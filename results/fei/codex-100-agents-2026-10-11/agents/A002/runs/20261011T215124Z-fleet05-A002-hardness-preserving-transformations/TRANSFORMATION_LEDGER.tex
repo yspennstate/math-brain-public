@@ -1,0 +1,289 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newcommand{\I}{\mathsf I}\newcommand{\HH}{\mathsf H}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\E}{\mathbb E}
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\title{A002: exact transformation costs and endpoint admission}
+\date{12 October 2026}\maketitle
+All functions are signs on finite uniform product cubes. Entropies use bits.
+Write $P_f(S)=\widehat f(S)^2$, $\HH(f)=H(P_f)$,
+$\I_i(f)=\Pr(i\in S)$, $\I(f)=\E|S|$, and
+$\Var(f)=1-(\E f)^2$. Constants have zero entropy and influence.
+We never divide by the influence of a constant. Let
+$C_*=\sup_{\I(f)>0}\HH(f)/\I(f)$, allowing infinity.
+
+\section{Elementary ledgers}
+For $f$ on $n$ bits, tensoring $m\ge1$ independent copies gives
+$T_m=\prod_{j=1}^m f(x^{(j)})$ on $mn$ bits. Its mean is
+$(\E f)^m$, entropy $m\HH(f)$, and influence $m\I(f)$.
+Every coordinate copy keeps its original influence. The spectrum is a product
+because the blocks are disjoint; overlapping products have no such ledger.
+
+Balancing by a fresh sign gives $B_m=zT_m$ on $mn+1$ bits,
+$\E B_m=0$, $\HH(B_m)=m\HH(f)$,
+$\I(B_m)=m\I(f)+1$, and $\I_z=1$.
+Its spectrum is the tensor spectrum with $z$ appended to every set.
+Thus balancing does not make relative coordinate influence small.
+Dummy padding by $q\ge0$ coordinates changes dimension by $q$ and changes
+none of mean, entropy, variance or influence; every dummy has influence zero.
+
+Multiplication by a character $\chi_R$ relabels $S$ by $S\triangle R$.
+Entropy and distances between supports are unchanged; influences become
+$\I_i$ or $1-\I_i$, according as $i\notin R$ or $i\in R$.
+The new mean is $\widehat f(R)$. Selecting
+$R=\{i:\I_i(f)>1/2\}$ gives total influence
+$J=\sum_i\min(\I_i,1-\I_i)\le\I(f)$.
+
+Balanced substitution has an exact ledger. If $u$ is on $N$ bits and
+$g_i$ are balanced signs on disjoint blocks of sizes $d_i$, then
+$U=u(g_1,\ldots,g_N)$ has dimension $\sum_i d_i$ and
+\[
+ \E U=\E u,\quad \HH(U)=\HH(u)+\sum_i\I_i(u)\HH(g_i),
+ \quad \I(U)=\sum_i\I_i(u)\I(g_i),
+ \quad \I_{ij}(U)=\I_i(u)\I_j(g_i).
+\]
+Indeed the set of occupied blocks uniquely identifies the outer Fourier set:
+each inner spectral set is nonempty. Conditional on that outer set, the inner
+sets are independent. The chain rule and expected cardinality prove all formulas.
+The physical inputs remain independent even when the resulting spectral
+membership coordinates are correlated.
+
+\section{Point activation, including an unbalanced core}
+Let $h$ be on $n$ bits with mean $a$, let $s\ge1$, let $A_s$ be one-point
+activation on $s$ fresh bits, and put $p=2^{-s}$, $d=1-a$,
+$G=1+A_s(h-1)$ on $n+s$ bits. Its exact ledger is
+\[
+ \E G=1-pd,\quad \Var(G)=2pd-p^2d^2,\quad
+ \I(G)=p\I(h)+spd.
+\]
+Each data influence is $p\I_i(h)$; each control influence is $pd$.
+For an all-positive active vertex the coefficients are $p\widehat h(S)$
+at $(S,T)$ for $S\ne\varnothing$ and every $T$, $-pd$ at
+$(\varnothing,T)$ for $T\ne\varnothing$, and $1-pd$ at the empty set.
+Other active vertices only change the corresponding signs.
+With $\phi(v)=-v\log_2v$,
+\[
+\begin{split}
+ \HH(G)={}&p[\HH(h)-\phi(a^2)]+2sp(1-a^2)\\
+ &+(p-p^2)d^2(2s-2\log_2d)+\phi((1-pd)^2).
+\end{split}
+\]
+Terms at zero have their continuous value. This follows by summing the three
+coefficient groups; the influence formula follows either from these coefficients
+or from the pivotal event at each control.
+For balanced $h$ the formula reduces to
+\[
+ \HH(G)=p\HH(h)+2sp(2-p)+\phi((1-p)^2),\qquad
+ \I(G)=p[\I(h)+s].
+\]
+In particular $\phi((1-p)^2)/p\to2\log_2 e$.
+
+\section{Systematic coding and its auxiliary costs}
+Given a binary $r\times N$ matrix $A$, put
+\[
+ F_0(x,z)=G(x_i\chi_{A_i}(z):1\le i\le N).
+\]
+There are $N+r$ independent physical bits. The Fourier map is the injective
+linear map $S\mapsto(S,AS)$, so
+\[
+ \E F_0=\E G,\quad\HH(F_0)=\HH(G),\quad
+ \I(F_0)=\I(G)+\sum_S|AS|P_G(S)\le\I(G)+r\Var(G).
+\]
+The original influences are unchanged. Auxiliary bit $j$ has influence
+$\Pr((AS)_j=1)\le\Var(G)$. Its spectral membership is a deterministic
+parity of the original spectral memberships; this is not a physical bias.
+If $r=1$ and $A$ is the all-one row, then the support has only even total
+cardinality and $\I(F_0)=\I(G)+\Pr(|S|\text{ odd})\le2\I(G)$.
+Its aggregate one-coordinate spectral erasure is zero; $z=1$ recovers $G$.
+Repeating each original coordinate in a separate parity pair instead gives
+$2N$ inputs, entropy $\HH(G)$ and influence $2\I(G)$ exactly.
+
+For fixed integer $d_0\ge1$ and sufficiently large $N$, choose
+$r=3d_0\lceil\log_2(2N)\rceil$. A uniformly random binary matrix has
+\[
+\Pr(\exists S\ne0:|S|+|AS|\le d_0)
+\le2^{-r}\sum_{j=1}^{d_0}\binom Nj
+        \sum_{l=0}^{d_0-j}\binom rl
+\le2^{-r}d_0(N+r)^{d_0}<1.
+\]
+The middle bound follows by grouping weight-$j$ subsets in the $N$ original
+coordinates and weight-$l$ subsets in the $r$ auxiliary coordinates, then
+bounding their count by $d_0(N+r)^{d_0}$. For large $N$, $r\le N$.
+Therefore a deterministic suitable matrix exists. This is an existence proof,
+not a claim that a search of random matrices was executed.
+
+\section{Diffuse seeds and auxiliary smoothing}
+Let $\operatorname{Maj}_3=(x_1+x_2+x_3-x_1x_2x_3)/2$.
+It has entropy $2$, total influence $3/2$, each influence $1/2$ and mean zero.
+Character-center an arbitrary positive-entropy seed to $u$ with influence $J>0$.
+For $q\ge1$ put $b_0=\operatorname{Maj}_3\prod_{j=1}^q u_j$,
+on $n_0=3+qn$ bits. Then
+\[
+ L=\I(b_0)=qJ+3/2>1,\quad H_0=\HH(b_0)=q\HH(f)+2,
+ \quad \max_i\I_i(b_0)\le1/2.
+\]
+Let $b_d$ be the balanced $d$-level self-substitution of $b_0$,
+with $b_1=b_0$. It has $n_0^d$ bits and
+\[
+ \I(b_d)=L^d,\quad
+ \HH(b_d)=H_0\frac{L^d-1}{L-1},\quad
+ \max_i\I_i(b_d)\le2^{-d}.
+\]
+Choose $q$ large and then $d$ large. The limiting ratio is
+$H_0/(L-1)$, which tends to $\HH(f)/J\ge\HH(f)/\I(f)$ as $q\to\infty$.
+Consequently one fixed balanced diffuse seed $b$ has any prescribed small
+maximum influence and ratio at least the original ratio minus any prescribed
+positive error. If $\HH(f)=0$, a deep majority composition suffices.
+
+For odd $L_g\ge3$ and integer $t\ge1$, define
+$g=\operatorname{Maj}_{L_g}(\chi_{[t]}(z^{(1)}),\ldots,
+\chi_{[t]}(z^{(L_g)}))$ on $d_g=L_gt$ bits. Then
+\[
+ \E g=0,\quad H_g=\HH(g)=\HH(\operatorname{Maj}_{L_g}),\quad
+ I_g=\I(g)=tL_g\beta_{L_g},\quad
+ \I_j(g)=\beta_{L_g}=2^{-(L_g-1)}\binom{L_g-1}{(L_g-1)/2}\to0.
+\]
+The pivotal identity follows by requiring a tie among the other majority inputs.
+For $L_g=2v+1$, the central-binomial expression equals
+$\prod_{j=1}^v(1-1/(2j))$. Its logarithm is at most
+$-\tfrac12\sum_{j=1}^v1/j$, which tends to minus infinity; thus it tends to zero.
+Majority is odd, so its nonzero supports have odd cardinality.
+Parity substitution preserves its spectrum magnitudes. Every nonempty support
+of $g$ has size at least $t$, and two distinct supports have distance at least $2t$.
+
+Activate $h=b^{\otimes m}$, using $s=\lceil2\log_2m\rceil$ and $m\ge2$,
+and then code all $N=mn+s$ inputs with a short-distance code having $r=O_k(\log m)$.
+Set $e_j=\Pr((AS)_j=1)$ and $Q=sp+\sum_{j=1}^r e_j$.
+Replace exactly the $s$ controls and $r$ coded auxiliary variables by independent
+copies of $g$. The final dimension is $D=mn+d_g(s+r)$ and its exact ledger is
+\[
+\begin{split}
+ \HH(F)&=pm\HH(b)+2sp(2-p)+\phi((1-p)^2)+H_gQ,\\
+ \I(F)&=pm\I(b)+I_gQ,\qquad 0\le Q\le p[s+r(2-p)],\\
+ \E F&=1-p,\qquad\Var(F)=p(2-p).
+\end{split}
+\]
+An unchanged data bit has influence $p\I_i(b)$; a gadget bit in a control block
+has influence $p\beta_{L_g}$; a gadget bit in coded block $j$ has influence
+$e_j\beta_{L_g}$. Thus the data relative influence is
+$\I_i(b)/(2-p)$ and every auxiliary relative influence is at most $\beta_{L_g}$.
+All auxiliary energy has been charged in $I_gQ$; no auxiliary bit is free.
+For fixed $b,g,k$, $D=mn+O(\log m)$,
+$\I(F)\to0$, $\E F\to1$, and
+$\HH(F)/\I(F)\to\HH(b)/\I(b)$.
+
+Choose $d_0=t=2k+1$. Distinct coded outer supports differ on more than $d_0$
+blocks; their substitutions differ on at least that many physical coordinates.
+Distinct terms belonging to one outer support differ inside a gadget by at least
+$2t$. Therefore the final Fourier-support distance exceeds $2k$.
+Choose $b$ and $L_g$ to give maximum relative influence at most $\epsilon$,
+then choose $m$ to satisfy total influence and near-constancy bounds.
+This proves the companion manuscript's simultaneous reduction independently.
+
+\section{Physical restriction plateau}
+If support distance is greater than $q$, deleting any set $B$ of at most $q$
+coordinates is injective on the support. Otherwise two supports differ only in $B$.
+For every physical assignment $\rho$, the restricted coefficient at $T$ is
+$\sum_{S\setminus B=T}\widehat F(S)\chi_{S\cap B}(\rho)$; at most one term
+is nonzero. Hence
+\[
+ \HH(F|\rho)=\HH(F),\quad
+ \I(F|\rho)=\I(F)-\sum_{i\in B}\I_i(F).
+\]
+Remaining influences are unchanged. The mean is unchanged if the empty support
+was initially present; that holds for the rare activations above. Distance drops
+by at most $|B|$. Thus every $\le k$ restriction of the constructed $F$ stays in
+the simultaneous class with distance $>k$, and its ratio can only increase.
+Such a child cannot be constant: it has the same mean strictly between zero and one.
+This is finite-depth stability, not closure under all restrictions.
+
+If a fixed nonnegative function $s_*(D)=o(D)$ is prescribed, the same construction
+works with activation length
+$\ell_m=\lceil a_m+2\log_2m\rceil$,
+$a_m=\max_{1\le D\le2mn}s_*(D)$.
+Indeed $a_m=o(m)$: split its maximum into a bounded prefix and a tail bounded
+by any prescribed small multiple of $D$. Consequently $\ell_m=o(m)$,
+$r=O(\log m)$, and final $D_m\le2mn$ eventually.
+The error terms are $o(p_m m)$, so the ratio is unchanged, while
+$\I(F_m)\le p_m m^2\le2^{-a_m}\le2^{-s_*(D_m)}$ for large $m$.
+No monotonicity of $s_*$ was assumed. An exponential requirement
+$\I\le2^{-cD}$ is not reached by this argument.
+
+\section{Restricted endpoints and full Fourier support}
+For balanced $g$, the selector
+$M_g=((1+g)/2)y_1+((1-g)/2)y_2$ adds two bits and satisfies
+\[
+ \E M_g=0,\quad\HH(M_g)=2+\HH(g)/2,\quad
+ \I(M_g)=1+\I(g)/2.
+\]
+The data influences halve and both fresh influences equal $1/2$. The coefficients
+are $1/2$ at $\{y_1\},\{y_2\}$ and $\pm\widehat g(S)/2$ at
+$S\cup\{y_1\},S\cup\{y_2\}$. For $g=z f^{\otimes m}$ a bound
+$\HH(M_g)\le C\I(M_g)$ gives $m\HH(f)+4\le C[m\I(f)+3]$.
+Division by $m\to\infty$ recovers FEI with the same constant.
+Similarly activating $z f^{\otimes m}$ with
+$s=\lceil2\log_2(m+1)\rceil$ gives arbitrarily small influence and minority
+probability while its ratio tends to $\HH(f)/\I(f)$.
+
+``Full Fourier support'' means all $2^D$ coefficients are nonzero; it is
+different from relevance of every physical coordinate. In positive dimension
+full Fourier support has distance one, so cannot be combined with distance $>1$.
+It nevertheless retains the optimal FEI constant even together with rarity.
+
+To prove this, take the last elementary activated tensor $G_m$ on $D_m=mn+1+s$
+bits and pad it with two dummy bits, giving $M_m=D_m+2$ bits.
+Flip its value at one physical point $x_0$ and call the result $K_m$.
+Put $\delta_m=2^{-M_m}$. Every coefficient changes by
+$-2\delta_m G_m(x_0)\chi_S(x_0)$.
+All original nonzero coefficients have magnitude at least $2^{-D_m}$,
+whereas $2\delta_m=2^{-D_m-1}$. Thus they cannot cancel; all original zero
+coefficients become nonzero. All physical coordinates are consequently relevant.
+The mean changes by at most $2\delta_m$, each influence by at most
+$2\delta_m$, and total influence by at most $2M_m\delta_m$.
+The influence bound follows because only the edge through $x_0$ in that
+direction changes pivotal status; its two directed endpoints have mass
+$2\delta_m$.
+
+Parseval gives amplitude-vector distance $2\sqrt{\delta_m}$.
+By Cauchy--Schwarz, squared-spectrum total variation $\tau_m$ is at most
+$2\sqrt{\delta_m}$. For $0\le\tau_m\le1-2^{-M_m}$,
+\[
+ |\HH(K_m)-\HH(G_m)|\le h_2(\tau_m)+\tau_m\log_2(2^{M_m}-1).
+\]
+For completeness, a maximal coupling of the two finite laws disagrees with
+probability $\tau_m$. Given one variable and the disagreement indicator,
+the other has at most $2^{M_m}-1$ possibilities on disagreement. Bounding its
+conditional entropy proves the inequality in both directions.
+For large $m$, the same bound can use $2\sqrt{\delta_m}$ in place of $\tau_m$
+because the right side is increasing up to $1-2^{-M_m}$.
+Since $M_m\ge mn$ and $p_m$ is of order $m^{-2}$, these entropy and influence
+errors are $o(p_m m)$. Hence
+\[
+ \I(K_m)\to0,\quad\E K_m\to1,\quad
+ \HH(K_m)/\I(K_m)\to\HH(f)/\I(f).
+\]
+The full-support/low-influence class therefore has supremum $C_*$.
+Applying the same surgery to the smoothed simultaneous sequence, with a strict
+slack in its numerical hypotheses, also preserves small relative influences:
+$|\Var(K_m)-\Var(F_m)|\le4\delta_m$ and
+$\I_i(K_m)\le\I_i(F_m)+2\delta_m$, while $\delta_m/p_m\to0$.
+It destroys the exact separated-support and plateau properties.
+
+Finally fix any actual Boolean $F_*(X,Y)$ and tensor it with an arbitrary seed
+on fresh $Z$ blocks: $F_m=F_*(X,Y)f^{\otimes m}(Z)$.
+The $X$ spectral marginal and maximum $X$ Fourier degree are unchanged, while
+\[
+ H(S_{Y,Z}\mid S_X)=H_{F_*}(S_Y\mid S_X)+m\HH(f),\quad
+ \I(F_m)=\I(F_*)+m\I(f),\quad
+ \E F_m=(\E F_*)(\E f)^m.
+\]
+Dimension is $|X|+|Y|+mn$. A uniform conditional-entropy bound by $C\I(F_m)$,
+or by $C\I_{Y,Z}(F_m)$ plus a fixed additive $X$ term, implies full FEI(C)
+after division by $m$. Low $X$ degree or one fixed realizable $X$ marginal
+does not exclude arbitrary seed tensors. A new admission hypothesis must exclude
+this actual construction by proof, rather than by a requested conclusion.
+No line above proves that $C_*$ is finite.
+\end{document}

@@ -1,0 +1,106 @@
+--- a/plit_notes_bm25.py
++++ b/plit_notes_bm25.py
+@@ -25,6 +25,54 @@
+ rb.ITEMS = os.path.join(HERE, "items", "plit.jsonl")
+ 
+ 
++
++def _paper_family(value):
++    import re
++    paper = str(value or "").strip()
++    return re.sub(r"v[0-9]+$", "", paper)
++
++
++def _load_item_sources(path):
++    """Answer-free provenance only; bind source identity to all solver text."""
++    if not path:
++        return {}
++    import re
++    out = {}
++    fields = {"item_id", "item_sha256", "paper", "source_statement_sha256"}
++    with io.open(path, encoding="utf-8") as stream:
++        for line in stream:
++            if not line.strip():
++                continue
++            row = json.loads(line)
++            if not isinstance(row, dict) or set(row) != fields:
++                raise ValueError("item-source manifest has unexpected or missing fields")
++            iid = row["item_id"]
++            if not isinstance(iid, str) or not iid or iid in out:
++                raise ValueError("item-source manifest has invalid or duplicate item identity")
++            if any(not isinstance(row[k], str) or not re.fullmatch(r"[0-9a-f]{64}", row[k])
++                   for k in ("item_sha256", "source_statement_sha256")):
++                raise ValueError("item-source manifest requires full SHA256 values")
++            if not isinstance(row["paper"], str) or not _paper_family(row["paper"]):
++                raise ValueError("item-source manifest has no source paper")
++            out[iid] = row
++    return out
++
++
++def _source_identity(item, paper_of, manifest):
++    import hashlib
++    row = manifest.get(item["item_id"])
++    if row is not None:
++        blob = json.dumps(item, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
++        if hashlib.sha256(blob).hexdigest() != row["item_sha256"]:
++            raise ValueError("item-source manifest does not match the complete item: " + item["item_id"])
++        return "lit_" + row["source_statement_sha256"][:20], _paper_family(row["paper"])
++    own_id = "lit_" + hashlib.sha256(item["claim"].strip().encode("utf-8")).hexdigest()[:20]
++    paper = paper_of.get(own_id)
++    if not paper:
++        raise ValueError("cannot resolve source identity for exclusion; supply a hash-bound item-source manifest: " + item["item_id"])
++    return own_id, paper
++
++
+ def main():
+     ap = argparse.ArgumentParser()
+     ap.add_argument("--run", default="run_plit")
+@@ -37,7 +85,9 @@
+                     help="never serve the literature node that IS the item's claim (found by the statement digest, no keys read)")
+     ap.add_argument("--exclude-own-paper", action="store_true",
+                     help="never serve a literature node from the item's own paper (the paper is read off the own-statement node)")
++    ap.add_argument("--item-source-manifest", default="", help="answer-free JSONL source identities bound to complete item hashes")
+     a = ap.parse_args()
++    item_sources = _load_item_sources(a.item_source_manifest)
+     run = a.run if os.path.isabs(a.run) else os.path.join(HERE, a.run)
+     ids = json.load(io.open(os.path.join(run, "SAMPLE.json"), encoding="utf-8"))["item_ids"]
+     idset = set(ids)
+@@ -49,13 +99,15 @@
+     conn = sqlite3.connect(a.store)
+     nodes = [(nid, ki, ti, bo) for nid, ki, ti, bo in conn.execute("select id, kind, title, body from nodes")]
+     paper_of = {}
+-    if a.exclude_own_paper:
++    if a.exclude_own_paper or a.exclude_own_statement:
+         for nid, meta in conn.execute("select id, metadata_json from nodes where id like 'lit_%'"):
+             try:
+-                paper_of[nid] = json.loads(meta or "{}").get("paper")
++                paper_of[nid] = _paper_family(json.loads(meta or "{}").get("paper"))
+             except Exception:
+                 pass
+     conn.close()
++    if a.exclude_own_paper and any(not paper_of.get(nid) for nid, _, _, _ in nodes if str(nid).startswith("lit_")):
++        raise ValueError("literature node has unresolved paper provenance; cannot certify own-paper exclusion")
+     if a.exclude_kind_prefix:
+         nodes = [n for n in nodes if not str(n[1] or "").startswith(a.exclude_kind_prefix)]
+     import hashlib
+@@ -78,9 +130,9 @@
+         steps = it.get("argument_steps") or []
+         qtext = it["claim"] + " " + " ".join(s.get("text", "") for s in steps[: a.steps])
+         q = rb._tok(qtext)
+-        own_id = "lit_" + hashlib.sha256(it["claim"].strip().encode("utf-8")).hexdigest()[:20]
+-        own_paper = paper_of.get(own_id)
++        own_id = own_paper = None
+         if a.exclude_own_statement or a.exclude_own_paper:
++            own_id, own_paper = _source_identity(it, paper_of, item_sources)
+             if any(d[0] == own_id for d in docs):
+                 own_stats["own_statement_in_store"] += 1
+             if own_paper:
+@@ -105,7 +157,7 @@
+     fp = rb.sample_fingerprint(ids)
+     meta = {"store": a.store, "n_nodes": n, "k": a.k, "ranking": "bm25 title x2 + body, query claim + %d steps" % a.steps,
+             "sample_fingerprint": fp, "label": a.label, "exclude_own_statement": a.exclude_own_statement,
+-            "exclude_own_paper": a.exclude_own_paper, "own_stats": own_stats}
++            "exclude_own_paper": a.exclude_own_paper, "own_stats": own_stats, "source_identity_policy": "full-item-bound manifest or exact source statement; unresolved identity raises"}
+     rb.dump_atomic(os.path.join(run, a.label + "_notes.json"), dict(meta, notes=brain))
+     if a.label == "brain":
+         shift = 37 % len(ids) or 1

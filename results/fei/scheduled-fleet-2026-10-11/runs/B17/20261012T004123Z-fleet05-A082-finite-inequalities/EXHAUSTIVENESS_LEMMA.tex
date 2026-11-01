@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{The five-coordinate certificate: covering and physical exhaustiveness}
+\author{A082, independent review of A071}\maketitle
+All entropies are in bits. Put $P_f(S)=\widehat f(S)^2$,
+$B_i=H(S_i\mid S_{-i})$, $I_i=\Pr(f(x)\ne f(x+e_i))$,
+and $K_5=16/3-(3/8)\log_2 3-(169/24)\log_2 13+(89/24)\log_2 89$.
+
+\begin{theorem}[Finite covering]
+The following covering filters on odd five-bit negative masks exhaust all
+nonconstant Boolean functions up to output negation, input translation and
+physical coordinate permutation: minority size at most $16$, nondecreasing
+physical boundary counts, and minimality among all translates containing zero.
+They need not give unique orbits.
+\end{theorem}
+\begin{proof}
+Negate the output if necessary to make the negative class a nonempty set $A$
+of size at most $16$. Translate any member of $A$ to zero. Permute the five
+physical coordinates to put their influences in nondecreasing order. This
+permutation fixes zero. Next select the smallest encoded translate of $A$
+among translates containing zero. Translation leaves the physical influence
+vector unchanged. Thus all filters can hold simultaneously. Output negation
+preserves the squared spectrum; input translation multiplies Walsh
+coefficients by characters and also preserves the squared spectrum.
+Physical permutations merely reorder the five $B_i/I_i$ ratios.
+Consequently the covering preserves their minimum. No general linear mixing
+of input coordinates is admitted.
+\end{proof}
+
+\paragraph{Exact finite arithmetic.}
+For a negative class $A$, the Walsh half-coefficients are
+\[
+ c_s=16\mathbf1_{s=0}-|A|+2|\{x\in A:s\cdot x=1\}|,
+ \qquad P(s)=c_s^2/256.
+\]
+Our reproduction computes these directly by population counts of parity masks,
+without the author's butterfly transform. For a spectral pair put $a=c_T^2$,
+$b=c_{T+i}^2$ and $G(a,b)=(a+b)\log_2(a+b)-a\log_2 a-b\log_2 b$.
+Then $B_i=\sum G/256$ and $I_i=D_i/256$, where
+$D_i=\sum_{T\not\ni i}c_{T+i}^2$. Physical boundary counts give a separate
+check $D_i=16 e_i$, with $e_i$ the number of undirected crossing edges.
+
+To enclose logarithms reduce an integer to $2^k r$ with $1\le r<2$.
+For $z=(r-1)/(r+1)$, the rational $50$-term sum encloses $\ln r$ with
+positive remainder at most $2z^{101}/[101(1-z^2)]$.
+Divide numerator endpoints by opposite positive $\ln2$ endpoints, add the
+exact integer $k$, and round outward at $2^{-110}$. Combine positive and
+negative coefficients of $G$ with opposite endpoints and round its upper
+bound outward at $2^{-40}$. Thus every packet and every sum gives a rigorous
+upper bound. There is no floating-point sign decision.
+
+The target lower bound is $2964159675584/2^{40}<K_5$.
+For each table a relevant coordinate with
+$\sum G_{\rm upper}\le2964159675584 D_i$ proves a strict upper pass.
+The remaining mask is $A=\{0,1,2\}$: exact prime-log vectors show that three
+coordinate ratios equal $K_5$ and the other two exceed it. Rational vector
+differences are cleared of denominators and checked by integer products.
+The integer intermediate bounds are at most
+$16(512\cdot2^{40})+256<2^{63}$ for numerator sums, and
+$256\cdot2964159675584<2^{63}$ for target products, so the signed int64
+computation cannot overflow.
+
+The finite certificate concludes that every nonconstant five-bit table has
+a relevant $i$ with $B_i\le K_5 I_i$. All extremizers belong to the orbit of
+the seed, since every other retained representative passes strictly.
+There are $32\binom52=320$ seed translates/direction choices and $320$
+distinct output complements: the center is the unique degree-two vertex of
+the three-vertex induced path. Thus precisely $640$ truth tables attain the bound.
+
+\begin{theorem}[Separate all-dimensional application]
+Every nonconstant Boolean sign whose Fourier support is contained in an affine
+space $c+V\subseteq\mathbb F_2^n$ with $\dim V\le5$ has a relevant physical
+coordinate with $B_i\le K_5 I_i$. This holds hereditarily under all physical
+restrictions and for disjoint products of such factors. In this class,
+$H(f)\le(K_5+2/\ln2)I(f)$.
+\end{theorem}
+\begin{proof}
+If a relevant $e_i$ lies outside $V$, no two supported Fourier sets differ by
+$e_i$, so $B_i=0$. Both physical child squared spectra coincide under projection,
+hence their entropy equals the parent entropy and the JS decrement is zero.
+If every relevant $e_i$ lies in $V$, their independence shows that at most five
+physical variables are relevant. Delete irrelevant variables and apply the
+finite certificate. Every physical restriction projects the affine support
+and cannot increase its dimension, so the argument applies at every descendant.
+For disjoint products, squared spectra are independent, preserving each factor's
+coordinate influence and conditional erasure entropy; restrictions preserve
+the factorization. Finally use the exact identities
+\[
+ H(f)-\tfrac12[H(f_+)+H(f_-)]=B_i+\operatorname{JS}_i,
+ \quad I(f)=I_i+\tfrac12[I(f_+)+I(f_-)],
+\]
+and $\operatorname{JS}_i\le(2/\ln2)I_i$. Induction on physical dimension
+pays every entropy decrement and leaves only constant terminals of zero entropy.
+The scalar JS bound is the previously reconstructed B17/C005 interface.
+The lower seed makes $K_5$ optimal for selectable erasure within this whole
+structural class; no optimality is claimed for the resulting $H/I$ bound.
+\end{proof}
+
+\paragraph{First unsupported universal line.}
+No bound here controls the dimension of $V$ for arbitrary Boolean residuals.
+Reaching these leaves by a stopping tree with total nonreused entropy cost
+bounded by original influence remains open. The known six-bit matching witness
+already exceeds $K_5$, so this constant cannot be universal. Aggregate erasure
+$\sum_iB_i\le K_5 I$ is not asserted. Parity-coded zero erasure alone is not
+a terminal-class certificate. Overlapping product factors are excluded.
+\end{document}

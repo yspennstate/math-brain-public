@@ -1,0 +1,11 @@
+{
+  "helper_version": "A094-stage3-independent-signed-mux-v3-tensor",
+  "family": "Actual bent/zero-flip selectors multiplied by arbitrary Boolean cores on independent fresh blocks shared by both children",
+  "domain": {"k4_core_bits": 2, "k4_core_truth_tables": "all 16", "k6_core_bits": 1, "k6_core_truth_tables": "all 4", "reference_variants": 3},
+  "case_count": {"Boolean_core_embeddings": 20, "reference_product_cases": 60},
+  "symmetry": "None; all labelled cores in the stated domains",
+  "arithmetic": "Actual integer transforms and physical edges; Fraction tensor-law identities and exact rational prime-log cost/deficit cancellation",
+  "memory_estimate_MB": 50,
+  "maximum_runtime_seconds": 55,
+  "command": "python -X utf8 code/check.py tensor"
+}

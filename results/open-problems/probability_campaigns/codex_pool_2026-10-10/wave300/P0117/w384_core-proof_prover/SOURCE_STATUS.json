@@ -1,0 +1,112 @@
+{
+  "problem_id": "P0117",
+  "checked_date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty": "NOT_CERTIFIED",
+  "source_status": "OLDER_QUESTION_RECOVERED; NEWER_PRIMARY_RESOLUTION_CLAIM_VERIFIED_AS_A_CLAIM_ONLY",
+  "original_card": {
+    "export": "~/math-brain-build/export/population/nodes.jsonl",
+    "line": 30,
+    "logical_id": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+    "recorded_status_date": "2026-09-07",
+    "recorded_scope": "nondegenerate continuous iid planar passage-time laws in the usual positive-speed regime",
+    "truth_status": "unverified",
+    "statement_fidelity_reviewed": false
+  },
+  "ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 552,
+    "tier": 5,
+    "dated_status": "attempted_un"
+  },
+  "original_question": {
+    "authors": [
+      "Antonio Auffinger",
+      "Michael Damron",
+      "Jack Hanson"
+    ],
+    "title": "50 years of first-passage percolation",
+    "url": "https://www.math.northwestern.edu/~auffing/FPPSurvey.pdf",
+    "section": "4.5",
+    "question": 31,
+    "quote": "Question 31. Do geodesic lines exist?",
+    "current_public_pdf_page_index": 85,
+    "old_card_pdf_page_label": 98,
+    "page_note": "Pagination differs; question number and surrounding definition govern, not the old page locator.",
+    "standing_hypothesis_note": "Question text is short and not a full distributional formulation. Original campaign registry path cited in the intake README is missing. The standard moment-restricted formulation below is explicit; broader moment-free scope is not silently identified with it."
+  },
+  "exact_working_target": {
+    "graph": "nearest-neighbor undirected Z^2",
+    "weights": "iid finite nonnegative nonatomic law F",
+    "moment": "E[min(t_1,t_2,t_3,t_4)^2]<infinity, for four independent samples",
+    "geodesic_definition": "A finite path minimizes total passage time among all finite nearest-neighbor paths.",
+    "bigeodesic_definition": "An injective path indexed by Z whose every finite subpath is minimizing.",
+    "conclusion": "Almost surely no bigeodesic exists anywhere, simultaneously over every path and random direction.",
+    "extra_shape_assumptions": [],
+    "scope": "standard moment-restricted specialization; proved reductions themselves need no upper-tail moment"
+  },
+  "primary_distributional_pin": {
+    "authors": [
+      "Daniel Ahlberg",
+      "Jack Hanson",
+      "Christopher Hoffman"
+    ],
+    "url": "https://arxiv.org/pdf/2208.11576",
+    "arxiv": "2208.11576v1",
+    "location": "Section 2.4, A1, PDF page index 10",
+    "assumptions": "iid continuous edge law and second moment of minimum of four incident-edge weights",
+    "verified_result_scope": "Theorem 1.1 gives uniform decay of the probability that a far fixed site lies on a ray from the origin. This is not itself the full no-bigeodesic conclusion."
+  },
+  "older_directional_source": {
+    "url": "https://arxiv.org/abs/1512.00804v2",
+    "authors": [
+      "Michael Damron",
+      "Jack Hanson"
+    ],
+    "result_scope": "deterministic-direction exclusion under limit-shape differentiability; no uncountable union is justified"
+  },
+  "newer_primary_claim": {
+    "title": "No bigeodesics in planar first-passage percolation",
+    "author": "OpenAI",
+    "date": "2026-09-24",
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/No-bigeodesics-in-planar-first-passage-percolation-September-24-2026/main.pdf",
+    "local_pdf": "sources/claimed_resolution_20260924.pdf",
+    "bytes": 608208,
+    "pages": 39,
+    "location": "Theorem 1.1, page 1",
+    "claim": "simultaneous absence under exactly the stated nonatomic and min-of-four second-moment assumptions, including singular continuous laws, without shape regularity",
+    "presence_and_statement_checked": true,
+    "full_proof_checked": false,
+    "external_independent_audit_checked": false,
+    "moment_free_claim": false,
+    "reduction_novelty_note": "Its Lemma 2.1 also proves moment-free finite minimizer existence. w384 does not claim this prerequisite is novel."
+  },
+  "prior_attempts": {
+    "export_row": 2403,
+    "logical_id": "math:probability.core:attempt-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+    "method": "geodesics from -n e_1 to n e_1 plus compactness",
+    "gap": "a fixed bounded-region anchor is unproved; endpoints can connect while paths escape every bounded set",
+    "independent_review": "none recorded",
+    "H_I_exact_id_or_bigeodesic_hits": 0,
+    "lean_P0117_receipt_found": false,
+    "owner_solved_status": "No independently audited owner resolution found in targeted recall, matching cards and named prior directories; this is not an exhaustive absence certificate."
+  },
+  "formal_check": {
+    "performed": false,
+    "theorem": null,
+    "assumptions": null,
+    "trusted_axioms": null,
+    "admitted_placeholders_used": false
+  },
+  "sources_and_scope_are_not_proofs": true,
+  "submission_states_file": "DELIVERY_STATE.json",
+  "single_remaining_gap": "Exclude uniformly pinned bigeodesics; equivalently prove support collapse H_infinity<=essential infimum of F. Unproved in this packet.",
+  "canonical_store_check": {
+    "path": "~/math-brain-build/local/population/brain.sqlite3",
+    "open_mode": "sqlite3.connect(\"file:~/math-brain-build/local/population/brain.sqlite3?mode=ro\", uri=True)",
+    "matching_original_nodes": 2,
+    "receipt": "canonical_nodes_p0117.json",
+    "observations": "Existing problem and attempt are curated-secondary, unverified, dated 2026-09-07; no new proof closure is asserted.",
+    "sql": "SELECT id,title,kind,body,metadata_json FROM nodes WHERE title LIKE '%bi-infinite geodesics in planar%' OR title LIKE '%bigeodesics%' LIMIT 6"
+  }
+}

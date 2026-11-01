@@ -1,0 +1,26 @@
+{
+ "about": "The numbers AB30 published, one entry per claim, each with where it appears and how derive.py computes it. check.py compares derive.py's results.json with these values; exact equality after the rounding named in the rule.",
+ "claims": {
+  "R1.points.all": {"expected": [27.0, 26.0], "published_in": "REPORT.md, Results round 1, points table: all thirty 27 / 26", "rule": "round1/RESULT_final.json by_family.all on_points, off_points"},
+  "R1.points.proof_audit": {"expected": [17.0, 17.0], "published_in": "REPORT.md, Results round 1, points table: proof audits 17 / 17", "rule": "round1/RESULT_final.json by_family.proof_audit"},
+  "R1.points.house_results": {"expected": [10.0, 9.0], "published_in": "REPORT.md, Results round 1, points table: house results 10 / 9", "rule": "round1/RESULT_final.json by_family.house_results"},
+  "R1.points_from_item_rows.all": {"expected": [27.0, 26.0], "published_in": "the same table, summed from the item rows rather than the family totals", "rule": "sum of on_pts and off_pts over round1/RESULT_final.json items"},
+  "R1.points_from_item_rows.proof_audit": {"expected": [17.0, 17.0], "published_in": "the same table, from the item rows", "rule": "items with family proof_audit"},
+  "R1.points_from_item_rows.house_results": {"expected": [10.0, 9.0], "published_in": "the same table, from the item rows", "rule": "items with family house_results"},
+  "R1.cost.on": {"expected": [61.26, 1.68], "published_in": "REPORT.md, Results round 1, cost table: total $61.26, median per run $1.68 (brain on)", "rule": "counted rows of round1/results.jsonl, arm on: sum and median of cost_usd_list, rounded to cents"},
+  "R1.cost.off": {"expected": [40.48, 0.77], "published_in": "REPORT.md, Results round 1, cost table: total $40.48, median per run $0.77 (brain off)", "rule": "as R1.cost.on, arm off"},
+  "R2.cost_total.on": {"expected": 17.05, "published_in": "REPORT.md, Round 2: $17.05 for the brain as it runs", "rule": "counted rows of round2/results.jsonl, arm on: sum of cost_usd_list, rounded to cents"},
+  "R2.cost_total.ondiet": {"expected": 17.37, "published_in": "REPORT.md, Round 2: $17.37 with the diet", "rule": "as R2.cost_total.on, arm ondiet"},
+  "R3.points.grader_A": {"expected": [18.0, 17.0], "published_in": "REPORT.md, Round 3 table: points 18 / 17", "rule": "round3/RESULT_r3_A.json by_family.all"},
+  "R3.points.grader_B": {"expected": [18.0, 17.0], "published_in": "the same, the second grader", "rule": "round3/RESULT_r3_B.json by_family.all"},
+  "R3.cost.on": {"expected": [30.88, 1.37], "published_in": "REPORT.md, Round 3 table: cost $30.88, median $1.37 (brain on)", "rule": "counted rows of round3/results.jsonl, arm on"},
+  "R3.cost.off": {"expected": [15.66, 0.56], "published_in": "REPORT.md, Round 3 table: cost $15.66, median $0.56 (brain off)", "rule": "counted rows of round3/results.jsonl, arm off"},
+  "R4.points.graded_in_both_arms": {"expected": [12.0, 12.0], "published_in": "REPORT.md, Round 4: the 12 items answered in both arms, all full", "rule": "round4/REPORT_r4_final.json rows: sum of pts per arm"},
+  "R4.median_item_cost.on_over_off": {"expected": 1.807, "published_in": "REPORT.md, Round 4: a median 1.81 times the control", "rule": "median over round4/REPORT_r4_final.json rows of on.cost / off.cost, rounded to 3 places"},
+  "R4.totals_with_timeout_items": {"expected": {"on": 13, "off": 13}, "published_in": "REPORT.md, Round 4: the round ends 13 against 13 of 14 items", "rule": "graded points plus items one arm timed out on, scored from timeout_items_grades.jsonl (both extra grades full); a timeout scores 0"},
+  "R5A.median_item_cost.on_over_off": {"expected": 1.564, "published_in": "REPORT.md, Round 5a cost paragraph (on against off)", "rule": "median over round5a/REPORT_r5a_final.json rows of on.cost / off.cost, rounded to 3 places"},
+  "R5A.median_item_cost.on_over_onlegacy": {"expected": 0.92, "published_in": "REPORT.md, Round 5a: on against onlegacy 0.92 at the median", "rule": "median of on.cost / onlegacy.cost, rounded to 2 places"},
+  "R5A.totals_with_timeout_items": {"expected": {"on": 7, "off": 6, "onlegacy": 6}, "published_in": "REPORT.md, Round 5a: on 7, off 6, onlegacy 6 of 8", "rule": "as R4.totals_with_timeout_items"},
+  "STATUS.pairs_done": {"expected": 30, "published_in": "STATUS.json pairs_done (corrected from 11 on 28 Sep)", "rule": "the number of round-1 items with a result; check.py also reads ../STATUS.json and requires it to say the same"}
+ }
+}

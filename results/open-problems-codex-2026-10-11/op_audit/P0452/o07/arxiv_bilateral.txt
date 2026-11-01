@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/ihPP1d1vd0ooWzj+aWamLzs9LZs</id>
+  <title>arXiv Query: search_query=all:"bilateral preference"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-11T23:51:34Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22bilateral+preference%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.02209v1</id>
+    <title>Conditional Graph Diffusion for Negotiation Support: Overcoming Discrete Infeasibility and Preference Elicitation Gaps</title>
+    <updated>2026-06-01T13:10:16Z</updated>
+    <link href="https://arxiv.org/abs/2606.02209v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.02209v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Traditional bilateral negotiation support systems search over discrete allocation spaces. This approach encounters structural infeasibility when no discrete outcome satisfies individual rationality. It fails to incorporate preference signals embedded in natural language dialogue. This study introduces the Conditional Graph Diffusion (CGD) framework to generate recommendations in a continuous bilateral utility space. A GATv2 encoder captures comparative bilateral preference structure through dynamic attention. A cross-attention mechanism fuses strategic embeddings with transformer-based dialogue representations into a unified conditioning context for a denoising diffusion probabilistic model. An analytically derived normative guidance gradient applies at inference time. It injects per-step monotonic corrections at each reverse diffusion step, steering generation toward individual rationality, security proximity, and equitability without retraining. Evaluation across synthetic, CaSiNo, and Deal or No Deal corpora confirms accumulated corrections achieve an individual rationality rate of at least 0.997, a security gap of at most 0.009, and a symmetry gap within 0.15. Relative to the Nash Bargaining Solution, CGD reduces security gaps by up to 70-fold at a maximum welfare cost of 3%. An ablation study demonstrates naive constraint minimization without a learned generative prior fails normative compliance across heterogeneous corpora. A controlled misrepresentation experiment establishes the architectural capacity of cross-attention fusion to exploit dialogue signals. An inference-time welfare guidance mechanism decouples normative compliance from welfare maximization, recovering Pareto efficiency on CaSiNo without retraining while preserving individual rationality.</summary>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-01T13:10:16Z</published>
+    <arxiv:primary_category term="cs.GT"/>
+    <author>
+      <name>Moirangthem Tiken Singh</name>
+    </author>
+  </entry>
+</feed>

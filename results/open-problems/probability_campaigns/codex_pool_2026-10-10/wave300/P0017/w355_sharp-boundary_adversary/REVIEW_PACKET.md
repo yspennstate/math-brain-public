@@ -1,0 +1,21 @@
+# P0017 boundary packet for w356
+
+Main deliverable: ATTEMPT.md sections 2-5, especially C002 in CLAIMS.jsonl. Referee w356 independently returned KEEP for both C001 and C002; exact verdicts are saved in REFEREE_VERDICTS.jsonl from ~/brain_workers/w356/PEER_REVIEWS.jsonl. The source-status record and finite arithmetic checks are separate from that mathematical audit.
+
+C001: isotropic regular simplex with v_i=sqrt((n+1)(n+2))(e_i-1/(n+1)), interpreted on sum-zero H. Conditioning perpendicular to (e_0-e_1)/sqrt(2) leaves a uniform interval of length sqrt(2(n+1)(n+2)) S, S~Beta(2,n-1). Check covariance on H, projection uniqueness, conditional density, and the positive-probability tail formula; essential supremum is quadratic, although average conditional variance is one.
+
+C002: f=T(S-1/2)_+^2 is C1 and has conditional mean zero. S is affine in Y and partial_u S=0. The ratio E Var(f|Y)/E |partial_u f|^2 is strictly greater than (n+1)(n+2)/24. This is a directional-energy statement; it does not refute the full-gradient KLS inequality. Check that the denominator is positive, that energy cannot be separated from its slice weight, and that all constants refer to the original metric.
+
+Validation: python -X utf8 -B ~/brain_workers/w355/verify_simplex.py. VERIFICATION.json records 5,898 passing checks in dimensions 2,4,8,16,32,64, including exact ambient covariance and two independent beta-integral computations. MEASUREMENTS.jsonl preserves the initial successful arithmetic rows and the corrected receipt run; repeated rows are rerun history, not twelve distinct dimensions. A Python boolean typo interrupted only the first receipt; the corrected run exits zero. This is not a Lean/formal proof receipt.
+
+At n=64, ess sup fiber C_P=869.3357556513, mean fiber C_P=1.2158542037, and the explicit smooth-test directional ratio is 346775/1679=206.5366289458. The false separation by the mean would understate this test by a factor 169.8695685025.
+
+Primary provenance: original intake op-p0017 is explicitly current-status unverified and its prior attempt is the Gaussian Hermite special case. The primary cited source is Randomstrasse101, arXiv:2603.29571v1, Entry 13, Conjecture 30; its covariance-scaled Cheeger formulation matches the intended target. October preprints 2610.05474v1 and 2610.07728v2 announce full resolutions; validity has not been checked here. Current openness is UNKNOWN rather than inherited from the September ledger.
+
+W354_AUDIT.md independently keeps the saved interval proof and the subsequently read SIMPLEX_PROOF.md, including its sharp directional conditional constant. The critical kernel/orthogonal-conditioning step, positive-probability quantifier and bump-sine lower bound were checked explicitly after saving our own derivation. The cutoff-energy test is the additional boundary delivered here. No result is promoted to a live theorem before review.
+
+Referee result: both exact statements KEEP, with the orthogonal conditioning/coarea step and the cutoff ratio independently rederived. There is no remaining gap for those special-case statements; full KLS and the October full-proof claims were not decided. This is a designated peer check, not two different-login keeps. DRAFT v1 remains concept material awaiting source/coordinator validation; BUNDLE_STATES.json distinguishes mathematical review, submission, ingestion and retrievability. INGESTION_OBSERVATION.json found zero new nodes by read-only exact logical-ID lookup. The hook remains a local proposal and reviewer diff.
+
+NEXT: Merge C002's independently checked cutoff obstruction with the triad's sharp directional constant, then validate the source-status card before coordinator ingestion.
+
+Network recovery: RECOVERY_CHECK.json verifies seven claim rows, both mathematical KEEP receipts, and the byte-identical three-card submission. RECOVERY_HANDOFF.json records the canonical peer mapping from w354/DEDUP_MAP.json: retain w355 source status, reconcile common simplex and averaging facts with w356 drafts, and preserve C002 as its checked cutoff witness. The old test receipt predates the referee verdicts; REFEREE_VERDICTS.jsonl records the subsequent review. Source/coordinator admission and ingestion remain pending.

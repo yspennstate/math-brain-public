@@ -1,0 +1,68 @@
+{
+  "basis": [
+    {
+      "codewords_checked": 2,
+      "dimension": 1,
+      "n": 2
+    },
+    {
+      "codewords_checked": 16,
+      "dimension": 4,
+      "n": 3
+    },
+    {
+      "codewords_checked": 2048,
+      "dimension": 11,
+      "n": 4
+    }
+  ],
+  "claims": [
+    "q-flip basis spans C0 exactly",
+    "frustrated relation decomposes into an odd number of frustrated basis q-flips",
+    "Aumann-Shapley 1/q loads conserve arbitrary signed relation weights",
+    "each frustrated q-flip routes to its unique physical disagreement edge",
+    "random anchor/pivot expected support incidence per physical edge is 4(2^n-n-1)/(n2^n)"
+  ],
+  "incidence": [
+    {
+      "expected_support_incidence": "4/8",
+      "n": 2,
+      "reduced": "1/2"
+    },
+    {
+      "expected_support_incidence": "16/24",
+      "n": 3,
+      "reduced": "2/3"
+    },
+    {
+      "expected_support_incidence": "44/64",
+      "n": 4,
+      "reduced": "11/16"
+    },
+    {
+      "expected_support_incidence": "104/160",
+      "n": 5,
+      "reduced": "13/20"
+    }
+  ],
+  "scope": "engineering self-check of exact algebra; not FEI closure",
+  "seed": 20260921,
+  "status": "PASS",
+  "transport": [
+    {
+      "functions_checked": 16,
+      "n": 2,
+      "relation_function_instances": 16
+    },
+    {
+      "functions_checked": 256,
+      "n": 3,
+      "relation_function_instances": 3840
+    },
+    {
+      "functions_checked": 192,
+      "n": 4,
+      "relation_function_instances": 393024
+    }
+  ]
+}

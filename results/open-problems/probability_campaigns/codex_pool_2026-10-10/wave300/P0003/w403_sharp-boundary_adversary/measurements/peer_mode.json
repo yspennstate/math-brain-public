@@ -1,0 +1,32 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w403/check_peer_mode.py",
+  "all_passed": true,
+  "cases": [
+    {
+      "N": 8,
+      "six_vertex_residuals": "all exactly zero",
+      "midpoint_distance_squared": "3/256",
+      "field_difference_squared": 1,
+      "maximum_field_norm_squared": 4,
+      "wrong_incoming_sign_residual": "1/8"
+    },
+    {
+      "N": 32,
+      "six_vertex_residuals": "all exactly zero",
+      "midpoint_distance_squared": "3/4096",
+      "field_difference_squared": 1,
+      "maximum_field_norm_squared": 4,
+      "wrong_incoming_sign_residual": "1/32"
+    },
+    {
+      "N": 128,
+      "six_vertex_residuals": "all exactly zero",
+      "midpoint_distance_squared": "3/65536",
+      "field_difference_squared": 1,
+      "maximum_field_norm_squared": 4,
+      "wrong_incoming_sign_residual": "1/128"
+    }
+  ],
+  "runtime_seconds": 0.002869199961423874,
+  "scope": "Independent exact-rational reproduction of w402 Lemma 2 and Proposition 3; not actual SAW partition sums or formal verification"
+}

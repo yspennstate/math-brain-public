@@ -1,0 +1,119 @@
+\section*{A character--point-defect obstruction to overlap-only associator payment}
+
+All logarithms are natural.  Put
+\[
+ \Phi(t)=t^2\log(1/t^2),\qquad \Phi(0)=0,
+\]
+and for a real function $u$ write
+\(\mathcal E(u)=\sum_S\Phi(\widehat u(S))\).
+
+Fix $n\geq1$, let $N=2^n$, fix a coordinate character $\chi$, and choose
+$y$ with $\chi(y)=-1$.  Define genuine Boolean functions
+\[
+ g_- =\chi,\qquad g_+=\chi+2\mathbf1_{\{y\}},\qquad h=-\chi.
+\tag{1}
+\]
+The pointwise formula is Boolean because the value of $\chi$ at $y$ is
+$-1$.  With
+\[
+ a=(g_++g_-)/2=\chi+\mathbf1_{\{y\}},\qquad
+ b=(g_+-g_-)/2=\mathbf1_{\{y\}},
+\]
+the composition is
+\[
+ F=a+hb=g_+.
+\tag{2}
+\]
+
+Take the physical block to be the full $n$-cube.  Since $h$ is the single
+Fourier character $-\chi$, its zero-frequency part vanishes.  Thus the
+block decomposition has source channel $A=a$ and exactly one nonzero
+selector channel $C=hb=\mathbf1_{\{y\}}$.  In particular its signed
+interference and shared remainder coincide:
+\[
+ \Omega_N=R_B^{\rm sh}=\mathcal E(F)-\mathcal E(A)-\mathcal E(C).
+\tag{3}
+\]
+
+\subsection*{Exact formula}
+
+The Fourier coefficients of a point mass have magnitude $1/N$.  At the
+character frequency the point-mass sign is negative.  Therefore
+\[
+\begin{aligned}
+ \mathcal E(F)&=\Phi(1-2/N)+(N-1)\Phi(2/N),\\
+ \mathcal E(A)&=\Phi(1-1/N)+(N-1)\Phi(1/N),\\
+ \mathcal E(C)&=N\Phi(1/N),
+\end{aligned}
+\]
+and hence
+\[
+ \boxed{\Omega_N=
+ \Phi(1-2/N)+(N-1)\Phi(2/N)
+ -\Phi(1-1/N)-(2N-1)\Phi(1/N).}
+\tag{4}
+\]
+
+The selector has one coefficient of squared magnitude one, so its complete
+$\alpha$-log envelope is exactly zero:
+\[
+ \sum_{\alpha\ne0}\widehat h(\alpha)^2
+        \log\frac1{\widehat h(\alpha)^2}=0.
+\tag{5}
+\]
+For the collision credit from the preceding B12 theorem, only source
+frequencies containing the selected coordinate contribute.  Exactly $N/2$
+of the $N$ point-mass frequencies do so, each with squared mass $1/N^2$.
+Consequently
+\[
+ \mathsf O_B={1\over2N},\qquad 2\mathsf O_B={1\over N}.
+\tag{6}
+\]
+
+\subsection*{Asymptotic separation}
+
+For fixed $c$,
+\[
+ \Phi(1-c/N)={2c\over N}+O(N^{-2}).
+\tag{7}
+\]
+The remaining terms in (4) are explicit.  Substitution gives
+\[
+ \boxed{N\Omega_N=4\log N+2-8\log2
+       +O\!\left({\log N\over N}\right).}
+\tag{8}
+\]
+Combining (5), (6), and (8),
+\[
+ {\Omega_N\over
+  2\mathsf O_B+
+  \sum_{\alpha\ne0}\widehat h(\alpha)^2
+       \log(1/\widehat h(\alpha)^2)}
+ =N\Omega_N\longrightarrow\infty.
+\tag{9}
+\]
+Thus no finite universal coefficient can pay the positive signed block
+associator by the exact overlap refund plus the already-paid selector
+$\alpha$-log envelope.  This is a genuine Boolean counterfamily to that
+helper inequality, not to FEI.
+
+\subsection*{The missing source budget has the correct scale}
+
+For $b=\mathbf1_{\{y\}}$, every squared Fourier coefficient is $1/N^2$.
+Therefore
+\[
+ \mathbf I(b)={1\over N^2}\sum_{S\subseteq[n]}|S|
+              ={n\over2N}.
+\tag{10}
+\]
+Since $\log N=n\log2$, (8) and (10) yield the finite limit
+\[
+ \boxed{\lim_{n\to\infty}{\Omega_N\over\mathbf I(b)}=8\log2.}
+\tag{11}
+\]
+The family therefore identifies the missing order of payment: the overlap
+refund is smaller by a logarithmic factor, while one-use source influence
+has exactly the required scale.  Any next universal B12 estimate must retain
+source influence or an equivalent terminal derivative-entropy reserve; an
+overlap-only repair of the scalar associator cannot work.
+

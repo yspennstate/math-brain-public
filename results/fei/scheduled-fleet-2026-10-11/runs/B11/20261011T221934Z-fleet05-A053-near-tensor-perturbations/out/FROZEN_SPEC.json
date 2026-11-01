@@ -1,0 +1,12 @@
+{
+  "helper_version": "A053-check-near-tensor-v1",
+  "actual_Boolean_family": "All signs on n=1,2,3, every one-point flip; all products of two arbitrary two-bit signs, every one-point flip; balanced tensor powers of all one- and two-bit signs for t=1,2,3 with point at zero",
+  "parameter_domain": "n<=7; no automatic escalation",
+  "case_count": "2120 exhaustive seed/point cases; 4096 two-factor product/point cases; 60 tensor embedding cases; total 6276",
+  "symmetry": "None; all signs and points in the declared domains",
+  "arithmetic": "integer Walsh transforms and Fraction probabilities; rational logarithm intervals via atanh series for selected entropy checks; exact rank-one factorization via all two-by-two minors",
+  "memory_estimate_MB": 25,
+  "maximum_runtime_seconds": 60,
+  "pilot": true,
+  "scope": "Finite identities support analytic all-dimensional proof, not a finite-to-infinite inference"
+}

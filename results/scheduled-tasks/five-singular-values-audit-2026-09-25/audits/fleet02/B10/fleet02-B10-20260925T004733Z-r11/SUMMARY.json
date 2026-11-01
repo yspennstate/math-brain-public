@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B10",
+  "run_id": "fleet02-B10-20260925T004733Z-r11",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "tex_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "pdf_blob": "8be3aae36ecad7a9dc9b7c95978aad09499f32d0",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "pdf_bytes": 484310,
+  "pdf_pages": 14,
+  "theorem_verdict": "GAP_REPAIRABLE_LOCAL_AS_WRITTEN; PASS_AFTER_C01_C02_C03",
+  "findings": [
+    {
+      "id": "C01",
+      "status": "FALSE",
+      "lines": "412",
+      "pdf_page": "9",
+      "repair": "replace half-open angular chart by open angular chart omitting one null ray; same Jacobian"
+    },
+    {
+      "id": "C02",
+      "status": "GAP",
+      "lines": "319-322",
+      "pdf_page": "7",
+      "repair": "insert Jensen/Cauchy-Schwarz |E F|^2 <= E|F|^2 before averaging"
+    },
+    {
+      "id": "C03",
+      "status": "GAP",
+      "lines": "416,441-442",
+      "pdf_page": "9-10",
+      "repair": "explicitly exclude atom at critical level; it is a union of two affine lines under a 2D density"
+    },
+    {
+      "id": "C04",
+      "status": "FALSE",
+      "lines": "41",
+      "pdf_page": "1",
+      "impact": "descriptive only; A=I_5 falsifies the unqualified abstract wording"
+    },
+    {
+      "id": "C05",
+      "status": "FALSE",
+      "lines": "65",
+      "pdf_page": "1",
+      "impact": "descriptive only; definite pair can have bounded density"
+    },
+    {
+      "id": "C06",
+      "status": "PASS_EDITORIAL",
+      "lines": "148",
+      "pdf_page": "3",
+      "repair": "Both -> All three"
+    },
+    {
+      "id": "C07",
+      "status": "UNCHECKED",
+      "lines": "62",
+      "pdf_page": "1",
+      "impact": "external literature-status claim; no proof dependency"
+    }
+  ],
+  "constants_status": "PASS_EXACT_RATIONAL_CERTIFICATES",
+  "pass1": "coverage_pass1_v2.jsonl",
+  "pass2": "coverage_pass2.jsonl (ignore virtual trailing line-676 record; see COVERAGE_CORRECTION.md)",
+  "pdf_visual_raster": "UNCHECKED; exact PDF bytes and all page text streams verified",
+  "lower_threshold_research_performed": false
+}

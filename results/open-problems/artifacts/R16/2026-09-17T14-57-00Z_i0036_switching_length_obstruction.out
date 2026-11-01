@@ -1,0 +1,15 @@
+PLANAR_FACE_CERTIFICATE_PASS
+S_ab = x^3 + x^6 + x^8
+S_ac = x^5 + 2*x^6 + x^7
+S_ad = x^5 + 2*x^6 + x^7
+S_bc = x^4 + x^6 + 2*x^7
+S_bd = 2*x^5 + x^6 + x^8
+S_cd = x^3 + x^5 + x^8
+LHS = S_ac*S_bd = 2*x^10 + 5*x^11 + 4*x^12 + 2*x^13 + 2*x^14 + x^15
+RHS = S_ab*S_cd + S_ad*S_bc = x^6 + x^8 + 2*x^9 + 2*x^10 + 5*x^11 + 4*x^12 + 6*x^13 + 3*x^14 + x^16
+RHS-LHS = x^6 + x^8 + 2*x^9 + 4*x^13 + x^14 - x^15 + x^16
+[x^15] LHS = 1
+[x^15] RHS = 0
+UNIQUE_SOURCE_LENGTH_15 = (('a', 0, 4, 5, 2, 3, 6, 'c'), ('b', 4, 0, 1, 2, 5, 6, 3, 'd'))
+WEIGHTED_DIFFERENCE_ON_0_1 = x^6+x^8+2*x^9+4*x^13+x^14*(1-x)+x^16 >= 0
+ALL_EXACT_CHECKS_PASS

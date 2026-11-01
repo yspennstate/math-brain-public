@@ -1,0 +1,52 @@
+[
+  {
+    "service": "openalex_retry",
+    "url": "https://api.openalex.org/works?search=2608.21125&per_page=5",
+    "date": "2026-10-11",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "openalex_citing_identifier",
+    "url": "https://api.openalex.org/works?filter=cites:https%3A%2F%2Farxiv.org%2Fabs%2F2608.21125&per_page=20",
+    "date": "2026-10-11",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "semantic_retry",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=threshold%20cascades%20unimodular&limit=10&fields=title,year,externalIds",
+    "date": "2026-10-11",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "service": "arxiv_recent",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22threshold%20cascades%22%20AND%20submittedDate%3A%5B20260821%20TO%2020261011%5D&max_results=50",
+    "date": "2026-10-11",
+    "status": 200,
+    "file": "arxiv_recent.txt",
+    "bytes": 6037
+  },
+  {
+    "service": "arxiv_chen",
+    "url": "https://export.arxiv.org/api/query?search_query=ti%3A%22necessary%20and%20sufficient%20condition%22%20AND%20au%3AChen%20AND%20all%3A%22derivative%20martingale%22&max_results=5",
+    "date": "2026-10-11",
+    "status": 200,
+    "file": "arxiv_chen.txt",
+    "bytes": 2014
+  },
+  {
+    "service": "aidekon_pdf",
+    "url": "https://arxiv.org/pdf/1101.1810",
+    "date": "2026-10-11",
+    "status": 200,
+    "file": "aidekon_pdf.pdf",
+    "bytes": 713849
+  },
+  {
+    "service": "companion_pdf",
+    "url": "https://arxiv.org/pdf/2608.15987",
+    "date": "2026-10-11",
+    "status": 200,
+    "file": "companion_pdf.pdf",
+    "bytes": 460608
+  }
+]

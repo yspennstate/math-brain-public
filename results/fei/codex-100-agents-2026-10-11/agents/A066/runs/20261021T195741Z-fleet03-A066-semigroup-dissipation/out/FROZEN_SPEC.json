@@ -1,0 +1,21 @@
+{
+  "helper_version": "data-debit-v1",
+  "family": "b(y)=(-1)^sum y_2k*y_(2k+1); core c(y,j)=b(y)-2*1_y=0*1_j=1; F(y,j,z)=b(y)+1_y=0*(r(j,z)-1), r=+1 only at j=z=0",
+  "domain": "pilot m=2; full m=2..6",
+  "case_count": 5,
+  "symmetry": "none; direct full labeled truth tables; analytic all m>=2",
+  "arithmetic": "integer Walsh, Fraction; rational atanh log intervals, 32 terms after binary reduction",
+  "memory_estimate_MB": 80,
+  "max_runtime_seconds": 55,
+  "max_dimension": 14,
+  "automatic_escalation": false,
+  "checks": [
+    "Booleanity and exact source/child truth tables",
+    "Walsh versus analytic spectra",
+    "independent edge influences",
+    "full actual terminal entropy debit",
+    "same G,R and exact reserve drop",
+    "signed empty-spectrum heat boundary",
+    "all-m bound DeltaH/e>=m+3 via midpoint curvature"
+  ]
+}

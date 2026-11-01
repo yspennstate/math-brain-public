@@ -1,0 +1,2 @@
+STATE: A095 stage5 saved: adaptive SAME-reference point-edit history paid from one source bank under explicit cumulative Pi_g/padding admission; weak unequal two-child first/second exposure certified;143,810 exact assertions PASS; independent review pending; FEI OPEN.
+NEXT: A094/A086 review point-path bank; pay beyond-admission weak history using measured incoming Gamma and signed old-sector KL, retaining child normalizers and one original owner (C020/C024).

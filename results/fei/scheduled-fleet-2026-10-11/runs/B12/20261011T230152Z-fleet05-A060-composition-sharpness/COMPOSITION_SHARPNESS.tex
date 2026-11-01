@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A060: exact composition sharpness controls}\maketitle
+All spectral entropy and erasure quantities below are in bits. The repeated
+singleton-log charge is in nats. Complete proofs and scope qualifications
+are in the adjacent \texttt{PROOF.md}.
+
+For a fresh rare-switch chain $F_0=x_0$ and
+$F_t=(1-A_r)F_{t-1}+A_r y_t$, put $p=2^{-r}$, $q=1-p$ and
+$\phi(u,v)=(u+v)h_2(v/(u+v))$. Exactly,
+\[
+ I(F_d)=1+r(1-q^d),\quad
+ H(F_d)=\left[q^2\log_2(q^{-2})+2rp(2-p)\right]\frac{1-q^d}{p},
+\]
+\[
+ B(F_d)=r\left[\phi(q^2,p^2)+2p-2p^2\right]\frac{1-q^d}{p}.
+\]
+The relaxed root ledger adds
+$D_d=\sum_{t=1}^{d-1}q^{d-t}\Lambda(F_t)$, although the exact
+outer erasure residual in the continuation sector is zero. It obeys
+$D_d\ge p d(d-1)q^{2d}$. At $r=3k$, $d=2^{2k}$, $k\ge2$,
+\[
+ I\le5/2,\quad H\le6(I-1),\quad
+ D_d\ge2^{k-1}(1-2^{-2k})\longrightarrow\infty.
+\]
+In the regime $dp\to0$, $r\to\infty$, $D_d\sim pd^2$ while
+$H\sim4rpd$. The gate deficit is $rp$, not $p$.
+
+Let $m\ge2$ be even, $a\ge1$, $\delta=2^{-m}$ and $p=2^{-a}$.
+For quadratic bent $b$ with $b(0)=1$, set
+$F(z,y)=b(y)-2\mathbf1_{z=0}\mathbf1_{y=0}$ and $W=\{z_1,\ldots,z_a\}$.
+Then $I_W=2ap\delta$, $I_{\rm data}=m(1/2+2p\delta)$.
+With $\beta=4p(1-p)\delta$, the exact selector/data chi-square is
+\[
+ \chi^2=\frac{\beta}{1-\beta}
+ \frac{16p^2\delta(1-\delta)}{(1+4p\delta)^2-16p^2\delta}.
+\]
+Put $L=2(1-p)(m+2a-2+1/\ln2)/a$. For all such parameters,
+\[
+ L-\frac{32p\delta}{a\ln2}\le\frac{B_W}{I_W}\le L.
+\]
+This diverges for fixed $a$ and $m\to\infty$, but tends to $4+2\lambda$
+when $a\to\infty$ and $m/a\to\lambda<\infty$. The branches have
+correlation $1-2\delta$ and are neither balanced nor orthogonal.
+
+On any class closed under disjoint tensor powers, a fixed additive term in
+$H\le CI+D$ disappears by division by the tensor exponent. This does not
+apply to an overhead proportional to that exponent, or to a class lacking
+tensor closure. None of these controls disproves full FEI.
+\end{document}

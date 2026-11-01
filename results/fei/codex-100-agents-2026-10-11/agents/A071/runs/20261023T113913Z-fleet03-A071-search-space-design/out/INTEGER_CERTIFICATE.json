@@ -1,0 +1,49 @@
+{
+  "formula": "2048*drift=3087log2(7)-4736-2268log2(3)-50log2(5)",
+  "inequality": "7^3087 > 2^4736 * 3^2268 * 5^50",
+  "comparisons": [
+    {
+      "name": "positive_drift",
+      "comparison": "lhs>rhs",
+      "lhs_bits": 8667,
+      "rhs_bits": 8447,
+      "lhs_sha256": "04366bfed75bdfdbdb34d5a512d633e6a74e1de1056cfb38c5b22f6c81fb80bd",
+      "rhs_sha256": "18f059ed7bacc082b256ab7db3e30389d90ff6f04581ba370aa7bf560b402863"
+    },
+    {
+      "name": "parent_C_positive",
+      "comparison": "lhs>rhs",
+      "lhs_bits": 14593,
+      "rhs_bits": 13203,
+      "lhs_sha256": "24130915057e4edc9856098a64cb3e917dab018e8719612a2bcac6b67670b4dc",
+      "rhs_sha256": "09c4f3e3e85e4c7495a9be429ea2609376fc05cd4a628edf9b5f9472e79065f1"
+    },
+    {
+      "name": "child0_C_positive",
+      "comparison": "lhs>rhs",
+      "lhs_bits": 3393,
+      "rhs_bits": 2755,
+      "lhs_sha256": "c223ffe785b44f61908fb0ad0bed05f5fd15afc0c3a9d95529335ea26547431d",
+      "rhs_sha256": "173b391eb03af5a146b64a21d9c975316e9b193ef21885e48d78f6ce85227871"
+    },
+    {
+      "name": "child1_C_positive",
+      "comparison": "lhs>rhs",
+      "lhs_bits": 49,
+      "rhs_bits": 43,
+      "lhs_sha256": "847b68e04850722a806bb44550e8c03218f8dfac46c78fd719ffe1303f915b60",
+      "rhs_sha256": "a25e395960716cc80e0063028f0c3c2e795d82efd65039f619b11f235d2e2b6a"
+    },
+    {
+      "name": "AND3_rate3_slack_positive",
+      "comparison": "lhs>rhs",
+      "lhs_bits": 15,
+      "rhs_bits": 15,
+      "lhs_sha256": "f0564615f8ba3c7397159da25de41ae044adcd2c4aeaf7d5018948b35fc2e60a",
+      "rhs_sha256": "eec4121f2a07b61aba16414812aa9afc39ab0a136360a5ace2240dc19b0464eb"
+    }
+  ],
+  "all_K_ge_3": "Every AND_m restriction for m<=3 has H<=3I; AND3 uses3^9>2^14, AND2 H2=2,I2=1, smaller H0. Thus all inner hulls vanish for every real K>=3 and the SAME strict drift remains.",
+  "seconds": 0.0021316999991540797,
+  "full_fei": "OPEN"
+}

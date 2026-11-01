@@ -1,0 +1,84 @@
+[
+  {
+    "claim_id": "A079-CUBIC-ROW-CONDITIONAL-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every Boolean F on two independent uniform physical address bits X and arbitrarily many uniform data bits Y, if each nonzero conditional squared Fourier row is a coordinate-product law with at most one nonfair varying coordinate, arbitrary nonfair marginal, arbitrary Fourier signs and arbitrary fixed frequency coordinates, then H(S_Y|S_X)<=[3/2+(5/2)h2(1/10)]I_Y(F), sharply, and H(F)<=[6+2log2(65/64)]I(F). If all nonfair primitive magnitude ratios belong to {2,3,4}, the sharper bound H(F)<=[10-3log2(3)]I(F) holds. Universally for every two-address Boolean F, H(w)<=sum_J w_J H_{1/2}(p_J)+2I_X(F); hence full H(F)<=sum_J w_J[H(p_J)+H_{1/2}(p_J)]+2I_X(F). For integer height-two rows of the fixed-ratio family, ratio2 requires at least one other fair coordinate, ratio4 requires at least three, and weights are <=5/8 for ratio2 or3 and <=17/32 for ratio4. Quadratic branch signs admit exactly the equal/overlapping/disjoint affine inverse-support amplitude classification in DERIVATION.md; the low-dimensional exclusion holds for arbitrary signs.",
+    "hypotheses": [
+      "Normalized Walsh; entropy in bits; all influence in the original physical coordinates",
+      "Exactly two address bits and actual Boolean signs; nonzero row h_J=2 E_X F chi_J",
+      "Conditional spectra are coordinate products with at most one nonfair varying coordinate; arbitrary marginal and Fourier signs; the sharper joint bound assumes ratios2,3,4",
+      "Inverse-support classification alone assumes quadratic Fourier-sign branches; universal row ledger assumes neither product spectra nor phase degree"
+    ],
+    "statement_sha256": "54e35f267d50603bd438aa62575dd1ae671be77dee1eba5a102706e89ad30b85",
+    "contributors": [
+      "A079"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A079\\runs\\20261014T030635Z-fleet05-A079-correlated-auxiliaries\\DERIVATION.md",
+      "sha256": "0498cf11c17539bde91c5be6a3a70e78918f58b25e6245456d5a311c7a8ef11c"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "NARROW_AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A032",
+      "A034",
+      "A068",
+      "A088",
+      "A092",
+      "A094",
+      "B16",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A079-SHARP-QUADRATIC-TWO-PHASE-COLLISION",
+    "version": 1,
+    "exact_statement": "For every n>=0 and every two quadratic Boolean phases g0,g1 on the same uniform physical n-bit cube, G(z,y)=g_z(y) has selector entropy decrement L=H(G)-(H(g0)+H(g1))/2 <= (12-(9/2)log2(3))*Inf_z(G), and H(G) <= (16/3-(3/2)log2(3))*I(G). Both constants are attained by g0=1 and g1=(-1)^(y0*y1). The admitted distinct-label quadratic affine-row function f(x,z,y)=(-1)^(xz+zy0y1) restricts at x=0 to this witness, so arbitrary label collision does not preserve a conditional constant of two. For X=z,Y=(y0,y1), the witness retains H(S_Y|S_X)=2-(3/8)log2(3) and I_Y=1/2.",
+    "hypotheses": [
+      "Normalized Walsh transform; entropy in bits; influence is physical squared Fourier mean degree",
+      "Two actual quadratic sign phases on the same full uniform data cube",
+      "One independent uniform physical selector bit",
+      "No assertion for unequal affine supports or repeated collision closure"
+    ],
+    "statement_sha256": "938777233a0b7fffcfbb415d033d99989abf54fea66bda2d6e32cc6eda6f12ef",
+    "contributors": [
+      "A079"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A079\\runs\\20261014T000722Z-fleet05-A079-correlated-auxiliaries\\DERIVATION.md",
+      "sha256": "4375d67f0fd79bd6cc987a94eeff97ad2ada7f92c70a62f1ab8149a35eef3b09"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A068",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "source": {
+          "path": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261014T023317Z-fleet05-A068-antichain-beyond-one-order\\REPORT.md",
+          "sha256": "cb3c7eb9feb7827b10eff7ae119f7436e1228b8823362f86bfc7e8eeb8f2e89c",
+          "locator": "Section 5: independent reconstruction; proof dependencies and changed downstream conclusions"
+        },
+        "method": "All-dimensional affine-support/rank reconstruction plus independent direct integer Walsh and rational prime-log verification; no author code import or substantive repair",
+        "registry_adoption": "NOT_VERIFIED"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_PENDING_REGISTRY_ADOPTION",
+    "supersedes": [],
+    "refutes": [
+      "Unqualified extension of A034 conditional constant two through an X restriction merging two quadratic labels"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A034",
+      "A080",
+      "A088",
+      "A092",
+      "B16",
+      "B20"
+    ]
+  }
+]

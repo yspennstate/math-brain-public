@@ -1,0 +1,18 @@
+{
+  "helper_version":"A028 v7 check.py and exact_helper.py copied byte-for-byte, independently direct-character verification",
+  "family":"actual Boolean binary mux; controller dimension0..2; shared source data dimension0..1",
+  "pilot":{"controller_max_dim":1,"data_max_dim":1,"roots":120,"reference_cases_per_root":8,"cases":960,"max_seconds":60},
+  "full":{"controller_max_dim":2,"data_max_dim":1,"roots":440,"reference_cases_per_root":8,"cases":3520,"max_seconds":480},
+  "source_references":["uniform","half actual spectrum plus half uniform"],
+  "controller_references":["root empty-calibrated conditional-nonempty uniform","root empty-calibrated average of true conditional law and uniform"],
+  "extra_fixture":"controller on3bits negative at0,1,2; G=point-defect3 times a shared dictator; H=Maj3 times the same dictator; data refs uniform, controller conditional weights 1,2,3,4,5,6,7 (nonempty index order), root empty calibrated",
+  "extra_policies":["D0,C0,D1,C1 then stop","C0,D0,C1,D1,C2,D2,D3 complete","adaptive choose unused coordinate by history parity and stop after depth>=3 on even parity"],
+  "queries":"all physical root queries and both inherited child states; three actual mixed stopping trees on fixed extra fixture",
+  "symmetry":"none; counts preserve padded variables and constants",
+  "arithmetic":"rational spectra, references and kernels; exact rational prime-log vectors; outward rational atanh sign intervals",
+  "memory_estimate_MB":180,
+  "maximum_runtime_seconds":480,
+  "independent":"direct character sums on fixed six-variable subfixture and two frozen mixed policies; at most254 nodes; 60seconds",
+  "automatic_escalation":false,
+  "note":"full root count uses equal-dimension G/H only:22*(2^2+4^2)=440;8 reference choices each"
+}

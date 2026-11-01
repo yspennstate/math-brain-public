@@ -1,0 +1,28 @@
+QFORM-RANK3-TRANSVERSE-NULL-PAIR-v1 numerical/algebraic sanity checks
+
+1. Universal constant from Theorem 4.1:
+   8*2^(2/3) = 12.699208415745595 < 13.
+
+2. Exact test frame data in spectral signature (1,1,-1):
+   Lambda = diag(1,1,-1).
+   u1 = (1/(2 sqrt(2)))*(1,0,1).
+   u2 = (1/(2 sqrt(2)))*(0,1,1).
+   Then
+     u1^T Lambda u1 = 0,
+     u2^T Lambda u2 = 0,
+     a = u1^T Lambda u2 = -1/8,
+     ||u1||^2 = ||u2||^2 = 1/4,
+     u1 dot u2 = 1/8,
+     Delta_12 = (1/4)(1/4)-(1/8)^2 = 3/64.
+   Since |det Lambda|=1, Theorem 5.1's Schur identity predicts
+     |a|^2 |sigma| = 3/64.
+   With |a|^2=1/64 this gives |sigma|=3.
+   A Parseval completion of these two rows was checked numerically: the
+   resulting pair Schur complement had numerical eigenvalues
+     (-6.12e-16, -2.67e-17, 3.0000000000),
+   and |a|^2*3 = 0.046875 = 3/64 to floating precision.
+
+3. For this example the theorem's displayed density constant is
+   8*2^(2/3)*(3/64)^(-1/3) = 35.22055732154268.
+
+These checks diagnose arithmetic only. The proof is the analytic argument in REPORT.md; no numerical experiment is used as proof of the theorem or of the full QFORM conjecture.

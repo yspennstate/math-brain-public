@@ -1,0 +1,25 @@
+(1) cert diff vs beta_3 * Delta(A, G), my map
+  (-0.10, 2.20) cert +1.701186008747e-03  beta*Delta +1.701186008747e-03  direct +1.701186008747e-03  eA/G^2 0.8056
+  ( 0.30, 2.30) cert +9.378334833554e-04  beta*Delta +9.378334833554e-04  direct +9.378334833554e-04  eA/G^2 0.8713
+  ( 0.10, 2.25) cert +1.535260930047e-03  beta*Delta +1.535260930047e-03  direct +1.535260930047e-03  eA/G^2 0.8410
+  (-0.10, 2.30) cert +1.074557653032e-03  beta*Delta +1.074557653032e-03  direct +1.074557653032e-03  eA/G^2 0.8204
+  ( 0.30, 2.20) cert +1.744678035453e-03  beta*Delta +1.744678035453e-03  direct +1.744678035453e-03  eA/G^2 0.8598
+  ( 0.00, 1.80) cert -2.139201887415e-03  beta*Delta -2.139201887415e-03  direct -2.139201887415e-03  eA/G^2 0.7565
+  (-0.50, 2.40) cert +4.490015956960e-04  beta*Delta +4.490015956960e-04  direct +4.490015956960e-04  eA/G^2 0.7736
+(2) transfer to m = 3, 4, 6: prefix on the same (A, G) as B points
+  B point (-0.10, 2.20) m=3: |dA| 0.0e+00 |dG| 0.0e+00  direct +1.511765e-06  beta*Delta +1.511765e-06  ratio 1.000000000  positive True
+  B point (-0.10, 2.20) m=4: |dA| 0.0e+00 |dG| 0.0e+00  direct +1.431408e-09  beta*Delta +1.431408e-09  ratio 1.000000000  positive True
+  B point (-0.10, 2.20) m=6: |dA| 0.0e+00 |dG| 1.8e-15  direct +1.426798e-15  beta*Delta +1.426798e-15  ratio 1.000000000  positive True
+  B point ( 0.10, 2.25) m=3: |dA| 0.0e+00 |dG| 0.0e+00  direct +1.354130e-06  beta*Delta +1.354130e-06  ratio 1.000000000  positive True
+  B point ( 0.10, 2.25) m=4: |dA| 1.8e-15 |dG| 0.0e+00  direct +1.271542e-09  beta*Delta +1.271542e-09  ratio 1.000000000  positive True
+  B point ( 0.10, 2.25) m=6: |dA| 1.8e-15 |dG| 1.8e-15  direct +1.242900e-15  beta*Delta +1.242900e-15  ratio 1.000000000  positive True
+  B point ( 0.30, 2.30) m=3: |dA| 3.6e-15 |dG| 0.0e+00  direct +8.183107e-07  beta*Delta +8.183107e-07  ratio 1.000000000  positive True
+  B point ( 0.30, 2.30) m=4: |dA| 3.6e-15 |dG| 0.0e+00  direct +7.591047e-10  beta*Delta +7.591047e-10  ratio 1.000000000  positive True
+  B point ( 0.30, 2.30) m=6: |dA| 1.8e-15 |dG| 1.8e-15  direct +7.204244e-16  beta*Delta +7.204244e-16  ratio 1.000000000  positive True
+(3) range over B and the m = 2 Jacobian
+  eA/G^2 on B corners: min 0.8056 max 0.8713 (m=2 region is (1/2, 1))
+  det d(A,G)/d(x1,x2) = (2/e)(x1 - x2); x2/x1 = exp(g1+g2) >= exp(2.1) on B, so det < 0 throughout: local diffeo
+(4) Monte Carlo, y-grid integrator (independent of the root method)
+  T=2  D(P_S||Q_S) 0.23344 +- 0.00735   last-step gain 1.9819e-03 +- 3.7e-05
+  T=3  D(P_S||Q_S) 0.21349 +- 0.00770   last-step gain 1.9122e-03 +- 2.9e-05
+  T=4  D(P_S||Q_S) 0.19276 +- 0.00501   last-step gain 1.6438e-03 +- 2.3e-05

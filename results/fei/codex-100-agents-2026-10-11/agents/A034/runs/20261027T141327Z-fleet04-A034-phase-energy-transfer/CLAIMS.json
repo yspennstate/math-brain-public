@@ -1,0 +1,36 @@
+[
+  {
+    "claim_id": "A034-AFFINE-PLANE-HEREDITARY-PHASE",
+    "version": 5,
+    "exact_statement": "For integer s>=2 put C=3+log2(e), R_s=64s^2, L_s=log2(s)+(s-1)log2(R_s)+C, J_s=(s-2)(1+log2(R_s))+2C, K_s=max(L_s,11J_s/3), K_s_rare=max(L_s,11J_s/6). Every ternary row u formed from at most s disjoint affine physical uniform-cube cells with intrinsic quadratic signs satisfies B(u)=sum_T uhat(T)^2 log2(1/uhat(T)^2)<=K_s E(u), retaining B(u)=mu H(P_u)+mu log2(1/mu). If mu<=1/2 use K_s_rare. A single piece has B<=C E. The rates are O(s log s); proper FOUR-cell rows have full rate<114, and support-mass<=1/2 FOUR-cell rows full rate<57. For an actual Boolean sign on disjoint independent uniform X,Y cubes with <=M complete affine Y phase cells, quadratic phases and INDIVIDUAL affine X-label maps on the cells, H(F)<=K_M I_Y and H(S_Y|S_X)<=K_M I_Y under every mixed physical restriction, with the direct single-piece bound at M1. The old complete-source rate2^(M+1), conditional rate2^M and fixed-M tensor guard degree<=M+1 remain valid. Optional integer X-degree cap d>=1 and arbitrary spectral correlations are allowed. The new scalar input is phi(|sum a_j|)<=sqrt(2) sum phi(|a_j|) for sum|a_j|<=1, phi(t)=sqrt(-t^2 ln(t^2)); factor1 if the sum is<=1/2. The squared factor2 is sharp as a scalar inequality.",
+    "hypotheses": [
+      "independent uniform physical X,Y cubes",
+      "actual Boolean sign F for source corollary",
+      "ternary row with disjoint nonempty affine physical cells and intrinsic quadratic signs",
+      "entropy bits; natural units only in scalar proof",
+      "finite piece count s or source phase count M; no dimension, codimension, rank or mass-ratio bound",
+      "rare-row improvement additionally mu<=1/2"
+    ],
+    "statement_sha256": "6b8dc7dd814e16e5569019404af449235245fa98e97a1599d6773126318ff223",
+    "contributors": [
+      "A034; A033 bounded-F2-degree mechanism credited and reconstructed"
+    ],
+    "proof_source": "PROOF.md sections1-5",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      "A034-AFFINE-PLANE-HEREDITARY-PHASE@4"
+    ],
+    "refutes": [],
+    "first_unproved_line": "No row bound uniform in growing piece count, and no original-influence-priced bounded-piece decomposition for arbitrary Boolean cores. Independent reconstruction of version5 pending.",
+    "next_consumers": [
+      "A079",
+      "A033",
+      "A088",
+      "A094",
+      "B07",
+      "B20"
+    ]
+  }
+]

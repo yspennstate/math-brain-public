@@ -1,0 +1,29 @@
+{
+  "helper_version": "A061-stage22-v1",
+  "family": "N=2^(m-1) actual disjoint point_m signs; optional bent mask; selected block depth m-r, exact spectrum references until one block-product installation",
+  "domain": {
+    "pilot_m": [
+      2,
+      3,
+      4
+    ],
+    "main_m": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "r": "all integers 1..m; no automatic extension",
+    "direct_states": "all ordered pairs of constant/live/frozen point-block states for m<=4, every legal block query and reset"
+  },
+  "case_count": "35 (m,r) pairs main; 9 pilot; finite state count computed before iteration and reported",
+  "symmetry": "point coordinates/outcomes identical up to translation; two explicit physical children constant and point_(s-1); independent full labelled truth-table check",
+  "arithmetic": "Fraction Walsh, prime-exponent log forms, 48-term outward atanh log intervals; symbolic equalities; no float signs",
+  "memory_estimate_mb": 80,
+  "pilot_max_seconds": 55,
+  "maximum_runtime_seconds": 120,
+  "heavy": false
+}

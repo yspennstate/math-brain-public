@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T065845Z-fleet03-B04-qform-auto11-r27",
+  "theorem": "QFORM-ROWSTAR-CLEANBANK-LINF-v1",
+  "checks": {
+    "row_star_constant": {
+      "expression": "2^(3/4)*sqrt(pi)",
+      "value": 2.98090017885818
+    },
+    "peer_pairvolume_constant": {
+      "expression": "12*2^(5/6)*exp(5/24)",
+      "value": 26.334046180759735,
+      "source_commit": "55255bcb25271145aa9f5a1a93a0cc84ad8e1c3d"
+    },
+    "three_sample_constant": {
+      "expression": "6*3^(1/4)*sqrt(e)",
+      "value": 13.019035313822702,
+      "source_commit": "053c462960cc0c0068d221ffece8029a662a7ab6"
+    },
+    "example_m6": {
+      "reduced_matrix": [[0.3333333333333333, 2.0], [2.0, 2.0]],
+      "exact_eigenvalues": [3.3333333333333335, -1.0],
+      "singular_values": [3.3333333333333335, 1.0],
+      "E2": 11.11111111111111,
+      "density_bound": 1.6327062696318093
+    },
+    "example_general": {
+      "det_Km": "-4*(1-1/m)",
+      "E2": "16*(1-1/m)^2",
+      "small_singular_value": "sqrt(4+(1-1/m)^2)-(1+1/m)",
+      "small_singular_ge_1_iff": "m>=6",
+      "density_bound": "2^(-1/4)*sqrt(pi)/sqrt(1-1/m)",
+      "limit_bound": 1.49045008942909,
+      "max_physical_cross_coefficient": "2/sqrt(m)"
+    },
+    "algebra": {
+      "row_star_factorization": "M=[r^T; a v^T]",
+      "E2_identity": "E2=||a||_2^2 * ||r wedge v||_2^2",
+      "double_star_identity": "E2=Delta^2 ||a||_2^2 ||b||_2^2"
+    }
+  },
+  "status": "PASS_ANALYTIC_FORMULAS_AND_FINITE_CONSTANTS"
+}

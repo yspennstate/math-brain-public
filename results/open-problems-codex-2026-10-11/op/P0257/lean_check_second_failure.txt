@@ -1,0 +1,14 @@
+Command: lake env lean ~\brain_workers\TRIO_1011\op\P0257\FiniteCharge.lean
+Exit: 1
+Elapsed seconds: 357.11
+~\brain_workers\TRIO_1011\op\P0257\FiniteCharge.lean:15:32: error(lean.unknownIdentifier): Unknown constant `Finset.mul_sum`
+~\brain_workers\TRIO_1011\op\P0257\FiniteCharge.lean:12:30: error: unsolved goals
+α : Type u_1
+inst✝ : Fintype α
+charge score loss : α → ℝ
+L R : ℝ
+hlocal : ∀ (v : α), 2 * score v - loss v ≤ charge v
+htotal : ∑ v, charge v = 2 * L
+hloss : ∑ v, loss v ≤ 2 * R
+hs : ∑ x, 2 * score x - ∑ x, loss x ≤ ∑ v, charge v
+⊢ ∑ v, score v - R ≤ L

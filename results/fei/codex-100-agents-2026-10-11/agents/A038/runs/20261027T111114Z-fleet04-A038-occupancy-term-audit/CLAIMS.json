@@ -1,0 +1,48 @@
+[
+  {
+    "claim_id": "A038-BALANCED-CANONICAL-ADMISSION",
+    "version": 7,
+    "exact_statement": "For every finite-dimensional uniform Boolean f, with V4 the maximum physical-restriction-tree weighted positive rate-4 query deficit, [H(f)-4I(f)]_+ <= V4(f) <= H(f). Moreover V4=H-W4 where W4 is the minimum complete-tree weighted sum of min(entropy drop,4 queried influence). Thus existence of a universal V4<=K I bound is equivalent to full FEI, with C->K=C and K->C=K+4. An actual Boolean unbounded V4/I family would disprove FEI.",
+    "hypotheses": [
+      "finite uniform cube",
+      "Boolean output {-1,1}",
+      "actual physical fresh-coordinate adaptive restriction trees",
+      "base-two entropy",
+      "rate 4 nonnegative",
+      "complete-tree min only for W4"
+    ],
+    "statement_sha256": "14271ed2a161479410eeeff6ee2540153616d67ee4ed237de0a8024982bcac3c",
+    "contributors": [
+      "A038"
+    ],
+    "proof_source": "PROOF.md sections 1-4",
+    "proof_dependencies": [
+      "C005 entropy restriction identity, independently rederived here",
+      "finite Shannon concavity and entropy chain rule",
+      "physical influence conservation"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A038",
+        "kind": "author rederivation and independent character/WHT implementation",
+        "status": "PASS finite checks; not independent external acceptance"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_FINITE_CHECKS_EXTERNAL_REVIEW_PENDING",
+    "supersedes": [
+      "A038-BALANCED-CANONICAL-ADMISSION@6 universal-scope sentence only; earlier ledger statements retained"
+    ],
+    "refutes": [
+      "stage11 REPORT.md: obstruction to precise universal V4 bound alone would not refute FEI, when obstruction means actual unbounded Boolean V4/I family"
+    ],
+    "first_unproved_line": "There exists a finite dimension-independent K with V4(f)<=K I(f) for all Boolean f.",
+    "next_consumers": [
+      "A039",
+      "A050",
+      "A088",
+      "A094",
+      "B08",
+      "B20"
+    ]
+  }
+]

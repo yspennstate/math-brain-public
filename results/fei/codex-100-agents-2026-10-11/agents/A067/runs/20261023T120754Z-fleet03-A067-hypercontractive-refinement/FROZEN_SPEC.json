@@ -1,0 +1,13 @@
+{
+  "helper_version": "A067-stage20-clean-Bellman-v1",
+  "actual_Boolean_family": "Products of k disjoint canonical quadratic pairs, l characters and d dummy bits; canonical G_m paid early-w/post-w frontier from A088 stage20, followed by physical queries inside retained clean exits",
+  "parameter_domain": {"pilot_clean_max_n": 3, "main_clean_max_n": 6, "pilot_inherited_m": [2], "main_inherited_m": [2,3,4], "paid_history": "Every 0<=H<=T<=m; w queried between pairs H and H+1; stop active zero path at T"},
+  "case_count": "Clean representatives: pilot 13, main 50 (2k+l+d<=ncap). Bellman recursion examines every remaining coordinate at every reachable literal signed restriction, thereby representing all finite adaptive stopping trees. Paid frontiers: pilot6, main31. Every retained clean leaf is checked; all candidate data coordinates and the fixed one-member-per-pair attaining continuation are tested.",
+  "symmetry": "Global sign, coordinate permutations and pair exchange preserve squared spectrum, physical influences and stopping optimum. Clean representatives have canonical order pairs/characters/dummies. Paid histories use canonical next pair; pair permutation preserves original origin/source. No arbitrary-core symmetry is asserted.",
+  "arithmetic": "Integer FWHT, exact Fraction influences and Bellman maxima; flat clean spectrum entropy certified as an exact integer. Inherited full CE/H/KL checked by rational log2 intervals via positive atanh series and explicit tail. Floats display only.",
+  "memory_estimate_mb": 120,
+  "pilot_max_seconds": 55,
+  "main_max_seconds": 180,
+  "automatic_dimension_escalation": false,
+  "target": "Sharp all-adaptive clean continuation price k/2 at globally fixed rate3; same original paid frontier reserve after all old invoices remains >m/2-71/96>=25/96 even when every clean leaf including original b_m is continued"
+}

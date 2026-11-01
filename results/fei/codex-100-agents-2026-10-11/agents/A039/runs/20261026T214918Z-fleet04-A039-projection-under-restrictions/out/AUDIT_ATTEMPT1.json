@@ -1,0 +1,7 @@
+{
+  "status": "FAILED_BOUNDARY_GUARD",
+  "first_failing_line": "audit.py scalar check at N=10 demanded 6*N*2^-N*(4/15)<1/64",
+  "exact_value": "1/64",
+  "repair": "Use <= for the rational envelope, together with the separate strict integer certificate 6^15<16*5^15 proving log2(6/5)<4/15. The theorem remains strict; no theorem hypothesis or source bound changes.",
+  "provenance": "First audit process exited 1 after completing tree checks and before writing AUDIT.json. No PASS was inferred from that attempt."
+}

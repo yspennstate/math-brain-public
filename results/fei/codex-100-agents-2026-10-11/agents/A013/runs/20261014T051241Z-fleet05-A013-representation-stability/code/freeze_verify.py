@@ -1,0 +1,5 @@
+from pathlib import Path
+import json
+R=Path(__file__).resolve().parents[1]
+spec={'helper_version':'A013-two-row-independent-verify-v1','family':'Saved eight two-row continuum profiles; actual complete Boolean phase classification','domain':'All256 three-bit phases; every saved positive leaf certificate and entire dyadic coverage tree','case_count':sum(json.loads((R/f'out/CONTINUUM_{i}.json').read_text())['certified_boxes'] for i in range(8)),'symmetry':'None in phase classification; exact complete box coverage','arithmetic':'Separate80-bit integer outward power arithmetic with32 atanh terms; Fraction; no author helper import','memory_estimate_MB':150,'maximum_runtime_seconds':50,'fixture_next_domain':'Eight representative phases x all16 events E0 x all16 events E1 on two private bits, three supplied H references; constants and correlated events included','fixture_case_counts':{'Boolean_parents':2048,'reference_cases':6144},'no_escalation':True}
+(R/'out/FROZEN_VERIFY.json').write_text(json.dumps(spec,indent=2),encoding='utf-8');print('verification and fixture domains frozen')

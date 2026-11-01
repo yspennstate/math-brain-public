@@ -1,0 +1,184 @@
+[
+  {
+    "name": "source",
+    "url": "https://arxiv.org/pdf/1606.03787",
+    "status": 200,
+    "bytes": 141257
+  },
+  {
+    "name": "covered",
+    "url": "https://arxiv.org/pdf/math/0503139",
+    "status": 200,
+    "bytes": 316712
+  },
+  {
+    "name": "kernel",
+    "url": "https://www.math.uchicago.edu/~lawler/srwbook.pdf",
+    "status": 200,
+    "bytes": 1826510
+  },
+  {
+    "name": "arxiv_search",
+    "url": "https://export.arxiv.org/api/query?search_query=au:Okada+AND+(all:boundary+OR+all:favorite)&max_results=30&sortBy=submittedDate&sortOrder=descending",
+    "status": 200,
+    "bytes": 89161,
+    "entries": [
+      {
+        "title": "Towards Physics-Informed Neural Networks for Stiff Guitar String Vibrations",
+        "id": "http://arxiv.org/abs/2609.21795v1",
+        "summary": "Modeling stiff string vibrations is challenging due to their dispersive and high-frequency characteristics. This study investigates the effectiveness of Physics-Informed Neural Networks (PINNs) in simulating the transverse vibration of a one-dimensional linear stiff string with sharp initial conditions induced by plucking. The governing Partial Differential Equation (PDE), along with the associated initial and boundary conditions, is incorporated directly into the loss function of the neural network. For the reference measurements, a wire-breaking experiment was performed to excite the string, and its vibration response was captured using a laser profiler. The comparison between experimental measurements, finite-difference time-domain (FDTD) simulations, and PINN-based simulations shows good overall agreement, highlighting the potential of PINNs for modeling stiff-string vibrations."
+      },
+      {
+        "title": "Entanglement Signatures of Kinetic-Mixing Portals in Dark Monopole Scattering",
+        "id": "http://arxiv.org/abs/2609.02467v1",
+        "summary": "We examine the interaction between the Standard Model (SM) fermions and the topological dark magnetic monopoles mediated via a kinetic-mixing portal to investigate the generation of quantum entanglement in particle-portal scattering. While the conventional phenomenology only takes into account total cross-sections, decay widths, and missing-energy signatures, we employ an information-theoretic approach to explain the scattering event. We quantify the quantum correlations transported over the portal boundary by calculating the Von Neumann entropy ($S_{\\text{ent}}$) and the subsystem purity deterioration ($γ< 1$) analytically. Our results demonstrate that the non-perturbative core form factor of the dark monopole controls its high-energy momentum transfer and that the Von Neumann entropy increases quadratically with the topological magnetic charge ($g_m^2$) and the kinetic-mixing parameter ($ε^2$). This paradigm provides an information-theoretic \"microscope\" to restrict portal parameter spaces and explore underlying topological structures without using traditional energy signatures by establishing quantum decoherence and purity loss as new, complementary observables."
+      },
+      {
+        "title": "TRACT: Temporally Routed Action Chunks with Chronological Phase Authority for Contact-Rich Manipulation",
+        "id": "http://arxiv.org/abs/2607.29285v2",
+        "summary": "Action chunking shortens the effective decision horizon of robot imitation learning by predicting multiple future actions, while conventional phase conditioning describes the current control instant. When a predicted horizon crosses a procedural boundary, assigning the current phase to the entire chunk creates a structural temporal mismatch. We present TRACT, which factorizes phase-structured action chunking into an accepted current phase and a single CURRENT-to-NEXT boundary inside the future horizon. A task-local graph constrains chronological phase authority, and a cumulative boundary distribution monotonically routes future queries through phase-specific query and action paths. For contact execution, a causal response-deficit integrator compares policy intent with ACK-eligible subsequent motion, accumulates arm compensation when directional response is suppressed, and decays after confirmed recovery. Across six real-robot variants with ten trials each, full TRACT achieves 10/10 full-sequence success, 99.00 [88.75, 100.00]% median [min, max] wipe completion, zero observed phase ambiguity, and zero stalls. Under the current complete method package and evaluation setting, the routed representation obtains better observed task results than the flat package (6/10 vs. 3/10 success; 77.08% vs. 8.03% median wipe completion). Chronological authority reduces observed phase ambiguity from 8/10 to 0/10, and response integration reduces stalls from 4/10 to 0/10. The package comparison does not isolate routing from other generator-package differences."
+      },
+      {
+        "title": "Treewidth of the $n \\times n$ toroidal grid",
+        "id": "http://arxiv.org/abs/2605.21015v1",
+        "summary": "In this paper, we show that the treewidth of the $n \\times n$ toroidal grid is $2n-1$ for all $n \\ge 5$. This closes the gap between the previously known upper bound of $2n-1$ (Ellis and Warren, DAM 2008) and the lower bound of $2n-2$ (Kiyomi, Okamoto, and Otachi, DAM 2016). To establish the matching lower bound, we construct a bramble of maximum order by utilizing maximum components obtained after removing $2n-1$ vertices. Our construction relies on the vertex-isoperimetric properties of the infinite grid to establish tight lower bounds on neighborhood sizes, combined with a careful analysis of balls of radius $n/2-1$ and their boundaries to overcome structural obstructions when $n$ is even."
+      },
+      {
+        "title": "EasyControlEdge: A Foundation-Model Fine-Tuning for Edge Detection",
+        "id": "http://arxiv.org/abs/2602.16238v1",
+        "summary": "We propose EasyControlEdge, adapting an image-generation foundation model to edge detection. In real-world edge detection (e.g., floor-plan walls, satellite roads/buildings, and medical organ boundaries), crispness and data efficiency are crucial, yet producing crisp raw edge maps with limited training samples remains challenging. Although image-generation foundation models perform well on many downstream tasks, their pretrained priors for data-efficient transfer and iterative refinement for high-frequency detail preservation remain underexploited for edge detection. To enable crisp and data-efficient edge detection using these capabilities, we introduce an edge-specialized adaptation of image-generation foundation models. To better specialize the foundation model for edge detection, we incorporate an edge-oriented objective with an efficient pixel-space loss. At inference, we introduce guidance based on unconditional dynamics, enabling a single model to control the edge density through a guidance scale. Experiments on BSDS500, NYUDv2, BIPED, and CubiCasa compare against state-of-the-art methods and show consistent gains, particularly under no-post-processing crispness evaluation and with limited training data."
+      },
+      {
+        "title": "An attention economy model of co-evolution between content quality and audience selectivity",
+        "id": "http://arxiv.org/abs/2602.06437v1",
+        "summary": "Human attention has become a scarce and strategically contested resource in digital environments. Content providers increasingly engage in excessive competition for visibility, often prioritizing attention-grabbing tactics over substantive quality. Despite extensive empirical evidence, however, there is a lack of theoretical models that explain the fundamental dynamics of the attention economy. Here, we develop a minimal mathematical framework to explain how content quality and audience attention coevolve under limited attention capacity. Using an evolutionary game approach, we model strategic feedback between providers, who decide how much effort to invest in production, and consumers, who choose whether to search selectively for high-quality content or to engage passively. Analytical and numerical results reveal three characteristic regimes of content dynamics: collapse, boundary, and coexistence. The transitions between these regimes depend on how effectively audiences can distinguish content quality. When audience discriminability is weak, both selective attention and high-quality production vanish, leading to informational collapse. When discriminability is sufficient and incentives are well aligned, high- and low-quality content dynamically coexist through feedback between audience selectivity and providers' effort. These findings identify two key conditions for sustaining a healthy information ecosystem: adequate discriminability among audiences and sufficient incentives for high-effort creation. The model provides a theoretical foundation for understanding how institutional and platform designs can prevent the degradation of content quality in the attention economy."
+      },
+      {
+        "title": "Data-Driven Discrete Geofence Design Using Binary Quadratic Programming",
+        "id": "http://arxiv.org/abs/2509.24679v1",
+        "summary": "Geofences have attracted significant attention in the design of spatial and virtual regions for managing and engaging spatiotemporal events. By using geofences to monitor human activity across their boundaries, content providers can create spatially triggered events that include notifications about points of interest within a geofence by pushing spatial information to the devices of users. Traditionally, geofences were hand-crafted by providers. In addition to the hand-crafted approach, recent advances in collecting human mobility data through mobile devices can accelerate the automatic and data-driven design of geofences, also known as the geofence design problem. Previous approaches assume circular shapes; thus, their flexibility is insufficient, and they can only handle geofence-based applications for large areas with coarse resolutions. A challenge with using circular geofences in urban and high-resolution areas is that they often overlap and fail to align with political district boundaries and road segments, such as one-way streets and median barriers. In this study, we address the problem of extracting arbitrary shapes as geofences from human mobility data to mitigate this problem. In our formulation, we cast the existing optimization problems for circular geofences to 0-1 integer programming problems to represent arbitrary shapes. Although 0-1 integer programming problems are computationally hard, formulating them as quadratic (unconstrained) binary optimization problems enables efficient approximation of optimal solutions, because this allows the use of specialized quadratic solvers, such as the quantum annealing, and other state-of-the-art algorithms. We then develop and compare different formulation methods to extract discrete geofences. We confirmed that our new modeling approach enables flexible geofence design."
+      },
+      {
+        "title": "Doping Dependence of Upper Critical Field of High-Tc Cuprate Bi2+xSr2-xCaCu2O8+d Estimated from Irreversibility Field at Zero Temperature",
+        "id": "http://arxiv.org/abs/2409.19887v1",
+        "summary": "We investigated the temperature (T) dependence of the irreversibility field Hirr(T) in high-critical-temperature cuprate Bi2+xSr2-xCa1-yYyCu2O8+d (Bi-2212) single crystals over a wide range of hole doping level (p). Hirr(T) was evaluated by measuring the magnetization hysteresis loop. The value of Hirr(T) extrapolated to T = 0 K [Hirr(0)], is either equal to or sets the lower boundary for the upper critical field at T = 0 K [Hc2(0)]. Tc shows a parabolic p-dependence (peak at p = 0.16), whereas Hirr(0) increases monotonically with p by approximately one order of magnitude, from 19 T for the most underdoped sample (p = 0.065, Tc = 24 K) to 209 T for the most overdoped sample (p = 0.200, Tc = 75 K). The present results qualitatively agree with Hc2(0) values evaluated from the specific heat measurements. The observed p-dependence of Hirr(0) in Bi-2212 is distinct from those in YBa2Cu3O7-d and HgBa2CuO6+d, in which a pronounced dip structure appears in the underdoped region. Considering that the dip structures observed in these two systems are likely associated with the formation of competing orders (most likely field-induced charge orders), the present results indicate that the influence of the competing order in Bi-2212 is less prominent than that in the other two systems."
+      },
+      {
+        "title": "Favorite sites for simple random walk in two and more dimensions",
+        "id": "http://arxiv.org/abs/2409.00995v2",
+        "summary": "On the trace of a discrete-time simple random walk on $\\mathbb{Z}^d$ for $d\\geq 2$, we consider the evolution of favorite sites, i.e., sites that achieve the maximal local time at a certain time. For $d=2$, we show that almost surely three favorite sites occur simultaneously infinitely often and eventually there is no simultaneous occurrence of four favorite sites. For $d\\geq 3$, we derive sharp asymptotics of the number of favorite sites. This answers an open question of Erdős and Révész (1987), which was brought up again in Dembo (2005)."
+      },
+      {
+        "title": "Asymptotic Expansions of Finite Hankel Transforms and the Surjectivity of Convolution Operators",
+        "id": "http://arxiv.org/abs/2401.03438v2",
+        "summary": "A compactly supported distribution is called invertible in the sense of Ehrenpreis-Hörmander if the convolution with it induces a surjection from $\\mathcal{C}^{\\infty}(\\mathbb{R}^{n})$ to itself. We give sufficient conditions for radial functions to be invertible. Our analysis is based on the asymptotic expansions of finite Hankel transforms. The dominant term may be the contribution from the origin or from the boundary of the support of the function. For the proof, we propose a new method to calculate the asymptotic expansions of finite Hankel transforms of functions with singularities at a point other than the origin."
+      },
+      {
+        "title": "Dichotomies for Tree Minor Containment with Structural Parameters",
+        "id": "http://arxiv.org/abs/2311.03225v1",
+        "summary": "The problem of determining whether a graph $G$ contains another graph $H$ as a minor, referred to as the minor containment problem, is a fundamental problem in the field of graph algorithms. While it is NP-complete when $G$ and $H$ are general graphs, it is sometimes tractable on more restricted graph classes. This study focuses on the case where both $G$ and $H$ are trees, known as the tree minor containment problem. Even in this case, the problem is known to be NP-complete. In contrast, polynomial-time algorithms are known for the case when both trees are caterpillars or when the maximum degree of $H$ is a constant. Our research aims to clarify the boundary of tractability and intractability for the tree minor containment problem. Specifically, we provide dichotomies for the computational complexities of the problem based on three structural parameters: the diameter, pathwidth, and path eccentricity."
+      },
+      {
+        "title": "HumanMimic: Learning Natural Locomotion and Transitions for Humanoid Robot via Wasserstein Adversarial Imitation",
+        "id": "http://arxiv.org/abs/2309.14225v4",
+        "summary": "Transferring human motion skills to humanoid robots remains a significant challenge. In this study, we introduce a Wasserstein adversarial imitation learning system, allowing humanoid robots to replicate natural whole-body locomotion patterns and execute seamless transitions by mimicking human motions. First, we present a unified primitive-skeleton motion retargeting to mitigate morphological differences between arbitrary human demonstrators and humanoid robots. An adversarial critic component is integrated with Reinforcement Learning (RL) to guide the control policy to produce behaviors aligned with the data distribution of mixed reference motions. Additionally, we employ a specific Integral Probabilistic Metric (IPM), namely the Wasserstein-1 distance with a novel soft boundary constraint to stabilize the training process and prevent mode collapse. Our system is evaluated on a full-sized humanoid JAXON in the simulator. The resulting control policy demonstrates a wide range of locomotion patterns, including standing, push-recovery, squat walking, human-like straight-leg walking, and dynamic running. Notably, even in the absence of transition motions in the demonstration dataset, robots showcase an emerging ability to transit naturally between distinct locomotion patterns as desired speed changes."
+      },
+      {
+        "title": "Imaging Josephson Vortices on Curved Junctions",
+        "id": "http://arxiv.org/abs/2307.11970v2",
+        "summary": "Understanding the nature of vortices in type-II superconductors is crucial for comprehending exotic superconductors and advancing the application of superconducting materials in future electronic devices. This study uses spectroscopic scanning tunneling microscopy to visualize Josephson vortices along crystalline domain boundaries in the superconducting spinel oxide LiTi2O4 (LTO). Our experimental results reveal that the local curvature of the Josephson junction dictates the positioning of Josephson vortices. Self-consistent solutions of the Bogoliubov-de Gennes and gap equations theoretically corroborate this observation. In addition to enhancing our understanding of the physics of Josephson vortex formation, this study offers potential guidelines for developing vortex-based superconducting devices."
+      },
+      {
+        "title": "Quark and lepton model with flavor specific dark matter and muon $g-2$ in modular $A_4$ and hidden $U(1)$ symmetries",
+        "id": "http://arxiv.org/abs/2304.13361v1",
+        "summary": "We propose a quark and lepton model explaining their masses, mixings, and CP violating phases, introducing modular $A_4$ and hidden gauged $U(1)$ symmetries. The hidden $U(1)$ brings us heavier Majorana fermions that are requested by chiral anomaly cancellations, and we work on a canonical seesaw scenario due to their neutral particles.In this framework, we search for favorite parameter space to satisfy both the experimental values and show predictions, applying the $χ$ square analysis.Then, we discuss a bosonic dark matter candidate that only annihilates into muon state due to the modular $A_4$ flavor symmetry where we suppose the main interaction of dark matter to be Yukawa terms. And we study muon anomalous magnetic dipole moment where there are not any constraints of lepton flavor violations thanks to this flavor symmetry. Finally, we show the allowed space to satisfy the observed relic density of dark matter and the muon anomalous magnetic dipole moment."
+      },
+      {
+        "title": "First Gadolinium Loading to Super-Kamiokande",
+        "id": "http://arxiv.org/abs/2109.00360v3",
+        "summary": "In order to improve Super-Kamiokande's neutron detection efficiency and to thereby increase its sensitivity to the diffuse supernova neutrino background flux, 13 tons of $\\rm Gd_2(\\rm SO_4)_3\\cdot \\rm 8H_2O$ (gadolinium sulfate octahydrate) was dissolved into the detector's otherwise ultrapure water from July 14 to August 17, 2020, marking the start of the SK-Gd phase of operations. During the loading, water was continuously recirculated at a rate of 60 m$^3$/h, extracting water from the top of the detector and mixing it with concentrated $\\rm Gd_2(\\rm SO_4)_3\\cdot \\rm 8H_2O$ solution to create a 0.02% solution of the Gd compound before injecting it into the bottom of the detector. A clear boundary between the Gd-loaded and pure water was maintained through the loading, enabling monitoring of the loading itself and the spatial uniformity of the Gd concentration over the 35 days it took to reach the top of the detector. During the subsequent commissioning the recirculation rate was increased to 120 m$^3$/h, resulting in a constant and uniform distribution of Gd throughout the detector and water transparency equivalent to that of previous pure-water operation periods. Using an Am-Be neutron calibration source the mean neutron capture time was measured to be $115\\pm1$ $μ$s, which corresponds to a Gd concentration of $111\\pm2$ ppm, as expected for this level of Gd loading. This paper describes changes made to the water circulation system for this detector upgrade, the Gd loading procedure, detector commissioning, and the first neutron calibration measurements in SK-Gd."
+      },
+      {
+        "title": "Assessing the Performance of Diagnostic Classification Models in Small Sample Contexts with Different Estimation Methods",
+        "id": "http://arxiv.org/abs/2104.10975v3",
+        "summary": "Fueled by the call for formative assessments, diagnostic classification models (DCMs) have recently gained popularity in psychometrics. Despite their potential for providing diagnostic information that aids in classroom instruction and students' learning, empirical applications of DCMs to classroom assessments have been highly limited. This is partly because how DCMs with different estimation methods perform in small sample contexts is not yet well-explored. Hence, this study aims to investigate the performance of respondent classification and item parameter estimation with a comprehensive simulation design that resembles classroom assessments using different estimation methods. The key findings are the following: (1) although the marked difference in respondent classification accuracy was not observed among the maximum likelihood (ML), Bayesian, and nonparametric methods, the Bayesian method provided slightly more accurate respondent classification in parsimonious DCMs than the ML method, and in complex DCMs, the ML method yielded the slightly better result than the Bayesian method; (2) while item parameter recovery was poor in both Bayesian and ML methods, the Bayesian method exhibited unstable slip values owing to the multimodality of their posteriors under complex DCMs, and the ML method produced irregular estimates that appear to be well-estimated due to a boundary problem under parsimonious DCMs."
+      },
+      {
+        "title": "Spontaneous deformation and fission of oil droplets on an aqueous surfactant solution",
+        "id": "http://arxiv.org/abs/2002.00644v2",
+        "summary": "We investigated the spontaneous deformation and fission of a tetradecane droplet containing palmitic acid (PA) on a stearyltrimethylammonium chloride (STAC) aqueous solution. In this system, the generation and rupture of the gel layer composed of PA and STAC induce the droplet deformation and fission.To investigate the characteristics of the droplet-fission dynamics, we obtained the time series of the number of the droplets, and confirmed that the number has a peak at a certain STAC concentration. Since the fission of the droplet should be led by the deformation, we analyzed four parameters which may relate to the fission dynamics from the spatio-temporal correlation of the droplet-boundary velocity. As a result, we found that the faster deformation would be the key factor for the fission dynamics."
+      },
+      {
+        "title": "Flat bands and higher-order topology in polymerized triptycene: Tight-binding analysis on decorated star lattices",
+        "id": "http://arxiv.org/abs/1907.06088v3",
+        "summary": "In a class of carbon-based materials called polymerized triptycene, which consist of triptycene molecules and phenyls, exotic electronic structures such as Dirac cones and flat bands arise from the kagome-type network. In this paper, we theoretically investigate the tight-binding models for polymerized triptycene, focusing on the origin of flat bands and the topological properties. The mechanism of the existence of the flat bands is elucidated by using the \"molecular-orbital\" representation, which we have developed in the prior works. Further, we propose that the present material is a promising candidate to realize the two-dimensional second-order topological insulator, which is characterized by the boundary states localized at the corners of the sample. To be concrete, we propose two methods to realize the second-order topological insulator, and elucidate the topological properties of the corresponding models by calculating the corner states as well as the bulk topological invariant, namely the $\\mathbb{Z}_3$ Berry phase."
+      },
+      {
+        "title": "Local rigidity of certain actions of solvable groups on the boundaries of rank one symmetric spaces",
+        "id": "http://arxiv.org/abs/1904.12140v2",
+        "summary": "Let $G$ be the group of orientation-preserving isometries of a rank-one symmetric space $X$ of non-compact type. We study local rigidity of certain actions of a solvable subgroup $Γ\\subset G$ on the boundary of $X$, which is diffeomorphic to a sphere. When $X$ is a quaternionic hyperbolic space or the Cayley hyperplane, the action we constructed is locally rigid."
+      },
+      {
+        "title": "The Hausdorff dimension function of the family of conformal iterated function systems of generalized complex continued fractions",
+        "id": "http://arxiv.org/abs/1810.12599v5",
+        "summary": "We consider the family of CIFSs of generalized complex continued fractions with a complex parameter space. This is a new interesting example to which we can apply a general theory of infinite CIFSs and analytic families of infinite CIFSs. We show that the Hausdorff dimension function of the family of the CIFSs of generalized complex continued fractions is continuous in the parameter space and is real-analytic and subharmonic in the interior of the parameter space. As a corollary of these results, we also show that the Hausdorff dimension function has a maximum point and the maximum point belongs to the boundary of the parameter space."
+      },
+      {
+        "title": "Local rigidity of certain actions of nilpotent-by-cyclic groups on the sphere",
+        "id": "http://arxiv.org/abs/1710.04942v1",
+        "summary": "Let G = SU(n,1), n >1 be the orientation-preserving isometry group of the complex hyperbolic space with an Iwasawa decomposition G = KAN. We prove local rigidity of a family of certain actions of a subgroup of AN on the imaginary boundary of the complex hyperbolic space."
+      },
+      {
+        "title": "Topics and problems on favorite sites of random walks",
+        "id": "http://arxiv.org/abs/1606.03787v1",
+        "summary": "In this article, we study special points of a simple random walk and a Gaussian free field, such as (nearly) favorite points, late points and high points. In section $2$, we extend results of [19] and suggest open problems for $d=2$. In section $3$, we give a survey on the geometric structures of (nearly) favorite points and late points of a simple random walk and high points of a Gaussian free field in two dimension."
+      },
+      {
+        "title": "Geometric structures of late points of a two-dimensional simple random walk",
+        "id": "http://arxiv.org/abs/1605.01158v3",
+        "summary": "We consider the problem, as suggested by Dembo ($2003$, $2006$), of late points of a simple random walk in two dimensions. It has been shown that the exponents for the numbers of pairs of late points coincide with those of nearly favorite points and high points in the Gaussian free field, whose exact values are known. We estimate the exponents for the numbers of a multipoint set of late points in average. While there have been observed certain similarities between among three classes of points, our results exhibit a difference."
+      },
+      {
+        "title": "Carbon gas in SMC low-metallicity star-forming regions",
+        "id": "http://arxiv.org/abs/1602.07719v1",
+        "summary": "This paper presents [CII], [CI] and CO emission line maps of the star-forming regions N66, N25+N26, and N88 in the metal-poor Local Group dwarf galaxy SMC. The spatial and velocity structure of the large HII region N66 reveals an expanding ring of shocked molecular gas centered on the exciting star cluster NGC346, whereas a more distant dense molecular cloud is being eroded by UV radiation from the same cluster. In the N25+N26 and N88 maps, diffuse [CII] emission at a relatively low surface brightness extends well beyond the compact boundaries of the bright emission associated with the [CII] regions. In all regions, the distribution of this bright [CII] emission and the less prominent [CI] emission closely follows the outline of the CO complexes, but the intensity of the [CII] and [CI] emission is generally anticorrelated, which can be understood by the action of photodissociation and photoionization processes. Notwithstanding the overall similarity of CO and [CII] maps, the intensity ratio of these lines varies significantly, mostly due to changes in CO brightness. [CII] emission line profiles are up to 50% wider in velocity than corresponding CO profiles. A radiative transfer analysis shows that the [CII] line is the dominant tracer of (CO-dark) molecular hydrogen in the SMC. CO emission traces only a minor fraction of the total amount of gas. The similarity of the spatial distribution and line profile shape, and the dominance of molecular gas associated with [[CII] rather than CO emission imply that in the low-metallicity environment of the SMC the small amount of dense molecular gas traced by CO is embedded in the much more extended molecular gas traced only by [CII] emission. The contribution from neutral atomic and ionized hydrogen zones is negligible in the star-forming regions observed."
+      },
+      {
+        "title": "Exponents for the number of pairs of $α$-favorite points of simple random walk in ${\\mathbb Z}^2$",
+        "id": "http://arxiv.org/abs/1602.05641v2",
+        "summary": "We investigate a problem suggested by Dembo, Peres, Rosen, and Zeitouni, which states that the growth exponent of favorite points associated with a simple random walk in ${\\mathbb Z}^2$ coincides, on average and almost surely, with those of late points and high points associated with the discrete Gaussian free field."
+      },
+      {
+        "title": "125 GeV Higgs boson mass from 5D gauge-Higgs unification",
+        "id": "http://arxiv.org/abs/1510.03092v3",
+        "summary": "In the context of a simple gauge-Higgs unification (GHU) scenario based on the gauge group SU(3)$\\times$U(1)$^\\prime$ in a 5-dimensional flat space-time, we investigate a possibility to reproduce the observed Higgs boson mass of around 125 GeV. We introduce bulk fermion multiplets with a bulk mass and a (half) periodic boundary condition. In our analysis, we adopt a low energy effective theoretical approach of the GHU scenario, where the running Higgs quartic coupling is required to vanish at the compactification scale. Under this \"gauge-Higgs condition,\" we investigate the renormalization group evolution of the Higgs quartic coupling and find a relation between the bulk mass and the compactification scale so as to reproduce the 125 GeV Higgs boson mass. Through quantum corrections at the one-loop level, the bulk fermions contribute to the Higgs boson production and decay processes and deviate the Higgs boson signal strengths at the Large Hadron Collider (LHC) experiments from the Standard Model (SM) predictions. Employing the current experimental data which show the the Higgs boson signal strengths for a variety of Higgs decay modes are consistent with the SM predictions, we obtain lower mass bounds on the lightest mode of the bulk fermions."
+      },
+      {
+        "title": "Frequently visited sites of the inner boundary of simple random walk range",
+        "id": "http://arxiv.org/abs/1409.8368v2",
+        "summary": "This paper considers the question: how many times does a simple random walk revisit the most frequently visited site among the inner boundary points? It is known that in ${\\mathbb{Z}}^2$, the number of visits to the most frequently visited site among all of the points of the random walk range up to time $n$ is asymptotic to $π^{-1}(\\log n)^2$, while in ${\\mathbb{Z}}^d$ $(d\\ge3)$, it is of order $\\log n$. We prove that the corresponding number for the inner boundary is asymptotic to $β_d\\log n$ for any $d\\ge2$, where $β_d$ is a certain constant having a simple probabilistic expression."
+      },
+      {
+        "title": "The inner boundary of random walk range",
+        "id": "http://arxiv.org/abs/1407.2081v2",
+        "summary": "In this paper, we deal with the inner boundary of random walk range, that is, the set of those points in a random walk range which have at least one neighbor site outside the range. If $L_n$ be the number of the inner boundary points of random walk range in the $n$ steps, we prove $\\lim_{n\\to \\infty}\\frac{L_n}{n}$ exists with probability one. Also, we obtain some large deviation result for transient walk. We find that the expectation of the number of the inner boundary points of simple random walk on two dimensionnal square lattice is of the same order as $\\frac{n}{(\\log n)^2}$."
+      },
+      {
+        "title": "125 GeV Higgs Boson and TeV Scale Colored Fermions in Gauge-Higgs Unification",
+        "id": "http://arxiv.org/abs/1310.3348v1",
+        "summary": "In the context of a simple gauge-Higgs unification scenario based on the gauge group SU(3) times U(1)' in a 5-dimensional flat spacetime, we investigate a possibility to realize the Higgs boson mass of 125 GeV with a compactification scale at the TeV. With the introduction of colored bulk fermions in a certain representation under the gauge group with a half-periodic boundary condition, we analyze the one-loop RGE of the Higgs quartic coupling with the gauge-Higgs condition and successfully obtain 125 GeV Higgs boson mass by adjusting a bulk mass for the fermions with a fixed compactification scale. The Kaluza-Klein modes of the colored fermions contribute to the Higgs-to-digluon effective coupling through the one-loop corrections. Since the contribution is destructive to the Standard Model one and reduces the Higgs boson production cross section, the recent LHC result gives a lower bound on the mass of the lightest Kaluza-Klein mode fermion. We find the mass of the lightest Kaluza-Klein mode fermion in the range of 2-3 TeV for 10%-5% reductions of the Higgs boson production cross section through the gluon fusion channel. Such Kaluza-Klein mode fermions can be discovered at the LHC run II with sqrt{s}=13-14 TeV, and LHC phenomenology for the Kaluza-Klein fermions is briefly discussed."
+      },
+      {
+        "title": "Diphoton and Z photon Decays of Higgs Boson in Gauge-Higgs Unification: A Snowmass white paper",
+        "id": "http://arxiv.org/abs/1307.8181v1",
+        "summary": "In the context of gauge-Higgs unification scenario in a 5-dimensional flat spacetime, we investigate Higgs boson production via gluon fusion and its diphoton and Z gamma decay modes at the LHC. We show that the signal strength of the Higgs diphoton decay mode observed at ATLAS (and CMS), which is considerably larger than the Standard Model expectation, can be explained by a simple gauge-Higgs unification model with color-singlet bulk fermions to which a half-periodic boundary condition is assigned. The bulk fermions with mass at the TeV scale also play a crucial role in reproducing the observed Higgs boson mass of around 125 GeV. One naturally expects that the KK modes also contribute to the effective H-Z-gamma coupling. However, we show a very specific and general prediction of the gauge-Higgs unification scenario that KK-mode contributions to the H-Z-gamma coupling do not exist at the 1-loop level. If the excess of the Higgs to diphoton decay mode persists, its correlation with the Higgs to Z photon decay mode can be a clue to distinguish scenarios beyond the SM, providing a significant improvement of the sensitivity for the Higgs boson signals in the future."
+      }
+    ]
+  },
+  {
+    "name": "openalex_search",
+    "url": "https://api.openalex.org/works?search=random%20walk%20moving%20boundary%20local%20time%20Okada&per_page=10",
+    "status": 429,
+    "bytes": 610
+  }
+]

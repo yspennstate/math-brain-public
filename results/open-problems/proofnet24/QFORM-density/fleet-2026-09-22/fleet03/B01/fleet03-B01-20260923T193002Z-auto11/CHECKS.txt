@@ -1,0 +1,62 @@
+fleet03/B01 deterministic checks — fleet03-B01-20260923T193002Z-auto11
+
+1. Constants
+C0 = 2^(3/4)*sqrt(e)*Gamma(1/4)
+   = 10.053118753721757...
+K_aligned = 32*sqrt(C0)
+          = 101.46129115978704...
+K_exact_singular = 4*sqrt(2)*exp(1/4)
+                 = 7.263544634846275...
+PASS: K_aligned < 101.462 and K_exact_singular < 7.264.
+
+2. Exact aligned W2 algebra
+Assume M_off = tau*(ell ell^T)_off.
+Then delta M_off - (ell ell^T)_off
+     = (delta*tau-1)*(ell ell^T)_off.
+Therefore
+W2 = a^2*(delta*tau-1)^2*sum_(k!=l) ell_k^2 ell_l^2.
+PASS.
+
+3. Delta cancellation
+lambda = ((delta*tau-1)/delta)*r0, r0=||ell||^2.
+Then
+|delta|^(-1/4)|lambda|^(-1/4)
+= |delta*tau-1|^(-1/4) r0^(-1/4).
+PASS: no reciprocal power of delta survives.
+
+4. Heavy-leverage cancellation
+Weights w_i=ell_i^2/r0, c=max w_i, Lnorm=1-sum_i w_i^2.
+For c>1/2,
+Lnorm <= 1-c^2 = (1-c)(1+c),
+so
+Lnorm/[4c(1-c)] <= (1+c)/(4c).
+The latter is decreasing for c>0 and its supremum over c>1/2 is 3/4.
+Thus eta(c)^(1/2)*Lnorm^(1/8) <= (3/4)^(1/8) < 1.
+For c<=1/2, eta=1 and Lnorm<=1.
+PASS.
+
+5. Global scaling
+Under A -> q A:
+a -> q a, ell -> q ell, delta -> q delta, M -> q M.
+Gamma1 = max ||ell_J|| ||C_i|| -> |q|^2 Gamma1.
+The positive-Gamma1 bound |a|^(-1/2)Gamma1^(-1/4)
+scales as |q|^(-1/2)|q|^(-1/2)=|q|^(-1).
+
+Also delta M_off - ell ell^T -> q^2(delta M_off-ell ell^T),
+so W2=a^2||...||_F^2 -> |q|^6 W2.
+The aligned bound |a|^(-1/4)W2^(-1/8)
+scales as |q|^(-1/4)|q|^(-6/8)=|q|^(-1).
+PASS.
+
+6. Exact-zero classification edge cases
+L(ell)>0 implies support(ell) has at least two indices, hence ell_{-i} !=0 for every i. Gamma1=0 forces M_{i,-i} in span(ell_{-i}) for every i. Symmetry gives alpha_i ell_j=alpha_j ell_i. On support, alpha_i/ell_i is constant tau; off support, alpha_i=0. Therefore M_off=tau(ell ell^T)_off, so M=D+tau ell ell^T.
+PASS, including support size exactly two.
+
+7. Scope checks
+- No moment/support/log-concavity hypothesis introduced.
+- No original random-coordinate rotation used.
+- No scalar law-uniform pointwise Fresnel power decay invoked.
+- Continuity not claimed for the full aligned branch.
+- Full QFORM not claimed solved.
+
+STATUS=PASS

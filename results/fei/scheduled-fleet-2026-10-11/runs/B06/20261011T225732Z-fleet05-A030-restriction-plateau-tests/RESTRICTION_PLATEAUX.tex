@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{A030: entropy plateaux and terminal ratio amplification}
+\author{A030, B06}\maketitle
+All cubes are uniform, outputs are signs, and entropy is in bits.
+For $f=\sum_S a_S\chi_S$, write $p_S=a_S^2$ and
+$I_i(f)=\sum_{S\ni i}p_S$, $I(f)=\sum_i I_i(f)$.
+
+\begin{theorem}[Exact separated-support restriction]
+Let $\mathcal F=\{S:a_S\ne0\}$, and let $A$ be a set of input
+coordinates such that $S\mapsto S\setminus A$ is injective on
+$\mathcal F$. For every physical assignment $\rho\in\{-1,1\}^A$,
+\[
+ \widehat{f_\rho}(S\setminus A)=a_S\chi_{S\cap A}(\rho),\qquad
+ H(f_\rho)=H(f),\qquad
+ I(f_\rho)=I(f)-\sum_{i\in A}I_i(f).
+\]
+In particular, if $|S\triangle T|\ge L$ for distinct $S,T\in\mathcal F$,
+every adaptive physical restriction tree of depth at most $L-1$ has
+zero entropy decrement at every internal node and on every branch.
+\end{theorem}
+\begin{proof}
+Fixing inputs in the Fourier expansion sums coefficients over each
+projection fiber. Injectivity leaves a single signed coefficient in
+each occupied fiber. Thus the squared masses are unchanged and
+the set sizes lose exactly $|S\cap A|$. If a projection collision
+occurred with $|A|<L$, two support sets would have symmetric difference
+contained in $A$, contradicting their distance. This applies to every
+node of an adaptive tree, regardless of earlier assignments.
+Moreover the spectral $A$-bits are determined by the complement,
+so block conditional entropy is zero; every child has the same labelled
+complement spectrum, so the physical-assignment/spectrum channel has
+zero mutual information. These are exact zeroes, not approximate ones.
+\end{proof}
+
+\begin{theorem}[Arbitrary core behind an all-path plateau]
+For any Boolean $g$ on $n$ coordinates and integer $L\ge2$, define
+\[
+ F_L(x)=g(y_1,\ldots,y_n),\qquad y_i=\prod_{j=1}^L x_{ij}.
+\]
+Then $H(F_L)=H(g)$, $I_{ij}(F_L)=I_i(g)$, and $I(F_L)=LI(g)$.
+All restrictions of fewer than $L$ coordinates preserve entropy.
+More generally, fixing any coordinates while retaining at least one
+coordinate in each block gives
+\[
+ H((F_L)_\rho)=H(g),\qquad
+ I((F_L)_\rho)=\sum_i \ell_i I_i(g),
+\]
+where $\ell_i\ge1$ is the number retained in block $i$.
+Querying $L-1$ coordinates per block gives a fair stopping partition
+of depth $n(L-1)$, every leaf a coordinate-sign translation of $g$.
+Its payment is $\Pi_H=0$, $\Pi_I=(L-1)I(g)$, and if $H(g)>0$ its
+leaf/root ratio amplification is exactly $L$ on every leaf.
+\end{theorem}
+\begin{proof}
+Each character $\chi_S(y)$ maps to the union of the full blocks
+indexed by $S$. This map is injective and multiplies distances and
+sizes by $L$. After the stated restrictions, it maps each $S$ to
+the union of its retained blocks with a sign depending on $\rho$.
+The map remains injective. The previous theorem proves all formulas.
+At a compression leaf $\ell_i=1$, so the influence is $I(g)$ and
+the entropy is $H(g)$ for all $2^{n(L-1)}$ equally probable leaves.
+The payments follow either directly or from the known fair-tree
+influence/entropy ledger. This is a physical tree, not spectral conditioning.
+\end{proof}
+
+\begin{theorem}[Unbounded amplification at one physical step]
+There is no finite universal bound on
+$(H(f_\rho)/I(f_\rho))/(H(f)/I(f))$, even for a one-coordinate
+restriction with zero entropy decrement on both branches.
+Indeed, put $g_r=1-2\mathbf1_{\{x=(1,\ldots,1)\}}$ for $r\ge2$,
+and $G_{r,m}(x,z)=g_r(x)\prod_{j=1}^m z_j$.
+At every spectator prefix of length $k\le m$,
+\[
+ H((G_{r,m})_\rho)=H(g_r),\quad
+ I((G_{r,m})_\rho)=r2^{1-r}+m-k.
+\]
+After all spectators the ratio amplification is
+$1+m2^{r-1}/r$, and already for $m=1$ it tends to infinity.
+For $p=2^{-r}$,
+\[
+ H(g_r)=(1-2p)^2\log_2\frac1{(1-2p)^2}
+          +8p(1-p)(r-1),\qquad I(g_r)=2rp,
+\]
+so $H(g_r)/I(g_r)\to4$, while $H(G_{r,1})/I(G_{r,1})\to0$.
+\end{theorem}
+\begin{proof}
+Multiplication by the fresh parity shifts every Fourier label by the
+fixed set of spectator coordinates. It preserves squared masses,
+and every spectator has influence one. A spectator restriction merely
+removes its label and changes the overall sign. The point-defect
+coefficients are $1-2p$ at the empty set and $-2p$ elsewhere;
+there are $2^{r-1}$ sets containing each coordinate. This proves the
+formulas. The empty entropy term is $4p/\ln2+O(p^2)$,
+giving the stated limits. Both branches have probability $1/2$ and
+the same ratio; this is not a rare-path amplification.
+\end{proof}
+
+\begin{theorem}[Bounded-depth regular terminals fail]
+Fix an integer $d\ge0$, a nonconstant seed $g$, and $L\ge d+2$.
+No physical restriction of $F_L$ fixing at most $d$ coordinates is
+unate. In particular, no adaptive tree of depth at most $d$ can have
+only C001-regular leaves.
+\end{theorem}
+\begin{proof}
+Every block retains at least two coordinates. The residual function
+is $g$ of signed block parities. Choose a relevant seed coordinate
+$i$ and values of the other seed coordinates where
+$g(1,y_{-i})\ne g(-1,y_{-i})$. All those values are attainable by the
+remaining block parities. In block $i$, the discrete derivative in
+one physical coordinate is the product of the other block coordinates,
+times a fixed nonzero signed half-difference of the two seed values.
+Flipping a second coordinate in that block reverses its derivative
+sign. The function is neither increasing nor decreasing in the first
+coordinate, even after any coordinate sign reversal; thus it is not
+unate. C001-regular functions are unate, so the stated terminal tree
+cannot exist. This is an all-leaf obstruction to a specified terminal
+class, not a failure of all stopping trees or of FEI.
+\end{proof}
+
+\paragraph{A useful restricted bound.}
+On an injective restriction of $d$ coordinates with positive entropy,
+the amplification is exactly
+$1+\sum_{i\in A} I_i(f)/I(f_\rho)\le1+d/I(f_\rho)$.
+If the residual is balanced, $I(f_\rho)\ge1$ by Parseval, since its
+empty coefficient vanishes. Thus amplification is at most $d+1$.
+For a known lower bound $I(f_\rho)\ge\eta>0$ the bound is $1+d/\eta$.
+
+\paragraph{What remains unpaid.}
+For $D_K(h)=KI(h)-H(h)$ the compression partition satisfies
+\[
+ D_K(F_L)=D_K(g)+K(L-1)I(g).
+\]
+This uses the existing B06 leaf ledger, not a new telescope theorem.
+All depth-$d$ entropy-erasure-channel decrements vanish if $L>d$,
+but the residual terminal entropy is exactly $H(g)$. No universal FEI
+constant or certified terminal-class membership follows from this
+plateau observation. Arbitrary $g$ remains an arbitrary core.
+\end{document}

@@ -1,0 +1,78 @@
+[
+  {
+    "claim_id": "A004-NORMALIZATION-LEDGER",
+    "version": 2,
+    "exact_statement": "The sign/indicator, logarithm, biased-influence and character conventions of A004-NORMALIZATION-LEDGER@1 remain in force. For every uniform-cube Boolean sign and physical coordinate i, f=psi+x_i*phi with ternary disjoint psi,phi, psi^2+phi^2=1, I_i=E phi^2 and coefficients fhat(T)=psihat(T), fhat(T+i)=phihat(T). Write a=psihat(T)^2,b=phihat(T)^2. Then B_i=sum Phi(a,b)=L_down,i+C_up,i, L_down,i=sum b log2(1+a/b), C_up,i=sum a log2(1+b/a)<=I_i/ln(2); B05 mismatch L_i is B_i, whereas A003 downward L_i is L_down,i. Delta_i=B_i+JS_i and h2(I_i)-B_i=MI(S_i;S_without_i). DTC=H-sum B_i, TC=sum h2(I_i)-H, and sum marginal slacks=TC+DTC. Uniform characters preserve full B,DTC but swap the two directional terms when the queried coordinate is translated. For any finite set law P with v=1-P_empty>0 and R=P conditioned nonempty, B(P)=vB(R)+T0 and DTC(P)=h2(v)+vDTC(R)-T0, where T0=sum Phi(P_empty,P_{i}). AND2 certifies that DTC(P)=vDTC(R) is false; point defects n>=2 have DTC(P_n)/(v_n DTC(R_n)) asymptotic to 2^n, although their FEI ratio tends to 4. No universal erasure or FEI payment is asserted.",
+    "hypotheses": [
+      "Actual Boolean signs and uniform orthonormal Walsh basis for physical-split and character statements",
+      "Full normalized squared spectral law includes the empty atom",
+      "Bits; natural-unit information multiplies by ln(2)",
+      "Weighted zero terms zero; conditional law omitted at v=0",
+      "Full/nonempty erasure conversion holds for all finite set laws; R not assumed Boolean",
+      "n>=2 in the point-defect asymptotic stress family"
+    ],
+    "statement_sha256": "0fc4cf08415c88bb60ba9f580644bd421f9c2cd01d9cc8a223d428f8e971fcf8",
+    "contributors": [
+      "A004/fleet05"
+    ],
+    "proof_source": {
+      "run": "~\\brain_workers\\FEI100_20261011\\agents\\A004\\runs\\20261012T030039Z-fleet05-A004-constant-and-unit-ledger",
+      "report": "REPORT.md",
+      "conventions": "CONVENTIONS.json",
+      "certificates": [
+        "out/validation.json",
+        "out/empty_conditioning_witness.json",
+        "out/nonempty_asymptotics.json"
+      ],
+      "source_pins": "out/source_manifest.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A004-NORMALIZATION-LEDGER",
+        "version": 1,
+        "statement_sha256": "ad5dea6487a39cc49d801960ffc78129cef5b8e9e8ab802339649388d28a72aa",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A004\\runs\\20261011T223224Z-fleet05-A004-constant-and-unit-ledger\\REPORT.md",
+        "status": "BASELINE_SELF_CHECKED_PENDING_REVIEW"
+      },
+      {
+        "source": "ERASURE_REDUCTION.md Sections 1-5, local SHA256 in source manifest",
+        "used_statement": "Pair erasure, JS and one-sided logarithmic identity, analytically reconstructed"
+      },
+      {
+        "source": "Elementary entropy chain rule, Parseval and convergent logarithm series",
+        "used_statement": "Exact full/nonempty correction and all-n stress-family asymptotics proved here"
+      }
+    ],
+    "review_records": [],
+    "status": "BASELINE_EXTENSION_PROVED_SELF_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A004-NORMALIZATION-LEDGER",
+        "version": 1,
+        "scope": "Convention interface extended; no version-1 assertion refuted"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A001",
+      "A002",
+      "A003",
+      "A005",
+      "A024",
+      "A027",
+      "A036",
+      "A038",
+      "A042",
+      "A051",
+      "A057",
+      "A061",
+      "A064",
+      "A081",
+      "A086",
+      "A094",
+      "A096",
+      "A099"
+    ]
+  }
+]

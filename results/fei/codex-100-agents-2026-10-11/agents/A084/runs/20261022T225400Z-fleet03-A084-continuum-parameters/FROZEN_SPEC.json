@@ -1,0 +1,12 @@
+{
+  "helper_version": "A084-heterogeneous-second-query-v1",
+  "actual_Boolean_family": "F=k(g_0,...,g_5), k=h or J, h negative on {0,1,2,4,8,16,32,6,17,40}, J(x)=-h(x xor 1); initially six identical disjoint Boolean cores, minority p<=1/16; one physical query precedes the target query",
+  "parameter_domain": "All real 0<p<=1/16; prior queried block minority t in [0,2p]; singleton shift constrained by actual Boolean influence; same-block second query separately retains t<=2p",
+  "case_count": "Two 64-entry gates; 60 ordered distinct (previous block,target block,gate) witness rows, 12 same-block rows; exact fixtures use g negative on {0,1,2} at n=6, all 12 (gate,previous block) prefixes coordinate2=0 or1 and all 6 target blocks queried at a surviving coordinate; 144 queries plus both full children. Pilot: witness table and first 4 queries.",
+  "symmetry_reduction": "None for gate directions. Physical fixtures use a fixed original coordinate in each actual core; no exhaustive-function claim.",
+  "arithmetic": "Integer Walsh and exact Fraction probabilities/profiles; outward 192-bit logarithms with 80 atanh terms and proved tail, display floats never select signs",
+  "memory_estimate_MB": 120,
+  "max_runtime_seconds_per_command": 55,
+  "automatic_dimension_escalation": false,
+  "purpose": "Refine the existing local curvature theorem to one heterogeneous continuation, explicitly retaining arbitrary inherited core debt. Check all boundary witness hypotheses before choosing a constant. Independently reconstruct A072 saturation accounting at its stated scope."
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "fei-campaign-claims/1",
+  "full_FEI_status": "OPEN",
+  "primary_packet_id": "A097",
+  "claims": [
+    {
+      "claim_id": "B20-A097-COMPLETE-BLOCK-DEFICIT-v1",
+      "status": "PROVED",
+      "scope": "Every genuine Boolean f, every physical block A, every real r",
+      "statement": "E_X[H(f_X)-rI(f_X)] = H(f)-rI(f)+rI_A(f)-Gamma_A(f), where Gamma_A=H(S_A|S_C)+I(X;Y).",
+      "proof_location": "REPORT.md#lemma-1--exact-complete-block-deficit-identity-proved",
+      "independent_review": "PENDING_A090_A094",
+      "universal_FEI_implication": false
+    },
+    {
+      "claim_id": "B20-A097-CRITICAL-DESCENT-v1",
+      "status": "PROVED",
+      "scope": "Every finite-dimensional nonconstant genuine Boolean f",
+      "statement": "Some physical restriction g has R(g)>=R(f) and every nonconstant physical restriction h of g has R(h)<=R(g).",
+      "proof_location": "REPORT.md#lemma-2--maximum-ratio-critical-descendant-proved",
+      "independent_review": "PENDING_A090_A094",
+      "universal_FEI_implication": false
+    },
+    {
+      "claim_id": "B20-A097-CRITICAL-BLOCK-LOWER-v1",
+      "status": "PROVED",
+      "scope": "Every restriction-critical genuine Boolean g and every physical block A",
+      "statement": "Gamma_A(g) >= R(g) I_A(g).",
+      "proof_location": "REPORT.md#lemma-3--critical-source-lower-payment-proved",
+      "independent_review": "PENDING_A090_A094",
+      "universal_FEI_implication": false
+    },
+    {
+      "claim_id": "B20-A097-PROPER-BLOCK-CRITERION-v1",
+      "status": "PROVED_REDUCTION",
+      "scope": "Universal conditional implication over restriction-critical Boolean sources",
+      "statement": "If every restriction-critical g with at least two relevant coordinates has an influential proper block A with Gamma_A(g)<=K I_A(g), then H(f)<=K I(f) for every Boolean f.",
+      "proof_location": "REPORT.md#theorem-4--proper-block-fei-criterion-proved-reduction",
+      "independent_review": "PENDING_A090_A094",
+      "universal_FEI_implication": "CONDITIONAL"
+    },
+    {
+      "claim_id": "FEI-B20-A097-CRITICAL-PROPER-BLOCK-UPPER",
+      "status": "OPEN",
+      "scope": "All restriction-critical genuine Boolean sources",
+      "statement": "There is a universal K such that some influential proper physical block A satisfies Gamma_A/I_A<=K.",
+      "first_gap": "Known criticality gives the reverse inequality Gamma_A>=R I_A; no universal upper selection theorem is proved.",
+      "mandatory_controls": [
+        "B05 sparse activation",
+        "whole-set addressing",
+        "shared-variable interference",
+        "equal-ratio tensor powers",
+        "biased prime gate endpoint tax",
+        "activation equivalence"
+      ],
+      "universal_FEI_implication": "WOULD_PROVE_FULL_FEI"
+    }
+  ]
+}

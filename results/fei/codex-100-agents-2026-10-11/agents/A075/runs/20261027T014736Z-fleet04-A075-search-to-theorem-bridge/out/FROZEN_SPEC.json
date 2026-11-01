@@ -1,0 +1,15 @@
+{
+  "helper_version": "prime_perturbation_v1",
+  "family": "G_m(x,z)=f(x)*(-1 if wt(x,z)<=1 else +1)",
+  "parameter_domain": "main every Boolean f on n=0,1,2,3, padding m=3; pilot n<=2; boundary every f n<=2, m=0,1,2",
+  "case_count_main": 278,
+  "case_count_pilot": 22,
+  "case_count_boundary": 66,
+  "symmetry": "none; every sign and dummy retained",
+  "arithmetic": "integer Walsh, rational squared masses/influences, exact residual row sets; no logarithmic signs needed",
+  "memory_estimate_mb": 80,
+  "maximum_runtime_seconds": 55,
+  "automatic_escalation": false,
+  "theorem_domain": "every finite Boolean f, every integer m>=3; ratio limit only when I(f)>0",
+  "helper_sha256": "2052ea479dc20c5cf4a7e0f5bbe8e49bde9767318d92c7aa8cdeab30a7a3dd01"
+}

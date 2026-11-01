@@ -1,0 +1,137 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newcommand{\CE}{\operatorname{CE}}
+\newcommand{\KL}{\operatorname{D}_2}
+\begin{document}
+\title{A097: compatible complete references on physical stopping trees}
+\author{A097, stream B20}
+\date{12 October 2026}
+\maketitle
+All entropy and divergence units are bits. Uniform physical influence counts
+edge-flip probabilities. Full FEI remains open; no literature novelty or
+independent acceptance is claimed.
+
+\begin{theorem}
+Let $f$ be any Boolean sign on a finite uniform cube. Fix a finite adaptive
+physical restriction tree: at history $h$ a nonempty block $A_h$ of remaining
+coordinates is revealed, with each assignment of probability
+$\alpha_h=2^{-|A_h|}$. Block choice uses only physical history, and no coordinate
+is revealed twice on a path. At leaf $l$ let $Q_l$ be any subprobability
+reference on the entire remaining subset space, positive on the support
+of its actual Fourier law $P_l$. Set $c_l=\CE(P_l,Q_l)$.
+
+There is a complete root subprobability reference $Q_0$ satisfying
+\[
+ \CE(P_0,Q_0)=\sum_{h\text{ internal}}\pi_h(B_h+J_h-\kappa_h)
+                       +\sum_{l\text{ leaf}}\pi_l c_l.
+\]
+Here $B_h=H(S_{A_h}\mid S_{A_h^c})$ is evaluated in the current actual
+restricted spectrum, $J_h$ is its physical-child mixture information, and
+$\kappa_h\ge0$ is the explicit posterior divergence defined below. Moreover,
+\[
+ \sum_h\pi_h\kappa_h
+ =\sum_l\pi_l\KL(P_l\Vert Q_l)-\KL(P_0\Vert Q_0)
+ \le\sum_l\pi_l\KL(P_l\Vert Q_l).
+\]
+If $c_l\le C_L I(f_l)$ at all leaves and
+$\sum_h\pi_h(B_h-\kappa_h)\le K I_{\rm removed}$, where
+$I_{\rm removed}=\sum_h\pi_h I_{A_h}(f_h)$, then
+\[
+ H(f)\le\CE(P_0,Q_0)\le\max\{K+2/\ln2,C_L\}I(f).
+\]
+No universal existence or payment of the displayed tree hypothesis is asserted.
+\end{theorem}
+
+\begin{proof}
+At a node write $R=A\sqcup C$, $m=2^{|A|}$,
+$a_{U,T}=\widehat f_h(U\cup T)$ and
+$b_{y,T}=\widehat{f_{hy}}(T)$. Actual signed restriction algebra and Parseval give
+\[
+q(T)=\sum_U a_{U,T}^2=m^{-1}\sum_y b_{y,T}^2,
+\qquad P_y(T)=b_{y,T}^2.
+\]
+For $q(T)>0$ define
+\[
+\theta(U\mid T)=a_{U,T}^2/q(T),\qquad
+k_P(y\mid T)=P_y(T)/(mq(T)).
+\]
+These are normalized probability kernels. Define $\theta$ arbitrarily as
+a probability kernel on zero true fibers, including those with positive
+reference mass. Given the already constructed child references set
+\[
+r(T)=m^{-1}\sum_yQ_y(T),\qquad
+Q_h(U\cup T)=\theta(U\mid T)r(T).
+\]
+This conserves mass as $\|Q_h\|_1=m^{-1}\sum_y\|Q_y\|_1\le1$ and preserves
+support positivity. All references are determined by the fixed leaf laws;
+independent interior resets are not allowed.
+
+Set $k_Q(y\mid T)=Q_y(T)/(mr(T))$ on positive true fibers and
+\[
+\kappa_h=\sum_Tq(T)\KL(k_P(\cdot\mid T)\Vert k_Q(\cdot\mid T)).
+\]
+The joint likelihood ratio on $(y,T)$, with true/reference atoms
+$P_y(T)/m,Q_y(T)/m$, factors in two ways, giving
+\[
+m^{-1}\sum_y\KL(P_y\Vert Q_y)=\KL(q\Vert r)+\kappa_h.
+\]
+This identity is valid for subprobabilities without dropping their mass
+normalizers. Completing any reference by a failure atom, of true mass zero,
+proves nonnegativity of generalized $\KL$. Since the parent true/reference
+laws share $\theta$, $\KL(P_h\Vert Q_h)=\KL(q\Vert r)$. Also
+$H(P_h)=B_h+H(q)$ and $J_h=H(q)-m^{-1}\sum_yH(P_y)$. Thus
+\[
+\CE(P_h,Q_h)=B_h+J_h+m^{-1}\sum_y\CE(P_y,Q_y)-\kappa_h.
+\]
+Finite telescoping with actual reach probabilities proves both equalities.
+
+For clarity the channel price has a direct physical proof. The uniform
+cube logarithmic Sobolev inequality is
+\[
+\operatorname{Ent}(g^2)\le\tfrac12\sum_i\mathbb E(g(x)-g(x^i))^2.
+\]
+Its two-point form is $F(t)\ge0$, where
+$F(t)=(t^2+1)\ln((t^2+1)/2)-2t^2\ln t+(t-1)^2$.
+For $t\ge1$, $F'(t)\ge0$ follows because the derivative of
+$1-1/t-\ln(2t^2/(t^2+1))$ is
+$(t-1)^2/[t^2(t^2+1)]\ge0$. Use $F(1)=0$, symmetry
+$F(t)=t^2F(1/t)$ and continuity. Conditional entropy tensorization gives
+the cube version. Apply it on block $A$ to
+$|b_{y,T}|/\sqrt{q(T)}$, then multiply by $q(T)$ and sum $T$.
+Signed differences dominate magnitude differences, and Parseval on $C$ yields
+\[
+J_h\le\frac1{2\ln2}\sum_{i\in A}\mathbb E_y\sum_T
+(b_{y,T}-b_{y^i,T})^2=\frac2{\ln2}I_A(f_h).
+\]
+Finally $I(f_h)=I_A(f_h)+m^{-1}\sum_y I(f_{hy})$, so
+$I(f)=I_{\rm removed}+\sum_l\pi_l I(f_l)$. Combining proves the constant.
+Gibbs applied to the complete root subprobability gives $H(f)\le\CE(P_0,Q_0)$.
+\end{proof}
+
+\paragraph{Exact global credit.}
+Draw a physical leaf transcript $L$ using the actual fair branch factors,
+sample its terminal spectrum, then insert removed spectral labels with
+$\theta$. Use the same construction with $Q_l$ for the reference joint law.
+Given $(S,L)$, the likelihood ratio is just $P_l(S_{R_l})/Q_l(S_{R_l})$,
+because all branch and innovation factors cancel. Hence
+\[
+\sum_h\pi_h\kappa_h=
+\mathbb E_{S\sim P_0}\KL(P(L\mid S)\Vert Q(L\mid S)).
+\]
+It is a single history-posterior credit, never recharged in descendants.
+Choosing $Q_l=P_l$ annihilates every $\kappa_h$, leaving the exact entropy
+telescope. The compatible lift therefore does not produce free payment
+for the universal erasure residual.
+
+\paragraph{C020 substitution.}
+For a terminal nonempty subprobability $R_l$, put
+$v_l=P_l(S\ne\varnothing)$ and complete it by
+$Q_l(\varnothing)=1-v_l$, $Q_l(S)=v_lR_l(S)$ otherwise. Then
+\[
+c_l=h_2(v_l)+\sum_{S\ne\varnothing}P_l(S)\log_2(1/R_l(S)).
+\]
+All complete witness normalizers, gate labels and fixed scale priors
+therefore enter the stopping-tree formula without change. None may be
+optimized or omitted separately. Endpoint conventions are as in REPORT.md.
+\end{document}

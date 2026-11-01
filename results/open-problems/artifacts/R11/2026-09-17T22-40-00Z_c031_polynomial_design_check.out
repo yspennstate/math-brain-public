@@ -1,0 +1,16 @@
+EXACT_CHECKS=917
+DESIGN_EXISTENCE_CERTIFICATE: for each N, the union-bound upper envelope is strictly < 1
+M_MOD_N_CERTIFICATE: M_N == 1 (mod N), so phase-s=1 empirical singleton counts cannot be label-uniform
+GENERATOR_CERTIFICATE: exact hypergeometric beta identity verified on all tested finite cores
+ERROR_CERTIFICATE: 2 eps_N H_{N-1} <= 2/N^2
+PARAMETER_SAMPLES:
+N=3 K=2 C=1296 L=14 M=10207 D=36 gcd(M,N)=1
+N=4 K=2 C=4096 L=15 M=61441 D=96 gcd(M,N)=1
+N=5 K=2 C=10000 L=17 M=265626 D=200 gcd(M,N)=1
+N=6 K=2 C=20736 L=18 M=839809 D=360 gcd(M,N)=1
+N=7 K=2 C=38416 L=19 M=2235332 D=588 gcd(M,N)=1
+N=38 K=5 C=14645194571776 L=47 M=141514010049 D=640601720 gcd(M,N)=1
+N=39 K=5 C=17565568854912 L=47 M=165380956768 D=753022972 gcd(M,N)=1
+N=40 K=5 C=20971520000000 L=48 M=196608000001 D=881428704 gcd(M,N)=1
+ALL_EXACT_CHECKS_PASS
+stdout_sha256=219ef25cadc5a1a9a1f5d75c56dbbccb7f731abd90e0458f0b8d6db7fe1c8b9c

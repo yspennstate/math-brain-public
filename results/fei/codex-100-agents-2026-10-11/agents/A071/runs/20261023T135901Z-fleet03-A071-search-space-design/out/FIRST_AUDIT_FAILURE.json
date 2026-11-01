@@ -1,0 +1,7 @@
+{
+  "stage": "initial source acceptance digest",
+  "result": "FAILED before AUDIT.json saved; mathematical 768-query identities reached before digest check",
+  "cause": "Verifier used json ensure_ascii=True while source exact_statement contains Unicode superscript2 and producer persist.py9 uses ensure_ascii=False",
+  "repair": "Match verified producer encoding; preserve source claim text and declared digest unchanged",
+  "source_defect": false
+}

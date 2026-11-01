@@ -1,0 +1,168 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w382",
+  "bundle_slug": "p0110-w382-route-obstructions-and-exponential-upgrade-001",
+  "entries": [
+    {
+      "key": "sequence-endpoints",
+      "namespace": "probability.fpp",
+      "logical_name": "p0110-sequence-endpoints",
+      "kind": "definition",
+      "title": "DRAFT: Scalar versions of four exponent endpoints",
+      "statement": "For real centered X_n of finite variance and D_n>=0, n>=2, define chi_a=inf{s: some alpha>0 has sup_n E exp(alpha|X_n|/n^s)<infinity}; chi_b=sup{s: for some N, inf_{n>N} Var(X_n)/n^(2s)>0}; xi_a is the same upper definition with D_n replacing |X_n|; xi_b=sup{s: for some N, inf_{n>N} E D_n/n^s>0}. Infimum/supremum can be extended real. These scalar definitions do not impose the all-displacement uniformity of FPP global exponents.",
+      "proof_text": null,
+      "assumptions": [
+        "n>=2",
+        "X_n centered with finite variance",
+        "D_n nonnegative with finite expectation"
+      ],
+      "domain": "probability; proof-method scope",
+      "source": {
+        "source_id": "owner-own-work:w382:P0110:sequence-endpoints",
+        "url": "urn:owner-probability-campaign:w382:P0110:sequence-endpoints",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (Codex w382 campaign derivation; independently unreviewed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "moment-only-route",
+      "namespace": "probability.fpp",
+      "logical_name": "p0110-moment-only-route",
+      "kind": "concept",
+      "title": "DRAFT: Moment-to-exponential matching route is invalid",
+      "statement": "The proposed inference from Var(X_n)=Theta(n^(2chi)) and E D_n=Theta(n^xi) to chi_a=chi_b=chi and xi_a=xi_b=xi is false without further tail assumptions. Polynomially rare large deviations can change the exponential upper endpoints while preserving those moment growth laws. This is a refuted abstract route, not an accepted theorem about FPP.",
+      "proof_text": null,
+      "assumptions": [
+        "Upper and lower endpoints as defined in sequence-endpoints",
+        "No additional uniform tail premise"
+      ],
+      "domain": "probability; proof-method scope",
+      "source": {
+        "source_id": "owner-own-work:w382:P0110:moment-only-route",
+        "url": "urn:owner-probability-campaign:w382:P0110:moment-only-route",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (Codex w382 campaign derivation; independently unreviewed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "rare-tail-obstruction",
+      "namespace": "probability.fpp",
+      "logical_name": "p0110-rare-tail-obstruction",
+      "kind": "concept",
+      "title": "DRAFT: Rare-tail gap between upper and lower endpoints",
+      "statement": "For n>=2 let B_n~Bernoulli(n^(-1/2)) and C_n~Bernoulli(n^(-1/4)); no independence is needed. Set X_n=n^(1/2)(B_n-n^(-1/2)) and D_n=n^(3/4)C_n. The exponential-moment upper endpoints and variance/expectation lower endpoints are respectively chi_a=1/2, chi_b=1/4, xi_a=3/4, xi_b=1/2. Thus moment growth alone does not force these pairs to match. This is a scalar example, not iid FPP; independent referee check is pending.",
+      "proof_text": null,
+      "assumptions": [
+        "Bernoulli marginals specified in the statement",
+        "No iid FPP construction claimed",
+        "Independent referee check pending"
+      ],
+      "domain": "probability; proof-method scope",
+      "source": {
+        "source_id": "owner-own-work:w382:P0110:rare-tail-obstruction",
+        "url": "urn:owner-probability-campaign:w382:P0110:rare-tail-obstruction",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (Codex w382 campaign derivation; independently unreviewed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "directional-global-obstruction",
+      "namespace": "probability.fpp",
+      "logical_name": "p0110-directional-global-obstruction",
+      "kind": "concept",
+      "title": "DRAFT: One support direction cannot supply all directions",
+      "statement": "A supporting-sphere direction of a norm does not imply a positive quadratic detour bound in every direction. For g(x)=||x||_1 on R^2, n a positive multiple of four, v=(n,n), z=(3n/4,n/4), g(z)+g(v-z)-g(v)=0 while dist(z,[0,v])=n/(2sqrt(2)). Therefore a bound c dist(z,[0,v])^2/|v|-K with c>0 and finite K cannot hold uniformly in n and direction just from the norm axioms. This geometry example does not assert that an eligible continuous iid FPP law has this shape. Independent referee check is pending.",
+      "proof_text": null,
+      "assumptions": [
+        "Abstract norm geometry",
+        "Independent referee check pending"
+      ],
+      "domain": "probability; proof-method scope",
+      "source": {
+        "source_id": "owner-own-work:w382:P0110:directional-global-obstruction",
+        "url": "urn:owner-probability-campaign:w382:P0110:directional-global-obstruction",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (Codex w382 campaign derivation; independently unreviewed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "conditional-exponential-upgrade",
+      "namespace": "probability.fpp",
+      "logical_name": "p0110-conditional-exponential-upgrade",
+      "kind": "concept",
+      "title": "DRAFT: Full Gaussian-form tail gives a larger-scale exponential moment",
+      "statement": "Let D_n>=0 be random variables, U_n>=0 and V_n>0 deterministic, n>=2. Assume P(D_n>sqrt(U_n+V_n t))<=exp(-t) for every n and every t>=0, U_n<=A n^(2tau)log(2+n) and V_n<=B n^(2tau), with fixed A,B>0 and tau>=0. Then for every r>tau and lambda>0, sup_n E exp(lambda D_n/n^r)<infinity. An explicit bound is 2 exp(lambda sqrt(U_n)/n^r+lambda^2 V_n/(2n^(2r))). Applied to the conditional supporting-direction FPP tail, tau=(1+q)/2. This does not give uniformity in other directions or matching lower endpoints. Independent referee check is pending.",
+      "proof_text": null,
+      "assumptions": [
+        "Full all-t tail",
+        "Deterministic U_n,V_n and uniform A,B,tau",
+        "Independent referee check pending"
+      ],
+      "domain": "probability; proof-method scope",
+      "source": {
+        "source_id": "owner-own-work:w382:P0110:conditional-exponential-upgrade",
+        "url": "urn:owner-probability-campaign:w382:P0110:conditional-exponential-upgrade",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (Codex w382 campaign derivation; independently unreviewed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "global-hypothesis-gate",
+      "namespace": "probability.fpp",
+      "logical_name": "p0110-global-hypothesis-gate",
+      "kind": "concept",
+      "title": "DRAFT: Exact missing premise in the conditional KPZ route",
+      "statement": "For iid nonnegative nearest-neighbor FPP on Z^d, d>=2, Chatterjee Theorem 1.1 assumes a nearly-gamma law with a moment-generating function near zero. Its upper exponents use uniform exponential moments of |T(0,v)-E T(0,v)|/|v|^s and D(0,v)/|v|^s over all nonzero displacements; its lower exponents use variance and expected segment-deviation lower bounds uniform outside a large ball. The KPZ conclusion requires both upper/lower pairs to match. For P0110 this is a sufficient formalized route, not a supplied law or a consequence of variance growth. Auffinger--Damron removes the nearly-gamma restriction for its conditional relation; it does not remove exponent matching. This node is an owner campaign hypothesis comparison of arXiv:1105.4566 Theorem 1.1 and arXiv:1109.0523 Theorems 2.1--2.2, not a new proof of those published theorems. Important convention boundary (independent referee check pending): Auffinger--Damron Eq. (2.2) as printed uses all nonzero displacements. With edge support [a,b], b<3a, adjacent vertices have only the direct edge as a geodesic, so D(0,e_1)=0 and the printed lower wandering premise fails. This includes Uniform[1,2]. Chatterjee's outside-large-ball lower convention avoids this finite obstruction; asymptotic matching is still needed.",
+      "proof_text": null,
+      "assumptions": [
+        "Primary theorem hypotheses retained",
+        "A chosen law still needs matching global endpoints"
+      ],
+      "domain": "probability; proof-method scope",
+      "source": {
+        "source_id": "owner-own-work:w382:P0110:global-hypothesis-gate",
+        "url": "urn:owner-probability-campaign:w382:P0110:global-hypothesis-gate",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (Codex w382 campaign derivation; independently unreviewed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "rare-tail-obstruction",
+      "to_key": "sequence-endpoints",
+      "kind": "depends_on",
+      "rationale": "The four exact values in the example use the exponential-upper and moment-lower definitions stated at sequence-endpoints."
+    },
+    {
+      "from_key": "rare-tail-obstruction",
+      "to_key": "moment-only-route",
+      "kind": "refutes",
+      "rationale": "The source end gives chi_a=1/2 versus chi_b=1/4 and xi_a=3/4 versus xi_b=1/2. The target end names the inference that moment growth forces these pairs to match; the explicit mismatches refute that abstract inference."
+    },
+    {
+      "from_key": "directional-global-obstruction",
+      "to_key": "global-hypothesis-gate",
+      "kind": "semantic_association",
+      "rationale": "The source end disproves extending one norm-support direction to every direction from norm axioms. The target end requires upper/lower estimates uniform over all nonzero displacements. This names a scope mismatch, not a new theorem implication."
+    },
+    {
+      "from_key": "conditional-exponential-upgrade",
+      "to_key": "global-hypothesis-gate",
+      "kind": "semantic_association",
+      "rationale": "The source end supplies an upper exponential moment from a full all-t tail. The target end requires upper moments plus matching global lower endpoints, so the directional upgrade leaves that missing premise explicit."
+    },
+    {
+      "from_key": "global-hypothesis-gate",
+      "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
+      "kind": "semantic_association",
+      "rationale": "The existing P0110 card asks for a nondegenerate iid undirected law with well-defined exponents satisfying chi=2xi-1. This draft names the matching-global-exponent premise for one sufficient primary-source route to that exact target."
+    }
+  ]
+}

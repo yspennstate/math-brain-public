@@ -1,0 +1,16 @@
+from pathlib import Path
+import json
+R=Path(__file__).resolve().parent
+claims=[
+ {'claim':'For fixed original seeds, the minimum frontier dimension over binary recolorings of a finite prefix that keep those seeds opposite decreases to an almost surely deterministic constant beta, with beta <= D.','status':'proved','proof_location':'SECOND_ATTEMPT.md: First saved result and Full zero-one step','remaining_gap':'No equality beta=D or beta=c is proved for the Poisson model.','checks':['Measurability inherited from ATTEMPT.md Section 2.3','Exact preservation of inherited cuts under refinement','Finite-permutation invariance of the decreasing limit; Hewitt-Savage hypotheses checked']},
+ {'claim':'The seed-separating minimum of the maximum crossing contact dimension equals the largest minimum edge dimension along a seed-to-seed path in each finite descendant-contact graph.','status':'proved','proof_location':'SECOND_ATTEMPT.md: Complete graph reduction','remaining_gap':'The edge weights are dimensions of limiting contacts, not directly computable from a finite Voronoi diagram; this identity alone does not solve their geometry.','checks':['Full reachable-set proof with strict thresholds and tied weights','bottleneck_checks.json: 59808 exhaustive weighted graphs and 500 random refinements','BottleneckCuts.lean algebra check: see second_lean_check.txt for status']},
+ {'claim':'Connected closed partitions of a cube with protected seed neighborhoods and all nonempty pair contacts strictly between dimensions d-1 and d can exhibit a strict decrease of the best seed-separating frontier dimension after refinement.','status':'counterexample','proof_location':'SECOND_ATTEMPT.md: Explicit closed-partition realization and Cantor-product dimension proof','remaining_gap':'This is a counterexample to a general geometric shortcut, not to P0231; realization by the Poisson coloring rule is not proved.','checks':['Exact contact sets C_(1/4) x [0,1]^(d-1) and C_(1/3) x [0,1]^(d-1)','Mass-distribution lower bound and explicit covering upper bound','Weights d-1+1/2 and d-1+log(2)/log(3) are strictly ordered and both in (d-1,d)']},
+ {'claim':'The deterministic minimum and maximum finite-recoloring envelopes beta and c coincide for the two-seed Poisson-coloring model in d>=2.','status':'conjecture','proof_location':'SECOND_ATTEMPT.md: Useful sufficient criterion and Exact remaining gap','remaining_gap':'Requires persistent terminal connectivity above every threshold below c; no model-specific proof is available. This sufficient target may be stronger than original dimension determinism.','checks':['Graph and closed-partition counterexamples rule out deriving equality from refinement and topology alone']},
+]
+p=R/'CLAIMS.jsonl'; old=[json.loads(l) for l in p.read_text(encoding='utf8').splitlines() if l]
+for claim in claims:
+ if not any(x['claim']==claim['claim'] for x in old):old.append({'problem_id':'P0231',**claim})
+p.write_text(''.join(json.dumps(x,ensure_ascii=False)+'\n' for x in old),encoding='utf8')
+assert (R/'STATUS.md').read_text(encoding='utf8').splitlines()[0]=='STATE: WORKING'
+assert json.loads((R/'bottleneck_checks.json').read_text(encoding='utf8'))['result']=='all assertions passed'
+print('Saved second-attempt claims; finite checks and working status validated.')

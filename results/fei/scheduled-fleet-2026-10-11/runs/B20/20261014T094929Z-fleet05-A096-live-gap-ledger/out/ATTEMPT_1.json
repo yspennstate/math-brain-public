@@ -1,0 +1,8 @@
+{
+  "status": "OUTPUT_SERIALIZATION_FAILURE_AFTER_53_ROOTS",
+  "assertions_at_last_checkpoint": 67890,
+  "failure": "ValueError: Exceeds the limit (4300 digits) for integer string conversion when serializing an unrounded accumulated Fraction log interval",
+  "mathematical_failure": false,
+  "credited_completed_full_runs": 0,
+  "repair": "Round final interval endpoints outward to grid 2^-90 before serialization; retain exact prime-log identities and same 32-term analytic logarithm bounds. No higher precision, dimension or search-domain change."
+}

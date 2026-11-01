@@ -1,0 +1,26 @@
+[
+  {
+    "from_key": "blocks",
+    "to": "cutset",
+    "kind": "depends_on",
+    "supporting_from": "For m>=3 and the simple Cayley graph of C_2*C_m with S={a,b,b^-1}, h_E>=1-2/m>0, p_u=1, and p_c is the unique p in (0,1) solving p[2 sum_{k=1}^{m-1}p^k-(m-1)p^m]=1.",
+    "supporting_to": "For independent Bernoulli(p) bond percolation, n pairwise edge-disjoint finite x-y cutsets F_i imply P_p(x connected to y) <= product_i[1-(1-p)^|F_i|].",
+    "rationale": "L4's bridge cuts satisfy L1's disjoint edge-index hypothesis; L2 then excludes uniqueness."
+  },
+  {
+    "from_key": "gap",
+    "to": "one-ended",
+    "kind": "depends_on",
+    "supporting_from": "The independent barrier-exploration attempt does not prove pc<pu for a general one-ended nonamenable Cayley graph. A fresh effective-barrier construction or quantitative nonmerger bound at some p>pc is still required.",
+    "supporting_to": "For a connected locally finite one-ended graph with maximum degree d and edge Cheeger constant h_E>0, the number of disjoint x-y cuts of size at most K is at most d(|B_R(x)|+|B_R(y)|), R=ceil(K/h_E)+1. This is uniform in x,y on vertex-transitive graphs.",
+    "rationale": "L3 gives a uniform finite bound on size-K cut multiplicity; the parent lane lacks a fresh-barrier replacement."
+  },
+  {
+    "from_key": "normalization",
+    "to": "math:probability.statmech:attempt-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+    "kind": "refutes",
+    "supporting_from": "For an infinite connected d-regular vertex-transitive undirected graph and normalized walk operator P=A/d with rho=||P||_2, pd rho<1 implies tau_p(x,y)<=(pd rho)^dist(x,y)/(1-pd rho), so pu>=1/(d rho). Thus pc<1/(d rho) suffices for pc<pu, without being necessary.",
+    "supporting_to": "p_c < 1/rho (Benjamini-Schramm criterion)",
+    "rationale": "Scoped correction only: the prior concept says 'p_c < 1/rho (Benjamini-Schramm criterion)' with normalized rho. L5 proves the degree-scaled sufficient bound, while pc<=1<1/rho makes the prior reduction vacuous. No refutation of the parent conjecture."
+  }
+]

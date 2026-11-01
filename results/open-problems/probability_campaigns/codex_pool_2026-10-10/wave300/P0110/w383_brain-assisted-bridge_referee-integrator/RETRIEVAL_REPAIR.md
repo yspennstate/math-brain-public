@@ -1,0 +1,7 @@
+# Bounded P0110 retrieval repair proposal
+
+Baseline command: `python -X utf8 ~/brain_workers/w383/measure_math_recall.py` on the read-only store. The Chatterjee hypothesis card ranked 9 for `P0110 iid FPP law proved KPZ exponent relation` and 6 for `Chatterjee 2013 KPZ relation hypotheses iid FPP chi xi exponent existence`. The conditional Auffinger–Damron card ranked outside top 10 and 5 respectively.
+
+Exact stored P0110 problem node: `claim_081071dcf812e1c0843a53fe1da486f97876afe30678a091de36c26017e679f0`. Exact Chatterjee node: `claim_e090760039c41cb781c56fbb85679625a58a678ff42cfb3ec11a01d8887de6c5`. Exact Auffinger–Damron node: `claim_cdf706646c2b45447e641263ec41ed5425512f1b415ae6923ee1a889e83be95c`. `TARGET_LINKS.json` confirms neither theorem card has a direct link from P0110.
+
+Propose two reviewed `semantic_association` links from the P0110 card to those theorem cards, with the precise rationales in `LINK_SIMULATION.json`. Also correct the Auffinger–Damron card per `CORRECTIONS.jsonl` before relying on its wording. The in-memory read-only simulation (`python -X utf8 ~/brain_workers/w383/simulate_target_links.py`) moved Chatterjee 9→7 on the first query and Auffinger–Damron 5→4 on the second. The first query still misses the theorem in top 5, so do not call this a completed retrieval fix. After integration, remeasure the two queries, inspect the returned full hypotheses, and keep the links only if the cue is precise and unrelated FPP results do not get displaced.

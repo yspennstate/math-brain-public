@@ -1,0 +1,71 @@
+{
+  "arithmetic": "exact Fraction; decimals only display",
+  "models": [
+    {
+      "model": "baseline_positive_H2",
+      "arrival": "11/10",
+      "probabilities": [
+        "3/7",
+        "4/7"
+      ],
+      "rates": [
+        "5",
+        "5/8"
+      ],
+      "maximum_count": 80,
+      "busy_phases": 3,
+      "slow_queue_tail_upper_display": "0.0000338819650833609985499114781245524662539399519",
+      "delay_lower_display": "0.392872619378512420636667195074272856376960069",
+      "delay_upper_display": "0.392893190047224051767481936119644070736353095",
+      "entry_phase_ratios_display": [
+        "0.392872619378512420636667195074272856376960069",
+        "0.392872619378512551147270442595899501760923521",
+        "0.392872619378512682111233685707139020345817183"
+      ],
+      "checks": [
+        "all generator rows",
+        "exact backward equations",
+        "positive occupations",
+        "slow exponential service domination",
+        "stationary incoming flux / occupation identity"
+      ]
+    },
+    {
+      "model": "more_variable_positive_H2",
+      "arrival": "11/10",
+      "probabilities": [
+        "200/533",
+        "333/533"
+      ],
+      "rates": [
+        "1000",
+        "5/8"
+      ],
+      "maximum_count": 80,
+      "busy_phases": 3,
+      "slow_queue_tail_upper_display": "0.0000338819650833609985499114781245524662539399519",
+      "delay_lower_display": "0.390345877647037257076235581563875153364132290",
+      "delay_upper_display": "0.390366533926724778913411392655513762438654564",
+      "entry_phase_ratios_display": [
+        "0.390345877647037257076235581563875153364132290",
+        "0.390345877647037779970588480847883290089695925",
+        "0.390345877647038288770655767111170361385008410"
+      ],
+      "checks": [
+        "all generator rows",
+        "exact backward equations",
+        "positive occupations",
+        "slow exponential service domination",
+        "stationary incoming flux / occupation identity"
+      ]
+    }
+  ],
+  "gap_lower_display": "0.00250608545178764172325580241875909393830550521",
+  "exact_assertions": [
+    "P_delay(S)>.39287",
+    "P_delay(T)<.39037",
+    "P_delay(S)-P_delay(T)>1/400"
+  ],
+  "coupling": "baseline short .2E replaced by .001E with probability 1400/1599 or 1.6E with probability 199/1599; long branch unchanged",
+  "positive_threshold_corollary": "at h=1/100000, P(W_S>h)-P(W_T>h)>3/1250=.0024"
+}

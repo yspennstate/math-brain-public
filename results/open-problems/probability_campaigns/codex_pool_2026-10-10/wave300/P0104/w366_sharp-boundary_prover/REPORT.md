@@ -1,0 +1,17 @@
+P0104 now has a concrete sharp-boundary packet: five author-proved special cases and obstructions, with the main fixed-law exponent gap explicitly open. Its exact primary target is Questions 13 and 15 of Auffinger-Damron-Hanson, recovered through two read-only canonical cards and checked against arXiv:1511.03262v2. Current openness is UNKNOWN; novelty is not claimed.
+
+The useful change is a guardrail for variance and geodesic-chaos routes. For weights in [1,1+epsilon], n epsilon<=2 forces the straight-path sum, and strict n epsilon<2 makes the geodesic unchanged even after full refresh. This disproves a law-uniform normalized power bound while preserving the distinction from a fixed-law KPZ conjecture. A separate four-route argument supplies the exact Pareto moment boundary.
+
+`python -X utf8 verify_boundaries.py` passed 3,504 exact finite configurations and 384 disjointness checks, using 0.078125 CPU seconds and 0.292606 wall seconds. At/below the support threshold, 2,336 configurations gave zero straight-path losses; the three beyond-threshold cases gave 1/16, 2/128 and 4/1024 losses. Exact Uniform examples at n=8,64,512 give ratios 2,4,8 against the proposed edge-variance-normalized n^(2/3) bound. These are measured controls for the stronger bridge, not an asymptotic exponent or a formal verification receipt.
+
+Before this packet, the recovered P0104 attempt only identifies the logarithmic-versus-polynomial exponent gap. This packet adds five explicit reviewable boundary rows, six draft entries, six supported relations and one narrowly triggered hook proposal. Live recall improvement is not measured: reviewed, ingested and retrievable are separate states and remain pending until the coordinator actually records them.
+
+The six-entry DRAFT bundle was submitted atomically at 2026-10-10T04:55:08Z to ~/math-brain-inbox/w366/bundle_001.json under exclusive claim clm-97b2877004. BRAIN_DELIVERY.json separates submission from the pending mathematical review and unverified ingestion/retrieval. w367 received the statement first; w368's complete review packet is REVIEW_PACKET.md.
+
+Apply after review: use patches/01_probability_hook.diff to create the hook proposal at its named live path without overwriting an existing file. patches/02_draft_bundle.diff is the equivalent new-file diff for the already submitted bundle; do not apply it over the existing inbox file. The reviewer/coordinator integrates, tests again and deploys. w366 never runs the live integrator.
+
+Risks: changed-law examples must not become false refutations of fixed-law universality; the heavy-tail example is outside standard moment hypotheses; finite exact checks are not infinite-lattice proofs. Every draft result remains a concept pending independent mathematical review. The primary source leaves its suitable law class and exponent convention to be specified; a primary source/hash check does not supply a proof.
+
+NEXT: w368 independently audits the boundary proofs; retain law dependence of the crossover while developing any fixed-law multiscale geodesic estimate.
+
+Independent audit update: w367 KEEP on C1-C4 is saved in PEER_AUDIT_RECEIPT.json with exact source lines and scope. This is not two-other-login admission. C5 and final w368 review remain pending. The submitted bundle stays immutable DRAFT concepts. Merge w367's overlapping support/variance proof as evidence, avoiding duplicate nodes.

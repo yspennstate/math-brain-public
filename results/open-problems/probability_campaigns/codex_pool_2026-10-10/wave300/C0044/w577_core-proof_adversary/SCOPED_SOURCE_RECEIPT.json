@@ -1,0 +1,114 @@
+{
+  "exact_intake_records": [
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+      "line": 44,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "C0044",
+        "historical_status": "source_says_open",
+        "intake": "claude_20260907",
+        "locator": "Open question 3.2, p. 42",
+        "problem_id": "C0044",
+        "recorded_at": "2026-09-07T06:38:45Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "drewitz_ramirez_rwre_2014",
+        "statement": "For a RWRE satisfying (E) and (IID) and any direction l, is P_0[A_l] in {0,1}, where A_l is the event of transience in direction l? Known for d = 1 and d = 2 (Zerner-Merkl).",
+        "status_search": "",
+        "title": "Zero-one law for directional transience in dimensions d >= 3",
+        "verification": "unreviewed"
+      }
+    },
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+      "line": 35,
+      "record": {
+        "attempt_id": "C0044-A001",
+        "author": "claude-probability-1000-continue-0907",
+        "correction_note": "Codex review 12:02: A_l and A_{-l} are disjoint by definition; the content of Zerner-Merkl is the 0-1 law for A_l.",
+        "independent_check": "",
+        "key_identity": "",
+        "method": "Analyse where the Zerner-Merkl planar argument uses d = 2.",
+        "obstruction": "Planarity is essential to the d = 2 proof; no substitute in d >= 3.",
+        "problem_id": "C0044",
+        "recorded_at": "2026-09-07T06:38:45Z",
+        "result": "Zerner-Merkl show P_0[A_l intersection A_{-l}] = 0 using that in d = 2 two independent walks in the same environment started at distant points on a line perpendicular to l must, with positive probability, have paths that intersect (planarity), which lets one derive a contradiction from the walk going to +infinity and -infinity in direction l with positive probability each. In d >= 3 paths of two walks need not intersect, and the known partial result (Kalikow's 0-1 law: P_0[A_l union A_{-l}] in {0,1}) does not exclude the mixed event. A candidate counterexample structure in d >= 3 would be an i.i.d. environment where the walk is guided to +l or -l depending on a local feature it meets first; the i.i.d. assumption and the fact that the walk visits infinitely many independent regions make such a persistent memory implausible but not provably impossible: the walk in direction +l sees fresh environment forever, and the event that it turns around is a tail event of the walk but not of the environment. I checked that the natural martingale argument (P_omega(A_l) as a function of the environment at the current position) fails because P_omega(A_l) is not measurable with respect to a finite region. No result.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "superseded_by": "C0044-A002"
+      }
+    },
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+      "line": 121,
+      "record": {
+        "attempt_id": "C0044-A002",
+        "author": "claude-probability-1000-continue-0907",
+        "independent_check": "Correction checked line by line against the source and the holder's message by the Fable agent; the holder's claim was taken as a lead, not as authority.",
+        "key_identity": "Zerner-Merkl (d=2): P_0(A_l) in {0,1}; Kalikow (all d): P_0(A_l union A_{-l}) in {0,1}; d >= 3 directional law open.",
+        "method": "Codex review 12:02: A_l and A_{-l} are disjoint by definition; the content of Zerner-Merkl is the 0-1 law for A_l.",
+        "obstruction": "see A001 for the standing obstruction",
+        "problem_id": "C0044",
+        "recorded_at": "2026-09-07T09:27:17Z",
+        "result": "CORRECTION of C0044-A001's first sentence. The events {X_n . l -> +infinity} and {X_n . l -> -infinity} are disjoint by definition, so 'Zerner-Merkl show P(A_l intersect A_{-l}) = 0' is empty; what Zerner-Merkl prove in d = 2 is P_0(A_l) in {0,1}, using planarity to show two walks in the same environment intersect, which is what A001 then describes. The reduction (planarity essential; no d >= 3 substitute; no finite-region measurability for the natural martingale) stands.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "supersedes": "C0044-A001"
+      }
+    }
+  ],
+  "store": {
+    "path": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+    "mode": "ro",
+    "tables": [
+      "nodes"
+    ],
+    "cards": [
+      {
+        "id": "claim_77b8c8b3e552560382a17be2fac6b00021e3a08ff74f780812e6f39787d2abb8",
+        "kind": "claim",
+        "title": "Open problem: Zero-one law for directional transience in dimensions d >= 3"
+      },
+      {
+        "id": "claim_372d2aafaafb697b2a7c3c66368c6ae5c2e757ce647bd528fceebd3b13c28630",
+        "kind": "claim",
+        "title": "Attempt on Zero-one law for directional transience in dimensions d >= 3"
+      }
+    ],
+    "nodes_columns": [
+      "id",
+      "kind",
+      "title",
+      "body",
+      "metadata_json",
+      "digest",
+      "created_at"
+    ]
+  },
+  "store_error": "interrupted",
+  "canonical_named_root": {
+    "path": "~\\math-research-brain",
+    "exists": true,
+    "note": "No canonical-store path guessed or promoted."
+  },
+  "export_metadata": {
+    "path": "~\\math-brain-build\\export\\population",
+    "matching_filenames": [],
+    "whole_export_read": false
+  },
+  "peer_primary_source_files": [
+    {
+      "path": "~\\brain_workers\\w576\\sources\\strict_zero_one_2026.pdf",
+      "bytes": 540710,
+      "pages": 34,
+      "first_page_excerpt": "A directional zero–one law\nunder strict ellipticity\nOpenAI\nSeptember 23, 2026\nAbstract\nWe prove the directional zero–one conjecture for nearest-neighbor random walks in\nindependent and identically distributed strictly elliptic environments on Zd, d ≥3: the\nprobability of escape in each fixed nonzero real direction is zero or one. Only strict\npositivity of the transition probabilities is required; no uniform lower bound or moment\nassumption is imposed.\nContents\n1\nIntroduction\n1\n1.1\nThe model and the theorem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2\n1.2\nPrior work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3\n1.3\nProof strategy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3\n2\nRegeneration in a real direction\n5\n2.1\nDeparture rows and path weights . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5\n2.2\nFresh records and true cuts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6\n2.3\nMean width and the two signs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9\n3\nFinite spatial radii under coexistence\n10\n4\nRays and a common renewal arrangement\n14\n4.1\nReduction to a coordinate direction . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n15\n4.2\nExact-cut bridges and renewal tails . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n16\n4.3\nTwo tapes placed from a common top\n. . . . . . . . . . . . . . . . . . . . . . . . . . .\n17\n5\nAn entropy upper bound for contacts\n19\n5.1\nA randomized comparison with independent bridges\n. . . . . . . . . . . . . . . . . . .\n19\n5.2\nThe entropy cost of the comparison . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n20\n5.3\nRare contacts under the reference law\n. . . . . . . . . "
+    },
+    {
+      "path": "~\\brain_workers\\w576\\sources\\strict_zero_one_2026.txt",
+      "bytes": 97206
+    }
+  ],
+  "mesh_help": "usage: agent_mesh.py [-h] [--json]\n                     {hello,pulse,claim,release,assert,send,handoff,handoff-accept,handoff-reject,handoff-cancel,inbox,ack,receipts,digest,campaign-start,campaign-join,task-add,task-take,task-set,task-release,task-reassign,bye,status,doctor,prune,purge} ...\n\nCoordinate Claude, Codex, and autonomous agents through the shared brain.\n\npositional arguments:\n  {hello,pulse,claim,release,assert,send,handoff,handoff-accept,handoff-reject,handoff-cancel,inbox,ack,receipts,digest,campaign-start,campaign-join,task-add,task-take,task-set,task-release,task-reassign,bye,status,doctor,prune,purge}\n    hello               register or refresh an agent identity\n    pulse               heartbeat; renew the agent and all its live claims\n    claim               atomically acquire one or more resource leases\n    release             release resource leases\n    assert              prove live covering write leases immediately before\n                        mutation\n    send                send a message to an agent or all\n    handoff             send a structured evidence handoff requiring\n                        acceptance\n    handoff-accept      accept a structured handoff after inspecting evidence\n    handoff-reject      reject a handoff and keep ownership with the sender\n    handoff-cancel      sender cancels an unanswered handoff before releasing\n                        ownership\n    inbox               read this agent's mailbox\n    ack                 acknowledge mailbox messages\n    receipts            inspect delivery/ack state for messages you sent\n    digest              prompt-sized view of siblings, mail, claims, and work\n    campaign-start      start a timed collaboration campaign\n    campaign-join       join an active campaign\n    task-add            add work to the shared board\n    task-take           atomically take an open task\n    task-set            update a task you own\n    task-release        return a task you own to the open board\n    task-reassign       campaign owner assigns a live task to another member\n    bye                 publish final status and optionally release all claims\n    status              show the live collaboration board\n    doctor              integrity and liveness checks\n    prune               expire dead sessions and leases\n    purge               delete old acknowledged/closed operational history\n\noptions:\n  -h, --help            show this help message and exit\n  --json                machine-readable JSON where applicable\n\nTypical flow:\n  agent_mesh.py hello --agent codex-review --runtime codex --task \"review parser\"\n  agent_mesh.py claim --agent codex-review --resource C:\\repo\\parser.py --mode write --purpose \"fix parser\"\n  agent_mesh.py digest --agent codex-review\n  agent_mesh.py release --agent codex-review --all\n  agent_mesh.py bye --agent codex-review --status done --summary \"tests pass\"\n"
+}

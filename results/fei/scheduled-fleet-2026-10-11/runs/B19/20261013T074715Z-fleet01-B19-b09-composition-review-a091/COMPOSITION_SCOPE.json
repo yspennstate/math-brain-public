@@ -1,0 +1,37 @@
+{
+  "schema": "fei-composition-scope/1",
+  "packet_id": "A091",
+  "reviewed_claim_version": "B09-BIASED-BLOCK-UNCERTAINTY-01",
+  "accepted": {
+    "functions": "all finite genuine Boolean functions",
+    "measure": "arbitrary interior product measure",
+    "restriction": "arbitrary physical coordinate block",
+    "identities": [
+      "L_A=M_A+J_A",
+      "J_A=I(Z;T)",
+      "0<=J_A<=M_A+Delta_A",
+      "L_A<=2M_A+Delta_A"
+    ],
+    "closure": "exact disjoint products/tensors with aligned physical blocks only"
+  },
+  "not_accepted": [
+    "additivity of M,J through a general nonlinear Boolean outer gate",
+    "a B09-ledger composition theorem inferred from O'Donnell-Tan FEI+",
+    "payment of accumulated Delta or M by a dimension-independent influence budget",
+    "sharpness of the exact Delta coefficient",
+    "full FEI"
+  ],
+  "countercontrol": {
+    "construction": "uniform AND of two dictators, reveal one input",
+    "base_M_sum": 0,
+    "base_J_sum": 0,
+    "composite_M": 1,
+    "composite_J": 1
+  },
+  "new_contributor_claim": {
+    "claim_version": "B09-ENDPOINT-ORDER-02",
+    "statement": "For fixed 0<q<1/2, biased two-bit AND with p tending to zero satisfies J-M=4q(1-2q)p log2(1/p)+O(p).",
+    "status": "CONTRIBUTOR_PROVED_PENDING_FRESH_REVIEW"
+  },
+  "full_fei": "OPEN"
+}

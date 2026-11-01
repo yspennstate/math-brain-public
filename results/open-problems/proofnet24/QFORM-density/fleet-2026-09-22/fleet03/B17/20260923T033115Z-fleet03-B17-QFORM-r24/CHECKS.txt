@@ -1,0 +1,17 @@
+verify_compound_poisson_barrier.py
+return code: 0
+
+B =
+['31/49', '-36/49', '-12/49']
+['-36/49', '-23/49', '-24/49']
+['-12/49', '-24/49', '41/49']
+rho = 0.539352601188379356667935722356
+q(c=a=1) = 0.466790324386610341487165379817
+factor = 0.586205251151669786981930229939
+compound-Poisson global density ceiling = 2.48705824953905342544520564348
+3sqrt(2) = 4.24264068711928514640506617263
+strict gap = 1.75558243758023172095986052915
+
+All assertions passed: O^T O=I, B^2=I, every entry of B is nonzero, the two formulas for rho agree, rho<1, q<1, and the compound-Poisson ceiling is strictly below 3sqrt(2).
+
+Environment note: a separate spreadsheet-runtime warmup emitted a timeout warning during Python startup. It was unrelated to this pure-Python checker; the checker itself returned code 0 and produced the output above.

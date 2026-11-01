@@ -1,0 +1,31 @@
+{
+  "source": "A086 unequal-amplitude negative-cell floor; RECONSTRUCTION section4",
+  "missing_term": "Complete amplitude-sensitive floor cost plus actual erased-edge debit from one supplied source slack",
+  "general_substitution": {
+    "active_width": "a>=1",
+    "dummy_width": "b>=0",
+    "controls": "r>=1",
+    "rho": "4*2^(-r-a-b)",
+    "lambda_parameter": "2*2^(-r-b)",
+    "weights": [
+      "1-lambda",
+      "lambda(1-2^(1-a))",
+      "rho"
+    ],
+    "special_source_check": "a=b=3 gives lambda=4rho and weights=(1-4rho,3rho,rho)",
+    "reference_change": "Normalize supplied reference; empty-calibrate explicitly; positive floor preserves conditional source debt",
+    "amplitude_bound": "Calibrated common vacuum collapsed in analysis; nonempty sector mixture phi(A,B) retained, never deleted",
+    "charges": {
+      "created": "2ptb",
+      "erased": "2pta",
+      "controls": "2rpt"
+    },
+    "full_cost": "c+10(C+E+J)",
+    "source_bank": "S_K=K I_g-c",
+    "erased_guard": "E/I_g=p2^-b<=1/2",
+    "paid_price": "K=2C0+10 if c<=C0 I_g"
+  },
+  "exact_debt": "(1-lambda)D(P_g||R0)-kappa",
+  "terminal_bill": "Independent arbitrary terminal c_h retained with coefficient1",
+  "first_unpaid_line": "Transport incoming Q and SAME unused bank through an active restriction; positive point/general three-amplitude profile does not share the positive mixture"
+}

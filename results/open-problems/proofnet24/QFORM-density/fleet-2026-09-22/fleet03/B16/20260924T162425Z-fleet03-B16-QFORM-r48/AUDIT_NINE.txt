@@ -1,0 +1,21 @@
+fleet03/B16 r48 — nine/400 independent audit
+
+Run: 20260924T162425Z-fleet03-B16-QFORM-r48
+Objective: QFORM-FIXED-MULTIPLICITY-AUDIT-20260924
+Execution/memory: WITHOUT_VERIFIED_BRAIN
+
+Pinned source: yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f, proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex, blob 19fb119877426b640b2c0dae19ec2f78a399fe11.
+
+Verdict: PASS in this independent B16 end-to-end reconstruction for the stated theorem s_9(A)>=s => ||p_(X^TAX+b^TX+c)||_infinity <=400 K^2/s, with arbitrary independent rough coordinate laws of cap K, arbitrary real symmetric A, dimension, signature, remaining spectrum and affine terms.
+
+Audit ledger:
+1. Fourier/Gaussian/Riesz: PASS. Plancherel, inversion, Gaussian regularization and half-Riesz constants agree with the stated Fourier convention. Rough laws use approximate identities/Tonelli; no moments or smoothness.
+2. Geometric BL/product projection: PASS. Heat-flow sign and large-time limit are correct. Rotations are deterministic integration changes only. The old zero-row wording defect is repaired: sum_(b_i>0)(1-b_i)<=d.
+3. Decoupling/determinant compiler: PASS. Copies are introduced only in original-coordinate banks; differences remain independent cap-one variables. The BL frame and scalar Fourier powers give the determinant exponent without rotated independence.
+4. Grouped mollified-L2 compiler: PASS. Jensen precedes expansion; D -> (M_JD,(c_iD)_(i in T)) has Gram determinant S^2 det(C_T C_T^T); weighted Holder and subset entropy are correct; heavy-row promotion uses literal coordinates. Hence the order-three density and order-two half-potential receivers are valid.
+5. Schur/interpolation: PASS. Singular Schur-count regularization is valid. Sampled interpolation correctly excludes singular seeds. Completion ranks are rank R<=3r globally and rank R[L,L]<=r; they are used in the correct places.
+6. Pivots: PASS. Scalar-square domination, definite/indefinite pair, quarter-power concentration, full pair half-potential and scalar convolution retain all affine terms. Normalized branch bounds 375, 280, 320, 383, 80 and <392.5 fit 400.
+7. Scaling: PASS. Y=KX and A/s give the exact K^2/s density scaling.
+8. Overlap theorem: PASS as supporting algebra: W_cross_(r,1)+(r+1)^2 V_(r+1) >= V_r sum_(j>3r)s_j(A)^2. It is not by itself an s8 theorem.
+
+Regularity: global essential boundedness is proved; only selected Fourier branches are explicitly C_0. Global continuity is not claimed. Full s3 remains OPEN.

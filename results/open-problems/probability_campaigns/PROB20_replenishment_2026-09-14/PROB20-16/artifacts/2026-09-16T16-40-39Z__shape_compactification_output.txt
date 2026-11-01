@@ -1,0 +1,28 @@
+status=PASS
+symbolic_compactification_identity=PASS
+polynomial_phase_constraint=PASS
+diagnostic_trials=12000
+exact_feasible_shapes=7398
+diagnostic_negative_found= False
+diagnostic_best_normalized_margin_s_minus_2= 0.2948433549813698
+diagnostic_best_phi= np.float64(1.3585369009872473e-10)
+best_u= ['31/32', '31/32', '3/64']
+best_q= 21/64
+best_fields= ['57/64', '3/4', '1/32']
+best_tau= 1.1143606456362505
+best_kernel_eigenvalues= ['0.008043630322148117', '0.11273697014896389', '0.9169431411743031']
+NOTE: X095 floating-point search is diagnostic only; exact claims above are the algebraic identities and rational feasibility checks.
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+
+process_exit_code=0

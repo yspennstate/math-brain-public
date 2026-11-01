@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "scope": "Isolated synthetic fixtures; not a completed-agent or final-package claim",
+  "verifier_sha256": "cc5adfd2b1315998614d9e925bd34da651a20ba7388d00c10df99b9b0a2f55f0",
+  "tests": [
+    {
+      "check": "Verifier contains no assertion gates",
+      "status": "PASS"
+    },
+    {
+      "check": "Reject duplicate JSON keys",
+      "status": "PASS"
+    },
+    {
+      "check": "Reject non-finite JSON constants",
+      "status": "PASS"
+    },
+    {
+      "check": "Valid synthetic manifest verifies hashes, lengths and partial-result coverage",
+      "status": "PASS"
+    },
+    {
+      "check": "Manifest omission of partial result fails coverage",
+      "status": "PASS"
+    },
+    {
+      "check": "Tampered manifest hash fails",
+      "status": "PASS"
+    },
+    {
+      "check": "Wrong byte count fails",
+      "status": "PASS"
+    },
+    {
+      "check": "Duplicate manifest entries rejected",
+      "status": "PASS"
+    },
+    {
+      "check": "Manifest traversal path rejected",
+      "status": "PASS"
+    },
+    {
+      "check": "Manifest self-reference rejected",
+      "status": "PASS"
+    },
+    {
+      "check": "Manifest cannot hash this run's live output",
+      "status": "PASS"
+    },
+    {
+      "check": "Noncanonical path rejected: /absolute",
+      "status": "PASS"
+    },
+    {
+      "check": "Noncanonical path rejected: ../parent",
+      "status": "PASS"
+    },
+    {
+      "check": "Noncanonical path rejected: a//b",
+      "status": "PASS"
+    },
+    {
+      "check": "Noncanonical path rejected: ./a",
+      "status": "PASS"
+    },
+    {
+      "check": "Noncanonical path rejected: a\\b",
+      "status": "PASS"
+    },
+    {
+      "check": "Symlink escape rejected",
+      "status": "PASS"
+    },
+    {
+      "check": "Concurrent input mutation rejected",
+      "status": "PASS"
+    },
+    {
+      "check": "Duplicate agent numbers and task names both fail",
+      "status": "PASS"
+    },
+    {
+      "check": "Incomplete synthetic roster cannot claim 30-agent completion",
+      "status": "PASS"
+    },
+    {
+      "check": "Sibling review can pin current A26 report without a false unresolved-hash gap",
+      "status": "PASS"
+    },
+    {
+      "check": "Sibling review of original A26 snapshot resolves to preserved historical bytes",
+      "status": "PASS"
+    },
+    {
+      "check": "Saved accepted A13 endpoint signs verify",
+      "status": "PASS"
+    },
+    {
+      "check": "All six historical false-pass signs are rejected",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "gate_id": "w558-c0047-finite-arithmetic-20261010",
+  "scope": "One foreground Python standard-library process; exact finite connectivity checks and rational arithmetic only",
+  "fresh": true,
+  "limits": {
+    "processes": 1,
+    "threads": 1,
+    "gpu": 0,
+    "training": false,
+    "network": false,
+    "wall_seconds": 60,
+    "enumeration_configurations_max": 512,
+    "finite_vertices_max": 5,
+    "outputs_within_worker_folder": true
+  },
+  "prohibited_actions": [
+    "No AI subprocesses",
+    "No resource-gate weakening",
+    "No live store writes",
+    "No background work"
+  ],
+  "mathematical_limit": "Numerics corroborate finite arithmetic and pointwise inequalities; they do not establish the infinite-graph proof or current openness.",
+  "status": "ADMITTED",
+  "checked_at_utc": "2026-10-10T07:17:29.491811+00:00",
+  "governor_state_path": "~\\.claude\\compute\\compute_state.json",
+  "governor_state_age_seconds": 19.977536916732788,
+  "governor_snapshot": {
+    "ts": "2026-10-10 10:17:09",
+    "status": "warn",
+    "mode": "owner_present_polite",
+    "cpu_pct": 85,
+    "mem_avail_mb": 4397,
+    "mem_load_pct": 93,
+    "commit_eff_avail_mb": 68719,
+    "commit_eff_used_pct": 57.9,
+    "disk_free_gb": 50.6
+  },
+  "foreground_priority": "BelowNormal"
+}

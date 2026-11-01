@@ -1,0 +1,138 @@
+\section*{A paid rectangle interface for ratio-critical Boolean sources}
+
+All Fourier entropies are in bits.  Let
+$f:\{-1,1\}^{A\sqcup B}\to\{-1,1\}$ be Boolean, with
+$|A|=a$, $|A|+|B|=N$.  Define the multiplicative rectangle defect
+\[
+ \rho_A(f)=\Pr_{x,x'\in\{-1,1\}^A,\ y,y'\in\{-1,1\}^B}
+ \bigl[f(x,y)f(x',y)f(x,y')f(x',y')=-1\bigr].       \tag{1}
+\]
+This is a truth-table statistic fixed before any entropy comparison.  It is
+zero exactly when $f$ is a disjoint Boolean product across the cut.
+
+\subsection*{The anchoring identity}
+
+For an anchor $(x_0,y_0)$ put
+\[
+ u_{y_0}(x)=f(x,y_0),\qquad
+ v_{x_0,y_0}(y)=f(x_0,y)f(x_0,y_0),
+\]
+and $T_{x_0,y_0}(x,y)=u_{y_0}(x)v_{x_0,y_0}(y)$.  Then
+\[
+ \mathbb E_{x_0,y_0}\Pr_{x,y}[f(x,y)\ne T_{x_0,y_0}(x,y)]
+ =\rho_A(f).                                         \tag{2}
+\]
+Indeed, the mismatch indicator is one precisely when the product of the four
+corners $(x,y),(x,y_0),(x_0,y),(x_0,y_0)$ is $-1$.  The four coordinates are
+independent and uniform after averaging the query and anchor.  Consequently
+there are Boolean $u,v$ such that
+\[
+ \varepsilon:=\Pr[f\ne uv]\le\rho_A(f).             \tag{3}
+\]
+This proves a Boolean realizability statement, not merely a rank-one
+approximation of an arbitrary spectral law.
+
+\subsection*{A dimension-explicit component excess}
+
+We first record a harmless universal estimate.  If $g$ is nonconstant on
+$N$ bits and $R(g)=H(g)/I(g)$, then
+\[
+ R(g)\le3N.                                           \tag{4}
+\]
+To prove this, let $S$ have law $\widehat g(S)^2$ and
+$q=\Pr[S\ne\varnothing]=\operatorname{Var}(g)$.  Then
+$I(g)=\mathbb E|S|\ge q$ and
+\[
+ H(g)\le h_2(q)+Nq.
+\]
+Writing the minority truth-table density as $\delta$, nonconstancy gives
+$\delta\ge2^{-N}$ and $q=4\delta(1-\delta)\ge2^{1-N}$.  The elementary bound
+$h_2(q)\le q\log_2(1/q)+q/\ln2$ therefore gives
+$h_2(q)\le2Nq$, which proves (4).
+
+For $0\le r\le1/16$ define the interface excess
+\[
+ \mathcal E_{N,a}(r)
+ =2h_2(2\sqrt r)+(2N-a)2\sqrt r+6aNr.                \tag{5}
+\]
+It depends only on the physical cut, its rectangle defect, and the ambient
+dimension.  It is not defined as a missing entropy gap.
+
+\begin{theorem}[controlled component excess]
+Suppose $f$ is descendant-critical: every nonconstant physical restriction
+$g$ satisfies $R(g)\le R:=R(f)$.  If $\rho=\rho_A(f)\le1/16$, then there are
+Boolean $u$ on $A$ and $v$ on $B$, with
+$\varepsilon=\Pr[f\ne uv]\le\rho$, for which
+\[
+ \boxed{\quad R I(u)-H(u)\le\mathcal E_{N,a}(\rho).\quad}    \tag{6}
+\]
+In particular, when $u$ is nonconstant,
+\[
+ (R-R(u))I(u)\le\mathcal E_{N,a}(\rho).              \tag{7}
+\]
+The symmetric assertion holds for $v$, replacing $a$ by $N-a$.
+\end{theorem}
+
+\begin{proof}
+Choose $u,v$ from (3).  The A053 critical near-tensor theorem, applied to the
+same physical cut, gives
+\[
+ R\bigl(I(u)-2a\varepsilon\bigr)
+ \le H(u)+2h_2(2\sqrt\varepsilon)
+             +(2N-a)2\sqrt\varepsilon.               \tag{8}
+\]
+Because $\varepsilon\le\rho\le1/16$, the displayed continuity terms are
+nondecreasing when $\varepsilon$ is replaced by $\rho$.  Move $H(u)$ to the
+left, use $R\le3N$, and bound
+$2Ra\varepsilon\le6aN\rho$.  This is (6).  The proof for $v$ is identical.
+\end{proof}
+
+\subsection*{An explicit influence-paid class}
+
+The preceding excess is not automatically $O(I)$ for arbitrary cuts.  The
+following sufficient admission criterion states exactly when it is paid.
+
+\begin{corollary}[paid low-interface cut]
+Let $J=I_A(f)>0$, $0<\kappa\le1$, and put $t=2\sqrt{\rho_A(f)}$.  Suppose
+\[
+ t\le\min\left\{
+ \frac{\kappa^2J^2}{144},
+ \frac{\kappa J}{6N},
+ \sqrt{\frac{2\kappa J}{9aN}}
+ \right\}.                                           \tag{9}
+\]
+Then the factors in the theorem may be chosen with
+\[
+ I(u)\ge\left(1-\frac{\kappa}{9N}\right)J\ge\frac89J, \tag{10}
+\]
+and the interface is paid by actual physical block influence:
+\[
+ R I(u)-H(u)\le\kappa J.                              \tag{11}
+\]
+Consequently
+\[
+ R(u)\ge R-\frac98\kappa.                            \tag{12}
+\]
+\end{corollary}
+
+\begin{proof}
+Hamming perturbation of a product changes each block influence by at most
+$2a\varepsilon$, so
+$I(u)\ge J-2a\varepsilon$.  From the third condition in (9),
+$2a\varepsilon=a t^2/2\le\kappa J/(9N)$, proving (10).
+The elementary inequality $h_2(t)\le2\sqrt t$ and the three conditions in
+(9) respectively give
+\[
+ 2h_2(t)\le\frac{\kappa J}{3},\qquad
+ (2N-a)t\le\frac{\kappa J}{3},\qquad
+ 6aN\rho=\frac32aNt^2\le\frac{\kappa J}{3}.
+\]
+Thus $\mathcal E_{N,a}(\rho)\le\kappa J$, and (11)--(12) follow.
+\end{proof}
+
+For $\rho_A(f)=0$, the result specializes to exact tensor purity: $f=uv$ and
+both nonconstant factors have ratio exactly $R$.  For positive defect, it is a
+quantitative alternative: either the cut violates the explicit small-interface
+condition (9), or it exposes a Boolean factor whose ratio is within
+$9\kappa/8$ of the critical source.  Universal admission of some cut satisfying
+(9) remains open.

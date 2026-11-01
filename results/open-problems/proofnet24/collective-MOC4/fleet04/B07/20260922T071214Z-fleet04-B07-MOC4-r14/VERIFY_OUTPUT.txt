@@ -1,0 +1,11 @@
+PASS mixed-Schur kernel and cubic gate
+PASS explicit reserve:
+ R=A*r1^2 + A*B*(A*r2^2+2*sig*r2*s2+B*s2^2)/(A*B-sig^2)
+PASS exact payment form:
+ delta >= r1^2/B +(sqrt(A)r2+sqrt(B)s2)^2/[2sqrt(AB)(sqrt(AB)-sig)]
+          +(sqrt(A)r2-sqrt(B)s2)^2/[2sqrt(AB)(sqrt(AB)+sig)]
+PASS polar-alignment consequence:
+ |sqrt(A)r+sqrt(B)Q s|^2 <= 2sqrt(AB)(sqrt(AB)-sig)*delta
+PASS top-circle exact factor:
+ numerator=-2[(sqrt(A)x-sqrt(B)y-r1*x*y/sqrt(B))^2 +(delta-r1^2/B)x^2y^2]
+PASS lead calibration q=-3/2, delta=2

@@ -1,0 +1,72 @@
+{
+  "full_FEI_proved": false,
+  "candidate_universal_L_le_3_delta_proved": false,
+  "arithmetic": "Fraction plus outward 64-term atanh logarithm intervals",
+  "exhaustive_n_le_4": {
+    "1": {
+      "canonical_functions": 2,
+      "violations": 0,
+      "max_L_over_delta": null
+    },
+    "2": {
+      "canonical_functions": 8,
+      "violations": 0,
+      "max_L_over_delta": [
+        [1],
+        {"lower": "1.000000000000", "upper": "1.000000000000"},
+        {"lower": "2.000000000000", "upper": "2.000000000000"},
+        "2",
+        "1"
+      ]
+    },
+    "3": {
+      "canonical_functions": 128,
+      "violations": 0,
+      "max_L_over_delta": [
+        [1],
+        {"lower": "2.661033013411", "upper": "2.661033013412"},
+        {"lower": "1.663145633382", "upper": "1.663145633383"},
+        "5/8",
+        "3/4"
+      ]
+    },
+    "4": {
+      "canonical_functions": 32768,
+      "violations": 0,
+      "max_L_over_delta": [
+        [1],
+        {"lower": "2.773751625802", "upper": "2.773751625803"},
+        {"lower": "0.823457513910", "upper": "0.823457513911"},
+        "19/64",
+        "1/2"
+      ]
+    }
+  },
+  "onepoint_finite_core": [
+    {"n": 2, "M": "1", "delta": "2", "L": {"lower": "2.000000000000", "upper": "2.000000000000"}, "L_over_delta": {"lower": "1.000000000000", "upper": "1.000000000000"}},
+    {"n": 3, "M": "3/4", "delta": "5/8", "L": {"lower": "1.663145633382", "upper": "1.663145633383"}, "L_over_delta": {"lower": "2.661033013411", "upper": "2.661033013412"}},
+    {"n": 4, "M": "1/2", "delta": "19/64", "L": {"lower": "0.823457513910", "upper": "0.823457513911"}, "L_over_delta": {"lower": "2.773751625802", "upper": "2.773751625803"}},
+    {"n": 5, "M": "5/16", "delta": "9/64", "L": {"lower": "0.367148988580", "upper": "0.367148988581"}, "L_over_delta": {"lower": "2.610837252131", "upper": "2.610837252132"}},
+    {"n": 6, "M": "3/16", "delta": "69/1024", "L": {"lower": "0.162848116594", "upper": "0.162848116595"}, "L_over_delta": {"lower": "2.416760454974", "upper": "2.416760454975"}},
+    {"n": 7, "M": "7/64", "delta": "67/2048", "L": {"lower": "0.074023772143", "upper": "0.074023772144"}, "L_over_delta": {"lower": "2.262696796269", "upper": "2.262696796270"}}
+  ],
+  "onepoint_tail_analytic_start_n": 8,
+  "quadratic_phases": [
+    {"n": 2, "M": "1", "delta": "2", "L": {"lower": "2.000000000000", "upper": "2.000000000000"}, "ratio": {"lower": "1.000000000000", "upper": "1.000000000000"}},
+    {"n": 4, "M": "2", "delta": "4", "L": {"lower": "4.000000000000", "upper": "4.000000000000"}, "ratio": {"lower": "1.000000000000", "upper": "1.000000000000"}},
+    {"n": 6, "M": "3", "delta": "6", "L": {"lower": "6.000000000000", "upper": "6.000000000000"}, "ratio": {"lower": "1.000000000000", "upper": "1.000000000000"}}
+  ],
+  "fixed_sparse_stress": [
+    {"name": "n5_three_point", "minority_set": [1,10,26], "M": "11/16", "delta": "29/64", "L": {"lower": "1.306054806892", "upper": "1.306054806893"}, "L_over_delta": {"lower": "2.882327849693", "upper": "2.882327849694"}},
+    {"name": "n6_seven_point", "minority_set": [57,52,51,44,28,43,9], "M": "13/16", "delta": "551/1024", "L": {"lower": "1.587433088806", "upper": "1.587433088807"}, "L_over_delta": {"lower": "2.950147881920", "upper": "2.950147881921"}}
+  ],
+  "addressing_m2": {
+    "M": "2",
+    "delta": "41/16",
+    "L": {"lower": "4.038102529652", "upper": "4.038102529653"},
+    "ratio": {"lower": "1.575844889620", "upper": "1.575844889621"}
+  },
+  "script_sha256": "d0cf5e6de88084782d1cb416e98c68d6322532a88f925c1c50eeeb6a67d19fac",
+  "elapsed_seconds": 32.405,
+  "status": "PASS"
+}

@@ -1,0 +1,12 @@
+{
+  "helper_version": "A056-biased-collision-v1",
+  "family": "F=c(W)G(S,X)+(1-c(W))H(S,Y), disjoint W,S,X,Y; c a Boolean indicator",
+  "domain": "All 16 two-bit sign controllers; all 16^2 pairs of two-bit shared-only branches; all 16^2 pairs of branches on one shared and one private bit each. Scalar p=0..16/16, x,y=-8..8/8.",
+  "case_count": "8192 Boolean roots; 4913 scalar triples. Each root includes compatible-reference checks with uniform and index-weighted seed laws.",
+  "symmetry": "None; exhaustive stated domains",
+  "arithmetic": "Integer Walsh transform, Fraction probabilities, exact rational prime-log vectors; sign by denominator clearing and integer product comparison. Analytic proof handles continuum.",
+  "memory_estimate_mb": 120,
+  "max_runtime_seconds": 300,
+  "pilot": "16 Boolean roots per domain and 51 scalar triples; under 60 seconds",
+  "dimension_escalation": false
+}

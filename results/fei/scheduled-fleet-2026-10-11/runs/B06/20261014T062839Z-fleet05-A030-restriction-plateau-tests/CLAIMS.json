@@ -1,0 +1,49 @@
+[
+  {
+    "claim_id": "A030-THREE-STATE-BOOLEAN-CUT-RESERVE",
+    "version": 1,
+    "exact_statement": "On a finite uniform physical cube let an exclusive controller kappa select k independent disjoint Boolean data cores with actual remaining means m_j, and fix one own-history physical controller policy T for all Boolean output labelings. For each labeling epsilon let r_epsilon be its supplied nonnegative C-priced controller potential. The actual complete-data controller-boundary reserve has mean-only harmonic extension P=sum_epsilon product_j[(1+epsilon_j m_j)/2] r_epsilon. This is the unique such extension on all physically realizable mean vectors; it is a DATA martingale and satisfies E_epsilon Inf_i(g_epsilon)=Inf_i(F) and E_epsilon D_i(g_epsilon)<=C Inf_i(F)+P-E P_child at each controller query. For three labels and sign-invariant least reserves r_j=Q_C(1-2C_j,T), P=sum_j w_j r_j with w_j=[1+m_l m_s-m_j(m_l+m_s)]/4, w_j>=0, sum_j w_j<=1, and w_j+w_l=(1-m_j m_l)/2 on a j-to-l edge. Binary labels recover delta*r_h. With existing rarity bank R=sum_j phi(q_j)(1-m_j^2), the residual E_i=D_i(F)-sum_j w_j D_i(1-2C_j)-(R-E R_child) remains explicit. Exhaustive exact certificates prove max positive E_i/Inf_i(F)=3 over all at-most-two-control three-state label maps and disjoint constant/dictator cores, including all partial histories. Support relabeling extends E_i<=3Inf_i(F) to arbitrary disjoint parity cores under every partial DATA exposure for these controller maps. Conditional on the scoped reviewed A064 local data lift, P+R is a nonnegative potential at alpha=max(11/2,C+3) for all compatible finite parity-core/controller interleavings. The three-state table(1,1,2,3) with independent dictators has C1 cut reserves(0,3/2,3/2), P=3/4, R=3/2 and actual root Q1=9/4; dropping the two nonzero cut reserves loses3/4. Its live child has E_i=1,d_i=1/2, refuting a zero-price residual extension. No arbitrary-controller/non-flat-core correction or inherited initial reserve bound is asserted.",
+    "hypotheses": [
+      "Actual Boolean sign functions on finite uniform independent physical blocks; entropy bits",
+      "Exactly one declared own-history controller policy shared by every output labeling; potentials use actual remaining controller histories",
+      "Distinct random physical data cores independent; duplicate correlated core labels merged; degenerate constant duplicates may be merged without altering formulas",
+      "Uniqueness asserted on physically realizable mean vectors, or with separately stated continuous extension",
+      "Three-cut collapse uses sign-invariant Q_C at C>=0; parity-core finite extension has at most two physical controller coordinates",
+      "Full interleaving corollary consumes only the scoped reviewed A064 additional-v2 local data lemma and retains all actual terminals"
+    ],
+    "statement_sha256": "187b43075230f4671cef940d2e33ff87bcec1c59de55d40f9c568adc7439f468",
+    "contributors": [
+      "A030; actual boundary harmonic graft credited to A064; earlier binary transfer independently accepted by A087; existing rarity bank credited to A038/A057"
+    ],
+    "proof_source": "PROOF.md; REPORT.md; out/VALIDATION.json; code/check.py",
+    "proof_dependencies": [
+      {
+        "claim_id": "A064-TERMINAL-CORRECTED-GLOBAL-DEBT",
+        "version": 2,
+        "scope": "Additional-v2 local data lift only, used only for the parity interleaving corollary; general cut law and correction census self-contained",
+        "acceptance": "A087 partial additional-v2 acceptance,20261014T020842Z",
+        "recorded_statement_sha256": "24810a34e194827e87ab6607315a59932d42d9b94868aa2c2b67cc04f62a7ed8"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW_WITH_SCOPED_REVIEWED_DEPENDENCY",
+    "supersedes": [],
+    "refutes": [
+      "Replacing the stated three-cut payload by its first zero dictator-cut reserve",
+      "Zero additional price for D_F minus expected actual controller seed decrement and owned rarity release"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A064",
+      "A087",
+      "A062",
+      "A065",
+      "A029",
+      "A028",
+      "A038",
+      "A091",
+      "A094",
+      "B06"
+    ]
+  }
+]

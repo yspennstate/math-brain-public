@@ -1,0 +1,7 @@
+{
+  "initial_pilot": "FAIL at assertion 26658, bent-control overlap",
+  "cause": "The helper compared TOTAL corrected entropy E with HIGH-DEGREE scale J_hi. The proof and intended control assert E_hi=J_hi. Bent spectra also have singleton mass, so total E includes an additional singleton charge.",
+  "repair": "Return Ehi separately and compare Ehi to Jhi; theorem unchanged. Duplicate strict control made explicit in frozen specification.",
+  "initial_runtime_seconds": 6.6039495,
+  "scope": "Checker bookkeeping error, not a counterexample to a stated theorem; rerun required."
+}

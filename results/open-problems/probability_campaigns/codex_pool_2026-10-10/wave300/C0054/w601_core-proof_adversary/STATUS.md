@@ -1,0 +1,6 @@
+STATE: WORKING
+NEXT: Recover the full intake statement, then audit w600's exact candidate against the saved scalar-contraction obstruction and eta-uniform requirement.
+
+2026-10-10: Started C0054 core-proof adversary task. Primary directive read. No pre-existing STATUS or FEEDBACK found. Current openness is UNKNOWN pending scoped primary-source and retired-work checks. Independent-first audit order preserved.
+2026-10-10: Saved first source-status row and INDEPENDENT.md before reading w600. Derived exact scalar fractional-moment row sum q=2W(W+1) sec(pi s/2)>4 at equal diagonal/hopping scale. This rejects one route; no claim of solving or disproving C0054. Recall returned three slugs; scoped scar reads pending. No hook audit assigned to w601 in the assignment grep.
+2026-10-10: Read top-three recall scars and the requested perceptron scar. Recovered the full intake and primary model. Saved two prior-record corrections. STUCK: team_comm could not send without membership or with guessed probability300-integration team; inspect its team registry and switch to the exact registered team/direct mesh route. w600's status reports a v2 exponent improvement; verify version before final source-status write.

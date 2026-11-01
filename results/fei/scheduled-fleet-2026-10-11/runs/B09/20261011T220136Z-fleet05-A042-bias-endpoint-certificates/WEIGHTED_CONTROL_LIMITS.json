@@ -1,0 +1,110 @@
+{
+  "source": "source_material/reductions/paper/biased.tex; REPORT.md section 4 reconstructs the proof",
+  "novelty": "recovered controls; no novelty claim",
+  "growing_arity": {
+    "domain": "m>=2, q=m^(-2), eta=1/m, r=q^m, q0=(m-1)r/[1+(m-1)r]",
+    "corrected_entropy_over_deficit_bits": "2+O((ln m)/m^2)+O(r) -> 2",
+    "event_TC_over_spectral_I_nats": "(ln m+1)/8+O((ln m)/m) -> infinity",
+    "coefficient_one_pivotal_residual_over_I_nats": "(ln m)/2-ln2+O((ln m)/m) -> infinity",
+    "credit_scope": "refutes exactly multiplier one; larger multipliers unsettled"
+  },
+  "ordered_local_limit": {
+    "domain": "eta=1/2, q0=q^m/(1+q^m); q->0 at fixed m>=1, then m->infinity",
+    "each_coordinate_physical_pair_MI_ratio_nats": "m ln2/2",
+    "corrected_entropy_over_deficit_bits": "2 for fixed m>=2; 2+4/ln2 for m=1",
+    "uniform_in_m_small_q_remainder": false
+  },
+  "finite_certificates": [
+    {
+      "m": 2,
+      "Hplus_over_deficit_bits": [
+        "4927865451/1000000000",
+        "49278654511/10000000000"
+      ],
+      "event_TC_over_I_nats": [
+        "399180637/2500000000",
+        "1596722549/10000000000"
+      ],
+      "unit_pivotal_residual_over_I_nats": [
+        "-6792401647/10000000000",
+        "-3396200823/5000000000"
+      ]
+    },
+    {
+      "m": 3,
+      "Hplus_over_deficit_bits": [
+        "32586672521/10000000000",
+        "16293336261/5000000000"
+      ],
+      "event_TC_over_I_nats": [
+        "2141328779/10000000000",
+        "107066439/500000000"
+      ],
+      "unit_pivotal_residual_over_I_nats": [
+        "-3439631513/10000000000",
+        "-429953939/1250000000"
+      ]
+    },
+    {
+      "m": 4,
+      "Hplus_over_deficit_bits": [
+        "13635875423/5000000000",
+        "27271750847/10000000000"
+      ],
+      "event_TC_over_I_nats": [
+        "1282551691/5000000000",
+        "2565103383/10000000000"
+      ],
+      "unit_pivotal_residual_over_I_nats": [
+        "-1540857943/10000000000",
+        "-770428971/5000000000"
+      ]
+    },
+    {
+      "m": 8,
+      "Hplus_over_deficit_bits": [
+        "22181818181/10000000000",
+        "11090909091/5000000000"
+      ],
+      "event_TC_over_I_nats": [
+        "357239369/1000000000",
+        "3572393691/10000000000"
+      ],
+      "unit_pivotal_residual_over_I_nats": [
+        "100185979/400000000",
+        "626162369/2500000000"
+      ]
+    },
+    {
+      "m": 16,
+      "Hplus_over_deficit_bits": [
+        "10334728033/5000000000",
+        "20669456067/10000000000"
+      ],
+      "event_TC_over_I_nats": [
+        "4543548547/10000000000",
+        "1135887137/2500000000"
+      ],
+      "unit_pivotal_residual_over_I_nats": [
+        "6329343951/10000000000",
+        "395583997/625000000"
+      ]
+    },
+    {
+      "m": 32,
+      "Hplus_over_deficit_bits": [
+        "20201816347/10000000000",
+        "5050454087/2500000000"
+      ],
+      "event_TC_over_I_nats": [
+        "5479972267/10000000000",
+        "1369993067/2500000000"
+      ],
+      "unit_pivotal_residual_over_I_nats": [
+        "501714721/500000000",
+        "10034294421/10000000000"
+      ]
+    }
+  ],
+  "full_FEI": "OPEN"
+}

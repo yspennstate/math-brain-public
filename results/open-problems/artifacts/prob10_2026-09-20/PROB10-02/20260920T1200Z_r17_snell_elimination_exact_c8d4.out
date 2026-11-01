@@ -1,0 +1,32 @@
+R17 PROB10-02 exact Snell-elimination / reduced-certificate checker
+SECTION scalar_cylinder_obstruction
+all-zero periodic environment is fixed by T_X,T_Y and has match reward 1
+therefore the diagonal cylinder inequality reduces exactly to c_X+c_Y >= 1
+SCALAR_CYLINDER_PERIODIC_OBSTRUCTION_PASS
+SECTION first_match_profile_quotient_counterexample
+same_first_match_prefix=10, T=1
+d_star(100)= 3/10 d_star(101)= 2/5
+FIRST_MATCH_ONLY_QUOTIENT_COUNTEREXAMPLE_PASS
+SECTION geometric_tail_regression
+K= 3 observed_gap= 3087007721/6442450944 proved_theorem_bound= 3/2
+K= 4 observed_gap= 514501283/2147483648 proved_theorem_bound= 3/4
+K= 5 observed_gap= 771751913/6442450944 proved_theorem_bound= 3/8
+K= 6 observed_gap= 128625315/2147483648 proved_theorem_bound= 3/16
+K= 7 observed_gap= 192937961/6442450944 proved_theorem_bound= 3/32
+K= 8 observed_gap= 32156323/2147483648 proved_theorem_bound= 3/64
+K= 9 observed_gap= 48234473/6442450944 proved_theorem_bound= 3/128
+GEOMETRIC_TAIL_REGRESSION_PASS
+SECTION ell6_exact_reduced_subsolution
+ell= 6 full_exact_candidate_iterations= 100 snell_truncation_K= 20
+rho_cert= 6293309/10000000
+min_reduced_residual= 61724634372071852361413350307618400173932180058336199120280129/98079714615416886934934209737619787751599303819750539264000000
+max_reduced_residual= 60278158027322014070391374070372377076783782884340418120613/95780971304118053647396689196894323976171195136475136000000
+exact_margin= 196507041945157264813263266876452046068730395772348908357/490398573077084434674671048688098938757996519098752696320000000
+previous_ell6_rho= 44277390789435/70368744177664
+rho_improvement= 612055919066017/5497558138880000000
+transferred_gamma_lower= 12586618/16293309
+current_source_lower= 99083249/125000000
+source_endpoint_moves= False
+ELL6_REDUCED_SUBSOLUTION_PASS
+ALL_EXACT_CHECKS_PASS
+RETURN_CODE=0

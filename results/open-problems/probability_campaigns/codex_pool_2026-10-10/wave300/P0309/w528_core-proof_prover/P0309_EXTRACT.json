@@ -1,0 +1,59 @@
+[
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\brain_bundle_C006p02.json",
+    "record": {
+      "key": "op-p0309",
+      "namespace": "probability.core",
+      "logical_name": "open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "concept",
+      "title": "Open problem: Positive-temperature crystalline Gibbs phases for three-dimensional Riesz gases",
+      "statement": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status unsolved). Prove existence of a crystalline Gibbs phase at sufficiently low positive temperature for the three-dimensional Coulomb or Riesz gas in the regimes predicted in the review. Source: Lewin: Coulomb and Riesz gases, the known and the unknown,2022, SectionVI,PDF59-61,66-67.",
+      "proof_text": null,
+      "assumptions": [
+        "Posed in Lewin: Coulomb and Riesz gases, the known and the unknown,2022",
+        "Status as recorded in the campaign ledger on 2026-09-07"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-codex-20260906:op-p0309",
+        "url": "urn:probability-research:20260906:codex-campaign:op-p0309",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+        "excerpt": null
+      }
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\brain_bundle_C006a05.json",
+    "record": {
+      "key": "at-p0309",
+      "namespace": "probability.core",
+      "logical_name": "attempt-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "concept",
+      "title": "Attempt on Positive-temperature crystalline Gibbs phases for three-dimensional Riesz gases",
+      "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Source-specific calculation, conditional implication or exact obstruction Result: The harmonic phonon calculation around an assumed crystal has infrared displacement variance proportional to integral over |k|<1 of |k|^-2 dk. In dimension d this is a constant times integral from0 to1 of r^(d-3)dr, finite in d=3 and logarithmically divergent in d=2. Therefore the elementary infrared objection to positional order is absent in three dimensions. Check: The radial Jacobian r^(d-1) produces the exponent d-3. This only checks the Gaussian approximation conditional on a lattice; it neither selects a lattice nor constructs an infinite-volume Gibbs measure. Obstruction: One must control defects, anharmonic fluctuations and alternative configurations uniformly in volume and show nontrivial positional order. Finite variance within an assumed crystal cannot prove that the full Gibbs law is crystalline. Numerical BCC/FCC phase diagrams are not a proof.",
+      "proof_text": null,
+      "assumptions": [
+        "Refers to the open problem node open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+        "No independent review"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-codex-20260906:at-p0309",
+        "url": "urn:probability-research:20260906:codex-campaign:at-p0309",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+        "excerpt": null
+      }
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\brain_bundle_C006a05.json",
+    "record": {
+      "from_key": "at-p0309",
+      "to_existing_logical": "math:probability.core:open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "depends_on",
+      "rationale": "The attempt is about this problem and inherits its hypotheses"
+    }
+  }
+]

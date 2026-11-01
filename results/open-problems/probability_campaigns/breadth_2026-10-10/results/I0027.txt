@@ -1,0 +1,303 @@
+{
+  "problem_id": "I0027",
+  "source_checks": [
+    {
+      "check": "Status from memory",
+      "known_resolving_papers": [],
+      "result": "I cannot confidently name a paper resolving both conjectures. This does not certify current openness."
+    },
+    {
+      "source_id": "aldous_fill_2014",
+      "location": "Open Problem 6.13, Section 6.4",
+      "statement_checked": "The statement supplied in the prompt.",
+      "original_source_inspected": false,
+      "recorded_status": "partially_resolved_in_literature",
+      "source_normalization_independently_verified": false
+    },
+    {
+      "web_search_used": false,
+      "browsing_used": false,
+      "child_agents_used": false,
+      "novelty_claimed": false,
+      "independent_model_family_audit": "pending",
+      "brain_nodes_admitted": false
+    }
+  ],
+  "exact_statement": {
+    "label": "conjecture",
+    "graph_class": "Connected simple undirected unweighted graphs on n vertices, n >= 2.",
+    "walk": "Simple random walk with transition matrix P(u,v)=1/d_u on adjacent vertices; continuous-time generator P-I, so the total jump rate is one.",
+    "definitions": {
+      "stationary_distribution": "pi_u=d_u/W, where W=sum_u d_u=2|E|.",
+      "tau_0": "Kemeny's constant: sum_v pi_v E_u[T_v], independent of u, with T_u=0 when the starting vertex is u.",
+      "tau_2": "1/mu_2, where 0=mu_1<mu_2<=...<=mu_n are the eigenvalues of I-P.",
+      "M_0": "M_0(n)=max_G tau_0(G).",
+      "M_2": "M_2(n)=max_G tau_2(G)."
+    },
+    "target": "M_0(n) ~ n^3/54 and M_2(n) ~ n^3/54 as n tends to infinity.",
+    "normalization_note": "These definitions use the ordinary spectral gap, not the absolute spectral gap. Replacing P by (I+P)/2 doubles both constants."
+  },
+  "answer": "yes",
+  "proof_or_counterexample": {
+    "label": "proof",
+    "proved_statement": "Under the stated graph and walk conventions, both asymptotics hold. More explicitly, every connected simple n-vertex graph satisfies tau_2 <= tau_0 <= n^3/54+(37/8)n^(5/2), and balanced barbells attain the leading constant.",
+    "steps": [
+      {
+        "id": 1,
+        "statement": "Spectral and resistance formulas for Kemeny's constant.",
+        "proof": "Write K=tau_0 and L=diag(d)-Adj. The matrix I-P is similar to the symmetric normalized Laplacian. The identity f^T L f=sum_{uv in E}(f_u-f_v)^2 shows that connectedness makes its zero eigenvalue simple and all other eigenvalues positive. Put Pi=1 pi^T and Z=(I-P+Pi)^(-1). This inverse exists: its eigenvalues are 1 and 1/mu_i for i>=2. Also Z1=1 and (I-P)Z=I-Pi. For a fixed target v, the vector h_u=(Z_vv-Z_uv)/pi_v has h_v=0 and satisfies h_u-sum_x P(u,x)h_x=1 for u!=v. These are the hitting-time equations for the rate-one walk. Their solution is unique because the principal submatrix of L obtained by deleting v is positive definite. Thus h_u=E_u[T_v]. Consequently sum_v pi_v E_u[T_v]=tr(Z)-sum_v Z_uv=tr(Z)-1=sum_{i=2}^n 1/mu_i. In particular, tau_2<=K. Define effective resistance R_uv by solving L phi=e_u-e_v and putting R_uv=phi_u-phi_v. For h^v_x=E_x[T_v], the hitting-time equations and the zero column sums of L give Lh^v=d-W e_v. Therefore L(h^v-h^u)=W(e_u-e_v), giving E_u[T_v]+E_v[T_u]=W R_uv. Averaging the random-target identity over the starting distribution pi and grouping unordered pairs yields K=(1/W)sum_{u<v} d_u d_v R_uv."
+      },
+      {
+        "id": 2,
+        "statement": "Effective resistance is at most graph distance.",
+        "proof": "Orient the edges arbitrarily and let J be the vertex-edge incidence matrix, so L=JJ^T. If L phi=e_u-e_v, the flow i=J^T phi has divergence e_u-e_v and energy ||i||^2=phi^T L phi=R_uv. Any other flow j with this divergence satisfies J(j-i)=0 and hence <i,j-i>=<phi,J(j-i)>=0. Thus ||j||^2=||i||^2+||j-i||^2>=R_uv. Sending one unit along a shortest u-v path produces a flow of energy dist_G(u,v). Therefore R_uv<=dist_G(u,v)."
+      },
+      {
+        "id": 3,
+        "statement": "High-degree neighborhoods form components with a controlled total diameter.",
+        "proof": "Fix a real threshold D>0. Let H={v:d_v>=D} and S=union_{h in H} N[h], using closed neighborhoods. Let C_1,...,C_k be the connected components of G[S], with s_i=|C_i|, s=sum_i s_i, and delta_i=diam(G[C_i]). Every component contains a high-degree vertex h and its entire closed neighborhood, so s_i>=D and k<=s/D. To bound delta_i, take a shortest path v_0,...,v_delta_i in G[C_i]. For each selected index j=0,5,10,..., choose h_j in H at distance at most one from v_j. Such a vertex exists by the definition of S and belongs to C_i. Its closed neighborhood lies entirely in C_i. If N[h_j] and N[h_l] intersect for distinct selected indices, a walk from v_j to v_l through h_j, a common neighbor, and h_l has length at most four inside C_i. This contradicts the shortest-path property, because |j-l|>=5. Hence these closed neighborhoods are disjoint, and each has at least D vertices. Therefore (floor(delta_i/5)+1)D<=s_i, implying delta_i<=5s_i/D. Summing gives delta=sum_i delta_i<=5s/D. If H is empty, take s=k=delta=0."
+      },
+      {
+        "id": 4,
+        "statement": "Comparison with a weighted tree.",
+        "proof": "Contract each C_i to a single vertex and retain each vertex outside S separately. The connected quotient has a spanning tree T. Let t=n-s. Its number of edges is t+k-1, hence at most t+s/D and also at most n-1. For each quotient vertex x, let w_x be the sum of original degrees in its part. Then sum_x w_x=W. Lift a T-path to G using one original edge for each tree edge and paths inside the visited components. A simple tree path visits each component at most once, so dist_G(u,v)<=dist_T(q(u),q(v))+delta. Steps 1 and 2 now give K<=(1/W)sum_{x<y}w_x w_y dist_T(x,y)+W delta/2. For a tree, an edge contributes one to the distance of exactly the pairs separated by its deletion. Therefore the first term equals sum_{e in E(T)} W_L(e)W_R(e)/W, where W_L and W_R are the total weights on the two sides of the edge."
+      },
+      {
+        "id": 5,
+        "statement": "Every tree cut has core contribution at most s^2/8.",
+        "proof": "For a contracted component C_i set a_i=2|E(G[C_i])|; for an outside singleton set a_x=0. Put b_x=w_x-a_x and B=sum_x b_x. There are no edges between different C_i. Thus B is twice the number of edges not internal to a component, and B<=2 sum_{v outside S}d_v<=2nD. For a tree cut write A_L=sum_L a_x, A_R=sum_R a_x, b_L=sum_L b_x, and b_R=sum_R b_x. Put A=A_L+A_R, so W=A+B. If A>0, expansion gives W_L W_R/W <= A_L A_R/A+B: the core product divided by W is at most A_L A_R/A, while the remaining numerator A_L b_R+A_R b_L+b_L b_R is at most AB+B^2=BW. If A=0, the same bound holds with core term zero. Let x and y be the total numbers of original component vertices on the two sides. Then x+y=s. Simplicity gives A_L<=sum_{i on L}s_i^2<=x^2 and A_R<=y^2. Since ab/(a+b) is increasing in both nonnegative arguments, A_L A_R/(A_L+A_R)<=x^2 y^2/(x^2+y^2)<=s^2/8, with zero-denominator expressions interpreted as zero. The last inequality follows from (x+y)^2(x^2+y^2)-8x^2y^2=(x-y)^2(x^2+4xy+y^2)>=0. Consequently every tree-edge contribution is at most s^2/8+B."
+      },
+      {
+        "id": 6,
+        "statement": "Universal upper bound with leading constant 1/54.",
+        "proof": "Combining Steps 3-5 yields K <= (t+s/D)s^2/8+2n^2D+5Ws/(2D). Since W<=n^2 and s<=n, this is at most (n-s)s^2/8+(21/8)n^3/D+2n^2D. On 0<=s<=n, the function (n-s)s^2 has maximum 4n^3/27, attained at s=2n/3. Hence K<=n^3/54+(21/8)n^3/D+2n^2D. Taking D=sqrt(n) proves K<=n^3/54+(37/8)n^(5/2). Step 1 gives the same upper bound for tau_2."
+      },
+      {
+        "id": 7,
+        "statement": "Balanced barbells provide the matching lower bound.",
+        "proof": "Let B(a,ell) consist of two disjoint copies of K_a, with chosen attachment vertices joined by a path of ell edges and ell-1 new internal vertices. Its order is 2a+ell-1. Give f value -1 throughout the left clique, +1 throughout the right clique, and value -1+2j/ell at the j-th internal path vertex. Reflection interchanges the cliques and sends f to -f while preserving degrees, so sum_v d_v f_v=0. The normalized-Laplacian Rayleigh principle gives tau_2 >= (sum_v d_v f_v^2)/(sum_{uv in E}(f_u-f_v)^2). The denominator is ell(2/ell)^2=4/ell. Each clique has total degree a(a-1)+1. Also sum_{j=1}^{ell-1}(-1+2j/ell)^2=(ell-1)(ell-2)/(3ell), obtained by expanding the square and summing j and j^2. Thus the numerator is 2a(a-1)+2ell/3+4/(3ell), and tau_2(B(a,ell)) >= [3a(a-1)ell+ell^2+2]/6. For each n>=6 choose a=floor(n/3) and ell=n-2a+1. Then the graph has exactly n vertices and a/n and ell/n both tend to 1/3. The displayed lower bound divided by n^3 therefore tends to 1/54."
+      },
+      {
+        "id": 8,
+        "statement": "Conclusion for both maxima and the limiting extremal family.",
+        "proof": "Let L_n=[3a(a-1)ell+ell^2+2]/6 for the parameters in Step 7. We have L_n <= tau_2(B(a,ell)) <= tau_0(B(a,ell)) <= M_0(n), and L_n <= M_2(n) <= M_0(n) <= n^3/54+(37/8)n^(5/2). Divide by n^3. The lower bound tends to 1/54 and the upper bound tends to 1/54, so M_0(n)/n^3 and M_2(n)/n^3 both tend to 1/54. The same sandwich proves that these balanced barbells attain the leading constant for both quantities. This establishes asymptotic extremality; it does not assert the exact finite-n maximizing graph."
+      }
+    ],
+    "numerical_evidence": {
+      "label": "numerical evidence, separate from the proof",
+      "method": "Offline normalized-Laplacian eigenvalue calculations; exact rational Kemeny calculations for selected graphs; independent resistance-formula checks.",
+      "small_graph_enumeration": {
+        "connected_graphs_examined": 995,
+        "vertex_range": "2 through 7",
+        "ranking_status": "Numerical rankings, not certified exact global optimization.",
+        "selected_results": [
+          {
+            "n": 2,
+            "selected_graph": "P_2",
+            "K_exact_for_selected_graph": "1/2",
+            "tau_2_numerical": 0.5
+          },
+          {
+            "n": 3,
+            "selected_graph": "P_3",
+            "K_exact_for_selected_graph": "3/2",
+            "tau_2_numerical": 1.0
+          },
+          {
+            "n": 4,
+            "selected_graph": "P_4",
+            "K_exact_for_selected_graph": "19/6",
+            "tau_2_numerical": 2.0
+          },
+          {
+            "n": 5,
+            "selected_graph": "P_5",
+            "K_exact_for_selected_graph": "11/2",
+            "tau_2_numerical": 3.414213562373095
+          },
+          {
+            "n": 6,
+            "selected_graph": "P_6",
+            "K_exact_for_selected_graph": "17/2",
+            "tau_2_numerical": 5.236067977499786
+          },
+          {
+            "n": 7,
+            "selected_graph": "B(3,2)",
+            "K_exact_for_selected_graph": "293/24",
+            "tau_2_numerical": 8.2749172176354
+          }
+        ]
+      },
+      "balanced_barbells": [
+        {
+          "n": 90,
+          "a": 30,
+          "ell": 31,
+          "K_over_n_cubed": 0.019266199624762812,
+          "tau_2_over_n_cubed": 0.01875662552087478
+        },
+        {
+          "n": 300,
+          "a": 100,
+          "ell": 101,
+          "K_over_n_cubed": 0.01871586487106845,
+          "tau_2_over_n_cubed": 0.018583308531217316
+        },
+        {
+          "n": 600,
+          "a": 200,
+          "ell": 201,
+          "K_over_n_cubed": 0.018614174424981967,
+          "tau_2_over_n_cubed": 0.018550156355786784
+        }
+      ],
+      "target_constant": "1/54 = 0.0185185185185185...",
+      "inequality_checks": {
+        "graphs": 1047,
+        "threshold_graph_pairs": 4188,
+        "result": "All checks passed.",
+        "checks": [
+          "Component counts and diameters",
+          "Residual degree volume",
+          "Individual weighted tree cuts",
+          "Contraction comparison",
+          "Universal upper bound",
+          "Agreement of spectral and resistance formulas"
+        ],
+        "independent_audit_substitute": false
+      }
+    }
+  },
+  "hardest_remaining_gap": "No mathematical gap is identified in the complete derivation under the explicitly stated conventions. Verification against the source's normalization, the literature-status check, and the required independent model-family audit remain pending. Novelty is unassessed.",
+  "evidence_status": "proved",
+  "draft_brain_nodes": [
+    {
+      "key": "I0027.rate_one_graph_walk",
+      "namespace": "probability.extremal_graph_walks",
+      "logical_name": "rate_one_kemeny_and_relaxation",
+      "kind": "definition",
+      "title": "Kemeny constant and relaxation time for rate-one graph walk",
+      "statement": "For a connected simple graph, put P(u,v)=1/d_u on edges and pi_u=d_u/(2|E|). For generator P-I, define tau_0=sum_v pi_v E_u[T_v] and tau_2=1/mu_2, where mu_2 is the smallest positive eigenvalue of I-P.",
+      "assumptions": [
+        "Finite connected simple undirected unweighted graph",
+        "At least two vertices",
+        "Total jump rate one"
+      ],
+      "domain": "Finite reversible Markov chains",
+      "source": {
+        "source_id": "campaign_result:I0027:2026-10-10",
+        "url": null,
+        "revision": "draft-v1; independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0027.kemeny_resistance_identity",
+      "namespace": "probability.extremal_graph_walks",
+      "logical_name": "kemeny_resistance_identity",
+      "kind": "lemma",
+      "title": "Spectral and electrical representations of Kemeny's constant",
+      "statement": "For the rate-one simple walk, tau_0=sum_{i=2}^n 1/mu_i=(1/W)sum_{u<v}d_u d_v R_uv, where W=sum_v d_v and R_uv is unit-edge effective resistance. Consequently tau_2<=tau_0, and R_uv<=dist_G(u,v).",
+      "proof_text": "Let L=diag(d)-Adj, Pi=1 pi^T, and Z=(I-P+Pi)^(-1). Connectedness and f^T L f=sum_edges(f_u-f_v)^2 imply that I-P has one zero eigenvalue and positive remaining eigenvalues mu_i. Its similarity to a symmetric matrix gives a complete eigenbasis. Thus Z has eigenvalues 1 and 1/mu_i. Also Z1=1 and (I-P)Z=I-Pi. For each target v, h_u=(Z_vv-Z_uv)/pi_v has h_v=0 and (I-P)h=1 away from v. These hitting-time equations have a unique solution: the principal submatrix of L deleting v is positive definite, since extending a zero-energy vector with value zero at v forces the entire vector to vanish. Therefore h_u=E_u[T_v]. Summing over targets gives tau_0=tr(Z)-1=sum_{i>=2}1/mu_i, which implies tau_2<=tau_0. The hitting-time vectors satisfy Lh^v=d-W e_v, with the equation at v determined by zero column sums. Hence L(h^v-h^u)=W(e_u-e_v). If L phi=e_u-e_v and R_uv=phi_u-phi_v, this proves E_u[T_v]+E_v[T_u]=W R_uv. Average the random-target identity over starting vertex pi and group unordered pairs to obtain tau_0=(1/W)sum_{u<v}d_u d_v R_uv. Finally orient the edges and let J be the incidence matrix. The flow i=J^T phi has divergence e_u-e_v and energy R_uv. Every other flow j with that divergence satisfies <i,j-i>=<phi,J(j-i)>=0, so ||j||^2>=R_uv. Unit flow along a shortest path has energy dist_G(u,v), establishing the resistance bound.",
+      "assumptions": [
+        "Finite connected simple undirected graph",
+        "Unit edge conductances",
+        "Rate-one simple random walk"
+      ],
+      "domain": "Reversible Markov chains and electrical networks",
+      "source": {
+        "source_id": "campaign_result:I0027:2026-10-10",
+        "url": null,
+        "revision": "draft-v1; independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0027.dense_neighborhood_components",
+      "namespace": "probability.extremal_graph_walks",
+      "logical_name": "dense_neighborhood_components",
+      "kind": "lemma",
+      "title": "Diameter budget for unions of high-degree neighborhoods",
+      "statement": "For D>0 let H={v:d_v>=D} and S=union_{h in H}N[h]. If the components of G[S] have sizes s_i and intrinsic diameters delta_i, and s=sum_i s_i, then their number k satisfies k<=s/D and sum_i delta_i<=5s/D.",
+      "proof_text": "Every component contains a high-degree vertex and its entire closed neighborhood, so its size is at least D; therefore k<=s/D. In a component C_i, take a geodesic v_0,...,v_delta_i. At indices 0,5,10,... choose high-degree vertices h_j at distance at most one from v_j. Each N[h_j] is contained in C_i. If two selected closed neighborhoods intersect, the corresponding path vertices are joined inside C_i by a walk of length at most four, contradicting geodesicity because their indices differ by at least five. The selected neighborhoods are therefore disjoint and each has at least D vertices. Thus (floor(delta_i/5)+1)D<=s_i, giving delta_i<=5s_i/D. Sum over components. When S is empty both asserted quantities are zero.",
+      "assumptions": [
+        "Finite simple undirected graph",
+        "D is a positive real number",
+        "Diameters measured inside the induced components"
+      ],
+      "domain": "Graph geometry",
+      "source": {
+        "source_id": "campaign_result:I0027:2026-10-10",
+        "url": null,
+        "revision": "draft-v1; independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0027.uniform_kemeny_upper_bound",
+      "namespace": "probability.extremal_graph_walks",
+      "logical_name": "uniform_kemeny_upper_bound",
+      "kind": "theorem",
+      "title": "Sharp leading upper bound for graph Kemeny constant",
+      "statement": "Every connected simple n-vertex graph, with rate-one simple random walk, satisfies tau_0<=n^3/54+(37/8)n^(5/2).",
+      "proof_text": "Use kemeny_resistance_identity and dense_neighborhood_components, whose proofs are included in this packet. For threshold D>0, form S and its components C_i; write s=|S|, t=n-s, and delta=sum_i diam(G[C_i])<=5s/D. Contract these components, retain outside vertices singly, and choose a quotient spanning tree T. It has at most t+s/D edges and at most n-1 edges. Assign each part weight w_x=sum_{v in part}d_v. Lifting tree paths gives R_uv<=dist_T(q(u),q(v))+delta, so K<=sum_{e in T}W_L(e)W_R(e)/W+W delta/2. Put a_i=2|E(G[C_i])| for components and a_x=0 for outside vertices, and let b_x=w_x-a_x. Their residual total B is at most 2 sum_{v outside S}d_v<=2nD. For a tree cut let A_L,A_R be the sums of a_x. Expanding the product, using A=A_L+A_R and W=A+B, gives W_L W_R/W<=A_L A_R/A+B, interpreting the core term as zero if A=0. Indeed the noncore numerator is at most AB+B^2. If x,y count original component vertices on the two sides, simplicity gives A_L<=x^2 and A_R<=y^2, with x+y=s. Monotonicity of ab/(a+b), followed by (x+y)^2(x^2+y^2)-8x^2y^2=(x-y)^2(x^2+4xy+y^2)>=0, bounds the core term by s^2/8. Consequently K<=(t+s/D)s^2/8+2n^2D+5Ws/(2D). Since W<=n^2 and s<=n, K<=(n-s)s^2/8+(21/8)n^3/D+2n^2D. The maximum of (n-s)s^2 on [0,n] is 4n^3/27. Taking D=sqrt(n) establishes the claimed bound.",
+      "assumptions": [
+        "Connected simple undirected unweighted graph",
+        "n>=2",
+        "Rate-one simple random walk",
+        "The two preceding lemmas"
+      ],
+      "domain": "Extremal graph Markov chains",
+      "source": {
+        "source_id": "campaign_result:I0027:2026-10-10",
+        "url": null,
+        "revision": "draft-v1; independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0027.balanced_barbell_lower_bound",
+      "namespace": "probability.extremal_graph_walks",
+      "logical_name": "balanced_barbell_lower_bound",
+      "kind": "lemma",
+      "title": "Explicit relaxation lower bound for balanced barbells",
+      "statement": "For two copies of K_a joined between attachment vertices by a path of ell edges, tau_2 >= [3a(a-1)ell+ell^2+2]/6.",
+      "proof_text": "Let f be -1 on one clique, +1 on the other, and -1+2j/ell at internal path position j. Degree-preserving reflection sends f to -f, so sum_v d_v f_v=0. The symmetric normalized-Laplacian variational principle, with vector diag(d)^(1/2)f, gives mu_2<=sum_edges(f_u-f_v)^2/sum_v d_v f_v^2. Its numerator is 4/ell. Each clique contributes a(a-1)+1 to the denominator, and internal vertices have degree two. Expanding and summing squares gives sum_{j=1}^{ell-1}(-1+2j/ell)^2=(ell-1)(ell-2)/(3ell). Therefore the denominator equals 2a(a-1)+2ell/3+4/(3ell). Taking the reciprocal Rayleigh quotient gives a(a-1)ell/2+ell^2/6+1/3, which is the stated bound.",
+      "assumptions": [
+        "a>=2 and ell>=1 are integers",
+        "The cliques are disjoint",
+        "The connecting path has ell-1 new internal vertices",
+        "Rate-one simple random walk"
+      ],
+      "domain": "Spectral graph theory and reversible Markov chains",
+      "source": {
+        "source_id": "campaign_result:I0027:2026-10-10",
+        "url": null,
+        "revision": "draft-v1; independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0027.extremal_asymptotics",
+      "namespace": "probability.extremal_graph_walks",
+      "logical_name": "extremal_kemeny_relaxation_asymptotics",
+      "kind": "theorem",
+      "title": "Extremal Kemeny constant and relaxation time have leading constant 1/54",
+      "statement": "Over connected simple n-vertex graphs with rate-one simple random walk, max_G tau_0(G) ~ n^3/54 and max_G tau_2(G) ~ n^3/54. Two cliques of size floor(n/3), joined by a path of n-2floor(n/3)+1 edges, attain both leading constants.",
+      "proof_text": "For n>=6 put a=floor(n/3) and ell=n-2a+1. The specified barbell has 2a+ell-1=n vertices. The balanced_barbell_lower_bound gives L_n=[3a(a-1)ell+ell^2+2]/6<=tau_2 of this graph. Since a/n and ell/n tend to 1/3, L_n/n^3 tends to 1/54. The kemeny_resistance_identity gives tau_2<=tau_0 for every graph. The uniform_kemeny_upper_bound therefore yields L_n<=M_2(n)<=M_0(n)<=n^3/54+(37/8)n^(5/2). Dividing by n^3 and applying the squeeze theorem proves both limits. Applying the same inequalities to the displayed barbell proves its asymptotic attainment for both quantities.",
+      "assumptions": [
+        "Connected simple undirected unweighted graphs",
+        "Rate-one simple random walk",
+        "The spectral identity, upper-bound theorem, and barbell lemma proved in this packet"
+      ],
+      "domain": "Probability and extremal spectral graph theory",
+      "source": {
+        "source_id": "campaign_result:I0027:2026-10-10",
+        "url": null,
+        "revision": "draft-v1; independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    }
+  ]
+}

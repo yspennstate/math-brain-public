@@ -1,0 +1,2 @@
+STATE: Stage5 complete: actual tag deletion paid for common-phase threshold cores and arbitrary-quadratic-relative strong pairs; full terminal references retained; 2796940 exact checks PASS; full FEI OPEN.
+NEXT: Weak/unequal pair with nonconstant quadratic relative phase: pay rare signed contrast using activation-sensitive conditional reference and one unused terminal reserve; A070/A088/A094 review.

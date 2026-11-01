@@ -1,0 +1,41 @@
+[
+  {
+    "claim_id": "A072-F6-SIXBIT-GUARDED-ADMISSION",
+    "version": 1,
+    "exact_statement": "Let h be the six-bit uniform sign negative on {0,1,2,4,8,16,32,6,17,40}. For every nonconstant six-bit Boolean core g with E(g)=min_relevant_i B_i(g)/Inf_i(g)>=14/5, there is a single output orientation sigma in {-1,1} such that for six disjoint identical copies F=h((sigma*g)_1,...,(sigma*g)_6), every relevant physical coordinate satisfies B_(j,i)(F)/Inf_(j,i)(F)>=B_i(g)/Inf_i(g), hence E(F)>=E(g). Orient g0 to at most 32 negative points M, then sigma*g=g0 except use -g0 for 16<=M<=20. This is proved by all 559 exact signature certificates plus complete 23-orbit sparse-core certificates E<14/5 when M<=3, with the signed recentered formula rederived in the report. No arbitrary-dimension or all-depth admission is asserted.",
+    "hypotheses": [
+      "Uniform physical six-bit sign core; entropy in bits; B_i=H(S_i|S_-i)",
+      "The specified outer gate on six disjoint identical core blocks",
+      "Core threshold E(g)>=14/5; relevant coordinates only",
+      "The same output orientation is used for all blocks and all coordinates"
+    ],
+    "statement_sha256": "cbac5a37104275428c68523890337eb383e90fa08751d1c4a93abf5403d1c84f",
+    "contributors": [
+      "A072 exact reconstruction and guarded repair",
+      "A071 prior reserve mechanism and sign-discovery"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "code/check.py",
+      "out/signatures.jsonl",
+      "out/orientation_policy.json",
+      "out/sparse_1.json through out/sparse_23.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "FINITE_GUARDED_REPAIR_PROVED_WITH_EXACT_CERTIFICATES_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A075",
+      "A071",
+      "A074",
+      "A089",
+      "A085",
+      "A092",
+      "B15",
+      "B20"
+    ]
+  }
+]

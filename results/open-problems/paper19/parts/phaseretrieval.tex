@@ -1,0 +1,293 @@
+For real phase retrieval, the critical number of measurements is \(N=2m-1\)
+\cite{BalanCasazzaEdidin2006,BandeiraCahillMixonNelson2014}.  When \(A\in\R^{(2m-1)\times m}\) is full
+spark, the complement property
+\cite{BalanCasazzaEdidin2006,BandeiraCahillMixonNelson2014,ConcaEdidinHeringVinzant2015} implies that
+the Balan--Wang parameter \cite{BalanWang2015} reduces to the extremal
+square-row-submatrix quantity:
+\[
+  \omega(A)=\min_{|T|=m}\smin(A_T).
+\]
+
+\begin{theorem}[Continuous critical frames: lower side]\label{thm:pr-lower}
+Let \(A_m\in\R^{(2m-1)\times m}\) have independent entries with densities
+uniformly bounded by \(K\).  Then for every \(\varepsilon>0\),
+\[
+  \PP\{\omega(A_m)\le e^{-(\log4+\varepsilon)m}\}\to0,
+\]
+provided \(A_m\) is interpreted on the full-spark event.  For continuous entry
+laws the full-spark event has probability one.
+\end{theorem}
+
+\begin{proof}
+At \(N=2m-1\), Stirling's formula gives
+\[
+  \frac{1}{m}\log \binom{2m-1}{m}\to\log4.
+\]
+Apply Corollary~\ref{cor:bd-lower}.  Continuous iid entries give full spark
+almost surely; more generally, independent absolutely continuous entries have
+this property because each \(m\times m\) minor is a nonzero polynomial in the
+entries, and there are only finitely many minors for each \(m\).
+\end{proof}
+
+\begin{corollary}[Directional anti-concentration critical frames]\label{cor:pr-directional-lower}
+Let \(A_m\in\R^{(2m-1)\times m}\) have independent rows satisfying the affine
+directional small-ball hypothesis of Corollary~\ref{cor:directional-row-lower}
+with constants \(L_{m,i}\) such that
+\[
+  \frac1m\log\left(\sum_{i=1}^{2m-1}L_{m,i}\right)\to0.
+\]
+Then \(A_m\) is full spark almost surely and, for every \(\varepsilon>0\),
+\[
+  \PP\{\omega(A_m)\le e^{-(\log4+\varepsilon)m}\}\to0
+\]
+under the Balan--Wang singular-value convention used here.
+\end{corollary}
+
+\begin{proof}
+For each fixed \(m\), the directional small-ball hypothesis has no atoms on
+affine hyperplanes.  Conditioning row by row shows that every selected
+\(m\times m\) minor is nonsingular almost surely, and a finite union over
+minors gives full spark.  At \(N=2m-1\), full spark identifies
+\(\omega(A_m)\) with \(\min_{|T|=m}\smin(A_{m,T})\).  Apply
+Corollary~\ref{cor:directional-row-lower} with \(h(2)=\log4\).
+\end{proof}
+
+\begin{corollary}[Conditional universal Balan--Wang base]\label{cor:pr-cond}
+If, in addition, the real bounded-density ensemble satisfies the
+pair-correlation condition of Section~\ref{sec:universality} at \(\gamma=2\),
+then
+\[
+  \frac{1}{m}\log\omega(A_m)\xrightarrow{\PP}-\log4,
+  \qquad
+  \omega(A_m)=4^{-m+o_\PP(m)}.
+\]
+\end{corollary}
+
+The Gaussian source paper \cite{ShmaloExtremal2026} proves the hypothesis in
+the Gaussian case and hence answers the exponential-base part of Randomstrasse
+Open Problem 21~\cite{BandeiraStablePhase} for iid Gaussian measurements.
+Appendix~\ref{sec:app-keystone} establishes the pair-correlation condition for
+all iid bounded-density real ensembles by an elementary off-support resolvent
+estimate, self-contained (Remark~\ref{appB:selfcontained}) with the anisotropic
+local law optional, so the universal base \(\omega(A_m)=4^{-m+o_\PP(m)}\) holds
+unconditionally for those ensembles; sharpening the rate and extending beyond
+bounded density is Problem~\ref{prob:pc}.
+
+\begin{corollary}[Row-normalized Gaussian critical frames]\label{cor:pr-normalized-gaussian}
+Let \(G_m\in\R^{(2m-1)\times m}\) have iid standard Gaussian entries and let
+\(U_m\) be obtained by normalizing each row of \(G_m\) to Euclidean norm one.
+Then \(U_m\) is full spark almost surely and its Balan--Wang singular-value
+statistic satisfies
+\[
+  \frac1m\log\omega(U_m)\xrightarrow{\PP}-\log4,
+  \qquad
+  \omega(U_m)=4^{-m+o_\PP(m)}.
+\]
+\end{corollary}
+
+\begin{proof}
+Row normalization rescales each nonzero Gaussian row and therefore does not
+change which row submatrices are singular.  Since \(G_m\) is full spark almost
+surely and has no zero row almost surely, \(U_m\) is full spark almost surely.
+At \(N=2m-1\), full spark identifies the Balan--Wang statistic with
+\(\min_{|T|=m}\smin((U_m)_T)\).  Corollary~\ref{cor:row-normalized-gaussian}
+with \(\gamma=2\) gives the limit because \(h(2)=\log4\).
+\end{proof}
+
+The same conclusion holds for iid rows uniform on any sphere of radius
+\(e^{o(m)}\), by Corollary~\ref{cor:spherical-pr}; the change from the unit
+sphere to radius \(\sqrt m\), for example, is only a scalar factor
+\(\sqrt m=e^{o(m)}\).
+
+\begin{corollary}[Diagonal preconditioning of Gaussian critical frames]\label{cor:pr-diagonal-preconditioned}
+Let \(G_m\in\R^{(2m-1)\times m}\) have iid standard Gaussian entries.  Let
+\(E_m=\operatorname{diag}(e_{1m},\ldots,e_{mm})\) have strictly positive finite
+random diagonal entries, possibly dependent on \(G_m\), and assume
+\[
+  \max_{1\le j\le m}|\log e_{jm}|=o_\PP(m).
+\]
+Put \(B_m=G_mE_m\).  Then \(B_m\) is full spark almost surely and
+\[
+  \frac1m\log\omega(B_m)\xrightarrow{\PP}-\log4,
+  \qquad
+  \omega(B_m)=4^{-m+o_\PP(m)}.
+\]
+In particular, the same base holds when the columns of \(G_m\) are normalized
+to unit Euclidean norm.
+\end{corollary}
+
+\begin{proof}
+Right multiplication by an invertible diagonal matrix multiplies every
+\(m\times m\) row minor determinant by \(\det E_m\), so full spark is preserved
+from \(G_m\) to \(B_m\).  On the full-spark event,
+\[
+  \omega(B_m)=\min_{|T|=m}\smin((G_m)_T E_m).
+\]
+With \(\Delta_m=\max_j|\log e_{jm}|\), Proposition~\ref{prop:random-column-weight}
+gives
+\[
+  e^{-\Delta_m}\omega(G_m)\le \omega(B_m)\le e^{\Delta_m}\omega(G_m).
+\]
+The Gaussian Balan--Wang law for \(\omega(G_m)\), together with
+\(\Delta_m=o_\PP(m)\), proves the claim.  The column-normalized case is
+Corollary~\ref{cor:column-normalized-gaussian} at \(\gamma=2\).
+\end{proof}
+
+\begin{remark}
+Column diagonal scaling is a coordinate preconditioning of the unknown signal,
+not normalization of the measurement vectors.  It preserves real
+phase-retrieval injectivity because the preconditioner is invertible, and it
+preserves the exponential Balan--Wang base only when the diagonal entries
+themselves have subexponential logarithmic extrema.  A subexponential condition
+number alone is not enough, since a scalar factor \(e^m I\) shifts the absolute
+singular-value exponent.
+\end{remark}
+
+\begin{remark}[Supercritical measurement counts]
+The random-row-count theorem in Section~\ref{sec:universality} is an RMT
+statement about the square statistic \(\min_{|T|=m}\smin(A_T)\).  It is not a
+Balan--Wang corollary when the measurement count merely fluctuates around
+\(2m\).  For a fixed supercritical count \(N=2m-1+r\), the fixed-excess quantity
+\[
+  \min_{|T|=m+r}\smin(A_T),
+\]
+is the natural Balan--Wang \(\omega\)-branch under the singular-value convention
+of \cite{BalanWang2015}.  It should not be confused with the full lower
+Lipschitz partition statistic, where partitions whose two sides both span can
+also enter.  The fixed-excess results of Section~\ref{sec:geometric} should
+therefore be read as RMT input for supercritical stability, not as a theorem
+about every Balan--Wang stability convention.
+\end{remark}
+
+\begin{corollary}[Directional fixed-excess branch]\label{cor:pr-directional-branch}
+Fix \(r\ge1\), and let \(A_m\in\R^{(2m-1+r)\times m}\) have independent rows
+which satisfy the affine directional small-ball hypothesis of
+Corollary~\ref{rect:directional-row-fixed-excess} with constants \(L_{m,i}\).
+Define the fixed-excess branch statistic
+\[
+  \omega_r^{\rm fe}(A_m)
+  =
+  \min_{\substack{T\subset[2m-1+r]\\ |T|=m+r}}\smin((A_m)_T).
+\]
+Assume
+\[
+  \frac1m\log
+  \sum_{\substack{S\subset[2m-1+r]\\ |S|=r+1}}
+  \prod_{i\in S}L_{m,i}\longrightarrow0 .
+\]
+Then, for every \(\varepsilon>0\),
+\[
+  \PP\left\{\omega_r^{\rm fe}(A_m)
+  \le \exp\left[-\left(\frac{\log4}{r+1}+\varepsilon\right)m\right]\right\}
+  \to0 .
+\]
+On any common coupling the same hypotheses give the almost-sure lower envelope
+\[
+  \liminf_{m\to\infty}\frac1m\log\omega_r^{\rm fe}(A_m)
+  \ge -\frac{\log4}{r+1}
+  \qquad\hbox{almost surely}.
+\]
+This is the deficient-complement branch of the Balan--Wang partition geometry.
+For \(r>0\) it is not the full lower-Lipschitz partition statistic.
+\end{corollary}
+
+\begin{proof}
+Set \(p=r+1\) and \(N_m=2m-1+r\).  In
+Corollary~\ref{rect:directional-row-fixed-excess},
+\[
+  \binom{N_m-p}{m-1}=\binom{2m-2}{m-1},
+  \qquad
+  \frac1m\log\binom{2m-2}{m-1}\to\log4 .
+\]
+The assumed elementary-symmetric directional budget is subexponential, and the
+polynomial slack \((p/2)\log m\) is \(o(m)\).  Taking
+\(u_m=p\varepsilon m\) gives the convergence-in-probability estimate.
+
+For the almost-sure lower envelope, take \(u_m=2\log m\) in the same finite
+budget estimate and apply Borel--Cantelli at every fixed \(\varepsilon>0\).
+The directional small-ball hypothesis also implies full spark almost surely in
+each fixed dimension by conditioning row by row, but full spark does not turn
+the displayed branch into the full supercritical stability statistic.
+\end{proof}
+
+\begin{corollary}[Almost-sure Balan--Wang lower envelope]\label{cor:pr-as-lower-envelope}
+Let \((A_m)_{m\ge1}\) be real \((2m-1)\times m\) random matrices on a common
+probability space, with independent entries inside each \(A_m\) and Lebesgue
+densities bounded by a common constant.  On the simultaneous full-spark event,
+\[
+  \liminf_{m\to\infty}\frac1m\log\omega(A_m)\ge-\log4
+  \qquad\hbox{almost surely}.
+\]
+For continuous entry laws the simultaneous full-spark event has probability
+one.  The same almost-sure lower envelope holds for the row-normalized
+Gaussian critical frames \(U_m\) of
+Corollary~\ref{cor:pr-normalized-gaussian}.  It also holds for
+diagonally preconditioned Gaussian critical frames \(B_m=G_mE_m\) whenever
+\(\max_j|\log e_{jm}|=o(m)\) almost surely; in particular it holds for
+column-normalized Gaussian critical frames.
+\end{corollary}
+
+\begin{proof}
+The first statement is Corollary~\ref{cor:as-square-lower-envelope} at
+\(\gamma=2\), where \(h(2)=\log4\), combined with the full-spark reduction
+\(\omega(A_m)=\min_{|T|=m}\smin(A_{m,T})\).  Simultaneous full spark holds
+almost surely because the exceptional event is a countable union, over all
+\(m\) and all selected minors, of zero sets of nonzero determinant polynomials.
+
+For normalized Gaussian frames, row normalization preserves full spark and
+\[
+  \omega(U_m)\ge
+  \frac{\omega(G_m)}{\max_{i\le 2m-1}\|(G_m)_i\|_2}.
+\]
+The Gaussian norm tail gives
+\[
+  \sum_m
+  \PP\left\{\max_{i\le2m-1}\|(G_m)_i\|_2>e^{\delta m}\right\}<\infty
+  \qquad(\delta>0).
+\]
+Combining this with the Gaussian lower envelope for \(\omega(G_m)\) and then
+letting \(\delta\downarrow0\) proves the normalized statement.
+
+For \(B_m=G_mE_m\), the proof of
+Corollary~\ref{cor:pr-diagonal-preconditioned} gives
+\[
+  \omega(B_m)\ge e^{-\Delta_m}\omega(G_m),
+  \qquad \Delta_m=\max_j|\log e_{jm}|.
+\]
+If \(\Delta_m=o(m)\) almost surely, the Gaussian lower envelope transfers.
+The column-normalized case has this property by the summable column-norm
+estimates in Corollary~\ref{cor:column-normalized-gaussian}.
+\end{proof}
+
+\begin{remark}
+The corollary concerns the Balan--Wang singular-value statistic \(\omega\).
+Other stability conventions may square singular values or include additional
+nonexponential factors; those conventions have the corresponding transformed
+exponential base.  Corollary~\ref{cor:pr-as-lower-envelope} is only a lower
+envelope; it does not upgrade the exact Gaussian base to almost-sure
+convergence.
+\end{remark}
+
+\begin{remark}[Discrete frames]
+For atomic entries, full spark is no longer automatic.  Proposition
+\ref{prop:finite-alphabet-obstruction} gives deterministic finite-alphabet
+projective-pair full-spark obstructions at the corresponding row count.  In the
+real sign case, Proposition~\ref{prop:sign-critical} gives the critical count
+exactly: every real sign matrix with \(2m-1\) rows and \(m\ge2\) columns has a
+singular \(m\)-row submatrix.  Thus iid Rademacher critical frames fail
+injectivity with probability one by the complement property
+\cite{BalanCasazzaEdidin2006,BandeiraCahillMixonNelson2014}, in sharp contrast
+with continuous Gaussian frames.  Away from the critical real sign case,
+including complex finite alphabets, a singular \(m\)-row submatrix is only a
+full-spark or square-minor obstruction and is not claimed to settle
+phase-retrieval injectivity.
+\end{remark}
+
+\begin{problem}[Complex phase-retrieval stability base]
+The complex injectivity threshold and the complex stability geometry are not
+obtained by simply replacing \(d=1\) with \(d=2\) at \(N=2m-1\).  At the generic
+complex threshold \(4m-4\) \cite{ConcaEdidinHeringVinzant2015}, determine the
+correct Balan--Wang-type exponential base for complex random measurements, and
+relate it to extremal singular values of the appropriate realified submatrix
+families.
+\end{problem}

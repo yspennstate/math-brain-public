@@ -1,0 +1,122 @@
+[
+  {
+    "claim_id": "A009-DENSE-GRAPH-MATCHING-MASS-AND-FIXED-POSTERIOR-KKT",
+    "version": 1,
+    "exact_statement": "For every n>=4, the positive complete-graph edge prime DNF on the uniform cube, with both endpoint orders per gate, pi=1/4 and one globally fixed lambda=1/(n-1), has the explicitly counted actual matching partition-forest output subprobability Q_match(A)=W_|A|/D stated in MATCHING_CERTIFICATE.md. Its complete nonempty spectral cross-entropy, including the off-support sector, is at most 185 I/6<31I. Uniform lambda is a global minimizer over all positive coordinate-incidence-feasible weights for the posterior frozen to the matching family at uniform weights; rational coordinate prices (n-1)(c0-v*rho)/2 certify this exactly. For every simple graph the induced-matching/external-root/internal-child formulas in the companion give exact complete matching-sector mass, which may vanish on positive Fourier mass. No optimum with jointly varying posterior or universal FEI assertion is made.",
+    "hypotheses": [
+      "n>=4 for all-dimensional complete-graph bound and KKT",
+      "uniform Boolean cube; bits; gamma=6/5 original queue",
+      "each graph edge is one positive conjunction prime gate; both endpoint orders fixed before sampling",
+      "global lambda=1/(n-1) on K_n or 1/Delta for general graph mass formula",
+      "distinct finite actual runs; matching-family posterior frozen before weight optimization"
+    ],
+    "statement_sha256": "c31a1a351d556be370f21c62423b19a8d8937e0c0dfe247f76b49e8d9f5ff8dd",
+    "contributors": [
+      "A009"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261013T235139Z-fleet05-A009-fractional-incidence-optimization\\MATCHING_CERTIFICATE.md",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261013T235139Z-fleet05-A009-fractional-incidence-optimization\\out\\CHECK.json",
+      "graph_check": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261013T235139Z-fleet05-A009-fractional-incidence-optimization\\out\\GRAPH_CHECK.json"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locator": "original generator and eq:forestconditioning",
+        "status": "SOURCE_COMPLETE_BASELINE"
+      },
+      {
+        "claim_id": "A008-COMPLETE-QUEUE-DEGREE-WEIGHTED-DETERMINANT-MASS",
+        "version": 1,
+        "statement_sha256": "f64b142a5309e20059893f5fba1082151a3b74f4beb6e13849c6f2b07d5f2f3f",
+        "status": "INDEPENDENTLY_RECONSTRUCTED_LOCALLY_BY_A009"
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTICALLY_PROVED_EXACTLY_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "matching-sector output mass is positive on every positive-mass spectral set of every graph DNF"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A010",
+      "A014",
+      "A086",
+      "A094",
+      "B02",
+      "B03",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A008-COMPLETE-QUEUE-DEGREE-WEIGHTED-DETERMINANT-MASS",
+    "version": 1,
+    "exact_statement": "For every fixed finite original forests.tex reference with positive feasible lambda, every nonempty covered A and eligible ownership assignment tau, let V be the used gates, s_u=|A_u|, g=|V|, a=|A|, e=g minus the number of original source SCCs, D=product_all(1+lambda_l*pi_l)-1, and t_u the original size/subset probability. Let T_tau be the incoming-Laplacian forest polynomial weighted by root pi over exactly one root per original source SCC. Define N_s(x^h)=product_u[product_(j in A_u)h_j!/((c_u+1)(c_u+2)*binom(s_u+c_u-1,c_u))], c_u=sum_(j in A_u)h_j. The exact conditioned mass of all distinct actual partition-forest events with this assignment and root restriction is Q_tau=product_used(lambda_u*t_u)*N_s(T_tau)/D. Assignments are disjoint, so Q_part=sum_tau Q_tau<=Q_* is a nonempty output subprobability. For independent per-gate triples B with density 2(1-b), rate-one exponential Y, and uniform simplex Z, N_s(T)=2^(-g)E T(BYZ). With factorial surrogate operator M, 2^(-(a+g+e))*3^(-e)*M(T)<=N_s(T)<=2^(-g)*M(T). Forced e-child sunflower prime assignments have T=pi*x^e and N_s(T)=pi*e!/((e+1)(e+2)*2^e), explicitly separating surrogate credit from complete queue probability. All label, root, subset, size, attachment, child-count and final-output ambiguity factors are retained; no universal O(I) or FEI bound is asserted.",
+    "hypotheses": [
+      "finite fixed nonconstant original gate table and fixed ordered covers, uniform Boolean cube, gamma=6/5",
+      "strictly positive feasible lambda and pi=min(P(h_l=1),1/2)>0",
+      "covered nonempty A; owned subsets nonempty and partition A; each used gate visited once",
+      "exactly one initial root per original source SCC and no additional roots; deterministic original root and attachment occurrence order",
+      "distinct actual child-label sequences are counted, failed/infinite events contribute no output mass",
+      "rational polynomial assertion only when pi rational; original subset factors may be algebraic and are kept explicit",
+      "ideal complete output reference cost; optional physical prefix rounding is not paid by I"
+    ],
+    "statement_sha256": "f64b142a5309e20059893f5fba1082151a3b74f4beb6e13849c6f2b07d5f2f3f",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261013T222820Z-fleet05-A008-gate-label-compression\\COMPLETE_MASS.md",
+      "code": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261013T222820Z-fleet05-A008-gate-label-compression\\code\\check.py",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261013T222820Z-fleet05-A008-gate-label-compression\\out\\CHECK_SUMMARY.json"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locators": [
+          "original queue",
+          "eq:forestconditioning",
+          "eq:forestcost",
+          "thm:posteriorforest"
+        ],
+        "status": "SOURCE_COMPLETE_BASELINE_READ"
+      },
+      {
+        "claim_id": "A006-ACTUAL-FOREST-DETERMINANT-MOMENT-BOUNDS",
+        "version": 1,
+        "statement_sha256": "cb901e12f7b1550d21db4d086a3b1502d57e2595a3a331550515b5687914803c",
+        "status": "INDEPENDENTLY_ACCEPTED_LOCALLY_BY_A008"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A009",
+        "verdict": "HOLDS_AT_ORIGINAL_WHOLE_SCOPE_NO_REPAIR",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261013T235139Z-fleet05-A009-fractional-incidence-optimization\\REVIEW_A008.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261013T235139Z-fleet05-A009-fractional-incidence-optimization\\out\\REVIEW_CHECK.json",
+        "method": "independent actual-probability ledger, minor multilinearity, beta/simplex moments and coefficient bounds; no author code imported",
+        "reviewer_supplied_substantive_repair": false
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_STATED_SCOPE_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "using b_tau*M(T_tau) as exact conditioned queue mass without original size/count/subset/multiset factors"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A009",
+      "A014",
+      "A086",
+      "A094",
+      "B02",
+      "B20"
+    ]
+  }
+]

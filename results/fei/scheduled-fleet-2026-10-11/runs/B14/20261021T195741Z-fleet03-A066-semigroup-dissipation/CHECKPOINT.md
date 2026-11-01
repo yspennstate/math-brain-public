@@ -1,0 +1,1 @@
+Candidate: for the specified nonflat attachment, the DATA j-query has e=delta/2 and D_R=e, yet DeltaH/e >= m+3 for all m>=2. Thus (DeltaH-D_R)/e >= m+2 is unbounded. Complete two child entropy is subtracted, G drop zero. Proof uses explicit bent coefficient counts and a scalar midpoint curvature upper bound. Exact validation pending; no FEI counterexample.

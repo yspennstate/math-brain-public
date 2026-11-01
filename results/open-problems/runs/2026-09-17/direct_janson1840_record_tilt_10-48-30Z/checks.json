@@ -1,0 +1,153 @@
+{
+  "allocation_examples": [
+    {
+      "P_max_at_least_threshold": 0.6297886205118516,
+      "P_max_at_least_threshold_is_exactly_one": false,
+      "P_max_equals_m": 0.3148943102559258,
+      "P_max_equals_m_is_exactly_one": false,
+      "all_checks_exact": true,
+      "decimal_values_are_rounded": true,
+      "family": "factorial_full",
+      "m": 19,
+      "n": 20,
+      "threshold": 18
+    },
+    {
+      "P_max_at_least_threshold": 0.9628995588069728,
+      "P_max_at_least_threshold_is_exactly_one": false,
+      "P_max_equals_m": 0.3466635659822304,
+      "P_max_equals_m_is_exactly_one": false,
+      "all_checks_exact": true,
+      "decimal_values_are_rounded": true,
+      "family": "factorial_full",
+      "m": 39,
+      "n": 40,
+      "threshold": 36
+    },
+    {
+      "P_max_at_least_threshold": 0.9999567765169386,
+      "P_max_at_least_threshold_is_exactly_one": false,
+      "P_max_equals_m": 0.3580513826235492,
+      "P_max_equals_m_is_exactly_one": false,
+      "all_checks_exact": true,
+      "decimal_values_are_rounded": true,
+      "family": "factorial_full",
+      "m": 79,
+      "n": 80,
+      "threshold": 72
+    },
+    {
+      "P_max_at_least_threshold": 0.9999999922449436,
+      "P_max_at_least_threshold_is_exactly_one": false,
+      "P_max_equals_m": 0.3614766767124951,
+      "P_max_equals_m_is_exactly_one": false,
+      "all_checks_exact": true,
+      "decimal_values_are_rounded": true,
+      "family": "factorial_full",
+      "m": 119,
+      "n": 120,
+      "threshold": 108
+    },
+    {
+      "P_max_at_least_threshold": 0.0,
+      "P_max_at_least_threshold_is_exactly_one": false,
+      "P_max_equals_m": 0.0,
+      "P_max_equals_m_is_exactly_one": false,
+      "all_checks_exact": true,
+      "decimal_values_are_rounded": true,
+      "family": "factorial_sparse",
+      "m": 23,
+      "n": 24,
+      "threshold": 21
+    },
+    {
+      "P_max_at_least_threshold": 0.9999999550753611,
+      "P_max_at_least_threshold_is_exactly_one": false,
+      "P_max_equals_m": 0.9999999550753611,
+      "P_max_equals_m_is_exactly_one": false,
+      "all_checks_exact": true,
+      "decimal_values_are_rounded": true,
+      "family": "factorial_sparse",
+      "m": 24,
+      "n": 25,
+      "threshold": 22
+    },
+    {
+      "P_max_at_least_threshold": 0.0,
+      "P_max_at_least_threshold_is_exactly_one": false,
+      "P_max_equals_m": 0.0,
+      "P_max_equals_m_is_exactly_one": false,
+      "all_checks_exact": true,
+      "decimal_values_are_rounded": true,
+      "family": "factorial_sparse",
+      "m": 119,
+      "n": 120,
+      "threshold": 108
+    },
+    {
+      "P_max_at_least_threshold": 1.0,
+      "P_max_at_least_threshold_is_exactly_one": false,
+      "P_max_equals_m": 1.0,
+      "P_max_equals_m_is_exactly_one": false,
+      "all_checks_exact": true,
+      "decimal_values_are_rounded": true,
+      "family": "factorial_sparse",
+      "m": 120,
+      "n": 121,
+      "threshold": 108
+    }
+  ],
+  "coefficient_recurrence_vs_direct_convolution_cases": 24,
+  "finite_reservoir_certificate": {
+    "L": 4,
+    "R": 3,
+    "b": 6,
+    "chosen_n": 12,
+    "chosen_residual": 2,
+    "crossing_union": "PASS",
+    "denominator_lower_bound_over_exact_denominator": 0.04242424223356217,
+    "disjoint_giant_denominator": "PASS",
+    "k": 16,
+    "mean": 0.20000079844710153,
+    "record_envelope": "PASS",
+    "sum_of_crossing_atom_probabilities": 3.0572757491620814,
+    "tau": "1/4",
+    "terminal_crossing_probability": 0.9999999888217587
+  },
+  "parameter_checks": [
+    {
+      "PASS": true,
+      "R_minus_vc": "9/2",
+      "a_minus_b": "2",
+      "b_minus_2_minus_ac": "3/2",
+      "epsilon": "1/2",
+      "v_minus_R_minus_padding": "6"
+    },
+    {
+      "PASS": true,
+      "R_minus_vc": "4",
+      "a_minus_b": "10/7",
+      "b_minus_2_minus_ac": "5/4",
+      "epsilon": "1/4",
+      "v_minus_R_minus_padding": "32/7"
+    },
+    {
+      "PASS": true,
+      "R_minus_vc": "37/10",
+      "a_minus_b": "22/19",
+      "b_minus_2_minus_ac": "11/10",
+      "epsilon": "1/10",
+      "v_minus_R_minus_padding": "74/19"
+    },
+    {
+      "PASS": true,
+      "R_minus_vc": "88/25",
+      "a_minus_b": "202/199",
+      "b_minus_2_minus_ac": "101/100",
+      "epsilon": "1/100",
+      "v_minus_R_minus_padding": "704/199"
+    }
+  ],
+  "scope": "Finite identities and examples only; not an asymptotic proof or independent audit.",
+  "status": "ALL_EXACT_CHECKS_PASS"
+}

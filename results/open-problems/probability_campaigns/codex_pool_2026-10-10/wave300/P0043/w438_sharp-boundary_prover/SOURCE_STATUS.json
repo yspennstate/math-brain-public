@@ -1,0 +1,97 @@
+{
+  "worker": "w438",
+  "date": "2026-10-10",
+  "candidate_id": "P0043",
+  "exact_target": {
+    "model": "independent Bernoulli bond percolation",
+    "graph": "infinite, connected, locally finite, quasi-transitive",
+    "assumptions": [
+      "p_c(G)<1"
+    ],
+    "conclusion": "P_(p_c)(there exists an infinite open cluster)=0; equivalently theta_o(p_c)=0 for every o",
+    "definitions": "p_c=inf{p:P_p(|C(o)|=infinity)>0}; quasi-transitive means finitely many vertex orbits under Aut(G)"
+  },
+  "current_openness": "UNKNOWN",
+  "resolved_by_this_worker": false,
+  "novelty_claim": false,
+  "primary_statement_verified": {
+    "source": "Tom Hutchcroft (2016), Critical percolation on any quasi-transitive graph of exponential growth has no infinite clusters",
+    "url": "https://arxiv.org/html/1605.05301v1",
+    "locator": "Introduction, Bernoulli bond model and Benjamini-Schramm conjecture; Theorem 1 for exponential growth",
+    "short_quote": "If p_c(G)<1, then G[p_c] has no infinite clusters almost surely.",
+    "graph_context": "The introduction assumes connected locally finite graphs and defines quasi-transitivity.",
+    "source_bytes_hash_check": "not performed; not a proof",
+    "known_partial_result": "Critical extinction for every quasi-transitive graph of exponential volume growth."
+  },
+  "ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "row": 549,
+    "recorded_tier": 5,
+    "recorded_status": "attempted_un",
+    "scope_warning": "P0043 short title drops p_c<1; C0084 includes it. Annotated ranking line 610 describes P0043 as an intermediate-dimensional lattice question. Exact Codex ledger pointer from the intake README is stale/unavailable; do not silently equate scopes."
+  },
+  "local_restatement": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "problem_id": "C0084",
+    "source_id": "heydenreich_hofstad_highd_2017",
+    "locator": "Open Problem 15.11, page 235",
+    "prior_attempt": "C0084-A001 in attempts.jsonl; no independent check recorded"
+  },
+  "recent_claim": {
+    "reported_title": "No percolation at criticality on quasi-transitive graphs",
+    "reported_date": "2026-09-24; October 2026 public collection",
+    "reported_primary_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf",
+    "primary_retrieval": "UNAVAILABLE through authorized web reader at blob and raw endpoints",
+    "primary_proof_audited": false,
+    "formal_receipt": null,
+    "actual_formal_theorem_checked": null,
+    "formal_assumptions_checked": null,
+    "trusted_axioms_checked": null,
+    "consequence": "No statement that the target is currently open, solved, or newly solved here."
+  },
+  "tree_precedent": {
+    "source": "Russell Lyons and Yuval Peres, Probability on Trees and Networks",
+    "url": "https://rdlyons.pages.iu.edu/prbtree/book_online.pdf",
+    "locator": "Exercise 5.51",
+    "scope": "Reciprocal expected-level-size survival criterion for spherically symmetric trees with retention bounded away from 1",
+    "own_work": "Independent derivation for deterministic one-or-two-child environments; explicit family, rates and boundary obstructions. No novelty claim."
+  },
+  "owner_work_check": {
+    "targeted_paths": [
+      "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "~/Big Open problem in probability theory/README.md",
+      "~/Big Open problem in probability theory/notes/round_213.md",
+      "~/Open problem project/solved_register.md"
+    ],
+    "result": "Team O holds C0084 under w344. Big Open project studies a distinct non-uniqueness/operator inequality. No percolation/critical match found in the referenced solved register. Local round_213 is distinct from the public collection family 213."
+  },
+  "brain_recall": {
+    "command": "python -X utf8 recall_packet.py",
+    "timeout_seconds": 55,
+    "wall_seconds": 63.413,
+    "result": "No hits before timeout; targeted memory-index fallback had no percolation match",
+    "assigned_scar_read": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "lesson": "Source receipts and green runners do not close an unchecked mathematical gap."
+  },
+  "single_hardest_gap": "Derive a sufficient critical-extinction/exploration criterion from quasi-transitivity in subexponential growth, with justified conditional exposure control despite overlapping branches.",
+  "finite_experiments": "NOT_RUN: fresh local gate distress/process_critical; see compute_gate.json",
+  "independent_review": {
+    "reviewer": "w439",
+    "path": "~/brain_workers/w439/AUDIT_W438.md",
+    "kept_claims": [
+      "w438-C02",
+      "w438-C03",
+      "w438-C04"
+    ],
+    "assigned_referee": "w440",
+    "assigned_referee_verdict": "pending",
+    "quasi_isometry_and_new_lower_bound": "not covered by w439 receipt"
+  },
+  "source_checks_are_mathematical_proof": false,
+  "math_store_read": {
+    "path": "~/math-brain-build/local/population/brain.sqlite3",
+    "mode": "read-only URI",
+    "scope": "named schema and six critical-percolation title matches only",
+    "result": "Retrieved dated percolation definition and lattice open-problem cards; their dated status is not a current-openness certificate. No exact Codex P0043 ledger row recovered."
+  }
+}

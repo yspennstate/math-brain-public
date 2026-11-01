@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact integer/rational except labeled exploratory block",
+  "synergy_checks": [
+    {
+      "m": 3,
+      "selector_function_dimension": 4,
+      "restriction": {
+        "H": "2",
+        "B": "0",
+        "I": "3/2",
+        "support_size": 4
+      },
+      "full": {
+        "H": "4",
+        "B": "4",
+        "I": "2"
+      },
+      "selector_influence": "1/2",
+      "mixture_erasure_gain": "3",
+      "all_signed_coefficients_checked": 16
+    },
+    {
+      "m": 5,
+      "selector_function_dimension": 6,
+      "restriction": {
+        "H": "4",
+        "B": "0",
+        "I": "5/2",
+        "support_size": 16
+      },
+      "full": {
+        "H": "6",
+        "B": "6",
+        "I": "3"
+      },
+      "selector_influence": "1/2",
+      "mixture_erasure_gain": "5",
+      "all_signed_coefficients_checked": 64
+    },
+    {
+      "m": 7,
+      "selector_function_dimension": 8,
+      "restriction": {
+        "H": "6",
+        "B": "0",
+        "I": "7/2",
+        "support_size": 64
+      },
+      "full": {
+        "H": "8",
+        "B": "8",
+        "I": "4"
+      },
+      "selector_influence": "1/2",
+      "mixture_erasure_gain": "7",
+      "all_signed_coefficients_checked": 256
+    }
+  ],
+  "pair_lift_truth_tables_checked": 276,
+  "pair_lift_range": "every truth table in dimensions 1,2,3",
+  "parity_lift_truth_tables_checked": 65812,
+  "parity_lift_range": "every truth table in dimensions 1,2,3,4",
+  "exploratory_complete_enumeration": [
+    {
+      "n": 1,
+      "truth_tables": 4,
+      "max_D_over_I_floating": 0.0,
+      "witness_label": 0
+    },
+    {
+      "n": 2,
+      "truth_tables": 16,
+      "max_D_over_I_floating": 0.0,
+      "witness_label": 0
+    },
+    {
+      "n": 3,
+      "truth_tables": 256,
+      "max_D_over_I_floating": 1.3333333333333333,
+      "witness_label": 23
+    },
+    {
+      "n": 4,
+      "truth_tables": 65536,
+      "max_D_over_I_floating": 2.216917186688699,
+      "witness_label": 384
+    }
+  ],
+  "scope": "The all-dimension theorems are proved in the note; these are self-checks, not independent audits."
+}

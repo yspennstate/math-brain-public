@@ -1,0 +1,40 @@
+{
+  "schema": "fei-run-claims/1",
+  "primary_packet": "A087",
+  "claims": [
+    {
+      "claim_id": "B09-BIASED-BLOCK-UNCERTAINTY",
+      "version": 1,
+      "status": "INDEPENDENT_RECONSTRUCTION_ACCEPTS_AT_STATED_SCOPE",
+      "statement": "For every genuine Boolean sign under an interior product bias and every physical block A, L_A=M_A+J_A and 0<=J_A<=M_A+Delta_A, with Delta_A=sum_i[h2(p_i)+log2 max(p_i,1-p_i)].",
+      "reviewer": "fleet01/B18-A087",
+      "dependencies": [
+        "biased orthonormal product transform",
+        "Boolean Parseval for every physical child",
+        "Shannon chain rule and mutual information",
+        "finite-dimensional Maassen-Uffink inequality"
+      ],
+      "exclusions": [
+        "no influence payment",
+        "no adaptive stopping theorem",
+        "no arbitrary composition theorem",
+        "no full FEI conclusion"
+      ]
+    },
+    {
+      "claim_id": "B18-AND-BIASED-TAX-LOWER-BOUND",
+      "version": 1,
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For g(X,Y)=(-1)^(XY), P(X=1)=p and fixed P(Y=1)=q in (0,1/2), revealing X gives J-M=4q(1-2q)p log2(1/p)+O(p). Consequently every universal J<=M+C p fails and every universal J<=M+kappa Delta requires kappa>=1/2.",
+      "contributors": ["fleet01/B18-A087"],
+      "review_required": ["A094", "A085"],
+      "scope_exclusions": [
+        "does not prove kappa=1/2 sufficient",
+        "does not prove coefficient 1 optimal",
+        "does not disprove FEI"
+      ]
+    }
+  ],
+  "full_fei": "OPEN"
+}
+

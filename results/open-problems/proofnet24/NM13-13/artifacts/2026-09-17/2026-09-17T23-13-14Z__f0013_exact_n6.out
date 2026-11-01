@@ -1,0 +1,45 @@
+F0013 exact n=6 signed-permutation quotient and factorization certificate
+source_metric=N_exact_irred
+metric_before=5
+metric_after=6
+checker_language=C++17 + OpenMP; exact integer arithmetic
+factor_backend=SymPy 1.14.0 dup_zz_factor over ZZ; every factorization multiplied back coefficient-by-coefficient
+threads=5
+--- quotient/charpoly run ---
+n4_classes=436
+n4_orbit_sum=65536 expected=65536
+n5_classes=19216
+n5_orbit_sum=33554432 expected=33554432
+n6_classes=3081888
+n6_orbit_sum=68719476736 expected=68719476736
+distinct_polynomials=131641 weight_sum=68719476736 direct_checks=3081888
+--- exact factorization run ---
+META	n4_classes	436	n4_sum	65536	n5_classes	19216	n5_sum	33554432	n6_classes	3081888	n6_sum	68719476736	distinct	131641	direct_checks	3081888
+rows=131641
+factor_weight_sum=68719476736
+factor_degree_census:
+1,1,1,1,1,1	polynomials=57	matrices=1305864192
+1,1,1,1,2	polynomials=727	matrices=5265497600
+1,1,1,3	polynomials=3146	matrices=9283180800
+1,1,2,2	polynomials=1041	matrices=2567805440
+1,1,4	polynomials=13666	matrices=15419444736
+1,2,3	polynomials=3544	matrices=3132318720
+1,5	polynomials=41004	matrices=18573396480
+2,2,2	polynomials=310	matrices=100307712
+2,4	polynomials=4577	matrices=1343056896
+3,3	polynomials=1155	matrices=421102080
+6	polynomials=62414	matrices=11307502080
+irreducible_matrices=11307502080
+irreducible_probability=22084965/134217728
+reducible_matrices=57411974656
+reducible_probability=112132763/134217728
+reducible_without_linear_factor_matrices=1864466688
+reducible_without_linear_factor_probability=7283073/268435456
+ALL_EXACT_FACTORIZATIONS_PASS
+--- deterministic intermediate ---
+tsv_lines=131642
+58d0520fa792f4a22297d0f023143da964744db43525968cded6b0c5fbe3be41  deterministic_n6_polynomial_weight_table.tsv
+--- source hashes ---
+2963ab6b3ab8de70ebc2be1b0cba2db2bd5b3b5d28256945dbd254599930bd20  f0013_n6_final.cpp
+23e59dd7bec5763ccd932bdad2470688088b71fe3b7c279ffc869fe206710a3a  f0013_factor_n6.py
+ALL_EXACT_CHECKS_PASS

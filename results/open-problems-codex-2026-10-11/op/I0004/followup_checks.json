@@ -1,0 +1,163 @@
+{
+  "families": [
+    {
+      "name": "linear_gap",
+      "a1": 1,
+      "spikes": [
+        33,
+        34,
+        35
+      ],
+      "separators": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "N": 1022701,
+      "towers": [
+        {
+          "m": 1,
+          "q": 3,
+          "A": 33,
+          "next_q": 203,
+          "J": 67,
+          "max_changed_letters": 3,
+          "max_profile_error": 2,
+          "old_variance": 0.6666666666666666,
+          "new_variance": 24.133805722051008,
+          "offset_variance": 23.638672310091334,
+          "error_variance": 1.63956337714413,
+          "scaled_variance_inequality": "exact pass",
+          "transfer_recursion": "exact pass"
+        },
+        {
+          "m": 2,
+          "q": 203,
+          "A": 34,
+          "next_q": 14207,
+          "J": 69,
+          "max_changed_letters": 3,
+          "max_profile_error": 2,
+          "old_variance": 24.133805722051008,
+          "new_variance": 49.83615896462033,
+          "offset_variance": 25.18756563747112,
+          "error_variance": 0.9363074584646707,
+          "scaled_variance_inequality": "exact pass",
+          "transfer_recursion": "exact pass"
+        },
+        {
+          "m": 3,
+          "q": 14207,
+          "A": 35,
+          "next_q": 1022701,
+          "J": 71,
+          "max_changed_letters": 3,
+          "max_profile_error": 2,
+          "old_variance": 49.83615896462033,
+          "new_variance": 76.95296889405878,
+          "offset_variance": 26.63519143027177,
+          "error_variance": 0.937484756634143,
+          "scaled_variance_inequality": "exact pass",
+          "transfer_recursion": "exact pass"
+        }
+      ]
+    },
+    {
+      "name": "variable_even_separators",
+      "a1": 1,
+      "spikes": [
+        32,
+        33
+      ],
+      "separators": [
+        4,
+        6,
+        4
+      ],
+      "N": 129787,
+      "towers": [
+        {
+          "m": 1,
+          "q": 5,
+          "A": 32,
+          "next_q": 971,
+          "J": 194,
+          "max_changed_letters": 5,
+          "max_profile_error": 4,
+          "old_variance": 1.04,
+          "new_variance": 23.217405691945938,
+          "offset_variance": 24.719125305558507,
+          "error_variance": 2.6713359549367626,
+          "scaled_variance_inequality": "exact pass",
+          "transfer_recursion": "exact pass"
+        },
+        {
+          "m": 2,
+          "q": 971,
+          "A": 33,
+          "next_q": 129787,
+          "J": 133,
+          "max_changed_letters": 7,
+          "max_profile_error": 6,
+          "old_variance": 23.217405691945938,
+          "new_variance": 46.65446232017695,
+          "offset_variance": 23.795692238114082,
+          "error_variance": 3.0919462299491496,
+          "scaled_variance_inequality": "exact pass",
+          "transfer_recursion": "exact pass"
+        }
+      ]
+    },
+    {
+      "name": "nonmonotone_spikes",
+      "a1": 3,
+      "spikes": [
+        96,
+        32
+      ],
+      "separators": [
+        2,
+        4,
+        2
+      ],
+      "N": 177305,
+      "towers": [
+        {
+          "m": 1,
+          "q": 7,
+          "A": 96,
+          "next_q": 2707,
+          "J": 386,
+          "max_changed_letters": 7,
+          "max_profile_error": 4,
+          "old_variance": 0.4897959183673469,
+          "new_variance": 195.52615153505482,
+          "offset_variance": 194.38997691213186,
+          "error_variance": 1.6078623669393124,
+          "scaled_variance_inequality": "exact pass",
+          "transfer_recursion": "exact pass"
+        },
+        {
+          "m": 2,
+          "q": 2707,
+          "A": 32,
+          "next_q": 177305,
+          "J": 65,
+          "max_changed_letters": 3,
+          "max_profile_error": 2,
+          "old_variance": 195.52615153505482,
+          "new_variance": 218.02092646025733,
+          "offset_variance": 22.267455621301774,
+          "error_variance": 1.2442413842955333,
+          "scaled_variance_inequality": "exact pass",
+          "transfer_recursion": "exact pass"
+        }
+      ]
+    }
+  ],
+  "scaled_square_cases": 18496,
+  "integer_cubic_barrier_cases": 81200,
+  "seconds": 1.8743771000299603,
+  "note": "Exact modular integer coding and rational variance checks. Finite checks support but do not replace FOLLOWUP.md proofs; huge eventual thresholds are not tested numerically."
+}

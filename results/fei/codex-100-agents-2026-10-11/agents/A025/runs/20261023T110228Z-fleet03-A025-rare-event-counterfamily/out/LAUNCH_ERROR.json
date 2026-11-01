@@ -1,0 +1,10 @@
+{
+  "error": "Invoked check.py --mode pilot; selector was positional and --mode selected the main branch.",
+  "disposition": "Stopped this owned invocation; exit1. No output is accepted from it. Added strict pilot|main argument validation. Corrected pilot completed before accepted main.",
+  "accepted_commands": [
+    "python -X utf8 code/check.py pilot",
+    "python -X utf8 code/check.py main",
+    "python -X utf8 code/scalar.py",
+    "python -X utf8 code/replay.py"
+  ]
+}

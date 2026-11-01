@@ -1,0 +1,14 @@
+{
+  "helper_version": "A036 inherited-occupancy independent implementation v1",
+  "actual_Boolean_family": "v_n=1-2*1[z=0]; F=-1 on x=0,a=1, v_n on x=1,b=1, +1 otherwise; query a then z0 in both children",
+  "parameter_domain": "pilot n=2; main n=2,3,4,5,6,7 only",
+  "case_count": 6,
+  "symmetry": "Data-coordinate permutations fix the truth table, occupancy reference and fair zero-fiber extension. Thus the single declared policy represents all n^2 labelled choices, but no other core or history.",
+  "arithmetic": "integer Walsh; Fraction probabilities; directed interval rounding at 2^-110; 60 exact root bisections; 24-term atanh log with proved geometric remainder after power-of-two reduction",
+  "memory_estimate_MB": 60,
+  "max_runtime_seconds": 600,
+  "pilot_max_runtime_seconds": 60,
+  "dimension_escalation": false,
+  "outputs": "full outcome normalizers and source-zero row counts, root A, final TC/H/I and signed conversion D; exact rational interval signs",
+  "search_objective": "Test whether the original occupancy bank pays conversion on biased rare non-flat cores after actual mixed query; retain all four terminal laws"
+}

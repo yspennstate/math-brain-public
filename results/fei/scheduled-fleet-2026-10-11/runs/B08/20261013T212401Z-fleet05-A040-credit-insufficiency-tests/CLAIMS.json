@@ -1,0 +1,90 @@
+[
+  {
+    "claim_id": "A023-OVERLAP-EXPOSURE-GOOD-CONTROL-LEDGER",
+    "version": 1,
+    "exact_statement": "For every uniform Boolean core g with a=1-Eg>=11/16 and independent compatible point-control blocks of common width s>=0 and exclusive widths r,t>=1, F=1+A_s(A_r OR A_t)(g-1) has a finite control-first stopping tree with exactly zero strict threshold-4 bad-node odd-face credit before the core terminal. Every queried node has B_v<4d_v for d_v>0. With u=2^-s,p=2^-r,q=2^-t,beta=p+q-pq, I_ctrl=u a[s beta+r p(1-q)+t q(1-p)], I_leaf=u beta I(g), H_leaf=u beta H(g). Thus H(F)<7I_ctrl+H_leaf, genuine minority/KL debt plus H_leaf<=4I_ctrl+H_leaf, and its full 3mu/ln2 allowance plus H_leaf<9I_ctrl+H_leaf. A more general sufficient local condition for a fresh point event against any independent residual event of probability q is a(1-q)>e/8. If g selects any bent sign on even k>=4 bits or its one-vertex flip, H(g)/I(g)<3 and therefore H(F)<7I(F), J+terminal<=4I(F), full sufficient KL ledger<9I(F), uniformly in all widths and k. Common coordinates and the shared core are paid once.",
+    "hypotheses": [
+      "uniform physical cube; Boolean signs; bit entropy",
+      "compatible common control literals; disjoint exclusive and common blocks; fresh controls independent of core",
+      "stopping after the control union is resolved; no unproved terminal entropy omission",
+      "unconditional class bound uses a fair selector between a bent seed and one actual vertex flip, k>=4 even"
+    ],
+    "statement_sha256": "31224c759b15727ae75297c8ee4d097397aac45b2637e6269d23df301daaaff2",
+    "contributors": [
+      "A023"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A023\\runs\\20261012T010933Z-fleet05-A023-amortized-rarity-budget\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A040",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "reviewed_at": "2026-10-13T21:33:53.871793+00:00",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A040\\runs\\20261013T212401Z-fleet05-A040-credit-insufficiency-tests\\REPORT.md",
+        "method": "Independent all-width reconstruction using direct constant-child paired spectrum and Fourier tensor fibers; separately implemented physical edge/face counting and exact prime-log tree checker",
+        "repair_supplied": false,
+        "original_statement_sha256": "31224c759b15727ae75297c8ee4d097397aac45b2637e6269d23df301daaaff2",
+        "original_claims_file_sha256": "a88fe1ed7574667e871fe515011e37ae04b0e361654081bbf438ca1318eac8cd",
+        "scope": "exact A023 v1 stated overlapping-control/exposure and terminal bounds; no arbitrary-core FEI acceptance"
+      }
+    ],
+    "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED_LOCALLY_BY_A040",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A021",
+      "A025",
+      "A028",
+      "A029",
+      "A064",
+      "A087",
+      "A094",
+      "B05",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A040-OVERLAP-LOCALIZED-FACE-POSTERIOR-COMPARISON",
+    "version": 1,
+    "exact_statement": "For every even k>=4, F_k=1+C(z)(b_k(x)-1-2y*1[x=0]) with C=1[z0=0](1[z1=0] OR 1[z2=0]) and the quadratic bent b_k, the selector-first physical control stopping tree has only its root K=4 bad, Q_bad=(3/8)2^-k(k+5/3), max_k Q_bad/I(F_k)=17/176 at k=4, and Q_bad/I(F_k)~2*2^-k. Its strictly positive root posterior J has J/B~log2(8/3)/k and Q_bad/J~k/log2(8/3). Native uniform-data terminal references retain CE_leaf=3k/8<=2I_leaf; queried influence is (3/8)2^-k+(5/8)(1-2^(-k/2)+2^-k). All entropy, influence, face and compensated TC ledgers are exact, and the declared native-leaf ledger yields H(F_k)<7I(F_k).",
+    "hypotheses": [
+      "uniform physical cubes and actual Boolean signs",
+      "even k>=4, quadratic bent sign and its actual zero-vertex flip",
+      "fixed compatible three-control overlap mask; fair selector",
+      "specified adaptive selector/control stopping rule",
+      "bit entropy; J is spectral-coordinate posterior MI",
+      "native terminal references specified; no universal compatible-root reference asserted"
+    ],
+    "statement_sha256": "e81c334aae2ecbfa8e21df1d8fd90a9e1a5436d780535f68af37589bdbbfcf9c",
+    "contributors": [
+      "A040"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A040\\runs\\20261013T212401Z-fleet05-A040-credit-insufficiency-tests\\REPORT.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A023-OVERLAP-EXPOSURE-GOOD-CONTROL-LEDGER",
+        "version": 1,
+        "acceptance": "A040 independent reconstruction at stated scope, out/REVIEW_A023.json"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPED_PACKET_EXTENSION_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "fixed positive fraction of root erasure supplied by the root spectral posterior KL on this overlapping-control family"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A037",
+      "A039",
+      "A046",
+      "A064",
+      "A088",
+      "A089",
+      "A098",
+      "B20"
+    ]
+  }
+]

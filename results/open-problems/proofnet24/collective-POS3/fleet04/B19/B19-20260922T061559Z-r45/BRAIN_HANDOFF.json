@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "run_id": "B19-20260922T061559Z-r45",
+  "campaign": "POS3",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "parent_status": "OPEN_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "canonical_report": {
+    "path": "proofnet24/collective-POS3/fleet04/B19/B19-20260922T061559Z-r45/REPORT.md",
+    "git_blob": "7e142965f79f76b8a3ffb05da2c82080fbae50d2"
+  },
+  "verifier": {
+    "path": "proofnet24/collective-POS3/fleet04/B19/B19-20260922T061559Z-r45/verify_pos3_canonical_blockers.py",
+    "git_blob": "1093e2cbf5194531d1b72383985dcb25446ceb2a",
+    "sha256_executed_bytes": "5599efc24ff794ef1bb00d02ced4bf9b27304e3a24609ac683c4f9ae09b5680a"
+  },
+  "verifier_output": {
+    "path": "proofnet24/collective-POS3/fleet04/B19/B19-20260922T061559Z-r45/verify_pos3_canonical_blockers.out",
+    "git_blob": "50e91921f242064b15e138bc6e7fe19f46673ab3",
+    "sha256_executed_bytes": "776d1fcd569446d63ad3a4b458cbd33b48ee5c4e01b905fe793c7f447923c12c",
+    "terminator": "POS3_CANONICAL_ACTIVE_BLOCKER_COMPRESSION_PASS"
+  },
+  "lead_consumed": {
+    "worker": "fleet04/B10",
+    "path": "proofnet24/collective-POS3/fleet04/B10/20260922T051259Z-B10-POS3-r14/REPORT.md",
+    "git_blob": "50bac494667235f3630991a512438eac42c30521"
+  },
+  "named_other_account_partner_consumed": {
+    "worker": "fleet01/B10",
+    "path": "proofnet24/collective-POS3/fleet01/B10/20260922T045216Z-fleet01-B10-pos3-r11/REPORT.md",
+    "git_blob": "7ab3502e574d795c8300fd0ec70dc33f12b87f0a",
+    "applied_result": "same-anchor TP2/PQD for exact three-chain full-extension flux"
+  },
+  "new_result": {
+    "name": "canonical_active_blocker_compression",
+    "statement": "For a width-at-most-three heavy cover x<.y with a incomparable to x,y, every bad x<->a middle swap is witnessed by one of at most three canonical Hasse blockers and every bad a<->y swap by one of at most three canonical Hasse blockers. Exact blocker weights partition the bad-event families. Two distinct canonical blockers carry total assigned incidence at least Pr(x<a<y)-1/3. If strict strong-majority span descent is absent, all canonical blockers lie outside the majority interval x prec_* a prec_* y.",
+    "partner_amplification": "If c is the maximum minority probability of the canonical channel pairs and h=Pr(x<a<y), fleet01/B10 TP2 gives 3c-c^2 >= (3h-1)/2, hence c >= (3-sqrt(11-6h))/2.",
+    "scope": "arbitrary finite size, width at most three, original uniform full-extension law"
+  },
+  "preserved_failure": "No different-anchor positive-association claim is used; the adaptive selector degenerates as h decreases to 1/3 and therefore does not close POS3.",
+  "next_essential_step": "CANONICAL-FRINGE REUSE ACYCLICITY: prove successive outward canonical Hasse channels cannot be reassigned in a finite cycle without balance, strict majority-span descent, width-four, an autonomous/ordinal reduction, or a source-valid charged non-crossed/multi-distinguisher exit.",
+  "full_target_closed": false
+}

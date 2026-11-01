@@ -1,0 +1,42 @@
+{
+  "target_id": "C0017",
+  "checked_date": "2026-10-10",
+  "dated_intake_verdict": "KEEP AS HISTORICAL LEAD ONLY",
+  "dated_intake_source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:17",
+  "intake_quote": "Prove that critical bond percolation on Z^2 at p = 1/2 is conformally invariant in the scaling limit (Cardy's formula and convergence of interfaces to SLE(6))",
+  "original_primary_source": {
+    "url": "https://arxiv.org/pdf/1102.5761",
+    "authors": "Christophe Garban and Jeffrey Steif",
+    "location": "Chapter II, Section 4, PDF page 26 (P25), printed page 24",
+    "quote": "on Z^2 at pc = 1/2, proving the conformal invariance is still a challenging open problem",
+    "scope_note": "The original note states the square-lattice conformal-invariance challenge; the intake's explicit Cardy plus SLE6 wording is a sharper working formulation, not a verbatim quotation from the note."
+  },
+  "current_openness": "UNKNOWN",
+  "primary_statement_verified": true,
+  "primary_claim": {
+    "url": "https://arxiv.org/pdf/2409.03235",
+    "author": "Wang Zhou",
+    "version": "v6, 2024-12-17",
+    "location": "Theorem 2 and Corollary 1.1, PDF page 6 (web PDF index P5)",
+    "theorem_scope": "Weak convergence of one Dobrushin exploration path to SLE6, given Caratheodory convergence and the paper's Condition C; Cardy crossing formula as corollary.",
+    "proof_status": "unrefereed here; existence of preprint claim only"
+  },
+  "older_preprint_notice": {
+    "url": "https://arxiv.org/abs/1112.2017",
+    "version": "v5, 2013-01-10",
+    "notice": "Authors call it preliminary and report critical comments, promising revision."
+  },
+  "independent_primary_context": {
+    "url": "https://arxiv.org/html/2502.08394",
+    "location": "Conjecture 5.1 and text after Theorem 5.2",
+    "scope": "A stronger full-plane nested CLE limit for FK q in [1,4] remains presented as a conjecture; rotational invariance is proved but is distinguished from conformal invariance. This does not decide the narrower exploration-path preprint."
+  },
+  "reason": "A primary preprint claims the narrower target; a later primary survey still presents the stronger full-plane limit as conjectural. Neither its theorem proof nor outside acceptance has been established by this audit."
+  ,"prior_attempt_correction": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl:17",
+    "old": "q=1 FK parafermionic spin sigma=2/3",
+    "correct": "q=1 FK parafermionic spin sigma=1/3 under the standard Definition 3 convention",
+    "primary_source": "https://arxiv.org/pdf/1208.3787, Definition 3, PDF page 7 (P6): sin(sigma*pi/2)=sqrt(q)/2 with sigma in [0,1]",
+    "patch": "patches/01_c0017_spin_correction.diff"
+  }
+}

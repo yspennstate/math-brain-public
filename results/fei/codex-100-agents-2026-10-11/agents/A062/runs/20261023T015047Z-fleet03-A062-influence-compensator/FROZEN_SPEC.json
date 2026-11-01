@@ -1,0 +1,16 @@
+{
+  "helper_version": "A062-sparse-reference-v1",
+  "family": "Boolean point functions g_n=1-2*1[x=0], with ONE original spectral reference; no carrier variables",
+  "target": "Conditional nonempty reference shape Bernoulli(delta) conditioned nonempty, 0<delta<=2^(1-n), arbitrary supporting empty-atom mass; preserve shape under physical Bayes transport and prove complete reset reserve <=5I/3 at every finite adaptive stopping cut",
+  "pilot": {"dimensions": [2,3,4], "reference_empty_choices": ["original-product", "actual-source-empty"], "maximum_seconds": 55},
+  "main": {"dimensions": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], "reference_empty_choices": ["original-product", "actual-source-empty"], "nonconstant_history_count_per_reference_choice": 209, "all_histories_including_terminal_per_reference_choice": 228, "delta": "2^(1-n), retained unchanged through histories"},
+  "independent_raw": {"dimensions": [2,3,4,5,6,7], "each_active_history": "all remaining physical directions and both child outcomes, no random sampling"},
+  "symmetry": "Proved permutation symmetry of point function and original reference; one nonconstant history at each remaining dimension, all other reached branches are actual constants. Raw check varies every remaining direction. This represents every adaptive policy rather than sampling query orders.",
+  "arithmetic": "Fraction masses and reference kernels, integer Walsh and independently counted edges; outward 70-bit dyadic log enclosures from the source-pinned 28-term positive atanh kernel with proved geometric tail. Strict signs use separated endpoints; interval overlap is diagnostic only.",
+  "adversarial": "At n=8, take incoming reference equal to actual source (conditional nonempty delta=1/2 violates delta<=d_n); certify TC>(5/3)I. Handle dimensions0,1,2 explicitly, empty-source atom, delta endpoints, actual constant branch, arbitrary old booking eligibility, and reject any tensor-reference factorization assumption.",
+  "memory_estimate_mb": 100,
+  "maximum_seconds_per_job": 55,
+  "automatic_dimension_escalation": false,
+  "gpu": false,
+  "formal": "Separate core integer accounting statement only; estimated512MB, fresh memok must pass and checker admission must pass; otherwise save NOT_ADMITTED without starting compiler. No full entropy formalization claim."
+}

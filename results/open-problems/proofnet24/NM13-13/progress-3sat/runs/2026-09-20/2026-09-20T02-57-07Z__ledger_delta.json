@@ -1,0 +1,55 @@
+{
+  "track": "NM13-13",
+  "parent": "T04 classical iid random 3-SAT",
+  "status": "PARTIAL / CANDIDATE_FULL_EXPLICIT_UPPER_PENDING_LATER_INDEPENDENT_REVIEW",
+  "runtime": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_level": "UNVERIFIED",
+    "requested_model_effort": "GPT-6 / maximum",
+    "authenticated_match": false
+  },
+  "source_model": "m=floor(alpha n) iid uniform signed proper 3-clauses on three distinct variables",
+  "source_threshold_literature": {
+    "before": "3.52 <= liminf c_n <= limsup c_n <= U_1RSB(3); 2026 literature reports physics/numerical value d_sat(3) approximately 12.801, alpha approximately 4.267, but this track has not interval-certified that numerical evaluation",
+    "after": "unchanged",
+    "movement": "none at current literature frontier"
+  },
+  "repo_independently_certified_explicit_decimal": {
+    "before_upper": 4.4898,
+    "after_upper": 4.418,
+    "strict_improvement": 0.0718,
+    "before_bracket": "[3.52,4.4898]",
+    "after_bracket": "[3.52,4.418]",
+    "after_width": 0.898
+  },
+  "new_claim_id": "NM13-13-T04-TWO-SURVEY-4418-UPPER-01",
+  "claim": "Candidate theorem: classical iid proper random 3-SAT is UNSAT with high probability at clause density alpha=4.418.",
+  "mechanism_gain": {
+    "method": "Panchenko-Talagrand one-step interpolation with an explicit two-survey hard-field trial, followed by Poisson-to-proper fixed-density transfer",
+    "poisson_density": "22089/5000 = 4.4178",
+    "source_density": "2209/500 = 4.418",
+    "survey_bias": "11/50 = 0.22",
+    "series_cutoff": 300,
+    "certificate": "A <= A_300 < -9.2508457096e-7 by outward interval arithmetic; omitted series terms only make A smaller",
+    "all_p_transfer": "K-SAT interpolation upper bound applies at p=3 because the K-SAT factors are nonnegative; Panchenko 2013/2014 explicitly records that the upper bound works for all p>=2"
+  },
+  "prior_failures_preserved": [
+    "arbitrary rescue-star penalties do not compose under simultaneous child flips",
+    "anchored degree-one rescue matching gives a strict local exponential penalty but had not been globally reoptimized",
+    "positive clause-local multiplicative second-moment weights hit the identical-pair barrier alpha <= log(2)/log(5/4)",
+    "o(n/log n)-radius solution-graph quotients change counts only by exp(o(n))",
+    "full-component quotient retains an unpaid cross-component overlap moment",
+    "whitening/core counting lacks a uniform exponential multiplicity lower bound",
+    "the exact q-binomial radius-two calculation in the run artifacts certifies only about 4.5923, worse than 4.4898",
+    "Franz-Leone's 2003 odd-overlap issue is historical for p-SAT rather than a current blocker: later Talagrand/Panchenko all-p K-SAT interpolation removes it"
+  ],
+  "companion_nm13_06": "Newest constructive report proves the static blocked-majority hypergraph is subcritical at 4.4898 with certified reproduction R<0.88; dynamic promotion, not initial blocked percolation, is its remaining obstruction.",
+  "artifacts": {
+    "code": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T02-57-07Z__two_survey_44178_interval.py",
+    "code_commit": "5faa4f78e33754b0bb92b104e90ddfa24af74bc3",
+    "output": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T02-57-07Z__two_survey_44178_interval.out",
+    "output_commit": "4668e07de2dad2caacad06eff7cf9650088079b8",
+    "result": "CERTIFIED_A_NEGATIVE = True"
+  },
+  "next_attack": "Reconstruct and interval-certify a richer one-step survey law closer to the published U_1RSB(3) frontier (or the historical 4.396 trial) while preserving an explicit finite-temperature interpolation transfer; do not return to the weaker Diaz-only reoptimization unless it supplies an independently useful structural lemma."
+}

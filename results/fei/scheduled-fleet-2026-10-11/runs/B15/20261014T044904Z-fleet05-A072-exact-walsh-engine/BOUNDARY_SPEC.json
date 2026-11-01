@@ -1,0 +1,13 @@
+{
+  "helper_version": "A072-first-core-query/1; direct centered interpolation with unequal endpoint biases",
+  "family": "six disjoint copies of actual six-bit core negative on {0,1,2}, outer h or J",
+  "domain": "physical inner coordinate i in {0,2}, outer block j in {0,1}, gate in {h,J}; exactly8 tagged queries",
+  "case_count": "8 compressed36-bit parent queries,16 physical35-bit child states, each reconstructed from checked64-entry outer and64/32-entry inner tables; no full36-bit truth table",
+  "symmetry": "none; nontransitive core and unequal J directions included explicitly",
+  "arithmetic": "exact Walsh/edge counts, arbitrary rational centered interpolation including constant-child p=0, outward rational entropy intervals",
+  "memory_estimate_mb": 100,
+  "pilot_domain": "h/J with j=0,i=2, including the constant child",
+  "pilot_max_seconds": 55,
+  "full_max_seconds": 120,
+  "goal": "check exact physical influence and complete terminal correction C_parent-average C_child; record its sign without claiming a universal child-surplus payment"
+}

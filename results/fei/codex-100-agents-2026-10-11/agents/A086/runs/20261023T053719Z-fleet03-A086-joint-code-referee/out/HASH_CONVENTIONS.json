@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "claims": [
+    {
+      "claim_id": "A011-PADDING-FRESH-RESET-SAME-SOURCE-BANK",
+      "version": 2,
+      "declared_sha256": "805620bf39632d41249625bf68fd7eac0667d553e08d0a0aedd413e663c32027",
+      "verified_convention": "utf8_exact_statement_only"
+    },
+    {
+      "claim_id": "A011-PADDING-FRESH-RESET-SAME-SOURCE-BANK",
+      "version": 3,
+      "declared_sha256": "3abab90623e667b774d75378a34657a79b1075404b28a5b375bc38a771b5200d",
+      "verified_convention": "utf8_exact_statement_only"
+    },
+    {
+      "claim_id": "A095-NONVANISHING-BOOKING-RARE-ALLOWANCE-OBSTRUCTION",
+      "version": 1,
+      "declared_sha256": "4acc6beeba123a890e170e2d7a3a568f677409a54b619f7f7ccc30acbdc7a3b2",
+      "verified_convention": "compact_sorted_statement_and_hypotheses"
+    },
+    {
+      "claim_id": "A094-CANONICAL-RETURN-POSITIVE-DEBIT-EXACT",
+      "version": 1,
+      "declared_sha256": "b35a10827fbd05ec446d68e4882ac3bf7bfa26f9498405b2be84a5266db0a4e8",
+      "verified_convention": "utf8_exact_statement_only"
+    }
+  ],
+  "initial_finalizer_error": "Our first validator incorrectly required A095 compact statement+hypotheses convention for A011; A011 authors explicitly hash UTF8 exact_statement alone. Corrected without changing any source statement/hash. No mathematical failure."
+}

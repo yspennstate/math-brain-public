@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "stream_id": "B05",
+  "primary_packet_id": "A023",
+  "claims": [
+    {
+      "claim_id": "B05_A023_PARITY_BALANCED_TOWER_RETAINED_U",
+      "claim_version": "v1",
+      "status": "AUTHOR_PROVED_RESTRICTED_ALL_PARAMETER_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "quantifiers": "For every Boolean base P with U(P)<=2I(P), every integer d>=1, every parity-balanced fair half-activation tower T_d(P), every finite adaptive/pruned restriction tree querying only tower variables, and every common Boolean terminal core h on disjoint variables.",
+      "statement": "U(T_d(P))=2+2^-d(U(P)-2), I(T_d(P))=2+2^-d(I(P)-2), and the retained upper-set loss is at most 2I(T_d(P)).",
+      "units": "bits",
+      "constant": 2,
+      "proof_artifact": "PROOF.md",
+      "finite_audit": "CHECK_BALANCED_TOWER.py and CHECK_BALANCED_TOWER.out",
+      "dependency": "The general transfer theorem is self-contained. Its dense-nullity-two instantiation uses the prior B05 theorem at commit 97ee31ccf5dd58017837d3939ffb012af1ed034f.",
+      "limitations": [
+        "fair selectors only",
+        "fresh parity balancer at every level",
+        "no selector or terminal-variable overlap",
+        "tree queries tower variables only",
+        "does not control arbitrary changing coherent cores"
+      ],
+      "full_fei_status": "OPEN"
+    }
+  ]
+}
+

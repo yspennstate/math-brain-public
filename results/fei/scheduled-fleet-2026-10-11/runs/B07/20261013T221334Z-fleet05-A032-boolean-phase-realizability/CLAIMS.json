@@ -1,0 +1,47 @@
+[
+  {
+    "claim_id": "A032-HEAVY-ROW-N6",
+    "version": 1,
+    "exact_statement": "For every Boolean F on at most six uniform physical bits with two distinguished address bits, whose positive conditional squared Fourier laws on the remaining bits are product laws, let w_J be the four address masses, N_J the number of conditional marginals outside {0,1/2,1}, and I_A=sum_J w_J |J|. Then Q=sum_J w_J N_J <= Kstar(H(w)+I_A), where Kstar=1/(45/8-(17 log2(17)+15 log2(5))/32)<1/2. This constant is attained by an actual six-bit Boolean truth table with w=(17,5,5,5)/32, all N_J=1 and I_A=5/8. Every individual admitted five-valued product-spectrum slice on four data bits has N_J<=1. No all-dimensional upper bound is asserted; the witness implies any all-dimensional constant must be at least Kstar.",
+    "hypotheses": [
+      "F takes values +/-1 on the uniform physical cube",
+      "Two physical address coordinates; at most four data coordinates, dummy lifts permitted",
+      "Positive conditional spectral laws are coordinate products; omit zero rows",
+      "Entropy in bits; address influence uses the original physical labels"
+    ],
+    "statement_sha256": "f4494f255282ee229793f8e233bea9bdbaa9f7e99e3fa62746caeddf3b504ec4",
+    "contributors": [
+      "A032"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "code/pilot.py",
+      "code/cover.py",
+      "code/certify.py",
+      "code/verify.py",
+      "out/certificate.json",
+      "out/witness.json"
+    ],
+    "proof_dependencies": [
+      "A032-TWO-ADDRESS-N6-CERTIFICATE@1: only its complete 45088-row catalogue and pointwise admission proof; pending external review"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A032 author",
+        "method": "Direct character sums on all45088 rows, direct Boolean realization of all10 objective representatives, rational logarithm remainder certificates",
+        "verdict": "PASS; no independent external acceptance"
+      }
+    ],
+    "status": "FINITE_REFINEMENT_CERTIFIED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A034",
+      "A079",
+      "A088",
+      "A094",
+      "B07-lead"
+    ]
+  }
+]

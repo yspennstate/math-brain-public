@@ -1,0 +1,53 @@
+[
+  {
+    "claim_id": "A032-TWO-ADDRESS-N6-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For every Boolean function F on at most six independent uniform physical bits and every distinguished pair A of bits such that each positive-probability conditional spectral law of S_(A^c) given S_A is a product law, H(F)<=Cstar I(F), where Cstar=16/3-(3/2)log2(3). The constant is attained by a three-variable point defect containing both addresses, with remaining coordinates dummy. On the subclass in which every physical data point has exactly one nonzero partial address Fourier slice (pure configurations), H(F)<=12I(F)/5, attained with four essential variables. On the subclass with all four slices of magnitude1/2 at every data point, H(F)<=2I(F) in every data dimension. A normalized non-Boolean product spectrum with six marginals1/16 has H/I>4, so the finite Boolean bound is not generic probability algebra.",
+    "hypotheses": [
+      "F is a real Boolean sign on a finite uniform physical cube",
+      "A consists of two distinct physical coordinates",
+      "Conditional squared Fourier spectra are product laws; zero-mass address labels omitted",
+      "Full finite bound requires at most six variables; the all-mixed bound is explicitly dimension-independent",
+      "H is in bits; I is total physical influence, equivalently expected spectral degree"
+    ],
+    "statement_sha256": "206cbe77071093971f0d41c605b988e2919b7e8dbe61398957a8ebc5b6deb7a2",
+    "contributors": [
+      "A032"
+    ],
+    "proof_source": [
+      "COMPLETENESS.md",
+      "MIXED_COMPLETENESS.md",
+      "NON_BOOLEAN_CONTROL.md",
+      "code/pure_product.py",
+      "code/mixed_product.py",
+      "code/mixed_cover.py",
+      "code/certify_full.py",
+      "out/pure_exact_certificate.json",
+      "out/full_exact_certificate.json",
+      "out/maximizer_truth_table.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A032 author",
+        "method": "Independent direct character-sum validation of45088 rows, exhaustive5^8 slice pilot with2208 product slices lifted, physical-edge influence and direct full64-entry truth table reconstruction",
+        "verdict": "PASS; external independent review not yet performed"
+      }
+    ],
+    "status": "EXACTLY_CERTIFIED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A031",
+      "A033",
+      "A034",
+      "A035",
+      "A078",
+      "A079",
+      "A088",
+      "A094",
+      "B07-lead"
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "claim_id": "A067-BOUNDED-FIBER-TWO-EVENT-ACCESS-RESERVE",
+    "version": 1,
+    "exact_statement": "For every Boolean seed g on m>=0 uniform core coordinates X, r control coordinates Z, and final physical edit mask E, put F(x,z)=g(x)(-1)^1_E(x,z). Assume every core fiber E_x has at most k assignments, k>=1 and k2^-r<=1/4. Let I_Z and I_X be the final F control/core influence sums, and Q=H(F)-E_z H(F_z), with entropy in bits. Then Q <= K I_Z+2 I_X, K=4r/(r-log2 k)+2/ln2. The core reserve is allocated once to the combined mask; I_X(F)>=I_X(1-2*1_E)>=2 P(E)log2(1/P_X(E_x nonempty)). Empty edit sets have Q=I_Z=0. In particular k=1,r>=2 gives K=4+2/ln2 and k=2,r>=3 gives K<=6+2/ln2. Two graph-controlled events with arbitrary shared core/domains/control maps have <=2 assignments per fiber after either XOR or union-once editing. Every complete physical control-reveal tree has this access price and retains all actual core leaves. If every complete leaf satisfies U<=bI, b>=0, the reviewed local granularity certificate gives H(F)<=max(K,4+2b)I(F). For earlier control-only stopping trees with U-certified leaves, the valid bound is H(F)<=(K+2+2b)I(F), retaining remaining control influence. No arbitrary core-leaf admission is asserted. Dropping the sparse-fiber cap invalidates the ownership inequality: g=(-1)^x and E={(0,0),(1,1)} on one core and one control bit give I_X(F)=0<I_X(1-2*1_E)=1.",
+    "hypotheses": [
+      "Actual Boolean signs on finite uniform cubes; entropy in bits; standard physical pivotal influence.",
+      "The seed g is independent of the r control coordinates; the edit mask is the actual final physical XOR or union mask.",
+      "Every fiber has cardinality <=k and k2^-r<=1/4; this implies r>=2 and r-log2 k>0.",
+      "The full access tree exposes every control and retains the exact actual core restrictions; its reserve is not renewed at descendants.",
+      "The U conditions are hypotheses for terminal entropy payment, not consequences of the access bound."
+    ],
+    "statement_sha256": "bff928c14877300aff73932ed9c66ba2a6c57b4ad6fc101b08283a88bccd8f25",
+    "contributors": [
+      "fleet05/A067"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261013T222025Z-fleet05-A067-hypercontractive-refinement\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A067-LOCAL-BOOLEAN-GRANULARITY",
+        "version": 1,
+        "acceptance_scope": "Independent A088/A070 acceptance at stated scope; needed only for conditional U-leaf corollaries, not the main access payment.",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-fleet05-A067-hypercontractive-refinement\\CLAIMS.json"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A088",
+        "verdict": "HOLDS_AT_STATED_BOOLEAN_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261013T234248Z-fleet05-A088-booleanity-referee\\AUDIT.md",
+        "method": "Independent actual-edge pivot reconstruction, signed Walsh row grouping, exact physical derivatives and prime-log certificates; no source checker imports",
+        "scope_diagnostics": "Normalized-real ownership false; normalized-real U terminal corollary false; bare Q extension undecided outside the finite tested grid",
+        "registry_adoption": "UNVERIFIED"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A069",
+      "A061",
+      "A064",
+      "B05",
+      "B06",
+      "B13",
+      "B14",
+      "B20"
+    ]
+  }
+]

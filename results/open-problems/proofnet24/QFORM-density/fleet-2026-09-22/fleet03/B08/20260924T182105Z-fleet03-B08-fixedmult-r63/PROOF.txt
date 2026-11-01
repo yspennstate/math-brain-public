@@ -1,0 +1,35 @@
+QFORM r63 supporting proof
+
+THEOREM QFORM-S7-MICROPIVOT-OVERLAP-MULTIDELETE-v1
+
+Normalize K=s=1 and assume s7(A)>=1.
+eta0=1/100, p0=1/400, d=3/40, kappa=4/625.
+
+Scalar gate:
+|A_ii|>=eta0 => s5(Schur_i(A))>=1.
+Current 5-direction half-potential branches:
+H0<70;
+Hpair<16*p0^(-1/4)<72;
+Hscalar<=1+d^(-1/2)*(J0+2*Llog).
+J0=pi+4*log(2), Llog<239/25.
+pi<22/7, log(2)<347/500, sqrt(40/3)<11/3.
+Thus Hscalar<81208/875<93 and
+||p_Q||_inf < 10*(81208/875)=812080/875<929.
+
+Pair gate:
+If |det A[{i,j},{i,j}]|>=p0, then:
+definite => ||p_Q||_inf <= pi/sqrt(p0)=20*pi<63.
+indefinite => s5(Schur_{i,j}(A))>=1 and
+||p_Q||_inf
+ <20*(6+347/125+239/25)+1/2
+ =18361/50<368.
+
+Hence an unpaid state obeys:
+|A_ii|<1/100 for every i;
+|det A[{i,j},{i,j}]|<1/400 for every i!=j.
+These imply the no-pivot hypotheses d=3/40, p=1/400 of the current source.
+
+Order-two volume:
+s7(A)>=1 => s5(A)>=1 => V2(A)>=kappa^2.
+
+If V3(A)>=kappa^3, a fair physical cut has Z3>=V3/64. The marginal-free order-three receiver yields ||p_Q||_inf<375 and a C0 density.

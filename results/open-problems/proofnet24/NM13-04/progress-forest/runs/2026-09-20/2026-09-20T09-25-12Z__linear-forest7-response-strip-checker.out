@@ -1,0 +1,34 @@
+T07 triangle + right linear forest (component order <=7) exact sign checker
+N^3=0 and N^2!=0: PASS
+unmarked path transfers T_l=A_l I+B_l N+C_l N^2:
+  P1: A,B,C=(4, 1, 0) rho=1/8
+  P2: A,B,C=(23, 12, 5/3) rho=101/828
+  P3: A,B,C=(130, 103, 85/3) rho=9727/80340
+  P4: A,B,C=(734, 780, 961/3) rho=103613/858780
+  P5: A,B,C=(4144, 5524, 9050/3) rho=1033583/8584296
+  P6: A,B,C=(23396, 37512, 25562) rho=13190815/109703844
+  P7: A,B,C=(132088, 247492, 202132) rho=70123811/583762916
+strict rho ordering rho1>...>rho7>0: PASS
+response strip: v=u^2/2-hu, h in [rho7,1/8]: PASS
+universal local witness: 213 edges, 22578 unordered pairs: PASS
+distinct exact local Rayleigh Q(u,v) polynomials: 749
+regular strip-Bernstein certificates: 736/749 PASS
+minimum regular constant = 2
+minimum positive regular Bernstein coefficient = 1
+exceptional exact discriminant certificates:
+  P4.0:s0-0 | P4.0:s3-1 : D=16476912
+  P5.0:s0-0 | P5.0:s3-1 : D=12901593600
+  P5.0:s0-0 | P5.0:s4-1 : D=1156460544
+  P6.0:s0-0 | P6.0:s3-1 : D=12802993007616
+  P6.0:s0-0 | P6.0:s4-1 : D=907023960000
+  P6.0:s0-0 | P6.0:s5-1 : D=76503301056
+  P6.0:s1-0 | P6.0:s4-1 : D=10096206840000
+  P7.0:s0-0 | P7.0:s3-1 : D=12954731194211328
+  P7.0:s0-0 | P7.0:s4-1 : D=902212338069504
+  P7.0:s0-0 | P7.0:s5-1 : D=60028920979200
+  P7.0:s0-0 | P7.0:s6-1 : D=4954651893504
+  P7.0:s1-0 | P7.0:s4-1 : D=10019454655795200
+  P7.0:s1-0 | P7.0:s5-1 : D=710839190880000
+exceptional count 13/749; all D>0 and all lower coefficients positive: PASS
+THEOREM CERTIFIED: K3 join any disjoint union of P_l, 1<=l<=7, is strictly unit-p-NC
+ALL_EXACT_CHECKS_PASS

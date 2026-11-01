@@ -1,0 +1,181 @@
+[
+  {
+    "claim_id": "A086-UNEQUAL-AMPLITUDE-NEUTRAL-POINT-FLOOR",
+    "version": 1,
+    "exact_statement": "Let g on six uniform data bits be -1 exactly when its first three bits equal a specified point and +1 otherwise, with three dummy bits. For every negative data point ystar, every r>=1 fresh point controls with any control point xstar, set p=2^-r,t=2^-6,rho=4pt, F=g(1-2*1_xstar*1_ystar). The actual data Fourier marginal is q=(1-4rho)P_g+3rho delta_empty+rho U_6. Given any fixed data spectral subprobability R of mass s<=1 positive on P_g support and finite cost c=CE(P_g,R), define Rprime=(1-4rho)R+3rho delta_empty+rho U_6 and Qprime=Rprime times the actual conditional control spectrum. This complete fixed output subprobability has mass (1-4rho)s+4rho, exact CE=(1-4rho)c+6rho+H(1-4rho,3rho,rho)-H(J|T)-kappa+B and exact debt (1-4rho)D(P_g||R)-kappa, where J labels the three analytical components, kappa is their measured conditional true/reference posterior KL and B is the true conditional control entropy. It has CE<=c+72 I_sel, I_sel=2rpt, I(g)=3/4, created and erased data charges C=E=6pt and I(F)=3/4+I_sel. Thus for every K, K I(F)-CE>=S_K+(K-72)I_sel with S_K=3K/4-c spent once, and supplied c<=K I(g) transfers with constant max(K,72). Any independent arbitrary Boolean terminal h with prescribed complete finite-cost reference retains the full additive CE c_h and KL D_h under the fixed product reference, with additive physical influence. This is a nonoptimal unequal-amplitude neutral negative-cell reference transfer, not an arbitrary-core, positive-point, hereditary reserve or universal FEI theorem; integer rounding is separate.",
+    "hypotheses": [
+      "Uniform finite Boolean cubes; three active bits, three dummy bits, actual negative-point sign flip under fresh point controls",
+      "Fixed complete finite-cost subprobability source reference positive on the true source spectrum; optional independent terminal reference positive on its true spectrum",
+      "Analytical three-component label is not a fair physical-child sampler; costs evaluated under the actual output law",
+      "Information quantities bits; ideal CE with separate single-word rounding"
+    ],
+    "statement_sha256": "13476c5099269b42bb53fab196bc31bc63fb33668a154b6505cca0cd71b17c35",
+    "contributors": [
+      "A086/fleet05; A011 parity repair and named unequal-amplitude neutral test credited as source context"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261014T042208Z-fleet05-A086-joint-code-referee\\RECONSTRUCTION.md",
+      "locator": "Sections 1 and 4",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261014T042208Z-fleet05-A086-joint-code-referee\\out\\UNEQUAL_RESULTS.json",
+      "tensor_validation": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261014T042208Z-fleet05-A086-joint-code-referee\\out\\TENSOR_RESULTS.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A094/fleet05/B19",
+        "at": "2026-10-14T06:33:29.583032+00:00",
+        "verdict": "HOLDS_AT_FULL_STATED_SCOPE",
+        "scope": "Entire original exact statement, hypotheses and complete proof chain, including source cost, physical debit, full conditional KL, endpoints and arbitrary independent terminal; no inherited-child price attributed",
+        "method": "Independent signed FWHT, edge surgery, mixture/calibration, source-bank and transport reconstruction; own exact checker and rational log/Bernstein certificates",
+        "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T061347Z-fleet05-A094-proof-chain-challenger\\AUDIT.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T061347Z-fleet05-A094-proof-chain-challenger\\out\\EXACT_RESULTS.json",
+        "source_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261014T042208Z-fleet05-A086-joint-code-referee\\CLAIMS.json",
+        "source_claims_sha256": "c44fc580e476f0991736232b73c3e9af2a472d82210c34778ab73d22cfa4f121",
+        "substantive_repair_supplied": false,
+        "contributor_conflict": false,
+        "declared_statement_sha256": "13476c5099269b42bb53fab196bc31bc63fb33668a154b6505cca0cd71b17c35",
+        "plain_statement_sha256": "baf2d0d67090e0d06e70e52faf02f99c368be24c54dd9aa7556906790b7e9298",
+        "canonical_statement_hypotheses_sha256": "13476c5099269b42bb53fab196bc31bc63fb33668a154b6505cca0cd71b17c35",
+        "known_hash_form_match": true
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_FULL_STATED_SCOPE_LOCALLY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A011",
+      "A094",
+      "A097",
+      "A095",
+      "A039",
+      "B18",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK",
+    "version": 1,
+    "exact_statement": "For every a>=1,b>=0,r>=1, let g=1-2 A_a on n=a+b data bits with b dummies, edit any full negative data point under r fresh uniform point controls, F=g+2 A_r D_n, and supply a normalized data reference R positive on source support with finite cost c. Put s=2^-a,t=2^-n,p=2^-r,rho=4pt,lambda=2p*2^-b,mu=1-2s; let R0 be the CE-nonincreasing empty calibration to mu^2. The actual data marginal is q=(1-lambda)P_g+lambda*mu*delta_empty+rho*U_n. The positive normalized floor Rprime=(1-lambda)R0+lambda*mu*delta_empty+rho*U_n and actual conditional control kernel give a complete normalized Q. Its exact residual KL is (1-lambda)D(P_g||R0)-kappa, where kappa is the measured posterior KL of this same three-component true/reference mixture. Exact physical charges are I_g=2as,C=2ptb,E=2pta,J=2rpt and I_F=I_g+C-E+J. The full ideal cost satisfies CE_F<=c+10(C+E+J). For any K>=10, K I_F-CE_F>=S_K+(K-10)C-(K+10)E+(K-10)J with S_K=K I_g-c. Since E<=I_g/2, a certified supplied source cost c<=C0 I_g yields CE_F<=(2C0+10)I_F, spending that source bank once. The structural source R=P_g obeys c<4I_g and hence yields complete CE_F<=18I_F. An independent arbitrary Boolean terminal h with full supplied R_h retains exact tensor CE=c_h+CE_F, KL=D_h+(1-lambda)D_gcal-kappa, and additive influence; conditional c_h<=C_h I_h yields max(C_h,2C0+10) total payment. This is a prescribed-reference/erased-edge transfer on a known read-once Boolean class, not a new FEI class claim, arbitrary-core floor theorem, or hereditary incoming-reference transport.",
+    "hypotheses": [
+      "Uniform physical cubes; a>=1 active negative point-defect bits,b>=0 dummies,r>=1 fresh point controls",
+      "Edit a full data point inside the negative cell; positive-cell orientations and arbitrary three-amplitude spectra are excluded",
+      "Supplied reference normalized and finite-cost positive on source support; off-source zeros permitted and covered by uniform floor",
+      "Empty calibration retains its exact binary-KL savings and conditional source law; mixture labels analytical, not physical fair-child histories",
+      "All costs bits and ideal CE; single-output integer rounding remains separate",
+      "Source bound c<=C0 I_g and arbitrary terminal influence bound are conditional inputs; no independently reused child surplus assumed"
+    ],
+    "statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+    "contributors": [
+      "A097; prior floor identity inputs A086/A011 credited in proof sources"
+    ],
+    "proof_source": {
+      "run_id": "20261014T050248Z-fleet05-A097-cross-route-transfer",
+      "files": [
+        "REPORT.md",
+        "DERIVATION.md",
+        "TRANSFER_HYPOTHESIS_CHECK.json",
+        "out/FROZEN_SPEC.json",
+        "code/check.py",
+        "out/VALIDATION_TOTALS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A086-UNEQUAL-AMPLITUDE-NEUTRAL-POINT-FLOOR",
+        "version": 1,
+        "statement_sha256": "13476c5099269b42bb53fab196bc31bc63fb33668a154b6505cca0cd71b17c35",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261014T042208Z-fleet05-A086-joint-code-referee\\CLAIMS.json",
+        "status": "Author-proved pending independent review; actual mixture identity generalized and reconstructed locally; normalized/empty-calibrated references here, no blanket acceptance of the subprobability72-tax clause"
+      },
+      {
+        "claim_id": "A011-POINT-EDIT-PAID-REFERENCE-FLOOR",
+        "version": 1,
+        "statement_sha256": "0d76a3540b8d17149bbfeace28c72070205f730791bfecff9ad3ece9290742b4",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A011\\runs\\20261014T035454Z-fleet05-A011-representation-existence\\CLAIMS.json",
+        "status": "Fully independently reconstructed by A086; one-active-bit parity identity and complete6-charge bound rederived locally, allowing off-source reference zeros covered by the positive floor"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A094/fleet05/B19",
+        "at": "2026-10-14T06:33:29.583032+00:00",
+        "verdict": "HOLDS_AT_FULL_STATED_SCOPE",
+        "scope": "Entire original exact statement, hypotheses and complete proof chain, including source cost, physical debit, full conditional KL, endpoints and arbitrary independent terminal; no inherited-child price attributed",
+        "method": "Independent signed FWHT, edge surgery, mixture/calibration, source-bank and transport reconstruction; own exact checker and rational log/Bernstein certificates",
+        "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T061347Z-fleet05-A094-proof-chain-challenger\\AUDIT.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T061347Z-fleet05-A094-proof-chain-challenger\\out\\EXACT_RESULTS.json",
+        "source_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A097\\runs\\20261014T050248Z-fleet05-A097-cross-route-transfer\\CLAIMS.json",
+        "source_claims_sha256": "e3884721651a8431178b712bb134232327c890ae7f157df66ef8a3f1e8a51a33",
+        "substantive_repair_supplied": false,
+        "contributor_conflict": false,
+        "declared_statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+        "plain_statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+        "canonical_statement_hypotheses_sha256": "eabd59e5c256c2c346fe26e59d950335da02ccf0cd6a7d64b53ab93ae036dc6f",
+        "known_hash_form_match": true
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_FULL_STATED_SCOPE_LOCALLY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A086",
+      "A011",
+      "A094",
+      "A095",
+      "A039",
+      "A064",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A094-INCOMING-PAID-FLOOR-DESCENDANT-SHOCK-AND-OWNER",
+    "version": 1,
+    "exact_statement": "For every integer n>=2 take the source g=1-2AND_1 on n data bits with n-1 dummies, one fresh fair point-control bit and an actual negative-data/zero-control point flip. Its source spectral law is delta_A on the active singleton. Prescribe the normalized source reference R(A)=1/2,R(empty)=0,R(T)=1/[2(2^n-2)] otherwise, with source CE exactly1, and carry the A097 negative-cell reference floor and actual control kernel. Put t=2^-n. The root I=1+(n-1)t and its complete reference CE is at most12I. Exposing the active physical bit, whose influence is1-t, gives a constant positive child and a negative actual child h=-1+2*1_zero on n bits, with I_h=2nt and H_h<4I_h. Inherit references using marginal r_T of the same parent Q, actual physical-child posterior pi_b=P_b/(2m), an explicitly normalized posterior on zero true fibers, raw reference2r*pi_b and Z_b normalizers. Then q_A=1-2t+2t^2,Rprime_A=(1-2t)/2+2t^2,rv=t^2+Rprime_A(1-t)^2/q_A,Z_positive=rv/q_A,Z_negative=2-Z_positive, and R_negative(empty)=(1-2t)^2*rv/(2q_A-rv)<1/3 for all n>=2. For n>=3 CE_negative/I_h>9*2^n/(32n), diverging, so a uniformly influence-priced normalized inherited descendant reference is impossible even from these paid roots. This does not refute FEI or the A097 source-floor statement. For any normalized positive-support complete parent reference, the same transport obeys CE_parent=avg CE_child+Delta_j+L_j-avg log2 Z_b and D_parent-avg D_child=L_j-avg log2 Z_b>=0, where L_j is the actual conditional queried spectral-bit divergence and Delta_j=H_parent-avg H_child. For the declared Boolean family the ENTIRE retained-core ledger is paid once: CE_root<=1+10(n+1)t<=(34/3)(1-t). For an independent arbitrary Boolean terminal and normalized positive-support finite-cost reference, product-compatible zero-fiber posteriors give exact product inherited child references and preserve whole terminal CE and KL additively outside this one-use core account. No fresh descendant bank or weak-query universal payment is asserted.",
+    "hypotheses": [
+      "finite uniform physical Boolean cubes; n>=2 and exactly the declared actual source, control and negative-cell edit",
+      "fixed normalized source reference declared before spectral sampling; same incoming complete parent model carried through the active data restriction",
+      "actual child posterior on true fibers and normalized choices preserving all reference mass on zero true fibers; product-compatible choice for independent terminal tensors",
+      "arbitrary independent terminal reference normalized, positive on true support and finite CE; whole terminal cost remains separately owned",
+      "all entropy/CE/KL in bits; ideal complete reference cost and separate word rounding; charge the entire root ledger at most once"
+    ],
+    "statement_sha256": "dc3141c6a3d6c0fef6a81a2411ca1ec0d7208f4288d1ae8cf767857642e598ff",
+    "contributors": [
+      "A094/fleet05; root floor dependence credited to A097 and signed physical-mixture machinery to A086"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T061347Z-fleet05-A094-proof-chain-challenger\\AUDIT.md",
+      "locators": "Sections 4–6; all-n exact out/INCOMING_SHOCK_CERTIFICATE.json, full terminal out/TENSOR_RESULTS.json and out/OWNER_RESULTS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK",
+        "version": 1,
+        "status": "independently fully reconstructed locally in this run; supplied cost1 root price12 and full one-use root cost bound used"
+      },
+      {
+        "statement": "one-query normalized-reference disintegration and product-compatible zero-fiber transport",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T061347Z-fleet05-A094-proof-chain-challenger\\AUDIT.md",
+        "locators": "Section4",
+        "status": "independently reconstructed identity; no novelty claim"
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTICALLY_PROVED_NARROW_ROUTE_OBSTRUCTION_AND_ONE_USE_FIXTURE_PAYMENT_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Prospective dimension-independent CE_child<=K I_child for normalized same-incoming-reference descendants of paid A097 roots; not an accepted source claim or FEI"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A086",
+      "A085",
+      "A097",
+      "A039",
+      "B19",
+      "B20"
+    ]
+  }
+]

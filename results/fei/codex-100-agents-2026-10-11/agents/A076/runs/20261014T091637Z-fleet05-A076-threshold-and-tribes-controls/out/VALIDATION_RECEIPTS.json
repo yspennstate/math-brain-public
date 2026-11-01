@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "exact_assertions_excluding_pilots": 34693,
+  "full": [
+    {
+      "status": "PASS",
+      "mode": "FULL",
+      "roots": 556,
+      "private_queries": 1608,
+      "point_history_roots": 6,
+      "exact_assertions": 26154,
+      "elapsed_seconds": 22.571182100000442,
+      "helper_sha256": "af2c8fdd2ff2063cc60d12fd5256f6bcaec59c1a27213c39eff444a07c0be865",
+      "memory": "180 MB frozen estimate; caches of spectra cleared per root; peak not measured"
+    },
+    {
+      "status": "PASS",
+      "mode": "FULL",
+      "roots": 278,
+      "private_queries": 804,
+      "mixed_history_checked": true,
+      "exact_assertions": 7330,
+      "elapsed_seconds": 8.69041769999967
+    },
+    {
+      "status": "PASS",
+      "roots": 22,
+      "exact_assertions": 1209,
+      "elapsed_seconds": 0.016151399999216665,
+      "scope": "Independent implementation of coefficients and edge influences; not an independent agent review. A028 release-only counterexample rechecked."
+    }
+  ],
+  "pilots": [
+    {
+      "status": "PASS",
+      "mode": "PILOT",
+      "roots": 22,
+      "private_queries": 36,
+      "point_history_roots": 0,
+      "exact_assertions": 674,
+      "elapsed_seconds": 0.1184715999988839,
+      "helper_sha256": "af2c8fdd2ff2063cc60d12fd5256f6bcaec59c1a27213c39eff444a07c0be865",
+      "memory": "180 MB frozen estimate; caches of spectra cleared per root; peak not measured"
+    },
+    {
+      "status": "PASS",
+      "mode": "PILOT",
+      "roots": 22,
+      "private_queries": 36,
+      "mixed_history_checked": false,
+      "exact_assertions": 384,
+      "elapsed_seconds": 0.11233240000001388
+    }
+  ],
+  "plateau_rerun": "Initial full PASS 7318 assertions/3.932s; added explicit post-shared inherited-quarter and nonconstant-core guards within frozen mixed-history domain, then final PASS7330 assertions. No failed job or dimension escalation.",
+  "independent_implementation": "check_spectrum.py uses direct character sums and exact four-point tensor coefficients; not an independent agent review."
+}

@@ -1,0 +1,25 @@
+T04 FOUR-SPECTRUM EXACT RATIONAL DRIFT VERIFIER
+state_mass = 1
+T2 = 11/10 T3 = 3/2 S = 2/5 rho = 8/11
+signed_2_masses A,B = 3/5 1/2
+D2 mass,dT2,dT3 = ('0', '-1', '0') PASS
+D3 mass,dT2,dT3 = ('0', '0', '-1') PASS
+M32 mass,dT2,dT3 = ('0', '1', '-1') PASS
+branch_matrix = [[4/11,10/33],[24/55,4/11]]
+branch_trace = 8/11 branch_det = 0 rho_match = True
+K2,K3,K32 = ('2/11', '20/11', '16/11')
+forced_G_mass = -1 PASS
+full (2, 1, 0, 2) T lambda = 11/3 mass = -14/3 expected = -14/3 PASS
+full (2, 1, 0, 2) F lambda = 22/3 mass = -25/3 expected = -25/3 PASS
+full (0, 0, 2, 3) T lambda = 0 mass = -1 expected = -1 PASS
+full (0, 0, 2, 3) F lambda = 0 mass = -1 expected = -1 PASS
+barrier: Phi=m2+2*m3-log(1-rho); report dPhi per expected variable removed
+U T score = -7391/1386 float=-5.332611832612 dm2 = -5/3 dm3 = -8 drho = -2144/1089 removed = 14/3
+U F score = -12619/2475 float=-5.098585858586 dm2 = -13/3 dm3 = -14 drho = -3016/1089 removed = 25/3
+U best_orientation = T
+V T score = -7/33 float=-0.212121212121 dm2 = 3 dm3 = -5 drho = 224/121 removed = 1
+V F score = -344/99 float=-3.474747474747 dm2 = 2 dm3 = -5 drho = 448/363 removed = 1
+V best_orientation = F
+same_total_degree_pair = (2, 3)
+opposite_4D_optimal_polarities = PASS
+ALL_EXACT_CHECKS_PASS

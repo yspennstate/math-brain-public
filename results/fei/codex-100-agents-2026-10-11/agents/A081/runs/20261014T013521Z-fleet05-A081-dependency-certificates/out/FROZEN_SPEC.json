@@ -1,0 +1,34 @@
+{
+  "helper_version": "A081-row-coarsening-v1",
+  "sha256": "343322eb57e0dcd456760622ea36eb3ca87c4ef9f671955c90bae597a7ecc6d7",
+  "actual_Boolean_family": "24 named core signs (all 4 one-bit, all 16 two-bit, four n3 masks 1,7,105,150) tensored with six named spectators; one actual tribes width4,m16 compressed spectrum",
+  "domain": {
+    "cores": 24,
+    "spectators": [
+      "constant",
+      "dictator",
+      "AND2 point defect",
+      "quadratic bent2",
+      "three-bit point defect",
+      "quadratic bent4"
+    ],
+    "partitions": [
+      "total residual degree",
+      "core degree and spectator degree",
+      "full core residual subset and spectator degree"
+    ],
+    "tribes_width": 4,
+    "tribes_blocks": 16
+  },
+  "case_count": {
+    "actual_tensor_functions": 144,
+    "coarsening_cases_per_relevant_core_row": 3,
+    "tribes_degree_packets": 64
+  },
+  "pilot": "one three-bit point defect core, six spectators, same three partitions and width4 tribes fixture",
+  "symmetry": "No tensor symmetry reduction; tribes uses proved coordinate transitivity only, not fixed-degree exchangeability",
+  "arithmetic": "direct integer character sums; Fraction laws; exact prime-log coefficient cancellation; integer occupancy-polynomial mixtures for tribes",
+  "memory_estimate_MB": 64,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false
+}

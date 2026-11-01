@@ -1,0 +1,9 @@
+# Measured brain retrieval failure and bounded repair
+
+Read-only command: `python -X utf8 store_probe_w479.py`, querying `~/math-brain-build/local/population/brain.sqlite3` with `mode=ro` and `PRAGMA query_only=ON`.
+
+Before any draft: title query `random current` returned 1 node. Its only hit, `claim_db355f188daf0592950298d6e3b23e5f2b7e6eb0f3a21694083ad47fdadd0048`, says nontriviality is equivalent to an unweighted uniform current intersection probability. Its body omits the source's finite-graph endpoint source laws and correlation weights, and the comparison to near-critical g(beta). Exact title query `renormalized coupling` returned 0 nodes. Thus relevant-title precision for a *fully stated and source-matched* current reduction is 0/1, and the source's defining quantity has 0 title hits. The specific returned row is quoted in SOURCE_STATUS.json/REVIEW_PACKET.md, not promoted as a theorem.
+
+Independent general-memory probe: `python -X utf8 ~/.claude/dreaming/brain.py recall "C0052 3D Ising scaling limit proof mistakes"` completed within 60 seconds. Its top three summaries concerned Ising perceptron release, Ising perceptron proof closure and a general conditional-product mistake; on-target precision@3=0/3. The engine reported C0052 absent. This is one query, not a corpus completeness claim.
+
+Bounded repair: one source-criterion concept, one finite-graph switching-identity concept, and one draft weighted-current bridge concept with exact hypotheses and a relation marking the bridge's dependence on the source identity. Keep the old unweighted reduction out of proof recall or annotate it as heuristic after coordinator review. Do not change global recall controls. The draft is not ingested; no after-recall gain is claimed. Recheck the same two title queries and a C0052 recall query only after reviewed integration.

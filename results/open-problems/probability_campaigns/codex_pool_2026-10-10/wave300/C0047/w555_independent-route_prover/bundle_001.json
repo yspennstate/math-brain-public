@@ -1,0 +1,141 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w555",
+  "bundle_slug": "c0047-independent-separators-normalization-20261010",
+  "entries": [
+    {
+      "key": "cutset",
+      "namespace": "probability.percolation",
+      "logical_name": "percolation-disjoint-cutset-connection-bound",
+      "kind": "concept",
+      "title": "Disjoint cutsets bound Bernoulli connections",
+      "statement": "DRAFT: author proof or explicit gap; independent mathematical review pending. For independent Bernoulli(p) bond percolation, n pairwise edge-disjoint finite x-y cutsets F_i imply P_p(x connected to y) <= product_i[1-(1-p)^|F_i|].",
+      "proof_text": null,
+      "assumptions": [
+        "Connected locally finite graph",
+        "Each F_i separates x,y",
+        "Pairwise disjoint edge-variable index sets"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:C0047:w555:2026-10-10:cutset",
+        "url": "file:///~/brain_workers/w555/PROOFS.md",
+        "revision": "author-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "one-ended",
+      "namespace": "probability.percolation",
+      "logical_name": "bounded-cut-multiplicity-in-one-ended-nonamenable-graphs",
+      "kind": "concept",
+      "title": "Bounded cutsets cannot cover one-ended nonamenable graphs",
+      "statement": "DRAFT: author proof or explicit gap; independent mathematical review pending. For a connected locally finite one-ended graph with maximum degree d and edge Cheeger constant h_E>0, the number of disjoint x-y cuts of size at most K is at most d(|B_R(x)|+|B_R(y)|), R=ceil(K/h_E)+1. This is uniform in x,y on vertex-transitive graphs.",
+      "proof_text": null,
+      "assumptions": [
+        "One end",
+        "Uniform maximum degree d<infinity",
+        "Unnormalized h_E>0",
+        "K>=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:C0047:w555:2026-10-10:one-ended",
+        "url": "file:///~/brain_workers/w555/PROOFS.md",
+        "revision": "author-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "blocks",
+      "namespace": "probability.percolation",
+      "logical_name": "simple-cyclic-free-product-percolation-threshold",
+      "kind": "concept",
+      "title": "Exact simple cyclic free-product percolation special case",
+      "statement": "DRAFT: author proof or explicit gap; independent mathematical review pending. For m>=3 and the simple Cayley graph of C_2*C_m with S={a,b,b^-1}, h_E>=1-2/m>0, p_u=1, and p_c is the unique p in (0,1) solving p[2 sum_{k=1}^{m-1}p^k-(m-1)p^m]=1.",
+      "proof_text": null,
+      "assumptions": [
+        "One undirected a-edge per involution pair",
+        "No loops or parallel edges",
+        "Independent Bernoulli bond variables",
+        "m>=3"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:C0047:w555:2026-10-10:blocks",
+        "url": "file:///~/brain_workers/w555/PROOFS.md",
+        "revision": "author-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "normalization",
+      "namespace": "probability.percolation",
+      "logical_name": "normalized-spectral-radius-percolation-degree-factor",
+      "kind": "concept",
+      "title": "Normalized spectral percolation criteria need the degree factor",
+      "statement": "DRAFT: author proof or explicit gap; independent mathematical review pending. For an infinite connected d-regular vertex-transitive undirected graph and normalized walk operator P=A/d with rho=||P||_2, pd rho<1 implies tau_p(x,y)<=(pd rho)^dist(x,y)/(1-pd rho), so pu>=1/(d rho). Thus pc<1/(d rho) suffices for pc<pu, without being necessary.",
+      "proof_text": null,
+      "assumptions": [
+        "d-regularity",
+        "Normalized rho=||A/d||_2",
+        "Bernoulli bond percolation",
+        "Vertex transitivity for the uniqueness conclusion"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:C0047:w555:2026-10-10:normalization",
+        "url": "file:///~/brain_workers/w555/PROOFS.md",
+        "revision": "author-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.percolation",
+      "logical_name": "benjamini-schramm-fresh-barrier-exploration-gap",
+      "kind": "concept",
+      "title": "Unclosed barrier and merger obligation for C0047",
+      "statement": "DRAFT: author proof or explicit gap; independent mathematical review pending. The independent barrier-exploration attempt does not prove pc<pu for a general one-ended nonamenable Cayley graph. A fresh effective-barrier construction or quantitative nonmerger bound at some p>pc is still required.",
+      "proof_text": null,
+      "assumptions": [
+        "All generating sets in the parent target are fixed; none substituted",
+        "No conditional products without derived filtration structure"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:C0047:w555:2026-10-10:gap",
+        "url": "file:///~/brain_workers/w555/PROOFS.md",
+        "revision": "author-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "blocks",
+      "to_key": "cutset",
+      "kind": "depends_on",
+      "rationale": "L4's bridge cuts satisfy L1's disjoint edge-index hypothesis; L2 then excludes uniqueness."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "one-ended",
+      "kind": "depends_on",
+      "rationale": "L3 gives a uniform finite bound on size-K cut multiplicity; the parent lane lacks a fresh-barrier replacement."
+    },
+    {
+      "from_key": "normalization",
+      "to_existing_logical": "math:probability.statmech:attempt-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+      "kind": "refutes",
+      "rationale": "Scoped correction only: the prior concept says 'p_c < 1/rho (Benjamini-Schramm criterion)' with normalized rho. L5 proves the degree-scaled sufficient bound, while pc<=1<1/rho makes the prior reduction vacuous. No refutation of the parent conjecture."
+    }
+  ],
+  "review_state": "pending w557; concepts only",
+  "parent_problem_solved": false
+}

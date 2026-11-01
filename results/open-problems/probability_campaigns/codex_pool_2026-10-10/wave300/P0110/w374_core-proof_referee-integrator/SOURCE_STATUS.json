@@ -1,0 +1,35 @@
+{
+  "id": "P0110",
+  "checked_at": "2026-10-10",
+  "status": "primary_source_verified_for_question_and_conditional_theorem",
+  "current_openness": "UNKNOWN",
+  "ledger_source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json, entry op-p0110",
+  "ledger_quote": "Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1.",
+  "ledger_citation": "Auffinger, Damron and Hanson: 50 years of first-passage percolation, Question22, PDF p.89; equation4.19",
+  "primary_source_url": "https://arxiv.org/pdf/1511.03262v2",
+  "primary_source_locator": "arXiv:1511.03262v2, section 4.3, printed p.88, PDF page 89 (one-based), Question 22; equation (4.19) on preceding page",
+  "primary_source_quote": "Question 22. Find a distribution of passage times where (4.19) holds.",
+  "primary_equation": "chi = 2 xi - 1 (4.19)",
+  "version_note": "The older Northwestern survey PDF numbers the same question's relation (4.13), printed p.78. The campaign ledger cites the later arXiv v2 version, where (4.19), PDF p.89 is correct.",
+  "theorem_source_url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v177-n2-p07-p.pdf",
+  "theorem_source_locator": "Chatterjee, Theorem 1.1, PDF pp.2-3, assumptions (A1)-(A4)",
+  "theorem_scope": "For d>=2 iid weights satisfying nearly-gamma and a finite moment generating function near zero, equality of the uniform upper and lower fluctuation exponents chi_a=chi_b and wandering exponents xi_a=xi_b implies chi=2xi-1.",
+  "searched_local_prior": "Targeted P0110 search in probability_1000_attempts_H_20260912 and probability_1000_attempts_I_20260914 found no named record; September 7 intake has an author-checked heuristic attempt, not a proof.",
+  "recent_literature_check": "Targeted 2025-2026 primary-literature search found the older conditional Chatterjee and Auffinger-Damron theorems; it did not exhaust all 2026 papers, so current openness remains UNKNOWN.",
+  "source_verdict_rows": [
+    {
+      "verdict": "FIX",
+      "claim": "The 2026-09-07 short title alone is the complete problem statement.",
+      "correction": "The campaign ledger asks for a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1; the exponent definitions and primary source still require verification.",
+      "evidence_quote": "Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1.",
+      "evidence_path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json"
+    },
+    {
+      "verdict": "KEEP",
+      "claim": "The campaign ledger locates Question 22 at equation (4.19), PDF p.89.",
+      "correction": "No correction to the ledger is needed: arXiv v2 has that equation and locator. My earlier (4.13) correction came from a different survey version and is withdrawn.",
+      "evidence_quote": "Question 22. Find a distribution of passage times where (4.19) holds.",
+      "evidence_path": "https://arxiv.org/pdf/1511.03262v2#page=89"
+    }
+  ]
+}

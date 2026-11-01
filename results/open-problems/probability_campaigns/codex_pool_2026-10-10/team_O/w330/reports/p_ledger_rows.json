@@ -1,0 +1,327 @@
+[
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+    "line": 3,
+    "data": {
+      "artifact": "proofs/P0032_brownian_prefix_candidate.md",
+      "attempt_id": "P0032-A001",
+      "independent_check": "Two-state cyclic example checks the pushforward direction and normalization; finite-window rejection sampling gives an independent special-case construction",
+      "independent_review": "none",
+      "method": "Forward density matching on the ergodic two-sided Wiener shift",
+      "novelty": "unassessed",
+      "obstruction": "No mathematical gap currently identified under the stated interpretation; source interpretation, measurability details, and earlier filling/embedding literature still under review",
+      "problem_id": "P0032",
+      "recorded_at": "2026-09-06T16:11:58Z",
+      "result": "Complete candidate construction of a finite nonnegative integer prefix time for any suffix law absolutely continuous with respect to Wiener measure",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "candidate_under_author_and_literature_checks"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+    "line": 22,
+    "data": {
+      "attempt_id": "P0020-A001",
+      "depth": "first_pass",
+      "full_problem_solved": false,
+      "independent_check": "A closure contact alone does not ensure an accessible common boundary point. This is why the necessary finite-chain condition was not promoted to an equivalence.",
+      "independent_review": "none",
+      "method": "Reduction to component adjacency and access",
+      "novelty": "not_claimed",
+      "obstruction": "Need finite accessible chains for every pair of components, simultaneously for the Brownian trace.",
+      "problem_id": "P0020",
+      "recorded_at": "2026-09-06T17:37:31Z",
+      "result": "If both endpoints lie in the same component of the complement of the Brownian trace, an open connected planar set is polygonally connected; removing loops gives a simple arc avoiding the trace entirely. If an arc crosses the trace finitely many times, its complementary intervals give a finite sequence of complement components with touching closures at successive crossing points.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+    "line": 30,
+    "data": {
+      "attempt_id": "P0028-A001",
+      "depth": "first_pass",
+      "full_problem_solved": false,
+      "independent_check": "For each deterministic s, {s<T} is measurable from the segment up to s. Future Brownian increments followed by independent stopped segments retain the Brownian law and are independent of the past. Integrating over s gives a Brownian future under Q; stationarity then supplies a Brownian past and its independence. This is a proof outline pending full artifact and earlier-literature comparison, not a newly claimed theorem.",
+      "independent_review": "none",
+      "method": "Stationary Palm construction in the identically distributed finite-mean case",
+      "novelty": "not_claimed",
+      "obstruction": "The actual question allows independent non-identically distributed segments. There is then no invariant iid index law or common Palm mean to which this argument applies.",
+      "problem_id": "P0028",
+      "recorded_at": "2026-09-06T17:37:31Z",
+      "result": "For iid stopped Brownian segments with 0<E T<infinity, the cycle sequence is ergodic under shifting its index. A stationary occupation law is Q(F)=E[integral_0^T F(theta_s X) ds]/E T. Shifting by t changes the numerator by E[integral_T^(T+t) F(theta_s X) ds-integral_0^t F(theta_s X) ds]=0 because the concatenation rooted at the next cycle has the same Palm law. Tilting the iid cycle sequence by T_0/E T and choosing a uniform time in that cycle realizes this law; the forward filling lemma supplies that tilt by a finite randomized index shift.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+    "line": 32,
+    "data": {
+      "attempt_id": "P0030-A001",
+      "depth": "first_pass",
+      "full_problem_solved": false,
+      "independent_check": "Independence of two halves at a proposed joining time is insufficient if their Brownian marginal laws have been lost there.",
+      "independent_review": "none",
+      "method": "Common-splice compatibility obstruction",
+      "novelty": "not_claimed",
+      "obstruction": "No construction aligns both certificates at one time while preserving both marginal laws and their independence.",
+      "problem_id": "P0030",
+      "recorded_at": "2026-09-06T17:37:31Z",
+      "result": "Two independent standard Brownian half-paths attached at the same deterministic time give a two-sided Brownian motion. For a general process certified separately as forward and backward Brownian, the certifying random times can differ. Moving either certificate to another random time can bias its marginal law, as the selection-density calculation in P0032 demonstrates.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+    "line": 67,
+    "data": {
+      "attempt_id": "P0028-A002",
+      "full_problem_solved": false,
+      "independent_review": "none",
+      "method": "Primary-source check of the iid finite-mean reduction",
+      "novelty": "known_theorem",
+      "obstruction": "The independent non-identically distributed bounded-length question remains unresolved here.",
+      "problem_id": "P0028",
+      "recorded_at": "2026-09-06T17:51:36Z",
+      "result": "Burdzy-Scheutzow (2014), Theorem 5.1 explicitly proves that strongly decomposable processes with finite mean segment length are two-sided Brownian motions. P0028-A001 rederives this known special case and is not a novel solution.",
+      "schema": "probability-attempt.v1",
+      "source_id": "burdzy_scheutzow_2014",
+      "source_location": "Theorem 5.1 and proof, extracted lines1434-1491",
+      "substantive": true,
+      "verification": "source_theorem_checked"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+    "line": 221,
+    "data": {
+      "attempt_id": "P0220-A001",
+      "depth": "first_pass_with_explicit_calculation",
+      "full_problem_solved": false,
+      "independent_check": "Restriction of an insertion tableau to labels at most b is the tableau of the corresponding restricted subword. The last specified first-row entry b pins the first k labels, irrespective of later larger labels. Conditional on B, the Poisson arrival times have independent gamma increments, so every term is a normalized conditional density and nonnegative summation is valid. For k1 this gives Exp(1); known Poissonized LIS formulas give P(X2>x)=exp(-x)*I0(2sqrt(x)) and E X2=e.",
+      "independent_review": "none",
+      "method": "Explicit stationary law of the leftmost Hammersley drift-jump particles structural calculation",
+      "novelty": "not_claimed",
+      "obstruction": "This repackages a known representation into explicit but rapidly growing finite-tableau coefficients and an infinite sum. It does not establish a new tractable closed joint law or its novelty, and should not be promoted as a full solution to the source request.",
+      "problem_id": "P0220",
+      "recorded_at": "2026-09-06T22:46:56Z",
+      "result": "The established rank representation can be expanded into a convergent combinatorial density series. Let B=(1=b1<...<bk) be the limiting first-row labels of the insertion tableau, and let q_B be its probability. The first b=bk labels form a uniform permutation, so q_B=(1/b!)*sum over partitions lambda of b with first row length k of f^lambda times the number of standard tableaux of shape lambda with first row B. Independent unit-rate Poisson spacings then give density exp(-xk)*sum_B q_B*product_(i=2..k)[(x_i-x_(i-1))^(b_i-b_(i-1)-1)/(b_i-b_(i-1)-1)!].",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+    "line": 341,
+    "data": {
+      "attempt_id": "P0347-A001",
+      "candidate_full_solution": false,
+      "depth": "individual_analytic_attempt",
+      "full_problem_solved": false,
+      "independent_check": "The quadratic identity follows by E[I(m-I)]=m*(m-1)/(2H_(m-1)). The Colless bound uses only the exact clade-count identity and the established mean continuous leaf-depth theorem. It does not rely on the false unrestricted occupation ansatz.",
+      "independent_review": "none",
+      "method": "Exact tree identity, source-specific recurrence or explicit limiting obstruction",
+      "novelty": "not_claimed",
+      "obstruction": "The mean Colless correction and one-split quadratic correction do not identify variances, normalized laws or joint distributions of the balance indices. Those remain unsolved here.",
+      "problem_id": "P0347",
+      "recorded_at": "2026-09-07T02:27:06Z",
+      "result": "For a split I distributed by q(m,i), the exact quadratic toll is E(m-2I)^2=m^2-2m*(m-1)/H_(m-1), hence asymptotic to m^2 rather than the source m^2/4. Also E min(I,m-I)<=m/H_(m-1), so E|m-2I|=m-O(m/log m), rather than m/2. If S is the external path length and C the Colless index, S-C is the sum of2*min(child sizes). Therefore E(S-C)<=2n*sum_m a(n,m)/H_(m-1)=2n*E continuous leaf depth=O(n log n). Since E S~(3/pi^2)n log^2 n, E C has that same leading constant, twice the source heuristic coefficient.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_partial"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+    "line": 22,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "planar_brownian_trace_finite_crossing_jordan_arc",
+      "historical_status": "source_says_open",
+      "locator": "Problem 2(i)",
+      "problem_id": "P0020",
+      "recorded_at": "2026-09-06T16:08:29Z",
+      "result_status": "not_started",
+      "schema": "probability-problem.v1",
+      "source_id": "burdzy_open_20260906",
+      "statement": "Almost surely, can every two points outside the trace of planar Brownian motion on [0,1] be connected by a Jordan arc meeting the trace at only finitely many points?",
+      "statement_caveat": "The quantifier is simultaneous over all pairs of outside points, not a single deterministic pair.",
+      "title": "Finite-crossing arcs through a planar Brownian trace",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+    "line": 30,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "uniformly_bounded_decomposable_forward_brownian_two_sided",
+      "historical_status": "source_says_open",
+      "locator": "Problem 8; compare Burdzy-Scheutzow (2014) Problem 7.7",
+      "problem_id": "P0028",
+      "recorded_at": "2026-09-06T16:10:00Z",
+      "result_status": "not_started",
+      "schema": "probability-problem.v1",
+      "source_id": "burdzy_open_20260906",
+      "statement": "Concatenate independent Brownian path segments cut at stopping times indexed by all integers, with lengths uniformly bounded by a deterministic constant and divergent sums in both directions. Is the resulting path two-sided Brownian after some random time shift?",
+      "statement_caveat": "The paper's related backward-Brownian question and its almost-sure random bound are recorded as related variants, not an extra count. Independent lengths alone are not the same as stopping times depending on their Brownian paths.",
+      "title": "Bounded independent Brownian pieces and two-sided Brownian motion",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+    "line": 34,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "brownian_equivalent_law_finite_prefix_embedding",
+      "historical_status": "source_says_open",
+      "locator": "Problem 7.5, PDF page 26",
+      "problem_id": "P0032",
+      "proof_file": "proofs/P0032_brownian_prefix_candidate.md",
+      "recorded_at": "2026-09-06T16:11:04Z",
+      "result_status": "candidate_proof",
+      "schema": "probability-problem.v1",
+      "source_id": "burdzy_scheutzow_2014",
+      "statement": "Given a process whose law on nonnegative time is equivalent to Wiener measure, can a random finite prefix be added, on an enlarged probability space if necessary, to produce a process with Wiener law?",
+      "statement_caveat": "No independence or Brownian stopping-time restriction is explicit in the source. The candidate proof uses a finite nonnegative integer random time depending on entire paths and auxiliary randomness.",
+      "title": "Embedding an equivalent Brownian law by adding a finite prefix",
+      "verification": "candidate_under_author_and_literature_checks"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+    "line": 122,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "planar_brownian_trace_finite_crossing_jordan_arc",
+      "historical_status": "source_says_open",
+      "locator": "Problem 2(i)",
+      "problem_id": "P0020",
+      "recorded_at": "2026-09-06T19:17:12Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "burdzy_open_20260906",
+      "statement": "Almost surely, can every two points outside the trace of planar Brownian motion on [0,1] be connected by a Jordan arc meeting the trace at only finitely many points?",
+      "statement_caveat": "The quantifier is simultaneous over all pairs of outside points, not a single deterministic pair.",
+      "title": "Finite-crossing arcs through a planar Brownian trace",
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+    "line": 130,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "uniformly_bounded_decomposable_forward_brownian_two_sided",
+      "historical_status": "source_says_open",
+      "locator": "Problem 8; compare Burdzy-Scheutzow (2014) Problem 7.7",
+      "problem_id": "P0028",
+      "recorded_at": "2026-09-06T19:17:12Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "burdzy_open_20260906",
+      "statement": "Concatenate independent Brownian path segments cut at stopping times indexed by all integers, with lengths uniformly bounded by a deterministic constant and divergent sums in both directions. Is the resulting path two-sided Brownian after some random time shift?",
+      "statement_caveat": "The paper's related backward-Brownian question and its almost-sure random bound are recorded as related variants, not an extra count. Independent lengths alone are not the same as stopping times depending on their Brownian paths.",
+      "title": "Bounded independent Brownian pieces and two-sided Brownian motion",
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+    "line": 291,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "explicit_stationary_law_of_the_leftmost_hammersley_drift-jump_particles",
+      "historical_status": "source_says_open",
+      "locator": "Problem,postedFebruary2018;1993notes Section4.1",
+      "problem_id": "P0220",
+      "recorded_at": "2026-09-06T22:46:56Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "aldous_left_hamm_20260906",
+      "source_statement_date": "dated source and author-page updates;accessed2026-09-06",
+      "statement": "Give a useful explicit joint stationary law for the ordered particles which drift at speed x and jump left at rate1 Poisson space-time points.",
+      "statement_caveat": "The1993 notes already contain a patience-sorting representation and small-k calculations. The1999 paper Section5.2 uses the stationary process for limit theorems. Those established representations are not counted as newly solved open work.",
+      "status_search": "Author-maintained page and relevant linked primary sources checked2026-09-06. Focused later-literature searches did not establish a complete resolution; current status remains unverified.",
+      "title": "Explicit stationary law of the leftmost Hammersley drift-jump particles"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+    "line": 323,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "explicit_stationary_law_of_the_leftmost_hammersley_drift-jump_particles",
+      "historical_status": "source_says_open",
+      "locator": "Problem,postedFebruary2018;1993notes Section4.1",
+      "metadata_corrected_at": "2026-09-06T22:56:27Z",
+      "problem_id": "P0220",
+      "recorded_at": "2026-09-06T22:46:56Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "aldous_left_hamm_20260906",
+      "source_statement_date": "2018-02",
+      "statement": "Give a useful explicit joint stationary law for the ordered particles which drift at speed x and jump left at rate1 Poisson space-time points.",
+      "statement_caveat": "The1993 notes already contain a patience-sorting representation and small-k calculations. The1999 paper Section5.2 uses the stationary process for limit theorems. Those established representations are not counted as newly solved open work.",
+      "status_search": "Author-maintained page and relevant linked primary sources checked2026-09-06. Focused later-literature searches did not establish a complete resolution; current status remains unverified.",
+      "title": "Explicit stationary law of the leftmost Hammersley drift-jump particles"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+    "line": 366,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "brownian_equivalent_law_finite_prefix_embedding",
+      "historical_status": "source_says_open",
+      "locator": "Problem 7.5, PDF page 26",
+      "problem_id": "P0032",
+      "proof_file": "proofs/P0032_brownian_prefix_candidate.md",
+      "recorded_at": "2026-09-07T00:19:46Z",
+      "result_status": "candidate_full_solution",
+      "schema": "probability-problem.v1",
+      "source_id": "burdzy_scheutzow_2014",
+      "statement": "Given a process whose law on nonnegative time is equivalent to Wiener measure, can a random finite prefix be added, on an enlarged probability space if necessary, to produce a process with Wiener law?",
+      "statement_caveat": "No independence or Brownian stopping-time restriction is explicit in the source. The candidate proof uses a finite nonnegative integer random time depending on entire paths and auxiliary randomness.",
+      "title": "Embedding an equivalent Brownian law by adding a finite prefix",
+      "verification": "candidate_under_author_and_literature_checks"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+    "line": 443,
+    "data": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "distributions_of_balance_indices_for_critical_beta-splitting_trees",
+      "historical_status": "source_says_open",
+      "locator": "Open Problem10,PDF41-43",
+      "problem_id": "P0347",
+      "recorded_at": "2026-09-07T02:27:06Z",
+      "result_status": "candidate_partial_counterexample",
+      "schema": "probability-problem.v1",
+      "source_id": "beta_splitting_overview",
+      "source_statement_date": "2025-04-17",
+      "statement": "Analyze the distributions of the source balance indices under DTCS(n), beyond the preliminary expectation heuristics.",
+      "statement_caveat": "Indices and parameter variants are grouped. Some source one-split constants are incorrect; correcting them is partial progress, not a solution of the distributional problem.",
+      "title": "Distributions of balance indices for critical beta-splitting trees"
+    }
+  }
+]

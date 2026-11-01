@@ -1,0 +1,53 @@
+{
+  "source_claim_id": "B10L-ONEBIT-HALF-TAX",
+  "source_version": 1,
+  "source_report_sha256": "5010a2b3731a294cd84c3ea754da85aa4766db7f265d9ef056cf36ac91112948",
+  "source_claims_sha256": "1cf553ef67ad31afacaf1a3e94d86e4d9c1dd9f3757130aee849d50387e24cb0",
+  "reviewer": "A046",
+  "subclaim_verdicts": [
+    {
+      "scope": "exact reduction with beta=arcsin sqrt(p)",
+      "verdict": "HOLDS",
+      "proof": "REPORT.md steps 1-2; all-dimensional analytic reconstruction; 50 exact finite cases"
+    },
+    {
+      "scope": "literal unswapped minimum-bias angle identity for p>1/2",
+      "verdict": "ERROR",
+      "witness": "G=H=1,p=3/4; actual debt zero; formula debt -h2(1/4)<-1/2 bits",
+      "repair": "swap children first, or use beta=arcsin sqrt(p)"
+    },
+    {
+      "scope": "exact asymptotic using -0.2787p+o(p)",
+      "verdict": "ERROR_IN_EXACT_COEFFICIENT",
+      "repair": "(log2(e)/2-1)p+O(p^2 log2(1/p)); independent squeeze proof in step 4"
+    },
+    {
+      "scope": "analytic half-tax lemma A/B boundary regions",
+      "verdict": "HOLDS_WITH_RATIONALLY_CERTIFIED_CONSTANTS",
+      "proof": "LEMMA_REVIEW.md; out/LEMMA_CONSTANT_CHECK.json; lemma B widened to p>=489/1000, abs(e)<=301/1000"
+    },
+    {
+      "scope": "middle-region source interval certificate",
+      "verdict": "REPLAY_PASS_NOT_INDEPENDENT_RATIONAL_RECERTIFICATION",
+      "reason": "faithful source replay gives 4100 positive boxes, 3 lemma-B boxes, 7 splits; own all-box arithmetic implementation absent",
+      "output": "out/CERTIFICATE_REPLAY.json"
+    },
+    {
+      "scope": "multi-bit extension",
+      "verdict": "CONDITIONAL",
+      "reason": "scalar one-bit identity does not establish uncertainty additivity"
+    },
+    {
+      "scope": "full-FEI stopping-tree influence payment",
+      "verdict": "OPEN",
+      "reason": "hereditary budget conversion and full conditional/terminal costs unpaid"
+    }
+  ],
+  "source_claim_blanket_acceptance": false,
+  "corrected_subclaim_contributor": "A046",
+  "corrected_subclaim_independent_reviewer_required": [
+    "A092",
+    "A087"
+  ],
+  "communication": "source-bound files only; no messages or shared-ledger mutations"
+}

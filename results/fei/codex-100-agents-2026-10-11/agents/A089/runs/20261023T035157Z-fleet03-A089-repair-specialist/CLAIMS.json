@@ -1,0 +1,49 @@
+[
+  {
+    "claim_id": "A089-ADAPTIVE-TWO-CORE-INHERITED-CREDIT",
+    "version": 1,
+    "exact_statement": "Let g be negative exactly on {0,1,2} in six bits, h negative on {0,1,2,4,8,16,32,6,17,40}, J(x)=-h(x xor1), and Fplus=J(-1,+1,g,g,g,g). With S=4I-H in bits, inherited credit a>=-S(Fplus) and total debit D=S(Fplus)+a, every adaptive physical reveal/stopping policy querying at most two of the four remaining cores is payable with nonnegative conserved conditional credit, nonnegative total debits, zero residual, no new transfer flow and every signed old debit label conserved. The second core may be selected after observing answers in the first core. The exact minimum initial credit is -S(Fplus), with every root query continuation upper bound smaller by more than 379/100000 bits. All six chosen-pair envelopes also fit every saved A072 financial row/terminal account: 270 strict comparisons and 12 exact initial-source identities.",
+    "hypotheses": [
+      "Uniform physical cube; disjoint original six-bit cores; fixed K=4; entropy bits.",
+      "Inherited credit may redistribute nonnegatively with preserved conditional mean; old signed debit labels may redistribute with mean preserved, total debit nonnegative.",
+      "Original spent A089 donor outgoing A and booked B-A, other stopped full terminals and parked2tau remain unchanged.",
+      "At most two distinct remaining cores may be queried in one continuation; alternatives are not simultaneous draws."
+    ],
+    "statement_sha256": "a42e2291468efc64ec2ff42dacff2724baf54196bf963b8cb411cbd04babcaff",
+    "contributors": [
+      "A089; source credit convention and finite stopping-hull method from A071/A072"
+    ],
+    "proof_source": [
+      "code/account_proof.txt",
+      "out/PAIR_*_STATES.json",
+      "out/ADAPTIVE_CHOICE.json",
+      "out/CHOICE_REPRODUCTION.json",
+      "out/INHERITED_CARRY.json"
+    ],
+    "proof_dependencies": [
+      "A089-SIGNED-TERMINAL-COMMON-KERNEL-REPAIR@1, independently accepted by A071",
+      "A071-INHERITED-SUBSIDY-NO-RENEWAL@1, independently accepted by A072",
+      "Finite stopping-envelope criterion independently reconstructed from A072 PROOF.md; no universal hull bound assumed.",
+      "Exact occupied-mask composition identity reconstructed in own helper and separate direct-moment code."
+    ],
+    "review_records": [
+      {
+        "reviewer": "A089",
+        "scope": "Different spectrum and physical-row implementation, plus independent adaptive-choice envelope from moment certificates; same author, not external review.",
+        "result": "PASS"
+      }
+    ],
+    "status": "PROVED_LOCALLY_EXACT_CERTIFICATE_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Attempted saturation-implies-future-positivity extension; original counterexample retained."
+    ],
+    "first_unproved_line": "Admission of a third remaining core using actual history-dependent inherited credit; ultimately dimension-independent influence payment for the full stopping hull.",
+    "next_consumers": [
+      "A071",
+      "A072",
+      "A074",
+      "A092"
+    ]
+  }
+]

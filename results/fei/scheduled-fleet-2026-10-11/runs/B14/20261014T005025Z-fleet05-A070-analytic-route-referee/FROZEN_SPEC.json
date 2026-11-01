@@ -1,0 +1,14 @@
+{
+  "helper_version": "A070-mask-referee-v1.1",
+  "family": "All Boolean signs on two bits for pair and triple products; all four-bit Boolean sources for one compatible overlapping-mask pair; five fixed block-size mask families; rational normalized real diagnostic",
+  "domain": {"pairs_n2": 256, "triples_n2": 4096, "sources_n4": 65536, "block_sizes_C_U_V_Y": [[1,1,1,1],[2,1,1,1],[1,2,1,1],[1,1,2,1],[1,1,1,2]], "assignments": "all assignments to C,U,V", "source_seeds": "1, parity, net mask, net mask times first core bit"},
+  "case_count": {"pilot": 57, "full": 70147, "explanation": "256+4096+65536+256 overlapping fixtures+3 diagnostics; pilot 4 pairs+16 triples+32 sources+4 mask fixtures+1 real diagnostic"},
+  "symmetry": "none; ordered seeds/masks are counted, not distinct resulting functions",
+  "arithmetic": "integer Walsh transform and integer resampling counts; exact fractions; rational-square normalized real spectrum; no floating logarithmic signs",
+  "memory_estimate_MB": 64,
+  "max_runtime_seconds": {"pilot":60,"full":180},
+  "guard_seconds": {"pilot":55,"full":175},
+  "dimension_escalation": false,
+  "pilot_command": "python -X utf8 code/check.py pilot",
+  "full_command": "python -X utf8 code/check.py full"
+}

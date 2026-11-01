@@ -1,0 +1,61 @@
+\section*{Terminal compensation for the one-point-defect restriction chain}
+
+Let $q_n$ be the genuine Boolean gate that is $+1$ at one cube point
+and $-1$ elsewhere.  For the complete physical selector/data packet of
+the B05--B19 ledger, write
+\[
+ D_n=L_n+Q_n
+\]
+and let restriction of one defect coordinate leave the constant child
+and the exceptional child $q_{n-1}$.  By the definition of the complete
+order-swap credit,
+\[
+ \Gamma_n^D=D_n-\frac12D_{n-1}.
+\]
+The B19 repair proves $\Gamma_n^D<0$ for every $n\ge3$; its new phase
+part is pending a fresh independent review, while the $L$ part has been
+independently accepted at explicit $L$ scope.
+
+\paragraph{Lemma (exact terminal-compensation identity).}
+For every $N\ge3$,
+\[
+ \boxed{
+ D_N=2^{-(N-2)}D_2+
+ \sum_{n=3}^{N}2^{-(N-n)}\Gamma_n^D.}
+\]
+Consequently, conditional on acceptance of the B19 full-credit repair,
+\[
+ \sum_{n=3}^{N}2^{-(N-n)}\Gamma_n^D<0,
+ \qquad
+ 0\le D_N<2^{-(N-2)}D_2.
+\]
+
+\paragraph{Proof.}
+Multiply the recurrence
+$D_n=\frac12D_{n-1}+\Gamma_n^D$ by $2^{-(N-n)}$ and sum from
+$n=3$ to $N$.  Every intermediate $D_n$ cancels, leaving the displayed
+identity.  Both $L_n$ and $Q_n$ are entropy packets, hence $D_n\ge0$.
+Strict negativity follows from the B19 sign theorem for every summand.
+
+\paragraph{Interpretation.}
+The complete physical first credit is negative at every nonterminal
+node on the canonical exceptional-child chain.  Nevertheless, this does
+not refute a globally chosen restriction tree: the weighted terminal
+packet $2^{-(N-2)}D_2$ is an unavoidable positive boundary term.  Any
+induction that discards terminal costs converts the exact identity into
+a false nonnegative-credit assertion.  Conversely, merely retaining the
+terminal term gives no universal FEI proof, because a general tree still
+needs a dimension-independent bound on the sum of all terminal packets
+without reusing influence.
+
+This is the precise cross-route substitution into the nonlocal-induction
+program: replace the refuted nodewise refund by a signed telescoping
+ledger plus an explicit terminal budget.  The next unpaid inequality is
+not $\Gamma_v^D\ge0$; it is
+\[
+ \sum_{\ell\ \mathrm{terminal}}2^{-\mathrm{depth}(\ell)}D(f_\ell)
+ \le C I(f)
+\]
+for a physically generated, globally chosen tree, with every coordinate
+and endpoint charged once.  The displayed $q_N$ chain shows why the
+terminal term cannot be omitted, but does not prove this universal bound.

@@ -1,0 +1,17 @@
+QFORM_B03_R33_CHECKS
+
+Analytic-envelope numerical checks (independent local Python arithmetic):
+- For A=2.3 and alpha=0.25: numerical 19.921617652875423, formula 2*A^(1-alpha)/(alpha(1-alpha)) = 19.92161765287493.
+- alpha=0.5: numerical 12.132600710484407, formula 12.13260071048248.
+- alpha=0.75: numerical 13.135925678762685, formula 13.135925678762538.
+- k=2 weighted envelope test K=1.7: numerical integral 10.430723848324494, formula 8*sqrt(K)=10.430723848324238.
+
+Target-family constants:
+- 3*sqrt(e) = 4.946163812100385.
+- 4*sqrt(2)*e^(1/4) = 7.263544634846275.
+- partner collision coefficient 8*sqrt(2)*e^(1/4) = 14.52708926969255.
+
+Spectral control check:
+For 100 random symmetric C in each d=2 and d=3, the block matrix [[0,I_d],[I_d,C]] had at least d eigenvalues of absolute value >=1 (minimum observed counts: d=2 ->2, d=3 ->3), as predicted exactly by diagonalising C and solving lambda^2-mu lambda-1=0. This finite check is not the proof; the exact product-of-roots argument is the proof.
+
+QFORM_B03_R33_CHECK_PASS

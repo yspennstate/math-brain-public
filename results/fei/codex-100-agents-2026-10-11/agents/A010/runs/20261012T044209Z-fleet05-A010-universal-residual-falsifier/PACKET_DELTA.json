@@ -1,0 +1,86 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261012T044209Z-fleet05-A010-universal-residual-falsifier",
+  "stream": "B02",
+  "packet_id": "A010",
+  "gap_id": "G-J-COST",
+  "attempt_id": "A010-BOUNDED-VARIATIONAL-2",
+  "method": "Exact one-gate rearrangement and raw Walsh census; multiaffine mass-ratio dyadic weight-domain cover; distinct queue and rational-log replay",
+  "mathematical_delta": {
+    "menu_n_le_4_exact": "(43+19 log2 3)/80",
+    "menu_equality_truth_tables": 96,
+    "pure_prime_n_le_4_bracket": [
+      "32/25",
+      "130101/100000"
+    ],
+    "pure_prime_extremizer": "P4 NPN class",
+    "pure_prime_all_orders": 16,
+    "pure_prime_certificate_nodes": 15400,
+    "pure_prime_verified_leaves": 7708,
+    "source_L1_L2": "Independent local acceptance at stated scope",
+    "sharp_prime_constant": "OPEN",
+    "universal_PIJ_and_FEI": "OPEN"
+  },
+  "deliverable_status": "COMPLETE_LOCAL_ARTIFACT",
+  "mathematical_status": "FINITE_MENU_EXACT_AND_PRIME_INFIMUM_BRACKET_CERTIFIED; UNIVERSAL_OPEN; INDEPENDENT_AGENT_REVIEW_PENDING",
+  "claim_versions_used": [
+    {
+      "claim_id": "B02-L1-single-gate-collapse",
+      "version": 1,
+      "statement_sha256": "d12cc05431e5cf728bb674e69980ad7c40dfa3d66b7d2abded4e5b366bd76102",
+      "acceptance": "Independent local reconstruction in out/reviews.json"
+    },
+    {
+      "claim_id": "B02-L2-one-order-closed-form",
+      "version": 1,
+      "statement_sha256": "0b812405745d85936d99f14dfd7f0188a8daf6c4e418bb04c601fd15bbb1bbc0",
+      "acceptance": "Independent local reconstruction in out/reviews.json"
+    },
+    {
+      "claim_id": "A010-PIJ-FINITE-TABLE-CEILING",
+      "version": 1,
+      "acceptance": "Author-checked source census reused; independent-agent review pending"
+    },
+    {
+      "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+      "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+      "locator": "partition-forest definition; eq:forestcost; eq:foresttarget; thm:posteriorforest",
+      "acceptance": "Source definition used directly; FEI implication conditional on source theorem"
+    }
+  ],
+  "claims_created_or_changed": [
+    "A010-N4-PRIME-SINGLE-MENU-INFIMUM-v1",
+    "A010-PIJ-N4-VARIATIONAL-BRACKET-v1"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "CLAIMS.json",
+    "out/reviews.json",
+    "out/hashes.json",
+    "out/independent_check.json",
+    "out/raw_rank_65536.json",
+    "out/p4_independent_check.json",
+    "out/pure_prime_bracket.json",
+    "CONTINUUM_SPEC.json",
+    "P4_CONTINUUM_SPEC.json",
+    "P4_SPEC.json",
+    "POLYNOMIAL_SPEC.json",
+    "RAW_CENSUS_SPEC.json",
+    "SEARCH_SPEC.json",
+    "VERIFY_SPEC.json"
+  ],
+  "next_consumers": [
+    "Claude/B02",
+    "A009",
+    "A086",
+    "A094"
+  ],
+  "next_action": "Use the certified P4 prime-only infimum bottleneck to derive a growing high-read graph-DNF mass polynomial, and apply the multiaffine ratio bounds to ALL packing weights rather than one table; A086/A094 review both bounded certificates.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Sharp P4 optimum unproved; growing-family universal lower bound unproved; independent-agent acceptance and supervisor mirror not verified"
+  ],
+  "packet_ids": [
+    "A010"
+  ]
+}

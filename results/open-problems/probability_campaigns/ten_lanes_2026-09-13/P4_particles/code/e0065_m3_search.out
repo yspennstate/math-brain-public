@@ -1,0 +1,11 @@
+BEST blend-search min entry: 0.0
+Traceback (most recent call last):
+  File "e0065_m3_search.py", line 65, in <module>
+    print(np.array2string(best[1],precision=8))
+          ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<site-packages>\numpy\_core\arrayprint.py", line 799, in array2string
+    if a.size == 0:
+       ^^^^^^
+AttributeError: 'NoneType' object has no attribute 'size'
+e0065_m3_search.py:10: RuntimeWarning: overflow encountered in add
+  y += c*P[idx]

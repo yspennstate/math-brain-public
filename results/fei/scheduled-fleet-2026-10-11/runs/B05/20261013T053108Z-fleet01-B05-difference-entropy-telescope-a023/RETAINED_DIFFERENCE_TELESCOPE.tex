@@ -1,0 +1,170 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Inf}{\operatorname{Inf}}
+\newcommand{\cH}{\mathsf H}
+\newcommand{\cU}{\mathsf U}
+\title{A retained-difference entropy telescope for rare restriction trees}
+\author{B05 / A023}
+\date{13 October 2026}
+\begin{document}
+\maketitle
+
+All logarithms are base two unless explicitly written as $\ln$.  For a
+real function $r$ of squared norm at most one, put
+\[
+  \mathcal L(r)=\sum_S \widehat r(S)^2
+       \log_2\frac1{\widehat r(S)^2},
+\]
+with $0\log(1/0)=0$.  For Boolean $f$, write $\cH(f)=\mathcal L(f)$,
+$\pi_f(S)=\sum_{T\supseteq S}\widehat f(T)^2$, and
+\[
+  \cU(f)=\sum_S\widehat f(S)^2
+       \log_2\frac{\pi_f(S)}{\widehat f(S)^2},\qquad
+  V(f)=\cH(f)-\cU(f)\geq0.
+\]
+
+\section{One-node inequality}
+
+Let $g,h:\{-1,1\}^n\to\{-1,1\}$ and let the fresh physical selector
+$z$ choose between them.  Write
+\[
+ F(z,x)=\begin{cases}g(x),&z=-1,\\h(x),&z=1,\end{cases}
+ \qquad d=\frac{g-h}{2},\qquad q=\E d^2=\Pr[g\ne h].
+\]
+
+\begin{theorem}[retained-difference node bound]\label{thm:node}
+For every such genuine Boolean pair, including zero Fourier atoms,
+\[
+ \cU(F)-\frac{\cU(g)+\cU(h)}2
+ \leq -V(F)+\frac{V(g)+V(h)}2
+       +\mathcal L(d)+\frac{3}{\ln2}\,q.                 \tag{1}
+\]
+The coefficient $3/\ln2<4.329$ is absolute.
+\end{theorem}
+
+\begin{proof}
+Put $a_S=\widehat g(S)$, $b_S=\widehat h(S)$,
+$u_S=(a_S+b_S)/2$, and $v_S=(a_S-b_S)/2=\widehat d(S)$.
+Then $M_S=u_S^2+v_S^2=(a_S^2+b_S^2)/2$ is a probability law.  Directly
+splitting the Fourier atoms according to whether they contain $z$ gives
+the exact identity
+\[
+ \cH(F)-\frac{\cH(g)+\cH(h)}2
+  =\operatorname{JS}(a^2,b^2)
+   +\sum_S M_S h_2\!\left(\frac{v_S^2}{M_S}\right),       \tag{2}
+\]
+where a zero summand is omitted.
+
+We use the scalar inequality
+\[
+ \frac12\left[x^2\log_2\frac{2x^2}{x^2+y^2}
+ +y^2\log_2\frac{2y^2}{x^2+y^2}\right]
+ \leq\frac{(x-y)^2}{2\ln2}.                              \tag{3}
+\]
+For completeness, signs can only enlarge the right side, so take $x,y\geq0$;
+by homogeneity set $y=1$ and $r=x$.  After multiplying by $2\ln2$, the
+difference between the right and left sides is
+\[
+ G(r)=(r-1)^2-r^2\ln\frac{2r^2}{r^2+1}
+                 -\ln\frac2{r^2+1}.
+\]
+Here
+\[
+ G'(r)=2(r-1)-2r\ln\frac{2r^2}{r^2+1}.
+\]
+The function
+$1-r^{-1}-\ln(2r^2/(r^2+1))$ has derivative
+$(r-1)^2/[r^2(r^2+1)]$ and vanishes at $r=1$.  Hence $G'$ has the sign of
+$r-1$, and $G(r)\geq G(1)=0$.  Summing (3) yields
+\[
+ \operatorname{JS}(a^2,b^2)
+ \leq\frac{\lVert a-b\rVert_2^2}{2\ln2}
+ =\frac{2}{\ln2}q.                                      \tag{4}
+\]
+
+For the second term in (2), $M_S\leq1$ and
+\[
+ \begin{aligned}
+ M_Sh_2(v_S^2/M_S)
+ &=v_S^2\log_2\frac{M_S}{v_S^2}
+   +u_S^2\log_2\left(1+\frac{v_S^2}{u_S^2}\right)\\
+ &\leq v_S^2\log_2\frac1{v_S^2}+\frac{v_S^2}{\ln2}.
+ \end{aligned}
+\]
+Thus the entropy increment in (2) is at most
+$\mathcal L(d)+3q/\ln2$.  Finally use $\cU=\cH-V$; this retains the
+complete upper-set asymmetry term rather than assigning signs separately
+to the $B-\Gamma+\mathrm{KL}$ pieces.
+\end{proof}
+
+\section{The all-depth telescope}
+
+Consider a finite binary restriction tree.  Every internal node $v$ queries
+its own fresh uniform physical coordinate $z_v$, no such coordinate is used
+at any other node, and $w_v=2^{-\operatorname{depth}(v)}$ is its reach
+probability.  Terminal functions $g_\ell$ are otherwise arbitrary Boolean
+functions: they may share all data coordinates and need not be tensor,
+bent, orthogonal, or spectrally flat.  Let $F_v^-,F_v^+$ be the two child
+subfunctions,
+\[
+ d_v=(F_v^--F_v^+)/2,\qquad q_v=\E d_v^2.
+\]
+
+\begin{theorem}[retained-credit tree bound]\label{thm:tree}
+For every such tree, of arbitrary depth,
+\begin{equation}
+\begin{split}
+ \cU(F_{\rm root})-\sum_{\ell}w_\ell\cU(g_\ell)
+ \leq{}&\sum_\ell w_\ell V(g_\ell)-V(F_{\rm root})\\
+ &+\sum_{v\ {m internal}}w_v\mathcal L(d_v)
+ +\frac3{\ln2}\,I_{\rm sel}(F_{\rm root}).
+\end{split}
+\tag{5}
+\end{equation}
+where
+\[
+ I_{\rm sel}(F_{\rm root})=\sum_v w_vq_v.
+\]
+Consequently one may drop the nonpositive root term $-V(F_{\rm root})$.
+All coefficients are independent of tree depth, reach probability, terminal
+bias, data-coordinate overlap, and the Fourier shapes of the terminal cores.
+\end{theorem}
+
+\begin{proof}
+Apply (1) at every internal node and multiply it by $w_v$.  Since the two
+child weights are $w_v/2$, both the $\cU$ terms and the $V$ terms telescope,
+leaving only the root and terminal values.  Freshness of $z_v$ makes its
+global physical influence exactly $w_vq_v$; summing gives the displayed
+selector influence identity.
+\end{proof}
+
+This theorem covers nested rare activations: a node at depth $j$ is reached
+with probability $2^{-j}$, yet neither the selector coefficient nor the
+retained-packet coefficient grows with $j$.  It also permits changing,
+coherent, fully overlapping terminal cores.  Each node contributes exactly
+one raw difference-spectrum packet $w_v\mathcal L(d_v)$, and every internal
+$V$ packet cancels exactly.  Only the probability-weighted terminal
+$\cH-\cU$ packet survives.
+
+\section{What remains unpaid}
+
+Equation (5) is a retained-credit theorem, not a pure influence theorem.
+The universal remaining question is whether
+\[
+ \sum_v w_v\mathcal L(d_v)
+\]
+admits dimension-free ownership by nonreused physical data influence and/or
+terminal entropy.  The sparse bent-core surgery obstruction shows why this
+packet cannot be replaced by $C\sum_vw_vq_v$: already at one node its ratio
+to selector influence can diverge.  Thus the new ledger survives that
+falsifier by retaining exactly the currency which the falsifier amplifies.
+
+Repeated physical selector variables are also outside Theorem~\ref{thm:tree};
+then $\sum_vw_vq_v$ need not equal actual selector influence.  Resolving
+raw-packet ownership under changing cores or reused address variables is the
+next unpaid step.  No claim about full FEI follows from (5).
+
+\end{document}

@@ -1,0 +1,7 @@
+from pathlib import Path
+import json
+RUN=Path(__file__).resolve().parents[1]
+(RUN/'out').mkdir(exist_ok=True)
+spec={'helper_version':'A096-folded-reference-history-v1','family':'A097 negative-cell point edit F=1-2A_a+2A_r D_(a+b); references structural, uniform, increasing rational weights on source cube','domain':{'a':[1,2,3],'b':[0,1,2],'r':[1,2]},'root_reference_cases':54,'policies':'Every first data coordinate, every ordered distinct two-data-coordinate policy, one outcome-adaptive depth-two policy per root; independent untouched 2-bit terminal on each root','symmetry':'None for labeled query policies; translated edit points not included','arithmetic':'Integer Walsh and direct edge counts; Fraction references; prime-log exact identities and 32-term rational atanh intervals','memory_estimate_MB':100,'max_runtime_seconds':55,'pilot':'One a=2,b=1,r=1 source with all three references; under 55s','dimension_max':7,'tensor_dimension_max':9,'search_scope':'Fixed interface validation, not a Boolean census or universal FEI test'}
+(RUN/'out/FROZEN_SPEC.json').write_text(json.dumps(spec,indent=2)+'\n',encoding='utf-8')
+print('Frozen spec saved before pilot')

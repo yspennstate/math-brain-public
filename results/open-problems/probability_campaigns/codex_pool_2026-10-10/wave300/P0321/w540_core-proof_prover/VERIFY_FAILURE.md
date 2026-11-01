@@ -1,0 +1,1 @@
+2026-10-10: First deterministic control run failed with TypeError at the toy cosh calculation because the measured circular first coefficient reused the constant q_vertex variable. Corrected it to q_first_vertex. No successful measurement or proof-audit receipt was claimed from this failed run.

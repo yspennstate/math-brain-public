@@ -1,0 +1,112 @@
+{
+  "helper": "A041-stage4-v1",
+  "pilot": true,
+  "assertions": 2744,
+  "cofactor_family_cases": 3,
+  "truth_table_family_reconstructions": 2,
+  "threshold_cases": 76,
+  "coefficient_profiles": 228,
+  "Boolean_catalog_tables": 20,
+  "admission_fixtures": [
+    {
+      "label": "biased-OR2",
+      "M": "9/64",
+      "Delta_mixed": "9/64",
+      "TC_spec_interval": [
+        "0",
+        "0"
+      ],
+      "degree_KL_minus_TC_interval": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "label": "fair-AND4",
+      "M": "9/64",
+      "Delta_mixed": "15/64",
+      "TC_spec_interval": [
+        "0",
+        "0"
+      ],
+      "degree_KL_minus_TC_interval": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "label": "coupled-phase4",
+      "M": "1",
+      "Delta_mixed": "2",
+      "TC_spec_interval": [
+        "0",
+        "0"
+      ],
+      "degree_KL_minus_TC_interval": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "label": "unequal-KL5",
+      "M": "60993/262144",
+      "Delta_mixed": "122391/262144",
+      "TC_spec_interval": [
+        "19956948914832968393733/1208925819614629174706176",
+        "9978474457416484196867/604462909807314587353088"
+      ],
+      "degree_KL_minus_TC_interval": [
+        "-4766064208187287603/1208925819614629174706176",
+        "-2383032104093643801/604462909807314587353088"
+      ]
+    }
+  ],
+  "cofactor_obstruction_certificates": [
+    {
+      "r": 1,
+      "n_B": 5,
+      "w": 6,
+      "threshold": 9,
+      "I_majority": "15/8",
+      "root_Delta": "15/16",
+      "L1_majority": "7/2",
+      "B_abs_over_Delta": "14/15",
+      "proved_lower_bound": "2/45",
+      "E_mixed_over_Delta_mixed_nats_interval": [
+        "776081852507202286963943/604462909807314587353088",
+        "1552163705014404573927887/1208925819614629174706176"
+      ]
+    },
+    {
+      "r": 2,
+      "n_B": 9,
+      "w": 10,
+      "threshold": 15,
+      "I_majority": "315/128",
+      "root_Delta": "315/256",
+      "L1_majority": "83/8",
+      "B_abs_over_Delta": "664/315",
+      "proved_lower_bound": "8/225",
+      "E_mixed_over_Delta_mixed_nats_interval": [
+        "1757830393668906164765437/1208925819614629174706176",
+        "878915196834453082382719/604462909807314587353088"
+      ]
+    },
+    {
+      "r": 3,
+      "n_B": 13,
+      "w": 14,
+      "threshold": 21,
+      "I_majority": "3003/1024",
+      "root_Delta": "3003/2048",
+      "L1_majority": "523/16",
+      "B_abs_over_Delta": "16736/3003",
+      "proved_lower_bound": "32/637",
+      "E_mixed_over_Delta_mixed_nats_interval": [
+        "932441305331824291003003/604462909807314587353088",
+        "1864882610663648582006007/1208925819614629174706176"
+      ]
+    }
+  ],
+  "runtime_seconds": 0.22916540000005625
+}

@@ -1,0 +1,68 @@
+worker: NM13-08
+parent: T07-uniform-forest-pairwise-negative-correlation
+runtime:
+  model: GPT-5.6 Sol
+  reasoning: UNVERIFIED
+status:
+  parent_before: OPEN
+  parent_after: OPEN
+  restricted_results: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+parent_metric:
+  name: largest completely certified all-graph vertex order
+  before: 9
+  after: 9
+  counterexample_order_lower_bound_before: 10
+  counterexample_order_lower_bound_after: 10
+mechanism_delta:
+  before:
+    - unit transparent substitution into a p-NC core
+    - PF-Rayleigh terminal series/parallel macro-closure
+    - transparent series-parallel theta gadgets
+  after:
+    - arbitrary internal transparent PF substitution preserves PF-Rayleigh and preserves the host terminal activity
+    - exact non-series-parallel PF atom Q_7 has activity 25/7
+    - an explicit PF neutralizer of activity 16/9 converts Q_7, and every transparent decoration of Q_7, into a transparent PF gadget
+    - infinitely many non-series-parallel transparent PF gadgets can therefore replace arbitrary edges of arbitrary unit-p-NC cores
+new_theorems:
+  - id: T07-PF-TRANSPARENT-INTERNAL-CLOSURE-08
+    verdict: CANDIDATE_FULL
+  - id: T07-SPLIT7-TRANSPARENT-NEUTRALIZER-09
+    verdict: CANDIDATE_FULL
+  - id: T07-WHEEL-NONSP-TRANSPARENT-EXPANSIONS-10
+    verdict: CANDIDATE_FULL
+application:
+  base_class: all wheel graphs W_m, m>=3
+  parameters:
+    - wheel rim size m>=3
+    - arbitrary substitution count k>=0
+    - arbitrary theta lengths ell_i>=2
+    - optional transparent internal decorations of the Q_7 atom
+  simple_subfamily_counts:
+    gadget_vertices: "13 + 8(2^ell-1)(ell-1)"
+    gadget_edges: "33 + 8 ell (2^ell-1)"
+    expanded_vertices: "m+1 + sum_i [11 + 8(2^ell_i-1)(ell_i-1)]"
+    expanded_edges: "2m + sum_i [32 + 8 ell_i(2^ell_i-1)]"
+exact_checks:
+  checker: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T02-43-00Z__transparent_neutralizer_checker.py
+  output: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T02-43-00Z__transparent_neutralizer_checker.out
+  result: ALL_EXACT_CHECKS_PASS
+  q7:
+    D: 4659375
+    C: 16640625
+    activity: 25/7
+  neutralizer_activity: 16/9
+  final_activity: 1
+literature_scope:
+  grimmett_winkler: "uniform-all-forests conjecture; verified <=8 vertices and 9 vertices with <=18 edges; spanning-tree theorem is separate"
+  erickson: "I-Rayleigh/SOS for series-parallel graphs; stronger weighted property"
+  huang: "general arboreal-gas negative-correlation problem still open; restricted graph/regime results"
+  bado: "all wheel graphs under uniform-all-forests law"
+  tang_zhang: "complete-graph specified spanning-subgraph ensembles including fixed-component forests, not arbitrary-graph all-component uniform forests"
+residual_obstruction:
+  - arbitrary 3-connected graphs need not expose a two-terminal transparent decomposition
+  - current PF machinery controls one distinguished port field, not simultaneous arbitrary real-edge weights
+  - no source-level general theorem or 10-vertex exhaustive advance is claimed
+failed_or_not_pursued:
+  - did not attempt another finite census because it would not transfer
+  - did not relabel spanning-tree or fixed-component complete-graph results as the parent conjecture
+next_attack: "Seek a two-port or separator-of-size-3 sign calculus that preserves Rayleigh under genuinely 3-connected composition, using the internal transparent-substitution identity as the local base case."

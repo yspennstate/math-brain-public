@@ -1,0 +1,12 @@
+{
+ "helper_version":"A043-rational-grid-certificate-v1",
+ "family_domain_count":"same 458356 prime/bias representatives and 4639338 full-grid cases as FROZEN_SPEC.json",
+ "arithmetic":"integer weighted Fourier moments, common denominator, integer Parseval and deficit, rational 32-term atanh logarithm enclosures rounded outwards to scale 2^24",
+ "maximum_log_argument":1296,
+ "certificate":"per-bias rational lower/upper bounds on maximum; candidate index from floating quotient checked against every case by exact integer cross-products",
+ "overflow_policy":"derive bounds in REPORT; arrays int64 only where products stay below 2^63; Fraction for final ratios",
+ "memory_estimate_mb":80,
+ "max_runtime_seconds":60,
+ "stop_policy":"50 seconds checked at every bias vector; partial certificate saved after each vector",
+ "command":"python -X utf8 code/certify_grid.py"
+}

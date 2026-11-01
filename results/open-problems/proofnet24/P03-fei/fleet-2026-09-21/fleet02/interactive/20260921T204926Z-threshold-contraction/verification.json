@@ -1,0 +1,311 @@
+{
+  "checks": {
+    "Boolean_codes": {
+      "exact_code_coset_moment_checks": 208,
+      "exact_four_active_generator_checks": 3,
+      "examples": [
+        {
+          "D": 3,
+          "H_float": -0.0,
+          "I_exact": "1",
+          "N2_mean_Brownian_exact": "0",
+          "active_qflip_count": 0,
+          "analytic_large_D_counterexample_hypothesis": false,
+          "d": 2,
+          "difference_direction_weight": 1,
+          "enumerated_codewords": 128,
+          "phase_states": 16,
+          "triple_zero_frequency_coefficients_exact": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "truth_values_per_function": 8
+        },
+        {
+          "D": 4,
+          "H_float": 2.0,
+          "I_exact": "1",
+          "N2_mean_Brownian_exact": "9/8",
+          "active_qflip_count": 4,
+          "analytic_large_D_counterexample_hypothesis": false,
+          "d": 2,
+          "difference_direction_weight": 1,
+          "enumerated_codewords": 2048,
+          "phase_states": 16,
+          "triple_zero_frequency_coefficients_exact": [
+            "3/256",
+            "3/256",
+            "3/256",
+            "3/256"
+          ],
+          "truth_values_per_function": 16
+        },
+        {
+          "D": 4,
+          "H_float": 2.0,
+          "I_exact": "1",
+          "N2_mean_Brownian_exact": "9/8",
+          "active_qflip_count": 4,
+          "analytic_large_D_counterexample_hypothesis": false,
+          "d": 3,
+          "difference_direction_weight": 1,
+          "enumerated_codewords": 32768,
+          "phase_states": 16,
+          "triple_zero_frequency_coefficients_exact": [
+            "3/256",
+            "3/256",
+            "3/256",
+            "3/256"
+          ],
+          "truth_values_per_function": 16
+        },
+        {
+          "D": 5,
+          "H_float": 2.216917186688699,
+          "I_exact": "1",
+          "N2_mean_Brownian_exact": "14128653/8388608",
+          "active_qflip_count": 4,
+          "analytic_large_D_counterexample_hypothesis": false,
+          "d": 2,
+          "difference_direction_weight": 2,
+          "enumerated_codewords": 65536,
+          "phase_states": 16,
+          "triple_zero_frequency_coefficients_exact": [
+            "-1827/524288",
+            "-1827/524288",
+            "-1827/524288",
+            "-1827/524288"
+          ],
+          "truth_values_per_function": 32
+        }
+      ],
+      "scope": "low-dimensional identity checks, not extrapolation to the analytic D>=27 counterfamily",
+      "status": "PASS"
+    },
+    "Christoffel": {
+      "exact_central_term_comparisons": 124,
+      "exact_reproducing_polynomial_norm_checks": 22,
+      "large_m_bound": "K > 64, hence zero-atom probability < 1/64",
+      "large_m_exact_central_binomial_check": 4096,
+      "status": "PASS",
+      "warning": "large-dimensional RM laws are handled by the analytic independence proof, not enumerated"
+    },
+    "current_formula": {
+      "analytic_trig_identity_max_error": "1.0060898484606336181485192337466019747179991669995302300712e-60",
+      "exact_spectrum_and_event_checks": [
+        {
+          "D": 5,
+          "J_exact": "1",
+          "N": 32,
+          "all_original_coordinates_relevant": true,
+          "random_anchor_order_event_lower_bound_exact": "3/16",
+          "triple_affine_zero_coefficient_exact": "7/512"
+        },
+        {
+          "D": 6,
+          "J_exact": "5/8",
+          "N": 64,
+          "all_original_coordinates_relevant": true,
+          "random_anchor_order_event_lower_bound_exact": "21/80",
+          "triple_affine_zero_coefficient_exact": "15/1024"
+        },
+        {
+          "D": 7,
+          "J_exact": "3/8",
+          "N": 128,
+          "all_original_coordinates_relevant": true,
+          "random_anchor_order_event_lower_bound_exact": "5/16",
+          "triple_affine_zero_coefficient_exact": "31/2048"
+        },
+        {
+          "D": 8,
+          "J_exact": "7/32",
+          "N": 256,
+          "all_original_coordinates_relevant": true,
+          "random_anchor_order_event_lower_bound_exact": "155/448",
+          "triple_affine_zero_coefficient_exact": "63/4096"
+        },
+        {
+          "D": 9,
+          "J_exact": "1/8",
+          "N": 512,
+          "all_original_coordinates_relevant": true,
+          "random_anchor_order_event_lower_bound_exact": "189/512",
+          "triple_affine_zero_coefficient_exact": "127/8192"
+        },
+        {
+          "D": 10,
+          "J_exact": "9/128",
+          "N": 1024,
+          "all_original_coordinates_relevant": true,
+          "random_anchor_order_event_lower_bound_exact": "889/2304",
+          "triple_affine_zero_coefficient_exact": "255/16384"
+        },
+        {
+          "D": 11,
+          "J_exact": "5/128",
+          "N": 2048,
+          "all_original_coordinates_relevant": true,
+          "random_anchor_order_event_lower_bound_exact": "51/128",
+          "triple_affine_zero_coefficient_exact": "511/32768"
+        },
+        {
+          "D": 12,
+          "J_exact": "11/512",
+          "N": 4096,
+          "all_original_coordinates_relevant": true,
+          "random_anchor_order_event_lower_bound_exact": "4599/11264",
+          "triple_affine_zero_coefficient_exact": "1023/65536"
+        }
+      ],
+      "late_cut_limit_exact": "(-16 ln 2+63 ln 3+25 ln 5-49 ln 7)/144",
+      "late_cut_limit_float": "0.0208928458630134932088988533662",
+      "late_cut_limit_positive_integer_certificate": true,
+      "live_window_elementary_constant_checks": 91,
+      "status": "PASS",
+      "succinct_late_cut_values": [
+        {
+          "D": 5,
+          "full_line_current_float": "0.016336084292944694645",
+          "ratio_to_J_float": "0.016336084292944694645",
+          "representation": "succinct exact rational cosine weights with high-precision logarithms, NOT truth-table enumeration"
+        },
+        {
+          "D": 10,
+          "full_line_current_float": "0.020730271976446881059",
+          "ratio_to_J_float": "0.2948305347761334195",
+          "representation": "succinct exact rational cosine weights with high-precision logarithms, NOT truth-table enumeration"
+        },
+        {
+          "D": 20,
+          "full_line_current_float": "0.020892686463870815549",
+          "ratio_to_J_float": "144.12874737855134398",
+          "representation": "succinct exact rational cosine weights with high-precision logarithms, NOT truth-table enumeration"
+        },
+        {
+          "D": 30,
+          "full_line_current_float": "0.0208928457073496618",
+          "ratio_to_J_float": "96696.216630862914081",
+          "representation": "succinct exact rational cosine weights with high-precision logarithms, NOT truth-table enumeration"
+        },
+        {
+          "D": 40,
+          "full_line_current_float": "0.020892845862861477748",
+          "ratio_to_J_float": "73627971.037012470076",
+          "representation": "succinct exact rational cosine weights with high-precision logarithms, NOT truth-table enumeration"
+        },
+        {
+          "D": 60,
+          "full_line_current_float": "0.020892845863013493064",
+          "ratio_to_J_float": "51033498491322.997304",
+          "representation": "succinct exact rational cosine weights with high-precision logarithms, NOT truth-table enumeration"
+        }
+      ],
+      "warning": "late-cut formula uses f in RM(d,D); it is not asserted at every smaller d. The D>=27 half-band full-line theorem uses the separate analytic moment lemma."
+    },
+    "finite_window": {
+      "arithmetic": "high precision diagnostic, not an interval certificate",
+      "energy_difference": "0.0",
+      "finite_window_energy": "0.021235150495882082032957331187403860443007822173567341728560047431",
+      "phase_transform_max_error": "1.8991135491519597494946484539123914308441931667239889932559559982e-65",
+      "status": "PASS"
+    },
+    "kernels": {
+      "Carleman_mass_error": "0.0",
+      "arithmetic": "floating numerical diagnostics only; theorem proved analytically",
+      "combined_mass_error": "0.0",
+      "log_grid_generalized_eigenvalue_checks": [
+        {
+          "S_P_G": [
+            {
+              "max_generalized_eigenvalue_float": 2.6057633716915407,
+              "min_Loewner_margin_float": 0.3148278763193588,
+              "optimal_constant_float": 3.141592653589793
+            },
+            {
+              "max_generalized_eigenvalue_float": 1.745528345128713,
+              "min_Loewner_margin_float": 0.16248324262602085,
+              "optimal_constant_float": 1.7932095469548859
+            },
+            {
+              "max_generalized_eigenvalue_float": 4.346022618544575,
+              "min_Loewner_margin_float": 0.47731685245311345,
+              "optimal_constant_float": 4.934802200544679
+            }
+          ],
+          "half_log_width": 2,
+          "points": 21
+        },
+        {
+          "S_P_G": [
+            {
+              "max_generalized_eigenvalue_float": 2.982655417526735,
+              "min_Loewner_margin_float": 0.3910583069189952,
+              "optimal_constant_float": 3.141592653589793
+            },
+            {
+              "max_generalized_eigenvalue_float": 1.775718516689104,
+              "min_Loewner_margin_float": 0.13368153055470533,
+              "optimal_constant_float": 1.7932095469548859
+            },
+            {
+              "max_generalized_eigenvalue_float": 4.757448843278808,
+              "min_Loewner_margin_float": 0.587727257292154,
+              "optimal_constant_float": 4.934802200544679
+            }
+          ],
+          "half_log_width": 6,
+          "points": 49
+        },
+        {
+          "S_P_G": [
+            {
+              "max_generalized_eigenvalue_float": 3.07045612416827,
+              "min_Loewner_margin_float": 0.4660453841522591,
+              "optimal_constant_float": 3.141592653589793
+            },
+            {
+              "max_generalized_eigenvalue_float": 1.7780181065581617,
+              "min_Loewner_margin_float": 0.10057347588216449,
+              "optimal_constant_float": 1.7932095469548859
+            },
+            {
+              "max_generalized_eigenvalue_float": 4.848285111482062,
+              "min_Loewner_margin_float": 0.5698313507244813,
+              "optimal_constant_float": 4.934802200544679
+            }
+          ],
+          "half_log_width": 12,
+          "points": 81
+        },
+        {
+          "S_P_G": [
+            {
+              "max_generalized_eigenvalue_float": 3.0932991945454367,
+              "min_Loewner_margin_float": 0.29043144318502717,
+              "optimal_constant_float": 3.141592653589793
+            },
+            {
+              "max_generalized_eigenvalue_float": 1.7768422135053492,
+              "min_Loewner_margin_float": 0.09856697876584133,
+              "optimal_constant_float": 1.7932095469548859
+            },
+            {
+              "max_generalized_eigenvalue_float": 4.870091101398417,
+              "min_Loewner_margin_float": 0.389330440658363,
+              "optimal_constant_float": 4.934802200544679
+            }
+          ],
+          "half_log_width": 20,
+          "points": 121
+        }
+      ],
+      "mixed_derivative_max_error": "2.76357393763022228012363259609612786275712011661961004320758511045394937701e-76",
+      "status": "PASS"
+    }
+  },
+  "full_FEI": "OPEN_NOT_PROVED",
+  "schema_version": 1
+}

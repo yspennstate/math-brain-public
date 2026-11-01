@@ -1,0 +1,63 @@
+{
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "run_id": "20260925T015323Z-fleet01-B10-fiveaudit-r12",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "scope": "B10 exact constants and inequalities; audit only",
+  "complete_passes": 0,
+  "first_unchecked_substantive_clause": "short.tex line 62 current-open-status claim",
+  "findings": [
+    {
+      "id": "C01",
+      "status": "FALSE_AS_WRITTEN",
+      "range": "407-413",
+      "impact": "local chart wording; null-ray repair preserves constant"
+    },
+    {
+      "id": "C02",
+      "status": "GAP",
+      "range": "311-323",
+      "impact": "missing Jensen/Cauchy-Schwarz; constant unchanged"
+    },
+    {
+      "id": "C03",
+      "status": "GAP",
+      "range": "415-442",
+      "impact": "critical level null-set sentence missing; tail constants pass"
+    },
+    {
+      "id": "C04",
+      "status": "FALSE_WORDING",
+      "range": "41",
+      "impact": "abstract omits no-pivot hypothesis; proof proposition has it"
+    },
+    {
+      "id": "C05",
+      "status": "FALSE_WORDING",
+      "range": "65",
+      "impact": "singularity should be upper envelope"
+    },
+    {
+      "id": "C07",
+      "status": "UNCHECKED",
+      "range": "62",
+      "impact": "literature-status only"
+    }
+  ],
+  "numerical_status": "PASS; no new fatal numerical defect",
+  "new_exact_certificate": "2^(5/4)*e^(3/4)*Gamma(1/4) < 18921/1000 < 19",
+  "final_branch_status": "all audited final numerical branches <269; advertised 270 is numerically safe",
+  "rendered_pdf_source_agreement": "UNCHECKED_THIS_RUN",
+  "github_artifacts_written": [
+    "acknowledgement JSON",
+    "checks.json",
+    "report_status.json"
+  ],
+  "github_full_report_write": "BLOCKED_BY_CONNECTOR_SAFETY_LAYER",
+  "github_coverage_write": "BLOCKED_BY_CONNECTOR_SAFETY_LAYER",
+  "github_executable_checker_write": "BLOCKED_BY_CONNECTOR_SAFETY_LAYER",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_metadata": "UNKNOWN",
+  "effort_metadata": "UNKNOWN"
+}

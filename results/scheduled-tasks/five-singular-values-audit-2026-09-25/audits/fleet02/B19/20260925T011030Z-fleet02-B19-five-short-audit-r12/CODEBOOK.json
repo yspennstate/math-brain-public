@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "statuses": {
+    "P": "PASS",
+    "G": "GAP",
+    "F": "FALSE",
+    "U": "UNCHECKED",
+    "N": "NOT_MATHEMATICAL"
+  },
+  "sections": {
+    "M": "metadata/typesetting",
+    "I": "introduction/theorem",
+    "F": "Fourier/conditioning/linear algebra",
+    "B": "Brascamp-Lieb/product projections",
+    "D": "crossing-volume Fourier decay",
+    "P": "one/two-coordinate pivots",
+    "S": "random signs",
+    "T": "final theorem",
+    "R": "references"
+  },
+  "dependencies": {
+    "M": "none",
+    "I": "later proved results",
+    "F": "elementary Fourier/measure/linear algebra",
+    "B": "Section 2 plus heat-flow BL argument",
+    "D": "Sections 2-3",
+    "P": "Sections 2-4 as cited",
+    "S": "Section 2 spectral interfaces; machine-checked facts accepted per owner",
+    "T": "Sections 2-6",
+    "R": "none"
+  },
+  "repairs": {
+    "C04": "qualify abstract random-sign summary by no-pivot regime",
+    "C07": "literature-status only; no proof repair",
+    "C05": "replace singularity assertion by upper-envelope wording",
+    "C06": "grammar: All three",
+    "N01": "drop all zero-beta factors; projection bound unchanged",
+    "C02": "insert Jensen before averaging conditional bound",
+    "C01": "remove one polar seam or state a.e. change of variables",
+    "C03": "exclude atom at hyperbolic critical level using null level set",
+    "NONE": "none"
+  },
+  "independence": {
+    "P1": "shared corrections were read first as required; each mathematical step was re-derived from the pinned source",
+    "P2": "reverse dependency regression repeated after P1; repairs rechecked for downstream constants",
+    "N01": "new B19 finding not present in shared CORRECTIONS"
+  }
+}

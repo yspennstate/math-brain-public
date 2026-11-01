@@ -1,0 +1,45 @@
+{
+  "helper_version": "A081-independent-profile-audit-v2",
+  "family": "M fresh fair selector between padded h_w*h_2 and all-zero full-point flip",
+  "domain": {
+    "pilot": [
+      [
+        4,
+        0
+      ]
+    ],
+    "full": [
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ]
+    ]
+  },
+  "case_count": "6 roots; all distinct labeled wide-only restrictions; every available next query; all adaptive histories by finite induction",
+  "symmetry": "none; enumerate 3^w restriction labels",
+  "arithmetic": "integer Walsh and physical edges; Fraction references; 24-term rational atanh log enclosure; outward log rounding to 2^-80",
+  "memory_estimate_MB": 120,
+  "max_runtime_seconds": 55,
+  "no_dimension_escalation": true,
+  "boundary_checks": "w=4,m=0, full exposure, branch stopping, zero fibers; failed extension to queried width-two checked separately without accepting universal claim"
+}

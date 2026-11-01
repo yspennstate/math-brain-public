@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "gate": {
+    "ts": "2026-10-10 08:02:35",
+    "status": "distress",
+    "mode": "throttle",
+    "reasons": [
+      "process_critical"
+    ],
+    "cpu_pct": 86.3,
+    "commit_used_pct": 88.2,
+    "commit_avail_mb": 12283,
+    "observed_at": "2026-10-10T05:02:45.778371+00:00",
+    "file_age_seconds": 10.18217134475708,
+    "planned_configurations": 320,
+    "workload": "one short single-process CPU-only exact finite-graph check; no models, random simulation, sweeps, GPU, or parallel children",
+    "throttle_action": "reduced from 1344 to 320 fixed configurations; retain launcher priority and finish one bounded atomic check",
+    "decision": "LIGHT_CHECK_ONLY: follow published throttle; no model-heavy computation"
+  },
+  "command": "python -X utf8 ~/brain_workers/w379/verify_detour.py",
+  "elapsed_check_seconds": 0.08941869996488094,
+  "total_configurations": 320,
+  "rows": [
+    {
+      "n": 2,
+      "configurations": 64,
+      "dijkstra_checks_passed": 64,
+      "positive_detour_cases": 0,
+      "tie_cases": 1,
+      "mean_block_saving_exact": "0",
+      "naive_axis_equals_unrestricted_failures": 0
+    },
+    {
+      "n": 3,
+      "configurations": 256,
+      "dijkstra_checks_passed": 256,
+      "positive_detour_cases": 1,
+      "tie_cases": 8,
+      "mean_block_saving_exact": "1/256",
+      "naive_axis_equals_unrestricted_failures": 1
+    }
+  ],
+  "independent_translated_blocks_checked": 20,
+  "shared_block_edges": 0,
+  "rigorous_c2_bound_for_fair_1_2_weights": "1/1280",
+  "scope": "Finite exact checks corroborate the construction and equality boundary; the infinite-volume result requires INDEPENDENT.md's proof and an independent referee. No exponent or novelty claim."
+}

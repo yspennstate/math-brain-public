@@ -1,0 +1,26 @@
+{
+  "command": "python -X utf8 verify_affine_audit.py",
+  "cases": 372,
+  "passed": 372,
+  "counts_by_ambient_dimension": {
+    "1": 3,
+    "2": 11,
+    "3": 51,
+    "4": 307
+  },
+  "max_entropy_formula_error": 0.0,
+  "wall_seconds": 0.08465430000796914,
+  "gate": {
+    "purpose": "Independent exact check of w510's affine-indicator C001-C004",
+    "max_ambient_dimension": 4,
+    "max_constructed_affine_cases": 400,
+    "max_truth_table_size": 16,
+    "max_wall_seconds": 90,
+    "cpu_only": true,
+    "store_access": false,
+    "training": false,
+    "test_bank_access": false
+  },
+  "claims": "w510 C001-C004 corroborated; independent written proof audit in AUDIT_W510.md",
+  "formal_verification": false
+}

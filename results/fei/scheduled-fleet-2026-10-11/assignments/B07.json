@@ -1,0 +1,381 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B07",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A031",
+      "stream": "B07",
+      "topic": "Convolution identity",
+      "target_statement": "Use sum_S fhat(S) fhat(S triangle U)=1_{U=empty} to derive a nontrivial entropy-weighted inequality. Preserve signs until after the cancellation that is supposed to pay the cost.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A031-D1",
+          "description": "SIGNED_WEIGHTED_IDENTITY.tex: candidate entropy-weighted consequence of f²=1",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A031-D2",
+          "description": "CANCELLATION_LEDGER.md: the exact signed step that pays the target debt",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Start from all signed convolution identities and retain the phase signs through the decisive cancellation.",
+        "Specify the entropy weight and any absolute-convergence/finite-sum manipulation; Parseval or triangle inequality alone must not silently replace the needed signed conclusion.",
+        "Locate the consequence absent from the fixed-order non-Boolean controls and quantify the paid term on an actual Boolean class."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A032",
+          "interface": "actual Boolean phase certificate"
+        },
+        {
+          "agent_id": "A033",
+          "interface": "full-Booleanity hierarchy guards"
+        },
+        {
+          "agent_id": "A070",
+          "interface": "non-Boolean relaxation tests"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A033",
+          "interface_use": "full signed identities"
+        },
+        {
+          "agent_id": "A035",
+          "interface_use": "frozen signed payment"
+        },
+        {
+          "agent_id": "A070",
+          "interface_use": "signed entropy-weighted inequality"
+        },
+        {
+          "agent_id": "A088",
+          "interface_use": "signed weighted inequality"
+        }
+      ],
+      "independent_reviewers": [
+        "A088",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A new signed inequality paying a named residual term, or a sharply scoped failure of that inequality.",
+      "source_ids": [
+        "brain_phase_energy",
+        "brain_cyclic_law",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F07",
+        "F09",
+        "F12",
+        "F14"
+      ]
+    },
+    {
+      "agent_id": "A032",
+      "stream": "B07",
+      "topic": "Boolean phase realizability",
+      "target_statement": "Given a candidate spectral probability law, determine whether signs can produce a Boolean inverse Walsh transform. Produce exact impossibility certificates or actual truth tables, never a merely normalized vector.",
+      "work_type": "construction_certificate",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A032-D1",
+          "description": "BOOLEAN_REALIZABILITY.json: law, phase signs, exact inverse, or impossibility certificate",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A032-D2",
+          "description": "REALIZABILITY_METHOD.md: completeness domain and algebraic number handling",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "An accepted realization has inverse Walsh values exactly ±1, not merely norm one or values numerically close to signs.",
+        "An impossibility claim specifies the complete finite phase domain or a proved algebraic obstruction; a failed heuristic search is labelled inconclusive.",
+        "Provide the common realizability interface reused by uniform coding, correlated auxiliaries, and the separate biased-normalization referee."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A071",
+          "interface": "bounded phase-search domain"
+        },
+        {
+          "agent_id": "A072",
+          "interface": "exact inverse Walsh validation"
+        },
+        {
+          "agent_id": "A078",
+          "interface": "proposed coding/padding laws"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A031",
+          "interface_use": "actual Boolean phase certificate"
+        },
+        {
+          "agent_id": "A033",
+          "interface_use": "exact realizability test"
+        },
+        {
+          "agent_id": "A034",
+          "interface_use": "genuine Boolean realizability"
+        },
+        {
+          "agent_id": "A045",
+          "interface_use": "common actual-Boolean certificate format"
+        },
+        {
+          "agent_id": "A078",
+          "interface_use": "actual Boolean realizability certificate"
+        },
+        {
+          "agent_id": "A079",
+          "interface_use": "phase-realizability certificates"
+        }
+      ],
+      "independent_reviewers": [
+        "A088",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "A complete actual realization or exact impossibility certificate for one live candidate law.",
+      "source_ids": [
+        "brain_phase_energy",
+        "brain_cyclic_law",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F07",
+        "F09",
+        "F12",
+        "F14"
+      ]
+    },
+    {
+      "agent_id": "A033",
+      "stream": "B07",
+      "topic": "Derivative hierarchy",
+      "target_statement": "Import the already proved fixed-order signed-convolution and atom-cap-prefix no-go families. State the exact complete derivative, granularity, or convolution hierarchy being used and seek a genuinely additional consequence of full Booleanity that those controls do not satisfy. Merely increasing a fixed prefix, retaining dyadic coefficients, or imposing small norm/square defects is already ruled out.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A033-D1",
+          "description": "BOOLEANITY_HIERARCHY.tex: named derivative/convolution/granularity constraints",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A033-D2",
+          "description": "NEW_FULL_BOOLEANITY_CONSEQUENCE.md: precise distinction from rejected prefixes",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Import the fixed signed-convolution-order no-go and the fixed atom-cap-prefix cyclic-law no-go as rejected baselines.",
+        "State the exact hierarchy being used; increasing a fixed truncation order, dyadic coefficients, or small square defect does not constitute a new admission condition.",
+        "Prove a genuinely additional consequence of full Booleanity that fails on the relevant controls and show where it could supply the missing high-degree or conditional payment."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A032",
+          "interface": "exact realizability test"
+        },
+        {
+          "agent_id": "A031",
+          "interface": "full signed identities"
+        },
+        {
+          "agent_id": "A078",
+          "interface": "cap-repaired padding controls"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A031",
+          "interface_use": "full-Booleanity hierarchy guards"
+        },
+        {
+          "agent_id": "A035",
+          "interface_use": "named Booleanity hypothesis"
+        },
+        {
+          "agent_id": "A067",
+          "interface_use": "full-Booleanity consequence"
+        },
+        {
+          "agent_id": "A070",
+          "interface_use": "full-Booleanity constraints"
+        },
+        {
+          "agent_id": "A078",
+          "interface_use": "full hierarchy and fixed-prefix controls"
+        }
+      ],
+      "independent_reviewers": [
+        "A088",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A new full-Booleanity restriction with an explicit role in one unpaid term is required to renew.",
+      "source_ids": [
+        "brain_phase_energy",
+        "brain_cyclic_law",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F07",
+        "F09",
+        "F12",
+        "F14"
+      ]
+    },
+    {
+      "agent_id": "A034",
+      "stream": "B07",
+      "topic": "Phase-energy transfer",
+      "target_statement": "Extend the recovered marginal phase-energy result for actual Boolean signs on disjoint uniform physical cubes X,Y, with integer X-degree bound d≥1, while retaining the full conditional spectral entropy H(S_Y|S_X). Seek a proved stable restricted condition not admitting arbitrary tensor factors. Correlations among spectral auxiliary coordinates are allowed; arbitrary correlated physical input laws are outside the baseline.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A034-D1",
+          "description": "CONDITIONAL_PHASE_THEOREM.tex: explicit stable hypothesis and entropy payment",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A034-D2",
+          "description": "PHASE_SCOPE.md: physical law, degree, marginal, and conditional terms",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Use actual Boolean f on disjoint uniform physical cubes X,Y with integer X-degree d≥1; correlated spectral Y coordinates do not authorize correlated physical inputs.",
+        "Retain H(S_Y|S_X) after using H(p_X)≤(2/ln2)I_Y+2(d−1); the marginal estimate cannot be spent twice.",
+        "Test the fixed cyclic-marginal arbitrary-tensor embedding, and prove that any purportedly weaker structural condition excludes it without assuming the desired FEI conclusion."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A032",
+          "interface": "genuine Boolean realizability"
+        },
+        {
+          "agent_id": "A079",
+          "interface": "correlated spectral auxiliaries"
+        },
+        {
+          "agent_id": "A005",
+          "interface": "arbitrary tensor-factor admission"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A003",
+          "interface_use": "conditional phase target"
+        },
+        {
+          "agent_id": "A079",
+          "interface_use": "marginal and conditional phase-energy interface"
+        },
+        {
+          "agent_id": "A088",
+          "interface_use": "conditional phase theorem"
+        }
+      ],
+      "independent_reviewers": [
+        "A088",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A complete restricted conditional theorem with proved admission/stability, or a hardness-preserving embedding refuting its claimed simplification.",
+      "source_ids": [
+        "brain_phase_energy",
+        "brain_cyclic_law",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F07",
+        "F09",
+        "F12",
+        "F14"
+      ]
+    },
+    {
+      "agent_id": "A035",
+      "stream": "B07",
+      "topic": "Signed cancellation countersearch",
+      "target_statement": "Test proposed weighted convolution payments on actual Boolean functions with severe cancellation. Separate an invalid triangle inequality or lost sign from a genuine obstruction to the target statement.",
+      "work_type": "targeted_countersearch",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A035-D1",
+          "description": "SIGNED_PAYMENT_TESTS.json: candidate, Boolean witnesses, and sign-sensitive quantities",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A035-D2",
+          "description": "CANCELLATION_FAILURE.tex: smallest failed inequality or surviving scope",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Compute the signed convolution before squaring or applying absolute values and retain the exact term where the proposed proof discards cancellation.",
+        "Use actual Boolean witnesses for theorem refutations; a non-Boolean relaxation failure is recorded separately as a missing-hypothesis diagnostic.",
+        "Certify the violation of the precise weighted inequality and avoid treating a bad proof step as proof that the theorem itself is false."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A031",
+          "interface": "frozen signed payment"
+        },
+        {
+          "agent_id": "A033",
+          "interface": "named Booleanity hypothesis"
+        },
+        {
+          "agent_id": "A072",
+          "interface": "exact Boolean spectra"
+        },
+        {
+          "agent_id": "A073",
+          "interface": "certified logarithms"
+        }
+      ],
+      "next_consumers": [],
+      "independent_reviewers": [
+        "A088",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "A candidate-specific signed counterexample or a completed finite certificate with honest bounds on its scope.",
+      "source_ids": [
+        "brain_phase_energy",
+        "brain_cyclic_law",
+        "brain_route_map"
+      ],
+      "advisory_F_tags": [
+        "F07",
+        "F09",
+        "F12",
+        "F14"
+      ]
+    }
+  ]
+}

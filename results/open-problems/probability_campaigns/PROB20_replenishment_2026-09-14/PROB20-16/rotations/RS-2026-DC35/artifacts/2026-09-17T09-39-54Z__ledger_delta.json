@@ -1,0 +1,55 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "RS-2026-DC35",
+  "report_kind": "STUCK_RECOVERY_2_WITH_PARTIAL_THEOREM",
+  "input_snapshot": "90d25d4183ef3c0fe0ba65bbc79f573acad3fd53",
+  "previous_report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-DC35/runs/2026-09-17/2026-09-17T08-37-21Z__report.md",
+  "previous_report_creation_commit": "9642f26e3ee5cb589eb2076e1b3114cb79fe20b3",
+  "report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-DC35/runs/2026-09-17/2026-09-17T09-39-54Z__report.md",
+  "report_creation_commit": "4080d1f29bc5d9df33354c4e77680dd61aaf24db",
+  "report_blob": "4f9929735ea261abb6902ca106cc46a5663e8dd2",
+  "source": {
+    "author": "Chiara Meroni",
+    "year": 2026,
+    "title": "Directional Convexity (problems 34 and 35)",
+    "locator": "Randomstrasse 101, Open Problem 35",
+    "posted": "2026-02-23",
+    "updated": "2026-06-05"
+  },
+  "metric": {
+    "name": "E_characterization",
+    "before": 0,
+    "after": 0,
+    "movement": "NO MOVEMENT"
+  },
+  "unchanged_count": 5,
+  "stuck_recovery_cycle": 2,
+  "methods": [3, 16, 29],
+  "outcomes": {
+    "B3": "Exact theorem for full two-defect canonical one-spike family; combined with pinned safe/one-defect results, every delta>0 in this K5 family has a semialgebraic exact functional hull.",
+    "B16": "All four endpoint choices per defective cell, all line-interface cases, and all coordinate derivative jumps were exhausted symbolically.",
+    "B29": "All central breakpoint orders r_*<=1, 1<r_*<alpha, r_*>=alpha were covered; no hidden square-boundary long chord occurs."
+  },
+  "mathematical_status": "PARTIAL",
+  "source_status": "OPEN on bounded 2026-09-17 check; no source-complete necessary-and-sufficient classification located",
+  "new_claim": "For D=[R(1,0) union R(0,1) union R(1,-alpha)] x R, K4={(0,0,0),(1,0,0),(0,1,0),(1,1,1)}, and K5=K4 union {(a,b,ab+delta)}, every alpha>1, 0<a,b<1, delta>0 has an exact semialgebraic functional D-convex hull. The new proof covers the entire two-defect regime delta>max{a(1-b),(1-a)b}.",
+  "artifacts": [
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-DC35/artifacts/2026-09-17T09-39-54Z__two_defect_selfcheck.py",
+      "creation_commit": "ff0442097d4197e2d3563f21108b708ba602f1db",
+      "blob": "46bc365f22c2b3069781eba1bf6814c9cddeb7a3"
+    },
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-DC35/artifacts/2026-09-17T09-39-54Z__two_defect_selfcheck.out",
+      "creation_commit": "d2de8edadd81ad2a75281515bd5a90c208ad018f",
+      "blob": "4bb296e02c00f17002badc153e6cd36aefcb5a9b",
+      "execution_status": "PASS"
+    }
+  ],
+  "audit_refs": [],
+  "next_protocol": "Both permitted HARD recovery cycles are now consumed. If E_characterization does not move on the next run, write a terminal immutable handoff and rotate this same native slot only after fresh source/current-status/ownership admission of an unassigned outside target.",
+  "model_actual": "GPT-5.6 Sol",
+  "reasoning_actual": "UNVERIFIED",
+  "model_requested": "GPT-6",
+  "reasoning_requested": "maximum"
+}

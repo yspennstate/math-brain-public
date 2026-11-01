@@ -1,0 +1,2 @@
+STATE: A070 stage5 saved: A069 adaptive history and A088 conditional-flag obstruction independently HOLD; one all-depth flag bill proved; fixed signed surplus>9/4;1568 exact checks PASS;FEI OPEN, new review pending.
+NEXT: A069/A088/A094 review; pay cumulative positive core-reference excess on longer unequal history from one unused child bank, keeping original R, old debits, single flag allowance and both terminals.

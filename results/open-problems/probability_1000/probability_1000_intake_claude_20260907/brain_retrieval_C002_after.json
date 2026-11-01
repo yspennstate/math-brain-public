@@ -1,0 +1,346 @@
+{
+  "recorded_at": "2026-09-07T07:44:59Z",
+  "phase": "after",
+  "own_nodes": 6,
+  "nodes": [
+    {
+      "id": "claim_185035ae5eeece9055619359a405033fda86bdf4d5fb573477a7612a4ca8b65a",
+      "title": "theta(p) sigma^2(p) is nondecreasing in p for random walk on the supercritical percolation cluster",
+      "metadata": {
+        "artifact_digest": "sha256:7ca693f41b58dc937f214984f88868ec53cbf2b1ac91190a10e3345bcae72591",
+        "artifact_path": "objects/sha256/7c/7ca693f41b58dc937f214984f88868ec53cbf2b1ac91190a10e3345bcae72591.md",
+        "bundle_digest": "sha256:cfe6e94ea6520815e3516fbd60cfa6f94788bb7274b9394099dad8fccbdce9b6",
+        "bundle_entry_key": "cond",
+        "bundle_id": "population.probability-intake-claude-reductions-and-two-lemmas-c002",
+        "claim_kind": "lemma",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_003.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.percolation:effective-conductivity-theta-times-sigma-squared-is-nondecreasing-in-p",
+        "overlay_schema_version": 1,
+        "proof_text": "Couple all p at once by i.i.d. uniform edge labels U_e and declare e open at level p iff U_e <= p; increasing p only adds edges. The homogenised conductivity of the random conductance model with conductance 1 on open edges and 0 on closed edges equals a fixed normalising constant times theta(p) sigma^2(p): the effective conductivity per unit volume is the density of the conducting phase times the diffusion constant of the walk on it, closed-edge sites contributing nothing. The homogenised conductivity is the infimum over correctors of the expected Dirichlet energy per unit volume, and adding conductors increases every Dirichlet energy (Rayleigh's monotonicity principle), hence increases the infimum. The normalising constant does not depend on p. Therefore theta(p) sigma^2(p) is nondecreasing. The same argument gives nothing for sigma^2 alone because theta(p) is itself increasing; near p_c the product bound only yields sigma^2(p) >= theta(p') sigma^2(p')/theta(p) for p > p'.",
+        "release_manifest_digest": "sha256:6a47bdc28d86e10df75c402ab20e1bd1b8be36962035f07c56f136f2a7f92809",
+        "revision_digest": "sha256:185035ae5eeece9055619359a405033fda86bdf4d5fb573477a7612a4ca8b65a",
+        "source_id": "owner-probability-intake-claude-20260907:cond",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    },
+    {
+      "id": "claim_d872789453c08f9a8db15d0be9e0cd2ea9565fcb9844d0e27604816a854697bd",
+      "title": "The optimal revealment of iterated 3-majority on 3^k bits decays like n^{-sigma} with sigma in [log(6/5)/log 3, 1 - log 2/log 3]",
+      "metadata": {
+        "artifact_digest": "sha256:2ed85dfd635d103b7ba6b178a1eed649f13df0c7f51e38b41ac71868410ead01",
+        "artifact_path": "objects/sha256/2e/2ed85dfd635d103b7ba6b178a1eed649f13df0c7f51e38b41ac71868410ead01.md",
+        "bundle_digest": "sha256:cfe6e94ea6520815e3516fbd60cfa6f94788bb7274b9394099dad8fccbdce9b6",
+        "bundle_entry_key": "maj",
+        "bundle_id": "population.probability-intake-claude-reductions-and-two-lemmas-c002",
+        "claim_kind": "lemma",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_003.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.boolean:iterated-three-majority-revealment-exponent-between-0166-and-0369",
+        "overlay_schema_version": 1,
+        "proof_text": "Greedy revealment: at each level a given child is one of the two evaluated first with probability 2/3, or is the third child with probability 1/3 and is then evaluated only if the first two disagree, which for independent uniform bits happens with probability 1/2; so the probability that a fixed leaf is read is (2/3 + 1/6)^k = (5/6)^k. Influence: flipping a leaf flips the output iff at every level above it the two sibling subtrees disagree, each with probability 1/2 independently across levels, giving 2^{-k}. Theorem VIII.7 of the source for the {-1,1}-valued balanced function (Var f = 1) with n max_i I_i = 3^k 2^{-k} gives delta >= (2/3)^k. Exponents follow from n = 3^k.",
+        "release_manifest_digest": "sha256:6a47bdc28d86e10df75c402ab20e1bd1b8be36962035f07c56f136f2a7f92809",
+        "revision_digest": "sha256:d872789453c08f9a8db15d0be9e0cd2ea9565fcb9844d0e27604816a854697bd",
+        "source_id": "owner-probability-intake-claude-20260907:maj",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    },
+    {
+      "id": "claim_def01164d3f67449c92bcee8979e251c7da83c7efa8bd0511d7ee8e29a3877de",
+      "title": "Biskup's Conjecture 16.5 (size of deep extremal level sets of the 2D DGFF) is equivalent to his Conjecture 16.6 given uniform integrability of deep cluster sizes",
+      "metadata": {
+        "artifact_digest": "sha256:2fb61e97b66dc55c8689cde24b2a9684b1c5e9dd03df5d79b7794c74607f2a3b",
+        "artifact_path": "objects/sha256/2f/2fb61e97b66dc55c8689cde24b2a9684b1c5e9dd03df5d79b7794c74607f2a3b.md",
+        "bundle_digest": "sha256:cfe6e94ea6520815e3516fbd60cfa6f94788bb7274b9394099dad8fccbdce9b6",
+        "bundle_entry_key": "deep",
+        "bundle_id": "population.probability-intake-claude-reductions-and-two-lemmas-c002",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_003.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.gaussian:deep-extremal-level-set-conjecture-equivalent-to-cluster-size-limit-given-uniform-integrability",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:6a47bdc28d86e10df75c402ab20e1bd1b8be36962035f07c56f136f2a7f92809",
+        "revision_digest": "sha256:def01164d3f67449c92bcee8979e251c7da83c7efa8bd0511d7ee8e29a3877de",
+        "source_id": "owner-probability-intake-claude-20260907:deep",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    },
+    {
+      "id": "claim_2d3b40df0c58f5d3b2bbd0fa402d7c9976750a9ca1cfc349a9c802bd75875b7b",
+      "title": "Curien's question (peeling notes, after Corollary 27) is equivalent to a divergence criterion for the perimeter walk of a general critical weight sequence",
+      "metadata": {
+        "artifact_digest": "sha256:df83450cd6316d68966737f30fe1137298234f489ec3017a7dc73081b9acf19d",
+        "artifact_path": "objects/sha256/df/df83450cd6316d68966737f30fe1137298234f489ec3017a7dc73081b9acf19d.md",
+        "bundle_digest": "sha256:cfe6e94ea6520815e3516fbd60cfa6f94788bb7274b9394099dad8fccbdce9b6",
+        "bundle_entry_key": "peel",
+        "bundle_id": "population.probability-intake-claude-reductions-and-two-lemmas-c002",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_003.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.planarmaps:filled-in-peeling-exhausts-the-map-iff-swallowing-series-diverges",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:6a47bdc28d86e10df75c402ab20e1bd1b8be36962035f07c56f136f2a7f92809",
+        "revision_digest": "sha256:2d3b40df0c58f5d3b2bbd0fa402d7c9976750a9ca1cfc349a9c802bd75875b7b",
+        "source_id": "owner-probability-intake-claude-20260907:peel",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    },
+    {
+      "id": "claim_6230ec4ab3502ecf92a06652957f7c9770670d92d6d31d26bfa347415e149608",
+      "title": "For a moment-determinate limit such as ISE, convergence of all r-point functions of a random probability measure gives convergence in distribution of the measure",
+      "metadata": {
+        "artifact_digest": "sha256:131a262d5adc56a8c1a30ed25c07a5c12d0e300cd0b98364aae82e6588ac1d7a",
+        "artifact_path": "objects/sha256/13/131a262d5adc56a8c1a30ed25c07a5c12d0e300cd0b98364aae82e6588ac1d7a.md",
+        "bundle_digest": "sha256:cfe6e94ea6520815e3516fbd60cfa6f94788bb7274b9394099dad8fccbdce9b6",
+        "bundle_entry_key": "ise",
+        "bundle_id": "population.probability-intake-claude-reductions-and-two-lemmas-c002",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_003.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.branching:moment-determinate-limit-turns-r-point-convergence-into-measure-convergence",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:6a47bdc28d86e10df75c402ab20e1bd1b8be36962035f07c56f136f2a7f92809",
+        "revision_digest": "sha256:6230ec4ab3502ecf92a06652957f7c9770670d92d6d31d26bfa347415e149608",
+        "source_id": "owner-probability-intake-claude-20260907:ise",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    },
+    {
+      "id": "claim_110a66c93e4dd42c4a0d76977a295abe757ed7b0e54010dfed1a062b28c733b0",
+      "title": "Quenched invariance principle on the vacant set of random interlacements for every u < u* as a corollary of Procaccia-Rosenthal-Sapozhnikov plus the 2023 sharpness theorem (conditional)",
+      "metadata": {
+        "artifact_digest": "sha256:f71f5f1cf6fe1a52c520793affd8f23397f16e7554c04c34e567403deedf8a93",
+        "artifact_path": "objects/sha256/f7/f71f5f1cf6fe1a52c520793affd8f23397f16e7554c04c34e567403deedf8a93.md",
+        "bundle_digest": "sha256:cfe6e94ea6520815e3516fbd60cfa6f94788bb7274b9394099dad8fccbdce9b6",
+        "bundle_entry_key": "qip",
+        "bundle_id": "population.probability-intake-claude-reductions-and-two-lemmas-c002",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_003.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.percolation:vacant-set-quenched-invariance-principle-all-u-from-prs-plus-sharpness",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:6a47bdc28d86e10df75c402ab20e1bd1b8be36962035f07c56f136f2a7f92809",
+        "revision_digest": "sha256:110a66c93e4dd42c4a0d76977a295abe757ed7b0e54010dfed1a062b28c733b0",
+        "source_id": "owner-probability-intake-claude-20260907:qip",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    }
+  ],
+  "touching_edges": [
+    {
+      "source": "claim_d872789453c08f9a8db15d0be9e0cd2ea9565fcb9844d0e27604816a854697bd",
+      "target": "claim_babee7a24db8a34dce03729ad06ee852b23130d26be640eb29cd8ff28a96fd6e",
+      "kind": "semantic_association"
+    },
+    {
+      "source": "claim_2d3b40df0c58f5d3b2bbd0fa402d7c9976750a9ca1cfc349a9c802bd75875b7b",
+      "target": "claim_a817fd3bd60fb611411430f5873c7895daeb62041db2abce151948ae4ec3b32d",
+      "kind": "depends_on"
+    },
+    {
+      "source": "claim_6230ec4ab3502ecf92a06652957f7c9770670d92d6d31d26bfa347415e149608",
+      "target": "claim_6c8676d825f4a55fd3a14f69b1c08c5a1e3f9cf9297d3f4f48fbb82aef6f2234",
+      "kind": "analogous_to"
+    },
+    {
+      "source": "claim_185035ae5eeece9055619359a405033fda86bdf4d5fb573477a7612a4ca8b65a",
+      "target": "claim_b53abc659df14e5d8ddde5b07705b69af963b5877f6be1a6fcbb51f59290b3ea",
+      "kind": "depends_on"
+    },
+    {
+      "source": "claim_def01164d3f67449c92bcee8979e251c7da83c7efa8bd0511d7ee8e29a3877de",
+      "target": "claim_4324253cbb5a5186615b30485e6b8e83210d13ca961a62180127bff0f5d09422",
+      "kind": "analogous_to"
+    },
+    {
+      "source": "claim_185035ae5eeece9055619359a405033fda86bdf4d5fb573477a7612a4ca8b65a",
+      "target": "claim_110a66c93e4dd42c4a0d76977a295abe757ed7b0e54010dfed1a062b28c733b0",
+      "kind": "analogous_to"
+    },
+    {
+      "source": "claim_110a66c93e4dd42c4a0d76977a295abe757ed7b0e54010dfed1a062b28c733b0",
+      "target": "claim_b53abc659df14e5d8ddde5b07705b69af963b5877f6be1a6fcbb51f59290b3ea",
+      "kind": "depends_on"
+    }
+  ],
+  "probes": [
+    {
+      "control": "positive",
+      "query": "Adding conductors to a random medium can only raise the effective conductivity, which is the cluster density times the walk's diffusion constant",
+      "target": "effective-conductivity-theta-times-sigma-squared-is-nondecreasing-in-p",
+      "hits": [
+        "math:probability.percolation:effective-conductivity-theta-times-sigma-squared-is-nondecreasing-in-p",
+        "math:harvest.wikipedia:wiki-first-passage-percolation",
+        "math:harvest.wikipedia:wiki-brownian-motion",
+        "math:harvest.arxiv.owner-math:arxiv-2404-19583-theorem-4-65c577",
+        "math:information-theory.core:mutual-information"
+      ],
+      "target_ranks": [
+        1
+      ],
+      "own_ranks": [
+        1
+      ]
+    },
+    {
+      "control": "positive",
+      "query": "Recursive majority of three: a query strategy that reads a leaf with probability five sixths per level, and an influence bound that caps how small any strategy's revealment can be",
+      "target": "iterated-three-majority-revealment-exponent-between-0166-and-0369",
+      "hits": [
+        "math:probability.boolean:iterated-three-majority-revealment-exponent-between-0166-and-0369",
+        "math:game-theory.core:finite-normal-form-game",
+        "math:harvest.arxiv.owner-math:arxiv-2302-05605-theorem-1-5-25b03b",
+        "math:harvest.arxiv.owner-math:arxiv-2304-07612-lemma-3-3-34f984",
+        "math:statistics.estimation:the-gross-exposure-ladder-for-ensemble-stacking-where-long-only-sits"
+      ],
+      "target_ranks": [
+        1
+      ],
+      "own_ranks": [
+        1
+      ]
+    },
+    {
+      "control": "positive",
+      "query": "Counting points of the deep level set below the field's top equals the extremal measure only if the cluster sizes at large depth are uniformly integrable",
+      "target": "deep-extremal-level-set-conjecture-equivalent-to-cluster-size-limit-given-uniform-integrability",
+      "hits": [
+        "math:probability.gaussian:deep-extremal-level-set-conjecture-equivalent-to-cluster-size-limit-given-uniform-integrability",
+        "math:harvest.wikipedia:wiki-falconer-s-conjecture",
+        "math:analysis.core:fundamental-theorem-calculus-2",
+        "math:harvest.wikipedia:wiki-egorov-s-theorem",
+        "math:algebra.fields:characteristic-of-a-field"
+      ],
+      "target_ranks": [
+        1
+      ],
+      "own_ranks": [
+        1
+      ]
+    },
+    {
+      "control": "positive",
+      "query": "A peeling exploration swallows every boundary vertex eventually exactly when the sum of per-step swallowing chances along the perimeter walk diverges",
+      "target": "filled-in-peeling-exhausts-the-map-iff-swallowing-series-diverges",
+      "hits": [
+        "math:probability.planarmaps:filled-in-peeling-exhausts-the-map-iff-swallowing-series-diverges",
+        "math:analysis.series:alternating-series-test-leibniz",
+        "math:combinatorics.isoperimetry:harper-vertex-isoperimetric-inequality",
+        "math:harvest.arxiv.owner-math:arxiv-2412-02666-theorem-1-4-9dd767",
+        "math:harvest.arxiv.owner-math:arxiv-2412-02666-theorem-1-5-924cd9"
+      ],
+      "target_ranks": [
+        1
+      ],
+      "own_ranks": [
+        1
+      ]
+    },
+    {
+      "control": "positive",
+      "query": "Convergence of all correlation functions of a random measure to those of a limit determined by its moments forces convergence in law of the measure",
+      "target": "moment-determinate-limit-turns-r-point-convergence-into-measure-convergence",
+      "hits": [
+        "math:probability.branching:moment-determinate-limit-turns-r-point-convergence-into-measure-convergence",
+        "math:harvest.wikipedia:wiki-dominated-convergence-theorem",
+        "math:probability.core:convergence-modes-definition",
+        "math:harvest.arxiv.owner-math:arxiv-1409-1402-theorem-3-5-cdc6af",
+        "math:harvest.wikipedia:wiki-egorov-s-theorem"
+      ],
+      "target_ranks": [
+        1
+      ],
+      "own_ranks": [
+        1
+      ]
+    },
+    {
+      "control": "positive",
+      "query": "Homogenization of the walk on the vacant set throughout the supercritical regime follows by combining the decoupling framework with the equality of the critical parameters",
+      "target": "vacant-set-quenched-invariance-principle-all-u-from-prs-plus-sharpness",
+      "hits": [
+        "math:probability.percolation:vacant-set-quenched-invariance-principle-all-u-from-prs-plus-sharpness",
+        "math:probability.percolation:effective-conductivity-theta-times-sigma-squared-is-nondecreasing-in-p",
+        "math:harvest.arxiv.owner-math:arxiv-2607-29403-definition-3-9-c926f0",
+        "math:harvest.arxiv.owner-math:arxiv-2512-19063-corollary-3-5-9c99d6",
+        "math:harvest.wikipedia:wiki-matiyasevich-s-theorem"
+      ],
+      "target_ranks": [
+        1
+      ],
+      "own_ranks": [
+        1,
+        2
+      ]
+    },
+    {
+      "control": "negative",
+      "query": "Prove that every bounded monotone sequence of reals converges",
+      "target": null,
+      "hits": [
+        "math:analysis.core:completeness-least-upper-bound",
+        "math:analysis.core:bolzano-weierstrass-theorem",
+        "math:harvest.wikipedia:wiki-monotone-convergence-theorem",
+        "math:analysis.core:cauchy-sequence-completeness",
+        "math:analysis.series:dirichlets-test-for-series"
+      ],
+      "target_ranks": [],
+      "own_ranks": []
+    },
+    {
+      "control": "negative",
+      "query": "Classify finite simple groups of order less than 100",
+      "target": null,
+      "hits": [
+        "math:harvest.wikipedia:wiki-classification-of-finite-simple-groups",
+        "math:algebra.groups:classification-of-finite-abelian-groups",
+        "math:harvest.wikipedia:wiki-sylow-theorems",
+        "math:harvest.wikipedia:wiki-simple-group",
+        "math:algebra.groups:cyclic-group-definition"
+      ],
+      "target_ranks": [],
+      "own_ranks": []
+    }
+  ],
+  "scope": "Canonical retrieval receipt only; no firing, action, theorem, novelty or downstream benefit certificate"
+}

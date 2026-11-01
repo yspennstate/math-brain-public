@@ -1,0 +1,82 @@
+{
+  "target": "C0052",
+  "recorded_title": "Non-triviality of the scaling limit of the three-dimensional Ising model",
+  "current_openness": "UNKNOWN",
+  "parent_problem_solved_by_this_packet": false,
+  "primary": {
+    "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+    "author": "Hugo Duminil-Copin",
+    "url": "https://arxiv.org/pdf/1707.00520v1",
+    "locator": "printed page 94 (PDF index 93), Conjecture 6, equations (7.1)-(7.2)",
+    "short_quote": "Prove that the three-dimensional Ising model is non-trivial",
+    "verification": "Primary PDF text inspected directly; source hash not freshly recomputed.",
+    "intake_reported_sha256": "cc442344d0cc21c5d57163719b06dfaf1d243dee8731716bf89d21c593f98a5b"
+  },
+  "exact_formulation": {
+    "model": "Free, translation-invariant, spin-flip symmetric zero-field nearest-neighbour ferromagnetic Ising state on Z^3, with 0<beta<beta_c.",
+    "G": "G_beta(x,y)=E_beta[sigma_x sigma_y]",
+    "U4": "E_beta[sigma_0 sigma_x sigma_y sigma_z] minus the three pair-correlation products; repeated labels are retained.",
+    "chi": "chi(beta)=sum_x G_beta(0,x)",
+    "xi": "xi(beta)=[lim_n -(1/n)log G_beta(0,n e1)]^(-1)",
+    "g": "g(beta)=sum_{x,y,z} U4(0,x,y,z)/(chi(beta)^2 xi(beta)^3)<=0",
+    "target": "g(beta) does not tend to zero as beta increases to beta_c from below.",
+    "quantifier": "There is epsilon>0 such that for every delta>0 there is beta in (beta_c-delta,beta_c) with -g(beta)>=epsilon.",
+    "auxiliary_target": "A uniform critical smeared fourth-cumulant deficit plus nondegenerate field convergence. This is a separate sufficient route, not an asserted equivalence to g."
+  },
+  "historical_checks": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+      "line": 52,
+      "status": "unreviewed; attempted_unsolved; primary locator recovered"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "line": 42,
+      "status": "C0052-A001: second-moment variance gap not closed; no independent check recorded"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md",
+      "line": 592,
+      "status": "attempted_un; no formal theorem receipt recovered"
+    },
+    {
+      "paths": [
+        "probability_1000_attempts_H_20260912",
+        "probability_1000_attempts_I_20260914"
+      ],
+      "status": "targeted exact-ID search returned no C0052 record; not an exhaustive owner-solved/retired check"
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "status": "no C0052 assignment returned by exact-ID search"
+    }
+  ],
+  "primary_literature_checked": [
+    {
+      "url": "https://arxiv.org/html/2112.04248v2",
+      "locator": "Theorem 5.4; Sections 7,8,11",
+      "scope": "zero-field ferromagnetic current identity and explicit 3D gap; 2022 context is not a current-status certificate"
+    },
+    {
+      "url": "https://arxiv.org/html/1912.07973v2",
+      "locator": "Theorem 1.2 and Proposition 1.4",
+      "scope": "d=4 Gaussianity; dimension and upper-bound direction do not supply a d=3 lower bound"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1612.02436v4",
+      "locator": "abstract and conformal-block setup",
+      "scope": "bootstrap CFT calculation; does not provide the lattice convergence/current second-moment bridge"
+    }
+  ],
+  "status_search": "Two bounded primary-literature searches plus named local records; insufficient to certify current openness or novelty.",
+  "served_model_evidence": {
+    "requested": "gpt-6.1-sol, maximum reasoning, Fast tier",
+    "response_side_identity": "UNAVAILABLE in this tool context",
+    "author_native_identity": "w478",
+    "referee": "w479",
+    "different_model_review_gate": "NOT SATISFIED"
+  },
+  "formal_check_receipt": null,
+  "paired_proof_read": true,
+  "independent_checkpoint": "ATTEMPT.md L1/L2 saved before any paired proof read"
+}

@@ -1,0 +1,16 @@
+2026-10-12
+Command: lake env lean ~/brain_workers/TRIO_1011/op/F0096/ForcedDegree.lean
+Working directory: ~/lean_verify
+Shared checker reported waiting for a slot, then "slot 0 taken after 240 s; running the check".
+Final process exit code: 0. No Lean diagnostics.
+Imported only Mathlib.Data.Finset.Card. Used ordinary decide for the closed Nat inequality; no native_decide, sorry, or custom axioms.
+Scope: finite neighbor-set cardinality contradiction in Lemma 2.1 only. The probabilistic theorem is checked by the written mathematical proofs, not formalized in Lean.
+
+2026-10-12 second attempt
+Command: lake env lean ~/brain_workers/TRIO_1011/op/F0096/PlantedMixing.lean
+Working directory: ~/lean_verify
+Shared checker reported waiting for a slot, then "slot 0 taken after 105 s; running the check".
+Final process exit code: 0. No Lean diagnostics.
+Imports: Mathlib.Data.Real.Basic and Mathlib.Tactic.Ring.
+Both degree-pair rank-one and degree-three-discrepancy numerator identities were kernel checked using ring. No sorry, native_decide, or custom axioms.
+Scope: algebraic identities only; no probabilistic or Hamiltonicity formalization is claimed.

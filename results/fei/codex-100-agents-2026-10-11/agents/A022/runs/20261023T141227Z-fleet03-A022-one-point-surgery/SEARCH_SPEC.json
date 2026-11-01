@@ -1,0 +1,29 @@
+{
+  "helper_version": "A022-stage11-selector-v1; exact.py/gu.py/v.py byte copies of stage10",
+  "family": "actual Boolean mux h(y,z)=a(z) if y=0 else c(z); epsilon absorbed into c; and g tensor2 with two adjacent controlled edits",
+  "domain": "ALL 16 by16 ordered Boolean controller pairs on two physical bits; pilot pairs (1,6),(3,5),(7,1),(0,15); adjacent seeds at (0,1) and (1,3), four pairs each",
+  "case_count": {
+    "pilot": 4,
+    "main": 256,
+    "adjacent": 8
+  },
+  "symmetry": "NONE: all ordered pairs retained; epsilon absorbed exactly by complementing c",
+  "arithmetic": "integer FWHT, exact Fraction, prime-log vectors and 40-term outward atanh bounds; no floating point signs",
+  "memory_estimate_MB": 100,
+  "maximum_runtime_seconds": {
+    "pilot": 60,
+    "main": 60,
+    "adjacent": 60,
+    "independent": 60
+  },
+  "frozen_hypotheses": [
+    "R=Delta_y V(h)-J_y(h) is nonnegative",
+    "G_z R is nonpositive"
+  ],
+  "purpose": "resolve signs exactly and derive actual CONTROL signed-drift identity; not a universal GU proof",
+  "source_hashes": {
+    "exact.py": "5fd9775b67af66eaa224add3592d3b21e19960724066226589c2d74610ab0c62",
+    "gu.py": "e02c9beaa28b1d1e84d46640026dd71cb2d9822c80061fe632cd0cec114daa8f",
+    "v.py": "2fb4cd0bd626d8f98e0a5d6904255aef315918f3682da1d8b9fd7e2b838db2d8"
+  }
+}

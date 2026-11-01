@@ -1,0 +1,56 @@
+{
+  "gate": {
+    "id": "w514-G3-peer-and-hypothesis-audit",
+    "reason": "new paired gadget proof and source/card delta mismatch",
+    "core_dimensions": [
+      2,
+      4
+    ],
+    "gadget_size": 3,
+    "max_physical_dimension": 15,
+    "max_truth_table_entries": 32768,
+    "max_wall_seconds": 55,
+    "no_gpu": true,
+    "no_training": true,
+    "no_function_search": true
+  },
+  "delta_counterexample": {
+    "function": "AND3, +1 only at all-positive input",
+    "rho0": 4.867668746754797,
+    "coordinate_input_bias": 0.5,
+    "maximal_flip_influence": 0.25,
+    "wrong_input_bias_ceiling": 4.0,
+    "correct_influence_ceiling": 7.245112497836532,
+    "verdict": "delta must denote maximal influence, not uniform input bias"
+  },
+  "peer_composition_rows": [
+    {
+      "core_m": 2,
+      "physical_dimension": 9,
+      "truth_table_entries": 512,
+      "all_influences_max": 0.375,
+      "selected_influence": 0.125,
+      "selected_increment_ratio": 3.5356601275693293,
+      "proved_ratio_lower_bound": 1.0,
+      "empty_selector_sector_B": 0.2728343109321616,
+      "sector_lower_bound": 0.125,
+      "H_over_I": 2.1778732139766475,
+      "composition_entropy_error": 8.881784197001252e-16
+    },
+    {
+      "core_m": 4,
+      "physical_dimension": 15,
+      "truth_table_entries": 32768,
+      "all_influences_max": 0.28125,
+      "selected_influence": 0.03125,
+      "selected_increment_ratio": 5.022816468051246,
+      "proved_ratio_lower_bound": 2.0,
+      "empty_selector_sector_B": 0.11219452094358466,
+      "sector_lower_bound": 0.0625,
+      "H_over_I": 2.5339282898693503,
+      "composition_entropy_error": 0.0
+    }
+  ],
+  "seconds": 0.3043517000041902,
+  "scope": "bounded truth-table diagnostics; independent mathematical audit in AUDIT_W513.md"
+}

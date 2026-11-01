@@ -1,0 +1,115 @@
+[
+  {
+    "claim_id": "A085-SIGNED-ADMISSION-EXACT-SIGN-BOUNDARY",
+    "version": 1,
+    "exact_statement": "For the actual two-bit Boolean table (-1,1,1,1), squared spectral law p=(1/4,1/4,1/4,1/4), A one nonempty atom and compatible calibrated q_b=(1/4,(3/4-b)/2,(3/4-b)/2,b), 0<b<1/3, the sharp floor-1/3 signed CE price is Delta(b)=(1/4)log2(432*b*(3/4-b)^2/25). Its interior sign boundary is bcrit=(7-2*sqrt(6))/12. For every integer m>=4 the two adjacent dyadic brackets bminus=floor(2^m*bcrit)/2^m and bplus=bminus+2^-m satisfy all hypotheses, have TV=2^-m and opposite price signs, with the same optimal target. Dimension two is minimal for this calibrated interior two-cell Boolean class. In the fixed m=4..160 Python binary64 conversion diagnostic, the first coincident converted bracket is m=58. This is a precision counterexample, not an FEI counterexample.",
+    "hypotheses": [
+      "Uniform Boolean AND2 seed; arbitrary normalized calibrated references, not required to be Boolean spectra",
+      "A fixed nonempty atom; fixed vacuum 1/4 and within-cell conditional profiles",
+      "Finite-CE incoming 0<b<1/3; all logarithms bits",
+      "Binary64 first is restricted to the frozen bracket sequence and observed Python conversion"
+    ],
+    "statement_sha256": "7cc6fd9a17103f1520d62bb25b328d766e2e745543b1c9757986230420f79a92",
+    "contributors": [
+      "A085"
+    ],
+    "proof_source": {
+      "path": "agents\\A085\\runs\\20261027T020848Z-fleet04-A085-certificate-adversary\\PROOF.md",
+      "sha256": "57a6f5f082090c81d1e16eeefde0c64aeef260269e207e24c3a0f2ec2aee1885",
+      "formal_verification": "NOT_CLAIMED; Lean algebra attempt timed out"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A085 separate implementation",
+        "independent_person": false,
+        "artifact": "out/INDEPENDENT_CHECKS.json",
+        "result": "790 exact assertions PASS; independent integer-square-root brackets"
+      },
+      {
+        "reviewer": "A073",
+        "at": "2026-10-27T12:39:38.817576+00:00",
+        "result": "HOLDS_UNCHANGED_SCOPE",
+        "independent_person": true,
+        "contributor_conflict": false,
+        "source_statement_sha256": "7cc6fd9a17103f1520d62bb25b328d766e2e745543b1c9757986230420f79a92",
+        "artifact": "PROOF.md sections1,2,4; code/invoice.py; code/paired.py; out/RESULT.json; out/PAIRED_RESULT.json",
+        "independence": "Full Boolean Walsh and direct full-CE reconstruction, integer bisection primary versus separate radical/product implementation; no A085 helper imported",
+        "scope": "Exact sign boundary/all-m dyadic opposite signs/minimal dimension; observed first alias only in declared m4..160 sequence",
+        "extension_separate": "New quantitative denominator margin is A073 claim, not a repair required for original A085 statement"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_BY_A073_UNCHANGED_SCOPED_STATEMENT",
+    "supersedes": [],
+    "refutes": [
+      "Unclaimed extension: fixed absolute incoming-mass precision suffices to certify every signed compatible admission sign"
+    ],
+    "first_unproved_line": "Construct a useful universally mandatory arbitrary-core profile/class and influence-priced original full source with sufficient CURRENT unused capacity.",
+    "next_consumers": [
+      "A097",
+      "A093",
+      "A094",
+      "A098",
+      "A099",
+      "B17",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A073-RATIONAL-SIGNED-INVOICE-SEPARATION",
+    "version": 1,
+    "exact_statement": "For the actual uniform AND2 truth table (-1,1,1,1), p=(1/4)^4, calibrated references q_b=(1/4,(3/4-b)/2,(3/4-b)/2,b), and the compatible mass floor1/3, the full signed CE invoice is Delta=(1/4)log2(G), G=432b(3/4-b)^2/25. For every rational b=k/d in[1/8,1/4], d>0 integer (not necessarily reduced), its nonzero sign is the sign of N=27k(3d-4k)^2-25d^3=(3k-d)(144k^2-168kd+25d^2), and |Delta|>=1/(300d^2). At supplied disjoint full-terminal seed weight3/8 and positive actual reach rho the magnitude is>=rho/(800d^2); zero weights give exact zero. Thus 2m+11 absolute precision bits suffice for each weight3/8 unit-reach adjacent dyadic m>=4 invoice, while exact integer signs require no logarithm refinement. For any finite list of these invoices with rational nonnegative reaches/weights and finite rational-log current CE/old bills, the SAME-original payment inequality reduces exactly to an integer-product comparison after clearing positive denominators; all negative prices, BOTH terminal laws and old U remain. Explicit size holds are UNRESOLVED, never sign verdicts. A concrete original AND2 capacity B=(5/2)I with I=1, oldU=1/4, retains reserve>1/8 throughout this interval after full admission, certified by512<625; matched q=p at valid zero-unused B=9/4,U=1/4 rejects the positive admission exactly. No new arbitrary-core source, necessary policy or universal FEI constant is asserted.",
+    "hypotheses": [
+      "Uniform actual AND2 seed; normalized references need not themselves be Boolean spectra; bits",
+      "Rational b=k/d in closed[1/8,1/4], d>0; fixed vacuum1/4 and CURRENT profiles; prescribed target floor1/3",
+      "Full terminal weighting uses supplied disjoint decomposition and actual nonnegative reaches; beta3/8 is explicit supplied-interface condition",
+      "Aggregate exact test uses rational-log finite costs; positive bases; all previous bills and BOTH full terminals retained; no source renewal"
+    ],
+    "statement_sha256": "f34ae70c9df589ca5a586e95d05bbb130eb9c04e836d61874a31da36b2c6c1dd",
+    "contributors": [
+      "A073"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/invoice.py",
+      "code/paired.py",
+      "code/full_account.py",
+      "out/RESULT.json",
+      "out/PAIRED_RESULT.json",
+      "out/FULL_ACCOUNT_RESULT.json",
+      "out/SELECTED_CERTIFICATES.json",
+      "out/M58_FIXTURE.json"
+    ],
+    "proof_dependencies": [
+      "A085-SIGNED-ADMISSION-EXACT-SIGN-BOUNDARY@1 (invoice independently reconstructed; original scoped claim accepted unchanged)"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A073 separate implementation",
+        "independent_person": false,
+        "result": "PASS",
+        "artifact": "out/PAIRED_RESULT.json"
+      },
+      {
+        "reviewer": "Lean4.35.0 kernel",
+        "result": "TWO_CONCRETE_SIGNS_PASS_NO_AXIOMS",
+        "artifact": "out/COMPILER.json",
+        "scope": "Two concrete m58 integer signs only, NOT the uniform separation theorem or full account"
+      }
+    ],
+    "status": "UNIFORM_PROSE_PROOF_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Supply a useful REQUIRED arbitrary-core admission/source and prove its full cost fits ACTUAL unused original capacity after query KL and old bills; FEI OPEN.",
+    "next_consumers": [
+      "A085",
+      "A097",
+      "A094",
+      "A050",
+      "A011",
+      "A074",
+      "B15",
+      "B20"
+    ]
+  }
+]

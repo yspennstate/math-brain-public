@@ -1,0 +1,12 @@
+{
+  "helper_version": "A060 exact sharpness checker v1",
+  "actual_Boolean_family": ["rare-switch chain F_d=(1-A_r)F_(d-1)+A_r y_d", "quadratic bent point flip at one a-bit selector cell"],
+  "parameter_domain": {"chain_truth_tables": [[1,1],[1,2],[1,3],[2,1],[2,2],[3,1]], "selector_truth_tables": [[1,2],[2,2],[3,2],[1,4],[2,4],[3,4],[1,6],[2,6]], "analytic_scales_k": [2,3,4,5,6,7,8]},
+  "case_count": "6 chain tables, 8 selector tables, 7 analytic chain scales; no exhaustive optimality claim",
+  "symmetry": "none; explicit origin events and fixed quadratic pairing",
+  "arithmetic": "integer FWHT; Fraction probabilities/influences; entropy equalities as rational linear combinations of log2(primes); all infinite claims analytic",
+  "memory_estimate_MB": 40,
+  "maximum_runtime_seconds": 60,
+  "pilot": "all finite tables are a single bounded pilot; no escalation",
+  "notes": "A059 already settled whole-subformula divergence; this is independent reproduction plus exact B and selector block refinement. No heavy job."
+}

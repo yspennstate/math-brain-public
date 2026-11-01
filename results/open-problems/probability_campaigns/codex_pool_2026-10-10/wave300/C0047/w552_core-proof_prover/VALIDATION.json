@@ -1,0 +1,283 @@
+{
+  "utc": "2026-10-10T07:11:49.174890+00:00",
+  "pid": 39160,
+  "command": "python -X utf8 ~/brain_workers/w552/validate.py",
+  "gate": {
+    "utc": "2026-10-10T07:11:49.055446+00:00",
+    "policy_path": "~\\brain_workers\\GATE.json",
+    "policy": {
+      "commit_floor_gb": 6.0,
+      "max_running": 500
+    },
+    "commit_spare_gb": 6.932159423828125,
+    "available_physical_gb": 3.8993453979492188,
+    "allowed": true,
+    "scope": "existing worker foreground validation only, no additional agent or pool slot",
+    "limits": {
+      "wall_seconds": 20,
+      "single_process": true,
+      "threads": 1,
+      "max_percolation_edges": 6,
+      "max_nonbacktracking_length": 6,
+      "gpu": false,
+      "training": false
+    },
+    "not_a_formal_or_mathematical_proof_receipt": true
+  },
+  "exact_russo_cases": 18,
+  "exact_bk_entry_checks": 294,
+  "min_exact_entry_slack": "3/625",
+  "numerical_norm_bootstrap_cases": 18,
+  "nonbacktracking_exact_matrix_checks": 21,
+  "finite_cases": [
+    {
+      "graph": "path4",
+      "p": "1/5",
+      "q": "21/100",
+      "alpha": 1.6180339887498947,
+      "norm_p": 1.362487910742456,
+      "norm_q": 1.3828352703285027,
+      "bootstrap_bound": 1.393201764609044
+    },
+    {
+      "graph": "path4",
+      "p": "1/2",
+      "q": "51/100",
+      "alpha": 1.6180339887498947,
+      "norm_p": 2.0855823048033115,
+      "norm_q": 2.1142013269428137,
+      "bootstrap_bound": 2.158419086184904
+    },
+    {
+      "graph": "path4",
+      "p": "4/5",
+      "q": "81/100",
+      "alpha": 1.6180339887498947,
+      "norm_p": 3.1031820894414075,
+      "norm_q": 3.143421416384671,
+      "bootstrap_bound": 3.2672315530985974
+    },
+    {
+      "graph": "triangle",
+      "p": "1/5",
+      "q": "21/100",
+      "alpha": 2.0,
+      "norm_p": 1.464,
+      "norm_q": 1.489678,
+      "bootstrap_bound": 1.5081588923685512
+    },
+    {
+      "graph": "triangle",
+      "p": "1/2",
+      "q": "51/100",
+      "alpha": 2.0,
+      "norm_p": 2.25,
+      "norm_q": 2.274898,
+      "bootstrap_bound": 2.356020942408377
+    },
+    {
+      "graph": "triangle",
+      "p": "4/5",
+      "q": "81/100",
+      "alpha": 2.0,
+      "norm_p": 2.856,
+      "norm_q": 2.869318,
+      "bootstrap_bound": 3.0290174783641604
+    },
+    {
+      "graph": "cycle4",
+      "p": "1/5",
+      "q": "21/100",
+      "alpha": 1.9999999999999998,
+      "norm_p": 1.4911999999999999,
+      "norm_q": 1.52088757,
+      "bootstrap_bound": 1.5370407018932646
+    },
+    {
+      "graph": "cycle4",
+      "p": "1/2",
+      "q": "51/100",
+      "alpha": 1.9999999999999998,
+      "norm_p": 2.5625,
+      "norm_q": 2.6025459700000004,
+      "bootstrap_bound": 2.7009222661396577
+    },
+    {
+      "graph": "cycle4",
+      "p": "4/5",
+      "q": "81/100",
+      "alpha": 1.9999999999999998,
+      "norm_p": 3.6752,
+      "norm_q": 3.70368037,
+      "bootstrap_bound": 3.9667737367457603
+    },
+    {
+      "graph": "diamond",
+      "p": "1/5",
+      "q": "21/100",
+      "alpha": 2.5615528128088303,
+      "norm_p": 1.6578413207216023,
+      "norm_q": 1.697260575578137,
+      "bootstrap_bound": 1.731366357204161
+    },
+    {
+      "graph": "diamond",
+      "p": "1/2",
+      "q": "51/100",
+      "alpha": 2.5615528128088303,
+      "norm_p": 2.9264244070554066,
+      "norm_q": 2.9669244799425556,
+      "bootstrap_bound": 3.163571779686184
+    },
+    {
+      "graph": "diamond",
+      "p": "4/5",
+      "q": "81/100",
+      "alpha": 2.5615528128088303,
+      "norm_p": 3.8399391995655106,
+      "norm_q": 3.8567201437189924,
+      "bootstrap_bound": 4.2588483406207684
+    },
+    {
+      "graph": "complete4",
+      "p": "1/5",
+      "q": "21/100",
+      "alpha": 3.0,
+      "norm_p": 1.812736,
+      "norm_q": 1.8618210053739999,
+      "bootstrap_bound": 1.9169856679535007
+    },
+    {
+      "graph": "complete4",
+      "p": "1/2",
+      "q": "51/100",
+      "alpha": 3.0,
+      "norm_p": 3.25,
+      "norm_q": 3.288883090294,
+      "bootstrap_bound": 3.6011080332409975
+    },
+    {
+      "graph": "complete4",
+      "p": "4/5",
+      "q": "81/100",
+      "alpha": 3.0,
+      "norm_p": 3.946816,
+      "norm_q": 3.9544586132140003,
+      "bootstrap_bound": 4.476901153036713
+    },
+    {
+      "graph": "star5",
+      "p": "1/5",
+      "q": "21/100",
+      "alpha": 2.0,
+      "norm_p": 1.4644749683231335,
+      "norm_q": 1.4913274012103652,
+      "bootstrap_bound": 1.5086629508667508
+    },
+    {
+      "graph": "star5",
+      "p": "1/2",
+      "q": "51/100",
+      "alpha": 2.0,
+      "norm_p": 2.443000468164691,
+      "norm_q": 2.4822200629996223,
+      "bootstrap_bound": 2.5684972687662024
+    },
+    {
+      "graph": "star5",
+      "p": "4/5",
+      "q": "81/100",
+      "alpha": 2.0,
+      "norm_p": 3.8259046063504956,
+      "norm_q": 3.8796581699903063,
+      "bootstrap_bound": 4.142912355654602
+    }
+  ],
+  "tree_constants": [
+    {
+      "d": 3,
+      "pc": 0.5,
+      "alpha": 2.8284271247461903,
+      "beta": 1.4142135623730951,
+      "coarse_certifies": false,
+      "nonbacktracking_certifies": true,
+      "critical_norm": 8.742640687119287,
+      "conditional_margin": 0.020220057259940423
+    },
+    {
+      "d": 4,
+      "pc": 0.3333333333333333,
+      "alpha": 3.4641016151377544,
+      "beta": 1.7320508075688772,
+      "coarse_certifies": false,
+      "nonbacktracking_certifies": true,
+      "critical_norm": 4.976067743425169,
+      "conditional_margin": 0.02900635094610967
+    },
+    {
+      "d": 5,
+      "pc": 0.25,
+      "alpha": 4.0,
+      "beta": 2.0,
+      "coarse_certifies": false,
+      "nonbacktracking_certifies": true,
+      "critical_norm": 3.75,
+      "conditional_margin": 0.03333333333333333
+    },
+    {
+      "d": 6,
+      "pc": 0.2,
+      "alpha": 4.47213595499958,
+      "beta": 2.23606797749979,
+      "coarse_certifies": true,
+      "nonbacktracking_certifies": true,
+      "critical_norm": 3.141640786499874,
+      "conditional_margin": 0.035587581927070185
+    },
+    {
+      "d": 7,
+      "pc": 0.16666666666666666,
+      "alpha": 4.898979485566356,
+      "beta": 2.449489742783178,
+      "coarse_certifies": true,
+      "nonbacktracking_certifies": true,
+      "critical_norm": 2.7764285466321486,
+      "conditional_margin": 0.03676020142487321
+    },
+    {
+      "d": 8,
+      "pc": 0.14285714285714285,
+      "alpha": 5.291502622129181,
+      "beta": 2.6457513110645907,
+      "coarse_certifies": true,
+      "nonbacktracking_certifies": true,
+      "critical_norm": 2.5317147851674626,
+      "conditional_margin": 0.03732297129435795
+    },
+    {
+      "d": 9,
+      "pc": 0.125,
+      "alpha": 5.656854249492381,
+      "beta": 2.8284271247461903,
+      "coarse_certifies": true,
+      "nonbacktracking_certifies": true,
+      "critical_norm": 2.3555658615255606,
+      "conditional_margin": 0.037523190963157586
+    },
+    {
+      "d": 10,
+      "pc": 0.1111111111111111,
+      "alpha": 6.0,
+      "beta": 3.0,
+      "coarse_certifies": true,
+      "nonbacktracking_certifies": true,
+      "critical_norm": 2.222222222222222,
+      "conditional_margin": 0.037500000000000006
+    }
+  ],
+  "before_coarse_tree_cases": 5,
+  "after_nonbacktracking_tree_cases": 8,
+  "elapsed_seconds": 0.12038069998379797,
+  "status": "PASS",
+  "proof_scope": "finite exact checks and numerical constants only; no infinite uniform-bound certificate"
+}

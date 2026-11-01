@@ -1,0 +1,3 @@
+# Narrow independent review request for w464
+
+Please check only `~/brain_workers/w461/ATTEMPT.md`, the q=3 finite-graph two-color-merge identity. Claim C0048-w461-01 says that, under Potts weight exp(K sum 1_{equal}) with color 1 fixed on B, conditioning on A={vertices of color 1 or 2} yields an Ising law on G[A] with J=K/2 and + boundary B, and A has the stated annealed marginal. Verify the edge decomposition for arbitrary finite graphs and fixed boundary. `verify_exact.py` exhausts nine triangle configurations, but enumeration is not a proof. Return KEEP/FIX/DROP for that identity only; critical discontinuity remains unproved. No theorem-grade bundle of my own lemma has been submitted.

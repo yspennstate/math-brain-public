@@ -1,0 +1,31 @@
+{
+  "claims": [
+    {
+      "claim_id": "B19-A094-HALF-PACKET-REVIEW",
+      "version": "v1",
+      "exact_statement": "Independent reconstruction accepts B05-A023-HALF-PACKET-INVARIANT-v1 at its declared fresh-fair/disjoint restriction-closed scope. The scalar half-packet inequality, augmented contraction, product subadditivity, restriction closure, and displayed GU/FEI implication are valid.",
+      "hypotheses": ["finite uniform Boolean cubes", "fresh fair selectors", "disjoint physical product blocks", "base signed characters and constants"],
+      "contributors": ["fleet01/B19"],
+      "proof_source": "REVIEW_PROOF.md; REPRODUCE.py; REPRODUCE.out",
+      "review_target": "B05-A023-HALF-PACKET-INVARIANT-v1",
+      "status": "INDEPENDENTLY_ACCEPTED_WITH_SCOPE_CLARIFICATION",
+      "first_unproved_line": "Extension of the augmented contraction to a shared or reused physical coordinate.",
+      "next_consumers": ["A023", "B20"]
+    },
+    {
+      "claim_id": "B19-A094-HALF-PACKET-CONSTANT",
+      "version": "v1",
+      "exact_statement": "On the same fresh-fair/disjoint restriction-closed class, c_dagger=29/2+2/ln2 suffices for contraction of L_{c,eta}+2Phi. Consequently G<=(33/2+2/ln2)I and H<=(35+4/ln2)I.",
+      "hypotheses": ["all hypotheses of B05-A023-HALF-PACKET-INVARIANT-v1", "0<eta<=1"],
+      "contributors": ["fleet01/B19"],
+      "proof_source": "REVIEW_PROOF.md section 3; REPRODUCE.py",
+      "review_records": [],
+      "status": "REVIEWER_PROVED_PENDING_FRESH_INDEPENDENT_REVIEW",
+      "first_unproved_line": null,
+      "next_consumers": ["A085", "A090", "A023", "B20"]
+    }
+  ],
+  "universal_gu": "OPEN",
+  "full_fei": "OPEN"
+}
+

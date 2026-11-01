@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B05",
+  "run_id": "20260925T032304Z-fleet02-B05-fiveSV-audit-r13",
+  "utc_start": "2026-09-25T03:23:04Z",
+  "utc_end": "2026-09-25T03:38:50.529Z",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_tex_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "source_pdf_blob": "8be3aae36ecad7a9dc9b7c95978aad09499f32d0",
+  "source_pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "refreshed_control_head": "bc34b7b1ebee71e5dfb47f68933243e8e09d85a0",
+  "passes_completed": [
+    "pass-1-forward-adversarial (complete locally; durable lines 1-340 plus local full JSONL)",
+    "pass-2-reverse-dependency (complete; durable full JSONL)"
+  ],
+  "verdict": {
+    "literal_source": "GAP_WITH_LOCAL_FALSE_WORDING",
+    "repaired_argument": "PASS_NO_FATAL_DEFECT_FOUND",
+    "density_claim": "270 K^2/s supported after repairs",
+    "halfmoment_claim": "77 K/sqrt(s) supported after repairs"
+  },
+  "fresh_findings": [
+    "C08 line398: density display needs a.e./critical-singleton version convention",
+    "C09 line613: J(R-a) is used before atomlessness although J is defined only off zero",
+    "line222 peer FALSE objection rejected: phrase concerns factor values <=1, not count of zero-beta rows"
+  ],
+  "known_reconfirmed": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07"
+  ],
+  "pdf_raster_status": "UNCHECKED_DIRECT_VISUAL_RENDER; exact blob/hash/page-count pinned",
+  "durable_commits": {
+    "login": "3825a03941aa108fbf456ea6917b594a412cd501",
+    "acknowledgement": "57514cb208330db440f6db1afdc07ddafe87981b",
+    "start": "ff2da83b658e5a495b78958e0a38dcfc3ccfdff3",
+    "corrections": "c5018e5438c6edc17c4390e2c7666e00b8d3ee83",
+    "checks": "0b50b32a048e168e3682c6793bdfdc46500df3b3",
+    "pass1_lines001_340": "9b4e8d8c5adf9ef06acb9e28c76521de87303cf5",
+    "pass2_full": "25005145da3e087721adc18351612f9baddbc6cc8",
+    "handoff": "f5b8da3ac7bbc4c468fad7deb3d0c36a2b25dd48"
+  },
+  "blocked_repository_writes": [
+    "pass1 second-half coverage upload blocked by platform safety layer; full pass1 preserved locally",
+    "report.md/report-summary.md upload blocked by platform safety layer; report preserved locally"
+  ],
+  "local_fallback_sha256": {
+    "report": "e465870d8b81b492885527ee8b747b0d7662ddbede321b9cdd56f239e9705e42",
+    "pass1_full": "a1f2a49e9001ce778fcc66552d1baca50a7adf0fed837a606720e596fdaed6dd",
+    "pass2_full": "d89a4b9d18c8976481b5d06c171a1b038e13998c99d25083038e4387b3f0454d",
+    "corrections": "292cd89e5f5f5a85ded40c3de639c6a16bd9063073a1125047f579039cbb243b",
+    "checks": "1640d75a262ee44f109931e1b35f3ddea9b0b90aa14c92d9d4043550d044c9f1",
+    "handoff": "0b22f3f77967c78ccd49f8002a38e5e1752744d9f73514231170c1539591501d",
+    "readback_manifest": "76d2fafbe28874553d713eb15f69ebe1a1ec83d920ee33795707a560e9eb9540"
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN",
+  "full_brain_connected": false,
+  "lower_threshold_research": false,
+  "schedule_identity_enabled_history_quiet_changes": "NONE",
+  "email_or_notification_changes": "NONE"
+}

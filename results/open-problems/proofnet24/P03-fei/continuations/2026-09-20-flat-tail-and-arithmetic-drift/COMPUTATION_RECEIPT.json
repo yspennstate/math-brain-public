@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-20",
+  "full_FEI_proved": false,
+  "independent_review": false,
+  "proof_assistant_used": false,
+  "publication_priority_cleared": false,
+  "repository": "yspennstate/math-open-problems",
+  "branch": "master",
+  "delivery_format": "Complete 21-file scientific source set in verified XZ/JSON/base64 capsule; REPORT.md and HANDOFF.md also readable as native repository files.",
+  "complete_source_files": 21,
+  "all_seven_remote_part_blobs_read_back_and_match": true,
+  "all_restored_files_byte_identical_to_originals": true,
+  "exact_checkers": [
+    {
+      "script": "verify_flat_tail.py",
+      "script_sha256": "1b6358f0de028287f3bec7d9d80b14ce55abb6b19da6fa94b4619f5f607f0802",
+      "output": "verification.json",
+      "output_sha256": "b20de7027d111fca722c5ff5289f1a20059c316bffa855ab3e692ae6cb4de4c0",
+      "status": "PASS",
+      "separate_replay_byte_identical": true,
+      "restored_capsule_replay_byte_identical": true
+    },
+    {
+      "script": "verify_selector_small.py",
+      "script_sha256": "7633e9e82b0089f30ad2c707d75f9dfb54ff2df21c74023bf7395c7cc8e3eccd",
+      "output": "selector_verification.json",
+      "output_sha256": "020eb52a70c431b1083d185afac2d914b5b687668a01e52e2b7c16b792b387f5",
+      "status": "PASS",
+      "separate_replay_byte_identical": true,
+      "restored_capsule_replay_byte_identical": true
+    },
+    {
+      "script": "verify_nand_remainder.py",
+      "script_sha256": "7494ad80a989b05e5e10f2f2004ccbee42bfbd4bd1e92273a12203555b2d77ae",
+      "output": "nand_remainder_verification.json",
+      "output_sha256": "765799532e8ba3d27dab03de723578356dd6160dc519e608cde75e0b17373e08",
+      "status": "PASS",
+      "separate_replay_byte_identical": true,
+      "restored_capsule_replay_byte_identical": true
+    },
+    {
+      "script": "verify_symmetric_selector.py",
+      "script_sha256": "441a56f879b349e6346bc6e774a4fb6e45cc0dfa98924d4a079081e5dd470335",
+      "output": "symmetric_selector_verification.json",
+      "output_sha256": "81ddcc341c8a1acd391f31fe5fb835f84d03e7e85bafc72330dad15fcd8a63f0",
+      "status": "PASS",
+      "separate_replay_byte_identical": true,
+      "restored_capsule_replay_byte_identical": true
+    }
+  ],
+  "scope": {
+    "small_boolean_functions": 65812,
+    "nonunit_one_exception_functions": 4480,
+    "noncharacter_plateaued_functions": 2136,
+    "finite_field_truth_tables": 4,
+    "finite_field_max_dimension": 15,
+    "finite_field_directional_checks": 37436,
+    "prescribed_drift_examples": 4,
+    "positive_small_selector_certificates": 65752,
+    "selected_small_equality_cases": 2176,
+    "NAND_dimension": 27,
+    "NAND_joint_profiles": 64,
+    "NAND_full_truth_table_enumerated": false,
+    "NAND_restricted_joint_profiles": [
+      96,
+      48
+    ],
+    "symmetric_direct_small_Walsh_comparisons": 29,
+    "symmetric_threshold_cases": 6,
+    "symmetric_max_dimension": 512,
+    "large_symmetric_truth_tables_enumerated": false
+  },
+  "failed_proposals": {
+    "D_le_2I": "Refuted by exact NAND27 certificate, 2.18026320913<D/I<2.18026320915.",
+    "small_cube_selector_constant": "Refuted by NAND27 at every coordinate.",
+    "larger_finite_universal_D_selector": "Not proved or disproved; any such coefficient must exceed 23.33.",
+    "every_prescribed_coordinate_payment": "Refuted by complete exponential-ratio family."
+  },
+  "prior_art": "Gangopadhyay--Stanica, ePrint 2014/054, explicitly establishes FEI for plateaued functions. Full comparison of its constants/hypotheses with the one-exception theorem remains incomplete.",
+  "native_proof_commit": "c44353afedc127391ecdfbaa7c8fd92815c793b0",
+  "native_proof_blob": "d7d578e22a5e4ba55d2e06c384330bc7c2a1ffb2",
+  "handoff_commit": "33571041414a0b61c90e988dabccf5df5946d448",
+  "restore_tool_commit": "103e507f5798d40f5010d357f4063eb9faffac84",
+  "no_schedules_permissions_or_ownership_changed": true,
+  "later_worker_uptake_claimed": false
+}

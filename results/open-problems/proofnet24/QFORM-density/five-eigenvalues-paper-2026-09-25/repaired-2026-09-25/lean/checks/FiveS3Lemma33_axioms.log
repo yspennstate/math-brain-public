@@ -1,0 +1,228 @@
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:61:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.Ball.real_star_eq_transpose`:
+  [Fintype n]
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype n] [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:486:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.BL.lin_sub`:
+  [Fintype ι]
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:491:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.BL.continuous_lin`:
+  [Fintype ι]
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:495:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.BL.pair_identity`:
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:502:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.BL.frame_apply`:
+  [Fintype κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:593:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.BL.DM_mulVec`:
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:644:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.BL.gd_eq_prod`:
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:723:8: warning: `mul_le_mul_left'` has been deprecated: Use `mul_le_mul_right` instead
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:801:75: warning: unused variable `hA`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:1141:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.ProjA.inner_euc`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:1180:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.ProjA.Psi_apply`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:1186:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.ProjA.Psi_measurePreserving`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:1199:6: warning: `EuclideanSpace.norm_single` has been deprecated: Use `PiLp.norm_single` instead
+
+Note: The updated constant has a different type:
+  ∀ (p : ℝ≥0∞) {ι : Type u_2} (β : ι → Type u_4) [hp : Fact (1 ≤ p)] [inst : Fintype ι]
+    [inst_1 : (i : ι) → SeminormedAddCommGroup (β i)] [inst_2 : DecidableEq ι] (i : ι) (b : β i),
+    ‖PiLp.single p i b‖ = ‖b‖
+instead of
+  ∀ {ι : Type u_1} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : DecidableEq ι] [inst_2 : Fintype ι] (i : ι) (a : 𝕜),
+    ‖EuclideanSpace.single i a‖ = ‖a‖
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.norm_single` to `PiLp.norm_single x`).
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:1208:8: warning: `EuclideanSpace.single_apply` has been deprecated: Use `PiLp.single_apply` instead
+
+Note: The updated constant has a different type:
+  ∀ (p : ℝ≥0∞) (𝕜 : Type u_1) {ι : Type u_2} [inst : DecidableEq ι] [inst_1 : Zero 𝕜] (i : ι) (a : 𝕜) (j : ι),
+    (PiLp.single p i a).ofLp j = if j = i then a else 0
+instead of
+  ∀ {ι : Type u_1} {𝕜 : Type u_3} [inst : RCLike 𝕜] [inst_1 : DecidableEq ι] (i : ι) (a : 𝕜) (j : ι),
+    (EuclideanSpace.single i a).ofLp j = if j = i then a else 0
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.single_apply` to `PiLp.single_apply x`).
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:1208:8: warning: This simp argument is unused:
+  EuclideanSpace.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp ̵[̵E̵u̵c̵l̵i̵d̵e̵a̵n̵S̵p̵a̵c̵e̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:1419:82: warning: This simp argument is unused:
+  Finset.sum_ite_eq'
+
+Hint: Omit it from the simp argument list.
+  simp only [basis_orth b, mul_ite, mul_one, mul_zero, Finset.sum_ite_eq, F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵i̵t̵e̵_̵e̵q̵'̵,̵Finset.mem_univ,
+              if_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+~/qform_five_lean_2026_09_25/lean/FiveS3Lemma33_run.lean:1489:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.Proj.real_star_eq_transpose`:
+  [Fintype n]
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype n] [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'QformFiveB.Ball.real_star_eq_transpose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Ball.eigU_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Ball.eigU_orth'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Ball.eigU_eigen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Ball.diag_conj_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Ball.gram_diag_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Ball.ball_det_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Ball.ball_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.gam_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.continuous_gam' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.integrable_gam' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.integral_gam' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.cdf_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.cdf_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.cdf_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.cdf_strictMono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.cdf_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.cdf_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.cdf_le_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.cdf_lt_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.cdf_tendsto_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.cdf_tendsto_bot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.G_surj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.G_strictMono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.G_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.G_Ginv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.Ginv_G' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.Ginv_strictMonoOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.Ginv_continuousAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.Ginv_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.integral_pos_of_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.cdf_div_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.tr_strictMono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.tr_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.tr'_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.tr_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.lin_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.continuous_lin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.pair_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.frame_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.frame_recon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.frame_ineq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.mono_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.Phi_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.DM_mulVec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.det_toCLM' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.Phi_hasFDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.gd_eq_prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.lintegral_gd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.prod_ofReal_rpow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.bl_nice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.smooth_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.smooth_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.smooth_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.smooth_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.smooth_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.smooth_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.le_of_forall_eps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.bl_lsc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.bl_bdd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.iSup_mul_iSup_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.prod_iSup_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.iSup_min_nat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.rpow_iSup_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.bl_meas' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.thm31' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.BL.thm31_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.density_of_le_volume' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.integrable_of_lintegral_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.pi_withDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.inner_euc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.exists_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.Psi_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.Psi_measurePreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.basis_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.basis_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.entropy_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.lintegral_affine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.fiber_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.ProjA.lemma32a' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Proj.real_star_eq_transpose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Proj.eigU_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Proj.eigU_orth'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Proj.eigU_eigen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Proj.spectral_decomp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Proj.conjDiag_transpose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Proj.conjDiag_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Proj.conjDiag_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Proj.det_conjDiag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Proj.measurable_mulVec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Proj.lemma32b' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Proj.lemma32_dot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Lemma32.lemma32b_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Lemma32.lemma32_dot_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.cintegral_const_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.gauss_fourier' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.lemma21c' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.lemma21c_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.chf_eq_charFun' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.chf_norm_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.chf_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.gauss_moment_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.int_chf_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.charFun_dlaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.charFun_zlaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.chf_zlaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Fpower.lemma33' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Lemma33.sgn_dot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Lemma33.sgn_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Lemma33.measurable_sgn_dot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Lemma33.charFun_sgn_dot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Lemma33.zlaw_eq_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Lemma33.zlaw_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.Lemma33.lemma33_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT 0

@@ -1,0 +1,207 @@
+% B01/A003: depth-free retained singleton-log credit for nested fresh activations.
+\section*{A depth-free singleton-log ledger for nested fresh activations}
+
+All logarithms are base two.  For a Boolean function $h$ put
+\[
+ p_h(S)=\widehat h(S)^2,\quad
+ \pi_h(S)=\sum_{T\supseteq S}p_h(T),\quad
+ U(h)=\sum_Sp_h(S)\log\frac{\pi_h(S)}{p_h(S)},
+\]
+and
+\[
+ G(h)=\sum_i\left(U(h)-\mathbb E_{x_i}U(h\mid x_i)\right).
+\]
+Define the singleton mass and singleton entropy
+\[
+ W_1(h)=\sum_j\widehat h(\{j\})^2,
+ \qquad
+ L_1(h)=\sum_j\widehat h(\{j\})^2
+            \log\frac1{\widehat h(\{j\})^2}.
+\tag{1}
+\]
+The convention at zero is continuous.
+
+\subsection*{1. Repaired one-layer estimate}
+
+Let $g:\{-1,1\}^n\to\{-1,1\}$, let
+$r=\Pr[g=-1]$, let $d\geq1$, and put $p=2^{-d}$.  On $d$ fresh
+control bits, define $F=g$ on one activation word and $F=1$ on all
+other words.  The exact source-pinned activation identity is
+\[
+ G(F)=pG(g)+d\delta_d(r)+\sum_j
+ \left(R_p(r)-\frac{R_p(r_{j,+})+R_p(r_{j,-})}{2}\right),
+\tag{2}
+\]
+where $r=(r_{j,+}+r_{j,-})/2$, and, with
+\[
+ \varphi(x)=x^2\log\frac1{x^2},\qquad M(t)=\varphi(1-2t),
+\]
+the nonaffine remainder has the useful exact form
+\[
+ R_p(r)=M(pr)-pM(r)+2p\varphi(r)-2\varphi(pr).
+\tag{3}
+\]
+
+We first record a scalar modulus.  If $0\leq h\leq1$ and
+$[x-h,x+h]\subseteq[-1,1]$, then
+\[
+ \left|\varphi(x)-\frac{\varphi(x+h)+\varphi(x-h)}2\right|
+ \leq64h^2\left(1+\log\frac1h\right).
+\tag{4}
+\]
+For $x\neq0$,
+\[
+ |\varphi''(x)|\leq\frac{4|\ln|x||+6}{\ln2}.
+\]
+The second derivative is locally integrable and $\varphi$ is $C^1$ at
+zero.  The integral form of the central second difference, together with
+\[
+ \int_{x-h}^{x+h}|\ln|u||\,du
+ \leq2h\left(1+\ln\frac1h\right),
+\]
+proves (4); the constant $64$ is deliberately nonoptimal.  The latter
+integral bound follows by moving an interval of length $2h$ toward the
+origin, where the even decreasing rearrangement $|\ln|u||$ is largest.
+
+Set
+\[
+ a_j=|r_{j,+}-r_{j,-}|=|\widehat g(\{j\})|.
+\tag{5}
+\]
+Apply (4) to the four terms of (3), with respective central increments
+$pa_j,a_j, a_j/2,pa_j/2$.  Since $p\leq1/2$ and
+$p\log(1/p)\leq1/2$, the triangle inequality gives the safe estimate
+\[
+ \left|R_p(r)-\frac{R_p(r_{j,+})+R_p(r_{j,-})}{2}\right|
+ \leq320p\,a_j^2\left(1+\log\frac1{a_j}\right)
+ \leq320p\left(a_j^2+a_j^2\log\frac1{a_j^2}\right).
+\tag{6}
+\]
+This is exactly the logarithmic credit exposed by the majority no-go; it
+is not replaced by a pointwise influence charge.
+
+For completeness, write $x=pr\leq1/2$.  The exact control charge is
+\[
+ \delta_d(r)=M(x)-\tfrac12M(2x)+2x
+ +4x^2\left(\log\frac1x-2\right).
+\]
+Using $M(x)\leq4x/\ln2$ and
+$x\log(1/x)\leq1/(e\ln2)$ gives
+\[
+ d\delta_d(r)\leq C_\star I_{\rm ctl},\qquad
+ C_\star=1+\frac{2(1+1/e)}{\ln2}<4.947,
+ \qquad I_{\rm ctl}=2rpd.
+\tag{7}
+\]
+Summing (6) in (2) proves the repaired transfer
+\[
+ \boxed{G(F)\leq pG(g)+320p\bigl(W_1(g)+L_1(g)\bigr)
+       +C_\star I_{\rm ctl}.}
+\tag{8}
+\]
+
+\subsection*{2. Exact hierarchy ledger}
+
+Let $f_0=g$.  For $t=1,\dots,m$, obtain $f_t$ by activating
+$f_{t-1}$ on one word of a fresh block of $d_t\geq1$ controls and setting
+all other branches to $1$.  Put
+\[
+ D_t=\sum_{u=1}^td_u,\qquad q_t=2^{-D_t},\qquad D_0=0, q_0=1.
+\]
+Then $f_t=1$ unless all $D_t$ controls are on their active words, where
+it equals $g$.  Every inherited data singleton coefficient is
+$q_t\widehat g(\{j\})$, and each of the $D_t$ control singleton
+coefficients has magnitude $2q_tr$.  Therefore
+\begin{align}
+ W_1(f_t)&=q_t^2W_1(g)+4D_tq_t^2r^2,\tag{9}\\
+ L_1(f_t)&=q_t^2L_1(g)+2D_tq_t^2W_1(g)
+ +4D_tq_t^2r^2\log\frac1{4q_t^2r^2}.\tag{10}
+\end{align}
+
+Iterating (8) creates the single accumulated credit
+\[
+ \mathcal C_m=\sum_{t=1}^m\frac{q_m}{q_{t-1}}
+ \bigl(W_1(f_{t-1})+L_1(f_{t-1})\bigr).
+\tag{11}
+\]
+The $D_t$ are distinct nonnegative integers, so
+\[
+ \sum_{s=0}^{m-1}2^{-D_s}\leq2,\quad
+ \sum_{s=0}^{m-1}D_s2^{-D_s}\leq2,\quad
+ \sum_{s=0}^{m-1}D_s^22^{-D_s}\leq6.
+\tag{12}
+\]
+Substitution of (9)--(10) in (11), followed by (12), yields
+\[
+ \mathcal C_m\leq2q_mL_1(g)+6q_mW_1(g)
+ +q_mr^2\left(56+8\log_+\frac1{4r^2}\right).
+\tag{13}
+\]
+The total physical influence of all controls at the root is
+\[
+ I_{\rm ctl}(f_m)=2q_mD_mr.
+\tag{14}
+\]
+Since $D_m\geq1$, $r\leq1$, and
+$r\log(1/r)\leq1/(e\ln2)$, (13) becomes
+\[
+ \boxed{\mathcal C_m\leq2q_mL_1(g)+6q_mW_1(g)
+ +\left(28+\frac8{e\ln2}\right)I_{\rm ctl}(f_m).}
+\tag{15}
+\]
+Thus the exposed singleton logarithm is charged once, not once per
+activation layer.
+
+The control charges also telescope exactly:
+\[
+ \sum_{t=1}^m\frac{q_m}{q_t}I_{{\rm ctl},t}
+ =2q_mr\sum_{t=1}^md_t=I_{\rm ctl}(f_m).
+\tag{16}
+\]
+Combining (8), (15), and (16) proves the all-depth estimate
+\[
+ \boxed{
+ G(f_m)\leq q_mG(g)+640q_mL_1(g)+1920q_mW_1(g)
+ +C_{\rm chain}I_{\rm ctl}(f_m),}
+\tag{17}
+\]
+where
+\[
+ C_{\rm chain}=C_\star+320\left(28+\frac8{e\ln2}\right)
+ <10324.
+\tag{18}
+\]
+Every constant is independent of $m$, all block sizes $d_t$, the total
+dimension, and the terminal bias $r$.
+
+\subsection*{3. A new restriction-closed endpoint}
+
+Let $\mathcal B$ be restriction closed and suppose, for fixed $A,C$,
+\[
+ G(g)\leq A I(g),\qquad H(g)\leq C I(g)qquad(g\in\mathcal B).
+\tag{19}
+\]
+Since $W_1(g)\leq I(g)$ and $L_1(g)\leq H(g)$, (17) gives every finite
+nested fresh-activation chain over $\mathcal B$
+\[
+ G(f)\leq K I(f),\qquad
+ K=\max\{A+640C+1920,C_{\rm chain}\}.
+\tag{20}
+\]
+The enlarged class is restriction closed: a control restriction either
+kills a layer or shortens its active word, while a data restriction acts
+on the terminal core.  Restriction induction therefore gives
+\[
+ U(f)\leq KI(f),\qquad H(f)\leq(2+2K)I(f).
+\tag{21}
+\]
+In particular, for signed parity terminals $A=C=0$, arbitrary-depth
+nested fresh activations satisfy FEI with the dimension-free constant
+$2+2C_{\rm chain}<20650$.  This strictly extends the previously proved
+one-layer parity-activation class.
+
+This is not universal GU$'$.  The retained terminal credits
+$q_mL_1(g)$ and $q_mW_1(g)$ are controlled here by an assumed terminal
+FEI bound.  Arbitrary hierarchies with changing coherent cores do not
+reduce to one fixed terminal spectrum, and their nonreused global credit
+remains open.  Full FEI remains open.

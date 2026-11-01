@@ -1,0 +1,15 @@
+# Compress an exactly optimal finite public mixture
+
+Fix any actual generator class of output subprobabilities Q on a finite output space and a nonzero target p supported on d outputs, v=sum p>0. An actual reference remains tied to its own sampler; no independent-root relaxation is introduced. Suppose an eligible finite public mixture Q_* is positive on supp p and has the EXACT score certificate
+
+    sum_(A in supp p) p(A) Q(A)/Q_*(A) <= v
+
+for EVERY allowed component Q. Then Q_* has an eligible mixture representation with at most d components that preserves Q_*(A) on every positive-target output. It therefore preserves the complete posterior-optimized cost exactly. For rational component masses and mixture coefficients this compression is executable by rational nullspace elimination; logarithmic arithmetic is not needed.
+
+Proof. Discard zero-weight components. The weighted average score equals v identically at Q_*, so every retained component must have score v. Write q_j in R^d for their target-output projections and w_A=p(A)/Q_*(A)>0. All q_j lie in w dot q=v. If there are k>d components, their d-dimensional columns are linearly dependent: sum_j beta_j q_j=0 for a nonzero beta. Taking the scalar product with w and using v>0 yields sum_j beta_j=0. Therefore beta has both signs. With original positive mixture coefficients eta_j, put t=min_(beta_j>0)eta_j/beta_j and eta'_j=eta_j-t beta_j. These coefficients are nonnegative, sum to1, preserve the projected output law, and remove at least one component. Repeat until at most d remain. Finite-dimensional rational Gaussian elimination gives rational beta when the inputs are rational. No actual component is changed or invented.
+
+The result assumes a finite eligible optimum representation. An attained optimum in a compact convex hull can first be given a finite representation, but no such existence theorem for arbitrary generator domains is needed or asserted here. Nonattained infima and approximate score certificates require additional arguments. An exact optimum is not a source-price bound: d can be exponential in the physical dimension, and the components/certificate may depend on the entire Fourier spectrum.
+
+The triangle in OPTIMUM.md makes the d bound sharp. It has d=4 positive target outputs. Score equality allows only the three axis output laws and the half-vector law. All four branch totals are forced and positive:5/24,5/24,5/24,3/8. Their projected columns have determinant -2/81 under the stated edge/target ordering, so no three can represent the optimum. Thus exact public mixing cannot generally be replaced by one global weight vector; nevertheless a finite exact optimum needs no more than d actual components.
+
+Only optimal OUTPUT cost is preserved. A separately fixed nonoptimal witness posterior need not preserve its bill. The actual public branch label and allocation posterior must still be included, as they are in the full output reference. This is a general optimization reduction for C020, not an influence-priced universal source or a proof of full FEI.

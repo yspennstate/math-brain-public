@@ -1,0 +1,29 @@
+{
+  "physical_family": "Common point activation of the k-shared-bit bent/spike selector; even k>=2,r>=1",
+  "root_selector_account": "delta_root=q(1-b+a)/2, q=2^-r,a=2^-k,b=2^(-k/2)",
+  "eligibility": "Selector unqueried, activation not failed, point-defect base branch still nonconstant and surviving, quadratic base branch nonconstant",
+  "mark_for_repeated_private_exposure": "M=12delta*1_eligible",
+  "retained_selector_component": "S=10delta*1_selector_unqueried",
+  "combined_single_account": "K=M+S; K_root=22delta_root",
+  "private_collision": {
+    "actual_remainder": "A_i=B_i(W)-B_i(G')/4",
+    "source_bound": "0<=A_i<=4delta",
+    "surviving_eligible_mass": "<=2delta/3",
+    "mark_release": "M_parent-E M_child>=4delta",
+    "sum_over_repeated_layers": "sum w A_i<=M_root-E M_leaf; no reset",
+    "sharp_contraction": "2/3 at k=2 private x before gate resolution",
+    "inherited_quarter_bill": "<=3Inf_i(W)/2"
+  },
+  "other_queries": {
+    "activation_controls": "B<=4 physical Inf",
+    "quadratic-relevant_data": "B<=10 physical Inf after activation tax",
+    "constant-quadratic_point_suffix": "B<=3 physical Inf",
+    "post_selector_branches": "point<=3; activated quadratic<=8; all<=10 physical Inf",
+    "selector_reveal": "B<=10delta paid only from retained S"
+  },
+  "any_stopped_physical_tree": "B_T+E K_leaf<=10P_data+K_root",
+  "influence_partition": "P_data=I_data(root)-E I_data(leaf), P_selector=Inf_z(root)-E Inf_z(leaf)",
+  "terminal_entropy": "Exact actual H(W_leaf); if z unqueried, half both branch entropies plus exact paired Fourier potential R; if z revealed, actual selected branch entropy",
+  "generic_conditional_interface": "For absorbing eligibility with eligible mismatch release fraction gamma at marked private nodes, M=(4/gamma)delta pays all repeated marked remainders by its telescope",
+  "unpaid_universal_line": "When both core children stay eligible, the mismatch martingale releases no mass; certify unused signed child surplus instead, keeping the inherited quarter bill and both terminals."
+}

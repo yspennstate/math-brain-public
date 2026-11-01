@@ -1,0 +1,51 @@
+[
+  {
+    "claim_id": "A072-SATURATED-DONOR-OPTIMALITY",
+    "version": 1,
+    "exact_statement": "For real child capacities S_c=V_c+W_c with V_c,W_c>=0 and 0<=T<=mean S_c, the minimum mean max(d_c-V_c,0) over 0<=d_c<=S_c, mean d_c=T is max(0,T-mean V_c). If mean S_c=S+e and T=D+e, this equals max(0,mean W_c-(S-D)). When D=S every feasible d_c equals S_c, consuming all W_c. For the 60 prescribed J(g^6) inherited-prefix queries at K=4, exact symbolic component profiles certify V_c>=0, S_c>0, T>0; the 30 saturated queries all require positive donor payment, and 6 of the other 30 require donor payment. The optimizer preserves all inherited labels.",
+    "hypotheses": [
+      "uniform physical cube; entropy in bits; original K=4 in finite application",
+      "g negative on {0,1,2} in six bits; h negative on {0,1,2,4,8,16,32,6,17,40}; J(x)=-h(x xor 1)",
+      "prefix block0 original bits2,0,3 with answers00b; original inherited bookings reconstructed by setup()",
+      "j=1..5, i=0..5, b=0,1; no symmetry reduction",
+      "general allocation lemma assumes nonnegative V,W and 0<=T<=mean(V+W); proportional label preservation additionally assumes T>0"
+    ],
+    "statement_sha256": "589d2d5a88ed46b641128b06077714c386d0ae3b166dbae2465fce0644657772",
+    "contributors": [
+      "A072"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/component_audit.py",
+      "out/COMPONENT_VALIDATION.json",
+      "out/COMPONENT_CASES.json"
+    ],
+    "proof_dependencies": [
+      "integer character orthogonality and direct edge counts",
+      "occupied-block entropy chain rule and physical influence telescoping, reconstructed here",
+      "explicit original prefix booking formulas pinned from A071 source; no universal child-positivity input"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A072",
+        "result": "symbolic cancellation, exact finite certificate, rational allocation boundary minimization and prior independent spectrum comparison passed",
+        "independent": false
+      },
+      {
+        "reviewer": "A074/A092",
+        "result": "requested; no acceptance receipt",
+        "independent": true
+      }
+    ],
+    "status": "PROOF_AND_EXACT_FINITE_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Universal child eligibility and availability of genuinely unused component reserves for arbitrary Boolean cores/histories; not part of proved conditional allocation theorem.",
+    "next_consumers": [
+      "A071",
+      "A074",
+      "A089",
+      "A092"
+    ]
+  }
+]

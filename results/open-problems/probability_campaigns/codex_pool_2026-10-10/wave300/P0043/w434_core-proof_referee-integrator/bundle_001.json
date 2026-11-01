@@ -1,0 +1,73 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w434",
+  "bundle_slug": "p0043-criticality-scope-and-audited-reductions-001",
+  "entries": [
+    {
+      "key": "p0043-scope",
+      "namespace": "probability.percolation",
+      "logical_name": "p0043-benjamini-schramm-criticality-scope",
+      "kind": "concept",
+      "title": "Critical nonpercolation on quasi-transitive graphs: exact scope",
+      "statement": "For independent Bernoulli bond percolation on an infinite connected locally finite quasi-transitive graph G with p_c(G)<1, the historical Benjamini-Schramm question asks whether at p=p_c(G) there is almost surely no infinite open cluster. The p_c<1 hypothesis is essential: on the two-sided line p_c=1 and all edges are open at that parameter. This card records the precise question, not a present-day open-status verdict.",
+      "proof_text": null,
+      "assumptions": ["Independent Bernoulli bond percolation", "G infinite, connected, locally finite, quasi-transitive", "p_c(G)<1 in the question"],
+      "domain": "probability theory; percolation",
+      "source": {"source_id": "arxiv:1605.05301", "url": "https://arxiv.org/html/1605.05301", "revision": "as-read-2026-10-10; Introduction and Conjecture", "license": "arxiv-nonexclusive", "excerpt": "If p_c(G)<1, then G[p_c] has no infinite clusters almost surely."}
+    },
+    {
+      "key": "exponential-case",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-extinction-quasitransitive-exponential-growth-hutchcroft",
+      "kind": "concept",
+      "title": "Critical nonpercolation for quasi-transitive exponential-growth graphs",
+      "statement": "Hutchcroft proved in 2016 that Bernoulli bond percolation at p_c has no infinite cluster almost surely on every connected locally finite quasi-transitive graph of exponential volume growth. This is a published special class of the broader criticality question.",
+      "proof_text": null,
+      "assumptions": ["Bernoulli bond percolation", "connected locally finite quasi-transitive graph", "exponential volume growth"],
+      "domain": "probability theory; percolation",
+      "source": {"source_id": "arxiv:1605.05301", "url": "https://arxiv.org/html/1605.05301", "revision": "as-read-2026-10-10; Theorem 1", "license": "arxiv-nonexclusive", "excerpt": null}
+    },
+    {
+      "key": "thinning-fragility",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-infinite-clusters-have-thinning-threshold-one",
+      "kind": "lemma",
+      "title": "Any hypothetical critical infinite component is destroyed by every independent thinning",
+      "statement": "Let G be countable, connected and locally finite with Bernoulli bond threshold p_c(G)>0. In the critical Bernoulli configuration, almost surely every infinite open component H, if any, has its own Bernoulli bond threshold p_c(H)=1.",
+      "proof_text": "For rational q in (0,1), independently retain each critically open edge with probability q. The resulting edges are iid Bernoulli(p_c q), so have no infinite component since p_c q<p_c. Conditional on the critical configuration X, the thinning restricted to each X-component has Bernoulli(q) law. For each vertex v the nonnegative conditional probability that its X-component survives this thinning has expectation zero and is therefore zero almost surely. Intersect over countably many v and rational q; monotonicity extends to every real q<1. At q=1 an infinite H survives. This is a reduction and does not exclude H.",
+      "assumptions": ["Countable connected locally finite graph", "Independent Bernoulli bond percolation", "p_c(G)>0"],
+      "domain": "probability theory; percolation",
+      "source": {"source_id": "owner-own-work:w433-critical-thinning-reduction-reviewed-w434", "url": "~/brain_workers/w433/ATTEMPT.md", "revision": "2026-10-10; w433 ATTEMPT.md section 2; w434 REVIEW_VERDICTS.jsonl", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "russo-atom",
+      "namespace": "probability.percolation",
+      "logical_name": "finite-radius-russo-measures-concentrate-at-critical-jump",
+      "kind": "lemma",
+      "title": "A critical jump appears as an atom of finite-radius Russo measures",
+      "statement": "Let G be infinite, connected and locally finite, let o be a vertex, and suppose 0<p_c(G)<1. Let A_n be the event that o connects inside B(o,n) to its distance-n sphere, f_n(p)=P_p(A_n), and mu_n(dp)=f_n'(p)dp on [0,p_c]. Then mu_n converges weakly to theta_o(p_c) times the point mass at p_c. In particular, pointwise control of individual pivotal edges below p_c cannot by itself rule out a critical jump.",
+      "proof_text": "Finite Russo differentiation gives f_n'(p)>=0 and mu_n([0,t])=f_n(t), since f_n(0)=0. For every t<p_c, f_n(t) decreases to theta_o(t)=0. The total mass f_n(p_c) decreases to theta_o(p_c). For a continuous test function h, split at p_c-delta: the lower part has vanishing mass and the upper part differs from h(p_c) times its mass by at most the modulus of continuity of h at delta. Let n tend to infinity then delta tend to zero. This is a limit theorem, not an extinction proof.",
+      "assumptions": ["Independent Bernoulli bond percolation", "G infinite connected locally finite", "0<p_c(G)<1"],
+      "domain": "probability theory; percolation",
+      "source": {"source_id": "owner-own-work:w432-russo-critical-atom-reviewed-w434", "url": "~/brain_workers/w432/ATTEMPT.md", "revision": "2026-10-10; w432 ATTEMPT.md L02; w434 REVIEW_VERDICTS.jsonl", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "critical-tree-susceptibility",
+      "namespace": "probability.percolation",
+      "logical_name": "regular-tree-critical-susceptibility-diverges",
+      "kind": "lemma",
+      "title": "Critical susceptibility diverges on a regular tree",
+      "statement": "For Bernoulli bond percolation on the D-regular tree with D>=3, p_c=1/(D-1), critical clusters are almost surely finite, but the expected critical cluster size is infinite. Thus critical extinction does not imply finite susceptibility at p_c.",
+      "proof_text": "The forward exploration is a Galton-Watson process with Binomial(D-1,p) offspring, so p_c=1/(D-1) and the critical process dies out almost surely. At this parameter, the sphere of radius n>=1 contains D(D-1)^(n-1) vertices, each connected to the root with probability (D-1)^(-n) along its unique path. Its expected connected-vertex count is D/(D-1) for every n, and summing over n diverges.",
+      "assumptions": ["Integer D>=3", "Independent Bernoulli bond percolation on the infinite D-regular tree"],
+      "domain": "probability theory; percolation",
+      "source": {"source_id": "owner-own-work:w433-regular-tree-source-correction-reviewed-w434", "url": "~/brain_workers/w433/ATTEMPT.md", "revision": "2026-10-10; w433 ATTEMPT.md section 7; w434 REVIEW_VERDICTS.jsonl", "license": "owner-own-work", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "exponential-case", "to_key": "p0043-scope", "kind": "specializes", "rationale": "The 2016 theorem covers the exponential-growth subclass of the exact historical question."},
+    {"from_key": "thinning-fragility", "to_key": "p0043-scope", "kind": "semantic_association", "rationale": "The lemma characterizes any hypothetical infinite critical component without asserting the full question."},
+    {"from_key": "russo-atom", "to_key": "p0043-scope", "kind": "semantic_association", "rationale": "A positive critical survival probability appears as the limiting pivotal-measure atom."},
+    {"from_key": "critical-tree-susceptibility", "to_key": "exponential-case", "kind": "semantic_association", "rationale": "The regular tree is an exponential-growth graph where extinction holds but critical susceptibility diverges."}
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "P0234",
+  "ledger_rows": [
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 305,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "a_safe_margin_around_extended_initial_color_seeds",
+        "historical_status": "source_says_open",
+        "locator": "Open Question1.4,PDFp4",
+        "problem_id": "P0234",
+        "recorded_at": "2026-09-06T22:54:37Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "basdevant_coloring_2023",
+        "source_statement_date": "2023-11",
+        "statement": "If the initial red seed is a segment or ball disjoint from the blue seed, does the limiting blue region almost surely avoid the entire initial red seed?",
+        "statement_caveat": "Pointwise protection of each fixed initial point is established in related arguments and does not imply simultaneous protection of a continuum. Disjoint initial colors are part of the meaningful scope.",
+        "status_search": "Primary source and available author updates read2026-09-06; focused later searches recorded in source registry. No current-open certification or novelty claim.",
+        "title": "A safe margin around extended initial color seeds"
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 235,
+      "record": {
+        "attempt_id": "P0234-A001",
+        "depth": "first_pass_with_explicit_argument",
+        "full_problem_solved": false,
+        "independent_check": "Pointwise zero intersection probability is inadequate: for a uniformly random U in a segment, every fixed x differs from U almost surely, but the random singleton{U} intersects the segment surely. The net argument explicitly identifies the missing uniform rate.",
+        "independent_review": "none",
+        "method": "A safe margin around extended initial color seeds structural attempt",
+        "novelty": "not_claimed",
+        "obstruction": "The available shielding results give positive protection probability or fixed-point statements, not a uniform small-distance exponent exceeding the dimension of the seed. The full safe-margin question remains unresolved here.",
+        "problem_id": "P0234",
+        "recorded_at": "2026-09-06T22:54:37Z",
+        "result": "A sufficient uniform estimate can be stated precisely. Let the compact seed K have covering number at most C*delta^-d0. If every x in K satisfies P(dist(x,B_infinity)<=2delta)<=Cprime*delta^alpha uniformly, with alpha>d0, a delta-net and union bound give P(K intersects B_infinity)<=Cdouble*delta^(alpha-d0), hence zero. Compactness converts zero separation into intersection for the closed limiting blue set.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_limited_argument"
+      }
+    }
+  ],
+  "store_cards": [
+    {
+      "id": "claim_440817578b11ef47b8bf0e0d5bb64fe537e2d8f0289b7110606a2834d0aff29b",
+      "kind": "claim",
+      "title": "Open problem: A safe margin around extended initial color seeds",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). If the initial red seed is a segment or ball disjoint from the blue seed, does the limiting blue region almost surely avoid the entire initial red seed? Source: Basdevant-Blanc-Curien-Singh: Fractal properties of the frontier in Poissonian coloring,2023, Open Question1.4,PDFp4. Status notes: Primary source and available author updates read2026-09-06; focused later searches recorded in source registry. No current-open certification or novelty claim.\nPosed in Basdevant-Blanc-Curien-Singh: Fractal properties of the frontier in Poissonian coloring,2023\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "metadata_json": "{\"artifact_digest\":\"sha256:686168548608417457d4de9ae8ae59be0024fbc04241083b3913b3c5dd720415\",\"artifact_path\":\"objects/sha256/68/686168548608417457d4de9ae8ae59be0024fbc04241083b3913b3c5dd720415.md\",\"bundle_digest\":\"sha256:ddd293f4ed06be48fe9cbeb6bd86eef5f0277c23c9d035ac24c184c235a410cc\",\"bundle_entry_key\":\"op-p0234\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-02\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_010.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0234-a-safe-margin-around-extended-initial-color-seeds\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:8e767f585adadfafded15d7807a186bb88344da7557453dc19b6b57f2f862f8f\",\"revision_digest\":\"sha256:440817578b11ef47b8bf0e0d5bb64fe537e2d8f0289b7110606a2834d0aff29b\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0234\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_f1438e27f372e39e1ed4781412fab5d7cbe0be7fcaf67199d3cc4563c7d5f8c6",
+      "kind": "claim",
+      "title": "Attempt on A safe margin around extended initial color seeds",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: A safe margin around extended initial color seeds structural attempt Result: A sufficient uniform estimate can be stated precisely. Let the compact seed K have covering number at most C*delta^-d0. If every x in K satisfies P(dist(x,B_infinity)<=2delta)<=Cprime*delta^alpha uniformly, with alpha>d0, a delta-net and union bound give P(K intersects B_infinity)<=Cdouble*delta^(alpha-d0), hence zero. Compactness converts zero separation into intersection for the closed limiting blue set. Check: Pointwise zero intersection probability is inadequate: for a uniformly random U in a segment, every fixed x differs from U almost surely, but the random singleton{U} intersects the segment surely. The net argument explicitly identifies the missing uniform rate. Obstruction: The available shielding results give positive protection probability or fixed-point statements, not a uniform small-distance exponent exceeding the dimension of the seed. The full safe-margin question remains unresolved here.\nRefers to the open problem node open-problem-p0234-a-safe-margin-around-extended-initial-color-seeds\nNo independent review",
+      "metadata_json": "{\"artifact_digest\":\"sha256:d92e41a391ddd543c91115b20592d3ea96e41f6974caab208d16d8e7fb2ab1d4\",\"artifact_path\":\"objects/sha256/d9/d92e41a391ddd543c91115b20592d3ea96e41f6974caab208d16d8e7fb2ab1d4.md\",\"bundle_digest\":\"sha256:eb454590da264abd9c57c60c3191f916b323e3458b64d5d132e727dbbc7d6100\",\"bundle_entry_key\":\"at-p0234\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-05\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_013.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0234-a-safe-margin-around-extended-initial-color-seeds\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:d8b4e74f8a108ad4690efcbb85218be43273e7604dff1773dd51d7866037d260\",\"revision_digest\":\"sha256:f1438e27f372e39e1ed4781412fab5d7cbe0be7fcaf67199d3cc4563c7d5f8c6\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0234\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    }
+  ]
+}

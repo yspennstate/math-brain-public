@@ -1,0 +1,13 @@
+{
+  "helper_version": "A094-stage5-incoming-floor-audit-v1",
+  "family": "Actual negative-cell point edits of 1-2AND_a with b dummies under r point controls; source floors and one active data restriction with actual conditional child laws",
+  "domain": {"root_a": [1,2,3,4], "root_b": [0,1,2,3], "root_r": [1,2], "root_points": "full zero data/control point", "references": ["exact source", "uniform full", "half-mass uniform subprobability for A086 only"], "neutral_negative_dummy_points": "0..7", "neutral_r": [1,2,3], "incoming_query": "first active data bit", "shock_n": [2,3,4,5,6,8,12,16,24,32,48], "direct_shock_n": [2,3,4,5,6], "tensor_terminal_bits": 2, "tensor_tables": "all 16", "tensor_references": 2, "tensor_shock_n": 3},
+  "case_count": {"root_physical_functions": 32, "normalized_root_reference_cases": 64, "neutral_translated_functions": 24, "neutral_subprobability_cases": 24, "normalized_active_queries": 64, "compressed_shock_cases": 11, "direct_shock_cases": 5, "terminal_tensor_reference_cases": 32},
+  "symmetry": "Fixed negative/control point uses only physical translations; neutral dummy translations checked explicitly. No quotient for labelled terminal functions. Large shock spectra use analytic coefficient counts and exact rational normalizers, verified directly at n2..6.",
+  "arithmetic": "Integer Walsh transforms, independent physical edges, Fraction mixture/normalizer/atom likelihood identities. Complete KL identities follow proved disintegration and exact pointwise likelihood factorization; rigorous sign bounds use 36-term rational atanh log intervals rounded outward to 2^-90, tail 2*z^73/[73*(1-z^2)]. Polynomial Bernstein certificate checked exactly.",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds_per_job": 55,
+  "internal_cutoff": "Checked after every completed physical case, with durable checkpoint; no incomplete suffix credited",
+  "pilot": "fixed-a1 root job; under60 seconds",
+  "jobs": ["python -X utf8 code/check.py 1", "python -X utf8 code/check.py 2", "python -X utf8 code/check.py 3", "python -X utf8 code/check.py 4", "python -X utf8 code/check.py neutral", "python -X utf8 code/check.py shock", "python -X utf8 code/check.py tensor"]
+}

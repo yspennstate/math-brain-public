@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "marker": "QFORM_B04_R50_PAIR_ANCHORED_E3_CHECK_PASS",
+  "exact_checks": [
+    "Q0^T Q0 = I_3",
+    "V^T V = I_3",
+    "residual C^T C = diag(1/16,1/16,1)"
+  ],
+  "numerical_checks": {
+    "projection_idempotence_error": 1.11e-16,
+    "projection_trace": 3.0,
+    "all_20_cross_entries_nonzero": true,
+    "K12": 56.25000000000001,
+    "K12_exact_target": "225/4",
+    "pair_bound": 2.730816364073070,
+    "partner_bridge_front": 6.824377206888847,
+    "generic_rank3_bound": 3.0,
+    "generic_E3_bound": 4.226510612764089
+  },
+  "monte_carlo_used": false,
+  "note": "The proof is analytic; these checks only guard algebra and constants."
+}

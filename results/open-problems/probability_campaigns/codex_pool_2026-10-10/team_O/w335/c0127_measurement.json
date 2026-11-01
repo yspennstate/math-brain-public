@@ -1,0 +1,70 @@
+{
+  "command": "python -X utf8 check_c0127.py",
+  "rho": 0.5,
+  "exact_variance_lower": 0.5,
+  "sample_diagnostics": [
+    {
+      "m": 16,
+      "repeats": 300,
+      "max_variance_sample": 0.6408470173583526,
+      "mean_near_peak_count_deficit_1": 5.993333333333333,
+      "median_near_peak_count_deficit_1": 6.0
+    },
+    {
+      "m": 64,
+      "repeats": 300,
+      "max_variance_sample": 0.665384380671756,
+      "mean_near_peak_count_deficit_1": 12.586666666666666,
+      "median_near_peak_count_deficit_1": 12.0
+    },
+    {
+      "m": 256,
+      "repeats": 300,
+      "max_variance_sample": 0.6052018482291879,
+      "mean_near_peak_count_deficit_1": 23.333333333333332,
+      "median_near_peak_count_deficit_1": 21.0
+    },
+    {
+      "m": 1024,
+      "repeats": 300,
+      "max_variance_sample": 0.5010598219254344,
+      "mean_near_peak_count_deficit_1": 43.513333333333335,
+      "median_near_peak_count_deficit_1": 36.0
+    }
+  ],
+  "shrinking_deficit_tail_controls": [
+    {
+      "log_m": 10,
+      "delta_m": 0.5623413251903491,
+      "log_binomial_mean_lower": -2.124464249402327,
+      "maximum_exceedance_upper": 0.15608784027076833
+    },
+    {
+      "log_m": 100,
+      "delta_m": 0.31622776601683794,
+      "log_binomial_mean_lower": -1.9148818345684955,
+      "maximum_exceedance_upper": 0.04128410746693603
+    },
+    {
+      "log_m": 1000,
+      "delta_m": 0.1778279410038923,
+      "log_binomial_mean_lower": -0.6010665383244587,
+      "maximum_exceedance_upper": 0.003583845310069301
+    },
+    {
+      "log_m": 10000,
+      "delta_m": 0.1,
+      "log_binomial_mean_lower": 2.627317815568946,
+      "maximum_exceedance_upper": 4.528657169470404e-05
+    },
+    {
+      "log_m": 1000000,
+      "delta_m": 0.03162277660168379,
+      "log_binomial_mean_lower": 21.949275010730307,
+      "maximum_exceedance_upper": 1.8462650384494958e-14
+    }
+  ],
+  "two_peak_probability_deficit_1": 0.5204998778130465,
+  "elapsed_seconds": 0.384182,
+  "result": "PASS; samples are illustrative only"
+}

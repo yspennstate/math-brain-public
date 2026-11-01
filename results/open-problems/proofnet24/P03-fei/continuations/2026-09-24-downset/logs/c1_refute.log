@@ -1,0 +1,11 @@
+Part 1: brute-force check of the composition identities
+  n=3 k=3 vars=10: Inf_z base 0.1250000000 comp 0.1250000000; Delta_z base 0.740222972541 comp 0.740222972541 (diff 0.00e+00); inner-influence formula max err 1.11e-16; ratio 5.921784
+  n=5 k=3 vars=16: Inf_z base 0.0312500000 comp 0.0312500000; Delta_z base 0.208113225360 comp 0.208113225360 (diff 4.44e-16); inner-influence formula max err 5.55e-17; ratio 6.659623
+
+Part 2: the ratio at z, and the least k making z the unique most influential coordinate
+  n= 3: Inf_z = 2^-3 = 1.250e-01, max Inf_y(g_n) = 0.625000, Delta_z/Inf_z = 5.921784; least odd k = 17 (max inner influence 1.2274e-01 < Inf_z), total variables 52
+  n= 5: Inf_z = 2^-5 = 3.125e-02, max Inf_y(g_n) = 0.406250, Delta_z/Inf_z = 6.659623; least odd k = 109 (max inner influence 3.1118e-02 < Inf_z), total variables 546
+  n= 7: Inf_z = 2^-7 = 7.812e-03, max Inf_y(g_n) = 0.320312, Delta_z/Inf_z = 7.424380; least odd k = 1071 (max inner influence 7.8113e-03 < Inf_z), total variables 7498
+  n= 9: Inf_z = 2^-9 = 1.953e-03, max Inf_y(g_n) = 0.275391, Delta_z/Inf_z = 8.223858; least odd k = 12659 (max inner influence 1.9530e-03 < Inf_z), total variables 113932
+  n=11: Inf_z = 2^-11 = 4.883e-04, max Inf_y(g_n) = 0.246582, Delta_z/Inf_z = 9.060479; least odd k = 162355 (max inner influence 4.8828e-04 < Inf_z), total variables 1785906
+  n=13: Inf_z = 2^-13 = 1.221e-04, max Inf_y(g_n) = 0.225708, Delta_z/Inf_z = 9.925378; least odd k = 2176477 (max inner influence 1.2207e-04 < Inf_z), total variables 28294202

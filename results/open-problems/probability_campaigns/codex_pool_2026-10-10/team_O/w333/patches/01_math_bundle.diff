@@ -1,0 +1,425 @@
+--- a/~/math-brain-inbox/w333/bundle_001.json
++++ b/~/math-brain-inbox/w333/bundle_001.json
+@@ -0,0 +1,422 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w333",
++  "bundle_slug": "team-o-ten-problems-reductions-w333-20261010",
++  "entries": [
++    {
++      "key": "nilpotent-rotation-approximants",
++      "namespace": "probability.openproblems",
++      "logical_name": "nilpotent-rotation-approximants",
++      "kind": "lemma",
++      "title": "Nilpotent sums of primitive rotation matrices",
++      "statement": "For q>=2, let omega be a primitive qth root of unity and c a complex number with c^q=-1. On C^q set U e_k=omega^k e_k and V e_k=c e_(k-1 mod q). Then det(zI-U-V)=z^q and (U+V)^q=0.",
++      "proof_text": "Each nonzero determinant term uses either all diagonal entries or the entire cyclic permutation. Thus det(zI-U-V)=product_k(z-omega^k)-c^q=(z^q-1)+1=z^q. Cayley-Hamilton gives nilpotency. See the separate P0189 proof for the full construction and strong-convergence reduction.",
++      "assumptions": [
++        "q is an integer >=2",
++        "omega is a primitive qth root",
++        "c^q=-1"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:P0189:nilpotent-rotation-approximants",
++        "url": "file:///~/brain_workers/w333/proofs/P0189.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "rotation-strong-convergence-reduction",
++      "namespace": "probability.openproblems",
++      "logical_name": "rotation-strong-convergence-reduction",
++      "kind": "lemma",
++      "title": "Strong convergence of rational rotation approximants",
++      "statement": "Fix an irrational theta and reduced rationals p_j/q_j tending to theta with q_j tending to infinity. The clock/shift pairs U_j,V_j from the nilpotent construction, with omega_j=exp(2*pi*i*p_j/q_j) and c_j=exp(pi*i/q_j), converge in all star-moments and in the norms of every fixed matrix-valued star-polynomial to the canonical irrational rotation pair u,v. This uses simplicity and the faithful canonical trace of the irrational rotation C*-algebra. The cached Fang--Jiang--Lin--Xu paper, arXiv:1210.4771v1, Theorem 12.2, identifies the Brown measure of u+v in this canonical tracial representation as Haar measure on the unit circle. Every finite sum U_j+V_j has empirical eigenvalue measure delta_0. This gives a candidate counterexample to the implication from arbitrary strong convergence to Brown-measure convergence, pending independent review and with no novelty claim. It does not address independent Ginibre ensembles or a free limiting family.",
++      "proof_text": "In the product of matrix algebras modulo norm-null sequences, the classes of U_j,V_j satisfy the irrational rotation relation. Simplicity makes the universal homomorphism injective, hence completely isometric. The quotient norm is the limsup, for every subsequence and every fixed matrix amplification. Therefore polynomial norms converge. A fixed word reduces to a phase times U_j^a V_j^b. Its trace is eventually zero unless a=b=0, and the phases converge, proving canonical star-moment convergence. The cached paper uses the canonical irrational-rotation pair in its tracial GNS von Neumann algebra, and Theorem 12.2 includes the coefficient lambda=1. Its established Brown measure is Haar on the unit circle, different from the finite delta_0 measures. The full construction therefore has no remaining unidentified source dependency in this local check; it still requires an independent full proof audit. Simultaneous conjugation by a Haar unitary Q_j makes the pair random without changing any polynomial norm, normalized trace, or eigenvalue. For each fixed matrix amplification the conjugating unitary is I_D tensor Q_j, which commutes with the coefficient matrices. Thus convergence holds for every outcome; the two coordinates are dependent, as permitted by the literal general formulation.",
++      "assumptions": [
++        "theta irrational",
++        "q_j -> infinity",
++        "p_j/q_j -> theta",
++        "simplicity of the irrational rotation C*-algebra",
++        "canonical trace faithful"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:P0189:rotation-strong-convergence-reduction",
++        "url": "file:///~/brain_workers/w333/proofs/P0189.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "weighted-covariance-hyperuniformity-bound",
++      "namespace": "probability.openproblems",
++      "logical_name": "weighted-covariance-hyperuniformity-bound",
++      "kind": "lemma",
++      "title": "A weighted covariance criterion for power-saving number variance",
++      "statement": "Let (eta_x) be a real, stationary, square-integrable field on Z^d, d>=1, with covariance c(z)=Cov(eta_0,eta_z). Suppose sum_z |c(z)|<infinity, sum_z c(z)=0, and M_alpha=sum_z ||z||_infinity^alpha |c(z)|<infinity for some 0<alpha<=1. For every integer L>=1, Var(sum_(x in {1,...,L}^d) eta_x) <= d M_alpha L^(d-alpha). These assumptions on the infinite-volume covariance are sufficient for a power saving; they are not established here for ARW wake states.",
++      "proof_text": "The variance equals sum_z n_L(z)c(z), where n_L(z)=product_i (L-|z_i|)_+. Subtract L^d sum_z c(z)=0. The overlap deficit satisfies 0<=L^d-n_L(z)<=d L^d min(1,||z||_infinity/L)<=d L^(d-alpha)||z||_infinity^alpha. Absolute summation proves the claim. A dyadic covariance estimate |c(z)|<=C(1+||z||_infinity)^(-d-beta), beta>alpha, supplies M_alpha<infinity by a geometric annulus sum. Finite-torus conservation alone does not supply the infinite-volume zero sum or a uniform weighted tail bound.",
++      "assumptions": [
++        "stationary square-integrable field on Z^d",
++        "absolute covariance summability",
++        "infinite-volume covariance sum zero",
++        "0<alpha<=1",
++        "M_alpha finite"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:P0390:weighted-covariance-hyperuniformity-bound",
++        "url": "file:///~/brain_workers/w333/proofs/P0390.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "sandpile-periodic-patch-frequency-reduction",
++      "namespace": "probability.openproblems",
++      "logical_name": "sandpile-periodic-patch-frequency-reduction",
++      "kind": "lemma",
++      "title": "Conditional patchwise criterion for sandpile height frequencies",
++      "statement": "Let B be a bounded Jordan measurable set in R^2 of positive area. Let P_i be countably many disjoint open Jordan measurable patches covering B up to a null set. For every i fix a finite-period Z^2 pattern h_i and let f_i(j) be its fraction of height j in one period. Suppose a discrete configuration s_N on B intersect N^(-1)Z^2 differs from h_i(Nx) at o(N^2) sites in each fixed P_i intersect B. Then for every integer j its height-j frequency in B converges to (1/area(B)) sum_i area(B intersect P_i) f_i(j). This is a sufficient condition; the required patchwise agreement for the actual sandpile, and the sandpile identity-element limit, are not proved here.",
++      "proof_text": "For a fixed finite collection of patches, periodic cell counting on Jordan sets gives the stated frequencies, and the o(N^2) mismatches change normalized counts by o(1). Choose finitely many patches covering all but epsilon area of B. Their union and its complement are Jordan measurable, so lattice counting bounds the omitted sites by epsilon N^2+o(N^2). Indicators of a fixed height lie in [0,1]. First let N tend to infinity, then epsilon tend to zero. This avoids an unsupported uniform claim about every small patch or a transition layer around an infinite gasket.",
++      "assumptions": [
++        "B bounded Jordan measurable with positive area",
++        "patches disjoint and Jordan measurable",
++        "patches cover B up to a null set",
++        "fixed finite-period pattern in each patch",
++        "o(N^2) mismatches in each fixed patch"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:C0100:sandpile-periodic-patch-frequency-reduction",
++        "url": "file:///~/brain_workers/w333/proofs/C0100.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "weak-height-convergence-does-not-determine-frequencies",
++      "namespace": "probability.openproblems",
++      "logical_name": "weak-height-convergence-does-not-determine-frequencies",
++      "kind": "lemma",
++      "title": "Weak height convergence alone does not determine height frequencies",
++      "statement": "Weak-* convergence of bounded lattice height functions to a constant does not by itself imply convergence of each height frequency. Alternating arrays equal to 1 everywhere, or to a fine checkerboard of heights 0 and 2, both converge weak-* to 1, while the height-1 frequencies are respectively 1 and 0. A sequence alternating these two array types has a weak-* limit and no height-1 frequency limit. These are generic bounded arrays, not claimed to be stabilized sandpiles.",
++      "proof_text": "On every fine checkerboard cell the height difference from 1 has mean zero. Against a continuous test function its integral is bounded by a constant times the modulus of continuity at the cell diameter, hence tends to zero. Boundedness extends the limit to L^1 test functions by density. The constant arrays have the same weak-* limit but a different exact height-1 fraction.",
++      "assumptions": [
++        "bounded arrays",
++        "weak-* convergence only",
++        "no sandpile dynamics assumed"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:C0100:weak-height-convergence-does-not-determine-frequencies",
++        "url": "file:///~/brain_workers/w333/proofs/C0100.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "sparse-first-passage-square-root-threshold",
++      "namespace": "probability.openproblems",
++      "logical_name": "sparse-first-passage-square-root-threshold",
++      "kind": "lemma",
++      "title": "The square-root threshold for exceptional first-passage clock time",
++      "statement": "Let tau_i be independent standard Brownian first hitting times of -1. For a deterministic exceptional-index set let m(N) count its first N indices and S_N=sum_(i=1 to m(N)) tau_i. For m(N)>0 and epsilon>0, P(S_N>epsilon N)=erf(m(N)/sqrt(2 epsilon N)). Thus S_N/N tends to zero in probability if and only if m(N)/sqrt(N) tends to zero. A zero density m(N)/N->0 alone is insufficient. If m(N)=O(N^(1/2-delta)) for some delta>0, then S_N/N->0 almost surely. These are clock statements, not a construction of a backward or two-sided Brownian law after a finite random shift.",
++      "proof_text": "By the strong Markov property, the sum of m independent first hitting times of -1 has the law of a Brownian first hitting time of -m. Brownian scaling and the reflection principle give the displayed erf formula. It tends to zero exactly when m(N)/sqrt(N) does. For the almost-sure assertion, use erf(x)<=2x/sqrt(pi) at N=2^k. The probabilities are O(2^(-delta k)) and summable. Borel-Cantelli and monotonicity of S_N extend the limit from dyadic N to every N. The earlier geometric-index result is included as a special case; the exact in-probability threshold is stronger.",
++      "assumptions": [
++        "independent standard Brownian first-passage times",
++        "deterministic exceptional indices",
++        "m(N) counts the first N indices"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:P0031:sparse-first-passage-square-root-threshold",
++        "url": "file:///~/brain_workers/w333/proofs/P0031.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "stationary-flow-lumping-three-halves-lower-bound",
++      "namespace": "probability.openproblems",
++      "logical_name": "stationary-flow-lumping-three-halves-lower-bound",
++      "kind": "lemma",
++      "title": "Stationary-flow lumping amplification approaches three halves",
++      "statement": "For finite irreducible reversible chains, any universal K satisfying t_stop(P_hat)<=K t_stop(P) for every stationary-flow lumping must obey K>=3/2. Here t_stop(P)=max_i inf_T E_i T for randomized stopping times with terminal law pi. A four-state family with symmetric weights W=[[0,0,1,0],[0,2s,1,2s],[1,1,0,s],[0,2s,s,4s^2]], P_ij=W_ij/sum_k W_ik, s>0, and blocks {0},{1},{2,3}, has t_stop(P)->2 and t_stop(P_hat)->3 as s->infinity. This proves a candidate lower bound only; existence or sharpness of a universal K is not settled here. Independent review is pending.",
++      "proof_text": "# P0242: stationary-flow lumping has asymptotic amplification 3/2\n\nLabel: proof candidate with an exact algebraic certificate; independent audit PENDING w347. This supplies a lower bound on any universal comparison constant, not an upper bound or a complete solution. No novelty claim.\n\nEarlier work read: the original store attempt requiring strong lumpability, and `Probability_P0242_Aldous_Fill_open_problem_4_45_lumping_2026-09-14.md`. The latter disproves K=1 and reports a finite witness with ratio 1.48220..., but explicitly has no asymptotic argument. The source is Aldous--Fill, Open Problem 4.45, PDF p.149 of the 2014 recompilation, and its stopping-time/halting-state identity.\n\nFor s>0 take the following symmetric weight matrix on states 0,1,2,3:\n\n    W = [[0, 0, 1, 0],\n         [0, 2s, 1, 2s],\n         [1, 1, 0, s],\n         [0, 2s, s, 4s^2]].\n\nLet w_i be its row sums: (1,4s+1,s+2,4s^2+3s), with total 4(s+1)^2. The discrete chain P_ij=W_ij/w_i is irreducible and reversible with pi_i=w_i/(4(s+1)^2). Set Q=P-I if using the rate-one continuous-time version. Lump states 2,3 into A by stationary flows. The coarse symmetric weights, in order 0,1,A, are\n\n    W_hat = [[0, 0, 1],\n             [0, 2s, 2s+1],\n             [1, 2s+1, 4s^2+2s]].\n\nThis is stationary-flow lumping, rather than strong lumpability: from state 2 the transition probability into {0} is 1/(s+2), whereas from state 3 it is zero.\n\nFor each target j let H_ij be the expected hitting time, the unique solution of H_jj=0 and -sum_k Q_ik H_kj=1 for i!=j. The standard optimal-stopping identity is\n\n    t_stop(P) = max_(i,j) D_ij,\n    D_ij = H_ij - sum_k pi_k H_kj.\n\nIt applies to randomized stopping times with stationary terminal law. The same linear systems compute the rate-one continuous-time quantity. The certificate below lists every rational D entry. `p0242_family.py` verifies the hitting equations, stationarity, and detailed balance as symbolic identities, with no floating point arithmetic. Uniqueness of the hitting solutions follows from irreducibility, so these identities identify the actual H matrices.\n\nThe entrywise limits as s tends to infinity are:\n\n    D -> [[-infinity, 2, -infinity, 2],\n          [2, -infinity, 1, 2],\n          [-infinity, 1, -infinity, 1],\n          [2, 2, 1, 0]],\n\n    D_hat -> [[-infinity, 3, 1],\n              [3, -infinity, 2],\n              [1, 2, 0]].\n\nEach limit is obtained by comparing numerator and denominator degrees and leading coefficients in the exact expressions below. For a fixed finite collection, the limit of its maximum is the maximum of its extended-real limits when at least one is finite. Consequently t_stop(P_s) tends to 2 and t_stop(P_hat_s) tends to 3, and their ratio tends to 3/2. Any constant K valid for all reversible chains and stationary-flow lumpings must therefore satisfy K>=3/2.\n\nThis proof does not establish existence of a universal K, or that 3/2 is sufficient. The dependency on the standard stopping-time identity, the precise stationary-flow convention, and the entire rational certificate must be independently checked before promotion.\n\nExact D entries (row i, column j):\n\nfine\n\n    D[0,0] = -(32*s**5 + 208*s**4 + 496*s**3 + 514*s**2 + 207*s + 30)/(4*(s + 1)**2*(2*s + 3))\n    D[0,1] = (16*s**3 + 62*s**2 + 81*s + 18)/(4*(s + 1)**2*(2*s + 3))\n    D[0,2] = -(32*s**4 + 120*s**3 + 126*s**2 + 15*s - 6)/(4*(s + 1)**2*(2*s + 3))\n    D[0,3] = (16*s**3 + 70*s**2 + 97*s + 26)/(4*(s + 1)**2*(2*s + 3))\n    D[1,0] = (16*s**3 + 62*s**2 + 81*s + 18)/(4*(s + 1)**2*(2*s + 3))\n    D[1,1] = -(16*s**4 + 48*s**3 + 66*s**2 + 47*s + 30)/(4*(s + 1)**2*(2*s + 3))\n    D[1,2] = (8*s**3 + 34*s**2 + 49*s + 6)/(4*(s + 1)**2*(2*s + 3))\n    D[1,3] = (16*s**3 + 38*s**2 + 33*s - 6)/(4*(s + 1)**2*(2*s + 3))\n    D[2,0] = -(32*s**4 + 120*s**3 + 126*s**2 + 15*s - 6)/(4*(s + 1)**2*(2*s + 3))\n    D[2,1] = (8*s**3 + 34*s**2 + 49*s + 6)/(4*(s + 1)**2*(2*s + 3))\n    D[2,2] = -(32*s**4 + 128*s**3 + 154*s**2 + 47*s + 6)/(4*(s + 1)**2*(2*s + 3))\n    D[2,3] = (8*s**3 + 42*s**2 + 65*s + 14)/(4*(s + 1)**2*(2*s + 3))\n    D[3,0] = (16*s**3 + 70*s**2 + 97*s + 26)/(4*(s + 1)**2*(2*s + 3))\n    D[3,1] = (16*s**3 + 38*s**2 + 33*s - 6)/(4*(s + 1)**2*(2*s + 3))\n    D[3,2] = (8*s**3 + 42*s**2 + 65*s + 14)/(4*(s + 1)**2*(2*s + 3))\n    D[3,3] = -(18*s**3 + 47*s**2 + 62*s + 16)/(4*s*(s + 1)**2*(2*s + 3))\n\ncoarse\n\n    D[0,0] = -(16*s**5 + 72*s**4 + 120*s**3 + 100*s**2 + 37*s + 5)/(2*(s + 1)**2*(2*s + 1))\n    D[0,1] = (12*s**3 + 20*s**2 + 15*s + 3)/(2*(s + 1)**2*(2*s + 1))\n    D[0,2] = (4*s**3 + 2*s**2 + 3*s + 1)/(2*(s + 1)**2*(2*s + 1))\n    D[1,0] = (12*s**3 + 20*s**2 + 15*s + 3)/(2*(s + 1)**2*(2*s + 1))\n    D[1,1] = -(8*s**4 + 16*s**3 + 20*s**2 + 13*s + 5)/(2*(s + 1)**2*(2*s + 1))\n    D[1,2] = (8*s**3 + 10*s**2 + 7*s + 1)/(2*(s + 1)**2*(2*s + 1))\n    D[2,0] = (4*s**3 + 2*s**2 + 3*s + 1)/(2*(s + 1)**2*(2*s + 1))\n    D[2,1] = (8*s**3 + 10*s**2 + 7*s + 1)/(2*(s + 1)**2*(2*s + 1))\n    D[2,2] = -(8*s**2 + 5*s + 1)/(2*(s + 1)**2*(2*s + 1))\n\nChecks: 50 symbolic residual identities passed in 2.428 seconds. Eight exact parameter values were evaluated; at s=1000 the ratio is 24076090051009/16078132074513 = 1.4974432315538901.\n\nNEXT: w347 independently verify the stopping-time identity and certificate; then add the lower-bound lemma and edges to the P0242 problem and earlier attempt.\n",
++      "assumptions": [
++        "s>0",
++        "P_ij=W_ij/w_i",
++        "stationary-flow lumping, not a Markov projection",
++        "standard optimal stationary-stopping identity t_stop=max_(i,j)(H_ij-E_pi H_.j)"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:P0242:stationary-flow-lumping-three-halves-lower-bound",
++        "url": "file:///~/brain_workers/w333/proofs/P0242.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "ray-knight-additive-square-correction",
++      "namespace": "probability.openproblems",
++      "logical_name": "ray-knight-additive-square-correction",
++      "kind": "lemma",
++      "title": "Ray-Knight local-time identity retains an additive independent square",
++      "statement": "In the normalized second Ray-Knight identity on a finite symmetric network pinned at a base vertex, the field identity in law is {L_(tau(t))^x + phi_x^2/2}_x =_d {(phi_x+sqrt(2t))^2/2}_x, with the left Gaussian field independent of the walk. It does not assert L_(tau(t))^x =_d (phi_x+sqrt(2t))^2/2. When Var(phi_x)=g>0 and t>0, the local-time marginal has mean t and an atom exp(-t/g) at zero, whereas the shifted Gaussian square has mean t+g/2 and no atom at zero. The omitted term in the earlier C0011 attempt invalidates that transfer step. This correction does not decide present openness of the full planar level-set problem.",
++      "proof_text": "For lambda>=0, independence on the left and the elementary Gaussian-square transform give E exp(-lambda L)=exp(-t lambda/(1+g lambda)). This is the Laplace transform of a compound Poisson sum with Poisson mean t/g and exponential jumps of mean g. It has mean t and zero atom exp(-t/g). Directly E[(phi+sqrt(2t))^2/2]=t+g/2, and a nondegenerate Gaussian hits a single value with probability zero. Thus the claimed equality after deleting the independent square is false.",
++      "assumptions": [
++        "finite symmetric network with normalized pinned Ray-Knight identity",
++        "g=Var(phi_x)>0",
++        "t>0",
++        "Gaussian field on the left independent of the walk"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:C0011:ray-knight-additive-square-correction",
++        "url": "file:///~/brain_workers/w333/proofs/C0011.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "inverse-local-time-square-root-chernoff-bound",
++      "namespace": "probability.openproblems",
++      "logical_name": "inverse-local-time-square-root-chernoff-bound",
++      "kind": "lemma",
++      "title": "Square-root Chernoff rate for inverse-local-time marginals",
++      "statement": "Let L have Laplace transform E exp(-lambda L)=exp(-t lambda/(1+g lambda)), lambda>=0, where t>0 and g>0. For ell>=t, P(L>=ell)<=exp(-(sqrt(ell)-sqrt(t))^2/g). For 0<=ell<=t, P(L<=ell)<=exp(-(sqrt(ell)-sqrt(t))^2/g). At ell=0 the bound is exact: P(L=0)=exp(-t/g). This supplies a one-point rate, not joint spatial convergence of a local-time level set.",
++      "proof_text": "The transform identifies a compound Poisson law with exponential jumps, whose moment generating function is exp(t lambda/(1-g lambda)) for lambda<1/g. For ell>0 choose lambda=(1-sqrt(t/ell))/g in Markov/Chernoff; positive lambda controls the upper tail and negative lambda controls the lower tail. Its optimized exponent is -(sqrt(ell)-sqrt(t))^2/g. Handle ell=0 by lambda tending to minus infinity, or by the compound-Poisson zero atom.",
++      "assumptions": [
++        "t>0",
++        "g>0",
++        "specified local-time/compound-Poisson Laplace transform"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:C0011:inverse-local-time-square-root-chernoff-bound",
++        "url": "file:///~/brain_workers/w333/proofs/C0011.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "poisson-extinction-duality-rate-identity",
++      "namespace": "probability.openproblems",
++      "logical_name": "poisson-extinction-duality-rate-identity",
++      "kind": "lemma",
++      "title": "Poisson branching extinction duality preserves the total-progeny rate",
++      "statement": "Let a Poisson(lambda) Galton-Watson process have lambda>1 and extinction probability q in (0,1), satisfying q=exp(-lambda(1-q)). Conditional on extinction its offspring law is Poisson(lambda q). If I(a)=a-1-log a, then I(lambda q)=I(lambda) exactly. For lambda=1+epsilon with epsilon decreasing to zero, lambda q=1-epsilon+(2/3)epsilon^2+O(epsilon^3). This is a branching-process mechanism for discrete duality; it does not prove that hypercube clusters after deleting the giant have this law.",
++      "proof_text": "If p_k is the original offspring law, conditioning the k independent descendant processes to become extinct gives p_k q^k/q. For Poisson(lambda), q=e^(lambda(q-1)) reduces this to Poisson(lambda q). Since log q=-lambda(1-q), I(lambda q)=lambda q-1-log lambda-log q=lambda-1-log lambda. Expanding the extinction equation gives 1-q=2epsilon-(8/3)epsilon^2+O(epsilon^3), hence the claimed dual mean. By Stirling, the Borel total-progeny mass has exponential rate I(a). A hypercube proof still needs uniform exploration and dependence estimates. The cached survey specifies epsilon=o(1) and epsilon>>2^(-d/3). It says Hulshof--Nachmias established the subcritical order Theta_P(epsilon^(-2) log(epsilon^3 2^d)), while the sharp leading constant remained missing in that revision. This local cached-source statement is not a certification of present openness.",
++      "assumptions": [
++        "Poisson Galton-Watson offspring",
++        "lambda>1",
++        "q is the nontrivial extinction root"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:C0070:poisson-extinction-duality-rate-identity",
++        "url": "file:///~/brain_workers/w333/proofs/C0070.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "prime-phase-moment-averaging-bound",
++      "namespace": "probability.openproblems",
++      "logical_name": "prime-phase-moment-averaging-bound",
++      "kind": "lemma",
++      "title": "An explicit moment window for time-averaged prime phases",
++      "statement": "Let tau be uniform on [T,2T], T>0, and let A and B be products of at most r prime factors each, all primes <=y, y>=2. For A=B, E exp(-i tau log(A/B))=1. For A!=B its modulus is at most min(1,2/(T |log(A/B)|))<=min(1,2 y^r/T). Independent Haar phases at the primes have the same expectation 1 when A=B and 0 otherwise. Thus for a finite polynomial in these phases and their conjugates with such monomials and coefficient absolute sum M, the time-average versus Haar moment error is at most 2 M y^r/T. This is a sufficient fixed-moment approximation window, not a necessary condition and not a decomposition theorem for log|zeta|.",
++      "proof_text": "Integrate the single exponential exactly over [T,2T]. For distinct positive integers A,B, |log(A/B)|>=|A-B|/max(A,B)>=y^(-r). Unique factorization identifies A=B with matching prime exponents, exactly the Haar resonance condition. Sum the monomial errors against absolute coefficients. A growing moment order or prime cutoff requires a quantitative bound on M y^r/T; failure of this upper bound to vanish proves no failure of independence by itself. Controlling the zeta approximation remainder and spatial increments remains separate.",
++      "assumptions": [
++        "tau uniform on [T,2T]",
++        "T>0",
++        "each prime product has at most r factors <=y",
++        "finite polynomial with coefficient absolute sum M"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:C0105:prime-phase-moment-averaging-bound",
++        "url": "file:///~/brain_workers/w333/proofs/C0105.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "random-cluster-finite-energy-boundary-obstruction",
++      "namespace": "probability.openproblems",
++      "logical_name": "random-cluster-finite-energy-boundary-obstruction",
++      "kind": "lemma",
++      "title": "Finite energy obstructs full exterior wiring of every boundary vertex",
++      "statement": "Consider a finite simple graph with an FK(p,q) law, 0<p<1 and q>=1, with no imposed identification of vertices outside a chosen subgraph H. Suppose H has at least two distinct boundary vertices and boundary vertex v has k incident edges outside H. If xi is the partition of the boundary induced by open paths using only exterior edges, then P(xi is not the one-block wired partition)>=(1-p)^k. In a family of maximum degree D this is at least (1-p)^D>0. Therefore uniqueness of a giant component alone cannot justify an assertion that every fixed boundary vertex is wired together with probability tending to one.",
++      "proof_text": "An FK edge conditional open probability is p when its endpoints are already connected and p/(p+q(1-p)) otherwise. Both are <=p for q>=1. Exposing the k exterior edges incident to v in turn gives probability at least (1-p)^k that all are closed. On that event no exterior open path leaves v, so v cannot be identified with another boundary vertex. The domain Markov property gives an interior FK law with the random exterior partition xi, not automatically the fully wired finite-volume law. A correct limit proof must compare the induced exterior partitions or their effects on a smaller ball.",
++      "assumptions": [
++        "0<p<1",
++        "q>=1",
++        "finite simple graph",
++        "no deterministic exterior identifications",
++        "at least two distinct boundary vertices"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:C0153:random-cluster-finite-energy-boundary-obstruction",
++        "url": "file:///~/brain_workers/w333/proofs/C0153.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "exterior-disk-log-distance-occupation-identity",
++      "namespace": "probability.openproblems",
++      "logical_name": "exterior-disk-log-distance-occupation-identity",
++      "kind": "lemma",
++      "title": "An exact boundary-occupation functional for synchronous reflection outside a disk",
++      "statement": "Let X,Y solve the synchronous Skorokhod equations in {|x|>=R}, R>0, with the same continuous driving path and inward-to-domain normal X/R or Y/R on the boundary. Write r=|X-Y| and let L_X,L_Y be their boundary regulators. Before r reaches zero, d log r = (1/(2R))(1-(|Y|^2-R^2)/r^2) dL_X + (1/(2R))(1-(|X|^2-R^2)/r^2) dL_Y. For reflected Brownian motions the same identity holds pathwise because the common Brownian increments cancel in X-Y. Thus coalescence at infinity is equivalent to this signed occupation functional tending to minus infinity. No sign or long-time behavior of that functional is proved here.",
++      "proof_text": "The difference X-Y is a continuous finite-variation path. Apply the ordinary chain rule to its squared norm and then its logarithm, localized away from zero. On dL_X support |X|=R and (X-Y).X/R=(r^2+R^2-|Y|^2)/(2R); use the analogous formula for dL_Y. This gives the identity. Integrating it yields log r_t=log r_0 plus the displayed functional, so r_t->0 exactly when that functional tends to -infinity, unless the paths have already met. For R=1 and drive (-t,0), X_0=(1,0) has X_t=(1,0), L_X=t. Starting Y_0=(-2,0) gives r_t=3+t; starting Y_0=(2,0) gives r_t=1-t for 0<=t<1. These deterministic Skorokhod examples confirm both signs; they do not give a positive-probability Brownian asymptotic event.",
++      "assumptions": [
++        "R>0",
++        "same continuous driving path",
++        "normal reflection into the exterior domain",
++        "boundary regulators supported on |X|=R or |Y|=R",
++        "identity localized before meeting"
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:P0025:exterior-disk-log-distance-occupation-identity",
++        "url": "file:///~/brain_workers/w333/proofs/P0025.md",
++        "revision": "2026-10-10-unreviewed",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "torus-local-time-level-set-held-status",
++      "namespace": "probability.openproblems",
++      "logical_name": "torus-local-time-level-set-held-status",
++      "kind": "concept",
++      "title": "C0011 torus level-set status is held, not a verified resolution",
++      "statement": "The 2026-09-07 local campaign row P0476, originating as C0011, records result_status=held and current_status=unverified. Its stated reason is that later wired-boundary local-time results do not directly match the torus with inverse-origin-local-time clock. The revision of Biskup's notes after Problem 16.11 cites an Abe--Biskup intermediate-level-set result in a different parametrization. That update alone is not a verified exact-domain resolution of the torus problem. A store heading saying \"Resolved or excluded\" must not be used as a proof that this exact problem was solved.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner:w333:c0011-held-source-status",
++        "url": "file:///~/brain_workers/w333/evidence/C0011_held_source.json",
++        "revision": "2026-10-10-read-of-2026-09-07-record",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "nilpotent-rotation-approximants",
++      "to_existing_logical": "math:probability.core:open-problem-p0189-brown-measure-convergence-from-general-strong-convergence",
++      "kind": "specializes",
++      "rationale": "New end: \"For q>=2, let omega be a primitive qth root of unity and c a complex number with c^q=-1. On C^q set U e_k=omega^k e_k and V e_k=c e_(k-1 mod q). Then det(zI-U-V)=z^q and (U+V)^q=0.\" Existing end: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_full_solution). Does strong convergence of a family of random matrices imply convergence of empirical complex-eigenvalue measures of every noncommutative polynomial to its limiting Brown measure? Source: The strong convergence phenomenon,2025 survey, Section 6.9, pp.69-70.\" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "rotation-strong-convergence-reduction",
++      "to_existing_logical": "math:probability.core:open-problem-p0189-brown-measure-convergence-from-general-strong-convergence",
++      "kind": "specializes",
++      "rationale": "New end: \"Fix an irrational theta and reduced rationals p_j/q_j tending to theta with q_j tending to infinity. The clock/shift pairs U_j,V_j from the nilpotent construction, with omega_j=exp(2*pi*i*p_j/q_j) and c_j=exp(pi*i/q_j), converge in all star-moments and in the norms of every fixed matrix-valued star-polynomial to the canonical irrational rotation pair u,v. This uses simplicity and the faithful canonical trace of the irrational rotation C*-algebra. The cached Fang--Jiang--Lin--Xu paper, arXiv:1210.4771v1, Theorem 12.2, identifies the Brown measure of u+v in this canonical tracial representation as Haar measure on the unit circle. Every finite sum U_j+V_j has empirical eigenvalue measure delta_0. This gives a candidate counterexample to the implication from arbitrary strong convergence to Brown-measure convergence, pending independent review and with no novelty claim. It does not address independent Ginibre ensembles or a free limiting family.\" Existing end: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_full_solution). Does strong convergence of a family of random matrices imply convergence of empirical complex-eigenvalue measures of every noncommutative polynomial to its limiting Brown measure? Source: The strong convergence phenomenon,2025 survey, Section 6.9, pp.69-70.\" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "weighted-covariance-hyperuniformity-bound",
++      "to_existing_logical": "math:probability.core:open-problem-p0390-hyperuniformity-transition-in-stationary-arw-wake-states",
++      "kind": "semantic_association",
++      "rationale": "New end: \"Let (eta_x) be a real, stationary, square-integrable field on Z^d, d>=1, with covariance c(z)=Cov(eta_0,eta_z). Suppose sum_z |c(z)|<infinity, sum_z c(z)=0, and M_alpha=sum_z ||z||_infinity^alpha |c(z)|<infinity for some 0<alpha<=1. For every integer L>=1, Var(sum_(x in {1,...,L}^d) eta_x) <= d M_alpha L^(d-alpha). These assumptions on the infinite-volume covariance are sufficient for a power saving; they are not established here for ARW wake states.\" Existing end: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Determine whether stationary wake-chain configurations have linear window variance below criticality and a power saving at and above criticality. Source: Levine and Silvestri: Universality conjectures for activated random walk, Question28; PDF15-16. Status notes: Focused searches on 2026-09-07 for ARW density, cutoff, local limits, hyperuniformity and incompr\" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "sandpile-periodic-patch-frequency-reduction",
++      "to_existing_logical": "math:probability.core:open-problem-c0100-convergence-of-height-fraction-statistics-in-the-sandpile-scaling-limi",
++      "kind": "specializes",
++      "rationale": "New end: \"Let B be a bounded Jordan measurable set in R^2 of positive area. Let P_i be countably many disjoint open Jordan measurable patches covering B up to a null set. For every i fix a finite-period Z^2 pattern h_i and let f_i(j) be its fraction of height j in one period. Suppose a discrete configuration s_N on B intersect N^(-1)Z^2 differs from h_i(Nx) at o(N^2) sites in each fixed P_i intersect B. Then for every integer j its height-j frequency in B converges to (1/area(B)) sum_i area(B intersect P_i) f_i(j). This is a sufficient condition; the required patchwise agreement for the actual sandpile, and the sandpile identity-element limit, are not proved here.\" Existing end: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Refine the Pegden-Smart weak-* convergence of the rescaled sandpile s_n by showing that for any ball B and integer j the fraction of sites in B with exactly j particles converges as the lattice spacing tends to zero; also determine the scaling limit of the sandpile identity element. Source: Levine and Peres: Laplacian growth, sandpiles and scaling limits, BAMS 2017, with open problems, Open problems (3)\" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "weak-height-convergence-does-not-determine-frequencies",
++      "to_existing_logical": "math:probability.core:open-problem-c0100-convergence-of-height-fraction-statistics-in-the-sandpile-scaling-limi",
++      "kind": "semantic_association",
++      "rationale": "New end: \"Weak-* convergence of bounded lattice height functions to a constant does not by itself imply convergence of each height frequency. Alternating arrays equal to 1 everywhere, or to a fine checkerboard of heights 0 and 2, both converge weak-* to 1, while the height-1 frequencies are respectively 1 and 0. A sequence alternating these two array types has a weak-* limit and no height-1 frequency limit. These are generic bounded arrays, not claimed to be stabilized sandpiles.\" Existing end: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Refine the Pegden-Smart weak-* convergence of the rescaled sandpile s_n by showing that for any ball B and integer j the fraction of sites in B with exactly j particles converges as the lattice spacing tends to zero; also determine the scaling limit of the sandpile identity element. Source: Levine and Peres: Laplacian growth, sandpiles and scaling limits, BAMS 2017, with open problems, Open problems (3)\" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "sparse-first-passage-square-root-threshold",
++      "to_existing_logical": "math:probability.core:open-problem-p0031-sparse-first-passage-pieces-in-a-forward-brownian-concatenation",
++      "kind": "specializes",
++      "rationale": "New end: \"Let tau_i be independent standard Brownian first hitting times of -1. For a deterministic exceptional-index set let m(N) count its first N indices and S_N=sum_(i=1 to m(N)) tau_i. For m(N)>0 and epsilon>0, P(S_N>epsilon N)=erf(m(N)/sqrt(2 epsilon N)). Thus S_N/N tends to zero in probability if and only if m(N)/sqrt(N) tends to zero. A zero density m(N)/N->0 alone is insufficient. If m(N)=O(N^(1/2-delta)) for some delta>0, then S_N/N->0 almost surely. These are clock statements, not a construction of a backward or two-sided Brownian law after a finite random shift.\" Existing end: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). In a two-sided independent concatenation, use unit-length Brownian segments except at increasingly rare negative-time indices where segments stop on first hitting -1. Characterize frequencies giving backward or two-sided Brownian motion. Source: Forward Brownian motion, Problem 7.4, PDF page 26.\" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "stationary-flow-lumping-three-halves-lower-bound",
++      "to_existing_logical": "math:probability.core:open-problem-p0242-optimal-stationary-stopping-under-markov-chain-lumping",
++      "kind": "specializes",
++      "rationale": "New end: \"For finite irreducible reversible chains, any universal K satisfying t_stop(P_hat)<=K t_stop(P) for every stationary-flow lumping must obey K>=3/2. Here t_stop(P)=max_i inf_T E_i T for randomized stopping times with terminal law pi. A four-state family with symmetric weights W=[[0,0,1,0],[0,2s,1,2s],[1,1,0,s],[0,2s,s,4s^2]], P_ij=W_ij/sum_k W_ik, s>0, and blocks {0},{1},{2,3}, has t_stop(P)->2 and t_stop(P_hat)->3 as s->infinity. This proves a candidate lower bound only; existence or sharpness of a universal K is not settled here. Independent review is pending.\" Existing end: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Determine the sharp universal comparison between the worst optimal expected stationary stopping time of a finite reversible chain and that of its stationary-flow lumping. Source: Aldous-Fill: Reversible Markov Chains and Random Walks on Graphs, 2002 recompiled2014, Open Problem4.45,PDF149; definition4.39,p148. Status notes: Focused primary-source searches on2026-09-06; no \" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "ray-knight-additive-square-correction",
++      "to_existing_logical": "math:probability.gaussian:attempt-c0011-scaling-limit-of-local-time-level-sets-of-planar-random-walk-in-the-fu",
++      "kind": "refutes",
++      "rationale": "New end: \"In the normalized second Ray-Knight identity on a finite symmetric network pinned at a base vertex, the field identity in law is {L_(tau(t))^x + phi_x^2/2}_x =_d {(phi_x+sqrt(2t))^2/2}_x, with the left Gaussian field independent of the walk. It does not assert L_(tau(t))^x =_d (phi_x+sqrt(2t))^2/2. When Var(phi_x)=g>0 and t>0, the local-time marginal has mean t and an atom exp(-t/g) at zero, whereas the shifted Gaussian square has mean t+g/2 and no atom at zero. The omitted term in the earlier C0011 attempt invalidates that transfer step. This correction does not decide present openness of the full planar level-set problem.\" Existing end: \"ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Second Ray-Knight isomorphism to transfer the DGFF level-set result to local times. Result: By the second Ray-Knight theorem the local time at level theta of the walk is, in law, (1/2)(h + sqrt(2 theta ...))^2 for an independent DGFF-type field h; level sets of the local time at height eta times the cover-time scale correspond to DGFF level sets at height lambda log N with lambda determined by eta and theta, giving eta < 1 \" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "inverse-local-time-square-root-chernoff-bound",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0011-scaling-limit-of-local-time-level-sets-of-planar-random-walk-in-the-fu",
++      "kind": "semantic_association",
++      "rationale": "New end: \"Let L have Laplace transform E exp(-lambda L)=exp(-t lambda/(1+g lambda)), lambda>=0, where t>0 and g>0. For ell>=t, P(L>=ell)<=exp(-(sqrt(ell)-sqrt(t))^2/g). For 0<=ell<=t, P(L<=ell)<=exp(-(sqrt(ell)-sqrt(t))^2/g). At ell=0 the bound is exact: P(L=0)=exp(-t/g). This supplies a one-point rate, not joint spatial convergence of a local-time level set.\" Existing end: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Show that a suitably normalised level set (16.19) of the local time of simple random walk on D_N (run to a multiple theta of the cover time), or the associated point measure, admits a scaling limit for all 0 < eta < 1 + (1/2) sqrt theta. Source: Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes, Problem 16.11, p. 224. Status notes: The acquired revision of the n\" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "poisson-extinction-duality-rate-identity",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0070-discrete-duality-principle-for-hypercube-percolation",
++      "kind": "analogous_to",
++      "rationale": "New end: \"Let a Poisson(lambda) Galton-Watson process have lambda>1 and extinction probability q in (0,1), satisfying q=exp(-lambda(1-q)). Conditional on extinction its offspring law is Poisson(lambda q). If I(a)=a-1-log a, then I(lambda q)=I(lambda) exactly. For lambda=1+epsilon with epsilon decreasing to zero, lambda q=1-epsilon+(2/3)epsilon^2+O(epsilon^3). This is a branching-process mechanism for discrete duality; it does not prove that hypercube clusters after deleting the giant have this law.\" Existing end: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Show that for the hypercube the second largest cluster at p = p_c(1 + eps) (eps >> 2^{-d/3}) has, to leading order, the size of the largest cluster at p_c(1 - eps). Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 13.4, p. 190.\" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "prime-phase-moment-averaging-bound",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0105-multiscale-decomposition-of-the-actual-zeta-function-with-self-similar",
++      "kind": "semantic_association",
++      "rationale": "New end: \"Let tau be uniform on [T,2T], T>0, and let A and B be products of at most r prime factors each, all primes <=y, y>=2. For A=B, E exp(-i tau log(A/B))=1. For A!=B its modulus is at most min(1,2/(T |log(A/B)|))<=min(1,2 y^r/T). Independent Haar phases at the primes have the same expectation 1 when A=B and 0 otherwise. Thus for a finite polynomial in these phases and their conjugates with such monomials and coefficient absolute sum M, the time-average versus Haar moment error is at most 2 M y^r/T. This is a sufficient fixed-moment approximation window, not a necessary condition and not a decomposition theorem for log|zeta|.\" Existing end: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Exhibit a rigorous multiscale (branching-random-walk-like) decomposition of log|zeta(1/2+i(tau+h))|, h in [0,1], whose increments are self-similar with the dichotomy (50) and asymptotically independent, sufficient to run the branching-random-walk machinery on zeta itself rather than on the random Euler-product model. Source: Arguin: Extrema of log-correlated random variables, principles and examples, Se\" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "exterior-disk-log-distance-occupation-identity",
++      "to_existing_logical": "math:probability.core:open-problem-p0025-synchronous-reflection-outside-a-disk",
++      "kind": "specializes",
++      "rationale": "New end: \"Let X,Y solve the synchronous Skorokhod equations in {|x|>=R}, R>0, with the same continuous driving path and inward-to-domain normal X/R or Y/R on the boundary. Write r=|X-Y| and let L_X,L_Y be their boundary regulators. Before r reaches zero, d log r = (1/(2R))(1-(|Y|^2-R^2)/r^2) dL_X + (1/(2R))(1-(|X|^2-R^2)/r^2) dL_Y. For reflected Brownian motions the same identity holds pathwise because the common Brownian increments cancel in X-Y. Thus coalescence at infinity is equivalent to this signed occupation functional tending to minus infinity. No sign or long-time behavior of that functional is proved here.\" Existing end: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For synchronously coupled reflected Brownian motions in the exterior of a nondegenerate closed disk, can their distance have positive limsup with positive probability? Source: Krzysztof Burdzy: My favorite open problems, Problem 5(ii).\" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "rotation-strong-convergence-reduction",
++      "to_key": "nilpotent-rotation-approximants",
++      "kind": "depends_on",
++      "rationale": "New end: \"Fix an irrational theta and reduced rationals p_j/q_j tending to theta with q_j tending to infinity. The clock/shift pairs U_j,V_j from the nilpotent construction, with omega_j=exp(2*pi*i*p_j/q_j) and c_j=exp(pi*i/q_j), converge in all star-moments and in the norms of every fixed matrix-valued star-polynomial to the canonical irrational rotation pair u,v. This uses simplicity and the faithful canonical trace of the irrational rotation C*-algebra. The cached Fang--Jiang--Lin--Xu paper, arXiv:1210.4771v1, Theorem 12.2, identifies the Brown measure of u+v in this canonical tracial representation as Haar measure on the unit circle. Every finite sum U_j+V_j has empirical eigenvalue measure delta_0. This gives a candidate counterexample to the implication from arbitrary strong convergence to Brown-measure convergence, pending independent review and with no novelty claim. It does not address independent Ginibre ensembles or a free limiting family.\" Dependency end: \"For q>=2, let omega be a primitive qth root of unity and c a complex number with c^q=-1. On C^q set U e_k=omega^k e_k and V e_k=c e_(k-1 mod q). Then det(zI-U-V)=z^q and (U+V)^q=0.\""
++    },
++    {
++      "from_key": "inverse-local-time-square-root-chernoff-bound",
++      "to_key": "ray-knight-additive-square-correction",
++      "kind": "depends_on",
++      "rationale": "New end: \"Let L have Laplace transform E exp(-lambda L)=exp(-t lambda/(1+g lambda)), lambda>=0, where t>0 and g>0. For ell>=t, P(L>=ell)<=exp(-(sqrt(ell)-sqrt(t))^2/g). For 0<=ell<=t, P(L<=ell)<=exp(-(sqrt(ell)-sqrt(t))^2/g). At ell=0 the bound is exact: P(L=0)=exp(-t/g). This supplies a one-point rate, not joint spatial convergence of a local-time level set.\" Dependency end: \"In the normalized second Ray-Knight identity on a finite symmetric network pinned at a base vertex, the field identity in law is {L_(tau(t))^x + phi_x^2/2}_x =_d {(phi_x+sqrt(2t))^2/2}_x, with the left Gaussian field independent of the walk. It does not assert L_(tau(t))^x =_d (phi_x+sqrt(2t))^2/2. When Var(phi_x)=g>0 and t>0, the local-time marginal has mean t and an atom exp(-t/g) at zero, whereas the shifted Gaussian square has mean t+g/2 and no atom at zero. The omitted term in the earlier C0011 attempt invalidates that transfer step. This correction does not decide present openness of the full planar level-set problem.\""
++    },
++    {
++      "from_key": "random-cluster-finite-energy-boundary-obstruction",
++      "to_existing_logical": "math:probability.core:local-weak-convergence-objective-method-technique",
++      "kind": "semantic_association",
++      "rationale": "New end: \"Consider a finite simple graph with an FK(p,q) law, 0<p<1 and q>=1, with no imposed identification of vertices outside a chosen subgraph H. Suppose H has at least two distinct boundary vertices and boundary vertex v has k incident edges outside H. If xi is the partition of the boundary induced by open paths using only exterior edges, then P(xi is not the one-block wired partition)>=(1-p)^k. In a family of maximum degree D this is at least (1-p)^D>0. Therefore uniqueness of a giant component alone cannot justify an assertion that every fixed boundary vertex is wired together with probability tending to one.\" Existing end: \"TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For a sequence of finite, possibly random, rooted graphs G_n, local weak (Benjamini-Schramm) convergence means that for every finite radius r, the distribution of the isomorphism class of the r-ball around the (uniformly, or otherwise canonically) chosen root converges weakly to that of a limiting, typically infinite, random r\" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    },
++    {
++      "from_key": "torus-local-time-level-set-held-status",
++      "to_existing_logical": "math:probability.core:resolved-p0476-scaling-limit-of-local-time-level-sets-of-planar-random-walk-in-the-fu",
++      "kind": "semantic_association",
++      "rationale": "New end: \"The 2026-09-07 local campaign row P0476, originating as C0011, records result_status=held and current_status=unverified. Its stated reason is that later wired-boundary local-time results do not directly match the torus with inverse-origin-local-time clock. The revision of Biskup's notes after Problem 16.11 cites an Abe--Biskup intermediate-level-set result in a different parametrization. That update alone is not a verified exact-domain resolution of the torus problem. A store heading saying \"Resolved or excluded\" must not be used as a proof that this exact problem was solved.\" Existing end: \"RESOLVED OR EXCLUDED in the Codex campaign ledger (status unverified, recorded by that worker's bounded search; verify before citing). Show that a suitably normalised level set (16.19) of the local time of simple random walk on D_N (run to a multiple theta of the cover time), or the associated point measure, admits a scaling limit for all 0 < eta < 1 + (1/2) sqrt theta. Source posing it: Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes, Chapter16 target\" The relation applies to this stated reduction, status distinction, or quoted step; no audited open-problem solution is asserted."
++    }
++  ]
++}

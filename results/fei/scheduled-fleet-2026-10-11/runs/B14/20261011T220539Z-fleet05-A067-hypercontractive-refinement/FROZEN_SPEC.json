@@ -1,0 +1,12 @@
+{
+  "helper_version": "A067-local-granularity-1",
+  "family": "All Boolean truth tables for n=0,1,2,3 (pilot); all Boolean truth tables for n=4 (separate exhaustive job); explicit point defects and dictator surgeries for n=2,...,12; majority3 times point defect for n=2,...,8",
+  "domain": "Dimensions are fixed explicitly; no automatic dimension increase",
+  "case_count": {"pilot": 278, "exhaustive_n4": 65536, "point_defect_and_surgery": 22, "tensor_obstruction": 7},
+  "symmetry": "None; all truth tables included, including complementary functions",
+  "arithmetic": "Integer Walsh transform, integer superset maxima, Fraction for family identities; no floating entropy is accepted as a proof",
+  "memory_estimate_mb": 50,
+  "max_runtime_seconds": {"pilot": 60, "exhaustive_n4": 60, "families": 60},
+  "checks": ["Parseval", "influence against physical edges", "local coefficient granularity", "exact excess-degree accounting", "closed-form family spectra", "all eight majority anchor choices", "all spectral shifts for finite tensor witnesses"],
+  "heavy_job": false
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "claim_id": "A080-EXACT-HULL-TENSOR-FAITHFUL-BANK",
+    "version": 1,
+    "exact_statement": "For every K>=0 and arbitrary finite disjoint uniform-cube Boolean factors, the full physical stopping hull R_K of (H-KI)_+ tensorizes exactly: R_K(product_i f_i)=sum_i R_K(f_i), with no root-sign hypothesis. Always 0<=H-R_K<=KI, and for 0<=K<=L, 0<=R_K-R_L<=(L-K)I; R_K is convex piecewise affine in K. For every actual disjoint-core Boolean composition F=B(g_i), pivotal probabilities q_i and signed correction C=H(F)-sum_i q_i H(g_i), the bank A=C+kappa I(F)+sum_i q_i R_K(g_i) satisfies H(F)+(kappa-K)I(F)<=A<=H(F)+kappa I(F). Any two representations of the same F at the same K,kappa differ by at most K I(F). With fixed kappa, unbounded A/I implies an actual ordinary H/I counterfamily, even with varying K; the converse holds at bounded K. The clipped bank A_plus=C_+ +kappa I+sum_i q_i R_K(g_i), even though not universally coherent, obeys A_plus/I-kappa<=max(H(F)/I(F),max_{i:q_i I(g_i)>0} H(g_i)/I(g_i)); its unbounded root ratio therefore extracts an actual whole-or-core Boolean counterfamily. Products cannot amplify a finite A/I or R_K/I at fixed K,kappa. For F_t the product of t independent two-bit functions negative only at00, H=2t,I=t,Var=1-4^-t,R_K=t(2-K)_+, providing sharp bank endpoints at0<=K<=2 and divergent variance/average-influence normalizations despite H/I=2. No universal initial bank bound, no full FEI proof, and no unbounded ordinary-ratio family is asserted.",
+    "hypotheses": [
+      "Finite {-1,1}-valued functions on independent uniform physical bits; H is Shannon entropy in bits of the normalized squared Fourier law, I is total physical influence.",
+      "K>=0; every R_K is the true complete finite physical stopping hull, with all adaptive queries and both full outcomes retained; factors have disjoint supports.",
+      "Composition cores and outer gate are actual Boolean functions, allowing constants/dummies; q_i are actual independent biased-output pivotal probabilities, not substituted formal parameters.",
+      "Counterexample extraction uses fixed kappa, nonconstant actual whole functions, and actual full influence denominators; bounded K is required only in stated converse and representation-sequence comparisons.",
+      "Initial-bank algebra is unconditional. Nonnegative coherent status of the signed bank at kappa=6 is the separate A072 theorem reviewed by A074; no fresh original owner credit or repeated repartition payment is inferred."
+    ],
+    "statement_sha256": "4ff95a1f2c945e06dd0a49a3564b72efbe288e2bda939b4789740d43bc1c9f9a",
+    "contributors": [
+      "A080"
+    ],
+    "proof_source": [
+      "agents\\A080\\runs\\20261023T133708Z-fleet03-A080-universal-counterexample-standard\\PROOF.md",
+      "agents\\A080\\runs\\20261023T133708Z-fleet03-A080-universal-counterexample-standard\\out\\main_certificates.json",
+      "agents\\A080\\runs\\20261023T133708Z-fleet03-A080-universal-counterexample-standard\\out\\verification_summary.json",
+      "agents\\A080\\runs\\20261023T133708Z-fleet03-A080-universal-counterexample-standard\\out\\extraction_summary.json"
+    ],
+    "proof_dependencies": [
+      "Finite physical restriction DAG and stopping-policy duality, proved directly by backward induction.",
+      "Shannon chain rule, entropy concavity, character orthogonality and direct edge counting, reconstructed in PROOF.md.",
+      "Actual pivotal-influence identity and exact composition correction; no unproved FEI inequality.",
+      "A072-SIGNED-COMPOSITION-DRIFT-COHERENT-ENVELOPE@1 is used only to identify the separately coherent kappa=6 bank; algebra, tensorization and extraction do not require its drift theorem.",
+      "The bank sandwich overlaps A089-SHARPENED-SIGNED-COMPOSITION-RESERVE@1, independently reconstructed here; source digest preserved in scoped review. Tensor lower bound and clipped extraction are distinct A080 additions."
+    ],
+    "review_records": [
+      {
+        "reviewer": "A080",
+        "verdict": "AUTHOR_PROOF_AND_EXACT_VALIDATION_ONLY",
+        "arithmetic": "Rational prime-log forms and integer-power signs; direct-character primal/dual reconstruction without producer import or Bellman maximization.",
+        "critical_scope": "Zero-payoff leaf completion and actual joint policy attain the lifted feasible dual; clipped bank chooses an actual whole/core function.",
+        "external_independent_review": "PENDING",
+        "source_repair_supplied": false
+      },
+      {
+        "reviewer": "A092",
+        "independent_reviewer": true,
+        "verdict": "INDEPENDENTLY_ACCEPTED_UNCHANGED_STATEMENT",
+        "run_id": "20261023T143845Z-fleet03-A092-counterexample-referee",
+        "scope": "Full tensor/hull/sandwich/extraction statement only. A089 owner proof and separate bank coherence are NOT accepted by this review.",
+        "proof": "REPORT.md complete reconstruction; code/audit.py independent full Bellman recursion from original truth tables; out/VALIDATION.json",
+        "repair_supplied": false
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      "Tensor amplification of a finite ordinary H/I or full-hull R_K/I ratio.",
+      "Inference from variance-normalized or dimension-averaged-influence growth to an FEI counterexample."
+    ],
+    "first_unproved_line": "A dimension-independent initial price for the coherent bank, or a literal Boolean sequence with its actual root A/I (or A_plus/I with whole/core extraction) unbounded.",
+    "next_consumers": [
+      "A071",
+      "A072",
+      "A074",
+      "A075",
+      "A084",
+      "A089",
+      "A092",
+      "B16",
+      "B20"
+    ]
+  }
+]

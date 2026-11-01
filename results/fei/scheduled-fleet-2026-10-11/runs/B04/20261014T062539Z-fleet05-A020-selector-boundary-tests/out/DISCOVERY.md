@@ -1,0 +1,3 @@
+# Saved before computation
+
+Candidate all-k witness: children differ only when v=0, have means +/-delta, identical squared Fourier laws, and delta=2^-k. Parent empty unqueried row has actual massdelta^2 exclusively at queried frequency present, forcing parent core-reference empty-set mass0. Child references put(1+delta^2)/2 at empty. Thus parent activation refund0, child refund tends(1/2)log2(9/8), core KL refund0. Candidate Lambda remains positive constant while essential query influence tends0. This is a proposed analytic mechanism until exact checks and full proof below; not an FEI counterexample or an error in A019's stated balanced-child theorem.

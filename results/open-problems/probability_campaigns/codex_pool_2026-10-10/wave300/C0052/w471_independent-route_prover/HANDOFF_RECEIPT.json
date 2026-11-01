@@ -1,0 +1,49 @@
+{
+  "routing_team": "landing_1007 (stale); direct named-peer fallback",
+  "recipient_scope": [
+    "w472",
+    "w473"
+  ],
+  "initial_failure": "Direct statement send returned mesh error: database is locked; no success receipt.",
+  "previous_receipt": {
+    "routing_team": "landing_1007",
+    "recipient_scope": [
+      "w472",
+      "w473"
+    ],
+    "initial_failure": "Direct statement send returned mesh error: database is locked; no success receipt.",
+    "attempts": [
+      {
+        "peer": "w472",
+        "attempt": 1,
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "no such team\n"
+      }
+    ],
+    "statement_sent": false,
+    "proof_sent": false,
+    "disposition": "STUCK: transport lock or routing failure; complete disk handoffs in HANDOFF_MESSAGES.md and REVIEW_PACKET.md"
+  },
+  "attempts": [
+    {
+      "peer": "w472",
+      "attempt": 1,
+      "returncode": 0,
+      "route": "direct named-peer mesh (task explicitly authorizes these recipients)",
+      "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": null,\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"message\",\n  \"message_id\": \"msg-97515c73d7\",\n  \"message_ids\": [\n    \"msg-97515c73d7\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": false,\n  \"reused\": 0,\n  \"to\": \"w472\",\n  \"topic\": \"probability300-C0052-claim\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "peer": "w473",
+      "attempt": 1,
+      "returncode": 0,
+      "route": "direct named-peer mesh (task explicitly authorizes these recipients)",
+      "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": null,\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"message\",\n  \"message_id\": \"msg-902ff5e187\",\n  \"message_ids\": [\n    \"msg-902ff5e187\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": false,\n  \"reused\": 0,\n  \"to\": \"w473\",\n  \"topic\": \"probability300-C0052-done\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "statement_sent": true,
+  "proof_sent": true,
+  "disposition": "named-peer handoffs sent"
+}

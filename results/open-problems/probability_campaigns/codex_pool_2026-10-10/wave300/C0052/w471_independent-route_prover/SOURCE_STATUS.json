@@ -1,0 +1,94 @@
+{
+  "candidate_id": "C0052",
+  "worker": "w471",
+  "checked_date": "2026-10-10",
+  "primary_statement_verified": true,
+  "primary_source": {
+    "author": "Hugo Duminil-Copin",
+    "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+    "year": 2017,
+    "url": "https://www.ihes.fr/~duminil/publi/2017PIMS.pdf",
+    "locator": "Conjecture 6 and equations (7.1)-(7.2), printed p.94 (PDF index 93); Exercise 34, printed p.42 (PDF index 41)",
+    "short_quote": "Prove that the three-dimensional Ising model is non-trivial",
+    "normalization": "U4 is the fourth cumulant, nonpositive by Lebowitz; the source's g is signed. This packet uses g_+=-g with denominator chi^2 times the exponential correlation length cubed.",
+    "verification": "Public primary PDF opened; exact equation and Exercise 34 text inspected. This is source verification, not a proof of the conjecture."
+  },
+  "historical_openness": "SOURCE_SAYS_OPEN (2017; local intake bounded check 2026-09-07)",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "parent_problem_solved": false,
+  "bounded_search": {
+    "result": "No verified solution of the 3D half found in the authorized bounded primary-literature search. Search absence does not certify openness.",
+    "queries": [
+      "three-dimensional Ising non-triviality scaling limit 2025 2026",
+      "three-dimensional Ising non-Gaussian scaling limit theorem",
+      "site:arxiv.org three-dimensional Ising open non-Gaussian",
+      "Thermodynamic limit of the first Lee-Yang zero",
+      "Marginal triviality Ising"
+    ],
+    "related_primary_results": [
+      {
+        "url": "https://arxiv.org/abs/1912.07973",
+        "authors": "Aizenman and Duminil-Copin",
+        "scope": "Gaussian scaling limits in 4D; settles the 4D half, not C0052"
+      },
+      {
+        "url": "https://arxiv.org/abs/2210.03602",
+        "authors": "Jiang and Newman",
+        "scope": "Thermodynamic first-zero limit and analyticity radius; not a variance-normalized block-zero bound"
+      },
+      {
+        "url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.87.410",
+        "authors": "Lee and Yang",
+        "scope": "Ferromagnetic circle-zero theorem; zero location does not give the missing uniform normalized bound"
+      },
+      {
+        "url": "https://arxiv.org/abs/1708.08820",
+        "authors": "Newman and Wu",
+        "scope": "Lee-Yang generating functions and tail behavior; established precedent, no novelty asserted for L1"
+      },
+      {
+        "url": "https://arxiv.org/abs/2107.08469",
+        "scope": "Quantitative Gaussian criteria using zero-free disks; established precedent for the route"
+      }
+    ]
+  },
+  "local_evidence": {
+    "ranking": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:542",
+    "problem_record": "Same intake/problems.jsonl:52 (unreviewed historical record)",
+    "prior_attempt": "Same intake/attempts.jsonl:42, C0052-A001: random-current intersections, open variance estimate",
+    "H_I_Lean_search": "No exact C0052 match in the specifically named H/I attempts and Lean records; broader Ising search found no relevant H/I attempt.",
+    "team_O": "No C0052 row in the targeted Team O board search.",
+    "owner_solved_retired_check": "Targeted 17 exact intake files and the read-only canonical store. The two matching canonical nodes are unverified concepts; no verified solved/retired status was found. This is not an exhaustive scan of the owner's work; current openness stays UNKNOWN.",
+    "peer_core_proof_read": false,
+    "independent_route_precommit": "ROUTE_PRECOMMIT.md",
+    "canonical_receipt": "LOCAL_SOURCE_RECEIPT.json",
+    "scope_boundaries": "SCOPE_BOUNDARIES.md; only four STATUS lines read from nearby lanes; no proposed core proof or referee verdict read"
+  },
+  "brain_recall": {
+    "receipt": "RECALL_RECEIPT.json",
+    "result": "55-second subprocess timeout (63.4 seconds elapsed under host load); no recall output",
+    "fallback_memory_slugs": [
+      "perceptron_proof_open_gaps_fleet_2026_07_12",
+      "proof_steps_need_derived_joint_structure_2026_09_09"
+    ],
+    "rules_applied": "Name the hardest unchecked gap; never treat passing controls or source hashes as proof; do not multiply conditional bounds without a valid joint structure."
+  },
+  "review": {
+    "referee": "w473",
+    "status": "pending",
+    "independently_checked_proof": false,
+    "formal_check": null,
+    "handoff": {
+      "statement_to_w472": "msg-97515c73d7",
+      "complete_packet_to_w473": "msg-902ff5e187",
+      "receipt": "HANDOFF_RECEIPT.json"
+    }
+  },
+  "served_model_evidence": {
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "max",
+    "response_side_receipt": null,
+    "status": "unavailable; requested settings do not certify the served model"
+  }
+}

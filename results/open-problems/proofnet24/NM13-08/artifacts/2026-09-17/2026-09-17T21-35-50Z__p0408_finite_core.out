@@ -1,0 +1,14 @@
+P0408_FINITE_CORE_EXACT
+F(a,x) = a*x**2 - 2*a*x + a - x**2 - x - 1
+discriminant_x = 3*(4*a - 1)
+a(x) = (x**2 + x + 1)/(x - 1)**2
+a'(x) = -3*(x + 1)/(x - 1)**3
+a(-1) = 1/4
+lim_x_to_1_minus a(x) = oo
+threshold_factor = -3*(x + 1)**2/4
+vertex_solutions_A = [{u: 0, v: 0}]
+vertex_solutions_B = [{u: 0, v: 0}]
+test_point = (-3/8, 1/8)
+distances_A = [61/32, 25/32 - sqrt(3)/8, sqrt(3)/8 + 25/32]
+distances_B = [61/32, 29/32, 13/32]
+ALL_EXACT_CHECKS_PASS

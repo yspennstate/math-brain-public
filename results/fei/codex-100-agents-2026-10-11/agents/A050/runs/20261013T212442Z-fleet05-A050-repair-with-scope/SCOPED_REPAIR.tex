@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A050: sharp output-conditional history repair}
+For the scalar angular tax $\tau(p)$, the two-basis projector estimate gives
+$u+w\ge1-\sqrt{1-r}$, where $r=\min(p,1-p)$. Thus
+$h_2(u)+h_2(w)\ge h_2(1-\sqrt{1-r})\ge h_2(r)/2$,
+so $0\le\tau(p)\le h_2(p)/2$.
+Let $Y=f(X)$ and let $\Pi$ be a finite deterministic physical transcript.
+At node $v$, put $c_v=H(X_i\mid Y,v)$ and
+$j_v=I(X_i;Y\mid v)=h_2(p_i)-c_v$.
+Then
+\[
+ [\tau(p_i)-c_v/2]_+\le j_v/2,
+ \quad \sum_vw_vj_v=I(\Pi;Y).
+\]
+Since independence and Boolean fibers give
+$H(Y)\le\sum_i h_2(p_i)\operatorname{Inf}_i^{\rm phys}(f)
+\le I_{\rm phys}(f)$, it follows that
+\[
+ \sum_v w_v[\tau(p_i)-c_v/2]_+\le I_{\rm phys}(f)/2,
+ \qquad A_{\mathcal T}\le I_{\rm phys}(f)/2+H(\Pi\mid Y)/2.
+\]
+The coefficient $1/2$ of the declared history bank is necessary:
+$\tau(q)/h_2(q)\to1/2$ as $q\to0$, while on $r$-bit $q$-biased point
+defects the transcript has expected query count $(1-q^r)/(1-q)$ and
+$I_{\rm phys}=rq^{r-1}\to0$.
+The exact remaining Fourier bill is
+\[
+H_{\widehat f}=\mathbb E H_{\widehat {f_{\rm leaf}}}
++2\sum_vw_vM_v+\tfrac12H(\Pi\mid Y)+\tfrac12I(\Pi;Y)
+-\sum_vw_v\bigl[\tfrac12h_2(p_i)-(J_v-M_v)\bigr].
+\]
+This preserves terminal Fourier entropy. Availability of the output-conditional
+refund on a spectral reference and payment of the remaining signed bill are open.
+\end{document}

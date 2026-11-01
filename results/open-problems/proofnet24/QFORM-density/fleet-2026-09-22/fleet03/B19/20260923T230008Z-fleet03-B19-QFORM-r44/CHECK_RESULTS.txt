@@ -1,0 +1,21 @@
+QFORM B19 r44 threshold-Schur compiler diagnostics
+
+Generalized Moore-Penrose threshold test:
+- sizes m in {1,2,3,5}, |L| in {1,2,3,5,8}
+- 3000 noncommuting random block matrices
+- many D forced to contain exact +1, exact -1, and repeated threshold eigenvalues
+- checked #eig(A)>=1 = #eig(D)>=1 + #eig(S_+)>=0
+- checked #eig(A)<=-1 = #eig(D)<=-1 + #eig(S_-)<=0
+- mismatches: 0
+
+Threshold-free ordinary Schur test:
+- 1018 noncommuting random blocks
+- checked strict inertia identities at +1 and -1
+- checked S_- - S_+ = 2I + 2 C(D^2-I)^(-1)C^T
+- maximum observed operator-norm algebra residual: 7.525871778400108e-13
+
+Partner numerical gate:
+34*sqrt(log(e*2^80)) = 255.45694599713616 < 256
+
+Diagnostics only; exact proof is in REPORT.md.
+QFORM_B19_R44_CHECK_PASS

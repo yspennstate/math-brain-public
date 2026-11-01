@@ -1,0 +1,163 @@
+{
+  "status": "PASS",
+  "pilot": true,
+  "assertions": 3907,
+  "threshold_cases": 117,
+  "catalog_truth_tables": 828,
+  "catalog_distinct_laws": [
+    {
+      "n": 1,
+      "p": "1/4",
+      "laws": 2
+    },
+    {
+      "n": 1,
+      "p": "1/2",
+      "laws": 2
+    },
+    {
+      "n": 1,
+      "p": "3/4",
+      "laws": 2
+    },
+    {
+      "n": 2,
+      "p": "1/4",
+      "laws": 8
+    },
+    {
+      "n": 2,
+      "p": "1/2",
+      "laws": 5
+    },
+    {
+      "n": 2,
+      "p": "3/4",
+      "laws": 8
+    },
+    {
+      "n": 3,
+      "p": "1/4",
+      "laws": 128
+    },
+    {
+      "n": 3,
+      "p": "1/2",
+      "laws": 30
+    },
+    {
+      "n": 3,
+      "p": "3/4",
+      "laws": 128
+    }
+  ],
+  "nonzero_mixed_cases": 72,
+  "cases_with_not_both_marginals_Boolean": 70,
+  "scalar_cases": 147,
+  "physical_coefficient_Jensen_checks": 144,
+  "occupation_patterns": 126,
+  "endpoint_cases": 8,
+  "first_nonadmitted_example": {
+    "r": 1,
+    "s": 1,
+    "w": 2,
+    "t": 1,
+    "pA": "1/4",
+    "pB": "1/4",
+    "M": "9/64",
+    "Delta": "9/64",
+    "Delta_mixed": "9/64",
+    "marginal_A_Boolean": false,
+    "marginal_B_Boolean": false,
+    "TC_spec": {
+      "lower": "0",
+      "upper": "0",
+      "diagnostic_midpoint": 0.0
+    },
+    "degree_KL": {
+      "lower": "0",
+      "upper": "0",
+      "diagnostic_midpoint": 0.0
+    },
+    "qa": [
+      "0",
+      "1"
+    ],
+    "qb": [
+      "0",
+      "1"
+    ]
+  },
+  "different_degree_KL_example": null,
+  "AND4_reference": {
+    "marginals": [
+      "0",
+      "1/3",
+      "1/3",
+      "1/3"
+    ],
+    "reference_mass_per_mixed_set": "1/9",
+    "Boolean_realizable_joint": "NO_DYADIC_MASS_OBSTRUCTION"
+  },
+  "coupled_phase_reference": {
+    "truth_table": [
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "marginals": [
+      "0",
+      "1/2",
+      "0",
+      "1/2"
+    ],
+    "joint_Boolean_realizable": true,
+    "separable_Boolean_phase_possible": false,
+    "coefficient_submatrix": [
+      "1/2",
+      "-1/2",
+      "-1/2",
+      "-1/2"
+    ]
+  },
+  "conjunction_checks": [
+    {
+      "m": 1,
+      "M": "1/4",
+      "Delta_mixed": "1/4",
+      "E_mixed_over_M": "2(2m-1)ln2"
+    },
+    {
+      "m": 2,
+      "M": "9/64",
+      "Delta_mixed": "15/64",
+      "E_mixed_over_M": "2(2m-1)ln2"
+    },
+    {
+      "m": 3,
+      "M": "49/1024",
+      "Delta_mixed": "119/1024",
+      "E_mixed_over_M": "2(2m-1)ln2"
+    },
+    {
+      "m": 4,
+      "M": "225/16384",
+      "Delta_mixed": "735/16384",
+      "E_mixed_over_M": "2(2m-1)ln2"
+    }
+  ],
+  "runtime_seconds": 0.42534350001369603
+}

@@ -1,0 +1,47 @@
+{
+  "symbolic": {
+    "affine_determinant": "2*y",
+    "Aa": "Matrix([[-1], [1]])",
+    "A2a": "Matrix([[0], [-2]])",
+    "rank_determinant": "2"
+  },
+  "jacobian_cases": 300,
+  "jacobian_max_absolute_error": 1.628841506118306e-10,
+  "jacobian_min_abs_determinant": 0.011664213881346013,
+  "stationary_samples": 30000,
+  "lambda0": 0.5,
+  "lambda1": 3.0,
+  "truncation_cutoff": 30.0,
+  "deterministic_truncation_error_bound": 1.3233677314107763e-13,
+  "simulation_iterations": 53,
+  "ball_mass_comparison": [
+    {
+      "radius": 0.2,
+      "empirical_mode0_ball_mass": 0.6527333333333334,
+      "proved_lower_bound_using_R_2": 0.27105237087157535
+    },
+    {
+      "radius": 0.1,
+      "empirical_mode0_ball_mass": 0.51,
+      "proved_lower_bound_using_R_2": 0.19166296949998196
+    },
+    {
+      "radius": 0.05,
+      "empirical_mode0_ball_mass": 0.3811,
+      "proved_lower_bound_using_R_2": 0.13552618543578768
+    },
+    {
+      "radius": 0.02,
+      "empirical_mode0_ball_mass": 0.2507,
+      "proved_lower_bound_using_R_2": 0.08571428571428572
+    },
+    {
+      "radius": 0.01,
+      "empirical_mode0_ball_mass": 0.17926666666666666,
+      "proved_lower_bound_using_R_2": 0.06060915267313264
+    }
+  ],
+  "endpoint_exponent": "0",
+  "elapsed_seconds": 0.447767972946167,
+  "interpretation": "Symbolic identities and numerical checks agree; Monte Carlo is diagnostic, not proof."
+}

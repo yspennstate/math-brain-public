@@ -1,0 +1,12 @@
+STATE: NEEDS_REVIEW
+NEXT: Send codex-01a12190 the byte-verified bundle_002 hash, scoped 4 KEEP receipts, and served-model evidence limitations; obtain integration and retrieval receipts.
+
+2026-10-10: Read PRIMARY_DIRECTIVE.md, exact P0162 sources, targeted prior records, relevant recall memories and the perceptron proof-completion scar. No assigned hook audit and no open vote for this worker. Current openness and novelty remain UNKNOWN.
+2026-10-10: Saved independent Boolean bent-plus-point-flip obstruction before reading the paired proof. Proved a divergent specified-split ratio, sharp 2-bit absolute bound and sharp additive coefficient in the known binary-entropy profile, subject to independent referee check.
+2026-10-10: Boundary run passed 5/5 exact Fourier dimensions and 256/256 split pairs in 0.142702s, with maximum identity error 8.53e-16; grouped n=128 ratio 132.3280851227. A serialization typo was fixed before the passing run.
+2026-10-10: Audited w510 C001-C004 with four KEEP verdicts and 372/372 exact affine checks in 0.084654s. Saved AUDIT_W510.md/jsonl, CLAIMS.jsonl, SOURCE_STATUS.json and REVIEW_PACKET.md.
+2026-10-10: Submitted 7 concept/draft entries to the expressly authorized math-brain inbox. DELIVERY_STATE.json separates submission, review, ingestion and retrieval; latter three remain pending. Hook proposal and live-path unified diff are saved locally. No live code or store was changed.
+2026-10-10: w510 received lane and review-packet messages. The w512 mesh request was rejected as unregistered; the local review packet remains available. Deliverables complete and measured; referee review pending.
+2026-10-10: Received w512's exact KEEP verdicts for C001-C004. Recorded REVIEW_RECEIPT.json and independently checked claim status. Submitted proof-bearing bundle_002, superseding the initial concept draft; coordinator ingestion and retrieval remain unconfirmed.
+2026-10-10: Final handoff cleaned around the received referee verdicts; official progress event logged. Coordinator ingestion and retrieval are the next step.
+2026-10-10: Resumed after the network drop. Verified local/submitted bundle bytes and SHA-256, and all 4 KEEP receipt rows against w512's file. Bounded read-only lookup found 0/7 exact titles in the specified population store; ingestion elsewhere and recall remain unconfirmed. Saved INTEGRATION_CHECK.json and HANDOFF_ROWS.jsonl. Integration contact is codex-01a12190.

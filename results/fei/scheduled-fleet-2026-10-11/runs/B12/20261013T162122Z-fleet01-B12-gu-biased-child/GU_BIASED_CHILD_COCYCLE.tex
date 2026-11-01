@@ -1,0 +1,176 @@
+\section*{Exact upper-mass cocycle for one biased child}
+
+All logarithms in this note are base two.  For a Boolean function $f$ write
+\[
+ p_f(S)=\widehat f(S)^2,\qquad
+ \pi_f(S)=\sum_{R\supseteq S}p_f(R),\qquad
+ U(f)=\sum_{S:p_f(S)>0}p_f(S)\log\frac{\pi_f(S)}{p_f(S)}.
+\]
+Put $\psi(t)=t^2\log(1/t^2)$, with $\psi(0)=0$.
+
+\subsection*{1. Exact one-biased-child formula}
+
+Fix a Boolean gate $g:\{-1,1\}\times\{-1,1\}^k\to\{-1,1\}$ and
+decompose it in its first input as
+\[
+ g(y,z)=a(z)+y b(z).
+\]
+Thus $a=(g_++g_-)/2$, $b=(g_+-g_-)/2$, and pointwise
+$a^2+b^2=1$, $ab=0$.  Let $a_T,b_T$ be their Fourier coefficients on
+the $z$ block.  Define
+\[
+ B_T=\sum_{R\supseteq T}b_R^2,
+ \qquad \beta=\sum_Tb_T^2=\operatorname{Inf}_y(g),
+\]
+and, for $-1\le\mu\le1$,
+\[
+ C_T(\mu)=\sum_{R\supseteq T}
+ \bigl((a_R+\mu b_R)^2+(1-\mu^2)b_R^2\bigr).
+\]
+The quadratic terms cancel in the cap:
+\[
+ C_T(\mu)=\sum_{R\supseteq T}(a_R^2+b_R^2+2\mu a_Rb_R),       \tag{1}
+\]
+so every $C_T$ is affine in $\mu$.  Set
+\begin{align*}
+ E_b&=\sum_{T:b_T\ne0}b_T^2\log\frac{B_T}{b_T^2},\\
+ \Phi_{g,y}(\mu)
+ &=\sum_{T:a_T+\mu b_T\ne0}(a_T+\mu b_T)^2
+       \log\frac{C_T(\mu)}{(a_T+\mu b_T)^2}
+   +(1-\mu^2)E_b,                                               \tag{2}\\
+ \Theta_{g,y}(\mu)&=\Phi_{g,y}(\mu)-\beta\psi(\mu).            \tag{3}
+\end{align*}
+
+\paragraph{Theorem 1.}
+Let $h:\{-1,1\}^n\to\{-1,1\}$ be any genuine Boolean function on a
+block disjoint from the $z$ variables, let $\mu=\mathbb Eh$, and put
+\[
+ F(x,z)=g(h(x),z).
+\]
+Then
+\[
+ \boxed{\ U(F)=\beta U(h)+\Theta_{g,y}(\mu)\ }.                 \tag{4}
+\]
+The full dependence on the nonconstant spectrum of $h$ is the single term
+$\beta U(h)$; the composition defect depends on $h$ only through its mean.
+
+\paragraph{Proof.}
+For $S\subseteq[n]$ and $T\subseteq[k]$, Fourier expansion gives
+\[
+ \widehat F(\varnothing,T)=a_T+\mu b_T,
+ \qquad
+ \widehat F(S,T)=b_T\widehat h(S)\quad(S\ne\varnothing).        \tag{5}
+\]
+For $S\ne\varnothing$, the upper cap factors as
+\[
+ \pi_F(S,T)=B_T\pi_h(S).                                       \tag{6}
+\]
+For $S=\varnothing$, summing both the empty and nonempty child branches
+gives exactly
+\[
+ \pi_F(\varnothing,T)=C_T(\mu).                                \tag{7}
+\]
+The nonempty-child terms in $U(F)$ therefore sum to
+\[
+ (1-\mu^2)E_b
+ +\beta\sum_{S\ne\varnothing}p_h(S)
+     \log\frac{\pi_h(S)}{p_h(S)}.                              \tag{8}
+\]
+The omitted empty atom of $U(h)$ is $\psi(\mu)$.  Adding the empty-child
+terms from (7) proves (4). \qed
+
+The influence also has the exact decomposition
+\[
+ I(F)=\beta I(h)+
+ \sum_T |T|\bigl((a_T+\mu b_T)^2+(1-\mu^2)b_T^2\bigr).          \tag{9}
+\]
+
+\subsection*{2. The signed one-coordinate cocycle}
+
+For a physical child coordinate $i$, write
+\[
+ \mu_-=\mathbb E h_{i,-},\qquad
+ \mu_+=\mathbb E h_{i,+},\qquad
+ \mu=\frac{\mu_-+\mu_+}{2}.
+\]
+Subtracting (4) for the two restrictions from (4) at the parent gives the
+exact identity
+\[
+ \boxed{
+ \Delta_iU(F)=\beta\Delta_iU(h)
+ +\Theta_{g,y}(\mu)
+ -\frac{\Theta_{g,y}(\mu_-)+\Theta_{g,y}(\mu_+)}2.}             \tag{10}
+\]
+No sign, separation, regularity, or nonzero-bias assumption occurs in (10).
+In particular it remains valid at exact coefficient collisions and at
+$\mu=0$.
+
+Define the coherent composition defect at a child-query node $v$ by
+\[
+ R_v=\Delta_{i(v)}U(g(h_v,z))-\beta\Delta_{i(v)}U(h_v).          \tag{11}
+\]
+Equation (10) says precisely that $R_v$ is the Doob decrement of the scalar
+potential $\Theta_{g,y}(\mathbb Eh_v)$.
+
+\subsection*{3. Complete adaptive hierarchy}
+
+\paragraph{Theorem 2.}
+For every complete adaptive physical restriction tree on the child block,
+with node reach probabilities $w_v$,
+\begin{align*}
+ \sum_{v\ {\rm internal}}w_vR_v
+  ={}&\Theta_{g,y}(\mu)
+  -\frac{1+\mu}{2}\Theta_{g,y}(1)
+  -\frac{1-\mu}{2}\Theta_{g,y}(-1).                            \tag{12}
+\end{align*}
+The right side is independent of the child dimension, Fourier shape, tree
+depth, and adaptive query order.  It vanishes on every unchanged cylinder.
+
+\paragraph{Proof.}
+Multiply (10)'s last three terms by $w_v$ and sum.  Every internal potential
+cancels against its parent occurrence.  At a complete leaf $h=\pm1$.  The
+total weights of the positive and negative leaves are $(1+\mu)/2$ and
+$(1-\mu)/2$, respectively.  This proves (12). \qed
+
+It is useful to name the endpoint-centered reserve
+\[
+ \overline\Theta_{g,y}(\mu)=\Theta_{g,y}(\mu)
+  -\frac{1+\mu}{2}\Theta_{g,y}(1)
+  -\frac{1-\mu}{2}\Theta_{g,y}(-1).                            \tag{13}
+\]
+Theorem 2 reduces the complete hierarchy problem for one biased child to the
+single scalar quantity $\overline\Theta$.
+
+\subsection*{4. Candidate universal payment and exact scope}
+
+The natural next lemma is
+\[
+ \overline\Theta_{g,y}(\mu)
+ \stackrel{?}{\le}3\beta(1-\mu^2),                              \tag{14}
+\]
+or the stronger local form
+\[
+ \Theta(\mu)-\frac{\Theta(\mu_-)+\Theta(\mu_+)}2
+ \stackrel{?}{\le}3\beta\operatorname{Inf}_i(h).               \tag{15}
+\]
+Since $1-\mu^2\le I(h)$ for Boolean $h$, (14) would pay the entire terminal
+reserve from the child-channel influence with a universal constant.  This
+note does not claim (14) or (15) as proved.
+
+The deterministic search accompanying this note reconstructed (4) in
+$205{,}344$ cases and tested (15) in $555{,}024$ nontrivial coordinate cases
+covering every outer Boolean gate through arity three and every child Boolean
+function through dimension three.  The largest observed normalized defect was
+\[
+ 2.280249404938720832\ldots<3.
+\]
+It also verified (12) on $37{,}728$ complete trees.  These are finite numerical
+checks, not an all-dimension proof.
+
+The exact result covers one arbitrary biased Boolean child and an arbitrary
+outer Boolean gate, with the other outer inputs realized as fresh physical
+bits (equivalently, nonempty disjoint parity characters).  Arbitrary balanced
+non-character children in the other slots, overlapping physical inputs, and
+a universal bound for (13) remain open.  The rare-bias lower bound accepted in
+the B19/A091 review rules out discarding bias taxes without a ledger; here the
+ledger is retained exactly through the endpoint-centered cocycle.

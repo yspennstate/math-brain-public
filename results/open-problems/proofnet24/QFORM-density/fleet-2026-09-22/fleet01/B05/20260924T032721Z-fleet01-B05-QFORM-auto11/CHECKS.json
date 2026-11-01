@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T032721Z-fleet01-B05-QFORM-auto11",
+  "claim_status": "SUPPORTING_THEOREM_PROVED_FULL_TARGET_OPEN",
+  "exact_checks": {
+    "K0_formula": "(8/3)(4-sqrt(2)) = (8*sqrt(2)/3)(2^(3/2)-1)",
+    "K0_numeric": 6.8954305003384135,
+    "compiler_pair_constant_formula": "3*2^(-5/3)*(K0*(1+sqrt(2)))^(2/3)",
+    "compiler_pair_constant_numeric": 6.16068933516362,
+    "target_star_half_pair_prefactor": 7.761982175235496,
+    "partner_maxcut_target_prefactor": 9.779484731487997,
+    "walsh_example_c": 0.9375,
+    "walsh_example_kappa": 0.2581988897471611,
+    "walsh_example_aggregate_ideal_constant_if_Cag_eq_K0": 6.294659130109666
+  },
+  "algebra_checks": [
+    "For z=w+theta*v, det((v_j,v_k),(z_j,z_k)) = det((v_j,v_k),(w_j,w_k)) = b_jk.",
+    "After pair coordinates y=(v_j x_j+v_k x_k)/P, s=(-v_k x_j+v_j x_k)/P, V=v_*+P y and dx_j dx_k=dV ds/P.",
+    "At fixed V=v, dZ/ds=b_jk/P and the s^2 coefficient in Psi is delta*b_jk^2/(2*a*v*P^2).",
+    "The inverse image of a Borel set E under q(s-s0)^2+c has Lebesgue measure at most 2 sqrt(|E|/|q|).",
+    "Integral over both shell signs: integral_{r<=|v|<=2r} sqrt(|v|) dv=(4/3)(2^(3/2)-1)r^(3/2).",
+    "For orthonormal u,v,w, exterior products v wedge u and v wedge w are orthonormal, so sum a_jk^2=sum b_jk^2=1 and sum a_jk b_jk=0.",
+    "Hence sum J_jk^2=kappa^2+(delta^2/a^2)(Z^2/V^2).",
+    "Walsh family: v all +1/sqrt(N), w has opposite signs on the two halves, so b_jk=0 within halves and |b_jk|=2/N across halves; N^2/4 cross pairs give total square mass 1.",
+    "M0=[[0,1,0],[1,0,0],[0,0,1]] has spectrum {1,-1,1}; with c=15/16 the physical spectral frame remains column-orthonormal and the target has exactly three eigenvalues of modulus one."
+  ],
+  "live_corrections_respected": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1",
+    "QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "QFORM-CROSSMINOR-ALONE-FALSE"
+  ],
+  "partner_application": {
+    "worker": "fleet02/B05",
+    "source_commit": "4ad9d206dba1b22fd917280717c24f4e1dd6ea09",
+    "result": "QFORM-NULLSTAR-MAXCUT-v1",
+    "input_inequality": "sum_cross b_jk^2 >= 1/2",
+    "applied_output": "||p_Q||_inf,ess <= 7.761982175236 (|J||K|)^(1/3) S_i^(-1/3), hence <9.780 (|J||K|)^(1/3) when S_i>=1/2"
+  },
+  "unresolved": "QFORM-WITT-CROSSSTAR-AGGREGATE-COAREA-v1: aggregate cross Pluecker square mass before reciprocal minor payment"
+}

@@ -1,0 +1,227 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w435",
+  "bundle_slug": "p0043-thinning-ray-energy-route-001",
+  "entries": [
+    {
+      "key": "target",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-quasi-transitive-bond-percolation-target-p0043",
+      "kind": "concept",
+      "title": "DRAFT target: no infinite critical cluster on quasi-transitive graphs",
+      "statement": "Historical conjectural target P0043: if G is an infinite connected locally finite quasi-transitive graph with bond threshold p_c(G)<1, then iid Bernoulli bond percolation on G at p_c has no infinite component almost surely. Current openness is UNKNOWN in this packet; a recent public solution claim has not been verified. This entry is a target, not a proof.",
+      "proof_text": null,
+      "assumptions": [
+        "G infinite, connected, locally finite, quasi-transitive",
+        "iid Bernoulli bond percolation",
+        "p_c(G)<1"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w435:P0043:target",
+        "url": "file:///~/brain_workers/w435/ATTEMPT.md",
+        "revision": "2026-10-10-author-proof-awaiting-w437",
+        "license": "owner-own-work (campaign rederivation; no novelty claim)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "energy",
+      "namespace": "probability.percolation",
+      "logical_name": "simple-ray-common-edge-energy",
+      "kind": "definition",
+      "title": "Common-edge energy of a measure on simple rays",
+      "statement": "For a Borel probability measure mu on infinite simple rays starting at o in a locally finite graph H, let K(gamma,gamma') be the number of shared undirected edges of two independent rays sampled from mu. For 0<r<1 define I_r(mu)=E[r^{-K}], with r^{-infinity}=infinity. Edge labels, rather than shared vertices, determine K for bond percolation.",
+      "proof_text": null,
+      "assumptions": [
+        "Borel probability mu on infinite simple rays from o",
+        "H locally finite",
+        "0<r<1"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w435:P0043:energy",
+        "url": "file:///~/brain_workers/w435/ATTEMPT.md",
+        "revision": "2026-10-10-author-proof-awaiting-w437",
+        "license": "owner-own-work (campaign rederivation; no novelty claim)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "fragility",
+      "namespace": "probability.percolation",
+      "logical_name": "quenched-threshold-one-for-critical-bond-components",
+      "kind": "concept",
+      "title": "DRAFT auxiliary: critical components have quenched threshold one",
+      "statement": "Author-derived auxiliary statement, awaiting designated referee review: on any countable connected locally finite graph G with p_c(G)>0, almost surely every infinite component C of iid Bernoulli(p_c(G)) bond percolation satisfies p_c(C)=1 for independent bond thinning on the fixed graph C. This is consistent with an infinite critical component and does not by itself prove critical extinction.",
+      "proof_text": null,
+      "assumptions": [
+        "G countable, connected, locally finite",
+        "iid Bernoulli bond states",
+        "p_c(G)>0"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w435:P0043:fragility",
+        "url": "file:///~/brain_workers/w435/ATTEMPT.md",
+        "revision": "2026-10-10-author-proof-awaiting-w437",
+        "license": "owner-own-work (campaign rederivation; no novelty claim)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "criterion",
+      "namespace": "probability.percolation",
+      "logical_name": "finite-common-edge-energy-implies-bond-survival",
+      "kind": "concept",
+      "title": "DRAFT auxiliary: finite ray energy gives percolation survival",
+      "statement": "Classical second-moment criterion, rederived by the author and awaiting designated referee review: let H be connected and locally finite, mu a Borel probability on infinite simple rays from o, and 0<r<1. If I_r(mu)<infinity, then iid Bernoulli(r) bond percolation on H satisfies P_r(o connects to infinity)>=1/I_r(mu)>0. The normalized open-prefix second moment uses the number of shared edges, because two length-n prefixes have 2n-K_n distinct edges in their union.",
+      "proof_text": null,
+      "assumptions": [
+        "H connected, locally finite",
+        "mu Borel probability on infinite simple rays from o",
+        "0<r<1",
+        "I_r(mu)<infinity"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w435:P0043:criterion",
+        "url": "file:///~/brain_workers/w435/ATTEMPT.md",
+        "revision": "2026-10-10-author-proof-awaiting-w437",
+        "license": "owner-own-work (campaign rederivation; no novelty claim)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "cutset",
+      "namespace": "probability.percolation",
+      "logical_name": "ray-common-edge-energy-cutset-obstruction",
+      "kind": "concept",
+      "title": "DRAFT auxiliary: cutsets obstruct finite ray energy",
+      "statement": "Author-derived auxiliary statement, awaiting designated referee review: for a ray measure mu with finite I_r, the averaged signed ray traversals form a unit flow f from o to infinity with sum_e f(e)^2 <= (I_r-1)/(r^{-1}-1). For pairwise edge-disjoint boundaries D_j of finite vertex sets containing o, I_r >= 1+(r^{-1}-1)sum_j 1/|D_j|. Therefore no subgraph of the nearest-neighbor square lattice supports such a measure with I_r finite for r<1, since square boundaries have 8j+4 edges and the reciprocal sum diverges.",
+      "proof_text": null,
+      "assumptions": [
+        "mu Borel probability on infinite simple rays from o in a locally finite graph",
+        "0<r<1",
+        "D_j pairwise edge-disjoint finite edge boundaries surrounding o"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w435:P0043:cutset",
+        "url": "file:///~/brain_workers/w435/ATTEMPT.md",
+        "revision": "2026-10-10-author-proof-awaiting-w437",
+        "license": "owner-own-work (campaign rederivation; no novelty claim)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "tree",
+      "namespace": "probability.percolation",
+      "logical_name": "square-generation-tree-positive-critical-bond-survival",
+      "kind": "concept",
+      "title": "DRAFT control: critical survival without quasi-transitivity",
+      "statement": "Author-derived explicit counterexample, awaiting designated referee review: in the rooted tree T whose depth-(n-1) vertices have four children when n is a positive perfect square and two children otherwise, maximum degree is five, p_c(T)=1/2, and P_{1/2}(o connects to infinity)>=2/7. The uniform-ray common-edge energy at r=1/2 is 7/2. The unique degree-four root fixes infinitely many distance orbits, so T is not quasi-transitive. This refutes removing quasi-transitivity from P0043 and does not refute P0043.",
+      "proof_text": null,
+      "assumptions": [
+        "Rooted spherically symmetric tree with b_n=4 at positive square n, b_n=2 otherwise",
+        "iid Bernoulli bond percolation"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w435:P0043:tree",
+        "url": "file:///~/brain_workers/w435/ATTEMPT.md",
+        "revision": "2026-10-10-author-proof-awaiting-w437",
+        "license": "owner-own-work (campaign rederivation; no novelty claim)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "susceptibility",
+      "namespace": "probability.percolation",
+      "logical_name": "regular-tree-critical-susceptibility-diverges-with-extinction",
+      "kind": "concept",
+      "title": "DRAFT correction: critical extinction does not make susceptibility finite",
+      "statement": "Classical regular-tree computation, rederived by the author and awaiting designated referee review: for the infinite d-regular tree, d>=3, p_c=1/(d-1), all critical bond clusters are finite almost surely but chi_o(p_c)=E|C_o|=infinity. The expected critical open count within graph distance N of o equals 1+Nd/(d-1). Thus subcritical finite susceptibility cannot be extended to p=p_c without another argument; Hutchcroft's exponential-growth proof uses finiteness for p<p_c.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite d-regular tree, d>=3",
+        "iid Bernoulli bond percolation",
+        "p=1/(d-1)"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w435:P0043:susceptibility",
+        "url": "file:///~/brain_workers/w435/ATTEMPT.md",
+        "revision": "2026-10-10-author-proof-awaiting-w437",
+        "license": "owner-own-work (campaign rederivation; no novelty claim)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-cluster-ray-energy-construction-gap-p0043",
+      "kind": "concept",
+      "title": "DRAFT unresolved gap: constructing a robust critical-cluster ray measure",
+      "statement": "Unproved route requirement: for a graph class where finite ray energy is possible, deduce from quasi-transitivity and a hypothetical infinite critical component that the component supports some ray measure mu with I_r(mu)<infinity for r<1. Critical thinning fragility would then give a contradiction. The required construction is missing. It cannot be a universal recurrent-graph construction, and a good measure on the host graph does not automatically transfer to a critical component. P0043 is not proved by this route.",
+      "proof_text": null,
+      "assumptions": [
+        "P0043 hypotheses",
+        "Hypothetical infinite critical component",
+        "A graph class where recurrence does not preclude finite ray energy"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w435:P0043:gap",
+        "url": "file:///~/brain_workers/w435/ATTEMPT.md",
+        "revision": "2026-10-10-author-proof-awaiting-w437",
+        "license": "owner-own-work (campaign rederivation; no novelty claim)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "criterion",
+      "to_key": "energy",
+      "kind": "depends_on",
+      "rationale": "The criterion assumes 'I_r(mu)<infinity'; the definition specifies 'I_r(mu)=E[r^{-K}]' with K counting shared edges."
+    },
+    {
+      "from_key": "cutset",
+      "to_key": "energy",
+      "kind": "depends_on",
+      "rationale": "The cutset bound concerns 'a ray measure mu with finite I_r'; the definition supplies the exact common-edge energy."
+    },
+    {
+      "from_key": "tree",
+      "to_key": "criterion",
+      "kind": "depends_on",
+      "rationale": "The tree has 'energy at r=1/2 is 7/2'; the criterion yields survival '>=1/I_r(mu)', giving 2/7."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "fragility",
+      "kind": "depends_on",
+      "rationale": "The gap says 'Critical thinning fragility would then give a contradiction'; fragility says each critical component has 'p_c(C)=1'."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "criterion",
+      "kind": "depends_on",
+      "rationale": "The gap requires 'I_r(mu)<infinity for r<1'; the criterion then gives positive r-thinning survival on that component."
+    },
+    {
+      "from_key": "fragility",
+      "to_key": "target",
+      "kind": "semantic_association",
+      "rationale": "Fragility is a necessary property of hypothetical critical components; the target asks whether those components are absent. No equivalence is asserted."
+    },
+    {
+      "from_key": "susceptibility",
+      "to_key": "target",
+      "kind": "semantic_association",
+      "rationale": "The regular-tree computation has 'all critical bond clusters are finite' and 'chi_o(p_c)=infinity'; it blocks a finite-susceptibility inference in an earlier attempt at the target."
+    }
+  ]
+}

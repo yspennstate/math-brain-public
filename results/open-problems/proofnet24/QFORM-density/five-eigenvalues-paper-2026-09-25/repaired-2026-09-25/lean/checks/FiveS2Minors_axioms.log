@@ -1,0 +1,37 @@
+~/qform_five_lean_2026_09_25/lean/FiveS2Minors_run.lean:110:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.coeff_sum_card`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS2Minors_run.lean:142:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.minors_star_eq_transpose`:
+  [Fintype n]
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype n] [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+'QformFiveB.perm_prod_expand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.perm_fix_compl_mem_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.det_diagonal_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.coeff_sum_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.det_one_add_X_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.minors_star_eq_transpose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.minors_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.minors_eigen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.det_one_add_X_smul_of_decomp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.det_one_add_X_smul_hermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.prod_C_mul_X_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.sum_principal_minors_eq_esymm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.gram_submatrix_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.lemma27a_first' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.cauchy_binet_gram' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.det_transpose_mul_self_eq_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.lemma27a_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT 0

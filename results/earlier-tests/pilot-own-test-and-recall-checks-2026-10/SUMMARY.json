@@ -1,0 +1,169 @@
+{
+  "four_arm_pilot_2026_10_07": {
+    "items": 27,
+    "rows": 108,
+    "model": "gpt-6.1-sol",
+    "graded": "65 by rule, 43 by a model judge, graded 29 Oct",
+    "score_out_of_27": {
+      "A_brain": 21.7,
+      "B_brain": 15.0,
+      "C_no_brain": 23.0,
+      "D_no_brain": 11.0
+    },
+    "status": {
+      "A_brain": {
+        "ok": 24,
+        "crash": 3
+      },
+      "B_brain": {
+        "ok": 15,
+        "timeout": 9,
+        "crash": 3
+      },
+      "C_no_brain": {
+        "ok": 25,
+        "crash": 2
+      },
+      "D_no_brain": {
+        "ok": 13,
+        "timeout": 7,
+        "crash": 7
+      }
+    },
+    "answered_timeouts_graded_right": {
+      "B_brain": 2
+    },
+    "median_wall_s": {
+      "A_brain": 96,
+      "B_brain": 264,
+      "C_no_brain": 79,
+      "D_no_brain": 216
+    },
+    "B_hook_wall_s": 147
+  },
+  "recall_pair_2026_10_22_23": {
+    "items": 25,
+    "model": "Claude Sonnet",
+    "no_brain_arm": {
+      "right": 0,
+      "answered_wrong": 13,
+      "timeouts": 11,
+      "errors": 1
+    },
+    "brain_arm_first_run": {
+      "timeouts": 10,
+      "note": "recall tool broken; excluded"
+    },
+    "brain_arm_rerun": {
+      "right": 3,
+      "timeouts": 21,
+      "errors": 1,
+      "commit_charge_pct": "88-96"
+    },
+    "never_run": 15
+  },
+  "same_agent_with_and_without_2026_10_23": {
+    "items": 20,
+    "model": "Claude Opus 5.5",
+    "no_brain_right": 9,
+    "brain_right": 19,
+    "brain_only": 10,
+    "no_brain_only": 0,
+    "sign_test_p": 0.001953125,
+    "brain_arm_recall_calls": 21,
+    "brain_arm_tool_output_chars": 291307,
+    "brain_arm_tool_seconds": 100
+  },
+  "depth_after_new_links_2026_10_28": {
+    "store_cards": 90797,
+    "store_links": 125830,
+    "items_asked": 98,
+    "paired": 43,
+    "right_card_at_1": [
+      18,
+      18
+    ],
+    "right_card_in_3": [
+      20,
+      19
+    ],
+    "right_card_in_8": [
+      22,
+      22
+    ],
+    "mrr_at_8": [
+      0.4403,
+      0.4428
+    ],
+    "tokens_a_call": [
+      4625,
+      4841
+    ],
+    "median_s": [
+      2.9,
+      13.2
+    ],
+    "hard_items_found": [
+      0,
+      0
+    ],
+    "hard_items": 16,
+    "order": "depth 0, depth 1"
+  },
+  "one_link_bank_2026_10_29": {
+    "items_selected": 63,
+    "paired": 30,
+    "hard": 19,
+    "answer_printed": [
+      11,
+      11
+    ],
+    "answer_in_top_8": [
+      0,
+      0
+    ],
+    "tokens_a_call": [
+      4946,
+      5014
+    ],
+    "median_s": [
+      3.5,
+      11.0
+    ],
+    "neighbours_printed_check": {
+      "neighbour_printed": 11,
+      "answer_printed": 11,
+      "neighbour_without_answer": 0
+    },
+    "order": "depth 0, depth 1"
+  },
+  "compaction_cap_2026_10_28": {
+    "queries": 110,
+    "memory_files": 36915,
+    "compaction_anchors": 13115,
+    "hit_at_8": {
+      "memories_clean_40": [
+        38,
+        38,
+        38
+      ],
+      "memories_typos_40": [
+        37,
+        37,
+        37
+      ],
+      "exact_compaction_30": [
+        12,
+        5,
+        6
+      ],
+      "same_session_compaction_30": [
+        25,
+        25,
+        25
+      ]
+    },
+    "order": "no cap, cap 1, cap 2",
+    "shipped": false
+  }
+}

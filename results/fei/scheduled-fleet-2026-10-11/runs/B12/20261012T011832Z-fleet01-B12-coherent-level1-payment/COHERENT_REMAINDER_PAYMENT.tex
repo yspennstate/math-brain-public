@@ -1,0 +1,119 @@
+\section*{A first-layer payment for the logarithmic coherent remainder}
+
+All logarithms in this note are natural.  Let
+\[
+  \mathcal E_{\rm raw}(v)=\sum_T v_T^2\log\frac1{v_T^2},
+  \qquad 0\log(1/0)=0.
+\]
+The starting point is the reviewed balanced-composition identity.  If
+\(F=g(h_1,\ldots,h_m)\), the children use pairwise disjoint physical
+blocks and are balanced Boolean signs, write, for a fixed outer coordinate
+\(j\),
+\[
+   g(y)=a(y_{\ne j})+y_jb(y_{\ne j}),\qquad
+   q_j=\operatorname{Inf}_j(g)=\sum_T b_T^2,
+\]
+and put \(\alpha_{j,i}=\widehat h_j(\{i\})\).  Then the source identity is
+\begin{align*}
+ \operatorname{Inf}_i(F)&=q_j\operatorname{Inf}_i(h_j),\\
+ D_i(F)&=q_jD_i(h_j)+R_j(\alpha_{j,i}),\\
+ R_j(\alpha)&={}&q_j\alpha^2\log\frac1{\alpha^2}
+      +\mathcal E_{\rm raw}(a)+\alpha^2\mathcal E_{\rm raw}(b)\\
+ &\quad-\frac12\left(\mathcal E_{\rm raw}(a+\alpha b)
+                 +\mathcal E_{\rm raw}(a-\alpha b)\right).
+\end{align*}
+In particular, the two coherent spectra \(a+\alpha b\) and
+\(a-\alpha b\) are both retained; no equality of restricted-child
+spectra is assumed.
+
+\subsection*{Proposition (proved): nonreusing first-layer log payment}
+
+For every balanced Boolean sign \(h:\{-1,1\}^n\to\{-1,1\}\),
+\[
+ \sum_{i=1}^n \widehat h(\{i\})^2
+       \log\frac1{\widehat h(\{i\})^2}
+ \le \frac2e\,\mathbf I(h).
+ \tag{1}
+\]
+Consequently, for every balanced disjoint substitution as above, the sum
+of the explicit logarithmic pieces of all coherent remainders at this
+physical layer satisfies
+\[
+ \sum_{j=1}^m q_j\sum_{i\in B_j}\alpha_{j,i}^2
+       \log\frac1{\alpha_{j,i}^2}
+ \le \frac2e\sum_{j=1}^m q_j\mathbf I(h_j)
+ =\frac2e\,\mathbf I(F).
+ \tag{2}
+\]
+In base-two entropy the coefficient is \(2/(e\log 2)<1.062\).
+
+\paragraph{Proof.}
+Fix a coordinate \(i\), and for \(x_{\ne i}\) set
+\[
+ \delta_i(x_{\ne i})=
+ \frac{h(x_{\ne i},+1)-h(x_{\ne i},-1)}2\in\{-1,0,1\}.
+\]
+Pairing the two points on every \(i\)-edge gives
+\[
+ \widehat h(\{i\})=\mathbb E_{x_{\ne i}}\delta_i(x_{\ne i}),
+ \qquad
+ \operatorname{Inf}_i(h)=\mathbb E_{x_{\ne i}}|\delta_i(x_{\ne i})|.
+\]
+Thus \(|\widehat h(\{i\})|\le\operatorname{Inf}_i(h)\).  For
+\(0\le u\le1\), with the endpoint interpreted continuously,
+\[
+ u^2\log\frac1{u^2}=2u\left(u\log\frac1u\right)\le\frac2e u,
+\]
+because \(\max_{0\le u\le1}u\log(1/u)=1/e\).  Apply this with
+\(u=|\widehat h(\{i\})|\), then sum over \(i\), proving (1).  Multiplying
+the inequality for child \(h_j\) by \(q_j\), summing over disjoint blocks,
+and using the exact influence identity proves (2). \(\square\)
+
+\subsection*{Exact cancellation form and scope}
+
+Writing \(\psi(t)=t^2\log(1/t^2)\), the complete remainder can also be
+written coefficientwise as
+\[
+ R_j(\alpha)=\sum_T\left[
+   \psi(a_T)+\psi(\alpha b_T)
+   -\frac{\psi(a_T+\alpha b_T)+\psi(a_T-\alpha b_T)}2
+ \right].
+ \tag{3}
+\]
+Indeed
+\(\mathcal E_{\rm raw}(\alpha b)=
+q_j\alpha^2\log(1/\alpha^2)+\alpha^2\mathcal E_{\rm raw}(b)\).
+This form proves immediately that \(R_j(0)=0\), and also that
+\(R_j(\alpha)=0\) whenever \(a_Tb_T=0\) for every \(T\).  The latter is
+coefficientwise neighboring-support orthogonality, stronger than the
+automatic Hilbert-space orthogonality \(\langle a,b\rangle=0\).
+
+Equation (2) pays exactly the term whose pointwise replacement by
+\(O(q_j\alpha^2)\) is false.  It does not yet pay the remaining coherent
+term
+\[
+ C_j(\alpha)=\mathcal E_{\rm raw}(a)+\alpha^2\mathcal E_{\rm raw}(b)
+ -\frac{\mathcal E_{\rm raw}(a+\alpha b)
+              +\mathcal E_{\rm raw}(a-\alpha b)}2.
+\]
+Nor does it iterate after physical restrictions: a restricted child need
+not remain balanced, so the balanced-composition interface is not closed.
+Thus this is a complete scoped theorem for a single nonreusing balanced
+physical layer, not completion of packet A057 and not a proof of FEI.
+
+\subsection*{Mandatory logarithmic control}
+
+The reviewed AND$_2$ outer control has
+\[
+ R(\alpha)=\frac{\alpha^2}{2}\log\frac1{\alpha^2}
+             +\frac32\alpha^2+O(\alpha^4),
+\]
+and genuine balanced children with arbitrarily small nonzero \(\alpha\)
+and leaf influence one.  Therefore no estimate
+\(R(\alpha)\le Cq\alpha^2\) can replace the logarithm.  Proposition (1)
+does not make that replacement: it sums the exact logarithmic quantities
+against the full physical influence budget.  On the cited control family,
+each summand is at most \((2/e)\operatorname{Inf}_i(h)\), while the
+selected-coordinate entropy/influence ratio still tends to zero as in the
+reviewed source.
+

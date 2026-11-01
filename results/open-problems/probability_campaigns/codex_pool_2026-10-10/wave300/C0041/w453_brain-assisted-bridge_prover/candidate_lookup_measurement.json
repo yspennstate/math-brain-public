@@ -1,0 +1,36 @@
+{
+  "command": "python -B -X utf8 measure_candidate_lookup.py",
+  "baseline": {
+    "returned": 3,
+    "target_hits": 1,
+    "false_positives": 2,
+    "rows": [
+      [
+        "claim_2856e289d84a5f155d0db05855eb1a0e61d023ff4313b35697fe02c9705cc9c2",
+        "Open problem: Transience in a direction implies ballisticity for uniformly elliptic i.i.d. RWRE in d >= 2"
+      ],
+      [
+        "claim_9417ed162d164ebdb7a0925b8d66153e332d99c06d02e85ceb7ae8daacaf47bb",
+        "Von Neumann Ordinal"
+      ],
+      [
+        "source_551d4d8e43831a87fe2cf5028110a83815258d3e4c855235e24ea7557844b06e",
+        "A proof of Sznitman's conjecture about ballistic RWRE"
+      ]
+    ]
+  },
+  "repaired": {
+    "returned": 1,
+    "target_hits": 1,
+    "false_positives": 0,
+    "rows": [
+      [
+        "claim_2856e289d84a5f155d0db05855eb1a0e61d023ff4313b35697fe02c9705cc9c2",
+        "Open problem: Transience in a direction implies ballisticity for uniformly elliptic i.i.d. RWRE in d >= 2"
+      ]
+    ]
+  },
+  "malformed_ids_rejected": 5,
+  "elapsed_seconds": 0.097996,
+  "scope": "One exact-ID fixture on the current store; not a general recall@k benchmark or deployed improvement. Do not fall back to raw metadata substring, which matches hash bytes and bibliography references."
+}

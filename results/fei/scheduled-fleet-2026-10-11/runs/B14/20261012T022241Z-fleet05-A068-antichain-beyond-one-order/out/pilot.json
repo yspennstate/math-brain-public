@@ -1,0 +1,117 @@
+{
+  "helper_version": 1,
+  "pilot": true,
+  "status": "PASS",
+  "base_cases": [
+    {
+      "q": 5,
+      "I_x": "15/8",
+      "I_z": "45/32",
+      "polar_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        4,
+        2,
+        4,
+        2,
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        4,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "raw_walsh_sha256": "aebaefba0c1190fe6abae93b046e5902afe7ec37a7019adcd27c9c607b40b69b",
+      "zero_coefficients": 828
+    }
+  ],
+  "edit_case_count": 2,
+  "assertions": 148,
+  "arithmetic": "integer Walsh, F2 rank, exact Fraction influence and reference; outward rational log intervals",
+  "log_series_terms": 22,
+  "cases": [
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 0,
+      "z0": 0,
+      "I_x": "965/512",
+      "I_z_including_padding": "725/512",
+      "entropy_bits": {
+        "lower": "2994353563159/500000000000",
+        "upper": "5988707126319/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "274722338951/40000000000",
+        "upper": "429253654611/62500000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "345065555507/31250000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11921449123681/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 60,
+        "1156": 100,
+        "8836": 10,
+        "9604": 6,
+        "36100": 15,
+        "37636": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 0,
+      "z0": 31,
+      "I_x": "965/512",
+      "I_z_including_padding": "725/512",
+      "entropy_bits": {
+        "lower": "2994353563159/500000000000",
+        "upper": "5988707126319/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "274722338951/40000000000",
+        "upper": "429253654611/62500000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "345065555507/31250000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11921449123681/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 60,
+        "1156": 100,
+        "8836": 10,
+        "9604": 6,
+        "36100": 15,
+        "37636": 5
+      }
+    }
+  ],
+  "runtime_seconds": 48.75374489999376,
+  "analytic_slack_coefficient": "287/1920",
+  "independent_reviewer": false
+}

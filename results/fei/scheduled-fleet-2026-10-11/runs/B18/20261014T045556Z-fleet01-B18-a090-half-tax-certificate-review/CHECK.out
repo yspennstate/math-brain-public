@@ -1,0 +1,40 @@
+formula_reconstruction_cases=450
+maximum_formula_error=1.3E-89
+formula_audit_decimal_precision=90
+original_import_decimal_precision=28
+audited_source=reports/fei-2026-10-11/runs/B10/20261013T072840Z-fleet01-B10-a047-half-tax-compact-core/certify_compact_core.py
+B10/A047 outward interval certificate: PASS
+rectangle: p in [1/64,49/100], q in [1/100,99/100]
+precision: 70 decimal digits with ROUND_FLOOR/ROUND_CEILING
+visited boxes: 7571
+accepted leaves: 3786
+maximum depth: 20
+smallest positive interval lower endpoint: 0.00000175806710428931354275432704507291288723012617973608770826808828560
+leaf-certificate sha256: eb3d732276ff9ba4cd8971ee2d5e7f1c6f32db82b4838071555b25efd966498c
+scope: compact core only; boundary collars and higher arity remain open
+audited_source=reports/fei-2026-10-11/runs/B10/20261013T195919Z-fleet01-B10-a047-endpoint-collars/certify_endpoint_collars.py
+B10/A047 endpoint-collar certificates: PASS
+collar=lower-q
+rectangle: p in [0.015625,0.49], q in [0,0.01]
+precision: 70 decimal digits with ROUND_FLOOR/ROUND_CEILING
+visited boxes: 89
+accepted leaves: 45
+maximum depth: 9
+smallest positive interval lower endpoint: 0.00009302987147913349927113794613534837203515904429028976112044768020678
+leaf-certificate sha256: 03b6443c7dd478f90ef4e3d02ace51abc9b6e4bb65536034e504c4b627988284
+uncertified_boxes=0
+collar=upper-q
+rectangle: p in [0.015625,0.49], q in [0.99,1]
+precision: 70 decimal digits with ROUND_FLOOR/ROUND_CEILING
+visited boxes: 77
+accepted leaves: 39
+maximum depth: 9
+smallest positive interval lower endpoint: 0.00010426165977229428814238436576495979982981319001011708096306201152952
+leaf-certificate sha256: 4bb3ef641152c5726647799f09c74b2b524e6bc1bc230f5df06aaba2f5ef6551
+uncertified_boxes=0
+combined_claim=half-tax margin strictly positive on both rectangles
+floating_point_used_for_sign_decisions=no
+scope=two-bit endpoint collars with p<=49/100; equality-corner strips, rare-p tail, higher arity, and global nonreuse remain open
+A090 independent repair audit: PASS
+verdict=published scripts formally defective; repaired claim holds
+scope=two-bit half-tax on p in [1/64,49/100], all q

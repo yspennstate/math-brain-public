@@ -1,0 +1,17 @@
+R04 independent audit of R05-I0030-C14
+SELF-CHECK: finite/symbolic core only; general Hausdorff-moment proof audited on page
+K2 h= 1/2 ratios= [0, 1, 1, 1, 1, 1, 1, 1] NONDECREASING PASS
+K2 h= 3/4 ratios= [0, 1/3, 3/5, 7/9, 15/17, 31/33, 63/65, 127/129] NONDECREASING PASS
+C5 h= 1/2 ratios= [0, 1/2, 2/3, 3/4, 57/70, 110/127, 859/948, 3381/3614] NONDECREASING PASS
+C5 h= 3/4 ratios= [0, 1/6, 6/19, 37/84, 937/1734, 3800/6139, 60523/88868, 478121/654254] NONDECREASING PASS
+K4 h= 1/2 ratios= [0, 1/3, 2/3, 13/15, 20/21, 121/123, 182/183, 1093/1095] NONDECREASING PASS
+K4 h= 3/4 ratios= [0, 1/9, 5/21, 19/51, 65/129, 211/339, 665/921, 2059/2571] NONDECREASING PASS
+Q3 h= 1/2 ratios= [0, 1/3, 1/2, 17/27, 8/11, 137/171, 6/7, 89/99] NONDECREASING PASS
+Q3 h= 3/4 ratios= [0, 1/9, 3/14, 25/81, 132/335, 4817/10233, 4788/8879, 33949/56565] NONDECREASING PASS
+Petersen h= 1/2 ratios= [0, 1/3, 1/2, 16/27, 2/3, 158/215, 2674/3357, 15362/18093] NONDECREASING PASS
+Petersen h= 3/4 ratios= [0, 1/9, 3/14, 124/405, 1550/4017, 6178/13601, 216946/422829, 2515118/4456299] NONDECREASING PASS
+K2 r1-r2 = (h - 1)*(2*h - 1)/(h*(2*h**2 - 2*h + 1))
+For 0<h<1/2 both (h-1) and (2h-1) are negative and denominator positive: r1>r2 PASS
+K2 h=1/2 idempotent boundary equality after first step PASS
+C14.1 one-step identity exact sample checks PASS
+AUDIT RESULT: PASS_MATH for R05-I0030-C14; novelty not audited

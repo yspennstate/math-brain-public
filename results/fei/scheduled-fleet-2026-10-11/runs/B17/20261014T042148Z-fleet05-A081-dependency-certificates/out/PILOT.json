@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "helper_version": "A081-signed-partition-v1",
+  "pilot": true,
+  "cases": 1,
+  "relevant_gate_rows": 2,
+  "positive_exact_losses": 2,
+  "assertions": 171,
+  "runtime_seconds": 0.002166699999975208,
+  "arithmetic": "direct integer character sums, Fraction, exact prime-log coefficient identities; analytic KL equality and log-ratio upper bound",
+  "owner_availability_witness": {
+    "d": 4,
+    "r": 2,
+    "gate_positive_table_mask": 7,
+    "gate_row": 0,
+    "loss_prime_log_coefficients": {
+      "5": "-5/256",
+      "41": "-3/512",
+      "31": "1/64"
+    },
+    "core_influence": "17/32",
+    "child_influences": [
+      "21/16",
+      "2"
+    ],
+    "C": 12,
+    "child_dimension": 5,
+    "complete_subprobability_reference": "Q_b=P_b*2^(H_b-12 I_b)",
+    "CE_b": "12 I_b exactly",
+    "unused_child_surplus": "0 exactly",
+    "lost_refund": "strictly positive by unequal conditional laws and KL equality case"
+  }
+}

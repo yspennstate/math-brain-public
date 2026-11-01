@@ -1,0 +1,2 @@
+STATE: A084 stage5 author proof complete: all-real rare first-query Delta C<=5Inf/4, h<=Inf/2, dominant J<=Inf/8; 2506 assertions/108 diagnostics/8 complete physical fixtures PASS; review pending, FEI OPEN.
+NEXT: Carry SAME full child account through one further heterogeneous physical query; pay inherited core excess from genuinely unused surplus, without renewing first-query or composition budgets; A072/A089/A075/A074/A092 review.

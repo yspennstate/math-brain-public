@@ -1,0 +1,55 @@
+{
+  "schema": "fei-progress/2",
+  "run_id": "20261011T234100Z-fleet01-B16-A078-linear-parity-padding",
+  "stream_id": "B16",
+  "packet_ids": ["A078"],
+  "primary_packet_id": "A078",
+  "attempt_id": "A078-attempt-01-linear-parity-padding",
+  "attempt_counter": 1,
+  "gap_id": "G-A078-BOOLEAN-CODING-PADDING",
+  "claim_id": "B16-A078-LINEAR-PARITY-PADDING-BARRIER",
+  "claim_version": 1,
+  "bounded_objective": "Classify arbitrary-rank genuine Boolean linear parity padding, charge every auxiliary influence, and test whether any nontrivial member can evade the complete proper-block restriction criterion.",
+  "source_versions": {
+    "plan_release_commit_baseline": "a1ff93577685acd461b154b04e0c1aa0c65645c8",
+    "daily_head_inspected": "b7f8ff9e42dbc2fd2bf515941a417594a7308614",
+    "stream_packet_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "assignment_B16_blob": "319bbb049c631c103a842cf9a530c7be91a319d0",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "obstruction_registry_blob": "dd482025647aed25166b46cc217a7ed77dcaa767",
+    "B14_A066_report_blob": "c43131d2c5f0404a02fd488fc16d4b07d5b3b1d7",
+    "B14_A066_proof_blob": "5b2383711ed86c7b69b43983220bc50ad7e00930",
+    "B20_A097_report_blob": "ebe88281bdfb0f6f58b43cb403424edb442cfdd4",
+    "B16_A079_report_blob": "4830187ce209f36c917fab9f0536c6a71bda6d09"
+  },
+  "prior_status": "A078_OPEN_UNPROVED_TARGET; one-bit parity lift known, arbitrary-rank code collisions and physical-child block loss untreated",
+  "new_status": "AUTHOR_PROVED_LINEAR_PARITY_PADDING_BARRIER_PENDING_INDEPENDENT_REVIEW",
+  "mathematical_delta": "Proved for arbitrary Boolean cores and arbitrary linear parity codewords that the lift preserves the complete squared-mass multiset, adds exactly E|c(S)| influence, and has Gamma_A=0 for every auxiliary-only physical block. Every relevant padding bit therefore prevents restriction-criticality. This eliminates the whole deterministic linear label family as an FEI or proper-block counterfamily mechanism.",
+  "acceptance_evidence": {
+    "boolean_realization": "Explicit truth-table permutation/circuit F(x,z)=g(x_i chi_{c_i}(z)); inverse uses the same sign flips.",
+    "all_auxiliary_costs": "I(F)-I(g)=E|c(S)| and I_zj=Pr[c(S)_j=1] exactly.",
+    "padding_scope": "Includes independent/disjoint padding, deterministic occupied coordinates, repeated/colliding labels, and arbitrary linear shared labels; excludes nonlinear Fourier-splitting gadgets.",
+    "proof_artifacts": ["BOOLEAN_CODING_PADDING.tex", "PADDING_ENERGY.md", "REPORT.md"],
+    "finite_certificate": "verify_linear_parity_padding.py; 212592 exact assertions; PASS; no seed"
+  },
+  "deliverables": {
+    "A078-D1_BOOLEAN_CODING_PADDING.tex": "AUTHOR_COMPLETE",
+    "A078-D2_PADDING_ENERGY.md": "AUTHOR_COMPLETE",
+    "independent_review": "PENDING"
+  },
+  "exact_remaining_obstacle": "Construct or exclude a nonlinear genuine Boolean encoder whose Fourier action splits a core coefficient among several auxiliary frequencies while retaining all auxiliary influence and avoiding a cheap physical padding restriction under arbitrary-core embedding.",
+  "named_consumers": ["A032", "A033", "A079", "B20"],
+  "named_reviewers": ["A092", "A088"],
+  "delivery_status": {
+    "canonical_path": "reports/fei-2026-10-11/runs/B16/20261011T234100Z-fleet01-B16-A078-linear-parity-padding/",
+    "brain_path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B16/20261011T234100Z-fleet01-B16-A078-linear-parity-padding/",
+    "canonical_saved": true,
+    "brain_mirror_saved": true,
+    "readback_required": true,
+    "native_brain_ingestion": "NOT_CLAIMED",
+    "independent_review": "NOT_YET_PERFORMED"
+  },
+  "next_action": "Build the smallest nonlinear Boolean Fourier splitter, compute its exact child mass laws and every auxiliary influence, and test restriction-criticality under an arbitrary hard core rather than a chosen easy core.",
+  "packet_completion": "NOT_COMPLETE_PENDING_INDEPENDENT_REVIEW",
+  "full_fei_status": "OPEN"
+}

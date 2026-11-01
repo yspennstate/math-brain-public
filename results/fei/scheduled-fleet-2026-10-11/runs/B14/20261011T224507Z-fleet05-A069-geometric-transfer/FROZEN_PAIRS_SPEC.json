@@ -1,0 +1,12 @@
+{
+  "helper_version": "A069-pairs-v1 with A069-exact-v1 decoder",
+  "family": "Maj3 padded to N=7; flip exactly two distinct truth-table values",
+  "parameter_domain": "every unordered pair 0 <= x < y < 128",
+  "case_count": 8128,
+  "symmetry_reduction": "unordered edit set removes ordering redundancy; no other reduction",
+  "arithmetic": "integer FWHT, direct physical edge count, exact rational code inequalities",
+  "memory_estimate_mb": 12,
+  "maximum_runtime_seconds": 60,
+  "purpose": "validate sparse multi-edit extension where N*rho=7/64 <= 1/8",
+  "command": "python -X utf8 code/validate_pairs.py"
+}

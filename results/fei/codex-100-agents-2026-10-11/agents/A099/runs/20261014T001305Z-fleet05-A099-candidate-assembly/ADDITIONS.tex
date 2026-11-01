@@ -1,0 +1,208 @@
+\section{A090: all fixed higher tails retain the optimal erasure constant}
+\label{sec:tail}
+For a fixed integer $\ell\ge2$ let $R_{\ge\ell}$ retain the edge costs
+$\phi(p_T,p_{T+i})$ with $|T|\ge\ell$. This is the original
+\path{A090-PARITY-TAIL-LOW-INFLUENCE-COMPLETENESS}, version 1
+\cite{A090c}. A096 and A099 independently reconstruct this scoped theorem;
+neither acceptance pays the resulting universal bill.
+\begin{theorem}\label{thm:tail}
+For every finite-valued nonnegative $s(N)=o(N)$ and fixed $\ell\ge2$,
+the supremum of $R_{\ge\ell}(F)/I(F)$ over all actual Boolean $F$
+with $0<I(F)\le2^{-s(N)}$ equals $K_E$, in the extended reals.
+\end{theorem}
+\begin{proof}
+Take any nonconstant $n$-bit seed $f$, $m$ disjoint copies,
+$h=\chi_Z f^{\otimes m}$ with $|Z|=\ell$ fresh parity coordinates,
+and $F=1+A_k(h-1)$ with $k$ fresh point controls, $q=2^{-k}$.
+The actual coefficients are $1-q$ at the empty frequency, $-q$ at
+nonempty pure-control frequencies, and $q\widehat h(S)$ on every
+control slice of each nonempty core frequency $S$.
+All occupied core frequencies contain $Z$. Thus all singleton core
+coefficients vanish, $B(h)=mB(f)$, and $I(h)=mI(f)+\ell$.
+Every data edge with positive cost has both endpoints containing $Z$.
+Homogeneity and the $2^k$ control slices give exactly $qmB(f)$,
+entirely inside the retained tail. Each parity coordinate has zero erasure
+but influence $q>0$; there are no two adjacent occupied frequencies on it.
+
+For a control coordinate, nonempty core frequencies contribute $q$
+to the erasure, since all such pairs have equal masses and their sum
+of upper masses is $q/2$. Empty-core lower control sets of size $r$
+give $\binom{k-1}{r}$ equal-mass pairs, each of cost $2q^2$.
+The exceptional pair $((1-q)^2,q^2)$ is outside the retained tail.
+Consequently
+\begin{align}
+I(F)&=q(mI(f)+\ell+k),\label{eq:tailI}\\
+R_{\ge\ell}(F)&=qmB(f)+kq+
+ 2kq^2\sum_{r=\ell}^{k-1}\binom{k-1}{r},\label{eq:tailB}\\
+R_{\ge2}(F)&=qmB(f)+2kq(1-kq).\label{eq:tailtwo}
+\end{align}
+An empty sum is zero. In particular the actual root and next layers are
+$B_0=k\phi((1-q)^2,q^2)$ and $T_{12}=2k(k-1)q^2$.
+No seed cost was removed by the fresh parity.
+
+To verify the cutoff without assuming monotonicity, put
+$\eta_m=\sup_{N\ge mn}s(N)/N$ and
+$k_m=\lceil4(n+1)m\sqrt{\eta_m}+2\sqrt m\rceil$.
+The tail supremum is finite and tends to zero, so $k_m=o(m)$.
+Eventually $N_m=mn+\ell+k_m\le(n+2)m$ and $\eta_m\le1$.
+Then $s(N_m)\le\eta_m(n+2)m\le4(n+1)m\sqrt{\eta_m}$.
+The remaining $2\sqrt m$ dominates
+$\log_2(mI(f)+\ell+k_m)\le\log_2((n+2)m)$.
+Equation~\eqref{eq:tailI} therefore meets the cutoff. Equation~\eqref{eq:tailB}
+gives a lower ratio tending to $B(f)/I(f)$, while
+$R_{\ge\ell}(F)\le B(F)$ gives the upper supremum bound $K_E$.
+Apply this to each finite seed ratio, including arbitrarily large ratios
+if $K_E=\infty$. There is no exchange of an unknown supremum and a limit.
+\end{proof}
+Thus even the unrestricted optimal constant for $R_{\ge2}/I$ equals $K_E$.
+In particular an all-dimensional bound $R_{\ge2}\le KI$ would imply
+$K_E\le K$ and $C_{\rm FEI}\le K+2/\ln2$, without the previously
+displayed additive root and level-one prices. This improves a conditional
+constant comparison and supplies no finite value of $K$.
+The relevant parity bits also give
+$\min_{i:d_i>0}B_i/d_i=0$ on these same functions: aggregate transport
+does not preserve a selected-coordinate hardness assertion.
+
+\section{A096: normalized derivative refunds retain the arbitrary seed}
+\label{sec:refund}
+The source \path{A096-TERMINAL-KL-REFUND-AUDIT}, version 1
+\cite{A096c}, calls the downward quantity $M$.
+Here it is exactly $\mathcal L$, not the marginal-entropy sum used
+elsewhere under the same letter. For $d_i>0$ set
+\[
+ \mu_i(T)=p_{T+i}/d_i,\qquad r_i(T)=p_T+p_{T+i},\quad i\notin T.
+\]
+Both are normalized probability laws. The joint laws
+$P(i,T)=p_{T+i}/I$ and $Q(i,T)=(d_i/I)r_i(T)$ have the same
+coordinate marginal $d_i/I$. Therefore
+\begin{equation}\label{eq:refundbaseline}
+ I D_2(P\Vert Q)=\sum_i d_iD_2(\mu_i\Vert r_i),\qquad
+ \mathcal L=\sum_i d_i\log_2(1/d_i)-I D_2(P\Vert Q).
+\end{equation}
+The identities follow by expanding the likelihood ratios; zero or irrelevant
+coordinates are omitted. This complete reference retains its whole normalizer.
+\begin{proposition}\label{prop:refund}
+For the actual $h,F$ in Theorem~\ref{thm:tail}, write
+$J=mI(f)+\ell$, $d=(1-q)^2+q^2$, and
+$D_f=D_2(P_f\Vert Q_f)$ with $I(f)D_f=0$ for constant seeds. Then
+\begin{align}
+ D_i(F)&=D_i(f)+k &&\text{on relevant seed coordinates},\\
+ D_z(F)&=k &&\text{on fresh parity coordinates},\\
+ D_c(F)&=(1-q)(k-1)+q\log_2(q/d),\label{eq:refundcontrol}\\
+ I(F)D_F&=q[mI(f)D_f+kJ+kD_c(F)],\label{eq:refundjoint}\\
+ \mathcal L(F)&=qm\mathcal L(f)+
+       k[q(1-q)+q^2\log_2(d/q^2)],\\
+ \mathcal L_{\ge2}(F)&=qm\mathcal L(f)+kq(1-kq).
+\end{align}
+For every fixed $\ell\ge2$ and every such cutoff $s$, the cutoff
+supremum of $\mathcal L_{\ge\ell}/I$ equals $K_{\mathcal L}$.
+\end{proposition}
+\begin{proof}
+In the tensor core, a seed row's $\mu_i$ and $r_i$ are tensored with
+the same other-block spectrum. Their likelihood ratio is unchanged.
+A parity row has $\mu_i=r_i$, hence zero divergence and zero downward cost.
+In the activated function, every occupied derivative core row is the
+old $\mu_i$ times the uniform control-subset law. On that support
+$r_i(F)$ is $q$ times the old $r_i$ times this same law. The exceptional
+constant endpoint is outside this support because the core has no singleton
+coefficients. The likelihood ratio acquires exactly the factor $1/q$,
+proving the first two formulas and $\mathcal L_i(F)=q\mathcal L_i(h)$.
+
+For a control row, the exceptional derivative atom has mass $q$ and
+reference mass $d$. All remaining atoms have likelihood ratio $1/(2q)$,
+with total derivative mass $1-q$. This proves~\eqref{eq:refundcontrol}.
+Weighting all rows by their physical influences $qd_i(h)$ and $q$
+proves~\eqref{eq:refundjoint}. Direct upper-mass summation gives
+the displayed $\mathcal L$ formula. In its higher tail, nonempty core
+frequencies contribute $q/2$ per control, and empty-core lower sets of
+size at least two contribute $q^2(2^{k-1}-k)$ per control; this gives
+the last formula. Every seed downward edge lies in the $\ell$-tail.
+Use the identical cutoff choice in Theorem~\ref{thm:tail}, the lower
+ratio $m\mathcal L(f)/(mI(f)+\ell+k)$ and the upper inequality
+$\mathcal L_{\ge\ell}\le\mathcal L$. The extended-real argument is unchanged.
+\end{proof}
+The first unpaid universal line is still, for one finite $K$ and every
+actual Boolean seed,
+\[
+ D_2(P_f\Vert Q_f)\ \ge\ \sum_i(d_i/I)\log_2(1/d_i)-K.
+\]
+It is exactly $\mathcal L(f)\le KI(f)$ by~\eqref{eq:refundbaseline},
+so it is the C018 leaf, not an additional theorem or a new named conjecture.
+The known activation refund in~\eqref{eq:refundjoint} leaves $mI(f)D_f$
+explicitly present. Source hashes and exact checks cannot pay that seed bill.
+
+\section{A097: one shared data bit and the boundary of selector payment}
+\label{sec:shared}
+This is the scoped version-1 claim
+\path{A097-ONE-SHARED-DATA-COLLISION-TRANSFER}~\cite{A097c}.
+It is included with its full proof at author scope; independent
+acceptance is pending. Let $G(s,X),H(s,Y)$ share one fair physical bit,
+with disjoint private blocks, and let $F=(G+H)/2+z(G-H)/2$ for a fresh selector.
+Supply normalized finite-cost references $R_G,R_H$ positive on true supports.
+Let $C=\{\varnothing,\{s\}\}$ and
+$a=(\widehat G(\varnothing),\widehat G(s))$, $b$ analogously.
+Calibrate each reference separately on both atoms of $C$ to its true
+mass, and rescale its complement to the true complement mass.
+The categorical KL chain rule on these three cells gives
+\[
+ c_G-c_G^c=D_2((a_0^2,a_1^2,1-\|a\|_2^2)Vert
+          (R_G(0),R_G(s),R_G(C^c)))\ge0,
+\]
+and similarly for $H$. A zero true complement gets zero calibrated mass.
+Positive true complement ensures a positive original denominator.
+
+With $r=(R_G^c+R_H^c)/2$, $q_T=(P_G+P_H)/2$, use the actual kernel
+$K(0\mid T)=(\widehat G(T)+\widehat H(T))^2/(4q_T)$,
+$K(1\mid T)=(\widehat G(T)-\widehat H(T))^2/(4q_T)$.
+At zero true fibers fix $K(0\mid T)=1$, preserving all reference mass.
+Then $Q(U,T)=r(T)K(U\mid T)$ is normalized. On $C$ the child posterior
+agrees after calibration, and outside $C$ every true fiber identifies
+its unique child. Thus the posterior mismatch is exactly zero.
+The KL chain rule yields
+\[
+ D_2(P_F\Vert Q)=\tfrac12(D_2(P_G\Vert R_G^c)+D_2(P_H\Vert R_H^c)),
+ \qquad \CE(P_F,Q)=\tfrac12(c_G^c+c_H^c)+B_z+J_z.
+\]
+
+Write $d_z=(1-\langle a,b\rangle)/2$. Conditional means lie in $[-1,1]$,
+so $\|a\|_1,\|b\|_1\le1$. The outside collision cost is
+$(2-\|a\|_2^2-\|b\|_2^2)/2\le2d_z$.
+For real conditional means $x,y$, $|x-y|\le1-xy$ follows by squaring,
+since $(1-xy)^2-(x-y)^2=(1-x^2)(1-y^2)\ge0$.
+Consequently $\|a-b\|_\infty\le2d_z$ and
+$\sum_{T\in C}|a_T^2-b_T^2|\le4d_z$.
+For any packet, the Renyi-one-half inequality gives
+$\phi(A,B)\le2\sqrt{AB}/\ln2$:
+Jensen bounds Shannon entropy by $2\log_2(\sqrt u+\sqrt{1-u})$,
+then $\ln(1+2\sqrt{u(1-u)})\le2\sqrt{u(1-u)}$.
+Here $A=(a_T+b_T)^2/4$, $B=(a_T-b_T)^2/4$,
+so the collision cost is at most $2d_z/\ln2$.
+Lemma~\ref{lem:single} pays $J_z\le2d_z/\ln2$. Therefore
+\[
+ \CE(P_F,Q)\le\tfrac12(c_G^c+c_H^c)+(2+4/\ln2)d_z,\quad
+ I(F)=\tfrac12(I(G)+I(H))+d_z.
+\]
+The shared bit is included exactly once through averaged data influence.
+Supplied child bounds thus transfer with constant $\max(K_G,K_H,2+4/\ln2)$.
+No arbitrary bounded-cost seed references were constructed here.
+For $t$ shared bits, calibrate every shared-only atom. The same proof
+works under both conditional-mean Fourier $\ell^1$ norms at most one;
+without this admission Cauchy--Schwarz gives coefficient
+$2+(2\,2^{t/2}+2)/\ln2$.
+
+There is no absolute selector-only coefficient for unrestricted overlap.
+For even $k\ge4$, take the quadratic bent sign $b$ and its flip
+$b'=b-2\mathbf1_0$. Put $\delta=2^{-k}$, $e=\sqrt\delta$.
+Their actual Fourier coefficients are $\sigma_Te$ and $\sigma_Te-2\delta$,
+by tensoring the two-bit quadratic transform. Selecting them has influence
+$\delta$ and packets $A_T=(\sigma_Te-\delta)^2$, $B_T=\delta^2$.
+Since $e\ge4\delta$, $A_T\ge9\delta/16$ and
+$\phi(A_T,B_T)\ge B_T\log_2(A_T/B_T)$.
+Summing all $2^k$ packets gives
+\[
+ [H(F)-\tfrac12(H(b)+H(b'))]/d_z\ge B_z/d_z
+ \ge k-\log_2(16/9)\longrightarrow\infty.
+\]
+This refutes only a selector-only extension. The full terminal entropy and
+core influence of order $k$ remain. A general payment must name a
+nonreused terminal core reserve, in addition to its complete reference cost.

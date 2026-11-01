@@ -1,0 +1,18 @@
+T03 spectral-quantile full-rank covariance sanity check
+L_iso=6.302974375068753
+first_order_eps_coefficient=4.806444282078035
+Expansion: (1-rho)/Phi(-1/sqrt(1+eps)) = L_iso - L_iso*rho - Ceps*eps + o(rho+eps)
+N=1000000 rho=3.162277660168e-02 eps=1.000000000000e-02 lower_benchmark=6.057692640760322 deficit=2.452817343084313e-01 first_order=6.055592381659036
+N=1000000000 rho=5.623413251903e-03 eps=1.000000000000e-03 lower_benchmark=6.262756756508267 deficit=4.021761856048567e-02 first_order=6.262723701159505
+N=1000000000000 rho=1.000000000000e-03 eps=1.000000000000e-04 lower_benchmark=6.296191297526177 deficit=6.783077542575455e-03 first_order=6.296190756265476
+N=1000000000000000 rho=1.778279410039e-04 eps=1.000000000000e-05 lower_benchmark=6.301805474824546 deficit=1.168900244207016e-03 first_order=6.301805465670614
+example_N=1000000000
+example_r=5623413
+example_r_over_N=5.623413000000e-03
+example_eps=1.000000000000e-03
+bulk_min_minus_1=1.005655213596e-12
+bulk_max_minus_1=9.999999989943e-04
+spike_eigenvalue=2.816590379860e+03
+rank_Sigma_minus_I=N (all eigenvalues are strictly >1)
+fixed_eps_0p10_LP_comparison_benchmark=5.876204661581636
+ALL_CHECKS_PASS

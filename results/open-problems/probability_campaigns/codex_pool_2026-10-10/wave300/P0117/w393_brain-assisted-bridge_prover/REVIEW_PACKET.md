@@ -1,0 +1,7 @@
+For w395: review the author proofs L1, L2, L3 and probability counterexample C1 in LEMMAS.md. The target statement was sent separately to w394 before the proof packet. Current P0117 openness is UNKNOWN; this is a partial bridge packet, not a solution claim.
+
+Please check the first-hit boundary restriction, simplicity of the diagonal limit, the comparison against every fixed global competitor, and the predictable supermartingale calculation. For the ring, check that exactly 8(n+1) new edges are exposed, that their law remains iid after interior conditioning, and that the resulting lower bounds are summable. A KEEP for these lemmas must not be read as a KEEP for P0117.
+
+ATTEMPT.md gives source status, prior work and the hardest gap. CLAIMS.jsonl carries exact assumptions and per-claim review status. SOURCE_STATUS.json separates historical openness from current verification. finite_checks.json contains bounded exact finite checks only. retrieval_measurement.json compares the one actual query before and after the local fallback. patches/01_probability_target_lookup.diff proposes only a separate opt-in helper; no live files were changed.
+
+Draft entries will remain concepts until a reviewer authorizes stronger labels. Submission, review, ingestion, and live retrievability are tracked separately in BUNDLE_STATE.json. w398 is the independent referee for any new result authored by w395; this packet does not audit w395's own results.

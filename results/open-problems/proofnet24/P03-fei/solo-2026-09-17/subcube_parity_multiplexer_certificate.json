@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact rational Walsh coefficients and influences; 160-bit outward rational logarithm intervals",
+  "examples": [
+    {
+      "name": "prefix_1_2_3_3",
+      "selector_bits": 3,
+      "data_bits": 2,
+      "cells": 4,
+      "codimensions": [
+        1,
+        2,
+        3,
+        3
+      ],
+      "label_probabilities": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "1/8"
+      ],
+      "H_label_exact": "7/4",
+      "H_fourier": {
+        "lower": "7/2",
+        "upper": "7/2"
+      },
+      "selector_influence_exact": "7/8",
+      "total_influence_exact": "3/2",
+      "data_erasure": {
+        "lower": "802563326345989788476075048233697314201921946221/730750818665451459101842416358141509827966271488",
+        "upper": "802563326345989788476075048233697314201921946225/730750818665451459101842416358141509827966271488"
+      },
+      "total_erasure": {
+        "lower": "2081377259010529841904299276860444956400862921325/730750818665451459101842416358141509827966271488",
+        "upper": "2081377259010529841904299276860444956400862921329/730750818665451459101842416358141509827966271488"
+      }
+    },
+    {
+      "name": "four_equal_cells",
+      "selector_bits": 4,
+      "data_bits": 2,
+      "cells": 4,
+      "codimensions": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "label_probabilities": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "H_label_exact": "2",
+      "H_fourier": {
+        "lower": "4",
+        "upper": "4"
+      },
+      "selector_influence_exact": "2",
+      "total_influence_exact": "3",
+      "data_erasure": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "total_erasure": {
+        "lower": "2",
+        "upper": "2"
+      }
+    },
+    {
+      "name": "point_addressing",
+      "selector_bits": 3,
+      "data_bits": 3,
+      "cells": 8,
+      "codimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "label_probabilities": [
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ],
+      "H_label_exact": "3",
+      "H_fourier": {
+        "lower": "6",
+        "upper": "6"
+      },
+      "selector_influence_exact": "3/2",
+      "total_influence_exact": "3",
+      "data_erasure": {
+        "lower": "3",
+        "upper": "3"
+      },
+      "total_erasure": {
+        "lower": "6",
+        "upper": "6"
+      }
+    },
+    {
+      "name": "standard_addressing",
+      "selector_bits": 3,
+      "data_bits": 8,
+      "cells": 8,
+      "codimensions": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "label_probabilities": [
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ],
+      "H_label_exact": "3",
+      "H_fourier": {
+        "lower": "6",
+        "upper": "6"
+      },
+      "selector_influence_exact": "3/2",
+      "total_influence_exact": "5/2",
+      "data_erasure": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "total_erasure": {
+        "lower": "3",
+        "upper": "3"
+      }
+    }
+  ],
+  "scope": "Finite self-checks only. The universal subcube-parity theorem and arbitrary parity-multiplexer erasure lemma are proved algebraically in the note; no independent audit."
+}

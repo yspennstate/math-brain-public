@@ -1,0 +1,1 @@
+Stage17 checkpoint: reconstruct A019 private-query Lambda with the same supplied core/mask references. Investigate the nonbalanced equal-child-mean case: the full empty-core row has query frequency absent; use its KL contribution to absorb the positive part of activation-refund curvature. No universal FEI claim. All writes stay in A018. No large search or remote compute.

@@ -1,0 +1,327 @@
+\section{Genuine nonempty-profile transactions from current query refunds}
+\label{sec:phase9}
+This section replaces the previous blanket unpaid nonempty-profile
+description by its now proved supplied-source sectors. It reconstructs
+A096's physical-phase theorem, A097's nonempty sign-bin extension,
+A093's common-reference JS refinement and A003's reference-singleton
+discrepancy refinement. The arguments use the CURRENT complete reference,
+not a reissued source budget. Their source-rate hypothesis is supplied.
+In particular the earlier point-source number $18$ is not transferred
+to this different wrapper. All costs below are in bits.
+
+\subsection{The common payment identity}
+\label{sec:centroid9}
+For a physical query let $P$ be its parent spectrum, $P_+,P_-$ the
+two actual child squared spectra, and $Q$ a normalized finite-CE
+complete reference. Let $\bar Q=M_jQ$, $\bar P=M_jP$.
+Its exact occupancy refund is
+\[
+r_{\mathrm{occ}}=\KL(P\Vert Q)-\KL(\bar P\Vert\bar Q)\ge0,
+\quad
+B_j+\tfrac12\sum_\tau\CE(P_\tau,\bar Q)-\CE(P,Q)
+=-r_{\mathrm{occ}}.
+\]
+This is the earlier complete-reference chain; neither a label-channel
+cost nor a new reference has been smuggled into it.
+
+Choose a partition $\Pi$ of child frequency labels BEFORE observing
+the physical outcome. Write $p_\tau=\Pi P_\tau$, $q=\Pi\bar Q$ and
+$\bar p=(p_++p_-)/2$. Calibrate each inherited reference to the
+actual masses on these blocks, retaining its conditional law within
+each block. Its exact CE decrease is
+$\rho_\tau=\KL(p_\tau\Vert q)$: within a block the factor is
+$p_\tau(B)/q(B)$, and expansion of the CE proves the identity.
+Finite CE ensures $q(B)>0$ on every actually occupied block;
+zero actual blocks are assigned zero mass explicitly.
+For $\rho=(\rho_++\rho_-)/2$ one has the exact centroid identity
+\[
+\rho=\operatorname{JS}(p_+,p_-)+\KL(\bar p\Vert q),\qquad
+\operatorname{JS}(p_+,p_-)=H(\bar p)-\tfrac12\sum_\tau H(p_\tau).
+\tag{PC9}\label{eq:centroid9}
+\]
+Indeed adding and subtracting $\log_2\bar p$ in each KL sum
+leaves the two child-to-midpoint divergences and one midpoint-to-$q$
+divergence. Terms at an unoccupied zero midpoint are omitted.
+No outcome-dependent comparison reference is used.
+
+Pinsker and the Euclidean parallelogram identity give
+\[
+\rho\ge\frac{\|\Delta\|_2^2+\|\bar p-q\|_2^2}{2\ln2},
+\qquad\Delta=(p_+-p_-)/2.
+\tag{PP9}\label{eq:euclid9}
+\]
+For completeness, log-sum first groups positive probability
+differences. Binary KL has second derivative
+$1/[u(1-u)\ln2]\ge4/\ln2$ in its first argument, so integration
+from equality gives $\KL(v\Vert q)\ge\|v-q\|_1^2/(2\ln2)
+\ge\|v-q\|_2^2/(2\ln2)$. Averaging the two Euclidean squares
+proves the displayed bound. Endpoints follow by finite support or limits.
+
+After calibration, changing a tail of actual mass $t$ from current
+conditional reference $M$ to $(1-\epsilon)M+\epsilon S$, for any
+prescribed probability law $S$, costs at most
+\[
+t\log_2\frac1{1-\epsilon}\le x/\ln2,
+\qquad\epsilon=x/(t+x),\quad t,x>0.
+\tag{PM9}\label{eq:mixture9}
+\]
+The first bound follows atomwise from the retained $(1-\epsilon)M$;
+the second is $\ln(1+x/t)\le x/t$. It remains valid for target zeros
+or newly introduced ghost labels because $\epsilon<1$ preserves
+occupied old support. At zero tail or zero energy make no mixture.
+If the average actual calibration refund is at least $2x/\ln2$,
+then both full child mixture bills, averaged with physical weights,
+are at most $x/\ln2$. The full transaction therefore satisfies
+\[
+B_j+\tfrac12\sum_\tau\CE(P_\tau,Q^{\mathrm{new}}_\tau)
+-\CE(P,Q)\le-r_{\mathrm{occ}}-x/\ln2.
+\tag{PT9}\label{eq:payment9}
+\]
+This scalar interface is a reconstruction of the existing signed-reset
+account and block-calibration arguments, not another broad candidate.
+Equation~\eqref{eq:centroid9} also identifies the exact calibration
+nullspace: $\rho=0$ iff $p_+=p_-=q$. Isospectral children alone do
+not imply zero calibration credit. Occupancy credit is a separate term.
+
+\subsection{Complete coherent Boolean wrapper and paid restoration}
+\label{sec:coherent9}
+Let $a:\{-1,1\}^k\to\{-1,0,1\}$, $b=1-a^2$, and let Boolean
+$h$ use disjoint uniform seed bits. Set $G=a+\sigma bh$, $\sigma\in\{-1,1\}$.
+Write $A_U=\widehat a(U)$, $B_U=\widehat b(U)$, $m=\E h$,
+$\beta=\sum_U B_U^2$. Supply a normalized finite-cost seed law $R$
+with $R(0)=m^2$. The complete coherent reference is
+\[
+Q(U,0)=(A_U+\sigma mB_U)^2,\qquad
+Q(U,T)=B_U^2R(T)\quad(T\ne0).
+\tag{CQ9}\label{eq:coherent9}
+\]
+Since $ab=0$, Parseval gives $\sum AB=0$ and
+$\sum A^2=1-\beta$. Thus this law is normalized; its true tail
+mass is $\beta(1-m^2)$. No influence price is obtained from normalization.
+
+At a seed query $j$, write $u_T=\widehat h(T)$,
+$v_T=\widehat h(T+j)$ for $j\notin T$, $d=v_0$.
+Actual child seed amplitudes are $u_T\pm v_T$, with means $m\pm d$.
+Booleanity gives $\sum_Tu_Tv_T=0$ by the Fourier coefficient of $h^2=1$.
+The common inherited nonempty row is $B_U^2\bar R(T)$, where
+$\bar R=M_jR$. Calibrating each controller/vacuum atom and each
+controller/nonempty-bin block to actual child mass gives the coherent law
+\[
+R^{\mathrm{cal}}_\tau(0)=(m+\tau d)^2,\qquad
+R^{\mathrm{cal}}_\tau(T)=P_{h_\tau}(W_\ell)
+\frac{\bar R(T)}{\bar R(W_\ell)}\quad(T\in W_\ell).
+\]
+Positive true bins have positive inherited normalizers; zero true bins
+are set to zero. Within-bin reference-only mass is retained. This
+operation is a PAID block calibration of the current complete law,
+not a free substitution of the actual fine spectrum.
+
+Controller queries are paid too. If a controller coordinate is deleted,
+write $A^\tau_U=A_U+\tau A_{U+j}$ and $B^\tau_U=B_U+\tau B_{U+j}$.
+The common inherited nonempty row is
+$(B_U^2+B_{U+j}^2)R(T)$. Calibration of each individual vacuum atom
+and each whole nonempty row to actual child masses gives precisely
+$(A^\tau_U+\sigma mB^\tau_U)^2$ and $(B^\tau_U)^2R(T)$.
+The same CE/block-KL calculation pays it, with no nonempty-profile
+replacement hidden in this restoration. Recompute all controller
+constants at a restricted child. A zero row, $\beta=0$, or a constant
+seed uses explicit zero-tail formulas. These derivations provide the
+coherent fragment credited to A079/A032 without importing any of
+their separate tag-price hypotheses or claims.
+
+\subsection{Physical phase and optimal two-bin energy}
+\label{sec:bins9}
+Put
+\[
+C=\sum A_U^2B_U^2,\quad D=\sum A_UB_U^3,\quad
+E_4=\sum B_U^4,\quad
+\Gamma=C-D^2/E_4\ge0,
+\]
+with $\Gamma=0$ when $E_4=0$. Cauchy--Schwarz proves nonnegativity.
+Also $F_m=\sum B_U^2(\sigma A_U+mB_U)^2\ge\Gamma$ by completing
+the square (when $E_4>0$).
+For any nonempty seed partition define $c_\ell=\sum_{T\in W_\ell}u_Tv_T$.
+The half-difference of the two actual coarse child probabilities is
+\[
+2dB_U(\sigma A_U+mB_U)\quad\hbox{at }(U,0),\qquad
+2B_U^2c_\ell\quad\hbox{at }(U,W_\ell).
+\]
+Equation~\eqref{eq:euclid9}, even dropping its mean-offset term, gives
+\[
+\rho\ge\frac{2}{\ln2}
+\left(d^2F_m+E_4\sum_\ell c_\ell^2\right)
+\ge2x/\ln2,\qquad
+x=\Gamma d^2+E_4\sum_\ell c_\ell^2.
+\tag{PE9}\label{eq:phase9}
+\]
+Using $t_\tau=\beta\operatorname{Var}(h_\tau)$ in
+Equation~\eqref{eq:mixture9} proves A097's stated complete transaction.
+Using only individual vacuum atoms proves A096's older certificate
+$x=\Gamma d^2$. Its smaller value is an intentionally coarser certificate.
+
+For fixed phases $u_Tv_T$, the two bins of nonnegative and negative
+products maximize $\sum c_\ell^2$ over partitions: split a mixed-sign
+block to increase the square sum, then merge like-sign blocks, which
+increases it again. At $d=0$, Booleanity implies
+$\sum_{T\ne0}u_Tv_T=0$, hence
+\[
+x=\frac{E_4}{2}\left(\sum_{T\ne0}|u_Tv_T|\right)^2.
+\]
+For $\beta>0$ this is positive exactly when the two child squared
+spectra differ, because their atomwise difference is $4u_Tv_T$ and
+their vacuum masses agree. This pays the zero-singleton NONISOSPECTRAL
+sector at the supplied source rate, not every relevant query.
+
+\subsection{The stronger JS certificate and reference mismatch}
+\label{sec:js9}
+For $d=0$ define $V=\operatorname{TV}(P_{h_+},P_{h_-})$,
+with TV equal to half the $\ell^1$ distance. The sign bins preserve
+this full TV exactly, since each bin collects differences of one sign.
+The controller/vacuum masses of the two children are identical.
+In their JS ratios the nonempty $B_U^2$ factors cancel. Thus exactly
+\[
+\operatorname{JS}(p_+,p_-)=\beta\operatorname{JS}(r_+,r_-),
+\]
+where $r_\tau$ is the seed child law coarsened to vacuum and sign bins.
+Each $r_\tau$ has $\ell^1$ distance $V$ from the common midpoint.
+Pinsker and Equation~\eqref{eq:centroid9} yield
+\[
+\rho\ge\frac{\beta V^2}{2\ln2}=\frac{2y}{\ln2},
+\qquad y=\beta V^2/4.
+\tag{PJ9}\label{eq:js9}
+\]
+Substitute $y$ for $x$ in the same mixture and payment interface.
+This is precisely A093's zero-singleton refinement, independently
+reconstructed here. The positive-energy ratio to A097's two-bin
+certificate is $2\beta/E_4$; neither $\Gamma$ nor the original source
+rate is changed.
+
+A003 retains a different part of Equation~\eqref{eq:euclid9}.
+Use individual controller/vacuum atoms and ONE whole seed-tail block.
+Put $r=R(\{j\})$ and $\delta=r-d^2$.
+Their actual and common inherited coarse probabilities are
+\[
+p_\tau(U,0)=(A_U+\sigma(m+\tau d)B_U)^2,\quad
+q(U,0)=(A_U+\sigma mB_U)^2+B_U^2r,
+\]
+\[
+p_\tau(\mathrm{tail})=\beta(1-(m+\tau d)^2),\quad
+q(\mathrm{tail})=\beta(1-m^2-r).
+\]
+Consequently the midpoint-minus-inherited entries are $-\delta B_U^2$
+and $\beta\delta$; the half-difference entries are
+$2dB_U(\sigma A_U+mB_U)$ and $-2\beta md$. Therefore EXACTLY
+\[
+\tfrac12\sum_\tau\|p_\tau-q\|_2^2
+=4d^2(F_m+\beta^2m^2)+\delta^2(E_4+\beta^2).
+\]
+Equations~\eqref{eq:euclid9} and \eqref{eq:mixture9} thus pay the
+same complete transaction at
+\[
+x_{\mathrm{disc}}=\Gamma d^2+
+\tfrac14(E_4+\beta^2)(r-d^2)^2.
+\tag{PD9}\label{eq:discrepancy9}
+\]
+In particular $d=0,r>0$ can give genuine positive conversion even
+when the children are isospectral. This certificate is not an asserted
+sum with a separately priced JS bound. Use whichever established
+certificate applies, or the exact actual calibration refund, without
+counting the same credit twice.
+
+For the displayed four-bit controller
+$a=(1,0,0,0,-1,1,1,1,1,0,0,0,1,-1,-1,-1)$,
+direct Walsh sums give
+\[
+\beta=3/8,\quad C=3/512,\quad D=3/256,\quad E_4=21/512,
+\quad\Gamma=9/3584,\quad(E_4+\beta^2)/4=93/2048.
+\]
+The discrepancy coefficient $93/2048$ multiplies a different term;
+it does not replace the phase constant $9/3584$.
+
+\subsection{Full Boolean witnesses and the exact remaining obligation}
+\label{sec:null9}
+Take $h=x_3g(x_1,x_2)$ with $g=-1$ only at the all-plus two-bit point.
+Query $x_1$. Both children are nonconstant distinct characters,
+$m=d=0$, $V=1$. A097's certificate gives
+$x=21/4096$ and $\epsilon=7/519$; A093's stronger one gives
+$y=3/32$ and $\epsilon=1/5$ on BOTH full children.
+These are different certificates on the same example, an energy ratio
+$128/7$, not numerical drift. With exact incoming spectrum and the
+other child's point law as target on each outcome, the actual
+calibration refund is $\beta=3/8$ bits and each full child mixture
+bill is $\beta\log_2(5/4)>0$. The exact signed full transaction is
+\[
+\tfrac38\log_2(5/8)<-\frac{3}{32\ln2}.
+\]
+The independent checker verifies the full 128-vertex Boolean law,
+both 64-vertex children and this prime-log equality directly.
+
+At the opposite boundary take parity on three seed bits and its EXACT
+spectral source. Query any seed bit: $d=0$, all $u_Tv_T=0$, and
+the inherited child reference equals both actual child spectra.
+Erasure, occupancy KL and calibration refund are all zero.
+Forcing a $1/64$ mixture toward a distinct nonempty singleton costs
+$(3/8)\log_2(64/63)>0$ on EACH full child. This refutes only a
+claim that every fixed positive conversion is funded by the current
+query, not FEI. It also shows why no $x\ge c\operatorname{Inf}_j$
+can hold universally for positive $c$.
+
+The calibration nullspace is exactly equal child block laws matching
+the common inherited block law, not just a zero singleton. The
+complete query without an additional reset remains paid there by
+the original CE identity; in the parity example it costs exactly zero.
+Thus a request for a NECESSARY positive conversion must specify its
+downstream invariant or quantitatively useful target and identify
+actual unused original surplus or occupancy credit to pay it.
+The examples do not establish that every possible FEI proof needs
+such a conversion.
+
+For any finite adaptive tree of admitted coherent seed/controller
+transactions, multiply Equation~\eqref{eq:payment9} by actual reach
+and telescope. Every current reference, old debit and complementary
+terminal remains, while the original complete CE decreases by the
+reached release. An already admitted rate $K$ therefore stays $K$.
+No initial influence price is constructed by that statement.
+The first unsupported all-dimensional step remains useful source
+admission or a hereditary influence-priced original owner paying
+necessary profile transport on every Boolean function. All FOUR
+universal conjectures in the earlier assembly remain conjectures,
+and both full integrated-candidate audits remain pending.
+
+\begin{theorem}[Assembled supplied-source profile-payment theorem]
+\label{thm:assembledphase9}
+For every finite Boolean seed and complementary finite controller,
+given the complete coherent finite-cost source in
+Equation~\eqref{eq:coherent9}, select at each seed node any of the
+certificates \eqref{eq:phase9}, \eqref{eq:js9} (when $d=0$), or
+\eqref{eq:discrepancy9}, with its stated block calibration and
+mixture strength. Include arbitrary paid controller restorations
+and inherited-reference query steps. Every finite adaptive such tree
+pays all erasures and complete terminal CE from the SAME original
+source CE, retaining the reached release of
+Equation~\eqref{eq:payment9}. If that source and previous bookings
+were admitted at rate $K$, this continuation preserves that $K$.
+No universal initial rate or required fixed-strength conversion in
+the zero-refund sector follows.
+\end{theorem}
+\begin{proof}
+The corresponding local bounds were derived above from the complete
+reference identity, block KL, the indicated current-energy certificate
+and both averaged mixture bills. Controller restoration is a block
+KL decrease, also proved above. Multiply each local inequality by
+its actual physical reach and sum the finite tree. Each intermediate
+complete CE cancels once against its parent contribution. The original
+source remains once, every final full CE remains once, and all prior
+bookings are untouched. No independence or new child quota is used.
+\end{proof}
+
+\paragraph{Exact source locators and audit scope.}
+A096, run \texttt{20261023T053800Z}, \texttt{DERIVATION.md}, Sections 1--4;
+A097, run \texttt{20261023T062140Z}, \texttt{DERIVATION.md}, Sections 1--4;
+A093, run \texttt{20261023T070224Z}, \texttt{DERIVATION.md}, Sections 1 and 3--4;
+A003, run \texttt{20261023T062246Z}, \texttt{DERIVATION.md}, Sections 1--4.
+Their original statement hashes and exact independent-review scopes
+are preserved in this run's claim ledger. A093's independent acceptance
+of A097 is separate from A093's contributor refinement; A099 supplies
+its own reconstruction of the latter. No published-literature priority
+or theorem is imported as an unchecked external premise.

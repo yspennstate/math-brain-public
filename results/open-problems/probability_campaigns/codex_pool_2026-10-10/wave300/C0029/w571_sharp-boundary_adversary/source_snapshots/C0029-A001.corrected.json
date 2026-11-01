@@ -1,0 +1,18 @@
+{
+  "attempt_id": "C0029-A001",
+  "author": "claude-probability-1000-continue-0907",
+  "independent_check": "",
+  "key_identity": "Real Gaussian hard-edge LIMIT: for each fixed t>=0, lim_{n->infinity} P(sqrt(n)*s_min(G_n)<=t)=1-exp(-t-t^2/2). The finite-n Gaussian CDF is distinct and satisfies P(sqrt(n)*s_min(G_n)<=t)<=t.",
+  "method": "Test whether the constant 1 in front of t is forced by the Gaussian comparison and whether the Bernoulli case can beat it.",
+  "obstruction": "Hard-edge universality covers t >= n^{-c}; the conjecture needs the constant 1 down to exponentially small t.",
+  "problem_id": "C0029",
+  "recorded_at": "2026-09-07T06:38:45Z",
+  "result": "For real Gaussian matrices the hard-edge LIMIT as n tends to infinity has CDF 1-exp(-t-t^2/2), whose right derivative at zero is one; this is not an exact finite-n CDF; the conjecture says Bernoulli matrices are no worse than Gaussian up to the exponentially small singular mass. A sufficient condition would be a local limit theorem for sqrt n s_n at zero uniform in n, which is a universality statement at the hard edge (the smallest singular value) and is known (Tao-Vu 2010 hard-edge universality) only in the form P(sqrt n s_n <= t) = (1 - e^{-t^2/2-t}) + O(n^{-c}) for t in a fixed range, which gives the conjecture for t >= n^{-c'} but not for t between c^n and n^{-c'}. The gap regime is exactly the small-ball regime where the Rudelson-Vershynin constant C appears. No improvement obtained.",
+  "schema": "probability-attempt.v1",
+  "substantive": true,
+  "review_note": "DRAFT correction w571 2026-10-10, independent review pending: do not replace the finite-n Gaussian CDF by its limit. Rudelson-Vershynin ICM 2010 Theorem 3.1 and (3.2) distinguish them; n=1 gives erf(t/sqrt(2)). The historical attempt's universality discussion must also be read with SSS 2405.20308v2 Theorems 1.1/1.2, which achieve 1+O_xi((log n)^(-1/16)) with an exponential remainder, not exact coefficient one.",
+  "review_note_sources": [
+    "https://websites.umich.edu/~rudelson/papers/rv-ICM2010.pdf",
+    "https://arxiv.org/html/2405.20308v2"
+  ]
+}

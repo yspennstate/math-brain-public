@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "stream_id": "B17",
+  "primary_packet_id": "A082",
+  "claims": [
+    {
+      "claim_id": "B17-A082-ALL-ARITY-HALF-TAX-v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "Assuming the repaired local scalar half-tax theorem, for every finite product-bias block A and every unit w in C^(2^|A|), H(|w|^2)+H(|(tensor_i U_p_i)w|^2) is at least sum_i(h2(p_i)-Delta(p_i)/2). Consequently J_A <= M_A + (1/2)sum_i Delta(p_i).",
+      "quantifiers": "every finite A; every p_i in [0,1]; every complex unit vector w; hence every genuine Boolean child family",
+      "uniform_constant": "1/2 independent of arity and biases",
+      "proof": "Schwonnek 2018 Proposition 1 and Corollary 1 applied to the two product projective measurements, followed by the exact source block reduction",
+      "endpoints": "p_i=0,1 are signed-permutation factors with zero local constant; p_i=1/2 included; zero atoms use 0 log 0=0",
+      "gu_implication": "Discharges the all-arity uncertainty sublemma. Universal GU still needs a signed hierarchy estimate paying terminal M_A and half-taxes with single-use physical influence.",
+      "limitations": [
+        "Does not prove GU or FEI",
+        "Does not cancel or bound the terminal M_A reserve",
+        "Depends on the repaired scalar half-tax theorem and exact J_A-M_A block identity",
+        "Independent mapping review pending"
+      ]
+    }
+  ]
+}
+

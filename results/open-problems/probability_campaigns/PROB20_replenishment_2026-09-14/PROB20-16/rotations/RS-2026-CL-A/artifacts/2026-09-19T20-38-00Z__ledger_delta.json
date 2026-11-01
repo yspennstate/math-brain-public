@@ -1,0 +1,54 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target": "RS-2026-CL-A",
+  "captured_master": "90e71ce8163cd67059f5f7f05292489abc292842",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T19-37-25Z__report.md",
+    "creation_commit": "1dcc784fa1d26dfb92a4bb16b5d6922bf4b91111",
+    "blob": "f89f33d4a8921c943c3be14946529503c896d455"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T20-38-00Z__report.md",
+    "creation_commit": "042fc9c8c6df7c18808cdaa4ef16b8f941af5ef9",
+    "readback_blob": "053708612d6e60aba2135c5443cdef611076132d"
+  },
+  "metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": "NO_FROZEN_METRIC_MOVEMENT_MATERIAL_OBLIGATION_MOVEMENT"
+  },
+  "status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / RAW_GRAM_RIESZ_REFUTED_AND_DEPENDENT_CHAOS_ROUTE",
+  "historical_initial_methods": ["B2", "B27", "B21"],
+  "methods": ["B12", "B6", "B21"],
+  "next_methods": ["B11", "B5", "B30"],
+  "new_results": [
+    "Uniform raw centered-source-monomial Gram lower bound exp(-O(D)) is false even for a homogeneous connected Dobrushin-unique 1D zero-field Ising chain.",
+    "For n=2m, fixed rho=tanh(J) in (0,1/2), and 2<=r<=m, lambda_min(G_{2r}) <= (1-rho^2)^r / [r rho^(2r-2) binom(m-1,r-1)].",
+    "At r=2 this is O(1/m); at r=floor(D_n/2) it is exp(-Theta(D_n log(n/D_n))) up to O_rho(D_n), so the predecessor raw-Riesz proof obligation is decisively refuted.",
+    "The exact source-degree filtration is basis-free: P_{<=D}=sum_{|S|<=D} L2(sigma(X_S)); support-compatible dependent Hoeffding/direct-sum decompositions preserve source degree exactly.",
+    "Dependent Hoeffding/Feshchenko/oblique-projection literature supplies the correct prior-art language; the remaining source-directed problem is a quantitative degree-filtered projector/subspace-angle bound under weak Gibbs dependence, not raw Gram conditioning."
+  ],
+  "audits": {
+    "p26": false,
+    "distinct_other": false,
+    "qualifying_count": "0/2"
+  },
+  "hard_recovery_cycles_consumed": 1,
+  "same_obligation_stagnation": 0,
+  "novelty": "UNVERIFIED",
+  "prompt_immutability": "PRESERVED_NO_AUTOMATION_UPDATE_CALLED",
+  "model_control": {
+    "requested": "GPT-6 maximum",
+    "actual_exposed_model": "GPT-5.6 Sol",
+    "reasoning_level": "UNVERIFIED",
+    "authenticated_scheduler_model_selector_exposed": false,
+    "authenticated_reasoning_selector_exposed": false
+  },
+  "source_check_date": "2026-09-19",
+  "source_status": "Open Problem 35 still live/open in fresh Randomstrasse read",
+  "mandatory_negative_stress": "Songtao Mao arXiv:2607.20318",
+  "positive_comparators": ["Hsieh et al. arXiv:2601.05850", "Chen-Li arXiv:2608.06279"],
+  "closure": "NOT_CLOSED"
+}

@@ -1,0 +1,49 @@
+{
+  "worker": "NM13-10",
+  "track": "progress-extrapolation",
+  "date": "2026-09-20",
+  "source": "Agresti--Veraar arXiv:2501.18561, Problem 3",
+  "frozen_pair": {
+    "X0": "H^{-1}(Torus)",
+    "Xhalf": "L^2(Torus)",
+    "X1": "H^1(Torus)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "brownian_dimension": 1,
+    "equation": "dZ=-AZ dt+A^(1/2)(Z+Y)dW, Z(0)=0",
+    "input_output_norm": "L^p(Omega x (0,T);L^2(Torus))"
+  },
+  "fixed_source_before": {
+    "strong_endpoint": "r_*=3, endpoint excluded",
+    "critical_spacetime_exponent_bracket": "[2/3,1]",
+    "critical_spacetime_norm_lower_bound_at_alpha_2_3": "4/9",
+    "exact_subcritical_input_norm": "C_p^g(T)=1/(sqrt(2/(p-1))-1), 2<=p<3"
+  },
+  "fixed_source_after": {
+    "strong_endpoint": "r_*=3, endpoint excluded",
+    "critical_spacetime_exponent_bracket": "[2/3,1]",
+    "critical_spacetime_norm_lower_bound_at_alpha_2_3": "4/9",
+    "exact_subcritical_input_norm": "C_p^g(T)=1/(sqrt(2/(p-1))-1), 2<=p<3"
+  },
+  "mechanism_gain": {
+    "claim_id": "NM10-AVP3-UNIFORM-SHELL-CRITICAL-13",
+    "status": "CANDIDATE_FULL / SELF-CHECKED / PENDING INDEPENDENT REVIEW",
+    "scope": "uniform restriction of the exact frozen torus pair to one arbitrary eigenspace; arbitrary progressive vector-valued inputs inside that eigenspace",
+    "tail_theorem": "m_R <= 621 (J/R^3) (1+log_+(T R^3/J))^2, J=E int_0^T ||Y||^3",
+    "endpoint_theorem": "||Z||_{Z_{3,2/3}(T)} <= 50 ||Y||_{L^3(Omega x (0,T);E_n)} uniformly in n and T",
+    "sharpness": "Existing source-valid high-frequency one-shell witnesses rule out every alpha<2/3 uniformly over shells; existing exact additive saddle gives endpoint norm >=4/9. Hence the uniform single-eigenspace critical exponent is exactly 2/3 and its norm lies in [4/9,50]."
+  },
+  "parent_status": "PARTIAL",
+  "parent_movement": "none; the full-spectrum spacetime bracket remains [2/3,1]",
+  "substantive_gain": true,
+  "history_note": "Do not reset predecessor counters or the original NM13-10 admission history. This run extends the productive P24 successor chain and does not reopen Agresti--Veraar Problems 4--5.",
+  "residual_obstruction": "active unequal-scale common-Brownian interaction. Passive off-input cross-scale cubic coherence already has a finite-memory bound from the immediately preceding run.",
+  "next_attack": "combine the new shellwise level-excursion inequality with the stopping-time Hellinger/decoherence kernel to control active two-shell forcing, then seek a summable full-spectrum Carleson charge",
+  "checker": {
+    "path": "2026-09-20T11-49-58+0300__critical_one_shell_log23_check.py",
+    "output": "2026-09-20T11-49-58+0300__critical_one_shell_log23_check.out",
+    "result": "CHECK_PASS"
+  },
+  "literature_check": "Bounded 2026-09-20 check retained Agresti--Veraar Problem 3 as source; later variational/discrete/Banach-geometry papers located do not resolve this exact multiplicative critical rearrangement endpoint. This is not a worldwide novelty certificate."
+}

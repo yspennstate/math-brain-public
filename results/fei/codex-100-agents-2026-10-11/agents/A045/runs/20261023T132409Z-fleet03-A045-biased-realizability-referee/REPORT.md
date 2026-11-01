@@ -1,0 +1,43 @@
+# A045 stage10: sharp singleton scale and exact low-carry owner
+
+## exact target, quantifiers, hypotheses and units
+
+Review A044-ALL-DEPTH-SINGLETON-IMPORT-OWNER@1 at its full mathematical scope; determine which sharper singleton scale source can be used at ALL finite depths, fan-ins and actual independent product biases without losing physical admission or terminal carry. All functions are Boolean signs; physical blocks disjoint, actual induced gate laws, deterministic/constant inputs contracted, literal leaves. Units: natural logarithms, J includes ln4. Full FEI OPEN.
+
+## sources actually read, revisions and theorem locators
+
+BOARD23Oct13:18UTC; B09 STREAM_NOTES v2; own saved STATUS and LEARNED baseline; current A041-A044 STATUS; A04312:34 full PROOF and CLAIMS; A04111:33 PROOF; A04412:57 full PROOF and primary CLAIMS at agents\A044\runs\20261023T125747Z-fleet03-A044-non-symmetric-gate-classes; protocol2026-10-11-execution-v2 required fields/dispatch/review and prior complete protocol intake. A044 exact statement-plus-hypotheses hash9250a165f1cd4657e938f45267659e2ad2432d9e30262c8d84fdcc65616b7315 and proof hashe556fdec74f1399a1c0838b2ff554f15334015f380012ba5d4c5ef3987ff41ad reproduced. A044's rolling STATUS lagged this newer saved proof; the dated source file governs this review. The crash-restore common.md was read; prior completed work products were reused, no old loop or background job recreated. Older paper/campaign intake remains prior-stage context, not a fresh literature audit. Current owner deadline23Oct14:49UTC supersedes stale initial protocol dates. Source receipts identify the exact local revisions.
+
+## complete derivation or exact first unsupported line
+
+PROOF.md reconstructs A044's entire physical singleton-loss partition, all-depth original entropy owner, separate high-carry refund, complete singleton-preserving reference, signed conversion and full ordinary KL; verdict HOLDS, no source repair or contributor conflict. Its conditional prime-scale implication stays conditional. Source checker code/counts were not imported.
+
+New scalar admission uses D_i in{-1,0,1}, d>=t and (j+1)t<=1 to prove P_i j_i<=v_i(d_i-t_i^2). Hence B_J(h)=ln4(2Delta-R)-J_1>=0, sharp at fair AND2. Keeping GENUINE final-singleton rounding carry gives the all-depth exact account T_tot+J_1(F)+B_J,tree=ln4(2Delta_F-R_tree+C_1,tot), and the separate mantissa owner ln4 C_1,tot+L_1(F)+V_tot=sum omega L_1(gate). This yields a universal signed net-import bound and, only when C_1,tot=0, T_tot<=ln4(2Delta_F-R_tree)-J_1(F)<=2ln4 Delta_F. The latter retains its actual R_tree and singleton terminal and is attained by every genuine Maj3 tower. No optimality for the coarser coefficient2 is claimed.
+
+The earlier4Delta theorem bounds ALL import even with low carry; the new2ln4 bound requires zero low carry, while its universal form keeps the signed carry debit. These are different hypotheses/quantities, not an unexplained numerical replacement. Full positive low carry is exhibited by AND4 at biases1/3,2/5,3/4,1/4: singleton label8 has mass3/400, actual j3 and summed local j2. The same reference and original account survive; neither V nor low/high carry is spent twice. R_tree differs from physical R_F in general.
+
+First unsupported universal line: pay arbitrary-prime J_hi at every arity and actual induced law from SAME genuinely unused original deficit/refunds AFTER all old singleton/carry debits, keeping both full terminal KL laws. The new exact scale account does not pay that bill. No FEI constant or Boolean divergent H/I family is claimed.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen out/FROZEN_SPEC.json preceded computation. Before pilot, v1.1 corrected compressed Maj3 bookkeeping to R_tree=Delta/2 and B_J,tree=0; the initial draft had mislabeled the degree refund as scale slack. No prior computed result/source was changed, and the domain stayed fixed. Commands: python -X utf8 code/check.py --pilot; python -X utf8 code/check.py. Pilot:2223 assertions on12 two-child formulas,2 chains and8 compressed towers plus controls PASS in0.718354s. Main:73304 assertions on512 two-child formulas,32 asymmetric depth3 chains and8 compressed towers plus controls PASS in10.363576s. The544 formula count is a new domain, different from prior stage's512 activation roots and49216 checks. No dimension was raised automatically.
+
+Every two-child formula uses all16 outer Boolean gates,4 fixed left and4 fixed right gates, and2 labeled physical laws. Chains use all16 outer gates above XOR2/AND2 at the same two laws. Maximum actual physical dimension4; compressed towers use a proved exact structural moment recursion, not enumeration on3^8 inputs. Spectra come from self-owned Mobius arithmetic, independently checked against centered physical moments. Rational prime-log vectors verify complete entropy/KL and carry-owner identities EXACTLY; there is no floating log-sign inference. New scalar/refund positivity is proved analytically and the rational scale inequality is tested per coordinate. Genuine complete-reference products and terminal low masses are checked per physical label. Controls retain negative/constant children, deterministic contractions, reused-wire and physical-versus-spectral conditioning failures. Source checker code was never copied/run.
+
+Estimated100MB, no measured peak RAM claim; all research jobs below300MB and below180seconds, pilot below55seconds. No GPU, heavy admission, formal compiler, detached jobs, automatic dimension escalation or workload shutdown. Compute-state snapshot was stale contextual data, not current capacity evidence; governor was not restarted.
+
+## proof dependencies and changed downstream conclusions
+
+A044 primary claim now has independent full-scope mathematical reconstruction. New sharp singleton scale/carry account awaits independent review and depends only on the reconstructed physical partition, Boolean derivative admission and finite weighted telescoping. The source theorem is not repaired or silently sharpened under its original hypotheses. Downstream, zero-singleton-carry formulas have a stronger actual import payment; general formulas retain the explicit low carry and its original mantissa owner. Arbitrary-prime J_hi and global FEI remain OPEN. No shared source or other agent's file was changed.
+
+## one next mathematical action and independent reviewer
+
+A044/A043 reconstruct equations(8)-(11), especially the positive low-carry witness and Maj3 degree refund; A041/A042/A091 challenge proposed reuse of B_J or V after a real previous debit. The one next action is an original-capacity payment of actual arbitrary-prime J_hi after this explicit singleton/carry history, with the same complete reference and full terminals. Another normalizer or wrapper computation cannot supply the missing arbitrary-seed price.
+
+## actual persistence receipts or precise save blocker
+
+All four protocol files, proof, frozen spec, code and exact results are saved only in this A045 run. Schema validation checks exact field sets, source statement/proof hashes, PASS domain counts, byte-identical PACKET_DELTA, STATUS exactly two lines and artifacts under20MB; local hash receipts are saved and reread. WORKLOG and LEARNED appended. Local persistence is verified; supervisor copy, remote mirror, brain ingestion, new independent theorem review and public release are distinct/unobserved. Checklist working update failed on its shared held lock; no lock modified. Initial packaging stopped before rolling writes because it assumed a statement-only hash; out/HASH_CONVENTION.json records the source compound convention and corrected verification. Brain self-care remains degraded/unverified: stale personal-model/state-of-mind/dream guidance was excluded from mathematics. No new job remains running; existing workloads untouched.
+
+## Universal bridge
+
+This stage advances C020 whole-set witness cost and C024 history transfer by independently accepting A044's single all-depth singleton owner, proving the sharp Boolean singleton scale source ln4(2Delta-R), and separating the exact low-carry mantissa bill. At zero singleton carry it improves the actual import allowance from4Delta to the terminal/refund-retaining ln4(2Delta-R_tree)-J_1(F), attained on actual Maj3 towers; in general the same bound is signed and retains ln4 C_1,tot rather than creating fresh capacity. What remains is the universal prime J_hi supplier after those original debits and both full terminal laws. That same-account arbitrary-prime price is the shortest route to full FEI because realizability, import, carry and reference transfer are now explicit, and further wrappers cannot erase the seed obligation.

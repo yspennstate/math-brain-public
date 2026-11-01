@@ -1,0 +1,45 @@
+{
+  "helper_version": "exercised-resets-v1",
+  "actual_Boolean_family": "F(x,a,b,z)=(-1)^a for x=0; 1-2*1[b=1,z=0] for x=1; n>=2; v_n point defect",
+  "parameter_domain": {
+    "pilot_n": [
+      2
+    ],
+    "array_n": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "scalar_m": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "case_count": "5 actual roots, both a children, every data-only depth; 19 scalar sizes; finite bases m=2..9",
+  "symmetry": "data coordinates permute exactly; x-twist conjugates spectral masks and product reference; no symmetry assumed for raw root check",
+  "arithmetic": "integer Walsh/Fraction and outward fixed point log intervals with 40-term atanh and proved tail",
+  "memory_estimate_mb": 90,
+  "maximum_runtime_seconds": 55,
+  "no_automatic_dimension_escalation": true,
+  "initial_reference": "full product of actual root Fourier marginals; deliberately differs from earlier canonical occupancy M",
+  "booking": "prior 1/4 globally, charged 1/2 only on a=1; initial reset conservative global h2(2^(-n-1)), charged twice on a=1; no later new surplus withdrawal"
+}

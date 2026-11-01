@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api//Jv/zhuJu8ehBMP/xBmlXBRhZY8</id>
+  <title>arXiv Query: search_query=ti:Boltzmann AND ti:maps&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-11T21:09:33Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:Boltzmann+AND+ti:maps&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>13</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.31978v1</id>
+    <title>Bridging Stochastic Flow Maps and Boltzmann Generators with Normalizing Flows</title>
+    <updated>2026-09-25T20:31:31Z</updated>
+    <link href="https://arxiv.org/abs/2609.31978v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.31978v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generating independent, equilibrium samples of molecular systems at scale remains a central obstacle in computational statistical mechanics. Boltzmann Generators address this by pairing a generative model with importance sampling to obtain consistent samples from the target distribution. We introduce Normalizing Flow Flow Maps (NF$^2$M), which combines the strengths of recent stochastic flow maps with the tractability of classic normalizing flows to build a Boltzmann Generator. Unlike most methods, which correct the generative model only at the end, NF$^2$M reweighs each denoising transition as generation proceeds, avoiding wasted compute on trajectories that are ultimately discarded. At each denoising step, a conditional normalizing flow proposes clean configurations given the current noisy state (a simpler task than sampling directly from the target) and its exact likelihood enables correcting each proposal toward the true denoising transition of the target Boltzmann distribution. This is in contrast to most existing methods, whose likelihoods are approximate or expensive to evaluate, undermining the statistical reliability of the correction. We establish consistency of the corrected transitions and bound how approximation errors propagate through the sampling chain. We evaluate NF$^2$M on peptide systems, demonstrating improved sampling efficiency and sample quality.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-25T20:31:31Z</published>
+    <arxiv:comment>Under review</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Louis Grenioux</name>
+    </author>
+    <author>
+      <name>RuiKang OuYang</name>
+    </author>
+    <author>
+      <name>Luhuan Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.29110v1</id>
+    <title>Few-Step Boltzmann Generators via Scalable Likelihood Flow Maps</title>
+    <updated>2026-06-27T23:26:53Z</updated>
+    <link href="https://arxiv.org/abs/2606.29110v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.29110v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent progress in flow-based generative modeling has led to models that output high-quality samples while using only a small number of function evaluations. However, at present, there is a lack of similar advances in estimating the model likelihood. In particular, most existing methods either rely on restrictive architectures that enable exact calculations, or use stochastic approximations such as Hutchinson's trace estimator that introduce substantial variance. In this work, we introduce SCAlable LikeLihood distillation of flOw maPs (SCALLOP). SCALLOP builds on the recently proposed F2D2, a likelihood flow map model that can generate samples and their densities in a small number of function evaluations. While F2D2 uses Hutchinson's estimator during training, we introduce an alternative and more scalable likelihood distillation objective that is Hutchinson-free and admits a vectorized formulation. Empirically, we demonstrate the effectiveness of SCALLOP as a Boltzmann generator in molecular science, and further validate its benefit on image datasets. SCALLOP significantly reduces both training variance and training time while consistently improving performance compared to F2D2, and is competitive with the state-of-the-art while achieving up to 10x inference speedup over the fastest baseline.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-27T23:26:53Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>RuiKang OuYang</name>
+    </author>
+    <author>
+      <name>Hanlin Yu</name>
+    </author>
+    <author>
+      <name>Xinyue Ai</name>
+    </author>
+    <author>
+      <name>Yutong He</name>
+    </author>
+    <author>
+      <name>Nicholas M. Boffi</name>
+    </author>
+    <author>
+      <name>Pradeep Ravikumar</name>
+    </author>
+    <author>
+      <name>Jose Miguel Hernandez-Lobato</name>
+    </author>
+    <author>
+      <name>Max Simchowitz</name>
+    </author>
+    <author>
+      <name>Benjamin Kurt Miller</name>
+    </author>
+    <author>
+      <name>Omar Chehab</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.14258v1</id>
+    <title>Sampling Boltzmann distributions via normalizing flow approximation of transport maps</title>
+    <updated>2026-03-15T07:28:10Z</updated>
+    <link href="https://arxiv.org/abs/2603.14258v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.14258v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a celebrated paper \cite{noe2019boltzmann}, Noé, Olsson, Köhler and Wu introduced an efficient method for sampling high-dimensional Boltzmann distributions arising in molecular dynamics via normalizing flow approximation of transport maps. Here, we place this approach on a firm mathematical foundation. We prove the existence of a normalizing flow between the reference measure and the true Boltzmann distribution up to an arbitrarily small error in the Wasserstein distance. This result covers general Boltzmann distributions from molecular dynamics, which have low regularity due to the presence of interatomic Coulomb and Lennard-Jones interactions. The proof is based on a rigorous construction of the Moser transport map for low-regularity endpoint densities and approximation theorems for neural networks in Sobolev spaces.
+  Numerical simulations for a simple model system and for the alanine dipeptide molecule confirm that the true and generated distributions are close in the Wasserstein distance. Moreover we observe that the RealNVP architecture does not just successfully capture the equilibrium Boltzmann distribution but also the metastable dynamics.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-15T07:28:10Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zia Ur Rehman</name>
+    </author>
+    <author>
+      <name>Gero Friesecke</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.12378v2</id>
+    <title>Efficient mapping of phase diagrams with conditional Boltzmann Generators</title>
+    <updated>2024-08-16T10:40:40Z</updated>
+    <link href="https://arxiv.org/abs/2406.12378v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.12378v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The accurate prediction of phase diagrams is of central importance for both the fundamental understanding of materials as well as for technological applications in material sciences. However, the computational prediction of the relative stability between phases based on their free energy is a daunting task, as traditional free energy estimators require a large amount of simulation data to obtain uncorrelated equilibrium samples over a grid of thermodynamic states. In this work, we develop deep generative machine learning models based on the Boltzmann Generator approach for entire phase diagrams, employing normalizing flows conditioned on the thermodynamic states, e.g., temperature and pressure, that they map to. By training a single normalizing flow to transform the equilibrium distribution sampled at only one reference thermodynamic state to a wide range of target temperatures and pressures, we can efficiently generate equilibrium samples across the entire phase diagram. Using a permutation-equivariant architecture allows us, thereby, to treat solid and liquid phases on the same footing. We demonstrate our approach by predicting the solid-liquid coexistence line for a Lennard-Jones system in excellent agreement with state-of-the-art free energy methods while significantly reducing the number of energy evaluations needed.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-18T08:05:04Z</published>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Maximilian Schebek</name>
+    </author>
+    <author>
+      <name>Michele Invernizzi</name>
+    </author>
+    <author>
+      <name>Frank Noé</name>
+    </author>
+    <author>
+      <name>Jutta Rogal</name>
+    </author>
+    <arxiv:doi>10.1088/2632-2153/ad849d</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/2632-2153/ad849d" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2311.09699v1</id>
+    <title>Boltzmann's Billiard Systems: Computation of the Billiard Mapping and Some Numerical Results</title>
+    <updated>2023-11-16T09:16:43Z</updated>
+    <link href="https://arxiv.org/abs/2311.09699v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2311.09699v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>L. Boltzmann proposed a billiard model with a planar central force problem reflected against a line not passing through the center. He asserted that such a system is ergodic, which thus illustrates his ergodic hypothesis. However, it has been recently shown that when the underlying central force problem is the Kepler problem then the system is actually integrable by Gallavotti-Jauslin. This raises the question of whether Boltzmann's assertion holds true for some central force problems that he considered. In this paper, we present some geometrical and numerical analysis on the dynamics of several of these systems. As indicated by the numerics, many of these systems show chaotic dynamics and a system seems to be ergodic.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-11-16T09:16:43Z</published>
+    <arxiv:comment>32 pages, 17 figures</arxiv:comment>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Michael Plum</name>
+    </author>
+    <author>
+      <name>Airi Takeuchi</name>
+    </author>
+    <author>
+      <name>Lei Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2112.11576v2</id>
+    <title>The exploration process of critical Boltzmann planar maps decorated by a triangular $O(n)$ loop model</title>
+    <updated>2022-10-03T19:16:59Z</updated>
+    <link href="https://arxiv.org/abs/2112.11576v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2112.11576v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we investigate pointed $(\mathbf{q}, g, n)$-Boltzmann loop-decorated maps with loops traversing only inner triangular faces. Using the peeling exploration of arXiv:1809.02012 modified to this setting we show that its law in the non-generic critical phase can be coded in terms of a random walk confined to the positive integers by a new specific boundary condition. Under a technical assumption that we believe to be true, combining this observation with explicit quantities for the peeling law we derive the large deviations property for the distribution of the so-called nesting statistic and show that the exploration process possesses exactly the same scaling limit as in the rigid loop model on bipartite maps that is a specific self-similar Markov process introduced in arXiv:1809.02012. Besides, we conclude the equivalence of the admissible weight sequences related by the so-called fixed point equation by proving the missing direction in the argument of arXiv:1202.5521.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-12-21T23:21:19Z</published>
+    <arxiv:comment>39 pages, 2 figures; changes in v2: proof of claim right after (6.2) added to appendix, references updated, paraphrasing of technical assumption and related background for more clarity, minor abstract and text edits. arXiv admin note: text overlap with arXiv:1809.02012 by other authors</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Aleksandra Korzhenkova</name>
+    </author>
+    <arxiv:doi>10.30757/ALEA.v19-58</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.30757/ALEA.v19-58" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.08806v1</id>
+    <title>A fast Petrov-Galerkin spectral method for the multi-dimensional Boltzmann equation using mapped Chebyshev functions</title>
+    <updated>2021-05-18T19:49:41Z</updated>
+    <link href="https://arxiv.org/abs/2105.08806v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.08806v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Numerical approximation of the Boltzmann equation presents a challenging problem due to its high-dimensional, nonlinear, and nonlocal collision operator. Among the deterministic methods, the Fourier-Galerkin spectral method stands out for its relative high accuracy and possibility of being accelerated by the fast Fourier transform. However, this method requires a domain truncation which is unphysical since the collision operator is defined in $\mathbb{R}^d$. In this paper, we introduce a Petrov-Galerkin spectral method for the Boltzmann equation in the unbounded domain. The basis functions (both test and trial functions) are carefully chosen mapped Chebyshev functions to obtain desired convergence and conservation properties. Furthermore, thanks to the close relationship of the Chebyshev functions and the Fourier cosine series, we are able to construct a fast algorithm with the help of the non-uniform fast Fourier transform (NUFFT). We demonstrate the superior accuracy of the proposed method in comparison to the Fourier spectral method through a series of 2D and 3D examples.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-18T19:49:41Z</published>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Jingwei Hu</name>
+    </author>
+    <author>
+      <name>Xiaodong Huang</name>
+    </author>
+    <author>
+      <name>Jie Shen</name>
+    </author>
+    <author>
+      <name>Haizhao Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2102.11632v1</id>
+    <title>Quenched local convergence of Boltzmann planar maps</title>
+    <updated>2021-02-23T11:17:05Z</updated>
+    <link href="https://arxiv.org/abs/2102.11632v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2102.11632v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Stephenson~(2018) established annealed local convergence of Boltzmann planar maps conditioned to be large. The present work uses results on rerooted multi-type branching trees to prove a quenched version of this limit.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-02-23T11:17:05Z</published>
+    <arxiv:comment>The results of this work were initially part of [21]. The paper got split during the refereeing process following a referee's recommendation. arXiv admin note: substantial text overlap with arXiv:1908.04843</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Benedikt Stufler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.11744v2</id>
+    <title>On the mapping between Hopfield networks and Restricted Boltzmann Machines</title>
+    <updated>2021-03-06T02:08:12Z</updated>
+    <link href="https://arxiv.org/abs/2101.11744v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.11744v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hopfield networks (HNs) and Restricted Boltzmann Machines (RBMs) are two important models at the interface of statistical physics, machine learning, and neuroscience. Recently, there has been interest in the relationship between HNs and RBMs, due to their similarity under the statistical mechanics formalism. An exact mapping between HNs and RBMs has been previously noted for the special case of orthogonal (uncorrelated) encoded patterns. We present here an exact mapping in the case of correlated pattern HNs, which are more broadly applicable to existing datasets. Specifically, we show that any HN with $N$ binary variables and $p&lt;N$ arbitrary binary patterns can be transformed into an RBM with $N$ binary visible variables and $p$ gaussian hidden variables. We outline the conditions under which the reverse mapping exists, and conduct experiments on the MNIST dataset which suggest the mapping provides a useful initialization to the RBM weights. We discuss extensions, the potential importance of this correspondence for the training of RBMs, and for understanding the performance of deep architectures which utilize RBMs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-27T23:49:48Z</published>
+    <arxiv:comment>ICLR 2021 oral paper</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <arxiv:journal_ref>The 9th International Conference on Learning Representations (ICLR 2021)</arxiv:journal_ref>
+    <author>
+      <name>Matthew Smart</name>
+    </author>
+    <author>
+      <name>Anton Zilman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.09623v1</id>
+    <title>Infinite stable Boltzmann planar maps are subdiffusive</title>
+    <updated>2019-10-21T19:32:27Z</updated>
+    <link href="https://arxiv.org/abs/1910.09623v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.09623v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The infinite discrete stable Boltzmann maps are generalisations of the well-known Uniform Infinite Planar Quadrangulation in the case where large degree faces are allowed. We show that the simple random walk on these random lattices is always subdiffusive with exponent less than 1/3. Our method is based on stationarity and geometric estimates obtained via the peeling process which are of own interest.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-21T19:32:27Z</published>
+    <arxiv:comment>22 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Prob. Math. Phys. 2 (2021) 1-26</arxiv:journal_ref>
+    <author>
+      <name>Nicolas Curien</name>
+    </author>
+    <author>
+      <name>Cyril Marzouk</name>
+    </author>
+    <arxiv:doi>10.2140/pmp.2021.2.1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2140/pmp.2021.2.1" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.04460v1</id>
+    <title>Geometry of large Boltzmann outerplanar maps</title>
+    <updated>2017-10-12T11:34:10Z</updated>
+    <link href="https://arxiv.org/abs/1710.04460v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.04460v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the phase diagram of random outerplanar maps sampled according to non-negative Boltzmann weights that are assigned to each face of a map. We prove that for certain choices of weights the map looks like a rescaled version of its boundary when its number of vertices tends to infinity. The Boltzmann outerplanar maps are then shown to converge in the Gromov-Hausdorff sense towards the $α$-stable looptree introduced by Curien and Kortchemski (2014), with the parameter $α$ depending on the specific weight-sequence. This allows us to describe the transition of the asymptotic geometric shape from a deterministic circle to the Brownian tree.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-12T11:34:10Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Sigurdur Örn Stefánsson</name>
+    </author>
+    <author>
+      <name>Benedikt Stufler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1506.01590v3</id>
+    <title>The peeling process of infinite Boltzmann planar maps</title>
+    <updated>2016-02-03T15:13:55Z</updated>
+    <link href="https://arxiv.org/abs/1506.01590v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1506.01590v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We start by studying a peeling process on finite random planar maps with faces of arbitrary degrees determined by a general weight sequence, which satisfies an admissibility criterion. The corresponding perimeter process is identified as a biased random walk, in terms of which the admissibility criterion has a very simple interpretation. The finite random planar maps under consideration were recently proved to possess a well-defined local limit known as the infinite Boltzmann planar map (IBPM). Inspired by recent work of Curien and Le Gall, we show that the peeling process on the IBPM can be obtained from the peeling process of finite random maps by conditioning the perimeter process to stay positive. The simplicity of the resulting description of the peeling process allows us to obtain the scaling limit of the associated perimeter and volume process for arbitrary regular critical weight sequences.</summary>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-06-04T13:45:12Z</published>
+    <arxiv:comment>29 pages, 5 figures, several improvements</arxiv:comment>
+    <arxiv:primary_category term="math-ph"/>
+    <arxiv:journal_ref>The Electronic Journal of Combinatorics 23 (2016) pp.1.28</arxiv:journal_ref>
+    <author>
+      <name>Timothy Budd</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1501.02459v1</id>
+    <title>The standard map: From Boltzmann-Gibbs statistics to Tsallis statistics</title>
+    <updated>2015-01-11T14:14:44Z</updated>
+    <link href="https://arxiv.org/abs/1501.02459v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1501.02459v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As well known, Boltzmann-Gibbs statistics is the correct way of thermostatistically approaching ergodic systems. On the other hand, nontrivial ergodicity breakdown and strong correlations typically drag the system into out-of-equilibrium states where Boltzmann-Gibbs statistics fails. For a wide class of such systems, it has been shown in recent years that the correct approach is to use Tsallis statistics instead. Here we show how the dynamics of the paradigmatic conservative (area-preserving) standard map exhibits, in an exceptionally clear manner, the crossing from one statistics to the other. Our results unambiguously illustrate the domains of validity of both Boltzmann-Gibbs and Tsallis statistics.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-01-11T14:14:44Z</published>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>Sci. Rep. 6, 23644 (2016)</arxiv:journal_ref>
+    <author>
+      <name>Ugur Tirnakli</name>
+    </author>
+    <author>
+      <name>Ernesto P. Borges</name>
+    </author>
+    <arxiv:doi>10.1038/srep23644</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/srep23644" title="doi"/>
+  </entry>
+</feed>

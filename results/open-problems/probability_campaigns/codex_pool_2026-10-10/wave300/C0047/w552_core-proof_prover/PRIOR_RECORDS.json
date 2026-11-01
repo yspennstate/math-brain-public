@@ -1,0 +1,40 @@
+[
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 47,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0047",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Conjecture 2, p. 4",
+      "problem_id": "C0047",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "duminil_copin_icm_2018",
+      "statement": "For a Cayley graph G of a finitely generated infinite group, p_c(G) < p_u(G) if and only if the group is non-amenable.",
+      "status_search": "Amenable direction is known (Burton-Keane uniqueness gives p_c = p_u). The non-amenable direction is known for many classes (Pak-Smirnova for some generating sets, Hutchcroft for several classes including nonunimodular and hyperbolic settings); not verified in a bounded search whether the full conjecture has been settled by 2026.",
+      "title": "Benjamini-Schramm conjecture: p_c < p_u if and only if the group is non-amenable",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 37,
+    "record": {
+      "attempt_id": "C0047-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Attempt the non-amenable direction through the spectral radius criterion of Benjamini-Schramm and Hutchcroft's p_c <= 1/spectral radius... type bounds.",
+      "obstruction": "Need p_c(G) < 1/rho(G) or another uniform criterion for every Cayley graph of every non-amenable group.",
+      "problem_id": "C0047",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "Known route: if p_c < 1/rho where rho is the spectral radius of simple random walk, then at p slightly above p_c the expected number of open paths of length n to distance n grows slower than the number of returns... this gives p_c < p_u for graphs where p_c(G) < 1/(rho ... ) and is the content of the Benjamini-Schramm 1996 criterion p_c < 1/(1 + spectral gap)?; the general conjecture needs p_c < p_u even when p_c is close to 1/rho... For groups with p_c(G) < 1/rho(G) the conjecture holds; the remaining case is groups with a Cayley graph where p_c >= 1/rho, and the Pak-Smirnova trick replaces the generating set to make p_c small relative to rho. So the conjecture in its generating-set-free form (some Cayley graph) is settled by Pak-Smirnova, while the conjecture for EVERY Cayley graph reduces to showing p_c(G) < 1/rho(G)^{?}... I checked the inequality p_c <= 1/(1 + h) where h is the Cheeger constant... Benjamini-Schramm prove p_c <= 1/(1+h) and p_u >= 1/(1+h)?? no. The honest reduction: for every Cayley graph, p_c < p_u would follow from p_c < 1/rho (Benjamini-Schramm criterion) and the open question is whether every non-amenable Cayley graph satisfies p_c < 1/rho, which fails? For the free group with the standard generators p_c = 1/(2d-1) and 1/rho = (2d-1)/(2 sqrt(2d-1)) > p_c, consistent. No counterexample and no proof.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  }
+]

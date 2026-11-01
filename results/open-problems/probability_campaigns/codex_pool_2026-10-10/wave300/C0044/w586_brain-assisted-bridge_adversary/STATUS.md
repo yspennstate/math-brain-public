@@ -1,0 +1,6 @@
+STATE: WORKING
+NEXT: Audit w585's full density proof against the saved martingale/invariant-law derivation and the uniform-integrability obstruction.
+
+2026-10-10: Read PRIMARY_DIRECTIVE.md; no existing checkpoint or w586 hook-audit assignment found. Team O board has no C0044 row. Lane: signed directional escape versus escape along either sign; no parent-problem solved claim.
+2026-10-10: Saved independent O1/O2 in ATTEMPT.md before reading w585. O1: annealed joint 5/16 versus marginal product 1/4, within iid uniform ellipticity. Source-status conflict: public 2026 preprint claims C0044; comparator uses sorry, so no formal-proof receipt. brain.py recall completed in 24.54 s; exact recall log saved. team_comm claim needs an explicit team (not yet delivered).
+2026-10-10: Read-only targeted brain lookup saved 10 title hits in brain_target_cards.json in 9.23 s. The old and corrected C0044 attempt cards are both present. Saved O3: bounded quenched martingale and conditional invariant-law bridge; UI of Cesaro densities is the missing premise. STUCK: two team_comm claim attempts failed (no team / no such team); switching to the authorized direct mesh channel for the named peers. One unrelated recall memory was opened and excluded; no further off-task reading or reuse.

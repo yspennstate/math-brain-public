@@ -1,0 +1,169 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\begin{document}
+\title{A064: terminal-corrected global restriction debt}
+\author{A064, B13}\date{12 October 2026}\maketitle
+All logarithms are base two except $\ln$. Functions are Boolean signs
+on finite uniform cubes. The restriction tree is physical and queries only
+fresh coordinates; its decisions use only revealed history and an independent
+seed in $\mathcal F_0$. Its stopping time $\tau\le n$ is bounded. Write
+$g_t$ for the actual restriction, $d_t=\operatorname{Inf}_{i_t}(g_t)$,
+$D_t=H(g_t)-\mathbb E[H(g_{t+1})\mid\mathcal F_t]$, with zero costs
+after stopping. Set $B=\mathbb E\sum_{t<\tau}d_t$ and
+$L_I=\mathbb E I(g_\tau)$. The accepted same-tree interface gives
+$I(f)=B+L_I$, $H(f)=\mathbb E\sum D_t+\mathbb EH(g_\tau)$.
+
+\begin{theorem}[Payment with all boundaries]
+Let $C,K,L\ge0$ and let $Q_t$ be adapted and integrable on this finite tree.
+Assume, at every positive-probability internal node,
+\[
+D_t\le C d_t+Q_t-\mathbb E[Q_{t+1}\mid\mathcal F_t].
+\]
+Assume $\mathbb E Q_0\le KB$ and
+$\mathbb E[H(g_\tau)-Q_\tau]\le L L_I$. Then
+\[
+H(f)\le(C+K)B+L L_I\le\max\{C+K,L\}I(f).
+\]
+A sufficient terminal condition is $Q_\tau\ge0$ and
+$H(g_\tau)\le L I(g_\tau)$ almost surely. Interior potentials may
+be signed and may increase on individual branches.
+\end{theorem}
+\begin{proof}
+$\sum_{s<t}(D_s-Cd_s)+Q_t$ is a supermartingale. Finite summation,
+with $\mathbf1_{t<\tau}$ measurable in $\mathcal F_t$, yields
+$\mathbb E\sum D_t\le CB+\mathbb EQ_0-\mathbb EQ_\tau$.
+Insert the entropy identity and the two boundary bounds. There is no
+dimension-limit exchange or unbounded optional stopping.
+\end{proof}
+
+\begin{lemma}[Explicit terminal correction]
+For a fixed finite tree put
+\[
+A_t=\mathbb E[H(g_\tau)\mid\mathcal F_t],\qquad
+Q_t=H(g_t)-A_t.
+\]
+Then $Q_\tau=0$, $Q_t\ge0$, and
+$Q_t-\mathbb E[Q_{t+1}\mid\mathcal F_t]=D_t$.
+Thus this is an exact potential with $C=0$; its initial resource bound
+requires an independent estimate of $H(f)-\mathbb EH(g_\tau)$.
+\end{lemma}
+\begin{proof}
+$A_t$ is a martingale. Entropy drops are nonnegative by the one-node
+erasure plus Jensen--Shannon identity. Backward induction from the finite
+leaves proves nonnegativity and uniqueness among solutions with zero leaves.
+\end{proof}
+
+\paragraph{Where the KL rebate lives.}
+At a node let $x_T,y_T$ be the child Fourier coefficients,
+$q_T=(x_T^2+y_T^2)/2$, $m_T=(|x_T|-|y_T|)^2/4$,
+$M=\sum m_T$, and $\nu_T=m_T/M$ when $M>0$. Then exactly
+\[
+D=M\log_2(1/M)-M D_2(\nu\Vert q)
+ +\sum_T(q_T-m_T)\log_2\frac{q_T}{q_T-m_T}
+ +\operatorname{JS}(x^2,y^2).
+\]
+All zero-mass terms are zero. The last two terms are respectively at most
+$M/\ln2$ and $2M/\ln2$. $M$ is spectral minority-fiber mass, not
+physical output minority probability and not necessarily the signed
+queried influence $d=\sum(x_T-y_T)^2/4$.
+The potential's expected bill is the sum of these exact node bills.
+The KL rebate is used once with its own node reference $q$; no posterior
+reference is transferred to another node.
+
+\begin{theorem}[Activation control reserve; arbitrary core retained]
+Let $g$ be any Boolean sign, $r\ge1$, $p=2^{-r}$,
+$a=1-\mathbb Eg\in[0,2]$, and $F=1+A_r(g-1)$ for a fresh
+point-subcube indicator $A_r$. Query controls until their first mismatch,
+or stop at $g$ after all matches. At an active node with $s$ controls left,
+write $u=2^{-s}$ and $F_s=1+A_s(g-1)$. Then explicitly
+\[
+Q_s=H(F_s)-uH(g),\quad Q_{\rm inactive}=0,
+\quad Q_{\rm core}=0.
+\]
+This potential has exact drift $D$, and
+\[
+0\le Q_r\le8rpa,\quad
+\mathbb EH(g_\tau)=pH(g),\quad
+I(F)=rpa+pI(g).
+\]
+If $H(g)\le L I(g)$ has a separate proof, then
+$H(F)\le\max\{8,L\}I(F)$. Without that proof the retained
+$pH(g)$ is unpaid.
+\end{theorem}
+\begin{proof}
+The explicit $Q_s$ is the terminal-corrected reserve, since the core
+survives with conditional probability $u$. Put $m=\mathbb Eg=1-a$.
+Actual Fourier coefficients are $1-pa$ at the empty set,
+$-pa$ times the point character at empty-data nonempty-control sets,
+and $p\widehat g(T)$ times that character for nonempty data $T$.
+Summation gives
+\begin{align*}
+Q_r={}&2rpa(2-pa)+p m^2\log_2(m^2)
+ -(p-p^2)a^2\log_2(a^2)\\
+&-(1-pa)^2\log_2((1-pa)^2).
+\end{align*}
+Interpret $0\log0=0$. The $m$ term is nonpositive. The last term
+is at most $2pa/\ln2$, using $-\ln(1-t)\le t/(1-t)$.
+For $a\ge1$ the $a$ term is nonpositive; for $a<1$ it is at most
+$2pa\,a\log_2(1/a)\le2pa/(e\ln2)$.
+Consequently $Q_r\le[4+2(1+1/e)/\ln2]rpa<8rpa$.
+The rational bounds $\ln2>56/81$ and $e>65/24$ prove the last strict
+inequality; if $a=0$ all terms vanish. Edge counting gives the stated
+influence split, with exclusive control budget $rpa$.
+\end{proof}
+
+\paragraph{Coherent endpoint terms.}
+The displayed $m^2\log(m^2)$, $a^2\log(a^2)$ and
+$(1-pa)^2\log((1-pa)^2)$ terms retain the signed constant-frequency
+recombination. They have not been replaced by an incoherent branch mixture.
+Negative means and the last control layer are included.
+
+\begin{theorem}[Both orders on the sparse bent splice]
+Let $b$ be any bent Boolean function on even $k\ge4$ bits, $v$ a vertex,
+$\delta=2^{-k}$, $b'=b-2b(v)\mathbf1_v$, and $g$ the fair physical
+selector between $b,b'$. For arbitrary $r\ge1$, activate this core as above.
+The control-first reserve has $Q_0\le8B_{\rm ctrl}$ and zero leaves;
+its terminal core is certified with constant $3$. The selector-first
+reserve has $Q_0\le9B_{\rm ctrl}\le9B$, zero leaves, and terminal
+data constant $3$. In particular these reserve certificates give
+$H(F)\le8I(F)$ and $H(F)\le9I(F)$ respectively. The second estimate
+is deliberately weaker than the previously available direct $8I$ bound.
+\end{theorem}
+\begin{proof}
+Bent flatness gives $I(b)=k/2$, $|\mathbb Eb|=\sqrt\delta$.
+Each point flip changes each data influence by $\pm2\delta$, so
+$\overline I=(I(b)+I(b'))/2\ge k/2-k\delta\ge7k/16$,
+$I(g)=\overline I+\delta\ge7k/16$, $H(g)\le k+1\le5k/4$.
+Thus $H(g)\le(20/7)I(g)<3I(g)$, and
+$11/16\le a\le21/16$.
+For selector first, the root discrepancy is one point of its residual
+cube, so $d=p\delta$. Its signed allocation satisfies
+$\lambda\le d\log_2(1/d)$ by KL nonnegativity, and
+$D\le\lambda+3d/\ln2\le p\delta(r+k+3/\ln2)$.
+The last expression is at most $rpa$: use
+$\delta\le1/16$, $k\delta\le1/4$, $1/\ln2<81/56$,
+and $1/16+1/4+243/896<11/16\le a$.
+In the two children the activation reserves average to at most
+$8rp(a_b+a_{b'})/2=8rpa$. Hence the explicit root reserve
+is $D+(Q_b+Q_{b'})/2\le9rpa$.
+The terminal entropy is at most $pk$, while its influence is
+$p\overline I\ge7pk/16$. It is therefore certified below $3$.
+The queried budget is exactly $B=rpa+p\delta$, disjoint from the
+terminal data budget. The payment theorem concludes.
+\end{proof}
+
+\paragraph{Sign obstruction.}
+$Q=CI-H$ has drift $Cd-D$. As a debt potential in the stated payment
+inequality it is valid only if $D\le Cd$ at that node. The opposite
+sign $H-CI$ has the exact required drift, but a universal initial bound
+for it with complete zero leaves is FEI itself. A known FEI certificate
+for parent and children does not imply the local condition $D\le Cd$.
+
+\paragraph{Scope.}
+No universal initial reserve bound or terminal-class admission is proved.
+All expected terminal reserves above are exactly zero at finite stopping.
+Only the nontrivial terminal entropy has a class-specific bound. No
+almost-sure dimension-limit decay is used to erase that entropy.
+\end{document}

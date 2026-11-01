@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "function": "f=1-2*A3; A0 is one input bit; A_(j+1)=1-product of three disjoint copies of A_j",
+  "method": "Exact indicator product/complement identities plus outward-rounded rational logarithm enclosures",
+  "levels": [
+    {
+      "depth": 1,
+      "variables": 3,
+      "indicator_mean": "7/8",
+      "I_exact": "3/4",
+      "H_bits": {
+        "lower_decimal": "2.216917186688699295864543688058706427645",
+        "upper_decimal": "2.216917186688699295864543688058706427646",
+        "width_upper_decimal": "2.554750713069748588579566113497900815329E-40"
+      },
+      "H_over_I": {
+        "lower_decimal": "2.955889582251599061152724917411608570193",
+        "upper_decimal": "2.955889582251599061152724917411608570194",
+        "width_upper_decimal": "3.406334284092998118106088151330534420439E-40"
+      }
+    },
+    {
+      "depth": 2,
+      "variables": 9,
+      "indicator_mean": "169/512",
+      "I_exact": "441/256",
+      "H_bits": {
+        "lower_decimal": "5.255148258246067495491977257044573988598",
+        "upper_decimal": "5.255148258246067495491977257044573988599",
+        "width_upper_decimal": "2.870310049292903160095991284100313011110E-40"
+      },
+      "H_over_I": {
+        "lower_decimal": "3.050607605693862310308267976878482859594",
+        "upper_decimal": "3.050607605693862310308267976878482859595",
+        "width_upper_decimal": "1.666211729294746505633954124103583063139E-40"
+      }
+    },
+    {
+      "depth": 3,
+      "variables": 27,
+      "indicator_mean": "129390919/134217728",
+      "I_exact": "37786203/67108864",
+      "H_bits": {
+        "lower_decimal": "2.492414589960119589918021236174917783962",
+        "upper_decimal": "2.492414589960119589918021236174917783964",
+        "width_upper_decimal": "1.789280437174252645843557603220785313315E-40"
+      },
+      "H_over_I": {
+        "lower_decimal": "4.426565742772551954573055627938441916885",
+        "upper_decimal": "4.426565742772551954573055627938441916886",
+        "width_upper_decimal": "3.177788927778413330165919885380111983319E-40"
+      }
+    }
+  ],
+  "H_gt_4I_certified": true,
+  "minimum_artificial_boundary_A_over_total_I": {
+    "lower_decimal": "0.2132828713862759772865278139692209584427",
+    "upper_decimal": "0.2132828713862759772865278139692209584430",
+    "width_upper_decimal": "1.588894463889206665082959942690055991660E-40"
+  },
+  "scope": "Rules out boundary-separated subcube-parity representations for this function; does not refute FEI."
+}

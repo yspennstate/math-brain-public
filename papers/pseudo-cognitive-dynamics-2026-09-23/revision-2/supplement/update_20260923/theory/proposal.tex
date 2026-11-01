@@ -1,0 +1,63 @@
+\subsection{Selective warnings under a context budget}
+\label{sec:warningbudget}
+
+The single-warning value identity does not account for warnings that detect the same failures. A small decision model makes that interaction explicit. It concerns proof-audit verdicts, not theorem discovery, and its parameters are illustrative rather than fitted to the experiments.
+
+Let $V$ be the event that an audited proof is valid, with $\Pr(V)=\pi\in(0,1)$. Each candidate warning has an alert event $F_i$ on a common probability space. Assume that these events do not change when other cards are selected. For a selected set $S$, the auditor rejects the proof if any selected warning alerts, and otherwise accepts it. Thus a false alert can reflect an applicability mistake even when the stored warning is mathematically sound. Write $E_S=\bigcap_{j\in S}F_j^c$, with $E_\varnothing$ the entire sample space. The probability of a correct verdict is
+\[
+ A(S)=\pi\Pr(E_S\mid V)
+ +(1-\pi)\bigl[1-\Pr(E_S\mid V^c)\bigr].
+\]
+An independently accepted audit result can be either a correct acceptance of a valid proof or a correct rejection of an invalid one.
+
+\begin{proposition}[Marginal value of an additional warning]
+For $i\notin S$, without any independence assumption,
+\begin{align*}
+ A(S\cup\{i\})-A(S)
+ ={}&(1-\pi)\Pr(E_S\cap F_i\mid V^c)\\
+ &-\pi\Pr(E_S\cap F_i\mid V).
+\end{align*}
+\end{proposition}
+\begin{proof}
+Since $E_{S\cup\{i\}}=E_S\setminus F_i$, subtracting the two expressions for $A$ gives the identity. The only verdicts that change are those on which all previous warnings remain silent and the additional warning alerts. On invalid proofs this change is a correction; on valid proofs it is an error.
+\end{proof}
+
+Consequently, a warning's detection rate on all invalid proofs is insufficient to determine its incremental value. It must detect failures missed by the selected warnings. A perfect duplicate of an existing alert has zero marginal accuracy. More strongly, if it detects no previously missed invalid proofs but creates a new false alert with positive conditional probability, its marginal accuracy is strictly negative. These statements allow arbitrary dependence among alerts under the stated common-response assumption.
+
+\begin{proposition}[An interior optimum with interchangeable warnings]
+Suppose there are $N$ warning cards whose alerts are mutually independent conditional on $V$ and also conditional on $V^c$. Each has false-positive probability $f=\Pr(F_i\mid V)$ and detection probability $d=\Pr(F_i\mid V^c)$, where $0<f<d<1$. If every card has the same fully serialized token length $\tau>0$ and available memory budget is $b\geq0$, let $k=\min\{N,\lfloor b/\tau\rfloor\}$. Then selecting $n\leq k$ cards gives
+\[
+ A_n=\pi(1-f)^n+(1-\pi)\bigl[1-(1-d)^n\bigr].
+\]
+Define
+\[
+ t=\frac{\log\!\bigl((1-\pi)d/(\pi f)\bigr)}
+ {\log\!\bigl((1-f)/(1-d)\bigr)}.
+\]
+The smallest accuracy-maximizing feasible count is
+\[
+ n^\ast=\min\{k,\max\{0,\lceil t\rceil\}\}.
+\]
+If $t$ is a nonnegative integer and $t+1\leq k$, the adjacent count $t+1$ is also a maximizer.
+\end{proposition}
+\begin{proof}
+Conditional independence gives the two probabilities of silence as products, proving the formula for $A_n$. Subtraction gives
+\[
+ A_{n+1}-A_n
+ =(1-\pi)d(1-d)^n-\pi f(1-f)^n.
+\]
+Both terms on the right are positive before subtraction. Their ratio is
+\[
+ \frac{(1-\pi)d}{\pi f}
+ \left(\frac{1-d}{1-f}\right)^n.
+\]
+It strictly decreases with $n$, and equals one precisely when $n=t$. Thus the increments are positive for $n<t$, zero for $n=t$, and negative for $n>t$. Truncating the resulting maximizing count to the feasible interval $\{0,\ldots,k\}$ proves the claim, including its tie case.
+\end{proof}
+
+For example, take $\pi=4/5$, $d=4/5$, and $f=1/20$, with room for at least three cards. The correct-verdict probabilities for zero, one, two, and three warnings are respectively
+\[
+ 0.8000,\qquad 0.9200,\qquad 0.9140,\qquad 0.8843.
+\]
+Every warning improves accuracy when supplied alone, yet adding the second warning lowers accuracy. The earlier warnings have already detected most invalid proofs, while further warnings still create false rejections. In this example one card is optimal despite the larger available budget. The monotone coverage guarantee above therefore does not transfer to this audit objective. If the larger packet also has higher positive mean operating cost, the smaller packet has lower cost per correct verdict, using the common-population criterion in Section~\ref{sec:costs}.
+
+These are elementary probability calculations, not a new theorem about optimal inference. An evaluator allowed to ignore additional information can retain its former decision policy; the example instead concerns a specified response rule. Conditional independence, equal diagnostic quality, and fixed alert behavior are strong assumptions. Actual memory can alter interpretation, repair an argument, expose a new proof, or displace other context. A full-versus-diet comparison cannot identify the mechanism from packet size and final score alone. It should record which additional cards detect previously missed errors, which cause false rejections, and their delivery and verification costs. The model demonstrates one possible reason for selective delivery, without asserting that it explains an observed treatment contrast.

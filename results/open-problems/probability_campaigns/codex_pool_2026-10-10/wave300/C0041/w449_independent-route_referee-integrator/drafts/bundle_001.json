@@ -1,0 +1,88 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w449",
+  "bundle_slug": "rwre-transience-slab-rate-gap-w449-001",
+  "entries": [
+    {
+      "key": "slab-zero-rate",
+      "namespace": "probability.rwre",
+      "logical_name": "directional-transience-implies-vanishing-two-sided-slab-back-exit",
+      "kind": "lemma",
+      "title": "Directional transience gives vanishing back-exit probability with no rate",
+      "statement": "DRAFT, independent check pending. Let X_n be any random lattice path and l a fixed nonzero direction. If X_n dot l tends to +infinity almost surely, define T^-_L=inf{n>=0:X_n dot l<=-L} and T^+_L=inf{n>=0:X_n dot l>=L}. Then P(T^-_L<T^+_L) tends to zero as L tends to infinity. This conclusion has no quantitative decay rate and does not need iid, ellipticity, or a Markov property.",
+      "proof_text": "For every path with X_n dot l tending to +infinity, the real sequence X_n dot l has a finite lower bound: choose N after which all terms exceed zero and take the minimum of the finitely many earlier values and zero. Hence the indicators of {T^-_L<infinity} decrease pointwise to zero as L increases. The event {T^-_L<T^+_L} is contained in {T^-_L<infinity}. Bounded convergence proves the probability limit. This proves only a qualitative tail statement; no step gives a power or exponential rate.",
+      "assumptions": [
+        "A probability law on paths X_n in Z^d, n>=0",
+        "Fixed nonzero l in R^d",
+        "X_n dot l tends to +infinity almost surely",
+        "L tends to +infinity through positive real values"
+      ],
+      "domain": "probability / random walks in random environment",
+      "source": {
+        "source_id": "owner-campaign:w449:C0041:slab-zero-rate",
+        "url": "file:///~/brain_workers/w449/ATTEMPT.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "rate-gap",
+      "namespace": "probability.rwre",
+      "logical_name": "c0041-qualitative-slab-exit-to-ballisticity-rate-gap",
+      "kind": "concept",
+      "title": "C0041 slab-exit route requires a quantitative rate",
+      "statement": "DRAFT proof-gap record. For iid uniformly elliptic nearest-neighbor RWRE on Z^d, d>=2, annealed directional transience in l implies only that its fixed-direction two-sided slab back-exit probability q_L tends to zero by the elementary pathwise argument. To reach a known polynomial ballisticity criterion one needs a power-law bound uniformly in a neighborhood of l, or another quantitative bridge. The proposed scale-doubling recursion is unproved: two candidate crossings can share visited environment sites and their annealed probabilities cannot simply be multiplied. This record does not claim the target implication is false or open as of 2026-10-10.",
+      "proof_text": null,
+      "assumptions": [
+        "Nearest-neighbor site-iid uniformly elliptic RWRE on Z^d, d>=2",
+        "Annealed almost-sure directional transience in a fixed unit direction l",
+        "The putative recursion has no proof in this packet"
+      ],
+      "domain": "probability / RWRE proof gap",
+      "source": {
+        "source_id": "owner-campaign:w449:C0041:slab-rate-gap",
+        "url": "file:///~/brain_workers/w449/ATTEMPT.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "claimed-solution-status",
+      "namespace": "probability.rwre",
+      "logical_name": "c0041-september-2026-formal-solution-claim-status",
+      "kind": "concept",
+      "title": "C0041 dated source status and September 2026 proof claim",
+      "statement": "As of 2026-10-10, C0041 matches Drewitz-Ramirez Open Question 2.20 (2013): for d>=2, iid uniformly elliptic nearest-neighbor RWRE, does annealed-almost-sure directional transience imply positive directional liminf speed? OpenAI's September 2026 math repository claims a stronger deterministic-velocity solution and registers a Lean solution theorem in OAI.Probability.Ballisticity.Main. The comparator challenge's sorry is a placeholder separate from that solution. This packet checked scope and the top solution theorem but did not run Lean or audit all imported axioms and deep estimates; treat mathematical proof status as claimed and pending independent verification.",
+      "proof_text": null,
+      "assumptions": [
+        "Historical source arXiv:1309.2589, Open Question 2.20 and definitions 2.13-2.14",
+        "Public OpenAI math repository scope note, comparator config, and solution entrypoint checked on 2026-10-10",
+        "No local formal-check receipt"
+      ],
+      "domain": "probability / RWRE research status",
+      "source": {
+        "source_id": "owner-campaign:w449:C0041:source-status",
+        "url": "file:///~/brain_workers/w449/SOURCE_STATUS.json",
+        "revision": "2026-10-10",
+        "license": "owner-own-work (attributed status synthesis, not reproduced source text)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "rate-gap",
+      "to_key": "slab-zero-rate",
+      "kind": "depends_on",
+      "rationale": "The rate-gap record begins from exactly the proved zero-rate lemma. Supporting ends: [For iid uniformly elliptic nearest-neighbor RWRE on Z^d, d>=2, annealed directional transience in l implies only that its fixed-direction two-sided slab back-exit probability q_L tends to zero by the elementary pathwise argument.] [If X_n dot l tends to +infinity almost surely, define T^-_L=inf{n>=0:X_n dot l<=-L} and T^+_L=inf{n>=0:X_n dot l>=L}. Then P(T^-_L<T^+_L) tends to zero as L tends to infinity.]"
+    },
+    {
+      "from_key": "claimed-solution-status",
+      "to_key": "rate-gap",
+      "kind": "semantic_association",
+      "rationale": "The independent slab route remains incomplete although a separate public solution is claimed. Supporting ends: [OpenAI's September 2026 math repository claims a stronger deterministic-velocity solution and registers a Lean solution theorem in OAI.Probability.Ballisticity.Main.] [The proposed scale-doubling recursion is unproved: two candidate crossings can share visited environment sites and their annealed probabilities cannot simply be multiplied.]"
+    }
+  ]
+}

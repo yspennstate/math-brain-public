@@ -1,0 +1,43 @@
+[
+  {
+    "claim_id": "A053-ARBITRARY-SURGERY-CRITICAL-RADIUS",
+    "version": 2,
+    "exact_statement": "For n>=3, let F be a Boolean sign with normalized Fourier support minimum Hamming distance at least3, and let Boolean G differ from F at exactly R>=1 vertices. For every relevant ORIGINAL coordinate i, L_i(G)<(37/4)R Inf_i(G). At K=10R the complete-child expected D_K gain is greater than(3/2)R2^-n. Thus a least-essential-dimension positive fixed-K witness, K>=0, has distance R>4K/37 from EVERY such seed; distance0 is also excluded. Linear dependence on the edit count is optimal in order for an ALL-relevant-coordinate guarantee: for every odd k>=3, the explicit Hamming-kernel bent-selector G* on n=r=2^k bits differs from such a seed at r+1 vertices, is tensor-prime with full Fourier support, satisfies H(G*)<=3I(G*), and has L_z/Inf_z>=(r-k-3)(1-1/r), whose ratio to the edit count tends to1. No fresh inherited bank or universal critical-source selection is claimed.",
+    "hypotheses": [
+      "Uniform finite binary cube; normalized Walsh transform; entropy bits; n>=3",
+      "Upper bound uses arbitrary edit set of R vertices and a seed with Fourier support distance>=3; queried coordinate relevant",
+      "Critical corollary requires an actual positive fixed-K witness of least essential dimension among all Boolean positive K-witnesses; no existence assumed",
+      "Order lower family is the actual Boolean construction in SHARPNESS_PROOF.md, odd k>=3"
+    ],
+    "statement_sha256": "a50315c602751dbe801eec2cae2f4069f12b719c4552e7149dafdaed39dda2c5",
+    "contributors": [
+      "A053"
+    ],
+    "proof_source": "LINEAR_RADIUS_PROOF.md and SHARPNESS_PROOF.md",
+    "proof_dependencies": [
+      "Self-contained row entropy/curvature, Boolean granularity, Hamming packing, sparse-derivative Cauchy-Schwarz and edited-edge cancellation; elementary Hamming-kernel/bent construction"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A053",
+        "kind": "author derivations, main exact checks, separate direct-character replay and physical/compressed sharpness certificates",
+        "outcome": "91721 full new-stage assertions PASS; independent-agent review pending"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      "A053-ARBITRARY-SURGERY-CRITICAL-RADIUS@1 (valid weaker quadratic-rate statement)"
+    ],
+    "refutes": [],
+    "first_unproved_line": "No gap claimed in the stated linear neighborhood theorem or its all-policy order lower family. A genuine critical source outside these neighborhoods still lacks a selected paid original block with sufficient unused independent release.",
+    "next_consumers": [
+      "B11",
+      "A051",
+      "A052",
+      "A055",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

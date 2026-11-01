@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\newcommand{\HH}{\mathrm H}
+\newcommand{\DD}{\mathrm D_2}
+\begin{document}
+\section*{Conditional credit conservation (A037)}
+All logarithms are base two. Let $W,A$ be finite random variables on one
+common probability space and $L$ the transcript of a finite adaptive tree.
+At node $h$, write $p_h=\Pr(H=h)$ and let $Y_h$ be its next outcome.
+Set $c_h=I(W;Y_h\mid A,H=h)$, averaging the conditional law of $A$ at $h$.
+Then
+\[
+ \sum_{h\text{ internal}}p_h c_h+
+ \sum_{l\text{ leaf}}p_l\HH(W\mid A,L=l)=\HH(W\mid A).
+\]
+Indeed $c_h=\HH(W\mid A,h)-\sum_y\Pr(y\mid h)\HH(W\mid A,hy)$.
+Multiplication by $p_h$ cancels every internal child term. Nonnegativity
+is Gibbs' inequality on each positive $(a,h)$ fiber. The identical argument
+below a node proves the remaining resource is its conditional entropy.
+Stopped transcripts include all stop decisions. Zero-probability nodes
+are omitted; terminal entropy is retained. Individual path surprisals
+are not asserted to decrease.
+
+For two laws $P,Q$ with finite divergences on a common witness space, let
+$p_h(w),q_h(w)$ be the Bayes posteriors and $k_h^P,k_h^Q$ their next-outcome
+channels. Define
+\[
+ K_h=\DD(p_h\Vert q_h),\quad
+ d_h=\DD(P(Y_h\mid h)\Vert Q(Y_h\mid h)),\quad
+ j_h=\sum_w p_h(w)\DD(k_h^P(\cdot\mid w)\Vert k_h^Q(\cdot\mid w)).
+\]
+Expanding the joint likelihood ratio by witness first and by outcome first gives
+\[
+ K_h+j_h=d_h+\sum_yP(y\mid h)K_{hy},\qquad
+ \sum_h p_h d_h+\sum_l p_lK_l=K_{\rm root}+\sum_h p_h j_h.
+\]
+A shared channel has $j_h=0$. A changed channel injects precisely $j_h$.
+If a predicted reference $q_{hy}$ is replaced by $r_{hy}$, add the signed
+correction $\delta_{hy}=\sum_w p_{hy}(w)\log_2(q_{hy}(w)/r_{hy}(w))$
+on the resource side. This follows from
+$\DD(p_{hy}\Vert r_{hy})=\DD(p_{hy}\Vert q_{hy})+\delta_{hy}$.
+Absolute continuity is checked before any subtraction.
+
+\section*{Common lift of a physical restriction tree}
+At a Boolean node $g$ on $R=B\sqcup C$, write
+$a_{U,T}=\widehat g(U\cup T)$,
+$b_{y,T}=\widehat {g|_{B=y}}(T)=\sum_U a_{U,T}\chi_U(y)$, and
+$q_T=\sum_Ua_{U,T}^2=2^{-|B|}\sum_y b_{y,T}^2$.
+Draw $S_0$ from the root squared Fourier law, maintain $S_h=S_0\cap R$,
+and use the channel
+\[
+ \Pr(Y_h=y\mid S_0,h)=2^{-|B|}b_{y,T}^2/q_T,
+ \qquad T=S_0\cap C.
+\]
+Unreachable zero fibers receive any normalized channel. If the node's current
+spectral law is $a_{U,T}^2$, summing over $U$ gives
+$\Pr(y,T\mid h)=2^{-|B|}b_{y,T}^2$; Boolean Parseval then gives
+$\Pr(y\mid h)=2^{-|B|}$ and the correct child spectral law.
+This proves existence inductively on every finite adaptive physical block tree.
+The channel depends on $S_0$ only through $T,h$, hence
+$I(S_0;Y_h\mid h)=I(T;Y_h\mid h)=J_h$.
+Consequently
+\[
+ \sum_h p_h J_h=I(S_0;L),\qquad
+ \HH(S_0\mid L)=\sum_h p_h B_h+\sum_l p_l\HH(f_l),
+\]
+where $B_h=\HH(S_h\cap B\mid S_h\cap C,h)$.
+The second formula follows from the local entropy decrement $B_h+J_h$
+and the first formula. A constant terminal function does not imply an empty
+root posterior entropy. The lift depends on signed Fourier coefficients;
+it is not a universal channel determined by parent squared masses alone.
+
+These formulas conserve resources, but do not bound the erased-label/witness
+residual by influence. Full FEI remains open. Full derivation, exact controls,
+reference-reset scope and downstream interfaces are in REPORT.md.
+\end{document}

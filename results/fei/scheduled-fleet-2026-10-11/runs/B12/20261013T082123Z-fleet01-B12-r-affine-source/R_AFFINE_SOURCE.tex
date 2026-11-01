@@ -1,0 +1,58 @@
+\section*{A fixed-piece affine-source payment}
+All logarithms are natural and $\Phi(t)=t\log(1/t)$.
+
+\paragraph{Theorem.}
+Let $E_1,\ldots,E_r$ be pairwise disjoint nonempty affine cosets in a
+physical Boolean cube, $s_j=\mathbf1_{E_j}$, $s=\sum_js_j$, and
+$d(x,z)=\mathbf1_{\{x=-1\}}s(z)$.  For the Boolean splice
+$g_-=x$, $g_+=x+2d$, $a=x+d$, $h=-x$, $F=a+d$, one has, for $r\ge3$,
+\[
+ \Omega=\mathcal E(F)-\mathcal E(a)-\mathcal E(d)
+ \le\left(8r\log r+{4\over e}\right)I(d).                 \tag{1}
+\]
+For $r\le2$, the sharper preceding bound $8\log2\,I(d)$ applies.
+
+\paragraph{Multiway spectral envelope.}
+For one Fourier coordinate put $a_j=\widehat{s_j}(T)$,
+$u=\sum_ja_j^2$, and $z=(\sum_ja_j)^2$.  Since the pieces are physically
+disjoint, $0\le u\le1$, while $0\le z\le\min(ru,1)$.  Then
+\[
+ \Phi(z)\le r\Phi(u)+{u\over e}.                           \tag{2}
+\]
+For $u\le1/(re)$ this follows from monotonicity of $\Phi$ and
+$\Phi(ru)\le r\Phi(u)$.  For $u\ge1/(re)$, use $\Phi(z)\le1/e$ and
+concavity of $r\Phi(u)+u/e$, whose values at both endpoints of the
+interval are at least $1/e$.  Since
+$\sum_j\Phi(a_j^2)\ge\Phi(u)$, summation gives
+\[
+ \mathcal E(s)\le r\sum_j\mathcal E(s_j)+{p\over e}
+ =2r\log2\sum_jp_jk_j+{p\over e},                         \tag{3}
+\]
+where $p_j=2^{-k_j}$ and $p=\sum_jp_j$.
+
+\paragraph{Piece-label budget.}
+For $\lambda_j=p_j/p$,
+\[
+ K:=\sum_jp_jk_j=p\log_2(1/p)+pH_2(\lambda)
+ \le p\log_2(1/p)+p\log_2r.                              \tag{4}
+\]
+Cube edge isoperimetry, applied to $s$ or its complement, implies
+\[
+ p\log_2(1/p)\le2I(s).                                    \tag{5}
+\]
+On the majority side this uses
+$(1-p)\log_2(1/(1-p))\ge p\log_2(1/p)$.
+Consequently $K\le2I(s)+p\log_2r$, and (3) becomes
+\[
+ \mathcal E(s)\le4r\log2\,I(s)+(2r\log r+1/e)p.          \tag{6}
+\]
+
+\paragraph{Selector conclusion.}
+Exact selector pairing gives
+$\Omega=\mathcal E(s)+C(p)$ with $C(p)\le0$, and
+$I(d)=I(s)/2+p/4$.  Equation (6) is therefore bounded by the right-hand
+side of (1).  For a nonreusing adaptive hierarchy, restrictions preserve
+the at-most-$r$-coset class and the physical derivative ledger pays the
+weighted sum once from the root source influence.
+
+The constant grows with $r$ and hence this theorem does not prove full FEI.

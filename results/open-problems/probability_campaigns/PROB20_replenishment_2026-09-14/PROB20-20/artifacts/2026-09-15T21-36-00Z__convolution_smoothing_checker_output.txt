@@ -1,0 +1,19 @@
+PROB20-20 convolution-smoothing finite diagnostic
+NMAX=160; CHECK_NS=(20, 40, 80, 160)
+
+LAW irregular_A: mean=3.75; empirical_Cgrad=0.0979127711133
+ n   sqrt(n)*maxatom      n*maxdiff       W75    mass75       H    minplateau/pstar
+ 20     0.0528065627471  0.0184657578822      44  0.75641742       0                   1
+ 40     0.0470919021825  0.00445684011288      62  0.75420881       0                   1
+ 80     0.0468511264932  0.00379021600046      88  0.75386604       1      0.999894924296
+160     0.0467576030306  0.0036221309861     124  0.75085912       1      0.999957000624
+
+LAW irregular_B: mean=6.94; empirical_Cgrad=0.211392282016
+ n   sqrt(n)*maxatom      n*maxdiff       W75    mass75       H    minplateau/pstar
+ 20     0.0291865924364  0.0270958989558     103  0.75581092       0                   1
+ 40     0.0206292693082  0.00216130668523     144  0.75147929       0                   1
+ 80     0.0201936823249  0.000735690233513     205  0.75235150       0                   1
+160     0.0201264223577  0.000684768319852     289  0.75012124       0                   1
+
+PASS: all tested plateau ratios are >= 3/4.
+NOTE: bounded scaled quantities are diagnostics only; the report contains the proof.

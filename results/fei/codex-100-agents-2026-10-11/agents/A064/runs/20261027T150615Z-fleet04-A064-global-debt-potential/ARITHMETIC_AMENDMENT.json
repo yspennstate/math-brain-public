@@ -1,0 +1,11 @@
+{
+  "helper_version": "A064-inherited-query-order-v2",
+  "written_before_rerun": true,
+  "prior_attempt": "out/ATTEMPT1.json; code/check_v1_timed_out.py retained byte-for-byte",
+  "change": "outward-round each proved log2 prime interval to96-bit dyadic endpoints before combining it; cache repeated exact entropy/KL and product laws",
+  "justification": "floor(2^96 lo)/2^96 <= true log <= ceil(2^96 hi)/2^96 preserves rigorous enclosure, avoids exploding rational denominator sizes",
+  "domain_change": "NONE:5812 transactions and21 lotteries each unchanged",
+  "runtime_cap_seconds": 180,
+  "memory_estimate_mb": 120,
+  "incomplete_possible": "unresolved interval sign or timeout raises; neither is counted as PASS"
+}

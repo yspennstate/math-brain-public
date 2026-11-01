@@ -1,0 +1,17 @@
+PROB20-19 rank-3 quintic top-three checker
+Executed locally after the mathematical report was committed.
+
+symbolic identities: PASS
+pair-merging factorization: PASS
+n=4 Newton reduction: PASS
+n=5 Bernstein certificate: PASS
+random capped-simplex bank: PASS; worst sum_phi=-1.70530256582e-13; worst G3=-5.06261699229e-14
+
+Random bank details:
+- deterministic NumPy RNG seed: 16092026
+- active ambient lengths n=3,...,30
+- 2000 capped-simplex samples per n
+- each vector projected to 0<=d_i<=1 and sum_i d_i=3
+- numerical tolerance for the two nonnegativity assertions: 1e-8
+
+The tiny negative minima are floating-point roundoff at coordinate/boundary cases, far below the assertion tolerance. These computations are reproducible self-checks, not independent verification and not a substitute for the analytic proof in runs/2026-09-16/2026-09-16T01-13-44Z__report.md.

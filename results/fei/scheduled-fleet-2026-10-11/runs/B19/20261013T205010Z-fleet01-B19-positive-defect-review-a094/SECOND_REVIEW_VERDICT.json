@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "review_packet": "A094",
+  "target_stream": "B05",
+  "target_packet": "A023",
+  "target_commit": "ed704e08ace97f8c295992ee560edfbe4d89a07a",
+  "target_claims": [
+    "B05_A023_POSITIVE_SCALAR_SLOPE_v1",
+    "B05_A023_POSITIVE_DEFECT_ENDPOINT_v1",
+    "B05_A023_POSITIVE_DEFECT_RETAINED_v1"
+  ],
+  "verdict": "ACCEPT_AT_FORMAL_THEOREM_SCOPE",
+  "proof_repair_required": false,
+  "scope_correction": "The retained-tree claim is an endpoint signed telescope. It does not establish an A023 first-revelation mismatch/KL credit, a stopping-rule ownership assignment, or nonreuse of a physical rarity credit across descendants.",
+  "accepted_constant": "8/3",
+  "uniform_parameters": [
+    "base dimension",
+    "arbitrary rank sequence r_k>=2",
+    "positive point-defect bias",
+    "activation probability",
+    "finite depth",
+    "tree reveal order",
+    "pruning",
+    "common disjoint terminal-core complexity"
+  ],
+  "uncovered": [
+    "biased outer selectors",
+    "negative near-constant balancers",
+    "variable reuse",
+    "changing or overlapping cores",
+    "leaf-dependent terminal factors",
+    "first-revelation rarity-credit ownership"
+  ],
+  "packet_complete": false,
+  "full_fei_status": "OPEN"
+}

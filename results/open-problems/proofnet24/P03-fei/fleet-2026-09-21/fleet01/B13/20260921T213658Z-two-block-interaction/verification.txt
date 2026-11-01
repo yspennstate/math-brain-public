@@ -1,0 +1,15 @@
+B13 two-block Boolean interaction diagnostic
+status: exact finite diagnostic only; analytic proof is in REPORT.md
+
+constant gamma = (13 - 3*sqrt(17))/8 = 0.0788353903933773...
+
+Exhaustive Boolean truth tables modulo global output sign; all nontrivial coordinate bipartitions, quotienting A<->B by requiring coordinate 0 in A. Cases with a*b=0 are trivial and omitted from the ratio statistic.
+
+n=2  checked_nontrivial=4       min q/(a b)=4/1
+n=3  checked_nontrivial=264     min q/(a b)=16/9
+n=4  checked_nontrivial=198044  min q/(a b)=64/81
+
+total_nontrivial_block_cases=198312
+violations_of_q_ge_gamma*a*b=0
+
+The checker uses an exact integer Walsh-Hadamard transform and Fraction arithmetic for q/(a b). The decimal gamma is used only to report the algebraic constant. These finite data support/falsify candidate constants but are not the proof of the all-dimensional theorem.

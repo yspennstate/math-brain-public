@@ -1,0 +1,55 @@
+[
+  {
+    "claim_id": "A059-PREPAID-TWO-TICKETS-AND-GEOMETRIC-STOPPING",
+    "version": 1,
+    "exact_statement": "For every finite Boolean core G in the A059@2 coherent-source expected-resource interface, the SAME original core owner (9/2)cI(G), allocated before its first use, pays TWO adaptively selected further core queries per path after any already-paid admitted prefix, with arbitrary exterior/tag interleavings and all old debits/full terminals retained. It also pays any finite-depth selected core policy independently killed after each query with continuation probability q<=1/2, without a depth bound. The rational pending rate is k=29/13 per ticket, and A=k/(1-q) for killing; unused original source includes (1/26)tI(current core) plus historical releases at q=1/2. This is an expected-resource theorem with explicit mean-zero branch innovations, not pathwise subtraction-only cash or a full-core entropy payment.",
+    "hypotheses": [
+      "finite uniform Boolean cubes; entropy bits",
+      "original coherent source and exterior escrow of A059@2",
+      "original core owner allocated BEFORE first use; no already exhausted account is retrospectively recreated",
+      "two-ticket policy has at most two selected further core queries per path",
+      "geometric policy uses fresh independent dummy coordinates irrelevant to F, actual continuation q<=1/2, and retains all killed siblings",
+      "all actual old core fees, coherent mean profiles and both complete terminal functions retained"
+    ],
+    "statement_sha256": "555770aacd78f4d05d5b613a5c02e406a267155705995d1bf2aac71b7c63303b",
+    "contributors": [
+      "A059; universal one-query input reconstructed from A060",
+      "A091 original 9/2 source; A059@2 exterior escrow"
+    ],
+    "proof_source": {
+      "path": "PROOF.md",
+      "sha256": "5fc2cd77ad465db2b6bcb7ba664c6775d6322ccb242a92609f2e89eb6e1e8696",
+      "validation": [
+        "out/validation.json",
+        "out/adversary.json"
+      ]
+    },
+    "proof_dependencies": [
+      "A059-EXACT-EXCESS-ESCROW-AND-CORE-OWNER-OBSTRUCTION@2",
+      "A060 universal one-query kappa bound: PROOF.md Section1 independently reconstructed",
+      "A091 ONESHOT_PROOF.md: original 9/2 core source",
+      "B17/A057 amplitude-pair JS inequality; Boolean cube edge isoperimetry"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A059",
+        "scope": "author adversarial checks; not independent acceptance of new claim",
+        "verdict": "PROOF_WITH_EXACT_FINITE_CONTROLS"
+      }
+    ],
+    "status": "PROVED_AUTHOR_CHECKED_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Dropping independent killing from this pending-potential transaction: actual m8 rare-tag witness; not FEI"
+    ],
+    "first_unproved_line": "Remove compulsory stopping or influence-price terminal entropy decay for arbitrary cores from SAME unused original capacity.",
+    "next_consumers": [
+      "A057",
+      "A060",
+      "A091",
+      "A087",
+      "B12",
+      "B20"
+    ]
+  }
+]

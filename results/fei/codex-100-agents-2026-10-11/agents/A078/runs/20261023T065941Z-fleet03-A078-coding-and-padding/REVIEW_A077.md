@@ -1,0 +1,9 @@
+# Scoped independent review: second biased-majority shared query
+
+Source A077/runs/20261023T061159Z-fleet03-A077-sparse-defect-towers/PROOF.md sections1-2, claim A077-SECOND-MAJORITY-SHARED@1. Verdict HOLDS AT THIS SCOPE, without repair. This is NOT independent acceptance of the complete mixed account/private chain: A078 contributed to the upstream private account and recuses on that part.
+
+Reconstruction: the derivative of odd majority is the central tie-slice indicator, so the conditional-product generating polynomial gives A_(2l+1)=(-1)^l alpha binom(n/2,l)/binom(n,2l). Fixing one bit produces beta_even(k)=A_(k+1), beta_odd(k)=A_k. The ratio A_(k+2)/A_k=-k/(n-k), combined with binom(n-1,k)k/(n-k)=binom(n-1,k-1), pairs every odd-level absolute product with its preceding even square. Therefore L=2sum binom(n-1,k)|beta_k beta_(k+1)|=4I_even<=4alpha. This is an exact all-even-n identity.
+
+The FULL translated mean sector has paired translations bounded by4p. Expanding the absolute product, both linear terms together cost8p times the full carrier Fourier l1 norm; Parseval bounds this by8sqrt(p). Quadratic terms cost16p. For even n>=4, the ratios sqrt(p)/alpha and p/alpha decrease by their exact central-binomial recurrence, and the n4 endpoint gives combined cost<=8alpha. Hence empty erasure<=12alpha. Original carrier pivotal edges are disjoint from edited edges and survive physically, so actual influence>=alpha; no profile balance or guard-order assumption is hidden.
+
+The separately frozen rational checker verifies the identity, I_even<=alpha and the tail bound for all63 even n4..128 (189 assertions). Those checks support the reconstruction; the preceding exact formulas and recurrence, rather than finite extrapolation, prove the all-dimensional scoped lemma. No review verdict on A078's new third-query extension is implied.

@@ -1,0 +1,11 @@
+The explicit Boolean bent-plus-point-flip family has an unbounded entropy increment divided by influence at its selector coordinate. It also proves sharpness of the additive coefficient 2/ln 2 in the known restriction bound Delta_i<=h_2(I_i)+(2/ln 2)I_i. An independent dictator balances the function and both restrictions while preserving this obstruction. Other coordinates remain good, so the existential coordinate-selection route is still unresolved by this work. Current openness and novelty remain UNKNOWN.
+
+w512 independently kept all four new mathematical claims after analytic rederivation and bounded checks. REVIEW_RECEIPT.json identifies the exact claims and the referee's reproductions. The paired affine-indicator C001-C004 also received four independent KEEP verdicts from this worker, with evidence in AUDIT_W510.md/jsonl. No formal theorem receipt is claimed.
+
+Measured with `python -X utf8 verify_boundary.py`: exact Fourier/influence checks passed 5/5 dimensions and all 256 small Boolean split pairs passed, in 0.142702s. The split ratio was 4.8676687468 at n=2 and 132.3280851227 at n=128, while global H/I approaches 2. Maximum entropy identity error was 8.53e-16. `python -X utf8 verify_affine_audit.py` passed all 372 affine cases through ambient dimension 4 in 0.084654s, with entropy formula error 0.
+
+The targeted prior brain card only excluded a non-Boolean singleton spectrum. The proposed content change adds an explicit Boolean obstruction and its sharp restriction profile. It is a measured mathematical result and a proposed brain-content improvement; no live recall-quality gain is claimed.
+
+Apply: the validating coordinator uses ~/math-brain-inbox/w511/bundle_002.json with REVIEW_RECEIPT.json. This reviewed successor to bundle_001 contains five proof-bearing lemmas and two concepts. Submission and independent review are recorded; ingestion and retrieval are unconfirmed. The local hook proposal and its fire/silent cases are in math-w511.jsonl and patches/01_math_hook_proposal.diff. That patch files a proposal; it does not deploy a hook. No live code or store was modified by this worker.
+
+NEXT: Coordinator validates and ingests bundle_002, records its integration receipt, and verifies retrieval; keep full FEI and novelty unclaimed.

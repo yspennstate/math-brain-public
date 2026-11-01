@@ -1,0 +1,107 @@
+{
+  "query_source": "recall_math.json",
+  "database": "~/math-brain-build/local/population/brain.sqlite3",
+  "sqlite_mode": "ro",
+  "nodes": [
+    {
+      "id": "claim_0e83fe2812957c403bb6117944285bc0",
+      "kind": "claim",
+      "title": "Fourier entropy and the entropy-influence conjecture",
+      "body": "The Fourier entropy of a Boolean $f$ is $H[\\hat f^2]=\\sum_S\\hat f(S)^2\\log(1/\\hat f(S)^2)$; the Fourier Entropy-Influence conjecture (Friedgut-Kalai) asserts $H[\\hat f^2]\\le C\\,I(f)$ for an absolute constant $C$.",
+      "metadata": {
+        "claim_kind": "definition",
+        "domain": "probability theory (vocabulary)",
+        "layer": "vocabulary",
+        "logical_id": "vocab.probability.fourier-entropy-influence",
+        "proposal": "w14-vocabulary-2026-10-06",
+        "provenance": "Vocabulary node proposed by worker w14 (claude-opus-5-5) on 6 Oct 2026 for the probability math brain: a standard definition written for the node, not reviewed; it links the cards that define or use the notion.",
+        "vocabulary": {
+          "area": "Boolean functions",
+          "generic": false,
+          "key": "fourier-entropy-influence"
+        }
+      },
+      "claim": {
+        "assumptions": [],
+        "created_at": "2026-10-07T02:04:49.444401+00:00",
+        "domain": "probability theory (vocabulary)",
+        "id": "claim_0e83fe2812957c403bb6117944285bc0",
+        "kind": "definition",
+        "schema_version": 1,
+        "statement": "The Fourier entropy of a Boolean $f$ is $H[\\hat f^2]=\\sum_S\\hat f(S)^2\\log(1/\\hat f(S)^2)$; the Fourier Entropy-Influence conjecture (Friedgut-Kalai) asserts $H[\\hat f^2]\\le C\\,I(f)$ for an absolute constant $C$.",
+        "status": "unverified"
+      },
+      "provenance": null
+    },
+    {
+      "id": "claim_d15d0160e58b4c9183707be9f49462d2",
+      "kind": "claim",
+      "title": "Fourier entropy-influence: reduction to small-influence functions, a 7.05 floor for restriction inductions, and read-once formulas over AND, OR, XOR, NOT",
+      "body": "The Fourier entropy-influence conjecture is equivalent to its restriction to Boolean functions all of whose influences are below any fixed tau: a coordinate of influence at least tau has restriction drop Delta_i <= (2/ln 2 + log2(e/tau)) Inf_i, so a violation localizes to a subcube on which every influence is small and the restriction step fails at every coordinate. On self-compositions of Numaro's record function the restriction-step constant rho_0 = min_i Delta_i/Inf_i is 6.3290, 6.8901 and 7.0519 at 324, 5832 and 104976 variables (limit about 7.1116), so no potential-free coordinate induction can give a constant below 7.05. The XOR gate inequality is certified, so read-once formulas over AND, OR, XOR and NOT satisfy H <= 6.4573 I; a prime monotone 7-input gate breaks the read-once potential behind that bound; the five prime 3-input classes (one-hot, MAJ3, EQ3, MUX, Q3) are proved, while fan-in 3 at 6.4573 in general is numerical only. Per-coordinate erasure bounds fail even for monotone functions (majority with one flipped point gives ratio at least (n - 3 log2 n)/2). The full conjecture remains open.",
+      "metadata": {
+        "campaign": "mb10d-2026-09-24",
+        "claim_kind": "lemma",
+        "domain": "analysis of Boolean functions",
+        "memory_status": "provisional",
+        "provenance": "typed refinement of the transported prose claim claim_201fffcee2604bcb9b42ffcc83185769; statement checked against the memory by session claude-46849b92 on 2026-09-24",
+        "source_id": "memory:fei_opus_wave1_reduction_small_influences_gates_and_ltf_2026_09_23",
+        "supersedes": "claim_201fffcee2604bcb9b42ffcc83185769"
+      },
+      "claim": {
+        "assumptions": [
+          "uniform measure on the Boolean cube"
+        ],
+        "created_at": "2026-09-24T21:55:57.002670+00:00",
+        "domain": "analysis of Boolean functions",
+        "id": "claim_d15d0160e58b4c9183707be9f49462d2",
+        "kind": "lemma",
+        "schema_version": 1,
+        "statement": "The Fourier entropy-influence conjecture is equivalent to its restriction to Boolean functions all of whose influences are below any fixed tau: a coordinate of influence at least tau has restriction drop Delta_i <= (2/ln 2 + log2(e/tau)) Inf_i, so a violation localizes to a subcube on which every influence is small and the restriction step fails at every coordinate. On self-compositions of Numaro's record function the restriction-step constant rho_0 = min_i Delta_i/Inf_i is 6.3290, 6.8901 and 7.0519 at 324, 5832 and 104976 variables (limit about 7.1116), so no potential-free coordinate induction can give a constant below 7.05. The XOR gate inequality is certified, so read-once formulas over AND, OR, XOR and NOT satisfy H <= 6.4573 I; a prime monotone 7-input gate breaks the read-once potential behind that bound; the five prime 3-input classes (one-hot, MAJ3, EQ3, MUX, Q3) are proved, while fan-in 3 at 6.4573 in general is numerical only. Per-coordinate erasure bounds fail even for monotone functions (majority with one flipped point gives ratio at least (n - 3 log2 n)/2). The full conjecture remains open.",
+        "status": "unverified"
+      },
+      "provenance": {
+        "evidence_class": "derived",
+        "source_kind": "campaign",
+        "source_ref": "memory:fei_opus_wave1_reduction_small_influences_gates_and_ltf_2026_09_23",
+        "artifact_path": "~\\.claude\\projects\\<project>\\memory\\fei_opus_wave1_reduction_small_influences_gates_and_ltf_2026_09_23.md",
+        "status": "provisional"
+      }
+    },
+    {
+      "id": "claim_dc05672a84f74b44a1f15207c0cf86e0",
+      "kind": "claim",
+      "title": "For the FEI restriction-step constant rho_0 (the open key inequality of the Gonzalez-MacManus-Pereyra approach (arXiv:2606.00246)): sup rho_",
+      "body": "For the FEI restriction-step constant rho_0 (the open key inequality of the Gonzalez-MacManus-Pereyra approach (arXiv:2606.00246)): sup rho_0 >= C_FEI, so any restriction-step proof must reach at least 6.5218, the best known FEI lower bound (Numaro 2026; Hod's read-once 6.4548 before it); the ceiling rho_0 <= (1 + h(delta))/delta forces the maximum influence of an extremal step below 0.2894; and descending a restriction tree produces the witness rho_0 = 6.3164 at n = 71, against the previously best known 6.08.",
+      "metadata": {
+        "claim_kind": "lemma",
+        "domain": "probability/boolean-functions/fourier-entropy-influence",
+        "memory_status": "provisional",
+        "provenance": "T6 correction 2026-09-23 (claude-96cda5f6): bar correction: sup rho_0 >= C_FEI, and the best known lower bound on C_FEI is 6.5218 (Numaro 2026, store card claim_dc791b32), not Hod's read-once 6.4548; the rest of the card is unchanged",
+        "source_id": "memory:fei_step_constant_lower_bound_ceiling_and_descent_witness_2026_09_21",
+        "supersedes": "claim_56de35f46497450ea80821dc3446afbb"
+      },
+      "claim": {
+        "assumptions": [
+          "the GMP restriction-step formulation of FEI",
+          "h the binary entropy function; delta the restricted coordinate's bias",
+          "the descent witness is a computed example at n = 71"
+        ],
+        "created_at": "2026-09-23T10:37:17.238812+00:00",
+        "domain": "probability/boolean-functions/fourier-entropy-influence",
+        "id": "claim_dc05672a84f74b44a1f15207c0cf86e0",
+        "kind": "lemma",
+        "schema_version": 1,
+        "statement": "For the FEI restriction-step constant rho_0 (the open key inequality of the Gonzalez-MacManus-Pereyra approach (arXiv:2606.00246)): sup rho_0 >= C_FEI, so any restriction-step proof must reach at least 6.5218, the best known FEI lower bound (Numaro 2026; Hod's read-once 6.4548 before it); the ceiling rho_0 <= (1 + h(delta))/delta forces the maximum influence of an extremal step below 0.2894; and descending a restriction tree produces the witness rho_0 = 6.3164 at n = 71, against the previously best known 6.08.",
+        "status": "unverified"
+      },
+      "provenance": {
+        "evidence_class": "derived",
+        "source_kind": "memory",
+        "source_ref": "memory:fei_public_lower_bound_record_is_numaro_6_5218_not_hod_2026_09_22; claim_dc791b32e0484ff9a7c3ca145381fcff",
+        "artifact_path": "~\\<private-repo>\\12_cognitive_architecture\\brain_improvement\\campaign_2026-09-23_round6\\tools_formula\\correct_fei_bar.py",
+        "status": "unverified"
+      }
+    }
+  ],
+  "seconds": 0.06071520003024489
+}

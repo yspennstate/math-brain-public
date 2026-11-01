@@ -1,0 +1,1 @@
+theorem epsilon_certificate : 295147905179352825856 < 100000 * 5511213292348743 := by decide

@@ -1,0 +1,136 @@
+\section*{Boolean payment of the complete singleton nonroot KL layer}
+
+All logarithms are base two.  Let $f:\{-1,1\}^n\to\{-1,1\}$ be
+Boolean, put $p(S)=\widehat f(S)^2$, and
+$\pi(A)=\sum_{S\supseteq A}p(S)$.  For a coordinate $i$ and
+$A\subseteq[n]\setminus\{i\}$ write
+\[
+ a_{i,A}=\widehat f(A),\quad b_{i,A}=\widehat f(A\cup\{i\}),\quad
+ m_{i,A}=a_{i,A}^2+b_{i,A}^2,
+\]
+\[
+ M_{i,A}=\pi(A),\qquad
+ C_{i,A}=\sum_{T\supseteq A,\ i\notin T}
+              \widehat f(T)\widehat f(T\cup\{i\}),
+\]
+and
+\[
+ \alpha_{i,A}={2a_{i,A}b_{i,A}\over m_{i,A}},\qquad
+ \beta_{i,A}={2C_{i,A}\over M_{i,A}}.
+\]
+The row contribution in the exact signed restriction identity is
+\[
+ K_{i,A}=m_{i,A}D_2\left({1+\alpha_{i,A}\over2}\middle\|
+                           {1+\beta_{i,A}\over2}\right).       \tag{1}
+\]
+
+For $k\ge0$ put $W_k=\sum_{|S|=k}p(S)$ and retain the sharp root reserve
+\[
+ M_1(f)=\sum_i\min\{p(\varnothing),p(\{i\})\}.          \tag{2}
+\]
+For ordered distinct pairs $(i,j)$ define
+\[
+ m_{ij}=p(\{j\})+p(\{i,j\}),\qquad P_j=\pi(\{j\}),
+\]
+and the singleton-row self-information
+\[
+ V_1(f)=\sum_{i\ne j}m_{ij}\log_2{P_j\over m_{ij}},     \tag{3}
+\]
+with zero-mass terms omitted.
+
+\paragraph{Theorem (complete $|A|=1$ payment).}
+For every genuine Boolean $f$,
+\[
+ \boxed{
+ K^{(1)}(f):=\sum_i\sum_{|A|=1}K_{i,A}
+ \le {1\over2}V_1(f)+{2\over\ln2}W_2(f).}             \tag{4}
+\]
+The constants are independent of dimension, bias, arity, overlap and
+coordinate reuse.
+
+\paragraph{Proof.}
+Fix ordered $i\ne j$, put $A=\{j\}$, and abbreviate $a=a_{i,A}$,
+$b=b_{i,A}$, $m=a^2+b^2$, $M=P_j$.  Let
+\[
+ x_\pm=(a\pm b)^2,
+ \qquad X_\pm=M\pm2C_{i,A},
+ \qquad p_\pm={x_\pm\over2m},\quad q_\pm={X_\pm\over2M}.
+\]
+The two functions $f_{i,+}$ and $f_{i,-}$ are again Boolean.  The
+singleton case of the Boolean granularity lemma, applied to coordinate
+$j$ in each child, gives
+\[
+ \sqrt{x_\pm}=|\widehat {f_{i,\pm}}(\{j\})|
+ \le\operatorname{Inf}_j(f_{i,\pm})=X_\pm.             \tag{5}
+\]
+Therefore, whenever $p_\pm>0$,
+\[
+ {p_\pm\over q_\pm}
+ ={x_\pm M\over mX_\pm}
+ \le M\sqrt{{2p_\pm\over m}}.
+\]
+Averaging the logarithm under $p$ yields
+\[
+ D_2(p\|q)
+ \le {1\over2}\log_2{M^2\over m}+{1\over2}
+       -{1\over2}h_2(p_+)
+ \le {1\over2}\log_2{M\over m}
+       +{1\over2}\bigl(1-h_2(p_+)\bigr),              \tag{6}
+\]
+because $M\le1$.  The sharp fair-posterior scalar estimate gives
+\[
+ m\bigl(1-h_2(p_+)\bigr)
+ \le {2\over\ln2}\min\{a^2,b^2\}
+ \le {2\over\ln2}p(\{i,j\}).                          \tag{7}
+\]
+Multiplying (6) by $m$ and applying (7),
+\[
+ K_{i,\{j\}}
+ \le {1\over2}m_{ij}\log_2{P_j\over m_{ij}}
+       +{1\over\ln2}p(\{i,j\}).                       \tag{8}
+\]
+Summation over ordered pairs counts each two-set twice and proves (4).
+No unsigned replacement of $C_{i,A}$ was made; it remains inside $q_\pm$
+until the genuine Boolean child estimate (5) is used.
+
+\paragraph{Exact GU consequence.}
+Let
+\[
+ D_{\ge2}(f)=\sum_i(B_i-\Gamma_i)
+ +\sum_i\sum_{|A|\ge2}K_{i,A}.                         \tag{9}
+\]
+The exact local identity and the sharp root theorem give
+\[
+ G=D_{\ge2}+K^{(0)}+K^{(1)}
+ \le D_{\ge2}+{1\over2}V_1
+       +{2\over\ln2}(M_1+W_2).                        \tag{10}
+\]
+Since $M_1\le W_1$ and
+$M_1+W_2\le W_1+W_2\le I$, one obtains the uniform reduction
+\[
+ \boxed{G(f)\le D_{\ge2}(f)+{1\over2}V_1(f)
+                    +{2\over\ln2}I(f).}               \tag{11}
+\]
+
+Freeze $R(f)=G(f)-4I(f)-\tfrac34U(f)$.  If the frozen GU pair fails,
+choose a counterexample of minimum dimension and a tensor-prime
+positive-residual factor.  Every proper physical child has nonpositive
+residual, and hence every relevant coordinate satisfies
+\[
+ \Delta_iG-\tfrac34\Delta_iU
+ \ge4\operatorname{Inf}_i(f)+R(f).                    \tag{12}
+\]
+No optimizer over unbounded dimension is assumed.  In view of (11), it is
+now sufficient, only on tensor-prime Boolean functions with $R>0$, to prove
+\[
+ \boxed{
+ D_{\ge2}(f)+{1\over2}V_1(f)
+ \le\left(4-{2\over\ln2}\right)I(f)+{3\over4}U(f).}   \tag{13}
+\]
+Then $G\le4I+3U/4$ universally, so restriction induction gives
+$U\le16I$ and the source reduction gives $H\le34I$.
+
+Compared with the preceding endpoint, (13) removes every nonempty
+singleton KL row from the unpaid signed aggregate.  The remaining KL sum
+starts at $|A|=2$.  The explicit term $V_1/2$ is retained; no claim that it
+is already bounded by $I$ or $U$ is made.

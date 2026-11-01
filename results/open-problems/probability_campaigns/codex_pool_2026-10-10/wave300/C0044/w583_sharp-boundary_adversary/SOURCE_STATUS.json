@@ -1,0 +1,23 @@
+{
+  "worker": "w583",
+  "target": "C0044",
+  "checked_date": "2026-10-10",
+  "exact_statement": "For every fixed d>=3, every common distribution of strictly positive nearest-neighbor transition vectors whose components sum to one, and every fixed deterministic ell in S^(d-1), let the site rows on Z^d be iid, sample the environment once, and start the walk at 0. Is the annealed probability P_0(lim_n X_n dot ell=+infinity) always 0 or 1?",
+  "assumptions": {"E": "Every nearest-neighbor transition probability is positive almost surely; no common positive lower bound is required.", "IID": "Full transition vectors at distinct sites are independent with the same distribution.", "direction": "Fixed deterministic unit direction; equivalent to any fixed nonzero real direction by scaling.", "probability": "Annealed, averaged over the static environment and the path from 0."},
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "parent_problem_solved": false,
+  "historical_status": {"ranking_date": "2026-09-07", "tier": 4, "result_status": "attempted_unsolved", "source_current_status": "unverified"},
+  "sources": [
+    {"source_id": "drewitz_ramirez_rwre_2014", "title": "Selected topics in random walks in random environment", "locator": "Open question 3.2, p.42 as cited by intake", "public_url": "https://www.mat.uc.cl/~aramirez/rwre-lecturepasi2012.pdf", "intake_path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl", "intake_line": 44, "quote": "Consider a RWRE satisfying the assumptions (E) and (IID).", "verification": "Exact question recovered from job-scoped primary search excerpt; full PDF fetch timed out. E/IID interpretation also independently confirmed in Zerner primary model."},
+    {"source_id": "zerner_2007", "public_url": "https://arxiv.org/pdf/0706.0745", "locator": "Introduction, equation (1) and Theorem 1", "verification": "Primary model, union law and planar directional law inspected. iid ellipticity required; uniform ellipticity not required for the full conjecture."},
+    {"source_id": "slonim_2023", "public_url": "https://arxiv.org/pdf/2108.11424", "revision": "v3 dated 2023-10-28", "locator": "Introduction and Theorem 2.1", "quote": "Such a 0-1 law is still an open conjecture for dimensions d ≥ 3.", "verification": "Historical openness in 2023 only; planar bounded jumps and all-dimensional Dirichlet subclass do not prove the general d>=3 iid case."},
+    {"source_id": "openai_math_220_claim_2026", "public_url": "https://github.com/openai/math/blob/main/lean/docs/220.md", "verification": "Recent public claim located; actual manuscript proof not audited. It prevents treating the old ranking as a current open-status certificate."},
+    {"source_id": "openai_math_directional_comparator", "public_url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalWalk.lean", "locator": "directional_zero_one, raw lines 78-81", "quote": "annealed μ 0 (escape ℓ) = 0 ∨ annealed μ 0 (escape ℓ) = 1 := by sorry", "verification": "Comparator target declaration contains an admitted placeholder. Not a formal proof receipt; not a refutation of a separate proof. No build or trusted-axiom report was run."}
+  ],
+  "prior_work": {"exact_rows_artifact": "exact_c0044_prior_rows.json", "superseded_attempt": "C0044-A001", "corrected_attempt": "C0044-A002", "standing_gap": "Exclude positive probabilities of both opposite directional escape events under exact iid strict ellipticity.", "new_source_correction": "Whole-environment dependence does not invalidate the quenched path-filtration martingale. Its zero limit is the unresolved obstruction.", "H_I_attempts_and_lean": "Filename-only exact-ID search found no C0044 attempt in H/I roots; Lean root matched ranking annotation only, no proof receipt.", "Team_O": "Board read: no C0044 ownership row was present in the scoped listed targets.", "percolation_attempts": "Not relevant to this RWRE harmonic boundary; no percolation corpus read."},
+  "brain_recall": {"receipt": "recall_receipt.json", "required_scar": "perceptron_proof_open_gaps_fleet_2026_07_12", "lesson": "A successful local check or completion label is not a parent-proof certificate; preserve the hardest unchecked piece."},
+  "served_model_evidence": {"requested_model": "gpt-6.1-sol", "requested_reasoning": "max", "requested_service_tier": "Fast", "actual_served_model": "UNKNOWN", "response_side_receipt": null, "different_model_gate": "NOT VERIFIED"},
+  "canonical_card_check": "Pending exact read-only query; no live store mutation.",
+  "independent_review": {"designated_referee": "w584", "receipt": null, "status": "requested via mesh; not yet observed"}
+}

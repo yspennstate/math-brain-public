@@ -1,0 +1,85 @@
+{
+  "target_id": "P0162",
+  "title": "Fourier entropy versus total influence",
+  "checked_date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "statement": "There exists one finite absolute C such that, for every integer n>=0 and Boolean f:{-1,1}^n->{-1,1}, sum_{S subset [n]} fhat(S)^2 log2(1/fhat(S)^2) <= C sum_{S subset [n]} |S| fhat(S)^2, using uniform measure and 0 log(1/0)=0.",
+  "primary_sources": [
+    {
+      "title": "The Fourier Entropy-Influence Conjecture for certain classes of Boolean functions",
+      "authors": "Ryan O'Donnell, John Wright, Yuan Zhou",
+      "year": 2011,
+      "url": "https://www.cs.cmu.edu/~jswright/papers/fei.pdf",
+      "locator": "PDF page 2, Section 1; displayed FEI formula",
+      "supports": "Exact normalized uniform-measure statement with base-2 logarithm; not a current-status certificate."
+    },
+    {
+      "title": "Further evidence towards the Fourier Entropy-Influence conjecture",
+      "authors": "Maria Jose Gonzalez, Paul MacManus, Maria Cristina Pereyra",
+      "version": "2606.00246v2 (2026-06-09)",
+      "url": "https://arxiv.org/html/2606.00246v2",
+      "locator": "Introduction, FEI Conjecture and Ansatz 1.1; Section 4",
+      "supports": "Recent partial results and an inductive route requiring a chosen suitable coordinate. The paper's weaker existence statement is not refuted by the w508 arbitrary-coordinate obstruction."
+    },
+    {
+      "title": "On the Fourier Entropy-Influence Conjecture for Boolean Plateaued Functions",
+      "authors": "Vladimir N. Potapov",
+      "version": "2609.21563 (submitted 2026-09-18)",
+      "url": "https://arxiv.org/abs/2609.21563",
+      "locator": "Abstract only",
+      "supports": "Scope is plateaued and partially bent functions; abstract alone is not used as a proof or a universal FEI solution."
+    }
+  ],
+  "original_attribution": {
+    "authors": "Ehud Friedgut and Gil Kalai",
+    "title": "Every monotone graph property has a sharp threshold",
+    "citation": "Proceedings of the AMS 124(10), 2993-3002 (1996)",
+    "verification": "Bibliographic attribution checked in author papers; original 1996 text not yet independently inspected."
+  },
+  "local_records": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "locator": "line 553",
+      "status": "tier 5; attempted_un"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json",
+      "key": "op-p0162",
+      "source_description": "O'Donnell: Open problems in analysis of Boolean functions, PDF p.5, FEI Conjecture",
+      "status": "source_says_open; current status unverified"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006a04.json",
+      "key": "at-p0162",
+      "prior_method": "Singleton spectral probability distribution is not Boolean; f^2=1 imposes nonlinear convolution identities.",
+      "disjointness": "w508 constructs explicit Boolean functions and tests a stronger coordinate inequality instead."
+    }
+  ],
+  "owner_solved_retired_check": "Targeted H/I attempt and Team O checks returned no P0162 solved certificate. A read-only exact-title canonical-store query recovered the historical target/attempt and related owner restriction-bound work; none of those inspected records supplied a certified universal FEI solution. Absence of a matching record is not evidence that FEI is open.",
+  "canonical_store_check": {
+    "path": "~/math-brain-build/local/population/brain.sqlite3",
+    "access": "sqlite URI mode=ro",
+    "command": "python -X utf8 ~/brain_workers/w508/read_store.py",
+    "target_node": "claim_d7e82bff88909352dff2f23bfcaf7a76446d6bfd14af38c5bda1d5efeb9d9c06",
+    "prior_attempt_node": "claim_06b0c09db7e28efc6febd3962e234332a00c2ba45a17792cc4d83fdbc6752fba",
+    "related_restriction_bound_node": "claim_d15d0160e58b4c9183707be9f49462d2",
+    "related_statement": "The owner card already contains the restriction-drop logarithmic estimate with additive coefficient 3/ln(2), and an arbitrary-coordinate erasure obstruction. Those are prior work, not a novelty claim for w508.",
+    "independent_proof_of_store_card_checked": false
+  },
+  "recall": {
+    "command": "python -X utf8 ~/.claude/dreaming/brain.py recall 'P0162 Fourier entropy influence proof mistakes'",
+    "result": "timeout after 60 seconds",
+    "memory_slugs_read": [
+      "perceptron_proof_open_gaps_fleet_2026_07_12",
+      "proof_steps_need_derived_joint_structure_2026_09_09"
+    ]
+  },
+  "source_check_is_proof": false,
+  "full_FEI_proved": false,
+  "independent_reviewer": "w509",
+  "review_state": "scoped_analytic_KEEP_for_w508_MATH_001_002_003",
+  "review_receipts": "~\\brain_workers\\w508\\REVIEW_RECEIPTS.jsonl",
+  "different_model_gate": "not_verified",
+  "model_evidence": "~\\brain_workers\\w508\\MODEL_EVIDENCE.json"
+}

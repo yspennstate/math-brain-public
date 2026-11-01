@@ -1,0 +1,16 @@
+{
+ "helper_version":"A035-shared-parity-v1",
+ "targets":["Reconstruct A031-FOURTH-ROOT-ERASURE-CREDITS v1 on exact Boolean splits", "Test the strengthened EVERY-tree K=4 bad-node odd-face payment, retaining spectral credit but optionally dropping physical deficit R", "Retain true joint-credit positive excess and terminal entropy when comparing two orders"],
+ "actual_Boolean_family":"f=b_m(y) product_j b_4(x_j) (-1)^[p_m(y) sum_j A_4(x_j) z_j], with p_m=(1-chi_[m])/2 and A_4=1_{x=0}; all blocks fresh except the explicitly shared parity y",
+ "domain":"Direct tables at (m,L)=(2,1),(4,1),(8,1),(4,2),(6,2); analytic fixed parameter certificates at m=L in {8,16,32,64,128,256,1024}; all-even m=L>=8 addressed separately by proof",
+ "case_count":"5 direct root tables; 14 selector-prefix split contexts (sum L*2^(L-1)); 7 analytic parameter cases; one r=4 module and one explicit rational non-Boolean discriminator",
+ "symmetry":"No truth-table symmetry reduction. Proof shows selector quantities are invariant under every previously fixed selector history; all such histories checked in direct prefix cases.",
+ "arithmetic":"Python integers and Fraction; 28-term atanh-series rational logarithm intervals with explicit geometric tail; direct edge counts versus integer Walsh; signed mixed convolutions before squaring; independent physical root and prefix checks",
+ "memory_estimate_MB":100,
+ "pilot":"Direct cases (2,1),(4,1), one module and the non-Boolean discriminator; enforced 50-second cap",
+ "pilot_max_seconds":50,
+ "full_max_seconds":240,
+ "dimension_escalation":"None. Maximum materialized dimension 16; analytic larger dimensions use closed formulas, not expanded tables.",
+ "source_versions":["A031-FOURTH-ROOT-ERASURE-CREDITS v1", "B05-ODDFACE-LOCALIZED-REDUCTION v1"],
+ "scope_warning":"A counterexample to EVERY-tree payment does not refute the original EXISTS-tree bridge. Good-order repair is proved only for this explicit family."
+}

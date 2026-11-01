@@ -1,0 +1,41 @@
+# A009: complete fractional-incidence payment with arbitrary cores
+
+## exact target, quantifiers, hypotheses and units
+
+For every finite simple graph H on r>=1 hubs and every m_i>=1, attach m_i private degree-one leaves at each hub, retaining all core edges. Prove a complete nonempty reference cross-entropy bound on the actual uniform Boolean edge DNF, in bits, using one global positive packing-feasible vector on precisely the original primes. The result is C_PL <= [log2 96+9/4+9/(8 ln2)] I < (843/80) I <11I. Core degree, core density, hub count and unequal leaf counts are unrestricted. This is a class theorem beyond bounded-read formulas, not a universal FEI solution or a global-weight optimality assertion.
+
+## sources actually read, revisions and theorem locators
+
+The execution protocol is 2026-10-11-execution-v2. BOARD.md snapshot 2026-10-14 05:41 UTC, the B02 lead's v2 notes (2026-10-11 23:35), and the preceding A009 STATUS were read before choosing the new mechanism. The original forests.tex baseline (sha256 d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a) supplies the original queue, eq:forestcost, eq:forestconditioning and eq:foresttarget definitions; its size/subset probabilities were read directly. New source-bound inputs are A010 stage4 REPORT (uniform-scale failure versus the infimum), A008 stage5 REPORT, CONNECTED_SCALES and CLAIMS (connected broom and same-prime repair), and A006 stage5 JOINT_EDGE_SLICE and ROOT_LAW_RELAXATION. A006 stage5 REPORT was absent when read; its prose files are advisory and no new A006 claim is used as a premise. SOURCE_RECEIPTS.json pins the bytes actually consumed. Prior baseline reading is inherited, not claimed to be newly re-executed wholesale.
+
+## complete derivation or exact first unsupported line
+
+PRIVATE_LEAF_PAYMENT.md contains the full proof and all-dimensional inequalities. Each private edge at hub i receives 1/(2m_i), and each core edge ij receives 1/[2 max(d_H(i),d_H(j))]. Hub incidence is at most one and leaf incidence at most one half. The actual chosen events use private gates; every unused core gate remains in the nonempty-root normalizer D. Exact chronological stars give block numerators U_0(t)=(1/(64m))^t, U_1(0)=1/64 and U_1(t)=t! (1/(2m))^t/[24*8^(t-1)*t^2*(t+1)]. These imply Q_PL(A)>=D^-1 96^-|A| product_i m_i^-t_i.
+
+Write q=Pr(false), a_i=Pr(false,hub_i negative), b_i=Pr(false,hub_i positive). Genuine private leaves give b_i<=2^-m_i a_i, Inf_hub_i=2(a_i-b_i)>=a_i and >=2q/3, and each leaf has influence 2b_i. Thus all private label charges sum to at most (9/4) I. Total weight is at most 3r/4; v=4q(1-q) and I>=2rq/3 pay v log2 D by 9I/(8 ln2), including its negative sign when D<1. Adding the log2(96) I pointwise cost proves the displayed bound. Rational inequalities log2 96<33/5 and ln2>2/3 yield 843/80<11. The first unsupported extension is a same-reference replacement for the block numerator and b_i<=2^-m_i a_i when a vertex has zero private leaves or its neighbors are shared. Attaching leaves changes f and supplies no free transfer to the original core.
+
+REVIEW_CONNECTED.md reconstructs the whole unchanged A008-CONNECTED-GRAPH-TWO-SCALE-QUANTIFIER-SEPARATION v1, hash cf0f06a75dabf85738b3cbfcfabc9142aa5cbbb9c62add74dfe300bcc59321f5: influence and singleton spectral mass, divergent uniform-scale complete/surrogate cost, exact repaired normalizer, and its sharper C_MS<(53/5)I for all m>=2. Verdict HOLDS without repair. Its needed A010 guard and A006 mass lower bound are directly reconstructed; no whole review of their additional independent claims is asserted.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Both searches were frozen in FROZEN_SPEC.json and VERIFY_SPEC.json before execution. From this run directory the completed commands are `python -X utf8 code/check.py --pilot`, `python -X utf8 code/check.py`, and `python -X utf8 code/verify.py`. Pilot: 10 functions, 300 truth inputs, 4677 assertions, 0.0515 seconds. Full: every labelled core on 1..4 hubs with private counts in {1,2}, no symmetry reduction, exactly 1098 functions and 1,341,228 truth inputs, maximum dimension 12; 72325 assertions, 4.3841 seconds. Scalar inequalities were also checked through m=64. Full physical signs, integer FWHT, exact Fraction influence identities and rational logarithm enclosures check the actual complete cost. The maximum displayed ratio was 5.77498; the rigorous decision uses enclosing rationals, never this display.
+
+Separate pure-Python replay: all cores on 1..3 hubs with counts {1,2}, plus single hubs with 3 and 4 leaves, 76 functions, 22392 distinct actual queue traces; 402460 assertions, 3.2800 seconds. It starts from every present/absent Bernoulli root factor, divides by exact root-conditioning probability, executes chronological queues, checks ownership and deduplicates traces. Five broom functions m=2..6 are independently checked by direct Walsh character sums. Total successful assertions across the three jobs: 479462. out/PILOT.json, out/CHECK.json and out/VERIFY.json record outcomes; partial JSONL rows were saved during the search. Estimated memory was 120 MB and 80 MB, below the memok trigger, with no background jobs or automatic dimension increases. Exact finite checks supplement the analytic all-dimensional proof.
+
+## proof dependencies and changed downstream conclusions
+
+The new theorem depends on the original conditioned queue definitions and elementary graph/probability identities, not on a claimed universal payment or unreviewed joint-optimization relaxation. Its positive weights and full expectation provide an explicit same-reference certificate on a meaningful unbounded-read family. Arbitrary densely connected cores are allowed even when every hub has only one private leaf; rarity of a defect tail is unnecessary. Unused core gates are paid in D, so this is not a sampled-set table selector. A008's connected-scale separation is independently accepted locally at its original whole scope. The new A009 claim is author-proved and exact-checked but awaits independent-agent review. Full FEI and general-graph PI-J remain OPEN.
+
+## one next mathematical action and independent reviewer
+
+A006/A010 replace the private-leaf conditional payment and disjoint-block numerator on one genuinely shared-neighbor or leafless incidence, retaining the same original prime reference, global weights, full normalizer and true Boolean spectrum; A008/A086 independently reconstruct the new whole private-leaf theorem.
+
+The shortest useful extension replaces the two private-neighbor payment steps on one genuine overlap while retaining all actual queue factors. A008/A086 are requested consumers for whole-claim reconstruction; no message was sent and no acceptance or downstream adoption is presumed.
+
+## actual persistence receipts or precise save blocker
+
+The four required protocol files, both proof/review notes, frozen specifications, code and outputs are saved locally in this unique run. SOURCE_RECEIPTS.json pins external read-only inputs; out/PERSISTENCE_RECEIPTS.json records local SHA256 and size readback after saving. STATUS.md has exactly two current lines; WORKLOG.md appends this stage and LEARNED.md records the all-dimensional statement and failed universal extension. PROGRESS and PACKET_DELTA are identical. No files outside A009 were written. Supervisor copying, mirror verification and public release are unobserved; there is no local save blocker.
+
+## Universal bridge
+
+This stage moves C020 whole-set witness cost / B02 PI-J from finite optimized graph instances and disconnected or broom repairs to a proved complete cost <11I for every arbitrary core with at least one private leaf at every hub. The entire root, label, subset, child-count, attachment, chronology and conditioning ledger is paid under the true spectrum using a single global feasible vector. What remains is a payment and witness numerator for shared or missing private neighbors; neither a selector nor attaching new leaves closes that gap. NEXT tests a same-reference replacement for those exact two private-neighbor steps on one overlap, the shortest route toward arbitrary graph PI-J and ultimately full FEI rather than another isolated class calibration.

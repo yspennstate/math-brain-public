@@ -1,0 +1,10 @@
+{
+  "helper": "A020-prefix-reserve-v1",
+  "attempt": "first full frozen-domain run",
+  "status": "FAILED_OVERSTRONG_SIDE_CHECK",
+  "failed_assertion": "Every nonconstant intermediate terminal has CE<4I",
+  "reason": "Inherited reference need not be locally rate-4 eligible even before a constant terminal. The active penultimate child is a fixed two-bit point defect but some reference masses shrink with original k.",
+  "repair": "Keep signed positive deficits and negative credits explicitly at every prefix; verify their difference equals the conserved signed reserve. Do not assert local eligibility.",
+  "mathematical_scope": "Frozen k3..8 unchanged; no dimension escalation or tolerance repair",
+  "lean_attempt": "RUNTIME_UNVERIFIED after 124.4 seconds, source SHA256 0724e5dcbbe0d0c95b2635d6a8f21d2f506bc30fc66c4a6116a027aa17057cdd. No Lean certification claimed."
+}

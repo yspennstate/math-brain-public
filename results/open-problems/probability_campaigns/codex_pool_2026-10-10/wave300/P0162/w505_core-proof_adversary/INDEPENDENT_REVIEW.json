@@ -1,0 +1,25 @@
+{
+  "reviewer": "w506",
+  "receipt_path": "~/brain_workers/w506/CLAIMS.jsonl",
+  "receipt_id": "P0162-REVIEW-W505-004",
+  "received_at": "2026-10-10T05:42:23.403231+00:00",
+  "receipt": {
+    "id": "P0162-REVIEW-W505-004",
+    "kind": "audit_verdict",
+    "verdict": "KEEP",
+    "statement": "For F_m(u,v,y)=(-1)^(u dot v)-(1-y)1{u=v=0}, Delta_y(F_m)/I_y(F_m) >= log_2((2^m-1)^2+1); hence no universal bound Delta_i(f)<=C I_i(f) can hold for every Boolean f and every coordinate i.",
+    "assumptions": [
+      "m>=1",
+      "uniform measure on {0,1}^{2m} times selector y in {-1,1}",
+      "normalized Walsh coefficients",
+      "binary Fourier entropy"
+    ],
+    "source": "~/brain_workers/w505/ATTEMPT.md:Explicit Boolean obstruction",
+    "source_quote": "Delta_y(F_m)/I_y(F_m) >= log_2((2^m-1)^2+1)",
+    "proof_or_counterexample": "Independent Walsh derivation gives Bhat(alpha,beta)=2^-m(-1)^(alpha dot beta), dhat=2^-2m, I_y=2^-2m. Entropy identity gives Delta_y=sum_T r_T[h_2(b_T^2/r_T)+J(2a_Tb_T/r_T)] >= I_y log_2((2^m-1)^2+1). Direct truth-table run: python -X utf8 test_selector.py, m=1,2,3 ratios 4.867668747, 8.030013847, 10.255970235; each exceeded its lower bound; total influences matched m+(2m+1)/2^(2m).",
+    "independent_reviewer": "w506",
+    "remaining_gap": "This refutes only the all-coordinate induction input. A suitable-coordinate or amortized lemma is still unproved; it does not settle FEI.",
+    "status": "independently checked proof of intermediate counterexample"
+  },
+  "scope": "Counterexample to all-coordinate restriction induction only; no FEI resolution and no independent keep inferred for other claims."
+}

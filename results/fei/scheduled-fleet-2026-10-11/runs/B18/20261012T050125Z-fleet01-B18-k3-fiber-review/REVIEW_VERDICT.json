@@ -1,0 +1,35 @@
+{
+  "schema": "fei-independent-review/1",
+  "review_run_id": "20261012T050125Z-fleet01-B18-k3-fiber-review",
+  "review_packet": "A088",
+  "target_stream": "B07",
+  "target_packet": "A034",
+  "target_claim": "B07-A034-K3-FIBER-v1",
+  "target_commit": "f73eca4c1bc554d485ae8d2439060bdf781d7dea",
+  "verdict": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_SCOPE_WITH_RECORD_REPAIRS",
+  "mathematical_repair": false,
+  "record_repairs": [
+    "K3_FIBER_STRUCTURE.tex equation (4): replace comma by multiplication.",
+    "Regenerate distinct statement_sha256 values for the two distinct B07 claim statements."
+  ],
+  "accepted_components": [
+    "exact three-bit Boolean fiber trichotomy",
+    "exact pointwise address energies and mu(noncharacter)<=4I_A/3",
+    "odd product-row granularity cylinder and simultaneous reserve",
+    "general-k one-point-defect address-energy formula"
+  ],
+  "not_accepted": [
+    "joint mod-4 control for even nu'=2 rows",
+    "a complete K3 FEI theorem",
+    "a recurrence uniform in k",
+    "full FEI"
+  ],
+  "first_unsupported_line": "Joint mod-4 classification/payment for even product rows with normalized granularity nu'=2.",
+  "independent_check": {
+    "command": "python3 INDEPENDENT_AUDIT.py",
+    "result": "PASS",
+    "assertions": 4478,
+    "random_seed": null
+  }
+}
+

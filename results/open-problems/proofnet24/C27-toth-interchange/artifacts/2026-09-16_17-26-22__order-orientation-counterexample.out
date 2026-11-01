@@ -1,0 +1,17 @@
+C27 ORDER-ORIENTATION COUNTEREXAMPLE
+charpoly(Q)= x*(x + 1)**2*(x + 3)**2*(x + 4)
+transition row at t=log(2):
+(0, 1, 2) 37/96
+(0, 2, 1) 7/32
+(1, 0, 2) 7/32
+(1, 2, 0) 7/96
+(2, 0, 1) 7/96
+(2, 1, 0) 1/32
+order: 1 < 0 < 2
+P(A)= 5/48
+P(B)= 7/12
+P(A and B)= 7/96
+covariance= 7/576
+E[2^(IA+IB)] - E[2^IA]E[2^IB]= 7/576
+PAIRWISE_NEGATIVE_ASSOCIATION_FAILS_EXACTLY
+ALL_EXACT_CHECKS_PASS

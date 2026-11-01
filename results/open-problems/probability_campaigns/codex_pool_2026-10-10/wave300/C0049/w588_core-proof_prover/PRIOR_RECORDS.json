@@ -1,0 +1,70 @@
+[
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "row": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "fk_interfaces_sle_q_not_2",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Conjecture 3 (Schramm), p. 93",
+      "problem_id": "C0049",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "duminil_copin_ising_potts_2017",
+      "statement": "For the critical random-cluster model with cluster weight q <= 4 on Dobrushin domains, the exploration path converges to SLE(kappa) with kappa = 4 pi / (pi - arccos(sqrt q / 2)); known for q = 2 (Smirnov, Chelkak et al.) and, for q = 1 site percolation, on the triangular lattice only.",
+      "status_search": "",
+      "title": "Convergence of random-cluster interfaces to SLE(kappa) for q in (0,4], q not 2",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "row": {
+      "attempt_id": "C0049-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Check which ingredients of the q = 2 proof are available for other q.",
+      "obstruction": "Discrete holomorphicity is only half-satisfied for q not 2.",
+      "problem_id": "C0049",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "The q = 2 proof uses (i) the parafermionic observable being discretely holomorphic (full Cauchy-Riemann), (ii) RSW-type crossing estimates for tightness, (iii) identification of the limit via the martingale observable. For q in (1,4) not 2: (ii) is available (Duminil-Copin-Sidoravicius-Tassion 2017 for q in [1,4]); (iii) would follow from (i); (i) fails: for general q the observable satisfies only the contour relations (half of the Cauchy-Riemann equations), the same obstruction as in C0017. So the conjecture is reduced, for q in [1,4], exactly to finding an additional discrete relation for the parafermionic observable; the count of unknowns versus equations (one complex relation per face versus two needed) is the precise deficit. For q < 1 even RSW is unavailable. No new relation found.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "row": {
+      "attempt_id": "C0050-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "Contour relations + Morera => any tight subsequential limit is holomorphic with the prescribed boundary modulus; uniqueness then forces (phi')^sigma.",
+      "method": "Test the conjecture's consistency by the boundary values and the contour relations alone.",
+      "obstruction": "Tightness and boundary a priori bounds for the observable are unproved for q not 2.",
+      "problem_id": "C0050",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "The contour relations plus the known boundary values determine the discrete observable up to a subspace of dimension equal to the number of faces minus the number of independent contour relations, which is of the order of the number of vertices, so the observable is far from determined by what is proved; the conjecture is a statement about the actual random-cluster measure, not derivable from the relations alone. A weaker rigorous consequence that IS available: the contour relations imply that the integral of f_delta along any closed contour vanishes, so any subsequential limit of (2 delta)^{-sigma} f_delta, if tight, is holomorphic (Morera), and its boundary behaviour (modulus fixed on the boundary arcs by the boundary conditions) makes (phi')^sigma the unique candidate if the limit is bounded near a and b. Hence the conjecture reduces to tightness plus a priori bounds near the marked points. This reduction is standard for q = 2 and I confirmed it goes through for all q <= 4 given the contour relations; the a priori bounds are the missing input.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "row": {
+      "attempt_id": "C0095-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Same structure as C0050: contour relations plus Morera give holomorphy of subsequential limits; identify the missing a priori bounds.",
+      "obstruction": "No RSW-type crossing estimates for critical SAW; tightness of the observable ratio is not available.",
+      "problem_id": "C0095",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result": "Smirnov's parafermionic observable for the honeycomb SAW at the critical weight satisfies the discrete contour relation (sum around each hexagon vanishes) but is not discretely holomorphic (only half the Cauchy-Riemann relations), the same deficit as for FK with q not 2. Any subsequential limit of the normalised observable that is tight and locally bounded is holomorphic by Morera (the contour relations pass to the limit) with boundary modulus determined by the spin 5/8 and the boundary conditions; the function (Phi')^{5/8} is the unique such function with the prescribed singularity at a and normalisation at b. Hence Conjecture 3.6 reduces to (i) tightness/local boundedness of F_delta(a, z)/F_delta(a, b) away from a and b and (ii) control near the marked points. (i) would follow from the Beurling-type estimate that a SAW from a to z in the domain has weight comparable to the two-point function in the bulk, i.e. from an RSW-type theory for the critical SAW, which is unavailable (there is no RSW for SAW, unlike FK with q in [1,4]). So the obstruction is specific: SAW lacks the crossing estimates that make the FK reduction work.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  }
+]

@@ -1,0 +1,72 @@
+R7-04 / P0029 exact integer certificate output — CORRECTED
+Execution date: 2026-09-18
+Arithmetic: Python arbitrary-precision integers; no randomness
+
+IMMUTABILITY NOTE: this file supersedes only the distance-distribution lines for 2x3 and 3x3 in `2026-09-18T174800Z__P0029_two_peak_restart_dp_check.out`. The total counts, distance sums, means, 4x4 distribution, and 4x4 tail probabilities in that earlier file were correct. The corrected distributions below were re-executed and their zeroth and first moments were checked against the exact count and distance sum.
+
+=== 2x2 subset DP ===
+grid=2x2
+two_peak_labelings=8
+distance_sum=16
+mean_distance=2
+normalized_mean=1
+distance_distribution=
+  2: 8
+
+=== 2x2 independent brute force ===
+bruteforce_two_peak_labelings=8
+bruteforce_distance_sum=16
+BRUTE_FORCE_MATCH=YES
+
+=== 2x3 subset DP ===
+grid=2x3
+two_peak_labelings=424
+distance_sum=1008
+mean_distance=126/53
+distance_distribution=
+  2: 264
+  3: 160
+CHECK: 264+160=424
+CHECK: 2*264+3*160=1008
+
+=== 2x3 independent brute force ===
+bruteforce_two_peak_labelings=424
+bruteforce_distance_sum=1008
+BRUTE_FORCE_MATCH=YES
+
+=== 3x3 subset DP ===
+grid=3x3
+two_peak_labelings=143808
+distance_sum=383616
+mean_distance=1998/749
+normalized_mean=666/749
+distance_distribution=
+  2: 63552
+  3: 64512
+  4: 15744
+CHECK: 63552+64512+15744=143808
+CHECK: 2*63552+3*64512+4*15744=383616
+
+=== 3x3 independent brute force ===
+bruteforce_two_peak_labelings=143808
+bruteforce_distance_sum=383616
+BRUTE_FORCE_MATCH=YES
+
+=== 4x4 subset DP ===
+grid=4x4
+two_peak_labelings=779299174080
+distance_sum=2538510905280
+mean_distance=377754599/115967139
+normalized_mean=377754599/463868556
+distance_distribution=
+  2: 173341437440
+  3: 313977112960
+  4: 217620337600
+  5: 66746375360
+  6: 7613910720
+CHECK: distance buckets sum to 779299174080
+CHECK: distance-weighted buckets sum to 2538510905280
+
+Derived exact 4x4 tail probabilities:
+P(rho_4 >= 3 | exactly two peaks)=1893617927/2435309919
+P(rho_4 >= 4 | exactly two peaks)=101382161/270589991

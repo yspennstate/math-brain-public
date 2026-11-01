@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A signed collision in sparse Boolean towers}\date{}\maketitle
+Full Fourier entropy--influence remains open. Entropies are in bits.
+Two shared vertices of mass $e=2^{-d}$ carry arbitrary correlated Boolean
+controllers $V,W$. Put $g(t)=-t^2\log_2t^2$ and
+\[
+ \Xi=e\sum_{T\ne\varnothing}
+ \left(\frac{g(\widehat V(T)+\widehat W(T))+g(\widehat V(T)-\widehat W(T))}{2}
+       -g(\widehat V(T))-g(\widehat W(T))\right).
+\]
+The full entropy equals the separated-row expression plus $\Xi$;
+the complete empty-private sector is retained. Although $\Xi\le0$,
+its restriction decrement can be positive. The mean sector obeys
+\[
+ \Delta_iH(F)\le e(\Delta_iH(V)+\Delta_iH(W))+
+ \Delta_i\{de(2-\mu^2-\nu^2)\}+12\operatorname{Inf}_i(F)+\Delta_i\Xi.
+\]
+The reserve is the original sum of point-event banks. Its directional
+derivative distribution has entropy at least $d-1$; weighted log concavity
+and $|g'|\le6$ give the midpoint price12.
+
+For even $k\ge6$, set $a=2^{-k}$, $b=2^{-k/2}$, $V=yB_k$, where $B_k$
+is quadratic bent, and $W=y(1-2\mathbf1_{\{z=0,i=0\}})$.
+All controller parent/child means vanish and all four controller children
+are nonconstant, but $\operatorname{Inf}_i(F)=ea$ and
+\[
+ \Delta_i\Xi/\operatorname{Inf}_i(F)\ge k-6.
+\]
+Indeed each nonempty bent label contributes at least $a^2(k-5)$,
+by the decreasing second derivative of $g$ on $[b-2a,b+2a]$.
+The common character introduces the old empty-label midpoint remainder
+between $-a^2$ and zero. The actual family satisfies $H(F)\le10I(F)$;
+it refutes a local-payment claim and not FEI. Taking $d=k$ makes roots rare.
+
+An actual unused target-five bent surplus $S=e(3k/2+5)$ pays one collision
+by a booked debit $4e$. For inherited old debit $0\le D_0\le S-4e$,
+both children retain $S-D_0-4e$ and their full terminal entropy.
+The next split receives that remaining donor, never $S$ again.
+Full proofs and endpoint conventions are in \texttt{PROOF.md}; exact
+per-scale source balances are in \texttt{MULTISCALE\_COST\_LEDGER.json}.
+\end{document}

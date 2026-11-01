@@ -1,0 +1,58 @@
+{
+  "target": "P0043",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "exact_statement": "Let G be an infinite connected locally finite undirected quasi-transitive graph with p_c(G)<1. In iid Bernoulli bond percolation on G at parameter p=p_c(G), almost surely every open connected component is finite.",
+  "equivalent_vertex_form": "For every vertex v, P_{p_c}(|C(v)|=infinity)=0; countability makes this equivalent to almost-sure absence of all infinite clusters.",
+  "threshold_definition": "p_c(G)=sup{p in [0,1]: almost surely G[p] has no infinite clusters}.",
+  "ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 549,
+    "dated_status": "attempted_un",
+    "full_hypotheses": false
+  },
+  "primary_sources": [
+    {
+      "url": "https://comptes-rendus.academie-sciences.fr/mathematique/item/10.1016/j.crma.2016.07.013.pdf",
+      "author": "Tom Hutchcroft",
+      "year": 2016,
+      "locator": "Introduction, Conjecture 1.1; Theorems 1.2 and 1.3",
+      "checked": "exact model, graph assumptions, p_c<1 and exponential-growth subclass",
+      "short_quote": "If p_c(G) < 1",
+      "mathematical_proof_receipt": false
+    },
+    {
+      "url": "https://github.com/openai/math/blob/main/lean/docs/213.md",
+      "locator": "Scope and comparator links",
+      "checked": "Scope note, comparator, comparator JSON and actual Main.lean theorem inspected. Main theorem has the intended graph hypotheses. Dependencies and trusted axioms were not kernel-checked.",
+      "status": "claim requiring verification",
+      "mathematical_proof_receipt": false,
+      "solution_module": "OAI.Probability.CriticalPercolation.Main",
+      "theorem_name": "OAI.CriticalPercolation.BondGraph.no_percolation_at_criticality",
+      "permitted_axioms_in_comparator": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "actual_axiom_receipt": false,
+      "note": "The comparator statement has sorry by design; this does not establish a defect in the separate actual solution."
+    },
+    {
+      "url": "https://github.com/openai/math/blob/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf",
+      "locator": "Theorem 1.1, page 2",
+      "checked": "downloaded exact target statement; 42-page proof not certified",
+      "local_file": "sources/quasi_transitive_claim.pdf",
+      "status": "claimed resolution requiring verification",
+      "mathematical_proof_receipt": false
+    },
+    {
+      "url": "https://arxiv.org/html/2304.12110v3",
+      "locator": "Section 3, Definition 4 and Lemma 7",
+      "checked": "finite graph and nonanticipating exploration definitions plus all conditional quantifiers checked in primary source; C004 still awaits referee",
+      "mathematical_proof_receipt": false
+    }
+  ],
+  "owner_solved_retired_check": "Read the relevant C0084 prior attempt and targeted percolation references in the named owner folder. No owner full-proof/retirement receipt for P0043 was recovered; no exhaustive exclusion is claimed.",
+  "no_novelty_claim": true,
+  "next": "Referee checks C003 and the paired bridge packet; no repeated open-status search is needed for this deliverable."
+}

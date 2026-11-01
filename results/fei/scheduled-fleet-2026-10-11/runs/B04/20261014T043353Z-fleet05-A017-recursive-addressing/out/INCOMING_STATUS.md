@@ -1,0 +1,2 @@
+STATE: A017 stage4 complete locally: <=6 arbitrary-quadratic shared-fiber edits have zero K4 stopping bill and H<=(4+2/ln2)(I-1); exact128/2187 critical alphabets; seven-edit fixed-order bill3/8 repaired to0; full FEI OPEN, independent review pending.
+NEXT: A091/A090 review v2; validate NEXT_DERIVATION.md rank-two all-weak coset/character collapse and seven-edit good-pivot policy, retaining full terminals and exact3/8 obstruction/repair.

@@ -1,0 +1,1 @@
+Exact controller character sums: beta=3/8, C=3/512, D=3/256, E=21/512. Hence C-D^2/E=9/3584. Checked by exact Walsh arithmetic in both pilot and primary; see DERIVATION equation(3) for its uniform-in-mean lower bound.

@@ -1,0 +1,19 @@
+PASS
+scalar_feature_checks 961 max_error 1.110e-16
+shannon_loewner_matrix_checks 36 worst_min_eig 0.000e+00
+combined_kernel_matrix_checks 40 worst_min_eig 0.000e+00
+carleman_ratio 1e-02 1.723925417698
+carleman_ratio 1e-04 2.354683849123
+carleman_ratio 1e-06 2.611776028134
+carleman_ratio 1e-08 2.743839677936
+pi 3.141592653590
+pi_over_ln2 4.532360141827
+combined_constant_bits 7.417750223605
+current_prefactor 0.571288072621
+central_prefactor 0.049095068741
+
+checker_git_blob_sha1 0b54c6e56530d74f6bacac3d9f10368a087ed9f0
+checker_sha256 a3d7c2d0ceb064be0f4baa83b08eaa70453c92a2872ffb548815982d6a5f4881
+checker_bytes 3426
+output_sha256_without_metadata 4c69d6a8112fe77ff4a051b9fd80bb812d01a3832c75bf212a6836e00625d27f
+note Numerical falsification checks only; Theorem 2.1 in REPORT.md is analytic and does not depend on these computations. After GitHub readback, the exact committed checker bytes were reconstructed by their blob/text, SHA-256 was recomputed, and those exact committed bytes were rerun with the PASS output above.

@@ -1,0 +1,11 @@
+{
+  "store": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "mode": "read-only",
+  "schema": [
+    [
+      "nodes",
+      "CREATE TABLE nodes (\n    id TEXT PRIMARY KEY,\n    kind TEXT NOT NULL,\n    title TEXT NOT NULL,\n    body TEXT NOT NULL,\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    ]
+  ],
+  "elapsed_seconds": 0.003152799909003079
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T165124Z-fleet01-B03-QFORM-r29",
+  "status": "PASS",
+  "scope": "finite arithmetic/exterior-algebra regression only; not a proof of full QFORM",
+  "seed": 20260923,
+  "random_trials": 1000,
+  "ambient_J_dimension": 7,
+  "I_rows_per_trial": 6,
+  "checks": {
+    "heavy_row_identity": "||c_i||^2 F_i^2 = alpha_i Z_2",
+    "two_row_volume": "prod singular([m;a_i]) = ||m|| ||c_i||",
+    "three_row_volume": "prod singular([m;a_i;a_j]) = ||m|| ||c_i|| ||d_j||",
+    "heavy_heavy_lower_bound": "Delta_J > (1/2) sqrt(V_3) when alpha_i>1/2 and beta_j>1/2",
+    "max_relative_identity_error": 1.1293230740312033e-15,
+    "lower_bound_violations": 0,
+    "observed_case2a_heavy_rows": 675,
+    "observed_case2b_heavy_rows": 66
+  },
+  "constants": {
+    "C_star_diffuse_envelope": 9.39913188784886,
+    "case2a_endpoint": 6.0,
+    "case2b_partner_endpoint": 6.231775903093545,
+    "K_star_phi_envelope": 30.87980451778735,
+    "weighted_time_constant": 15.05911390259813,
+    "riesz_moment_constant": 6.007717241127417
+  },
+  "ordering_checks": {
+    "case2a_below_C_star": true,
+    "case2b_below_C_star": true
+  },
+  "result": "QFORM_B03_ROW_MARGINAL_FREE_2VOLUME_PASS"
+}

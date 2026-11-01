@@ -1,0 +1,101 @@
+{
+ "duration_api_ms": 35462,
+ "stop_reason": "end_turn",
+ "session_id": "55e8ac7e-7f87-41f7-98c3-761ff67d5c91",
+ "total_cost_usd": 0.13942139999999997,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 8323,
+  "cache_read_input_tokens": 2147,
+  "output_tokens": 3620,
+  "output_tokens_details": {
+   "thinking_tokens": 2280
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 8323,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 3620,
+    "cache_read_input_tokens": 2147,
+    "cache_creation_input_tokens": 8323,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 8323
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ },
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 2,
+   "outputTokens": 3620,
+   "cacheReadInputTokens": 2147,
+   "cacheCreationInputTokens": 8323,
+   "webSearchRequests": 0,
+   "costUSD": 0.13942139999999997,
+   "contextWindow": 1000000,
+   "maxOutputTokens": 128000,
+   "thinkingTokens": 2280,
+   "canonicalModel": "claude-opus-5-5",
+   "provider": "firstParty",
+   "costBasis": "list"
+  }
+ },
+ "permission_denials": [],
+ "terminal_reason": "completed",
+ "fast_mode_state": "off",
+ "fast_mode_disabled_reason": "sdk_opt_in_required",
+ "subagent_stats": {
+  "spawned": 0,
+  "requested": {
+   "background": 0,
+   "foreground": 0,
+   "unset": 0
+  },
+  "started_in_background": 0,
+  "max_depth": 0,
+  "spawned_by_subagents": 0,
+  "completed": 0,
+  "failed": 0,
+  "killed": {
+   "parent": 0,
+   "user": 0,
+   "system": 0
+  },
+  "refused": {
+   "depth_limit": 0,
+   "concurrency_limit": 0,
+   "budget": 0
+  },
+  "by_type": {}
+ },
+ "safety_stops": 0,
+ "is_error": false,
+ "num_turns": 1,
+ "subtype": "success",
+ "api_error_status": null,
+ "result": "**Scope.** I read the \"correction\" as the final section, *coupling cannot erase a raw drift gap* (C008), which refines the caveat after w375 L2, plus the concrete constant c0. I also re-derived the earlier items it relies on.\n\n**C008: union bound.**\n- Let A = {U_n/n ≤ μ−c+ε} and B = {V_n/n ≥ μ−ε}.\n- On A∩B, (V_n−U_n)/n ≥ (μ−ε) − (μ−c+ε) = c−2ε.\n- P(A∩B) ≥ 1 − P(Aᶜ) − P(Bᶜ) holds for any joint law. ✓\n- The a.s. limsup bound gives P(U_n/n > μ−c+ε) ≤ P(sup_{m≥n} U_m/m > μ−c+ε) → 0, and likewise for V_n.\n- These are statements about single-n marginals, so they transfer to any coupling, even one that changes with n. ✓\n- ε ∈ (0, c/2) keeps c−2ε > 0. ✓\n\n**Meaning of μ.** For an axial endpoint, the coordinate-monotone path is unique, so V_n/n → E[t_e] by the SLLN. So μ must denote E[t_e], not the FPP time constant. Otherwise L2's \"limsup T/n ≤ μ−c\" would contradict Kingman. Read this way, L2 is the strict inequality g(e1) < E[t_e], and the text is consistent (\"directed axial cost divided by n tends to μ\" fixes this reading). It is not an error, but writing μ := E t_e explicitly would remove the ambiguity.\n\n**Concrete c0.**\n- Uniform[1,2] with low = [1, 5/4] and high = [7/4, 2]: each edge lands in its interval with probability 1/4.\n- With n = 6 there are 6 high and 8 low edges, all disjoint, giving probability 4^−14 = 1/268435456. ✓\n- Costs: 6·7/4 = 10.5 versus 8·5/4 = 10, a gap of 1/2. So δ ≥ (1/2)·4^−14. ✓\n- c = δ/(k+1) with k = 6 gives c ≥ 4^−14/14 = 1/3758096384 = c0, and 14·268435456 = 3758096384. ✓\n- Choosing ε = c/4 gives c−2ε = c/2 ≥ c0/2, which is the stated P(…≥ c0/2) → 1. ✓\n\n**Earlier items, rechecked.**\n- **Oscillating example (C002).**\n  - √Var X_n = n^{a_n} = D_n²/n. ✓\n  - Thresholds: χ_a = 1/3, χ_b = 1/4, ξ_a = 2/3, ξ_b = 5/8. ✓\n  - Gaps: 1/12 and 1/24. Both endpoint identities hold. ✓\n  - E exp(α|X_n|/n^q) = exp(α n^{a_n−q}), so the threshold arguments are exact.\n- **Bernoulli obstruction and filtration product bound.** Both correct. Measurability of earlier events follows from F_i increasing.\n- **D(0,e1) = 0 (C005).** Alternative self-avoiding paths have odd length ≥ 3, so cost ≥ 3 > 2. ✓\n\n**New faults.** The correction introduces none. It claims nothing about centered fluctuations, recentering, or P0110 itself, and its scope statements match what is proved.\n\nVERDICT: KEEP\nLINE CHECKED: \"P((V_n−U_n)/n ≥ c−2ε) ≥ 1 − P(U_n/n > μ−c+ε) − P(V_n/n < μ−ε) → 1\", valid for any coupling because both error terms depend only on single-n marginals, with μ = E[t_e] as the directed axial limit.\nFIX: none",
+ "ttft_ms": 24184,
+ "type": "result",
+ "duration_ms": 35599,
+ "uuid": "5679dbce-1c84-41c5-a90f-74f954a6464e",
+ "ttft_stream_ms": 2963,
+ "time_to_request_ms": 95,
+ "first_content_frame_ms": 2963,
+ "queued_turn_count": 0,
+ "result_index": 0,
+ "_rc": 0,
+ "_wall_s": 38.3
+}

@@ -1,0 +1,7 @@
+# Independent reconstruction of A060 and A091 inputs
+
+A060 universal one-query bound: HOLDS at the written scope. PROOF Section 1 reconstructs pivotal-product influence, edge isoperimetry with its factor 2, both entropy packet bounds, the two concavity intervals and the p>=1/2 boundary. The checker verifies all 804 physical coordinate cases on n<=3, with no symmetry quotient and exact signs. This is an author reconstruction by A059, independent of A060's implementation; no repair of the source is needed.
+
+A091 one-shot 9/2 original-core source: HOLDS at its stated expected-resource scope. A pending influence ticket is harmonic after booking its released coordinate influence into UNUSED cash. Its single selected fee is bounded by its principal. It closes once; both full actual child profiles and historical debits remain. The new two-ticket refinement allocates within this source BEFORE either fee, rather than declaring that A091's already-closed ticket can be reused. A060's smaller one-shot owner is not claimed to pay two queries.
+
+The original bank can be divided in advance because 9/2=2*(29/13)+1/26; log2(3)<8/5 is certified by 243<256. At q=1/2 the geometric bank equals the two-ticket sum. The scalar release, full wrapper profile identity and both terminal spectra are checked independently. Neither this review nor the new theorem pays an unrestricted complete core tree. External A091/A087 review of the new theorem remains pending.

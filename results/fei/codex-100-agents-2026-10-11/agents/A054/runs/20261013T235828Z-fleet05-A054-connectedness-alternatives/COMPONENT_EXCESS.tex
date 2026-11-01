@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A054: component cross term paid by physical projection uncertainty}
+All entropies use bits. Let $g=1_U=\sum_k g_k$ be its actual connected
+components and let $A$ be a proper nonempty physical block, $r=|A|$.
+Define raw Fourier entropy $F$, indicator energy $E_A$, and mass $M$.
+For the partial-Fourier amplitudes $v_t(x)$ put
+\[
+\Lambda_A(h)=B_A(h)+(\ln2)^{-1}\sum_t\operatorname{Ent}(v_t^2),\qquad
+B_A(h)=\sum_t q_t H((\widehat h(e,t)^2/q_t)_e).
+\]
+Raw entropy expansion gives $F(h)-\mathbb E_xF(h_x)=\Lambda_A(h)$,
+including physical mass-tilt. Thus the signed cross term
+$X_A=\Lambda_A(g)-\sum_k\Lambda_A(g_k)$ obeys
+\[
+F(g)-\sum_kF(g_k)=X_A+\mathbb E_x\left[F(g_x)-\sum_kF((g_k)_x)\right].
+\]
+Let $R_k$ be the component projections on $A$ and
+$\mu_k=|R_k|/2^r$, $p_k=M(g_k)$, $p=\sum_kp_k$.
+For any real $w$ supported on $R_k$, Cauchy--Schwarz implies
+$|\widehat w(e)|^2\le\mu_k\mathbb Ew^2$, and relative entropy to the
+uniform physical law is at least $\log_2(1/\mu_k)$. Consequently
+\[
+\Lambda_A(g_k)\ge2p_k\log_2(1/\mu_k),\qquad
+E_A(g_k)\ge\tfrac12p_k\log_2(1/\mu_k).
+\]
+The energy bound follows by indicator edge isoperimetry on each physical
+data fiber. Put $Q_A=\sum_kp_k\log_2(1/\mu_k)$,
+$\Theta_A=[rp-2Q_A]_+$ and $\kappa=2/\ln2$.
+If the projections are disjoint, the terminal term vanishes, and
+\[
+F(g)\le\sum_kF(g_k)+\Gamma_A,
+\quad\Gamma_A=[B_A(g)+\kappa E_A(g)-\sum_k\Lambda_A(g_k)]_+
+\le\kappa E_A(g)+\Theta_A.
+\]
+If $Q_A\ge rp/2$, then $\Gamma_A\le\kappa E_A(g)$ and
+$E_A(g)\ge rp/4$, without any Cartesian-component assumption.
+In this projection class physical raw-ratio criticality forces
+$R_{\rm raw}\le4+\kappa$; for $f=1-2g$, physical sign-ratio criticality
+and $p\ge p_0>0$ force $H(f)/I(f)\le\kappa+1/p_0$.
+The same class excludes dimension-minimal positive $H-KI$ deficits
+at $K\ge\kappa+1/p_0$ while retaining actual child deficits.
+Full proofs, controls and the open universal admission line appear in
+\texttt{PROJECTION\_PAYMENT.md}; full FEI remains open.
+\end{document}

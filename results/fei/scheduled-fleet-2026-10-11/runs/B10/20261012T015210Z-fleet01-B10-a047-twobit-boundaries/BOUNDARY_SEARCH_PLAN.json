@@ -1,0 +1,24 @@
+{
+  "schema": "fei-boundary-search-plan/1",
+  "packet_id": "A047",
+  "candidate_id": "B10-A046-HALF-BIAS-TAX@1",
+  "exact_reduction": "Every two-bit Boolean gate is constant, a dictator, parity-equivalent, or point-defect-equivalent. Only the point-defect class is nontrivial.",
+  "point_defect_parameters": {
+    "p": "probability of the exceptional value of the revealed bit",
+    "q": "probability of the exceptional value of the unrevealed bit",
+    "domain": "0<p,q<1"
+  },
+  "analytic_boundaries": [
+    "p down to 0 with fixed q, including the unique saturating q=1/4",
+    "p up to 1 with fixed q",
+    "q down to 0 and q up to 1 with fixed p",
+    "joint rare tube q=1/4+O(1/sqrt(log(1/p)))"
+  ],
+  "bounded_pilot_boxes": [
+    "p,q in {1/400,...,399/400}",
+    "p=2^-k for k=4,8,...,64,96,128,192,256,384,512 and q=1/4+j/(40 sqrt(k)) for -20<=j<=20",
+    "p=1-2^-k for k=4,8,...,64,96,128,192,256 and q=j/100 for 1<=j<=99"
+  ],
+  "proof_status": "Endpoint asymptotics proved; finite pilot numerical only; full interior continuum remains open.",
+  "next_certificate_target": "Prove D(p,q)<=0 on a compact interior rectangle and close the joint q->0,1 corners, using signed rational log intervals or an analytic monotonicity decomposition."
+}

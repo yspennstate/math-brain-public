@@ -1,0 +1,57 @@
+[
+  {
+    "claim_id": "A052-AFFINE-MINIMAL-PATH-COLLISION-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer m>=3, M=2^m and r=M-2, let C consist of zero and the vertex-edge incidence vectors of the path on r+1 vertices, indexed bijectively by y in F_2^m, and f_m(x,y)=(-1)^(x dot c_y). This actual Boolean function has full affine spectral dimension r+m, minimum influence over its full affine Fourier-label orbit, H=2m, I=2r/M+m/2, and original data coordinates 2,3 satisfy C_2=C_3=0 but C_{23}=2/M>0. Both restrictions at either coordinate retain entropy 2m and have influence I-2/M>0, hence strictly larger H/I. Therefore affine minimality and full affine span, even with Booleanity, do not imply any finite-multiple singleton domination at every physical pair; actual descendant criticality excludes this family.",
+    "hypotheses": [
+      "uniform finite cubes; Boolean signs; entropy bits",
+      "m integer >=3",
+      "path-incidence construction; coordinates indexed from zero",
+      "collision normalization given in PATH_CODE_PROOF.md section3"
+    ],
+    "statement_sha256": "ae6c7f78c0bbd6585d8e34ac698a1064d44318797d15b0d6df97f15dc6709e1d",
+    "contributors": [
+      "A052"
+    ],
+    "proof_source": [
+      "PATH_CODE_PROOF.md",
+      "out/PATH_GUARD.json",
+      "code/path_guard.py"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A051-AFFINE-MINIMUM-BASIS-CRITICAL-REDUCTION",
+        "version": 1,
+        "statement_sha256": "e5b7d55818d52b67c4844061b2553f5c652e703f790476a8f6880ca9afefd1e7",
+        "acceptance": "independently reconstructed without repair; see REVIEW_A051.md"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A052",
+        "kind": "author audit plus exact independent-representation checks",
+        "verdict": "PASS",
+        "scope": "all-m analytic derivation; direct nine-bit and implicit m3..6 checks; not independent-agent acceptance"
+      }
+    ],
+    "status": "AUTHOR_CHECKED_PROOF_AND_EXACT_CERTIFICATE; INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      {
+        "claim_id": "EXPLORATORY-AFFINE-PAIR-SINGLETON-DOMINATION",
+        "version": 0,
+        "exact_false_statement": "Full affine span and minimum affine-orbit influence imply C_ij<=2(C_i+C_j) for every original physical pair.",
+        "scope": "new exploratory statement only; no registered source theorem refuted"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A051",
+      "A055",
+      "A090",
+      "A094",
+      "B11",
+      "B20"
+    ]
+  }
+]

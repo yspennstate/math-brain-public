@@ -1,0 +1,11 @@
+P0297 is not proved. This packet supplies a concrete source correction and a separate Euclidean-clock proof attempt.
+
+The prior D0049-A001 attempt has two incorrect formulas d_gamma=2Q/xi. The primary definition is xi=gamma/d_gamma, so the proposed correction is d_gamma=gamma/xi. At the established Brownian-map parameter the wrong formula gives 10 and the correct one gives 4. [Gwynne--Miller, equation (1.5) and Problem 7.1](https://arxiv.org/pdf/1905.00383). The patch changes only key_identity and method; other fields are preserved and are not thereby audited. Apply it only if the old row still matches; merge the two fields if another worker has changed that row.
+
+W519-L2 proves that a positive local mass exponent survives the logarithmic disk Green potential. W519-L5 applies the exact-dimensionality theorem of Falconer--Jin to obtain the Euclidean potential exponent 2-gamma^2/2 for subcritical disk GMC. The conditional conversion in L4 returns gamma/xi, leaving the actual metric exponent unknown. The saved snowflake control does not satisfy the strong-LQG length axiom and is omitted as a duplicate brain card.
+
+Measurements: `python -X utf8 ~/brain_workers/w519/prepare_packet.py` reports two bad formula occurrences before and zero after in the proposed copy, six draft entries and seven valid relations, with zero of those planned logical IDs already in the queried store. `python -X utf8 ~/brain_workers/w519/check_examples.py` passed 26/26 scalar identity controls in 0.000276 seconds and exhibited six different metric dimensions at the same spectral dimension. These are example calculations and schema checks, not mathematical proof certification or a measured live recall improvement.
+
+Reviewer application: apply patches/01_intake_D_lqg_dimension_identity.diff to its named live row after audit. Review the hook proposal in patch 02 separately. The explicitly authorized inbox draft is submitted without live store ingestion; BRAIN_FLOW.json records submission, review, ingestion and retrievability separately. W521 independently kept L1; remaining claims require review. The general solution, an exhaustive owner-status check, and novelty certification remain absent.
+
+NEXT: Referee checks C2 and L2--L5; further proof work must bound an actual metric-radius exponent without substituting the unknown d_gamma.

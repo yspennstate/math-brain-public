@@ -1,0 +1,9 @@
+Command: lake env lean ~/brain_workers/TRIO_1011/op/P0286/Algebra.lean
+Working directory: ~/lean_verify
+2026-10-12: Command submitted once; shared Lean gateway reported waiting for a slot.
+The gateway then reported: [leancheck] slot 0 taken after 1559 s; running the check
+Completion: exec session 40583 returned exit_code: 0, output: empty (no Lean errors or warnings).
+VERIFIED: projection_covariance_constraint, queue_drift_identity, spectral_denominator_identity.
+These are kernel-checked algebraic identities only. The probability proofs, spectral analysis, and asymptotic limits remain handwritten proofs; they are not Lean-formalized.
+The shared wrapper was read only to confirm scheduling and its 3600-second compilation timeout; no scheduler state was changed.
+The file imports only Mathlib.Tactic.Ring and Mathlib.Data.Real.Basic and has no sorry or native_decide.

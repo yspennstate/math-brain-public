@@ -1,0 +1,29 @@
+% A019 structural extension; entropy in bits, uniform physical coordinates.
+\paragraph{Rare disjoint-module translation closure.}
+Let $g:\mathbb F_2^n\to\{-1,1\}$, let $W_j$ be mutually disjoint fresh
+blocks of size $k_j\ge1$, and let $v_j\in\mathbb F_2^n$ be arbitrary.
+For $A_j(w_j)=\mathbf1_{w_j=z_j}$ set
+$F(w,y)=g(y+\sum_jv_jA_j(w_j))$.
+Define $\delta_j=2^{-k_j}$ and
+$\rho_j=\Pr[g(y)\ne g(y+v_j)]$.
+Then, writing $E_k=H(1-2\mathbf1_{w=z})$,
+\[
+ H(F)=H(g)+\sum_j\rho_jE_{k_j},\qquad
+ I(F)=I(g)+\sum_j2k_j\delta_j\rho_j,
+ \qquad M_W=0,\quad B_W=\sum_j\rho_jE_{k_j}\le4I_W(F).
+\]
+Indeed the data coefficient row at $T$ is
+$\widehat g(T)\prod_{j:T\cdot v_j=1}(-1)^{A_j(w_j)}$.
+Its squared selector spectrum tensorizes across the physical blocks.
+Each module has empty mass $(1-2\delta)^2$ and $2^k-1$ nonempty masses
+$4\delta^2$. Hence
+\[
+ \frac{E_k}{2k\delta}
+ \le(1-\delta)\left(4-\frac{4-2/\ln2}{k}\right)<4,
+ \qquad\lim_{k\to\infty}\frac{E_k}{2k\delta}=4.
+\]
+Thus a certified core constant $C$ is preserved at $\max\{C,4\}$,
+uniformly over finite nesting using fresh selector modules. The arbitrary
+terminal core remains a separate obligation. Constant $4$ pays entire
+modules, not every singleton query. See REPORT.md for the complete proof,
+exact validation, singleton guard and bent-splice exclusion.

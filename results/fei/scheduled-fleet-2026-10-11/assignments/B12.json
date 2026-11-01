@@ -1,0 +1,378 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B12",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A056",
+      "stream": "B12",
+      "topic": "Balanced composition",
+      "target_statement": "Reprove the full entropy and influence identities for balanced disjoint substitution. Track means and the precise conditions needed when a child is later physically restricted.",
+      "work_type": "baseline_reproduction",
+      "priority": "P0",
+      "mathematical_design_status": "RECOVERED_BASELINE",
+      "deliverables": [
+        {
+          "deliverable_id": "A056-D1",
+          "description": "BALANCED_SUBSTITUTION_BASELINE.tex: exact H and I identities",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A056-D2",
+          "description": "COMPOSITION_INTERFACE.json: balance, block independence, and child-mean requirements",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "For disjoint balanced children prove/source-pin H(g(h))=H(g)+Σ_i I_i(g)H(h_i) and I(g(h))=Σ_i I_i(g)I(h_i).",
+        "Track all child means after a physical restriction and identify where the balanced formula ceases to apply.",
+        "Complete this baseline once; do not repeatedly claim the known chain rule as progress on overlapping or biased composition."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A004",
+          "interface": "sign and entropy conventions"
+        },
+        {
+          "agent_id": "A024",
+          "interface": "induced child means"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A013",
+          "interface_use": "disjoint substitution baseline"
+        },
+        {
+          "agent_id": "A018",
+          "interface_use": "existing disjoint-composition comparison"
+        },
+        {
+          "agent_id": "A024",
+          "interface_use": "means under disjoint substitution"
+        },
+        {
+          "agent_id": "A043",
+          "interface_use": "exact disjoint composition identities"
+        },
+        {
+          "agent_id": "A053",
+          "interface_use": "product H/I identities"
+        },
+        {
+          "agent_id": "A057",
+          "interface_use": "balanced substitution baseline"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 1,
+      "renewal_milestone": "One reusable identity/interface packet is reviewed and retired; new coherent remainder work belongs to A057.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_multiplexers",
+        "brain_phase_energy"
+      ],
+      "advisory_F_tags": [
+        "F02",
+        "F10",
+        "F11",
+        "F13",
+        "F14"
+      ]
+    },
+    {
+      "agent_id": "A057",
+      "stream": "B12",
+      "topic": "Coherent restriction remainder",
+      "target_statement": "Use the exact coherent-composition remainder from the Brain. Seek a summable bound that retains its alpha^2 log(1/alpha^2) term rather than replacing it by O(alpha^2).",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A057-D1",
+          "description": "COHERENT_REMAINDER_PAYMENT.tex: exact remainder and summed compensation",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A057-D2",
+          "description": "ALPHA_LOG_CONTROLS.md: small-alpha and cancellation regimes",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Import the complete source remainder, including qα² log(1/α²) and both E_raw(a±αb) terms, with the source's nats converted consistently.",
+        "Do not replace the remainder by O(α²): the recovered logarithmic counterexample must pass as a mandatory control.",
+        "Prove a nonreusing sum across the actual physical hierarchy or a complete scoped theorem; equality of child spectra cannot be assumed after coherent substitution."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A056",
+          "interface": "balanced substitution baseline"
+        },
+        {
+          "agent_id": "A024",
+          "interface": "induced means after restriction"
+        },
+        {
+          "agent_id": "A018",
+          "interface": "exact coherent collision interface"
+        },
+        {
+          "agent_id": "A037",
+          "interface": "released-credit chain rule"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A058",
+          "interface_use": "coherent remainder accounting"
+        },
+        {
+          "agent_id": "A059",
+          "interface_use": "summed coherent remainder"
+        },
+        {
+          "agent_id": "A091",
+          "interface_use": "coherent remainder"
+        },
+        {
+          "agent_id": "A097",
+          "interface_use": "coherent remainder"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A genuinely summable coherent remainder on an unbounded composition family, or a precise scalable failure of the proposed amortization.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_multiplexers",
+        "brain_phase_energy"
+      ],
+      "advisory_F_tags": [
+        "F02",
+        "F10",
+        "F11",
+        "F13",
+        "F14"
+      ]
+    },
+    {
+      "agent_id": "A058",
+      "stream": "B12",
+      "topic": "Overlapping compositions",
+      "target_statement": "Identify a nontrivial class of shared-input compositions with a provable entropy ledger. Use collision or posterior information explicitly; disjoint-block chain rules cannot simply be reused.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A058-D1",
+          "description": "OVERLAPPING_COMPOSITION_CLASS.tex: explicit non-selector or repeated-control class",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A058-D2",
+          "description": "OVERLAP_ENTROPY_LEDGER.md: collision, posterior, and influence accounting",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Choose a class distinct from A019's fresh-selector quantitative-correlation problem—for example an overlapping non-selector outer composition or controlled reuse of selector coordinates—and define it exactly.",
+        "Do not apply disjoint-block chain rules to shared physical inputs; give an actual coefficient or posterior decomposition.",
+        "State and prove the structural hypothesis paying the full collision debt, with the bent-splice selector-only increment failure included when relevant."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A018",
+          "interface": "exact collision/block ledger"
+        },
+        {
+          "agent_id": "A057",
+          "interface": "coherent remainder accounting"
+        },
+        {
+          "agent_id": "A013",
+          "interface": "reuse stability"
+        },
+        {
+          "agent_id": "A019",
+          "interface": "boundary of the already studied selector classes"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A059",
+          "interface_use": "overlapping class interface"
+        },
+        {
+          "agent_id": "A060",
+          "interface_use": "overlapping-composition theorem"
+        },
+        {
+          "agent_id": "A091",
+          "interface_use": "overlapping composition"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A new explicitly defined shared-input class with a complete entropy ledger and controlled influence cost.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_multiplexers",
+        "brain_phase_energy"
+      ],
+      "advisory_F_tags": [
+        "F02",
+        "F10",
+        "F11",
+        "F13",
+        "F14"
+      ]
+    },
+    {
+      "agent_id": "A059",
+      "stream": "B12",
+      "topic": "Decomposition depth",
+      "target_statement": "Prove a factorization or stopping theorem that limits accumulated overhead without assuming bounded formula depth. Supply an explicit family of growing-depth functions covered by the theorem.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A059-D1",
+          "description": "DEPTH_UNIFORM_FACTORIZATION.tex: decomposition or stopping theorem",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A059-D2",
+          "description": "GROWING_DEPTH_FAMILY.md: exact parameter growth and uniform constant",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Prove termination or summability without assuming a bounded depth or bounded number of composition steps.",
+        "Track each overhead term along the full decomposition; a constant per level gives a depth factor unless a proved compensation removes it.",
+        "Exhibit a family of growing depth and demonstrate that the new theorem covers it outside a simple restatement of existing read-once/orthogonal closure."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A043",
+          "interface": "genuine prime decomposition"
+        },
+        {
+          "agent_id": "A057",
+          "interface": "summed coherent remainder"
+        },
+        {
+          "agent_id": "A058",
+          "interface": "overlapping class interface"
+        },
+        {
+          "agent_id": "A028",
+          "interface": "stopping at known terminals"
+        }
+      ],
+      "next_consumers": [],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A depth-uniform theorem with a specific growing family or an analytic lower bound on unavoidable accumulated overhead.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_multiplexers",
+        "brain_phase_energy"
+      ],
+      "advisory_F_tags": [
+        "F02",
+        "F10",
+        "F11",
+        "F13",
+        "F14"
+      ]
+    },
+    {
+      "agent_id": "A060",
+      "stream": "B12",
+      "topic": "Composition sharpness",
+      "target_statement": "Find exact examples showing which constants or hypotheses in new closure results are necessary. Check whether a purported improvement changes only an additive constant that disappears under tensorization.",
+      "work_type": "counterexample_family",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A060-D1",
+          "description": "COMPOSITION_SHARPNESS.tex: exact extremal/control families",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A060-D2",
+          "description": "CONSTANT_SCOPE.json: necessary coefficients, assumptions, and additive losses",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Compute H, I, means, and relevant correlations exactly for each claimed sharpness example.",
+        "Distinguish an additive improvement erased by tensorization from a change in the multiplicative universal/class coefficient.",
+        "Compare only examples satisfying all of the theorem's fresh-selector, bias, orthogonality, or overlap hypotheses."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A019",
+          "interface": "proposed correlation/class closure"
+        },
+        {
+          "agent_id": "A044",
+          "interface": "new biased gate result"
+        },
+        {
+          "agent_id": "A058",
+          "interface": "overlapping-composition theorem"
+        },
+        {
+          "agent_id": "A002",
+          "interface": "tensor amplification"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A019",
+          "interface_use": "closure sharpness examples"
+        }
+      ],
+      "independent_reviewers": [
+        "A091",
+        "A090"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "A rigorous lower bound on one proposed coefficient or a counterexample identifying a necessary hypothesis.",
+      "source_ids": [
+        "threshold_source",
+        "reductions_multiplexers",
+        "brain_phase_energy"
+      ],
+      "advisory_F_tags": [
+        "F02",
+        "F10",
+        "F11",
+        "F13",
+        "F14"
+      ]
+    }
+  ]
+}

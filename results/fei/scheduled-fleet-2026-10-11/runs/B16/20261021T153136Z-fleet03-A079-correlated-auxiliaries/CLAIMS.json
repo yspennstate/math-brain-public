@@ -1,0 +1,92 @@
+[
+  {
+    "claim_id": "A032-PRODUCT-BRANCH-MASS-RIGIDITY",
+    "version": 1,
+    "exact_statement": "For every Boolean g(z,Y) on the independent uniform physical cube, if every positive conditional squared Fourier law of S_Y given S_z=b is coordinate product, allowing arbitrary marginals, deterministic frequency coordinates and arbitrary signs, then every varying conditional marginal is fair; if both branches are positive their masses are exactly1/2. Consequently H(g)<=2I(g) sharply in every dimension, in bits and original physical influence. More generally every nonzero integer ternary physical row with product normalized squared spectrum has reduced dyadic norm numerator1 modulo4; thus no ternary product spectrum with norm3/8 is realizable by any signs in any dimension.",
+    "hypotheses": [
+      "Actual Boolean g on independent uniform input; split one original physical frequency coordinate",
+      "All positive branch spectral laws coordinate product; deterministic labels and all signs allowed",
+      "Ternary norm clause assumes a nonzero row with values0,+/-1 and product normalized spectrum",
+      "Entropy bits; physical influence in original coordinates"
+    ],
+    "statement_sha256": "5edf08cfa795791ce83f62dead2f8b924e3832e07fea2da0f59ca297d5f9d68a",
+    "contributors": [
+      "A032"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A032\\runs\\20261014T105923Z-fleet05-A032-boolean-phase-realizability\\MASS_RIGIDITY.md",
+      "sha256": "3f28dafae512dfb3b2869af3fc56d7578130f804b4c3d5c1fe5df3c322ab618e",
+      "validation": [
+        "out/validation.json",
+        "out/mass_congruence.json",
+        "out/ternary_obstruction.json",
+        "out/truth_tables.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A079",
+        "at": "2026-10-21T15:53:57.077412+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A079\\runs\\20261021T153136Z-fleet03-A079-correlated-auxiliaries\\REVIEW_A032.md",
+        "method": "Independent primitive-integer/mod4/entropy reconstruction; no repair, no author implementation imported",
+        "finite_validation": "out/validation.json",
+        "formal_verification": "NOT_CLAIMED"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_BY_A079_LOCAL_REGISTRY_ADOPTION_UNVERIFIED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A079",
+      "A034",
+      "A033",
+      "A088",
+      "A094",
+      "B07-lead",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A079-FIXED-NONFAIR-SIBLING-SEED-TRANSPORT",
+    "version": 1,
+    "exact_statement": "There exist fixed complementary ternary/indicator rows a,b on four uniform physical bits, with E a^2=5/8 and E b^2=3/8, such that for every Boolean seed h on a disjoint uniform cube, F_h(z,u,x)=a(u)+z*b(u)*h(x) is Boolean, its z-frequency0 normalized squared row remains the same coordinate-product law with three fair marginals and one4:1 marginal, its other row is nonproduct, H(F_h)=5-(9/16)log2(3)+(3/8)H(h), I(F_h)=17/8+(3/8)I(h), I_z=3/8 and I_(u,x)=7/4+(3/8)I(h). With X=(z,unused d) and Y=(u,x), H(Y|X)=(5/8)[7/5+log2(5)]+(3/8)[3-(1/2)log2(3)+H(h)] and the signed address/order1/2-Renyi gap is3/4-2log2(3)-(3/8)R(h). For h_t=ell times t independent copies of any nonconstant Boolean seed f, the joint and conditional/data-influence ratios tend to H(f)/I(f), while the address/seed spectral mutual information is exactly h2(3/8). A universal FEI bound on this fixed-mask one-product-branch class therefore implies full FEI at the same constant; no unbounded-ratio Boolean seed or full-FEI proof is supplied.",
+    "hypotheses": [
+      "Actual Boolean signs on independent uniform physical cube; fixed displayed a,b on16 points",
+      "Fresh seed variables and fresh physical address z; optional second address unused",
+      "All entropies in bits; influence in original physical coordinates; R is order1/2",
+      "Limit uses nonconstant seed I(f)>0 and accounts for balancing sign ell"
+    ],
+    "statement_sha256": "9f459612f7674cd2e65de549e8fd7f36450f149c912b9a5381dd6fbb64da82b6",
+    "contributors": [
+      "A079"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A079\\runs\\20261021T153136Z-fleet03-A079-correlated-auxiliaries\\PROOF.md",
+      "sha256": "54153a0b2aaf9fc58924a2ceef3f94ab89582c8d8e4fb5497a5eca7260c8da1f",
+      "validation": [
+        "out/validation.json",
+        "out/balanced_validation.json"
+      ],
+      "formal_verification": "CORE_LEAN_ATTEMPT_RUNTIME_UNVERIFIED; no theorem certificate"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A032",
+      "A034",
+      "A088",
+      "A094",
+      "A096",
+      "A097",
+      "B16",
+      "B20"
+    ]
+  }
+]

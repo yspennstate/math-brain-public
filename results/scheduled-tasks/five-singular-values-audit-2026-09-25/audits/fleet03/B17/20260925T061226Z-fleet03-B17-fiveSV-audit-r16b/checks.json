@@ -1,0 +1,17 @@
+{
+  "run_id": "20260925T061226Z-fleet03-B17-fiveSV-audit-r16b",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "finding": "C06b",
+  "lemma_2_5_statement": "PASS",
+  "lemma_2_5_literal_proof": "GAP_ZERO_PADDED_INDEX_BRANCH",
+  "repair": "If s_j(T)=0 the variational lower bound is trivial; otherwise j<=rank(T), so the first j right singular vectors exist and the source argument applies.",
+  "downstream_impact": "NONE_FOUND",
+  "affected_uses": [
+    "line 160 live index",
+    "lines 573-577 live indices"
+  ],
+  "section6_7_regression": "PASS_NO_NEW_DEFECT",
+  "C07": "UNCHECKED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN"
+}

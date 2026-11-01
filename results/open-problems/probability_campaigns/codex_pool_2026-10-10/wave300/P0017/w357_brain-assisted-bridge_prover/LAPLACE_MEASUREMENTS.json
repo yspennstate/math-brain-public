@@ -1,0 +1,89 @@
+{
+  "task": "P0017 weighted-covariance shortcut",
+  "gate": {
+    "task": "P0017 fixed one-dimensional Laplace posterior audit",
+    "created_date": "2026-10-10",
+    "allowed": true,
+    "noise_variance": 1.0,
+    "max_posterior_evaluations": 50000,
+    "max_runtime_seconds": 15,
+    "processes": 1,
+    "gpu": false,
+    "training": false,
+    "network": false,
+    "output_scope": "~/brain_workers/w357",
+    "purpose": "Reproduce the false weighted-covariance bridge at finite tail locations; floating-point evidence supplements the analytic proof and does not certify KLS."
+  },
+  "command": "python -X utf8 measure_laplace.py",
+  "unweighted_E_A": 0.4791602054814605,
+  "mmse_upper_bound": 0.5,
+  "observation_density_integral_on_minus20_20": 0.9999999999985857,
+  "posterior_variances": [
+    {
+      "y": 0.0,
+      "posterior_variance_over_t": 0.36103248576520897
+    },
+    {
+      "y": 2.0,
+      "posterior_variance_over_t": 0.6300588760598071
+    },
+    {
+      "y": 4.0,
+      "posterior_variance_over_t": 0.9802178329951827
+    },
+    {
+      "y": 6.0,
+      "posterior_variance_over_t": 0.9999808607802549
+    },
+    {
+      "y": 8.0,
+      "posterior_variance_over_t": 0.999999999697252
+    },
+    {
+      "y": 10.0,
+      "posterior_variance_over_t": 1.0
+    }
+  ],
+  "weighted_ratios": [
+    {
+      "L": 0.0,
+      "ratio": 0.44326628160050663
+    },
+    {
+      "L": 2.0,
+      "ratio": 0.7314286464651677
+    },
+    {
+      "L": 4.0,
+      "ratio": 0.9672371079249121
+    },
+    {
+      "L": 6.0,
+      "ratio": 0.9993436701158052
+    },
+    {
+      "L": 8.0,
+      "ratio": 0.9999982039421331
+    }
+  ],
+  "formula_cross_checks": [
+    {
+      "y": 0.0,
+      "absolute_formula_vs_quadrature_error": 1.8838849182856165e-06
+    },
+    {
+      "y": 2.0,
+      "absolute_formula_vs_quadrature_error": 4.4528240539243313e-07
+    },
+    {
+      "y": 6.0,
+      "absolute_formula_vs_quadrature_error": 1.227437818052124e-09
+    }
+  ],
+  "L6_refined_ratio": 0.9993436701241654,
+  "L6_refinement_difference": 8.360201420032354e-12,
+  "posterior_evaluations": 34526,
+  "elapsed_seconds": 0.06982089998200536,
+  "status": "floating-point reproduction; analytic proof is ATTEMPT.md L6",
+  "KLS_proved": false
+}

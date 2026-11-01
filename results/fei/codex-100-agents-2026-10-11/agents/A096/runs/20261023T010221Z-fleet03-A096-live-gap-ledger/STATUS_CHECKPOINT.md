@@ -1,0 +1,1 @@
+Analytic derivation saved. New supplied-likelihood selective-frontier theorem pays arbitrary finite exit query trees, extends the one-query reset policy, and preserves the same structural rate18 with at least7e_root residual. Numerical/exact validation and independent review are not yet complete. Full FEI remains OPEN.

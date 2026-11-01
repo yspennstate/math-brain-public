@@ -1,0 +1,284 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\boxt}{\boxtimes}
+
+\title{Failure of Free Multiplicative Strong Log-Unimodality at Every Time}
+\author{}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $\sigma_t$ denote the marginal law of free positive multiplicative Brownian motion. Hasebe, Ueda and Wang asked whether $\sigma_t$ fails free multiplicative strong log-unimodality for every $t>0$. We answer this affirmatively. For each $t>0$ we give an explicit log-unimodal probability measure $\nu_t$ on $(0,\infty)$ such that $\sigma_t\boxtimes\nu_t$ is not log-unimodal. The proof uses the root-count criterion of Hasebe--Ueda--Wang and a one-parameter family of Poisson-type kernels whose normalized profiles are monotone in the kernel scale.
+\end{abstract}
+
+\section{Statement and source criterion}
+
+A probability measure $\mu$ on $(0,\infty)$ is \emph{log-unimodal} when $\log_*\mu$ is unimodal on $\R$. It is \emph{$\boxtimes$-strongly log-unimodal} when $\mu\boxtimes\nu$ is log-unimodal for every log-unimodal probability measure $\nu$ on $(0,\infty)$.
+
+Hasebe, Ueda and Wang~\cite{HUW} proved that $\sigma_t$ fails this strong property for sufficiently small $t>0$ and asked in their Problem~4.11 whether the failure holds for every $t>0$. We prove the full statement.
+
+\begin{theorem}\label{thm:main}
+For every $t>0$, the free positive multiplicative Brownian law $\sigma_t$ is not $\boxtimes$-strongly log-unimodal. More precisely, for every $t>0$ there is an explicit log-unimodal probability measure $\nu_t$ such that $\sigma_t\boxtimes\nu_t$ is not log-unimodal.
+\end{theorem}
+
+We use Hasebe--Ueda--Wang's Lemma~4.1 in the following contrapositive form. For $b\in(0,\pi)$ let
+\begin{equation}\label{eq:lambda}
+ \lambda_b(dr)=\frac{c_b}{1-2r\cos b+r^2}\,dr,
+ \qquad c_b=\frac{\sin b}{\pi-b}.
+\end{equation}
+If $\sigma_t\boxtimes\nu$ is log-unimodal, then for every $a\in(0,1/t)$ the equation
+\begin{equation}\label{eq:source-level}
+ \frac{r}{c_{a\pi t}}\frac{d(\lambda_{a\pi t}\circledast\nu^{-1})}{dr}(r)
+ =\frac{a\pi}{\sin(a\pi t)}
+\end{equation}
+has at most two positive solutions $r$. Here $\circledast$ is classical multiplicative convolution and $\nu^{-1}$ is the image of $\nu$ under $x\mapsto x^{-1}$. Thus it suffices to construct a log-unimodal $\nu$ and one admissible $a$ for which \eqref{eq:source-level} has four positive roots.
+
+\section{A normalized kernel}
+
+Under logarithmic coordinates $r=e^x$, the density of $\log_*\lambda_b$ is
+\begin{equation}\label{eq:h}
+ h_b(x)=\frac{c_b}{2(\cosh x-\cos b)}.
+\end{equation}
+Set
+\begin{equation}\label{eq:K}
+ A_b=\frac{\pi}{\pi-b},
+ \qquad
+ K_b(v)=\frac{b}{A_b}h_b(bv)
+ =\frac{b\sin b}{2\pi(\cosh(bv)-\cos b)}.
+\end{equation}
+
+\begin{lemma}[scale monotonicity]\label{lem:monotone}
+For every fixed $v\in\R$, $b\mapsto K_b(v)$ is non-increasing on $(0,\pi)$. Moreover
+\begin{equation}\label{eq:K0}
+ K_b(v)\le K_0(v):=\frac{1}{\pi(1+v^2)}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Write
+\[
+ K_b(v)=\frac{1}{2\pi G_v(b)},
+ \qquad
+ G_v(b)=\frac{\cosh(bv)-\cos b}{b\sin b}.
+\]
+The decomposition
+\begin{equation}\label{eq:G-decomp}
+ G_v(b)
+ =\frac{\cosh(bv)-1}{b^2}\frac{b}{\sin b}
+ +\frac{\tan(b/2)}{b}
+\end{equation}
+shows that $G_v$ is non-decreasing. Indeed, $b/\sin b$ is increasing because
+\[
+ \left(\frac b{\sin b}\right)'
+ =\frac{\sin b-b\cos b}{\sin^2b}>0,
+\]
+and $\tan(b/2)/b$ is increasing because $x\mapsto \tan x/x$ is increasing on $(0,\pi/2)$. Finally, with
+\[
+ \phi(x)=\frac{\cosh x-1}{x^2},
+\]
+we have
+\[
+ \phi'(x)=\frac{x\sinh x-2(\cosh x-1)}{x^3}\ge0
+ \quad (x>0),
+\]
+because the numerator has derivative $x\cosh x-\sinh x$ and second derivative $x\sinh x\ge0$, both starting from zero at the origin. Since $\phi$ is even, $(\cosh(bv)-1)/b^2=v^2\phi(bv)$ is non-decreasing in $b>0$. Hence $G_v$ is non-decreasing and $K_b$ is non-increasing. Taking $b\downarrow0$ in \eqref{eq:K} yields \eqref{eq:K0}.
+\end{proof}
+
+An exact primitive is
+\begin{equation}\label{eq:primitive}
+ \int_u^v K_b(w)\,dw
+ =\frac{\Phi_b(v)-\Phi_b(u)}{\pi},
+ \qquad
+ \Phi_b(v)=\arctan\!\left(\cot\frac b2\,\tanh\frac{bv}{2}\right).
+\end{equation}
+
+\section{The witness profile}
+
+Fix
+\begin{equation}\label{eq:constants}
+ B=\frac1{10},\qquad \kappa=\frac85,\qquad d=\frac{19}{20}.
+\end{equation}
+For $0<b\le B$ and $\ell\ge100$, set
+\[
+ p=\frac{\kappa}{\ell}
+\]
+and define the probability measure $\nu_{b,p,\ell}$ by
+\begin{equation}\label{eq:witness}
+ \log_*\nu_{b,p,\ell}
+ =p\delta_0+\frac{1-p}{\ell b}\mathbf 1_{[-\ell b,0]}(y)\,dy.
+\end{equation}
+This is unimodal on the logarithmic line with mode $0$, hence $\nu_{b,p,\ell}$ is log-unimodal with mode $1$.
+
+The inverse law has its uniform logarithmic density on $[0,\ell b]$. Therefore the logarithmic density $q_{b,p,\ell}$ of $\lambda_b\circledast\nu_{b,p,\ell}^{-1}$ is
+\[
+ q_{b,p,\ell}(x)
+ =p h_b(x)+\frac{1-p}{\ell b}\int_0^{\ell b}h_b(x-y)\,dy.
+\]
+Define
+\begin{equation}\label{eq:S}
+ S_{b,p,\ell}(y)
+ :=\frac b{A_b}q_{b,p,\ell}(by)
+ =pK_b(y)+\frac{1-p}{\ell}\int_{y-\ell}^{y}K_b(v)\,dv
+\end{equation}
+and
+\begin{equation}\label{eq:R}
+ R_{b,\ell}(y):=\ell S_{b,p,\ell}(y)
+ =\kappa K_b(y)+\left(1-\frac{\kappa}{\ell}\right)
+ \int_{y-\ell}^{y}K_b(v)\,dv.
+\end{equation}
+
+\begin{lemma}[uniform high--low--high pattern]\label{lem:crossings}
+For every $0<b\le1/10$ and every $\ell\ge100$,
+\begin{equation}\label{eq:HLH}
+ R_{b,\ell}(0)>\frac{19}{20},\qquad
+ R_{b,\ell}(3)<\frac{19}{20},\qquad
+ R_{b,\ell}(\ell/2)>\frac{19}{20}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Since $\ell\ge100$,
+\begin{equation}\label{eq:coeff}
+ 1-\frac{\kappa}{\ell}\ge\frac{123}{125}.
+\end{equation}
+
+At $y=0$, Lemma~\ref{lem:monotone} and interval inclusion give
+\[
+ R_{b,\ell}(0)
+ \ge \frac85 K_B(0)+\frac{123}{125}\int_{-100}^0K_B(v)\,dv.
+\]
+Elementary Taylor estimates and $\pi<22/7$ give
+\[
+ K_B(0)>\frac{4193}{13200}.
+\]
+Using \eqref{eq:primitive},
+\[
+ \int_{-100}^0K_B(v)\,dv
+ =\frac1\pi\arctan\!\left(\cot\frac1{20}\tanh5\right).
+\]
+The bounds $\cot(1/20)>799/40$ and $\tanh5>9/10$ make the arctangent argument larger than $16$. Since $\arctan(16)>\pi/2-1/16>12\pi/25$, we obtain
+\[
+ \int_{-100}^0K_B>\frac{12}{25}.
+\]
+Therefore
+\begin{equation}\label{eq:high0}
+ R_{b,\ell}(0)
+ >\frac85\frac{4193}{13200}+\frac{123}{125}\frac{12}{25}
+ =\frac{202241}{206250}>\frac{19}{20}.
+\end{equation}
+
+At $y=3$, Lemma~\ref{lem:monotone} gives
+\[
+ R_{b,\ell}(3)
+ \le \frac85K_0(3)+\int_{-\infty}^3K_0(v)\,dv
+ =1-\frac{\arctan(1/3)}\pi+\frac4{25\pi}.
+\]
+The alternating series gives $\arctan(1/3)>26/81$, while
+\[
+ \frac\pi{20}+\frac4{25}<\frac{11}{70}+\frac4{25}=\frac{111}{350}
+\]
+and
+\[
+ \frac{26}{81}-\frac{111}{350}=\frac{109}{28350}>0.
+\]
+Hence $R_{b,\ell}(3)<19/20$.
+
+At $y=\ell/2$, discard the nonnegative first term in \eqref{eq:R}. By Lemma~\ref{lem:monotone}, \eqref{eq:coeff}, and $\ell\ge100$,
+\[
+ R_{b,\ell}(\ell/2)
+ \ge\frac{123}{125}\int_{-50}^{50}K_B(v)\,dv.
+\]
+The primitive \eqref{eq:primitive} gives
+\[
+ \int_{-50}^{50}K_B
+ =\frac2\pi\arctan\!\left(\cot\frac1{20}\tanh\frac52\right).
+\]
+Now $\cot(1/20)>799/40$ and $\tanh(5/2)>29/30$, so the arctangent argument is larger than $23171/1200$. Using $\arctan x>\pi/2-1/x$ and the elementary rational lower bound $\pi>333/106$, one gets
+\[
+ \int_{-50}^{50}K_B>\frac{967}{1000}.
+\]
+Thus
+\begin{equation}\label{eq:highmid}
+ R_{b,\ell}(\ell/2)
+ >\frac{123}{125}\frac{967}{1000}
+ =\frac{118941}{125000}>\frac{19}{20}.
+\end{equation}
+This proves \eqref{eq:HLH}.
+\end{proof}
+
+\section{All times}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Fix $t>0$ and define
+\begin{equation}\label{eq:path}
+ \ell(t)=\max\{100,95\pi t\},
+ \qquad
+ b(t)=\sqrt{\frac{\pi d t}{\ell(t)}},
+ \qquad
+ p(t)=\frac{8}{5\ell(t)},
+ \qquad
+ D(t)=\frac{d}{\ell(t)}.
+\end{equation}
+If $\ell(t)=95\pi t$, then $b(t)^2=d/95=1/100$. If $\ell(t)=100$, the defining inequality $95\pi t\le100$ again gives $b(t)^2\le1/100$. Therefore
+\begin{equation}\label{eq:range}
+ 0<b(t)\le\frac1{10},\qquad \ell(t)\ge100,
+ \qquad 0<p(t)\le\frac2{125}<1.
+\end{equation}
+Let $\nu_t=\nu_{b(t),p(t),\ell(t)}$ from \eqref{eq:witness}. Lemma~\ref{lem:crossings}, divided by $\ell(t)$, gives
+\[
+ S_t(0)>D(t),\qquad S_t(3)<D(t),\qquad S_t(\ell(t)/2)>D(t).
+\]
+Because $\ell(t)\ge100$, the three displayed points are strictly ordered. Also $S_t(y)\to0$ as $y\to\pm\infty$. Since $D(t)>0$ and $S_t$ is continuous, the equation
+\begin{equation}\label{eq:Slevel}
+ S_t(y)=D(t)
+\end{equation}
+has at least four distinct real roots: one to the left of $0$, one in $(0,3)$, one in $(3,\ell(t)/2)$, and one to the right of $\ell(t)/2$.
+
+The parameter choice satisfies
+\begin{equation}\label{eq:timeid}
+ \frac{b(t)^2}{\pi D(t)}=t.
+\end{equation}
+Set
+\[
+ a(t)=\frac{D(t)}{b(t)}.
+\]
+Then
+\[
+ a(t)\pi t=b(t)<\pi,
+\]
+so $a(t)\in(0,1/t)$. For a root $y$ of \eqref{eq:Slevel}, put $r=e^{b(t)y}$. Since $q(by)=(A_b/b)S(y)$,
+\[
+ \frac{r}{c_b}\frac{d(\lambda_b\circledast\nu_t^{-1})}{dr}(r)
+ =\frac{q(by)}{c_b}
+ =\frac{A_bD(t)}{b(t)c_b}
+ =\frac{\pi D(t)}{b(t)\sin b(t)}
+ =\frac{a(t)\pi}{\sin(a(t)\pi t)}.
+\]
+Thus the four distinct roots of \eqref{eq:Slevel} yield four distinct positive roots of the source equation \eqref{eq:source-level}, contradicting the necessary condition for log-unimodality of $\sigma_t\boxtimes\nu_t$. Hence $\sigma_t\boxtimes\nu_t$ is not log-unimodal. Since $\nu_t$ is log-unimodal, $\sigma_t$ is not $\boxtimes$-strongly log-unimodal. As $t>0$ was arbitrary, the theorem follows.
+\end{proof}
+
+\section{Finite certificate and audit status}
+
+The proof above is analytic; the accompanying script \texttt{check.py} uses exact rational arithmetic to certify the coarse numerical inequalities used in Lemma~\ref{lem:crossings}, including the rational $\pi$ enclosure, the three strict crossing margins, and the parameter identity $d/B^2=95$. Its archived output is \texttt{check.out}.
+
+The source-matching theorem was independently audited end to end by two distinct repository tracks: R17 audit \texttt{R17-AUDIT-R18-I0080-C007-ENDTOEND-002} and P26 audit \texttt{P26-AUDIT-R18-I0080-C007-ENDTOEND-05}. Both audits returned full mathematical PASS verdicts and P26 independently re-executed the exact checker. These audits establish repository closure under the stated protocol; they are not substitutes for external peer review.
+
+\begin{thebibliography}{9}
+\bibitem{HUW}
+T.~Hasebe, Y.~Ueda and J.-C.~Wang,
+\emph{Log-unimodality for free positive multiplicative Brownian motion},
+Colloq. Math. \textbf{169} (2022), 209--226;
+arXiv:2009.13848 (2020).
+\end{thebibliography}
+
+\end{document}

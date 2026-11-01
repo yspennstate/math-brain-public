@@ -1,0 +1,13 @@
+# C0056 exact source and operational target
+
+Primary source: Paul Bourgade, Random band matrices (2018), Section 2.1, printed page 7; https://math.nyu.edu/~bourgade/papers/ICMProceedings.pdf . The original source fixes iid centred variance-one site variables and periodic finite boxes, and discusses both absolutely continuous spectral states and GOE microscopic statistics. It does not specify a theorem with one fully quantified universal class of single-site laws. The intake's combined demand is retained.
+
+The precise specialisation used for this proof attempt is H_lambda=-A+lambda V on l2(Z^3), with A the sum over the six nearest neighbours and V_x iid Uniform[-1,1]. Here lambda>0 is fixed before the spectral-height or volume limit. To match the source's variance-one convention, use W_x=sqrt(3)V_x and alpha=lambda/sqrt(3). The negative-hopping convention is unitarily equivalent to positive hopping on the infinite bipartite lattice.
+
+Spectral operational goal: find lambda_0>0 and a deterministic bounded nonempty open interval I such that, for every fixed 0<lambda<lambda_0, almost surely chi_I(H_lambda)l2(Z^3) is contained in the absolutely continuous subspace and chi_I(H_lambda) is nonzero. This purity formulation is stronger than merely requiring a nonzero absolutely continuous component. The probability-one event may depend on the fixed lambda. The conditional proofs in ATTEMPT.md establish a sufficient route only; they do not prove the lattice hypothesis or nonzero weight.
+
+Separate finite-volume operational goal: on the periodic torus Lambda_L=(Z/LZ)^3 with iid copies of the same site law, let e_{j,L} be the L^3 real eigenvalues. At an energy E where the density n_lambda(E) of the averaged local spectral measure exists and is positive, the unfolded process is Xi_{L,E}=sum_j delta_{L^3 n_lambda(E)(e_{j,L}-E)}. One seeks convergence in law to the unit-intensity GOE bulk point process at delocalised energies as L tends to infinity. The choices of admissible E, law regularity, and point-process convergence mode need to be part of any full statistics theorem. This is an explicit conventional operational formulation of the source's microscopic-statistics demand; it is not a theorem asserted by the survey or this packet.
+
+The September 23, 2026 primary preprint claims the uniform-law spectral goal on an interval near the lower free edge. It is not a GOE theorem. Its full proof has not been independently audited here, so current openness is UNKNOWN and novelty is not asserted.
+
+NEXT: Establish the uniform inverse cavity-width moment for the spectral operational goal at fixed lambda; the GOE operational goal still needs an independent universality argument.

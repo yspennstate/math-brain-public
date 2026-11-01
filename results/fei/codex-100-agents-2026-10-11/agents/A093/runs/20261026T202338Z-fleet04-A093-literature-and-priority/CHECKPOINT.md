@@ -1,0 +1,1 @@
+A097 theorem statement reconstructs. Two proof-text issues: derivative misses positive t; inherited CE-only equality omits erasure B. Correct identity B+mean CEchild-CEparent=-D_occ. Matched AND2 gives CE difference -1,D_occ=0,B=1. Stage20 prints correct identity. Finite checker ready, spec frozen before execution. Full FEI OPEN.

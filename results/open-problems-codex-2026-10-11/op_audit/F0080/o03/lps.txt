@@ -1,0 +1,1463 @@
+PDF PAGE 1
+arXiv:math/0412263v5  [math.PR]  20 Nov 2006
+The Annals of Probability
+2006, Vol. 34, No. 5, 1665–1692
+DOI: 10.1214/009117906000000269
+c
+⃝Institute of Mathematical Statistics, 2006
+MINIMAL SPANNING FORESTS
+By Russell Lyons,1
+Yuval Peres2 and Oded Schramm
+Indiana University, University of California, Berkeley and Microsoft
+Research
+Minimal spanning forests on inﬁnite graphs are weak limits of
+minimal spanning trees from ﬁnite subgraphs. These limits can be
+taken with free or wired boundary conditions and are denoted FMSF
+(free minimal spanning forest) and WMSF (wired minimal spanning
+forest), respectively. The WMSF is also the union of the trees that
+arise from invasion percolation started at all vertices. We show that
+on any Cayley graph where critical percolation has no inﬁnite clus-
+ters, all the component trees in the WMSF have one end a.s. In Zd
+this was proved by Alexander [Ann. Probab. 23 (1995) 87–104], but a
+diﬀerent method is needed for the nonamenable case. We also prove
+that the WMSF components are “thin” in a diﬀerent sense, namely,
+on any graph, each component tree in the WMSF has pc = 1 a.s.,
+where pc denotes the critical probability for having an inﬁnite cluster
+in Bernoulli percolation. On the other hand, the FMSF is shown to
+be “thick”: on any connected graph, the union of the FMSF and in-
+dependent Bernoulli percolation (with arbitrarily small parameter) is
+a.s. connected. In conjunction with a recent result of Gaboriau, this
+implies that in any Cayley graph, the expected degree of the FMSF
+is at least the expected degree of the FSF (the weak limit of uniform
+spanning trees). We also show that the number of inﬁnite clusters
+for Bernoulli(pu) percolation is at most the number of components
+of the FMSF, where pu denotes the critical probability for having a
+unique inﬁnite cluster. Finally, an example is given to show that the
+minimal spanning tree measure does not have negative associations.
+1. Introduction.
+Suppose that i.i.d. random weights ⟨U(e);e ∈E⟩, uni-
+form in [0, 1], are assigned to the edges of a ﬁnite connected graph G = (V,E).
+Received December 2004; revised July 2005.
+1Supported in part by the Institute for Advanced Studies, Jerusalem, NSF Grants
+DMS-98-02663, DMS-01-03897 and DMS-02-31224, the Miller Institute, Berkeley.
+2Supported in part by NSF Grants DMS-01-04073 and DMS-02-44479.
+AMS 2000 subject classiﬁcations. Primary 60B99, 60K35, 82B43; secondary 60D05,
+20F65.
+Key words and phrases. Spanning trees, Cayley graphs, amenability, percolation.
+This is an electronic reprint of the original article published by the
+Institute of Mathematical Statistics in The Annals of Probability,
+2006, Vol. 34, No. 5, 1665–1692. This reprint diﬀers from the original in
+pagination and typographic detail.
+1
+
+PDF PAGE 2
+2
+R. LYONS, Y. PERES AND O. SCHRAMM
+The minimal spanning tree determined by these weights is the spanning tree
+with minimum total weight; it can be obtained from G by deleting every edge
+e whose label U(e) is maximal in some (simple) cycle. This construction has
+two analogues in an inﬁnite graph G. The free minimal spanning forest
+FMSF in G is obtained by deleting any edge with a label that is maximal
+in a cycle; the wired minimal spanning forest WMSF in G is obtained by
+deleting any edge with a label that is maximal in an extended cycle, meaning
+a cycle or a bi-inﬁnite simple path. The FMSF was studied by Alexander
+and Molchanov [6] in Z2 and by Alexander [5] in Zd. The WMSF is implicit
+in [5] (where it is shown that for Zd it is the same as the FMSF); it was
+considered explicitly by H¨aggstr¨om [20], who studied the WMSF on trees,
+where it is generally diﬀerent from the FMSF. Also, Aldous and Steele [3, 4]
+(Section 4.4 in the second paper) considered the wired minimal spanning
+forest (which they called simply the minimal spanning forest) in a weighted
+graph, in order to study the asymptotics of the analogous tree on the points
+of a Poisson process with weights given by Euclidean distances.
+One reason to study these forests is their close connection to percolation;
+in fact, the WMSF is closely tied to critical bond percolation and inva-
+sion percolation, while the FMSF is related to percolation at the uniqueness
+threshold pu [as deﬁned in (1.1)]. For example, the conjecture that nona-
+menable groups have an intermediate phase with inﬁnitely many inﬁnite
+clusters is equivalent to WMSF ̸= FMSF on such groups, as we shall see.
+Another natural random forest in an inﬁnite graph is the free uniform
+spanning forest (FSF), constructed by Pemantle [36] as a weak limit of uni-
+form spanning trees from ﬁnite subgraphs. If the ﬁnite subgraphs are taken
+with wired boundary, then the wired uniform spanning forest (WSF) arises.
+These forests were studied in detail by Pemantle [36] and Benjamini, Lyons,
+Peres and Schramm (BLPS) [10] and have close connections to random walks
+and potential theory. A key theme of this paper will be to describe the strik-
+ing analogies, and important diﬀerences, between the uniform and minimal
+spanning forests.
+We now recall some terminology and state our main results. An end of
+an inﬁnite tree T is an equivalence class of inﬁnite simple paths in T, where
+two paths are equivalent if they have a ﬁnite symmetric diﬀerence. Recall
+that a graph G = (V,E) is transitive if for every pair of vertices, there is
+an automorphism taking one to the other. A graph G is quasi-transitive if
+the orbit space V/Aut(G) is ﬁnite. A quasi-transitive graph G is unimodular
+if Aut(G) is a unimodular group; see [9] for details. In particular, Cayley
+graphs are unimodular.
+Recall that Bernoulli(p) (bond) percolation on a graph G is the random
+subgraph G[p] that remains when each edge is independently kept with
+probability p and deleted otherwise. Let θ(p) = θ(p,G,v) be the probability
+that a ﬁxed vertex v of G is in an inﬁnite cluster of G[p]. As is customary,
+
+PDF PAGE 3
+MINIMAL SPANNING FORESTS
+3
+let pc = pc(G) denote the inﬁmum of those p such that G[p] has an inﬁ-
+nite connected component a.s.; pc(G) is called the critical probability of G.
+Then θ(p) = 0 for p < pc and θ(p) > 0 for p > pc (assuming G is connected).
+Bernoulli(pc) percolation is called critical percolation.
+A very simple coupling among ⟨G[p];p ∈[0,1]⟩, the WMSF and the FMSF
+is obtained by taking G[p] to be the set of edges e ∈E satisfying U(e) < p.
+This coupling, which we call the standard coupling, facilitates most of the
+connections between the WMSF, the FMSF and Bernoulli percolation.
+We now describe our most interesting results.
+Theorem 1.1 (One end).
+Let G be a unimodular quasi-transitive graph.
+If G is transitive, then the WMSF-expected degree of each vertex is 2. If
+θ(pc,G) = 0, then a.s. each component of the WMSF has one end.
+See Theorem 3.12 for the proof.
+By [8], θ(pc,G) = 0 when G is nonamenable (see below), quasi-transitive
+and unimodular. For G = Zd, Alexander [5] proved that there is one end per
+tree a.s. under the assumption that θ(pc,Zd) = 0. Kesten [27] and Hara and
+Slade [25] have shown that θ(pc,Zd) = 0 for d = 2 and d ≥19, respectively,
+and this is widely believed to hold for every d > 1. Theorem 3.12 has an
+analogue for wired uniform spanning forests due to [36] and [10]; in the
+uniform case, no additional assumption like θ(pc) = 0 is needed. In any case,
+both theorems show that the wired spanning forests are “thin” in a certain
+sense.
+Other aspects of “thinness” are the following. In [10], it was conjectured
+that the trees of the WSF on every graph are a.s. all recurrent for sim-
+ple random walk. This was proved by Morris [33]. Our next theorem is an
+analogue of Morris’ theorem for the WMSF.
+Theorem 1.2.
+Let G be an inﬁnite graph. Then the WMSF Fw satisﬁes
+pc(Fw) = 1 a.s.
+See Theorem 3.20 for the proof of a slight improvement of this theorem.
+On the other hand, the free spanning forests seem to be “thick” when not
+equal to the wired spanning forests. Thus, the next theorem shows that the
+FMSF is always “almost” connected:
+Theorem 1.3.
+Let G be any locally ﬁnite connected graph and ε ∈(0,1).
+Let Ff be a conﬁguration of the FMSF and let ω be an independent copy of
+G[ε]. Then Ff ∪ω is connected a.s.
+See Theorem 3.22 for the proof. Note that for planar graphs, this follows
+from Theorem 1.2 by planar duality (see Theorem 4.1 below). In conjunction
+
+PDF PAGE 4
+4
+R. LYONS, Y. PERES AND O. SCHRAMM
+with recent work of Gaboriau [17], Theorem 1.3 allows us to compare the
+FSF and the FMSF:
+Corollary 1.4.
+For any transitive unimodular graph G, the FSF-expected
+degree of a vertex v is at most the FMSF-expected degree of v.
+See Corollary 3.24 for the proof of an improvement of this theorem.
+Obtaining a tight lower bound on the FSF-expected degree is a major
+open problem in the theory of uniform spanning forests, closely related to
+the possible equivalence of ﬁrst ℓ2-Betti numbers and cost (see [16] and the
+proof of Corollary 3.24).
+Let
+pu = pu(G) := inf{p ∈[0,1];G[p] a.s. has a unique inﬁnite cluster}.
+(1.1)
+Proposition 1.5.
+Let G be an inﬁnite graph. Under the standard cou-
+pling, the number of trees in the FMSF on G is a.s. at least the number of
+inﬁnite clusters of G[pu].
+For a proof, see Proposition 3.13.
+The preceding theorems show that in some ways, the WMSF is similar to
+critical Bernoulli percolation, while the FMSF is similar to Bernoulli perco-
+lation at the uniqueness threshold. Our next result holds for both minimal
+forests:
+Theorem 1.6.
+Both measures WMSF and FMSF have a trivial tail σ-
+ﬁeld on any graph.
+See Theorem 3.14 for the proof. The analogous result holds for the uniform
+spanning forests ([10] and [36]).
+Naturally, we want to know when the free and wired minimal spanning
+forests are the same. We say that a graph G has almost everywhere unique-
+ness (of the inﬁnite cluster) if, for almost every p ∈(0,1) in the sense of
+Lebesgue measure, there is a.s. at most one inﬁnite component in G[p]. The
+following extends Proposition 2.1 of [5]:
+Proposition 1.7.
+On any connected graph G, we have FMSF = WMSF
+iﬀG has almost everywhere uniqueness.
+See Proposition 3.6 for the proof.
+For which d is the FMSF in Zd a tree? This is perhaps the most tantalizing
+open question about minimal spanning forests, and it has been answered only
+for d = 2; see [6]. A similar result of ours is as follows. Recall that an inﬁnite
+graph is nonamenable if, for some δ > 0 and all ﬁnite sets F of vertices in
+G, the number of edges in the boundary of F is at least δ|F|.
+
+PDF PAGE 5
+MINIMAL SPANNING FORESTS
+5
+Proposition 1.8.
+Let G be a proper plane connected nonamenable graph
+with one end such that there is a group of homeomorphisms of the plane act-
+ing quasi-transitively on the vertices of G. Then the FMSF on G is a.s. a
+tree.
+See Section 4 for the deﬁnition of a proper plane graph and Proposition
+4.4 for the proof. This proposition applies to 1-skeletons (i.e., sets of vertices
+and edges) of tilings in the hyperbolic plane for which there is a group of
+hyperbolic isometries acting quasi-transitively on the tiles, and such that
+each tile is a ﬁnite and bounded hyperbolic polygon.
+In the direction opposite to the proposition, it is not straightforward to
+produce any graph for which the FMSF is disconnected. An indirect method
+is to show that a certain transitive graph G is nontreeable, that is, there is
+no automorphism-invariant measure on the space of spanning trees in G. It
+is known that Cayley graphs with Kazhdan’s property T, as well as certain
+nonamenable products, are nontreeable (see [1] and [37]). As explained in the
+latter paper, in any nontreeable transitive graph, the number of components
+of the FMSF is almost surely inﬁnite. Another indirect method is to apply
+Proposition 1.5 to transitive graphs where G[pu] has inﬁnitely many inﬁnite
+clusters (such as the product of a regular tree of high degree and Z; see [39]).
+This, however, does not yet provide graphs beyond the nontreeable graphs,
+since the only graphs for which this property of Bernoulli(pu) percolation
+has been established are also known to be nontreeable. An example of a
+(nontransitive) graph where the FMSF has exactly two components a.s. is
+described in Example 6.1; it is not known whether this is possible in a
+transitive graph. Other examples and open questions on minimal spanning
+forests are presented in the ﬁnal section. In Section 5 we give a simple
+method to calculate probabilities of spanning trees in ﬁnite graphs; we use
+this to give an example where the minimal spanning tree measure does not
+have negative associations, unlike the case of uniform spanning trees.
+2. Background: minimal spanning trees on ﬁnite graphs.
+We begin with
+a few deﬁnitions and some notation for graphs. A graph G = (V,E) is locally
+ﬁnite if the number of neighbors of each vertex is ﬁnite. We shall consider
+only such graphs. A forest is a graph with no cycles. A tree is a nonempty
+connected forest. A subgraph H ⊂G is spanning if H contains all the vertices
+of G. A spanning tree or forest of G = (V,E) will usually be thought of as a
+subset of E, since its vertex set is always V. Given a graph G = (V,E), we
+let 2E denote the measurable space of all subsets of E with the Borel σ-ﬁeld,
+that is, the σ-ﬁeld generated by sets of the form {F ⊂E;e ∈F}, where e ∈E.
+Let G = (V,E) be a ﬁnite connected graph, and suppose that U :E →R
+is some injective function. The number U(e) will then be referred to as the
+
+PDF PAGE 6
+6
+R. LYONS, Y. PERES AND O. SCHRAMM
+label of e. The labeling U then induces a total ordering on E, where e < e′
+if U(e) < U(e′).
+Deﬁne TU to be the subgraph whose vertex set is V and whose edge
+set consists of all edges e ∈E whose endpoints cannot be joined by a path
+whose edges are strictly smaller than e. For the sake of completeness, we
+now prove that TU is a spanning tree. The largest edge in any cycle of G is
+not in TU and, therefore, TU is a forest. If ∅̸= A ⊊V, then the least edge
+of G connecting A with V \ A must belong to TU, which shows that TU is
+connected. Thus, it is a spanning tree. In fact, among all spanning trees, TU
+has minimal edge label sum, P
+e∈T U(e).
+Definition 2.1 (The minimal spanning tree).
+When ⟨U(e);e ∈E⟩are
+independent uniform [0,1] random variables, the law of the corresponding
+spanning tree TU is called simply the minimal spanning tree (measure). It
+is a probability measure on 2E.
+There is an easy (and well-known) monotonicity principle for the minimal
+spanning tree measure, which is analogous to a similar principle for uniform
+spanning trees:
+Proposition 2.2 (Domination).
+Let H be a connected subgraph of the
+ﬁnite connected graph G. Let µH and µG be the corresponding minimal span-
+ning tree measures. Let µH
+G(A) := µG[{T;T ∩H ∈A}] for every A ⊆2E(H).
+Then µH stochastically dominates µH
+G.
+A monotone coupling giving the stochastic domination is obtained by
+using the same labels on E(H), and independent labels on E(G) \ E(H).
+Remark 2.3.
+The following diﬀerence from the uniform spanning tree
+must be kept in mind. Given an edge, e, the minimal spanning tree measure
+on G conditioned on the event not to contain e need not be the same as the
+minimal spanning tree measure on G \ e, the graph G with e deleted; the
+simplest example is G = K4, the complete graph on four vertices.
+3. Minimal spanning forests.
+We now present two natural extensions
+to inﬁnite graphs of the notion of the minimal spanning tree. After the
+deﬁnitions, we give some partly novel deterministic facts about the forests,
+then proceed to our main probabilistic results.
+Let G = (V,E) be an inﬁnite connected graph and U :E →R be an in-
+jective labeling of the edges. Let Ff = Ff(U) = Ff(U,G) be the set of edges
+e ∈E such that in every path in G connecting the endpoints of e there is
+at least one edge e′ with U(e′) ≥U(e). When ⟨U(e);e ∈E⟩are independent
+uniform random variables in [0, 1], the law of Ff (or sometimes, Ff itself )
+
+PDF PAGE 7
+MINIMAL SPANNING FORESTS
+7
+is called the free minimal spanning forest on G and is denoted by FMSF or
+FMSF(G).
+An extended path joining two vertices a,b ∈V is either a simple path in
+G joining them, or the union of a simple inﬁnite path starting at a and
+a disjoint simple inﬁnite path starting at b. (The latter possibility may be
+considered as a simple path connecting a and b through ∞.) Let Fw =
+Fw(U) = Fw(U,G) be the set of edges e ∈E such that in every extended path
+joining the endpoints of e there is at least one vertex e′ with U(e′) ≥U(e).
+Equivalently, Fw(U) consists of those edges e such that there is a ﬁnite set
+of vertices W ⊂V where e is the least edge joining W to V \ W. (If the
+endpoints of e are a and b, then W is the vertex set of the component of
+a or the component of b in the set of edges smaller than e.) Again, when
+U is chosen according to the product measure on [0,1]E, we call Fw the
+wired minimal spanning forest on G. The law of Fw is denoted WMSF or
+WMSF(G).
+Clearly, Fw(U) ⊂Ff(U). Note that Fw(U) and Ff(U) are indeed forests,
+since in every simple cycle of G, the edge e with U(e) maximal is present
+neither in Ff(U) nor in Fw(U). In addition, all the connected components
+in Ff(U) and in Fw(U) are inﬁnite. Indeed, the least edge joining any ﬁnite
+vertex set to its complement belongs to both forests.
+We shall now describe how Ff(U) and Fw(U) arise as limits of the minimal
+spanning tree on ﬁnite graphs. Consider an increasing sequence of ﬁnite,
+nonempty, connected subgraphs Gn ⊂G, n ∈N, such that S
+n Gn = G and
+E(Gn) = (V(Gn)×V(Gn))∩E(G) for each n. For n ∈N, let Gw
+n be the graph
+obtained from G by identifying the vertices outside Gn to a single vertex,
+then removing all resulting loops based at that vertex.
+Proposition 3.1.
+Let Tn(U) and T w
+n (U) denote the minimal spanning
+trees on Gn and Gw
+n , respectively, that are induced by the labeling U. Then
+Ff(U) = limn→∞Tn(U) and Fw(U) = limn→∞T w
+n (U). This means that for
+every e ∈Ff(U), we have e ∈Tn(U) for every suﬃciently large n, for every
+e /∈Ff(U), we have e /∈Tn(U) for every suﬃciently large n and similarly for
+Fw(U).
+We leave the easy proof of this proposition to the reader.
+It will be useful to make more explicit the comparisons that determine
+which edges belong to the two spanning forests. Deﬁne
+Zf(e) = ZU
+f (e) := inf
+P max{U(e′);e′ ∈P},
+where the inﬁmum is over simple paths P in G \ {e} that connect the
+endpoints of e; if there are none, the inﬁmum is deﬁned to be ∞. Thus,
+Ff(U) = {e;U(e) ≤Zf(e)}. Similarly, deﬁne
+Zw(e) = ZU
+w (e) := inf
+P sup{U(e′);e′ ∈P},
+
+PDF PAGE 8
+8
+R. LYONS, Y. PERES AND O. SCHRAMM
+where the inﬁmum is over extended paths P in G\{e} that join the endpoints
+of e. Again, if there are no such extended paths, then the inﬁmum is deﬁned
+to be ∞. Thus, {e;U(e) < Zw(e)} ⊆Fw(U) ⊆{e;U(e) ≤Zw(e)}.
+It turns out that there are also dual deﬁnitions for Zf and Zw. In order
+to state these, recall that if W ⊆V, then the set of edges ∂EW joining W to
+V \ W is said to be a cut.
+Lemma 3.2.
+For any injection U :E →R on any graph G, we have
+Zf(e) = sup
+C
+inf{U(e′);e′ ∈C \ {e}},
+(3.1)
+where the supremum is over all cuts C that contain e. Similarly,
+Zw(e) = sup
+C
+min{U(e′);e′ ∈C \ {e}},
+(3.2)
+where now the supremum is over all cuts C containing e such that C = ∂EW
+for some ﬁnite W ⊂V.
+Proof.
+We ﬁrst verify (3.1). If P is a simple path in G \ {e} that con-
+nects the endpoints of e, and C is a cut that contains e, then C ∩C ̸= ∅, so
+max{U(e′);e′ ∈P} ≥inf{U(e′);e′ ∈C \{e}}. This proves one inequality (≥)
+in (3.1). To prove the reverse inequality, ﬁx one endpoint x of e, and let W
+be the vertex set of the component of x in (G \ {e})[Zf(e)]. Then C := ∂EW
+is a cut that contains e. Using C in the right-hand side of (3.1) yields the ≤
+inequality in (3.1) and shows that the supremum there is achieved.
+The ≥inequality in (3.2) is proved in the same way as in (3.1). For the
+other direction, we dualize the above proof. Let Z denote the right-hand
+side of (3.2), and let W be the vertex set of the connected component of
+one of the endpoints of e in the set of edges e′ ̸= e such that U(e′) ≤Z. We
+clearly have U(e′) > Z for each e′ ∈∂EW \{e}. Thus, by the deﬁnition of Z,
+the other endpoint of e is in W if W is ﬁnite. The same argument applies
+with the roles of the endpoints of e switched. Therefore, there is an extended
+path C connecting the endpoints of e in G\{e} with sup{U(e′);e′ ∈P} ≤Z.
+This completes the proof of (3.2) and also shows that the inﬁmum in the
+deﬁnition of Zw(e) is attained.
+□
+The invasion tree T(v) = TU(v) of a vertex v is deﬁned as the increasing
+union of the trees Γn, where Γ0 := {v} and Γn+1 is Γn together with the
+least edge joining Γn to a vertex not in Γn. (If G is ﬁnite, we stop when Γn
+contains V.)
+Proposition 3.3.
+Let U :E →R be an injective labeling of the edges
+of a locally ﬁnite graph G = (V,E). Then the union S
+v∈V TU(v) of all the
+invasion trees is equal to Fw(U).
+
+PDF PAGE 9
+MINIMAL SPANNING FORESTS
+9
+This is easily proved using the characterization of Fw(U) as the set of all
+edges e such that there is some ﬁnite W ⊂V where e is the minimal edge
+joining W and V \ W. (The details are left to the reader.)
+The invasion basin I(v) of a vertex v is deﬁned as the union of the sub-
+graphs Gn, where G0 := {v} and Gn+1 is Gn together with the lowest edge
+not in Gn but incident to some vertex in Gn. Note that I(v) has the same
+vertices as T(v), but may have additional edges.
+The following extends to general graphs a result proved in [6] (in Z2) and
+[5] (in Zd):
+Proposition 3.4.
+Let U :E →R be an injective labeling of the edges of
+a locally ﬁnite graph G = (V,E). If x and y are vertices in the same compo-
+nent of Fw(U), then the symmetric diﬀerences I(x)△I(y) and TU(x)△TU(y)
+are ﬁnite.
+Proof.
+We give the proof only for |I(x)△I(y)| < ∞, since the proof
+for TU(x)△TU(y) is essentially the same. It suﬃces to prove this when e :=
+[x,y] ∈Fw(U). Consider the connected components C(x) and C(y) of x and
+y in G[U(e)]. Not both C(x) and C(y) can be inﬁnite, since e ∈Fw(U). If
+both are ﬁnite, then invasion from each x and y will ﬁll C(x) ∪C(y) ∪{e}
+before invading elsewhere and, therefore, I(x) = I(y) in this case. Finally, if,
+say, C(x) is ﬁnite and C(y) is inﬁnite, then I(x) = C(x) ∪{e} ∪I(y).
+□
+We begin our probabilistic results by recording the analogues of several
+results on uniform spanning forests from [10]:
+Proposition 3.5.
+Let G be a connected locally ﬁnite graph.
+(a) If G is amenable, then the average degree of vertices in both the free
+and wired minimal spanning forests on G is a.s. 2.
+(b) The free and wired minimal spanning forests on G are the same if
+they have a.s. the same ﬁnite number of trees, or if the expected degree of
+every vertex is the same for both measures.
+(c) The free and wired minimal spanning forests on G are the same on
+any transitive amenable graph.
+(d) If Fw is connected a.s., or if each component of Ff has a.s. one end,
+then WMSF(G) = FMSF(G).
+(e) If G is unimodular and transitive with WMSF(G) ̸= FMSF(G), then
+a.s. the FMSF has a component with uncountably many ends, in fact, with
+pc < 1.
+Proof.
+The proofs are analogous to those of corresponding statements
+for uniform spanning forests in [10]. For (a), see Remark 6.1 there; for (b),
+
+PDF PAGE 10
+10
+R. LYONS, Y. PERES AND O. SCHRAMM
+see Remark 5.8 and Proposition 5.10 there; for (c), see Corollary 6.3 there;
+for (d), see Remark 5.9 there; and for (e), see Proposition 10.11 there.
+□
+Next, we characterize when the free and wired minimal spanning forests
+coincide.
+Proposition 3.6.
+On any connected graph G, we have FMSF = WMSF
+iﬀG has almost everywhere uniqueness.
+Proof.
+Since Fw ⊂Ff and E is countable, FMSF ̸= WMSF is equivalent
+to the existence of an edge e such that P[Zw(e) < U(e) ≤Zf(e)] > 0. Let A(e)
+be the event that the two endpoints of e are in distinct inﬁnite components
+of (G\e)[U(e)]. Then {Zw(e) < U(e) < Zf(e)} ⊂A(e) ⊂{Zw(e) ≤U(e) ≤
+Zf(e)}. Consequently, P[A(e)] = P[Zw(e) < U(e) < Zf(e)]. Hence, FMSF ̸=
+WMSF is equivalent to the existence of an e ∈E such that P[A(e)] > 0. It
+is easy to see that almost everywhere uniqueness fails iﬀthere is some e ∈E
+with P[A(e)] > 0.
+□
+Corollary 3.7.
+On any graph G, if almost everywhere uniqueness
+fails, then a.s. WMSF is not a tree.
+Proof.
+By Proposition 3.5(b), if WMSF is a tree a.s., then WMSF =
+FMSF.
+□
+We also obtain the following result of H¨aggstr¨om [22].
+Corollary 3.8 (Equality on trees).
+If G is a tree, then the free and
+wired minimal spanning forests are the same iﬀpc(G) = 1.
+Proof.
+This is clear, since only at p = 1 can G[p] have a unique inﬁnite
+cluster a.s.; see [38] for this fact.
+□
+The issue of uniqueness in percolation is clariﬁed by the following result. It
+was conjectured by Benjamini and Schramm [11] and proved by H¨aggstr¨om
+and Peres [23] under a unimodularity assumption, and by Schonmann [40]
+in general.
+Theorem 3.9 (Uniqueness monotonicity).
+Let G be a locally ﬁnite con-
+nected graph with a quasi-transitive automorphism group. If there is a.s. a
+unique inﬁnite cluster for G[p], then the same holds for every p′ > p.
+
+PDF PAGE 11
+MINIMAL SPANNING FORESTS
+11
+Thus, Proposition 3.6 shows that for quasi-transitive G, FMSF = WMSF
+iﬀpc = pu, which conjecturally holds iﬀG is amenable. The argument of
+Burton and Keane [14] shows that, in fact, for a quasi-transitive amenable
+G and every p ∈[0,1], there is a.s. at most one inﬁnite cluster in G[p].
+This is slightly stronger than pc = pu, and provides another proof that for
+quasi-transitive amenable graphs, FMSF = WMSF [cf. Proposition 3.5(a),
+(b)].
+In contrast to the WSF, the number of trees in the WMSF is not always
+an a.s. constant: see Example 6.2. On the other hand, the total number of
+ends of all trees in either forest is an a.s. constant, since it is a tail random
+variable and the tail σ-ﬁeld is trivial, as we shall see in Theorem 3.14.
+Although the number of trees in the WMSF can vary, we do know their es-
+sential supremum. Let α(x1,...,xK) be the probability that I(x1),...,I(xK)
+are pairwise vertex-disjoint. The following theorem is analogous to Theorem
+9.4 from [10]:
+Proposition 3.10.
+Let G be a connected graph. The WMSF-essential
+supremum of the number of trees is
+sup{K;∃x1,...,xK ∈V
+α(x1,...,xK) > 0}.
+(3.3)
+This is obvious from the representation of WMSF as the union of invasion
+trees.
+To analyze the number of ends in the trees of the WMSF, we shall use
+the Mass-Transport Principle, which was introduced into percolation theory
+by H¨aggstr¨om [21] and extended by BLPS [9]. See [9] for background. Also,
+the following lemma from [24] will be employed:
+Lemma 3.11.
+Let G be a locally ﬁnite quasi-transitive connected graph
+and p > pc(G). Then a.s. the invasion tree of each vertex of G intersects an
+inﬁnite cluster of G[p].
+Theorem 3.12 (One end).
+Let G be a unimodular quasi-transitive graph.
+If G is transitive, then the WMSF-expected degree of each vertex is 2. If
+θ(pc,G) = 0, then a.s. each component of the WMSF has one end.
+Proof.
+Fix a basepoint o. Let e1,e2,... be the edges in the invasion tree
+of o, in the order they are added. Suppose that θ(pc) = 0. Then supn≥k U(en) >
+pc for any k. By Lemma 3.11, limsupU(en) = pc. For each k such that
+U(ek) = supn≥k U(en), the edge ek separates o from ∞in the invasion tree
+of o. It follows that the invasion tree of o has a.s. one end. The same will be
+true for any ﬁnite connected union of invasion trees that contains o, since
+any such union agrees with the invasion tree of o, except for ﬁnitely many
+
+PDF PAGE 12
+12
+R. LYONS, Y. PERES AND O. SCHRAMM
+edges, by Proposition 3.4. Consequently, there is a well-deﬁned special end
+for each component of Fw (viz., the end of any invasion tree contained in
+the component).
+Suppose that Aut(G) acts transitively on the vertices of G. Orient each
+edge in Fw toward the special end of the component containing that edge.
+Then each vertex has precisely one outgoing edge. By the Mass-Transport
+Principle, it follows that the WMSF-expected degree of a vertex is 2. Since
+θ(pc) = 0 when G is non-amenable, this conclusion holds for all such G. It
+also holds for amenable G by Proposition 3.5(a).
+Combining the fact that the expected degree is 2 with Theorem 7.2 of [9],
+we deduce that a.s. each component of Fw has one or two ends. We say
+that a vertex v is in the future of a vertex u if v can be reached from u by
+following the oriented edges of Fw.
+Suppose that, with positive probability, the component of o had two ends.
+Let the trunk of a component with two ends be the (unique) subgraph of it
+that would be isomorphic to Z. Label the vertices of the trunk xn (n ∈Z),
+with xn+1 in the future of xn. Since θ(pc) = 0, there would be an ε > 0 such
+that with positive probability supn∈Z U([xn,xn+1]) > pc+ε. By Lemma 3.11,
+limsupU([xn,xn+1]) = pc. Thus, with positive probability there would be
+a largest m ∈Z such that U([xm,xm+1]) > pc + ε. We could then transport
+mass 1 from each vertex in such a component to the vertex xm, when this
+event occurs. The vertex xm would then receive inﬁnite mass, contradicting
+the Mass-Transport Principle. This completes the proof in the case where
+Aut(G) acts transitively.
+The reduction from the quasi-transitive setting to the transitive setting
+proceeds by mapping Fw to a forest over a set of vertices where there is a
+transitive group action. Let Γ = Aut(G), and denote by Γo := {γ(o);γ ∈Γ}
+the orbit of o under Γ. Let k := maxv∈V mino′∈Γo d(o′,v), where d(u,v) refers
+to the graph distance on G. Note that k < ∞, as Γ acts quasi-transitively
+on G. For every vertex v ∈V, choose some vertex ov in Γo with d(ov,v) ≤
+k. Among all possible choices of ov, we choose uniformly at random, and
+make ⟨ov;v ∈V⟩independent and independent of the labeling U. Let n be
+the number of vertices in G within distance k of o. For each o′ ∈Γo, let
+Wo′ := {v ∈V;ov = o′}, and given U and ⟨ov;v ∈V⟩, choose an injection
+φo′ :Wo′ →{1,2,...,n}, uniformly at random among all possible injections,
+where the collection ⟨φo′;o′ ∈Γo⟩is independent, given U and ⟨ov;v ∈V⟩.
+Let eV := {1,2,...,n} × Γo, and let eΓ denote the group of permutations of
+eV of the form (j,o′) 7→(πj,γo′), where π is any permutation on {1,2,... ,n}
+and γ ∈Γ. Then eΓ is unimodular and acts transitively on eV. Let eFw be the
+image of Fw under the random injective map Φ:V →eV given by Φ(v) :=
+(φov(v),ov). Then eFw is a forest on the vertex set eV and the law of eFw
+is invariant under eΓ. The mass-transport argument used before now shows
+
+PDF PAGE 13
+MINIMAL SPANNING FORESTS
+13
+that the expected degree in eFw of any vertex ev ∈eV is 2P[ev ∈Φ(V)]. We may
+set eU([Φ(v),Φ(u)]) := U([v,u]) for every [v,u] ∈E. The above arguments
+then show that eFw a.s. has precisely one end for every inﬁnite connected
+component, which shows that the same is true for Fw.
+□
+The preceding result gives one relation between the WMSF and critical
+Bernoulli percolation. The next result gives a relation between the FMSF
+and Bernoulli(pu) percolation.
+According to Lemma 3.11, every component of WMSF(G) intersects some
+inﬁnite cluster of G[p] for every p > pc(G), provided G is quasi-transitive. A
+comparable statement for FMSF(G) holds for general graphs:
+Proposition 3.13.
+Under the standard coupling, each component of
+FMSF(G) intersects at most one inﬁnite cluster of G[pu]. Thus, the number
+of trees in (G) is at least the number of inﬁnite clusters in G[pu]. If G
+is quasi-transitive with pu(G) > pc(G), then each component of FMSF(G)
+intersects exactly one inﬁnite cluster of G[pu].
+Proof.
+Let ⟨pj⟩be a sequence satisfying limj→∞pj = pu that is con-
+tained in the set of p ∈[pu,1] such that there is a.s. a unique inﬁnite cluster
+in G[p]. Let P be a ﬁnite simple path in G, and let A be the event that
+P ⊂Ff and the endpoints of P are in distinct inﬁnite pu-clusters. Since a.s.
+for every j = 1,2,... there is a unique inﬁnite cluster in G[pj], a.s. on A
+there is a path joining the endpoints of P in G[pj]. Because P ⊂Ff on A,
+a.s. on A we have maxP U ≤pj. Thus, maxP U ≤pu a.s. on A. On the other
+hand, maxP U ≥pu a.s. on A since on A, the endpoints of P are in dis-
+tinct pu components. This implies P[A] ≤P[maxP U = pu] = 0, and the ﬁrst
+statement follows.
+The second sentence follows from the fact that every vertex belongs to
+some component of Ff. Finally, the third sentence follows from Lemma 3.11
+and the fact that invasion trees are contained in the wired minimal spanning
+forest, which, in turn, is contained in the free minimal spanning forest.
+□
+We now prove a result that shows precisely shared behavior for both
+minimal spanning forests:
+Theorem 3.14.
+Both measures WMSF and FMSF have a trivial tail
+σ-ﬁeld on any graph.
+For our proof, we need the following strengthening of Theorem 5.1(i) of [5]:
+
+PDF PAGE 14
+14
+R. LYONS, Y. PERES AND O. SCHRAMM
+Lemma 3.15.
+Let G be any inﬁnite locally ﬁnite graph with distinct ﬁxed
+labels U(e) on its edges. Let F be the corresponding free or wired minimal
+spanning forest. If the label U(e) is changed at a single edge e, then the forest
+changes at most at e and at one other edge [an edge f with U(f) = Zf(e) or
+Zw(e), resp.]. More generally, if F′ is the forest when labels only in K are
+changed, then |(F△F′) \ K| ≤|K|.
+Proof.
+Consider ﬁrst the free minimal spanning forest. Suppose the
+two values of U(e) are u1 and u2, with u1 < u2. Let F1 and F2 be the
+corresponding free minimal spanning forests. Then F1 \ F2 ⊆{e}. Suppose
+that f ∈F2\F1. Then there must be a path P ⊂G\{e} joining the endpoints
+of e and containing f, such that U(f) = maxP U > u1. Suppose that there
+were a path P′ ⊂G \ {e} joining the endpoints of e, such that maxP′ U <
+U(f). Then P ∪P′ would contain a cycle containing f but not e, on which
+f has the maximum label. This would contradict f ∈F2. Therefore, Zf(e) =
+U(f). Since the labels are distinct, there is at most one such f.
+For the WMSF, the proof is the same, only with “extended path” replac-
+ing “path” and “Zw(e)” replacing “Zf(e).”
+The second conclusion in the lemma follows by induction from the ﬁrst.
+□
+Proof of Theorem 3.14.
+Let F(K) be the σ-ﬁeld generated by U(e)
+for e ∈K. Let A be a tail event of 2E. Let φ:[0,1]E →2E be the map that
+assigns the (free or wired) minimal spanning forest to a conﬁguration of
+labels. (Actually, φ is deﬁned only on the conﬁgurations of distinct labels.)
+We claim that φ−1(A) lies in the tail σ-ﬁeld T
+Kﬁnite F(E \ K). This implies
+the desired result by Kolmogorov’s 0–1 law. Indeed, for any ﬁnite set K of
+edges and any two labelings ω1, ω2 that diﬀer only on K, we know by Lemma
+3.15 that φ(ω1) and φ(ω2) diﬀer at most on 2|K| edges, whence either both
+ωi are in φ−1(A) or neither are. In other words, φ−1(A) ∈F(E \ K).
+□
+Assume, as usual, that ⟨U(e);e ∈E⟩are uniform i.i.d. in [0, 1]. If G is
+a transitive graph and I(v) is the invasion basin (not just the tree) of a
+vertex v, then pc(I(v)) = 1 a.s. (To prove this, let p > pc(G). Lemma 3.11
+implies that I(v) \ G[p] is ﬁnite a.s. However, Bernoulli(p′) percolation on
+G[p] has the same law as G[p′p]. Thus, a.s. pc(I(v)) ≥pc(G[p]) = pc(G)/p.)
+In fact, a stronger result is true in greater generality. Deﬁne the invasion
+basin of inﬁnity to be the set of edges [x,y] such that there do not exist dis-
+joint inﬁnite simple paths from x and y consisting only of edges e satisfying
+U(e) < U([x,y]), and denote the invasion basin of inﬁnity by I(∞) = IU(∞).
+Note that
+I(∞) ⊃
+[
+v∈V
+I(v) ⊃Fw(U).
+
+PDF PAGE 15
+MINIMAL SPANNING FORESTS
+15
+For an edge e, deﬁne
+ZU
+∞(e) := Z∞(e) := inf
+P sup{U(f);f ∈P \ {e}},
+where the inﬁmum is over bi-inﬁnite simple paths that contain e; if there is
+no such path P, deﬁne Z∞(e) := 1. Because U(e) and Z∞(e) are independent
+and U(e) is a continuous random variable, we have U(e) ̸= Z∞(e) a.s. for
+every e. Thus, a.s. e ∈I(∞) iﬀU(e) < Z∞(e).
+Theorem 3.16.
+Let G = (V,E) be a bounded degree graph. Then
+pc(I(∞)) = 1 a.s. Therefore, pc(Fw) = 1 a.s.
+To prove this, we begin with the following lemma that will provide a
+coupling between percolation and invasion that is diﬀerent from the usual
+one we have been working with:
+Lemma 3.17.
+Let G = (V,E) be a locally ﬁnite inﬁnite graph and ⟨U(e);
+e ∈E⟩be i.i.d. uniform [0,1] random variables. Conditioned on I(∞), the
+random variables
+U(e)
+Z∞(e)
+(e ∈I(∞))
+are i.i.d. uniform [0,1] random variables.
+Remark 3.18.
+At ﬁrst sight, this lemma may seem obvious; however,
+the proof requires some care, as the parameters Z∞(e) are deﬁned in terms of
+the edge variables U(e). The proof given below circumvents this dependence.
+It relies on the following elementary observation:
+Let ⟨Ui;1 ≤i ≤k⟩be a random vector distributed uniformly in [0,1]k,
+and let ⟨Zi;1 ≤i ≤k⟩be an independent random vector with an arbitrary
+distribution in (0,1]k. Then given Ui < Zi for all 1 ≤i ≤k, the conditional
+law of the vector ⟨Ui/Zi;1 ≤i ≤k⟩is uniform in [0,1]k.
+We leave the justiﬁcation to the reader.
+Proof of Lemma 3.17.
+Let A ⊂E be a ﬁnite set. It suﬃces to prove
+that, conditional on IU(∞), on the event A ⊂IU(∞), the random variables
+⟨U(e)/Z∞(e);e ∈A⟩are i.i.d. uniform in [0,1]. Deﬁne eU(e) := 0 for e ∈A
+and eU(e) := U(e) for e /∈A, and let ZU
+A := ZU
+∞↾A denote the restriction of
+ZU
+∞to A.
+Claim: The symmetric diﬀerence between the event [U ↾A < Z eU
+A] and the
+event [A ⊂IU(∞)] has probability 0.
+The ﬁrst event is contained in the second event because Z eU
+A(e) ≤ZU
+A(e) for
+all e ∈A. For the converse, assume that A ⊂IU(∞). Consider any bi-inﬁnite
+
+PDF PAGE 16
+16
+R. LYONS, Y. PERES AND O. SCHRAMM
+simple path P. If e ∈A ∩P, then U(e) < ZU
+∞(e) ≤sup{U(e′);e ̸= e′ ∈P}.
+Hence, for every such P,
+sup
+P
+U = sup
+P\A
+U = sup
+P\A
+eU = sup
+P
+eU.
+Therefore, ZU
+A = Z eU
+A and IU(∞) = I eU(∞), provided that ZU
+∞(e) ̸= U(e) for
+all e ∈E, which holds a.s. Hence, A ⊂IU(∞) implies U ↾A < Z eU
+A a.s., which
+veriﬁes the claim.
+By the claim (and the observation in Remark 3.18), conditioned on eU
+and A ⊂IU(∞), the random variables ⟨U(e)/Z eU
+A (e);e ∈A⟩are i.i.d. uni-
+form in [0,1]. The same is true when conditioning instead on eU, IU(∞)
+and A ⊂IU(∞), since IU(∞) = I eU(∞) is eU-measurable on the event A ⊂
+IU(∞). By averaging with respect to eU and using ZU
+A = Z eU
+A , we conclude
+that, conditional on IU(∞), on the event A ⊂IU(∞), the random variables
+⟨U(e)/Z∞(e);e ∈A⟩are i.i.d. uniform in [0,1]. The lemma follows.
+□
+We also need the following fact:
+Lemma 3.19.
+If a graph H of bounded degree does not contain a simple
+bi-inﬁnite path, then pc(H) = 1.
+Proof.
+By repeated applications of Menger’s theorem, we see that if x
+is a vertex in H, then there are inﬁnitely many vertices v such that x is in
+a ﬁnite component of H \ {v}. Since H has bounded degree, it follows that
+pc(H) = 1.
+□
+Proof of Theorem 3.16.
+Let ωp be the set of edges e satisfying
+U(e) < pZ∞(e). Lemma 3.17 implies that, given I(∞), ωp has the law of
+Bernoulli(p) percolation on I(∞). Suppose that P[pc(I(∞)) < 1] > 0 and ﬁx
+p < 1 so that P[pc(ωp) < 1] = P[pc(I(∞)) < p] > 0. On the event pc(ωp) < 1,
+Lemma 3.19 implies that a.s., ωp contains a simple bi-inﬁnite path P. Let
+α:= supe∈P U(e). Since P ⊂ωp, we have, for e ∈P,
+U(e) < pZ∞(e) ≤psup
+P
+U = pα,
+which yields that α ≤pα. Thus, α = 0, which is clearly impossible. This
+contradiction shows that pc(I(∞)) = 1.
+□
+Theorem 3.16 was stated for bounded degree graphs. If G is locally ﬁnite
+but has unbounded degree, a similar argument still shows the following:
+Theorem 3.20.
+Let G = (V,E) be an inﬁnite graph. Then the WMSF
+Fw satisﬁes pc(Fw) = 1 a.s., and moreover, S
+v∈V I(v) has pc = 1.
+
+PDF PAGE 17
+MINIMAL SPANNING FORESTS
+17
+Proof.
+To see this, replace Z∞(e) used in the above proof by g
+Z∞(e),
+deﬁned as Z∞(e), except that the inﬁmum ranges over all bi-inﬁnite paths
+P ⊃{e} that are edge-simple (no edge is repeated).
+□
+Corollary 3.21.
+Let G be a unimodular transitive locally ﬁnite con-
+nected graph. Then pc(G) < pu(G) iﬀpc(Ff) < 1 a.s.
+Proof.
+By Proposition 3.6 and Theorem 3.9, we have pc(G) < pu(G)
+iﬀWMSF ̸= FMSF. Now the conclusion follows from Theorem 3.16 and
+Proposition 3.5(e).
+□
+A dual argument shows that the FMSF is almost connected in the follow-
+ing sense:
+Theorem 3.22.
+Let G be any locally ﬁnite connected graph and ε ∈
+(0,1). Let Ff be a conﬁguration of the FMSF and ω be an independent copy
+of G[ε]. Then Ff ∪ω is connected a.s.
+For this, we use a lemma dual to Lemma 3.17; it will provide a coupling
+of Ff and Ff ∪ω.
+Lemma 3.23.
+Let G = (V,E) be a locally ﬁnite inﬁnite graph and ⟨U(e);
+e ∈E⟩be i.i.d. uniform [0,1] random variables. Conditioned on Ff, the ran-
+dom variables
+1 −U(e)
+1 −Zf(e)
+(e /∈Ff)
+are i.i.d. uniform [0,1] random variables.
+Proof.
+Let A ⊂E be a ﬁnite set such that P[A ∩Ff = ∅] > 0. Let
+eU(e) := 1 for e ∈A and eU(e) := U(e) for e /∈A, and let ZU
+A denote the
+restriction of ZU
+f to A. Consider any cut C. If A∩Ff = ∅and e ∈A∩C, then
+U(e) > ZU
+f (e) ≥inf{U(e′);e′ ∈C \ {e}}, by (3.1). Hence, if A ∩Ff = ∅, then
+for every cut C,
+inf
+C U = inf
+C\AU = inf
+C\A
+eU = inf
+C
+eU
+and, therefore, (still assuming that A ∩Ff = ∅) ZU
+A = Z eU
+A and FU
+f = FeU
+f ,
+because f ∈FU
+f
+if and only if there is some cut C ∋f with U(f) = infC U,
+as we have seen in the proof of Lemma 3.2. Hence, A ∩FU
+f = ∅implies
+U > Z eU
+A on A. In fact, A ∩FU
+f = ∅is equivalent to U > Z eU
+A on A, because
+Z eU
+A ≥ZU
+A. Thus (by the observation in Remark 3.18), conditioned on eU
+
+PDF PAGE 18
+18
+R. LYONS, Y. PERES AND O. SCHRAMM
+and A ∩FU
+f = ∅, the random variables ⟨(1 −U(e))/(1 −Z eU(e)
+A
+);e ∈A⟩are
+i.i.d. uniform in [0,1]. The same is true when conditioning instead on eU, FU
+f
+and A ∩FU
+f = ∅, since FU
+f = FeU
+f is eU-measurable on the event A ∩FU
+f = ∅.
+By averaging with respect to eU and using ZU
+A = Z eU
+A, we conclude that,
+conditional on FU
+f , on the event A ∩FU
+f = ∅, ⟨(1 −U(e))/(1 −Zf(e));e ∈A⟩
+are i.i.d. uniform [0,1] variables. The lemma follows.
+□
+Proof of Theorem 3.22.
+By invoking Lemma 3.23, we see that Ff ∪ω
+has the same law as
+ξ := {e;1 −U(e) ≥(1 −ε)[1 −Zf(e)]}.
+(3.4)
+Thus, it suﬃces to show that ξ is connected a.s. Consider any nonempty cut
+C in G, and let α := infe∈C U(e). Then 1−α = supC(1−U), so we may choose
+e ∈C to satisfy 1 −U(e) > (1 −ε)(1 −α). By (3.1), Zf(e) ≥infC\{e} U ≥α
+and, therefore, e ∈ξ. Since ξ intersects every nonempty cut, it is connected.
+□
+Recall that both WSF and WMSF have expected degree 2 in every tran-
+sitive unimodular graph, by Theorem 3.12. We may combine Theorem 3.22
+with recent work of Gaboriau [17] to deduce an inequality between the ex-
+pected degrees of FSF and FMSF:
+Corollary 3.24.
+Let G = (V,E) be a transitive unimodular connected
+inﬁnite graph of degree d and let o ∈V. Then
+E[dego FSF] ≤E[dego FMSF] ≤2 + d
+Z pu
+pc
+θ(p)2 dp,
+where degv H denotes the degree of a vertex v in a graph H ∋v.
+The ﬁrst inequality strengthens an observation of Lyons [29] (see the
+discussion following Conjecture 3.8 there), as well as its extension, Corollary
+4.5, by Gaboriau [17]. The second inequality strengthens the inequality of
+Corollary 4.5 by Gaboriau [17].
+Proof of Corollary 3.24.
+If G is amenable, then FSF = WMSF
+and FMSF = WMSF by Corollary 6.3 of [10] and Proposition 3.5(c), so all
+have expected degree 2. Thus, the conclusion is trivial.
+Assume now that G is not amenable. We need some concepts deﬁned
+or reviewed in [17]. First, there is a number β1(G) ≥0 called the ﬁrst ℓ2-
+Betti number of G. Second, Theorems 6.4 and 7.8 of [10], together with
+Deﬁnition 2.9 of Gaboriau [17], show that E[dego FSF] = E[dego WSF] +
+2β1(G) = 2 + 2β1(G), an identity ﬁrst observed by Lyons [30] for Cayley
+
+PDF PAGE 19
+MINIMAL SPANNING FORESTS
+19
+graphs. Third, let OHD be the set of graphs with no nonconstant harmonic
+Dirichlet functions. (A harmonic Dirichlet function on G is a real-valued
+function f on the vertex set of G with f(x) = P
+y∼x f(y) for all x (harmonic)
+and P
+x∼y[f(x) −f(y)]2 < ∞(Dirichlet).) By Theorem 7.3 of [10], OHD
+consists precisely of the graphs on which the wired and free uniform spanning
+forests agree. By Theorem 4.2 of [17], if µ is an Aut(G)-invariant coupling
+of processes ω1,ω2 ∈2E such that all clusters of ω1 are in OHD and (V,ω2)
+is connected, with both statements holding µ-a.s., then
+2β1(G) ≤
+X
+e
+µ[e ∈ω2 \ ω1],
+(3.5)
+where the summation is over edges incident with o. Let ε > 0 and let µ be the
+law of (Fw,ξ), where ξ is deﬁned in (3.4). Since G is not amenable, we have
+θ(pc) = 0, and so a.s. every cluster of Fw is a tree with one end, by Theo-
+rem 3.12. This implies that a.s. every cluster of Fw is in OHD (since the wired
+uniform spanning forest of a tree with one end is necessarily the whole tree).
+Combining this with Theorem 3.22, which shows that ξ is a.s. connected
+with expected degree at most E[dego FMSF] + dε, we may apply (3.5) to
+this choice of µ, obtaining 2β1(G) ≤E[dego FMSF] −E[dego WMSF] + dε =
+E[dego FMSF] −2 + dε, by Theorem 3.12. Since this holds for all positive ε,
+we have proved that E[dego FSF] ≤E[dego FMSF].
+To prove the ﬁnal inequality, recall the event A(e) used in the proof of
+Proposition 3.6; there, if e is an edge with endpoints x and y, then A(e) was
+the event that x and y are in distinct inﬁnite components of (G\{e})[U(e)].
+We saw there that P[A(e)] = P[e ∈Ff \ Fw]. Let Ax and Ay be the events
+that x and y belong to inﬁnite clusters, respectively. Since θ(p,G \ {e},x) ≤
+θ(p), the BK inequality of van den Berg and Kesten [42] gives P[A(e)] =
+R pu
+pc P[A(e)|U(e) = p]dp ≤
+R pu
+pc θ(p)2 dp. Sum this over all edges incident to o
+to obtain the desired inequality.
+□
+4. Corollaries for planar graphs.
+A plane graph is a graph G embedded
+in the plane in such a way that no two edges cross each other. A face of a
+plane graph G is a component of R2 \ G. A plane graph is proper if every
+bounded set in the plane contains only ﬁnitely many edges and vertices.
+Suppose that G is a proper plane graph. We deﬁne the dual graph G† as
+follows. In each face f of G, we place a single vertex f † of G†. For every
+edge e in G, we place an edge e† in G† connecting f1† and f2†, where f1 and
+f2 are the two faces on either side of e. (It may happen that f1 = f2; then
+e† is a loop.) This is done in such a way that G† is a plane graph and e ∩e†
+is a single point for every edge e of G. Note that G† is locally ﬁnite iﬀthe
+boundary of every face of G has ﬁnitely many vertices.
+When Γ is a subset of the edges of a plane graph G, deﬁne
+Γ∗:= {e†;e /∈Γ}.
+
+PDF PAGE 20
+20
+R. LYONS, Y. PERES AND O. SCHRAMM
+Theorem 4.1 (FMSF is dual to WMSF).
+Let G and G† be proper locally
+ﬁnite dual plane graphs. For any injection U :E →R, let U. (e†) := 1 −U(e).
+We have
+(Ff(U,G))∗= {e†;U†(e†) < ZU†
+w (e†)},
+whence (Ff(U,G))∗= Fw(U†,G†) if U†(e†) ̸= ZU†
+w (e†) for all e† ∈E†.
+Proof.
+The Jordan curve theorem implies that a set P ⊂E \ {e} is a
+simple path between the endpoints of e iﬀthe set C := {f †;f ∈P} ∪{e†}
+is a ﬁnite cut. Thus, the result is an immediate consequence of Lemma 3.2.
+□
+The following easy result is proved in the same way that Proposition 12.5
+of [10] is proved:
+Proposition 4.2 (Topology from duality).
+Let G be a proper plane
+graph with G† locally ﬁnite. If each tree of the WMSF of G has only one
+end a.s., then the FMSF of G† has only one tree a.s. If, in addition, the
+WMSF of G has inﬁnitely many trees a.s., then the tree of the FMSF of G†
+has inﬁnitely many ends a.s.
+Corollary 4.3 ([6]).
+The minimal spanning forest of Z2 is a.s. a tree
+with one end.
+Proof.
+The hypothesis θ(pc) = 0 of Theorem 3.12 applies by Harris
+[26] and Kesten [27]. Therefore, each tree in the WMSF has one end. By
+Proposition 4.2, this means that the FMSF has one tree. On the other hand,
+the wired and free measures are the same by amenability.
+□
+The same reasoning shows the following:
+Proposition 4.4.
+Let G be a connected nonamenable proper plane graph
+with one end, such that there is a group of homeomorphisms of the plane
+acting quasi-transitively on the vertices of G. Then the FMSF on G is a.s.
+a tree.
+The nonamenability assumption can be replaced by the assumption that
+the planar dual of G satisﬁes θ(pc) = 0. The latter assumption is known to
+hold in many amenable cases (see [28]).
+Proof of Proposition 4.4.
+Let G be such an embedded graph. It is
+shown by Lyons with Peres [31] that G and G† have unimodular automor-
+phism groups; the transitive case appeared in [13]. Thus, we may apply the
+
+PDF PAGE 21
+MINIMAL SPANNING FORESTS
+21
+main result of [8] to G† to see that θ(pc,G†) = 0. Thus, Theorem 3.12 and
+Proposition 4.2 yield the desired conclusion.
+□
+We may also use similar reasoning to give another proof of a theorem of
+Benjamini and Schramm [13] (as extended from the transitive case by Lyons
+with Peres [31]):
+Corollary 4.5.
+If G is a proper planar connected nonamenable graph
+with one end, such that there is a group of homeomorphisms of the plane act-
+ing quasi-transitively on the vertices of G, then pc(G) < pu(G). In addition,
+there is a unique inﬁnite cluster in Bernoulli(pu(G)) bond percolation.
+Proof.
+By Theorem 3.9 and Proposition 3.6, it suﬃces to show that
+WMSF ̸= FMSF on G. Indeed, if they were the same, then they would also
+be the same on the dual graph, so that each would be one tree with one end,
+as in the proof of Proposition 4.4. But this is impossible by Theorem 5.3 of
+[9]. (Actually, that theorem was stated only in the transitive case, but the
+proof extends to quasi-transitive graphs.)
+Furthermore, by Proposition 4.4, the FMSF is a tree on G, whence, by
+Proposition 3.13, there is a unique inﬁnite cluster in Bernoulli(pu) percola-
+tion on G.
+□
+5. Correlations for the minimal spanning tree.
+In view of the numerous
+similarities with uniform spanning trees, one might expect that the minimal
+spanning tree measure has negative associations. However, this is far from
+true. Indeed, the presence of even two edges can be positively correlated. To
+see this, we ﬁrst present the following formula for computing probabilities
+of spanning trees. Let MST denote the minimal spanning tree measure on a
+ﬁnite connected graph.
+Proposition 5.1.
+Let G be a ﬁnite connected graph. Given a set F
+of edges, let N(F) be the number of edges of G that do not become loops
+when each edge in F is contracted. Note that N(∅) is the number of edges
+of G that are not loops. Let N ′(e1,...,ek) := Qk−1
+j=0 N({e1,...,ej}). Let T =
+{e1,...,en} be a spanning tree of G. Then
+MST(T) =
+X
+σ∈Sn
+N ′(eσ(1),...,eσ(n))−1,
+where Sn is the group of permutations of {1,2,... ,n}.
+Proof.
+To make the dependence on G explicit, we write N(F) = N(G;F).
+Note that N(G/F;∅) = N(G;F), where G/F is the graph G with each edge
+in F contracted. Given an edge e that is not a loop, the chance that e is
+
+PDF PAGE 22
+22
+R. LYONS, Y. PERES AND O. SCHRAMM
+the least edge in the minimal spanning tree of G equals N(G;∅)−1. Fur-
+thermore, given that this is the case, the ordering on the nonloops of the
+edge set of G/{e} is uniform. Thus, if f is not a loop in G/{e}, then the
+chance that f is the next least edge in the minimal spanning tree of G,
+given that e is the least edge in the minimal spanning tree of G, equals
+N(G/{e};∅)−1 = N(G;{e})−1. Thus, we may easily condition, contract and
+repeat.
+Thus, the probability that the minimal spanning tree is T and that
+eσ(1) < ··· < eσ(n) is equal to
+n−1
+Y
+j=0
+N(G/{eσ(1),eσ(2),...,eσ(j)};∅)−1 = N ′(eσ(1),...,eσ(n))−1.
+Summing this over all possible induced orderings of T gives MST(T).
+□
+An example of a graph where the inclusion of two speciﬁc edges in the
+MST is positively correlated is provided by the complete graph K4, with
+two of its edges that do not share endpoints replaced by three edges (each)
+in parallel. If e1 and e2 are two of these parallel edges not sharing endpoints
+with each other, then MST[e1,e2 ∈T] > MST[e1 ∈T]MST[e2 ∈T]; the left-
+hand side divided by the right-hand side turns out to be 109872/109561. To
+aid the reader who wishes to check the calculations, we present the following
+outline, where the probabilities that appear below were calculated using
+Proposition 5.1. Let e3, e4, e5 and e6 be the four edges that are not replaced
+by parallel ones, with e3 and e4 not incident with each other and e1,e3,e5
+sharing a common vertex. Let us use the following shorthand for a spanning
+tree: [ijk] will denote the tree formed by the edges ei,ej,ek. Then there
+are four types of spanning trees, where “isomorphic” below refers to the
+existence of an automorphism of G that sends one spanning tree to another:
+• 12 trees isomorphic to [134], each with probability 163/12600;
+• 36 trees isomorphic to [123], each with probability 109/6300;
+• 4 trees isomorphic to [345], each with probability 7/600;
+• 12 trees isomorphic to [135], each with probability 23/1575.
+Thus, MST[e1 ∈T] = MST[e2 ∈T] = 331/1260 and MST[e1,e2 ∈T] =
+109/1575.
+6. Concluding remarks and questions.
+We give some examples to illus-
+trate how the behavior of minimal spanning forests may diﬀer from that of
+uniform spanning forests, or how we can answer certain questions for min-
+imal spanning forests that are still open for uniform spanning forests. We
+then give some open questions and conjectures.
+
+PDF PAGE 23
+MINIMAL SPANNING FORESTS
+23
+Example 6.1.
+We describe a connected planar graph where the FMSF
+equals the WMSF and has two components a.s. If we drop the planarity
+requirement, then such an example is known for the uniform spanning forests
+(Remark 9.8 in [10]). That example can be modiﬁed so as to be planar,
+but with unbounded degrees; a bounded-degree example is impossible by
+Corollary 12.9 of [10]. Let G−be the lower half plane of Z2, that is, the
+subgraph of Z2 spanned by vertices (x,y) ∈Z2 with y ≤0. For n > 0, let τ(n)
+be the probability that invasion percolation on G−from the origin reaches
+(n,0). By Barsky, Grimmett and Newman [7], in G−we have θ(pc) = 0, and
+for every p > pc, there is a unique inﬁnite G−[p] cluster. Moreover, for p > pc,
+a.s. every invasion tree meets the inﬁnite G−[p] cluster; see [24], Proposition
+4.3.1. We claim that limn→∞τ(n) = 0. For any ﬁxed p > pc, the event that
+(n,0) is in the invasion tree of the origin is contained in the union of two
+events: the event that (n,0) is in an inﬁnite G−[p] cluster, and the event
+that the invasion tree of the origin has not met an inﬁnite G−[p] cluster in
+its ﬁrst n invasion steps. The probability of the latter event tends to zero
+as n →∞and the probability of the former event tends to 0 as p ↓pc,
+because θ(p) is right continuous at pc. Consequently, limn→∞τ(n) = 0, as
+claimed. Thus, we may choose a sequence ⟨nk⟩such that P
+k τ(nk) < ∞. Let
+G be the subgraph of Z2 obtained by erasing all edges connecting (n,0) to
+(n,1) for n /∈{nk} (in particular, all these edges for n ≤0 are erased). Since
+pc of the lower half plane is the same as pc of the whole plane, as shown by
+Grimmett and Marstrand [19], we have pc(G) = pc(Z2) = 1/2. Since critical
+percolation in Z2 has inﬁnitely many disjoint open cycles that surround the
+origin (see [18]), there are inﬁnitely many disjoint paths in the lower half
+plane that are open at level 1/2 and connect the negative x-axis to the
+positive x-axis. A similar situation obtains for the upper half plane. For any
+vertex v in G, the invasion tree Tv must intersect, and thus ﬁll, inﬁnitely
+many of the paths in one of these two families. It follows that the WMSF
+in G has at most two components.
+Given ε > 0, choose m > 0 such that P
+k τ(m + nk) < ε. Then the ver-
+tices (−m,0) and (−m,1) have disjoint invasion trees with probability at
+least 1 −2ε. This shows that the WMSF in G a.s. has two components,
+Γ1 and Γ2. We claim that these are also the components of the FMSF. In-
+deed, let e be an edge with endpoints in Γ1 and Γ2. Clearly, U(e) > 1/2. Let
+p ∈(1/2,U(e)) be rational. By Barsky, Grimmett and Newman [7], there
+is a unique Bernoulli(p) percolation inﬁnite cluster in each half plane, and
+the vertices (nk,0) and (nk,1) are in these clusters for inﬁnitely many k.
+Therefore, there is a unique Bernoulli(p) percolation cluster in G. The inva-
+sion trees from the endpoints of e intersect this cluster since θ(1/2,G) = 0,
+and the labels on these trees are all less than U(e) (otherwise, e would be
+invaded). Therefore, e /∈FMSF. Thus, the FMSF equals the WMSF on G.
+
+PDF PAGE 24
+24
+R. LYONS, Y. PERES AND O. SCHRAMM
+The number of trees in the WSF is an a.s. constant on every graph. This
+is not true for the WMSF:
+Example 6.2.
+Next, we provide a planar graph where the number of
+trees in the WMSF is not an a.s. constant. Let H+ be the upper half of
+Z2 (above the x-axis). Let pk := 1/2 + 2−k−1. Choose {mk} so that (i) with
+probability greater than 1−k−2, an inﬁnite cluster of Bernoulli(pk) percola-
+tion in H+ comes within distance mk of the origin, and (ii) with probability
+greater than 1 −k−2, Bernoulli(1/2) percolation in Z2 has an open cycle in
+the annulus B(0,mk+1) \ B(0,mk). Deﬁne a planar graph G+ by adding to
+every edge in H+ a parallel path joining its endpoints; if the distance from
+the edge to the x-axis is between mk and mk+1, then the path has length k.
+It is easy to check that pc(G+) = 1/2, that there is a unique inﬁnite cluster
+for Bernoulli(1/2) percolation on G+ a.s. and that every invasion tree in G+
+intersects that cluster a.s. Let G−be a copy of G+, built on the lower half
+plane. Let v+ and v−be two ﬁxed vertices on the boundaries of G+ and G−,
+respectively. Add a single edge e := [v+,v−], thus deﬁning a planar graph G
+with pc(G) = 1/2. Consider the event A that each of v+, v−is contained in
+the unique critical inﬁnite cluster in G+, respectively G−. If U(e) > 1/2 and
+A occurs, then the WMSF has two trees. If U(e) < 1/2 and A occurs, then
+the WMSF has one tree.
+It was asked in [10] whether the number of trees in the FSF is always an
+a.s. constant. This is still not known, but we can show it is not true for the
+FMSF:
+Example 6.3.
+The previous example can be modiﬁed to obtain a pla-
+nar graph Γ where the number of trees in the FMSF is not an a.s. con-
+stant. Deﬁne Γ by joining G+ and G−at boundary vertices (j,±1) with
+⌈2j/j2⌉disjoint paths of length j, for each j ≥1. Consider the inﬁnite clus-
+ters ∆+ and ∆−for Bernoulli(1/2) percolation in G+, respectively G−. For
+any p > 1/2, inﬁnitely many of the paths we added will have all labels less
+than p by Borel–Cantelli; therefore, there is a.s. a unique inﬁnite cluster for
+Bernoulli(p) percolation in Γ.
+If there is exactly one path P in Γ connecting ∆+ and ∆−with U(e) < 1/2
+for all e ∈P, then the FMSF in Γ is connected, because the same holds for
+the WMSF, by the analysis of the preceding example; if there is no such path
+P, then the FMSF in Γ has two components. Both of these possibilities occur
+with positive probability, by Borel–Cantelli.
+Example 6.4.
+Although for transitive unimodular graphs, the inequal-
+ity WSF ̸= FSF implies the inequality WSF ̸= FSF (see Corollary 3.24 and
+recall that the expected degrees of the vertices in the WSF and in the WMSF
+
+PDF PAGE 25
+MINIMAL SPANNING FORESTS
+25
+are 2), the same is not true for general graphs. We give an example to illus-
+trate this phenomenon: Deﬁne τp(r) to be the probability that Bernoulli(p)
+percolation on Z3 connects the origin to any point at distance at least r from
+the origin. Given a positive integer m, write Gm for the graph obtained from
+Z2 by replacing each edge by m parallel edges. Choose and ﬁx m so that
+pc(Gm) < pc(Z3). Let Gm,n be the subgraph of Gm induced by an n-by-n
+square. Write Cn for the eﬀective conductance between one corner of Gm,n
+and the opposite corner. (All edges are given unit conductance.) Because
+Z2, and hence Gm, is recurrent, Cn →0 as n →∞. Choose a sequence ⟨nk⟩
+such that
+X
+k
+Cnk < ∞.
+(6.1)
+Also, choose an increasing sequence ⟨Rk⟩such that
+X
+k
+τpc(Z3)−1/k(Rk) < ∞,
+(6.2)
+and ﬁx a sequence of vertices ⟨xk⟩in Z3 such that ∥xk −xj∥≥Rk for all
+pairs j < k.
+Finally, let G be the graph obtained by starting with two copies of Z3
+and identifying xk in one copy with one corner of Gm,nk and identifying
+xk in the other copy with the opposite corner of Gm,nk. We claim that
+WSF(G) ̸= FSF(G), while WMSF(G) = FMSF(G).
+To prove this, we ﬁrst show that pc(G) = pc(Z3). Indeed, since G contains
+a copy of Z3, we have trivially that pc(G) ≤pc(Z3). On the other hand,
+given p < pc(Z3), condition (6.2) and the Borel–Cantelli lemma ensure that
+in each copy of Z3, a.s. all but ﬁnitely many p-clusters contain at most one
+of the points xk, and the other p-clusters contain ﬁnitely many of the points
+xk. Therefore, all p-clusters of G are ﬁnite a.s.
+Next, note that for p > pc(G), we have a.s. that inﬁnitely many k are
+such that each copy of xk lies in the inﬁnite p-cluster of its copy of Z3 and
+also, since pc(G) > pc(Gm), both copies of xk are connected to each other in
+Gm,nk. It follows that there is a.s. a unique inﬁnite p-cluster in G, whence,
+by Proposition 3.6, we obtain that WMSF(G) = FMSF(G).
+It remains to show that WSF(G) ̸= FSF(G). For this, it suﬃces (and
+indeed, is equivalent) to show that there is a nonconstant harmonic Dirichlet
+function on G; see [10], Theorem 7.3 for this criterion. We now deﬁne such a
+function. Let f(x) be the probability that when simple random walk starts
+from x in G, it eventually stays in the ﬁrst copy of Z3. To show that f
+is not constant, take a starting point that is very far from x1,x2,...,xK.
+The expected number of visits the walk makes to xk for 1 ≤k ≤K is then
+very small and the expected number of visits to xk for k > K is bounded.
+On each visit to xk, the chance of crossing Gm,nk to the other copy of xk
+
+PDF PAGE 26
+26
+R. LYONS, Y. PERES AND O. SCHRAMM
+before leaving Gm,nk is at most aCnk for some constant a (see, e.g., [15] or
+[31]). From (6.1), it follows that the expected number of crossings from one
+copy of Z3 to the other is very small, and hence the probability of making
+any crossing is also very small. That is, f(x) tends to 1 as x →∞in the
+ﬁrst copy of Z3, while f(x) tends to 0 as x →∞in the second copy of Z3.
+The fact that f is harmonic is obvious from the Markov property of simple
+random walk. Finally, to see that f is Dirichlet, observe that f = limn fn,
+where fn(x) is the probability that the random walk starting at x will hit
+a vertex v satisfying ∥v∥> n in the ﬁrst copy of Z3 before hitting a vertex
+v satisfying ∥v∥> n in the second copy. Let g be the function that equals
+one in the ﬁrst copy of Z3, zero in the second copy, and is harmonic at other
+vertices. The Dirichlet energy P
+x∼y[g(x) −g(y)]2 is equal to P
+k Cnk, which
+is ﬁnite. Since on ﬁnite graphs harmonic functions with given boundary
+values minimize the Dirichlet energy, the Dirichlet energy of fn is no larger
+than that of g. The same therefore holds for f = limn fn.
+There are many open questions related to minimal spanning forests:
+Question 6.5.
+Let G be a transitive graph whose automorphism group
+is not unimodular. Does every tree of the WMSF on G have one end a.s.?
+Question 6.6.
+Does every nonamenable quasi-transitive graph G sat-
+isfy FMSF ̸= WMSF? In view of Proposition 3.6, a positive answer is equiv-
+alent to a well-known conjecture by Benjamini and Schramm [11] that any
+such graph G satisﬁes pc(G) < pu(G).
+Question 6.7.
+If G is a unimodular transitive graph and WMSF ̸=
+FMSF, does FMSF-a.s. every tree have inﬁnitely many ends?
+After the ﬁrst version of this paper was circulated, a proof of this conjec-
+ture was obtained by Tim´ar [41].
+Question 6.8.
+For which d is the minimal spanning forest of Zd a.s. a
+tree? This question is due to Newman and Stein [35] who conjecture that
+the answer is d < 8 or d ≤8.
+There is a related conjecture of Benjamini and Schramm [12]:
+Conjecture 6.9.
+Let G be a quasi-transitive nonamenable graph. Then
+FMSF is a single tree a.s. iﬀthere is a unique inﬁnite cluster in G[pu] a.s.
+We can strengthen this conjecture to say that the number of trees in
+the FMSF equals the number of inﬁnite clusters at pu. An even stronger
+
+PDF PAGE 27
+MINIMAL SPANNING FORESTS
+27
+conjecture would be that in the natural coupling of Bernoulli percolation
+and the FMSF, each inﬁnite cluster at pu intersects exactly one component
+of the FMSF and each component of the FMSF intersects exactly one inﬁnite
+cluster at pu. Recall that in Proposition 3.13, we proved the second part of
+this conjecture for those G that satisfy pu(G) > pc(G).
+Question 6.10.
+Must the number of trees in the FMSF and the WMSF
+in a quasi-transitive graph be either 1 or ∞a.s.? This question for Zd is due
+to Newman [34].
+Conjecture 6.11.
+The components of the FMSF on a unimodular
+transitive graph are indistinguishable in the sense that for every automorphism-
+invariant property A of subgraphs, either a.s. all components satisfy A or
+a.s. all do not. The same holds for the WMSF.
+This fails in the nonunimodular setting, as the example in [32] shows.
+Conjecture 6.12.
+Let To be the component of the identity o in the
+WMSF on a Cayley graph, and let ξ = ⟨vn;n ≥0⟩be the unique ray from o
+in To. The sequence of “bushes” ⟨bn⟩observed along ξ converges in distri-
+bution. (Formally, bn is the connected component of vn in T \ {vn−1,vn+1},
+multiplied on the left by v−1
+n .)
+Question 6.13.
+Given a ﬁnitely generated group Γ, does the expected
+degree of a vertex in the FMSF of a Cayley graph of Γ depend on which Cay-
+ley graph is used? As discussed in the proof of Corollary 3.24, the analogous
+result is true for the FSF.
+Question 6.14.
+One may consider the minimal spanning tree on εZ2 ⊂
+R2 and let ε →0. It would be interesting to show that the limit exists in
+various senses. Aizenman, Burchard, Newman and Wilson [2] have shown
+that a subsequential limit exists.
+Acknowledgments.
+We thank Itai Benjamini for useful discussions at the
+early stages of this work, and G´abor Pete for comments on the manuscript.
+Part of this work was done while the ﬁrst two authors were visiting Microsoft
+Research.
+REFERENCES
+[1] Adams, S. R. and Spatzier, R. J. (1990). Kazhdan groups, cocycles and trees.
+Amer. J. Math. 112 271–287. MR1047300
+[2] Aizenman, M., Burchard, A., Newman, C. M. and Wilson, D. B. (1999). Scal-
+ing limits for minimal and random spanning trees in two dimensions. Random
+Structures Algorithms 15 319–367. MR1716768
+
+PDF PAGE 28
+28
+R. LYONS, Y. PERES AND O. SCHRAMM
+[3] Aldous, D. J. and Steele, J. M. (1992). Asymptotics for Euclidean minimal
+spanning trees on random points. Probab. Theory Related Fields 92 247–258.
+MR1161188
+[4] Aldous, D. J. and Steele, J. M. (2004). The objective method: Probabilistic com-
+binatorial optimization and local weak convergence. In Probability on Discrete
+Structures. Encyclopaedia Math. Sci. (H. Kesten, ed.) 110 1–72. Springer, Berlin.
+MR2023650
+[5] Alexander, K. S. (1995). Percolation and minimal spanning forests in inﬁnite
+graphs. Ann. Probab. 23 87–104. MR1330762
+[6] Alexander, K. S. and Molchanov, S. A. (1994). Percolation of level sets for two-
+dimensional random ﬁelds with lattice symmetry. J. Statist. Phys. 77 627–643.
+MR1301459
+[7] Barsky, D. J., Grimmett, G. R. and Newman, C. M. (1991). Percolation in half-
+spaces: Equality of critical densities and continuity of the percolation probability.
+Probab. Theory Related Fields 90 111–148. MR1124831
+[8] Benjamini, I., Lyons, R., Peres, Y. and Schramm, O. (1999). Critical percolation
+on any nonamenable group has no inﬁnite clusters. Ann. Probab. 27 1347–1356.
+MR1733151
+[9] Benjamini, I., Lyons, R., Peres, Y. and Schramm, O. (1999). Group-invariant
+percolation on graphs. Geom. Funct. Anal. 9 29–66. MR1675890
+[10] Benjamini, I., Lyons, R., Peres, Y. and Schramm, O. (2001). Uniform spanning
+forests. Ann. Probab. 29 1–65. MR1825141
+[11] Benjamini, I. and Schramm, O. (1996). Percolation beyond Zd, many questions
+and a few answers. Electron. Comm. Probab. 1 71–82 (electronic). MR1423907
+[12] Benjamini, I. and Schramm, O. (1998). Personal communication.
+[13] Benjamini, I. and Schramm, O. (2001). Percolation in the hyperbolic plane. J.
+Amer. Math. Soc. 14 487–507. MR1815220
+[14] Burton, R. M. and Keane, M. (1989). Density and uniqueness in percolation.
+Comm. Math. Phys. 121 501–505. MR0990777
+[15] Doyle, P. G. and Snell, J. L. (1984). Random Walks and Electric Net-
+works. Mathematical Association of America, Washington, DC. Available at
+http://arxiv.org/abs/math/0001057. MR0920811
+[16] Gaboriau, D. (2002). Invariants l2 de relations d’´equivalence et de groupes. Publ.
+Math. Inst. Hautes ´Etudes Sci. 95 93–150. MR1953191
+[17] Gaboriau, D. (2006). Invariant percolation and harmonic Dirichlet functions.
+GAFA. To appear.
+[18] Grimmett, G. (1999). Percolation, 2nd ed. Springer, Berlin. MR1707339
+[19] Grimmett, G. R. and Marstrand, J. M. (1990). The supercritical phase of perco-
+lation is well behaved. Proc. Roy. Soc. London Ser. A 430 439–457. MR1068308
+[20] H¨aggstr¨om, O. (1995). Random-cluster measures and uniform spanning trees.
+Stochastic Process. Appl. 59 267–275. MR1357655
+[21] H¨aggstr¨om, O. (1997). Inﬁnite clusters in dependent automorphism invariant per-
+colation on trees. Ann. Probab. 25 1423–1436. MR1457624
+[22] H¨aggstr¨om, O. (1998). Uniform and minimal essential spanning forests on trees.
+Random Structures Algorithms 12 27–50. MR1637387
+[23] H¨aggstr¨om, O. and Peres, Y. (1999). Monotonicity of uniqueness for percolation
+on Cayley graphs: All inﬁnite clusters are born simultaneously. Probab. Theory
+Related Fields 113 273–285. MR1676835
+[24] H¨aggstr¨om, O., Peres, Y. and Schonmann, R. H. (1999). Percolation on transi-
+tive graphs as a coalescent process: Relentless merging followed by simultaneous
+
+PDF PAGE 29
+MINIMAL SPANNING FORESTS
+29
+uniqueness. In Perplexing Problems in Probability (M. Bramson and R. Durrett,
+eds.) 69–90. Birkh¨auser, Boston. MR1703125
+[25] Hara, T. and Slade, G. (1994). Mean-ﬁeld behaviour and the lace expansion. In
+Probability and Phase Transition (G. Grimmett, ed.) 87–122. Kluwer, Dordrecht.
+MR1283177
+[26] Harris, T. E. (1960). A lower bound for the critical probability in a certain perco-
+lation process. Proc. Cambridge Philos. Soc. 56 13–20. MR0115221
+[27] Kesten, H. (1980). The critical probability of bond percolation on the square lattice
+equals 1
+2. Comm. Math. Phys. 74 41–59. MR0575895
+[28] Kesten, H. (1982). Percolation Theory for Mathematicians. Birkh¨auser, Boston.
+MR0692943
+[29] Lyons, R. (2000). Phase transitions on nonamenable graphs. J. Math. Phys. 41 1099–
+1126. MR1757952
+[30] Lyons, R. (2005). Random complexes and ℓ2-Betti numbers. To appear.
+[31] Lyons, R. with Peres, Y. (2006). Probability on Trees and Networks. Cambridge
+Univ. Press. Available at http://mypage.iu.edu/~rdlyons/.
+[32] Lyons, R. and Schramm, O. (1999). Indistinguishability of percolation clusters.
+Ann. Probab. 27 1809–1836. MR1742889
+[33] Morris, B. (2003). The components of the wired spanning forest are recurrent.
+Probab. Theory Related Fields 125 259–265. MR1961344
+[34] Newman,
+C.
+M.
+(1997).
+Topics
+in
+Disordered
+Systems.
+Birkh¨auser,
+Basel.
+MR1480664
+[35] Newman, C. M. and Stein, D. L. (1996). Ground-state structure in a highly disor-
+dered spin-glass model. J. Statist. Phys. 82 1113–1132. MR1372437
+[36] Pemantle, R. (1991). Choosing a spanning tree for the integer lattice uniformly.
+Ann. Probab. 19 1559–1574. MR1127715
+[37] Pemantle, R. and Peres, Y. (2000). Nonamenable products are not treeable. Israel
+J. Math. 118 147–155. MR1776080
+[38] Peres, Y. and Steif, J. E. (1998). The number of inﬁnite clusters in dynamical
+percolation. Probab. Theory Related Fields 111 141–165. MR1626782
+[39] Schonmann, R. H. (1999). Percolation in ∞+1 dimensions at the uniqueness thresh-
+old. In Perplexing Problems in Probability (M. Bramson and R. Durrett, eds.)
+53–67. Birkh¨auser, Boston. MR1703124
+[40] Schonmann, R. H. (1999). Stability of inﬁnite clusters in supercritical percolation.
+Probab. Theory Related Fields 113 287–300. MR1676831
+[41] Tim´ar, A. (2006). Ends in free minimal spanning forests. Ann. Probab. 34 865–869.
+[42] van den Berg, J. and Kesten, H. (1985). Inequalities with applications to perco-
+lation and reliability. J. Appl. Probab. 22 556–569. MR0799280
+R. Lyons
+Department of Mathematics
+Indiana University
+Bloomington, Indiana 47405-5701
+USA
+E-mail: rdlyons@indiana.edu
+URL: http://mypage.iu.edu/˜rdlyons/
+Y. Peres
+Departments of Statistics and Mathematics
+University of California
+Berkeley, California 94720-3860
+USA
+E-mail: peres@stat.berkeley.edu
+URL: http://www.stat.berkeley.edu/˜peres/
+O. Schramm
+Microsoft Research
+One Microsoft Way
+Redmond, Washington 98052
+USA
+URL: http://research.microsoft.com/˜schramm/

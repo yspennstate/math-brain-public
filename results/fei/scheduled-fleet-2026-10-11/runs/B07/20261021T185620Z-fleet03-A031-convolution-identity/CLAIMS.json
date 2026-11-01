@@ -1,0 +1,43 @@
+[
+  {
+    "claim_id": "A031-TRIANGLE-SAME-ORIGINAL-BANK-WEAK-RESET",
+    "version": 1,
+    "exact_statement": "For every integer L>=1, let f_L=2 product_{j=1}^3(1-1_{input_Ej=0})-1 with E1={x,a,c}, E2=X2 union{a,b}, E3=X3 union{b,c}, X2 and X3 disjoint L-bit private blocks. Let p_s be the entire squared Walsh spectrum of f_L restricted to x=s, and prescribe Q_s(T)=Q_s(T+b)=(p_s(T)+p_s(T+b))/2 for b notin T. With bits, oriented M=sum_i sum_T p(T+i)log2((p(T)+p(T+i))/p(T+i)) and full conditional spectral entropy B_x, M(f_L)+B_x(f_L)+(CE(p_0,Q_0)+CE(p_1,Q_1))/2+1/16 <17 I_private(f_L), where the single ORIGINAL private owner is {x} union X2 union X3. The signed average fresh-reference reset relative to R(T)=p(T)+p(T+x) equals 1-average_s B_b(p_s)-J_x, is negative for L=1 and positive for every L>=2; for L>=16 it exceeds 1/4-2^-L(L+3/2). Any finite adaptive no-reset continuation carries the full expected terminal CE under the same original bank and retained old M debit; this does not pay later prescribed fresh resets or all physical phase-channel costs.",
+    "hypotheses": [
+      "actual Boolean zero-point clause triangle exactly as stated",
+      "L is any positive integer; private blocks disjoint and disjoint from four shared/singleton labels",
+      "normalized uniform Walsh transform; logs base two",
+      "root reference is its entire actual spectrum; child references prescribed by b-row fair lifting",
+      "all previous root M, both child CE bills and all carried terminal debts retained; no reserve renewal"
+    ],
+    "statement_sha256": "aafbf5cea41e12f45e829f1ce55f3452775279004b4912e9d53fab4c56b983de",
+    "contributors": [
+      "A031"
+    ],
+    "proof_source": [
+      "DERIVATION.md sections 1-6",
+      "code/check_reset.py",
+      "out/CHECK.json",
+      "code/reproduce.py",
+      "out/REPRODUCTION.json"
+    ],
+    "proof_dependencies": [
+      {
+        "source": "mop_fei100/research_pushes/2026-10-11-full-fei-100-agents/sources/BLOCK_RESTRICTION_IDENTITY_2026-09-18.md",
+        "locator": "section 2 one-bit J_x<=(2/ln2)Inf_x",
+        "use": "positive reset lower bound only; joint bank theorem does not need this upper bound"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_WITH_EXACT_CERTIFICATES_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": null,
+    "refutes": [],
+    "first_unproved_line": "No gap in scoped author derivation/certificate; universal first unpaid line is paying a next prescribed fresh reference or admitting an arbitrary signed core against the SAME unused ancestor bank with both complete terminal bills and old debits. Independent-agent and formal acceptance remain pending.",
+    "next_consumers": [
+      "A035",
+      "A096",
+      "A088",
+      "A094"
+    ]
+  }
+]

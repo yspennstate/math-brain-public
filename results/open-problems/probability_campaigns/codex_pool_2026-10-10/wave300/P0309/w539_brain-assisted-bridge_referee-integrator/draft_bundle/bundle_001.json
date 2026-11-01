@@ -1,0 +1,57 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w539",
+  "bundle_slug": "p0309-reviewed-obstruction-conditional-bridge-001",
+  "entries": [
+    {
+      "key": "riesz-pair-transverse-curvature",
+      "namespace": "probability.riesz-gases",
+      "logical_name": "riesz-pair-transverse-curvature-in-three-dimensions",
+      "kind": "lemma",
+      "title": "A three-dimensional Riesz pair has negative transverse curvature",
+      "statement": "For s>0 and x in R^3 minus {0}, V_s(x)=|x|^{-s} has Hessian s|x|^{-s-2}[(s+2)ee^T-I], where e=x/|x|. Its radial eigenvalue is s(s+1)|x|^{-s-2}, and each of its two transverse eigenvalues is -s|x|^{-s-2}. Thus convexity of r to r^{-s} on (0,infinity) does not give convexity in vector displacements.",
+      "proof_text": "Differentiate grad V_s(x)=-s|x|^{-s-2}x. The displayed Hessian follows. Acting on e gives s(s+1)|x|^{-s-2}e; acting on any v perpendicular to e gives -s|x|^{-s-2}v. Equivalently, V_s((1,t,0))=(1+t^2)^{-s/2} has second derivative -s at t=0.",
+      "assumptions": ["s>0", "x is a nonzero vector in R^3", "This is a pair-potential statement and makes no assertion about the full Hessian"],
+      "domain": "probability and equilibrium statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w538-P0309-S1.2-reviewed-w539-20261010",
+        "url": null,
+        "revision": "w538-ATTEMPT-2026-10-10-reviewed-w539",
+        "license": "owner-own-work (w538 derivation independently checked by w539)",
+        "excerpt": "w538 O1: radial eigenvalue is positive; both transverse eigenvalues are negative."
+      }
+    },
+    {
+      "key": "conditional-bragg-bound",
+      "namespace": "probability.riesz-gases",
+      "logical_name": "conditional-bragg-bound-under-dirichlet-graph-convexity",
+      "kind": "lemma",
+      "title": "Bragg lower bound for a globally convex labeled displacement Gibbs model",
+      "statement": "Let D be a finite nonempty subset of Z^3 and L_D the Dirichlet nearest-neighbor lattice Laplacian on D (diagonal 6, off-diagonal -1 for neighbors). Let H_D:R^{3|D|}->R be C^2 and even, with D^2H_D(u) >= kappa(L_D tensor I_3) for every u and kappa>0. At beta>0 let P_D(du) be proportional to exp(-beta H_D(u))du. For nonzero G in 2pi Z^3 set B_{D,G}=|D|^{-1} sum_{x in D} exp(i G dot (x+u_x)) and C_3=(2pi)^{-3} integral_{[-pi,pi]^3} [2 sum_j(1-cos q_j)]^{-1}dq. Then C_3<infinity and Re E B_{D,G} >= 1-|G|^2 C_3/(2 beta kappa). If a=1-|G|^2 C_3/(2 beta kappa)>0, then E|B_{D,G}|^2>=a^2.",
+      "proof_text": "The global Hessian lower bound makes P_D integrable and L_D positive definite. Apply the Brascamp-Lieb covariance inequality to V=beta H_D with Gamma=beta kappa(L_D tensor I_3): Var(G dot u_x) <= |G|^2 (L_D^{-1})_{xx}/(beta kappa). The killed-walk Green representation bounds (L_D^{-1})_{xx} by the unrestricted lattice Green value C_3, whose Fourier integrand behaves as |q|^{-2} near zero and is integrable in dimension three. Evenness gives E u_x=0. Since G dot x is a multiple of 2pi and cos t>=1-t^2/2, averaging the cosine bound gives Re E B_{D,G} >= a. Jensen gives E|B_{D,G}|^2>=|E B_{D,G}|^2>=a^2 when a>0.",
+      "assumptions": ["D finite and nonempty subset of Z^3 with Dirichlet boundary", "H_D globally C^2 and even on all R^{3|D|}", "uniform all-displacement Hessian lower bound with kappa>0", "beta>0", "G is nonzero reciprocal-lattice vector", "This labeled model is not asserted to be a continuum Riesz Gibbs measure"],
+      "domain": "probability and equilibrium statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w538-P0309-S1.3-reviewed-w539-20261010",
+        "url": null,
+        "revision": "w538-ATTEMPT-2026-10-10-reviewed-w539",
+        "license": "owner-own-work (w538 derivation independently checked by w539)",
+        "excerpt": "w538 B1 assumes a uniform all-displacement Hessian comparison; actual Riesz Gibbs models are not covered."
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "conditional-bragg-bound",
+      "to_existing_logical": "math:harvest.arxiv.mathematics:arxiv-2405-06616-theorem-3-13-68d962",
+      "kind": "depends_on",
+      "rationale": "The source theorem assumes a global positive-definite Hessian lower bound and concludes a covariance upper bound. The conditional lemma uses it with V=beta H_D and Gamma=beta kappa(L_D tensor I_3)."
+    },
+    {
+      "from_key": "riesz-pair-transverse-curvature",
+      "to_existing_logical": "math:probability.core:open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "semantic_association",
+      "rationale": "P0309 concerns 3D Riesz Gibbs phases. Negative transverse pair curvature blocks an automatic termwise convexity argument; it is not evidence that the phase does not exist."
+    }
+  ]
+}

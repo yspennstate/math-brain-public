@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "balanced_core_cases": 78,
+  "history_fixtures": [
+    {
+      "core": [
+        1,
+        -1
+      ],
+      "reference_only_erased_mass": "0",
+      "fair_second_outcome_KL": {},
+      "adversarial_second_outcome_KL": {},
+      "old_conditional_booking": {
+        "5": "1/2",
+        "2": "-1"
+      }
+    },
+    {
+      "core": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "reference_only_erased_mass": "30/49",
+      "fair_second_outcome_KL": {},
+      "adversarial_second_outcome_KL": {
+        "7": "2",
+        "79": "-1/2",
+        "19": "-1/2"
+      },
+      "old_conditional_booking": {
+        "5": "1/2",
+        "2": "-1"
+      }
+    },
+    {
+      "core": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "reference_only_erased_mass": "60/433",
+      "fair_second_outcome_KL": {},
+      "adversarial_second_outcome_KL": {
+        "433": "1",
+        "17": "-1/2",
+        "29": "-1/2",
+        "373": "-1/2"
+      },
+      "old_conditional_booking": {
+        "5": "1/2",
+        "2": "-1"
+      }
+    },
+    {
+      "core": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "reference_only_erased_mass": "225/272",
+      "fair_second_outcome_KL": {},
+      "adversarial_second_outcome_KL": {
+        "2": "4",
+        "17": "1",
+        "7": "-1/2",
+        "71": "-1/2",
+        "47": "-1/2"
+      },
+      "old_conditional_booking": {
+        "5": "1/2",
+        "2": "-1"
+      }
+    }
+  ],
+  "factored_cases": [
+    {
+      "r": 16,
+      "m": 4096,
+      "root_dimension": 65540,
+      "core_I": 3,
+      "root_I": "5/2",
+      "core_H_interval": [
+        "9502813158085043865330481/1208925819614629174706176",
+        "4751406579042521932665241/604462909807314587353088"
+      ],
+      "canonical_entropy_strict_lower": "253/16",
+      "original_canonical_owner_remainder_strict_upper": "-109/16",
+      "signed_canonical_owner_remainder_strict_upper": "-93/16",
+      "alternative_initial_lift_remainder_strict_lower": "65/32"
+    },
+    {
+      "r": 32,
+      "m": 134217728,
+      "root_dimension": 4294967300,
+      "core_I": 3,
+      "root_I": "5/2",
+      "core_H_interval": [
+        "4793594505137372728398863/604462909807314587353088",
+        "9587189010274745456797727/1208925819614629174706176"
+      ],
+      "canonical_entropy_strict_lower": "509/16",
+      "original_canonical_owner_remainder_strict_upper": "-365/16",
+      "signed_canonical_owner_remainder_strict_upper": "-349/16",
+      "alternative_initial_lift_remainder_strict_lower": "129/64"
+    },
+    {
+      "r": 64,
+      "m": 288230376151711744,
+      "root_dimension": 18446744073709551620,
+      "core_I": 3,
+      "root_I": "5/2",
+      "core_H_interval": [
+        "9629297784762745440129681/1208925819614629174706176",
+        "4814648892381372720064841/604462909807314587353088"
+      ],
+      "canonical_entropy_strict_lower": "1021/16",
+      "original_canonical_owner_remainder_strict_upper": "-877/16",
+      "signed_canonical_owner_remainder_strict_upper": "-861/16",
+      "alternative_initial_lift_remainder_strict_lower": "257/128"
+    }
+  ],
+  "assertions": 913,
+  "helper_assertions": 2138,
+  "seconds": 0.6142415999784134,
+  "formal_scope": "Separate Lean admission result; no compilation inferred",
+  "full_FEI": "OPEN"
+}

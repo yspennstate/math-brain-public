@@ -1,0 +1,159 @@
+{
+  "claims": [
+    {
+      "claim_id": "B04-SEL-LOG-SHARP",
+      "version": 1,
+      "exact_statement": "For every multiplexer F(x,y)=g_x(y) with a selector bits, Delta:=H(F)-2^{-a} sum_b H(g_b) satisfies Delta=M_W+B_W with 0<=M_W<=min(a,(2/ln2) I_sel(F)) and 0<=B_W<=a*h2(I_sel(F)/a) (h2(0)=0; for a=0 both sides vanish). Hence Delta<=min(a,(2/ln2) I_sel)+a*h2(I_sel/a)<=I_sel*log2(e^3 a/I_sel). Here M_W=a-sum_T R_T H(r_T), B_W=sum_T R_T H(nu_T)=H(S_sel|S_data) as in threshold paper Prop. 8.6 eq. (75).",
+      "hypotheses": [
+        "F(x,y)=g_x(y) with x a fresh uniform selector block of a>=0 bits independent of uniform data y in {0,1}^m",
+        "g_b arbitrary Boolean (+-1) functions on the common data cube; no balance, orthogonality or disjointness",
+        "entropy H(f)=sum_S fhat(S)^2 log2(1/fhat(S)^2); influence = physical edge disagreement probability; h2 binary entropy in bits"
+      ],
+      "statement_sha256": "af0592ce5d609d348d82043db1d874b32f71fe881f7b1cf72ccff65de66510a0",
+      "contributors": [
+        "claude-B04-lead"
+      ],
+      "proof_source": "REPORT.md section 1; original lead claim and independently reconstructed proof, with exact certificates in out/",
+      "proof_dependencies": [
+        "threshold_paper_38pp Prop 8.6 eq (75),(79)",
+        "Gross/Bonami log-Sobolev on {0,1}^a (independently re-proved from the two-point inequality in A018 REPORT sec. 2)"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A018",
+          "scope": "part M_W<=(2/ln2)I_sel only",
+          "verdict": "independent derivation by a different route agrees",
+          "independent": true
+        },
+        {
+          "reviewer": "claude-B04-lead",
+          "verdict": "exhaustive exact-Walsh checks a=1 m<=3, a=2 m<=2 (131,600 multiplexers), 0 violations",
+          "independent": false
+        },
+        {
+          "reviewer": "A018",
+          "date_utc": "2026-10-12T01:36:52.011492+00:00",
+          "independent": true,
+          "verdict": "HOLDS_AT_STATED_SCOPE",
+          "proof_reconstruction": "REPORT.md section 1",
+          "implementation": "Independent Python integer Walsh/direct sums and rational outward logs; no imported lead code",
+          "source_statement_sha256_announced": "5eb07bb433f45b30d330b306892bc8c9824729219607c9c27bb8c7ae959003b2",
+          "statement_utf8_sha256_recomputed": "af0592ce5d609d348d82043db1d874b32f71fe881f7b1cf72ccff65de66510a0",
+          "source_hash_matches_utf8_statement": false,
+          "mathematical_repair_supplied": false,
+          "scope_note": "Universal analytic statement plus independent exact finite certificate"
+        }
+      ],
+      "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A018",
+      "supersedes": null,
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A018",
+        "A020",
+        "A090",
+        "A091",
+        "B06",
+        "C019"
+      ]
+    },
+    {
+      "claim_id": "B04-BENT-SPLICE-SHARP",
+      "version": 1,
+      "exact_statement": "For even m>=2 let g_0(y)=(-1)^{y1y2+...+y_{m-1}y_m} and g_1=g_0 with the value at y=0 flipped; F(x,y)=g_x(y) (a=1). With u=2^{-m/2}: I_sel=2^{-m}=u^2 exactly and Delta=m u^2+A+B where A=-2 sum_{e=+-1} w_e (1-e u)^2 log2(1-e u), B=sum_e w_e (1-2eu)^2 log2|1-2eu|, w_e=(1+eu)/2. Consequently Delta=I_sel(m+3/ln2)-(19/(6 ln2)) I_sel^2+O(I_sel^3) and [(2/ln2)I_sel+h2(I_sel)]-Delta=(8/(3 ln2)) I_sel^2+O(I_sel^3)>0. For the t-fold tensor power (a=t selector bits, tm data bits) Delta, I_sel and the B04-SEL-LOG-SHARP bound are t times the one-bit values. Hence for every eps>0 no function psi with psi(s,a)<=(2/ln2)s+a h2(s/a)-eps s bounds Delta over all multiplexers.",
+      "hypotheses": [
+        "F(x,y)=g_x(y) with x a fresh uniform selector block of a>=0 bits independent of uniform data y in {0,1}^m",
+        "g_b arbitrary Boolean (+-1) functions on the common data cube; no balance, orthogonality or disjointness",
+        "entropy H(f)=sum_S fhat(S)^2 log2(1/fhat(S)^2); influence = physical edge disagreement probability; h2 binary entropy in bits",
+        "m even, inner-product bent core, one flipped point"
+      ],
+      "statement_sha256": "f6cfc4002c04b18be271a51b15c4156580bab6e12c46e83de31ee5c55309e50b",
+      "contributors": [
+        "claude-B04-lead"
+      ],
+      "proof_source": "REPORT.md section 2; original lead claim and independently reconstructed proof, with exact certificates in out/",
+      "proof_dependencies": [
+        "B04-SEL-LOG-SHARP"
+      ],
+      "review_records": [
+        {
+          "reviewer": "claude-B04-lead",
+          "verdict": "closed form inside certified enclosure at m=2,4,6,8,10,12; series coefficients exact",
+          "independent": false
+        },
+        {
+          "reviewer": "A018",
+          "date_utc": "2026-10-12T01:36:52.011492+00:00",
+          "independent": true,
+          "verdict": "HOLDS_AT_STATED_SCOPE",
+          "proof_reconstruction": "REPORT.md section 2",
+          "implementation": "Independent Python integer Walsh/direct sums and rational outward logs; no imported lead code",
+          "source_statement_sha256_announced": "a8f1d01a8d45db754b1025ab966f165d55870df63ff5352cbbdf21fe2c24b5fb",
+          "statement_utf8_sha256_recomputed": "f6cfc4002c04b18be271a51b15c4156580bab6e12c46e83de31ee5c55309e50b",
+          "source_hash_matches_utf8_statement": false,
+          "mathematical_repair_supplied": false,
+          "scope_note": "Bent sharpness is asymptotic on the displayed actual Boolean family, not exact pointwise optimization; standard zero-mass convention retained"
+        }
+      ],
+      "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A018",
+      "supersedes": null,
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A016",
+        "A017",
+        "A019",
+        "A020",
+        "B05"
+      ]
+    },
+    {
+      "claim_id": "B04-NODE-BOUNDARY",
+      "version": 1,
+      "exact_statement": "For every Boolean f on n>=1 coordinates and every coordinate i, with D_i=(f|_{x_i=0}-f|_{x_i=1})/2 on the other n-1 coordinates: Delta_i H:=H(f)-(H(f|_{x_i=0})+H(f|_{x_i=1}))/2 <= (3/ln2) Inf_i(f) + 2 I(D_i), where I(D_i)=sum_{S contains i}(|S|-1) fhat(S)^2. The bound is first-order sharp: on the bent splice of B04-BENT-SPLICE-SHARP, Delta/bound -> 1.",
+      "hypotheses": [
+        "f Boolean +-1 on the uniform cube",
+        "entropy in bits; physical influence"
+      ],
+      "statement_sha256": "d1d82ff055ba6ac7bbf8518b2cc7bb058cdce29a57723a07c968bdefc1461fb5",
+      "contributors": [
+        "claude-B04-lead"
+      ],
+      "proof_source": "REPORT.md section 3; original lead claim and independently reconstructed proof, with exact certificates in out/",
+      "proof_dependencies": [
+        "B04-SEL-LOG-SHARP",
+        "edge-isoperimetric inequality: e(S)<=(1/2)|S|log2|S| on the m-cube"
+      ],
+      "review_records": [
+        {
+          "reviewer": "claude-B04-lead",
+          "verdict": "all 65,836 Boolean f on n<=4 and every i: 0 violations; bent splice ratio 0.99999982 at m=20",
+          "independent": false
+        },
+        {
+          "reviewer": "A018",
+          "date_utc": "2026-10-12T01:36:52.011492+00:00",
+          "independent": true,
+          "verdict": "HOLDS_AT_STATED_SCOPE",
+          "proof_reconstruction": "REPORT.md section 3",
+          "implementation": "Independent Python integer Walsh/direct sums and rational outward logs; no imported lead code",
+          "source_statement_sha256_announced": "69e116fec728179a093d377af806aacf6483628db74a2807855d81805e4b3764",
+          "statement_utf8_sha256_recomputed": "d1d82ff055ba6ac7bbf8518b2cc7bb058cdce29a57723a07c968bdefc1461fb5",
+          "source_hash_matches_utf8_statement": false,
+          "mathematical_repair_supplied": false,
+          "scope_note": "Universal analytic statement plus independent exact finite certificate"
+        }
+      ],
+      "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A018",
+      "supersedes": null,
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A019",
+        "A020",
+        "B06",
+        "C019"
+      ]
+    }
+  ]
+}

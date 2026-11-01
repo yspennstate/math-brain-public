@@ -1,0 +1,45 @@
+{
+  "helper_version": "A050-stage9 using own stage8 exact rational helpers, hashes frozen before execution",
+  "actual_Boolean_family": "F_h; signed heterogeneous point-tensor cores; b,a,first1/7 reset, divergent data and later1/7 reset, selected x exposure, full pure-core refresh and data/reset continuation",
+  "parameter_domain": [
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      4
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "case_count": 50,
+  "policies": "five selected-x rules: aligned,antialigned,both,plus-only,minus-only; incoming data prefix absent/present; post-a plus queries first remaining data bit, minus last",
+  "pilot_case_count": 5,
+  "symmetry": "one prescribed label rule, no all-tree finite enumeration; analytic theorem supplies unbounded quantifiers",
+  "arithmetic": "Fraction spectra/pivots/coherent likelihoods; rational32-term atanh logs",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": 55,
+  "no_automatic_dimension_increase": true,
+  "scalar_certificate": {
+    "domain": "mu in[0,1]; low[0,1/5],middle[1/5,3/4],high[3/4,1] with shared endpoints",
+    "middle_cells": 512,
+    "arithmetic": "rational midpoint bounds minus12 times exact half-cell length; derivative bound analytic; endpoint high concavity",
+    "max_runtime_seconds": 55,
+    "memory_estimate_MB": 80
+  },
+  "helper_sha256": {
+    "code\\check.py": "353a3af585940b1409e316489e1b086125712c4a9d8592cb25c1228c6138561c",
+    "code\\controller.py": "5b5b77f45190151e172d019bd266eae29fb6bf85ba36fd98dbcd5cf8d4f441f7",
+    "code\\exact.py": "3781db1e1b2196d5c0b42a7d29c1fa9ce21a23a84f88dc602814a65f88533b59",
+    "code\\reset.py": "ebfcb497d0c9b0138608a7742acfd59cebeb8036c757065cdc49315f79ac3bf0",
+    "code\\scalar.py": "92a8b1344b194f77d2cf15f22bad8e22116ebd899971b337fc22026f4329df21"
+  }
+}

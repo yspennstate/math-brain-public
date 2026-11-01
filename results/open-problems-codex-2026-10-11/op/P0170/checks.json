@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-12",
+  "exact_parity": [
+    {
+      "n": 2,
+      "all_proper_subsets_checked": true
+    },
+    {
+      "n": 3,
+      "all_proper_subsets_checked": true
+    },
+    {
+      "n": 4,
+      "all_proper_subsets_checked": true
+    },
+    {
+      "n": 5,
+      "all_proper_subsets_checked": true
+    },
+    {
+      "n": 6,
+      "all_proper_subsets_checked": true
+    },
+    {
+      "n": 7,
+      "all_proper_subsets_checked": true
+    },
+    {
+      "n": 8,
+      "all_proper_subsets_checked": true
+    },
+    {
+      "n": 9,
+      "all_proper_subsets_checked": true
+    }
+  ],
+  "quadrature": [
+    {
+      "n": 1,
+      "absolute_probability_error": 0.5,
+      "estimated_quad_error": 2.1209818828989342e-11,
+      "proved_lower_bound": 0.053387356023653125,
+      "signed_direction": 1
+    },
+    {
+      "n": 3,
+      "absolute_probability_error": 0.08773982804591092,
+      "estimated_quad_error": 4.407294428113153e-12,
+      "proved_lower_bound": 0.0031258207007137367,
+      "signed_direction": -1
+    },
+    {
+      "n": 5,
+      "absolute_probability_error": 0.02434518451061035,
+      "estimated_quad_error": 1.4275065601532142e-12,
+      "proved_lower_bound": 0.00018301627540201858,
+      "signed_direction": 1
+    },
+    {
+      "n": 7,
+      "absolute_probability_error": 0.007550973245923844,
+      "estimated_quad_error": 3.5494479909211364e-13,
+      "proved_lower_bound": 1.0715572090996585e-05,
+      "signed_direction": -1
+    },
+    {
+      "n": 9,
+      "absolute_probability_error": 0.0024618852208042894,
+      "estimated_quad_error": 6.926758845590512e-14,
+      "proved_lower_bound": 6.273949406145465e-07,
+      "signed_direction": 1
+    },
+    {
+      "n": 15,
+      "absolute_probability_error": 9.766185757497348e-05,
+      "estimated_quad_error": 1.735439258450152e-14,
+      "proved_lower_bound": 1.25926740269796e-10,
+      "signed_direction": -1
+    },
+    {
+      "n": 31,
+      "absolute_probability_error": 2.5093323665980315e-08,
+      "estimated_quad_error": 2.209267235283419e-14,
+      "proved_lower_bound": 1.739094410669121e-20,
+      "signed_direction": -1
+    }
+  ],
+  "monte_carlo": [
+    {
+      "n": 3,
+      "samples": 200000,
+      "observed_signed_error": -0.08947,
+      "quadrature_signed_error": -0.08773982804591092,
+      "standard_error": 0.0011006855195160742,
+      "z_score": -1.5719039847546639
+    },
+    {
+      "n": 5,
+      "samples": 200000,
+      "observed_signed_error": 0.024920000000000053,
+      "quadrature_signed_error": 0.02434518451061035,
+      "standard_error": 0.0011167079116562763,
+      "z_score": 0.5147411273706731
+    },
+    {
+      "n": 7,
+      "samples": 200000,
+      "observed_signed_error": -0.008014999999999994,
+      "quadrature_signed_error": -0.007550973245923844,
+      "standard_error": 0.001117906487151406,
+      "z_score": -0.41508548291777136
+    }
+  ],
+  "exact_root_representation": {
+    "polynomials_checked": 142,
+    "grid": "all quarter-integers from -3 to 3, including every root",
+    "arithmetic": "exact Fraction",
+    "max_degree": 6,
+    "leading_signs": "both"
+  },
+  "constants": {
+    "c": 0.24197072451914337,
+    "cdf_constant_bound": 31.17391304347826,
+    "claimed_cdf_constant": 32,
+    "root_atom_example": "q(s)=-s^2: event is singleton {0}; requires coefficient cost 2"
+  },
+  "kernel": {
+    "normalization_truncated": 0.9999990614730646,
+    "normalization_tail_upper": 2.5464790894703256e-06,
+    "first_absolute_moment_truncated": 1.3236719716137464,
+    "first_moment_tail_upper": 0.0003819718634205488,
+    "proved_first_moment_upper": 4.058451048843331
+  }
+}

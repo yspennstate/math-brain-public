@@ -1,0 +1,9 @@
+{
+  "helper_version": "A056-prescribed-fresh-reset-v1",
+  "domain_change": "none",
+  "partition": "two disjoint lanes by frozen history index modulo2;132 histories in each",
+  "source_checks": "all256 source and22 endpoint certificates repeated in each lane; count once in aggregate",
+  "added_validation": "explicit first/shared and private-prefix outcome normalizers; same physical queries and reset targets",
+  "maximum_runtime_per_lane_seconds": 55,
+  "memory_estimate_MB": 100
+}

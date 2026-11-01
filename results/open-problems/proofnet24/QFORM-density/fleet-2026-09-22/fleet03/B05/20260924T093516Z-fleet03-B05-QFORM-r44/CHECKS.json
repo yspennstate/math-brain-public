@@ -1,0 +1,33 @@
+{
+  "run_id": "20260924T093516Z-fleet03-B05-QFORM-r44",
+  "status": "exact_algebra_checked",
+  "checks": {
+    "pair_pencil_symbolic": {
+      "identity": "det A_{i,j}=c*((mu*alpha-beta^2)*y^2+2*mu*gamma*y*z+mu*delta*z^2)",
+      "result": "PASS"
+    },
+    "pencil_determinant_symbolic": {
+      "identity": "det [[mu*alpha-beta^2,mu*gamma],[mu*gamma,mu*delta]]=mu*det M",
+      "result": "PASS"
+    },
+    "stress_frame_parseval": {
+      "identity": "R^T R=I_3 for four balanced sign classes repeated m/4 times",
+      "result": "PASS"
+    },
+    "stress_spectrum": {
+      "identity": "nonzero spectrum(R diag(1,1,-1) R^T)={1,1,-1}",
+      "result": "PASS"
+    },
+    "stress_pair_determinants": {
+      "hub_residual": "0",
+      "residual_residual_values": ["0", "-6/m^2", "-2/m^2"],
+      "result": "PASS"
+    },
+    "constants": {
+      "C_star": 491.735145127033,
+      "C_star_times_4_pow_1_over_3": 780.5808866643873,
+      "four_pi": 12.566370614359172
+    }
+  },
+  "note": "Finite/symbolic checks are diagnostics only; the report contains exact proofs."
+}

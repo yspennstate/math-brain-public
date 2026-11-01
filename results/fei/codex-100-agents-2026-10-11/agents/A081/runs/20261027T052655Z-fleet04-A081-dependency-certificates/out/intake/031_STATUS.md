@@ -1,0 +1,2 @@
+STATE: A081 stage11 complete: 100-node graph/16 guards PASS; all-M conditional v4 budget exact; parity refutes uncancelled fixed-ambient majorant, NOT FEI; full v4 review pending; FEI OPEN.
+NEXT: A011/A099/A094: replace uncancelled fixed-ambient point-flip majorants by a cancellation-aware arbitrary-target admission/extraction with actual original influence payment, full old U and terminals; independently review v4 without treating supplied source price as proved.

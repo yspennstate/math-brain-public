@@ -1,0 +1,76 @@
+\section*{A005 endpoint-admission tests}
+
+Let
+\[
+\mathcal C_\eta=\left\{F:
+I(F)\le\eta,\quad \max_i I_i(F)/I(F)\le\eta,\quad
+\Pr(F=-1)\le\eta,\quad \widehat F(S)\ne0\ \forall S\right\}.
+\]
+For a nonconstant seed $g$ on $n$ variables, let $u_m$ differ at at
+most one truth-table point from $g^{\otimes m}$ and have odd negative
+count.  Put
+\[
+r_m=\lceil\sqrt m\rceil,\quad p_m=2^{-r_m},\quad
+F_m=1+A_{r_m}(u_m-1).
+\]
+Then $F_m\in\mathcal C_\eta$ for all sufficiently large $m$, and
+\[
+\frac{H(F_m)}{I(F_m)}\to\frac{H(g)}{I(g)}.
+\]
+
+For the downward functional
+\[
+L(f)=\sum_Ap_A\sum_{i\in A}
+\log_2\left(1+\frac{p_{A\setminus i}}{p_A}\right),
+\qquad p_A=\widehat f(A)^2,
+\]
+write $\ell(x,y)=x\log_2(1+y/x)$.  If two $N$-variable Boolean
+functions differ at one truth-table point, their squared Fourier laws
+have total variation at most $\tau_N=2^{1-N/2}$.  Every nonzero Boolean
+Fourier mass is at least $2^{2-2N}$, whence
+\[
+|L(f)-L(u)|\le4N^2\tau_N=8N^2 2^{-N/2}.
+\]
+Since $L$ is additive under disjoint products,
+\[
+L(u_m)=mL(g)+o(1).
+\]
+
+For a full-support core with mean $\mu$, put $q=1-\mu$, $p=2^{-r}$,
+and $c=1-pq$.  Exact Fourier partition gives
+\[
+\begin{aligned}
+L(1+A_r(g-1))={}&p\sum_{|S|\ge2}a_S^2
+\sum_{i\in S}\log_2\left(1+\frac{a_{S\setminus i}^2}{a_S^2}\right)\\
+&+\sum_{|S|=1}\left[\ell(p^2a_S^2,c^2)
++(2^r-1)\ell(p^2a_S^2,p^2q^2)\right]\\
+&+\frac{rp}{2}(1-\mu^2)
++\left(\frac{rp}{2}-rp^2\right)q^2+r\ell(p^2q^2,c^2).
+\end{aligned}
+\]
+The singleton mass of $u_m$ is $o(1)$, and $r_m/m\to0$, so
+\[
+L(F_m)=p_m mL(g)+o(p_m m),\qquad
+\frac{L(F_m)}{I(F_m)}\to\frac{L(g)}{I(g)}.
+\]
+Thus, for every $\eta>0$,
+\[
+\sup_{F\in\mathcal C_\eta}\frac{L(F)}{I(F)}=C_L.
+\]
+
+In contrast, an activation control $z$ satisfies
+\[
+\begin{aligned}
+\Delta_zH={}&2p(1-\mu^2)+\phi(p^2q^2)+2pq^2-4p^2q^2\\
+&+\phi((1-pq)^2)-\frac12\phi((1-2pq)^2),
+\end{aligned}
+\]
+while $I_z=pq$.  Along the embedding, $\mu(u_m)\to0$ and $p_m\to0$,
+so
+\[
+\frac{\Delta_zH(F_m)}{I_z(F_m)}\to4.
+\]
+Hence this construction does not preserve the seed's existential
+restriction-step statistic.  No conclusion about a different embedding
+or about the truth of the universal STEP endpoint follows.
+

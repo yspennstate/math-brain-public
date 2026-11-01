@@ -1,0 +1,71 @@
+{
+  "helper_version": "A056-degree-entropy-boundary-v1",
+  "actual_Boolean_family": "f_{k,m}(x,z,y)=(1-A_k(x))*z+A_k(x)*product(y); A_k=all k guard bits0; disjoint blocks; main diagonal m=2^k",
+  "domain": {
+    "direct_truth_tables": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        8
+      ]
+    ],
+    "compressed_diagonal_k": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      64,
+      128,
+      256
+    ],
+    "guard_restriction": "first guard bit, both outcomes",
+    "literal_restriction": "z, both signs"
+  },
+  "case_count": {
+    "truth_roots": 3,
+    "direct_children": 12,
+    "compressed_roots": 35
+  },
+  "symmetry": "no census claim; compressed binomial multiplicities proved analytically",
+  "arithmetic": "integer Walsh transform, literal edge counts, Fraction binomial moments and exact prime-log identities for materialized models; analytic inequalities for all k",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": 55,
+  "pilot": "k=1 direct and compressed",
+  "frozen_max_truth_dimension": 12,
+  "no_automatic_escalation": true
+}

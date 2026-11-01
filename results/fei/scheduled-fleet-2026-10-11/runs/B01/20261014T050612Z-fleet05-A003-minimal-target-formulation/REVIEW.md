@@ -1,0 +1,13 @@
+# Independent terminal-criterion review
+
+Source: A004-KL-SHADOW-EXCLUSIVE-TERMINAL-TRANSFER@1, statement digest 50023058787e5d377d362f5de415f98448e50375a8f9e6b608d49f599050ca32, A004 run 20261014T024610Z REPORT/DERIVATION/CLAIMS. Verdict: HOLDS at its original stated scope, without repair. Registry adoption is not asserted.
+
+Independent reconstruction starts from actual child spectra rather than the named bank. For each seed row let a=Ahat^2,b=Dhat^2,delta=sum b. The complete derivative/reference KL expands to M=sum b log2((a+b)/b), and B-M=sum a log2((a+b)/a). ln(1+t)<=t gives 0<=B-M<=delta/ln2. Physical parity embedding occupies paired flags and makes the complete duplicated-row KL log2(1/delta); deleting its partner recovers the original normalized row and thus loses M. This confirms the precise partner loss, distinct from A096's newer mask-only loss L_d.
+
+For balanced fresh h, resolving u then the encoder leaves g_+,g_- with actual probabilities 1/2. Encoder variance drops sum to one, so Q=B and its inherited erasure is delta E_h. Let hbar be the average ACTUAL child entropy and ibar the average child influence. Then ibar=I(g)-delta and H(g)-hbar=B+J. Substituting directly into T_K=K ibar-hbar gives T_K-B-delta E_h=K I(g)-H(g)+J-(K+E_h)delta, and the partner-KL version adds the same single C_up. This is a physical terminal identity, with no assumed positive seed or child bank.
+
+Maj3 has E_h=1 for any complete adaptive policy by its first free-erasure query, two symmetric two-input slices of erasure one, and final dictator/constant spectra. AND2's four masses 1/4 give delta=1/2,B=1,M=C_up=1/2,J=1. Constant/dictator terminals give T_2=1, so the shadow-plus-inner margin is -1/2 while the KL-plus-inner margin is zero. This independently confirms the actual obstruction and its units. The finite executable reconstructs the exact margin for every distinguished row of all 276 signs through dimension three, including this endpoint, and rigorous interval bounds check C_up.
+
+No substantive repair is supplied. A003's older interleaved mechanism is a source ancestor; this review reconstructs A004's new cross-route correction, terminal criterion and exact AND2 obstruction, and does not count as a new independent acceptance of A003's own earlier claim.
+
+New dependency consumed: A096 stage5's point-core mask-only KL loss needs terminal price five without a local allowance at C<5. The new retained-bank calculation uses its SAME physical children but avoids that loss; it does not refute A096's result. A094's all-location bent/flip reserve was read as direction toward destroyed-edge debit, not assumed or re-proved here. The remaining non-point unequal-amplitude target is explicitly separate from both already-paid baselines.

@@ -1,0 +1,15 @@
+# Scoped independent review of w474
+
+2026-10-10. Reviewer w475. Read w474's ATTEMPT.md and CLAIMS.jsonl only after saving the contact and path-current derivations in this folder. Exact snapshot hash will be recorded in review_packet.json. Served model/account identity is not available here; no model-diversity gate is certified.
+
+KEEP w474-L1, within its stated Gaussian scope. Independently expanding sign(X)-sqrt(2/pi)X gives covariance (2/pi)(arcsin r-r). The positive coefficients after the linear term are all powers r^(2k+1), k>=1; for r in [0,1] each is <=r^3. Their sum at r=1 gives 1-2/pi and equality holds there. The r=0 and r=1 boundaries are sound.
+
+KEEP w474-L2 and its auxiliary-bridge counterexample w474-C1, for finite lists of fixed compactly supported smooth tests and fixed 0<gamma<3. The positive Gamma mixture yields a positive-definite covariance. Gaussian interpolation with cross-covariance tC has a positive derivative for increasing functions when all entries of C are nonnegative; monotone smoothing transfers this to the signs. The nonlinear residual is orthogonal to the linear Gaussian field. Its variance is bounded by N^(-3+gamma) times the shell sum of |z|^(-3gamma), giving exactly the three stated regimes. The singular diagonal in the covariance Riemann sum has bound O(N^(gamma-3)+delta^(3-gamma)). Taking N to infinity and then delta to zero is valid. Joint convergence follows by applying the same L2 bound to each fixed linear combination of tests.
+
+The gamma=0 endpoint gives a single common sign and the gamma=3 endpoint gives logarithmically diverging Gaussian variance plus a bounded L2 error. Both checks are correct. Constants may depend on gamma and tests; this proof does not justify gamma depending on N, a growing family of tests, or distribution-space tightness. Weak FDD convergence does not by itself imply convergence of fourth moments or of the source's subcritical renormalized coupling. w474 explicitly restricts its statement to FDD convergence, so this is a scope limit rather than a defect.
+
+KEEP w474-L3 as an independently reproduced special case. This folder's separately derived multiplicity-pattern formula equals w474's inclusion-exclusion formula: 12chi^2-16chi-6B+12. The all-equal excess subtraction is 10; triples have multiplicity three and two-pair tuples multiplicity two. Finite chi supplies absolute convergence and B<=chi supplies the sharp asymptotic coefficient. This removes exact coincidences only. It does not remove distinct sites at bounded distance.
+
+The parent C0052 proof remains incomplete. Neither the sign-field surrogate, the two-point bounds, nor contact removal establishes the required positive subsequential lower bound for the four-distinct-site Ursell sum normalized by chi^2 xi^3. The exact current law is the union of the two specified sourced currents. A sprinkled independent-cluster lower bound needs a separate transfer estimate; the path obstruction in ATTEMPT.md excludes a model-uniform proportional reverse comparison.
+
+NEXT: w476 should finish the scoped special-case checks; the integrator should keep all parent-problem and model-diversity gates separate.

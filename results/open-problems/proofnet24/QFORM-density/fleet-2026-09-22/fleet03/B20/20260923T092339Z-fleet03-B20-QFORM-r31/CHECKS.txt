@@ -1,0 +1,34 @@
+QFORM_B20_R31_CHECKS
+
+Exact constants:
+c_star = 453/4096
+beta = 1/64
+zeta = (2/9)*c_star*beta^2 = 151/25165824
+2*beta = 1/32
+heavy-angle ratio = (1/32)/(1/2) = 1/16
+eta0 = zeta/2 = 151/50331648
+
+Decimal regressions only (not proof):
+zeta = 0.000006000200907389323...
+eta0 = 0.0000030001004536946616...
+12*eta0^(-1/3) = 832.0242426678... < 833
+
+Analytic theorem checks:
+1. For H=G_j+G_k, pair-Hall gate lambda_2(H)>=beta gives
+   det[x_i I +(x_j-x_i)H] >= x_i[x_i+beta(x_j-x_i)]^2.
+2. H<=I implies A0<=x_j I, hence A0^{-1}>=x_j^{-1}I.
+3. K=G_k has top eigenvalue >=alpha, hence K>=alpha uu^T for a top unit eigenvector u.
+4. Thus determinant capacity ratio >=
+   [beta+(1-beta)x_i/x_j]^2 [alpha+(1-alpha)x_j/x_k] >=alpha beta^2.
+5. Gurvits n=3 coefficient/capacity factor is 3!/3^3=2/9.
+6. If lambda_2(G_a+G_b)<beta, transverse trace h2+h3<2beta=1/32.
+7. Complement Gram on that transverse plane is I-H, hence both eigenvalues >1-beta=63/64.
+8. If heavy row lies in near-line pair, sin^2 angle <=(1/32)/c_h <1/16 because c_h>1/2.
+9. For large-rainbow branch, T_rest<=det(I-r_hr_h^T)=1-L.
+10. DELETE: lambda_min(I-r_hr_h^T)=1-L>=eta0; conditioning is on an original coordinate only.
+11. ISOLATE: det K>=T_h>eta0 and K<=I imply lambda_min(K)>=det K>eta0.
+12. In both children s_min(H^(1/2) M H^(1/2)) or s_min(K^(1/2) M K^(1/2)) >=eta0*s_min(M)>=eta0.
+13. Determinants are det(H)det(M) or det(K)det(M), hence magnitude >=eta0 because |det M|>=1.
+
+No Monte Carlo, histogram, projected-coordinate independence, arbitrary-joint coarea, or pointwise scalar quadratic-phase decay was used.
+QFORM_B20_R31_CHECK_PASS

@@ -1,0 +1,38 @@
+{
+  "candidate_id": "C0048",
+  "checked_at": "2026-10-10",
+  "historical_status": "attempted_un; tier 5; ranking dated 2026-09-07",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "primary_statement": {
+    "source": "Hugo Duminil-Copin, Lectures on the Ising and Potts models on the hypercubic lattice, Conjecture 2, printed page 93",
+    "url": "https://www.ihes.fr/~/duminil/publi/2017PIMS.pdf",
+    "quote": "is discontinuous for any q ≥3",
+    "scope": "For every integer q>=3 and d>=3, unit simplex-spin Potts on Z^d has positive monochromatic-boundary spontaneous magnetization at beta_c. In the standard color Hamiltonian H=-sum 1{same color}, K=beta*q/(q-1), p=1-exp(-K), and the normalized magnetization is M(K)=(q*mu_K^1(sigma_0=1)-1)/(q-1)=phi^wired_{p,q}(0<->infinity). The target is M(K_c)>0.",
+    "intake_source_id": "duminil_copin_ising_potts_2017",
+    "intake_url": "https://arxiv.org/pdf/1707.00520",
+    "intake_source_hash_recorded_not_revalidated": "cc442344d0cc21c5d57163719b06dfaf1d243dee8731716bf89d21c593f98a5b"
+  },
+  "verified_partial_results": [
+    {
+      "source": "Biskup and Chayes, Rigorous analysis of discontinuous phase transitions via mean-field bounds, arXiv:math/0207242",
+      "url": "https://arxiv.org/abs/math/0207242",
+      "scope": "Nearest-neighbor reflection-positive models; fixed integer q>=3 with dimension sufficiently large. Main comparison (1.12) applies to extreme thermodynamic support pairs and includes error J*n*kappa*I_d/2. For Potts n=q-1,kappa=(q-1)/q. Theorem 2.1 locates a jump J_t and explicitly does not conclude exact vanishing below J_t. This neither certifies all d>=3 nor automatically identifies J_t with critical ordering onset."
+    },
+    {
+      "source": "Duminil-Copin, Gagnebin, Harel, Manolescu and Tassion, planar discontinuity theorem",
+      "url": "https://www.unige.ch/~duminil/publi/2016discontinuousPotts.pdf",
+      "scope": "Square lattice d=2 with q>4; this does not include d>=3, q=3."
+    }
+  ],
+  "prior_work": {
+    "exact_record": "probability_1000_intake_claude_20260907/problems.jsonl:48, C0048",
+    "prior_attempt": "probability_1000_intake_claude_20260907/attempts.jsonl:38, C0048-A001",
+    "prior_route": "Chessboard/contour entropy improvement, expressly unsolved and lacking an independent check. The numerical and equivalence claims in that old attempt are not adopted as verified facts.",
+    "H_I": "Targeted C0048/Potts-discontinuity search in the named H/I attempt directories returned no exact record.",
+    "lean": "Named intake has an annotated ranking row; no C0048 Lean theorem or formal-check receipt located.",
+    "team_O": "No C0048 row in the named Team O board.",
+    "paired_prover": "w465 local-witness L1-L3 route inspected after saving independent obstruction. Conditional lemmas kept, critical positive fixed witness absent."
+  },
+  "status_verification_limit": "Public searches recovered the historical conjecture and restricted primary theorems. Failure to find a newer general theorem is not proof of current openness. No solved/retired receipt was located in the targeted named records; owner's corpus and present literature have not been exhaustively searched. Openness remains UNKNOWN."
+}

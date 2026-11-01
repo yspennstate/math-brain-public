@@ -1,0 +1,3 @@
+# Frozen additional owner-compatibility predicates
+
+After reading A050 stage5's actual conservative continuation, retain its already booked envelope C_b+(1/2)B_y without refund. On the unchanged five physical nodes and same 48-step root/32-term log precision, check C_y=(1/2)log2[(2-theta)^2/(4(1-theta))], B_y=2C_y; final unpaid quotient J=D_bar-C_b-C_y/2>=0; combined conservative spend D_bar+C_y/2 fits the same final2 owner and leaves >173/100. This is a new source-booking objection, justifying one unchanged-domain main recheck. Preserve first audit as out/audit_initial.json; no census, dimension or precision increase.

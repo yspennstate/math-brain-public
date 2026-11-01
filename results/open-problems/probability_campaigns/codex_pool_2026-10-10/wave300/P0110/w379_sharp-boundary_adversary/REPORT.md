@@ -1,0 +1,13 @@
+P0110 remains unproved; current openness is UNKNOWN. The exact primary question, nondegenerate fixed-law catalog statement, and prior conditional attempt were recovered and checked against primary sources and two exact nodes in the read-only population store.
+
+The deliverable is an independently derived positive linear axial gap between monotone restriction and undirected iid FPP. It holds for every finite nonnegative nonconstant iid law and has explicit bound 1/1280 for fair weights {1,2}. w380 independently checked C1/C2 and returned KEEP. I directly audited w378's finite-scale forced-straight lemma and law-uniform variance counterexample KEEP, including their equality and quantifier limits.
+
+Measurement: `python -X utf8 ~/brain_workers/w379/verify_detour.py` passed 320/320 exact Dijkstra checks in 0.089419 seconds after a fresh compute gate. The raw equality bridge fails in 1 of 256 n=3 assignments; the correct two-path minimum matches all 256. Twenty independent candidate blocks share zero edges. This measures the counterexample check, not recall speed or brain performance. The infinite-volume proof is in INDEPENDENT.md and its independent verdicts are in REFEREE_VERDICTS.jsonl.
+
+Brain output: four draft entries and six allowed relations, including a carefully scoped semantic association with the existing P0110 node. The draft retains one definition and three concepts. SOURCE_STATUS.json, CLAIMS.jsonl, ATTEMPT.md, REVIEW_PACKET.md, audit verdicts, measurements, source-node receipts, two staged hooks, and the creation diff are complete. BUNDLE_STATUS.json separates submission, mathematical review, ingestion and retrieval; ingestion and recall of the new draft have not been observed or tested by this worker.
+
+Apply: after the coordinator verifies the audit's account/model provenance, use the normal integrator on ~/math-brain-inbox/w379/bundle_001.json; patches/01_p0110_draft_bundle.diff reconstructs that draft from an empty destination relative to ~. Do not apply it over the already submitted file. No live code or SQLite store was edited, no integrator was run, and global hooks/progress writes are staged locally under the worker's write restriction.
+
+Limits: the linear raw axial gap does not exclude separately centered fluctuation comparisons or interior-direction routes. The bound can be tiny for a narrow law. The prior norm-curvature balance still lacks exponent existence and replacement-error control for one concrete fixed law; this work does not close that gap or claim novelty.
+
+NEXT: Coordinator verifies review provenance and ingests the scoped draft; subsequent mathematical work must estimate centered replacement error for one fixed law before using it to transfer exponents.

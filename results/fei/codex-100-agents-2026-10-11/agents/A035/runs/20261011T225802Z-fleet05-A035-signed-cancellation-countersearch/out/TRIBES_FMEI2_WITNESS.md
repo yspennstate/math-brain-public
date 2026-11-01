@@ -1,0 +1,1 @@
+Exact Boolean obstruction: f is OR of three disjoint width-two AND gates, with output in {-1,1}. Its squared spectrum has histogram {25/1024:1, 81/1024:9, 9/1024:27, 1/1024:27}. Its influence is 27/16. Thus Hinf=10-4 log2(3)>27/8=2I, because 3^32<2^53 (an integer comparison). The false statement is only Hinf<=2I; no all-constant FMEI or FEI counterexample is asserted.

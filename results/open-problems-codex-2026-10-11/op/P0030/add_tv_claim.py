@@ -1,0 +1,5 @@
+﻿import pathlib,json
+p=pathlib.Path('CLAIMS.jsonl')
+c=dict(problem_id='P0030',claim='For any continuous process on R with one a.s. finite Brownian-future starting time S, independent uniform centering on [0,R] gives every fixed [-M,M] window law within E min(1,abs(S+M)/R) of two-sided Wiener law in total variation (supremum-over-events convention).',status='proved',proof_location='ATTEMPT.md, Theorem D',remaining_gap='Uniform centers escape to infinity and do not yield a single finite random shift with exact Wiener law. Extra compatibility hypotheses have not yielded tight centers.',checks=['Full pathwise translated-interval cancellation bound for [0,1]-valued indicators, valid without conditioning on S.','Fubini at deterministic times of the unconditional Brownian path B.','Bound uniform over all Borel finite-window events; dominated convergence requires no moment assumption.'])
+p.write_text(p.read_text(encoding='utf8')+json.dumps(c,ensure_ascii=False)+'\n',encoding='utf8')
+print('saved Theorem D claim')

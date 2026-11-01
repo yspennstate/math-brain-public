@@ -1,0 +1,49 @@
+QFORM fleet03/B01 deterministic check sheet
+run=fleet03-B01-20260923T170256Z-auto11-crosscompiler
+
+C_GC = 3*2^(7/6)*exp(1/3) = 9.39913188784886
+C_*  = 2*sqrt(2*C_GC) = 8.67139291595018
+C_leak = C_* * 2^(1/6) = 9.73330945413282
+C_exact_null = C_* * 2^(1/12) = 9.18702077113785
+
+Scaling check for partner-fed bound
+|a|^(-5/12) W2^(-1/24) Z2^(-1/12):
+A -> lambda A gives powers
+-5/12 -(6/24) -(4/12) = -5/12 -3/12 -4/12 = -1.
+PASS
+
+Concrete gate check:
+epsilon=0.01
+C=4*(1/2)*[[1,1],[1,-1],[-1,1],[-1,-1]]
+singular values(C)=(4,4)
+Z2=e2(CC^T)=256
+2-row determinant weights: 64,64,0,0,64,64
+normalized nonzero weights: 1/4 each
+row marginals alpha=(1/2,1/2,1/2,1/2)
+S_J=||ell_J||=1
+rank(M_J)=1
+PASS
+
+Residual density cap:
+C_GC*(S_J^2*Z2)^(-1/6)=3.7300479615897824
+Full compiler bound:
+2*sqrt(2)*sqrt(3.7300479615897824)=5.462635233357456
+
+For the same example W2=2+64*epsilon^2=2.0064.
+Partner-fed coarse bound:
+9.73330945413282*W2^(-1/24)*256^(-1/12)=5.956253010823034
+
+Example matrix eigenvalues:
+-4.06796718, -4.00000000, -1.19941977, -5.66e-16, 1.81e-16,
+ 1.00000000, 1.20905563, 4.00000000, 4.06833132
+count(|lambda|>=1)=7
+PASS
+
+Partner correction check:
+From E[x^2 y^2]>=L/4 one obtains xy>=sqrt(L)/2 for some partition.
+Combining L>=W2/(4a^2) gives xy>=sqrt(W2)/(4|a|).
+This does NOT imply x,y >= sqrt(W2)/(4|a|).
+After orienting y=max(x,y): y>=sqrt(xy)>=W2^(1/4)/(2|a|^(1/2)).
+PASS
+
+STATUS=PASS

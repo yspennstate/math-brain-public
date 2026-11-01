@@ -1,0 +1,213 @@
+Let $C_6$ have vertex set $\mathbb Z/6\mathbb Z$, with its cyclic edges, and let $\cI$ be its independent subsets. There are eighteen: the empty set, six singletons, nine pairs, and two alternating triples. On six fair signs $z=(z_0,\ldots,z_5)$, let $Q$ be the orthogonal Walsh projection onto
+\[
+ \operatorname{span}\{\chi_A:A\in\cI\}.
+\]
+Define
+\[
+ L=\left\{z:\sum_{i=0}^5\one_{\{z_i\ne z_{i+1}\}}\le2\right\},
+ \qquad H=L^c.
+\]
+Each of $L$ and $H$ has thirty-two configurations. The configurations in $L$ have an empty, full, or single cyclic interval of plus signs.
+
+\begin{lemma}\label{lem:rank}
+If $q\in\operatorname{Ran}Q$ vanishes on $L$, then $q=0$.
+\end{lemma}
+\begin{proof}
+Put $y_i=(1+z_i)/2$. Since the family $\cI$ is closed under subsets, the span of its Walsh characters equals the span of the monomials $y_A=\prod_{i\in A}y_i$, $A\in\cI$. Write $q=\sum_{A\in\cI}b_Ay_A$.
+
+Evaluate first at the empty open set, and then at each singleton open set. This gives $b_\varnothing=0$ and all singleton coefficients zero. A three-site cyclic interval contains exactly one independent pair, its two endpoints; evaluating on all six such intervals kills the six distance-two pair coefficients. A four-site interval then kills its opposite pair, since the other independent coefficients in that interval have already vanished. Three such intervals kill the remaining three pairs. Finally, a five-site interval contains exactly one of the two alternating triples. Intervals omitting a site of each parity kill both triple coefficients. All evaluations were on $L$, so $q=0$.
+\end{proof}
+
+\begin{proposition}\label{prop:coercivity}
+Every function $g$ on six signs which vanishes on $L$ satisfies
+\begin{equation}\label{eq:coercivity}
+ \|(\Id-Q)g\|_2^2\ge\astar\|g\|_2^2.
+\end{equation}
+The constant in \eqref{eq:astar} is optimal on this function space.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{lem:rank} already implies the inequality with some positive constant by compactness of the unit sphere of functions supported on $H$. We compute the best constant.
+
+Let $M$ be the $32\times18$ matrix
+\[
+ M_{z,A}=\chi_A(z),\qquad z\in L,\quad A\in\cI,
+\]
+and put $G=M^{\mathsf T}M$. If $q=\sum_{A\in\cI}u_A\chi_A$, then
+\begin{equation}\label{eq:gramnorm}
+ \|q\|_2^2=\|u\|^2,\qquad
+ \|\one_Lq\|_2^2=\frac1{64}u^{\mathsf T}Gu.
+\end{equation}
+We record the small-block calculation to specify the constant without numerical approximation.
+
+The symmetry $z\mapsto-z$ separates even and odd degrees. Order the even block by the constant and the six distance-two pairs, followed by the three opposite pairs. Then
+\[
+ G_{\rm even}=32I_{10}+
+ \begin{pmatrix}0&K\\K^{\mathsf T}&0\end{pmatrix},
+ \qquad K^{\mathsf T}K=512I_3+112J_3.
+\]
+Here $J_3$ is the all-ones matrix. The first row of $K$ is $(-4,-4,-4)$; the other rows are two copies of each permutation of $(-4,12,12)$. The eigenvalues of this block are
+\[
+ 32\pm4\sqrt{53},\quad
+ 32\pm16\sqrt2\ \text{(each twice)},\quad
+ 32\ \text{(four times)}.
+\]
+
+In the odd block, the singleton matrix is circulant with first row $(32,12,0,-4,0,12)$; its eigenvalues are $52,48,16,12,16,48$. The alternating triples have block
+\[
+ \begin{pmatrix}32&-4\\-4&32\end{pmatrix}.
+\]
+A singleton couples with coefficient zero to its own parity triple and with coefficient $-4$ to the other. Only the constant and alternating singleton modes couple to these triples, giving the two blocks
+\[
+ \begin{pmatrix}52&-4\sqrt3\\-4\sqrt3&28\end{pmatrix},
+ \qquad
+ \begin{pmatrix}12&4\sqrt3\\4\sqrt3&36\end{pmatrix}.
+\]
+Thus the odd eigenvalues are $40\pm8\sqrt3$, $24\pm8\sqrt3$, and $48,16$ each twice. The least eigenvalue of $G$ is $32-4\sqrt{53}$.
+
+By \eqref{eq:gramnorm}, $\|\one_Lq\|_2^2\ge\astar\|q\|_2^2$ on $\operatorname{Ran}Q$. If $g=\one_Hg$, then
+\[
+ |\langle g,q\rangle|=|\langle g,\one_Hq\rangle|
+ \le\sqrt{1-\astar}\,\|g\|_2\|q\|_2.
+\]
+Take $q=Qg$ and use Pythagoras to obtain \eqref{eq:coercivity}. For sharpness, choose a least-eigenvalue vector $q$ in \eqref{eq:gramnorm} and put $g=\one_Hq$. Then $Qg=(1-\astar)q$, and equality follows.
+\end{proof}
+
+\section{Exterior conditioning and spectral face density}\label{sec:faces}
+\subsection{Preservation under exterior operators}\label{sec:conditioning}
+
+Consider a finite site-connection graph with a distinguished nonterminal site $v$ whose only neighbors are $v_0,\ldots,v_5$, with all cyclic ring edges present. Let $W_v$ be this seven-site wheel. Let $f$ be the sign of the event connecting two fixed terminal sets. For a site $v$, define the sign derivative
+\[
+ \partial_v f(\omega_{v^c})
+ =\E_v[\omega_vf]
+ =\frac{f(1,\omega_{v^c})-f(-1,\omega_{v^c})}{2}.
+\]
+
+\begin{lemma}\label{lem:zero}
+For every exterior configuration, $\partial_vf$ vanishes when the six ring signs lie in $L$.
+\end{lemma}
+\begin{proof}
+In such a configuration, all open neighbors of $v$ are joined by an open ring path, unless there are no open neighbors. Any terminal path through the open center can therefore replace its visit to $v$ by an open ring path. The resulting walk contains a terminal path avoiding $v$. If there are no open neighbors, opening $v$ cannot create a terminal connection. Thus reversing $v$ never changes the event.
+\end{proof}
+
+Let $E_v$ average over the center sign, let $P_v=\Id-E_v$, and extend the ring projection $Q_v$ by the identity on all other coordinates. Set
+\[
+ T_v=P_v(\Id-Q_v).
+\]
+This is the Fourier projection onto supports containing $v$ and at least one pair of cyclically adjacent neighbors. Such supports contain at least one of the six elementary faces incident to $v$.
+
+\begin{proposition}\label{prop:outside}
+If $A$ is any linear operator acting only on coordinates outside $W_v$, then
+\begin{equation}\label{eq:outside}
+ \|T_vAf\|_2^2\ge\astar\|P_vAf\|_2^2.
+\end{equation}
+Consequently, for every spectral event $\mathcal H$ determined by $\cS_f\cap W_v^c$,
+\begin{equation}\label{eq:conditional}
+ \Prob\bigl(T_v(\cS_f)=1,\mathcal H\bigr)
+ \ge\astar\Prob\bigl(v\in\cS_f,\mathcal H\bigr),
+\end{equation}
+where $T_v(S)=1$ means that $S$ contains an incident face at $v$.
+\end{proposition}
+\begin{proof}
+The zero in Lemma~\ref{lem:zero} holds as an identity in every exterior coordinate. An operator on those coordinates preserves it. Hence $\partial_vAf$ still vanishes on $L$, fiber by fiber. Since
+\[
+ P_vAf=\omega_v\partial_vAf,
+ \qquad T_vAf=\omega_v(\Id-Q_v)\partial_vAf,
+\]
+Proposition~\ref{prop:coercivity}, followed by integration over the exterior coordinates, gives \eqref{eq:outside}.
+
+For \eqref{eq:conditional}, take $A$ to be the diagonal Walsh projector retaining exactly the exterior supports satisfying $\mathcal H$. Parseval identifies the two squared norms with the two probabilities. The function $Af$ need not be Boolean, monotone, or nonnegative.
+\end{proof}
+
+The whole wheel must remain unconditioned in \eqref{eq:conditional}. An exterior event for a single chosen face may involve the other ring coordinates and does not satisfy this hypothesis. The estimate concerns the union of the six incident-face events.
+
+\subsection{Conditional Bernoulli bounds and face density}\label{sec:amplification}
+
+Take a family of disjoint full wheels $W_{v_1},\ldots,W_{v_k}$. For the spectral sample define
+\[
+ x_j=\one_{\{v_j\in\cS_f\}},\qquad
+ y_j=\one_{\{T_{v_j}(\cS_f)=1\}},
+ \qquad X=\sum_jx_j,\quad Y=\sum_jy_j.
+\]
+We have $y_j\le x_j$.
+
+\begin{lemma}\label{lem:bernoulli}
+Conditional on the complete center-inclusion pattern $(x_1,\ldots,x_k)$, the variable $Y$ stochastically dominates a binomial random variable with $X$ trials and success probability $\astar$. In particular, for $t\ge0$ and $b(t)=1-\astar+\astar e^{-t}$,
+\begin{equation}\label{eq:classmgf}
+ \E\bigl[e^{-tY}b(t)^{-X}\bigr]\le1.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Fix a center pattern having positive probability and list its occupied centers. Reveal the corresponding $y_j$ in any deterministic order. At a currently occupied center $v_j$, the specified values of all other $x_i$, and every preceding success or failure of $y_i$, depend only on spectral coordinates outside $W_{v_j}$. This uses disjointness of the wheels. Proposition~\ref{prop:outside}, divided by the probability of the conditioning event together with $x_j=1$, gives
+\[
+ \Prob(y_j=1\mid x_1,\ldots,x_k,\text{preceding }y_i)\ge\astar
+\]
+whenever this conditional probability is defined. Successive coupling with independent uniform random variables gives the stochastic domination. Equivalently, iterated conditional expectation gives
+\[
+ \E[e^{-tY}\mid x_1,\ldots,x_k]\le b(t)^X,
+\]
+which proves \eqref{eq:classmgf}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:finite}]
+Use axial coordinates $(i,j)$ for the triangular lattice, with neighbor differences $\pm(1,0)$, $\pm(0,1)$, and $\pm(1,-1)$. Color the interior centers by $i+3j\pmod7$. The seven vertices of any wheel have all seven colors: the neighbor increments have residues $\pm1,\pm2,\pm3$. Any two sites at graph distance at most two lie in a common wheel. Thus distinct centers of the same color have distance at least three, and their wheels are disjoint. Write $X_c,Y_c$ for the preceding counts in color $c$, $1\le c\le7$, and put
+\[
+ X=\sum_cX_c=X_R,\qquad Y=\sum_cY_c.
+\]
+Each successful center has an incident face. Each face has at most three vertices, so
+\begin{equation}\label{eq:Yfaces}
+ Y\le3K_R(\cS_R).
+\end{equation}
+Apply H\"older's inequality to the seventh roots of the seven nonnegative variables in \eqref{eq:classmgf}. It gives
+\begin{equation}\label{eq:globalmgf}
+ \E\bigl[e^{-tY/7}b(t)^{-X/7}\bigr]\le1.
+\end{equation}
+No independence between color classes is used.
+
+On $\{Y\le\theta X,\ X\ge m\}$, the random variable in \eqref{eq:globalmgf} is at least
+\[
+ \exp\left\{\frac{m}{7}\bigl(-t\theta-\ln b(t)\bigr)\right\}
+\]
+whenever the quantity in parentheses is positive. Markov's inequality and optimization over $t\ge0$ yield
+\[
+ \Prob(Y\le\theta X,\ X\ge m)
+ \le e^{-mD(\theta\Vert\astar)/7}.
+\]
+Use \eqref{eq:Yfaces} to obtain \eqref{eq:density}. Taking $\theta=0$, or letting $t\to\infty$ in \eqref{eq:globalmgf}, proves \eqref{eq:noface}.
+\end{proof}
+
+\begin{lemma}\label{lem:fibers}
+Put $q=1-\astar$, $F_R=\{K_R(\cS_R)=0\}$, and $E_R=\{\cS_R\subseteq V_R^\circ\}$. For every integer $n\ge1$,
+\begin{equation}\label{eq:fibers}
+ \Prob(F_R,\ |\cS_R|=n,\ E_R)
+ \le7q^{\lceil n/7\rceil}\Prob(1\le|\cS_R|\le7n).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Fix a color class $V_c$ and partition all supports $S$ by
+\[
+ J=S\cap V_c,\qquad W_J=\bigcup_{v\in J}W_v,
+ \qquad T=S\setminus W_J.
+\]
+In such a fiber, the $k=|J|$ active centers are included and the entire support outside their disjoint wheels is fixed. Inactive centers of the same color lie outside $W_J$, so their absence is already specified by $T$. The conditional argument in Lemma~\ref{lem:bernoulli} remains valid with this extra exterior condition: every preceding marker history and every other center condition is exterior to the current wheel. The probability that all $k$ markers fail is therefore at most $q^k$ in every positive-probability fiber.
+
+Write $\ell=|T|$. Every support in the fiber has size between $\ell+k$ and $\ell+7k$. If $k\ge\lceil n/7\rceil$ and $\ell+k\le n$, the whole fiber lies in $\{1\le|S|\le7n\}$. Sum the conditional failure bound over these disjoint fibers. This gives
+\[
+ \Prob(F_R,\ |\cS_R|=n,\ X_c\ge\lceil n/7\rceil)
+ \le q^{\lceil n/7\rceil}\Prob(1\le|\cS_R|\le7n).
+\]
+On $E_R\cap\{|\cS_R|=n\}$, the seven center counts sum to $n$, so at least one is at least $\lceil n/7\rceil$. Sum over colors to prove \eqref{eq:fibers}.
+\end{proof}
+
+The conditioning in this proof fixes complete fibers, not the total Fourier degree. Other members of a selected fiber may meet the boundary collar; this is why the probability on the right of \eqref{eq:fibers} is unrestricted.
+
+\begin{corollary}\label{cor:robust}
+For critical square crossings,
+\[
+ \Prob\left(K_R(\cS_R)\ge\frac{\astar}{6}X_R\right)\longrightarrow1.
+\]
+Moreover, with probability tending to one, at least $\astar X_R/36$ sites must be deleted from $\cS_R$ to obtain a set containing no full interior elementary face.
+\end{corollary}
+\begin{proof}
+Section~\ref{sec:critical} proves that $X_R\to\infty$ in probability. Apply \eqref{eq:density} with $\theta=\astar/2$. Each site belongs to at most six elementary faces, so deleting $k$ sites can destroy at most $6k$ of the original faces. The second assertion follows.
+\end{proof}
+

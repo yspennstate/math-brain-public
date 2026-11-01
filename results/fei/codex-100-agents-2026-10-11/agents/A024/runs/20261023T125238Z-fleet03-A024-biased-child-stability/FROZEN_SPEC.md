@@ -1,0 +1,11 @@
+# Frozen before execution
+
+Helper: inherited stage19 code/check_flat.py SHA256 57317278512eb1134ec52e844c2356c8ca905144c99f409d6f0ecb66c0c82f87, using definitions before fixtures; it imports exact stage13 prime-log helpers. Current checker code/check.py is version1, hash recorded before execution in out/SPEC_RECEIPT.json.
+
+Family: every quadratic polynomial modulo constant global sign and every unordered pair with repetition of affine flats (empty included), actual function (-1)^(q+1_(A union B)). No coordinate symmetry quotient. A/B exchange is exact symmetry; global sign preserves erasure, influence and restriction identities. Dimensions fixed: pilot n=0,1,2; full n=0,1,2,3. Counts: 3+16+624=647 pilot descriptions; full adds 64*52*53/2=88192, total88839. Add exactly five declared fixed fixtures n=8,7,4,6,4 to each; totals652/88844. Each finite description checks both children at every physical coordinate; selected query checks actual prime-log erasure <=10d, universal cross-overlap bound and derivative coefficient bound. No automatic dimension escalation. The five fixtures replay every single physical-prefix query, both full terminals and a complete selected continuation;29 prefixes. They are fixed tests, not a dimension search.
+
+Arithmetic: integer Walsh transforms, Fraction influences and cross-spectral mass, exact prime-log entropy vectors with rational atanh interval signs, no floating point sign decisions. Cached truth-spectrum audit independent of selection algorithm; every physical child checked by direct restriction. General support lower bound and all-dimensional proof supplied analytically in DERIVATION.md; finite checks are not that bridge or independent acceptance.
+
+Memory estimate under200MB (4096 short cache entries, 1024 repair states, largest actual cube256); no job expected above300MB, so memok not triggered. Pilot cap55s, full cap240s, one job at a time, no detached child/window/GPU. Commands: python -X utf8 code/check.py --pilot; then python -X utf8 code/check.py. Required outputs PILOT.json and VALIDATION.json. Timeouts or failures must be recorded, never passed off as proofs.
+
+Version2 freezes the sharper actual half-spectrum proof before rerun. V1 pilot/full/spec receipts are preserved in out/V1_*.json. Revised checker tests K10; pilot/full domains, count, arithmetic and caps unchanged.

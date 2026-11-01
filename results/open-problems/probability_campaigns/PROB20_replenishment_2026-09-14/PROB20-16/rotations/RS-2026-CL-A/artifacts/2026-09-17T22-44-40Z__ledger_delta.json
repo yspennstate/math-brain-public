@@ -1,0 +1,72 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target": "RS-2026-CL-A",
+  "source": "Anastasia Kireeva, Randomstrasse 101, 2026-06-05, first displayed Open Problem 35",
+  "metric": "E_framework",
+  "before": 1,
+  "after": 1,
+  "metric_movement": false,
+  "remaining_obligation_moved": true,
+  "remaining_obligation_stagnation_count": 0,
+  "status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING",
+  "run_label": "CORRELATION_PROFILE_BOUNDARY",
+  "hard_recoveries_consumed": 1,
+  "qualifying_audits": {
+    "count": 0,
+    "required": 2,
+    "p26": false,
+    "distinct_other": false
+  },
+  "methods": [
+    "B8_GO_THE_OTHER_WAY_AND_DISCRETIZE",
+    "B16_COMPUTE_EVERY_SMALL_CASE_AND_STARE_AT_THE_SEQUENCE",
+    "B17_LOOK_FOR_YOUR_NUMBERS_SOMEWHERE_ELSE"
+  ],
+  "new_results": [
+    "For upper gamma-negative-dependent forced supports, chi2(TP||Q) <= gamma^2*(exp(U)-1), with U <= rho_*^2*(Adv^{<=D})^2.",
+    "Order-profile bound: chi2(TP||Q) <= sum_k Gamma_k^2 U^k/k!.",
+    "Every unbiased pairwise-independent three-bit law has density 2^-3(1+theta y1y2y3), |theta|<=1; the sharp upper triple-cylinder ratio is 2.",
+    "Odd-parity forced-support exact spectrum at Q=Bern(1/2)^3: b1=3/4, b2=3/16, b3=1/16, chi2=1; marginal-matched independent chi2=61/64."
+  ],
+  "prior_art_update": {
+    "classification": "KNOWN_MECHANISM_NOVELTY_UNVERIFIED_TRANSLATION",
+    "details": "Doerr-Gnewuch 2021 Definition 1.1 names upper gamma-negative dependence and correlation number; negative-cylinder MGF domination is standard. The forced-support low-degree inference translation is proved here but publication novelty is unverified."
+  },
+  "failed_or_narrowed_routes": [
+    "Pairwise dependence cannot replace all-cylinder control; the three-bit parity law is the exact first obstruction.",
+    "A single worst-cylinder gamma can be overly crude; order-by-order Gamma_k is the less wasteful algebraic quantity.",
+    "Large gamma alone does not imply distinguishability and is not a source counterexample.",
+    "Positive forced-support models still do not cover Mao's signed/cancellative rank construction."
+  ],
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T22-44-40Z__report.md",
+    "creation_commit": "62b3de61fb239bf80add6941509267ac498caab4",
+    "readback_blob": "17e2b89aebecee6fd9cf09a289af93c91dc36cf9"
+  },
+  "artifacts": [
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-17T22-44-40Z__small_case_checker.py",
+      "creation_commit": "51acc3f1e50e9d4e963618a7675f617d282f44ad",
+      "readback_blob": "1ad705da43c7830d8e6a5b7d6e9952c448350564"
+    },
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-17T22-44-40Z__small_case_checker.out",
+      "creation_commit": "88710932a61ac3d28fc850edd19254d2aece2986",
+      "readback_blob": "b6e08f25e17222396a05154d52771a0e82ee10e6",
+      "result": "EXACT_SMALL_CASE_PASS"
+    }
+  ],
+  "source_current_check": {
+    "date_utc": "2026-09-17",
+    "live_source_still_displays_open_problem": true,
+    "later_source_complete_characterization_found": false,
+    "negative_search_is_not_novelty_proof": true
+  },
+  "next_methods": [
+    "B29_ADD_THE_POINTS_AT_INFINITY",
+    "B27_SWAP_THE_QUANTIFIERS_REUSE",
+    "B24_FIND_THE_EXTREMAL_OBJECT_REUSE"
+  ],
+  "method_menu_note": "After this run only B29 remains genuinely unused in the 30-method menu; B27 and B24 are deliberately recycled nonconsecutive methods rather than falsely labeled unused.",
+  "closure": false
+}

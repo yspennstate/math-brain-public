@@ -1,0 +1,51 @@
+{
+  "track": "NM13-10",
+  "root": "proofnet24/NM13-10/progress-extrapolation",
+  "source": "Agresti-Veraar arXiv:2501.18561 / NoDEA Problem 3",
+  "frozen_pair": {
+    "X0": "H^{-1}(T)",
+    "Xhalf": "L^2(T)",
+    "X1": "H^1(T)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "brownian_dimension": 1,
+    "transformed_equation": "dZ=-AZ dt+A^(1/2)(Z+Y)dW"
+  },
+  "parent_before": {
+    "strong_endpoint": "r_*=3, endpoint excluded",
+    "subcritical_input_norm": "C_p^g(T)=1/(sqrt(2/(p-1))-1), 2<=p<3",
+    "critical_rearrangement_bracket": "2/3 <= alpha_*(T) <= 1",
+    "conditional_Z_3_2over3_lower_constant": "4/9"
+  },
+  "parent_after": {
+    "strong_endpoint": "r_*=3, endpoint excluded",
+    "subcritical_input_norm": "unchanged",
+    "critical_rearrangement_bracket": "2/3 <= alpha_*(T) <= 1",
+    "conditional_Z_3_2over3_lower_constant": "4/9"
+  },
+  "new_gain": {
+    "status": "CANDIDATE_FULL / SELF-CHECKED / PENDING INDEPENDENT REVIEW",
+    "scope": "arbitrary progressive forcing supported in any spectral band of the exact frozen A with condition ratio K=lambda_max/lambda_min",
+    "tail": "m_R <= 1243 K^(3/2) J R^(-3) [1+log_+(T R^3/(K^(3/2)J))]^2",
+    "endpoint": "||T_T Y||_{Z_{3,2/3}(T)} <= 65 sqrt(K) ||Y||_3",
+    "dyadic_application": "for every torus dyadic block lambda in [2^j,2^(j+1)), the uniform endpoint constant is <=65 sqrt(2)",
+    "connection": "extends the previous exact one-shell result to arbitrary simultaneous active interaction of all unequal comparable Fourier scales in one band; residual obstruction is active interaction across widely separated bands"
+  },
+  "proof_mechanism": [
+    "spectral Rayleigh quotient q and input A-energy v",
+    "subcritical stopped p-moment bound with K^(p/2), not K^p",
+    "log-radius drift b <= -1/4 + 4 v^(3/2)",
+    "high-level excursion duration charged by cubic input energy",
+    "critical effective aspect ratio eta=T R^3/(K^(3/2)J)",
+    "quantile optimization at delta=3/log eta"
+  ],
+  "checker": "2026-09-20T12-50-04+0300__spectral_band_endpoint_checker.py",
+  "checker_output": "2026-09-20T12-50-04+0300__spectral_band_endpoint_checker.out",
+  "checker_status": "CHECK_PASS",
+  "residual_obstruction": "full-spectrum L^3 -> Z_{3,2/3} remains open; must control simultaneous active forcing across arbitrarily separated dyadic bands without summing band constants",
+  "runtime": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_level": "UNVERIFIED"
+  }
+}

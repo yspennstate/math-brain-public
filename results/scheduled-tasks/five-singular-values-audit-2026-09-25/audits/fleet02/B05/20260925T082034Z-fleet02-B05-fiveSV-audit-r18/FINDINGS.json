@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "account": "fleet02",
+  "slot": "B05",
+  "run_id": "20260925T082034Z-fleet02-B05-fiveSV-audit-r18",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "passes": [
+    {
+      "id": "P1-forward-B05-adversarial",
+      "physical_lines": "1-675",
+      "status": "COMPLETE"
+    },
+    {
+      "id": "P2-reverse-dependency",
+      "physical_lines": "675-1",
+      "status": "COMPLETE"
+    }
+  ],
+  "findings": [
+    {
+      "ref": "C01",
+      "lines": "412",
+      "page": 9,
+      "status": "FALSE",
+      "repair": "delete one null polar ray; constant unchanged"
+    },
+    {
+      "ref": "C02",
+      "lines": "319-322",
+      "page": 7,
+      "status": "GAP",
+      "repair": "insert outer Jensen/Cauchy inequality"
+    },
+    {
+      "ref": "C03",
+      "lines": "416,441",
+      "page": "9-10",
+      "status": "GAP",
+      "repair": "state critical hyperbola level has zero probability"
+    },
+    {
+      "ref": "C04",
+      "lines": "41",
+      "page": 1,
+      "status": "FALSE",
+      "repair": "add no-pivot qualifier to abstract summary"
+    },
+    {
+      "ref": "C05",
+      "lines": "65",
+      "page": 1,
+      "status": "FALSE",
+      "repair": "say upper envelope rather than actual singularity"
+    },
+    {
+      "ref": "C07",
+      "lines": "62,74,648-673",
+      "page": "1,2,14",
+      "status": "UNCHECKED",
+      "repair": "no proof dependency"
+    },
+    {
+      "ref": "C10",
+      "lines": "148",
+      "page": 3,
+      "status": "GAP",
+      "repair": "add padded-zero j>min dimension case"
+    },
+    {
+      "ref": "D01",
+      "lines": "222",
+      "page": 5,
+      "status": "PASS",
+      "repair": "optional wording: each zero-beta factor is <=1"
+    },
+    {
+      "ref": "C12",
+      "lines": "224",
+      "page": 5,
+      "status": "GAP",
+      "repair": "if p(y)=0 done; otherwise take logs"
+    },
+    {
+      "ref": "R08",
+      "lines": "398",
+      "page": 9,
+      "status": "GAP",
+      "repair": "state square density formula a.e.; choose value at critical point"
+    },
+    {
+      "ref": "C11",
+      "lines": "505",
+      "page": 11,
+      "status": "GAP",
+      "repair": "define h(0)=+infinity"
+    },
+    {
+      "ref": "R09",
+      "lines": "613",
+      "page": 13,
+      "status": "GAP",
+      "repair": "establish atomlessness before E J(R-a), or extend J at zero"
+    }
+  ],
+  "theorem_status": "No fatal theorem counterexample found; repaired dependency chain supports stated 270 and 77 bounds.",
+  "new_findings_this_pass": [],
+  "local_full_coverage_sha256": {
+    "pass1": "9caef5095b03dc782b5fbd426ae6a17cd9c0c1415d89885ad7f353f9ac96f6ce",
+    "pass2": "a51f30984fcccb449b1b28e5243ae118aa28b2ebb3184f367fc947d7c1549c94",
+    "report": "ede7959acc01bdd0e074e586c8f495ea1ef891ea474612144b6f89b598503b74"
+  },
+  "direct_pdf_raster": "UNCHECKED",
+  "lower_threshold_research": false
+}

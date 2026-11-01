@@ -1,0 +1,282 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\TV}{\mathrm{TV}}
+\newcommand{\Law}{\operatorname{Law}}
+\newcommand{\rhoi}{\rho^{*}}
+
+\title{A Tensorization Bound for Interlaced Maximal Correlation of $\phi$-Mixing Markov Chains}
+\author{R7-01 research note}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Bradley's 2005 survey asks in Question~5 whether a $\phi$-mixing Markov chain must be interlaced-$\rho$-mixing.  We give a candidate affirmative proof, with the quantitative estimate
+\[
+   \rho^{*}(n)\le \min\{1,4\sqrt{2\phi(n)}\}.
+\]
+The argument is valid for the not-necessarily-stationary real-state Markov-chain setting used in Bradley's Section~3.  The key observation is that $\phi(n)$ controls the total-variation diameter of every $n$-step family of Markov transition rows.  This control survives arbitrary conditioning on the earlier history.  Decomposing an arbitrary interlacing into alternating monochromatic blocks then produces a weighted path of subjective maximal correlations.  Peyre's ``$N$ against $M$'' tensorization theorem, in its minimal-hypothesis form, bounds the correlation of the two full colors by the operator norm of that path.
+\end{abstract}
+
+\section{Source question and notation}
+
+The source is R. C. Bradley, \emph{Basic Properties of Strong Mixing Conditions. A Survey and Some Open Questions}, Probability Surveys 2 (2005), 107--144, Question~5 in Section~3.  Bradley asks whether a Markov chain that is $\phi$-mixing must be $\rho^{*}$-mixing.
+
+Let $X=(X_k)_{k\in\mathbb Z}$ be a Markov chain with state space $\mathbb R$.  For integers $J\le L$, write
+\[
+  \cF_J^L=\sigma(X_k:J\le k\le L).
+\]
+For two sigma-fields $\mathcal A,\mathcal B$, Bradley's coefficients are
+\[
+ \phi(\mathcal A,\mathcal B)
+ =\sup_{A\in\mathcal A,\,P(A)>0\atop B\in\mathcal B}
+     |P(B\mid A)-P(B)|
+\]
+and
+\[
+ \rho(\mathcal A,\mathcal B)
+ =\sup |\operatorname{Corr}(f,g)|,
+\]
+where the latter supremum ranges over square-integrable nonconstant real random variables measurable with respect to the two sigma-fields.  For $n\ge1$,
+\[
+  \phi(n)=\sup_{j\in\mathbb Z}
+  \phi(\cF_{-\infty}^{j},\cF_{j+n}^{\infty}).
+\]
+For nonempty disjoint $S,T\subset\mathbb Z$ put
+\[
+ d(S,T)=\inf\{|s-t|:s\in S,t\in T\},
+\]
+and
+\[
+ \rho^{*}(n)=\sup_{d(S,T)\ge n}
+  \rho\bigl(\sigma(X_s:s\in S),\sigma(X_t:t\in T)\bigr).
+\]
+We use Bradley's standard inequality
+\begin{equation}\label{eq:bradley-rho-phi}
+ \rho(\mathcal A,\mathcal B)
+ \le 2\sqrt{\phi(\mathcal A,\mathcal B)}
+       \sqrt{\phi(\mathcal B,\mathcal A)}
+ \le 2\sqrt{\phi(\mathcal A,\mathcal B)}.
+\end{equation}
+
+The other external input is R. Peyre, \emph{Tensorizing maximal correlations}, arXiv:1004.1602v2 (2010), Theorem~3.3.1 together with the minimal-hypothesis refinement in Section~3.4(a).  In the form used below, if vector variables $(U_i)_{i\in I}$ and $(V_j)_{j\in J}$ are ordered and
+\[
+ \{U_i:V_j\}_{\sigma(U_{i'}:i'<i,\,V_{j'}:j'<j)}\le \varepsilon_{ij},
+\]
+where the braces denote Peyre's subjective maximal correlation, then
+\begin{equation}\label{eq:peyre}
+ \rho\bigl(\sigma(U_i:i\in I),\sigma(V_j:j\in J)\bigr)
+ \le \min\{1,\|\varepsilon\|_{\ell^2(J)\to\ell^2(I)}\}.
+\end{equation}
+
+\section{A row-diameter consequence of $\phi$}
+
+For $s<t$, let $K_{s,t}(x,\cdot)$ be a regular conditional law of $X_t$ given $X_s=x$, and let $\mu_s=\Law(X_s)$ and $\mu_t=\Law(X_t)$.  We use the total-variation convention
+\[
+ \|\nu-\eta\|_{\TV}=\sup_{B\in\mathcal B(\mathbb R)}|\nu(B)-\eta(B)|.
+\]
+
+\begin{lemma}[Essential row bound]\label{lem:row}
+Let $g=t-s\ge1$.  There is a Borel set $A_{s,t}\subset\mathbb R$ with $\mu_s(A_{s,t})=1$ such that for every $x\in A_{s,t}$,
+\begin{equation}\label{eq:row-marginal}
+ \|K_{s,t}(x,\cdot)-\mu_t\|_{\TV}\le \phi(g).
+\end{equation}
+Consequently, for all $x,x'\in A_{s,t}$,
+\begin{equation}\label{eq:row-diameter}
+ \|K_{s,t}(x,\cdot)-K_{s,t}(x',\cdot)\|_{\TV}\le 2\phi(g).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Fix a Borel set $B$ and set
+\[
+ h_B(x)=K_{s,t}(x,B)-\mu_t(B).
+\]
+For every Borel $D$ with $\mu_s(D)>0$, the event $\{X_s\in D\}$ belongs to $\cF_{-\infty}^{s}$ and $\{X_t\in B\}$ belongs to $\cF_t^{\infty}$.  Hence, by the definition of $\phi(g)$,
+\[
+ \left|\frac{1}{\mu_s(D)}\int_D h_B\,d\mu_s\right|\le \phi(g).
+\]
+If $h_B>\phi(g)+\epsilon$ on a set of positive $\mu_s$-measure, taking that set for $D$ contradicts the displayed inequality; the same argument applies to $-h_B$.  Thus
+\[
+ |h_B(x)|\le \phi(g)
+\]
+for $\mu_s$-almost every $x$.
+
+To make the null set independent of $B$, let $\mathcal C$ be a countable algebra generating $\mathcal B(\mathbb R)$, for example finite unions of half-open intervals with rational endpoints.  Intersect the full-measure sets obtained above for all $B\in\mathcal C$; call the intersection $A_{s,t}$.  For fixed $x\in A_{s,t}$ the class of Borel sets $B$ satisfying
+\[
+ |K_{s,t}(x,B)-\mu_t(B)|\le\phi(g)
+\]
+is a monotone class containing $\mathcal C$, so it is all of $\mathcal B(\mathbb R)$.  This proves \eqref{eq:row-marginal}.  The triangle inequality gives \eqref{eq:row-diameter}.
+\end{proof}
+
+\begin{lemma}[The row bound survives arbitrary input conditioning]\label{lem:arbitrary-input}
+Fix $s<t$, $g=t-s$, and let $A_{s,t}$ be as in Lemma~\ref{lem:row}.  Let $\lambda$ be any probability measure supported on $A_{s,t}$.  Under the law
+\[
+ U\sim\lambda,\qquad V\mid(U=x)\sim K_{s,t}(x,\cdot),
+\]
+one has
+\begin{equation}\label{eq:conditional-phi}
+ \phi(\sigma(U),\sigma(V))\le 2\phi(g)
+\end{equation}
+and therefore
+\begin{equation}\label{eq:conditional-rho}
+ \rho(\sigma(U),\sigma(V))
+ \le a_g:=\min\{1,2\sqrt{2\phi(g)}\}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Put $\delta=2\phi(g)$.  By \eqref{eq:row-diameter}, for every Borel $B$ the numbers $K_{s,t}(x,B)$, $x\in A_{s,t}$, have range at most $\delta$.
+
+Let $C\in\sigma(U)$ have positive probability.  The conditional law of $V$ given $C$ is a convex mixture of the rows $K_{s,t}(x,\cdot)$, and the unconditional law of $V$ is another convex mixture of the same rows.  Therefore, for every Borel $B$,
+\[
+ |P(V\in B\mid C)-P(V\in B)|\le\delta.
+\]
+Taking the supremum proves \eqref{eq:conditional-phi}.  Applying \eqref{eq:bradley-rho-phi} under this probability law gives
+\[
+ \rho(\sigma(U),\sigma(V))\le 2\sqrt{\delta}
+ =2\sqrt{2\phi(g)},
+\]
+and maximal correlation is always at most one.
+\end{proof}
+
+\begin{remark}\label{rem:conditional-support}
+If $\lambda$ arises as a conditional law of $X_s$ given an arbitrary earlier-history sigma-field, then it is supported on $A_{s,t}$ almost surely.  Indeed $\mu_s(A_{s,t}^c)=0$, so the conditional probability of $X_s\in A_{s,t}^c$ is zero almost surely.  Thus Lemma~\ref{lem:arbitrary-input} is available after arbitrary conditioning on the past.
+\end{remark}
+
+\section{Interlaced block tensorization}
+
+\begin{theorem}\label{thm:main}
+For every real-state Markov chain $X=(X_k)_{k\in\mathbb Z}$ in Bradley's Section~3 setting and every $n\ge1$,
+\begin{equation}\label{eq:main-bound}
+ \boxed{\quad
+ \rho^{*}(n)\le \min\{1,4\sqrt{2\phi(n)}\}.
+ \quad}
+\end{equation}
+Consequently every $\phi$-mixing Markov chain is $\rho^{*}$-mixing.
+\end{theorem}
+
+\begin{proof}
+We first treat finite nonempty disjoint sets $S,T\subset\mathbb Z$ satisfying $d(S,T)\ge n$.
+
+Order $S\cup T$ chronologically.  Merge consecutive selected times belonging to the same set into maximal monochromatic blocks.  The resulting blocks
+\[
+ B_1<B_2<\cdots<B_m
+\]
+alternate in color.  Enumerate the $S$-blocks chronologically as $S_1,\dots,S_I$ and the $T$-blocks chronologically as $T_1,\dots,T_J$.  Define the vector variables
+\[
+ U_i=(X_k)_{k\in S_i},\qquad V_j=(X_k)_{k\in T_j}.
+\]
+For each pair $(i,j)$ set
+\[
+ \mathcal H_{ij}
+ =\sigma(U_{i'}:i'<i,\ V_{j'}:j'<j).
+\]
+We shall verify Peyre's minimal subjective-correlation hypotheses with a matrix $\varepsilon=(\varepsilon_{ij})$ supported exactly on adjacent opposite-color blocks.
+
+\medskip
+\noindent\textbf{Adjacent blocks.}
+Suppose first that $S_i$ occurs immediately before $T_j$ in the complete block order.  Let
+\[
+ s=\max S_i,\qquad t=\min T_j.
+\]
+Then $t-s\ge n$.  Every variable in $\mathcal H_{ij}$ occurs strictly before the block $S_i$.  Condition on $\mathcal H_{ij}=h$ for a value $h$ outside the usual null set.  By the Markov property, under that conditional law we have the Markov chain of random elements
+\[
+ U_i\longrightarrow X_s\longrightarrow X_t\longrightarrow V_j.
+\]
+The transition from $X_s$ to $X_t$ is still $K_{s,t}$; only the input law of $X_s$ has changed.  By Remark~\ref{rem:conditional-support} and Lemma~\ref{lem:arbitrary-input},
+\[
+ \rho(X_s,X_t\mid\mathcal H_{ij}=h)
+ \le a_{t-s}\le a_n,
+\]
+where the last inequality uses the monotonicity of $\phi(\cdot)$.  Maximal-correlation data processing along the displayed Markov chain gives
+\[
+ \rho(U_i,V_j\mid\mathcal H_{ij}=h)\le a_n.
+\]
+Thus Peyre's subjective correlation satisfies
+\[
+ \{U_i:V_j\}_{\mathcal H_{ij}}\le a_n.
+\]
+The argument is identical when $T_j$ occurs immediately before $S_i$.
+
+\medskip
+\noindent\textbf{Nonadjacent blocks.}
+Suppose $S_i$ lies before $T_j$ but they are not adjacent in the complete block order.  Because colors alternate, the $T$-block immediately following $S_i$ lies strictly between them and has $T$-index smaller than $j$.  Therefore that entire intermediate block belongs to $\mathcal H_{ij}$.  Choose any time $r$ in it.  Conditional on $X_r$ the Markov property separates the past from the future.  Adding to the conditioning sigma-field further variables from the past and from the future side does not destroy that factorization: conditionally on $X_r$, the joint law of the pre-$r$ path and the post-$r$ path is a product, and conditioning on additional coordinates of either factor preserves the product structure between the two remaining factors.  Hence, for almost every value of $\mathcal H_{ij}$,
+\[
+ U_i\ \text{and}\ V_j\quad\text{are independent}.
+\]
+Thus
+\[
+ \{U_i:V_j\}_{\mathcal H_{ij}}=0.
+\]
+The case in which $T_j$ lies before $S_i$ is symmetric, using the intervening $S$-block, which has index smaller than $i$ and therefore belongs to $\mathcal H_{ij}$.
+
+We have proved that the matrix of admissible subjective-correlation bounds is the weighted incidence matrix of a finite alternating path: every nonzero entry is at most $a_n$, and each row and each column has at most two nonzero entries.  Consequently
+\[
+ \|\varepsilon\|_{2\to2}
+ \le\sqrt{\|\varepsilon\|_1\|\varepsilon\|_\infty}
+ \le 2a_n.
+\]
+Peyre's Theorem~3.3.1 with the minimal hypotheses of Section~3.4(a) therefore gives
+\begin{align*}
+ &\rho\bigl(\sigma(X_s:s\in S),\sigma(X_t:t\in T)\bigr)\\
+ &\qquad=\rho\bigl(\sigma(U_1,\dots,U_I),\sigma(V_1,\dots,V_J)\bigr)\\
+ &\qquad\le \min\{1,2a_n\}
+ \le \min\{1,4\sqrt{2\phi(n)}\}.
+\end{align*}
+This proves the required bound for finite $S,T$.
+
+Finally, let $S,T$ be arbitrary admissible subsets of $\mathbb Z$.  Maximal correlation between two countable random vectors is the supremum of the maximal correlations over finite subvectors (equivalently, square-integrable functions of the full coordinate sigma-fields are approximated in $L^2$ by their conditional expectations on increasing finite-coordinate sigma-fields).  Therefore the same uniform bound passes to arbitrary $S,T$.  Taking the supremum in Bradley's definition of $\rho^{*}(n)$ gives \eqref{eq:main-bound}.  If $\phi(n)\to0$, the right-hand side tends to zero, completing the proof.
+\end{proof}
+
+\section{The reset-age stress test from the preceding R7-01 runs}
+
+The earlier R7-01 work considered the stationary chain
+\[
+ P(i,0)=1-q,\qquad P(i,i+1)=q,\qquad 0<q<1.
+\]
+It has $\phi(n)=q^n$.  Theorem~\ref{thm:main} immediately yields
+\[
+ \rho^{*}(n)\le \min\{1,4\sqrt{2}\,q^{n/2}\}.
+\]
+For this particular kernel one can improve the local adjacent-block constant because an $n$-step transition is an exact ``reveal with probability $q^n$, otherwise refresh independently'' channel.  Its maximal correlation is $q^{n/2}$ for every input law, and the same path tensorization gives
+\[
+ \rho^{*}(n)\le \min\{1,2q^{n/2}\}.
+\]
+In particular the prior alternating-singleton diagnostic quantity
+\[
+ R_d=\sup_N\rho\bigl(\sigma(X_0,X_{2d},\dots,X_{2Nd}),
+                 \sigma(X_d,X_{3d},\dots,X_{(2N-1)d})\bigr)
+\]
+satisfies $R_d\le2q^{d/2}\to0$.  Thus the reset-age model is not a counterexample, uniformly in the number of alternating blocks.
+
+\section{Prior-art and protocol status}
+
+The source question is from 2005.  The decisive tensorization input used here is Peyre's 2010 monograph, which postdates the source.  A bounded literature search on 17 September 2026 recovered Bradley's source; later sufficient-condition results based on lower-$\psi$ or copula density assumptions; Bradley's later INAR/interlaced-$\rho$ work; and Peyre's maximal-correlation tensorization.  It did not locate a later article explicitly stating the implication proved above.  This search failure is not evidence of novelty.  The argument may be implicit in the post-2010 tensorization literature, and that question requires a separate bibliographic audit.
+
+This file is therefore a complete \emph{candidate} source-level proof, not a declaration of protocol closure.  The repository protocol additionally requires an independent P26 full-proof audit and a second independent audit from a distinct track.  Neither audit is supplied by R7-01 itself.
+
+\begin{thebibliography}{9}
+\bibitem{Bradley2005}
+R. C. Bradley,
+\emph{Basic Properties of Strong Mixing Conditions. A Survey and Some Open Questions},
+Probability Surveys 2 (2005), 107--144.
+\href{https://doi.org/10.1214/154957805100000104}{doi:10.1214/154957805100000104}.
+
+\bibitem{Peyre2010}
+R. Peyre,
+\emph{Tensorizing maximal correlations},
+arXiv:1004.1602v2 (2010).
+\end{thebibliography}
+
+\end{document}

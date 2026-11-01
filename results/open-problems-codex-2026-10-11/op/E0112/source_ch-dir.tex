@@ -1,0 +1,219 @@
+ \chapter{Directional free energy} \label{ch:dir}
+ 
+ In this section we make use of the Brownian nature of the polymer and the invariance of the medium under shear transformations, which induces a lot of symmetries in the model, culminating with quadratic shape function and the equality
+ \eqref{eq:p0=}. 
+ 
+ \section{Point-to-point partition function}
+
+With $P_{s,x}^{t,y}$  the Brownian bridge  in $\R^d$ joining $(s,x)$ to $(t,y)$, we introduce the point-to-point partition (P2P) function
+\begin{equation} \label{PtoPdefinition}
+Z_t(\om, \b; x) = P_{0,0}^{t,x}\left[ \exp \{ \b \om(V_t)\}\right]\;,
+\end{equation}
+from which we can recover the point-to-level (P2L) partition function
+ \begin{equation}
+\label{eq:intZ}
+Z_t(\om,\b)= \int_{\rd} Z_t(\om, \b; x) \rho(t,x) dx \; 
+\end{equation}
+by conditioning on $B_t$.
+We use the standard notation %$\rho$ for the heat kernel in $\R^d$,
+$%\begin{equation}\nn
+\rho(t,x) = (2 \pi t)^{-d/2} \exp - |x|^2/2t
+$ for the heat kernel in $\R^d$. %\end{equation}.
+% [is $\rho$ defined ??? also check all the $g$'s are $\rho$'s]
+For $\xi \in \R^d$, define the shear transformation $\tau_\xi: \R_+\times \R^d \to \R_+\times \R^d$ by
+\begin{equation}\nn
+\tau_\xi(s,x)=(s,x+s\xi)\;,
+\end{equation}
+which is one to one with $\tau_\xi^{-1}=\tau_{-\xi}$.
+Since $\tau_\xi$ acts on the graph of functions $f: \R_+ \to \R^d$, we denote its action on functions
+by
+\begin{equation} \label{eq:tauxif}
+\tau_\xi f : s \mapsto f(s)+s\xi \;,
+\end{equation}
+so that $\tau_\xi(s,f(s))=(s, \tau_\xi(f)(s)$.
+The pushed forward of  a point measure by $\tau_\xi$  is defined by
+\begin{equation}\label{eq:tau}
+\tau_\xi \circ \big(\sum_i \delta_{(t_i, x_i)}\big) = \sum_i \delta_{(t_i, x_i + \xi t_i)}=  \sum_i \delta_{\tau_\xi (t_i, x_i)}
+ \;,
+\end{equation}
+where it is clear that $\tau_\xi \circ \om$ is again a Poisson point process with intensity $\nu ds dx$,
+i.e., $\tau_\xi \circ \om=\om$ in law. With $B$ the canonical process, under the measure $P_{0,0}^{t,t\xi}$
+the process 
+$W=\tau_{-\xi}(B)$
+%$W(s)=B(s)-s\xi=\tau_{-\xi}(B)(s), s \geq 0$, 
+is a Brownian bridge $(0,0) \to (0,0)$. Therefore, for all $\om$,
+\begin{eqnarray} \nn
+Z_t(\om, \b; t\xi) &=&  P_{0,0}^{t,t\xi}\left[ \exp \{ \b \om(V_t (B) )\}\right] \\ \nn
+&=&  P_{0,0}^{t,t\xi}\left[ \exp \{ \b \om(V_t (\tau_{\xi} (W)) )\}\right] \\ \nn
+&=&  P_{0,0}^{0,0}\left[ \exp \{ \b \om(\tau_{\xi} (V_t (B))) \}\right] \\ \nn
+&=&  P_{0,0}^{0,0}\left[ \exp \{ \b (\tau_{\xi} \circ \om)(V_t (B)) \}\right] \\ \label{eq:CMBB}
+&=& Z_t(\tau_{\xi} \circ \om, \b; 0)\;.
+\end{eqnarray}
+This implies that $Z_t(\om, \b; x)$ has same law as $Z_t(\om, \b; 0)$.
+% 
+%Two important facts:
+% \begin{equation}
+%\label{eq:intZ}
+%Z_t(\om,\b)= \int_{\rd} Z_t(\om, \b; x) g(t,x) dx\;,
+%\end{equation}
+%and, by Cameron-Martin-Girsanov, with the shear transformation $\tau_v$ acting on the point measures as 
+%\begin{equation}\label{eq:tau}
+%\tau_v \big(\sum_i \delta_{(t_i, x_i)}\big) = \sum_i \delta_{(t_i, vt_i+x_i)})
+%\end{equation}
+%we have
+%\begin{equation}
+%\label{eq:CMGd}
+%Z_t(\om, \b; x) = Z_t(\tau_{x/t}\om, \b; 0) \;.
+%\end{equation}
+%
+We can prove that the {\em directional free energy},  in the direction $\xi \in \rd$, 
+$$ p^{\rm dir}(\b, \nu; \xi ) =  \lim_{t \to \8} \frac{1}{t} \ln Z_t (\om, \b; t\xi)
+$$
+exists a.s. and in $L^p$-norm for all $p \geq 1$, and is equal to
+$
+\lim_{t \to \8}  t^{-1}\P[\ln Z_t(\om, \b; t \xi)]
+$. The route is quite different from  Theorem \ref{th:freeenergy}, it follows the lines of chapter 5 in \cite{Sznitman} for the undirected case, that we briefly sketch now:
+define the tube around the Brownian path between times $s \leq t$,  $V_{s,t}=V_{s,t}(B)=\cup_{u \in [s,t]} \{u\}\times U(B_u)$, and also
+\begin{equation}\nn
+{\mathfrak e}_{s,t}(x,y;\om) := P\left[ e^{\b \om(V_{s,t})} {\bf 1}_{B_t \in U(y)} \big\vert B_s=x\right] = P_{x} \left[ e^{\b \theta_{s,x} \!\circ \om(V_{t-s})} {\bf 1}_{B_{t-s} \in U(y)} \right],
+\end{equation}
+which is the integral of the P2P partition function over a ball of radius $r$. Then, the quantity 
+\begin{equation} \nn
+a_{s,t}(x,y;\om)= \inf_{z \in U(x)} \ln {\mathfrak e}_{s,t}(z, y; \om)
+\end{equation}
+is superadditive, in particular we have
+$$a_{0,s+t}(0, (s+t)\xi; \om) \geq  a_{0,s}(0, s\xi; \om) + a_{s,s+t}(s\xi, (s+t)\xi; \om), $$
+and the subadditive ergodic theorem shows the existence of the limit $t^{-1} a_{0,t}(0, t\xi; \om)$ as $t \to \8$, say $ p^{\rm dir}(\b, \nu; \xi )$, a.s. and in $L^1$. 
+($L^p$-convergence will follow from the concentration inequality, which remains unchanged).
+Then, one can show that the infimum over $z \in U(x) $ in the definition of $a_{0,t}(0,y;\om)$ can be dropped in the limit $t \to \8$, as well as the integration 
+ in the definition of  $e_{0,t}(0,y;\om)$ on the fixed domain $ U(y)$. Proving these claims requires some work with quite a few technical estimates;
+ we do not write the details here, the reader is referred to section 5.1 in \cite{Sznitman}.
+
+
+
+
+By \eqref{eq:CMBB}, $Z_t(\om, \b; x)\eqlaw Z_t(\om, \b; x')$ and thus, for all $\xi, \xi' \in \rd$,
+\begin{equation}\label{eq:samepdir}
+p^{\rm dir}(\b, \nu; \xi ) = p^{\rm dir}(\b, \nu; \xi' ) \;.
+\end{equation}
+%%%%%%
+\section{Free energy does not depend on direction}
+Let $P^h$ be the Wiener measure with drift $h \in \rd$, i.e., the probability measure on the path space ${\cal C}(\R_+, \rd)$ such that for all $t$,
+\begin{equation} \nn
+\left(\frac{ d P^h}{d P}\right)_{| \cF_t}= \exp \left\{ h \cdot B_t - \frac{t|h|^2}{2}\right\}\;.
+\end{equation}
+By Cameron-Martin formula, under $P^h$, the canonical process $B$ is a  Brownian motion  with drift $h$, i.e., $W=\tau_{-h}(B)$ is a standard Brownian motion under $P^h$
+and has the same law as $B$ under $P$. Thus, the partition function for the drifted Brownian polymer
+\begin{eqnarray}
+Z_t^h(\om,\b) &\stackrel{\rm def.}{=}& P^h\left[ \exp \{ \b \om(V_t(B))\}\right] \nn \\
+\nn &=& P^h\left[ \exp \{ \b \om(V_t(\tau_{h}(W)))\}\right] \\
+\nn &=& P\left[ \exp \{ \b \om(V_t(\tau_{h}(B)))\}\right] \\
+&=&   Z_t(\tau_{-h} \circ \om,\b) \label{eq:CMh}
+\end{eqnarray}
+as in \eqref{eq:CMBB}. It would be routine, and this time exactly as in the proof of  Theorem \ref{th:freeenergy}, to show the existence of  free energy for the drifted Brownian polymer 
+\begin{equation} \nn
+p^h(\b, \nu) := \lim_{t \to \8} t^{-1} \ln Z_t^h(\om,\b)
+\end{equation}
+a.s. and in $L^p$; But in fact, this is even unnecessary since \eqref{eq:CMh} yields the existence of the limit. 
+Now, the previous display together with invariance of $\om$ under shear shifts imply that
+\begin{equation}
+p^h(\b, \nu) = p(\b, \nu) \;.
+\end{equation}
+On the other hand, similar to  \eqref{eq:intZ} we have
+ \begin{equation}
+\label{eq:intZh}
+Z_t^h(\om,\b)= \int_{\rd} e^{h \cdot x - t|h|^2/2} Z_t(\om, \b; x) \rho(t,x) dx\;.
+\end{equation}
+By Laplace method, 
+it follows from standard work that 
+\begin{eqnarray} \nn
+p^h(\b, \nu) 
+%&:=& \lim_{t \to \8} Z_t^h(\om,\b)\\ 
+\nn &=& \sup_{\xi \in \rd} \left\{ h \cdot \xi - |h|^2/2 - |\xi|^2/2  + p^{\rm dir}(\b, \nu; \xi )\right\}
+\\ \label{eq:ph=} &\stackrel{\eqref{eq:samepdir}}{=}& p^{\rm dir}(\b, \nu; 0 ) - |h|^2/2 + \sup_{\xi \in \rd} \left\{ h \cdot \xi - |\xi|^2/2 \right\}\\
+\nn &=& p^{\rm dir}(\b, \nu; 0 ).
+\end{eqnarray}
+%Taking $h=0$, we see that $p(\b, \nu) = p^{\rm dir}(\b, \nu; 0 )$. 
+Finally, all the above  notions of free energy coincide:
+\begin{equation}
+\label{eq:p0=}
+\boxed{\quad p(\b, \nu) = p^{\rm dir}(\b, \nu; \xi ) = p^h(\b,\nu)\;.\quad }
+\end{equation}
+{\bf Conclusion:}  The critical values  $\beta_c^{\pm}$  for  equality of quenched and annealed free energy are the same for all free energies (P2P in all directions, P2L
+with all drifts). 
+ 
+
+ \section{Local limit theorem}
+
+In the $L^2$-region, a local limit theorem was discovered by Sina\"i  \cite{Si95} in the discrete case, and extended to our continuous model by Vargas \cite{Va04}. 
+ \medskip
+
+
+Define the time-space reversal  operator on the environment $\theta_{t,x}^\leftarrow $,
+acting on point measures as 
+\begin{equation}\label{eq:thetainv}
+\theta_{t,x}^\leftarrow (\sum_i \delta_{(t_i, x_i)}\big) = \sum_i \delta_{(t-t_i, x_i-x)}
+\end{equation}
+
+\begin{theorem}[Local limit theorem; \cite{Va04}, Th. 2.9] \label{prop:LLT}
+Assume $\b \in (-\b_2^-, \b_2^+)$. Then, for any constant $A>0$ and any positive function $\ell_t$ tending to $\8$ with $\ell_t = o(t^a)$ for some $a<1/2$,
+\begin{equation} \label{eq:llt1}
+Z_t(\om, \b; x) = W_\8 \times W_\8 \circ \theta_{t,x}^\leftarrow + \eps_t(x) \;,
+\end{equation}
+ and
+ \begin{equation}\nn
+Z_t(\om, \b; x) = W_{\ell_t} \times W_{\ell_t} \circ \theta_{t,x}^\leftarrow + \delta_t(x) \;,
+\end{equation}
+ with error terms vanishing as $t \to \8$,
+ $$
+ \sup_{|x| \leq A \sqrt{t}} \P[ |\eps_t(x)|] \to 0 \;, \qquad  \sup_{|x| \leq A \sqrt{t}} \P[ |\delta_t(x)|^2] \to 0 \;.
+ $$
+\end{theorem}
+%%%%%%
+
+%%%%%%%%%%%%%%
+%\begin{remark}
+%\begin{enumerate}
+%\item 
+%Intuitively, the local limit theorem states that, the polymer ending at $x$ at time $t$ only "feels" the environment at times $s$ close to 0  and locations close to 0  or close t
+%at "large" times $s$ close to $t$ and locations close to $x$. (See Figure \ref{fig:LLT}.) In between, it behaves like a Brownian bridge.
+%\item It leads to a weak form of CLT. 
+%%\item  We expect it holds in the full WD region.
+%\end{enumerate}
+%\end{remark}
+%%%%%%%%%%%%% 
+Intuitively, the local limit theorem states that, the polymer ending at $x$ at time $t$ only "feels" the environment at times $s$ close to 0  and locations close to 0  or close t
+at "large" times $s$ close to $t$ and locations close to $x$. (See Figure \ref{fig:LLT}.) In between, it behaves like a Brownian bridge.
+\medskip
+
+%To be added  [???] :
+%For $ \b \in (\b_c^-, \b^+_c)$,  the 2 constructions of Busemann functions give the same result: \\
+%${\rm Buseman}^h = {\rm Buseman}(\xi) $ if $h=\xi$.
+%%\end{itemize}
+
+
+\begin{conjecture}
+We formulate two conjectures:
+
+$\bullet$ It is natural to define another pair of critical inverse temperature, analogue to the weak/strong disorder transition:
+\begin{eqnarray} \label{eq:betacdir}
+\overline{\b}_c^{+,{dir}}&=& \sup\{ \b \geq 0: \lim_t \P[ (W_t^{{dir}, \xi})^{1/2}] >0\}, \\ \nn   \overline{\b}_c^{-,{dir}}&=& \inf\{ \b \leq 0: \lim_t \P[ (W_t^{{dir}, \xi})^{1/2}] >0\}.
+\end{eqnarray}
+Using Jensen inequality  in \eqref{eq:intZ}, it is not difficult to get $\overline{\b}_c^{+,{dir}} \in [\b_2^+,  \b_c^+ ]$, $\overline{\b}_c^{-,{dir}} \in [\b_c^{-}, \b_2^-]$.
+We conjecture that %[local extinction does not imply global extension for BBM ??] 
+the equality holds, i.e., 
+$$\overline{\b}_c^\pm = \overline{\b}_c^{\pm,{dir}}. $$
+
+$\bullet$ A long standing conjecture is that the local limit theorem  \eqref{eq:llt1} holds the way all through the weak disorder region. Note that the latter conjecture would imply that the former one holds.
+\end{conjecture}
+\begin{figure}[h!!!] \centering
+\includegraphics[scale=0.4]{LLT.eps}
+% 
+%
+\caption{The local limit theorem. The P2P partition function only feels details of the environment close to the space-time endpoints $(0,0)$ and $(t,x)$. In between, it behaves like the Gaussian propagator.} 
+ \label{fig:LLT}
+%% 
+%
+\end{figure}
+
+

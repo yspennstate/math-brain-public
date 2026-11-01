@@ -1,0 +1,17 @@
+{
+  "target_id": "C0023",
+  "checked_at": "2026-10-10",
+  "exact_target": "For each integer 3 <= d <= 10, nearest-neighbour Bernoulli bond percolation on Z^d has theta_d(p_c(d)) = P_{p_c(d)}(|C(0)| = infinity) = 0, where edges are independent Bernoulli(p) and p_c(d) = inf{p in [0,1]: theta_d(p)>0}.",
+  "historical_sources": [
+    {"source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:23", "observation": "2026-09-07 intake says attempted_unsolved and does not distinguish bond from site."},
+    {"source": "https://arxiv.org/html/2401.12397v1", "locator": "Conjecture 3 and Theorem 6", "observation": "Kozma-Nitzan formulate a uniform finite-graph gluing conjecture and prove it implies theta(p_c)=0 on Z^d for d>=2; this is a conditional reduction, not itself a proof of Conjecture 3."},
+    {"source": "https://arxiv.org/html/1502.03051v1", "locator": "Theorem 1.1", "observation": "Duminil-Copin--Tassion prove exponential one-arm decay for each p<p_c with rate c(p)>0 and identify their finite-set threshold with p_c; no uniform critical decay follows."}
+  ],
+  "later_claims": [
+    {"source": "https://github.com/anthropics/formal-math/tree/795efb86f191735c5481675763537cfb4ff37e55/percolation", "claimed_theorem": "Percolation.Continuity.CSH.percolationContinuity_allDimensions, d>=2, plus comparator BondPercolation.percolation_continuity", "scope": "nearest-neighbour Bernoulli bond percolation on Z^d", "receipt": "AUDIT.md records a successful Lean build, comparator and axioms [propext, Classical.choice, Quot.sound]; Challenge.lean has two statement-only sorry placeholders while Solution.lean is claimed to close them", "verification_here": "Primary statement and published receipt read; no independent build or full proof-chain audit."},
+    {"source": "https://github.com/openai/math/blob/main/lean/docs/213.md", "claimed_theorem": "No infinite cluster at criticality for Bernoulli bond percolation on infinite connected locally finite quasi-transitive graphs with p_c<1", "scope": "Would include Z^d, d>=2", "verification_here": "Primary scope document found; formal theorem and build not independently checked here."}
+  ],
+  "current_openness": "UNKNOWN: public proof claims postdate the 2026-09-07 intake; independent semantic and proof audit has not been completed in this packet.",
+  "owner_retirement_check": "No C0023 row was found in the named attempts_H and attempts_I directories, and no P0043 match was found in the named Big Open problem folder by targeted grep. This does not prove that no owner solved or retired record exists elsewhere.",
+  "model_boundary": "A 2026 Cerf paper arXiv:2608.23661 explicitly addresses site percolation. Its site statement and bond C0023 have different product spaces and critical parameters; their equivalence is not established by the cited intake note."
+}

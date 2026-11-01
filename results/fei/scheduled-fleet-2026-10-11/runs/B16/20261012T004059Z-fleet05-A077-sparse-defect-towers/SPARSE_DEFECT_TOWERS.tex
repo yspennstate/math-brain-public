@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{Majority's scalar restriction bill: explicit bridge constants}
+\author{A077, B16, stage 2}\maketitle
+All inputs are uniform signs and entropy is in bits. Write
+\[a_n=2^{-(n-1)}\binom{n-1}{(n-1)/2},\qquad I(\mathrm{Maj}_n)=na_n.\]
+For a complete coordinate restriction tree let
+\[\Lambda=\sum_v w_v j_v\log_2(1+\kappa_{\min,v}/(2j_v)),\]
+where $j_v$ is the smaller disagreement/agreement probability and $\kappa(g)=1-\max_S\widehat g(S)^2$. Zero-$j$ terms vanish. Let $\Lambda_*$ delete exactly isospectral child splits.
+
+For every odd $n\ge511$ and every complete adaptive coordinate tree,
+\[\frac\Lambda I\ge\frac{n+1}{4n}\log_2(1+\sqrt{3n+1}/20)\ge\tfrac18\log_2n-1,\]
+\[\frac{\Lambda_*}I\ge\frac{n+1}{8n}\log_2(1+\sqrt{3n+1}/20)\ge\tfrac1{16}\log_2n-\tfrac12.\]
+For every odd $n\ge3$,
+\[\Lambda_*\le\Lambda\le I\frac{n-1}{n}\log_2(1/a_n)\le\tfrac I2\log_2(2(n-1)).\]
+
+\paragraph{Proof.} At depth $d$, remaining $m=n-d$, and revealed sum $s$, the residual threshold is $\operatorname{sign}(s+\sum_{i=1}^mX_i)$. Its queried influence is
+\[j=2^{-(m-1)}\binom{m-1}{(m-1-s)/2}\quad(m\ge2).\]
+The first $d$ adaptively selected fresh signs are still independent fair signs. Weighting their sum by $j$ conditions $N=n-1$ signs to have zero total. Hence $\mathbb E j=a_n$ and the conditional revealed-sum variance is $d(N-d)/(N-1)$. For $d\le N/2$ this is at most $m/2$, so good nodes $s^2\le m$ carry at least $a_n/2$ of weighted $j$ mass at each depth. Across $L=(n+1)/2$ depths they carry at least $La_n/2$.
+
+Let $c_k=2^{-k}\binom{k}{\lfloor k/2\rfloor}$. Induction using $c_{2r+2}/c_{2r}=(2r+1)/(2r+2)$ gives
+\[1/(2\sqrt r)\le c_{2r}\le1/\sqrt{3r+1},\qquad c_k^2\le2/(3k+2).\]
+At a good node, child shift $t=s\pm1$ and child dimension $k=m-1$ obey $|t|\le\sqrt m+1$. Symmetry bounds the child mean by $|t|c_k$, since its mean is the probability of an interval containing $|t|$ support atoms. For $m\ge256$ its square is at most $2(m+2\sqrt m+1)/(3m-1)\le4/5$. For monotone Boolean $g$, $D_i g\in\{0,1\}$ implies $|\widehat g(S)|\le\operatorname{Inf}_i(g)$ when $i\in S$, with equality at singleton $i$. Thus the largest nonempty Fourier magnitude is the largest influence; child nonempty squared maxima are at most $1/4$. Therefore both child defects are at least $1/5$. Also $j\le\sqrt{2/(3m-1)}$. The good-node logarithm is consequently at least $\log_2(1+\sqrt{3n+1}/20)$, proving the first bound.
+
+An active exactly isospectral split has $s=0$: equality of the child mean squares forces zero parent mean; conversely $g_-(x)=-g_+(-x)$ at $s=0$. Its pivotal-bridge mass at depth $d$ is $a_n c_dc_{N-d}/c_N\le2a_n/\sqrt{d+1}$, using the central-binomial bounds. Summing gives at most $4a_n\sqrt L$. Since $L\ge256$, this is at most $La_n/4$, leaving good nonisospectral mass at least $La_n/4$ and proving the second bound.
+
+Finally, $j\le1/2$ and $\kappa\le1$ imply the scalar summand is at most $j\log_2(1/j)$. Concavity and $\mathbb Ej=a_n$ bound every depth by $a_n\log_2(1/a_n)$. The final one-variable nonconstant threshold is a character, with $j=0$. Summing and using $a_n\ge1/\sqrt{2(n-1)}$ proves the upper bound. Constant branches can be padded with zero-cost ignored queries. This is an elementary all-dimensional proof; no local-limit approximation is used.
+
+Both bills are therefore $\Theta(I\log n)$ although majority has bounded $H/I$ by the supplied threshold theorem. The result refutes scalar payment on complete trees and after isospectral deletion, not certified stopping at a threshold leaf. The exact leading coefficient $1/2$ remains a conjecture. Full FEI remains open.
+\end{document}

@@ -1,0 +1,96 @@
+\section*{Two-factor signed refund for $q_a\otimes q_b$}
+
+All logarithms are base two.  For a Boolean child $h$ and a constant
+branch $c\in\{-1,1\}$, let $p=\Pr[h\ne c]$.  Let $\mathscr D_c(h)$ be the
+complete physical selector packet $L+Q$ of the selector between $h$ and
+$c$.  Then
+\[
+ \mathscr D_c(h)=F(p),
+\]
+where, with $0\log(1/0)=0$,
+\[
+ F(p)=4p(1-p)-2(1-p)^2\log(1-p)-2p^2\log p
+ +(1-2p)^2\log|1-2p|.                                      \tag{1}
+\]
+In particular $F(p)=F(1-p)$ and $F(0)=F(1)=0$.
+
+Indeed, for every nonempty Fourier cell the midpoint and half-difference
+coefficients are both $\widehat h(S)/2$, and its $L+Q$ contribution is
+$\widehat h(S)^2$.  Their sum is $\operatorname{Var}(h)=4p(1-p)$.
+At the empty cell the two coefficients are, up to signs, $1-p,p$.
+Writing $q=(1-p)^2+p^2$ and $r=(1-2p)^2=2q-1$, the phase term is
+\[
+ Q=-q\log q+\frac r2\log r.
+\]
+It cancels the $q\log q$ term in $L$, proving (1).
+
+Let $q_n$ be $+1$ only at the origin and $-1$ elsewhere.  Put
+\[
+ x=2^{-a},\qquad y=2^{-b},\qquad p=x+y-2xy,
+\]
+and let
+\[
+ D_a=F(x),\quad D_b=F(y),\quad R_{a,b}=F(p).
+\]
+Here $R_{a,b}$ is the complete packet for $q_aq_b$ against the constant
+$+1$ branch.  Define the cross term
+\[
+ \Xi_{a,b}=R_{a,b}-D_a-D_b.                                  \tag{2}
+\]
+
+When an $a$-factor coordinate is revealed at the state $q_mq_b$, one
+child is $-q_b$ and the other is $q_{m-1}q_b$.  Both inherit the same
+constant branch.  With $R_{0,b}:=D_b$, the signed first-factor credit is
+\[
+ \Gamma_{m\mid b}=R_{m,b}-\frac12R_{m-1,b}-\frac12D_b.       \tag{3}
+\]
+The state $q_mq_b$ is reached with probability $2^{m-a}$.  Therefore
+\[
+ \boxed{\sum_{m=1}^a2^{m-a}\Gamma_{m\mid b}=R_{a,b}-D_b
+ =D_a+\Xi_{a,b}.}                                             \tag{4}
+\]
+After the first factor is exhausted, every leaf has packet $D_b$, since
+$F(y)=F(1-y)$.  Reversing the factor order gives
+\[
+ \boxed{\sum_{m=1}^b2^{m-b}\Gamma_{m\mid a}=R_{a,b}-D_a
+ =D_b+\Xi_{a,b}.}                                             \tag{5}
+\]
+
+For either order, split the reached credits into
+\[
+ P_{a\mid b}=\sum_m2^{m-a}(\Gamma_{m\mid b})_+,
+ \qquad
+ N_{a\mid b}=\sum_m2^{m-a}(-\Gamma_{m\mid b})_+.
+\]
+Equation (4) is exactly
+\[
+ \boxed{R_{a,b}+N_{a\mid b}=D_b+P_{a\mid b}.}                \tag{6}
+\]
+Thus every negative credit is paid by positive credits and the one
+terminal $D_b$ packet, with every node and terminal used once.  Reversing
+the order yields the analogous identity with $a,b$ exchanged.
+
+The cross term is not zero and has no fixed sign.  Rigorous intervals give
+\[
+ \Xi_{4,4}<-0.01038,
+ \qquad
+ \Xi_{5,5}>0.00239.                                          \tag{7}
+\]
+Consequently a ledger that simply sums the two isolated one-factor
+payments can overpay or underpay.  The exact factor-first telescope does
+not double-spend: it assigns $\Xi_{a,b}$ once, to the first phase.
+
+For equal factors, put $\delta=2^{-n}$.  Expanding (1) at zero gives
+\[
+ F(p)=4p+p^2\left(2\log\frac1p-4+\frac3{\ln2}\right)
+ +O\!\left(p^3\log\frac1p\right).
+\]
+Since the tensor disagreement probability is $2\delta(1-\delta)$,
+\[
+ \boxed{\Xi_{n,n}=\delta^2\left(4n-24+\frac6{\ln2}\right)
+ +O(n\delta^3).}                                              \tag{8}
+\]
+Hence $\Xi_{n,n}>0$ for all sufficiently large $n$.  It is a genuine
+positive underpayment of naive additivity, but it is lower order relative
+to $D_n+D_n\sim8\delta$.
+

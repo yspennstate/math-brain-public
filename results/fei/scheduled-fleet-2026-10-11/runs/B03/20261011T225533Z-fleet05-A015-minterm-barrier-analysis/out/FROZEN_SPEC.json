@@ -1,0 +1,12 @@
+{
+  "helper_version": "A015-exact-minterms-v1",
+  "family": "All nonconstant Boolean cores through m=3 with fresh point activations; majority and disjoint tribes controls",
+  "domain": {"all_cores_m": [1,2,3], "activation_r": [1,2,3], "majority_n": [1,3,5,7,9], "tribes_w": [1,2,3], "tribes_s": [1,2,3]},
+  "case_count": 866,
+  "symmetry": "No core symmetry reduction; majority level symmetry and tribes block symmetry are used only in analytic formulas checked against entire truth tables",
+  "arithmetic": "integer Walsh transform, Fraction squared spectra/influences/probabilities; logarithmic quantities retained as exact symbolic rational multiples of log2 integers; floating diagnostics are not certificates",
+  "memory_estimate_mb": 30,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "additional_validation": "Exact set-cover dynamic programming for majority supports through n=7, and desirability checks for activated majority through n+r=12"
+}

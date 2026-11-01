@@ -1,0 +1,70 @@
+{
+  "target": "C0120",
+  "current_openness": "UNKNOWN",
+  "parent_problem_solved": false,
+  "exact_statement_recovered": true,
+  "canonical_model": "In Chatterjee 0810.4221v2 Section 8, a path p has n vertices in Z^2_+, starts at (0,0), and takes right/up unit steps with final endpoint unrestricted on i+j=n-1. With independent standard Gaussian vertex weights g_v, X_p=sum_{v in p}g_v and M_n=max_p X_p. Distinct path sums tie with probability zero. Each path has variance n and Cov(X_p,X_q)=|p intersection q|. This is the zero-temperature Gaussian maximum; log Z at fixed finite inverse temperature is a different observable. Theorem 8.1 gives Var(M_n)<=C n/log n for n>=2. No current-openness conclusion is asserted.",
+  "exact_target": "Find epsilon>0 and C,n0 independent of n such that Var(M_n)<=C n^(1-epsilon) for every n>=n0 in the cited Gaussian source model.",
+  "intake_model_status": "Related finite-temperature/general-dimensional formulation; not a faithful exact restatement of its 2008 citation.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/0810.4221v2",
+      "version": "v2, 2008-12-16",
+      "locators": [
+        "Section 8",
+        "Theorem 3.2",
+        "Theorem 8.1",
+        "Section 12(3)"
+      ],
+      "checks": [
+        {
+          "path": "~\\Downloads\\Probability_1000_intake_claude_20260907\\sources\\chatterjee_chaos_2008\\source.pdf",
+          "sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+          "intake_sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+          "match": true
+        },
+        {
+          "path": "~\\Downloads\\Probability_1000_intake_claude_20260907\\sources\\chatterjee_chaos_2008\\text.txt",
+          "sha256": "e58058138c0f797174c513fc8579af201360f9d093f241af8c24fe3503017956",
+          "intake_sha256": "e58058138c0f797174c513fc8579af201360f9d093f241af8c24fe3503017956",
+          "match": true
+        }
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/1204.1819",
+      "scope": "Finite-temperature near-gamma i.i.d. environment; abstract checked only."
+    },
+    {
+      "url": "https://arxiv.org/html/2103.09199v2",
+      "scope": "Section 2.4: fixed-beta point-to-plane polymer, Gaussian-Lipschitz pushforward disorder; C depends on d,beta,law."
+    }
+  ],
+  "prior_work_checks": {
+    "intake_and_attempt": "exact C0120 records saved",
+    "ranking": "tier 5 historical row recovered",
+    "lean": "annotated C0120 row; no theorem receipt located",
+    "attempts_H_I": "targeted C0120 search returned no proof",
+    "team_O": "no C0120 row from scoped board query",
+    "owner_solved_retired": "targeted relevant README returned no matching polymer variance solution; completeness not claimed"
+  },
+  "recent_primary_search": "Checked public arXiv search for directed-polymer variance/polynomial superconcentration in 2025/2026; no scoped resolution certified. Search incompleteness preserves UNKNOWN.",
+  "paired_proof_read": true,
+  "paired_proof": {
+    "path": "~\\brain_workers\\w501\\LEMMAS.md",
+    "sha256": "29e531611d35eaef4015da7c523212e0d5eab956641e479a73887ff903c2ae9a",
+    "snapshot": "REVIEWED_W501_LEMMAS.md"
+  },
+  "served_model_evidence": {
+    "author_w502": "UNAVAILABLE",
+    "paired_author_w501": "UNAVAILABLE",
+    "referee_w503": "UNAVAILABLE",
+    "requested_settings_are_not_evidence": true
+  },
+  "formal_check": {
+    "performed": false,
+    "receipt": null,
+    "trusted_axioms": null
+  },
+  "review_state": "w503 pending; no theorem promotion or live-store edit"
+}

@@ -1,0 +1,137 @@
+--- a/~/math-brain-inbox/w342/bundle_008.json
++++ b/~/math-brain-inbox/w342/bundle_008.json
+@@ -0,0 +1,134 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w342",
++  "bundle_slug": "w342-c0128-partial-results",
++  "entries": [
++    {
++      "key": "c0128-w342-result-scope",
++      "namespace": "probability.research.attempts",
++      "logical_name": "c0128-w342-result-scope",
++      "kind": "concept",
++      "title": "Result scope and audit status for C0128",
++      "statement": "The cached excited-walk problem asks for conditions giving directional zero-one laws. The sublinear adverse-drift budget supplies an explicit sufficient condition and includes finite adverse-cookie perturbations of uniform bias. It does not classify general stationary ergodic cookie environments. Proofs await w346 KEEP.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0128:c0128-w342-result-scope",
++        "url": "file:///~/brain_workers/w342/proofs/C0128.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "nearest-neighbor-walk-sublinear-adverse-drift-transience",
++      "namespace": "probability.excited-walks",
++      "logical_name": "nearest-neighbor-walk-sublinear-adverse-drift-transience",
++      "kind": "theorem",
++      "title": "Directional transience from a sublinear adverse-drift budget",
++      "statement": "Let X_0=0 and X_{n+1}-X_n be +/-1 with history-conditional right probability p_n. If p_*>1/2 and sum_{k<n}(p_*-p_k)_+=o(n) almost surely, then liminf X_n/n>=2p_*-1 almost surely. In particular X_n->+infinity and sup_n X_n=+infinity have probability one; inf_n X_n=-infinity and X_n->-infinity have probability zero.",
++      "proof_text": "# C0128: robust directional transience under a sublinear adverse-drift budget\n\nStatus: proof of a sufficient condition, awaiting w346. Does not settle the general stationary ergodic cookie-environment problem; no novelty claim.\n\nLet X_0=0 and let X_{n+1}-X_n be +/-1. Conditional on the history through n (including the full cookie environment if random), its chance of +1 is p_n. Fix p_*>1/2 and assume\n\n    B_n=sum_{k=0}^{n-1}(p_*-p_k)_+ = o(n) almost surely.\n\nThen liminf X_n/n >= 2p_*-1 almost surely. Thus P(X_n -> +infinity)=P(sup_n X_n=+infinity)=1, and the two corresponding leftward events have probability zero.\n\nProof: M_n=X_n-sum_{k<n}(2p_k-1) is a martingale with increments bounded by two. Azuma-Hoeffding gives P(|M_n|>=eta n)<=2 exp(-eta^2 n/8). This is summable for each positive rational eta, so Borel-Cantelli implies M_n/n -> 0 almost surely. The predictable drift is at least (2p_*-1)n-2B_n, proving the claim. Divergence to +infinity makes the infimum over all times finite. Mirroring the signs gives the leftward version when positive drift excess over a p_*<1/2 is sublinear.\n\nA concrete cookie-environment condition is\n\n    sum_{z in Z,j>=1}(p_*-omega(z,j))_+ < infinity.\n\nEach cookie is used at most once, so this total bounds B_n on every trajectory. In particular any finite set of arbitrary adverse cookies in an otherwise uniformly right-biased environment preserves directional transience and the lower speed bound. Cookies with zero right probability are allowed among that finite set. This condition is stronger than the sought general classification and typically is not a nontrivial stationary environment assumption.\n\nThe proof establishes the zero-one values by an explicit drift calculation. It does not infer a zero-one law just because the environment is ergodic or because a hitting event looks shift-invariant.\n\nSource: C0128-A001's unresolved hitting-time ergodicity route and the cached Kosygina-Zerner Problem 3.5.\n",
++      "assumptions": [
++        "Predictable history-conditional probabilities",
++        "Almost-sure sublinear adverse-drift budget"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0128:nearest-neighbor-walk-sublinear-adverse-drift-transience",
++        "url": "file:///~/brain_workers/w342/proofs/C0128.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "finite-adverse-cookie-perturbation-preserves-rightward-speed",
++      "namespace": "probability.excited-walks",
++      "logical_name": "finite-adverse-cookie-perturbation-preserves-rightward-speed",
++      "kind": "lemma",
++      "title": "Finite adverse-cookie debt preserves directional transience",
++      "statement": "For a one-dimensional nearest-neighbor cookie walk, suppose p_*>1/2 and sum_{z in Z,j>=1}(p_*-omega(z,j))_+ is finite almost surely, after conditioning on the environment. Each cookie is used at most once, so liminf X_n/n>=2p_*-1 almost surely. This includes finitely many arbitrary adverse cookies in an otherwise uniformly right-biased environment, including cookies of right probability zero.",
++      "proof_text": "# C0128: robust directional transience under a sublinear adverse-drift budget\n\nStatus: proof of a sufficient condition, awaiting w346. Does not settle the general stationary ergodic cookie-environment problem; no novelty claim.\n\nLet X_0=0 and let X_{n+1}-X_n be +/-1. Conditional on the history through n (including the full cookie environment if random), its chance of +1 is p_n. Fix p_*>1/2 and assume\n\n    B_n=sum_{k=0}^{n-1}(p_*-p_k)_+ = o(n) almost surely.\n\nThen liminf X_n/n >= 2p_*-1 almost surely. Thus P(X_n -> +infinity)=P(sup_n X_n=+infinity)=1, and the two corresponding leftward events have probability zero.\n\nProof: M_n=X_n-sum_{k<n}(2p_k-1) is a martingale with increments bounded by two. Azuma-Hoeffding gives P(|M_n|>=eta n)<=2 exp(-eta^2 n/8). This is summable for each positive rational eta, so Borel-Cantelli implies M_n/n -> 0 almost surely. The predictable drift is at least (2p_*-1)n-2B_n, proving the claim. Divergence to +infinity makes the infimum over all times finite. Mirroring the signs gives the leftward version when positive drift excess over a p_*<1/2 is sublinear.\n\nA concrete cookie-environment condition is\n\n    sum_{z in Z,j>=1}(p_*-omega(z,j))_+ < infinity.\n\nEach cookie is used at most once, so this total bounds B_n on every trajectory. In particular any finite set of arbitrary adverse cookies in an otherwise uniformly right-biased environment preserves directional transience and the lower speed bound. Cookies with zero right probability are allowed among that finite set. This condition is stronger than the sought general classification and typically is not a nontrivial stationary environment assumption.\n\nThe proof establishes the zero-one values by an explicit drift calculation. It does not infer a zero-one law just because the environment is ergodic or because a hitting event looks shift-invariant.\n\nSource: C0128-A001's unresolved hitting-time ergodicity route and the cached Kosygina-Zerner Problem 3.5.\n",
++      "assumptions": [
++        "Finite total adverse-cookie debt"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0128:finite-adverse-cookie-perturbation-preserves-rightward-speed",
++        "url": "file:///~/brain_workers/w342/proofs/C0128.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0128-w342-validation-evidence",
++      "namespace": "probability.research.attempts",
++      "logical_name": "c0128-w342-validation-evidence",
++      "kind": "concept",
++      "title": "Finite validation evidence for C0128",
++      "statement": "Measured validation evidence for C0128: {\"command\": \"python -X utf8 verify_remaining.py\", \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"martingale_mean_exact\": \"0\", \"positive_probability_final_paths\": 2048, \"prefix_drift_checks\": 4095, \"seconds\": 0.112, \"steps\": 12, \"total_adverse_cookie_budget\": \"3/2\", \"violations\": 0}. These finite checks support the written proof and do not replace its independent audit or establish the full open problem.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0128:c0128-w342-validation-evidence",
++        "url": "file:///~/brain_workers/w342/c0128_measurements.json",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "finite-adverse-cookie-perturbation-preserves-rightward-speed",
++      "kind": "depends_on",
++      "rationale": "FROM \"For a one-dimensional nearest-neighbor cookie walk, suppose p_*>1/2 and sum_{z in Z,j>=1}(p_*-omega(z,j))_+ is finite almost surely, after conditioning on the environment. Each cookie is used at most once, so liminf X_n/n>=2p_*-1 almost surely. This includes\"; TO \"Let X_0=0 and X_{n+1}-X_n be +/-1 with history-conditional right probability p_n. If p_*>1/2 and sum_{k<n}(p_*-p_k)_+=o(n) almost surely, then liminf X_n/n>=2p_*-1 almost surely. In particular X_n->+infinity and sup_n X_n=+infinity have probability one; inf_n\"; The full cookie debt bounds every trajectory's accumulated adverse drift.",
++      "to_key": "nearest-neighbor-walk-sublinear-adverse-drift-transience"
++    },
++    {
++      "from_key": "c0128-w342-result-scope",
++      "kind": "cites",
++      "rationale": "FROM \"The cached excited-walk problem asks for conditions giving directional zero-one laws. The sublinear adverse-drift budget supplies an explicit sufficient condition and includes finite adverse-cookie perturbations of uniform bias. It does not classify general\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For excited random walks on Z, find conditions on the cookie environment under which P_0(sup X_n = +infinity), P_0(inf X_n = -infinity) and the events {X_n ->\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0128-one-sided-zero-one-laws-for-one-dimensional-excited-random-walks"
++    },
++    {
++      "from_key": "nearest-neighbor-walk-sublinear-adverse-drift-transience",
++      "kind": "cites",
++      "rationale": "FROM \"Let X_0=0 and X_{n+1}-X_n be +/-1 with history-conditional right probability p_n. If p_*>1/2 and sum_{k<n}(p_*-p_k)_+=o(n) almost surely, then liminf X_n/n>=2p_*-1 almost surely. In particular X_n->+infinity and sup_n X_n=+infinity have probability one; inf_n\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For excited random walks on Z, find conditions on the cookie environment under which P_0(sup X_n = +infinity), P_0(inf X_n = -infinity) and the events {X_n ->\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0128-one-sided-zero-one-laws-for-one-dimensional-excited-random-walks"
++    },
++    {
++      "from_key": "nearest-neighbor-walk-sublinear-adverse-drift-transience",
++      "kind": "cites",
++      "rationale": "FROM \"Let X_0=0 and X_{n+1}-X_n be +/-1 with history-conditional right probability p_n. If p_*>1/2 and sum_{k<n}(p_*-p_k)_+=o(n) almost surely, then liminf X_n/n>=2p_*-1 almost surely. In particular X_n->+infinity and sup_n X_n=+infinity have probability one; inf_n\"; TO \"The cached excited-walk problem asks for conditions giving directional zero-one laws. The sublinear adverse-drift budget supplies an explicit sufficient condition and includes finite adverse-cookie perturbations of uniform bias. It does not classify general\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "c0128-w342-result-scope"
++    },
++    {
++      "from_key": "finite-adverse-cookie-perturbation-preserves-rightward-speed",
++      "kind": "cites",
++      "rationale": "FROM \"For a one-dimensional nearest-neighbor cookie walk, suppose p_*>1/2 and sum_{z in Z,j>=1}(p_*-omega(z,j))_+ is finite almost surely, after conditioning on the environment. Each cookie is used at most once, so liminf X_n/n>=2p_*-1 almost surely. This includes\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For excited random walks on Z, find conditions on the cookie environment under which P_0(sup X_n = +infinity), P_0(inf X_n = -infinity) and the events {X_n ->\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0128-one-sided-zero-one-laws-for-one-dimensional-excited-random-walks"
++    },
++    {
++      "from_key": "finite-adverse-cookie-perturbation-preserves-rightward-speed",
++      "kind": "cites",
++      "rationale": "FROM \"For a one-dimensional nearest-neighbor cookie walk, suppose p_*>1/2 and sum_{z in Z,j>=1}(p_*-omega(z,j))_+ is finite almost surely, after conditioning on the environment. Each cookie is used at most once, so liminf X_n/n>=2p_*-1 almost surely. This includes\"; TO \"The cached excited-walk problem asks for conditions giving directional zero-one laws. The sublinear adverse-drift budget supplies an explicit sufficient condition and includes finite adverse-cookie perturbations of uniform bias. It does not classify general\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "c0128-w342-result-scope"
++    },
++    {
++      "from_key": "c0128-w342-validation-evidence",
++      "kind": "cites",
++      "rationale": "FROM \"Measured validation evidence for C0128: {\"command\": \"python -X utf8 verify_remaining.py\", \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"martingale_mean_exact\": \"0\", \"positive_probability_final_paths\": 2048,\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For excited random walks on Z, find conditions on the cookie environment under which P_0(sup X_n = +infinity), P_0(inf X_n = -infinity) and the events {X_n ->\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0128-one-sided-zero-one-laws-for-one-dimensional-excited-random-walks"
++    },
++    {
++      "from_key": "c0128-w342-validation-evidence",
++      "kind": "cites",
++      "rationale": "FROM \"Measured validation evidence for C0128: {\"command\": \"python -X utf8 verify_remaining.py\", \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"martingale_mean_exact\": \"0\", \"positive_probability_final_paths\": 2048,\"; TO \"The cached excited-walk problem asks for conditions giving directional zero-one laws. The sublinear adverse-drift budget supplies an explicit sufficient condition and includes finite adverse-cookie perturbations of uniform bias. It does not classify general\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "c0128-w342-result-scope"
++    }
++  ]
++}

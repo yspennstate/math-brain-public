@@ -1,0 +1,58 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w569",
+  "bundle_slug": "c0029-gaussian-law-correction-001",
+  "entries": [
+    {
+      "key": "attempt-c0029-corrected",
+      "namespace": "probability.random-matrices",
+      "logical_name": "attempt-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr",
+      "kind": "concept",
+      "title": "C0029 attempt: Gaussian hard-edge comparison, corrected finite-n scope",
+      "statement": "C0029 asks whether an n by n iid uniform-sign matrix B satisfies P(s_min(B) <= t/sqrt(n)) <= t + exp(-Omega(n)) with exact coefficient one for all t >= 0. The 2026-09-07 Gaussian-comparison attempt did not prove this. The curve F(t)=1-exp(-t-t^2/2) is the LIMIT of the real-Gaussian CDF P(sqrt(n) s_min(G_n) <= t) as n tends to infinity for fixed t; it is not that CDF exactly at each finite n. At n=1 the true Gaussian CDF is 2 Phi(t)-1. Tao-Vu's quantitative universality gives a polynomial probability error and settles a polynomial-scale regime; Sah-Sahasrabudhe-Sawhney obtain a (1+o(1)) coefficient with exponential remainder. Neither estimate alone supplies the exact coefficient-one bound throughout the intermediate small-ball window. Current global openness is unverified here; this is an unsuccessful attempt record, not a theorem solving C0029.",
+      "proof_text": null,
+      "assumptions": ["B has iid uniform entries in {-1,+1}", "G_n has iid real N(0,1) entries", "The limiting Gaussian statement holds for each fixed t>=0 as n tends to infinity"],
+      "domain": "probability theory; random matrices",
+      "supersedes_existing": true,
+      "source": {
+        "source_id": "owner-own-work:w568-w569:c0029-attempt-correction",
+        "url": "https://arxiv.org/pdf/0903.0614",
+        "revision": "as-read-2026-10-10; independently checked by w568 and w569",
+        "license": "owner-own-work (campaign correction, not reproduced source prose)",
+        "excerpt": "Theorem 1.1 (Limiting distributions for gaussian models)."
+      }
+    },
+    {
+      "key": "finite-n-gaussian-counterexample",
+      "namespace": "probability.random-matrices",
+      "logical_name": "finite-n-real-gaussian-hard-edge-cdf-differs-from-limit",
+      "kind": "lemma",
+      "title": "Real Gaussian hard-edge limiting CDF differs at finite n",
+      "statement": "Let G_n be an n by n matrix with iid real standard-normal entries. The function F(t)=1-exp(-t-t^2/2), t>=0, is the limiting CDF of sqrt(n) s_min(G_n) at each fixed t as n tends to infinity, but it is not the exact finite-n CDF for every n. Already at n=1, P(s_min(G_1)<=t)=2 Phi(t)-1 differs from F(t).",
+      "proof_text": "Tao and Vu Theorem 1.1 states the real-Gaussian formula with an o(1) term as n tends to infinity. At n=1, s_min([Z])=|Z| for Z standard normal, so the CDF equals P(-t<=Z<=t)=2 Phi(t)-1. Its right derivative at zero is 2 phi(0)=sqrt(2/pi), whereas F'(0)=1. Thus the two functions differ.",
+      "assumptions": ["n is a positive integer", "t>=0", "all Gaussian entries are independent real N(0,1)"],
+      "domain": "probability theory; random matrices",
+      "source": {
+        "source_id": "owner-own-work:w568-w569:c0029-gaussian-counterexample",
+        "url": "https://arxiv.org/pdf/0903.0614",
+        "revision": "as-read-2026-10-10; independently checked by w568 and w569",
+        "license": "owner-own-work (campaign proof with Tao-Vu primary locator)",
+        "excerpt": "Theorem 1.1 (Limiting distributions for gaussian models)."
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "finite-n-gaussian-counterexample",
+      "to_key": "attempt-c0029-corrected",
+      "kind": "semantic_association",
+      "rationale": "Counterexample card: 'not the exact finite-n CDF'; corrected attempt card: 'not that CDF exactly at each finite n'. The lemma supplies the scalar witness for the correction."
+    },
+    {
+      "from_key": "attempt-c0029-corrected",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr",
+      "kind": "cites",
+      "rationale": "Corrected attempt card: 'C0029 asks whether' the exact coefficient-one bound holds; existing open-problem card: 'show P(sqrt n s_n(X) <= t) <= t + c^n'. The attempt explicitly cites that target."
+    }
+  ]
+}

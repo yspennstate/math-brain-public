@@ -1,0 +1,13 @@
+PASS QFORM-PARTIAL-HEAVY-QUADRATIC-BARRIER-v1
+series=[Fraction(1, 1), Fraction(0, 1), Fraction(-1, 2880), Fraction(-1, 181440)]
+c_u10=53990741/240540480 0.22445594604284486
+baseline_3sqrt2=4.2426406871192857
+ell=0.02 asymptotic_ratio=0.99991021762158283
+ell=0.05 asymptotic_ratio=0.99943886013489291
+ell=0.10 asymptotic_ratio=0.99775544053957155
+
+Additional local numerical sanity check performed during the run for the aligned orientation u=e3 by direct Fourier quadrature of the Gaussian-smoothed square characteristic function:
+ell=0.02: p(0)=4.242269345240361, ratio=0.9999124738797579, second-order prediction=0.99991375
+ell=0.05: p(0)=4.240268244140099, ratio=0.9994408098271461, second-order prediction=0.9994609375
+ell=0.10: p(0)=4.232799288218978, ratio=0.9976803600337436, second-order prediction=0.99784375
+The numerical quadrature is diagnostic only; the theorem is proved analytically in REPORT.md.

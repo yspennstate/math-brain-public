@@ -1,0 +1,204 @@
+[
+  {
+    "claim_id": "A026-AFFINE4-GOOD-COORDINATE",
+    "version": 1,
+    "exact_statement": "Every nonconstant uniform-cube Boolean sign function with nonzero Fourier support of affine F2 dimension at most four, and every disjoint product of such factors, has a relevant physical coordinate i with B_i <= (7/2) I_i. This class is closed under physical restrictions and satisfies H <= (7/2+2/ln 2) I.",
+    "hypotheses": [
+      "Uniform finite cube; Boolean sign outputs; bit entropy; factors use disjoint physical variable sets; each factor support has affine F2 dimension <=4."
+    ],
+    "statement_sha256": "441e9a88fb64a474673b512cb01b9bf06a6b5535fcc47be8bc610f471889e6f7",
+    "contributors": [
+      "A026"
+    ],
+    "proof_source": "GOOD_COORDINATE_TARGET.tex; code/edge_pilot.py; code/independent_check.py; out/edge_pilot.json; out/independent_check.json",
+    "proof_dependencies": [
+      "Recovered exact physical decrement and influence identities: ERASURE_REDUCTION.md sections 1-4; reconstructed in GOOD_COORDINATE_TARGET.tex."
+    ],
+    "review_records": [
+      {
+        "reviewer": "A028",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261011T221633Z-fleet05-A028-stopping-tree-payment\\INDEPENDENT_REVIEW.md",
+        "original_claims_source": "~\\brain_workers\\FEI100_20261011\\agents\\A026\\runs\\20261011T214052Z-fleet05-A026-good-coordinate-erasure\\CLAIMS.json",
+        "original_claims_sha256": "c06e4db66ab1d7cdfea745a212098077ab247f409ae1832f864029c93b94febf",
+        "method": "Separate scalar integer Walsh/prime-log/combinatorial reconstruction plus analytic hereditary/block/limit proofs",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261011T221633Z-fleet05-A028-stopping-tree-payment\\out\\validation.json",
+        "at": "2026-10-11T22:37:35.146416+00:00"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A003",
+      "A087",
+      "A094",
+      "A027",
+      "A061",
+      "A096"
+    ]
+  },
+  {
+    "claim_id": "A026-AMPLITUDE-K4-THRESHOLD-NOGO",
+    "version": 1,
+    "exact_statement": "For f=+1 exactly at Hamming weights >=24 on 32 uniform sign bits, every coordinate has edge amplitude proxy A_i=2 sum_T |fhat(T) fhat(T+i)| with A_i/I_i=2220940451/536870912>4. Thus existential proxy selection with K=4 is false. No true-erasure violation or unbounded-ratio family is claimed.",
+    "hypotheses": [
+      "Uniform 32-bit cube; coordinate signs identified with 0/1 bits; threshold is Hamming weight >=24; proxy A_i is not child Hellinger affinity."
+    ],
+    "statement_sha256": "99a547e3430467b97c2092643f49eb7365f5dc560518386b87b9f3d2e38f5d7d",
+    "contributors": [
+      "A026"
+    ],
+    "proof_source": "code/symmetric_pilot.py; code/independent_check.py; out/symmetric_pilot.json; out/independent_check.json",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A028",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261011T221633Z-fleet05-A028-stopping-tree-payment\\INDEPENDENT_REVIEW.md",
+        "original_claims_source": "~\\brain_workers\\FEI100_20261011\\agents\\A026\\runs\\20261011T214052Z-fleet05-A026-good-coordinate-erasure\\CLAIMS.json",
+        "original_claims_sha256": "c06e4db66ab1d7cdfea745a212098077ab247f409ae1832f864029c93b94febf",
+        "method": "Separate scalar integer Walsh/prime-log/combinatorial reconstruction plus analytic hereditary/block/limit proofs",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261011T221633Z-fleet05-A028-stopping-tree-payment\\out\\validation.json",
+        "at": "2026-10-11T22:37:35.146416+00:00"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Existential edge-amplitude proxy A_i<=4 I_i for every Boolean function."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A003",
+      "A087",
+      "A094",
+      "A046",
+      "A075",
+      "A096"
+    ]
+  },
+  {
+    "claim_id": "A027-DATA-FIRST-PROPER-BLOCK",
+    "version": 1,
+    "exact_statement": "For every Boolean u on m>=1 uniform core bits, r>=1 fresh control bits, p=2^(-r), d=1-Eu, and F=1+A_r(u-1), the proper core block W satisfies B_W(F)<=p(2dm+2)<=6pm. I_W(F)=pI(u), expected terminal influence=rpd, and all leaves are constants or point defects satisfying H<=4I. For each fixed eta>0, I(u)>=eta*m implies H(F)<=max(6/eta+2/ln(2),4)*I(F) by a single-use physical stopping ledger.",
+    "hypotheses": [
+      "Uniform normalized Boolean Fourier spectrum; entropy in bits",
+      "Explicit core/control activation representation",
+      "For the constant bound only: fixed eta>0 and I(u)>=eta*m"
+    ],
+    "statement_sha256": "9f07bfbcad6bdbc37ddc431b188837a5f6b2c607322567b894938e5cf474be1e",
+    "contributors": [
+      "A027"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A027\\runs\\20261011T215911Z-fleet05-A027-block-selection\\ADAPTIVE_BLOCK_SELECTION.tex",
+    "proof_dependencies": [
+      "C006@recovered-BLOCK_RESTRICTION_IDENTITY-sections-1-3",
+      "threshold-paper@context-38pp-Proposition-8.6"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A028",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261011T221633Z-fleet05-A028-stopping-tree-payment\\INDEPENDENT_REVIEW.md",
+        "original_claims_source": "~\\brain_workers\\FEI100_20261011\\agents\\A027\\runs\\20261011T215911Z-fleet05-A027-block-selection\\CLAIMS.json",
+        "original_claims_sha256": "dc4d58d8c1f2e822eef7e492fb9b275c3df5201d2051c7945fcbcf3ead153943",
+        "method": "Separate scalar integer Walsh/prime-log/combinatorial reconstruction plus analytic hereditary/block/limit proofs",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261011T221633Z-fleet05-A028-stopping-tree-payment\\out\\validation.json",
+        "at": "2026-10-11T22:37:35.146416+00:00"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_ADOPTION_PENDING",
+    "supersedes": null,
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A065",
+      "A087",
+      "A094",
+      "A097"
+    ]
+  },
+  {
+    "claim_id": "A027-CORE-BLOCK-HARDNESS",
+    "version": 1,
+    "exact_statement": "For every Boolean core u with Eu>=0, delta=(1-Eu)/2, v=1-(Eu)^2, p=2^(-r), R0=1-4p*delta+4p^2*delta, and L the entropy of the nonempty conditional core spectrum, B_W(1+A_r(u-1))/p=v*L+4*delta*(1-p)*h2(delta)+(R0/p)*h2(p^2*v/R0). Continuous zero-mass conventions apply. A uniform core-block bound B_W<=K*p*I(u) for all such cores and r>=1 implies full FEI with constant K+2. Conversely FEI with constant C implies this block bound with constant C+5.",
+    "hypotheses": [
+      "Uniform normalized Boolean Fourier spectrum; entropy in bits",
+      "Core mean nonnegative for the quantitative equivalence",
+      "Fresh point-indicator controls; W consists of all core coordinates but is proper in the full cube"
+    ],
+    "statement_sha256": "77678060db6c63d420d4c2df32186612dcb5bfbb334517329f28742cedc814be",
+    "contributors": [
+      "A027"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A027\\runs\\20261011T215911Z-fleet05-A027-block-selection\\ADAPTIVE_BLOCK_SELECTION.tex",
+    "proof_dependencies": [
+      "C006@recovered-BLOCK_RESTRICTION_IDENTITY-sections-1-3",
+      "threshold-paper@context-38pp-Proposition-8.6"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A028",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261011T221633Z-fleet05-A028-stopping-tree-payment\\INDEPENDENT_REVIEW.md",
+        "original_claims_source": "~\\brain_workers\\FEI100_20261011\\agents\\A027\\runs\\20261011T215911Z-fleet05-A027-block-selection\\CLAIMS.json",
+        "original_claims_sha256": "dc4d58d8c1f2e822eef7e492fb9b275c3df5201d2051c7945fcbcf3ead153943",
+        "method": "Separate scalar integer Walsh/prime-log/combinatorial reconstruction plus analytic hereditary/block/limit proofs",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261011T221633Z-fleet05-A028-stopping-tree-payment\\out\\validation.json",
+        "at": "2026-10-11T22:37:35.146416+00:00"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_ADOPTION_PENDING",
+    "supersedes": null,
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A065",
+      "A087",
+      "A094",
+      "A097"
+    ]
+  },
+  {
+    "claim_id": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every finite-dimensional uniform-cube Boolean sign g, r>=1 fresh point-controls, p=2^-r, delta=Pr(g=-1), F=1+A_r(g-1), and the control-first physical stopping tree, the actual magnitude-mismatch/KL bill obeys E sum J <= (3+log2(e)/e) Q and E sum (J+3log2(e)mu) <= kappa Q, where Q=2rp delta and kappa=3+log2(e)(3+1/e)<8. Adding any certified terminal allowance K I(g) gives complete expected path-plus-terminal payment <=max(kappa,K) I(F). Finite fresh point-activation, sign-negation and disjoint-physical-product expressions over FEI-certified terminals preserve this maximum constant independently of depth, control arity, core bias and factor count.",
+    "hypotheses": [
+      "Uniform physical product cube; Boolean sign outputs; bit entropy/KL",
+      "Fresh physical point-indicator controls; products on disjoint physical supports",
+      "J uses magnitude mismatch, including the last-child sign correction",
+      "Every terminal has an explicit FEI certificate; fixed overlap parameters when applicable"
+    ],
+    "statement_sha256": "03adf744715f4bb93c371888d755681c867c554b4ccdd8bb7663ba02dbec2930",
+    "contributors": [
+      "A028"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261011T221633Z-fleet05-A028-stopping-tree-payment\\REPORT.md",
+    "proof_dependencies": [
+      "Recovered actual-child inequality Delta H<=J+3mu/ln2 (campaign plan sharper mismatch/KL paragraph)",
+      "Parseval and exact physical influence decomposition; disjoint Fourier tensorization",
+      "Terminal FEI certificates are hypotheses; recovered threshold Theorems A/C/D for their respective applications"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A029",
+      "A064",
+      "A065",
+      "A087",
+      "A094",
+      "A097",
+      "B20"
+    ]
+  }
+]

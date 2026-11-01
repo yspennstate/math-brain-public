@@ -1,0 +1,171 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "claude-probability-1000-continue-0907",
+  "bundle_slug": "probability-intake-claude-high-dimensional-and-environment-reductions-c003",
+  "entries": [
+    {
+      "key": "wrap",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-clusters-wrap-the-torus-iff-d-above-6-mean-field-depletion-mechanism",
+      "kind": "concept",
+      "title": "Critical percolation clusters on the torus wrap around it exactly when d > 6, which is the mechanism behind mean-field (Erdos-Renyi-like) depletion",
+      "statement": "PRIVATE MECHANISM NOTE, author-recorded. On the torus T_{n,d} with volume V, a critical cluster of size V^{2/3} has intrinsic geometry of a critical tree embedded four-dimensionally, so its Euclidean diameter is of order (V^{2/3})^{1/4} = V^{1/6}, while the torus side is V^{1/d}. Since V^{1/6} > V^{1/d} iff d > 6, above six dimensions the window clusters wrap around the torus many times and see the torus uniformly; this is why the exploration process should have the same global (mass-proportional) depletion as in G(n,p), which is what the multiplicative-coalescent scaling limit (Heydenreich-van der Hofstad Open Problems 13.3 and 13.5) needs. The torus plateau theorem (Hutchcroft-Michta-Slade) is the two-point version of this uniformity; the open step is the exploration-level (higher-point) version. Same reason makes eps >> V^{-1/3} lie above the correlation-length crossover eps >> V^{-2/d} for d > 6 (Open Problem 13.2).",
+      "proof_text": null,
+      "assumptions": [
+        "Bernoulli percolation on the discrete torus, d > 6",
+        "Mean-field cluster geometry (intrinsic diameter m^{1/2}, Euclidean diameter m^{1/4})"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:wrap",
+        "url": "urn:probability-research:20260907:claude-intake:wrap",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "mst",
+      "namespace": "probability.percolation",
+      "logical_name": "torus-mst-diameter-and-limit-reduce-to-supercritical-uniqueness-and-window-geometry",
+      "kind": "concept",
+      "title": "Diameter and scaling limit of the minimal spanning tree on high-dimensional tori reduce to supercritical uniqueness and the geometry of window clusters",
+      "statement": "PRIVATE REDUCTION, author-recorded. Via the Kruskal/invasion coupling the MST on T_{n,d}, d > 6, is governed by the critical window p = p_c(1 + O(V^{-1/3})): the V^{1/3} diameter (Heydenreich-van der Hofstad Open Problem 16.3) follows from (a) a window cluster of size V^{2/3} with intrinsic diameter V^{1/3} existing with positive probability (torus plateau plus the Kozma-Nachmias intrinsic one-arm exponent applied on the torus), (b) subcritical clusters at p_c(1 - eps) having intrinsic diameter O(eps^{-1} log V), summable over the geometric ladder of levels, and (c) uniqueness and concentration of the giant just above the window (Open Problem 13.2), the same three ingredients as in the complete-graph proof of Addario-Berry, Broutin, Goldschmidt and Miermont. The scaling limit (Open Problem 16.4) additionally needs metric-space (Gromov-Hausdorff-Prokhorov) convergence of the window clusters and the product merging rule, both unproved on the torus and both consequences of the wrapping mechanism if it could be made quantitative.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform i.i.d. edge weights on T_{n,d}, d > 6",
+        "Kruskal/invasion coupling between the MST and percolation"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:mst",
+        "url": "urn:probability-research:20260907:claude-intake:mst",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "dual",
+      "namespace": "probability.percolation",
+      "logical_name": "hypercube-duality-principle-reduces-to-sharp-subcritical-cluster-tail",
+      "kind": "concept",
+      "title": "The discrete duality principle on the hypercube reduces to a sharp exponential rate in the subcritical cluster-size tail",
+      "statement": "PRIVATE REDUCTION, author-recorded. Heydenreich-van der Hofstad Open Problem 13.4 asks that the second largest cluster at p_c(1 + eps) on {0,1}^d match, to leading order, the largest cluster at p_c(1 - eps), eps >> 2^{-d/3}. G(n,p) has this by exact symmetry after removing the giant; the hypercube does not, so it must come from tails: the subcritical largest cluster is Theta(eps^{-2} log(eps^3 2^d)) once the tail P(|C| >= k) >= c k^{-1/2} exp(-c' eps^2 k) holds with the SHARP rate in eps^2 k (the upper bound is known, the sharp lower bound is the missing half), and the supercritical second-largest needs the same tail for the clusters after removal of the giant, which is the geometric-depletion question of the exploration process. So the duality principle is equivalent to two tail statements, one subcritical with a sharp rate and one post-giant.",
+      "proof_text": null,
+      "assumptions": [
+        "Bernoulli bond percolation on the hypercube {0,1}^d",
+        "Critical window width 2^{-d/3}"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:dual",
+        "url": "urn:probability-research:20260907:claude-intake:dual",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "rwre",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "rwre-transience-implies-ballistic-reduces-to-regeneration-time-integrability-and-moment-self-improvement",
+      "kind": "concept",
+      "title": "Transience implies ballisticity for uniformly elliptic i.i.d. RWRE (open, d >= 2) is a statement about the first moment of the regeneration time, and the polynomial condition (P)_M is a moment self-improvement",
+      "statement": "PRIVATE REDUCTION, author-recorded. Under (IID)+(UE) transience in direction l gives the Sznitman-Zerner regeneration structure with tau_1 < infinity a.s.; ballisticity is E[tau_1 | D = infinity] < infinity (Drewitz-Ramirez Open Question 2.20). Under (UE) a trap of diameter r holds the walk at most exponentially long in r, so sub-ballistic behaviour needs polynomially rare traps of logarithmic size along the path, which i.i.d. environments do allow; the question is whether the tail P(tau_1 > n) can be as heavy as n^{-1+eps}. Open Question 3.20 (does positive velocity imply (P)_M for M > 15d + 5) is then the question whether a finite first moment of tau_1 self-improves to moments of order about M/d, because (P)_M is equivalent through the slab decomposition to high moments of tau_1. The Guerra-Ramirez theorem (T) <=> (T') (2018) settles Open Question 3.28 but neither of these. Recorded as the moment-self-improvement reformulation.",
+      "proof_text": null,
+      "assumptions": [
+        "Random walk in i.i.d. uniformly elliptic environment on Z^d, d >= 2",
+        "Regeneration structure of Sznitman-Zerner"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:rwre",
+        "url": "urn:probability-research:20260907:claude-intake:rwre",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "band",
+      "namespace": "probability.random-matrices",
+      "logical_name": "one-dimensional-band-matrix-transition-established-2025-status-note",
+      "kind": "concept",
+      "title": "Status note: the one-dimensional random band matrix localisation-delocalisation transition at W = N^{1/2} was established in 2025 (bounded recall, verify before citing)",
+      "statement": "PRIVATE STATUS NOTE from a bounded web search on 2026-09-07, not a re-read of the papers. Bourgade's ICM 2018 conjecture (0.2) for d = 1: bulk eigenvectors of N x N Hermitian band matrices with band width W are localised for W << N^{1/2} and delocalised with GUE statistics for W >> N^{1/2}. Yau and Yin (arXiv 2501.01718, 2025) proved, for W > N^{1/2+eps}, the local semicircle law down to scale N^{-1+eps}, simultaneous delocalisation of all bulk eigenvectors, quantum unique ergodicity and GUE bulk universality; arXiv 2508.05802 (2025) treats the localised side; together with Erdos-Riabov's delocalisation work the d = 1 transition is established. The d = 2 localisation side at fixed W (localisation length exp(W^2)) and the finite W_c in d = 3 remain open as far as the search found. A solver meeting the 1D conjecture should treat it as a theorem to cite, not a target.",
+      "proof_text": null,
+      "assumptions": [
+        "Hermitian random band matrices, d = 1, subgaussian entries",
+        "Statuses from a bounded search; verify against the papers before citing"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:band",
+        "url": "urn:probability-research:20260907:claude-intake:band",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "sfp",
+      "namespace": "probability.percolation",
+      "logical_name": "scale-free-percolation-effective-long-range-exponent-mean-field-prediction",
+      "kind": "concept",
+      "title": "Scale-free percolation: an effective long-range exponent and the predicted mean-field region",
+      "statement": "PRIVATE HEURISTIC, author-recorded. In scale-free percolation with weight tail exponent tau and long-range parameter alpha (connection probability 1 - exp(-lambda W_x W_y |x-y|^{-alpha d})), the annealed two-point connection decays like |x-y|^{-alpha d (tau-1)}, i.e. like long-range percolation with P(x <-> y) ~ |x-y|^{-d-s} for s = d(alpha(tau-1) - 1). Long-range percolation is mean-field for d > 3 min(s, 2) (Heydenreich-van der Hofstad-Sakai), which predicts mean-field critical behaviour for scale-free percolation iff alpha(tau - 1) < 4/3 or d > 6, with tau > 3 (for tau in (2,3) the model percolates instantly). This is a prediction for Heydenreich-van der Hofstad Open Problem 16.8, not a theorem: the quenched weights induce correlations that the annealed long-range comparison ignores.",
+      "proof_text": null,
+      "assumptions": [
+        "Scale-free percolation on Z^d with parameters alpha, tau, lambda",
+        "Long-range percolation upper critical dimension 3 min(s,2)"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:sfp",
+        "url": "urn:probability-research:20260907:claude-intake:sfp",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "wrap",
+      "to_existing_logical": "math:harvest.wikipedia:wiki-percolation-theory",
+      "kind": "depends_on",
+      "rationale": "Critical percolation clusters on tori"
+    },
+    {
+      "from_key": "mst",
+      "to_key": "wrap",
+      "kind": "depends_on",
+      "rationale": "The merging rule and the giant's uniqueness rest on the wrapping mechanism"
+    },
+    {
+      "from_key": "dual",
+      "to_key": "wrap",
+      "kind": "analogous_to",
+      "rationale": "Both are consequences of mean-field depletion in the exploration process"
+    },
+    {
+      "from_key": "rwre",
+      "to_existing_logical": "math:probability.core:borel-cantelli-lemmas",
+      "kind": "semantic_association",
+      "rationale": "Trap-tail arguments for regeneration times are Borel-Cantelli-type estimates"
+    },
+    {
+      "from_key": "band",
+      "to_existing_logical": "math:probability.random-matrices:empirical-spectral-distribution-definition",
+      "kind": "depends_on",
+      "rationale": "Local semicircle law is the ESD at microscopic scale"
+    },
+    {
+      "from_key": "sfp",
+      "to_existing_logical": "math:harvest.wikipedia:wiki-percolation-theory",
+      "kind": "depends_on",
+      "rationale": "Long-range and inhomogeneous percolation"
+    }
+  ]
+}

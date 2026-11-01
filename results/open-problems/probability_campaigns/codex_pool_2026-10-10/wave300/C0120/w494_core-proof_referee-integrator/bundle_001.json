@@ -1,0 +1,51 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w494",
+  "bundle_slug": "c0120-first-chaos-floor-w494-001",
+  "entries": [
+    {
+      "key": "model",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-chatterjee-gaussian-ground-state-free-endpoint-model",
+      "kind": "definition",
+      "title": "Gaussian directed ground-state path model in C0120",
+      "statement": "For n>=1, put iid standard Gaussian weights g_v on vertices v of the nonnegative integer quadrant. Let P_n be all paths of n vertices that begin at (0,0) and move one unit right or up at each step, with no fixed endpoint. Define M_n=max_{p in P_n} sum_{v in p}g_v. This is the zero-temperature 1+1-dimensional model of Chatterjee's Section 8, Theorem 8.1; that theorem bounds Var(M_n) by C n/log n for n>=2.",
+      "proof_text": null,
+      "assumptions": ["n>=1", "iid N(0,1) site weights", "path contains the origin and n-1 moves"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:0810.4221v2",
+        "url": "https://arxiv.org/pdf/0810.4221v2",
+        "revision": "as-read-2026-10-10-section-8",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "The (1+1)-dimensional directed polymer model in Gaussian environment"
+      }
+    },
+    {
+      "key": "floor",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-first-gaussian-chaos-overlap-floor-draft",
+      "kind": "concept",
+      "title": "First Gaussian chaos and persistent polymer overlap (draft)",
+      "statement": "[DRAFT: author proof; independent w497 review pending.] In the Gaussian directed ground-state model with n-vertex free-endpoint up/right paths, let p_v=P(v belongs to the unique maximizing path), let M_n be its maximal path sum, and let D_n(1) be the squared L2 norm of the first-degree Gaussian Hermite projection of M_n-E M_n. Then D_n(1)=sum_v p_v^2>=H_n=sum_{j=1}^n 1/j. For the Ornstein-Uhlenbeck coupling g^t=e^{-t}g+sqrt(1-e^{-2t})g' with independent g', the expected overlap of maximizing paths tends to D_n(1) as t tends to infinity. This lower floor does not give the desired power upper bound on Var(M_n).",
+      "proof_text": null,
+      "assumptions": ["exact model as defined by this bundle's model entry", "Gaussian integration by parts for Lipschitz maxima", "normalized Gaussian Hermite decomposition", "t>=0"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-c0120-w494-20261010",
+        "url": "owner-own-work://C0120/w494/ATTEMPT.md",
+        "revision": "author-written-20261010-v1-pending-w497",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "floor",
+      "to_key": "model",
+      "kind": "depends_on",
+      "rationale": "The p_v layer normalization and unique maximizing path use the exact Gaussian quadrant/free-endpoint model, including the origin."
+    }
+  ]
+}

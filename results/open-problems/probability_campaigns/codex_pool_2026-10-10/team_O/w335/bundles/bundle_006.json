@@ -1,0 +1,43 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w335",
+  "bundle_slug": "w335-c0014-20261010",
+  "entries": [
+    {
+      "key": "c0014-wiring-direction",
+      "namespace": "probability.electrical-networks",
+      "logical_name": "wired-layer-resistance-lower-comparison-and-interface-current-obstruction",
+      "kind": "lemma",
+      "title": "Wired interfaces reverse the unsupported layer upper comparison [draft; pending w347]",
+      "statement": "In a finite resistor network whose contracted intermediate interfaces yield a series chain of independently wired layer networks, the sum of those wired layer resistances is at most the original effective resistance. Rayleigh monotonicity alone cannot justify the opposite upper bound. On s-a-t and s-b-t with resistances (1,M) and (M,1), respectively, the original resistance is (M+1)/2 and the wired layer sum is 2M/(M+1). Their ratio (M+1)^2/(4M) is unbounded. To upper-bound the original resistance using layer flows, the interface current distributions must match. This does not identify a DGFF limiting law or refute an upper bound constructed using matched flows.",
+      "proof_text": "For a finite positive-resistance network separated into successive layers by interfaces, identify all vertices in each intermediate interface and replace the boundary terminal sets by wired terminals. If the resulting quotient is a series chain of wired layer networks, its total effective resistance is the sum of their wired effective resistances. Rayleigh monotonicity gives\n\n    sum of wired layer resistances <= original effective resistance.\n\nIdentification introduces extra zero-cost connections and decreases effective resistance. It does not, by itself, give the reverse upper bound. For an upper bound by Thomson's principle, unit flows in consecutive layers must have matching distributions on the intermediate interface.\n\nAn explicit counterexample has vertices s,a,b,t and resistances r(s,a)=r(b,t)=1, r(a,t)=r(s,b)=M>0. Before wiring a to b there are two parallel paths, each of resistance M+1, so R_original=(M+1)/2. Wiring a and b gives two successive parallel pairs with resistance M/(M+1), so their sum is R_wired=2M/(M+1). The ratio is (M+1)^2/(4M), unbounded as M grows. At M=100, R_original=50.5 and R_wired=200/101, a factor 25.5025 smaller.\n\nThe independently optimal wired-layer unit flows have incompatible interface currents. In the first layer the low-resistance edge into a carries M/(M+1); in the second layer the edge leaving a carries 1/(M+1). Their mismatch is (M-1)/(M+1). Joining these minimisers as a flow in the original graph violates Kirchhoff's law unless M=1. Wiring supplies the missing current transfer artificially.",
+      "assumptions": [
+        "Finite positive-resistance network",
+        "Wired layer terminal minima",
+        "Contracted quotient is a series chain"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w335:c0014-wiring-direction",
+        "url": "file:///~/brain_workers/w335/C0014_proof.md",
+        "revision": "author-checked-20261010-pending-independent-w347",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "c0014-wiring-direction",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0014-limit-of-the-normalised-log-effective-resistance-of-the-dgff-electric",
+      "kind": "specializes",
+      "rationale": "New card: \"This does not identify a DGFF limiting law\"; existing card: \"For admissible approximations D_N of a domain D and the network with resistances (13.13) built from the DGFF, characterise the limit distribution of x -> (log N)^{-1/2} log R_eff(floor(xN), D_N^c) as N -> infinity\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    },
+    {
+      "from_key": "c0014-wiring-direction",
+      "to_existing_logical": "math:probability.gaussian:attempt-c0014-limit-of-the-normalised-log-effective-resistance-of-the-dgff-electric",
+      "kind": "refutes",
+      "rationale": "New card: \"Rayleigh monotonicity alone cannot justify the opposite upper bound\"; existing card: \"Rayleigh monotonicity gives R_eff(x, D_N^c) <= sum over dyadic annuli around x of the resistance across the annulus\"."
+    }
+  ]
+}

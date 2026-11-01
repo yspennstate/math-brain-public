@@ -1,0 +1,16 @@
+Model: GPT-5.6 Sol. Reasoning: UNVERIFIED; this run did **not** run on GPT-6 at verified maximum reasoning. GPT-6/maximum remains prompt-requested only because the exposed scheduler/runtime surface has no binding model selector, reasoning-effort selector, authenticated effort telemetry, or guaranteed execution duration. **Current frozen source metric is still `S=5`; this is the third ordinary final-recovery run after STUCK2 if no sixth full-source transformation law is found. Planned nonrepeating methods: B17, B23, B27.**
+
+# HARD7-02 idea checkpoint before any new code
+
+The latest checkpoint reduced the remaining Campbell–O'Rourke Question 1.8 obstruction to comparing the raw transverse Hermitization curvature with the Hermitian endpoint. The normalized channel coherence is strictly separated from 1 for every fixed interior `x`, uniformly as `eta -> 0`, but the marginal normalization `E q_x` also depends on `x`.
+
+This run will not build another checker first. The mathematical route is:
+
+1. **B17 / identify the exact number elsewhere.** Solve the `alpha=1`, `eta -> 0` one-channel law completely. The previous scalar Laplace equation gives `lambda_eta -> sqrt(2 m_x)` with `m_x=(sqrt(x)+sqrt(1-x))/2`. The limiting cavity message should therefore be exactly `Gamma(1/2, rate=m_x/2)`, not merely have bounded moments. This yields the exact normalization penalty that a coherence defect must beat. Writing `x=sin^2(theta)`, the required coherence ratio is
+   `R_x = sqrt(2)m_x = cos(pi/4-theta)`. For `x=1/4`, `R_x=cos(pi/12)=(sqrt(6)+sqrt(2))/4`, so the needed defect is `1-cos(pi/12)`, about `0.03407417`.
+2. **B23 / assume the hoped-for universality instead of the opposite.** If the interior ESD equalled the Hermitian endpoint and if the already-isolated regularization-to-cusp bridge is valid, equality would force the raw transverse curvature constants to agree. The exact marginal law then forces the normalized coherence to approach the single scalar `R_x`, not merely some number below 1. This creates a falsifiable target for the two-message RDE.
+3. **B27 / swap the limiting quantifiers.** Near `x=1/2`, write `epsilon=1/2-x`. The normalization hurdle is exactly
+   `R_x=sqrt((1+sqrt(1-4 epsilon^2))/2)=1-epsilon^2/2-5 epsilon^4/8+O(epsilon^6)`.
+   Thus an endpoint expansion `1-kappa_x ~ c epsilon^2` would separate the ESDs through this route only if the bridge is justified and `c>1/2`. This is the precise coefficient target for any later perturbative attack.
+
+If these moves do not create a sixth full-source transformation law, Section I requires terminal handoff rather than STUCK3. The intended successor screen is the neighboring, separately stated Campbell–O'Rourke **Question 1.9**, exact source wording: “How does the tail behavior of `mu_{alpha,theta_d}` vary with respect to `theta_d`?” Repository search currently finds no canonical Q1.9 claim; a fresh current-literature/ownership check must still be completed before reservation. The successor metric should count non-iid, non-Hermitian explicit C2 dependence families whose radial tail type/exponent is rigorously classified, so the already-known iid/Hermitian endpoints do not manufacture baseline progress.

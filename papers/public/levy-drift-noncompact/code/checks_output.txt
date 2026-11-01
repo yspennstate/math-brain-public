@@ -1,0 +1,48 @@
+PASS C1 energy identity, trial 0 | E=1.105489e-03, 1/(2 Ds)=1.105489e-03
+PASS C1 energy identity, trial 1 | E=1.374941e-02, 1/(2 Ds)=1.374941e-02
+PASS C1 energy identity, trial 2 | E=3.486179e-02, 1/(2 Ds)=3.486179e-02
+PASS C1 energy identity, trial 3 | E=1.343363e-03, 1/(2 Ds)=1.343363e-03
+PASS C1 energy identity, trial 4 | E=1.884735e-03, 1/(2 Ds)=1.884735e-03
+     C2 delta=2.0: Dirichlet bottom on [x,2x], x=10,40,160: 58.30704, 821.28170, 12854.06446
+     C2 delta=1.0: Dirichlet bottom on [x,2x], x=10,40,160: 0.17435, 0.12808, 0.12519
+     C2 delta=0.5: Dirichlet bottom on [x,2x], x=10,40,160: 0.05257, 0.00375, 0.00034
+PASS C2 delta=2 grows
+PASS C2 delta=1 near 1/8
+PASS C2 delta=1/2 decreases to 0
+     C3 w1 downward jump, delta=2, tau=6, h=0.0833, m=4.0: lambda_D=1.271e+00, Rayleigh=2.113e+00
+PASS C3 w1 downward jump m=4.0: lambda_D <= Rayleigh
+     C3 w1 downward jump, delta=2, tau=6, h=0.0833, m=8.0: lambda_D=2.431e-02, Rayleigh=5.247e-02
+PASS C3 w1 downward jump m=8.0: lambda_D <= Rayleigh
+PASS C3 w1 downward jump m=8.0: lambda_D drops by at least e^-2 per +4 in m | ratio 1.913e-02
+     C3 w1 downward jump, delta=2, tau=6, h=0.0833, m=12.0: lambda_D=6.324e-04, Rayleigh=1.450e-02
+PASS C3 w1 downward jump m=12.0: lambda_D <= Rayleigh
+PASS C3 w1 downward jump m=12.0: lambda_D drops by at least e^-2 per +4 in m | ratio 2.602e-02
+     C3 w1 downward jump: other-sign jump m=12 lambda_D=1.862e+01; no jump lambda_D=1.773e+01
+PASS C3 w1 downward jump: a jump of the other sign does not lower the bottom
+     C4 w2 upward jump, delta=2, tau=6, h=0.0833, m=4.0: lambda_D=1.272e+00, Rayleigh=2.077e+00
+PASS C4 w2 upward jump m=4.0: lambda_D <= Rayleigh
+     C4 w2 upward jump, delta=2, tau=6, h=0.0833, m=8.0: lambda_D=2.513e-02, Rayleigh=6.370e-02
+PASS C4 w2 upward jump m=8.0: lambda_D <= Rayleigh
+PASS C4 w2 upward jump m=8.0: lambda_D drops by at least e^-2 per +4 in m | ratio 1.976e-02
+     C4 w2 upward jump, delta=2, tau=6, h=0.0833, m=12.0: lambda_D=1.449e-03, Rayleigh=2.660e-02
+PASS C4 w2 upward jump m=12.0: lambda_D <= Rayleigh
+PASS C4 w2 upward jump m=12.0: lambda_D drops by at least e^-2 per +4 in m | ratio 5.767e-02
+     C4 w2 upward jump: other-sign jump m=12 lambda_D=2.051e+01; no jump lambda_D=1.873e+01
+PASS C4 w2 upward jump: a jump of the other sign does not lower the bottom
+     C5 alpha=0.5 n= 2 tau=6.436e+00 jump=1.314e+01 h=6.04e-03 log10 first term=-1.3
+     C5 alpha=0.5 n= 5 tau=4.687e+01 jump=4.945e+01 h=1.14e-04 log10 first term=-13.6
+     C5 alpha=0.5 n= 8 tau=2.758e+02 jump=5.246e+06 h=3.29e-06 log10 first term=-2278243.6
+     C5 alpha=0.5 n=11 tau=2.965e+03 jump=3.751e+04 h=2.84e-08 log10 first term=-16273.9
+     C5 alpha=0.5 n=14 tau=2.161e+04 jump=4.448e+07 h=5.35e-10 log10 first term=-19318892.9
+     C5 alpha=0.5 n=17 tau=1.993e+05 jump=1.255e+09 h=6.30e-12 log10 first term=-544988465.0
+     C5 alpha=0.5 n=20 tau=1.233e+06 jump=4.468e+11 h=1.64e-13 log10 first term=-194050359223.9
+PASS C5 alpha=0.5: first term below 1e-3 in the last three blocks
+     C5 alpha=1.5 n= 2 tau=6.224e+00 jump=1.723e+00 h=6.45e-03 log10 first term=3.6
+     C5 alpha=1.5 n= 5 tau=6.275e+01 jump=1.180e+01 h=6.35e-05 log10 first term=3.3
+     C5 alpha=1.5 n= 8 tau=4.222e+02 jump=2.098e+01 h=1.40e-06 log10 first term=2.6
+     C5 alpha=1.5 n=11 tau=3.160e+03 jump=1.039e+02 h=2.50e-08 log10 first term=-29.9
+     C5 alpha=1.5 n=14 tau=2.984e+04 jump=1.431e+02 h=2.81e-10 log10 first term=-43.0
+     C5 alpha=1.5 n=17 tau=1.583e+05 jump=8.883e+02 h=9.98e-12 log10 first term=-364.1
+     C5 alpha=1.5 n=20 tau=1.859e+06 jump=8.678e+03 h=7.23e-14 log10 first term=-3742.7
+PASS C5 alpha=1.5: first term below 1e-3 in the last three blocks
+ALL PASS

@@ -1,0 +1,14 @@
+{
+  "helper_version": "check.py v2-stage2",
+  "family": "b=z times selector between 4-bit quadratic bent b4 and its point-zero flip; tensor copies activated on one control point",
+  "pilot": {"t": 1, "k": 1, "case_count": 1, "runtime_cap_seconds": 60},
+  "validation_domain": {"t_k_pairs": [[1,1],[1,2],[1,3],[2,1]], "K": 4, "seed_restriction_split_cases": 216, "remainder_q": "2^-j, j=1..12"},
+  "case_count": "4 family functions x 2 full tree orders, 216 seed restriction splits, 12 remainder certificates",
+  "symmetry": "none for family and restrictions; cache identical rational erasure expressions only",
+  "arithmetic": "integer Walsh and edge counts; Fraction prime-log vectors; rational atanh intervals with signed corner division",
+  "memory_estimate_MB": 80,
+  "max_dimension": 13,
+  "maximum_runtime_seconds": 60,
+  "orders": {"control_first": "controls; all tensor selectors; all bent data; all balancing bits", "data_first": "all tensor selectors; all bent data; all balancing bits; controls"},
+  "analytic_extension": "m=4 fixed, arbitrary t>=1,k>=1; no automatic dimension escalation"
+}

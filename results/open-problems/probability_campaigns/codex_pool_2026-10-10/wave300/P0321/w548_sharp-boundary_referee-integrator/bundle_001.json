@@ -1,0 +1,33 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w548",
+  "bundle_slug": "p0321-source-scope-001",
+  "entries": [
+    {
+      "key": "p0321-mw-scope",
+      "namespace": "probability.riesz_gases",
+      "logical_name": "two-dimensional-riesz-hexatic-source-and-mermin-wagner-scope",
+      "kind": "concept",
+      "title": "P0321 source boundary: hexatic prediction and Mermin-Wagner scope",
+      "statement": "Lewin's 2022 survey, Section VI.B, describes the predicted two-step melting of two-dimensional Riesz gases: an intermediate hexatic phase has fast positional correlations and slow sixfold orientational correlations. This is a phase-diagram prediction with numerical evidence, not a complete quantified existence theorem in that passage. The survey's Theorem 47 gives translation invariance of equilibrium states for d=1 or 2 under its hypothesis s>d; in d=2 it does not cover the long-range examples s=0 and s=1 later discussed numerically. Specify the exponent, ensemble, thermodynamic limit, phase observable and temperature interval before treating P0321 as a theorem statement.",
+      "proof_text": null,
+      "assumptions": ["This is a source-scoping and research-status concept, not a proof of a Riesz hexatic phase.", "Current openness beyond the dated survey is UNKNOWN."],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:2202.09240",
+        "url": "https://arxiv.org/pdf/2202.09240",
+        "revision": "as-read-2026-10-10; PDF pp.60,65-66",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "For d in {1, 2} and s > d"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0321-mw-scope",
+      "to_existing_logical": "math:probability.core:open-problem-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases",
+      "kind": "semantic_association",
+      "rationale": "From entry: 'under its hypothesis s>d'; to existing card: 'Prove or refute the intermediate hexatic phase predicted in two-dimensional Riesz-gas phase diagrams.' The source-scope note governs the open-problem card's citation; no solution is asserted."
+    }
+  ]
+}

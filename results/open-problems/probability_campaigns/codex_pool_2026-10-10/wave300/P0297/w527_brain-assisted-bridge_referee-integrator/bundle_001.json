@@ -1,0 +1,38 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w527",
+  "bundle_slug": "p0297-referee-obstructions-001",
+  "entries": [
+    {
+      "key": "invalid-2q-over-xi",
+      "namespace": "probability.lqg.metric",
+      "logical_name": "refuted-dimension-equals-two-q-over-xi",
+      "kind": "concept",
+      "title": "Refuted P0297 route: d_gamma = 2Q/xi",
+      "statement": "The intake attempt D0049-A001 wrote d_gamma=2Q/xi for Q=2/gamma+gamma/2. This is false at gamma=sqrt(8/3): the known d_gamma=4 gives xi=gamma/d_gamma=1/sqrt(6) and Q=5/sqrt(6), so 2Q/xi=10. The correct parameter identity xi=gamma/d_gamma does not itself evaluate d_gamma. Do not use the refuted equation to infer an LQG dimension.",
+      "proof_text": null,
+      "assumptions": [
+        "gamma=sqrt(8/3)",
+        "known d_gamma=4",
+        "Q=2/gamma+gamma/2",
+        "xi=gamma/d_gamma"
+      ],
+      "domain": "probability; Liouville quantum gravity",
+      "source": {
+        "source_id": "owner-own-work:prob1000-D0049-A001-correction-w527-20261010",
+        "url": "~/<private-repo>/06_math_research/probability_1000_intake_D_20260908/attempts.jsonl",
+        "revision": "2026-10-10; correction checked against arXiv:1905.00383v3 equation (1.5)",
+        "license": "owner-own-work (correction of campaign attempt)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "invalid-2q-over-xi",
+      "to_existing_logical": "math:probability.core:open-problem-p0297-exact-hausdorff-dimension-of-liouville-quantum-gravity",
+      "kind": "semantic_association",
+      "rationale": "The corrected intake attempt concerns the same exact dimension target and prevents reuse of a numerically false parameter relation. Both statements are quoted in w527/EDGE_EVIDENCE.jsonl."
+    }
+  ]
+}

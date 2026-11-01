@@ -1,0 +1,216 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w342",
+  "bundle_slug": "w342-p0289-partial-results",
+  "entries": [
+    {
+      "key": "p0289-w342-result-scope",
+      "namespace": "probability.research.attempts",
+      "logical_name": "p0289-w342-result-scope",
+      "kind": "concept",
+      "title": "Result scope and audit status for P0289",
+      "statement": "The cached Ross problem asks for universal decrease of stationary Cox/GI/1 mean workload with modulation speed and a necessary-and-sufficient criterion. The second-order coefficient sign criterion and prior-source scope correction have w346 KEEP on rows S1.w342.001 and .002. The bounded unit-service expansion and cyclic counterexample still await full proof review and address universal monotonicity only. The complete criterion remains unresolved here. Novelty and October 2026 literature status are unverified.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0289:p0289-w342-result-scope",
+        "url": "file:///~/brain_workers/w342/proofs/P0289.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "unit-service-workload-minus-parallel-residual-monotonicity",
+      "namespace": "probability.queueing",
+      "logical_name": "unit-service-workload-minus-parallel-residual-monotonicity",
+      "kind": "lemma",
+      "title": "Monotonicity of workload minus parallel residual work",
+      "statement": "For any locally finite set A of nonnegative arrival ages with finite unit-service workload, let V(A)=sup_{u>=0}(#{a in A:a<=u}-u)_+ and T(A)=sum_{a in A}(1-a)_+. Then V(A)>=T(A), and V(A)-T(A) does not decrease when ages are added, provided both compared workloads are finite.",
+      "proof_text": "# P0289: independent light-traffic proof and monotonicity counterexample\n\nStatus: **expansion and counterexample proof awaiting full blind audit**. The separate second-order sign criterion and prior-source scope correction have w346 KEEP on rows S1.w342.001 and .002; those verdicts do not certify the full counterexample. This continues the earlier cyclic-environment construction and addresses only universal monotonicity. A general necessary-and-sufficient workload-ordering criterion remains unresolved. No claim of novelty or literature priority is made.\n\nSources: `ross_second_conjecture_quantitative_half_closed_2026_09_08.md`; H-20260912 `lane_Q1/STATUS.md` and `p0289_check.py`. The primary problem is attributed there to Leskela, *Ross's second conjecture and supermodular stochastic ordering*, Queueing Systems 100 (2022), 213-215, Problem 1. Primary cached statement still to be checked.\n\n## Uniform expansion, with both arrival marginals specified\n\nLet M>0 be finite, eps>=0, and F be a stationary measurable nonnegative process with F <= M. Conditional on F, arrivals are a Poisson process with intensity eps F(ct), for c>0. All jobs require one unit of service and the server works at rate one. Assume q=eps M<1. Let a=E F(0).\n\nTake a Poisson random measure on R x [0,q] with intensity dt dz, independent of F. Keep the point (t,z) in the Cox process exactly when z <= eps F(ct). Conditional on F this is a Poisson process with the required intensity; retaining all points gives a homogeneous Poisson process of rate q. These are the two required marginals.\n\nFor an arrival configuration with ages A at time zero, write\n\n    V(A)=sup_{u>=0} (#{a in A: a<=u}-u)_+,\n    T(A)=sum_{a in A} (1-a)_+,\n    D(A)=V(A)-T(A).\n\nEndpoint choices do not affect these values at a deterministic time almost surely. V is the stationary single-server workload, and T is the total residual work if every job had its own rate-one server.\n\n**Configuration lemma.** D is nonnegative and nondecreasing when arrivals are added. To see nonnegativity, let 0<=a_1<=...<=a_k<1 be all recent ages. Then V>=k-a_k>=k-sum_i a_i=T. If k=0, T=0. To prove monotonicity, adding an age a>=1 leaves T unchanged and cannot lower V. If 0<=a<1, it is enough to prove V_new>=V_old+1-a. For any workload candidate b>=a, the arrival contributes one, so the new value is at least the old candidate plus one. For any b<a, the candidate at a in the augmented configuration is at least N_old(b)+1-a=(N_old(b)-b)+(1-a)+b. If V_old=0, the candidate at a is at least 1-a. Taking the supremum proves the desired inequality. Apply the finite argument on each bounded past interval and pass to increasing intervals. D therefore has the same monotonicity for the stable stationary configurations.\n\nThe dominating homogeneous workload V_q has finite moments of all orders. For completeness, choose theta>0 with q(e^theta-1)<theta, possible since q<1. For integer n, an exceedance of N(-u,0]-u over x for some u in [n,n+1] implies N(-(n+1),0]-n>x. Its probability is at most exp(-theta x+q(e^theta-1)) exp(-n[theta-q(e^theta-1)]). Summing over n gives an exponential tail. V<=V_q, and T has finite moments as it is bounded by the recent Poisson count.\n\nStationary square-workload balance is now integrable: the deterministic drift is -2V, and a unit-service arrival adds 2V+1. Conditioning the Cox compensator on F and the past gives\n\n    E V = eps a/2 + eps E[F(0)V(0)].\n\nConditional Campbell's formula gives\n\n    E[F(0)T(0)] = eps integral_0^1 (1-u) E[F(0)F(-cu)] du.\n\nFor homogeneous rate q, the same square balance gives E V_q=q/[2(1-q)], while Campbell gives E T_q=q/2. Thus E D_q=q^2/[2(1-q)]. The configuration lemma gives 0<=D<=D_q under the stated thinning coupling. Combining these facts yields, uniformly for every c>0,\n\n    E V_c = eps a/2 + eps^2 integral_0^1 (1-u) E[F(0)F(-cu)] du + R_c,\n    0 <= R_c=eps E[F(0)D_c] <= eps^3 M^3/[2(1-eps M)].\n\nThis proves, rather than assumes, the earlier packet's uniform remainder.\n\n## Explicit increase under faster modulation\n\nLet m=1024, theta=2pi/m, and let X_t be a stationary continuous-time Markov chain on Z/mZ which jumps only clockwise, at rate r=1/sin(theta). Set F(t)=2+cos(theta X_t). The uniform initial law is invariant; 1<=F<=3 and E F=2. The character eigenvalue r(e^{i theta}-1) has real part -delta and imaginary part 1, where delta=tan(pi/m). Orthogonality under the uniform law gives\n\n    E[F(0)F(-s)] = 4+(1/2)e^{-delta s}cos(s).\n\nPut J_delta(c)=integral_0^1 (1-u)e^{-delta cu}cos(cu)du. The proved expansion is\n\n    E V_c=eps+2eps^2+(eps^2/2)J_delta(c)+R_c.\n\nFor J_0(c)=(1-cos c)/c^2, the inequality 1-e^{-x}<=x gives |J_delta(c)-J_0(c)|<=delta c/6. Also delta<pi/512: sin x<=x and cos x>=1/sqrt(2) for 0<=x<=pi/4 imply tan x<=sqrt(2)x<2x. With c_1=2pi and c_2=3pi, and the elementary bound pi^2<10,\n\n    J_delta(c_2)-J_delta(c_1)\n      >= 2/(9pi^2)-5delta pi/6\n      > 1/45-25/1536 = 137/23040.\n\nTake eps=1/10000, M=3. Since R_{c_2}>=0 and R_{c_1}<=27eps^3/[2(1-3eps)],\n\n    (E V_{c_2}-E V_{c_1})/eps^2\n      > 137/46080 - 27/19994\n      > 137/46080 - 1/700\n      = 2491/1612800 > 0.\n\nAll queues are stable. Faster modulation strictly raises the mean stationary workload for this construction, conditional on the independent auditor accepting the proof. This is a counterexample to the universal monotonicity clause, not a solution of the entire two-part problem.\n\n## Exact sign test for the second-order coefficient\n\nFor continuous R on [0,infinity), Psi(c)=integral_0^1 (1-u)R(cu)du satisfies Psi'(c)=c^{-3}integral_0^c (2v-c)R(v)dv. Substitute v=cu and differentiate c^{-2}integral_0^c(c-v)R(v)dv. Psi is nonincreasing iff the displayed integral is nonpositive for all c>0. This says nothing by itself about the full workload outside light traffic.\n\nChecks to run: enumerate arrival configurations and additions to test the configuration lemma; calculate J from an independent closed expression and numerical quadrature; check exact rational margin arithmetic. Such checks support the written proof and do not replace it.\n",
+      "assumptions": [
+        "Nonnegative arrival ages",
+        "Unit service and rate-one server",
+        "Finite compared workloads"
+      ],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0289:unit-service-workload-minus-parallel-residual-monotonicity",
+        "url": "file:///~/brain_workers/w342/proofs/P0289.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bounded-cox-unit-service-uniform-light-traffic-expansion",
+      "namespace": "probability.queueing",
+      "logical_name": "bounded-cox-unit-service-uniform-light-traffic-expansion",
+      "kind": "lemma",
+      "title": "Uniform light-traffic expansion for bounded Cox intensity",
+      "statement": "Let M>0 be finite, eps>=0, and F be stationary, measurable and bounded between 0 and M, with a=E F(0), eps M<1 and c>0. Conditional on F, take Poisson arrivals of intensity eps F(ct), unit service and a rate-one server. The stationary workload satisfies E V_c=eps a/2+eps^2 integral_0^1(1-u)E[F(0)F(-cu)]du+R_c, uniformly in c, where 0<=R_c<=eps^3 M^3/[2(1-eps M)].",
+      "proof_text": "# P0289: independent light-traffic proof and monotonicity counterexample\n\nStatus: **expansion and counterexample proof awaiting full blind audit**. The separate second-order sign criterion and prior-source scope correction have w346 KEEP on rows S1.w342.001 and .002; those verdicts do not certify the full counterexample. This continues the earlier cyclic-environment construction and addresses only universal monotonicity. A general necessary-and-sufficient workload-ordering criterion remains unresolved. No claim of novelty or literature priority is made.\n\nSources: `ross_second_conjecture_quantitative_half_closed_2026_09_08.md`; H-20260912 `lane_Q1/STATUS.md` and `p0289_check.py`. The primary problem is attributed there to Leskela, *Ross's second conjecture and supermodular stochastic ordering*, Queueing Systems 100 (2022), 213-215, Problem 1. Primary cached statement still to be checked.\n\n## Uniform expansion, with both arrival marginals specified\n\nLet M>0 be finite, eps>=0, and F be a stationary measurable nonnegative process with F <= M. Conditional on F, arrivals are a Poisson process with intensity eps F(ct), for c>0. All jobs require one unit of service and the server works at rate one. Assume q=eps M<1. Let a=E F(0).\n\nTake a Poisson random measure on R x [0,q] with intensity dt dz, independent of F. Keep the point (t,z) in the Cox process exactly when z <= eps F(ct). Conditional on F this is a Poisson process with the required intensity; retaining all points gives a homogeneous Poisson process of rate q. These are the two required marginals.\n\nFor an arrival configuration with ages A at time zero, write\n\n    V(A)=sup_{u>=0} (#{a in A: a<=u}-u)_+,\n    T(A)=sum_{a in A} (1-a)_+,\n    D(A)=V(A)-T(A).\n\nEndpoint choices do not affect these values at a deterministic time almost surely. V is the stationary single-server workload, and T is the total residual work if every job had its own rate-one server.\n\n**Configuration lemma.** D is nonnegative and nondecreasing when arrivals are added. To see nonnegativity, let 0<=a_1<=...<=a_k<1 be all recent ages. Then V>=k-a_k>=k-sum_i a_i=T. If k=0, T=0. To prove monotonicity, adding an age a>=1 leaves T unchanged and cannot lower V. If 0<=a<1, it is enough to prove V_new>=V_old+1-a. For any workload candidate b>=a, the arrival contributes one, so the new value is at least the old candidate plus one. For any b<a, the candidate at a in the augmented configuration is at least N_old(b)+1-a=(N_old(b)-b)+(1-a)+b. If V_old=0, the candidate at a is at least 1-a. Taking the supremum proves the desired inequality. Apply the finite argument on each bounded past interval and pass to increasing intervals. D therefore has the same monotonicity for the stable stationary configurations.\n\nThe dominating homogeneous workload V_q has finite moments of all orders. For completeness, choose theta>0 with q(e^theta-1)<theta, possible since q<1. For integer n, an exceedance of N(-u,0]-u over x for some u in [n,n+1] implies N(-(n+1),0]-n>x. Its probability is at most exp(-theta x+q(e^theta-1)) exp(-n[theta-q(e^theta-1)]). Summing over n gives an exponential tail. V<=V_q, and T has finite moments as it is bounded by the recent Poisson count.\n\nStationary square-workload balance is now integrable: the deterministic drift is -2V, and a unit-service arrival adds 2V+1. Conditioning the Cox compensator on F and the past gives\n\n    E V = eps a/2 + eps E[F(0)V(0)].\n\nConditional Campbell's formula gives\n\n    E[F(0)T(0)] = eps integral_0^1 (1-u) E[F(0)F(-cu)] du.\n\nFor homogeneous rate q, the same square balance gives E V_q=q/[2(1-q)], while Campbell gives E T_q=q/2. Thus E D_q=q^2/[2(1-q)]. The configuration lemma gives 0<=D<=D_q under the stated thinning coupling. Combining these facts yields, uniformly for every c>0,\n\n    E V_c = eps a/2 + eps^2 integral_0^1 (1-u) E[F(0)F(-cu)] du + R_c,\n    0 <= R_c=eps E[F(0)D_c] <= eps^3 M^3/[2(1-eps M)].\n\nThis proves, rather than assumes, the earlier packet's uniform remainder.\n\n## Explicit increase under faster modulation\n\nLet m=1024, theta=2pi/m, and let X_t be a stationary continuous-time Markov chain on Z/mZ which jumps only clockwise, at rate r=1/sin(theta). Set F(t)=2+cos(theta X_t). The uniform initial law is invariant; 1<=F<=3 and E F=2. The character eigenvalue r(e^{i theta}-1) has real part -delta and imaginary part 1, where delta=tan(pi/m). Orthogonality under the uniform law gives\n\n    E[F(0)F(-s)] = 4+(1/2)e^{-delta s}cos(s).\n\nPut J_delta(c)=integral_0^1 (1-u)e^{-delta cu}cos(cu)du. The proved expansion is\n\n    E V_c=eps+2eps^2+(eps^2/2)J_delta(c)+R_c.\n\nFor J_0(c)=(1-cos c)/c^2, the inequality 1-e^{-x}<=x gives |J_delta(c)-J_0(c)|<=delta c/6. Also delta<pi/512: sin x<=x and cos x>=1/sqrt(2) for 0<=x<=pi/4 imply tan x<=sqrt(2)x<2x. With c_1=2pi and c_2=3pi, and the elementary bound pi^2<10,\n\n    J_delta(c_2)-J_delta(c_1)\n      >= 2/(9pi^2)-5delta pi/6\n      > 1/45-25/1536 = 137/23040.\n\nTake eps=1/10000, M=3. Since R_{c_2}>=0 and R_{c_1}<=27eps^3/[2(1-3eps)],\n\n    (E V_{c_2}-E V_{c_1})/eps^2\n      > 137/46080 - 27/19994\n      > 137/46080 - 1/700\n      = 2491/1612800 > 0.\n\nAll queues are stable. Faster modulation strictly raises the mean stationary workload for this construction, conditional on the independent auditor accepting the proof. This is a counterexample to the universal monotonicity clause, not a solution of the entire two-part problem.\n\n## Exact sign test for the second-order coefficient\n\nFor continuous R on [0,infinity), Psi(c)=integral_0^1 (1-u)R(cu)du satisfies Psi'(c)=c^{-3}integral_0^c (2v-c)R(v)dv. Substitute v=cu and differentiate c^{-2}integral_0^c(c-v)R(v)dv. Psi is nonincreasing iff the displayed integral is nonpositive for all c>0. This says nothing by itself about the full workload outside light traffic.\n\nChecks to run: enumerate arrival configurations and additions to test the configuration lemma; calculate J from an independent closed expression and numerical quadrature; check exact rational margin arithmetic. Such checks support the written proof and do not replace it.\n",
+      "assumptions": [
+        "M>0 finite and eps>=0",
+        "Stationary measurable bounded nonnegative intensity",
+        "Unit deterministic service",
+        "eps M<1"
+      ],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0289:bounded-cox-unit-service-uniform-light-traffic-expansion",
+        "url": "file:///~/brain_workers/w342/proofs/P0289.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "ross-cyclic-environment-faster-modulation-workload-rise",
+      "namespace": "probability.queueing",
+      "logical_name": "ross-cyclic-environment-faster-modulation-workload-rise",
+      "kind": "theorem",
+      "title": "Cyclic environment with increased workload under faster modulation",
+      "statement": "Let X_t be the stationary clockwise CTMC on Z/1024Z with jump rate 1/sin(2pi/1024), and F(t)=2+cos(2pi X_t/1024). For conditional Poisson arrivals of intensity F(ct)/10000, unit service and rate-one service, both stationary queues are stable and E V_{3pi}-E V_{2pi}>2491/161280000000000>0. Thus universal mean-workload decrease with modulation speed fails for this stationary ergodic environment.",
+      "proof_text": "# P0289: independent light-traffic proof and monotonicity counterexample\n\nStatus: **expansion and counterexample proof awaiting full blind audit**. The separate second-order sign criterion and prior-source scope correction have w346 KEEP on rows S1.w342.001 and .002; those verdicts do not certify the full counterexample. This continues the earlier cyclic-environment construction and addresses only universal monotonicity. A general necessary-and-sufficient workload-ordering criterion remains unresolved. No claim of novelty or literature priority is made.\n\nSources: `ross_second_conjecture_quantitative_half_closed_2026_09_08.md`; H-20260912 `lane_Q1/STATUS.md` and `p0289_check.py`. The primary problem is attributed there to Leskela, *Ross's second conjecture and supermodular stochastic ordering*, Queueing Systems 100 (2022), 213-215, Problem 1. Primary cached statement still to be checked.\n\n## Uniform expansion, with both arrival marginals specified\n\nLet M>0 be finite, eps>=0, and F be a stationary measurable nonnegative process with F <= M. Conditional on F, arrivals are a Poisson process with intensity eps F(ct), for c>0. All jobs require one unit of service and the server works at rate one. Assume q=eps M<1. Let a=E F(0).\n\nTake a Poisson random measure on R x [0,q] with intensity dt dz, independent of F. Keep the point (t,z) in the Cox process exactly when z <= eps F(ct). Conditional on F this is a Poisson process with the required intensity; retaining all points gives a homogeneous Poisson process of rate q. These are the two required marginals.\n\nFor an arrival configuration with ages A at time zero, write\n\n    V(A)=sup_{u>=0} (#{a in A: a<=u}-u)_+,\n    T(A)=sum_{a in A} (1-a)_+,\n    D(A)=V(A)-T(A).\n\nEndpoint choices do not affect these values at a deterministic time almost surely. V is the stationary single-server workload, and T is the total residual work if every job had its own rate-one server.\n\n**Configuration lemma.** D is nonnegative and nondecreasing when arrivals are added. To see nonnegativity, let 0<=a_1<=...<=a_k<1 be all recent ages. Then V>=k-a_k>=k-sum_i a_i=T. If k=0, T=0. To prove monotonicity, adding an age a>=1 leaves T unchanged and cannot lower V. If 0<=a<1, it is enough to prove V_new>=V_old+1-a. For any workload candidate b>=a, the arrival contributes one, so the new value is at least the old candidate plus one. For any b<a, the candidate at a in the augmented configuration is at least N_old(b)+1-a=(N_old(b)-b)+(1-a)+b. If V_old=0, the candidate at a is at least 1-a. Taking the supremum proves the desired inequality. Apply the finite argument on each bounded past interval and pass to increasing intervals. D therefore has the same monotonicity for the stable stationary configurations.\n\nThe dominating homogeneous workload V_q has finite moments of all orders. For completeness, choose theta>0 with q(e^theta-1)<theta, possible since q<1. For integer n, an exceedance of N(-u,0]-u over x for some u in [n,n+1] implies N(-(n+1),0]-n>x. Its probability is at most exp(-theta x+q(e^theta-1)) exp(-n[theta-q(e^theta-1)]). Summing over n gives an exponential tail. V<=V_q, and T has finite moments as it is bounded by the recent Poisson count.\n\nStationary square-workload balance is now integrable: the deterministic drift is -2V, and a unit-service arrival adds 2V+1. Conditioning the Cox compensator on F and the past gives\n\n    E V = eps a/2 + eps E[F(0)V(0)].\n\nConditional Campbell's formula gives\n\n    E[F(0)T(0)] = eps integral_0^1 (1-u) E[F(0)F(-cu)] du.\n\nFor homogeneous rate q, the same square balance gives E V_q=q/[2(1-q)], while Campbell gives E T_q=q/2. Thus E D_q=q^2/[2(1-q)]. The configuration lemma gives 0<=D<=D_q under the stated thinning coupling. Combining these facts yields, uniformly for every c>0,\n\n    E V_c = eps a/2 + eps^2 integral_0^1 (1-u) E[F(0)F(-cu)] du + R_c,\n    0 <= R_c=eps E[F(0)D_c] <= eps^3 M^3/[2(1-eps M)].\n\nThis proves, rather than assumes, the earlier packet's uniform remainder.\n\n## Explicit increase under faster modulation\n\nLet m=1024, theta=2pi/m, and let X_t be a stationary continuous-time Markov chain on Z/mZ which jumps only clockwise, at rate r=1/sin(theta). Set F(t)=2+cos(theta X_t). The uniform initial law is invariant; 1<=F<=3 and E F=2. The character eigenvalue r(e^{i theta}-1) has real part -delta and imaginary part 1, where delta=tan(pi/m). Orthogonality under the uniform law gives\n\n    E[F(0)F(-s)] = 4+(1/2)e^{-delta s}cos(s).\n\nPut J_delta(c)=integral_0^1 (1-u)e^{-delta cu}cos(cu)du. The proved expansion is\n\n    E V_c=eps+2eps^2+(eps^2/2)J_delta(c)+R_c.\n\nFor J_0(c)=(1-cos c)/c^2, the inequality 1-e^{-x}<=x gives |J_delta(c)-J_0(c)|<=delta c/6. Also delta<pi/512: sin x<=x and cos x>=1/sqrt(2) for 0<=x<=pi/4 imply tan x<=sqrt(2)x<2x. With c_1=2pi and c_2=3pi, and the elementary bound pi^2<10,\n\n    J_delta(c_2)-J_delta(c_1)\n      >= 2/(9pi^2)-5delta pi/6\n      > 1/45-25/1536 = 137/23040.\n\nTake eps=1/10000, M=3. Since R_{c_2}>=0 and R_{c_1}<=27eps^3/[2(1-3eps)],\n\n    (E V_{c_2}-E V_{c_1})/eps^2\n      > 137/46080 - 27/19994\n      > 137/46080 - 1/700\n      = 2491/1612800 > 0.\n\nAll queues are stable. Faster modulation strictly raises the mean stationary workload for this construction, conditional on the independent auditor accepting the proof. This is a counterexample to the universal monotonicity clause, not a solution of the entire two-part problem.\n\n## Exact sign test for the second-order coefficient\n\nFor continuous R on [0,infinity), Psi(c)=integral_0^1 (1-u)R(cu)du satisfies Psi'(c)=c^{-3}integral_0^c (2v-c)R(v)dv. Substitute v=cu and differentiate c^{-2}integral_0^c(c-v)R(v)dv. Psi is nonincreasing iff the displayed integral is nonpositive for all c>0. This says nothing by itself about the full workload outside light traffic.\n\nChecks to run: enumerate arrival configurations and additions to test the configuration lemma; calculate J from an independent closed expression and numerical quadrature; check exact rational margin arithmetic. Such checks support the written proof and do not replace it.\n",
+      "assumptions": [
+        "Uniform stationary initial law for the finite irreducible CTMC",
+        "Conditional Poisson Cox law",
+        "Unit deterministic service"
+      ],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0289:ross-cyclic-environment-faster-modulation-workload-rise",
+        "url": "file:///~/brain_workers/w342/proofs/P0289.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "light-traffic-integrated-correlation-sign-criterion",
+      "namespace": "probability.queueing",
+      "logical_name": "light-traffic-integrated-correlation-sign-criterion",
+      "kind": "lemma",
+      "title": "Sign criterion for an integrated second-order coefficient",
+      "statement": "If R:[0,infinity)->R is continuous and Psi(c)=integral_0^1(1-u)R(cu)du for c>0, then Psi is continuously differentiable and Psi'(c)=c^{-3}integral_0^c(2v-c)R(v)dv. Psi is nonincreasing iff the integral is nonpositive for every c>0. When Psi is a workload expansion coefficient this criterion alone does not order full workloads.",
+      "proof_text": "P0289 second-order sign criterion\n\nAuditor: w346; KEEP S1.w342.001. This certifies the coefficient criterion only, not full-workload ordering.\n\nLet R:[0,infinity)->R be continuous and Psi(c)=integral_0^1 (1-u)R(cu)du for c>0. Then Psi'(c)=c^(-3) integral_0^c (2v-c)R(v)dv. Consequently Psi is nonincreasing exactly when that integral is nonpositive for every c>0. This criterion orders only the second-order coefficient of a light-traffic workload expansion; it is not a criterion for ordering full Cox workloads.\n\nProof: Write A(c)=integral_0^c (c-v)R(v)dv. Substitution v=cu gives Psi(c)=A(c)/c^2. Continuity gives A'(c)=integral_0^c R(v)dv. Differentiation yields Psi'(c)=(cA'(c)-2A(c))/c^3, the displayed integral. A continuously differentiable function on (0,infinity) is nonincreasing iff its derivative is everywhere nonpositive.\n",
+      "assumptions": [
+        "Continuity of R"
+      ],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0289:light-traffic-integrated-correlation-sign-criterion",
+        "url": "file:///~/brain_workers/w342/proofs/P0289_sign_criterion.md",
+        "revision": "w346-keep-S1.w342.001-second-order-criterion-only-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0289-w342-validation-evidence",
+      "namespace": "probability.research.attempts",
+      "logical_name": "p0289-w342-validation-evidence",
+      "kind": "concept",
+      "title": "Finite validation evidence for P0289",
+      "statement": "Measured validation evidence for P0289: {\"command\": \"python -X utf8 verify_p0289.py\", \"computed_second_order_rise\": \"0.01077398940616819853952512632932955989870040498661470344\", \"configuration_checks\": 715, \"configuration_violations\": 0, \"label\": \"finite exact checks and numerical evidence; written proof is audited separately\", \"maximum_quadrature_difference\": \"3.580463007839955588873797005437450184075229463165379464e-49\", \"quadrature_checks\": 9, \"rational_margin_lower_bound\": \"2491/1612800\", \"seconds\": 0.533, \"single_addition_checks\": 6435, \"workload_difference_lower_bound_eps_1e_minus4\": \"2491/161280000000000\"}. These finite checks support the written proof and do not replace its independent audit or establish the full open problem.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0289:p0289-w342-validation-evidence",
+        "url": "file:///~/brain_workers/w342/p0289_measurements.json",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "bounded-cox-unit-service-uniform-light-traffic-expansion",
+      "kind": "depends_on",
+      "rationale": "FROM \"Let M>0 be finite, eps>=0, and F be stationary, measurable and bounded between 0 and M, with a=E F(0), eps M<1 and c>0. Conditional on F, take Poisson arrivals of intensity eps F(ct), unit service and a rate-one server. The stationary workload satisfies E\"; TO \"For any locally finite set A of nonnegative arrival ages with finite unit-service workload, let V(A)=sup_{u>=0}(#{a in A:a<=u}-u)_+ and T(A)=sum_{a in A}(1-a)_+. Then V(A)>=T(A), and V(A)-T(A) does not decrease when ages are added, provided both compared\"; The nonnegative residual difference is monotone under the stated Poisson thinning coupling.",
+      "to_key": "unit-service-workload-minus-parallel-residual-monotonicity"
+    },
+    {
+      "from_key": "ross-cyclic-environment-faster-modulation-workload-rise",
+      "kind": "depends_on",
+      "rationale": "FROM \"Let X_t be the stationary clockwise CTMC on Z/1024Z with jump rate 1/sin(2pi/1024), and F(t)=2+cos(2pi X_t/1024). For conditional Poisson arrivals of intensity F(ct)/10000, unit service and rate-one service, both stationary queues are stable and E V_{3pi}-E\"; TO \"Let M>0 be finite, eps>=0, and F be stationary, measurable and bounded between 0 and M, with a=E F(0), eps M<1 and c>0. Conditional on F, take Poisson arrivals of intensity eps F(ct), unit service and a rate-one server. The stationary workload satisfies E\"; The uniform remainder leaves a strictly positive rational lower bound for the workload difference.",
+      "to_key": "bounded-cox-unit-service-uniform-light-traffic-expansion"
+    },
+    {
+      "from_key": "light-traffic-integrated-correlation-sign-criterion",
+      "kind": "analogous_to",
+      "rationale": "FROM \"If R:[0,infinity)->R is continuous and Psi(c)=integral_0^1(1-u)R(cu)du for c>0, then Psi is continuously differentiable and Psi'(c)=c^{-3}integral_0^c(2v-c)R(v)dv. Psi is nonincreasing iff the integral is nonpositive for every c>0. When Psi is a workload\"; TO \"Let M>0 be finite, eps>=0, and F be stationary, measurable and bounded between 0 and M, with a=E F(0), eps M<1 and c>0. Conditional on F, take Poisson arrivals of intensity eps F(ct), unit service and a rate-one server. The stationary workload satisfies E\"; The integral sign test applies to the second-order term and carries no full-workload conclusion.",
+      "to_key": "bounded-cox-unit-service-uniform-light-traffic-expansion"
+    },
+    {
+      "from_key": "p0289-w342-result-scope",
+      "kind": "cites",
+      "rationale": "FROM \"The cached Ross problem asks for universal decrease of stationary Cox/GI/1 mean workload with modulation speed and a necessary-and-sufficient criterion. The second-order coefficient sign criterion and prior-source scope correction have w346 KEEP on rows\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Is the mean stationary workload in a stable Cox/GI/1 queue always nonincreasing in the modulation speed of its\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0289-ross-modulation-monotonicity-and-a-criterion-for-cox-workload-ordering"
+    },
+    {
+      "from_key": "unit-service-workload-minus-parallel-residual-monotonicity",
+      "kind": "cites",
+      "rationale": "FROM \"For any locally finite set A of nonnegative arrival ages with finite unit-service workload, let V(A)=sup_{u>=0}(#{a in A:a<=u}-u)_+ and T(A)=sum_{a in A}(1-a)_+. Then V(A)>=T(A), and V(A)-T(A) does not decrease when ages are added, provided both compared\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Is the mean stationary workload in a stable Cox/GI/1 queue always nonincreasing in the modulation speed of its\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0289-ross-modulation-monotonicity-and-a-criterion-for-cox-workload-ordering"
+    },
+    {
+      "from_key": "unit-service-workload-minus-parallel-residual-monotonicity",
+      "kind": "cites",
+      "rationale": "FROM \"For any locally finite set A of nonnegative arrival ages with finite unit-service workload, let V(A)=sup_{u>=0}(#{a in A:a<=u}-u)_+ and T(A)=sum_{a in A}(1-a)_+. Then V(A)>=T(A), and V(A)-T(A) does not decrease when ages are added, provided both compared\"; TO \"The cached Ross problem asks for universal decrease of stationary Cox/GI/1 mean workload with modulation speed and a necessary-and-sufficient criterion. The second-order coefficient sign criterion and prior-source scope correction have w346 KEEP on rows\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0289-w342-result-scope"
+    },
+    {
+      "from_key": "bounded-cox-unit-service-uniform-light-traffic-expansion",
+      "kind": "cites",
+      "rationale": "FROM \"Let M>0 be finite, eps>=0, and F be stationary, measurable and bounded between 0 and M, with a=E F(0), eps M<1 and c>0. Conditional on F, take Poisson arrivals of intensity eps F(ct), unit service and a rate-one server. The stationary workload satisfies E\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Is the mean stationary workload in a stable Cox/GI/1 queue always nonincreasing in the modulation speed of its\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0289-ross-modulation-monotonicity-and-a-criterion-for-cox-workload-ordering"
+    },
+    {
+      "from_key": "bounded-cox-unit-service-uniform-light-traffic-expansion",
+      "kind": "cites",
+      "rationale": "FROM \"Let M>0 be finite, eps>=0, and F be stationary, measurable and bounded between 0 and M, with a=E F(0), eps M<1 and c>0. Conditional on F, take Poisson arrivals of intensity eps F(ct), unit service and a rate-one server. The stationary workload satisfies E\"; TO \"The cached Ross problem asks for universal decrease of stationary Cox/GI/1 mean workload with modulation speed and a necessary-and-sufficient criterion. The second-order coefficient sign criterion and prior-source scope correction have w346 KEEP on rows\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0289-w342-result-scope"
+    },
+    {
+      "from_key": "ross-cyclic-environment-faster-modulation-workload-rise",
+      "kind": "cites",
+      "rationale": "FROM \"Let X_t be the stationary clockwise CTMC on Z/1024Z with jump rate 1/sin(2pi/1024), and F(t)=2+cos(2pi X_t/1024). For conditional Poisson arrivals of intensity F(ct)/10000, unit service and rate-one service, both stationary queues are stable and E V_{3pi}-E\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Is the mean stationary workload in a stable Cox/GI/1 queue always nonincreasing in the modulation speed of its\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0289-ross-modulation-monotonicity-and-a-criterion-for-cox-workload-ordering"
+    },
+    {
+      "from_key": "ross-cyclic-environment-faster-modulation-workload-rise",
+      "kind": "cites",
+      "rationale": "FROM \"Let X_t be the stationary clockwise CTMC on Z/1024Z with jump rate 1/sin(2pi/1024), and F(t)=2+cos(2pi X_t/1024). For conditional Poisson arrivals of intensity F(ct)/10000, unit service and rate-one service, both stationary queues are stable and E V_{3pi}-E\"; TO \"The cached Ross problem asks for universal decrease of stationary Cox/GI/1 mean workload with modulation speed and a necessary-and-sufficient criterion. The second-order coefficient sign criterion and prior-source scope correction have w346 KEEP on rows\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0289-w342-result-scope"
+    },
+    {
+      "from_key": "light-traffic-integrated-correlation-sign-criterion",
+      "kind": "cites",
+      "rationale": "FROM \"If R:[0,infinity)->R is continuous and Psi(c)=integral_0^1(1-u)R(cu)du for c>0, then Psi is continuously differentiable and Psi'(c)=c^{-3}integral_0^c(2v-c)R(v)dv. Psi is nonincreasing iff the integral is nonpositive for every c>0. When Psi is a workload\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Is the mean stationary workload in a stable Cox/GI/1 queue always nonincreasing in the modulation speed of its\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0289-ross-modulation-monotonicity-and-a-criterion-for-cox-workload-ordering"
+    },
+    {
+      "from_key": "light-traffic-integrated-correlation-sign-criterion",
+      "kind": "cites",
+      "rationale": "FROM \"If R:[0,infinity)->R is continuous and Psi(c)=integral_0^1(1-u)R(cu)du for c>0, then Psi is continuously differentiable and Psi'(c)=c^{-3}integral_0^c(2v-c)R(v)dv. Psi is nonincreasing iff the integral is nonpositive for every c>0. When Psi is a workload\"; TO \"The cached Ross problem asks for universal decrease of stationary Cox/GI/1 mean workload with modulation speed and a necessary-and-sufficient criterion. The second-order coefficient sign criterion and prior-source scope correction have w346 KEEP on rows\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0289-w342-result-scope"
+    },
+    {
+      "from_key": "p0289-w342-validation-evidence",
+      "kind": "cites",
+      "rationale": "FROM \"Measured validation evidence for P0289: {\"command\": \"python -X utf8 verify_p0289.py\", \"computed_second_order_rise\": \"0.01077398940616819853952512632932955989870040498661470344\", \"configuration_checks\": 715, \"configuration_violations\": 0, \"label\": \"finite\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Is the mean stationary workload in a stable Cox/GI/1 queue always nonincreasing in the modulation speed of its\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0289-ross-modulation-monotonicity-and-a-criterion-for-cox-workload-ordering"
+    },
+    {
+      "from_key": "p0289-w342-validation-evidence",
+      "kind": "cites",
+      "rationale": "FROM \"Measured validation evidence for P0289: {\"command\": \"python -X utf8 verify_p0289.py\", \"computed_second_order_rise\": \"0.01077398940616819853952512632932955989870040498661470344\", \"configuration_checks\": 715, \"configuration_violations\": 0, \"label\": \"finite\"; TO \"The cached Ross problem asks for universal decrease of stationary Cox/GI/1 mean workload with modulation speed and a necessary-and-sufficient criterion. The second-order coefficient sign criterion and prior-source scope correction have w346 KEEP on rows\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0289-w342-result-scope"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+ "helper_version":"A071-independent-block-signs-v1",
+ "actual_Boolean_family":"h negative on {0,1,2,4,8,16,32,6,17,40}; g0=h,g1=h(g0^6),g2=h((-g1)^6),g3=h(g2^6); F_epsilon=h(epsilon_1*g3,...,epsilon_6*g3), six disjoint copies",
+ "parameter_domain":"All64 epsilon in {+1,-1}^6 at fixed1296-bit actual core g3; resulting circuits7776 bits; no new recursion depths",
+ "case_count":64,
+ "orbit_count":10,
+ "coordinate_types_per_representative":6,
+ "symmetry":"Outer matched pairs (0,4),(1,2),(3,5): their48 permutations are actual automorphisms. Sign colorings classified by counts of00,01,11 pairs (10 triples summing3). Generate all48 automorphisms, verify h on all64 inputs and every sign orbit; retain all6 block types for each orbit. Inner transitivity covers1296 physical coordinates per block.",
+ "completeness":"All independent OUTPUT signs of six identical g3 copies for this fixed gate; excludes changing gate, nonidentical cores, and shared physical inputs",
+ "arithmetic":"Fraction exact biased centered outer transform and exact seed Walsh; rational96-bit log intervals with128-bit outward normalized-argument brackets and48-term positive atanh series at natural scale2^160; all sign and threshold comparisons rational",
+ "pilot":"Seed h, exactly four sign patterns0,1,5,63; at most24 coordinate types; cap55 seconds",
+ "memory_estimate_MB":140,
+ "maximum_runtime_seconds":600,
+ "why_this_family":"A080 closes both common signs on g3 but explicitly leaves different per-block signs open. This complete bounded family tests that remaining hard-core admission repair; A075 localization and terminal entropy are retained as context, not assumed payment."
+}

@@ -1,0 +1,19 @@
+QFORM_B11_CONDITIONABLE_SPAN_CHECK
+seed=20260923
+samples=1000
+ambient_light_dimension=7
+residual_rule=maximal two-coordinate (l,v) area
+max_identity_discrepancy=2.220446049250313e-15
+selected_Delta_R_min=0.09790824043390274
+selected_Delta_R_median=0.2659709305399601
+selected_Delta_R_max=0.7585865193957482
+constants:
+  192^(1/3)=5.768998281229633
+  6912^(1/3)=19.048812623618392
+  27648^(1/3)=30.23810519747695
+checks:
+  ||v_perp||^2 = Delta_R/||l_R||^2
+  p_R reconstruction from span(l_R,v_R) on two-coordinate residuals
+  (kappa sqrt(g))^2*|lambda Delta_R/g| = kappa^2|lambda|Delta_R
+status=QFORM_B11_CONDITIONABLE_SPAN_CHECK_PASS
+note=finite arithmetic audit only; not a proof and not evidence of a universal physical-minor lower bound

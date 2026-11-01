@@ -1,0 +1,15 @@
+MIXED_THETA_BUNDLE_TESTS
+(2,) cost 2 D 3 C 1 response 1/3
+(3,) cost 3 D 7 C 1 response 1/7
+(2, 3) cost 5 D 21 C 10 response 10/21
+(1, 2, 3) cost 6 D 21 C 31 response 31/21
+(2, 2, 3) cost 7 D 63 C 51 response 17/21
+(3, 4) cost 7 D 105 C 22 response 22/105
+GREEDY_EPS_NET_TESTS
+r 1/2 eps 1/100 terms [2, 3, 6] cost 11 residual 1/126 bound_KA 70
+r 5/7 eps 1/1000 terms [2, 2, 5, 7, 8, 9, 10] cost 43 residual 508634/806159805 bound_KA 170
+r 13/29 eps 1/10000 terms [2, 4, 5, 6, 13] cost 30 residual 52646/2319568335 bound_KA 294
+r 1/10 eps 1/100000 terms [4, 5, 10, 14, 15] cost 48 residual 365777/59050393710 bound_KA 391
+COST_LE_12_DISTINCT_RESPONSES_[0,1] 67
+COST_LE_12_MAX_GAP_[0,1] 8/105 between 92/105 20/21
+STATUS=MIXED_THETA_EXACT_PASS

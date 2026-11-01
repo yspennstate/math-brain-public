@@ -1,0 +1,31 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B05",
+  "primary_packet_id": "A023",
+  "claims": [
+    {
+      "claim_id": "B05-A023-CHANGING-OVERLAP-SWAP-NOGO",
+      "version": "v1",
+      "exact_statement": "No absolute finite C bounds the transition from the reviewed logarithmic orbit potential for X={y,x} to Y={y,z} by C times Inf_x+Inf_z. The Boolean multiplexers f_m=x on y=+1 and f_m=z Maj_m on y=-1 have Inf_x=Inf_z=1/2, but the potential gap equals m q(a_m^2/2)-1/2=(1/pi)log_2 m+O(1).",
+      "hypotheses": [
+        "Odd m and uniform finite cube",
+        "Genuine sign-valued Boolean multiplexer",
+        "Two active size-two overlap blocks sharing y",
+        "Reviewed logarithmic orbit potential"
+      ],
+      "contributors": ["fleet01/B05"],
+      "proof_source": "PROOF.md and CHECK_CHANGING_OVERLAP.py",
+      "proof_dependencies": [
+        "B19 fixed-block logarithmic potential definition",
+        "Classical singleton coefficient of odd majority"
+      ],
+      "review_records": [],
+      "status": "PROVED_PARAMETRIC_ROUTE_OBSTRUCTION_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": "Absolute changing-overlap swap fee based only on the entering/leaving coordinate influences",
+      "first_unproved_line": "Whether the complete entering-coordinate Fourier slice admits a signed nonreusing payment by total private influence and KL refund.",
+      "next_consumers": ["A087", "A094", "B01", "B19", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

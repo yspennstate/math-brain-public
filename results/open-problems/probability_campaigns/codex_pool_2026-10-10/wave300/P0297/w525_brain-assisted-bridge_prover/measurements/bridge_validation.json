@@ -1,0 +1,91 @@
+{
+  "command": "python -X utf8 validate_bridge.py",
+  "compute_gate": "measurements\\compute_gate.json",
+  "elapsed_seconds": 50.44126460002735,
+  "parameter_guard": {
+    "prior_formula_dimension": 10.0,
+    "correct_anchor_dimension": 3.9999999999999996,
+    "unchecked_bad_rows_rejected": 0,
+    "guard_bad_rows_rejected": 1,
+    "valid_control_rows_accepted": 2,
+    "bad_result": {
+      "consistent": false,
+      "errors": [
+        "Canonical normalization requires xi * d_gamma = gamma.",
+        "The Brownian parameter has the known value d_sqrt(8/3) = 4."
+      ],
+      "proof_status": "parameter consistency only; d_gamma not proved"
+    },
+    "good_result": {
+      "consistent": true,
+      "errors": [],
+      "proof_status": "parameter consistency only; d_gamma not proved"
+    },
+    "underdetermined_control": {
+      "consistent": true,
+      "errors": [],
+      "proof_status": "parameter consistency only; d_gamma not proved"
+    }
+  },
+  "fixed_route_response_failure": {
+    "predicted_derivative": 0.0,
+    "exact_derivative": -0.5641895835477563,
+    "absolute_error": 0.5641895835477563
+  },
+  "retained_switch_response": [
+    {
+      "beta": 1,
+      "retained_response": 0.3631618460316306,
+      "exact_hard_response": 0.5641895835477563,
+      "absolute_error": 0.20102773751612568
+    },
+    {
+      "beta": 4,
+      "retained_response": 0.5378981851130743,
+      "exact_hard_response": 0.5641895835477563,
+      "absolute_error": 0.02629139843468198
+    },
+    {
+      "beta": 16,
+      "retained_response": 0.5623890834769618,
+      "exact_hard_response": 0.5641895835477563,
+      "absolute_error": 0.001800500070794464
+    },
+    {
+      "beta": 64,
+      "retained_response": 0.5640763433649979,
+      "exact_hard_response": 0.5641895835477563,
+      "absolute_error": 0.00011324018275837844
+    },
+    {
+      "beta": 256,
+      "retained_response": 0.5641825032391444,
+      "exact_hard_response": 0.5641895835477563,
+      "absolute_error": 7.080308611850938e-06
+    }
+  ],
+  "two_route_fixed_beta_derivative_error": 2.9992675010248604e-12,
+  "correlated_gaussian_checks": [
+    {
+      "correlation": 0.4,
+      "finite_difference": -0.09601598753794516,
+      "interpolation": -0.09601598738892814,
+      "absolute_error": 1.4901702094505254e-10
+    },
+    {
+      "correlation": -0.4,
+      "finite_difference": -0.25796958032731077,
+      "interpolation": -0.25796958090804206,
+      "absolute_error": 5.807312963845845e-10
+    }
+  ],
+  "common_mode_invariance_error": 4.649058915617843e-16,
+  "two_route_variance_at_xi_1": 0.6816901138162093,
+  "poincare_upper_bound_at_xi_1": 1.0,
+  "status": "all bounded numerical controls passed; mathematical independent audit pending",
+  "limitations": [
+    "two-route model is not planar LFPP",
+    "parameter consistency is not a proof",
+    "quadrature errors are numerical evidence, not certified integration errors"
+  ]
+}

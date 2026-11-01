@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A069: a stable partition-tree encoding}
+Entropy is in bits. Let $T$ be a rooted partition tree of $[N]$ with singleton leaves
+and $2\le b_v\le3$ children at each internal vertex. Write $C_v$ for the vertex cell.
+Encode the root occupancy in one bit, and every occupied internal vertex's nonempty
+child mask in $b_v$ bits. A preorder decoder determines the next vertex from the
+previous masks, and terminates when all occupied branches reach leaves. It is prefix free,
+and has length
+\[
+ L_T(S)=1+\sum_{v\text{ internal}}b_v\mathbf1_{S\cap C_v\ne\varnothing},
+ \qquad \max L_T\le3N-2.
+\]
+Kraft and Gibbs imply $H(f)\le\Gamma_T(f)=\sum_S\widehat f(S)^2L_T(S)$.
+For Boolean $f,g$ differing on fraction $\rho$ of the uniform cube,
+weighted Minkowski and Parseval give
+\[
+ \sqrt{\Gamma_T(f)}\le\sqrt{\Gamma_T(g)}+2\sqrt{\rho\max L_T},
+ \qquad
+ \Gamma_T(f)\le2\Gamma_T(g)+8\rho(3N-2).
+\]
+The physical edit bound is $|I(f)-I(g)|\le2N\rho$.
+This reconstructs the abstract decoder of percolation Lemma 2.1; geometric arm
+estimates are not assumed. Its extra hypothesis is a paid occupancy sum.
+
+For complete depth-$d$ ternary recursive majority $g_d$, $n=3^d$, the identity
+$\mathrm{Maj}_3=(y_1+y_2+y_3-y_1y_2y_3)/2$ gives four equiprobable child masks.
+Each main-tree cell at depth $j$ has occupancy $2^{-j}$, so
+\[
+ I(g_d)=(3/2)^d,\qquad
+ \sum_{j=0}^{d-1}\mathbb E N_j=2(I(g_d)-1).
+\]
+Attach a binary padding tree to the main tree by a binary root when $N>n$.
+Then $\Gamma_T(g_d)=1+6(I(g_d)-1)+2\mathbf1_{N>n}\le6I(g_d)-3$.
+For any truth-table edit set of density $\rho$,
+\[
+ H(f)\le\Gamma_T(f)\le12I(f)-6+48N\rho-16\rho.
+\]
+Thus $N\rho\le1/8$ implies $H(f)\le\Gamma_T(f)\le12I(f)$.
+For one edited input and $d\ge1$, $N2^{-N}\le3/8$ and
+$I(f)\ge\operatorname{Var}(f)=1-4\cdot2^{-2N}\ge15/16$.
+Consequently $\Gamma_T(f)\le(124/5)I(f)<25I(f)$.
+For fixed $d$, the weighted Minkowski difference tends to zero under padding and
+one-point flipping, because $N2^{-N}\to0$.
+Complete proofs, scope comparison, and exact checks are in REPORT.md.
+Full FEI remains open: universal fixed-tree/reference selection and payment is unproved.
+\end{document}

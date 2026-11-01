@@ -1,0 +1,48 @@
+{
+  "gate": "2*1[x1+x2+x3>=2]-1",
+  "all_bias_bound_nats": "E <= (4+ln4)D - (ln4-1)P123",
+  "sharp_supremum_bits": "2+4/ln2",
+  "unanimous_vertex": {
+    "ratio": "2+error",
+    "max_absolute_error_bits": "400 delta ln(1/delta)"
+  },
+  "mixed_vertex": {
+    "physical_probabilities": [
+      "1-e",
+      "u",
+      "v"
+    ],
+    "S": "e(u+v)+uv",
+    "lambda": "uv/S",
+    "ratio_bits": "2+(2/ln2)(1+lambda)+error",
+    "max_absolute_error_bits": "400 delta ln(1/delta)",
+    "domain": "0<e,u,v<=1/8; delta=max(e,u,v)",
+    "cluster_interval_bits": [
+      "2+2/ln2",
+      "2+4/ln2"
+    ]
+  },
+  "same_deterministic_edge": {
+    "physical_probabilities": [
+      "e",
+      "d",
+      "r"
+    ],
+    "leading_ratio_bits": "2+2A(r)/ln2",
+    "error": "O_r((e+d)ln(1/(e+d)))"
+  },
+  "opposite_deterministic_edge": {
+    "physical_probabilities": [
+      "1-e",
+      "d",
+      "r"
+    ],
+    "theta": "e/(e+d)",
+    "leading_ratio_bits": "2+(2/ln2)[1+theta A(r)+(1-theta)A(1-r)]",
+    "error": "O_r((e+d)ln(1/(e+d)))"
+  },
+  "edge_scope": "r in fixed compact subinterval of (0,1); joint r endpoint instead uses corner bound",
+  "A": "A(r)=r ln(1/r)/(1-r)",
+  "contraction": "face -> AND2/OR2 with positive remaining deficit; edge -> constant/literal with E=D=0; do not assign limiting quotient to zero deficit",
+  "full_FEI": "OPEN"
+}

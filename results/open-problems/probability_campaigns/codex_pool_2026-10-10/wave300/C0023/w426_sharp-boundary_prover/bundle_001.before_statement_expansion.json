@@ -1,0 +1,191 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w426",
+  "bundle_slug": "draft-c0023-forest-relay-boundary-w426-20261010",
+  "entries": [
+    {
+      "key": "l1",
+      "namespace": "probability.percolation",
+      "logical_name": "separator-witness-percolation-gluing",
+      "kind": "lemma",
+      "title": "Separator witness for percolation gluing",
+      "statement": "AUTHOR PROOF; independent audit pending. Let G be a finite undirected graph with vertices o,b, a nonempty relay set A, a vertex v, and a_star in A. If every o-to-A path and every a_star-to-b path contains v, then in every edge configuration {o connects to A,a_star connects to b} is contained in {o connects to b,o connects to A}. For independent Bernoulli edge states with arbitrary edge probabilities in [0,1], P(o connects to b)>=P(o connects to A)min_{a in A}P(a connects to b). Connection means an open path in G.",
+      "proof_text": "On the intersected event, a chosen open o-to-A path supplies an open o-to-v segment, and an open a_star-to-b path supplies an open v-to-b segment. Concatenate to connect o to b. Harris positive association bounds the intersection probability below by the product of the two increasing-event probabilities.",
+      "assumptions": [
+        "The two separator hypotheses hold for deterministic G,v,a_star",
+        "Independent Bernoulli edge states with arbitrary probabilities in [0,1] only for the probabilistic product conclusion"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w426-c0023-boundary-20261010",
+        "url": "file:///~/brain_workers/w426/ATTEMPT.md",
+        "revision": "author-packet-v2-2026-10-10; independent review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l2",
+      "namespace": "probability.percolation",
+      "logical_name": "finite-forest-arbitrary-relay-percolation-gluing",
+      "kind": "lemma",
+      "title": "Gluing with arbitrary many relays in a finite forest",
+      "statement": "AUTHOR PROOF; independent audit pending. Let G be any finite undirected forest, o,b any vertices, and A any nonempty vertex set. For independent Bernoulli edge states with arbitrary edge probabilities in [0,1], P(o connects to b)>=P(o connects to A)min_{a in A}P(a connects to b). There is also a deterministic a_star in A such that {o connects to A,a_star connects to b} is contained in {o connects to b,o connects to A} in every configuration. Consequently P(o connects to b,o connects to A)>=min_{a in A}P(o connects to A,a connects to b) holds for any edge-state law. The product inequality's coefficient 1 is sharp. Connection means an open path; overlap of terminals and relays, disconnected forests, and o=b are allowed.",
+      "proof_text": "If A has a vertex outside b's graph component, the minimum connection probability is zero; if o and b are in different graph components then either this happens or P(o connects to A)=0. Otherwise all relevant vertices lie in one tree. Project each relay to the unique o-b path and choose the projection nearest o, denoted v, and a relay a_star attaining it. Every o-to-A path contains v and every a_star-to-b path contains v. Apply L1. A three-vertex path o-a-b with A={a} attains equality for any positive edge probabilities, proving sharpness.",
+      "assumptions": [
+        "Finite undirected forest",
+        "Independent Bernoulli edge states",
+        "o,b vertices; A nonempty"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w426-c0023-boundary-20261010",
+        "url": "file:///~/brain_workers/w426/ATTEMPT.md",
+        "revision": "author-packet-v2-2026-10-10; independent review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l3",
+      "namespace": "probability.percolation",
+      "logical_name": "sharp-finite-forest-near-one-gluing-modulus",
+      "kind": "lemma",
+      "title": "Sharp near-one gluing modulus in finite forests",
+      "statement": "AUTHOR PROOF; independent audit pending. For each epsilon in (0,1), delta_star=1-sqrt(1-epsilon) is the largest delta in (0,1] such that the following implication holds for every finite forest G, independent Bernoulli edge probabilities in [0,1], vertices o,b and nonempty relay set A: if P(o connects to A)>1-delta and P(a connects to b)>1-delta for all a in A, then P(o connects to b)>1-epsilon. A two-edge path rules out every larger delta, so delta_star is also a necessary upper bound on any proposed all-finite-graph modulus. Its sufficiency for arbitrary cyclic graphs is not asserted.",
+      "proof_text": "L2 gives terminal probability > (1-delta_star)^2=1-epsilon. For any larger delta choose a two-edge path o-a-b with both probabilities x strictly between max(0,1-delta) and sqrt(1-epsilon); the premises hold but x^2<1-epsilon.",
+      "assumptions": [
+        "Independent Bernoulli bond states with arbitrary edge probabilities in [0,1]",
+        "Nonempty relay set",
+        "Strict premises and conclusion as in Kozma-Nitzan Conjecture 3"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w426-c0023-boundary-20261010",
+        "url": "file:///~/brain_workers/w426/ATTEMPT.md",
+        "revision": "author-packet-v2-2026-10-10; independent review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "b1",
+      "namespace": "probability.percolation",
+      "logical_name": "arbitrary-order-relay-selection-conditioning-counterexample",
+      "kind": "lemma",
+      "title": "Relay selection can destroy terminal connectivity",
+      "statement": "AUTHOR PROOF; independent audit pending. In independent bond percolation on the path o--a2--a1--b, give successive edges probabilities r,s,t in (0,1) and order A=(a1,a2). Let I be the first member of A connected to o, undefined when o misses A. Then P(I=a2)=r(1-s)>0 but P(a2 connects to b | I=a2)=0<P(a2 connects to b)=st. Moreover P(o connects to b)=rst while sum_{a in A}P(I=a)P(a connects to b)=rst(2-s)>rst. For r=s=t=1/2 these are 1/8 and 3/16. This refutes unconditional substitution or the averaged bridge for arbitrary relay order, without refuting product gluing or claims requiring a nondecreasing terminal-marginal order.",
+      "proof_text": "P(I=a1)=rs, P(I=a2)=r(1-s), and P(a1 connects to b)=t, P(a2 connects to b)=st. Conditioning on I=a2 forces the middle edge closed, so its conditional terminal probability is 0. P(o connects to b)=rst, but the averaged unconditional relay sum is rst(2-s), larger by rst(1-s)>0. At r=s=t=1/2 the true probability is 1/8 and the sum 3/16.",
+      "assumptions": [
+        "Path o--a2--a1--b",
+        "Independent edge probabilities r,s,t in (0,1)",
+        "Relay order (a1,a2)"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w426-c0023-boundary-20261010",
+        "url": "file:///~/brain_workers/w426/ATTEMPT.md",
+        "revision": "author-packet-v2-2026-10-10; independent review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "b2",
+      "namespace": "probability.percolation",
+      "logical_name": "square-obstruction-to-fixed-relay-witness",
+      "kind": "lemma",
+      "title": "A square prevents a fixed pointwise relay witness",
+      "statement": "AUTHOR PROOF; independent audit pending. Let G have vertices o,a1,a2,v,b, exactly the edges o-a1,a1-v,o-a2,a2-v,v-b, and A={a1,a2}. No fixed a_star in A satisfies {o connects to A,a_star connects to b} subset {o connects to b} for every edge configuration. With each independent edge probability 1/2, P(o connects to b)=7/32, P(o connects to A)=3/4, and min_{a in A}P(a connects to b)=9/32, so product gluing still holds with margin 1/128. Thus only a universal deterministic-witness bridge is refuted, not stochastic gluing.",
+      "proof_text": "For a_star=a1 open exactly o-a2,a1-v,v-b; for a_star=a2 interchange the relay names. Each selection violates the claimed event inclusion. At half weights product gluing remains valid: 7/32-(3/4)(9/32)=1/128.",
+      "assumptions": [
+        "Edges o-a1,a1-v,o-a2,a2-v,v-b",
+        "A={a1,a2}",
+        "All independent edge probabilities strictly between 0 and 1 to obtain positive-probability failures"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w426-c0023-boundary-20261010",
+        "url": "file:///~/brain_workers/w426/ATTEMPT.md",
+        "revision": "author-packet-v2-2026-10-10; independent review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bad-selected-marginal",
+      "namespace": "probability.percolation",
+      "logical_name": "refuted-arbitrary-order-unconditional-selected-relay-bridge",
+      "kind": "concept",
+      "title": "Refuted arbitrary-order selected-relay bridge",
+      "statement": "REFUTED AUXILIARY PROPOSITION, not a theorem: after selecting the first member I of an arbitrarily ordered relay set A reached from o in independent bond percolation, replace P(a connects to b | I=a) by a lower bound P(a connects to b), or assert P(o connects to b)>=sum_a P(I=a)P(a connects to b). This proposition is false on o--a2--a1--b with relay order (a1,a2). A specified nondecreasing marginal order is a separate proposition. The original product and near-one gluing assertions are not refuted.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite undirected graph",
+        "Independent edge states",
+        "Arbitrary fixed relay order"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w426-c0023-boundary-20261010",
+        "url": "file:///~/brain_workers/w426/ATTEMPT.md",
+        "revision": "author-packet-v2-2026-10-10; independent review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bad-fixed-witness",
+      "namespace": "probability.percolation",
+      "logical_name": "refuted-universal-fixed-relay-pointwise-witness",
+      "kind": "concept",
+      "title": "Refuted universal fixed-relay witness bridge",
+      "statement": "REFUTED AUXILIARY PROPOSITION, not a theorem: for every finite graph and nonempty relay set A there is a deterministic a_star in A such that {o connects to A,a_star connects to b} is contained in {o connects to b}. A square o--a1--v--a2--o with a pendant edge v--b and A={a1,a2} is a counterexample. The inclusion does hold for forests; failure of this deterministic bridge does not refute probabilistic gluing.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite undirected graph",
+        "Nonempty relay set"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w426-c0023-boundary-20261010",
+        "url": "file:///~/brain_workers/w426/ATTEMPT.md",
+        "revision": "author-packet-v2-2026-10-10; independent review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "l2",
+      "to_key": "l1",
+      "kind": "depends_on",
+      "rationale": "L2: 'every finite forest' admits the fixed separator demanded by L1: 'v lies on every o-to-A path and every a_star-to-b path'. Tree projection supplies both hypotheses; no arbitrary cyclic extension is asserted."
+    },
+    {
+      "from_key": "l3",
+      "to_key": "l2",
+      "kind": "depends_on",
+      "rationale": "L3's 'delta_star=1-sqrt(1-epsilon)' follows by applying L2's 'product gluing inequality' to the two strict near-one premises; two-edge paths establish necessity."
+    },
+    {
+      "from_key": "b1",
+      "to_key": "bad-selected-marginal",
+      "kind": "refutes",
+      "rationale": "B1: 'conditional terminal probability is 0' and 'rst(2-s)' exceeds 'rst', directly refuting the concept's replacement of selected conditional marginals and its arbitrary-order averaged inequality."
+    },
+    {
+      "from_key": "b2",
+      "to_key": "bad-fixed-witness",
+      "kind": "refutes",
+      "rationale": "B2: 'For a_star=a1 open exactly o-a2,a1-v,v-b; for a_star=a2 interchange the relay names' excludes every candidate required by the concept's universal pointwise witness assertion."
+    },
+    {
+      "from_key": "b2",
+      "to_key": "l2",
+      "kind": "semantic_association",
+      "rationale": "L2's forest witness meets its boundary at B2's square; B2 explicitly leaves the probability product bound intact (margin 1/128 at half weights)."
+    }
+  ]
+}

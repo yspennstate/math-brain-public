@@ -1,0 +1,82 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target": "RS-2026-CL-A",
+  "report_kind": "research_progress",
+  "captured_master": "5a144af36009c35c6ba44c8baf2c40bd8ad7afa5",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T22-36-11Z__report.md",
+    "creation_commit": "4652e84f12c8a6ce780abc3e2270c3b343e4d39c",
+    "blob": "2efc5b9449798c0717f2a9a84f02c33caf794c9f"
+  },
+  "previous_ledger": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-19T22-36-11Z__ledger_delta.json",
+    "creation_commit": "84fb5d86bbfbf235e9200e622a384dc9ad106802",
+    "blob": "d92a7a4aba12d3298578a6501422d8b124f5fb11"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T23-47-00Z__report.md",
+    "creation_commit": "3bd4cff85337027f0e8bfdfe6751505f8f9352d2",
+    "readback_blob": "e46625fd65ef6d2ea221f67b1006d4d7db593a03"
+  },
+  "supporting_artifact": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-19T23-47-00Z__gaussian_tensor_handoff.md",
+    "creation_commit": "1e0daafb108711730e87e55212d5ed624f4698ce",
+    "readback_blob": "45260c1c18aaa332f512126bd8745f2b5a6df148",
+    "ownership": "RS-2026-CL-A supporting lemma shared for P08/P09; no source-claim transfer"
+  },
+  "metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": "NO_FROZEN_METRIC_MOVEMENT_MATERIAL_OBLIGATION_MOVEMENT"
+  },
+  "status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / REFERENCE_CHAOS_BRIDGE_AND_NOISY_TV_PROGRESS",
+  "historical_initial_methods": ["B2", "B27", "B21"],
+  "previous_methods": ["B14", "B2", "B25"],
+  "methods": ["B18", "B6", "B21"],
+  "method_outcomes": {
+    "B18": "Proved a reference-chaos bridge: if Lambda_n(d) is the one-sided Q-to-reference L2 inflation on degree d, then the reference spectral mass through d is at most Lambda_n(d) times source LDA squared. Combined this with a degree-diagonal reversible noise semigroup to prove a quantitative TV-convergence theorem with explicit inflation and global-complexity exponents.",
+    "B6": "Removed the predecessor's global pointwise lower-density assumption. On the Boolean cube, Lambda_n(d) is bounded above by the L-infinity norm of the degree-2d truncation of dQ/dU, yielding an explicit nonproduct-null sufficient theorem and a sharp noise-threshold condition 2t>max(eta,beta).",
+    "B21": "Ported the exact theorem to Gaussian Hermite/Ornstein-Uhlenbeck chaos and wrote a source-preserving supporting handoff for the P08/P09 Gaussian roles. Hsieh et al. 2601.05850 remains close positive prior art; no ownership or novelty claim transferred."
+  },
+  "new_results": [
+    "Reference-chaos mass lemma: ||Pi_{1:d}(p-q)||_R^2 <= Lambda_n(d) Adv_Q^{<=d}(P,Q)^2.",
+    "Noisy TV theorem: bounded source LDA, vanishing fixed-degree LDA, null inflation exponent below 2t, and global reference-L2 complexity exponent below 2t imply TV(T_t P,T_t Q)->0.",
+    "All-positive-noise corollary when both inflation and global complexity exponents tend to zero.",
+    "Boolean explicit sufficient condition using ||Pi_{<=2d}(dQ/dU)||_infinity, requiring neither permutation invariance nor a product null nor a global lower density bound.",
+    "Quantitative Mao obstruction: with uniform null and exact low-degree matching, survival at noise time t forces limsup D_n^{-1} log chi2(P_n||U_n) >= 2t.",
+    "Gaussian/Hermite/OU specialization shared as a supporting lemma with P08/P09."
+  ],
+  "remaining_obligation": [
+    "For fixed-strength sparse Gibbs nulls, prove eta_n->0 relative to a natural reference or construct a Q-adapted chaos/noise semigroup achieving the same all-positive-noise effect.",
+    "Replace the global reference-L2 pair-complexity condition by a weaker high-degree entropy/pressure envelope that still excludes Mao but covers natural planted models with large raw chi-square.",
+    "Turn current/cluster and complete-analyticity estimates into explicit Lambda_n(d) bounds or generator-energy inflation bounds with exp(O(d)) rather than ambient-n loss.",
+    "Determine the extremal bounded-degree weak-Gibbs geometry for low-degree norm inflation and the sharp inflation exponent.",
+    "Translate Hsieh regularization and Chen-Li interface reassembly into the reference/adapted-chaos framework without false subsumption.",
+    "Obtain actual P26 plus one distinct OTHER full theorem/source audit before any closure claim."
+  ],
+  "next_methods": ["B24", "B5", "B23"],
+  "audits": {
+    "p26": false,
+    "distinct_other": false,
+    "qualifying_count": "0/2"
+  },
+  "hard_recovery_cycles_consumed": 1,
+  "same_obligation_stagnation": 0,
+  "novelty": "UNVERIFIED",
+  "prompt_immutability": "PRESERVED_NO_AUTOMATION_UPDATE_CALLED",
+  "model_control": {
+    "requested": "GPT-6 maximum",
+    "actual_exposed_model": "GPT-5.6 Sol",
+    "reasoning_level": "UNVERIFIED",
+    "authenticated_scheduler_model_selector_exposed": false,
+    "authenticated_reasoning_selector_exposed": false
+  },
+  "source_check_date_utc": "2026-09-19",
+  "source_check_date_local": "2026-09-20",
+  "source_status": "Randomstrasse first broad box remains displayed as Open Problem 35; post title says problems 36-38",
+  "mandatory_negative_stress": "Songtao Mao arXiv:2607.20318; theorem gives a fixed positive resampling rate epsilon_r for each r, not all rates",
+  "positive_comparators": ["Hsieh et al. arXiv:2601.05850", "Chen-Li arXiv:2608.06279"],
+  "closure": "NOT_CLOSED"
+}

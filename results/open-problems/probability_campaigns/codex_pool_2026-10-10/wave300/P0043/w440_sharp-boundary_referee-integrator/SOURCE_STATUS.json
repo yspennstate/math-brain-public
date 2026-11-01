@@ -1,0 +1,38 @@
+{
+  "target": "P0043",
+  "checked_at_local_date": "2026-10-10",
+  "historical_rank": {
+    "source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:549",
+    "quote": "5,P0043,Absence of infinite clusters at critical percolation,attempted_un,theta(p_c)=0 on quasi-transitive graphs",
+    "verdict": "FIX_STATEMENT_SCOPE"
+  },
+  "primary_source": {
+    "citation": "Itai Benjamini and Oded Schramm, Percolation Beyond Z^d, Many Questions and a Few Answers, Electronic Communications in Probability 1 (1996), 71-82, Conjecture 4 and Section 2",
+    "url": "https://www.maths.tcd.ie/EMIS/journals/EJP-ECP/article/download/978/978-3321-1-PB.pdf",
+    "quote_conjecture": "Conjecture 4 Critical percolation dies in every almost transitive graph (assuming pc < 1).",
+    "quote_model": "Throughout the paper, site percolation is discussed. Except when dealing with planar graphs, the results and questions remain equally valid, with only minor modifications, for bond percolation.",
+    "quote_graph_scope": "The graphs we shall consider will always be locally finite",
+    "quote_connected": "We assume throughout that the graph G is connected."
+  },
+  "exact_statement": "For every infinite, connected, locally finite graph G with finitely many vertex orbits under Aut(G) and Bernoulli site percolation critical parameter p_c(G)<1, at p=p_c(G) there is almost surely no infinite open cluster. The bond-percolation analogue is explicitly indicated by the authors and stated as Conjecture 1.1 in Hutchcroft (2016).",
+  "bond_source": {
+    "citation": "Tom Hutchcroft, Critical percolation on any quasi-transitive graph of exponential growth has no infinite clusters, Comptes Rendus Mathematique 354 (2016), 944-947, Conjecture 1.1 and Theorem 1.2",
+    "url": "https://comptes-rendus.academie-sciences.fr/mathematique/item/10.1016/j.crma.2016.07.013.pdf",
+    "quote_conjecture": "Let G be a quasi-transitive graph. If pc(G) < 1, then G[pc] has no infinite clusters almost surely.",
+    "scope": "Independent Bernoulli bond percolation on connected, locally finite graphs; the exponential-growth case is proved as Theorem 1.2."
+  },
+  "recent_full_bond_claim": {
+    "release": "OpenAI math release, pinned commit adc7f1241b42e322a6451854ab7e4b4c146bf78a, dated September/October 2026",
+    "primary_comparator": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/ComparatorChallenges/CriticalPercolation.lean",
+    "primary_solution_module": "https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/OAI/Probability/CriticalPercolation/Main.lean",
+    "theorem": "OAI.CriticalPercolation.BondGraph.no_percolation_at_criticality",
+    "statement_checked": "For an infinite vertex type, connected full bond graph, locally finite bond incidence, finite vertex-orbit quotient under bond-graph automorphisms, and criticalProbability<1, the independent Bernoulli bond law gives measure zero to the event that some open cluster is infinite.",
+    "comparator_placeholder": "The comparator file ends its theorem with sorry; this file alone is not a proof.",
+    "solution_module_status": "The separate Main.lean states the matching theorem and invokes main_failure_topological_classification_counterexample and compact_open_virtually_nilpotent_quotient_of_sparse_polynomial. Imports and build were not checked end to end; trusted axioms were not independently verified.",
+    "verdict": "CLAIMED_FULL_BOND_PROOF_UNVERIFIED",
+    "site_scope": "No general quasi-transitive site theorem is verified by this bond module."
+  },
+  "current_openness": "UNKNOWN_CLAIMED_FULL_BOND_PROOF_UNVERIFIED",
+  "reason_current_openness": "A primary solution module with the matching top-level bond statement exists, but this audit has no clean build, axiom inventory, or independent mathematical review of its imported load-bearing lemmas. No novelty claim is made.",
+  "prior_solved_retired_status": "Historical P0043 and C0084 ranking rows say attempted_un. The named September H/I attempt directories had no P0043 match. No owner-local solved/retired certificate was found in those named records; current status is dominated by the unverified recent external bond claim."
+}

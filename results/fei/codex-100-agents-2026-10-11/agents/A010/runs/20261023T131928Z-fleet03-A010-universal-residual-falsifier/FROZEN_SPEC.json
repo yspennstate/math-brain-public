@@ -1,0 +1,79 @@
+{
+  "helper_version": "A010-two-intersecting-core-falsifier-v1",
+  "helper_sha256": "aac09c23ae8eac2caaa8708f981bb17cbff21957dcbadc5ae3e2f764234bd955",
+  "actual_families": "A006 paired disjoint OR products; A008 common-anchor functions; new two-intersecting-core function with r width-two private clauses per core",
+  "pilot_domain": {
+    "support_family_selectors": [
+      1,
+      8
+    ],
+    "paired_widths": [
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "common_anchor_widths": [
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "new_r": [
+      1,
+      2
+    ],
+    "scalar_r": [
+      4,
+      16
+    ]
+  },
+  "full_domain": {
+    "support_family_selectors": [
+      1,
+      127
+    ],
+    "paired_widths": "all length1,2 lists with widths1..3",
+    "common_anchor_widths": "all length1..3 lists with widths1..3",
+    "new_r": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "scalar_r": [
+      4,
+      256
+    ]
+  },
+  "full_case_counts": {
+    "support_families": 127,
+    "extra_center_and_duplicate_covers": 2,
+    "actual_anchor_events_source": 108723,
+    "paired_functions": 12,
+    "paired_truth_inputs": 7140,
+    "common_anchor_functions": 39,
+    "common_anchor_truth_inputs": 5908,
+    "new_functions": 4,
+    "new_truth_inputs": 559232,
+    "max_physical_dimension": 19,
+    "all_size_scalar_cases": 253
+  },
+  "symmetry": "No symmetry reduction; complete labelled small covers and width lists; actual new truth tables and target-compatible anchor tuples. All-r theorem uses analytic proof, not extrapolation.",
+  "arithmetic": "Integer union/occupation DP versus independent actual-anchor enumeration; direct physical flips and integer Walsh; Fraction; 16-term atanh logs with proved tail rounded outward to 40-bit dyadics",
+  "memory_estimate_MB": 120,
+  "pilot_max_seconds": 55,
+  "full_max_seconds": 180,
+  "automatic_dimension_escalation": false,
+  "formal_checker": "No Lean claim"
+}

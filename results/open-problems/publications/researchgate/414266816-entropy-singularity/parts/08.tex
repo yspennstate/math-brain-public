@@ -1,0 +1,182 @@
+If $X_n\to\infty$ in probability and comparison laws assign probability zero to every successful test, the two sequences of laws are asymptotically mutually singular.
+\end{proposition}
+\begin{proof}
+The conditional Bernoulli argument of Lemma~\ref{lem:bernoulli} applies within each family. H\"older across $C$ families gives the analogue of \eqref{eq:globalmgf}. Letting $t\to\infty$ yields the bound. The event $\{Y_n>0\}$ gives the final assertion.
+\end{proof}
+
+In particular, noise sensitivity suffices for the small-cardinality part of this criterion when the empty Fourier mass vanishes. For each fixed $k$ and fixed $0<\rho<1$, noise sensitivity implies
+\[
+ \rho^k\Prob(0<|\cS_{f_n}|\le k)
+ \le\sum_{A\ne\varnothing}\rho^{|A|}\widehat f_n(A)^2\longrightarrow0.
+\]
+The sharper percolation lower-tail estimate is needed only for the decay exponent in Theorem~\ref{thm:rate}. The Fourier interpretation of noise sensitivity originates in \cite{BKS}; the quantitative percolation estimates used here are from \cite{GPS}.
+
+\subsection{Product measures and general quads}\label{sec:extensions}
+
+The local estimate persists for nonuniform product measures. Let $\eta_i\in\{0,1\}$ be independent with parameters $0<p_i<1$, and use the orthonormal basis
+\[
+ \psi_A=\prod_{i\in A}\frac{\eta_i-p_i}{\sqrt{p_i(1-p_i)}}.
+\]
+Spectral probabilities are the squared coefficients in this basis, for functions of unit $L^2$ norm.
+
+\begin{proposition}\label{prop:biased}
+Suppose every tested ring has its six parameters in $[\delta,1-\delta]$, where $0<\delta\le1/2$. For a site-connection sign function, Proposition~\ref{prop:outside}, Theorem~\ref{thm:finite}, and Lemma~\ref{lem:fibers} hold for the product spectral law with $\astar$ replaced by
+\[
+ a_\delta=\astar\left(\frac{\delta}{1-\delta}\right)^6.
+\]
+When the connection function is nonconstant, they also hold for its centered, variance-normalized version, whose spectral law is the original spectral law conditioned to be nonempty.
+\end{proposition}
+\begin{proof}
+Because $\cI$ is downward closed, the span $V$ of $\{\psi_A:A\in\cI\}$ on a ring equals the span of its independent-set monomials. Thus $V$ is the same vector space as in Lemma~\ref{lem:rank}. The ring product measure has density, relative to the fair measure, between
+\[
+ m_p=2^6\prod_i\min(p_i,1-p_i),\qquad
+ M_p=2^6\prod_i\max(p_i,1-p_i).
+\]
+For $g$ vanishing on $L$, norm comparison gives
+\[
+ \dist_p(g,V)^2
+ \ge m_p\dist_{1/2}(g,V)^2
+ \ge m_p\astar\|g\|_{1/2}^2
+ \ge (m_p/M_p)\astar\|g\|_p^2
+ \ge a_\delta\|g\|_p^2.
+\]
+The product derivative is
+\[
+ D_v^pf=\E_v[\psi_vf]
+ =\sqrt{p_v(1-p_v)}\,[f(1,\cdot)-f(0,\cdot)].
+\]
+It vanishes on $L$ by Lemma~\ref{lem:zero}, and that identity survives every exterior operator. Since $P_vAf=\psi_vD_v^pAf$ and $\|\psi_v\|_p=1$, the preceding inequality proves the product version of Proposition~\ref{prop:outside}. All subsequent conditioning and coloring arguments are unchanged. Finally, subtracting the mean changes only the empty Fourier coefficient, and division by the standard deviation normalizes the remaining squared coefficients. The derivative inequalities are homogeneous, so the same constants apply after this normalization.
+\end{proof}
+
+Uniformly bounded product parameters alone do not imply escape of the spectral size or negligible boundary mass. Proposition~\ref{prop:biased} is a finite-volume result. For the uncentered Boolean sign function, the fair one-point identity becomes
+\[
+ \Prob_p(v\in\cS_f)=4p_v(1-p_v)\Prob_p(v\in\cP_f),
+\]
+as follows by taking the squared norm of $D_v^pf$. For its centered spectrum, divide the right-hand side by $\operatorname{Var}_p(f)$. Boundary estimates must use this normalization.
+
+\begin{theorem}\label{thm:quads}
+Let $Q$ be a fixed Jordan quad in the sense of \cite[Section~2.1]{GPS}, with its continuous hexagonal-tile crossing convention. Let $\mu_R$ and $\nu_R$ be the spectral and pivotal laws of the critical triangular-site crossing of $RQ$, and write
+\[
+ \mu_R^+=\mu_R(\,\cdot\mid S\ne\varnothing),\qquad
+ \epsilon_R=\mu_R(\varnothing).
+\]
+Count only elementary faces consisting of full interior tiles. Then
+\[
+ \mu_R(K_R=0,\ S\ne\varnothing)\longrightarrow0,
+ \qquad \TV(\mu_R^+,\nu_R)\longrightarrow1.
+\]
+The latter conclusion also holds with the pivotal law conditioned to be nonempty. Moreover, for every fixed $0<\delta<\astar/3$,
+\[
+ \mu_R^+\bigl(K_R(S)\ge\delta|S|\bigr)\longrightarrow1,
+ \qquad
+ 1-\TV(\mu_R,\nu_R)
+ =\min\{\epsilon_R,\nu_R(\varnothing)\}+o(1).
+\]
+\end{theorem}
+\begin{proof}
+By \cite[Theorem~7.4]{GPS}, nonzero spectral size is tight above and away from zero on the scale $R^2\alpha_4(R)$, which tends to infinity. Thus, for each fixed $m$,
+\[
+ \mu_R(0<|S|<m)\longrightarrow0.
+\]
+Equations~(7.7)--(7.8) in the proof of that theorem show that, for every $\eta>0$, there is a fixed $U'\Subset Q^\circ$ with
+\[
+ \limsup_{R\to\infty}\mu_R(S\not\subset RU')\le\eta.
+\]
+For large $R$, all sites in $RU'$ are tested centers. Consequently, for the full-wheel center set $V_R^\circ$,
+\[
+ \mu_R(S\not\subset V_R^\circ)\longrightarrow0.
+\]
+This interior approximation avoids any regularity assumption on the Jordan boundary. The face-free estimate now gives
+\[
+ \mu_R(K_R=0,\ S\ne\varnothing)
+ \le\mu_R(S\not\subset V_R^\circ)
+   +\mu_R(0<|S|<m)+(1-\astar)^{m/7}.
+\]
+Send $R\to\infty$, then $m\to\infty$.
+
+For a fixed nonempty bulk set, the first- and second-moment estimates in \cite[Lemma~3.1]{GPS}, followed by Paley--Zygmund, give $\mu_R(S\ne\varnothing)\ge c_Q>0$. The preceding exceptional probabilities therefore still vanish under $\mu_R^+$. In particular, $X_R\to\infty$ and $X_R=|S|$ with probability tending to one under this law. Apply Theorem~\ref{thm:finite} with $\theta=3\delta$ to the centered normalized crossing function to obtain the face-density assertion. Lemma~\ref{lem:forest} holds for this quad and also after any defined conditioning of its pivotal law. It proves both singularity assertions. Finally, the nonempty overlap of $\mu_R$ and $\nu_R$ is at most $\mu_R(K_R=0,S\ne\varnothing)=o(1)$, whereas their empty overlap is exactly the displayed minimum.
+\end{proof}
+
+The empty-atom term need not vanish for a general quad. No quantitative rate uniform over quads is asserted in Theorem~\ref{thm:quads}.
+
+\section{Separation under perturbations}\label{sec:perturbations}
+
+The face statistic also gives quantitative separation in a metric on sets. For subsets of the same finite coordinate set, put
+\[
+ d_\triangle(A,B)=|A\mathbin\triangle B|,\qquad
+ \mathcal F_R=\{B\subseteq V_R:K_R(B)=0\},\qquad
+ d_\triangle(A,\mathcal F_R)=\min_{B\in\mathcal F_R}d_\triangle(A,B).
+\]
+This distance permits both insertions and deletions. Its minimum over $\mathcal F_R$ can always be attained by deletions alone: if $B$ is face-free, then $A\cap B$ is face-free and $d_\triangle(A,A\cap B)\le d_\triangle(A,B)$.
+
+\begin{theorem}[Distance from face-free sets]\label{thm:distance}
+For every finite connection function covered by Theorem~\ref{thm:finite}, using the corresponding domain's complete-wheel and interior-face conventions, every $m>0$, and $0\le\theta<\astar$,
+\begin{equation}\label{eq:distance_tail}
+ \Prob\left(d_\triangle(\cS_f,\mathcal F_R)\le\frac{\theta}{18}X_R,\ X_R\ge m\right)
+ \le\exp\left\{-\frac m7D(\theta\Vert\astar)\right\}.
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:distance_mean}
+ \E d_\triangle(\cS_f,\mathcal F_R)\ge\frac{\astar}{18}\E X_R.
+\end{equation}
+For critical triangular-site square crossings, if
+\[
+ W_1^\triangle(\mu_R,\nu_R)
+ =\inf_{\pi\in\Pi(\mu_R,\nu_R)}\E_\pi|S\mathbin\triangle P|,
+\]
+where $\Pi$ denotes all couplings, then
+\begin{equation}\label{eq:transport}
+ W_1^\triangle(\mu_R,\nu_R)\asymp m(R).
+\end{equation}
+Uniformly over these couplings,
+\begin{equation}\label{eq:coupling_distance}
+ \Prob_\pi\left(|S\mathbin\triangle P|\ge\frac{\astar}{36}|S|\right)\longrightarrow1.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Every elementary face in $A$ must lose a vertex when $A$ is changed into a face-free set. A site belongs to at most six elementary faces, hence
+\begin{equation}\label{eq:delete_faces}
+ d_\triangle(A,\mathcal F_R)\ge K_R(A)/6.
+\end{equation}
+The event in \eqref{eq:distance_tail} therefore implies $K_R(\cS_f)\le\theta X_R/3$, so Theorem~\ref{thm:finite} applies.
+
+Let $Y_R$ count centers whose spectral supports contain an incident face. Proposition~\ref{prop:outside}, with the exterior operator equal to the identity, gives $\E Y_R\ge\astar\E X_R$. Since $Y_R\le3K_R(\cS_f)$, \eqref{eq:delete_faces} proves \eqref{eq:distance_mean}.
+
+For a critical square, Lemma~\ref{lem:boundary} and the bulk influence comparison give $\E X_R\asymp m(R)$. Every pivotal realization belongs to $\mathcal F_R$, so every coupling has mean distance at least the left side of \eqref{eq:distance_mean}. Conversely, under any coupling, $|S\mathbin\triangle P|\le|S|+|P|$, and both expectations are comparable to $m(R)$. This proves \eqref{eq:transport}. Finally apply \eqref{eq:distance_tail} with $\theta=\astar/2$. The facts $X_R\to\infty$ in probability and $\Prob(X_R=|\cS_R|)\to1$ follow from Section~\ref{sec:critical}. The resulting exceptional event depends only on the spectral marginal, so its probability bound is uniform over all couplings.
+\end{proof}
+
+The same argument applies to the spectral law conditioned to be nonempty in a fixed Jordan quad, using Theorem~\ref{thm:quads}. Its conclusion is the analogue of \eqref{eq:coupling_distance} for either the unconditional or the nonempty-conditioned pivotal law. Thus local geometric separation cannot be removed by changing a vanishing fraction of the spectral sites. This is a statement about the number of changed sites; it does not assert a positive distance in a metric on continuum subsets.
+
+\subsection{Stability under independent thinning}\label{sec:thinning}
+
+Let $\cS_R^{(\rho)}$ be obtained by retaining each member of $\cS_R$ independently with probability $\rho\in(0,1]$. The retention variables are independent of the original spectral sample. Write $K_R^{(\rho)}=K_R(\cS_R^{(\rho)})$, while $X_R=|\cS_R\cap V_R^\circ|$ continues to count the original centers.
+
+\begin{proposition}[Thinning bounds]\label{prop:thinning}
+Put $a_\rho=\astar\rho^3$. For every fair site-connection function covered by Theorem~\ref{thm:finite}, every $m>0$, and $0\le\theta<a_\rho$,
+\[
+ \Prob\left(K_R^{(\rho)}\le\frac\theta3X_R,\ X_R\ge m\right)
+ \le\exp\left\{-\frac m7D(\theta\Vert a_\rho)\right\}.
+\]
+In particular,
+\begin{equation}\label{eq:thinning_noface}
+ \Prob(K_R^{(\rho)}=0,\ X_R\ge m)\le(1-\astar\rho^3)^{m/7}.
+\end{equation}
+For critical triangular-site square crossings, put $m(R)=R^2\alpha_4(R)$ and let $\mu_R^{(\rho_R)}$ be the law of the thinned sample. If $\rho_R^3m(R)\to\infty$, then
+\[
+ \TV(\mu_R^{(\rho_R)},\lambda_R)\longrightarrow1
+\]
+for every sequence of laws $\lambda_R$ supported on sets with no full interior elementary face. This includes the original pivotal law and every independently thinned pivotal law. Conversely, if $\rho_R^3m(R)\to0$, then $\Prob(K_R^{(\rho_R)}>0)\to0$.
+\end{proposition}
+\begin{proof}
+Adjoin independent Bernoulli retention variables $(\xi_v)$ to the spectral probability space. For a tested center $v$, let $y_v^{(\rho)}$ indicate that some incident face is contained in $\cS_R^{(\rho)}$, and put $x_v=\one_{\{v\in\cS_R\}}$.
+
+An event determined by the spectral support and retention variables outside $W_v$ can first be conditioned on the exterior retention variables. Proposition~\ref{prop:outside} then gives its original local success bound with constant $\astar$. Conditional on the entire spectral support, choose the first present incident face in a fixed ordering, when one exists. Its three retention variables are unconditioned and independent, so it survives with probability $\rho^3$. Consequently, for every such exterior event $H$,
+\[
+ \Prob(y_v^{(\rho)}=1,H)\ge\astar\rho^3\Prob(x_v=1,H).
+\]
+Here $y_v^{(\rho)}\le x_v$. Within a disjoint wheel family, all previously revealed thinned markers and all other original center conditions are exterior to the current wheel. Thus Lemma~\ref{lem:bernoulli} applies with $\astar\rho^3$ in place of $\astar$. The seven-color H\"older argument and $\sum_v y_v^{(\rho)}\le3K_R^{(\rho)}$ prove the finite bounds.
+
+The spectral lower-tail theorem of \cite[Theorem~1.1]{GPS}, the vanishing empty atom, and Lemma~\ref{lem:boundary} give
+\[
+ \lim_{u\downarrow0}\limsup_{R\to\infty}\Prob(X_R\le u\,m(R))=0.
+\]

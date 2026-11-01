@@ -1,0 +1,152 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w349",
+  "bundle_slug": "p0017-weighted-covariance-adversary-001",
+  "entries": [
+    {
+      "key": "weighted-counterexample",
+      "namespace": "probability.stochastic_localization",
+      "logical_name": "exponential-posterior-expectation-factorization-counterexample",
+      "kind": "concept",
+      "title": "DRAFT: dependent covariance and variance in a log-concave posterior",
+      "statement": "DRAFT independent audit, pending w350 check. Let X=Exp(1)-1, s>0 and Z an independent N(0,1), Y=sX+sqrt(s)Z, A=Var(X|Y), and f(x)=x. Then X is isotropic log-concave in dimension one, E|Cov(f(X),X|Y)|^2=E A^2, and (E||Cov(X|Y)||_op)(E Var(f(X)|Y))=(E A)^2. Bayes' posterior is N((Y-1)/s,1/s) truncated below -1. Its variance is bounded, continuous and nonconstant, so E A^2>(E A)^2. Consequently the unweighted expectation-factorization shortcut is false in this class. This does not refute the variance-weighted bound or KLS.",
+      "proof_text": null,
+      "assumptions": [
+        "s>0",
+        "fixed f=x",
+        "independent standard Gaussian observation noise"
+      ],
+      "domain": "probability and functional inequalities",
+      "source": {
+        "source_id": "owner-probability-campaign-w349-20261010:weighted-counterexample",
+        "url": "file:///~/brain_workers/w349/WEIGHTED_GAP.md",
+        "revision": "author-checked-20261010-v1",
+        "license": "owner-own-work (campaign draft; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "weighted-input",
+      "namespace": "probability.stochastic_localization",
+      "logical_name": "unproved-uniform-localization-variance-weighted-input",
+      "kind": "concept",
+      "title": "UNPROVED: uniform variance-weighted localization input",
+      "statement": "UNPROVED SUFFICIENT INPUT, not a theorem. There would exist universal T>0,K<infinity such that for every compactly supported full-dimensional isotropic log-concave mu in every R^n, X~mu independent of Brownian B, mu_t=Law(X|Y_r:0<=r<=t), Y_t=tX+B_t, every smooth fixed f, and a.e. 0<t<T, E|Cov_mu_t(f,X)|^2 <= K E Var_mu_t(f). The same constants must work for all dimensions, measures and functions. Unweighted covariance expectation bounds do not establish this input.",
+      "proof_text": null,
+      "assumptions": [
+        "compact support and full dimension",
+        "isotropic log-concave law",
+        "Brownian observation filtration",
+        "universal quantifiers over f and mu"
+      ],
+      "domain": "probability and functional inequalities",
+      "source": {
+        "source_id": "owner-probability-campaign-w349-20261010:weighted-input",
+        "url": "file:///~/brain_workers/w349/WEIGHTED_GAP.md",
+        "revision": "author-checked-20261010-v1",
+        "license": "owner-own-work (campaign draft; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "conditional-route",
+      "namespace": "probability.stochastic_localization",
+      "logical_name": "conditional-variance-weighted-localization-poincare-reduction",
+      "kind": "concept",
+      "title": "DRAFT: Poincare reduction conditional on a weighted input",
+      "statement": "DRAFT conditional reduction, pending referee check. For compactly supported isotropic log-concave mu and Brownian observation mu_t, assume E|Cov_mu_t(f,X)|^2<=K E Var_mu_t(f) for every smooth f and a.e. 0<t<T. Also use the T-strong-convexity posterior inequality C_P(mu_T)<=1/T. Innovation Ito isometry gives V_f'(t)=-E|Cov_mu_t(f,X)|^2, where V_f(t)=E Var_mu_t(f). Gronwall and E mu_T|grad f|^2=mu|grad f|^2 then give C_P(mu)<=exp(KT)/T. The universal weighted hypothesis is unproved here; this is not a KLS proof.",
+      "proof_text": null,
+      "assumptions": [
+        "T>0, finite K",
+        "the uniform variance-weighted estimate is assumed",
+        "posterior strong-convexity Poincare inequality",
+        "bounded compact-support filtering justification"
+      ],
+      "domain": "probability and functional inequalities",
+      "source": {
+        "source_id": "owner-probability-campaign-w349-20261010:conditional-route",
+        "url": "file:///~/brain_workers/w349/WEIGHTED_GAP.md",
+        "revision": "author-checked-20261010-v1",
+        "license": "owner-own-work (campaign draft; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "tilt-domain",
+      "namespace": "probability.stochastic_localization",
+      "logical_name": "finite-fourth-moments-insufficient-for-exponential-tilts",
+      "kind": "concept",
+      "title": "DRAFT: fourth moments do not guarantee exponential tilt derivatives",
+      "statement": "DRAFT scope correction, pending independent check. Let R have density 5r^(-6) on r>=1, S an independent fair sign, and X=sqrt(3/5)SR. Then E X=0, E X^2=1 and E X^4=9/5, but E exp(zX)=infinity for every real z!=0. Thus isotropy and finite fourth moments alone do not define an exponential tilt average near zero. Require finite Laplace transform on a neighborhood, or define f -> (1/2)E[f(XX^T-I)] algebraically and identify it with a tilt derivative only when tilts exist. This counterexample is not log-concave and does not refute the log-concave target.",
+      "proof_text": null,
+      "assumptions": [
+        "Pareto shape 5",
+        "independent fair sign",
+        "scope is general probability laws with finite fourth moments"
+      ],
+      "domain": "probability and functional inequalities",
+      "source": {
+        "source_id": "owner-probability-campaign-w349-20261010:tilt-domain",
+        "url": "file:///~/brain_workers/w349/PEER_AUDIT.md",
+        "revision": "author-checked-20261010-v1",
+        "license": "owner-own-work (campaign draft; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "tensor-witness",
+      "namespace": "probability.stochastic_localization",
+      "logical_name": "sharp-block-symmetry-binomial-tensor-equality-witness",
+      "kind": "concept",
+      "title": "DRAFT: equality witness for partial tensor symmetrization",
+      "statement": "DRAFT independently derived equality witness, pending w350 check. Let 1<=p<=q, dim H>=2, P_q average permutations of the first q positions in H^(tensor(p+q)), and choose orthonormal binary basis e0,e1. For each coordinate let a be the number of ones in its first p positions. Set T=(-1)^a/binom(q,p-a) if the total number of ones is p, and 0 otherwise. T is separately symmetric in its first p and last q positions. A finite-difference identity gives P_qT=(-1)^p block_swap(T)/binom(q,p), so ||T||/||P_qT||=binom(q,p). Tensoring with a nonzero vector in any auxiliary Hilbert space preserves equality. This witness alone is not an upper-bound proof or a KLS proof.",
+      "proof_text": null,
+      "assumptions": [
+        "ordered-index Hilbert norm",
+        "1<=p<=q",
+        "dim H>=2",
+        "nonzero auxiliary vector when used"
+      ],
+      "domain": "probability and functional inequalities",
+      "source": {
+        "source_id": "owner-probability-campaign-w349-20261010:tensor-witness",
+        "url": "file:///~/brain_workers/w349/PEER_L1_INDEPENDENT.md",
+        "revision": "author-checked-20261010-v1",
+        "license": "owner-own-work (campaign draft; independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "conditional-route",
+      "to_key": "weighted-input",
+      "kind": "depends_on",
+      "rationale": "The reduction assumes this universal weighted estimate and does not derive it."
+    },
+    {
+      "from_key": "weighted-counterexample",
+      "to_key": "weighted-input",
+      "kind": "semantic_association",
+      "rationale": "The counterexample explains why the weighted input cannot be replaced by a product of unweighted expectations."
+    },
+    {
+      "from_key": "weighted-counterexample",
+      "to_existing_logical": "math:probability.core:open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
+      "kind": "semantic_association",
+      "rationale": "The exact counterexample rules out a shortcut in a localization route to the same isotropic log-concave Poincare/Cheeger problem."
+    },
+    {
+      "from_key": "conditional-route",
+      "to_existing_logical": "math:probability.core:open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
+      "kind": "semantic_association",
+      "rationale": "If its universal input is proved, this conditional variance-retention reduction yields the target Poincare bound."
+    },
+    {
+      "from_key": "tensor-witness",
+      "to_existing_logical": "math:probability.core:open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
+      "kind": "semantic_association",
+      "rationale": "The witness checks sharpness of the deterministic tensor-recovery component in the tilt-derivative route; no universal analytic input is supplied."
+    }
+  ]
+}

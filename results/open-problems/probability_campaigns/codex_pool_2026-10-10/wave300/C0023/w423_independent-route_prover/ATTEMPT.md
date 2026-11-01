@@ -1,0 +1,25 @@
+C0023 statement for the independent adversary, before any proof packet is sent.
+
+For each integer d with 3<=d<=10, let E_d={{x,y}:x,y in Z^d, ||x-y||_1=1}. Under P_p, every edge of E_d is independently open with probability p. Let C(0) be the connected component of 0 in the open-edge graph, theta_d(p)=P_p(|C(0)|=infinity), and p_c(d)=inf{p in [0,1]:theta_d(p)>0}. The target is theta_d(p_c(d))=0 for every such d. We use nearest-neighbour Bernoulli BOND percolation; site or dependent models are separate targets.
+
+Current openness on 2026-10-10 is UNKNOWN. The primary historical statement is verified in Duminil-Copin, Sixty years of percolation, arXiv:1712.04651, definitions pp.1-2 and Conjecture 1 p.3. A bounded current search did not verify the secondary 2026 formal-proof claim. No novelty claim or resolution claim is made.
+
+The exact prior attempt C0023-A001 bootstrapped Barsky-Grimmett-Newman's half-space result using finite energy and uniqueness. Its own gaps are infinite half-space susceptibility and gluing across a hyperplane; I do not reuse these as proved inputs. The exact target/dedup-key checks in the named H/I and lean folders found the historical attempted_un label, not a proof receipt. Existing Team O's board did not name C0023. The export's matching card remains an unverified half-space concept. These are bounded searches, not statements that no other local work exists.
+
+Independent route fixed in the initial ATTEMPT.md before reading any peer proof: reverse thinning, finite-volume connectivity witnesses and exact conditional bridge counts. No peer proposed proof has been read. The statement was delivered first to adversary w424 as msg-4fe478d188. Referee w425 receives this complete packet after the checks.
+
+Assume theta_d(p_c)>0 and expose finite origin-to-boundary connection events A_n. L1 gives the exact logarithmic loss under lowering p: integral lambda_n(s)/s ds. L2 shows a bounded loss on one fixed interval would retain a positive one-arm limit below criticality, contradicting the definition of p_c. This is only an analytic reduction until one derives the geometric estimate. It is not a proof mechanism on its own.
+
+The attempted shortcut was to estimate the number of bridges at p_c, then use that endpoint estimate to bound all subsequent damage from thinning. L3 refutes this shortcut in a broader graph class: its explicit series of parallel-path blocks has p_c=1/2, positive critical percolation, a unique infinite critical cluster almost surely, and bounded conditional exponential moments of all orders for its open pivotal counts at p_c. Its integrated loss on every fixed interval below p_c still diverges. Thus even strong endpoint information cannot simply be integrated below the endpoint.
+
+On Z^d, finite energy supplies a positive probability of a specified finite detour, but does not by itself give a uniform detour-length or conditional-independence bound along infinitely many possible bottlenecks. Conditioning on a connection or on an infinite cluster couples the regions; no conditional per-region probabilities are multiplied here. The multiplication in L3 is justified by disjoint block edge sets, and after conditioning by the factorized event that each individual block crosses.
+
+L4 strengthens the geometric formulation: a hypothetical infinite critical lattice cluster must have quenched thinning threshold 1. The retained annealed law is Bernoulli(p_c q), and the simultaneous conditional statement follows by Fubini, countably many rational q and monotonicity. To finish this route one would need a resilience theorem using the actual lattice iid geometry, not just existence, uniqueness, or endpoint pivotal moments.
+
+Single hardest remaining gap: Under theta_d(p_c)>0, derive lattice-specific control of bridge creation over a fixed nonzero interval below p_c, sufficient to keep the integrated conditional pivotal load bounded along some scales. For a separate quenched formulation, derive genuine q<1 survival of a hypothetical critical cluster on a set of configurations of positive probability. Neither result is established here.
+
+The finite identities passed 40 exact checks on 544 configurations. The two-stage retention law passed 8 checks over 10098 joint configurations. A deliberately wrong normalization omitting p failed 40/40 checks. These validate finite calculations and detect a normalization error; they do not certify the infinite-volume target.
+
+Formal proof status: no Lean/Mathlib theorem or kernel receipt is claimed. L1-L4 have author-written full proofs in LEMMAS.md and await w425's independent mathematical verdict. The draft brain entries remain concepts with proof_text null. Submitted, reviewed, ingested and retrievable are tracked separately in SUBMISSION_STATUS.json.
+
+NEXT: Check whether critical-cluster detour geometry controls new bridges created by thinning for every s in one fixed interval [p_c-delta,p_c]; endpoint estimates alone cannot supply this.

@@ -1,0 +1,11 @@
+C0048 remains unsolved by this packet; current openness is UNKNOWN. The exact historical target and interaction normalization are recovered from Duminil-Copin's primary lectures, Conjecture 2, p.93. The old contour route had no proved q=3,d=3 input.
+
+The substantive result is an exact finite free-FK cumulant identity, including the fourth-order variance term, plus a quantitative cubic exclusion lemma and a proved conditional bridge to critical magnetization. The independent-colour entropy special case gives the explicit q=3 exclusion threshold 1/16. The single remaining lattice input is SP(q,d): a physical scalar potential with a positive uniform cubic coefficient and a uniform C1 quartic remainder. It is unproved.
+
+Measured with `python -X utf8 ~/brain_workers/w456/run_checks.py`: 72 exact cases, 7416 spin and 1140 FK configurations; complete identities 0 failures, deliberately omitted variance 40 failures and 2 wrong signs. Checker CPU 0.03125 seconds, wall 0.087190 seconds. Evidence: MEASUREMENTS.md and measurements.json. This measures mathematical diagnostics, not deployed recall quality.
+
+Risk: L1 assumes free boundary and zero field; fixed or wired cluster colours alter the formulas. Finite analyticity supplies no uniform critical remainder. The mean-field potential cannot be substituted for the convex thermodynamic Legendre potential. A source/hash check or exact finite enumeration is not a proof of the parent problem. w457 and appointed referee w458 independently recorded scoped KEEP verdicts for the finite identities and conditional reduction, with scalar q=3 constants checked. Both exclude SP and C0048. Served author/referee model identity is unverified; no theorem promotion is authorized by the packet.
+
+How to apply: independently review REVIEW_PACKET.md, then let the validating coordinator process ~/math-brain-inbox/w456/bundle_001.json under the proof/model gates. It contains six DRAFT definition/concept entries and four explicit dependencies; no theorem promotion or live-store/code edit was made. Submission, review, ingestion and retrieval are recorded separately in BRAIN_PIPELINE.json. The measured hook proposal is ~/primary_directive/hooks1000/proposals/math-w456.jsonl.
+
+NEXT: Review L1--L5 and the exact counterexamples; then control or refute SP(q,d)'s lattice correlation correction for q=d=3.

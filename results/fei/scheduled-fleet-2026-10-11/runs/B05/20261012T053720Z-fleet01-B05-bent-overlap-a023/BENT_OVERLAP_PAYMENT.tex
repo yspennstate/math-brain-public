@@ -1,0 +1,153 @@
+% B05/A023: retained-U payment for fully overlapping bent one-point surgery.
+\section*{A retained-$U$ payment for fully overlapping bent surgery}
+
+All logarithms are base two.  For a Boolean function $f$ write
+\[
+ U(f)=\sum_S\widehat f(S)^2
+ \log\frac{\sum_{T\supseteq S}\widehat f(T)^2}{\widehat f(S)^2},
+\]
+with the usual zero-mass convention.
+
+\subsection*{Exact shared-variable switch identity}
+
+Let $g,h:\{-1,1\}^n\to\{-1,1\}$ be arbitrary Boolean functions on the
+same physical variables.  Set
+\[
+ a_T=\widehat g(T),\qquad b_T=\widehat h(T),\qquad d_T=b_T-a_T,
+\]
+and define their upper masses
+\[
+ A_T=\sum_{R\supseteq T}a_R^2,\quad
+ B_T=\sum_{R\supseteq T}b_R^2,\quad
+ D_T=\sum_{R\supseteq T}d_R^2.
+\]
+Let $z$ be a fresh $d$-bit selector block, let $p=2^{-d}$, and put
+\[
+ F(z,x)=\begin{cases}h(x),&z=z_\star,\\g(x),&z\ne z_\star.\end{cases}       \tag{1}
+\]
+Then
+\begin{align}
+ U(F)={}&\sum_T c_T^2\log\frac{(1-p)A_T+pB_T}{c_T^2}
+ +p(1-p)\sum_Td_T^2\log\frac{D_T}{d_T^2} \\
+ &+\left(\frac{pd}{2}-p^2d\right)\sum_Td_T^2,                 \tag{2}
+\end{align}
+where $c_T=(1-p)a_T+pb_T$.
+
+Indeed, the control-empty coefficient is $c_T$, while every nonempty
+control coefficient has magnitude $p|d_T|$.  At control frequency $Q$ the
+upper mass is
+\[
+ \begin{cases}
+ (1-p)A_T+pB_T,&Q=\varnothing,\\
+ p2^{-|Q|}D_T,&Q\ne\varnothing.
+ \end{cases}
+\]
+Summing $d-|Q|$ over nonempty $Q$ gives $d/(2p)-d$, proving (2).  No
+orthogonality or disjointness is used.
+
+The complete retained-child charge is
+\[
+ J=U(F)-(1-p)U(g)-pU(h).                                  \tag{3}
+\]
+If $\delta=\Pr[g\ne h]$, then each selector coordinate is physically
+pivotal with probability $2p\delta$, so
+\[
+ I_{\rm ctl}(F)=2pd\delta.                                \tag{4}
+\]
+
+\subsection*{Bent one-point surgery}
+
+\paragraph{Theorem.}
+Let $k\ge8$ be even, let $g$ be any bent Boolean function on $k$ bits, and
+let $h$ be obtained from $g$ by flipping its value at one input point.
+For every $d\ge1$, the shared-variable switch (1) satisfies
+\[
+ \boxed{J\le71 I_{\rm ctl}(F).}                           \tag{5}
+\]
+The bound is independent of $k$, $d$, the bent function, and the flipped
+point.  The two children share every physical data variable and have
+completely overlapping Fourier supports.
+
+\paragraph{Proof.}
+Put $N=2^k$, $\alpha=N^{-1/2}$ and $\delta=N^{-1}=\alpha^2$.  Bentness gives
+$a_T=\alpha s_T$ with $s_T\in\{-1,1\}$.  A one-point flip gives
+\[
+ b_T-a_T=-2\delta t_T,qquad t_T\in\{-1,1\}.              \tag{6}
+\]
+In particular $\Pr[g\ne h]=\delta$.
+
+For each $T$, let $L_T=k-|T|$ and introduce the dimensionless quantities
+\[
+ \frac{B_T}{A_T}=1+u_T,qquad
+ \frac{b_T^2}{\delta}=1+v_T,qquad
+ \frac{c_T^2}{\delta}=1+w_T.                             \tag{7}
+\]
+Since $A_T=2^{-|T|}$ and the upper-cone average of the signs $s_Rt_R$ lies
+in $[-1,1]$,
+\[
+ |u_T|,|v_T|\le\frac{17}{4}\alpha,qquad
+ |w_T|\le\frac{33}{8}p\alpha                            \tag{8}
+\]
+for $k\ge8$.  Moreover
+\[
+ v_T=-4\alpha s_Tt_T+4\delta,qquad
+ w_T=-4p\alpha s_Tt_T+4p^2\delta,                        \tag{9}
+\]
+so
+\[
+ pv_T-w_T=4p(1-p)\delta.                                 \tag{10}
+\]
+
+The $L_T$ terms in (2)--(3) cancel exactly, atom by atom.  After converting
+temporarily to natural logarithms, the remaining scalar term is
+\[
+ \Phi_p(u,v,w)
+ =(1+w)\log\frac{1+pu}{1+w}
+ -p(1+v)\log\frac{1+u}{1+v}.                             \tag{11}
+\]
+Thus
+\[
+ J=\frac{\delta}{\ln2}\sum_T\Phi_p(u_T,v_T,w_T)
+ +(1-2p)I_{\rm ctl}(F).                                  \tag{12}
+\]
+
+At the origin, $\Phi_p=0$ and
+\[
+ \nabla\Phi_p(0,0,0)=(0,p,-1).
+\]
+On the box (8), using $p\le1/2$ and $\alpha\le1/16$, direct
+differentiation gives
+\[
+ |\Phi_{uu}|\le4p,quad |\Phi_{uv}|\le\tfrac32p,quad
+ |\Phi_{uw}|\le\tfrac65p,quad |\Phi_{vv}|\le\tfrac32p,quad
+ |\Phi_{ww}|\le\tfrac65,quad \Phi_{vw}=0.              \tag{13}
+\]
+Taylor's theorem with integral remainder, (8), and (10) therefore give
+\begin{align*}
+ \Phi_p(u_T,v_T,w_T)
+ &\le4p\delta+\frac12p\delta\left[
+ 4\left(\frac{17}{4}\right)^2
+ +3\left(\frac{17}{4}\right)^2
+ +\frac65\frac{17}{4}\frac{33}{8}
+ +\frac32\left(\frac{17}{4}\right)^2
+ +\frac35\left(\frac{33}{8}\right)^2\right]\\
+ &<97p\delta.                                             \tag{14}
+\end{align*}
+There are $N=1/\delta$ Fourier atoms.  Hence (12), $97/\ln2<140$, and
+$I_{\rm ctl}=2pd\delta$ imply
+\[
+ J\le140p\delta+I_{\rm ctl}
+ \le\left(\frac{70}{d}+1\right)I_{\rm ctl}
+ \le71I_{\rm ctl},
+\]
+which proves (5).\qed
+
+\paragraph{Payment scope.}
+The selector stopping rule is physical, adaptive, and finite: reveal the
+$d$ fresh controls until an inactive bit appears, otherwise reach the
+flipped child.  Equation (3) retains the two child packets with their exact
+physical probabilities, and (5) spends each selector influence once.  The
+theorem removes disjointness and Fourier orthogonality for an unbounded
+fully overlapping family.  It does not cover repeated coherent surgeries
+through an arbitrary hierarchy; controlling the accumulation of several
+changing overlap patterns remains open.

@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B09",
+  "run_id": "20260925T054042Z-fleet02-B09-pass05",
+  "pass_id": "B09-pass05",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "pdf_blob": "8be3aae36ecad7a9dc9b7c95978aad09499f32d0",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "physical_source_lines": 675,
+  "terminal_newline_extra_split_field": true,
+  "literal_verdict": "GAP_LOCAL_REPAIRS; no theorem-level counterexample found",
+  "repaired_chain_verdict": "PASS in this reconstruction; not formal certification",
+  "defects": [
+    {
+      "id": "C04",
+      "lines": "41",
+      "page": 1,
+      "status": "FALSE",
+      "impact": "expository",
+      "repair": "add no-pivot qualifier"
+    },
+    {
+      "id": "C07",
+      "lines": "62",
+      "page": 1,
+      "status": "UNCHECKED",
+      "impact": "literature metadata only"
+    },
+    {
+      "id": "C05",
+      "lines": "65",
+      "page": 1,
+      "status": "FALSE",
+      "impact": "expository",
+      "repair": "say upper envelope, not singularity"
+    },
+    {
+      "id": "B09-C10",
+      "lines": "148",
+      "page": 3,
+      "status": "GAP",
+      "impact": "local proof text; no downstream constant change",
+      "repair": "handle j>min(matrix dimensions) separately by B=T before SVD/kernel argument"
+    },
+    {
+      "id": "C06",
+      "lines": "148",
+      "page": 3,
+      "status": "FALSE_WORDING",
+      "impact": "none",
+      "repair": "replace Both follow with These assertions follow"
+    },
+    {
+      "id": "L222",
+      "lines": "222",
+      "page": 5,
+      "status": "PASS_B09_DISAGREEMENT_PRESERVED",
+      "impact": "none",
+      "note": "read at most one as factor value <=1; any number of zero-beta factors may be dropped"
+    },
+    {
+      "id": "C02",
+      "lines": "319-321",
+      "page": 7,
+      "status": "GAP",
+      "impact": "load-bearing but zero-loss repair",
+      "repair": "insert outer Jensen/Cauchy |EF|^2<=E|F|^2"
+    },
+    {
+      "id": "C08",
+      "lines": "398",
+      "page": 9,
+      "status": "GAP",
+      "impact": "density representative only",
+      "repair": "formula a.e./z!=v; define representative at v"
+    },
+    {
+      "id": "C01",
+      "lines": "412",
+      "page": 9,
+      "status": "FALSE_LITERAL",
+      "impact": "local chart wording",
+      "repair": "slit-plane open-angle chart; null seam"
+    },
+    {
+      "id": "C03",
+      "lines": "441",
+      "page": 10,
+      "status": "GAP",
+      "impact": "critical-level closure",
+      "repair": "q=v is two affine lines, null under joint density"
+    },
+    {
+      "id": "C09",
+      "lines": "613",
+      "page": 13,
+      "status": "GAP",
+      "impact": "definition on null event",
+      "repair": "define J(0)=+infinity or establish atomlessness first"
+    },
+    {
+      "id": "BIB",
+      "lines": "648-674",
+      "page": 14,
+      "status": "UNCHECKED",
+      "impact": "non-load-bearing bibliography/priority metadata"
+    }
+  ],
+  "b09_lens": "PASS after C02; kernel normalization, measurability, Fubini, L2 approximate identity, Young domination, DCT, and original-coordinate factorization independently checked",
+  "pdf_visual_equivalence": "UNCHECKED by B09; exact PDF blob authenticated but private PDF page-image route unavailable",
+  "lower_threshold_research": false,
+  "full_brain_connected": false
+}

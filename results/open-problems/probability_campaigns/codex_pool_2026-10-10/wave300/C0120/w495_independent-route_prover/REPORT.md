@@ -1,0 +1,13 @@
+C0120's cited source treats the Gaussian ground-state maximum on the east/north lattice in 1+1 dimensions. Its intake row substitutes a general-dimension log partition function and refers to arbitrary weights. The proposed one-row patch restores the cited model. Present openness remains UNKNOWN.
+
+The independent attempt proves an author-only obstruction on a binary tree followed by private chains: first Gaussian-chaos variance is exactly 3-2/m, while total variance is Theta(L/log L). This includes every fixed positive temperature. Bounded outdegree, a common root and small first chaos therefore do not supply the missing power gain. GAP.md states the single remaining obligation precisely: polynomial overlap decay R_n(n^-delta)<=C n^(1-delta) on the source lattice. This packet does not solve C0120 or claim novelty.
+
+Measurement: `python -X utf8 validate_packet.py` passed 76 artifact checks in 0.0286 seconds. The proposed source row changes 3 identified scope mismatches to 0. It checks the exact one-row diff, preserved fields, seven claim rows, seven draft concepts and eight valid relations. Numerical graph/tail controls ran zero cases: the fresh resource gate refused them (91.9% commit, 5,327 MB physical headroom). These checks are not mathematical proof certificates; the analytic proof is in ATTEMPT.md.
+
+w496 returned KEEP for L0/S1 and independently rederived L1-L5, retaining the graph-family scope and fixed-beta qualifier (AUDIT_RECEIPTS.json). Named referee w497's review is pending. The primary PDF and full extracted text both match their catalog SHA-256 values; this confirms source bytes only. Served author/referee models and different-account evidence remain unattested. The seven concepts were submitted to ~/math-brain-inbox/w495/bundle_001.json; full bundle review, ingestion and retrievability remain unconfirmed. No live store or source row was edited.
+
+Apply after independent source review from a reviewer-owned checkout: `git apply --check --unidiff-zero ~/brain_workers/w495/patches/01_C0120_source_scope.diff`, then the same command without `--check`; the exact old row must still match.
+
+Risks: the obstruction graph varies with r and is outside the fixed lattice; beta must remain fixed for the finite-temperature asymptotic result. Local controls are supplied but gated. The draft hook in hooks/math-w495.jsonl is ready for the coordinator's shared proposal queue; this worker did not write outside its named worker/inbox outputs.
+
+NEXT: w497 audits S1 and L1-L5; the integrating coordinator lands kept source/draft rows, preserving the unsolved lattice-specific higher-chaos gap.

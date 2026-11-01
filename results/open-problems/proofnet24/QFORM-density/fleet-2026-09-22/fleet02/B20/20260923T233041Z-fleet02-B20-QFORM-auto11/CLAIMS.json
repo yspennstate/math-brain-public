@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "fleet02",
+  "slot": "B20",
+  "run_id": "20260923T233041Z-fleet02-B20-QFORM-auto11",
+  "full_target": "OPEN",
+  "continuity": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-R39-DIFFUSE-AGGREGATE-E3-v1",
+      "status": "PROVED_SUPPORTING_IMPLICATION",
+      "statement": "In the inherited r39 physical-pair diffuse branch, with S>S0=1/(480 sqrt(7626)) and ell_j<=3/4, define Zagg=sum_j S^2(1-ell_j)d_j^2. Some literal physical split has Z3>=27 Zagg/256. Hence Zagg>=2^-50 pays the full law by ||p_Q||_infty<=2048 sqrt(3)e^(1/3)<4950.573."
+    },
+    {
+      "id": "QFORM-R39-DIFFUSE-COMMONPLANE-RANK8-v1",
+      "status": "PROVED_STRUCTURAL_REDUCTION",
+      "statement": "If instead Zagg<2^-50, then A[L,L]=Delta+V^T K V+E with K symmetric 2x2 and ||E||op<3/256. Combining with fleet03/B20 r39 gives A=diag(0_H,Delta)+K8+E*, rank K8<=8, ||E*||op<1/32, and s3(diag(0_H,Delta)+K8)>31/32. After conditioning H\\T, the residual quadratic matrix is physical diagonal plus rank<=4 plus retained tail <3/256."
+    },
+    {
+      "id": "QFORM-DIFFUSE-ZAGG-POSITIVITY-FALSE-v1",
+      "status": "REFUTED_INTERMEDIATE_CLAIM",
+      "statement": "The target plus diffuse pair area does not force Zagg>0: A=[[0,V],[V^T,0]] with two flat orthonormal Walsh rows has nonzero spectrum {1,1,-1,-1}, all ell_j=2/m, and Zagg=0. This family is not a QFORM counterexample; pinned Theorem H gives ||p_Q||_infty<=4."
+    }
+  ],
+  "first_unpaid_implication": "QFORM-R39-COLOOP-OR-ALIGNED-RANK8-RETAINEDTAIL-PAYMENT-v1",
+  "pinned_source_application": [
+    "diffuse D2 branch retains the full-law H_1/2(Q)<265.625 inequality",
+    "for the selected physical split, e5>=1/1024 gives ||p_Q||_infty<23.317 by D5",
+    "the target-valid Zagg=0 Walsh obstruction is paid by pinned Theorem H with ||p_Q||_infty<=4"
+  ],
+  "partner": {
+    "account": "fleet03",
+    "slot": "B20",
+    "run_id": "20260923T214857Z-fleet03-B20-QFORM-r39",
+    "commit": "5d9892edb6f33beda5ce5e10c4482fcc5fe994a8",
+    "applied_exact_expressions": [
+      "epsilon_H=(3+122 sqrt(10))2^-20",
+      "||E39||op<epsilon_H+1/64",
+      "rank K6<=6",
+      "epsilon_H<1/2048"
+    ]
+  },
+  "corrections_preserved": [
+    "no law-uniform pointwise quadratic-phase decay",
+    "no worst-fibre supremum",
+    "no arbitrary-joint coarea substitution",
+    "no conditional-cap-as-independence",
+    "no post-rotation independence",
+    "no deletion of nonzero small coefficient tails",
+    "no one-good-minor inference from aggregate volume"
+  ]
+}

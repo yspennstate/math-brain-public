@@ -1,0 +1,89 @@
+\section*{A sharp constant-child exclusion for critical FEI sources}
+
+All Fourier entropies are in bits.  For a nonconstant Boolean function $f$,
+write $R(f)=H(f)/I(f)$.  Call $f$ restriction-critical if every nonconstant
+physical restriction $g$ of $f$ satisfies $R(g)\le R(f)$.
+
+\subsection*{Source identity}
+
+Let one physical coordinate $x$ split $K$ into a constant child $c\in
+\{-1,1\}$ and a Boolean child $D$.  Multiplication by $c$ does not change
+any squared Fourier coefficient, so assume $c=1$ and put
+$p=\Pr[D=-1]$.  The independently reviewed scalar packet identity and the
+sharp bias calculation give
+\begin{align}
+ H(K)&=\frac12H(D)+p\,c(p), &
+ I(K)&=\frac12I(D)+p,                                      \tag{1}\\
+ c(p)&\le C_*, &
+ 4.872321<C_*&<4.872322.                                   \tag{2}
+\end{align}
+Here
+\[
+c(p)=\frac1p\left[
+2(1-p)^2\log_2\frac1{1-p}+2p^2\log_2\frac1p+4p(1-p)
+-(1-2p)^2\log_2\frac1{|1-2p|}\right],                     \tag{3}
+\]
+with continuous endpoint conventions.  Equation (1) retains the full child
+entropy and influence.  There is no independence assumption beyond the one
+fresh physical selector already present in the restriction split.
+
+For completeness, (2) is an all-dimensional one-variable statement.  With
+$A(p)=(\ln2)p c(p)$, the sign of $c'(p)$ is the sign of
+\[
+G(p)=2(1-p^2)\ln(1-p)-2p^2\ln p-4p^2\ln2
+ -(1-4p^2)\ln|1-2p|,                                      \tag{4}
+\]
+and
+\[
+G'(p)=4p\ln\frac{(1-2p)^2}{4p(1-p)}.                       \tag{5}
+\]
+The derivative changes sign only at
+$\alpha=(1-1/\sqrt2)/2$ and $\beta=(1+1/\sqrt2)/2$.
+Together with $G(0+)=0$, $G(1/2)=-2\ln2$, and
+$G(1-)=-4\ln2$, this gives the unique maximizer.  The source-bound rational
+interval certificate brackets it in $(0.22944127,0.22944128)$ and proves the
+upper bound in (2).
+
+\subsection*{Cross-route substitution}
+
+Assume first that $D$ is nonconstant.  Put $R=R(K)$.  Restriction-criticality
+at the physical child gives
+\[
+ H(D)\le R I(D).                                             \tag{6}
+\]
+Substituting (1)--(2) and (6) into the defining equality
+$R I(K)=H(K)$ yields
+\[
+ R\left(\frac12 I(D)+p\right)
+ =\frac12H(D)+pc(p)
+ \le \frac R2 I(D)+C_*p.                                    \tag{7}
+\]
+Since $D$ is not the constant $1$, $p>0$.  Cancelling the child term and
+dividing by $p$ gives
+\[
+ \boxed{R(K)\le C_*<4.872322.}                              \tag{8}
+\]
+If both children are constant, relevance makes $K$ a signed dictator and
+$H(K)=0$, so (8) is again true.
+
+Thus every restriction-critical Boolean source with ratio at least
+$4.872322$ has no relevant coordinate with a constant child.  Combining this
+with the critical-prime descent reduces any hypothetical source above that
+threshold to a tensor-prime source whose every codimension-one physical face
+is nonconstant.
+
+\subsection*{Debt paid and debt remaining}
+
+The earlier critical-pruning route asked for a universal bound on
+$\min_i\Delta_iH/I_i$.  The substitution pays that obligation completely on
+the constant-child stratum: such a coordinate cannot occur in a critical
+source above $C_*$.  It also excludes every sparse-activation outer control
+from a critical endpoint above $C_*$, while retaining its active child's full
+entropy and influence.
+
+The exact remaining class has two nonconstant children at every relevant
+coordinate.  Addressing, bent splices, shared-variable interference, and
+general near-tensor surgeries may lie in that class.  No estimate for them is
+claimed.  In particular, (8) is a structural restriction on near-extremizers,
+not a proof that full FEI has constant $C_*$.
+

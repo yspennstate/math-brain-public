@@ -1,0 +1,12 @@
+BT-biased-thresholds numeric summary (2026-10-12). Float evidence unless marked exact.
+- search_small n<=5 (exhaustive monotone LTFs, weights<=9, optimized biases): sup H+/Delta = 7.77078 (AND2/OR2 limit).
+- scan_random seed 7: 4749 random LTFs n=5..11, best 7.7707 (AND2/OR2 limit).
+- scan_sym: symmetric thresholds m<=40, best 7.768 (m=2) decreasing to 7.732 (m=40), OR at p=0.001; precision verified.
+- scan_twogroup: two-weight thresholds groups up to 12+12, optimized biases: best 7.7704 (AND2 limit); majority uniform ratios 4.0, 3.60, 3.37, 3.24 (n=3,9,21,41).
+- scan_credit: 19,737 random n<=10: max alpha TC/I = 0.302, max (VlnV-credit)/I = 0.418.
+- group_credit: 317k exchangeable-group configs: alpha TC/I <= 0.281, credit excess <= 0.84 (AND_k, q->1 limit).
+- tc_chain: 81,414 configs: TC <= 0.89 sum_i c_i (1-q_i) (OR-type extremal).
+- credit counterexample T_s (exact for s=4,8,10; mpmath beyond): (VlnV-credit)/I = -0.1874, 0.2366, 0.3656 (s=4,8,10), 0.629, 1.003, 1.365, 1.721 (s=16,32,64,128); alpha TC/I = 0.311..0.722; H+/Delta ~ 2.04.
+- gibbs_bound / gibbs_ld on T_s (s=4,8,12): paper-normalizer B/I 5.15,5.44,5.62; exact-normalizer 1.351,1.286,1.238; level-dependent 0.631,0.671,0.683; true E/I 0.622,0.662,0.674.
+- scan_lcr: 2277 random LTFs n<=10: max LCR excess/I = 0.744; T_s: -0.77,-0.73,-0.71.
+- verify_tools / verify_caseB: identities to 3e-15; Case B inequalities never violated in 9135 cases.

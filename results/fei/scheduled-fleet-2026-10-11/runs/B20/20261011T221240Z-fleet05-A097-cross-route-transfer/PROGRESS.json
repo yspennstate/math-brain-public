@@ -1,0 +1,76 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T221240Z-fleet05-A097-cross-route-transfer",
+  "stream": "B20",
+  "packet_id": "A097",
+  "gap_id": "G-R-MISMATCH",
+  "attempt_id": "A097-CROSS-ROUTE-COMPATIBLE-REFERENCE-1",
+  "method": "Reverse compatible reference lift plus exact joint/conditional KL factorization",
+  "mathematical_delta": "Constructed complete root reference from prescribed terminal witnesses, paid all physical channel/history information by (2/ln2) removed influence, and isolated exact posterior KL correction capped by terminal slack; universal erasure payment remains open",
+  "deliverable_status": "COMPLETE_LOCAL",
+  "mathematical_status": "TRANSFER_THEOREM_AUTHOR_PROVED; UNIVERSAL_FEI_OPEN; INDEPENDENT_REVIEW_PENDING",
+  "claim_versions_used": [
+    {
+      "claim_id": "A011-BOUNDARY-RETAINING-SELECTOR-TRANSCRIPT",
+      "version": 1,
+      "source_run": "20261011T213831Z-fleet05-A011-representation-existence",
+      "usage": "Source interface reconstructed; no independent acceptance assumed"
+    },
+    {
+      "claim_id": "A037-PHYSICAL-SPECTRAL-COMMON-LIFT",
+      "version": 1,
+      "source_run": "20261011T220010Z-fleet05-A037-conditional-credit-ledger",
+      "usage": "Function-specific common lift reconstructed and extended to terminal references"
+    },
+    {
+      "claim_id": "A037-CONDITIONAL-CREDIT-CONSERVATION",
+      "version": 1,
+      "source_run": "20261011T220010Z-fleet05-A037-conditional-credit-ledger",
+      "usage": "KL conservation reconstructed with complete leaf references and explicit posterior correction"
+    },
+    {
+      "claim_id": "A061-FAIR-TREE-PROCESS",
+      "version": 1,
+      "source_run": "20261011T214516Z-fleet05-A061-entropy-process",
+      "usage": "Physical reach weighting, influence conservation and terminal telescope reconstructed"
+    },
+    {
+      "claim_id": "C006",
+      "version": "supplement 2026-10-11",
+      "usage": "Uniform block information <=(2/ln2)I_A; full proof supplied"
+    }
+  ],
+  "claims_created_or_changed": [
+    "A097-COMPATIBLE-LEAF-REFERENCE-TRANSFER@1"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "CROSS_ROUTE_SUBSTITUTION.tex",
+    "TRANSFER_HYPOTHESIS_CHECK.json",
+    "FROZEN_SPEC.json",
+    "BLOCK_FROZEN_SPEC.json",
+    "SPEC_CORRECTIONS.md",
+    "code/check_transfer.py",
+    "code/check_blocks.py",
+    "out/EXACT_RESULTS.json",
+    "out/BLOCK_RESULTS.json",
+    "out/SOURCE_RECEIPTS.json"
+  ],
+  "next_consumers": [
+    "A028",
+    "A039",
+    "A064",
+    "A090",
+    "A094",
+    "B20"
+  ],
+  "next_action": "Insert the actual terminal witness laws on the sparse activated bent-defect control-first tree into the compatible lift, then bound sum pi(B-kappa) using the single removed-influence budget",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "No universal erasure-minus-credit payment or universal bounded-cost terminal tree is proved",
+    "B20 STREAM_NOTES.md absent at supplied path; independent review, supervisor copy and mirror verification pending"
+  ],
+  "packet_ids": [
+    "A097"
+  ]
+}

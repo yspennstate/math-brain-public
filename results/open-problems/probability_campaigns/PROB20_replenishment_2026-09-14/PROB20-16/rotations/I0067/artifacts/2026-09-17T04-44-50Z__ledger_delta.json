@@ -1,0 +1,45 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "I0067",
+  "report_kind": "THIRD_STUCK_HANDOFF_ROTATION",
+  "input_snapshot_sha": "5adb5edbdf9fd7dec128cd6911c1553310243271",
+  "pre_rotation_master_sha": "dedfc7674194fbef3623312d76b18a763497449e",
+  "previous_report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/I0067/runs/2026-09-17/2026-09-17T03-38-23Z__report.md",
+  "previous_report_commit": "4718a1828af52fc83198b220acda00c2e74a1ca4",
+  "current_report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/I0067/runs/2026-09-17/2026-09-17T04-44-50Z__report.md",
+  "current_report_creation_commit": "dc20aa77a606adf4d638b726049fd5565de98614",
+  "source": "Antonio Agresti and Mark Veraar (2025), Nonlinear SPDEs and Maximal Regularity: An Extended Survey, arXiv:2501.18561v5 / NoDEA 32 (2025), Article 123, Problem 10",
+  "frozen_metric": "E_endpoint in {0,1}",
+  "metric_before": 0,
+  "metric_after": 0,
+  "unchanged_count": 5,
+  "stuck_recovery_cycles_used": 2,
+  "third_stuck_rotation_triggered": true,
+  "methods_tried": [22, 27, 23],
+  "method_outcomes": {
+    "B22": "All prior routes converge to one missing module: non-autonomous/random generalized Stokes-Hodge endpoint tent-space stability plus the critical incompressible bilinear map; another restricted lemma would not attack it.",
+    "B27": "Quantifier swap explains why constant-transport and coefficient-adapted moving-frame endpoint results are only restricted subclasses; the source needs a general coefficient-class theorem or a source-valid negative witness.",
+    "B23": "Assuming the -1/2 barrier is genuine did not produce a certified obstruction: Piola structure, critical first-Picard scaling, determinant-one shear geometry and parabolic-Dini oscillation defeat the obvious failure mechanisms."
+  },
+  "mathematical_status": "PARTIAL_HANDOFF_RELEASED",
+  "source_status": "A bounded fresh check on 2026-09-17 found no theorem or counterexample deciding Agresti-Veraar Problem 10 for the arbitrary source-valid nonzero smooth transport coefficient class at smoothness <= -1/2. Agresti arXiv:2607.15140 (2026-07-16) concerns high-probability global smoothness for suitably chosen transport noise from subcritical positive-smoothness data and does not close the endpoint. Negative search is not proof of novelty or exhaustive openness.",
+  "history_gaps": [
+    "The deployment text names predecessor path 2026-09-16T23-38-00Z__handoff.md, but direct fetch at commit 6ccbfad7a7fbcc7dbd839e38e00f2c6f3961afda returned 404. The actual predecessor handoff body was recovered at the same creation commit as 2026-09-16T23-47-00Z__report.md, blob 239d4eb82a46f311727f9bff7e53d42106549042."
+  ],
+  "audit_refs": [],
+  "artifact_refs": [
+    "operations/claims/RS-2026-DC35.md @ dc99adfe5fdd338d902566fec84223de0355dcf4, blob 5ee4127eaee3388075ce927eb61e50e9dfad3e53"
+  ],
+  "successor": {
+    "target_id": "RS-2026-DC35",
+    "category": "HARD_OUTSIDE",
+    "source": "Chiara Meroni, Directional Convexity (problems 34 and 35), Randomstrasse 101, posted 2026-02-23, updated 2026-06-05, Open Problem 35",
+    "claim_path": "operations/claims/RS-2026-DC35.md",
+    "claim_creation_commit": "dc99adfe5fdd338d902566fec84223de0355dcf4",
+    "claim_blob": "5ee4127eaee3388075ce927eb61e50e9dfad3e53",
+    "frozen_metric": "E_characterization in {0,1}",
+    "metric_initial": 0,
+    "admission_status": "ADMITTED_ACTIVE",
+    "current_status_check": "Proposer page still labels Open Problem 35 and was updated 2026-06-05. Bounded searches through 2026-09-17 found no general necessary-and-sufficient characterization; prior repo screens were pending/non-owning."
+  }
+}

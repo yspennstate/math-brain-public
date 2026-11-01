@@ -1,0 +1,46 @@
+{
+  "slot": "NM13-01",
+  "parent": "T08",
+  "source": "Justin Salez, arXiv:2508.21055v1, Problem 2.3",
+  "source_convention": "rate-one continuous-time SRW, P_t = exp(t(T-I))",
+  "status_before": "PARTIAL / OPEN",
+  "status_after": "PARTIAL / OPEN",
+  "source_metric": {
+    "kind": "proved theorem scope inside the source class",
+    "before": "NM13-01 had line-graph, truncation, twisted finite-fiber, strong-square, and incidence-strong non-LRE cutoff classes; P26 separately had exact-distance-two cutoff on suitable Ramanujan high-girth bases.",
+    "after": "Adds every fixed pure exact-distance-k graph, k>=3, of any fixed-degree non-bipartite vertex-transitive Ramanujan family with girth tending to infinity. The source continuous-time walk has an explicit Gaussian profile and Theta(sqrt(log n)) window; these output graphs are spectral expanders but fail every fixed LRE constant.",
+    "general_conjecture": "OPEN"
+  },
+  "new_theorem": {
+    "class": "Y_n^[k]: vertices of G_n, edges exactly at G_n-distance k, fixed k>=3",
+    "hypotheses": "G_n fixed d>=3 regular, connected, non-bipartite, vertex-transitive, Ramanujan, girth(G_n)->infinity",
+    "output_degree": "D_k=d(d-1)^(k-1)",
+    "speed": "v_{d,k}=k-[2(d-1)/(d(d-2))](1-(d-1)^(-k))",
+    "second_moment": "a_{d,k}=E[xi^2] for xi=k-2J with the explicit tree-shell law in the report",
+    "cutoff_center": "T_n=log_{d-1}|V(G_n)|/v_{d,k}",
+    "window": "Theta(sqrt(log |V(G_n)|))",
+    "profile": "Phi(-z v_{d,k}^{3/2}/sqrt(a_{d,k})) at T_n+z sqrt(log_{d-1} n)",
+    "explicit_d6_k3": "degree 150; center (75/194)log_5 n; profile coefficient squared 7301384/3256875; absolute output spectral gap at least 1-3/(5 sqrt(5))"
+  },
+  "mechanism_progress": "Proved exact spherical-power radialization K_k^m=sum_r P(R_m=r)K_r and its Poissonized continuous-time form. Separately proved canonical stabilizer-orbit lumping for every vertex-transitive graph: the full point-start TV curve, likelihood ratio, every f-divergence, and information varentropy are exactly those of the stabilizer-orbit quotient chain.",
+  "obstruction_removed": "The previous need to guess an external factor/conditional decomposition is removed: transitivity itself supplies a canonical exact information-preserving quotient. The quotient has gap at least the original gap, at most d outgoing orbit types per state, transition probabilities in multiples of 1/d, and adjacent stationary-mass ratios in [1/d,d].",
+  "remaining_obstruction": "The stabilizer quotient can still have rank of order n (in particular for a regular action), so transitivity plus a spectral gap has not yet been converted into quotient varentropy concentration. A general proof must control this quotient dynamics, not raw ambient heat-kernel/NBRW chi-square.",
+  "partner_boundary": "P26's newest checked report proves a shell/Green transfer and the pure exact-distance-two case. This run does not duplicate k=2; the new source-level class is k>=3 and the quotient reduction is transitivity-specific.",
+  "sanity_check": {
+    "script": "2026-09-20T05-00-20Z__exact_distance_k_orbit_checker.py",
+    "output": "2026-09-20T05-00-20Z__exact_distance_k_orbit_checker.out",
+    "result": "ALL_EXACT_CHECKS_PASS",
+    "scope": "exact polynomial radial-mixture identities for d in {3,4,6,8}, k in {2,3,4}, m<=5; exact d=6,k=3 constants; exact full-vs-orbit TV equality on Q3"
+  },
+  "literature_check_2026_09_20": "Salez Problem 2.3 and source CT convention rechecked at arXiv:2508.21055v1. Altschuler arXiv:2609.14945v1 (2026-09-14) proves fixed-degree LRE cutoff and explicitly places LRE strictly between Ramanujan and spectral expansion. Pedrotti-Salez arXiv:2607.05345 (2026-07-06) supplies a local-product cutoff mechanism, not a transitivity+spectral-gap theorem. Bounded searches did not locate the exact pure distance-k>=3 cutoff theorem; novelty remains UNVERIFIED.",
+  "publication_novelty": "UNVERIFIED",
+  "classification": "CANDIDATE_FULL for the restricted exact-distance-k theorem and the exact quotient lemma, pending later independent review; PARTIAL / OPEN for Salez Problem 2.3",
+  "failed_or_retired_routes_preserved": "The preceding raw NBRW trace condition is preserved as sufficient but retired as a necessary route after the incidence-strong polynomial counterexample. The older P0292 terminal handoff is unchanged.",
+  "next_attack": "Apply Salez's varentropy criterion directly to the stabilizer-orbit quotient. Seek a transitivity/expansion inequality using integer orbit transitions and adjacent orbit-mass ratios to force information-variance concentration; stress-test it first on the affine Haiman family where ambient L2 is polynomially late.",
+  "runtime": {
+    "model": "GPT-5.6 Sol",
+    "reasoning": "UNVERIFIED",
+    "requested": "GPT-6 maximum",
+    "authenticated_gpt6_maximum": false
+  }
+}

@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newcommand{\E}{\mathbb E}
+\newcommand{\F}{\mathbb F}
+\newcommand{\wh}{\widehat}
+\begin{document}
+\title{Distinct correlated bent branches preserve arbitrary FEI ratios}
+\author{A079, B16}\date{12 October 2026}\maketitle
+Physical inputs are disjoint and uniform, transforms normalized, and entropy is in bits. Full FEI remains open.
+
+\begin{theorem}[Character tags with logarithmic overhead]
+Let $g:\F_2^k\to\{-1,1\}$, $k\ge1$, $m=\lceil\log_2(k+1)\rceil$, and $N=2^m$. For $b\in\F_2^m$, use its binary integer index and set $c_b=e_b$ when $0\le b<k$ and $c_b=0$ otherwise. Define
+\[
+ F_g(x,a,b)=(-1)^{a\cdot b+c_b\cdot x}g(x).
+\]
+Every physical $x$-branch is bent and the branches are distinct even modulo sign. Writing $p_g(v)=\wh g(v)^2$ gives
+\begin{align*}
+ \wh F_g(v,s,t)&=2^{-m}(-1)^{s\cdot t}\wh g(v+c_s),\\
+ q(v):=P(S_X=v)&=(1-k/N)p_g(v)+N^{-1}\sum_i p_g(v+e_i),\\
+ H(F_g)&=2m+H(g),& I_Y(F_g)&=m,\\
+ I_X(F_g)&=I(g)+(k-2I(g))/N,& H(S_X\mid S_Y)&=H(g),\\
+ H(S_Y\mid S_X)&=2m+H(g)-H(q).
+\end{align*}
+The spectral marginals are dependent exactly when $p_g$ is not uniform.
+\end{theorem}
+\begin{proof}
+The sum over $a$ in the Fourier transform forces $b=s$, giving the signed coefficient. Its square has the displayed shifted conditional law. Character multiplication preserves entropy and complements coordinate $i$'s influence at exactly one of the $N$ tags. At a zero tag the global branch sign is determined, and the unit tags recover every selector bit, proving branch distinctness. Conditional laws are equal exactly when $p_g$ is invariant under every unit shift, namely when it is uniform.
+\end{proof}
+
+\begin{theorem}[Full-ratio hardness in a genuinely dependent class]
+Fix a nonconstant Boolean seed $f$ on $n$ bits and set $g_t=z\prod_{j=1}^t f(x^{(j)})$ on $k_t=tn+1$ disjoint selector bits. Apply the construction above with $m_t=\lceil\log_2(k_t+1)\rceil$. Then
+\[
+ H(F_t)=tH(f)+2m_t,\qquad I(F_t)=tI(f)+J_t,\qquad m_t<J_t<m_t+2,
+\]
+where $J_t=m_t+1+[k_t-2(tI(f)+1)]/2^{m_t}$. Every branch is bent and distinct, and
+\[
+ I(S_X;S_Y)\ge h_2(2^{-m_t})>0,\qquad
+ \frac{H(F_t)}{I(F_t)}\longrightarrow\frac{H(f)}{I(f)}.
+\]
+The optimal FEI constant of this restricted dependent bent-branch class equals the universal optimal constant, possibly infinite.
+\end{theorem}
+\begin{proof}
+Entropy and influence of $g_t$ equal $tH(f)$ and $tI(f)+1$. Its extra $z$ spectral bit is deterministically one; the unit tag for $z$ complements it, making its value determine that tag event of probability $2^{-m_t}$. This gives the mutual-information lower bound. The influence formula and $k_t/2^{m_t}<1$ bound $J_t$. Since $m_t=O(\log t)$ and $I(f)>0$, the full ratio converges. Inclusion gives one direction of the optimal-constant equality; applying the limit to each arbitrary seed gives the other.
+\end{proof}
+
+\paragraph{No amplification.}
+For any bent-branch selector $F(x,y)=g_x(y)$ on $d$ data bits, put $\sigma_t(x)=2^{d/2}\wh g_x(t)\in\{-1,1\}$. Then
+\[
+ H(F)=d+\E_t H(\sigma_t),\qquad I(F)=d/2+\E_t I(\sigma_t).
+\]
+Thus its ratio is at most the maximum of two and the nonconstant Boolean phase-row ratios. Every violation above a constant $C\ge2$ descends to a smaller Boolean selector-cube function. This does not prove FEI for the arbitrary phase rows.
+
+\paragraph{Terminal-inclusive transport.}
+For $F=(-1)^{a\cdot b}h_b(x)$ with arbitrary Boolean $h_b$, querying $b_i$ and then $a_i$ pays two bits of entropy and one unit of influence per matched pair. The full tree retains $\E_b H(h_b)$ and $\E_b I(h_b)$ at the leaves. Aggregate erasure obeys
+\[
+ B(F)=m+\E_b B(h_b)+\sum_i H(S_i\mid V,S_{-i}),
+\]
+with the last term in $[0,m]$. A data $a_i$ restriction first instead produces phase-core selectors $G_s(x,z)=h_{s,z}(x)$ and exchanges their two split terms:
+\[
+ B_{a_i}(F)=1-\E_s JS_z(G_s),\qquad
+ JS_{a_i}(F)=1-\E_s B_z(G_s).
+\]
+The two identities retain the collided core and do not assign a fixed price to its possibly rare next split. Extending this payment to nonflat, non-Boolean normalized selector rows is the first unsupported universal step.
+\end{document}

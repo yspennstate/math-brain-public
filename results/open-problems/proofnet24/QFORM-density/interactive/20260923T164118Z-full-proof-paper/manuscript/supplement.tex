@@ -1,0 +1,535 @@
+\section{Further coordinate block estimates and spectral stability}
+\label{sec:additional-results}
+
+The estimates in this section apply to blocks of original independent
+coordinates with densities bounded by one.  Their conclusions are
+uniform in affine terms.  The deterministic spectral inequalities
+control perturbations of coordinate submatrices.
+
+\subsection{A linear bank with two crossing directions}
+
+\begin{lemma}[Negative moments from a density bound]
+\label{supp:negative-moment}
+If a probability law on $\mathbb R^d$ has density at most $K$, then for
+$0<p<d$ and every $z\in\mathbb R^d$,
+\[
+ \mathbb E|Y-z|^{-p}\le\frac d{d-p}(K v_d)^{p/d},
+\]
+where $v_d$ is the volume of the unit ball.
+\end{lemma}
+\begin{proof}
+For every $r>0$, the probability of the ball of radius $r$ is at most
+$\min\{1,Kv_dr^d\}$.  Integrate this bound in
+\[
+ \mathbb E|Y-z|^{-p}
+ =\int_0^\infty\mathbb P\{|Y-z|<t^{-1/p}\}\,dt
+\]
+and split at $t=(Kv_d)^{p/d}$.  The two contributions are
+$(Kv_d)^{p/d}$ and $p(Kv_d)^{p/d}/(d-p)$.
+\end{proof}
+
+\begin{theorem}[An arbitrary-rank crossing block with a linear bank]
+\label{supp:null-bank}
+Let $X_I$ and $X_J$ be disjoint original coordinate banks and let
+\[
+ Q=F(X_I)+2X_I^{\mathsf T}M X_J+b_J^{\mathsf T}X_J,
+\]
+where $F$ is any real measurable function.  If $s_2(M)>0$, then
+\begin{equation}\label{eq:supp-null-bank}
+ \|p_Q\|_\infty\le
+ \frac{2\sqrt\pi}{\sqrt{s_1(M)s_2(M)}}.
+\end{equation}
+The rank and all smaller singular values of $M$ are unrestricted.
+\end{theorem}
+\begin{proof}
+Condition on $X_I=x$.  The remaining polynomial is linear in $X_J$,
+with coefficient vector $c(x)=2M^{\mathsf T}x+b_J$.  The
+one-dimensional product-projection estimate of \citet{LPP2016} gives
+a conditional density bound $\sqrt2/|c(x)|$ whenever $c(x)\ne0$.
+Let $u_1,u_2$ and $v_1,v_2$ be corresponding left and right singular
+vectors for the two largest singular values $s_1,s_2$ of $M$.
+The vector $U=(u_1^{\mathsf T}X_I,u_2^{\mathsf T}X_I)$ has density
+bounded by two.  Therefore
+\[
+ Z=(2s_1U_1+v_1^{\mathsf T}b_J,
+       2s_2U_2+v_2^{\mathsf T}b_J)
+\]
+has density at most $1/(2s_1s_2)$, and $|c(X_I)|\ge|Z|$.
+Lemma~\ref{supp:negative-moment} with $d=2,p=1$ gives
+\[
+ \mathbb E|c(X_I)|^{-1}
+ \le2\sqrt{\frac\pi{2s_1s_2}}.
+\]
+In particular, the exceptional set $c(X_I)=0$ has probability zero.
+Averaging the conditional density inequality proves
+\eqref{eq:supp-null-bank}.  This argument retains the full matrix $M$;
+the projection onto two singular directions is used only for a lower
+bound on the length of $c(X_I)$.
+\end{proof}
+
+The condition that the $J$ bank enters linearly is essential to this
+proof.  Theorem~\ref{supp:null-bank} includes a bilinear form with
+an arbitrary quadratic or measurable addition on one bank.  Its
+conditioning argument is closely related to the independent-block
+density estimates in \citet{BGKS2024}.
+
+\subsection{A singular physical pair and a random slope}
+
+\begin{theorem}[Rank-one physical pair]
+\label{supp:rank-one-pair}
+Let $X,Y,Z_1,\ldots,Z_m$ be independent original coordinates.  Suppose
+\begin{align*}
+ Q={}&aX^2+2bXY+cY^2+2X\langle u,Z\rangle
+       +2Y\langle v,Z\rangle+F(Z)\\
+    &+2\alpha X+2\beta Y,
+\end{align*}
+where $a\ne0$, $ac=b^2$, $F$ is real measurable, and
+$w=v-(b/a)u\ne0$.  Then
+\begin{equation}\label{eq:supp-rank-one-pair}
+ \|p_Q\|_\infty\le
+ \frac{4\,2^{1/4}}{\sqrt{|a|\,|w|}}.
+\end{equation}
+The dependence of $F$ on all coordinates of $Z$ is unrestricted.
+\end{theorem}
+\begin{proof}
+Complete the square only in the original coordinate $X$.  With
+$\eta=\beta-b\alpha/a$ this writes
+\[
+ Q=a\left(X+\frac{bY+\langle u,Z\rangle+\alpha}{a}\right)^2
+       +2Y(\langle w,Z\rangle+\eta)+\widetilde F(Z).
+\]
+Conditioning on $(Y,Z)$ and using the scalar square density bound gives
+\[
+ p_Q(t)\le |a|^{-1/2}
+  \mathbb E k_a\bigl(t-2Y(\langle w,Z\rangle+\eta)
+                     -\widetilde F(Z)\bigr),
+ \quad k_a(u)=|u|^{-1/2}\mathbf1_{\{au>0\}},
+\]
+for almost every $t$.  For any probability density $f\le M$,
+\[
+ \sup_t\int_0^\infty y^{-1/2}f(t\pm y)\,dy\le2\sqrt M,
+\]
+by filling the interval of length $1/M$ nearest zero.
+If $\ell\ne0$, the variable $2\ell Y$ has density at most
+$1/(2|\ell|)$.  Hence the expectation of the one-sided kernel
+over $Y$ is at most $\sqrt2\,|\ell|^{-1/2}$, uniformly in its
+translate.
+The scalar projection $\langle w,Z\rangle+\eta$ has density at
+most $\sqrt2/|w|$ by \citet{LPP2016}.
+Lemma~\ref{supp:negative-moment} with $d=1,p=1/2$ gives
+\[
+ \mathbb E|\langle w,Z\rangle+\eta|^{-1/2}
+ \le2\sqrt{2\sqrt2/|w|}.
+\]
+Multiplication by the preceding bound for the slope gives
+$\sqrt2\cdot2\sqrt{2\sqrt2}=4\,2^{1/4}$, as asserted.
+All changes of variables can be integrated against nonnegative output
+test functions, so the almost-everywhere conditional formulas introduce
+no exceptional-level assumption.
+\end{proof}
+
+\begin{corollary}[An aggregate bound for singular pairs]
+\label{supp:singular-pair-volume}
+Under Theorem~\ref{supp:rank-one-pair}, put
+\[
+ W=a^2\sum_{i\ne j}w_i^2w_j^2.
+\]
+If $W>0$, then
+\[
+ \|p_Q\|_\infty\le
+     4\,2^{1/4}|a|^{-1/4}W^{-1/8}.
+\]
+\end{corollary}
+\begin{proof}
+The inequality $|w|^4\ge\sum_{i\ne j}w_i^2w_j^2=W/a^2$
+inserted into \eqref{eq:supp-rank-one-pair} proves the statement.
+\end{proof}
+
+\subsection{Spectral energy in a coordinate set}
+
+For a coordinate set $H$, let $P_H:\mathbb R^{|H|}\to\mathbb R^n$
+be the coordinate inclusion.  Compression is written
+$T_{HH}=P_H^{\mathsf T}TP_H$.  Eigenvalues of a positive
+semidefinite matrix are listed in decreasing order.
+
+\begin{lemma}[Spectral-square spill]
+\label{supp:spill}
+Let $A$ be symmetric, $C=A_{HH}$, $B=A_{H,H^c}$, and
+$0\le G\le A^2$.  Suppose $\lambda_k(G_{HH})\ge g^2$.
+For $0\le r<k$ put $c=s_{r+1}(C)$.  If $c<g$, then
+\[
+ s_{k-r}(B)\ge\sqrt{g^2-c^2}.
+\]
+In particular, one may use $G=\Lambda^2
+\mathbf1_{\{|A|\ge\Lambda\}}$ for any $\Lambda>0$.
+\end{lemma}
+\begin{proof}
+The exact block identity is $(A^2)_{HH}=C^2+BB^{\mathsf T}$.
+Write $C=C_r+E$, where $C_r$ consists of its $r$ largest
+absolute eigenmodes.  Then $C_rE=0$, $\operatorname{rank}C_r\le r$,
+and $E^2\le c^2I$.  Thus
+\[
+ BB^{\mathsf T}+C_r^2=(A^2)_{HH}-E^2\ge G_{HH}-c^2I.
+\]
+The left side has at least $k$ eigenvalues at least $g^2-c^2$.
+Adding a positive semidefinite matrix of rank at most $r$ can
+increase that count by at most $r$.  Consequently
+$BB^{\mathsf T}$ has at least $k-r$ eigenvalues of that size,
+which is the assertion.  The stated spectral projection gives an
+admissible $G$ by the spectral theorem.
+\end{proof}
+
+\begin{lemma}[A pair in an approximate rank-two self block]
+\label{supp:pair-extraction}
+Let $C=C^{\mathsf T}$ be $m$ by $m$, $m\ge3$, and write
+$N=\binom m2$.  If $s_2(C)\ge b$ and $s_3(C)<a$, then some
+principal two-coordinate block $K$ satisfies
+\[
+ s_{\min}(K)>b/N-a.
+\]
+\end{lemma}
+\begin{proof}
+Let $C_2=\lambda_1uu^{\mathsf T}+\lambda_2vv^{\mathsf T}$ be the
+two largest absolute eigenmodes.  The orthonormality of $u,v$ gives
+$\sum_{i<j}(u_iv_j-u_jv_i)^2=1$.  Choose a pair $I$ whose
+summand is at least $1/N$.  Then
+\[
+ |\det(C_2)_{II}|\ge s_1(C)s_2(C)/N,
+ \qquad \|(C_2)_{II}\|\le s_1(C).
+\]
+It follows that $s_{\min}((C_2)_{II})\ge b/N$.
+The remaining matrix has norm $s_3(C)<a$, so the singular-value
+perturbation inequality proves the claim.
+\end{proof}
+
+\begin{theorem}[Six spectral-square directions on a coordinate set]
+\label{supp:six-carrier}
+Let $s_3(A)\ge s>0$ and let $H$ have size $m\ge6$.  Suppose
+$0\le G\le A^2$ and $\lambda_6(G_{HH})\ge g^2$.
+For $N=\binom m2$, choose $0<a<b/N$ and $0<b<g$, and set
+$\kappa=b/N-a$.  Then
+\begin{equation}\label{eq:supp-six-carrier}
+ \|p_Q\|_\infty\le\max\left\{
+ \frac{2\sqrt{6\pi m}}a,
+ \frac{9.2+\log_+(10000\kappa/s)}\kappa,
+ \frac{5\sqrt{2e}}{\sqrt{g^2-b^2}}\right\}.
+\end{equation}
+All entries of the actual matrix $A$ outside $H$ are retained.
+\end{theorem}
+\begin{proof}
+Put $C=A_{HH}$ and $B=A_{H,H^c}$.  If $s_3(C)\ge a$,
+condition on the complementary original coordinates and apply
+Corollary~\ref{cor:finite-core}.  This gives the first term.
+If $s_3(C)<a$ and $s_2(C)\ge b$,
+Lemma~\ref{supp:pair-extraction} gives a physical pair $K$ with
+$s_{\min}(K)>\kappa$, hence $|\det K|>\kappa^2$.
+A definite pair gives $\pi/\kappa$ by Lemma~\ref{geom:definite}.
+An indefinite pair gives the estimate in Theorem~\ref{geom:fullpair}.
+The function
+\[
+ x\longmapsto\frac{9.2+\log_+(10000x/s)}x
+\]
+is decreasing on $(0,\infty)$: on its logarithmic branch its
+derivative has numerator $1-9.2-\log(10000x/s)<0$, and
+elsewhere this is immediate.  Substitute $x=\sqrt{|\det K|}
+>\kappa$; the second term in \eqref{eq:supp-six-carrier}
+also exceeds $\pi/\kappa$.
+
+The remaining case has $s_2(C)<b$.
+Lemma~\ref{supp:spill} with $k=6,r=1$ gives
+$s_5(B)>\sqrt{g^2-b^2}$.
+The five-volume case of Corollary~\ref{four:d-cases} gives
+\[
+ \|p_Q\|_\infty\le5\sqrt{2e}\,
+       e_5(BB^{\mathsf T})^{-1/10}
+ \le5\sqrt{2e}/s_5(B),
+\]
+which proves the third term.  These three alternatives are exhaustive.
+\end{proof}
+
+The carrier hypothesis itself implies $s_6(A)\ge g$, so one may
+always take $s=g$ if no stronger global spectral lower bound is
+available.  In particular, this theorem does not extract six directions
+from the three-direction premise of Conjecture~\ref{conj:main}.
+
+\subsection{Stability under additional spectrum}
+
+\begin{proposition}[Localized anticommutator bound]
+\label{supp:anticommutator}
+Let $A=A_0+R$ be symmetric and define
+\[
+ \nu_H=\max\{0,-\lambda_{\min}((A_0R+RA_0)_{HH})\}.
+\]
+For every $j\le|H|$,
+\[
+ \lambda_j((A^2)_{HH})\ge
+       \lambda_j((A_0^2)_{HH})-\nu_H.
+\]
+If $A_0R+RA_0=0$, all these inequalities hold with zero loss.
+This includes disjoint spectral packets, for which $A_0R=0$.
+\end{proposition}
+\begin{proof}
+The identity $A^2=A_0^2+A_0R+RA_0+R^2$, together with
+$R^2\ge0$, gives $(A^2)_{HH}\ge(A_0^2)_{HH}-\nu_HI$.
+Apply monotonicity of ordered eigenvalues under this order.
+The zero-loss assertions follow from the same identity.
+\end{proof}
+
+\begin{theorem}[Low-rank additions with an operator-norm remainder]
+\label{supp:rank-reserve}
+Let $A=A_0+S+R$ be symmetric, $\|R\|\le\varepsilon$, and
+$r_H=\operatorname{rank}(SP_H)$.  If $k+r_H\le|H|$, then
+\begin{equation}\label{eq:supp-rank-reserve}
+ \sqrt{\lambda_k((A^2)_{HH})}\ge
+ \left(\sqrt{\lambda_{k+r_H}((A_0^2)_{HH})}
+                                  -\varepsilon\right)_+.
+\end{equation}
+No restriction is imposed on the signs or magnitudes of the
+nonzero eigenvalues of $S$.
+\end{theorem}
+\begin{proof}
+For any rectangular matrices $T,E$ with $\operatorname{rank}E\le r$,
+the singular-value variational principle gives
+\begin{equation}\label{eq:supp-rank-interlace}
+ s_k(T+E)\ge s_{k+r}(T).
+\end{equation}
+Indeed, take a $(k+r)$-dimensional subspace on which
+$|Tx|\ge s_{k+r}(T)|x|$ and intersect it with $\ker E$.
+The intersection has dimension at least $k$, and $T+E=T$ there.
+Apply \eqref{eq:supp-rank-interlace} to $T=A_0P_H$, $E=SP_H$,
+then use $\|RP_H\|\le\varepsilon$.  Finally,
+\[
+ s_j(MP_H)^2=\lambda_j((M^2)_{HH})
+\]
+for symmetric $M$, which proves \eqref{eq:supp-rank-reserve}.
+\end{proof}
+
+\begin{remark}[The amount of spectral reserve]
+A different argument notes that
+\[
+ \operatorname{range}((A_0+S)^2-A_0^2)
+ \subset \operatorname{range}(S)+A_0\operatorname{range}(S).
+\]
+Rank interlacing of the squares then gives a valid but weaker loss
+of at most $2\operatorname{rank}S$.  The fact that this difference
+can have rank $2\operatorname{rank}S$ does not make that spectral
+reserve loss necessary.  Theorem~\ref{supp:rank-reserve} uses the
+rectangular operators before squaring and loses at most
+$\operatorname{rank}S$, and often only $r_H$.
+\end{remark}
+
+\begin{corollary}[An adaptive split of a signed addition]
+\label{supp:adaptive-rank}
+Let $E=E^{\mathsf T}$, let $S_h$ contain its eigenmodes with
+absolute eigenvalue greater than $h\ge0$, and put
+$r_H(h)=\operatorname{rank}(S_hP_H)$.  If $\|T\|\le\delta$
+and $A=A_0+E+T$, then, whenever $k+r_H(h)\le|H|$,
+\[
+ \sqrt{\lambda_k((A^2)_{HH})}\ge
+ \left(\sqrt{\lambda_{k+r_H(h)}((A_0^2)_{HH})}
+                                      -h-\delta\right)_+.
+\]
+The threshold $h$ may be chosen to maximize the bound.
+\end{corollary}
+\begin{proof}
+The remaining part $E-S_h$ has operator norm at most $h$.
+Apply Theorem~\ref{supp:rank-reserve} with remainder
+$E-S_h+T$.
+\end{proof}
+
+\begin{proposition}[Separate positive and negative reserves]
+\label{supp:signed-reserve}
+Let $C=C_0+P-N+T$ be symmetric $m$ by $m$, where $P,N\ge0$
+and $\|T\|\le\delta$.  Write $p_j=\lambda_j(P)$ and
+$n_j=\lambda_j(N)$ in decreasing order, and set
+$p_{m+1}=n_{m+1}=0$.  For $1\le u,v\le m$,
+\begin{align*}
+ \lambda_u(C)&\ge
+ \max_{0\le r\le m-u}
+    \{\lambda_{u+r}(C_0)-n_{r+1}\}-\delta,\\
+ \lambda_v(-C)&\ge
+ \max_{0\le r\le m-v}
+    \{\lambda_{v+r}(-C_0)-p_{r+1}\}-\delta.
+\end{align*}
+If the active bounds are positive and supply a total of at least
+three positive and negative directions, their minimum is a lower
+bound for $s_3(C)$.
+\end{proposition}
+\begin{proof}
+Write $N=N_r+N_{\mathrm{tail}}$, where $N_r$ has rank at most $r$
+and $\|N_{\mathrm{tail}}\|=n_{r+1}$.  The favorable term $P\ge0$
+can only increase ordered eigenvalues, so
+\[
+ \lambda_{u+r}(C_0+P+T-N_{\mathrm{tail}})
+ \ge\lambda_{u+r}(C_0)-\delta-n_{r+1}.
+\]
+Subtracting $N_r$ loses at most $r$ indices by rank interlacing,
+which proves the first inequality after maximizing in $r$.
+Apply the same argument to $-C$ for the second.  Strictly positive
+positive and negative spectral directions are disjoint, proving
+the final assertion.
+\end{proof}
+
+\subsection{A complementary Schur block protects three directions}
+
+\begin{theorem}[Complementary Schur protection]
+\label{supp:schur-protection}
+On an original coordinate block $H$ of size $m$, suppose
+\[
+ A_{HH}=B+U\Theta U^{\mathsf T}+T,
+ \qquad B=B^{\mathsf T},\quad\Theta=\Theta^{\mathsf T},
+ \quad\|T\|\le\delta.
+\]
+Let the columns of $W$ form an orthonormal basis of
+$\operatorname{range}U$, and let the columns of $Z$ form an
+orthonormal basis of its orthogonal complement.
+Suppose $D=Z^{\mathsf T}BZ$ is invertible and $s_3(D)\ge\mu>0$.
+Put
+\[
+ R=(W^{\mathsf T}BZ)D^{-1},\quad\rho=\|R\|,\quad
+ \ell=\frac{\sqrt{\rho^2+4}-\rho}{2}.
+\]
+If $\delta<\ell^2\mu$, then for every $\Theta$,
+\[
+ \|p_Q\|_\infty\le
+ \frac{2\sqrt{6\pi m}}{\ell^2\mu-\delta}.
+\]
+\end{theorem}
+\begin{proof}
+The orthogonal basis $[W\ Z]$ is used for matrix algebra only.
+In this basis the block without $T$ equals
+\[
+ L\begin{pmatrix}S&0\\0&D\end{pmatrix}L^{\mathsf T},
+ \quad L=\begin{pmatrix}I&R\\0&I\end{pmatrix},
+ \quad
+ S=W^{\mathsf T}(B+U\Theta U^{\mathsf T})W-RDR^{\mathsf T}.
+\]
+No invertibility assumption on $S$ is needed.  A singular-value
+decomposition of $R$ decomposes $L$ into two-dimensional shears
+$\bigl(\begin{smallmatrix}1&r\\0&1\end{smallmatrix}\bigr)$
+and identity blocks.  The smaller singular value of such a shear
+is $(\sqrt{r^2+4}-r)/2$, decreasing in $r\ge0$, so
+$s_{\min}(L)=\ell$.  Multiplication on each side by an invertible
+matrix reduces every singular value by at most its smallest singular
+value.  Consequently
+\[
+ s_3(B+U\Theta U^{\mathsf T})
+ \ge\ell^2s_3(\operatorname{diag}(S,D))\ge\ell^2\mu.
+\]
+The perturbation $T$ costs at most $\delta$.  Condition outside $H$
+and apply Corollary~\ref{cor:finite-core} to finish.
+\end{proof}
+
+\begin{corollary}[Many large eigenvalues of one sign]
+\label{supp:codimension-one}
+If $A$ has at least $n-1$ eigenvalues at least $s>0$, or at least
+$n-1$ eigenvalues at most $-s$, and $n\ge4$, then
+\[
+ \|p_Q\|_\infty\le\frac{2\sqrt{24\pi}}s.
+\]
+The remaining eigenvalue may have any sign and magnitude.
+\end{corollary}
+\begin{proof}
+Every principal four-coordinate block has at least three eigenvalues
+of the indicated sign and magnitude by interlacing.  Apply
+Corollary~\ref{cor:finite-core} with $m=4$.
+\end{proof}
+
+These results give bounds under additional spectral hypotheses.
+They do not establish that $s_3(A)\ge1$ alone guarantees a bounded
+coordinate block, linear bank, or complementary Schur block satisfying
+their respective hypotheses.
+
+\subsection{Limitations of density interpolation and joint caps}
+
+\begin{proposition}[An $L^3$ bound and a square-root interval bound]
+\label{supp:interpolation-obstruction}
+There are probability densities $p_N$, $N\ge2$, such that
+\[
+ \|p_N\|_3\le2^{1/3},\qquad
+ \sup_z\int_{z-\varepsilon}^{z+\varepsilon}p_N(x)\,dx
+        \le3\sqrt\varepsilon\quad(\varepsilon>0),
+\]
+while $\|p_N\|_\infty=N$.
+\end{proposition}
+\begin{proof}
+Set
+\[
+ p_N=N\mathbf1_{[0,N^{-3}]}
+                +(1-N^{-2})\mathbf1_{[2,3]}.
+\]
+Its mass is one, its essential supremum is $N$, and
+$\int p_N^3=1+(1-N^{-2})^3\le2$.
+An interval of length $2\varepsilon$ receives at most
+$\min\{N^{-2},2N\varepsilon\}$ from the spike.  Dividing by
+$\sqrt\varepsilon$, the maximum over $\varepsilon>0$ occurs
+at $\varepsilon=(2N^3)^{-1}$ and equals
+$\sqrt2N^{-1/2}\le1$.  If $0<\varepsilon\le1$, the other
+part has mass at most $\min\{1,2\varepsilon\}\le2\sqrt\varepsilon$.
+For $\varepsilon\ge1$, the total mass is already at most
+$1\le3\sqrt\varepsilon$.  This proves all assertions.
+\end{proof}
+
+Thus a uniform $L^3$ bound and a uniform square-root interval bound
+do not imply a uniform density bound.  An additional hypothesis is
+needed to combine these estimates for quadratic forms.
+
+\begin{proposition}[A moving quadratic ridge under a joint density cap]
+\label{supp:moving-ridge}
+For every $0<\varepsilon<1$ there are a uniform $X$ on $[0,1]$
+and a triple $(Y,Z,W)$ independent of $X$, with joint probability density
+bounded by one such that
+\[
+ T=4XY+Z^2-YW,\qquad \|p_T\|_\infty\ge\frac1{9\varepsilon}.
+\]
+The quadratic matrix has spectrum
+$\{1,0,\sqrt{17}/2,-\sqrt{17}/2\}$.  The triple is not required
+to have independent coordinates.
+\end{proposition}
+\begin{proof}
+For $L>0$, define
+\[
+ S_{\varepsilon,L}=
+ \{(y,z,w):\varepsilon\le y\le2\varepsilon,
+       \ L\le w\le2L,
+       \ \sqrt{yw}\le z\le\sqrt{yw+\varepsilon}\}.
+\]
+Its volume
+\[
+ V_\varepsilon(L)=\int_\varepsilon^{2\varepsilon}
+       \int_L^{2L}
+       (\sqrt{yw+\varepsilon}-\sqrt{yw})\,dw\,dy
+\]
+is positive and continuous.  It tends to zero as $L\downarrow0$,
+because it is at most $\varepsilon^{3/2}L$.
+For $L\ge1$, rationalization and $yw\le4\varepsilon L$ give
+\[
+ V_\varepsilon(L)\ge
+    \frac{\varepsilon^{3/2}\sqrt L}{2\sqrt5},
+\]
+so it tends to infinity as $L\to\infty$.  Choose $L$ for which
+$V_\varepsilon(L)=1$ and let the triple have density
+$\mathbf1_{S_{\varepsilon,L}}$.
+On this set, $0\le Z^2-YW\le\varepsilon$, while
+$0\le4XY\le8\varepsilon$.  Thus $T\in[0,9\varepsilon]$
+almost surely.  Given the triple, $4XY$ is uniform on an interval
+of positive length; consequently $T$ has a density.  A probability
+density supported on an interval of length $9\varepsilon$ has
+essential supremum at least its reciprocal.
+
+In coordinates $(X,Y,Z,W)$ the matrix is
+\[
+ A_*=\begin{pmatrix}
+ 0&2&0&0\\2&0&0&-1/2\\0&0&1&0\\0&-1/2&0&0
+ \end{pmatrix}.
+\]
+The $(X,Y,W)$ block has eigenvalues
+$0,\pm\sqrt{2^2+(1/2)^2}$, and $Z$ contributes eigenvalue one.
+This proves the stated spectrum.
+\end{proof}
+
+Proposition~\ref{supp:moving-ridge} concerns a weaker independence
+assumption than Conjecture~\ref{conj:main}.  It shows that keeping
+one independent hub and a bounded joint density for the remaining
+three statistics does not preserve enough information for the
+desired conclusion.  It is not a counterexample to that conjecture.

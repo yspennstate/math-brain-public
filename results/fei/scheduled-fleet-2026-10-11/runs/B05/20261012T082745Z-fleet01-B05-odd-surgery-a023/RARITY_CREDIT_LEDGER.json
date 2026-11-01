@@ -1,0 +1,32 @@
+{
+  "schema": "fei-rarity-credit-ledger/1",
+  "packet_id": "A023",
+  "claim_version": "B05_ODD_SURGERY_PAYMENT_v1",
+  "model": "one fresh d-bit selector activates an odd-m point surgery of a bent k-bit Boolean core",
+  "stopping_rule": {
+    "physical": true,
+    "adaptive": false,
+    "finite": true,
+    "stop": "at the unique selector block's first revelation",
+    "descendant_reuse": false
+  },
+  "credits": [
+    {
+      "name": "difference-spectrum rare-log refund",
+      "amount_upper_bound_bits": "8*m*2^(-k)*log2(m)",
+      "spent_at": "first selector revelation",
+      "reuse_count": 1
+    },
+    {
+      "name": "physical selector influence",
+      "amount": "2*p*d*m*2^(-k)",
+      "spent_at": "first selector revelation",
+      "reuse_count": 1
+    }
+  ],
+  "uniform_results": {
+    "triple_surgery": "J < 327 I_ctl for all even k>=10 and all d>=1",
+    "odd_m_sparse_regime": "J <= [1+99m/(2 ln 2)+4 log2(m)] I_ctl when m*2^(-k/2)<=1/32"
+  },
+  "unpaid": "the odd-m constant grows as O(m); no depth-independent arbitrary-hierarchy transport is proved"
+}

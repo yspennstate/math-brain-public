@@ -1,0 +1,28 @@
+[
+  {
+    "service": "openalex_citing",
+    "url": "https://api.openalex.org/works?filter=cites:doi:10.1090/s0273-0979-09-01252-x&per-page=50",
+    "date": "2026-10-11",
+    "status": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "openalex_search_retry",
+    "url": "https://api.openalex.org/works?search=circular%20law%202%2Bepsilon%20rate&per-page=15",
+    "date": "2026-10-11",
+    "status": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "arxiv_weak",
+    "url": "https://export.arxiv.org/api/query?search_query=all:%22circular%20law%22%20AND%20(all:%22weak%20moment%22%20OR%20all:%22heavy%20tail%22%20OR%20all:%22convergence%20rate%22)&max_results=30",
+    "date": "2026-10-11",
+    "bytes": 7440,
+    "status": "ok"
+  },
+  {
+    "service": "w1_crossref",
+    "url": "https://api.crossref.org/works?query.title=The%20Wasserstein%20distance%20to%20the%20circular%20law&rows=3",
+    "date": "2026-10-11",
+    "bytes": 23333,
+    "status": "ok"
+  }
+]

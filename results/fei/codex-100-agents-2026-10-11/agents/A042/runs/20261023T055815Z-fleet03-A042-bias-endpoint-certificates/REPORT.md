@@ -1,0 +1,39 @@
+# A042 stage9: arbitrary-seed dyadic activation endpoints
+
+## exact target, quantifiers, hypotheses and units
+
+For every finite Boolean seed g at any interior independent product law, determine the corrected entropy E=ln2 Hplus, I-Var, actual dyadic scale charge J and complete-reference ordinary KL after an independent rare selector activation F=1-X+Xg. Use epsilon=2^-k, k>=1, for exact dyadic cells; the entropy expansion itself holds at every interior epsilon. Contract deterministic inputs first, and handle constant seeds, zero deficit and unit conditional atoms explicitly. Reflecting X covers selected probabilities tending to one. All logarithms are natural. Full FEI remains OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Current BOARD, B09 STREAM_NOTES v2 and own stage8 STATUS; execution protocol2026-10-11-execution-v2; A041 stage19 PROOF on adaptive references, A043 stage18 PROOF on prime56067 collar, A044 stage18 PROOF on complete dyadic reference/carry and its CLAIMS, A045 stage18 PROOF on signed reference transfer, and A091 stage19 REPORT on original-capacity stopping payments. Their exact source paths/hashes are in out/SOURCE_RECEIPTS.json. A044's statement and source-proof hashes were reproduced. The older campaign/literature intake remains prior-stage context, not a claimed fresh literature audit. Current owner deadline23Oct14:49UTC supersedes the initial protocol dates. The lead's original binary assignment is already closed; current board asks for actual scale payment with the SAME owner account.
+
+## complete derivation or exact first unsupported line
+
+PROOF.md gives direct mixed coefficients, exact Delta_F=epsilon Delta_g+epsilon(1-epsilon)V, and zero carry. Writing B=V+4a^2*j_a with a=(1-Eg)/2, one has V<=B<=2V and J_F=epsilon J_g+ln4[epsilon(1-epsilon)B+epsilon^2*kV]. The outer activation gate satisfies sharp J_o<=3ln4 Delta_o, equality at a=epsilon=1/2. A seed J/Delta bound therefore persists through arbitrary finite independent dyadic activations with constant max(K,3ln4). The explicit endpoint error is at most ln4 epsilon(k+2)V after division by epsilon. This pays the actual outer scale contribution, not just its rounding error.
+
+The corrected-entropy expansion includes the exact 2epsilon^2 V ln(1/epsilon) term. Complete flat and tree laws preserve actual empty mass and all occupied labels. Their full ordinary KL splits exactly into epsilon KL_seed plus a Bernoulli sector divergence. The positive normalizer transfer is at most epsilon(Z_seed-V), charged to the inherited original seed allocation once; the exact signed flat/tree conversion also retains -epsilon n_seed. Constants produce constant/signed-literal zero-deficit laws. The zero selector mass contracts physically rather than normalizing an undefined conditional law. REVIEW_A044.md independently accepts only the flat identity and normalizer bound used in this transfer, not the entire larger all-depth source claim.
+
+First unsupported line toward full FEI: Pay the inherited arbitrary-seed dyadic scale charge from genuinely unused ORIGINAL degree-weighted capacity in the same complete reference; epsilon J_g is not negligible compared with epsilon I(g). No new unconditional bound on arbitrary J_seed is proved. Both the new exact KL limit and scale limit expose that remaining obligation explicitly.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen SPEC and independent ENTROPY_AUDIT_SPEC preceded their jobs. Commands: python -B -X utf8 code/check.py --pilot; python -B -X utf8 code/check.py; python -B -X utf8 code/audit_entropy.py --pilot; python -B -X utf8 code/audit_entropy.py. The main pilot passed16 cases/948 assertions. Main exact moment implementation exhausts16 two-bit seeds at four product laws and k=1,2,4,10, plus256 three-bit seeds at fair law and k=1,4,10:1024 actual roots,38 constant and986 nonconstant fixtures,103702 exact Fraction assertions PASS in 22.699s. It checks direct spectra, cells, J, Delta, sharp equality, normalizers and pointwise complete likelihood-ratio factorizations. This is not a floating KL comparison.
+
+Independent integer Mobius polynomial transform and canonical prime-log dictionaries verify the corrected-entropy expansion and deficit exactly on192 roots, including nondyadic epsilon=1/3:384 formula assertions PASS in 0.291s. Its16-case pilot passed32 assertions. These two data paths do not share spectral helper code. The arbitrary-dimension and continuum conclusions use the written proof rather than finite extrapolation. No formal proof, peak memory measurement or float sign certificate is claimed. Jobs were estimated80MB, stayed below55s and required no over300MB admission, GPU, compiler or detached work.
+
+## proof dependencies and changed downstream conclusions
+
+The new claim is an authored endpoint certificate pending independent review. Its main theorem is derived directly; A044-COMPLETE-DYADIC-REFERENCE-CARRY@1 is used only for the optional inherited normalizer bound, independently reconstructed at that scope. A044 independently accepted our stage8 scale-aware approximation at stated mathematical scope; this does not pay J universally. A041 adaptive selection and A045 signed conversion are context, not new assumptions of this theorem. No other source is repaired or refuted. Downstream, dyadic activation gates have a sharp paid scale constant and incur zero carry; the seed scale/KL obligation is carried exactly, so a rare wrapper cannot erase it or renew capacity already spent.
+
+## one next mathematical action and independent reviewer
+
+A044/A045 independently reconstruct equations(1),(7)-(10), then use this exact arbitrary-seed endpoint to test a proposed whole-set scale supplier from genuinely unused ORIGINAL capacity. A041/A091 should challenge any double use of epsilon(Z_seed-V) or dropped seed terminal KL. The next target is the universal inherited seed scale bill, not another isolated gate census.
+
+## actual persistence receipts or precise save blocker
+
+All four protocol files, proof, scoped review, frozen specs, scripts and exact outputs are saved in this designated A042 run. Finalizer checks exact schema key sets, source statement/proof hashes, PASS counts, identical compatibility-copy bytes and all artifacts under20MB, then writes local sha256 receipts. Initial packaging failed because I assumed a statement-only hash; reading A044's source finalizer showed its sorted compact statement-plus-hypotheses JSON convention. out/PACKAGING_CORRECTION.json preserves the correction; the source hash is now reproduced using its actual convention. Rolling STATUS has exactly two lines; WORKLOG and LEARNED are appended. Local persistence is the only claimed receipt: supervisor copy, remote mirror and downstream adoption remain unobserved. No shared-source mutation, git or messaging occurred. Brain self-care remains degraded/unverified: stale owner-model/state-of-mind notes affect personal-context guidance, and current research instructions and actual files govern instead. No research job is left running.
+
+## Universal bridge
+
+This stage advances C020 whole-set witness cost and C024 history transfer by paying the actual dyadic activation outer-gate scale bill at the sharp constant3ln4, proving zero carry and conditional all-depth preservation, and exposing the exact inherited seed scale/KL and signed normalizer conversion in one complete reference with the original deficit split. It does not prove the universal supplier: epsilon J_seed persists on the same scale as epsilon I_seed, and its original allocation cannot be renewed. The shortest next step is an original-capacity supplier for that arbitrary seed charge, tested against equations(1),(7)-(10), because the wrapper and conversion costs are now explicit and paid rather than being confused with the missing universal entropy bound.

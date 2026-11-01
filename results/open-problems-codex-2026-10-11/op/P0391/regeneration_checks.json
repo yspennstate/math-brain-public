@@ -1,0 +1,50 @@
+{
+  "seed": 3912026,
+  "model": "M/D/1; service=1; lambda=0.8; complete empty-to-empty cycles",
+  "predicate": "prearrival Q<=6 and workload>=2; all arrivals are marked",
+  "stationary_predicate_exact": "552032/3515625",
+  "expected_cycle_reward_exact": "552032/703125",
+  "expected_cycle_reward": 0.7851121777777778,
+  "expected_cycle_length": 6.25,
+  "expected_cycle_arrivals": 5,
+  "elapsed_seconds": 1.79457129992079,
+  "results": [
+    {
+      "gamma": "PS",
+      "cycles": 8000,
+      "mean_length": 6.367295156612384,
+      "mean_arrivals": 5.095625,
+      "mean_reward": 0.794875,
+      "reward_standard_error": 0.02624520800383892,
+      "reward_z": 0.37198494371979157
+    },
+    {
+      "gamma": "middle",
+      "cycles": 8000,
+      "mean_length": 6.50284584126379,
+      "mean_arrivals": 5.234875,
+      "mean_reward": 0.82575,
+      "reward_standard_error": 0.028575456020391812,
+      "reward_z": 1.4221233142604115
+    },
+    {
+      "gamma": "alternating",
+      "cycles": 8000,
+      "mean_length": 6.231794557253764,
+      "mean_arrivals": 4.98575,
+      "mean_reward": 0.7635,
+      "reward_standard_error": 0.026939268443538594,
+      "reward_z": -0.8022555557911408
+    },
+    {
+      "gamma": "ends",
+      "cycles": 8000,
+      "mean_length": 6.182425922717388,
+      "mean_arrivals": 4.94425,
+      "mean_reward": 0.777875,
+      "reward_standard_error": 0.02652472677876647,
+      "reward_z": -0.27284645900938226
+    }
+  ],
+  "caveat": "Monte Carlo tests the regenerative counting identity for four gamma; it does not establish the theorem."
+}

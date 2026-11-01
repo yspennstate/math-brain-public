@@ -1,0 +1,27 @@
+{
+  "schema": "fei-packet-delta/2",
+  "run_id": "20261012T084412Z-fleet01-B19-odd-surgery-review-a094",
+  "stream": "B19",
+  "packet_ids": ["A094"],
+  "primary_packet_id": "A094",
+  "target_packet_id": "A023",
+  "target_claim_versions": [
+    "B05_ODD_SURGERY_PAYMENT_v1",
+    "B05_ODD_M_SPARSE_PAYMENT_v1",
+    "B05_ODD_PARITY_REFUND_v1"
+  ],
+  "prior_status": "AUTHOR_PROVED_PENDING_A087_A094_REVIEW",
+  "new_status": "INDEPENDENTLY_ACCEPTED_EXACT_SCOPE",
+  "delta": "Independent proof and computation accept the triple 327 bound, sparse odd-m bound, and parity refund without repair.",
+  "scope_limit": "One-node retained-child payment only; the O(m) constant, even-m erasures, terminal child payment, and arbitrary shared-variable hierarchies remain open.",
+  "evidence": [
+    "REPORT.md",
+    "REVIEW_PROOF.tex",
+    "SOURCES.md",
+    "CHECK.py",
+    "CHECK.out",
+    "CLAIMS.json",
+    "PROGRESS.json"
+  ],
+  "full_fei_status": "OPEN"
+}

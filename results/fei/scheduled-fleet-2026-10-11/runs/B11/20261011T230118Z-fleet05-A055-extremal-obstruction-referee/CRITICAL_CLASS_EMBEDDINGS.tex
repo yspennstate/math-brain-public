@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A055: exact critical-class admission tests}\maketitle
+All cubes are uniform, signs are Boolean, and entropies are in bits.
+Write $D_C(f)=H(f)-CI(f)$ and $L_A=H(f)-\mathbb E_aH(f_a)$.
+Then
+\[
+ L_A-CI_A-D_C(f)=-\mathbb E_aD_C(f_a).
+\]
+A dimension-critical positive-deficit witness requires every proper child
+deficit to be nonpositive, hence every displayed left side nonnegative.
+For disjoint $f(x,y)=g(x)h(y)$, the $y$ block instead gives
+\[
+ L_y-CI_y-D_C(f)=-D_C(g).
+\]
+For $F_r=1+\mathbf1_{y=0}(g-1)$, $t=2^{-r}$ and $\mu=\mathbb Eg$,
+\[
+ I_x=tI(g),\quad I_y=rt(1-\mu),\quad
+ L_y-CI_y-D_C(F_r)=-tD_C(g).
+\]
+For $k$ controls the same shortfall is $-2^{-k}D_C(F_{r-k})$, with $F_0=g$.
+For all core coordinates it is $-(1-\mu)D_C(d_r)/2$, where $d_r$ is
+the $r$-bit point defect. Thus the sign of each relevant test is explicit.
+
+To pass the thin-cylinder geometry and density tests with an arbitrary
+core, set $K(x,0)=-1$, $K(x,1)=g(x)$ and $T(x,w,0)=K(x,w)$,
+$T(x,w,1)=1$. The negative support is one cylinder on selector $y$,
+whose connected data fiber includes the full $w=0$ cube. Its density is
+$p=(3-\mu)/8\in[1/4,1/2]$. Exactly
+\[
+ I(T)=I(g)/4+1,\qquad H(T)=H(g)/4+E(g),\quad 0\le E(g)\le9/2.
+\]
+For tensor cores $g^{\otimes m}$ this preserves the limiting ratio
+$H(g)/I(g)$ and thus the extended optimal FEI constant of the geometric
+and density class. However
+\[
+ L_{w,y}-CI_{w,y}-D_C(T)=-D_C(g)/4,
+\]
+so it fails genuine criticality whenever the core violates $C$.
+
+For one-point surgery $J$ on $(-1)^zG(x)$ in $N\ge5$ bits, set
+$e=2^{1-N}$. The fresh-sign mismatch is $e$, its influence is $1-e$,
+and
+\[
+ L_z(J)\le h_2(e)+\frac{2e}{\ln2},\qquad
+ \mathbb E_zD_C(J_z)\ge D_C(J)+C(1-e)-h_2(e)-\frac{2e}{\ln2}.
+\]
+For $C\ge1$ the added term is strictly larger than $13/32$. Therefore
+any violating edited balanced tensor has a violating singleton child.
+Qualitative primitivity and full Fourier support do not repair this test.
+
+Complete proofs, zero-mass conventions, independent review and scope
+limits appear in EMBEDDING\_PROOF.md and REVIEW\_A053.md. No universal
+proper-block selection or full FEI conclusion is claimed.
+\end{document}

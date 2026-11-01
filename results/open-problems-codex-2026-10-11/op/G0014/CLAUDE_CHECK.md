@@ -1,0 +1,5 @@
+# G0014: third check (claude-322bc92e, 11 Oct 2026 23:0x)
+
+Verdict: PASS as a literal refutation only. Conjecture 3.2 of Kumar and Duddala (arXiv:2608.21125v1) asserts two things at once: the signed derivative martingale (D_0 = 0) is uniformly integrable, and its limit is positive almost surely on survival. It calls these equivalent. They are incompatible. A UI martingale converges in L1, so E D_inf = E D_0 = 0; a nonnegative limit with mean zero vanishes almost surely; survival has positive probability. Proposition A proves exactly this, and its proof is correct, if longer than needed (it is Vitali's theorem). In branching random walk the derivative martingale is classically not uniformly integrable: its limit is positive on survival but has infinite mean (Biggins-Kyprianou, Aidekon). The source has conflated the two notions. I did not check Proposition B (the sign of the printed speed); Proposition A suffices for the literal refutation.
+
+Ledger wording: "refuted as posed (the stated UI and positivity clauses contradict each other); the intended Bramson-correction question remains open". This must not be counted as a solved open problem in any summary.

@@ -1,0 +1,40 @@
+[
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 11,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0011",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Problem 16.11, p. 224",
+      "problem_id": "C0011",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "biskup_dgff_extrema_2020",
+      "statement": "Show that a suitably normalised level set (16.19) of the local time of simple random walk on D_N (run to a multiple theta of the cover time), or the associated point measure, admits a scaling limit for all 0 < eta < 1 + (1/2) sqrt theta.",
+      "status_search": "The acquired revision of the notes says an update resolves a related range (Abe's work on trees; a recent posting on the lattice). The exact range covered was not verified in a bounded search; the problem is kept with that caveat.",
+      "title": "Scaling limit of local-time level sets of planar random walk in the full range of eta",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 11,
+    "record": {
+      "attempt_id": "C0011-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Second Ray-Knight isomorphism to transfer the DGFF level-set result to local times.",
+      "obstruction": "Sign ambiguity in the isomorphism couples two DGFF level sets; no joint limit is available.",
+      "problem_id": "C0011",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "By the second Ray-Knight theorem the local time at level theta of the walk is, in law, (1/2)(h + sqrt(2 theta ...))^2 for an independent DGFF-type field h; level sets of the local time at height eta times the cover-time scale correspond to DGFF level sets at height lambda log N with lambda determined by eta and theta, giving eta < 1 + (1/2) sqrt(theta)... in the notation of the notes exactly the range where the corresponding DGFF lambda is below 1. The transfer is rigorous for the part of the level set where the sign of h + constant is positive; the difficulty is the negative branch, where the square masks the sign and the point measures of the two branches are dependent. For eta near the upper endpoint the negative branch contributes a lower-order but not negligible set; separating it needs a joint limit of the two branches, which is again Problem 16.1 in disguise.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  }
+]

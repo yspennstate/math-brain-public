@@ -1,0 +1,27 @@
+{
+  "target": "C019 logarithmic stopping-tree surrogate, lead-directed majority-of-tribes",
+  "formula": "Lambda_T=sum w_v j_v log2(1+kappa_min,v/(2j_v))",
+  "parameters": "F=Maj3(x1,x2,Tribes_(w,2^w)), even w>=16",
+  "orders": [
+    "x-first",
+    "y-first",
+    "alternating-x-y",
+    "every fixed shuffle preserving the contiguous block-by-block y order"
+  ],
+  "stopping": "constant-only or symmetric-threshold leaves; exact B=0 queries may be skipped for charging",
+  "rigorous_results": {
+    "Lambda_over_I_lower_bound": "w/64",
+    "y_first_Lambda_over_I": "w/2+O(1)",
+    "true_erasure_plus_9_leafI_over_I_upper_bound": 14
+  },
+  "terminal_certification": "Only H(leaf)<9 I(leaf) for symmetric thresholds, no formula theorem",
+  "arbitrary_core_guard": "Central-majority/balanced-arbitrary-core B/I supremum is exactly the universal erasure supremum; preserve B(core).",
+  "finite_certificates": "out/VALIDATION.json and out/EXACT_LOG_LEDGERS.json",
+  "scope_exclusions": [
+    "every adaptive y order",
+    "arbitrary certified leaf classes",
+    "refutation of the valid one-step majorant",
+    "C019 or FEI disproof"
+  ],
+  "next_target": "exact shifted empty-core erasure row after one x restriction, retaining core erasure and terminal entropy"
+}

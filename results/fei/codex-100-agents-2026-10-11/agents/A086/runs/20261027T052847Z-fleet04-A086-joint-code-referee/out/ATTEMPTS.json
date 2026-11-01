@@ -1,0 +1,57 @@
+{
+  "initial_failures": [
+    {
+      "reason": "reviewer counted only ordinary potential records as all augmented states",
+      "observed": {
+        "potential_rows": 2121,
+        "conversion_entries": 108,
+        "raw_restrictions": 729
+      },
+      "mathematical_effect": "none; all reference and Bellman inequalities already passed before count assertion",
+      "repair": "count both reachable entry types; mathematical domain unchanged"
+    }
+  ],
+  "final_run": {
+    "status": "PASS",
+    "rung": "exact finite certificate and analytic tensor proof; not Lean-checked",
+    "assertions": 29907,
+    "seconds": 0.592881300020963,
+    "raw_restrictions": 729,
+    "reachable_augmented_states": 2229,
+    "potential_records": 2121,
+    "transactions": 108,
+    "physical_query_pairs": 2642,
+    "ghost_atom_occurrences": 3304,
+    "constant_state_occurrences": 1738,
+    "beta_above_one_states": 600,
+    "original_total_influence": "7/8",
+    "original_shared_influence": "5/8",
+    "original_source_spare_nats": [
+      "128316267370448106589/147573952589676412928",
+      "128316267370448106625/147573952589676412928"
+    ],
+    "root_potential_nats": "470162435185/549755813888",
+    "margin_bits_lower": "2107999687492187229/102290469161621245280",
+    "margin_bits_lower_decimal_evidence_only": 0.02060797750532848,
+    "policy_counts": [
+      1,
+      2,
+      9,
+      244,
+      238145,
+      283565205126,
+      482455353348902740055257
+    ],
+    "certificate_sha256": "38fd223a491b51ee50fb5c492ab4f908d4908577804c0b83e1896fee6ce3bd15",
+    "source_helper_imports": false,
+    "finite_policy_search": false,
+    "log_method": "24-term rational atanh with explicit geometric tail and outward 2^-64 rounding"
+  },
+  "formal_check": {
+    "status": "HELD_MEMORY_ADMISSION_NO_COMPILER_STARTED",
+    "command": "python -B -X utf8 tools/memok.py",
+    "exit_code": 1,
+    "output": "WAIT: physical free 5.0 GB (need 4.0), commit free 3.6 GB (need 8.0)",
+    "mathematical_effect": "No Lean certification claimed. Exact rational certificate and prose induction are separate evidence."
+  }
+}

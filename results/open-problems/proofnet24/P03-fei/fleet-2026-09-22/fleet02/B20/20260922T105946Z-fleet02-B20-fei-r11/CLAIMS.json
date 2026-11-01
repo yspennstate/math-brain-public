@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "programme": "FEI-ALL-TEAM-20260922T095941Z",
+  "assignment": "FEI-20260922-fleet02-B20",
+  "run_id": "20260922T105946Z-fleet02-B20-fei-r11",
+  "full_fei_status": "OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "claims": [
+    {
+      "claim_id": "B20-DIFFUSE-SELECTOR-ENTROPY-LOWER-BOUND-v1",
+      "status": "PROVED_IN_RUN",
+      "scope": "centered minimum-dimensional all-block ratio-critical cores satisfying fleet03/B20 low-J diffusion; influence-proportional index selector and deterministic block-label coarsening",
+      "statement": "If L=log2(1/J), p_i=q_i/J, max_i p_i<=c0/L with c0=2/ln2, and A=Phi(I) has label multiplicity m, then H2(I)>=log2(L/c0) when positive and H2(A)>=max(0,log2(L/(m c0))).",
+      "dependencies": [
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "7d31b66c5517b7b491693642c503d29352d8ffb4",
+          "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet03/B20/20260922T104610Z-terminal-lowJ-diffusion/REPORT.md",
+          "mode": "uses premise",
+          "result": "max_i q_i/J <= (2/ln2)/log2(1/J)"
+        }
+      ]
+    },
+    {
+      "claim_id": "B20-DIFFUSE-SELECTOR-POSTERIOR-NONREUSE-v1",
+      "status": "PROVED_IN_RUN",
+      "scope": "finite physical restriction tree at nodes satisfying the preceding critical-core hypothesis and source-realizable selector condition",
+      "statement": "At every such node ref_v>=max(0,log2(log2(1/J_v)/(m_v c0))); summing with reach probabilities is bounded above by H2(Theta)-E H2(Theta|leaf)<=H2(Theta).",
+      "dependencies": [
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4a1748352ae7e31c4941f91c3f6a81a5a6928421",
+          "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet02/B20/20260922T103102Z-fleet02-B20-fei-r17/REPORT.md",
+          "mode": "uses premise",
+          "result": "posterior selector refund identity and telescope"
+        },
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "7d31b66c5517b7b491693642c503d29352d8ffb4",
+          "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet03/B20/20260922T104610Z-terminal-lowJ-diffusion/REPORT.md",
+          "mode": "uses premise",
+          "result": "low-J normalized-influence diffusion"
+        }
+      ]
+    },
+    {
+      "claim_id": "B20-ONE-POINT-FREE-RANDOM-SELECTOR-FALSIFIER-v1",
+      "status": "PROVED_IN_RUN",
+      "scope": "genuine d-dimensional one-point-defect Boolean family; uniformly randomized singleton block selector",
+      "statement": "For q=2^(1-d), J=dq, choosing A={I} with I uniform gives H2(A)=log2 d, D_A=q, C_A=W_A=0 and U_A=h2(q). Hence for every fixed finite K, U_A+H2(A)<=K D_A fails for all sufficiently large d; with admitted Theta=I the posterior refund equals log2 d exactly. This refutes only a free randomized selector payment, not FEI.",
+      "dependencies": [
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "7d31b66c5517b7b491693642c503d29352d8ffb4",
+          "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet03/B20/20260922T104610Z-terminal-lowJ-diffusion/REPORT.md",
+          "mode": "uses premise",
+          "result": "one-point-defect q,J and F/J calibration"
+        },
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "85ffa60db26997421d980b1f86c03d82259504ca",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md",
+          "mode": "uses premise",
+          "result": "D_A=I_A+C_A and U_A definition"
+        }
+      ]
+    }
+  ],
+  "remaining_obligation": "Construct a deterministic decoded-state affordable physical block on every nonterminal ratio-critical core, or prove F<=KJ on the all-block terminal critical class; randomized influence-proportional selection cannot be treated as free.",
+  "recipient": "fleet04/B19"
+}

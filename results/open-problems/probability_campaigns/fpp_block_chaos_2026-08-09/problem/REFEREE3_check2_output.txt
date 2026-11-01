@@ -1,0 +1,151 @@
+
+==============================================================================
+A1. r_0: smallest r for which the lemma's OWN range ledger is non-empty
+==============================================================================
+ lower(r) = max( (2C3/c_-) log r , (2/(c'' c_-)) log(18 C1 rho r) ),  upper(r) = delta^2 sqrt r
+ delta = min(1, 3C2/c_-),  c'' = c1/(6 sqrt(2+rho))
+
+(C1, c1, C2, C3, c_-, rho)                      log10 r_0    delta        c''
+(1.0, 1.0, 1.0, 1.0, 1.0, 2.0)                        5.5    1.000   8.33e-02
+(1.0, 0.5, 1.0, 1.0, 0.5, 2.0)                        7.0    1.000   4.17e-02
+(1.0, 0.2, 1.0, 2.0, 0.2, 2.0)                        8.5    1.000   1.67e-02
+(1.0, 0.1, 0.5, 2.0, 0.1, 2.0)                       10.0    1.000   8.33e-03
+(1.0, 0.05, 0.5, 2.0, 0.05, 2.0)                     11.0    1.000   4.17e-03
+(1.0, 0.02, 0.1, 0.5, 0.05, 1.5)                     12.0    1.000   1.78e-03
+(1.0, 0.01, 0.1, 5.0, 0.01, 2.0)                     14.0    1.000   8.33e-04
+
+=> the lemma is VACUOUS below r_0, and r_0 is not stated anywhere in the draft.
+
+==============================================================================
+A2. n_0 for G-f(i): 'polylog, far inside the range sigma^2 <= delta^2 sqrt n'
+==============================================================================
+ need (log M + 3 log n + O(1))/(c'' c_-)  <=  delta^2 sqrt(n)
+     M    c''*c_-    delta    log10 n_0
+     5      1.000     1.00          3.0
+     5      1.000     0.10          7.5
+     5      0.100     1.00          5.5
+     5      0.100     0.10         10.0
+     5      0.010     1.00          7.5
+     5      0.010     0.10         12.0
+     5      0.001     1.00         10.0
+     5      0.001     0.10         14.0
+     8      1.000     1.00          3.0
+     8      1.000     0.10          7.5
+     8      0.100     1.00          5.5
+     8      0.100     0.10         10.0
+     8      0.010     1.00          7.5
+     8      0.010     0.10         12.0
+     8      0.001     1.00         10.0
+     8      0.001     0.10         14.0
+
+==============================================================================
+A3. n_0 for G-f(ii): the draft's 'n >~ M^3/theta^4' against the honest requirement
+==============================================================================
+ honest: c'' c_- (theta^2/4) sqrt(n) M^{-3/2} >= log(C M n)  [union] and >= the lemma's
+ own lower threshold (2C3/c_-) log(Mn) at R = Mn.
+     M    theta    c''*c_-      log10 n_0 draft M^3/theta^4
+     5     0.05      1.000           11.5         2.00e+07
+     5     0.05      0.010           16.0         2.00e+07
+     5     0.20      1.000            9.0         7.81e+04
+     5     0.20      0.010           13.5         7.81e+04
+     5     0.50      1.000            7.5         2.00e+03
+     5     0.50      0.010           11.5         2.00e+03
+     8     0.05      1.000           12.5         8.19e+07
+     8     0.05      0.010           16.5         8.19e+07
+     8     0.20      1.000            9.5         3.20e+05
+     8     0.20      0.010           14.0         3.20e+05
+     8     0.50      1.000            8.0         8.19e+03
+     8     0.50      0.010           12.5         8.19e+03
+
+==============================================================================
+B. REPAIR of the longitudinal-range hole, derived from the ENCLOSING BALL and tested
+==============================================================================
+CLAIM (mine, to replace the draft's 'v is arbitrary at its distance in the condition as
+stated'): let n be the outward unit normal supporting B_g at u* = u/g(u), and suppose
+B_g is inside a Euclidean ball of radius R touching at u* (Newman-Piza's printed condition).
+Write phi(y) = <y,n>/<u*,n>, so phi <= g and phi is linear. Then
+    g(v) + g(x-v) - g(x) = [g(v) - phi(v)] + [g(x-v) - phi(x-v)]          (phi linear, exact)
+                        >= (1/(2 R <u*,n>)) [ g(v)|vhat-u*|^2 + g(x-v)|what-u*|^2 ].
+For v at transversal offset d and ANY longitudinal position, |vhat-u*| ~ c d/|v| and
+|what-u*| ~ c d/|x-v|, so the excess is >= c d^2 (1/|v| + 1/|x-v|) >= 4 c d^2/(|v|+|x-v|).
+Since every site in the G-a union has |v| + |x-v| <= C_L' r = (2+rho) r, while the MIDPOINT
+has |v|+|x-v| ~ r, the all-j excess is at least (1/C_L') times the midpoint excess.
+TEST: measure  min_j excess(d,j) / excess(d,r/2)  over the whole G-a union range and check
+it never drops below 1/C_L'.
+
+norm       tilt        d  min ratio       argmin j       1/C_L'
+l1         0.00      1.0     1.0000            0.0       0.2500
+l1         0.00      5.0     1.0000            0.0       0.2500
+l1         0.00     20.0     1.0000            0.0       0.2500
+l1         0.02        - FLAT c_-=0              -       0.2500
+l1         0.10        - FLAT c_-=0              -       0.2500
+l1         0.30        - FLAT c_-=0              -       0.2500
+l2         0.00      1.0     1.0000          100.0       0.2500
+l2         0.00      5.0     1.0000          100.0       0.2500
+l2         0.00     20.0     1.0000          100.0       0.2500
+l2         0.02      1.0     1.0000          100.0       0.2500
+l2         0.02      5.0     1.0000          100.0       0.2500
+l2         0.02     20.0     1.0000          100.0       0.2500
+l2         0.10      1.0     1.0000          100.0       0.2500
+l2         0.10      5.0     1.0000          100.0       0.2500
+l2         0.10     20.0     1.0000          100.0       0.2500
+l2         0.30      1.0     1.0000          100.0       0.2500
+l2         0.30      5.0     1.0000          100.0       0.2500
+l2         0.30     20.0     1.0000          100.0       0.2500
+lp1.3      0.00      1.0     1.0000          100.0       0.2500
+lp1.3      0.00      5.0     1.0000          100.0       0.2500
+lp1.3      0.00     20.0     1.0000          100.0       0.2500
+lp1.3      0.02      1.0     0.9845           88.0       0.2500
+lp1.3      0.02      5.0     0.8309           42.4       0.2500
+lp1.3      0.02     20.0     0.9873           74.8       0.2500
+lp1.3      0.10      1.0     0.9994           97.4       0.2500
+lp1.3      0.10      5.0     0.9827           87.2       0.2500
+lp1.3      0.10     20.0     0.7114           33.2       0.2500
+lp1.3      0.30      1.0     0.9999           99.2       0.2500
+lp1.3      0.30      5.0     0.9982           95.8       0.2500
+lp1.3      0.30     20.0     0.9660           82.4       0.2500
+l4         0.00        - FLAT c_-=0              -       0.2500
+l4         0.02      1.0     0.8768          150.0       0.2500
+l4         0.02      5.0     0.7921          124.8       0.2500
+l4         0.02     20.0     0.9720          107.0       0.2500
+l4         0.10      1.0     0.9954          106.8       0.2500
+l4         0.10      5.0     0.8722          151.4       0.2500
+l4         0.10     20.0     0.7318          131.4       0.2500
+l4         0.30      1.0     0.9993          102.6       0.2500
+l4         0.30      5.0     0.9832          113.2       0.2500
+l4         0.30     20.0     0.7427          161.0       0.2500
+hex        0.00        - FLAT c_-=0              -       0.2500
+hex        0.02        - FLAT c_-=0              -       0.2500
+hex        0.10        - FLAT c_-=0              -       0.2500
+hex        0.30        - FLAT c_-=0              -       0.2500
+mix        0.00      1.0     1.0000          100.0       0.2500
+mix        0.00      5.0     1.0000          100.0       0.2500
+mix        0.00     20.0     1.0000          100.0       0.2500
+mix        0.02      1.0     1.0000          100.0       0.2500
+mix        0.02      5.0     1.0000          100.2       0.2500
+mix        0.02     20.0     0.9999          100.8       0.2500
+mix        0.10      1.0     1.0000          100.2       0.2500
+mix        0.10      5.0     0.9999          101.0       0.2500
+mix        0.10     20.0     0.9983          104.0       0.2500
+mix        0.30      1.0     1.0000          100.6       0.2500
+mix        0.30      5.0     0.9990          103.2       0.2500
+mix        0.30     20.0     0.9849          112.2       0.2500
+
+worst ratio over all norms/tilts/offsets: 0.7114  vs the guaranteed 1/C_L' = 0.25
+=> the derived degradation 1/C_L' is a valid (and loose) guarantee; measured loss is small,
+   but it is NOT zero for tilted spans, so the constant must be carried:
+   c_- -> c_-/C_L' for the far-j sites, i.e. worst case c'' c_- -> c1 c_-/(6 (2+rho)^{3/2}).
+   U[1,2]: c1 c_-/48 (Form A) and c1 c_-/96 (Form B) instead of /12 and /24.
+
+==============================================================================
+C. Consolidated corrected constants
+==============================================================================
+rho = b/a_w = 2.0  (U[1,2])
+  site count N          : draft 6 rho r      -> sharp 2(rho r + 1) <= 4 rho r
+  Form A prefactor      : draft 18 C1 rho r  -> 12 C1 rho r  (one-sided: 6 C1 rho r)
+  c''                   : c1/(6 sqrt(4)) = c1/12  (unchanged, CONFIRMED)
+  c'' after the far-j repair (tilted spans only): c1/(6 (4)^{1/2}) with c_- -> c_-/4
+  C'''                  : draft delta^2 -> delta^2/4 (ceiling-safe for r >= 2/delta)
+  wlog on delta         : delta <= min(1, 3C2/c_-)   CONFIRMED
+  new wlog on c1        : c1 <= 3 sqrt(2+rho)/C3  (kills the middle-band hole; makes
+                          the consumer's A >= C3 c'' branch vacuous, so A = 2 suffices)

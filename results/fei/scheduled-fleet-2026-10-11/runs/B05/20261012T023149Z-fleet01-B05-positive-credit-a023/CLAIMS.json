@@ -1,0 +1,56 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T023149Z-fleet01-B05-positive-credit-a023",
+  "claims": [
+    {
+      "claim_id": "B05-A023-POINT-DEFECT-POSITIVE-CREDIT-BOUND",
+      "version": 1,
+      "label": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "exact_statement": "For every finite list of genuine Boolean point defects q_(n_j) on pairwise disjoint uniform physical blocks and every deterministic factor-first order, let P_j and N_j be the reach-weighted positive and negative complete L+Q credits generated while exhaustively revealing factor j. Then each stage satisfies P_j<48*2^(-n_j)<=24 I(q_(n_j)), and the full physical finite tree satisfies R(A)+sum_j N_j=sum_j P_j<24 sum_j I(q_(n_j))=24 I(product_j q_(n_j)). No interaction, ancestor credit, terminal packet, or physical influence is reused.",
+      "hypotheses": [
+        "finite uniform Boolean cube",
+        "pairwise disjoint physical factor blocks",
+        "every factor is a genuine Boolean one-point defect q_n",
+        "complete conditional-label plus phase packet L+Q",
+        "deterministic factor-first exhaustive order",
+        "entropy in bits"
+      ],
+      "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "stable_gap_id": "B05_RARE_REFUNDS",
+      "obstruction_id": "O-B05",
+      "contributors": ["fleet01/B05"],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "path": "reports/fei-2026-10-11/runs/B05/20261012T023149Z-fleet01-B05-positive-credit-a023/RARE_REVELATION_PAYMENT.tex",
+        "sha256": "7dff03ba7f68e38afb0fed7c1ee3fbf6c81556dfd344558a47234593bf5c62a1"
+      },
+      "dependencies": [
+        {
+          "claim_id": "B05-A023-MULTIFACTOR-MOBIUS-OWNERSHIP",
+          "version": 1,
+          "role": "exact single-use identity; author-proved and independently unreviewed"
+        },
+        {
+          "claim_id": "B05-A023-TWO-FACTOR-SIGNED-REFUND",
+          "version": 1,
+          "role": "independently accepted scalar packet formula",
+          "review_commit": "4a3a44691f97a208cd6b805c93cdff5508a24cc6"
+        }
+      ],
+      "refutes": [
+        "The total positive owned credit for disjoint point-defect products must grow without a dimension-independent influence bound",
+        "Optimizing the factor order is necessary for a uniform bound on this family"
+      ],
+      "does_not_prove": [
+        "a payment for addressing or unrelated branching leaves",
+        "a shared-variable composition theorem",
+        "an optimal constant",
+        "the Fourier Entropy-Influence conjecture"
+      ],
+      "first_unproved_line": "Construct a bounded-variation or nonlocal information-credit analogue for unrelated Boolean branches and shared physical variables, with whole-set addressing as a falsifier.",
+      "next_consumers": ["A027", "A028", "A064", "A087", "A090", "A094", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN",
+  "independent_review": "PENDING"
+}

@@ -1,0 +1,19 @@
+import pathlib,json
+P=pathlib.Path(__file__).parent
+v=json.loads((P/'verification.json').read_text())
+assert v['errors']==[]
+path=P/'CLAIMS.jsonl';claims=[json.loads(s) for s in path.read_text().splitlines() if s.strip()]
+for c in claims:
+ if c['claim'].startswith('Exact finite'):
+  c['status']='proved_special_case'
+  c['remaining_gap']='Does not determine the asymptotic optimum; finite values were already in earlier work.'
+  c['checks']=f"Independent raw depth-two DP ({v['raw_states']} states); complete structural depth-three certificate ({v['certificate_states']} states, {v['transition_pairs']} successor pairs), zero errors; verification.json."
+claims.append({'problem_id':'C0021','claim':'sigma >= 1-log(15796051/1048576)/(3 log 3)=0.1770445476755945, by repeating the certified depth-three algorithm.','status':'proved','proof_location':'ATTEMPT.md sections 2 and 4','remaining_gap':'Weaker than stronger prior depth-four policies; does not determine sigma.','checks':'Exact finite certificate and complete composition proof.'})
+path.write_text('\n'.join(json.dumps(c,ensure_ascii=False) for c in claims)+'\n',encoding='utf8')
+with (P/'ATTEMPT.md').open('a',encoding='utf8') as f:
+ f.write(f"\n### Completed independent certificate audit\n\nverify.py exited successfully: raw depth-two cost 393/64 over {v['raw_states']} partial assignments; depth-three certificate checked {v['certificate_states']} residual types and {v['transition_pairs']} successor pairs, with zero errors. Exact root cost 15796051/1048576. Runtime {v['seconds']:.1f} seconds. This establishes the finite values as computationally proved special cases of the exhaustive Bellman recurrence. The complete probability and asymptotic arguments remain handwritten proofs, not Lean formalizations.\n")
+with (P/'LITERATURE.md').open('a',encoding='utf8') as f:
+ f.write("\n### Further inspected results\n\nJansson–Jansson's exact journal reference: *Journal of Functional Programming* (2023), DOI 10.1017/S0956796823000102, recovered from Crossref.\n\nXia Zong, Tuomo Lehtonen, and Jussi Rintanen, *Cost-Optimal Decision Diagrams for Stochastic Boolean Function Evaluation*, arXiv:2606.24672v1, 23 June 2026. Downloaded and text inspected: general branch-and-bound optimization, #P-hardness and PSPACE containment. No recursive-majority revealment exponent theorem appears.\n\nGitHub tulasimohan/rec-maj-visualizer README gives depth-one cost 2.6667 and depth-three cost 18.6923. These are different from the fair-input costs 2.5 and 15.064288. The numerical claims are therefore not applicable to the object here; no exponent proof appears in the README. zpotthoff/Recursive-Majority README request returned 404.\n\nThe focused arXiv title-majority query returned 100 entries, with no inspected title/abstract containing recursive majority, iterated majority or revealment; it was noisy and is not a comprehensive negative result. The subsequent exact phrase iterated majority query returned Jansson–Jansson and a threshold-window paper, plus irrelevant iterative-majorization hits. No source-matching theorem found.\n\nAdditional searches, all 2026-10-12: arXiv au:Jacka AND au:Windridge; Crossref Jacka Warren Windridge Boolean expected cost; arXiv all:\"iterated majority\". Full requests/statuses in search_jacka_log.json. Found Saul Jacka, Jon Warren and Peter Windridge, *Minimizing the time to a decision*, arXiv:0911.5413v3. Direct PDF request is separately logged in search_jacka_pdf_log.json. The diffusion-control model is a lead, not automatically the discrete query model.\n\n### Complete request list\n\n")
+ for path in sorted(P.glob('search*_log.json')):
+  for r in json.loads(path.read_text()):f.write(f"* {r['date']} | {r['service']} | `{r['url']}` | {r['status']}\n")
+print('Updated finite claims, proof audit, and full literature request ledger.')

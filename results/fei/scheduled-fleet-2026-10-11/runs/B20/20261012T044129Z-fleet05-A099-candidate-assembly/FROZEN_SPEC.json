@@ -1,0 +1,14 @@
+{
+  "helper_version": "A099-balanced-erasure-transfer-v1",
+  "actual_Boolean_family": "every labelled seed on n=1,2; h=z times m disjoint seed copies; F=1+A_k(h-1)",
+  "parameter_domain": {"n": [1,2], "m": [1,2], "k": [1,2]},
+  "case_count": 80,
+  "pilot_case_count": 16,
+  "symmetry": "none; every labelled truth table, including constant seeds",
+  "arithmetic": "integer FWHT; Fraction squared spectra and influence; exact rational linear combinations of prime logarithms for entropy identities; lower bound follows from proven nonnegative phi remainder",
+  "memory_estimate_mb": 30,
+  "max_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "largest_actual_cube_dimension": 7,
+  "purpose": "validate no-loss aggregate erasure transport, not coordinate-witness transport or a universal FEI bound"
+}

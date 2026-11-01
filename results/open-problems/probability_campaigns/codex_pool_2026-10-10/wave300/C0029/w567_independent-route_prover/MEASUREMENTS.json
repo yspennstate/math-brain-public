@@ -1,0 +1,148 @@
+{
+  "gate": "COMPUTE_GATE.json",
+  "status": "PASS",
+  "elapsed_s_after_import": 0.053062,
+  "checks": {
+    "random_algebra": {
+      "matrices": 40,
+      "n_range": [
+        2,
+        6
+      ],
+      "nonsingular_inverse_checks": 16,
+      "max_inverse_residual": 0.0,
+      "min_smin_over_arithmetic_bound": 1.1249999999999996
+    },
+    "exact_n2": {
+      "population": 16,
+      "interior_counts": {
+        "-1": 8,
+        "1": 8
+      },
+      "singular_count": 8
+    },
+    "schur_crossings": [
+      {
+        "t": 0.25,
+        "factor": 0.8,
+        "smin": 0.20005456633177707
+      },
+      {
+        "t": 0.25,
+        "factor": 1.0,
+        "smin": 0.25000000000000006
+      },
+      {
+        "t": 0.25,
+        "factor": 1.2,
+        "smin": 0.29989921464775177
+      },
+      {
+        "t": 1.0,
+        "factor": 0.8,
+        "smin": 0.8046875045555123
+      },
+      {
+        "t": 1.0,
+        "factor": 1.0,
+        "smin": 0.9999999999999999
+      },
+      {
+        "t": 1.0,
+        "factor": 1.2,
+        "smin": 1.1900526249619456
+      },
+      {
+        "t": 1.9,
+        "factor": 0.8,
+        "smin": 1.7281829997521
+      },
+      {
+        "t": 1.9,
+        "factor": 1.0,
+        "smin": 1.8999999999999997
+      },
+      {
+        "t": 1.9,
+        "factor": 1.2,
+        "smin": 1.9513682190368058
+      }
+    ],
+    "schur_endpoint": {
+      "t": 2,
+      "admissible": false,
+      "reason": "d_min-t^2 is zero"
+    },
+    "hadamard_obstruction": [
+      {
+        "n": 2,
+        "zero_count": 2,
+        "population": 4,
+        "conditional_atom": 0.5
+      },
+      {
+        "n": 4,
+        "zero_count": 6,
+        "population": 16,
+        "conditional_atom": 0.375
+      },
+      {
+        "n": 8,
+        "zero_count": 70,
+        "population": 256,
+        "conditional_atom": 0.2734375
+      }
+    ],
+    "gaussian_correction": {
+      "n": 1,
+      "t": 0.1,
+      "true_cdf": 0.07965567455405796,
+      "misstated_finite_cdf": 0.09967547741373439,
+      "absolute_error": 0.02001980285967643,
+      "true_slope_at_zero": 0.7978845608028654,
+      "limiting_slope_at_zero": 1
+    },
+    "collision_floor": [
+      {
+        "n": 2,
+        "exact_collision_fraction": "1/2",
+        "collision_probability": 0.5,
+        "ratio_to_2_power_minus_n": 2.0
+      },
+      {
+        "n": 4,
+        "exact_collision_fraction": "151/256",
+        "collision_probability": 0.58984375,
+        "ratio_to_2_power_minus_n": 9.4375
+      },
+      {
+        "n": 8,
+        "exact_collision_fraction": "7037101119707/35184372088832",
+        "collision_probability": 0.20000644325668304,
+        "ratio_to_2_power_minus_n": 51.20164947371086
+      },
+      {
+        "n": 16,
+        "exact_collision_fraction": "96255104839446483827926548547488128311305185590690295756865259/26328072917139296674479506920917608079723773850137277813577744384",
+        "collision_probability": 0.0036559874755127037,
+        "ratio_to_2_power_minus_n": 239.59879519520055
+      }
+    ],
+    "gaussian_independent_quadrature": {
+      "n": 1,
+      "t": 0.1,
+      "panels": 100,
+      "reference_cdf": 0.0796556745540593,
+      "old_absolute_error": 0.020019802859675098,
+      "corrected_absolute_error": 1.3322676295501878e-15,
+      "gate": "COMPUTE_GATE_L6_C1.json"
+    }
+  },
+  "formal_proof": false,
+  "independent_review": "PENDING w569",
+  "source_correction_before_after": {
+    "false_finite_gaussian_identity_fields_before": 2,
+    "false_finite_gaussian_identity_fields_after": 0,
+    "scope": "proposed local source row only; live store not changed"
+  }
+}

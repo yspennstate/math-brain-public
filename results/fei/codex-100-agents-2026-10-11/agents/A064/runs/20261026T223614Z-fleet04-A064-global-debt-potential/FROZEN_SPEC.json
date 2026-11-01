@@ -1,0 +1,13 @@
+{
+  "helper_version": "A064-order-lottery-v1",
+  "family": "all Boolean cores on 0,1,2,3 bits; fresh protected two-bit mask; exact-reference root; fair dummy reset lottery",
+  "domain": {"core_dimensions": [0,1,2,3], "lottery_lengths": [0,1,2,3], "lotteries": "single-success and alternating leaves; all leaves checked"},
+  "case_count": "278 truth tables; 8 declared lotteries per core; actual mask tables and coherent pivot checked per core",
+  "symmetry": "none",
+  "arithmetic": "integer Walsh, Fraction probabilities, prime-log identities and rational outward log intervals; no floating signs",
+  "memory_estimate_mb": 45,
+  "max_runtime_seconds": 55,
+  "pilot": "first 6 cores; at most 55 seconds",
+  "guards": ["constants", "characters", "zero TC", "epsilon=1", "lottery costs below and above two", "every prefix and adapted cut", "reference-only product mass retained"],
+  "additional_exact_algebra": "all depth-three nonnegative integer leaf-cost vectors in {0,1,2,3}; 65536 vectors; no Boolean extrapolation"
+}

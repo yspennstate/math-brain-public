@@ -1,0 +1,17 @@
+{
+  "target_id": "C0017",
+  "checked_at": "2026-10-10",
+  "model": "independent nearest-neighbor bond percolation on mesh-delta Z^2 at p=1/2",
+  "working_exact_statement": "For every bounded Jordan domain D with four distinct boundary points a,b,c,d in cyclic order, the probability of an open bond crossing in the mesh-delta square-lattice approximation joining arc ab to arc cd converges as delta goes to zero to Cardy's conformally invariant value, with the lattice approximation and boundary convention specified. A corresponding exploration interface with alternating boundary conditions converges to chordal SLE_6 in an appropriate curve topology.",
+  "statement_caveat": "The cited Garban-Steif source explicitly phrases the square-bond case as an open extension after its triangular-site Theorem II.2; it does not give the full square-boundary approximation or an equivalence theorem between Cardy's formula and interface convergence. The working formulation is a precise target assembled from that source and the local intake, not a verbatim theorem.",
+  "historical_primary_source": {"citation":"Christophe Garban and Jeffrey E. Steif, Noise Sensitivity of Boolean Functions and Percolation, Chapter II section 4 (2012 preprint)","url":"https://arxiv.org/pdf/1102.5761","locator":"Theorem II.2 and open-status sentence: PDF page index 25, printed p.24; the local catalog's p.26 locator is imprecise for this version","quote":"on Z^2 at p_c = 1/2, proving the conformal invariance is still a challenging open problem","scope":"historical status only"},
+  "local_intake": {"path":"~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:17","quote":"Prove that critical bond percolation on Z^2 at p = 1/2 is conformally invariant in the scaling limit (Cardy's formula and convergence of interfaces to SLE(6)), as is known on the triangular lattice by Smirnov.","review_state":"unreviewed","search_date":"2026-09-07"},
+  "later_claims_needing_audit": [
+    {"url":"https://arxiv.org/abs/1112.2017","authors":"Tsai, Yam, Zhou","year":2013,"claim":"square-bond exploration to SLE_6","caveat":"v5 comments call this a preliminary version and report many critical workshop comments"},
+    {"url":"https://arxiv.org/abs/2409.03235","author":"Wang Zhou","year":2024,"claim":"square-bond exploration to SLE_6","caveat":"arXiv v6 is a 115-page preprint; abstract alone does not verify proof"},
+    {"url":"https://ameskandari.github.io/ai4math/","title":"Conformal Limits of Critical Square-Lattice Random-Cluster Interfaces","year":2026,"claim":"October 2026 manuscript headline includes q=1 square-bond Cardy claim","caveat":"Discovered in peer w417's source sweep; primary proof and review stage not independently checked here"}
+  ],
+  "nearby_nontransfer": {"url":"https://arxiv.org/abs/2206.04599","reason":"Despite a square-lattice title and a claim about Cardy's formula, its Section 1.1 says the paper mainly works on site percolation on N_delta, so it does not directly settle independent square-bond C0017."},
+  "current_openness": "UNKNOWN",
+  "reason": "The 2026-09-07 local search reports no accepted resolution, but later arXiv proof claims exist and have not been independently checked; no retirement/solved record found yet. Neither an abstract nor a source hash is mathematical validation."
+}

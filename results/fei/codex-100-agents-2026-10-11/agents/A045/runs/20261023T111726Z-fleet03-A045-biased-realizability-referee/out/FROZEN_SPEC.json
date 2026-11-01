@@ -1,0 +1,57 @@
+{
+  "helper_version": "A045-stage9-v1.1",
+  "family": "all Boolean two-bit seeds, four laws, one/two independent dyadic selector wires; all three-bit seeds at one law, one selector; mandatory shared-wire/deterministic controls",
+  "parameter_domain": {
+    "seed2_laws": [
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/3",
+        "2/5"
+      ],
+      [
+        "1/8",
+        "3/4"
+      ],
+      [
+        "1",
+        "1/3"
+      ]
+    ],
+    "selector_laws": [
+      [
+        "1/2"
+      ],
+      [
+        "1/4"
+      ],
+      [
+        "1/2",
+        "1/4"
+      ],
+      [
+        "1/4",
+        "1/4"
+      ]
+    ],
+    "seed3_law": [
+      "1/3",
+      "1/2",
+      "3/4"
+    ],
+    "seed3_selector": [
+      "1/4"
+    ]
+  },
+  "case_count": 512,
+  "case_count_explanation": "16*4*4 +256=512; plus four mandatory controls; pilot indices17*k,k=0..15 plus controls, selected before execution to cover nonconstant and multiselector branches",
+  "symmetry": "none; all labeled truth tables retained",
+  "arithmetic": "Fraction physical centered moments; canonical rational prime-log identities; no floating proof",
+  "memory_estimate_MB": 90,
+  "max_runtime_seconds": 55,
+  "pilot_max_runtime_seconds": 55,
+  "dimension_fixed_max": 4,
+  "search_auto_escalation": false
+}

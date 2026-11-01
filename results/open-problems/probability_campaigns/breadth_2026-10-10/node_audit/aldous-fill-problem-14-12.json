@@ -1,0 +1,21 @@
+{
+ "verdicts": {
+  "aldous-fill-problem-14-12-cycle-coalescence-exact-mean": {
+   "verdict": "FAITHFUL",
+   "why": "The entry matches the record's Theorem: EC(C_n) = (n^2-1)/6 = tau_0(C_n) for continuous-time rate-one walks started from every vertex. The arithmetic checks out. The increments are 3(a^2-b^2)+3(a+b) and -3(a^2-b^2)+3(a+b), which average to 3(a+b); each gap is counted twice, giving 6n. M_0 = n and M_T = n^3, so EC = (n^2-1)/6. The sum over m of 1/(1-cos(2 pi m/n)) is (1/2)(n^2-1)/3 = (n^2-1)/6. tau_2/tau_0 tends to 6/(2 pi^2) = 3/pi^2. The answer agrees with K_3 at 4/3 and with K_{2,2} at 2.5 in the record's table. The entry calls this 'adjacent' to Open Problem 14.12 rather than a resolution, which keeps the record's strength. It also correctly says the problem's hypothesis fails here. The tau_0 identity is presented as classical, as the record does. The restriction n>=3 only makes C_n a simple cycle. The proof text is the record's verbatim, and the statement's note on the EC-as-stopping-time notation explains rather than changes it. Status tags 'author-checked, no independent read' and 'unrefereed' are kept.",
+   "statement": ""
+  },
+  "aldous-fill-problem-14-12-complete-graph-coalescence-exact-mean": {
+   "verdict": "FAITHFUL",
+   "why": "The entry matches the record's elementary computation, and the computation is correct. With k particles, the coalescence rate is k(k-1)/(n-1). The sum over k of (n-1)/(k(k-1)) is (n-1)(1-1/n) = (n-1)^2/n. The nonconstant eigenvalues are -1/(n-1), so each term 1/(1-lambda) is (n-1)/n, and n-1 of them give (n-1)^2/n. The case n>=2 also holds: for K_2, EC = 1/2 = tau_0. The record derives this by hand for general n, and the n=4..8 solver match is only a check, so stating it for all n is at the record's strength. Calling it 'recorded alongside' Open Problem 14.12 makes no overclaim. The proof text is verbatim, and the unrefereed status is kept.",
+   "statement": ""
+  }
+ },
+ "served": [
+  "claude-opus-5-5"
+ ],
+ "stop_reason": "end_turn",
+ "rc": 0,
+ "cost_usd": 0.1330646,
+ "raw": ""
+}

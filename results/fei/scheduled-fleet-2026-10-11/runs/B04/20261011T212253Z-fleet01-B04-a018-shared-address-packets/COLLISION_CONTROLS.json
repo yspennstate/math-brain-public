@@ -1,0 +1,57 @@
+{
+  "schema": "fei-a018-collision-controls/1",
+  "packet_id": "A018",
+  "claim_version": "B04-A018-SHARED-ADDRESS-PACKET-v1",
+  "units": "bits",
+  "exact_interface": {
+    "R_T": "N^(-1) sum_b ghat_b(T)^2",
+    "r_T": "physical branch-label law ghat_b(T)^2/(N R_T)",
+    "nu_T": "squared normalized Walsh transform of ghat_b(T)/sqrt(N R_T)",
+    "B_W": "sum_T R_T H(nu_T)",
+    "M_W": "a-sum_T R_T H(r_T)",
+    "decrement": "H(F)-N^(-1)sum_b H(g_b)=B_W+M_W",
+    "mixing_bound": "0 <= M_W <= (2/ln 2) I_sel(F)"
+  },
+  "controls": [
+    {
+      "name": "identical branches",
+      "r_T": "uniform on branch labels",
+      "nu_T": "point mass at empty selector set",
+      "B_W": 0,
+      "M_W": 0,
+      "scope": "complete selector-cost cancellation"
+    },
+    {
+      "name": "selector-character signed identical branches",
+      "r_T": "uniform",
+      "nu_T": "point mass at the character support",
+      "B_W": 0,
+      "M_W": 0,
+      "scope": "entropy cancellation survives a coherent selector character"
+    },
+    {
+      "name": "shared-address k-fold data character",
+      "family": "F_{t,k}(x,y)=product_{r=1}^k y_{r,x}",
+      "B_W": "t",
+      "M_W": "t",
+      "H": "2t",
+      "I": "t/2+k",
+      "coordinate_budget": "t+k 2^t h2(2^-t)",
+      "packet_congestion": "selector 1/2; each data coordinate 2^-t",
+      "scope": "coordinatewise entropy budget diverges relative to I for k=t, while H/I=4/3"
+    },
+    {
+      "name": "bent splice",
+      "I_selector": "2^-m",
+      "increment_ratio_lower": "m-1",
+      "scope": "refutes a universal selector-only increment payment, not block selection or FEI"
+    },
+    {
+      "name": "shared signed dictator",
+      "family": "g_b(y)=h(b)y",
+      "remaining_entropy": "H(h)",
+      "selector_influence": "I(h)",
+      "scope": "unrestricted universal packet payment is FEI-hard"
+    }
+  ]
+}

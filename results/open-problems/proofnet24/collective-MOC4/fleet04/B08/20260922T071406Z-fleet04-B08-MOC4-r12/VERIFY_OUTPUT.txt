@@ -1,0 +1,10 @@
+PASS MOC4-DOUBLE-V4-MIXED-SCHUR-BRIDGE-v1
+two_point_lift_mass = 1
+two_point_lift_R_match = True
+two_point_lift_D_match = True
+two_point_lift_v_invariant = True
+J3_kernel_factor = -24*ra*rb*(c1*ra + d1*rb)
+ell_kernel = [8*c1*ra**2, -8*c2*ra**2, -8*c1*ra*rb, -8*d2*rb**2]
+J4_kernel = 24*ra**2*rb**2*(4*c33 - ra**2 - rb**2)
+reserve = 32*ra**2*(-4*c1**2*ra**2*rb**2 + c1**2*s2**2 - 4*c2**2*ra**2*rb**2 - 4*c2*d2*rb**2*s2 - 4*d2**2*rb**4)/((-2*ra*rb + s2)*(2*ra*rb + s2))
+LS_equivalence: J4+3R = -24*a*b*(delta-phi)

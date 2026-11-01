@@ -1,0 +1,37 @@
+{
+  "helper_version": "A047 stage8 Fraction/Walsh/coherent kernel and44-term log helper, own-source reuse plus new equal-mean scalar identity",
+  "family": "r>=4 bits z, base mux h=z1-sign if z0=0 else z2-sign, ignoring higher bits. h0 flips base at integer1; h1 flips at integers1,4,5. Core g(a,z)=h_a(z). Balanced variant chi_y*g. Matching-empty full-essential spike alpha, same full mask in parent and BOTH children. Activation epsilon at x0, core at x1, both signs.",
+  "domain": {
+    "r": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "alpha": [
+      "1/6",
+      "1/7"
+    ],
+    "balanced_character": [
+      false,
+      true
+    ],
+    "mode": [
+      "core",
+      "activation epsilon=-1",
+      "activation epsilon=+1"
+    ],
+    "query": "a only"
+  },
+  "case_count": 48,
+  "pilot_domain": "r4,alpha1/6,both balance variants,all3modes",
+  "pilot_case_count": 6,
+  "symmetry": "none; both physical outcomes/controller signs retained",
+  "arithmetic": "integer Walsh, exact Fraction probabilities and edge influences, normalized actual coherent laws, rigorous44-term logs and128bit outward intervals; all-dimensional result from explicit formula/convexity, not finite extrapolation",
+  "memory_estimate_MB": 90,
+  "max_runtime_seconds": 55,
+  "pilot_max_runtime_seconds": 55,
+  "automatic_dimension_increase": false,
+  "max_physical_dimension": 10,
+  "expected_checks": "same means; fixed essential sets; matching source/reference support before and after; exact t0=4delta^2,t1=36delta^2; queryInf=2delta or delta in activation; exact scalar-normalizer identity; pure reset>1/128 and activation>1/512 at alpha1/6; no claim local bill is a FEI counterexample or necessary conversion"
+}

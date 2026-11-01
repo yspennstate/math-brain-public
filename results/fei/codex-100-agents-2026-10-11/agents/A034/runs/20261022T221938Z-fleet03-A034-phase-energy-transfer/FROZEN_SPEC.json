@@ -1,0 +1,12 @@
+{
+  "helper_version": "A034-two-cell-v1",
+  "family": "All signed quadratic phases on nonempty affine cells of F2^n, and every unordered disjoint pair; additional cubic and quartic boundary fixtures",
+  "parameter_domain": "n=0,1,2,3 exhaustive; n=4 named fixtures only",
+  "case_count": "All affine cells and all degree-at-most-two phase polynomials on intrinsic coordinates; pair count deterministically recorded by generator, upper bound 150000",
+  "symmetry": "Unordered component pairs only, justified by invariance of their sum; no phase quotient",
+  "arithmetic": "integer truth tables and Walsh transforms; exact Fraction energy and rational logarithm intervals",
+  "memory_estimate_mb": 90,
+  "maximum_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "checks": ["disjoint nonparallel/unequal component energy ratio at least 1/3", "Fourier pointwise domination p<=2q", "complete row entropy and joint row bill <=24I", "parallel gluing degree<=3", "all one-coordinate physical restrictions preserve two-cell form", "cubic admits genuine nonproduct spectra", "quartic tensor guard boundary"]
+}

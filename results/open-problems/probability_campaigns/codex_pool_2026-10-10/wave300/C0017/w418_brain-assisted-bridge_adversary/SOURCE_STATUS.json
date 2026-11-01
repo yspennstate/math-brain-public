@@ -1,0 +1,133 @@
+{
+  "target": "C0017",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "parent_problem_solved": false,
+  "intake": {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 17,
+    "statement": "Prove that critical bond percolation on Z^2 at p = 1/2 is conformally invariant in the scaling limit (Cardy's formula and convergence of interfaces to SLE(6)), as is known on the triangular lattice by Smirnov.",
+    "reported_locator": "Chapter II Section 4, p. 26",
+    "verification": "unreviewed"
+  },
+  "primary_target_source": {
+    "url": "https://arxiv.org/pdf/1102.5761",
+    "authors": "Christophe Garban and Jeffrey Steif",
+    "location": "Chapter II section 4; Theorem II.2 and following paragraph; printed page 24, PDF page index 25 in the as-read version",
+    "short_quote": "proving the conformal invariance is still a challenging open problem",
+    "scope": "Historical square-lattice conjecture; triangular site theorem. Does not certify status in 2026.",
+    "pagination_clarification": "Printed page 24 = PDF page index 25 = one-based PDF page 26. The intake's p.26 is consistent with PDF pagination; no locator error is asserted."
+  },
+  "observable_source": {
+    "url": "https://arxiv.org/abs/1208.3787",
+    "full_text_url": "https://www.unige.ch/~duminil/publi/divergenceFK.pdf",
+    "location": "Definition 3 and Proposition 4, printed p.7; introductory discussion printed p.2",
+    "hypotheses": [
+      "Finite simply connected square-lattice Dobrushin domain (G,a,b)",
+      "FK model with 0<q<4 at p_c(q)",
+      "F(e)=E[exp(i sigma W_gamma(e,e_b)) 1_{e in gamma}]",
+      "sigma in [0,1] satisfies sin(sigma pi/2)=sqrt(q)/2",
+      "Interior medial vertex with four incident edges"
+    ],
+    "result": "F(NW)-F(SE)=i(F(NE)-F(SW)); q=1 gives p_c=1/2 and principal sigma=1/3.",
+    "short_quote": "not fully preholomorphic, but rather a divergence-free differential form",
+    "does_not_supply": "A common normalized scalar limit, boundary identification, or square-bond conformal invariance."
+  },
+  "other_primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/0909.4499",
+      "location": "Theorem 1 and Corollaries 1-4",
+      "scope": "Critical triangular SITE percolation; no square BOND transfer theorem"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1204.0505v2",
+      "location": "Theorem 3.4",
+      "scope": "Canonical isoradial BOND percolation with bounded angles and square-grid property; conditional invariance of certain exponents if existence holds for a member; does not include triangular site percolation or scalar observable convergence"
+    },
+    {
+      "url": "https://arxiv.org/abs/2409.03235v6",
+      "date": "2024-12-17",
+      "scope": "Primary manuscript claims full square-bond SLE_6 convergence; validity and acceptance not independently verified here"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.18421",
+      "date": "2026-09-16",
+      "scope": "Primary manuscript claims a half-plane one-arm exponent; neither theorem validity nor a complete conformal-invariance bridge checked here"
+    }
+  ],
+  "prior_work": {
+    "C0017_attempt": {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+      "line": 17,
+      "defect": "Principal-spin convention mismatch in an author-checked, unreviewed attempt; also present in the matched population export node",
+      "scope": "Correct only that parameter. Do not certify the whole attempt."
+    },
+    "other_named_directories": "Targeted C0017/conformal-square searches in attempts H, attempts I, and prob1000_lean; no exact C0017 resolution surfaced in the inspected matches. No broad repository or store export read.",
+    "owner_solved_retired": "Local mathematical owner folder inspected by targeted filename/term discovery; no verified solved/retired C0017 result recovered. Absence in this bounded check is not a completeness certificate.",
+    "team_o_board": "Read; no C0017 row found by targeted search. Probability300 board names C0017 workers w408-w419; no competing shared mathematical artifact edited.",
+    "owner_solved_retired_evidence": {
+      "targeted_matches": [
+        {
+          "path": "~/Big Open problem in probability theory/research/external/yamamoto_1705.06873.tex",
+          "line": 760
+        },
+        {
+          "path": "~/Big Open problem in probability theory/research/external/yamamoto_1810.07162.tex",
+          "line": 1080
+        }
+      ],
+      "scope": "The matches state the square-bond critical probability 1/2 in external literature; they do not supply a C0017 conformal-invariance proof. Bounded local search only."
+    }
+  },
+  "brain_use": {
+    "bounded_recall": {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "-X",
+        "utf8",
+        "~/.claude/dreaming/brain.py",
+        "recall",
+        "C0017 square lattice bond percolation parafermionic observable conformal invariance mistakes",
+        "-n",
+        "3"
+      ],
+      "elapsed_seconds": 55.588161000050604,
+      "timeout_seconds": 55,
+      "returncode": null,
+      "timed_out": true,
+      "stdout": "",
+      "stderr": "",
+      "fallback": "Targeted MEMORY.md search and the named perceptron scar; no continued wait."
+    },
+    "canonical_read": {
+      "path": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+      "open_mode": "read-only",
+      "node_id": "claim_07a861a72ebeb008dc23e9db32147327c062427adee7a530bab01f0de67bd002",
+      "logical_id": "math:probability.percolation:attempt-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+      "status": "exact_node_retrieved",
+      "legacy_spin_phrase_present": true,
+      "title": "Attempt on Conformal invariance of critical bond percolation on the square lattice",
+      "elapsed_seconds": 0.003272300004027784
+    },
+    "fallback": "Targeted memory-index grep gave no applicable entries; read named scar perceptron_proof_open_gaps_fleet_2026_07_12 and targeted population export nodes. The scar's local-versus-global proof obligation is a hint only.",
+    "export_match": {
+      "path": "~/math-brain-build/export/population/nodes.jsonl",
+      "line": 272,
+      "node_id": "claim_07a861a72ebeb008dc23e9db32147327c062427adee7a530bab01f0de67bd002",
+      "logical_id": "math:probability.percolation:attempt-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+      "truth_status": "unverified",
+      "short_defective_quote": "the parafermionic observable has spin sigma = 2/3"
+    }
+  },
+  "verification_limits": "Source and artifact inspection are not mathematical proof. No formal-check receipt, admitted placeholder, independent approval, ingestion, or live recall improvement is claimed.",
+  "additional_recent_primary_lead": {
+    "title": "Conformal Limits of Critical Square-Lattice Random-Cluster Interfaces",
+    "date": "2026-10-05",
+    "primary_manuscript_url": "https://raw.githubusercontent.com/openai/math/main/preprints/Conformal-Limits-of-Critical-Square-Lattice-Random-Cluster-Interfaces-October-5-2026/paper.pdf",
+    "primary_file_page": "https://github.com/openai/math/blob/main/preprints/Conformal-Limits-of-Critical-Square-Lattice-Random-Cluster-Interfaces-October-5-2026/paper.pdf",
+    "verification": "Primary file page located. Raw PDF fetch by web tool failed: unsupported application/octet-stream content type. Primary theorem text was not parsed by w418; w417 reports a parent claim. No mathematical-validity or acceptance certificate is inferred.",
+    "effect_on_status": "Current openness remains UNKNOWN; no novelty or parent-solution claim."
+  },
+  "parent_problem_solved_scope": "False denotes no solution claimed by this packet; it is not a global openness certificate.",
+  "response_side_model_evidence": "See AUTHOR_IDENTITY.json: unavailable for author, pending for referee; no different-model promotion gate claimed passed."
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "run_id": "20261013T183318Z-fleet01-B05-dense-nullity-two-a023",
+  "stream_id": "B05",
+  "account": "fleet01",
+  "primary_packet_id": "A023",
+  "packet_ids": ["A023"],
+  "attempt_id": "B05-A023-DENSE-NULLITY-TWO-10",
+  "stable_gap_id": "B05_RARE_REFUNDS",
+  "claim_version": "B05-A023-DENSE-NULLITY-TWO-v1",
+  "objective": "Remove coordinate alignment at kernel width two by comparing the exact two-bit fiber entropy to root influence in the original physical basis.",
+  "source_plan": {
+    "control_revision": "2026-10-12.1",
+    "control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "assignment_path": "reports/fei-2026-10-11/assignments/B05.json",
+    "assignment_blob": "05447e6d999437bb82a266b427bd76a4b37266b6",
+    "nullity_one_receipt": "762c425a4d56287e2dfda853cc581fa2e9e0a457",
+    "aligned_width_receipt": "09fe8877f0362b6b46361d2e5acbcb10f8dc5dd9"
+  },
+  "prior_status": "Arbitrary physical orientation was proved only through nullity one; nullity two with arbitrary cores required coordinate alignment.",
+  "new_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "mathematical_delta": "Proved H(P),U(P)<=2I(P) for every physical orientation of a two-dimensional kernel and converted it to a complete-tree retained-U payment with arbitrary common disjoint terminal core.",
+  "previous_bound": "Dense nullity two: OPEN. Coordinate-aligned nullity two: constant 2.",
+  "new_bound": "Dense nullity two: retained loss <=2I(P), sharp and independent of all listed structural parameters.",
+  "new_class": "all affine-bilinear shields with rank M=m-2, arbitrary Boolean coherent core D, arbitrary physical kernel orientation, arbitrary finite restriction trees, and arbitrary common disjoint terminal core",
+  "constant_ledger": {
+    "dimension_dependence": 0,
+    "kernel_orientation_dependence": 0,
+    "core_bias_dependence": 0,
+    "defect_count_dependence": 0,
+    "overlap_dependence": 0,
+    "tree_depth_dependence": 0,
+    "reveal_order_dependence": 0,
+    "dyadic_activation_probability_dependence": 0,
+    "constant": 2,
+    "sharp": true
+  },
+  "verification": {
+    "script": "CHECK_DENSE_NULLITY_TWO.py",
+    "output": "CHECK_DENSE_NULLITY_TWO.out",
+    "two_bit_truth_tables": 16,
+    "exhaustive_matrix_core_instances": 19760,
+    "sampled_larger_instances": 1000,
+    "largest_H_over_I": 2,
+    "result": "PASS"
+  },
+  "attempt_counter": 1,
+  "acceptance_status": "PENDING_A087_A094_OR_B19",
+  "packet_complete": false,
+  "full_fei_status": "OPEN",
+  "remaining_obstacle": "At kernel width at least three, nonaffine fibers need not be flat. A width-uniform fiber payment is full-FEI-hard, and no new signed shield-fiber interaction credit is proved.",
+  "next_action": "At width three, isolate a signed interaction credit that vanishes on the disjoint tensor embedding but pays nonflat changing fibers once under the complete tree telescope.",
+  "consumer_targets": ["A027", "A028", "A064", "A087", "B01", "B18", "B20"],
+  "reviewer_targets": ["A087", "A094", "B19"],
+  "delivery": {
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_path": "reports/fei-2026-10-11/runs/B05/20261013T183318Z-fleet01-B05-dense-nullity-two-a023/",
+    "brain_repository": "yspennstate/math-research-brain",
+    "brain_path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B05/20261013T183318Z-fleet01-B05-dense-nullity-two-a023/",
+    "canonical_package_commit": "711af621e95743a671056fb968426a536e423c40",
+    "brain_package_commit": "0590cd8432b62baf2e93fdba83f4fa2afe34afcc",
+    "readback": "VERIFIED_NONEMPTY_AND_GIT_BLOB_IDENTICAL_FOR_ALL_NINE_FILES_AT_BOTH_PACKAGE_COMMITS",
+    "status": "DELIVERED_AND_VERIFIED",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  }
+}
+

@@ -1,0 +1,25 @@
+{
+  "checked_epoch": 1791616357.6836576,
+  "checked_utc": "2026-10-10T07:12:37.683744+00:00",
+  "governor_path": "~\\.claude\\compute\\compute_state.json",
+  "governor_data_age_seconds": 26.6836576461792,
+  "local_metrics": {
+    "ts": "2026-10-10 10:12:11",
+    "status": "warn",
+    "mode": "owner_present_polite",
+    "cpu_pct": 83.9,
+    "mem_avail_mb": 6169,
+    "commit_used_pct": 91.1,
+    "commit_avail_mb": 9285,
+    "commit_eff_used_pct": 58.2,
+    "commit_eff_avail_mb": 68221
+  },
+  "bounded_cpu_check_allowed": false,
+  "limits": {
+    "max_truth_table_atoms": 2048,
+    "max_seconds": 45,
+    "gpu": false,
+    "parallel_workers": 1
+  },
+  "policy": "Fail closed on stale telemetry, non-normal governor state or commit warning; no resource controls changed."
+}

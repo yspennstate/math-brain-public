@@ -1,0 +1,12 @@
+{
+  "helper_version": "A087-stage2-direct-fiber-audit-v1",
+  "actual_Boolean_family": "All NPN transformations of every Boolean table through n=3; all two-bit outers composed with ordered pairs of four explicit balanced three-bit inner functions; stopped physical trees on those compositions; fixed A021 remainder parameters",
+  "parameter_domain": {"NPN_n":[0,1,2,3],"outer_n":2,"inner_n":3,"inner_types":["literal","parity","majority3","literal_times_quadratic_bent2"],"tree_query_depth":2,"remainder_k":[1,2,3,4,5,6]},
+  "case_count": {"NPN_transformations":24852,"compositions":256,"physical_composition_splits":1536,"stopped_trees":256,"remainder_parameters":6},
+  "symmetry": "No search symmetry reduction; explicitly test all signed permutations and output signs on all n<=3 tables. The all-n NPN theorem is proved analytically, not inferred from these tests.",
+  "arithmetic": "Direct integer character sums, exact rational raw masses and prime-log coefficient vectors; rational natural-log intervals from a 32-term atanh series with proved remainder; rational factorial-series bounds for e; exact signed endpoint interval arithmetic.",
+  "memory_estimate_MB": 60,
+  "maximum_runtime_seconds_per_phase": 60,
+  "phases": ["npn","composition","trees","correction"],
+  "pilot": "Run phases separately in the frozen order; each phase persists final results immediately, uses a 55-second guard, and does not increase dimension."
+}

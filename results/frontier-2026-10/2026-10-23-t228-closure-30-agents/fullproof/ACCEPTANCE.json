@@ -1,0 +1,95 @@
+{
+  "problem_id": "T357",
+  "list": "TOP200_DL",
+  "status": "complete internally reviewed mathematical answer in the explicitly permitted Gaussian random-feature regime",
+  "published_open_problem_novelty_certified": false,
+  "external_peer_review": false,
+  "formal_proof_assistant_verification": false,
+  "central_registry_modified": false,
+  "synthesis": {
+    "path": "T357_THEOREM_AND_SYNTHESIS.md",
+    "sha256": "7b773eba4446340893bd8e67a1397ba06b154bf79b9f89a348e68c1a93282d51",
+    "bytes": 23850
+  },
+  "complete_proof": {
+    "path": "T357_GAUSSIAN_COMPLETE_PROOF.md",
+    "sha256": "6e0331ef62b2a19218c914d7dc1cdf6034c151dbacf6f95214738f9eb173d3b3",
+    "bytes": 155321
+  },
+  "proof_modules": [
+    {
+      "path": "b03_gaussian_dynamics.md",
+      "sha256": "b5992c4a107b715a92fe79413ef79e1acb000afe3300e78c1e0af114340b59c9",
+      "bytes": 38137
+    },
+    {
+      "path": "b01_GD_state_evolution_check.md",
+      "sha256": "077b6c8134a2780f4ad5132be70fe50ccdfccd7240d00a50b4ea775d1ea0338f",
+      "bytes": 21299
+    },
+    {
+      "path": "b04_calibration_transfer.md",
+      "sha256": "ce160157647aed6aa8d405979525f31649ce8f91d99ca9ce8821d3d849eaa574",
+      "bytes": 28218
+    },
+    {
+      "path": "b02_uniform_time_GD.md",
+      "sha256": "1102592bcfdc5b3b9b82476b7d6065b7f0c596f3f6b14b05d1362637f104483f",
+      "bytes": 26302
+    },
+    {
+      "path": "b06_gaussian_overconfidence.md",
+      "sha256": "b65ea33e7e0208b825f429f5369ac1fbd1e470803848356df749b7208fbcb532",
+      "bytes": 16217
+    }
+  ],
+  "independent_reviews": [
+    {
+      "path": "b01_final_T357_review.md",
+      "sha256": "d19264374d366ca03692238fc44a8133e64d0c49b0bf531359cef60f8d0a17c4",
+      "bytes": 6392
+    },
+    {
+      "path": "b02_final_T357_review.md",
+      "sha256": "565bc389f468d2dae12ca4c386a1d2bddce1a160eab9144b44b29fe4f5b2dea5",
+      "bytes": 7712
+    },
+    {
+      "path": "b02_gaussian_calibration_audit.md",
+      "sha256": "6105f68431fb7aac91a8951d8990b1471d7197fed7f0b5c06dff89eb581a77b7",
+      "bytes": 12027
+    },
+    {
+      "path": "b04_state_evolution_audit.md",
+      "sha256": "5b87d0249f5901c8cb9a426ea602c9f01fae33855046deed77265fd72e5ba213",
+      "bytes": 27972
+    },
+    {
+      "path": "b05_RF_universality_audit.md",
+      "sha256": "cfd1777eaba5bd932ccc03abf52dc86ac3ae4b0fd4569a5fc88ad16675c7d7a1",
+      "bytes": 23294
+    },
+    {
+      "path": "b05_uniform_time_audit.md",
+      "sha256": "7ec1bff70ff33ddb1792465676adf4f5bae7846d809f8e0cc104840420e77eb7",
+      "bytes": 11624
+    },
+    {
+      "path": "b06_scope_and_mathematics.md",
+      "sha256": "a8013b52e64ac76c9f43026933b7795a332cee7aa19bb7e4fb983f8daa7850fa",
+      "bytes": 49765
+    }
+  ],
+  "quantifiers": {
+    "finite_time": "Every fixed finite horizon; every fixed positive finite alpha, gamma and c; finite beta >= 0.",
+    "uniform_time": "Explicit alpha/gamma > C_star(beta,gamma) and fixed 0 < c < gamma/(2 Lambda); all positive times and MLE.",
+    "overconfidence": "Positive beta; riskoptimal first-step scale; average confidence minus accuracy, not pointwise at every score.",
+    "common_regime": "Synthesis equation (16) gives a nonempty open weak-teacher regime in which the same fixed scale satisfies all conclusions."
+  },
+  "verification": {
+    "analytic": "Independent derivations and adversarial assumption/normalization/scope checks; see pinned reviews.",
+    "numeric": "Two regimes, five iterations, dimensions 250/500/1000 and twelve network draws each; independent QMC scrambles.",
+    "numeric_is_proof": false,
+    "finite_network_A_Q": "Asymptotically equivalent covariance proxies."
+  }
+}

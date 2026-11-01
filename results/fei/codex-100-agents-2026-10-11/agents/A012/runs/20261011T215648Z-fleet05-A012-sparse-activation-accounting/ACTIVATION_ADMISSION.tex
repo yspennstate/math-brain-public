@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newcommand{\cR}{\mathcal R}
+\begin{document}
+\title{A012: hereditary admission for sparse activation}
+\author{A012, stream B03}\date{12 October 2026}\maketitle
+Entropy is in bits. Full FEI remains open. Complete derivations, including
+product-biased gate constants and the exact finite certificate, are in
+\texttt{HIDDEN\_CORE\_TEST.md}; the read-once gate bound is a recovered baseline.
+
+\section*{Exact ledger}
+For a Boolean sign $g$ of mean $\mu$, a point indicator $A_r$ on $r\ge1$
+fresh controls, $p=2^{-r}$, and $F=1+A_r(g-1)$, put
+$a=1-\mu$, $v=1-\mu^2$, and $L(q)=q\log_2(1/q)$, $L(0)=0$. Then
+\begin{align*}
+H(F)&=L((1-pa)^2)+(p-p^2)a^2\log_2\frac1{p^2a^2}
+       +p[H(g)-L(\mu^2)]+2rpv,\\
+I(F)&=pI(g)+rpa.
+\end{align*}
+Zero terms have their continuous interpretation. For balanced $g$,
+\[
+H(F)=pH(g)+2rp(2-p)+L((1-p)^2),\qquad I(F)=p[I(g)+r].
+\]
+For $g_t=z\prod_{j=1}^t f(x^{(j)})$ and
+$r_t=\lceil2\log_2(t+1)\rceil$, these identities give
+$I(F_t)\to0$, $\Pr(F_t=-1)\to0$, and
+$H(F_t)/I(F_t)\to H(f)/I(f)$.
+
+\begin{theorem}[Hereditary reflection]
+Let $\mathcal C$ contain literals and constants and be closed under sign
+reversal, physical restrictions, disjoint products, and point activation
+on fresh controls. For every Boolean $f$ and integers $t,r\ge1$,
+\[
+f\in\mathcal C\quad\Longleftrightarrow\quad
+z\prod_{j=1}^t f(x^{(j)})\in\mathcal C\quad\Longleftrightarrow\quad
+1+A_r\left[z\prod_{j=1}^t f(x^{(j)})-1\right]\in\mathcal C.
+\]
+\end{theorem}
+\begin{proof}
+Forward implications are the stated closures. Restrict the controls to the
+selected point. Fix all but one data block, obtaining a sign product $c$;
+then fix $z=c$. The surviving restriction is exactly $f$.
+\end{proof}
+
+\section*{A nonvacuous certified class}
+Let $\cR$ consist of finite AND/OR/parity/negation formulas with literals
+and constants as leaves and globally distinct original variable labels.
+No opaque Boolean leaves are permitted. Restrictions, sign reversal,
+disjoint substitution, and disjoint products preserve the certificate.
+Point activation is $F=\operatorname{OR}(-\ell_1,\ldots,-\ell_r,g)$ for
+fresh matching control literals $\ell_i$. Thus hereditary reflection applies.
+
+Under a product law with coordinate variances $v_i$, define
+\[
+E(f)=\sum_{S\ne\varnothing}\widehat f(S)^2
+\log_2\frac{\prod_{i\in S}v_i}{\widehat f(S)^2},
+\qquad \Delta(f)=I(f)-\operatorname{Var}(f).
+\]
+Disjoint substitution satisfies
+\[
+E(b(f_i))=E(b)+\sum_i\frac{I_i(b)}{\operatorname{Var}(f_i)}E(f_i),
+\quad
+\Delta(b(f_i))=\Delta(b)+\sum_i\frac{I_i(b)}{\operatorname{Var}(f_i)}\Delta(f_i).
+\]
+Remove deterministic children. For $a_i\in(0,1]$, write
+$Z=\prod_i a_i$, $R_0=\sum_i(1-a_i)-1+Z$ and
+$\Theta=\sum_i(a_i-Z)\ln(1/a_i)$. Appending $b$ changes $R_0$ by
+$(1-b)(1-Z)$ and $\Theta$ by
+$(1-b)Z\ln(1/Z)+b(1-Z)\ln(1/b)\le2(1-b)(1-Z)$.
+Hence $\Theta\le2R_0$.
+OR has $\Delta=4ZR_0$ and $E_{\rm nat}=\ln4\,\Delta+8Z\Theta$;
+parity has $\Delta=R_0$ and $E_{\rm nat}=\Theta$ (use respectively
+$a_i=\Pr(X_i=-1)$ and $a_i=(EX_i)^2$).
+Therefore $E(f)\le C_0\Delta(f)$ for $f\in\cR$,
+$C_0=2+4/\ln2$. For uniform original inputs,
+$L((Ef)^2)\le\log_2(e)\operatorname{Var}(f)$ gives
+\[
+H(f)\le C_0 I(f),\qquad C_0<8.
+\]
+
+\section*{An actual excluded core}
+The multiplexer
+$M=(1+x)y/2+(1-x)z/2$ has four coefficients of magnitude $1/2$,
+$H(M)=2$, and all three influences $1/2$. A root of a putative
+read-once certificate is AND/OR or parity. If three singleton children
+occur, AND/OR is unbalanced and parity has influences one. If a singleton
+and a two-variable child occur, balance at AND/OR forces the other child
+to be constant; parity again has singleton influence one. Thus
+$M\notin\cR$, and all its activated balanced tensors are excluded.
+Yet $M=\operatorname{OR}(\operatorname{AND}(x,y),
+\operatorname{AND}(-x,z))$: overlapping substitution is not a closure.
+Universal representation and reuse payment remain unproved.
+\section*{Consumed A011 dependency: rare transcript cost}
+For the control-first activation of the literal $y$, stop at the first
+control mismatch with output $+1$, and output $y$ only on the matching
+point. Then $D=\sum_{j=1}^r2^{-(j-1)}=2(1-p)$ and
+$I_{\rm sel}=rp$, $I=p(r+1)$. The uncompressed two-bits-per-query
+transcript costs $2D=4(1-p)$, hence
+\[
+\frac{2D}{I}=\frac{4(2^r-1)}{r+1}\longrightarrow\infty.
+\]
+This is an explicit failure of that transcript payment, not FEI. If an
+exact spectral witness $W$ retains its physical leaf label $J$, then
+$H(J)=D$ and $H(W)\ge D$. Consequently
+\[
+H(W\mid S)\ge D-H(F)\ge2(1-p)-4rp-2p\log_2(e)\longrightarrow2.
+\]
+This exposes a necessary posterior erasure on a certified literal core.
+It consumes A011's low-boundary continuation while leaving its pending
+claim as an unreviewed source interface, not a proof premise.
+\end{document}

@@ -1,0 +1,41 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w509",
+  "bundle_slug": "p0162-exact-statement-source-review-w509-001",
+  "entries": [
+    {
+      "key": "p0162-exact",
+      "namespace": "probability.core",
+      "logical_name": "open-problem-p0162-fourier-entropy-versus-total-influence",
+      "kind": "concept",
+      "title": "P0162: exact Boolean Fourier entropy–influence conjecture",
+      "statement": "CONJECTURE, not a proved theorem. There is an absolute constant C such that for every n and Boolean f:{-1,1}^n->{-1,1} under the uniform product measure, H(f)<=C I(f). Here hat f(S)=E_x[f(x) product_{i in S}x_i], H(f)=sum_{S subset [n]} hat f(S)^2 log_2(1/hat f(S)^2) with zero terms set to zero, and I(f)=sum_{S subset [n]} |S| hat f(S)^2. The Boolean-valued hypothesis is essential. The dated 2026-09-07 local label attempted_un is historical; current global openness was not exhaustively certified by this source check.",
+      "proof_text": null,
+      "assumptions": [
+        "finite uniform Boolean cube",
+        "f takes values exactly -1 or +1",
+        "one constant independent of n and f",
+        "base-2 logarithm; a different fixed base only rescales C"
+      ],
+      "domain": "probability theory; analysis of Boolean functions",
+      "source": {
+        "source_id": "wikipedia:Entropy_influence_conjecture:2026-10-10",
+        "url": "https://en.wikipedia.org/wiki/Entropy_influence_conjecture",
+        "revision": "as-read-2026-10-10; exact form corroborated by O'Donnell-Wright-Zhou, https://www.cs.cmu.edu/~odonnell/papers/fei.pdf, Introduction",
+        "license": "CC-BY-SA-4.0",
+        "excerpt": null
+      },
+      "supersedes_existing": true,
+      "draft_review_status": "source-checked-by-w509; mathematical conjecture remains unproved",
+      "proof_artifact": "~/brain_workers/w509/SOURCE_STATUS.json"
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0162-exact",
+      "to_existing_logical": "math:probability.core:attempt-p0162-fourier-entropy-versus-total-influence",
+      "kind": "semantic_association",
+      "rationale": "The existing attempt shows why dropping Boolean realizability from this exact conjecture invalidates an entropy-versus-mean-cardinality route; it neither refutes nor proves P0162."
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+\section*{Exact biased-child coherent identity and collision asymptotics}
+
+All logarithms are natural.  Put
+\[
+ \psi(t)=t^2\log\frac1{t^2},\qquad
+ \mathcal E_{\rm raw}(c)=\sum_T\psi(c_T),
+\]
+with \(\psi(0)=0\), and define the scalar interference kernel
+\[
+ K(x,y)=\psi(x)+\psi(y)-\frac{\psi(x+y)+\psi(x-y)}2.
+\]
+
+Let \(a,b\) be functions on a block \(W\), let \(h\) be a Boolean sign
+on a disjoint block \(X\), and suppose \(a+b\) and \(a-b\) are Boolean
+signs.  Thus
+\[
+ F(W,X)=a(W)+h(X)b(W)
+\]
+is Boolean.  Fix \(i\in X\), write
+\[
+ h=r+x_i s,\qquad \mu=\mathbb Eh=\widehat r(\varnothing),
+ \qquad \alpha=\widehat h(\{i\})=\widehat s(\varnothing),
+\]
+and put \(q=\|b\|_2^2=\sum_T b_T^2\).  For any Boolean sign
+\(f=u+x_i v\), define its physical split decrement by
+\[
+ D_i(f)=\mathcal E_{\rm raw}(u)+\mathcal E_{\rm raw}(v)
+ -\frac{\mathcal E_{\rm raw}(u+v)+\mathcal E_{\rm raw}(u-v)}2.
+\]
+
+\subsection*{Theorem 1 (proved): exact biased-child remainder}
+
+For every choice above,
+\[
+ D_i(F)=qD_i(h)+R_\mu(\alpha),                                      \tag{1}
+\]
+where
+\begin{align*}
+ R_\mu(\alpha)={}&\mathcal E_{\rm raw}(a+\mu b)
+ +\mathcal E_{\rm raw}(\alpha b)\\
+ &-\frac{\mathcal E_{\rm raw}(a+(\mu+\alpha)b)
+              +\mathcal E_{\rm raw}(a+(\mu-\alpha)b)}2
+ -qK(\mu,\alpha).                                                   \tag{2}
+\end{align*}
+Equivalently,
+\begin{align*}
+ R_\mu(\alpha)={}&\mathcal E_{\rm raw}(a+\mu b)
+ +\alpha^2\mathcal E_{\rm raw}(b)\\
+ &-\frac{\mathcal E_{\rm raw}(a+(\mu+\alpha)b)
+              +\mathcal E_{\rm raw}(a+(\mu-\alpha)b)}2\\
+ &+q\left[-\psi(\mu)+\frac{\psi(\mu+\alpha)+\psi(\mu-\alpha)}2\right]. \tag{3}
+\end{align*}
+When \(\mu=0\), (3) is exactly the reviewed balanced formula, including
+\(q\alpha^2\log(1/\alpha^2)\) and both coherent spectra.
+
+\paragraph{Proof.}
+The physical split of \(F\) is
+\[
+ F=(a+rb)+x_i(sb).
+\]
+For every nonempty Fourier index \(U\) of the remaining child block, the
+four vectors entering \(D_i(F)\) are respectively
+\(r_Ub,s_Ub,(r_U+s_U)b,(r_U-s_U)b\).  Tensor entropy gives
+\[
+ \mathcal E_{\rm raw}(cb)=q\psi(c)+c^2\mathcal E_{\rm raw}(b).
+\]
+The coefficients multiplying \(\mathcal E_{\rm raw}(b)\) cancel because
+\[
+ r_U^2+s_U^2=\frac{(r_U+s_U)^2+(r_U-s_U)^2}{2}.
+\]
+The resulting contribution is exactly \(q\) times the corresponding
+nonconstant-index contribution to \(D_i(h)\).  At the empty child index,
+the four vectors are
+\[
+ a+\mu b,\quad \alpha b,\quad a+(\mu+\alpha)b,
+ \quad a+(\mu-\alpha)b.
+\]
+Subtracting \(q\) times the empty-index contribution
+\(K(\mu,\alpha)\) to \(D_i(h)\) proves (1)--(2).  Finally,
+\[
+ \mathcal E_{\rm raw}(\alpha b)
+ =q\psi(\alpha)+\alpha^2\mathcal E_{\rm raw}(b),
+\]
+which gives (3). \(\square\)
+
+\subsection*{Coefficientwise form}
+
+For \(b_T\ne0\), put \(t_T=a_T/b_T\).  The quadratic coefficient of
+\(\log(1/b_T^2)\) cancels inside each kernel, so (2) is exactly
+\[
+ \boxed{
+ R_\mu(\alpha)=\sum_{T:b_T\ne0}b_T^2
+ \bigl[K(t_T+\mu,\alpha)-K(\mu,\alpha)\bigr].}                    \tag{4}
+\]
+This identity isolates the child-mean correction rather than treating a
+biased child as balanced.
+
+\subsection*{Theorem 2 (proved): fixed-bias collision law}
+
+Define the exact collision energy
+\[
+ Z_\mu(a,b)=\sum_{T:\,b_T\ne0,\ a_T+\mu b_T=0}b_T^2.
+\]
+For fixed finite coefficient arrays \(a,b\):
+\[
+ \lim_{\alpha\to0}
+ \frac{R_\mu(\alpha)}{\alpha^2\log(1/\alpha^2)}
+ =-Z_\mu(a,b),\qquad 0<|\mu|<1,                                  \tag{5}
+\]
+whereas at exact balance
+\[
+ \lim_{\alpha\to0}
+ \frac{R_0(\alpha)}{\alpha^2\log(1/\alpha^2)}
+ =q-Z_0(a,b).                                                       \tag{6}
+\]
+
+\paragraph{Proof.}
+For every fixed \(x\ne0\), Taylor expansion of \(\psi\) away from zero
+gives
+\[
+ K(x,\alpha)=\psi(\alpha)+O_x(\alpha^2),
+\]
+whereas \(K(0,\alpha)=0\) identically.  If \(\mu\ne0\), the subtracted
+kernel \(K(\mu,\alpha)\) contributes one copy of \(\psi(\alpha)\) at
+every \(b_T\ne0\).  It cancels when \(t_T+\mu\ne0\), and remains with
+negative sign precisely when \(a_T+\mu b_T=0\), proving (5).  If
+\(\mu=0\), the subtracted kernel vanishes.  A positive copy remains
+precisely when \(a_T\ne0\), proving (6). \(\square\)
+
+Thus a fixed nonzero child bias removes every positive leading
+\(\alpha^2\log(1/\alpha^2)\) debt.  Exact coherent collisions produce a
+negative logarithmic refund instead.  This statement is not uniform as
+\(\mu\to0\) or as a nonzero collision gap tends to zero.  Indeed
+\[
+ K(c\alpha,\alpha)=\alpha^2K(c,1),
+\]
+so the balanced positive logarithm reappears when \(\mu\) is comparable
+to \(\alpha\).  Uniform control of this two-parameter transition is part
+of the remaining hierarchy gap.
+
+\subsection*{Actual Boolean collision control}
+
+Take the two three-bit branches, in lexicographic truth-table order,
+\[
+ g_+=(-1,-1,-1,-1,-1,-1,-1,1),
+\]
+\[
+ g_-=(-1,-1,-1,1,-1,1,1,-1).
+\]
+Their half-sum and half-difference Fourier vectors are
+\[
+ \widehat a=(-1/2,-1/4,-1/4,0,-1/4,0,0,1/4),
+\]
+\[
+ \widehat b=(-1/4,0,0,1/4,0,1/4,1/4,-1/2).
+\]
+At \(\mu=1/2\), the collision energy is \(Z_{1/2}=1/4\).  For every
+\(n\ge4\), choose a Boolean child which is negative on \(2^{n-2}\)
+points, with \(2^{n-3}+1\) of them on the \(x_1=+1\) face and
+\(2^{n-3}-1\) on the \(x_1=-1\) face.  Then
+\[
+ \mathbb Eh=\frac12,\qquad \widehat h(\{1\})=-2^{2-n}.
+\]
+This is a genuine Boolean family, and (5) gives
+\[
+ \frac{R_{1/2}(\alpha_n)}{\alpha_n^2\log(1/\alpha_n^2)}\longrightarrow-\frac14.
+\]
+The archived deterministic values through \(n=14\) approach this limit
+from below.  The family is a control for a refund, not an FEI
+counterexample.
+

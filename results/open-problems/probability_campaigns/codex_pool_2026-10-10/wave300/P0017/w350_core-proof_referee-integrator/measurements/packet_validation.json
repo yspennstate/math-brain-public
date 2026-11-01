@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "command": "python -X utf8 validate_packet.py",
+  "bundles": [
+    {
+      "file": "bundle_001.json",
+      "entries": 6,
+      "relations": 8,
+      "dependency_cycle": false
+    },
+    {
+      "file": "bundle_002.json",
+      "entries": 4,
+      "relations": 5,
+      "dependency_cycle": false
+    },
+    {
+      "file": "bundle_003.json",
+      "entries": 2,
+      "relations": 2,
+      "dependency_cycle": false
+    }
+  ],
+  "claim_rows": 10,
+  "peer_KEEPs": 13,
+  "historical_FIXs": 1,
+  "relations_with_both_ends_quoted": 15,
+  "hook_controls": {
+    "fire": true,
+    "silent": true
+  },
+  "formal_proof_assistant_used": false,
+  "live_store_written": false
+}

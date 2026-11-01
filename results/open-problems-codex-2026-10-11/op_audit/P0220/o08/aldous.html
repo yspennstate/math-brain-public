@@ -1,0 +1,44 @@
+<html><head><script async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+</script>
+<title>Left Hamm</title></head><body><h2 align="center">A one-dimensional drift-jump particle process.</h2>
+
+In the  <i>Hammersley process</i>   (<a href="https://www.stat.berkeley.edu/~aldous/Papers/me71.pdf">Aldous-Diaconis 1995</a>), at each time \( t&gt;0\)
+ there are a (two-sided) infinite number of particles at positions 
+ \( 0 &lt; \ldots &lt; X_{-1}(t) &lt; X_0(t) &lt; X_1(t) &lt; \ldots &lt; \infty\)
+ and the dynamics are
+ <blockquote>
+ Events occur as a rate-1 space-time Poisson point process on \( (0,\infty) \times (0,\infty) \).
+ When an event occurs at \( (x_0,t_0) \), the closest particle to the right of \(x_0\) is moved to \(x_0\).
+  </blockquote>
+This arose as one of many aspects of the "longest increasing subsequence of a uniform random permutations" problem,
+and the relation is  most clearly seen using the <i>patience sorting</i> 
+representation (<a href="https://www.stat.berkeley.edu/~aldous/Papers/me86.pdf">Aldous-Diaconis 1999</a>).
+But there is also a different limit process which arises by considering, instead of a scaling limit, only the first
+\(k\) piles in patience sorting, corresponding in a sense to considering only the start of the subsequence. 
+In this process there are \(k\) particles at positions 
+ \( 0  &lt; X_1(t) &lt; X_2(t) &lt;  \ldots &lt; X_k(t) \)
+and the dynamics are
+  <blockquote>
+ Events occur as a rate-1 space-time Poisson point process on \( (0,\infty) \times (0,\infty) \).
+ When an event occurs at \( (x_0,t_0) \), the closest particle (if any) to the right of \(x_0\) is moved to \(x_0\).
+ Also the particles move to the right at speed linearly increasing in space:
+ \( dX_i(t)/dt = X_i(t) \).
+  </blockquote>
+ In fact these distributions are consistent as \(k\) varies, and so define an infinite particle process.
+ This process is mentioned briefly in section 5.2 of Aldous-Diaconis 1999.   
+ By soft arguments this process has a unique stationary distribution.
+<p>
+<b>Problem.</b> 
+Give some (fairly explicit) description of the stationary distribution.
+
+
+<br/>
+</p><p>
+<font size="-1"><b>History.</b>
+Some analysis is attempted in section 4.1 of <a href="patience.pdf">these unfinished unpublished 1993 notes</a> 
+from which the two published papers above were mined and refined.
+The problem was often mentioned in subsequent conversations. Posted here February 2018.
+</font>
+</p><p><br/>
+Back to <b><a href="https://www.stat.berkeley.edu/~aldous/Research/OP/index.html">Open Problem list</a></b>
+</p></body><script>if(window.parent==window){(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","G-6FTL175Z2R","auto",{"siteSpeedSampleRate":100});ga("send","pageview");}</script><script async src="https://siteimproveanalytics.com/js/siteanalyze_6294756.js"></script></HTML>

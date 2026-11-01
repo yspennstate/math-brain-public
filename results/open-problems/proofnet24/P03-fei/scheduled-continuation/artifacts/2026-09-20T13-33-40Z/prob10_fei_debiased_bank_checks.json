@@ -1,0 +1,60 @@
+{
+  "character_child_debiased_upper_constant_lambda1": 5.878626264498266,
+  "coded_F8": {
+    "new_selector_status": "UNVERIFIED",
+    "physical_inputs": 2040,
+    "reason": "The archived F_8 truth table is not enumerable in this bounded run, and no compressed certificate for Q_{A,lambda}/I_A is proved. The analytic compiler itself is dimension-free and applies formally, but no paid block is asserted."
+  },
+  "compiler": "A universal hereditary proper-block selector with nondecreasing lambda and Q<=K I_A implies H<=2K I.",
+  "constant_c_ln2_over_2": 0.34657359027997264,
+  "executed_checker_source_sha256": "11428460d77f5623a98a82acc1038a395f91f5ab0d4b4080d599237df0bfc62d",
+  "executed_full_stdout_sha256": "4a314ab84d66827f84283bea9674acbe55a16ac23a6ab4513c5a4057f12beacf",
+  "exhaustive_small_boolean_dynamic_grid": {
+    "2": {
+      "dynamic_witness_canonical_mask": 1,
+      "fixed_lambda_worst_best": {"0.0": 2.0, "0.25": 2.0618293615242322, "0.5": 2.1273625589018774, "0.75": 2.196849930352161, "1.0": 2.27055988837249},
+      "functions_up_to_global_sign": 8,
+      "monotone_grid_dynamic_worst_from_lambda0": 2.0,
+      "monotone_grid_dynamic_worst_from_lambda1": 2.27055988837249,
+      "proper_block_cases": 16
+    },
+    "3": {
+      "dynamic_witness_canonical_mask": 1,
+      "fixed_lambda_worst_best": {"0.0": 2.672488983973203, "0.25": 2.7641687219761932, "0.5": 2.8640510101834282, "0.75": 2.972963581668271, "1.0": 3.0918211334703525},
+      "functions_up_to_global_sign": 128,
+      "monotone_grid_dynamic_worst_from_lambda0": 2.672488983973203,
+      "monotone_grid_dynamic_worst_from_lambda1": 3.0918211334703525,
+      "proper_block_cases": 768
+    },
+    "4": {
+      "dynamic_witness_canonical_mask": 1,
+      "fixed_lambda_worst_best": {"0.0": 2.6340033908863774, "0.25": 2.74862285216018, "0.5": 2.875583160399648, "0.75": 3.016312101917274, "1.0": 3.1724094552489195},
+      "functions_up_to_global_sign": 32768,
+      "monotone_grid_dynamic_worst_from_lambda0": 2.672488983973203,
+      "monotone_grid_dynamic_worst_from_lambda1": 3.1724094552489195,
+      "proper_block_cases": 458752
+    }
+  },
+  "full_FEI_proved": false,
+  "limitations": [
+    "Finite floating-point checks are self-checks, not proof, independent validation, or formal verification.",
+    "The monotone-scale compiler is proved analytically in the report; the grid {0,.25,.5,.75,1} only tests a finite discretization through dimension four.",
+    "Named examples test all singletons, all pairs, all-but-one blocks, and listed structural blocks, not every proper block above dimension four.",
+    "No universal hereditary paid selector is inferred from the finite tests."
+  ],
+  "max_abs_block_influence_budget_error": 0.0,
+  "named_best_tested_ratio_lambda0_lambda1": {
+    "Gamma3_Maj3_n6": {"lambda0": 2.1455351442114354, "lambda1": 2.129479741742334, "lambda1_best_mask": 8, "lambda1_max_singleton_ratio": 3.0735410445614946},
+    "addressing_2_to_4_n6": {"lambda0": 0.0, "lambda1": -0.1520530179809274, "lambda1_best_mask": 4, "lambda1_max_singleton_ratio": 2.2457746876482387},
+    "bent_quadratic_n4": {"lambda0": 2.0, "lambda1": 2.135279944186245, "lambda1_best_mask": 3, "lambda1_max_singleton_ratio": 2.3678878384956317},
+    "majority3_of_majority3_n9": {"lambda0": 0.0, "lambda1": -0.11128518892552641, "lambda1_best_mask": 8, "lambda1_max_singleton_ratio": -0.1112851889255122},
+    "majority5": {"lambda0": 0.0, "lambda1": -0.12469005445149861, "lambda1_best_mask": 1, "lambda1_max_singleton_ratio": -0.12469005445149861},
+    "one_point_w6": {"lambda0": 2.2922449382251955, "lambda1": 2.8931774861715933, "lambda1_best_mask": 1, "lambda1_max_singleton_ratio": 2.8931774861715933},
+    "padded_bent_marker_m4_k3_n8": {"lambda0": 1.6207779679211853, "lambda1": 1.7755926468696979, "lambda1_best_mask": 6, "lambda1_max_singleton_ratio": 5.388594293975093},
+    "tensor_w3_w3_n6": {"lambda0": 2.6724889839732047, "lambda1": 3.0321853922161712, "lambda1_best_mask": 9, "lambda1_max_singleton_ratio": 3.0430583635171757}
+  },
+  "one_point_predicted_limit_lambda1": 2.613705638880109,
+  "one_point_sequence_lambda1": {"2": 2.27055988837249, "3": 3.0918211334703525, "4": 3.1724094552489195, "5": 3.038840879685098, "6": 2.8931774861715933, "7": 2.78356962364961, "8": 2.7113526970790787, "9": 2.667011983195126, "10": 2.641026026967295, "11": 2.6263471589323077, "12": 2.6183403918918167},
+  "small_grid_monotonicity": {"min_G": 0.0, "min_G_increment": 0.0},
+  "status": "PASS"
+}

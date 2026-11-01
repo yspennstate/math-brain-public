@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "fleet03",
+  "slot": "B18",
+  "run_id": "20260923T175446Z-fleet03-B18-QFORM-r32",
+  "status": "PASS_SUPPORTING_THEOREM_FULL_QFORM_OPEN",
+  "theorem": "QFORM-NULLHUB-RANKONE-PARTNER-CLOSURE-v1",
+  "claims": {
+    "rank_one_partner_bound": "||p_Q||_inf <= [192/(|d| gamma^2 (1-q_i))]^(1/3) for g_i!=0, q_i<1, epsilon ell_- + d beta_i beta_- in span(g_-)",
+    "target_q_le_3_4": "||p_Q||_inf <= 3840^(1/3) = 15.65947056467545... for 1/2<q_i<=3/4 in the target-normalized moderate/high-shear packet",
+    "q_eq_1_endpoint": "<296 by completed three-disjoint-banks all-pivot theorem under the same exact rank-one-partner geometry",
+    "partner_splice": "<64.18 across all edge sizes for 1/2<q_i<=3/4 in the exact rank-one-partner branch, using r31 at g_i=0, this run for 0<|g_i|<1/64, and fleet04/B18 r4 for |g_i|>=1/64",
+    "continuity_new_branch": false,
+    "full_qform": false
+  },
+  "symbolic_checks": {
+    "conditional_cancellation": "PASS: Q-2U(H+epsilon V)-d(K-(b/epsilon)H)^2 factors as -(H+epsilon V)(-2 alpha epsilon^2 H+b^2 d H-b^2 d epsilon V-2 epsilon^2 l V)/epsilon^2, hence depends only on H,V",
+    "transverse_norm": "PASS: ||P_{G^perp}B||^2=(1-q)/(1-rho^2)",
+    "invariant": "PASS: mu*s^3=|d|*gamma^2*(1-q)",
+    "scalar_optimization": "PASS: sup_{mu>0} mu^(1/3)B(mu)=192^(1/3)",
+    "constants": {
+      "192_cuberoot": 5.768998281229633,
+      "3840_cuberoot": 15.659470564675452
+    }
+  },
+  "source_checks": {
+    "primary_lpp": "Livshyts-Paouris-Pivovarov, arXiv:1507.07949 / Israel J. Math. 216 (2016): product cap-one inputs, every k-dimensional orthogonal marginal <=2^(k/2); hypotheses match owner source class",
+    "pure_hub_source": "yspennstate/math-open-problems@fad298c9bb0e96eae32c5a98861b42b50eec8568:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/hubs.tex",
+    "partner_fleet04_B18": "yspennstate/math-open-problems@afbdba9c6b0624552a6725568d3eb883b999d1e1:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T162049Z-fleet04-B18-QFORM-r4/REPORT.md",
+    "three_bank_endpoint": "yspennstate/math-open-problems@602d508c11f3bb5848b65581a750b4497708bd5f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T112422Z-fleet03-B18-QFORM-r27/REPORT.md"
+  },
+  "correction_audit": {
+    "post_rotation_independence": false,
+    "conditional_cap_as_independence": false,
+    "arbitrary_joint_indefinite_coarea": false,
+    "law_uniform_pointwise_quadratic_phase_decay": false,
+    "fixed_good_minor": false,
+    "near_zero_replaced_by_zero": false,
+    "extra_distributional_assumptions": false
+  },
+  "remaining_debt": [
+    "exact rank-one-partner collar 3/4<q_i<1 with 0<|g_i|<1/64 needs a uniform interpolation",
+    "general source-entangled tiny-edge branch where the two-anchor partner cross block has genuine rank two",
+    "arbitrary-extra-spectrum global compiler",
+    "full-target continuity"
+  ],
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

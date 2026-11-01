@@ -1,0 +1,769 @@
+{
+  "P0276": {
+    "ledger_rows": [
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+        "line": 361,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "product_condition_and_cutoff_for_unweighted_abelian_cayley_graphs",
+          "historical_status": "source_says_open",
+          "locator": "Problem2.4,PDF26-27",
+          "problem_id": "P0276",
+          "recorded_at": "2026-09-07T00:04:19Z",
+          "result_status": "unsolved",
+          "schema": "probability-problem.v1",
+          "source_id": "salez_markov_2025",
+          "source_statement_date": "2025-08-28",
+          "statement": "Is total-variation cutoff equivalent to the spectral product condition for simple random walks on finite Abelian Cayley graphs?",
+          "statement_caveat": "The source defines uniform choice from a generating set and places weighted walks in a separate subsequent paragraph. Its statement does not impose a bounded-degree hypothesis. A weighted reset example alone is insufficient.",
+          "title": "Product condition and cutoff for unweighted Abelian Cayley graphs"
+        }
+      },
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+        "line": 375,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "product_condition_and_cutoff_for_unweighted_abelian_cayley_graphs",
+          "historical_status": "source_says_open",
+          "locator": "Problem2.4,PDF26-27",
+          "problem_id": "P0276",
+          "proof_file": "proofs/P0276_unweighted_abelian_cutoff_counterexample_candidate.md",
+          "recorded_at": "2026-09-07T00:24:16Z",
+          "result_status": "candidate_full_solution",
+          "schema": "probability-problem.v1",
+          "source_id": "salez_markov_2025",
+          "source_statement_date": "2025-08-28",
+          "statement": "Is total-variation cutoff equivalent to the spectral product condition for simple random walks on finite Abelian Cayley graphs?",
+          "statement_caveat": "Literal unrestricted uniform-generator statement; explicit unbounded-degree unweighted Abelian Cayley counterexample candidate. No claim about bounded-degree or random-generator variants; novelty and independent review unverified.",
+          "title": "Product condition and cutoff for unweighted Abelian Cayley graphs"
+        }
+      },
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+        "line": 268,
+        "payload": {
+          "attempt_id": "P0276-A001",
+          "candidate_full_solution": false,
+          "depth": "individual_analytic_attempt",
+          "full_problem_solved": false,
+          "independent_check": "The semigroup identity is e^(t(L+theta(Pi-I)))=Pi+e^(-theta*t)*(e^(tL)-Pi). The cube first-level eigenvalue is2/d, so adding theta of order1/(d log d) leaves relaxation of order d. The example thus really satisfies the product condition.",
+          "independent_review": "none",
+          "method": "Explicit model calculation and hypothesis obstruction",
+          "novelty": "not_claimed",
+          "obstruction": "To settle the stated uniform-generator problem one must either transfer the reset mechanism to an unweighted Abelian Cayley graph and verify the full state-space mixing profile, or prove a structural obstruction to that transfer. A possible auxiliary-factor construction has been identified for further checking; no full result is claimed at intake. The2026 local-product theorem uses a stronger constant and is not a resolution by its abstract.",
+          "problem_id": "P0276",
+          "recorded_at": "2026-09-07T00:04:19Z",
+          "result": "The weighted reset construction gives a useful obstruction that must not be mislabelled. Let Q_d be continuous-time rate-one simple walk on the d-cube and add independent resets to uniform at rate theta_d. Because the uniform projection commutes with its generator, the total-variation distance is exactly exp(-theta_d*t) times the cube distance. Taking theta_d*t_d to1, where t_d=(d/4)*log d, produces a gradual exp(-s) profile before the cube mixing scale although the inverse-gap-to-mixing ratio tends to zero. This destroys cutoff for the weighted walk.",
+          "schema": "probability-attempt.v1",
+          "substantive": true,
+          "verification": "author_checked_partial"
+        }
+      },
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+        "line": 273,
+        "payload": {
+          "attempt_id": "P0276-A002",
+          "candidate_full_solution": true,
+          "depth": "full_analytic_candidate",
+          "full_problem_solved": false,
+          "independent_check": "Exact projected semigroup and conditional auxiliary coupling are checked separately; a complete character spectrum rules out a hidden slow auxiliary mode. The cube profile is proved by an exact chi-square formula and a magnetization Chebyshev argument.",
+          "independent_review": "none",
+          "method": "Unweighted Abelian auxiliary-factor realization of a rare uniform reset; exact Fourier spectrum",
+          "novelty": "not_claimed",
+          "obstruction": "No gap found in author checks, but exact source scope, independent review and prior-art reconciliation remain necessary. The degree is unbounded and the generator set is specially chosen.",
+          "problem_id": "P0276",
+          "proof_file": "proofs/P0276_unweighted_abelian_cutoff_counterexample_candidate.md",
+          "recorded_at": "2026-09-07T00:24:16Z",
+          "result": "The Cayley generator set on H_d times Z_m consists of all basis-coordinate increments paired with a nonzero auxiliary increment, and all nonzero cube increments paired with zero. Choosing m~2^d log(d)/4 gives full-state TV profile e^-s for0<s<1 and0 for s>1 on scale T~d log(d)/4. The exact full character spectrum gives gap~2/d. Hence the product condition holds while t_mix(3/4)/t_mix(1/4) tends to log(4/3), so cutoff fails.",
+          "schema": "probability-attempt.v1",
+          "substantive": true,
+          "verification": "author_checked_candidate"
+        }
+      }
+    ],
+    "store_nodes": [
+      {
+        "id": "claim_a56705d20f4ad3e5ec0580674f0e5fd4bf9f6217930329baee3bec9d318ea1e6",
+        "kind": "claim",
+        "title": "Open problem: Product condition and cutoff for unweighted Abelian Cayley graphs",
+        "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_full_solution). Is total-variation cutoff equivalent to the spectral product condition for simple random walks on finite Abelian Cayley graphs? Source: Salez: Modern aspects of Markov chains, entropy curvature and cutoff,2025, Problem2.4,PDF26-27.\nPosed in Salez: Modern aspects of Markov chains, entropy curvature and cutoff,2025\nStatus as recorded in the campaign ledger on 2026-09-07",
+        "metadata_json": "{\"artifact_digest\":\"sha256:dfd4445115ce78bde451becb7c4888b78f2ba3d2ad584c9c91f28438b660ca11\",\"artifact_path\":\"objects/sha256/df/dfd4445115ce78bde451becb7c4888b78f2ba3d2ad584c9c91f28438b660ca11.md\",\"bundle_digest\":\"sha256:ddd293f4ed06be48fe9cbeb6bd86eef5f0277c23c9d035ac24c184c235a410cc\",\"bundle_entry_key\":\"op-p0276\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-02\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_010.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0276-product-condition-and-cutoff-for-unweighted-abelian-cayley-graphs\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:8e767f585adadfafded15d7807a186bb88344da7557453dc19b6b57f2f862f8f\",\"revision_digest\":\"sha256:a56705d20f4ad3e5ec0580674f0e5fd4bf9f6217930329baee3bec9d318ea1e6\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0276\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_5d5c1af0b5b1a5d176a64e76e1a45191a1d1eafdeb32358f548c0d38aaca2be8",
+        "kind": "claim",
+        "title": "Attempt on Product condition and cutoff for unweighted Abelian Cayley graphs",
+        "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Unweighted Abelian auxiliary-factor realization of a rare uniform reset; exact Fourier spectrum Result: The Cayley generator set on H_d times Z_m consists of all basis-coordinate increments paired with a nonzero auxiliary increment, and all nonzero cube increments paired with zero. Choosing m~2^d log(d)/4 gives full-state TV profile e^-s for0<s<1 and0 for s>1 on scale T~d log(d)/4. The exact full character spectrum gives gap~2/d. Hence the product condition holds while t_mix(3/4)/t_mix(1/4) tends to log(4/3), so cutoff fails. Check: Exact projected semigroup and conditional auxiliary coupling are checked separately; a complete character spectrum rules out a hidden slow auxiliary mode. The cube profile is proved by an exact chi-square formula and a magnetization Chebyshev argument. Obstruction: No gap found in author checks, but exact source scope, independent review and prior-art reconciliation remain necessary. The degree is unbounded and the generator set is specially chosen.\nRefers to the open problem node open-problem-p0276-product-condition-and-cutoff-for-unweighted-abelian-cayley-graphs\nNo independent review",
+        "metadata_json": "{\"artifact_digest\":\"sha256:08ace3e9b4eb1e3c4cdd6f281ee898d1fba65ece26c73104f88345c338f14af6\",\"artifact_path\":\"objects/sha256/08/08ace3e9b4eb1e3c4cdd6f281ee898d1fba65ece26c73104f88345c338f14af6.md\",\"bundle_digest\":\"sha256:eb454590da264abd9c57c60c3191f916b323e3458b64d5d132e727dbbc7d6100\",\"bundle_entry_key\":\"at-p0276\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-05\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_013.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0276-product-condition-and-cutoff-for-unweighted-abelian-cayley-graphs\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:d8b4e74f8a108ad4690efcbb85218be43273e7604dff1773dd51d7866037d260\",\"revision_digest\":\"sha256:5d5c1af0b5b1a5d176a64e76e1a45191a1d1eafdeb32358f548c0d38aaca2be8\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0276\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_17acbf2a026eb5d235b94431846e88ac17809e983c8bcc6ecd09c510ae2bf662",
+        "kind": "claim",
+        "title": "Salez Problem 2.4 (our id P0276): the LITERAL statement FALLS - a degree-unbounded abelian Cayley graph obeys the product condition without cutoff",
+        "body": "Salez, Modern aspects of Markov chains: entropy, curvature and the cutoff phenomenon (arXiv:2508.21055), Problem 2.4 (p. 27) asks to prove that cutoff is equivalent to the product condition for random walks on Cayley graphs of abelian groups, presented as a workshop prediction reiterated as [52, Conjecture 1], with no degree bound stated in the printed question. Our result (id P0276, 2026-09-08): the literal statement is FALSE. Take G_d = (Z/2)^d x (Z/m_d) with m_d = 1 + ceil(2^d log d / 4) and S_d = {(e_i, k): i <= d, k nonzero} union {(x, 0): x in the cube, x nonzero} - a simple, connected, undirected, vertex-transitive, unweighted abelian Cayley graph. The cube generators act as a reset Q_d = (2^d Pi_d - I)/(2^d - 1), giving the exact identity q_d(t) = e^{-beta_d t} c_d(alpha_d t) with beta_d chosen so that beta_d T_d tends to 1 (T_d the cube's mixing scale); the distance profile is e^{-s} on 0 < s < 1 and 0 beyond, a continuous decay with NO cutoff, while gap times t_mix is asymptotic to (1/2) log d, which diverges, so the product condition HOLDS. Verification as the source words it: alpha_d tends to 1 and beta_d ~ 4/(d log d) so beta_d T_d tends to 1; the character computation puts the slowest sector at a = 1 giving gap = 2 alpha_d/d + beta_d ~ 2/d; the profile yields t(3/4)/t(1/4) tending to log(4/3) = 0.288, not 1; and the whole-graph error bound |v_d - q_d| <= e^{-alpha_d t} + 1/m_d is correct with both terms vanishing on the relevant scale. A scoped independent review by another agent is on file, checking the full character spectrum, the coupling and the mixing-time brackets, and found no gap in scope. CAVEAT in the memo's own words: the degree is unbounded; Salez's Problem 2.4 as printed carries no degree bound, so the literal statement falls, but whether the workshop question and [52, Conjecture 1] carry one is unchecked.\nG_d = (Z/2)^d x (Z/m_d), m_d = 1 + ceil(2^d log d / 4)\nS_d as specified; degree unbounded in d\nsimple, connected, vertex-transitive, unweighted abelian Cayley graph",
+        "metadata_json": "{\"artifact_digest\":\"sha256:b3be2c1068b95d85e606b2664ab4e97ae627c8802faae9e164df95b7fbc91838\",\"artifact_path\":\"objects/sha256/b3/b3be2c1068b95d85e606b2664ab4e97ae627c8802faae9e164df95b7fbc91838.md\",\"bundle_digest\":\"sha256:745ed875be729d5bfd14b42c6f87e312f9d72d63db6b4bc5cb58522a25a785f8\",\"bundle_entry_key\":\"p0276\",\"bundle_id\":\"population.probability-campaign-results-p-series-001\",\"claim_kind\":\"theorem\",\"conditions\":[],\"domain\":\"probability, Markov chains, cutoff, Cayley graphs\",\"draft\":\"claude-m1-probstore-0912/bundle_001.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.open-problems:p0276-salez-problem-2-4-literal-form-refuted\",\"overlay_schema_version\":1,\"proof_text\":\"The generating set has two parts on very different scales: the cube part acts as an exact reset with rate beta_d, the cyclic part mixes slowly. Characters diagonalise both, so the distance profile is computable exactly: q_d(t) = e^{-beta_d t} c_d(alpha_d t). Tuning m_d so that beta_d T_d tends to 1 makes the reset and the slow mixing happen on the same scale, which produces a continuous exponential profile (no cutoff) while the spectral gap times the mixing time still diverges (the product condition).\",\"release_manifest_digest\":\"sha256:218890765536141de9a0987b1c815b553a66906fd465e6538e55a9cd7dba73f0\",\"revision_digest\":\"sha256:17acbf2a026eb5d235b94431846e88ac17809e983c8bcc6ecd09c510ae2bf662\",\"source_id\":\"owner-campaign:P0276 (thirteen-settled memo 2026-09-08; proof file P0276_unweighted_abelian_cutoff_counterexample_candidate.md)\",\"source_revision\":\"as-read-2026-09-12\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_a9f4b2cb0a302793f8f83f380f8c8a97ef0ac85ff90114be6d7f832b06b36b27",
+        "kind": "claim",
+        "title": "Salez Problem 2.4 (our id P0276): the LITERAL statement FALLS - a degree-unbounded abelian Cayley graph obeys the product condition without cutoff",
+        "body": "[campaign status: candidate_full_solution - author-checked, unrefereed] Salez, Modern aspects of Markov chains: entropy, curvature and the cutoff phenomenon (arXiv:2508.21055), Problem 2.4 (p. 27) asks to prove that cutoff is equivalent to the product condition for random walks on Cayley graphs of abelian groups, presented as a workshop prediction reiterated as [52, Conjecture 1], with no degree bound stated in the printed question. Our result (id P0276, 2026-09-08): the literal statement is FALSE. Take G_d = (Z/2)^d x (Z/m_d) with m_d = 1 + ceil(2^d log d / 4) and S_d = {(e_i, k): i <= d, k nonzero} union {(x, 0): x in the cube, x nonzero} - a simple, connected, undirected, vertex-transitive, unweighted abelian Cayley graph. The cube generators act as a reset Q_d = (2^d Pi_d - I)/(2^d - 1), giving the exact identity q_d(t) = e^{-beta_d t} c_d(alpha_d t) with beta_d chosen so that beta_d T_d tends to 1 (T_d the cube's mixing scale); the distance profile is e^{-s} on 0 < s < 1 and 0 beyond, a continuous decay with NO cutoff, while gap times t_mix is asymptotic to (1/2) log d, which diverges, so the product condition HOLDS. Verification as the source words it: alpha_d tends to 1 and beta_d ~ 4/(d log d) so beta_d T_d tends to 1; the character computation puts the slowest sector at a = 1 giving gap = 2 alpha_d/d + beta_d ~ 2/d; the profile yields t(3/4)/t(1/4) tending to log(4/3) = 0.288, not 1; and the whole-graph error bound |v_d - q_d| <= e^{-alpha_d t} + 1/m_d is correct with both terms vanishing on the relevant scale. A scoped independent review by another agent is on file, checking the full character spectrum, the coupling and the mixing-time brackets, and found no gap in scope. CAVEAT in the memo's own words: the degree is unbounded; Salez's Problem 2.4 as printed carries no degree bound, so the literal statement falls, but whether the workshop question and [52, Conjecture 1] carry one is unchecked. G_d = (Z/2)^d x (Z/m_d), m_d = 1 + ceil(2^d log d / 4) S_d as specified; degree unbounded in d simple, connected, vertex-transitive, unweighted abelian Cayley graph",
+        "metadata_json": "{\"artifact_digest\":\"sha256:93b081cff91b1ef6be203953951586d2bfd6c752762e7bf9152069f3801c6124\",\"artifact_path\":\"objects/sha256/93/93b081cff91b1ef6be203953951586d2bfd6c752762e7bf9152069f3801c6124.md\",\"bundle_digest\":\"sha256:4e562ca46d29ca11a9c71a798848111be91db8603bfdd351b6939979b6ae744c\",\"bundle_entry_key\":\"st-p0276-salez-problem-2-4-literal-form-refuted\",\"bundle_id\":\"population.status-fidelity-20260913\",\"claim_kind\":\"theorem\",\"conditions\":[],\"domain\":\"probability, Markov chains, cutoff, Cayley graphs\",\"draft\":\"claude-mathbrain-ultracode-0912/bundle_002_status_fidelity.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.open-problems:p0276-salez-problem-2-4-literal-form-refuted\",\"overlay_schema_version\":1,\"proof_text\":\"The generating set has two parts on very different scales: the cube part acts as an exact reset with rate beta_d, the cyclic part mixes slowly. Characters diagonalise both, so the distance profile is computable exactly: q_d(t) = e^{-beta_d t} c_d(alpha_d t). Tuning m_d so that beta_d T_d tends to 1 makes the reset and the slow mixing happen on the same scale, which produces a continuous exponential profile (no cutoff) while the spectral gap times the mixing time still diverges (the product condition).\",\"release_manifest_digest\":\"sha256:0f020739c7eb9d3f502c48b509896d6e2f2d6014dcfd996ce6e246851a602551\",\"revision_digest\":\"sha256:a9f4b2cb0a302793f8f83f380f8c8a97ef0ac85ff90114be6d7f832b06b36b27\",\"source_id\":\"owner-campaign:P0276 (thirteen-settled memo 2026-09-08; proof file P0276_unweighted_abelian_cutoff_counterexample_candidate.md)\",\"source_revision\":\"status-fidelity-2026-09-13; title and first sentence now carry the campaign's own result_status (candidate_full_solution), which the served block was clipping away\",\"statement_fidelity_reviewed\":false,\"supersedes\":[\"claim_17acbf2a026eb5d235b94431846e88ac17809e983c8bcc6ecd09c510ae2bf662\"],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      }
+    ]
+  },
+  "C0033": {
+    "ledger_rows": [
+      {
+        "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+        "line": 26,
+        "payload": {
+          "attempt_id": "C0033-A001",
+          "author": "claude-probability-1000-continue-0907",
+          "correction_note": "Codex review 11:15: finite-kernel concavity implies stationary entropy concavity; it is not an equivalence.",
+          "independent_check": "Probabilities summed to 1 within 1e-8 in every trial and were non-negative.",
+          "key_identity": "P_Q(A) = det(I-Q) det(J_A), J = Q(I-Q)^{-1}, gives an exact finite formula for the entropy.",
+          "method": "Numerical test on random pairs of positive contractions, plus the diagonal and one-element cases in closed form.",
+          "obstruction": "No analytic argument beyond diagonal kernels; the 2x2 case is the natural next target.",
+          "problem_id": "C0033",
+          "recorded_at": "2026-09-07T06:38:45Z",
+          "result": "Exact facts: for |E| = 1 the measure is Bernoulli(q) and Ent = h(q) is concave, so the conjecture holds; for commuting diagonal kernels the measure is a product and Ent = sum h(q_i), concave; for Q_2 = I - Q_1 the midpoint is I/2, whose entropy |E| log 2 is the maximum possible, so the inequality holds trivially. Numerical check (raw/C_lyons_conj26_entropy_check.json): 1440 random pairs of symmetric positive contractions in dimensions 2..6 with spectra in (0.02, 0.98), entropy computed exactly from P(A) = det(I-Q) det(J_A) with J = Q(I-Q)^{-1}; the concavity gap Ent(mid) - average was positive in every trial, minimum gap 8.5e-4 (dimension 2). No counterexample; the minimum gap being attained in dimension 2 suggests that a proof for 2x2 kernels, where the measure has four atoms with explicit determinants, would be the first non-trivial case to attempt analytically.",
+          "schema": "probability-attempt.v1",
+          "substantive": true,
+          "superseded_by": "C0033-A002"
+        }
+      },
+      {
+        "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+        "line": 115,
+        "payload": {
+          "attempt_id": "C0033-A002",
+          "author": "claude-probability-1000-continue-0907",
+          "independent_check": "Correction checked line by line against the source and the holder's message by the Fable agent; the holder's claim was taken as a lead, not as authority.",
+          "key_identity": "Conjecture 2.6 (finite) => Conjecture 5.3 (stationary), by finite-restriction limits; converse open.",
+          "method": "Codex review 11:15: finite-kernel concavity implies stationary entropy concavity; it is not an equivalence.",
+          "obstruction": "see A001 for the standing obstruction",
+          "problem_id": "C0033",
+          "recorded_at": "2026-09-07T09:27:17Z",
+          "result": "CORRECTION of C0033-A001 and of the problem statement's 'equivalently': Lyons's Conjecture 2.6 (finite positive contractions) implies Conjecture 5.3 (stationary processes on Z, concavity of the entropy rate in the symbol) by taking limits of finite restrictions, but the converse is not claimed and is not known; the two are recorded as implication, not equivalence. The numerical evidence (1440 random pairs, no violation) is for Conjecture 2.6 only.",
+          "schema": "probability-attempt.v1",
+          "substantive": true,
+          "supersedes": "C0033-A001"
+        }
+      },
+      {
+        "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+        "line": 33,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "C0033",
+          "historical_status": "source_says_open",
+          "intake": "claude_20260907",
+          "locator": "Conjecture 2.6, p. 5 and Conjecture 5.3, p. 22",
+          "problem_id": "C0033",
+          "recorded_at": "2026-09-07T06:38:45Z",
+          "result_status": "partial_result",
+          "schema": "probability-problem.v1",
+          "source_id": "lyons_determinantal_2014",
+          "statement": "For positive contractions Q_1, Q_2 on l^2(E), E finite, Ent(P_{(Q_1+Q_2)/2}) >= (Ent(P_{Q_1}) + Ent(P_{Q_2}))/2; which implies (Conjecture 5.3, by finite restrictions) concavity of the entropy rate H(P_f) of stationary determinantal processes in the symbol f; the converse is not claimed.",
+          "status_search": "Not verified against later literature in this session.",
+          "title": "Concavity of the entropy of determinantal measures in the kernel",
+          "verification": "unreviewed"
+        }
+      }
+    ],
+    "store_nodes": [
+      {
+        "id": "claim_f5b12cf96d988002ceb58890fe0531b3920cd010587d394c0354928bb66fc16e",
+        "kind": "claim",
+        "title": "Open problem: Concavity of the entropy of determinantal measures in the kernel",
+        "body": "OPEN PROBLEM (source_says_open; current status unverified; result status partial_result). For positive contractions Q_1, Q_2 on l^2(E), E finite, Ent(P_{(Q_1+Q_2)/2}) >= (Ent(P_{Q_1}) + Ent(P_{Q_2}))/2; equivalently (Conjecture 5.3) the entropy H(P_f) of stationary determinantal processes is concave in f. Source: Lyons: Determinantal probability, basic properties and conjectures, ICM 2014, Conjecture 2.6, p. 5 and Conjecture 5.3, p. 22. Status notes: Not verified against later literature in this session.\nPosed in Lyons: Determinantal probability, basic properties and conjectures, ICM 2014\nCurrent status unverified as of 2026-09-07",
+        "metadata_json": "{\"artifact_digest\":\"sha256:f594cf1251f84413c20a53c22c40fdbf28379f4d0047eef7c3fc6395e8d3689c\",\"artifact_path\":\"objects/sha256/f5/f594cf1251f84413c20a53c22c40fdbf28379f4d0047eef7c3fc6395e8d3689c.md\",\"bundle_digest\":\"sha256:bee140cfde7d5bf56318732d7b8273e9824005d4b35903e078e74d929a549266\",\"bundle_entry_key\":\"op-c0033\",\"bundle_id\":\"population.probability-intake-claude-bulk-problems-and-exclusions-c004a\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_006.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.determinantal:open-problem-c0033-concavity-of-the-entropy-of-determinantal-measures-in-the-kernel\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:27ce636e4c81aa81a5dbf74798c83425e9bd5ce208c7c2ac89a1b27196ba3791\",\"revision_digest\":\"sha256:f5b12cf96d988002ceb58890fe0531b3920cd010587d394c0354928bb66fc16e\",\"source_id\":\"owner-probability-intake-claude-20260907:op-c0033\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_d4aa99ecc3e287beab38b974e694ba2fd958ba04e802eb03f1abc1d1d52bac5a",
+        "kind": "claim",
+        "title": "Attempt on Concavity of the entropy of determinantal measures in the kernel",
+        "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Numerical test on random pairs of positive contractions, plus the diagonal and one-element cases in closed form. Result: Exact facts: for |E| = 1 the measure is Bernoulli(q) and Ent = h(q) is concave, so the conjecture holds; for commuting diagonal kernels the measure is a product and Ent = sum h(q_i), concave; for Q_2 = I - Q_1 the midpoint is I/2, whose entropy |E| log 2 is the maximum possible, so the inequality holds trivially. Numerical check (raw/C_lyons_conj26_entropy_check.json): 1440 random pairs of symmetric positive contractions in dimensions 2..6 with spectra in (0.02, 0.98), entropy computed exactly from P(A) = det(I-Q) det(J_A) with J = Q(I-Q)^{-1}; the concavity gap Ent(mid) - average was positive in every trial, minimum gap 8.5e-4 (dimension 2). No counterexample; the minimum gap being attained in dimension 2 suggests that a proof for 2x2 kernels, where the measure has four atoms with explicit determinants, would be the first non-trivial case to attempt analytically. Key identity: P_Q(A) = det(I-Q) det(J_A), J = Q(I-Q)^{-1}, gives an exact finite formula for the entropy. Check: Probabilities summed to 1 within 1e-8 in every trial and were non-negative. Obstruction: No analytic argument beyond diagonal kernels; the 2x2 case is the natural next target.\nRefers to the open problem node open-problem-c0033-concavity-of-the-entropy-of-determinantal-measures-in-the-kernel\nNo independent review; result status partial_result",
+        "metadata_json": "{\"artifact_digest\":\"sha256:19cec17ae7830d32aad2656d26e95ab7f29253de9022d3421ba53d80968b03be\",\"artifact_path\":\"objects/sha256/19/19cec17ae7830d32aad2656d26e95ab7f29253de9022d3421ba53d80968b03be.md\",\"bundle_digest\":\"sha256:3afc0553fbedbe5e4a4f8548c9d6f5c8d0ecfb86f127315c266229ee060578ce\",\"bundle_entry_key\":\"at-c0033\",\"bundle_id\":\"population.probability-intake-claude-bulk-attempts-c004b\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_007.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.determinantal:attempt-c0033-concavity-of-the-entropy-of-determinantal-measures-in-the-kernel\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:d60ad0b3f8346e7b04626eeea85bdd0598b8424cfd19b6d40584ecb68567692f\",\"revision_digest\":\"sha256:d4aa99ecc3e287beab38b974e694ba2fd958ba04e802eb03f1abc1d1d52bac5a\",\"source_id\":\"owner-probability-intake-claude-20260907:at-c0033\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_42905c49a5fa26f19fbcf30ed75a67fa687f05f63d7bb3df4da94e1f9e338df9",
+        "kind": "claim",
+        "title": "Attempt on Concavity of the entropy of determinantal measures in the kernel (corrected)",
+        "body": "ATTEMPT RECORD (SUPERSEDING REVISION 2026-09-07 12:4x after the Codex holder's review), author-checked only. CORRECTION of C0033-A001 and of the problem statement's 'equivalently': Lyons's Conjecture 2.6 (finite positive contractions) implies Conjecture 5.3 (stationary processes on Z, concavity of the entropy rate in the symbol) by taking limits of finite restrictions, but the converse is not claimed and is not known; the two are recorded as implication, not equivalence. The numerical evidence (1440 random pairs, no violation) is for Conjecture 2.6 only. Key identity: Conjecture 2.6 (finite) => Conjecture 5.3 (stationary), by finite-restriction limits; converse open. Standing obstruction: see the earlier attempt; the correction above replaces the flawed step only.\nRefers to the open problem node open-problem-c0033-concavity-of-the-entropy-of-determinantal-measures-in-the-kernel\nSupersedes the 2026-09-07 morning attempt record",
+        "metadata_json": "{\"artifact_digest\":\"sha256:550cdf003055e877ac1c587046ab8ab46df6b5b841bd1847c6b3b3108da57399\",\"artifact_path\":\"objects/sha256/55/550cdf003055e877ac1c587046ab8ab46df6b5b841bd1847c6b3b3108da57399.md\",\"bundle_digest\":\"sha256:2d2b8e1de58268505d748e2bc46e844a9fcfbf0c7614f2c00add7647124e914c\",\"bundle_entry_key\":\"at-c0033\",\"bundle_id\":\"population.probability-intake-claude-corrections-after-codex-review-c007\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_016.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.determinantal:attempt-c0033-concavity-of-the-entropy-of-determinantal-measures-in-the-kernel\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:33d2e0ff945d2415c478c05d6154a6ef8f1de031148187769bd3866ee1be1797\",\"revision_digest\":\"sha256:42905c49a5fa26f19fbcf30ed75a67fa687f05f63d7bb3df4da94e1f9e338df9\",\"source_id\":\"owner-probability-intake-claude-20260907:at-c0033\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[\"claim_d4aa99ecc3e287beab38b974e694ba2fd958ba04e802eb03f1abc1d1d52bac5a\"],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      }
+    ]
+  },
+  "C0135": {
+    "ledger_rows": [
+      {
+        "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+        "line": 111,
+        "payload": {
+          "attempt_id": "C0135-A001",
+          "author": "claude-probability-1000-continue-0907",
+          "independent_check": "",
+          "key_identity": "Backtracking scale sqrt(n) is negligible against the sqrt(n) log n scale of the maximum at delta = 1.",
+          "method": "Identify what the log n scaling comes from and whether it survives without (POS1).",
+          "obstruction": "Two-sided branching-with-migration comparison not verified under (6.2) without (POS1).",
+          "problem_id": "C0135",
+          "recorded_at": "2026-09-07T07:09:31Z",
+          "result": "The log n factor at delta = 1 comes from the total progeny of the critical branching process with migration delta = 1 having a tail n^{-1/2} with a logarithmic correction, so that the time to make n right excursions is of order n^2 log n, equivalently the maximum after time t is of order sqrt(t)/log t... the source's scaling sqrt n log n for X_{[nt]} reflects the backtracking being negligible at that scale. Under (6.2) the migration has finite mean and the critical tail should persist (same mechanism as C0134). Removing (POS1) allows left-pushing cookies; the walk then has non-negligible backtracking below its maximum, and the limit of X itself (not only its maximum) may differ from the running maximum; the maximum process S should still converge to the running maximum of Brownian motion since the backtracking affects only the difference S - X, whose scale is the length of a typical left excursion, of order sqrt(n) (diffusive) which is o(sqrt n log n). So the expected answer is: the theorem persists under (6.2), and without (POS1) the maximum still converges but X - S is O(sqrt n), negligible at the sqrt n log n scale, so the conclusion for X persists too. The proof would need the branching-process comparison for two-sided cookies (the branching process with migration then has both immigration and emigration), which is the source's [KM11]-type framework; not carried out.",
+          "schema": "probability-attempt.v1",
+          "substantive": true
+        }
+      },
+      {
+        "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+        "line": 135,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "C0135",
+          "historical_status": "source_says_open",
+          "intake": "claude_20260907",
+          "locator": "Problem 6.4, p. 26",
+          "problem_id": "C0135",
+          "recorded_at": "2026-09-07T07:09:31Z",
+          "result_status": "attempted_unsolved",
+          "schema": "probability-problem.v1",
+          "source_id": "kosygina_zerner_erw_2012",
+          "statement": "Does the convergence of the excited random walk with delta = 1, rescaled by b sqrt(n) log n, to the running maximum of Brownian motion (Theorem 6.3) remain true when (IID), (BD), (WEL) are replaced by the assumptions (6.2), and can (POS1) then be removed?",
+          "status_search": "",
+          "title": "Running-maximum limit theorem at the critical parameter delta = 1 under weaker assumptions",
+          "verification": "unreviewed"
+        }
+      }
+    ],
+    "store_nodes": [
+      {
+        "id": "claim_8159aec16d2c23812e755681113e2ee0db4ad687f4ff2bd4c70ab971a68f652a",
+        "kind": "claim",
+        "title": "Open problem: Running-maximum limit theorem at the critical parameter delta = 1 under weaker assumptions",
+        "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Does the convergence of the excited random walk with delta = 1, rescaled by b sqrt(n) log n, to the running maximum of Brownian motion (Theorem 6.3) remain true when (IID), (BD), (WEL) are replaced by the assumptions (6.2), and can (POS1) then be removed? Source: Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012, Problem 6.4, p. 26.\nPosed in Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012\nCurrent status unverified as of 2026-09-07",
+        "metadata_json": "{\"artifact_digest\":\"sha256:e2f00ad86b2e1a16bb09b046947e837bec8d795777588e4af96100641b6c346f\",\"artifact_path\":\"objects/sha256/e2/e2f00ad86b2e1a16bb09b046947e837bec8d795777588e4af96100641b6c346f.md\",\"bundle_digest\":\"sha256:bee140cfde7d5bf56318732d7b8273e9824005d4b35903e078e74d929a549266\",\"bundle_entry_key\":\"op-c0135\",\"bundle_id\":\"population.probability-intake-claude-bulk-problems-and-exclusions-c004a\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_006.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.randomenvironment:open-problem-c0135-running-maximum-limit-theorem-at-the-critical-parameter-delta-1-under\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:27ce636e4c81aa81a5dbf74798c83425e9bd5ce208c7c2ac89a1b27196ba3791\",\"revision_digest\":\"sha256:8159aec16d2c23812e755681113e2ee0db4ad687f4ff2bd4c70ab971a68f652a\",\"source_id\":\"owner-probability-intake-claude-20260907:op-c0135\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_608d3c6f8ea24f9bbc1c3678d0d7068626f24e589aad37c0337cbd6b33c6b9f8",
+        "kind": "claim",
+        "title": "Attempt on Running-maximum limit theorem at the critical parameter delta = 1 under weaker assumptions",
+        "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Identify what the log n scaling comes from and whether it survives without (POS1). Result: The log n factor at delta = 1 comes from the total progeny of the critical branching process with migration delta = 1 having a tail n^{-1/2} with a logarithmic correction, so that the time to make n right excursions is of order n^2 log n, equivalently the maximum after time t is of order sqrt(t)/log t... the source's scaling sqrt n log n for X_{[nt]} reflects the backtracking being negligible at that scale. Under (6.2) the migration has finite mean and the critical tail should persist (same mechanism as C0134). Removing (POS1) allows left-pushing cookies; the walk then has non-negligible backtracking below its maximum, and the limit of X itself (not only its maximum) may differ from the running maximum; the maximum process S should still converge to the running maximum of Brownian motion since the backtracking affects only the difference S - X, whose scale is the length of a typical left excursion, of order sqrt(n) (diffusive) which is o(sqrt n log n). So the expected answer is: the theorem persists under (6.2), and without (POS1) the maximum still converges but X - S is O(sqrt n), negligible at the sqrt n log n scale, so the conclusion for X persists too. The proof would need the branching-process comparison for two-sided cookies (the branching process with migration then has both immigration and emigration), which is the source's [KM11]-type framework; not carried out. Key identity: Backtracking scale sqrt(n) is negligible against the sqrt(n) log n scale of the maximum at delta = 1. Obstruction: Two-sided branching-with-migration comparison not verified under (6.2) without (POS1).\nRefers to the open problem node open-problem-c0135-running-maximum-limit-theorem-at-the-critical-parameter-delta-1-under\nNo independent review; result status attempted_unsolved",
+        "metadata_json": "{\"artifact_digest\":\"sha256:9fb84ede0f59f3bfb973fdef8c0f25f158cbba099c9e96dcc3e4bd35c2005d35\",\"artifact_path\":\"objects/sha256/9f/9fb84ede0f59f3bfb973fdef8c0f25f158cbba099c9e96dcc3e4bd35c2005d35.md\",\"bundle_digest\":\"sha256:3afc0553fbedbe5e4a4f8548c9d6f5c8d0ecfb86f127315c266229ee060578ce\",\"bundle_entry_key\":\"at-c0135\",\"bundle_id\":\"population.probability-intake-claude-bulk-attempts-c004b\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_007.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.randomenvironment:attempt-c0135-running-maximum-limit-theorem-at-the-critical-parameter-delta-1-under\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:d60ad0b3f8346e7b04626eeea85bdd0598b8424cfd19b6d40584ecb68567692f\",\"revision_digest\":\"sha256:608d3c6f8ea24f9bbc1c3678d0d7068626f24e589aad37c0337cbd6b33c6b9f8\",\"source_id\":\"owner-probability-intake-claude-20260907:at-c0135\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      }
+    ]
+  },
+  "P0109": {
+    "ledger_rows": [
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+        "line": 180,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "existence_of_finite_fpp_geodesics_without_distributional_assumptions",
+          "historical_status": "source_says_open",
+          "locator": "Question21, PDF p.73",
+          "problem_id": "P0109",
+          "recorded_at": "2026-09-06T19:30:23Z",
+          "result_status": "attempted_unsolved",
+          "schema": "probability-problem.v1",
+          "source_id": "fpp_survey_2015",
+          "source_statement_date": "2016-09-26",
+          "statement": "For every iid finite nonnegative passage-time distribution in d>=3, prove that the infimum over finite paths between any two vertices is attained.",
+          "statement_caveat": "Infinite passage-time edges are not included in this formulation. Non-iid weighted graphs can fail attainment and therefore cannot settle the iid question by analogy.",
+          "title": "Existence of finite FPP geodesics without distributional assumptions",
+          "verification": "primary_statement_checked"
+        }
+      },
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+        "line": 610,
+        "payload": {
+          "admitted": true,
+          "current_status": "open_per_source",
+          "dedup_key": "existence_of_finite_fpp_geodesics_without_distributional_assumptions",
+          "historical_status": "source_says_open",
+          "locator": "Question21, PDF p.73",
+          "problem_id": "P0109",
+          "recorded_at": "2026-09-14T09:57:05Z",
+          "result_status": "RESOLUTION SEARCH RUN 2026-09-14: no resolution found. Question 21 of the first-passage percolation survey asks for the existence of geodesics in dimension at least three under no assumption on the passage-time law; the survey's text was read directly and no later resolution was found.",
+          "schema": "probability-problem.v1",
+          "source_id": "fpp_survey_2015",
+          "source_statement_date": "2016-09-26",
+          "statement": "For every iid finite nonnegative passage-time distribution in d>=3, prove that the infimum over finite paths between any two vertices is attained.",
+          "statement_caveat": "Infinite passage-time edges are not included in this formulation. Non-iid weighted graphs can fail attainment and therefore cannot settle the iid question by analogy.",
+          "title": "Existence of finite FPP geodesics without distributional assumptions",
+          "verification": "primary_statement_checked",
+          "status_search": "Resolution search run 2026-09-14 in a sampling audit of the rows carrying no status_search. The searcher's web search was unavailable for most of the batch and it worked from primary-source PDFs instead, which makes the four items checked against the papers themselves (the first-passage survey and the 2026 edition of Lyons and Peres) strong and the rest weaker.",
+          "author": "claude-prob1000-0913-20h"
+        }
+      },
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+        "line": 111,
+        "payload": {
+          "attempt_id": "P0109-A001",
+          "depth": "first_pass",
+          "full_problem_solved": false,
+          "independent_check": "For a finite ladder route attaining maximum height k, vertical cost is at least2(1-2^(-k)) and at least one rung has cost at least3*2^(-k); this gives the same strict lower bound. Embed the ladder into Z^d with all other edges cost100 to preserve failure.",
+          "independent_review": "none",
+          "method": "Existence of finite FPP geodesics without distributional assumptions structural argument",
+          "novelty": "not_claimed",
+          "obstruction": "The ladder environment is deterministic and spatially inhomogeneous, so it is only a counterexample to a general compactness inference. The iid critical case requires additional probabilistic structure.",
+          "problem_id": "P0109",
+          "recorded_at": "2026-09-06T19:30:23Z",
+          "result": "If all edge times are at least a>0, a fixed connecting path of cost M bounds any competing path length by M/a; only finitely many simple paths of that length start at a fixed vertex, so a minimum exists. Without a positive lower bound, a deterministic ladder can fail: give each vertical edge from height j-1 to j on both rails weight2^(-j), and the rung at height k weight3*2^(-k). A route across at height k costs2+2^(-k), with infimum2 unattained.",
+          "schema": "probability-attempt.v1",
+          "substantive": true,
+          "verification": "author_checked_limited_argument"
+        }
+      }
+    ],
+    "store_nodes": [
+      {
+        "id": "claim_1960ae60be201f3f71040fd6384a1fbe03024cf11d37bd3b7c976cbd016c4c93",
+        "kind": "claim",
+        "title": "Open problem: Existence of finite FPP geodesics without distributional assumptions",
+        "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For every iid finite nonnegative passage-time distribution in d>=3, prove that the infimum over finite paths between any two vertices is attained. Source: Auffinger, Damron and Hanson: 50 years of first-passage percolation, Question21, PDF p.73.\nPosed in Auffinger, Damron and Hanson: 50 years of first-passage percolation\nStatus as recorded in the campaign ledger on 2026-09-07",
+        "metadata_json": "{\"artifact_digest\":\"sha256:81c0da7d7dd426b328433a6ff29b965ad6a72e38c63fc1054d144c5ab6857b94\",\"artifact_path\":\"objects/sha256/81/81c0da7d7dd426b328433a6ff29b965ad6a72e38c63fc1054d144c5ab6857b94.md\",\"bundle_digest\":\"sha256:58d74c8da229fa6b81fe6bac4abdfaadf798d61b07728701a8922a92ccd764b6\",\"bundle_entry_key\":\"op-p0109\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-01\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_009.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0109-existence-of-finite-fpp-geodesics-without-distributional-assumptions\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:772492982336f844e436033d99bbb6870cb26f16b277731cabc6cb87e48d4e89\",\"revision_digest\":\"sha256:1960ae60be201f3f71040fd6384a1fbe03024cf11d37bd3b7c976cbd016c4c93\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0109\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_421686e5504f7ea30b1a3160da96946030bef36ac190d3111a45079f8010e84f",
+        "kind": "claim",
+        "title": "Attempt on Existence of finite FPP geodesics without distributional assumptions",
+        "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Existence of finite FPP geodesics without distributional assumptions structural argument Result: If all edge times are at least a>0, a fixed connecting path of cost M bounds any competing path length by M/a; only finitely many simple paths of that length start at a fixed vertex, so a minimum exists. Without a positive lower bound, a deterministic ladder can fail: give each vertical edge from height j-1 to j on both rails weight2^(-j), and the rung at height k weight3*2^(-k). A route across at height k costs2+2^(-k), with infimum2 unattained. Check: For a finite ladder route attaining maximum height k, vertical cost is at least2(1-2^(-k)) and at least one rung has cost at least3*2^(-k); this gives the same strict lower bound. Embed the ladder into Z^d with all other edges cost100 to preserve failure. Obstruction: The ladder environment is deterministic and spatially inhomogeneous, so it is only a counterexample to a general compactness inference. The iid critical case requires additional probabilistic structure.\nRefers to the open problem node open-problem-p0109-existence-of-finite-fpp-geodesics-without-distributional-assumptions\nNo independent review",
+        "metadata_json": "{\"artifact_digest\":\"sha256:4f3bc20ef3291548a67ec2863f8e3d289e50e5917365dc8a7955512bbc8899ba\",\"artifact_path\":\"objects/sha256/4f/4f3bc20ef3291548a67ec2863f8e3d289e50e5917365dc8a7955512bbc8899ba.md\",\"bundle_digest\":\"sha256:f3e0d4cb2f270970b3a7e311e549325fd4a447f22688326d8e681b699cda8afb\",\"bundle_entry_key\":\"at-p0109\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-04\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_012.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0109-existence-of-finite-fpp-geodesics-without-distributional-assumptions\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:705337efabf29cd94bdc3e6e7eb6e032d19e1a439ab1ed1610b6421824e2eead\",\"revision_digest\":\"sha256:421686e5504f7ea30b1a3160da96946030bef36ac190d3111a45079f8010e84f\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0109\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      }
+    ]
+  },
+  "P0441": {
+    "ledger_rows": [
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+        "line": 541,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "deterministic_delayedoff_waiting-power_tradeoff",
+          "historical_status": "source_says_open",
+          "locator": "Section8; PDF39-40",
+          "problem_id": "P0441",
+          "recorded_at": "2026-09-07T06:50:32Z",
+          "result_status": "unsolved",
+          "schema": "probability-problem.v1",
+          "source_id": "queues_deterministic_setup_2025",
+          "source_statement_date": "2025-12-18",
+          "statement": "Analyze waiting and power for deterministic setup when idle servers remain on for a grace interval gamma before switching off.",
+          "statement_caveat": "The source distinguishes these policies from its instantaneous-off model and credits earlier exponential-setup studies.",
+          "status_search": "Focused later-primary-source checks on 2026-09-07; offline concave scheduling, general FCFS threshold representation, SEK-SMOD and fork-join asymptotics credited. No present-openness certification.",
+          "title": "Deterministic DelayedOff waiting-power tradeoff"
+        }
+      },
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+        "line": 430,
+        "payload": {
+          "attempt_id": "P0441-A001",
+          "depth": "individual_analytic_attempt",
+          "full_problem_solved": false,
+          "independent_check": "Integrate P(G>t)=exp(-Lambda*t) over [0,gamma]. Separately condition on G>gamma for the cold-arrival delay. Both formulas have correct gamma=0 and gamma->infinity limits.",
+          "independent_review": "none",
+          "method": "Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison",
+          "novelty": "not_claimed",
+          "obstruction": "The idle-gap calculation is not a stationary many-server mean or a globally optimal grace period.",
+          "problem_id": "P0441",
+          "recorded_at": "2026-09-07T06:50:32Z",
+          "result": "A single idle-gap diagnostic is exact: for next-arrival gap G~Exp(Lambda), the chance the server becomes cold is exp(-Lambda*gamma), and expected on-idle duration is E[min(G,gamma)]=(1-exp(-Lambda*gamma))/Lambda. If a cold arrival triggers deterministic setup beta, that arrival incurs beta*exp(-Lambda*gamma) expected setup delay. The local marginal tradeoff follows by differentiation, but a full renewal cycle also includes later arrivals during setup, active service and possible setup cancellation.",
+          "schema": "probability-attempt.v1",
+          "substantive": true,
+          "verification": "author_checked_partial"
+        }
+      }
+    ],
+    "store_nodes": [
+      {
+        "id": "claim_cdef6839a0bf53137e2e933bf29e454e0c79f0ca87e238767036ac332b599a3f",
+        "kind": "claim",
+        "title": "Open problem: Deterministic DelayedOff waiting-power tradeoff",
+        "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status unsolved). Analyze waiting and power for deterministic setup when idle servers remain on for a grace interval gamma before switching off. Source: Williams Wang Harchol-Balter: An Upper Bound on the M M k Queue With Deterministic Setup Times, Section8; PDF39-40. Status notes: Focused later-primary-source checks on 2026-09-07; offline concave scheduling, general FCFS threshold representation, SEK-SMOD and fork-join asymptotics credited. No present-openness certification.\nPosed in Williams Wang Harchol-Balter: An Upper Bound on the M M k Queue With Deterministic Setup Times\nStatus as recorded in the campaign ledger on 2026-09-07",
+        "metadata_json": "{\"artifact_digest\":\"sha256:8a748029f7f5c1d68e93ff5b80151abe2985628a70c8d2d865ca9d90134417f9\",\"artifact_path\":\"objects/sha256/8a/8a748029f7f5c1d68e93ff5b80151abe2985628a70c8d2d865ca9d90134417f9.md\",\"bundle_digest\":\"sha256:6913ad4db57082b81fdec0f29146178848c9c051d8c521e4f541a065ceca6365\",\"bundle_entry_key\":\"op-p0441\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-03\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_011.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0441-deterministic-delayedoff-waiting-power-tradeoff\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:f48cd8bd688b3052c95326e6be4b13d699e2f33a0e6a9da6bce4ba5cac1b5c16\",\"revision_digest\":\"sha256:cdef6839a0bf53137e2e933bf29e454e0c79f0ca87e238767036ac332b599a3f\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0441\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_dc0f6252c48222334a228fe0bb9769e24bae84d2c43cce9629903982b6404002",
+        "kind": "claim",
+        "title": "Attempt on Deterministic DelayedOff waiting-power tradeoff",
+        "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: A single idle-gap diagnostic is exact: for next-arrival gap G~Exp(Lambda), the chance the server becomes cold is exp(-Lambda*gamma), and expected on-idle duration is E[min(G,gamma)]=(1-exp(-Lambda*gamma))/Lambda. If a cold arrival triggers deterministic setup beta, that arrival incurs beta*exp(-Lambda*gamma) expected setup delay. The local marginal tradeoff follows by differentiation, but a full renewal cycle also includes later arrivals during setup, active service and possible setup cancellation. Check: Integrate P(G>t)=exp(-Lambda*t) over [0,gamma]. Separately condition on G>gamma for the cold-arrival delay. Both formulas have correct gamma=0 and gamma->infinity limits. Obstruction: The idle-gap calculation is not a stationary many-server mean or a globally optimal grace period.\nRefers to the open problem node open-problem-p0441-deterministic-delayedoff-waiting-power-tradeoff\nNo independent review",
+        "metadata_json": "{\"artifact_digest\":\"sha256:e2946cdda04ba1c003d1e00b7b7b216035589c19ae7a09a3ec0464de1ec42584\",\"artifact_path\":\"objects/sha256/e2/e2946cdda04ba1c003d1e00b7b7b216035589c19ae7a09a3ec0464de1ec42584.md\",\"bundle_digest\":\"sha256:3786d03aae20a39c79b12ad3cf58dec843c451a5d36e81e57db43874f5a8ea18\",\"bundle_entry_key\":\"at-p0441\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-06\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_014.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0441-deterministic-delayedoff-waiting-power-tradeoff\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:233733e24e295ad3f4bf20173f773140a3caabeee893c454dbe46cefe4e4c29c\",\"revision_digest\":\"sha256:dc0f6252c48222334a228fe0bb9769e24bae84d2c43cce9629903982b6404002\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0441\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      }
+    ]
+  },
+  "C0045": {
+    "ledger_rows": [
+      {
+        "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+        "line": 36,
+        "payload": {
+          "attempt_id": "C0045-A001",
+          "author": "claude-probability-1000-continue-0907",
+          "correction_note": "Codex review 12:02: the claimed equivalence of (P)_M with arbitrary regeneration-moment bounds is unsupported.",
+          "independent_check": "",
+          "key_identity": "",
+          "method": "Relate (P)_M to the tail of the regeneration time.",
+          "obstruction": "No self-improvement mechanism for regeneration-time moments is known.",
+          "problem_id": "C0045",
+          "recorded_at": "2026-09-07T06:38:45Z",
+          "result": "(P)_M asks for a polynomial decay P(exit from a slab of width L against the direction l) <= L^{-M}; ballisticity is E[tau_1 | D = infinity] < infinity. A polynomial decay of the atypical exit probability with exponent M forces tail bounds P(tau_1 > n) <= n^{-M/(something)} through the standard slab decomposition, so (P)_M implies moments of tau_1 of order roughly M/d; conversely finite first moment of tau_1 gives, through the same decomposition, only the exit probability from a slab of width L bounded by L^{-1} type estimates, i.e. (P)_1, far below 15d + 5. So the question is equivalent to whether the first moment of the regeneration time automatically upgrades to moments of high order under (UE)+(IID), a self-improving property. Self-improvement is plausible because a heavy tail of tau_1 would require a trap structure incompatible with a positive velocity, but it is exactly the content of the open question and I have no proof. Recorded reduction: (P)_M for large M <=> E[tau_1^{M'}] < infinity for some M' growing with M, so the question is a moment self-improvement question.",
+          "schema": "probability-attempt.v1",
+          "substantive": true,
+          "superseded_by": "C0045-A002"
+        }
+      },
+      {
+        "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+        "line": 122,
+        "payload": {
+          "attempt_id": "C0045-A002",
+          "author": "claude-probability-1000-continue-0907",
+          "independent_check": "Correction checked line by line against the source and the holder's message by the Fable agent; the holder's claim was taken as a lead, not as authority.",
+          "key_identity": "(P)_M => moment bounds on tau_1 (source); moments => (P)_M unsupported.",
+          "method": "Codex review 12:02: the claimed equivalence of (P)_M with arbitrary regeneration-moment bounds is unsupported.",
+          "obstruction": "see A001 for the standing obstruction",
+          "problem_id": "C0045",
+          "recorded_at": "2026-09-07T09:27:17Z",
+          "result": "CORRECTION of C0045-A001. A001 asserted '(P)_M for large M <=> E[tau_1^{M'}] < infinity for some M' growing with M'. Only one direction is supported by the source's slab decomposition: (P)_M gives polynomial tails for exit probabilities, hence moment bounds on tau_1 of order growing with M. The converse (high moments of tau_1 imply (P)_M) is not established and A001 should not have written an equivalence. The question 'does positive velocity imply (P)_M' stands as a self-improvement question in one direction only.",
+          "schema": "probability-attempt.v1",
+          "substantive": true,
+          "supersedes": "C0045-A001"
+        }
+      },
+      {
+        "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+        "line": 45,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "C0045",
+          "historical_status": "source_says_open",
+          "intake": "claude_20260907",
+          "locator": "Open question 3.20, p. 52",
+          "problem_id": "C0045",
+          "recorded_at": "2026-09-07T06:38:45Z",
+          "result_status": "attempted_unsolved",
+          "schema": "probability-problem.v1",
+          "source_id": "drewitz_ramirez_rwre_2014",
+          "statement": "Under (UE) and (IID), does ballisticity (positive limiting velocity in direction l, condition (3.26)) imply the polynomial condition (P)_M for M > 15d + 5?",
+          "status_search": "",
+          "title": "Does positive velocity imply the polynomial ballisticity condition (P)_M?",
+          "verification": "unreviewed"
+        }
+      }
+    ],
+    "store_nodes": [
+      {
+        "id": "claim_64fa957fbc3562bc5936b6aaa26ae593b9c625b0eb5fac29ce710633da8f9f50",
+        "kind": "claim",
+        "title": "Open problem: Does positive velocity imply the polynomial ballisticity condition (P)_M?",
+        "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Under (UE) and (IID), does ballisticity (positive limiting velocity in direction l, condition (3.26)) imply the polynomial condition (P)_M for M > 15d + 5? Source: Drewitz and Ramirez: Selected topics in random walks in random environment, Open question 3.20, p. 52.\nPosed in Drewitz and Ramirez: Selected topics in random walks in random environment\nCurrent status unverified as of 2026-09-07",
+        "metadata_json": "{\"artifact_digest\":\"sha256:9dad04439c3ebb9ef21f760b5fffeb0c29d28330d1cf0784b0f483362b1d6b22\",\"artifact_path\":\"objects/sha256/9d/9dad04439c3ebb9ef21f760b5fffeb0c29d28330d1cf0784b0f483362b1d6b22.md\",\"bundle_digest\":\"sha256:bee140cfde7d5bf56318732d7b8273e9824005d4b35903e078e74d929a549266\",\"bundle_entry_key\":\"op-c0045\",\"bundle_id\":\"population.probability-intake-claude-bulk-problems-and-exclusions-c004a\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_006.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.randomenvironment:open-problem-c0045-does-positive-velocity-imply-the-polynomial-ballisticity-condition-p-m\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:27ce636e4c81aa81a5dbf74798c83425e9bd5ce208c7c2ac89a1b27196ba3791\",\"revision_digest\":\"sha256:64fa957fbc3562bc5936b6aaa26ae593b9c625b0eb5fac29ce710633da8f9f50\",\"source_id\":\"owner-probability-intake-claude-20260907:op-c0045\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_4aa149d62fa8ef45f15847962e9e8ca210a16b9771cf302a7524dd8668785280",
+        "kind": "claim",
+        "title": "Attempt on Does positive velocity imply the polynomial ballisticity condition (P)_M?",
+        "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Relate (P)_M to the tail of the regeneration time. Result: (P)_M asks for a polynomial decay P(exit from a slab of width L against the direction l) <= L^{-M}; ballisticity is E[tau_1 | D = infinity] < infinity. A polynomial decay of the atypical exit probability with exponent M forces tail bounds P(tau_1 > n) <= n^{-M/(something)} through the standard slab decomposition, so (P)_M implies moments of tau_1 of order roughly M/d; conversely finite first moment of tau_1 gives, through the same decomposition, only the exit probability from a slab of width L bounded by L^{-1} type estimates, i.e. (P)_1, far below 15d + 5. So the question is equivalent to whether the first moment of the regeneration time automatically upgrades to moments of high order under (UE)+(IID), a self-improving property. Self-improvement is plausible because a heavy tail of tau_1 would require a trap structure incompatible with a positive velocity, but it is exactly the content of the open question and I have no proof. Recorded reduction: (P)_M for large M <=> E[tau_1^{M'}] < infinity for some M' growing with M, so the question is a moment self-improvement question. Obstruction: No self-improvement mechanism for regeneration-time moments is known.\nRefers to the open problem node open-problem-c0045-does-positive-velocity-imply-the-polynomial-ballisticity-condition-p-m\nNo independent review; result status attempted_unsolved",
+        "metadata_json": "{\"artifact_digest\":\"sha256:9b157aae8cf13db197a37f31fdc2b0e8699988d7002a9bd4064db4dfa13362a3\",\"artifact_path\":\"objects/sha256/9b/9b157aae8cf13db197a37f31fdc2b0e8699988d7002a9bd4064db4dfa13362a3.md\",\"bundle_digest\":\"sha256:3afc0553fbedbe5e4a4f8548c9d6f5c8d0ecfb86f127315c266229ee060578ce\",\"bundle_entry_key\":\"at-c0045\",\"bundle_id\":\"population.probability-intake-claude-bulk-attempts-c004b\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_007.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.randomenvironment:attempt-c0045-does-positive-velocity-imply-the-polynomial-ballisticity-condition-p-m\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:d60ad0b3f8346e7b04626eeea85bdd0598b8424cfd19b6d40584ecb68567692f\",\"revision_digest\":\"sha256:4aa149d62fa8ef45f15847962e9e8ca210a16b9771cf302a7524dd8668785280\",\"source_id\":\"owner-probability-intake-claude-20260907:at-c0045\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_e79bfb0edcbd3c329f6ef7fb73940411f281eed43f5041b5c6c13cd8912a0948",
+        "kind": "claim",
+        "title": "Attempt on Does positive velocity imply the polynomial ballisticity condition (P)_M? (corrected)",
+        "body": "ATTEMPT RECORD (SUPERSEDING REVISION 2026-09-07 12:4x after the Codex holder's review), author-checked only. CORRECTION of C0045-A001. A001 asserted '(P)_M for large M <=> E[tau_1^{M'}] < infinity for some M' growing with M'. Only one direction is supported by the source's slab decomposition: (P)_M gives polynomial tails for exit probabilities, hence moment bounds on tau_1 of order growing with M. The converse (high moments of tau_1 imply (P)_M) is not established and A001 should not have written an equivalence. The question 'does positive velocity imply (P)_M' stands as a self-improvement question in one direction only. Key identity: (P)_M => moment bounds on tau_1 (source); moments => (P)_M unsupported. Standing obstruction: see the earlier attempt; the correction above replaces the flawed step only.\nRefers to the open problem node open-problem-c0045-does-positive-velocity-imply-the-polynomial-ballisticity-condition-p-m\nSupersedes the 2026-09-07 morning attempt record",
+        "metadata_json": "{\"artifact_digest\":\"sha256:662b7cbcf0293e3c9e1a105d0ca6474bf6fbabac037d4e1678f16af45b1e4284\",\"artifact_path\":\"objects/sha256/66/662b7cbcf0293e3c9e1a105d0ca6474bf6fbabac037d4e1678f16af45b1e4284.md\",\"bundle_digest\":\"sha256:2d2b8e1de58268505d748e2bc46e844a9fcfbf0c7614f2c00add7647124e914c\",\"bundle_entry_key\":\"at-c0045\",\"bundle_id\":\"population.probability-intake-claude-corrections-after-codex-review-c007\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_016.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.randomenvironment:attempt-c0045-does-positive-velocity-imply-the-polynomial-ballisticity-condition-p-m\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:33d2e0ff945d2415c478c05d6154a6ef8f1de031148187769bd3866ee1be1797\",\"revision_digest\":\"sha256:e79bfb0edcbd3c329f6ef7fb73940411f281eed43f5041b5c6c13cd8912a0948\",\"source_id\":\"owner-probability-intake-claude-20260907:at-c0045\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[\"claim_4aa149d62fa8ef45f15847962e9e8ca210a16b9771cf302a7524dd8668785280\"],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      }
+    ]
+  },
+  "C0081": {
+    "ledger_rows": [
+      {
+        "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+        "line": 69,
+        "payload": {
+          "attempt_id": "C0081-A001",
+          "author": "claude-probability-1000-continue-0907",
+          "independent_check": "",
+          "key_identity": "",
+          "method": "Try a direct cluster-expansion (Mayer-type) argument for the susceptibility at fixed p (2d) in the d -> infinity limit.",
+          "obstruction": "Uniformity of the subcritical cluster expansion up to the critical point; a_4 requires third-order cycle corrections.",
+          "problem_id": "C0081",
+          "recorded_at": "2026-09-07T06:52:37Z",
+          "result": "At p = lambda/(2d) the expected cluster size chi(p) has, for fixed lambda < 1, a convergent expansion as d -> infinity in powers of 1/d obtained by comparing the cluster to a branching process with Poisson(lambda) offspring and counting cycles: the first correction comes from the 4-cycles of Z^d (each pair of neighbours of a vertex shares a common neighbour with frequency ~ 1/(2d)), which gives the known a_2 = 1 through the shift of the effective branching ratio. This direct route reproduces a_1, a_2 by hand; a_3 = 7/2 requires the 6-cycle and the double-4-cycle corrections and the interplay with the self-avoidance of the exploration, and I did not complete it. Existence of the expansion to all orders without the lace expansion would need a general theorem that the non-backtracking cycle corrections form an asymptotic series, which is a version of the lace expansion in disguise (the lace expansion IS the systematic bookkeeping of these corrections); a Mayer-type expansion at fixed lambda < 1 converges for the subcritical susceptibility, and p_c is then the divergence point of the series in lambda, whose location in powers of 1/d is obtained by inverting the series, which is a purely algebraic step if the expansion of chi is known to all orders with uniform error terms. So: an alternative derivation exists in principle via the convergent subcritical cluster expansion plus inversion, but the uniformity of the subcritical expansion up to lambda near 1 is exactly the difficult point. Computing a_4 by hand would require the 8-cycle counts and the interactions of three 4-cycles; not done.",
+          "schema": "probability-attempt.v1",
+          "substantive": true
+        }
+      },
+      {
+        "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+        "line": 81,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "C0081",
+          "historical_status": "source_says_open",
+          "intake": "claude_20260907",
+          "locator": "Open Problem 15.8, p. 232",
+          "problem_id": "C0081",
+          "recorded_at": "2026-09-07T06:52:37Z",
+          "result_status": "attempted_unsolved",
+          "schema": "probability-problem.v1",
+          "source_id": "heydenreich_hofstad_highd_2017",
+          "statement": "Find an argument for the existence of the asymptotic expansion of p_c(Z^d) in powers of 1/(2d) that avoids the lace expansion, and use it to compute the coefficients a_4, a_5, ....",
+          "status_search": "",
+          "title": "Lace-expansion-free derivation and higher coefficients of the 1/d expansion of p_c(Z^d)",
+          "verification": "unreviewed"
+        }
+      }
+    ],
+    "store_nodes": [
+      {
+        "id": "claim_95ece8505e160addd40ef2b30b002fd4f245ea1192f4c128e0bef753271028fc",
+        "kind": "claim",
+        "title": "Open problem: Lace-expansion-free derivation and higher coefficients of the 1/d expansion of p_c(Z^d)",
+        "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Find an argument for the existence of the asymptotic expansion of p_c(Z^d) in powers of 1/(2d) that avoids the lace expansion, and use it to compute the coefficients a_4, a_5, .... Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 15.8, p. 232.\nPosed in Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems\nCurrent status unverified as of 2026-09-07",
+        "metadata_json": "{\"artifact_digest\":\"sha256:9cc354feff1202d082eeeea425d8bbe99caf6f869e5565df3de4ddd2e589b44b\",\"artifact_path\":\"objects/sha256/9c/9cc354feff1202d082eeeea425d8bbe99caf6f869e5565df3de4ddd2e589b44b.md\",\"bundle_digest\":\"sha256:bee140cfde7d5bf56318732d7b8273e9824005d4b35903e078e74d929a549266\",\"bundle_entry_key\":\"op-c0081\",\"bundle_id\":\"population.probability-intake-claude-bulk-problems-and-exclusions-c004a\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_006.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.percolation:open-problem-c0081-lace-expansion-free-derivation-and-higher-coefficients-of-the-1-d-expa\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:27ce636e4c81aa81a5dbf74798c83425e9bd5ce208c7c2ac89a1b27196ba3791\",\"revision_digest\":\"sha256:95ece8505e160addd40ef2b30b002fd4f245ea1192f4c128e0bef753271028fc\",\"source_id\":\"owner-probability-intake-claude-20260907:op-c0081\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_8a4f08cc91d36f1025b2b90f552fc5c95ea11695b20b363f30735ed40dd052cf",
+        "kind": "claim",
+        "title": "Attempt on Lace-expansion-free derivation and higher coefficients of the 1/d expansion of p_c(Z^d)",
+        "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Try a direct cluster-expansion (Mayer-type) argument for the susceptibility at fixed p (2d) in the d -> infinity limit. Result: At p = lambda/(2d) the expected cluster size chi(p) has, for fixed lambda < 1, a convergent expansion as d -> infinity in powers of 1/d obtained by comparing the cluster to a branching process with Poisson(lambda) offspring and counting cycles: the first correction comes from the 4-cycles of Z^d (each pair of neighbours of a vertex shares a common neighbour with frequency ~ 1/(2d)), which gives the known a_2 = 1 through the shift of the effective branching ratio. This direct route reproduces a_1, a_2 by hand; a_3 = 7/2 requires the 6-cycle and the double-4-cycle corrections and the interplay with the self-avoidance of the exploration, and I did not complete it. Existence of the expansion to all orders without the lace expansion would need a general theorem that the non-backtracking cycle corrections form an asymptotic series, which is a version of the lace expansion in disguise (the lace expansion IS the systematic bookkeeping of these corrections); a Mayer-type expansion at fixed lambda < 1 converges for the subcritical susceptibility, and p_c is then the divergence point of the series in lambda, whose location in powers of 1/d is obtained by inverting the series, which is a purely algebraic step if the expansion of chi is known to all orders with uniform error terms. So: an alternative derivation exists in principle via the convergent subcritical cluster expansion plus inversion, but the uniformity of the subcritical expansion up to lambda near 1 is exactly the difficult point. Computing a_4 by hand would require the 8-cycle counts and the interactions of three 4-cycles; not done. Obstruction: Uniformity of the subcritical cluster expansion up to the critical point; a_4 requires third-order cycle corrections.\nRefers to the open problem node open-problem-c0081-lace-expansion-free-derivation-and-higher-coefficients-of-the-1-d-expa\nNo independent review; result status attempted_unsolved",
+        "metadata_json": "{\"artifact_digest\":\"sha256:0c2bbbcd63cccf590abb0f6a05807028f149fc8029fee80a0d06ca777b3ae464\",\"artifact_path\":\"objects/sha256/0c/0c2bbbcd63cccf590abb0f6a05807028f149fc8029fee80a0d06ca777b3ae464.md\",\"bundle_digest\":\"sha256:3afc0553fbedbe5e4a4f8548c9d6f5c8d0ecfb86f127315c266229ee060578ce\",\"bundle_entry_key\":\"at-c0081\",\"bundle_id\":\"population.probability-intake-claude-bulk-attempts-c004b\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_007.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.percolation:attempt-c0081-lace-expansion-free-derivation-and-higher-coefficients-of-the-1-d-expa\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:d60ad0b3f8346e7b04626eeea85bdd0598b8424cfd19b6d40584ecb68567692f\",\"revision_digest\":\"sha256:8a4f08cc91d36f1025b2b90f552fc5c95ea11695b20b363f30735ed40dd052cf\",\"source_id\":\"owner-probability-intake-claude-20260907:at-c0081\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      }
+    ]
+  },
+  "C0123": {
+    "ledger_rows": [
+      {
+        "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+        "line": 100,
+        "payload": {
+          "attempt_id": "C0123-A001",
+          "author": "claude-probability-1000-continue-0907",
+          "independent_check": "",
+          "key_identity": "Expected number of level-set neighbours of a level-set point is of order delta (the deficit); bridges expected iff the deficit tends to infinity.",
+          "method": "Estimate the number of near-maximal configurations and compare with the connectivity threshold of the level set on the hypercube.",
+          "obstruction": "Second moment for level-set paths on the hypercube not done.",
+          "problem_id": "C0123",
+          "recorded_at": "2026-09-07T07:01:07Z",
+          "result": "In the NK model with K = O(1) the fitness is a sum of n local terms each depending on K + 1 bits, so the field is a sum of n independent contributions (for the standard model with random neighbourhoods) and the level set at height M_n - delta_n with delta_n = o(n) but delta_n >> sqrt n contains exp(c delta_n^2/n)... the number of configurations within delta of the maximum is, by a large-deviation count, about exp(n I(delta/n)) for a rate I; bridges exist if this level set percolates on the hypercube, and a level set of density rho on the n-cube contains a giant connected component when the local structure allows, roughly when each configuration in the set has on average more than one neighbour in the set: the expected number of neighbours in the level set of a typical level-set point is n times the conditional probability that flipping one bit stays within delta of the maximum, which is n times (probability that the change of the K+1 affected local terms is at most delta), of order n delta/n = delta when delta is small compared to the local term scale... so bridges exist (heuristically) when delta_n >> 1, i.e. the level set within a constant deficit of the maximum is connected in the giant-component sense for deficits growing to infinity, while for bounded deficits the peaks are isolated. This suggests the answer depends on the deficit scale: bridges at deficit delta_n -> infinity, islands at bounded deficit. The argument is a branching heuristic (neighbour counts) without control of dependencies; making it rigorous would need a second-moment argument on the number of level-set paths, which I did not carry out.",
+          "schema": "probability-attempt.v1",
+          "substantive": true
+        }
+      },
+      {
+        "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+        "line": 123,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "C0123",
+          "historical_status": "source_says_open",
+          "intake": "claude_20260907",
+          "locator": "Section 12, problem (8), p. 59",
+          "problem_id": "C0123",
+          "recorded_at": "2026-09-07T07:01:07Z",
+          "result_status": "attempted_unsolved",
+          "schema": "probability-problem.v1",
+          "source_id": "chatterjee_chaos_2008",
+          "statement": "In the Kauffman-Levin NK fitness model with multiple near-maximal peaks, decide whether the peaks are connected by 'bridges' (paths along which the fitness never drops below the near-maximal level) or are isolated islands.",
+          "status_search": "",
+          "title": "Bridges between multiple peaks in the NK fitness landscape",
+          "verification": "unreviewed"
+        }
+      }
+    ],
+    "store_nodes": [
+      {
+        "id": "claim_9162d492b61ee81fc0b3c66d7c5c03de719d024611a30934ae8484e32e696003",
+        "kind": "claim",
+        "title": "Open problem: Bridges between multiple peaks in the NK fitness landscape",
+        "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). In the Kauffman-Levin NK fitness model with multiple near-maximal peaks, decide whether the peaks are connected by 'bridges' (paths along which the fitness never drops below the near-maximal level) or are isolated islands. Source: Chatterjee: Chaos, concentration and multiple valleys, 2008, with open questions, Section 12, problem (8), p. 59.\nPosed in Chatterjee: Chaos, concentration and multiple valleys, 2008, with open questions\nCurrent status unverified as of 2026-09-07",
+        "metadata_json": "{\"artifact_digest\":\"sha256:ca9f75ec0a05902aab31d7dcc13b814584ba17628c325f32ed39ab73915f0d91\",\"artifact_path\":\"objects/sha256/ca/ca9f75ec0a05902aab31d7dcc13b814584ba17628c325f32ed39ab73915f0d91.md\",\"bundle_digest\":\"sha256:bee140cfde7d5bf56318732d7b8273e9824005d4b35903e078e74d929a549266\",\"bundle_entry_key\":\"op-c0123\",\"bundle_id\":\"population.probability-intake-claude-bulk-problems-and-exclusions-c004a\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_006.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.gaussian:open-problem-c0123-bridges-between-multiple-peaks-in-the-nk-fitness-landscape\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:27ce636e4c81aa81a5dbf74798c83425e9bd5ce208c7c2ac89a1b27196ba3791\",\"revision_digest\":\"sha256:9162d492b61ee81fc0b3c66d7c5c03de719d024611a30934ae8484e32e696003\",\"source_id\":\"owner-probability-intake-claude-20260907:op-c0123\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_da8288433af89fb2cdaef6a9c5ba83956db970fbaaa4ea6dc713012d2fa791dd",
+        "kind": "claim",
+        "title": "Attempt on Bridges between multiple peaks in the NK fitness landscape",
+        "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Estimate the number of near-maximal configurations and compare with the connectivity threshold of the level set on the hypercube. Result: In the NK model with K = O(1) the fitness is a sum of n local terms each depending on K + 1 bits, so the field is a sum of n independent contributions (for the standard model with random neighbourhoods) and the level set at height M_n - delta_n with delta_n = o(n) but delta_n >> sqrt n contains exp(c delta_n^2/n)... the number of configurations within delta of the maximum is, by a large-deviation count, about exp(n I(delta/n)) for a rate I; bridges exist if this level set percolates on the hypercube, and a level set of density rho on the n-cube contains a giant connected component when the local structure allows, roughly when each configuration in the set has on average more than one neighbour in the set: the expected number of neighbours in the level set of a typical level-set point is n times the conditional probability that flipping one bit stays within delta of the maximum, which is n times (probability that the change of the K+1 affected local terms is at most delta), of order n delta/n = delta when delta is small compared to the local term scale... so bridges exist (heuristically) when delta_n >> 1, i.e. the level set within a constant deficit of the maximum is connected in the giant-component sense for deficits growing to infinity, while for bounded deficits the peaks are isolated. This suggests the answer depends on the deficit scale: bridges at deficit delta_n -> infinity, islands at bounded deficit. The argument is a branching heuristic (neighbour counts) without control of dependencies; making it rigorous would need a second-moment argument on the number of level-set paths, which I did not carry out. Key identity: Expected number of level-set neighbours of a level-set point is of order delta (the deficit); bridges expected iff the deficit tends to infinity. Obstruction: Second moment for level-set paths on the hypercube not done.\nRefers to the open problem node open-problem-c0123-bridges-between-multiple-peaks-in-the-nk-fitness-landscape\nNo independent review; result status attempted_unsolved",
+        "metadata_json": "{\"artifact_digest\":\"sha256:1e7bd155373b15ca522ec78421073512d8627de38cfd9b89bc0ed14123418078\",\"artifact_path\":\"objects/sha256/1e/1e7bd155373b15ca522ec78421073512d8627de38cfd9b89bc0ed14123418078.md\",\"bundle_digest\":\"sha256:3afc0553fbedbe5e4a4f8548c9d6f5c8d0ecfb86f127315c266229ee060578ce\",\"bundle_entry_key\":\"at-c0123\",\"bundle_id\":\"population.probability-intake-claude-bulk-attempts-c004b\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_007.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.gaussian:attempt-c0123-bridges-between-multiple-peaks-in-the-nk-fitness-landscape\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:d60ad0b3f8346e7b04626eeea85bdd0598b8424cfd19b6d40584ecb68567692f\",\"revision_digest\":\"sha256:da8288433af89fb2cdaef6a9c5ba83956db970fbaaa4ea6dc713012d2fa791dd\",\"source_id\":\"owner-probability-intake-claude-20260907:at-c0123\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      }
+    ]
+  },
+  "P0012": {
+    "ledger_rows": [
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+        "line": 14,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "gaussian_tensor_symmetric_injective_type2",
+          "historical_status": "source_says_open",
+          "locator": "Conjecture 16, Entry 8",
+          "problem_id": "P0012",
+          "recorded_at": "2026-09-06T16:07:03Z",
+          "result_status": "not_started",
+          "schema": "probability-problem.v1",
+          "source_id": "randomstrasse_2025_v1",
+          "statement": "For symmetric order-r tensors T_i on R^d, p>=2 and independent standard Gaussians g_i, is E||sum_i g_i T_i||_(I_p) bounded by polylog(d,n) times O_(r,p)(d^(1/2-1/p) sqrt(sum_i ||T_i||_(I_p)^2))?",
+          "statement_caveat": "The unresolved range is p<2r apart from known matrix and other special cases. The source says p>=2r is proved. All parameters remain one problem.",
+          "title": "Gaussian tensor type-2 bound",
+          "verification": "unreviewed"
+        }
+      },
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+        "line": 114,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "gaussian_tensor_symmetric_injective_type2",
+          "historical_status": "source_says_open",
+          "locator": "Conjecture 16, Entry 8",
+          "problem_id": "P0012",
+          "recorded_at": "2026-09-06T19:17:12Z",
+          "result_status": "attempted_unsolved",
+          "schema": "probability-problem.v1",
+          "source_id": "randomstrasse_2025_v1",
+          "statement": "For symmetric order-r tensors T_i on R^d, p>=2 and independent standard Gaussians g_i, is E||sum_i g_i T_i||_(I_p) bounded by polylog(d,n) times O_(r,p)(d^(1/2-1/p) sqrt(sum_i ||T_i||_(I_p)^2))?",
+          "statement_caveat": "The unresolved range is p<2r apart from known matrix and other special cases. The source says p>=2r is proved. All parameters remain one problem.",
+          "title": "Gaussian tensor type-2 bound",
+          "verification": "author_checked_limited_argument"
+        }
+      },
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+        "line": 14,
+        "payload": {
+          "attempt_id": "P0012-A001",
+          "depth": "first_pass",
+          "full_problem_solved": false,
+          "independent_check": "The upper bound follows by the exponential-moment union bound and minimizing its parameter; coordinate vectors prove the norm identity even for even r by taking absolute value outside the form.",
+          "independent_review": "none",
+          "method": "Diagonal-tensor Gaussian estimate",
+          "novelty": "not_claimed",
+          "obstruction": "This verifies a restricted diagonal family. Off-diagonal terms and the full p range require the tensor geometry absent here.",
+          "problem_id": "P0012",
+          "recorded_at": "2026-09-06T17:37:31Z",
+          "result": "For a diagonal homogeneous form T(x)=sum_j a_j x_j^r and 2<=p<=r, its supremum over the l_p unit ball is max_j |a_j|. Indeed sum |x_j|^r<=1 and a coordinate vector attains the maximum. For independent standard g_i, each diagonal coefficient of sum_i g_i T_i has variance at most sum_i ||T_i||^2, so the Gaussian maximum bound gives E||sum_i g_i T_i|| <= sqrt(2 log(2d)) (sum_i ||T_i||^2)^(1/2).",
+          "schema": "probability-attempt.v1",
+          "substantive": true,
+          "verification": "author_checked_limited_argument"
+        }
+      }
+    ],
+    "store_nodes": [
+      {
+        "id": "claim_f80f64db88053276354cd0efcc292a2c0297a484ddce9c6238e4ebf25624e764",
+        "kind": "claim",
+        "title": "Open problem: Gaussian tensor type-2 bound",
+        "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For symmetric order-r tensors T_i on R^d, p>=2 and independent standard Gaussians g_i, is E||sum_i g_i T_i||_(I_p) bounded by polylog(d,n) times O_(r,p)(d^(1/2-1/p) sqrt(sum_i ||T_i||_(I_p)^2))? Source: Randomstrasse101: Open Problems of 2025, Conjecture 16, Entry 8.\nPosed in Randomstrasse101: Open Problems of 2025\nStatus as recorded in the campaign ledger on 2026-09-07",
+        "metadata_json": "{\"artifact_digest\":\"sha256:96a33ae15e3a223ba22dd8bd4570873e2900dcc6d64675861eb1a7c51e7a325e\",\"artifact_path\":\"objects/sha256/96/96a33ae15e3a223ba22dd8bd4570873e2900dcc6d64675861eb1a7c51e7a325e.md\",\"bundle_digest\":\"sha256:58d74c8da229fa6b81fe6bac4abdfaadf798d61b07728701a8922a92ccd764b6\",\"bundle_entry_key\":\"op-p0012\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-01\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_009.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0012-gaussian-tensor-type-2-bound\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:772492982336f844e436033d99bbb6870cb26f16b277731cabc6cb87e48d4e89\",\"revision_digest\":\"sha256:f80f64db88053276354cd0efcc292a2c0297a484ddce9c6238e4ebf25624e764\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0012\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_20d9bc2963b9cf1e0c6686bdecf298ce24856b312f14dfcf365f8668798d5f38",
+        "kind": "claim",
+        "title": "Attempt on Gaussian tensor type-2 bound",
+        "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Diagonal-tensor Gaussian estimate Result: For a diagonal homogeneous form T(x)=sum_j a_j x_j^r and 2<=p<=r, its supremum over the l_p unit ball is max_j |a_j|. Indeed sum |x_j|^r<=1 and a coordinate vector attains the maximum. For independent standard g_i, each diagonal coefficient of sum_i g_i T_i has variance at most sum_i ||T_i||^2, so the Gaussian maximum bound gives E||sum_i g_i T_i|| <= sqrt(2 log(2d)) (sum_i ||T_i||^2)^(1/2). Check: The upper bound follows by the exponential-moment union bound and minimizing its parameter; coordinate vectors prove the norm identity even for even r by taking absolute value outside the form. Obstruction: This verifies a restricted diagonal family. Off-diagonal terms and the full p range require the tensor geometry absent here.\nRefers to the open problem node open-problem-p0012-gaussian-tensor-type-2-bound\nNo independent review",
+        "metadata_json": "{\"artifact_digest\":\"sha256:b2a3a80763c0adb49517b26141c02df21d92c12f92fa54c05448a2fb45967691\",\"artifact_path\":\"objects/sha256/b2/b2a3a80763c0adb49517b26141c02df21d92c12f92fa54c05448a2fb45967691.md\",\"bundle_digest\":\"sha256:f3e0d4cb2f270970b3a7e311e549325fd4a447f22688326d8e681b699cda8afb\",\"bundle_entry_key\":\"at-p0012\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-04\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_012.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0012-gaussian-tensor-type-2-bound\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:705337efabf29cd94bdc3e6e7eb6e032d19e1a439ab1ed1610b6421824e2eead\",\"revision_digest\":\"sha256:20d9bc2963b9cf1e0c6686bdecf298ce24856b312f14dfcf365f8668798d5f38\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0012\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      }
+    ]
+  },
+  "P0038": {
+    "ledger_rows": [
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+        "line": 41,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "transient_cayley_percolation_clusters_transient",
+          "historical_status": "source_says_open",
+          "locator": "Conjecture 6.44, printed p.216",
+          "problem_id": "P0038",
+          "recorded_at": "2026-09-06T16:41:32Z",
+          "result_status": "not_started",
+          "schema": "probability-problem.v1",
+          "source_id": "lyons_peres_20260819",
+          "statement": "Is every infinite Bernoulli percolation cluster on a transient Cayley graph almost surely transient?",
+          "statement_caveat": "The claim concerns all infinite clusters simultaneously. Nonamenable and Euclidean cases have substantial existing results.",
+          "title": "Transience preserved in Cayley percolation clusters",
+          "verification": "unreviewed"
+        }
+      },
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+        "line": 138,
+        "payload": {
+          "admitted": true,
+          "current_status": "unverified",
+          "dedup_key": "transient_cayley_percolation_clusters_transient",
+          "historical_status": "source_says_open",
+          "locator": "Conjecture 6.44, printed p.216",
+          "problem_id": "P0038",
+          "recorded_at": "2026-09-06T19:17:12Z",
+          "result_status": "attempted_unsolved",
+          "schema": "probability-problem.v1",
+          "source_id": "lyons_peres_20260819",
+          "statement": "Is every infinite Bernoulli percolation cluster on a transient Cayley graph almost surely transient?",
+          "statement_caveat": "The claim concerns all infinite clusters simultaneously. Nonamenable and Euclidean cases have substantial existing results.",
+          "title": "Transience preserved in Cayley percolation clusters",
+          "verification": "author_checked_limited_argument"
+        }
+      },
+      {
+        "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+        "line": 38,
+        "payload": {
+          "attempt_id": "P0038-A001",
+          "depth": "first_pass",
+          "full_problem_solved": false,
+          "independent_check": "The root has b+1 possible children but a finite root modification does not change transience. At bp<=1 the nondegenerate branching process dies out.",
+          "independent_review": "none",
+          "method": "Percolation on regular trees",
+          "novelty": "not_claimed",
+          "obstruction": "The reduction uses independent descendant trees and does not extend to clusters with overlapping paths in a general transient Cayley graph.",
+          "problem_id": "P0038",
+          "recorded_at": "2026-09-06T17:47:59Z",
+          "result": "For bond percolation on the (b+1)-regular tree, descendants of a nonroot vertex form a Galton-Watson process with Binomial(b,p) offspring. Conditional on survival when bp>1, its branching number is bp almost surely, so the electrical-network branching-number criterion gives transience.",
+          "schema": "probability-attempt.v1",
+          "substantive": true,
+          "verification": "author_checked_limited_argument"
+        }
+      }
+    ],
+    "store_nodes": [
+      {
+        "id": "claim_a7683dc04e66576346206facd5632498be775bf4194392df6c5e02dda1ab21a7",
+        "kind": "claim",
+        "title": "Open problem: Transience preserved in Cayley percolation clusters",
+        "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Is every infinite Bernoulli percolation cluster on a transient Cayley graph almost surely transient? Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Conjecture 6.44, printed p.216.\nPosed in Probability on Trees and Networks, paperback electronic version 19 August 2026\nStatus as recorded in the campaign ledger on 2026-09-07",
+        "metadata_json": "{\"artifact_digest\":\"sha256:382a655f8636fc73a80e407ee0b000f61cc830356620a2f50c38a3db280d59b7\",\"artifact_path\":\"objects/sha256/38/382a655f8636fc73a80e407ee0b000f61cc830356620a2f50c38a3db280d59b7.md\",\"bundle_digest\":\"sha256:58d74c8da229fa6b81fe6bac4abdfaadf798d61b07728701a8922a92ccd764b6\",\"bundle_entry_key\":\"op-p0038\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-01\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_009.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0038-transience-preserved-in-cayley-percolation-clusters\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:772492982336f844e436033d99bbb6870cb26f16b277731cabc6cb87e48d4e89\",\"revision_digest\":\"sha256:a7683dc04e66576346206facd5632498be775bf4194392df6c5e02dda1ab21a7\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0038\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      },
+      {
+        "id": "claim_ec2f3c83aaffb4104cfa30396018affed4863acc315dbb2da7b4486a442a58df",
+        "kind": "claim",
+        "title": "Attempt on Transience preserved in Cayley percolation clusters",
+        "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Percolation on regular trees Result: For bond percolation on the (b+1)-regular tree, descendants of a nonroot vertex form a Galton-Watson process with Binomial(b,p) offspring. Conditional on survival when bp>1, its branching number is bp almost surely, so the electrical-network branching-number criterion gives transience. Check: The root has b+1 possible children but a finite root modification does not change transience. At bp<=1 the nondegenerate branching process dies out. Obstruction: The reduction uses independent descendant trees and does not extend to clusters with overlapping paths in a general transient Cayley graph.\nRefers to the open problem node open-problem-p0038-transience-preserved-in-cayley-percolation-clusters\nNo independent review",
+        "metadata_json": "{\"artifact_digest\":\"sha256:157c92d9dae6e00bc7bdb7c83b563bee0e3001892093fb762bf365ad4ed2d48c\",\"artifact_path\":\"objects/sha256/15/157c92d9dae6e00bc7bdb7c83b563bee0e3001892093fb762bf365ad4ed2d48c.md\",\"bundle_digest\":\"sha256:f3e0d4cb2f270970b3a7e311e549325fd4a447f22688326d8e681b699cda8afb\",\"bundle_entry_key\":\"at-p0038\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-04\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_012.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0038-transience-preserved-in-cayley-percolation-clusters\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:705337efabf29cd94bdc3e6e7eb6e032d19e1a439ab1ed1610b6421824e2eead\",\"revision_digest\":\"sha256:ec2f3c83aaffb4104cfa30396018affed4863acc315dbb2da7b4486a442a58df\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0038\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+      }
+    ]
+  }
+}

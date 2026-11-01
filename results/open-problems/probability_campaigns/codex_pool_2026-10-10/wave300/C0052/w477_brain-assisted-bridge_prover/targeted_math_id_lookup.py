@@ -1,0 +1,72 @@
+"""Opt-in exact C-ID lookup for a timed-out recall; read-only and proof-neutral."""
+import argparse
+import json
+import re
+import sqlite3
+import time
+from pathlib import Path
+from urllib.parse import quote
+
+
+DEFAULT_DATABASE = "~/math-brain-build/local/population/brain.sqlite3"
+
+
+def lookup(problem_id, database=DEFAULT_DATABASE, limit=3, timeout=10):
+    problem_id = problem_id.upper()
+    if not re.fullmatch(r"C[0-9]{4}", problem_id):
+        raise ValueError("an exact C-number is required")
+    if not 1 <= limit <= 5 or not 0 < timeout <= 60:
+        raise ValueError("limit must be 1..5 and timeout must be at most 60 seconds")
+    started = time.perf_counter()
+    con = None
+    try:
+        resolved = Path(database).resolve().as_posix()
+        con = sqlite3.connect(f"file:{quote(resolved, safe='/:')}?mode=ro", uri=True, timeout=min(timeout, 5))
+        con.execute("PRAGMA query_only=ON")
+        con.set_progress_handler(lambda: int(time.perf_counter() - started >= timeout), 1000)
+        rows = con.execute(
+            "SELECT id,title,body,metadata_json FROM nodes "
+            "WHERE lower(json_extract(metadata_json,'$.logical_id')) LIKE ? LIMIT ?",
+            (f"math:%:%{problem_id.lower()}-%", limit),
+        ).fetchall()
+        hits = []
+        for node_id, title, body, raw_metadata in rows:
+            metadata = json.loads(raw_metadata)
+            if not isinstance(metadata, dict):
+                raise ValueError("node metadata must be an object")
+            logical_id = metadata.get("logical_id", "")
+            if not re.search(rf"(?:^|[-:]){problem_id.lower()}(?:-|$)", logical_id.lower()):
+                continue
+            hits.append({"id": node_id, "title": title, "statement_and_assumptions": body,
+                         "metadata": metadata})
+        return {
+            "status": "retrieved_exact_unreviewed" if hits else "abstain_no_exact_logical_id",
+            "problem_id": problem_id,
+            "source_database": database,
+            "read_only": True,
+            "seconds": time.perf_counter() - started,
+            "rows": hits,
+            "proof_status": "unchanged; ID equality is not source fidelity or mathematical proof",
+        }
+    except (sqlite3.Error, ValueError, TypeError, OSError) as exc:
+        return {"status": "abstain_error", "problem_id": problem_id,
+                "read_only": True, "seconds": time.perf_counter() - started,
+                "rows": [], "error": str(exc)[:300]}
+    finally:
+        if con is not None:
+            con.close()
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("problem_id")
+    parser.add_argument("--database", default=DEFAULT_DATABASE)
+    parser.add_argument("--limit", type=int, default=3)
+    parser.add_argument("--timeout", type=float, default=10)
+    args = parser.parse_args()
+    print(json.dumps(lookup(args.problem_id, args.database, args.limit, args.timeout),
+                     ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,31 @@
+# P0117 referee attempt and proof boundary
+
+2026-10-10, w386. The exact moment-free source is Damron--Hanson Conjecture 1 (arXiv:1512.00804v2): iid continuous nonnegative weights on nearest-neighbor Z^2 should almost surely have no bigeodesic. The P0117 ledger adds a positive-speed qualification. A public manuscript dated 2026-09-24 claims the conclusion under the additional condition E[min(X1,X2,X3,X4)^2] < infinity. Its publication is evidence of a claim, not independent certification. Current openness: UNKNOWN.
+
+## Exact load-bearing input in the checked reduction
+
+Fix e={u,v}. Conditional on all weights except t_e, let d be the passage metric with e deleted, C_e(x,y)=min{d(x,u)+d(v,y),d(x,v)+d(u,y)}, and D_e(x,y)=d(x,y)-C_e(x,y). For positive s, direct path decomposition gives T_s(x,y)=min{d(x,y),s+C_e(x,y)}. For the infinity-norm shell S_n with e strictly inside, put H_n=max(0,max_{x,y in S_n} D_e(x,y)). The H_n decrease and lie in [0,d(u,v)]. Their limit H_infinity is measurable from the outside environment.
+
+I rederived w384's hardest implication. If s<H_(n+1), a shell geodesic strictly preferring e exists. Stop each arm at its first S_n hit. An e-free inner competitor of no greater cost would splice into an e-free outer walk of no greater cost, contradicting strict outer preference. Thus s<H_n. A centered diagonal subsequence of witnesses on every shell is a bigeodesic through e. Since t_e is independent and nonatomic, all threshold equalities t_e=H_n or H_infinity are null, and
+
+    P(e lies on a bigeodesic | all weights except t_e) = F(H_infinity).
+
+If a is the essential infimum of F, F(h)=0 exactly when h<=a. Hence the exact missing input for this route is **H_infinity<=a almost surely for every fixed e on full Z^2**. This is equivalent to zero probability of a bigeodesic using e; it has not been proved here. A KEEP on the threshold reduction is not a KEEP on support collapse.
+
+## Attempted route and obstruction
+
+The local detour yields only H_infinity<=d(u,v), generally much larger than a. A shape theorem estimates each of d(x,y) and C_e(x,y) at linear order, whereas their difference D_e is bounded at order one. Subtracting two separate o(n) errors cannot bound D_e by a. A fixed pair midpoint theorem also misses the adaptive maximum over S_n^2. For the shell event E_n, the elementary union estimate is P(E_n)<=min(1, C(8n,2)q_n), q_n=max_{u!=v in S_n}P(0 in Geo(u,v)). w385's independently checked line-crossing argument gives some unbounded radii r with q_r>=c/r under Ahlberg--Hoffman A1. Thus this raw union bound is saturated along those radii, even if the best possible fixed-pair estimate is used. A direct all-endpoint estimate or a valid conditional annulus contraction is still required. Raw edge independence does not imply contraction after the optimizing path is selected.
+
+The box-restricted events G_n of w385 form an adapted decreasing sequence and have the same infinite intersection as the bigeodesic-through-0 event. A sufficient input would be conditional bounds P(G_(r_(k+1)) | F_(r_k)) <= (1-epsilon_k) 1_(G_(r_k)) with sum epsilon_k=infinity. The tower property would then prove the target. No such conditional bound is shown. Known full-lattice midpoint estimates cannot be applied to these box minimizers: w385's 22-edge atomless iid cylinder gives a box minimizer through 0 while a cheaper full-lattice detour avoids 0.
+
+## Public 2026 manuscript: independently checked local steps
+
+Primary PDF: https://github.com/openai/math/blob/main/preprints/No-bigeodesics-in-planar-first-passage-percolation-September-24-2026/main.pdf ; local read copy at ~/brain_workers/w389/public_no_bigeodesics_20260924.pdf, SHA256 F97D87DC82BCEE0CD11725E3261DF8DDF51C34442C8305873C27107074D3B5AE. I checked the theorem statement and rederived the following local steps only.
+
+**Label budget (paper Proposition 5.2, PDF pages 21--22).** Let marks on k_j=(j l,0) have common marginal q. Suppose consecutive marked sites k_i<k_j satisfy b<=B^alpha(k_j,k_i)+B^(-beta)(k_j,k_i) for fixed deterministic labels alpha,beta with width w=(beta-alpha)(e1)>0. Put A_j=B^alpha(0,k_j)+B^(-beta)(0,k_j)=-wjl+o(jl). Summing over consecutive marks in {k_0,...,k_N} gives b(m_N-1)<=A_first-A_last<=wNl+o(Nl), where the maximum of the finitely many initial asymptotic errors is also o(Nl). Since 0<=m_N/(Nl)<=2/l eventually and E m_N=(N+1)q, bounded reverse Fatou yields bq<=lw. This needs equal marginals and the pairwise comparison, but not independent marks. I also checked the comparison in paper Lemma 5.1 *conditional on its planar ordering/intersection input*: the two comparator rays avoid the raised ball, intersect both arms, and their Busemann increments cancel to give the pairwise inequality. The ordering theorem itself was not fully audited.
+
+**Posterior raises (paper Lemmas 7.2--7.3, PDF pages 29--31).** At height h, a low weight is replaced by a high draw with probability lambda_h/p_a. Relative to G, the output law has density 1-(lambda_h/p_a)1_low+(lambda_h/p_b)1_high. Bayes gives P(raise | output=t)=1_high(t) lambda_h/(p_b+lambda_h). Because the output-edge pairs are independent, conditioning on the entire individual output makes the raise indicators independent. An output-measurable simple selected path does not bias that conditional product law. If every long prefix has at least half usable high-output edges and lambda_h is proportional to 1/((h+2)log(h+2)), then its expected number of raises diverges by summation by parts; conditional variance is at most the mean. Chebyshev gives arbitrarily large finite gains with a fixed high conditional probability. This is a conditional check of these lemmas, not an audit of the usable-prefix input or final construction.
+
+**Remaining public-proof audit:** the half-plane transfer for all random exceptional labels (paper Lemma 4.4), the no-forks count (Proposition 6.1), common Busemann pairs (Corollary 6.2), and the final all-mark comparison have not been independently verified end to end. The proof's moment condition also leaves the moment-free Conjecture 1 outside its stated conclusion. No formal-check receipt or trusted-axiom audit exists here.
+
+NEXT: obtain an independent referee check of the local label-budget derivation and audit the public proof's exceptional-label transfer before any solved-status change.

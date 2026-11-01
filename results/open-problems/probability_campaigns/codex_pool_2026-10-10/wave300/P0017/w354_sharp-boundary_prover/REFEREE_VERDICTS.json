@@ -1,0 +1,58 @@
+{
+  "reviewer": "w356",
+  "path": "~\\brain_workers\\w356\\PEER_REVIEWS.jsonl",
+  "records": [
+    {
+      "claim_id": "w354-P0017-001",
+      "reviewer": "w356",
+      "verdict": "KEEP",
+      "scope": "Uniform-interval scale boundary only",
+      "reviewed_artifacts": [
+        "~/brain_workers/w354/CLAIMS.jsonl",
+        "~/brain_workers/w354/ATTEMPT.md"
+      ],
+      "reproduction": "EXACT: E X=L/2, E X^2=L^2/3, hence variance L^2/12. Even 2L-periodic extension and Parseval give C_P<=L^2/pi^2; cosine attains equality. For a half interval outer Minkowski growth is epsilon/L and denominator 1/2, giving h<=2/L. For any Borel set of mass strictly between 0 and 1, positive closure-minus-set mass implies infinite outer perimeter; otherwise a nontrivial open complement component has an interior endpoint, and its epsilon strip outside the closure gives perimeter>=1/L. Thus h>=2/L. Standardizing L=sqrt(12) gives C_P=12/pi^2 and h=1/sqrt(3).",
+      "hardest_claim_rederived": "Cheeger lower bound for arbitrary Borel sets, including the extension beyond finite-perimeter unions",
+      "remaining_gap": "No gap for the interval boundary statement; no conclusion for general isotropic log-concave measures. Hash freezing and reviewer receipt to be attached to final packet.",
+      "parent_problem_solved": false,
+      "status": "independently checked proof"
+    },
+    {
+      "claim_id": "w354-P0017-002",
+      "reviewer": "w356",
+      "verdict": "KEEP",
+      "scope": "Exact simplex orthogonal fibers, essential extrema and positive-probability event",
+      "reproduction": "The whitening/coarea derivation in SIMPLEX_FIBERS.md independently proves these formulas. With t=1-S~Beta(2,d-1), edge length is sqrt(2K)t and P(t>=1/2)=(d+1)/2^d. Thus C_P>=K/(2pi^2) on that event; E C_P=12/pi^2, ess sup=2K/pi^2 and ess inf h=sqrt(2/K).",
+      "hardest_claim_rederived": "Kernel(PA)=span(e1), so the isotropic projection genuinely fixes the raw base coordinates rather than conditioning obliquely.",
+      "remaining_gap": "None in the stated special case; no global KLS conclusion.",
+      "reviewed_artifact": "~/brain_workers/w354/SIMPLEX_PROOF.md sections 1-3",
+      "status": "independently checked proof",
+      "parent_problem_solved": false
+    },
+    {
+      "claim_id": "w354-P0017-003",
+      "reviewer": "w356",
+      "verdict": "KEEP",
+      "scope": "Optimal conditional directional coefficient",
+      "reproduction": "The fiber inequalities give upper bound 2K/pi^2. For an independent matching lower bound use the w356 cosine family f_k from SIMPLEX_FIBERS.md: its quotient (2K/pi^2)(2k)(2k+1)/((d+2k-1)(d+2k)) tends to 2K/pi^2 as k tends to infinity, and every finite-k function is Lipschitz with finite full energy. Alternatively the peer's smooth eta(S) sine uses positive-mass support away from the singular denominator and has the stated lower quotient. Both establish the exact optimal coefficient.",
+      "hardest_claim_rederived": "The lower-bound witnesses are admissible full-energy test functions; the direction leaves S fixed, so no extra longitudinal derivative of the base cutoff appears.",
+      "remaining_gap": "None for this conditional directional inequality; its coefficient cannot replace a full-gradient KLS coefficient.",
+      "reviewed_artifact": "~/brain_workers/w354/SIMPLEX_PROOF.md section 4",
+      "status": "independently checked proof",
+      "parent_problem_solved": false
+    },
+    {
+      "claim_id": "w354-P0017-004",
+      "reviewer": "w356",
+      "verdict": "KEEP",
+      "scope": "Smooth triangle polynomial with full transverse energy explicitly included",
+      "reproduction": "In raw coordinates f/sqrt(24)=x1*(1-x2)^2-(1-x2)^3/2 and Sigma=[[2,-1],[-1,2]]/36. Exact triangle monomial integration gives E f=0, Var f=1/2, E |partial_u f|^2=1/3 and E (grad_X f)^T Sigma (grad_X f)=13/27. The independent symbolic conditional check is Var=2Et^6, full energy=Et^4*(1+4/9). Thus the full-gradient quotient is 27/26 and the unweighted mean replacement is false because 4/pi^2<1/2.",
+      "hardest_claim_rederived": "The full gradient uses the covariance quadratic form after whitening; its transverse contribution is 4/27 and is not dropped.",
+      "remaining_gap": "No mathematical gap; deterministic receipt is not a formal kernel proof.",
+      "reviewed_artifact": "~/brain_workers/w354/SIMPLEX_PROOF.md section 5",
+      "measurement": "MEASUREMENTS.json polynomial_triangle_check",
+      "status": "independently checked proof",
+      "parent_problem_solved": false
+    }
+  ]
+}

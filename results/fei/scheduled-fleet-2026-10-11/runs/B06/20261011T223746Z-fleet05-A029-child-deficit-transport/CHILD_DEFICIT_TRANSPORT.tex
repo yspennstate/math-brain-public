@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A029: scoped child-deficit transport}
+All entropies are in bits, all physical inputs fair, and all functions
+Boolean signs. Put $D_K(f)=KI(f)-H(f)$. We use the established B06 R2
+identity, rather than claim it anew:
+\[
+D_K(f)=\mathbb E_{\rho\in L}D_K(f_\rho)
+ +K\Pi_I(T)-\Pi_H(T).
+\]
+Internal deficits are replaced, not added, when the terminal cut is
+refined. Each terminal deficit and each signed increment has its unique
+physical node and reach probability. For parity on $m$ variables, the
+sum of all internal weighted deficits is $Km(m+1)/2$, whereas the
+actual root deficit is only $Km$; the former is not a reserve.
+
+\paragraph{Certified finite theorem.}
+For every nonconstant Boolean $f$ on at most four variables, let $r_1$
+be the minimum relevant coordinate entropy-drop/influence ratio and
+$r_2$ the minimum ratio of a nonempty adaptive tree of depth at most two.
+Then $0\le r_1-r_2\le2$, with equality exactly for signed AND2 (allowing
+irrelevant variables) and the four-variable bent functions. The exact
+census and a separately implemented direct-transform/min-cost certificate
+are saved in \texttt{code/census.py} and \texttt{code/verify.py}; the
+rational logarithm remainder proofs are given in \texttt{REPORT.md}.
+All 65,804 nonconstant truth tables were verified, and the equality set
+has $8+24+48+896=976$ elements.
+
+\paragraph{Analytic explanation.}
+Signed AND2 has $H=2$, $I=1$, both local ratios $4$, and a complete
+two-level tree ratio $2$. At $K=2$, root debt is $1$, paid by weighted
+actual child deficits $(0+2)/2$. Four-variable bent functions are
+quadratic signs with nonsingular alternating adjacency matrix; their
+root entropy is $4$, influence $2$, and every root coordinate has
+entropy decrement $2$ and influence $1/2$. The rank-two children have
+entropy $2$. If the graph has a leaf, querying its neighbor makes that
+leaf isolated in both children, with influences $0$ and $1$; query it
+in the influence-one child. If the graph is complete, each child is a
+triangle; querying any coordinate preserves a quadratic edge and
+entropy $2$, and has influence $1/2$. Either construction has
+$\Pi_H=2$, $\Pi_I=1$.
+For any two-level tree, the weighted influence $Z$ of entropy-preserving
+second queries is at most $1/2$ (isolated sibling derivatives are
+complementary). Entropy-dropping second queries have ratio $4$; let
+$E$ be their weighted influence. Therefore
+\[
+\frac{\Pi_H}{\Pi_I}=
+ \frac{2+4E}{1/2+Z+E}\ge\frac{2+4E}{1+E}\ge2.
+\]
+
+\paragraph{B05 family, all even $k\ge4$.}
+Let $r=2k$, $\delta=2^{-k}$, $p=2^{-r}$,
+$b(x)=(-1)^{x_1x_2+\cdots+x_{k-1}x_k}$, and let $b'$ be its sign
+flip at zero. With $A$ the all-zero event on $r$ new controls, set
+$G=1+A(b-1)$ and $H=1+A(b'-1)$. Their means are determined by
+$\mathbb Eb=\sqrt\delta$, $\mathbb Eb'=\sqrt\delta-2\delta$;
+their core influences are $k/2$ and $k/2+2k\delta$.
+The fair selector of $G,H$ has selector influence $d=p\delta$.
+For $F=1+A(u-1)$ with $\mu=\mathbb Eu\in[0,1]$, $c=1-\mu$, and
+$h(t)=-t\log_2t$, exact Fourier coefficient counting gives
+\begin{align*}
+H(F)&=p[H(u)-h(\mu^2)]
+ +2rp[(1-\mu^2)+(1-p)c^2]\\
+&\quad+p(1-p)h(c^2)+h((1-pc)^2).
+\end{align*}
+Since $h(t)\le(1-t)/\ln2$ on $[0,1]$ and
+$(1-\mu^2)+c^2=2c$, we have
+\[
+H(F)\le pH(u)+4rpc+2p/\ln2,
+\qquad I(F)=p[I(u)+rc].
+\]
+Thus $D_4(G),D_4(H)\ge p(k-2/\ln2)\ge p(k-3)$,
+using $H(u)\le k$ and $\ln2>2/3$. These child reserves are proved
+directly, not assumed inductively. The established erasure/JS split
+gives $\Delta_yH\le h_2(d)+2d/\ln2$, hence
+\[
+\Delta_yH-4d\le p\delta(3k+1/2).
+\]
+Because $2^{-k}(3k+1/2)$ decreases for $k\ge4$ and equals $25/32$
+at $k=4$, the actual child reserve pays the split:
+\[
+D_4(f)\ge p[k-3-\delta(3k+1/2)]>0.
+\]
+This is scoped to the B05 family. Arbitrary terminal deficits remain
+unpaid in the universal conjecture. In particular, a complete AND2
+factor tree for $F=g_{\rm AND2}h$ has $(\Pi_H,\Pi_I)=(2,1)$ but
+retains signed copies of $h$ at the leaves, so
+$D_K(F)=D_K(h)+(K-2)$.
+\end{document}

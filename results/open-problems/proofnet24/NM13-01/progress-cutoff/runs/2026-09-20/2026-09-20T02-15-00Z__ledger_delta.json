@@ -1,0 +1,36 @@
+{
+  "worker": "NM13-01",
+  "parent": "T08 Transitive-expander cutoff / Salez arXiv:2508.21055 Problem 2.3",
+  "runtime": {
+    "model": "GPT-5.6 Sol",
+    "reasoning": "UNVERIFIED",
+    "requested": "GPT-6 maximum",
+    "authenticated_runtime_metadata": false
+  },
+  "status": {
+    "parent_before": "OPEN/PARTIAL",
+    "parent_after": "OPEN/PARTIAL",
+    "restricted_theorem": "CANDIDATE_FULL pending later independent review",
+    "publication_novelty": "UNVERIFIED"
+  },
+  "source_level_before": "Known/repository-positive scope included long-range expanders, NM13-01 line-graph and arc-truncation non-LRE classes, and P26 finite-fiber lexicographic transfers; no general vertex-transitive spectral-expander theorem.",
+  "source_level_after": "Adds twisted finite-group Cayley thickenings: for a fixed finite fiber Cayley graph and arbitrary inverse-compatible generator twists, any Salez-continuous-time cutoff Cayley base transfers cutoff after time rescaling (d+s)/d, with the same order window; for Ramanujan/LRE Cayley bases this gives bounded-degree vertex-transitive spectral expanders outside uniform LRE with O(sqrt(log n)) cutoff window.",
+  "quantitative_center_application": "If the d-regular base has center d/(d-2) log_{d-1}|Gamma_n| and O(sqrt(log |Gamma_n|)) window, the twisted degree-(d+s) output has center (d+s)/(d-2) log_{d-1}|Gamma_n| and O(sqrt(log |Gamma_n|)) window.",
+  "spectral_transfer": "gap(output) >= min{ d/(d+s) gap(base), s/(d+s) gap(fiber) }.",
+  "tv_transfer": "d_base(a t) <= d_output(t) <= d_base(a t) + (1/2)sqrt(|K|-1) exp(-b gamma_F t), where a=d/(d+s), b=s/(d+s).",
+  "non_lre": "For N=|Gamma_n||K| and D=d+s, balls satisfy |B_H(r)| <= C_{d,K}(d-1)^r; at r=floor((1/2)log_{D-1}N), any LRE constant is O(N^{-beta}) with beta=(1/2)(1-log_{D-1}(d-1))>0.",
+  "mechanism_progress": "Finite-state entropy disintegration removes the prior arc-transitivity entropy-synchronization obstruction: if H(Y)>=log n-Delta and J has at most m states, sum_j p_j(log n-H(Y|J=j)) <= Delta+H(J); persistent directed-edge orbit types therefore inherit near-maximal entropy without arc-transitivity. For fixed degree, the NBRW directed-edge orbit process has at most d states and transition probabilities in multiples of 1/(d-1); transient orbit mass is uniformly exponentially small and persistent types have uniformly positive mass along their periodic support.",
+  "remaining_obstruction": "The general Salez conjecture still lacks a mechanism proving near-maximal NBRW endpoint entropy (or an equivalent Green/varentropy condition) from vertex transitivity plus spectral expansion. Tree-rate/pre-entropic LRE cannot be forced by those source hypotheses. Orbital synchronization is no longer the blocker; accumulated collision/transport structure is.",
+  "checks": {
+    "script": "2026-09-20T02-15-00Z__twisted-fiber-checker.py",
+    "output": "2026-09-20T02-15-00Z__twisted-fiber-checker.out",
+    "verdict": "ALL_CHECKS_PASS",
+    "noncommuting_example": "cross_vertical_commutator_max=0.125"
+  },
+  "failed_or_pruned_routes": [
+    "Do not re-enter P26 lexicographic finite-fiber exact-semigroup route: active partner duplication.",
+    "Do not try to derive maximal/pre-entropic tree-rate growth from vertex transitivity plus spectral gap: current PROB10 T08 two-copy obstruction refutes that route."
+  ],
+  "next_attack": "Use the orbital-chain disintegration lemma to seek an automorphism-orbit-averaged collision/Green bound for NBRW that survives product/two-copy expanders; quantify collision entropy per recurrent directed-edge orbit rather than ambient-degree ball growth.",
+  "posted_exclusions": "No posted Problem 2.4 Abelian-Cayley/product-condition result reopened."
+}

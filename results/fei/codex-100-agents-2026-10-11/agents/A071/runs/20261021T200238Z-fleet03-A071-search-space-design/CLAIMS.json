@@ -1,0 +1,52 @@
+[
+  {
+    "claim_id": "A071-SPENT-SIBLING-NEXT-QUERY-CENSUS",
+    "version": 1,
+    "exact_statement": "For F=J(g^6) on six disjoint uniform six-bit blocks, with g negative exactly on {0,1,2}, h negative exactly on {0,1,2,4,8,16,32,6,17,40} and J(x)=-h(x xor1), retain the rate4 A089 prefix block0 original coordinates2=0,0=0,3=b, and its exact minimal sibling-transfer debit. All60 next-query alternatives (b in {0,1}, block j in {1,...,5}, coordinate i in {0,...,5}) have two nonconstant full children with positive S4 and admit same-debit full-capacity payment. Exactly36 alternatives fail corrected-newly-queried-core-only payment. For b=0,j=1,i=0 the required mean debit minus mean corrected selected capacity lies strictly between31/1000 and4/125 bits. No universal child-eligibility or FEI bound is asserted.",
+    "hypotheses": [
+      "uniform physical cube",
+      "disjoint six-bit cores",
+      "fixed rate4",
+      "specified original prefix and minimal A089 debit",
+      "all entropy in bits",
+      "60 alternatives are separate choices"
+    ],
+    "statement_sha256": "5f6b3c014cd965d5ed98d79eca54e5f86a5d20215b695bdd1e536dd0c5893569",
+    "contributors": [
+      "A071"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "code/continue_spent.py",
+      "code/reproduce_spent.py",
+      "out/FINAL_VALIDATION.json"
+    ],
+    "proof_dependencies": [
+      "explicit Boolean tables",
+      "exact Shannon occupied-block chain rule",
+      "A089 stage6 minimal-transfer allocation reconstructed locally"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A071 second implementation",
+        "status": "INTERNAL_REPRODUCTION_ONLY",
+        "artifact": "out/REPRODUCTION.json"
+      }
+    ],
+    "status": "EXACT_FINITE_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "candidate selected-newly-queried-core-only continuation; no attributed source theorem"
+    ],
+    "first_unproved_line": "For arbitrary Boolean cores and retained histories, inherited component constraints guarantee nonnegative full child capacities and enough unused transferred reserve.",
+    "next_consumers": [
+      "A089",
+      "A072",
+      "A074",
+      "A075",
+      "A092",
+      "B15",
+      "B20"
+    ]
+  }
+]

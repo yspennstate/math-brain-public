@@ -1,0 +1,44 @@
+[
+  {
+    "service": "source",
+    "url": "https://arxiv.org/pdf/1506.00724",
+    "date": "2026-10-12",
+    "outcome": "HTTP 200, 1399192 bytes; saved source.pdf"
+  },
+  {
+    "service": "arxiv",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22Brownian+net%22&max_results=100&sortBy=submittedDate&sortOrder=descending",
+    "date": "2026-10-12",
+    "outcome": "HTTP 200, 25350 bytes; saved arxiv.xml"
+  },
+  {
+    "service": "openalex",
+    "url": "https://api.openalex.org/works?search=Brownian+net+bubble&per-page=50",
+    "date": "2026-10-12",
+    "outcome": "HTTP 200, 1007404 bytes; saved openalex.json"
+  },
+  {
+    "service": "openalex_source",
+    "url": "https://api.openalex.org/works?search=The+Brownian+web+the+Brownian+net+and+their+universality&per-page=5",
+    "date": "2026-10-12",
+    "outcome": "HTTP 200, 98739 bytes; saved openalex_source.json"
+  },
+  {
+    "service": "crossref",
+    "url": "https://api.crossref.org/works?query=Brownian+net+bubble+hypothesis&rows=30",
+    "date": "2026-10-12",
+    "outcome": "HTTP 200, 206021 bytes; saved crossref.json"
+  },
+  {
+    "service": "semantic",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=Brownian+net+bubble&limit=50&fields=title%2Cauthors%2Cyear%2Cabstract%2CexternalIds%2Curl",
+    "date": "2026-10-12",
+    "outcome": "HTTP Error 429: "
+  },
+  {
+    "service": "github",
+    "url": "https://api.github.com/search/repositories?q=%22Brownian+net%22&per_page=50",
+    "date": "2026-10-12",
+    "outcome": "HTTP 200, 11362 bytes; saved github.json"
+  }
+]

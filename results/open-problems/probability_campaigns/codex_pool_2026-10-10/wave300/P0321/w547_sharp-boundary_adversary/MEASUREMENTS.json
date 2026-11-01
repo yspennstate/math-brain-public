@@ -1,0 +1,31 @@
+{
+  "status": "SKIPPED_FRESH_RESOURCE_GATE",
+  "gate": {
+    "sampled_at_utc": "2026-10-10T05:46:59Z",
+    "kind": "fresh local admission snapshot for bounded deterministic CPU quadrature",
+    "cpu_percent": 82.6,
+    "available_memory_bytes": 7576662016,
+    "commit_available_bytes": 12184829952,
+    "global_gate_policies": [
+      {
+        "path": "~\\brain_workers\\GATE.json",
+        "policy": {
+          "commit_floor_gb": 6.0,
+          "max_running": 500
+        }
+      }
+    ],
+    "limits": {
+      "cpu_percent_below": 75,
+      "available_memory_at_least_bytes": 2147483648,
+      "numeric_work_wall_seconds": 60,
+      "blas_threads": 1,
+      "commit_headroom_at_least_gb": 6.0,
+      "largest_dense_array_elements": 16384,
+      "gpu": false,
+      "new_workers_or_background_processes": 0
+    },
+    "admitted": false
+  },
+  "proof_role": "Analytic proof remains separate from numerical checking."
+}

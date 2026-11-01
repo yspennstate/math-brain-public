@@ -1,0 +1,137 @@
+% B01/A003: complete retained-U payment for a two-point bent surgery.
+\section*{A physical payment for two coherent surgeries}
+
+All logarithms are base two unless natural logarithms are displayed.  Let
+$g:\{0,1\}^k\to\{-1,1\}$ be bent, with even $k\ge8$, and put
+$\delta=2^{-k}$ and $\alpha=\sqrt\delta$.  Let $x\ne y$, and let $h$ be
+obtained from $g$ by flipping both $g(x)$ and $g(y)$.  A fresh $d$-bit
+selector activates $h$ at one control word and otherwise returns $g$:
+\[
+ F(z,X)=\begin{cases}h(X),&z=z_\star,\\g(X),&z\ne z_\star.\end{cases}
+ \qquad p=2^{-d}.
+\tag{1}
+\]
+The children disagree at two points, so
+\[
+ I_{\rm ctl}(F)=2pd\Pr[g\ne h]=4pd\delta.                 \tag{2}
+\]
+
+Write $a_T=\widehat g(T)$, $b_T=\widehat h(T)$,
+$e_T=b_T-a_T$, $c_T=(1-p)a_T+pb_T$, and
+\[
+ A_T=\sum_{Q\supseteq T}a_Q^2,\quad
+ B_T=\sum_{Q\supseteq T}b_Q^2,\quad
+ D_T=\sum_{Q\supseteq T}e_Q^2.
+\]
+Direct Walsh summation over the selector block gives
+\begin{align}
+ U(F)={}&\sum_Tc_T^2\log\frac{(1-p)A_T+pB_T}{c_T^2}
+ +p(1-p)\sum_Te_T^2\log\frac{D_T}{e_T^2}\\
+ &+\left(\frac{pd}{2}-p^2d\right)\sum_Te_T^2.             \tag{3}
+\end{align}
+This identity is rederived here and requires no disjointness or
+orthogonality.
+
+Define the retained-child charge
+\[
+ J=U(F)-(1-p)U(g)-pU(h).                                  \tag{4}
+\]
+Bentness gives $a_T^2=\delta$ and $A_T=2^{-|T|}$.  Put
+\[
+ 1+u_T=\frac{B_T}{A_T},\qquad
+ 1+v_T=\frac{b_T^2}{\delta},\qquad
+ 1+w_T=\frac{c_T^2}{\delta}.                              \tag{5}
+\]
+The two-point Walsh perturbation is the sum of two vectors of magnitude
+$2\delta$, hence $|e_T|\le4\delta$.  Counting the
+$2^{k-|T|}=A_T/\delta$ atoms in the upper cone gives
+\[
+ |u_T|,|v_T|\le8\alpha+16\delta\le9\alpha,
+ \qquad |w_T|\le8p\alpha+16p^2\delta\le\frac{17}{2}p\alpha.
+\tag{6}
+\]
+
+Let $L_T=k-|T|$ and use natural logarithms in
+\[
+ \Phi_p(u,v,w)
+ =(1+w)\ln\frac{1+pu}{1+w}
+ -p(1+v)\ln\frac{1+u}{1+v}.                              \tag{7}
+\]
+Expanding (3)--(4) exactly yields
+\[
+ J=\frac{\delta}{\ln2}\sum_T\Phi_p(u_T,v_T,w_T)
+ +p(1-p)K +(1-2p)I_{\rm ctl}(F),                          \tag{8}
+\]
+where
+\[
+ K=\mathcal U(e)-\sum_Te_T^2L_T,
+ \qquad \mathcal U(e)=\sum_Te_T^2\log\frac{D_T}{e_T^2}. \tag{9}
+\]
+Indeed, the coefficient of $L_T$ in the coherent-minus-child terms is
+$w_T-pv_T=-p(1-p)e_T^2/\delta$, and
+$\sum_Te_T^2=4\Pr[g\ne h]=8\delta$, which proves (8).
+
+We now use the independently accepted two-surgery refund.  Put
+$R=\operatorname{supp}(x\oplus y)$, $r=|R|$, and
+$\tau=g(x)g(y)$.  If $r\ge2$, then
+\[
+ \sum_Te_T^2L_T=4\delta k,
+ \qquad K=-\rho_{r,\tau(-1)^r}\le0.                      \tag{10}
+\]
+If $r=1$, direct character summation instead gives
+\[
+ \sum_Te_T^2L_T=4\delta(k+\tau),\qquad
+ \mathcal U(e)=4\delta(k-1),
+\]
+and therefore
+\[
+ K=-4\delta(1+\tau)\le0.                                 \tag{11}
+\]
+Thus the correctly weighted difference packet creates no positive debt in
+(8), including both adjacent-point phases.
+
+It remains to bound the coherent scalar term.  From (6),
+$|u|,|v|\le9/16$ and $|w|\le17/64$.  On this box,
+\[
+ |\Phi_{uu}|\le10p,\quad |\Phi_{uv}|\le2.3p,\quad
+ |\Phi_{uw}|\le1.4p,\quad |\Phi_{vv}|\le2.3p,\quad
+ |\Phi_{ww}|\le1.4,\quad \Phi_{vw}=0.                    \tag{12}
+\]
+For example, $1+u,1+v\ge7/16$, $1+pu\ge23/32$, and
+$1+w\ge47/64$; differentiating (7) gives (12).
+
+At the origin, $\Phi_p=0$ and $\nabla\Phi_p=(0,p,-1)$.  The linear term
+is exactly
+\[
+ pv_T-w_T=p(1-p)e_T^2/\delta\le16p\delta.                 \tag{13}
+\]
+Taylor's theorem, (6), (12), and $p\le1/2$ give
+\begin{align*}
+ \Phi_p(u_T,v_T,w_T)
+ &\le16p\delta+\frac12p\delta\bigl[
+ 10\cdot9^2+2(2.3)9^2+2(1.4)9(8.5)p\\
+ &\hspace{40mm}+2.3\cdot9^2+1.4(8.5)^2p\bigr]\\
+ &<780p\delta.                                            \tag{14}
+\end{align*}
+There are $1/\delta$ Fourier atoms.  Combining (8), $K\le0$, and (14),
+\[
+ J\le\frac{780}{\ln2}p\delta+I_{\rm ctl}(F)
+ =\left(\frac{195}{d\ln2}+1\right)I_{\rm ctl}(F)
+ <283I_{\rm ctl}(F).                                      \tag{15}
+\]
+
+\paragraph{Theorem.}
+For every even $k\ge8$, every bent Boolean $g$, every distinct pair
+$x,y$, and every selector depth $d\ge1$, the shared-variable switch (1)
+between $g$ and its two-point edit satisfies
+\[
+ \boxed{U(F)-(1-p)U(g)-pU(h)<283I_{\rm ctl}(F).}
+\]
+The constant is independent of dimension, selector rarity, Hamming
+separation, and phase.
+
+\paragraph{Scope.}
+This is a complete physical retained-child payment for one selector node
+whose child differs by two coherent point surgeries.  It does not assign
+single-use credit to several selector nodes, nor control three or more
+overlapping displacement filters through an arbitrary hierarchy.

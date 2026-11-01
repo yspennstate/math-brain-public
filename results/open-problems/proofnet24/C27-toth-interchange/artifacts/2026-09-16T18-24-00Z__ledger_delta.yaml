@@ -1,0 +1,49 @@
+track: C27
+source: "Toth 1993 random interchange; exact accessible finite-volume formulation Ioffe-Toth 2020 section 1.6 Conjecture 1(ii)"
+status: PARTIAL
+source_status: OPEN_ON_BOUNDED_CURRENT_SEARCH
+metric:
+  name: theta_block
+  definition: "leakage/block exponent for the frozen deterministic block-visitation event under H_beta(B) <= (k-1)/(4e) and the existing fixed scale map"
+  before: "1/2 + 1/(16 e log 2) = 0.5331711153389402..."
+  after: "1/2 + 1/(16 e log 2) = 0.5331711153389402..."
+  movement: false
+  unchanged_count_after_previous_movement: 1
+  stale_root_value_must_not_reset_metric: "1/4"
+  historical_intermediate_same_metric: "203/500"
+stuck:
+  historical_recovery_count: 1
+  increment_this_run: false
+  physical_orbit_propagating_cube_exponent: UNMEASURED
+methods:
+  - number: 19
+    name: "make it an algorithm"
+    outcome: "localized phase-factorization restart procedure P=S_l W_l R_l written explicitly; requires choosing a clean moving phase center"
+  - number: 20
+    name: "find why the algorithm fails"
+    outcome: "identified diagonal phase-selection obstruction: uniform fixed-center contamination does not imply a clean moving center b_l=R_l(a)"
+  - number: 27
+    name: "swap the quantifiers"
+    outcome: "proved one high-probability event controlling phase-window occupancy simultaneously for every spatial center along one fresh chronological Z3 trace"
+claims:
+  - id: C27-TRACE-PHASE-01
+    status: PROVED_PARTIAL_AUXILIARY
+    statement: "For CT nearest-neighbor SRW on Z3 and deterministic disjoint intervals of length >=1 in [0,beta], sup_x number of intervals whose trace hits B(x,r) is O(r^2 log(beta+2)) with probability 1-O(beta^-10), uniformly for 1<=r<=beta."
+    source_scope_note: "Applies to deterministic/pre-slab-selected chronological tags; does not apply to final-cycle-selected anticipative labels without a no-peeking filtration."
+  - id: C27-DIAGONAL-PHASE-BARRIER-01
+    status: PROVED_METHOD_BARRIER
+    statement: "A uniform bound for each fixed spatial center cannot by itself select a clean rotating phase when the tested center b_l varies with l; the deterministic construction R_l={x_l}, b_l=x_l contaminates every diagonal while each fixed center is contaminated once."
+remaining_obligation: "Prove or refute a phase-diagonal no-peeking estimate controlling #{l: dist(Phi_{0,t_l}(a), R_l)<=r}=o(m) for an admissibly selected cyclic anchor and phase-indexed revealed sets, then use it for genuine renewal."
+audit:
+  id: C27-AUDIT-C28-I0032-SP-UPPER-01
+  verdict: PASS
+  scope: "C28 one-sided spectral-profile upper bound s_* <= S_sp(E), including source N(s)=2 normalization; does not audit reverse comparison, finite two-sided factor, READY/admission, or source closure."
+report:
+  path: "proofnet24/C27-toth-interchange/runs/2026-09-16/2026-09-16T18-24-00Z__run-report.md"
+  creation_commit: "7971efc3bdd0d6fdc7086830d4178927f56cb96d"
+shared_ledger_instruction: "P26 only: reconcile C27 to supported theta_block=0.5331711153389402... and unchanged_count=1; never reset to stale 1/4."
+model_runtime:
+  requested: "GPT-6 maximum"
+  actual_reported: "GPT-5.6 Sol"
+  reasoning: UNVERIFIED
+  selectors_exposed: false

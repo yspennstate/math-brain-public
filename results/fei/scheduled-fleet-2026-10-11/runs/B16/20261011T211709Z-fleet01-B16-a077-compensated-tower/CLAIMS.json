@@ -1,0 +1,26 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B16-A077-COMPENSATED-TOWER",
+      "version": 1,
+      "packet_id": "A077",
+      "attempt_id": "A077-B09-SPARSE-CODE-1",
+      "gap_id": "G-BIASED-TAX",
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For k>=3, epsilon_k=2^-k, and the biased Boolean gate g_k(X,Y)=(-1)^(XY) with iid Bernoulli(epsilon_k) inputs, the B09 restriction gain J_k and M_k=H(S_X|S_Y) satisfy J_k>=r_k(k-log2(e)) and M_k<=r_k epsilon_k(4k+2log2(e)), where r_k=4epsilon_k^2(1-epsilon_k). Hence J_k/(2r_k+M_k) diverges. Encoding X,Y as ANDs of k fair bits gives an actual uniform Boolean point defect f_k with exact M_code=M_k+r_k log2(2^k-1), I(f_k)=2r_k k2^(k-1)/(2^k-1), and H(f_k)/I(f_k)->4. With N_k=2^(2k) disjoint copies per scale, the collapsed biased helper ratio diverges linearly while the actual uniform tower has H/I->4.",
+      "quantifiers": "All integers k>=3; tower depth K>=3; all physical coordinates of distinct copies are disjoint.",
+      "units": "bits",
+      "scope_exclusions": [
+        "Not a counterexample to uniform FEI.",
+        "Does not rule out a biased restriction inequality with the B09 endpoint tax.",
+        "Does not address overlapping or correlated auxiliary encodings."
+      ],
+      "refutes": [
+        "Every fixed-constant tax-free product-biased helper J <= C(I_core+M)"
+      ],
+      "next_consumers": ["A079", "A080", "B20"],
+      "independent_reviewers": ["A092", "A088"]
+    }
+  ]
+}

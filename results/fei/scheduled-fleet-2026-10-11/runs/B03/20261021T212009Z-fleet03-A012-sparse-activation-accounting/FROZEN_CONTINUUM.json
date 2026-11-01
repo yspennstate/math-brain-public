@@ -1,0 +1,13 @@
+{
+  "helper_version": "continuum.py tangent-v1",
+  "family": "All three-row edits of pure three-bit shared phases by arbitrary correlated private events",
+  "domain": "q in [0,1]^3; all 256 phases reduced by common sign/character to 16 representatives; arbitrary triples to {0,1,2} by affine bijection",
+  "case_count": "16 jobs, 64 initial boxes each; dyadic octree maximum depth9; maximum100000 visited nodes per job",
+  "symmetry": "Common signs/characters and affine shared relabeling preserve B_z and d; original shared influences retained unchanged in final identity",
+  "arithmetic": "integer Walsh, 80-bit outward fixed-point logarithms, 24 atanh terms and explicit uniform tail; entropy tangent slopes and exact integer corner bounds; analytic rare d<=1/32 and moderate d>=1/6 pruning",
+  "memory_estimate_mb": 150,
+  "maximum_runtime_seconds": 55,
+  "jobs_sequential": true,
+  "no_dimension_escalation": true,
+  "failure_policy": "save every unresolved box; no claim of continuum theorem unless every box is certified or analytically pruned"
+}

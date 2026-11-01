@@ -1,0 +1,10 @@
+{
+  "frozen_at_utc": "2026-10-11T23:04:00Z", "amended_23_12Z": "beta grid start moved from 0.2897 to 0.28 because sin^2(0.2897)=0.0816>0.08 left a gap; acceptance unchanged",
+  "target": "For all p in [0.08,0.5] and all theta in the fundamental domain theta = beta/2 + d, d in [0, pi/4], sin^2 beta = p: F(theta) = h2(sin^2 theta) + h2(sin^2(theta-beta)) >= R(p) := (p/2)log2(1/p) + (1-p/2)log2(1/(1-p)) = h2(p) - Delta(p)/2.",
+  "excluded_and_proved_analytically": ["p in (0,0.08] (lemma A in REPORT.md)", "p in [0.49,0.5] with |theta-beta| <= 0.3 (lemma B in REPORT.md)"],
+  "method": "branch-and-bound over boxes (p-interval, d-interval) with exact binary endpoints; lower bound = min h2 over the enclosed range of sin^2 theta (concavity: endpoint minimum) + same for sin^2(theta-beta) - upper enclosure of R(p2) (R increasing); mpmath iv interval arithmetic, prec 80 bits",
+  "acceptance": "every box closed with a strictly positive rigorous lower bound or contained in lemma B region; any box narrower than 2^-40 in p that is not closed = FAIL",
+  "caps": {"max_boxes": 3000000, "max_seconds": 900},
+  "no_dimension_escalation": true,
+  "also_run": ["identity check J-M = h2(p) - sum_T r_T^2 F(t_T) on random real and Boolean child pairs (float, evidence)", "two-bit block: local minimisation of H(w^2)+H((U1 x U2 w)^2) over real unit w vs U(p1)+U(p2) (float, evidence for additivity)"]
+}

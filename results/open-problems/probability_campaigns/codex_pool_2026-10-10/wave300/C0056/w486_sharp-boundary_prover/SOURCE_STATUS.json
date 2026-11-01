@@ -1,0 +1,59 @@
+{
+  "candidate_id": "C0056",
+  "worker": "w486",
+  "current_openness": "UNKNOWN",
+  "reason": "A dated September 2026 primary preprint claims to solve the uniform-disorder version; mathematical validation has not been recovered.",
+  "source_rows": "SOURCE_ROWS.jsonl",
+  "exact_original_statement": "Prove existence of absolutely continuous spectrum (delocalised states) for the random Schrodinger operator -Delta + lambda V on Z^3 at small disorder lambda, and GOE local statistics for its finite-volume restriction.",
+  "original_primary": {
+    "author": "Paul Bourgade",
+    "title": "Random band matrices",
+    "arxiv": "1807.03031",
+    "url": "https://math.nyu.edu/~bourgade/papers/ICMProceedings.pdf",
+    "locator": "Section 2.1, printed p. 7",
+    "disorder": "iid centered variance-one site law",
+    "finite_volume_boundary": "periodic"
+  },
+  "formal_spectral_subtarget": "For iid uniform [-sqrt(3),sqrt(3)] sites on Z^3, find lambda_0>0 and a nonempty deterministic open I subset (-6,6) so that for each fixed 0<lambda<lambda_0 the ac part of H_lambda on I is almost surely nonzero. Probability-one events may depend on lambda.",
+  "goe_scope": "Separate periodic-box bulk limit at volume/DOS scale; not proved in this lane. The historical source gives a qualitative goal, not full energy/DOS quantifiers.",
+  "recent_primary_claim": {
+    "url": "https://github.com/openai/math/tree/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026",
+    "date": "2026-09-23",
+    "scope": "Pure ac spectrum on a fixed nonempty interval above -6 for each sufficiently small fixed coupling with iid uniform [-1,1] sites; no GOE clause",
+    "verification": "Primary claim, no independent proof verdict recovered",
+    "normalization": "Variance-one uniform law rescales the claimed coupling by sqrt(3)"
+  },
+  "prior_attempt": {
+    "id": "C0056-A001",
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 45,
+    "gap": "No closed lattice Green-function recursion; deleting edges changes the operator; finite-time transport does not prove fixed-disorder boundary positivity"
+  },
+  "named_prior_searches": {
+    "attempts_H": "No C0056 match",
+    "attempts_I": "No C0056 match",
+    "lean": "Only historical annotated ranking matched",
+    "team_O": "No C0056 row"
+  },
+  "brain_recall": {
+    "completed_within_timeout": true,
+    "slugs": [
+      "openproblem_recon_fpp_chi_target_2026_08_09",
+      "rank_lane_the_support_rank_deficit_is_theta_log_n_2026_08_19",
+      "perceptron_proof_open_gaps_fleet_2026_07_12"
+    ],
+    "caution": "Absent C0056 and low separation; memories are hints"
+  },
+  "novelty_claim": false,
+  "status_check": "2026-10-10",
+  "model_identity": {
+    "native_worker": "w486",
+    "served_model_evidence": "unavailable; requested settings do not certify served identity"
+  },
+  "store_scope_receipt": "STORE_SCOPE.json (mode=ro; prior attempt remains unverified)",
+  "source_snapshot_hashes": {
+    "bourgade_intake_pdf_sha256": "b8b15c02ac7b675471097e9c499a6d588cfd7b0c591c49b0135f2a42eaedddb0",
+    "bourgade_intake_extracted_sha256": "94becc31961db4aac94611aa72da6eb502984d68650e03a539e8340255dc49bd",
+    "origin": "Existing sources.jsonl:7 receipt; no new PDF-byte verification claimed"
+  }
+}

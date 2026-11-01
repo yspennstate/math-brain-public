@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "cases": 3,
+  "assertions": 318,
+  "runtime_seconds": 0.06173080000007758,
+  "strict_integer_sign": "2209^8 < 2*2040^8",
+  "canonical_y_conditional_bill": "1/2 log2 V <1/16",
+  "canonical_y_envelope": "log2 V <1/8",
+  "combined_booked_envelope": "B_b+(1/2) B_y <1/4",
+  "owner": "old mean child S4=3 partitioned into query edge reserve1 and final S4=2; take total conditional envelope from final2 only",
+  "cases_detail": [
+    {
+      "c": "3/4",
+      "eta": "5/8",
+      "V": "16/15",
+      "new_conditional_KL": {
+        "2": "2",
+        "3": "-1/2",
+        "5": "-1/2"
+      },
+      "new_envelope": {
+        "2": "4",
+        "3": "-1",
+        "5": "-1"
+      },
+      "reach": "1/2",
+      "earlier_booked_envelope": {
+        "5": "1/2",
+        "2": "-1"
+      },
+      "conservative_total_envelope": {
+        "2": "1",
+        "3": "-1/2"
+      },
+      "final_mean_H": "2",
+      "final_mean_I": "1",
+      "final_S4_owner": "2",
+      "owner_remaining": ">7/4",
+      "query_edge_reserve": "1 (distinct from final S4 owner)"
+    },
+    {
+      "c": "25/32",
+      "eta": "12/19",
+      "V": "361/336",
+      "new_conditional_KL": {
+        "19": "1",
+        "2": "-2",
+        "3": "-1/2",
+        "7": "-1/2"
+      },
+      "new_envelope": {
+        "19": "2",
+        "2": "-4",
+        "3": "-1",
+        "7": "-1"
+      },
+      "reach": "1/2",
+      "earlier_booked_envelope": {
+        "2": "3/2",
+        "3": "1/2",
+        "19": "-1/2"
+      },
+      "conservative_total_envelope": {
+        "2": "-1/2",
+        "19": "1/2",
+        "7": "-1/2"
+      },
+      "final_mean_H": "2",
+      "final_mean_I": "1",
+      "final_S4_owner": "2",
+      "owner_remaining": ">7/4",
+      "query_edge_reserve": "1 (distinct from final S4 owner)"
+    },
+    {
+      "c": "13/16",
+      "eta": "30/47",
+      "V": "2209/2040",
+      "new_conditional_KL": {
+        "47": "1",
+        "2": "-3/2",
+        "3": "-1/2",
+        "5": "-1/2",
+        "17": "-1/2"
+      },
+      "new_envelope": {
+        "47": "2",
+        "2": "-3",
+        "3": "-1",
+        "5": "-1",
+        "17": "-1"
+      },
+      "reach": "1/2",
+      "earlier_booked_envelope": {
+        "2": "1",
+        "3": "1/2",
+        "5": "1/2",
+        "47": "-1/2"
+      },
+      "conservative_total_envelope": {
+        "2": "-1/2",
+        "47": "1/2",
+        "17": "-1/2"
+      },
+      "final_mean_H": "2",
+      "final_mean_I": "1",
+      "final_S4_owner": "2",
+      "owner_remaining": ">7/4",
+      "query_edge_reserve": "1 (distinct from final S4 owner)"
+    }
+  ]
+}

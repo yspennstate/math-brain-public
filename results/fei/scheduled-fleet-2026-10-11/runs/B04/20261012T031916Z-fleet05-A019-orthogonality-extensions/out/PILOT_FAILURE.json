@@ -1,0 +1,9 @@
+{
+  "helper": "A019-star-v1",
+  "status": "FAIL",
+  "first_unsupported_formula": "B_x=sum_T p_T Phi((alpha+beta)^2/4,(alpha-beta)^2/4)",
+  "missing_term": "sum_T p_T [1-(alpha^2+beta^2)/2] from nonempty private frequencies",
+  "exact_witness": "dictator core, one active one-bit point module gated by x: B_x=1, omitted-term prediction=1/2, Inf_x=1/2",
+  "repair": "restore nonempty mass; replace proposed B_x<=2Inf_x by proved B_x<=3Inf_x",
+  "mathematical_claim_published": false
+}

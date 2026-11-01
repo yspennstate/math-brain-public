@@ -1,0 +1,35 @@
+[
+  {
+    "service": "arxiv_spatial",
+    "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22multi-species%22+OR+all%3A%22two-species%22%29+AND+%28all%3Acorrelations+OR+all%3Acovariance%29&max_results=50",
+    "date": "2026-10-12",
+    "status": 200,
+    "file": "arxiv_spatial.txt"
+  },
+  {
+    "service": "arxiv_horizon",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22stationary+horizon%22&max_results=30",
+    "date": "2026-10-12",
+    "status": 200,
+    "file": "arxiv_horizon.txt"
+  },
+  {
+    "service": "crossref_focused",
+    "url": "https://api.crossref.org/works?query.title=Decoupling+and+decay+of+two-point+functions+in+a+two-species+ASEP&rows=5",
+    "date": "2026-10-12",
+    "status": 200,
+    "file": "crossref_focused.txt"
+  },
+  {
+    "service": "openalex_retry",
+    "url": "https://api.openalex.org/works?search=ASEP+covariance&per-page=10",
+    "date": "2026-10-12",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "semantic_retry",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2504.00765?fields=title,authors,year,citations.title,citations.externalIds",
+    "date": "2026-10-12",
+    "error": "HTTP Error 429: "
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "task": "T04 classical iid random 3-SAT",
+  "worker": "NM13-13",
+  "date": "2026-09-20",
+  "runtime_model": "GPT-5.6 Sol",
+  "reasoning_effort": "UNVERIFIED",
+  "status": "CANDIDATE_FULL pending later independent review",
+  "published_source_bracket_before": [3.52, 4.4898],
+  "published_source_bracket_after": [3.52, 4.4898],
+  "project_candidate_upper_before": 4.38885876,
+  "project_candidate_upper_after": 4.38885875992,
+  "project_endpoint_gain": 8e-11,
+  "mechanism": "convex tangent correction to each positive nested-Radau Riemann cell plus one-sided compound-Poisson density Lipschitz transfer",
+  "same_density_old_A_upper": -1.2097746305453904e-9,
+  "same_density_new_A_upper": -2.4982888802254415e-9,
+  "same_density_certificate_gain": 1.288514249680051e-9,
+  "density_transfer_constant": 28.8,
+  "density_delta": 8e-11,
+  "transferred_A_upper": -1.942888802254415e-10,
+  "predecessor": {
+    "report_commit": "30189fe101e4ce440aa8666be71f9ea1c950b4bc",
+    "upper": 4.38885876
+  },
+  "artifacts": {
+    "verifier": {
+      "path": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T15-54-26Z__t04_tangent_transfer_verifier.py",
+      "commit": "9a14f889078f4c13e205b76d67086fcff264a330"
+    },
+    "output": {
+      "path": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T15-54-26Z__t04_tangent_transfer_verifier.out",
+      "commit": "3fadf0c05fc2b212218bf0b660060496ec583f90"
+    },
+    "report": {
+      "path": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/2026-09-20T15-54-26Z__t04_tangent_corrected_radau_density_transfer.md",
+      "commit": "b36f3d447e42ad4daef5ccad1f0515b1e38a9382"
+    }
+  },
+  "preserved_failures": [
+    "rescue stars do not compose",
+    "anchored degree-one rescue matching lacks full Diaz-polytope reoptimization",
+    "local multiplicative second moment identical-pair barrier near 3.10628",
+    "sublinear solution-ball quotient gives only exp(o(n)) savings",
+    "full-component quotient leaves uncontrolled overlap moment",
+    "whitening lacks uniform exponential cluster multiplicity theorem",
+    "q-binomial radius-two route only about 4.5923",
+    "equal-weight two-support hard-field family stalls near 4.4178",
+    "constructive finite-density C-promotion/D-forbidden-triple closure unresolved"
+  ],
+  "next_attack": "certified exponential-cell lower bound using full node-dependent log derivative, or exact positive-exponential integration of the secondary correction; switch to overlap/cluster counting if endpoint polishing stagnates"
+}

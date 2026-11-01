@@ -1,0 +1,80 @@
+{
+  "problem_id": "P0104",
+  "date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "exact_statement_recovered": true,
+  "source_precision": "The original questions use suitable conditions and do not fix the asymptotic convention. The packet explicitly specializes rather than treating these as precise universal assumptions.",
+  "precise_specialization": {
+    "graph": "nearest-neighbor undirected Z^2",
+    "weights": "iid Exp(1)",
+    "T_n": "infimum of weight sums over finite paths from (0,0) to (n,0)",
+    "target": "lim log Var(T_n)/(2 log n)=1/3"
+  },
+  "original_target": {
+    "source": "Auffinger-Damron-Hanson, arXiv:1511.03262",
+    "locator": "Section 3.1, Questions 13 and 15",
+    "parts": [
+      "exponent below 1/2 in d>=2 under suitable F conditions",
+      "planar exponent 1/3",
+      "positive exponent in suitable d"
+    ],
+    "store_node": "claim_32684d2ece2943d218971312722a87f42333b030b9c7a29f034d6c11f31f8f1d",
+    "legacy_page_locators": "The old card gives PDF pp.34 and40; the checked current PDF was located by question numbers, avoiding that version-dependent page attribution."
+  },
+  "full_hypotheses_compared": [
+    {
+      "source": "https://arxiv.org/html/1401.0917v2",
+      "locator": "Theorem 1.1, (1.2), (1.3)",
+      "hypotheses": [
+        "iid nonnegative nearest-neighbor edge weights on Z^d",
+        "d>=2",
+        "F(0)<p_c(d)",
+        "E exp(alpha t_e)<infinity for some alpha>0"
+      ],
+      "conclusion": "Two-tail exponential concentration at sqrt(||x||_1/log ||x||_1), ||x||_1>1, lambda>=0",
+      "proof_need_mismatch": "Scale is not standard deviation and not n^(1/3); it does not supply uniform kurtosis at the claimed scale."
+    },
+    {
+      "source": "https://arxiv.org/html/1810.08270v2",
+      "locator": "Theorem 1, (1.2.1), Remark 2",
+      "hypotheses": [
+        "planar Z^2 iid nonnegative edge weights",
+        "F(0)<1/2",
+        "if I=inf supp F>0, F(I)<oriented-bond critical threshold"
+      ],
+      "conclusion": "Two deterministic quantile levels with positive probability liminfs separated by at least a fixed multiple of sqrt(log ||x||)",
+      "own_deduction": "With square-integrable T, L1 yields Var T>=c log ||x||. In d>2 the cited method gives constant lower scale only."
+    },
+    {
+      "source": "https://arxiv.org/html/2604.01214v1",
+      "locator": "Sections 1.1 and 2.1.1, Theorem 2.1",
+      "hypotheses": [
+        "Riemannian path lengths on R^2, not edge-weight lattice lengths",
+        "radial nonnegative smooth bounded kernel K supported in unit ball",
+        "Gaussian white noise or homogeneous Poisson input",
+        "smooth monotone field transform bounded between positive finite d1,d2",
+        "continuous path metric, scaled to time constant 1"
+      ],
+      "conclusion": "Stretched-exponential concentration around n at Q_n comparable to the actual standard deviation; the main theorem gives some polynomial variance saving.",
+      "proof_need_mismatch": "No verified transfer of this model and its assumptions to lattice Exp(1) FPP."
+    }
+  ],
+  "prior_attempts": {
+    "recovered": "claim_9ffe9930e9d9ed5c9d98ff4d61a32155d942cd754628487fc173a2d2c6493b2f",
+    "digest": "Prior elementary example isolates the n/log n logarithmic barrier; not repeated here.",
+    "named_H_I_directories": "Targeted ID/exponent grep found no relevant attempt row.",
+    "Lean_directory": "Only dated attempted_un ranking annotation located; no actual theorem receipt for P0104."
+  },
+  "owner_solved_retired_check": {
+    "scars_read": [
+      "fpp_width3_strip_time_constant_solved_2026_07_12",
+      "openproblem_recon_fpp_chi_target_2026_08_09",
+      "l1prime_tightness_means_no_lossy_argument_can_work_2026_08_29",
+      "perceptron_proof_open_gaps_fleet_2026_07_12"
+    ],
+    "finding": "Solved strip time constant is a different model and quantity; unresolved sharp variance recursion not reused. No target-solution certificate found in the named reads.",
+    "limitation": "No exhaustive solved/retired registry located; current openness stays UNKNOWN."
+  },
+  "novelty_claim": false,
+  "formal_check_receipt": null
+}

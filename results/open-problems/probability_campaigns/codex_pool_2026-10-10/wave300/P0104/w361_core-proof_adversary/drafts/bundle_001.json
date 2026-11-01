@@ -1,0 +1,88 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w361",
+  "bundle_slug": "p0104-adversary-selection-threshold-floor-20261010",
+  "entries": [
+    {
+      "key": "selected-square",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "selected-geodesic-costs-are-dependent-square-counterexample",
+      "kind": "concept",
+      "title": "Selected geodesic costs can be dependent",
+      "statement": "INDEPENDENTLY CHECKED FINITE COUNTEREXAMPLE (w362-R001). On a square with four independent edge weights uniform on {1,2}, select the cheaper path between opposite corners, breaking ties toward the upper path. Conditional on upper selection, its two costs have covariance -5/121: the probability both equal 2 is 1/11, but the product of marginal probabilities is 16/121. The unconditional two selected costs have covariance -9/256. Their sum has variance 23/64; dropping covariance terms gives 55/128. Disjoint raw inputs therefore do not ensure independent costs after path selection. This is a finite obstruction, not a claim about planar fluctuation exponents.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite square graph with two two-edge terminal paths",
+        "Four independent uniform {1,2} weights",
+        "Upper path wins ties"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w361:P0104:selected-square",
+        "url": "urn:owner-own-work:w361:p0104:selected-square",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work (campaign proof audit; concept-only draft)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "threshold-floor",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "replacement-threshold-kernel-retention-factor-and-first-order-floor",
+      "kind": "concept",
+      "title": "Retention factor and persistent threshold covariance",
+      "statement": "AUTHOR-DERIVED FINITE IDENTITY, explicit referee acceptance pending. On a finite connected graph with iid Uniform[1,2] edge weights and fixed terminals, define clipped off-edge thresholds a_e in [0,1] so that centered coordinate costs are min(U,a_e)-a_e+a_e^2/2 for U uniform on [0,1]. For a<=b, K(a,b)=a^2[b(2-b)/4-a/6], and K is symmetric. Under independent rate-one coordinate refresh, Var(T)=integral_0^infinity exp(-t)H(t)dt, where H(t)=sum_e E K(a_e(eta),a_e(eta^t)) and only off-edge coordinates are coupled inside H. Its limit is the first-order Hoeffding energy L, not generally zero. H(t)-L is the sum over |S|>=2 of |S|exp(-(|S|-1)t)||T_S||_2^2. A full-kernel integrable decay envelope for all t is impossible when L>0. No lattice exponent estimate is asserted.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite connected graph and distinct fixed terminals",
+        "Simple paths and positive weights",
+        "Independent Uniform[1,2] coordinates and independent refresh flags",
+        "T_S denotes the orthogonal Hoeffding projection on coordinate set S"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w361:P0104:threshold-floor",
+        "url": "urn:owner-own-work:w361:p0104:threshold-floor",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work (campaign proof audit; concept-only draft)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "open-crossover",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "planar-fpp-first-order-separated-two-sided-noise-crossover-draft",
+      "kind": "concept",
+      "title": "Unproved crossover input for planar FPP",
+      "statement": "UNPROVED SUFFICIENT INPUT, not a theorem about FPP. For iid Uniform[1,2] undirected nearest-neighbour Z^2 passage times from 0 to n e1, restrict to the exact finite box [-2n,2n]^2. Let H_n and L_n be the threshold kernel and its first-order floor from the finite-product identity. A sufficient route to variance of order n^(2/3) would prove, uniformly in integer n>=1: L_n<=C n^(2/3); H_n(t)-L_n<=C n F(n^(1/3)t) for all t>=0 with nonnegative integrable F; and H_n(t)>=c n for 0<=t<=c' n^(-1/3), for positive constants independent of n. Upper and lower integral bounds then follow by substitution and persistence. All quantitative inputs remain unproved. A qualitative chaos statement, a kernel value only at t=0, or an assumed variance-growth ratio does not supply them. Current full-target openness is UNKNOWN as of this draft.",
+      "proof_text": null,
+      "assumptions": [
+        "Exact finite-box reduction for positive bounded edge weights",
+        "The named normalized variance identity",
+        "Quantitative inputs are a proposed proof obligation, not established hypotheses of the actual model"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w361:P0104:open-crossover",
+        "url": "urn:owner-own-work:w361:p0104:open-crossover",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work (campaign proof audit; concept-only draft)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "open-crossover",
+      "to_key": "threshold-floor",
+      "kind": "depends_on",
+      "rationale": "The sufficient crossover bounds require the correctly normalized variance integral and separation of its persistent first-order floor."
+    },
+    {
+      "from_key": "selected-square",
+      "to_key": "threshold-floor",
+      "kind": "semantic_association",
+      "rationale": "The finite selection counterexample prevents substituting independent selected segments for the derived joint refresh coupling in the threshold identity."
+    }
+  ]
+}

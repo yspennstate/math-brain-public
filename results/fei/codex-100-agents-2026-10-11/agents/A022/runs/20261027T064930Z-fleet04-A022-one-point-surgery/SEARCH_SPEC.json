@@ -1,0 +1,24 @@
+{
+  "helper_version": "A022-unbalanced-mark-v2-per-fixture-cache",
+  "family": "six-bit g tensor g, adjacent vertices 0,1 replaced by a,-c; ordered Boolean pairs on same m control bits",
+  "domain": {
+    "pilot": "all16 ordered m=1 pairs",
+    "main": "all256 ordered m=2 pairs plus 8 m=3 guards"
+  },
+  "case_count": {
+    "pilot": 16,
+    "main": 264
+  },
+  "symmetry": "none",
+  "arithmetic": "Fraction spectra and rational prime-log equalities/sign intervals",
+  "memory_estimate_mb": 100,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "helper_sha256": {
+    "audit.py": "38bde309f5d6e996b5ea5ca3b1b9a2ec252c822bf57e01ac51c50faf8f381de5",
+    "base.py": "e30664cf0e09e1a26652d0b6fc109b00f7997092dd24e21974f6238ff81e2b1c",
+    "check.py": "530d4a6efa06753938f74fde351b37c28cd05b68fe733bce0a533af0fca06fee"
+  },
+  "reason_for_revision": "v1 pilot16 pairs234 assertions8.83s; cache pure spectra/potentials within each fixture to meet60s main bound",
+  "main_partition": "four sequential blocks: a-mask0..3,4..7,8..11,12..15, each ALL c-mask0..15 plus2 three-bit guards;66 cases per command"
+}

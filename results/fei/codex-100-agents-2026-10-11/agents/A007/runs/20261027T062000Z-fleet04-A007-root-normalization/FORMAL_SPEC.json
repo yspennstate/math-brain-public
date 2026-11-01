@@ -1,0 +1,10 @@
+{
+  "target": "a007_surplus_refund",
+  "kind": "Core Lean signed-integer accounting implication only; it does not certify real logarithms, Fourier dominance or the all-dimensional theorem",
+  "source": "code/Accounting.lean",
+  "memory_estimate_mb": 200,
+  "maximum_runtime_seconds": 45,
+  "admission": "Core imports only; no Mathlib compile because its measured approximately4GB use exceeds this packet's1.5GB cap",
+  "trusted_axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "compiler_and_source": "lean_check.py --core --file code/Accounting.lean --target a007_surplus_refund --reviewed-sha256 ACTUAL_SHA256 --timeout45 --json; pin actual receipt and source hash"
+}

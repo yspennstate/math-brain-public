@@ -1,0 +1,17 @@
+Verification environment: native Python standard library plus an independent local SciPy cross-check used only as an auxiliary comparison; theorem proof does not depend on SciPy.
+
+Exact verifier result:
+PASS: exact 3x3 Birkhoff interval reconstruction
+PASS: parity-payment minimum occurs at an endpoint
+PASS: nonzero transversal negative counts = [0, 2, 4, 6]
+
+Additional independent numerical LP cross-check performed during the run:
+- 200 random six-permutation mixtures were converted to 3x3 doubly stochastic R.
+- For each, a random real 3x3 K was generated.
+- The endpoint formula for min_lambda sum lambda m_rho(K) was compared with scipy.optimize.linprog over all six Birkhoff weights.
+- Maximum absolute discrepancy: 2.220446049250313e-16.
+
+The LP check is supporting evidence only; the report contains an exact algebraic parameterization proving the endpoint formula.
+
+Full MOC4 status: OPEN / NOT PROVED / NOT DISPROVED.
+Brain status: WITHOUT_VERIFIED_BRAIN.

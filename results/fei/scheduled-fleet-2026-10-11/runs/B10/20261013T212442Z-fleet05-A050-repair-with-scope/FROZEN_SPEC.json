@@ -1,0 +1,22 @@
+{
+  "helper_version": "A050-output-conditional-tax-refund-v1",
+  "actual_Boolean_family": "All Boolean truth tables on n=0,1,2,3 under four prescribed independent product laws; complete and partial physical singleton trees; two fair common-lift compatibility controls; biased homogeneous point defects",
+  "parameter_domain": {
+    "n": [0, 1, 2, 3],
+    "laws_truncated_to_n": [["1/2", "1/2", "1/2"], ["1/8", "1/8", "1/8"], ["1/8", "1/4", "3/8"], ["3/4", "7/8", "1/2"]],
+    "policies": ["forward-essential-complete", "reverse-essential-complete", "max-physical-influence-complete", "forward-depth-one-stopping"],
+    "point_defect_dimensions": [1, 2, 3, 4, 5, 6, 7, 8],
+    "point_defect_bias": "1/8",
+    "scalar_midpoint_lower_bound_k": [2, 8, 128],
+    "scalar_p": "1-((2^k-1)/2^k)^2",
+    "finite_underrefund_witness": "k=128, q=scalar_p, four-variable point defect, refund coefficient 49/100"
+  },
+  "case_count": {"Boolean_roots": 1112, "physical_trees": 4448, "compatibility_controls": 2, "point_defect_closed_formula_checks": 8, "scalar_bounds": 3, "underrefund_certificate": 1},
+  "symmetry_reduction": "none",
+  "arithmetic": "integer truth tables, Fraction product Fourier moments and physical probabilities; exact rational coefficient vectors of prime logarithms for identities; range-reduced rational atanh logarithm intervals for signs; no numerical minimization of tau*",
+  "memory_estimate_MB": 100,
+  "pilot_max_seconds": 60,
+  "max_runtime_seconds": 120,
+  "automatic_dimension_increase": false,
+  "GPU": false
+}

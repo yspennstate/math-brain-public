@@ -1,0 +1,29 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B03-A014-RANK-TWO-COLLISION",
+      "version": 1,
+      "packet_id": "A014",
+      "attempt_id": "A014-RANK-TWO-COLLISION-2",
+      "gap_id": "FEI-GAP-SHARED-SELECTOR-CIRCULARITY",
+      "exact_statement": "For every finite uniform address cube and every balanced Boolean branch family whose nonconstant-frequency branch Fourier matrix has rank two, there exist two independent balanced Boolean cores g,h and Boolean controllers sigma,tau such that every branch is in {+g,-g,+h,-h} and F(a,x)=sigma(a)((1+tau(a))g(x)+(1-tau(a))h(x))/2. For the separable subclass tau=b and sigma=s(c) on disjoint address blocks, H and I factor exactly. The explicit orthogonal majority-variant family has completely coincident branch Fourier supports, worst read 2^(t+1), fractional congestion one, spectral rank two, controller-root cost below three, and H(F_t)<4I(F_t) for every t>=1.",
+      "hypotheses": [
+        "All cubes are finite and uniform; outputs are genuine signs.",
+        "Every branch is balanced.",
+        "The branch Fourier matrix is restricted to nonempty data frequencies and has exact real rank two.",
+        "The uniform constant-four corollary uses the displayed separable controllers and the explicit two majority-variant cores."
+      ],
+      "statement_sha256": "30f3b42cbd0b14b6eedc10b5ab2f14a129a420197e9eab1e049dfa7ef68f8ab3",
+      "contributors": ["fleet01/B03"],
+      "proof_source": ["REPORT.md", "RANK_TWO_COLLISION_THEOREM.tex", "COLLISION_COST_LEDGER.md"],
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": "Control the joint posterior/collision charge for arbitrary correlated rank-two controllers (sigma,tau), or prove a stable structural hypothesis that pays it without assuming FEI.",
+      "next_consumers": ["A009", "A068", "A086", "A094", "A097", "B20"]
+    }
+  ]
+}

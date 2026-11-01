@@ -1,0 +1,75 @@
+[
+  {
+    "claim_id": "A030-THREE-STATE-BOOLEAN-CUT-RESERVE",
+    "version": 4,
+    "exact_statement": "Version4 retains A030@3 at its declared scope and adds the following. For any finite-label Boolean selector F(y,x)=g_L(y)(x), with independent uniform control and data cubes and arbitrary shared-data Boolean sources, let c_j=hat(1_{L=j}), b_j=hat(g_j), P(U,t)=(sum_j c_j(U)b_j(t))^2 and Qinc(U,t)=sum_j c_j(U)^2 b_j(t)^2. Qinc is a normalized support-positive reference with the same data marginal as P. The exact conditional-profile conversion cost C=D(P||Qinc) is at most sum_t q(t) log2(k_t), where k_t counts nonzero source amplitudes at t, and hence at most log2(number of sources). The latter bound is sharp for uniform address labels and identical sources. For the even-r>=4 tagged rare-label bent family of PROOF.md, after actual tag outcomes (+,-) of root reach1/4, this conversion has 0<C<3*2^-r/8=(3/4)Inf_s(F). The SAME original U=4I_root, with old debit1/4, pays the two-tag entropy path, the selected conversion, all other full terminals, and every subsequent finite adaptive physical no-reset continuation with the CURRENT reference, leaving more than765/512 unused root units. The exact source references have inherited Z=0, so the conversion is paid from original admission surplus, not Z or cut slack. No universal initial admission or full-FEI theorem is asserted.",
+    "hypotheses": [
+      "Uniform finite product cube; normalized Walsh coefficients and base2 entropy/KL.",
+      "All source/control phases retained when computing the true Boolean spectrum; Qinc retains mass on zero-true rows.",
+      "For quantitative payment: exact canonical bent rare-label controller, independent tagged point-defect/majority/tagged point-defect sources; even r>=4.",
+      "One selected (+,-) tag-history conversion; physical reach1/4, old debit1/4, original U=4I_root; both physical children and all source terminals retained.",
+      "After conversion inherit CURRENT reference through actual phase channels with its own branch normalizers; no further free reset."
+    ],
+    "statement_sha256": "4d55084cfeacba6a612fb9d26869f6b48d8ef158e907b47964434609a583378a",
+    "contributors": [
+      "A030"
+    ],
+    "proof_source": [
+      "PROOF.md sections1-5",
+      "code/check.py",
+      "code/rows.py",
+      "out/VALIDATION.json",
+      "out/ROWS.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim": "A030-THREE-STATE-BOOLEAN-CUT-RESERVE@3",
+        "scope": "Actual family and previous local obstruction retained; new admission proof independently derived here."
+      },
+      {
+        "claim": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT@7",
+        "scope": "Physical reference transport interface only; reconstructed directly in PROOF.md section4."
+      },
+      {
+        "claim": "A029-FINITE-LABEL-SIGNED-CHILD-ACCOUNT@2",
+        "scope": "Exact conditional-profile bill and inherited-Z distinction only; its special eligibility example is not used."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A030",
+        "kind": "Author analytic proof plus exact sector/physical-reference checker and separate helper-free integer character-sum reconstruction.",
+        "result": "Pilot69/main668 assertions PASS; independent-representation9280 finite cases/152322 integer assertions PASS; not external independent acceptance."
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_CHECKED_EXTERNAL_REVIEW_PENDING_NOT_LEAN_CERTIFIED",
+    "supersedes": [
+      {
+        "claim_id": "A030-THREE-STATE-BOOLEAN-CUT-RESERVE",
+        "version": 3,
+        "reason": "Cumulative addition: a specified incoherent-profile conversion and same original quota payment; previous local obstruction remains valid."
+      }
+    ],
+    "refutes": [
+      {
+        "statement": "A changed conditional profile may be reset free whenever supplied source references are exact.",
+        "witness": "Exact source references give W=Z=0 but selected tagged node has C>0."
+      },
+      {
+        "statement": "Delete off-true mass from Qinc without retaining normalization and the actual reference.",
+        "witness": "2816 of9280 frozen actual shared-source cases have Qinc>0 at a zero P row."
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B06 Claude lead",
+      "A028",
+      "A029",
+      "A056",
+      "A087",
+      "A094",
+      "A097",
+      "B20"
+    ]
+  }
+]

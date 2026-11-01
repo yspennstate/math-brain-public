@@ -1,0 +1,4 @@
+--- a/~/primary_directive/hooks1000/proposals/together-w331.jsonl
++++ b/~/primary_directive/hooks1000/proposals/together-w331.jsonl
+@@ -0,0 +1 @@
++{"id": "together-w331-01", "area": "together", "event": "PreToolUse", "cue": "authorised first agent_mesh.py send AND sender not registered", "fire_when": "The first named audit send from w331 returned exit 4 because the sender was not registered.", "silent_when": "The sender is already registered, or the session does not authorise mesh messaging.", "text": "Before an authorised first mesh send, register the existing sender with hello. An unregistered sender exits 4 without queuing. For this audit keep the message to IDs, counts and artifact paths.", "evidence": "AUDIT_DELIVERY_ATTEMPTS.jsonl: exit 4 before hello, then exit 0 with a verified queued message; MESH_HELLO_RECEIPT.json", "proposer": "w331"}

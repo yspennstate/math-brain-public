@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "pdf_blob": "8be3aae36ecad7a9dc9b7c95978aad09499f32d0",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "account": "fleet02",
+  "slot": "B16",
+  "run_id": "20260925T062826Z-fleet02-B16-fiveaudit-auto11",
+  "pass_id": "P08-section6-first-adversarial-full",
+  "verdict": "No fatal theorem defect found after local repairs; literal manuscript is not gap-free.",
+  "defects": [
+    {
+      "line": 41,
+      "page": 1,
+      "status": "FALSE",
+      "repair": "C04",
+      "summary": "Abstract random-sign clause omits no-pivot hypothesis."
+    },
+    {
+      "line": 62,
+      "page": 1,
+      "status": "UNCHECKED",
+      "repair": "C07",
+      "summary": "Current-open-status literature claim not exhaustively primary-source verified; no proof dependency."
+    },
+    {
+      "line": 65,
+      "page": 1,
+      "status": "FALSE",
+      "repair": "C05",
+      "summary": "Outline says singularity where proof only gives upper envelope."
+    },
+    {
+      "line": 74,
+      "page": 2,
+      "status": "UNCHECKED",
+      "summary": "Related-work attribution bundle not exhaustively primary-source checked; no proof dependency."
+    },
+    {
+      "line": 148,
+      "page": 3,
+      "status": "GAP",
+      "repair": "C06",
+      "summary": "'Both follow' introduces three assertions; all three mathematical assertions pass."
+    },
+    {
+      "line": 222,
+      "page": 5,
+      "status": "FALSE",
+      "repair": "P08-R01",
+      "summary": "Zero-beta factors need not be at most one; drop all zero-beta factors. Constants unchanged."
+    },
+    {
+      "line_range": "319-321",
+      "page": 7,
+      "status": "GAP",
+      "repair": "C02",
+      "summary": "Outer Jensen/Cauchy-Schwarz is omitted. Insert |E F|^2 <= E|F|^2."
+    },
+    {
+      "line": 398,
+      "page": 9,
+      "status": "GAP",
+      "repair": "P08-R02",
+      "summary": "Square-profile density display must be read a.e./off z=v; define point value arbitrarily."
+    },
+    {
+      "line": 412,
+      "page": 9,
+      "status": "GAP",
+      "repair": "C01",
+      "summary": "Half-open angular parametrization is not literally a diffeomorphism; omit one null ray."
+    },
+    {
+      "line": 441,
+      "page": 10,
+      "status": "GAP",
+      "repair": "C03",
+      "summary": "Explicitly close critical hyperbolic level q=v as two affine null lines."
+    }
+  ],
+  "section6": "PASS under fresh reconstruction: fourth-moment pairings, Frobenius factor 2, compression direction, and singular-value duplication all checked.",
+  "projection_product": "PASS after local repairs; no post-projection independence used.",
+  "pdf_visual_comparison": "UNCHECKED this run: exact private PDF could not be routed to screenshot-capable viewer.",
+  "fresh_lean": "UNCHECKED and not used as premise.",
+  "lower_threshold_research": false
+}

@@ -1,0 +1,1 @@
+Target: global physical-weight polynomial dual for posterior-optimized actual-run references, including all fixed mixtures. Test K3 with exact chronological enumeration; complete all-dimensional source payment remains OPEN.

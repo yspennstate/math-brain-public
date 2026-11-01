@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "rings": [[2,3],[5,0],[4,5],[5,0],[1,2],[3,4],[0,1],[4,5]],
+  "states_position_to_label": [
+    [0,1,2,3,4,5],
+    [0,1,3,2,4,5],
+    [5,1,3,2,4,0],
+    [5,1,3,2,0,4],
+    [4,1,3,2,0,5],
+    [4,3,1,2,0,5],
+    [4,3,1,0,2,5],
+    [3,4,1,0,2,5],
+    [3,4,1,0,5,2]
+  ],
+  "final_label_to_position": [3,2,5,0,1,4],
+  "cycles": [[0,3],[1,2,5,4]],
+  "labels_0_3_adjacent_at_any_checked_state": false,
+  "note": "Executed finite deterministic certificate. Positions are constant between consecutive rings, so absence of adjacency in the initial state and every post-ring state certifies absence of adjacency throughout the deterministic time interval."
+}

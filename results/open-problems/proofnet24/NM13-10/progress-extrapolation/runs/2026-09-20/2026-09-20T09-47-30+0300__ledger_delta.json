@@ -1,0 +1,37 @@
+{
+  "slot": "NM13-10",
+  "source": "Agresti-Veraar arXiv:2501.18561 / NoDEA 32 (2025), Problem 3",
+  "frozen_pair": {
+    "X0": "H^{-1}(T)",
+    "X1_2": "L^2(T)",
+    "X1": "H^1(T)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "brownian_dimension": 1
+  },
+  "fixed_source_endpoint_before": "r_*=3, endpoint excluded",
+  "fixed_source_endpoint_after": "r_*=3, endpoint excluded",
+  "critical_spacetime_exponent_bracket_before": "[2/3,1]",
+  "critical_spacetime_exponent_bracket_after": "[2/3,1]",
+  "quantitative_spacetime_endpoint_lower_constant": "4/9 -> unchanged",
+  "mechanism_gain": "Full frozen-pair Bellman trace estimate: for 5/2<=p<3, delta=(3-p)/2, E Psi_p(Z_t)+(delta/2) E int_0^t ||Z||^p <= 520 delta^{-(p-1)} E int_0^t ||Y||^p. Hence the terminal Bellman trace blows up only as delta^{-(p-1)/p} ~ delta^{-2/3}, not delta^{-1}. On every exact Fourier shell this yields an all-progressive terminal Lorentz-Zygmund estimate with exponent 2/3 and explicit constant 22.",
+  "new_restricted_exact_subproblem": {
+    "name": "one-shell terminal trace logarithmic exponent",
+    "upper": "alpha_trace<=2/3 for arbitrary progressive inputs",
+    "lower": "alpha_trace>=1/2 from the explicit additive critical exponential witness",
+    "status": "PARTIAL / new bracket [1/2,2/3]"
+  },
+  "status": "CANDIDATE_FULL / SELF-CHECKED / PENDING INDEPENDENT REVIEW for the trace theorem; parent critical spacetime endpoint remains PARTIAL",
+  "residual_obstruction": "Convert the full-spectrum critical Bellman trace control into a source-scale spacetime occupation/good-lambda estimate without paying the extra delta^{-1/p} memory factor; equivalently prove or refute L^3 -> Z_{3,2/3}(T).",
+  "failed_or_nonclosing_routes_this_run": [
+    "Naively integrating the terminal estimate in time restores the missing memory factor and reproduces the known delta^{-1} spacetime norm blow-up, hence only logarithmic exponent 1.",
+    "The trace theorem alone does not control the source spacetime rearrangement because high-frequency Bellman terminal mass and occupation are not uniformly comparable."
+  ],
+  "essential_artifacts": [
+    "2026-09-20T09-47-30+0300__critical_trace_endpoint_check.py",
+    "2026-09-20T09-47-30+0300__critical_trace_endpoint_check.out"
+  ],
+  "next_attack": "Build a level-truncated Bellman/energy-stopping inequality that uses the new delta^{-2/3} terminal boundary term and avoids integrating the full exponential memory kernel; test first on two unequal Fourier scales with common Brownian motion, then lift to the full torus.",
+  "t05_fallback_due": false
+}

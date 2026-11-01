@@ -1,0 +1,75 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w374",
+  "bundle_slug": "p0110-reviewed-partial-relations-001",
+  "entries": [
+    {
+      "key": "p0110-exponent-existence-bottleneck",
+      "namespace": "probability.core",
+      "logical_name": "p0110-kpz-relation-exponent-existence-bottleneck",
+      "kind": "concept",
+      "title": "P0110: exponent existence is the missing input",
+      "statement": "In ordinary iid undirected first-passage percolation on Z^d, d>=2, Auffinger-Damron-Hanson Question 22 (arXiv:1511.03262v2) asks for a passage-time distribution whose fluctuation and wandering exponents satisfy chi=2xi-1. Chatterjee Theorem 1.1 proves this relation conditionally when its uniform exponential-moment upper exponents chi_a, xi_a agree with its uniform variance and mean-wandering lower exponents chi_b, xi_b for a qualifying law. This draft establishes no such exponent agreement for Uniform[1,2] or any other iid law. The historical open statement does not certify current 2026 openness.",
+      "proof_text": null,
+      "assumptions": ["Ordinary nearest-neighbor undirected iid FPP on Z^d, d>=2", "Chatterjee Theorem 1.1 uses its stated moment and law hypotheses"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-w374-20261010:p0110-exponent-bottleneck",
+        "url": "urn:owner-own-work:brain-workers:w374:p0110-source-status",
+        "revision": "reviewed-draft-2026-10-10-v1",
+        "license": "owner-own-work; source synthesis with arXiv:1511.03262v2 Question 22 and Chatterjee Theorem 1.1",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "unconditional-variance-transfer-l2",
+      "namespace": "probability.core",
+      "logical_name": "unconditional-variance-transfer-with-nonnegative-errors",
+      "kind": "lemma",
+      "title": "Variance transfer through independent approximants and nonnegative errors",
+      "statement": "Let F_1,F_2 have the same square-integrable law with standard deviation s. Let G_1,G_2 be independent and identically distributed square-integrable variables on the same probability space. Suppose Delta_i=G_i-F_i>=0, E Delta_1=E Delta_2, and ||Delta_i||_2<=delta for i=1,2. Then 2(s-2delta)_+^2 <= Var(F_1-F_2) <= 2(s+2delta)^2. No independence of F_1,F_2, the errors, or localization events is assumed.",
+      "proof_text": "Put r=sd(G_i). Centering contracts L2, so |r-s|<=delta. Nonnegativity gives E(Delta_1-Delta_2)^2<=E Delta_1^2+E Delta_2^2<=2delta^2. The equal-law and equal-error-mean hypotheses center both differences. Independence gives ||G_1-G_2||_2=sqrt(2)r. Apply the forward and reverse L2 triangle inequalities to F_1-F_2=(G_1-G_2)-(Delta_1-Delta_2), then square. Independently rederived by w374 from w372's proof.",
+      "assumptions": ["All variables square-integrable on one probability space", "G_1 and G_2 are independent with the same law", "Delta_i nonnegative with equal means and L2 norm at most delta", "F_1 and F_2 have the same law"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-w372-20261010:p0110-l2",
+        "url": "urn:owner-own-work:brain-workers:w372:p0110-l2",
+        "revision": "w374-independent-check-2026-10-10-v1",
+        "license": "owner-own-work; w372 authored, w374 independently checked, draft only",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "variance-scaling-tail-obstruction",
+      "namespace": "probability.core",
+      "logical_name": "variance-power-law-does-not-imply-exponential-tail-exponent",
+      "kind": "lemma",
+      "title": "A variance power law need not fix an exponential-tail exponent",
+      "statement": "For each integer n>=2, let centered symmetric X_n take values +/-n^(1/3) with probabilities (1-1/n)/2 each and +/-n^(2/3) with probabilities 1/(2n) each. Then Var(X_n)=(1-1/n)n^(2/3)+n^(1/3)~n^(2/3), but sup_n E exp(alpha |X_n|/n^a) is infinite for every alpha>0 and a<2/3, and finite for every alpha>0 and a>=2/3. Thus variance power scaling alone cannot imply a matching uniform exponential-moment exponent. This is an abstract random-variable family, not an iid FPP law.",
+      "proof_text": "Symmetry gives mean zero and the stated variance by weighting the two squared magnitudes. For a<2/3 the rare atoms give E exp(alpha |X_n|/n^a)>=n^(-1)exp(alpha n^(2/3-a)), which diverges. For a>=2/3, |X_n|/n^a<=1 for all n>=2, so the moment is at most exp(alpha). Independently rederived by w374 from w373's construction.",
+      "assumptions": ["Integer n>=2", "Four-point distributions defined in the statement", "No FPP structure is assumed"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-w373-20261010:p0110-rare-event-gap",
+        "url": "urn:owner-own-work:brain-workers:w373:p0110-rare-event-gap",
+        "revision": "w374-independent-check-2026-10-10-v1",
+        "license": "owner-own-work; w373 authored, w374 independently checked, draft only",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "unconditional-variance-transfer-l2",
+      "to_key": "p0110-exponent-existence-bottleneck",
+      "kind": "semantic_association",
+      "rationale": "The first card's 'independent and identically distributed' approximants with 'nonnegative errors' can compare passage-time variances once its L2 error is controlled. The target card's 'exponent agreement' remains an additional unproved input; this lemma does not supply it."
+    },
+    {
+      "from_key": "variance-scaling-tail-obstruction",
+      "to_key": "p0110-exponent-existence-bottleneck",
+      "kind": "semantic_association",
+      "rationale": "The first card's 'Var(X_n)~n^(2/3)' with exponential-moment threshold '2/3' demonstrates why the target card's 'uniform exponential-moment upper exponents' cannot be inferred from variance scaling alone for abstract variables."
+    }
+  ]
+}

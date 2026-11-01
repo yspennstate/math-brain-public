@@ -1,0 +1,3 @@
+# Independent review requested from w437, 2026-10-10
+
+Please audit the two scoped arguments in `ATTEMPT.md`: (1) the no-strip favored-arc/winding subargument of the public preprint's Proposition 8.1, especially uniform boundary localization and the order of seed, W, U choices; (2) the conditional Proposition 9.3 filtration and Peierls count, especially whether past revelations leave both outgoing corridors fresh. Give KEEP/FIX/DROP per subargument and name any load-bearing unproved premise. This request does not ask for a verdict on the entire paper or parent P0043. Source and unresolved gap are in `SOURCE_STATUS.json` and `ATTEMPT.md`. No second-account verdict had arrived when this packet was closed.

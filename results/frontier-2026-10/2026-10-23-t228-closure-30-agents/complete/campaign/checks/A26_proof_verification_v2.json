@@ -1,0 +1,1672 @@
+{
+  "audit": "A26",
+  "status": "PASS_WITH_GAPS",
+  "mode": "proof",
+  "strict_final_manifest": false,
+  "utc": "2026-10-23T19:39:54.275892+00:00",
+  "python": "3.12.14",
+  "verifier_sha256": "cc5adfd2b1315998614d9e925bd34da651a20ba7388d00c10df99b9b0a2f55f0",
+  "root": "/workspace/scratch/e11efad40900",
+  "counts": {
+    "PASS": 208,
+    "WARN": 5,
+    "PENDING": 1,
+    "FAIL": 0
+  },
+  "details": {
+    "source_pin_results": [
+      {
+        "path": "a01/DOSSIER.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "5d95a5f8a9d830ca673e75321d66f66d9dccad45",
+        "raw_git_blob_sha1": "5d95a5f8a9d830ca673e75321d66f66d9dccad45",
+        "local_sha256": "8b9e0d922aa09f71ff7f722748af91d4d8967aea344721080285d97737e3912c",
+        "bytes": 13755,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/moves.jsonl",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "005367810642d99b9cde2e327a8e8ded7c60bf38",
+        "raw_git_blob_sha1": "005367810642d99b9cde2e327a8e8ded7c60bf38",
+        "local_sha256": "bf2e8baa632014eabb5b3e5c7b7945cd6283762aa22e57fc94ae7159249b29ca",
+        "bytes": 1206,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/lit.json",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "15104bf3c1e4c346599335ee1caa83731b1dadcb",
+        "raw_git_blob_sha1": "15104bf3c1e4c346599335ee1caa83731b1dadcb",
+        "local_sha256": "9b6efeed890c41ebfdedf13e99451dcb477bc665c22f3f4dfd3cbdef85f75a78",
+        "bytes": 2558,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/WORKER_RULES.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "f43b62c49305c89054f15a959b212a86e6115ad4",
+        "raw_git_blob_sha1": "f43b62c49305c89054f15a959b212a86e6115ad4",
+        "local_sha256": "68c23f109501b78d94e5f29c61b7bcde979320431a49a8a24ce6496a2c4cc2b9",
+        "bytes": 2413,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/claude_4af6ff1a/T228_B_v2.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "b7b358985ff34a9ea3fa7b35339047f0fe793822",
+        "raw_git_blob_sha1": "b7b358985ff34a9ea3fa7b35339047f0fe793822",
+        "local_sha256": "ad1eba565e053137543476431bf1a5c76302fab385e0bc2ef67c1ef6646a2205",
+        "bytes": 10942,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/claude_4af6ff1a/REVIEW_POINT1_CHECK.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "2a3abd7151775dfeeb73eb721191d2b2d329dc92",
+        "raw_git_blob_sha1": "2a3abd7151775dfeeb73eb721191d2b2d329dc92",
+        "local_sha256": "8319b43ad82756ef6a3575d163483c01f2560241c193b801ca979149c3fc92aa",
+        "bytes": 1401,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/claude_4af6ff1a/REVIEW.tsv",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "644b741f22ebdaabbc7cd89db470c8ad55efbc4c",
+        "raw_git_blob_sha1": "644b741f22ebdaabbc7cd89db470c8ad55efbc4c",
+        "local_sha256": "80e9000aabcc3a934c432c636f99335260672d22c760538115296e68882fc797",
+        "bytes": 1520,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/claude_b1e26540/T3_CLAIM.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "b665c36d72d2f087c0ee11cb65628aa376dc3387",
+        "raw_git_blob_sha1": "b665c36d72d2f087c0ee11cb65628aa376dc3387",
+        "local_sha256": "27e378909732f5fdc7b451e850c04a2f997ad038ffb18bdb62fa6227e8b85fe6",
+        "bytes": 4984,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/claude_b1e26540/T3_STEP3.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "a3adfc7537b6a8f51b796539c5063b07a23fca39",
+        "raw_git_blob_sha1": "a3adfc7537b6a8f51b796539c5063b07a23fca39",
+        "local_sha256": "9f33285b4d31c4c776158f18ec650dfdcd2aba8a42a064216c175c1a564dab90",
+        "bytes": 7231,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/claude_b1e26540/REVIEW.tsv",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "0e580d2fa5b5cdfb9533d10fc42ccbc9db802782",
+        "raw_git_blob_sha1": "0e580d2fa5b5cdfb9533d10fc42ccbc9db802782",
+        "local_sha256": "63074ec5dd715b268dc9448c449e98bb5430c03d9b21c514b5b364c30a412ec8",
+        "bytes": 4656,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/claude_b1e26540/T3_SETUP.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "de30be030e66bf30700ba818a5155c9d6c4e3562",
+        "raw_git_blob_sha1": "de30be030e66bf30700ba818a5155c9d6c4e3562",
+        "local_sha256": "c2f455ae36180961543d35d54309f9d1a0baa188efcc8c50ae3111ba69d4e996",
+        "bytes": 4820,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/claude_b1e26540/T3_STEP1.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "c169b975cd3a5d8ed1f554214d010da1c587e96d",
+        "raw_git_blob_sha1": "c169b975cd3a5d8ed1f554214d010da1c587e96d",
+        "local_sha256": "422e99e73410d839411e483a15c690ec53a14d1a60e9087eefdd3d14d30e2255",
+        "bytes": 7371,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/claude_b1e26540/T3_STEP2.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "04d08036877af25a6d083247fdbfbf834ae0206e",
+        "raw_git_blob_sha1": "04d08036877af25a6d083247fdbfbf834ae0206e",
+        "local_sha256": "d001130ea2111d78d46adf15d9c2c54ecf84be5aea6817f5e9fdb6bf2dec379e",
+        "bytes": 5095,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/w688_target1/proofs/T228_A_v1.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "6056b253ff1d4b9eb2411d6dec7d25c5ce8d7523",
+        "raw_git_blob_sha1": "6056b253ff1d4b9eb2411d6dec7d25c5ce8d7523",
+        "local_sha256": "e2a75786a298beac72d216c20dd8c7d63b5b1de335756b1bb8ce0d5c43c4a07a",
+        "bytes": 9986,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/w688_target1/proofs/SELF_AUDIT_v1.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "2c5dc1cda3926955468fb001ca16630695e2b9a4",
+        "raw_git_blob_sha1": "2c5dc1cda3926955468fb001ca16630695e2b9a4",
+        "local_sha256": "983f441ac3d2417ddb00d1879d4ba7a7cc8661ff6b33bb4b1a9c2ac8a8dff6d8",
+        "bytes": 1382,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/w688_target1/README.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "1fb809c14128c5a9030793040b19615a453bb992",
+        "raw_git_blob_sha1": "1fb809c14128c5a9030793040b19615a453bb992",
+        "local_sha256": "1991c34f953d96a45934672a981b77da00908856daef1c1b88da64592b31f001",
+        "bytes": 665,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/w688_target1/STATUS.md",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "a4645652db6bf5b3d0f01bf46a4b7027cbd174b7",
+        "raw_git_blob_sha1": "a4645652db6bf5b3d0f01bf46a4b7027cbd174b7",
+        "local_sha256": "cd6acc5f474a947f94dbbfeb383d93a330377cec7c001f1aee4a3cd374009476",
+        "bytes": 908,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/w688_target1/CLAIMS.jsonl",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "f0d934f8c5b4accdf05fee0bb02db50ce332074a",
+        "raw_git_blob_sha1": "f0d934f8c5b4accdf05fee0bb02db50ce332074a",
+        "local_sha256": "f85ab7f9e8c1cb88a1a6030984583fb1491dbc213c9bc1d32eb024897e546154",
+        "bytes": 1891,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a01/w688_target1/AUDITS_FROM_REVIEWER.tsv",
+        "pin_record": "a01/SOURCE_MANIFEST.json",
+        "expected_git_blob_sha1": "0e98941b66685633143b2dd20f33f60e0ca70608",
+        "raw_git_blob_sha1": "0e98941b66685633143b2dd20f33f60e0ca70608",
+        "local_sha256": "2ae0e7922d8dd599e117961470939e046ea0453c12b88febf9ea6e45a36d3296",
+        "bytes": 1560,
+        "pin_status": "RAW_MATCH"
+      },
+      {
+        "path": "a02/DOSSIER.md",
+        "pin_record": "a02/SOURCE_PINS.json",
+        "expected_git_blob_sha1": "54d15be26e9c5c10ae28d38c890cd7f57983787b",
+        "raw_git_blob_sha1": "afc31f9fe834be74af37875a30c476f3e101559f",
+        "local_sha256": "326390bfbf2500bd2e11d0143cb5fb53e6eb6ab3f4015b885db7ae328c829399",
+        "bytes": 3337,
+        "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+        "normalized_git_blob_sha1": "54d15be26e9c5c10ae28d38c890cd7f57983787b"
+      },
+      {
+        "path": "a02/lit.json",
+        "pin_record": "a02/SOURCE_PINS.json",
+        "expected_git_blob_sha1": "9041f04163a8ee3e173122461b9c0ba53f717fce",
+        "raw_git_blob_sha1": "f6653f6099c5f1e2305477e571bbe16088718898",
+        "local_sha256": "a953e1e331a1a9b0abf539654c1f6385eaca5f6ea9144e48162c04d73df98030",
+        "bytes": 692,
+        "pin_status": "EXACT_GIT_BYTES_RECOVERED_AND_NORMALIZATION_VERIFIED",
+        "minus_one_lf_git_blob_sha1": "3bc95e31140fbf8281fb02477bfdcf1c8fc5c2cf",
+        "recovered_path": "campaign/sources/recovered/a02/lit.json",
+        "recovered_git_blob_sha1": "9041f04163a8ee3e173122461b9c0ba53f717fce",
+        "transform": "replace CRLF with LF, then append exactly one terminal LF"
+      },
+      {
+        "path": "a02/moves.jsonl",
+        "pin_record": "a02/SOURCE_PINS.json",
+        "expected_git_blob_sha1": "7ac406917251bb6f8a9f575a6bfb1e7767ef831d",
+        "raw_git_blob_sha1": "496748267be2515d5b952c4ee12a3f73299a8ffd",
+        "local_sha256": "6c027d1f5bd38adcd1899bbb6f64456b6de39422d5acd43e458a7d11844c0b71",
+        "bytes": 1068,
+        "pin_status": "EXACT_GIT_BYTES_RECOVERED_AND_NORMALIZATION_VERIFIED",
+        "minus_one_lf_git_blob_sha1": "51650eb301f5f12c6ac454f4fb02fab4922ef2fc",
+        "recovered_path": "campaign/sources/recovered/a02/moves.jsonl",
+        "recovered_git_blob_sha1": "7ac406917251bb6f8a9f575a6bfb1e7767ef831d",
+        "transform": "replace CRLF with LF, then append exactly one terminal LF"
+      },
+      {
+        "path": "a02/reviewer_check_c002_sim_5693.py",
+        "pin_record": "a02/SOURCE_PINS.json",
+        "expected_git_blob_sha1": "e0da0738de68e16916b35ee6968c846065801666",
+        "raw_git_blob_sha1": "d23d64bd8a38b971af7cd5ff2e2898fc3d112e51",
+        "local_sha256": "fe6033262cf0807624ea5396c65ff8615e2b58e9cc13a1bd978716c4589e4184",
+        "bytes": 3976,
+        "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+        "normalized_git_blob_sha1": "e0da0738de68e16916b35ee6968c846065801666"
+      },
+      {
+        "path": "a02/DOSSIER.md",
+        "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+        "expected_git_blob_sha1": "54d15be26e9c5c10ae28d38c890cd7f57983787b",
+        "raw_git_blob_sha1": "afc31f9fe834be74af37875a30c476f3e101559f",
+        "local_sha256": "326390bfbf2500bd2e11d0143cb5fb53e6eb6ab3f4015b885db7ae328c829399",
+        "bytes": 3337,
+        "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+        "normalized_git_blob_sha1": "54d15be26e9c5c10ae28d38c890cd7f57983787b"
+      },
+      {
+        "path": "a02/moves.jsonl",
+        "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+        "expected_git_blob_sha1": "7ac406917251bb6f8a9f575a6bfb1e7767ef831d",
+        "raw_git_blob_sha1": "496748267be2515d5b952c4ee12a3f73299a8ffd",
+        "local_sha256": "6c027d1f5bd38adcd1899bbb6f64456b6de39422d5acd43e458a7d11844c0b71",
+        "bytes": 1068,
+        "pin_status": "EXACT_GIT_BYTES_RECOVERED_AND_NORMALIZATION_VERIFIED",
+        "minus_one_lf_git_blob_sha1": "51650eb301f5f12c6ac454f4fb02fab4922ef2fc",
+        "recovered_path": "campaign/sources/recovered/a02/moves.jsonl",
+        "recovered_git_blob_sha1": "7ac406917251bb6f8a9f575a6bfb1e7767ef831d",
+        "transform": "replace CRLF with LF, then append exactly one terminal LF"
+      },
+      {
+        "path": "a02/lit.json",
+        "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+        "expected_git_blob_sha1": "9041f04163a8ee3e173122461b9c0ba53f717fce",
+        "raw_git_blob_sha1": "f6653f6099c5f1e2305477e571bbe16088718898",
+        "local_sha256": "a953e1e331a1a9b0abf539654c1f6385eaca5f6ea9144e48162c04d73df98030",
+        "bytes": 692,
+        "pin_status": "EXACT_GIT_BYTES_RECOVERED_AND_NORMALIZATION_VERIFIED",
+        "minus_one_lf_git_blob_sha1": "3bc95e31140fbf8281fb02477bfdcf1c8fc5c2cf",
+        "recovered_path": "campaign/sources/recovered/a02/lit.json",
+        "recovered_git_blob_sha1": "9041f04163a8ee3e173122461b9c0ba53f717fce",
+        "transform": "replace CRLF with LF, then append exactly one terminal LF"
+      },
+      {
+        "path": "a02/C002.md",
+        "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+        "expected_git_blob_sha1": "c0b744a4035085965ea943d20bd9d71065aea049",
+        "raw_git_blob_sha1": "69dfda70aa8adf93bc297790dd749756d52d962c",
+        "local_sha256": "081d31b977353686a5189c4bdbca817c69f644366120e7aa4a89e100879d39ef",
+        "bytes": 8807,
+        "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+        "normalized_git_blob_sha1": "c0b744a4035085965ea943d20bd9d71065aea049"
+      },
+      {
+        "path": "a02/C003.md",
+        "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+        "expected_git_blob_sha1": "19ea6fc9cc6bee84ae699815a14c66509bc6bb77",
+        "raw_git_blob_sha1": "95339e575053a26c569fc9564ba13d71938c1a74",
+        "local_sha256": "80a484b6a70e58716b1388390148e3cb847f3b8079c2c1dceba5f9601c1f9003",
+        "bytes": 3885,
+        "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+        "normalized_git_blob_sha1": "19ea6fc9cc6bee84ae699815a14c66509bc6bb77"
+      },
+      {
+        "path": "a02/C004.md",
+        "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+        "expected_git_blob_sha1": "c8339450d321f019104a217f3860940d7bb2bc5d",
+        "raw_git_blob_sha1": "e8b99d1ee8a07255444c8f3ae23b90e4156167c0",
+        "local_sha256": "2ee0334e0a3e7a941ef546cc59e9eb5bcd9e65c7418be0bbc0ef290b8545fca3",
+        "bytes": 9777,
+        "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+        "normalized_git_blob_sha1": "c8339450d321f019104a217f3860940d7bb2bc5d"
+      },
+      {
+        "path": "a02/C005_v2.md",
+        "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+        "expected_git_blob_sha1": "58d6cf954b31d1e54fa704386562ab26dd442ccc",
+        "raw_git_blob_sha1": "64a51f28750a4207fa699cc98b8a1b8e51ee7f5b",
+        "local_sha256": "eaf2328ae0c5769ab588cafd6c38e31fd07291d28129ca3ff172e74716eebf0c",
+        "bytes": 9702,
+        "pin_status": "EXACT_GIT_BYTES_RECOVERED_AND_NORMALIZATION_VERIFIED",
+        "minus_one_lf_git_blob_sha1": "c9ac915d1b192b6a6159991f3a439c8aacebf6c4",
+        "recovered_path": "campaign/sources/recovered/a02/C005_v2.md",
+        "recovered_git_blob_sha1": "58d6cf954b31d1e54fa704386562ab26dd442ccc",
+        "transform": "replace CRLF with LF, then append exactly one terminal LF"
+      },
+      {
+        "path": "a02/PRIOR_CLAIMS.jsonl",
+        "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+        "expected_git_blob_sha1": "f7da48879c4cce40dda45e77e96759e3b29e6980",
+        "raw_git_blob_sha1": "aaa2640ff652b2c638f2e486bc3a382f5ef7b0eb",
+        "local_sha256": "ea2fb1685a0e75b329d0d49ef09c5f8fadb36c8a252920874f080a1e3487d218",
+        "bytes": 8817,
+        "pin_status": "EXACT_GIT_BYTES_RECOVERED_AND_NORMALIZATION_VERIFIED",
+        "minus_one_lf_git_blob_sha1": "98fde8d6edd78ebb0fe81bec20ee0cb68a11904d",
+        "recovered_path": "campaign/sources/recovered/a02/PRIOR_CLAIMS.jsonl",
+        "recovered_git_blob_sha1": "f7da48879c4cce40dda45e77e96759e3b29e6980",
+        "transform": "replace CRLF with LF, then append exactly one terminal LF"
+      },
+      {
+        "path": "a02/PRIOR_REPORT.md",
+        "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+        "expected_git_blob_sha1": "0a801bb44f91412d6dad8eef193f343ace36ca8a",
+        "raw_git_blob_sha1": "ee2494e2a8f5a9416041c92e39d5d4e1e97f2fa6",
+        "local_sha256": "711c540f2e2cf03dc9f1b4a1e703649456ecf72df38cbd7f2f2b94cb0ab1850a",
+        "bytes": 2643,
+        "pin_status": "EXACT_GIT_BYTES_RECOVERED_AND_NORMALIZATION_VERIFIED",
+        "minus_one_lf_git_blob_sha1": "953f3957151c3bf550945ebbeb3e97918df9a683",
+        "recovered_path": "campaign/sources/recovered/a02/PRIOR_REPORT.md",
+        "recovered_git_blob_sha1": "0a801bb44f91412d6dad8eef193f343ace36ca8a",
+        "transform": "replace CRLF with LF, then append exactly one terminal LF"
+      },
+      {
+        "path": "a06/source/frontier/rows/T421/DOSSIER.md",
+        "pin_record": "a06/SOURCE_PINS.json",
+        "expected_git_blob_sha1": "844ff1ee84129df07c6a928787d928bdee244d7e",
+        "raw_git_blob_sha1": "f05dfb3c5fb4d576838683a9a8b94a2d1d0a68fd",
+        "local_sha256": "6c6fb5653f80b9650e7334059c1cbf263dde6f9f2e7bde5582aa27ec9a14abcd",
+        "bytes": 3735,
+        "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+        "normalized_git_blob_sha1": "844ff1ee84129df07c6a928787d928bdee244d7e"
+      },
+      {
+        "path": "a06/source/frontier/rows/T421/moves.jsonl",
+        "pin_record": "a06/SOURCE_PINS.json",
+        "expected_git_blob_sha1": "11661c48d10c21f239ffccb938fb515e682652fa",
+        "raw_git_blob_sha1": "28949003e769f052305ad716a25a09fbcff89652",
+        "local_sha256": "33bbd2279b5225902101dfbfba17cf5c4718346dbf950864e4fa25ff85a2eda3",
+        "bytes": 698,
+        "pin_status": "EXACT_GIT_BYTES_RECOVERED_AND_NORMALIZATION_VERIFIED",
+        "minus_one_lf_git_blob_sha1": "b2e8f1ea68f3f0a1bb8de53ebf18e0f5e65724e9",
+        "recovered_path": "campaign/sources/recovered/a06/source/frontier/rows/T421/moves.jsonl",
+        "recovered_git_blob_sha1": "11661c48d10c21f239ffccb938fb515e682652fa",
+        "transform": "replace CRLF with LF, then append exactly one terminal LF"
+      }
+    ],
+    "registry": {
+      "rows": 422,
+      "raw_sha256": "c1a7636d5ef95888a26e92b36a017e2a2aae72d7140de9f6d39c695c67d2d3b0",
+      "normalized_git_blob_sha1": "b8d4607e60eafcce5b3e8286cf882e8931737bd6"
+    },
+    "review_sha256_reference_count_unresolved": 0,
+    "review_sha256_reference_count_explicitly_not_bundled": 5
+  },
+  "events": [
+    {
+      "status": "PASS",
+      "label": "SHA256 campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+      "sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 campaign/proofs/T228_NONZERO_TEACHER.md",
+      "sha256": "f95fa6fade82ba0dca4dab8e311fc61bb57b3267f3953b465c94228cb1315933"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 campaign/proofs/T228_INDEX_DEPENDENCE.md",
+      "sha256": "4fc5a1c72f9ea24b1408c99aa1fc01c10492d1e816a59e2e3227addf8609e6ee"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 campaign/proofs/T228_MOMENT_DYNAMICS.md",
+      "sha256": "e2ba8992e95ac4f43e2036fc9875761870a965038027942729347edae436c970"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 campaign/proofs/T228_BATCH_TWO.md",
+      "sha256": "f302b97190ae773c1b6eee1a96c48ed7b46907c32091ea8bfc9e1afd8988bcbd"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 campaign/checks/A08_reviewed_source.md",
+      "sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 campaign/checks/A08_exact_checker.py",
+      "sha256": "276aba76fbc17e8b1efbaed5c86d19338d5dda0bd7f283edb593a0e89658dbed"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 campaign/checks/A08_exact_checker.out",
+      "sha256": "0ce9659af85da24205f7156b1ebd84f08e1b3f00e2669f8c2a80ddee2e68079c"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 campaign/checks/A13_tail_index_certificate.py",
+      "sha256": "ce9e6b42e901d7ffa06c11cbc6e35e6f2ad8b3216e957896374a9e4527a0bb58"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 campaign/history/A13_tail_index_certificate_v1.py",
+      "sha256": "f3b81bb6b7b3520c842e21dfa7faa919c104e0ff21b68e44d85864b66d359ff4"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 campaign/history/A02_CONTINUOUS_KERNEL_EXTENSION_v1.md",
+      "sha256": "0eb859b59c44b6396b65c98b90b5874eab1bfdf8262dc1710dfc024b4efe0543"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 campaign/history/A05_ERM_BRIDGE_v1.md",
+      "sha256": "c7fcd6fdfa4b0a3d0c7af44e4760db75fd59fabd6c2114629c6bc0b64677144f"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 a02/CONTINUOUS_KERNEL_EXTENSION.md",
+      "sha256": "5cd1bdd401d2efbd15433e9fa5fc1834e792424fa70fba552da85b776ef45566"
+    },
+    {
+      "status": "PASS",
+      "label": "SHA256 a05/ERM_BRIDGE.md",
+      "sha256": "97eeb783f610ea4ce4ead20c547a0ec65ebc4ca0320d7a07e4d38c05bf936d96"
+    },
+    {
+      "status": "PASS",
+      "label": "A16 build pin campaign/proofs/T228_NONZERO_TEACHER.md",
+      "sha256": "f95fa6fade82ba0dca4dab8e311fc61bb57b3267f3953b465c94228cb1315933"
+    },
+    {
+      "status": "PASS",
+      "label": "A16 build pin campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+      "sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f"
+    },
+    {
+      "status": "PASS",
+      "label": "A16 build pin a01/SOURCE_MANIFEST.json",
+      "sha256": "4ab4e50d1a2abdc2b54c58949c48d8a708473fbafe62058216c682787c52c54f"
+    },
+    {
+      "status": "PASS",
+      "label": "A16 build pin campaign/sources/T228_REGISTRY.json",
+      "sha256": "23d28d28be3efdb748ca5e9b6fdccfec5f0677d3ff871516ef97c587e3186d6e"
+    },
+    {
+      "status": "PASS",
+      "label": "A16 build pin campaign/manuscript/T228_Proof.tex",
+      "sha256": "38b9479f502a3b0658906642c1ea8fd1e9b05fee0e5434e90944042b827cf0c0"
+    },
+    {
+      "status": "PASS",
+      "label": "A16 build pin campaign/manuscript/T228_Proof.pdf",
+      "sha256": "85e9fe0de2c2017ec6985b97290da40bd71ede22829a776a770196827246ebb6"
+    },
+    {
+      "status": "PASS",
+      "label": "A18 proof pin campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+      "sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f"
+    },
+    {
+      "status": "PASS",
+      "label": "A18 proof pin campaign/proofs/T228_NONZERO_TEACHER.md",
+      "sha256": "f95fa6fade82ba0dca4dab8e311fc61bb57b3267f3953b465c94228cb1315933"
+    },
+    {
+      "status": "PASS",
+      "label": "A02 historical manifest a02/REPORT.md",
+      "sha256": "7eaca61bebfd3b1f6a0b5e0dde65717eaa7486e29b2f3f52071f071e82eb7460"
+    },
+    {
+      "status": "PASS",
+      "label": "A02 manifest byte count a02/REPORT.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A02 historical manifest a02/CONTINUOUS_KERNEL_EXTENSION.md",
+      "reviewed_path": "a02/CONTINUOUS_KERNEL_EXTENSION.md",
+      "preserved_path": "campaign/history/A02_CONTINUOUS_KERNEL_EXTENSION_v1.md",
+      "reviewed_sha256": "0eb859b59c44b6396b65c98b90b5874eab1bfdf8262dc1710dfc024b4efe0543",
+      "current_sha256": "5cd1bdd401d2efbd15433e9fa5fc1834e792424fa70fba552da85b776ef45566",
+      "scope": "preserved old version; not current bytes"
+    },
+    {
+      "status": "PASS",
+      "label": "A02 manifest byte count campaign/history/A02_CONTINUOUS_KERNEL_EXTENSION_v1.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A02 historical manifest a02/check_extension.py",
+      "sha256": "7c572b2c5eaf3897f54a0945cfc0a26c24aa9a468a9c784c4bf75ff0503323cf"
+    },
+    {
+      "status": "PASS",
+      "label": "A02 manifest byte count a02/check_extension.py"
+    },
+    {
+      "status": "PASS",
+      "label": "A02 historical manifest a02/extension_checks.json",
+      "sha256": "65318cf928eaa6d23e80844d949bdd067c997f320144ef9630964d563691c8c2"
+    },
+    {
+      "status": "PASS",
+      "label": "A02 manifest byte count a02/extension_checks.json"
+    },
+    {
+      "status": "PASS",
+      "label": "A02 historical manifest a02/T336_REGISTRY.json",
+      "sha256": "a62961f2c1f30287356a73e9609430d437e93ba42a85aaad85908fdbd2d5f7d6"
+    },
+    {
+      "status": "PASS",
+      "label": "A02 manifest byte count a02/T336_REGISTRY.json"
+    },
+    {
+      "status": "PASS",
+      "label": "A02 historical manifest a02/COMPLETE_SOURCE_PINS.json",
+      "sha256": "440b9d0aeaf34d4dd075fb04b9e073a11979d2caba9bd971c534070a798799bb"
+    },
+    {
+      "status": "PASS",
+      "label": "A02 manifest byte count a02/COMPLETE_SOURCE_PINS.json"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest T354_next.md",
+      "sha256": "e92496a9053aeb0e195ab32ecee5b67a2cb0b1faf1a481850b95ee0944213f5a"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest frontier.py",
+      "sha256": "e343dbe2a384360eadf942531f09cede68cd2e1260bf895e6dac7914d551c371"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest T354_independent_prior_audit.md",
+      "sha256": "f5ccf97da806793c0937d77100d2f92d86ca1aa992749c8a27b86a5105034559"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest TRIAGE_REPORT.md",
+      "sha256": "65e94961a5ad0dea69cb1ca9546f5af15135ebc4239be98b7a7df757e937cfbb"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest T357_next.md",
+      "sha256": "50a01286f797434db25ef2c1674daa86ae130bd1b4191b1e7de183badb2f973c"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest rows_T248_DOSSIER.md",
+      "sha256": "d6ddc0ba4ec55cc06826a1e9f0890607cec0e42c7562adfdb53b7d01ddb8a25f"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest rows_T421_DOSSIER.md",
+      "sha256": "6c6fb5653f80b9650e7334059c1cbf263dde6f9f2e7bde5582aa27ec9a14abcd"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest selected_registry_rows.json",
+      "sha256": "2ab9bbb03c1bfac606a5db93bb011d24d68959674603ebc400a9a54be3f1b287"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest rows_T354_DOSSIER.md",
+      "sha256": "e75a652e1fafaaa6272ec192dad236da018de1ff429f5f01945b158a55f3b998"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest registry422.jsonl",
+      "sha256": "c1a7636d5ef95888a26e92b36a017e2a2aae72d7140de9f6d39c695c67d2d3b0"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest rows_T357_DOSSIER.md",
+      "sha256": "4f150d1a55209ed37d8b1c6bca8e6ed85b9b4b50dbac24e616b5126791fb5ff9"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest rows_T366_DOSSIER.md",
+      "sha256": "500c361765d5e1d1d560a6886c17ea52e723ab85d71619dd03d76ca6a9ca1d71"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest T354_theorem.md",
+      "sha256": "fbf6011a14d439eff8208fa14c6a0625cc66aca91eebe09b19fb0b4c4bd59f28"
+    },
+    {
+      "status": "PASS",
+      "label": "A03 SHA256 manifest WORKER_RULES.md",
+      "sha256": "fcd42e5af95861a17a61de5967e9d6b224560dbc02bb99e87f4769524fad37b4"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 recovered source count is exactly 19"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 source paths are unique"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/DOSSIER.md",
+      "path": "a01/DOSSIER.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "5d95a5f8a9d830ca673e75321d66f66d9dccad45",
+      "raw_git_blob_sha1": "5d95a5f8a9d830ca673e75321d66f66d9dccad45",
+      "local_sha256": "8b9e0d922aa09f71ff7f722748af91d4d8967aea344721080285d97737e3912c",
+      "bytes": 13755,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/moves.jsonl",
+      "path": "a01/moves.jsonl",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "005367810642d99b9cde2e327a8e8ded7c60bf38",
+      "raw_git_blob_sha1": "005367810642d99b9cde2e327a8e8ded7c60bf38",
+      "local_sha256": "bf2e8baa632014eabb5b3e5c7b7945cd6283762aa22e57fc94ae7159249b29ca",
+      "bytes": 1206,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/lit.json",
+      "path": "a01/lit.json",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "15104bf3c1e4c346599335ee1caa83731b1dadcb",
+      "raw_git_blob_sha1": "15104bf3c1e4c346599335ee1caa83731b1dadcb",
+      "local_sha256": "9b6efeed890c41ebfdedf13e99451dcb477bc665c22f3f4dfd3cbdef85f75a78",
+      "bytes": 2558,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/WORKER_RULES.md",
+      "path": "a01/WORKER_RULES.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "f43b62c49305c89054f15a959b212a86e6115ad4",
+      "raw_git_blob_sha1": "f43b62c49305c89054f15a959b212a86e6115ad4",
+      "local_sha256": "68c23f109501b78d94e5f29c61b7bcde979320431a49a8a24ce6496a2c4cc2b9",
+      "bytes": 2413,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/claude_4af6ff1a/T228_B_v2.md",
+      "path": "a01/claude_4af6ff1a/T228_B_v2.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "b7b358985ff34a9ea3fa7b35339047f0fe793822",
+      "raw_git_blob_sha1": "b7b358985ff34a9ea3fa7b35339047f0fe793822",
+      "local_sha256": "ad1eba565e053137543476431bf1a5c76302fab385e0bc2ef67c1ef6646a2205",
+      "bytes": 10942,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/claude_4af6ff1a/REVIEW_POINT1_CHECK.md",
+      "path": "a01/claude_4af6ff1a/REVIEW_POINT1_CHECK.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "2a3abd7151775dfeeb73eb721191d2b2d329dc92",
+      "raw_git_blob_sha1": "2a3abd7151775dfeeb73eb721191d2b2d329dc92",
+      "local_sha256": "8319b43ad82756ef6a3575d163483c01f2560241c193b801ca979149c3fc92aa",
+      "bytes": 1401,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/claude_4af6ff1a/REVIEW.tsv",
+      "path": "a01/claude_4af6ff1a/REVIEW.tsv",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "644b741f22ebdaabbc7cd89db470c8ad55efbc4c",
+      "raw_git_blob_sha1": "644b741f22ebdaabbc7cd89db470c8ad55efbc4c",
+      "local_sha256": "80e9000aabcc3a934c432c636f99335260672d22c760538115296e68882fc797",
+      "bytes": 1520,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/claude_b1e26540/T3_CLAIM.md",
+      "path": "a01/claude_b1e26540/T3_CLAIM.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "b665c36d72d2f087c0ee11cb65628aa376dc3387",
+      "raw_git_blob_sha1": "b665c36d72d2f087c0ee11cb65628aa376dc3387",
+      "local_sha256": "27e378909732f5fdc7b451e850c04a2f997ad038ffb18bdb62fa6227e8b85fe6",
+      "bytes": 4984,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/claude_b1e26540/T3_STEP3.md",
+      "path": "a01/claude_b1e26540/T3_STEP3.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "a3adfc7537b6a8f51b796539c5063b07a23fca39",
+      "raw_git_blob_sha1": "a3adfc7537b6a8f51b796539c5063b07a23fca39",
+      "local_sha256": "9f33285b4d31c4c776158f18ec650dfdcd2aba8a42a064216c175c1a564dab90",
+      "bytes": 7231,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/claude_b1e26540/REVIEW.tsv",
+      "path": "a01/claude_b1e26540/REVIEW.tsv",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "0e580d2fa5b5cdfb9533d10fc42ccbc9db802782",
+      "raw_git_blob_sha1": "0e580d2fa5b5cdfb9533d10fc42ccbc9db802782",
+      "local_sha256": "63074ec5dd715b268dc9448c449e98bb5430c03d9b21c514b5b364c30a412ec8",
+      "bytes": 4656,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/claude_b1e26540/T3_SETUP.md",
+      "path": "a01/claude_b1e26540/T3_SETUP.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "de30be030e66bf30700ba818a5155c9d6c4e3562",
+      "raw_git_blob_sha1": "de30be030e66bf30700ba818a5155c9d6c4e3562",
+      "local_sha256": "c2f455ae36180961543d35d54309f9d1a0baa188efcc8c50ae3111ba69d4e996",
+      "bytes": 4820,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/claude_b1e26540/T3_STEP1.md",
+      "path": "a01/claude_b1e26540/T3_STEP1.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "c169b975cd3a5d8ed1f554214d010da1c587e96d",
+      "raw_git_blob_sha1": "c169b975cd3a5d8ed1f554214d010da1c587e96d",
+      "local_sha256": "422e99e73410d839411e483a15c690ec53a14d1a60e9087eefdd3d14d30e2255",
+      "bytes": 7371,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/claude_b1e26540/T3_STEP2.md",
+      "path": "a01/claude_b1e26540/T3_STEP2.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "04d08036877af25a6d083247fdbfbf834ae0206e",
+      "raw_git_blob_sha1": "04d08036877af25a6d083247fdbfbf834ae0206e",
+      "local_sha256": "d001130ea2111d78d46adf15d9c2c54ecf84be5aea6817f5e9fdb6bf2dec379e",
+      "bytes": 5095,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/w688_target1/proofs/T228_A_v1.md",
+      "path": "a01/w688_target1/proofs/T228_A_v1.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "6056b253ff1d4b9eb2411d6dec7d25c5ce8d7523",
+      "raw_git_blob_sha1": "6056b253ff1d4b9eb2411d6dec7d25c5ce8d7523",
+      "local_sha256": "e2a75786a298beac72d216c20dd8c7d63b5b1de335756b1bb8ce0d5c43c4a07a",
+      "bytes": 9986,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/w688_target1/proofs/SELF_AUDIT_v1.md",
+      "path": "a01/w688_target1/proofs/SELF_AUDIT_v1.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "2c5dc1cda3926955468fb001ca16630695e2b9a4",
+      "raw_git_blob_sha1": "2c5dc1cda3926955468fb001ca16630695e2b9a4",
+      "local_sha256": "983f441ac3d2417ddb00d1879d4ba7a7cc8661ff6b33bb4b1a9c2ac8a8dff6d8",
+      "bytes": 1382,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/w688_target1/README.md",
+      "path": "a01/w688_target1/README.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "1fb809c14128c5a9030793040b19615a453bb992",
+      "raw_git_blob_sha1": "1fb809c14128c5a9030793040b19615a453bb992",
+      "local_sha256": "1991c34f953d96a45934672a981b77da00908856daef1c1b88da64592b31f001",
+      "bytes": 665,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/w688_target1/STATUS.md",
+      "path": "a01/w688_target1/STATUS.md",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "a4645652db6bf5b3d0f01bf46a4b7027cbd174b7",
+      "raw_git_blob_sha1": "a4645652db6bf5b3d0f01bf46a4b7027cbd174b7",
+      "local_sha256": "cd6acc5f474a947f94dbbfeb383d93a330377cec7c001f1aee4a3cd374009476",
+      "bytes": 908,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/w688_target1/CLAIMS.jsonl",
+      "path": "a01/w688_target1/CLAIMS.jsonl",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "f0d934f8c5b4accdf05fee0bb02db50ce332074a",
+      "raw_git_blob_sha1": "f0d934f8c5b4accdf05fee0bb02db50ce332074a",
+      "local_sha256": "f85ab7f9e8c1cb88a1a6030984583fb1491dbc213c9bc1d32eb024897e546154",
+      "bytes": 1891,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "source Git blob a01/w688_target1/AUDITS_FROM_REVIEWER.tsv",
+      "path": "a01/w688_target1/AUDITS_FROM_REVIEWER.tsv",
+      "pin_record": "a01/SOURCE_MANIFEST.json",
+      "expected_git_blob_sha1": "0e98941b66685633143b2dd20f33f60e0ca70608",
+      "raw_git_blob_sha1": "0e98941b66685633143b2dd20f33f60e0ca70608",
+      "local_sha256": "2ae0e7922d8dd599e117961470939e046ea0453c12b88febf9ea6e45a36d3296",
+      "bytes": 1560,
+      "pin_status": "RAW_MATCH"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 payload count matches manifest"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 payload names cover all 19 unique manifest paths"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file DOSSIER.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file moves.jsonl"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file lit.json"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file WORKER_RULES.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file claude_4af6ff1a/T228_B_v2.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file claude_4af6ff1a/REVIEW_POINT1_CHECK.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file claude_4af6ff1a/REVIEW.tsv"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file claude_b1e26540/T3_CLAIM.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file claude_b1e26540/T3_STEP3.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file claude_b1e26540/REVIEW.tsv"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file claude_b1e26540/T3_SETUP.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file claude_b1e26540/T3_STEP1.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file claude_b1e26540/T3_STEP2.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file w688_target1/proofs/T228_A_v1.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file w688_target1/proofs/SELF_AUDIT_v1.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file w688_target1/README.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file w688_target1/STATUS.md"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file w688_target1/CLAIMS.jsonl"
+    },
+    {
+      "status": "PASS",
+      "label": "A01 embedded payload agrees with exact recovered file w688_target1/AUDITS_FROM_REVIEWER.tsv"
+    },
+    {
+      "status": "PASS",
+      "label": "normalized source Git blob a02/DOSSIER.md",
+      "normalization": "comparison only: remove exactly one terminal LF byte",
+      "path": "a02/DOSSIER.md",
+      "pin_record": "a02/SOURCE_PINS.json",
+      "expected_git_blob_sha1": "54d15be26e9c5c10ae28d38c890cd7f57983787b",
+      "raw_git_blob_sha1": "afc31f9fe834be74af37875a30c476f3e101559f",
+      "local_sha256": "326390bfbf2500bd2e11d0143cb5fb53e6eb6ab3f4015b885db7ae328c829399",
+      "bytes": 3337,
+      "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+      "normalized_git_blob_sha1": "54d15be26e9c5c10ae28d38c890cd7f57983787b"
+    },
+    {
+      "status": "PASS",
+      "label": "recovered exact Git bytes and declared transform a02/lit.json",
+      "recovered_path": "campaign/sources/recovered/a02/lit.json",
+      "local_sha256": "a953e1e331a1a9b0abf539654c1f6385eaca5f6ea9144e48162c04d73df98030",
+      "recovered_sha256": "305a677e4da52fa498f613880e4c88af6c646348e6ba5508ddc54fa29347306d",
+      "source_bytes_modified": false
+    },
+    {
+      "status": "PASS",
+      "label": "recovered exact Git bytes and declared transform a02/moves.jsonl",
+      "recovered_path": "campaign/sources/recovered/a02/moves.jsonl",
+      "local_sha256": "6c027d1f5bd38adcd1899bbb6f64456b6de39422d5acd43e458a7d11844c0b71",
+      "recovered_sha256": "ec6d72e8808e57239c430537ae17fa7034f51e5e1bbff7d6ac1319f7eede858d",
+      "source_bytes_modified": false
+    },
+    {
+      "status": "PASS",
+      "label": "normalized source Git blob a02/reviewer_check_c002_sim_5693.py",
+      "normalization": "comparison only: remove exactly one terminal LF byte",
+      "path": "a02/reviewer_check_c002_sim_5693.py",
+      "pin_record": "a02/SOURCE_PINS.json",
+      "expected_git_blob_sha1": "e0da0738de68e16916b35ee6968c846065801666",
+      "raw_git_blob_sha1": "d23d64bd8a38b971af7cd5ff2e2898fc3d112e51",
+      "local_sha256": "fe6033262cf0807624ea5396c65ff8615e2b58e9cc13a1bd978716c4589e4184",
+      "bytes": 3976,
+      "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+      "normalized_git_blob_sha1": "e0da0738de68e16916b35ee6968c846065801666"
+    },
+    {
+      "status": "PASS",
+      "label": "normalized source Git blob a02/DOSSIER.md",
+      "normalization": "comparison only: remove exactly one terminal LF byte",
+      "path": "a02/DOSSIER.md",
+      "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+      "expected_git_blob_sha1": "54d15be26e9c5c10ae28d38c890cd7f57983787b",
+      "raw_git_blob_sha1": "afc31f9fe834be74af37875a30c476f3e101559f",
+      "local_sha256": "326390bfbf2500bd2e11d0143cb5fb53e6eb6ab3f4015b885db7ae328c829399",
+      "bytes": 3337,
+      "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+      "normalized_git_blob_sha1": "54d15be26e9c5c10ae28d38c890cd7f57983787b"
+    },
+    {
+      "status": "PASS",
+      "label": "recovered exact Git bytes and declared transform a02/moves.jsonl",
+      "recovered_path": "campaign/sources/recovered/a02/moves.jsonl",
+      "local_sha256": "6c027d1f5bd38adcd1899bbb6f64456b6de39422d5acd43e458a7d11844c0b71",
+      "recovered_sha256": "ec6d72e8808e57239c430537ae17fa7034f51e5e1bbff7d6ac1319f7eede858d",
+      "source_bytes_modified": false
+    },
+    {
+      "status": "PASS",
+      "label": "recovered exact Git bytes and declared transform a02/lit.json",
+      "recovered_path": "campaign/sources/recovered/a02/lit.json",
+      "local_sha256": "a953e1e331a1a9b0abf539654c1f6385eaca5f6ea9144e48162c04d73df98030",
+      "recovered_sha256": "305a677e4da52fa498f613880e4c88af6c646348e6ba5508ddc54fa29347306d",
+      "source_bytes_modified": false
+    },
+    {
+      "status": "PASS",
+      "label": "normalized source Git blob a02/C002.md",
+      "normalization": "comparison only: remove exactly one terminal LF byte",
+      "path": "a02/C002.md",
+      "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+      "expected_git_blob_sha1": "c0b744a4035085965ea943d20bd9d71065aea049",
+      "raw_git_blob_sha1": "69dfda70aa8adf93bc297790dd749756d52d962c",
+      "local_sha256": "081d31b977353686a5189c4bdbca817c69f644366120e7aa4a89e100879d39ef",
+      "bytes": 8807,
+      "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+      "normalized_git_blob_sha1": "c0b744a4035085965ea943d20bd9d71065aea049"
+    },
+    {
+      "status": "PASS",
+      "label": "normalized source Git blob a02/C003.md",
+      "normalization": "comparison only: remove exactly one terminal LF byte",
+      "path": "a02/C003.md",
+      "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+      "expected_git_blob_sha1": "19ea6fc9cc6bee84ae699815a14c66509bc6bb77",
+      "raw_git_blob_sha1": "95339e575053a26c569fc9564ba13d71938c1a74",
+      "local_sha256": "80a484b6a70e58716b1388390148e3cb847f3b8079c2c1dceba5f9601c1f9003",
+      "bytes": 3885,
+      "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+      "normalized_git_blob_sha1": "19ea6fc9cc6bee84ae699815a14c66509bc6bb77"
+    },
+    {
+      "status": "PASS",
+      "label": "normalized source Git blob a02/C004.md",
+      "normalization": "comparison only: remove exactly one terminal LF byte",
+      "path": "a02/C004.md",
+      "pin_record": "a02/COMPLETE_SOURCE_PINS.json",
+      "expected_git_blob_sha1": "c8339450d321f019104a217f3860940d7bb2bc5d",
+      "raw_git_blob_sha1": "e8b99d1ee8a07255444c8f3ae23b90e4156167c0",
+      "local_sha256": "2ee0334e0a3e7a941ef546cc59e9eb5bcd9e65c7418be0bbc0ef290b8545fca3",
+      "bytes": 9777,
+      "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+      "normalized_git_blob_sha1": "c8339450d321f019104a217f3860940d7bb2bc5d"
+    },
+    {
+      "status": "PASS",
+      "label": "recovered exact Git bytes and declared transform a02/C005_v2.md",
+      "recovered_path": "campaign/sources/recovered/a02/C005_v2.md",
+      "local_sha256": "eaf2328ae0c5769ab588cafd6c38e31fd07291d28129ca3ff172e74716eebf0c",
+      "recovered_sha256": "22df67c6b2aaec99499aac6bf3440e8d5d6305204deedcc98fe9b4a621583b40",
+      "source_bytes_modified": false
+    },
+    {
+      "status": "PASS",
+      "label": "recovered exact Git bytes and declared transform a02/PRIOR_CLAIMS.jsonl",
+      "recovered_path": "campaign/sources/recovered/a02/PRIOR_CLAIMS.jsonl",
+      "local_sha256": "ea2fb1685a0e75b329d0d49ef09c5f8fadb36c8a252920874f080a1e3487d218",
+      "recovered_sha256": "9273d28747e152dd976a693da3626045507c03c6cc9e2b1ef7ba8775a3cc13b8",
+      "source_bytes_modified": false
+    },
+    {
+      "status": "PASS",
+      "label": "recovered exact Git bytes and declared transform a02/PRIOR_REPORT.md",
+      "recovered_path": "campaign/sources/recovered/a02/PRIOR_REPORT.md",
+      "local_sha256": "711c540f2e2cf03dc9f1b4a1e703649456ecf72df38cbd7f2f2b94cb0ab1850a",
+      "recovered_sha256": "9f438b0db596dd3839a9b5a3aedce183089a41230cfaa795aa8694384860218f",
+      "source_bytes_modified": false
+    },
+    {
+      "status": "PASS",
+      "label": "normalized source Git blob a06/source/frontier/rows/T421/DOSSIER.md",
+      "normalization": "comparison only: remove exactly one terminal LF byte",
+      "path": "a06/source/frontier/rows/T421/DOSSIER.md",
+      "pin_record": "a06/SOURCE_PINS.json",
+      "expected_git_blob_sha1": "844ff1ee84129df07c6a928787d928bdee244d7e",
+      "raw_git_blob_sha1": "f05dfb3c5fb4d576838683a9a8b94a2d1d0a68fd",
+      "local_sha256": "6c6fb5653f80b9650e7334059c1cbf263dde6f9f2e7bde5582aa27ec9a14abcd",
+      "bytes": 3735,
+      "pin_status": "MATCH_AFTER_EXACTLY_ONE_TERMINAL_LF_REMOVAL",
+      "normalized_git_blob_sha1": "844ff1ee84129df07c6a928787d928bdee244d7e"
+    },
+    {
+      "status": "PASS",
+      "label": "recovered exact Git bytes and declared transform a06/source/frontier/rows/T421/moves.jsonl",
+      "recovered_path": "campaign/sources/recovered/a06/source/frontier/rows/T421/moves.jsonl",
+      "local_sha256": "33bbd2279b5225902101dfbfba17cf5c4718346dbf950864e4fa25ff85a2eda3",
+      "recovered_sha256": "56bbc6d0d4057ac945c8ecb17c74dc222b8779aade9835fdfe4840dcd71ffdab",
+      "source_bytes_modified": false
+    },
+    {
+      "status": "PASS",
+      "label": "A06 registry metadata points to the full registry, not its single-row extract"
+    },
+    {
+      "status": "PASS",
+      "label": "full local registry exact SHA256"
+    },
+    {
+      "status": "PASS",
+      "label": "full registry pin requires exactly one terminal LF removal",
+      "raw_git_blob_sha1": "71c0b85da9d60ecf52b33d6aeb29897048ff0f6e",
+      "source_bytes_modified": false
+    },
+    {
+      "status": "PASS",
+      "label": "422 unique registry problem IDs"
+    },
+    {
+      "status": "PASS",
+      "label": "exact extracted registry object T228",
+      "path": "campaign/sources/T228_REGISTRY.json",
+      "comparison": "all parsed keys and values; duplicate keys forbidden"
+    },
+    {
+      "status": "PASS",
+      "label": "exact extracted registry object T336",
+      "path": "a02/T336_REGISTRY.json",
+      "comparison": "all parsed keys and values; duplicate keys forbidden"
+    },
+    {
+      "status": "PASS",
+      "label": "exact extracted registry object T421",
+      "path": "a06/source/top200_probability_2026_10_14/list.jsonl",
+      "comparison": "all parsed keys and values; duplicate keys forbidden"
+    },
+    {
+      "status": "PASS",
+      "label": "selected registry row T228"
+    },
+    {
+      "status": "PASS",
+      "label": "selected registry row T248"
+    },
+    {
+      "status": "PASS",
+      "label": "selected registry row T354"
+    },
+    {
+      "status": "PASS",
+      "label": "selected registry row T357"
+    },
+    {
+      "status": "PASS",
+      "label": "selected registry row T366"
+    },
+    {
+      "status": "PASS",
+      "label": "selected registry row T421"
+    },
+    {
+      "status": "PASS",
+      "label": "A18 obligation map preserves the literal operative registry fields"
+    },
+    {
+      "status": "PASS",
+      "label": "correction ledger current version a02/CONTINUOUS_KERNEL_EXTENSION.md",
+      "sha256": "5cd1bdd401d2efbd15433e9fa5fc1834e792424fa70fba552da85b776ef45566"
+    },
+    {
+      "status": "PASS",
+      "label": "correction ledger historical version campaign/history/A02_CONTINUOUS_KERNEL_EXTENSION_v1.md",
+      "sha256": "0eb859b59c44b6396b65c98b90b5874eab1bfdf8262dc1710dfc024b4efe0543"
+    },
+    {
+      "status": "PASS",
+      "label": "correction ledger current version a05/ERM_BRIDGE.md",
+      "sha256": "97eeb783f610ea4ce4ead20c547a0ec65ebc4ca0320d7a07e4d38c05bf936d96"
+    },
+    {
+      "status": "PASS",
+      "label": "correction ledger historical version campaign/history/A05_ERM_BRIDGE_v1.md",
+      "sha256": "c7fcd6fdfa4b0a3d0c7af44e4760db75fd59fabd6c2114629c6bc0b64677144f"
+    },
+    {
+      "status": "PASS",
+      "label": "correction ledger current version a06/T421_conditional_classification.md",
+      "sha256": "c70f7b419ba161a21c53dfd86ea629e11f173fe920effbb8086770094c1ebd2e"
+    },
+    {
+      "status": "PASS",
+      "label": "correction ledger historical version campaign/history/A06_T421_conditional_classification_v1.md",
+      "sha256": "f7e1a52a4126001fa26180e1b2832d215eeb4e97d9d161a65ae6136202096400"
+    },
+    {
+      "status": "PASS",
+      "label": "correction ledger current version a06/CLAIMS.jsonl",
+      "sha256": "1025c9f7e428b28f683db2a006a09a9cd768ffa4c6fca555b35e35f0da80ff4c"
+    },
+    {
+      "status": "PASS",
+      "label": "correction ledger historical version campaign/history/A06_CLAIMS_v1.jsonl",
+      "sha256": "bddd571a75d22177c064194ff1381c682f1ae85e1d19336d9f29e1f96ad35784"
+    },
+    {
+      "status": "PASS",
+      "label": "correction ledger current version campaign/checks/A13_tail_index_certificate.py",
+      "sha256": "ce9e6b42e901d7ffa06c11cbc6e35e6f2ad8b3216e957896374a9e4527a0bb58"
+    },
+    {
+      "status": "PASS",
+      "label": "correction ledger historical version campaign/history/A13_tail_index_certificate_v1.py",
+      "sha256": "f3b81bb6b7b3520c842e21dfa7faa919c104e0ff21b68e44d85864b66d359ff4"
+    },
+    {
+      "status": "PASS",
+      "label": "correction ledger current version campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+      "sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A12.md:11",
+      "sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A12.md:12",
+      "sha256": "f95fa6fade82ba0dca4dab8e311fc61bb57b3267f3953b465c94228cb1315933"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A16.md:18",
+      "sha256": "f95fa6fade82ba0dca4dab8e311fc61bb57b3267f3953b465c94228cb1315933"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A16.md:19",
+      "sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A16.md:20",
+      "sha256": "4ab4e50d1a2abdc2b54c58949c48d8a708473fbafe62058216c682787c52c54f"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A16.md:21",
+      "sha256": "23d28d28be3efdb748ca5e9b6fdccfec5f0677d3ff871516ef97c587e3186d6e"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A16.md:22",
+      "sha256": "38b9479f502a3b0658906642c1ea8fd1e9b05fee0e5434e90944042b827cf0c0"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A16.md:23",
+      "sha256": "85e9fe0de2c2017ec6985b97290da40bd71ede22829a776a770196827246ebb6"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A19.md:13",
+      "sha256": "5cd1bdd401d2efbd15433e9fa5fc1834e792424fa70fba552da85b776ef45566"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A19.md:14",
+      "sha256": "7eaca61bebfd3b1f6a0b5e0dde65717eaa7486e29b2f3f52071f071e82eb7460"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A19.md:15",
+      "sha256": "081d31b977353686a5189c4bdbca817c69f644366120e7aa4a89e100879d39ef"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A19.md:16",
+      "sha256": "80a484b6a70e58716b1388390148e3cb847f3b8079c2c1dceba5f9601c1f9003"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A19.md:17",
+      "sha256": "2ee0334e0a3e7a941ef546cc59e9eb5bcd9e65c7418be0bbc0ef290b8545fca3"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A19.md:18",
+      "sha256": "eaf2328ae0c5769ab588cafd6c38e31fd07291d28129ca3ff172e74716eebf0c"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A19.md:19",
+      "sha256": "7c572b2c5eaf3897f54a0945cfc0a26c24aa9a468a9c784c4bf75ff0503323cf"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A19.md:20",
+      "sha256": "a62961f2c1f30287356a73e9609430d437e93ba42a85aaad85908fdbd2d5f7d6"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A19.md:21",
+      "sha256": "326390bfbf2500bd2e11d0143cb5fb53e6eb6ab3f4015b885db7ae328c829399"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A19.md:22",
+      "sha256": "0eb859b59c44b6396b65c98b90b5874eab1bfdf8262dc1710dfc024b4efe0543"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A19.md:23",
+      "sha256": "3491617e52167995afe986652c5e4991cfa0152ee34eb529c860d095900b795b"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A19.md:24",
+      "sha256": "39c582d3a5b102999095e73a464a3e467bbca49658e56789323d21eff4667095"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A20.md:13",
+      "sha256": "97eeb783f610ea4ce4ead20c547a0ec65ebc4ca0320d7a07e4d38c05bf936d96"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A20.md:14",
+      "sha256": "c7fcd6fdfa4b0a3d0c7af44e4760db75fd59fabd6c2114629c6bc0b64677144f"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A20.md:15",
+      "sha256": "263bd76f3cd851d1827c1a0f5183db30d5f8c295109ca82b152a1ca384cd2192"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A20.md:16",
+      "sha256": "ff604cb8f6324e8d1c000cc4f8a19987c4445292974b505ba5318ad48f28e39d"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A20.md:17",
+      "sha256": "5cd1bdd401d2efbd15433e9fa5fc1834e792424fa70fba552da85b776ef45566"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A20.md:18",
+      "sha256": "0eb859b59c44b6396b65c98b90b5874eab1bfdf8262dc1710dfc024b4efe0543"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A20.md:19",
+      "sha256": "803b5dab335bd23a51835a2611304b097ee5a4c41295fc834cc12c558928255e"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A21.md:15",
+      "reviewed_path": "a06/T421_conditional_classification.md",
+      "preserved_path": "campaign/history/A06_T421_conditional_classification_v1.md",
+      "reviewed_sha256": "f7e1a52a4126001fa26180e1b2832d215eeb4e97d9d161a65ae6136202096400",
+      "current_sha256": "c70f7b419ba161a21c53dfd86ea629e11f173fe920effbb8086770094c1ebd2e",
+      "scope": "preserved old version; not current bytes"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A21.md:16",
+      "reviewed_path": "a06/CLAIMS.jsonl",
+      "preserved_path": "campaign/history/A06_CLAIMS_v1.jsonl",
+      "reviewed_sha256": "bddd571a75d22177c064194ff1381c682f1ae85e1d19336d9f29e1f96ad35784",
+      "current_sha256": "1025c9f7e428b28f683db2a006a09a9cd768ffa4c6fca555b35e35f0da80ff4c",
+      "scope": "preserved old version; not current bytes"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A21.md:17",
+      "sha256": "75c18536ae5594204d4c693142567e92e96840c2a068084c2921ffd03350837e"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A21.md:18",
+      "sha256": "53d83fe1b95ce6adfe4a9997616cbb631a48bb39d174a691981f79e2e276629c"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A21.md:19",
+      "sha256": "6c6fb5653f80b9650e7334059c1cbf263dde6f9f2e7bde5582aa27ec9a14abcd"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A21.md:20",
+      "sha256": "33bbd2279b5225902101dfbfba17cf5c4718346dbf950864e4fa25ff85a2eda3"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A21.md:21",
+      "sha256": "978e6189de82959207d3b58e2d15a0454bd2a4625b2d869e401d72441112c57c"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A21.md:22",
+      "sha256": "ed83deddb6874babcab0ddbb1447d9935a1b7e1b0b412ee321675736fb6b8575"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A21.md:23",
+      "sha256": "1d471a687918c94c7b08a460850db8415608063a51426cf9c53772e20a672ea9"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A22.md:13",
+      "sha256": "f302b97190ae773c1b6eee1a96c48ed7b46907c32091ea8bfc9e1afd8988bcbd"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A22.md:14",
+      "sha256": "4f40fa2dfb8bc1f88928f6990b4b63902caf211581e8eaa3f38a7115dcb7f543"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A22.md:15",
+      "sha256": "89db767d5897a3ff526dc269688183a2330545b5cc2b216e03a7a6533b50ac7b"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A24.md:18",
+      "sha256": "f3b81bb6b7b3520c842e21dfa7faa919c104e0ff21b68e44d85864b66d359ff4"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A25.md:9",
+      "sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A25.md:10",
+      "sha256": "4fc5a1c72f9ea24b1408c99aa1fc01c10492d1e816a59e2e3227addf8609e6ee"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A25.md:11",
+      "sha256": "e2ba8992e95ac4f43e2036fc9875761870a965038027942729347edae436c970"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A27.md:11",
+      "sha256": "38b9479f502a3b0658906642c1ea8fd1e9b05fee0e5434e90944042b827cf0c0"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A27.md:12",
+      "sha256": "85e9fe0de2c2017ec6985b97290da40bd71ede22829a776a770196827246ebb6"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A27.md:13",
+      "sha256": "23d28d28be3efdb748ca5e9b6fdccfec5f0677d3ff871516ef97c587e3186d6e"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A28.md:22",
+      "sha256": "f95fa6fade82ba0dca4dab8e311fc61bb57b3267f3953b465c94228cb1315933"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A28.md:23",
+      "sha256": "c1e0c3edcc049c36bb0c21b3c4b89f21ffa35b3fe78a481b198cffe3b97beb0e"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A28.md:24",
+      "sha256": "7fb0e5e90990651ef1c448150f0eb7ea6a625f6da00e7819a356b5fccf30c344"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A28.md:25",
+      "sha256": "23d28d28be3efdb748ca5e9b6fdccfec5f0677d3ff871516ef97c587e3186d6e"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A29.md:11",
+      "sha256": "f302b97190ae773c1b6eee1a96c48ed7b46907c32091ea8bfc9e1afd8988bcbd"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A29.md:12",
+      "sha256": "8c9192d1e168e60bce428b4cf7a0632bdf0736fbdd35ee985620b46a5ccdf490"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A29.md:13",
+      "sha256": "f95fa6fade82ba0dca4dab8e311fc61bb57b3267f3953b465c94228cb1315933"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A30.md:11",
+      "sha256": "38b9479f502a3b0658906642c1ea8fd1e9b05fee0e5434e90944042b827cf0c0"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A30.md:12",
+      "sha256": "85e9fe0de2c2017ec6985b97290da40bd71ede22829a776a770196827246ebb6"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A30.md:13",
+      "sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A30.md:14",
+      "sha256": "f95fa6fade82ba0dca4dab8e311fc61bb57b3267f3953b465c94228cb1315933"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A30.md:15",
+      "sha256": "23d28d28be3efdb748ca5e9b6fdccfec5f0677d3ff871516ef97c587e3186d6e"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A30.md:78",
+      "sha256": "70f1a221d08b1b784ea9d2ea11f963483666092662fbf24cbf51c8f855de1555"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A30.md:79",
+      "sha256": "f6d7244537a743b3059d20711fa249fc7b820aaf779130ca16754f00606f3e7b"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A30.md:80",
+      "sha256": "89acc6ed26fb0f8880ab5d3415090b235f26ba6fb2a43dd939d60aadaaea6d65"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A30.md:81",
+      "sha256": "ddb3c574332c22f2af79ba5bbb7e1c409b5c09bda59c8989bd02a5c1e3e9febd"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A30.md:82",
+      "sha256": "99fc2b7b33c17395f14d457545363d173775907ab60c3d1f4ad429f38dd48bd9"
+    },
+    {
+      "status": "PASS",
+      "label": "review version pin campaign/reviews/A30.md:83",
+      "sha256": "9362d2651a2c5923a3eb90897a10774a4721be7d1d57df9b4cf9171eabf60274"
+    },
+    {
+      "status": "WARN",
+      "label": "historical explicit-proof draft bytes not retained",
+      "report": "campaign/reviews/A07.md",
+      "line": 8,
+      "sha256": "9d0ef065e10642dbc8967870bdc3f368300424659f9316456355775264133287",
+      "current_path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+      "current_sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f",
+      "reason": "The earliest editable candidate was superseded before a separate snapshot was retained. Its recorded hash is preserved; no replacement bytes are claimed. Current version 2 retains the theorem and all estimates and explicitly adds gamma=0 and the finite-stopping-time likelihood convention. All current proof inputs and the full self-contained extension are retained and independently accepted.",
+      "historical_bytes_verified": false
+    },
+    {
+      "status": "WARN",
+      "label": "historical explicit-proof draft bytes not retained",
+      "report": "campaign/reviews/A08.md",
+      "line": 15,
+      "sha256": "9d0ef065e10642dbc8967870bdc3f368300424659f9316456355775264133287",
+      "current_path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+      "current_sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f",
+      "reason": "The earliest editable candidate was superseded before a separate snapshot was retained. Its recorded hash is preserved; no replacement bytes are claimed. Current version 2 retains the theorem and all estimates and explicitly adds gamma=0 and the finite-stopping-time likelihood convention. All current proof inputs and the full self-contained extension are retained and independently accepted.",
+      "historical_bytes_verified": false
+    },
+    {
+      "status": "WARN",
+      "label": "historical explicit-proof draft bytes not retained",
+      "report": "campaign/reviews/A09.md",
+      "line": 9,
+      "sha256": "9d0ef065e10642dbc8967870bdc3f368300424659f9316456355775264133287",
+      "current_path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+      "current_sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f",
+      "reason": "The earliest editable candidate was superseded before a separate snapshot was retained. Its recorded hash is preserved; no replacement bytes are claimed. Current version 2 retains the theorem and all estimates and explicitly adds gamma=0 and the finite-stopping-time likelihood convention. All current proof inputs and the full self-contained extension are retained and independently accepted.",
+      "historical_bytes_verified": false
+    },
+    {
+      "status": "WARN",
+      "label": "external primary-source cache intentionally not bundled",
+      "report": "campaign/reviews/A28.md",
+      "line": 26,
+      "sha256": "0645a0af6a1239c616c5af2c4289226cb50cc01fc90134cc6895753dfc146a43",
+      "url": "https://arxiv.org/pdf/0907.2261v2",
+      "reason": "Third-party primary-source paper or extracted reference text; cite original URL and retain evidence hash. Authored mathematical reviews are bundled in full.",
+      "bytes_reverified_in_this_audit": false
+    },
+    {
+      "status": "WARN",
+      "label": "external primary-source cache intentionally not bundled",
+      "report": "campaign/reviews/A28.md",
+      "line": 27,
+      "sha256": "7c989fd78dc5b38b5fb0342ff2e619184f91aa7d69c4a4b6ebe6f3215ef6cacc",
+      "url": "https://arxiv.org/pdf/0907.2261v2",
+      "reason": "Third-party primary-source paper or extracted reference text; cite original URL and retain evidence hash. Authored mathematical reviews are bundled in full.",
+      "bytes_reverified_in_this_audit": false
+    },
+    {
+      "status": "PASS",
+      "label": "review Markdown file/hash tables checked",
+      "entries": 64
+    },
+    {
+      "status": "PASS",
+      "label": "A08 exact rational checker re-executed on isolated exact copies",
+      "returncode": 0,
+      "stdout_sha256": "0ce9659af85da24205f7156b1ebd84f08e1b3f00e2669f8c2a80ddee2e68079c",
+      "output_sha256": "0ce9659af85da24205f7156b1ebd84f08e1b3f00e2669f8c2a80ddee2e68079c",
+      "stderr": ""
+    },
+    {
+      "status": "PASS",
+      "label": "A08 transcript and all 37 checks reproduce byte-for-byte"
+    },
+    {
+      "status": "PASS",
+      "label": "A08 author output was not overwritten"
+    },
+    {
+      "status": "PASS",
+      "label": "saved A13 endpoint sign evidence campaign/checks/A13_tail_index_certificate.json",
+      "issues": [],
+      "quadrature_reexecuted": false
+    },
+    {
+      "status": "PASS",
+      "label": "A13 source/script provenance campaign/checks/A13_tail_index_certificate.json",
+      "script_version": "historical v1"
+    },
+    {
+      "status": "PASS",
+      "label": "A13 declared precision/mesh campaign/checks/A13_tail_index_certificate.json"
+    },
+    {
+      "status": "PASS",
+      "label": "saved A13 endpoint sign evidence campaign/checks/A24_replayed_certificate.json",
+      "issues": [],
+      "quadrature_reexecuted": false
+    },
+    {
+      "status": "PASS",
+      "label": "A13 source/script provenance campaign/checks/A24_replayed_certificate.json",
+      "script_version": "historical v1"
+    },
+    {
+      "status": "PASS",
+      "label": "A13 declared precision/mesh campaign/checks/A24_replayed_certificate.json"
+    },
+    {
+      "status": "PASS",
+      "label": "historical A24 false-pass fixture is INVALID evidence and independently rejected",
+      "path": "campaign/checks/A24_optimized_falsepass.json",
+      "rejected_issues": [
+        "endpoint sign is not certified for eta=0.99",
+        "endpoint sign is not certified for eta=0.99",
+        "endpoint sign is not certified for eta=1",
+        "endpoint sign is not certified for eta=1",
+        "endpoint sign is not certified for eta=1.01",
+        "endpoint sign is not certified for eta=1.01"
+      ],
+      "classification": "INVALID_HISTORICAL_OPTIMIZED_FALSEPASS"
+    },
+    {
+      "status": "PASS",
+      "label": "current A13 unconditionally rejects optimized execution",
+      "flags": [
+        "-I",
+        "-O",
+        "-B"
+      ],
+      "PYTHONOPTIMIZE": null,
+      "returncode": 1,
+      "output_created": false
+    },
+    {
+      "status": "PASS",
+      "label": "current A13 unconditionally rejects optimized execution",
+      "flags": [
+        "-I",
+        "-OO",
+        "-B"
+      ],
+      "PYTHONOPTIMIZE": null,
+      "returncode": 1,
+      "output_created": false
+    },
+    {
+      "status": "PASS",
+      "label": "current A13 unconditionally rejects optimized execution",
+      "flags": [
+        "-B"
+      ],
+      "PYTHONOPTIMIZE": "1",
+      "returncode": 1,
+      "output_created": false
+    },
+    {
+      "status": "PENDING",
+      "label": "final file manifest was not requested; final package is not certified"
+    }
+  ],
+  "scope": "Local byte integrity, saved evidence consistency, A08 replay, optimized-A13 rejection; not formal proof or remote-state verification."
+}

@@ -1,0 +1,17 @@
+{
+  "helper_version": "B04-lead-verify-v1",
+  "frozen_at_utc": "2026-10-11T22:45:00Z",
+  "families": {
+    "P1_exhaustive_a1": "all ordered pairs (g_0,g_1) of Boolean functions on m data bits, m in {1,2,3}; F(x,y)=g_x(y), one fresh selector bit",
+    "P2_exhaustive_a2": "all 4-tuples (g_00,g_01,g_10,g_11) of Boolean functions on m data bits, m in {1,2}; two fresh selector bits",
+    "P3_lowenergy_a1_m4": "20000 pseudo-random pairs on m=4 data bits with g_1 = g_0 flipped on k points, k uniform in {1,2,3}; seed 20261011",
+    "P4_bent_splice": "g_0 = (-1)^{y1y2+y3y4+...} (inner-product bent) on m data bits, g_1 = g_0 with the all-zero point flipped; m in {2,4,6,8,10,12}; plus tensor squares (a=2) for m in {2,4}",
+    "P5_A017_independent": "300 pseudo-random (n,a,M,q) with n<=5, a<=3, q quadratic over F2; F=(-1)^q(x) y_(Mx); seed 7"
+  },
+  "case_counts": {"P1": "4^2+16^2+256^2 = 65808", "P2": "4^4+16^4 = 65792", "P3": 20000, "P4": "6 + 2", "P5": 300},
+  "symmetry_reduction": "none",
+  "arithmetic": "integer Walsh-Hadamard transforms (exact); influences as exact integers over 4^n; entropies in float64 for P1-P3,P5 (evidence only, the inequality is proved analytically); P4 entropies as mpmath interval enclosures of exact rational masses (certified) plus 60-digit values; sympy series for the all-m asymptotic",
+  "memory_estimate": "< 200 MB (largest array 65536 x 16 int64 = 8 MB)",
+  "max_runtime_seconds": 600,
+  "escalation": "none; no automatic increase of m or a"
+}

@@ -1,0 +1,64 @@
+{
+  "timestamp_utc": "2026-09-20T12:23:08Z",
+  "worker": "NM13-13",
+  "parent": "T04",
+  "model": "classical iid random 3-SAT, uniform proper signed 3-clauses",
+  "status": "OPEN/PARTIAL; CANDIDATE_FULL pending later independent review",
+  "runtime_model": "GPT-5.6 Sol",
+  "reasoning_effort": "UNVERIFIED",
+  "source_published_explicit_bracket_before": [3.52, 4.4898],
+  "source_published_explicit_bracket_after": [3.52, 4.4898],
+  "project_candidate_upper_before": 4.388865,
+  "project_candidate_upper_after": 4.38886365,
+  "project_candidate_endpoint_gain": 0.00000135,
+  "project_candidate_bracket_after": [3.52, 4.38886365],
+  "claim_id": "NM13-13-T04-PRODUCT-GAUSS9-REOPT-438886365-UPPER-10",
+  "mechanism": {
+    "name": "direct product-law nine-node Gaussian tail with survey reoptimization",
+    "description": "Keep the exact X=QQ' product-measure Gaussian lower envelope for the squared Hausdorff-moment tail, but optimize the symmetric five-support survey against that stronger objective rather than reusing the one-variable-optimal predecessor law.",
+    "alpha": "87777273/20000000",
+    "K": 2300,
+    "gauss_nodes": 9,
+    "support": ["651/100000", "789/10000", "1/2", "9211/10000", "99349/100000"],
+    "weights": ["5581/100000", "3669/20000", "13037/25000", "3669/20000", "5581/100000"],
+    "certified_A_K": "5.13683004634749097541305555246268e-5",
+    "certified_complete_tail_lower_bound": "5.13722299416926033848721073466304e-5",
+    "certified_A_upper": "<-3.92947821769363074155e-9",
+    "fixed_density_predecessor_survey_diagnostic_upper": "+1.1129168259968898e-7",
+    "fixed_density_objective_gain_diagnostic": "1.15221160817e-7"
+  },
+  "candidate_theorem": "Pr[Phi_{n,floor(4.38886365 n)} is satisfiable] -> 0",
+  "candidate_theorem_label": "CANDIDATE_FULL",
+  "fresh_source_checks": {
+    "lower": "Hajiaghayi-Sorkin 3.52",
+    "upper": "Diaz-Kirousis-Mitsche-Perez-Gimenez 4.4898",
+    "scaling_window": "Carenini ECCC TR26-145, O(n/log n), does not locate fixed-k=3 center",
+    "gibbs_uniqueness": "Chatterjee et al. 2026 is a distinct threshold"
+  },
+  "preserved_failures": [
+    "arbitrary rescue stars fail composition",
+    "anchored degree-one rescue matching not globally reoptimized in Diaz type polytope",
+    "positive clause-local second moments hit identical-pair barrier 3.10628...",
+    "sublinear solution-ball quotienting gives only exp(o(n))",
+    "whole-component quotienting leaves uncontrolled overlap moment",
+    "whitening/core counting lacks uniform exponential multiplicity theorem",
+    "q-binomial radius-two route only about 4.5923",
+    "equal-weight two-support hard-field survey stalls near 4.4178"
+  ],
+  "companion_nm13_06": "Exact A/B dual-Horn union closure and seed/orientation closure criterion; C-promotions and D-forbidden triples are constructive globalization obstruction; make-minus-break one-flip rule.",
+  "report": {
+    "path": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/2026-09-20T12-23-08Z__t04_product_gauss9_survey_reopt_438886365.md",
+    "commit": "a8f4c57b6148616ddc5aa9e06634b90da27a7494"
+  },
+  "artifacts": [
+    {
+      "path": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T12-23-08Z__product_gauss9_reopt_438886365_interval.py",
+      "commit": "dce2f4dba21176e8bf4164f3c8056bfebeeea404"
+    },
+    {
+      "path": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T12-23-08Z__product_gauss9_reopt_438886365_interval.out",
+      "commit": "3383cb25d310d3b637a06b5ca4a8c4ebcebb71e8"
+    }
+  ],
+  "next_attack": "Optimize a symmetric seven-support rational survey directly against the product-law Gauss9 objective; continue only if the mechanism gain is materially larger than 1.15e-7, otherwise switch to a stronger finite-Hankel complete-tail envelope."
+}

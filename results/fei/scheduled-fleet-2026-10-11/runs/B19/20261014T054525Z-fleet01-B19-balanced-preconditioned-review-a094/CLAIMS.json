@@ -1,0 +1,40 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B19",
+  "primary_packet_id": "A094",
+  "claims": [
+    {
+      "claim_id": "B19-A094-B05-BALANCED-PRECONDITIONED-REVIEW",
+      "version": "v1",
+      "exact_statement": "Independent reconstruction accepts B05-A023-BALANCED-PRECONDITIONED-ACTIVATION-v1 without repair: for every genuine Boolean q, fresh uniform y,z, 0<eta<=1, and c>=3/2+eta, L_{c,eta}(T(q))<=L_{c,eta}(q)/2. At eta=1/4,c=7/4 this yields GU(15/4,3/4) only on the generated fresh/disjoint proper class.",
+      "hypotheses": [
+        "Uniform finite cube and genuine sign-valued Boolean q",
+        "Fresh independent balancing character y and fresh fair selector z",
+        "0<eta<=1 and c>=3/2+eta",
+        "Every inserted child has an already-paid L residual",
+        "Disjoint variable blocks for product closure"
+      ],
+      "statement_sha256": "8773b7d9e31d3231eb0079ab72a1b0254be48d20445ae2bac90c7c97aa69328c",
+      "contributors": ["fleet01/B19"],
+      "proof_source": "PROOF_AUDIT.md",
+      "proof_dependencies": [
+        "B05-A023-ACTIVATION-SMR-v1 exact recurrence, independently reconstructed in the prior B19 review",
+        "U-universal Theorem G and GU restriction-induction scope"
+      ],
+      "review_records": [
+        {
+          "reviewer": "fleet01/B19",
+          "target": "B05-A023-BALANCED-PRECONDITIONED-ACTIVATION-v1",
+          "verdict": "ACCEPTED_AT_DECLARED_PROPER_CLASS_SCOPE",
+          "material_repair": false
+        }
+      ],
+      "status": "INDEPENDENTLY_ACCEPTED_ONE_REVIEW",
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": "Replace the fresh balancing character by a reused physical coordinate, or control both A(q) and A(-q) descendants in a restriction-closed ledger.",
+      "next_consumers": ["A087", "A090", "A095", "A099", "B01", "B05", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

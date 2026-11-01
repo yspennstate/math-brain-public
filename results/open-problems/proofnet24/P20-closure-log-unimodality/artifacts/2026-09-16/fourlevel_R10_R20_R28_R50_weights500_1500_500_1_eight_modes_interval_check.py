@@ -1,0 +1,184 @@
+#!/usr/bin/env python3
+"""Certified interval core for P20 / I0081 eight-mode counterexample.
+
+Input logarithmic density:
+    h(y)=2501/98100 for |y|<=10,
+         2001/98100 for 10<|y|<=20,
+          501/98100 for 20<|y|<=28,
+            1/98100 for 28<|y|<=50,
+            0 otherwise.
+For rho=mu boxtimes mu, certify the physical-boundary derivative signs
+    g'(8)>0, g'(18)<0,
+    g'(29)>0, g'(37)<0,
+    g'(46)>0, g'(48)<0,
+    g'(53)>0, g'(54)<0.
+
+Exact rational admissibility is checked by Fraction.
+Each analytic root box is certified by a contraction/Krawczyk inclusion
+using mpmath interval arithmetic with outward rounding.
+"""
+from fractions import Fraction
+import mpmath as mp
+
+mp.mp.dps = 130
+mp.iv.dps = 90
+iv = mp.iv
+
+# Indicator representation h=sum_j a_j 1_{[-R_j,R_j]}.
+RATS = ((10,500),(20,1500),(28,500),(50,1))
+N = 2*sum(R*w for R,w in RATS)
+assert N == 98100
+coeff = [Fraction(w,N) for R,w in RATS]
+# Plateau heights.
+h1=sum(coeff)
+h2=sum(coeff[1:])
+h3=sum(coeff[2:])
+h4=coeff[3]
+assert (h1,h2,h3,h4)==(Fraction(2501,98100),Fraction(2001,98100),Fraction(501,98100),Fraction(1,98100))
+assert 20*h1 + 20*h2 + 16*h3 + 44*h4 == 1
+assert h1 > h2 > h3 > h4 > 0
+
+DATA = {
+8: {
+"qre":"0.0013019849010239728319469473660824459877818644795100190684327956589186480253908414421474916655380542649936786044",
+"qim":"0.014689038915171646374118994477100182197596878546044211360380615426503545547199285549331735910469345380660859883",
+"cre":"2.000995693026963547122832463685007259737587278952627827178725435350178761655746316475052454045411797743480052",
+"cim":"23.122946379957011745068563720451704645070597163454227382444430021981918668020305519474716579163110652575179678",
+"sign":1},
+18:{
+"qre":"0.0000075257206648464191178755593933788080649253658736861697508198393652833744072011988612703257207858499090169141419",
+"qim":"0.000072717041837252493759871199347258154266576172126590466844770864505509500253972940868593691574176554585674001607",
+"cre":"264.2431815698943692925702089279344369349480061744078961769973192741453815829132188857595646813211916132167049",
+"cim":"2546.9932409046955275998347826821262754593648506448477631866590480171066115823027563956001496323201277040950093",
+"sign":-1},
+29:{
+"qre":"0.000000029607402854054593495788768519867707948308415461872220501919432657680667870940874341300491869168201514874417959",
+"qim":"0.00000019989272552731322550087882155746727774798047986827444657952978705728378701068808707712389554138283302844169172",
+"cre":"55391.304053823035180717572614049239232342190076288781942342650195687895487768923072033311319619471828406293411",
+"cim":"429527.14051618134045131815525002714609820385145929154963670638547205077944770093428972266319253835494875810122",
+"sign":1},
+37:{
+"qre":"0.00000000053666314734155107277908460958984079749205892189168605009416590156459216705033213121876622584500514395130323611",
+"qim":"0.0000000020516333765654824331452013976132791317581996941889098103564661743767263410682636596606204548789227806296623666",
+"cre":"4316591.3039891090579849666758440007153602677779824177985180958709545256139258462175392573177725839005709926549",
+"cim":"14269805.072537734614924291362248803512408229108840177961699266466554198100935513114402793941827233493134309896",
+"sign":-1},
+46:{
+"qre":"0.0000000000037715287047621712963198033340756414584607770520306856536330357078588447523960007526687035626342451447172111548",
+"qim":"0.000000000013362592377571539238627671605749558633293774940090713004159558150748892507454060703580633049685465374637506897",
+"cre":"150622977.38912996462430078700118150509632842286875918939863178894471135376212232646707097028077801175282515891",
+"cim":"740305996.77844121635071322196266731362643110127280672543044364139471476917976172800610495568936992384698673484",
+"sign":1},
+48:{
+"qre":"0.0000000000016778221863349639406645218246697711910814020096408391326970576043358665525558749973185680339817397344624584084",
+"qim":"0.0000000000040170447132072956982829557439461677284813444889211400266628449704613122987189083760936342056150811717472845676",
+"cre":"457814039.15638444236414281870324989590803026772818420032101033077830405498970169652980423167614099033811936363",
+"cim":"1759467985.0135308647953466692708902540065973236133124143310500628092277525967626555818216516487807737059997532",
+"sign":-1},
+53:{
+"qre":"0.000000000000042808726260726883374671724037230476950916242343114442633286266599600270589635215768173007842596312109631055703",
+"qim":"0.000000000000025173154132369953687822826988052929694827949017863804498516365827235976410386973866377211009002357784474051853",
+"cre":"5179732836.0552162785002781277693082860590732214630173896098289207577956685678191252429853369100408452040304792",
+"cim":"-1358511564.5410176863662913691464886606203190386870416958449478268782892305587079429101392837808911121678228309",
+"sign":1},
+54:{
+"qre":"0.000000000000015029161999008395864456619087831132318907612676050789658296728454538268272667853491161104062194480539759735823",
+"qim":"0.000000000000022706622530890787455037416939040991601682219725257298308712803364026438740974859088378477474643284943375236879",
+"cre":"4228701802.9683836037242710186483719747028841090560877281165251152120008446145420254455612189212461105452799136",
+"cim":"2294329833.9347677609456131620564403084255724349683110625713123751894885318654031881691728518071397975567549027",
+"sign":-1},
+}
+RADIUS=iv.mpf("1e-30")
+
+def positive(x): return x.a > 0
+def negative(x): return x.b < 0
+def less_than(x,c): return x.b < iv.mpf(str(c))
+def strict_contains(outer,inner):
+    return (outer.real.a < inner.real.a and inner.real.b < outer.real.b
+            and outer.imag.a < inner.imag.a and inner.imag.b < outer.imag.b)
+def abs2(z): return z.real**2+z.imag**2
+
+def F(R,z):
+    R=iv.mpf(R); ep=iv.exp(R); em=iv.exp(-R)
+    return 2*R-iv.log(1-z*ep)+iv.log(1-z*em)
+def Fp(R,z):
+    R=iv.mpf(R); ep=iv.exp(R); em=iv.exp(-R)
+    return ep/(1-z*ep)-em/(1-z*em)
+def M(z):
+    return (500*F(10,z)+1500*F(20,z)+500*F(28,z)+F(50,z))/98100
+def Mp(z):
+    return (500*Fp(10,z)+1500*Fp(20,z)+500*Fp(28,z)+Fp(50,z))/98100
+def eta(z):
+    mz=M(z); return 1-1/mz
+def etap(z):
+    mz=M(z); return Mp(z)/mz**2
+def H(z):
+    ez=eta(z); return z**2/ez
+def Hp(z):
+    ez=eta(z); ep=etap(z)
+    return 2*z/ez-z**2*ep/ez**2
+def density_and_derivative(y,z):
+    s=iv.exp(-iv.mpf(y)); w=eta(z)
+    qy=-s/Hp(z); wy=etap(z)*qy
+    g=iv.im(1/(1-w))/iv.pi
+    gp=iv.im(wy/(1-w)**2)/iv.pi
+    return g,gp,w
+
+print("P20 I0081 four-level R=(10,20,28,50), weights=(500,1500,500,1), eight-mode interval core")
+print("mpmath version:",mp.__version__)
+print("interval dps:",mp.iv.dps)
+print("exact normalization denominator:",N)
+print("exact plateau heights:",h1,h2,h3,h4)
+print("exact total mass:",20*h1+20*h2+16*h3+44*h4)
+print("root-box radius:",RADIUS)
+
+all_ok=True
+for y in (8,18,29,37,46,48,53,54):
+    d=DATA[y]
+    r0=iv.mpf(d["qre"]); i0=iv.mpf(d["qim"])
+    q0=iv.mpc(r0,i0)
+    C=iv.mpc(iv.mpf(d["cre"]),iv.mpf(d["cim"]))
+    X=iv.mpc([r0.a-RADIUS.b,r0.b+RADIUS.b],[i0.a-RADIUS.b,i0.b+RADIUS.b])
+    s=iv.exp(-iv.mpf(y))
+    branch_ok=True
+    for R in (10,20,28,50):
+        ep=iv.exp(iv.mpf(R)); em=iv.exp(-iv.mpf(R))
+        branch_ok &= negative((1-X*ep).imag)
+        branch_ok &= negative((1-X*em).imag)
+    mz=M(X); ez=eta(X); hp=Hp(X)
+    denominator_ok=positive(abs2(mz)) and positive(abs2(ez)) and positive(abs2(hp))
+    f0=H(q0)-s
+    contraction_factor=1-C*hp
+    K=q0-C*f0+contraction_factor*(X-q0)
+    inclusion=strict_contains(X,K)
+    contraction_sq=abs2(contraction_factor)
+    contraction_ok=less_than(contraction_sq,1)
+    g,gp,w=density_and_derivative(y,X)
+    upper_half_plane=positive(X.imag)
+    w_inside_unit=less_than(abs2(w),1)
+    one_minus_w_ok=positive(abs2(1-w))
+    density_positive=positive(g)
+    derivative_sign=positive(gp) if d["sign"]>0 else negative(gp)
+    ok=all([branch_ok,denominator_ok,inclusion,contraction_ok,upper_half_plane,
+            w_inside_unit,one_minus_w_ok,density_positive,derivative_sign])
+    all_ok &= ok
+    print("\ny =",y)
+    print("X.real =",X.real)
+    print("X.imag =",X.imag)
+    print("principal-log branch safe:",branch_ok)
+    print("denominators nonzero:",denominator_ok)
+    print("K.rawczyk.real =",K.real)
+    print("K.rawczyk.imag =",K.imag)
+    print("K(X) subset int(X):",inclusion)
+    print("|1-C Hprime(X)|^2 =",contraction_sq," <1:",contraction_ok)
+    print("Im X > 0:",upper_half_plane)
+    print("|w|^2 =",abs2(w)," <1:",w_inside_unit)
+    print("|1-w|^2 =",abs2(1-w)," nonzero:",one_minus_w_ok)
+    print("g(y) =",g," positive:",density_positive)
+    print("gprime(y) =",gp," expected sign:",d["sign"]," PASS:",derivative_sign)
+    print("H(q0)-exp(-y) =",f0)
+    print("POINT CERTIFICATE PASS:",ok)
+
+assert all_ok
+print("\nALL_INTERVAL_CHECKS_PASS")
+print("Certified sign pattern: gprime(8)>0, gprime(18)<0, gprime(29)>0, gprime(37)<0, gprime(46)>0, gprime(48)<0, gprime(53)>0, gprime(54)<0.")

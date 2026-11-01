@@ -1,0 +1,2 @@
+STATE: A020 stage6 saved: SAME reference all private prefixes paid; signed reserve>5/4, original half-bank leaves>1/32; nonconstant local eligibility false k>=8;6 families/832 exact assertions PASS; FEI OPEN, review pending.
+NEXT: Replace point event by one unequal-spectrum activation with SAME reference/source bank; A016/A019 review all-prefix proof, A090/A091/A094 audit signed terminals; do not require local eligibility.

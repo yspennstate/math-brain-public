@@ -1,0 +1,15 @@
+{
+  "helper_version": "phase-erasure-v1",
+  "family": "All fourth-root-valued F on m=0,1,2,3 retained physical bits, equivalently all actual Boolean splits of n=m+1 cubes; dense bent M=I+J r=2,4; bent one-point phase splits m=2,4,6; one rational normalized non-Boolean diagnostic",
+  "parameter_domain": "Exhaustive pilot m=0..2; fixed full search m=0..3 after pilot; targeted families dimensions as stated, never raised automatically",
+  "case_count": {"pilot": 276, "full": 65812, "dense_bent": 2, "bent_surgery": 3, "non_boolean": 1},
+  "symmetry": "None; all 4^(2^m) phase tables retained; one distinguished coordinate encodes every split",
+  "arithmetic": "Integer real/imaginary Walsh, full signed convolution, integer boundary and fourth-root identities; rational log intervals with proved atanh tail; float entropy permitted only as exploratory display, never a sign certificate",
+  "memory_estimate": "Under 60 MB, streamed tables and rational logs cached; no memok threshold crossed",
+  "pilot_max_runtime_seconds": 60,
+  "full_max_runtime_seconds": 300,
+  "heavy_jobs_at_once": 1,
+  "command_pilot": "python -X utf8 code/check_phase.py --pilot",
+  "command_full": "python -X utf8 code/check_phase.py --full",
+  "purpose": "Check fourth-root encoding, signed imaginary cancellation, phase-square energy, and all credit identities; verify exact dense-bent obstruction and rational entropy certificates for sharpness family"
+}

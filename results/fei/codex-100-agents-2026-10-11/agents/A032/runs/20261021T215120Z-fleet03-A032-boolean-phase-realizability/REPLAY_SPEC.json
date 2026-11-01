@@ -1,0 +1,12 @@
+{
+  "helper_version": "A032-policy-histogram-v1",
+  "actual_Boolean_family": "same fixed controller with constant seed, whose arbitrary-seed cancellation is independently checked in check.py",
+  "parameter_domain": "all deterministic adaptive trees querying only remaining four u coordinates, with stop permitted at every state",
+  "case_count": 238145,
+  "symmetry": "No symmetry. Identical exact cost pairs are aggregated WITH multiplicities; recurrence T0=1,Td=1+d*T(d-1)^2.",
+  "arithmetic": "Independent fast integer Walsh implementation; entropy as exact rational coefficients of log2(2),log2(3); sign by integer-power comparison after denominator clearing, independent of first checker's log intervals.",
+  "memory_estimate_MB": 90,
+  "pilot_max_seconds": 60,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false
+}

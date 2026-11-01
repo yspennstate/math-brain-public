@@ -1,0 +1,192 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\title{A009: fixed-posterior fractional incidence certificates}
+\author{A009, stream B02}\maketitle
+All entropy units are bits except the explicitly natural-unit program.
+This is provisional continuation evidence for A006/A007, pending independent
+review. Full FEI is open. Complete source locators and the full ledger are
+in \texttt{REPORT.md}.
+
+Fix actual partition-forest laws for a finite nonconstant gate union.
+Let $v$ be nonempty spectral mass, $c_l$ expected use of gate $l$,
+$\pi_l>0$ its root parameter, and $A_{jl}=1_{j\in R_l}$.
+Remove unused gates if necessary. Every retained support is nonempty.
+For a constant-false gate removal is mandatory; a constant-true gate makes
+the Boolean function constant. Duplicate supports retain separate columns.
+The entire weight-dependent residual is
+\[
+ R(\lambda)=d+\frac{F(\ln\lambda)}{\ln2},\quad
+ F(t)=v\ln D(e^t)-\sum_lc_lt_l,\quad
+ D(\lambda)=\prod_l(1+\pi_l\lambda_l)-1.
+\]
+Here $d$ retains all ranks, subset congestion, cover multiplicity, root
+rarity, and minus the entropy of the laws on distinct actual runs.
+
+\begin{theorem}[Fixed-law convex primal and dual certificate]
+The program minimizing $F(t)$ subject to
+$\sum_l A_{jl}e^{t_l}\le1$ is convex. For a probability distribution $\nu$
+on nonempty root sets, put $r_l=\Pr_\nu(l\in R)$. For $y_j\ge0$, put
+$q_l=\sum_j A_{jl}y_j$ and $b_l=c_l-vr_l$. If $b_l\ge0$, and
+$q_l>0$ whenever $b_l>0$, a lower bound on the infimum is
+\[
+ L(\nu,y)=v\left(H_{\rm nat}(\nu)+\sum_lr_l\ln\pi_l\right)
+ -\sum_jy_j+\sum_{l:b_l>0}b_l\left(1+\ln\frac{q_l}{b_l}\right).
+\]
+For positive feasible $\lambda$, take
+\[
+ \nu_*(R)=\frac{\prod_{l\in R}\pi_l\lambda_l}{D(\lambda)},\qquad
+ r_l=\frac{\pi_l\lambda_l\prod_{k\ne l}(1+\pi_k\lambda_k)}{D(\lambda)}.
+\]
+If $c_l-vr_l=\lambda_lq_l$ and
+$y_j(\sum_l A_{jl}\lambda_l-1)=0$, then $L(\nu_*,y)=F(\ln\lambda)$.
+Thus these identities certify exact global optimality.
+\end{theorem}
+\begin{proof}
+Expansion expresses $\ln D(e^t)$ as a log-sum-exp over nonempty subsets,
+so $F$ and the constraints are convex. Gibbs gives
+$\ln D(e^t)\ge H_{\rm nat}(\nu)+\sum_l r_l(t_l+\ln\pi_l)$.
+Add the nonpositive-on-feasible-points quantity
+$\sum_jy_j(\sum_l A_{jl}e^{t_l}-1)$ and take the unconstrained infimum.
+Each term is $-b_lt_l+q_le^{t_l}$; its infimum is
+$b_l(1+\ln(q_l/b_l))$ if $b_l,q_l>0$, and zero if $b_l=0$.
+The stated equalities give equality in Gibbs, every scalar infimum, and
+the coordinate-price inequality. No minimax interchange is needed.
+\end{proof}
+
+For the actual Boolean instance below with $(r,m)=(1,2)$,
+$v=15/16$, $c_l=17/32$, $\pi_l=1/4$, $\lambda_l=1/2$,
+$r_l=9/17$, and the sole nonzero coordinate price $y=19/272$ satisfy
+the theorem by rational arithmetic. Other illustrative abstract
+certificates are not claimed Boolean-realizable.
+
+\begin{proposition}[The optimized posterior changes convexity]
+For the duplicate-dictator representation $x_1=x_1\vee x_1$, the
+posterior-optimized natural-unit residual is
+\[
+ \ln\left(1+\frac{\lambda_1\lambda_2}{2(\lambda_1+\lambda_2)}\right).
+\]
+With $\lambda_1=e^{t+s}$, $\lambda_2=e^{t-s}$ this is
+$\ln(1+e^t/(4\cosh s))$. Its second $s$ derivative at
+$t=\ln(1/4)$, $s=0$ is $-1/17$, in the strict feasible interior.
+The joint posterior-optimized objective is therefore nonconvex.
+\end{proposition}
+\begin{proof}
+There are precisely two runs for the singleton spectral set, with
+$2^{-B_l}=\lambda_l/2$. The finite Gibbs optimum is minus the
+logarithm of their sum. Divide the expanded root normalizer $D$
+by this sum and differentiate the displayed formula.
+\end{proof}
+
+\begin{theorem}[Complete shared-core singleton certificate]
+For every $r,m\ge1$, let $f=2A_rB_m-1$, where $A_r$ is a core
+conjunction and $B_m$ an OR of private literals on disjoint fair inputs.
+Use the $m$ distinct conjunction gates $A_r\wedge x_l$, with core-first
+orders, one cover per gate, and $\lambda_l=1/m$. The conditioned
+posterior forest residual admits actual laws with
+\[
+ R\le 8 I(f).
+\]
+A normalized prior on complete scaled references can be paid with
+$R+\text{prior cost}\le10I(f)$. These functions already have read-once
+formula representations; the result certifies their DNF of read $m$.
+\end{theorem}
+\begin{proof}
+Write $p=2^{-r}$, $q=2^{-m}$, $b=1-q$, $\gamma=6/5$.
+The exact law on a nonempty set $U\cup T$ is $4p^2b^2$ if
+$T=\varnothing$, and $4p^2q^2$ otherwise. Consequently
+\[
+ v=4pb(1-pb),\quad I_c=2rpb,\quad I_d=2pmq.
+\]
+For nonempty $U$ and empty $T$, average over all $m$ single roots.
+For both nonempty, average over the $|T|!$ actual star runs, choosing
+the root among touched private gates and all child-label orders.
+For empty $U$, all touched private gates are forced roots and the run
+is unique. Every selected subset is disjoint, and every used gate is
+visited once. The star root reaches all used gates through a selected
+core coordinate, so these are valid source-component forests.
+
+The root count $K$ obeys
+$E K-v=4p^2q(m/2-b)\le pI_d$.
+Since $D=(1+p/(2m))^m-1$, expansion and the exponential integral give
+$\log_2D=-(r+1)+\delta$ with $0\le\delta\le(p/2)\log_2 e$.
+Thus the normalization and root rarity together cost at most
+$I_d+(\log_2e)I_c$, using $(r+1)p\le1$ and $v\le4pb$.
+
+For a selected core rank $j$, its predecessor count is
+$\operatorname{Bin}(j-1,1/2)$, and
+$E[1/(1+\operatorname{Bin})]=2(1-2^{-j})/j$.
+Jensen implies expected log-rank discrepancy at most one bit
+conditional on selection. Summing its contribution under the exact
+Fourier law pays all core ranks by $\gamma I_c$.
+For each private leaf its congestion and rank terms combine into
+$\gamma\log_2(r+1)$; the inside root has no larger cost.
+They sum to at most $\gamma\log_2(r+1)I_d\le\gamma I_c$, since
+$m2^{-m}\le1/2$, $b\ge1/2$, and $\log_2(r+1)\le r$.
+The core-only posterior entropy cancels the label cost exactly.
+The remaining labels minus entropy cost at most
+$I_d\log_2m\le4p\le4I_c$, by $\log_2m\le m$ and $m^2/2^m\le2$.
+All terms have been retained, so
+\[
+ R\le(4+2\gamma+\log_2e)I_c+I_d<8(I_c+I_d).
+\]
+Finally weights $w_j=1/[(j+1)(j+2)]$ on complete references with
+$\lambda_l^{(j)}=2^{-j}/m$ sum to one. Choosing $j=0$ pays $v\le2I$.
+\end{proof}
+\section*{Lead-directed outer-pressure test}
+The B02 lead assigned the outer fractional pressure
+$P=(48/5)\sum_j\alpha_j\log_2 S_j$, where
+$S_j=\sum_l\sqrt{q_{j,l}}\lambda_l^{-11/48}$.
+For the one-core sunflower, the first-positive-index tie gives
+$q_{0,l}=2^{-l}/(1-2^{-m})$, and each private derivative has a
+unique gate. The global vector $\lambda_l=2^{-l}$ obeys all rows.
+Its common sum is at most $\sqrt2/(2^{13/48}-1)<9$, and its private
+log costs are $11l/48$. Thus $P<41I$, a calibration on a known FEI class.
+
+\begin{proposition}[Affine-plane pressure obstruction]
+For every prime power $Q\ge16$, let $f_Q$ be the OR of all line
+conjunctions in the affine plane over $\mathbb F_Q$. These are its
+prime implicants. For any disjoint pivotal tie decomposition and every
+global feasible incidence vector,
+\[
+ P\ge7 I(f_Q)\log_2\frac{Q+1}{2}.
+\]
+Uniform weights give $P\le7I(f_Q)\log_2(Q+1)$.
+\end{proposition}
+\begin{proof}
+There are $Q(Q+1)$ lines and $Q+1$ through each point. Fix a point $j$
+and condition on the other $Q-1$ points of one incident line being
+positive. Each alternative incident line is ready with probability
+$2^{-(Q-1)}$; each nonincident line has at most one forced point,
+so its full-positive probability is at most $2^{-(Q-1)}$.
+The union bound leaves clean probability at least $1-\epsilon_Q$,
+where $\epsilon_Q=Q(Q+1)2^{-(Q-1)}<1/2$.
+Clean events for distinct incident lines are disjoint and make $j$
+pivotal. Thus $\alpha_j\ge(Q+1)2^{-(Q-1)}(1-\epsilon_Q)$.
+Any tie piece is supported where its incident line is ready, so its
+normalized squared mass is at most $2/(Q+1)$.
+Write $k=Q+1$, $a=11/48$, $\beta=24/59$.
+H\"older and $\sum_l\lambda_l\le1$ give
+\[
+ S_j\ge\left(\sum_l q_{j,l}^{\beta}\right)^{1+a}
+ \ge(k/2)^{35/48}.
+\]
+Use $q_l^\beta=(\sqrt{q_l}\lambda_l^{-a})^{1/(1+a)}
+\lambda_l^{a/(1+a)}$ for the first step, and
+$q_l^\beta\ge q_l(2/k)^{\beta-1}$ for the second.
+Multiply by $(48/5)\alpha_j$ and sum. For uniform $\lambda=1/k$,
+Cauchy gives $\sum\sqrt q\le\sqrt k$, proving the upper bound.
+The rational bound on $\epsilon_Q$ holds at $Q=16$ and decreases
+with ratio $(Q+2)/(2Q)<1$ thereafter.
+\end{proof}
+This is a lower bound for the positive coordinatewise pressure only,
+not for the full expression with $v\log Z$, whole-set forest cost,
+PI-J, or actual Fourier entropy divided by influence.
+
+The finite Walsh and rational-log checks are supporting certificates,
+not the all-parameter proof. Arbitrary overlapping base gates do not
+have the binomial/private-label law just used. Paying their full
+expected structural cost remains the universal bridge.
+\end{document}

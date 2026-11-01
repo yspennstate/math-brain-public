@@ -1,0 +1,160 @@
+\section*{Signed Boolean restriction KL and tensor-prime reduction for GU}
+
+All logarithms are base two.  For a Boolean function $f$ write
+\[
+ p(S)=\widehat f(S)^2,
+ \qquad \pi(S)=\sum_{T\supseteq S}p(T),
+ \qquad U(f)=\sum_Sp(S)\log{\pi(S)\over p(S)},
+\]
+\[
+ I(f)=\sum_S|S|p(S),
+ \qquad
+ G(f)=\sum_i\left(U(f)-{U(f_{i,+})+U(f_{i,-})\over2}\right).
+\]
+
+\subsection*{Exact signed local identity}
+
+Fix a physical coordinate $i$.  For $A\subseteq[n]\setminus\{i\}$ put
+\[
+ a_A=\widehat f(A),\quad b_A=\widehat f(A\cup\{i\}),\quad
+ m_A=a_A^2+b_A^2,
+\]
+and define the upper sums
+\[
+ M_A=\sum_{T\supseteq A}(a_T^2+b_T^2),\quad
+ N_A=\sum_{T\supseteq A}b_T^2,\quad
+ C_A=\sum_{T\supseteq A}a_Tb_T.                     \tag{1}
+\]
+The Boolean convolution identity $\widehat{f^2}(\{i\})=0$ is
+\[
+ \boxed{C_\varnothing=\sum_Aa_Ab_A=0.}              \tag{2}
+\]
+Consequently the two physical restriction spectra
+$(a_A+b_A)^2$ and $(a_A-b_A)^2$ are both normalized probability laws.
+
+On rows with $m_A>0$ put
+\[
+ \alpha_A={2a_Ab_A\over m_A},\qquad
+ \beta_A={2C_A\over M_A}.                            \tag{3}
+\]
+The coefficient and upper-mass asymmetries are therefore genuine binary
+parameters in $[-1,1]$.  Direct expansion gives
+\[
+ \boxed{
+ K_i:=U(m)-{U(f_{i,+})+U(f_{i,-})\over2}
+ =\sum_A m_A D_2\left({1+\alpha_A\over2}\middle\|
+                       {1+\beta_A\over2}\right)\ge0.} \tag{4}
+\]
+Here $U(m)=\sum_Am_A\log(M_A/m_A)$ and $D_2$ is binary KL divergence.
+No absolute values are taken before the signed sums $C_A$ are formed.
+
+If
+\[
+ B_i=\sum_A m_A h_2\left({b_A^2\over m_A}\right),
+ \qquad
+ \Gamma_i=\sum_A b_A^2\log{M_A\over N_A},            \tag{5}
+\]
+with zero terms omitted, then a second direct expansion yields
+\[
+ U(f)-U(m)=B_i-\Gamma_i.
+\]
+Thus
+\[
+ \boxed{\Delta_iU=B_i-\Gamma_i+K_i.}                 \tag{6}
+\]
+Equations (2)--(6) exhibit exactly where classical signed Booleanity enters
+the GU problem: the difficult KL term compares each local phase
+asymmetry $\alpha_A$ with its signed upper-set average $\beta_A$, while
+$\beta_\varnothing=0$ is forced by $f^2=1$.
+
+\subsection*{Tensor additivity of the complete GU aggregate}
+
+Let $g$ and $h$ be Boolean functions on disjoint physical cubes and put
+$F(x,y)=g(x)h(y)$.  The Fourier and upper-set laws factor:
+\[
+ p_F(A\cup B)=p_g(A)p_h(B),\qquad
+ \pi_F(A\cup B)=\pi_g(A)\pi_h(B).                    \tag{7}
+\]
+It follows immediately that
+\[
+ \boxed{U(F)=U(g)+U(h),\qquad I(F)=I(g)+I(h).}        \tag{8}
+\]
+If $i$ is a coordinate of $g$, then
+$F_{i,\pm}=g_{i,\pm}h$, so (8) also gives
+\[
+ \Delta_iU(F)=\Delta_iU(g).
+\]
+The analogous statement holds on the $h$ block.  Summing over all physical
+coordinates proves
+\[
+ \boxed{G(F)=G(g)+G(h).}                              \tag{9}
+\]
+
+Therefore, for any fixed $a\ge0$ and $0\le b<1$, the residual
+\[
+ \mathcal R_{a,b}(f)=G(f)-aI(f)-bU(f)                 \tag{10}
+\]
+is exactly additive under disjoint Boolean tensor products.  In particular:
+
+\begin{enumerate}
+\item if $G\le aI+bU$ holds for each tensor-prime Boolean factor, it holds
+      for every Boolean function with the same pair $(a,b)$;
+\item any positive-residual counterexample has a tensor-prime factor with
+      positive residual;
+\item tensor powers cannot hide a failed constant or create a new one.
+\end{enumerate}
+
+This is a genuine reduction because recursively splitting a nontrivial
+disjoint-variable product terminates after finitely many variables.
+
+\subsection*{Character lifts cost no GU debt}
+
+Let $R$ be any set of fresh address coordinates and
+\[
+ F(a,y)=\chi_R(a)g(y).                                \tag{11}
+\]
+The character is a tensor factor with
+\[
+ U(\chi_R)=G(\chi_R)=0,\qquad I(\chi_R)=|R|.
+\]
+Hence
+\[
+ \boxed{U(F)=U(g),\qquad G(F)=G(g),\qquad
+ I(F)=I(g)+|R|.}                                      \tag{12}
+\]
+Thus every GU pair valid for the core $g$ is valid, with extra slack
+$a|R|$, for arbitrary character-lift arity.  The same statement can be
+seen locally: address restrictions have identical squared child spectra,
+so their signed parameters in (3) give $K_i=0$ and $\Delta_iU=0$.
+
+This resolves, for the GU route, the character-lift obstruction that
+invalidated bounded sponsor reuse in the preceding conditional-entropy
+ledger.  An arbitrary inherited Boolean core is transported exactly; its
+GU debt is not charged again at the address block.
+
+\subsection*{Complete implication and remaining inequality}
+
+It is enough to prove on tensor-prime genuine Boolean functions one pair
+$a<\infty$, $0\le b<1$ such that the exact signed aggregate inequality
+\[
+ \boxed{
+ \sum_i\sum_A m_{i,A}
+ D_2\left({1+\alpha_{i,A}\over2}\middle\|
+           {1+\beta_{i,A}\over2}\right)
+ \le aI+bU+\sum_i(\Gamma_i-B_i)}                     \tag{13}
+\]
+holds.  By (6), (13) is precisely $G\le aI+bU$.  Tensor additivity then
+extends it to every Boolean function.  The source-reviewed GU reduction
+would give
+\[
+ U(f)\le {a\over1-b}I(f),\qquad
+ H(f)\le\left(2+{2a\over1-b}\right)I(f).             \tag{14}
+\]
+
+Inequality (13) remains open.  The mathematical movement here is that
+exact tensor and character-lift inheritance has been removed from its
+scope with no arity, reuse, depth, or correlation-gap loss.  The next
+Boolean-specific step must control the signed upper correlations $C_A$ on
+tensor-prime sources; an arbitrary spectral-law relaxation loses (2) and
+is outside the claim.
+

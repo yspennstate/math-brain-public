@@ -1,0 +1,110 @@
+{
+  "candidate_id": "C0056",
+  "title": "Extended states for the three-dimensional Anderson model at weak disorder",
+  "checked_at_utc": "2026-10-10T07:08:15.970134+00:00",
+  "current_openness": "UNKNOWN",
+  "parent_result": "NOT_PROVED",
+  "historical_record": {
+    "date": "2026-09-07",
+    "tier": 5,
+    "status": "attempted_unsolved",
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 56,
+    "source_id": "bourgade_band_icm_2018",
+    "primary_locator": "section 2.1, printed page 7, equation (2.1)",
+    "source_hash_from_intake_not_independently_recomputed": "b8b15c02ac7b675471097e9c499a6d588cfd7b0c591c49b0135f2a42eaedddb0"
+  },
+  "primary_source": {
+    "author": "Paul Bourgade",
+    "title": "Random band matrices",
+    "arxiv": "1807.03031",
+    "url": "https://math.nyu.edu/~bourgade/papers/ICMProceedings.pdf",
+    "model": "H_RS=Delta+lambda V on l2(Z^d); iid centered variance-one real site potentials",
+    "statement_recovered": true,
+    "goals": [
+      "infinite-volume absolutely continuous spectrum at weak disorder in d=3",
+      "separate finite periodic-box GOE bulk microscopic statistics"
+    ],
+    "quote_location": "STATEMENT_TO_ADVERSARY.md; one short primary-source quote",
+    "exact_law_and_all_target_quantifiers_prescribed_by_survey": false
+  },
+  "lane_specialization": {
+    "model": "H_g=A+gV on l2(Z^3); A nearest-neighbor adjacency; iid V uniform[-1,1]",
+    "variance_normalization": "variance-one uniform potential is sqrt(3)V, so g=sqrt(3)lambda",
+    "quantifiers": "There exist deterministic I nonempty open inside(-6,6), g0>0; for each fixed 0<g<g0 an almost-sure spectral conclusion. No common event for every coupling asserted.",
+    "target": "nonzero ac component; pure ac is a stronger sufficient target",
+    "GOE_target": "periodic-box point process unfolded by volume times positive density of states; no proof here"
+  },
+  "recent_primary_claim": {
+    "date": "2026-09-23",
+    "author": "OpenAI",
+    "title": "Absolutely Continuous Spectrum for Weak-Disorder Anderson Models in Dimensions at Least Three",
+    "url": "https://github.com/openai/math/tree/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026",
+    "checked_sections": "README; introduction model and main theorem; scope paragraph",
+    "claimed_model": "nearest-neighbor Z^d, iid uniform[-1,1], each fixed sufficiently small positive coupling",
+    "claimed_conclusion": "purely ac spectrum and nonzero weight on an open interval for each fixed d>=3",
+    "GOE_theorem_in_checked_introduction": false,
+    "proof_independently_verified": false,
+    "status": "CLAIM_FOUND_NOT_CERTIFIED; not used as an established theorem",
+    "claimed_interval_d3": "(-6+e2/2,-6+e2), fixed e2 in (0,1/100); non-effective positive d=3 coupling threshold"
+  },
+  "established_input": {
+    "authors": "Combes, Germinet, Klein",
+    "arxiv": "0804.3202v3",
+    "url": "https://arxiv.org/pdf/0804.3202",
+    "locator": "equations (1.4),(2.7); Remark 2.2(i)",
+    "assumptions": "deterministic self-adjoint finite-volume hopping; independent diagonal site laws with densities bounded by R",
+    "statement": "E[n_Q(n_Q-1)] <= (R |Q| N)^2 for each bounded interval Q",
+    "our_R": "1/(2g)",
+    "source_statement_checked": true,
+    "not_an_eigenvector_mark_estimate": true
+  },
+  "owner_solved_or_retired_check": {
+    "scoped_records": [
+      "original C0056 intake/attempt",
+      "H/I exact-ID searches",
+      "Lean ranking annotation",
+      "Team O board",
+      "read-only population store"
+    ],
+    "current_retirement_decision_verified": false,
+    "reason": "No verified owner retirement decision located in the scoped named material; current public proof claim is not an audit."
+  },
+  "store_snapshot": {
+    "path": "~/math-brain-build/local/population/brain.sqlite3",
+    "mode": "ro",
+    "scoped_evidence": "STORE_C0056_CARDS.json",
+    "existing_problem_truth_status": "unverified",
+    "existing_problem_logical_id": "math:probability.random-matrices:open-problem-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor"
+  },
+  "served_identity": {
+    "worker": "w483",
+    "native_thread_id": "01a12474-2d80-7f42-86af-36623eb474d1",
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "max",
+    "requested_service_tier": "Fast",
+    "response_side_served_model_evidence": null,
+    "served_model_status": "UNKNOWN",
+    "served_tier_status": "UNKNOWN",
+    "note": "Requested settings, worker label and turn context do not prove served identity."
+  },
+  "independent_review": {
+    "referee": "w485",
+    "review_of_referee_own_new_results": "w488",
+    "status": "SCOPED_DIRECT_KEEP_RECEIVED",
+    "different_model_gate_passed": false,
+    "different_account_gate_passed": false,
+    "receipt": "REVIEW_RECEIPTS.json",
+    "attempt_snapshot_verified": true,
+    "parent_result": "NOT_PROVED"
+  },
+  "brain_states": {
+    "prepared": true,
+    "submitted": true,
+    "reviewed": false,
+    "ingested": false,
+    "retrievable": false,
+    "submitted_at_utc": "2026-10-10T07:13:19.344803+00:00",
+    "review_note": "Proof L1-L8 has direct scoped KEEP; the six-concept bundle, served-identity gates and seven relation rows are not separately certified."
+  }
+}

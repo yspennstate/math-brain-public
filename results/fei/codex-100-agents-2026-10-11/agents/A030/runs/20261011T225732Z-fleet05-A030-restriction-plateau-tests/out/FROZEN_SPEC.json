@@ -1,0 +1,11 @@
+{
+  "helper_version": "A030-plateau-exact-v1",
+  "actual_Boolean_family": "Every seed on n=1,2,3; parity substitution of each seed input by L fresh coordinates; and fresh parity spectator products. Point-defect seed for infinite amplification proof.",
+  "parameter_domain": "Seed n=1..3, all 2^(2^n) truth tables. Replication L=2 for n<=3 and L=3 for n<=2. Every partial physical restriction fixing at most L-1 coordinates. Spectator count m=1,2 for all seeds; point defects r=2..12 and m=1..3.",
+  "case_count": "276 seeds; 296 replicated functions and 4736 replication restriction nodes; 552 seed spectator functions and 2760 spectator prefix nodes; 33 point-defect spectator functions and 275 prefix nodes. Counts checked by verifier.",
+  "symmetry_reduction": "None: exhaust all assignments and all eligible coordinate subsets; constant seeds included as edge cases.",
+  "arithmetic": "Integer Walsh transform, Fraction coefficients/probabilities/influences. Entropy equality certified by exact multiset equality of squared coefficients; infinite divergence proved symbolically. No floating logarithms used for claims.",
+  "memory_estimate": "Under 100 MB; maximum truth table 32768 entries; sequential cases, no retained large tables.",
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false
+}

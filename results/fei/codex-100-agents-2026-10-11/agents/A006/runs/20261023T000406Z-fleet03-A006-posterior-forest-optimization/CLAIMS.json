@@ -1,0 +1,49 @@
+[
+  {
+    "claim_id": "A006-DELETED-DEGREE-TWO-COMPLETE-POSTERIOR-COST",
+    "version": 1,
+    "exact_statement": "For every labelled bipartite H of maximum degree at most two on sides 2<=a<=b, the positive edge DNF for G=K_ab minus H, with its original surviving edge primes, both endpoint orders, pi=1/4 and fixed lambda_e=1/b, has complete nonempty posterior all-partition forest cost C<42 I(f) when G is nonempty; if a>=4, C<(283/8)I(f)<36I(f). The empty G case is constant and handled separately. More generally for any G on 4<=a<=b with every left degree>=b/2 and right degree>=a/2, the same reference satisfies C<(91/8)I(f)+2J log2 b, where J is the total physical flip influence of the indicator of assignments having nonempty active sets on both sides and no active surviving G edge.",
+    "hypotheses": [
+      "Uniform independent physical Boolean bits; logarithms and entropy in bits.",
+      "Actual partition-forest runs; posterior witness entropy subtracted; descriptions of one run not counted separately.",
+      "Nonempty original surviving width-two prime table with both endpoint orders; lambda_e=1/b satisfies packing.",
+      "Degree-two conclusion requires max degree(H)<=2; conditional dense-graph transfer has only the stated minimum-degree hypotheses."
+    ],
+    "statement_sha256": "b7dcb04baef45b89177ea1012a9c5cfc5ca81f3525ff510b637dc7dbe25752c2",
+    "contributors": [
+      "A006"
+    ],
+    "proof_source": [
+      "DELETED_DEGREE_TWO.md sections 1-5",
+      "REVIEW_A010.md",
+      "code/check.py",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [
+      "A010-GENERIC-WIDTH-TWO-FOREST-MASS@1 (independently reconstructed locally; unchanged source hash in out/SOURCE_CLAIMS.json)"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A006",
+        "kind": "author proof and exact validation; not independent acceptance",
+        "result": "PASS; formal compiler not started after admission hold",
+        "artifacts": [
+          "out/CHECK.json",
+          "out/REVIEW.json",
+          "out/ADVERSARIAL.json",
+          "out/LEAN_ADMISSION.json"
+        ]
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_CHECKS_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B02 Claude lead",
+      "A010",
+      "A007",
+      "B20"
+    ]
+  }
+]

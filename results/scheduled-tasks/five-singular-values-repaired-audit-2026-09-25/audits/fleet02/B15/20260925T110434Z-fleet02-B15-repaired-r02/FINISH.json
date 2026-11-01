@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "account": "fleet02",
+  "slot": "B15",
+  "run_id": "20260925T110434Z-fleet02-B15-repaired-r02",
+  "objective_id": "QFORM-FIVE-270-REPAIRED-AUDIT-20260925",
+  "source_commit": "4e530247ec0ef4101a6e5ecf621bd35a969c42aa",
+  "source_blob": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+  "source_sha256": "90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb",
+  "controls_final": {
+    "main_observed": "cda4032316fab84c10440e1236ad5ac301ea23ff",
+    "CURRENT_OBJECTIVE_blob": "a1e93e8fb929b3064fea245dc435b65d17a89085",
+    "AGENTS_blob": "b675b94968920e7f6b0dcf209b77e03a6c8127e1"
+  },
+  "passes_completed": 2,
+  "source_lines_checked": 683,
+  "proof_environments_checked": 26,
+  "line_status_counts": {
+    "PASS": 234,
+    "GAP": 1,
+    "FALSE": 1,
+    "UNCHECKED": 12,
+    "NOT_MATHEMATICAL": 435
+  },
+  "findings": [
+    {
+      "line": 62,
+      "status": "FALSE_DESCRIPTIVE",
+      "repair": "nonzero scalar rescaling"
+    },
+    {
+      "line": 435,
+      "status": "GAP_REPAIRABLE_LOCAL",
+      "repair": "absolute Jacobian"
+    }
+  ],
+  "repaired_ledger_regression": "20/20 grouped repairs PASS",
+  "theorem_verdict": "PASS_AFTER_TWO_LOCAL_THEOREM_NEUTRAL_REPAIRS",
+  "theorem_bounds": {
+    "s5_density": "<269 K^2/s, hence <=270 K^2/s",
+    "s3_halfpotential": "<77 K/sqrt(s)"
+  },
+  "rendered_pdf": "UNCHECKED: 15-page reference PDF absent from current conversation/library; no authenticated connector-to-renderer bridge. Page fields intentionally UNCHECKED_VISUAL.",
+  "external_metadata": "UNCHECKED: L74 plus eleven bibliography entries; no internal theorem dependency.",
+  "coverage_artifacts": [
+    "coverage_001-171.jsonl",
+    "coverage_172-342.jsonl",
+    "coverage_compact_343-513.json",
+    "coverage_tail_514-683_rle.json",
+    "FINDINGS.json",
+    "REPAIR_REGRESSION.json",
+    "CHECKS.json"
+  ],
+  "delivery_note": "Two attempted redundant expanded coverage writes were blocked by platform safety/branch-conflict checks; the final coverage set above accounts for all 683 lines and was read back.",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "schedule_state_changed": false,
+  "notifications_changed": false,
+  "email_sent": false
+}

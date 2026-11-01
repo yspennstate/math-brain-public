@@ -1,0 +1,54 @@
+{
+  "schema": "fei-progress/2",
+  "run_id": "20261014T010523Z-fleet01-B05-mixed-sign-defect-a023",
+  "stream": "B05",
+  "account": "fleet01",
+  "primary_packet_id": "A023",
+  "packet_ids": ["A023"],
+  "attempt_id": "B05-A023-MIXED-SIGN-DEFECT-01",
+  "attempt_counter": 1,
+  "gap_id": "B05_RARE_REFUNDS",
+  "prior_status": "Separate homogeneous positive and negative point-defect tower theorems; no theorem for sign-changing hierarchies.",
+  "new_status": "AUTHOR_PROVED_MIXED_SIGN_ALL_RANK_ENDPOINT_AND_TREE_RESERVE_PENDING_REVIEW",
+  "mathematical_delta": "Removed sign homogeneity at constant 8/3 and proved an explicit discounted reserve of 1/3 per negative level.",
+  "claim_versions": [
+    "B05_A023_MIXED_SIGN_DEFECT_ENDPOINT-v1",
+    "B05_A023_MIXED_SIGN_DEFECT_RESERVE-v1",
+    "B05_A023_MIXED_SIGN_DEFECT_TREE-v1"
+  ],
+  "source_pins": {
+    "owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "B05_assignment_blob": "05447e6d999437bb82a266b427bd76a4b37266b6",
+    "positive_author_delivery": "ed704e08ace97f8c295992ee560edfbe4d89a07a",
+    "positive_independent_review": "f9e5ba18eb5860b3c985ca2a1e983ddc851e29d0",
+    "negative_author_delivery": "9a6f9a8eeb3795ebdbeebf4efa767ed607af2897",
+    "negative_scalar_review": "aba1124116091e2ed86071528197a8bf5c3540c8"
+  },
+  "case_extension": {
+    "previous_class": "sign-homogeneous arbitrary-rank point-defect towers",
+    "new_class": "arbitrary sign and rank sequences in point-defect towers",
+    "previous_bound": "8/3 for positive towers; 16/9 for negative towers",
+    "new_bound": "8/3 uniformly for mixed-sign towers, plus explicit discounted negative-node reserve",
+    "parameter_dependence": "none in dimension, depth, rank, defect rarity or number of sign changes"
+  },
+  "verification": {
+    "status": "PASS",
+    "scalar_points": 200002,
+    "direct_towers": 2048,
+    "mixed_sign_direct_towers": 1024,
+    "recurrence_steps": 157353,
+    "negative_steps": 78762,
+    "pruned_trees": 120,
+    "terminal_tensor_checks": 120
+  },
+  "remaining_obstacle": "Endpoint cancellation does not assign first-revelation mismatch/KL credit across changing, overlapping, shared-variable or leaf-dependent cores.",
+  "next_action": "Use the explicit discounted negative-node reserve as a candidate budget for exactly one controlled terminal-core change; either prove a one-change gluing lemma or exhibit a genuine Boolean falsifier.",
+  "consumer_targets": ["A027", "A028", "A064", "A087", "A094", "B20"],
+  "reviewer_targets": ["A087", "A094"],
+  "independent_review": "PENDING",
+  "canonical_delivery": "DELIVERED_AND_READ_BACK_AT_42d0bbb0743d40468dfa2224073f43d6d9760be4",
+  "brain_handoff_delivery": "DELIVERED_AND_READ_BACK_AT_a9de3ebd11651d382b1196c207ff2b696981ef1d",
+  "native_ingestion": "NOT_OBSERVED",
+  "packet_completion_status": "IN_PROGRESS",
+  "full_fei_status": "OPEN"
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS_SELF_CHECK_ONLY",
+  "arithmetic": "exact Python integers and fractions",
+  "scope": "all Boolean truth tables modulo global sign for n<=4",
+  "execution": "native current-run enumeration equivalent to check_product_spectrum_rigidity.py",
+  "rows": [
+    {
+      "n": 1,
+      "product_spectrum_functions_mod_global_sign": 2,
+      "distinct_marginal_patterns": 2,
+      "count_by_number_of_half_marginals": {"0": 2},
+      "violations_of_0_half_1_marginal_claim": 0
+    },
+    {
+      "n": 2,
+      "product_spectrum_functions_mod_global_sign": 8,
+      "distinct_marginal_patterns": 5,
+      "count_by_number_of_half_marginals": {"0": 4, "2": 4},
+      "violations_of_0_half_1_marginal_claim": 0
+    },
+    {
+      "n": 3,
+      "product_spectrum_functions_mod_global_sign": 32,
+      "distinct_marginal_patterns": 14,
+      "count_by_number_of_half_marginals": {"0": 8, "2": 24},
+      "violations_of_0_half_1_marginal_claim": 0
+    },
+    {
+      "n": 4,
+      "product_spectrum_functions_mod_global_sign": 560,
+      "distinct_marginal_patterns": 41,
+      "count_by_number_of_half_marginals": {"0": 16, "2": 96, "4": 448},
+      "violations_of_0_half_1_marginal_claim": 0
+    }
+  ],
+  "claim_scope": "finite falsification evidence only; the universal theorem is algebraic and written in REPORT.md"
+}

@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A048: tensor scope of the existing B09 ledger}
+\author{A048, stream B10}\date{11 October 2026}\maketitle
+All entropies are Shannon bits. Write $e(x)=-x\log_2x$, with $e(0)=0$.
+For an actual Boolean restriction channel, let
+\[
+ M_A=H(S_A\mid S_B),\quad J_A=I(Z;T),\quad L_A=M_A+J_A,
+ \quad P_A=M_A+\Delta_A,
+\]
+where $\Delta_A=\sum_{i\in A}(h_2(p_i)+\log_2\max(p_i,1-p_i))$.
+The existing candidate is $J_A\le P_A$. Its full uncertainty proof remains under review.
+
+\paragraph{Aligned tensors.}
+For disjoint independent Boolean factors, squared Fourier laws and actual child channels factor.
+Hence $M,J,L,\Delta,P$ add for aligned reveals. Their $t$-fold values are exactly
+$t$ times the one-factor values. No $t\log t$ term occurs.
+An arbitrary wholly unrevealed common factor preserves these local ledgers and adds its
+entropy to both parent entropy and expected terminal entropy.
+
+\paragraph{Irrelevant coordinates.}
+A revealed independent coordinate ignored by $f$ has deterministic empty spectral label
+and is independent of $T$. It adds zero to $M,J,L,I_A$, but adds $\delta(p)$ to $P$.
+At $p=1/8$, $\delta(p)=\log_2(7)/8>0$. Thus payment of the unreduced displayed
+$P$ by revealed influence, or by total influence after arbitrarily many dummies, is false.
+Contracting such coordinates repairs this specific scope defect, not universal payment.
+
+\paragraph{One shared selector.}
+Let $F=1+X(g-1)$, $\Pr(X=1)=p$, $m=\mathbb Eg$, $v=1-m^2$.
+Put $a_0=(1-p+pm)^2$, $b_0=p(1-p)(1-m)^2$, $q_0=1-pv$.
+Each nonempty data coefficient contributes selector masses $p^2G_T^2$ and
+$p(1-p)G_T^2$, giving
+\[
+ M=e(a_0)+e(b_0)-e(q_0)+pv h_2(p),\qquad
+ J=h_2(pv)-p h_2(v),\qquad H(F)=pH(g)+M+J.
+\]
+For $g_t=\prod_{j=1}^t g_1^{(j)}$ replace $m$ by $(\mathbb Eg_1)^t$ and
+$H(g)$ by $tH(g_1)$. This is a shared selector, not $t$ aligned selectors.
+For $m=0$, $M=J=h_2(p)$, independently of $H(g)$.
+
+\paragraph{Fair point activation.}
+For a point indicator on $k$ fair controls let $p=2^{-k}$, $d=1-m$, $v=1-m^2$,
+$q_0=1-pv$ and $r=p(1-p)d^2$. Exact coefficient summation gives
+\begin{align*}
+ M&=q_0h_2(r/q_0)+r\log_2(2^k-1)+pvk,\\
+ J&=h_2(pv)-p h_2(v),\\
+ L&=e((1-pd)^2)+(p-p^2)d^2(2k-\log_2d^2)+2kpv-p e(m^2),\\
+ I_A&=kpd,\quad I(F)=pI(g)+kpd,\quad \mathbb EH(F_Z)=pH(g).
+\end{align*}
+Terms with $d=0$ are interpreted by continuity.
+The spectrum has mass $(1-pd)^2$ at the all-empty label, $p^2d^2$ at each
+of $2^k-1$ nonempty pure-control labels, and $p^2G_T^2$ for every control
+label paired with $T\ne\varnothing$. A control is pivotal with probability $pd$.
+
+Since $e((1-y)^2)\le2y/\ln2$ and
+$d^2\log_2(1/d^2)\le2d/(e\ln2)$ when $d\le1$ (it is nonpositive when $d\ge1$),
+using $d^2+v=2d$ gives
+\[
+ 0\le L\le\left(4+\frac{2(1+1/e)}{k\ln2}\right)I_A\le8I_A.
+\]
+The final inequality is strict for $I_A>0$. The strict constant follows from $e>8/3$ and
+$\ln2>2(1/3+1/81)=56/81>11/16$. For $d=0$ everything vanishes.
+Uniformly over $m\in[-1,1]$,
+\begin{align*}
+ |L-4pk(1-m)|&\le17p+8kp^2,\\
+ |J-pkv|&<3p,\\
+ |M-pk(3-4m+m^2)|&\le20p+8kp^2.
+\end{align*}
+These follow by bounding the exact empty atom by $8p$,
+$|d^2\log_2d^2|$ by $8$, $e(m^2)$ by $1$, and the quadratic control
+term by $8kp^2$. Also
+$J=pvk+e(1-pv)-p e(1-v)$.
+Thus the logarithm is $k=\log_2(1/p)$, paid locally by control influence;
+arbitrary terminal entropy $pH(g)$ remains unpaid.
+
+\paragraph{Collision control.}
+For $Z=\sum_U v_U>0$, $L_{\rm coll}=\sum_U e(v_U)$ and
+$T=L_{\rm coll}/Z$, direct expansion gives
+\[
+ T=H(v/Z)-\log_2Z,\quad Z_t=Z^t,\quad
+ L_t=tZ^{t-1}L_{\rm coll},\quad T_t=tT.
+\]
+These are product-compatible normalization identities, not a new Boolean payment theorem.
+Rescaling $v$ by $c$ preserves its normalized law and changes $T$ to $T-\log_2c$.
+
+\paragraph{Open bridge.}
+Essential-coordinate contraction and paid activation decrements do not pay arbitrary terminal
+entropy or a universal stopping tree without influence reuse. Full FEI is open.
+\end{document}

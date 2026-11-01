@@ -1,0 +1,46 @@
+{
+  "exact_bridge_cases": [
+    {
+      "n": 3,
+      "Bregman_curvature_identity": "EXACT PASS",
+      "stationary_subtraction_and_cosh_remainder": "EXACT PASS",
+      "bridge_face_acceleration": "EXACT PASS"
+    },
+    {
+      "n": 4,
+      "Bregman_curvature_identity": "EXACT PASS",
+      "stationary_subtraction_and_cosh_remainder": "EXACT PASS",
+      "bridge_face_acceleration": "EXACT PASS"
+    }
+  ],
+  "DPP_cases": [
+    {
+      "name": "dense complex noncommuting",
+      "noncommuting": true,
+      "p_prime_zero": false,
+      "max_identity_error": "5.327347333924808965257204769e-66",
+      "theta_solve_residual": "7.972636417116610094947221312e-67",
+      "negative_entropy_Hessian": "0.2493210323524722370434444389",
+      "edge_kinetic_term": "0.2481629416363012753847176227",
+      "nonnegative_excess_face_term": "0.0005739829910480889679524206481",
+      "calibrated_force_work": "0.0005841077251228726907743956335",
+      "Cauchy_force_certificate_lower_bound": "0.2398409192369525344452459565",
+      "largest_DPP_face_Q": "0.006953652167937882223596509311",
+      "status": "PASS"
+    },
+    {
+      "name": "imaginary current with positive hidden face",
+      "noncommuting": true,
+      "p_prime_zero": true,
+      "max_identity_error": "6.077163357286271198382875053e-64",
+      "theta_solve_residual": "0.0",
+      "negative_entropy_Hessian": "34.26914137743859588566613282",
+      "edge_kinetic_term": "0.0",
+      "nonnegative_excess_face_term": "0.0",
+      "calibrated_force_work": "34.26914137743859588566613282",
+      "Cauchy_force_certificate_lower_bound": "-58.87038032218090650641644097",
+      "largest_DPP_face_Q": "0.5",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+% B19/A094 independent reconstruction of B01 two-surgery refund.
+\section*{Independent review: the two-surgery difference refund}
+
+All logarithms are base two.  Put $\delta=2^{-k}$.  For distinct
+$x,y\in\{0,1\}^k$, let $z=x\oplus y$, $R=\operatorname{supp}(z)$,
+$r=|R|$, $\tau=g(x)g(y)$, and $\sigma=\tau(-1)^r$.  The two point-flip
+Walsh perturbations are
+\[
+ e_x(T)=-2g(x)\delta\chi_T(x),\qquad
+ e_y(T)=-2g(y)\delta\chi_T(y).
+\]
+For $D_e(S)=\sum_{T\supseteq S}e(T)^2$, write $T=S\cup W$.  Then
+\[
+ \sum_{T\supseteq S}\chi_T(z)
+ =\chi_S(z)\prod_{j\notin S}(1+(-1)^{z_j})
+ =2^{k-|S|}(-1)^r\mathbf 1_{R\subseteq S}.
+\]
+Consequently
+\[
+ D_{e_x+e_y}(S)
+ =8\delta2^{-|S|}(1+\sigma\mathbf 1_{R\subseteq S})
+\]
+and, because $D_{e_x}(S)=D_{e_y}(S)=4\delta2^{-|S|}$,
+\[
+ C_R(S)=8\sigma\delta2^{-|S|}\mathbf 1_{R\subseteq S}.
+\]
+Under the flat bent law $p(S)=\delta$,
+\[
+ \sum_Sp(S)\frac{|C_R(S)|}{2^{-|S|}}
+ =8\delta\,2^{-r}.
+\]
+
+Now define
+\[
+ \mathcal U(e)=\sum_Te(T)^2\log\frac{D_e(T)}{e(T)^2}.
+\]
+The combined atom law is
+\[
+ q(T)=(e_x(T)+e_y(T))^2
+ =8\delta^2(1+\tau\chi_T(z)).
+\]
+There are $2^{k-1}$ nonzero atoms, each equal to $16\delta^2$.  On a
+nonzero atom,
+\[
+ \log\frac{D_{e_x+e_y}(T)}{q(T)}
+ =k-|T|-1+\mathbf 1_{R\subseteq T}.
+\]
+The final indicator can occur only when $\sigma=1$.
+
+If $r\ge2$, conditioning on the parity of $|T\cap R|$ preserves every
+coordinate marginal at $1/2$.  Hence
+\[
+ \sum_{T:q(T)>0}(k-|T|-1)=2^{k-2}(k-2),
+\]
+and the number of nonzero atoms containing $R$ is
+$\mathbf 1_{\sigma=1}2^{k-r}$.  Therefore
+\[
+ \mathcal U(e_x+e_y)
+ =4\delta(k-2)+16\delta2^{-r}\mathbf 1_{\sigma=1}.
+\]
+Since $\mathcal U(e_x)=\mathcal U(e_y)=2\delta k$, the refund is
+\[
+ \rho_{r,\sigma}=8\delta-2^{4-r}\delta\mathbf 1_{\sigma=1}
+ \qquad(r\ge2).
+\]
+
+If $r=1$, the parity condition fixes the unique bit in $R$.  The
+$\mathbf 1_{R\subseteq T}$ correction cancels this fixed membership, so
+\[
+ \mathcal U(e_x+e_y)=4\delta(k-1),\qquad \rho_{1,\sigma}=4\delta.
+\]
+It follows in all cases that
+\[
+ 4\delta\le\rho_{r,\sigma}\le8\delta,
+ \qquad 8\delta2^{-r}\le\rho_{r,\sigma}.
+\]
+
+These equations accept the two algebraic v1 claims.  Bentness is only
+needed to interpret $p(S)=\delta$ as the flat parent spectral law; the
+character-sum and difference-vector identities themselves hold for either
+choice of the two phase signs.  The principal-filter generator $R$ is an
+algebraic owner, not yet a disjoint physical pivotal event.  A complete
+selector payment must restore the selector probability multiplying the
+difference packet and bound the coherent-parent and retained-child
+residual at the same normalization.  No such step is proved here.

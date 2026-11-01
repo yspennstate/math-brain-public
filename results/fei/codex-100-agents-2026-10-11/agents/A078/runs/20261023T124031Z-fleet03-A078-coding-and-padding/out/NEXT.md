@@ -1,0 +1,2 @@
+STATE: Complete local v4, universal GU/FEI OPEN, review pending.
+NEXT: A076/A077 independently check GU_PROOF sections1-4; analyze the FIRST nonzero-erasure physical query after peeling parity coverage, retaining exact signed upper-set correction and BOTH full child U. A universal dimension-independent finite a>=0,b<1 remains required; root-only GU on fully covered parity padding cannot supply it.

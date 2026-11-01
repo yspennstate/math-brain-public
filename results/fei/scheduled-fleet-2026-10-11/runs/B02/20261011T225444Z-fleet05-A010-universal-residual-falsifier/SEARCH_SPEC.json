@@ -1,0 +1,16 @@
+{
+  "helper_version": "PI-J-v1.1: f255355bb22ea323354e059a67438165102ffb3bf98a35f2ace34b99c23ebaab",
+  "actual_Boolean_family": "Every sign truth table on 1 through 4 uniform bits, represented by an NPN orbit representative and transported tables",
+  "parameter_domain": "All prime implicants of either output orientation, M=1, each conjunction ordered by increasing physical coordinate; one global lambda=1/max coordinate read",
+  "case_count": "4+16+256+65536 truth tables before NPN; predicted 2+4+14+222 NPN orbits including constants; two output orientations per nonconstant orbit",
+  "justified_symmetry_reduction": "Input flips preserve squared spectra and conjunction supports; coordinate permutations transport the entire ordered table; output complementation is handled by evaluating both orientations. This does not assert that the lexicographic-order table is invariant under permutations.",
+  "optimization_freedoms": "Exhaust all coordinate assignments to incident prime gates, one root per source SCC, all compatible acyclic parent maps, connecting coordinates, and child label permutations within equal-coordinate attachment groups. Optimize posterior exactly by log sum of 2^-B. Does not optimize lambda or gate orders, and does not search arbitrary supports or non-prime tables.",
+  "candidate_constant": "Exploratory ranked census, no preselected universal violation constant; any resulting finite ceiling is certified by intervals",
+  "arithmetic": "Integer Walsh and edge influence, Fraction gate/cost masses; exact integer fifth-root dyadic enclosures at 72 bits for rational^(6/5); rational atanh log series with 40 terms and explicit tail. Floating midpoint only for preliminary sorting; extrema require interval separation.; 80-bit outward dyadic rounding at each nonnegative log-series step, followed by 64-bit outward rounding",
+  "memory_estimate": "Below 150 MB including memoized rational logarithms; one heavy job only; no GPU",
+  "maximum_runtime_seconds": 1500,
+  "pilot": "n<=2, under 60 seconds; full n<=4 only after pilot validation",
+  "limitations": "A table upper bound or finite ceiling never falsifies the lambda variational infimum or full FEI. Symmetry transported orders give a valid existence upper bound for all represented functions.",
+  "pilot_observed_seconds": 0.030884,
+  "restarted_search": "v1 terminated after n=3 because unrounded rational log sums were too expensive; v1.1 repeats the identical domain"
+}

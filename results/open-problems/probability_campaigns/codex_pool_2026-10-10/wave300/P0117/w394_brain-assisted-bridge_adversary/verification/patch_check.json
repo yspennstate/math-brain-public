@@ -1,0 +1,26 @@
+[
+  {
+    "patch": "01_p0117_audit_bundle.diff",
+    "check_returncode": 0,
+    "apply_returncode": 0,
+    "payload_matches": true,
+    "stderr": "",
+    "commands": [
+      "git apply --check --whitespace=error PATCH",
+      "git apply --whitespace=error PATCH"
+    ],
+    "scope": "Own fresh scratch folder; required live-path headers; explicitly prepared empty destinations; normalized LF patch endings."
+  },
+  {
+    "patch": "02_selector_hook.diff",
+    "check_returncode": 0,
+    "apply_returncode": 0,
+    "payload_matches": true,
+    "stderr": "",
+    "commands": [
+      "git apply --check --whitespace=error PATCH",
+      "git apply --whitespace=error PATCH"
+    ],
+    "scope": "Own fresh scratch folder; required live-path headers; explicitly prepared empty destinations; normalized LF patch endings."
+  }
+]

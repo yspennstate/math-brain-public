@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T193114Z-fleet01-B13-qform-auto11",
+  "scope": "algebra/arithmetic sanity checks only; not an independent proof review",
+  "checks": [
+    {
+      "name": "half_riesz_constant",
+      "identity": "(4*sqrt(2e))^4 = 1024 e^2",
+      "lhs_numeric": 7566.393445304985,
+      "rhs_numeric": 7566.393445304985,
+      "status": "PASS"
+    },
+    {
+      "name": "diffuse_corollary_constant",
+      "identity": "(3/2)*(1024 e^2) = 1536 e^2",
+      "numeric": 11349.590167957478,
+      "status": "PASS"
+    },
+    {
+      "name": "schur_determinant_transport",
+      "identity": "det(G)=1-c; det(N)=det(Lambda)*d/a; det(M)=det(G)*det(N)=(1-c)d det(Lambda)/a",
+      "status": "SYMBOLIC_IDENTITY_CHECKED"
+    },
+    {
+      "name": "leverage_transport",
+      "identity": "G=I-u u^T has lambda_min=1-c, hence G^{-1} <= (1-c)^{-1} I and tilde_c_i <= c_i/(1-c)",
+      "status": "SYMBOLIC_IDENTITY_CHECKED"
+    },
+    {
+      "name": "target_diagonal_floor_exact_rank2",
+      "identity": "rank(R)<=2 implies s_3(D+R)<=s_1(D)+s_3(R)=||D||_op",
+      "status": "SINGULAR_VALUE_RANK_INEQUALITY_CHECKED"
+    },
+    {
+      "name": "heavy_hub_count",
+      "identity": "sum_i c_i=2 and c_i>1/3 implies at most five such indices",
+      "status": "PASS"
+    }
+  ],
+  "final_marker": "QFORM_B13_RANK2_SCHUR_PRODUCT_RIGIDITY_CHECK_PASS"
+}

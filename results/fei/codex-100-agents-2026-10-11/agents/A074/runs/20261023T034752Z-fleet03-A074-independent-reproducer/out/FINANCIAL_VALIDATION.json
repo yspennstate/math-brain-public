@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "policies": [
+    {
+      "core": 2,
+      "policy": "first",
+      "rows": 10,
+      "leaves": 11,
+      "source_initial_debit_used_only_as_additive_inherited_spare": false,
+      "source_stop_reaches": [
+        "1/1024",
+        "1/2048"
+      ],
+      "zero_new_flow": true
+    },
+    {
+      "core": 2,
+      "policy": "last",
+      "rows": 6,
+      "leaves": 7,
+      "source_initial_debit_used_only_as_additive_inherited_spare": false,
+      "source_stop_reaches": [
+        "1/1024",
+        "1/2048"
+      ],
+      "zero_new_flow": true
+    },
+    {
+      "core": 2,
+      "policy": "last-from-ACTUAL-positive-debit-stopped-leaf",
+      "rows": 6,
+      "leaves": 7,
+      "source_initial_debit_used_only_as_additive_inherited_spare": true,
+      "source_stop_reaches": [
+        "1/128"
+      ],
+      "zero_new_flow": true
+    },
+    {
+      "core": 3,
+      "policy": "first",
+      "rows": 10,
+      "leaves": 11,
+      "source_initial_debit_used_only_as_additive_inherited_spare": false,
+      "source_stop_reaches": [
+        "1/1024",
+        "1/2048"
+      ],
+      "zero_new_flow": true
+    },
+    {
+      "core": 3,
+      "policy": "last",
+      "rows": 6,
+      "leaves": 7,
+      "source_initial_debit_used_only_as_additive_inherited_spare": false,
+      "source_stop_reaches": [
+        "1/1024",
+        "1/2048"
+      ],
+      "zero_new_flow": true
+    },
+    {
+      "core": 3,
+      "policy": "last-from-ACTUAL-positive-debit-stopped-leaf",
+      "rows": 6,
+      "leaves": 7,
+      "source_initial_debit_used_only_as_additive_inherited_spare": true,
+      "source_stop_reaches": [
+        "1/128"
+      ],
+      "zero_new_flow": true
+    }
+  ],
+  "checks": 1373,
+  "helper_checks": 532,
+  "runtime_seconds": 4.739052299992181,
+  "exact_equalities": "rational profiles and conditional-mean algebra in INDEPENDENT_PROOF.md",
+  "interval_overlap_role": "comparison diagnostics only; never an equality proof",
+  "scope": "source policy choices reconstructed using independent raw labelled S/R; positive initial-debit amounts are source inputs, not newly audited source-prefix funding"
+}

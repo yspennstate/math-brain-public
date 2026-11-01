@@ -1,0 +1,33 @@
+POS3_GREEDY_FRINGE_2CYCLE_PASS
+n 11 E 932 width 3 width_witness (0, 4, 8)
+chains [(0, 1, 2, 3), (4, 5, 6, 7), (8, 9, 10)]
+covers [(0, 1), (0, 5), (1, 2), (1, 6), (1, 10), (2, 3), (4, 1), (4, 5), (5, 3), (5, 6), (6, 7), (8, 9), (9, 5), (9, 10), (10, 3), (10, 7)]
+incomparability_connected True
+proper_autonomous_modules [(0, 4), (8, 9)]
+incomparable_pairs 18
+pair 0 4 count 466 prob 1/2 balanced True
+pair 0 8 count 417 prob 417/932 balanced True
+pair 0 9 count 736 prob 184/233 balanced False
+pair 1 5 count 740 prob 185/233 balanced False
+pair 1 8 count 98 prob 49/466 balanced False
+pair 1 9 count 344 prob 86/233 balanced True
+pair 2 5 count 300 prob 75/233 balanced False
+pair 2 6 count 616 prob 154/233 balanced True
+pair 2 7 count 848 prob 212/233 balanced False
+pair 2 8 count 16 prob 4/233 balanced False
+pair 2 9 count 80 prob 20/233 balanced False
+pair 2 10 count 464 prob 116/233 balanced True
+pair 3 6 count 164 prob 41/233 balanced False
+pair 3 7 count 506 prob 253/466 balanced True
+pair 4 8 count 417 prob 417/932 balanced True
+pair 4 9 count 736 prob 184/233 balanced False
+pair 5 10 count 662 prob 331/466 balanced False
+pair 6 10 count 284 prob 71/233 balanced False
+step1 endpoint (5, 10) prob 331/466 D [1] U [6] alpha 48/233 beta 71/233 eta 21/233 union 98/233
+step1 greedy_max upper -> (10, 6) majority_prob 162/233
+step2 endpoint (10, 6) prob 162/233 D [5] U [3] alpha 135/466 beta 41/233 eta 35/466 union 91/233
+step2 greedy_max lower -> (5, 10) majority_prob 331/466
+greedy_cycle (5, 10) -> (10, 6) -> (5, 10)
+conditioning_step1 gamma 185/233 equal_pred_child_prob_10_lt_5 27/74 original_prob_10_lt_5 135/466
+conditioning_step2 gamma 331/466 equal_pred_child_prob_6_lt_10 142/331 original_prob_6_lt_10 71/233
+ORDINAL_PADDING: for all s,t>=0, C_s + P + C_t preserves these 18 incomparable-pair probabilities and has 3-chain cover lengths (4+s+t,4,3).

@@ -1,0 +1,39 @@
+== J4_max (n=4, J=6)   table 1100000011101110
+   H=3.000000000 I=1.500000 J=6.000000000  prime=True  rho0=2.00000  nonzero coefficients=10  distinct |fhat|=[np.float64(0.25), np.float64(0.5)]
+   influences: [0.25 0.5  0.25 0.5 ]  Delta/Inf: [3.1323 2.     3.1323 2.    ]
+   coin set Y = [0, 2]  core variables X = [1, 3]
+   coin x0: hole cells (core index, bits over X) [3]  -> subcube dim 0 exact=True  Inf=0.25000
+   coin x2: hole cells (core index, bits over X) [0]  -> subcube dim 0 exact=True  Inf=0.25000
+   core (x-bits in order X, value): 00:~y2 10:F 01:T 11:~y0
+   core cells: T=1 F=1 holes=2 of 4
+== J5_best5var (J=5.947)   table 11101010110000001110111011100000
+   H=3.716917187 I=1.625000 J=5.947067499  prime=True  rho0=2.31529  nonzero coefficients=20  distinct |fhat|=[np.float64(0.125), np.float64(0.25), np.float64(0.375)]
+   influences: [0.375 0.375 0.375 0.375 0.125]  Delta/Inf: [2.3153 2.3153 2.3153 2.3153 3.1323]
+   coin set Y = [0]  core variables X = [1, 2, 3, 4]
+   coin x0: hole cells (core index, bits over X) [1, 2, 3, 9, 11, 13]  -> subcube dim 4 exact=False  Inf=0.37500
+   core (x-bits in order X, value): 0000:T 1000:~y0 0100:~y0 1100:~y0 0010:T 1010:F 0110:F 1110:F 0001:T 1001:~y0 0101:T 1101:~y0 0011:T 1011:~y0 0111:F 1111:F
+   core cells: T=5 F=5 holes=6 of 16
+== J5_second (J=5.7735)   table 11110000000000001111010101110111
+   H=3.608458593 I=1.625000 J=5.773533749  prime=True  rho0=2.02607  nonzero coefficients=21  distinct |fhat|=[np.float64(0.125), np.float64(0.25), np.float64(0.375), np.float64(0.5)]
+   influences: [0.25  0.125 0.375 0.375 0.5  ]  Delta/Inf: [4.     4.1714 2.0261 3.7108 2.2169]
+   coin set Y = [1, 2]  core variables X = [0, 3, 4]
+   coin x1: hole cells (core index, bits over X) [6]  -> subcube dim 0 exact=True  Inf=0.12500
+   coin x2: hole cells (core index, bits over X) [0, 1, 4]  -> subcube dim 2 exact=False  Inf=0.37500
+   core (x-bits in order X, value): 000:~y2 100:~y2 010:F 110:F 001:~y2 101:T 011:y1 111:T
+   core cells: T=2 F=2 holes=4 of 8
+== J6_max (n=6, J=6.347)   table 0000000000000000011101010111010111110101111100001111010111110101
+   H=3.966917187 I=1.625000 J=6.347067499  prime=True  rho0=2.98196  nonzero coefficients=44  distinct |fhat|=[np.float64(0.0625), np.float64(0.125), np.float64(0.25), np.float64(0.375)]
+   influences: [0.375  0.0625 0.375  0.0625 0.375  0.375 ]  Delta/Inf: [2.982  6.0172 2.982  6.0172 2.982  2.982 ]
+   coin set Y = [1, 3]  core variables X = [0, 2, 4, 5]
+   coin x1: hole cells (core index, bits over X) [4]  -> subcube dim 0 exact=True  Inf=0.06250
+   coin x3: hole cells (core index, bits over X) [11]  -> subcube dim 0 exact=True  Inf=0.06250
+   core (x-bits in order X, value): 0000:F 1000:F 0100:F 1100:F 0010:y1 1010:T 0110:F 1110:T 0001:T 1001:T 0101:F 1101:~y3 0011:T 1011:T 0111:F 1111:T
+   core cells: T=7 F=7 holes=2 of 16
+== J6_second (6.2789)   table 1000100011111100000000000000000010101010111111111010101011111111
+   H=3.924340783 I=1.625000 J=6.278945253  prime=True  rho0=2.34868  nonzero coefficients=43  distinct |fhat|=[np.float64(0.0625), np.float64(0.125), np.float64(0.1875), np.float64(0.25), np.float64(0.3125), np.float64(0.375), np.float64(0.5)]
+   influences: [0.3125 0.125  0.0625 0.375  0.25   0.5   ]  Delta/Inf: [3.2028 5.1323 5.0184 2.8684 4.0466 2.3487]
+   coin set Y = [0, 2]  core variables X = [1, 3, 4, 5]
+   coin x0: hole cells (core index, bits over X) [0, 8, 9, 12, 13]  -> subcube dim 3 exact=False  Inf=0.31250
+   coin x2: hole cells (core index, bits over X) [3]  -> subcube dim 0 exact=True  Inf=0.06250
+   core (x-bits in order X, value): 0000:~y0 1000:F 0100:T 1100:~y2 0010:F 1010:F 0110:F 1110:F 0001:~y0 1001:~y0 0101:T 1101:T 0011:~y0 1011:~y0 0111:T 1111:T
+   core cells: T=5 F=5 holes=6 of 16

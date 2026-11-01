@@ -1,0 +1,19 @@
+{
+  "problem_id": "C0029",
+  "as_read": "2026-10-10",
+  "target": "For B_n with iid uniform {-1,1} entries, there exist rho in (0,1) and n_0 such that for every n>=n_0 and t>=0, P(sqrt(n) s_min(B_n)<=t)<=t+rho^n.",
+  "current_exact_constant_openness": "UNKNOWN",
+  "scope_reason": "Verified primary 2025 theorem proves coefficient 1+o(1), not exactly one. Bounded 2026 search found no new exact resolution; no exhaustive or owner-archive-wide certificate is claimed.",
+  "primary_sources": [
+    {"url": "https://arxiv.org/pdf/math/0212413", "title": "Smoothed Analysis of Algorithms", "authors": "Daniel A. Spielman; Shang-Hua Teng", "year": 2002, "locator": "Conjecture 2, printed page 605, PDF page index 8", "verified_content": "Inverse-norm conjecture for independent uniform +/-1 entries, coefficient one, absolute exponential remainder. Uses dimension d and exponent n in the printed formula; normalized here to dimension n."},
+    {"url": "https://arxiv.org/html/2405.20308v2", "title": "On the Spielman-Teng Conjecture", "authors": "Ashwin Sah; Julian Sahasrabudhe; Mehtaab Sawhney", "revision": "v2, 2025-01-08", "doi": "10.1007/s00039-025-00707-z", "locators": ["Theorem 1.1", "Theorem 1.2", "Lemma 9.2"], "verified_content": "Fixed real mean-zero variance-one iid subgaussian entries; uniform multiplicative error O_xi((log n)^(-1/16)) plus exp(-Omega_xi(n)). Lemma 9.2 requires a spectral cutoff and retains an additive O(delta_n epsilon) term."}
+  ],
+  "prior_target_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:29",
+  "prior_attempt_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl:23",
+  "prior_attempt_issue_to_verify": "The prior attempt calls the Gaussian hard-edge limiting law exact at finite n. Do not use it as a finite-n identity without a separate source.",
+  "brain_scar": "perceptron_proof_open_gaps_fleet_2026_07_12",
+  "author_identity": {"native_worker": "w574", "requested_model": "gpt-6.1-sol", "requested_reasoning": "max", "requested_service_tier": "Fast", "served_model": "UNVERIFIED", "served_model_response_evidence": null},
+  "referee": "w575",
+  "referee_response_served_model_evidence": null,
+  "no_formal_check_claim": true
+}

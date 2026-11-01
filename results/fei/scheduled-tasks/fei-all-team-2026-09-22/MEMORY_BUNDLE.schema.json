@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FEI memory validation bundle",
+  "type": "object",
+  "required": [
+    "claims"
+  ],
+  "properties": {
+    "claims": {
+      "$ref": "CLAIMS.schema.json"
+    },
+    "snapshot": {
+      "$ref": "MEMORY_SNAPSHOT.schema.json"
+    },
+    "deltas": {
+      "$ref": "DELTAS.schema.json"
+    },
+    "manifest": {
+      "type": "object"
+    },
+    "inbox": {
+      "$ref": "CORRECTION_INBOX.schema.json"
+    }
+  },
+  "additionalProperties": false
+}

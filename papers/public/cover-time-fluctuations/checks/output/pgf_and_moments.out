@@ -1,0 +1,10 @@
+E Y_k^3 = 6*k**6 - 6*k**5 - 6*k**4 + 18*k**3 - 11*k**2 + 5*k + 2  (degree 6, leading coefficient 6 ) -> (3.5) with C >= that
+(3.2)-(3.5) verified symbolically
+E exp(Y_k/(4k^2)) for k=3..199: max = 1.331671, at k=199; last = 1.331671
+(3.6) algebra verified; bound at c = 1/4 uniform over k <= 199
+(4.1)-(4.3) and E N_j^3 = 1/j + 6/j^2 + 6/j^3 <= 13/j verified
+(4.5)-(4.10) verified by differentiation for r = 1..6, symbolic k
+f_k''(1) = E Y(Y-1) = 2*k**4 - 2*k**3 + 2*k
+N - D*T = (z-1)^3 * S with S = k*(k - 1)*(k**4 + k**3*z - k**3 - k**2*z - k**2 + 2*k + z - 1)
+identities of Sections 3, 5, 9.1, 10 verified
+PGF_AND_MOMENTS_CHECKS_PASS

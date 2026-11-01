@@ -1,0 +1,137 @@
+\section*{Three-address Boolean fibers and the first joint 2-adic reserve}
+
+All cubes below are uniform.  Let
+\[
+ f:\{-1,1\}^{A}\times\{-1,1\}^{C}\longrightarrow\{-1,1\},
+ \qquad |A|=3,
+\]
+and, for $T\subseteq A$, put
+\[
+ g_T(x)=\mathbb E_y[f(y,x)\chi_T(y)],\qquad
+ w_T=\mathbb E_x g_T(x)^2.
+\]
+Thus $\widehat f(T\cup U)=\widehat g_T(U)$ and
+$I_A(f)=\sum_T |T|w_T$.
+
+\paragraph{Theorem (exact $K_3$ fiber trichotomy).}
+For each fixed $x$, exactly one of the following occurs.
+\begin{enumerate}
+\item Character: one $g_D(x)$ has modulus $1$ and the other seven vanish.
+\item Point defect: one $g_D(x)$ has modulus $3/4$ and the other seven
+have modulus $1/4$.  Equivalently, $f(\cdot,x)$ differs at exactly one
+point from a signed character.
+\item Semibent: four coefficients have modulus $1/2$ and four vanish.
+The support is an affine two-flat in $\mathbb F_2^3$; after translating
+that flat, the four signs form a two-bit bent phase.
+\end{enumerate}
+Across the $256$ Boolean fibers the three types occur respectively
+$16,128,112$ times.
+
+If
+\[
+ J_A(x)=\sum_{T\subseteq A}|T|g_T(x)^2,
+\]
+then the exact values are
+\[
+ J_A(x)=
+ \begin{cases}
+ |D|,&\text{character with support $D$},\\
+ \frac34+\frac12|D|,&\text{point defect with major coefficient $D$},\\
+ \frac14\sum_{T\in F}|T|\in\{1,\frac32,2\},
+   &\text{semibent with support flat $F$}.
+ \end{cases}
+\]
+Consequently, if $N$ is the set of non-character fibers, then
+\[
+ \mu(N)\le \frac43 I_A(f).
+\tag{1}
+\]
+
+\paragraph{Proof.}
+Write
+\[
+ a_T(x)=4g_T(x)=\frac12\sum_y f(y,x)\chi_T(y)\in\mathbb Z.
+\]
+Parseval gives $\sum_T a_T^2=16$.  Moreover all eight $a_T$ have the
+same parity: for $T,U$, the difference $a_T-a_U$ is a sum of four
+integers congruent modulo two.  If the common parity is odd, the only
+way eight odd squares sum to $16$ is $(9,1,\ldots,1)$.  If it is even,
+division by four leaves a sum of four squares, hence either $(16,0^7)$
+or $(4,4,4,4,0^4)$.  This proves the three magnitude patterns.
+
+In the first case Fourier inversion gives a signed character.  In the
+second, the coefficient of modulus $3/4$ has correlation $3/4$ with a
+unique signed character, hence Hamming distance $(1-3/4)/2=1/8$, one
+point.  In the third case let $K$ be the four-point Fourier support.
+The Boolean convolution identities
+\[
+ \sum_T g_Tg_{T\triangle U}=0\qquad(U\ne\varnothing)
+\]
+exclude $|K\cap(K+U)|=2$: the two ordered summands are equal and cannot
+cancel.  Therefore every difference of two points of $K$ stabilizes
+$K$, so $K$ is a coset of a two-dimensional subspace.  The same
+identities reduce the phase to the two-bit bent condition.  There are
+$16$ signed characters, $16\cdot8=128$ one-point defects, and
+$14\cdot8=112$ affine-flat bent phases.  The formulas for $J_A$ follow
+by summing the displayed squared magnitudes.  Every non-character
+fiber has $J_A\ge3/4$ and $I_A=\mathbb E_xJ_A(x)$, proving (1). \qed
+
+\paragraph{Joint odd-granularity reserve for product rows.}
+Assume the conditional squared Fourier law of a nonzero row $g_T$ is
+product.  Factor its frozen coordinates as in A2-L3k, let $R_T$ be the
+active coordinates, $r_T=|R_T|$, and write the least active Walsh
+coefficient as
+\[
+ \kappa_T=\nu_T2^{-r_T-2},\qquad
+ \nu'_T=\nu_T\Big/\prod_{i\in R_T}q_{T,i}\in\mathbb Z_{>0},
+\]
+where the active magnitude ratios are reduced $p_{T,i}/q_{T,i}$.
+Let $P$ be the common point-defect set and let $D(x)$ be its unique
+major address.  Then
+\[
+ w_U(P):=\mathbb E[1_Pg_U^2]
+   =\frac{\mu(P)}{16}+\frac12\mu\{x\in P:D(x)=U\},
+\tag{2}
+\]
+and hence
+\[
+ \sum_U|U|w_U(P)=\frac34\mu(P)
+   +\frac12\mathbb E[1_P|D(x)|]\ge\frac34\mu(P).
+\tag{3}
+\]
+Furthermore, $\nu'_T$ is odd if and only if $P$ is a cylinder over
+$R_T$ whose trace has odd cardinality.  In that case
+\[
+ \mu(P)\ge2^{-r_T},\qquad
+ w_U\ge2^{-r_T-4}\quad\hbox{for every }U\subseteq A,
+\qquad I_A(f)\ge\frac34,2^{-r_T}.
+\tag{4}
+\]
+
+Indeed $4g_T(x)$ is odd exactly on $P$, independently of $T$.  After
+the frozen coordinates are removed, the parity of every Walsh
+numerator $2^{r_T+2}\widehat g_T(V)$ equals the parity of the number of
+points of the trace of $P$.  The divisibility argument in A2-L3k then
+says that this common parity is odd exactly when $\nu'_T$ is odd.
+The row factorization makes $P$ a cylinder.  Equations (2)--(4) now
+follow from the point-defect squared magnitudes.
+
+\paragraph{Why this does not yet prove $C_3<\infty$ sharply.}
+The theorem pays every non-character fiber by physical address
+influence and completely identifies the first (odd) 2-adic layer.
+It does not yet control even product rows with $\nu'_T=2$ whose
+semibent and point-defect contributions can cancel modulo four.  That
+is the first unpaid line in the $K_3$ analogue of the $K_2$ proof.
+
+The natural general-$k$ warning is already exact for $k\ge2$.  A one-point defect
+from a signed character with major address $D$ has
+\[
+ J_A= k2^{1-k}+(1-2^{2-k})|D|.
+\tag{5}
+\]
+For $D=\varnothing$ the available local address charge is only
+$k/2^{k-1}$.  Thus a recurrence which pays a fixed per-defect entropy
+cost only from this local reserve necessarily loses order $2^k/k$;
+additional multi-row or conditional entropy credit is required for a
+constant uniform in $k$.  This is an obstruction to that payment
+mechanism, not a counterexample to FEI.

@@ -1,0 +1,22 @@
+{
+  "attempts": [
+    {
+      "result": "failed",
+      "assertion": 12340,
+      "cause": "bit-one g branch has Fourier selector coefficient (hhat-ghat)/2 in checker convention",
+      "correction": "reverse two selector coefficient signs; Boolean proof unchanged"
+    },
+    {
+      "result": "failed",
+      "assertion": 20495,
+      "cause": "r=1 character projected full reference equals actual spectrum",
+      "correction": "allow exact ref==P as proof of equality; otherwise require strict interval gap"
+    },
+    {
+      "result": "PASS",
+      "assertions": 52366,
+      "runtime_seconds": 65.0659306999296,
+      "budget_deviation": "successful checker exceeded 60-second frozen pilot cap by 5.065931 seconds"
+    }
+  ]
+}

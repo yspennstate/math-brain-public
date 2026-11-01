@@ -1,0 +1,13 @@
+# P0020: exact deterministic reduction to the accessible adjacency graph
+
+2026-10-10. Label: proof of a deterministic reduction, awaiting w346 KEEP. Showing its graph is almost surely connected for a planar Brownian trace remains the open probabilistic step.
+
+Let K be a closed subset of the plane. A boundary point z of a component U of the open complement is accessible from U if there is a continuous path gamma:[0,1]->closure(U) with gamma(0)=z and gamma(t) in U for every t>0. Form a graph on the complement components, joining U,V when one point z in K is accessible from both. Distinct outside points can be joined by an arc meeting K finitely many times if and only if their components are joined by a finite path in this graph.
+
+Necessity: parameterize the arc injectively. Remove its finitely many K-points. The intervening open parameter intervals lie in complement components. The arc's one-sided pieces at a crossing provide access paths from the neighboring components. Crossings with the same component on both sides can be ignored in the graph walk.
+
+Sufficiency: along a finite graph path, choose one common accessible point for each edge. In each component join the chosen access paths' interior endpoints by polygonal paths; an open connected planar set is polygonally connected. Include polygonal joins to the requested outside endpoints. Concatenate the finitely many pieces. It is a continuous path whose image meets K only at the chosen finite set. The elementary arc-extraction theorem for a path in a metric space gives an arc between its distinct endpoints inside that image, so it has no additional K-contacts. Equivalently, apply that theorem to the compact, locally connected path image. This topological step needs no property peculiar to Brownian motion.
+
+Consequently the simultaneous all-pairs question is equivalent to connectedness of this graph. The vertices are countable, because distinct open components contain distinct rational points. Mere intersection of closures does not supply accessible edges.
+
+Negative deterministic control: K is the union of the unit circle and the circles of radii 1+1/n, n>=1. This is compact. Any path from the origin to a point of radius 3 meets every one of the infinitely many circles, by the intermediate value theorem. The inner disk is isolated in the accessible adjacency graph: none of the annular complement components has the unit circle in its boundary. So arbitrary compact sets need not have the desired property. Finite nested-circle sets instead have a connected finite path graph. Neither observation certifies anything about Brownian traces.

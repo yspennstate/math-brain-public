@@ -1,0 +1,63 @@
+[
+  {
+    "service": "arxiv_fredrickson",
+    "query": "all:Fredrickson AND all:Andersen",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3AFredrickson%20AND%20all%3AAndersen&sortBy=submittedDate&sortOrder=descending&max_results=100",
+    "date": "2026-10-11T22:10:39.573416",
+    "http_status": 200,
+    "saved": "arxiv_fredrickson.response"
+  },
+  {
+    "service": "arxiv_facilitated",
+    "query": "all:\"facilitated\" AND all:\"equilibrium\"",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22facilitated%22%20AND%20all%3A%22equilibrium%22&sortBy=submittedDate&sortOrder=descending&max_results=80",
+    "date": "2026-10-11T22:10:40.498439",
+    "http_status": 200,
+    "saved": "arxiv_facilitated.response"
+  },
+  {
+    "service": "crossref_recent",
+    "query": "Fredrickson Andersen; published since 2025-10-23",
+    "url": "https://api.crossref.org/works?query.title=Fredrickson%20Andersen&filter=from-pub-date:2025-10-23&rows=60",
+    "date": "2026-10-11T22:10:40.746538",
+    "http_status": 200,
+    "saved": "crossref_recent.response"
+  },
+  {
+    "service": "crossref_source",
+    "query": "Long time behaviour of one facilitated kinetically constrained models",
+    "url": "https://api.crossref.org/works?query.title=Long%20time%20behaviour%20of%20one%20facilitated%20kinetically%20constrained%20models&rows=10",
+    "date": "2026-10-11T22:10:40.852737",
+    "http_status": 200,
+    "saved": "crossref_source.response"
+  },
+  {
+    "service": "openalex_source_retry",
+    "query": "arxiv:2510.20461",
+    "url": "https://api.openalex.org/works?search=2510.20461&per_page=5",
+    "date": "2026-10-11T22:10:42.306104",
+    "error": "<HTTPError 429: 'Too Many Requests'>"
+  },
+  {
+    "service": "semantic_source_retry",
+    "query": "ARXIV:2510.20461",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:2510.20461?fields=title,authors,year,citationCount,citations.title,citations.year,citations.externalIds",
+    "date": "2026-10-11T22:10:42.653036",
+    "error": "<HTTPError 429: ''>"
+  },
+  {
+    "service": "front_pdf",
+    "query": "1803.08761",
+    "url": "https://arxiv.org/pdf/1803.08761",
+    "date": "2026-10-11T22:10:42.939491",
+    "http_status": 200,
+    "saved": "front_pdf.pdf"
+  },
+  {
+    "service": "openalex_title_retry",
+    "query": "one facilitated kinetically constrained models",
+    "url": "https://api.openalex.org/works?search=one%20facilitated%20kinetically%20constrained%20models&per_page=5",
+    "date": "2026-10-11T22:11:05.786314",
+    "error": "<HTTPError 429: 'Too Many Requests'>"
+  }
+]

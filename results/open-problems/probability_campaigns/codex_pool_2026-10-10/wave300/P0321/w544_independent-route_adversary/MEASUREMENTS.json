@@ -1,0 +1,71 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w544/verify_elasticity.py",
+  "model": "UV-cutoff compatible Gaussian displacement; not a Riesz Gibbs gas",
+  "parameters": {
+    "beta": 1.0,
+    "a": 1.3,
+    "b": 1.0,
+    "Lambda": 1.0,
+    "rho": 1.0,
+    "s_values": [
+      0.25,
+      1.0,
+      1.75
+    ]
+  },
+  "checks": {
+    "modal_pairs": 27700,
+    "covariance_contractions": 83100,
+    "max_absolute_theta_contraction_error": 1.6653345369377348e-16,
+    "max_absolute_density_contraction_error": 4.440892098500626e-16,
+    "all_assertions_passed": true
+  },
+  "rows": [
+    {
+      "L": 64,
+      "distance": 16.0,
+      "mode_count": 324,
+      "theta_variance": 0.019775390625,
+      "theta_covariance": 0.0003662109375,
+      "compatible_C6": 0.49721613469791176,
+      "continuum_C6_limit": 0.4886067799803316,
+      "relative_error_to_limit": 0.017620211323974542,
+      "independent_angle_GFF_C6": 4.7402379565688666e-07
+    },
+    {
+      "L": 128,
+      "distance": 32.0,
+      "mode_count": 1304,
+      "theta_variance": 0.0198974609375,
+      "theta_covariance": -6.103515625000932e-05,
+      "compatible_C6": 0.48748007587716247,
+      "continuum_C6_limit": 0.4886067799803316,
+      "relative_error_to_limit": 0.0023059526583206085,
+      "independent_angle_GFF_C6": 8.162319196270093e-09
+    },
+    {
+      "L": 256,
+      "distance": 64.0,
+      "mode_count": 5208,
+      "theta_variance": 0.019866943359375,
+      "theta_covariance": -3.1577388273640317e-18,
+      "compatible_C6": 0.48908941134384004,
+      "continuum_C6_limit": 0.4886067799803316,
+      "relative_error_to_limit": 0.0009877705002944998,
+      "independent_angle_GFF_C6": 1.5609021531169936e-10
+    },
+    {
+      "L": 512,
+      "distance": 128.0,
+      "mode_count": 20864,
+      "theta_variance": 0.0198974609375,
+      "theta_covariance": 9.536743164070306e-06,
+      "compatible_C6": 0.4887201366678948,
+      "continuum_C6_limit": 0.4886067799803316,
+      "relative_error_to_limit": 0.00023199982523328992,
+      "independent_angle_GFF_C6": 2.9337228565256046e-12
+    }
+  ],
+  "elapsed_seconds": 0.4537367000011727,
+  "interpretation": "The incompatible independent-angle substitution gives decay, while the angle derived from a stable shear displacement tends to a positive constant. This tests formulas only; no Monte Carlo, microscopic transfer, or independent review is claimed."
+}

@@ -1,0 +1,27 @@
+{
+  "helper_version": "A056-shared-phase-query-v1",
+  "family": "fair mux of two disjoint private point activations of shared Boolean phases; prescribed original uniform/index-weighted empty-calibrated phase references",
+  "domain": "all 256 labelled pairs of two-bit phases; widths (1,1),(2,1); 2 reference laws; query each shared bit. Three-bit: all256 u, v=u with inputs cyclically permuted and first input flipped; widths(1,1), both reference laws; all3 shared queries",
+  "case_count": {
+    "roots": 1536,
+    "shared_transports": 3584,
+    "pilot_transports": 4
+  },
+  "symmetry": "none; three-bit v family is explicit restricted domain, not an exhaustive pair census",
+  "arithmetic": "integer FWHT; Fraction probabilities; exact rational prime-log expressions and rational atanh log enclosures from prior helper; no floating sign",
+  "memory_estimate_MB": 140,
+  "max_runtime_seconds": 55,
+  "pilot_max_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "checks": [
+    "Booleanity/physical restriction",
+    "positive child normalizers",
+    "complete phase-reference coherent transport and empty calibration",
+    "root inherited reference plus refined categorical calibration equals declared rebuilt child reference",
+    "exact KL release equals original phase-weighted release",
+    "nonnegative release",
+    "same rate7 channel+full terminal payment on finite domain",
+    "both nonconstant child cases retained"
+  ],
+  "failure_policy": "save first exact witness; no unsupported universal rate assertion"
+}

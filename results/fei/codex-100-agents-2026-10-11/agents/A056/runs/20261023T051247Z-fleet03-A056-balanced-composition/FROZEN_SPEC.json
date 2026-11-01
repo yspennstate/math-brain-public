@@ -1,0 +1,38 @@
+{
+  "helper_version": "A056-degree-tilt-reset-v1",
+  "family": "eight fixed labelled five-bit phase tables, paired cyclically; exact initial spectrum references; two private point blocks and fair mux",
+  "domain": {
+    "phase_bits": 5,
+    "pair_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "widths": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "prefix": "shared0; reset both; private A or B or z selected by pair index mod3; shared0; reset both; shared0; reset both; shared0 then stop"
+  },
+  "cases": 16,
+  "pilot_cases": 1,
+  "symmetry": "none",
+  "arithmetic": "integer FWHT, Fraction, prime-log vectors and32-term rational atanh bounds; exact integer fallback",
+  "memory_estimate_MB": 120,
+  "max_runtime_seconds_per_job": 55,
+  "scalars": "all256 three-bit Boolean phases with exact and uniform inherited refs, plus eight five-bit phases; dummy padding of eight phases by two bits",
+  "lanes": 2,
+  "lane_partition": "history index parity, eight full histories/lane",
+  "scope": "conditional all-dimension proof is analytic; finite histories are evidence, not full FEI"
+}

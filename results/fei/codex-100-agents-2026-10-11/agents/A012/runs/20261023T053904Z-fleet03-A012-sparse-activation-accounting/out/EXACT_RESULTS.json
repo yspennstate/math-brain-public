@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "full_FEI": "OPEN",
+  "unique_child_tables": 65536,
+  "child_executions": 131072,
+  "child_author": {
+    "status": "PASS",
+    "mode": "author",
+    "cases": 65536,
+    "assertions": 327699,
+    "smallest_certified_nonconstant_4I_minus_H": "579/2048",
+    "witness": 1,
+    "lower_log_power": 64,
+    "reference_allowance": "log2(16/15)<1/8, by exact (16/15)^8<2",
+    "physical_edge_digest": "eb0fb6b521fb7a1b0c2fffee22b1e99daabd947f51db70fa24c6b2e7716591ae",
+    "seconds": 3.8270233999937773
+  },
+  "child_independent_replay": {
+    "status": "PASS",
+    "mode": "replay",
+    "cases": 65536,
+    "assertions": 327699,
+    "smallest_certified_nonconstant_4I_minus_H": "265/1024",
+    "witness": 1,
+    "lower_log_power": 32,
+    "reference_allowance": "log2(16/15)<1/8, by exact (16/15)^8<2",
+    "physical_edge_digest": "c4db4abf6aad81624c0992057d6a3c477b168de765b7a171852a9fa17c1ac40b",
+    "seconds": 2.8951555999810807
+  },
+  "matching_full_histograms": true,
+  "child_lemma": "nonconstant H<=4I-1/4, stronger than frozen1/8 target by recorded exact minimum",
+  "reference_lemma": "whole-private mixture15/16 P+1/16 rho*pi yields CE<=4I-1/8 for nonconstant <=4-bit children",
+  "Boolean_parent_fixtures": [
+    {
+      "status": "PASS",
+      "mode": "base",
+      "cases": 1024,
+      "assertions": 84944,
+      "largest_parent_truth_table": 64,
+      "minimum_certified_parent_gap_nats": "368076725122248702068637424686975244586521763036973490876679871109/632340586723623424970110089590600156870015738604639400279831969800",
+      "seconds": 11.992081100004725,
+      "both_private": true,
+      "old_shared_debit": "(I_shared(G)+I_shared(H))/ln2 preserved",
+      "reference": "15/16 true whole private law plus1/16 uniform, both full KL retained"
+    },
+    {
+      "status": "PASS",
+      "mode": "lift",
+      "cases": 96,
+      "assertions": 9144,
+      "largest_parent_truth_table": 512,
+      "minimum_certified_parent_gap_nats": "26020254809214034361038654347619276750862676089461637893678146193193273153946297552946461963539572115100360278609981057522993/28139399302093700042111633493095883510413998688765394259757433398938949935078209688214233693202537432348556366058161317335200",
+      "seconds": 1.506918200000655,
+      "both_private": true,
+      "old_shared_debit": "(I_shared(G)+I_shared(H))/ln2 preserved",
+      "reference": "15/16 true whole private law plus1/16 uniform, both full KL retained"
+    }
+  ],
+  "negative_controls": {
+    "status": "PASS",
+    "checks": 9,
+    "actual_both_private_negative_control": {
+      "G": "U",
+      "H": "V",
+      "B": 1,
+      "Delta": 2,
+      "d": "1/2",
+      "rho_sum": 2,
+      "average_rounded_B": 0
+    },
+    "false_statement": "B<=E B(rounded pure phases) without a variance correction",
+    "scope": "refutes that proof step only, not B<=4d or FEI",
+    "multiple_private_guard": {
+      "G": "U1*U2",
+      "rho": 1,
+      "Iprivate": 2
+    }
+  },
+  "parent_cases_executed": 1120,
+  "analytic_all_pair_family_count": 4294967296,
+  "genuine_both_private_pair_count": 4261478400,
+  "all_pairs_enumerated": false,
+  "total_exact_assertions": 749495,
+  "remaining_original_stock_bits": ">=1/8 for two nonconstant <=4-bit children after variance conversion AND old shared bookings",
+  "new_proof": "analytic semiconvex curvature and exact rounding; v7 pending independent-agent review",
+  "compiler": "not launched; no Lean claim; all jobs estimated<=110MB",
+  "brain_selfcare": "DEGRADED_UNVERIFIED: owner model91.3h and state of mind75.9h stale at wake; explicit current FEI records used"
+}

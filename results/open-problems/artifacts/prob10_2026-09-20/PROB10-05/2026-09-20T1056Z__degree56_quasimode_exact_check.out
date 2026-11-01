@@ -1,0 +1,41 @@
+PROB10-05 degree-56 exact finite-core execution record
+
+Execution note: the exact Gaussian moment engine was executed in this bounded run in two algebraically identical stages (one-step Rayleigh moment, then two-step norm moment) so that each exact-arithmetic call stayed within the platform's single-call execution cap. The compact repository checker reconstructs both stages from the SHA-verified immutable degree-48 moment engine and the frozen degree-56 witness. A monolithic rerun was also attempted locally but exceeded the tool-call time cap; no claim depends on that timed-out rerun.
+
+BASE_GIT_BLOB = 8f82e8ae344db14a32b013636a4ef62f4a726ce3
+WITNESS_LENGTH = 57
+
+PHASE 1 — exact one-step killed moment
+elapsed_display_seconds = 20.349072456359863
+mu interval = (0.9122120876871298, 0.9122120877239712)
+mu coarse = 11402651/12500000 91221209/100000000
+PHASE1_EXACT_MU_PASS = True
+
+PHASE 2 — exact two-step killed norm moment
+elapsed_display_seconds = 44.12896752357483
+nNorm interval = (0.8321444136965233, 0.8321444137301309)
+mu lower imported from phase 1 = 11402651/12500000
+eps2 coarse upper = 677/50000000 1.354e-05
+nNorm cap = 0.8321444188979265
+PHASE2_EXACT_NORM_PASS = True
+
+The phase-2 inequality is rigorous because nNorm=<Kf,Kf> and phase 1 proves mu>=mu_lo, hence
+  eps^2 = nNorm-mu^2 <= nNorm-mu_lo^2 < 677/50000000.
+A direct exact interval computation performed during the same run additionally gave
+eps2 interval = (1.3520706797159533e-05, 1.3520807619249886e-05),
+but the theorem uses only the coarser 677/50000000 bound above.
+
+SYNTHESIS — exact rational/integer checks
+L40 = 0.1469733479315881
+power check = True
+trace margin = 64286279871315630412779399790771061898786122724885820987919791806992939320847291538957942030839147426161065257279182662177852859045980006324599705983103213/390832503418642859159606042082176731161330831301437095547597016201653310840298095303036924792285673624747295135481921477926047362987327488000000000000000000000000
+trace margin decimal display = 1.64485500333259e-07
+Temple margin = 22139183/625000000000000
+Temple margin decimal display = 3.54226928e-08
+covariance finite margins = [7.78146399812076e-06, 0.0038921584429475525, 0.03541217760593994, 0.04362455218596731, 0.03396025917319854]
+incoming lower/width = 53683/312500 0.1717856 0.0782144
+new lower/width = 42971/250000 0.171884 0.078116
+repository gain = 123/1250000 9.84e-05
+ALL_EXACT_SYNTHESIS_CHECKS_PASS = True
+
+COMBINED_VERDICT = ALL_EXACT_CHECKS_PASS

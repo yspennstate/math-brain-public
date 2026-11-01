@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "date": "2026-09-20",
+  "seed": 2026092053,
+  "full_FEI_proved": false,
+  "independent_audit": false,
+  "proof_assistant_used": false,
+  "exhaustive": {
+    "boolean_functions": 65812,
+    "coefficient_capacity_assertions": 2100292,
+    "singleton_control_packets": 197136,
+    "first_two_erasure_band_checks": 65808,
+    "scope": "All Boolean functions on 1--4 bits; canonical control/data splits, and all first two level bands."
+  },
+  "sampled_packets": {
+    "cases": 490,
+    "with_overlapping_centres": 350,
+    "all_centres_width_at_least_two": 83,
+    "positive_selected_edges": 5231,
+    "scope": "Seeded Boolean truth tables, rare sets and polynomial phases in dimensions 4--10; arbitrary overlapping centres."
+  },
+  "scalar": {
+    "asymmetric_scalar_pairs": 1089,
+    "logarithm_terms": 48
+  },
+  "inherited_addressing": {
+    "actual_truth_table_dimension": 7,
+    "truth_table_entries": 128,
+    "exact_packet_A": "2",
+    "exact_packet_B": "1/2",
+    "exact_packet_E": "1/2",
+    "symbolic_cases": [
+      {
+        "address_bits": 4,
+        "exact_data_power_sum": "1",
+        "influence": "3"
+      },
+      {
+        "address_bits": 8,
+        "exact_data_power_sum": "2",
+        "influence": "5"
+      },
+      {
+        "address_bits": 16,
+        "exact_data_power_sum": "8",
+        "influence": "9"
+      },
+      {
+        "address_bits": 32,
+        "exact_data_power_sum": "128",
+        "influence": "17"
+      },
+      {
+        "address_bits": 64,
+        "exact_data_power_sum": "32768",
+        "influence": "33"
+      }
+    ],
+    "scope": "Only the seven-bit truth table is enumerated. Large entries evaluate inherited exact formulas; not a new obstruction or full FEI proof."
+  },
+  "spectral_retention": {
+    "cases": [
+      {
+        "K": "4",
+        "w": 2,
+        "boolean_control_influence_lower": "15/512",
+        "real_energy_upper": "11/15360",
+        "ratio_lower": "450/11"
+      },
+      {
+        "K": "4",
+        "w": 4,
+        "boolean_control_influence_lower": "15/256",
+        "real_energy_upper": "19/15360",
+        "ratio_lower": "900/19"
+      },
+      {
+        "K": "16",
+        "w": 2,
+        "boolean_control_influence_lower": "15/1024",
+        "real_energy_upper": "11/253952",
+        "ratio_lower": "3720/11"
+      },
+      {
+        "K": "16",
+        "w": 4,
+        "boolean_control_influence_lower": "15/512",
+        "real_energy_upper": "19/253952",
+        "ratio_lower": "7440/19"
+      },
+      {
+        "K": "256",
+        "w": 2,
+        "boolean_control_influence_lower": "15/4096",
+        "real_energy_upper": "11/66584576",
+        "ratio_lower": "243840/11"
+      },
+      {
+        "K": "256",
+        "w": 4,
+        "boolean_control_influence_lower": "15/2048",
+        "real_energy_upper": "19/66584576",
+        "ratio_lower": "487680/19"
+      },
+      {
+        "K": "65536",
+        "w": 2,
+        "boolean_control_influence_lower": "15/65536",
+        "real_energy_upper": "11/4395899027456",
+        "ratio_lower": "1006141440/11"
+      },
+      {
+        "K": "65536",
+        "w": 4,
+        "boolean_control_influence_lower": "15/32768",
+        "real_energy_upper": "19/4395899027456",
+        "ratio_lower": "2012282880/19"
+      },
+      {
+        "K": "4294967296",
+        "w": 2,
+        "boolean_control_influence_lower": "15/16777216",
+        "real_energy_upper": "11/18889429902681561890816",
+        "ratio_lower": "16888466390384640/11"
+      },
+      {
+        "K": "4294967296",
+        "w": 4,
+        "boolean_control_influence_lower": "15/8388608",
+        "real_energy_upper": "19/18889429902681561890816",
+        "ratio_lower": "33776932780769280/19"
+      }
+    ],
+    "scope": "Analytic Fourier-retention implications applied to the prior square-root family; no Boolean function matching all coefficients is asserted to exist."
+  },
+  "distinct_exact_packet_signatures": 848,
+  "checker_sha256": "502c8b94c1cc83048bb7de514b41c949a6bfe3d31d250e47eb82a12040eb51c6"
+}

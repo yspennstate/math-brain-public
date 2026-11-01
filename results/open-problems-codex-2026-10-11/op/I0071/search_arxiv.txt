@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/QH/vwCcapq7YpUpHcMqZuZRQP3Y</id>
+  <title>arXiv Query: search_query=all:"triangular" AND all:"stochastic" AND all:"reaction"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-12T03:09:11Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22triangular%22+AND+(all:%22stochastic%22+AND+all:%22reaction%22)&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2604.06645v2</id>
+    <title>Global in time solutions to stochastic reaction-diffusion systems with superlinear reactions satisfying a triangular control of mass</title>
+    <updated>2026-05-26T15:01:06Z</updated>
+    <link href="https://arxiv.org/abs/2604.06645v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.06645v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study systems of reaction-diffusion equations perturbed by multiplicative noise, where the reaction terms satisfy quasipositivity, a triangular mass-control structure, and polynomial growth. Our results apply to a broad class of reaction-diffusion systems arising, most notably, in chemistry and biology. In the deterministic setting these assumptions are known to guarantee the global existence of solutions. In the stochastic setting, however, reaction-diffusion systems have typically been analyzed under different assumptions on the reactions that preclude many natural models, such as reversible chemical reaction networks modeled by the mass-action law, and the question of global existence and uniqueness under a mass-control structure has remained open. In this work, we show that stochastically perturbing reaction-diffusion systems with triangular control of mass by suitable multiplicative noise leads to solutions that exist for all time.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-08T03:42:27Z</published>
+    <arxiv:comment>38 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Dionysis Milesis</name>
+    </author>
+    <author>
+      <name>Michael Salins</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.02566v1</id>
+    <title>triangulax: Differentiable Simulations with Triangular Meshes across Soft Matter Physics</title>
+    <updated>2026-10-01T22:58:51Z</updated>
+    <link href="https://arxiv.org/abs/2610.02566v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.02566v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many physical and biological systems -foams, membranes, elastic shells, or tissue sheets- can be mathematically described as 2D surfaces. These surfaces can host complex dynamics, like reaction-diffusion systems, and undergo drastic deformations. Here, we present triangulax, an open-source Python library for simulations and geometry processing that discretizes surfaces using triangular meshes available at https://github.com/nikolas-claussen/triangulax. It combines two features. First, discrete differential geometry provides coordinate-free discretization, which allows simulating strongly deforming surfaces. Second, the library is built on the machine-learning framework JAX, so mesh-based energies and entire simulations can be differentiated automatically (including simulations with stochastic forces or topological modifications). This simplifies multi-physics simulations by computing forces automatically and allows fitting model parameters to experimental data or design objectives. We implement an algorithm to preserve mesh quality in strongly deforming surfaces and apply it to a model of membrane mechanics coupled to an on-membrane concentration field. We validate our approach against exact solutions and existing software, and demonstrate triangulax across a range of problems, including membrane mechanics, vertex models, and inverse design of a shape-morphing elastomer sheet.</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.bio-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-01T22:58:51Z</published>
+    <arxiv:comment>20 pages, 11 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <author>
+      <name>Samuel Silliman</name>
+    </author>
+    <author>
+      <name>Qiwei Yu</name>
+    </author>
+    <author>
+      <name>Nikolas Claussen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.01668v2</id>
+    <title>Fluid Deformation in Random Unsteady Flow</title>
+    <updated>2026-05-05T22:45:26Z</updated>
+    <link href="https://arxiv.org/abs/2510.01668v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.01668v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fluid deformation controls myriad processes in random flows including mixing and dispersion, stress development in complex fluids, colloid transport and deposition, droplet breakup and emulsification, fluid-structure interaction, chemical reactions and biological activity. Despite this, fundamental aspects are not well understood, including the link between the Lagrangian velocity gradient tensor $\boldsymbolε$ and deformation measures such as Lyapunov exponents ($λ_{\infty,i}$), their finite-time counterparts (FTLEs) and the right Cauchy-Green tensor $\mathbf{C}$. We address these knowledge gaps by developing an \emph{ab initio} stochastic model of fluid deformation in ergodic and stationary random unsteady flows. We show that although the Lagrangian velocity process is non-Markovian and non-Fickian, temporal decorrelation in unsteady random flows results in Fickian evolution of $\boldsymbolε$. Application of an objective coordinate transform renders $\boldsymbolε^\prime$ upper triangular, the basis vectors of which exponentially converge to Lyapunov vectors. As such, the diagonal components of $\boldsymbolε^\prime$ correspond to increments of the Lyapunov spectra, while the off-diagonal components objectively quantify shear and vorticity. This leads to a stochastic model of Lagrangian fluid deformation as a simple Brownian process that provides a direct link between $\boldsymbolε^\prime$ and fluid deformation. We develop closed-form expressions for the evolution of $\mathbf{C}$ and the FTLEs, and apply the stochastic model to numerical results for a model 2D unsteady flow and 3D forced homogeneous isotropic turbulence, returning excellent agreement with direct calculations of deformation measures.</summary>
+    <category term="physics.flu-dyn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-02T04:47:57Z</published>
+    <arxiv:comment>21 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.flu-dyn"/>
+    <author>
+      <name>Daniel Lester</name>
+    </author>
+    <author>
+      <name>Marco Dentz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.00213v2</id>
+    <title>Design principles for fast and efficient self-assembly processes</title>
+    <updated>2024-03-04T23:43:57Z</updated>
+    <link href="https://arxiv.org/abs/2403.00213v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.00213v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Self-assembly is a fundamental concept in biology and of significant interest to nanotechnology. Significant progress has been made in characterizing and controlling the properties of the resulting structures, both experimentally and theoretically. However, much less is known about kinetic constraints and determinants of dynamical properties like time efficiency, although these constraints can become severe limiting factors of self-assembly processes. Here we investigate how the time efficiency and other dynamical properties of reversible self-assembly depend on the morphology (shape) of the building blocks for systems in which the binding energy between the constituents is large. As paradigmatic examples, we stochastically simulate the self-assembly of constituents with triangular, square, and hexagonal morphology into two-dimensional structures of a specified size. We find that the constituents' morphology critically determines the assembly time and how it scales with the size of the target structure. Our analysis reveals three key structural parameters defined by the morphology: The nucleation size and attachment order, which describe the effective order of the chemical reactions by which clusters nucleate and grow, respectively, and the growth exponent, which determines how the growth rate of an emerging structure scales with its size. Using this characterization, we formulate an effective theory of the self-assembly kinetics, which we show exhibits an inherent scale invariance. This allows us to identify general scaling laws that describe the minimal assembly time as a function of the size of the target structure. We show how these insights on the kinetics of self-assembly processes can be used to design assembly schemes that could significantly increase the time efficiency and robustness of artificial self-assembly processes.</summary>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-01T01:22:29Z</published>
+    <arxiv:comment>43 pages, 22 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.soft"/>
+    <author>
+      <name>Florian M. Gartner</name>
+    </author>
+    <author>
+      <name>Erwin Frey</name>
+    </author>
+  </entry>
+</feed>

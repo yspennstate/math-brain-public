@@ -1,0 +1,1 @@
+COMPLETE_LOCAL: proof/review and exact main/boundary certificates saved. New extension pending independent review. No stage research process left running. FEI and universal initial source pricing OPEN.

@@ -1,0 +1,2 @@
+STATE: A092 stage17 complete: A085 full-support absolute-TV reset obstruction accepted; A047 all-r canonical full-price obstruction accepted at substatement scope; exact checks PASS; FEI OPEN.
+NEXT: Pay one prescribed inherited mixed query/reset using correlation-preserving Q and SAME unused original bank, with old bookings, channel bills and both complete terminals; A096/A097 supply, A087/A094 review.

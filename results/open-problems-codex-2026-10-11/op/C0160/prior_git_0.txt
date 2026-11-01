@@ -1,0 +1,97 @@
+Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is **not GPT-6 at maximum**; no authenticated runtime model/effort telemetry or binding selector is exposed.
+
+# R7-01 — shard-zero status reconciliation: C0151 and C0160
+
+Date: 2026-09-18 UTC  
+Repository: `yspennstate/math-open-problems`  
+Branch: `master`  
+Native slot: `6aabe777361481919c9e614646464772`  
+Own root: `research7_2026-09-17/R7-01/`  
+Captured run-start master: `74032e7e9c8e69917301311c88855c435dadb0ef`  
+Fresh pre-delivery master: `86904ca15a3762e1e6a71243818835f88975704a`  
+State entering screen: `PENDING_ADMISSION`.
+
+## 1. Why these rows are in this worker's partition
+
+The owner gate is the exact case-sensitive ASCII sum modulo seven. For a `Cdddd` identifier, `sum(ord(c)) = 259 +` the decimal digit sum, because `ord('C') + 4 ord('0') = 259`, which is `0 mod 7`.
+
+- `C0151`: digit sum `0+1+5+1=7`, hence residue `0 mod 7`.
+- `C0160`: digit sum `0+1+6+0=7`, hence residue `0 mod 7`.
+
+Partition membership is not ownership. Direct current probes of `operations/claims/C0151.md` and `operations/claims/C0160.md` returned 404 at the fresh repository state. That does not make either row admissible; source/current-status gates still control.
+
+## 2. C0151 — exact source conjecture is already refuted in the literature
+
+### 2.1 Original source recovered
+
+Gábor Pete, *Probability and Geometry on Groups*, lecture notes, current PDF version dated **3 April 2024**, Conjecture 14.16 (Balázs Szegedy), printed p. 214 / PDF page 214 in the current file:
+
+https://math.bme.hu/~gabor/PGG.pdf
+
+The current primary PDF says that on random `d`-regular graphs the optimal density, in fact all possible limit densities, should be achievable by local constructions, then states Conjecture 14.16: the possible densities of independent sets in random `d`-regular graphs should coincide with the possible densities of independent sets that are factors of iid on the `d`-regular tree.
+
+The web PDF text was recovered directly from the current file. Two requested page-image screenshot attempts failed with a cache-miss error, so this record does not pretend to have a successful visual-page audit; the primary PDF text extraction did succeed.
+
+### 2.2 Repository history recovered before external search
+
+This is **not a new mathematical refutation by R7-01**. The original intake machinery already contained the key correction, but the top-level `problems.jsonl` row remained stale as `unverified` / `attempted_unsolved`.
+
+`probability_1000_intake_claude_20260907/batch_C005.py` explicitly records that the conjecture fails at the maximum density, citing the asymptotic gap between random-regular maximum independent sets and factor-of-iid independent sets. The raw tier file likewise says `C0151|2|... refuted at the maximum by Rahman-Virag + Ding-Sly-Sun`.
+
+The purpose of this screen is therefore to externally verify that old internal correction and prevent R7-01 from treating the stale problem row as free open inventory.
+
+### 2.3 Current primary/follow-up literature check
+
+Mustazee Rahman and Bálint Virág, *Local algorithms for independent sets are half-optimal*, Annals of Probability **45** (2017), 1543–1577, DOI 10.1214/16-AOP1094, arXiv:1402.0485:
+
+https://arxiv.org/abs/1402.0485
+
+Their theorem/abstract gives the needed comparison in one place:
+
+- the largest density of a factor-of-iid independent set on the `d`-regular tree is asymptotically at most `(log d)/d` as `d -> infinity`, and this is asymptotically attainable;
+- in contrast, the maximum independent-set density in random `d`-regular graphs is asymptotically `2(log d)/d`.
+
+Rahman's related SIAM paper *Factor of IID Percolation on Trees* (2016), DOI 10.1137/15M1021362, independently gives the `(log d)/d` upper bound for factor-of-iid site percolations with finite clusters; independent sets are the size-one-cluster case.
+
+Thus, for all sufficiently large fixed `d`, a maximum-density independent set in the random `d`-regular graph has limiting density near `2 log d/d`, while every factor-of-iid independent set on `T_d` has density at most near `log d/d`. The two sets of densities cannot coincide. This directly falsifies the literal source conjecture.
+
+Classification for admission: **KNOWN / REFUTED_IN_LITERATURE**, not an open source and not claimable by R7-01. Any residual question about characterising submaximal densities would be a different narrowed problem and cannot be substituted for Conjecture 14.16 without a new outside source.
+
+## 3. C0160 — the encoded residual silently changes the source scope
+
+### 3.1 Original survey recovered
+
+Olle Häggström and Johan Jonasson, *Uniqueness and non-uniqueness in percolation theory*, Probability Surveys **3** (2006), 289–344, DOI 10.1214/154957806000000096:
+
+https://arxiv.org/abs/math/0612812
+
+The repository's C0160 row is titled as monotonicity of the number of infinite clusters / uniqueness threshold and itself says that for iid bond percolation on a **transitive** graph the uniqueness set is an interval and that this is proved by Häggström–Peres and Schonmann. The row then manufactures a purported residual for quasi-transitive and general invariant-percolation settings.
+
+### 3.2 Current-status reconciliation
+
+The quasi-transitive Bernoulli extension is not open. Standard later statements explicitly record that for a quasi-transitive graph `G`, Bernoulli percolation has a unique infinite cluster almost surely for every `p > p_u`. A convenient current source is Tom Hutchcroft, *Percolation on Hyperbolic Graphs*, GAFA **29** (2019), whose introduction states that Häggström, Peres and Schonmann / Schonmann proved exactly this for quasi-transitive graphs.
+
+A second modern check, Pengfei Tang, *Heavy Bernoulli-percolation clusters are indistinguishable* (arXiv:1809.01284), proves for any quasi-transitive graph that the uniqueness threshold also equals the threshold for connectivity decay, reinforcing that the quasi-transitive Bernoulli phase boundary is standard established theory.
+
+The source row's proposed fallback to **general invariant dependent percolation families** is not the same literal problem as iid Bernoulli percolation with parameter `p`; a dependent family needs an additional choice of family/coupling and hypotheses. It therefore cannot be used to keep C0160 open under the same canonical ID.
+
+Classification for admission: **KNOWN / SOURCE-SCOPE-MISMATCH**. The Bernoulli uniqueness-monotonicity statement encoded by C0160 is already known; the putative dependent-percolation residual is a distinct, under-specified problem and is not an admissible continuation of this row.
+
+## 4. Admission decision and mathematical accounting
+
+Neither row passes source admission:
+
+- `C0151`: literal source conjecture is refuted in literature; stale intake status must not override the recovered attempt/history plus fresh verification.
+- `C0160`: literal Bernoulli uniqueness-monotonicity scope is known, while the proposed dependent-family residual changes the problem.
+
+No claim file is created. No Section-B method is charged because no target was admitted. No target-specific stagnation counter starts.
+
+Frozen successor accounting remains:
+
+`UNKNOWN/UNMEASURED -> UNKNOWN/UNMEASURED`.
+
+## 5. Cursor consequence
+
+The bounded R7-01 shard-zero C/I sweep should not revisit C0151 or C0160 absent a material source/status change. C0151 joins the `KNOWN/REFUTED` exclusions; C0160 joins the `KNOWN/SCOPE-MISMATCH` exclusions. Continue only with genuinely unscreened shard-zero queue/intake deltas or newly added outside rows, with exact source and ownership recovery before any claim.
+
+No shared `QUEUE.md`, `RESULTS.md`, or `POSTED.md` file was edited. No peer/historical report was edited. No email, Drive, public posting, workflow execution, access change, schedule change, or force-push was performed.

@@ -1,0 +1,92 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w454",
+  "bundle_slug": "c0041-regeneration-audit-001",
+  "entries": [
+    {
+      "key": "moment-gap",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "c0041-regeneration-clock-gap-and-dated-source-status",
+      "kind": "concept",
+      "title": "C0041: regeneration moment gap and source-status audit (DRAFT)",
+      "statement": "DRAFT audit, 2026-10-10. C0041 concerns nearest-neighbor RWRE on Z^d, d>=2, with iid site transition rows and a deterministic positive lower bound kappa on every transition. Its premise is annealed almost-sure transience in one fixed unit direction l, and its conclusion is positive speed in that direction. Regeneration durations being finite almost surely does not by itself supply the finite conditioned first moment needed by the renewal speed argument. Drewitz-Ramirez arXiv:1309.2589 poses this as Open question 2.20; a September 23, 2026 OpenAI preprint titled Directional transience implies ballisticity now claims the full result. That proof is not certified by this audit, so current openness is UNKNOWN and no novelty is claimed. A comparator admitted with sorry is a statement specification, not a proof receipt; the separate solution Main.lean and its dependencies must be checked.",
+      "proof_text": null,
+      "assumptions": [
+        "Historical source status is dated 2026-09-07",
+        "The newer source is a claimed resolution whose proof is not independently certified here"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-c0041-w454-audit-20261010",
+        "url": "owner://primary-directive/C0041/w454",
+        "revision": "independent-and-adversarial-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "finite-not-integrable",
+      "namespace": "probability.renewal",
+      "logical_name": "finite-regeneration-durations-do-not-imply-positive-renewal-speed",
+      "kind": "concept",
+      "title": "Finite regeneration durations do not ensure positive speed (DRAFT obstruction)",
+      "statement": "DRAFT independent obstruction, review pending. Let T_i be iid positive integers with P(T_i=m)=1/[m(m+1)], m>=1. Set S_k=sum_{i=1}^k T_i and Y_t=max{k:S_k<=t}. Then T_i is finite almost surely, P(T_i>=m)=1/m and E[T_i]=infinity. Strong laws for the truncations min(T_i,M), followed by M increasing to infinity, give S_k/k -> infinity. Thus Y_t -> infinity but Y_t/t -> 0 almost surely despite unit regeneration displacements. This holding process is outside uniformly elliptic nearest-neighbor iid RWRE and does not refute C0041; it refutes only an inference from finite-a.s. regeneration times and bounded displacements to positive speed.",
+      "proof_text": null,
+      "assumptions": [
+        "Abstract iid regenerative holding process",
+        "No claim to satisfy the C0041 model"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-c0041-w454-independent-renewal-obstruction",
+        "url": "owner://primary-directive/C0041/w454",
+        "revision": "independent-and-adversarial-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "conditioned-clock",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "conditioned-cube-clock-bound-requires-quantitative-radius-rate",
+      "kind": "concept",
+      "title": "Future conditioning in the radius-to-clock bridge (DRAFT)",
+      "statement": "DRAFT sufficient bridge, review pending; combines the independently audited w453 outward-face argument with w454 conditioning. Let X start at 0 in Z^d in a nearest-neighbor environment with every transition at least kappa, 0<kappa<=1/(2d). Let tau be an arbitrary nonnegative integer random time, R_tau the maximum infinity-norm of the path up to tau, and D any event with P(D)=p>0. For integers r,t>=0, P(tau>t|D)<=P(R_tau>r|D)+p^-1(1-kappa^(r+1))^floor(t/(r+1)). The deterministic-time cube survival estimate is proved in the original law by conditional iteration, then divided by p; the conditioned law is not assumed to retain ellipticity. If P(R_tau>r|D)<=C exp(-lambda r) with lambda>log(1/kappa), this bound is summable in t and gives E[tau|D]<infinity. C0041 does not supply that radius-tail rate in this derivation, and the condition is sufficient, not necessary.",
+      "proof_text": null,
+      "assumptions": [
+        "Fixed environment, or an annealed mixture with common kappa",
+        "Positive conditioning-event probability",
+        "The clock may depend on the future",
+        "For the moment implication, the stated strict exponential rate is an additional hypothesis"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-c0041-w453-w454-conditioned-clock-audit",
+        "url": "owner://primary-directive/C0041/w454",
+        "revision": "independent-and-adversarial-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "moment-gap",
+      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0041-transience-in-a-direction-implies-ballisticity-for-uniformly-elliptic",
+      "kind": "cites",
+      "rationale": "The existing target card states the iid UE d>=2 single-direction problem with status dated September 7; this audit preserves that exact model and adds the later claimed source, without deciding its proof."
+    },
+    {
+      "from_key": "finite-not-integrable",
+      "to_key": "moment-gap",
+      "kind": "analogous_to",
+      "rationale": "The first end has finite-a.s. iid durations and zero speed; the second end requires a finite conditioned first moment. The analogy blocks only the abstract finiteness shortcut; it is not a counterexample under C0041 assumptions."
+    },
+    {
+      "from_key": "conditioned-clock",
+      "to_key": "moment-gap",
+      "kind": "semantic_association",
+      "rationale": "The first end requires a quantitative radius-tail rate and p>0 to conclude an integrable clock; the second end identifies that clock moment as the bridge still unsupported by mere directional transience in this derivation."
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+% Superseded R27 note.
+%
+% This historical draft tried to prove a new second-moment theorem for radially
+% concentrated rotationally invariant rows.  The manuscript now uses a simpler
+% pathwise result in parts/rotinv_universality.tex: spherical directions plus
+% radial weights with subexponential global logarithmic extrema have the
+% Gaussian row-submatrix base, up to the deterministic radial scale.
+%
+% Do not input this notes file; it intentionally duplicates historical labels
+% from the included section below.
+
+\subsection{Rotationally invariant rows: the upper side without Gaussianity}
+
+The conditional universality theorem of Section~\ref{sec:universality} left the
+second-moment (upper) side open for general independent entries.  For
+\emph{rotationally invariant} rows with a concentrated radius the upper side holds
+unconditionally.  The Gaussian law enters the source second-moment argument only
+through (i) the one-dimensional marginal small-ball exponent and (ii) the Haar law
+of the normals of random row spans; rotational invariance supplies (ii) exactly,
+and radial concentration supplies the planar density comparison behind the
+two-slab estimate.
+
+\begin{definition}[Rotationally invariant rows; radial concentration]\label{def:rot-inv}
+A matrix $A\in\F^{N\times m}$ has \emph{rotationally invariant rows} if its rows
+$a_1,\dots,a_N$ are i.i.d.\ and the law of $a_1$ is invariant under $U(m)$ (under
+$O(m)$ when $\F=\R$); equivalently $a_1=R\,\theta$ with $\theta$ uniform on the unit
+sphere of $\F^m$, $R=\|a_1\|\ge0$ independent of $\theta$, and $\PP\{a_1=0\}=0$.
+The rows are \emph{radially concentrated} (with scale $b_m>0$) if
+$R/b_m\to1$ in probability and the families $\{(R/b_m)^{-d_\F}\}$ and
+$\{(R/b_m)^{-2d_\F}\}$ are uniformly integrable.
+\end{definition}
+
+Rows uniform on the sphere of radius $b_m$ ($R\equiv b_m$) and Gaussian rows
+($R=\|N(0,I_m)\|$, so $R/\sqrt m\to1$) are radially concentrated.  Rotational
+invariance does \emph{not} require independent entries; this is a different
+generalization of the Gaussian case than the independent-entry model of
+Section~\ref{sec:universality}.
+
+\begin{lemma}[Marginal small-ball for spherical rows]\label{lem:rot-marginal}
+For rotationally invariant $a_1=R\theta$ and any unit $u$, $\langle a_1,u\rangle$
+has the law of $R\theta_1$.  The sphere coordinate $\theta_1$ has, on
+$\F\simeq\R^{d_\F}$, a density of order $m^{1/2}$ near the origin
+($\theta_1^2\sim\operatorname{Beta}(d_\F/2,d_\F(m-1)/2)$).  Hence for $0<t\le1$,
+\[
+  \PP\{|\langle a_1,u\rangle|\le t\}\le C_\F m^{1/2}\,\EE[R^{-d_\F}\wedge t^{-d_\F}]\,t^{d_\F},
+\]
+which is $\le C_\F m^{1/2}\EE[R^{-d_\F}]\,t^{d_\F}$ when $\EE[R^{-d_\F}]<\infty$, with the
+matching lower bound $c_\F t^{d_\F}$ when $R$ is bounded above with positive
+probability.  For $R\equiv b_m$ one gets $c_\F(t/b_m)^{d_\F}\le\PP\le C_\F(t/b_m)^{d_\F}$
+on $0<t\le b_m$.
+\end{lemma}
+
+\begin{lemma}[Planar projection comparison]\label{lem:planar}
+Let $x=R\theta$ be radially concentrated with scale $b_m$, and let $V\subset\F^m$ be
+a fixed two-dimensional ($\F$-)subspace with orthonormal basis $f_1,f_2$.  Write
+$f_Z$ for the density of $\langle x,f_1\rangle$ and $g$ for the density of
+$(\langle x,f_1\rangle,\langle x,f_2\rangle)$ on $\F^2$.  Then
+\[
+  \kappa_m:=\frac{g(0)}{f_Z(0)^2}\longrightarrow 1\qquad(m\to\infty).
+\]
+\end{lemma}
+
+\begin{proof}
+By the Poincar\'e--Maxwell limit $\sqrt m\,(\theta_1,\theta_2)\to N(0,I)$ on $\F^2$,
+the pair $(\langle x,f_1\rangle,\langle x,f_2\rangle)=R(\theta_1,\theta_2)$ is a scale
+mixture of centered $\F^2$ Gaussians with scale $\sigma=R/\sqrt m$.  For a single
+$\F^2$ Gaussian of scale $\sigma$ the two coordinates are independent, so its planar
+density at the origin factorizes as $f_\sigma(0)^2$ with
+$f_\sigma(0)=c_{d_\F}\sigma^{-d_\F}$, where $c_{d_\F}$ depends only on $\F$; hence the
+joint planar density at the origin is $c_{d_\F}^2\sigma^{-2d_\F}$.  Writing
+$\sigma=(R/b_m)\,s_m$ with $s_m=b_m/\sqrt m$,
+\[
+  f_Z(0)=\EE\!\big[c_{d_\F}\sigma^{-d_\F}\big],\qquad
+  g(0)=\EE\!\big[c_{d_\F}^2\sigma^{-2d_\F}\big].
+\]
+Radial concentration $R/b_m\to1$ with uniform integrability of $(R/b_m)^{-2d_\F}$
+collapses both expectations to the common scale $s_m$, giving
+$f_Z(0)=(1+o(1))c_{d_\F}s_m^{-d_\F}$ and $g(0)=(1+o(1))c_{d_\F}^2 s_m^{-2d_\F}$, whence
+$\kappa_m=g(0)/f_Z(0)^2\to1$.  For a non-degenerate limiting scale $\Sigma$ (genuine
+mixture) Jensen gives $\kappa_\infty=\EE[\Sigma^{-2d_\F}]/(\EE[\Sigma^{-d_\F}])^2>1$;
+see Remark~\ref{rem:radial-mixture}.
+\end{proof}
+
+\begin{theorem}[Spherical universality]\label{thm:rot-inv-univ}
+Let $\F\in\{\R,\C\}$ and let $A_m\in\F^{N_m\times m}$ have radially concentrated
+rotationally invariant rows with $N_m/m\to\gamma>1$ and the two-sided marginal
+small-ball estimate
+\begin{equation}\label{eq:rot-marg}
+  c_\F t^{d_\F}\le \PP\{|\langle a_1,u\rangle|\le t\}\le C_\F m^{B}t^{d_\F},\qquad 0<t\le1
+\end{equation}
+(Lemma~\ref{lem:rot-marginal}; e.g.\ $R\equiv\sqrt m$ gives $B=1/2$).  Then
+\[
+  \frac1m\log M_m\xrightarrow{\PP}-\frac{h(\gamma)}{d_\F},
+\]
+with deviation probability $O_{\gamma,\varepsilon,\F}(m^{-1})$ when $N_m=\gamma m+O(1)$.
+\end{theorem}
+
+\begin{proof}
+Run the proof of \cite{ShmaloExtremal2026}, discharging the two uses of
+Gaussianity.
+
+\emph{Lower side.}  By the negative second-moment identity, $\smin(A_{m,T})\le t$
+forces $|\langle a_i,u\rangle|\le\sqrt m\,t$ for some $i\in T$ and the unit normal
+$u$ of the other rows of $T$; \eqref{eq:rot-marg} gives
+$\PP\{\smin(A_{m,T})\le t\}\le C_\F m^{B+1}t^{d_\F}$, and a union bound over
+$\binom{N_m}{m}$ submatrices closes it as in Theorem~\ref{thm:univ-lower}.
+
+\emph{Upper side.}  Fix $x=a_{N_m}$; for an $(m-1)$-set $S$ let $u_S$ be a unit
+normal to $\spn\{a_i:i\in S\}$ and $Z_t=\sum_S\mathbf1\{|\langle x,u_S\rangle|\le t\}$.
+(i) The single-slab probability is \eqref{eq:rot-marg}.  (ii) For $S\ne T$ with
+$|S\cap T|=m-D$, conditional on the shared rows the normals $u_S,u_T$ are
+independent and Haar in $E^\perp=(\spn\{a_i:i\in S\cap T\})^\perp$: the disjoint
+rows project to i.i.d.\ rotationally invariant vectors in $E^\perp$, whose spans
+have Haar normals.  This is the normals lemma of \cite{ShmaloExtremal2026}, using
+only rotational invariance.  Conditional on $u_S,u_T$ with overlap
+$\varrho=\langle u_S,u_T\rangle$, the pair $(\langle x,u_S\rangle,\langle x,u_T\rangle)$
+is the image of the rotationally invariant projection $P_{\spn\{u_S,u_T\}}x$ under
+the coordinates $(u_S,u_T)$ whose Gram determinant is $1-|\varrho|^2$, so its
+density at $0$ equals $g(0)\,(1-|\varrho|^2)^{-d_\F/2}$ with $g$ as in
+Lemma~\ref{lem:planar}.  Integrating over the two slabs (resp.\ disks) of radius
+$t$ and dividing by $p(t)^2=(1+o(1))f_Z(0)^2(2t)^{2d_\F}\!/\!\dots$ gives, for $D\ge3$,
+\[
+  \frac{q_D(t)}{p(t)^2}\le (1+o(1))\,\kappa_m\,(1-|\varrho|^2)^{-d_\F/2},
+\]
+with $\kappa_m\to1$ by Lemma~\ref{lem:planar}, and $q_2(t)\le p(t)$.  By (ii)
+$|\varrho|^2$ has the exact $\operatorname{Beta}$ law of \cite{ShmaloExtremal2026},
+so $\EE[(1-|\varrho|^2)^{-d_\F/2}\mid D]\le1+C/D$; the overlap combinatorics and the
+$D=2$ term are identical to the source.  Hence $\Var Z_t/(\EE Z_t)^2\to0$ for every
+$t=e^{-sm}$, $s<h(\gamma)/d_\F$, and the second-moment method gives the upper side.
+\end{proof}
+
+\begin{corollary}[Spherical random frames have Balan--Wang base $1/4$]\label{cor:spherical-pr}
+Let $A_m\in\R^{(2m-1)\times m}$ have i.i.d.\ rows uniform on the sphere of radius
+$\sqrt m$.  Then $A_m$ is full spark a.s.\ and $\omega(A_m)=4^{-m+o_\PP(m)}$.
+\end{corollary}
+
+\begin{proof}
+Continuous rotationally invariant rows give full spark a.s., so
+$\omega(A_m)=\min_{|T|=m}\smin(A_{m,T})$; apply Theorem~\ref{thm:rot-inv-univ} at
+$\gamma=2$, $h(2)=\log4$.
+\end{proof}
+
+\begin{remark}[Radial mixtures change the constant]\label{rem:radial-mixture}
+If the radius does not concentrate -- e.g.\ $R/\sqrt m\to\Sigma$ for a
+non-degenerate positive $\Sigma$ -- then the two-slab constant is
+$\kappa_\infty=\EE[\Sigma^{-2d_\F}]/(\EE[\Sigma^{-d_\F}])^2>1$, the second-moment
+ratio tends to $\kappa_\infty>1$ rather than $1$, and the bare second-moment method
+gives only $\PP\{Z_t>0\}\ge\kappa_\infty^{-1}$.  Whether the exponential base
+$h(\gamma)/d_\F$ nonetheless holds for genuine radial mixtures (by a boosting or
+conditioning argument), or whether mixtures shift the base, is left open
+(Problem~\ref{prob:radial-mixture}).
+\end{remark}

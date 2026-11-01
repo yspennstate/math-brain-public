@@ -1,0 +1,167 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w342",
+  "bundle_slug": "w342-p0133-partial-results",
+  "entries": [
+    {
+      "key": "p0133-w342-result-scope",
+      "namespace": "probability.research.attempts",
+      "logical_name": "p0133-w342-result-scope",
+      "kind": "concept",
+      "title": "Result scope and audit status for P0133",
+      "statement": "The cached torus problem asks for the distribution of three noncontractible loop homotopy classes in a spanning-tree dual complement. A unimodular winding constraint is proved for a theta core; it does not provide limiting probabilities. The 3x3 square-grid enumeration also has bouquet cores, which are not covered by the three-loop assertion. Proofs await w346 KEEP.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0133:p0133-w342-result-scope",
+        "url": "file:///~/brain_workers/w342/proofs/P0133.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "torus-dual-tree-complement-homology-unimodularity",
+      "namespace": "probability.spanning-trees",
+      "logical_name": "torus-dual-tree-complement-homology-unimodularity",
+      "kind": "lemma",
+      "title": "Integral homology basis of a torus dual tree complement",
+      "statement": "For a finite connected graph cellularly embedded in an oriented torus and a primal spanning tree T, the dual edges complementary to T form a connected one-face graph H. Inclusion H->torus induces an isomorphism H_1(H,Z)->H_1(torus,Z). Thus any integral cycle basis of H has two winding vectors with determinant +/-1 in any oriented torus-period basis.",
+      "proof_text": "# P0133: unimodular winding constraint for a theta core\n\nStatus: proof of a structural necessary condition, awaiting w346. No limiting probability distribution is claimed. Continues the earlier cycle-rank-two calculation rather than repeating it as a distributional answer.\n\nLet a finite connected graph be cellularly embedded in a torus and T be a primal spanning tree. The dual complement H consists of all dual edges whose primal edges are not in T. H is connected: a nontrivial partition of its dual vertices would give a nonempty primal separating boundary made entirely of T edges; such a boundary is an even edge subgraph and hence contains a cycle, impossible in T. Deleting the dual edges corresponding to T merges the original dual faces along a tree into a single topological disk. Thus H is a connected one-face cellular graph on the torus. Euler's formula gives cycle rank two.\n\nThe inclusion H -> torus induces an isomorphism on integral first homology. One way to see this is the cellular chain complex: there is one two-cell, and its attaching walk traverses every oriented graph edge once in each direction, so its boundary is zero in the abelian edge-chain group. Therefore H_1(torus,Z)=ker(boundary_1)=H_1(H,Z). In particular an integral graph cycle basis has winding vectors forming a basis of Z^2, with determinant +/-1.\n\nSuppose additionally that, after pruning leaves and suppressing degree-two vertices, H has a theta core: three paths A,B,C between two branch vertices. Orient all three from the first branch vertex to the second and let their lifted displacements be D_A,D_B,D_C. The three loop windings are\n\n    u=D_A-D_B, v=D_A-D_C, v-u=D_B-D_C,\n\nexpressed in units of the two torus periods. The cycles A-B and A-C form an integral basis of the graph's first homology. Hence det(u,v)=+/-1. All three winding vectors are primitive, and the determinant of every pair is +/-1. Up to orientation, the three slopes are a Farey triangle.\n\nThis is conditional on the theta-core topology. A bouquet core and differing definitions of edge-simple loops need separate treatment. The constraint alone supplies no weights for the limiting winding distribution and does not turn an arbitrary chosen cycle basis into the requested loop triple.\n\nSource: P0133-A001 and Schramm Problem 6.2 in the cached 2006 paper. Exact finite-grid enumeration will separately test the homology-basis determinant without asserting a scaling limit.\n\n## A bouquet witness under the literal no-repeated-edge convention\n\nFor every square torus grid of side L>=3, take the primal comb tree: in every horizontal row retain the L-1 nonwrapping horizontal edges, and in column zero retain the L-1 nonwrapping vertical edges. This is connected with L^2-1 edges and is a spanning tree.\n\nIts dual complement has, after pruning leaves, one horizontal loop and one vertical loop meeting at a single dual vertex. To check this directly, the omitted horizontal wrap edges give the full vertical dual loop in column L-1. The omitted vertical edges give horizontal dual chains in every row, with a wrap edge only in row L-1. All chains in the other rows prune away; row L-1 supplies the second loop.\n\nThese two loops have disjoint edge sets and windings (1,0) and (0,1), after choosing orientations. Traversing either alone, or concatenating the first with the second in either orientation, gives four noncontractible closed trails with no repeated edges. Up to reversing the complete trail, their distinct homotopy windings are\n\n    (1,0), (0,1), (1,1), (1,-1).\n\nThe concatenations repeat the common vertex but no edge. Thus, under the literal edge-simple definition given as 'no repeating edges' in the cached source, at least four classes occur for this finite-grid tree. A vertex-simple-cycle convention would give only the two individual loops. This requires reconciliation with the source's assertion of precisely three paths before turning it into a universal finite-grid statement. It is not a conclusion about the intended limiting distribution. The witness exists at arbitrarily fine grid sizes, but its probability may tend to zero.\n\nSource quote for audit: Schramm cached text, lines 1048-1049: 'contains precisely three edge-simple closed paths (i.e., no repeating edges)'. Ask the Claude reviewer to resolve the source convention; the new lemma itself only claims the four explicit trails under its stated convention.\n",
+      "assumptions": [
+        "Connected cellular embedding in an oriented torus",
+        "Primal spanning tree"
+      ],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0133:torus-dual-tree-complement-homology-unimodularity",
+        "url": "file:///~/brain_workers/w342/proofs/P0133.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "torus-theta-core-loop-windings-farey-triangle",
+      "namespace": "probability.spanning-trees",
+      "logical_name": "torus-theta-core-loop-windings-farey-triangle",
+      "kind": "lemma",
+      "title": "Farey-triangle constraint on torus theta-core windings",
+      "statement": "Under the torus dual-tree-complement hypotheses, suppose pruning leaves and suppressing degree-two vertices gives a theta core. Orient its three paths between the branch vertices in the same direction. Their three loop windings, in units of the torus periods, are u,v,v-u for a Z^2 basis u,v with det(u,v)=+/-1. Every winding is primitive and every pair has determinant +/-1. This statement is conditional on a theta core and assigns no distributional probabilities.",
+      "proof_text": "# P0133: unimodular winding constraint for a theta core\n\nStatus: proof of a structural necessary condition, awaiting w346. No limiting probability distribution is claimed. Continues the earlier cycle-rank-two calculation rather than repeating it as a distributional answer.\n\nLet a finite connected graph be cellularly embedded in a torus and T be a primal spanning tree. The dual complement H consists of all dual edges whose primal edges are not in T. H is connected: a nontrivial partition of its dual vertices would give a nonempty primal separating boundary made entirely of T edges; such a boundary is an even edge subgraph and hence contains a cycle, impossible in T. Deleting the dual edges corresponding to T merges the original dual faces along a tree into a single topological disk. Thus H is a connected one-face cellular graph on the torus. Euler's formula gives cycle rank two.\n\nThe inclusion H -> torus induces an isomorphism on integral first homology. One way to see this is the cellular chain complex: there is one two-cell, and its attaching walk traverses every oriented graph edge once in each direction, so its boundary is zero in the abelian edge-chain group. Therefore H_1(torus,Z)=ker(boundary_1)=H_1(H,Z). In particular an integral graph cycle basis has winding vectors forming a basis of Z^2, with determinant +/-1.\n\nSuppose additionally that, after pruning leaves and suppressing degree-two vertices, H has a theta core: three paths A,B,C between two branch vertices. Orient all three from the first branch vertex to the second and let their lifted displacements be D_A,D_B,D_C. The three loop windings are\n\n    u=D_A-D_B, v=D_A-D_C, v-u=D_B-D_C,\n\nexpressed in units of the two torus periods. The cycles A-B and A-C form an integral basis of the graph's first homology. Hence det(u,v)=+/-1. All three winding vectors are primitive, and the determinant of every pair is +/-1. Up to orientation, the three slopes are a Farey triangle.\n\nThis is conditional on the theta-core topology. A bouquet core and differing definitions of edge-simple loops need separate treatment. The constraint alone supplies no weights for the limiting winding distribution and does not turn an arbitrary chosen cycle basis into the requested loop triple.\n\nSource: P0133-A001 and Schramm Problem 6.2 in the cached 2006 paper. Exact finite-grid enumeration will separately test the homology-basis determinant without asserting a scaling limit.\n\n## A bouquet witness under the literal no-repeated-edge convention\n\nFor every square torus grid of side L>=3, take the primal comb tree: in every horizontal row retain the L-1 nonwrapping horizontal edges, and in column zero retain the L-1 nonwrapping vertical edges. This is connected with L^2-1 edges and is a spanning tree.\n\nIts dual complement has, after pruning leaves, one horizontal loop and one vertical loop meeting at a single dual vertex. To check this directly, the omitted horizontal wrap edges give the full vertical dual loop in column L-1. The omitted vertical edges give horizontal dual chains in every row, with a wrap edge only in row L-1. All chains in the other rows prune away; row L-1 supplies the second loop.\n\nThese two loops have disjoint edge sets and windings (1,0) and (0,1), after choosing orientations. Traversing either alone, or concatenating the first with the second in either orientation, gives four noncontractible closed trails with no repeated edges. Up to reversing the complete trail, their distinct homotopy windings are\n\n    (1,0), (0,1), (1,1), (1,-1).\n\nThe concatenations repeat the common vertex but no edge. Thus, under the literal edge-simple definition given as 'no repeating edges' in the cached source, at least four classes occur for this finite-grid tree. A vertex-simple-cycle convention would give only the two individual loops. This requires reconciliation with the source's assertion of precisely three paths before turning it into a universal finite-grid statement. It is not a conclusion about the intended limiting distribution. The witness exists at arbitrarily fine grid sizes, but its probability may tend to zero.\n\nSource quote for audit: Schramm cached text, lines 1048-1049: 'contains precisely three edge-simple closed paths (i.e., no repeating edges)'. Ask the Claude reviewer to resolve the source convention; the new lemma itself only claims the four explicit trails under its stated convention.\n",
+      "assumptions": [
+        "The pruned core is theta"
+      ],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0133:torus-theta-core-loop-windings-farey-triangle",
+        "url": "file:///~/brain_workers/w342/proofs/P0133.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "torus-comb-tree-dual-four-edge-simple-trail-classes",
+      "namespace": "probability.spanning-trees",
+      "logical_name": "torus-comb-tree-dual-four-edge-simple-trail-classes",
+      "kind": "lemma",
+      "title": "Four edge-simple trail classes in a torus comb-tree dual",
+      "statement": "For every L>=3, take the spanning tree on the L-by-L square torus grid consisting of all nonwrapping horizontal row edges and the nonwrapping vertical edges in column zero. Its pruned dual complement is two edge-disjoint loops meeting at one vertex. Under the convention that an edge-simple closed trail may repeat vertices but not edges, it contains four distinct noncontractible homotopy classes up to total reversal, with windings (1,0),(0,1),(1,1),(1,-1). This is a finite-grid convention check, not a scaling-limit distribution assertion.",
+      "proof_text": "# P0133: unimodular winding constraint for a theta core\n\nStatus: proof of a structural necessary condition, awaiting w346. No limiting probability distribution is claimed. Continues the earlier cycle-rank-two calculation rather than repeating it as a distributional answer.\n\nLet a finite connected graph be cellularly embedded in a torus and T be a primal spanning tree. The dual complement H consists of all dual edges whose primal edges are not in T. H is connected: a nontrivial partition of its dual vertices would give a nonempty primal separating boundary made entirely of T edges; such a boundary is an even edge subgraph and hence contains a cycle, impossible in T. Deleting the dual edges corresponding to T merges the original dual faces along a tree into a single topological disk. Thus H is a connected one-face cellular graph on the torus. Euler's formula gives cycle rank two.\n\nThe inclusion H -> torus induces an isomorphism on integral first homology. One way to see this is the cellular chain complex: there is one two-cell, and its attaching walk traverses every oriented graph edge once in each direction, so its boundary is zero in the abelian edge-chain group. Therefore H_1(torus,Z)=ker(boundary_1)=H_1(H,Z). In particular an integral graph cycle basis has winding vectors forming a basis of Z^2, with determinant +/-1.\n\nSuppose additionally that, after pruning leaves and suppressing degree-two vertices, H has a theta core: three paths A,B,C between two branch vertices. Orient all three from the first branch vertex to the second and let their lifted displacements be D_A,D_B,D_C. The three loop windings are\n\n    u=D_A-D_B, v=D_A-D_C, v-u=D_B-D_C,\n\nexpressed in units of the two torus periods. The cycles A-B and A-C form an integral basis of the graph's first homology. Hence det(u,v)=+/-1. All three winding vectors are primitive, and the determinant of every pair is +/-1. Up to orientation, the three slopes are a Farey triangle.\n\nThis is conditional on the theta-core topology. A bouquet core and differing definitions of edge-simple loops need separate treatment. The constraint alone supplies no weights for the limiting winding distribution and does not turn an arbitrary chosen cycle basis into the requested loop triple.\n\nSource: P0133-A001 and Schramm Problem 6.2 in the cached 2006 paper. Exact finite-grid enumeration will separately test the homology-basis determinant without asserting a scaling limit.\n\n## A bouquet witness under the literal no-repeated-edge convention\n\nFor every square torus grid of side L>=3, take the primal comb tree: in every horizontal row retain the L-1 nonwrapping horizontal edges, and in column zero retain the L-1 nonwrapping vertical edges. This is connected with L^2-1 edges and is a spanning tree.\n\nIts dual complement has, after pruning leaves, one horizontal loop and one vertical loop meeting at a single dual vertex. To check this directly, the omitted horizontal wrap edges give the full vertical dual loop in column L-1. The omitted vertical edges give horizontal dual chains in every row, with a wrap edge only in row L-1. All chains in the other rows prune away; row L-1 supplies the second loop.\n\nThese two loops have disjoint edge sets and windings (1,0) and (0,1), after choosing orientations. Traversing either alone, or concatenating the first with the second in either orientation, gives four noncontractible closed trails with no repeated edges. Up to reversing the complete trail, their distinct homotopy windings are\n\n    (1,0), (0,1), (1,1), (1,-1).\n\nThe concatenations repeat the common vertex but no edge. Thus, under the literal edge-simple definition given as 'no repeating edges' in the cached source, at least four classes occur for this finite-grid tree. A vertex-simple-cycle convention would give only the two individual loops. This requires reconciliation with the source's assertion of precisely three paths before turning it into a universal finite-grid statement. It is not a conclusion about the intended limiting distribution. The witness exists at arbitrarily fine grid sizes, but its probability may tend to zero.\n\nSource quote for audit: Schramm cached text, lines 1048-1049: 'contains precisely three edge-simple closed paths (i.e., no repeating edges)'. Ask the Claude reviewer to resolve the source convention; the new lemma itself only claims the four explicit trails under its stated convention.\n",
+      "assumptions": [
+        "L>=3 integer",
+        "Edge-simple means no repeated edges; repeated vertices allowed"
+      ],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0133:torus-comb-tree-dual-four-edge-simple-trail-classes",
+        "url": "file:///~/brain_workers/w342/proofs/P0133.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0133-w342-validation-evidence",
+      "namespace": "probability.research.attempts",
+      "logical_name": "p0133-w342-validation-evidence",
+      "kind": "concept",
+      "title": "Finite validation evidence for P0133",
+      "statement": "Measured validation evidence for P0133: {\"bouquet_cores\": 2592, \"command\": \"python -X utf8 verify_structural.py\", \"label\": \"exact finite checks; separate written proof awaiting audit\", \"seconds\": 1.058, \"spanning_trees\": 11664, \"theta_core_checks\": 9072, \"torus_side\": 3, \"unimodular_basis_checks\": 11664, \"violations\": 0}. These finite checks support the written proof and do not replace its independent audit or establish the full open problem.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0133:p0133-w342-validation-evidence",
+        "url": "file:///~/brain_workers/w342/p0133_measurements.json",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "torus-theta-core-loop-windings-farey-triangle",
+      "kind": "depends_on",
+      "rationale": "FROM \"Under the torus dual-tree-complement hypotheses, suppose pruning leaves and suppressing degree-two vertices gives a theta core. Orient its three paths between the branch vertices in the same direction. Their three loop windings, in units of the torus periods,\"; TO \"For a finite connected graph cellularly embedded in an oriented torus and a primal spanning tree T, the dual edges complementary to T form a connected one-face graph H. Inclusion H->torus induces an isomorphism H_1(H,Z)->H_1(torus,Z). Thus any integral cycle\"; The two path-difference graph cycles are an integral homology basis.",
+      "to_key": "torus-dual-tree-complement-homology-unimodularity"
+    },
+    {
+      "from_key": "p0133-w342-result-scope",
+      "kind": "cites",
+      "rationale": "FROM \"The cached torus problem asks for the distribution of three noncontractible loop homotopy classes in a spanning-tree dual complement. A unimodular winding constraint is proved for a theta core; it does not provide limiting probabilities. The 3x3 square-grid\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Determine the limiting distribution of the homotopy classes of the three edge-simple noncontractible closed paths in the dual\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0133-torus-spanning-tree-dual-homotopy-distribution"
+    },
+    {
+      "from_key": "torus-dual-tree-complement-homology-unimodularity",
+      "kind": "cites",
+      "rationale": "FROM \"For a finite connected graph cellularly embedded in an oriented torus and a primal spanning tree T, the dual edges complementary to T form a connected one-face graph H. Inclusion H->torus induces an isomorphism H_1(H,Z)->H_1(torus,Z). Thus any integral cycle\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Determine the limiting distribution of the homotopy classes of the three edge-simple noncontractible closed paths in the dual\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0133-torus-spanning-tree-dual-homotopy-distribution"
+    },
+    {
+      "from_key": "torus-dual-tree-complement-homology-unimodularity",
+      "kind": "cites",
+      "rationale": "FROM \"For a finite connected graph cellularly embedded in an oriented torus and a primal spanning tree T, the dual edges complementary to T form a connected one-face graph H. Inclusion H->torus induces an isomorphism H_1(H,Z)->H_1(torus,Z). Thus any integral cycle\"; TO \"The cached torus problem asks for the distribution of three noncontractible loop homotopy classes in a spanning-tree dual complement. A unimodular winding constraint is proved for a theta core; it does not provide limiting probabilities. The 3x3 square-grid\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0133-w342-result-scope"
+    },
+    {
+      "from_key": "torus-theta-core-loop-windings-farey-triangle",
+      "kind": "cites",
+      "rationale": "FROM \"Under the torus dual-tree-complement hypotheses, suppose pruning leaves and suppressing degree-two vertices gives a theta core. Orient its three paths between the branch vertices in the same direction. Their three loop windings, in units of the torus periods,\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Determine the limiting distribution of the homotopy classes of the three edge-simple noncontractible closed paths in the dual\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0133-torus-spanning-tree-dual-homotopy-distribution"
+    },
+    {
+      "from_key": "torus-theta-core-loop-windings-farey-triangle",
+      "kind": "cites",
+      "rationale": "FROM \"Under the torus dual-tree-complement hypotheses, suppose pruning leaves and suppressing degree-two vertices gives a theta core. Orient its three paths between the branch vertices in the same direction. Their three loop windings, in units of the torus periods,\"; TO \"The cached torus problem asks for the distribution of three noncontractible loop homotopy classes in a spanning-tree dual complement. A unimodular winding constraint is proved for a theta core; it does not provide limiting probabilities. The 3x3 square-grid\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0133-w342-result-scope"
+    },
+    {
+      "from_key": "torus-comb-tree-dual-four-edge-simple-trail-classes",
+      "kind": "cites",
+      "rationale": "FROM \"For every L>=3, take the spanning tree on the L-by-L square torus grid consisting of all nonwrapping horizontal row edges and the nonwrapping vertical edges in column zero. Its pruned dual complement is two edge-disjoint loops meeting at one vertex. Under the\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Determine the limiting distribution of the homotopy classes of the three edge-simple noncontractible closed paths in the dual\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0133-torus-spanning-tree-dual-homotopy-distribution"
+    },
+    {
+      "from_key": "torus-comb-tree-dual-four-edge-simple-trail-classes",
+      "kind": "cites",
+      "rationale": "FROM \"For every L>=3, take the spanning tree on the L-by-L square torus grid consisting of all nonwrapping horizontal row edges and the nonwrapping vertical edges in column zero. Its pruned dual complement is two edge-disjoint loops meeting at one vertex. Under the\"; TO \"The cached torus problem asks for the distribution of three noncontractible loop homotopy classes in a spanning-tree dual complement. A unimodular winding constraint is proved for a theta core; it does not provide limiting probabilities. The 3x3 square-grid\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0133-w342-result-scope"
+    },
+    {
+      "from_key": "p0133-w342-validation-evidence",
+      "kind": "cites",
+      "rationale": "FROM \"Measured validation evidence for P0133: {\"bouquet_cores\": 2592, \"command\": \"python -X utf8 verify_structural.py\", \"label\": \"exact finite checks; separate written proof awaiting audit\", \"seconds\": 1.058, \"spanning_trees\": 11664, \"theta_core_checks\": 9072,\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Determine the limiting distribution of the homotopy classes of the three edge-simple noncontractible closed paths in the dual\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0133-torus-spanning-tree-dual-homotopy-distribution"
+    },
+    {
+      "from_key": "p0133-w342-validation-evidence",
+      "kind": "cites",
+      "rationale": "FROM \"Measured validation evidence for P0133: {\"bouquet_cores\": 2592, \"command\": \"python -X utf8 verify_structural.py\", \"label\": \"exact finite checks; separate written proof awaiting audit\", \"seconds\": 1.058, \"spanning_trees\": 11664, \"theta_core_checks\": 9072,\"; TO \"The cached torus problem asks for the distribution of three noncontractible loop homotopy classes in a spanning-tree dual complement. A unimodular winding constraint is proved for a theta core; it does not provide limiting probabilities. The 3x3 square-grid\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0133-w342-result-scope"
+    }
+  ]
+}

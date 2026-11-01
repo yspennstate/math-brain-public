@@ -1,0 +1,13 @@
+two_angle_square_residual = 0
+flat_curve_half_angle_residual = 0
+J2 = 0
+J3 = 0
+J4 = 0
+J5 = 0
+J6 = -5*A**2*B**2*(A - B)**2*(A + B)**2/2
+J6_expected = -5*A**2*B**2*(A - B)**2*(A + B)**2/2
+phi_curve_series = A**4*B*t**5/120 - A**2*B**3*t**5/48 + A**2*B*t**3/12 + B**5*t**5/80 - B**3*t**3/12 + B*t
+LS6_one_range = (a*j6 + 10*d**2)/a
+LS6_flat_curve_reserve = A**2*B**2*(A - B)**2*(A + B)**2/4
+balanced_geodesic_profile = 0
+PASS MOC4-MSQR-DOUBLE-ANTIPODE-FLAT-CURVE-v1

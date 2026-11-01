@@ -1,0 +1,41 @@
+# A062 stage 5: the controller owner at an unfinished-core frontier
+
+## exact target, quantifiers, hypotheses and units
+
+Let a be any Boolean controller seed, T any prescribed finite complete physical seed tree and C>=4. Tag it by a fresh sign w, and use h=w*a to select between two disjoint balanced parity cores. After a fixed prefix of p parity-bit reveals leaving both cores nonconstant, the COMPLETE declared controller-then-core reserve is exactly Q_C(a,T)/2. The initial reserve, including that prefix, is [Q_C(a,T)-pC]_+/2. Each prefix query spends exactly its own C/2 account once. Entropy is in bits; influences are ordinary. No bound on the seed reserve is assumed.
+
+A separate all-k actual Boolean family demonstrates that A064's price-11 ordered-point controller inequality cannot simply be extended to arbitrary non-point controller queries using only inherited parity-core reserves and variance-rarity release: at an actual partial-core history those accounts have zero drift while D/d tends to infinity. The stated A064 theorem is not refuted.
+
+## sources actually read, revisions and theorem locators
+
+Updated BOARD.md snapshot Oct14 04:40 UTC; B13 lead STREAM_NOTES.md v2; own STATUS.md; EXECUTION_PROTOCOL.json revision 2026-10-11-execution-v2. A064 LEARNED.md and current run 20261014T030103Z-fleet05-A064-global-debt-potential DERIVATION.md sections 1-6, especially section 4 core-weight harmonicity and section 6 overlapping/non-point gap; CLAIMS.json A064-REPEATED-FALLBACK-PRIORITY-GLOBAL-DEBT v1. A057 LEARNED.md stage-4 variance release, signed U and zero-release example, plus current STATUS.md. Prior own reserve source and exact physical-tree/logarithm kernel are reused. Source hashes and exact review scopes are in out/SOURCES.json. The board's new ordered-point closure changes our target: it is consumed, not repeated.
+
+## complete derivation or exact first unsupported line
+
+DERIVATION.md proves the transfer by actual disjoint Fourier sectors: at every seed-query history H(F)=2+H(a)/2, Inf_i(F)=Inf_i(a)/2 and D_i(F)=D_i(a)/2. The tag keeps selector probabilities at 1/2; both parity cores remain balanced after the prefix. The lifted terminal w-mux has D=2,d=1/2 and zero reserve at C>=4. Finite Bellman induction therefore proves the exact half-transfer, retaining all terminal entropy. Prefix data queries have D=0,d=1/2 and identical continuation reserves, giving the exact clipped debit [Q_C(a,T)-pC]_+/2.
+
+For the canonical B05 selector seed on k bent bits and r=2k controls, the physical selector packets give D_s/d_s>=(1-2^-k)(k-2). The lift preserves this rate at the first seed-selector query after a partial data reveal. Its variance release is exactly zero and parity-core reserves are zero. Thus the proposed arbitrary-controller extension D<=11d+reserve release fails for every even k>=14. This identifies the missing owner as the controller seed's COMPLETE reserve Q_C(a,T)/2; it neither forbids earlier prefix payment nor rules out another physical policy.
+
+First unsupported universal line: price the inherited controller seed reserve from an exclusive unused source account, or replace the declared policy with one whose retained controller/core reserves have such a certificate. For unequal non-flat actual cores the half-transfer is unproved; coherent rows and both terminal references remain. This is a finite-tree theorem and a separate analytic all-k witness, not a passage to infinite-depth stopping.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen FROZEN_SPEC.json preceded each computation. `python -X utf8 code/check_owner.py --pilot` checked 48 lifted roots from all 16 two-bit seeds, price 4 and prefix lengths 0,1,2: 1,255 assertions, no failures in 0.476 seconds. Final command without `--pilot` checked those seeds plus point-defect seeds on 3,4,5 bits at prices 4,6,11 and all three prefix lengths: 171 complete lifted roots plus six compressed B05 selector roots k=4,6,8,10,12,14. It passed 3,367 exact assertions in 1.412 seconds. The oracle uses actual physical truth-table recursion to constants, with edge/Walsh influences, actual frontier reserves, prefix costs and selector probabilities. A nonzero price-four seed-reserve fixture prevents the transfer checks from reducing to all-zero cases.
+
+The large Boolean witnesses use derived Fourier histograms with exact multiplicities, including the exceptional empty-control/data row. No huge full-cube enumeration is claimed. `python -X utf8 code/raw_seed.py` independently reconstructs the actual 8,192-value k=4,r=8 seed and both 4,096-value physical children; its raw Walsh/edge selector decrement and influence agree with the compressed certificate. Its exact assertion count and runtime are in out/RAW_SEED.json.
+
+`python -X utf8 code/review_harmonic.py` independently checked A064's inherited-core harmonic clause on all 81 three-label two-bit controllers, both control directions, with a partially exposed point-defect core and nonzero actual continuation reserves: 162 queries, 824 assertions, no failures in 1.542 seconds. REVIEW_NOTE.md accepts only that clause, not the whole priority theorem. The raw seed check adds eight assertions in 3.310 seconds, for a final total of 4,199. All signs use Fraction arithmetic and rational log-series error bounds with outward 120-bit dyadic rounding. Pilot assertions are excluded. Memory estimate was 140 MB; no job required admission above 300 MB.
+
+## proof dependencies and changed downstream conclusions
+
+New exact half-transfer uses direct Boolean spectra, direct physical edges and the finite Bellman definition; it does not assume A064's controller price or an FEI endpoint. The all-k lower bound is reconstructed from actual B05 Fourier amplitudes, not a floating fit. Earlier reserve-candidate conclusions remain at their original scopes and sources; this is version 4 of the existing pending candidate, not a new broad universal claim. A064-REPEATED-FALLBACK-PRIORITY-GLOBAL-DEBT v1 inherited-core controller harmonicity independently HOLDS at the named clause. Zero harmonic drift is confirmed as bookkeeping, not entropy payment. A064's disjoint ordered-point theorem remains intact; the obstruction concerns only its hypothetical all-controller extension.
+
+## one next mathematical action and independent reviewer
+
+At one A038/A039 exposed priority query with unequal non-flat remaining cores, graft a prescribed controller seed reserve onto the actual child continuations and compute the signed profile correction to the exact half-transfer. Record its initial capacity and already-consumed data debit separately. This tests the live ownership gap using the identified controller owner rather than repeating a zero-reserve core test. A087/A094 should reconstruct the full half-transfer, C>=4 terminal threshold, prefix clipping and actual all-k failing node; A064/A065 can consume the precise extension failure.
+
+## actual persistence receipts or precise save blocker
+
+REPORT.md, CLAIMS.json, PROGRESS.json, identical PACKET_DELTA.json, DERIVATION.md, REVIEW_NOTE.md, frozen specifications, executable code and exact outputs are saved locally. STATUS.md, WORKLOG.md and LEARNED.md are updated. out/RECEIPTS.json validates protocol schemas, file hashes and sizes, the required report fields and two-line status. Independent review of the accumulated reserve candidate, supervisor adoption and remote mirrors are pending. No shared tree was changed and no remote save is asserted.
+
+**Universal bridge:** This stage moves C019 stopping-tree payment by identifying the exact controller owner at unfinished core exposure: Q_C(a,T)/2 remains at the frontier, and an earlier p*C/2 physical data debit reduces the initial reserve exactly once. It also closes the proposed variance-plus-core-only all-controller extension negatively, with an all-k unbounded local rate and a precise actual failing node while preserving A064's stated theorem. Full FEI and pricing arbitrary inherited controller seeds remain open. NEXT inserts this owner into one actual unequal-core priority query and prices its signed profile correction, because that is the outstanding general ownership step rather than another isolated parity class bound.

@@ -1,0 +1,15 @@
+{
+ "helper_version":"A035-shared-phase-exposure-v1",
+ "target":"Exact selector-only raw bill = q/2 [4L+sum_j E U_j] and true joint selector bill = L(beta-4q)/2 under interleavings that query selectors only at completed-core-pair boundaries",
+ "family":"Frozen r=4 shared-parity family at m=4,L=2 (14 bits)",
+ "domain":"All 24 permutations of atomic units {corepair0,corepair1,selector0,selector1}, plus one explicitly adaptive policy branching on selector0; full histories within each order",
+ "case_count":"24 deterministic policies and one adaptive policy; each prefix stops only after all shared core bits and selectors are exposed, keeping both four-bit leaf functions",
+ "symmetry":"none; all units labelled and all physical assignments included",
+ "arithmetic":"Fraction physical weights, exact influence/phase boundary, rational interval B from signed kernel, exact expected unrevealed-core count, complete weighted terminal entropy/influence",
+ "memory_estimate_MB":100,
+ "pilot":"two deterministic extreme orders, enforced 50-second cap",
+ "pilot_max_seconds":50,
+ "full_max_seconds":180,
+ "no_dimension_escalation":true,
+ "scope":"Selector contribution only. Other adaptive core nodes may be bad; no unproved whole-tree adaptive payment follows."
+}

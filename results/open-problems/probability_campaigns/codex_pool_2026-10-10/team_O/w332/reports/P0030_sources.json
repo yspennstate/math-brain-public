@@ -1,0 +1,81 @@
+{
+  "id": "P0030",
+  "ledger_rows": [
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 32,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "forward_backward_brownian_decomposition_compatibility",
+        "historical_status": "source_says_open",
+        "locator": "Problems 7.1-7.3, PDF pages 25-26",
+        "problem_id": "P0030",
+        "recorded_at": "2026-09-06T16:10:43Z",
+        "result_status": "not_started",
+        "schema": "probability-problem.v1",
+        "source_id": "burdzy_scheutzow_2014",
+        "statement": "Does a decomposable forward Brownian motion which is also backward Brownian necessarily become two-sided Brownian after a random shift? The source also asks weaker related formulations using independence of past and future at a random time.",
+        "statement_caveat": "The three linked formulations are grouped as one compatibility problem. A general process that is both forward and backward Brownian without the extra assumptions is already counterexampled in the paper.",
+        "title": "Compatibility of forward and backward Brownian decompositions",
+        "verification": "unreviewed"
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 132,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "forward_backward_brownian_decomposition_compatibility",
+        "historical_status": "source_says_open",
+        "locator": "Problems 7.1-7.3, PDF pages 25-26",
+        "problem_id": "P0030",
+        "recorded_at": "2026-09-06T19:17:12Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "burdzy_scheutzow_2014",
+        "statement": "Does a decomposable forward Brownian motion which is also backward Brownian necessarily become two-sided Brownian after a random shift? The source also asks weaker related formulations using independence of past and future at a random time.",
+        "statement_caveat": "The three linked formulations are grouped as one compatibility problem. A general process that is both forward and backward Brownian without the extra assumptions is already counterexampled in the paper.",
+        "title": "Compatibility of forward and backward Brownian decompositions",
+        "verification": "author_checked_limited_argument"
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 32,
+      "record": {
+        "attempt_id": "P0030-A001",
+        "depth": "first_pass",
+        "full_problem_solved": false,
+        "independent_check": "Independence of two halves at a proposed joining time is insufficient if their Brownian marginal laws have been lost there.",
+        "independent_review": "none",
+        "method": "Common-splice compatibility obstruction",
+        "novelty": "not_claimed",
+        "obstruction": "No construction aligns both certificates at one time while preserving both marginal laws and their independence.",
+        "problem_id": "P0030",
+        "recorded_at": "2026-09-06T17:37:31Z",
+        "result": "Two independent standard Brownian half-paths attached at the same deterministic time give a two-sided Brownian motion. For a general process certified separately as forward and backward Brownian, the certifying random times can differ. Moving either certificate to another random time can bias its marginal law, as the selection-density calculation in P0032 demonstrates.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_limited_argument"
+      }
+    }
+  ],
+  "store_cards": [
+    {
+      "id": "claim_c950bb541cf5826e928d5a1a29fd8fd31a7d772479caef175d2a20723f111fb5",
+      "kind": "claim",
+      "title": "Open problem: Compatibility of forward and backward Brownian decompositions",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Does a decomposable forward Brownian motion which is also backward Brownian necessarily become two-sided Brownian after a random shift? The source also asks weaker related formulations using independence of past and future at a random time. Source: Forward Brownian motion, Problems 7.1-7.3, PDF pages 25-26.\nPosed in Forward Brownian motion\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "metadata_json": "{\"artifact_digest\":\"sha256:1f29a97680c84555cf8668548b5a720ba23d6745bc7756f91a083146593c0d6d\",\"artifact_path\":\"objects/sha256/1f/1f29a97680c84555cf8668548b5a720ba23d6745bc7756f91a083146593c0d6d.md\",\"bundle_digest\":\"sha256:58d74c8da229fa6b81fe6bac4abdfaadf798d61b07728701a8922a92ccd764b6\",\"bundle_entry_key\":\"op-p0030\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-01\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_009.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0030-compatibility-of-forward-and-backward-brownian-decompositions\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:772492982336f844e436033d99bbb6870cb26f16b277731cabc6cb87e48d4e89\",\"revision_digest\":\"sha256:c950bb541cf5826e928d5a1a29fd8fd31a7d772479caef175d2a20723f111fb5\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0030\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_c3873b87fa4a1ff38e3506dc7a79475ee1b7f02efdbb9a237254dc9cf5816b03",
+      "kind": "claim",
+      "title": "Attempt on Compatibility of forward and backward Brownian decompositions",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Common-splice compatibility obstruction Result: Two independent standard Brownian half-paths attached at the same deterministic time give a two-sided Brownian motion. For a general process certified separately as forward and backward Brownian, the certifying random times can differ. Moving either certificate to another random time can bias its marginal law, as the selection-density calculation in P0032 demonstrates. Check: Independence of two halves at a proposed joining time is insufficient if their Brownian marginal laws have been lost there. Obstruction: No construction aligns both certificates at one time while preserving both marginal laws and their independence.\nRefers to the open problem node open-problem-p0030-compatibility-of-forward-and-backward-brownian-decompositions\nNo independent review",
+      "metadata_json": "{\"artifact_digest\":\"sha256:7feb453bf39a851b7c0bb07c9ac36a5457c9334014058b93c7cd7c936fba9a70\",\"artifact_path\":\"objects/sha256/7f/7feb453bf39a851b7c0bb07c9ac36a5457c9334014058b93c7cd7c936fba9a70.md\",\"bundle_digest\":\"sha256:f3e0d4cb2f270970b3a7e311e549325fd4a447f22688326d8e681b699cda8afb\",\"bundle_entry_key\":\"at-p0030\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-04\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_012.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0030-compatibility-of-forward-and-backward-brownian-decompositions\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:705337efabf29cd94bdc3e6e7eb6e032d19e1a439ab1ed1610b6421824e2eead\",\"revision_digest\":\"sha256:c3873b87fa4a1ff38e3506dc7a79475ee1b7f02efdbb9a237254dc9cf5816b03\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0030\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    }
+  ]
+}

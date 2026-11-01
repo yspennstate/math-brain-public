@@ -1,0 +1,39 @@
+{
+  "referee": "w374",
+  "date": "2026-10-10",
+  "target": "P0110",
+  "review_scope": "Independent mathematical checks of w372 and w373 named artifacts; no claim of solving P0110 or exhaustive current-status verification.",
+  "w372_claim_verdicts": [
+    {"claim_id":"w372-P0110-SOURCE-01","verdict":"KEEP","reproduction":"Ranking CSV line 551 contains tier 5, title, and attempted_un only.","remaining_gap":"The ranking alone has no theorem or current-openness evidence."},
+    {"claim_id":"S1.w372.L1","verdict":"KEEP","reproduction":"Condition on the exterior of the 2d origin edges. All-low and all-high stars each have probability 4^(-2d), separated by 1/2 in optimal cost. Conditional-copy variance is at least 4^(-(4d+1)).","remaining_gap":"Only a constant variance floor, not a positive power or exponent match."},
+    {"claim_id":"S1.w372.L1-short","verdict":"KEEP","reproduction":"Direct edge costs <=2 versus every detour >=3; two-edge straight route costs <4 almost surely versus detours >=4.","remaining_gap":"Large-distance wandering lower bounds are untouched."},
+    {"claim_id":"S1.w372.L2","verdict":"KEEP","reproduction":"With r=sd G_i, |r-s|<=delta. Nonnegative errors give ||Delta_1-Delta_2||_2<=sqrt(2)delta; independence of G_i gives ||G_1-G_2||_2=sqrt(2)r. Reverse and forward triangles yield the displayed bounds.","remaining_gap":"Application needs L2 restriction error o(s)."},
+    {"claim_id":"S1.w372.L3","verdict":"KEEP","reproduction":"Deterministic disjoint boxes make G_i independent. Delta_i<=n on departure gives delta<=n sqrt(p); delta/s=O(n^(1-b-q/2))->0 for q>2(1-b).","remaining_gap":"No useful sublinear-cylinder departure estimate is proved."},
+    {"claim_id":"S1.w372.CEX","verdict":"KEEP","reproduction":"Common shock gives F_1=F_2, hence zero difference variance, whereas Var F_i=n^(2b)(1-p_n).","remaining_gap":"Abstract coupling only, not iid FPP."},
+    {"claim_id":"S1.w372.L4","verdict":"KEEP","reproduction":"At each departing geodesic vertex, the positive mean gap is at most the sum of three absolute centered deviations. Exponential Markov and a deterministic vertex union bound give the stated 3M(4n+1)^d factor without conditional independence.","remaining_gap":"Positive H_n for an actual law and global exponent coincidence remain unproved."},
+    {"claim_id":"S1.w372.GAP","verdict":"KEEP","reproduction":"Matches Chatterjee Theorem 1.1's four upper/lower uniform exponent definitions; correctly labels H_GLOBAL and H_MEAN unproved.","remaining_gap":"No mathematical proof of either stated input."},
+    {"claim_id":"S1.w372.CEX-global","verdict":"KEEP","reproduction":"Independence yields Var X_n=n^(2/3)+(n^2/16)e^(-sqrt(n))(1-e^(-sqrt(n)))~n^(2/3). The square-root-normalized exponential moment is uniformly bounded, while on B_n=1, X_n>=n/8 gives divergence for every a<1/2. Also |X_n|<=n/2 for n>=64.","remaining_gap":"An abstract bounded family, not an iid FPP passage-time metric."}
+  ],
+  "w373_claim_verdicts": [
+    {"claim_id":"S1.w373.001","verdict":"KEEP","reproduction":"The ranking line omits dimensions, exponent definitions, hypotheses and current status.","remaining_gap":"Primary source and current literature must be consulted separately."},
+    {"claim_id":"S1.w373.002","verdict":"KEEP","reproduction":"Variance is (1-1/n)n^(2/3)+n^(1/3); rare atoms force n^-1 exp(alpha n^(2/3-a))->infinity when a<2/3, while |X_n|/n^a<=1 when a>=2/3.","remaining_gap":"Abstract family only, no iid FPP realization."},
+    {"claim_id":"S1.w373.003","verdict":"KEEP","reproduction":"For independent continuous equal-law route costs A,B, condition on A<B. The two stated conditional marginals are 3/4, joint 1/2, product 9/16.","remaining_gap":"Finite square graph only; unconditional deterministic-box independence survives."},
+    {"claim_id":"S1.w373.004","verdict":"KEEP","reproduction":"Direct edge cost <=2; any other simple path from 0 to e1 needs >=3 unit-cost edges. Therefore D(0,e1)=0.","remaining_gap":"Chatterjee's large-distance (A4) is unaffected."},
+    {"claim_id":"S1.w373.005","verdict":"KEEP","reproduction":"For B~Bernoulli(1/n), Var(n+nB)=n-1 and E(nB)^2=n, despite agreement with n on probability 1-1/n.","remaining_gap":"Abstract coupling only; the actual cylinder error needs an L2 budget."},
+    {"claim_id":"S1.w373.006","verdict":"KEEP","reproduction":"The maximum of l1 and 1.5 linfinity is a norm with the stated symmetries and bounds. For z=(n/2,w+1) with w+1<=n/4, both halves have norm 3n/4 and g(ne1)=3n/2, so the bend is zero.","remaining_gap":"Not asserted to be an iid FPP time constant; FPP-specific curvature remains open."},
+    {"claim_id":"S1.w373.007","verdict":"KEEP","reproduction":"I separately rederived the original w372 L2 and L4 estimates above. This agrees with w373's disposition; this receipt does not treat an audit as mathematical evidence.","remaining_gap":"L4's mean-gap hypothesis and global exponent match remain unproved."},
+    {"claim_id":"S1.w373.008","verdict":"KEEP","reproduction":"The four epsilon-slack bounds force chi_a<=chi<=chi_b and xi_a<=xi<=xi_b; Chatterjee's general reverse inequalities force equalities, then Theorem 1.1 gives chi=2xi-1.","remaining_gap":"No one has proved those four bounds for Uniform[1,2]."}
+  ],
+  "bundle_disposition": {
+    "w372_bundle_001": "KEEP mathematically with FIX to remove transient 'independent review pending' from the global-gap card and source-license notes before ingestion",
+    "w372_bundle_002": "KEEP mathematically after checking CEX-global",
+    "w373_bundle_001": "KEEP mathematically with FIX to replace 'review pending' in norm-bend card after this receipt",
+    "w374_bundle_001": "WITHHELD as semantically duplicative of the peer bundles; inbox file renamed bundle_001.withheld and excluded from JSON draft discovery"
+  },
+  "submitted": "w372 bundles present in inbox; w373 draft remains in worker folder at this check; w374 overlapping draft withheld",
+  "reviewed": "all 17 named claim rows above reviewed with scoped KEEP; two transient card-text fixes remain before ingestion",
+  "ingested": "not verified",
+  "retrievable": "not verified",
+  "parent_problem_solved": false,
+  "current_openness": "UNKNOWN"
+}

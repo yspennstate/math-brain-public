@@ -1,0 +1,26 @@
+{
+  "problem_id": "C0052",
+  "source_rows": [
+    {
+      "verdict": "KEEP_AS_HISTORICAL_METADATA_ONLY",
+      "source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:542",
+      "exact_quote": "5,C0052,Non-triviality of the scaling limit of the three-dimensional Ising model,attempted_un,3D Ising non-triviality",
+      "reason": "This establishes the dated title, tier and then-recorded status. It does not establish the quantified conjecture or current openness."
+    }
+  ],
+  "primary_source": {
+    "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+    "author": "Hugo Duminil-Copin",
+    "url": "https://www.ihes.fr/~/duminil/publi/2017PIMS.pdf",
+    "locator": "printed p. 94; equations (7.1)-(7.2), Conjecture 6",
+    "source_quote": "If g(β) tends to 0 as β ↗ βc, the field is said to be trivial. Otherwise, it is said to be non-trivial.",
+    "formula": "g_d(beta) = sum_{x2,x3,x4 in Z^d} U4(0,x2,x3,x4) / [chi(beta)^2 xi(beta)^d], chi = sum_x <sigma_0 sigma_x>, xi = (-lim_{n->infinity} n^(-1) log <sigma_0 sigma_{n e1}>)^(-1)",
+    "operational_three_dimensional_statement": "For the nearest-neighbor, zero-field ferromagnetic Ising model on Z^3, show that g_3(beta) does not converge to zero as beta increases to beta_c from below.",
+    "quantifier_note": "Since the ferromagnetic four-point Ursell function is nonpositive, this is equivalent to existence of epsilon>0 and beta_n increasing to beta_c with -g_3(beta_n)>=epsilon. A positive full liminf is a stronger statement. The source's prose about a non-Gaussian spin-field scaling limit is not by itself a construction or uniqueness theorem for that limit."
+  },
+  "intake_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:52",
+  "prior_attempt": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl:42; unreviewed second-moment route, no variance bound",
+  "later_primary_result": "https://annals.math.princeton.edu/2021/194-1/p03 proves Gaussian scaling limits in the four-dimensional nearest-neighbor Ising-type case; this resolves the separate 4D half of the 2017 conjecture, not C0052.",
+  "current_openness": "UNKNOWN",
+  "status_reason": "No exhaustive solved/retired or post-2021 primary-source search has established a 2026-10-10 theorem or a certified current-open status. No novelty claim is made."
+}

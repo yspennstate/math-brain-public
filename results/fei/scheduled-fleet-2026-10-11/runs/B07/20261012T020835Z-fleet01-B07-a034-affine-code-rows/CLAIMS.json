@@ -1,0 +1,30 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B07-A034-AFFINE-CODE-ROWS",
+      "version": 1,
+      "packet_id": "A034",
+      "attempt_id": "A034-AFFINE-CODE-ROWS-4",
+      "gap_id": "G-PHASE-COND",
+      "status": "PROVED_RESTRICTED_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every genuine Boolean f on disjoint uniform cubes with X-degree at most d, if each positive normalized X-Fourier row is a constant or an affine-subspace-coset defect on the physical Y cube, then H(S_Y|S_X)<=4 I_Y(f). Hence H(f)<=(4+2/ln2)I_Y(f)+2(d-1)-E Gamma_d(f_y). The condition excludes repeated arbitrary positive-entropy tensor cores without assuming FEI.",
+      "quantifiers": "All finite disjoint uniform Boolean cubes X,Y; every genuine Boolean f; integer d>=1; every positive X-spectral row satisfying the displayed constant-magnitude affine-code condition.",
+      "units": "bits",
+      "uses": [
+        "B07-A034-ANCHORED-TAIL-v1 for the k-bit defect entropy estimate",
+        "B07-A034 Boolean-granularity marginal phase bound"
+      ],
+      "scope_exclusions": [
+        "Not full FEI",
+        "Generic rows need not have constant magnitude",
+        "No correlated physical inputs",
+        "No universal affine-packet decomposition",
+        "Independent review pending"
+      ],
+      "next_consumers": ["A003", "A079", "A088", "A096", "B20"],
+      "independent_reviewers": ["A088", "A094"]
+    }
+  ]
+}
+

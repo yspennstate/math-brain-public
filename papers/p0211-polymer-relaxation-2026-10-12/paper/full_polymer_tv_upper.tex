@@ -1,0 +1,304 @@
+
+\section{Mixing from an arbitrary polymer configuration}\label{sec:full-polymer-tv}
+\begin{theorem}\label{thm:full-polymer-tv-upper-new}
+For every fixed $b>0$, the polymer chain with $\beta=b/n$ satisfies
+\[
+ t^{\mathrm{polymer}}_{\mathrm{mix},n}(\varepsilon)
+ \leq C_b\sqrt n\left\{(\log n)^2+\log(1/\varepsilon)\right\},
+ \qquad 0<\varepsilon<1,
+\]
+for all sufficiently large $n$. Together with endpoint cutoff this gives,
+for each fixed $\varepsilon\in(0,1)$,
+\[
+ \frac{\sqrt n\log n}{8\sqrt b}-O_{b,\varepsilon}(\sqrt n)
+ \leq t^{\mathrm{polymer}}_{\mathrm{mix},n}(\varepsilon)
+ \leq O_b\bigl(\sqrt n(\log n)^2\bigr).
+\]
+The extra logarithm in the upper bound is not removed by this argument;
+worst-case polymer cutoff is not asserted.
+\end{theorem}
+
+\subsection{A degree-dependent sector bound}
+Let $L_B$ be the labelled-cut comparison generator, and let
+$\mathcal L_\ell$ be its degree-$\ell$ radial generator:
+\begin{align*}
+ (\mathcal L_\ell g)(k)
+ ={}&\beta(n-k-\ell)(g(k+1)-g(k))\\
+ &+\frac{(k-1)(k-\ell)}n(g(k-1)-g(k))
+ -\left(\ell\beta+\frac{\ell(k-1)}n\right)g(k),
+ \qquad \ell\leq k\leq n-\ell.
+\end{align*}
+Assume $2\leq A:=n\sqrt\beta\leq n/4$. For $\ell\geq1$ use
+\[
+ h_\ell(k)=\frac1{(k+A)_\ell},\qquad
+ (x)_\ell=x(x+1)\cdots(x+\ell-1).
+\]
+Its neighboring ratios are
+\[
+ \frac{h_\ell(k+1)}{h_\ell(k)}=\frac{k+A}{k+A+\ell},\qquad
+ \frac{h_\ell(k-1)}{h_\ell(k)}=\frac{k+A+\ell-1}{k+A-1}.
+\]
+Direct substitution gives the exact identity
+\begin{equation}\label{eq:degree-certificate-new}
+ \frac{-(\mathcal L_\ell h_\ell)(k)}{h_\ell(k)}
+ =\ell\left[
+ \frac{\beta(n-k-\ell)}{k+A+\ell}+\beta
+ +\frac{(k-1)(A+\ell-1)}{n(k+A-1)}\right].
+\end{equation}
+All bracketed terms are nonnegative. If $k\leq A$, then $\ell\leq k$
+gives $n-k-\ell\geq n/2$ and $k+A+\ell\leq3A$; the first term is
+at least $\sqrt\beta/6$. If $k\geq A$, then
+\[
+ \frac{k-1}{k+A-1}\geq\frac13,\qquad A+\ell-1\geq A,
+\]
+so the last term is at least $\sqrt\beta/3$.
+The finite positive-vector comparison therefore proves that every
+eigenvalue in degree $\ell$ is at least
+\begin{equation}\label{eq:degree-linear-lower-new}
+ \lambda_\ell\geq\frac{\ell\sqrt\beta}{6}.
+\end{equation}
+Independently, the killing term gives
+\[
+ \lambda_\ell\geq\ell\beta+\frac{\ell(\ell-1)}n.
+\]
+In particular, at fixed $b>0$, $\beta=b/n$, and $A=\sqrt{bn}$,
+\[
+ \lambda_\ell\geq \frac{b\ell}{6A}
+ \qquad(1\leq\ell\leq\lfloor n/2\rfloor)
+\]
+for every sufficiently large $n$.
+
+
+\subsection{A polynomial bound on the count density}
+Fix $b>0$, put $A=\sqrt{bn}$, and let $p$ be the stationary count law.
+Let $r$ be a mode of $p$ and define
+\[
+ V(k)=\left(\frac{p(r)}{p(k)}\right)^{3/4}\geq1,
+ \qquad W(k)=(\sqrt{\lambda_k}-\sqrt{\mu_k})^2.
+\]
+We prove the drift inequality
+\begin{equation}\label{eq:count-log-lyapunov-new}
+ \frac{(QV)(k)}{V(k)}
+ \leq\frac{C_b-c_b\log V(k)}{A},\qquad 1\leq k\leq n,
+\end{equation}
+for all sufficiently large $n$.
+
+By detailed balance, the exact expression is
+\[
+ \frac{QV(k)}{V(k)}
+ =\lambda_k^{1/4}\mu_{k+1}^{3/4}
+  +\mu_k^{1/4}\lambda_{k-1}^{3/4}-\lambda_k-\mu_k.
+\]
+At an endpoint the term with zero outgoing rate is zero; thus the displayed
+formula remains valid if one formally sets $\lambda_0=b$ and
+$\mu_{n+1}=n+1$. These are algebraic conventions only.
+Write $\lambda=\lambda_k$ and $\mu=\mu_k$. With
+$u=\lambda^{1/4}$ and $v=\mu^{1/4}$,
+\begin{align*}
+ &\lambda+\mu-\lambda^{1/4}\mu^{3/4}-\mu^{1/4}\lambda^{3/4}\\
+ &\hspace{1cm}=(u-v)^2(u^2+uv+v^2)
+ \geq\frac34(u-v)^2(u+v)^2
+ =\frac34W(k).
+\end{align*}
+The two coefficient-variation errors are
+\[
+ E_1=\lambda_k^{1/4}(\mu_{k+1}^{3/4}-\mu_k^{3/4}),\qquad
+ E_2=\mu_k^{1/4}(\lambda_{k-1}^{3/4}-\lambda_k^{3/4}).
+\]
+Since $\mu_{k+1}-\mu_k=2k/n$, concavity gives, for $k\geq2$,
+\[
+ E_1\leq\frac34\lambda_k^{1/4}\mu_k^{-1/4}\frac{2k}{n}
+       \leq C_b n^{-3/4}\sqrt k.
+\]
+The same bound holds at $k=1$ by direct substitution, since
+$E_1=\lambda_1^{1/4}(2/n)^{3/4}$.
+For $k\leq2A$, it follows that $E_1\leq C_b/A$.
+For $k>2A$, one has $\mu_k\geq3b\geq3\lambda_k$ and hence
+$W(k)\geq c_bk^2/n$ (for large $n$). Thus
+\[
+ \frac{E_1}{W(k)}\leq C_bn^{1/4}k^{-3/2}\leq\frac{C_b}{A}.
+\]
+For sufficiently large $n$, this is at most $1/4$.
+The inequality $(x+y)^{3/4}-x^{3/4}\leq y^{3/4}$ also gives, uniformly
+including $k=n$,
+\[
+ E_2\leq\mu_k^{1/4}(b/n)^{3/4}
+ \leq\frac{b^{3/4}\sqrt k}{n}\leq\frac{C_b}{A}.
+\]
+Consequently
+\begin{equation}\label{eq:count-drift-square-new}
+ \frac{QV(k)}{V(k)}\leq-\frac12W(k)+\frac{C_b}{A}.
+\end{equation}
+
+It remains to check
+\begin{equation}\label{eq:stationary-weight-vs-drift-new}
+ \log V(k)\leq C_b\{1+A W(k)\}.
+\end{equation}
+On $A/2\leq k\leq2A$, the elementary stationary ratio estimates proved
+earlier give
+\[
+ \log\frac{p(r)}{p(k)}\leq C_b\left(1+\frac{(k-A)^2}{A}\right).
+\]
+The exact drift factorization around its zero $a=A+O_b(1)$ and
+$\lambda_k+\mu_k\leq C_b$ give
+$W(k)\geq c_b(k-a)^2/A^2$, proving
+\eqref{eq:stationary-weight-vs-drift-new} on this interval.
+If $k<A/2$, then $W(k)\geq c_b>0$, while
+\[
+ \log\frac{p(r)}{p(k)}\leq\log\frac{p(r)}{p(1)}
+ \leq\log\frac{A^{2(r-1)}}{(r-1)!\,r!}\leq C_bA,
+\]
+where $r=A+O_b(1)$ and the last bound follows from
+$j!\geq(j/e)^j$.
+If $k>2A$, sum the consecutive ratios to obtain
+\[
+ \log\frac{p(r)}{p(k)}
+ =\sum_{j=r}^{k-1}
+ \left[\log\frac jA+\log\frac{j+1}A-\log(1-j/n)\right]
+ \leq\frac{C_bk^2}{A}.
+\]
+Here $\log x\leq x$ controls the first two terms. For the last,
+$-\log(1-j/n)\leq2j/n$ when $k\leq n/2$; when $k>n/2$, its sum is
+at most
+$\sum_{j=1}^{n-1}-\log(1-j/n)\leq Cn\leq Ck^2/n$.
+Since $W(k)\geq c_bk^2/n$ and $A^2=bn$, this proves
+\eqref{eq:stationary-weight-vs-drift-new} in the remaining case.
+Combining it with \eqref{eq:count-drift-square-new} proves
+\eqref{eq:count-log-lyapunov-new}.
+
+Now let $y(t)=\mathbb E_iV(K_t)$ for any initial count $i$.
+The finite-state evolution equation and Jensen's inequality for
+$x\log x$ imply
+\[
+ y'(t)\leq\frac{C_b}{A}y(t)-\frac{c_b}{A}y(t)\log y(t).
+\]
+Thus $z(t)=\log y(t)$ satisfies
+\[
+ z(t)\leq\frac{C_b}{c_b}+e^{-c_bt/A}z(0).
+\]
+Uniformly in $i$, \eqref{eq:stationary-weight-vs-drift-new} and
+$W(i)\leq\lambda_i+\mu_i\leq b+n$ give
+$z(0)\leq C_bn^2$. Consequently there exists $C_b<\infty$ such that
+\begin{equation}\label{eq:count-V-moment-new}
+ \sup_i\sup_{t\geq t_0}\mathbb E_iV(K_t)\leq C_b,
+ \qquad t_0=C_b A\log n.
+\end{equation}
+
+Let $q_t$ be any count distribution at time $t\geq t_0$ started from a
+point mass (or any mixture). Equation \eqref{eq:count-V-moment-new}
+gives $q_t(k)\leq C_b/V(k)$. The stationary Gaussian and geometric-tail
+estimates give
+\[
+ p(r)\asymp_b A^{-1/2},\qquad \sum_k\sqrt{p(k)}\leq C_b A^{1/4}.
+\]
+It follows that
+\begin{equation}\label{eq:count-L2-polynomial-new}
+ M(t):=\sum_{k=1}^n\frac{q_t(k)^2}{p(k)}
+ \leq C_bp(r)^{-3/2}\sum_k\sqrt{p(k)}\leq C_bA,
+ \qquad t\geq t_0.
+\end{equation}
+This is a polynomial bound, not a claim that count $L^2$ mixing is complete.
+
+
+\subsection{The polymer mixing bound}
+
+
+Let $p_{\mathrm{cut}}$ be the map from nonempty labelled cut sets to their
+unordered segment lengths, and write $\pi_B$, $\pi_M$, and $p$ for the
+stationary cut, polymer, and count laws, respectively. Start the actual
+polymer chain from any state $x$. Let $f_t$ be its density with respect to
+$\pi_M$, and lift it by
+\[
+ F_t(S)=f_t(p_{\mathrm{cut}}(S)).
+\]
+The lift is nonnegative. Its average on the layer $|S|=k$ is
+\[
+ \overline F_t(k)=\frac{q_t(k)}{p(k)},
+\]
+where $q_t$ is the distribution of the actual polymer count. Strong
+lumpability of the count means that $q_t$ evolves under $Q$ from $K(x)$.
+The preceding Lyapunov calculation therefore gives, with $A=\sqrt{bn}$,
+\begin{equation}\label{eq:polymer-count-warm-new}
+ M(t):=\sum_kp(k)\overline F_t(k)^2\leq M_*:=C_bA,
+ \qquad t\geq t_0:=C_bA\log n.
+\end{equation}
+Choose the constant so that $M_*\geq1$.
+
+Let $P_\ell$ denote the orthogonal projection onto the complete
+degree-$\ell$ sector of the labelled-cut comparison space, and set
+\[
+ d_\ell=\dim H_\ell=\binom n\ell-\binom n{\ell-1}.
+\]
+On a layer of size $N_k=\binom nk$, the projector onto degree $\ell$
+has constant diagonal $d_\ell/N_k$ whenever that degree is present.
+Indeed, the projector commutes with every permutation of the labels,
+and its trace is $d_\ell$. Positive semidefiniteness then gives
+\[
+ |P_\ell(S,T)|\leq\sqrt{P_\ell(S,S)P_\ell(T,T)}=d_\ell/N_k.
+\]
+For every nonnegative function $F$, it follows, using the ordinary matrix
+kernel of this layerwise projector, that
+\begin{align*}
+ \|P_\ell F\|_{L^2(\pi_B)}^2
+ &=\sum_k\frac{p(k)}{N_k}
+       \sum_{|S|=|T|=k}F(S)P_\ell(S,T)F(T)\\
+ &\leq d_\ell\sum_kp(k)\overline F(k)^2.
+\end{align*}
+Absent degrees contribute zero. Telescoping the dimensions gives
+\begin{equation}\label{eq:positive-low-degree-new}
+ \sum_{\ell=0}^{d}\|P_\ell F_t\|_2^2
+ \leq\binom nd M(t),\qquad 0\leq d\leq\lfloor n/2\rfloor.
+\end{equation}
+
+Put $R(t)=\|F_t\|_{L^2(\pi_B)}^2=\|f_t\|_{L^2(\pi_M)}^2$ and
+$g=\sqrt\beta/6=b/(6A)$. The stationary Dirichlet-form identity and
+the proved sector bound $\lambda_\ell\geq g\ell$ imply
+\begin{align*}
+ -R'(t)
+ &=2\mathcal E_M(f_t,f_t)=2\mathcal E_B(F_t,F_t)\\
+ &\geq2g(d+1)\sum_{\ell>d}\|P_\ell F_t\|_2^2\\
+ &\geq2g(d+1)\left\{R(t)-M_*\binom nd\right\},
+ \qquad t\geq t_0.
+\end{align*}
+This is a statement about the actual polymer evolution; no invariance of
+the polymer lift under the cut semigroup, or under individual sector
+projections, is assumed. The sector decomposition is used only to bound
+the instantaneous stationary energy.
+
+Positivity also bounds the initial size of this differential inequality:
+on each layer, $\sum_SF_t(S)^2\leq(\sum_SF_t(S))^2$, so
+\[
+ R(t)\leq\sum_kp(k)\binom nk\overline F_t(k)^2
+       \leq2^nM_*,\qquad t\geq t_0.
+\]
+For $n$ large, whenever $R(t)>16M_*n^2$, put
+\[
+ s(t)=\log\frac{R(t)}{M_*},\qquad
+ d=\left\lfloor\frac{s(t)}{2\log n}\right\rfloor.
+\]
+Then $1\leq d<\lfloor n/2\rfloor$, because
+$s(t)\leq n\log2$. Moreover,
+\[
+ M_*\binom nd\leq M_*n^d\leq M_*e^{s(t)/2}\leq R(t)/4.
+\]
+The energy inequality consequently gives
+\[
+ s'(t)=\frac{R'(t)}{R(t)}
+ \leq-g(d+1)\leq-\frac{g}{2\log n}s(t).
+\]
+Since $s(t_0)\leq n\log2$, it takes at most
+$2g^{-1}(\log n)^2$ additional time to reach
+$R(t)\leq16M_*n^2$. Once this threshold is reached it remains satisfied,
+because $R(t)$ is nonincreasing.
+
+Finally use the already established polymer gap
+$\gamma_M\geq c_b/A$. If $t_1$ is the preceding threshold time, then
+\[
+ R(t_1+u)-1\leq e^{-2\gamma_Mu}\{R(t_1)-1\},\qquad
+ \|P^M_{t_1+u}(x,\cdot)-\pi_M\|_{\rm TV}
+ \leq\frac12\sqrt{R(t_1+u)-1}.
+\]
+As $R(t_1)\leq16C_bAn^2$, an additional
+$C_bA\{\log n+\log(1/\varepsilon)\}$ time suffices. This proves
+Theorem~\ref{thm:full-polymer-tv-upper-new}, uniformly over the initial
+polymer state $x$.

@@ -1,0 +1,125 @@
+# Consolidated mathematical claims and limits
+
+This ledger distinguishes the scope of a mathematical argument from its historical novelty, external acceptance, and formal verification. It is a cumulative review index; immutable numbered reports preserve earlier formulations and subsequent corrections. The [actual execution index](AGENT_INDEX.md) and [coordinator synthesis](agents/011.md) record the broader run.
+
+**The full Lyons determinantal entropy-concavity conjecture remains unresolved in this run.** The two tree constructions disprove precisely the unrestricted fluctuation clauses stated below. The four-type uniqueness theorem completes the exact question left open in the project's QSO manuscript. None is presented as a cleared worldwide first.
+
+## Principal completed proofs
+
+| Statement | Exact scope | Proof and review |
+|---|---|---|
+| Four-type fixed-point uniqueness | Every symmetric quadratic stochastic operator with four types whose offspring can equal neither parent; allowed coefficients may be zero. Exactly one simplex fixed point, including possible boundary points. | [Main proof](FOUR_TYPE_UNIQUENESS.md);006, full independent007, constructive008, integrated031. |
+| Certified convergent algorithm | Averaging weight2/5 enters the coordinate cap2/5 in three steps and then contracts by23/25. A rational residual gives a rigorous distance bound. | Main proof;008,013, corrected [solver and independent verifier](SOLVER_USAGE.md);026 adversarial audit and root regression. The separate guaranteed exact-grid algorithm065 has polynomial bit complexity and arbitrary rational tolerance; parent checked proof and code. |
+| Global averaging through0.51 | Every fixed positive weight at most51/100 converges from every simplex point. For weights from1/2 through51/100 the uniform factor is2499/2500 after three steps. | [Larger-range proof](QSO_GLOBAL_051.md), [below-half proof](QSO_AVERAGING_RANGE.md); full independent046. |
+| Stronger half-step rate | At weight1/2, factor7967/8192 after three steps. The earlier0.502 perturbation method remains a valid separate estimate. | [Half-step proof](QSO_HALF_STEP_EXPLICIT.md);024 and046. |
+| Quantitative coefficient dependence | Full-row-l1 Lipschitz constant2sqrt(5)-1; uniform analytic extension across the coefficient boundary; exact derivatives and quadratic remainder bounds. | Main note;013; [044](agents/044.md), independently read and checked by the parent. Sharper constants in later reports must retain their own proof obligations. |
+| Attainable fixed-point geometry | Exact singleton and pair inequalities characterize attainable fixed points in every dimension at least three. In four types, an exact pair-product minimum improves the coefficient bound to(204+95sqrt(5))/121. | [Geometry proof](QSO_FIXED_POINT_GEOMETRY.md); full parent review of049. The global coefficient constant is not claimed sharp. |
+| Tangent spectral bounds | Every tangent eigenvalue of the raw four-type Jacobian has modulus strictly belowsqrt(2); det(I-J) is greater than4/3. A larger sufficient averaging range is local stability only. | [Spectral proof](QSO_SPECTRAL_BOUNDS.md);029 and parent independent review. |
+| Small parental leakage | Four-type uniqueness and global averaged convergence when total probability of reproducing a parent is below1-sqrt(3)/2. | Main note, Theorem6; coordinator011 and independent014. |
+| Subcritical tree counterexample | One fixed aperiodic offspring law with mean below1 and finite third moment, no exponential moment, and a non-Gaussian two-normal degree-one count limit along a deterministic size subsequence. | [Complete proof](SUBCRITICAL_COUNTEREXAMPLE.md);015, full independent034, parent review. |
+| Critical tree counterexample | One fixed computable aperiodic critical offspring law, with every moment above1 infinite, and a non-Gaussian mixture limit for centered degree-one counts on a size subsequence. | [Complete proof](CRITICAL_COUNTEREXAMPLE.md);028, full independent033 and its terminating selector, parent review, and full integration audit062. The evaluator is now fixed explicitly. No stage integer was numerically constructed. |
+| Two-site determinantal entropy | Full complex Hermitian two-site concavity, including the closed contraction boundary. | [Entropy note](LYONS_PARTIAL_RESULTS.md);016 and independent018. |
+| Coordinate restrictions in any dimension | Concavity with only a two-coordinate principal block varying; or with the principal block complementary to one coordinate fixed while its incident row and column vary. | Entropy note;010,016,017,018. |
+| Scaled cross-matrix entropy | A two-coordinate block varies freely while the entire cross matrix is one fixed complex matrix times one complex scalar. Strict mutual-information chord gap if the scalar changes and the cross matrix is nonzero. | Entropy note, Section6;036, coordinator011, full independent045, parent review. |
+| Indefinite rank-two entropy directions | At most one positive and at most one negative direction eigenvalue, through five sites, in arbitrary orientation. | Entropy note, Section4;019. The dimension-six compressed rank-two projection case remains open; full independent079 audit passes. |
+| Full lines through diagonal kernels | Every nonzero Hermitian line through an interior diagonal kernel is strictly concave on its entire feasible interval, in every dimension. A sharp marginal curvature bound gives convex total correlation. | [Complete proof](DIAGONAL_ENDPOINT_ENTROPY.md), full independent068 and symbolic certificate. This does not settle arbitrary lines or entire neighborhoods. The quartic023 expansion describes midpoint flatness. |
+
+## Other completed deductions and their boundaries
+
+The numbered reports contain the full arguments. An individual worker's `PROVED` label is not a substitute for the displayed proof, nor for a separately listed audit.
+
+| Report | Result | Boundary of the claim |
+|---|---|---|
+| [012](agents/012.md) | Global four-type continuous-flow convergence, exact rate and cap-entry estimates. | Finite entry into the limiting cap itself is false in general. |
+| [025](agents/025.md) | Fractional fixed-generation moment bounds under matching local probability estimates and a doubling-scale condition. | Does not settle unrestricted Janson Problem20.1. |
+| [037](agents/037.md) | Fixed-law P12 three-tier small-ball theorem with corrected recursion and eventual exponential failure bound. | Independent[054](agents/054.md) passes, supplying a complete rectangular-net replacement for a dimensional ambiguity in a cited source proof. The triangular-array extension is not included. |
+| [038](agents/038.md) | Arbitrarily switched averaged QSO tracking, convergence criteria, finite-variation equivalences, and periodic response. | Common forcing is required when comparing two trajectories; slowly varying coefficients alone need not give a constant state limit. |
+| [041](agents/041.md) | Explicit higher-dimensional contraction neighborhoods around the equiprobable tensor and sharp thresholds for the specified contraction guarantees. | The general tensor contraction theorem and equiprobable convergence have prior literature; stronger uniqueness thresholds are not claimed. |
+| [042](agents/042.md) | Complete zero-curvature classification and strict chords between distinct rank-one projection kernels, with the exceptional quartic coefficient. | Restricted endpoint class; no unrestricted entropy conclusion. |
+| [043](agents/043.md) | Dimension-dependent bounds for nonlinear bounded lifts and exact optimal linear selection constants. | The distinction between a nonlinear choice of a preimage and one linear right inverse is essential. |
+| [044](agents/044.md) | Uniform analytic extension, derivative formulas, and exact first-order activation of a missing QSO type. | The invariant-face dichotomy is for feasible affine rays; curved paths can activate at higher order. |
+| [047](agents/047.md) | Sharper averaged leave-one-out gate from leave-two-out covariance cancellation. | An empirical-width substitute has an exact failure-probability counterexample; independent087 audit is assigned. |
+| [048](agents/048.md) | Exact centered-inverse L-ensemble Hessian and a semidefinite rank-r Fisher bound controlled by atom-probability oscillation. | All semidefinite directions are not settled; the bound can lose force for rare atoms. |
+| [050](agents/050.md) | Interior star-direction equality classification, quartic loss in flat directions, and strict star-slice chords. | Point-coordinate graph components matter; the broader entropy conjecture remains open. |
+| [051](agents/051.md) | Gaussian realized-risk lower quantiles and failure of convergence to zero from conditional-mean lower bounds; exact effective-rank criterion for relative concentration. | A fixed positive threshold with probability tending to1 is a different conclusion from relative concentration. |
+| [052](agents/052.md) | The archived five-type example mixed with the equiprobable tensor has exactly one interior fixed point for every positive mixing weight. | Full exact audit passes; this one path does not classify all strictly positive five-type operators. |
+| [053](agents/053.md) | Strict three-site entropy curvature in every nonzero gauge-commutator direction, including affine-feasible boundary directions. | The sufficient higher-dimensional cone is restricted; arbitrary directions remain unresolved. |
+| [055](agents/055.md) | Exact complete-bipartite product-demand flow and cut formulas, with sharp limiting gaps in the specified families. | This extends the archived reduction counterexample and does not settle the original Aldous–Fill diameter conjecture. |
+| [056](agents/056.md) | Modular-oscillation and correlation-determinant improvements of the semidefinite Fisher bound; exact resolvent representation and a noncommuting strict chord. | Full independent066 audit passes, reconstructing both exact certificates and documenting the dimension/reporting clarifications. The pointwise sign of the resolvent integrand can change. |
+| [057](agents/057.md) | Sharp rational four-type fixed-point field degree8, sharp boundary degree4, generic incidence degree, and dense rational fixed-point specializations. | Universal bounds and exact examples are fully displayed; independent symbolic reconstruction is assigned to098. No radical-solvability claim. |
+| [058](agents/058.md) | Positive finite Rényi-order two-site concavity holds exactly at Shannon order1; exact order2 chord failure and sharp fixed-reference chi-square contraction. | Other Rényi orders are counterexamples to the altered functional, not to Lyons's Shannon conjecture. |
+| [059](agents/059.md) | Exact anisotropic chronological contact-time transforms and a rigorous nonexponential example. | Fresh chronological interchange only; cyclic reuse is excluded. |
+| [060](agents/060.md) | Uniform four-type uniqueness through parental leakage7/50; boundary-specific uniqueness through1/2 and an exact family disproving that guarantee above1/2. | Parent read the full proof; the interrupted078 audit is reassigned to102. The larger uniqueness interval is not a convergence theorem. |
+| [064](agents/064.md) | August2026 primary Matrix Spencer text states the unrestricted square result; realification and bounded-aspect reductions are proved. | The full analytical small-ball core has not been independently verified here; optimal unbounded-aspect dependence is not established by the inspected theorem. |
+
+## Prior results and formal-proof provenance
+
+| Topic | What this run establishes | Attribution or remaining gate |
+|---|---|---|
+| Lyons scalar-ray entropy | [039](agents/039.md) gives a complete quantitative scalar-ray derivation and equality condition. | Gu's thinning-relative-entropy theorem is prior work; scalar-ray concavity is not claimed as a new solution. |
+| Erdős548 / Erdős–Sós | [040](agents/040.md) audits the elementary rooted-word proof, external statement-comparison logs, archive compatibility differences, and prepares a pinned replay directory. | A public proof and external Lean/NanoDa acceptance already existed at the pinned public commit. The local replay and new wrapper were not compiled; no Lean executable was available. |
+| Matrix Spencer / matrix Komlós | [005](agents/005.md) distinguishes prior claims, dimension obstructions, and exact finite checks. | An existing published or public proof is not a new result of this session. |
+| QSO literature | [009](agents/009.md), [035](agents/035.md), and041 record primary-source findings. | The full hypotheses of the closest Jamilov2016 four-type paper were not retrieved. Priority remains unverified. |
+
+## Corrections and failed stronger statements
+
+| Statement or route | Finding | What it does not disprove |
+|---|---|---|
+| Archived Aldous–Fill flow-cut reduction | [001](agents/001.md) gives an exact K2,3 counterexample, ratio39/35. | The original Aldous–Fill conjecture. |
+| Strengthened condensation conclusions | [002](agents/002.md) refutes the archived gap-necessity and universal one-box claims. | The original broader open-ended Janson questions. |
+| Chronological versus cyclic interchange | [004](agents/004.md) separates fresh chronological paths from cyclic reuse and its finite-cycle trapping atom. | A correctly conditioned or differently formulated limit theorem. |
+| Original public solver accepted floats | [026](agents/026.md) found a false-zero certificate. The canonical API now requires exact rational inputs; exact regression and an independent verifier pass. | The mathematical residual theorem. The historical flawed implementation is retained. |
+| One-point Fisher projection dominates entropy curvature | [048](agents/048.md) gives an exact noncommuting rank-two counterexample and an unbounded-ratio family. | Entropy concavity: the full Fisher term is strongly sufficient at the witness. |
+| Endpoint-only Fisher optimization | [022](agents/022.md) gives a precise obstruction and the remaining quartic comparison. | The full Lyons conjecture. |
+| Sectorwise beam-splitter entropy increase | [027](agents/027.md) gives an exact four-site counterexample. | The stronger global beam-splitter inequality or Lyons's conjecture. |
+| Full exterior-square positivity | [030](agents/030.md) gives a strict interior counterexample on a nondecomposable bivector. | Positivity on decomposable directions used in019. |
+| Polished Lyons formula transcription | A missing plus sign between the two expectations in equation(10) was corrected. The original019 proof had the correct sum. | The underlying mixed-derivative argument. |
+| Report065 display delimiter | The closing display delimiter after equation(14) is missing in the immutable report. The full correctly delimited bound is integrated in the main proof, Section8. | The rounding, stopping or bit-complexity theorem. |
+| Literal least passing power is automatically computable | [033](agents/033.md) identifies the strict-comparison issue and supplies a terminating certificate enumeration. The polished critical construction adopts that selector. | Existence of the original mathematical least-power sequence; the two definitions need not choose the same law. |
+
+## Original tree conjectures and excluded hypotheses
+
+The source claims are the unrestricted subcritical/no-exponential-moment and critical/infinite-variance fluctuation clauses in Thévenin's closing conjecture, read alongside Janson's Problem20.2. The constructed subsequence limits are mixtures of two distinct normal laws, so they are not Gaussian. The counterexamples do not claim a complete classification of conditioned-tree degree counts. The critical construction is explicitly outside the finite-index stable-domain hypotheses of the established limit theorems. The completed primary-source audit067 confirms the literal clauses and distinguishes later restricted2023/2026 results; historical priority remains unverified.
+
+Primary sources: [Janson, *Simply generated trees, conditioned Galton–Watson trees, random allocations and condensation*](https://arxiv.org/abs/1112.0510); [Thévenin, *Vertices with fixed outdegrees in large Galton–Watson trees*](https://arxiv.org/abs/1812.07365); [Lyons, *Determinantal Probability: Basic Properties and Conjectures*](https://arxiv.org/abs/1406.2707); [Ganikhodzhaev–Rozikov, *Quadratic Stochastic Operators: Results and Open Problems*](https://arxiv.org/abs/0902.4207).
+
+No new universal theorem in this run is claimed to have been formally verified, externally refereed, or cleared for historical priority. Exact arithmetic verifies the specific identities and certificates recorded in each script; finite numerical nonfailure does not establish a universal theorem.
+
+
+## Recovery provenance and held claims
+
+The workspace disconnected after the latest checkpoint. [Recovery notes](recovery/UNPUSHED_COMPLETED_REPORTS.md) preserve findings from completed069,070,072,074 and interrupted071,073,076. They are explicitly not the lost original report bytes. Unavailable exact witnesses and unreviewed numerical constants are not certified by those summaries. Fresh reports will supply reconstructed proofs where possible. Seven interrupted agents are excluded from the100-completion target;107 actual launches are now expected. [Interruption record](recovery/INTERRUPTIONS.md).
+
+
+###080 — DC1 inheritance and interval-map genericity
+
+The primary Štefánková Theorem B(i) matches the uniformly convergent continuous-surjective interval-map setup. Report080 gives a complete corrected open-dense proof, preserving surjectivity even near endpoint fixed points. It proves a strict one-step m-branch horseshoe requires L>m for an L-Lipschitz map. Density of iterate horseshoes is a sufficient condition on a closed stratum, not established for every L>1 and not proved necessary. The genuinely pointwise problem remains outside this conclusion. [Full proof and sources](agents/080.md).
+
+
+## Complete reports079–084
+
+- [079](agents/079.md): complete independent019 and polished entropy Section4 audit passes. Additional arbitrary-dimensional rank/corank-one compression boundary theorem has a full regularization estimate. Exact JS certificate is archived separately.
+- [081](agents/081.md): recovered and fully rederived conditional Bernoulli Fisher covariance; block interaction quartic is a positive sum of fourth powers in all dimensions. A full strict-concavity neighborhood is proved for two connected interior two-site blocks. Parent read the full derivation; independent096 audit pending. No universal neighborhood or global Lyons claim.
+- [082](agents/082.md): necessary rate examples, failure of universal global averaging convergence for every weight>2/sqrt5, and a complete independent attracting positive raw2cycle proof for epsilon<=1/50, contraction123/125. Cycle uniqueness is only among periodic orbits meeting the specified caps. Parent read the full proof.
+- [083](agents/083.md): every nonconstant fixed-two-coordinate-block chord is strict, boundary included; sharp pure-offdiagonal modulus8/3 and an exact conditional flatness criterion. Parent checked the principal proof and constants.
+- [084](agents/084.md): exact primitive C_p² Chern lattice quotient Z/p² plus (Z/p)^(p(p+1)/2−1), with explicit inverse and trace row. The whole cyclic-induction lattice is different and has exponentp. The general trace refinement is conditional on the archived Chern setup. No Baum–Connes result. Parent read the lattice derivation.
+
+
+### Integration corrections identified by093
+
+The current diagonal-endpoint note replaces two literal form-feed characters with the intended LaTeX fraction commands. The mathematical identity is unchanged; the prior checkpoint blob remains intact. The current four-type note, Section8, now explicitly assumes exactly encoded rational tensor coefficients before its exact-arithmetic and polynomial-bit-complexity claim. That hypothesis was already present in report065 and the implementation. [Pinned-snapshot audit093](agents/093.md) records the completed bounded review; root applied both required repairs.
+
+
+## Reports085–093 and new integration state
+
+| Report | Scope and review boundary |
+|---|---|
+| [085](agents/085.md) | Reconstructed spectral/subset sandwich, sharp forest and matching corrections, and block pinching equality. Independent101 audit pending. Full Lyons remains open. |
+| [086](agents/086.md) | Exact support/interiority, finite averaged support propagation, and a full five-type basin family with unchanged coefficient zero pattern. Root independently rederived the central scalar/contrast basin equations; the report carries complete further proofs. No universal positive five-type uniqueness. |
+| [087](agents/087.md) | Full independent047 audit passes. Joint measurability and almost-sure population integrals are explicit; the historical neural pipeline still needs its stability/moment inputs. |
+| [088](agents/088.md) | Extends diagonal entropy to boundary endpoints and proves co-monotone affine coordinate-resampling entropy with precise equality and boundary support handling. The induced kernel curve need not be affine. |
+| [089](agents/089.md) | Exact subdivision inventory and bounded reserve multiplier; two explicit obstructions to stronger encoding/norm shortcuts. General Benjamini–Schramm conjecture is not settled. |
+| [090](agents/090.md) | Full cubic four-type strict all-parent-exclusion uniqueness and interiority, plus 9/10 averaged contraction afterfive steps. Independent106 audit pending. Full stochastic tensor class fordegree>=4 is empty under these exact assumptions. |
+| [091](agents/091.md) | Complete2017 primary text obtained. Archived five-type W is exactlyJamilov equation7; its two fixedpoints and spectra are prior Theorem3. The052 positive-mixture classification is not in that paper.2016 extra-symmetry scope remains unverified. |
+| [092](agents/092.md) | A structured disjoint-block rank2 six-site positivity class, restricted exteriorPSD and boundary entropy corollary, with exact certificate. The general compressed rank2 case remains open. |
+| [093](agents/093.md) | Bounded integrated principal audit passes after the two recorded repairs. It does not assert full replay of every report or formal verification. |

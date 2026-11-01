@@ -1,0 +1,207 @@
+{
+  "status": "PASS",
+  "date": "2026-09-20",
+  "seed": 2026092051,
+  "full_FEI_proved": false,
+  "independent_review": false,
+  "proof_assistant_used": false,
+  "all_boolean": {
+    "functions": 65812,
+    "nonzero_band_cases": 147348,
+    "integral_band_functions": 29076,
+    "half_integer_band_functions": 29076,
+    "nonplateaued_integral_functions": 26880,
+    "by_dimension": {
+      "1": {
+        "functions": 4,
+        "grid_exponent_counts": {
+          "0": 4
+        },
+        "integral_functions": 4,
+        "nonplateaued_integral": 0
+      },
+      "2": {
+        "functions": 16,
+        "grid_exponent_counts": {
+          "0": 16
+        },
+        "integral_functions": 16,
+        "nonplateaued_integral": 0
+      },
+      "3": {
+        "functions": 256,
+        "grid_exponent_counts": {
+          "0": 128,
+          "2": 128
+        },
+        "integral_functions": 128,
+        "nonplateaued_integral": 0
+      },
+      "4": {
+        "functions": 65536,
+        "grid_exponent_counts": {
+          "0": 28928,
+          "2": 18176,
+          "3": 18432
+        },
+        "integral_functions": 28928,
+        "nonplateaued_integral": 26880
+      }
+    },
+    "distinct_entropy_bound_certificates": 23,
+    "scope": "Every Boolean truth table in dimensions 1--4. The grid exponent is measured, not bounded universally."
+  },
+  "flat_ternary": {
+    "ternary_truth_tables": 6651,
+    "flat_ternary_functions": 536,
+    "by_dimension": {
+      "1": {
+        "ternary_functions": 9,
+        "nonzero_flat_functions": 8
+      },
+      "2": {
+        "ternary_functions": 81,
+        "nonzero_flat_functions": 48
+      },
+      "3": {
+        "ternary_functions": 6561,
+        "nonzero_flat_functions": 480
+      }
+    }
+  },
+  "five_variable_obstruction": {
+    "dimension": 5,
+    "definition": "1-2*1{y1=x1*x2, y2=x1*x3}",
+    "walsh_integers": [
+      16,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -8,
+      -8,
+      -8,
+      8,
+      0,
+      0,
+      0,
+      0,
+      -8,
+      -8,
+      0,
+      0,
+      -8,
+      8,
+      0,
+      0,
+      -8,
+      -8,
+      0,
+      0,
+      0,
+      0,
+      -8,
+      8
+    ],
+    "bands": [
+      {
+        "amplitude": "1/4",
+        "count": 12,
+        "divisibility_order": 1,
+        "mesh": "1/2",
+        "grid_exponent": 1,
+        "physical_values": [
+          "-3/2",
+          "1/2"
+        ]
+      },
+      {
+        "amplitude": "1/2",
+        "count": 1,
+        "divisibility_order": 0,
+        "mesh": "1/2",
+        "grid_exponent": 1,
+        "physical_values": [
+          "1/2"
+        ]
+      }
+    ],
+    "grid_exponent": 1,
+    "entropy": "7/2",
+    "influence": "15/8",
+    "refutes": "Power-of-two Fourier amplitudes automatically have integral magnitude-band projections.",
+    "does_not_refute": "FEI, or a constant-four FEI bound for all power-of-two spectra."
+  },
+  "nonaffine_cell_example": {
+    "dimension": 9,
+    "entropy": "7",
+    "influence": "15/4",
+    "affine_minimum": "13/4",
+    "band_summary": [
+      {
+        "amplitude": "1/16",
+        "count": 128,
+        "divisibility_order": 4,
+        "mesh": "1",
+        "grid_exponent": 0
+      },
+      {
+        "amplitude": "1/8",
+        "count": 32,
+        "divisibility_order": 3,
+        "mesh": "1",
+        "grid_exponent": 0
+      }
+    ],
+    "grid_exponent": 0,
+    "all_three_physical_cells_nonaffine": true
+  },
+  "tensor_powers": {
+    "actual_truth_tables": 3,
+    "rows": [
+      {
+        "factors": 1,
+        "dimension": 5,
+        "grid_exponent": 1,
+        "entropy": "7/2",
+        "influence": "15/8",
+        "lowest_band_mesh": "1/2"
+      },
+      {
+        "factors": 2,
+        "dimension": 10,
+        "grid_exponent": 2,
+        "entropy": "7",
+        "influence": "15/4",
+        "lowest_band_mesh": "1/4"
+      },
+      {
+        "factors": 3,
+        "dimension": 15,
+        "grid_exponent": 3,
+        "entropy": "21/2",
+        "influence": "45/8",
+        "lowest_band_mesh": "1/8"
+      }
+    ],
+    "interpretation": "Grid denominators can grow under tensor powers even while H/I stays exactly 28/15. The all-t statement is proved separately."
+  },
+  "affine_checks": {
+    "affine_and_character_images": 16,
+    "minimum_basis_cost_checked": true
+  },
+  "scalar_checks": {
+    "biased_head_scalar_grid": 257,
+    "endpoints_certified_exactly": true
+  },
+  "shared_branch_composition": {
+    "shared_branch_pairs": 24,
+    "dimension": 6,
+    "spectral_mixture_and_energy_identities_exact": true,
+    "scope": "The two Boolean branches use the SAME three auxiliary variables; branch independence is not assumed."
+  },
+  "checker_sha256": "5bc1421189349ab31d1595fa60a1e4d280a2c464e8bef38e0a56e702490fe99d"
+}

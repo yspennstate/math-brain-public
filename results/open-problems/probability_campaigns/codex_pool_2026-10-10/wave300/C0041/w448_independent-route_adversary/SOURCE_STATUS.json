@@ -1,0 +1,55 @@
+{
+  "target": "C0041",
+  "checked_at": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "historical_status": "Conjecture in Drewitz-Ramirez 2012 and Guerra-Ramirez 2018; local ranking attempted_un (2026-09-07).",
+  "exact_statement": "For d>=2 and a nearest-neighbor RWRE on Z^d in a uniformly elliptic i.i.d. environment, P_0(lim_n X_n.l=+infinity)=1 is conjectured to imply P_0(liminf_n X_n.l/n>0)=1.",
+  "recent_primary_claim": {
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Directional-transience-implies-ballisticity-September-23-2026/paper.pdf",
+    "authors": "OpenAI",
+    "dated": "2026-09-23",
+    "pages": 58,
+    "bytes": 709037,
+    "sha256": "8b305d1fbb11b2a62d76f7decbc45accf5d1c02362937d0af5c4108dd0cc1411",
+    "exact_scope": "Theorem 1.1, manuscript page 3: d>=2, iid UE nearest-neighbor, fixed real unit l, P0(A_l)=1 implies deterministic velocity v with v.l>0. No extra drift or moment assumption stated.",
+    "read_scope": "Title, model and theorem on pages 1-3; full 58-page proof not independently audited.",
+    "proof_status": "claimed, not verified here"
+  },
+  "paired_prover_proof_read": true,
+  "local_attempts_read": [
+    "C0041-A001: regeneration integrability; H/I searches returned no target record; lean annotations pending targeted extraction"
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1809.02011v3",
+      "authors": "Guerra and Ramirez",
+      "location": "abstract, statement of scope",
+      "quote": "stating that $(T)$ and $(T')$ are equivalent"
+    },
+    {
+      "url": "https://arxiv.org/abs/1005.0376v2",
+      "scope": "original conjecture source; retrieve exact introduction"
+    }
+  ],
+  "independent_approach_saved_before_paired_proof": true,
+  "source_locator_corrected": "Intake cites Drewitz-Ramirez 2014 Open question 2.20, p.24; retrieve that survey source metadata. 2012 Conjecture 1.1 matches the same statement.",
+  "paired_proof_read_after_independent_approach_saved": true,
+  "exact_primary_source": {
+    "url": "https://arxiv.org/pdf/1309.2589",
+    "locator": "Open question 2.20, PDF page 24 (printed page 22)",
+    "quote": "Let d >= 2. Assume given a RWRE for which (UE) and (IID) are fulfilled"
+  },
+  "formal_comparator": {
+    "path": "~\\brain_workers\\w448\\sources\\DirectionalBallisticity.lean",
+    "sha256": "f1225d29e53266aa298b6f09d2b4d9b9f54122199142d1f58ac1b082c0b441c4",
+    "actual_theorem": "OAI.DirectionalTransience.directional_transience_implies_ballisticity",
+    "placeholder": "sorry",
+    "scope_note": "This is a comparator statement template. Its placeholder does not adjudicate a separate formalization."
+  },
+  "owner_solved_or_retired_check": {
+    "scope": "Exact C0041 intake and named H/I/Lean searches, targeted recall and readonly canonical population title query",
+    "result": "Historical attempted-unsolved record; no exact C0041 solved/retired receipt found in these scoped checks. This is not a whole-corpus negative claim."
+  },
+  "canonical_store_lookup": "prior_store_lookup.json",
+  "novelty_claim": false
+}

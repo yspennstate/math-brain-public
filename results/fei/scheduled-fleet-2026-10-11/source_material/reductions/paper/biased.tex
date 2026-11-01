@@ -1,0 +1,642 @@
+\section{Product measures and obstructions to threshold normalization}
+\label{biasfull:section}
+
+The generalized FEI inequality of O'Donnell and Tan~\cite{ODT13}
+uses a corrected spectral entropy under product measures. Symmetric
+threshold gates satisfy this inequality under arbitrary product inputs
+in~\cite{Threshold}. The normalization estimates used for those gates
+cannot be extended to weighted thresholds without a different argument.
+We give explicit counterexamples to both a conditional-total-correlation
+estimate and its proposed pivotal-credit replacement. Their genuine
+corrected entropy-to-deficit ratios tend to \(2\).
+
+\subsection{Normalization and exact composition}
+
+Let \(Y_i\in\{0,1\}\) be independent with
+\(\P(Y_i=1)=q_i\in(0,1)\), and let
+\[
+ \phi_i(Y_i)=\frac{Y_i-q_i}{\sqrt{q_i(1-q_i)}},
+ \qquad v_i=4q_i(1-q_i),\qquad v_S=\prod_{i\in S}v_i.
+\]
+For a Boolean sign function \(f\), put
+\[
+ P_f^\mu(S)=\wh f_\mu(S)^2,\qquad
+ \I_\mu(f)=\sum_S|S|P_f^\mu(S),\qquad
+ V_\mu(f)=\Var_\mu(f),
+ \qquad \Delta_\mu(f)=\I_\mu(f)-V_\mu(f).
+\]
+Its corrected entropy is
+\begin{equation}\label{biasfull:hplus}
+ \HH_\mu^+(f)=\sum_{S\ne\varnothing}P_f^\mu(S)
+                      \log\frac{v_S}{P_f^\mu(S)}.
+\end{equation}
+Every summand is nonnegative, since
+\[
+ |\wh f_\mu(S)|\le\E_\mu|\phi_S|=\sqrt{v_S}.
+\]
+Write
+\[
+ h_0(f)=(\E_\mu f)^2\log\frac1{(\E_\mu f)^2}.
+\]
+If \(\HH_\mu(f)\) denotes the ordinary Shannon entropy of
+\(P_f^\mu\), then
+\begin{equation}\label{biasfull:rawcorrected}
+ \HH_\mu^+(f)=\HH_\mu(f)-h_0(f)
+                    +\sum_i\I_i^\mu(f)\log v_i.
+\end{equation}
+In particular, on a uniform cube
+\(\HH^+(f)=\HH(f)-h_0(f)\).
+
+We use the following exact form of disjoint composition.
+
+\begin{lemma}[Product-measure composition]\label{biasfull:composition}
+Let \(g_i\) be Boolean functions on disjoint variable blocks with product
+input laws \(\mu_i\). Let \(p_i=\P(g_i=1)\), \(V_i=4p_i(1-p_i)>0\), and
+let \(\nu\) be the product law with these output probabilities.
+For \(F=G(g_1,\ldots,g_k)\), set \(a_i=\I_i^\nu(G)/V_i\).
+Then
+\begin{align}
+ \HH_\mu^+(F)&=\HH_\nu^+(G)+\sum_i a_i\HH_{\mu_i}^+(g_i),
+       \label{biasfull:comph}\\
+ \I_\mu(F)&=\sum_i a_i\I_{\mu_i}(g_i),
+       \label{biasfull:compi}\\
+ \Delta_\mu(F)&=\Delta_\nu(G)+\sum_i a_i\Delta_{\mu_i}(g_i).
+       \label{biasfull:compdelta}
+\end{align}
+Constant children may be frozen and deleted.
+\end{lemma}
+\begin{proof}
+For a nonempty spectral set, its occupied blocks form a unique set \(A\),
+and its nonempty intersections with those blocks are \(T_i\), \(i\in A\).
+The coefficient is
+\[
+ \wh F\Bigl(\bigcup_{i\in A}T_i\Bigr)
+   =\wh G_\nu(A)\prod_{i\in A}\frac{\wh g_i(T_i)}{\sqrt{V_i}}.
+\]
+The squared coefficient is therefore the outer spectral mass times the
+conditional nonempty spectral masses of the occupied children.
+Taking the logarithm in~\eqref{biasfull:hplus} proves
+\eqref{biasfull:comph}; summing degrees proves~\eqref{biasfull:compi}.
+Finally \(V_\mu(F)=V_\nu(G)\), so subtraction proves
+\eqref{biasfull:compdelta}.
+\end{proof}
+
+For an increasing event \(A\), write \(f=2\mathbf1_A-1\),
+\(\alpha=\mu(A)\), and let \(\rho_i\) be its pivotal probability.
+Then
+\begin{equation}\label{biasfull:pivotal}
+ \I_i^\mu(f)=4q_i(1-q_i)\rho_i,\qquad
+ \E_{\mu(\cdot\mid A)}Y_i-q_i
+       =\frac{\I_i^\mu(f)}{4\alpha}.
+\end{equation}
+Both identities follow by conditioning on \(Y_i\).
+For a distribution \(Q\) on a finite product set, its total correlation,
+in nats, is
+\[
+ \TC(Q)=\KL\left(Q\,\middle\|\,\bigotimes_iQ_i\right)
+       =\sum_i H_{\rm nat}(Q_i)-H_{\rm nat}(Q).
+\]
+If \(Q=\mu(\cdot\mid A)\), the product structure of \(\mu\) gives
+\begin{equation}\label{biasfull:tcdecomp}
+ \ln\frac1\alpha
+   =\TC(Q)+\sum_i\KL(Q_i\|\mu_i).
+\end{equation}
+
+\subsection{Rare disjoint tribes}
+
+\begin{proposition}\label{biasfull:tribes}
+Let
+\[
+ A_m=\bigvee_{j=1}^m(X_j\wedge Z_j),\qquad f_m=2\mathbf1_{A_m}-1,
+\]
+where the \(2m\) inputs are independent Bernoulli \(q=m^{-\gamma}\)
+bits and \(1/2<\gamma<1\).
+Writing \(\alpha=\P(A_m)\), \(V=V_\mu(f_m)\), and \(Q=\mu(\cdot\mid A_m)\),
+one has
+\begin{align}
+ \frac{\alpha\TC(Q)}{\I_\mu(f_m)}
+     &\sim\frac{2\gamma-1}{8}\ln m,\label{biasfull:tribestc}\\
+ \frac{V\ln(1/V)-\sum_i\I_i^\mu(f_m)\ln^+(4\rho_i/V)}
+           {\I_\mu(f_m)}
+     &\sim\frac{2\gamma-1}{2}\ln m,\label{biasfull:tribescredit}\\
+ \frac{\HH_\mu^+(f_m)}{\Delta_\mu(f_m)}
+     &\longrightarrow2.\label{biasfull:tribesratio}
+\end{align}
+For all sufficiently large \(m\), every logarithmic credit in
+\eqref{biasfull:tribescredit} is zero.
+\end{proposition}
+\begin{proof}
+Put \(b=q^2\), \(a=(1-b)^m\), \(r=(1-b)^{m-1}\), and
+\(\alpha=1-a\). Each pivotal probability is \(qr\), whence
+\begin{equation}\label{biasfull:tribesIV}
+ \I_\mu(f_m)=8mq^2(1-q)r,\qquad V=4\alpha a.
+\end{equation}
+Since \(mq^2\to0\) and \(mq\to\infty\),
+\[
+ \alpha\sim mq^2,\qquad
+ \I_\mu(f_m)\sim8\alpha,\qquad
+ V\sim4\alpha,\qquad \Delta_\mu(f_m)\sim4\alpha.
+\]
+The logarithm arguments are exactly
+\[
+ \frac{4\rho_i}{V}=\frac{q}{\alpha(1-q^2)}
+       \sim\frac1{mq}\longrightarrow0.
+\]
+This proves~\eqref{biasfull:tribescredit} and its final assertion.
+
+Every conditional marginal under \(Q\) has mean \(q+d\), where
+\[
+ d=\frac{q^2(1-q)(1-q^2)^{m-1}}\alpha\sim\frac1m.
+\]
+Equation~\eqref{biasfull:tcdecomp} gives
+\[
+ \TC(Q)=\ln(1/\alpha)
+       -2m\KL\bigl(\operatorname{Ber}(q+d)\|
+                         \operatorname{Ber}(q)\bigr).
+\]
+The inequality \(\ln t\le t-1\) implies
+\[
+ \KL\bigl(\operatorname{Ber}(q+d)\|
+                         \operatorname{Ber}(q)\bigr)
+       \le\frac{d^2}{q(1-q)}.
+\]
+Thus the subtracted term is \(O((mq)^{-1})=o(1)\).
+This proves~\eqref{biasfull:tribestc}.
+
+For~\eqref{biasfull:tribesratio}, the sign version \(g\) of a single
+two-input conjunction has
+\begin{align}
+ \Delta_\mu(g)&=4q^2(1-q)^2,\notag\\
+ \HH_\mu^+(g)&=8q^2(1-q)^2
+                  +16q^3(1-q)\log(1/q).
+                    \label{biasfull:andpair}
+\end{align}
+These follow by listing its two singleton masses
+\(4q^3(1-q)\) and its two-coordinate mass \(4q^2(1-q)^2\).
+The outer OR gate has \(m\) inputs of probability \(b\).
+Its variance and influence are \(V_o=4a\alpha\) and
+\(\I_o=4mba\), and direct summation of its spectrum gives
+\begin{equation}\label{biasfull:orentropy}
+ \HH_o^+=2(\I_o-V_o)
+           +8ma(\alpha-b)\log\frac1{1-b}.
+\end{equation}
+Indeed its nonempty spectral mass at a set of size \(k\) is
+\(4a^2[b/(1-b)]^k\).
+The union bound and the first two Bonferroni terms give
+\[
+ 0\le mb-\alpha\le\binom m2b^2,\qquad
+ 0\le\alpha-b\le mb.
+\]
+Using \(-\ln(1-b)\le b/(1-b)\) in~\eqref{biasfull:orentropy}
+yields \(\HH_o^+=O(m^2b^2)=O(\alpha^2)\).
+Every child multiplier in~\eqref{biasfull:comph} is \(r\).
+Consequently
+\[
+ \HH_\mu^+(f_m)=\HH_o^++mr\HH_\mu^+(g)
+       \sim8mq^2\sim8\alpha,
+\]
+which proves~\eqref{biasfull:tribesratio}.
+\end{proof}
+
+\subsection{An asymmetric weighted threshold}
+
+The preceding example is monotone but not generally a weighted threshold.
+The following calculation gives a counterexample within that smaller class.
+Let
+\[
+ h(u)=-u\ln u-(1-u)\ln(1-u)
+\]
+denote binary entropy in nats.
+
+\begin{lemma}[Two-branch conditional law]\label{biasfull:mixture}
+Fix \(m\ge1\), \(q,\eta\in(0,1)\), and let
+\[
+ a=q^m,\qquad
+ q_0=\frac{(1-\eta)a}{\eta+(1-\eta)a}.
+\]
+Take independent \(X_0\sim\operatorname{Ber}(q_0)\) and
+\(X_1,\ldots,X_m\sim\operatorname{Ber}(q)\), and set
+\[
+ A=\left\{mX_0+\sum_{j=1}^mX_j\ge m\right\},
+ \qquad f=2\mathbf1_A-1,\qquad \alpha=\P(A).
+\]
+Then
+\begin{align}
+ \alpha&=\frac{a}{\eta+(1-\eta)a},\label{biasfull:alphamix}\\
+ \TC(\mu(\cdot\mid A))
+   &=m\{h(\eta+(1-\eta)q)-(1-\eta)h(q)\},
+       \label{biasfull:tcmix}\\
+ \frac{\I_\mu(f)}{4\alpha}
+   &=1-\eta-q_0+m\eta(1-q).
+       \label{biasfull:Imix}
+\end{align}
+\end{lemma}
+\begin{proof}
+The event is the disjoint union of \(\{X_0=1\}\) and
+\(\{X_0=0,X_1=\cdots=X_m=1\}\).
+Its probability gives~\eqref{biasfull:alphamix}.
+Under the conditional law \(Q=\mu(\cdot\mid A)\),
+\(\P_Q(X_0=0)=\eta\). Given \(X_0=1\), the light variables are
+independent Bernoulli \(q\); given \(X_0=0\), they are all one.
+Hence their marginal means are
+\[
+ \E_QX_0=1-\eta,\qquad
+ \E_QX_j=\eta+(1-\eta)q\quad(1\le j\le m).
+\]
+The joint entropy is \(h(\eta)+(1-\eta)mh(q)\), while the sum of
+marginal entropies is \(h(\eta)+mh(\eta+(1-\eta)q)\).
+This proves~\eqref{biasfull:tcmix}.
+Summing~\eqref{biasfull:pivotal} proves~\eqref{biasfull:Imix}.
+\end{proof}
+
+\begin{theorem}[Failure of weighted-threshold normalization estimates]
+\label{biasfull:weightedcounter}
+For every \(m\ge2\), specialize Lemma~\ref{biasfull:mixture} to
+\[
+ q=m^{-2},\qquad \eta=\frac1m,\qquad
+ a=q^m,\qquad d=1+(m-1)a.
+\]
+Thus \(q_0=(m-1)a/d\) and \(\alpha=ma/d\).
+For these weighted thresholds,
+\begin{align}
+ \frac{\alpha\TC(\mu(\cdot\mid A))}{\I_\mu(f)}
+   &=\frac{\ln m+1}{8}
+        +O\left(\frac{\ln m}{m}\right),\label{biasfull:weightedTC}\\
+ \frac{V_\mu(f)\ln(1/V_\mu(f))
+            -\sum_i\I_i^\mu(f)\ln^+(4\rho_i/V_\mu(f))}
+        {\I_\mu(f)}
+   &=\frac12\ln m-\ln2
+        +O\left(\frac{\ln m}{m}\right),\label{biasfull:weightedcredit}\\
+ \frac{\HH_\mu^+(f)}{\Delta_\mu(f)}
+   &\longrightarrow2.\label{biasfull:weightedratio}
+\end{align}
+In particular, neither of the first two numerators is bounded above
+by a universal constant times \(\I_\mu(f)\).
+\end{theorem}
+\begin{proof}
+The light conditional mean is
+\[
+ r=\frac1m+\left(1-\frac1m\right)m^{-2}
+     =m^{-1}+m^{-2}-m^{-3}.
+\]
+By~\eqref{biasfull:tcmix},
+\[
+ \TC(\mu(\cdot\mid A))=mh(r)-(m-1)h(q).
+\]
+The expansion
+\(h(u)=u\ln(1/u)+u+O(u^2)\) as \(u\downarrow0\) gives
+\[
+ mh(r)=\ln m+1+O((\ln m)/m),\qquad
+ (m-1)h(q)=O((\ln m)/m).
+\]
+Equation~\eqref{biasfull:Imix} is now
+\begin{equation}\label{biasfull:weightedinfluence}
+ \frac{\I_\mu(f)}{4\alpha}
+      =2-\frac1m-q-q_0.
+\end{equation}
+Together these prove~\eqref{biasfull:weightedTC}.
+
+We compute the credit residual, since the large heavy-coordinate
+credit must be subtracted before the remaining cost is assessed.
+The pivotal probabilities and influences satisfy
+\[
+ \rho_0=1-a,\qquad
+ \rho_{\rm light}=(1-q_0)q^{m-1},
+\]
+\[
+ \frac{\I_0^\mu(f)}{4\alpha}=1-\frac1m-q_0,\qquad
+ \frac{\sum_{j=1}^m\I_j^\mu(f)}{4\alpha}=1-q.
+\]
+Since \(V:=V_\mu(f)=4\alpha(1-\alpha)\), the logarithm arguments are
+\begin{equation}\label{biasfull:weightcreditargs}
+ \frac{4\rho_0}{V}=\frac{1-a}{\alpha(1-\alpha)},\qquad
+ \frac{4\rho_{\rm light}}{V}
+      =\frac{1}{mq(1-\alpha)}=\frac{m}{1-\alpha}.
+\end{equation}
+Both exceed one for \(m\ge2\). Let
+\[
+ L=\ln(1/\alpha)=2m\ln m-\ln m+\ln d.
+\]
+Dividing the residual by \(4\alpha\) yields exactly
+\begin{align}
+ D_m:={}&\frac{V\ln(1/V)-\sum_i\I_i^\mu(f)\ln^+(4\rho_i/V)}
+                    {4\alpha}\notag\\
+ ={}&(1-\alpha)[L-\ln4-\ln(1-\alpha)]\notag\\
+ &-\left(1-\frac1m-q_0\right)
+                 [L+\ln(1-a)-\ln(1-\alpha)]\notag\\
+ &-(1-q)[\ln m-\ln(1-\alpha)].
+                       \label{biasfull:residualexact}
+\end{align}
+Here \(a=m^{-2m}\), \(q_0=O(ma)\), and \(\alpha=O(ma)\).
+All terms containing \(aL\), \(q_0L\), or \(\alpha L\) tend to zero.
+It follows that
+\[
+ D_m=\frac Lm-(1-q)\ln m-\ln4+o(1)
+      =\ln m-\ln4+O((\ln m)/m).
+\]
+Dividing by~\eqref{biasfull:weightedinfluence} proves
+\eqref{biasfull:weightedcredit}.
+
+To prove~\eqref{biasfull:weightedratio}, let \(g\) be the sign version
+of the conjunction of the \(m\) light variables. For \(S\ne\varnothing\),
+\[
+ P_g^\mu(S)=4a^2\left(\frac{1-q}{q}\right)^{|S|}.
+\]
+Summing its degree and its corrected entropy gives
+\begin{align}
+ \I_\mu(g)&=4ma(1-q),\notag\\
+ \Delta_\mu(g)&=4a[m(1-q)-1+a],\notag\\
+ \HH_\mu^+(g)&=2\Delta_\mu(g)
+                 +8ma(q-a)\log(1/q).
+                    \label{biasfull:andmany}
+\end{align}
+Consequently \(\Delta_\mu(g)\sim4ma\) and
+\(\HH_\mu^+(g)\sim8ma\).
+The outer OR gate has input probabilities \(q_0\) and \(a\).
+Its deficit is
+\[
+ \Delta_o=4q_0a(1-q_0)(1-a)=O(ma^2).
+\]
+For an OR gate with probabilities \(x,y\), its corrected entropy is
+\begin{align*}
+ &8x(1-x)(1-y)^2\log\frac1{1-y}\\
+ &\quad+8y(1-y)(1-x)^2\log\frac1{1-x}
+       +8xy(1-x)(1-y).
+\end{align*}
+The inequality \(-\ln(1-u)\le u/(1-u)\) bounds this by
+\((2+4/\ln2)\,4xy(1-x)(1-y)\).
+Thus \(\HH_o^+=O(ma^2)\).
+The heavy child is a dictator and has zero corrected entropy and
+zero deficit. The light-block multiplier in
+Lemma~\ref{biasfull:composition} is \(1-q_0\), so
+\[
+ \Delta_\mu(f)=\Delta_o+(1-q_0)\Delta_\mu(g)\sim4ma,\qquad
+ \HH_\mu^+(f)=\HH_o^++(1-q_0)\HH_\mu^+(g)\sim8ma.
+\]
+This proves~\eqref{biasfull:weightedratio}.
+\end{proof}
+
+\begin{remark}\label{biasfull:creditremark}
+Equation~\eqref{biasfull:weightedcredit} refutes precisely an estimate
+with coefficient one on the pivotal credits and an additional
+\(O(\I_\mu(f))\) term. It does not refute an inequality with a larger
+multiplier on the credits. Replacing the fixed factor \(4\) inside
+all logarithms by another fixed positive factor changes the residual
+by only a bounded multiple of \(\I_\mu(f)\) for this family, and
+therefore does not repair the coefficient-one estimate.
+Neither~\eqref{biasfull:weightedTC} nor~\eqref{biasfull:weightedcredit}
+is a counterexample to generalized FEI.
+\end{remark}
+
+\begin{proposition}[A local total-correlation obstruction]
+\label{biasfull:localTC}
+There is no universal \(K\) such that every increasing weighted
+threshold event \(A\) has a coordinate \(j\) satisfying
+\[
+ \alpha\sum_{k\ne j} I_Q(X_j;X_k)\le K\I_j^\mu(2\mathbf1_A-1),
+ \qquad Q=\mu(\cdot\mid A).
+\]
+Here the mutual informations are measured in nats.
+\end{proposition}
+\begin{proof}
+In Lemma~\ref{biasfull:mixture}, take \(\eta=1/2\) and let
+\(q\downarrow0\) with \(m\) fixed.
+The conditional law converges to the equal mixture of
+\((1,0,\ldots,0)\) and \((0,1,\ldots,1)\).
+Hence every pairwise mutual information tends to \(\ln2\),
+while~\eqref{biasfull:pivotal} gives
+\(\I_j^\mu(f)/\alpha\to2\) for every \(j\).
+Every proposed coordinate ratio therefore tends to \(m\ln2/2\).
+Letting \(m\) increase proves the assertion.
+\end{proof}
+
+The exact recursion behind this failed proposal is
+\[
+ \TC(Q)=\E_{X_j}\TC(Q_{-j}\mid X_j)
+                  +\sum_{k\ne j}I_Q(X_j;X_k).
+\]
+It follows by expanding the marginal and joint entropies.
+The obstruction concerns the proposed payment of this recursion,
+not the identity itself.
+
+\subsection{What a uniform encoding of biased inputs transfers}
+
+Let \(p_i\) be dyadic probabilities and choose arbitrary uniform-input
+Boolean encoders \(g_i\) with \(\P(g_i=1)=p_i\), on disjoint blocks.
+Let \(V_i=4p_i(1-p_i)\).
+If ordinary uniform FEI is assumed with a constant \(C\), then
+Lemma~\ref{biasfull:composition} applied to \(F=G(g_1,\ldots,g_k)\)
+gives exactly
+\begin{equation}\label{biasfull:encoding}
+ \HH_\nu^+(G)+h_0(F)
+   \le\sum_i\I_i^\nu(G)R_C(g_i),\qquad
+ R_C(g)=\frac{C\I(g)-\HH^+(g)}{\Var(g)}.
+\end{equation}
+The relevant encoder quantity is its entropy-influence slack per
+unit variance, rather than its influence alone.
+
+\begin{proposition}[Encoder slack]\label{biasfull:encoderslack}
+For the sign version \(g\) of the uniform conjunction on \(k\) bits,
+with \(p=2^{-k}\),
+\begin{equation}\label{biasfull:andencoder}
+ R_C(g)=2+\left(\frac{C}{2(1-p)}-2\right)\log\frac1p.
+\end{equation}
+More generally, if uniform FEI holds with \(C_0\), then for every
+\(C>C_0\) and every uniform Boolean encoder of probability
+\(p\in(0,1/2]\),
+\begin{equation}\label{biasfull:encodergap}
+ R_C(g)\ge\frac{C-C_0}{2(1-p)}\log\frac1p.
+\end{equation}
+Thus no choice of encoders makes the coefficients in
+\eqref{biasfull:encoding} uniformly bounded when the constant used
+has a fixed positive slack over a valid FEI constant.
+\end{proposition}
+\begin{proof}
+For the conjunction, the nonempty squared coefficients are all
+\(4p^2\). Thus
+\[
+ \I(g)=2kp,\qquad V=4p(1-p),\qquad
+ \HH^+(g)=V(2k-2),
+\]
+which proves~\eqref{biasfull:andencoder}.
+For an arbitrary encoder,
+\[
+ C\I(g)-\HH^+(g)
+   =C\I(g)-\HH(g)+h_0(g)\ge(C-C_0)\I(g).
+\]
+The uniform edge-isoperimetric inequality gives
+\(\I(g)\ge2p\log(1/p)\), proving~\eqref{biasfull:encodergap}.
+
+For completeness, this form of edge isoperimetry follows by induction.
+If a coordinate's two sections have probabilities \(p_0\le p_1\),
+their other influences average, and the coordinate influence is at
+least \(p_1-p_0\). Writing \(p_0=p(1-t)\), \(p_1=p(1+t)\), the
+induction reduces to
+\[
+ (1-t)\log(1-t)+(1+t)\log(1+t)\le2t,\qquad0\le t\le1.
+\]
+The left side is convex, with endpoint values \(0,2\), and is
+therefore below the chord \(2t\).
+\end{proof}
+
+This proposition is a limitation of the inference
+\eqref{biasfull:encoding}. It does not rule out a different reduction,
+additional structural information about the outer gate, or the
+generalized FEI conjecture itself.
+
+\subsection{A sharp loss in a monotone dual-rail embedding}
+
+The following calculation makes explicit the product-measure cost of the monotone encoding considered in~\cite{BrainMonotone}.
+
+Every Boolean function on \(\{0,1\}^n\) is the restriction of a
+monotone function to the antichain
+\[
+ x\longmapsto(x_1,1-x_1,\ldots,x_n,1-x_n).
+\]
+For example, take the upward closure of the encoded inputs on
+which the function equals one. The following bound quantifies the
+loss when the ambient law is required to be a product law.
+
+\begin{proposition}\label{biasfull:dualrail}
+Let \(Y,Z\) be independent Bernoulli bits with
+\[
+ \P(Y=1\mid Y\ne Z)=p,\qquad t=\P(Y\ne Z).
+\]
+Then
+\begin{equation}\label{biasfull:railone}
+ t\le\frac1{1+2\sqrt{p(1-p)}}.
+\end{equation}
+The bound is sharp. For independent pairs encoding independent
+bits of probabilities \(p_1,\ldots,p_n\), the event \(E\) that every
+pair is valid satisfies
+\begin{equation}\label{biasfull:railall}
+ \P(E)\le\prod_{i=1}^n
+       \bigl(1+2\sqrt{p_i(1-p_i)}\bigr)^{-1}.
+\end{equation}
+In particular, balanced decoding forces \(\P(E)\le2^{-n}\).
+\end{proposition}
+\begin{proof}
+The valid cell probabilities are \(pt\) and \((1-p)t\).
+If the invalid cell probabilities are \(u,v\), independence implies
+\[
+ uv=p(1-p)t^2,\qquad u+v=1-t.
+\]
+Thus \((1-t)^2\ge4p(1-p)t^2\), proving~\eqref{biasfull:railone}.
+Equality is attained by
+\[
+ \P(Y=1)=\frac{\sqrt p}{\sqrt p+\sqrt{1-p}},
+ \qquad \P(Z=1)=1-\P(Y=1).
+\]
+Independent pairs give~\eqref{biasfull:railall} by multiplication.
+\end{proof}
+
+Conditioning on all valid pairs preserves independence of the decoded
+bits, but its relative-entropy cost is
+\[
+ \KL(\mu(\cdot\mid E)\|\mu)=\ln\frac1{\mu(E)}
+ \ge\sum_i\ln\bigl(1+2\sqrt{p_i(1-p_i)}\bigr).
+\]
+This is at least \(n\ln2\) for balanced decoding. The proposition
+concerns this embedding; it asserts no obstruction to all conceivable
+monotone embeddings.
+
+\subsection{The gate-potential formulation on its finite-cube domain}
+
+Let \(\mathcal Q_2\) be the dyadic probabilities in \([0,1]\).
+The following formulation of the gate potential in~\cite{BrainGate}
+uses only probabilities realized by finite uniform Boolean functions.
+Put \(V_p=4p(1-p)\), and let \(h_2\) denote binary entropy in bits.
+
+\begin{proposition}\label{biasfull:gatepotential}
+Uniform FEI holds with constant \(C\) if and only if there is a
+symmetric function \(\Gamma:\mathcal Q_2\to[0,\infty)\), with
+\(\Gamma(1/2)\le C\), such that every finite Boolean gate \(G\)
+and every vector of interior dyadic input probabilities satisfy
+\begin{equation}\label{biasfull:gatecondition}
+ \Gamma(p_{\rm out})+\HH_\nu(G)
+ \le\sum_i\I_i^\nu(G)
+         \frac{\Gamma(p_i)+h_2(V_{p_i})}{V_{p_i}}.
+\end{equation}
+Here \(p_{\rm out}=\P_\nu(G=1)\), which is dyadic. Deterministic
+inputs are frozen and deleted.
+\end{proposition}
+\begin{proof}
+For sufficiency, apply~\eqref{biasfull:gatecondition} to an arbitrary
+Boolean function regarded as one gate with all input probabilities
+\(1/2\). Since \(V_{1/2}=1\) and \(h_2(1)=0\),
+\[
+ \HH(G)+\Gamma(p_{\rm out})
+      \le\Gamma(1/2)\I(G)\le C\I(G).
+\]
+
+Conversely, assume uniform FEI with \(C\) and define
+\begin{equation}\label{biasfull:gammaslack}
+ \Gamma_C(p)=\inf_{\substack{g\ {\rm finite\ uniform\ Boolean}\\
+                              \P(g=1)=p}}
+                  \{C\I(g)-\HH(g)\}.
+\end{equation}
+The admissible set is nonempty for dyadic \(p\).
+FEI makes the infimum nonnegative; a single example makes it finite.
+Output negation gives symmetry, constants give the endpoint values
+zero, and a dictator gives \(\Gamma_C(1/2)\le C\).
+
+Choose disjoint child functions of the prescribed probabilities
+whose slacks approach the infima. Their raw entropy composition is
+\[
+ \HH(F)=\HH_\nu(G)+
+    \sum_i\frac{\I_i^\nu(G)}{V_{p_i}}
+                  [\HH(g_i)-h_2(V_{p_i})].
+\]
+This follows either from the same spectral factorization as
+Lemma~\ref{biasfull:composition}, or by conditioning each child
+spectrum on being nonempty. Consequently
+\[
+ C\I(F)-\HH(F)=
+ \sum_i\frac{\I_i^\nu(G)}{V_{p_i}}
+      [C\I(g_i)-\HH(g_i)+h_2(V_{p_i})]-\HH_\nu(G).
+\]
+The left side is at least \(\Gamma_C(p_{\rm out})\).
+Letting the finitely many child slacks tend to their infima proves
+\eqref{biasfull:gatecondition}.
+\end{proof}
+
+No finite uniform Boolean function has a nondyadic output probability.
+Thus the infimum in~\eqref{biasfull:gammaslack} does not directly
+define an all-real-bias potential; that extension would need an
+additional argument. The dyadic formulation already suffices for
+equivalence to FEI on all finite uniform cubes.
+
+For comparison with the encoder bound,
+\begin{equation}\label{biasfull:encoderpotential}
+ \inf_{\P(g=1)=p}R_C(g)
+   =\frac{\Gamma_C(p)+h_0(p)}{V_p},
+ \qquad
+ h_0(p)=(1-V_p)\log\frac1{1-V_p}.
+\end{equation}
+This identity follows from \(\HH^+(g)=\HH(g)-h_0(p)\).
+If FEI holds with \(C_1<C_2\), edge isoperimetry also gives
+\[
+ \Gamma_{C_2}(p)\ge\Gamma_{C_1}(p)
+                 +2(C_2-C_1)p\log(1/p),\qquad p\le\tfrac12.
+\]
+
+Finally, balanced gates retain the complete optimal-constant question:
+\begin{equation}\label{biasfull:balancedoptimal}
+ C_{\rm FEI}
+  =\sup_{\substack{g\ {\rm balanced}\\\I(g)>1}}
+                       \frac{\HH(g)}{\I(g)-1}.
+\end{equation}
+Indeed, balanced self-composition of a gate with influence \(a>1\)
+and entropy \(h\) gives ratios tending to \(h/(a-1)\).
+Conversely, for any nonconstant \(f\), the balanced function
+\(g=z\prod_{j=1}^r f(x^{(j)})\), with a fresh uniform sign \(z\),
+satisfies \(\HH(g)=r\HH(f)\) and
+\(\I(g)-1=r\I(f)\). A balanced function of influence one is a
+signed dictator and has zero entropy.
+In particular, whenever FEI holds with \(C\),
+\(\Gamma_C(1/2)=C\).
+
+The quantifier over every gate in~\eqref{biasfull:gatecondition}
+already contains unrestricted FEI at uniform input. A proof for a
+restricted family of gates supplies a composition theorem for that
+family; it does not remove this universal quantifier.

@@ -1,0 +1,38 @@
+--- a/~/math-brain-inbox/w395/bundle_001.json
++++ b/~/math-brain-inbox/w395/bundle_001.json
+@@ -0,0 +1,35 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w395",
++  "bundle_slug": "p0117-fixed-label-random-label-gap-20261010",
++  "entries": [
++    {
++      "key": "ahlberg-hoffman-fixed-label",
++      "namespace": "probability.fpp",
++      "logical_name": "ahlberg-hoffman-fixed-functional-ray-uniqueness-assumption-a1",
++      "kind": "concept",
++      "title": "Ahlberg–Hoffman: simultaneous ray labels, fixed-label uniqueness",
++      "statement": "For iid continuous nearest-neighbor edge weights on Z^2 with finite second moment of the minimum of four incident weights (Assumption A1), Ahlberg and Hoffman state that almost surely every infinite geodesic ray has an asymptotically linear Busemann functional in a deterministic closed set C. For each fixed functional rho in C, almost surely there are not two distinct rays from the origin whose Busemann functions are asymptotically linear to rho. The null set in the second assertion may depend on rho; this statement alone does not exclude a ray with an environment-selected exceptional functional. This node summarizes the source statement; it does not independently certify its full proof.",
++      "proof_text": null,
++      "assumptions": ["iid continuous (nonatomic) nearest-neighbor edge weights on Z^2", "E[min(X1,X2,X3,X4)^2]<infinity", "uniqueness quantifier is for each deterministic fixed rho"],
++      "domain": "probability theory",
++      "source": {"source_id": "arxiv:1609.02447:theorems-2.5-2.6", "url": "https://arxiv.org/pdf/1609.02447", "revision": "as-read-2026-10-10", "license": "arxiv-nonexclusive", "excerpt": "For every functional"}
++    },
++    {
++      "key": "random-label-quantifier-gap",
++      "namespace": "probability.fpp",
++      "logical_name": "p0117-fixed-versus-random-functional-quantifier-gap",
++      "kind": "concept",
++      "title": "P0117 bridge: fixed functional is not every random functional",
++      "statement": "The fixed-functional uniqueness conclusion of Ahlberg–Hoffman cannot be intersected over an uncountable set of possible Busemann labels. A hypothetical bigeodesic may choose a label depending on the edge environment. To exclude every bigeodesic, one needs simultaneous control of such environment-selected labels or another whole-event argument. The abstract counterexample is U uniform on [0,1]: P(U=rho)=0 for each fixed rho, but almost surely there exists rho=U.",
++      "proof_text": null,
++      "assumptions": ["The possible functional set is not known to be countable", "Ahlberg–Hoffman uniqueness is pointwise in fixed rho", "This is a proof-gap record, not a bigeodesic construction"],
++      "domain": "probability theory",
++      "source": {"source_id": "owner-w395-p0117-bridge-20261010:quantifier-gap", "url": "urn:owner-work:w395:p0117-quantifier-gap-20261010", "revision": "2026-10-10-reviewed-draft", "license": "owner-own-work", "excerpt": null}
++    }
++  ],
++  "relations": [
++    {"from_key": "random-label-quantifier-gap", "to_key": "ahlberg-hoffman-fixed-label", "kind": "semantic_association", "rationale": "The AH source node says uniqueness is for each fixed rho; this gap node says a bigeodesic can select a random rho, so the fixed-rho null events cannot simply be intersected."},
++    {"from_key": "random-label-quantifier-gap", "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp", "kind": "semantic_association", "rationale": "The existing P0117 card asks whether a bi-infinite geodesic exists under continuous iid planar weights; this node identifies why fixed-label nonexistence does not settle that all-path question."}
++  ]
++}

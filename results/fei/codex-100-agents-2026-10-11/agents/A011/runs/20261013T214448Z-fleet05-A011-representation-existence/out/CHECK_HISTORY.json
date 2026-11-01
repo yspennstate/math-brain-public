@@ -1,0 +1,43 @@
+{
+  "v1_combined": {
+    "outcome": "INCOMPLETE_RUNTIME_CUTOFF",
+    "first_failed_check": "time.monotonic()-start<55",
+    "assertion_number": 934168,
+    "mathematical_failure": false,
+    "domain_completed": false
+  },
+  "v1_1_change": "Identical frozen family split into sequential general and equal-a3 jobs; memoize exact log vectors and CE. Replace redundant aggregate interval calculation by positive averaging of the already interval-certified scalar row bounds. No dimension or family increase.",
+  "v1_1_initial_diagnostic": {
+    "outcome": "INVALID_TEST_IMPLICATION",
+    "assertion_number": 208194,
+    "failed_line": "bool(phase_ent) or selector==0",
+    "actual_witness": "one-bit phase character: spectral entropy zero, influence one",
+    "correction": "selector!=0 or not phase_ent; zero influence implies zero entropy",
+    "proof_changed": false,
+    "arithmetic_or_domain_changed": false
+  },
+  "completed_jobs": [
+    {
+      "mode": "general",
+      "seconds": 26.44182860001456,
+      "assertions": 324133,
+      "status": "PASS"
+    },
+    {
+      "mode": "equal-a3",
+      "seconds": 32.06021429999964,
+      "assertions": 539174,
+      "status": "PASS"
+    }
+  ],
+  "draft_general_ledger_correction": {
+    "wrong_line": "CE=H(U|T)+avg c-JS-kappa",
+    "correct_line": "CE=H(U|T)+avg c+JS-kappa",
+    "method": "Final direct derivation from H(q)+KL(q||r); added independent leaf-posterior prime-log identity check on every general comb",
+    "common_magnitude_claim_changed": false,
+    "old_complete_outputs_preserved": [
+      "EXACT_general_v1_1.json",
+      "EXACT_equal-a3_v1_1.json"
+    ]
+  }
+}

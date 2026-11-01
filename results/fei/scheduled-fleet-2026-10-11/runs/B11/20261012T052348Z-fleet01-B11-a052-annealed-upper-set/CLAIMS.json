@@ -1,0 +1,37 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B11-A052-ANNEALED-UPPERSET",
+      "version": 1,
+      "packet_id": "A052",
+      "attempt_id": "A052-ANNEALED-UPPERSET-4",
+      "gap_id": "G-CRITICAL-U-PAYMENT",
+      "status": "PROVED_STRUCTURAL_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every genuine Boolean f and Bernoulli-t live set J, the expected upward potential of the uniform physical restrictions f_{J,X} is at most F_t(p)=E_J sum_{A subset J} m_J(A) log_2(pi(A)/m_J(A)), where p(T)=fhat(T)^2, m_J(A)=P_{S~p}[S intersect J=A], and pi(A)=P[S contains A]. F_t has an exact nonnegative coordinate decomposition sum_i C_i(t). Hence some i with p_i=Inf_i(f)>0 has C_i(t)/p_i >= F_t/I. For a finite-dimensional H/I maximizer of ratio R, the accepted A052 persistence theorem implies at t=1/2 that this ratio is at least (R-2)/4-1/(2 ln 2), plus the retained normalized terminal variance and empty-coefficient entropy terms.",
+      "quantifiers": "Every n>=1; every genuine {-1,1}-valued Boolean function on the uniform n-cube; every t in [0,1]; every fixed global coordinate order. The critical consequence applies to fixed-n H/I maximizers and genuine physical restrictions.",
+      "units": "bits for entropy and surprisal; dimensionless normalized charges",
+      "hypotheses": [
+        "Uniform Boolean cube and genuine Boolean f",
+        "Physical restriction assignments are uniform on the fixed coordinates",
+        "The maximizer consequence imports the source-complete A052 random-restriction persistence theorem",
+        "The p_i<1/2 addendum for R>4 imports the prior all-block critical theorem"
+      ],
+      "scope_exclusions": [
+        "Not a proof of full FEI",
+        "No universal upper bound max_i C_i(t)/p_i<=K is proved",
+        "No claim that an arbitrary spectral probability law is Boolean-realizable or critical",
+        "Finite enumeration is diagnostic and not the all-dimensional proof",
+        "Independent review pending"
+      ],
+      "artifacts": [
+        "REPORT.md",
+        "ANNEALED_UPPER_SET_ENVELOPE.tex",
+        "verify_envelope.py",
+        "CHECK.out"
+      ],
+      "next_consumers": ["A055", "A096", "A099", "B20"],
+      "independent_reviewers": ["A090", "A094"]
+    }
+  ]
+}

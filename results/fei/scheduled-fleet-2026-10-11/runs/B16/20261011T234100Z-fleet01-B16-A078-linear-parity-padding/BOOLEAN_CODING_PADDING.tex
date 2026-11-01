@@ -1,0 +1,81 @@
+\section*{Linear parity padding is spectrally isometric but restriction-cheap}
+
+Let $g:\{-1,1\}^n\to\{-1,1\}$ and choose arbitrary codewords
+$c_1,\ldots,c_n\in\mathbb F_2^m$.  For
+$z\in\{-1,1\}^m$ write
+$\chi_c(z)=\prod_{j:c_j=1}z_j$ and define the genuine Boolean circuit
+\[
+ F(x,z)=g\bigl(x_1\chi_{c_1}(z),\ldots,
+                 x_n\chi_{c_n}(z)\bigr).                 \tag{1}
+\]
+For each fixed $z$, the displayed map is a permutation of the $x$ truth
+table, with inverse given by the same sign multipliers.  Thus (1) is an
+actual Boolean realization, not an abstract spectral law.
+
+Put $c(S)=\bigoplus_{i\in S}c_i$.  Expanding the Boolean core gives
+\[
+ F(x,z)=\sum_{S\subseteq[n]}\widehat g(S)\chi_S(x)
+                         \chi_{c(S)}(z),                 \tag{2}
+\]
+and hence, with $T\subseteq[m]$ identified with its indicator vector,
+\[
+ \widehat F(S,T)=
+ \begin{cases}
+   \widehat g(S),&T=c(S),\\
+   0,&T\ne c(S).
+ \end{cases}                                             \tag{3}
+\]
+The $x$ support $S$ remains in the lifted frequency, so the map
+$S\mapsto(S,c(S))$ is injective even when distinct sets have the same code
+label.  Therefore, for $S$ sampled from
+$\mu_g(S)=\widehat g(S)^2$,
+\[
+ H(F)=H(g),\qquad
+ I(F)=I(g)+\mathbb E_{S\sim\mu_g}|c(S)|,                 \tag{4}
+\]
+and each padding coordinate has exact influence
+\[
+ I_{z_j}(F)=\Pr_{S\sim\mu_g}[c(S)_j=1].                 \tag{5}
+\]
+
+Now physically fix an arbitrary padding block $A\subseteq[m]$ to
+$z_A=a$.  Equation (2) becomes
+\[
+ F_a(x,z_{A^c})=
+ \sum_S \widehat g(S)\chi_{c(S)|_A}(a)\chi_S(x)
+                    \chi_{c(S)|_{A^c}}(z_{A^c}).         \tag{6}
+\]
+The signs in (6) have modulus one, and the frequency map remains injective
+because it retains $S$.  Every child therefore has exactly the positive
+squared Fourier masses of $g$:
+\[
+ H(F_a)=H(g)=H(F).                                      \tag{7}
+\]
+For the complete physical block entropy loss
+\[
+ \Gamma_A(F)=H(F)-\mathbb E_aH(F_a)
+             =H(S_A\mid S_{A^c})+I(a;Y),
+\]
+where the second equality is the complete-block identity of
+`B20-A097-COMPLETE-BLOCK-DEFICIT-v1`, (7) yields
+\[
+ \boxed{\Gamma_A(F)=0\quad\text{for every padding block }A.} \tag{8}
+\]
+
+Consequently, if a padding coordinate $z_j$ is relevant, then the proper
+singleton block $\{z_j\}$ has
+\[
+ \frac{\Gamma_{\{z_j\}}(F)}{I_{z_j}(F)}=0.              \tag{9}
+\]
+Moreover fixing $z_j$ preserves $H$ and lowers influence by the positive
+quantity in (5).  If $H(g)>0$, that child has strictly larger $H/I$ than
+$F$, so $F$ is not restriction-critical.  If $H(g)=0$, the lift has zero
+spectral entropy; if all quantities in (5) vanish, the padding is irrelevant
+on the occupied spectrum.
+
+Thus no family of the form (1), regardless of code length, rank, label
+collisions, sparsity, or dependence among auxiliary labels, can produce an
+unbounded FEI ratio or a hard source for the proper-block criterion.  The
+construction preserves entropy exactly but charges every auxiliary
+influence in (4), and any nontrivial charge exposes a zero-loss physical
+block.

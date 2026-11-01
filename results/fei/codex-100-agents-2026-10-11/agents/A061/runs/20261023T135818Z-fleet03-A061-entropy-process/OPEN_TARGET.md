@@ -1,0 +1,11 @@
+# Frozen mathematical target, before computation
+
+Packet A061/B13; stable gap G-R-MISMATCH. Source to review: A064 run20261023T130211Z, PROOF sections1--5; exact claim version to be pinned from CLAIMS.json. Prior bound: its sector eligibility formula and any-reference capital lower bound are author proved/exact checked, new review pending. A087/A065 have already closed arbitrary product-history cocycle and ONE tensor installation at supplied2A. Do not repeat that solved NEXT.
+
+Candidate necessity bridge to REFUTE: a restriction-closed actual Boolean class satisfying a uniform GU bound G<=aI (b=0) admits a reference-paying account A<=CI for ALL immediate actual-product stopping cuts of its fresh bent extensions, some finite C independent of dimension. Account pays full terminal KL and actual outcome KL; full terminal H stays explicit. This necessity is not implied by an existing accepted theorem.
+
+Exact proposed certificate: for every m>=1, the point sign f_m=1-2*1[x=0] satisfies G(f_m)<=19I(f_m)/8, uniformly. The same bound holds for every disjoint product and every physical restriction thereof. Nevertheless, for m>=3, N=2^(m-1) independent copies and fresh bent pair, every supporting original reference/account admitting immediate pivot plus actual-product stopping has A/I >=(m^2-5m-2)/(m+1), tending to infinity. Thus even certified GU does NOT imply the proposed account property. This does not refute GU or FEI.
+
+Relevance: a proposed B13 route that treats such an account as necessary for GU is ruled out. A sufficient universal stopping proof must instead select a narrower full-H+KL terminal/reference policy and fund its ACTUAL initial capacity; no universal product-stop capacity or product-KL/I bound can be imported. This strengthens the source obstruction from bounded H/I to an explicit valid GU pair on a restriction-closed class. It does not prove GU on arbitrary Boolean functions.
+
+Independent source-level reconstruction will also check A064's exact sector formula, normalization, signed optional-reset maximum and rare-branch interpretation. No source repair is intended; if needed it changes reviewer status to contributor. No large pair census is authorized by this target.

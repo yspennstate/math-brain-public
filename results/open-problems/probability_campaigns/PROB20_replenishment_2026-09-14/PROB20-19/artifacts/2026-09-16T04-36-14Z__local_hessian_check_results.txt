@@ -1,0 +1,36 @@
+=== conditional curvature identity ===
+s=2.3 tau=0.7 kappa=0.8 finite_diff=-0.558830370867 formula=-0.558830409052 abs_err=3.818e-08
+s=1.1 tau=0.9 kappa=2 finite_diff=-0.560702648894 formula=-0.560702795833 abs_err=1.469e-07
+s=3 tau=1.4 kappa=0.3 finite_diff=-0.112730136337 formula=-0.112730147447 abs_err=1.111e-08
+s=2 tau=0.4 kappa=1.7 finite_diff=-1.59155874035 formula=-1.59155880645 abs_err=6.610e-08
+
+=== sign-symmetrized full-objective bank ===
+pair=(0, 1) centered_curvature=-0.23602944
+pair=(0, 2) centered_curvature=-1.60881187
+pair=(0, 3) centered_curvature=-4.14270086
+pair=(1, 2) centered_curvature=-0.423814481
+pair=(1, 3) centered_curvature=-2.08289504
+pair=(2, 3) centered_curvature=-0.512294758
+
+=== mixed Hessian entries ===
+pairs=(0, 1),(0, 2) mixed=0.000e+00
+pairs=(0, 1),(0, 3) mixed=0.000e+00
+pairs=(0, 1),(1, 2) mixed=0.000e+00
+pairs=(0, 1),(1, 3) mixed=0.000e+00
+pairs=(0, 1),(2, 3) mixed=0.000e+00
+pairs=(0, 2),(0, 3) mixed=0.000e+00
+pairs=(0, 2),(1, 2) mixed=0.000e+00
+pairs=(0, 2),(1, 3) mixed=0.000e+00
+pairs=(0, 2),(2, 3) mixed=0.000e+00
+pairs=(0, 3),(1, 2) mixed=0.000e+00
+pairs=(0, 3),(1, 3) mixed=0.000e+00
+pairs=(0, 3),(2, 3) mixed=0.000e+00
+pairs=(1, 2),(1, 3) mixed=0.000e+00
+pairs=(1, 2),(2, 3) mixed=0.000e+00
+pairs=(1, 3),(2, 3) mixed=0.000e+00
+
+PASS
+conditional_max_abs_error=1.469e-07
+largest_mixed_abs=0.000e+00
+least_negative_pair_curvature=-0.23602944
+samples_after_sign_symmetrization=524288

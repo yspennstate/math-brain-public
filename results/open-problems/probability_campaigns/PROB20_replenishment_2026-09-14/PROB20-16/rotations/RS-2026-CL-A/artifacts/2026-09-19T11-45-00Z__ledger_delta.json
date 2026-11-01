@@ -1,0 +1,89 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "RS-2026-CL-A",
+  "report_kind": "research_progress",
+  "input_snapshot_sha": "cec26785ae27407deb88fcb7ed0984381a6b3ffa",
+  "source": {
+    "author": "Anastasia Kireeva",
+    "venue": "Randomstrasse 101",
+    "title": "Low-degree hardness of finding the largest clique in Erdős–Rényi graph (problems 36-38)",
+    "posted": "2026-06-05",
+    "locator": "first displayed Open Problem 35",
+    "url": "https://randomstrasse101.math.ethz.ch/posts/clique-low-degree/",
+    "fresh_check_date": "2026-09-19",
+    "status": "live/open in bounded fresh check"
+  },
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T10-43-17Z__report.md",
+    "creation_commit": "f4382fbd8481976583985811afa46229de1ec548",
+    "blob": "07a842e252fd3185f127f2f2894ed8a82709e368"
+  },
+  "current_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T11-45-00Z__report.md",
+    "creation_commit": "3f501018509e4f0060fb4ad82f699ee62aeca311",
+    "readback_blob": "6741db1ae10a4965dd027b0aaadfc8605944b0df"
+  },
+  "historical_initial_methods": ["B2", "B27", "B21"],
+  "methods": [
+    {
+      "id": "B5",
+      "outcome": "PROGRESS",
+      "summary": "Derived margin-refined full-tail damping ||S_t Pi_{>=K}|| <= exp[-K alpha_t(s)-delta_s beta_t(s)], proved alpha_t(s)=s(1-exp(-kappa t/s)) is strictly increasing in admissible tilt, and reduced finite-K optimization to one scalar objective using local-table delta_s."
+    },
+    {
+      "id": "B11",
+      "outcome": "PROGRESS_WITH_FAILED_NAIVE_ROUTE",
+      "summary": "Showed unweighted tail pressure is exponentially equivalent to global chi-square under bounded source LDA, so that naive weakening fails. Replaced it by discounted degree pressure Theta_{r,D}=log(1+sum_{k>D}e^{-2rk}||Pi_k h||_2^2), proving same-degree noisy LDA and TV transfer for r below the aligned damping rate. Derived a substantive forced violation for Mao."
+    },
+    {
+      "id": "B22",
+      "outcome": "PROGRESS",
+      "summary": "Identified Hsieh symmetry-quotient/truncation and Chen-Li positive-weight low-interface reassembly as two model-specific methods for controlling noise-discounted high-degree likelihood-ratio energy without assuming small unweighted global chi-square."
+    }
+  ],
+  "fixed_metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": "NO_FROZEN_METRIC_MOVEMENT"
+  },
+  "mathematical_status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / OPTIMIZED_TILT_DISCOUNTED_DEGREE_PRESSURE_AND_REASSEMBLY_PROGRESS",
+  "same_obligation_stagnation_count": 0,
+  "hard_recovery_cycles_consumed": 1,
+  "audits": {
+    "qualifying_count": "0/2",
+    "p26": "ABSENT_IN_FRESH_EXACT_TOKEN_SEARCH",
+    "distinct_other": "ABSENT_IN_FRESH_SEARCH"
+  },
+  "later_literature": [
+    {
+      "work": "Songtao Mao, The Polynomial-Time Low-Degree Conjecture is False",
+      "id": "arXiv:2607.20318",
+      "role": "mandatory negative stress"
+    },
+    {
+      "work": "Hsieh et al., Rigorous Implications of the Low-Degree Heuristic",
+      "id": "arXiv:2601.05850",
+      "role": "positive comparator; symmetry quotient and noise-weighted tail mechanism"
+    },
+    {
+      "work": "Chen-Li, Rigorous Low-Degree Implications for Planted Subgraph Detection: Noise and Treewidth",
+      "id": "arXiv:2608.06279",
+      "role": "positive comparator; low-interface Fourier reassembly mechanism"
+    }
+  ],
+  "new_claims": [
+    "Margin-refined tilted damping with explicit beta_t(s) bonus.",
+    "Optimal asymptotic degree damping uses the largest admissible tilt; alpha_t'(s)>0.",
+    "Discounted degree-pressure same-degree transfer theorem with geometric Cauchy factor.",
+    "Under bounded source LDA, raw unweighted tail pressure is not a genuine weakening of global chi-square.",
+    "Mao's perfectly aligned product-noise counterexample must violate discounted pressure at linear-in-D scale for every discount below the noise damping rate."
+  ],
+  "artifacts": [],
+  "next_methods": ["B18", "B25", "B4"],
+  "next_attack": "Recast discounted degree pressure as an analytic degree generating function, derive a two-color polymer/reassembly certificate for that weighted generating function, and instantiate a genuinely nonproduct bounded-arity model where the discounted criterion succeeds beyond the prior unweighted pressure theorem.",
+  "model_actual": "GPT-5.6 Sol",
+  "reasoning_actual": "UNVERIFIED",
+  "model_request_only": "GPT-6 maximum remains prompt-only because the exposed task-control schema has no authenticated model/reasoning selector"
+}

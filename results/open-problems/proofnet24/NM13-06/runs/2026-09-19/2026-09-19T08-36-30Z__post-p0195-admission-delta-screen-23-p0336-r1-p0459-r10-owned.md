@@ -1,0 +1,351 @@
+Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 maximum. ADMISSION_PENDING / NO MATHEMATICAL MOVEMENT: successor metric `UNMEASURED -> UNMEASURED`; Section-B methods #2 ATTACK THE NEGATION FIRST, #9 RANDOMIZE, and #10 DERANDOMIZE remain genuinely NOT_TRIED because no successor crossed admission.**
+
+# NM13-06 — post-P0195 admission delta screen 23: P0336 residue 1 and P0459 residue 10 are already owned
+
+Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Worker / namespace: `NM13-06` / `proofnet24/NM13-06/`  
+Category: **CLOSABLE OUTSIDE**  
+Preferred lane: source-posed finite discrepancy, signing, or design questions with exact combinatorial certificates  
+Exclusive selection shard: `int(SHA256(UTF-8 canonical dedup_key).hexdigest(),16) mod 13 = 5`  
+Run date: 2026-09-19 UTC
+
+## 1. Runtime truth and task-control limits
+
+The task prompt requests GPT-6 with maximum reasoning. This invocation actually identifies as **GPT-5.6 Sol**. Authenticated reasoning-effort telemetry is not exposed, so the reasoning level is **UNVERIFIED**. I do not claim GPT-6, maximum reasoning, an hour-long execution, or a support escalation.
+
+The currently exposed scheduled-task control surface still offers title/prompt, schedule/start configuration, timing mode, enabled state, and ordinary update controls. It exposes **no bindable model-family selector and no bindable reasoning-effort selector**, and no authenticated applied-runtime receipt. Therefore GPT-6 / maximum remains prompt text only in this environment. Making those settings binding would require an owner-authorized product/workspace/API/admin scheduling surface that persists model and effort fields into inference routing and returns trustworthy per-run applied-model/applied-effort metadata.
+
+The historical P26 `You cannot modify this task` response remains an authorization-context boundary, not a mathematical or ownership event. Repository continuity records a later successful P26 update from an authorized context. If such a refusal recurs, the compliant workaround is the task-owning or otherwise authorized account/workspace/API/admin surface, ownership repair/transfer, or authorized platform support for that same task. Do not clone the task and do not bypass access controls. This invocation made no scheduler, permission, or support change.
+
+## 2. Authoritative continuity and required reads
+
+I continued from the immutable predecessor
+
+`proofnet24/NM13-06/runs/2026-09-19/2026-09-19T07-36-30Z__post-p0195-admission-delta-screen-22-p0458-owned-r20-handoff-no-release.md`
+
+created at commit
+
+`d26726f31cf433013a9791d6428bdecfae1e7d52`.
+
+Its preserved state was:
+
+- the terminal P0195 six-unchanged-run handoff remains preserved and is not reopened;
+- successor state `ADMISSION_PENDING`;
+- successor metric `UNMEASURED -> UNMEASURED` because no exact source instance class has passed admission;
+- initial Section-B methods #2/#9/#10 are unspent and may not be reported as tried before admission;
+- durable cursor `STRICT_DELTA_ONLY_RESIDUE5_ADMISSION_AFTER_I0130_CODEX_P0488`;
+- canonical residue-5 reconciliation had already been completed through the populated I-series frontier I0130 and Codex P-series frontier P0488;
+- preferred sign-matrix discrepancy source I0095 is unavailable under R02's exclusive provisional reservation;
+- retained unowned residue-5 sentinels I0087 and I0106 fail, respectively, the CLOSABLE/source-shape gate and exact-source-freeze gate.
+
+Before deciding this run I reread or exact-target-recovered current `master` state for:
+
+- `FLEET_RULES.md`;
+- `operations/new_methods_2026-09-16/OWNER_DIRECTIVE.md`;
+- `operations/NEW_METHODS_2026-09-16.md`;
+- later owner-authorized `operations/NM13_DEPLOYMENT_2026-09-17T203709Z.md`;
+- root `QUEUE.md`, `POSTED.md`, and `RESULTS.md`;
+- `probability_campaign_2026_09/INDEX.md` and `RANKING.md`;
+- the newest immutable NM13-06 predecessor report;
+- newest neighboring NM13-05 report `2026-09-19T08-33-30Z__p0411-all-even-positive-coefficients-refuted-pringsheim.md`;
+- newest visible neighboring NM13-07 report `2026-09-19T07-31-58Z__p0282-five-sixths-row94.md`;
+- current canonical claims for all material delta candidates;
+- current I0095 reservation;
+- direct current claim-path checks and exact attempt searches for I0087/I0106;
+- current original-source/follow-up literature for the two residue-5 sentinels.
+
+The append-only intake and attempt JSONL corpora are too large for an honest claim that every unchanged byte was freshly rendered model-visible on every hourly invocation. This worker instead preserves the already completed canonical residue-5 reconciliation and checks the exact Git delta for any mutation of `probability_1000_intake_*/problems.jsonl` or probability attempt ledgers. The complete delta below contains no such mutation. Missing display is never treated as permission to restart, invent a baseline, or steal ownership.
+
+## 3. Frozen repository delta before this write
+
+Predecessor creation commit:
+
+`d26726f31cf433013a9791d6428bdecfae1e7d52`.
+
+Final frozen pre-write `master`:
+
+`78628acb366021fba93dfb8042f688670c39a6bf`.
+
+Exact Git comparison reports:
+
+- **108 commits ahead**;
+- **0 behind**;
+- `too_large = null`.
+
+Thus the changed-file list is complete for this frozen interval. It contains substantial mathematics by already assigned workers but only two new canonical claim files relative to the NM13-06 predecessor:
+
+- `operations/claims/P0336.md`;
+- `operations/claims/P0459.md`.
+
+The interval contains **no changed** root `QUEUE.md`, `POSTED.md`, `RESULTS.md`, campaign `INDEX.md`/`RANKING.md`, `probability_1000_intake_*/problems.jsonl`, probability attempt ledger, or controlling owner/NM13 policy file. The validated strict-delta cursor therefore remains appropriate; there is no basis for reopening an unchanged static catalog merely to manufacture screening activity.
+
+## 4. New claim P0336 — canonical residue 1, already exclusively owned
+
+Current canonical claim:
+
+`operations/claims/P0336.md`.
+
+It records:
+
+- owner worker: **R7-05**;
+- category: **CLOSABLE OUTSIDE**;
+- source: del Barrio, González-Sanz, Loubes, Rodríguez-Vítores, *Distributional Limit Theory for Optimal Transport*, arXiv:2505.19104v2 (13 July 2026), Problem 4;
+- literal target: identify the limiting empirical Euclidean OT plan between independent iid uniform samples on `[0,1]^2` and `[2,3] x [0,1]`;
+- canonical dedup key:
+  `selected_limit_of_empirical_euclidean_transport_between_separated_rectangles`.
+
+Exact SHA-256 of that canonical key is
+
+`c30dfcaa5755777a4bea112324bcb19330e2133cf478934af7b47705384dd0d3`,
+
+whose integer value is **1 mod 13**.
+
+Therefore P0336 fails NM13-06's shard gate and, independently, its ownership gate. It cannot be duplicated under an alias or different source ID. No claim is created here.
+
+## 5. New claim P0459 — canonical residue 10, already exclusively owned
+
+Current canonical claim:
+
+`operations/claims/P0459.md`.
+
+It records:
+
+- owner: native CLOSABLE slot `6aa7b517489c8191a5250c9384e9b33c`;
+- status: **CLAIMED / READY / CLOSABLE OUTSIDE / OPEN**;
+- source: Hossein Dabirian and Vijay Subramanian, *Connectivity of a family of bilateral preference random graphs*, Journal of Applied Probability 63(2) (2026), §1.1 second additional question;
+- literal target: find conditions under which Theorem 8 generalizes to simultaneous concentration of node degrees around their mean in the source `LK(n,k)` model;
+- frozen metric `E_conc=0` at admission.
+
+The canonical identity recovered in the current NM13 admission stream is
+
+`simultaneous_concentration_of_bilateral_preference_degrees`,
+
+with SHA-256
+
+`4b7cee417518e43a3891bd8b131f6263db87def44f2a342e244fca835df93ac9`,
+
+which is **10 mod 13**.
+
+Thus P0459 also fails both the residue-5 shard gate and exclusive-ownership gate. Its READY status is permission for its owner, not free inventory for NM13-06.
+
+## 6. Lifecycle changes in the delta do not create lawful residue-5 inventory
+
+### P0220 six-run handoff
+
+R7-04's current P0220 handoff explicitly says the worker-local CLOSABLE retirement is **not a release of canonical ownership** and that only an owner/coordinator-authorized release or reassignment can alter the ownership boundary. The source remains OPEN/PARTIAL. Therefore P0220 is not free inventory even after its local six-run stop.
+
+### SIVASHANKAR terminal handoff
+
+The SIVASHANKAR regular-subgraph track exhausted its HARD recovery allowance and entered a successor-admission gate, but its source is explicitly **HARD OUTSIDE / OPEN / PARTIAL**, and the canonical claim states that ownership remains exclusive unless a later explicit release/handoff supersedes it. That lifecycle transition is neither a residue-5 CLOSABLE admission nor permission to steal the predecessor source.
+
+### Current coordinator snapshot
+
+The newest task-health status in this exact interval likewise says no additional genuinely free, source-current, ownership-clear CLOSABLE successor was admitted at its frozen snapshot. This is supporting operational evidence only; NM13-06 still performs its own shard/source/ownership checks.
+
+## 7. Preferred discrepancy source I0095 remains reserved and unavailable
+
+The current canonical reservation
+
+`operations/claims/I0095.md`
+
+still assigns Randomstrasse 2024 Open Problem 11, sign-matrix discrepancy, exclusively to **R02**, native task `6aa7b57642bc81919f330e26f9c4e7d0`, with status `PENDING_ADMISSION`.
+
+The source target is exactly the attractive finite-signing shape NM13-06 prefers:
+
+`C* = sup_n sup_{A in {-1,+1}^{n x n}} disc(A)/sqrt(n)`
+
+under the source's Boolean-signing infinity-norm convention, with exact witnessed lower-bound certificates. But a pending reservation is still ownership work and cannot be duplicated. The current campaign archive already records small-order exact values through n=11 and a 5/3 lower bound as baseline history. No owner-authorized release appears in this exact delta.
+
+The standing exclusions also remain in force: no duplicate Komlos, Beck-Fiala, Paley, or already-posted Toeplitz/Hankel Matrix Spencer work.
+
+## 8. Residue-5 sentinel I0087 — still unowned, still not an honest finite/short CLOSABLE endpoint
+
+Canonical identity retained from the completed reconciliation:
+
+`ideal_voronoi_2023::Question 7.1`.
+
+Exact SHA-256:
+
+`e01754ea477c09f0f775647f53f99da48c939890189234dced3fd0e9d8af4b7b`,
+
+which is **5 mod 13**.
+
+Fresh current claim-path check: `operations/claims/I0087.md` is absent. Exact repository search still recovers no actual `I0087-A*` attempt ledger record beyond NM13 screening reports. Thus it remains unowned on the checked repository evidence, but ownership is only one admission gate.
+
+### Source shape
+
+D'Achille, Curien, Enriquez, Lyons, Ünel, *Ideal Poisson-Voronoi tessellations on hyperbolic spaces*, Annals of Probability 54(2) (2026), 846-891, Question 7.1 asks broadly for which homogeneous Riemannian manifolds the low-intensity ideal Poisson-Voronoi limit exists, giving `H^2 x R` as an example. That is a classification/future-directions programme, not a source-posed finite certificate, exact number, discrepancy bound, or isolated short theorem with a frozen finite instance class.
+
+### Bounded literature refresh — 2026-09-19 UTC
+
+Fresh queries used the exact source title, `Question 7.1`, `H^2 x R`, author names, and 2026 IPVT convergence/follow-up terms. They recovered, among other current work:
+
+- Matteo D'Achille and Ali Khezeli, arXiv:2606.30517 (submitted 29 June 2026), *Convergence towards Ideal Poisson--Voronoi tessellations with a focus on Diestel--Leader graphs*, giving necessary-and-sufficient convergence criteria on broad proper pointed measured metric spaces and applications;
+- Matteo D'Achille and Christoph Thäle, arXiv:2606.26049 (24 June 2026), exact face-volume densities in hyperbolic IPVTs.
+
+The bounded search does not supply a clean source-level refreezing of Question 7.1 into the finite/number/short-CLOSABLE shape required here. This is not a claim of worldwide openness. Silently replacing the broad source question by one hand-selected manifold or one sufficient-condition check would change the source scope.
+
+**Disposition: fails the CLOSABLE/source-shape gate.**
+
+## 9. Residue-5 sentinel I0106 — still unowned, but the source itself leaves the transient model unfrozen
+
+Canonical identity retained from the completed reconciliation:
+
+`reinforcement_matrix_2023::Open Problem 4`.
+
+Exact SHA-256:
+
+`da9d33474a7c909695f8e7cf8ad19f9e92d8bb917c28531a23aa7c674561dc9c`,
+
+which is **5 mod 13**.
+
+Fresh current claim-path check: `operations/claims/I0106.md` is absent. Exact repository search still recovers no actual `I0106-A*` attempt ledger record beyond NM13 screening reports.
+
+### Source scope
+
+Aletti et al., *Open problems in stochastic reinforcement models*, Open Problem 4 asks to extend the reinforced-ant model to transient graphs such as `Z^d` or regular trees and immediately lists several inequivalent ways to do so: a density of food sources, weak drift toward the origin, or conditioning walks to hit the food-source set. The source therefore does not freeze one transient process law, parameter family, or source metric.
+
+### Bounded literature refresh — 2026-09-19 UTC
+
+Fresh queries used the exact source title / `Open Problem 4` / ants / transient graph terms plus author/follow-up terms. They recovered current finite-graph work including Cécile Mailler and Zoé Varin, arXiv:2601.22855 (submitted 30 January 2026), *The two-nest ants process on triangle-series-parallel graphs*, which remains a finite graph model with marked nests/food, as well as the earlier Kious-Mailler-Schapira finite-graph trace-reinforced ants line.
+
+The bounded search did not recover a later source-author theorem that canonically chooses one of the source's several transient mechanisms and freezes one exact output quantity. This is negative evidence only, not proof of worldwide openness.
+
+**Disposition: fails the exact-source-freeze gate.** No surrogate model or invented metric is admitted.
+
+## 10. Why Section-B #2/#9/#10 remain genuinely unspent
+
+The NM13 deployment assigns #2/#9/#10 as this worker's initial substantive research attacks **after admission**, and the owner instruction forbids reporting methods as tried when no exact target exists.
+
+This invocation performed continuity recovery, exact-delta reconciliation, shard hashing for new canonical keys, ownership checks, and current-source/literature screening. It did not attack the negation of an admitted statement, randomize an admitted construction, or derandomize an existence proof. Therefore:
+
+- **#2 ATTACK THE NEGATION FIRST — NOT_TRIED**;
+- **#9 RANDOMIZE — NOT_TRIED**;
+- **#10 DERANDOMIZE — NOT_TRIED**.
+
+No finite checker or substantive mathematical artifact is warranted. Manufacturing a checker for an unadmitted surrogate would violate both the 90/10 rule and exact-source admission rule.
+
+## 11. Admission verdict, counters, and next cursor
+
+No candidate in the exact delta passes all of:
+
+1. canonical source identity and aliases recovered;
+2. canonical dedup key hashing to residue 5;
+3. exact source statement frozen without inventing scope;
+4. genuinely CLOSABLE finite/number/certificate/short-theorem shape;
+5. current primary/follow-up literature checked;
+6. prior attempts and historical lifecycle recovered;
+7. exclusive ownership clear;
+8. POSTED/campaign/retirement exclusions clear.
+
+Accordingly:
+
+**ADMISSION_PENDING.**
+
+No canonical `operations/claims/<ID>.md` is created in this invocation. The successor metric remains honestly
+
+`UNMEASURED -> UNMEASURED`.
+
+This is **NO MATHEMATICAL MOVEMENT**. Screening iterations are not mathematical unchanged runs and do not activate the stuck protocol for a nonexistent admitted target.
+
+Preserved counters:
+
+- terminal P0195 unchanged-run count: **6**;
+- successor unchanged-run counter: **NOT_STARTED**;
+- successor stuck-recovery counter: **0**;
+- admission screen ordinal recorded by this worker: **23** (operational only, not progress).
+
+The durable screening cursor remains
+
+`STRICT_DELTA_ONLY_RESIDUE5_ADMISSION_AFTER_I0130_CODEX_P0488`.
+
+The next invocation should react only to a genuine source/intake/canonical-alias/status change, an explicit owner-authorized ownership release/reassignment, or a newly recovered canonical residue-5 identity. It should not rescreen static owned rows merely to generate activity.
+
+## 12. Structured ledger_delta for P26
+
+```yaml
+ledger_delta:
+  worker: NM13-06
+  category: CLOSABLE_OUTSIDE
+  run_status: ADMISSION_PENDING
+  mathematical_movement: false
+  source_id: null
+  claim_id: null
+  canonical_dedup_key: null
+  selection_shard_mod13: 5
+  predecessor_report: proofnet24/NM13-06/runs/2026-09-19/2026-09-19T07-36-30Z__post-p0195-admission-delta-screen-22-p0458-owned-r20-handoff-no-release.md
+  predecessor_commit: d26726f31cf433013a9791d6428bdecfae1e7d52
+  frozen_prewrite_head: 78628acb366021fba93dfb8042f688670c39a6bf
+  git_delta:
+    ahead: 108
+    behind: 0
+    too_large: false
+    intake_problems_jsonl_changed: false
+    probability_attempt_ledger_changed: false
+    queue_changed: false
+    posted_changed: false
+    results_changed: false
+    campaign_index_changed: false
+    campaign_ranking_changed: false
+    new_canonical_claims:
+      - source_id: P0336
+        dedup_key: selected_limit_of_empirical_euclidean_transport_between_separated_rectangles
+        sha256: c30dfcaa5755777a4bea112324bcb19330e2133cf478934af7b47705384dd0d3
+        residue_mod13: 1
+        owner: R7-05
+        disposition: OWNED_ACTIVE_OFF_SHARD
+      - source_id: P0459
+        dedup_key: simultaneous_concentration_of_bilateral_preference_degrees
+        sha256: 4b7cee417518e43a3891bd8b131f6263db87def44f2a342e244fca835df93ac9
+        residue_mod13: 10
+        owner: 6aa7b517489c8191a5250c9384e9b33c
+        disposition: OWNED_READY_OFF_SHARD
+  preferred_discrepancy_candidate:
+    source_id: I0095
+    owner: R02
+    state: PENDING_ADMISSION_RESERVED
+    disposition: OWNED_NOT_AVAILABLE
+  residue5_sentinels:
+    - source_id: I0087
+      dedup_key: ideal_voronoi_2023::Question 7.1
+      sha256: e01754ea477c09f0f775647f53f99da48c939890189234dced3fd0e9d8af4b7b
+      residue_mod13: 5
+      claim_path: ABSENT
+      disposition: FAIL_CLOSABLE_SOURCE_SHAPE
+    - source_id: I0106
+      dedup_key: reinforcement_matrix_2023::Open Problem 4
+      sha256: da9d33474a7c909695f8e7cf8ad19f9e92d8bb917c28531a23aa7c674561dc9c
+      residue_mod13: 5
+      claim_path: ABSENT
+      disposition: FAIL_EXACT_SOURCE_FREEZE
+  lifecycle_events:
+    P0220_handoff: NOT_A_RELEASE
+    SIVASHANKAR_handoff: HARD_TERMINAL_NOT_RESIDUE5_CLOSABLE_RELEASE
+  metric:
+    name: successor_source_metric
+    before: UNMEASURED
+    after: UNMEASURED
+  methods:
+    2: NOT_TRIED
+    9: NOT_TRIED
+    10: NOT_TRIED
+  counters:
+    p0195_terminal_unchanged_runs_preserved: 6
+    successor_unchanged_runs: NOT_STARTED
+    successor_stuck_recoveries: 0
+    admission_screen_ordinal: 23
+  screening_cursor: STRICT_DELTA_ONLY_RESIDUE5_ADMISSION_AFTER_I0130_CODEX_P0488
+  next_step: screen only material source/status/alias/ownership deltas; admit only a genuinely unassigned residue-5 CLOSABLE source after exact source/literature/history checks
+  literature_check_date_utc: 2026-09-19
+  literature_scope:
+    - I0087 exact source title / Question 7.1 / H2xR / 2026 author and IPVT convergence follow-ups
+    - I0106 exact source title / Open Problem 4 / transient reinforced ants / 2026 author and ants follow-ups
+  literature_limit: bounded public-web search; negative search is not worldwide-openness or novelty proof
+  runtime:
+    actual_model: GPT-5.6 Sol
+    reasoning_level: UNVERIFIED
+    scheduler_model_selector: NOT_EXPOSED
+    scheduler_reasoning_selector: NOT_EXPOSED
+```
+
+No canonical claim, checker, substantive mathematical artifact, shared root, peer namespace, workflow, permission, public surface, email/Drive resource, paid compute, scheduler setting, or support request was created or modified by this invocation. The only repository write is this immutable report; it must be read back at its returned creation commit without a receipt-only follow-up commit.

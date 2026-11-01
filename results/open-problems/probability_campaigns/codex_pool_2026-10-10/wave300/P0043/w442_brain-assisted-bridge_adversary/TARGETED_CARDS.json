@@ -1,0 +1,205 @@
+[
+  {
+    "diagnostic": "bounded-title-source-lookup",
+    "ranked_recall": false,
+    "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+    "title_terms": [
+      "percolation",
+      "exponential"
+    ],
+    "limit": 5,
+    "sql_budget_seconds": 2.0,
+    "seconds": 0.08011320000514388,
+    "hit_count": 5,
+    "hits": [
+      {
+        "id": "claim_82d8cc27848fcea8a5f9deec83f1bd84499a7c7255201b6e0069b46410df6877",
+        "kind": "claim",
+        "title": "Basu-Sidoravicius-Sly (arXiv:2312.14143, 2023), 'Rotationally invariant first passage percolation: Concentration and scaling relations': for rotationally invariant first passage percolation on the plane, a multi-scale argument gives stretched exponential concentration of the passage times at the scale of the standard deviation. This is the input that the 2026 barrier-breaking paper consumes.",
+        "body": "rotationally invariant first passage percolation on the plane\nthe authors describe the hypotheses only as ones 'which can be verified for many standard rotationally invariant models of first passage percolation, e.g. Riemannian FPP, Voronoi FPP and the Howard-Newman model' - the hypothesis SET itself is not available to lane P4\n\nWHY THE STATUS IS abstract-only AND NOT MORE: the abstract names the conclusion and the model class but deliberately abstracts the hypotheses behind 'hypotheses which can be verified for many standard rotationally invariant models'. Since the whole question for the campaign is WHICH hypotheses are load-bearing and whether any lattice analogue could satisfy them, an abstract that does not list them is not enough to answer anything. Anyone who needs the dependency audit of the 2026 paper has to read this one.\nSOURCE: arXiv:2312.14143v1, official arXiv API record retrieved by lane P4 on 2026-08-22.\nVERIFICATION STATUS: abstract-only.",
+        "metadata": {
+          "bundle_key": "kr15_bss_2023_concentration_input",
+          "bundle_tag": "p4-fpp-known-results-v1",
+          "claim_kind": "theorem",
+          "domain": "probability / first-passage percolation / known results",
+          "filed_by": "claude-8e06e1f7-P4",
+          "filed_on": "2026-08-22",
+          "lane": "campaign_2026-08-22_30h/P4_known_results",
+          "layer": "fpp_known_results",
+          "raw_sources_dir": "~\\<private-repo>\\12_cognitive_architecture\\brain_improvement\\campaign_2026-08-22_30h\\lanes\\P4_known_results\\arxiv_raw",
+          "verification_status": "abstract-only"
+        },
+        "source_checked": false,
+        "applicability_checked": false,
+        "current_revision_checked": false
+      },
+      {
+        "id": "claim_9d127862488110bde2375decb6c609004fc6303c37da15ff1c818d0e0f7bed7d",
+        "kind": "claim",
+        "title": "Damron-Houdre-Ozdemir (2022): a POLYNOMIAL fluctuation lower bound does exist in planar first-passage percolation, but for a different observable - T_n, the minimal passage time between two opposite sides of an n by n square - under a curvature assumption and for exponentially distributed weights, where the fluctuations of T_n are at least of order n^{1/8-epsilon} for every epsilon > 0. This is NOT a bound on the point-to-point passage time T(0,x), where the best lower bound is still logarithmic.",
+        "body": "the observable is T_n, the minimal passage time between two opposite sides of an n by n square - a minimum over crossings, not a point-to-point passage time\na curvature assumption on the limit shape (unproven in first-passage percolation)\nthe edge weights t_e are exponentially distributed\nd = 2\n\nWHY A SEPARATE ARGUMENT WAS NEEDED, in the authors' words: 'previous arguments to bound the fluctuations of T(x,y) only give a constant lower bound for those of T_n (even assuming curvature)', so they represent T_n as a minimum of cylinder passage times and use the Markov property to get finer distributional information. The minimum-over-crossings structure is the whole difficulty and the whole difference.\nCOROLLARY they state: the first polynomial lower bounds on higher central moments of the discrete torus passage time, under the same curvature assumption.\nTHE MISQUOTE THIS NODE EXISTS TO BLOCK: 'polynomial variance lower bounds are known in FPP'. They are known for this observable, under an unproven curvature assumption, for one weight law (extended by Dembin-Elboim to absolutely continuous laws). Nothing polynomial is known unconditionally for Var T(0,x).\nSOURCE: arXiv:2204.06592v1, 'Fluctuation bounds for first-passage percolation on the square, tube, and torus'. Official arXiv API record retrieved by lane P4 on 2026-08-22.\nVERIFICATION STATUS: theorem-checked-against-source. The abstract states the observable, the curvature hypothesis, the weight law and the exponent; the proof was not read.",
+        "metadata": {
+          "bundle_key": "kr18_damron_houdre_ozdemir_minimal_crossing_polynomial",
+          "bundle_tag": "p4-fpp-known-results-v1",
+          "claim_kind": "theorem",
+          "domain": "probability / first-passage percolation / known results",
+          "filed_by": "claude-8e06e1f7-P4",
+          "filed_on": "2026-08-22",
+          "lane": "campaign_2026-08-22_30h/P4_known_results",
+          "layer": "fpp_known_results",
+          "raw_sources_dir": "~\\<private-repo>\\12_cognitive_architecture\\brain_improvement\\campaign_2026-08-22_30h\\lanes\\P4_known_results\\arxiv_raw",
+          "verification_status": "theorem-checked-against-source"
+        },
+        "source_checked": false,
+        "applicability_checked": false,
+        "current_revision_checked": false
+      },
+      {
+        "id": "claim_e0ac11a71f537e18638ecc1571a2f38ea7228e9554a4f3ee591312e42f2c3f07",
+        "kind": "claim",
+        "title": "Dembin-Elboim (2025): for planar first-passage percolation with i.i.d. weights uniform on {a,b}, 0 < a < b < infinity, the event that the minimal left-right crossing time tau(n,k) of the square [0,n]^2 with vertical fluctuations bounded by k exceeds its median is NOISE SENSITIVE whenever k <= n^{1/2-epsilon} - unconditionally, improving Ahlberg-De la Riva's n^{1/22-epsilon} - and, under a curvature assumption, for all k <= n; the same methods give Var T_n >= n^{1/4-epsilon} for the minimal left-right crossing, extended from exponential to absolutely continuous weights.",
+        "body": "planar first-passage percolation on Z^2, i.i.d. weights uniform on {a,b} with 0 < a < b < infinity\nthe k <= n^{1/2-epsilon} noise-sensitivity result is UNCONDITIONAL\nextension to all k <= n^{1-epsilon} needs the limit shape not to be a polygon with a small number of sides - and follows unconditionally when a and b are sufficiently close\nextension to all k <= n needs a stronger curvature assumption\nthe variance bound Var T_n >= n^{1/4-epsilon} needs the curvature assumption; it is for the minimal left-right crossing T_n = tau(n,n), not the point-to-point passage time\n\nCONSISTENCY CHECK WITH DAMRON-HOUDRE-OZDEMIR: a variance lower bound n^{1/4-epsilon} is a standard-deviation lower bound n^{1/8-epsilon/2}, which matches their fluctuation exponent n^{1/8-epsilon}. The two results agree; Dembin-Elboim's contribution on that half is the weight class, from exponential to absolutely continuous.\nWHY THIS MATTERS TO A CHAOS PROGRAM: this is the strongest unconditional noise-sensitivity statement available on the LATTICE, and noise sensitivity is the same family of object as the geodesic disorder chaos that Basu-Sidoravicius-Sly telescope in the continuum. The technique is different from earlier work: a small-ball probability estimate in the tail, obtained by perturbing the weights for tail events with a Mermin-Wagner type estimate.\nSOURCE: arXiv:2505.03211v1, 'Noise sensitivity and variance lower bound for minimal left-right crossing of a square in first-passage percolation'. Official arXiv API record retrieved by lane P4 on 2026-08-22.\nVERIFICATION STATUS: theorem-checked-against-source. The abstract separates the unconditional range from the two conditional extensions and states the weight class for each; the proof was not read.",
+        "metadata": {
+          "bundle_key": "kr19_dembin_elboim_noise_sensitivity_and_variance",
+          "bundle_tag": "p4-fpp-known-results-v1",
+          "claim_kind": "theorem",
+          "domain": "probability / first-passage percolation / known results",
+          "filed_by": "claude-8e06e1f7-P4",
+          "filed_on": "2026-08-22",
+          "lane": "campaign_2026-08-22_30h/P4_known_results",
+          "layer": "fpp_known_results",
+          "raw_sources_dir": "~\\<private-repo>\\12_cognitive_architecture\\brain_improvement\\campaign_2026-08-22_30h\\lanes\\P4_known_results\\arxiv_raw",
+          "verification_status": "theorem-checked-against-source"
+        },
+        "source_checked": false,
+        "applicability_checked": false,
+        "current_revision_checked": false
+      },
+      {
+        "id": "claim_08f06081c21e4624c53bd962e6151aeda3c8204cdd1d020ca96e7683fec278ff",
+        "kind": "claim",
+        "title": "Lemma 5 of arXiv:2304.12110: Exponential decay of the volume for Bernoulli percolation: a proof via stochastic comparis",
+        "body": "[Lemma 5 of arXiv:2304.12110, 'Exponential decay of the volume for Bernoulli percolation: a proof via stochastic comparis'] Let p ∈(0, 1) and h ∈(0, +∞). Moreover, let A ⊆{0, 1}E × {0, 1}V be any non-empty set and let ε ∈[0, 1]. Assume that for every (e, x) ∈⃗E × {0, 1}E such that A ∩Expl(e, x) ̸= ∅, we have ∀k ∈{0, . . . , |E| −1}, PG p,h \u0002 ek+1 is pivotal for A A ∩Explk(e, x) \u0003 ≤ε. Then, PG p(1−ε) ⪯PG p,h \u0002 ω ∈· A \u0003 . Remark 6. • Recall that we use the letter ω to denote the elements of {0, 1}E.",
+        "metadata": {
+          "artifact_digest": "sha256:da31719ca9ad7d4a69fe3b9e62edf9f24aa202be0903572f062c05d8a1b9d1e0",
+          "artifact_path": "objects/sha256/da/da31719ca9ad7d4a69fe3b9e62edf9f24aa202be0903572f062c05d8a1b9d1e0.md",
+          "bundle_digest": "sha256:503bf819b9f1001e02260db63034bcff9b830ea0f0f17f4fd2e0d1f0b8fce2a9",
+          "bundle_entry_key": "lit-2304-12110-lemma-5-9fd6b2",
+          "bundle_id": "population.lit4-arxiv-002",
+          "claim_kind": "concept",
+          "conditions": [],
+          "domain": "harvested statement (arXiv 2304.12110, 2023): owner_math",
+          "draft": "claude-brain-20h-20260901/bundle_lit4_002.json",
+          "evidence_ids": [],
+          "logical_id": "math:harvest.arxiv.owner-math:arxiv-2304-12110-lemma-5-9fd6b2",
+          "overlay_schema_version": 1,
+          "proof_text": "",
+          "release_manifest_digest": "sha256:7355b441685d5d0a0d9e613edc83e1ea14c90f139c954c24a7999f5f9c414642",
+          "revision_digest": "sha256:08f06081c21e4624c53bd962e6151aeda3c8204cdd1d020ca96e7683fec278ff",
+          "source_id": "arxiv:2304.12110",
+          "source_revision": "as-read-2026-09-02",
+          "statement_fidelity_reviewed": false,
+          "supersedes": [],
+          "trust_class": "curated_secondary",
+          "truth_status": "unverified"
+        },
+        "source_checked": false,
+        "applicability_checked": false,
+        "current_revision_checked": false
+      },
+      {
+        "id": "claim_5df2b62b583a156268141fc66e8bdf6bca069daa8e9dcd6daf40af92ed7320a5",
+        "kind": "claim",
+        "title": "Lemma 7 of arXiv:2304.12110: Exponential decay of the volume for Bernoulli percolation: a proof via stochastic comparis",
+        "body": "[Lemma 7 of arXiv:2304.12110, 'Exponential decay of the volume for Bernoulli percolation: a proof via stochastic comparis'] Let q ∈[0, 1]. Moreover, let µ be a probability measure on {0, 1}E and assume that for every (e, x) ∈⃗E × {0, 1}E such that µ \u0002 Expl(e, x) \u0003 > 0, we have ∀k ∈{0, . . . , |E| −1}, µ \u0002 ωek+1 = 1 Explk(e, x) \u0003 ≥q. Then, PG q ⪯µ.",
+        "metadata": {
+          "artifact_digest": "sha256:aa80323e26d3788196621ecd6f72466bcfad728041e38d73db85efaa656be9d0",
+          "artifact_path": "objects/sha256/aa/aa80323e26d3788196621ecd6f72466bcfad728041e38d73db85efaa656be9d0.md",
+          "bundle_digest": "sha256:503bf819b9f1001e02260db63034bcff9b830ea0f0f17f4fd2e0d1f0b8fce2a9",
+          "bundle_entry_key": "lit-2304-12110-lemma-7-72467d",
+          "bundle_id": "population.lit4-arxiv-002",
+          "claim_kind": "concept",
+          "conditions": [],
+          "domain": "harvested statement (arXiv 2304.12110, 2023): owner_math",
+          "draft": "claude-brain-20h-20260901/bundle_lit4_002.json",
+          "evidence_ids": [],
+          "logical_id": "math:harvest.arxiv.owner-math:arxiv-2304-12110-lemma-7-72467d",
+          "overlay_schema_version": 1,
+          "proof_text": "",
+          "release_manifest_digest": "sha256:7355b441685d5d0a0d9e613edc83e1ea14c90f139c954c24a7999f5f9c414642",
+          "revision_digest": "sha256:5df2b62b583a156268141fc66e8bdf6bca069daa8e9dcd6daf40af92ed7320a5",
+          "source_id": "arxiv:2304.12110",
+          "source_revision": "as-read-2026-09-02",
+          "statement_fidelity_reviewed": false,
+          "supersedes": [],
+          "trust_class": "curated_secondary",
+          "truth_status": "unverified"
+        },
+        "source_checked": false,
+        "applicability_checked": false,
+        "current_revision_checked": false
+      }
+    ],
+    "warning": "Unranked candidate rows; inspect source, current revision and full assumptions before use."
+  },
+  {
+    "diagnostic": "bounded-title-source-lookup",
+    "ranked_recall": false,
+    "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+    "title_terms": [
+      "anchored",
+      "expansion"
+    ],
+    "limit": 5,
+    "sql_budget_seconds": 2.0,
+    "seconds": 0.05175660003442317,
+    "hit_count": 0,
+    "hits": [],
+    "warning": "Unranked candidate rows; inspect source, current revision and full assumptions before use."
+  },
+  {
+    "diagnostic": "bounded-title-source-lookup",
+    "ranked_recall": false,
+    "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+    "title_terms": [
+      "percolation",
+      "sharpness"
+    ],
+    "limit": 5,
+    "sql_budget_seconds": 2.0,
+    "seconds": 0.04777289996854961,
+    "hit_count": 1,
+    "hits": [
+      {
+        "id": "source_39f3627ad45c5860352721d67533a929e7e2b0492e141f5b8d5264e1aa3b908d",
+        "kind": "source",
+        "title": "Sharpness of the phase transition in percolation models",
+        "body": "Paper: Michael Aizenman, David J Barsky. Sharpness of the phase transition in percolation models. 1987. doi:10.1007/bf01212322.",
+        "metadata": {
+          "arxiv": null,
+          "authors": [
+            "Michael Aizenman",
+            "David J Barsky"
+          ],
+          "confidence": "medium",
+          "doi": "10.1007/bf01212322",
+          "editions": [],
+          "ingest": "w13-paper-nodes-2026-10-06",
+          "key": "doi:10.1007/bf01212322",
+          "kind": "paper",
+          "metadata_source": "citation index: 11 of 11 references with these authors and year agree",
+          "n_cards": 1,
+          "owner_paper": false,
+          "title": "Sharpness of the phase transition in percolation models",
+          "venue": null,
+          "work_key": "doi:10.1007/bf01212322",
+          "year": 1987
+        },
+        "source_checked": false,
+        "applicability_checked": false,
+        "current_revision_checked": false
+      }
+    ],
+    "warning": "Unranked candidate rows; inspect source, current revision and full assumptions before use."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "helper_version": "A006-connected-connector-v1",
+  "family": "two disjoint K_mm edge DNFs, plus one cross-component edge joining a left endpoint in block1 to a right endpoint in block2; all original edge primes, both endpoint orders, fixed lambda=1/(2m)",
+  "pilot": "m=2,3; physical truth tables, integer Walsh, cylinder perturbation and exact singleton-root subfamily masses",
+  "full": "m=2,3,4; 2^(4m) truth tables; all 2^(2m+2)-1 nonempty cylinder Fourier sets; source-obstruction physical checks and scalar formulas m=2..256",
+  "cases": {"pilot_functions": 4, "full_functions": 6, "full_truth_inputs_counted_per_function": 139776, "full_cylinder_nonempty_sets": 1341},
+  "symmetry": "none; one explicitly labelled connector; relabelling invariance supplied by proof only",
+  "arithmetic": "integer direct physical flips and Walsh; Fraction probabilities and queue factors; exact dyadic inequalities; no floating signs",
+  "memory_MB": 80,
+  "pilot_max_seconds": 55,
+  "full_max_seconds": 120,
+  "heavy_jobs": "one sequential job; no admission needed below300MB; no dimension escalation",
+  "target": "general same-reference insertion inequality plus connected one-connector cost<23I for every m>=2; independent source reconstruction first",
+  "review_domain": "all196 pairs of nonconstant signed2bit component functions; all5120 canonical merges of two three-node forests in20 preserving interleavings; arbitrary-width root consequence rederived analytically; source scalar regimes through64; physical crossed m2..4",
+  "root_subfamily_domain": "all cylinder-supported nonempty sets for m2..4; enumerate and deduplicate actual root/owned-block choices within each component; no complete full-forest cost enumeration is claimed"
+}

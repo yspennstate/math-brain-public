@@ -1,0 +1,50 @@
+{
+  "ledger_delta": {
+    "worker": "NM13-13",
+    "role": "T04_cluster_aware_3SAT_variational",
+    "target": "T04",
+    "status": "OPEN/PARTIAL; CANDIDATE_FULL for the explicit 4.3911 upper endpoint pending later independent review",
+    "runtime_model": "GPT-5.6 Sol",
+    "runtime_reasoning": "UNVERIFIED",
+    "source_model": "classical iid random 3-SAT with m=floor(alpha n), three distinct variables chosen uniformly per clause, and independent fair literal signs",
+    "literature_supported_symbolic_before": "3.52 <= liminf c_n <= limsup c_n <= U_1RSB(3)",
+    "literature_supported_symbolic_after": "unchanged",
+    "literature_numeric_note": "the 2026 literature reports the physics value d_sat(3) approximately 12.801 (alpha approximately 4.267), but this worker has not independently interval-certified the full U_1RSB(3) variational evaluation at that decimal",
+    "explicit_candidate_upper_before": 4.39539,
+    "explicit_candidate_upper_after": 4.3911,
+    "explicit_candidate_bracket_before": "[3.52, 4.39539]",
+    "explicit_candidate_bracket_after": "[3.52, 4.3911]",
+    "explicit_candidate_width_before": 0.87539,
+    "explicit_candidate_width_after": 0.8711,
+    "explicit_upper_improvement": 0.00429,
+    "claim_id": "NM13-13-T04-THREE-SUPPORT-43911-UPPER-03",
+    "mechanism": "symmetric three-support hard-field 1RSB interpolation trial with exact rational law R in {51/1000, 1/2, 949/1000}, weights {43/200,57/100,43/200}, and a K=1200 one-sided compound-Poisson moment truncation",
+    "certificate": {
+      "interval_dps": 620,
+      "K": 1200,
+      "candidate_A_1200_upper": "-0.0000026716784686338610605334089229138406357705451643093473134133632275",
+      "all_mu_intervals_positive": true,
+      "logic": "A <= A_1200 because omitted mu_k^2/k terms enter with a minus sign; therefore A_1200<0 certifies A<0"
+    },
+    "mechanism_gain": {
+      "comparison": "predecessor three-support law evaluated at the same alpha=4.3911 and same K=1200",
+      "predecessor_A_1200_lower": "0.00011362761677033881959846759736009761284102662605669855506934569079",
+      "candidate_vs_predecessor_truncation_gain_lower": "0.00011629929523897268065900100628301145347679717122100790238275905401",
+      "qualification": "positive predecessor A_1200 is inconclusive about its infinite A; no claim that the predecessor law itself fails at 4.3911"
+    },
+    "transfer": "strict negative hard-field coefficient -> finite m,beta,H negative interpolation bound -> linear minimum violated-clause energy in the Poisson with-replacement model -> removal of O_p(1) repeated-variable clauses -> same-density O_p(sqrt(n)) de-Poissonization to the proper fixed-count iid model",
+    "prior_failures_preserved": [
+      "arbitrary rescue stars do not compose",
+      "anchored degree-one matching penalty was not globally reoptimized over the Diaz polytope",
+      "positive local multiplicative second moments hit the identical-pair barrier log(2)/log(5/4)",
+      "sublinear solution-graph quotienting gives only exp(o(n)) savings",
+      "full-component quotienting leaves an uncontrolled cross-component overlap moment",
+      "whitening/core counting lacks a uniform exponential cluster-multiplicity theorem",
+      "q-binomial radius-two counting reached only about 4.5923"
+    ],
+    "companion_NM13_06": "latest constructive report proves the static blocked-majority core is subcritical even at 4.4898 and isolates dynamic promotion as its obstruction",
+    "next_attack": "retain the rigorous interpolation/transfer and search a richer symmetric finite-support survey or a rigorous tail-acceleration inequality, targeting a certified endpoint below 4.3911 without changing the source model",
+    "code_commit": "2be9b7ae07d53da951eecda770909612a042f4b8",
+    "output_commit": "0a1c78da6a3bf2a23bfd99cba33ddd34e51cc640"
+  }
+}

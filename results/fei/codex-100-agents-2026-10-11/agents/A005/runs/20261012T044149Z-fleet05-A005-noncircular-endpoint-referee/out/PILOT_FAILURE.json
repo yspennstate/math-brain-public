@@ -1,0 +1,9 @@
+{
+  "status": "CORRECTED_BEFORE_ACCEPTANCE",
+  "failed_line": "tensor fixture expected sigma=C/4-1/2",
+  "exact_observation": "At C=0 the independently computed average slack is -1, not -1/2.",
+  "cause": "The analytic example and expected fixture halved both H and I of the active two-bit point-defect child a second time. That actual child has H=2,I=1; average with the constant child is H=1,I=1/2.",
+  "repair": "sigma=C/2-1; at C=8/3 individual certification first fails at m=2, average certification first fails at m=3.",
+  "unchanged": "Frozen domain, core conservation identity, all-dimensional dimension-gap obstruction and arithmetic.",
+  "proof_dependency_effect": "No accepted or shared claim was used or changed. The new local example was corrected before its claim was created."
+}

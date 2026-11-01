@@ -1,0 +1,251 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w417",
+  "bundle_slug": "c0017-independent-cell-bridge-and-spin-correction-001",
+  "entries": [
+    {
+      "key": "def-cells",
+      "namespace": "probability.percolation",
+      "logical_name": "terminal-partition-cells-and-exterior-sensitivity",
+      "kind": "definition",
+      "title": "Terminal partition cells and exterior sensitivity",
+      "statement": "A finite cell exposes distinct terminals T and a state pi, a partition of T recording connectivity inside the cell. On a common deterministic skeleton a crossing event is a Boolean function f of all cell partitions. Exterior sensitivity S_i(x_-i) equals one exactly when f(x_-i,pi) is nonconstant as pi ranges over the finite allowed cell states; it depends only on the exterior.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite terminal sets and state spaces",
+        "Same deterministic skeleton and event in both compared laws"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w417:C0017:def-cells",
+        "url": "file:///~/brain_workers/w417/ATTEMPT.md",
+        "revision": "draft-author-checked-2026-10-10-pending-w419",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "weighted-comparison",
+      "namespace": "probability.percolation",
+      "logical_name": "sensitivity-weighted-independent-cell-comparison",
+      "kind": "concept",
+      "title": "DRAFT weighted independent-cell comparison",
+      "statement": "DRAFT author-proved partial result; independent referee review pending. For a Boolean event f on finitely many cell states, two product laws mu=product mu_i and nu=product nu_i satisfy |E_nu f-E_mu f|<=sum_i TV(mu_i,nu_i) P_Hi(S_i), where H_i has nu_j for j<i and mu_j for j>i, and S_i means the event is nonconstant in cell i for the fixed exterior. This does not prove the C0017 square-lattice scaling limit.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite state sets with the same cell skeleton in both laws",
+        "Independence of all cell variables within each endpoint law",
+        "Boolean event f"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w417:C0017:weighted-comparison",
+        "url": "file:///~/brain_workers/w417/ATTEMPT.md",
+        "revision": "draft-author-checked-2026-10-10-pending-w419",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "finite-obstruction",
+      "namespace": "probability.percolation",
+      "logical_name": "finite-independent-bond-three-terminal-site-obstruction",
+      "kind": "concept",
+      "title": "DRAFT finite independent-bond obstruction",
+      "statement": "DRAFT author-proved partial result; independent referee review pending. No finite undirected graph with three distinct terminal vertices and independent edges with probabilities strictly between zero and one induces a terminal partition law supported exactly on the all-separate and all-connected partitions with positive mass on both. For m fair edges in a graph connecting the three terminals, total variation from any such all-or-none law is at least 2^(-m). This does not prove the C0017 square-lattice scaling limit.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite graph",
+        "Three distinct terminal vertices",
+        "Independent nondegenerate edge states",
+        "All-or-none target has all-connected mass p in (0,1)"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w417:C0017:finite-obstruction",
+        "url": "file:///~/brain_workers/w417/ATTEMPT.md",
+        "revision": "draft-author-checked-2026-10-10-pending-w419",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "pair-counterexample",
+      "namespace": "probability.percolation",
+      "logical_name": "three-terminal-pair-matching-crossing-counterexample",
+      "kind": "concept",
+      "title": "DRAFT pair matching crossing counterexample",
+      "statement": "DRAFT author-proved partial result; independent referee review pending. A three-edge independent star with edge probability 1/sqrt(2) matches all three pair-connection probabilities of a fair all-or-none site cell, yet the event that terminal a connects to b or c has probability 1-1/(2sqrt(2)), exceeding 1/2 by (1-1/sqrt(2))/2. This does not prove the C0017 square-lattice scaling limit.",
+      "proof_text": null,
+      "assumptions": [
+        "Three terminal star",
+        "Three mutually independent edges with common probability 1/sqrt(2)",
+        "Reference site cell joins all terminals with probability 1/2 and none otherwise"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w417:C0017:pair-counterexample",
+        "url": "file:///~/brain_workers/w417/ATTEMPT.md",
+        "revision": "draft-author-checked-2026-10-10-pending-w419",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "dependence-counterexample",
+      "namespace": "probability.percolation",
+      "logical_name": "equal-marginals-dependent-crossing-counterexample",
+      "kind": "concept",
+      "title": "DRAFT equal marginals crossing counterexample",
+      "statement": "DRAFT author-proved partial result; independent referee review pending. Equal one-cell marginals do not control a joint crossing event if cell independence is removed: X=(Z,Z) and Y=(Z,1-Z), Z fair, have identical marginals but P(X_1=X_2=1)=1/2 and P(Y_1=Y_2=1)=0. This does not prove the C0017 square-lattice scaling limit.",
+      "proof_text": null,
+      "assumptions": [
+        "Fair bit Z",
+        "The endpoint joint laws are the two stated dependent laws"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w417:C0017:dependence-counterexample",
+        "url": "file:///~/brain_workers/w417/ATTEMPT.md",
+        "revision": "draft-author-checked-2026-10-10-pending-w419",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "pair-route",
+      "namespace": "probability.percolation",
+      "logical_name": "refuted-pair-connectivity-only-crossing-transfer",
+      "kind": "concept",
+      "title": "Refuted route: pair connectivity determines every crossing",
+      "statement": "REFUTED ROUTE, retained as a draft concept: matching all three pair-connectivity probabilities of a three-terminal cell was proposed to imply equality of every crossing event on a common skeleton. This implication is false: a star with three independent edges of probability 1/sqrt(2) matches each fair-site pair probability 1/2, but a connection from terminal a to the boundary set {b,c} has probability 1-1/(2sqrt(2)) rather than 1/2.",
+      "proof_text": null,
+      "assumptions": [
+        "Three distinct terminals",
+        "Full cell connectivity, rather than only one fixed pair event, can enter a crossing"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w417:C0017:pair-route",
+        "url": "file:///~/brain_workers/w417/ATTEMPT.md",
+        "revision": "draft-author-checked-2026-10-10-pending-w419",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "dependence-route",
+      "namespace": "probability.percolation",
+      "logical_name": "refuted-marginal-tv-product-comparison-with-dependent-cells",
+      "kind": "concept",
+      "title": "Refuted route: dependent cells substituted as products",
+      "statement": "REFUTED ROUTE, retained as a draft concept: applying the independent-cell comparison using only coordinate marginal total-variation distances for dependent endpoint laws is false. The laws of (Z,Z) and (Z,1-Z), for Z a fair bit, have identical coordinate marginals but probabilities 1/2 and 0 for the event that both bits equal one.",
+      "proof_text": null,
+      "assumptions": [
+        "Dependent joint laws are permitted in the refuted proposal"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w417:C0017:dependence-route",
+        "url": "file:///~/brain_workers/w417/ATTEMPT.md",
+        "revision": "draft-author-checked-2026-10-10-pending-w419",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.percolation",
+      "logical_name": "c0017-mesoscopic-weighted-cell-transfer-gap",
+      "kind": "concept",
+      "title": "Unresolved C0017 comparison gap G1",
+      "statement": "UNRESOLVED RESEARCH BRIDGE. For square-bond and triangular-site crossings in one marked Jordan domain, construct a common deterministic planar cell skeleton with independent partition laws mu_delta and nu_delta, representation errors r_mu(delta), r_nu(delta), and actual exterior hybrid laws H_i=(product_{j<i} nu_j)(product_{j>i} mu_j). Prove r_mu+r_nu+sum_i TV(mu_i,nu_i) P_Hi(S_i=1) tends to zero. The weighted comparison would then transfer the known reference crossing limit. No such construction or bound is proved in this packet. Neither the exponent 5/4 on square bonds nor uniform arm bounds for arbitrary hybrids may be assumed. Interface convergence still needs tightness and identification.",
+      "proof_text": null,
+      "assumptions": [
+        "Critical square-lattice independent bonds at p=1/2",
+        "Reference critical triangular-lattice independent sites at p=1/2",
+        "Uniform marked Jordan boundary approximation",
+        "No current-open or novelty claim"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w417:C0017:gap",
+        "url": "file:///~/brain_workers/w417/ATTEMPT.md",
+        "revision": "draft-author-checked-2026-10-10-pending-w419",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "spin-correction",
+      "namespace": "probability.percolation",
+      "logical_name": "c0017-standard-parafermionic-spin-source-correction",
+      "kind": "concept",
+      "title": "DRAFT source correction: q=1 standard parafermionic spin",
+      "statement": "SOURCE CORRECTION DRAFT, pending independent review. For the standard FK edge observable F(e)=E[exp(i sigma W_gamma(e,e_b)) 1_{e in gamma}], with winding measured in radians and 0<sigma<1, the parameter convention sin(pi sigma/2)=sqrt(q)/2 gives sigma=1/3 at q=1; sigma=2/3 corresponds to q=3. The existing C0017 attempt card says q=1 has spin 2/3. This correction concerns that parameter only, not the conjectural observable limit or the remaining conformal-invariance gap. Primary reference: Duminil-Copin, Conjecture 1 Eq.(3.3), https://www.ihes.fr/~duminil/publi/divergenceFK.pdf .",
+      "proof_text": null,
+      "assumptions": [
+        "Standard stated edge-observable and winding convention",
+        "0<q<4, 0<sigma<1; specialize q=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w417:C0017:spin-correction",
+        "url": "file:///~/brain_workers/w417/ATTEMPT.md",
+        "revision": "draft-author-checked-2026-10-10-pending-w419",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "weighted-comparison",
+      "to_key": "def-cells",
+      "kind": "depends_on",
+      "rationale": "The stated cell result uses the same finite terminal-partition and exterior-event framework."
+    },
+    {
+      "from_key": "finite-obstruction",
+      "to_key": "def-cells",
+      "kind": "depends_on",
+      "rationale": "The stated cell result uses the same finite terminal-partition and exterior-event framework."
+    },
+    {
+      "from_key": "pair-counterexample",
+      "to_key": "def-cells",
+      "kind": "depends_on",
+      "rationale": "The stated cell result uses the same finite terminal-partition and exterior-event framework."
+    },
+    {
+      "from_key": "pair-counterexample",
+      "to_key": "pair-route",
+      "kind": "refutes",
+      "rationale": "The exact star calculation matches every pair probability but separates the crossing event a connected to {b,c}."
+    },
+    {
+      "from_key": "dependence-counterexample",
+      "to_key": "dependence-route",
+      "kind": "refutes",
+      "rationale": "Identical marginals give zero marginal distance while the explicit Boolean event differs by 1/2."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "weighted-comparison",
+      "kind": "depends_on",
+      "rationale": "The displayed unresolved total error is exactly the bound in the weighted comparison, plus the two representation errors."
+    },
+    {
+      "from_key": "gap",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+      "kind": "cites",
+      "rationale": "The source target requires square-bond Cardy limits and SLE6; this draft identifies only an unresolved crossing-transfer route."
+    },
+    {
+      "from_key": "spin-correction",
+      "to_existing_logical": "math:probability.percolation:attempt-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+      "kind": "refutes",
+      "rationale": "Scoped refutation of the exact sentence that q=1 has standard spin sigma=2/3. The primary parameter relation instead gives 1/3. The historical missing-limit assessment is preserved."
+    }
+  ]
+}

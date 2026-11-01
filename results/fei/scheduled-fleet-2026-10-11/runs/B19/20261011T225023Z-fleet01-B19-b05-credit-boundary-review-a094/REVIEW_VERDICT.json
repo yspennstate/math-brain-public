@@ -1,0 +1,17 @@
+{
+  "schema": "fei-independent-review/1",
+  "review_packet": "A094",
+  "target_packet": "A023",
+  "target_claim": "B05-A023-ORDER-SWAP-CREDIT-BOUNDARY-v1",
+  "target_source_commit": "f8af483622a55611c7933f7d8252fe3c94e4c06e",
+  "verdict": {
+    "conditional_label_L_theorem": "ACCEPT",
+    "unqualified_physical_order_swap_reading": "REQUIRES_SCOPE_REPAIR",
+    "complete_physical_L_plus_Q_strengthening": "PROVED_BY_REVIEWER_PENDING_FRESH_INDEPENDENT_REVIEW",
+    "full_FEI": "OPEN"
+  },
+  "precise_gap_in_target": "The author proof controls Gamma^L but an unqualified physical selector/data order swap has Gamma^(L+Q); Gamma^Q was not evaluated.",
+  "repair": "For q_n, Gamma_n^Q=P(delta)-P(2delta)/2+2delta^2<0 for every n>=3. Therefore Gamma_n^(L+Q)<0. Exact intervals give the same sign for both coordinate classes of q_4 tensor q_5.",
+  "fresh_reviewer_required": true,
+  "suggested_reviewers": ["A087", "A090"]
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "claim_id": "A060-EXACT-STOPPED-TERMINAL-RETENTION",
+    "version": 1,
+    "exact_statement": "For G_r=z times r disjoint AND2 signs and the actual four-bit bent-point wrapper F_r=b-C+C G_r with C the all-one point, query one first variable per factor, retaining all physical answers and independent dyadic continuation outcomes. If s_j is the survival probability of query j and S_r=sum_j s_j, then H(F_r)=E0+r/8, I(F_r)=7/4+(r+1)/16, E H(F_leaf)=E0+(r-S_r)/8 and E I(F_leaf)=7/4+(r+1-S_r/2)/16, where E0=8-(45/64)log2(3)-(75/64)log2(5). Thus full debit is exactly four times removed influence. For constant horizon-dependent q_r, terminal/root entropy tends to zero iff r(1-q_r) tends to zero; fixed q<1 retains terminal/root ratio tending to one. The same identities retain a positive already-booked deterministic prefix. This obstructs terminal exhaustion using A059 geometric pending potential at fixed original rate, but deterministic no-killing exhaustion of this particular family remains affordable.",
+    "hypotheses": [
+      "finite uniform Boolean cube; entropy bits",
+      "r>=1; tag z untouched; disjoint two-variable AND factors",
+      "four-bit bent b=(-1)^(u1u2+u3u4), u=(1+x)/2; C all-one point",
+      "each selected query is the first variable of a new factor; stopping coins fresh and independent of all core answers",
+      "dyadic continuation probabilities in [0,1] for finite physical realizations; both stopped and surviving siblings retained",
+      "asymptotic horizon statements have r tending to infinity; old booked prefix is retained, not recredited"
+    ],
+    "statement_sha256": "3682bc05af091686b8b5f9a9cbc8f2c92f0e650eee47f07ecb145e6800421807",
+    "contributors": [
+      "A060"
+    ],
+    "proof_source": {
+      "path": "PROOF.md",
+      "sha256": "dbde71a1d41a721d88bf5c6ae67b9e4fb673c75a8c88ef87ae8acf74f29b8f7a",
+      "validation": "out/all.json",
+      "code": "code/check.py"
+    },
+    "proof_dependencies": [
+      "disjoint Boolean product Fourier entropy/influence identities, rederived in PROOF Section2",
+      "A059-PREPAID-TWO-TICKETS-AND-GEOMETRIC-STOPPING@1 supplies target certificate, not a premise of exact terminal formulas"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A060",
+        "verdict": "AUTHOR_PROOF_AND_EXACT_FINITE_CONTROLS",
+        "checks": 11485,
+        "independent_external_review": false
+      }
+    ],
+    "status": "PROVED_AUTHOR_CHECKED_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Fixed-q depth-free stopping alone forces a vanishing full-terminal entropy fraction under tensorization"
+    ],
+    "first_unproved_line": "A necessary entropy-decaying arbitrary-core continuation paid from the same unused original owner, with all old fees and full terminals retained.",
+    "next_consumers": [
+      "A059",
+      "A057",
+      "A091",
+      "A087",
+      "B12",
+      "B20"
+    ]
+  }
+]

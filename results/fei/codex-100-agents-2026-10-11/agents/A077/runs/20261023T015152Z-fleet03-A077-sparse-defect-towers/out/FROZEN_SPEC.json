@@ -1,0 +1,46 @@
+{
+  "helper_version": "masked-carrier-v1",
+  "helper_sha256": "b22882a3115fa73df0f8a5455d2b3fa14dff26282af31027bf1ef2809298cfe0",
+  "arithmetic_sha256": "af2c8fdd2ff2063cc60d12fd5256f6bcaec59c1a27213c39eff444a07c0be865",
+  "family": "A076 constant-outside review; Maj3 carrier with adjacent edited vertices and balanced correlated controllers; guarded k4 bent/point-padding source",
+  "domain": {
+    "review_n": [
+      0,
+      1,
+      2
+    ],
+    "review_d": [
+      1,
+      2,
+      3
+    ],
+    "balanced_n": [
+      1,
+      2
+    ],
+    "carrier_partial_assignments": 27,
+    "source_k": 4,
+    "source_m": 2,
+    "old_D0": "1/8",
+    "first_debit": "4/8",
+    "source_policies": 3,
+    "both_first_x1_children": true
+  },
+  "case_count": {
+    "review_roots": 828,
+    "review_shared_queries": 1656,
+    "balanced_ordered_pairs": 40,
+    "carrier_shared_queries": 27,
+    "balanced_shared_queries": 1080,
+    "mixed_nodes": 378,
+    "mixed_leaves": 384
+  },
+  "symmetry": "none; every ordered pair and partial assignment; no automatic dimension raise",
+  "arithmetic": "integer Walsh, Fraction prime-log identities; outward 24-term atanh rational bounds at 2^-70",
+  "memory_estimate_mb": 100,
+  "pilot_max_runtime_seconds": 55,
+  "main_max_runtime_seconds": 180,
+  "pilot_domain": "review_n0,1; balanced_n1; first mixed policy both initial children",
+  "scope_guard": "private guard y queried only after all shared inputs",
+  "before_search": true
+}

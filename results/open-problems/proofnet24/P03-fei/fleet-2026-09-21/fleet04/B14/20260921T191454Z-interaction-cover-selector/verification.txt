@@ -1,0 +1,11 @@
+command: python -S verify_interaction_cover.py
+exit_code: 0
+checker_sha256: a0f44a11cee8392fc1c99d4ce8a31a3041c1394773dc56b713438c9e26878c2e
+stdout_sha256: a32787a9ca16e36dbdf54bc2ae91a7fb3e6b89a44b72e230bdc681fdfe48f0eb
+
+n,total_sign_normalized,critical_roots,max_cover_violation,max_subset_violation
+2,8,4,0,0
+3,128,88,0,0
+4,32768,1312,0,0
+
+Execution note: an earlier pure-Python port failed before enumeration because a list was indexed by a tuple; that local false start was corrected before this captured run. The final captured run used only the Python standard library and exited 0. This finite computation is a regression check, not the proof of either theorem.

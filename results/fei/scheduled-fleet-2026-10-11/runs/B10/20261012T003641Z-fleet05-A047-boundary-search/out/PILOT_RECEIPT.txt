@@ -1,0 +1,8 @@
+Fixed pilot: n=0,1,2; p=1/8,1/4,3/8; 828 ordered pair-bias cases.
+PASS. Compute runtime 1.2739533999701962 seconds (<60).
+At n=2, certified maxima (display only):
+p=1/8: 0.11954501602442495; p=1/4: 0.08272815130664832;
+p=3/8: 0.009440472829260055. Each has 32 candidate maximizing pairs.
+Certified sampled-real lower bound minus Boolean upper bound is positive
+at all three p. Full n<=3 run was authorized in the original frozen spec
+and starts only after this successful pilot; no automatic dimension growth.

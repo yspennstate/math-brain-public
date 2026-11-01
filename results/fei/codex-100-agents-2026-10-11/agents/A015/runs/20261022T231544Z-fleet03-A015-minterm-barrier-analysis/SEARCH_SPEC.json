@@ -1,0 +1,14 @@
+{
+  "helper_version": "A015-RARE-CORE-QUEUE-CHECK@1",
+  "family": "F=2 A_r 1_{|x|>=m-t}1_{|y|>=m-t}-1; unchanged full uniform prime queue",
+  "domain": "pilot physical m=2,3;t=0,1;r=0,1; full physical m=2..6;t=0..max(1,floor(m/4));r=0..2 plus (8,2,0); scalar m=2..64 and all declared t,r=0..8; actual queue m=2..4,t=0,1,r=0,1; visit W=1..64,s=1..W",
+  "case_count": {"pilot_physical":8,"full_physical":31,"actual_queue_parameter_cases":12,"visit_pairs":2080,"scalar_parameter_cases":"sum_{m=2}^{64}9(max(1,floor(m/4))+1), counted in output before checks"},
+  "symmetry": "No quotient: every truth input and Fourier output in physical cases; every nonempty output in queue cases. Scalars use block-exchange invariance only in analytic formulas.",
+  "arithmetic": "Integer Walsh transform, exact Fraction influences/root probabilities; rational enclosing dyadic fifth roots for theta^(5)=(s/rank)^6, 64 binary digits; no floating point acceptance",
+  "memory_estimate_mb": 90,
+  "max_runtime_seconds": 55,
+  "heavy_job": false,
+  "frozen_before_execution": true,
+  "commands": ["python -X utf8 code/check_rare_core.py --pilot", "python -X utf8 code/check_rare_core.py"],
+  "scope": "Finite checks validate accounting and formulas; all-dimensional conclusions rely on RARE_CORE_PAYMENT.md proof, pending independent review. No automatic parameter increase."
+}

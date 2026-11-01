@@ -1,0 +1,5 @@
+For the 3-input mux under address Bernoulli q and data means m0,m1, set vj=1-mj^2, d=|m1-m0| and g(t)=t ln(1/t)/(1-t). Exact corrected ratio:
+R = 2 + [d^2 ln(4/d^2)+2v0 g(1-q)+2v1 g(q)]/[(v0+v1) ln2].
+The scalar geometry v0+v1>=d(2-d), together with d ln(2/d)<=2-d, gives d^2 ln(4/d^2)<=2(v0+v1). Since g is increasing, R<=K(q)=2+2[1+g(max(q,1-q))]/ln2.
+For q<=1/2, m0=-1+epsilon and m1=1-epsilon^2 attain K(q) in the epsilon->0 limit; exchange the variance roles for q>=1/2. Therefore the exact all-data-mean supremum at fixed q is K(q), and sup over interior q is K*=2+4/ln2. Interior data Bernoulli biases suffice. Need exact bounded spectrum validation and full written proof before final claim.
+General two-mean profile h=u+t b: H+(h)=t^2 H+(b)+t^2 Var(b)log2(1/t^2), Delta(h)=t^2 Delta(b). Centered data deficit D dominates (v0+v1)I(b)/4 along crossing edges, so the scale correction is <=(2/ln2)D. This removes the equal-mean requirement if the Boolean profile b has a corrected FEI+ theorem; arbitrary b remains the exact unpaid universal residual.

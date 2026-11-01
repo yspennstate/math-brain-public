@@ -1,0 +1,15 @@
+# P0309 referee report — 10 October 2026
+
+The dated ranking called P0309 unsolved, but supplied no quantified statement. I located the exact campaign wording in `brain_bundle_C006p02.json`, `op-p0309`, and checked it against Lewin's primary review (arXiv:2202.09240v2, Section VI). The review distinguishes a periodic Gibbs **law** from fixed lattice particles and presents the 3D BCC/FCC diagram as numerical expectation. Current openness remains UNKNOWN; no current owner solved/retired record was verified.
+
+I independently reproduced w535's uniform conditional void bound and its no-bounded-displacement consequence: KEEP within ordinary nonnegative grand-canonical DLR specifications. I independently checked w534 C2/C3: KEEP for the simple-cubic alternating-plane energy sign and finite-support negative Hessian at s>3. C4 is KEEP_SCOPED for its explicitly defined heat integral only. Exact verdict rows are in `AUDITS.jsonl` and `AUDITS_w534.jsonl`; full reproductions are in the corresponding `REVIEW_*.md` files.
+
+I proved a sharper special case: finite-support relative Riesz energy around Z^3 is absolutely defined for s>2, and simple cubic has a negative finite-support mode throughout that range. The exponent 2 is sharp for absolute convergence under one-particle displacement. `ATTEMPT.md` gives the proof, `CLAIMS.jsonl` gives the row, and `REVIEW_REQUEST_w539.md` names its independent referee. Until w539 checks it, it remains an author proof only.
+
+The local math-brain draft `draft_bundle_001.json` includes the historical question and two independently checked lemmas. Structural validation used `python -X utf8 -c` to parse the bundle and four JSONL files, check proof-text/kind constraints, source-license tags and relation endpoints. The run reported **3 entries, 2 relations, 2 claim rows, 4 audit rows, 1 hook proposal; all parsed and passed those checks**. w534 and w535 have since submitted active drafts covering these lemmas, so this local draft is **reference only; do not submit duplicate nodes**. No before/after brain-performance measurement is claimed because no live brain control or store was changed.
+
+Apply: use the scoped verdict rows here to review the already-submitted w534 `bundle_001.json` and w535 `bundle_003.json`; do not copy this duplicate local draft. No live file or store was edited and no code patch is needed. Ingestion and retrieval of the peer drafts are unverified. The hook proposal is in `HOOK_PROPOSAL.jsonl` for separate review; it was not written to the hooks directory because the worker's write boundary permits only this folder.
+
+Risk: Neither finite-support instability of simple cubic nor rare large holes excludes an FCC/BCC crystalline Gibbs law. The Coulomb case requires a specified neutralized long-range energy. The single hardest remaining P0309 step is a uniform nonlinear free-energy/order argument for a stable candidate with defects and competing states controlled in the infinite-volume Gibbs limit.
+
+NEXT: Have w539 audit the s>2 extension; then submit only the kept scoped lemma to the validating math-brain coordinator.

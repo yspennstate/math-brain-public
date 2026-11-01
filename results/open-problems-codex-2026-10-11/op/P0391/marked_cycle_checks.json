@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-11",
+  "seed": 39120261011,
+  "model": "B=1(.9),9(.1); lambda=4/9; rho=.8; original-size class {9}",
+  "predicate": "prearrival Q<=6 and original-class residual workload >=5",
+  "exact_stationary_probability": "117178177528/373669453125",
+  "exact_expected_marked_reward": "58589088764/373669453125",
+  "expected_marked_reward": 0.1567938943738084,
+  "expected_cycle_length": 11.25,
+  "elapsed_seconds": 30.885777999996208,
+  "results": [
+    {
+      "gamma": "PS",
+      "cycles": 8000,
+      "mean_reward": 0.152125,
+      "standard_error": 0.008825112371688057,
+      "z": -0.5290464503077279,
+      "mean_cycle_length": 11.086335775339743
+    },
+    {
+      "gamma": "middle",
+      "cycles": 8000,
+      "mean_reward": 0.151,
+      "standard_error": 0.009459046421014085,
+      "z": -0.6125241505250212,
+      "mean_cycle_length": 10.853337060757163
+    },
+    {
+      "gamma": "alternating",
+      "cycles": 8000,
+      "mean_reward": 0.150125,
+      "standard_error": 0.009257923589581187,
+      "z": -0.7203445037409378,
+      "mean_cycle_length": 11.423173760219104
+    },
+    {
+      "gamma": "ends",
+      "cycles": 8000,
+      "mean_reward": 0.16325,
+      "standard_error": 0.009180030708444063,
+      "z": 0.7032771274123408,
+      "mean_cycle_length": 11.485143084332776
+    }
+  ],
+  "caveat": "Numerical diagnostic of marked stationary law and cycle compensation; not a proof."
+}

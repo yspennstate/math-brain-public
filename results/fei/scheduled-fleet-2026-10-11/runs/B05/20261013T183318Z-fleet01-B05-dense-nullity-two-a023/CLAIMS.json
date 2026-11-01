@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "run_id": "20261013T183318Z-fleet01-B05-dense-nullity-two-a023",
+  "stream_id": "B05",
+  "primary_packet_id": "A023",
+  "stable_gap_id": "B05_RARE_REFUNDS",
+  "claims": [
+    {
+      "claim_id": "B05_A023_DENSE_NULLITY_TWO_FEI_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every binary s-by-m matrix M of rank m-2, every affine phase, and every Boolean D(y), P(x,y)=(-1)^(x^TMy+affine)D(y) satisfies H(P)<=2I(P) and U(P)<=2I(P) in the original physical basis.",
+      "quantifiers": {
+        "dimension": "every m>=2 and s>=m-2",
+        "kernel_orientation": "every physical orientation",
+        "core": "every Boolean D",
+        "constant": 2
+      },
+      "evidence": ["PROOF.md#1-exact-physical-basis-fiber-entropy", "PROOF.md#2-the-orientation-sensitive-two-bit-lemma", "PROOF.md#3-physical-influence-pays-the-fiber-entropy"]
+    },
+    {
+      "claim_id": "B05_A023_DENSE_NULLITY_TWO_TREE_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For the same P, every finite adaptive/pruned physical restriction tree and every common disjoint Boolean terminal core h have complete retained-U loss at most 2I(P).",
+      "quantifiers": {
+        "tree": "every finite deterministic adaptive/pruned tree on P variables",
+        "terminal_core": "every Boolean h on a disjoint block",
+        "leaf_probabilities": "all dyadic probabilities induced by uniform restrictions"
+      },
+      "evidence": ["PROOF.md#4-complete-signed-restriction-tree-payment"]
+    },
+    {
+      "claim_id": "B05_A023_NULLITY_TWO_CONSTANT_SHARP_v1",
+      "status": "PROVED",
+      "statement": "The constant two is sharp for this class, already for rank zero and a nonaffine Boolean function on two bits.",
+      "evidence": ["PROOF.md#theorem", "CHECK_DENSE_NULLITY_TWO.py", "CHECK_DENSE_NULLITY_TWO.out"]
+    }
+  ],
+  "packet_complete": false,
+  "full_fei_status": "OPEN",
+  "required_reviewers": ["A087", "A094", "B19"]
+}
+

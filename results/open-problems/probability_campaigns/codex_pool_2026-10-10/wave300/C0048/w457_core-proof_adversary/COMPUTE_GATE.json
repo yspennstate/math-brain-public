@@ -1,0 +1,12 @@
+{
+  "task": "C0048 exact finite-graph FK conditioning and counterexample check",
+  "authorized_scope": "Small local exact-arithmetic experiment; no training, no GPU, no live stores",
+  "max_graph_edges": 12,
+  "max_configurations_per_case": 4096,
+  "max_cases": 7,
+  "max_elapsed_seconds": 30,
+  "max_output_bytes": 32768,
+  "write_root": "~/brain_workers/w457",
+  "command": "python -X utf8 validate_fk.py",
+  "proof_limit": "Finite enumeration validates formulas and exact counterexamples; it is not an infinite-volume or C0048 proof."
+}

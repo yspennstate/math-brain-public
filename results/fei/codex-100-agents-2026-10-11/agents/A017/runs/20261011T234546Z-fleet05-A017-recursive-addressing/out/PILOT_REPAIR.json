@@ -1,0 +1,9 @@
+{
+  "first_helper": "A017-point-surgery-v1",
+  "failed_assertion": "Histogram equality at assertion 40 after four completed root cases",
+  "cause": "Expected integer Walsh amplitudes incorrectly scaled by 2^r. Fiber embedding scales probabilities via the ambient denominator and repeats each coefficient 2^r times; its integer Walsh numerator is unchanged.",
+  "repair": "Multiply only histogram multiplicity by 2^r, leaving integer numerator amplitude unchanged.",
+  "repaired_helper": "A017-point-surgery-v1.1",
+  "frozen_family_or_domain_changed": false,
+  "mathematical_formula_changed": false
+}

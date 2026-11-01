@@ -1,0 +1,712 @@
+[
+  {
+    "agent_id": "A039",
+    "stream": "B08",
+    "stream_name": "Relative entropy and posterior credit",
+    "topic": "Projection under restrictions",
+    "assignment": "Study how an information projection changes under a physical restriction. Establish a monotonicity or compensated identity that remains valid when the two child spectra interfere coherently.",
+    "original_assignment": "Study how an information projection changes under a physical restriction. Establish a monotonicity or compensated identity that remains valid when the two child spectra interfere coherently.",
+    "assignment_revision_note": "Original task retained; packet-specific tests include recovered baselines and scope corrections.",
+    "work_type": "new_math",
+    "priority": {
+      "band": "P1",
+      "rationale": "Substantial parallel route or class theorem; renew only for a quantitative lemma, a rigorous obstruction, or a necessary review."
+    },
+    "initial_execution_status": "OPEN",
+    "mathematical_status": "UNPROVED_TARGET",
+    "gap_id": "FEI-B08-A039-INITIAL",
+    "claim_id": null,
+    "target_statement": "Study how an information projection changes under a physical restriction. Establish a monotonicity or compensated identity that remains valid when the two child spectra interfere coherently.",
+    "baseline_source_ids": [
+      "brain_route_map",
+      "brain_phase_energy",
+      "reductions_restrictions"
+    ],
+    "advisory_method_tags": [
+      "F03",
+      "F05",
+      "F07",
+      "F08",
+      "F09"
+    ],
+    "upstream_packets": [
+      {
+        "agent_id": "A036",
+        "interface": "actual information projection and support normalization",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A037",
+        "interface": "common probability space for credits",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A024",
+        "interface": "physical child law",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      }
+    ],
+    "proof_dependencies": [],
+    "proof_dependency_status": "DECLARE_AND_SOURCE_PIN_PER_ATTEMPT; empty design list does not assert a dependency-free proof.",
+    "deliverables": [
+      {
+        "deliverable_id": "A039-D1",
+        "description": "PROJECTION_RESTRICTION.tex: compensated restriction identity or monotonicity theorem",
+        "initial_status": "OPEN"
+      },
+      {
+        "deliverable_id": "A039-D2",
+        "description": "COHERENT_CHILD_EXAMPLES.json: exact child spectra and reference changes",
+        "initial_status": "OPEN"
+      }
+    ],
+    "acceptance_criteria": [
+      "Construct the proposed stochastic map explicitly before invoking data processing; physical restriction produces coherent child spectra and need not be a channel on squared parent coefficients.",
+      "Track reoptimization of the reference, its normalizer, and support changes in both children.",
+      "Verify equality on an isospectral split and locate the compensating term for a non-isospectral Boolean control."
+    ],
+    "next_consumers": [],
+    "reviewers": [
+      {
+        "agent_id": "A088",
+        "role": "PRIMARY_INDEPENDENT_REVIEW",
+        "required_when": "A completed mathematical, baseline, certificate, or review artifact is proposed for acceptance.",
+        "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+      },
+      {
+        "agent_id": "A094",
+        "role": "SECOND_OR_ALTERNATE_REVIEW",
+        "required_when": "A major new theorem/counterfamily needs another review, or the primary reviewer must recuse; full-FEI complete-chain requirements are specified separately.",
+        "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+      }
+    ],
+    "initial_pilot": {
+      "work_cycles": 3,
+      "budget_kind": "CAP_NOT_MANDATORY_SPEND",
+      "first_cycle_output": "PROJECTION_RESTRICTION.tex: compensated restriction identity or monotonicity theorem",
+      "final_cycle_gate": "Apply the packet-specific acceptance criteria, save the complete derivation or exact first gap, and route the result to the nominated independent reviewer.",
+      "renewal_milestone": "A proved restriction identity with a usable compensation term or a minimal coherent-child counterexample.",
+      "no_progress_action": "After the pilot, record the exact unresolved line and changed approach needed. Retire an accepted baseline; pause a falsified helper; otherwise choose a distinct hypothesis, proof mechanism, or targeted falsifier before renewal.",
+      "actual_cycles_used": 0
+    },
+    "concurrent_contract_at_a1ff935": {
+      "input_packet_ids": [
+        "A036",
+        "A037"
+      ],
+      "completion_criterion": "A physical-restriction information-projection identity retains both child spectra and their interference; monotonicity is proved under stated conditions or refuted by an actual Boolean split.",
+      "suggested_review_packets": [
+        "A088",
+        "A094"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    "owner_native_stream": "B08",
+    "input_packet_ids": [
+      "A024",
+      "A036",
+      "A037"
+    ],
+    "completion_criterion": "Construct the proposed stochastic map explicitly before invoking data processing; physical restriction produces coherent child spectra and need not be a channel on squared parent coefficients. Track reoptimization of the reference, its normalizer, and support changes in both children. Verify equality on an isospectral split and locate the compensating term for a non-isospectral Boolean control.",
+    "suggested_review_packets": [
+      "A088",
+      "A094"
+    ],
+    "baseline_guard": "Use OBSTRUCTION_REGISTRY.json and the matrix recovered baselines at their exact scopes; do not repeat already proved positive-energy selector closure or the three already refuted weighted-threshold payments.",
+    "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap.",
+    "supplemental_F_groups": [
+      "F03",
+      "F05",
+      "F07",
+      "F08",
+      "F09"
+    ]
+  },
+  {
+    "agent_id": "A064",
+    "stream": "B13",
+    "stream_name": "Restriction martingales",
+    "topic": "Global debt potential",
+    "assignment": "Build a potential that can temporarily grow on rare branches but has a controlled expected terminal value. Provide a theorem with every boundary term and initial condition stated.",
+    "original_assignment": "Build a potential that can temporarily grow on rare branches but has a controlled expected terminal value. Provide a theorem with every boundary term and initial condition stated.",
+    "assignment_revision_note": "Original task retained; packet-specific tests include recovered baselines and scope corrections.",
+    "work_type": "new_math",
+    "priority": {
+      "band": "P0",
+      "rationale": "Immediate campaign work: closes a primary J/R interface, attacks its unpaid term, certifies a decisive falsifier, or removes a review/execution bottleneck."
+    },
+    "initial_execution_status": "OPEN",
+    "mathematical_status": "UNPROVED_TARGET",
+    "gap_id": "FEI-B13-A064-INITIAL",
+    "claim_id": null,
+    "target_statement": "Build a potential that can temporarily grow on rare branches but has a controlled expected terminal value. Provide a theorem with every boundary term and initial condition stated.",
+    "baseline_source_ids": [
+      "reductions_restrictions",
+      "brain_route_map",
+      "b19_review_readbacks"
+    ],
+    "advisory_method_tags": [
+      "F05",
+      "F06",
+      "F08",
+      "F10"
+    ],
+    "upstream_packets": [
+      {
+        "agent_id": "A023",
+        "interface": "scoped rare first-revelation payment",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A029",
+        "interface": "two-child deficit transport",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A037",
+        "interface": "nonreuse posterior credit",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A061",
+        "interface": "entropy process",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A062",
+        "interface": "influence compensator",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      }
+    ],
+    "proof_dependencies": [],
+    "proof_dependency_status": "DECLARE_AND_SOURCE_PIN_PER_ATTEMPT; empty design list does not assert a dependency-free proof.",
+    "deliverables": [
+      {
+        "deliverable_id": "A064-D1",
+        "description": "GLOBAL_DEBT_POTENTIAL.tex: formula, initial bound, drift, and terminal theorem",
+        "initial_status": "OPEN"
+      },
+      {
+        "deliverable_id": "A064-D2",
+        "description": "POTENTIAL_OBSTRUCTION_TESTS.md: addressing, rare cores, plateaux, and coherent remainders",
+        "initial_status": "OPEN"
+      }
+    ],
+    "acceptance_criteria": [
+      "State the potential explicitly with a defined sign convention; prove its initial resource bound and expected terminal bound instead of assuming them.",
+      "Use only proved parts of upstream interfaces and leave their unproved global hypotheses visible; the final FEI conclusion is never an input.",
+      "Show where μ log(1/μ), the KL rebate, and coherent α² log(1/α²) terms enter and demonstrate that no credit is spent twice.",
+      "Allow local increases only with a proved expectation/telescoping argument on the actual tree."
+    ],
+    "next_consumers": [
+      {
+        "agent_id": "A065",
+        "interface_use": "global potential version"
+      },
+      {
+        "agent_id": "A077",
+        "interface_use": "current global debt candidate"
+      },
+      {
+        "agent_id": "A087",
+        "interface_use": "global debt potential"
+      }
+    ],
+    "reviewers": [
+      {
+        "agent_id": "A087",
+        "role": "PRIMARY_INDEPENDENT_REVIEW",
+        "required_when": "A completed mathematical, baseline, certificate, or review artifact is proposed for acceptance.",
+        "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+      },
+      {
+        "agent_id": "A094",
+        "role": "SECOND_OR_ALTERNATE_REVIEW",
+        "required_when": "A major new theorem/counterfamily needs another review, or the primary reviewer must recuse; full-FEI complete-chain requirements are specified separately.",
+        "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+      }
+    ],
+    "initial_pilot": {
+      "work_cycles": 3,
+      "budget_kind": "CAP_NOT_MANDATORY_SPEND",
+      "first_cycle_output": "GLOBAL_DEBT_POTENTIAL.tex: formula, initial bound, drift, and terminal theorem",
+      "final_cycle_gate": "Apply the packet-specific acceptance criteria, save the complete derivation or exact first gap, and route the result to the nominated independent reviewer.",
+      "renewal_milestone": "One complete drift-and-boundary theorem on a declared class, or a certified obstruction to the exact potential.",
+      "no_progress_action": "After the pilot, record the exact unresolved line and changed approach needed. Retire an accepted baseline; pause a falsified helper; otherwise choose a distinct hypothesis, proof mechanism, or targeted falsifier before renewal.",
+      "actual_cycles_used": 0
+    },
+    "concurrent_contract_at_a1ff935": {
+      "input_packet_ids": [
+        "A023",
+        "A029",
+        "A062"
+      ],
+      "completion_criterion": "A global debt potential pays rare growth through a proved initial-to-terminal expectation bound; the B05 no-go is passed analytically and no node reuses descendant credit.",
+      "suggested_review_packets": [
+        "A087",
+        "A094"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    "owner_native_stream": "B13",
+    "input_packet_ids": [
+      "A023",
+      "A029",
+      "A037",
+      "A061",
+      "A062"
+    ],
+    "completion_criterion": "State the potential explicitly with a defined sign convention; prove its initial resource bound and expected terminal bound instead of assuming them. Use only proved parts of upstream interfaces and leave their unproved global hypotheses visible; the final FEI conclusion is never an input. Show where μ log(1/μ), the KL rebate, and coherent α² log(1/α²) terms enter and demonstrate that no credit is spent twice. Allow local increases only with a proved expectation/telescoping argument on the actual tree.",
+    "suggested_review_packets": [
+      "A087",
+      "A094"
+    ],
+    "baseline_guard": "Use OBSTRUCTION_REGISTRY.json and the matrix recovered baselines at their exact scopes; do not repeat already proved positive-energy selector closure or the three already refuted weighted-threshold payments.",
+    "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap.",
+    "supplemental_F_groups": [
+      "F05",
+      "F06",
+      "F08",
+      "F10"
+    ]
+  },
+  {
+    "agent_id": "A090",
+    "stream": "B18",
+    "stream_name": "Independent proof audit A",
+    "topic": "Independent reconstruction",
+    "assignment": "Reprove a near-complete campaign candidate from its theorem statements and original sources, without relying on the supplied derivation. Report the first unreconstructed implication precisely.",
+    "original_assignment": "Reprove a near-complete campaign candidate from its theorem statements and original sources, without relying on the supplied derivation. Report the first unreconstructed implication precisely.",
+    "assignment_revision_note": "Original task retained; packet-specific tests include recovered baselines and scope corrections.",
+    "work_type": "independent_reconstruction",
+    "priority": {
+      "band": "P0",
+      "rationale": "Immediate campaign work: closes a primary J/R interface, attacks its unpaid term, certifies a decisive falsifier, or removes a review/execution bottleneck."
+    },
+    "initial_execution_status": "OPEN",
+    "mathematical_status": "REVIEW_PENDING",
+    "gap_id": "FEI-B18-A090-INITIAL",
+    "claim_id": null,
+    "target_statement": "Reprove a near-complete campaign candidate from its theorem statements and original sources, without relying on the supplied derivation. Report the first unreconstructed implication precisely.",
+    "baseline_source_ids": [
+      "threshold_source",
+      "reductions_forests",
+      "reductions_restrictions",
+      "brain_route_map",
+      "brain_phase_energy"
+    ],
+    "advisory_method_tags": [
+      "F05",
+      "F08",
+      "F19",
+      "F20"
+    ],
+    "upstream_packets": [
+      {
+        "agent_id": "A081",
+        "interface": "exact statement graph and original sources",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A086",
+        "interface": "reviewable code candidate locator",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A087",
+        "interface": "reviewable restriction candidate locator",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A088",
+        "interface": "reviewable Booleanity candidate locator",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      }
+    ],
+    "proof_dependencies": [],
+    "proof_dependency_status": "DECLARE_AND_SOURCE_PIN_PER_ATTEMPT; empty design list does not assert a dependency-free proof.",
+    "deliverables": [
+      {
+        "deliverable_id": "A090-D1",
+        "description": "BLIND_RECONSTRUCTION.tex: proof developed from statements and original inputs",
+        "initial_status": "OPEN"
+      },
+      {
+        "deliverable_id": "A090-D2",
+        "description": "RECONSTRUCTION_COMPARISON.md: first unreconstructed implication and final scope",
+        "initial_status": "OPEN"
+      }
+    ],
+    "acceptance_criteria": [
+      "Start from theorem statements and original baseline sources; do not copy the candidate's supplied derivation into the purported independent proof.",
+      "Record the critical reconstruction before comparing it with the authors' proof and identify genuinely shared unproved assumptions.",
+      "A near-complete universal candidate requires all dimensions, limit passages, terminal cases, and constant independence, not agreement on a summary."
+    ],
+    "next_consumers": [
+      {
+        "agent_id": "A094",
+        "interface_use": "independent reconstruction"
+      },
+      {
+        "agent_id": "A099",
+        "interface_use": "independent reconstruction"
+      }
+    ],
+    "reviewers": [
+      {
+        "agent_id": "A094",
+        "role": "PRIMARY_INDEPENDENT_REVIEW",
+        "required_when": "A completed mathematical, baseline, certificate, or review artifact is proposed for acceptance.",
+        "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+      },
+      {
+        "agent_id": "A085",
+        "role": "SECOND_OR_ALTERNATE_REVIEW",
+        "required_when": "A major new theorem/counterfamily needs another review, or the primary reviewer must recuse; full-FEI complete-chain requirements are specified separately.",
+        "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+      }
+    ],
+    "initial_pilot": {
+      "work_cycles": 3,
+      "budget_kind": "CAP_NOT_MANDATORY_SPEND",
+      "first_cycle_output": "BLIND_RECONSTRUCTION.tex: proof developed from statements and original inputs",
+      "final_cycle_gate": "Apply the packet-specific acceptance criteria, save the complete derivation or exact first gap, and route the result to the nominated independent reviewer.",
+      "renewal_milestone": "One full candidate is independently reconstructed or its first irreparable/open implication is precisely identified.",
+      "no_progress_action": "After the pilot, record the exact unresolved line and changed approach needed. Retire an accepted baseline; pause a falsified helper; otherwise choose a distinct hypothesis, proof mechanism, or targeted falsifier before renewal.",
+      "actual_cycles_used": 0
+    },
+    "concurrent_contract_at_a1ff935": {
+      "input_packet_ids": [
+        "A081"
+      ],
+      "completion_criterion": "A near-complete candidate is reconstructed from theorem statements and original sources without its author's derivation; all unreconstructed implications and limiting assumptions are itemized.",
+      "suggested_review_packets": [
+        "A094",
+        "A085"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    "owner_native_stream": "B18",
+    "input_packet_ids": [
+      "A081",
+      "A086",
+      "A087",
+      "A088"
+    ],
+    "completion_criterion": "Start from theorem statements and original baseline sources; do not copy the candidate's supplied derivation into the purported independent proof. Record the critical reconstruction before comparing it with the authors' proof and identify genuinely shared unproved assumptions. A near-complete universal candidate requires all dimensions, limit passages, terminal cases, and constant independence, not agreement on a summary.",
+    "suggested_review_packets": [
+      "A094",
+      "A085"
+    ],
+    "baseline_guard": "Use OBSTRUCTION_REGISTRY.json and the matrix recovered baselines at their exact scopes; do not repeat already proved positive-energy selector closure or the three already refuted weighted-threshold payments.",
+    "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap.",
+    "supplemental_F_groups": [
+      "F05",
+      "F08",
+      "F19",
+      "F20"
+    ]
+  },
+  {
+    "agent_id": "A094",
+    "stream": "B19",
+    "stream_name": "Independent proof audit B and literature",
+    "topic": "Proof-chain challenger",
+    "assignment": "Challenge the strongest complete-looking argument from A086-A090, independently selecting difficult regimes and embeddings. Agreement counts only after examining the full proof chain.",
+    "original_assignment": "Challenge the strongest complete-looking argument from A086-A090, independently selecting difficult regimes and embeddings. Agreement counts only after examining the full proof chain.",
+    "assignment_revision_note": "Original task retained; packet-specific tests include recovered baselines and scope corrections.",
+    "work_type": "independent_proof_review",
+    "priority": {
+      "band": "P0",
+      "rationale": "Immediate campaign work: closes a primary J/R interface, attacks its unpaid term, certifies a decisive falsifier, or removes a review/execution bottleneck."
+    },
+    "initial_execution_status": "OPEN",
+    "mathematical_status": "REVIEW_PENDING",
+    "gap_id": "FEI-B19-A094-INITIAL",
+    "claim_id": null,
+    "target_statement": "Challenge the strongest complete-looking argument from A086-A090, independently selecting difficult regimes and embeddings. Agreement counts only after examining the full proof chain.",
+    "baseline_source_ids": [
+      "threshold_source",
+      "reductions_biased",
+      "reductions_multiplexers",
+      "brain_route_map",
+      "b19_review_readbacks"
+    ],
+    "advisory_method_tags": [
+      "F19",
+      "F20"
+    ],
+    "upstream_packets": [
+      {
+        "agent_id": "A086",
+        "interface": "first joint-code review",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A087",
+        "interface": "first restriction review",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A088",
+        "interface": "first Booleanity review",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A090",
+        "interface": "independent reconstruction",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      }
+    ],
+    "proof_dependencies": [],
+    "proof_dependency_status": "DECLARE_AND_SOURCE_PIN_PER_ATTEMPT; empty design list does not assert a dependency-free proof.",
+    "deliverables": [
+      {
+        "deliverable_id": "A094-D1",
+        "description": "SECOND_CHAIN_CHALLENGE.md: independently selected hard regimes and embeddings",
+        "initial_status": "OPEN"
+      },
+      {
+        "deliverable_id": "A094-D2",
+        "description": "SECOND_REVIEW_VERDICT.json: accepted scope, unresolved leaf, or counterexample",
+        "initial_status": "OPEN"
+      }
+    ],
+    "acceptance_criteria": [
+      "Read the complete candidate proof and original dependencies independently; the first referee's verdict is not evidence for a missing step.",
+      "Choose difficult limits and arbitrary-seed embeddings independently and test the exact highest-risk implications.",
+      "For full FEI, verify the entire chain and all known applicable controls; ensure neither this reviewer nor the first reviewer contributed the theorem being approved."
+    ],
+    "next_consumers": [
+      {
+        "agent_id": "A095",
+        "interface_use": "failed universal implication"
+      },
+      {
+        "agent_id": "A099",
+        "interface_use": "second complete-chain verdict"
+      }
+    ],
+    "reviewers": [
+      {
+        "agent_id": "A090",
+        "role": "PRIMARY_INDEPENDENT_REVIEW",
+        "required_when": "A completed mathematical, baseline, certificate, or review artifact is proposed for acceptance.",
+        "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+      },
+      {
+        "agent_id": "A085",
+        "role": "SECOND_OR_ALTERNATE_REVIEW",
+        "required_when": "A major new theorem/counterfamily needs another review, or the primary reviewer must recuse; full-FEI complete-chain requirements are specified separately.",
+        "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+      }
+    ],
+    "initial_pilot": {
+      "work_cycles": 3,
+      "budget_kind": "CAP_NOT_MANDATORY_SPEND",
+      "first_cycle_output": "SECOND_CHAIN_CHALLENGE.md: independently selected hard regimes and embeddings",
+      "final_cycle_gate": "Apply the packet-specific acceptance criteria, save the complete derivation or exact first gap, and route the result to the nominated independent reviewer.",
+      "renewal_milestone": "A second substantive independent complete-chain verdict is available for the strongest reviewable candidate.",
+      "no_progress_action": "After the pilot, record the exact unresolved line and changed approach needed. Retire an accepted baseline; pause a falsified helper; otherwise choose a distinct hypothesis, proof mechanism, or targeted falsifier before renewal.",
+      "actual_cycles_used": 0
+    },
+    "concurrent_contract_at_a1ff935": {
+      "input_packet_ids": [
+        "A086",
+        "A087",
+        "A088",
+        "A090"
+      ],
+      "completion_criterion": "A second independent challenge examines the complete candidate chain and different difficult regimes; agreement by summary or repeated computations does not count as reconstruction.",
+      "suggested_review_packets": [
+        "A090",
+        "A085"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    "owner_native_stream": "B19",
+    "input_packet_ids": [
+      "A086",
+      "A087",
+      "A088",
+      "A090"
+    ],
+    "completion_criterion": "Read the complete candidate proof and original dependencies independently; the first referee's verdict is not evidence for a missing step. Choose difficult limits and arbitrary-seed embeddings independently and test the exact highest-risk implications. For full FEI, verify the entire chain and all known applicable controls; ensure neither this reviewer nor the first reviewer contributed the theorem being approved.",
+    "suggested_review_packets": [
+      "A090",
+      "A085"
+    ],
+    "baseline_guard": "Use OBSTRUCTION_REGISTRY.json and the matrix recovered baselines at their exact scopes; do not repeat already proved positive-energy selector closure or the three already refuted weighted-threshold payments.",
+    "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap.",
+    "supplemental_F_groups": [
+      "F19",
+      "F20"
+    ]
+  },
+  {
+    "agent_id": "A098",
+    "stream": "B20",
+    "stream_name": "Synthesis and mathematical coordination",
+    "topic": "Resource reallocation",
+    "assignment": "At each campaign checkpoint compare mathematical output against predefined milestones. Reassign packets within available authorized capacity to distinct next lemmas; do not create extra workers or schedules.",
+    "original_assignment": "At each campaign checkpoint compare mathematical output against predefined milestones. Reassign packets within available authorized capacity to distinct next lemmas; do not create extra workers or schedules.",
+    "assignment_revision_note": "Original task retained; packet-specific tests include recovered baselines and scope corrections.",
+    "work_type": "resource_coordination",
+    "priority": {
+      "band": "P0",
+      "rationale": "Immediate campaign work: closes a primary J/R interface, attacks its unpaid term, certifies a decisive falsifier, or removes a review/execution bottleneck."
+    },
+    "initial_execution_status": "OPEN",
+    "mathematical_status": "OPERATIONAL_WORK",
+    "gap_id": "FEI-B20-A098-INITIAL",
+    "claim_id": null,
+    "target_statement": "At each campaign checkpoint compare mathematical output against predefined milestones. Reassign packets within available authorized capacity to distinct next lemmas; do not create extra workers or schedules.",
+    "baseline_source_ids": [
+      "assignment_source",
+      "plan_source",
+      "math_revised_plan",
+      "supplement_campaign"
+    ],
+    "advisory_method_tags": [
+      "F01",
+      "F20"
+    ],
+    "upstream_packets": [
+      {
+        "agent_id": "A096",
+        "interface": "current mathematical output and gaps",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A081",
+        "interface": "proof-status evidence",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      },
+      {
+        "agent_id": "A085",
+        "interface": "verification bottlenecks",
+        "dependency_kind": "ADVISORY_REUSE",
+        "required_to_start": false,
+        "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+      }
+    ],
+    "proof_dependencies": [],
+    "proof_dependency_status": "DECLARE_AND_SOURCE_PIN_PER_ATTEMPT; empty design list does not assert a dependency-free proof.",
+    "deliverables": [
+      {
+        "deliverable_id": "A098-D1",
+        "description": "CHECKPOINT_ALLOCATION.json: active packet, pilot cycles used, outputs, and next assignment per stream",
+        "initial_status": "OPEN"
+      },
+      {
+        "deliverable_id": "A098-D2",
+        "description": "ALLOCATION_RATIONALE.md: mathematical evidence for keep/pivot/retire decisions",
+        "initial_status": "OPEN"
+      }
+    ],
+    "acceptance_criteria": [
+      "Count only the twenty existing B-stream schedules and the hypothetical 100 A-packet design; A labels do not add 100 live workers or another twenty coordinators.",
+      "At each natural run choose one ready packet within the B-stream's five-item backlog, resume its exact gap, and record attempt/cycle use.",
+      "Renew a pilot only after its stated mathematical milestone or a justified new attack; when review queues are full, finish/review existing candidates rather than add more.",
+      "Never infer token prices, paid capacity, continuous runtime, or completed scheduled execution from this matrix."
+    ],
+    "next_consumers": [
+      {
+        "agent_id": "A100",
+        "interface_use": "execution evidence"
+      }
+    ],
+    "reviewers": [
+      {
+        "agent_id": "A090",
+        "role": "PRIMARY_INDEPENDENT_REVIEW",
+        "required_when": "A completed mathematical, baseline, certificate, or review artifact is proposed for acceptance.",
+        "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+      },
+      {
+        "agent_id": "A094",
+        "role": "SECOND_OR_ALTERNATE_REVIEW",
+        "required_when": "A major new theorem/counterfamily needs another review, or the primary reviewer must recuse; full-FEI complete-chain requirements are specified separately.",
+        "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+      }
+    ],
+    "initial_pilot": {
+      "work_cycles": 1,
+      "budget_kind": "CAP_NOT_MANDATORY_SPEND",
+      "first_cycle_output": "CHECKPOINT_ALLOCATION.json: active packet, pilot cycles used, outputs, and next assignment per stream",
+      "final_cycle_gate": "Apply the packet-specific acceptance criteria, save the complete derivation or exact first gap, and route the result to the nominated independent reviewer.",
+      "renewal_milestone": "A source-grounded checkpoint decision preserves authorized capacity and changes the next concrete mathematical task where warranted.",
+      "no_progress_action": "After the pilot, record the exact unresolved line and changed approach needed. Retire an accepted baseline; pause a falsified helper; otherwise choose a distinct hypothesis, proof mechanism, or targeted falsifier before renewal.",
+      "actual_cycles_used": 0
+    },
+    "concurrent_contract_at_a1ff935": {
+      "input_packet_ids": [
+        "A096"
+      ],
+      "completion_criterion": "At a checkpoint, a source-bound delta ledger identifies productive, stuck and refuted packets and assigns distinct next mathematical actions within existing B ownership and actual capacity.",
+      "suggested_review_packets": [
+        "A090",
+        "A094"
+      ],
+      "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+      "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+    },
+    "owner_native_stream": "B20",
+    "input_packet_ids": [
+      "A081",
+      "A085",
+      "A096"
+    ],
+    "completion_criterion": "Count only the twenty existing B-stream schedules and the hypothetical 100 A-packet design; A labels do not add 100 live workers or another twenty coordinators. At each natural run choose one ready packet within the B-stream's five-item backlog, resume its exact gap, and record attempt/cycle use. Renew a pilot only after its stated mathematical milestone or a justified new attack; when review queues are full, finish/review existing candidates rather than add more. Never infer token prices, paid capacity, continuous runtime, or completed scheduled execution from this matrix.",
+    "suggested_review_packets": [
+      "A090",
+      "A094"
+    ],
+    "baseline_guard": "Use OBSTRUCTION_REGISTRY.json and the matrix recovered baselines at their exact scopes; do not repeat already proved positive-energy selector closure or the three already refuted weighted-threshold payments.",
+    "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap.",
+    "supplemental_F_groups": [
+      "F01",
+      "F20"
+    ]
+  }
+]

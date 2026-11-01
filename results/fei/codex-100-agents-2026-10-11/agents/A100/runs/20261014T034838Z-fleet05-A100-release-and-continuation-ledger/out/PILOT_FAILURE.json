@@ -1,0 +1,9 @@
+{
+  "command": "python -X utf8 code/check_binary.py --pilot",
+  "status": "ABORTED_IMPLEMENTATION_TYPE_ERROR",
+  "first_failure": "Formal prime-log helper L lacked scalar division at D0/2.",
+  "mathematical_assertion_failure": false,
+  "completed_cases": 0,
+  "validation_counted": false,
+  "repair": "Added scalar division as exact Fraction multiplication; unchanged family, domain, arithmetic and bounds. Updated helper byte hash is frozen by the retry spec."
+}

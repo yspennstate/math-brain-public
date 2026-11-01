@@ -1,0 +1,33 @@
+fleet03/B07 r24 prepublication-addendum arithmetic checks
+
+Parameters: theta=1/16, eta=1/64.
+
+rho = (1-2 eta) theta^2 / 216
+    = (31/32)*(1/256)/216
+    = 31/1769472
+    = 0.000017519350405092592...
+PASS
+
+rho/16 = 31/28311552
+       = 0.000001094959400318287...
+PASS
+
+sqrt(rho) = 0.004185612309458748...
+PASS
+
+2/sqrt(rho) = 477.82734093178...
+PASS
+
+kappa = 1/(256 sqrt(3)); kappa^2 = 1/196608.
+(2/sqrt(rho))/kappa^2 = 93,944,677.84591538...
+PASS
+
+Logical inequalities checked:
+- b^2 E2(N) >= rho F^6 and b^2<=F^2 imply E2(N)>=rho F^4.
+- two-color second-compound selection gives matching-bank product >=E2(N)/16>=rho F^4/16.
+- ||c||^2||r||^2 F_perp^2 >=rho F^6 implies ||c||||r||F_perp>=sqrt(rho)F^3.
+- F_perp<=||N||_F<=F implies ||c||||r||>=sqrt(rho)F^2.
+- fleet04/B18 projection cap 2/(||c||||r||) therefore is <2 rho^(-1/2)F^(-2).
+
+All decimal evaluations were recomputed in-session from the exact displayed expressions.
+STATUS=PASS

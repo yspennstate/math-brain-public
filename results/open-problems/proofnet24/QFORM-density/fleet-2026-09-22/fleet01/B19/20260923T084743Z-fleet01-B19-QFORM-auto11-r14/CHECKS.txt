@@ -1,0 +1,17 @@
+QFORM B19 r14 deterministic arithmetic check
+
+rho0 = sqrt(29/3072) = 0.09716019846967515
+etaG = (63/64)^2*(1/8) = 3969/32768 = 0.121124267578125
+c0 = (sqrt(23)/16 - 3/(32*sqrt(2)))^2 = 0.05449806650512538
+sqrt(c0) = 0.23344820947080613
+rho1 = rho0*sqrt(c0) = 0.02268187436457382
+Cstar = 2^(15/4)*3^(-3/8) = 8.911319467025024
+receiver_bound = Cstar*etaG^(-1/4)*rho1^(-3/8) = 62.481956408802915
+
+Subset endpoint arithmetic:
+1/8 + 47/64 = 55/64.
+1 - 55/64 - 1/64 = 1/8.
+1 - 23/32 = 9/32.
+
+All displayed thresholds are in the safe direction used in REPORT.md.
+QFORM_THINLINE_STAR_AGGREGATE_REPARTITION_CHECK_PASS

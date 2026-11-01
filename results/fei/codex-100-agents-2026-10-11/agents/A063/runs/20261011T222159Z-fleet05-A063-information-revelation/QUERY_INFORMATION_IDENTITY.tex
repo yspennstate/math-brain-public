@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A063: physical query information and spectral erasure}
+\maketitle
+All entropies are in bits. Let $f:\{-1,1\}^n\to\{-1,1\}$ be Boolean.
+The root spectral set has probability $\Pr(S=s)=\widehat f(s)^2$.
+For a physical block $A$ and complement $C$, write
+\[
+ a_{u,w}=\widehat f(u\cup w),\quad
+ c_{x,w}=\sum_{u\subseteq A}a_{u,w}\chi_u(x),\quad
+ q_w=\sum_u a_{u,w}^2=2^{-|A|}\sum_x c_{x,w}^2.
+\]
+The actual physical/spectral joint experiment is
+\[
+ \Pr(X_A=x,W=w)=2^{-|A|}c_{x,w}^2.
+\]
+The physical assignment $X_A$ is uniform, by Boolean Parseval at each child.
+Define $\nu_w(u)=a_{u,w}^2/q_w$ and
+$r_w(x)=2^{-|A|}c_{x,w}^2/q_w$. Omit zero fibers. Then
+\[
+ B_A=H(S_A\mid S_C)=\sum_w q_w H(\nu_w),\qquad
+ J_A=I(X_A;W)=|A|-\sum_wq_wH(r_w),
+\]
+and the exact decrement is
+\[
+ H(f)-\mathbb E_x H(f_x)=B_A+J_A.
+\]
+Thus $B_W$ in the collision interface is $B_A$ and $M_W$ is $J_A$.
+The physical branch entropy $H(X_A)=|A|$ is neither of these charges.
+
+\paragraph{Local classical lifts are not uniquely specified by child spectra.}
+Any joint extension $\Pr(U,X_A,W)$ with marginals
+$\Pr(U=u,W=w)=a_{u,w}^2$ and
+$\Pr(X_A=x,W=w)=2^{-|A|}c_{x,w}^2$ obeys
+\[
+ I(U,W;X_A)=J_A+I(U;X_A\mid W).
+\]
+The additional term is nonnegative and at most $B_A$.
+The canonical lift chooses $U$ and $X_A$ conditionally independent given $W$:
+\[
+ \Pr(U=u,W=w,X_A=x)=a_{u,w}^2r_w(x).
+\]
+It attains the minimal full-label information $J_A$.
+Alternative lifts are mathematical couplings, not changes to the physical child law.
+
+\paragraph{Finite adaptive tree chain rule (A037 reconstruction).}
+For any finite tree with no repeated physical coordinates, at node $h$ let
+$R_h$ be the remaining coordinates and $g_h$ the actual restricted function.
+Maintain $S_h=S\cap R_h$ and draw the next physical block outcome using
+\[
+ k_h(x\mid S)=r_{h,w}(x),\qquad w=S\cap (R_h\setminus A_h).
+\]
+The policy depends only on physical history. At every node the outcome has
+the actual uniform conditional law and the next spectral set has the actual
+child spectrum. This follows by summing the joint formula over the erased
+subset, then over $w$. Inductively it constructs a single joint root-label/
+physical-transcript law. Since the kernel depends on $S$ only through $w$,
+\[
+ I(S;X_{A_h}\mid h)=I(w;X_{A_h}\mid h)=J_h.
+\]
+For the full stopped transcript $L$, with node probability $p_h$, Shannon's
+chain rule and the retained local decrement give
+\[
+ \sum_h p_hJ_h=I(S;L),\qquad
+ H(S\mid L)=\sum_h p_hB_h+\sum_{\ell}p_\ell H(g_\ell).
+\]
+No full-label posterior is identified with a leaf spectrum. The latter is
+the law of $S\cap R_\ell$, and previously erased coordinates remain uncertain.
+
+\paragraph{Fixed-block coarsening refund.}
+Fix a block $A$. Query all and only its coordinates in an arbitrary finite
+order adaptive to the values already observed, using the canonical singleton
+kernel at each step. Let $Z=X_A$ be the final assignment, $U=S_A$ and $W=S_C$.
+The complete transcript is in bijection with $Z$ because the policy is
+deterministic. The induced $(Z,W)$ law is the physical-block joint law above:
+each leaf has probability $2^{-|A|}$ and conditional $W$ law $\widehat f_Z^2$.
+Let
+\[
+ \mathcal R_A=I(U;Z\mid W).
+\]
+Then the cumulative query charges obey the exact identities
+\[
+ \boxed{\sum_h p_hJ_h=J_A+\mathcal R_A,\qquad
+ \sum_h p_hB_h=B_A-\mathcal R_A.}
+\]
+Indeed $I(S;Z)=I(W;Z)+I(U;Z\mid W)$ proves the first. The local decrements
+sum to $H(f)-\mathbb E_ZH(f_Z)=B_A+J_A$, proving the second by subtraction.
+Equivalently $\sum_h p_h B_h=H(U\mid W,Z)$.
+Thus $0\le\mathcal R_A\le B_A$; the direct block lift has $\mathcal R_A=0$,
+whereas the singleton-refined lift need not. The refund may depend on order.
+Independent policy seeds can be conditioned on throughout and averaged;
+the theorem does not replace conditional information by information with an
+unrecorded seed or unrecorded stopping outcome.
+
+\paragraph{Sharp refund ceiling and retained-information barrier.}
+For $t\in[0,1]$, the elementary binary entropy bound is
+$h_2(t)\ge4t(1-t)$. To prove it, write $v=|1-2t|$ and expand
+\[
+ 1-h_2(t)=\frac1{\ln2}\sum_{k\ge1}
+       \frac{v^{2k}}{2k(2k-1)}\le v^2,
+\]
+since the positive coefficients sum to $\ln2$ at $v=1$.
+For a singleton fiber put $\beta=b^2/(a^2+b^2)$ and
+$\rho=1/2+ab/(a^2+b^2)$. Direct algebra gives
+$4\beta(1-\beta)+4\rho(1-\rho)=1$. Thus
+$h_2(\beta)+h_2(\rho)\ge1$, so $J_h\le B_h$ at every node.
+The coarsening identities consequently sharpen to
+\[
+ \boxed{0\le\mathcal R_A\le\tfrac12(B_A-J_A).}
+\]
+For any stopped singleton tree (with $L$ retaining its history),
+\[
+ \boxed{I(S;L)\le\tfrac12[H(f)-\mathbb EH(g_L)],\qquad
+ H(S\mid L)\ge\tfrac12[H(f)+\mathbb EH(g_L)].}
+\]
+Hence even complete revelation of the physical input cannot extract more
+than half the root spectral entropy under this canonical coupling.
+This is sharp: the two-bit sign $f(x_1,x_2)=1-2\mathbf1_{x_1=x_2=+1}$
+has four squared Fourier masses $1/4$, so $H(f)=2$.
+Its first query has $B=J=1$ (constant and character children), and its
+second query has $B=J=0$. For $A=\{1,2\}$ the direct block charges are
+$B_A=2,J_A=0$, whereas sequential charges are $1,1$ and
+$\mathcal R_A=1$. Thus the refund ceiling is attained.
+Disjoint products of this two-bit sign, queried one pair at a time,
+give equality $I(S;L)=H(f)/2$ in arbitrarily large dimensions.
+
+\paragraph{Reference correction.}
+Let $P_x(w)=c_{x,w}^2$ and let $Q_x$ be normalized supported reference laws.
+Set $Q=2^{-|A|}\sum_xQ_x$ and
+$t_w(x)=2^{-|A|}Q_x(w)/Q(w)$. Expanding the joint divergence in two orders gives
+\[
+ 2^{-|A|}\sum_xD_2(P_x\Vert Q_x)
+ =D_2(q\Vert Q)+\sum_wq_wD_2(r_w\Vert t_w).
+\]
+Consequently
+\[
+ \sum_wq_wD_2(r_w\Vert t_w)
+ =J_A+\sum_{w,x}2^{-|A|}P_x(w)
+       \log_2\frac{2^{-|A|}}{t_w(x)}.
+\]
+The second term is the signed reference correction, not automatically zero
+or free credit. All laws here are normalized and divergences finite; support
+failure gives an infinite term and cannot be subtracted.
+
+\paragraph{Open bridge.}
+The finite-tree identities already imply
+$H(f)=I(S;L)+H(S\mid L)$. The mixture information has the standard bound
+$\sum_hp_hJ_h\le (2/\ln2)I(f)$, but no universal influence bound for the
+remaining $H(S\mid L)$ is proved here. Maximizing the coarsening refund does
+not establish such a bound or eliminate the retained terminal term.
+\end{document}

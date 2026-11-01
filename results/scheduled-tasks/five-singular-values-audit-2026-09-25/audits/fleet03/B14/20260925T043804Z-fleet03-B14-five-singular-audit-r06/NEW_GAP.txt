@@ -1,0 +1,5 @@
+B14-R06-01 | short.tex L148 | PDF p3 | GAP
+Lemma 2.5 declares singular values padded with zeros but its variational proof invokes the first j right singular vectors without separately treating padded indices j beyond the right-space dimension.
+Example issue: for a tall m x n matrix and j>n, j right singular vectors do not exist although padded s_j=0 is defined.
+Repair: if j>min(m,n), rank(T)<j and choosing B=T gives variational minimum 0=s_j; otherwise use the printed singular-vector argument.
+All theorem uses are square or dimension-valid, so no constant or theorem conclusion changes.

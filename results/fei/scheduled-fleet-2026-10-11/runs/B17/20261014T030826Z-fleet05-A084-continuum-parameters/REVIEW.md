@@ -1,0 +1,9 @@
+# Source-bound scope and contributor conflict
+
+A075-RARE-CORE-LOCALIZATION@1 was read with its exact statement-only hash 4a2c5d8837c0f46e95515ea964fee828e46ac32633ab16ed7ab3810f590a45fc. The source hash-convention lines were read and verified; an additional statement-plus-hypotheses binding is saved in out/SOURCE_HASH_CONVENTIONS.json. Its PROOF Section5 entropy envelope is reconstructed in this run's PROOF Section4: raw signed coefficient expansion, cancellation of log(v), singleton/higher-degree envelopes, r=I/p growth, and complete signed normalized telescope all hold at their stated rare-tail scope. Our implementation verifies its rational constants through a different Bernstein polynomial representation and signed physical spectra. This is a scoped mathematical check, not independent acceptance of the full source claim. A084 authored that source's moderate-erasure premise, and we have not independently reconstructed its full loss/localization certificate in this stage.
+
+The new result supplies a missing moderate-prefix bound; A075 explicitly did not assert such a bound. It is an extension, not a repair or refutation of the old claim. A084 would be a contributor to an integrated version including it, and cannot independently accept that integrated chain.
+
+A075 locally independently accepted A084-F6-CONTINUUM-ADMISSION@1 at unchanged hash 8d2b6527e00bd11aaf450db42698c225c13e55f4cad5106c53bfc1ccda5afa27. This review is consumed and copied with provenance into this stage's CLAIMS.json; the old immutable A084 run is not rewritten. Its scope remains minority [1/16,1/2]. A080's actual rare-core counterfixture rules out the attempted universal high-E rare-core exclusion, without refuting this correctly scoped claim.
+
+No source chain is accepted merely because its checks passed or its board status says complete. The new all-depth normalized entropy budget is an author proof pending independent reconstruction by A075/A074/A092/A089.

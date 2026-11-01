@@ -1,0 +1,13 @@
+{
+  "helper_version": "prefix_audit.py v1, local standalone quadratic_audit.py v1 pinned by pilot/main",
+  "family": "quadratic phases with arbitrary ordinary query prefixes and arbitrary optional actual product resets",
+  "domain": "all alternating matrices n=0..4; all physical outcomes, coordinate orders, stopping cuts, and optional reset decisions",
+  "case_count": "76 matrix roots; finite memoized recursion over all reachable truth-table/reference states",
+  "symmetry": "linear characters translate all spectral laws and references by the same mask; constant phases cancel. Kernel transport, zero-source extension, normalization, and KL are covariant under that translation, so all linear and constant terms have the same costs",
+  "arithmetic": "Fraction references; compare exponentiated KL/reset prices as exact rational numbers, no floating logarithms",
+  "memory_estimate_MB": 150,
+  "max_runtime_seconds": 300,
+  "pilot": "all graphs n<=3, all histories; under 60 seconds",
+  "fixed_limits": "main n<=4; cache at most 20000 states; no automatic dimension increase; one job at a time",
+  "frozen_before_execution": true
+}

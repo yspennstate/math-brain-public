@@ -1,0 +1,26 @@
+{
+  "command": "python -X utf8 verify_bridge.py",
+  "gate": "fresh-w549-P0321-exact-checks",
+  "status": "PASS",
+  "shield_slack_exact": "159/1024",
+  "shared_parity_fixture": {
+    "states": 32,
+    "pairwise_independence_checks_passed": 15,
+    "largest_pair_covariance": "0",
+    "triple_product_covariance": "1",
+    "exact_block_alpha": "1/4"
+  },
+  "independent_parity_fixture": {
+    "states": 64,
+    "pairwise_independence_checks_passed": 15,
+    "largest_pair_covariance": "0",
+    "triple_product_covariance": "0",
+    "exact_block_alpha": "0"
+  },
+  "baseline_false_admissions_on_one_negative_fixture": 1,
+  "proposed_gate_false_admissions_on_same_fixture": 0,
+  "matching_tags_accepted": true,
+  "matching_tags_truth_verified": false,
+  "elapsed_seconds": 0.008065899950452149,
+  "limitations": "Exact finite checks and hypothesis-scope admission only. No Riesz simulation, infinite-volume mixing certificate, proof assistant, independent audit, or deployed retrieval gain."
+}

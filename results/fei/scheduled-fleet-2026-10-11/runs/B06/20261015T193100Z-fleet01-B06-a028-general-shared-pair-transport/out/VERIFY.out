@@ -1,0 +1,12 @@
+command: python /mnt/data/verify_shared_pair.py
+EXHAUSTIVE_SHARED_MUX_TRANSPORT_AUDIT
+domain: all ordered pairs of genuine Boolean functions h+,h- on n=1,2,3 bits
+arithmetic: exact integer Walsh coefficients and Fraction masses; logs/KL float diagnostics only
+seed: none; no random sampling
+counts: {1: {'ordered_boolean_pairs': 16, 'max_identity_error': 0.0}, 2: {'ordered_boolean_pairs': 256, 'max_identity_error': 1.1102230246251565e-16}, 3: {'ordered_boolean_pairs': 65536, 'max_identity_error': 1.1102230246251565e-15}}
+n=1: max rho/q=1.000000000000 at masks (0, 1); max Delta/q=2.000000000000 at masks (0, 1); max(rho-2q)=-0.500000000000 at masks (0, 1)
+n=2: max rho/q=2.000000000000 at masks (3, 6); max Delta/q=2.134488210612 at masks (1, 9); max(rho-2q)=0.000000000000 at masks (3, 6)
+n=3: max rho/q=2.953445297804 at masks (27, 105); max Delta/q=2.991446071166 at masks (24, 105); max(rho-2q)=0.476722648902 at masks (27, 105)
+witness n=2 masks (5,9): {'Uparent': 1.0, 'Uchild': 0.0, 'Delta': 1.0, 'q': 0.5, 'rho': 1.0, 'B': 1.0, 'Gamma': 0.5, 'K': 0.5, 'K0': 0.0, 'identity_error': 0.0}
+coefficient-2 obstruction n=3 masks (27,105): {'Uparent': 1.7267226489021295, 'Uchild': 0.25, 'Delta': 1.4767226489021295, 'q': 0.5, 'rho': 1.4767226489021295, 'B': 1.0, 'Gamma': 0.5, 'K': 0.9767226489021297, 'K0': 0.0, 'identity_error': -2.220446049250313e-16}
+elapsed_seconds=13.288

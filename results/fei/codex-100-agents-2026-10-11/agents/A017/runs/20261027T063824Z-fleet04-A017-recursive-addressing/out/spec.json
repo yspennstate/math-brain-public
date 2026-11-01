@@ -1,0 +1,28 @@
+{
+  "helper_version": "A017-fixed-multiplier-rank-ledger-v1",
+  "helper_sha256": "81a4aea90fdd03d57125fbfdf88590e8e8dede390cf6b5f59d8098bc3db90efa",
+  "family": "ALL Boolean f,c on3 physical bits, including queries in multiplier; ALL Boolean4-bit f with ONE fixed AND2 sign multiplier on original bits2,3 and query bits0,1",
+  "parameter_domain": "n3:256*256=65536 ordered pairs and all3 queries; n4:65536 roots and all9 stopped two-query policies; translated defects m=2..8",
+  "case_count": {
+    "three_bit_pairs": 65536,
+    "three_bit_queries": 196608,
+    "four_bit_roots": 65536,
+    "four_bit_stopped_policies": 589824,
+    "defect_family_rows": 7
+  },
+  "symmetry": "No quotient in n3. n4 uses ONE specified nonlinear multiplier, not all multipliers. Constant/character and bent endpoints retained separately.",
+  "arithmetic": "Integer Walsh, integer prime-log entropy vectors with common denominator256, exact rational atanh64 logarithm bounds rounded outward at100bits, exact physical edge counts",
+  "pilot": "n3 first8 f and all256 c; n4 first64 roots/all9 policies; m=2..4; fixed domain no growth",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": 300,
+  "pilot_max_runtime_seconds": 60,
+  "proof_failures_checked": [
+    "coherent coset mass preservation",
+    "affine rank monotonicity at BOTH children",
+    "nonnegative potential including endpoints",
+    "rank refund sign",
+    "queried influence transfer when c depends on query",
+    "all full terminal entropies",
+    "false universal original-influence admission"
+  ]
+}

@@ -1,0 +1,11 @@
+--- a/~/math-brain-inbox/w396/bundle_001.json
++++ b/~/math-brain-inbox/w396/bundle_001.json
+@@ -32,7 +32,7 @@
+       "kind": "lemma",
+       "title": "Static collar deficit controls every exploration time",
+       "statement": "DRAFT, mathematical review pending. Let P be a finite probability law on simple paths and F_k the prefix filtration, with completed paths retained and a finite deterministic horizon N. For nested forbidden sets A subset B let E_A,E_B be full-path avoidance events, so E_B subset E_A, and r(A)=P(E_A), r(B)=P(E_B). Put M_k^A=P(E_A|F_k), M_k^B=P(E_B|F_k). For every lambda>0, P(max_(0<=k<=N)(M_k^A-M_k^B)>=lambda)<=min(1,(r(A)-r(B))/lambda). This applies to exact fixed-length SAW kernels and to all-length finite endpoint-constrained SAW laws; no independence or path-length loss is required.",
+-      "proof_text": "D_k=M_k^A-M_k^B is the nonnegative martingale E[1_(E_A minus E_B)|F_k]. Stop at its first lambda crossing, or at N if none occurs. Finite optional stopping gives E D_tau=D_0=r(A)-r(B). Since D_tau is at least lambda on the crossing event and nonnegative elsewhere, lambda times that probability is at most D_0. The equal-weight two-path diamond attains equality for lambda=1.",
++      "proof_text": "D_k=M_k^A-M_k^B is the nonnegative martingale E[1_(E_A minus E_B)|F_k]. Stop at its first lambda crossing, or at N if none occurs. Finite optional stopping gives E D_tau=E D_0=r(A)-r(B). Since D_tau is at least lambda on the crossing event and nonnegative elsewhere, lambda times that probability is at most D_0. The equal-weight two-path diamond attains equality for lambda=1.",
+       "assumptions": [
+         "Nested full-path avoidance events",
+         "Finite prefix horizon retaining terminal information",

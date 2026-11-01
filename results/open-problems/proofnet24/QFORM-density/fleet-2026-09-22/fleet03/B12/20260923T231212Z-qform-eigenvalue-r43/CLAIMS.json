@@ -1,0 +1,35 @@
+{
+  "run_id": "20260923T231212Z-qform-eigenvalue-r43",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "SUPPORTING_STABILITY_THEOREM_PROVED_FULL_TARGET_OPEN",
+  "claims": [
+    {
+      "id": "QFORM-SPECTRAL-PACKET-SCHUR-BUDGET-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For symmetric A0 and arbitrary symmetric added E, let delta_q=s_{q+1}(E). For final A=A0+E, any invertible r-coordinate physical pivot with Schur complement S satisfies s_k(S)>=max(0,s_{q+r+k}(A0)-delta_q) whenever q+r+k<=n. The q leading added eigenmodes may be arbitrarily large, signed and oriented; the remaining full-rank tail is charged only by delta_q."
+    },
+    {
+      "id": "QFORM-SPECTRAL-PACKET-SIGNED-COUNTS-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For a>delta_q, the positive and negative threshold counts of the final Schur complement each lose at most q+r relative to A0 at threshold a, with threshold shifted to a-delta_q."
+    },
+    {
+      "id": "QFORM-SPECTRAL-PACKET-SCALAR-RECEIVER-v1",
+      "status": "PROVED_COROLLARY_USING_EXISTING_HALF_POTENTIAL",
+      "statement": "If s_{q+3}(A0)>=a>delta_q and a final original-coordinate scalar pivot has magnitude beta>0, then the final law has essential density at most (G2+1)/sqrt(beta(a-delta_q)), where G2 is the completed absolute two-large-mode half-potential constant from the source-pinned lower-level theorem."
+    }
+  ],
+  "partner_applied": {
+    "account": "fleet04",
+    "slot": "B12",
+    "source_commit": "3df1475f988c811570dc5c249a7756d24adb51bf",
+    "actual_equation": "partner local sqrt(lambda_6((A_p^2)[H,H]))>=7/4 implies s_6(A_p)>=7/4; after an additional arbitrary E with s_4(E)<=1/4, any final scalar pivot has Schur s_2>=3/2 and any final invertible pair has Schur operator norm>=3/2"
+  },
+  "source_matching_not_reclaimed": [
+    "Exact Schur rank-perturbation profile s_{j+r}(A)<=s_j(S) is already recorded at math-open-problems@93d2aedf7856c66f42a4ece7156b773db2589efe.",
+    "The r=2,k=1 arbitrary-rank physical-pair receiver is already proved at math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc."
+  ],
+  "continuity": "NOT_CLAIMED_FOR_NEW_GENERAL_COMPILER; FULL_TARGET_CONTINUITY_OPEN",
+  "full_target": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

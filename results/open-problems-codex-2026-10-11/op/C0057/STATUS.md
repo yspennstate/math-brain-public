@@ -1,0 +1,7 @@
+STATE: DONE
+NEXT: No further step required for this attempt; independent expert review of the general proof is appropriate.
+VERDICT: SOLVED
+2026-10-12: Verified exact source statement and hypotheses. Searched arXiv, OpenAlex, Crossref, Semantic Scholar (including source citations), GitHub, and author pages; OpenAlex returned HTTP 429. No exact published solution verified.
+2026-10-12: First proved exhaustion with finite f_q''(Z_q), including an explicit nonregular critical example; exact integral and numerical transition checks passed.
+2026-10-12: Proved the unrestricted affirmative result. Derived the exact negative-jump kernel directly from the partition-function integral, including infinite-f_q'' weights. Kernel bounds control the swallowing rate, large relative jumps, and truncated log-perimeter drift/variance. Localized martingale convergence contradicts perimeter escape if the rate sum is finite. Survival compensators and dual connectivity finish exhaustion for every continuing adapted algorithm.
+2026-10-12: Hostile self-referee checks completed. Seventy atomic/lacunary transition tests passed (normalization error <5.56e-16). Lean checked six finite algebra lemmas with exit code 0; no sorry or native_decide. The probabilistic proof is written, not fully formalized or independently peer reviewed. No remaining mathematical gap identified. Full argument in ATTEMPT.md; claims in CLAIMS.jsonl.

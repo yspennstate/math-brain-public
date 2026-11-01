@@ -1,0 +1,1599 @@
+
+SOURCE LINE 509 
+ unstable: (0,1) and (β,α), where
+α < β = (q −p) ±
+p
+(q −p)2 −4qp2/r
+2q
+.
+See Figure 5 for an example.
+The PDE results that were routine for the sexual reproduction model are
+now diﬃcult. To prove the existence of a traveling wave with u(−∞) =
+(α,β) and u(∞) = (1,0) one goes to the four dimensional phase plane:
+(u1,u′
+1,u2,u′
+2), and looks for a curve connecting (α,0,β,0) and (1,0,0,0)
+which will exist only for one value of the speed c. Fortunately this was done
+previously by Volpert and Volpert (1988). With the existence of a traveling
+wave established the next step is to prove a convergence theorem for the
+
+STOCHASTIC SPATIAL MODELS
+13
+Fig. 6.
+Colicin mean ﬁeld ODE.
+PDE, which can be done with comparison techniques because of monotonic-
+ity properties of system (u1,−u2). Once the PDE result is established the
+rest is a routine application of the block construction.
+Example 2.3. Colicin.
+Durrett and Levin (1997) considered a competi-
+tion between two types of E. coli, one of which produces colicin (a chemical
+that kills other E. coli):
+Birth
+Rate
+Death
+Rate
+0 →1
+β1f1
+1 →0
+δ1
+0 →2
+β2f2
+2 →0
+δ2 + γf1
+Here the rates are like the two-species contact process, except for the
+γf1 in the death rate 2 →0, which comes from 1’s killing 2’s with colicin.
+For simplicity we suppose that the basic death rates are equal δ1 = δ2 = 1.
+Having done this it is natural to suppose that β1 < β2, for otherwise it is
+clear that the 1’s will out compete the 2’s.
+The mean-ﬁeld ODE is:
+du1
+dt = β1u1(1 −u1 −u2) −δ1u1,
+(9)
+du2
+dt = β2u2(1 −u1 −u2) −u2(δ2 + γu1).
+A little algebra shows that when
+δi < βi
+and
+δ2
+β2
+< δ1
+β1
+< δ2 + γ
+β2 + γ
+the mean-ﬁeld ODE has an interior ﬁxed point but it is unstable. Figure 6
+shows the situation when β1 = 3, γ1 = 2.5 and β2 = 4.
+Figure 7 gives the density versus time in the system on a 200 × 200 grid.
+To emphasize that the behavior is diﬀerent from the ODE, we start the gray
+
+14
+R. DURRETT
+colicin producer (1’s) at a small density. By time 1000 it has eliminated the
+black colicin sensitive strain (2’s). The other panel shows the state at time
+600. Note that the two types have segregated. A movie would show that the
+interface moves in a direction that favors the 1’s.
+Problem 6.
+Show that coexistence is not possible in the colicin model
+when β1 < β2 and δ1 = δ2 = 1.
+Case 3. Cyclic systems, periodic orbits.
+In this case, we see coexistence
+with signiﬁcant spatial structure. The pictures are pretty but the problems
+are hard.
+Example 3.1. Multitype biased voter model.
+Each site can be in state 1,
+
+SOURCE LINE 513 
+ 2q
+.
+See Figure 5 for an example.
+The PDE results that were routine for the sexual reproduction model are
+now diﬃcult. To prove the existence of a traveling wave with u(−∞) =
+(α,β) and u(∞) = (1,0) one goes to the four dimensional phase plane:
+(u1,u′
+1,u2,u′
+2), and looks for a curve connecting (α,0,β,0) and (1,0,0,0)
+which will exist only for one value of the speed c. Fortunately this was done
+previously by Volpert and Volpert (1988). With the existence of a traveling
+wave established the next step is to prove a convergence theorem for the
+
+STOCHASTIC SPATIAL MODELS
+13
+Fig. 6.
+Colicin mean ﬁeld ODE.
+PDE, which can be done with comparison techniques because of monotonic-
+ity properties of system (u1,−u2). Once the PDE result is established the
+rest is a routine application of the block construction.
+Example 2.3. Colicin.
+Durrett and Levin (1997) considered a competi-
+tion between two types of E. coli, one of which produces colicin (a chemical
+that kills other E. coli):
+Birth
+Rate
+Death
+Rate
+0 →1
+β1f1
+1 →0
+δ1
+0 →2
+β2f2
+2 →0
+δ2 + γf1
+Here the rates are like the two-species contact process, except for the
+γf1 in the death rate 2 →0, which comes from 1’s killing 2’s with colicin.
+For simplicity we suppose that the basic death rates are equal δ1 = δ2 = 1.
+Having done this it is natural to suppose that β1 < β2, for otherwise it is
+clear that the 1’s will out compete the 2’s.
+The mean-ﬁeld ODE is:
+du1
+dt = β1u1(1 −u1 −u2) −δ1u1,
+(9)
+du2
+dt = β2u2(1 −u1 −u2) −u2(δ2 + γu1).
+A little algebra shows that when
+δi < βi
+and
+δ2
+β2
+< δ1
+β1
+< δ2 + γ
+β2 + γ
+the mean-ﬁeld ODE has an interior ﬁxed point but it is unstable. Figure 6
+shows the situation when β1 = 3, γ1 = 2.5 and β2 = 4.
+Figure 7 gives the density versus time in the system on a 200 × 200 grid.
+To emphasize that the behavior is diﬀerent from the ODE, we start the gray
+
+14
+R. DURRETT
+colicin producer (1’s) at a small density. By time 1000 it has eliminated the
+black colicin sensitive strain (2’s). The other panel shows the state at time
+600. Note that the two types have segregated. A movie would show that the
+interface moves in a direction that favors the 1’s.
+Problem 6.
+Show that coexistence is not possible in the colicin model
+when β1 < β2 and δ1 = δ2 = 1.
+Case 3. Cyclic systems, periodic orbits.
+In this case, we see coexistence
+with signiﬁcant spatial structure. The pictures are pretty but the problems
+are hard.
+Example 3.1. Multitype biased voter model.
+Each site can be in state 1,
+2, ...,k, and j →i at rate fiλij. In words, i’s eat j’s at rate λij. The mean
+ﬁeld ODE is
+dui
+dt = ui
+
+SOURCE LINE 515 
+ See Figure 5 for an example.
+The PDE results that were routine for the sexual reproduction model are
+now diﬃcult. To prove the existence of a traveling wave with u(−∞) =
+(α,β) and u(∞) = (1,0) one goes to the four dimensional phase plane:
+(u1,u′
+1,u2,u′
+2), and looks for a curve connecting (α,0,β,0) and (1,0,0,0)
+which will exist only for one value of the speed c. Fortunately this was done
+previously by Volpert and Volpert (1988). With the existence of a traveling
+wave established the next step is to prove a convergence theorem for the
+
+STOCHASTIC SPATIAL MODELS
+13
+Fig. 6.
+Colicin mean ﬁeld ODE.
+PDE, which can be done with comparison techniques because of monotonic-
+ity properties of system (u1,−u2). Once the PDE result is established the
+rest is a routine application of the block construction.
+Example 2.3. Colicin.
+Durrett and Levin (1997) considered a competi-
+tion between two types of E. coli, one of which produces colicin (a chemical
+that kills other E. coli):
+Birth
+Rate
+Death
+Rate
+0 →1
+β1f1
+1 →0
+δ1
+0 →2
+β2f2
+2 →0
+δ2 + γf1
+Here the rates are like the two-species contact process, except for the
+γf1 in the death rate 2 →0, which comes from 1’s killing 2’s with colicin.
+For simplicity we suppose that the basic death rates are equal δ1 = δ2 = 1.
+Having done this it is natural to suppose that β1 < β2, for otherwise it is
+clear that the 1’s will out compete the 2’s.
+The mean-ﬁeld ODE is:
+du1
+dt = β1u1(1 −u1 −u2) −δ1u1,
+(9)
+du2
+dt = β2u2(1 −u1 −u2) −u2(δ2 + γu1).
+A little algebra shows that when
+δi < βi
+and
+δ2
+β2
+< δ1
+β1
+< δ2 + γ
+β2 + γ
+the mean-ﬁeld ODE has an interior ﬁxed point but it is unstable. Figure 6
+shows the situation when β1 = 3, γ1 = 2.5 and β2 = 4.
+Figure 7 gives the density versus time in the system on a 200 × 200 grid.
+To emphasize that the behavior is diﬀerent from the ODE, we start the gray
+
+14
+R. DURRETT
+colicin producer (1’s) at a small density. By time 1000 it has eliminated the
+black colicin sensitive strain (2’s). The other panel shows the state at time
+600. Note that the two types have segregated. A movie would show that the
+interface moves in a direction that favors the 1’s.
+Problem 6.
+Show that coexistence is not possible in the colicin model
+when β1 < β2 and δ1 = δ2 = 1.
+Case 3. Cyclic systems, periodic orbits.
+In this case, we see coexistence
+with signiﬁcant spatial structure. The pictures are pretty but the problems
+are hard.
+Example 3.1. Multitype biased voter model.
+Each site can be in state 1,
+2, ...,k, and j →i at rate fiλij. In words, i’s eat j’s at rate λij. The mean
+ﬁeld ODE is
+dui
+dt = ui
+X
+j
+
+SOURCE LINE 530 
+ PDE, which can be done with comparison techniques because of monotonic-
+ity properties of system (u1,−u2). Once the PDE result is established the
+rest is a routine application of the block construction.
+Example 2.3. Colicin.
+Durrett and Levin (1997) considered a competi-
+tion between two types of E. coli, one of which produces colicin (a chemical
+that kills other E. coli):
+Birth
+Rate
+Death
+Rate
+0 →1
+β1f1
+1 →0
+δ1
+0 →2
+β2f2
+2 →0
+δ2 + γf1
+Here the rates are like the two-species contact process, except for the
+γf1 in the death rate 2 →0, which comes from 1’s killing 2’s with colicin.
+For simplicity we suppose that the basic death rates are equal δ1 = δ2 = 1.
+Having done this it is natural to suppose that β1 < β2, for otherwise it is
+clear that the 1’s will out compete the 2’s.
+The mean-ﬁeld ODE is:
+du1
+dt = β1u1(1 −u1 −u2) −δ1u1,
+(9)
+du2
+dt = β2u2(1 −u1 −u2) −u2(δ2 + γu1).
+A little algebra shows that when
+δi < βi
+and
+δ2
+β2
+< δ1
+β1
+< δ2 + γ
+β2 + γ
+the mean-ﬁeld ODE has an interior ﬁxed point but it is unstable. Figure 6
+shows the situation when β1 = 3, γ1 = 2.5 and β2 = 4.
+Figure 7 gives the density versus time in the system on a 200 × 200 grid.
+To emphasize that the behavior is diﬀerent from the ODE, we start the gray
+
+14
+R. DURRETT
+colicin producer (1’s) at a small density. By time 1000 it has eliminated the
+black colicin sensitive strain (2’s). The other panel shows the state at time
+600. Note that the two types have segregated. A movie would show that the
+interface moves in a direction that favors the 1’s.
+Problem 6.
+Show that coexistence is not possible in the colicin model
+when β1 < β2 and δ1 = δ2 = 1.
+Case 3. Cyclic systems, periodic orbits.
+In this case, we see coexistence
+with signiﬁcant spatial structure. The pictures are pretty but the problems
+are hard.
+Example 3.1. Multitype biased voter model.
+Each site can be in state 1,
+2, ...,k, and j →i at rate fiλij. In words, i’s eat j’s at rate λij. The mean
+ﬁeld ODE is
+dui
+dt = ui
+X
+j
+(λij −λji)uj.
+Silvertown et al. (1992) who were interested in the competition of grass
+species, studied the ﬁve species case in which
+λij =
+
+
+
+
+
+
+0
+0.09
+0.32
+0.23
+0.37
+
+SOURCE LINE 556 
+ dt = β1u1(1 −u1 −u2) −δ1u1,
+(9)
+du2
+dt = β2u2(1 −u1 −u2) −u2(δ2 + γu1).
+A little algebra shows that when
+δi < βi
+and
+δ2
+β2
+< δ1
+β1
+< δ2 + γ
+β2 + γ
+the mean-ﬁeld ODE has an interior ﬁxed point but it is unstable. Figure 6
+shows the situation when β1 = 3, γ1 = 2.5 and β2 = 4.
+Figure 7 gives the density versus time in the system on a 200 × 200 grid.
+To emphasize that the behavior is diﬀerent from the ODE, we start the gray
+
+14
+R. DURRETT
+colicin producer (1’s) at a small density. By time 1000 it has eliminated the
+black colicin sensitive strain (2’s). The other panel shows the state at time
+600. Note that the two types have segregated. A movie would show that the
+interface moves in a direction that favors the 1’s.
+Problem 6.
+Show that coexistence is not possible in the colicin model
+when β1 < β2 and δ1 = δ2 = 1.
+Case 3. Cyclic systems, periodic orbits.
+In this case, we see coexistence
+with signiﬁcant spatial structure. The pictures are pretty but the problems
+are hard.
+Example 3.1. Multitype biased voter model.
+Each site can be in state 1,
+2, ...,k, and j →i at rate fiλij. In words, i’s eat j’s at rate λij. The mean
+ﬁeld ODE is
+dui
+dt = ui
+X
+j
+(λij −λji)uj.
+Silvertown et al. (1992) who were interested in the competition of grass
+species, studied the ﬁve species case in which
+λij =
+
+
+
+
+
+
+0
+0.09
+0.32
+0.23
+0.37
+0.08
+0
+0.16
+0.06
+0.09
+0.06
+0.06
+0
+0.44
+0.11
+0.02
+0.06
+0.05
+0
+0.03
+0.02
+0.03
+0.05
+0.03
+0
+
+
+
+
+
+
+
+SOURCE LINE 557 
+ (9)
+du2
+dt = β2u2(1 −u1 −u2) −u2(δ2 + γu1).
+A little algebra shows that when
+δi < βi
+and
+δ2
+β2
+< δ1
+β1
+< δ2 + γ
+β2 + γ
+the mean-ﬁeld ODE has an interior ﬁxed point but it is unstable. Figure 6
+shows the situation when β1 = 3, γ1 = 2.5 and β2 = 4.
+Figure 7 gives the density versus time in the system on a 200 × 200 grid.
+To emphasize that the behavior is diﬀerent from the ODE, we start the gray
+
+14
+R. DURRETT
+colicin producer (1’s) at a small density. By time 1000 it has eliminated the
+black colicin sensitive strain (2’s). The other panel shows the state at time
+600. Note that the two types have segregated. A movie would show that the
+interface moves in a direction that favors the 1’s.
+Problem 6.
+Show that coexistence is not possible in the colicin model
+when β1 < β2 and δ1 = δ2 = 1.
+Case 3. Cyclic systems, periodic orbits.
+In this case, we see coexistence
+with signiﬁcant spatial structure. The pictures are pretty but the problems
+are hard.
+Example 3.1. Multitype biased voter model.
+Each site can be in state 1,
+2, ...,k, and j →i at rate fiλij. In words, i’s eat j’s at rate λij. The mean
+ﬁeld ODE is
+dui
+dt = ui
+X
+j
+(λij −λji)uj.
+Silvertown et al. (1992) who were interested in the competition of grass
+species, studied the ﬁve species case in which
+λij =
+
+
+
+
+
+
+0
+0.09
+0.32
+0.23
+0.37
+0.08
+0
+0.16
+0.06
+0.09
+0.06
+0.06
+0
+0.44
+0.11
+0.02
+0.06
+0.05
+0
+0.03
+0.02
+0.03
+0.05
+0.03
+0
+
+
+
+
+
+
+.
+
+SOURCE LINE 560 
+ A little algebra shows that when
+δi < βi
+and
+δ2
+β2
+< δ1
+β1
+< δ2 + γ
+β2 + γ
+the mean-ﬁeld ODE has an interior ﬁxed point but it is unstable. Figure 6
+shows the situation when β1 = 3, γ1 = 2.5 and β2 = 4.
+Figure 7 gives the density versus time in the system on a 200 × 200 grid.
+To emphasize that the behavior is diﬀerent from the ODE, we start the gray
+
+14
+R. DURRETT
+colicin producer (1’s) at a small density. By time 1000 it has eliminated the
+black colicin sensitive strain (2’s). The other panel shows the state at time
+600. Note that the two types have segregated. A movie would show that the
+interface moves in a direction that favors the 1’s.
+Problem 6.
+Show that coexistence is not possible in the colicin model
+when β1 < β2 and δ1 = δ2 = 1.
+Case 3. Cyclic systems, periodic orbits.
+In this case, we see coexistence
+with signiﬁcant spatial structure. The pictures are pretty but the problems
+are hard.
+Example 3.1. Multitype biased voter model.
+Each site can be in state 1,
+2, ...,k, and j →i at rate fiλij. In words, i’s eat j’s at rate λij. The mean
+ﬁeld ODE is
+dui
+dt = ui
+X
+j
+(λij −λji)uj.
+Silvertown et al. (1992) who were interested in the competition of grass
+species, studied the ﬁve species case in which
+λij =
+
+
+
+
+
+
+0
+0.09
+0.32
+0.23
+0.37
+0.08
+0
+0.16
+0.06
+0.09
+0.06
+0.06
+0
+0.44
+0.11
+0.02
+0.06
+0.05
+0
+0.03
+0.02
+0.03
+0.05
+0.03
+0
+
+
+
+
+
+
+.
+This example is not very interesting because λ1j > λj1 for 2 ≤j ≤5, so using
+ideas of Grannan and Swindle (1990) and their improvement by Mountford
+Fig. 7.
+
+SOURCE LINE 561 
+ δi < βi
+and
+δ2
+β2
+< δ1
+β1
+< δ2 + γ
+β2 + γ
+the mean-ﬁeld ODE has an interior ﬁxed point but it is unstable. Figure 6
+shows the situation when β1 = 3, γ1 = 2.5 and β2 = 4.
+Figure 7 gives the density versus time in the system on a 200 × 200 grid.
+To emphasize that the behavior is diﬀerent from the ODE, we start the gray
+
+14
+R. DURRETT
+colicin producer (1’s) at a small density. By time 1000 it has eliminated the
+black colicin sensitive strain (2’s). The other panel shows the state at time
+600. Note that the two types have segregated. A movie would show that the
+interface moves in a direction that favors the 1’s.
+Problem 6.
+Show that coexistence is not possible in the colicin model
+when β1 < β2 and δ1 = δ2 = 1.
+Case 3. Cyclic systems, periodic orbits.
+In this case, we see coexistence
+with signiﬁcant spatial structure. The pictures are pretty but the problems
+are hard.
+Example 3.1. Multitype biased voter model.
+Each site can be in state 1,
+2, ...,k, and j →i at rate fiλij. In words, i’s eat j’s at rate λij. The mean
+ﬁeld ODE is
+dui
+dt = ui
+X
+j
+(λij −λji)uj.
+Silvertown et al. (1992) who were interested in the competition of grass
+species, studied the ﬁve species case in which
+λij =
+
+
+
+
+
+
+0
+0.09
+0.32
+0.23
+0.37
+0.08
+0
+0.16
+0.06
+0.09
+0.06
+0.06
+0
+0.44
+0.11
+0.02
+0.06
+0.05
+0
+0.03
+0.02
+0.03
+0.05
+0.03
+0
+
+
+
+
+
+
+.
+This example is not very interesting because λ1j > λj1 for 2 ≤j ≤5, so using
+ideas of Grannan and Swindle (1990) and their improvement by Mountford
+Fig. 7.
+Simulation of colicin model. Producers (1’s) are gray; sensitive strain (2’s) is
+
+SOURCE LINE 620 
+ 0.02
+0.06
+0.05
+0
+0.03
+0.02
+0.03
+0.05
+0.03
+0
+
+
+
+
+
+
+.
+This example is not very interesting because λ1j > λj1 for 2 ≤j ≤5, so using
+ideas of Grannan and Swindle (1990) and their improvement by Mountford
+Fig. 7.
+Simulation of colicin model. Producers (1’s) are gray; sensitive strain (2’s) is
+black.
+
+STOCHASTIC SPATIAL MODELS
+15
+and Sudbury (1992) one can show that if A1
+t is the event 1’s are alive at
+time t then P(A1
+t ,ξt(x) ̸= 1) →0 so if the 1’s do not die out they take over
+the system. The key to the proof is that if θ is small
+Zt =
+X
+z:ξt(z)=1
+e−θ|z|
+is a submartingale.
+Durrett and Levin (1998) studied the cyclic case in which λ13 = β1,
+λ21 = β2, λ32 = β3, and the other λij = 0. This system with βi = 1 and the
+corresponding discrete time deterministic cellular automata had been stud-
+ied earlier by Bramson and Griﬀeath (1989), Fisch, Gravner and Griﬀeath
+(1991) and Durrett and Griﬀeath (1993). The mean-ﬁeld ODE has equilib-
+rium: ρi = βi−1/(β1 + β2 + β3) where i −1 is computed modulo 3 with the
+result in {1,2,3}. Around this ﬁxed point are concentric periodic orbits. See
+Figure 8 for an example. To prove mathematically that this occurs, write
+H(u) = P
+i ρi log ui and check that H(u) is constant along solutions of the
+ODE.
+Problem 7.
+Show that coexistence always occurs in the cyclic case of
+Silvertown’s model.
+For partial credit show that coexistence can occur for some parameters.
+Figure 9 gives a proof by simulation.
+Interlude: lizard love.
+Systems with a cyclic relationship exist in na-
+ture. In the side-blotched lizard (Uta stansburiana), males have one of three
+throat colors, each one declaring a particular strategy. Dominant, orange-
+throated males establish large territories within which live several females.
+But these territories are vulnerable to inﬁltration by males with yellow-
+striped throats—known as sneakers—who mimic the markings and behav-
+ior of receptive females. The orange males can’t successfully defend all their
+Fig. 8.
+Cyclic particle system with β1 = 0.3, β2 = 0.7, β3 = 1.0.
+
+16
+R. DURRETT
+Fig. 9.
+Cyclic particle system with β1 = 0.3, β2 = 0.7, β3 = 1.0. 1’s are black, 2’s white,
+3’s gray.
+females against these disguised interlopers, who cluster on the fringes of the
+territories held by the orange lizards.
+However, a large population of sneakers, which have no territory of their
+own to defend, can be quickly overrun by blue-throated males, who defend
+territories large enough to hold just one female. Sneakers have no chance
+against a vigilant, blue-throated guard. But once the sneakers become rare,
+powerful orange males ﬂourish, grabbing territory and females from the blue
+lizards. Now, the blue males lose out. See Sinervo and Lively (1996) for more
+on these lizards.
+Example 3.2. Three species colicin.
+Durrett and Levin (1997) considered
+an E. coli competition model with rates
+Birth
+
+SOURCE LINE 676 
+ But these territories are vulnerable to inﬁltration by males with yellow-
+striped throats—known as sneakers—who mimic the markings and behav-
+ior of receptive females. The orange males can’t successfully defend all their
+Fig. 8.
+Cyclic particle system with β1 = 0.3, β2 = 0.7, β3 = 1.0.
+
+16
+R. DURRETT
+Fig. 9.
+Cyclic particle system with β1 = 0.3, β2 = 0.7, β3 = 1.0. 1’s are black, 2’s white,
+3’s gray.
+females against these disguised interlopers, who cluster on the fringes of the
+territories held by the orange lizards.
+However, a large population of sneakers, which have no territory of their
+own to defend, can be quickly overrun by blue-throated males, who defend
+territories large enough to hold just one female. Sneakers have no chance
+against a vigilant, blue-throated guard. But once the sneakers become rare,
+powerful orange males ﬂourish, grabbing territory and females from the blue
+lizards. Now, the blue males lose out. See Sinervo and Lively (1996) for more
+on these lizards.
+Example 3.2. Three species colicin.
+Durrett and Levin (1997) considered
+an E. coli competition model with rates
+Birth
+Rate
+Death
+Rate
+0 →1
+β1f1
+1 →0
+δ1
+0 →2
+β2f2
+2 →0
+δ2
+0 →3
+β3f3
+3 →0
+δ3 + γ1f1 + γ2f2
+Here, 1’s and 2’s are colicin producers, while 3 is colicin sensitive. In the
+two species system (we conjecture) there is no coexistence, but as we will
+see coexistence is possible with three species.
+Consider for concreteness, the situation when δi = 1, β1 = 3, β2 = 3.2,
+β3 = 4.0, γ1 = 3 and γ2 = 0.5. In this case the 2’s beat the 1’s since they have
+a larger birth rate, the 3’s beat the 2’s since the colicin they make is not
+nasty enough, while the 1’s beat the 3’s. Thus again the three competitors
+have the same relationship as in the child’s game paper-rock-scissors.
+The mean-ﬁeld ODE is similar to (9):
+du1
+dt = β1u1(1 −u1 −u2 −u3) −δ1u1,
+
+STOCHASTIC SPATIAL MODELS
+17
+du2
+dt = β2u2(1 −u1 −u2 −u3) −δ2u2,
+(10)
+du3
+dt = β3u3(1 −u1 −u2 −u3) −u3(δ3 + γ1u1 + γ2u2).
+Figure 10 gives a picture of the mean-ﬁeld ODE in the concrete case
+considered above as we look down into the tetrahedron ui ≥0, u1 +u2 +u3 ≤
+1. On the (u1,0,u3) and (0,u2,u3) faces we see the colicin ODE, while on the
+(u1,u2,0) face we have the competing contact process. As in the competing
+contact process comparing the ﬁrst two equations shows that there is ﬁxed
+point with u1u2 > 0 when β1/δ1 ̸= β2/δ2.
+Figure 11 gives a simulation. The graph gives the numbers of the diﬀerent
+types on a 200 × 200 grid, while the picture gives a snapshot of part of the
+system at the ﬁnal time.
+Problem 8.
+Show that coexistence can occur in the three species colicin
+model.
+Fig. 10.
+Three species colicin mean-ﬁeld ODE.
+Fig. 11.
+Three species colicin simulation: 1’s black, 2’s darker gray, 3’s lighter gray.
+
+18
+R. DURRETT
+Coexistence has been veriﬁed experimentally by Kirkup and Riley (2004).
+They began with a sensitive strain (S) of E. coli, introduced colicin plasmids
+to make a colicin-producing strain (C), and exposed the sensitive strain to
+
+SOURCE LINE 695 
+ on these lizards.
+Example 3.2. Three species colicin.
+Durrett and Levin (1997) considered
+an E. coli competition model with rates
+Birth
+Rate
+Death
+Rate
+0 →1
+β1f1
+1 →0
+δ1
+0 →2
+β2f2
+2 →0
+δ2
+0 →3
+β3f3
+3 →0
+δ3 + γ1f1 + γ2f2
+Here, 1’s and 2’s are colicin producers, while 3 is colicin sensitive. In the
+two species system (we conjecture) there is no coexistence, but as we will
+see coexistence is possible with three species.
+Consider for concreteness, the situation when δi = 1, β1 = 3, β2 = 3.2,
+β3 = 4.0, γ1 = 3 and γ2 = 0.5. In this case the 2’s beat the 1’s since they have
+a larger birth rate, the 3’s beat the 2’s since the colicin they make is not
+nasty enough, while the 1’s beat the 3’s. Thus again the three competitors
+have the same relationship as in the child’s game paper-rock-scissors.
+The mean-ﬁeld ODE is similar to (9):
+du1
+dt = β1u1(1 −u1 −u2 −u3) −δ1u1,
+
+STOCHASTIC SPATIAL MODELS
+17
+du2
+dt = β2u2(1 −u1 −u2 −u3) −δ2u2,
+(10)
+du3
+dt = β3u3(1 −u1 −u2 −u3) −u3(δ3 + γ1u1 + γ2u2).
+Figure 10 gives a picture of the mean-ﬁeld ODE in the concrete case
+considered above as we look down into the tetrahedron ui ≥0, u1 +u2 +u3 ≤
+1. On the (u1,0,u3) and (0,u2,u3) faces we see the colicin ODE, while on the
+(u1,u2,0) face we have the competing contact process. As in the competing
+contact process comparing the ﬁrst two equations shows that there is ﬁxed
+point with u1u2 > 0 when β1/δ1 ̸= β2/δ2.
+Figure 11 gives a simulation. The graph gives the numbers of the diﬀerent
+types on a 200 × 200 grid, while the picture gives a snapshot of part of the
+system at the ﬁnal time.
+Problem 8.
+Show that coexistence can occur in the three species colicin
+model.
+Fig. 10.
+Three species colicin mean-ﬁeld ODE.
+Fig. 11.
+Three species colicin simulation: 1’s black, 2’s darker gray, 3’s lighter gray.
+
+18
+R. DURRETT
+Coexistence has been veriﬁed experimentally by Kirkup and Riley (2004).
+They began with a sensitive strain (S) of E. coli, introduced colicin plasmids
+to make a colicin-producing strain (C), and exposed the sensitive strain to
+the colicin-producer to obtain a resistant strain (R). A number of unlucky
+mice were then chosen to have the competition drama play out in their
+colons. After reading the paper, I think I will stick to computer simulations.
+In four cases, the experiment had to be discontinued because the mice were
+ﬁghting or several mice died.
+Example 3.3. Spatial Prisoner’s Dilemma.
+This time we allow multiple
+hawks ηt(x) and doves ζt(x) at each site.
+• Migration. Each individual at rate ν migrates to a nearest neighbor.
+• Death due to crowding. Each individual at x dies at rate κ(ηt(x) + ζt(x)).
+• Game step. Let pt(x) be the fraction of hawks in the 5×5 square centered
+at x. Hawks give birth (or death) at rate apt(x) + b(1 −pt(x)), doves at
+rate cpt(x) + d(1 −pt(x)).
+Here, “birth (or death)” means that if the quantity is positive it is a birth
+rate, but if it is negative it is −1 times a death rate.
+An interesting choice for the game matrix is a Prisoner’s Dilemma
+H
+D
+H
+
+SOURCE LINE 700 
+ Rate
+Death
+Rate
+0 →1
+β1f1
+1 →0
+δ1
+0 →2
+β2f2
+2 →0
+δ2
+0 →3
+β3f3
+3 →0
+δ3 + γ1f1 + γ2f2
+Here, 1’s and 2’s are colicin producers, while 3 is colicin sensitive. In the
+two species system (we conjecture) there is no coexistence, but as we will
+see coexistence is possible with three species.
+Consider for concreteness, the situation when δi = 1, β1 = 3, β2 = 3.2,
+β3 = 4.0, γ1 = 3 and γ2 = 0.5. In this case the 2’s beat the 1’s since they have
+a larger birth rate, the 3’s beat the 2’s since the colicin they make is not
+nasty enough, while the 1’s beat the 3’s. Thus again the three competitors
+have the same relationship as in the child’s game paper-rock-scissors.
+The mean-ﬁeld ODE is similar to (9):
+du1
+dt = β1u1(1 −u1 −u2 −u3) −δ1u1,
+
+STOCHASTIC SPATIAL MODELS
+17
+du2
+dt = β2u2(1 −u1 −u2 −u3) −δ2u2,
+(10)
+du3
+dt = β3u3(1 −u1 −u2 −u3) −u3(δ3 + γ1u1 + γ2u2).
+Figure 10 gives a picture of the mean-ﬁeld ODE in the concrete case
+considered above as we look down into the tetrahedron ui ≥0, u1 +u2 +u3 ≤
+1. On the (u1,0,u3) and (0,u2,u3) faces we see the colicin ODE, while on the
+(u1,u2,0) face we have the competing contact process. As in the competing
+contact process comparing the ﬁrst two equations shows that there is ﬁxed
+point with u1u2 > 0 when β1/δ1 ̸= β2/δ2.
+Figure 11 gives a simulation. The graph gives the numbers of the diﬀerent
+types on a 200 × 200 grid, while the picture gives a snapshot of part of the
+system at the ﬁnal time.
+Problem 8.
+Show that coexistence can occur in the three species colicin
+model.
+Fig. 10.
+Three species colicin mean-ﬁeld ODE.
+Fig. 11.
+Three species colicin simulation: 1’s black, 2’s darker gray, 3’s lighter gray.
+
+18
+R. DURRETT
+Coexistence has been veriﬁed experimentally by Kirkup and Riley (2004).
+They began with a sensitive strain (S) of E. coli, introduced colicin plasmids
+to make a colicin-producing strain (C), and exposed the sensitive strain to
+the colicin-producer to obtain a resistant strain (R). A number of unlucky
+mice were then chosen to have the competition drama play out in their
+colons. After reading the paper, I think I will stick to computer simulations.
+In four cases, the experiment had to be discontinued because the mice were
+ﬁghting or several mice died.
+Example 3.3. Spatial Prisoner’s Dilemma.
+This time we allow multiple
+hawks ηt(x) and doves ζt(x) at each site.
+• Migration. Each individual at rate ν migrates to a nearest neighbor.
+• Death due to crowding. Each individual at x dies at rate κ(ηt(x) + ζt(x)).
+• Game step. Let pt(x) be the fraction of hawks in the 5×5 square centered
+at x. Hawks give birth (or death) at rate apt(x) + b(1 −pt(x)), doves at
+rate cpt(x) + d(1 −pt(x)).
+Here, “birth (or death)” means that if the quantity is positive it is a birth
+rate, but if it is negative it is −1 times a death rate.
+An interesting choice for the game matrix is a Prisoner’s Dilemma
+H
+D
+H
+a = −0.6
+b = 0.9
+D
+c = −0.9
+d = 0.7
+
+SOURCE LINE 716 
+ two species system (we conjecture) there is no coexistence, but as we will
+see coexistence is possible with three species.
+Consider for concreteness, the situation when δi = 1, β1 = 3, β2 = 3.2,
+β3 = 4.0, γ1 = 3 and γ2 = 0.5. In this case the 2’s beat the 1’s since they have
+a larger birth rate, the 3’s beat the 2’s since the colicin they make is not
+nasty enough, while the 1’s beat the 3’s. Thus again the three competitors
+have the same relationship as in the child’s game paper-rock-scissors.
+The mean-ﬁeld ODE is similar to (9):
+du1
+dt = β1u1(1 −u1 −u2 −u3) −δ1u1,
+
+STOCHASTIC SPATIAL MODELS
+17
+du2
+dt = β2u2(1 −u1 −u2 −u3) −δ2u2,
+(10)
+du3
+dt = β3u3(1 −u1 −u2 −u3) −u3(δ3 + γ1u1 + γ2u2).
+Figure 10 gives a picture of the mean-ﬁeld ODE in the concrete case
+considered above as we look down into the tetrahedron ui ≥0, u1 +u2 +u3 ≤
+1. On the (u1,0,u3) and (0,u2,u3) faces we see the colicin ODE, while on the
+(u1,u2,0) face we have the competing contact process. As in the competing
+contact process comparing the ﬁrst two equations shows that there is ﬁxed
+point with u1u2 > 0 when β1/δ1 ̸= β2/δ2.
+Figure 11 gives a simulation. The graph gives the numbers of the diﬀerent
+types on a 200 × 200 grid, while the picture gives a snapshot of part of the
+system at the ﬁnal time.
+Problem 8.
+Show that coexistence can occur in the three species colicin
+model.
+Fig. 10.
+Three species colicin mean-ﬁeld ODE.
+Fig. 11.
+Three species colicin simulation: 1’s black, 2’s darker gray, 3’s lighter gray.
+
+18
+R. DURRETT
+Coexistence has been veriﬁed experimentally by Kirkup and Riley (2004).
+They began with a sensitive strain (S) of E. coli, introduced colicin plasmids
+to make a colicin-producing strain (C), and exposed the sensitive strain to
+the colicin-producer to obtain a resistant strain (R). A number of unlucky
+mice were then chosen to have the competition drama play out in their
+colons. After reading the paper, I think I will stick to computer simulations.
+In four cases, the experiment had to be discontinued because the mice were
+ﬁghting or several mice died.
+Example 3.3. Spatial Prisoner’s Dilemma.
+This time we allow multiple
+hawks ηt(x) and doves ζt(x) at each site.
+• Migration. Each individual at rate ν migrates to a nearest neighbor.
+• Death due to crowding. Each individual at x dies at rate κ(ηt(x) + ζt(x)).
+• Game step. Let pt(x) be the fraction of hawks in the 5×5 square centered
+at x. Hawks give birth (or death) at rate apt(x) + b(1 −pt(x)), doves at
+rate cpt(x) + d(1 −pt(x)).
+Here, “birth (or death)” means that if the quantity is positive it is a birth
+rate, but if it is negative it is −1 times a death rate.
+An interesting choice for the game matrix is a Prisoner’s Dilemma
+H
+D
+H
+a = −0.6
+b = 0.9
+D
+c = −0.9
+d = 0.7
+The H strategy dominates D, so it is the better choice, but the payoﬀ
+for (D,D) is better than that for (H,H). This is the Prisoner’s Dilemma
+“paradox.” If everyone played D then the world would be a nice place, but
+this leads to the temptation to play H and increase your payoﬀ.
+Fig. 12.
+Hawks–Doves ODE.
+
+STOCHASTIC SPATIAL MODELS
+19
+In a homogeneously mixing population the densities of Hawks (u) and
+Doves (v) would evolve according to
+du
+dt = u
+
+a
+u
+
+SOURCE LINE 724 
+ du1
+dt = β1u1(1 −u1 −u2 −u3) −δ1u1,
+
+STOCHASTIC SPATIAL MODELS
+17
+du2
+dt = β2u2(1 −u1 −u2 −u3) −δ2u2,
+(10)
+du3
+dt = β3u3(1 −u1 −u2 −u3) −u3(δ3 + γ1u1 + γ2u2).
+Figure 10 gives a picture of the mean-ﬁeld ODE in the concrete case
+considered above as we look down into the tetrahedron ui ≥0, u1 +u2 +u3 ≤
+1. On the (u1,0,u3) and (0,u2,u3) faces we see the colicin ODE, while on the
+(u1,u2,0) face we have the competing contact process. As in the competing
+contact process comparing the ﬁrst two equations shows that there is ﬁxed
+point with u1u2 > 0 when β1/δ1 ̸= β2/δ2.
+Figure 11 gives a simulation. The graph gives the numbers of the diﬀerent
+types on a 200 × 200 grid, while the picture gives a snapshot of part of the
+system at the ﬁnal time.
+Problem 8.
+Show that coexistence can occur in the three species colicin
+model.
+Fig. 10.
+Three species colicin mean-ﬁeld ODE.
+Fig. 11.
+Three species colicin simulation: 1’s black, 2’s darker gray, 3’s lighter gray.
+
+18
+R. DURRETT
+Coexistence has been veriﬁed experimentally by Kirkup and Riley (2004).
+They began with a sensitive strain (S) of E. coli, introduced colicin plasmids
+to make a colicin-producing strain (C), and exposed the sensitive strain to
+the colicin-producer to obtain a resistant strain (R). A number of unlucky
+mice were then chosen to have the competition drama play out in their
+colons. After reading the paper, I think I will stick to computer simulations.
+In four cases, the experiment had to be discontinued because the mice were
+ﬁghting or several mice died.
+Example 3.3. Spatial Prisoner’s Dilemma.
+This time we allow multiple
+hawks ηt(x) and doves ζt(x) at each site.
+• Migration. Each individual at rate ν migrates to a nearest neighbor.
+• Death due to crowding. Each individual at x dies at rate κ(ηt(x) + ζt(x)).
+• Game step. Let pt(x) be the fraction of hawks in the 5×5 square centered
+at x. Hawks give birth (or death) at rate apt(x) + b(1 −pt(x)), doves at
+rate cpt(x) + d(1 −pt(x)).
+Here, “birth (or death)” means that if the quantity is positive it is a birth
+rate, but if it is negative it is −1 times a death rate.
+An interesting choice for the game matrix is a Prisoner’s Dilemma
+H
+D
+H
+a = −0.6
+b = 0.9
+D
+c = −0.9
+d = 0.7
+The H strategy dominates D, so it is the better choice, but the payoﬀ
+for (D,D) is better than that for (H,H). This is the Prisoner’s Dilemma
+“paradox.” If everyone played D then the world would be a nice place, but
+this leads to the temptation to play H and increase your payoﬀ.
+Fig. 12.
+Hawks–Doves ODE.
+
+STOCHASTIC SPATIAL MODELS
+19
+In a homogeneously mixing population the densities of Hawks (u) and
+Doves (v) would evolve according to
+du
+dt = u
+
+a
+u
+u + v + b
+v
+u + v −κ(u + v)
+
+,
+(11)
+dv
+dt = v
+
+SOURCE LINE 727 
+ STOCHASTIC SPATIAL MODELS
+17
+du2
+dt = β2u2(1 −u1 −u2 −u3) −δ2u2,
+(10)
+du3
+dt = β3u3(1 −u1 −u2 −u3) −u3(δ3 + γ1u1 + γ2u2).
+Figure 10 gives a picture of the mean-ﬁeld ODE in the concrete case
+considered above as we look down into the tetrahedron ui ≥0, u1 +u2 +u3 ≤
+1. On the (u1,0,u3) and (0,u2,u3) faces we see the colicin ODE, while on the
+(u1,u2,0) face we have the competing contact process. As in the competing
+contact process comparing the ﬁrst two equations shows that there is ﬁxed
+point with u1u2 > 0 when β1/δ1 ̸= β2/δ2.
+Figure 11 gives a simulation. The graph gives the numbers of the diﬀerent
+types on a 200 × 200 grid, while the picture gives a snapshot of part of the
+system at the ﬁnal time.
+Problem 8.
+Show that coexistence can occur in the three species colicin
+model.
+Fig. 10.
+Three species colicin mean-ﬁeld ODE.
+Fig. 11.
+Three species colicin simulation: 1’s black, 2’s darker gray, 3’s lighter gray.
+
+18
+R. DURRETT
+Coexistence has been veriﬁed experimentally by Kirkup and Riley (2004).
+They began with a sensitive strain (S) of E. coli, introduced colicin plasmids
+to make a colicin-producing strain (C), and exposed the sensitive strain to
+the colicin-producer to obtain a resistant strain (R). A number of unlucky
+mice were then chosen to have the competition drama play out in their
+colons. After reading the paper, I think I will stick to computer simulations.
+In four cases, the experiment had to be discontinued because the mice were
+ﬁghting or several mice died.
+Example 3.3. Spatial Prisoner’s Dilemma.
+This time we allow multiple
+hawks ηt(x) and doves ζt(x) at each site.
+• Migration. Each individual at rate ν migrates to a nearest neighbor.
+• Death due to crowding. Each individual at x dies at rate κ(ηt(x) + ζt(x)).
+• Game step. Let pt(x) be the fraction of hawks in the 5×5 square centered
+at x. Hawks give birth (or death) at rate apt(x) + b(1 −pt(x)), doves at
+rate cpt(x) + d(1 −pt(x)).
+Here, “birth (or death)” means that if the quantity is positive it is a birth
+rate, but if it is negative it is −1 times a death rate.
+An interesting choice for the game matrix is a Prisoner’s Dilemma
+H
+D
+H
+a = −0.6
+b = 0.9
+D
+c = −0.9
+d = 0.7
+The H strategy dominates D, so it is the better choice, but the payoﬀ
+for (D,D) is better than that for (H,H). This is the Prisoner’s Dilemma
+“paradox.” If everyone played D then the world would be a nice place, but
+this leads to the temptation to play H and increase your payoﬀ.
+Fig. 12.
+Hawks–Doves ODE.
+
+STOCHASTIC SPATIAL MODELS
+19
+In a homogeneously mixing population the densities of Hawks (u) and
+Doves (v) would evolve according to
+du
+dt = u
+
+a
+u
+u + v + b
+v
+u + v −κ(u + v)
+
+,
+(11)
+dv
+dt = v
+
+c
+u
+
+SOURCE LINE 729 
+ du2
+dt = β2u2(1 −u1 −u2 −u3) −δ2u2,
+(10)
+du3
+dt = β3u3(1 −u1 −u2 −u3) −u3(δ3 + γ1u1 + γ2u2).
+Figure 10 gives a picture of the mean-ﬁeld ODE in the concrete case
+considered above as we look down into the tetrahedron ui ≥0, u1 +u2 +u3 ≤
+1. On the (u1,0,u3) and (0,u2,u3) faces we see the colicin ODE, while on the
+(u1,u2,0) face we have the competing contact process. As in the competing
+contact process comparing the ﬁrst two equations shows that there is ﬁxed
+point with u1u2 > 0 when β1/δ1 ̸= β2/δ2.
+Figure 11 gives a simulation. The graph gives the numbers of the diﬀerent
+types on a 200 × 200 grid, while the picture gives a snapshot of part of the
+system at the ﬁnal time.
+Problem 8.
+Show that coexistence can occur in the three species colicin
+model.
+Fig. 10.
+Three species colicin mean-ﬁeld ODE.
+Fig. 11.
+Three species colicin simulation: 1’s black, 2’s darker gray, 3’s lighter gray.
+
+18
+R. DURRETT
+Coexistence has been veriﬁed experimentally by Kirkup and Riley (2004).
+They began with a sensitive strain (S) of E. coli, introduced colicin plasmids
+to make a colicin-producing strain (C), and exposed the sensitive strain to
+the colicin-producer to obtain a resistant strain (R). A number of unlucky
+mice were then chosen to have the competition drama play out in their
+colons. After reading the paper, I think I will stick to computer simulations.
+In four cases, the experiment had to be discontinued because the mice were
+ﬁghting or several mice died.
+Example 3.3. Spatial Prisoner’s Dilemma.
+This time we allow multiple
+hawks ηt(x) and doves ζt(x) at each site.
+• Migration. Each individual at rate ν migrates to a nearest neighbor.
+• Death due to crowding. Each individual at x dies at rate κ(ηt(x) + ζt(x)).
+• Game step. Let pt(x) be the fraction of hawks in the 5×5 square centered
+at x. Hawks give birth (or death) at rate apt(x) + b(1 −pt(x)), doves at
+rate cpt(x) + d(1 −pt(x)).
+Here, “birth (or death)” means that if the quantity is positive it is a birth
+rate, but if it is negative it is −1 times a death rate.
+An interesting choice for the game matrix is a Prisoner’s Dilemma
+H
+D
+H
+a = −0.6
+b = 0.9
+D
+c = −0.9
+d = 0.7
+The H strategy dominates D, so it is the better choice, but the payoﬀ
+for (D,D) is better than that for (H,H). This is the Prisoner’s Dilemma
+“paradox.” If everyone played D then the world would be a nice place, but
+this leads to the temptation to play H and increase your payoﬀ.
+Fig. 12.
+Hawks–Doves ODE.
+
+STOCHASTIC SPATIAL MODELS
+19
+In a homogeneously mixing population the densities of Hawks (u) and
+Doves (v) would evolve according to
+du
+dt = u
+
+a
+u
+u + v + b
+v
+u + v −κ(u + v)
+
+,
+(11)
+dv
+dt = v
+
+c
+u
+u + v + d
+v
+
+SOURCE LINE 734 
+ Figure 10 gives a picture of the mean-ﬁeld ODE in the concrete case
+considered above as we look down into the tetrahedron ui ≥0, u1 +u2 +u3 ≤
+1. On the (u1,0,u3) and (0,u2,u3) faces we see the colicin ODE, while on the
+(u1,u2,0) face we have the competing contact process. As in the competing
+contact process comparing the ﬁrst two equations shows that there is ﬁxed
+point with u1u2 > 0 when β1/δ1 ̸= β2/δ2.
+Figure 11 gives a simulation. The graph gives the numbers of the diﬀerent
+types on a 200 × 200 grid, while the picture gives a snapshot of part of the
+system at the ﬁnal time.
+Problem 8.
+Show that coexistence can occur in the three species colicin
+model.
+Fig. 10.
+Three species colicin mean-ﬁeld ODE.
+Fig. 11.
+Three species colicin simulation: 1’s black, 2’s darker gray, 3’s lighter gray.
+
+18
+R. DURRETT
+Coexistence has been veriﬁed experimentally by Kirkup and Riley (2004).
+They began with a sensitive strain (S) of E. coli, introduced colicin plasmids
+to make a colicin-producing strain (C), and exposed the sensitive strain to
+the colicin-producer to obtain a resistant strain (R). A number of unlucky
+mice were then chosen to have the competition drama play out in their
+colons. After reading the paper, I think I will stick to computer simulations.
+In four cases, the experiment had to be discontinued because the mice were
+ﬁghting or several mice died.
+Example 3.3. Spatial Prisoner’s Dilemma.
+This time we allow multiple
+hawks ηt(x) and doves ζt(x) at each site.
+• Migration. Each individual at rate ν migrates to a nearest neighbor.
+• Death due to crowding. Each individual at x dies at rate κ(ηt(x) + ζt(x)).
+• Game step. Let pt(x) be the fraction of hawks in the 5×5 square centered
+at x. Hawks give birth (or death) at rate apt(x) + b(1 −pt(x)), doves at
+rate cpt(x) + d(1 −pt(x)).
+Here, “birth (or death)” means that if the quantity is positive it is a birth
+rate, but if it is negative it is −1 times a death rate.
+An interesting choice for the game matrix is a Prisoner’s Dilemma
+H
+D
+H
+a = −0.6
+b = 0.9
+D
+c = −0.9
+d = 0.7
+The H strategy dominates D, so it is the better choice, but the payoﬀ
+for (D,D) is better than that for (H,H). This is the Prisoner’s Dilemma
+“paradox.” If everyone played D then the world would be a nice place, but
+this leads to the temptation to play H and increase your payoﬀ.
+Fig. 12.
+Hawks–Doves ODE.
+
+STOCHASTIC SPATIAL MODELS
+19
+In a homogeneously mixing population the densities of Hawks (u) and
+Doves (v) would evolve according to
+du
+dt = u
+
+a
+u
+u + v + b
+v
+u + v −κ(u + v)
+
+,
+(11)
+dv
+dt = v
+
+c
+u
+u + v + d
+v
+u + v −κ(u + v)
+
+.
+In the concrete example under consideration, we have the following behavior.
+On the vertical axis one can see that in the absence of Hawks, Doves reach
+
+SOURCE LINE 735 
+ considered above as we look down into the tetrahedron ui ≥0, u1 +u2 +u3 ≤
+1. On the (u1,0,u3) and (0,u2,u3) faces we see the colicin ODE, while on the
+(u1,u2,0) face we have the competing contact process. As in the competing
+contact process comparing the ﬁrst two equations shows that there is ﬁxed
+point with u1u2 > 0 when β1/δ1 ̸= β2/δ2.
+Figure 11 gives a simulation. The graph gives the numbers of the diﬀerent
+types on a 200 × 200 grid, while the picture gives a snapshot of part of the
+system at the ﬁnal time.
+Problem 8.
+Show that coexistence can occur in the three species colicin
+model.
+Fig. 10.
+Three species colicin mean-ﬁeld ODE.
+Fig. 11.
+Three species colicin simulation: 1’s black, 2’s darker gray, 3’s lighter gray.
+
+18
+R. DURRETT
+Coexistence has been veriﬁed experimentally by Kirkup and Riley (2004).
+They began with a sensitive strain (S) of E. coli, introduced colicin plasmids
+to make a colicin-producing strain (C), and exposed the sensitive strain to
+the colicin-producer to obtain a resistant strain (R). A number of unlucky
+mice were then chosen to have the competition drama play out in their
+colons. After reading the paper, I think I will stick to computer simulations.
+In four cases, the experiment had to be discontinued because the mice were
+ﬁghting or several mice died.
+Example 3.3. Spatial Prisoner’s Dilemma.
+This time we allow multiple
+hawks ηt(x) and doves ζt(x) at each site.
+• Migration. Each individual at rate ν migrates to a nearest neighbor.
+• Death due to crowding. Each individual at x dies at rate κ(ηt(x) + ζt(x)).
+• Game step. Let pt(x) be the fraction of hawks in the 5×5 square centered
+at x. Hawks give birth (or death) at rate apt(x) + b(1 −pt(x)), doves at
+rate cpt(x) + d(1 −pt(x)).
+Here, “birth (or death)” means that if the quantity is positive it is a birth
+rate, but if it is negative it is −1 times a death rate.
+An interesting choice for the game matrix is a Prisoner’s Dilemma
+H
+D
+H
+a = −0.6
+b = 0.9
+D
+c = −0.9
+d = 0.7
+The H strategy dominates D, so it is the better choice, but the payoﬀ
+for (D,D) is better than that for (H,H). This is the Prisoner’s Dilemma
+“paradox.” If everyone played D then the world would be a nice place, but
+this leads to the temptation to play H and increase your payoﬀ.
+Fig. 12.
+Hawks–Doves ODE.
+
+STOCHASTIC SPATIAL MODELS
+19
+In a homogeneously mixing population the densities of Hawks (u) and
+Doves (v) would evolve according to
+du
+dt = u
+
+a
+u
+u + v + b
+v
+u + v −κ(u + v)
+
+,
+(11)
+dv
+dt = v
+
+c
+u
+u + v + d
+v
+u + v −κ(u + v)
+
+.
+In the concrete example under consideration, we have the following behavior.
+On the vertical axis one can see that in the absence of Hawks, Doves reach
+an equilibrium. However, when both are present, the ratio of Hawks to Doves
+
+SOURCE LINE 736 
+ 1. On the (u1,0,u3) and (0,u2,u3) faces we see the colicin ODE, while on the
+(u1,u2,0) face we have the competing contact process. As in the competing
+contact process comparing the ﬁrst two equations shows that there is ﬁxed
+point with u1u2 > 0 when β1/δ1 ̸= β2/δ2.
+Figure 11 gives a simulation. The graph gives the numbers of the diﬀerent
+types on a 200 × 200 grid, while the picture gives a snapshot of part of the
+system at the ﬁnal time.
+Problem 8.
+Show that coexistence can occur in the three species colicin
+model.
+Fig. 10.
+Three species colicin mean-ﬁeld ODE.
+Fig. 11.
+Three species colicin simulation: 1’s black, 2’s darker gray, 3’s lighter gray.
+
+18
+R. DURRETT
+Coexistence has been veriﬁed experimentally by Kirkup and Riley (2004).
+They began with a sensitive strain (S) of E. coli, introduced colicin plasmids
+to make a colicin-producing strain (C), and exposed the sensitive strain to
+the colicin-producer to obtain a resistant strain (R). A number of unlucky
+mice were then chosen to have the competition drama play out in their
+colons. After reading the paper, I think I will stick to computer simulations.
+In four cases, the experiment had to be discontinued because the mice were
+ﬁghting or several mice died.
+Example 3.3. Spatial Prisoner’s Dilemma.
+This time we allow multiple
+hawks ηt(x) and doves ζt(x) at each site.
+• Migration. Each individual at rate ν migrates to a nearest neighbor.
+• Death due to crowding. Each individual at x dies at rate κ(ηt(x) + ζt(x)).
+• Game step. Let pt(x) be the fraction of hawks in the 5×5 square centered
+at x. Hawks give birth (or death) at rate apt(x) + b(1 −pt(x)), doves at
+rate cpt(x) + d(1 −pt(x)).
+Here, “birth (or death)” means that if the quantity is positive it is a birth
+rate, but if it is negative it is −1 times a death rate.
+An interesting choice for the game matrix is a Prisoner’s Dilemma
+H
+D
+H
+a = −0.6
+b = 0.9
+D
+c = −0.9
+d = 0.7
+The H strategy dominates D, so it is the better choice, but the payoﬀ
+for (D,D) is better than that for (H,H). This is the Prisoner’s Dilemma
+“paradox.” If everyone played D then the world would be a nice place, but
+this leads to the temptation to play H and increase your payoﬀ.
+Fig. 12.
+Hawks–Doves ODE.
+
+STOCHASTIC SPATIAL MODELS
+19
+In a homogeneously mixing population the densities of Hawks (u) and
+Doves (v) would evolve according to
+du
+dt = u
+
+a
+u
+u + v + b
+v
+u + v −κ(u + v)
+
+,
+(11)
+dv
+dt = v
+
+c
+u
+u + v + d
+v
+u + v −κ(u + v)
+
+.
+In the concrete example under consideration, we have the following behavior.
+On the vertical axis one can see that in the absence of Hawks, Doves reach
+an equilibrium. However, when both are present, the ratio of Hawks to Doves
+increases until the population crashes to 0. See Figure 12 for an example.
+ARXIV Kinetics properties of voltage induced colicin Ia channels into a lipid bilayer http://arxiv.org/abs/physics/9806048v2   The activation kinetics of the ion channels formed by colicin Ia incorporated into a planar bilayer lipid membrane (BLM) was investigated by the voltage clamp technique using different step voltage stimuli. The temporal behaviour of ion channels put in evidence a gain or a loss of memory, revealed by a specific sequence of electrical pulses used for stimulation.
+ARXIV More Bang For Your Buck: Quorum-Sensing Capabilities Improve the Efficacy of Suicidal Altruism http://arxiv.org/abs/1406.0416v1 Within the context of evolution, an altruistic act that benefits the receiving individual at the expense of the acting individual is a puzzling phenomenon. An extreme form of altruism can be found in colicinogenic E. coli. These suicidal altruists explode, releasing colicins that kill unrelated individuals, which are not colicin resistant. By committing suicide, the altruist makes it more likely that its kin will have less competition. The benefits of this strategy rely on the number of competitors and kin nearby. If the organism explodes at an inopportune time, the suicidal act may not harm any competitors. Communication could enable organisms to act altruistically when environmental conditions suggest that that strategy would be most beneficial. Quorum sensing is a form of communication in which bacteria produce a protein and gauge the amount of that protein around them. Quorum sensing is one means by which bacteria sense the biotic factors around them and determine when to produce products, such as antibiotics, that influence competition. Suicidal altruists could use quorum sensing to determine when exploding is most beneficial, but it is challenging to study the selective forces at work in microbes. To address these challenges, we use digital evolution (a form of experimental evolution that uses self-replicating computer programs as organisms) to investigate the effects of enabling altruistic organisms to communicate via quorum sensing. We found that quorum-sensing altruists killed a greater number of competitors per explosion, winning competitions against non-communicative altruists. These findings indicate that quorum sensing could increase the beneficial effect of altruism and the suite of conditions under which it will evolve.
+ARXIV CsrA and its regulators control the time-point of ColicinE2 release in Escherichia coli http://arxiv.org/abs/1805.02068v1 The bacterial SOS response is a cellular reaction to DNA damage, that, among other actions, triggers the expression of colicin - toxic bacteriocins in Escherichia coli that are released to kill close relatives competing for resources. However, it is largely unknown, how the complex network regulating toxin expression controls the time-point of toxin release to prevent premature release of inefficient protein concentrations. Here, we study how different regulatory mechanisms affect production and release of the bacteriocin ColicinE2 in Escherichia coli. Combining experimental and theoretical approaches, we demonstrate that the global carbon storage regulator CsrA controls the duration of the delay between toxin production and release and emphasize the importance of CsrA sequestering elements for the timing of ColicinE2 release. In particular, we show that ssDNA originating from rolling-circle replication of the toxin-producing plasmid represents a yet unknown additional CsrA sequestering element, which is essential in the ColicinE2-producing strain to enable toxin release by reducing the amount of free CsrA molecules in the bacterial cell. Taken together, our findings show that CsrA times ColicinE2 release and reveal a dual function for CsrA as an ssDNA and mRNA-binding protein, introducing ssDNA as an important post-transcriptional gene regulatory element.
+CROSSREF ['Mechanism of export of colicin E1 and colicin E3'] 10.1128/jb.138.3.770-778.1979 {'date-parts': [[1979, 6]]} [{'given': 'K S', 'family': 'Jakes', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}, {'given': 'P', 'family': 'Model', 'sequence': 'additional', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['The Colicin E1 TolC-Binding Conformer: Pillar or Pore Function of TolC in Colicin Import?'] 10.1021/acs.biochem.6b00621.s001 None None
+CROSSREF ['Role of Cal, the colicin A lysis protein, in two steps of colicin A release and in the interaction with colicin A–porin complexes'] 10.1099/mic.0.27160-0 {'date-parts': [[2004, 11, 1]]} [{'given': 'Danièle', 'family': 'Cavard', 'sequence': 'first', 'affiliation': [{'name': "Laboratoire d'Ingénierie des Systèmes Macromoléculaires, Centre National de la Recherche Scientifique, 31 Chemin Joseph Aiguier, 13402 Marseille Cedex 20, France"}], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}]
+CROSSREF ['Synthesis and Export of Colicin A and Colicin E1 during Inhibition of Lipid Synthesis'] 10.1111/j.1432-1033.1981.tb06199.x {'date-parts': [[2005, 3, 3]]} [{'given': 'Catherine', 'family': 'BOCQUET', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}, {'given': 'Andrée', 'family': 'LAZDUNSKI', 'sequence': 'additional', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['colicin, n.'] 10.1093/oed/9840653613 {'date-parts': [[2023, 3, 2]]} None
+CROSSREF ['Colicin S8 export: extracellular and cytoplasmic colicin are different'] 10.1007/s10123-003-0139-7 {'date-parts': [[2003, 12, 1]]} [{'given': 'Maria-Elena', 'family': 'Garcia Diaz', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}, {'given': 'Juan Luis', 'family': 'Concepci�n Curbelo', 'sequence': 'additional', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Expression of the bacterial toxin colicin E1 requires the presence of a colicin augmentation function (caf)'] 10.1016/0041-0101(83)90165-4 {'date-parts': [[1983, 1]]} [{'given': 'Anne W.', 'family': 'Emerick', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Regulating colicin synthesis to cope with stress and lethality of colicin production'] 10.1042/bst20120184 {'date-parts': [[2012, 11, 21]]} [{'given': 'Darja', 'family': 'Žgur-Bertok', 'sequence': 'first', 'affiliation': [{'name': 'Department of Biology, Biotechnical Faculty, University of Ljubljana, Večna pot 111, Ljubljana, Slovenia'}], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}]
+CROSSREF ['Synthesis and functioning of the colicin E1 lysis protein: comparison with the colicin A lysis protein'] 10.1128/jb.173.1.191-196.1991 {'date-parts': [[1991, 1]]} [{'given': 'D', 'family': 'Cavard', 'sequence': 'first', 'affiliation': [{'name': 'Centre de Biochimie et de Biologie Moléculaire du C.N.R.S., Marseille, France.'}], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Components and Mechanisms Involved in Colicin Release and Colicin Uptake Across the Cell Envelope in E. coli'] 10.1007/978-3-642-74194-4_21 {'date-parts': [[1990]]} [{'given': 'Claude', 'family': 'Lazdunski', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Evolution of colicin BM plasmids: the loss of the colicin B activity gene'] 10.1099/mic.0.026666-0 {'date-parts': [[2009, 5, 1]]} [{'given': 'Julia K.', 'family': 'Christenson', 'sequence': 'first', 'affiliation': [{'name': 'School of Biology, Australian National University, Canberra, ACT 0200, Australia'}], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}, {'given': 'David M.', 'family': 'Gordon', 'sequence': 'additional', 'affiliation': [{'name': 'School of Biology, Australian National University, Canberra, ACT 0200, Australia'}], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}]
+CROSSREF ['Structural characterization of the interaction of colicin A, colicin N, and TolB with the TolAIII translocon'] 10.2210/pdb3qdr/pdb {'date-parts': [[2011, 1, 19]]} [{'given': 'C.', 'family': 'Li', 'sequence': 'first', 'affiliation': [], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}]
+CROSSREF ['Colicin 24, a New Plasmid-Borne Colicin from a Uropathogenic Strain of Escherichia coli'] 10.1006/plas.1994.1030 {'date-parts': [[1994, 5]]} [{'given': 'Graham J.', 'family': "O'Brien", 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}, {'given': 'H.Khris', 'family': 'Mahanty', 'sequence': 'additional', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Sensitization of Colicin K-Treated Bacteria By Sodium Dodecyl Sulfate: Presence of Free Colicin in Colicin K-Treated Cultures of\n            <i>Escherichia coli</i>'] 10.1128/aac.9.4.639 {'date-parts': [[1976, 4]]} [{'given': 'Danièle', 'family': 'Cavard', 'sequence': 'first', 'affiliation': [{'name': 'Massachusetts Institute of Technology, Department of Biology, Cambridge, Massachusetts 02139'}], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Applications and mechanisms of colicin E1'] 10.31274/rtd-180813-17049 None [{'given': 'Brenda Sue', 'family': 'Patton', 'sequence': 'first', 'affiliation': [{'name': 'Iowa State University'}], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Stability of Colicin Plasmids in Continuous Culture: Mathematical Model and Analysis'] 10.1002/btpr.5420010111 {'date-parts': [[1985, 3]]} [{'given': 'Douglas A.', 'family': 'Lauffenburger', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Characterization of Colicin Ia and Colicin Ib'] 10.1016/s0021-9258(19)45098-9 {'date-parts': [[1972, 6]]} [{'given': 'Jordan', 'family': 'Konisky', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}, {'family': 'With the technical assistance of Billie S. Cowell', 'sequence': 'additional', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Competition by Allelopathy Proceeds in Traveling Waves: Colicin-Immune Strain Aids Colicin-Sensitive Strain'] 10.1006/tpbi.1999.1448 {'date-parts': [[2000, 3]]} [{'given': 'M.', 'family': 'Nakamaru', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}, {'given': 'Y.', 'family': 'Iwasa', 'sequence': 'additional', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['The mechanism of action of colicin E2, colicin E3 and cloacin DF13'] 10.1016/b978-0-444-80400-6.50010-1 {'date-parts': [[1982]]} [{'given': 'KAREN S.', 'family': 'JAKES', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Crystal structure of the Colicin I receptor Cir from E.coli in complex with receptor binding domain of Colicin Ia.'] 10.2210/pdb2hdi/pdb {'date-parts': [[2006, 6, 20]]} [{'given': 'S.K.', 'family': 'Buchanan', 'sequence': 'first', 'affiliation': [], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}, {'given': 'L.', 'family': 'Esser', 'sequence': 'additional', 'affiliation': [], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}, {'given': 'P.', 'family': 'Lukacik', 'sequence': 'additional', 'affiliation': [], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}]
+CROSSREF ['Structural characterization of the interaction of colicin A, colicin N, and TolB with TolAIII translocon'] 10.2210/pdb3qdp/pdb {'date-parts': [[2011, 1, 19]]} [{'given': 'C.', 'family': 'Li', 'sequence': 'first', 'affiliation': [], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}]
+CROSSREF ['Characterization of Colicin Ia and Colicin Ib: Antigenic Homology'] 10.1128/jb.109.3.1322-1324.1972 {'date-parts': [[1972, 3]]} [{'given': 'Richard E.', 'family': 'Isaacson', 'sequence': 'first', 'affiliation': [{'name': 'Department of Microbiology, University of Illinois, Urbana, Illinois 61801'}], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}, {'given': 'Jordan', 'family': 'Konisky', 'sequence': 'additional', 'affiliation': [{'name': 'Department of Microbiology, University of Illinois, Urbana, Illinois 61801'}], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Characterization of Colicin Ia and Colicin Ib'] 10.1016/s0021-9258(18)63083-2 {'date-parts': [[1970, 6]]} [{'given': 'Jordan', 'family': 'Konisky', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}, {'given': 'Frederic M.', 'family': 'Richards', 'sequence': 'additional', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Escherichia coli K317, formerly used to define colicin group E2, produces colicin E7, is immune to colicin E2, and carries a bacteriophage-restricting conjugative plasmid'] 10.1128/jb.144.2.524-531.1980 {'date-parts': [[1980, 11]]} [{'given': 'B M', 'family': 'Males', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}, {'given': 'B A', 'family': 'Stocker', 'sequence': 'additional', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['A model relating the replication and expression of colicin factor E2-P9'] 10.1017/s0016672300013847 {'date-parts': [[1972, 12]]} [{'given': 'K. G.', 'family': 'Hardy', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}, {'given': 'G. G.', 'family': 'Meynell', 'sequence': 'additional', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Structure and Function of Colicin S4, a colicin with a duplicated receptor binding domain'] 10.2210/pdb3few/pdb {'date-parts': [[2008, 12, 1]]} [{'given': 'T.', 'family': 'Arnold', 'sequence': 'first', 'affiliation': [], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}, {'given': 'D.', 'family': 'Linke', 'sequence': 'additional', 'affiliation': [], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}, {'given': 'K.', 'family': 'Zeth', 'sequence': 'additional', 'affiliation': [], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}]
+CROSSREF ['Purification and Characterization of Colicin E2 and Colicin E3'] 10.1016/s0021-9258(18)99436-6 {'date-parts': [[1967, 11]]} [{'given': 'Harvey R.', 'family': 'Herschman', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}, {'given': 'Donald R.', 'family': 'Helinski', 'sequence': 'additional', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Mapping of colicin E2 and colicin E3 plasmid deoxyribonucleic acid EcoR-1-sensitive sites'] 10.1128/jb.121.1.381-389.1975 {'date-parts': [[1975, 1]]} [{'given': 'J', 'family': 'Inselburg', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}, {'given': 'V', 'family': 'Johns', 'sequence': 'additional', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+CROSSREF ['Role of the colicin A lysis protein in the expression of the colicin A operon'] 10.1099/00221287-143-7-2295 {'date-parts': [[1997, 7, 1]]} [{'given': 'Danièle', 'family': 'Cavard', 'sequence': 'first', 'affiliation': [{'name': 'Laboratoire d’Ingénierie des Systémes Macromoléculaires, CNRS, 31 chemin Joseph Aiguier, BP 71, 13402 Marseille Cedex 20, France'}], 'role': [{'vocabulary': 'crossref', 'role': 'author'}]}]
+CROSSREF ['Studies of colicin induction with an imm- col+ mutant of the plasmid colicin E1'] 10.1007/bf00268644 {'date-parts': [[1979, 1]]} [{'given': 'Joseph', 'family': 'Inselburg', 'sequence': 'first', 'affiliation': [], 'role': [{'role': 'author', 'vocabulary': 'crossref'}]}]
+GITHUB ingallslab/colicin_model None
+GITHUB ingallslab/colicin-ODE-model None
+GITHUB Pavi31/Plasmid_Genome_conflicts Theoretical modelling of plasmid-genome conflicts: colicin operons as genetic arms
+PRIOR ~\<private-repo>\06_math_research\probability_1000_intake_E_20260908\attempts.jsonl {"attempt_id": "E0012-A001", "author": "claude-prob1000-E-0908", "independent_check": "", "key_identity": "For a bistable reaction term g the travelling-wave speed satisfies c times the integral of (w')^2 equals the integral of g between the two stable states, so the sign of the speed is the sign of that integral - the whole conjecture is that this sign is positive when lambda_1 < lambda_2 and the death rates are equal.", "method": "Take the source's own simulation observation seriously and ask what statement it is evidence for: the two types segregate into large single-type regions and the interface moves. That is an interface problem, not a density problem.", "obstruction": "The reduction to an interface velocity is rigorous only under fast stirring, where the particle system converges to the PDE. Without a small parameter the interface is rough, its width is of the same order as the lattice spacing, and there is no known way to define its velocity, let alone compare it with the PDE's. The system is also not attractive, so the interface cannot be handled by a monotone comparison with a one-dimensional growth process.", "problem_id": "E0012", "recorded_at": "2026-09-08T12:06:08Z", "result": "Under segregation the long-time behaviour is decided by the sign of the interface velocity, which in the mean-field PDE is the sign of the integral of the reaction term across the connecting orbit - the same computation the source performs for the sexual reproduction model, where c has the sign of the integral of g over the interval between the two stable states. So the conjecture is equivalent to: for lambda_1 < lambda_2 and delta_1 = delta_2 = 1 the corresponding integral is strictly positive, i.e. the colicin advantage always beats the birth-rate disadvantage. This is a scalar computation for the PDE, and it is exactly the content of the mean-field bistability the source reports. What is NOT thereby proved: that the particle system with no stirring segregates at all, or that its interface follows the PDE velocity; those are the two hard steps, and they are what makes the conjecture a conjecture.", "schema": "probability-attempt.v1", "substantive": true}
+PRIOR ~\<private-repo>\06_math_research\probability_1000_intake_E_20260908\attempts.jsonl {"attempt_id": "E0014-A001", "author": "claude-prob1000-E-0908", "independent_check": "", "key_identity": "phi(u) = -sum_i c_i log u_i is convex and blows up on the boundary of the simplex, and is conserved by a zero-sum replicator flow; it is therefore the natural candidate for the survey's own Theorem 5, and the whole question is whether the colicin production cost keeps it nonincreasing.", "method": "Identify which of the two available coexistence machines applies: the fast-stirring Lyapunov theorem (Theorem 5 of the survey) or the cyclic-structure argument.", "obstruction": "Whether the required inequality holds for the actual colicin rates is not settled by the survey, and 'coexistence with fast stirring' is weaker than the question, which is posed for the model as given. Removing the stirring runs into the same wall as E0011: no small parameter, and a three-dimensional density vector to control in the block construction.", "problem_id": "E0014", "recorded_at": "2026-09-08T12:06:08Z", "result": "The three-species colicin system is a genuine rock-paper-scissors: the colicin producer beats the sensitive strain, the sensitive strain outgrows the resistant one, and the resistant strain outgrows the producer, because producing colicin is costly. That is the structure under which the cyclic machinery could apply, and it is a better target than the five-species problem E0013. Concretely, the fast-stirring theorem needs a convex phi decreasing along the ODE and blowing up at the boundary; for a zero-sum-like three-species replicator the function phi(u) = -sum c_i log u_i is exactly of that type (it blows up at the boundary and is convex), and it is constant, hence nonincreasing, along the ODE when the interaction is skew-symmetric. So for the skew-symmetric idealisation the survey's own Theorem 5 applies and gives coexistence with fast stirring. The genuine colicin matrix is only approximately skew-symmetric because of the cost of production; the honest conclusion is that Theorem 5 applies to a perturbation only if phi remains nonincreasing, which requires the cost term to have the right sign, and that is a checkable inequality on the model's rates rather than a theorem.", "schema": "probability-attempt.v1", "substantive": true}
+PRIOR ~\<private-repo>\06_math_research\probability_1000_intake_E_20260908\problems.jsonl {"admitted": true, "current_status": "unverified", "dedup_key": "durrett_coexistence_2009::problem_6", "historical_status": "source_says_open", "intake": "E_20260908", "locator": "Problem 6, PDF p. 14", "problem_id": "E0012", "recorded_at": "2026-09-08T12:06:08Z", "result_status": "attempted_unsolved", "schema": "probability-problem.v1", "source_id": "durrett_coexistence_2009", "statement": "In the colicin model of Durrett and Levin (type 1 produces colicin, which raises the death rate of type 2 by an amount proportional to the local density of 1s), show that coexistence is not possible when lambda_1 < lambda_2 and delta_1 = delta_2 = 1. Durrett notes that in the parameter range where the mean-field ODE has an interior fixed point that fixed point is unstable, and that simulations show segregation with the interface moving in favour of the 1s.", "status_search": "WebSearch 2026-09-08 on the colicin / allelopathy spatial competition model and rigorous non-coexistence results. Found the Durrett-Levin (1997) analysis and the later interface literature but no proof of non-coexistence under the stated hypotheses. Kept open.", "title": "Absence of coexistence in the two-type colicin model with equal death rates", "verification": "unreviewed"}
+PRIOR ~\<private-repo>\06_math_research\probability_1000_intake_E_20260908\problems.jsonl {"admitted": true, "current_status": "unverified", "dedup_key": "durrett_coexistence_2009::problem_8", "historical_status": "source_says_open", "intake": "E_20260908", "locator": "Problem 8, PDF p. 17", "problem_id": "E0014", "recorded_at": "2026-09-08T12:06:08Z", "result_status": "attempted_unsolved", "schema": "probability-problem.v1", "source_id": "durrett_coexistence_2009", "statement": "Show that coexistence can occur in the three-species colicin model, whose mean-field ODE and simulation are given in the survey's Figures 10 and 11.", "status_search": "WebSearch 2026-09-08 on three-strain colicin / rock-paper-scissors bacterial competition and rigorous coexistence. The rigorous literature covers the three-species cyclic particle systems and the Kerr-Riley-Feldman-Bohannan style models at the simulation level; no proof for the survey's three-species colicin model was found. Kept open.", "title": "Coexistence in the three-species colicin model", "verification": "unreviewed"}
+PUBLISHED PATHS 

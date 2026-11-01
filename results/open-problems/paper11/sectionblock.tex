@@ -1,0 +1,146 @@
+\begin{proof}
+As in \cite{companion7}, it suffices to prove the cap-mass bound
+\begin{equation}\label{eq:cap}
+\Lambda^{(n,k)}_u(h):=\mu\bigl(\{x\in G_k:\ \tau(x)\ge\tau_{\max}-h\}\bigr)
+\;\ge\;b(n,k)\,h^{\frac{n+1+k}2}
+\qquad(0<h\le h_0),
+\end{equation}
+for every unit $u$ with $\hat u\ne0$, together with a bulk anchor; the
+conversion to sections is given at the end.  We prove \eqref{eq:cap} by
+induction on $k$; the base case $k=0$ is the standard spherical cap bound
+$\Lambda^{(n,0)}_u(h)\ge c(n)h^{\frac{n+1}2}$.
+
+\emph{Case 1: $|\hat u|\ge\frac12$.}  With $p=\hat u/|\hat u|$, split the
+truncated indices into
+\[
+\mathcal A:=\Bigl\{i\le k:\ u_i\ge\tfrac{\sqrt h}{2k}\Bigr\},
+\quad
+\mathcal Z:=\Bigl\{i\le k:\ i\notin\mathcal A,\
+u_i>0\ \text{ or }\ |p_i|<2\sqrt h\Bigr\},
+\quad
+\mathcal N:=\{1,\dots,k\}\setminus(\mathcal A\cup\mathcal Z),
+\]
+so that $u_i\le0$ and $p_i\le-2\sqrt h$ for $i\in\mathcal N$.  Let
+$\tilde u$ be $u$ with the $\mathcal A\cup\mathcal Z$-coordinates replaced by
+$0$.  Every coordinate zeroed in $\tilde u$ but present in $\hat u$ lies in
+$\mathcal Z\setminus P$ and satisfies
+$|\hat u_i|=|u_i|\le\max\bigl(\tfrac{\sqrt h}{2k},\,2\sqrt h\bigr)\le2\sqrt h$,
+whence
+\[
+|\hat u|^2-|\tilde u|^2\;\le\;4kh,
+\qquad
+|\hat u|-|\tilde u|\;\le\;\frac{4kh}{|\hat u|}\;\le\;8kh,
+\]
+and $|\tilde u|\in[\tfrac14,1]$ for $h\le h_0(k)$.  Set
+$\tilde p:=\tilde u/|\tilde u|\in G_k$; then $\tilde p_i=0$ for
+$i\in\mathcal A\cup\mathcal Z$, and for $i\in\mathcal N$,
+$|\tilde p_i|=|u_i|/|\tilde u|\ge|u_i|\ge2\sqrt h\,|\hat u|\ge\sqrt h$, with
+$\tilde p_i<0$.
+
+Decompose $x=y\,\tilde p+w$, $w\perp\tilde p$.  Since
+$\tilde p\perp e_i$ for $i\in\mathcal A\cup\mathcal Z$, the coordinates
+$w_i:=x_i$ ($i\in\mathcal A\cup\mathcal Z$) are coordinates of the
+hyperplane $\tilde p^\perp$; let $w^\perp$ denote the remaining component of
+$w$.  Define the witness box $W$ by
+\[
+w_i\in\Bigl[-\min\Bigl(\frac{h}{8k\,u_i},\frac{\sqrt h}8\Bigr),\,0\Bigr]
+\ (i\in\mathcal A),
+\qquad
+w_i\in\Bigl[-\frac{\sqrt h}{8\sqrt k},\,0\Bigr]\ (i\in\mathcal Z),
+\qquad
+|w^\perp|\le\frac{\sqrt h}8,
+\]
+\[
+1-\frac{h}{4|\tilde u|}\;\le\;y\;\le\;\sqrt{1-|w|^2}.
+\]
+
+\emph{$W$ is nonempty with a long fibre.}  We have
+$|w|^2\le k\cdot\frac h{64k}+k\cdot\frac h{64k}+\frac h{64}\le\frac{3h}{64}$,
+so $\sqrt{1-|w|^2}\ge1-\frac{3h}{64}$, while
+$\frac h{4|\tilde u|}\ge\frac h4$; the $y$-fibre has length at least
+$\frac h4-\frac{3h}{64}\ge\frac h8$.
+
+\emph{$W\subseteq G_k$.}  For $i\in\mathcal A\cup\mathcal Z$:
+$x_i=w_i\le0$.  For $i\in\mathcal N$:
+$x_i=y\tilde p_i+(w^\perp)_i\le(1-h)(-\sqrt h)+\frac{\sqrt h}8<0$ for
+$h\le\frac12$.  And $|x|^2=y^2+|w|^2\le1$.
+
+\emph{$W$ lies in the cap, after rescaling.}  Since $w\perp\tilde p$ and
+$u-\tilde u$ is supported on $\mathcal A\cup\mathcal Z$,
+\[
+\tau(x)=y\,\langle\tilde p,u\rangle+\langle w,u\rangle
+=y\,|\tilde u|+\sum_{i\in\mathcal A\cup\mathcal Z}u_iw_i ,
+\]
+using $\langle\tilde p,u\rangle=\langle\tilde p,\tilde u\rangle=|\tilde u|$
+and $\langle w,\tilde u\rangle=|\tilde u|\langle w,\tilde p\rangle=0$.  Now
+$\sum_{\mathcal A}u_i|w_i|\le k\cdot\frac h{8k}=\frac h8$ and
+$\sum_{\mathcal Z}|u_i||w_i|\le k\cdot\frac{\sqrt h}{2k}\cdot
+\frac{\sqrt h}{8\sqrt k}\le\frac h{16}$, so on $W$,
+\[
+\tau(x)\;\ge\;\Bigl(1-\frac h{4|\tilde u|}\Bigr)|\tilde u|
+-\frac h8-\frac h{16}
+\;\ge\;|\tilde u|-\frac h2
+\;\ge\;|\hat u|-8kh-\frac h2
+\;\ge\;\tau_{\max}-9kh .
+\]
+Replacing $h$ by $h/(9k)$ in the whole construction (which only changes
+constants), $W$ lies in the cap of depth $h$.
+
+\emph{Volume.}  Each $\mathcal A$-window has length
+$\min\bigl(\frac h{8ku_i},\frac{\sqrt h}8\bigr)\ge\frac h{8k}$ (using
+$u_i\le1$ and $h\le k^2$); each $\mathcal Z$-window has length
+$\frac{\sqrt h}{8\sqrt k}$; the $w^\perp$-ball has dimension
+$n-1-|\mathcal A|-|\mathcal Z|$; the fibre has length $\ge\frac h8$.  Hence
+\[
+\Lambda^{(n,k)}_u(h)\;\ge\;\frac{\vol(W)}{\vol(B^n)}
+\;\ge\;c(n,k)\,h\cdot h^{|\mathcal A|}\cdot
+h^{\frac{|\mathcal Z|+(n-1-|\mathcal A|-|\mathcal Z|)}2}
+\;=\;c(n,k)\,h^{\frac{n+1+|\mathcal A|}2}
+\;\ge\;c(n,k)\,h^{\frac{n+1+k}2},
+\]
+proving \eqref{eq:cap} in Case 1.
+
+\emph{Case 2: $|\hat u|<\frac12$ (induction on $k$).}  Then
+$\sum_{i\in P}u_i^2=1-|\hat u|^2>\frac34$, so some $i_0\in P$ has
+$u_{i_0}>\frac{\sqrt3}{2\sqrt k}\ge\frac1{2\sqrt k}$.  Write
+$x=(x_{i_0},x')$ and $u=(u_{i_0},u')$; note $u'\ne0$ would fail only if
+$u=e_{i_0}$, in which case $\hat u=0$, excluded.  For
+$s\in[-\frac{h}{2u_{i_0}},0]$ --- an interval of length
+$\frac h{2u_{i_0}}\ge\frac h2$ --- the slice
+$G_k\cap\{x_{i_0}=s\}$ contains $\sqrt{1-s^2}\,\cdot G'$, where
+$G'$ is the orthogonal model with parameters $(n-1,k-1)$ in the coordinates
+$x'$ {\rm(}the slice is exactly the ball of radius $\sqrt{1-s^2}$
+intersected with the $k-1$ remaining half-spaces{\rm)}.  On the slice,
+$\tau(x)=u_{i_0}s+\langle x',u'\rangle\ge-\frac h2+\langle x',u'\rangle$.
+The maximum of $\langle x',u'\rangle$ over the unscaled slice region equals
+$|\widehat{u'}|=|\hat u|$ {\rm(}zeroing the positive truncated coordinates of
+$u'$ gives the same vector $\hat u$, supported away from
+$i_0${\rm)}, and scaling by $\sqrt{1-s^2}\ge1-h$ changes it by at most
+$|\hat u|h\le h$.  Hence the cap of depth $h$ for $(G_k,u)$ contains, over
+each slice, the image of the cap of depth $h_*$ for
+$(G',u'/|u'|)$ with
+$h_*:=\frac{h/4}{|u'|}\ge\frac h4$, provided
+$u_{i_0}|s|+\,$scaling loss$\,\le\frac h2+h\le2h$ and the slice-cap depth
+$\frac h4$ are budgeted within a total depth $4h$; replacing $h$ by
+$h/4$ throughout, the inclusion holds at depth $h$.  By the induction
+hypothesis applied to $(n-1,k-1)$ at depth $\min(h_*,h_0)$ --- if
+$h_*>h_0$ use monotonicity $\Lambda(h_*)\ge\Lambda(h_0)\ge b\,h_0^{(n+k-1)/2}
+\ge b'h^{(n+k-1)/2}$ --- and Fubini over $s$,
+\[
+\Lambda^{(n,k)}_u(h)\;\ge\;c\cdot\frac h2\cdot
+b(n-1,k-1)\,h^{\frac{(n-1)+1+(k-1)}2}
+\;=\;c'\,h^{1+\frac{n+k-1}2}\;=\;c'\,h^{\frac{n+1+k}2}.
+\]
+
+\emph{Conversion to sections.}  Exactly as in \cite{companion7}: by
+Brunn--Minkowski, $A_u$ is unimodal in the depth; the inner ball
+\eqref{eq:thick} provides a bulk depth
+$h^\dagger\ge c(k)>0$ with $A_u(h^\dagger)\ge a_1(n,k)>0$ {\rm(}its
+$\tau$-range is an interval of length $2r_0$ inside the range of $G_k$,
+whose sections at distance $\le\frac{r_0}2$ from its center have radius
+$\ge\frac{\sqrt3}2r_0${\rm)}.  For $h\le h_0\le h^\dagger$: if $h$ is below
+the mode of $A_u$, then $A_u$ is nondecreasing on $[0,h]$ and
+$A_u(h)\ge\Lambda_u(h)/h\ge b\,h^{\frac{n-1+k}2}$ by \eqref{eq:cap}; if $h$
+is above the mode, unimodality gives
+$A_u(h)\ge A_u(h^\dagger)\ge a_1\ge a_1h^{\frac{n-1+k}2}$.
+\end{proof}

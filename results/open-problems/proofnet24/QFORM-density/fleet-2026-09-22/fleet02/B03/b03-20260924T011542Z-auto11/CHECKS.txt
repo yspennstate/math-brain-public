@@ -1,0 +1,44 @@
+QFORM fleet02/B03 b03-20260924T011542Z-auto11 deterministic checks
+
+Family order: (z,y1,y2,w1,w2,s).
+For Q_epsilon=T_epsilon+s^2, exact nonzero eigenvalues are
+  2,
+  1,
+  -(epsilon^(-1)+2 epsilon).
+Numerical eigvalsh checks:
+  epsilon=0.25: {-4.5,1,2} plus three numerical zeros.
+  epsilon=0.10: {-10.2,1,2} plus three numerical zeros.
+  epsilon=0.01: {-100.02,1,2} plus three numerical zeros.
+
+Physical principal triple (y1,z,s): diag(1,-epsilon^(-1),1).
+For epsilon<=1/4 its minimum eigenvalue modulus is 1.
+Pinned localized Theorem A constant: 6 sqrt(pi)=10.634723105433096.
+
+Partner r43 on R_epsilon (second crossing deleted):
+  M0=MR=MC=1,
+  sigma=1, alpha=-1, beta=-1,
+  K=pi^(3/2),
+  density cap=3,
+  weighted whole-copy time integral=(24/5)sqrt(pi)=8.507778484346476,
+  whole-copy half-Riesz=24/(5sqrt(2))=3.394112549695428.
+
+From the pinned localized density cap M=6sqrt(pi), the layer-cake whole-copy bound gives
+  int |t|^(-1/2)|phi_Q(t)|^2 dt <=4 sqrt(pi M)
+   =4 sqrt(6) pi^(3/4)=23.120542547609993.
+
+Rank-two anchored SVD minor list used in REPORT.md:
+  tau = b*s1*s2-c1*r1*s2-c2*r2*s1;
+  -c2*rperp*s1;
+  +c1*rperp*s2;
+  -cperp*r2*s1;
+  +cperp*r1*s2;
+  -cperp*rperp*s1;
+  -cperp*rperp*s2.
+Their squared coordinatewise sum is exactly equation (3.4).
+
+For the instability family N=diag(1,-epsilon), b=-epsilon^(-1), c=r=(0,-1):
+  c_perp=r_perp=0,
+  tau=(-epsilon^(-1))*1*(-epsilon) - 1 =0,
+so the anchored 3x3 determinant vanishes exactly after the tiny second crossing completes the rank-two form.
+
+QFORM_B03_TRIANGLE_INSTABILITY_CHECK_PASS

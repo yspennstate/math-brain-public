@@ -1,0 +1,31 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261014T041720Z-fleet01-B12-gu-character-overlap",
+  "stream": "B12",
+  "primary_packet_id": "A058",
+  "universal_gu_status": "OPEN",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "B12-A058-GU-CHARACTER-OVERLAP-FACTORIZATION",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For F=product_j chi_{R_j} f_j with arbitrarily reused character cores R_j in one shared block and pairwise-disjoint residual blocks, U(F)=sum_j U(f_j), G(F)=sum_j G(f_j), and I(F)=|triangle_j R_j|+sum_j I(f_j).",
+      "scope": "All finite dimensions, all factor counts, arbitrary reuse multiplicities and cancellations, arbitrary Boolean residual factors."
+    },
+    {
+      "claim_id": "B12-A058-GU-PAIR-PRESERVATION",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every a>=0 and 0<=b<1, if each residual factor obeys G<=aI+bU, then the reused-character-core product obeys the identical pair with no additive or multiplicative loss.",
+      "scope": "Exact class closure; for a restriction-closed residual class this implies U<=aI/(1-b) and H<=(2+2a/(1-b))I throughout the generated overlap class."
+    },
+    {
+      "claim_id": "B12-A058-SHARED-COORDINATE-OVERLAP",
+      "version": "v9",
+      "status": "OPEN",
+      "statement": "Character-only shared cores are now exactly closed for U/G, but a non-character shared coordinate still creates a random posterior core and an unpaid joint signed four-channel collision term."
+    }
+  ]
+}
+

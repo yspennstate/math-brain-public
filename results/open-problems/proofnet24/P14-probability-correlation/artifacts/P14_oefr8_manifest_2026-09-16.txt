@@ -1,0 +1,27 @@
+P14 OEFR(8) exact finite certificate manifest — 2026-09-16
+scope: every unlabeled simple graph on exactly 8 vertices; every distinguished present edge g; every unordered pair {e,f} of distinct present edges with e,f != g; q(t)=Delta_{ef} with only g assigned weight t>0 and all other edges weight 1.
+coverage extension: all graphs on fewer than 8 vertices follow by adjoining isolated vertices, which leaves the forest polynomial and marked-edge Rayleigh difference unchanged.
+graph_catalog_source: regenerated with proofnet24/P14-probability-correlation/artifacts/P14_generate_n8_exact_2026-09-16.py from all 1044 seven-vertex atlas classes by all 2^7 neighborhoods plus exact isomorphism deduplication.
+graph_catalog_lines=12346
+graph_catalog_sha256=22d0b5dc0a9da6ff5d1618fe0ec31fd396a8a42b19f4f98072c9959c7b3fab90
+checker_sha256=56aa9518667807a01f25de031543b599e87056205baf3e0b5019fc70d6122d3d
+combined_output_sha256=0b38d05c37fbdfafda0e0d6ff1da924141354dab6fd2307558052eeba058261e
+chunk_a_sha256=da7f879f6ba3ca0af41e946305735007d915f713d8d60684e7b0b008395d0e4a
+chunk_b_sha256=225f0cd271b156c992a7df6922d4029ba7d6857d9c60a8d26ec6e699e32dbd08
+chunk_c_sha256=086328e9abcf59fb4356bb7c0010876ea2c058559a472a97dae58a5470d61912
+chunk_coverage=1-4000,4001-8000,8001-12346
+processed_graphs_total=12346
+oefr_marked_triples_total=15734472
+q1_negative_total=462407
+critical_q2pos_q1neg_total=462407
+zero_discriminant_slack_total=0
+global_min_positive_discriminant_slack=572
+min_slack_witness_g6=GG?`IK
+min_slack_witness_indices=g=3,e=1,f=6
+min_slack_witness_q(t)=36-2*t+4*t^2
+min_slack_witness_vertex=t=1/4
+min_slack_witness_minimum=143/4
+status=PASS
+arithmetic: exact integer arithmetic; modular determinant counts modulo 1000000007 are exact here because all relevant spanning-tree counts for n=8 are < 1000000007; final Rayleigh products use signed __int128.
+method: compute q(0), q(1), q(2), where q(2) is realized by replacing g with two parallel unit copies; reconstruct q0,q1,q2 by exact finite differences; apply the exact all-t>0 quadratic criterion.
+limitations: proves OEFR through 8 vertices only; it does not prove the all-positive-weight Rayleigh property, full negative association, or the source conjecture beyond the already-complete unit n<=9 scope.

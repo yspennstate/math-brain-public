@@ -1,0 +1,19 @@
+{
+  "helper_version": "A040-independent-v1",
+  "family": "F=1+[WUV OR S(U OR V)](g-1), independent point blocks; actual Boolean cores",
+  "domains": {
+    "pilot": "s=L=R=T=1,g=(-1,1,1,1),first core query",
+    "main": "s=L=R=T=1; all 256 labelled 3-bit cores; all 3 core queries; additional 16 labelled 2-bit cores and both queries",
+    "reserve": "j=1..8,L,R,T=1..4,a=0,1/8,1/2,1,3/2,2; formal core influence=0,1,5/2"
+  },
+  "case_counts": {
+    "pilot_roots": 1,
+    "main_core_queries": 800,
+    "reserve_rows": 9216
+  },
+  "symmetry": "none",
+  "arithmetic": "integer Walsh, Fraction, rational atanh logarithm intervals; no floating signs",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": 55,
+  "automatic_dimension_escalation": false
+}

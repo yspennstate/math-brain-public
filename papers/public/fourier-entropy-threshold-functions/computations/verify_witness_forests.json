@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "domain": {
+    "coordinates": 3,
+    "gates": 3,
+    "supports": "All ordered triples of nonempty subsets; repeated supports included.",
+    "sets_and_assignments": "All nonempty covered sets and all admissible assignments.",
+    "forests": "All source-SCC root representatives, spanning forests, attachments, and permitted child orders."
+  },
+  "arithmetic": "Exact integers and fractions.Fraction; no floating-point comparisons.",
+  "case_counts": {
+    "admissible_assignments": 6201,
+    "attached_forests": 7929,
+    "covered_nonempty_sets": 2083,
+    "cyclic_parent_choices_rejected": 216,
+    "directed_spanning_forests": 7677,
+    "disjoint_witness_mass_checks": 1029,
+    "exact_probability_checks": 24651,
+    "ordered_finite_witnesses": 8217,
+    "source_root_choices": 7371,
+    "support_triples": 343
+  },
+  "assignments_by_active_gate_count": {
+    "1": 2793,
+    "2": 3024,
+    "3": 384
+  },
+  "root_choices_by_root_count": {
+    "1": 6645,
+    "2": 720,
+    "3": 6
+  },
+  "probability_specialization": {
+    "theta": "All subset weights equal 1.",
+    "pi": "All gate rarity weights equal 1/2.",
+    "lambda": [
+      "1/3",
+      "1",
+      "7/2"
+    ],
+    "maximum_sum_of_distinct_witness_probabilities": {
+      "1/3": {
+        "mass": "9041/74088",
+        "support_masks": [
+          7,
+          7,
+          7
+        ]
+      },
+      "1": {
+        "mass": "9041/52488",
+        "support_masks": [
+          7,
+          7,
+          7
+        ]
+      },
+      "7/2": {
+        "mass": "13153/127776",
+        "support_masks": [
+          1,
+          6,
+          6
+        ]
+      }
+    }
+  },
+  "script_sha256": "07f53950e66119066fab298d0c0a0191e285cfbd0ce1f5bee79193f44692c365",
+  "scope": "Finite consistency checks only; the general forest and variational inequalities require the manuscript proofs."
+}

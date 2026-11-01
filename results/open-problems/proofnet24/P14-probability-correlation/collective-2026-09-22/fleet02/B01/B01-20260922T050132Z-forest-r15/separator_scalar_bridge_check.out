@@ -1,0 +1,11 @@
+PASS scalar_threshold_identity cases=112500
+PASS threshold_difference_identity cases=112500
+CONE_ADD_COUNTEREXAMPLE child0=(1, 0, 0, 0, 0) cone=(0, 0)
+CONE_ADD_COUNTEREXAMPLE child1=(1, 1, 1, 0, 1) cone=(0, 0)
+CONE_ADD_COUNTEREXAMPLE sum=(2, 1, 1, 0, 1) cone=(1, -1)
+ABSTRACT_TRANSITION_TABLE (7, 3, 8, 3, 0, 0, 0, 4, 2, 4, 4, 6, 8, 4, 2, 4)
+ABSTRACT_TRANSITION child_delete=(27, 8, 8, 8, 8) cone=(24, 320)
+ABSTRACT_TRANSITION child_contract=(7, 3, 8, 5, 12) cone=(5, 60)
+ABSTRACT_TRANSITION parent_sum=(34, 11, 16, 13, 20) cone=(153, -772)
+NOTE abstract transition table is not asserted graph-realizable
+PASS

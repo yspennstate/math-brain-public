@@ -1,0 +1,66 @@
+[
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 260,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "brown-measure_convergence_from_general_strong_convergence",
+      "historical_status": "source_says_open",
+      "locator": "Section 6.9, pp.69-70",
+      "problem_id": "P0189",
+      "recorded_at": "2026-09-06T21:40:16Z",
+      "result_status": "candidate_complete_counterexample",
+      "schema": "probability-problem.v1",
+      "source_id": "strong_convergence_2025",
+      "source_statement_date": "2026-02-11",
+      "statement": "Does strong convergence of a family of random matrices imply convergence of empirical complex-eigenvalue measures of every noncommutative polynomial to its limiting Brown measure?",
+      "statement_caveat": "This is the literal general statement. It does not impose independent entries, independence of the matrix family, or a free limiting family. The narrower Ginibre-with-adjoints question is recorded as a remaining subclass, not counted again.",
+      "title": "Brown-measure convergence from general strong convergence",
+      "verification": "primary_statement_checked_with_scope_caveat"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 369,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "brown-measure_convergence_from_general_strong_convergence",
+      "historical_status": "source_says_open",
+      "locator": "Section 6.9, pp.69-70",
+      "problem_id": "P0189",
+      "proof_file": "proofs/P0189_brown_measure_strong_convergence_counterexample_candidate.md",
+      "recorded_at": "2026-09-07T00:19:46Z",
+      "result_status": "candidate_full_solution",
+      "schema": "probability-problem.v1",
+      "source_id": "strong_convergence_2025",
+      "source_statement_date": "2026-02-11",
+      "statement": "Does strong convergence of a family of random matrices imply convergence of empirical complex-eigenvalue measures of every noncommutative polynomial to its limiting Brown measure?",
+      "statement_caveat": "This is the literal general statement. It does not impose independent entries, independence of the matrix family, or a free limiting family. The narrower Ginibre-with-adjoints question is recorded as a remaining subclass, not counted again.",
+      "title": "Brown-measure convergence from general strong convergence",
+      "verification": "primary_statement_checked_with_scope_caveat"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 192,
+    "record": {
+      "attempt_id": "P0189-A001",
+      "depth": "complete_candidate",
+      "full_problem_solved": false,
+      "independent_check": "The strong-convergence proof maps the simple irrational rotation algebra into the product of matrix algebras modulo norm-null sequences; injectivity gives every subsequential limsup polynomial norm and therefore the full limit. Normalized word traces are checked directly. The determinant calculation independently checks nilpotency. Full proof and all source dependencies are in the proof packet.",
+      "independent_review": "none",
+      "method": "Brown-measure convergence from general strong convergence structural calculation",
+      "novelty": "not_claimed",
+      "obstruction": "No gap presently identified in the literal-general-scope construction, but there is no independent review and no novelty claim. It does not resolve independent Ginibre polynomials with adjoints; the June2026 holomorphic-Ginibre theorem is compatible with this example.",
+      "problem_id": "P0189",
+      "proof_path": "proofs/P0189_brown_measure_strong_convergence_counterexample_candidate.md",
+      "recorded_at": "2026-09-06T21:40:16Z",
+      "result": "Complete candidate counterexample: rational clock/shift unitary pairs U_j,V_j approach an irrational rotation pair u,v strongly, while U_j^q=I and V_j^q=-I force det(zI-U_j-V_j)=z^q. Hence every finite sum is nilpotent with empirical measure delta_0. The established Brown measure of u+v is Haar measure on the unit circle. Simultaneous Haar conjugation makes the finite family random without changing any of these statements.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_limited_argument"
+    }
+  }
+]

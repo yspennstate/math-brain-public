@@ -1,0 +1,77 @@
+--- a/~/math-brain-inbox/w336/bundle_003.json
++++ b/~/math-brain-inbox/w336/bundle_003.json
+@@ -0,0 +1,74 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w336",
++  "bundle_slug": "w336-c0129-checked-attempt-20261010",
++  "audit_status": "PENDING_W346_KEEP; do not promote to audited or solved",
++  "entries": [
++    {
++      "key": "finite-cookie-prefix-failure-mean-and-variance",
++      "namespace": "probability.randomenvironment",
++      "logical_name": "finite-cookie-prefix-failure-mean-and-variance",
++      "kind": "lemma",
++      "title": "Exact failure moments beyond the cookie prefix",
++      "statement": "For independent Bernoulli trials with probabilities p_1,...,p_M followed by fair trials, let F_m count failures before the m-th success. For m>=M and m>=1, s=sum p_i, t=sum p_i(1-p_i), and delta=sum(2p_i-1), E F_m=m-delta and Var F_m=2(m-s)+4t. This is a quenched single-stack identity; it assumes no independence between stacks. It does not settle the stationary-ergodic excited-walk recurrence criterion.",
++      "proof_text": "# C0129: exact cookie-prefix moments; log-mean route unsupported\n\nStatus: proof written; w346 KEEP pending. The stationary-ergodic recurrence criterion remains unresolved by this round. The cached 2012 review poses Problem 3.11. The prior attempt alternates between a log-mean argument and an averaged-drift claim; neither is a proof of the general criterion.\n\nFix a cookie stack of length M, with independent Bernoulli success probabilities p_1,...,p_M in its first M trials and probability 1/2 thereafter. Let F_m count failures before the m-th success. For every integer m>=M with m>=1, set s=sum p_i, t=sum p_i(1-p_i), and delta=sum(2*p_i-1). Then\n\n    E[F_m]=m-delta,\n    Var(F_m)=2(m-s)+4t.\n\nProof: sample all M prefix trials and let S be their number of successes. When m>=M, the stopping time processes the whole prefix, except that it may finish precisely at its end when m=M=S; that exception has zero tail and satisfies the same representation. Conditional on S,\n\n    F_m = M-S + NB(m-S,1/2),\n\nwhere NB(k,1/2) counts failures before k fair-coin successes, with mean k and variance 2k (and NB(0)=0). Conditional expectation is m+M-2S, whose variance is 4t. The total-variance identity gives the formulas. They hold quenched, without any independence between stacks at different sites.\n\nThe associated map F_{k+1} has conditional expectation k+1-delta for k+1>=M. Its large-population linear coefficient is exactly 1 at every site. Therefore a nontrivial product of site-dependent offspring means is not supplied by this identity; a standard subcritical/supercritical BPRE log-mean test cannot be used to settle the cookie criterion merely by calling this a BPRE. Additive migration and low-population behavior still matter. This refutes that proposed mechanism, not the possible averaged-drift criterion or every BPRE method.\n\nBoundary check: with M=2 and p_1=p_2=3/4, m=1 is outside the hypothesis. Its actual mean is (1/4)*(3/4*1+1/4*3)=3/8, whereas m-delta=0. The cutoff must stay on the card. No periodic-environment recurrence/transience claim is certified here.\n\nChecks: enumerate prefix outcomes exactly using rational probabilities, check means and variances, and verify the m<M counterexample. These are checks of the local moment lemma, not of the full walk criterion.\n",
++      "assumptions": [
++        "All hypotheses and scope restrictions in the statement apply."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner:campaign:w336:C0129:finite-cookie-prefix-failure-mean-and-variance",
++        "url": "~\\brain_workers\\w336\\proofs\\C0129.md",
++        "revision": "author-proof-2026-10-10; independent audit w346 pending",
++        "license": "owner-own-work; campaign proof, no novelty claim",
++        "excerpt": "For independent Bernoulli trials with probabilities p_1,...,p_M followed by fair trials, let F_m count failure"
++      }
++    },
++    {
++      "key": "cookie-branching-log-mean-route-warning",
++      "namespace": "probability.randomenvironment",
++      "logical_name": "cookie-branching-log-mean-route-warning",
++      "kind": "concept",
++      "title": "Critical offspring warning for the cookie branching route",
++      "statement": "With a finite cookie prefix and a fair tail, the large-population expectation of F_(k+1) is k+1-delta once k+1>=M. Its linear coefficient is one at every site. A nontrivial Lyapunov exponent of site-dependent offspring means is therefore not obtained by this calculation; migration and small-population behavior remain relevant. The general stationary-ergodic criterion and the prior periodic-case assertion are not proved by this local identity.",
++      "proof_text": null,
++      "assumptions": [
++        "All hypotheses and scope restrictions in the statement apply."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner:campaign:w336:C0129:cookie-branching-log-mean-route-warning",
++        "url": "~\\brain_workers\\w336\\proofs\\C0129.md",
++        "revision": "author-proof-2026-10-10; independent audit w346 pending",
++        "license": "owner-own-work; campaign proof, no novelty claim",
++        "excerpt": "With a finite cookie prefix and a fair tail, the large-population expectation of F_(k+1) is k+1-delta once k+1"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "finite-cookie-prefix-failure-mean-and-variance",
++      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0129-recurrence-transience-criterion-for-excited-random-walks-under-station",
++      "kind": "cites",
++      "rationale": "New: \"For independent Bernoulli trials with probabilities p_1,...,p_M followed by fair trials, let F_m count failures before the m-th success. For m>=M and m>=1, s=sum p_i, t=sum p_i(1-p\"; existing: \"Can the assumption (IID) in the recurrence/transience criterion (3.10) of Theorem 3.10 (recurrent iff |delta| <= 1 for bounded cookie stacks) be replaced by stationarity and ergodicity (SE)?\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
++    },
++    {
++      "from_key": "finite-cookie-prefix-failure-mean-and-variance",
++      "to_existing_logical": "math:probability.randomenvironment:attempt-c0129-recurrence-transience-criterion-for-excited-random-walks-under-station",
++      "kind": "cites",
++      "rationale": "New: \"For independent Bernoulli trials with probabilities p_1,...,p_M followed by fair trials, let F_m count failures before the m-th success. For m>=M and m>=1, s=sum p_i, t=sum p_i(1-p\"; existing: \"whose survival criterion is governed by the Lyapunov exponent of the environment, i.e. by an ergodic average of log-means, not by the mean delta of the drift. So the natural (SE) analogue is NOT 'delta in [-1,1]' with delta = E sum_i (2 ome\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
++    },
++    {
++      "from_key": "cookie-branching-log-mean-route-warning",
++      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0129-recurrence-transience-criterion-for-excited-random-walks-under-station",
++      "kind": "cites",
++      "rationale": "New: \"With a finite cookie prefix and a fair tail, the large-population expectation of F_(k+1) is k+1-delta once k+1>=M. Its linear coefficient is one at every site. A nontrivial Lyapuno\"; existing: \"Can the assumption (IID) in the recurrence/transience criterion (3.10) of Theorem 3.10 (recurrent iff |delta| <= 1 for bounded cookie stacks) be replaced by stationarity and ergodicity (SE)?\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
++    },
++    {
++      "from_key": "cookie-branching-log-mean-route-warning",
++      "to_existing_logical": "math:probability.randomenvironment:attempt-c0129-recurrence-transience-criterion-for-excited-random-walks-under-station",
++      "kind": "cites",
++      "rationale": "New: \"With a finite cookie prefix and a fair tail, the large-population expectation of F_(k+1) is k+1-delta once k+1>=M. Its linear coefficient is one at every site. A nontrivial Lyapuno\"; existing: \"whose survival criterion is governed by the Lyapunov exponent of the environment, i.e. by an ergodic average of log-means, not by the mean delta of the drift. So the natural (SE) analogue is NOT 'delta in [-1,1]' with delta = E sum_i (2 ome\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
++    }
++  ]
++}

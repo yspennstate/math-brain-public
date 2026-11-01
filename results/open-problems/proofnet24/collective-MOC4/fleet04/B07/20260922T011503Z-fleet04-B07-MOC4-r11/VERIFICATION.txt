@@ -1,0 +1,18 @@
+MOC4 fleet04/B07 r11 exact standard-library verification
+
+U_orthogonal_det1 PASS
+D_equals_HPH_mean_zero_block PASS entries=9
+row_block_orthogonality PASS equations=9
+column_block_orthogonality PASS equations=9
+q_recovery_from_R_D PASS checks=18
+phase_interval_exact_rational_witness PASS checks=18
+R=
+4329/15625 251136/390625 31264/390625
+4896/15625 31264/390625 236961/390625
+256/625 4329/15625 4896/15625
+D=
+-279/15625 209664/390625 -7936/390625
+-2304/15625 -7936/390625 223839/390625
+256/625 279/15625 2304/15625
+
+Scope: this is an exact Fraction-arithmetic check on the campaign's rational orthogonal witness. It verifies the block formulas and identities used in the report; the general theorem is proved algebraically in REPORT.md and does not depend on this finite check.

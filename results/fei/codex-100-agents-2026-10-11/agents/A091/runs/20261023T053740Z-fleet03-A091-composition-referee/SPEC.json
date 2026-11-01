@@ -1,0 +1,12 @@
+{
+  "helper_version": "A091-stage19 audit.py v2; corrected bent influence expectation1/2; added complete sharpness-tree physical replay before final rerun. exact.py/check.py from 20261014T094139Z imported read-only with bytecode disabled; hashes saved in receipts",
+  "actual_Boolean_family": "F=K+Cg with exterior disjoint from internal; each exterior entry either C=1,K=0 or C=0,K=+/-1; all two-bit Boolean g. Separate paired-quadratic bent singleton wrappers and source W=(1-X)g+X(b-C+Cg).",
+  "parameter_domain": "transfer: all 3^4 exterior configurations and all 16 two-bit g, both coordinates. Trees: all 256 three-bit Boolean g, complete fixed coordinate order. Sharpness: m=4,6, g all16 two-bit signs plus AND3 and parity3. Source-only obstruction: m=4,6,8.",
+  "case_count": "pilot transfer 3 exterior configurations x16 internal tables x2 queries=96; main transfer81x16x2=2592; variance256 trees x7 internal nodes=1792; sharpness36 wrapped roots including complete physical internal-tree replay; obstruction3 roots, each independently direct-character reproduced",
+  "symmetry": "none; literal constants, all biases, c=0, c=1 and all overlapping exterior K/C patterns retained",
+  "arithmetic": "Fraction physical Fourier amplitudes, exact prime-log entropy expressions, 40-term atanh with geometric error and outward rational enclosures; independent direct character sums for source spectrum",
+  "memory_estimate_MB": 180,
+  "maximum_runtime_seconds_per_command": 55,
+  "automatic_dimension_escalation": false,
+  "execution": "python -B -X utf8 code/audit.py pilot|transfer|trees|sharp|obstruction"
+}

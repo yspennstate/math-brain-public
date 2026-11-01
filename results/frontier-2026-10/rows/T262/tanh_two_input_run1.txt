@@ -1,0 +1,14 @@
+infinite-width c_l: l 1: 0.512043 l 2: 0.501282 l 5: 0.490009 l 10: 0.484840 l 100: 0.479487 l 1000: 0.478929 l 5000: 0.478880 l 10000: 0.478874 l 20000: 0.478871
+c_inf (Richardson on 10k/20k) 0.478868, theta_inf 1.071432
+limit t 0.25: z quantiles -0.088 0.231 0.585 0.934 1.245 | mean 0.582 sd 0.522
+limit t 0.5: z quantiles -0.364 0.121 0.648 1.162 1.610 | mean 0.635 sd 0.766
+limit t 1.0: z quantiles -0.795 -0.057 0.774 1.549 2.197 | mean 0.735 sd 1.162
+limit t 2.0: z quantiles -1.572 -0.348 1.060 2.220 3.160 | mean 0.916 sd 1.814
+net n 200 t 0.25: z quantiles -0.101 0.205 0.563 0.927 1.232 | mean 0.570 sd 0.520 (se 0.012) | median q 8.90e-03
+net n 200 t 0.5: z quantiles -0.339 0.101 0.607 1.131 1.631 | mean 0.621 sd 0.770 (se 0.017) | median q 3.75e-03
+net n 200 t 1.0: z quantiles -0.809 -0.086 0.754 1.572 2.202 | mean 0.725 sd 1.159 (se 0.026) | median q 1.38e-03
+net n 200 t 2.0: z quantiles -1.586 -0.359 0.993 2.209 3.151 | mean 0.896 sd 1.806 (se 0.040) | median q 3.24e-04
+net n 400 t 0.25: z quantiles -0.145 0.194 0.557 0.919 1.226 | mean 0.550 sd 0.538 (se 0.012) | median q 4.27e-03
+net n 400 t 0.5: z quantiles -0.405 0.103 0.628 1.153 1.556 | mean 0.610 sd 0.769 (se 0.017) | median q 1.82e-03
+net n 400 t 1.0: z quantiles -0.772 -0.072 0.760 1.518 2.188 | mean 0.719 sd 1.153 (se 0.026) | median q 6.61e-04
+net n 400 t 2.0: z quantiles -1.590 -0.319 1.148 2.234 3.142 | mean 0.952 sd 1.822 (se 0.041) | median q 1.68e-04

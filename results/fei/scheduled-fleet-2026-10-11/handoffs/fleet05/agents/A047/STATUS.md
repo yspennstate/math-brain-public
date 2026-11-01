@@ -1,0 +1,2 @@
+STATE: A047 stage6 complete: A050 envelope independently accepted; same-owner canonical b/y full payment<21/32; all-n rare-core source+positive-edge cost<7/4 from certified final>=2;18 cases/6707 exact assertions PASS; FEI OPEN, new review pending.
+NEXT: A039/A050 review complete payment; test fixed canonical marginal-gap/unused-frontier criterion on one supplied non-point core after another data query, same Q/bookings, full terminal debts.

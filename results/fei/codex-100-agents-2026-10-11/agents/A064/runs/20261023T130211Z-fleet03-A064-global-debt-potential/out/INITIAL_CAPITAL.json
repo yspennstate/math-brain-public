@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "point_dimensions": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "actual_case_count": 4,
+  "tensor_spectra": "exact source additivity, not enumerated and no reference-kernel tensorization assumed",
+  "exact_assertions": 438,
+  "seconds": 0.07159409999803756,
+  "records": [
+    {
+      "m": 2,
+      "actual_point_dimension": 2,
+      "tensor_copies": 2,
+      "tensor_core_I": 2,
+      "outer_bent_I": 3,
+      "initial_capital_lower_bound": {},
+      "analytic_simpler_lower_bound": -8,
+      "analytic_ratio_lower_bound": "-8/3"
+    },
+    {
+      "m": 4,
+      "actual_point_dimension": 4,
+      "tensor_copies": 8,
+      "tensor_core_I": 4,
+      "outer_bent_I": 5,
+      "initial_capital_lower_bound": {
+        "2": "48",
+        "7": "-63/4"
+      },
+      "analytic_simpler_lower_bound": -6,
+      "analytic_ratio_lower_bound": "-6/5"
+    },
+    {
+      "m": 6,
+      "actual_point_dimension": 6,
+      "tensor_copies": 32,
+      "tensor_core_I": 6,
+      "outer_bent_I": 7,
+      "initial_capital_lower_bound": {
+        "2": "640",
+        "31": "-2015/16"
+      },
+      "analytic_simpler_lower_bound": 4,
+      "analytic_ratio_lower_bound": "4/7"
+    },
+    {
+      "m": 8,
+      "actual_point_dimension": 8,
+      "tensor_copies": 128,
+      "tensor_core_I": 8,
+      "outer_bent_I": 9,
+      "initial_capital_lower_bound": {
+        "2": "5376",
+        "127": "-48895/64"
+      },
+      "analytic_simpler_lower_bound": 22,
+      "analytic_ratio_lower_bound": "22/9"
+    }
+  ]
+}

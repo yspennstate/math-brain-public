@@ -1,0 +1,13 @@
+{
+ "helper_version":"A069-same-bank-v1",
+ "family":"q2 times four cores (Maj3,y0,-y0,-Maj3) in index c+2u",
+ "domain":"27 partial Y assignments, 27 physical query types; full Walsh formula crosschecks at m=1,2,3; leaf control certificates m=1,2 and analytic m>=3",
+ "case_count":{"core_nodes":27,"core_queries":27,"full_nodes":81,"full_queries":81,"leaf_boundary_types":4},
+ "symmetry":"No core reduction; leaf types d=0 or1 are proved from all eight complete assignments",
+ "arithmetic":"Fraction throughout; log2 via power-of-two reduction and 24-term atanh series, explicit positive geometric remainder; no floating sign tests",
+ "memory_estimate_mb":64,
+ "maximum_runtime_seconds":55,
+ "automatic_dimension_escalation":false,
+ "claims_to_test":["relevant core decrement <=4 physical core influence", "irrelevant core decrement <1/4", "all actual leaf surplus at rate4 >1 for m1,2", "exact all-m formulas checked against complete spectra at m1..3"],
+ "failure_policy":"Any failed predicate leaves intended theorem unresolved; retain output and change mechanism rather than silently adjust domain"
+}

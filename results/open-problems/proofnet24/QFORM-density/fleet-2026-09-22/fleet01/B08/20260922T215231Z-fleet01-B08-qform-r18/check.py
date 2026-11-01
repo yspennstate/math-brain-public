@@ -1,0 +1,32 @@
+from mpmath import mp
+
+mp.dps = 50
+q = mp.mpf(1)
+beta = 2*q/(mp.pi**2 * mp.e**2)
+J = mp.sqrt(mp.pi)/mp.sqrt(beta) * mp.gamma(3/(4*q)-mp.mpf('0.5'))/mp.gamma(3/(4*q))
+M = (2*mp.pi)**(-mp.mpf(2)/3) * J**(mp.mpf(2)/3)
+C = (2**(mp.mpf(4)/3)+1) * M**(mp.mpf(3)/4)
+splice = C * 2**(mp.mpf(1)/4)
+Delta = mp.mpf(317037289472)/mp.mpf(519230401875)
+partner = (2**(mp.mpf(4)/3)+1)*mp.sqrt(3)*2**(mp.mpf(1)/4)*Delta**(-mp.mpf(1)/8)
+eps = mp.mpf('1e-4')
+delta = mp.mpf('1e-2')
+eta = mp.sqrt(2*mp.pi*eps)+eps/2
+counter_lb = mp.cos(delta)**3 * (2-eta)
+
+print('beta_1 =', mp.nstr(beta, 30))
+print('J_1 =', mp.nstr(J, 30))
+print('L3_coeff =', mp.nstr(M, 30))
+print('C_half_leverage =', mp.nstr(C, 30))
+print('r20_splice_coeff =', mp.nstr(splice, 30))
+print('Delta_const =', mp.nstr(Delta, 30))
+print('partner_coeff =', mp.nstr(partner, 30))
+print('tail_eta_eps =', mp.nstr(eta, 30))
+print('counterexample_difference_lower_bound =', mp.nstr(counter_lb, 30))
+assert q < mp.mpf('1.5')
+assert C < mp.mpf('7.902')
+assert splice < mp.mpf('9.398')
+assert Delta > mp.mpf('0.6105')
+assert partner < mp.mpf('7.712')
+assert counter_lb > mp.mpf('1.9745')
+print('QFORM_B08_R18_CHECK_PASS')

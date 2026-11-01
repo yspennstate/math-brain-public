@@ -1,0 +1,2 @@
+STATE: A028 stage5 saved arbitrary-controller shared-core full payment with one R bank; R contracts through all mixed physical queries; 230304 entropy/reference+87881 bank assertions; release-only data rule refuted (extra price>=3); v5 review pending; FEI OPEN.
+NEXT: A091/A094 review; pay one non-flat DATA residual from actual query influence, released R and inherited signed controller/child surplus with both terminal references retained.

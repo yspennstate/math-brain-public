@@ -1,0 +1,30 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B05",
+  "run_id": "20261014T032726Z-fleet01-B05-fixed-shared-block-a023",
+  "primary_packet_id": "A023",
+  "claims": [
+    {
+      "claim_id": "B05-FIXED-SHARED-BLOCK-TRANSPORT-v1",
+      "status": "AUTHOR_PROVED_PENDING_REVIEW",
+      "quantifiers": "For every finite shared coordinate set X, every disjoint private U,V, and all Boolean f(X,U), g(X,V)",
+      "statement": "The singleton potential of fg is bounded by coefficient-one private X-orbit charges plus |X| times the smaller empty-orbit charge; the associated block potential contracts under every physical reveal order.",
+      "units": "bits with q(t)=t log2(1/t)+2t/ln(2)",
+      "dependencies": [
+        "B01-ONE-SHARED-BLOCK-POTENTIAL-v1",
+        "OVERLAP_PRODUCT",
+        "B05_RARE_REFUNDS"
+      ],
+      "proof_files": ["REPORT.md", "PROOF.md", "ENDPOINT_INTERFACES.tex"],
+      "verification_files": ["CHECK.py", "CHECK.out"],
+      "limitations": [
+        "empty-orbit coefficient equals |X|",
+        "shared block must be fixed rather than changing through the hierarchy",
+        "does not yet pay the complete signed Delta_i U charge",
+        "not a proof of full FEI"
+      ]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}
+

@@ -1,0 +1,66 @@
+diff --git a/~/math-brain-inbox/w542/bundle_001.json b/~/math-brain-inbox/w542/bundle_001.json
+new file mode 100644
+--- /dev/null
++++ b/~/math-brain-inbox/w542/bundle_001.json
+@@ -0,0 +1,61 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w542",
++  "bundle_slug": "p0321-source-and-conditional-proof-boundaries-001",
++  "entries": [
++    {
++      "key": "p0321-source-scope",
++      "namespace": "probability.core",
++      "logical_name": "p0321-hexatic-riesz-source-scope",
++      "kind": "concept",
++      "title": "P0321 hexatic Riesz phase: source scope",
++      "statement": "Lewin's 2022 review, section VI.2, describes a predicted intermediate 2D hexatic phase by fast translational and slow sixfold orientational correlations, mentioning simulations for short-range s>2 and long-range jellium at s=0 and s=1. This is a qualitative prediction, not a fully quantified existence theorem. Theorem 47 of that review proves translation invariance only for s>d, so it does not cover d=2,s=1. The 2026-09-07 intake calls P0321 unsolved, but current openness is unverified.",
++      "proof_text": null,
++      "assumptions": ["Source is Mathieu Lewin, arXiv:2202.09240v2, sections VI.1 and VI.2", "Current-status statement is limited to a dated intake and bounded source review"],
++      "domain": "probability theory",
++      "source": {"source_id": "owner:w542:p0321-source-review-20261010", "url": "file:///~/brain_workers/w542/SOURCE_STATUS.json", "revision": "as-read-2026-10-10", "license": "owner-own-work", "excerpt": null}
++    },
++    {
++      "key": "gaussian-surrogate-obstruction",
++      "namespace": "probability.core",
++      "logical_name": "p0321-cutoff-gaussian-elastic-surrogate-correlations",
++      "kind": "lemma",
++      "title": "Cutoff Gaussian elastic surrogate has algebraic positional correlation and an orientation plateau",
++      "statement": "For a centered real 2D Gaussian displacement field with stationary increments and cutoff spectrum Q(k)=a_T|k|^{-2}P_T(k)+a_L|k|^{-s}P_L(k) on 0<|k|<=Lambda, where a_T>0, a_L>=0, 0<=s<2, the density-wave surrogate E exp(i q·(u(re)-u(0))) lies between positive multiples of r^{-a_T|q|^2/(4pi)} for every fixed nonzero q and direction e. For theta=curl(u)/2, the sixfold surrogate E exp(i6(theta(re)-theta(0))) tends to exp(-36 a_T Lambda^2/(16pi))>0. These are surrogate-field facts, not Riesz Gibbs or Delaunay-bond statements.",
++      "proof_text": "Gaussianity gives E exp(iq·Delta u)=exp[-Var(q·Delta u)/2]. Polar integration yields transverse variance a_T|q|^2/(2pi) times integral_0^{Lambda r}[1-J0(t)-cos(2alpha)J2(t)]dt/t = a_T|q|^2 log r/(2pi)+O(1), since Bessel tails divided by t are integrable; the longitudinal term is O(1) for s<2. The curl spectrum is a_T/4 on the cutoff disk, so Var theta=a_T Lambda^2/(16pi), and its covariance tends to zero by Riemann-Lebesgue. The Gaussian characteristic function then gives the stated orientation limit.",
++      "assumptions": ["Only the stipulated Gaussian field, not a particle Gibbs process", "Fixed ultraviolet cutoff Lambda>0", "q is nonzero and e is a fixed unit direction"],
++      "domain": "probability theory",
++      "source": {"source_id": "owner:w541:p0321-gaussian-20261010", "url": "file:///~/brain_workers/w541/INDEPENDENT.md", "revision": "reviewed-by-w542-2026-10-10", "license": "owner-own-work", "excerpt": null}
++    },
++    {
++      "key": "cumulant-vertex-bound",
++      "namespace": "probability.core",
++      "logical_name": "bounded-cumulants-imply-algebraic-vertex-bounds",
++      "kind": "lemma",
++      "title": "Uniform higher cumulants and logarithmic variance imply algebraic vertex bounds",
++      "statement": "Let q,a>0 and D,B>=0. For each real X_{L,r}, 2<=r<=L/4, assume E exp(q|X_{L,r}|)<infinity, |kappa_2(X_{L,r})-a log r|<=D, and sum_{n>=3}q^n|kappa_n(X_{L,r})|/n!<=B uniformly. Set eta=q^2 a/2 and H=q^2D/2+B. Then exp(-H)r^{-eta}<=|E exp(iqX_{L,r})|<=exp(H)r^{-eta}. This conditional lemma does not establish the hypotheses for Riesz gases.",
++      "proof_text": "The moment-generating function M(z)=E exp(zX) is analytic for |Re z|<q. The absolutely convergent cumulant series K(z)=sum_n kappa_n z^n/n! is analytic in |z|<q and continuous at iq. Near zero M=exp K, hence throughout the disk by the identity theorem. Passing z=itq to iq by dominated and absolute convergence gives M(iq)=exp K(iq). Its real exponent is -q^2 kappa_2/2 plus a remainder bounded by B, yielding the bounds.",
++      "assumptions": ["Uniform exponential moment at q", "Uniform log-variance estimate", "Absolute sum of higher cumulants at q"],
++      "domain": "probability theory",
++      "source": {"source_id": "owner:w540:p0321-transfer-20261010", "url": "file:///~/brain_workers/w540/ATTEMPT.md", "revision": "reviewed-by-w542-2026-10-10", "license": "owner-own-work", "excerpt": null}
++    },
++    {
++      "key": "microscopic-bottleneck",
++      "namespace": "probability.core",
++      "logical_name": "p0321-microscopic-defect-sector-proof-obligation",
++      "kind": "concept",
++      "title": "P0321 microscopic defect-sector proof obligation (unproved)",
++      "statement": "UNPROVED INPUT for a chosen d=2,s=1 jellium subtarget: on a nonempty beta interval, construct equilibrium thermodynamic limits and control the dislocation/disclination sectors strongly enough to transfer a slow sixfold correlation to a genuine particle-bond observable while proving absence of crystalline positional quasi-long-range order in the same state. Gaussian spin-wave estimates and conditional cumulant lemmas do not supply this input.",
++      "proof_text": null,
++      "assumptions": ["This is a proposed proof obligation, not a theorem", "Finite-volume neutralizing background and the observable still require explicit conventions"],
++      "domain": "probability theory",
++      "source": {"source_id": "owner:w542:p0321-referee-attempt-20261010", "url": "file:///~/brain_workers/w542/ATTEMPT.md", "revision": "2026-10-10", "license": "owner-own-work", "excerpt": null}
++    }
++  ],
++  "relations": [
++    {"from_key": "p0321-source-scope", "to_existing_logical": "math:probability.core:open-problem-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases", "kind": "semantic_association", "rationale": "The source-scope note clarifies the exact P0321 node title and its dated open status."},
++    {"from_key": "gaussian-surrogate-obstruction", "to_key": "p0321-source-scope", "kind": "semantic_association", "rationale": "The Gaussian surrogate has algebraic positional correlation, whereas the source's hexatic description requires fast positional decorrelation."},
++    {"from_key": "cumulant-vertex-bound", "to_key": "microscopic-bottleneck", "kind": "semantic_association", "rationale": "The conditional vertex bound would be usable only after the unproved microscopic connected-cumulant estimates are obtained."},
++    {"from_key": "microscopic-bottleneck", "to_key": "p0321-source-scope", "kind": "semantic_association", "rationale": "The bottleneck specifies what the chosen d=2,s=1 subtarget would need beyond the qualitative source prediction."}
++  ]
++}

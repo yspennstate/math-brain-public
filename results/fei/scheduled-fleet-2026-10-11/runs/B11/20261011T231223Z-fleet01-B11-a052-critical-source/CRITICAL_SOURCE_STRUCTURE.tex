@@ -1,0 +1,133 @@
+\section*{Critical descendants and tensor purity}
+
+For a nonconstant Boolean function $f$ on a finite uniform cube, write
+\[
+ R(f)=\frac{\mathsf H(f)}{\mathsf I(f)}.
+\]
+A \emph{physical descendant} is obtained by fixing an arbitrary set of input
+coordinates to signs.  Constants are omitted whenever $R$ is used.  We call
+$f$ $\eta$-critical if
+\[
+ R(g)\le R(f)+\eta                                      \tag{1}
+\]
+for every nonconstant physical descendant $g$ of $f$.  Thus critical means
+$0$-critical.  This definition includes the empty restriction.
+
+\begin{proposition}[finite critical reduction]\label{prop:reduction}
+Every nonconstant Boolean $f$ has a critical physical descendant $g$ with
+$R(g)\ge R(f)$.  Consequently the supremum of $R$ over critical sources is
+the full FEI supremum (finite or infinite).
+\end{proposition}
+
+\begin{proof}
+The set of physical descendants of a fixed finite truth table is finite.
+Choose a nonconstant descendant $g$ maximizing $R$.  Every descendant of $g$
+is also a descendant of $f$, hence has ratio at most $R(g)$.  The empty
+restriction shows $R(g)\ge R(f)$.  Taking suprema proves the last assertion.
+\end{proof}
+
+\begin{theorem}[tensor purity of critical sources]\label{thm:purity}
+Let $f_1,\ldots,f_m$ be nonconstant Boolean functions on disjoint physical
+blocks and let $F=\prod_{j=1}^m f_j$.  Put
+\[
+ H_j=\mathsf H(f_j),\quad I_j=\mathsf I(f_j),\quad
+ r_j=H_j/I_j,\quad I=\sum_j I_j,\quad w_j=I_j/I,
+ \quad r=R(F).
+\]
+Then
+\[
+ \mathsf H(F)=\sum_jH_j,\qquad \mathsf I(F)=\sum_jI_j,
+ \qquad r=\sum_jw_jr_j.                              \tag{2}
+\]
+If $F$ is $\eta$-critical, then for every $j$
+\[
+ r-\frac{1-w_j}{w_j}\eta\ \le\ r_j\ \le\ r+\eta, \tag{3}
+\]
+and every nonconstant physical descendant $u$ of $f_j$ obeys
+\[
+ R(u)\le r_j+\frac{\eta}{w_j}.                       \tag{4}
+\]
+In particular, a tensor product is critical if and only if all its factors
+are critical and all their ratios are equal.
+\end{theorem}
+
+\begin{proof}
+The squared Fourier law of a disjoint product is the product of the squared
+Fourier laws.  Shannon entropy and expected set size are therefore additive,
+which proves (2).
+
+Fix all blocks except block $j$ to arbitrary input points.  The resulting
+physical descendant is $\pm f_j$, so (1) gives $r_j\le r+\eta$.  Averaging
+these upper bounds in (2) and isolating the $j$th term gives
+\[
+ w_j(r-r_j)=\sum_{k\ne j}w_k(r_k-r)
+ \le (1-w_j)\eta,
+\]
+which is (3).  More generally, after applying any restriction inside block
+$j$, fix all other blocks completely.  The resulting descendant of $F$ is
+$\pm u$.  Hence $R(u)\le r+\eta$, while (3) implies
+$r+\eta-r_j\le\eta/w_j$.  This proves (4).
+
+For $\eta=0$, (3) forces every $r_j=r$, and (4) says that every factor is
+critical.  Conversely, restrict a product of critical equal-ratio factors in
+arbitrary physical coordinates.  The surviving function is a product of
+factor descendants.  Its ratio is an influence-weighted average of ratios at
+most the common value, so the product is critical.
+\end{proof}
+
+\paragraph{Quantitative interpretation.}
+If $w_j\ge\alpha>0$, then an $\eta$-critical product forces
+$|r_j-r|\le\max\{1,(1-\alpha)/\alpha\}\eta$ and makes $f_j$
+$(\eta/\alpha)$-critical.  Thus a factor separated from the product ratio by
+$\Delta>0$ can occur only with influence weight at most
+$\eta/(\Delta+\eta)$ on the low-ratio side.  This is a genuine ratio-deficit
+statement; it does not compare raw component entropies.
+
+\begin{proposition}[one-point surgery defeats qualitative primitivity]
+\label{prop:surgery}
+Let $h:\{-1,1\}^a\to\{-1,1\}$ be any nonconstant Boolean function.  Lift it
+to $a+N$ variables by ignoring $N$ new variables, and flip its value at one
+joint input to obtain $G_N$.  Then $G_N$ is not a product across the original
+and new blocks, but
+\[
+ \mathsf H(G_N)\longrightarrow\mathsf H(h),\qquad
+ \mathsf I(G_N)\longrightarrow\mathsf I(h),\qquad
+ R(G_N)\longrightarrow R(h).                         \tag{5}
+\]
+More explicitly, with $d=a+N$ and $p,q$ the two squared Fourier laws,
+\[
+ \frac12\|p-q\|_1\le \tau_d:=2^{1-d/2},\qquad
+ |\mathsf I(G_N)-\mathsf I(h)|\le \frac d{2^{d-1}},  \tag{6}
+\]
+and for $d\ge4$
+\[
+ |\mathsf H(G_N)-\mathsf H(h)|
+ \le h_2(\tau_d)+\tau_d\log_2(2^d-1).                \tag{7}
+\]
+\end{proposition}
+
+\begin{proof}
+If two Boolean tables differ at one input, Parseval gives
+$\|\widehat G_N-\widehat h\|_2=2^{1-d/2}$.  Therefore
+\[
+ \|p-q\|_1\le
+ \|\widehat G_N-\widehat h\|_2
+ \|\widehat G_N+\widehat h\|_2\le2^{2-d/2},
+\]
+which is the first part of (6).  A point flip toggles the boundary status of
+exactly $d$ incident undirected edges, proving the second part of (6).
+The finite-alphabet entropy continuity inequality gives (7), and its right
+side tends to zero.  Since $\mathsf I(h)>0$, (5) follows.
+
+For nonfactorization, choose a new-block input other than the exceptional
+one.  Its row is $h$.  A rank-one Boolean product across the two blocks would
+force every row to be $h$ or $-h$, whereas the exceptional row differs from
+$h$ at exactly one original-block input and agrees elsewhere.  This is
+neither $h$ nor $-h$.
+\end{proof}
+
+The surgery proposition does not claim that $G_N$ remains critical.  It
+shows exactly why connectedness, visual primitivity, or nonfactorization
+cannot replace the quantified descendant comparison (1).  Conversely,
+Proposition~\ref{prop:reduction} shows that restricting to genuinely critical
+sources is not by itself an easier FEI class.

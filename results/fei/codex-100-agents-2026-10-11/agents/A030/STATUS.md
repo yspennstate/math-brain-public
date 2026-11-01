@@ -1,0 +1,2 @@
+STATE: A030 stage5 saved: exact three-cut harmonic controller reserve/edge ownership; omitted-cut debt3/4; finite/parity correction optimum3;60219 exact checks PASS; prior binary transfer A087 accepted; new review pending; FEI OPEN.
+NEXT: Price signed E at one genuinely non-flat surjective three-state controller query with all3 cut reserves, full terminals and unused child surplus; A064/A029/A087/A091/A094 review; no rarity reset.

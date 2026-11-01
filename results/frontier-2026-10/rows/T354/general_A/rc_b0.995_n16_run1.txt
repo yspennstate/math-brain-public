@@ -1,0 +1,33 @@
+T354 Theorem 3 (agent A, 21 Oct 2026): an empirical falsification test of the rate, on the d = 2 nonconvex sum of
+drift_bound_check.py (same a, b, c for the same seed). R independent reshuffling streams run side by side (PyTorch Adam, bias
+correction on, eta_k = eta0/sqrt(k)); at log-spaced checkpoints k we record E||grad f(x_k)||_phi(x_k) over the R streams,
+||u||_phi^2 = sum_j phi_j u_j^2, phi_j = 1/(sqrt(B2_j(x)) + eps), B2_j(x) = mean_i g_ij(x)^2. Theorem 3 says
+    min_{k <= T} E||grad f(x_k)||_phi <= rho_* + O(T^(-1/4) polylog T).
+Checkpoints only see some k, so the printed running min is an upper bound on the theorem's min; the test fails if, past the
+transient, (running min - plateau) decays slower than T^(-1/4), or if the plateau does not scale like 1 - b2 between runs.
+The plateau is the mean of E||grad f||_phi over the last eighth of the run's checkpoints. argv: b1 b2 eps n seed R log2T
+b1 0.9 b2 0.995 eps 1e-08 n 16 seed 7 R 64 T 2^22; mean a 1.008 mean c 2.016
+k        64  E|grad f|_phi 2.4229e-01 (se 5.9e-03)  running min 2.4229e-01
+k       128  E|grad f|_phi 1.6326e-01 (se 4.8e-03)  running min 1.6326e-01
+k       256  E|grad f|_phi 9.1436e-02 (se 2.9e-03)  running min 9.1436e-02
+k       512  E|grad f|_phi 3.7747e-02 (se 1.4e-03)  running min 3.7747e-02
+k      1024  E|grad f|_phi 1.1473e-02 (se 5.0e-04)  running min 1.1473e-02
+k      2048  E|grad f|_phi 2.8768e-03 (se 1.7e-04)  running min 2.8768e-03
+k      4096  E|grad f|_phi 1.3584e-03 (se 9.8e-05)  running min 1.3584e-03
+k      8192  E|grad f|_phi 1.0222e-03 (se 6.6e-05)  running min 1.0222e-03
+k     16384  E|grad f|_phi 7.9876e-04 (se 5.2e-05)  running min 7.1605e-04
+k     32768  E|grad f|_phi 6.4387e-04 (se 3.6e-05)  running min 6.0374e-04
+k     65536  E|grad f|_phi 4.8306e-04 (se 2.9e-05)  running min 4.1755e-04
+k    131072  E|grad f|_phi 4.5358e-04 (se 2.0e-05)  running min 4.1755e-04
+k    262144  E|grad f|_phi 3.5327e-04 (se 1.4e-05)  running min 3.5327e-04
+k    524288  E|grad f|_phi 3.6062e-04 (se 1.3e-05)  running min 3.3767e-04
+k   1048576  E|grad f|_phi 3.4757e-04 (se 9.0e-06)  running min 3.2790e-04
+k   2097152  E|grad f|_phi 3.3887e-04 (se 5.5e-06)  running min 3.2790e-04
+k   4194304  E|grad f|_phi 3.3490e-04 (se 4.7e-06)  running min 3.2790e-04
+plateau (last 8 checkpoints) 3.3995e-04 +- 5.8e-06; plateau/(1 - b2) 0.0680
+gap fit over k 64..220436 (48 pts): (running min - plateau) ~ k^-1.170  (Theorem 3 needs <= -0.25 up to logs)
+  T 4096: running min - plateau +1.018e-03   x T^(1/4) = +8.148e-03
+  T 32768: running min - plateau +2.638e-04   x T^(1/4) = +3.549e-03
+  T 262144: running min - plateau +1.332e-05   x T^(1/4) = +3.014e-04
+  T 4194304: running min - plateau -1.205e-05   x T^(1/4) = -5.455e-04
+DONE

@@ -1,0 +1,33 @@
+PROB10_04_MEAN_BALL_TRANSPORT_CHECK
+FINITE_DECIMAL_SURROGATE_ONLY_NOT_SOURCE_INTERVAL_CERTIFICATE
+variable_within_block_pair_count = 14951
+clause_within_block_pair_count = 26
+max_euclid2_variable = 1058 arg = ((23, 0, 0), (0, 23, 0))
+max_euclid2_clause = 10 arg = (0, ((0, 1, 0), (0, 1, 0, 2)), ((0, 0, 3), (0, 3, 0, 0)))
+max_maha2_variable_exact = 31142027354004217406082224586738500000000000000/15065099914736643401347122407794694799636837
+max_maha2_variable_decimal = 2067.163678319927 arg = ((0, 1, 22), (0, 23, 0))
+max_maha2_clause_exact = 5191755930797788443825036068514070000000000000000/557854423524544245023520725909342034299358120033
+max_maha2_clause_decimal = 9.306650107739737 arg = (0, ((0, 1, 0), (0, 1, 0, 2)), ((0, 0, 3), (0, 3, 0, 0)))
+center_eta_lower = 0.07
+RV_op_upper = 0.256
+RC_op_upper = 1.057
+invSV_op_upper = 6.19
+invSC_op_upper = 5.15
+anisotropic_euclidean_transport_coeff_upper_V = 114.0
+anisotropic_euclidean_transport_coeff_upper_C = 7.0
+rho_isotropic_certified_surrogate = 0.00084
+isotropic_remaining_slack_exact = 275893946251/319875590500000
+isotropic_remaining_slack_decimal = 0.0008625039060334302
+rho_anisotropic_certified_surrogate = 0.0015
+anisotropic_over_isotropic_radius_factor = 1.7857142857142858
+sV_upper = 0.171
+sC_upper = 0.0105
+degradation_upper_exact = 4442527557/65623640000
+degradation_upper_decimal = 0.06769706095242507
+remaining_LMI_slack_exact = 151127243/65623640000
+remaining_LMI_slack_decimal = 0.0023029390475749287
+EXACT_SUPPORT_ENUMERATION_PASS = True
+EXACT_CENTER_SPECTRAL_ENVELOPES_PASS = True
+EXACT_SURROGATE_MEAN_BALL_LMI_PASS = True
+
+Execution note: this is the actual stdout from running the matching checker during this bounded run. A Python startup hook emitted an unrelated artifact-tool warmup timeout to stderr before the checker ran; the checker itself completed normally and all asserted exact `Fraction` tests passed. Every displayed rational certificate treats the inherited finite-decimal saddle matrices and coordinates as exact rationals, so this is deliberately labeled a surrogate certificate rather than a source interval certificate.

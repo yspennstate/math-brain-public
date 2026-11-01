@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "assertions": 22,
+  "runtime_seconds": 0.009865100000752136,
+  "rows": [
+    {
+      "n": 2,
+      "query_influence": "3/4",
+      "source_bound_full_root_bill": "17/2",
+      "owned_query_budget": "17/2"
+    },
+    {
+      "n": 3,
+      "query_influence": "7/8",
+      "source_bound_full_root_bill": "6",
+      "owned_query_budget": "119/12"
+    },
+    {
+      "n": 4,
+      "query_influence": "15/16",
+      "source_bound_full_root_bill": "33/8",
+      "owned_query_budget": "85/8"
+    },
+    {
+      "n": 5,
+      "query_influence": "31/32",
+      "source_bound_full_root_bill": "23/8",
+      "owned_query_budget": "527/48"
+    },
+    {
+      "n": 6,
+      "query_influence": "63/64",
+      "source_bound_full_root_bill": "67/32",
+      "owned_query_budget": "357/32"
+    },
+    {
+      "n": 8,
+      "query_influence": "255/256",
+      "source_bound_full_root_bill": "173/128",
+      "owned_query_budget": "1445/128"
+    },
+    {
+      "n": 12,
+      "query_influence": "4095/4096",
+      "source_bound_full_root_bill": "2113/2048",
+      "owned_query_budget": "23205/2048"
+    },
+    {
+      "n": 16,
+      "query_influence": "65535/65536",
+      "source_bound_full_root_bill": "32853/32768",
+      "owned_query_budget": "371365/32768"
+    },
+    {
+      "n": 24,
+      "query_influence": "16777215/16777216",
+      "source_bound_full_root_bill": "8388733/8388608",
+      "owned_query_budget": "95070885/8388608"
+    },
+    {
+      "n": 32,
+      "query_influence": "4294967295/4294967296",
+      "source_bound_full_root_bill": "2147483813/2147483648",
+      "owned_query_budget": "24338148005/2147483648"
+    },
+    {
+      "n": 48,
+      "query_influence": "281474976710655/281474976710656",
+      "source_bound_full_root_bill": "140737488355573/140737488355328",
+      "owned_query_budget": "1595024868027045/140737488355328"
+    }
+  ],
+  "analytic_all_n_reason": "(n+1)2^-n decreases from3/4 atn2, query influence>=3/4. Full inherited child+innovation ledger equals rootCE, not renewed descendant cost."
+}

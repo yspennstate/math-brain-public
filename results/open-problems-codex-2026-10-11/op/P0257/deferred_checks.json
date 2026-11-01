@@ -1,0 +1,59 @@
+[
+  {
+    "check": "piecewise_hazard_integration",
+    "cases": 100,
+    "max_error": 4.434694599098066e-06
+  },
+  {
+    "check": "presampled_graph_invariants",
+    "graphs": 250,
+    "steps": 6000,
+    "all_passed": true,
+    "innovation_mean": 1.0061855997092537,
+    "innovation_exp1_KS": [
+      0.008494698787610222,
+      0.7761533238282735
+    ],
+    "adjacent_innovation_correlation": -0.00038906968189326844
+  },
+  {
+    "check": "n3_exact_mean",
+    "target": 3.75,
+    "replicates": 5000,
+    "measured": 3.755377734930381,
+    "standard_error": 0.038241569142167524
+  },
+  {
+    "check": "direct_vs_deferred",
+    "n": 12,
+    "replicates_each": 150,
+    "direct_mean": 1.7275881577621854,
+    "deferred_mean": 1.7567078298434777,
+    "two_sample_KS": [
+      0.06666666666666667,
+      0.8943205382966369
+    ]
+  },
+  {
+    "check": "direct_vs_deferred",
+    "n": 40,
+    "replicates_each": 100,
+    "direct_mean": 2.051583251628718,
+    "deferred_mean": 2.0186342929166665,
+    "two_sample_KS": [
+      0.1,
+      0.7020569828664881
+    ]
+  },
+  {
+    "check": "direct_vs_deferred",
+    "n": 80,
+    "replicates_each": 60,
+    "direct_mean": 2.0688889501117287,
+    "deferred_mean": 2.1205238450641626,
+    "two_sample_KS": [
+      0.21666666666666667,
+      0.11976314781726739
+    ]
+  }
+]

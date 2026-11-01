@@ -1,0 +1,44 @@
+PASS-BEGIN
+m 1 equality 32 orbit 32 all_decomposable True andor_witness 32 witness_count_range 10 10
+m 2 equality 80 orbit 80 all_decomposable True andor_witness 80 witness_count_range 10 10
+m 3 equality 320 orbit 320 all_decomposable True andor_witness 320 witness_count_range 4 4
+m 4 equality 80 orbit 80 all_decomposable True andor_witness 80 witness_count_range 10 10
+m 5 equality 960 orbit 960 all_decomposable True andor_witness 960 witness_count_range 2 2
+m 6 equality 480 orbit 480 all_decomposable True andor_witness 480 witness_count_range 6 6
+m 7 equality 480 orbit 480 all_decomposable True andor_witness 480 witness_count_range 2 2
+m 8 equality 40 orbit 40 all_decomposable True andor_witness 40 witness_count_range 10 10
+m 9 equality 480 orbit 480 all_decomposable True andor_witness 480 witness_count_range 2 2
+m 10 equality 960 orbit 960 all_decomposable True andor_witness 960 witness_count_range 5 5
+m 11 equality 1920 orbit 1920 all_decomposable True andor_witness 1920 witness_count_range 1 1
+m 12 equality 240 orbit 240 all_decomposable True andor_witness 240 witness_count_range 8 8
+m 13 equality 960 orbit 960 all_decomposable True andor_witness 960 witness_count_range 2 2
+m 14 equality 240 orbit 240 all_decomposable True andor_witness 240 witness_count_range 6 6
+m 15 equality 960 orbit 960 all_decomposable True andor_witness 960 witness_count_range 2 2
+m 16 equality 10 orbit 10 all_decomposable True andor_witness 0 witness_count_range 10 10
+total_equality_m_le_16 8242
+symmetry m>16 follows by output complement; cube automorphisms and decomposability are preserved
+classification every exact central equality case is cube-automorphic to the explicit read-once comparator; every nonliteral equality case has a binary AND/OR inner factor
+PASS-END
+MARGIN-SEPARATION-BEGIN
+m 1 strict_ratio NONE (all singleton tables are equality orbit)
+m 2 strict_ratio_lower 5.749588226662400 kind generic B 10 delta_scaled_lb 561483225260 M_num_over_1024 100
+m 3 strict_ratio_lower 4.510233182775008 kind generic B 13 delta_scaled_lb 532947475699 M_num_over_1024 121
+m 4 strict_ratio_lower 2.808342857133714 kind low B 14 delta_scaled_lb 307162499999 M_num_over_1024 112
+m 5 strict_ratio_lower 0.898653299517664 kind generic B 17 delta_scaled_lb 120229982455 M_num_over_1024 137
+m 6 strict_ratio_lower 2.989674281409561 kind generic B 20 delta_scaled_lb 478815021632 M_num_over_1024 164
+m 7 strict_ratio_lower 0.051796476980784 kind low B 17 delta_scaled_lb 4906502214 M_num_over_1024 97
+m 8 strict_ratio_lower 0.914600000000000 kind low B 20 delta_scaled_lb 114325000000 M_num_over_1024 128
+m 9 strict_ratio_lower 0.051796476980784 kind low B 19 delta_scaled_lb 4906502214 M_num_over_1024 97
+m 10 strict_ratio_lower 2.226850795410286 kind generic B 26 delta_scaled_lb 426233160059 M_num_over_1024 196
+m 11 strict_ratio_lower 1.407552143718774 kind low B 23 delta_scaled_lb 188315081728 M_num_over_1024 137
+m 12 strict_ratio_lower 1.584238885987556 kind low B 24 delta_scaled_lb 222783593342 M_num_over_1024 144
+m 13 strict_ratio_lower 0.798455542904471 kind low B 25 delta_scaled_lb 119300486391 M_num_over_1024 153
+m 14 strict_ratio_lower 0.147772302034824 kind low B 20 delta_scaled_lb 9813004432 M_num_over_1024 68
+m 15 strict_ratio_lower 0.280372252876800 kind low B 25 delta_scaled_lb 39701149089 M_num_over_1024 145
+m 16 strict_ratio_lower 1.829200000000000 kind low B 24 delta_scaled_lb 228650000000 M_num_over_1024 128
+global_strict_Dcert_over_M_lower_exact 2453251107/47363281250
+global_strict_Dcert_over_M_lower_decimal 0.051796476980784
+base_Gamma_RO_margin_upper_exact -3959236589/94726562500
+base_Gamma_RO_margin_upper_decimal -0.041796476980784
+interpretation every essential composition-prime five-input gate at uniform bias is strict, hence c_Gamma_RO <= 0.01-rstar < 0
+MARGIN-SEPARATION-END

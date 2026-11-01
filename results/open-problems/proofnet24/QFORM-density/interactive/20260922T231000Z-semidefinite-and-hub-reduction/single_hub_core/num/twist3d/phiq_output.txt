@@ -1,0 +1,102 @@
+python phiq.py 4 1 0 ; python phiq.py 4 8 0 ; python phiq.py 8 8 0   (combs at the integers, hub comb of Nh teeth)
+N=4 Nh=1 eps=0 frame=irr points=1105 (0s)
+  eta in [0.05, 1): mean eta|phi| = 0.234, max eta|phi| = 0.481, mean |phi| eta^{3/2} = 0.152
+  eta in [1, 3): mean eta|phi| = 0.451, max eta|phi| = 0.491, mean |phi| eta^{3/2} = 0.593
+  eta in [3, 10): mean eta|phi| = 0.190, max eta|phi| = 0.364, mean |phi| eta^{3/2} = 0.401
+  eta in [10, 30): mean eta|phi| = 0.051, max eta|phi| = 0.201, mean |phi| eta^{3/2} = 0.227
+  eta in [30, 100): mean eta|phi| = 0.116, max eta|phi| = 0.511, mean |phi| eta^{3/2} = 0.899
+  eta in [100, 300): mean eta|phi| = 0.015, max eta|phi| = 0.125, mean |phi| eta^{3/2} = 0.165
+  int_{0.05}^{max} |phi_Q| d eta = 1.626 (twice this bounds 2 pi ||p_Q|| from above only if it converges)
+N=4 Nh=8 eps=0 frame=irr points=1105 (3s)
+  eta in [0.05, 1): mean eta|phi| = 0.096, max eta|phi| = 0.122, mean |phi| eta^{3/2} = 0.051
+  eta in [1, 3): mean eta|phi| = 0.096, max eta|phi| = 0.114, mean |phi| eta^{3/2} = 0.130
+  eta in [3, 10): mean eta|phi| = 0.115, max eta|phi| = 0.132, mean |phi| eta^{3/2} = 0.272
+  eta in [10, 30): mean eta|phi| = 0.082, max eta|phi| = 0.117, mean |phi| eta^{3/2} = 0.335
+  eta in [30, 100): mean eta|phi| = 0.054, max eta|phi| = 0.081, mean |phi| eta^{3/2} = 0.410
+  eta in [100, 300): mean eta|phi| = 0.057, max eta|phi| = 0.092, mean |phi| eta^{3/2} = 0.652
+  int_{0.05}^{max} |phi_Q| d eta = 0.718 (twice this bounds 2 pi ||p_Q|| from above only if it converges)
+N=8 Nh=8 eps=0 frame=irr points=12209 (38s)
+  eta in [0.05, 1): mean eta|phi| = 0.040, max eta|phi| = 0.052, mean |phi| eta^{3/2} = 0.019
+  eta in [1, 3): mean eta|phi| = 0.040, max eta|phi| = 0.049, mean |phi| eta^{3/2} = 0.054
+  eta in [3, 10): mean eta|phi| = 0.033, max eta|phi| = 0.048, mean |phi| eta^{3/2} = 0.075
+  eta in [10, 30): mean eta|phi| = 0.020, max eta|phi| = 0.029, mean |phi| eta^{3/2} = 0.082
+  eta in [30, 100): mean eta|phi| = 0.019, max eta|phi| = 0.034, mean |phi| eta^{3/2} = 0.139
+  eta in [100, 300): mean eta|phi| = 0.009, max eta|phi| = 0.044, mean |phi| eta^{3/2} = 0.117
+  eta in [300, 1e+09): mean eta|phi| = 0.005, max eta|phi| = 0.013, mean |phi| eta^{3/2} = 0.091
+  int_{0.05}^{max} |phi_Q| d eta = 0.257 (twice this bounds 2 pi ||p_Q|| from above only if it converges)
+python phiq.py n n 0 irr fine for n = 4, 8   (fine combs: teeth of width 1/n at spacing 2/n in [0, 2], light and hub)
+N=4 Nh=4 eps=0 frame=irr fine combs in [0,2] points=1105 (1s)
+  eta in [0.05, 1): mean eta|phi| = 0.287, max eta|phi| = 0.753, mean |phi| eta^{3/2} = 0.195
+  eta in [1, 3): mean eta|phi| = 0.799, max eta|phi| = 0.844, mean |phi| eta^{3/2} = 1.060
+  eta in [3, 10): mean eta|phi| = 0.539, max eta|phi| = 0.698, mean |phi| eta^{3/2} = 1.244
+  eta in [10, 30): mean eta|phi| = 0.309, max eta|phi| = 0.398, mean |phi| eta^{3/2} = 1.266
+  eta in [30, 100): mean eta|phi| = 0.182, max eta|phi| = 0.229, mean |phi| eta^{3/2} = 1.344
+  eta in [100, 300): mean eta|phi| = 0.127, max eta|phi| = 0.159, mean |phi| eta^{3/2} = 1.429
+  int_{0.05}^{max} |phi_Q| d eta = 3.010 (twice this bounds 2 pi ||p_Q|| from above only if it converges)
+N=8 Nh=8 eps=0 frame=irr fine combs in [0,2] points=12209 (38s)
+  eta in [0.05, 1): mean eta|phi| = 0.285, max eta|phi| = 0.741, mean |phi| eta^{3/2} = 0.192
+  eta in [1, 3): mean eta|phi| = 0.781, max eta|phi| = 0.826, mean |phi| eta^{3/2} = 1.033
+  eta in [3, 10): mean eta|phi| = 0.523, max eta|phi| = 0.679, mean |phi| eta^{3/2} = 1.208
+  eta in [10, 30): mean eta|phi| = 0.298, max eta|phi| = 0.383, mean |phi| eta^{3/2} = 1.226
+  eta in [30, 100): mean eta|phi| = 0.168, max eta|phi| = 0.224, mean |phi| eta^{3/2} = 1.217
+  eta in [100, 300): mean eta|phi| = 0.107, max eta|phi| = 0.119, mean |phi| eta^{3/2} = 1.401
+  eta in [300, 1e+09): mean eta|phi| = 0.060, max eta|phi| = 0.066, mean |phi| eta^{3/2} = 1.071
+  int_{0.05}^{max} |phi_Q| d eta = 2.999 (twice this bounds 2 pi ||p_Q|| from above only if it converges)
+python phiq.py 8 8 eps irr fine for eps = 0.03, 0.003
+N=8 Nh=8 eps=0.03 frame=irr fine combs in [0,2] points=12209 (37s)
+  eta in [0.05, 1): mean eta|phi| = 0.285, max eta|phi| = 0.741, mean |phi| eta^{3/2} = 0.192
+  eta in [1, 3): mean eta|phi| = 0.781, max eta|phi| = 0.826, mean |phi| eta^{3/2} = 1.033
+  eta in [3, 10): mean eta|phi| = 0.523, max eta|phi| = 0.679, mean |phi| eta^{3/2} = 1.208
+  eta in [10, 30): mean eta|phi| = 0.298, max eta|phi| = 0.383, mean |phi| eta^{3/2} = 1.226
+  eta in [30, 100): mean eta|phi| = 0.169, max eta|phi| = 0.224, mean |phi| eta^{3/2} = 1.230
+  eta in [100, 300): mean eta|phi| = 0.095, max eta|phi| = 0.122, mean |phi| eta^{3/2} = 1.236
+  eta in [300, 1e+09): mean eta|phi| = 0.079, max eta|phi| = 0.091, mean |phi| eta^{3/2} = 1.407
+  int_{0.05}^{max} |phi_Q| d eta = 2.989 (twice this bounds 2 pi ||p_Q|| from above only if it converges)
+N=8 Nh=8 eps=0.003 frame=irr fine combs in [0,2] points=12209 (33s)
+  eta in [0.05, 1): mean eta|phi| = 0.285, max eta|phi| = 0.741, mean |phi| eta^{3/2} = 0.192
+  eta in [1, 3): mean eta|phi| = 0.781, max eta|phi| = 0.826, mean |phi| eta^{3/2} = 1.033
+  eta in [3, 10): mean eta|phi| = 0.523, max eta|phi| = 0.679, mean |phi| eta^{3/2} = 1.208
+  eta in [10, 30): mean eta|phi| = 0.298, max eta|phi| = 0.383, mean |phi| eta^{3/2} = 1.226
+  eta in [30, 100): mean eta|phi| = 0.168, max eta|phi| = 0.224, mean |phi| eta^{3/2} = 1.217
+  eta in [100, 300): mean eta|phi| = 0.107, max eta|phi| = 0.119, mean |phi| eta^{3/2} = 1.405
+  eta in [300, 1e+09): mean eta|phi| = 0.074, max eta|phi| = 0.078, mean |phi| eta^{3/2} = 1.320
+  int_{0.05}^{max} |phi_Q| d eta = 3.000 (twice this bounds 2 pi ||p_Q|| from above only if it converges)
+python phiq.py 16 16 0 irr fine
+N=16 Nh=16 eps=0 frame=irr fine combs in [0,2] points=113521 (1037s)
+  eta in [0.05, 1): mean eta|phi| = 0.284, max eta|phi| = 0.737, mean |phi| eta^{3/2} = 0.191
+  eta in [1, 3): mean eta|phi| = 0.775, max eta|phi| = 0.822, mean |phi| eta^{3/2} = 1.028
+  eta in [3, 10): mean eta|phi| = 0.518, max eta|phi| = 0.670, mean |phi| eta^{3/2} = 1.199
+  eta in [10, 30): mean eta|phi| = 0.297, max eta|phi| = 0.382, mean |phi| eta^{3/2} = 1.217
+  eta in [30, 100): mean eta|phi| = 0.167, max eta|phi| = 0.222, mean |phi| eta^{3/2} = 1.219
+  eta in [100, 300): mean eta|phi| = 0.095, max eta|phi| = 0.122, mean |phi| eta^{3/2} = 1.238
+  eta in [300, 1e+09): mean eta|phi| = 0.067, max eta|phi| = 0.083, mean |phi| eta^{3/2} = 1.387
+  int_{0.05}^{max} |phi_Q| d eta = 3.020 (twice this bounds 2 pi ||p_Q|| from above only if it converges)
+
+python phiq.py 8 8 eps irr for eps = 0.03, 0.003, and python phiq.py 8 8 0.003 irr2   (combs at the integers, cross term on)
+N=8 Nh=8 eps=0.03 frame=irr combs at the integers points=12209 (25s)
+  eta in [0.05, 1): mean eta|phi| = 0.039, max eta|phi| = 0.052, mean |phi| eta^{3/2} = 0.019
+  eta in [1, 3): mean eta|phi| = 0.036, max eta|phi| = 0.043, mean |phi| eta^{3/2} = 0.049
+  eta in [3, 10): mean eta|phi| = 0.028, max eta|phi| = 0.044, mean |phi| eta^{3/2} = 0.064
+  eta in [10, 30): mean eta|phi| = 0.019, max eta|phi| = 0.029, mean |phi| eta^{3/2} = 0.075
+  eta in [30, 100): mean eta|phi| = 0.020, max eta|phi| = 0.032, mean |phi| eta^{3/2} = 0.146
+  eta in [100, 300): mean eta|phi| = 0.017, max eta|phi| = 0.036, mean |phi| eta^{3/2} = 0.220
+  eta in [300, 1e+09): mean eta|phi| = 0.015, max eta|phi| = 0.018, mean |phi| eta^{3/2} = 0.260
+  int_{0.05}^{max} |phi_Q| d eta = 0.256 (twice this bounds 2 pi ||p_Q|| from above only if it converges)
+N=8 Nh=8 eps=0.003 frame=irr combs at the integers points=12209 (33s)
+  eta in [0.05, 1): mean eta|phi| = 0.040, max eta|phi| = 0.052, mean |phi| eta^{3/2} = 0.019
+  eta in [1, 3): mean eta|phi| = 0.040, max eta|phi| = 0.049, mean |phi| eta^{3/2} = 0.054
+  eta in [3, 10): mean eta|phi| = 0.033, max eta|phi| = 0.047, mean |phi| eta^{3/2} = 0.075
+  eta in [10, 30): mean eta|phi| = 0.020, max eta|phi| = 0.029, mean |phi| eta^{3/2} = 0.083
+  eta in [30, 100): mean eta|phi| = 0.016, max eta|phi| = 0.027, mean |phi| eta^{3/2} = 0.117
+  eta in [100, 300): mean eta|phi| = 0.022, max eta|phi| = 0.053, mean |phi| eta^{3/2} = 0.298
+  eta in [300, 1e+09): mean eta|phi| = 0.020, max eta|phi| = 0.033, mean |phi| eta^{3/2} = 0.349
+  int_{0.05}^{max} |phi_Q| d eta = 0.270 (twice this bounds 2 pi ||p_Q|| from above only if it converges)
+N=8 Nh=8 eps=0.003 frame=irr2 combs at the integers points=12209 (25s)
+  eta in [0.05, 1): mean eta|phi| = 0.039, max eta|phi| = 0.052, mean |phi| eta^{3/2} = 0.019
+  eta in [1, 3): mean eta|phi| = 0.040, max eta|phi| = 0.043, mean |phi| eta^{3/2} = 0.054
+  eta in [3, 10): mean eta|phi| = 0.035, max eta|phi| = 0.058, mean |phi| eta^{3/2} = 0.082
+  eta in [10, 30): mean eta|phi| = 0.014, max eta|phi| = 0.028, mean |phi| eta^{3/2} = 0.057
+  eta in [30, 100): mean eta|phi| = 0.016, max eta|phi| = 0.025, mean |phi| eta^{3/2} = 0.115
+  eta in [100, 300): mean eta|phi| = 0.019, max eta|phi| = 0.042, mean |phi| eta^{3/2} = 0.261
+  eta in [300, 1e+09): mean eta|phi| = 0.017, max eta|phi| = 0.037, mean |phi| eta^{3/2} = 0.306
+  int_{0.05}^{max} |phi_Q| d eta = 0.263 (twice this bounds 2 pi ||p_Q|| from above only if it converges)

@@ -1,0 +1,17 @@
+T084 matroid tests, agent B, 18 Oct 2026. k(A) replaced by the corank r(E) - r(A); N = Z10 Z01 - Z00 Z11.
+"pointwise" = every partial sum in q of every lam-level of N is >= 0 (uniform weight lam); "weighted" = random edge weights
+w_e = exp(U(ln 1e-3, ln 10) + U(-1.5, 1.5)), N(q) checked on 400 points of (0,1) and its q-partial sums.
+
+regular_test.py (uniform weight, all pairs): M(K5), M*(K5), M(K3,3), M*(K3,3), R10 - 0 pointwise failures.
+matroid_s8.py: rank-4 binary [I4|A], A rows 0111/1011/1101/1111 - 1 of 28 pairs basis-positively-correlated; that pair fails
+  pointwise (-16 = 20*28 - 48*12, the basis counts); AG(3,2) and the other candidate pass.
+binary_sweep.py 1 150: 150 random simple binary matroids, rank 3-5, up to 10 elements, 4,346 pairs; 13 basis-unbalanced pairs;
+  pointwise fails on exactly those 13, always at the basis level (|A|+|B| = 2r-2), sometimes also one below.
+balanced_vs_pointwise.py 2 120 (<= 8 elements): balanced & pointwise 115, unbalanced & not pointwise 5, mismatches 0.
+s8_extensions.py: the 15 single-element extensions of the unbalanced 8-element matroid. 7 have balanced bases of their own and
+  pass pointwise at uniform weight although each has the unbalanced matroid as a deletion; the other 8 fail. So the uniform-
+  weight statement is not minor-closed.
+weighted_regular.txt (600 trials each, random pair): M(K4), M*(K4), M(K5), M*(K5), M(K3,3), M*(K3,3), R10, F7, F7* - 0 failures;
+  control, the unbalanced 8-element matroid at its bad pair: N < 0 somewhere in 153 of 600.
+weighted_extra.txt: extension v=6 (balanced bases, uniform weight passes) at the bad pair: N < 0 in 51 of 600 weighted trials -
+  the weights find the deletion minor. AG(3,2): 0 of 600.

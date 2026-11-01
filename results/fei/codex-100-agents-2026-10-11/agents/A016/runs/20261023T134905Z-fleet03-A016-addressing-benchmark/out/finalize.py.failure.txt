@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "agents\A016\runs\20261023T134905Z-fleet03-A016-addressing-benchmark\code\finalize.py", line 14, in <module>
+    p=next(x for x in runs if x.name.startswith(stamp)) if stamp else max((x for x in runs if (x/'CLAIMS.json').exists() and any(c['claim_id']=='A020-PREDETERMINED-MIXED-EXPOSURE-AVERAGED-RESERVE' for c in read(x/'CLAIMS.json'))),key=lambda x:x.name)
+                                                                      ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "agents\A016\runs\20261023T134905Z-fleet03-A016-addressing-benchmark\code\finalize.py", line 14, in <genexpr>
+    p=next(x for x in runs if x.name.startswith(stamp)) if stamp else max((x for x in runs if (x/'CLAIMS.json').exists() and any(c['claim_id']=='A020-PREDETERMINED-MIXED-EXPOSURE-AVERAGED-RESERVE' for c in read(x/'CLAIMS.json'))),key=lambda x:x.name)
+                                                                                                                             ^^^
+  File "agents\A016\runs\20261023T134905Z-fleet03-A016-addressing-benchmark\code\finalize.py", line 14, in <genexpr>
+    p=next(x for x in runs if x.name.startswith(stamp)) if stamp else max((x for x in runs if (x/'CLAIMS.json').exists() and any(c['claim_id']=='A020-PREDETERMINED-MIXED-EXPOSURE-AVERAGED-RESERVE' for c in read(x/'CLAIMS.json'))),key=lambda x:x.name)
+                                                                                                                                 ~^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'

@@ -1,0 +1,14 @@
+{
+ "helper_version":"A009-growing-deleted-degree-v1",
+ "family":"Actual G=K_(a,b) minus labelled bipartite H; SAME surviving primes, both endpoint orders, pi=1/4, lambda=1/b",
+ "domain":"pilot all degree<=2 H for2<=a<=b<=3; full same330 graphs plus explicit6 bounded-degree fixtures; all truth inputs for n<=16; sparse exact defect/boundary verification for larger fixture dimensions through a=b=32",
+ "case_count":{"pilot_graphs":330,"extra_full_fixtures":6},
+ "symmetry":"Only exchange a,b; no labelled graph or truth-input symmetry quotient",
+ "arithmetic":"Python integers/Fraction; integer FWHT and physical flips; sparse exact physical edge boundaries; rational logarithm enclosures with proved atanh tail",
+ "memory_estimate_mb":90,
+ "max_runtime_seconds":60,
+ "automatic_dimension_escalation":false,
+ "fixtures":["a=b=4 H=C8","a=b=8 H=4 disjoint K22","a=b=12 H=4 disjoint K33","a=b=16 H=4 disjoint K44","a=b=32 H=8 disjoint K44","a=4,b=8 H=K22 plus isolated deletion vertices"],
+ "scalar_domain":"4<=a<=b<=128 and0<=d<=floor(a/2); boundary induction for b^4/2^b through b=256",
+ "status":"FROZEN_BEFORE_EXECUTION"
+}

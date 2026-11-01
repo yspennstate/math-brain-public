@@ -1,0 +1,22 @@
+QFORM-ONE-HEAVY-MAJORITY-M1M2-EXACT-v1
+
+Exact identities checked symbolically:
+I1 = -5/24 + (1/2) log(1+sqrt(2))
+I2 = -1/12 + sqrt(2)*pi/16
+C2 = 8*(I1+I2) = -7/3 + pi/sqrt(2) + 4 log(1+sqrt(2))
+
+High-precision checks:
+C1 = pi = 3.14159265358979323846264338328
+C2 = 3.41360248382402189110504446162
+3sqrt(2) = 4.24264068711928514640506617263
+3sqrt(2)-C2 = 0.829038203295263255300021711013
+
+Elementary analytic certificate:
+pi/sqrt(2) < 11sqrt(2)/7,
+log(1+sqrt(2)) < 1,
+so C2 < 5/3 + 11sqrt(2)/7 < 3sqrt(2).
+
+Spectrum check is exact from J_m/m having eigenvalues 1,0,...,0:
+spec_nonzero(diag(1,J_m/m,-J_m/m)) = {1,1,-1}.
+
+Status: PASS. Numerical values are sanity checks only; theorem is analytic.

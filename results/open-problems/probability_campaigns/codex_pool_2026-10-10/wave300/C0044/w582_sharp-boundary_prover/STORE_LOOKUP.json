@@ -1,0 +1,28 @@
+{
+  "path": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "access": "mode=ro",
+  "search": "C0044 or exact directional-zero-one title; at most 5 rows",
+  "rows": [
+    {
+      "table": "nodes",
+      "id": "claim_77b8c8b3e552560382a17be2fac6b00021e3a08ff74f780812e6f39787d2abb8",
+      "title": "Open problem: Zero-one law for directional transience in dimensions d >= 3",
+      "body_excerpt": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For a RWRE satisfying (E) and (IID) and any direction l, is P_0[A_l] in {0,1}, where A_l is the event of transience in direction l? Known for d = 1 and d = 2 (Zerner-Merkl). Source: Drewitz and Ramirez: Selected topics in random walks in random environment, Open question 3.2, p. 42.\nPosed in Drewitz and Ramirez: Selected topics in random walks in random environment\nCurrent status unverified as of 2026-09-07"
+    },
+    {
+      "table": "nodes",
+      "id": "claim_372d2aafaafb697b2a7c3c66368c6ae5c2e757ce647bd528fceebd3b13c28630",
+      "title": "Attempt on Zero-one law for directional transience in dimensions d >= 3",
+      "body_excerpt": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Analyse where the Zerner-Merkl planar argument uses d = 2. Result: Zerner-Merkl show P_0[A_l intersection A_{-l}] = 0 using that in d = 2 two independent walks in the same environment started at distant points on a line perpendicular to l must, with positive probability, have paths that intersect (planarity), which lets one derive a contradiction from the walk going to +infinity and -infinity in direction l with positive probability each. In d >= 3 paths of two walks need not intersect, and the known partial result (Kalikow's 0-1 law: P_0[A_l union A_{-l}] in {0,1}) does not exclude the mixed event. A candidate counterexample structure in d >= 3 would be an i.i.d. environment where the walk is guided to +l or -l depending on a local feature it meets first; the i.i.d. assumption and the fact that the walk visits infinitely many independent regions make such a persistent memory implausible but not provably impossible: the walk in direction +l sees fresh environment forever, and the event that it turns around is a tail event of the walk but not of the environment. I checked that the natural martingale argument (P_omega(A_l) as a function of the environment at the current position) fails because P_omega(A_l) is not measurable with respect to a finite region. No result. Obstruction: Planarity is essential to the d = 2 proof; no substitute in d >= 3.\nRefers to the open problem node open-problem-c0044-zero-one-law-for-directional-transience-in-dimensions-d-3\nNo independent review; result status attempted_unsolved"
+    },
+    {
+      "table": "nodes",
+      "id": "claim_4b1317a4c7b663b925ef6da8c356e0c7f99b89503f70b7d0d4a8e76475ed3df5",
+      "title": "Attempt on Zero-one law for directional transience in dimensions d >= 3 (corrected)",
+      "body_excerpt": "ATTEMPT RECORD (SUPERSEDING REVISION 2026-09-07 12:4x after the Codex holder's review), author-checked only. CORRECTION of C0044-A001's first sentence. The events {X_n . l -> +infinity} and {X_n . l -> -infinity} are disjoint by definition, so 'Zerner-Merkl show P(A_l intersect A_{-l}) = 0' is empty; what Zerner-Merkl prove in d = 2 is P_0(A_l) in {0,1}, using planarity to show two walks in the same environment intersect, which is what A001 then describes. The reduction (planarity essential; no d >= 3 substitute; no finite-region measurability for the natural martingale) stands. Key identity: Zerner-Merkl (d=2): P_0(A_l) in {0,1}; Kalikow (all d): P_0(A_l union A_{-l}) in {0,1}; d >= 3 directional law open. Standing obstruction: see the earlier attempt; the correction above replaces the flawed step only.\nRefers to the open problem node open-problem-c0044-zero-one-law-for-directional-transience-in-dimensions-d-3\nSupersedes the 2026-09-07 morning attempt record"
+    }
+  ],
+  "status": "targeted read complete",
+  "elapsed_seconds": 0.033802099991589785,
+  "scope_limit": "Population mirror only; this does not certify all owner solved/retired work or the latest control-repository state."
+}

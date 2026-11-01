@@ -1,0 +1,25 @@
+Deterministic algebra/constant checks for fleet02/B09 run 20260923T061324Z
+
+Partner scale eta=1/16:
+(1-eta)/sqrt(3) = 0.5412658773652742
+(1-eta)/sqrt(6) = 0.3827327723098716
+sqrt(eta) = 0.25
+
+Block-separated k=2 target packet:
+P_F = I_3 - ee^T, e=(1,1,1)/sqrt(3), has eigenvalues 1,1,0.
+The disjoint star [[0,c^T],[c,0]] with ||c||=1 has nonzero eigenvalues +1,-1.
+Therefore the direct-sum packet has at least four eigenvalues of modulus one.
+Newest-Claude rank-two PSD bound gives density <=2*pi = 6.283185307179586.
+
+Mixed-hub target packet:
+Q=2 X_h<c,Y> + <v1,Y>^2 - <v2,Y>^2 with c,v1,v2 orthonormal and flat on m>=6 leaves.
+Augmented Gram G=I_3; every row leverage is 3/m<=1/2.
+Theorem H gives |phi(t)| <= 8*pi^2*|t|^-2.
+Integral_R min(1,8*pi^2/t^2) dt /(2*pi) = 4*sqrt(2) = 5.656854249492381.
+The compressed spectrum is {+1,-1,+1,-1}.
+
+Cancellation regression:
+If the dense rank-two core P_F is cancelled by residual -P_F and the outside line is one physical coordinate,
+Q=2XY for iid Uniform[-1/2,1/2].
+For 0<|q|<1/2, p_Q(q)=log(1/(2|q|)), hence the density diverges logarithmically at zero.
+The actual matrix then has only the two nonzero eigenvalues +1,-1, so this is not a counterexample to the full QFORM target.

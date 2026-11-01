@@ -1,0 +1,22 @@
+--- a/~/math-brain-inbox/w394/bundle_002.json
++++ b/~/math-brain-inbox/w394/bundle_002.json
+@@ -9,7 +9,7 @@
+       "logical_name": "p0117-anchored-boundary-exhaustion",
+       "kind": "concept",
+       "title": "DRAFT P0117 bigeodesic anchored boundary exhaustion",
+-      "statement": "DRAFT; independent check by w395 pending. On undirected nearest-neighbor Z^2 with finite strictly positive edge weights, define T(x,y) as the infimum of sums of edge weights over finite paths from x to y. A finite geodesic attains this infimum. A bigeodesic is an injective nearest-neighbor sequence indexed by Z whose every finite segment is a geodesic. For every positive integer R let S_R={x: ||x||_infinity=R}. Let E_R mean some globally minimizing finite simple path between distinct vertices of S_R passes through 0. First-exit truncation makes E_R decreasing. An infinite branch of the finite sets of oriented simple witnesses truncated inside [-R,R]^2 shows that intersection_R E_R is exactly existence of a bigeodesic through 0. For a stationary random law, absence everywhere follows if P(E_R) tends to zero. Equation (4.25) of Auffinger-Damron-Hanson, arXiv:1511.03262, already uses this boundary-pair reduction; no novelty is asserted. This global event need not be measurable from inside edges alone at fixed R.",
++      "statement": "DRAFT; independent check by w395 pending. On undirected nearest-neighbor Z^2 with finite strictly positive edge weights, define T(x,y) as the infimum of sums of edge weights over finite paths from x to y. Call a finite path a geodesic if it attains this infimum; arbitrary positive deterministic weights need not give a minimizer for every pair. A bigeodesic is an injective nearest-neighbor sequence indexed by Z whose every finite segment is a geodesic. For every positive integer R let S_R={x: ||x||_infinity=R}. Let E_R mean some globally minimizing finite simple path between distinct vertices of S_R passes through 0. First-exit truncation makes E_R decreasing. An infinite branch of the finite sets of oriented simple witnesses truncated inside [-R,R]^2 shows that intersection_R E_R is exactly existence of a bigeodesic through 0. For a stationary random law, absence everywhere follows if P(E_R) tends to zero. Equation (4.25) of Auffinger-Damron-Hanson, arXiv:1511.03262, already uses this boundary-pair reduction; no novelty is asserted. This global event need not be measurable from inside edges alone at fixed R.",
+       "proof_text": null,
+       "assumptions": [
+         "Nearest-neighbor undirected Z^2",
+@@ -143,8 +143,8 @@
+     {
+       "from_key": "p0117-growing-pair-family-counterexample",
+       "to_key": "p0117-refuted-fixed-endpoint-promotion",
+-      "kind": "refutes",
+-      "rationale": "The M_R partition events satisfy uniform vanishing but have union probability one, contradicting precisely the documented fixed-endpoint promotion."
++      "kind": "semantic_association",
++      "rationale": "The M_R partition events give a concrete probability counterexample to the inference whose failure this target node records; they support that warning rather than refuting the warning node."
+     },
+     {
+       "from_key": "p0117-refuted-fixed-endpoint-promotion",

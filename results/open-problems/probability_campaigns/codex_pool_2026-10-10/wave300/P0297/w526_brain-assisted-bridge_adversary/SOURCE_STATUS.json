@@ -1,0 +1,21 @@
+{
+  "target_id": "P0297",
+  "title": "Exact Hausdorff dimension of Liouville quantum gravity",
+  "checked_at_utc": "2026-10-10; final checkpoint",
+  "current_openness": "UNKNOWN",
+  "dated_status": {"status":"unsolved","date":"2026-09-07","evidence":"~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:554"},
+  "precise_working_target": "For every fixed gamma in (0,2), determine the deterministic almost-sure intrinsic Hausdorff dimension d_gamma of the canonical gamma-LQG metric for a whole-plane GFF with additive constant fixed. No elementary closed form is assumed to exist. Equivalently in the subcritical range, determine the actual LFPP relation Q(xi), with xi=gamma/d_gamma and Q(xi)=2/gamma+gamma/2. Normalizing the metric by a positive deterministic constant does not change the dimension.",
+  "exact_intake_source_recovered_from_brain": {"node_id":"claim_75af14e7ac074f83e6e184d7d70cc4ec4d65e92c7b55d0e037bd1065492535b1","source":"Rhodes-Vargas 2025, arXiv:2509.21053v1","locator":"Section 3, paragraph on the associated random distance, PDF p. 4; HTML line 97","dated_source_status":"central open problem as of 2025-09-25","current_2026_status":"UNKNOWN; the 2025 statement and inspected 2026 abstracts are not a complete current-status certification"},
+  "known_special_case": "gamma=sqrt(8/3), d_gamma=4",
+  "primary_sources": [
+    {"url":"https://arxiv.org/html/2509.21053v1","authors":"Remi Rhodes and Vincent Vargas","title":"Two Decades of Probabilistic Approach to Liouville Conformal Field Theory","revision":"v1, 2025-09-25","read_scope":"Section 3 paragraph about the random distance","supports":"Exact original P0297 source; intrinsic metric dimension is identified as an open problem and the Brownian value 4 is recorded"},
+    {"url":"https://arxiv.org/html/2109.01252v2","authors":"Jian Ding, Julien Dubedat, Ewain Gwynne","title":"Introduction to the Liouville quantum gravity metric","revision":"v2, 2023-02-23","read_scope":"Problem 5.1; equations (2.3)-(2.5)","supports":"Complete precise target and equivalent LFPP exponent convention; a_epsilon=epsilon^(1-xi Q+o(1)), median crossing distance, convergence as epsilon tends to zero"},
+    {"url":"https://arxiv.org/html/1905.11790v3","authors":"Ewain Gwynne and Joshua Pfeffer","title":"KPZ formulas for the Liouville quantum gravity metric","revision":"v3, 2019-12-28","read_scope":"Definition 1.2; Theorems 1.4-1.5; Corollaries 1.6-1.7; Corollary 1.10 proof","supports":"Canonical intrinsic metric target; exact independence hypothesis; thick-point and geodesic obstruction"},
+    {"url":"https://arxiv.org/abs/1807.01072","authors":"Jian Ding and Ewain Gwynne","title":"The fractal dimension of Liouville quantum gravity: universality, monotonicity, and bounds","read_scope":"Abstract only so far","supports":"Existence and universality of an exponent is distinct from an evaluated formula"},
+    {"url":"https://arxiv.org/abs/2606.10496","title":"Dimension lower bounds in random geometry via Lipschitz functions","read_scope":"Abstract","supports":"2026 work on subsets and lower bounds; does not supply an exact general d_gamma"},
+    {"url":"https://arxiv.org/abs/2609.22514","title":"Directed distances in spanning-tree-decorated planar maps: exact exponent, scaling limit and universality","read_scope":"Abstract; HTML fetch failed due size","supports":"Directed distance exponent is a different metric and cannot settle the canonical undirected LQG metric dimension"}
+  ],
+  "not_proof": "Source identity, metadata, and hash checks are not mathematical proof. No claim of a new solution or formal proof is made.",
+  "owner_prior_work": {"matched_brain_attempt":"claim_925925851463c9410d37f9321ba6e1a5992a179bf08cc21a852f4cda7d9f03a1","matched_status":"explicitly states no new dimension formula and no independent review","other_scoped_records":"D0049 and D0052 prior records, dated ranking, and targeted H/I/Lean searches; no resolution located within those inputs","limitation":"No exhaustive solved/retired registry certification; no novelty claim"},
+  "pending": ["Independent review of w526 original controls", "Current October 2026 openness remains uncertified"]
+}

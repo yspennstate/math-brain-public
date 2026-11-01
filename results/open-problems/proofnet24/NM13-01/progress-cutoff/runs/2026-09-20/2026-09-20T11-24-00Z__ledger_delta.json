@@ -1,0 +1,41 @@
+{
+  "task": "T08",
+  "owner": "NM13-01",
+  "date": "2026-09-20",
+  "runtime_model": "GPT-5.6 Sol",
+  "runtime_effort": "UNVERIFIED",
+  "source_problem": "Salez arXiv:2508.21055 Problem 2.3: prove that all vertex-transitive expanders exhibit cutoff",
+  "source_convention": "rate-one continuous time P_t = exp(t(T-I))",
+  "source_status_before": "OPEN",
+  "source_status_after": "OPEN",
+  "restricted_result_status": "CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW",
+  "publication_novelty": "UNVERIFIED",
+  "new_class": {
+    "name": "C3 rotating-lamp semidirect Cayley lifts of degree-six Ramanujan Cayley graphs",
+    "input": "L_n = Cay(K_n,U_n), |U_n|=6, Ramanujan; C3 cyclically permutes three copies of K_n",
+    "output_group": "K_n^3 semidirect C3",
+    "output_degree": 8,
+    "output_size": "N_n = 3 |K_n|^3",
+    "spectral_gap_lower_bound": "(3-sqrt(5))/148",
+    "cutoff_center": "6 log_5 |K_n| = 2 log_5 N_n + O(1)",
+    "cutoff_window": "O(sqrt(log N_n))",
+    "long_range_expansion": "fails every fixed positive LRE constant; singleton-ball ratio at r=floor((1/2)log_7 N) is N^{-beta+o(1)}, beta=(1/2)(1-log_7 5)>0"
+  },
+  "mechanism_advance": {
+    "previous_obstruction": "the 10:30 normalizing-voltage theorem required monodromy to normalize the hidden generator set; nonnormalizing monodromy was left as the next structural obstruction",
+    "removed_scope": "a nonnormalizing phase can rotate one vertical generator set through three disjoint coordinate copies and still preserve cutoff",
+    "key_identity": "conditional on the C3 phase path, the three lamp coordinates are independent source-continuous-time walks with operational times B_j(t)=(6/8) A_j(t), where A_j is phase occupation time",
+    "concentration": "A_j(t)=t/3+O_P(sqrt(t)); an explicit Poisson-equation martingale gives second moment O(t)",
+    "reason_normalizer_is_unnecessary_here": "the three conjugate vertical semigroups commute because they act on distinct direct-product coordinates"
+  },
+  "remaining_obstruction": "arbitrary transitive spectral expanders need not admit a finite switching representation with commuting conjugate semigroups or any sharp macroscopic factor; genuinely noncommuting monodromy remains unresolved",
+  "partner_complement": "P26 remains on shell entropy/Green/spherical-distance transfer, most recently all fixed exact distances on EFMP biregular Cayley bigraphs",
+  "sanity_checker": "2026-09-20T11-24-00Z__rotating_lamp_checker.py",
+  "sanity_output": "2026-09-20T11-24-00Z__rotating_lamp_checker.out",
+  "sanity_verdict": "ALL_CHECKS_PASS",
+  "failed_or_preserved_routes": [
+    "normalizing-voltage theorem preserved; not overwritten",
+    "raw NBRW trace necessity remains ruled out by prior NM13-01 work",
+    "no claim that finite numerical checks prove the asymptotic theorem"
+  ]
+}

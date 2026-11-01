@@ -1,0 +1,15 @@
+{
+  "helper": "check_bounded.py v1",
+  "family": "all256 labelled three-bit cores with six-bit parity-expanded root; BOTH five-bit children for EACH of six physical root queries; all8 sign translates of fully unwrapped three-bit core",
+  "domain": "root ell=(2,2,2),theta0; endpoint ell=(1,1,1),theta0..7; root query positions0..5; nonuniform stopped/full sibling frontier per nonconstant core; fixed Maj3 control",
+  "case_count": {
+    "cores": 256,
+    "states": 2304,
+    "root_query_edges": 1536
+  },
+  "symmetry": "none: no root coordinate omitted; family itself is explicitly narrowed",
+  "arithmetic": "integer Walsh-Hadamard; Fraction physical-edge influences and exact spectral mass multisets",
+  "memory_estimate_MB": 80,
+  "max_runtime_seconds": 55,
+  "automatic_dimension_escalation": false
+}

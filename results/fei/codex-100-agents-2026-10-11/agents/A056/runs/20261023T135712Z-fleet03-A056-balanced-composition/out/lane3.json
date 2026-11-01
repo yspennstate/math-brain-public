@@ -1,0 +1,3645 @@
+{
+  "status": "PASS",
+  "helper": "A056-per-set-witness-physical-kernel-v1",
+  "pilot": false,
+  "lane": 3,
+  "assertions_executed": 65106,
+  "single_queries": 384,
+  "full_trees": 128,
+  "physical_nodes_checked": 990,
+  "reference_only_pair_fibers": 152,
+  "constant_child_laws": 860,
+  "runtime_seconds": 13.202557500000694,
+  "examples": [
+    {
+      "code": 3,
+      "uniform": false,
+      "i": 0,
+      "Z": [
+        "1/2",
+        "1/2"
+      ],
+      "lambda": {},
+      "rho": {},
+      "base_release": {},
+      "joint_release": {},
+      "base_terminal": {
+        "2": "2"
+      },
+      "joint_terminal": {
+        "2": "9/4"
+      },
+      "I_spent": "0"
+    },
+    {
+      "code": 3,
+      "uniform": false,
+      "i": 1,
+      "Z": [
+        "1/2",
+        "1/2"
+      ],
+      "lambda": {
+        "2": "1/4"
+      },
+      "rho": {},
+      "base_release": {
+        "2": "2"
+      },
+      "joint_release": {
+        "2": "9/4"
+      },
+      "base_terminal": {},
+      "joint_terminal": {},
+      "I_spent": "1/2"
+    },
+    {
+      "code": 3,
+      "uniform": false,
+      "i": 2,
+      "Z": [
+        "1/2",
+        "1/2"
+      ],
+      "lambda": {
+        "2": "1/4"
+      },
+      "rho": {},
+      "base_release": {
+        "2": "2"
+      },
+      "joint_release": {
+        "2": "9/4"
+      },
+      "base_terminal": {},
+      "joint_terminal": {},
+      "I_spent": "1/2"
+    },
+    {
+      "code": 3,
+      "uniform": true,
+      "i": 0,
+      "Z": [
+        "1/2",
+        "1/2"
+      ],
+      "lambda": {},
+      "rho": {},
+      "base_release": {
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "joint_release": {
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "base_terminal": {
+        "2": "2"
+      },
+      "joint_terminal": {
+        "2": "9/4"
+      },
+      "I_spent": "0"
+    },
+    {
+      "code": 3,
+      "uniform": true,
+      "i": 1,
+      "Z": [
+        "3/7",
+        "4/7"
+      ],
+      "lambda": {
+        "2": "1/4"
+      },
+      "rho": {},
+      "base_release": {
+        "2": "3/2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "joint_release": {
+        "2": "7/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "base_terminal": {
+        "2": "1/2"
+      },
+      "joint_terminal": {
+        "2": "1/2"
+      },
+      "I_spent": "1/2"
+    },
+    {
+      "code": 3,
+      "uniform": true,
+      "i": 2,
+      "Z": [
+        "3/7",
+        "4/7"
+      ],
+      "lambda": {
+        "2": "1/4"
+      },
+      "rho": {},
+      "base_release": {
+        "2": "3/2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "joint_release": {
+        "2": "7/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "base_terminal": {
+        "2": "1/2"
+      },
+      "joint_terminal": {
+        "2": "1/2"
+      },
+      "I_spent": "1/2"
+    },
+    {
+      "code": 7,
+      "uniform": false,
+      "i": 0,
+      "Z": [
+        "1/2",
+        "1/2"
+      ],
+      "lambda": {
+        "2": "1/16",
+        "3": "1/16"
+      },
+      "rho": {
+        "2": "1/48"
+      },
+      "base_release": {
+        "2": "3",
+        "3": "-9/8"
+      },
+      "joint_release": {
+        "2": "49/16",
+        "3": "-17/16"
+      },
+      "base_terminal": {
+        "2": "1"
+      },
+      "joint_terminal": {
+        "2": "9/8"
+      },
+      "I_spent": "1/4"
+    },
+    {
+      "code": 7,
+      "uniform": false,
+      "i": 1,
+      "Z": [
+        "1/2",
+        "1/2"
+      ],
+      "lambda": {
+        "2": "1/16",
+        "3": "1/16"
+      },
+      "rho": {
+        "2": "1/48"
+      },
+      "base_release": {
+        "2": "3",
+        "3": "-9/8"
+      },
+      "joint_release": {
+        "2": "49/16",
+        "3": "-17/16"
+      },
+      "base_terminal": {
+        "2": "1"
+      },
+      "joint_terminal": {
+        "2": "9/8"
+      },
+      "I_spent": "1/4"
+    }
+  ],
+  "trees": [
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4"
+      },
+      "code": 3,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "code": 3,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 7,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 7,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 11,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 11,
+      "uniform": true
+    },
+    {
+      "nodes": 7,
+      "leaves": 8,
+      "initial_I": "1",
+      "old_base_debit": {},
+      "full_joint_debit": {},
+      "full_terminal_CE": {},
+      "lambda_total": {},
+      "reselection_entropy_total": {},
+      "combined_bill": {},
+      "code": 15,
+      "uniform": false
+    },
+    {
+      "nodes": 7,
+      "leaves": 8,
+      "initial_I": "1",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {},
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "7": "1"
+      },
+      "code": 15,
+      "uniform": true
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 19,
+      "uniform": false
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 19,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "2",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "25/12",
+        "3": "1/4"
+      },
+      "code": 23,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "3": "1/4",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "1/12",
+        "3": "1/4",
+        "7": "1"
+      },
+      "code": 23,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "5/2"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "5/2"
+      },
+      "code": 27,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "2": "1/2",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "1/2",
+        "7": "1"
+      },
+      "code": 27,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 31,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 31,
+      "uniform": true
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 35,
+      "uniform": false
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 35,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "5/2"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "5/2"
+      },
+      "code": 39,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "2": "1/2",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "1/2",
+        "7": "1"
+      },
+      "code": 39,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "2",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "25/12",
+        "3": "1/4"
+      },
+      "code": 43,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "3": "1/4",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "1/12",
+        "3": "1/4",
+        "7": "1"
+      },
+      "code": 43,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 47,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 47,
+      "uniform": true
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "1",
+      "old_base_debit": {},
+      "full_joint_debit": {},
+      "full_terminal_CE": {},
+      "lambda_total": {},
+      "reselection_entropy_total": {},
+      "combined_bill": {},
+      "code": 51,
+      "uniform": false
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "1",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {},
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "7": "1"
+      },
+      "code": 51,
+      "uniform": true
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 55,
+      "uniform": false
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 55,
+      "uniform": true
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 59,
+      "uniform": false
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 59,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4"
+      },
+      "code": 63,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "code": 63,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-17/16"
+      },
+      "code": 67,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 67,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "5/2"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "5/2"
+      },
+      "code": 71,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "2": "1/2",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "1/2",
+        "7": "1"
+      },
+      "code": 71,
+      "uniform": true
+    },
+    {
+      "nodes": 7,
+      "leaves": 8,
+      "initial_I": "2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "5/2",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "31/12",
+        "3": "1/4"
+      },
+      "code": 75,
+      "uniform": false
+    },
+    {
+      "nodes": 7,
+      "leaves": 8,
+      "initial_I": "2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "2": "1/2",
+        "3": "1/4",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/12",
+        "3": "1/4",
+        "7": "1"
+      },
+      "code": 75,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 79,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 79,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "5/2"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "5/2"
+      },
+      "code": 83,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "2": "1/2",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "1/2",
+        "7": "1"
+      },
+      "code": 83,
+      "uniform": true
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 87,
+      "uniform": false
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 87,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-17/16"
+      },
+      "code": 91,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 91,
+      "uniform": true
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4"
+      },
+      "code": 95,
+      "uniform": false
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "code": 95,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "5/2",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "31/12",
+        "3": "1/4"
+      },
+      "code": 99,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "2": "1/2",
+        "3": "1/4",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/12",
+        "3": "1/4",
+        "7": "1"
+      },
+      "code": 99,
+      "uniform": true
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-17/16"
+      },
+      "code": 103,
+      "uniform": false
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 103,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "9/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-9/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "9/16"
+      },
+      "reselection_entropy_total": {
+        "2": "3/16"
+      },
+      "combined_bill": {
+        "2": "35/8",
+        "3": "-9/16"
+      },
+      "code": 107,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "9/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-3/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "9/16"
+      },
+      "reselection_entropy_total": {
+        "2": "3/16"
+      },
+      "combined_bill": {
+        "2": "35/8",
+        "3": "-3/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 107,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/3",
+        "3": "1/4"
+      },
+      "code": 111,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-1/2",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/3",
+        "3": "-1/2",
+        "7": "3/4"
+      },
+      "code": 111,
+      "uniform": true
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 115,
+      "uniform": false
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 115,
+      "uniform": true
+    },
+    {
+      "nodes": 2,
+      "leaves": 3,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4"
+      },
+      "code": 119,
+      "uniform": false
+    },
+    {
+      "nodes": 2,
+      "leaves": 3,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "code": 119,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/3",
+        "3": "1/4"
+      },
+      "code": 123,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-1/2",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/3",
+        "3": "-1/2",
+        "7": "3/4"
+      },
+      "code": 123,
+      "uniform": true
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "3/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 127,
+      "uniform": false
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "3/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 127,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-17/16"
+      },
+      "code": 131,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 131,
+      "uniform": true
+    },
+    {
+      "nodes": 7,
+      "leaves": 8,
+      "initial_I": "2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "5/2",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "31/12",
+        "3": "1/4"
+      },
+      "code": 135,
+      "uniform": false
+    },
+    {
+      "nodes": 7,
+      "leaves": 8,
+      "initial_I": "2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "2": "1/2",
+        "3": "1/4",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/12",
+        "3": "1/4",
+        "7": "1"
+      },
+      "code": 135,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "5/2"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "5/2"
+      },
+      "code": 139,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "2": "1/2",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "1/2",
+        "7": "1"
+      },
+      "code": 139,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 143,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 143,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "5/2",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "31/12",
+        "3": "1/4"
+      },
+      "code": 147,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "2": "1/2",
+        "3": "1/4",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/12",
+        "3": "1/4",
+        "7": "1"
+      },
+      "code": 147,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "9/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-9/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "9/16"
+      },
+      "reselection_entropy_total": {
+        "2": "3/16"
+      },
+      "combined_bill": {
+        "2": "35/8",
+        "3": "-9/16"
+      },
+      "code": 151,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "9/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-3/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "9/16"
+      },
+      "reselection_entropy_total": {
+        "2": "3/16"
+      },
+      "combined_bill": {
+        "2": "35/8",
+        "3": "-3/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 151,
+      "uniform": true
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-17/16"
+      },
+      "code": 155,
+      "uniform": false
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 155,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/3",
+        "3": "1/4"
+      },
+      "code": 159,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-1/2",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/3",
+        "3": "-1/2",
+        "7": "3/4"
+      },
+      "code": 159,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "5/2"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "5/2"
+      },
+      "code": 163,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "2": "1/2",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/2"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "1/2",
+        "7": "1"
+      },
+      "code": 163,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-17/16"
+      },
+      "code": 167,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 167,
+      "uniform": true
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 171,
+      "uniform": false
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 171,
+      "uniform": true
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4"
+      },
+      "code": 175,
+      "uniform": false
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "code": 175,
+      "uniform": true
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 179,
+      "uniform": false
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "5/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 179,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/3",
+        "3": "1/4"
+      },
+      "code": 183,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-1/2",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/3",
+        "3": "-1/2",
+        "7": "3/4"
+      },
+      "code": 183,
+      "uniform": true
+    },
+    {
+      "nodes": 2,
+      "leaves": 3,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4"
+      },
+      "code": 187,
+      "uniform": false
+    },
+    {
+      "nodes": 2,
+      "leaves": 3,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "code": 187,
+      "uniform": true
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "3/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 191,
+      "uniform": false
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "3/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 191,
+      "uniform": true
+    },
+    {
+      "nodes": 7,
+      "leaves": 8,
+      "initial_I": "2",
+      "old_base_debit": {},
+      "full_joint_debit": {
+        "2": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "1"
+      },
+      "code": 195,
+      "uniform": false
+    },
+    {
+      "nodes": 7,
+      "leaves": 8,
+      "initial_I": "2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "2": "1",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "1",
+        "7": "1"
+      },
+      "code": 195,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-17/16"
+      },
+      "code": 199,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 199,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-17/16"
+      },
+      "code": 203,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 203,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4"
+      },
+      "code": 207,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "code": 207,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-17/16"
+      },
+      "code": 211,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 211,
+      "uniform": true
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/3",
+        "3": "1/4"
+      },
+      "code": 215,
+      "uniform": false
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-1/2",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/3",
+        "3": "-1/2",
+        "7": "3/4"
+      },
+      "code": 215,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "11/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "11/4"
+      },
+      "code": 219,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "11/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "11/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "code": 219,
+      "uniform": true
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "3/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 223,
+      "uniform": false
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "3/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 223,
+      "uniform": true
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-17/16"
+      },
+      "code": 227,
+      "uniform": false
+    },
+    {
+      "nodes": 6,
+      "leaves": 7,
+      "initial_I": "7/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-15/16",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_joint_debit": {
+        "2": "75/16",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "11/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "113/24",
+        "3": "-7/8",
+        "5": "-15/16",
+        "7": "15/16"
+      },
+      "code": 227,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "11/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "11/4"
+      },
+      "code": 231,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "11/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "11/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "code": 231,
+      "uniform": true
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/3",
+        "3": "1/4"
+      },
+      "code": 235,
+      "uniform": false
+    },
+    {
+      "nodes": 4,
+      "leaves": 5,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-1/2",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4",
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "7/3",
+        "3": "-1/2",
+        "7": "3/4"
+      },
+      "code": 235,
+      "uniform": true
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "3/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 239,
+      "uniform": false
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "3/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 239,
+      "uniform": true
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "9/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4"
+      },
+      "code": 243,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "1",
+      "old_base_debit": {
+        "2": "2",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_joint_debit": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "1/4"
+      },
+      "reselection_entropy_total": {},
+      "combined_bill": {
+        "2": "9/4",
+        "3": "-3/4",
+        "7": "3/4"
+      },
+      "code": 243,
+      "uniform": true
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "3/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 247,
+      "uniform": false
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "3/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 247,
+      "uniform": true
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "3/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 251,
+      "uniform": false
+    },
+    {
+      "nodes": 3,
+      "leaves": 4,
+      "initial_I": "3/4",
+      "old_base_debit": {
+        "2": "4",
+        "3": "-9/8"
+      },
+      "full_joint_debit": {
+        "2": "67/16",
+        "3": "-17/16"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "2": "3/16",
+        "3": "1/16"
+      },
+      "reselection_entropy_total": {
+        "2": "1/48"
+      },
+      "combined_bill": {
+        "2": "101/24",
+        "3": "-17/16"
+      },
+      "code": 251,
+      "uniform": true
+    },
+    {
+      "nodes": 0,
+      "leaves": 1,
+      "initial_I": "0",
+      "old_base_debit": {},
+      "full_joint_debit": {},
+      "full_terminal_CE": {},
+      "lambda_total": {},
+      "reselection_entropy_total": {},
+      "combined_bill": {},
+      "code": 255,
+      "uniform": false
+    },
+    {
+      "nodes": 0,
+      "leaves": 1,
+      "initial_I": "0",
+      "old_base_debit": {},
+      "full_joint_debit": {},
+      "full_terminal_CE": {},
+      "lambda_total": {},
+      "reselection_entropy_total": {},
+      "combined_bill": {},
+      "code": 255,
+      "uniform": true
+    }
+  ],
+  "parity_cases": [],
+  "full_FEI": "OPEN"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "C0041",
+  "status": "SOURCE_AND_RECENT_CLAIM_CHECKED_PROOF_PENDING",
+  "current_openness": "CLAIMED_RESOLVED_PENDING_INDEPENDENT_PROOF_AUDIT",
+  "ranking_evidence": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 540,
+    "quote": "5,C0041,Transience in a direction implies ballisticity for uniformly elliptic i.i.d. RWR,attempted_un,\"transience implies ballisticity, UE i.i.d., d>=2\""
+  },
+  "historical_source": {
+    "authors": "Alexander Drewitz and Alejandro F. Ramirez",
+    "url": "https://arxiv.org/pdf/1309.2589",
+    "locator": "Open question 2.20, printed p. 22, PDF p. 23; definitions 2.1-2.3 and 2.13-2.14",
+    "exact_statement": "For d >= 2, a nearest-neighbor RWRE on Z^d with an i.i.d. law of site transition rows and deterministic kappa > 0 lower bound on every nearest-neighbor transition, does annealed-almost-sure X_n dot l -> +infinity for a unit vector l imply annealed-almost-sure liminf (X_n dot l)/n > 0?",
+    "historical_status": "OPEN_QUESTION_IN_2013_SOURCE"
+  },
+  "recent_primary_claim": {
+    "repository": "https://github.com/openai/math",
+    "scope_note": "https://github.com/openai/math/blob/main/lean/docs/220.md",
+    "comparator_config": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalBallisticity.json",
+    "solution_module": "https://raw.githubusercontent.com/openai/math/main/lean/OAI/Probability/Ballisticity/Main.lean",
+    "declaration": "OAI.DirectionalTransience.directional_transience_implies_ballisticity",
+    "scope_match_checked": true,
+    "solution_file_read": true,
+    "full_dependency_and_axiom_audit": false,
+    "local_build_or_comparator_run": false
+  },
+  "key_import_chain_read": [
+    "OAI/Probability/Ballisticity/Renewal/VelocityWords.lean: directional_transience_implies_ballisticity_unit",
+    "OAI/Probability/Ballisticity/Renewal/DurationMoment.lean: conditioned_wordDuration_integrable",
+    "OAI/Probability/Ballisticity/Renewal/DurationTail.lean: duration_polynomial_rapidDecay",
+    "OAI/Probability/Ballisticity/Geometry/StripTimeTail.lean: stripTime_rapidDecay"
+  ],
+  "owner_solved_or_retired_check": "Targeted local intake and attempts H/I, Team O board, and peer store lookup showed no owner retirement certificate; this is not an exhaustive private-corpus search. The September 2026 public solution claim is the relevant later status event.",
+  "notes": "The challenge file's sorry is a placeholder, not the solution module. The solution top theorem delegates to a unit-direction theorem whose deep duration-integrability proof remains to audit. No novelty claim for local work."
+}

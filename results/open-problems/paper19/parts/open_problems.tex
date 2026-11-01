@@ -1,0 +1,382 @@
+\begin{problem}[Second-moment universality: completing the self-contained estimate]\label{prob:pc}
+Proposition~\ref{appB:resolvent} with Remark~\ref{appB:selfcontained} establishes the pair-correlation
+condition for iid bounded-density entries self-contained --- an elementary off-support leave-one-out
+estimate, with the anisotropic local law \cite{BEKYY2014,KnowlesYin2017} an optional citation ---
+modulo routine error bookkeeping.  The problem here is to complete that bookkeeping with explicit
+constants, to obtain the sharp rate \(M(D)=1+d_\F/(2D)+O(D^{-2})\), and to extend beyond bounded
+density (general sub-Gaussian or atomic entries, where the marginal small-ball is more delicate).  By
+Lemma~\ref{lem:two-proj} (two-projection local central limit theorem) and
+Proposition~\ref{prop:small-D-negligible} (small/intermediate-codimension
+negligibility), the upper side reduces to the bulk overlap-moment estimate, for
+some fixed \(\varepsilon>0\),
+\[
+  \EE\!\left[(1-|\varrho_{I,J}|^2)^{-d_\F/2}\ ;\ D(I,J)\ge\varepsilon m\right]\le 1+o(1),
+\]
+where $\varrho_{I,J}=\langle u_I,u_J\rangle$ is the overlap of the unit normals of two
+random $(m-1)$-row spans and $D(I,J)=m-|I\cap J|$.  This reduces further.  In the
+shared orthocomplement $E^\perp\cong\F^D$ the normal $u$ is the null vector of
+$D-1$ projected rows, and a polar-cap net/small-ball bound (Rudelson--Vershynin
+invertibility) gives the lower tail
+\(\PP\{1-|\varrho|^2\le y\}\le (C\sqrt y)^{D-1}+e^{-cD}\); with Markov this reduces
+the moment to the single \emph{decorrelation} estimate
+\[
+  \EE|\varrho_{I,J}|^2=o(1)\qquad\Longleftrightarrow\qquad
+  \sup_{\|w\|=1}\EE\big[|\langle u,w\rangle|^2\mid E\big]=o(1)\quad(D\to\infty),
+\]
+a delocalization in expectation of the random normal; this condition on
+$\EE|\varrho|^2$ is both \emph{sufficient and necessary} for the displayed bound.  For
+\emph{disjoint} row sets it is exact, $\EE|\varrho|^2=1/m$, because the signed-permutation/phase
+symmetry of the iid law forces $\EE[uu^*]=I_m/m$.  For \emph{overlapping} sets it is the remaining
+point: conditional isotropy of the projected rows pins only the trace of $\EE[uu^*\mid E]$, not its
+spectrum, so a soft central-limit argument does not suffice.  The estimate is not obstructed,
+however --- it holds with the sharp rate $\EE|\varrho|^2=(1+o(1))/D$ in every simulation we ran
+(distribution-free, including non-symmetric bounded-density laws), and the apparent isotropic
+obstruction with $\lambda_{\max}\asymp1$ is a fixed-small-dimension artifact whose top eigenvalue in
+fact decays like $1/D$.  What remains is a no-gaps delocalization in expectation for the null vector
+of projections of iid rows.  In the keystone's realization the projected rows are $g_i=B^*a_i$, so
+$GG^*=B^*(AA^*)B$ is a deformed sample-covariance matrix and the estimate is a hard-edge,
+direction-uniform delocalization of its bottom null vector at aspect ratio tending to one --- exactly
+the object controlled by the anisotropic local law \cite{KnowlesYin2017,BEKYY2014}, whose adaptation to
+this null-vector form (with the $E^\perp$ intersection constraint) would close the universality upper
+side, and with it the fluctuation law of Conjecture~\ref{conj:gumbel}.  An Efron--Stein reduction
+sharpens the target to the single-step increment $q_r-q_{r-1}=o(1/m)$ of the conditional overlap
+moment $q_r=\EE[|\varrho|^2\mid |I\cap J|=r]$.
+\end{problem}
+
+\begin{conjecture}[Poisson hard-edge extreme process]\label{conj:gumbel}
+Let \(A_m\in\F^{N_m\times m}\) be iid Gaussian with \(N_m/m\to\gamma>1\), and
+let \(G_m\in\F^{m\times m}\) be one square Gaussian matrix.  Define \(b_m\) by
+\[
+  \binom{N_m}{m}F_m(e^{-b_m})=1,\qquad
+  F_m(t)=\PP\{\smin(G_m)\le t\}.
+\]
+Prove that
+\[
+  \sum_{|T|=m}\delta_{\log\smin(A_{m,T})+b_m}
+\]
+converges to the Poisson extreme process with the hard-edge intensity.  This
+would determine the \(\log m\) correction, the \(O(1)\) centering, and the
+Gumbel law for \(\log M_m^\F\).
+\end{conjecture}
+
+\paragraph{Known first-moment part.}
+The centering above is well-defined for all large \(m\), since \(F_m\) is
+continuous, \(F_m(0)=0\), and \(F_m(t)\to1\).  Lemma~\ref{ldp:one-matrix} gives
+\[
+  b_m=\frac1{d_\F}\log\binom{N_m}{m}+O_\F(\log m)
+      =\frac{h(\gamma)}{d_\F}m+o(m).
+\]
+If \(N_m=\gamma m+O(1)\), the exact Gaussian hard-edge formulas give the sharper
+centering
+\[
+  b_m=
+  \begin{cases}
+    h(\gamma)m+O(1),& \F=\R,\\[2mm]
+    \frac{h(\gamma)}2m+\frac14\log m+O(1),& \F=\C.
+  \end{cases}
+\]
+Here the complex formula uses \(F_m(t)=1-e^{-mt^2}\), while the real formula
+uses Edelman's finite-\(m\) hard-edge coefficient
+\(\kappa_m=\sqrt2\,\Gamma((m+1)/2)/\Gamma(m/2)=m^{1/2}(1+O(m^{-1}))\)
+\cite{Edelman1988}.
+
+For fixed \(x\in\R\), put
+\[
+  Z_m^{\rm fl}(x)=
+  \#\{T\subset[N_m]: |T|=m,\ \log\smin(A_{m,T})+b_m\le x\}.
+\]
+Then exactly
+\[
+  \EE Z_m^{\rm fl}(x)
+  =
+  \binom{N_m}{m}F_m(e^{x-b_m})
+  =
+  \frac{F_m(e^x e^{-b_m})}{F_m(e^{-b_m})}.
+\]
+The finite-\(m\) Gaussian hard-edge formulas imply, uniformly for fixed \(x\),
+\[
+  \frac{F_m(e^x e^{-b_m})}{F_m(e^{-b_m})}
+  \longrightarrow e^{d_\F x}.
+\]
+Thus the conjectured point process has the correct first intensity:
+\[
+  \EE Z_m^{\rm fl}(x)\to e^{d_\F x},
+\]
+corresponding to the intensity measure \(d_\F e^{d_\F x}\,dx\).  Markov's
+inequality gives the one-sided bound
+\[
+  \limsup_{m\to\infty}
+  \PP\{\log M_m^\F+b_m\le x\}\le e^{d_\F x}.
+\]
+Using only the polynomial two-sided bound of Lemma~\ref{ldp:one-matrix}, without
+the finite-\(m\) regular variation formula, one still has
+\[
+  \PP\{\log M_m^\F+b_m\le x\}
+  \le C_\F m^{1+d_\F/2}e^{d_\F x},
+\]
+so
+\[
+  \PP\{\log M_m^\F+b_m\le-r_m\}\to0
+  \qquad
+  \text{whenever}\quad
+  r_m-\frac{1+d_\F/2}{d_\F}\log m\to+\infty .
+\]
+
+If the point process in Conjecture~\ref{conj:gumbel} converges, then
+\[
+  \PP\{\log M_m^\F+b_m\le x\}
+  \to 1-\exp(-e^{d_\F x}).
+\]
+Equivalently,
+\[
+  \PP\{-(\log M_m^\F+b_m)\le x\}\to \exp(-e^{-d_\F x}),
+\]
+the standard Gumbel form with rate \(d_\F\).
+
+\paragraph{Critical Poisson overlap condition.}
+The method of moments shows that Conjecture~\ref{conj:gumbel} would follow from
+factorial moment convergence at the centered scale.  For every fixed
+\(r\ge2\) and \(x_1,\ldots,x_r\in\R\), with
+\(\tau_i=e^{x_i-b_m}\), one sufficient condition is
+\[
+  \sum_{\substack{(T_1,\ldots,T_r)\\\text{distinct}}}
+  \PP\{\smin(A_{m,T_i})\le\tau_i,\ 1\le i\le r\}
+  \longrightarrow
+  \prod_{i=1}^r e^{d_\F x_i}.
+\]
+This is stronger than Problem~\ref{prob:pc}.  The latter is a bulk two-point
+condition for the exponential-scale second-moment argument below the critical
+line.  At the centered scale, the single-event probability is of order
+\(\binom{N_m}{m}^{-1}\) up to polynomial factors, so the
+small/intermediate-overlap range is no longer removed by
+Proposition~\ref{prop:small-D-negligible}.  It does \emph{not}, however, require a
+separate higher-order independence input.  The joint density of the \(r\) slabs is
+governed by the Gram matrix \(G_r=(\langle u_{T_i},u_{T_j}\rangle)_{i,j}\) of the
+\(r\) unit normals, and Gershgorin's bound
+\(\lambda_{\min}(G_r)\ge 1-(r-1)\max_{i\ne j}|\varrho_{ij}|\) forces
+\(\det G_r\to1\) on spread tuples from the \emph{pairwise} overlaps alone; the
+higher-order asymptotic independence is thus a corollary of the two-point
+statement, and a Chen--Stein/Arratia--Goldstein--Gordon argument collapses the
+factorial moments to two-point terms, with no genuine \(r\)-point obstruction for
+\(r\ge3\).  What remains is a single \emph{critical-scale} two-point estimate, with
+a genuine subtlety at the minimal codimension.  For \(D(I,J)=2\) (row sets
+differing in one index) the overlap obeys \(1-|\varrho|^2\sim\mathrm{Beta}(d_\F/2,d_\F/2)\),
+so \(\EE[(1-|\varrho|^2)^{-d_\F/2}\mid D{=}2]=\infty\): no uniform moment bound
+holds.  That divergence is the near-diagonal regime \(|\varrho|\to1\), where the two
+least-singular-value events nearly coincide and the \emph{true} joint probability
+is regularized to the first-moment scale \(p_1\) (a self-pairing term), not the
+divergent local-CLT moment.  The required estimate is therefore the critical-scale
+negligibility of the genuine \emph{off-diagonal} clustering,
+\(\sum_{D\ge3}\#\{\text{codim-}D\text{ pairs}\}\,p_1^2\,M(D)\to0\) with
+\(M(D)=\EE[(1-|\varrho|^2)^{-d_\F/2}\mid D]\) finite and \(\to1\) for \(D\ge3\),
+together with the correct accounting of the \(D=2\) near-diagonal term --- the
+regime Proposition~\ref{prop:small-D-negligible} no longer controls at the centered
+scale.  For the Gaussian ensemble the overlap is exactly
+\(|\varrho|^2\sim\operatorname{Beta}(d_\F/2,d_\F(D-1)/2)\), giving the closed form
+\[
+  M(D)=\frac{\Gamma\!\big(\tfrac{d_\F(D-2)}2\big)\,\Gamma\!\big(\tfrac{d_\F D}2\big)}
+            {\Gamma\!\big(\tfrac{d_\F(D-1)}2\big)^2}
+       =1+\frac{d_\F}{2D}+O(D^{-2})\qquad(D\ge3),
+\]
+so the association constant \(C(D)=M(D)\) is explicit, bounded, and summable against
+the polynomial codimension counts; the Gaussian case of the bounded-association bound
+is thus a finite computation, and the keystone (Problem~\ref{prob:pc}) is exactly the
+statement that \(M(D)\) retains this value universally.
+
+For the Gaussian ensemble the reduction is \emph{exact}.  Conditioning on the shared rows makes the two
+events $\{\smin(A_S)\le t_m\}$, $\{\smin(A_T)\le t_m\}$ conditionally i.i.d., so with
+\(q=\PP\{\smin(A_T)\le t_m\mid A_S\}\) and the hypergeometric (Vandermonde) codimension law \(P_{\mathrm V}(D)\),
+\[
+  \EE[(N_t)_2]=\Big(\tbinom Nm\,p_1\Big)^2\sum_{D\ge2}P_{\mathrm V}(D)\,M_m(D),\qquad
+  M_m(D):=\frac{\EE[q^2]}{(\EE q)^2}\ge1,
+\]
+and the Gumbel law is \emph{equivalent} to \(\EE_{\mathrm V}[M_m(D)]\to1\).  On the bulk \(D\ge\varepsilon m\)
+this is rigorous: rotational invariance makes the two null directions Haar in the shared orthocomplement,
+so \(|\varrho|^2\sim\operatorname{Beta}(d_\F/2,d_\F(D-1)/2)\) \emph{exactly} and
+\(M_m(D)\le(1+o(1))M(D)=1+d_\F/(2D)+O(D^{-2})=1+O(1/m)\), the rare \(|\varrho|\to1\) killed by the
+super-exponential Beta tail.  The lone residual is a uniform polynomial bound \(M_m(D)\le\mathrm{poly}(m)\)
+for the small codimensions \(1\le D<\varepsilon m\) at the \emph{centered} scale, where the two-projection
+expansion is void; the worst case is \(M_m(1)=\Theta(m)\) (a centered-scale \(\log(1/t_m)=\Theta(m)\)
+effect, invisible to moderate-scale simulation), which is polynomial, so the exponentially light
+\(P_{\mathrm V}(D<\varepsilon m)=e^{-\Theta(m)}\) removes it.  This is the fluctuation-law analogue of the
+keystone reduction: the universality base reduces to one overlap estimate, the Gaussian Gumbel law to a
+uniform small-codimension hard-edge bound.
+
+Simulation indicates the limit is \emph{simple} Poisson, so no compound (cluster)
+correction to the Gumbel law is needed.  At the \(2\%\)--\(5\%\) lower quantile the
+\(D=2\) co-occurrence ratio \(\PP\{\text{both small}\}/\PP\{\text{small}\}^2\) is
+\(4\)--\(7\), with conditional \(\PP\{T\text{ small}\mid S\text{ small}\}\approx0.13\)--\(0.20\)
+\emph{decreasing} toward the extremal scale, while large-\(D\) pairs are independent
+(ratio \(\approx1\)); the association of the closest pairs is bounded, not divergent.
+Since each submatrix has only \(O(m^2)\) codimension-\(2\) neighbours against
+\(\binom{N}{m}\) submatrices in all, their total contribution to \(\EE[(N_t)_2]\) is
+\(O\!\big(m^2/\binom{N}{m}\big)\lambda^2\to0\), and the exponentially many independent
+large-\(D\) pairs supply the \(\lambda^2\).  Thus the extremal index is one, reducing
+Conjecture~\ref{conj:gumbel} to a rigorous version of this count: a centred-scale
+bounded-association bound \(\PP\{\text{both}\mid D\}\le C(D)\,p_1^2\) with summable
+polynomial codimension weights.  Directly, full enumeration of all \(\binom{N}{m}\)
+submatrices (calibrated to \(\EE N_t=\lambda=2\)) gives the second factorial-moment
+ratio \(\EE[N_t(N_t-1)]/(\EE N_t)^2=1.18,1.13,1.04\) for \(m=6,7,8\), decreasing to
+the Poisson value \(1\), with \(\operatorname{Var}(N_t)/\EE N_t=1.37,1.25,1.07\) and
+\(\PP\{N_t=0\}=0.157,0.157,0.139\to e^{-\lambda}=0.135\): the simple-Poisson signature
+sharpens with \(m\) as the finite-size small-codimension excess decays.
+
+\begin{problem}[Hard-edge avoidance speed]\label{prob:avoidance}
+For the Gaussian square-row-submatrix model and \(s<h(\gamma)/d_\F\), determine
+whether
+\[
+  \lim_{m\to\infty}\frac1m
+  \log\!\left[-\log\PP\left\{
+  \min_{|T|=m}\smin(A_T)>e^{-sm}
+  \right\}\right]
+  =h(\gamma)-d_\F s.
+\]
+If this equality fails, identify the overlap-cluster correction.  This is the
+dependent avoidance counterpart to the easy union-bound tail
+\[
+  \PP\{M_m\le e^{-sm}\}\le \exp((h(\gamma)-d_\F s+o(1))m)
+\]
+for \(s>h(\gamma)/d_\F\).
+\end{problem}
+
+\begin{problem}[Atomic full spark beyond the sign obstruction]\label{prob:atomic-fullspark}
+For a specified atomic class, such as Bernoulli-\(p\) entries or bounded-support
+integer-valued entries, determine the threshold below the available deterministic
+projective-pair obstruction row counts at which some \(m\times m\) row
+submatrix is singular with high probability.  Proposition~\ref{prop:sign-critical}
+is the symmetric sign case of the finite-alphabet projective-pair obstruction,
+but below such deterministic row counts general atomic laws have law-dependent
+collision and inverse Littlewood--Offord structure.
+\end{problem}
+
+\begin{problem}[Log-concave extremal hard edge]\label{prob:logconcave}
+For iid isotropic log-concave rows, prove the matching upper side, or disprove
+it, for the square and fixed-excess lower-side bases:
+\[
+  \frac1m\log\min_{|T|=m}\smin(A_T)\stackrel{?}{\longrightarrow}-h(\gamma),
+  \qquad
+  \frac1m\log M_m^{(r)}\stackrel{?}{\longrightarrow}
+  -\frac{h(\gamma)}{r+1}.
+\]
+The lower sides follow from directional anti-concentration; the open input is
+the pair-correlation theorem for dependent-coordinate rows.
+\end{problem}
+
+\begin{problem}[Frame-design optimization]\label{prob:frame-design}
+Among iid continuous real row ensembles at \(N=2m-1\) with isotropy
+\(\EE aa^T=I_m\), bounded row-norm moments, and uniformly bounded one-dimensional
+densities, determine which laws minimize or maximize the Balan--Wang exponential
+base.  The problem should specify whether rows are normalized to the sphere or
+allowed to have exponential radial extremes; subexponential radial variation is
+covered by Theorem~\ref{thm:rot-inv-univ} and does not change the base.
+\end{problem}
+
+\begin{problem}[Complex stability base]\label{prob:complex-pr}
+At the generic \(4m-4\) complex phase-retrieval threshold, determine the exponential base for the
+complex Balan--Wang stability constant
+\[
+  a(\Phi)=\inf_{x\not\sim e^{i\theta}y}
+  \frac{\||Ax|-|Ay|\|}{\dist(x,\mathbb T y)}
+  =\min_{\substack{S=S^*,\ \rank S\le2,\ S\ne0}}
+  \frac{\|(\phi_i^*S\phi_i)_{i=1}^N\|}{\|S\|},
+\]
+the second equality because \(xx^*-yy^*\) is Hermitian of rank \(\le2\).  The rank-\(\le2\) Hermitian
+cone has real dimension \(2(2m-2)=4m-4\), matching the threshold \(N\), so
+\(S\mapsto(\phi_i^*S\phi_i)\) is a \emph{square} sensing map and \(a(\Phi)\) is its extremal hard edge
+--- the exact analogue of the real case (cone dimension \(2m-1=N\)).  Two ingredients differ from the
+real frame.  \emph{Small-ball (here proved):} for the signature-\((1,1)\) perturbations
+\(S=xx^*-yy^*\), \(\phi_i^*S\phi_i=\lambda_1|\langle\phi_i,e_1\rangle|^2-\lambda_2|\langle\phi_i,e_2\rangle|^2\)
+is a difference of two independent exponentials with strictly positive density at the origin, so
+\(\PP\{|\phi_i^*S\phi_i|\le t\}\asymp t\) with exponent \(1\) --- \emph{not} the naive complex value
+\(d_\C=2\), since an indefinite quadratic form crosses zero transversally.  \emph{Entropy:} the
+realified configuration count is \(\tfrac1m\log\binom{4m-4}{2m-2}\to\log16\).  The principle of
+Section~\ref{sec:principle} then predicts a finite \emph{candidate base}
+\[
+  a(\Phi)=c^{-m+o(m)}\qquad(\text{conjectured},\ c\ \text{finite}),
+\]
+with \(c=16\) (the square of the real base \(4^{-m}\)) suggested by the realification count
+\(\binom{4m-4}{2m-2}\); the exact value is open, since the two-direction stratification below counts
+\(\binom{N}{k}^2\) and admits \(c\) up to \(256\).  The lower side is partially settled.  The constant reduces
+\emph{exactly} to a Grassmannian least-singular-value statistic,
+\[
+  a(\Phi)=\min_{U\in\mathrm{Gr}_\C(2,m)}\sigma_{\min}\big(M(U)\big),
+\]
+where \(M(U)\) is the \((4m-4)\times4\) real matrix of the evaluation
+\(H\mapsto(w_i^*Hw_i)_i\), \(w_i=U^*\phi_i\), over \(2\times2\) Hermitian \(H\); and a first-moment/net
+argument over this Grassmannian (real dimension \(4m-8\)), fed the exponent-\(1\) small-ball, proves the
+sub-exponential bound
+\[
+  a(\Phi)\ \ge\ m^{-(2+o(1))m}\qquad\text{with high probability.}
+\]
+The gap to a finite base is the net's Lipschitz cost \(e^{\Theta(m\log m)}\):
+closing it needs a Segre/bilinear least-singular-value small-ball (constant exponent, subexponential
+constant) for \(\Re(\bar p_iq_i)\), which is irreducible (no exact finite combinatorial family as in
+the real case).  That single estimate is the missing RMT input, and a net analysis shows it is
+unavoidable: at the critical count every split of the \(N\)-dimensional sensing into netted and
+exactly-treated coordinates leaves union-deficit one, while the eigenvectors enter
+\(|\langle\phi_i,u\rangle|^2\) nonlinearly, so \(\Theta(m)\) directions must be netted and the
+Lipschitz cost is paid \(\Theta(m)\) times.  The exponential decay is moreover a \emph{critical-point}
+phenomenon: at \(N=(4+\eta)m\), \(\eta>0\), the same argument gives only the polynomial bound
+\(a(\Phi)\ge m^{-2/\eta}\), so genuine exponential decay of the stability constant occurs precisely at
+the injectivity threshold \(N=4m-4\).
+\end{problem}
+
+\begin{problem}[Proportional rectangular / sample-covariance edge]\label{prob:rectangular}
+For \(\ell/m\to\zeta\in(1,\gamma)\), define
+\[
+  M_{m,\ell}=\min_{|T|=\ell}\smin(A_T)/\sqrt m.
+\]
+Equivalently,
+\[
+  \min_{|T|=\ell}
+  \lambda_{\min}\!\left(\ell^{-1}A_T^*A_T\right)
+  =\frac{m}{\ell}M_{m,\ell}^2 .
+\]
+Prove convergence of \(M_{m,\ell}\), and identify its limit through the
+left-tail large-deviation rate \(I^-_{\zeta,d_\F}\) for the smallest rectangular
+Wishart eigenvalue:
+\[
+  I^-_{\zeta,d_\F}(x_{\gamma,\zeta})=
+  \gamma\log\gamma-\zeta\log\zeta-(\gamma-\zeta)\log(\gamma-\zeta).
+\]
+The fixed-excess formula \(-h(\gamma)/(d_\F(r+1))\) does not apply in this
+regime.
+\end{problem}
+
+\begin{problem}[Trimmed projection concentration]\label{prob:trimmed}
+For iid isotropic rows \(a_i\), develop sharp concentration and large
+deviations for
+\[
+  \inf_{\|x\|=1}\sum_{i=1}^{\lfloor N/2\rfloor}
+  \bigl(\langle a_i,x\rangle^2\bigr)_{(i)},
+\]
+where the order statistics are increasing.  This statistic is the fixed-split
+analogue of the worst half-frame conditioning problem in phase retrieval.
+\end{problem}
+
+\begin{problem}[Smoothed bad frames]\label{prob:smoothed}
+Let \(F_m\in\R^{N_m\times m}\), \(N_m/m\to\gamma>1\), be a deterministic frame
+with normalized row norms and poor extremal row-submatrix conditioning.  Put
+\(A_m=F_m+\sigma_m G_m\), where \(G_m\) is Gaussian.  Determine the threshold
+scale of \(\sigma_m\) at which
+\[
+  \min_{|T|=m}\smin((A_m)_T)
+\]
+recovers the Gaussian exponential scale.  The answer should depend on the
+worst deterministic row-submatrix deficiency of \(F_m\).
+\end{problem}
+
+\begin{problem}[Exponential radial extremes]\label{prob:radial-mixture}
+Theorem~\ref{thm:rot-inv-univ} shows that spherical row directions with
+subexponential global radial variation have the same base as the Gaussian
+row-submatrix model, up to the deterministic radial scale.  Determine the sharp
+base when the sampled radii themselves have exponential extremes: for instance,
+when the empirical lower tail of
+\[
+  m^{-1}\log(R_{im}/b_m)
+\]
+has a nontrivial large-deviation rate among the \(N_m\asymp m\) available rows.
+The answer should combine the hard-edge entropy \(h(\gamma)\) with a weighted
+selection problem for the row radii, rather than only the worst global
+diagonal-sandwich bound.
+\end{problem}

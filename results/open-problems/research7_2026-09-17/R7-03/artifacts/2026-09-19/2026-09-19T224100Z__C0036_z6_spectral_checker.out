@@ -1,0 +1,17 @@
+C0036 Z6 SPECTRAL-MIXTURE / HESSIAN EXACT SELF-CHECK
+W2_VALUES= ['1/12', '1/36', '1/9']
+W3_VALUES= ['1/18', '1/72', '1/8']
+W4_VALUES= ['0', '1/9']
+W5_VALUES= ['1/6']
+F_COUNTS_SIZE_0= [('1', 1)]
+F_COUNTS_SIZE_1= [('1', 6)]
+F_COUNTS_SIZE_2= [('1/2', 6), ('1/3', 3), ('5/6', 6)]
+F_COUNTS_SIZE_3= [('0', 12), ('1/4', 8)]
+F_COUNTS_SIZE_4= [('0', 15)]
+F_COUNTS_SIZE_5= [('0', 6)]
+F_COUNTS_SIZE_6= [('0', 1)]
+F_MONOTONE_DECREASING_UNDER_INCLUSION=PASS
+HESSIAN_MODE_1_5= p**2*(p - 1)**2*(p + 1)
+HESSIAN_MODE_2_4= p**2*(p - 1)*(p**2 - 2) = p^2*(1-p)*(2-p^2) on 0<p<1
+HESSIAN_MODE_3= p**2*(p - 1)**2*(p + 2)
+ALL_EXACT_CHECKS_PASS

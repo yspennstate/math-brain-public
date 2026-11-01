@@ -1,0 +1,25 @@
+{
+  "problem_id": "C0029",
+  "ranking_record": {
+    "quote": "4,C0029,Spielman-Teng conjecture on the least singular value of Bernoulli matrices,attempted_un,Spielman-Teng constant one",
+    "source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:428",
+    "interpretation": "Historical intake status only; current openness and exact statement unverified."
+  },
+  "current_openness": "UNKNOWN: 2025 published result has coefficient 1+o(1); targeted 2026 public search found no exact-coefficient resolution, which is not an exhaustive novelty check.",
+  "exact_primary_statement": "For an n by n matrix B with independent uniform entries in {-1,+1}, there exists an absolute alpha in (0,1) such that P(s_min(B) <= t/sqrt(n)) <= t + alpha^n for every t >= 0, interpreted asymptotically; equivalently the original inverse-norm formulation uses P(||B^{-1}|| > u) <= sqrt(n)/u + alpha^n with singular matrices counted in the event.",
+  "original_primary_source": {
+    "authors": "Daniel A. Spielman and Shang-Hua Teng",
+    "title": "Smoothed Analysis of Algorithms",
+    "locator": "ICM 2002 survey, Conjecture 2, page 9 of Yale author PDF",
+    "url": "https://cs-www.cs.yale.edu/homes/spielman/PAPERS/icm.pdf",
+    "short_quote": "Let A be a d-by-d matrix of independently and uniformly chosen ±1 entries.",
+    "notation_note": "The displayed remainder uses alpha^n after defining a d-by-d matrix; the least-singular-value restatement in later primary papers supplies the intended dimension parameter."
+  },
+  "later_primary_sources": [
+    {"authors":"Sah, Sahasrabudhe, Sawhney","title":"On the Spielman-Teng Conjecture","year":2025,"url":"https://doi.org/10.1007/s00039-025-00707-z","locator":"Theorem 1.1; author PDF introduction equation (2)","checked_result":"For iid mean-zero variance-one subgaussian entries, P(s_min(M)<=t/sqrt(n)) <= (1+O((log n)^(-1/16)))t+exp(-Omega(n)); Bernoulli is included but exact coefficient one is not proved."},
+    {"authors":"Tao, Vu","title":"Random matrices: The distribution of the smallest singular values","year":2010,"url":"https://arxiv.org/pdf/0903.0614","locator":"Theorem 1.1 equations (1)-(2), Theorem 1.3, Conjecture 1.2","checked_result":"1-exp(-t-t^2/2) is a limiting real-Gaussian CDF; Theorem 1.3 has uniform O(n^-c) distributional error."}
+  ],
+  "local_prior_status": "Intake problems.jsonl:29 marks current_status unverified and notes coefficient 1+o(1); attempts.jsonl:23 is C0029-A001 and contains a false finite-n Gaussian exact-law statement.",
+  "owner_solved_retired_status": "PENDING targeted read-only check; no solved claim adopted",
+  "checked_at": "2026-10-10"
+}

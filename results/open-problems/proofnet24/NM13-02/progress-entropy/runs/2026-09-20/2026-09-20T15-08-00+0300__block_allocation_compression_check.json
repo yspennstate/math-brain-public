@@ -1,0 +1,87 @@
+{
+  "Cchi": 2.8750387749145276,
+  "controller_family": [
+    {
+      "B_A": 2.0,
+      "B_A_upper": 2.0,
+      "I_A": 0.75,
+      "I_leaf_avg": 0.5,
+      "I_root": 1.25,
+      "R_prefix": 1.6193273052979023,
+      "certificate_over_I": 2.750015509965811,
+      "d": 1,
+      "m": 1,
+      "n": 4
+    },
+    {
+      "B_A": 1.1681222459933007,
+      "B_A_upper": 1.311278124459133,
+      "I_A": 0.375,
+      "I_leaf_avg": 0.5,
+      "I_root": 0.875,
+      "R_prefix": 0.9917151437887317,
+      "certificate_over_I": 3.1414828707615965,
+      "d": 1,
+      "m": 2,
+      "n": 5
+    },
+    {
+      "B_A": 0.5792504238607974,
+      "B_A_upper": 0.7935644431995964,
+      "I_A": 0.1875,
+      "I_leaf_avg": 0.375,
+      "I_root": 0.5625,
+      "R_prefix": 0.4880516339220684,
+      "certificate_over_I": 3.3274737489645236,
+      "d": 1,
+      "m": 3,
+      "n": 6
+    },
+    {
+      "B_A": 0.27835811516405895,
+      "B_A_upper": 0.4622900666170139,
+      "I_A": 0.09375,
+      "I_leaf_avg": 0.25,
+      "I_root": 0.34375,
+      "R_prefix": 0.2317886574733194,
+      "certificate_over_I": 3.435781121005515,
+      "d": 1,
+      "m": 4,
+      "n": 7
+    },
+    {
+      "B_A": 0.13413265431953725,
+      "B_A_upper": 0.26312232431271465,
+      "I_A": 0.046875,
+      "I_leaf_avg": 0.15625,
+      "I_root": 0.203125,
+      "R_prefix": 0.11059546463591909,
+      "certificate_over_I": 3.506939731166078,
+      "d": 1,
+      "m": 5,
+      "n": 8
+    }
+  ],
+  "controller_formula_argmax": [
+    30,
+    2,
+    3.999984329793932
+  ],
+  "controller_formula_max_d1to30_m1to40": 3.999984329793932,
+  "deterministic_dimension4_fixed_order_cases": 38400,
+  "deterministic_dimension4_functions": 600,
+  "exhaustive_dimensions": [
+    1,
+    2,
+    3
+  ],
+  "exhaustive_fixed_order_cases": 1954,
+  "max_R_minus_block_conditional_entropy": 5.551115123125783e-17,
+  "max_R_over_block_conditional_entropy_positive": 1.0000000000000002,
+  "notes": [
+    "Finite checks are sanity checks only; the theorem is proved analytically by induction plus concavity of conditional entropy.",
+    "The controller-family total_bound includes the inherited one-point-defect hereditary constant only for checking the stated grafted certificate."
+  ],
+  "status": "PASS",
+  "theorem": "For every Boolean f, every physical block A, and every fixed order of A, the accumulated hereditary allocation while completely querying A is <= H(S_A|S_Ac). Analytic proof covers adaptive orders as well."
+}

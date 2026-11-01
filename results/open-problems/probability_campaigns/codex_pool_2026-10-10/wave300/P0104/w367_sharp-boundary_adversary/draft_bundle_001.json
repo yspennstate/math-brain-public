@@ -1,0 +1,93 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w367",
+  "bundle_slug": "fpp-small-noise-sharp-boundaries-w367-001",
+  "entries": [
+    {
+      "key": "sharp-support-threshold",
+      "namespace": "probability.fpp",
+      "logical_name": "lattice-fpp-straight-path-sharp-support-threshold",
+      "kind": "concept",
+      "title": "DRAFT: sharp straight-path support threshold in lattice FPP",
+      "statement": "UNREVIEWED author-derived special case. In nearest-neighbor undirected FPP on Z^d, d>=2, with every edge weight in [a,b], 0<a<b, and integer n>=1, n(b-a)<=2a implies that T(0,n e1) equals the sum on the straight n-edge path. For iid laws with essential support endpoints a,b, n(b-a)>2a gives positive probability that an edge-disjoint (n+2)-edge dogleg beats that path. This is a finite-distance threshold, not an asymptotic exponent.",
+      "proof_text": null,
+      "assumptions": [
+        "d>=2, n>=1 integer",
+        "0<a<b finite",
+        "iid with essential endpoints only for positive-probability sharpness"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w367:P0104-boundaries",
+        "url": "file:///~/brain_workers/w367/ATTEMPT.md",
+        "revision": "draft-2026-10-10-v1",
+        "license": "owner-own-work (draft; w368 review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "exact-uniform-variance",
+      "namespace": "probability.fpp",
+      "logical_name": "lattice-fpp-uniform-small-noise-passage-variance",
+      "kind": "concept",
+      "title": "DRAFT: exact variance in the continuous small-noise FPP window",
+      "statement": "UNREVIEWED author-derived special case. For iid Uniform[1,1+epsilon] edge weights on nearest-neighbor undirected Z^d, d>=2, epsilon>0, integer n>=1 and n epsilon<=2, T(0,n e1) is the straight-path sum, E T=n(1+epsilon/2), and Var T=n epsilon^2/12. These identities use independent weights on a deterministic path. They do not identify an exponent for a fixed law as n tends to infinity.",
+      "proof_text": null,
+      "assumptions": [
+        "iid Uniform[1,1+epsilon]",
+        "d>=2",
+        "epsilon>0, n>=1 integer, n epsilon<=2"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w367:P0104-boundaries",
+        "url": "file:///~/brain_workers/w367/ATTEMPT.md",
+        "revision": "draft-2026-10-10-v1",
+        "license": "owner-own-work (draft; w368 review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "constant-onset-tradeoff",
+      "namespace": "probability.fpp",
+      "logical_name": "lattice-fpp-small-noise-variance-constant-onset-tradeoff",
+      "kind": "concept",
+      "title": "DRAFT: necessary constant/onset tradeoff in normalized FPP variance bounds",
+      "statement": "UNREVIEWED author-derived necessary condition. For iid Uniform[1,1+epsilon] FPP on nearest-neighbor undirected Z^d, d>=2, 0<epsilon<=1, theta<1, K=floor(2/epsilon), suppose C>0 and integer N>=1 give Var T(0,n e1)<=C Var(tau_e) n^theta for every integer n>=N. Then either N>K or C>=K^(1-theta). Consequently no finite common C,N works over all epsilon for theta<1. This refutes only the law-uniform auxiliary bound; the per-fixed-law KPZ question is unaffected. No such asymptotic upper bound is proved here.",
+      "proof_text": null,
+      "assumptions": [
+        "iid Uniform law as stated",
+        "theta<1",
+        "The stated upper bound is a hypothesis; C,N may depend on epsilon in the necessary condition"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w367:P0104-boundaries",
+        "url": "file:///~/brain_workers/w367/ATTEMPT.md",
+        "revision": "draft-2026-10-10-v1",
+        "license": "owner-own-work (draft; w368 review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "exact-uniform-variance",
+      "to_key": "sharp-support-threshold",
+      "kind": "depends_on",
+      "rationale": "The threshold entry gives the straight-path identity under n(b-a)<=2a; with a=1,b=1+epsilon this is exactly the variance entry condition n epsilon<=2."
+    },
+    {
+      "from_key": "constant-onset-tradeoff",
+      "to_key": "exact-uniform-variance",
+      "kind": "depends_on",
+      "rationale": "The variance entry states Var T=n epsilon^2/12. At K=floor(2/epsilon), division by Var(tau)=epsilon^2/12 gives C>=K^(1-theta) whenever N<=K."
+    },
+    {
+      "from_key": "constant-onset-tradeoff",
+      "to_existing_logical": "math:probability.core:open-problem-p0104-subdiffusive-and-kpz-passage-time-fluctuation-exponents",
+      "kind": "semantic_association",
+      "rationale": "The existing P0104 concept asks to \"prove a fluctuation exponent strictly below1/2\" under \"suitable nondegenerate iid passage-time assumptions\". This boundary entry explicitly restricts its obstruction to a \"law-uniform auxiliary bound\" and leaves the fixed-law parent unaffected. It documents a quantifier hazard, not a refutation of P0104."
+    }
+  ]
+}

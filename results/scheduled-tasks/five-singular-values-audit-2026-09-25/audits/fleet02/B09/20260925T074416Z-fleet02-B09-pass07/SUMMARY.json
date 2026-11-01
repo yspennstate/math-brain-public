@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B09",
+  "run_id": "20260925T074416Z-fleet02-B09-pass07",
+  "pass_id": "B09-pass07",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_tex_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "source_pdf_blob": "8be3aae36ecad7a9dc9b7c95978aad09499f32d0",
+  "source_pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "physical_tex_lines": 675,
+  "complete_source_pass": true,
+  "verdict": "literal source has local gaps/wording defects; no theorem-level counterexample found; repaired chain closes in this reconstruction",
+  "local_statuses": [
+    "L41 C04 FALSE expository",
+    "L62 C07 UNCHECKED literature only",
+    "L65 C05 FALSE expository",
+    "L148 B09-C10 GAP padded-zero proof edge plus C06 wording",
+    "L222 PASS under factor-value reading; wording disagreement preserved",
+    "L224 C12 GAP log(0) domain",
+    "L319-321 C02 GAP omitted Jensen/Cauchy",
+    "L398 C08 GAP density representative at critical value",
+    "L412 C01 FALSE literal chart claim",
+    "L441 C03 GAP critical-level null statement",
+    "L613 C09 GAP J(0) domain",
+    "L651-671 bibliography metadata UNCHECKED"
+  ],
+  "initial_lens": "Lemma 4.3 lines 311-369 PASS after C02; mollification, measurability, Fubini, DCT, kernel normalization and original-coordinate factorization rechecked",
+  "theorem_claims": [
+    "s5(A)>=s => ess sup p_Q <=270 K^2/s",
+    "s3(A)>=s => sup_a E|Q-a|^-1/2 <=77 K/sqrt(s)"
+  ],
+  "new_finding_this_pass": null,
+  "pdf_visual_status": "UNCHECKED by B09; exact PDF blob authenticated but private page-image route unavailable",
+  "lower_threshold_research": false,
+  "peer_comparison": "After independent derivation, fleet02/B08 pass7 independently agrees on C12 and reports no fatal theorem defect; B09 separately verified 675 physical lines rather than counting the terminal newline sentinel.",
+  "login_write_status": "blocked by platform safety",
+  "acknowledgement_write_status": "blocked by platform safety",
+  "start_commit": "a5c81b8fa408d701ff2bfcc82762f6cdf5ba6f83",
+  "lemma43_commit": "2e6d5d17d87b9d7a04c91acdce49447fc317753c"
+}

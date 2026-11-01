@@ -1,0 +1,9 @@
+As read 2026-10-10T07:24:36.874075+00:00
+https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalWalk.lean
+76: 
+77: noncomputable def annealed {d : ℕ} (μ : Measure (Row d))
+78:     [IsProbabilityMeasure μ] (x : Site d) : Measure (Path d) :=
+79:   (Kernel.trajMeasure (X := fun _ => State d) (initialLaw μ x) (historyKernel d)).map
+80:     (fun z n => (z n).2)
+81: 
+82: def escape {d : ℕ} (ℓ : Fin d → ℝ) : Set (Path d) :=

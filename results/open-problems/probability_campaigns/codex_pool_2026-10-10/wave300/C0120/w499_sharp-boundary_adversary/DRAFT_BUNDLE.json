@@ -1,0 +1,59 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w499",
+  "bundle_slug": "c0120-change-overlap-bridge-boundary-20261010",
+  "entries": [
+    {
+      "key": "overlap",
+      "namespace": "probability.polymers",
+      "logical_name": "normalized-common-vertex-overlap",
+      "kind": "definition",
+      "title": "Normalized common-vertex overlap of layered paths",
+      "statement": "For two paths P and Q each visiting n vertices with one vertex in each of the same n time layers, their normalized common-vertex overlap is |P intersect Q|/n. A probability of changing the path measures whether this overlap is below one at all; it does not by itself measure how far below one it is.",
+      "proof_text": null,
+      "assumptions": [
+        "Paths use one vertex in each of the same n layers",
+        "n>=1"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w499:C0120-overlap-definition",
+        "url": "file:///~/brain_workers/w499/ATTEMPT.md",
+        "revision": "2026-10-10-campaign-definition",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bridge-counterexample",
+      "namespace": "probability.polymers",
+      "logical_name": "complete-layered-gaussian-change-overlap-counterexample",
+      "kind": "concept",
+      "title": "Draft counterexample to a change-based power-variance bridge",
+      "statement": "DRAFT AUTHOR RESULT; INDEPENDENT REFEREE AND MODEL-PROVENANCE GATES PENDING. For each N>=3 take a fixed iid N(0,1) origin and N layers of N iid N(0,1) sites, all weights independent, with all edges between consecutive layers. Every path has n=N+1 vertices and a free endpoint. The maximum has variance Theta(N/log N), failing every fixed n^(1-epsilon) upper bound. Under independent Gaussian OU perturbation at time N^(-1/2), the maximizing path changes with probability tending to one while common-vertex overlap divided by n tends to one in expectation and probability. This is a triangular sequence of growing-degree complete layered graphs. It refutes only a general auxiliary implication using path replacement alone, even with an O(n/log n) variance premise; it does not refute the unrestricted planar lattice problem or a bridge assuming actual quantitative overlap decay. The proof is in the linked campaign artifact; current novelty and parent openness are UNKNOWN.",
+      "proof_text": null,
+      "assumptions": [
+        "Graph width and degree grow with N",
+        "Independent standard Gaussian weights and OU copies at every site",
+        "OU parameter denotes time",
+        "Author proof awaits w500 independent check"
+      ],
+      "domain": "probability",
+      "source": {
+        "source_id": "owner-own-work:w499:C0120-B2",
+        "url": "file:///~/brain_workers/w499/ATTEMPT.md",
+        "revision": "2026-10-10-author-proof-pending-referee",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "bridge-counterexample",
+      "to_key": "overlap",
+      "kind": "depends_on",
+      "rationale": "The counterexample contrasts the probability of any path replacement with the stated normalized common-vertex overlap; both ends specify equal layer counts."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "family": "one-point defect",
+  "formula": {
+    "H_fourier_over_I_limit": "4",
+    "H_sens": "h2((n+1)/2^n)+((n+1)/2^n)*log2(n+1)",
+    "H_sens_over_I_asymptotic": "n/2 + O(1)",
+    "I": "n*2^(1-n)",
+    "Pr_sens_empty": "1-(n+1)/2^n",
+    "Pr_sens_full": "2^-n",
+    "Pr_sens_singleton_i": "2^-n for each i"
+  },
+  "rows": [
+    {"n":2,"influence":1.0,"boundary_activation":0.75,"sensitivity_set_entropy_over_I":2.0,"sensitivity_size_entropy_over_I":1.5,"fourier_entropy_over_I":2.0,"brute_distribution_check":"PASS"},
+    {"n":3,"influence":0.75,"boundary_activation":0.5,"sensitivity_set_entropy_over_I":2.6666666666666665,"sensitivity_size_entropy_over_I":1.8741854163060887,"fourier_entropy_over_I":2.955889582251599,"brute_distribution_check":"PASS"},
+    {"n":4,"influence":0.5,"boundary_activation":0.3125,"sensitivity_set_entropy_over_I":3.243281524373716,"sensitivity_size_entropy_over_I":2.2432815243737165,"fourier_entropy_over_I":3.402475551198587,"brute_distribution_check":"PASS"},
+    {"n":5,"influence":0.3125,"boundary_activation":0.1875,"sensitivity_set_entropy_over_I":3.77885673283316,"sensitivity_size_entropy_over_I":2.617892685389479,"fourier_entropy_over_I":3.6237403997020836,"brute_distribution_check":"PASS"},
+    {"n":8,"influence":0.0625,"boundary_activation":0.03515625,"sensitivity_set_entropy_over_I":5.297080862411539,"sensitivity_size_entropy_over_I":3.7970808624115393,"fourier_entropy_over_I":3.8427825918979237,"brute_distribution_check":"PASS"},
+    {"n":12,"influence":0.005859375,"boundary_activation":0.003173828125,"sensitivity_set_entropy_over_I":7.28021839019621,"sensitivity_size_entropy_over_I":5.487737139835633,"fourier_entropy_over_I":3.906044566733527},
+    {"n":16,"influence":0.00048828125,"boundary_activation":0.0002593994140625,"sensitivity_set_entropy_over_I":9.266332325903665,"sensitivity_size_entropy_over_I":7.266332325903665,"fourier_entropy_over_I":3.930271404540879},
+    {"n":24,"influence":2.86102294921875e-06,"boundary_activation":1.4901161193847656e-06,"sensitivity_set_entropy_over_I":13.251403107290031,"sensitivity_size_entropy_over_I":10.958921856929452,"fourier_entropy_over_I":3.9535576700917776},
+    {"n":32,"influence":1.4901161193847656e-08,"boundary_activation":7.683411240577698e-09,"sensitivity_set_entropy_over_I":17.243889627600566,"sensitivity_size_entropy_over_I":14.743889627600566,"fourier_entropy_over_I":3.9651684391113533}
+  ],
+  "schema": "b17-fei-sensitivity-obstruction-v1",
+  "status": "PASS",
+  "local_checker_sha256": "b5fc6048392227a70b7a7f8fe0fcdbcc777c0a7486d018d5f3b72f0aedbb17f9",
+  "local_full_output_sha256": "6245de94ff6daa967cc65d84892b9494925b14172e8b42f7648b75c6e2bc7145"
+}

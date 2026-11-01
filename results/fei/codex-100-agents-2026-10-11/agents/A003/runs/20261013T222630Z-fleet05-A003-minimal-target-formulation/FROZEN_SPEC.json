@@ -1,0 +1,11 @@
+{
+  "helper_version": "A003-sliced-majority-v1",
+  "family": "All labelled Boolean outer signs on one or two inputs; replace distinguished input by Majority_M; actual first-bit slices, plus encoder-only endpoints",
+  "parameter_domain": {"outer_dimensions": [1,2], "M": [3,5,7], "first_slice_signs": [-1,1], "encoder_only_M": [3,5,7,9,11,13,15]},
+  "case_count": "120 composed slice cases (20 outer signs times 3 sizes times 2 signs), 14 encoder slice endpoints, 28 twice-sliced encoder endpoints on the same seven sizes",
+  "symmetry": "No outer reduction; representative first and second physical positions justified by majority permutation symmetry; all remaining inner coordinates checked",
+  "arithmetic": "integer FWHT, Fraction spectra, rational prime-log forms for entropy identities; Phi<=2sqrt(ab) is proved analytically, not numerically certified",
+  "memory_estimate_MB": 90,
+  "maximum_runtime_seconds": 58,
+  "automatic_escalation": false
+}

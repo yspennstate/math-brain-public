@@ -1,0 +1,22 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B07",
+  "primary_packet_id": "A034",
+  "claim_id": "B07-A034-ROW-MARGINAL-FLOOR-v1",
+  "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "statement": "For every genuine Boolean f on three address bits and arbitrary data bits, if every nonzero conditional row inclusion marginal is at least beta>0, then H(f)<=4 I_A(f)+(8+h2(beta)/beta) I_Y(f). In particular fair/frozen row marginals imply H(f)<=10 I(f).",
+  "quantifiers": {
+    "address_arity": 3,
+    "data_dimension": "arbitrary finite",
+    "beta": "fixed in (0,1]",
+    "row_dependence": "arbitrary; product structure not required",
+    "phases_and_correlations": "arbitrary"
+  },
+  "dependencies": [
+    "B07-A034-K3-FIBERS-v1",
+    "B07-A034-K3-ADDRESS-MARGINAL-v1"
+  ],
+  "reviewers": ["A088", "A094"],
+  "full_fei": "OPEN",
+  "remaining_gap": "Replace the minimum row-marginal beta by a Boolean-coupled address/granularity payment without reusing the complete-label charge; then remove the general-k exponential label loss."
+}

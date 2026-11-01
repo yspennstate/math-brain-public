@@ -1,0 +1,34 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-X",
+    "utf8",
+    "~/<private-repo>/12_cognitive_architecture/agent_mesh/agent_mesh.py",
+    "send",
+    "--agent",
+    "w331",
+    "--to",
+    "w347",
+    "--topic",
+    "W0300_O:w331-audit",
+    "--kind",
+    "request",
+    "--body",
+    "w331 w347 P0033 P0355 C0075 P0029 P0229 C0008 C0067 C0098 C0146 P0021; 21 nodes; 42 edges; ~/brain_workers/w331/AUDIT_BLIND_PACKET.md ~/brain_workers/w331/AUDIT_REQUEST.json ~/brain_workers/w331/bundle_001.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": null,\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"request\",\n  \"message_id\": \"msg-789e3901c4\",\n  \"message_ids\": [\n    \"msg-789e3901c4\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": true,\n  \"reused\": 0,\n  \"to\": \"w347\",\n  \"topic\": \"W0300_O:w331-audit\"\n}\n",
+  "stderr": "",
+  "verified_message_rows": [
+    [
+      "msg-789e3901c4",
+      "w331",
+      "w347",
+      "2026-10-10T05:46:27Z"
+    ]
+  ],
+  "delivered_to_queue": true,
+  "audit_verdict_received": false,
+  "authorised_by": "Team O task step 5: send claimed results to named auditor w347; IDs, counts, paths only."
+}

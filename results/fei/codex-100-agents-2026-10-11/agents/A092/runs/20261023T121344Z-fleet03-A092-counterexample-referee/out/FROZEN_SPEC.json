@@ -1,0 +1,40 @@
+{
+  "helper_version": "A092-stage20-direct-character-symbolic-review-v1",
+  "helper_sha256": "d3f2c06a7aab70847f85d79c37d55c3c1fd9dac17fb6dadc3960d39930191ae2",
+  "family": "Literal F=+1 iff disjoint physical blocks of sizes3,2,2 are all nonzero; query physical bit0; independent universal-vacuum sanity census",
+  "domain": {
+    "circuit_full_dimensions": [
+      7,
+      6,
+      6
+    ],
+    "point_core_sizes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "pilot_vacuum_n": 2,
+    "primary_vacuum_n": 3
+  },
+  "case_count": {
+    "circuit_states": 3,
+    "point_cores": 4,
+    "pilot_vacuum_tables": 16,
+    "pilot_vacuum_queries": 32,
+    "primary_vacuum_tables": 256,
+    "primary_vacuum_queries": 768
+  },
+  "symmetry": "none; every labelled table and both full children, including dummies",
+  "arithmetic": "direct integer character sums and independent butterfly; exact Fraction physical edges; symbolic rational linear forms in prime logs; clear denominators to exact integer sign; prior A092 rigorous rational log bounds for decimal brackets",
+  "memory_estimate_MB": 90,
+  "maximum_runtime_seconds": {
+    "pilot": 55,
+    "primary": 120
+  },
+  "no_dimension_escalation": true,
+  "claim_scope": [
+    "A071 positive-outer envelope obstruction",
+    "A071 universal EMPTY-component envelope only; not whole FEI"
+  ]
+}

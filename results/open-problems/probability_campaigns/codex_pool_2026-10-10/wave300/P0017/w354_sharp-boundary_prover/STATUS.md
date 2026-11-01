@@ -1,0 +1,16 @@
+STATE: NEEDS_REVIEW
+NEXT: Coordinator admits the deduplicated draft and staged hook; test any transverse-energy decorrelation estimate against the saved exact polynomial family.
+
+2026-10-10: Read PRIMARY_DIRECTIVE.md. Worker folder initially empty. All research artifacts stay in this folder; independent review remains required.
+2026-10-10: Saved first exact boundary result: scale-free constants without covariance normalization are impossible, already for a uniform interval.
+2026-10-10: Recovered the exact normalized target from arXiv:2610.05474v1 Theorem 1.1; October primary papers claim the full result. Current openness is not certified; no novelty claim.
+2026-10-10: Recall timed out at the 60-second limit (observed 66.252 seconds); read the explicitly cited perceptron proof-gap scar as fallback.
+2026-10-10: Sent the independent statement to w355, mesh message msg-d2d8a72760. Claimed disjoint simplex-fiber lane, clm-d47be61e8e. team_comm could not send without team membership; the authorized direct mesh send succeeded.
+2026-10-10: Saved SIMPLEX_PROOF.md and four claims. Bounded formula checks: 11,245 exact arithmetic checks in 0.05667 seconds across seven dimensions. At d=100, supremum/mean conditional constant ratio is exactly 1,717. These are validation receipts, not proof or brain-deployment measurements.
+2026-10-10: Independently integrated the explicit triangle polynomial in raw coordinates: all seven exact checks passed in 0.00054 seconds, variance 1/2, directional energy 1/3, full energy 13/27.
+2026-10-10: Recovered the actual intake card and Gaussian attempt. Read-only store query confirms both are currently present with unverified status. Recovered the cited arXiv:2603.29571v1 Conjecture 30 covariance formulation. Saved SOURCE_STATUS.json and a source-status correction row.
+2026-10-10: Complete proof sent to w356, request msg-c9a16f7774, via the existing offline-recipient mailbox fallback. Sending is not a mathematical audit. w355 independently reported a compatible smooth-test obstruction and found the interval normalization proof sound; no full-packet referee verdict has arrived.
+2026-10-10: w356 returned four claim-by-claim KEEP verdicts, now copied to REFEREE_VERDICTS.json. w355 also independently checked the full packet. No mathematical changes after these reviews; the original proof artifact remains intact.
+STUCK: Both new-file Git diff checks rejected the generated old header. Corrected the builder to use the standard /dev/null old header for new files; diff --git still names the exact live path on both sides. Next validate the corrected package and deduplicate shared peer concepts.
+2026-10-10: Resolved packaging failure: both corrected diffs pass git apply --check. Final pure-parser validation: two concepts, three relations, zero errors. Six duplicate cards map to peers; exact endpoint evidence is saved for each submitted edge and three canonical links remain deferred.
+2026-10-10T05:29:19.881101+00:00: Final handoff complete: five saved claims, four w356 KEEP units plus w355 general-family audit; two concepts and three relations submitted; schema and both patch checks pass. Global ingestion/retrieval remain unverified; hook and progress command are staged for the reviewer.

@@ -1,0 +1,111 @@
+{
+  "candidate_id": "C0048",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "exact_target": "For every integer d >= 3 and integer q >= 3, the nearest-neighbor ferromagnetic zero-field q-state Potts model on Z^d, with unit interaction and monochromatic color-1 boundary condition, has positive spontaneous magnetization at its critical inverse temperature.",
+  "normalization": "Using H=-sum_{<x,y>}1{sigma_x=sigma_y}, p=1-exp(-beta), m=(q*mu^1(sigma_0=1)-1)/(q-1)=phi^w_{p,q}(0 connected to infinity). Other simplex Hamiltonian conventions rescale beta.",
+  "primary_sources": [
+    {
+      "title": "Order/disorder phase transitions: the example of the Potts model",
+      "author": "Hugo Duminil-Copin",
+      "year": 2016,
+      "url": "https://www.ihes.fr/~duminil/publi/2015%20Currents%20developments%20in%20mathematics.pdf",
+      "location": "Printed page 32, Conjecture 1 and the preceding definition",
+      "quote": "continuous if m*(beta_c,q) = 0",
+      "finding": "The d>=3, integer q>=3 part of Conjecture 1 is exactly the target; it concerns critical magnetization. No latent-heat equivalence is assumed.",
+      "local_hash": null
+    },
+    {
+      "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+      "author": "Hugo Duminil-Copin",
+      "arxiv_id": "1707.00520v1",
+      "url": "https://arxiv.org/abs/1707.00520",
+      "finding": "Exact C0048 intake primary source verified against the PDF. The target is positive critical magnetization; the cited special regimes do not eliminate the q=d=3 input.",
+      "location": "Conjecture 2, PDF page 93 (zero-based page 92)",
+      "quote": "is discontinuous for any q >= 3",
+      "intake_reported_sha256": "cc442344d0cc21c5d57163719b06dfaf1d243dee8731716bf89d21c593f98a5b",
+      "hash_status": "Reported by the 2026-09-07 source manifest, not revalidated in this round."
+    },
+    {
+      "title": "Rigorous Analysis of Discontinuous Phase Transitions via Mean-Field Bounds",
+      "authors": [
+        "Marek Biskup",
+        "Lincoln Chayes"
+      ],
+      "year": 2003,
+      "url": "https://www.math.ucla.edu/~lchayes/lchayes_website_folder/old_publications_folder/bc_mft.pdf",
+      "location": "Theorem 2.1 and its following paragraph, printed pp.63-64",
+      "finding": "Establishes a first-order jump at J_t in sufficiently high dimension. The following paragraph does not establish zero magnetization at all J<J_t; this theorem alone does not identify the jump with critical onset."
+    },
+    {
+      "title": "Upper critical dimension of the 3-state Potts model",
+      "authors": [
+        "Shai M. Chester",
+        "Ning Su"
+      ],
+      "url": "https://arxiv.org/abs/2210.09091",
+      "finding": "Numerical conformal-bootstrap work, including a 2025 publication; not a rigorous proof of the full lattice target."
+    },
+    {
+      "title": "Bootstrap proof of first-order transitions?",
+      "author": "Slava Rychkov",
+      "updated": "2025-07",
+      "url": "https://slava.ihes.fr/media/open_problems/1st_order.pdf",
+      "finding": "The updated primary problem note treats a bootstrap exclusion as open and discusses alternatives; it does not certify the lattice conjecture."
+    },
+    {
+      "title": "Spinodal-like scaling behavior after a temperature quench across the first-order phase transition in three-dimensional q-state Potts models",
+      "arxiv_id": "2604.25351",
+      "url": "https://arxiv.org/abs/2604.25351",
+      "finding": "Abstract checked: conditional droplet-nucleation scaling argument and numerical quench analysis for q=6. This is not a rigorous proof of critical lattice ordering for all q>=3,d>=3.",
+      "authors": [
+        "Andrea Pelissetto",
+        "Davide Rossini",
+        "Ettore Vicari"
+      ]
+    }
+  ],
+  "owner_solved_retired_check": {
+    "state": "targeted_checks_complete",
+    "finding": "No C0048 proof or Potts-specific solved/retired text record found in the specified H/I attempt directories, Lean annotated list, or Big Open folder .md/.json/.jsonl files. This is not a whole-machine absence claim.",
+    "prior_record": "probability_1000_intake_claude_20260907/problems.jsonl:48",
+    "prior_attempt": "probability_1000_intake_claude_20260907/attempts.jsonl:38, C0048-A001, no result",
+    "other_intakes": "Exact-ID/Potts-discontinuity filename matches inspected only as relevant; no later proof read."
+  },
+  "recent_literature_check": {
+    "state": "targeted_primary_check_complete",
+    "finding": "No verified general rigorous proof recovered in this round; current openness remains UNKNOWN and no novelty claim is made.",
+    "as_of": "2026-10-10"
+  },
+  "novelty_claim": false,
+  "paired_proof_read": true,
+  "canonical_population_check": {
+    "receipt": "CANONICAL_CHECK.json",
+    "mode": "ro",
+    "target_nodes_found": 2,
+    "truth_status": "unverified",
+    "statement_fidelity_reviewed": false,
+    "new_result_promotion": false
+  },
+  "canonical_repository_check": {
+    "path": "~/math-research-brain",
+    "finding": "Read README/AGENTS; the located local SQLite file is a separate JMLR audit, outside this C0048 source lane, and was not opened. The named math-brain-build population store supplied the two exact C0048 lookups."
+  },
+  "recall": {
+    "timeout_seconds": 60,
+    "result": "timed_out",
+    "fallback_slugs": [
+      "perceptron_proof_open_gaps_fleet_2026_07_12",
+      "proof_steps_need_derived_joint_structure_2026_09_09"
+    ],
+    "scope": "Only the two named files were read; neither is mathematical approval of this packet."
+  },
+  "paired_snapshot_receipt": "review/provenance.json",
+  "formal_check": null,
+  "independent_review": {
+    "reviewer": "w458",
+    "scope": "I1/I2/I3/S3 obstruction kept; parent NOT_PROVED",
+    "receipt": "review/w458_verdict_snapshot.json",
+    "served_model_attestation": "unavailable"
+  }
+}

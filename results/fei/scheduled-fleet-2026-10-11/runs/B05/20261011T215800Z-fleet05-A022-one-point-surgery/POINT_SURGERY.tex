@@ -1,0 +1,170 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{Signed point surgery and its exact logarithmic bill}
+\author{A022, B05}\maketitle
+All entropies and divergences are in bits. We use binary cube coordinates,
+characters $\chi_S(x)=(-1)^{S\cdot x}$ and normalized Fourier coefficients.
+These are local identities and obstructions, not a proof or disproof of FEI.
+
+\paragraph{Arbitrary finite surgery.}
+Let $f:\{0,1\}^n\to\{-1,1\}$, $D\subseteq\{0,1\}^n$,
+$\delta=2^{-n}$, and define the actual Boolean table
+$g(x)=f(x)(1-2\mathbf1_D(x))$.
+Writing $a_S=\widehat f(S)$, set
+\[
+t_S=\delta\sum_{v\in D}f(v)\chi_S(v),\quad
+\widehat g(S)=a_S-2t_S,\quad
+m_S=a_S-t_S,\quad e_S=t_S^2,\quad q_S=m_S^2+e_S.
+\]
+The physical selector parent with children $f,g$ has spectrum
+$m_S^2$ without the selector and $e_S$ with it. Thus
+$\sum q_S=1$, $\mu:=\sum e_S=|D|\delta$, and
+\[
+L=\sum_S q_Sh_2(e_S/q_S),\qquad
+H(F)=H(q)+L,\qquad
+I(F)=\mu+\tfrac12(I(f)+I(g)).
+\]
+Zero packets contribute zero. For $\mu>0$, $E_S=e_S/\mu$ is a
+probability law. The logarithmic part and its remaining term are
+\[
+J=\sum_{e_S>0}e_S\log_2(q_S/e_S)
+=\mu[\log_2(1/\mu)-D_2(E\Vert q)],
+\qquad L=J+R,
+\]
+\[
+R=\sum_{m_S\ne0}m_S^2\log_2(q_S/m_S^2),
+\qquad 0\le R\le\mu/\ln2.
+\]
+Proof: expand binary entropy and use
+$-(1-u)\ln(1-u)\le u$ for $0\le u\le1$.
+The true decrement is $L+\operatorname{JS}(a^2,(a-2t)^2)$.
+Do not replace $e_S$ by the minority mass without checking:
+the minority is $\min(e_S,m_S^2)$, with the same binary entropy
+but potentially a different normalization and KL law.
+
+\paragraph{One point, with signs retained.}
+For $D=\{v\}$ put $s=f(v)$. Then
+$t_S=\delta s\chi_S(v)$, $e_S=\delta^2$, $\mu=\delta$,
+and $E$ is uniform on all $2^n$ labels. In particular
+\[
+J/\delta=n-D_2(U\Vert q)
+=2^{-n}\sum_S\log_2\big((r_S-1)^2+1\big),\quad
+r_S=\frac{a_S}{\delta s\chi_S(v)}.
+\]
+The exact influence change is
+\[
+\operatorname{Inf}_i(g)-\operatorname{Inf}_i(f)
+=2\delta f(v)f(v^{(i)}),\quad
+I(g)-I(f)=2\delta\sum_i f(v)f(v^{(i)}).
+\]
+An undirected boundary edge contributes $2\delta$ to influence;
+flipping one endpoint reverses its pivotal status. This proves the formula.
+For every one-point surgery with $n\ge1$, $r_S$ is an even integer:
+the unnormalized Walsh sum of $2^n$ signs is even. Hence
+$(r_S-1)^2\ge1$ and $e_S\le m_S^2$ in every packet.
+Thus the physical mismatch mass equals the spectral minority mass
+for arbitrary one-point seeds, not only bent seeds.
+
+\paragraph{Adjacent pair and interaction.}
+Take $u=v^{(j)}$, $s=f(v)$, $\varepsilon=f(u)/f(v)\in\{-1,1\}$.
+Then
+\[
+t_S=\delta s\chi_S(v)(1+\varepsilon(-1)^{\mathbf1_{j\in S}}),
+\quad e_S=\delta^2(2+2\varepsilon(-1)^{\mathbf1_{j\in S}}).
+\]
+Thus $e_S=4\delta^2$ on
+$\mathcal A=\{S: \varepsilon(-1)^{\mathbf1_{j\in S}}=1\}$,
+and zero elsewhere. Here $\mu=2\delta$ and $E$ is uniform on
+the $2^{n-1}$ active labels. The displayed cross term is essential.
+Moreover $\Delta\operatorname{Inf}_j=0$, whereas for $i\ne j$
+\[
+\Delta\operatorname{Inf}_i
+=2\delta[f(v)f(v^{(i)})+f(u)f(u^{(i)})].
+\]
+Equivalently, adding the two independent one-point changes computed
+from the original table requires the correction
+$-4\delta f(v)f(u)$ in coordinate $j$. Both endpoints of their
+common edge are flipped, so that edge does not change status.
+
+\paragraph{Bent control, any flipped vertex.}
+Let $n\ge4$ be even and $f$ bent, so $a_S=\sigma_S\sqrt\delta$.
+After incorporating $s\chi_S(v)$ into the signs, Fourier inversion gives
+sign multiplicities $N_\pm=(\delta^{-1}\pm\delta^{-1/2})/2$.
+Define $\Phi(r)=A(r)h_2(1/A(r))$, $A(r)=(r-1)^2+1$.
+For one point the exact formula is
+\[
+L=\delta^2[N_+\Phi(\delta^{-1/2})+N_-\Phi(-\delta^{-1/2})].
+\]
+For an adjacent pair the active sign multiplicities are
+$M_\pm=\delta^{-1}/4\pm\delta^{-1/2}/2$, independently of
+$\varepsilon$, and
+\[
+L=4\delta^2[M_+\Phi(\delta^{-1/2}/2)+M_-\Phi(-\delta^{-1/2}/2)].
+\]
+Indeed the sum of the signs on the active half-cube equals
+$\delta^{-1/2}$ by inversion at $v$ and $u$.
+For $|r|\ge2$ we have the uniform estimate
+\[
+|\Phi(r)-2\log_2|r|-\log_2 e|\le 12/|r|. \tag{*}
+\]
+Consequently the point ratio is $n+\log_2e+O(\sqrt\delta)$;
+the adjacent-pair ratio is $n-2+\log_2e+O(\sqrt\delta)$.
+Here the respective mismatch denominators are $\delta$ and $2\delta$.
+These are divergent selector-local ratios, not divergent $H/I$.
+For $n\ge4$ one-point bent coefficients do not cross signs;
+for adjacent flips this also holds at $n=4$, allowing zero child coefficients.
+The bounds above therefore also describe the minority allocation in these cases.
+
+\paragraph{Proof of the uniform estimate.}
+Put $z=1/r$ and $B=A/r^2=1-2z+2z^2$.
+For $|z|\le1/2$, $B\ge1/2$ and $|B-1|\le3|z|$;
+the mean value theorem gives $|\ln B|\le6|z|$.
+Also $A-1=(r-1)^2\ge r^2/4$ and
+\[
+1-\frac1{2(A-1)}\le (A-1)\ln(1+1/(A-1))\le1.
+\]
+Thus the error is at most $(6/|r|+2/r^2)/\ln2$
+$\le 7/(\ln2\,|r|)<12/|r|$.
+
+\paragraph{Tensor classification and a uniform remainder.}
+Fix any Boolean seed $h$ on $m\ge1$ bits, a vertex $v$, and
+integer Walsh sums $W_T=2^m\widehat h(T)$.
+Let $M=|\{T:W_T\ne0\}|$, $\rho=M/2^m$, and
+$\lambda=M^{-1}\sum_{W_T\ne0}\log_2|W_T|$.
+For $f_t=h^{\otimes t}$ on $mt$ bits, flip the single vertex
+$(v,\ldots,v)$ and put $\delta_t=2^{-mt}$.
+The normalized signed ratio in each tensor Fourier label is
+\[
+r_{T_1,\ldots,T_t}
+=\prod_{b=1}^t\frac{W_{T_b}}{h(v)\chi_{T_b}(v)}.
+\]
+Every nonzero integer Walsh sum is even, hence has magnitude at least two.
+There are exactly $M^t$ nonzero tensor labels; all others have $r=0$
+and $\Phi(0)=2$. Averaging (*) over the active labels gives
+\[
+\boxed{\left|\frac{L_t}{\delta_t}
+-2(1-\rho^t)-\rho^t(2t\lambda+\log_2e)\right|
+\le12(\rho/2)^t.}
+\]
+This proves a dichotomy for a fixed seed: if $\rho<1$, the selector
+cost ratio tends to 2; if $\rho=1$, it grows as
+$2t\lambda+\log_2e+O(2^{-t})$, where $\lambda\ge1$.
+In particular any constant price $L_t\le K\delta_t$ fails for full-support
+seeds. This is not a statement about optimized trees or total FEI.
+The exact new entropy is always
+$H(g_t)=\sum_S (a_S-2t_S)^2\log_2(1/(a_S-2t_S)^2)$.
+
+\paragraph{Tensor bent core with character padding.}
+For a bent core on $k$ even bits tensored with a character on
+$\ell$ further bits, the occupied fraction is $\rho=2^{-\ell}$,
+and $|r|=2^{k/2+\ell}$ on occupied labels. Thus, uniformly in
+$k\ge2$ and $\ell\ge0$,
+\[
+\left|\frac L\delta-2(1-2^{-\ell})
+-2^{-\ell}(k+2\ell+\log_2e)\right|
+\le12\,2^{-k/2-2\ell}.
+\]
+This explicitly separates the dimension $k+\ell$, occupancy,
+and surviving logarithm; a raw dimension logarithm misses the KL credit.
+\end{document}

@@ -1,0 +1,9 @@
+STATE: WORKING
+NEXT: Verify submitted draft/patch consistency, send the frozen hashes and packet to w566 and codex-01a12190, then mark NEEDS_REVIEW.
+
+2026-10-10: Read PRIMARY_DIRECTIVE and checked hook audit assignment (no w564 match). Started scoped source recovery and prior-attempt digest. No parent theorem claimed.
+2026-10-10: Saved exact Rademacher statement from arXiv:2405.20308v2. The 2025 result retains 1+O((log n)^(-1/16)); current openness remains UNKNOWN. First intake claim saved before turn 20.
+2026-10-10: Saved L1 exact spectral equivalence, L2 signed replacement/cancellation, and L3 flat Hadamard obstruction. H is explicitly unproved and equivalent to the parent target; no theorem completion claimed. Read the cited perceptron proof-gap scar.
+2026-10-10: STUCK: team_comm found neither worker membership nor an active probability team; a read-only registry query confirmed all three peers have no campaign. Use a new narrowly named C0029 triad communication team; do not retry nonexistent team names. Recall timed out at 60 seconds; fallback scar read.
+2026-10-10 10:14-10:15 local: Fresh small-check gate passed (7.04 GiB physical free, 11.39 GiB commit headroom, 50.59 GiB disk). 3,168 exact event cases: 0 exact mismatches vs 192 erased-denominator mismatches; 0.34375 CPU seconds. Claimed topic:C0029:exact-row-extension, created C0029-core-proof-w564, and successfully sent the statement to w565 and proof location to w566.
+2026-10-10: Submitted ~/math-brain-inbox/w564/bundle_001.json (5 concepts, 2 relations) and math-w564.jsonl hook proposal (2 fire / 3 silence controls). Proposed 2-row Gaussian scope patch saved; progress-page event logged. Reviewed/ingested/retrievable remain false. w565 reports an independent Hadamard/scope checkpoint and requests the proof path.

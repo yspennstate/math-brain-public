@@ -1,0 +1,5 @@
+# Release index at 2026-10-23T14:04:53.765127+00:00
+
+Full FEI OPEN. Accepted theorem list: out/THEOREM_RELEASE_LEDGER.json (exact statement/version/hypotheses and original review receipts). New independent A100 review: REVIEW.md, unchanged A097 declared floor/SAME original owner. Count interpretation: {'accepted_statement_versions': 213, 'partial_statement_versions': 113, 'pending_statement_versions': 715, 'withdrawn_statement_variants': 1}; upstream recorded scope acceptance is not fresh A100 proof reconstruction.
+
+Failed routes: out/FAILED_ROUTE_ARCHIVE.json, preserving previous archive and exact current scope boundaries. Proof status: REPORT.md and REVIEW.md. Next ten questions: CONTINUATION.md and out/NEXT_TEN_QUESTIONS.json. Configured/executed/saved/reviewed/released evidence: out/PERSISTENCE_AND_RELEASE_STATES.json. Original source pins: out/REVIEW_SOURCE_RECEIPTS.json. Current readback: out/PERSISTENCE_RECEIPTS.json and out/FINAL_READBACK.json. Supervisor copying and remote/public releases remain UNVERIFIED. No public-release authorization inferred from private save.

@@ -1,0 +1,42 @@
+{
+  "parser": "isolated actual parse_draft and require from live integrator; no integrator initialization",
+  "identifier_pattern": "[a-z0-9][a-z0-9._/-]{0,255}\\Z",
+  "parser_errors": [],
+  "entries": 19,
+  "relations": 29,
+  "quoted_external_endpoints_verified": 20,
+  "quoted_internal_endpoints_verified": 9,
+  "deployment_patches": [
+    {
+      "patch": "01_team_o_bundle.apply.diff",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "patch": "02_hooks_proposals.apply.diff",
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "hook_proposals_validated": 2,
+  "result_rows": 29,
+  "problems_with_measurements": 10,
+  "independent_keeps": 0,
+  "current_lean_status": "SETUP_UNVERIFIED",
+  "integration_ran": false,
+  "live_store_modified": false,
+  "actual_local_patch_application": [
+    {
+      "patch": "01_team_o_bundle.apply.diff",
+      "exit_code": 0,
+      "created_content_matches": true,
+      "workspace_only": true
+    },
+    {
+      "patch": "02_hooks_proposals.apply.diff",
+      "exit_code": 0,
+      "created_content_matches": true,
+      "workspace_only": true
+    }
+  ]
+}

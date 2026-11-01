@@ -1,0 +1,71 @@
+{
+  "target_id": "P0017",
+  "checked_on": "2026-10-10",
+  "statement_status": "verified against the original problem source and a current primary theorem statement",
+  "parent_statement": "Does there exist a finite universal C such that for every n >= 1, every full-dimensional isotropic log-concave probability measure mu on R^n, and every locally Lipschitz f in W^{1,2}(mu), Var_mu(f) <= C integral |grad f|^2 dmu? Isotropic means mean zero and covariance I_n.",
+  "dated_ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 548,
+    "verbatim_record": "5,P0017,Dimension-free log-concave Poincare or Cheeger constant,attempted_un,KLS-type dimension-free Poincare/Cheeger for log-concave",
+    "current_status_certificate": false
+  },
+  "current_openness": "UNKNOWN",
+  "reason": "Recent primary arXiv sources explicitly claim full proofs. Their existence makes a fresh open or novelty assertion unsafe, but this worker has not independently checked a full proof.",
+  "primary_proof_claims": [
+    {
+      "url": "https://arxiv.org/abs/2610.05474v1",
+      "title": "Presenting a proof of the Kannan-Lovasz-Simonovits conjecture",
+      "authors": [
+        "Pierre Bizeul",
+        "Boaz Klartag",
+        "Joseph Lehec"
+      ],
+      "submitted": "2026-10-04",
+      "source_quote": "We present here a proof of this conjecture.",
+      "checked": "primary abstract and introduction; full proof not independently audited"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.07728v2",
+      "title": "A Dimension-Free Bound on the Poincare Constant of Isotropic Log-Concave Measures",
+      "submitted": "2026-10-06",
+      "checked": "v2 primary abstract; proof not independently audited",
+      "revised": "2026-10-08",
+      "claimed_bound": "C_P<=25"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.01447v2",
+      "title": "An O(1) Bound for the KLS Constant",
+      "checked": "v2 primary abstract; v1 log-star bound is superseded in this source",
+      "revised": "2026-10-04",
+      "claimed_bound": "universal O(1) bound"
+    }
+  ],
+  "local_solved_retired_check": {
+    "scanned": "Named September ranking, annotated Lean ranking, intake dedup index, H/I attempts (exact ID and KLS/title searches), Team O board, targeted population export and read-only population store query.",
+    "found": "The existing P0017 attempt card contains a standard-Gaussian Hermite-expansion special case and explicitly says it does not prove general KLS and has no independent review.",
+    "certifies_no_other_solution": false,
+    "limitations": "No whole-corpus or retired-machine search; canonical alternate-store location was not established in this packet. Current openness remains UNKNOWN with primary full-resolution claims recorded."
+  },
+  "brain_states": {
+    "prepared": true,
+    "submitted": true,
+    "reviewed": false,
+    "ingested": false,
+    "retrievable": false
+  },
+  "original_source": {
+    "title": "Randomstrasse101: Open Problems of 2025",
+    "version": "2603.29571v1",
+    "url": "https://arxiv.org/html/2603.29571v1",
+    "location": "Entry 13, Conjecture 30; equations immediately following",
+    "primary_blog": "https://randomstrasse101.math.ethz.ch/posts/KLSConjecture/",
+    "formulation": "A universal lower bound on Euclidean Cheeger constant divided by the best half-space cut ratio; equivalently h(mu)>=c/sqrt(||Cov(mu)||_op), uniformly over dimensions and log-concave probabilities.",
+    "source_typo_handling": "The arXiv HTML half-space formula binds H but prints S in the ratio. The primary blog uses H consistently. The covariance-normalized formulation is unambiguous in both. The audit uses that formulation and notes the correction explicitly."
+  },
+  "primary_theorem_statement": {
+    "url": "https://arxiv.org/html/2610.05474v1",
+    "location": "Theorem 1.1; equations (5)-(6)",
+    "assumptions": "Every n>=1 and every isotropic log-concave probability measure on R^n; C_P uses all locally Lipschitz L2 test functions and Euclidean gradient.",
+    "mathematical_validity_checked": "Statement only; full proof unaudited"
+  }
+}

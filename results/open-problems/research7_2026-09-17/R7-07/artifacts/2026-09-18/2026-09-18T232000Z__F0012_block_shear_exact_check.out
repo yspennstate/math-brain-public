@@ -1,0 +1,14 @@
+local_total=16
+diag_count=6
+below_count=4
+above_count=4
+diag_allowed= [(-1, -1, -1, -1), (-1, 1, -1, 1), (-1, 1, 1, -1), (1, -1, -1, 1), (1, -1, 1, -1), (1, 1, 1, 1)]
+below_allowed= [(-1, 1, -1, 1), (-1, 1, 1, -1), (1, -1, -1, 1), (1, -1, 1, -1)]
+above_allowed= [(-1, -1, -1, -1), (-1, 1, -1, 1), (1, -1, 1, -1), (1, 1, 1, 1)]
+m=1 n=2 family_count=6 -log2(lower_probability)=1.415037499279 normalized=0.353759374820
+m=2 n=4 family_count=576 -log2(lower_probability)=6.830074998558 normalized=0.426879687410
+m=3 n=6 family_count=884736 -log2(lower_probability)=16.245112497837 normalized=0.451253124940
+m=4 n=8 family_count=21743271936 -log2(lower_probability)=29.660149997115 normalized=0.463439843705
+m=5 n=10 family_count=8549802417586176 -log2(lower_probability)=47.075187496394 normalized=0.470751874964
+m=6 n=12 family_count=53790705718937052512256 -log2(lower_probability)=68.490224995673 normalized=0.475626562470
+EXACT_LOCAL_COUNT_AND_EXPONENT_PASS

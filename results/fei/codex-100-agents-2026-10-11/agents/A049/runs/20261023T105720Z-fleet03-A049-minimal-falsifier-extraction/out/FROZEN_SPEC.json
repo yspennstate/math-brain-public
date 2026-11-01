@@ -1,0 +1,21 @@
+{
+  "helper_version": "activation-all-alpha-v1",
+  "family": "g(a,b,c)=-1 iff a+b+c=1; J_s(x,z)=s on x0 and g on x1",
+  "parameter_domain": "0<alpha<1 analytic; rational replay alpha=j/100 for j1..99 plus1/6; both s signs",
+  "case_count": 200,
+  "symmetry": "global s sign checked directly, no quotient in replay",
+  "arithmetic": "integer Walsh, Fraction coherent transport; exact rational powers and derivative polynomial certificate",
+  "memory_estimate_mb": 40,
+  "maximum_runtime_seconds": 55,
+  "pilot": "alpha1/6 both signs; under60s",
+  "scope_change": "Consume A047 same-support obstruction rather than repeat established point-factor sign tests; compressed wide/load pilot deferred in favor of parameter elimination on minimal witness.",
+  "validation_domain": {
+    "truth_tables": "all22Boolean signs on0,1,2bits",
+    "essential_queries": 26,
+    "purpose": "fixed-domain independent representation check of analytic minimum dimension; no dimension escalation",
+    "helper": "audit.py-v1",
+    "arithmetic": "integer FWHT and polynomial identities",
+    "memory_estimate_mb": 30,
+    "max_runtime_seconds": 55
+  }
+}

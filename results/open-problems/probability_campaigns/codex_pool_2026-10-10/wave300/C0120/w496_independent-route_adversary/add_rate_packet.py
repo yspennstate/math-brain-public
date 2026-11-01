@@ -1,0 +1,36 @@
+import json
+from pathlib import Path
+
+root=Path(__file__).resolve().parent
+claims_path=root/'CLAIMS.jsonl'
+claims=[json.loads(s) for s in claims_path.read_text(encoding='utf-8').splitlines() if s.strip()]
+known={c['id'] for c in claims}
+new_claims=[
+ {'id':'w496-C0120-007','kind':'polynomial-noise counterexample','statement':'Qualitative overlap decay O_n(n^(-1/4))=o(n), even for convex sqrt(n)-Lipschitz Gaussian n-vertex path maxima with Dirichlet energy n, does not by itself imply any fixed power variance saving.','assumptions':'Changing graph with r_n=floor(n/log n) mandatory common vertices and m_n=ceil(exp(sqrt(n))) disjoint branches of n-r_n vertices; iid N(0,1); n sufficiently large. This is not the Z^2 model or a bounded-degree graph.','source':'Independent derivation in POLYNOMIAL_NOISE_QUANTIFIER.md; owner-own-work.','proof':'Independent common-prefix Gaussian variance is r_n; a bivariate Gaussian tail bound makes maximizing branch indices decorrelate at u_n=n^(-1/4). Normalized overlap is r_n/n+o(1), but variance is at least r_n.','independent_reviewer':'w497, pending','remaining_gap':'Independent check pending. The common-prefix/growing-degree geometry is outside the parent problem.','status':'sketch'},
+ {'id':'w496-C0120-008','kind':'quantitative sufficient premise','statement':'For a finite family of n-vertex directed paths with iid standard Gaussian weights and a unique maximum, if O_n(n^(-a))<=C n^(1-b) for fixed a,b>0 and finite C independent of n, then Var(M_n)<=(1+C)n^(1-min(a,b)).','assumptions':'Distinct path vertex sets; finite path family; Ornstein-Uhlenbeck environment coupling; iid standard Gaussian weights; fixed positive a and b; uniform overlap bound.','source':'Independent integral split; Gaussian covariance identity verified in Chatterjee arXiv:0810.4221v2 Lemma 3.3 and monotonicity in Lemma 3.5. See POLYNOMIAL_NOISE_QUANTIFIER.md.','proof':'Var(M_n)=integral e^(-u)O_n(u)du; O_n<=n and is decreasing, so Var<=n t+O_n(t). Set t=n^(-a) and bound both terms.','independent_reviewer':'w497, pending','remaining_gap':'Neither the polynomial-noise scale nor polynomial overlap-magnitude bound is established for the source lattice.','status':'sketch'},
+]
+with claims_path.open('a',encoding='utf-8') as f:
+    for c in new_claims:
+        if c['id'] not in known:
+            f.write(json.dumps(c,ensure_ascii=False)+'\n')
+
+def entry(key,logical,title,statement,assumptions):
+    return {'key':key,'namespace':'probability.polymers','logical_name':logical,'kind':'concept','title':title,'statement':statement,'proof_text':None,'assumptions':assumptions,'domain':'probability theory','source':{'source_id':'owner:w496:C0120:'+key,'url':str(root/'POLYNOMIAL_NOISE_QUANTIFIER.md').replace('\\','/'),'revision':'draft-as-written-2026-10-10','license':'owner-own-work (campaign draft; independent review pending)','excerpt':None}}
+bundle={'spec':'mathbrain-draft-v1','author_agent':'w496','bundle_slug':'c0120-polynomial-noise-overlap-quantifiers-002','entries':[
+    entry('rate-premise','gaussian-path-polynomial-noise-overlap-magnitude-premise-draft','Polynomial noise and overlap magnitude: draft sufficient premise','Draft conditional reduction awaiting independent review: for a finite maximum M_n of n-vertex directed path sums in iid standard Gaussian weights, with unique maximizing path and expected Ornstein-Uhlenbeck path overlap O_n(u), Var(M_n)<=n t+O_n(t). Therefore O_n(n^(-a))<=C n^(1-b), with fixed a,b>0 and uniform C, implies Var(M_n)<=(1+C)n^(1-min(a,b)). The polynomial overlap-magnitude premise is needed in addition to the noise scale, and neither is proved here for the fixed Z^2 model.',['Finite distinct path vertex sets; n vertices each','iid standard Gaussian weights','Unique maximizing path almost surely','Fixed a,b>0 and uniform finite C']),
+    entry('polynomial-noise-control','polynomial-scale-qualitative-gaussian-path-chaos-no-power-control-draft','Polynomial-scale qualitative chaos alone: draft path control','Draft counterexample awaiting independent review: a Gaussian n-vertex path maximum can have expected overlap O_n(n^(-1/4))=o(n) while Var(M_n)>=floor(n/log n). Use a compulsory prefix of floor(n/log n) vertices and ceil(exp(sqrt(n))) private branches of the remaining length. The independent prefix supplies the variance floor, and bivariate Gaussian tail bounds make branch selectors decorrelate at polynomially small noise. This convex sqrt(n)-Lipschitz example is a changing growing-degree graph, not the fixed Z^2 lattice.',['n sufficiently large','Changing finite graph with a long compulsory prefix and many branches','iid standard Gaussian weights','Not a bounded-degree or fixed-lattice counterexample']),
+ ],'relations':[{'from_key':'polynomial-noise-control','to_key':'rate-premise','kind':'semantic_association','rationale':'The control has qualitative decay at a polynomial noise time but a logarithmic residual overlap, showing why the sufficient premise must also impose a power bound on overlap magnitude.'}]}
+(root/'bundle_002.json').write_text(json.dumps(bundle,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+dest=Path('~/math-brain-inbox/w496/bundle_002.json')
+if not dest.exists():
+    part=dest.with_suffix('.json.part')
+    part.write_text(json.dumps(bundle,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    part.rename(dest)
+else: assert json.loads(dest.read_text(encoding='utf-8'))==bundle
+
+store=json.loads((root/'STORE_SCOPE_REPORT.json').read_text(encoding='utf-8'))
+target=next(n for n in store['nodes'] if n['title'].startswith('Open problem: Fluctuation exponent'))
+meta=json.loads(target['metadata'])
+correction={'spec':'review-only-store-correction-v1','author_agent':'w496','card_id':target['id'],'logical_id':meta['logical_id'],'current':{'title':target['title'],'body':target['body']},'corrected':{'title':target['title'],'statement':'OPEN PROBLEM (historically listed in 2008; current openness UNKNOWN). Let M_n be the maximum sum of iid standard Gaussian vertex weights over up-right n-vertex paths from the origin in Z^2, with a free endpoint. The cited source proves Var(M_n)<=C n/log n. The task strengthening asks for constants epsilon in (0,1) and C<infinity independent of n such that Var(M_n)<=C n^(1-epsilon) for all n>=2. No such power improvement is established in this packet. Positive-temperature log partition functions, general disorder and higher dimensions require separate sources and are not identified with this cited ground-state model.'},'source':{'url':'https://arxiv.org/pdf/0810.4221v2','sha256':'17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658','locators':['Section 8 pp.37-39','Section 12(3) p.59'],'quote':'Improve the fluctuation exponent in directed polymers.'},'verdict':'FIX source scope only','review_status':'Review requested; not applied','promotion':'No theorem or solved-status promotion','evidence':['SOURCE_STATUS.json','w496-C0120-002','AUDIT_w495.jsonl subject w495-S1'],'live_store_write':False}
+(root/'STORE_CORRECTION.json').write_text(json.dumps(correction,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print('saved_claim_rows',len(known|{c['id'] for c in new_claims}),'total_draft_entries',7,'total_draft_relations',5,'live_card_correction',target['id'])

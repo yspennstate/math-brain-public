@@ -1,0 +1,57 @@
+{
+  "exhaustive": {
+    "m": 2,
+    "n": 3,
+    "outcomes": 4096,
+    "histogram": [
+      1728,
+      2196,
+      172
+    ],
+    "exact_distribution": [
+      "27/64",
+      "549/1024",
+      "43/1024"
+    ],
+    "isolated_mean": "507/1024"
+  },
+  "simulation": [
+    {
+      "m": 20,
+      "n": 16000,
+      "repetitions": 300,
+      "mean_A_over_m": 0.6789999999999999,
+      "standard_error": 0.004200520220476386,
+      "prediction": 0.6666666666666666
+    },
+    {
+      "m": 100,
+      "n": 2000000,
+      "repetitions": 300,
+      "mean_A_over_m": 0.6665,
+      "standard_error": 0.001967475222561527,
+      "prediction": 0.6666666666666666
+    },
+    {
+      "m": 500,
+      "n": 250000000,
+      "repetitions": 300,
+      "mean_A_over_m": 0.6668666666666667,
+      "standard_error": 0.0008755738151406425,
+      "prediction": 0.6666666666666666
+    },
+    {
+      "m": 2000,
+      "n": 16000000000,
+      "repetitions": 300,
+      "mean_A_over_m": 0.6664316666666666,
+      "standard_error": 0.0004312273992483605,
+      "prediction": 0.6666666666666666
+    }
+  ],
+  "constants": {
+    "isolated_unoptimized": 0.1353352832366127,
+    "isolated_optimized": 0.24682520643774114,
+    "greedy_optimized": 0.5291336839893998
+  }
+}

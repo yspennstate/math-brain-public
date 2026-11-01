@@ -1,0 +1,64 @@
+{
+  "candidate": "C0029",
+  "checked_date": "2026-10-10",
+  "exact_target": {
+    "ensemble": "real n by n matrix with iid uniform {-1,+1} entries",
+    "scale": "s_min <= t/sqrt(n)",
+    "coefficient": 1,
+    "remainder": "C exp(-c n), C,c>0 independent of n,t; equivalent asymptotically to a fixed b^n with 0<b<1",
+    "quantifiers": "one choice of constants works for all sufficiently large n and all t>=0; finitely many dimensions must be addressed if claiming the all-n formulation"
+  },
+  "current_openness": "UNKNOWN",
+  "known_primary_result": {
+    "authors": "Ashwin Sah, Julian Sahasrabudhe, Mehtaab Sawhney",
+    "title": "On the Spielman-Teng Conjecture",
+    "arxiv": "2405.20308",
+    "latest_version_seen": "v2, 2025-01-08",
+    "published_date": "2025-02-13",
+    "doi": "10.1007/s00039-025-00707-z",
+    "statement": "Theorem 1.1 bounds the least singular value lower-tail by (1+O_xi((log n)^(-1/16)))t plus exp(-Omega_xi(n)) for iid mean-zero, variance-one real subgaussian entries; this does not remove the multiplicative error for Rademacher entries.",
+    "primary_url": "https://arxiv.org/abs/2405.20308",
+    "inspected_text_url": "https://arxiv.org/html/2405.20308v2",
+    "inspected_text_version": "v2 verified: equation (2), Theorems 1.1 and 1.2"
+  },
+  "local_status": "Recovered problems.jsonl:29 and attempts.jsonl:23; H/I and Lean exact-ID searches found no extra C0029 proof; Team O has no target row. Checked the two exact C0029 export cards. Owner-wide retirement status was not independently certified; current openness remains UNKNOWN.",
+  "recall": {
+    "query": "C0029 Spielman Teng least singular value independent route mistakes",
+    "result": "Timed out at 55 seconds; using targeted memory index/file fallback."
+  },
+  "served_identity": {
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "max",
+    "requested_service_tier": "Fast",
+    "response_side_model_evidence": null,
+    "response_side_reasoning_evidence": null,
+    "response_side_tier_evidence": null,
+    "account_evidence": null,
+    "note": "Requested settings and worker label do not establish actual served model or login. No identity-gated proof acceptance is claimed."
+  },
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1109.3343",
+      "locator": "Section 7, printed p.53 (PDF page index 52)",
+      "role": "The exact historical C0029 target; iid symmetric Bernoulli, large n, small t"
+    },
+    {
+      "url": "https://arxiv.org/pdf/math/0212413",
+      "locator": "Conjecture 2, printed p.605 (PDF index 8)",
+      "role": "Original ICM statement in inverse-norm notation; modern source fixes dimension notation"
+    },
+    {
+      "url": "https://arxiv.org/pdf/0903.0614",
+      "locator": "Theorem 1.1 equations (1)-(2), printed p.3; Conjecture 1.2 and Theorem 1.3",
+      "role": "Real Gaussian law is a limit; uniform polynomial comparison includes an error"
+    },
+    {
+      "url": "https://arxiv.org/html/2405.20308v2",
+      "locator": "Introduction equation (2), Theorems 1.1-1.2",
+      "role": "Coefficient 1+o(1), not exact one; comparison uses finite-n Gaussian CDF"
+    }
+  ],
+  "historical_quantifiers": "There exist b in (0,1), N and a fixed t0>0 with P(sqrt(n)s_min<=t)<=t+b^n for all n>=N and 0<=t<=t0. The modern primary statement uses all t>=0.",
+  "source_hash_scope": "Local input line and frozen proof hashes are recorded. Web source locators were read, but no PDF-byte hash or formal proof receipt is claimed. Bundle/store digests and seals are left to the coordinator.",
+  "paired_scope": "KEEP elementary scope; full-target gap remains"
+}

@@ -1,0 +1,187 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w510",
+  "bundle_slug": "p0162-affine-sharp-boundary-w510-001",
+  "entries": [
+    {
+      "key": "defs",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "uniform-boolean-spectral-entropy-influence",
+      "kind": "definition",
+      "title": "Uniform Boolean spectral entropy and total influence",
+      "statement": "For f:F_2^n->{-1,+1}, n>=1, on uniform input, write fhat(s)=E[f(x)(-1)^(s dot x)]. Its spectral law is Pr[S=s]=fhat(s)^2, summing to one by Parseval. Its Shannon entropy is H(f)=sum_s fhat(s)^2 log2(1/fhat(s)^2), including s=0 and using zero for zero-log terms. Its total influence is I(f)=sum_s |s| fhat(s)^2=sum_i Pr[f(x)!=f(x+e_i)]. Friedgut-Kalai's FEI conjecture asks for one finite absolute C with H(f)<=C I(f) for all n and f; no bias or variance restriction is part of this uniform-cube target. Current openness as of 2026-10-10 is UNKNOWN in this author packet.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform probability on F_2^n",
+        "Boolean output in {-1,+1}",
+        "Normalized real Walsh coefficients",
+        "Shannon entropy in bits with zero-log terms equal to zero"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:w510:P0162:defs",
+        "url": "urn:owner-own-work:w510:P0162:defs",
+        "revision": "draft-author-proof-2026-10-10-v1-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "affine",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "affine-indicator-fourier-entropy-orientation",
+      "kind": "lemma",
+      "title": "Exact spectrum and influence of affine-subspace indicators",
+      "statement": "Let A=a+V be a nonempty affine subspace of F_2^n with codimension r>=1, U=V^perp, p=2^-r, and m the number of coordinates nonzero on some u in U. For f=1-2*1_A, fhat(0)=1-2p, fhat(u)=-2p*(-1)^(u dot a) for nonzero u in U, and fhat(s)=0 outside U. Each active coordinate has influence 2p, each inactive one zero, so I(f)=2pm. With q=(1-2p)^2, H(f)=-q log2(q)+8p(1-p)(r-1). Here 0 log2(0)=0, m>=r, and H=0 at r=1. Sign reversal preserves all squared-spectrum quantities.",
+      "proof_text": "## C001: exact spectrum and influence of affine indicators\n\nLet A=a+V be a nonempty affine subspace of F_2^n of codimension r>=1. Write U=V^perp (dimension r), p=2^(-r), and m=|{i: there exists u in U with u_i=1}|. Set f=1-2 1_A. Then\n\n* fhat(0)=1-2p;\n* fhat(u)=-2p (-1)^(u dot a) for nonzero u in U;\n* fhat(s)=0 for s not in U;\n* I_i(f)=2p for each of the m active coordinates, zero for all others; I(f)=2pm;\n* with q=(1-2p)^2, H(f)=-q log2(q)+8p(1-p)(r-1).\n\nProof. The average of a character over a+V is p(-1)^(s dot a) if s annihilates V, and zero otherwise: if s does not annihilate V, translating the summation by a v in V with s dot v=1 negates the sum. This gives the coefficients. For an active coordinate i, u -> u_i is a nonzero linear functional on U, so exactly 2^(r-1) elements of U have u_i=1. Each contributes Fourier square 4p^2; hence I_i=4p^2 2^(r-1)=2p. There are 2^r-1 nonzero coefficients of square 4p^2. Their entropy contribution is (2^r-1)4p^2(2r-2)=8p(1-p)(r-1). The empty coefficient contributes the stated remaining term. This proves all formulas without any independence assertion about Z.\n\nThe sign-reversed f has the same entropy and influence. For r=0, f is constant and H=I=0. For r=1, f is a signed parity, q=0, H=0 and I=m.\n",
+      "assumptions": [
+        "Uniform probability on F_2^n",
+        "Boolean output in {-1,+1}",
+        "Normalized real Walsh coefficients",
+        "Shannon entropy in bits with zero-log terms equal to zero",
+        "A nonempty affine subspace; r>=1",
+        "m counts active ambient coordinates, not just codimension"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:w510:P0162:affine",
+        "url": "urn:owner-own-work:w510:P0162:affine",
+        "revision": "draft-author-proof-2026-10-10-v1-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "sharp",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "affine-indicator-fei-sharp-constant-four",
+      "kind": "theorem",
+      "title": "Sharp entropy-influence constant 4 for affine indicators",
+      "statement": "For the class consisting of f=+/- (1-2*1_(a+V)) on uniform F_2^n and constant Boolean functions, H(f)<=4 I(f), and no smaller constant works uniformly over this class. At fixed codimension r>=2, put p=2^-r and H_r=-(1-2p)^2 log2((1-2p)^2)+8p(1-p)(r-1). If m is the active-coordinate count of V^perp, then H(f)/I(f)=H_r/(2pm)=(r/m)M_r where M_r=H_r/(2pr). The fixed-r maximum is M_r, attained exactly by coordinate subcubes up to translation and sign. M_r tends to 4. This is a special case, and the coordinate AND/OR limit 4 is known folklore; novelty is not claimed.",
+      "proof_text": "## C002: sharp FEI constant 4 for the entire affine-indicator class\n\nFor all functions in C001 and constants, H(f)<=4 I(f). No smaller uniform constant works for this class. For a fixed r>=2, the maximum ratio is\n\nM_r=[-(1-2p)^2 log2((1-2p)^2)+8p(1-p)(r-1)]/(2pr), p=2^(-r),\n\nand is attained exactly when A is a coordinate subcube, up to translation. For each affine indicator H(f)/I(f)=(r/m) M_r, and M_r tends to 4 as r tends to infinity.\n\nProof. An r-dimensional subspace supported on m coordinates injects into F_2^m, so m>=r. For r>=2, 0<q<1 and -q ln(q)<=1-q (apply ln(t)<=t-1 to t=1/q). Since 1-q=4p(1-p),\n\nH(f)<=4p(1-p)/ln(2)+8p(1-p)(r-1).\n\nAfter division by I=2pm, this is\n\nH(f)/I(f) <= 4(r/m)(1-p)[1-(1-1/(2 ln(2)))/r] < 4.\n\nHere ln(2)>1/2, for example by integrating 1/t>1/2 on (1,2), and r/m<=1. The cases r<=1 were already handled. For a fixed r>=2, H(f)>0 is fixed and I=2pm is minimized exactly at m=r. In that case U is an r-dimensional subspace of its r-coordinate support and therefore is that entire coordinate space; A fixes those r coordinates and leaves the others free. Conversely any such coordinate subcube has m=r. For coordinate subcubes the nonempty entropy term divided by I is 4(1-p)(r-1)/r ->4. The remaining nonnegative empty term is at most 2(1-p)/(r ln(2)) ->0. Thus M_r->4 and any C<4 fails for some r. No estimate on general Boolean functions follows from this special class.\n",
+      "assumptions": [
+        "Uniform probability on F_2^n",
+        "Boolean output in {-1,+1}",
+        "Normalized real Walsh coefficients",
+        "Shannon entropy in bits with zero-log terms equal to zero",
+        "Affine-subspace indicators and constants only",
+        "Fixed-r equality characterization restricted to r>=2"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:w510:P0162:sharp",
+        "url": "urn:owner-own-work:w510:P0162:sharp",
+        "revision": "draft-author-proof-2026-10-10-v1-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "conditioning",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "nonempty-spectral-conditioning-mass-counterexample",
+      "kind": "lemma",
+      "title": "Retain variance when conditioning the spectral sample",
+      "statement": "For a nonconstant uniform Boolean f, let S have probabilities fhat(s)^2, v=Var(f)=Pr[S!=0]>0, and Q be the law of S conditioned on S!=0. Then H(f)=h2(v)+v H(Q) and I(f)=v E_Q|S|, where h2 is binary entropy. No finite absolute C makes H(Q)<=C I(f) hold for all such f. For f_r=1-2*1_(x_1=...=x_r=0), r>=2, Q is uniform on 2^r-1 nonzero vectors, H(Q)=log2(2^r-1), and I(f_r)=r*2^(1-r); their ratio is at least ((r-1)/r)*2^(r-1) and diverges. The counterexample refutes the unweighted conditioned bridge, not the FEI conjecture. Constants have v=0 and Q is undefined.",
+      "proof_text": "## C003: conditioning away the empty spectrum must retain its mass\n\nFor any nonconstant Boolean f, let v=Pr[Z!=0]=Var(f)>0 and Q be the law of Z conditioned on Z!=0. The exact identities are\n\nH(f)=h2(v)+v H(Q), and I(f)=v E_Q|Z|.\n\nProof. At 0 the spectral mass is 1-v; each nonzero spectral mass is v Q(s). Expanding -sum p log2 p gives the entropy identity, and the expectation identity follows since |0|=0. When v=1 these identities use h2(1)=0; for constants Q is undefined and must not be used.\n\nThe stronger bridge H(Q)<=C I(f) with absolute C is false even for coordinate subcube indicators. In C001 with m=r, Q is uniform on the 2^r-1 nonzero dual vectors, so H(Q)=log2(2^r-1) and I(f)=r 2^(1-r). For r>=2,\n\nH(Q)/I(f)>=((r-1)/r) 2^(r-1)->infinity.\n\nThis refutes only the bridge with the wrong denominator. The mass-weighted quantity v H(Q)/I(f) stays bounded here, as C002 proves for the full entropy.\n",
+      "assumptions": [
+        "Uniform probability on F_2^n",
+        "Boolean output in {-1,+1}",
+        "Normalized real Walsh coefficients",
+        "Shannon entropy in bits with zero-log terms equal to zero",
+        "f nonconstant; v>0 for the conditioning identity",
+        "Explicit subcube counterexample uses r>=2"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:w510:P0162:conditioning",
+        "url": "urn:owner-own-work:w510:P0162:conditioning",
+        "revision": "draft-author-proof-2026-10-10-v1-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "coordinate",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "spectral-coordinate-entropy-charging-counterexample",
+      "kind": "lemma",
+      "title": "Spectral coordinate entropy cannot be uniformly charged to influence",
+      "statement": "For f_r=1-2*1_(x_1=...=x_r=0) on the uniform F_2^r cube, r>=2, its squared Fourier law S has Pr[i in S]=I_i(f_r)=a=2^(1-r) for every i. The first spectral-coordinate chain entropy increment in any deterministic ordering is h2(a), and h2(a)/I_i>=r-1. Thus no absolute C bounds every chain-rule increment H(1_(i in S)|previously exposed spectral coordinates) by C I_i(f) for all Boolean f. Also sum_i h2(I_i)/I is unbounded on this family although H/I tends to 4. For distinct i,j and r>=3, Pr[i,j in S]=2^-r, whereas Pr[i in S]Pr[j in S]=2^(2-2r); spectral coordinates are dependent despite independent input bits. The assertion does not rule out adaptive or block entropy budgets.",
+      "proof_text": "## C004: uniform per-coordinate entropy charging and spectral independence fail\n\nLet f_r=1-2 1_{x_1=...=x_r=0} on F_2^r, r>=2, and Z its spectral random vector. Every coordinate has a=Pr[Z_i=1]=I_i(f_r)=2^(1-r). Thus for the first coordinate in ANY deterministic ordering,\n\nH(Z_i)/I_i(f_r)=h2(a)/a>=log2(1/a)=r-1.\n\nTherefore no absolute C can make every chain-rule increment H(Z_i | previously exposed coordinates)<=C I_i(f) for all Boolean functions and all steps; the first step already fails for every ordering of f_r. Also sum_i h2(I_i)/I=h2(a)/a is unbounded, even though H/I tends to 4. A bound by sum_i h2(I_i) cannot be converted to a dimension-free FEI bound merely by a universal scalar inequality for its summands.\n\nFor distinct i,j and r>=2, exactly 2^(r-2) dual vectors contain both coordinates, so Pr[Z_i=Z_j=1]=p, where p=2^(-r). The product of the marginal probabilities is 4p^2. For r>=3 these differ, with covariance p-4p^2>0. Independent input bits do not imply independent spectral-coordinate bits. All these assertions follow from C001's exact spectrum, not numerical extrapolation.\n",
+      "assumptions": [
+        "Uniform probability on F_2^n",
+        "Boolean output in {-1,+1}",
+        "Normalized real Walsh coefficients",
+        "Shannon entropy in bits with zero-log terms equal to zero",
+        "Explicit coordinate-subcube family",
+        "Deterministic coordinate ordering",
+        "r>=3 for strict pair dependence"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:w510:P0162:coordinate",
+        "url": "urn:owner-own-work:w510:P0162:coordinate",
+        "revision": "draft-author-proof-2026-10-10-v1-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "general-fei-mass-weighted-spectral-entropy-gap",
+      "kind": "concept",
+      "title": "Unresolved mass-weighted entropy gap beyond affine spectra",
+      "statement": "DRAFT unresolved route, not a theorem: for arbitrary nonconstant uniform Boolean f, let v=Var(f)>0 and Q be its nonempty conditioned squared Fourier law. General FEI would require a dimension-free bound h2(v)+v H(Q)<=C*v*E_Q|S|. The affine-indicator proof controls only uniform nonzero dual-subspace spectra. The false inequalities H(Q)<=C I(f) and a uniform charge of every individual chain entropy increment to that coordinate's influence cannot supply the missing estimate. A next proof step is a block exposure rule that preserves the factor v and explicitly permits correlated spectral coordinates. No full FEI resolution is claimed.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform probability on F_2^n",
+        "Boolean output in {-1,+1}",
+        "Normalized real Walsh coefficients",
+        "Shannon entropy in bits with zero-log terms equal to zero",
+        "Proposed route only; general entropy estimate unproved"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:w510:P0162:gap",
+        "url": "urn:owner-own-work:w510:P0162:gap",
+        "revision": "draft-author-proof-2026-10-10-v1-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "affine",
+      "to_key": "defs",
+      "kind": "depends_on",
+      "rationale": "The affine formula uses the normalized squared Fourier law in the definition: 'I(f)=sum_s |s| fhat(s)^2' and 'H(f)=sum_s fhat(s)^2 log2(1/fhat(s)^2)'."
+    },
+    {
+      "from_key": "sharp",
+      "to_key": "affine",
+      "kind": "depends_on",
+      "rationale": "The sharp theorem's exact ratio 'H_r/(2pm)' uses the affine lemma's supporting end 'I(f)=2pm' and its displayed entropy formula, together with m>=r."
+    },
+    {
+      "from_key": "conditioning",
+      "to_key": "affine",
+      "kind": "depends_on",
+      "rationale": "The conditioned counterexample uses the affine lemma's equal nonzero Fourier squares; this gives the supporting conclusion 'Q is uniform on 2^r-1 nonzero vectors'."
+    },
+    {
+      "from_key": "coordinate",
+      "to_key": "affine",
+      "kind": "depends_on",
+      "rationale": "The coordinate lemma uses the affine supporting end 'Each active coordinate has influence 2p' and counts dual vectors to establish its entropy and joint-probability ends."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "conditioning",
+      "kind": "semantic_association",
+      "rationale": "The unresolved route retains the proved conditioning end 'H(f)=h2(v)+v H(Q)' and does not use the refuted unweighted bridge."
+    }
+  ]
+}

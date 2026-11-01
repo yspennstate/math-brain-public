@@ -1,0 +1,10 @@
+{
+  "helper_version": "certify.py v1.2; exact outward dyadic rounding of log intervals",
+  "family_and_domain": "Unchanged from FROZEN_SPEC_v2.json",
+  "case_count": "12 compressed family certificates, k=4,6,8,10,12,14",
+  "symmetry": "Unchanged; all directed multiplicities preserved",
+  "arithmetic": "Fraction atanh series (36 terms), explicit remainder, all-corner quotient division, followed by exact outward rounding to a 2^-100 dyadic grid before interval addition",
+  "memory_estimate": "Below 100 MB",
+  "max_runtime_seconds": 60,
+  "reason": "Unrounded rational denominator growth exceeded Python's integer-string serialization limit. Outward rounding preserves certificates and bounds denominator growth; it changes neither mathematical domain nor required signs."
+}

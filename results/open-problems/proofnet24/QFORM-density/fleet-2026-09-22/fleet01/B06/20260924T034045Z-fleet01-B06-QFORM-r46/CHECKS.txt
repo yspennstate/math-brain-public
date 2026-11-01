@@ -1,0 +1,15 @@
+Finite algebra audit for fleet01/B06 r46.
+
+Deterministic script: check_plucker_deletion.py, NumPy default_rng(0).
+Dimensions: n=5,8,12,30; 50 random Parseval n x 3 frames per dimension; one random singleton deletion each trial.
+
+Maximum absolute errors observed in the actual run:
+1. |det G_i - (1-P_ii)|: 1.33226763e-15
+2. singleton conditional leverage formula: 1.74305015e-14
+3. |sum residual leverages - 3|: 1.77635684e-15
+4. |total Cauchy-Binet Pluecker mass - 1|: 5.32907052e-15
+5. |avoiding Pluecker mass - (1-P_ii)|: 5.66213743e-15
+
+QFORM_B06_R46_CHECK_PASS
+
+These are finite floating-point sanity checks only. The theorem rests on the exact identities and proof in REPORT.md.

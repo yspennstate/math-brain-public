@@ -1,0 +1,87 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w344",
+  "bundle_slug": "w344-open-problem-c0063-checked-partials-20261010",
+  "entries": [
+    {
+      "key": "regular-tree-percolation-linear-critical-amplitude",
+      "namespace": "probability.percolation",
+      "logical_name": "regular-tree-percolation-linear-critical-amplitude",
+      "kind": "lemma",
+      "title": "Exact near-critical percolation amplitude on a regular tree",
+      "statement": "For independent bond percolation on the infinite d-regular tree with d>=3, p_c=1/(d-1), theta(p)=0 for p<=p_c, and theta(p)=[2d(d-1)/(d-2)](p-p_c)+O((p-p_c)^2) as p decreases to p_c from above. The positive descendant-survival solution u obeys 1-u=(1-pu)^(d-1); division by u and the implicit-function theorem give the expansion, and theta=1-(1-pu)^d. This is an exact tree analogue, not a high-dimensional lattice solution.",
+      "proof_text": "The cached Heydenreich-van der Hofstad source's Open Problem 9.1 asks for a positive limit of theta(p)/(p-p_c) for high-dimensional lattice percolation, beyond bounded ratios. The intake route writes beta=gamma-Delta while substituting gamma=1 and Delta=2; that displayed subtraction cannot produce beta=1. We do not accept the claimed equivalence or differentiation of a singular limit as proved.\n\nFor bond percolation on the infinite d-regular tree, d>=3, p_c=1/(d-1) and\n\n    theta(p) = [2d(d-1)/(d-2)] (p-p_c)+O((p-p_c)^2).\n\nLet k=d-1 and u be the probability that a vertex with its parent edge removed has an infinite descendant cluster. It solves 1-u=(1-pu)^k. For p>1/k it is the positive branching-process survival solution. Dividing by u and expanding gives kp-1=binom(k,2)p^2 u+O(u^2). The divided equation has nonzero u derivative at (u,p)=(0,1/k), so its positive branch is analytic. With epsilon=p-1/k, u=2k^2 epsilon/(k-1)+O(epsilon^2), and theta=1-(1-pu)^d gives the claimed coefficient. This is a tree analogue, not a proof on Z^d. Nine small numerical checks for d=3,4,8 approach the predicted slopes.\n\nBounded-ratio exponent information and monotonicity alone are insufficient: F(epsilon)=epsilon(2+sin(log epsilon)), epsilon>0 small, lies between epsilon and 3epsilon and is strictly increasing because F'=2+sin(log epsilon)+cos(log epsilon)>=2-sqrt(2)>0. Nevertheless F(epsilon)/epsilon has no limit, while log F/log epsilon ->1. A lattice-percolation proof therefore needs an additional mechanism ruling out oscillation; this example is not a percolation counterexample.",
+      "assumptions": [
+        "Independent bond percolation",
+        "Infinite d-regular tree",
+        "d>=3"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:regular-tree-percolation-linear-critical-amplitude",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "For independent bond percolation on the infinite d-regular tree with d>=3, p_c=1/(d-1), theta(p)=0 for p<=p_c, and theta(p)=[2d(d-1)/(d-2)](p-p_c)+O((p-p_c)^2) as"
+      }
+    },
+    {
+      "key": "monotone-bounded-ratio-exponent-without-amplitude-limit",
+      "namespace": "probability.critical_scaling",
+      "logical_name": "monotone-bounded-ratio-exponent-without-amplitude-limit",
+      "kind": "lemma",
+      "title": "Monotonicity and exponent one do not force a limiting amplitude",
+      "statement": "On 0<epsilon<1/4, F(epsilon)=epsilon(2+sin(log epsilon)) is strictly increasing, lies between epsilon and 3epsilon, and satisfies log F(epsilon)/log epsilon ->1 as epsilon tends to zero. Nevertheless F(epsilon)/epsilon has no limit. Thus monotonicity plus bounded-ratio beta=1 alone cannot establish asymptotic equivalence to c epsilon. This analytic counterexample is a refuted inference, not a percolation counterexample.",
+      "proof_text": "The cached Heydenreich-van der Hofstad source's Open Problem 9.1 asks for a positive limit of theta(p)/(p-p_c) for high-dimensional lattice percolation, beyond bounded ratios. The intake route writes beta=gamma-Delta while substituting gamma=1 and Delta=2; that displayed subtraction cannot produce beta=1. We do not accept the claimed equivalence or differentiation of a singular limit as proved.\n\nFor bond percolation on the infinite d-regular tree, d>=3, p_c=1/(d-1) and\n\n    theta(p) = [2d(d-1)/(d-2)] (p-p_c)+O((p-p_c)^2).\n\nLet k=d-1 and u be the probability that a vertex with its parent edge removed has an infinite descendant cluster. It solves 1-u=(1-pu)^k. For p>1/k it is the positive branching-process survival solution. Dividing by u and expanding gives kp-1=binom(k,2)p^2 u+O(u^2). The divided equation has nonzero u derivative at (u,p)=(0,1/k), so its positive branch is analytic. With epsilon=p-1/k, u=2k^2 epsilon/(k-1)+O(epsilon^2), and theta=1-(1-pu)^d gives the claimed coefficient. This is a tree analogue, not a proof on Z^d. Nine small numerical checks for d=3,4,8 approach the predicted slopes.\n\nBounded-ratio exponent information and monotonicity alone are insufficient: F(epsilon)=epsilon(2+sin(log epsilon)), epsilon>0 small, lies between epsilon and 3epsilon and is strictly increasing because F'=2+sin(log epsilon)+cos(log epsilon)>=2-sqrt(2)>0. Nevertheless F(epsilon)/epsilon has no limit, while log F/log epsilon ->1. A lattice-percolation proof therefore needs an additional mechanism ruling out oscillation; this example is not a percolation counterexample.",
+      "assumptions": [
+        "epsilon tends to zero through positive values"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:monotone-bounded-ratio-exponent-without-amplitude-limit",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "On 0<epsilon<1/4, F(epsilon)=epsilon(2+sin(log epsilon)) is strictly increasing, lies between epsilon and 3epsilon, and satisfies log F(epsilon)/log epsilon ->1"
+      }
+    },
+    {
+      "key": "archival-critical-exponent-subtraction-route-audit",
+      "namespace": "probability.critical_scaling",
+      "logical_name": "archival-critical-exponent-subtraction-route-audit",
+      "kind": "concept",
+      "title": "The archived beta equals gamma minus Delta route does not establish beta one",
+      "statement": "The C0063-A001 intake attempt displays beta=gamma-Delta with gamma=1 and Delta=2 and claims that this gives beta=1. The displayed arithmetic instead gives -1. This records a route failure in that attempt and does not assert a replacement scaling theorem or equivalence of unresolved amplitude statements. Singular-limit differentiation and a right derivative at criticality still require proof for the requested lattice model.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:archival-critical-exponent-subtraction-route-audit",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; source-backed route audit; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "The C0063-A001 intake attempt displays beta=gamma-Delta with gamma=1 and Delta=2 and claims that this gives beta=1. The displayed"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "regular-tree-percolation-linear-critical-amplitude",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0063-critical-exponent-beta-1-in-the-asymptotic-sense-for-high-dimensional",
+      "kind": "analogous_to",
+      "rationale": "New end: \"For independent bond percolation on the infinite d-regular tree with d>=3, p_c=1/(d-1), theta(p)=0 for p<=p_c, and theta(p)=[2d(d-1)/(d-2)](p-p_c)+O((p-p_c)^2) as\"; existing end: \"Prove that theta(p) ~ c (p - p_c) as p decreases to p_c for percolation on Z^d in\". This result addresses or audits C0063; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    },
+    {
+      "from_key": "monotone-bounded-ratio-exponent-without-amplitude-limit",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0063-critical-exponent-beta-1-in-the-asymptotic-sense-for-high-dimensional",
+      "kind": "analogous_to",
+      "rationale": "New end: \"On 0<epsilon<1/4, F(epsilon)=epsilon(2+sin(log epsilon)) is strictly increasing, lies between epsilon and 3epsilon, and satisfies log F(epsilon)/log epsilon ->1\"; existing end: \"Prove that theta(p) ~ c (p - p_c) as p decreases to p_c for percolation on Z^d in\". This result addresses or audits C0063; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    },
+    {
+      "from_key": "archival-critical-exponent-subtraction-route-audit",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0063-critical-exponent-beta-1-in-the-asymptotic-sense-for-high-dimensional",
+      "kind": "cites",
+      "rationale": "New end: \"The C0063-A001 intake attempt displays beta=gamma-Delta with gamma=1 and Delta=2 and claims that this gives beta=1. The displayed\"; existing end: \"Prove that theta(p) ~ c (p - p_c) as p decreases to p_c for percolation on Z^d in\". This result addresses or audits C0063; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    }
+  ]
+}

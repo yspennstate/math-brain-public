@@ -1,0 +1,7 @@
+# Scoped independent reconstruction of A047 v1
+
+The unchanged statement is pinned in CLAIMS.json by its source UTF-8 digest. This review accepts ONLY the pure-core all-alpha analytic obstruction and its alpha=1/6 core/activated formulas. It does not review A047's enumeration or minimality clauses, so it is not acceptance of the entire bundled claim.
+
+For the actual three-bit truth table (1,-1,-1,1,-1,1,1,1), direct character sums give full positive support, empty/full masses1/16,9/16 and six other masses1/16. Reconstructing the actual coherent physical query and each reference's own outcome normalization gives core sigma=log2[4(2+alpha)/((2-alpha)^3(1+2alpha))]/8. Its logarithm is positive for0<alpha<1 because numerator minus denominator equals alpha^2(18-11alpha+2alpha^2)>0. At1/6 this is log2(1404/1331)/8.
+
+For BOTH activation signs the actual reference outcomes are101/195,94/195. The mean reset is log2(K)/32, where K=(155/156)^13*(59/60)^5*(13/12)^10 /[(4/3)^2*(1-(7/195)^2)^16]. The audit checks K>1 as an exact rational integer comparison and checks the KL formula by prime-factor coefficient vectors, without importing either A047's or the main helper's code. This independently supports the analytic obstruction; no source statement or proof was repaired. See code/audit.py and out/AUDIT.json. Its 1,442 assertions/37 identities also cover the NEW rare-query family, so these totals are not all attributed to this review.

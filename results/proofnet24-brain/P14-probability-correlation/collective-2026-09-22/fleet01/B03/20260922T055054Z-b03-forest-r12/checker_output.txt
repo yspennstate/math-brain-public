@@ -1,0 +1,14 @@
+K4_COUNTS N=15 A=9 B=9 D=5 GAP=6
+RESIDUAL_TOTAL domain=30 codomain=36 surplus=6
+FIXED_FIBER I=empty U=all4 domain=4 codomain=2 deficit=2
+DOMAIN F={02,03,12} H={13}
+DOMAIN F={02,03,13} H={12}
+DOMAIN F={02,12,13} H={03}
+DOMAIN F={03,12,13} H={02}
+CODOMAIN F={03,12} H={02,13}
+CODOMAIN F={02,13} H={03,12}
+SIZE4_GRADE I=0 U=4 domain=4 codomain=2 balance=-2
+SIZE4_GRADE I=1 U=3 domain=12 codomain=12 balance=0
+SIZE4_GRADE I=2 U=2 domain=0 codomain=2 balance=2
+PIVOT sourceF={02,03,12} sourceH={13} c=02 d=12 targetF={02,03} targetH={02,13} valid_codomain=True
+TRANSFER_ONLY_HALL_REFUTED=True

@@ -1,0 +1,12 @@
+dual_relations 2048
+gate_separated_relations 1024
+shell_counts {4: 64, 6: 256, 8: 384, 10: 256, 12: 64}
+subcube-two-point influences ['1/4', '1/4', '0', '1/4'] J 3/4
+subcube-two-point gradient_checks 4096 max_bound_ratio 1/2
+subcube-two-point shell_gradient_energy {4: ['64', '64', '0', '64'], 6: ['256', '256', '0', '256'], 8: ['384', '384', '0', '384'], 10: ['256', '256', '0', '256'], 12: ['64', '64', '0', '64']}
+subcube-two-point cross_identity_checks 65536
+weight-one-four-point influences ['1/2', '1/2', '1/2', '1/2'] J 2
+weight-one-four-point gradient_checks 4096 max_bound_ratio 1/2
+weight-one-four-point shell_gradient_energy {4: ['64', '64', '64', '64'], 6: ['256', '256', '256', '256'], 8: ['384', '384', '384', '384'], 10: ['256', '256', '256', '256'], 12: ['64', '64', '64', '64']}
+weight-one-four-point cross_identity_checks 65536
+status PASS

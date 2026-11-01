@@ -1,0 +1,1 @@
+The first pilot stopped at the fixed witness's Fourier-coefficient expectation: draft 3/32 was incorrect. Direct expansion g=2h0+2h1-2h0h1-1 gives -2/64=-1/32 on T={0,1,2}. Corrected both proof and checker before repeating the pilot. Ownership, root credit and integer factorization countercertificate are unchanged. This failed run contributes no successful-check total.

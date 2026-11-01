@@ -1,0 +1,2 @@
+STATE: A076 stage6 saved: one boundary bank pays nonconstant private/private/shared/private history; exact bent/plateaued signed prices40/60; 34693, exact assertions PASS; v6 review pending; FEI OPEN.
+NEXT: Unequal-height threshold carrier (Maj5 point edit) on SAME booked history: price signed row remainder from unused R/source surplus, retaining inherited input entropy, quarter core and both terminals; A092/A088/A094 review.

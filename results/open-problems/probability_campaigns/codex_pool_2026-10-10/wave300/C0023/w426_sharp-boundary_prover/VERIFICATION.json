@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "command": "python -X utf8 verify_boundary.py",
+  "arithmetic": "fractions.Fraction; exhaustive open/closed states, no float tolerance",
+  "counts": {
+    "configurations": 463,
+    "probability_cases": 29339,
+    "pointwise_cases": 7916,
+    "forest_topologies": 25,
+    "counterexample_weight_vectors": 29
+  },
+  "elapsed_seconds": 50.59495009994134,
+  "half_weight_counterexample": {
+    "r": "1/2",
+    "s": "1/2",
+    "t": "1/2",
+    "actual_terminal_probability": "1/8",
+    "incorrect_relay_sum": "3/16",
+    "overstatement": "1/16",
+    "selected_a2_probability": "1/4",
+    "unconditional_a2_terminal_probability": "1/4",
+    "conditional_a2_terminal_probability": "0"
+  },
+  "near_one_counterexample": {
+    "r": "99/100",
+    "s": "99/100",
+    "t": "99/100",
+    "actual_terminal_probability": "970299/1000000",
+    "incorrect_relay_sum": "98000199/100000000",
+    "overstatement": "970299/100000000",
+    "selected_a2_probability": "99/10000",
+    "unconditional_a2_terminal_probability": "9801/10000",
+    "conditional_a2_terminal_probability": "0"
+  },
+  "cyclic_witness_obstruction": {
+    "deterministic_witnesses": [],
+    "terminal_probability": "7/32",
+    "relay_hit_probability": "3/4",
+    "minimum_relay_terminal_probability": "9/32",
+    "product_gluing_margin": "1/128",
+    "meaning": "No deterministic relay witness, although the product bound holds here."
+  },
+  "scope": "Finite consistency checks support the written proofs; not a lattice proof or formal proof receipt."
+}

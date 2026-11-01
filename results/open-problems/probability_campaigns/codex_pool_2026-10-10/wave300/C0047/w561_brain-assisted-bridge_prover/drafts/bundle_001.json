@@ -1,0 +1,227 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w561",
+  "bundle_slug": "c0047-operator-continuation-normalization-review-draft",
+  "entries": [
+    {
+      "key": "def-two-point",
+      "namespace": "probability.percolation",
+      "logical_name": "bernoulli-bond-two-point-operator-counting-measure",
+      "kind": "definition",
+      "title": "Bernoulli bond two-point operator on counting measure",
+      "statement": "Let G be a countable simple graph with uniformly bounded degree. In independent Bernoulli bond percolation at p in [0,1], tau_p(x,y)=P_p(x is connected to y by a finite open path), allowing the path of length zero. T_p has matrix tau_p and initially acts on finitely supported functions on V. Boundedness means extension to a bounded operator on l2(V) with counting measure. Let p_2->2=sup{p:T_p is bounded}; for infinite connected vertex-transitive G, pc=inf{p:P_p(|C(o)|=infinity)>0} and pu=inf{p:P_p(exactly one infinite cluster)=1}.",
+      "proof_text": null,
+      "assumptions": [
+        "Countable simple graph",
+        "Uniformly bounded degree",
+        "Independent Bernoulli bond law"
+      ],
+      "domain": "probability theory / independent bond percolation",
+      "source": {
+        "source_id": "owner-probability-campaign-w561-20261010:def-two-point",
+        "url": "",
+        "revision": "review-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "tree-reference",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-regular-tree-bond-threshold-reference",
+      "kind": "concept",
+      "title": "Draft regular-tree threshold reference",
+      "statement": "DRAFT mathematical statement, author-checked and awaiting independent review: For independent Bernoulli bond percolation on the infinite d-regular tree T_d, d>=3, p_c(T_d)=1/(d-1) and p_u(T_d)=1.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite connected d-regular tree",
+        "integer d>=3",
+        "Each edge independently open with probability p",
+        "p_c=inf{p:P_p(|C(o)|=infinity)>0}",
+        "p_u=inf{p:P_p(exactly one infinite open cluster)=1}"
+      ],
+      "domain": "probability theory / independent bond percolation",
+      "source": {
+        "source_id": "owner-probability-campaign-w561-20261010:tree-reference",
+        "url": "",
+        "revision": "review-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "norm-continuation",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-quantitative-two-point-operator-continuation",
+      "kind": "concept",
+      "title": "Draft quantitative two-point operator continuation",
+      "statement": "DRAFT mathematical statement, author-checked and awaiting independent review: On a countable simple graph with uniformly bounded degree and adjacency l2 norm a>0, if the Bernoulli bond two-point operator at p0<1 has norm M<infinity, then ||T_q||<=M/(1-aM(q-p0)) whenever p0<=q<=1 and aM(q-p0)<1.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Countable simple graph",
+        "Uniformly bounded degree",
+        "p0 in [0,1)",
+        "a=||A||2->2>0",
+        "M=||T_p0||2->2<infinity"
+      ],
+      "domain": "probability theory / independent bond percolation",
+      "source": {
+        "source_id": "owner-probability-campaign-w561-20261010:norm-continuation",
+        "url": "",
+        "revision": "review-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "uniqueness-obstruction",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-uniqueness-obstruction-to-two-point-l2-boundedness",
+      "kind": "concept",
+      "title": "Draft uniqueness obstruction to operator boundedness",
+      "statement": "DRAFT mathematical statement, author-checked and awaiting independent review: For independent Bernoulli bond percolation on an infinite countable vertex-transitive simple graph of bounded degree, boundedness of T_p on l2 rules out almost-sure uniqueness of an infinite cluster; in particular p_2->2<=p_u.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite countable vertex-transitive simple graph",
+        "Uniformly bounded degree",
+        "Independent Bernoulli bond product law",
+        "p_2->2=sup{p:T_p bounded on l2}",
+        "p_u=inf{p:almost surely exactly one infinite cluster}"
+      ],
+      "domain": "probability theory / independent bond percolation",
+      "source": {
+        "source_id": "owner-probability-campaign-w561-20261010:uniqueness-obstruction",
+        "url": "",
+        "revision": "review-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "normalization-refutation",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-normalized-spectral-and-exponential-decay-route-refutation",
+      "kind": "concept",
+      "title": "Draft refutation of two insufficient spectral routes",
+      "statement": "DRAFT mathematical statement, author-checked and awaiting independent review: Pointwise exponential decay tau_p(x,y)<=C exp(-c dist(x,y)) with c>0 does not imply l2 operator boundedness. Also, using normalized random-walk rho, pc<1/rho is not the adjacency-Neumann criterion, and its proposed obstruction pc>=1/rho is impossible when rho<1. On T4 at p=3/4 the squared root-column norm is 1+4p^2 sum_{n>=0}(3p^2)^n and diverges since 3p^2=27/16>1, although tau_p=p^distance decays exponentially. The adjacency norm is 2sqrt(3), normalized rho=sqrt(3)/2 and pc=1/3. This refutes the insufficient operator inference, not the parent conjecture.",
+      "proof_text": null,
+      "assumptions": [
+        "Bernoulli bond percolation on T_4",
+        "p=3/4 for the exponential-decay counterexample",
+        "rho=||A||/4=sqrt(3)/2",
+        "pc=1/3"
+      ],
+      "domain": "probability theory / independent bond percolation",
+      "source": {
+        "source_id": "owner-probability-campaign-w561-20261010:normalization-refutation",
+        "url": "",
+        "revision": "review-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "spectral-criterion",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-correctly-normalized-sufficient-percolation-spectral-criterion",
+      "kind": "concept",
+      "title": "Draft correctly normalized sufficient spectral criterion",
+      "statement": "DRAFT mathematical statement, author-checked and awaiting independent review: For an infinite countable vertex-transitive simple graph of bounded degree, independent Bernoulli bond percolation satisfies pc<pu if pc<1/||A||2->2. For a d-regular graph this condition is pc*d*rho<1 with rho the normalized random-walk spectral radius.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite countable vertex-transitive graph",
+        "Simple graph with uniformly bounded degree",
+        "Independent Bernoulli bond percolation",
+        "a=||A||2->2",
+        "pc*a<1"
+      ],
+      "domain": "probability theory / independent bond percolation",
+      "source": {
+        "source_id": "owner-probability-campaign-w561-20261010:spectral-criterion",
+        "url": "",
+        "revision": "review-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "critical-gap",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-c0047-critical-operator-missing-bridge",
+      "kind": "concept",
+      "title": "C0047 critical operator estimate remains an unverified bridge",
+      "statement": "For each prescribed finite symmetric generating set of each infinite finitely generated nonamenable group, finiteness of ||T_pc|| on counting-measure l2, together with pc<1, would imply pc<p_2->2<=pu by the draft continuation and uniqueness lemmas. This packet has not established that finite critical norm in general. Hyperbolicity and pc*||A||<1 are additional sufficient hypotheses, not assumptions of the original target. A September 2026 primary source claims the general critical estimate; independent mathematical verification and a compiled trusted-axiom receipt remain absent here.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite finitely generated nonamenable group",
+        "Prescribed finite symmetric generating set",
+        "Independent Bernoulli bond law"
+      ],
+      "domain": "probability theory / independent bond percolation",
+      "source": {
+        "source_id": "owner-probability-campaign-w561-20261010:critical-gap",
+        "url": "",
+        "revision": "review-draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "norm-continuation",
+      "to_key": "def-two-point",
+      "kind": "depends_on",
+      "rationale": "The draft statement uses the explicitly defined counting-measure two-point operator or percolation thresholds."
+    },
+    {
+      "from_key": "uniqueness-obstruction",
+      "to_key": "def-two-point",
+      "kind": "depends_on",
+      "rationale": "The draft statement uses the explicitly defined counting-measure two-point operator or percolation thresholds."
+    },
+    {
+      "from_key": "spectral-criterion",
+      "to_key": "def-two-point",
+      "kind": "depends_on",
+      "rationale": "The draft statement uses the explicitly defined counting-measure two-point operator or percolation thresholds."
+    },
+    {
+      "from_key": "spectral-criterion",
+      "to_key": "uniqueness-obstruction",
+      "kind": "depends_on",
+      "rationale": "The positive Neumann-series bound rules out uniqueness through the bounded-kernel obstruction."
+    },
+    {
+      "from_key": "critical-gap",
+      "to_key": "norm-continuation",
+      "kind": "depends_on",
+      "rationale": "A finite norm at pc would yield a strictly larger bounded parameter."
+    },
+    {
+      "from_key": "critical-gap",
+      "to_key": "uniqueness-obstruction",
+      "kind": "depends_on",
+      "rationale": "The operator threshold cannot exceed the uniqueness threshold."
+    },
+    {
+      "from_key": "normalization-refutation",
+      "to_existing_logical": "math:probability.statmech:attempt-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+      "kind": "refutes",
+      "rationale": "Refutes only the prior normalized-rho obstruction and its adjacency normalization: the old route omits degree, while the corrected condition is pc*d*rho<1. No edge claims to refute the parent conjecture."
+    },
+    {
+      "from_key": "spectral-criterion",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+      "kind": "semantic_association",
+      "rationale": "A sufficient criterion for the historical target, requiring an extra quantitative assumption; not a proof of the full target."
+    },
+    {
+      "from_key": "critical-gap",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+      "kind": "semantic_association",
+      "rationale": "Isolates the additional unverified estimate needed by this proof route."
+    }
+  ]
+}

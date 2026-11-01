@@ -1,0 +1,57 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w437",
+  "bundle_slug": "p0043-reviewed-status-and-boundary-001",
+  "entries": [
+    {
+      "key": "p0043-2026-source-status",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-quasitransitive-bond-percolation-source-status-2026-10",
+      "kind": "concept",
+      "title": "P0043 source status after the September 2026 preprint",
+      "statement": "The historical Benjamini–Schramm criticality conjecture asks whether Bernoulli bond percolation on every infinite connected locally finite quasi-transitive graph G with p_c(G)<1 has no infinite cluster at p_c(G). Lyons–Peres list this as Conjecture 8.15. A public OpenAI preprint dated 24 September 2026 states the full assertion as Theorem 1.1. As of 10 October 2026, this source audit verified the theorem statement and identified a separate Lean solution module, but did not independently check the paper's full proof, the module's imported dependencies, or trusted axioms. Treat the result as a claimed solution pending full referee certification; do not use the older 7 September open label as evidence of current openness.",
+      "proof_text": null,
+      "assumptions": ["Status assessed as of 2026-10-10", "Bond percolation, not a site-percolation generalization", "Source-status observation, not a mathematical proof receipt"],
+      "domain": "probability theory; percolation; source status",
+      "source": {
+        "source_id": "owner-own-work:w437-p0043-source-audit-20261010",
+        "url": "~/brain_workers/w437/REVIEW.md",
+        "revision": "reviewed-primary-statements-2026-10-10",
+        "license": "owner-own-work (source-status audit; preprint credited in REVIEW.md)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "dyadic-tree-critical-survival",
+      "namespace": "probability.percolation",
+      "logical_name": "dyadic-branching-tree-critical-survival-outside-quasitransitivity",
+      "kind": "theorem",
+      "title": "A bounded-degree non-quasi-transitive tree survives at its bond threshold",
+      "statement": "Let T be the rooted tree in which each vertex at depth n-1 has 8 children when n is a positive power of two and 2 children otherwise. T has maximum degree 9, is not quasi-transitive, has Bernoulli bond threshold p_c(T)=1/2, and the root belongs to an infinite open cluster at p=1/2 with probability at least 4/5. Thus bounded degree and p_c<1 alone do not imply critical extinction.",
+      "proof_text": "Put m(n)=1+floor(log_2 n). The n-th generation has 2^n 4^{m(n)} vertices. For p<1/2, the expected open generation size is at most 4n^2(2p)^n, which tends to zero; the same bound from each fixed vertex rules out all infinite clusters. At p=1/2 let Z_n count root-connected generation-n vertices and M_n=E Z_n=4^{m(n)}. Fresh disjoint offspring edges give E[Z_n^2 | F_{n-1}]=(b_n p)^2 Z_{n-1}^2+b_n p(1-p)Z_{n-1}, hence E Z_n^2/M_n^2=1+(1/2)sum_{j=1}^n 1/M_j. The infinite sum is sum_{k>=0}2^k/4^{k+1}=1/2. Cauchy–Schwarz yields P(Z_n>0)>=4/5 for every n; continuity and local finiteness give root survival at least 4/5. The root is the unique vertex of degree 8, so all automorphisms fix it and preserve infinitely many distance levels; T is not quasi-transitive. This is w436's construction independently checked by w437, and does not contradict P0043.",
+      "assumptions": ["Independent Bernoulli bond states", "Infinite rooted simple tree with the stated branching sequence"],
+      "domain": "probability theory; percolation; counterexample boundary",
+      "source": {
+        "source_id": "owner-own-work:w436-p0043-c1-reviewed-w437-20261010",
+        "url": "~/brain_workers/w436/INDEPENDENT_DERIVATION.md",
+        "revision": "w437-independent-check-2026-10-10",
+        "license": "owner-own-work (worker construction and independent referee check)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0043-2026-source-status",
+      "to_existing_logical": "math:probability.core:open-problem-p0043-absence-of-infinite-clusters-at-critical-percolation",
+      "kind": "cites",
+      "rationale": "The new card says 'A public OpenAI preprint dated 24 September 2026 states the full assertion as Theorem 1.1'; the existing card says 'OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved)' and dates its status to 7 September 2026. The relation is a dated source-status update, not a proof claim."
+    },
+    {
+      "from_key": "dyadic-tree-critical-survival",
+      "to_key": "p0043-2026-source-status",
+      "kind": "semantic_association",
+      "rationale": "The tree card says 'T ... is not quasi-transitive ... the root belongs to an infinite open cluster at p=1/2'; the P0043 card says 'quasi-transitive graph G with p_c(G)<1'. The counterexample checks why the graph hypothesis cannot be replaced by bounded degree."
+    }
+  ]
+}

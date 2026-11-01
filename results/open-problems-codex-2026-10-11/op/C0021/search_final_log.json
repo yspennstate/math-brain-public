@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2026-10-12",
+    "service": "openalex_citing",
+    "url": "https://api.openalex.org/works?filter=cites%3Adoi%3A10.1017%2FCBO9781139020299&per-page=100",
+    "status": "<HTTPError 429: 'Too Many Requests'>"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "openalex_doi",
+    "url": "https://api.openalex.org/works/https://doi.org/10.1017/CBO9781139020299",
+    "status": "<HTTPError 429: 'Too Many Requests'>"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "arxiv_narrow",
+    "url": "https://export.arxiv.org/api/query?search_query=ti%3A%22majority%22+AND+%28all%3A%22query%22+OR+all%3A%22revealment%22%29&max_results=100&sortBy=submittedDate&sortOrder=descending",
+    "status": "OK 260787 bytes"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "stochastic",
+    "url": "https://arxiv.org/pdf/2606.24672",
+    "status": "OK 480323 bytes"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "github_visualizer",
+    "url": "https://api.github.com/repos/tulasimohan/rec-maj-visualizer/readme",
+    "status": "OK 2738 bytes"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "github_recursive",
+    "url": "https://api.github.com/repos/zpotthoff/Recursive-Majority/readme",
+    "status": "<HTTPError 404: 'Not Found'>"
+  },
+  {
+    "date": "2026-10-12",
+    "service": "crossref_levelp",
+    "url": "https://api.crossref.org/works?query.title=Level-p-complexity+of+Boolean+Functions+using+Thinning+Memoization+and+Polynomials&rows=3",
+    "status": "OK 14140 bytes"
+  }
+]

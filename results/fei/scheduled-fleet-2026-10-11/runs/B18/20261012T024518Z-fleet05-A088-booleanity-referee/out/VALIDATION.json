@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "assertions": 53482,
+  "runtime_seconds": 22.123870600014925,
+  "small_tables": 278,
+  "physical_blocks": 1844,
+  "coherent_singleton_splits": 804,
+  "padding_roots": 828,
+  "padding_prefixes": 1656,
+  "padding_reserve_min_margin_lower": "21404371387/25000000000",
+  "majority": [
+    {
+      "n": 1,
+      "alpha": "1",
+      "full_erasure_and_channel": "0",
+      "positive_heat_drop": false
+    },
+    {
+      "n": 3,
+      "alpha": "1/2",
+      "full_erasure_and_channel": "0",
+      "positive_heat_drop": true
+    },
+    {
+      "n": 5,
+      "alpha": "3/8",
+      "full_erasure_and_channel": "0",
+      "positive_heat_drop": true
+    },
+    {
+      "n": 7,
+      "alpha": "5/16",
+      "full_erasure_and_channel": "0",
+      "positive_heat_drop": true
+    }
+  ],
+  "addressing": [
+    {
+      "a": 1,
+      "r": 1,
+      "block_sizes": [
+        1
+      ]
+    },
+    {
+      "a": 1,
+      "r": 2,
+      "block_sizes": [
+        1,
+        2
+      ]
+    },
+    {
+      "a": 2,
+      "r": 1,
+      "block_sizes": [
+        1
+      ]
+    },
+    {
+      "a": 2,
+      "r": 2,
+      "block_sizes": [
+        1,
+        2
+      ]
+    }
+  ],
+  "block_scope_certificate": "A066_BLOCK_SCOPE_CERTIFICATE.json",
+  "nonBoolean_singleton_level_price": "fails; ln4>2/e",
+  "TC_monotonicity_controls": "K4 +1bit; triangle -1bit"
+}

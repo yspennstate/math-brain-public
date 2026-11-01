@@ -1,0 +1,252 @@
+# B17 — exact completion of the balanced uniform arity-five gate slice
+
+**Outcome:** `AUXILIARY_ONLY`. Full uniform-cube Friedgut–Kalai Fourier entropy–influence remains **OPEN / NOT PROVED**.
+
+**Execution:** `WITHOUT_VERIFIED_BRAIN`. Authenticated repository controls and source artifacts were read directly; no authenticated mathematical/cognitive brain retrieval or receiver-context use occurred.
+
+## 0. Exact candidate and end-to-end conditional argument
+
+The live owner target is the all-gate reformulation in
+
+`proofnet24/P03-fei/continuations/2026-09-22-gate-reformulation/REPORT.md`, report blob `1c0596f786fccf542f1f9ea65cc728b2c21ddef5`.
+
+For a symmetric nonnegative potential `Gamma`, the universal gate inequality
+
+\[
+\Gamma(p_{\rm out})+H_t(G;p)
+\le \sum_i {\rm It}_i(G;p)
+\frac{\Gamma(p_i)+h(V_{p_i})}{V_{p_i}}
+\tag{G}
+\]
+
+for every Boolean gate and every product bias is equivalent to full FEI with finite dimension-independent constant `Gamma(1/2)`. For the current read-once fixed-point candidate, put
+
+\[
+D_G=\text{RHS}(G)-\text{LHS}(G),\qquad
+P_G=\frac{I(G;p)}4-p_{\rm out}(1-p_{\rm out})\ge0,
+\]
+
+and when `P_G>0`,
+
+\[
+c_G=-D_G/P_G.
+\]
+
+The fixed read-once candidate is already globally refuted by the certified balanced high-arity gate. The exact compatible other-account theorem consumed here is
+
+`fleet04/B12/20260922T004033Z-prime-safe-split/REPORT.md`,
+
+which proves the safe-split envelope and descends the failure to a composition-prime gate of arity at most 18 whose every essential first split is bad at threshold `c_*=0.2681828`.
+
+The current owner nevertheless singled out arity five as the first untouched falsifier search. The first missing finite inference for that search is therefore:
+
+> can a five-input gate already have dangerous margin?
+
+This run settles one whole exact slice of that question: **all balanced five-input gates at uniform input bias**.
+
+The second exact peer artifact consumed substantively is
+
+`fleet04/B14/20260922T005458Z-gate-balanced-small-arity/REPORT.md`, report blob `2018008a020bf7d1fa92423b0b7ffbab715f2834`, together with its exact-rational entropy-table generator blob `7797ca3cbd4daad44ebd56bdefa39b081c1152d5` and generated table blob `87660de3597ea7229cb15c8d67a6f59af33ab07c`.
+
+That peer proved the corresponding statement only for balanced **unate** gates through arity six. I reuse its independently generated rigorous upward entropy atoms and remove the unate restriction completely at arity five.
+
+## 1. Balanced-uniform margin reduction
+
+Let `G:{-1,1}^5->{-1,1}` be balanced and take all five input biases equal to `1/2`. Then
+
+\[
+p_{\rm out}=1/2,\qquad V_{p_i}=1,\qquad h(V_{p_i})=0,
+\]
+
+so with `C_0=Gamma(1/2)=6.4548`,
+
+\[
+D_G=C_0(I(G)-1)-H(G),
+\]
+
+\[
+P_G=\frac{I(G)-1}{4}.
+\]
+
+Hence for every non-character balanced gate,
+
+\[
+\boxed{c_G=4\left(\frac{H(G)}{I(G)-1}-C_0\right).}
+\tag{1.1}
+\]
+
+Thus the entire balanced-uniform arity-five falsifier question reduces to the exact finite extremum of `H/(I-1)`.
+
+## 2. The exact theorem
+
+### Theorem
+
+For every balanced Boolean function on five uniform cube coordinates with `I(G)>1`,
+
+\[
+\boxed{\frac{H(G)}{I(G)-1}\le6.}
+\tag{2.1}
+\]
+
+The constant is attained. Therefore
+
+\[
+\boxed{\max c_G=4(6-6.4548)=-1.8192}
+\tag{2.2}
+\]
+
+on the entire balanced-uniform five-input slice.
+
+In particular, **no balanced five-input Boolean gate at uniform bias can be the owner's desired falsifier**; this includes every non-unate gate as well as every unate one.
+
+### Proof/certificate reduction
+
+Let `A={x:G(x)=1}`. Balance means `|A|=16`. Let `B=|\partial A|` be the number of undirected cube edges crossing the cut. Since each coordinate has 16 undirected edges,
+
+\[
+I(G)=B/16.
+\tag{2.3}
+\]
+
+Also the spectral distribution has at most 32 atoms, hence
+
+\[
+H(G)\le5.
+\tag{2.4}
+\]
+
+If `B>=30`, then
+
+\[
+\frac{H(G)}{I(G)-1}
+\le \frac5{30/16-1}
+=\frac{40}{7}<6.
+\tag{2.5}
+\]
+
+So only `B<=28` requires inspection.
+
+Split `Q_5` into the two `Q_4` layers of the fifth coordinate. Represent `A` by two 16-bit masks `A_0,A_1`. If `b(A_j)` is the internal `Q_4` edge boundary, then exactly
+
+\[
+B=b(A_0)+b(A_1)+|A_0\triangle A_1|,
+\tag{2.6}
+\]
+
+and balance is
+
+\[
+|A_0|+|A_1|=16.
+\tag{2.7}
+\]
+
+All `2^16` four-cube masks are precomputed by size, boundary and integer Walsh transform. Since
+
+\[
+|A_0\triangle A_1|\ge\bigl||A_0|-|A_1|\bigr|,
+\]
+
+only `22,620,546` layer pairs can possibly have `B<=28`; exactly `867,930` do.
+
+If `w_j(T)` denotes the integer Walsh transform of the sign function of layer `A_j`, then the five-dimensional Walsh numerators factor exactly as
+
+\[
+W_{(T,0)}=w_0(T)+w_1(T),\qquad
+W_{(T,1)}=w_0(T)-w_1(T).
+\tag{2.8}
+\]
+
+Every nonzero Fourier mass is `W^2/1024`, so its entropy contribution is
+
+\[
+\frac{W^2}{1024}\log_2\frac{1024}{W^2}.
+\tag{2.9}
+\]
+
+The checker imports the fleet04/B14 `N=32` table whose entry for each possible `|W|` is a rigorous **upward** rounding of (2.9) to units `10^{-15}`. That table was generated by exact rational `atanh` series with a rigorous tail bound, not floating-point logarithms.
+
+The complete low-boundary counts and maximum certified entropy upper bounds are:
+
+| `B` | functions | maximum upward entropy bound |
+|---:|---:|---:|
+| 16 | 10 | characters |
+| 22 | 2,400 | 1.701237775599294 |
+| 24 | 9,440 | 3.000000000000000 |
+| 26 | 130,560 | 3.716917186688700 |
+| 28 | 725,520 | 3.912687890016525 |
+
+For these four non-character boundaries, the target upper bounds from `6(I-1)=3(B-16)/8` are respectively
+
+\[
+2.25,\quad 3,\quad 3.75,\quad 4.5.
+\]
+
+The checker verifies the comparison by exact integer arithmetic:
+
+\[
+8H_{\rm upper}\le 3(B-16).
+\tag{2.10}
+\]
+
+Together with (2.5), this proves (2.1).
+
+### Equality witness
+
+Take layer masks
+
+\[
+A_0=\texttt{0x000f},\qquad A_1=\texttt{0x33ff}.
+\]
+
+Then `B=24`, so `I=3/2`. Its nonzero five-dimensional Walsh magnitudes are
+
+\[
+|W|=8\quad\text{with multiplicity }8,
+\qquad
+|W|=16\quad\text{with multiplicity }2.
+\]
+
+Thus
+
+\[
+H=8\cdot\frac1{16}\cdot4
++2\cdot\frac14\cdot2
+=3,
+\]
+
+and therefore
+
+\[
+\frac{H}{I-1}=\frac3{1/2}=6.
+\]
+
+So the bound is exact.
+
+## 3. Old/new missing implications
+
+**Old universal candidate.** Prove the current read-once potential survives every gate, equivalently bound every gate margin by the read-once correction. This fixed-potential statement is already globally false by the inherited high-arity balanced witness, so it is not a route to full FEI.
+
+**Owner's current finite adversarial subproblem.** Determine whether arity five already contains a gate/bias falsifier. Before this run, the complete balanced-uniform arity-five space had not been closed; fleet04/B14 only closed the unate part.
+
+**New proved inference.** Every balanced five-input gate at uniform bias satisfies the exact sharp bound (2.1), hence has `c_G<=-1.8192`. The balanced-uniform arity-five slice is therefore completely eliminated.
+
+**Remaining arity-five obligations.** Any arity-five falsifier must either
+
+1. have non-balanced output under uniform inputs, or
+2. use a genuinely nonuniform input-bias vector.
+
+This does not supply a replacement universal potential and does not prove FEI.
+
+## 4. Verification and privacy
+
+Checker source SHA-256:
+
+`8ec4a8f5fe8da354c11503faf8a795115b3211c526149e64e69de2166f7718d2`
+
+Captured output SHA-256:
+
+`4ee704c7dc70a27e19edfcc893423cecbdbd14929ccd2cb5e5e1312a8a1b7fc7`
+
+The checker exited `PASS=1`. The committed artifacts contain only mathematical formulas, logical account/slot labels, source-bound repository paths and nonsecret hashes. They contain no credentials, scheduler identifiers, machine paths, personal data, email content or unrelated private material.
+
+No novelty or publication-priority claim is made.

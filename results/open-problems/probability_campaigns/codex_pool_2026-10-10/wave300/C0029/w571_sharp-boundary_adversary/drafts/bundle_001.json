@@ -1,0 +1,96 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w571",
+  "bundle_slug": "c0029-sharp-boundary-route-obstructions-w571-20261010",
+  "entries": [
+    {
+      "key": "cdf-transfer-obstruction",
+      "namespace": "probability.random-matrices",
+      "logical_name": "multiplicative-hard-edge-comparison-does-not-imply-coefficient-one",
+      "kind": "concept",
+      "title": "Draft: multiplicative hard-edge comparison obstruction",
+      "statement": "DRAFT author proof, independent review pending. Put H(t)=1-exp(-t-t^2/2), delta_n=(log(n+e))^(-1/16), p_n=exp(-n), and F_n(t)=p_n+(1-p_n)H((1+delta_n)t) for t>=0, with F_n(t)=0 for t<0. These are scalar CDFs with H(t)<=F_n(t)<=(1+delta_n)H(t)+p_n, and the same weak limit H. Yet at t=sqrt(delta_n)/2, F_n(t)-t>=delta_n^(3/2)/6, too large for any C exp(-c n). This refutes an abstract error-removal bridge only; it is not an iid matrix law or a refutation of C0029 or finite-n Gaussian comparison.",
+      "proof_text": null,
+      "assumptions": [
+        "scalar CDFs",
+        "n>=1",
+        "t>=0",
+        "no iid-matrix realization asserted"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:probability300:C0029:w571:20261010",
+        "url": "file:///~/brain_workers/w571/ATTEMPT.md",
+        "revision": "draft-unreviewed-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "flat-kernel-atom",
+      "namespace": "probability.random-matrices",
+      "logical_name": "full-row-rank-flat-kernel-does-not-give-exponential-small-ball-error",
+      "kind": "concept",
+      "title": "Draft: flat kernel vectors retain arithmetic atoms",
+      "statement": "DRAFT author proof, independent review pending. For every even n>=2, balanced sign rows span {x:sum x_i=0}. Select n-1 independent rows as A; its unit kernel vector is (1,...,1)/sqrt(n), perfectly flat. For an independent iid uniform sign row X, P(dist(X,rowspan(A))=0)=binom(n,n/2)/2^n>=1/(n+1). Thus full row rank and coordinate flatness alone do not give a uniform conditional small-ball estimate C epsilon+C exp(-c n). At n=4 the three rows (1,1,-1,-1), (1,-1,1,-1), (1,-1,-1,1) have Gram matrix 4I and zero-projection probability 3/8. These row blocks may be rare; no averaged estimate or parent conjecture is refuted.",
+      "proof_text": null,
+      "assumptions": [
+        "even n>=2",
+        "deterministic full-row-rank balanced sign block A",
+        "independent iid uniform sign row X",
+        "pointwise conditional statement, not an average"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:probability300:C0029:w571:20261010",
+        "url": "file:///~/brain_workers/w571/ATTEMPT.md",
+        "revision": "draft-unreviewed-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gaussian-finite-limit-correction",
+      "namespace": "probability.random-matrices",
+      "logical_name": "gaussian-hard-edge-limit-is-not-the-finite-dimension-cdf",
+      "kind": "concept",
+      "title": "Draft correction: Gaussian finite-dimensional law versus hard-edge limit",
+      "statement": "DRAFT source correction, independent review pending. For an n by n real matrix G_n with iid N(0,1) entries, Rudelson-Vershynin ICM 2010 Theorem 3.1 states convergence, for each fixed t>=0 as n tends to infinity, of P(sqrt(n)*s_min(G_n)<=t) to H(t)=1-exp(-t-t^2/2). Their separate equation (3.2) gives the all-n upper bound by t. H is not the exact finite-n CDF: at n=1 the CDF is erf(t/sqrt(2)) and its right derivative at zero is sqrt(2/pi), not one. Preserve finite-n Gaussian CDFs in comparisons; the limiting-law identity in the existing C0029 attempt card needs this qualifier.",
+      "proof_text": null,
+      "assumptions": [
+        "real iid N(0,1)",
+        "variance-one unnormalised entries",
+        "fixed t in the limit statement",
+        "finite-n comparison distinct from its limit"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:probability300:C0029:w571:20261010",
+        "url": "file:///~/brain_workers/w571/ATTEMPT.md",
+        "revision": "draft-unreviewed-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "cdf-transfer-obstruction",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr",
+      "kind": "semantic_association",
+      "rationale": "C0029's coefficient-one target is stronger than approximate universality. The scalar counterexample isolates why a relative error cannot be discarded; it does not refute the target."
+    },
+    {
+      "from_key": "flat-kernel-atom",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr",
+      "kind": "semantic_association",
+      "rationale": "A uniform full-rank flat-normal conditional bridge for iid sign matrices fails on balanced row blocks; an averaged arithmetic estimate would require additional work."
+    },
+    {
+      "from_key": "gaussian-finite-limit-correction",
+      "to_existing_logical": "math:probability.random-matrices:attempt-c0029-spielman-teng-conjecture-on-the-least-singular-value-of-bernoulli-matr",
+      "kind": "semantic_association",
+      "rationale": "The existing attempt claims H is a finite-n exact Gaussian law. The n=1 Gaussian CDF and the explicitly asymptotic primary source identify the missing limit qualifier; other contents of the attempt are not refuted."
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\begin{document}
+\title{A008: dictionary-first Fourier-set coding}
+\author{A008, B02}\maketitle
+All logarithms are base two. A gate table is fixed before the sampled set is known. It consists of names $1,\ldots,m$, nonempty supports $R_l\subseteq[n]$, positive rational weights $\eta_l$, positive rational probabilities $\kappa_k$ summing to one on $1\le k\le m$, and positive rational laws $q_l$ on the nonempty subsets of $R_l$. The decoder knows this table; it is an explicit structural model, not the unknown Fourier law. For example, $q_l(B)=1/(2^{|R_l|}-1)$. The known function and a fixed representation may be side information in a per-function FEI code; if a table is selected separately for a sampled set, its selector must be transmitted under a fixed normalized prior.
+
+\begin{theorem}[Finite dictionary code and its quotient]
+Put $E_k(\eta)=\sum_{|F|=k}\prod_{l\in F}\eta_l$. A finite record is
+\[
+ r=(F,(B_l)_{l\in F}),\quad \varnothing\ne B_l\subseteq R_l,
+ \qquad D(r)=\bigcup_{l\in F}B_l.
+\]
+Its probability and ideal cost are
+\[
+ a(r)=\kappa_{|F|}\frac{\prod_{l\in F}\eta_l}{E_{|F|}(\eta)}
+                  \prod_{l\in F}q_l(B_l),
+\]
+\[
+ c(r)=-\log\kappa_{|F|}+\log E_{|F|}(\eta)
+       -\sum_{l\in F}\log\eta_l-\sum_{l\in F}\log q_l(B_l).
+\]
+These probabilities sum to one. There is a computable prefix code for records of length $\lceil c(r)\rceil<c(r)+1$. Each gate appears once in the dictionary, its subset appears once in the dictionary's increasing order, and $D(r)$ is decoded in finite time. Roots and attachments need no additional fields because they can be reconstructed canonically after the record has been read.
+
+Define $Q(A)=\sum_{r:D(r)=A}a(r)$. This is a normalized law on nonempty outputs. There is also a computable prefix code for outputs of length $\lceil-\log Q(A)\rceil<-\log Q(A)+1$. It recovers $A$, and may reconstruct a fixed canonical record for $A$; it does not recover the original random latent record.
+\end{theorem}
+\begin{proof}
+Sample $k$ under $\kappa$, $F$ with mass $\prod\eta/E_k$, and independently each $B_l$ under $q_l$. All choices have finite support, and every local law is normalized. This proves normalization and termination. In increasing dictionary order the gate names have no repeated occurrence slots. Union is a deterministic output map even when subsets overlap.
+
+For either the record or output law $p$, assign length $L=\lceil-\log p\rceil$. Then $2^{-L}\le p$ and Kraft's sum is at most one. The lengths are computable by exact rational comparison. Sort by length and then a fixed finite lexicographic order; assign consecutive canonical binary words, shifting the integer word when the length increases. Kraft's inequality prevents overflow. Decoding the finite prefix trie recovers the record, or the output, as appropriate. Equivalently the dictionary/subset fields can be decoded by one rational arithmetic block followed by prefix termination. There is a single rounding overhead, not one per gate.
+
+Here is a canonical root/attachment reconstruction, valid for every record. Give $j\in A$ to the smallest $l\in F$ with $j\in B_l$, call its assigned subset $A_l$, and discard empty $A_l$. On the used gates draw $l\to h$ when $l\ne h$ and $A_l\cap R_h\ne\varnothing$. Choose the smallest gate in each source strongly connected component as a root. From those roots in increasing order, use breadth-first search with neighbors in increasing order. Every used vertex is reached: the condensation DAG is finite and every component has a source ancestor. The discovering edge is its parent, and its attachment is the smallest element of $A_l\cap R_h$. The selected subsets partition $A$, are supported in the named gates, and this is a finite forest. Root choices, edge choices, attachment choices and child ordering are deterministic functions of the decoded record. They therefore have zero conditional description cost. This is a different generator from a queue with independently sampled roots; no queue normalizer has been discarded.
+
+The output law is a finite pushforward. The output code may reconstruct the lexicographically first record in its fiber by finite enumeration. Its output is unambiguous, but the original record's identity has intentionally been forgotten. If that identity is demanded, the record code must be used and its full name cost paid.
+\end{proof}
+
+For any law $P$ on subsets with nonempty mass $v$, support covered by this table, Gibbs gives
+\[
+ H(P)\le h_2(v)+\sum_{A\ne\varnothing}P(A)[-\log Q(A)].
+\]
+A physical prefix code for the full law with reference mass $1-v$ at the empty set and $vQ(A)$ elsewhere has expected length less than the right side plus one (omit zero-mass symbols). This is a structural reference law, not a choice of the spectral law itself.
+
+The exact ambiguity identity for a finite fiber is
+\[
+ \inf_\nu\{\mathbb E_\nu c(r)-H(\nu)\}=-\log Q(A),
+ \qquad \nu_*(r)=a(r)/Q(A).
+\]
+It follows by writing the left side as $-\log Q(A)+D(\nu\Vert\nu_*)$. It is an ideal quotient/reference cost. A transmitted random record has expected length $\mathbb E c(r)$, so its latent entropy cannot be subtracted from its physical bit count. The quotient code, which does not identify the latent record, realizes the output length bound above.
+
+For multiple predetermined tables with normalized weights $w_j$, transmit the table selector or form $Q_{\rm mix}=\sum_jw_jQ_j$. Every bound using table $j$ pays $\log(1/w_j)$ together with its whole cost. Choosing the best table after seeing $A$ is valid only with this paid selector. A finite selector/record experiment again has a canonical prefix code with one total rounding overhead.
+
+\begin{theorem}[Sunflower structural reference]
+For every integer $m\ge1$, let
+\[
+ f_m=x_0-(1+x_0)\prod_{i=1}^m(1-x_i)/2.
+\]
+Take gates $R_i=\{0,i\}$, uniform dictionary weights, and uniform local subsets $\{0\},\{i\},\{0,i\}$. Choose
+\[
+ \kappa_k=\rho_{m,k}=\frac{m+1}{m k(k+1)}\quad(1\le k\le m).
+\]
+For the resulting normalized structural output law $Q_m$,
+\[
+ \sum_{A\ne\varnothing}\widehat f_m(A)^2[-\log Q_m(A)]
+ <\frac{25}{4}I(f_m).
+\]
+The associated full-output prefix code has expected length less than $(33/4)I(f_m)$. These are bounds for a new dictionary reference on an existing Boolean family, not a new FEI class theorem and not a bound for the original queue residual.
+\end{theorem}
+\begin{proof}
+The size weights telescope to one. Write $T\subseteq[m]$, $t=|T|$. For nonempty $T$ the only records producing $T$ have $F=T$ and $B_i=\{i\}$, so
+\[
+ Q_m(T)=\frac{\rho_{m,t}}{\binom mt3^t}.
+\]
+Records producing $\{0\}\cup T$ may include $u$ extra gates, each carrying only $\{0\}$. The $t$ gates in $T$ have two choices each. At $u=0$ exclude the all-private choice. Thus
+\[
+ Q_m(\{0\}\cup T)=\sum_{u=0}^{m-t}\binom{m-t}{u}
+ \frac{\rho_{m,t+u}}{\binom m{t+u}3^{t+u}}
+ \begin{cases}2^t-1,&u=0,\\2^t,&u>0.\end{cases}
+\]
+Also $Q_m(\{0\})=\sum_{k=1}^m\rho_{m,k}3^{-k}\ge1/6$. Each record is counted once; dictionary order is fixed, so no factorial multiplicity is inserted.
+
+The squared Fourier law, obtained by expanding the displayed Boolean function, is
+\[
+ P(\varnothing)=4^{-m},\quad P(\{0\})=(1-2^{-m})^2,
+ \quad P(T)=P(\{0\}\cup T)=4^{-m}\quad(T\ne\varnothing).
+\]
+Physical influences are $I_0=1-2^{-m}$ and $I_i=2^{-m}$, hence $I=1+(m-1)2^{-m}\ge1$.
+
+For $t\ge1$, both output probabilities are at least $\rho_{m,t}/[\binom mt3^t]$. Their individual costs are at most
+\[
+ \log(t(t+1))+\log\binom mt+t\log3\le3m+2t.
+\]
+Indeed $m+1\le2^m$, $\binom mt\le2^m$, and $\log3<2$. The combined rare contribution is at most
+\[
+ r_m=4^{-m}\sum_{t=1}^m\binom mt(6m+4t)
+      =8m2^{-m}-6m4^{-m}.
+\]
+Here $r_1=5/2$, $r_2=13/4$, and for $m\ge2$,
+\[
+ 4^{m+1}(r_m-r_{m+1})=16(m-1)2^m-18m+6
+ \ge46m-58>0.
+\]
+So $r_m\le13/4$. The common singleton costs less than $\log6<3$, giving total less than $25/4\le(25/4)I$. Since $h_2(v)\le1\le I$ and the full-output prefix rounding costs less than one, its expected length is less than $(33/4)I$.
+
+This cannot be read as a physical record-code bound. Any record producing $\{0\}$ has $k\ge1$, mass $\rho_{m,k}/[\binom mk3^k]$. For $k<m$, $\binom mk\ge m$; for $k=m$, $3^m\ge m$. Therefore every such record has cost at least $\log m$. Raw deterministic or randomized witness descriptions consequently cost at least $(1-2^{-m})^2\log m$ in spectral expectation. The quotient removes latent gate identity; explicit transmission cannot remove it for free.
+\end{proof}
+
+\paragraph{Addressing calibration.}
+For $a$ control bits and distinct data bits $y_u$, the addressing function has spectrum supported exactly on $T\cup\{y_u\}$, each with probability $4^{-a}$. A dedicated table chooses the one gate name $u$ uniformly and its control subset $T$ uniformly; the private coordinate is mandatory. Its output code is the $a$ address bits followed by the $a$ subset bits, exactly $2a$ bits. It has one dictionary name, no forest edges, no output ambiguity, and no additional normalizer. Direct summation yields $H=2a$ and $I=1+a/2$. If mixed with another table at weight $1/2$, its complete ideal cost is $2a+1$; this selector charge is not omitted.
+
+\paragraph{Unpaid universal line.}
+The generic dictionary law has no proved universal influence payment. One must choose a fixed structural table or a paid prior of such tables for every Boolean function and prove $h_2(v)+\mathbb E_P[-\log Q(A)]=O(I)$ with one dimension-independent constant. Local subset costs and active-set combinatorics remain unpaid in general. No assertion of computational efficiency is made for enumeration or output-prefix compilation.
+\end{document}

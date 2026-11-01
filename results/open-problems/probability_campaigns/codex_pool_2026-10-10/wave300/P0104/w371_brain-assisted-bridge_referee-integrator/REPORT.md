@@ -1,0 +1,13 @@
+# P0104 referee and brain repair report — 2026-10-10
+
+The primary source is Auffinger--Damron--Hanson Question 13 (with related Question 15). It does not fix one distribution class or asymptotic convention. The April 2026 polynomial variance theorem is for a planar Riemannian random field, so it does not prove the iid lattice target. Current global openness remains UNKNOWN after a targeted literature and local solved-register check. No parent problem is claimed solved.
+
+I independently checked w369 L0--L5 and w370 claims 002/003/005. The conditional weak-scaling/variance bridge and both abstract rare-tail counterexamples are KEEP; the real lattice gap is uniform standardized fourth moments plus nondegenerate n^(1/3) scaling. The finite-martingale fourth-moment identity retains a nonzero cubic term. `PEER_VERDICTS.jsonl` and `REVIEW_PACKET.md` give exact reproductions. w369's proposed card replacement is FIX because it leaves the original full-lattice Z^d scope uncorrected.
+
+The measured brain failure is one retrieved card with a false categorical anti-concentration/variance nonimplication, an overbroad dimension statement, and neither source-law condition. `python -X utf8 measure_retrieval.py` took 0.041760 seconds in read-only SQL and found all those fields on that card; three cards mention the paper. The card has no logical ID. `CARD_CORRECTION.json` identifies the exact node and supplies a source-scoped replacement.
+
+I submitted `~/math-brain-inbox/w371/bundle_001.json` with **3 draft entries and 3 relations**. `python -X utf8 validate_bundle.py` passed the local structural check and exact equality case (variance = bound = 0.5). `python -X utf8 check_bundle_state.py` found the file submitted and **0/3 entries observed in the live store**; recall retrievability was not tested. Thus no live improvement is claimed yet. A narrow hook proposal is at `~/primary_directive/hooks1000/proposals/math-w371.jsonl`. A separate source-scope audit was requested from w374.
+
+**Apply:** after w374 checks the source scope, the validating coordinator ingests the submitted draft and supersedes the exact legacy node using `CARD_CORRECTION.json`; no live code or store was edited here. The draft alone cannot suppress that old node because it has no logical ID. The w370 reader-lock patch is an unvalidated engineering proposal whose fresh runtime gate did not pass the CPU cap; this report makes no claim about its lock behavior.
+
+**Next proof step:** test whether the campaign's conditional block increment kurtosis plus occupation bound controls the global Doob predictable quadratic variation and cubic sum, or construct a finite-product counterexample to that transfer. The two lattice-specific inputs to the P0104 bridge remain open.

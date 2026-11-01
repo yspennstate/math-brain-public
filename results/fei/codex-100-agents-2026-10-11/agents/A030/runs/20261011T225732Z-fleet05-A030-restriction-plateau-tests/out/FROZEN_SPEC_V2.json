@@ -1,0 +1,12 @@
+{
+  "helper_version": "A030-plateau-exact-v2",
+  "actual_Boolean_family": "Every seed on n=1,2,3; parity substitution of each seed input by L fresh coordinates; fresh parity spectator products; point defects.",
+  "parameter_domain": "All 276 seed truth tables n=1..3. Replication L=2 for n<=3 and L=3 for n<=2; every restriction fixing <=L-1 coordinates and every leaf of the block compression tree. Spectator count m=1,2 for all seeds. Point defects r=2..8,m=1..3, every spectator prefix assignment.",
+  "case_count": "296 replication parents; 4736 shallow nodes; 552 spectator parents,2760 prefixes; 21 defect parents,175 prefixes; 3744 compression leaves.",
+  "symmetry_reduction": "None",
+  "arithmetic": "Integer Walsh and Fraction; exact squared-mass multiset proves entropy equality; independent edge counting verifies influence.",
+  "memory_estimate": "Under 30 MB; maximum truth table 2048 entries.",
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "revision_reason": "v1 stopped at internal 59-second runtime guard during point-defect prefix verification, with no failed mathematical assertion. Reduced fixed defect domain to r<=8."
+}

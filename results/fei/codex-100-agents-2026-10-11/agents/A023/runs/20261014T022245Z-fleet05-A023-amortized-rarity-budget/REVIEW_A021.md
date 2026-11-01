@@ -1,0 +1,13 @@
+# Partial independent review of A021's relative-bias upper price
+
+Source: A021-POINT-SWITCH-RELATIVE-BIAS-PRICE v1, run 20261014T011316Z-fleet05-A021-rare-core-asymptotics, DERIVATION.md sections 1-2, statement hash 2ccea9f4bf55495791c70de6b742e9bee6587eb7fd21103751abec2a29dd5b84. No source code or output is imported by this review.
+
+Verdict: HOLDS for the all-dimensional upper point-switch price and its strict K6/K7 sufficient contrast criteria only. No acceptance of the optimal-price lower family, supremum asymptotics, complete overlap application, source computations, or entire bundled claim is issued. No substantive repair was supplied.
+
+Independent reconstruction: use fresh residual point density rho, original branch disagreement gamma and inactive minority eta. Set Delta=(Hhat-Ghat)/2 with squared norm gamma. Nonempty residual-selector rows give exactly 2(1-rho)d. For empty residual-selector and nonempty data rows, total derivative mass is at most rho^2 gamma and total packet mass is at most 2Var(G)+4rho^2 gamma<=8eta+4rho^2 gamma. Kernel Psi(a,b)<=b log2(e(a+b)/b), followed by log-sum, bounds this sector by rho^2 gamma log2(e(8eta/(rho^2 gamma)+4)). The mass replacement is monotone because x log2(eP/x) is increasing for x<=P, and the chosen derivative upper mass is <=P.
+
+The empty data row has |Delta_empty|<=gamma, so its derivative mass is <=rho^2 gamma^2. Packet mass is <=1. Divide its h2 upper estimate by d=rho gamma and put x=rho gamma to obtain x log2(e/x^2)<=2c/sqrt(e). This uses no assumption on branch balance. The remaining part is 2+2^-l(L-2+2l), L=c+log2(8eta/gamma+4), l>=0. If L<=4 enlarge to4 and use 1+l<=2^l. If L>=4 use 2l/(2^l-1)<=2 for l>=1 and the l=0 equality. This independently gives max(4,L)+2c/sqrt(e).
+
+Constant checks: ln2>842/1215>9/13 from three positive atanh terms, and e>65/24>(13/8)^2, so 2c/sqrt(e)<16/9. For eta/gamma<=1/5, L<4 using (28/5)^2<32 and c<3/2, giving strict6. For eta/gamma<=1, L<13/9+18/5 since12^5<2^18, giving total<307/45<7. These are exact all-dimensional statements.
+
+code/check_block.py constructs all ordered two-bit signs and balanced bent-edit fixtures independently, through direct integer Walsh transforms and undirected edge counts. At every actual point node it checks the source upper price with outward rational replacements c<81/56 and 2c/sqrt(e)<16/9. It also derives a different whole-block cumulative bound and checks exact terminal ownership. The saved validation specifies counts; finite cases support the reconstruction and are not used to extrapolate the source theorem. The initial runtime-cap attempt and fixed-domain memoized rerun are both disclosed.

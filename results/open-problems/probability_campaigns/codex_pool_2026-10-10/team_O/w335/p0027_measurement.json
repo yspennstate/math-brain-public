@@ -1,0 +1,113 @@
+{
+  "command": "python -X utf8 check_p0027.py",
+  "exact_tensor_rank_cases": [
+    {
+      "dimension": 1,
+      "tensor_variables": 1,
+      "exact_constraint_rank": 1,
+      "nullity": 0
+    },
+    {
+      "dimension": 2,
+      "tensor_variables": 8,
+      "exact_constraint_rank": 8,
+      "nullity": 0
+    },
+    {
+      "dimension": 3,
+      "tensor_variables": 27,
+      "exact_constraint_rank": 27,
+      "nullity": 0
+    },
+    {
+      "dimension": 4,
+      "tensor_variables": 64,
+      "exact_constraint_rank": 64,
+      "nullity": 0
+    }
+  ],
+  "rotation_gap_cases": [
+    {
+      "inner_radius": 0,
+      "angle": 0,
+      "minimum_displacement": 0.0
+    },
+    {
+      "inner_radius": 0,
+      "angle": 0.5235987755982988,
+      "minimum_displacement": 0.0
+    },
+    {
+      "inner_radius": 0,
+      "angle": 1.5707963267948966,
+      "minimum_displacement": 0.0
+    },
+    {
+      "inner_radius": 0,
+      "angle": 3.141592653589793,
+      "minimum_displacement": 0.0
+    },
+    {
+      "inner_radius": 0.5,
+      "angle": 0,
+      "minimum_displacement": 0.0
+    },
+    {
+      "inner_radius": 0.5,
+      "angle": 0.5235987755982988,
+      "minimum_displacement": 0.25881904510252074
+    },
+    {
+      "inner_radius": 0.5,
+      "angle": 1.5707963267948966,
+      "minimum_displacement": 0.7071067811865476
+    },
+    {
+      "inner_radius": 0.5,
+      "angle": 3.141592653589793,
+      "minimum_displacement": 1.0
+    },
+    {
+      "inner_radius": 1,
+      "angle": 0,
+      "minimum_displacement": 0.0
+    },
+    {
+      "inner_radius": 1,
+      "angle": 0.5235987755982988,
+      "minimum_displacement": 0.5176380902050415
+    },
+    {
+      "inner_radius": 1,
+      "angle": 1.5707963267948966,
+      "minimum_displacement": 1.4142135623730951
+    },
+    {
+      "inner_radius": 1,
+      "angle": 3.141592653589793,
+      "minimum_displacement": 2.0
+    },
+    {
+      "inner_radius": 3,
+      "angle": 0,
+      "minimum_displacement": 0.0
+    },
+    {
+      "inner_radius": 3,
+      "angle": 0.5235987755982988,
+      "minimum_displacement": 1.5529142706151244
+    },
+    {
+      "inner_radius": 3,
+      "angle": 1.5707963267948966,
+      "minimum_displacement": 4.242640687119286
+    },
+    {
+      "inner_radius": 3,
+      "angle": 3.141592653589793,
+      "minimum_displacement": 6.0
+    }
+  ],
+  "elapsed_seconds": 0.04122,
+  "result": "PASS; checks cover the algebraic and geometric steps, not stochastic-path formalization"
+}

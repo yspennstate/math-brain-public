@@ -1,0 +1,48 @@
+% A042 source-pinned endpoint certificate. Natural logarithms unless log_2 shown.
+\paragraph{Weighted threshold family.}
+Let
+\[
+A_m=\{mX_0+\sum_{j=1}^mX_j\ge m\},\quad
+q=m^{-2},\quad \eta=m^{-1},\quad a=q^m,
+\]
+\[
+d=1+(m-1)a,\quad q_0=(m-1)a/d,\quad \alpha=ma/d.
+\]
+Then
+\[
+\frac{\alpha\operatorname{TC}(\mu(\cdot\mid A_m))}{\mathcal I_\mu(f_m)}
+=\frac{\ln m+1}{8}+O\!\left(\frac{\ln m}{m}\right),
+\]
+and, with $V=4\alpha(1-\alpha)$ and physical pivotal probabilities
+$\rho_i$,
+\[
+\frac{V\ln(1/V)-\sum_i\mathcal I_i\ln^+(4\rho_i/V)}{\mathcal I_\mu(f_m)}
+=\frac12\ln m-\ln2+O\!\left(\frac{\ln m}{m}\right).
+\]
+The second display concerns coefficient one on the pivotal credits only.
+In contrast, with corrected entropy measured in bits,
+\[
+\frac{\mathcal H_\mu^+(f_m)}{\Delta_\mu(f_m)}\longrightarrow2.
+\]
+The first two displays are in nats.  Their bit versions divide the
+logarithmic numerators and displayed right sides by $\ln2$.
+
+\paragraph{Local total-correlation iterated limit.}
+Fix $m$, set $\eta=1/2$, and let $q\downarrow0$.  Then
+\[
+q_0=\frac{q^m}{1+q^m},\qquad \alpha=\frac{2q^m}{1+q^m},
+\]
+and for every $j\in\{0,\ldots,m\}$,
+\[
+\lim_{q\downarrow0}
+\frac{\alpha\sum_{k\ne j}I_Q(X_j;X_k)}{\mathcal I_j(f_m)}
+=\frac{m\ln2}{2},\qquad Q=\mu(\cdot\mid A_m).
+\]
+Sending $m\to\infty$ only after this fixed-$m$ limit disproves a universal
+coordinatewise local-total-correlation payment.  No uniformity in $q$ over
+growing $m$ is asserted.
+
+\paragraph{Endpoints.}
+At deterministic bias endpoints, freeze and delete deterministic coordinates
+before forming a ratio.  In the null or certain-event cases the uncontracted
+ratios are $0/0$ and are not assigned values by continuity.

@@ -1,0 +1,37 @@
+{
+  "worker": "NM13-01",
+  "target": "T08 / Salez arXiv:2508.21055 Problem 2.3",
+  "status": "PARTIAL",
+  "runtime_model": "GPT-5.6 Sol",
+  "reasoning_level": "UNVERIFIED",
+  "source_level": {
+    "before": "Salez Problem 2.3 OPEN. NM13-01 had already proved cutoff with O(sqrt(log n)) window for line graphs of fixed-degree edge-transitive long-range expanders, a transitive spectral-expander class outside fixed-c LRE. Other current T08 work includes vanishing-LRE and large-LRE-cover quotient classes.",
+    "after": "Salez Problem 2.3 remains OPEN. Added a distinct source-valid class: lexicographic products H_n=G_n[F], where G_n is any fixed-degree vertex-transitive long-range-expander sequence and F is any fixed nontrivial regular vertex-transitive graph. H_n is vertex-transitive and spectrally expanding, fails every fixed long-range-expansion constant, in fact any admissible LRE constant is polynomially small, and rate-one continuous-time SRW has cutoff.",
+    "cutoff_location": "T_n = (rd+k)/(r(d-2)) * log_{d-1}|V(G_n)| = (rd+k)/(r(d-2)) * log_{d-1}(|V(H_n)|/r)",
+    "window": "O(sqrt(log |V(H_n)|))",
+    "relative_window": "O(1/sqrt(log |V(H_n)|)) -> 0"
+  },
+  "mechanism_progress": {
+    "exact_tv_sandwich": "For alpha=rd/(rd+k), d_G(alpha t) <= d_H(t) <= d_G(alpha t)+(1-1/r)e^{-alpha t} for every point start.",
+    "fiber_split": "The fiber-constant sector evolves exactly as the base walk sped by alpha; the fiber-orthogonal sector equals e^{-alpha t} times an internal-F heat flow and therefore dies on O(1) time.",
+    "obstruction_removed": "Fixed transitive local fibers, abundant short cycles and severe failure of long-range expansion are harmless when their orthogonal sector has uniform O(1) damping. Degree inflation/tree-branching mismatch is therefore not a cutoff obstruction.",
+    "general_reduction": "A proved semigroup factor/fiber criterion transfers cutoff whenever a transitive quotient carries the logarithmic-time transport and the fiber remainder has uniform exponential TV decay."
+  },
+  "dependencies": [
+    "operations/PROGRESS20_2026-09-20.md",
+    "Salez arXiv:2508.21055v1 Problem 2.3, rate-one continuous-time convention",
+    "Altschuler arXiv:2609.14945v1, fixed-degree long-range-expander Gaussian cutoff and strict LRE/spectral hierarchy",
+    "Pedrotti--Salez arXiv:2607.05345, local-product cutoff criterion",
+    "NM13-01 previous line-graph theorem",
+    "P26 line-graph entropy/TV transfer",
+    "PROB10-08 vanishing-LRE and large-LRE-cover quotient results"
+  ],
+  "prior_art_label": "NEW REPOSITORY T08 CLASS / PUBLICATION NOVELTY UNVERIFIED. Lexicographic graph products and blow-ups are classical; bounded web/repository searches did not locate this exact continuous-time cutoff-transfer statement.",
+  "artifacts": [
+    "2026-09-20T01-05-00Z__lexicographic_fiber_checker.py",
+    "2026-09-20T01-05-00Z__lexicographic_fiber_checker.out"
+  ],
+  "checker": "ALL_EXACT_CHECKS_PASS",
+  "historical_handoff": "Preserve the earlier NM13-01 admission history and terminal P0292 handoff. LIVE20 T08 work continues without modifying old claims or peer files.",
+  "next_step": "Push the factor/fiber criterion from exact lexicographic products to genuinely transitive normal block systems with nontrivial inter-block matchings, seeking a structural transitivity condition that forces O(1) fiber damping without any LRE ancestry."
+}

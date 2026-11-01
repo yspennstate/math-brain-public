@@ -1,0 +1,7 @@
+The recovered local P0321 attempt is the common-random-angle counterexample to a one-point symmetry argument. Its own status is unverified, and its core finite-dimensional identity follows because the common angle cancels and the remaining iid noises are explicitly independent. It does not concern an elastic shear kernel, an ultraviolet cutoff, or a quantitative bounded-window approximation rate.
+
+Our independent route was written before peer proof proposals. H1-H4 address Fourier covariance and the shear-zero limit, not that old mixture computation. The brief symmetry-mixture comment in H1 is supporting context, not a new result being claimed.
+
+Targeted searches of the two named H/I attempt directories and the Lean intake did not recover an additional P0321 proof. The dated ranking and exported target/attempt cards remain unverified metadata. The old Team O board had no P0321 row; the new board deliberately assigns w540-w551 to the same target. Claims were attempted through team_comm; exact handoff delivery receipts are tracked separately and not inferred from a command merely returning.
+
+The hardest gap is not crystallization folklore or a characteristic-function calculation: it is a microscopic reduction that includes defects and transfers two asymptotic correlation regimes on a coupling interval. SOURCE_STATUS.json records the bounded status search and the explicit limits of its conclusion.

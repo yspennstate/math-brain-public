@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "case_count": 9,
+  "assertions": 178,
+  "seconds": 0.01452270001755096,
+  "families": [
+    {
+      "m": 1,
+      "n": 3,
+      "common_parity": false,
+      "control_influence": "1/8",
+      "root_entropy": {
+        "2": "6",
+        "7": "-49/32"
+      },
+      "terminal_entropy": {
+        "2": "2",
+        "3": "-9/16"
+      },
+      "terminal_influence": "3/8",
+      "label_reserve": {
+        "2": "7/32"
+      },
+      "M": {
+        "2": "1",
+        "5": "25/16",
+        "7": "-49/32"
+      },
+      "J": {
+        "2": "3",
+        "3": "9/16",
+        "5": "-25/16"
+      },
+      "controller_decrement": {
+        "2": "4",
+        "3": "9/16",
+        "7": "-49/32"
+      },
+      "signed_residual_sum": {
+        "2": "121/32",
+        "3": "9/16",
+        "7": "-49/32"
+      }
+    },
+    {
+      "m": 1,
+      "n": 3,
+      "common_parity": true,
+      "control_influence": "1/8",
+      "root_entropy": {
+        "2": "6",
+        "7": "-49/32"
+      },
+      "terminal_entropy": {
+        "2": "2",
+        "3": "-9/16"
+      },
+      "terminal_influence": "11/8",
+      "label_reserve": {
+        "2": "1"
+      },
+      "M": {
+        "2": "1",
+        "5": "25/16",
+        "7": "-49/32"
+      },
+      "J": {
+        "2": "3",
+        "3": "9/16",
+        "5": "-25/16"
+      },
+      "controller_decrement": {
+        "2": "4",
+        "3": "9/16",
+        "7": "-49/32"
+      },
+      "signed_residual_sum": {
+        "2": "3",
+        "3": "9/16",
+        "7": "-49/32"
+      }
+    }
+  ],
+  "schedule_review": [
+    {
+      "n": 2,
+      "policy": "complete",
+      "R": "0",
+      "a": "0",
+      "injection": {},
+      "capacity": {},
+      "KL": {}
+    },
+    {
+      "n": 2,
+      "policy": "first",
+      "R": "0",
+      "a": "0",
+      "injection": {},
+      "capacity": {},
+      "KL": {}
+    },
+    {
+      "n": 2,
+      "policy": "adaptive",
+      "R": "0",
+      "a": "0",
+      "injection": {},
+      "capacity": {},
+      "KL": {}
+    },
+    {
+      "n": 2,
+      "policy": "complete",
+      "R": "1",
+      "a": "1",
+      "injection": {},
+      "capacity": {},
+      "KL": {}
+    },
+    {
+      "n": 2,
+      "policy": "first",
+      "R": "1/2",
+      "a": "1/2",
+      "injection": {},
+      "capacity": {},
+      "KL": {}
+    },
+    {
+      "n": 2,
+      "policy": "adaptive",
+      "R": "1/2",
+      "a": "1",
+      "injection": {},
+      "capacity": {
+        "2": "1"
+      },
+      "KL": {
+        "2": "1"
+      }
+    },
+    {
+      "n": 3,
+      "policy": "parity",
+      "R": "2",
+      "a": "3",
+      "injection": {
+        "2": "1"
+      },
+      "capacity": {
+        "2": "-2",
+        "3": "3"
+      },
+      "KL": {
+        "2": "-3",
+        "3": "3"
+      }
+    }
+  ],
+  "formula_certificates": []
+}

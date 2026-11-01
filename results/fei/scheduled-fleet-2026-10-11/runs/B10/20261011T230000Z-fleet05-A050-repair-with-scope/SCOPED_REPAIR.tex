@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A050 scoped repair (full FEI remains open)}
+Let $g,h$ be Boolean signs in a common normalized product Fourier basis.
+Assume $|G_T|=|H_T|$ whenever both coefficients are nonzero.
+Let $w=\sum_{G_TH_T\ne0}G_T^2$ and
+$b=\sum_{G_T=-H_T\ne0}G_T^2$.
+For a fresh physical selector with probability $p$ of choosing $h$,
+\[
+J=(1-w)h_2(p),\quad M=J+b h_2(4p(1-p)),\quad L=M+J.
+\]
+Indeed shared fibers have physical posterior $p$; exclusive fibers have
+deterministic posterior. The selector-present parent probabilities in each
+fiber are $0$, $4p(1-p)$, $p$, or $1-p$, respectively.
+Thus $J\le M$. At $p=1/2$, $L=2(1-w)$ and
+$d=\Pr(g\ne h)=(1-w)/2+b$, so $L\le4d$.
+The pair $g=(-1)^{y_1y_2},h=(-1)^{y_2y_3}$ has $w=1/2,b=0$
+and attains equality with $d=1/4$.
+For a finite fair physical tree with this condition at each queried node,
+\[
+H(F)\le4\bigl(I(F)-\mathbb E I(F_{\rm leaf})\bigr)
+       +\mathbb E H(F_{\rm leaf}).
+\]
+This follows by telescoping both entropy and
+$I(u)=\operatorname{Inf}_i(u)+(I(u_0)+I(u_1))/2$ on the same tree.
+For a quadratic sign with polar matrix $B$, autocorrelation is a character
+on $\ker B$ and zero off it; Fourier inversion gives a flat affine spectrum
+of dimension $r=\operatorname{rank}B$. Hence $H=r\le2I$.
+Equal-rank quadratic children meet the hypothesis and their fair selector
+satisfies $H(F)\le4I(F)$. All terminal costs remain explicit.
+No universal existence of such a tree is proved.
+\end{document}

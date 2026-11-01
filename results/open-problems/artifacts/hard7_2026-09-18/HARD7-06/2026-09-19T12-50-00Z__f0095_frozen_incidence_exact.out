@@ -1,0 +1,16 @@
+n=4 N=6 color_partition_masks=14
+ALL_EXACT_CHECKS_PASS
+n=5 N=10 color_partition_masks=41
+ALL_EXACT_CHECKS_PASS
+n=6 N=15 color_partition_masks=122
+m=4 a=1365 mu=0 var=0 J=30/1001 hazard=0 defect=3/1001
+m=5 a=3003 mu=30/1001 var=29130/1002001 J=135/998 hazard=3/1001 defect=7512/499499
+m=6 a=4990 mu=81/499 var=33858/249001 J=18/49 hazard=9/499 defect=3231/69860
+m=7 a=6300 mu=18/35 var=516/1225 J=96/131 hazard=9/140 defect=1941/18340
+m=8 a=5895 mu=156/131 var=12344/17161 J=1024/761 hazard=156/917 defect=161886/697837
+m=9 a=3805 mu=1836/761 var=697410/579121 J=90/91 hazard=306/761 defect=73089/346255
+m=10 a=1365 mu=279/91 var=4332/8281 J=5/11 hazard=279/455 defect=1451/7280
+m=11 a=240 mu=13/4 var=3/16 J=0 hazard=13/16 defect=None
+ALL_EXACT_CHECKS_PASS
+
+Execution note: reproduced during this HARD7-06 run with Python integer enumeration and fractions.Fraction exact arithmetic before archival. The finite assertions cover all labelled graphs only for n=4,5,6 and do not constitute an asymptotic theorem.

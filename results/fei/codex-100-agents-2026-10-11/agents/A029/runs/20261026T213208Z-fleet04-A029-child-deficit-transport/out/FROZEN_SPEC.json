@@ -1,0 +1,13 @@
+{
+  "helper_version": "A029-occupancy-pooling-v1 standalone exact Walsh and rational-log enclosure",
+  "actual_Boolean_family": "Binary muxes on disjoint control/data cubes, arbitrary shared Boolean sources; rare point-defect guard",
+  "parameter_domain": "pilot nc=nd=1, all controllers and source pairs; full (nc,nd)=(1,1),(2,1),(1,2), all truth tables; epsilon in {0,1/32,1/16}; every one-coordinate root split; rare guards n=1..10",
+  "case_count": "pilot64 mux roots; full64+256+1024=1344 mux roots before any duplicate removal; all physical root edges and both children; 10 compressed rare guards",
+  "symmetry": "none; labelled mux representations counted even when resulting Boolean functions coincide",
+  "arithmetic": "Fraction Walsh spectra, direct physical edge influences, exact rational identities, outward rational atanh logarithm bounds; no floating signs",
+  "memory_estimate_MB": 160,
+  "maximum_runtime_seconds": {"pilot":55,"full":240,"independent":55},
+  "dimension_escalation": false,
+  "gpu": false,
+  "checks_that_could_fail": ["conditional odds and full-law normalization", "eta physical release in both query blocks", "KL chord and influence price at endpoints", "true weighted calibration versus reference weighting", "both children and signed full terminal accounting", "rare actual Boolean target outside relative-factor-2 class"]
+}

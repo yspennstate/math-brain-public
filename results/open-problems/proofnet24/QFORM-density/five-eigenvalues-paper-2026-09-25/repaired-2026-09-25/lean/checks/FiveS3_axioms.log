@@ -1,0 +1,25 @@
+~/qform_five_lean_2026_09_25/lean/FiveS3_run.lean:132:42: warning: unused variable `h1`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+~/qform_five_lean_2026_09_25/lean/FiveS3_run.lean:193:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+'QformFiveB.trace_vecMulVec_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.frame_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.frame_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.bl_pointwise' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.bl_heat_algebra' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.gaussian_normalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.beta_log_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.sum_beta_log_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.rpow_inv_le_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.integral_rescale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.det_gram_svd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.fpower_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.pow_le_of_le_one'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.fpower_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+rc=0 secs=139

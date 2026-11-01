@@ -1,0 +1,184 @@
+[
+ {
+  "problem_id": "D0078",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Conjecture 3.1, Section 3.1, PDF p. 12",
+  "title": "Convergence of the spanning-tree-decorated map's area measure to sqrt(2)-LQG under the uniformizing embedding",
+  "statement": "Let mu_n be the area measure of the uniformizing embedding of the Mullin-bijection spanning-tree-decorated random planar map. There exists a variant h of the Gaussian free field such that mu_n converges in law to mu_h = exp(sqrt 2 h) d^2 z in the vague topology, modulo rotations; h should be an embedding of the sqrt 2-quantum cone. Variants: weighting by a statistical mechanics model of central charge c < 1 gives the gamma-quantum cone, and the uniformizing map may be replaced by a circle packing or Tutte embedding without changing the limit.",
+  "status_search": "WebSearch 2026-09-08 'random planar map uniformizing embedding converges Liouville quantum gravity Mullin bijection sqrt(2)-LQG proved'. The established embedded convergence results found are: Gwynne-Miller-Sheffield (Tutte embedding of the mated-CRT map, Ann. Probab. 2021), Holden-Sun (uniform triangulations under the Cardy embedding, arXiv:1905.13207), Bertacco-Gwynne-Sheffield (Smith embedding, arXiv:2306.02988). STRONG LEAD, not certified: an MIT probability seminar listing for Fall 2025 announces work of Pu Yu with Nina Holden on convergence of the uniform-spanning-tree-weighted map through the Mullin bijection to sqrt 2-LQG under CIRCLE PACKING, which is one of the variants the source explicitly allows. I read only the seminar listing, not a paper, so this is recorded as open with the lead flagged.",
+  "attempt": {
+   "method": "Separate the conjecture into the two things it asserts: that the embedded map has a scaling limit at all (tightness), and that the limit is the sqrt 2-LQG measure of a quantum cone.",
+   "result": "Tightness under a conformal embedding is the hard half and it has a known reduction: the family of embedded area measures is tight as soon as one has (a) an upper bound on the maximal face diameter (no macroscopic faces, Problem 6.6 of the source, recorded here as D0084) and (b) a bound on the modulus of continuity of the embedding, both of which are consequences of up-to-constants estimates for the discrete Dirichlet energy. Given tightness, identification of the limit as exp(sqrt 2 h) follows from the mating-of-trees theorem plus the fact that the encoding walk converges to correlated Brownian motion, since the peanosphere topology determines the pair (measure, curve) modulo the embedding. So the conjecture is exactly 'peanosphere convergence plus tightness implies embedded convergence', which is the general programme of Sections 5.2-5.3 of the source.",
+   "obstruction": "The wall is the same polylogarithmic loss as in D0050: the strong coupling with Brownian motion controls graph distances and Dirichlet energies only up to polylogarithmic factors, whereas the modulus of continuity of a conformal embedding needs up-to-constants control. The Cardy-embedding proof avoided this by using percolation observables instead of distances, and the corresponding observable for the spanning-tree model is the Mullin walk itself, which is why the circle-packing route in the flagged seminar lead is plausible.",
+   "key_identity": "Peanosphere convergence determines (mu_h, eta) modulo embedding; the embedded statement needs no macroscopic faces plus an up-to-constants modulus of continuity."
+  }
+ },
+ {
+  "problem_id": "D0079",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Conjecture 3.2, Section 3.1, PDF p. 14",
+  "title": "Joint convergence of the embedded map and its Peano curve to LQG decorated by whole-plane SLE_8",
+  "statement": "In the setting of Conjecture 3.1, let lambda_{infinity,n} be the image under the uniformizing map of the Peano curve lambda_infinity of the spanning tree T_infinity, and let eta be a whole-plane SLE_8 from infinity to infinity independent of mu_h. Then, as curves modulo monotone reparametrisation, (mu_n, lambda_{infinity,n}) converges jointly in law to (mu_h, eta) modulo rotations -- the limiting objects being independent even though the discrete ones are not.",
+  "status_search": "Same WebSearch as D0078 on 2026-09-08. The joint statement is stronger than Conjecture 3.1 and I found no proof of it; the same circle-packing lead applies. Open.",
+  "attempt": {
+   "method": "Ask why the limits are independent when the discrete objects are not, since that is the surprising part and any proof must explain it.",
+   "result": "The independence is a consequence of the mating-of-trees theorem read backwards, and stating it explains what a proof needs. In the continuum, (h, eta) is a measurable function of the two-sided correlated Brownian motion Z, and for kappa = 8 (gamma = sqrt 2) the two coordinates of Z are INDEPENDENT; the field h is a function of the pair through a symmetric functional while the curve eta is determined by the whole path, and the independence of (mu_h, eta) is the statement that the field-valued and curve-valued functionals of Z are independent. So a proof of Conjecture 3.2 must supply the discrete counterpart: the conditional law of the discrete Peano curve given the map must converge to the law of eta, which is exactly the claim the source makes in its own justification. That reduces the conjecture to a conditional-convergence statement for the Mullin walk given the map, i.e. to a mixing statement for the walk conditioned on its 'tree-shape'.",
+   "obstruction": "The conditional law of the Peano curve given the map is not accessible: conditioning on the map is conditioning the walk on a complicated functional (the map is the walk modulo the bijection's equivalence), and no description of that conditional law is known. This is the discrete face of the same difficulty as Problem 6.4 (two independent decorations, D0082 here).",
+   "key_identity": "For gamma = sqrt 2 the mating-of-trees Brownian motion has independent coordinates; the conjectured independence of (mu_h, eta) is the continuum shadow of that."
+  }
+ },
+ {
+  "problem_id": "D0080",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Problem 6.1, Section 6, PDF p. 55",
+  "title": "New mating-of-trees bijections, especially with i.i.d. encoding-walk increments",
+  "statement": "Find additional mating-of-trees bijections for random planar maps beyond those of Mullin, Bernardi, Sheffield, Bernardi-Holden-Sun, Kenyon-Miller-Sheffield-Wilson, Li-Sun-Watson. It is particularly interesting to find bijections whose encoding walk has i.i.d. increments, since that is what Theorem 5.1 of the source requires; alternatively, extend the class of maps to which Theorem 5.1 applies.",
+  "status_search": "WebSearch 2026-09-08 on mating-of-trees bijections; the results found (the survey itself, Bernardi's minicourse slides on Mullin-type bijections, the bipolar-orientation and active-spanning-tree papers) reproduce the same list of bijections. No new i.i.d.-increment bijection was found. Open.",
+  "attempt": {
+   "method": "Ask what forces i.i.d. increments. In the Mullin and Kenyon-Miller-Sheffield-Wilson bijections the walk increments are i.i.d. because the decorated map is built by a sequence of independent local choices; in the hamburger-cheeseburger bijection the walk is a stack-based process and its increments depend on the history.",
+   "result": "The structural criterion is that the bijection be a 'free' encoding: the decorated map corresponds to an unconstrained word in a free monoid, so that the uniform measure on maps pulls back to a product measure on letters. Mullin (words in a 4-letter alphabet with a balanced-parenthesis constraint that becomes a walk), bipolar orientations (Kenyon-Miller-Sheffield-Wilson, walks in the quarter plane with i.i.d. steps) and Schnyder woods are of this type. The hamburger-cheeseburger encoding is not, because the burger stack introduces a memory. So the search for new i.i.d. bijections is the search for further decorated-map classes in bijection with an unconstrained lattice walk, and the natural candidates are decorations by other spanning structures with a local exploration rule (for instance Eulerian orientations, or spanning forests with a fixed number of components).",
+   "obstruction": "For a decoration whose local exploration is not deterministic-given-the-past (which is the case whenever the model has a nonlocal constraint such as acyclicity or connectivity), the encoding word is constrained and the increments are dependent. Constructing a bijection means finding a local rule that resolves the nonlocal constraint, and that is exactly the art of bijective combinatorics; there is no general method.",
+   "key_identity": "i.i.d. increments correspond to a bijection with an unconstrained word in a free monoid; nonlocal decoration constraints destroy it."
+  }
+ },
+ {
+  "problem_id": "D0081",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Problem 6.2, Section 6, PDF p. 55",
+  "title": "Graph distance and random walk results for FK-decorated maps via the hamburger-cheeseburger bijection",
+  "statement": "Prove analogues of the results of Section 5.2 of the source (graph distance and random walk asymptotics on random planar maps, obtained by strong coupling with the mated-CRT map) for random planar maps decorated by the critical FK model or by the active spanning tree model, which are encoded by Sheffield's hamburger-cheeseburger bijection. The encoding walk is non-Markovian except in the degenerate (Mullin) case, so the Komlos-Major-Tusnady/Zaitsev strong coupling with Brownian motion does not apply directly.",
+  "status_search": "WebSearch 2026-09-08 on mating of trees and graph distances; the results found (Gwynne-Hutchcroft-Miller-Sun mating-of-trees approach to graph distances arXiv:1711.00723; random walk on random planar maps arXiv:1711.00836; the active-spanning-tree paper arXiv:1603.09722) all work with i.i.d.-increment encodings or with the mated-CRT map directly. No FK-decorated analogue found. Open.",
+  "attempt": {
+   "method": "Identify the minimal coupling strength needed. Theorem 5.1 of the source compares the map with the mated-CRT map through a strong coupling of the encoding walk with Brownian motion; the source suggests either proving a strong coupling for the hamburger-cheeseburger walk or finding a route that works with a weaker coupling.",
+   "result": "The second route is the more promising and can be made precise. The hamburger-cheeseburger walk is a function of an i.i.d. sequence of letters through a stack (a queue-like transformation), so it is a deterministic functional of an i.i.d. sequence with unbounded but exponentially decaying memory (the burger stack's relevant depth has exponential tails at criticality). A strong coupling theorem for such 'functionals of i.i.d. with exponentially decaying memory' does exist in the literature for MARTINGALE approximations (Berkes-Liu-Wu), giving an almost sure invariance principle with error n^{1/4+eps}. That error is worse than KMT's log n but still o(n^{1/2}), and the honest question is whether Theorem 5.1 can be run with an n^{1/4+eps} coupling error rather than a polylogarithmic one. My reading of the proof structure is that it cannot, because the comparison of graph distances requires the coupling error to be smaller than the smallest scale at which the mated-CRT map is compared, which is polynomial only if the exponents are favourable.",
+   "obstruction": "The wall is therefore quantitative: an n^{1/4} almost-sure invariance principle is available for the hamburger-cheeseburger walk but Theorem 5.1 needs n^{o(1)}. Improving the invariance principle to n^{o(1)} for a stack functional with exponential memory is not known and would be of independent interest.",
+   "key_identity": "The hamburger-cheeseburger walk is a functional of i.i.d. letters with exponentially decaying memory: Berkes-Liu-Wu gives an n^{1/4+eps} strong coupling, Theorem 5.1 needs n^{o(1)}."
+  }
+ },
+ {
+  "problem_id": "D0082",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Problem 6.3, Section 6, PDF p. 55",
+  "title": "Brownian limit and correlation for the meander lattice walk",
+  "statement": "Prove that the lattice walk Z arising in the meander problem converges to a two-dimensional Brownian motion whose coordinate correlation is -cos(pi gamma^2 / 4) for the appropriate gamma. A solution would, by an argument analogous to Gwynne-Sun's estimate of the FK partition function, give the exponent alpha in the asymptotic enumeration of meanders. The source carries an UPDATE stating that, contrary to the conjecture, the scaling limit of a uniform meander is expected to be LQG with central charge c = -4 decorated by two independent SLE_8 curves, with kappa not equal to 16/gamma^2, so that the mating-of-trees results do not apply directly.",
+  "status_search": "WebSearch 2026-09-08 on mating-of-trees and meanders; the source's own update cites Borga-Gwynne-Sun (BGS22) for the corrected prediction, and I found no proof of either the original or the corrected statement. Open, with the source's own correction to the conjecture recorded in the statement so that the row is not read as endorsing the original correlation value.",
+  "attempt": {
+   "method": "Take the correction seriously and ask what the c = -4 prediction changes. Central charge c = -4 corresponds to gamma with 25 - 6(2/gamma + gamma/2)^2 = -4, and the decoration is by two INDEPENDENT SLE_8 curves rather than by a curve matched to gamma.",
+   "result": "The arithmetic of the corrected prediction is checkable and I checked it: c = -4 gives (2/gamma + gamma/2)^2 = 29/6, so Q = sqrt(29/6) = 2.1985, and solving gamma/2 + 2/gamma = Q gives gamma^2 - 2 Q gamma + 4 = 0, gamma = Q - sqrt(Q^2 - 4) = 2.1985 - sqrt(0.8333) = 2.1985 - 0.9129 = 1.2856. With that gamma, the ORIGINAL conjectured correlation -cos(pi gamma^2/4) = -cos(pi * 0.4132) = -cos(1.2981) = -0.2691, whereas two independent SLE_8 curves correspond to a pair of independent Brownian motions, i.e. correlation 0. So the correction is not a small adjustment of the constant but a change of the whole structure, and the honest content of this row is that the numerical value in the source's conjecture is superseded while the convergence statement (Z converges to a two-dimensional Brownian motion) is not.",
+   "obstruction": "The wall for the convergence statement itself is that the meander walk is defined through a matching of two independent arch systems, so it is a functional of two independent Dyck-path-like objects with a nonlocal pairing; no invariance principle for such a pairing is known, and the pairing is what produces the (now expected zero) correlation.",
+   "key_identity": "c = -4 gives Q = sqrt(29/6) = 2.1985 and gamma = 1.2856; the original conjecture's correlation -cos(pi gamma^2/4) = -0.269, while two independent SLE_8 curves give correlation 0."
+  }
+ },
+ {
+  "problem_id": "D0083",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Problem 6.4, Section 6, PDF p. 56",
+  "title": "Joint peanosphere convergence for two independent decorations of the same map",
+  "statement": "Let M be a random planar map reweighted by the partition function of a statistical physics model, and let P_1 and P_2 be two independent samples of the model on M. Assume (M, P_i) converges in the peanosphere sense to an SLE-decorated LQG surface, giving random walks Z_1 and Z_2. Does (Z_1, Z_2) converge jointly to two Brownian motions encoding the SAME LQG surface decorated by two INDEPENDENT SLE curves? This was established for percolated triangulations as a key step in the Cardy-embedding convergence proof of Holden and Sun.",
+  "status_search": "WebSearch 2026-09-08 as for D0078; Holden-Sun (arXiv:1905.13207) and the joint percolation scaling limit paper (arXiv:1905.06757) give the percolated-triangulation case, and I found no general result. Open beyond that case.",
+  "attempt": {
+   "method": "Ask what the obstacle is, given that the marginal convergences are assumed. The walks Z_1 and Z_2 do not separate the randomness of the map from that of the decoration, so their joint law is not determined by the two marginals plus 'independence of the decorations'.",
+   "result": "The correct formulation is a conditional-independence statement and identifying it is the useful step: what must be shown is that, conditionally on the LIMITING surface, the two limiting curves are independent, i.e. that the sigma-field generated by the surface is exactly the intersection of the sigma-fields generated by the two decorated pairs. In the discrete setting the map is the common information of (M,P_1) and (M,P_2), and the statement is that common information is asymptotically the surface. So Problem 6.4 is a discrete-to-continuum statement about COMMON INFORMATION, which is a different kind of object from a scaling limit and explains why it is not immediate from Theorem 4.6.",
+   "obstruction": "Common information does not pass to weak limits in general -- two sequences of pairs can converge jointly while their common sigma-fields converge to something strictly smaller than the common sigma-field of the limit. Ruling this out needs a quantitative statement that the map is measurably reconstructible from each decorated walk with a vanishing error, which is exactly what the percolation proof supplies through the metric-and-peanosphere joint convergence and which is unavailable in general.",
+   "key_identity": "Problem 6.4 is the statement that the asymptotic common information of (M,P_1) and (M,P_2) is the limiting LQG surface."
+  }
+ },
+ {
+  "problem_id": "D0084",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Problem 6.5, Section 6, PDF p. 56",
+  "title": "Embedded convergence to LQG for spanning-tree-weighted and bipolar-oriented maps",
+  "statement": "Can the mated-CRT map coupling techniques of Sections 5.2 and 5.3 of the source be extended to show that additional random planar map models -- for instance spanning-tree-weighted or bipolar-oriented random planar maps -- converge to LQG under appropriate embeddings? The source notes the difficulty: scaling limit results generally need up-to-constants estimates whereas the strong coupling techniques give only polylogarithmic multiplicative errors.",
+  "status_search": "Same WebSearch as D0078. The embedded convergence results found are for uniform triangulations (Cardy embedding) and for the mated-CRT map itself (Tutte and Smith embeddings); the flagged Holden-Yu circle-packing lead for the spanning-tree case is the closest. Open, with that lead.",
+  "attempt": {
+   "method": "Ask which embedding requires only polylogarithmic control. The Tutte embedding is defined by harmonic functions, so it is controlled by Dirichlet energies rather than by distances, and Dirichlet energies are exactly what Theorem 5.1 transfers.",
+   "result": "The right target is therefore the Tutte (or Smith) embedding rather than the uniformizing map, and this is a genuine narrowing of the problem: Gwynne-Miller-Sheffield proved Tutte-embedding convergence for the mated-CRT map itself, and Theorem 5.1 transfers Dirichlet energies up to polylogarithmic factors. A harmonic embedding is stable under a polylogarithmic distortion of the Dirichlet form in the sense that the embedded vertex positions move by a polylogarithmic factor in the energy norm, and convergence in the vague topology of the area measure requires only that this movement be o(1) at macroscopic scales. So the honest assessment is that the polylogarithmic loss may be tolerable for the Tutte embedding, and the real obstruction is elsewhere: the absence of macroscopic faces (Problem 6.6, D0085).",
+   "obstruction": "The wall is that a polylogarithmic distortion of the Dirichlet form does NOT control the maximal face size, which is a distance-type quantity, and a Tutte embedding with macroscopic faces does not converge to a measure at all. So Problem 6.5 for the Tutte embedding reduces to Problem 6.6, exactly as the source suggests.",
+   "key_identity": "Tutte embedding is controlled by Dirichlet energies (which transfer up to polylogs); the residual obstacle is the maximal face size, a distance-type quantity."
+  }
+ },
+ {
+  "problem_id": "D0085",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Problem 6.6, Section 6, PDF p. 56",
+  "title": "No macroscopic faces for embeddings of random planar maps",
+  "statement": "Can the mated-CRT map coupling techniques be used to show that embeddings of various random planar maps have no macroscopic faces, i.e. that the maximal face size tends to zero as the number of faces tends to infinity? This is known for the mated-CRT map under the Tutte embedding (Gwynne-Miller-Sheffield: polynomial decay) and under the circle packing (Gwynne-Jerison-Nachmias). The difficulty is that the maximal face size is not a simple functional of graph distances or Dirichlet energies.",
+  "status_search": "Same WebSearch as D0078; the mated-CRT results cited in the source were confirmed and no transfer to other models was found. Open.",
+  "attempt": {
+   "method": "Look for a formulation of 'no macroscopic faces' as an energy quantity, since energies are what Theorem 5.1 transfers.",
+   "result": "There is one, and it is the useful output. A face of the embedded map is macroscopic exactly when the harmonic measure from infinity of that face is bounded below, equivalently when the effective resistance from the face's boundary cycle to a macroscopic annulus is bounded above. Effective resistance IS a Dirichlet-energy quantity (it is the reciprocal of the minimal energy of a unit flow), so 'no macroscopic faces' can be phrased as: for every eps, the maximum over faces of the harmonic measure of the face tends to zero -- a statement about resistances, which Theorem 5.1 transfers up to polylogarithmic factors. This converts the problem into a resistance estimate for the mated-CRT map, uniform over faces, and the polylogarithmic loss is harmless because the target is a qualitative 'tends to zero' with polynomial decay available on the mated-CRT side.",
+   "obstruction": "The gap in the argument above is that the correspondence 'macroscopic face iff bounded-below harmonic measure' requires the embedding to be the Tutte embedding (where harmonic measure and the embedding are directly linked) and a control of the face's boundary length; a face with a very long boundary can have small harmonic measure per boundary vertex and still be macroscopic. Making the equivalence quantitative needs a bound on the maximal face degree in the map, which for spanning-tree-weighted maps has a heavy tail. That heavy tail is the wall.",
+   "key_identity": "For a Tutte embedding, a macroscopic face has harmonic measure bounded below, and harmonic measure is a resistance (Dirichlet-energy) quantity that Theorem 5.1 transfers."
+  }
+ },
+ {
+  "problem_id": "D0086",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Problem 6.7, Section 6, PDF p. 57",
+  "title": "Mating of trees for non-simply-connected LQG surfaces",
+  "statement": "Develop a mating-of-trees theory for non-simply-connected LQG surfaces. Prove scaling limit results for natural model-decorated random planar maps on non-simply-connected surfaces, starting from peanosphere convergence and upgrading to more intrinsic topologies, and determine the connection between the LQG surfaces so obtained and those defined by the path-integral approach. The new difficulty is that the conformal structure of the limiting surface is itself random, i.e. there is a probability measure on moduli space, and the law of the random modulus is hard to derive from the planar-map side.",
+  "status_search": "WebSearch 2026-09-08 on mating of trees and higher genus; the results found (the survey; Liouville CFT literature including the 2025 Rhodes-Vargas LCFT survey which is already in the Codex source list; Ang-Remy-Sun style work on the torus) develop the path-integral side for higher genus but I found no mating-of-trees theory there. Open.",
+  "attempt": {
+   "method": "Ask what has to be added to the simply-connected theory. Mating of trees encodes a simply-connected surface decorated by a space-filling curve by a two-dimensional correlated Brownian motion; on a surface of genus g the space-filling curve is still defined but the encoding must record the topology.",
+   "result": "The natural encoding is a Brownian motion on a graph rather than on the line, and saying so is the structural output. A space-filling exploration of a genus-g decorated map returns to previously visited regions in a way recorded by the surface's fundamental group, so the encoding object should be a pair of boundary-length processes indexed by the edges of a ribbon graph (a pair of pants decomposition), with a matching condition at each vertex of the decomposition. The moduli of the surface then appear as the (random) lengths of the decomposition curves, which are functionals of the encoding process -- giving a candidate description of the random modulus as a functional of correlated Brownian motions on a graph. That is the concrete programme this attempt produces.",
+   "obstruction": "The wall is that the decomposition is not canonical: different pants decompositions give different encodings and the consistency (mapping class group equivariance) of the resulting law on moduli space is not automatic. In the path-integral approach the law on moduli space is postulated (the DDK ansatz); deriving it from the discrete side requires exactly the equivariance that the encoding does not manifestly have.",
+   "key_identity": "Genus-g encoding should be boundary-length processes on a ribbon graph with matching conditions; the random modulus is then a functional of those processes, but mapping-class-group equivariance is not automatic."
+  }
+ },
+ {
+  "problem_id": "D0087",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Problem 6.8, Section 6, PDF p. 57",
+  "title": "Conformal welding and mating of trees for mismatched kappa and gamma",
+  "statement": "Is there a variant of the conformal welding and cutting results of Sheffield and Duplantier-Miller-Sheffield for kappa not in {gamma^2, 16/gamma^2}? Is there a variant of the mating-of-trees theorem (Theorem 4.6 of the source) when kappa is not 16/gamma^2? The key difficulty is that for gamma^2 != kappa the two surfaces obtained by cutting a gamma-LQG surface along an SLE_kappa are not independent, so the boundary length process Z is not expected to be Markovian; the most interesting result would be an explicit description of the law of that process.",
+  "status_search": "WebSearch 2026-09-08 on conformal welding for mismatched parameters; nothing found in the searched results. Open.",
+  "attempt": {
+   "method": "Ask what the matching condition kappa = gamma^2 or 16/gamma^2 does. It is exactly the condition under which the SLE curve is the interface of a conformal welding of two INDEPENDENT quantum wedges, which is what makes Z a Levy-type process.",
+   "result": "For mismatched parameters the pair of cut surfaces is dependent, so the boundary length process has memory; the honest reformulation is that Z should be a Markov process in a LARGER state space that records the conditional law of one side given the other. The natural candidate for that state space is the pair (boundary length, a 'field-decoration' variable measuring the discrepancy between kappa and gamma^2), and the discrepancy variable should evolve autonomously as a diffusion whose drift is proportional to (kappa - gamma^2). This predicts that Z is a Markov ADDITIVE process (a Markov-modulated Levy process) rather than a Levy process, which is a concrete and testable structure.",
+   "obstruction": "Testing it requires computing a two-point function of the LQG measure across an SLE_kappa with mismatched kappa, and the only tool for such computations -- the imaginary-geometry coupling of SLE with the GFF -- has its own matching condition between kappa and the field's coupling constant, so it does not apply. That is the wall.",
+   "key_identity": "Matching kappa = gamma^2 or 16/gamma^2 makes the two cut surfaces independent and Z Levy; mismatched parameters should give a Markov-additive Z with a discrepancy state variable."
+  }
+ },
+ {
+  "problem_id": "D0088",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Problem 6.9, Section 6, PDF p. 57",
+  "title": "Extending mating-of-trees theory to central charge between 1 and 25",
+  "statement": "Can any of the mating-of-trees results be extended to LQG with central charge c in (1,25), corresponding to complex gamma? In that regime Q = 2/gamma + gamma/2 lies in (0,2) so LQG surfaces still make sense and are expected to carry a canonical metric, but there is no construction of a canonical area measure and the phase is much less understood than c <= 1.",
+  "status_search": "WebSearch 2026-09-08 on supercritical LQG; the searched results include 'Random walk reflected off of infinity, with applications to uniform spanning forests and supercritical Liouville quantum gravity' (arXiv:2506.18827), which indicates active work in the c > 1 regime, and the source cites Gwynne-Holden-Pfeffer-Remy and Ding-Gwynne for the metric there. I found no mating-of-trees theorem in that regime. Open.",
+  "attempt": {
+   "method": "Check which ingredients of the theory survive when the area measure does not exist. Mating of trees encodes a surface by the boundary lengths of the space-filling curve's past and future, and boundary length is defined through the quantum boundary measure.",
+   "result": "The obstruction is precise and worth stating: the mating-of-trees encoding is a statement about MEASURES (the two boundary-length processes and the area they enclose), and in the c in (1,25) phase there is no canonical area or boundary measure, only a metric. So a mating-of-trees theory there must be re-founded on a metric quantity -- the natural candidate being the LQG distance to the curve, or the quantum natural time of the space-filling curve replaced by its metric length. This suggests the correct object is a 'mating of trees in the metric', encoding a supercritical surface by the two metric-boundary processes of a space-filling exploration. That reformulation is the output of this attempt.",
+   "obstruction": "The wall is that the supercritical LQG metric has infinitely many singular points (the metric is not a length metric in the naive sense and there is a dense set of points at infinite distance), so a space-filling curve parametrised by metric length may not exist. Establishing the existence of such a parametrisation is a prerequisite that has not been addressed.",
+   "key_identity": "Mating of trees is a statement about the quantum area and boundary measures, which do not exist for c in (1,25); a metric-based reformulation is needed."
+  }
+ },
+ {
+  "problem_id": "D0089",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Problem 6.10, Section 6, PDF p. 58",
+  "title": "Existence and uniqueness of the conformal welding of quantum wedges by analytic techniques",
+  "statement": "Can one prove existence and uniqueness for the conformal welding problem for a pair of quantum wedges, or a pair of continuum random trees, using analytic techniques? A positive answer requires identifying almost sure properties of the wedges or CRTs that allow the welding to be defined. The probabilistic proof establishes uniqueness through the conformal removability of SLE_kappa, which does not solve this problem because removability of the interface cannot be seen from the two surfaces being welded.",
+  "status_search": "WebSearch 2026-09-08 on conformal welding of quantum surfaces; the searched results include the Miller-McEnteggart-Qian style uniqueness results under regularity conditions on the interface, which the source itself cites as not resolving the problem, and Lin-Rohde's welding of a CRT to a Euclidean disk. No analytic existence/uniqueness result for the pair of wedges was found. Open.",
+  "attempt": {
+   "method": "Recall the classical analytic criteria for conformal welding: a welding homeomorphism that is quasisymmetric welds uniquely (Beurling-Ahlfors), and more generally a homeomorphism in the Weil-Petersson class or satisfying a Beltrami-solvability condition welds. So the question is what regularity class the quantum welding homeomorphism belongs to.",
+   "result": "The welding homeomorphism for two independent quantum wedges is the map matching quantum boundary lengths, i.e. the composition of one boundary measure's distribution function with the inverse of the other's. Both are (multifractal) measures with a known multifractal spectrum, so the homeomorphism's Holder regularity can be read off: it is Holder continuous with exponents given by the ratio of the boundary-measure exponents, but it is NOT quasisymmetric (the boundary measures have thick points where the local dimension degenerates), which is exactly why the classical criteria fail. That identification -- the welding map is Holder but not quasisymmetric, with the failure concentrated on the boundary thick points -- is the concrete content of this attempt and it tells one which analytic criterion would have to be developed: a welding theorem for homeomorphisms that are quasisymmetric off a set of Hausdorff dimension zero.",
+   "obstruction": "No such welding theorem is known. Existence for non-quasisymmetric welding maps is genuinely delicate (there are homeomorphisms that do not weld at all), and uniqueness fails without conformal removability of the image curve, which is a property of the interface, not of the data. That is the wall the source itself names.",
+   "key_identity": "The quantum welding homeomorphism matches the two boundary measures; it is Holder but fails quasisymmetry exactly at the boundary thick points."
+  }
+ },
+ {
+  "problem_id": "D0090",
+  "source_id": "ghs_mating_trees_survey_2019",
+  "locator": "Problem 6.11, Section 6, PDF p. 58",
+  "title": "Conformal welding of two LQG surfaces with different gamma parameters",
+  "statement": "What can be said about the conformal welding of a gamma_1-LQG surface and a gamma_2-LQG surface for distinct gamma_1, gamma_2 in (0,2)? A solution to Problem 6.10 for quantum wedges might also yield existence and uniqueness in this setting if the welding criterion holds almost surely for pairs of LQG surfaces with different gamma values.",
+  "status_search": "WebSearch 2026-09-08 as for D0089; nothing found on mismatched-gamma welding. Open.",
+  "attempt": {
+   "method": "Compute the regularity of the welding homeomorphism in the mismatched case, using the multifractal spectra of the two boundary measures, and compare with the matched case.",
+   "result": "The mismatched case is STRICTLY worse and quantifying that is the useful output. The gamma-LQG boundary measure has quantum-length exponents governed by the parameter gamma, and the welding map is F_2^{-1} composed with F_1 where F_i is the distribution function of the gamma_i boundary measure. In the matched case gamma_1 = gamma_2 the two measures have the same multifractal spectrum and the exponents cancel on the diagonal of the spectrum, so the map is Holder with exponent bounded away from 0 and 1 on a full-measure set. When gamma_1 != gamma_2 the spectra do not cancel: at a point that is alpha-thick for the first field and typical for the second, the local Holder exponent is the ratio of two different exponents and is unbounded above and below as alpha ranges, so the welding map has points of infinite and of zero local Holder exponent. Consequently the welding map is NOT Holder on any set of full measure, which is a strictly stronger failure of regularity than in the matched case and predicts that the interface, if it exists, is not a curve of finite dimension in the usual sense.",
+   "obstruction": "With the welding map failing Holder continuity, even existence is in doubt, and no known welding theorem applies. The wall is that the two fields are independent, so their thick points do not align, and there is no reason for the composed map to be regular anywhere.",
+   "key_identity": "Welding map = F_2^{-1} o F_1 with F_i the gamma_i boundary-measure distribution functions; for gamma_1 != gamma_2 the multifractal exponents do not cancel and the local Holder exponent is unbounded in both directions."
+  }
+ }
+]

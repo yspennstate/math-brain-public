@@ -1,0 +1,13 @@
+{
+  "check_command": [
+    "git",
+    "apply",
+    "--no-index",
+    "--check",
+    "--directory=validation/patch_target",
+    "~\\brain_workers\\w538\\patches\\01_riesz_scope_warning.diff"
+  ],
+  "check_returncode": 128,
+  "stdout": "",
+  "stderr": "error: git apply: bad git-diff - expected /dev/null on line 2\n"
+}

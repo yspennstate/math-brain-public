@@ -1,0 +1,24 @@
+{
+  "exact_symbolic": {
+    "status": "PASS",
+    "claims": [
+      "p12=eps*(x-detM), p123=eps*detM",
+      "boundary law is two-site DPP M with fixed split weights a^2,b^2",
+      "leading rare normal Fisher coefficient = x*an^2/eps",
+      "common log(1/eps) coefficient = 2*(an*B11-|eta|^2)",
+      "zeta/B mixed frozen terms cancel",
+      "zeta/B Fisher cross cancels",
+      "(x-detM)*(y-detM)-detM*det(I-M)=c^2",
+      "pure-zeta frozen coefficient = 2(1-x) log(detM det(I-M)/((x-detM)(y-detM))) |zeta|^2"
+    ]
+  },
+  "numerical_diagnostic": {
+    "status": "NUMERICAL_ONLY_NOT_GLOBAL_CERTIFICATE",
+    "seed": 202609161846,
+    "requested": 6000,
+    "accepted": 6000,
+    "negative_count": 0,
+    "best_normalized_margin_s_minus_2": 0.1964302968212217,
+    "domain": "tau>=0 shapes with rho1=rho2, u3 in [1e-8,1e-2], interior fields; targeted near u3=0 pair-degenerate face"
+  }
+}

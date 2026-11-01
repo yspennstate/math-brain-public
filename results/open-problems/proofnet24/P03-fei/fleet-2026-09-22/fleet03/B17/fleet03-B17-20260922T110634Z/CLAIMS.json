@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "run_id": "fleet03-B17-20260922T110634Z",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "B17-DEGREE-ADAPTIVE-LOG-COMPILER-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Every balanced finite uniform-cube Boolean function and every epsilon>0.",
+      "statement": "For the deterministic degree/sign/source-log/reference-log statistic Z_epsilon defined in REPORT.md, K_epsilon=D((Z_epsilon)#P||(Z_epsilon)#Q_r) satisfies 0 <= K_occ-K_epsilon <= epsilon*(I-1).",
+      "dependencies": [
+        "IPROJ maximum-entropy occurrence projection"
+      ],
+      "verification": "analytic proof in REPORT.md; no finite computation needed"
+    },
+    {
+      "id": "B17-ZERO-K-BRANCH-C2-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Balanced finite uniform-cube Boolean functions satisfying K_occ=0.",
+      "statement": "K_occ=0 implies H(f)<=2*(I(f)-1).",
+      "dependencies": [
+        "B-PRODUCT-EQUALITY-RIGIDITY-v1 at yspennstate/math-open-problems@84c69136ca6b008badb76f15bf1071d029c927aa"
+      ],
+      "verification": "analytic substitution into the source-pinned equality classification"
+    },
+    {
+      "id": "B17-HIERARCHY-SAFE-LOG-COMPILER-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Balanced disjoint Boolean compositions with balanced outer gate and balanced nonconstant children; iterates over finite balanced composition trees.",
+      "statement": "Retaining the exact hierarchy mismatch C_hier and replacing each local K_occ by its local K_epsilon gives a tree-compiled credit whose total loss is between 0 and epsilon*(I(F)-1).",
+      "dependencies": [
+        "KL-COMPOSITION at yspennstate/math-open-problems@2bf247373576eb406ca91bb3ea5f3ce5e5ab8588",
+        "B17-DEGREE-ADAPTIVE-LOG-COMPILER-v1"
+      ],
+      "verification": "analytic proof in REPORT.md"
+    },
+    {
+      "id": "B17-SUSPENSION-LOG-APPLICATION-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Balanced character suspensions F(y,x)=y g(x).",
+      "statement": "The partner suspension constant mode is retained exactly and 0 <= K_susp-K_epsilon(F) <= epsilon*I(g). On sparse one-point defects this preserves the full rare-event logarithmic order.",
+      "dependencies": [
+        "fleet04/B17 suspension transport at yspennstate/math-open-problems@374c4874e914c7414abc9109fadf77cfc3947298",
+        "B17-DEGREE-ADAPTIVE-LOG-COMPILER-v1"
+      ],
+      "verification": "analytic application in REPORT.md"
+    },
+    {
+      "id": "FEI-BALANCED-COMPILED-PAYMENT",
+      "status": "OPEN",
+      "scope": "All balanced finite uniform-cube Boolean functions.",
+      "statement": "Find finite C and epsilon>0 such that K_epsilon >= Hmax(r)-C*(I-1) universally, or a different source-valid closing payment.",
+      "dependencies": [
+        "B17-DEGREE-ADAPTIVE-LOG-COMPILER-v1"
+      ],
+      "verification": "not proved"
+    }
+  ]
+}

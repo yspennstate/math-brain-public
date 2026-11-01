@@ -1,0 +1,47 @@
+{
+  "helper": "A041-unbounded-jump-v1",
+  "family": "actual strict majority F_m=2*1{N_A+N_B>=m+1}-1, |A|=|B|=m",
+  "domains": {
+    "full_fair_count_spectra": [
+      1,
+      2,
+      3,
+      4,
+      8,
+      16
+    ],
+    "top_atom_count_formulas": [
+      1,
+      2,
+      3,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024
+    ],
+    "direct_product_checks": "m=1,2,3,4 fair; m=3,4 at three additional prescribed labeled bias profiles",
+    "A045_review": "all proper retained counts r=1..2^d-2 at d=2,3,4,8; both endpoints at each d"
+  },
+  "case_count": {
+    "full_count": 6,
+    "top_count": 12,
+    "direct": 10,
+    "admission_proper": 276,
+    "admission_endpoints": 8
+  },
+  "symmetry": "exact permutation symmetry inside each group for FAIR count formulas only; direct product checks retain labels",
+  "arithmetic": "integers and Fraction; natural-log intervals from 20-term atanh with rigorous remainder",
+  "memory_estimate_MB": 120,
+  "maximum_runtime_seconds": 60,
+  "targets": [
+    "top P/Kstar unbounded",
+    "actual averaged positive log coherence <=3D and complete Cstar<28D on the fair family",
+    "source admission theorem scope"
+  ],
+  "direct_helper_sha256": "42a2e215787e78cd430184bd27b37bca751711fd3e69a9a98f817786073a9406"
+}

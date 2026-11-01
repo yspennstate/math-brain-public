@@ -1,0 +1,20 @@
+Executed current-run deterministic computations matching CHECK.py logic.
+
+random_trials=100 lower_ratio_max=0.866089952001 upper_ratio_max=0.737530804121
+N=256
+large_spectrum=[-1.0, -1.0, 1.0, 1.0, 1.0] up to numerical roundoff
+max_diag=0.003906250000000
+max_pair_det=0.003906250000000
+gamma_single=0.062132709846042
+gamma_total_sq=0.988281250000000
+rho_lower=0.964843750000000
+r23_bound=4.563014343315869
+partner_max_minor=6.103515625000000e-05
+partner_bound=76.195250494473555
+singleton_grouped_bound=20.589334288025853
+
+The random tests numerically verified
+  Gamma_total/Delta <= E(C,D) <= sqrt(2)/(sqrt(1-q) Delta) Gamma_total
+on 100 seeded instances, where E(C,D) was computed by exact least squares over the three symmetric 2x2 parameters and free diagonal.
+
+These checks are regression evidence only; the proof is in REPORT.md.

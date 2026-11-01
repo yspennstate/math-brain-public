@@ -1,0 +1,62 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w344",
+  "bundle_slug": "w344-open-problem-p0018-checked-partials-20261010",
+  "entries": [
+    {
+      "key": "single-edge-partition-graph-matrix-sharp-norm",
+      "namespace": "probability.graph_matrices",
+      "logical_name": "single-edge-partition-graph-matrix-sharp-norm",
+      "kind": "lemma",
+      "title": "Sharp expected norm for the valid single-edge graph-matrix shape",
+      "statement": "Under the partition convention of Randomstrasse101 Definition 14.2, the shape with one edge uv, U={u} and V={v}, gives a symmetric n by n Rademacher matrix A with zero diagonal. Its expected operator norm is Theta(sqrt(n)), so this shape has exponents f=1/2 and g=0. Deterministically ||A||>=sqrt(n-1) by its Frobenius norm. For each unit real x, P(|x^T A x|>=r)<=2exp(-r^2/4); a 1/4 sphere net of size at most 9^n and integration give the O(sqrt(n)) expectation bound. This does not resolve the existence conjecture for every fixed shape.",
+      "proof_text": "Randomstrasse101, arXiv:2603.29571, Definition 14.2 and Conjecture 31, PDF p.14, define the cited restricted graph matrices using a partition into left and right vertex sets. Overlapping index vertices and unindexed internal vertices are not supplied by that displayed definition. The diagonal signed-degree experiment in special_case_measurements.jsonl therefore belongs to a broader convention and is explicitly excluded as a special case of this literal problem. Its finite calculations are retained only as a scope warning.\n\nA valid shape has two distinct vertices u,v, one edge uv, U={u} and V={v}. Injective labeling gives an n by n symmetric Rademacher matrix A with zero diagonal. It satisfies E||A||=Theta(sqrt(n)), so f=1/2 and g=0 for this shape. The lower bound is deterministic: ||A||>=||A||_F/sqrt(n)=sqrt(n-1). For a fixed unit real x, x^T A x=sum_(i<j)2x_i x_j epsilon_ij. Its moment-generating function is at most exp(s^2), since cosh z<=exp(z^2/2) and sum_(i<j)x_i^2 x_j^2<=1/2. Hence P(|x^T A x|>=r)<=2 exp(-r^2/4). A 1/4 net of the unit sphere has at most 9^n points and ||A||<=2 max_net |x^T A x|; a union bound and integration of this tail give E||A||<=C sqrt(n). This proves the shape exponents, without resolving the all-shapes existence conjecture.\n\nvalid_shape_measurements.json uses 12 samples each at n=64,128,256 and verifies the shape's n(n-1) nonzero entries. The mean norm divided by sqrt(n) is 1.926,1.955,1.974. At n=256 the old Frobenius upper bound is 255.500 and the mean norm is 31.5894, a factor 8.088 numerical gap. The experiment illustrates the bound's loss; the proved improvement is the order n to order sqrt(n) for this one shape.",
+      "assumptions": [
+        "Independent Rademacher variables for unordered distinct pairs",
+        "Single-edge shape",
+        "Injective labels",
+        "Disjoint left/right partition"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:single-edge-partition-graph-matrix-sharp-norm",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "Under the partition convention of Randomstrasse101 Definition 14.2, the shape with one edge uv, U={u} and V={v}, gives"
+      }
+    },
+    {
+      "key": "graph-matrix-partition-convention-excludes-diagonal-internal-vertex-example",
+      "namespace": "probability.graph_matrices",
+      "logical_name": "graph-matrix-partition-convention-excludes-diagonal-internal-vertex-example",
+      "kind": "concept",
+      "title": "Exclude an overlapping diagonal example from the cited graph-matrix convention",
+      "statement": "Definition 14.2 in the cached Randomstrasse101 paper partitions all shape vertices into left and right sets. The diagonal signed-degree construction using the same vertex on both sides and an unindexed leaf requires a broader graph-matrix convention. Its finite norm experiment therefore supplies no special-case answer under this literal definition. The valid one-edge example uses distinct left and right vertices. Exact indexing conventions must be fixed before assigning shape exponents.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:graph-matrix-partition-convention-excludes-diagonal-internal-vertex-example",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; source-backed scope correction; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "Definition 14.2 in the cached Randomstrasse101 paper partitions all shape vertices into left and right sets. The diagonal"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "single-edge-partition-graph-matrix-sharp-norm",
+      "to_existing_logical": "math:probability.core:open-problem-p0018-sharp-polynomial-logarithmic-expected-norm-of-graph-matrices",
+      "kind": "specializes",
+      "rationale": "New end: \"Under the partition convention of Randomstrasse101 Definition 14.2, the shape with one edge uv, U={u} and V={v}, gives\"; existing end: \"For each fixed graph shape alpha with specified left and right index sets, form M_alpha by summing injective\". This result addresses or audits P0018; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    },
+    {
+      "from_key": "graph-matrix-partition-convention-excludes-diagonal-internal-vertex-example",
+      "to_existing_logical": "math:probability.core:open-problem-p0018-sharp-polynomial-logarithmic-expected-norm-of-graph-matrices",
+      "kind": "cites",
+      "rationale": "New end: \"Definition 14.2 in the cached Randomstrasse101 paper partitions all shape vertices into left and right sets. The diagonal\"; existing end: \"For each fixed graph shape alpha with specified left and right index sets, form M_alpha by summing injective\". This result addresses or audits P0018; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    }
+  ]
+}

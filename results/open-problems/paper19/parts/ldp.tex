@@ -1,0 +1,311 @@
+Throughout this section \(A_m\in\F^{N_m\times m}\) has independent standard
+Gaussian entries, \(N_m/m\to\gamma>1\), and
+\[
+  M_m=M_m^\F(A_m)=\min_{\substack{T\subset[N_m]\\ |T|=m}}\smin(A_{m,T}).
+\]
+Write \(d=d_\F\) and \(h=h(\gamma)\), so that the source theorem gives
+\(\tfrac1m\log M_m\xrightarrow{\PP}-h/d\).  Two large-deviation events surround
+this limit.  In the \emph{upper tail} the minimum is atypically small,
+\(M_m\le e^{-sm}\) with \(s>h/d\); in the \emph{lower tail} it is atypically
+large, \(M_m\ge e^{-sm}\) with \(s<h/d\).  The two regimes are not symmetric.  The
+upper tail is a first-moment computation whose rate we pin between two explicit
+lines, and the matching value is a clean conjecture.  The lower tail is a strongly
+dependent avoidance problem and is left open.  Both are organised by the counting
+variable
+\begin{equation}\label{ldp:Zdef}
+  Z_m(s)=\sum_{\substack{T\subset[N_m]\\ |T|=m}}
+         \mathbf{1}_{\{\smin(A_{m,T})\le e^{-sm}\}},
+  \qquad
+  \{M_m\le e^{-sm}\}=\{Z_m(s)\ge1\}.
+\end{equation}
+
+\subsection{The upper tail: an atypically small minimum}
+
+The union-bound half of the theory gives a clean upper-tail estimate for the
+event that the extremal hard edge is even smaller than its typical exponential
+scale.
+
+\begin{proposition}[Small-minimum upper tail]\label{prop:small-tail}
+Let \(Y_m^*=\min_{T\in\mathcal T_m}Y_{m,T}\).  Assume
+\[
+  |\mathcal T_m|\le \exp((H+o(1))m)
+\]
+and, for every fixed \(s>0\),
+\[
+  \sup_T\PP\{Y_{m,T}\le e^{-sm}\}
+  \le \exp\{-(as+o(1))m\}.
+\]
+Then for every \(s>H/a\),
+\[
+  \PP\{Y_m^*\le e^{-sm}\}
+  \le \exp\{-(as-H+o(1))m\}.
+\]
+\end{proposition}
+
+\begin{proof}
+This is the same union bound as in Theorem~\ref{thm:principle}:
+\[
+  \PP\{Y_m^*\le e^{-sm}\}
+  \le |\mathcal T_m|\sup_T\PP\{Y_{m,T}\le e^{-sm}\}.
+\]
+\end{proof}
+
+For square row submatrices with \(H=h(\gamma)\) and \(a=d_\F\), this gives
+\begin{equation}\label{ldp:gauss-upper}
+  \PP\{M_m\le e^{-sm}\}
+  \le
+  \exp\{-(d_\F s-h(\gamma)+o(1))m\},
+  \qquad s>\frac{h(\gamma)}{d_\F},
+\end{equation}
+whenever the one-matrix exponential small-ball estimate holds.  For the Gaussian
+ensemble that estimate, and its matching lower companion, are the following
+two-sided bound.
+
+\begin{lemma}[Two-sided least-singular-value tail]\label{ldp:one-matrix}
+Let \(G\in\F^{m\times m}\) have independent standard Gaussian entries.  There are
+constants \(0<c_\F\le C_\F<\infty\), depending only on \(\F\), such that for all
+\(0<t\le1\),
+\begin{equation}\label{ldp:two-sided}
+  c_\F\,t^{d}
+  \;\le\;
+  \PP\{\smin(G)\le t\}
+  \;\le\;
+  C_\F\, m^{1+d/2}\,t^{d}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The upper bound is the polynomial Gaussian tail of \cite{ShmaloExtremal2026}
+underlying Definition~\ref{def:lsv-tail} with exponent \(a=d_\F\).
+
+For the lower bound, let \(R_1,\dots,R_m\) be the rows of \(G\) and put
+\(d_m=\dist\big(R_m,\spn_\F\{R_1,\dots,R_{m-1}\}\big)\).  Almost surely
+\(R_1,\dots,R_{m-1}\) span a hyperplane; let \(w\in\F^m\) be a unit vector
+orthogonal to it, so \(\langle R_j,w\rangle=0\) for \(j\le m-1\) and
+\(d_m=|\langle R_m,w\rangle|\).  Set \(u=\overline w\) (so \(u=w\) when
+\(\F=\R\)); then \(\|u\|=1\) and the vector \(Gu\) has \(j\)-th coordinate
+\(\sum_k(R_j)_k\overline{w_k}=\langle R_j,w\rangle\), which vanishes for
+\(j\le m-1\).  Hence \(Gu=\langle R_m,w\rangle\,e_m\) and \(\|Gu\|=d_m\), so
+\[
+  \smin(G)=\min_{\|v\|=1}\|Gv\|\le \|Gu\|=d_m.
+\]
+Conditional on \(R_1,\dots,R_{m-1}\), the unit vector \(w\) is fixed and \(R_m\)
+is a standard Gaussian vector, so \(\langle R_m,w\rangle\) is a standard scalar
+Gaussian over \(\F\).  Hence \(\PP\{\smin(G)\le t\}\ge\PP\{d_m\le t\}=p_\F(t)\),
+where \(p_\R(t)=\PP\{|N(0,1)|\le t\}\ge \sqrt{2/\pi}\,e^{-1/2}\,t\) and
+\(p_\C(t)=1-e^{-t^2}\ge t^2/2\) for \(0<t\le1\).  In both cases
+\(p_\F(t)\ge c_\F t^{d}\).
+\end{proof}
+
+The exponent in \eqref{ldp:gauss-upper} is the natural large-deviation rate.
+Define
+\begin{equation}\label{ldp:Iminus}
+  I_-(s)=\liminf_{m\to\infty}\Big(-\tfrac1m\log\PP\{M_m\le e^{-sm}\}\Big).
+\end{equation}
+Then \eqref{ldp:gauss-upper} reads
+\begin{equation}\label{ldp:rate-lower}
+  I_-(s)\ge d_\F\,s-h(\gamma),\qquad s\ge \tfrac{h}{d},
+  \qquad\text{with } I_-(s)=0 \text{ for } s\le \tfrac{h}{d}.
+\end{equation}
+The boundary statement holds because for \(s<h/d\) one has
+\(e^{-sm}>e^{-(h/d)m}\), so \(\PP\{M_m\le e^{-sm}\}\to1\) by the source theorem
+and \(I_-(s)=0\); the value \(I_-(h/d)=0\) follows by monotonicity.  A single
+submatrix bounds the rate from above.
+
+\begin{proposition}[Upper bound on the rate]\label{ldp:upper-tail-low}
+For every fixed \(s>0\) and every fixed \(T_0\) with \(|T_0|=m\),
+\begin{equation}\label{ldp:single}
+  \PP\{M_m\le e^{-sm}\}\ge \PP\{\smin(A_{m,T_0})\le e^{-sm}\}\ge c_\F\,e^{-d_\F s m},
+\end{equation}
+so that \(I_-(s)\le d_\F\,s\).  In particular
+\begin{equation}\label{ldp:sandwich}
+  d_\F\,s-h(\gamma)\;\le\;I_-(s)\;\le\;d_\F\,s,\qquad s\ge \tfrac{h}{d}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The first inequality in \eqref{ldp:single} holds because
+\(M_m\le\smin(A_{m,T_0})\), and the second is the lower half of
+Lemma~\ref{ldp:one-matrix} with \(t=e^{-sm}\le1\).  The sandwich combines this
+with \eqref{ldp:rate-lower}.
+\end{proof}
+
+The width of the window \eqref{ldp:sandwich} is exactly the entropy \(h(\gamma)\):
+a single submatrix sees only the small-ball exponent \(d_\F\), while the union
+bound credits all \(e^{hm}\) submatrices.  Closing the window to the lower line is
+the natural guess.
+
+\begin{conjecture}[Exact upper-tail rate]\label{ldp:exact-rate}
+For every fixed \(s>h(\gamma)/d_\F\) the limit defining \(I_-(s)\) exists and
+\begin{equation}\label{ldp:exact}
+  I_-(s)=d_\F\,s-h(\gamma).
+\end{equation}
+\end{conjecture}
+
+The heuristic behind \eqref{ldp:exact} is a first-moment computation.  By
+Lemma~\ref{ldp:one-matrix},
+\begin{equation}\label{ldp:EZ}
+  \EE Z_m(s)=\binom{N_m}{m}\,\PP\{\smin(A_{m,T})\le e^{-sm}\}
+           =\exp\{(h-d_\F s+o(1))m\},
+\end{equation}
+which tends to \(0\) for \(s>h/d\).  If the small-submatrix events behaved like a
+Poisson family one would expect
+\(\PP\{Z_m(s)\ge1\}\sim\EE Z_m(s)=e^{-(d_\F s-h+o(1))m}\), which is
+\eqref{ldp:exact}.  Turning this into a proof requires a matching lower bound on
+\(\PP\{Z_m(s)\ge1\}\), for instance through the Bonferroni inequality
+\[
+  \PP\{Z_m(s)\ge1\}\ge \EE Z_m(s)-\tfrac12\,\EE\big[Z_m(s)(Z_m(s)-1)\big],
+\]
+which is useful only when
+\(\EE[Z_m(s)(Z_m(s)-1)]=o(\EE Z_m(s))\).  This is exactly what fails at the crude
+level.  The pairs \(I,J\) with \(|I\cap J|=m-1\) number
+\(\binom{N_m}{m}\,m(N_m-m)=\Theta(m^2)\binom{N_m}{m}\), and for such nearly
+coincident row sets the events \(\{\smin(A_{m,I})\le e^{-sm}\}\) and
+\(\{\smin(A_{m,J})\le e^{-sm}\}\) are strongly positively correlated rather than
+asymptotically independent: their pair probability does not factorise into
+\(\PP\{\smin\le e^{-sm}\}^2\).  This is the same overlap dependence that
+\cite{ShmaloExtremal2026} controls at the typical scale through the second-moment
+estimate over random hyperplanes; in the rarer regime \(\EE Z_m(s)\to0\) that
+control is not available.  Restricting to a subfamily of pairwise disjoint
+submatrices removes the dependence, but only \(\lfloor\gamma\rfloor\) of them fit
+inside \([N_m]\), so it improves \eqref{ldp:single} by a constant factor and does
+not change the rate.  We therefore record \eqref{ldp:exact} as a conjecture, with
+\eqref{ldp:sandwich} as the proven two-sided bound.
+
+\subsection{The lower tail: an atypically large minimum}
+
+Fix \(s<h/d\).  By \eqref{ldp:Zdef} the lower-tail probability is the probability
+that the counting variable vanishes, up to the null boundary event
+\(\{M_m=e^{-sm}\}\),
+\begin{equation}\label{ldp:hole}
+  \PP\{M_m\ge e^{-sm}\}=\PP\{M_m>e^{-sm}\}=\PP\{Z_m(s)=0\}
+  =\PP\Big\{\,\smin(A_{m,T})> e^{-sm}\ \text{for all } |T|=m\,\Big\},
+\end{equation}
+that is, the probability that all \(\binom{N_m}{m}=e^{hm+o(m)}\) square row
+submatrices simultaneously avoid being \(e^{-sm}\)-small.  Since by \eqref{ldp:EZ}
+\(\EE Z_m(s)=e^{(h-d_\F s+o(1))m}\to\infty\) for \(s<h/d\), this is the lower-tail
+large deviation of \(Z_m(s)\) all the way to zero.  It is a strongly dependent
+avoidance event: the indicators in \eqref{ldp:Zdef} are far from independent,
+because overlapping row sets share most of their rows.  This is the open problem
+recorded as Problem~\ref{prob:avoidance}; here we collect what can and cannot be
+said rigorously.
+
+The only unconditional bound available is one-sided and merely polynomial.
+
+\begin{proposition}[Polynomial bound on the lower tail]\label{ldp:lower-poly}
+Assume \(N_m=\gamma m+O(1)\).  For every fixed \(s<h(\gamma)/d_\F\),
+\begin{equation}\label{ldp:cheby}
+  \PP\{M_m\ge e^{-sm}\}=O_{\gamma,s,\F}(m^{-1}).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Pick \(s<s'<h/d\).  Then \(\{M_m\ge e^{-sm}\}\subseteq\{M_m> e^{-s'm}\}\), and the
+second-moment upper estimate of \cite{ShmaloExtremal2026}, equivalently the
+Chebyshev half of Theorem~\ref{thm:principle}, gives
+\(\PP\{M_m> e^{-s'm}\}\le \Var Z_m(s')/(\EE Z_m(s'))^2=O(m^{-1})\).
+\end{proof}
+
+Estimate \eqref{ldp:cheby} shows the lower-tail event is at least polynomially
+rare, but says nothing about an exponential rate; in particular it does not even
+exclude polynomial decay.  The independence heuristic points the opposite way: if
+the events in \eqref{ldp:Zdef} were independent then
+\(\PP\{Z_m(s)=0\}=\prod_T(1-\PP\{\smin(A_{m,T})\le e^{-sm}\})\approx
+e^{-\EE Z_m(s)}=\exp\{-e^{(h-d_\F s)m}\}\), a doubly exponential decay.  The
+conjectural picture is that the true decay is much slower than this
+independent-product prediction, but proving this unconditionally is part of the
+avoidance problem.  A construction supplies a complementary bound, conditional
+on a deterministic geometry input.
+
+\begin{proposition}[Conditional lower bound on the lower tail]\label{ldp:lower-construct}
+Fix \(s>0\).  Suppose that for all large \(m\) there are deterministic matrices
+\(A_{0,m}\in\F^{N_m\times m}\) with
+\[
+  \sup_{m,i,j}|(A_{0,m})_{ij}|\le B<\infty,
+  \qquad
+  M_m(A_{0,m})\ge 2e^{-sm}.
+\]
+Then there is \(C=C(\gamma,B,\F)\) such that, for all large \(m\),
+\begin{equation}\label{ldp:m3}
+  \PP\{M_m\ge e^{-sm}\}\ge
+  \exp\{-C(s\,m^{3}+m^2\log m)\}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Write \(A_0=A_{0,m}\).  If \(\|A_m-A_0\|_{\mathrm{op}}\le e^{-sm}\), then for
+every \(T\),
+\(\smin(A_{m,T})\ge \smin((A_0)_T)-\|A_{m,T}-(A_0)_T\|_{\mathrm{op}}\ge
+2e^{-sm}-e^{-sm}=e^{-sm}\), so \(M_m\ge e^{-sm}\).  Hence
+\(\PP\{M_m\ge e^{-sm}\}\ge\PP\{\|A_m-A_0\|_{F}\le e^{-sm}\}\), the standard
+Gaussian measure of the Frobenius ball of radius \(r=e^{-sm}\) about \(A_0\) in
+real dimension \(n=d_\F N_m m\).  Bounding the integrand below by its value on the
+ball,
+\[
+  \PP\{\|A_m-A_0\|_{F}\le r\}
+  \ge c_\F^n e^{-C_\F(\|A_0\|_F+r)^2}\,\mathrm{vol}(B_r^{n})
+  \ge \exp\Big\{-C_\F n\log\tfrac{n}{r^2}
+       -C_\F\big(n+\|A_0\|_F^2\big)\Big\}.
+\]
+Since \(\|A_0\|_F^2\le d_\F N_m m B^2=\Theta(m^2)\), \(n=\Theta(m^2)\) and
+\(\log(1/r)=sm\), the exponent is bounded below by
+\(-C(s\,m^3+m^2\log m)\), giving \eqref{ldp:m3}.
+\end{proof}
+
+Under this deterministic geometry hypothesis,
+Proposition~\ref{ldp:lower-construct} would rule out the doubly exponential
+independence prediction, but only under the hypothesis that a uniformly
+well-conditioned bounded frame \(A_0\) with \(M_m(A_0)\ge 2e^{-sm}\) exists, and
+only with the non-sharp speed \(m^3\) coming from the use of a Frobenius ball.
+For \(s<h/d\) the hypothesis is the bounded-amplitude quantitative
+achievability condition that, for some fixed \(B\),
+\[
+  \mathfrak m_m(B)=
+  \sup_{\|A_0\|_\infty\le B} M_m(A_0)
+  \ge 2e^{-sm}
+\]
+eventually.  Whether this holds for some \(s<h/d\) is itself open; it is a
+quantitative full-spark or Kruskal-rank conditioning problem at linear
+oversampling, not a consequence of the usual generic full-spark statements.
+A typical Gaussian frame, or a random unit-norm frame, has
+\(M_m=e^{-(h/d)m+o(m)}\), so it does not realise the lower-tail event; the
+construction must use an atypical configuration.
+
+We summarise the expected picture, with the speed flagged as the main unknown.
+
+\begin{conjecture}[Lower-tail large deviation]\label{ldp:lower-rate}
+For each fixed \(s<h(\gamma)/d_\F\) the hole probability \eqref{ldp:hole} decays at
+exponential speed \(m^{2}\): there is a rate \(K(s)\in(0,\infty)\) with
+\begin{equation}\label{ldp:Krate}
+  \PP\{M_m\ge e^{-sm}\}=\exp\{-(K(s)+o(1))\,m^{2}\}.
+\end{equation}
+The rate \(K\) is nonincreasing in \(s\), with \(K(s)\downarrow0\) as \(s\uparrow
+h(\gamma)/d_\F\) and \(K(s)\uparrow\) as \(s\) decreases.
+\end{conjecture}
+
+The speed \(m^2\) is suggested by the Coulomb-gas large deviations of Laguerre
+(Wishart) ensembles, where forcing a global change of the spectrum costs an
+exponential of order \(m^2\) \cite{Forrester2010}.  Forcing every \(m\)-row
+submatrix to be simultaneously well
+conditioned is a global constraint of this type.  What is known is far from this:
+the lower bound on the rate (an exponential, rather than polynomial, upper bound
+on the probability) is open, so even the positivity \(K(s)>0\) is unproven, while
+the matching upper bound on the rate is open beyond the conditional, non-sharp
+estimate \eqref{ldp:m3}.  A positive-association (FKG-type) heuristic for the
+avoidance events \(\{\smin(A_{m,T})>e^{-sm}\}\) would make the hole probability
+exceed the independent product, consistent with \eqref{ldp:Krate} lying far above
+the doubly exponential prediction; but \(\smin(A_{m,T})\) is not monotone in the
+Gaussian entries, so no FKG inequality applies directly.
+
+\begin{remark}[Relation to the fluctuation problem]
+The lower tail is the hard side of the deviation problem left open by the source
+paper, whose quantitative rate is only the polynomial \eqref{ldp:cheby}.  A
+description of \(K(s)\), together with the matching upper-tail
+Conjecture~\ref{ldp:exact-rate}, would determine the full large-deviation profile
+of \(\tfrac1m\log M_m\) about its limit \(-h/d\), and is tied to the conjectured
+Gumbel fluctuation law of \(\log M_m\) in Conjecture~\ref{conj:gumbel}.  The
+first-moment intensity at the centered scale is recorded there; the full
+Poisson law requires critical-scale factorial moments and overlap-cluster
+control, beyond the bulk pair-correlation estimate used for the
+exponential-scale second moment.
+\end{remark}

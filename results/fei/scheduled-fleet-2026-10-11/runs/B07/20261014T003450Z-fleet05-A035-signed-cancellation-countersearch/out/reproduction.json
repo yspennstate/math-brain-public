@@ -1,0 +1,180 @@
+{
+  "helper_version": "A035-direct-collision-reproducer-v1",
+  "runtime_seconds": 0.013911100017139688,
+  "case_count": 2,
+  "records": [
+    {
+      "point": 0,
+      "p": "3/4",
+      "I": "205/64",
+      "d": "3/64",
+      "rho": "1",
+      "within_carrier_credit": [
+        "48590347489/1000000000000",
+        "4859034749/100000000000"
+      ],
+      "B": [
+        "28047563803/125000000000",
+        "8975220417/40000000000"
+      ],
+      "B_prime_log_coefficients": {
+        "2": "1",
+        "17": "85/1024",
+        "5": "205/256",
+        "3": "-765/512",
+        "7": "-735/1024",
+        "13": "195/1024",
+        "11": "-363/1024",
+        "41": "369/1024"
+      },
+      "coherent_pairs": {
+        "(25, 9)": 10,
+        "(49, 1)": 30,
+        "(121, 9)": 6,
+        "(81, 1)": 18
+      },
+      "incoherent_pairs_child_scaled": {
+        "(97, 9)": 10,
+        "(241, 9)": 6,
+        "(25, 1)": 30,
+        "(41, 1)": 18
+      },
+      "denominator": 4096,
+      "total_correction_certificate": {
+        "sign": -1,
+        "scale": 1024,
+        "prime_exponents": {
+          "2": 256,
+          "3": -990,
+          "5": 1420,
+          "7": -735,
+          "41": 369,
+          "11": -363,
+          "13": -273,
+          "17": 85
+        },
+        "numerator_bits": 5878,
+        "denominator_bits": 5899,
+        "method": "exact integer product comparison; prime_exponents regenerate both integers"
+      },
+      "signed_correction_certificate": {
+        "sign": -1,
+        "scale": 2048,
+        "prime_exponents": {
+          "97": 485,
+          "3": -3294,
+          "5": 140,
+          "7": -1848,
+          "41": 1107,
+          "11": -726,
+          "17": 170,
+          "241": 723,
+          "53": -530
+        },
+        "numerator_bits": 15873,
+        "denominator_bits": 15957,
+        "method": "exact integer product comparison; prime_exponents regenerate both integers"
+      },
+      "ambiguity_certificate": {
+        "sign": 1,
+        "scale": 2048,
+        "prime_exponents": {
+          "97": -485,
+          "2": 512,
+          "3": 1314,
+          "5": 2700,
+          "7": 378,
+          "41": -369,
+          "13": -546,
+          "241": -723,
+          "53": 530
+        },
+        "numerator_bits": 12961,
+        "denominator_bits": 12920,
+        "method": "exact integer product comparison; prime_exponents regenerate both integers"
+      }
+    },
+    {
+      "point": 1,
+      "p": "1/4",
+      "I": "197/64",
+      "d": "1/64",
+      "rho": "1",
+      "within_carrier_credit": [
+        "696966751/1000000000000",
+        "21780211/31250000000"
+      ],
+      "B": [
+        "115418108553/1000000000000",
+        "57709054277/500000000000"
+      ],
+      "B_prime_log_coefficients": {
+        "2": "1",
+        "5": "225/256",
+        "7": "-441/512",
+        "41": "287/512",
+        "3": "-567/256"
+      },
+      "coherent_pairs": {
+        "(49, 1)": 36,
+        "(81, 1)": 28
+      },
+      "incoherent_pairs_child_scaled": {
+        "(25, 1)": 30,
+        "(41, 1)": 18,
+        "(153, 1)": 10,
+        "(169, 1)": 6
+      },
+      "denominator": 4096,
+      "total_correction_certificate": {
+        "sign": 1,
+        "scale": 512,
+        "prime_exponents": {
+          "2": 384,
+          "3": -1044,
+          "5": 550,
+          "7": -441,
+          "41": 287,
+          "13": -78
+        },
+        "numerator_bits": 3199,
+        "denominator_bits": 3182,
+        "method": "exact integer product comparison; prime_exponents regenerate both integers"
+      },
+      "signed_correction_certificate": {
+        "sign": 1,
+        "scale": 2048,
+        "prime_exponents": {
+          "17": 255,
+          "3": -3384,
+          "5": 2040,
+          "7": -2912,
+          "41": 1517,
+          "11": -770,
+          "13": 624
+        },
+        "numerator_bits": 16216,
+        "denominator_bits": 16203,
+        "method": "exact integer product comparison; prime_exponents regenerate both integers"
+      },
+      "ambiguity_certificate": {
+        "sign": 1,
+        "scale": 2048,
+        "prime_exponents": {
+          "2": 1536,
+          "3": -792,
+          "5": 160,
+          "7": 1148,
+          "41": -369,
+          "11": 770,
+          "13": -936,
+          "17": -255
+        },
+        "numerator_bits": 7795,
+        "denominator_bits": 7739,
+        "method": "exact integer product comparison; prime_exponents regenerate both integers"
+      }
+    }
+  ],
+  "status": "PASS; independent transform and exact integer sign certificates"
+}

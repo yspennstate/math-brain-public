@@ -1,0 +1,53 @@
+{
+  "helper_version": "A070-order-referee-and-real-normalization-v1",
+  "family": "all ordered Boolean pairs on two bits; fixed inherited uniform/biased/root-mixture references; normalized-real two-bit normalization adversary; homogeneous real degree-one family",
+  "domain": {
+    "boolean_core_n": 2,
+    "ordered_pairs": 256,
+    "references": [
+      "uniform",
+      "(1,2,4,9)/16",
+      "root mean spectrum including zero cells"
+    ],
+    "orders": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "real_bad_normalization": {
+      "function": "(2+x+2y)/3",
+      "q": "1/4096",
+      "queried": "x"
+    },
+    "degree_one_dimensions": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "sharpness_k": [
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "case_count": {
+    "boolean_pair_reference_orders": 1536,
+    "renormalization_witness": 1,
+    "sharpness_references": 4,
+    "degree_one": "binomial (depth,prefixsum) dynamic program; actual count recorded"
+  },
+  "symmetry": "degree-one coordinates exchangeable; exact prefix sum sufficient; no quotient in Boolean pair enumeration",
+  "arithmetic": "integer Walsh/Fraction, exact prime-log expressions,24-term atanh bounds with explicit tail/outward2^-80",
+  "memory_estimate_mb": 64,
+  "max_runtime_seconds": 60,
+  "automatic_dimension_escalation": false
+}

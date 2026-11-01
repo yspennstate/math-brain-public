@@ -1,0 +1,3 @@
+The first one-off source-receipt command used Path('.') without resolve before navigating to the prior run, producing FileNotFoundError and no receipt. This is a path-resolution setup failure, not a mathematical result; code/read_sources.py resolves its own file location. Both attempts to mark checklist T-20261027-078 working failed with 'checklist lock held too long'; no shared lock was removed or altered. The research output remains local regardless of checklist availability.
+
+Fresh memory admission passed: physical free6.5GB versus4GB required, commit free15.8GB versus8GB required. Core-Lean scalar check is attempted with no Mathlib; the4.1GB Mathlib route remains over the packet1.5GB/job cap and is not launched. All exact numerical scripts are estimated below120MB.

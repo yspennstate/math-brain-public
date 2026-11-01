@@ -1,0 +1,69 @@
+{
+  "law": "0.75 N(-1,0.16) + 0.25 N(3,1.44), mean zero",
+  "moments": {
+    "v": 3.48,
+    "mu3": 8.88,
+    "mu5": 179.04
+  },
+  "checks": [
+    {
+      "t": 1000.0,
+      "classical": -0.004440767239989176,
+      "classical_error_t3": 29.560010824291584,
+      "64": {
+        "mode": -0.026425440477747548,
+        "success": true,
+        "max_residual": 1.3877787807814457e-17,
+        "free_error_t3": -787.6777475471349
+      },
+      "128": {
+        "mode": -0.0264254404777474,
+        "success": true,
+        "max_residual": 1.1102230246251565e-16,
+        "free_error_t3": -787.6777473979487
+      },
+      "quadrature_mode_difference": 1.491862189340054e-16
+    },
+    {
+      "t": 3000.0,
+      "classical": -0.0014800874406877254,
+      "classical_error_t3": 29.501431419487016,
+      "64": {
+        "mode": -0.008856103718756246,
+        "success": true,
+        "max_residual": 4.163336342344337e-17,
+        "free_error_t3": -842.0064186236347
+      },
+      "128": {
+        "mode": -0.008856103718756156,
+        "success": true,
+        "max_residual": 1.1102230246251565e-16,
+        "free_error_t3": -842.006416188083
+      },
+      "quadrature_mode_difference": 9.020562075079397e-17
+    },
+    {
+      "t": 10000.0,
+      "classical": -0.00044400793851924106,
+      "classical_error_t3": 29.48075899708307,
+      "64": {
+        "mode": -0.002661847389803052,
+        "success": true,
+        "max_residual": 2.7755575615628914e-17,
+        "free_error_t3": -861.8030518501671
+      },
+      "128": {
+        "mode": -0.0026618473898032706,
+        "success": true,
+        "max_residual": 0.0,
+        "free_error_t3": -861.8032704253251
+      },
+      "quadrature_mode_difference": 2.185751579730777e-16
+    }
+  ],
+  "inequality_grid_minima": {
+    "classical": 0.0,
+    "stationarity_lower": 0.0,
+    "stationarity_upper": 0.0
+  }
+}

@@ -1,0 +1,192 @@
+\section*{A060: the optimal constant-branch selector tax}
+
+All cubes are uniform, Fourier coefficients are normalized, and logarithms
+are base two.  Let (D:\{-1,1\}^n\to\{-1,1\}) be arbitrary and introduce
+one fresh selector (x).  Define
+\[
+ K(+1,z)=1,\qquad K(-1,z)=D(z).
+\]
+Put
+\[
+ p=\Pr[D=-1]=\frac{1-\mathbb ED}{2}.
+\]
+
+\subsection*{Exact bias reduction}
+
+\paragraph{Theorem (PROVED).}
+For every (n\geq0) and every Boolean (D),
+\[
+ I_x(K)=p,\qquad I(K)=\frac12I(D)+p,
+\]
+and
+\[
+ H(K)=\frac12H(D)+p\,c(p),
+\]
+where, for (0<p<1),
+\begin{align*}
+ c(p)=\frac1p\bigg[&
+ 2(1-p)^2\log_2\frac1{1-p}
+ +2p^2\log_2\frac1p+4p(1-p)\\
+ &-(1-2p)^2\log_2\frac1{|1-2p|}
+ \bigg],
+\end{align*}
+with the last term interpreted as zero at (p=1/2), and with the endpoint
+values understood by continuity.  In particular, the entire selector tax
+(H(K)-H(D)/2) depends only on the bias (p), not on any other Fourier
+geometry of (D).
+
+\paragraph{Proof.}
+Write
+\[
+ K=u+xv,\qquad u=\frac{1+D}{2},\quad v=\frac{1-D}{2}.
+\]
+If (m=\widehat D(\varnothing)=1-2p), then the two constant-frequency
+squared masses of (K) are
+\[
+ \widehat u(\varnothing)^2=(1-p)^2,
+ \qquad
+ \widehat v(\varnothing)^2=p^2.
+\]
+For every nonempty (S\subseteq[n]), the coefficient
+(\widehat D(S)) produces the two squared masses
+\[
+ \widehat u(S)^2=\widehat v(S)^2=rac14\widehat D(S)^2.
+\]
+The entropy contribution of this pair is
+\[
+ \frac12\widehat D(S)^2
+ \log_2\frac1{\widehat D(S)^2}
+ +\widehat D(S)^2.
+\]
+Summing over nonempty (S), using
+(\sum_{S\ne\varnothing}\widehat D(S)^2=1-m^2=4p(1-p)), and subtracting
+half of the constant-frequency entropy of (D) gives exactly the displayed
+formula for (p c(p)).
+
+Characters containing (x) carry precisely the Fourier mass of (v), so
+\[
+ I_x(K)=\sum_S\widehat v(S)^2=\mathbb E v^2=p.
+\]
+Every nonempty data character of (D) appears twice with one quarter of its
+old squared mass, hence contributes half of its old degree; the (x)-degree
+adds (p).  Thus (I(K)=I(D)/2+p). \qed
+
+\subsection*{Sharp universal coefficient}
+
+Define
+\[
+ C_*=\max_{0\leq p\leq1}c(p).
+\]
+
+\paragraph{Theorem (PROVED).}
+The function (c) has a unique global maximizer (p_*\in(0,1/2)).  It is
+the unique zero in that interval of
+\begin{align*}
+ F(p)={}&2(1-p^2)\ln(1-p)-2p^2\ln p-4p^2\ln2\\
+ &-(1-4p^2)\ln(1-2p).
+\end{align*}
+Moreover,
+\[
+ 0.22944127<p_*<0.22944128,
+ \qquad
+ 4.872321<C_*<4.872322.
+\]
+Consequently (C_*) is the smallest constant for which
+\[
+ H(K)\leq\frac12H(D)+C_* I_x(K)
+\]
+holds for every finite-dimensional Boolean (D).
+
+\paragraph{Proof.}
+Let (A(p)=(\ln2)\,p c(p)).  For (p\ne1/2),
+\[
+ A(p)=-2(1-p)^2\ln(1-p)-2p^2\ln p
+ +4(\ln2)p(1-p)+(1-2p)^2\ln|1-2p|.
+\]
+Since (c'(p)=F(p)/(p^2\ln2)), it suffices to determine the sign of
+(F).  Direct differentiation gives
+\[
+ F'(p)=pA''(p)
+ =4p\ln\frac{(1-2p)^2}{4p(1-p)}.
+\]
+The logarithm changes sign only at
+\[
+ \alpha=\frac{1-1/\sqrt2}{2},\qquad
+ \beta=\frac{1+1/\sqrt2}{2}.
+\]
+Also (F(0+)=0), (F(1/2)=-2\ln2), and (F(1-)=-4\ln2).
+Thus (F) first increases on ((0,\alpha)), then strictly decreases to
+(p=\beta), and finally increases while remaining negative up to (p=1).
+It therefore has exactly one zero (p_*\in(\alpha,1/2)); (c) increases
+before (p_*) and decreases afterward.
+
+The attached rational-interval certificate proves
+(F(0.22944127)>0), (F(0.22944128)<0), and evaluates (c) on that
+root box.  A Boolean witness at (p=235/1024) proves
+(C_*>4.872321), while interval evaluation on the root box proves
+(C_*<4.872322).
+
+Every Boolean density is dyadic, but dyadic numbers are dense.  For every
+dyadic (p=k/2^n), a Boolean (D) of that density exists, and the exact bias
+identity gives tax ratio (c(p)).  Dyadic densities approaching (p_*)
+therefore approach (C_*).  No smaller universal coefficient can work.
+\qed
+
+\subsection*{Concrete near-extremal Boolean gate}
+
+Index the ten-cube lexicographically by (0,\ldots,1023), and let
+(D_{10}=-1) on indices (0,\ldots,234) and (+1) elsewhere.  Then
+\[
+ p=\frac{235}{1024},\qquad
+ \mathbb ED_{10}=\frac{277}{512},\qquad
+ I(D_{10})=\frac{277}{256}.
+\]
+The exact absolute integer-Walsh histogram of (D_{10}) is
+\[
+ \{2^{(768)},6^{(128)},10^{(64)},22^{(32)},42^{(28)},
+ 470^{(3)},554^{(1)}\},
+\]
+where coefficients are divided by (1024).  For its eleven-bit splice
+(K_{11}),
+\[
+ I_x(K_{11})=\frac{235}{1024},\qquad
+ I(K_{11})=\frac{789}{1024},\qquad
+ \mathbb EK_{11}=\frac{789}{1024},
+\]
+and the absolute integer-Walsh histogram is
+\[
+ \{2^{(1536)},6^{(256)},10^{(128)},22^{(64)},42^{(56)},
+ 470^{(7)},1578^{(1)}\},
+\]
+with coefficients divided by (2048).  Rigorous interval evaluation yields
+\[
+ \frac{H(K_{11})-H(D_{10})/2}{I_x(K_{11})}
+ =4.8723210430423538411\ldots>4.872321,
+\]
+whereas
+\[
+ \frac{H(K_{11})}{I(K_{11})}
+ =3.2266979050419697025\ldots.
+\]
+Disjoint tensor powers preserve the latter ratio, not the local tax
+coefficient.
+
+\subsection*{FEI closure consequence and scope}
+
+If a class containing (D) obeys (H(D)\leq C I(D)), then
+\[
+ H(K)\leq\frac C2 I(D)+C_*p
+ \leq\max\{C,C_*\}\left(\frac12I(D)+p\right)
+ =\max\{C,C_*\}I(K).
+\]
+Thus constant-branch fresh-selector extension preserves FEI with the sharp
+scalar overhead (C_*).  This is a restricted closure theorem, not full FEI.
+It keeps half of the child entropy and half of the child influence in the
+ledger; it does not claim that selector influence alone pays the whole gate.
+
+Because the bias reduction is exact for every child (D), it includes rare
+defects and addressing children without hiding their child deficits.  It uses
+one fresh selector and makes no overlapping-input or reused-selector claim.
+It is consistent with selector-erasure obstructions for arbitrary two-branch
+splices and with the failure of overlapping-product subadditivity.
+

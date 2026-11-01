@@ -1,0 +1,17 @@
+{
+  "helper_version": "A065 reserve-check v1",
+  "actual_Boolean_family": ["B05 activated quadratic bent point defect: k even, r=2k, one selector", "quadratic bent splice b(x) with one selected point flipped, r=0", "ordinary addressing with distinct physical data variables", "point-defect sign 1-2*1_{x=0}"],
+  "parameter_domain": {"B05_k": [2,4], "splice_k": [2,4,6], "address_bits": [1,2,3], "point_defect_n": [2,4,8], "C": ["4", "32609/5000", "8"]},
+  "rules": ["min-influence", "max-influence", "greedy-min-D-over-d", "control-first", "selector-first"],
+  "case_count": "11 families times 5 rules times 3 prices = 165 reserve outputs; pilot B05 k=2, five rules, 3 prices",
+  "symmetry": "No input symmetry reduction; reuse identical residual truth tables; deterministic original-coordinate tie breaking, with exact algebraic tie check for greedy rule",
+  "arithmetic": "Integer Walsh, integer edge counts, rational influences, base-two entropy enclosures with rigorous rational atanh-series logarithm bounds; fixed-point outward rounding at 2^-70",
+  "memory_estimate_MB": 180,
+  "maximum_runtime_seconds": 1500,
+  "pilot_maximum_runtime_seconds": 60,
+  "maximum_dimension": 13,
+  "automatic_dimension_escalation": false,
+  "potential": "Q_v=max(0,D_v-C*d_v+(Q_0+Q_1)/2), constant leaves zero",
+  "tie_break": "least original variable index; dummy variables never queried; grouped orders control/core/selector and selector/control/core",
+  "search_claims": "Finite exact certificates only; symbolic all-k bounds developed separately"
+}

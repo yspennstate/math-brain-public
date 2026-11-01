@@ -1,0 +1,206 @@
+\begin{proof}
+For $r\ge2s_*$ choose a retained dyadic parameter $s$ with $r/2<s\le r$. Each rectangular partition cell has both side lengths at most $r$ and meets at most four target cells. Given its occupancy, its contribution to the target pattern can be recorded by one of at most fifteen nonempty masks. Therefore
+\[
+ H(Z_r^{\mathrm{grid}})\le H(Z_s)+\log_2(15)\E N_s
+ \le C m(R)/m(r),
+\]
+using fixed-factor regularity. The bounded remaining range follows by data processing from $H(A)\le Cm(R)$.
+\end{proof}
+
+\section{Uniform inputs for the percolation models}\label{sec:inputs}
+
+We use the following two regimes. In both, rectangles have horizontal and vertical sides in the displayed Euclidean embedding and aspect ratio at most $\kappa$.
+\begin{enumerate}[label=(\roman*)]
+\item Critical bond percolation on $\mathbb Z^2$, with parameter $1/2$.
+\item Site percolation on
+\[
+ \mathbb T=\{(i+j/2,\sqrt3j/2):i,j\in\mathbb Z\},
+\]
+with independent parameters $p_x\in[p_*,1-p_*]$, where $p_*\in[p_0,1/2]$, $p_0>0$ is fixed, and $R\le L_\varepsilon(p_*)$. Here $L_\varepsilon$ is the characteristic length defined in \cite[Section~3.1]{Nolin}, with fixed $\varepsilon\in(0,1/2)$ and $L_\varepsilon(1/2)=\infty$.
+\end{enumerate}
+The second regime includes critical triangular percolation and spatially varying near-critical parameters. Constants are uniform over the indicated parameter profiles, rectangle locations, and retained scales; they may depend on $p_0,\varepsilon,\kappa$. All statements concern $R\ge R_0$ for a fixed sufficiently large lattice cutoff. Numbered citations to Nolin~\cite{Nolin} refer to the published version.
+
+To pass from lattice-coordinate RSW to the Euclidean rectangles used here, cover each fixed-aspect-ratio corridor by a bounded number of overlapping lattice-coordinate parallelograms of side at most $cR$, where $c>0$ is fixed and sufficiently small. Crossing and joining these parallelograms gives the required corridor crossings by RSW and positive association. Thus each near-critical RSW input is applied at a lattice scale below $L_\varepsilon(p_*)$, even after the change of coordinates.
+
+Critical RSW, arm separation, quasi-multiplicativity, and \eqref{eq:armgap} are available in regime (i) from \cite[Section~2.2]{GPS}. The half-plane three-arm bound \eqref{eq:halfarm} holds with $\beta=2$ by \cite[equation~(4.12)]{GPS}; lattice rotations give all four side directions. For regime (ii), Nolin's sandwich-product formulation, arm separation, and arm comparison \cite[Definition~5, Theorems~11 and~27, Proposition~17]{Nolin} give uniform RSW and \eqref{eq:armactual}. The next lemma gives a half-plane estimate uniform in the boundary direction in both regimes.
+
+\begin{lemma}[Independent central inversion]\label{lem:reflection}
+In either regime, let $L=\infty$ for critical square-lattice bonds and
+$L=L_\varepsilon(p_*)$ for the triangular-lattice sandwich product measures.
+For every Euclidean half-plane $H$, every $z\in\partial H$, either alternating
+three-arm color order, and $r_*\le r<t\le L$,
+\begin{equation}\label{eq:reflection}
+ \Prob\bigl(A_3^H(z;r,t)\bigr)
+ \le C(r/t)^{1+\eta_6/2},
+\end{equation}
+where $\eta_6>0$ is a critical alternating six-arm gap for the model:
+$\alpha_{6,\mathrm{crit}}(a,b)\le C(a/b)^{2+\eta_6}$.
+The constants are uniform in the direction and position of the boundary,
+including its microscopic phase.  Any fixed microscopic padding of the
+half-plane or of the annulus is allowed, with constants depending on that
+padding.  Bond arms use open primal paths and closed dual paths.
+\end{lemma}
+\begin{proof}
+Fix one of the two orders and denote its event by $E$.
+Write $H=\{x:n\cdot(x-z)\ge0\}$, where $n$ is its inward unit normal.
+Identify a random coordinate with its site, or with its primal-edge midpoint.
+Choose a fixed $d_0$ so that every coordinate used by $E$ belongs to
+\[
+ U=\{x:n\cdot(x-z)\ge-d_0\}.
+\]
+Here and below a geometric set also denotes the random coordinates it contains.
+Let $\ell$ exceed the distance from a coordinate to any point of its site-path
+or primal/dual-edge realization, including all fixed endpoint and padding
+conventions.  Choose a central inversion $g(x)=2c-x$ satisfying
+\begin{equation*}
+ |c-z|\le D_0,\qquad
+ n\cdot(c-z)<-d_0-2\ell-2,
+\end{equation*}
+where $D_0$ is fixed independently of $n,z$.
+
+For triangular sites, take $c$ in $\mathbb T$.  The lattice has bounded
+covering radius, so such a $c$ exists by choosing it close to a point a fixed
+distance from $z$ in direction $-n$.  Then $g$ is an involutive lattice
+isometry, and the coordinate map is $\tau(x)=g(x)$.
+
+For square bonds, take
+\[
+ c\in(1/4,1/4)+(1/2)\mathbb Z^2,
+ \qquad 2c=a+(1/2,1/2),\quad a\in\mathbb Z^2.
+\]
+This set of centers also has bounded covering radius.  The map
+$g(x)=a+(1/2,1/2)-x$ interchanges the primal lattice and its dual.  For a
+primal edge $e$, define
+\[
+ \tau(e)=g(e)^*,
+\]
+where the star denotes the perpendicular primal edge crossing the dual edge
+$g(e)$.  Taking a crossing edge commutes with $g$, so $\tau^2(e)=e$.
+Thus $\tau$ is a bijection of the random bond coordinates, with midpoint
+$g(\operatorname{mid}(e))$.  In particular, it exchanges horizontal and
+vertical coordinates.  Moreover,
+$g(e^*)=\tau(e)$: a primal path is carried to a dual path, and a dual path
+to a primal path.
+
+In both models the coordinate sets $U$ and $\tau(U)$ are disjoint.  Indeed,
+their geometric half-planes are separated by more than $4\ell+4$.
+The same separation, after allowing distance $\ell$ from the coordinates,
+keeps all realizations of the two groups of paths disjoint.
+Define a product measure $\nu$ by retaining $p_x$ on $U$, setting the
+parameter at $\tau(x)$ to $1-p_x$ for every $x\in U$, and using $1/2$
+on the remaining coordinates.  This remains in the triangular sandwich
+class; in the bond model it is just the critical fair product measure.
+
+Let $E'$ be the $\tau$-image of $E$ with every coordinate state reversed.
+It is supported on $\tau(U)$ and has $\nu(E')=\Prob(E)$.
+For bonds the state reversal gives exactly the required geometric colors:
+an open primal path becomes a closed dual path, and a closed dual path
+becomes an open primal path.  Independence now gives
+\begin{equation}\label{eq:reflectsquare}
+ \Prob(E)^2=\nu(E\cap E').
+\end{equation}
+
+On $E\cap E'$, truncate the six paths to a common annulus. Choose a lattice
+center $q$ within bounded distance of $z$; both $z$ and $g(z)$ are then
+within a fixed distance $D$ of $q$. Let $S_a(q)$ denote the balls in the
+lattice norm used for the arm estimates. There is a fixed $A$ such that
+\[
+ B(q,a/A)\subseteq S_a(q)\subseteq B(q,Aa).
+\]
+Choose a sufficiently large fixed $K$, and increase $r_*$ to absorb $D$,
+all lattice endpoint conventions, and the minimum admissible inner radius
+$n_0(6)$ for the six-arm comparison.
+When $t\ge4K^2r$, put
+\[
+ a=\lceil Kr\rceil+c_{\rm lat},\qquad
+ b=\lfloor t/K\rfloor-c_{\rm lat},
+\]
+where the fixed integer $c_{\rm lat}$ absorbs the endpoint conventions of
+the arm estimates.
+Every original arm has a point inside $S_a(q)$ and reaches outside
+$S_b(q)$. Retain the segment from its last visit to the inner boundary
+before its first visit to the outer boundary, up to that outer visit.
+Fixed lattice endpoint adjustments are absorbed by $c_{\rm lat}$.
+This gives six disjoint arms in the lattice annulus, with
+\[
+ n_0(6)\le a<b\le t/K\le L,
+ \qquad a/b\le C r/t;
+\]
+increasing $r_*$ once more ensures these inequalities despite rounding.
+
+Their colors alternate: the two separated half-planes meet the outer boundary
+of the common convex ball in two disjoint arcs.  Each group of three therefore occurs
+consecutively in cyclic order.  Disjoint paths preserve the linear order
+within a group under the annular truncation.  Its word is $BWB$, while
+the other group's word is $WBW$, or conversely.  Reversing a group's
+linear orientation does not change either word.  Their cyclic
+concatenation is consequently alternating.
+
+The critical six-arm gap holds in both models
+\cite[Remark~4.6]{GPS}.  In the triangular regime,
+\cite[Theorem~27]{Nolin} compares this alternating six-arm event under
+$\nu$ to criticality at the radii $a,b$. The bound $b\le t/K\le L$
+ensures that this comparison is within the characteristic-length cutoff.
+Thus, in either model,
+\[
+ \Prob(E)^2\le C\alpha_{6,\mathrm{crit}}(a,b)
+ \le C(a/b)^{2+\eta_6}
+ \le C(r/t)^{2+\eta_6}.
+\]
+Taking square roots proves \eqref{eq:reflection}; the bounded-ratio
+range follows from probability at most one.  If both original orders
+are allowed, apply the argument separately and add the two bounds.
+Increasing the fixed constants proves the padded versions as well.
+\end{proof}
+
+\begin{corollary}[Half-plane arms with unspecified order]\label{cor:generalreflection}
+Fix an integer $j\ge1$.  In regime (ii), for every direction of $H$ and
+$z\in\partial H$,
+\[
+ \Prob\bigl(A_j^{H,\mathrm{any}}(z;r,t)\bigr)
+ \le C_j\sqrt{\alpha_{2j,\mathrm{crit}}(r,t)},
+ \qquad r_*(j)\le r<t\le L_\varepsilon(p_*),
+\]
+where the $j$ site arms are disjoint and monochromatic but their colors
+and order are unspecified.  The critical event on the right is alternating.
+The constants have the same direction, phase, and padding uniformity as
+Lemma~\ref{lem:reflection}.
+\end{corollary}
+\begin{proof}
+For $0\le k\le j$, let $E_k$ be the event of $j$ disjoint arms with
+$k$ open arms and $j-k$ closed arms.
+Apply the site-inversion construction to $E_k$ and its color-reversed
+copy. Then $\Prob(E_k)^2$ is bounded by the probability of $2j$
+disjoint full-plane arms with exactly $j$ arms of each color, after
+truncation to a common lattice annulus below the characteristic length.
+Sum over the finitely many possible balanced color words.  For each word,
+use \cite[Theorem~27]{Nolin} to compare with criticality and
+\cite[Proposition~20]{Nolin} to compare the critical nonconstant word
+with the alternating word.  Critical fixed-factor regularity absorbs
+the radius changes.  Taking square roots and then summing over
+$k=0,\ldots,j$ proves the result.
+\end{proof}
+
+Lemma~\ref{lem:reflection} gives \eqref{eq:halfarm} in both regimes with $\beta=1+\eta_6/2>1$, supplying the half-plane input in Theorem~\ref{thm:armcriterion}.
+
+The pivotal scale and its boundary-arm compensation are recorded in \cite[Remark~36, equation~(7.17)]{Nolin}. We state the uniform interior estimates needed here.
+
+\begin{lemma}[Bulk pivotal estimates]\label{lem:bulkmoments}
+Fix a positive relative distance $\gamma$ from the sides of $Q$. Uniformly for relevant coordinates $x,y$ in this interior region,
+\begin{align}
+ c\alpha_4(R)\le\Prob(x\in\cP_f)&\le C\alpha_4(R),\label{eq:bulkone}\\
+ \Prob(x,y\in\cP_f)&\le C\alpha_4(R)\alpha_4(|x-y|),\quad x\ne y.\label{eq:bulktwo}
+\end{align}
+The constants may depend on $\gamma$ and the previously fixed parameters. Consequently
+\begin{equation}\label{eq:meancomparison}
+ I(f)\asymp m(R),\qquad J(f)\asymp I(f).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Pivotality at $x$ forces four alternating arms to radius $c_\gamma R$, for a sufficiently small fixed $c_\gamma>0$, giving the one-point upper bound. For the lower bound, require four arms from the coordinate to a square of radius $c_\gamma R$, with separated landings directed towards the four distinguished boundary arcs. Arm separation and comparison give probability at least $c\alpha_4(R)$. Extend them through four separated corridors to the respective sides of $Q$, open towards the left and right and closed towards the top and bottom. Uniform RSW and separated-arm extension bound the conditional probability of these extensions below by a positive constant, uniformly in the profile and scale. For mixed colors this gluing is justified by the separated-domain form of positive association, as in \cite[Lemma~13 and Theorem~11]{Nolin}; in the critical bond setting the corresponding arm-separation construction is reviewed in \cite[Section~2.2]{GPS}. The resulting outside configuration makes $x$ pivotal. Finite lattice endpoint adjustments are absorbed by finite energy and the fixed microscopic cutoff.
+
+For the pair estimate put $d=|x-y|$. When $d$ is small compared with $R$, use two disjoint four-arm annuli of outer radius $cd$ about $x,y$, and a disjoint common four-arm annulus from radius $Cd$ to $c_\gamma R$. Independence and the full-plane arm comparison give
+\[
+ \Prob(x,y\in\cP_f)\le C\alpha_4(d)^2\alpha_4(d,R)
+ \asymp C\alpha_4(d)\alpha_4(R).
+\]

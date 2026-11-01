@@ -1,0 +1,76 @@
+[
+  {
+    "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+    "version": 1,
+    "exact_statement": "For every balanced Boolean b, integers t,k>=1, q=2^-k and c=1/ln2, F=1+A_k(product_{j=1}^t b_j-1) has H(F)=q[tH(b)+4k+2c]-q^2(2k+3c)+R(q), I(F)=q[tI(b)+k], and -2cq^3/[3(1-q)]<=R(q)<=0. The exact entropy is q t H(b)+(4q-2q^2)k-2(1-q)^2 log2(1-q); variance is 2q-q^2 and minority probability q/2. If k=o(t) and 2^-k t->0 for a fixed seed, H(F)/I(F)->H(b)/I(b) with influence tending to zero.",
+    "hypotheses": [
+      "uniform physical cube",
+      "Boolean sign seed with mean zero",
+      "disjoint independent seed copies and fresh point controls",
+      "bit entropy"
+    ],
+    "statement_sha256": "cf143df5920601dcec3c3e11e0a14be3e6e217e964f3acd2250215079116d382",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T214020Z-fleet05-A021-rare-core-asymptotics\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A002",
+      "A007",
+      "A012",
+      "A015",
+      "A023",
+      "A025",
+      "A026",
+      "A036",
+      "A040",
+      "A047",
+      "A048",
+      "A077",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A021-CONTROL-FIRST-KL-LEDGER",
+    "version": 1,
+    "exact_statement": "For the same family, a control-first stopping tree has terminal entropy 2^-k t H(b), queried influence k2^-k, and exact magnitude-mismatch/KL debt J_tree=2^-k(k+A_k). Here A_k=sum_{s=1}^k 2^-s[2s-1+log2(1-2^(1-s)+2^(1-2s))] and there exists A in [0,3] with 0<=A-A_k<=(2k+3)2^-k. Hence J_tree<=2^-k(k+3)<=4k2^-k uniformly in tensor count. The blind rarity sum before KL subtraction is 2^-k k(k+1)/2. At each active node s, mu=2^-s and J_s=mu-mu^2+mu^2 log2((1-2mu+2mu^2)/mu^2).",
+    "hypotheses": [
+      "hypotheses of A021-UNIFORM-RARE-CORE-EXPANSION, reproved directly in REPORT.md",
+      "controls queried first, stopping on first inactive control",
+      "mismatch defined using absolute child Fourier coefficients",
+      "complete terminal entropy retained"
+    ],
+    "statement_sha256": "6afe9b93a0b13174a5b51e23c0357056d3a334ff52b3dbb4d7003459eae91aea",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T214020Z-fleet05-A021-rare-core-asymptotics\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A002",
+      "A007",
+      "A012",
+      "A015",
+      "A023",
+      "A025",
+      "A026",
+      "A036",
+      "A040",
+      "A047",
+      "A048",
+      "A077",
+      "B20"
+    ]
+  }
+]

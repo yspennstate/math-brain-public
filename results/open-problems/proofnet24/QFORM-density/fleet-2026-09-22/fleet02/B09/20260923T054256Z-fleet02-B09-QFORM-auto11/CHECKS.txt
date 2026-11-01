@@ -1,0 +1,28 @@
+Exact finite algebra checks for fleet02/B09 20260923T054256Z
+
+Stress-frame rows:
+f=(e1+e2)/sqrt(2)
+g=(e1-e2)/sqrt(2)
+rows = [f, g/sqrt(2), g/sqrt(2), e3/sqrt(2), e3/sqrt(2)]
+
+U^T U = I_3.
+With L=diag(1,-1,0) and hub slope c=third column, the full 6x6 active physical matrix (hub first) is
+[[0,0,0,0,1/sqrt(2),1/sqrt(2)],
+ [0,0,1/sqrt(2),1/sqrt(2),0,0],
+ [0,1/sqrt(2),0,0,0,0],
+ [0,1/sqrt(2),0,0,0,0],
+ [1/sqrt(2),0,0,0,0,0],
+ [1/sqrt(2),0,0,0,0,0]].
+
+Exact eigenvalue multiplicities: +1 (2), -1 (2), 0 (2).
+For the physical pair (hub,core leaf), complementary cross rows are
+u=(1/sqrt(2),1/sqrt(2),0,0),
+v=(0,0,1/sqrt(2),1/sqrt(2)),
+so Delta=||u||^2||v||^2-<u,v>^2=1 exactly.
+
+At eta=1/16,
+2 sqrt(2) 3^(1/4) eta^(-1/2) (1-eta)^(-1/4)
+=15.131865744050812.
+
+Newest-Claude r=3 mixed-hub constant:
+(5/3) 2^(8/5)=5.0523885550346606.

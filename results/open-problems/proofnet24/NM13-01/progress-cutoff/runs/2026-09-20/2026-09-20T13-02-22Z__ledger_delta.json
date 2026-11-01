@@ -1,0 +1,54 @@
+{
+  "task": "T08",
+  "owner_track": "NM13-01",
+  "date": "2026-09-20",
+  "source_problem": {
+    "reference": "Justin Salez, arXiv:2508.21055v1, Problem 2.3",
+    "convention": "rate-one continuous time P_t=exp(t(T-I))",
+    "before": "OPEN",
+    "after": "OPEN"
+  },
+  "restricted_result": {
+    "status": "CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW",
+    "publication_novelty": "UNVERIFIED",
+    "name": "conditional-fiber two-quotient cutoff transfer with nonnormalizing noncommuting voltage",
+    "tv_sandwich": "max{d_G(a t),d_L(h t)} <= d_H(t) <= d_G(a t)+d_L(h t)+0.5*sqrt(|A|-1)*exp(-b*eta*t)",
+    "gap_transfer": "gap(H) >= min{a*gap(G),h*gap(L),b*eta}",
+    "explicit_class": {
+      "degree": 20,
+      "vertex_transitive": true,
+      "spectral_gap_lower_bound": "1/20",
+      "cutoff_center": "5 log_5 m_j = 50 log_5 n_j + O(1) = (25/6) log_5 N_j + O(1)",
+      "window": "O(sqrt(log N_j))",
+      "sizes": "m_j=n_j^{10+o(1)}, N_j=6 n_j^2 m_j=n_j^{12+o(1)}",
+      "persistent_noncommutation": "||[P_L tensor R_a, I tensor P_Arefresh]||_{2->2}=sqrt(3)/8",
+      "long_range_expansion": "fails every fixed positive LRE constant",
+      "lre_failure_exponent": 0.22669871513354878
+    }
+  },
+  "mechanism_progress": {
+    "removed_obstruction": "The total hidden-state L2 prefactor is not the relevant information budget when a growing exact quotient can be conditioned out. Persistent nonnormalizing/noncommuting voltage can coexist with a supercritical growing hidden quotient and cutoff.",
+    "quantitative_certificate": {
+      "naive_full_hidden_L2_power_in_m": 0.39466626636009705,
+      "conditional_residual_L2_power_in_m": -0.10533373363990296
+    },
+    "remaining_obstruction": "An arbitrary vertex-transitive spectral expander need not expose a sharp normal quotient with a conditionally small/gapped fiber. The next transitivity-specific target is to obtain an analogous conditional-information decomposition from stabilizer-orbit/representation structure or to control quotient likelihood varentropy directly."
+  },
+  "primary_boundary": {
+    "Salez_2508.21055": "Problem 2.3 remains the vertex-transitive expander cutoff conjecture",
+    "Altschuler_2609.14945_2026-09-14": "fixed-degree long-range expanders have Gaussian-profile cutoff; Ramanujan => LRE => spectral, neither converse",
+    "Pedrotti_Salez_2607.05345_2026-07-06": "local-product/non-equilibrium-Poincare sufficient criterion; not ordinary transitivity+gap",
+    "Kaufman_Lubotzky_1108.2960": "Theorem 3 supplies degree-six edge-transitive Ramanujan Cayley graphs on PSL2(5^alpha) for 5^alpha>17"
+  },
+  "partner_complement": "P26 latest read: 2026-09-20_14-57-03__biregular-line-finite-orbit-green-transfer.md; P26 owns finite-orbit shell Green/radial mechanisms, while this result is an algebraic conditional-fiber/quotient transfer.",
+  "sanity_check": {
+    "script": "2026-09-20T13-02-22Z__conditional-fiber-supercritical-check.py",
+    "output": "2026-09-20T13-02-22Z__conditional-fiber-supercritical-check.out",
+    "result": "ALL_CHECKS_PASS",
+    "finite_checks_are_not_asymptotic_proof": true
+  },
+  "runtime": {
+    "model": "GPT-5.6 Sol",
+    "effort": "UNVERIFIED"
+  }
+}

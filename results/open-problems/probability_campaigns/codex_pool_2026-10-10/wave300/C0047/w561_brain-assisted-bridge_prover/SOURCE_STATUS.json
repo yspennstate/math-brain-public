@@ -1,0 +1,110 @@
+{
+  "candidate_id": "C0047",
+  "agent": "w561",
+  "checked_on": "2026-10-10",
+  "exact_target": "For every infinite finitely generated group Gamma and every prescribed finite symmetric generating set S excluding identity, let G be its simple undirected Cayley graph. Under independent Bernoulli bond percolation, pc(G)<pu(G) if and only if Gamma is nonamenable. pc is the infimum of p for which the root has positive probability of an infinite cluster; pu is the infimum of p for which there is almost surely exactly one infinite cluster.",
+  "historical_status": "1996 Conjecture 6; 2018 Conjecture 2; dated intake attempted_unsolved",
+  "current_openness": "UNKNOWN",
+  "recent_primary_claim": {
+    "title": "Nonuniqueness of percolation on nonamenable quasi-transitive graphs",
+    "author": "OpenAI",
+    "manuscript_date": "2026-09-24",
+    "scope": "Theorem 1.1 and Corollary 1.2 include the full bond target and the critical two-point operator bound for every prescribed Cayley generating set.",
+    "mathematical_review": "NOT independently audited in this packet",
+    "implementation": "OAI.Probability.BenjaminiSchramm.Main.full_main and critical_bounded_unconditional are present; top-level file has no sorry.",
+    "comparator": "Challenge declarations intentionally contain sorry; they are specifications, not implementation proof receipts.",
+    "formal_check_receipt": null,
+    "permitted_axioms_in_config": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "actual_trusted_axioms": "UNKNOWN: no compiled print-axioms/comparator receipt was produced.",
+    "conclusion": "A primary claimed resolution is located; this packet does not certify either current openness or a completed solution."
+  },
+  "primary_sources": [
+    {
+      "path": "~\\brain_workers\\w561\\sources\\openai_214_scope.md",
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/docs/214.md",
+      "bytes": 1455,
+      "sha256": "da93a0ed83eb2815e89c0993091833c7769f05f18dd60486a2ea306d8b8bca87",
+      "status": "fetched"
+    },
+    {
+      "path": "~\\brain_workers\\w561\\sources\\openai_lean_README.md",
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/README.md",
+      "bytes": 650,
+      "sha256": "292ff9d539f494158dfbf68d989ba85a82782a4343b2fe43088f8fa62525bf1b",
+      "status": "fetched"
+    },
+    {
+      "path": "~\\brain_workers\\w561\\sources\\openai_formalization.yaml",
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/formalization.yaml",
+      "bytes": 79482,
+      "sha256": "5a8a164259591208886cd018416e61552665265ec9e20cff636f9d51117c2278",
+      "status": "fetched"
+    },
+    {
+      "path": "~\\brain_workers\\w561\\sources\\openai_BenjaminiSchramm_comparator.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/BenjaminiSchramm.lean",
+      "bytes": 9159,
+      "sha256": "1751e2795328a58a27f29568bf993f63c29cfeb82d87a80d87038e2428a67a47",
+      "status": "fetched"
+    },
+    {
+      "path": "~\\brain_workers\\w561\\sources\\openai_214_paper.pdf",
+      "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive-graphs-September-24-2026/paper.pdf",
+      "bytes": 649525,
+      "sha256": "46a78d044d2713e48cb3faa9b0b9d22da9480193e2202fe63d8e0daa7d8a3dbb",
+      "status": "fetched"
+    },
+    {
+      "path": "~\\brain_workers\\w561\\sources\\openai_214_Main.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/OAI/Probability/BenjaminiSchramm/Main.lean",
+      "bytes": 1229,
+      "sha256": "cd39e891b28350cc45563d8c3a7c7917413b03fc50fe2385455ef766cd42862d",
+      "status": "fetched"
+    },
+    {
+      "path": "~\\brain_workers\\w561\\sources\\openai_214_comparator_config.json",
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/BenjaminiSchramm.json",
+      "bytes": 446,
+      "sha256": "e28c13cfa56ba14b02e883fc5195201b8b349332e7ba80066594eda566ee1bbc",
+      "status": "fetched"
+    },
+    {
+      "path": "~\\brain_workers\\w561\\sources\\benjamini_schramm_1996.pdf",
+      "url": "https://www.maths.tcd.ie/EMIS/journals/EJP-ECP/article/download/978/978-3321-1-PB.pdf",
+      "bytes": 304617,
+      "sha256": "307793d5ab2e5525b73d16750071e49f851578e9eda03d24f5195a5d313b9300",
+      "status": "fetched"
+    }
+  ],
+  "other_primary_checks": [
+    {
+      "url": "https://arxiv.org/html/1712.04651",
+      "locator": "Conjecture 2, original PDF p.4",
+      "result": "Exact Cayley-graph universal formulation checked; cited intake raw source corroborates it."
+    },
+    {
+      "url": "https://arxiv.org/html/1804.10191",
+      "locator": "Theorem 2.1; Lemma 2.4; Remark 2.5; Section 2",
+      "result": "Hyperbolic theorem requires Gromov hyperbolicity; operator continuation and normalized adjacency identity checked."
+    },
+    {
+      "path": "~\\brain_workers\\w561\\sources\\benjamini_schramm_1996.pdf",
+      "locator": "Printed pp.72 and 76",
+      "result": "Standing model is site; authors extend nonplanar questions to bond. Conjecture 6 and correctly normalized Theorem 4 verified."
+    }
+  ],
+  "bounded_prior_search": {
+    "intake": "C0047-A001 recovered exactly and canonical population card recovered read-only.",
+    "attempts_H_20260912": "No C0047 hit in scoped ID grep.",
+    "attempts_I_20260914": "No C0047 hit in scoped ID grep.",
+    "lean_20260908": "C0047 ranking references only; no proof receipt found in scoped search.",
+    "Team_O": "No C0047 row; related P0041 assigned to w336. Our scope is a conditional operator lemma and normalization audit.",
+    "owner_percolation_archive": "No targeted percolation/Schramm/C0047 filename hit; this does not certify absence of prior owner solutions."
+  },
+  "parent_solution_claim": false,
+  "hardest_remaining_gap_in_our_attempt": "Uniform finiteness of ||T_pc|| for every prescribed nonamenable Cayley graph; the recent manuscript claims this but is not independently verified here."
+}

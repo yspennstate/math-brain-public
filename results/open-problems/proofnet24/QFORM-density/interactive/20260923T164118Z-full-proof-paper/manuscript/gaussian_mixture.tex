@@ -1,0 +1,112 @@
+\section{Arbitrary quadratic forms under Gaussian mixture inputs}\label{sec:gaussian-mixture}
+
+The Gaussian determinant formula and weighted arithmetic--geometric mean yield a dimension-free estimate for product laws with controlled Gaussian-mixture component peaks. The result applies to quadratic forms of arbitrary rank and signature, provided the hypothesis holds for every coordinate. For related Gaussian quadratic-form and regularity estimates, see \citet{APSSS2017,GNSU2019,HMP2025}.
+
+\begin{theorem}[Gaussian mixtures with controlled average component peaks]\label{gm:main}
+Let
+\[
+ X_i=M_i+\sqrt{T_i}\,G_i,\qquad 1\le i\le n,
+\]
+where the pairs $(M_i,T_i)$ are independent across coordinates, $0<T_i<\infty$ almost surely, and the $G_i$ are independent standard Gaussian variables independent of all pairs. Suppose
+\begin{equation}\label{gm:moment}
+ \mathbb E T_i^{-1/2}\le\sqrt{2\pi}\qquad(1\le i\le n).
+\end{equation}
+Let $A$ be any real symmetric matrix, let $b,c$ be arbitrary, and let $3\le k\le\rank A$. Put
+\[
+ Z_k=e_k(A^2)=\sum_{|I|=|J|=k}\det(A_{IJ})^2>0,
+ \qquad
+ I_k=\int_0^\infty(1+u^{2k})^{-1/4}\,du.
+\]
+Then $Q=X^TAX+b^TX+c$ has a bounded continuous density satisfying
+\begin{equation}\label{gm:density}
+ \|p_Q\|_\infty\le I_k Z_k^{-1/(2k)},\qquad
+ I_k=\frac1{2k}\mathrm B\!\left(\frac1{2k},\frac14-\frac1{2k}\right)
+ <\frac{k}{k-2}.
+\end{equation}
+In particular, $s_3(A)\ge1$ implies $\|p_Q\|_\infty<3$ in this input class.
+\end{theorem}
+
+\begin{proof}
+Condition first on all the mixture variables $(M_i,T_i)$. With $D=\diag(T_1,\ldots,T_n)$ and $M=(M_1,\ldots,M_n)$, write
+\[
+ Q=G^T B G+\ell^TG+c',\qquad
+ B=D^{1/2}AD^{1/2},\quad
+ \ell=D^{1/2}(2AM+b).
+\]
+Orthogonally diagonalizing $B$ is legitimate for the standard Gaussian vector $G$. If its eigenvalues are $\mu_j$ and the rotated linear coefficients are $\beta_j$, direct one-dimensional Gaussian integration gives
+\begin{align*}
+ |\varphi_{Q\mid M,D}(t)|
+ &=\prod_j(1+4t^2\mu_j^2)^{-1/4}
+   \exp\left[-\sum_j\frac{t^2\beta_j^2}{2(1+4t^2\mu_j^2)}\right]\\
+ &\le\det(I+4t^2B^2)^{-1/4}.
+\end{align*}
+Terms with $\mu_j=0$ obey the same formula and contribute only a Gaussian linear factor. Expanding the determinant in elementary symmetric functions yields
+\[
+ |\varphi_{Q\mid M,D}(t)|
+ \le[1+(2t)^{2k}W_k]^{-1/4},\qquad W_k=e_k(B^2)>0.
+\]
+This bound is integrable because $k>2$. Fourier inversion and the substitution $u=2tW_k^{1/(2k)}$ give
+\begin{equation}\label{gm:conditional}
+ \|p_{Q\mid M,D}\|_\infty
+ \le\frac1{2\pi}\int_{\mathbb R}[1+(2t)^{2k}W_k]^{-1/4}\,dt
+ =\frac{I_k}{2\pi}W_k^{-1/(2k)}.
+\end{equation}
+
+It remains to average the random spectral factor. For $T_I=\prod_{i\in I}T_i$, Cauchy--Binet gives the exact identity
+\begin{equation}\label{gm:minors}
+ W_k=\sum_{|I|=|J|=k}\det(A_{IJ})^2T_I T_J.
+\end{equation}
+The sum is over ordered pairs of coordinate subsets; intersections are allowed. On the nonzero minors, define probability weights
+\[
+ w_{IJ}=\frac{\det(A_{IJ})^2}{Z_k},\qquad
+ \alpha_i=\sum_{I,J}w_{IJ}(\mathbf1_{\{i\in I\}}+\mathbf1_{\{i\in J\}}).
+\]
+Then $0\le\alpha_i\le2$ and $\sum_i\alpha_i=2k$. Weighted arithmetic--geometric mean in \eqref{gm:minors} gives
+\[
+ W_k\ge Z_k\prod_iT_i^{\alpha_i},\qquad
+ W_k^{-1/(2k)}\le Z_k^{-1/(2k)}\prod_iT_i^{-\alpha_i/(2k)}.
+\]
+Independence across coordinates and concavity of $s\mapsto s^{\alpha_i/k}$ give
+\begin{align*}
+ \mathbb E W_k^{-1/(2k)}
+ &\le Z_k^{-1/(2k)}\prod_i\mathbb E(T_i^{-1/2})^{\alpha_i/k}\\
+ &\le Z_k^{-1/(2k)}\prod_i(\mathbb E T_i^{-1/2})^{\alpha_i/k}\\
+ &\le2\pi Z_k^{-1/(2k)}.
+\end{align*}
+Here $\alpha_i/k\le2/k<1$, and zero exponents are omitted. This estimate also proves that the expectation of the conditional Fourier $L^1$ bound is finite. Hence
+$\int|\varphi_Q(t)|\,dt\le\mathbb E\int|\varphi_{Q\mid M,D}(t)|\,dt<\infty$
+by conditional expectation, the triangle inequality, and Tonelli. Fourier inversion therefore supplies a continuous density, and averaging \eqref{gm:conditional} proves \eqref{gm:density}.
+
+The beta-integral formula follows from $v=u^{2k}$. Finally,
+\[
+ I_k<\int_0^1 1\,du+\int_1^\infty u^{-k/2}\,du
+ =1+\frac2{k-2}=\frac{k}{k-2}.
+\]
+If $s_3(A)\ge1$, then $Z_3\ge s_1(A)^2s_2(A)^2s_3(A)^2\ge1$, which gives the final assertion.
+\end{proof}
+
+\begin{corollary}[Centered scale mixtures]\label{gm:centered}
+Conjecture~\ref{conj:main} holds, with a constant smaller than $3$, for all independent coordinate laws that are Gaussian scale mixtures about deterministic coordinate centers and have densities bounded by one. There is no lower bound on the component variances and no moment assumption on the coordinate variables themselves.
+\end{corollary}
+\begin{proof}
+If $M_i=m_i$ is deterministic, the mixture density is
+\[
+ f_i(x)=\mathbb E\left[(2\pi T_i)^{-1/2}
+ e^{-(x-m_i)^2/(2T_i)}\right].
+\]
+It is maximized at $m_i$, and its essential supremum is
+$(2\pi)^{-1/2}\mathbb E T_i^{-1/2}$, also when this is infinite. The latter assertion follows by monotone convergence as $x\to m_i$ along either side. Thus the density cap is equivalent to \eqref{gm:moment}, and Theorem~\ref{gm:main} applies.
+\end{proof}
+
+\begin{remark}[Scope of the mixture condition]\label{gm:scope}
+For random component centers, \eqref{gm:moment} still implies a cap-one marginal density, but the converse can fail. Narrow components placed far apart can have a bounded final mixture density while their average component peak is large. The theorem therefore does not extend to all bounded densities by an arbitrary Gaussian-mixture approximation. Independent centered Laplace laws, after scaling to the stated cap, are examples within the centered scale-mixture class. The result also differs from the adapted-hub theorem: here the entire input vector satisfies the mixture hypothesis, whereas the adapted theorem allows a conditional hub law outside that class.
+\end{remark}
+
+\begin{remark}[Unequal component-peak bounds]
+The same proof retains the factor
+\[
+ \frac{I_k}{2\pi}Z_k^{-1/(2k)}
+ \prod_i(\mathbb E T_i^{-1/2})^{\alpha_i/k}.
+\]
+In particular, a common bound $\mathbb E T_i^{-1/2}\le\sqrt{2\pi}K$ gives $I_kK^2Z_k^{-1/(2k)}$. The powers sum to two, as required by quadratic scaling. The weighted-minor argument allows the conditional Gaussian eigenvectors to depend on the mixture variables.
+\end{remark}

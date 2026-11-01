@@ -1,0 +1,38 @@
+{
+  "schema": "fei-live-gap-ledger/1",
+  "primary_packet": "A096",
+  "snapshot_source_head": "cbd237f4322e4610627ea3e84f0ad049ea8ccebc",
+  "entries": [
+    {
+      "claim": "B05-A023-ORDER-SWAP-CREDIT-BOUNDARY-L-NARROW-v1",
+      "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED_AT_EXPLICIT_L_SCOPE",
+      "source_commit": "f8af483622a55611c7933f7d8252fe3c94e4c06e",
+      "effect": "Refutes universal nodewise nonnegative conditional-label L credit."
+    },
+    {
+      "claim": "B19-A094-FULL-ORDER-SWAP-CREDIT-BOUNDARY-v1",
+      "status": "ANALYTICALLY_PROVED_WITH_EXACT_FINITE_CERTIFICATE_PENDING_FRESH_INDEPENDENT_REVIEW",
+      "source_commit": "cbd237f4322e4610627ea3e84f0ad049ea8ccebc",
+      "effect": "Strengthens the one-point-defect obstruction to the complete physical L+Q credit; does not refute signed/global trees."
+    },
+    {
+      "claim": "B20-A096-TERMINAL-COMPENSATION-v1",
+      "status": "PROVED_CONDITIONAL_ON_B19_FULL_CREDIT_SIGN_PENDING_INDEPENDENT_REVIEW",
+      "source": "NEXT_LEMMA_DERIVATION.tex",
+      "effect": "Identifies the exact terminal boundary term that a nonlocal restriction ledger must retain."
+    }
+  ],
+  "retired_or_refuted_routes": [
+    {
+      "route": "universal nodewise nonnegative first-credit",
+      "guard": "B05_RARE_REFUNDS",
+      "status": "REFUTED_AT_L_SCOPE; PROPOSED_FULL_L_PLUS_Q_REFUTATION_PENDING_FRESH_REVIEW"
+    }
+  ],
+  "nearest_unpaid_leaf": {
+    "statement": "For a physically generated globally chosen restriction tree, bound the probability-weighted terminal complete-packet budget by C I(f) without coordinate reuse.",
+    "status": "OPEN",
+    "consumers": ["A027", "A028", "A029", "A087", "A090", "A097"]
+  },
+  "full_fei": "OPEN"
+}

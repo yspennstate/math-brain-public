@@ -1,0 +1,7 @@
+{
+  "status": "FAILED_IMPLEMENTATION_SIGN_CONVENTION; corrected before acceptance",
+  "first_failing_check": "inverse_values(polynomial(seed,m,r)) == actual activation truth signs",
+  "cause": "Polynomial implementation used balance character (-1)^bit, while frozen truth table uses 2*bit-1, its negative.",
+  "repair": "Negate all coefficients containing the balance coordinate, matching the unchanged frozen Boolean truth table; proof explicitly records epsilon convention.",
+  "mathematical_effect": "No domain or claimed orientation/refund/entropy formula changed; signed polynomial reconstruction was not accepted on the failed attempt."
+}

@@ -1,0 +1,168 @@
+   \le CKL\sqrt{n\log\!\left(e+\frac{b^2|Q|}{n}\right)} .
+\]
+\end{theorem}
+
+\begin{proof}
+Let $E_Q:\mathcal F\to\bigoplus_{q\in Q}M_b(\C)$ be the evaluation map.  Since
+$Q$ is $L$-norming, $E_Q$ is injective on $\mathcal F$.  Hence the map
+\[
+   \widetilde\Pi(E_QF)=\Pi(F),
+   \qquad F\in\spanop\{F_1,\ldots,F_n\},
+\]
+is well-defined and satisfies
+\[
+   \norm{\widetilde\Pi(E_QF)}_{op}
+   \le \norm{F}_{L^\infty}
+   \le L\norm{E_QF}_{\oplus_{q\in Q}M_b} .
+\]
+Set $Y_i=E_QF_i$.  Then $\norm{Y_i}\le K$.  Apply
+\cref{thm:block-spencer} to $Y_i/K$ and reconstruct with $\widetilde\Pi$.
+\end{proof}
+
+\begin{theorem}[Fixed-level block Toeplitz and Hankel]\label{thm:block-toeplitz}
+Fix integers $s\ge1$ and $b\ge1$.  There is a constant $C_{s,b}$ such that every
+family of $s$-level $b\times b$ block Toeplitz contractions
+$A_1,\ldots,A_n\in M_D(\C)$ satisfies
+\[
+   \discop(A_1,\ldots,A_n)
+   \le C_{s,b}\sqrt{n\log\!\left(e+\frac Dn\right)} .
+\]
+The same estimate holds for the corresponding fixed-level block Hankel class.
+Thus, for fixed $s,b$ and $D\le n$, these classes satisfy the Matrix Spencer
+bound $O_{s,b}(\sqrt n)$.
+\end{theorem}
+
+\begin{proof}
+Carlsson--Perfekt's multivariable Nehari theorem gives, for fixed level $s$, a
+bounded extension of finite multilevel Toeplitz data to an essentially bounded
+matrix-valued multiplier, with constants depending only on $s$; see
+\cite{CarlssonPerfekt2021}.  For fixed block size $b$, this gives an
+$M_b(\C)$-valued multiplier with loss depending only on $s$ and $b$.  Convolving
+with a product de la Vall\'ee Poussin kernel preserves the finite Toeplitz
+coefficients and gives coordinate degrees $O(d_j)$.  A product Bernstein grid
+with $O_s(\prod_j d_j)=O_{s,b}(D)$ points is norming.  Applying
+\cref{thm:sampled} gives the displayed estimate.  The Hankel case follows by
+multiplication with the tensor-product reversal matrix.
+\end{proof}
+
+\begin{thebibliography}{99}
+
+\bibitem{AkbasSra2026}
+E. Akbas and S. Sra,
+\emph{An algebraic Matrix Spencer theorem},
+arXiv:2606.16005, 2026.
+
+\bibitem{BansalJiangMeka2024}
+N. Bansal, H. Jiang, and R. Meka,
+\emph{Resolving Matrix Spencer conjecture up to poly-logarithmic rank},
+SIAM J. Comput., Special Section STOC 2023, STOC23-57--STOC23-67, 2024.
+
+\bibitem{BBvH2023}
+A. S. Bandeira, M. T. Boedihardjo, and R. van Handel,
+\emph{Matrix concentration inequalities and free probability},
+Invent. Math. \textbf{234} (2023), 419--487.
+
+\bibitem{BCSvH2026}
+A. S. Bandeira, G. Cipolloni, D. Schr{\"o}der, and R. van Handel,
+\emph{Matrix concentration inequalities and free probability II. Two-sided bounds and applications},
+Comm. Amer. Math. Soc., to appear; arXiv:2406.11453.
+
+\bibitem{BandeiraBolcskei2026}
+A. S. Bandeira and H. B{\"o}lcskei,
+\emph{Matrix discrepancy for representations of finite groups},
+arXiv:2606.12181, 2026.
+
+\bibitem{BoettcherGrudsky2005}
+A. B{\"o}ttcher and S. M. Grudsky,
+\emph{Spectral Properties of Banded Toeplitz Matrices},
+SIAM, Philadelphia, 2005.
+
+\bibitem{BoettcherSilbermann2006}
+A. B{\"o}ttcher and B. Silbermann,
+\emph{Analysis of Toeplitz Operators}, 2nd ed.,
+Springer Monographs in Mathematics, Springer, Berlin, 2006.
+
+\bibitem{CarlssonPerfekt2021}
+M. Carlsson and K.-M. Perfekt,
+\emph{Nehari's theorem for convex domain Hankel and Toeplitz operators in several variables},
+Int. Math. Res. Not. IMRN \textbf{2021} (2021), no. 5, 3331--3361.
+
+\bibitem{Chazelle2000}
+B. Chazelle,
+\emph{The Discrepancy Method: Randomness and Complexity},
+Cambridge University Press, Cambridge, 2000.
+
+\bibitem{CourtneySarason2012}
+D. Courtney and D. Sarason,
+\emph{A mini-max problem for self-adjoint Toeplitz matrices},
+Math. Scand. \textbf{110} (2012), no. 1, 82--98.
+
+\bibitem{DadushJiangReis2022}
+D. Dadush, H. Jiang, and V. Reis,
+\emph{A new framework for matrix discrepancy: partial coloring bounds via mirror descent},
+Proceedings of the 54th Annual ACM SIGACT Symposium on Theory of Computing (STOC), 2022,
+649--658.
+
+\bibitem{Giannopoulos1997}
+A. A. Giannopoulos,
+\emph{On some vector balancing problems},
+Studia Math. \textbf{122} (1997), no. 3, 225--234.
+
+\bibitem{Gluskin1989}
+E. D. Gluskin,
+\emph{Extremal properties of orthogonal parallelepipeds and their applications to the geometry of Banach spaces},
+Math. USSR-Sb. \textbf{64} (1989), no. 1, 85--96.
+
+\bibitem{Gray2006}
+R. M. Gray,
+\emph{Toeplitz and circulant matrices: A review},
+Found. Trends Commun. Inf. Theory \textbf{2} (2006), no. 3, 155--239.
+
+\bibitem{GrenanderSzego1958}
+U. Grenander and G. Szeg{\H{o}},
+\emph{Toeplitz Forms and Their Applications},
+University of California Press, Berkeley, 1958.
+
+\bibitem{KyngLuhSong2020}
+R. Kyng, K. Luh, and Z. Song,
+\emph{Four deviations suffice for rank 1 matrices},
+Adv. Math. \textbf{375} (2020), 107366.
+
+\bibitem{LustPiquardPisier1991}
+F. Lust-Piquard and G. Pisier,
+\emph{Non-commutative Khintchine and Paley inequalities},
+Ark. Mat. \textbf{29} (1991), 241--260.
+
+\bibitem{Matousek1999}
+J. Matousek,
+\emph{Geometric Discrepancy: An Illustrated Guide},
+Algorithms and Combinatorics 18, Springer, Berlin, 1999.
+
+\bibitem{Meka2014}
+R. Meka,
+\emph{Discrepancy and beating the union bound},
+Windows on Theory blog post, 2014.
+
+\bibitem{MSS2015}
+A. W. Marcus, D. A. Spielman, and N. Srivastava,
+\emph{Interlacing families II: Mixed characteristic polynomials and the Kadison--Singer problem},
+Ann. of Math. (2) \textbf{182} (2015), no. 1, 327--350.
+
+\bibitem{NikolskayaFarforovskaya2004}
+L. N. Nikolskaya and Yu. B. Farforovskaya,
+\emph{Toeplitz and Hankel matrices as Hadamard--Schur multipliers},
+St. Petersburg Math. J. \textbf{15} (2004), no. 6, 915--928.
+
+\bibitem{Spencer1985}
+J. Spencer,
+\emph{Six standard deviations suffice},
+Trans. Amer. Math. Soc. \textbf{289} (1985), no. 2, 679--706.
+
+\bibitem{Zygmund1959}
+A. Zygmund,
+\emph{Trigonometric Series}, Vols. I--II, 2nd ed.,
+Cambridge University Press, Cambridge, 1959.
+
+\end{thebibliography}
+
+\end{document}

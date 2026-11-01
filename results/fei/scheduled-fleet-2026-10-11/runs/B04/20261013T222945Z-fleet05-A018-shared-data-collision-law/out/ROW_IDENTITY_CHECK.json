@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "pairs": 65536,
+  "checks": 328269,
+  "elapsed_seconds": 2.8912612999847624,
+  "normalized_reference_fixtures": [
+    {
+      "module_masks": [
+        0,
+        255
+      ],
+      "normalization": "1",
+      "debt_prime_log_scaled": {},
+      "denominator": 1024
+    },
+    {
+      "module_masks": [
+        7,
+        19
+      ],
+      "normalization": "1",
+      "debt_prime_log_scaled": {
+        "2": 1024,
+        "5": -1280,
+        "17": 544
+      },
+      "denominator": 1024
+    },
+    {
+      "module_masks": [
+        23,
+        171
+      ],
+      "normalization": "1",
+      "debt_prime_log_scaled": {},
+      "denominator": 1024
+    },
+    {
+      "module_masks": [
+        105,
+        197
+      ],
+      "normalization": "1",
+      "debt_prime_log_scaled": {},
+      "denominator": 1024
+    }
+  ],
+  "identity": "H(shared)=sum H(modules)+B_shared-sum B_j-TC(data); exact module-marginal conditional reference debt=TC"
+}

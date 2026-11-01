@@ -1,0 +1,163 @@
+{
+  "candidate_id": "C0023",
+  "worker": "w420",
+  "date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "model": "Independent nearest-neighbor Bernoulli bond percolation on Z^d; exact product measure and target recovered in primary Kozma--Nitzan Section 1",
+  "target": "theta_d(p_c(d)) = 0 for every integer 3 <= d <= 10",
+  "historical_record": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 539,
+    "quote": "5,C0023,No percolation at criticality on Z^d for 3 <= d <= 10,attempted_un,theta(p_c)=0 for 3<=d<=10",
+    "certifies_current_openness": false
+  },
+  "primary_sources_located": [
+    {
+      "url": "https://arxiv.org/abs/1506.07977",
+      "authors": "Robert Fitzner and Remco van der Hofstad",
+      "scope": "Mean-field behavior for nearest-neighbor percolation in d >= 11; this does not establish the assigned d=3,...,10 target"
+    },
+    {
+      "url": "https://arxiv.org/abs/2401.12397",
+      "authors": "Gady Kozma and Shahaf Nitzan",
+      "scope": "Reduction of critical nonpercolation to a conjectured finite-graph inequality; full statement pending targeted reading"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/docs/213.md",
+      "scope": "Public description claiming critical nonpercolation on Z^3 and on quasi-transitive graphs; no actual proof or trusted-axiom receipt checked"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/formal-math/main/README.md",
+      "scope": "Repository status needs checking against a secondary claim of a percolation formalization"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.20764",
+      "authors": "Arthur Blanc-Renaudie",
+      "scope": "September 2026 Markovian renormalisation and semi-decidability of mean-field behavior; not itself a checked proof for all assigned dimensions"
+    }
+  ],
+  "formal_check": {
+    "performed": false,
+    "source_statement_inspection_performed": true,
+    "headline_bodies": "Both inspected comparator headline bodies are admitted with sorry",
+    "trusted_axioms": null,
+    "no_formal_success_claim": true
+  },
+  "brain_pipeline": {
+    "prepared": "complete",
+    "submitted": {
+      "state": "complete",
+      "path": "~\\math-brain-inbox\\w420\\bundle_001.json",
+      "addendum_path": "~\\math-brain-inbox\\w420\\bundle_002.json"
+    },
+    "reviewed": {
+      "state": "partial",
+      "received": "w421 scoped KEEP L0-L5; G remains unproved",
+      "pending": "named referee w422; served-model/different-account gates unverified; no parent theorem promotion"
+    },
+    "ingested": "unverified; no receipt",
+    "retrievable": "unverified; not queried for this new draft"
+  },
+  "historical_intake": {
+    "record_path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 23,
+    "source_id": "garban_steif_noise_2012",
+    "primary_url": "https://arxiv.org/abs/1102.5761",
+    "locator": "Chapter XI Section 1, p. 136; also cited ICM 2018 Conjecture 1 p. 3 and Ising/Potts 2017 Conjecture 1 p. 37",
+    "historic_current_status": "no_resolution_found_in_documented_search as of 2026-09-07; unreviewed",
+    "exact_statement": "Prove theta(p_c)=0 for Bernoulli percolation on Z^d for every d>=3; the historical unresolved range was 3<=d<=10."
+  },
+  "prior_attempts": {
+    "C0023-A001": "Half-space susceptibility and hyperplane gluing inputs explicitly unproved; not reused",
+    "H_I_and_lean_targeted_search": "rg -l C0023 in the named H/I attempts returned no exact candidate file; Lean annotated ranking repeats historical status, not a proof",
+    "owner_retirement_check": "Named historical records and the recalled campaign proof-directory audit were checked; no independently verified retirement receipt recovered. This is not an exhaustive nonexistence claim.",
+    "team_O": "The named Team O board has no C0023 owner; disjoint quantified-anchor lane claimed on mesh."
+  },
+  "source_snapshots": [
+    {
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/CriticalZ3.lean",
+      "retrieved_at": "2026-10-10T09:45:08.258591+03:00",
+      "http_status": 200,
+      "snapshot": "~\\brain_workers\\w420\\sources\\CriticalZ3.lean",
+      "bytes": 2184,
+      "sha256": "34ea3ff4648b6ea92c3e7d94bcb7b66047a9d0fbd1f583c461c34636cbb854d8",
+      "admitted_placeholder_lines": [
+        59
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/CriticalPercolation.lean",
+      "retrieved_at": "2026-10-10T09:45:08.681523+03:00",
+      "http_status": 200,
+      "snapshot": "~\\brain_workers\\w420\\sources\\CriticalPercolation.lean",
+      "bytes": 2253,
+      "sha256": "cff7e946579873434b64ed4679d21ad9f07ac77958af69952d28826136b7e528",
+      "admitted_placeholder_lines": [
+        58
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/formal-math/main/README.md",
+      "retrieved_at": "2026-10-10T09:45:09.049231+03:00",
+      "http_status": 200,
+      "snapshot": "~\\brain_workers\\w420\\sources\\formal-math-README.md",
+      "bytes": 3228,
+      "sha256": "b1d4ad116af3fbab6120738727a24f9ebd6831e238a454a2585357050a4ae212",
+      "admitted_placeholder_lines": []
+    }
+  ],
+  "canonical_record_matches": 1,
+  "served_model_evidence": {
+    "author": "UNVERIFIED; requested model and effort are not served-model evidence",
+    "referee": "pending"
+  },
+  "reported_resolution_status": "REPORTED_SOLVED_IN_SEPTEMBER_24_PRIMARY_PREPRINTS__INDEPENDENT_PROOF_AUDIT_PENDING",
+  "new_primary_reports": [
+    {
+      "source": "OpenAI, Critical bond and site percolation on the cubic lattice, 2026-09-24, Theorem 1.1",
+      "url": "https://github.com/openai/math/blob/main/preprints/Critical-bond-and-site-percolation-on-the-cubic-lattice-September-24-2026/paper.pdf",
+      "scope": "d=3 only; manuscript proof not independently refereed here",
+      "evidence_origin": "w422/SOURCE_STATUS.json primary-text extraction; no proof audit inferred"
+    },
+    {
+      "source": "OpenAI math Lean scope note 213",
+      "url": "https://github.com/openai/math/blob/main/lean/docs/213.md",
+      "scope": "All assigned d if its formalized theorem and lattice instantiation audit clean; comparator challenge file contains a deliberate sorry, so challenge alone is not a proof receipt",
+      "evidence_origin": "w422/SOURCE_STATUS.json primary-text extraction; no proof audit inferred"
+    },
+    {
+      "source": "OpenAI, No percolation at criticality on quasi-transitive graphs, 2026-09-24, Theorem 1.1",
+      "url": "https://github.com/openai/math/blob/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf",
+      "scope": "Includes nearest-neighbor bond percolation on Z^d for all d>=2, provided its proof is sound; this 42-page manuscript has not received a full independent audit by w422",
+      "evidence_origin": "w422/SOURCE_STATUS.json primary-text extraction; no proof audit inferred"
+    }
+  ],
+  "unknown_reason": "A new primary manuscript reports the full target solved. Its mathematical validity and actual solution trusted axioms have not been independently verified by w420; no original solved credit is allowed.",
+  "new_primary_direct_check": {
+    "web_raw_pdf": "Fetch failed: application/octet-stream unsupported; source report remains explicitly attributed to w422",
+    "local_public_pdf": "~\\brain_workers\\w422\\openai_quasi_transitive_20260924.pdf",
+    "pages_extracted": [
+      1,
+      2
+    ],
+    "page_count": 42,
+    "extracted_report": "PRIMARY_PREPRINT_FIRST_PAGES_REPORT.txt",
+    "scope_inspection_only": true,
+    "mathematical_proof_verified": false,
+    "reported_scope_verified_by_w420": true,
+    "statement_evidence": "PRIMARY_PREPRINT_FIRST_PAGES_REPORT.txt, Theorem 1.1 on printed page 2: reported theorem includes Z^d for all d>=2; mathematical proof unverified"
+  },
+  "scoped_review_receipts": [
+    {
+      "reviewer": "w421",
+      "verdict": "KEEP",
+      "scope": "conditional supporting lemmas L0-L5 only",
+      "remaining_gap_preserved": "G",
+      "evidence_path": "~/brain_workers/w421/AUDIT_W420.md",
+      "received_via": "team_comm.py read --as w420; message timestamp 06:56 UTC",
+      "served_model": "UNVERIFIED",
+      "cross_account_quorum": "UNVERIFIED",
+      "parent_problem_proved": false
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "candidate_id": "C0023",
+  "worker": "w421",
+  "checked_date": "2026-10-10",
+  "exact_statement": "For every integer 3<=d<=10, take iid Bernoulli(p) states on unoriented nearest-neighbour bonds of Z^d. Let theta_d(p)=P_p(|C(0)|=infinity) and p_c(d)=inf{p:theta_d(p)>0}. Prove theta_d(p_c(d))=0.",
+  "exact_statement_status": "primary conventions and conjecture checked; intermediate-dimension scope recovered from dated intake",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "openness_reason": "A bounded primary-source search located the bond conjecture in 2024 and a site conjecture in Aug 2026. No resolution was found, but neither this search nor the scoped owner-work checks certifies all current literature or retired work.",
+  "served_model_settings": "UNVERIFIED. Requested gpt-6.1-sol, max, Fast are not response-side serving evidence.",
+  "sources": [
+    {
+      "id": "C0023-intake",
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+      "line": 23,
+      "status": "historical attempted_unsolved, unreviewed; not a current openness certificate"
+    },
+    {
+      "id": "duminil_copin_icm_2018",
+      "url": "https://arxiv.org/pdf/1712.04651",
+      "revision": "v1",
+      "locator": "pp.1-3: independent nearest-neighbour bonds; Conjecture 1 p.3",
+      "quote": "Show that theta(p_c) = 0 on Z^d for every d >= 3.",
+      "quote_note": "Plain-text rendering of the displayed mathematical statement; primary PDF checked."
+    },
+    {
+      "id": "kozma_nitzan_2024",
+      "url": "https://arxiv.org/html/2401.12397v1",
+      "revision": "v1",
+      "locator": "Section 1, Conjecture 1 and finite-size discussion",
+      "quote": "We were not able to prove or disprove this conjecture.",
+      "scope": "bond percolation; arbitrary finite-graph connection inequality is conjectural"
+    },
+    {
+      "id": "cerf_2026",
+      "url": "https://arxiv.org/html/2608.23661v1",
+      "revision": "v1",
+      "locator": "Section 1, Conjecture 1.1",
+      "scope": "SITE percolation; cannot silently serve as a bond theorem",
+      "coverage_limit": "Experimental HTML includes only the introduction/references. The announced finite-cluster-tail theorem was not audited from that incomplete representation."
+    },
+    {
+      "id": "fitzner_hofstad_2017",
+      "url": "https://arxiv.org/abs/1506.07977v2",
+      "revision": "v2",
+      "scope": "abstract verifies nearest-neighbour mean-field threshold d>=11; full computer-assisted proof not re-audited"
+    }
+  ],
+  "owner_prior_work": {
+    "C0023_A001": "Half-space route explicitly leaves susceptibility and hyperplane gluing unproved; not a solved or retired receipt.",
+    "H_I_and_lean_exact_ID_search": "No C0023 hit in the named H/I attempt directories; Lean annotated ranking repeats attempted_unsolved.",
+    "G0001": "Targeted G intake row identifies Cerf's site-tail reformulation; its attempt labels it equivalent only modulo stated additional theorems, not a new solution.",
+    "Team_O": "Read board; no C0023 row was listed. Probability300 board assigns C0023 to w420-w431.",
+    "Big_Open_problem_folder": "Targeted search reached research/open_status.md, whose target is the different nonamenable p_c<p_u problem; it supplies no C0023 solution.",
+    "population_store_check": {
+      "path": "~/math-brain-build/local/population/brain.sqlite3",
+      "mode": "ro",
+      "scope": "exact target titles only, at most five nodes; not a solved/retired certification",
+      "exact_title_hits": 0,
+      "rows": []
+    },
+    "canonical_store_check": "Population schema and a narrow exact-title lookup were inspected read-only; no whole export was read. A complete canonical research solved/retired certification was unavailable in the scoped reads. UNKNOWN is preserved."
+  },
+  "recall": {
+    "command": "python -X utf8 bounded_recall.py",
+    "status": "TIMEOUT after 60 seconds (61.875 including cleanup)",
+    "fallback": "Targeted MEMORY.md grep then the exact cited proof-gap and conditioning scars",
+    "scars": [
+      "perceptron_proof_open_gaps_fleet_2026_07_12",
+      "proof_steps_need_derived_joint_structure_2026_09_09"
+    ]
+  },
+  "paired_proof_read": true,
+  "independent_checkpoint_files": [
+    "ATTEMPT.md",
+    "INDEPENDENT_SELECTOR_OBSTRUCTION.md",
+    "FINITE_DEPENDENCE_OBSTRUCTION.md"
+  ],
+  "review": {
+    "referee": "w422",
+    "state": "pending",
+    "referee_own_new_results_referee": "w425",
+    "different_model_or_account_serving_evidence": "UNAVAILABLE; do not promote to an independently checked theorem"
+  },
+  "brain_states": {
+    "prepared": true,
+    "submitted": true,
+    "reviewed": false,
+    "ingested": false,
+    "retrievable": false
+  },
+  "draft_path": "~\\math-brain-inbox\\w421\\bundle_001.json",
+  "updated_utc": "2026-10-10T06:49:35.508411+00:00"
+}

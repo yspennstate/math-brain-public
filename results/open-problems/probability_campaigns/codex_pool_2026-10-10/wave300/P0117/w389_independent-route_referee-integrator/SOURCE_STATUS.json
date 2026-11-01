@@ -1,0 +1,139 @@
+{
+  "target": "P0117",
+  "worker": "w389",
+  "checked_at": "2026-10-10T05:11:33.533705+00:00",
+  "current_openness": "UNKNOWN",
+  "parent_problem_solved": false,
+  "novelty_claim": false,
+  "ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 552,
+    "tier": 5,
+    "dated_status": "attempted_un",
+    "certifies_current_status": false
+  },
+  "exact_intake_record": {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "lines": [
+      188,
+      600
+    ],
+    "source_id": "fpp_survey_2015",
+    "exact_scope": "Nondegenerate continuous iid planar FPP in the positive-speed setting; constant deterministic weights are excluded by the intended scope.",
+    "historical_status_search": "2026-09-14 reported no resolution but explicitly noted degraded search engines"
+  },
+  "survey": {
+    "title": "Auffinger, Damron and Hanson: 50 years of first-passage percolation",
+    "url": "https://arxiv.org/pdf/1511.03262",
+    "archived_pdf": "~\\Downloads\\Probability_1000_20h_20260906\\sources\\fpp_survey_2015\\source.pdf",
+    "page_count_measured": 160,
+    "question": 31,
+    "section": "4.5",
+    "physical_pdf_page_verified": 98,
+    "printed_page_verified": 98,
+    "excerpt": "Question 31. Do geodesic lines exist?",
+    "source_record_statement_date": "2016-09-26",
+    "locator_caveat": "This is the archived 160-page version. Earlier survey editions have different page numbers; the minimum-of-four moment is not stated by this short question itself.",
+    "evidence": "survey_page_excerpt.json"
+  },
+  "precise_primary_conjecture": {
+    "source": "Damron and Hanson, Bigeodesics in first-passage percolation",
+    "url": "https://arxiv.org/html/1512.00804v2",
+    "location": "Conjecture 1",
+    "statement": "For finite nonnegative iid edge weights with a continuous common distribution on the nearest-neighbor graph Z^2, almost surely no self-avoiding bi-infinite geodesic exists. Every finite segment must minimize against all finite lattice paths.",
+    "moment_assumption_in_conjecture": "NONE stated"
+  },
+  "working_moment_qualified_case": {
+    "assumptions": [
+      "nearest-neighbor Z^2",
+      "finite nonnegative iid edge weights",
+      "atomless common law",
+      "E[min(X1,X2,X3,X4)^2]<infinity for four independent weights"
+    ],
+    "extra_shape_assumption": "NONE in this working target; any imported differentiability theorem is separately conditional"
+  },
+  "established_inputs_checked": [
+    {
+      "url": "https://arxiv.org/html/1512.00804v2",
+      "location": "Theorem 1.1",
+      "assumptions": [
+        "iid continuous weights",
+        "finite mean",
+        "differentiable full limit-shape boundary"
+      ],
+      "conclusion": "For each preassigned deterministic direction, no bigeodesic has an end in that direction almost surely",
+      "does_not_supply": "A simultaneous random-direction exclusion"
+    },
+    {
+      "url": "https://arxiv.org/html/2208.11576v1",
+      "location": "Theorem 1.1 and Section 2.4 A1",
+      "assumptions": [
+        "iid continuous weights",
+        "finite second moment of the minimum of four incident weights"
+      ],
+      "conclusion": "The probability that a prescribed distant vertex is visited by an infinite geodesic from 0 tends to zero uniformly with distance",
+      "does_not_supply": "Vanishing raw forward-ray shell sum; that sum is at least one when rays exist"
+    }
+  ],
+  "prior_attempt": {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 119,
+    "id": "P0117-A001",
+    "full_problem_solved": false,
+    "gap": "Opposite-endpoint finite geodesics need not stay anchored in a fixed bounded region"
+  },
+  "owner_solved_retired_check": {
+    "state": "NO CERTIFIED P0117 RESOLUTION IN THE TARGETED LOCAL RECORDS",
+    "exhaustive": false,
+    "checked": [
+      "original P0117 ledger and attempt",
+      "H/I attempt directories and lean ranking via targeted P0117 searches",
+      "Open problem project/solved_register.md via FPP/geodesic/percolation terms",
+      "Big Open problem in probability theory/README.md",
+      "width-3 directed FPP solved memory (different model)",
+      "canonical population store's P0117 cards"
+    ]
+  },
+  "canonical_store": {
+    "path": "~/math-brain-build/local/population/brain.sqlite3",
+    "mode": "read-only URI",
+    "target_cards": 2,
+    "truth_status": "unverified",
+    "evidence": "live_store_check.json",
+    "supporting_memory_slug": "prob1000_mathbrain_two_bundles_15_nodes_retrievable_2026_09_07"
+  },
+  "recent_claimed_resolution": {
+    "title": "No bigeodesics in planar first-passage percolation",
+    "author_as_printed": "OPENAI",
+    "date_as_printed": "September 24, 2026",
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/No-bigeodesics-in-planar-first-passage-percolation-September-24-2026/main.pdf",
+    "pdf_pages_measured": 39,
+    "actual_theorem": "Theorem 1.1",
+    "hypotheses": [
+      "finite nonnegative iid nearest-neighbor weights on Z^2",
+      "atomless common law",
+      "E[min(X1,X2,X3,X4)^2]<infinity"
+    ],
+    "claimed_conclusion": "All self-avoiding bigeodesics are absent in one probability-one event, including random end-directions",
+    "mathematical_certification": "NOT CERTIFIED by w389",
+    "partial_check": "Low-to-high replacement posterior independently derived in R07; geometric transfer, no-fork, common Busemann and global budget steps remain unchecked",
+    "evidence": [
+      "public_manuscript_listing.json",
+      "public_manuscript_extract.json",
+      "public_dependency_pages.json",
+      "POSTERIOR_REDERIVATION.md"
+    ]
+  },
+  "formal_check": {
+    "run": false,
+    "theorem_receipt": null,
+    "trusted_axioms_receipt": null,
+    "note": "PDF identity, mechanical schema validation and finite diagnostic checks are not formal mathematical proof receipts"
+  },
+  "recall": {
+    "path": "recall.txt",
+    "exit_code": 0,
+    "target_id_absent_in_general_memory_recall": true,
+    "math_store_target_present": true
+  }
+}

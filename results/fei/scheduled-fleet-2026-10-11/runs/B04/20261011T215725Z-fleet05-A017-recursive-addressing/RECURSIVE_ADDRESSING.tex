@@ -1,0 +1,221 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\F}{\mathbb F_2}
+\newcommand{\I}{\mathrm I}
+\newcommand{\rk}{\operatorname{rank}}
+\begin{document}
+\title{A017: exact addressing ledgers with reused controls and quadratic phases}
+\author{A017, stream B04}
+\date{Stage 20261011T215725Z; independent review pending}
+\maketitle
+All entropy is in bits. Physical binary controls $x\in\F^n$ and sign
+data $y\in\{-1,1\}^{2^a}$ are independent and uniform. The binary
+Walsh convention is $\chi_u(x)=(-1)^{u\cdot x}$.
+
+\begin{theorem}[Rank and fiber-phase ledger]
+Let $M:\F^n\to\F^a$ be linear and let
+\[
+ q(x)=q_0+\sum_i\ell_i x_i+\sum_{i<j}Q_{ij}x_i x_j
+\]
+be a quadratic polynomial over $\F$. Write $Q$ also for its symmetric,
+zero-diagonal polar matrix. Define the Boolean function
+\[
+ F_{M,q}(x,y)=(-1)^{q(x)}y_{Mx}.
+\]
+Let $r=\rk M$, $K=\ker M$, and $k=\rk(Q|_{K\times K})$.
+Let $c$ count nonzero columns of $M$, let $b$ count indices $i$ whose
+$M$ column is zero and whose $Q$ row is nonzero, and let $d$ count
+indices whose $M$ column and $Q$ row are zero but $\ell_i=1$.
+Then the squared Fourier spectrum has exactly $2^{2r+k}$ nonzero
+atoms, all of mass $2^{-2r-k}$, and
+\[
+ H(F_{M,q})=2r+k,\qquad \I(F_{M,q})=1+\frac{c+b}{2}+d.
+\]
+Every active-address control has influence $1/2$. Every inactive-address
+control has influence $1/2$ if its polar row is nonzero, and otherwise
+has influence $\ell_i$. Each reachable data bit has influence $2^{-r}$;
+unreachable data bits have influence zero. In particular,
+\[
+ H(F_{M,q})\le4\bigl(\I(F_{M,q})-1-d\bigr)
+ \le4\bigl(\I(F_{M,q})-1\bigr).
+\]
+No selector-freshness hypothesis is imposed on a program computing $Mx$.
+\end{theorem}
+
+\begin{lemma}[Quadratic Walsh law]
+A quadratic sign on a $D$-dimensional binary vector space whose polar
+form has rank $k$ has $2^k$ nonzero Walsh coefficients, each of squared
+magnitude $2^{-k}$. The rank $k$ is even.
+\end{lemma}
+\begin{proof}
+For $g(t)=(-1)^{q(t)}$, its autocorrelation at $h$ is
+\[
+ \mathbb E_t g(t)g(t+h)
+ =(-1)^{q(h)+q(0)}\mathbb E_t(-1)^{B(t,h)}.
+\]
+This vanishes off the radical $R$ of the polar form. On $R$,
+$q(h)+q(0)$ is linear. Consequently
+\[
+ |\widehat g(\lambda)|^2
+ =2^{-D}\sum_{h\in R}(-1)^{q(h)+q(0)+\lambda(h)}
+\]
+is either zero or $|R|/2^D=2^{-k}$. Parseval gives the support count.
+An alternating bilinear form has even rank: if nonzero, choose a pair
+with pairing one, split off their nondegenerate two-dimensional span,
+and repeat on its orthogonal complement.
+\end{proof}
+
+\begin{proof}[Proof of the theorem]
+For a reachable $z$, choose $x_z$ with $Mx_z=z$ and put
+$a_z(x)=\mathbf1_{Mx=z}(-1)^{q(x)}$. The function $q(x_z+t)$ on $K$
+has the same polar form $Q|_K$ for every $z$; translating affects only
+linear and constant terms. For an ambient frequency $u$,
+\[
+ \widehat a_z(u)=2^{-r}(-1)^{u\cdot x_z}
+ \mathbb E_{t\in K}(-1)^{q(x_z+t)+u\cdot t}.
+\]
+The restriction map $(\F^n)^*\to K^*$ is onto with fibers of size
+$2^r$. The lemma gives $2^{r+k}$ nonzero ambient coefficients per
+reachable label, each of squared magnitude $2^{-2r-k}$.
+The only data frequencies of $F$ are singletons $\{y_z\}$, with
+coefficient $\widehat a_z(u)$. Different labels are distinct physical
+data coordinates, so there are no cross-label coefficient collisions.
+There are $2^r$ reachable labels. This proves the exact flat law and
+the entropy formula, including $r=0$, $k=0$, and constant $q$.
+
+Flipping $x_i$ changes $Mx$ by its $i$th column. If this column is
+nonzero, the old and new data bits are distinct independent signs;
+the output disagreement probability is $1/2$, regardless of $q$.
+If it is zero, disagreement is exactly the event
+\[
+ q(x+e_i)+q(x)=\ell_i+\sum_jQ_{ij}x_j=1.
+\]
+A nonconstant linear polynomial is balanced; a constant one equals
+$\ell_i$. Flipping $y_z$ is pivotal exactly on $Mx=z$, whose probability
+is $2^{-r}$ for reachable $z$. Their total influence is one.
+
+For the bound, let $V$ be the coordinate span of the nonzero $M$ columns
+and the nonzero polar rows outside those columns. Its dimension is
+$c+b$ and $M|_V$ has rank $r$. On all other coordinate directions
+both $M$ and $Q$ vanish. Thus the restricted polar form on $K$ has rank
+at most $\dim(K\cap V)=c+b-r$. Therefore
+\[
+ 2r+k\le r+c+b\le2(c+b)=4(\I(F)-1-d),
+\]
+where $r\le c$. Pure linear phase directions counted by $d$ cost
+influence but no entropy. This proof uses no FEI assumption.
+\end{proof}
+
+\paragraph{Exact recursive addressing program.}
+Fix a state width $a$, and initialize $s_0(x)=0$, $M_0=0$, $q_0=0$.
+At stage $t$ allow arbitrary fixed binary matrices $A_t\in\F^{a\times a}$,
+$B_t\in\F^{a\times n}$, and a fixed quadratic phase increment $p_t$:
+\[
+ s_t=A_ts_{t-1}+B_tx,\quad M_t=A_tM_{t-1}+B_t,\quad
+ q_t=q_{t-1}+p_t,\quad F_t=(-1)^{q_t(x)}y_{s_t(x)}.
+\]
+The same physical control may occur at arbitrarily many stages.
+Let $r_t,k_t,c_t,b_t,d_t$ be the theorem's parameters for $(M_t,q_t)$.
+For every $t$ the exact recurrence is
+\[
+ H_t-H_{t-1}=2(r_t-r_{t-1})+(k_t-k_{t-1}),\quad
+ \I_t-\I_{t-1}=\tfrac12(c_t+b_t-c_{t-1}-b_{t-1})+d_t-d_{t-1}.
+\]
+The changing kernel is recomputed; its quadratic rank is not assumed
+additive. Influence increments can be negative. These are identities
+for the final Boolean functions, not a conserved ancestral budget for
+arbitrary stopping trees.
+
+\paragraph{A cancellation tower.}
+Take $n=a=m$, $A_t$ the identity, and at stage $t$ add $x_j$ to state
+coordinate $j$, for $j=1+((t-1)\bmod m)$. Set every phase increment
+to zero. On the first cycle $r_t=c_t=t$; on the second
+$r_t=c_t=2m-t$. The program can be iterated indefinitely. At every
+even complete cycle $F_t=y_0$, $H_t=0$, and $\I_t=1$. A ledger charging
+fresh selectors at every syntactic level incorrectly keeps increasing.
+
+\paragraph{Nontrivial quadratic fibers.}
+Let $n=2m$, $q=\sum_{j=1}^m x_{2j-1}x_{2j}$. Address the first $h$
+complete pairs, with state width $2h$, for $0\le h\le m$. Then
+$r=c=2h$, $k=2(m-h)$, $b=2(m-h)$, $d=0$, so
+\[
+ H=2m+2h,\qquad \I=1+m.
+\]
+For $h<m$ there is genuine quadratic Fourier entropy inside address
+fibers. This is not an application of the unsigned affine-cell formula.
+The state map and phase can each be computed by unbounded-depth reuse
+programs of the displayed type; their final ranks completely specify
+the ledger.
+
+\paragraph{Sharing labels and coefficient collisions.}
+The final data singleton identifies the terminal label $J\in\operatorname{im}M$,
+which is uniform and costs $r$ bits once. Conditional on that label,
+the control-frequency support is uniform on a set of size $2^{r+k}$.
+Choose fixed bases to encode it by $k$ bits for an allowed restriction
+in $K^*$ and $r$ bits for its ambient lift. Total code length is exactly
+$2r+k$. This is a normalized law, not a partial cost with an omitted
+reference normalizer. The terminal label is shared by the entire Fourier
+set and all program levels. The uniform physical transcript
+$(s_1,\ldots,s_t)$ costs $R_t=\rk [M_1;\ldots;M_t]$ bits; given the
+terminal label it retains $R_t-r_t$ bits. Terminal addressing discards
+this history, and coherent Fourier cancellation must be performed
+before squaring. The signed fiber calculation performs that cancellation.
+Independent stage-label costs are not justified.
+
+\paragraph{General fiber identity and physical-budget comparison.}
+For any Boolean sign $g(x)$ in place of $(-1)^{q(x)}$, restrict it to
+each reachable affine fiber $x_z+K$ and call the resulting sign on $K$
+$g_z$. Choose any fixed linear coordinates on $K$ to define its Walsh
+entropy; this entropy is invariant under changing those linear coordinates,
+since the frequency labels are permuted. The same ambient-frequency
+restriction calculation gives the exact identity
+\[
+ H(g(x)y_{Mx})=2r+2^{-r}\sum_{z\in\operatorname{im}M}H(g_z).
+\]
+For $M e_i=0$, the physical control influence is $\Pr[g(x)\ne g(x+e_i)]$;
+for $M e_i\ne0$ it is $1/2$. Consequently
+\[
+ \I(g(x)y_{Mx})=1+\frac c2+
+ \sum_{i:M e_i=0}\Pr[g(x)\ne g(x+e_i)].
+\]
+The ordinary coordinate influence of $g_z$ in an arbitrary kernel basis
+is not this physical sum. An oblique basis change can greatly increase
+or decrease influence and is not a free FEI reduction. For quadratic
+phases the preceding rank argument pays exactly the residual
+$H(g_z)=k$ without making that substitution.
+
+There is also a valid, generally weaker physical reorganization. Query
+all $c$ controls with nonzero $M$ column first. Their neighboring branches
+have distinct data labels and hence are orthogonal, irrespective of the
+phase. The remaining phase restrictions are ordinary Boolean signs on
+the inactive physical controls. If those signs satisfy FEI with constant
+$C$, baseline Corollary 8.7 pays the whole function with $\max\{4,C\}$.
+For quadratic phase restrictions, the lemma gives $H\le2\I$ directly:
+their polar rank is at most the number of nonzero polar rows, each
+with influence $1/2$, and pure linear directions only increase influence.
+Thus the present constant-four closure can also be recovered from the
+baseline plus this elementary quadratic-leaf bound. The new artifact is
+the exact rank ledger and reuse accounting, not a new universal closure
+mechanism. The sharper $2r+k$ ledger records cancellation hidden by the
+physical reorganization's $2c$ bound.
+
+\paragraph{Scope and remaining universal gap.}
+When $q$ is affine, $k=0$, and the entropy identity is an application
+of the established affine-cell baseline (with shifted control spectra).
+The unsigned tower alone is not a new FEI class. Quadratic fibers add
+a closed exact ledger and explicit influence payment, not a novelty
+claim or a universal FEI theorem. An arbitrary phase on a fiber loses
+the flat quadratic law. If $M=0$ and $q$ is replaced by an arbitrary
+Boolean phase $g(x)$, then $F=g(x)y_0$, $H(F)=H(g)$ and
+$\I(F)=\I(g)+1$. A strong bound for this unrestricted class is full FEI;
+an ordinary bound also implies full FEI by tensor amplification. Thus
+unrestricted phase entropy cannot be declared paid by label compression.
+The first unsupported universal line would be a constant bound on
+$2^{-r}\sum_zH(g_z)$ in the displayed physical budget, for arbitrary
+$g$ and $M$. At $M=0$ that line is exactly FEI. The next universal
+obligation is to bound the complete conditional fiber spectrum for
+nonquadratic, genuinely Boolean phases without spending previously
+charged physical influence a second time.
+\end{document}

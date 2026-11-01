@@ -1,0 +1,44 @@
+[
+  {
+    "claim_id": "A049-BLOCK-SHARP-TAX-GRID",
+    "version": 1,
+    "exact_statement": "For every Boolean sign on two revealed bits and m=0,1,2 fair residual bits, at every ordered revealed-bias pair in {1/8,1/4,3/8,1/2}^2, the actual physical-block debt J_A-M_A is at most tau*(p1)+tau*(p2). All 1,052,928 truth-table/bias cases are covered by output-negation symmetry and exact rational certificates; no additivity theorem is assumed. Every nonuniform pair has a certified gap greater than 7/1000 bit to explicit lower witnesses for the sum tau*. The uniform pair has maximum debt exactly zero. The maximum of (J_A-M_A)/(Delta_A/2), excluding the zero-denominator uniform pair, lies strictly between 68132470/100000000 and 68132471/100000000 and is attained by f=(-1)^X2(1-2X1UV), Pr(X1=1)=1/8 and X2,U,V fair. Both revealed coordinates are essential; four total variables are minimal for a positive debt inside this frozen domain. This is not an all-dimensional block-additivity theorem or a FEI falsifier.",
+    "hypotheses": [
+      "Genuine Boolean signs with complete truth tables",
+      "Two actual revealed physical coordinates; inherited product-biased orthonormal basis",
+      "Zero, one or two uniform residual coordinates; only the explicitly specified revealed bias grid",
+      "Shannon entropy in bits, including empty atoms; Delta_i=p_i log2((1-p_i)/p_i)"
+    ],
+    "statement_sha256": "e1290f128106e8bf485fbbcb8f21c03c14b4fbdb5cb148b228d5c6dc9daeba6a",
+    "contributors": [
+      "fleet05/A049"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "FROZEN_SPEC.json",
+      "code/census.py",
+      "code/verify.py",
+      "out/CENSUS.json",
+      "out/TAU_LOWER_WITNESSES.json",
+      "out/EXTREMAL_CERTIFICATE.json",
+      "out/INDEPENDENT_RECONSTRUCTION.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "FINITE_EXISTING_HELPER_VERIFICATION_COMPLETE_LOCAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A074",
+      "A092",
+      "A085",
+      "A050",
+      "A048",
+      "A047",
+      "B09",
+      "B10",
+      "B20"
+    ]
+  }
+]

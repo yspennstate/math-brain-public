@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newcommand{\E}{\mathbb E}
+\begin{document}
+\title{A007: shared-core root normalization}
+\author{A007, stream B02}
+\date{12 October 2026}
+\maketitle
+All logarithms are base two. This is a component theorem, not full FEI.
+
+Let $B=\bigvee_{l=1}^m b_l$ be a nonconstant indicator on a finite uniform
+data cube, with $\rho_l=\E b_l>0$. Let $A_r$ be a conjunction on $r\ge1$
+fresh fair coordinates, put $p=2^{-r}$, $b=\E B$, $g=2B-1$, and
+$F=2A_rB-1$. Represent $F$ by gates $h_l=2A_rb_l-1$.
+Fix $\lambda_l>0$ with $\sum_l\lambda_l\le1$. This implies all fractional
+incidence constraints. Set
+\[
+ \pi_l=p\rho_l,\quad s=\sum_l\lambda_l\rho_l,\quad
+ D=\prod_l(1+p\lambda_l\rho_l)-1,\quad
+ \Lambda=\log(D+1),\quad Z=\frac D{D+1}.
+\]
+Thus $\Lambda+\log Z=\log D$ exactly.
+\begin{theorem}
+There are actual partition-forest laws in the conditioned queue, with
+root count $K$, for which, writing $v=\operatorname{Var}(F)$,
+$I_d=pI(g)$ and $I_c=2rpb$,
+\begin{align*}
+ T_{\rm root}
+ &: =v(\Lambda+\log Z)
+     +\sum_{A\ne\varnothing}\widehat F(A)^2
+        \E\sum_{l\text{ root}}\log\frac1{\pi_l}\\
+ &=v\log s+v\delta+r(\E K-v)
+       +\E\sum_{l\text{ root}}\log\frac1{\rho_l},\\
+ 0&\le\delta=\log\frac D{ps}\le ps\log e,\\
+ 0&\le r(\E K-v)\le \tfrac12 I_d,
+ \qquad v\delta\le(\log e)I_c.
+\end{align*}
+Here $\E K$ denotes the unconditioned spectral-weighted expectation on
+nonempty sets, not an expectation renormalized by $v$.
+Consequently
+\[
+ T_{\rm root}\le
+ \E\sum_{l\text{ root}}\log\frac1{\rho_l}
+       +(\log e)I(F).
+\]
+\end{theorem}
+\begin{proof}
+For $a=ps$, expansion gives $D\ge a$; also
+$D\le e^a-1\le ae^a$. Taking logarithms proves the bound on $\delta$.
+
+Write a spectral set as $U\cup T$, with $U$ in the shared core. If
+$U\ne\varnothing$, assign all $U$ to one gate $l_0$, and assign the data
+coordinates to gates containing them. The gate $l_0$ reaches every other
+used gate through any fixed coordinate of $U$. A star with these
+attachments is a valid forest rooted in the unique source strongly
+connected component, and has $K=1$. Each gate is visited once and the
+selected subsets partition the output. If $U=\varnothing$, any
+source-component spanning forest on an assignment of $T$ has
+$1\le K\le |T|$. All prescribed queue draws have positive probability.
+
+For nonempty $U\cup T$, $\widehat F(U\cup T)=2p\widehat B(T)$, whereas
+$\widehat F(\varnothing)=2pb-1$. Therefore
+\[
+ v=4pb(1-pb),\qquad I(F)=pI(g)+2rpb,
+ \qquad I(g)=4\sum_T|T|\widehat B(T)^2.
+\]
+Only the empty-core, nonempty-data sets contribute to $\E K-v$, so
+\[
+ 0\le\E K-v
+ =4p^2\sum_{T\ne\varnothing}\widehat B(T)^2
+     (\E[K\mid U=\varnothing,T]-1)
+ \le p^2I(g).
+\]
+The elementary inequality $r2^{-r}\le1/2$ proves the claimed bound on
+$r(\E K-v)$. Finally
+\[
+ v\delta\le4pb\,ps\log e
+   =\frac{2ps}{r}(\log e)I_c\le(\log e)I_c.
+\]
+Substitute $\log D=-r+\log s+\delta$ and
+$\log(1/\pi_l)=r+\log(1/\rho_l)$ to obtain the exact identity.
+Now $\log s\le0$ and $\log e\ge1/2$ give the conclusion.
+\end{proof}
+
+For disjoint private conjunctions of widths $w_l$, put
+$\rho_l=2^{-w_l}$ and $Q=\prod_l(1-\rho_l)$. The canonical assignment
+has one root per touched private block when $U=\varnothing$. Tensor
+factorization of $1-B=\prod_l(1-b_l)$ gives exactly
+\[
+ \E K-v=4p^2Q\left(\sum_l\rho_l-(1-Q)\right).
+\]
+This is positive for two or more petals, but has the required $p^2$
+suppression.
+
+For completeness, a fixed prior over entire references can be paid:
+$\lambda_l^{(j)}=2^{-j}\lambda_l$ and
+$w_j=1/[(j+1)(j+2)]$ for $j\ge0$. Every conditioned component is a
+subprobability, and the weights sum to one. Selecting $j=0$ in the
+mixture adds exactly $v\le2I(F)$ to the full spectral cross-entropy.
+Its $D_j$, witness costs and prior penalty must always be kept together.
+This does not pay the remaining base rarity, labels, ranks or congestion.
+\end{document}

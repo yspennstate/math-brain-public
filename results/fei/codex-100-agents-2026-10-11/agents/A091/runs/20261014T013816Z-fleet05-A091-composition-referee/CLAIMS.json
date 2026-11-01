@@ -1,0 +1,129 @@
+[
+  {
+    "claim_id": "A059-INTERLEAVED-BIASED-STOPPING-RESERVE",
+    "version": 1,
+    "exact_statement": "For F=sum_j C_j u_j with a finite exclusive controller partition and pairwise disjoint independent Boolean data cores, every finite adaptive physical tree interleaving data and controller queries admits U=sum q_j[H(u_j)-eta(m_j^2)] and R=sum q_j log2(1/q_j)(1-m_j^2). At a controller query, U is a martingale and kappa=R-E R_child=sum_j q_j V_j D_2(P(X|C_j)||uniform)>=0. At a data query in core j, R-E R_child=q_j log2(1/q_j)beta_j^2 and D_iH(F)<=U+R-E(U_child+R_child)+(3/ln2)q_j beta_j^2. Hence R_root=E R_leaf+sum_data w q_j log2(1/q_j)beta_j^2+sum_controller w kappa, and sum_data w cap+E R_leaf+sum_controller w kappa<=((1+2/e)/ln2)Pi_data+R_root, with R_root<=2I_ctrl(root). The full stopped entropy bound retains E H(F_leaf), U_root-E U_leaf, R_root-E R_leaf and sum_controller w(DH-kappa); no universal price for that residual is asserted.",
+    "hypotheses": [
+      "Finite uniform physical cube; independent disjoint controller and data blocks, each selected core on its own physical cube; Boolean sign outputs.",
+      "Exclusive selector indicators C_j partition controller assignments; constant output states and biased core outputs are permitted.",
+      "Each adaptive tree step queries one currently unrevealed physical coordinate and children have fair reach probabilities; arbitrary stopping frontiers and interleavings.",
+      "H, eta and KL use bits; eta(x)=x log2(1/x). Endpoint caps and zero-probability terms are zero. Shared physical DATA between cores is excluded."
+    ],
+    "statement_sha256": "751c4dfb5c28dc0715e0148810bb712da3d72761db3c29b1f46995ec2d03ab21",
+    "contributors": [
+      "A059",
+      "A056/A057 upstream recentered split and positive cap envelope"
+    ],
+    "proof_source": {
+      "run": "20261013T235852Z-fleet05-A059-decomposition-depth",
+      "path": "PROOF.md",
+      "locators": "Sections 1-4; growing-depth test Section 5"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A056-BIASED-ERASURE",
+        "version": 2,
+        "scope": "exact signed row split/envelope independently reconstructed here"
+      },
+      {
+        "claim_id": "A057-EXCLUSIVE-SELECTOR-VARIANCE-CAP-PAYMENT",
+        "version": 1,
+        "scope": "Sections 1,3,4 independently accepted locally; fresh suffix subclaim not reviewed"
+      },
+      "Elementary physical variance/influence conservation, selector KL concavity and indicator isoperimetry"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A091 fleet05 B19",
+        "date_utc": "2026-10-14T01:56:45.063326+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE_NO_SUBSTANTIVE_REPAIR",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A091\\runs\\20261014T013816Z-fleet05-A091-composition-referee\\REVIEW_A059.md",
+        "method": "Independent raw centered-moment controller/core representation, explicit unnormalized outer row transform, actual controller conditional-KL reset, signed empty-core cancellation, and all-frontier reserve/influence telescopes with exact rational logs",
+        "validation": {
+          "completed_roots": 2130,
+          "completed_trees": 8520,
+          "completed_frontiers": 39940,
+          "main_counted_exact_assertions": 418779
+        },
+        "dependency_alias_resolution": {
+          "source": "A056-BIASED-ERASURE@2",
+          "actual_export": "A056-DISJOINT-COMPOSITION@2; BIASED_ERASURE_INTERFACE.json",
+          "impact": "Algebra independently reconstructed; B20 normalize source alias before shared-index adoption"
+        },
+        "scope_exclusions": [
+          "No general controller residual price",
+          "No arbitrary core/terminal entropy payment",
+          "No shared physical data extension",
+          "A091 point residual and profile extension are separate authored results"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_ACCEPTED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A056",
+      "A057",
+      "A091",
+      "A090",
+      "A024",
+      "A064",
+      "A097",
+      "B12",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A091-POINT-CONTROLLER-RESIDUAL-AND-BOUNDARY",
+    "version": 1,
+    "exact_statement": "For every finite uniform Boolean core u and r>=1 fresh point controls, F=1+A_r(u-1), every actual controller query in any finite adaptive physical restriction tree satisfies 0<=D_control-kappa<=(3+2/ln2)Inf_control, where kappa=R-E R_child and R=q log2(1/q)(1-m^2) for the live residual point activation. Thus the actual stopped sum of controller residuals costs at most (3+2/ln2)Pi_control. For every exclusive controller with independent disjoint Boolean cores, U=sum q_j[H(u_j)-eta(m_j^2)] and R=sum eta(q_j)V_j satisfy H(F)-U-R=Eraw(ghat^2)+sum_{q_j>0}q_j V_j H(Chat_j^2/q_j)>=0, g=sum m_j C_j. At any actual controller-resolved leaf this quantity is eta(m_j^2)<=I(F_leaf)/ln2. Combining the reviewed interleaved DATA identity gives H(F_root)<=U_root+R_root+(3/ln2)T_data+(3+2/ln2)Pi_control+E[H_leaf-U_leaf-R_leaf] for point activations, and the last term is <=E I_leaf/ln2 if its actual controller states are resolved. Arbitrary inherited core entropy and unresolved-controller payment are not asserted.",
+    "hypotheses": [
+      "Finite uniform independent physical cube; genuine Boolean signs; point controls fresh and disjoint from the core for the controller price.",
+      "Adaptive finite singleton physical trees query only unrevealed coordinates, with actual physical reach probabilities and actual stopping functions.",
+      "For the profile identity, exclusive controller indicators partition assignments and each Boolean core occupies its own independent data cube; constants allowed.",
+      "Entropy and KL units bits; eta(x)=x log2(1/x), Eraw is raw squared-amplitude entropy without mean-profile renormalization; zero terms omitted.",
+      "Controller-resolved means its actual remaining selector label is constant, even if irrelevant controller coordinates remain; no boundary price is asserted at unresolved-controller leaves."
+    ],
+    "statement_sha256": "e342cd958b1d03627fe6208b97a4a64ef4c9c264dd09b612b7dae59bbce67a9d",
+    "contributors": [
+      "A091"
+    ],
+    "proof_source": {
+      "run_id": "20261014T013816Z-fleet05-A091-composition-referee",
+      "path": "POINT_CONTROL_PAYMENT.md",
+      "validation": [
+        "out/CHECK.json",
+        "out/PROFILE.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A059-INTERLEAVED-BIASED-STOPPING-RESERVE",
+        "version": 1,
+        "status": "Independently reconstructed and accepted in this run"
+      },
+      {
+        "source": "Closed C005 two-point physical channel bound; A019 b(z)<=3z scalar packet bound",
+        "scope": "Both scalar derivations reconstructed directly in POINT_CONTROL_PAYMENT.md, no source optimization or full theorem assumed"
+      }
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A059",
+      "A057",
+      "A064",
+      "A024",
+      "A050",
+      "A090",
+      "A085",
+      "B12",
+      "B19",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,444 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\TV}{\mathrm{TV}}
+\newcommand{\ee}{\mathrm e}
+
+\title{Mutual Singularity of Binary and Ternary Harmonic Codings of the Middle-Third Cantor Set}
+\author{}
+\date{September 18, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $E\subset[0,1]$ be the middle-third Cantor set.  For an integer base $b\ge2$, let $T_{[b]}(E)$ be the maximal $b$-adic coding tree of $E$, let $\mu_b$ be harmonic measure of simple random walk on this tree, and let $\nu_b$ be its pushforward to $E$.  Lyons and Peres ask in Question 16.7 of \emph{Probability on Trees and Networks} whether $\nu_2$ and $\nu_3$ are mutually singular; $\nu_3$ is Cantor--Lebesgue measure.  We prove that
+\[
+   \nu_2\perp\nu_3.
+\]
+The proof combines an exact Hellinger-affinity cocycle, an electrical-network certificate giving a robust open family of dyadic sceneries with a strict harmonic/Cantor split discrepancy, and a $\times2/\times3$ Fourier-mixing argument based on the digit-change estimate of Allen--Chow--Yu.  The finite rational core of the conductance comparison is independently reproducible by exact-arithmetic scripts included with the research package.
+\end{abstract}
+
+\section{The source question and notation}
+
+For $n\ge0$ and $0\le k<2^n$, write
+\[
+ I_{k,n}:=[k2^{-n},(k+1)2^{-n}].
+\]
+The maximal dyadic coding tree $T_{[2]}(E)$ has, at level $n$, one vertex for each dyadic interval $I_{k,n}$ meeting $E$, with the evident parent-child containment relation.  The analogous definition gives $T_{[b]}(E)$ for every base $b$.  The use of closed coding intervals only creates the usual countable endpoint multiplicities.  These are null for the measures considered below: Cantor--Lebesgue measure is atomless, and harmonic measure of simple random walk on a transient unit-conductance tree has no atom at a single end.  Indeed, an atom of mass $a>0$ at one end would force current at least $a$ along every edge of the corresponding infinite ray, contradicting finiteness of the unit-current energy.
+
+Let
+\[
+   \mu:=\nu_2,\qquad \nu:=\nu_3.
+\]
+The measure $\nu$ is the usual Cantor--Lebesgue measure.  We use half-open dyadic cells when forming measurable partitions, which changes no mass because of the preceding endpoint observation.
+
+The maintained online edition of Lyons--Peres still states the following as Question 16.7: is $\nu_2\perp\nu_3$?  Our main theorem answers this affirmatively.
+
+\begin{theorem}\label{thm:main}
+For the middle-third Cantor set,
+\[
+   \nu_2\perp\nu_3.
+\]
+\end{theorem}
+
+\section{Hellinger affinity and the exact cocycle}
+
+Let $\mathcal D_n$ be the level-$n$ dyadic partition and define
+\[
+ A_n:=\sum_{I\in\mathcal D_n}\sqrt{\mu(I)\nu(I)}.
+\]
+
+\begin{lemma}[Hellinger criterion]\label{lem:hellinger}
+The sequence $(A_n)$ is nonincreasing and
+\[
+  \mu\perp\nu \quad\Longleftrightarrow\quad A_n\longrightarrow0.
+\]
+\end{lemma}
+
+\begin{proof}
+Put $\rho=(\mu+\nu)/2$, let $f=d\mu/d\rho$ and $g=d\nu/d\rho$, and let $\mathcal F_n$ be the dyadic sigma-field.  If
+\[
+  f_n=\E_\rho[f\mid\mathcal F_n],\qquad
+  g_n=\E_\rho[g\mid\mathcal F_n],
+\]
+then a direct calculation on each dyadic atom gives
+\[
+  A_n=\int\sqrt{f_ng_n}\,d\rho.
+\]
+Refining one atom and applying Cauchy--Schwarz shows $A_{n+1}\le A_n$.  Martingale convergence gives $f_n\to f$ and $g_n\to g$ almost surely and in $L^1$; since $0\le f_n,g_n\le2$, dominated convergence gives
+\[
+  A_n\longrightarrow\int\sqrt{fg}\,d\rho.
+\]
+The last integral is zero exactly when $fg=0$ $\rho$-almost everywhere, which is equivalent to mutual singularity.
+\end{proof}
+
+For a level-$n$ dyadic cell $v$ with positive mass under both measures, let $v0,v1$ denote its two children and put
+\[
+ p_v:=\frac{\mu(v0)}{\mu(v)},\qquad
+ q_v:=\frac{\nu(v0)}{\nu(v)},\qquad
+ w_n(v):=\frac{\sqrt{\mu(v)\nu(v)}}{A_n}.
+\]
+Zero-mass cases are interpreted by the evident limiting convention.  Let
+\[
+ h(p,q):=\sqrt{pq}+\sqrt{(1-p)(1-q)}.
+\]
+Then expansion over the two children gives the exact identity
+\begin{equation}\label{eq:cocycle}
+ \frac{A_{n+1}}{A_n}=\sum_{v\in\mathcal D_n}w_n(v)h(p_v,q_v).
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:hell-loss}
+ 1-h(p,q)
+ =\frac12\Big[(\sqrt p-\sqrt q)^2+(\sqrt{1-p}-\sqrt{1-q})^2\Big]
+ \ge \frac12(p-q)^2.
+\end{equation}
+The final inequality follows by applying Cauchy--Schwarz to the two-vectors $(\sqrt p,\sqrt{1-p})$ and $(\sqrt q,\sqrt{1-q})$.
+
+\begin{corollary}\label{cor:finite-series}
+If $A_\infty:=\lim_nA_n>0$, then
+\[
+ \sum_{n=0}^\infty \E_{w_n}\big[(p_v-q_v)^2\big]<\infty.
+\]
+\end{corollary}
+
+\begin{proof}
+Write $L_n:=\sum_vw_n(v)(1-h(p_v,q_v))$.  Equation \eqref{eq:cocycle} gives $A_{n+1}=A_n(1-L_n)$.  If $A_\infty>0$, then
+\[
+ \sum_n -\log(1-L_n)=\log(A_0/A_\infty)<\infty.
+\]
+Since $-\log(1-x)\ge x$ and \eqref{eq:hell-loss} holds pointwise, the claim follows.
+\end{proof}
+
+Thus it is enough to find infinitely many levels carrying a uniformly positive $w_n$-mass of cells with a uniformly nonzero split discrepancy.
+
+\section{A robust electrical split discrepancy}
+
+We first produce one strict infinite-tree discrepancy and then make it robust.
+
+\subsection{The certified base scenery}
+
+Consider the level-$7$ dyadic parent
+\[
+ D_0=I_{4,7}=[4/128,5/128].
+\]
+Its intersection with $E$ is the single level-$5$ ternary cylinder
+\[
+ C_0=[8/3^5,9/3^5].
+\]
+After affinely normalizing $D_0$ to $[0,1]$, the Cantor copy has the form
+\[
+ K_{u_0,r_0}=u_0+r_0E,\qquad
+ u_0=\frac{52}{243},\quad r_0=\frac{128}{243}.
+\]
+The exact relations
+\[
+ \frac{u_0}{r_0}=\frac{13}{32}<1,
+ \qquad
+ \frac{1-u_0-r_0}{r_0}=\frac{63}{128}<9,
+ \qquad
+ \frac{1/2-u_0}{r_0}=\frac{139}{256}\in(1/3,2/3)
+\]
+show that the dyadic midpoint lies in the central third gap.  Hence Cantor measure gives the two dyadic children equal conditional mass, so $q=1/2$.
+
+Let $C_L,C_R$ be the effective conductances from the two dyadic children to infinity in the descendant coding trees, and let
+\[
+ G_L=\frac{C_L}{1+C_L},\qquad G_R=\frac{C_R}{1+C_R}
+\]
+be the conductances including the parent-child edges.  The harmonic left split is
+\[
+ p=\frac{G_L}{G_L+G_R}.
+\]
+Exact variational bounds give
+\begin{equation}\label{eq:branch-bounds}
+ G_L\ge \frac{22568879259648}{72515958735737},
+ \qquad
+ G_R\le \frac{13703}{45323}.
+\end{equation}
+The first is a Thomson-principle lower bound on conductance obtained from an explicit unit flow, and the second is a Rayleigh upper bound obtained by wiring the right descendant subtree at radius six.  In particular,
+\begin{equation}\label{eq:split-lower}
+ p\ge
+ \frac{1022889314685026304}{2016575497240830415}
+ >\frac12.
+\end{equation}
+We record enough detail to make the variational certificate transparent.
+
+Let $d=\log_3 2$.  Cantor measure satisfies the elementary Frostman bound
+\begin{equation}\label{eq:frostman}
+ \nu(J)\le2|J|^d
+\end{equation}
+for every interval $J$.  To see this, choose $m$ so that $3^{-(m+1)}\le|J|<3^{-m}$.  The level-$(m+1)$ Cantor intervals have length $a=3^{-(m+1)}$, mass $a^d$, and gaps at least $a$; an interval of length $<3a$ meets positive Cantor mass in at most two such intervals.
+
+Condition $\nu$ on the left dyadic child $I_{8,8}$ and use that boundary measure as a unit flow in its coding subtree.  The exact energy through the first eight descendant levels is
+\[
+ \frac{955961}{524288}.
+\]
+For descendant depth $r\ge9$, \eqref{eq:frostman} and $\nu(I_{8,8})=1/64$ imply that the squared-current contribution is at most $128q_0^{8+r}$ where $q_0=2^{-d}<2/3$.  Hence the remaining energy is less than
+\[
+ 384(2/3)^{17}=\frac{16777216}{43046721}.
+\]
+The total trial-flow energy is therefore less than
+\[
+ E_*:=\frac{49947079476089}{22568879259648},
+\]
+which gives the left inequality in \eqref{eq:branch-bounds}.  The radius-six wired right network has exact descendant conductance $13703/31620$, hence branch conductance $13703/45323$, giving the right inequality.
+
+\subsection{Wired exhaustion}
+
+We will repeatedly use the following standard fact.
+
+\begin{lemma}\label{lem:wired}
+For a descendant coding subtree rooted at $v$, let $C_R(v)$ be the effective conductance when vertices at graph distance $R$ are wired to a sink.  Then $C_R(v)$ decreases to the effective conductance $C_\infty(v)$ from $v$ to infinity.
+\end{lemma}
+
+\begin{proof}
+Rayleigh monotonicity gives $C_{R+1}\le C_R$, equivalently $R_R:=1/C_R$ is nondecreasing.  Restricting any unit flow to infinity to the depth-$R$ cutset gives $R_\infty\ge R_R$.  Conversely, if $\sup_RR_R<\infty$, take energy-minimizing finite flows and use diagonal compactness on the countable edge set; a subsequence converges edgewise to a unit flow to infinity, and lower semicontinuity of the squared-current energy gives energy at most $\sup_RR_R$.  If $\sup_RR_R=\infty$, both resistances are infinite.  Thus $R_R\uparrow R_\infty$ and $C_R\downarrow C_\infty$.
+\end{proof}
+
+\subsection{An open gap neighborhood}
+
+\begin{lemma}[robust harmonic gap]\label{lem:robust-gap}
+There are open intervals $U\ni u_0$, $R\ni r_0$ and $\eta>0$ such that for every $(u,r)\in U\times R$, the scaled Cantor set $K_{u,r}=u+rE\subset(0,1)$ satisfies:
+\begin{enumerate}
+\item $1/2$ lies in the central third gap of $K_{u,r}$;
+\item the natural Cantor measure on $K_{u,r}$ has dyadic root split $q=1/2$;
+\item harmonic measure on the maximal dyadic coding tree of $K_{u,r}$ has left split $p\ge1/2+\eta$.
+\end{enumerate}
+The neighborhood may additionally be chosen so that
+\begin{equation}\label{eq:margins-neigh}
+ \frac ur<1,\qquad \frac{1-u-r}{r}<9,
+ \qquad 0<u<u+r<1,
+ \qquad \frac{1/2-u}{r}\in(1/3,2/3).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The midpoint and margin inequalities are strict at $(u_0,r_0)$, so they persist in a small product neighborhood.
+
+For the left branch, use the natural Cantor measure on the left ternary third of $K_{u,r}$ as a unit flow down the corresponding dyadic descendant tree.  At any fixed finite depth, its energy is a finite sum of squares of masses of intervals whose endpoints depend continuously on $(u,r)$.  Since the Cantor distribution function is continuous, every finite-depth energy is continuous.
+
+The energy tails converge uniformly on a neighborhood with $r$ bounded away from zero.  Indeed, after affine scaling the Frostman estimate \eqref{eq:frostman} yields
+\[
+ \max_{J\text{ at dyadic depth }s}\text{flow}(J)\le C2^{-ds}
+\]
+with $C$ uniform on that neighborhood.  The flow masses at each level sum to one, so the level energy is at most the maximum flow mass.  Hence the tail is bounded by a uniform geometric series.  Therefore the full trial-flow energy is continuous in $(u,r)$.
+
+At the base point this trial energy is strictly below $E_*$, and
+\[
+ \frac1{1+E_*}=\frac{22568879259648}{72515958735737}
+ >\frac{13703}{45323}.
+\]
+Thus, after shrinking the neighborhood, the resulting lower bound for the left branch conductance remains strictly larger than $13703/45323$.
+
+For the right branch, retain the same radius-six wired comparison.  Its topology depends on only finitely many normalized dyadic boundaries through relative level seven.  At $(u_0,r_0)$ none of these boundaries lies in $u_0+r_0E$; this is certified exactly by the finite script in the accompanying package.  Because the scaled Cantor set is compact and the boundary set is finite, there is a positive minimum separation.  Small perturbations of $(u,r)$ therefore cross no relevant dyadic boundary, so the radius-six wired topology is unchanged.  Its branch conductance remains exactly bounded above by $13703/45323$.
+
+The strict gap between the uniform left lower bound and the right upper bound gives a uniform $\eta>0$ in the current-split ratio.  Shrinking once more gives \eqref{eq:margins-neigh}.
+\end{proof}
+
+\section{The overlap measure under hypothetical non-singularity}
+
+Assume, toward contradiction, that $\mu$ and $\nu$ are not mutually singular.  By Lemma \ref{lem:hellinger}, $A_n\to A_\infty>0$.  Retain $\rho,f,g,f_n,g_n$ from the proof of Lemma \ref{lem:hellinger} and define
+\begin{equation}\label{eq:lambda-n}
+ \frac{d\lambda_n}{d\rho}:=\frac{\sqrt{f_ng_n}}{A_n}.
+\end{equation}
+Then $\lambda_n$ is a probability measure and, on each level-$n$ dyadic cell $v$,
+\begin{equation}\label{eq:lambda-weight}
+ \lambda_n(v)=\frac{\sqrt{\mu(v)\nu(v)}}{A_n}=w_n(v).
+\end{equation}
+Since $0\le f_n,g_n\le2$, martingale convergence and dominated convergence imply
+\[
+ \sqrt{f_ng_n}\longrightarrow\sqrt{fg}\quad\text{in }L^1(\rho).
+\]
+Consequently
+\begin{equation}\label{eq:tv}
+ \lambda_n\longrightarrow\lambda\quad\text{in total variation},
+ \qquad
+ \frac{d\lambda}{d\rho}=\frac{\sqrt{fg}}{A_\infty}.
+\end{equation}
+In particular $\lambda\ll\nu$ and $\lambda\ll\mu$.  Most importantly, for every sequence of measurable events $B_n$,
+\begin{equation}\label{eq:varying}
+ |\lambda_n(B_n)-\lambda(B_n)|
+ \le \|\lambda_n-\lambda\|_{\TV}\longrightarrow0.
+\end{equation}
+This removes the possibility that the Hellinger weights permanently hide on a moving exceptional family of balanced cells while the fixed overlap law sees the robust gap.
+
+\section{Dyadic--ternary scenery mixing}
+
+Write every nonendpoint $x\in E$ uniquely as
+\[
+ x=\sum_{j\ge1}\xi_j3^{-j},\qquad \xi_j\in\{0,2\}.
+\]
+Under $\nu$, the digits are independent and equiprobable.  Set
+\[
+ \alpha=\log_3 2,\qquad
+ m_n=\lceil\alpha n\rceil,\qquad
+ r_n=\frac{2^n}{3^{m_n}}=3^{\{\alpha n\}-1}\in(1/3,1),
+\]
+and let
+\[
+ a_m(x)=\sum_{j=1}^m\xi_j3^{-j},
+ \qquad
+ u_n(x)=\{2^n a_{m_n}(x)\}\in[0,1).
+\]
+The number $\alpha$ is irrational, since a rational relation would imply $2^q=3^p$ for nonzero integers $p,q$.
+
+We use the following two published arithmetic facts from Allen--Chow--Yu \cite{ACY}.  Write $e(t)=e^{2\pi it}$.  If $D_3(y;L,M)$ counts ternary digit changes between positions $L$ and $M$, counting from the left, their Lemma 2.6 gives a constant $\rho_0<1$ such that
+\begin{equation}\label{eq:ACY-product}
+ \left|\prod_{j=L+1}^M\frac{1+e(2^{n+1}k/3^j)}2\right|
+ \le \rho_0^{D_3(2^{n+1}|k|;L,M)}
+\end{equation}
+for $k\ne0$.  Their Theorem 1.13 (Stewart; Bugeaud--Cipu--Mignotte) says that for multiplicatively independent bases $2,3$,
+\begin{equation}\label{eq:digit-change}
+ D_2(N)+D_3(N)\longrightarrow\infty
+\end{equation}
+as $N\to\infty$, in fact with an effective quantitative lower bound.
+
+\begin{lemma}[suffix--position mixing]\label{lem:mixing}
+Let $\lambda\ll\nu$.  Fix $L\ge1$ and $s\in\{0,2\}^L$.  For every continuous function $\phi$ on the circle,
+\begin{equation}\label{eq:mixing}
+ \int \one_{\{(\xi_{m_n-L+1},\ldots,\xi_{m_n})=s\}}
+       \phi(u_n(x))\,d\lambda(x)
+ \longrightarrow 2^{-L}\int_0^1\phi(t)\,dt.
+\end{equation}
+Consequently, for every interval $J\subset[0,1)$ whose endpoints have Lebesgue measure zero,
+\[
+ \lambda\{\text{suffix}_L(m_n)=s,\ u_n\in J\}
+ \longrightarrow 2^{-L}|J|.
+\]
+\end{lemma}
+
+\begin{proof}
+Let $h=d\lambda/d\nu$.  Approximate $h$ in $L^1(\nu)$ by its conditional expectations $h_K$ on the first $K$ ternary digits.  The approximation error against the bounded integrand in \eqref{eq:mixing} is at most $\|h-h_K\|_1\|\phi\|_\infty$, uniformly in $n$.  It therefore suffices to work with a fixed cylinder density $h_K$ and then let $K\to\infty$.
+
+By uniform trigonometric approximation, it suffices to take $\phi(t)=e(kt)$ for fixed $k\in\mathbb Z$.  For $k=0$ and $m_n>K+L$, the prescribed final $L$ digits are independent of the first $K$ digits under $\nu$, so the integral is exactly $2^{-L}\int h_K\,d\nu=2^{-L}$.
+
+Fix $k\ne0$.  Condition on the first $K$ digits and on the final word $s$.  The middle digits $\xi_{K+1},\ldots,\xi_{m_n-L}$ remain independent and uniform in $\{0,2\}$.  Apart from a phase of modulus one, the conditional Fourier coefficient therefore has modulus
+\begin{equation}\label{eq:fourier-product}
+ \prod_{j=K+1}^{m_n-L}
+ \left|\frac{1+e(2^{n+1}k/3^j)}2\right|.
+\end{equation}
+By \eqref{eq:ACY-product}, this is at most
+\[
+ \rho_0^{D_3(2^{n+1}|k|;K,m_n-L)}.
+\]
+Let $y_n=2^{n+1}|k|$.  Multiplication by a power of two merely appends binary zeroes, so $D_2(y_n)$ is bounded in $n$ for fixed $k$.  By \eqref{eq:digit-change}, $D_3(y_n)\to\infty$.
+
+Let $\Delta_3(y)$ be the number of ternary digits of $y$.  Then
+\[
+ \Delta_3(y_n)=\lfloor(n+1)\log_3 2+\log_3|k|\rfloor+1
+ =\alpha n+O_k(1)=m_n+O_k(1).
+\]
+Removing the first $K$ digit positions, the final $L$ positions, and the bounded number of positions between $m_n$ and $\Delta_3(y_n)$ can remove only $O_{K,L,k}(1)$ digit changes.  Hence
+\[
+ D_3(y_n;K,m_n-L)\longrightarrow\infty.
+\]
+Thus every nonzero Fourier coefficient tends to zero.  This proves \eqref{eq:mixing} for fixed $h_K$, and the uniform $L^1$ approximation gives it for arbitrary $h$.  Approximation of interval indicators from above and below by continuous functions yields the final assertion.
+\end{proof}
+
+\section{A recurrent finite block forces nonsummable Hellinger loss}
+
+We now use the suffix $s=22$ and the open sets $U,R$ from Lemma \ref{lem:robust-gap}.
+
+\begin{lemma}[isolation by the suffix $22$]\label{lem:isolate}
+Let $C$ be a level-$m$ Cantor cylinder of length $\ell=3^{-m}$ whose last two ternary digits are $22$.  If a previous level-$m$ cylinder exists, its right endpoint lies exactly $\ell$ to the left of $C$'s left endpoint.  If a next level-$m$ cylinder exists, its left endpoint lies at least $9\ell$ to the right of $C$'s right endpoint.
+\end{lemma}
+
+\begin{proof}
+Identify ternary digits $0,2$ with binary digits $0,1$.  Decrementing an address ending in $11$ replaces the final $11$ by $10$, so the two left endpoints differ by $2\ell$; subtracting the previous cylinder's length leaves a gap $\ell$.  If the terminal run of $2$'s has length $r\ge2$, incrementing the binary address changes the ternary left endpoint by $(3^r+1)\ell$, so the gap after the current cylinder is $3^r\ell\ge9\ell$.
+\end{proof}
+
+For $x\in E$, let $C_n(x)$ be its level-$m_n$ Cantor cylinder.  Whenever the suffix of the first $m_n$ digits is $22$ and $(u_n(x),r_n)\in U\times R$, the margin conditions \eqref{eq:margins-neigh} and Lemma \ref{lem:isolate} imply that the level-$n$ dyadic cell $D_n(x)$ containing $C_n(x)$ meets $E$ only in that cylinder.  After normalization to $[0,1]$, the scenery is exactly $u_n(x)+r_nE$.  Therefore
+\begin{equation}\label{eq:good-split}
+ q_{D_n(x)}=\frac12,\qquad
+ p_{D_n(x)}\ge\frac12+\eta.
+\end{equation}
+Modulo the null endpoint set, the good event is a union $G_n$ of whole level-$n$ dyadic cells.
+
+Since $\alpha$ is irrational, $\{\alpha n\}$ is equidistributed modulo one.  The set
+\[
+ N_R:=\{n:r_n\in R\}
+\]
+has positive natural density.  Apply Lemma \ref{lem:mixing} to the overlap measure $\lambda$ from \eqref{eq:tv}, with suffix $22$ and the interval $U$.  Along $n\in N_R$,
+\[
+ \lambda(G_n)\longrightarrow\frac{|U|}{4}.
+\]
+By total-variation convergence \eqref{eq:varying},
+\[
+ \lambda_n(G_n)\longrightarrow\frac{|U|}{4}
+\]
+along the same subsequence.  Hence there is a $c>0$ such that for all sufficiently large $n\in N_R$,
+\[
+ \lambda_n(G_n)\ge c.
+\]
+Using \eqref{eq:lambda-weight} and \eqref{eq:good-split},
+\[
+ \E_{w_n}[(p_v-q_v)^2]\ge c\eta^2
+\]
+for infinitely many $n$.  Therefore
+\begin{equation}\label{eq:diverge}
+ \sum_n\E_{w_n}[(p_v-q_v)^2]=\infty.
+\end{equation}
+
+\section{Proof of the main theorem}
+
+Assume that $\nu_2$ and $\nu_3$ are not mutually singular.  Corollary \ref{cor:finite-series} gives
+\[
+ \sum_n\E_{w_n}[(p_v-q_v)^2]<\infty.
+\]
+On the other hand, Sections 4--6 construct the fixed overlap law $\lambda$, establish the robust recurrent scenery event, and prove \eqref{eq:diverge}.  This contradiction shows $A_\infty=0$.  By Lemma \ref{lem:hellinger}, $\nu_2\perp\nu_3$.  This proves Theorem \ref{thm:main}.
+
+\section{Exact finite certificates and audit status}
+
+The proof uses exact finite arithmetic only for the electrical comparison and the finite no-tangency/topology core of Lemma \ref{lem:robust-gap}.  The accompanying repository package contains exact-arithmetic Python scripts and archived outputs.  In particular:
+\begin{itemize}
+\item \texttt{infinite\_split\_checker.py} certifies the first-eight-level trial-flow energy, its rational tail bound, the radius-six wired comparison, and the strict infinite harmonic split lower bound;
+\item \texttt{scenery\_gap\_checker.py} certifies the base normalized scenery, strict margin inequalities, the same conductance gap, and absence of tangency at all 133 relevant finite dyadic boundaries.
+\end{itemize}
+The scripts are self-checks, not independent audits.  Under the project closure protocol, two independent end-to-end audits by other tracks are still required before declaring fleet-level closure or public-posting readiness.
+
+\section{Prior art and imported ingredients}
+
+Lyons and Peres \cite{LP} introduced the coding-tree formulation and explicitly posed the mutual-singularity question.  Their maintained paperback/electronic version dated 19 August 2026 still labels Question 16.7 open.
+
+The only deep arithmetic input in the proof is imported from Allen, Chow and Yu \cite{ACY}.  We use their Lemma 2.6, which bounds the Fourier product \eqref{eq:ACY-product} by a power determined by ternary digit changes, and their Theorem 1.13, which records the Stewart--Bugeaud--Cipu--Mignotte lower bound for total digit changes in multiplicatively independent bases.  We do not claim either ingredient as new.  Recent work on dyadic approximation in the Cantor set, including Baker \cite{Baker}, is closely related arithmetically but does not state the coding-tree harmonic-measure conclusion proved here.
+
+A bounded literature search performed on September 18, 2026 found no source-matching published resolution.  That negative search is current-status evidence, not by itself a priority or novelty certificate.
+
+\begin{thebibliography}{9}
+
+\bibitem{LP}
+R. Lyons and Y. Peres,
+\emph{Probability on Trees and Networks},
+Cambridge Series in Statistical and Probabilistic Mathematics 42,
+Cambridge University Press, 2016; maintained paperback/electronic version dated 19 August 2026.
+
+\bibitem{ACY}
+D. Allen, S. Chow and H. Yu,
+Dyadic approximation in the middle-third Cantor set,
+\emph{Selecta Mathematica (N.S.)} \textbf{29} (2023), Article 11.
+\href{https://doi.org/10.1007/s00029-022-00814-x}{doi:10.1007/s00029-022-00814-x}.
+
+\bibitem{Baker}
+S. Baker,
+Approximating elements of the middle third Cantor set with dyadic rationals,
+\emph{Israel Journal of Mathematics} \textbf{266} (2025), 285--305.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,59 @@
+MOC4-DENSE-IN-HULL-PAIR-TRAP-v1 — exact verification summary
+status: PASS for the stated auxiliary result; NOT a proof/disproof of MOC4
+arithmetic: Python standard-library Fraction / exact Gaussian rationals
+
+common direction: (216964043, 365420756)
+all 24 support values distinct: YES
+unique target maximum: 3412 = 502510420792230
+second target vertex: 4321 = 502510420792224
+exact vertex gap: 6
+support width: 3516399730246630
+
+candidate U = Q(10^-10) P_4321, Q(t)=(I-tS)(I+tS)^(-1)
+exact orthogonality: PASS
+exact orientation: det(Q)=det(P_4321)=det(U)=1 (supplemental exact checker)
+all 16 U entries nonzero: PASS
+all 36 two-by-two minors nonzero: PASS
+
+candidate common-direction gap M-L(D):
+146559639035124021415276996805890043231942837950575743396618750000000000000006 /
+24414062500000000044433593750000000020529785156250000000284375000000000000001
+= 6.00308281487868... > 0
+
+candidate loss below the non-global 4321 trap:
+75264035124021148675434305890043108764127013075743394912500000000000000000 /
+24414062500000000044433593750000000020529785156250000000284375000000000000001
+= 0.0030828148786799063... > 0
+
+normalized target gap: 1.707167351664437e-15
+
+exact hull certificate:
+D in conv{v_1234,v_1342,v_4321}
+common denominator:
+910584953393554689157264615176269532015710887308640136729356493537128125000037297559691
+nonnegative numerators:
+2550683187709637288381932044084057229756679314392876562500000000000000
+2240297798370834692485897855498769059672512066842028125000000000000000
+910584953393554684366283629095797551147880987725813847300165112302223437500037297559691
+sum-to-denominator check: PASS
+exact reconstruction of Re(D), Im(D): PASS
+
+full embedded SU(2) row-pair maximum-improvement rigorous upper bounds:
+(1,2): 3.454490393285883e-06
+(1,3): 1.0723075830671863e-04
+(1,4): 1.9119042502592737e-04
+(2,3): 2.2504958245057665e-03
+(2,4): 4.7336422994642284e-04
+(3,4): 5.707914542190649e-05
+exact assertion for every pair: Delta_rs < 1/400
+therefore global support deficit / largest pair-orbit improvement > 2400
+
+exact Cayley determinant series through order 2:
+D(t) = v_4321 + 0*t + (-99534232-784537096 i)t^2 + O(t^3)
+second-order target-cone representation:
+alpha = 497504682718/1776074271 > 0
+beta  = 1310894256442/5328222813 > 0
+(-99534232-784537096 i) = alpha(v_1234-v_4321)+beta(v_1342-v_4321)
+
+Interpretation verified by the exact calculations above:
+a dense true-unitary family can have every elementary pair-orbit improvement tend to zero while the same common-direction deficit to the global target-support vertex tends to 6. This refutes the stronger proof lemma that approximate pair stationarity in the dense interior forces approximate global support maximality. It is NOT an MOC4 counterexample.

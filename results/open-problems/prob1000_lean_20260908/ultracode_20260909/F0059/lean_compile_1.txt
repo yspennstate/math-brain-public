@@ -1,0 +1,29 @@
+Prob1000/U_F0059.lean:42:4: error: linarith failed to find a contradiction
+case succ
+u B : ℕ → ℝ
+c : ℝ
+i0 : ℕ
+hc : 0 ≤ c
+hB0 : 0 < B i0
+hB : ∀ (i : ℕ), 2 * B i ≤ B (i + 1)
+hu : ∀ (i : ℕ), i0 ≤ i → u (i + 1) - u i ≤ c / B i
+N : ℕ
+hpos : 0 < B (i0 + N)
+hle : u (i0 + N) - u i0 ≤ 2 * c / B i0 - 2 * c / B (i0 + N)
+hpos' : 0 < B (i0 + (N + 1))
+hstep : u (i0 + N + 1) - u (i0 + N) ≤ c / B (i0 + N)
+hkey : 2 * c / B (i0 + (N + 1)) ≤ c / B (i0 + N)
+this : u (i0 + (N + 1)) - u i0 = u (i0 + N + 1) - u (i0 + N) + (u (i0 + N) - u i0)
+a✝ : 2 * c / B i0 - 2 * c / B (i0 + (N + 1)) < u (i0 + N + 1) - u (i0 + N) + (u (i0 + N) - u i0)
+⊢ False
+failed
+Prob1000/U_F0059.lean:64:4: error: Type mismatch: After simplification, term
+  this
+ has type
+  @Tendsto ℕ ℝ (u ∘ fun a => i0 + a) atTop (𝓝 0)
+but is expected to have type
+  @Tendsto ℕ ℝ (fun N => u (i0 + N)) atTop (𝓝 0)
+'F0059_telescope' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'F0059_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'F0059_limit' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+exit 1

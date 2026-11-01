@@ -1,0 +1,39 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w507",
+  "bundle_slug": "p0162-bent-splice-exact-range-w507-002",
+  "entries": [
+    {
+      "key": "bent-exact-range",
+      "namespace": "probability.boolean_fourier",
+      "logical_name": "bent-point-splice-exact-influence-and-class-extremizer-draft-w507",
+      "kind": "concept",
+      "title": "Draft exact influence range and extremizer for bent point splices",
+      "statement": "DRAFT author-derived result, independent review pending. Fix even m>=4, N=2^m, and Boolean g on the uniform m-cube with |hat(g)(T)|=1/sqrt(N) for every T. For a vertex a set h=g-2g(a)1_{z=a}, F(z,+1)=g(z), F(z,-1)=h(z), and s_g(a)=#{j:g(a)!=g(a+e_j)}. Then I(F)=m/2+(m+1-2s_g(a))/N; each s=0,...,m is attainable by a character twist of the canonical quadratic bent base. Put R=sqrt(N), K_+=(N+R)/2, K_-=(N-R)/2 and phi(t)=t log_2(1/t), phi(0)=0. H(F)=E_m=K_+phi((R-1)^2/N^2)+K_-phi((R+1)^2/N^2)+Nphi(1/N^2), independent of g and a. At fixed m the sharp class maximum H/I is E_m/[m/2-(m-1)/N], attained by the full-parity twist flipped at zero. At m=4 this example has I=29/16 and H>469/128>2I, so a canonical constant-2 bound does not extend to all bent splices. Every such splice still satisfies H<=3I. These are class results; general FEI is not proved and novelty is not certified.",
+      "proof_text": null,
+      "assumptions": [
+        "uniform input",
+        "base-2 spectral entropy",
+        "fixed even m>=4",
+        "flat Boolean Walsh spectrum",
+        "one flipped vertex on one selector branch"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-work:w507:P0162:bent-splice-exact-range",
+        "url": "urn:owner-work:w507:P0162:bent-splice-exact-range",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; independent review pending",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "bent-exact-range",
+      "to_existing_logical": "math:probability.core:open-problem-p0162-fourier-entropy-versus-total-influence",
+      "kind": "semantic_association",
+      "rationale": "An exact restricted-class entropy/influence calculation with an unproved global FEI gap; no solution or refutation of the parent target."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "fixtures": [
+    {
+      "fixture": "Final FEI cycle through actual history",
+      "PASS": true,
+      "rejection": [
+        "CYCLE_THROUGH_FINAL_FEI:FEI-FINAL@1 -> A001-NEUTRAL-CORE-ACTUAL-DATA-TRANSFER@1 -> FEI-FINAL@1"
+      ]
+    },
+    {
+      "fixture": "Accepted history depends on isolated refuted unsigned transport",
+      "PASS": true,
+      "rejection": [
+        "ACCEPTED_DEPENDS_ON_UNRESOLVED:A001-NEUTRAL-CORE-ACTUAL-DATA-TRANSFER@1",
+        "ACCEPTED_DEPENDS_ON_UNRESOLVED:A081-PHASE-AWARE-TWO-DATA-HISTORY-CERTIFICATE@1"
+      ]
+    },
+    {
+      "fixture": "Literal hypothesis changed",
+      "PASS": true,
+      "rejection": [
+        "STATEMENT_HASH:A001-NEUTRAL-CORE-ACTUAL-DATA-TRANSFER@1"
+      ]
+    },
+    {
+      "fixture": "Statement-only hash alias used as graph proof edge",
+      "PASS": true,
+      "rejection": [
+        "DEPENDENCY_HASH:A081-PHASE-AWARE-TWO-DATA-HISTORY-CERTIFICATE@1"
+      ]
+    },
+    {
+      "fixture": "Final conclusion in route premise",
+      "PASS": true,
+      "rejection": [
+        "ROUTE_ASSUMES_CONCLUSION:R-C018-COMPLETE-KL"
+      ]
+    },
+    {
+      "fixture": "phase_available",
+      "PASS": true,
+      "rejection": [
+        "MISSING_PHASE:A081-PHASE-AWARE-TWO-DATA-HISTORY-CERTIFICATE@1"
+      ]
+    },
+    {
+      "fixture": "arbitrary_supplied_reference",
+      "PASS": true,
+      "rejection": [
+        "UNPROVED_REFERENCE_EXTENSION:A081-PHASE-AWARE-TWO-DATA-HISTORY-CERTIFICATE@1"
+      ]
+    },
+    {
+      "fixture": "executed_cost_cancellation",
+      "PASS": true,
+      "rejection": [
+        "EXECUTED_COST_REFUND:A081-PHASE-AWARE-TWO-DATA-HISTORY-CERTIFICATE@1"
+      ]
+    },
+    {
+      "fixture": "descendant_bank_renewal",
+      "PASS": true,
+      "rejection": [
+        "BANK_RENEWAL:A081-PHASE-AWARE-TWO-DATA-HISTORY-CERTIFICATE@1"
+      ]
+    },
+    {
+      "fixture": "terminal_entropy",
+      "PASS": true,
+      "rejection": [
+        "TERMINAL_DEBT_DROPPED:A081-PHASE-AWARE-TWO-DATA-HISTORY-CERTIFICATE@1"
+      ]
+    },
+    {
+      "fixture": "actual_encoder_interaction",
+      "PASS": true,
+      "rejection": [
+        "ENCODER_INTERACTION_ERASED:A081-PHASE-AWARE-TWO-DATA-HISTORY-CERTIFICATE@1"
+      ]
+    },
+    {
+      "fixture": "depth_scope",
+      "PASS": true,
+      "rejection": [
+        "UNPROVED_HISTORY_DEPTH:A081-PHASE-AWARE-TWO-DATA-HISTORY-CERTIFICATE@1"
+      ]
+    }
+  ],
+  "scope": "Declared interface/ledger checks only, not an automated inference prover"
+}

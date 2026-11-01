@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T105609Z-b10-fei-2622b4",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "B10-PHYSICAL-MARGINAL-CAP-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "statement": "For every nonconstant Boolean gate under interior product biases, with output variance v=V_q and normalized nonempty spectral occurrence marginal r_i=I_i^t/v, r_i <= (V_{p_i}/V_q) min(1,m(q)/m(p_i)).",
+      "dependencies": [],
+      "scope": "all finite arities; arbitrary interior product biases; actual Boolean gates"
+    },
+    {
+      "id": "B10-CAPPED-GIBBS-DANGER-WEDGE-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "statement": "For the exact influence I-projection Q_r and Gibbs reference nu_Gamma^+, B_inf^Gamma >= Lambda_phys-T_Gamma, where Lambda_phys is the strongest one-coordinate binary-KL penalty forced when a Gibbs occurrence marginal exceeds the Boolean physical cap. Hence B_inf<0 implies Lambda_phys<T_Gamma and -B_inf<=T_Gamma-Lambda_phys.",
+      "dependencies": [
+        "IPROJ@4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+        "B10-PHYSICAL-MARGINAL-CAP-v1"
+      ],
+      "scope": "all finite arities; arbitrary interior product biases; any finite symmetric potential for which the cited Gibbs/I-projection identity applies"
+    },
+    {
+      "id": "B10-SINGLE-COORDINATE-SIGNFREE-RESERVE-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "statement": "The U={i} biased Booleanity equation gives K_occ >= F_i^2/(4 v L_i^2 ln 2), with F_i the explicit sign-free cancellation deficit in REPORT.md equations (3.2)-(3.3).",
+      "dependencies": [
+        "BOOL_GAP@603b35e74227d1c2d8ee34c0c527c439c686e30b",
+        "IPROJ@4bd6d05f1eb8325d665f2748f4d74dcee2550a04"
+      ],
+      "scope": "all finite arities; arbitrary interior product biases; actual Boolean gates"
+    },
+    {
+      "id": "B10-VIOLATOR-ADMISSIBILITY-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "statement": "Any actual violating source R_Gamma<0 must satisfy max_i F_i^2/(4 v L_i^2 ln2) < -B_inf^Gamma <= T_Gamma-Lambda_phys, in addition to every physical marginal cap.",
+      "dependencies": [
+        "B10-CAPPED-GIBBS-DANGER-WEDGE-v1",
+        "B10-SINGLE-COORDINATE-SIGNFREE-RESERVE-v1"
+      ],
+      "scope": "necessary condition for a gate-level violation; not a proof of universal nonnegativity"
+    },
+    {
+      "id": "B10-PHYSICAL-CAP-SHARPNESS-EXAMPLE-v1",
+      "status": "EXACT_CONSTRUCTION_IN_THIS_REPORT",
+      "statement": "At biases (1/10,7/20,1/2), the Boolean gate that is +1 iff x1=1 and x2 xor x3=1 has q=19/20 and r1=18/19, exactly saturating the physical cap for coordinate 1.",
+      "dependencies": ["B10-PHYSICAL-MARGINAL-CAP-v1"],
+      "scope": "explicit 3-input genuine Boolean source"
+    }
+  ],
+  "partner_result_consumed": {
+    "source": "fleet02/B10 run 20260922T104655Z-f298f290",
+    "commit": "fd0d86bca8aa49cea57cc6e6d4f5bd18e21374d3",
+    "application": "Its exact balanced two-point dictator payment theorem covers the balanced-uniform face where the new coordinate cap and kappa-based screen can be silent."
+  },
+  "next_unpaid_implication": "On the residual set passing every physical cap, Gibbs-cap test, and one-coordinate Booleanity reserve, prove a joint multicoordinate or genuinely multiscale nonreusing lower bound K_occ >= -B_inf."
+}

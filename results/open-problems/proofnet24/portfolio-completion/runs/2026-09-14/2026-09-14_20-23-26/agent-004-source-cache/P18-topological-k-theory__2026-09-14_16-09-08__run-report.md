@@ -1,0 +1,1305 @@
+# ProofNet24 P18 — Topological / Operator K-Theory
+
+**Run:** 2026-09-14 16:09:08 Asia/Jerusalem  
+**Scope:** topology/operator \(K\)-theory, magnetic Toeplitz/Pimsner–Voiculescu boundary maps, controlled representatives; **NO number theory**.  
+**Status:** substantive theorem-level progress. The previous P18 controlled bulk Fermi projection theorem remains valid. This run proves the next named bottleneck: an **explicit controlled \(K_1\) representative of the PV bulk-boundary map** for a uniformly gapped finite-range magnetic Hamiltonian. The representative lies exactly in the unitization of the boundary ideal, has an explicit finite-propagation/error bound, has the correct ordinary \(K_1\) image, and is natural under magnetic cocycle homotopy and the fixed-factor maps already proved in P17. The fully measured bulk-boundary index formula remains open.
+
+---
+
+## 0. Exact unresolved lemma recovered before work
+
+The complete previous P18 report is
+
+`P18_topological_K_theory_2026-09-14_14-55.md`
+
+(ChatGPT Library file `file_00000000270481f4bad3a37d3513ca7f`).
+
+Its exact next theorem target was:
+
+> **Controlled bulk-boundary continuation.**  
+> Given the uniformly gapped finite-range magnetic family \(H_t\) and a finite-range half-space/PV lift, construct controlled representatives for:
+> - the bulk Fermi class \(P_t\);
+> - the boundary class
+>   \[
+>   \partial_t[P_t]\in K_1(A_{tB}^{\parallel}(\Omega));
+>   \]
+> - a finite-propagation boundary unitary representing that class with explicit error,
+> and prove magnetic-homotopy/factor-map naturality.
+
+The source magnetic bulk algebra is
+\[
+A_t
+=
+C(\Omega)\rtimes_{\tau,\sigma_{tB},r}\mathbb Z^d,
+\qquad
+\sigma_{tB}(n,m)
+=
+e^{\pi i t n^TBm},
+\]
+with:
+
+- \(\Omega\) compact metrizable;
+- \(\tau:\mathbb Z^d\curvearrowright\Omega\) continuous;
+- \(B\) a fixed real skew matrix;
+- \(t\in[0,1]\).
+
+Because \(\mathbb Z^d\) is amenable, full and reduced twisted crossed products agree in P17/P18.
+
+The previous P18 theorem `P18-MAG-CTRL` already proved that a finite-range self-adjoint section
+\[
+H=H^*\in M_r(\mathfrak A_R)
+\]
+with uniform Fermi gap
+\[
+\operatorname{spec}(H_t)
+\subset
+[-M,-\delta]\cup[\delta,M]
+\]
+has one exact global Fermi projection
+\[
+P\in M_r(\mathfrak A),
+\qquad
+q_t(P)=P_t,
+\]
+and explicit controlled bulk almost-projections.
+
+The current P17 report is
+
+`P17_magnetic_algebra_K_theory_2026-09-14_15-56-39.md`
+
+(Library file `file_000000003ba082308b491d70be613272`).
+
+P17 now also fixes the Benameur–Mathai normalization:
+\[
+\sigma_B^{P17}
+=
+\sigma_{-B}^{BM},
+\]
+and proves the principal-solenoidal/Chern-integral trace-range containment. Its remaining controlled problem is exactly an explicit PV boundary representative.
+
+The latest P01 state remains categorically separate. Its nonamenable quotient fillings do not induce reduced \(C^*\)-homomorphisms; local marked-group agreement does not supply the upper reduced-norm/resolvent control needed for reduced \(K\)-theory. Nothing below bypasses that P01 obstruction.
+
+The older “pages 97–98 / equation 178 / truncated unitary matrix” search was rechecked in the previous P18 run. The indexed equation-178 hit is from an unrelated DNN manuscript and is not a valid topology/K-theory source. It is therefore not forced into the present track.
+
+---
+
+## 1. Reports read this run
+
+### P18
+
+Full latest P18 report:
+`P18_topological_K_theory_2026-09-14_14-55.md`.
+
+It proves:
+
+- the repaired Cantor orbit-breaking/gap-label statements;
+- one exact global magnetic Fermi projection;
+- explicit finite-propagation bulk almost-projections;
+- an explicit canonical-trace continuity modulus;
+- factor-map naturality throughout the magnetic homotopy.
+
+### P17
+
+Full latest P17 report:
+`P17_magnetic_algebra_K_theory_2026-09-14_15-56-39.md`.
+
+Its relevant facts are:
+
+- magnetic half-space/PV extension;
+- ordinary PV naturality under magnetic homotopy and fixed factor maps;
+- exact Benameur–Mathai cocycle normalization;
+- measured magnetic trace-range containment under Chern integrality;
+- explicit controlled PV boundary representative still OPEN before this run.
+
+### P01
+
+Latest P01 report read from Gmail message
+`1a09edbf662d4195`,
+subject
+`Hourly Baum–Connes Research Update — finite-type and reduced-norm obstruction`.
+
+The important negative fact is unchanged:
+
+\[
+\boxed{
+\text{local/marked agreement does not create reduced }C^*\text{-functoriality}.
+}
+\]
+
+P18 has honest Toeplitz extensions and honest evaluation maps, so the controlled construction below is legitimate there.
+
+---
+
+## 2. Primary literature checked
+
+### 2.1 Pimsner–Voiculescu exponential boundary formula
+
+For an extension
+\[
+0\to J\to T\xrightarrow{\pi}A\to0,
+\]
+the standard \(K_0(A)\to K_1(J)\) connecting map sends a projection \(p\) to
+\[
+[\exp(2\pi i a)]
+\]
+when \(a=a^*\in T\) is a self-adjoint lift of \(p\).
+
+This is the convention used below. With the opposite convention the resulting class is inverted; no other formula changes.
+
+The original PV Toeplitz extension for a crossed product by one automorphism is the relevant source.
+
+### 2.2 Oyono-Oyono–Yu quantitative \(K\)-theory
+
+Oyono-Oyono and Yu develop quantitative \(K\)-theory for filtered \(C^*\)-algebras and prove a controlled six-term exact sequence. In particular, an \(\varepsilon\)-unitary of propagation \(r\) in the unitization of a filtered ideal defines a controlled \(K_1^{\varepsilon,r}\) class.
+
+The construction below is more explicit than invoking the abstract controlled boundary map: it manufactures the approximate boundary unitary directly and then checks that its forget-control image is the ordinary PV boundary class.
+
+---
+
+## 3. The filtered PV Toeplitz section
+
+Write the magnetic bulk algebra in the cut direction as
+\[
+A
+=
+D\rtimes_\alpha\mathbb Z,
+\qquad
+D=A_B^\parallel(\Omega).
+\]
+
+Let
+\[
+0\to
+J=D\otimes\mathcal K
+\to
+\mathcal T_\alpha
+\xrightarrow{\pi}
+A
+\to0
+\tag{3.1}
+\]
+be the PV Toeplitz extension.
+
+Use the standard Toeplitz representation on the half-space module and let
+\[
+s:A\to\mathcal T_\alpha
+\tag{3.2}
+\]
+be the compression/Toeplitz map.
+
+The facts needed below are:
+
+1. \(s\) is unital completely positive and contractive;
+2. \(\pi\circ s=\operatorname{id}_A\);
+3. \(s(x^*)=s(x)^*\);
+4. on a finite Fourier polynomial, \(s\) does not increase Fourier propagation.
+
+These statements follow directly from compression by the half-space projection.
+
+We filter \(A,\mathcal T_\alpha,J\) by the inherited finite Fourier/spatial propagation so that
+\[
+\mathcal T_{\alpha,r}\mathcal T_{\alpha,s}
+\subset
+\mathcal T_{\alpha,r+s}
+\]
+and
+\[
+s(A_r)\subset\mathcal T_{\alpha,r}.
+\]
+
+---
+
+## 4. Exact boundary unitary from the gapped bulk Hamiltonian
+
+Let
+\[
+H=H^*\in M_r(A_R),
+\qquad
+\|H\|\le M,
+\]
+and assume
+\[
+\operatorname{spec}(H)
+\subset
+[-M,-\delta]\cup[\delta,M],
+\qquad
+0<\delta<M.
+\tag{4.1}
+\]
+
+The bulk Fermi projection is
+\[
+P=1_{(-\infty,0)}(H).
+\tag{4.2}
+\]
+
+Take the canonical finite-propagation self-adjoint lift
+\[
+\widehat H=s^{(r)}(H)
+\in
+M_r(\mathcal T_{\alpha,R}).
+\tag{4.3}
+\]
+Contractivity gives
+\[
+\|\widehat H\|\le M.
+\]
+
+Define the continuous ramp
+\[
+f_\delta(x)
+=
+\begin{cases}
+1,&x\le-\delta,\\[1mm]
+\dfrac{\delta-x}{2\delta},&-\delta\le x\le\delta,\\[2mm]
+0,&x\ge\delta.
+\end{cases}
+\tag{4.4}
+\]
+
+Then
+\[
+0\le f_\delta\le1,
+\qquad
+\operatorname{Lip}(f_\delta)=\frac1{2\delta}.
+\]
+
+Put
+\[
+a=f_\delta(\widehat H).
+\tag{4.5}
+\]
+Then \(a=a^*\), \(0\le a\le1\), and
+\[
+\pi^{(r)}(a)
+=
+f_\delta(H)
+=
+P.
+\tag{4.6}
+\]
+
+Therefore
+\[
+\boxed{
+U
+=
+e^{2\pi i a}
+\in
+1+M_r(J)
+}
+\tag{4.7}
+\]
+is an exact unitary and
+\[
+\boxed{
+[U]
+=
+\partial[P]
+\in
+K_1(J)
+}
+\tag{4.8}
+\]
+in the chosen PV boundary convention.
+
+The problem is that \(a\) and \(U\) need not have finite propagation.
+
+---
+
+# 5. New theorem P18-MAG-BDY-CTRL — explicit controlled PV boundary representative
+
+We now construct a finite-propagation \(\varepsilon\)-unitary in \(1+J\) with ordinary \(K_1\) class \(\partial[P]\).
+
+## 5.1 Bernstein approximation of the lift
+
+Map
+\[
+[-M,M]\ni x
+\longmapsto
+t=\frac{x+M}{2M}\in[0,1],
+\]
+and define
+\[
+F(t)=f_\delta(2Mt-M).
+\]
+Then
+\[
+\operatorname{Lip}(F)=\frac{M}{\delta}.
+\]
+
+Let \(B_nF\) be the degree-\(n\) Bernstein polynomial and set
+\[
+p_n(x)
+=
+(B_nF)\!\left(\frac{x+M}{2M}\right).
+\tag{5.1}
+\]
+
+Because Bernstein polynomials preserve the interval range,
+\[
+0\le p_n(x)\le1
+\qquad
+(x\in[-M,M]).
+\tag{5.2}
+\]
+
+For \(K\sim\operatorname{Bin}(n,t)\),
+\[
+(B_nF)(t)-F(t)
+=
+E[F(K/n)-F(t)].
+\]
+Hence
+\[
+\begin{aligned}
+|(B_nF)(t)-F(t)|
+&\le
+\frac{M}{\delta}
+E|K/n-t|\\
+&\le
+\frac{M}{\delta}
+\sqrt{\frac{t(1-t)}n}\\
+&\le
+\frac{M}{2\delta\sqrt n}.
+\end{aligned}
+\]
+
+Thus
+\[
+\boxed{
+\eta_n
+:=
+\sup_{|x|\le M}|p_n(x)-f_\delta(x)|
+\le
+\frac{M}{2\delta\sqrt n}.
+}
+\tag{5.3}
+\]
+
+In particular,
+\[
+b_n:=p_n(\widehat H)
+\]
+is a positive contraction,
+\[
+b_n\in M_r(\mathcal T_{\alpha,nR}),
+\tag{5.4}
+\]
+and
+\[
+\boxed{
+\|b_n-a\|\le\eta_n.
+}
+\tag{5.5}
+\]
+
+At the bulk level,
+\[
+\boxed{
+\|p_n(H)-P\|\le\eta_n.
+}
+\tag{5.6}
+\]
+
+No half-space spectral gap is assumed or needed.
+
+## 5.2 Polynomial approximation of the exponential
+
+Let
+\[
+T_N(z)
+=
+\sum_{j=0}^{N}
+\frac{(2\pi i z)^j}{j!}.
+\tag{5.7}
+\]
+
+For every contraction \(0\le b\le1\),
+\[
+\boxed{
+\|T_N(b)-e^{2\pi ib}\|
+\le
+\rho_N,
+}
+\tag{5.8}
+\]
+where
+\[
+\boxed{
+\rho_N
+=
+e^{2\pi}
+\frac{(2\pi)^{N+1}}{(N+1)!}.
+}
+\tag{5.9}
+\]
+
+The conservative bound (5.9) is sufficient.
+
+Define
+\[
+v_{n,N}
+=
+T_N(b_n).
+\tag{5.10}
+\]
+Then
+\[
+v_{n,N}
+\in
+M_r(\mathcal T_{\alpha,NnR}).
+\tag{5.11}
+\]
+
+Its bulk quotient is
+\[
+\pi^{(r)}(v_{n,N})
+=
+T_N(p_n(H)).
+\]
+
+## 5.3 Exact correction into the boundary ideal
+
+The crucial step is to correct the quotient **exactly**, using the Toeplitz section:
+\[
+\boxed{
+u_{n,N}
+=
+v_{n,N}
+-
+s^{(r)}
+\left(
+T_N(p_n(H))-1
+\right).
+}
+\tag{5.12}
+\]
+
+Then
+\[
+\pi^{(r)}(u_{n,N})
+=
+T_N(p_n(H))
+-
+(T_N(p_n(H))-1)
+=
+1.
+\]
+
+Therefore
+\[
+\boxed{
+u_{n,N}
+\in
+1+M_r(J).
+}
+\tag{5.13}
+\]
+
+Because \(s\) preserves finite Fourier propagation,
+\[
+\boxed{
+\operatorname{prop}(u_{n,N})
+\le
+NnR.
+}
+\tag{5.14}
+\]
+
+This exact quotient correction is the step that prevents an “approximately in the ideal” gap.
+
+## 5.4 Norm error relative to the exact boundary unitary
+
+Since the exponential is operator-Lipschitz on self-adjoint operators with constant \(2\pi\),
+\[
+\|e^{2\pi i b_n}-e^{2\pi i a}\|
+\le
+2\pi\eta_n.
+\]
+Thus
+\[
+\|v_{n,N}-U\|
+\le
+\rho_N+2\pi\eta_n.
+\tag{5.15}
+\]
+
+Also
+\[
+\begin{aligned}
+\|T_N(p_n(H))-1\|
+&\le
+\|T_N(p_n(H))-e^{2\pi ip_n(H)}\|\\
+&\quad+
+\|e^{2\pi ip_n(H)}-e^{2\pi iP}\|\\
+&\le
+\rho_N+2\pi\eta_n,
+\end{aligned}
+\tag{5.16}
+\]
+because
+\[
+e^{2\pi iP}=1.
+\]
+
+Contractivity of \(s\) gives
+\[
+\|u_{n,N}-v_{n,N}\|
+\le
+\rho_N+2\pi\eta_n.
+\tag{5.17}
+\]
+
+Combining,
+\[
+\boxed{
+\|u_{n,N}-U\|
+\le
+2\rho_N+4\pi\eta_n.
+}
+\tag{5.18}
+\]
+
+With the explicit Bernstein error,
+\[
+\boxed{
+\delta_{n,N}
+:=
+\|u_{n,N}-U\|
+\le
+2e^{2\pi}\frac{(2\pi)^{N+1}}{(N+1)!}
++
+\frac{2\pi M}{\delta\sqrt n}.
+}
+\tag{5.19}
+\]
+
+## 5.5 Unitary defect
+
+Because \(U\) is unitary and
+\[
+\|u_{n,N}\|
+\le
+1+\delta_{n,N},
+\]
+\[
+\begin{aligned}
+\|u_{n,N}^*u_{n,N}-1\|
+&=
+\|(u-U)^*u+U^*(u-U)\|\\
+&\le
+\delta_{n,N}(1+\delta_{n,N})+\delta_{n,N}\\
+&=
+2\delta_{n,N}+\delta_{n,N}^2.
+\end{aligned}
+\]
+Likewise for \(u_{n,N}u_{n,N}^*-1\).
+
+Therefore, if
+\[
+2\delta_{n,N}+\delta_{n,N}^2<\varepsilon,
+\tag{5.20}
+\]
+then
+\[
+\boxed{
+u_{n,N}
+\text{ is an }(\varepsilon,NnR)\text{-unitary in }1+M_r(J).
+}
+\tag{5.21}
+\]
+
+---
+
+# 6. Ordinary \(K_1\) class of the controlled representative
+
+Assume, for example,
+\[
+\delta_{n,N}<1.
+\tag{6.1}
+\]
+
+Then
+\[
+\|U^*u_{n,N}-1\|<1,
+\]
+so \(U^*u_{n,N}\) is invertible.
+
+Equivalently \(u_{n,N}\) is invertible.
+
+The straight-line path
+\[
+u_s
+=
+U+s(u_{n,N}-U),
+\qquad
+0\le s\le1,
+\]
+stays invertible because
+\[
+\|U^*u_s-1\|
+\le
+s\delta_{n,N}<1.
+\]
+Moreover each \(u_s\in1+M_r(J)\).
+
+Therefore \(u_{n,N}\) and \(U\) determine the same ordinary \(K_1(J)\) class after polar decomposition / deformation from invertibles to unitaries.
+
+Hence:
+
+\[
+\boxed{
+[u_{n,N}]_{K_1(J)}
+=
+[U]
+=
+\partial[P].
+}
+\tag{P18-MAG-BDY-CTRL}
+\]
+
+More precisely, in Oyono-Oyono–Yu quantitative \(K\)-theory, \(u_{n,N}\) defines a controlled class
+\[
+[u_{n,N}]_{\varepsilon,NnR}
+\in
+K_1^{\varepsilon,NnR}(J)
+\]
+whenever (5.20) holds, and its forget-control image is exactly the PV boundary class.
+
+### Status
+
+\[
+\boxed{
+\texttt{P18-MAG-BDY-CTRL — PROVED.}
+}
+\]
+
+---
+
+## 7. Concrete parameter choice
+
+The theorem is already explicit, but it is useful to record one simple sufficient choice.
+
+To guarantee
+\[
+\delta_{n,N}\le\eta,
+\qquad
+0<\eta<1,
+\]
+it is enough to impose separately
+\[
+\frac{2\pi M}{\delta\sqrt n}
+\le
+\frac\eta2,
+\]
+i.e.
+\[
+\boxed{
+n
+\ge
+\left(
+\frac{4\pi M}{\delta\eta}
+\right)^2,
+}
+\tag{7.1}
+\]
+and
+\[
+2e^{2\pi}
+\frac{(2\pi)^{N+1}}{(N+1)!}
+\le
+\frac\eta2.
+\tag{7.2}
+\]
+
+Using Stirling,
+\[
+(N+1)!
+\ge
+\left(\frac{N+1}{e}\right)^{N+1},
+\]
+so it is sufficient that
+\[
+2e^{2\pi}
+\left(
+\frac{2\pi e}{N+1}
+\right)^{N+1}
+\le
+\frac\eta2.
+\tag{7.3}
+\]
+
+Thus for each fixed \(\eta\), one may take
+\[
+N=O(\log(1/\eta))
+\]
+very crudely, and the propagation budget is
+\[
+\boxed{
+O\!\left(
+R\,\eta^{-2}\log(1/\eta)
+\right)
+}
+\]
+up to constants depending on \(M/\delta\).
+
+This is not optimized. Jackson/Chebyshev approximation could improve the \(n^{-1/2}\) Bernstein rate to \(n^{-1}\) for the piecewise-linear ramp away from its corners, but the elementary bound above is already sufficient for controlled \(K\)-theory.
+
+---
+
+# 8. Magnetic homotopy naturality
+
+Return to the continuous field
+\[
+\mathfrak A
+\]
+of magnetic crossed products over \(t\in[0,1]\), with one exact global Fermi projection
+\[
+P\in M_r(\mathfrak A).
+\]
+
+Construct the corresponding global Toeplitz extension in the cut direction
+\[
+0\to\mathfrak J\to\mathfrak T\to\mathfrak A\to0
+\]
+and use the global Toeplitz section \(s\).
+
+The polynomial construction can be performed once at the section-algebra level:
+\[
+\mathfrak u_{n,N}
+=
+T_N(p_n(\widehat H))
+-
+s\!\left(
+T_N(p_n(H))-1
+\right).
+\tag{8.1}
+\]
+
+Evaluation is a \(*\)-homomorphism and commutes with polynomials and the Toeplitz compression, so
+\[
+\boxed{
+\operatorname{ev}_t(\mathfrak u_{n,N})
+=
+u_{n,N,t}.
+}
+\tag{8.2}
+\]
+
+The same \(M,\delta,R,n,N\) control parameters work for every \(t\) because the gap and finite propagation are uniform.
+
+The exact boundary unitary section
+\[
+\mathfrak U
+=
+e^{2\pi i f_\delta(\widehat H)}
+\]
+satisfies
+\[
+[\operatorname{ev}_t(\mathfrak U)]
+=
+\partial_t[P_t].
+\]
+
+Since
+\[
+\|\mathfrak u_{n,N}-\mathfrak U\|
+\le
+\delta_{n,N}
+<1,
+\]
+the controlled class evaluates to the correct ordinary boundary class in every fiber.
+
+Thus:
+
+\[
+\boxed{
+\texttt{P18-MAG-BDY-HOM — PROVED.}
+}
+\]
+
+The controlled bulk-boundary representative is natural through the magnetic cocycle homotopy.
+
+---
+
+## 9. Factor-map naturality
+
+Let
+\[
+\pi:\Omega\to\Omega'
+\]
+be one of the P17 factor maps, so pullback gives
+\[
+\pi^*:
+C(\Omega')\rtimes_{\tau',\sigma_{tB}}\mathbb Z^d
+\to
+C(\Omega)\rtimes_{\tau,\sigma_{tB}}\mathbb Z^d.
+\]
+
+Assume the Hamiltonian on \(\Omega\) is the pullback of a Hamiltonian \(H'\) on \(\Omega'\).
+
+The factor map preserves Fourier propagation and extends coefficientwise to the Toeplitz extension, commuting with the Toeplitz section:
+\[
+\widetilde\pi^*\circ s'
+=
+s\circ\pi^*.
+\]
+
+Polynomial functional calculus commutes with \(*\)-homomorphisms. Therefore
+\[
+\boxed{
+\widetilde\pi^*(u'_{n,N})
+=
+u_{n,N}.
+}
+\tag{9.1}
+\]
+
+The same control pair
+\[
+(\varepsilon,NnR)
+\]
+is preserved.
+
+Thus:
+
+\[
+\boxed{
+\texttt{P18-MAG-BDY-FACTOR — PROVED.}
+}
+\]
+
+This extends P17/P18 factor naturality from the bulk \(K_0\) class and trace pairing to an explicit controlled boundary \(K_1\) representative.
+
+---
+
+## 10. What the theorem does and does not prove
+
+### Proved
+
+For a uniformly gapped finite-range magnetic Hamiltonian:
+
+- the bulk Fermi class has a controlled finite-propagation representative;
+- its PV boundary class has an explicit finite-propagation approximate-unitary representative;
+- the representative lies **exactly** in \(1+J\), not merely near it;
+- the ordinary \(K_1\) image is exactly the PV boundary class;
+- the construction is uniform in the magnetic homotopy parameter;
+- factor maps commute with the construction.
+
+### Not proved
+
+This does not yet identify the numerical boundary pairing with the P17 measured magnetic Chern/Pfaffian trace formula.
+
+One still needs a theorem of the form
+\[
+\boxed{
+\langle
+\operatorname{Ch}^{\partial},
+\partial_B[P]
+\rangle
+=
+\pm
+\langle
+\operatorname{Ch},
+[P]
+\rangle
+}
+\]
+with the exact orientation and magnetic convention \(\Theta=-B\), plus whatever Chern-integrality hypothesis is needed on the non-toral hull.
+
+---
+
+## 11. Independent peer audit
+
+### `AUDIT_FOR=P17` — `P17-M6G`
+
+**Source:**  
+`P17_magnetic_algebra_K_theory_2026-09-14_15-56-39.md`
+
+**Library file id:**  
+`file_000000003ba082308b491d70be613272`
+
+**Claim:** the skew cocycle
+\[
+\sigma_B(n,m)
+=
+\exp\left(
+\pi i
+\sum_{j<k}
+B_{jk}(n_jm_k-n_km_j)
+\right)
+\]
+is cohomologous to the upper-triangular cocycle
+\[
+\sigma_B^{up}(n,m)
+=
+\exp\left(
+2\pi i
+\sum_{j<k}
+B_{jk}n_jm_k
+\right)
+\]
+using
+\[
+c_B(n)
+=
+\exp\left(
+-\pi i
+\sum_{j<k}
+B_{jk}n_jn_k
+\right).
+\]
+
+**Verdict:** **PROVED / PASS.**
+
+Indeed
+\[
+(\delta c_B)(n,m)
+=
+c_B(n)c_B(m)c_B(n+m)^{-1}
+\]
+has exponent
+\[
+\pi i
+\sum_{j<k}
+B_{jk}(n_jm_k+n_km_j).
+\]
+Multiplying by the skew-cocycle exponent
+\[
+\pi i
+\sum_{j<k}
+B_{jk}(n_jm_k-n_km_j)
+\]
+gives
+\[
+2\pi i
+\sum_{j<k}
+B_{jk}n_jm_k.
+\]
+
+Thus
+\[
+\boxed{
+\sigma_B^{up}
+=
+(\delta c_B)\sigma_B.
+}
+\]
+
+The induced gauge isomorphism multiplies the \(n\)-th Fourier generator by the scalar \(c_B(n)\), fixes the coefficient algebra, and has
+\[
+c_B(0)=1.
+\]
+Therefore it preserves the zero Fourier coefficient, the canonical conditional expectation, and the canonical trace.
+
+No hidden full/reduced issue occurs because the acting group is \(\mathbb Z^d\).
+
+This audit certifies `P17-M6G` only.
+
+---
+
+## 12. Interaction with P01
+
+This theorem does not solve P01.
+
+The essential inputs used here are:
+
+1. one honest extension
+   \[
+   0\to J\to T\to A\to0;
+   \]
+2. a completely positive contractive section
+   \[
+   s:A\to T;
+   \]
+3. actual evaluation/factor homomorphisms;
+4. norm functional calculus inside fixed \(C^*\)-algebras.
+
+P01's lacunary/nonamenable quotient stages have no canonical reduced quotient homomorphisms.
+
+A common finite-propagation formula evaluated at several marked groups is not the same as the Toeplitz section in one exact extension.
+
+Therefore no reduced functoriality is being inferred from local algebraic similarity.
+
+---
+
+## 13. Comparison with P25 controlled \(K\)-theory
+
+P25-QK0 constructs a controlled \(K_0\) representative of an isolated kernel projection.
+
+The present theorem is the complementary controlled \(K_1\) boundary construction.
+
+The key additional ingredient is the **exact quotient correction**
+\[
+v
+\longmapsto
+v-s(\pi(v)-1).
+\]
+
+This guarantees exact membership in the unitized ideal while retaining finite propagation.
+
+The abstract Oyono-Oyono–Yu six-term theorem guarantees a controlled boundary map exists under controlled-extension hypotheses. P18-MAG-BDY-CTRL supplies a concrete representative tailored to the magnetic PV extension with explicit propagation/error formulas.
+
+---
+
+## 14. Failed routes / counterexamples
+
+### 14.1 Exponentiate a finite-propagation lift and claim finite propagation
+
+**REJECTED.**
+
+The exponential series generally creates arbitrarily large propagation.
+
+### 14.2 Use \(T_N(p_n(\widehat H))\) directly as a boundary element
+
+**REJECTED.**
+
+Its quotient is
+\[
+T_N(p_n(H)),
+\]
+which is only close to \(1\), not equal to \(1\).
+
+Therefore it need not lie in
+\[
+1+J.
+\]
+
+The correction
+\[
+-s(T_N(p_n(H))-1)
+\]
+is essential.
+
+### 14.3 Round the bulk approximate projection by spectral cutoff and keep propagation
+
+**REJECTED.**
+
+The exact cutoff is non-polynomial and generally loses finite propagation.
+
+### 14.4 Strong convergence is enough
+
+**REJECTED.**
+
+The theorem uses norm approximation throughout. Strong/von-Neumann convergence is not a substitute for a \(K_1\) representative.
+
+### 14.5 Pointwise fiber gaps suffice
+
+**REJECTED.**
+
+The total homotopy theorem still needs one uniform gap. Otherwise one common ramp \(f_\delta\) and one global Fermi class need not exist.
+
+### 14.6 Controlled PV naturality solves P01
+
+**REJECTED.**
+
+P18 works in one genuine Toeplitz extension. P01 lacks the corresponding reduced maps.
+
+---
+
+## 15. Cumulative P18 ledger
+
+### PROVED
+
+- `P18-R1.1`: raw point-orbit-breaking \(K_0(A_y)=C(X,\mathbb Z)\) statement is false.
+- `P18-R1.2`: singleton orbit-breaking AF algebra has ordered \(K_0\) isomorphic to the Cantor crossed product.
+- `P18-R1.3`: PV gives the Cantor \(\mathbb Z\)-crossed-product \(K\)-groups.
+- `P18-R1.4/R1.5/R1.6`: corrected order cone and infinitesimal handling.
+- `P18-R1.7`: factor-map trace functoriality.
+- `P18-R2`: uniquely ergodic subgroup realization criterion.
+- `P18-DAMAGE-01`: repaired Cantor damage localized to the recovered manuscript section.
+- `P18-MAG-CTRL`: exact global Fermi projection plus explicit finite-propagation bulk almost-projections.
+- `P18-MAG-TRACE-MOD`: explicit magnetic canonical-trace continuity modulus.
+- `P18-MAG-FACTOR`: bulk controlled representatives and trace pairing are natural under fixed factor maps.
+- **`P18-MAG-BDY-CTRL` — NEW:** explicit finite-propagation \(\varepsilon\)-unitary
+  \[
+  u_{n,N}\in1+M_r(J)
+  \]
+  with
+  \[
+  \operatorname{prop}(u_{n,N})\le NnR,
+  \]
+  \[
+  \|u_{n,N}-U\|
+  \le
+  2e^{2\pi}\frac{(2\pi)^{N+1}}{(N+1)!}
+  +
+  \frac{2\pi M}{\delta\sqrt n},
+  \]
+  and ordinary \(K_1\) class
+  \[
+  [u_{n,N}]
+  =
+  \partial[P].
+  \]
+- **`P18-MAG-BDY-HOM` — NEW:** the controlled boundary representative is evaluation-natural through the magnetic cocycle homotopy.
+- **`P18-MAG-BDY-FACTOR` — NEW:** the controlled boundary representative is natural under the P17 fixed-factor maps.
+- **`P18-AUDIT-P17-M6G` — NEW:** P17 cocycle gauge-equivalence lemma independently verified.
+
+### CONDITIONAL / IMPORTED
+
+- Gillaspy supplies evaluation-map \(K\)-isomorphisms for the magnetic cocycle homotopy.
+- Pimsner–Voiculescu supplies the ordinary exponential boundary formula.
+- Oyono-Oyono–Yu supplies the general quantitative \(K\)-theory framework and forget-control interpretation.
+- Benameur–Mathai supplies the measured magnetic index/gap-label theory used by P17.
+- The exact measured **bulk-boundary numerical pairing** for the user's non-toral hull still requires matching the PV orientation with the measured Chern/index formula.
+
+### DISPROVED / REJECTED
+
+- exact Fermi projection or exact boundary unitary generally preserves finite propagation;
+- an approximate bulk exponential automatically lies in the boundary ideal;
+- strong convergence produces the required stable \(K\)-class;
+- abstract magnetic \(K\)-group invariance freezes trace values;
+- pointwise nonuniform gaps yield one global magnetic Fermi class;
+- a \(C^*\)-monomorphism automatically induces a \(K_0\)-monomorphism;
+- controlled magnetic Toeplitz functoriality can be transplanted to P01's nonamenable reduced quotient problem;
+- the unrelated DNN “equation 178” hit should be treated as a topology source.
+
+### OPEN
+
+1. Obtain two OTHER independent audits of `P18-MAG-BDY-CTRL`.
+2. Complete `P17-M7`: measured bulk-boundary index compatibility, including orientation/sign in the P17 convention \(\Theta=-B\).
+3. Pair the controlled boundary class with the relevant odd boundary cyclic cocycle and identify the numerical equality with the bulk measured index.
+4. Improve the elementary Bernstein propagation rate using sharper polynomial approximation if needed for a quantitative physical bound.
+5. Extend the theorem from a true spectral gap to a mobility-gap/Sobolev setting.
+6. Produce the line-by-line §12.13 Cantor manuscript replacement text.
+7. P01 remains open and requires genuinely nonlocal reduced-norm/resolvent control or a finite forbidden-trace gapped matrix.
+
+---
+
+## 16. Exact dependency graph
+
+### Bulk
+
+\[
+\text{finite-range }H
++
+\text{uniform Fermi gap}
+\]
+implies
+\[
+P=1_{(-\infty,0)}(H)
+\in K_0(A).
+\]
+
+### Boundary
+
+\[
+P
++
+\text{Toeplitz self-adjoint lift }a
+\]
+implies
+\[
+U=e^{2\pi ia}
+\in1+J,
+\qquad
+[U]=\partial[P].
+\]
+
+### Controlled boundary
+
+\[
+\text{Bernstein }p_n(\widehat H)
++
+\text{Taylor }T_N
++
+\text{exact Toeplitz quotient correction}
+\]
+implies
+\[
+u_{n,N}\in1+J
+\]
+with explicit finite propagation and unitary defect, and
+\[
+[u_{n,N}]_{\rm ordinary}=\partial[P].
+\]
+
+### Homotopy/factor naturality
+
+Because every step is built from actual homomorphisms, the common Toeplitz section, polynomials and norm functional calculus,
+\[
+\operatorname{ev}_t(u_{n,N})=u_{n,N,t}
+\]
+and fixed-factor pullback commutes with the construction.
+
+### Numerical bulk-boundary index
+
+Still open:
+\[
+\text{controlled }K_1\text{ boundary class}
++
+\text{measured odd boundary cocycle}
+\stackrel{?}{=}
+\text{P17 measured bulk Pfaffian/Chern index}.
+\]
+
+---
+
+## 17. Exact next attack
+
+The next theorem should be the numerical/topological compatibility statement, not another existence theorem.
+
+> **P18/P17-M7 — measured bulk-boundary pairing.**  
+> Under principal-solenoidal or another verified Chern-integral hypothesis, take the P17/P18 magnetic bulk class \(x=[P]\) and its explicit controlled boundary representative \(u_{n,N}\). Prove that the odd boundary cyclic pairing of
+> \[
+> \partial_Bx
+> \]
+> equals the cut-direction contraction/transgression of the measured bulk Chern character, with the P17 magnetic convention
+> \[
+> \Theta=-B
+> \]
+> and the correct orientation sign.
+
+The toral calibration must reduce to the exterior-algebra contraction formula already proved in P17-M3B.
+
+After that, the remaining magnetic theorem will be a numerical index identity rather than a \(K\)-class existence or controlled-representative problem.
+
+---
+
+## 18. Bottom line
+
+The controlled bulk-boundary existence problem named by the previous P18 run is now solved.
+
+For a uniformly gapped finite-range magnetic bulk Hamiltonian and its canonical PV half-space lift, there is an explicit element
+\[
+\boxed{
+u_{n,N}
+=
+T_N(p_n(\widehat H))
+-
+s\!\left(T_N(p_n(H))-1\right)
+\in1+J
+}
+\]
+with
+\[
+\boxed{
+\operatorname{prop}(u_{n,N})
+\le
+NnR,
+}
+\]
+\[
+\boxed{
+\|u_{n,N}-U\|
+\le
+2e^{2\pi}\frac{(2\pi)^{N+1}}{(N+1)!}
++
+\frac{2\pi M}{\delta\sqrt n},
+}
+\]
+and
+\[
+\boxed{
+[u_{n,N}]_{\rm ordinary}
+=
+\partial[P].
+}
+\]
+
+The construction is evaluation-natural through the magnetic homotopy and natural under the existing P17 factor maps.
+
+Thus the live P17/P18 frontier has moved from **constructing the boundary \(K_1\) class** to **computing its measured/cyclic pairing with exact orientation and magnetic normalization**.
+

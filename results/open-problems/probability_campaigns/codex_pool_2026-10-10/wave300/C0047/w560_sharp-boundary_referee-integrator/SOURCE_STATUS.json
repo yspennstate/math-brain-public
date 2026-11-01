@@ -1,0 +1,53 @@
+{
+  "id": "C0047",
+  "checked_at": "2026-10-10",
+  "source_rows": [
+    {
+      "kind": "intake_ranking",
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "line": 431,
+      "quote": "4,C0047,Benjamini-Schramm conjecture: p_c < p_u if and only if the group is non-amenable,attempted_un,Benjamini-Schramm p_c<p_u for every Cayley graph",
+      "assessment": "Intake title and prior attempt label only; exact theorem scope, primary source, and current open status remain unverified."
+    },
+    {
+      "kind": "original_primary_statement",
+      "url": "https://emis.de/ft/41630",
+      "pages": "2, 6",
+      "quote": "Conjecture 6 Assume that the almost transitive graph G has positive Cheeger constant. Then pc(G) < pu(G).",
+      "model_quote": "Throughout the paper, site percolation is discussed. Except when dealing with planar graphs, the results and questions remain equally valid, with only minor modifications, for bond percolation.",
+      "assessment": "Original scope is locally finite connected quasi-transitive positive-Cheeger graph, site by default and bond analog; not only Cayley graphs."
+    }
+  ],
+  "current_openness": "PUBLIC_PREPRINT_CLAIMS_RESOLUTION__INDEPENDENT_VALIDATION_PENDING",
+  "recent_primary_claim": {
+    "url": "https://github.com/openai/math/blob/main/overview.tex",
+    "paper_url": "https://github.com/openai/math/blob/main/preprints/Nonuniqueness-of-percolation-on-nonamenable-quasi-transitive-graphs-September-24-2026/paper.pdf",
+    "downloaded_pdf_sha256": "46A78D044D2713E48CB3FAA9B0B9D22DA9480193E2202FE63D8E0DAA7D8A3DBB",
+    "paper_locators": "Theorem 1.1, Corollary 1.2, critical-boundedness Theorem 2.6",
+    "result": 214,
+    "quote": "Proves $p_c<p_u$ for Bernoulli bond percolation on every infinite connected locally finite nonamenable quasi-transitive graph",
+    "scope": "bond; every such quasi-transitive graph, hence each Cayley graph of a finitely generated nonamenable group for each finite symmetric generating set",
+    "caveat": "This is the authors' release claim; paper and proof require independent mathematical review."
+  },
+  "formalization_caveat": {
+    "url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/BenjaminiSchramm.lean",
+    "lines": "199-216",
+    "finding": "Comparator theorem bodies full_main, critical_laws, and cayley_main end in sorry; this comparator cannot be cited as a formal proof."
+  },
+  "model_scope": {
+    "original_site_default": true,
+    "original_bond_analog_asserted": true,
+    "2026_claimed_solution": "bond only",
+    "site_current_openness": "UNKNOWN",
+    "bond_validation": "published manuscript claim found; mathematical and actual formal-proof review pending"
+  },
+  "local_attempt_correction": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 37,
+    "wrong": "p_c < 1/rho with rho normalized",
+    "correct": "D*rho*p_c < 1 is the published sufficient hypothesis, with D=|S|",
+    "primary_source": "https://arxiv.org/html/1206.2183v3 Section 1 equation (3)",
+    "referee": "w560; w559 independently found same correction"
+  },
+  "next": "Independently audit 2026 bond manuscript Theorem 2.6 and obtain w563 site-tree review."
+}

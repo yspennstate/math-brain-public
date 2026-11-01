@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\begin{document}
+\title{A complete spectral transcript for boundary-retaining selector trees}
+\author{A011, stream B03}
+\maketitle
+All cubes are uniform, Boolean values are signs, and entropy is in bits.
+The result is a restricted-class construction, not full FEI. Independent
+review and literature novelty remain unestablished.
+
+Let $\mathcal T$ be a finite binary decision tree querying selector
+coordinates $x_1,\ldots,x_a$, never querying a coordinate twice on a path.
+Selector coordinates can occur at arbitrarily many nodes on different paths.
+The independent data cube is $y\in\{-1,1\}^n$. Each leaf $\ell$ has a
+Boolean data function $g_\ell(y)$. They can share all their variables and
+Fourier supports. A leaf path specifies a coordinate subcube $C_\ell$ of
+codimension $d_\ell$ and probability $p_\ell=2^{-d_\ell}$. Put
+\[
+ F(x,y)=g_{\ell(x)}(y),\qquad D=\sum_\ell p_\ell d_\ell.
+\]
+A complete leaf spectral code means a prefix code on finite witnesses
+$W_\ell$, a deterministic decoder $S_\ell(W_\ell)$, and a witness probability
+law whose decoded marginal is $\widehat g_\ell(S)^2$. Write $c_\ell$ for
+the expected code length. Subprobability Kraft sums are allowed.
+
+\begin{theorem}[Complete cost and physical admission]
+For every tree and complete leaf spectral codes as above, there is a
+complete prefix code for a joint witness $W$ of the spectrum of $F$, with
+expected length
+\[
+ \mathbb E L(W)=2D+\sum_\ell p_\ell c_\ell.
+\]
+In particular $H(F)\le 2D+\sum_\ell p_\ell c_\ell$.
+The represented positive event has the constructive gate cover
+\[
+ \{F=1\}=\bigcup_\ell \bigl(C_\ell\cap\{g_\ell=1\}\bigr).
+\]
+If $I_{\rm sel}(F)\ge\gamma D$ for some $\gamma>0$ and
+$c_\ell\le K I(g_\ell)$ for every leaf, then the whole expected cost is
+at most $\max\{2/\gamma,K\} I(F)$.
+No admission claim is made for every Boolean function.
+\end{theorem}
+
+\begin{proof}
+First construct the exact witness law recursively. At a node querying
+$x_j$, let $G,H$ be its two actual Boolean child functions on the remaining
+cube, and write $u_T=\widehat G(T)$, $v_T=\widehat H(T)$,
+\[
+ q_T=(u_T^2+v_T^2)/2,\qquad
+ \theta_T=(u_T-v_T)^2/(4q_T)\quad(q_T>0).
+\]
+Choose a fair physical child $B$, sample its complete recursive witness,
+and let $T$ be its decoded Fourier set. Then independently of that witness
+conditional on $T$, sample a spectral bit $Z$ with probability
+$\theta_T$ of being one. Decode the result as $T\cup\{j:Z=1\}$.
+Zero-$q_T$ packets are never sampled. The inequality
+$(u_T-v_T)^2\le2(u_T^2+v_T^2)$ makes this a valid Bernoulli law.
+Its output probabilities are
+\[
+ q_T(1-\theta_T)=(u_T+v_T)^2/4,\qquad
+ q_T\theta_T=(u_T-v_T)^2/4.
+\]
+These are exactly the two selector-frequency sectors of the parent.
+Induction proves the decoded law is $\widehat F^2$, including all signed
+cross terms. Physical path probability is $p_\ell$, since child choices
+are fair regardless of the spectral choices.
+
+Encode first the physical path to a leaf, using $d_\ell$ branch bits.
+These leaf words are prefix-free. Next use the leaf's complete prefix
+code. Finally append the $d_\ell$ sampled spectral bits in a prescribed
+order along the known path. This is decodable and prefix-free: the physical
+prefix determines the leaf dictionary and the number of final bits; the
+leaf prefix determines where those final bits begin. Its Kraft sum is
+\[
+ \sum_\ell 2^{-d_\ell}
+ \left(\sum_{w_\ell}2^{-L_\ell(w_\ell)}\right)
+ \sum_{z\in\{0,1\}^{d_\ell}}2^{-d_\ell}\le1.
+\]
+This includes words not sampled by the true witness law. No success
+conditioning or hidden normalization is required.
+Since queried coordinates are distinct on a path and disjoint from the
+data cube, the spectral decoder is the leaf Fourier set union the chosen
+selector coordinates. Every witness has length $2d_\ell+L_\ell$.
+Taking expectation gives the claimed cost. Shannon's prefix inequality
+and deterministic decoding give $H(F)\le H(W)\le\mathbb E L(W)$.
+
+The gate cover follows directly from the partition into leaf subcubes.
+Conditioning on selectors gives
+$I_{\rm data}(F)=\sum_\ell p_\ell I(g_\ell)$, so
+$I(F)=I_{\rm sel}(F)+I_{\rm data}(F)$. Charge the $2D$ term only to
+selector influence and the leaf term only to data influence. This proves
+the final assertion without reusing influence.
+\end{proof}
+
+\begin{theorem}[Repeated unsigned character leaves]
+Suppose $g_\ell=\chi_{A_\ell}$ with each $A_\ell$ nonempty; labels may
+repeat. Define
+\[
+ B=\mathbb E_x\sum_{j=1}^a
+       \mathbf1\{A_{\ell(x)}\ne A_{\ell(x^{\oplus j})}\}.
+\]
+Then $I_{\rm sel}(F)=B/2$, $I_{\rm data}(F)=\sum p_\ell|A_\ell|$,
+and the full witness cost is $2D$. If $B\ge\beta D$ for a fixed
+$\beta>0$, then
+\[
+ H(F)\le\mathbb E L(W)=2D\le(4/\beta)I_{\rm sel}(F)
+ \le(4/\beta)I(F).
+\]
+Every gate combines a conjunction with a parity event; for singleton
+$A_\ell$ every gate is an ordinary conjunction ($M=1$).
+\end{theorem}
+\begin{proof}
+A character's spectrum is deterministic, so its leaf code is empty.
+Distinct unsigned characters disagree on exactly half the data cube,
+and identical ones never disagree. Average the physical selector edges.
+The data identity follows as before. For any $x$, a selector coordinate
+not fixed by its leaf path leaves $x$ inside the same leaf subcube when
+flipped. Thus $0\le B\le D$. No spectral support disjointness is used.
+\end{proof}
+
+\begin{theorem}[An unbounded-read, vanishing-energy-per-coordinate example]
+Query $x_1,\ldots,x_a$ in order, stopping at the first positive coordinate.
+At stopping index $j$ output $y_1$ for odd $j$ and $y_2$ for even $j$.
+The all-negative terminal leaf has label of index $a+1$ by the same rule.
+For every $a\ge1$, this representation has
+\[
+ D=2(1-2^{-a}),\quad B\ge D/2,\quad
+ I_{\rm sel}=B/2\le D/2<1,\quad I_{\rm data}=1,
+ \quad \mathbb E L(W)=2D\le8I_{\rm sel}.
+\]
+Consequently $H(F)\le8I(F)$ uniformly, whereas $I_{\rm sel}/a\to0$.
+The conjunction cover has $a+1$ gates and $x_1$ occurs in every gate.
+Data labels repeat arbitrarily often.
+\end{theorem}
+\begin{proof}
+Query $j$ is reached with probability $2^{-(j-1)}$, giving the formula
+for $D$. Let $r_j$ be the chance that the continuation after query $j$
+has the opposite data label from its stopping leaf. Then $r_a=1$ and
+$r_j=1-r_{j+1}/2$, hence $1/2\le r_j\le1$. The label-flip probability
+for coordinate $j$ is $2^{-(j-1)}r_j$: this includes both orientations
+of its uniform physical edge. Therefore
+$B=\sum_j2^{-(j-1)}r_j\ge D/2$. Apply the preceding theorem.
+The cover is $C_\ell\cap\{y_{t(\ell)}=1\}$; every path fixes $x_1$.
+\end{proof}
+
+\paragraph{Scope and remaining line.}
+The physical admission $I_{\rm sel}\ge\gamma D$, or $B\ge\beta D$,
+is a hypothesis, not a proved property of arbitrary trees. The construction
+does not bound the original queue reference's minimum witness cost; it
+supplies a different complete reference. Expected-depth spectral coding
+and decision-tree FEI bounds have prior art. This file claims a source-complete
+campaign interface and its scoped applications, not literature priority.
+\end{document}

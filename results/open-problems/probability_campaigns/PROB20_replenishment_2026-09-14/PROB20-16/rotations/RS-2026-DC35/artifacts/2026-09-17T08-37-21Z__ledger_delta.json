@@ -1,0 +1,53 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "RS-2026-DC35",
+  "report_kind": "STUCK_THINKING_ONLY",
+  "input_snapshot_sha": "71797de2178d292ba260494528e9882836ce5cb8",
+  "previous_report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-DC35/runs/2026-09-17/2026-09-17T07-42-23Z__report.md",
+  "previous_report_commit": "8da127b34052342e3551479cafc35d3fffa028b3",
+  "report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-DC35/runs/2026-09-17/2026-09-17T08-37-21Z__report.md",
+  "report_creation_commit": "9642f26e3ee5cb589eb2076e1b3114cb79fe20b3",
+  "report_blob_sha": "bce276774c1f961c429d9e1e63d255cc9849cd78",
+  "exact_source": {
+    "author": "Chiara Meroni",
+    "year": 2026,
+    "title": "Directional Convexity (problems 34 and 35)",
+    "venue": "Randomstrasse 101",
+    "locator": "Open Problem 35 (Conditions for semialgebraic D-convex hulls)",
+    "posted": "2026-02-23",
+    "updated": "2026-06-05"
+  },
+  "frozen_metric": {
+    "name": "E_characterization",
+    "domain": "{0,1}",
+    "before": 0,
+    "after": 0,
+    "movement": "NO MOVEMENT"
+  },
+  "unchanged_count": 4,
+  "stuck_recovery_cycle": 1,
+  "methods_tried": [1, 17, 27],
+  "method_outcomes": {
+    "B1": "Reframed the finite-support Jensen condition as dual membership against the evaluation-difference cone induced by all D-convex functions; this isolates the missing finite real-algebraic representation theorem but does not itself supply one.",
+    "B17": "Compared the hidden Jensen-weight object with biconvex martingales, laminate/Jensen measures, and finite planar D-convex algorithms. These give representation or projected membership machinery, but the bounded search found no theorem giving semialgebraicity of the full parametric weight relation.",
+    "B27": "Strengthened the target to Jensen-tameness: semialgebraicity of the full relation J_D(P) for every finite support. The prior minimal-fiber theorem makes this product-stable and natural, but equivalence with the source property for a fixed D remains unproved because projection can hide nonsemialgebraic fibers."
+  },
+  "exact_blocker": "Characterize all cones D subset R^d such that for every finite K subset R^d, the functional D-convex hull conv_D(K) is semialgebraic; after prior reductions, the operative gap is deciding when {x : Lambda_D(P,x) is nonempty} is semialgebraic for every finite P while Lambda_D is defined by all D-convex Jensen inequalities.",
+  "simplest_unproved_case": "For three normalized planar directions D3 and arbitrary affinely spanning four-point planar support P, decide whether the full Jensen relation J_D3(P) is semialgebraic. The hidden barycentric fiber is one-dimensional.",
+  "section_i_action": "PORT_NEAREST_SOLVED_TECHNIQUE",
+  "nearest_solved_technique": "Extend the finite planar Franek-Matousek functional D-convex hull machinery from projected membership to the full scalar Jensen-weight relation, using biconvex/martingale language only as a translation aid.",
+  "next_methods": [3, 16, 29],
+  "mathematical_status": "PARTIAL",
+  "source_status": "OPEN in the bounded 2026-09-17 source/literature check; no source-complete characterization located. Search miss is not a novelty certificate.",
+  "history_gaps": [],
+  "audit_refs": [],
+  "neighbor_refs": [
+    "proofnet24/C29-closure-brownian-shapes/runs/2026-09-16/2026-09-16T23-36-35Z__six-run-rotation-handoff.md @ 7b4525d41ccd941c6353394a52961ecfa169b1b9"
+  ],
+  "artifact_refs": [
+    "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-DC35/runs/2026-09-17/2026-09-17T08-37-21Z__report.md @ 9642f26e3ee5cb589eb2076e1b3114cb79fe20b3, blob bce276774c1f961c429d9e1e63d255cc9849cd78"
+  ],
+  "new_checker": false,
+  "new_theorem_claim": false,
+  "delivery": "GitHub only; no shared-root ledger edits, no email/Drive/public posting, no workflow execution or permission bypass."
+}

@@ -1,0 +1,91 @@
+--- a/~/math-brain-inbox/w415/bundle_001.json
++++ b/~/math-brain-inbox/w415/bundle_001.json
+@@ -0,0 +1,88 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w415",
++  "bundle_slug": "c0017-boundary-quantifiers-w415-001",
++  "entries": [
++    {
++      "key": "uniform-bridge",
++      "namespace": "probability.percolation",
++      "logical_name": "unrestricted-uniform-cardy-domain-bridge",
++      "kind": "concept",
++      "title": "Unrestricted uniform Cardy approximation: refuted draft auxiliary bridge",
++      "statement": "DRAFT AUXILIARY PROPOSAL, REFEREE CHECK PENDING: for free critical bond percolation on the graph induced by delta Z^2 in the closure of each marked Jordan rectangle Q, the proposed bound sup_Q |P_delta(H_Q)-Cardy(Q)| -> 0 as delta -> 0 ranges over all positive-size Q, including Q that shrink with delta. This is stronger than convergence for each fixed marked domain. The two-bond boundary construction contradicts this proposed bound under the stated discretization. This auxiliary proposal is not the fixed-domain C0017 target.",
++      "proof_text": null,
++      "assumptions": [
++        "Independent Bernoulli(1/2) bonds and free boundary conditions.",
++        "Boundary contacts are induced-graph vertices on the two designated opposite sides.",
++        "Q may depend on delta and no relative-mesh condition is imposed."
++      ],
++      "domain": "critical planar percolation; boundary approximation",
++      "source": {
++        "source_id": "owner-own-work:w415:uniform-bridge",
++        "url": "file:///~/brain_workers/w415/ATTEMPT.md",
++        "revision": "2026-10-10-draft-referee-pending",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "two-bond-witness",
++      "namespace": "probability.percolation",
++      "logical_name": "two-bond-obstruction-to-uniform-cardy-approximation",
++      "kind": "concept",
++      "title": "Two-bond rectangle obstruction to uniform Cardy approximation: draft",
++      "statement": "DRAFT AUTHOR DERIVATION; INDEPENDENT REVIEW BY w416 PENDING. Let delta>0 and take Q_delta=(0,2 delta) x (-delta/2,delta/2), marked at its corners. Its closed-rectangle induced delta Z^2 graph has exactly three vertices and two bonds, so free Bernoulli(1/2) left-to-right crossing probability is exactly 1/4. For horizontal aspect ratio 2, Cardy has cross ratio x=(sqrt(2)-1)^4 and value C(x)=B_x(1/3,1/3)/B(1/3,1/3). Since x<1/32, the beta-integral bounds give C(x)<(8/961)^(1/3)<1/4. Thus the approximation error exceeds 1/4-(8/961)^(1/3)>0 at every delta. This refutes only an unrestricted uniform-domain auxiliary assertion. The relative mesh delta/height(Q_delta)=1; no fixed-domain Cardy limit or C0017 solution is refuted or proved.",
++      "proof_text": null,
++      "assumptions": [
++        "Induced graph includes boundary vertices in the closed rectangle.",
++        "The two distinct bonds are independent; no conditional-product estimate is used.",
++        "Horizontal Cardy aspect is width/height=K(1-x)/K(x), with K the elliptic parameter integral.",
++        "Cardy is a comparison function here; its square-bond scaling-limit identification is not assumed."
++      ],
++      "domain": "critical planar percolation; boundary approximation",
++      "source": {
++        "source_id": "owner-own-work:w415:two-bond-witness",
++        "url": "file:///~/brain_workers/w415/ATTEMPT.md",
++        "revision": "2026-10-10-draft-referee-pending",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "quantifier-guard",
++      "namespace": "probability.percolation",
++      "logical_name": "cardy-limit-fixed-domain-and-relative-mesh-guard",
++      "kind": "concept",
++      "title": "Quantifier guard for Cardy boundary-limit arguments: draft concept",
++      "statement": "DRAFT SCOPE GUARD FOR C0017: pointwise convergence in mesh for each fixed marked Jordan domain does not provide a supremum bound over arbitrary domains that vary with the mesh. The two-bond rectangle has a persistent positive crossing discrepancy because the mesh never becomes fine relative to its height. Keep the marked domain fixed or state and prove suitable quantitative family hypotheses. For more general varying domains, unmarked interior convergence and Euclidean boundary-mark convergence do not automatically preserve marked prime ends. These are necessary scope checks, not a theorem asserting that any proposed list of conditions suffices. Correctly marked square-bond Cardy/SLE(6) limit identification remains the hardest unresolved step in this packet.",
++      "proof_text": null,
++      "assumptions": [
++        "The counterexample concerns the explicitly stated free induced-graph convention.",
++        "No sufficiency claim for diameter normalization or boundary regularity is made.",
++        "Author result is not independently checked or promoted to theorem status."
++      ],
++      "domain": "critical planar percolation; boundary approximation",
++      "source": {
++        "source_id": "owner-own-work:w415:quantifier-guard",
++        "url": "file:///~/brain_workers/w415/ATTEMPT.md",
++        "revision": "2026-10-10-draft-referee-pending",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "two-bond-witness",
++      "to_key": "uniform-bridge",
++      "kind": "refutes",
++      "rationale": "Draft relation pending referee check. The source end gives an error exceeding the positive constant 1/4-(8/961)^(1/3) for Q_delta at every delta. The target end proposes sup_Q |P_delta(H_Q)-Cardy(Q)| -> 0 over all sizes, which includes Q_delta. This relation targets that auxiliary supremum, never C0017 itself."
++    },
++    {
++      "from_key": "quantifier-guard",
++      "to_key": "two-bond-witness",
++      "kind": "depends_on",
++      "rationale": "The guard distinguishes each fixed domain from arbitrary mesh-dependent domains. Its explicit supporting example is the two-bond rectangle with delta/height=1 and a persistent positive discrepancy."
++    }
++  ]
++}

@@ -1,0 +1,34 @@
+PART A: tribes(m,w) exhaustive, exact spectrum vs closed form; single-gate identity
+ m=2 w=2 n=4: spectrum formula True; I exact True; v exact True; H=3.325376 H_closed=3.325376; H/I=2.2169; SORD nat direct=0.791859 formula=0.791859; rand direct=0.791859 formula=0.791859; LB q^(m-1) I (ln m-1)=-0.345209 <= SORD True; single-gate bound=16.7834 >= H True
+ m=3 w=2 n=6: spectrum formula True; I exact True; v exact True; H=4.620958 H_closed=4.620958; H/I=2.7383; SORD nat direct=1.254333 formula=1.254333; rand direct=1.254333 formula=1.254333; LB q^(m-1) I (ln m-1)=0.093605 <= SORD True; single-gate bound=19.5455 >= H True
+ m=4 w=2 n=8: spectrum formula True; I exact True; v exact True; H=5.543985 H_closed=5.543985; H/I=3.2853; SORD nat direct=1.504666 formula=1.504666; rand direct=1.504666 formula=1.504666; LB q^(m-1) I (ln m-1)=0.275008 <= SORD True; single-gate bound=20.3839 >= H True
+ m=5 w=2 n=10: spectrum formula True; I exact True; v exact True; H=5.830604 H_closed=5.830604; H/I=3.6855; SORD nat direct=1.583798 formula=1.583798; rand direct=1.583798 formula=1.583798; LB q^(m-1) I (ln m-1)=0.305063 <= SORD True; single-gate bound=19.7248 >= H True
+ m=6 w=2 n=12: spectrum formula True; I exact True; v exact True; H=5.655852 H_closed=5.655852; H/I=3.9723; SORD nat direct=1.545701 formula=1.545701; rand direct=1.545701 formula=1.545701; LB q^(m-1) I (ln m-1)=0.267521 <= SORD True; single-gate bound=18.1745 >= H True
+ m=2 w=3 n=6: spectrum formula True; I exact True; v exact True; H=3.931402 H_closed=3.931402; H/I=2.9954; SORD nat direct=0.950107 formula=0.950107; rand direct=0.950107 formula=0.950107; LB q^(m-1) I (ln m-1)=-0.352401 <= SORD True; single-gate bound=15.8877 >= H True
+ m=3 w=3 n=9: spectrum formula True; I exact True; v exact True; H=5.255148 H_closed=5.255148; H/I=3.0506; SORD nat direct=1.725397 formula=1.725397; rand direct=1.725397 formula=1.725397; LB q^(m-1) I (ln m-1)=0.130061 <= SORD True; single-gate bound=21.0703 >= H True
+ m=4 w=3 n=12: spectrum formula True; I exact True; v exact True; H=6.287985 H_closed=6.287985; H/I=3.1287; SORD nat direct=2.408386 formula=2.408386; rand direct=2.408386 formula=2.408386; LB q^(m-1) I (ln m-1)=0.520101 <= SORD True; single-gate bound=24.8572 >= H True
+ m=2 w=4 n=8: spectrum formula True; I exact True; v exact True; H=3.200428 H_closed=3.200428; H/I=3.4138; SORD nat direct=0.792830 formula=0.792830; rand direct=0.792830 formula=0.792830; LB q^(m-1) I (ln m-1)=-0.269695 <= SORD True; single-gate bound=11.9168 >= H True
+ m=3 w=4 n=12: spectrum formula True; I exact True; v exact True; H=4.518233 H_closed=4.518233; H/I=3.4272; SORD nat direct=1.528751 formula=1.528751; rand direct=1.528751 formula=1.528751; LB q^(m-1) I (ln m-1)=0.114263 <= SORD True; single-gate bound=17.0721 >= H True
+PART B: random f on n<=7: identity for every order, min over all orders = influence-sorted order, bound >= H
+ functions=59; max |direct - formula| = 1.33e-15; max (sorted - min over orders) = 0.00e+00; bound<H violations = 0
+PART C: tribes m=2^w: H/I, one-gate-per-block forest bound / I (closed form), single-gate lower bound / I
+  w        H/I     blockforest/I    singlegate_LB/I
+   2     3.2853      12.6061        10.8178
+   3     3.8289      12.8669        11.1276
+   4     4.0563      13.0139        11.4988
+   5     4.1454      13.0958        11.8969
+   6     4.1737      13.1434        12.3100
+   7     4.1760      13.1729        12.7323
+   8     4.1678      13.1929        13.1604
+   9     4.1561      13.2076        13.5924
+  10     4.1441      13.2191        14.0268
+  11     4.1327      13.2286        14.4629
+  12     4.1226      13.2369        14.9001
+  16     4.0927      13.2618        16.6551
+  20     4.0742      13.2793        18.4146
+  24     4.0618      13.2924        20.1763
+  28     4.0530      13.3027        21.9392
+  32     4.0464      13.3109        23.7028
+  40     4.0371      13.3234        27.2313
+  48     4.0309      13.3325        30.7609
+  60     4.0247      13.3423        36.0563

@@ -1,0 +1,180 @@
+[
+  {
+    "claim_id": "A012-DISJOINT-PRIVATE-MUX-ADMISSION",
+    "version": 2,
+    "exact_statement": "For every pair of Boolean children G(s,X),H(s,Y) sharing at most two uniform physical data bits, with disjoint private cubes and a fresh selector z, let F=(G+H)/2+z(G-H)/2 and d*=min(Inf_z(F),1-Inf_z(F)). After sign folding, the exact shared-collision minority influence delta has delta<=min(d*,4d*^2), and noncollision erasure is B_out=2(d*-delta). Thus full selector erasure B_z<=4d* and entropy increment Delta<=K d*, K=4+2/ln2<7. Every supplied normalized finite-cost positive-support child reference can be calibrated separately at the at-most-four shared-only atoms without increasing CE. The explicit complete normalized coherent output reference retains D(P_F||Q)=(D(P_G||R_Gcal)+D(P_H||R_Hcal))/2 and CE_F=(c_Gcal+c_Hcal)/2+Delta. I(F)=(I(G)+I(H))/2+Inf_z(F), counting shared data coordinates once through the averaged branch charge. Supplied child CE bounds imply root CE<=max(K_G,K_H,K)I(F). The finite literal/constant certificate grammar closed under signs, disjoint products, fresh activation and fresh-selector mux with child support intersection at most two is physical-restriction-hereditary and has explicit full CE<=K I. Its seed membership reflects from fresh balanced tensors and fresh point activations; the four-bit sign +1 iff at least two binary inputs are one is a certified nonmember, as are its balanced tensors and rare activations. All original v1 conclusions remain valid at their stated disjoint-private scope. No general selector substitution, arbitrary opaque terminal bound, three-or-more shared-bit constant-four payment, optimal constant or universal FEI is asserted.",
+    "hypotheses": [
+      "Uniform finite Boolean cubes; all H, CE and KL in bits",
+      "At most two shared physical child coordinates; all remaining private coordinates disjoint; fresh selector absent from children",
+      "Finite normalized references positive on true support; shared moments and references fixed before spectral sampling; off-target reference mass retained",
+      "Ideal negative-log reference costs; no integer prefix-rounding payment",
+      "Structural terminals literals/constants; opaque supplied terminal costs remain hypotheses"
+    ],
+    "statement_sha256": "6e864f3bf8111d2e5db80b5a56b90f0347d7d0921a287206cd412916700c8ef8",
+    "contributors": [
+      "A012/fleet05; A013/A097 one-bit calibration and A095 minority cap credited as prior inputs"
+    ],
+    "proof_source": {
+      "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261014T014452Z-fleet05-A012-sparse-activation-accounting\\DERIVATION.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261014T014452Z-fleet05-A012-sparse-activation-accounting\\out\\EXACT_RESULTS.json",
+      "nonmember": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261014T014452Z-fleet05-A012-sparse-activation-accounting\\out\\NONMEMBER_CERTIFICATE.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A012-DISJOINT-PRIVATE-MUX-ADMISSION",
+        "version": 1,
+        "scope": "fresh activation coefficient 6 and hereditary audit; independently accepted by A013 at entire original scope"
+      },
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 3,
+        "scope": "shared-t cap/calibration/debt upper application independently reconstructed in current DERIVATION Section5; not rank/block/lower claims"
+      },
+      "New exact collision ownership and two-bit scalar optimization proved in current DERIVATION"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_NARROW_PACKET_REFINEMENT_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A012-DISJOINT-PRIVATE-MUX-ADMISSION",
+        "version": 1,
+        "scope": "all v1 conclusions preserved; improves reference coefficient and expands admitted child overlap to two"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A013",
+      "A095",
+      "A097",
+      "A086",
+      "A094",
+      "B03",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A095-RANK-KL-EQUIVALENCE",
+    "version": 3,
+    "exact_statement": "For every Boolean f and every order sigma, normalize Q_(sigma,k)(S)=prod_{i in positions_sigma(S)}i^(-2)/Z_(n,k), set beta_(n,k)=ln(Z_(n,k)(k!)^2), D_sigma=sum_k P(|S|=k)D_nat(P(S||S|=k)||Q_(sigma,k)), and T_sigma=2R_sigma-D_sigma. Then (ln2)H(f)=H_nat(|S|)+T_sigma+E beta, with 0<=beta_(n,k)<=k ln(pi^2/4). If K_T=sup_nonconstant_f min_sigma T_sigma/I(f) and C_FEI=sup H/I, then K_T/ln2<=C_FEI<=log2(4+e)+log2(pi^2/4)+K_T/ln2 in the extended real sense. Thus K_T finite iff uniform-cube FEI holds. Concrete paid application: for any Boolean g with known bias mu and supplied normalized core reference R positive on its spectrum, empty calibration to R0(empty)=mu^2 is CE-nonincreasing. For r>=1,p=2^-r,F=1+A_r(g-1), the full reference Q(vac)=[1-p(1-mu)]^2, Q(U!=empty,T=empty)=p^2(1-mu)^2, Q(U,T!=empty)=p^2 R0(T) is normalized and has CE_F-H(F)=p D(P_g||R0) and CE_F<=p CE_g_cal+6rp(1-mu). For g=q product_j(1-2 A_(L_j)) on disjoint private blocks and a supplied terminal reference, its fixed occupied-block/uniform-nonempty-subset reference gives CE_F<=p CE_q_cal+4p sum_j I(h_j)+6rp(1-mu_g), with I(F)=p[I(q)+sum_j I(h_j)+r(1-mu_g)]. Thus a terminal cost <=C I(q) yields full cost <=max(C,6)I(F); q=1 yields CE<=6I uniformly in r, widths and number of blocks. For r=0,q=1 the same block reference has CE=H<4I. No universal terminal reference bound or incompatible shared-control extension is claimed. Further complete-reference application: for every integer t>=2, Boolean children G(s,X), H(s,Y) sharing a uniform t-bit block s with disjoint arbitrary private cubes, fresh selector z and F=(G+H)/2+z(G-H)/2, put d=Inf_z(F), d*=min(d,1-d). Shared-collision minority mass delta obeys delta<=min(d*,2^t d*^2) and B_C<=h2(delta). Consequently Delta=H(F)-(H(G)+H(H))/2 <= (t+2+3/ln2)d*. Every supplied normalized finite-cost positive-support child reference can be calibrated at all shared-only atoms, decreasing CE by exact categorical KL; their lifted single normalized full-output reference Q retains exact debt D(P_F||Q)=(D(P_G||R_Gc)+D(P_H||R_Hc))/2 and CE_F<=(c_Gc+c_Hc)/2+(t+2+3/ln2)d*. I(F)=(I(G)+I(H))/2+d, counting shared physical bits once. Given supplied child CE bounds K_G I(G), K_H I(H), this closes CE_F<=max(K_G,K_H,t+2+3/ln2)I(F). If kappa_t=sup Delta/d* over all such children and private dimensions with 0<d*<=1/2, then t-1-log2(16/9)<=kappa_t<=t+2+3/ln2 for t>=4, and kappa_t/t tends to 1. These dimension-dependent transfers do not give an absolute selector-only coefficient, a universal arbitrary-terminal reference, or a full FEI bound.",
+    "hypotheses": [
+      "Boolean sign function",
+      "uniform measure",
+      "H in bits, D and beta in nats",
+      "zero-mass levels omitted",
+      "k=0 reference assigns mass one to empty set",
+      "References normalized and positive on actual support",
+      "Earlier activation application only: Shared controls form one common signed conjunction; all remaining private blocks and terminal cube are disjoint",
+      "Bias is fixed known instance data; references chosen before spectral sampling",
+      "Ideal negative-log probability costs; no optional binary prefix-rounding bit included",
+      "The new selector application uses t>=2 arbitrary shared uniform bits and disjoint private cubes; it does not use the common-spine hypothesis of the earlier activation application",
+      "d*=min(d,1-d) is justified by sign folding; child spectra and all entropy costs are preserved",
+      "All references are calibrated and fixed before spectral sampling; complete off-target reference mass retained"
+    ],
+    "statement_sha256": "0e0f8156b244b72893f9cdd56d20be4257ff2cceb04252dc0805766411a2c4cb",
+    "contributors": [
+      "A095; A097/A086 collision-calibration transfer and bent-flip lower witness credited as prior inputs"
+    ],
+    "proof_source": {
+      "original_equivalence": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261011T231526Z-fleet05-A095-restricted-result-extraction\\REPORT.md",
+      "retained_v2": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261013T213857Z-fleet05-A095-restricted-result-extraction\\DERIVATION.md",
+      "new_linear_tax_and_sharpness": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T010024Z-fleet05-A095-restricted-result-extraction\\DERIVATION.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T010024Z-fleet05-A095-restricted-result-extraction\\out\\EXACT_RESULTS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 2,
+        "status": "Earlier exact equivalence and paid applications retained unchanged; author-proved with independent review pending"
+      },
+      {
+        "claim_id": "A097-ONE-SHARED-DATA-COLLISION-TRANSFER",
+        "version": 1,
+        "status": "Calibration identity and bent-flip witness reconstructed from cited DERIVATION and BOUNDARY; independently accepted by A094 stage 3 at full stated scope; larger-block exponential bound replaced only as an upper estimate, not refuted"
+      },
+      "Elementary Parseval, signed selector expansion, Jensen for binary entropy, scalar JS inequality, and all-parameter calculus in current DERIVATION"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A012/fleet05",
+        "verdict": "HOLDS_AT_NEW_SHARED_T_UPPER_CALIBRATION_DEBT_APPLICATION_SCOPE",
+        "scope": "DERIVATION Sections1-4 only, all t>=2 upper tax, exact categorical calibration and normalized terminal debt; excludes bundled rank equivalence, earlier block claims and Section5 asymptotic lower-bound application",
+        "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261014T014452Z-fleet05-A012-sparse-activation-accounting\\DERIVATION.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261014T014452Z-fleet05-A012-sparse-activation-accounting\\out\\EXACT_RESULTS.json",
+        "method": "independent Parseval/private support and minority cap reconstruction, all-parameter rare-regime derivative proof, independently implemented signed Boolean spectra/physical edge and reference checkers",
+        "substantive_repair_supplied": false,
+        "source_claims_sha256": "435124421626f94b5c73f3f062324a804f3a411f0ac5735f3c39413187e0caa8",
+        "source_hash_convention": "raw UTF-8 exact_statement",
+        "stage": "20261014T014452Z-fleet05-A012-sparse-activation-accounting"
+      }
+    ],
+    "status": "ORIGINAL_AUTHOR_PROVED_WITH_LOCAL_INDEPENDENT_PARTIAL_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 2,
+        "scope": "Prior statements retained; same C020 candidate extended with a linear all-overlap paid-reference application and sharp asymptotic tax"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A094",
+      "A097",
+      "A086",
+      "A085",
+      "B19",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A012-DISJOINT-PRIVATE-MUX-ADMISSION",
+    "version": 1,
+    "exact_statement": "For any Boolean g(a),h(b) on disjoint uniform private cubes and a fresh physical selector z, supplied normalized spectral references can be empty-calibrated without increasing CE. For F=z?g:h the complete coherent reference in DERIVATION.md has CE_F=(CE_g_cal+CE_h_cal)/2+Delta(mu,nu), debt=(D_g_cal+D_h_cal)/2, and Delta<=(6+1/ln2)Inf_z<(15/2)Inf_z when Inf_z>0. I_data=[I(g)+I(h)]/2 and Inf_z=(1-mu*nu)/2. Two opposite shared-literal activations with disjoint private supports therefore retain half their respective weighted terminal costs and pay each physical influence once. The recursive literal/constant certificate closed under sign flips, disjoint products, fresh activation and fresh-selector disjoint-child mux has an explicit normalized calibrated output reference with CE<=(15/2)I and is hereditary under physical restrictions. For every Boolean seed f, membership of f, its fresh balanced disjoint tensor, and a fresh point activation of that tensor is equivalent. No arbitrary opaque terminal admission, general selector substitution, additional shared-private-coordinate payment, optimal constant or universal FEI is asserted.",
+    "hypotheses": [
+      "finite uniform Boolean cubes; entropy and CE in bits",
+      "fresh selector absent from both cores; private physical supports disjoint",
+      "normalized references positive on actual spectral support; biases fixed before spectral sampling",
+      "ideal probability costs, with no integer prefix rounding payment",
+      "recursive admission has only literals/constants at terminal leaves"
+    ],
+    "statement_sha256": "662c43e7e9de77a989f409ec8e8ef1d619352d759472dd8e4afeddd2c55a0464",
+    "contributors": [
+      "A012/fleet05"
+    ],
+    "proof_source": {
+      "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261013T220914Z-fleet05-A012-sparse-activation-accounting\\DERIVATION.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261013T220914Z-fleet05-A012-sparse-activation-accounting\\out\\EXACT_RESULTS.json",
+      "admission": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261013T220914Z-fleet05-A012-sparse-activation-accounting\\out\\ADMISSION_RESULTS.json"
+    },
+    "proof_dependencies": [
+      "Elementary Fourier expansion, KL chain rule and scalar inequalities reconstructed in DERIVATION.md"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A013/fleet05",
+        "verdict": "HOLDS_AT_ENTIRE_ORIGINAL_STATEMENT_SCOPE",
+        "source_statement_sha256": "662c43e7e9de77a989f409ec8e8ef1d619352d759472dd8e4afeddd2c55a0464",
+        "source_claims_sha256": "b96da6256df64845d70b5bbdfa32a15702c31202902faffb2b9e980c7e584dd1",
+        "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261013T222840Z-fleet05-A013-representation-stability\\REVIEW_A012.md",
+        "proof_sha256": "c86a251c4225396574d69bc94fff3f9c41fabbcb54d0072aa2daa3db3cc6e503",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261013T222840Z-fleet05-A013-representation-stability\\out\\EXACT_RESULTS.json",
+        "method": "Independent Fourier-sector and KL reconstruction; fresh Boolean truth-table program; all-bias scalar proof and complete structural/hereditary induction; no author-code import",
+        "substantive_repair_supplied": false,
+        "timestamp_utc": "2026-10-13T22:44:38.117559+00:00"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A095",
+      "A094",
+      "A086",
+      "A011",
+      "B03",
+      "B20"
+    ]
+  }
+]

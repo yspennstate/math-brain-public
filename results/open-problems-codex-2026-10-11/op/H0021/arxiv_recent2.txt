@@ -1,0 +1,636 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/peVZsV4C/BCVawmbABPKZqH9NZ4</id>
+  <title>arXiv Query: search_query=(all:"spanning trees" OR all:"bounded-degree trees" OR all:"tree universality") AND submittedDate:"202608060000 TO 202610122359"&amp;id_list=&amp;start=80&amp;max_results=80</title>
+  <updated>2026-10-11T21:40:44Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:%22spanning+trees%22+OR+(all:%22bounded-degree+trees%22+OR+all:%22tree+universality%22))+AND+submittedDate:%22202608060000+TO+202610122359%22&amp;start=80&amp;max_results=80&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>80</opensearch:itemsPerPage>
+  <opensearch:totalResults>113</opensearch:totalResults>
+  <opensearch:startIndex>80</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.03574v3</id>
+    <title>An $m+n^{3/2}$ algorithm for counting spanning trees by $\ell_1$-regularized resistance</title>
+    <updated>2026-09-13T13:23:10Z</updated>
+    <link href="https://arxiv.org/abs/2609.03574v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.03574v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the basic problem of approximating the number of spanning trees of a graph. For a graph with $n$ vertices, $m$ edges, We propose an algorithm that approximates the number of spanning trees in $\widetilde O(m+n^{3/2}\eps^{-1})$ time. Our algorithm improves upon the previously best known $\widetilde O(m+n^{15/8}\eps^{-7/4})$ time algorithm by Chu, Gao, Peng, Sachdeva, Sawlani, and Wang [FOCS 2018] and the $\widetilde O(m^{3/2}\eps^{-1})$ time algorithm by Liu, Peng, and Yang [FOCS 2026]. Notably, our algorithm is based on the novel concept of $\ell_1$-regularized resistance. We propose simple and efficient algorithm for computing $\ell_1$-regularized resistance and we show that they can be used to approximate the number of spanning trees by combining with the determinant sparsifier framework of Durfee, Peebles, Peng, and Rao [FOCS 2017]. Our algorithm matches the best known size of the determinant sparsifiers.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T09:24:22Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Rong-Hua Li</name>
+    </author>
+    <author>
+      <name>Yichun Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.03306v1</id>
+    <title>Geometry-Aware Graph Construction via Adaptive Spectral Bandwidth Control</title>
+    <updated>2026-09-03T02:57:28Z</updated>
+    <link href="https://arxiv.org/abs/2609.03306v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.03306v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Kernelized graph methods - spectral clustering, diffusion maps, and sparse kernel -regression graphs - that use Gaussian kernels depend on the choice of Gaussian bandwidth sigma, which governs the spectral character of the local kernel operator. When sigma is too small, the kernel overestimates local complexity and treats each sample as an independent direction; when sigma is too large, the kernel collapses multiple directions together, the condition number diverges, and all geometric discrimination is lost. We propose a choice of scale to make the spectral complexity of the kernel consistent with the intrinsic complexity of the underlying manifold. We propose a per-node bandwidth criterion that operationalizes this principle by jointly matching the kernel's effective rank to the local intrinsic dimension estimated via minimum spanning tree, anchoring the search in the manifold-consistent log-log scaling regime. We evaluate SSL embeddings from six encoders on CIFAR-100, showing that adaptive bandwidth consistently improves leave-one-out (LOO) classification and label propagation (LP) accuracy over fixed-bandwidth methods and competing adaptive methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-03T02:57:28Z</published>
+    <arxiv:comment>Accepted at IEEE MLSP 2026. 6 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ecem Bozkurt</name>
+    </author>
+    <author>
+      <name>Antonio Ortega</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.01283v1</id>
+    <title>Sensitivity Oracles for Matroid Packing, Matroid Covering, and Matching Problems with Applications</title>
+    <updated>2026-09-01T14:17:13Z</updated>
+    <link href="https://arxiv.org/abs/2609.01283v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.01283v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sensitivity oracles preprocess a graph so that queries can be answered after any $f$ edge insertions and deletions, without recomputing from scratch. For structural optimization problems the known landscape is limited: for flows and cuts, all known compact oracles handle only $f\le2$ failures; existing oracles for $s$- and global min-cut apply only to undirected graphs; and for matchings, arborescence and spanning-tree packings, and arboricity, no efficient oracle is known for $f&gt;1$. We present a unified algebraic framework based on sensitivity oracles for matroid packing, covering, and parity of sparse linear matroids, yielding the first oracles supporting an arbitrary number $f$ of updates across all of these problems (all constructions randomized Monte-Carlo).
+  Concretely, we obtain efficient oracles for exact $(s,t)$-max-flow/min-cut, resolving an open problem of Baswana, Bhanja, and Pandey (ICALP'22) with near-optimal space; for all-pairs $k$-bounded flow, generalizing the near-optimal reachability oracle of Brand and Saranurak (FOCS'19, the case $k=1$); the first oracles for any $f$ for directed $s$- and global min-cut; oracles for $k$-disjoint arborescences, $k$-disjoint spanning trees, colorful spanning trees, and arboricity; and oracles for the existence of an $α$-factor, with perfect matching as the case $α=1$.
+  We further introduce the \emph{subset sensitivity model}, in which updates are confined to a susceptible edge set of size $σ$ fixed during preprocessing. Here we decouple updates from the matroid representation and eliminate the dependence on $k$ and the matroid density altogether: all of the above are supported with $\widetilde O(f^ω)$ query time and $O(fσ^2)$ space. We also prove a matching $Ω(\min\{σ^2,n^2\})$-bit lower bound when $f\ge2$, establishing optimality.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-01T14:17:13Z</published>
+    <arxiv:comment>65 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Keerti Choudhary</name>
+    </author>
+    <author>
+      <name>Amit Kumar</name>
+    </author>
+    <author>
+      <name>Lakshay Saggi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.01672v1</id>
+    <title>All-Minors Matrix-Tree Theory for Superport Networks: Completed Quotient-Incidence Determinants and Conductance-Weighted Subdivision Extensions</title>
+    <updated>2026-09-01T07:37:13Z</updated>
+    <link href="https://arxiv.org/abs/2609.01672v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.01672v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An electrical network can be summarized at its boundary by a response matrix: prescribed boundary voltages determine boundary currents. A superport network adds a constraint by grouping boundary terminals into superports, requiring the total current in each group to be zero and making voltage differences inside the groups the natural coordinates. Earlier work determined forest formulas for a single response entry and for the determinant of the whole response matrix. The missing case was an arbitrary subdeterminant, or minor: one needs to know not only which spanning forests contribute, but also the sign carried by each forest. This paper supplies that sign rule. After choosing one reference vertex in each superport, the response is \[ L=\left(D^{T}K^{-1}D\right)^{-1}, \] with \(K\) the grounded weighted Laplacian and \(D\) recording the selected voltage differences. Contracting the components of a physical spanning forest \(F\) produces a much smaller quotient port graph \(H_F\). Its reduced incidence matrix \[ B_F=Q_FD \] has columns only of the forms \[ 0,\qquad \pm e_a,\qquad e_a-e_b. \] Hence every square incidence minor is exactly \(0\) or \(\pm1\). For a \(k\)-set of response coordinates \(I\), append to \(B_F\) the selector rows \(E_I^{T}\) and define the completed quotient-incidence determinant \[ \widehatχ_F(I) = \det \begin{pmatrix} B_F\\ E_I^{T} \end{pmatrix}. \] For coordinate sets \(I,J\) of the same size, the arbitrary response minor is a weighted spanning-forest sum whose coefficient is simply \[ \widehatχ_F(I)\widehatχ_F(J). \] Thus the Jacobi complementary-minor factors used in the derivation disappear from the final theorem. Direct block-triangular reduction gives \[ \widehatχ_F(I)\in\{0,\pm1\}, \] with nonvanishing occurring exactly when the complementary quotient edges \(N\setminus I\) form a spanning tree of \(H_F\).</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-01T07:37:13Z</published>
+    <arxiv:comment>11 pages, 7 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tony Newton</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.30299v1</id>
+    <title>Beating Quadratic Time--Message Trade-off in Distributed Minimum Spanning Tree Construction</title>
+    <updated>2026-08-31T06:13:08Z</updated>
+    <link href="https://arxiv.org/abs/2608.30299v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.30299v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a new distributed algorithm for computing a minimum spanning tree (MST) in the \textsf{CONGEST-KT$_{1}$} model, where messages are limited to $O(\log n)$ bits and each vertex initially knows the identifiers of its neighbors. Our algorithm exposes a two-parameter time--message trade-off: for any $0 \leq λ\leq κ\leq 1/2$, it runs in $\tilde{O}(n^λD_G + n^{1 - κ- λ} + n^{1 - 2κ+ λ} + n^{1/2})$ rounds and uses $\tilde{O}(\min\{m, n^{1 + κ}\})$ messages, where $n$, $m$, and $D_G$ are the number of vertices, edges, and thenetwork diameter, respectively. In particular, setting $(κ, λ) = (1/3, 1/6)$ yields an MST algorithm running in $\tilde{O}(n^{1/2} + n^{1/6}D_G)$ rounds with only $\tilde{O}(n^{4/3})$ messages. Under the mild assumption $D_G = O(n^{1/3})$, this is round-optimal while improving the best known message bound of $\tilde{O}(n^{3/2})$. More broadly, our algorithm breaks the quadratic time--message trade-off barrier $\mathrm{\# rounds} \cdot \mathrm{\# messages} = \tildeΩ(n^2)$, which no previous MST algorithm in the \textsf{CONGEST-KT$_{1}$} model has been able to overcome, and it does so for almost the entire range of the diameter $D_G$. As a byproduct, we also obtain new low-message broadcast, spanning-tree, and leader-election algorithms.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-31T06:13:08Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Taisuke Izumi</name>
+    </author>
+    <author>
+      <name>Naoki Kitamura</name>
+    </author>
+    <author>
+      <name>Toshimitsu Masuzawa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.28484v1</id>
+    <title>An Alexander Polynomial Refinement for Alternating Links, with Trapezoidal Properties</title>
+    <updated>2026-08-28T16:12:10Z</updated>
+    <link href="https://arxiv.org/abs/2608.28484v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.28484v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We define an invariant of alternating links---a homogeneous, four-variable Laurent polynomial---that encodes the symmetrized Alexander polynomial, the signature, and other topological data. Along the way, we extend a spanning tree formulation of the Alexander polynomial due to Murasugi and Stoimenow from special alternating links to all alternating links. This project is motivated by Fox's trapezoidal conjecture; accordingly, we prove certain sequences associated to our invariant are trapezoidal for all alternating links. We also conjecture our polynomial has $M$-convex support, and that it satisfies symmetry and log-concavity properties. We prove a partial symmetry result.</summary>
+    <category term="math.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-28T16:12:10Z</published>
+    <arxiv:comment>39 pages, many figures, comments welcome</arxiv:comment>
+    <arxiv:primary_category term="math.GT"/>
+    <author>
+      <name>Joe Boninger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.27118v1</id>
+    <title>Lunar Generalizations of the Euclidean Minimum Spanning Tree in the Plane and their Expected Costs</title>
+    <updated>2026-08-27T13:28:35Z</updated>
+    <link href="https://arxiv.org/abs/2608.27118v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.27118v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by the recent introduction of chromatic persistent homology, we generalize the Euclidean minimum spanning tree (EMST) for $n$ points in $\mathbb{R}^2$ to the lunar EMST for the case in which the points come in $s+1$ colors. Calling the intersection of $s+1$ disks of radius $r$ centered at points with pairwise different colors a \emph{lune}, the generalized EMST reflects the history of the union of lunes as $r$ goes from $0$ to $\infty$, and its \emph{cost} is twice the difference between the radii when the arcs and nodes of the tree are formed. If the points are chosen uniformly at random in $[0,1]^2$ and colored randomly, the expected cost converges to some constant (that depends on $s$) times $\sqrt{n}$, as $n$ goes to infinity. The main contribution of this paper is a proof that this constant exists, however similar to the case of the classic EMST, its precise value remains elusive.</summary>
+    <category term="cs.CG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-27T13:28:35Z</published>
+    <arxiv:primary_category term="cs.CG"/>
+    <author>
+      <name>Ondřej Draganov</name>
+    </author>
+    <author>
+      <name>Herbert Edelsbrunner</name>
+    </author>
+    <author>
+      <name>Sophie Rosenmeier</name>
+    </author>
+    <author>
+      <name>Morteza Saghafian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.26458v1</id>
+    <title>Gluing Formula for the Pseudo-Determinant of Graph Laplacian and Applications to Counting of Spanning Trees</title>
+    <updated>2026-08-26T23:29:00Z</updated>
+    <link href="https://arxiv.org/abs/2608.26458v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.26458v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we establish a gluing formula for the pseudo-determinant of the Laplacian on a simple finite graph. We achieve this by using the gluing formula for the determinant of massive Laplacian and the perturbation theory technique. In addition, we apply this gluing relation to derive a gluing formula for the number of spanning trees and rooted spanning forests on simple finite graphs.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T23:29:00Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shivjyot Brar</name>
+    </author>
+    <author>
+      <name>Sheng-Chang Chen</name>
+    </author>
+    <author>
+      <name>Sayonita Ghosh Hajra</name>
+    </author>
+    <author>
+      <name>Santosh Kandel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.25530v1</id>
+    <title>Not All Degree Constraints Are Created Equal when Computing Spanning Trees</title>
+    <updated>2026-08-26T08:35:53Z</updated>
+    <link href="https://arxiv.org/abs/2608.25530v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.25530v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the computation of minimum spanning trees subject to local degree constraints. Recent work (ICALP 2026) established that three natural formalizations of this problem share the exact same parameterized complexity under standard structural graph parameters, including treewidth, pathwidth and clique-width. This applies to the cases where every vertex has a single target degree (Specified Degree MST), or a degree upper bound (Bounded Degree MST), or is equipped with a set of admissible degrees (Set of Degrees MST).
+  In this paper, we investigate these problems under more restrictive parameterizations and reveal that their complexity landscapes fundamentally diverge on bounded-treedepth graphs. Specifically, we prove that the former two problems are fixed-parameter tractable when parameterized by the treedepth of the input graph. In sharp contrast, we show that Set of Degrees MST remains W[1]-hard parameterized by treedepth, even when combined with the feedback vertex number (i.e., deletion distance to treewidth $1$). Finally, we show that this divergence seems to be specific to treedepth: we exclude an analogous W[1]-hardness result for Set of Degrees MST w.r.t. the vertex cover number and also rule out fixed-parameter algorithms for the former two problems w.r.t. deletion distance to constant pathwidth.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T08:35:53Z</published>
+    <arxiv:comment>To appear at IPEC 2026. This is the original submitted version - reviewer comments will be incorporated in a later version</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Narek Bojikian</name>
+    </author>
+    <author>
+      <name>Alexander Firbas</name>
+    </author>
+    <author>
+      <name>Robert Ganian</name>
+    </author>
+    <author>
+      <name>Hung P. Hoang</name>
+    </author>
+    <author>
+      <name>Krisztina Szilagyi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.25385v2</id>
+    <title>Matching complements in subcubic graphs and a proof of the 3-Decomposition Conjecture</title>
+    <updated>2026-09-03T09:07:07Z</updated>
+    <link href="https://arxiv.org/abs/2608.25385v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.25385v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We prove the 3-Decomposition Conjecture: every finite connected cubic loopless multigraph decomposes into a spanning tree, a 2-regular subgraph, and a matching. The proof rests on a new theorem on matching complements in subcubic graphs. Let H be a finite connected bridgeless
+  simple graph of maximum degree three, and let S be its set of degree-two vertices, with |S| = k &gt;= 2. We show that H has a matching of size equal to its cyclomatic number, |E(H)| - |V(H)| + 1, whose deletion leaves a single tree containing all of S, together with cycles
+  disjoint from S. The proof is by induction on k, using an alternating-path exchange that stops at the first entry into the growing tree component.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T05:23:00Z</published>
+    <arxiv:comment>14 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Jicheng Ma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.27927v1</id>
+    <title>Resilient forest universality in percolated dense graphs</title>
+    <updated>2026-08-24T03:11:16Z</updated>
+    <link href="https://arxiv.org/abs/2609.27927v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.27927v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Christoph, Müyesser and Wigderson recently asked whether an approximate form of the Erdős-Sós conjecture is robust under random edge deletions. We establish a density-sensitive transference theorem that converts global resilience for bounded-degree trees in sparse random graphs into resilient forest universality in arbitrary dense host graphs. More precisely, if $F$ is an $N$-vertex graph of edge density $λ$ bounded away from zero and $p\in[K/N,1]$, then, with probability $1-o(1)$ uniformly over the host and the percolation parameter, every subgraph obtained from $F_p$ by deleting at most an $α$-fraction of its edges contains every bounded-degree forest on at most $((1-α)λ-ξ)N$ vertices. Consequently, for every $c&gt;0$, $L\ge1$, fixed $D$ and $α&lt;c$, every graph $F$ on at most $Ld$ vertices with average degree at least $d$ has the property that, after percolation at any rate $p\in[K/d,1]$ and any subsequent deletion of at most an $α$-fraction of the surviving edges, the remaining graph is universal for all forests on at most $(1-c)d$ vertices and maximum degree at most $D$. This includes vertex-disjoint packings of any prescribed collection of bounded-degree trees of that total order. We further obtain forest-universality results for graphs whose connected components have vertex-cover number at most $Cd$, and for graphs that can be brought into this form by deleting sufficiently few edges on the $dn$-scale.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-24T03:11:16Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <arxiv:journal_ref>JCMCC, 2026</arxiv:journal_ref>
+    <author>
+      <name>Mostafa Mirabi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.22308v1</id>
+    <title>Spanning trees in the Assignment Problem: two theorems and two conjectures</title>
+    <updated>2026-08-23T09:17:27Z</updated>
+    <link href="https://arxiv.org/abs/2608.22308v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.22308v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The \emph{Minimum Matching Problem} consists of finding an independent edge set of minimum weight $M_{\star}(G)$ in a given edge-weighted graph $G$. When $G$ is bipartite, this reduces to the \emph{Assignment Problem}. We consider a variant of this problem defined by taking the union of optimal matchings across various slightly modified versions of the base graph: $H_{\mathcal{J}}(G)=\bigcup_{U \in \mathcal{J}} M_{\star}(G_{U})$. We establish two families of results: (1) In two distinct settings for the Assignment Problem, we prove that the resulting graphs $H_{\mathcal{J}}$, as well as certain associated graphs $\bar{H}_{\mathcal{J}}$, are spanning trees on the relevant base graphs $G$ and $\bar{G}$. (2) In these same settings, assuming the edge weights are given by the $p$-th power of Euclidean distances for point configurations in the plane, we show that for $p=1$ the tree $H_{\mathcal{J}}$ is non-crossing (i.e., its planar embedding has no crossing edges), whereas, remarkably, for $p=2$ the associated tree $\bar{H}_{\mathcal{J}}$ is non-crossing. Finally, we introduce novel conjectures in Statistical Mechanics, to be explored in future work: in the Random Euclidean Assignment Problem (where points are i.i.d.\ on a planar domain), we conjecture that for $p=2$ the trees $\bar{H}_{\mathcal{J}}$ are asymptotically distributed as Uniform Spanning Trees with free and wired boundary conditions in the two respective settings. In particular, suitable paths on the tree in the second setting, and on its planar dual in the first setting, are asymptotically distributed as $\text{SLE}_κ$ with $κ=2$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-23T09:17:27Z</published>
+    <arxiv:comment>116 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Sergio Caracciolo</name>
+    </author>
+    <author>
+      <name>Gabriele Sicuro</name>
+    </author>
+    <author>
+      <name>Andrea Sportiello</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.21739v1</id>
+    <title>An 8/5 Rounding for Half-Integral Forest-BCR via Root Supports and Circuit Rank</title>
+    <updated>2026-08-22T02:42:08Z</updated>
+    <link href="https://arxiv.org/abs/2608.21739v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.21739v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the rounding of a supplied half-integral feasible solution of the root-assignment bidirected cut relaxation for Steiner Forest (Forest-BCR). Byrka, Grandoni, and Traub [IPCO 2025] proved a $16/9$ guarantee for a recursive framework that normalizes the LP point, selects a vertex set of maximum projected LP density, buys a minimum spanning tree on that set, contracts it, and recurses. We prove that the same framework has guarantee $8/5$.
+  The new analysis keeps the orientation and the root label of each projected half-unit of LP mass. In a simple projection, the cut constraints at a terminal of degree two determine the root-assignment vector of every demand incident with it, and half-integrality leaves only two possibilities: a unit assignment to one root, which forces excess outdegree inside that root's support, or a split assignment to two roots, which forces overlap between their supports. For every connected component $C$ of the split-root graph this yields $ β_C\ \ge\ \frac{L_C}{2}$, where $β_C$ is the circuit rank of the union of the root supports in $C$ and $L_C$ is the number of its vertices of degree two in the full projection. Balancing the density certificate obtained from this inequality against the ordinary degree sum gives a vertex set of density at least $5/8$, and the inherited contraction lemma turns that into the $8/5$ rounding.
+  For every $q\ge3$ we also construct a normalized half-integral point whose maximum projected density is exactly $5q/[2(4q-1)]$, so the universal projected-density bound is asymptotically tight.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-22T02:42:08Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Morteza Alimi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.21248v1</id>
+    <title>T-Robinson Spaces: Structure, Recognition, and Applications to Real Data</title>
+    <updated>2026-08-21T15:59:51Z</updated>
+    <link href="https://arxiv.org/abs/2608.21248v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.21248v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study \emph{$T$-Robinson spaces}, a tree-based generalization of Robinson spaces in which every path of a compatible tree induces a Robinson subspace. This framework extends the classical notion of Robinsonian representations from linear orderings to tree structures, allowing the modeling of hierarchical and branching data. We establish a complete combinatorial characterization of $T$-Robinson spaces by proving their equivalence with several graph- and hypergraph-theoretic properties. In particular, we show that a dissimilarity space is $T$-Robinson if and only if all its level graphs are dually chordal with a common compatible tree. Combined with the characterization of hypertrees established by Brucker~\cite{brucker2005hypertrees}, this yields the equivalent characterization in terms of the associated cluster, ball, and 2-ball hypergraphs being hypertrees. Building upon these structural results, we develop a recognition algorithm with complexity \(O(K n^{2})\), where \(K\) denotes the number of minimum spanning trees of the dissimilarity space, improving upon existing hypertree-based approaches whenever \(K\) remains moderate. We further introduce a quantitative measure of $T$-Robinson structure that evaluates the extent to which an arbitrary dissimilarity space admits a tree-like representation. Finally, we discuss applications to real-world datasets, illustrating how $T$-Robinson spaces provide an interpretable framework for analyzing and organizing relational data.</summary>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-21T15:59:51Z</published>
+    <arxiv:primary_category term="cs.DM"/>
+    <author>
+      <name>Patricio Asenjo</name>
+    </author>
+    <author>
+      <name>Sergio Cavero</name>
+    </author>
+    <author>
+      <name>Mauricio Soto-Gomez</name>
+    </author>
+    <author>
+      <name>Christopher Thraves Caro</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.20778v1</id>
+    <title>Resistance Curvature: Recognition, Polyhedral Structure, and Graph Products</title>
+    <updated>2026-08-21T06:43:03Z</updated>
+    <link href="https://arxiv.org/abs/2608.20778v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.20778v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Resistance curvature, introduced by Devriendt and Lambiotte, is a novel discrete curvature notion defined through effective resistance. A graph is called resistance nonnegative if there exists a choice of positive edge weights for which the resistance curvature is nonnegative at every vertex. This property has a notable combinatorial interpretation in terms of random spanning trees: a graph is resistance nonnegative if and only if it admits a distribution on its spanning trees under which every vertex has expected degree at most two. The resistance nonnegativity can also be characterized by the tree double matching polytope. These characterizations reveal strong connections among resistance curvature, effective resistance, spanning tree distributions, matching theory, and polyhedral combinatorics. Based on the sign of the curvature, Devriendt introduced the classes of resistance nonnegative (RN), resistance positive (RP), and strictly resistance nonnegative (SRN) graphs, and posed several questions concerning their recognition, polyhedral structure, and structural properties.
+  In this paper, we first answer Devriendt's question on the computational complexity of recognizing RN, RP, and SRN graphs by proving that all three classes can be recognized in polynomial time. We then address his question concerning the tree double matching polytope $Θ(G)$. Further, we characterize the vertices of $Θ(G)$ in terms of full-rank systems of tight constraints. Whenever $Θ(G)\neq\emptyset$, we also determine the least positive integer $k_G$ such that $k_GΘ(G)$ is a lattice polytope. Finally, for every finite Cartesian product of paths, we explicitly construct an average point satisfying the condition for resistance nonnegativity, thereby obtaining that such graphs are RN. We further characterize the classes of such Cartesian product graphs that are RP or SRN.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-21T06:43:03Z</published>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Meng Guo</name>
+    </author>
+    <author>
+      <name>Wensheng Sun</name>
+    </author>
+    <author>
+      <name>Yujun Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.18992v1</id>
+    <title>Tight Energy Lower Bounds for Distributed Graph Algorithms</title>
+    <updated>2026-08-19T14:58:48Z</updated>
+    <link href="https://arxiv.org/abs/2608.18992v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.18992v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There has been a significant recent interest in designing distributed algorithms in the SLEEPING model that minimize the {energy (a.k.a awake) complexity, which measures the number of rounds a node is awake during the algorithm. A node spends non-trivial resources (messages, energy, etc.) only when it is awake and not while sleeping. Energy complexity has been studied for various fundamental problems with respect to minimizing the maximum (worst-case) or the average number of rounds a node is awake.
+  It has been shown that the energy complexities of several fundamental problems such as leader election (LE), broadcast, Minimum Spanning Tree (MST), Maximal Independent Set (MIS) is exponentially smaller compared to their respective best-possible round complexities in the standard CONGEST model (where nodes can only send messages of small size). This raises a fundamental question of whether such significant energy gains are possible for many other fundamental problems.
+  Our main contribution is a general and powerful technique for showing energy lower bounds using information theory. It gives almost a "plug-in" way to show energy lower bounds for various problems in the standard CONGEST model. Our information-theoretic technique allows us to leverage known lower bounds on communication complexity to obtain new, almost optimal (up to logarithmic factors) polynomial (in $n$) lower bounds on energy complexity --- for both worst-case and average-case --- for fundamental graph problems such as triangle enumeration, All-Pairs Shortest Paths (APSP), diameter computation, minimum weight cycle, Maximum Independent Set (MaxIS), Minimum Dominating Set (MinDS), Minimum Vertex Cover (MinVC). The energy lower bounds of these problems match their respective round lower bounds, implying that one cannot obtain any significant gains in energy complexity.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-19T14:58:48Z</published>
+    <arxiv:comment>To appear at DISC 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Fabien Dufoulon</name>
+    </author>
+    <author>
+      <name>Gopal Pandurangan</name>
+    </author>
+    <author>
+      <name>Peter Robinson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.17887v1</id>
+    <title>The segmented spiral structure of the Solar neighbourhood traced by young clustered populations</title>
+    <updated>2026-08-18T15:21:06Z</updated>
+    <link href="https://arxiv.org/abs/2608.17887v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.17887v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Milky Way spiral pattern remains poorly constrained, and the youngest tracers in the solar neighbourhood do not always follow a few smooth, continuous logarithmic arms. We analyse young open clusters, both independently and combined with young stellar object (YSO)-based groups, to test whether they define continuous spiral-arm ridges or shorter, partially connected structures. In the (theta_G, ln R_G) plane, we identify local overdensities using a density-supported Bayesian Gaussian Mixture Model (BGMM), introducing published Perseus, Local, Sagittarius, and Scutum arm tracks only afterwards as reference curves. We then apply a Minimum Spanning Tree (MST) analysis in the heliocentric (X,Y) plane to examine spatial connectivity. The open-cluster sample already resolves into several local components, while the addition of YSO-based groups highlights branches and intermediate regions without producing continuous arms. The MST likewise shows distinct local branches at small pruning scales that progressively merge as the linking scale increases. The Local--Sagittarius region provides the clearest agreement between both diagnostics: the BGMM identifies an intermediate component between the reference arms, while the MST connects neighbouring branches through the same region. Overall, young structures near the Sun appear as fragmented, spiral-like segments with partial links rather than smooth continuations of a few grand-design arms. Determining whether this morphology reflects spiral-arm formation mechanisms or subsequent evolution will require additional age, vertical, and kinematic information.</summary>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-18T15:21:06Z</published>
+    <arxiv:comment>12 pages, 4 figures, 5 tables. Accepted for publication in Astronomy &amp; Astrophysics</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.GA"/>
+    <author>
+      <name>M. Carmen Sánchez-Gil</name>
+    </author>
+    <author>
+      <name>Emilio J. Alfaro</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.16483v1</id>
+    <title>Cayley-tree pseudo-orbit tracing: period subgroups and relative geometry</title>
+    <updated>2026-08-17T12:23:50Z</updated>
+    <link href="https://arxiv.org/abs/2608.16483v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.16483v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We introduce Cayley-tree POTP, obtained by imposing the pseudo-orbit equations of a finitely generated group action only along a spanning tree of a Cayley graph. For zero-dimensional actions, we characterize this property by equicontinuity along normalized replacement paths; for subshifts, the criterion is expressed in the right-coset space of the common left-period subgroup. These criteria characterize virtual freeness and, for commensurated subgroup pairs, identifies Cayley-tree POTP of the coset full shift with relative quasi-tree geometry and a finite Bass--Serre decomposition. For infinite-index VFP pairs, Cayley-tree POTP of the coset full shift is equivalent to virtual cohomological codimension one, although ordinary POTP holds for every such shift. Finally, we prove that the strong topological Rokhlin property passes to finite-index overgroups. Consequently every finitely generated virtually free group has this property, answering the virtually cyclic case posed by Doucha, and Cayley-tree POTP is generic for its Cantor actions.</summary>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-17T12:23:50Z</published>
+    <arxiv:primary_category term="math.DS"/>
+    <author>
+      <name>Hui Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.14839v1</id>
+    <title>Optimal Transport on Graphs and Stochastically Evolving Trees</title>
+    <updated>2026-08-14T19:24:02Z</updated>
+    <link href="https://arxiv.org/abs/2608.14839v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.14839v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We give an effective algorithm for determining the transportation distance between two given probability density functions defined on the vertices of a graph $G=(V,E)$ by analyzing an associated polytope. The vertices of the polytope correspond to feasible flows on spanning trees in $G$, and the $1$-skeleton of the polytope is a projection of the spanning tree state graph associated with the Glauber dynamics on $G$. The optimal value of this transportation problem, known as the $1$-Wasserstein distance, can be computed by tracing the transportation cost along the vertices of this polytope. We show that a local minimum of the transportation cost is also a global minimum, and this leads to a steepest descent algorithm for solving the transportation problem. If the probability density functions take discrete values in $δ\mathbb{Z}$ for some $δ&gt;0$, then the optimal transport cost can be reached in at most $\frac{|V|-1}δ$ steps. As an application, we give an efficient algorithm for computing the Ollivier--Ricci curvature of a graph.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-14T19:24:02Z</published>
+    <arxiv:comment>15 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Fan Chung</name>
+    </author>
+    <author>
+      <name>Sawyer Jack Robertson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.13431v1</id>
+    <title>Measuring the Arrow of Time: Identification, Estimation, and Inference for Directional Structure in Multivariate Time Series</title>
+    <updated>2026-08-13T16:19:52Z</updated>
+    <link href="https://arxiv.org/abs/2608.13431v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.13431v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many questions across the sciences take the same form: several coupled series are observed together, and the analyst wants to know not merely that they move together but which one moves first, and how strongly. This paper sets out a complete method built on one organising idea: the direction of a coupled system is exactly the part of its behaviour that changes when the record is played backwards. Tools built on contemporaneous covariance alone (correlation matrices, distance measures, spanning trees, undirected centralities, principal components) carry no information about direction: a reversible system and a circulating one can share identical covariance at every sampling of the same point-in-time record. Formally, direction is a circulation matrix carried by the lagged covariance. Its vanishing is exactly statistical time reversibility for linear systems, feature maps carry the characterisation to nonlinear ones, and under the Gaussian benchmark its magnitude is an entropy-production functional of the identified circulation, the quadratic component of the divergence per unit time between the forward and reversed records. Around this estimand we build a cross-fitted estimator removing first-order bias, delete-block jackknife standard errors, and a randomisation test exact under its stated block null, with a familywise correction and a nonlinear extension. A sampling theory says when the arrow is measurable at all, and a design layer separates transmission from the ordering of clocks. A laboratory of four systems with known answers compares the method with correlation networks, Granger causality, transfer entropy, and connectedness indices, reporting the failures of each when read as a measure of direction, including our own. Complete algorithms and worked examples in two languages make the paper the base reference for a series of applications.</summary>
+    <category term="econ.EM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-13T16:19:52Z</published>
+    <arxiv:comment>64 pages, 6 figures. Base methods reference for a series of applications. JEL: C12, C32, C58, G15</arxiv:comment>
+    <arxiv:primary_category term="econ.EM"/>
+    <author>
+      <name>Avishek Bhandari</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.12831v2</id>
+    <title>Fast A/B/n Testing: Exact Multi-Policy Comparison via Tree-Coupled Feedback Sharing</title>
+    <updated>2026-08-14T03:53:23Z</updated>
+    <link href="https://arxiv.org/abs/2608.12831v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.12831v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Online platforms increasingly compare many adaptive decision policies---ranking systems, recommendation algorithms, pricing rules, and language-model agents---while each reward-bearing interaction can be costly or risky. A direct A/B/n design gives each of $J\ge 2$ policies its own horizon-$T$ trajectory and therefore uses $JT$ outcomes. We introduce Tree-Coupled A/B Testing (\TCAB), an exact feedback-sharing design for arbitrary history-dependent contextual-bandit policies. At each round, a predictable tree connects the current policy histories; every parent--child context--action law is maximally coupled, and one reward is shared within each component of matched tree edges. Every policy retains exactly its standalone finite-horizon trajectory law, even though the policies are deliberately dependent. If $D_{e,t}$ records a mismatch on tree edge $e$ at round $t$, the number of reward queries satisfies the pathwise identity $N(T)=T+\sum_{t,e}D_{e,t}$ and hence equals $T$ plus cumulative tree-edge total variation in expectation. This cost is conditionally optimal among exact edge-local designs on the selected tree, and a current-round minimum-spanning tree is myopically optimal among tree designs. For fixed $J$, sublinear pseudo-regret of every policy and almost-sure uniqueness of the oracle action imply $\mathbb{E}[N(T)]=T+o(T)$, versus $JT$ for independent runs. We also obtain finite-sample variance bounds for pairwise policy contrasts. Experiments on reward-model evaluation, multiple-choice language-model evaluation, and adaptive search policies demonstrate substantial improvements in the cost--precision frontier.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-13T05:10:43Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yuxiao Wen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.11990v1</id>
+    <title>On spanning trees whose degrees are congruent to one modulo $\ell$</title>
+    <updated>2026-08-12T12:28:07Z</updated>
+    <link href="https://arxiv.org/abs/2608.11990v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.11990v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>An $\ell$-congruent spanning tree of a nontrivial connected graph is a spanning tree in which every vertex has degree congruent to one modulo $\ell$. This notion provides a common generalization of classical spanning trees and odd spanning trees. We show, via a constructive greedy algorithm, that every $n$-vertex graph $G$ satisfying $n\equiv2\pmod{\ell}$ and $δ(G)&gt;\frac{(\ell-1)n}{\ell}$ has an $\ell$-congruent spanning tree. For the special case of odd spanning trees ($\ell=2$), our algorithmic approach simplifies the original proof by Zheng and Wu. We also derive formulas for the numbers of $\ell$-congruent spanning trees in complete graphs and complete bipartite graphs. These formulas specialize to the classical spanning-tree formulas when $\ell=1$ and to the corresponding odd-spanning-tree formulas when $\ell=2$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T12:28:07Z</published>
+    <arxiv:comment>12 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Zhidan Yan</name>
+    </author>
+    <author>
+      <name>Wei Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.11734v1</id>
+    <title>Average hitting times and recurrence structures II: Cartesian products of powers of cycles and regular graphs</title>
+    <updated>2026-08-12T07:13:16Z</updated>
+    <link href="https://arxiv.org/abs/2608.11734v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.11734v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In our previous work \cite{MiezakiTamura2026}, we clarified the second-order linear recurrence structures appearing in the average hitting times on the $k$-th power graph $C_N^k$ of the cycle graph. In this paper, for a connected $r$-regular graph $G$ on $m$ vertices, we investigate the average hitting times of the simple random walk on the Cartesian product graph $C_N^k \square G$. By using discrete Fourier analysis in the $C_N^k$ direction and the Laplacian spectral decomposition of $G$, we decompose the average hitting time into a component proportional to the average hitting time on $C_N^k$ and correction terms arising from the nonzero Laplacian eigenspaces of $G$. For each nonzero Laplacian eigenvalue, we introduce a Chebyshev-type polynomial, and when all of its roots are simple, we express the correction term as a finite Green-type sum. Furthermore, for two vertices having the same $G$-coordinate, we transform this expression into a second-order linear recurrence representation of the form $V_\ell V_{N-\ell}/V_N$.
+  When $G$ is a walk-regular graph, the average hitting time between two vertices having the same $G$-coordinate depends only on the Laplacian eigenvalues of $G$ and their multiplicities. We also derive formulas for the number of spanning trees and the number of two-component spanning forests of $C_N^k \square G$, and give several explicit examples.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T07:13:16Z</published>
+    <arxiv:comment>33 pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Tsuyoshi Miezaki</name>
+    </author>
+    <author>
+      <name>Shunya Tamura</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.10654v1</id>
+    <title>Fixed forests in the minimum spanning tree and cubic volume growth</title>
+    <updated>2026-08-11T08:38:20Z</updated>
+    <link href="https://arxiv.org/abs/2608.10654v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.10654v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $M_n$ be the minimum spanning tree of the complete graph $K_n$ with i.i.d.\ uniform edge weights. For a fixed forest $F$ with connected components $T_1, \ldots, T_d$, we show that there exists a function $Ψ$ on finite trees such that $$
+  n^{|E(F)|} \mathbb{P}_n(F \subseteq M_n) \longrightarrow \prod_{i=1}^d Ψ(T_i). $$ We give a recursive description of $Ψ$ and calculate it explicitly for several small trees. For the star $S_k$ and the path $P_k$, we prove that $Ψ(S_k) \sim ζ(2)^k$ and $Ψ(P_k) \sim k^2/12$, respectively. We also show that the expected size of a ball of radius $r$ is asymptotic to $r^3/36$, and give exponential tail bounds.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-11T08:38:20Z</published>
+    <arxiv:comment>29 pages, 1 figure. Comments are welcome!</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Luca Makowiec</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.26162v1</id>
+    <title>Extremal Spanning Trees of Random Marked Graphs with Independent Edge Weights</title>
+    <updated>2026-08-09T07:10:52Z</updated>
+    <link href="https://arxiv.org/abs/2609.26162v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26162v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we consider a Bernoulli random graph~\(G\) on~\(n\) vertices with non-uniform edge probabilities, where each vertex has an independent mark and each edge is equipped with an independent positive weight. The cost of an edge depends on the weight as well the marks of the endvertices and we estimate the growth of the maximum and minimum cost of a spanning tree containing all the vertices. For edge weights with heavy tails and vertex marks distributed uniformly in the unit square, we obtain a phase transition in terms of the tail decay exponent~\(s:\) If~\(s\) is large, then the maximum cost is essentially determined by the vertex locations and if~\(s\) is small, then the edge weights crucially influence the maximum cost. We derive a similar result for minimum cost spanning trees and use martingale difference based methods to establish the~\(L^2-\)convergence of the extremal cost, appropriately scaled and centred.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-09T07:10:52Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Ghurumuruhan Ganesan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.08529v1</id>
+    <title>Maximum Spanning Trees of Random Geometric Graphs With Independent Edge Weights</title>
+    <updated>2026-08-09T06:58:01Z</updated>
+    <link href="https://arxiv.org/abs/2608.08529v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.08529v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study maximum weight spanning trees of the random geometric graph (RGG)~\(G\) formed by~\(n\) vertices where each edge is independently either open or closed with a certain probability and is also equipped with an independent random positive weight. We use segmentation and iterative path construction to obtain deviation bounds for the order of growth of the maximum weight of a spanning tree in terms of an inverse of the edge weight complementary cumulative distribution function (ccdf) and also illustrate our results for the special cases of power law and exponential decay. We then use martingale difference methods to individually estimate the variance contribution due to randomness in vertex locations and edge states/weights and determine sufficient conditions for~\(L^2-\)convergence of the maximum weight, appropriately scaled and centred.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-09T06:58:01Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Ghurumuruhan Ganesan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.08375v1</id>
+    <title>Algebraic formulas for first-passage times of Markov processes in the linear framework: generalising the work of Hill and Kac</title>
+    <updated>2026-08-09T00:08:50Z</updated>
+    <link href="https://arxiv.org/abs/2608.08375v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.08375v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a preceding paper, we used the graph-theoretic linear framework to show how transient properties of continuous-time Markov processes -- splitting probabilities and the moments of first-passage time (FPT) distributions -- could be expressed as rational algebraic functions of the transition rates, by using spanning forests of the underlying graph. This contrasts with the related rational formulas for steady-state (s.s.) probabilities, which use only spanning trees. The biophysicist Terrell Hill sketched a procedure for calculating mean FPTs and splitting probabilities in terms of the s.s. probabilities of a modified Markov process, thereby converting calculations using ensembles of trajectories to those using a single trajectory. Similarly, Mark Kac showed that the mean recurrence time to a state of a Markov process could be expressed in terms of the s.s. probability of that state. Here, we explore further the relationships between transient and s.s. properties, forests and trees, and ensemble and single-trajectory calculations. We formalise Hill's procedure by introducing a Hill operator, $H_u[G]$, on a graph, $G$, and use it to calculate all moments of the conditional and unconditional FPTs from $u$ as rational functions of the s.s. probabilities of $H_u[G]$, which arise from trees and "exchange factors" which arise from forests. We then combine this with an unravelling operator, $U_v[G]$, to calculate all moments of the recurrence time distribution as rational functions of the s.s. probabilities of $G$ and related exchange factors. Surprisingly, the Hill operator turns out to be a left-inverse to the unravelling operator, suggesting that the algebra of operators on linear framework graphs may be of broader interest. Our results integrate and generalise previously disparate findings into a common repertoire of rational algebraic formulas for FPTs of Markov processes.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.QM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-09T00:08:50Z</published>
+    <arxiv:comment>58 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Kee-Myoung Nam</name>
+    </author>
+    <author>
+      <name>Jeremy Gunawardena</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.08222v1</id>
+    <title>Enumerating iterated tilted algebras in type $A$</title>
+    <updated>2026-08-08T16:38:40Z</updated>
+    <link href="https://arxiv.org/abs/2608.08222v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.08222v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that isoclasses of iterated tilted algebras in type $A_n$ are in bijection with non-crossing spanning trees up to rotation on a convex n+1-gon. This is done by constructing a relationship between iterated tilted algebras up to isomorphism and exceptional sets up to isomorphic Hom-Ext quiver.</summary>
+    <category term="math.RT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-08T16:38:40Z</published>
+    <arxiv:comment>23 pages and 6 figures</arxiv:comment>
+    <arxiv:primary_category term="math.RT"/>
+    <author>
+      <name>Alexander E. Black</name>
+    </author>
+    <author>
+      <name>Jonathan E. Gordon</name>
+    </author>
+    <author>
+      <name>Ray Maresca</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.07134v1</id>
+    <title>The Sync Heap: Delete First, Ask Questions Later</title>
+    <updated>2026-08-07T11:53:20Z</updated>
+    <link href="https://arxiv.org/abs/2608.07134v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.07134v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Heaps (priority queues) are among the best-studied data structures in computer science. In this paper, we critically revisit the textbook assumption that in the comparison model at least one of the two standard heap operations of inserting an element and deleting the minimum must take logarithmic time.
+  By decoupling the deletion itself from the act of revealing the identity of the deleted element to the user, we avoid the sorting barrier and obtain a novel trade-off between the complexities of heap operations. This shows that the logarithmic barrier is not inherently the cost of deleting the minimum but rather the information cost of immediately learning which element was deleted. In the special case when the user inspects the heap state only constantly many times, we show that both insertions and deletions can be supported in constant amortized time. As an application, this yields a runtime improvement from $\mathcal{O}(n \log n)$ to the optimal $\mathcal{O}(n)$ for a textbook unit-time scheduling problem.
+  We obtain our results by designing a new data structure, the sync heap, which gains speed by rearranging and compacting its operations until queries force it to synchronize and reveal its state. As a key component, we use the soft heap introduced by Chazelle as part of his minimum spanning tree algorithm. Our data structure is simple, comparison-based, and deterministic, and our results are asymptotically optimal.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T11:53:20Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Benjamin Aram Berendsohn</name>
+    </author>
+    <author>
+      <name>Egor Gorbachev</name>
+    </author>
+    <author>
+      <name>László Kozma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.11257v1</id>
+    <title>Combinatorial and Sampling Approaches to Determining the Priority Vector from an Incomplete Pairwise Comparison Matrix on the Set of Spanning Trees</title>
+    <updated>2026-08-07T10:59:07Z</updated>
+    <link href="https://arxiv.org/abs/2608.11257v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.11257v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper considers combinatorial and sampling approaches to deriving a priority vector from an incomplete pairwise comparison matrix. It is shown that the informationally significant combinations of matrix elements are in one-to-one correspondence with spanning trees of the graph induced by the matrix. The combinatorial approach is based on the enumeration of all spanning trees and the componentwise aggregation of the priority vectors derived from them. To reduce computational complexity, a sampling Monte Carlo approach with a sequential stopping criterion is proposed, ensuring a prescribed accuracy for estimating the components of the resulting vector.</summary>
+    <category term="math.GM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T10:59:07Z</published>
+    <arxiv:comment>8 pages, Proceedings of International Conference on System Analysis &amp; Intelligent Information Technologies</arxiv:comment>
+    <arxiv:primary_category term="math.GM"/>
+    <author>
+      <name>Vitaliy Tsyganok</name>
+    </author>
+    <author>
+      <name>Oksana Mulesa</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.06816v1</id>
+    <title>Pairwise edge correlations in random minimum spanning trees: a universal bound and complete-graph negative correlation</title>
+    <updated>2026-08-07T05:15:39Z</updated>
+    <link href="https://arxiv.org/abs/2608.06816v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.06816v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $G$ be a finite connected multigraph whose edges receive independent weights from one atomless law, and let $\operatorname{MST}(G)$ be the resulting random minimum spanning tree. Its law is not pairwise negatively correlated: Lyons, Peres and Schramm exhibited two positively correlated edges, and we give such an example on a simple graph. We prove that positive correlation is nevertheless uniformly controlled: $\mathbf{P}(e,f\in T)\leq 8\mathbf{P}(e\in T)\mathbf{P}(f\in T)$, answering a question of R. Lyons recorded by Tang and Zhang. After conditioning on all other weights, Harris's inequality gives conditional negative correlation; two bottleneck distances and a sharp second-moment estimate control the remaining environmental covariance. For $K_n$ we prove pairwise negative correlation for every $n\geq 3$. The key finite identity is $\mathbf{E}[\mathrm{deg}(x)^2]=10(n-1)/n-4\mathbf{E}[L_n]$, where $L_n$ is the total weight of the minimum spanning tree under rate-one exponential weights. Known expansions for $\mathbf{E}[L_n]$ then give the rate of convergence to $10-4ζ(3)$ and the limits of both pair-correlation ratios. Finally, an explicit $K_4$ family shows that no universal constant survives when the independent edge laws need not be identical.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-07T05:15:39Z</published>
+    <arxiv:comment>21 pages. Accompanying code and exact data: https://github.com/agupta/random-mst-correlations</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Anish Gupta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.06096v1</id>
+    <title>A Special Point Skeleton Reconstruction Algorithm for Dynamic Multiobjective Optimization</title>
+    <updated>2026-08-06T14:36:17Z</updated>
+    <link href="https://arxiv.org/abs/2608.06096v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.06096v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>To address the issue that existing dynamic multi-objective optimization algorithms mainly rely on individual migration or independent special point sampling after environmental changes, while failing to fully exploit the structural relationships among representative solutions, a Special Point Skeleton Reconstruction based Dynamic Multi-Objective Evolutionary Algorithm (SPSR-DMOEA) is proposed. First, the centroid, knee points, and extreme points are extracted from the Pareto optimal solution set of the current environment, and their positions in the new environment are adaptively predicted according to their movement velocities across consecutive environments. Subsequently, in the decision space, the centroid is connected with other anchor points, and a minimum spanning tree is constructed among the non-centroid anchor points, thereby establishing a prediction skeleton capable of describing the overall population structure. According to the lengths of the skeleton edges, the number of individuals allocated to each edge is determined proportionally. Candidate solutions are uniformly generated along each edge, and random orthogonal perturbations are introduced to expand the search region around the skeleton. Experimental results on the DF dynamic multi-objective benchmark suite demonstrate the effectiveness of the proposed method in dynamic tracking capability.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-06T14:36:17Z</published>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>GuangXian Gan</name>
+    </author>
+    <author>
+      <name>MinRong Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.05924v1</id>
+    <title>Edge-defect matrices and stability of the Kirchhoff index for complete graphs with deleted edges</title>
+    <updated>2026-08-06T11:54:34Z</updated>
+    <link href="https://arxiv.org/abs/2608.05924v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.05924v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study the effective resistance, the Kirchhoff index, and the number of spanning trees of the connected graph $K_n-F$, which is obtained from the complete graph by deleting a set $F$ of $p$ edges. Let $B$ be the incidence matrix of the deleted edges. We call the matrix $Q=B^TB$ the edge-defect matrix. This is a $p\times p$ matrix which records, with signs, the way in which the deleted edges share their end vertices.
+  First, we derive a formula for the effective resistance between any two distinct vertices in terms of the resolvent of the edge-defect matrix. This reduces the usual computation using the $n\times n$ Laplacian matrix to a computation using a $p\times p$ matrix corresponding to the number of deleted edges. Moreover, by using the eigenvalues of the same matrix, we give unified formulas for the Kirchhoff index and the number of spanning trees.
+  Next, we derive a stability identity which exactly describes the excess from the Xu, Das, and Zhang type lower bound. As a consequence, we show that, in the range where a matching deletion can be realized, the Kirchhoff index is minimized when the deleted edge set is a matching. Furthermore, by using majorization, we prove that, for $p\ge 2$ and $n\ge \max\{4,2p-1\}$, among all non-matching deleted edge sets, the minimum is attained only when the deletion graph is isomorphic to $P_3\cup(p-2)K_2$. Finally, we apply the obtained formulas to several deletion graphs, such as matchings, stars, cliques, paths, and cycles.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-06T11:54:34Z</published>
+    <arxiv:comment>40pages</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Shunya Tamura</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,73 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w566",
+  "bundle_slug": "c0029-reviewed-row-reduction-001",
+  "entries": [
+    {
+      "key": "exact-threshold",
+      "namespace": "probability.random-matrices",
+      "logical_name": "c0029-exact-row-extension-threshold",
+      "kind": "lemma",
+      "title": "Exact row-extension threshold for the least singular value",
+      "statement": "Let n>=2, D be a real (n-1)-by-n matrix, X in R^n, A=[D;X^T], and r>=0. If the least of the n-1 singular values of D is <=r, then s_min(A)<=r. Otherwise let v span ker(D) with norm one, and let (v_i,s_i), i=1,...,n-1, be right singular vectors and positive singular values of D. Then s_min(A)<=r exactly when |<v,X>|^2 <= r^2(1+sum_i |<v_i,X>|^2/(s_i^2-r^2)).",
+      "proof_text": "The first branch follows by interlacing of DD^T as a principal submatrix of AA^T. On the second branch DD^T-r^2 I is positive definite. Congruence reduces AA^T-r^2 I to that block and scalar Schur complement ||X||^2-r^2-(DX)^T(DD^T-r^2 I)^(-1)(DX). Expanding X in the orthonormal basis v,v_i gives |<v,X>|^2-r^2(1+sum_i |<v_i,X>|^2/(s_i^2-r^2)). Inertia makes the least eigenvalue nonpositive exactly when that scalar is nonpositive. Independently checked by w566; this is a deterministic reduction only.",
+      "assumptions": ["n>=2", "D and X real", "r>=0", "second branch requires s_min(D)>r"],
+      "domain": "probability and random matrix theory",
+      "source": {"source_id": "owner-own-work:C0029:w564:L1-reviewed-w566", "url": "urn:owner-own-work:C0029:w564:ATTEMPT.md:L1", "revision": "as-read-2026-10-10", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "row-telescope",
+      "namespace": "probability.random-matrices",
+      "logical_name": "c0029-exact-rademacher-gaussian-row-telescope",
+      "kind": "lemma",
+      "title": "Exact row-by-row Rademacher-Gaussian CDF telescope",
+      "statement": "Let A_k be n-by-n with its first k rows independent standard Gaussian vectors and remaining n-k rows independent uniform sign vectors; all entries are independent. Put p_k(r)=P(s_min(A_k)<=r). Let D_k be the other n-1 rows when row k is removed, and Q_mu(D,r)=P_X(s_min([D;X^T])<=r) for an independent row X of law mu. Then p_0(r)-p_n(r)=sum_{k=1}^n E[Q_R(D_k,r)-Q_G(D_k,r)]. Each summand is zero on s_min(D_k)<=r.",
+      "proof_text": "For k=1,...,n, the matrices A_(k-1) and A_k have the same law off row k. Condition on the common independent skeleton D_k, permute the row to the bottom, and subtract conditional probabilities Q_R and Q_G. Thus p_(k-1)-p_k=E(Q_R-Q_G). Sum and telescope. Exact row extension shows both Q values equal one on s_min(D_k)<=r. Independently checked by w566; the needed signed bound on the sum is unproved.",
+      "assumptions": ["n>=2", "all rows and entries independent", "r>=0", "R is uniform on {-1,+1}^n", "G has iid N(0,1) entries"],
+      "domain": "probability and random matrix theory",
+      "source": {"source_id": "owner-own-work:C0029:w564:L2-reviewed-w566", "url": "urn:owner-own-work:C0029:w564:ATTEMPT.md:L2", "revision": "as-read-2026-10-10", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "hadamard-obstruction",
+      "namespace": "probability.random-matrices",
+      "logical_name": "c0029-hadamard-pointwise-comparison-obstruction",
+      "kind": "lemma",
+      "title": "Flat Hadamard skeleton defeats pointwise Gaussian row comparison",
+      "statement": "For n=2^m>=2, let D be a Sylvester Hadamard matrix with its all-ones row removed. Put r=1/[8(n+1)] and Q_R,Q_G as in the exact row telescope. Then Q_R(D,r)-Q_G(D,r)>=3/[4(n+1)]. Thus flat orthogonal singular vectors alone cannot imply Q_R(D,r)<=Q_G(D,r)+exp(-c n) uniformly over deterministic skeletons for fixed c>0.",
+      "proof_text": "For a sign row X put S=sum_j X_j. Since D^TD=nI-nvv^T for v=1/sqrt(n) times the all-ones vector, the least squared singular value of [D;X^T] is n-sqrt(n^2-S^2). Every nonzero S has |S|>=2, yielding least squared singular value >=2/n>r^2. Thus Q_R=P(S=0)=2^-n binom(n,n/2)>=1/(n+1). For a Gaussian row, normal projection is independent of tangent squared norm W~chi-square(n-1); its bounded density and Jensen give Q_G<=sqrt(2/pi)r sqrt(1+(n-1)/(n-r^2))<=2r=1/[4(n+1)]. Subtract. The counterexample does not contradict an averaged iid-matrix estimate. Independently checked by w566.",
+      "assumptions": ["n a power of two, n>=2", "D fixed as specified", "row independent of D", "r=1/[8(n+1)]"],
+      "domain": "probability and random matrix theory",
+      "source": {"source_id": "owner-own-work:C0029:w564:L3-reviewed-w566", "url": "urn:owner-own-work:C0029:w564:ATTEMPT.md:L3", "revision": "as-read-2026-10-10", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "two-coordinate-atom",
+      "namespace": "probability.random-matrices",
+      "logical_name": "c0029-two-coordinate-rademacher-atom",
+      "kind": "lemma",
+      "title": "A deterministic unit normal can have a Rademacher atom",
+      "statement": "For n>=2, R uniform on {-1,+1}^n and v=(1,-1,0,...,0)/sqrt(2), P(<R,v>=0)=1/2. Therefore no finite K gives P(|<R,v>|<=t)<=K t simultaneously for all deterministic unit v and all t>=0.",
+      "proof_text": "The four equiprobable pairs (R_1,R_2) have two equal-sign pairs, and <R,v>=(R_1-R_2)/sqrt(2) vanishes exactly in those pairs. At t=0 the proposed right side is zero. Independently checked by w566. This does not settle a bound averaged over random kernel vectors.",
+      "assumptions": ["n>=2", "independent uniform signs"],
+      "domain": "probability and random matrix theory",
+      "source": {"source_id": "owner-own-work:C0029:w565:C01-reviewed-w566", "url": "urn:owner-own-work:C0029:w565:CLAIMS.jsonl:C01", "revision": "as-read-2026-10-10", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "gaussian-cdf-correction",
+      "namespace": "probability.random-matrices",
+      "logical_name": "c0029-finite-gaussian-cdf-is-not-hard-edge-limit",
+      "kind": "concept",
+      "title": "Do not use the real Gaussian hard-edge limit as an exact finite-n CDF",
+      "statement": "The formula 1-exp(-t^2/2-t) is not the exact distribution function of sqrt(n) times the least singular value of an n-by-n real Gaussian matrix at every finite n. For n=1 and t=1, the exact value is erf(1/sqrt(2))=0.6826894921, while the proposed formula gives 0.7768698399. Use the finite-n CDF F_n or a valid finite-n bound such as F_n(t)<=t instead.",
+      "proof_text": null,
+      "assumptions": ["real iid standard Gaussian matrix", "n=1 for the counterexample"],
+      "domain": "probability and random matrix theory",
+      "source": {"source_id": "owner-own-work:C0029:w566:finite-gaussian-cdf-correction", "url": "urn:owner-own-work:C0029:w566:SOURCE_STATUS.json", "revision": "as-read-2026-10-10", "license": "owner-own-work", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "row-telescope", "to_key": "exact-threshold", "kind": "depends_on", "rationale": "The conditional row probabilities use the exact row-extension threshold and its deficient-skeleton branch."},
+    {"from_key": "hadamard-obstruction", "to_key": "exact-threshold", "kind": "depends_on", "rationale": "The Hadamard row comparison is evaluated using the exact singular-value threshold."},
+    {"from_key": "two-coordinate-atom", "to_key": "hadamard-obstruction", "kind": "analogous_to", "rationale": "Both exhibit sign atoms that prevent universal deterministic-row anti-concentration shortcuts."},
+    {"from_key": "gaussian-cdf-correction", "to_key": "row-telescope", "kind": "semantic_association", "rationale": "The telescope endpoint is the finite-n Gaussian CDF, not its asymptotic hard-edge limit."}
+  ]
+}

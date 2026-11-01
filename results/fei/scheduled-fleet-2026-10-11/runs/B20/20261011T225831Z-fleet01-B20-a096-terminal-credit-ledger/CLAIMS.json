@@ -1,0 +1,27 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B20-A096-TERMINAL-COMPENSATION",
+      "version": 1,
+      "packet_id": "A096",
+      "attempt_id": "A096-TERMINAL-LEDGER-1",
+      "gap_id": "B05_RARE_REFUNDS",
+      "status": "PROVED_CONDITIONAL_ON_B19_FULL_CREDIT_SIGN_PENDING_INDEPENDENT_REVIEW",
+      "statement": "If D_n is the complete physical L+Q packet for the genuine one-point-defect q_n and Gamma_n^D=D_n-D_{n-1}/2, then for every N>=3, D_N=2^{-(N-2)}D_2+sum_{n=3}^N 2^{-(N-n)} Gamma_n^D. Using the contributor-proved B19 signs, every internal summand is negative, so the positive weighted terminal packet is indispensable.",
+      "quantifiers": "All integers N>=3; canonical physical restriction chain of the genuine Boolean one-point-defect family; entropy in bits.",
+      "dependencies": [
+        "B05-A023-ORDER-SWAP-CREDIT-BOUNDARY-L-NARROW-v1",
+        "B19-A094-FULL-ORDER-SWAP-CREDIT-BOUNDARY-v1"
+      ],
+      "scope_exclusions": [
+        "Does not prove the universal terminal-budget inequality.",
+        "Does not refute globally chosen trees or signed multistep cancellation.",
+        "Does not solve full FEI.",
+        "The B19 full-credit sign still needs a fresh independent reviewer."
+      ],
+      "next_consumers": ["A027", "A028", "A029", "A087", "A090", "A097"],
+      "independent_reviewers": ["A090", "A094"]
+    }
+  ]
+}

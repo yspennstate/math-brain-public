@@ -1,0 +1,166 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w420",
+  "bundle_slug": "c0023-quantified-anchor-obstruction-20261010",
+  "review_status": "pending; all entries remain concept/draft material",
+  "entries": [
+    {
+      "key": "color",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-finite-dependent-bad-site-coloring-bound",
+      "kind": "concept",
+      "title": "Draft: dependence-aware bad-site bound",
+      "statement": "DRAFT author-checked supporting bound, independent audit pending. For a binary field on Z^2 with independence of sigma-fields on index sets at infinity-norm distance greater than integer R>=0, and each bad-site probability <=q in [0,1], the probability that m>=1 distinct specified sites are all bad is <=q^ceil(m/(R+1)^2). Both coordinate residues modulo R+1 supply a jointly independent subfamily. Pairwise independence alone is insufficient.",
+      "proof_text": null,
+      "assumptions": [
+        "Strong R-dependence, not only pairwise independence",
+        "Uniform bad-site probability bound",
+        "No novelty claim"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w420:c0023-anchor-certificate-20261010",
+        "url": "urn:owner-work:w420:c0023-anchor-certificate:2026-10-10",
+        "revision": "author-checked-draft-20261010; independent review pending",
+        "license": "owner-own-work; DRAFT supporting reductions, no parent-problem solved claim",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "peierls",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-explicit-finite-dependent-good-site-threshold",
+      "kind": "concept",
+      "title": "Draft: explicit finite-dependent block threshold",
+      "statement": "DRAFT author-checked supporting estimate, independent audit pending. For the strongly R-dependent binary field on Z^2 with bad probability <=q, put K=(R+1)^2 and t=8*q^(1/K). If t<1, the probability that 0 belongs to an infinite nearest-neighbor good component is at least 1-q-9*t*(1+t)/(1-t)^3. In particular q<=800^(-K) yields probability >9/10. The proof uses enclosing bad star-cycles and multiplies probabilities only for an independent color subfamily.",
+      "proof_text": null,
+      "assumptions": [
+        "Strong infinity-norm R-dependence",
+        "Bad probabilities uniformly <=q in [0,1]",
+        "Nearest-neighbor good components and star-neighbor bad cycles",
+        "General boundary proof awaits referee"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w420:c0023-anchor-certificate-20261010",
+        "url": "urn:owner-work:w420:c0023-anchor-certificate:2026-10-10",
+        "revision": "author-checked-draft-20261010; independent review pending",
+        "license": "owner-own-work; DRAFT supporting reductions, no parent-problem solved claim",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "anchor",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-compatible-local-anchor-openness-certificate",
+      "kind": "concept",
+      "title": "Draft: local anchor certificate and critical lower bound",
+      "statement": "DRAFT author-checked conditional reduction, independent audit pending. For independent nearest-neighbor bond percolation on Z^d, d>=2, take plane block centers c_z=L*(z_1,z_2,0,...,0), seed boxes S_z=c_z+[-L,L]^d, and outer boxes D_z(M)=c_z+[-M,M]^d, integers M>=L>=1. Select h_z as the first vertex in S_z reaching the boundary of D_z(M) internally. G_z requires h_z and its four neighboring anchors to exist and h_z to connect to each inside D_z(M+L). Put R=floor(2*(M+L)/L). If p0>0 and P_p0(G_0^c)<800^(-(R+1)^2), finite-product continuity preserves the strict margin at some p1<p0 and compatible anchors give theta_d(p1)>0. Hence the critical failure probability for every fixed pair is at least this threshold. This does not prove critical nonpercolation.",
+      "proof_text": null,
+      "assumptions": [
+        "Same deterministic finite anchor rule in all neighboring events",
+        "Product measure on bonds",
+        "Supporting box contains every test and connection",
+        "Strict threshold margin for lowering p"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w420:c0023-anchor-certificate-20261010",
+        "url": "urn:owner-work:w420:c0023-anchor-certificate:2026-10-10",
+        "revision": "author-checked-draft-20261010; independent review pending",
+        "license": "owner-own-work; DRAFT supporting reductions, no parent-problem solved claim",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-critical-anchor-dependence-matched-estimate-gap",
+      "kind": "concept",
+      "title": "Unproved: critical dependence-matched anchor estimate",
+      "statement": "UNPROVED INPUT, no theorem or solved claim. On independent nearest-neighbor bond percolation on Z^d, take centers c_z=L*(z_1,z_2,0,...,0), seeds S_z=c_z+[-L,L]^d, and D_z(M)=c_z+[-M,M]^d, integers M>=L>=1. Let h_z be the first seed vertex reaching the boundary of D_z(M) internally, using one fixed offset order. G_z requires h_z and its four neighboring anchors to exist and h_z to connect to each inside D_z(M+L). A proof route to theta_d(p_c)=0 for a fixed d in {3,...,10} would need to derive from hypothetical theta_d(p_c)>0 a finite pair with P_pc(G_0^c)<800^(-(floor(2*(M+L)/L)+1)^2). Unique infinite-cluster stabilization supplies only lim_L lim_M P_pc(G_0^c)=0. It supplies no estimate matching the increasing dependence range. A uniform fixed-aspect-ratio high-probability connection estimate would suffice, but remains unproved in this packet. Current openness of the full target is UNKNOWN.",
+      "proof_text": null,
+      "assumptions": [
+        "Hypothetical positive critical percolation probability",
+        "Compatible local anchor construction",
+        "Iterated limit is not a joint-scale rate"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w420:c0023-anchor-certificate-20261010",
+        "url": "urn:owner-work:w420:c0023-anchor-certificate:2026-10-10",
+        "revision": "author-checked-draft-20261010; independent review pending",
+        "license": "owner-own-work; DRAFT supporting reductions, no parent-problem solved claim",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "quantifiers",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-two-scale-limit-dependence-threshold-obstruction",
+      "kind": "concept",
+      "title": "Draft: counterexample to a scale-selection inference",
+      "statement": "DRAFT author-checked numerical-family counterexample to a logical inference, independent audit pending. For integers M>=L>=1, let q_fake(L,M)=1 when M<L*2^L and q_fake(L,M)=2^(-L) otherwise. This is nonincreasing in M for each fixed L and lim_L lim_M q_fake=0. Nevertheless q_fake(L,M)>800^(-(floor(2*(M+L)/L)+1)^2) for every finite pair. Thus an iterated vanishing failure limit alone cannot supply a dependence-matched block certificate. No percolation realization of q_fake is asserted.",
+      "proof_text": null,
+      "assumptions": [
+        "Logical counterexample only",
+        "No percolation counterexample or novelty claim"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w420:c0023-anchor-certificate-20261010",
+        "url": "urn:owner-work:w420:c0023-anchor-certificate:2026-10-10",
+        "revision": "author-checked-draft-20261010; independent review pending",
+        "license": "owner-own-work; DRAFT supporting reductions, no parent-problem solved claim",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "formal-status",
+      "namespace": "probability.percolation",
+      "logical_name": "draft-critical-percolation-comparator-placeholder-audit",
+      "kind": "concept",
+      "title": "Source audit: comparator statements do not certify a proof",
+      "statement": "SOURCE-STATUS DRAFT, not a mathematical proof. The public openai/math files lean/ComparatorChallenges/CriticalZ3.lean and CriticalPercolation.lean inspected on 2026-10-10 end their headline critical_no_infinite and no_percolation_at_criticality statements with sorry. These inspected statement files do not certify admitted-free proofs. This says nothing about unseen solution artifacts. Current openness of C0023 remains UNKNOWN; retirement requires the actual theorem, its intended definitions and assumptions, and a trusted-axiom receipt from the actual solution.",
+      "proof_text": null,
+      "assumptions": [
+        "Only the inspected public raw statements are covered",
+        "No inference from documentation prose to a checked proof"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w420:c0023-anchor-certificate-20261010",
+        "url": "urn:owner-work:w420:c0023-anchor-certificate:2026-10-10",
+        "revision": "author-checked-draft-20261010; independent review pending",
+        "license": "owner-own-work; DRAFT supporting reductions, no parent-problem solved claim",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "peierls",
+      "to_key": "color",
+      "kind": "depends_on",
+      "rationale": "The contour sum uses only the independently colored subfamily bound."
+    },
+    {
+      "from_key": "anchor",
+      "to_key": "peierls",
+      "kind": "depends_on",
+      "rationale": "The anchor certificate percolates its finite-dependent coarse field through the explicit good-site threshold."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "anchor",
+      "kind": "depends_on",
+      "rationale": "The unproved critical estimate would contradict the proved conditional openness certificate."
+    },
+    {
+      "from_key": "quantifiers",
+      "to_key": "gap",
+      "kind": "semantic_association",
+      "rationale": "The numerical family explains why the iterated limit cannot discharge the dependence-matched gap."
+    }
+  ]
+}

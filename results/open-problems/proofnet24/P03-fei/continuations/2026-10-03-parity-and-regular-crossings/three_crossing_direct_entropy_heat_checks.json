@@ -1,0 +1,953 @@
+{
+  "status": "PASS",
+  "counts": {
+    "exhaustive_tree_functions": 65814,
+    "extra_lacunary_functions": 300,
+    "exact_tree_covariance_checks": 66969,
+    "exact_local_split_checks": 66969,
+    "full_retention_grids": 102,
+    "dyadic_error_certificates": 45,
+    "direct_majority_coefficients": 43688,
+    "halfspace_budget_truth_tables": 6,
+    "halfspace_budget_vertices": 21840
+  },
+  "exact_checks": [
+    "tree influence recursion",
+    "tree covariance <= b*variance",
+    "lexicographic crossing descent and read count",
+    "both-branch rational score-grid component witnesses",
+    "endpoint numerator parity",
+    "all N tested explicit dyadic continuity bounds",
+    "majority coefficient formula via direct integer Walsh transform",
+    "three-crossing halfspace-budget influence/spectrum formulas"
+  ],
+  "numeric_supplements": [
+    "tree entropy/local split inequalities",
+    "point-hole entropy bound"
+  ],
+  "grid_examples": [
+    {
+      "N": 3,
+      "pivot": -1,
+      "total_tiny_coordinates": 1458,
+      "witnesses": [
+        {
+          "component": 0,
+          "positive_tiny_coordinates": 0,
+          "score": "-19"
+        },
+        {
+          "component": 1,
+          "positive_tiny_coordinates": 1093,
+          "score": "-245/243"
+        },
+        {
+          "component": 2,
+          "positive_tiny_coordinates": 1336,
+          "score": "727/243"
+        },
+        {
+          "component": 3,
+          "positive_tiny_coordinates": 1458,
+          "score": "5"
+        }
+      ]
+    },
+    {
+      "N": 3,
+      "pivot": 1,
+      "total_tiny_coordinates": 1458,
+      "witnesses": [
+        {
+          "component": 0,
+          "positive_tiny_coordinates": 0,
+          "score": "-11"
+        },
+        {
+          "component": 1,
+          "positive_tiny_coordinates": 607,
+          "score": "-245/243"
+        },
+        {
+          "component": 2,
+          "positive_tiny_coordinates": 850,
+          "score": "727/243"
+        },
+        {
+          "component": 3,
+          "positive_tiny_coordinates": 1458,
+          "score": "13"
+        }
+      ]
+    },
+    {
+      "N": 15,
+      "pivot": -1,
+      "total_tiny_coordinates": 22781250,
+      "witnesses": [
+        {
+          "component": 0,
+          "positive_tiny_coordinates": 0,
+          "score": "-79"
+        },
+        {
+          "component": 1,
+          "positive_tiny_coordinates": 17085937,
+          "score": "-26578133/3796875"
+        },
+        {
+          "component": 2,
+          "positive_tiny_coordinates": 20882812,
+          "score": "34171867/3796875"
+        },
+        {
+          "component": 3,
+          "positive_tiny_coordinates": 22781250,
+          "score": "17"
+        }
+      ]
+    },
+    {
+      "N": 15,
+      "pivot": 1,
+      "total_tiny_coordinates": 22781250,
+      "witnesses": [
+        {
+          "component": 0,
+          "positive_tiny_coordinates": 0,
+          "score": "-47"
+        },
+        {
+          "component": 1,
+          "positive_tiny_coordinates": 9492187,
+          "score": "-26578133/3796875"
+        },
+        {
+          "component": 2,
+          "positive_tiny_coordinates": 13289062,
+          "score": "34171867/3796875"
+        },
+        {
+          "component": 3,
+          "positive_tiny_coordinates": 22781250,
+          "score": "49"
+        }
+      ]
+    },
+    {
+      "N": 51,
+      "pivot": -1,
+      "total_tiny_coordinates": 35192575602,
+      "witnesses": [
+        {
+          "component": 0,
+          "positive_tiny_coordinates": 0,
+          "score": "-259"
+        },
+        {
+          "component": 1,
+          "positive_tiny_coordinates": 26394431701,
+          "score": "-146635731701/5865429267"
+        },
+        {
+          "component": 2,
+          "positive_tiny_coordinates": 32259860968,
+          "score": "158366590183/5865429267"
+        },
+        {
+          "component": 3,
+          "positive_tiny_coordinates": 35192575602,
+          "score": "53"
+        }
+      ]
+    },
+    {
+      "N": 51,
+      "pivot": 1,
+      "total_tiny_coordinates": 35192575602,
+      "witnesses": [
+        {
+          "component": 0,
+          "positive_tiny_coordinates": 0,
+          "score": "-155"
+        },
+        {
+          "component": 1,
+          "positive_tiny_coordinates": 14663573167,
+          "score": "-146635731701/5865429267"
+        },
+        {
+          "component": 2,
+          "positive_tiny_coordinates": 20529002434,
+          "score": "158366590183/5865429267"
+        },
+        {
+          "component": 3,
+          "positive_tiny_coordinates": 35192575602,
+          "score": "157"
+        }
+      ]
+    },
+    {
+      "N": 103,
+      "pivot": -1,
+      "total_tiny_coordinates": 2388104593058,
+      "witnesses": [
+        {
+          "component": 0,
+          "positive_tiny_coordinates": 0,
+          "score": "-519"
+        },
+        {
+          "component": 1,
+          "positive_tiny_coordinates": 1791078444793,
+          "score": "-60896667123135/1194052296529"
+        },
+        {
+          "component": 2,
+          "positive_tiny_coordinates": 2189095876969,
+          "score": "63284771715777/1194052296529"
+        },
+        {
+          "component": 3,
+          "positive_tiny_coordinates": 2388104593058,
+          "score": "105"
+        }
+      ]
+    },
+    {
+      "N": 103,
+      "pivot": 1,
+      "total_tiny_coordinates": 2388104593058,
+      "witnesses": [
+        {
+          "component": 0,
+          "positive_tiny_coordinates": 0,
+          "score": "-311"
+        },
+        {
+          "component": 1,
+          "positive_tiny_coordinates": 995043580440,
+          "score": "-60896667123239/1194052296529"
+        },
+        {
+          "component": 2,
+          "positive_tiny_coordinates": 1393061012617,
+          "score": "63284771715985/1194052296529"
+        },
+        {
+          "component": 3,
+          "positive_tiny_coordinates": 2388104593058,
+          "score": "313"
+        }
+      ]
+    }
+  ],
+  "tree_three_crossing_examples": [
+    {
+      "n": 5,
+      "cuts": [
+        1,
+        2,
+        21
+      ],
+      "branching_budget": 1,
+      "influence": "13/8",
+      "entropy_numeric": 3.240222972541423
+    },
+    {
+      "n": 5,
+      "cuts": [
+        1,
+        2,
+        23
+      ],
+      "branching_budget": 1,
+      "influence": "3/2",
+      "entropy_numeric": 3.10845859334435
+    },
+    {
+      "n": 5,
+      "cuts": [
+        6,
+        15,
+        23
+      ],
+      "branching_budget": 2,
+      "influence": "13/8",
+      "entropy_numeric": 2.716917186688699
+    },
+    {
+      "n": 5,
+      "cuts": [
+        1,
+        22,
+        28
+      ],
+      "branching_budget": 2,
+      "influence": "25/16",
+      "entropy_numeric": 3.3436820618674963
+    },
+    {
+      "n": 5,
+      "cuts": [
+        6,
+        25,
+        28
+      ],
+      "branching_budget": 1,
+      "influence": "27/16",
+      "entropy_numeric": 3.3436820618674963
+    },
+    {
+      "n": 5,
+      "cuts": [
+        1,
+        7,
+        18
+      ],
+      "branching_budget": 2,
+      "influence": "7/4",
+      "entropy_numeric": 3.5
+    },
+    {
+      "n": 5,
+      "cuts": [
+        7,
+        23,
+        28
+      ],
+      "branching_budget": 2,
+      "influence": "17/8",
+      "entropy_numeric": 3.240222972541423
+    },
+    {
+      "n": 5,
+      "cuts": [
+        10,
+        16,
+        29
+      ],
+      "branching_budget": 1,
+      "influence": "21/16",
+      "entropy_numeric": 3.3436820618674963
+    },
+    {
+      "n": 5,
+      "cuts": [
+        8,
+        9,
+        14
+      ],
+      "branching_budget": 1,
+      "influence": "23/16",
+      "entropy_numeric": 2.334164453818145
+    },
+    {
+      "n": 5,
+      "cuts": [
+        19,
+        22,
+        30
+      ],
+      "branching_budget": 2,
+      "influence": "21/16",
+      "entropy_numeric": 2.923480601581041
+    },
+    {
+      "n": 6,
+      "cuts": [
+        2,
+        19,
+        63
+      ],
+      "branching_budget": 2,
+      "influence": "13/8",
+      "entropy_numeric": 3.6917091320434414
+    },
+    {
+      "n": 6,
+      "cuts": [
+        11,
+        21,
+        32
+      ],
+      "branching_budget": 1,
+      "influence": "13/8",
+      "entropy_numeric": 2.923480601581041
+    },
+    {
+      "n": 6,
+      "cuts": [
+        19,
+        39,
+        60
+      ],
+      "branching_budget": 2,
+      "influence": "33/16",
+      "entropy_numeric": 3.6374798353712667
+    },
+    {
+      "n": 6,
+      "cuts": [
+        6,
+        36,
+        54
+      ],
+      "branching_budget": 2,
+      "influence": "17/8",
+      "entropy_numeric": 3.60845859334435
+    },
+    {
+      "n": 6,
+      "cuts": [
+        38,
+        43,
+        45
+      ],
+      "branching_budget": 2,
+      "influence": "23/16",
+      "entropy_numeric": 2.966917186688699
+    },
+    {
+      "n": 6,
+      "cuts": [
+        21,
+        29,
+        36
+      ],
+      "branching_budget": 2,
+      "influence": "29/16",
+      "entropy_numeric": 3.3603344588121344
+    },
+    {
+      "n": 6,
+      "cuts": [
+        16,
+        27,
+        33
+      ],
+      "branching_budget": 1,
+      "influence": "23/16",
+      "entropy_numeric": 3.3603344588121344
+    },
+    {
+      "n": 6,
+      "cuts": [
+        23,
+        58,
+        60
+      ],
+      "branching_budget": 1,
+      "influence": "13/8",
+      "entropy_numeric": 3.297804303284963
+    },
+    {
+      "n": 6,
+      "cuts": [
+        1,
+        3,
+        44
+      ],
+      "branching_budget": 2,
+      "influence": "13/8",
+      "entropy_numeric": 3.3436820618674963
+    },
+    {
+      "n": 6,
+      "cuts": [
+        1,
+        53,
+        55
+      ],
+      "branching_budget": 2,
+      "influence": "9/16",
+      "entropy_numeric": 1.6024766513678825
+    },
+    {
+      "n": 7,
+      "cuts": [
+        15,
+        22,
+        75
+      ],
+      "branching_budget": 2,
+      "influence": "53/32",
+      "entropy_numeric": 3.2079494536987876
+    },
+    {
+      "n": 7,
+      "cuts": [
+        18,
+        84,
+        110
+      ],
+      "branching_budget": 2,
+      "influence": "37/16",
+      "entropy_numeric": 3.5561051621399598
+    },
+    {
+      "n": 7,
+      "cuts": [
+        28,
+        30,
+        98
+      ],
+      "branching_budget": 1,
+      "influence": "5/4",
+      "entropy_numeric": 2.850618887799647
+    },
+    {
+      "n": 7,
+      "cuts": [
+        31,
+        86,
+        106
+      ],
+      "branching_budget": 2,
+      "influence": "129/64",
+      "entropy_numeric": 3.703061466030709
+    },
+    {
+      "n": 7,
+      "cuts": [
+        50,
+        73,
+        110
+      ],
+      "branching_budget": 2,
+      "influence": "113/64",
+      "entropy_numeric": 3.7325048220850783
+    },
+    {
+      "n": 7,
+      "cuts": [
+        63,
+        79,
+        126
+      ],
+      "branching_budget": 2,
+      "influence": "33/32",
+      "entropy_numeric": 3.0645189799129775
+    },
+    {
+      "n": 7,
+      "cuts": [
+        34,
+        68,
+        82
+      ],
+      "branching_budget": 2,
+      "influence": "25/16",
+      "entropy_numeric": 3.3033691153103293
+    },
+    {
+      "n": 7,
+      "cuts": [
+        52,
+        119,
+        127
+      ],
+      "branching_budget": 2,
+      "influence": "61/32",
+      "entropy_numeric": 3.179307048044222
+    },
+    {
+      "n": 7,
+      "cuts": [
+        7,
+        16,
+        25
+      ],
+      "branching_budget": 1,
+      "influence": "27/32",
+      "entropy_numeric": 2.6422266305885227
+    },
+    {
+      "n": 7,
+      "cuts": [
+        66,
+        75,
+        98
+      ],
+      "branching_budget": 2,
+      "influence": "93/64",
+      "entropy_numeric": 3.5024957579322433
+    },
+    {
+      "n": 8,
+      "cuts": [
+        83,
+        85,
+        129
+      ],
+      "branching_budget": 2,
+      "influence": "73/64",
+      "entropy_numeric": 0.604119484160888
+    },
+    {
+      "n": 8,
+      "cuts": [
+        19,
+        185,
+        244
+      ],
+      "branching_budget": 2,
+      "influence": "63/32",
+      "entropy_numeric": 4.029625399113473
+    },
+    {
+      "n": 8,
+      "cuts": [
+        67,
+        147,
+        213
+      ],
+      "branching_budget": 2,
+      "influence": "2",
+      "entropy_numeric": 3.396575105167855
+    },
+    {
+      "n": 8,
+      "cuts": [
+        160,
+        163,
+        172
+      ],
+      "branching_budget": 1,
+      "influence": "11/8",
+      "entropy_numeric": 3.0610706984603953
+    },
+    {
+      "n": 8,
+      "cuts": [
+        141,
+        224,
+        243
+      ],
+      "branching_budget": 1,
+      "influence": "101/64",
+      "entropy_numeric": 2.8004583001432355
+    },
+    {
+      "n": 8,
+      "cuts": [
+        1,
+        219,
+        255
+      ],
+      "branching_budget": 2,
+      "influence": "1",
+      "entropy_numeric": 3.097676824963099
+    },
+    {
+      "n": 8,
+      "cuts": [
+        157,
+        198,
+        219
+      ],
+      "branching_budget": 2,
+      "influence": "89/64",
+      "entropy_numeric": 3.2419098166795024
+    },
+    {
+      "n": 8,
+      "cuts": [
+        1,
+        68,
+        204
+      ],
+      "branching_budget": 2,
+      "influence": "143/64",
+      "entropy_numeric": 2.149021146304472
+    },
+    {
+      "n": 8,
+      "cuts": [
+        82,
+        119,
+        135
+      ],
+      "branching_budget": 2,
+      "influence": "109/64",
+      "entropy_numeric": 3.515153186813661
+    },
+    {
+      "n": 8,
+      "cuts": [
+        111,
+        140,
+        153
+      ],
+      "branching_budget": 2,
+      "influence": "13/8",
+      "entropy_numeric": 2.9699324976344963
+    },
+    {
+      "n": 9,
+      "cuts": [
+        292,
+        315,
+        509
+      ],
+      "branching_budget": 2,
+      "influence": "71/128",
+      "entropy_numeric": 1.8483732514129974
+    },
+    {
+      "n": 9,
+      "cuts": [
+        356,
+        429,
+        486
+      ],
+      "branching_budget": 2,
+      "influence": "353/256",
+      "entropy_numeric": 3.724626372129496
+    },
+    {
+      "n": 9,
+      "cuts": [
+        48,
+        194,
+        394
+      ],
+      "branching_budget": 2,
+      "influence": "143/64",
+      "entropy_numeric": 3.359478814185013
+    },
+    {
+      "n": 9,
+      "cuts": [
+        12,
+        388,
+        463
+      ],
+      "branching_budget": 2,
+      "influence": "321/256",
+      "entropy_numeric": 3.4971788894981004
+    },
+    {
+      "n": 9,
+      "cuts": [
+        308,
+        321,
+        506
+      ],
+      "branching_budget": 2,
+      "influence": "117/256",
+      "entropy_numeric": 1.5151280451529578
+    },
+    {
+      "n": 9,
+      "cuts": [
+        236,
+        392,
+        459
+      ],
+      "branching_budget": 2,
+      "influence": "433/256",
+      "entropy_numeric": 3.6175535619876453
+    },
+    {
+      "n": 9,
+      "cuts": [
+        104,
+        238,
+        342
+      ],
+      "branching_budget": 2,
+      "influence": "7/4",
+      "entropy_numeric": 3.531950340568917
+    },
+    {
+      "n": 9,
+      "cuts": [
+        51,
+        268,
+        460
+      ],
+      "branching_budget": 2,
+      "influence": "493/256",
+      "entropy_numeric": 3.570996356361201
+    },
+    {
+      "n": 9,
+      "cuts": [
+        269,
+        386,
+        436
+      ],
+      "branching_budget": 2,
+      "influence": "373/256",
+      "entropy_numeric": 3.0470051368653057
+    },
+    {
+      "n": 9,
+      "cuts": [
+        96,
+        186,
+        280
+      ],
+      "branching_budget": 2,
+      "influence": "29/16",
+      "entropy_numeric": 3.54506820909316
+    },
+    {
+      "n": 10,
+      "cuts": [
+        57,
+        241,
+        368
+      ],
+      "branching_budget": 2,
+      "influence": "77/64",
+      "entropy_numeric": 3.543603682778464
+    },
+    {
+      "n": 10,
+      "cuts": [
+        472,
+        849,
+        1008
+      ],
+      "branching_budget": 2,
+      "influence": "227/128",
+      "entropy_numeric": 3.7320448410119837
+    },
+    {
+      "n": 10,
+      "cuts": [
+        204,
+        632,
+        850
+      ],
+      "branching_budget": 2,
+      "influence": "565/256",
+      "entropy_numeric": 3.7504089416164117
+    },
+    {
+      "n": 10,
+      "cuts": [
+        663,
+        959,
+        981
+      ],
+      "branching_budget": 2,
+      "influence": "387/256",
+      "entropy_numeric": 3.425988445407491
+    },
+    {
+      "n": 10,
+      "cuts": [
+        564,
+        727,
+        887
+      ],
+      "branching_budget": 2,
+      "influence": "103/64",
+      "entropy_numeric": 3.789346815483392
+    },
+    {
+      "n": 10,
+      "cuts": [
+        562,
+        724,
+        831
+      ],
+      "branching_budget": 2,
+      "influence": "403/256",
+      "entropy_numeric": 3.282210574321446
+    },
+    {
+      "n": 10,
+      "cuts": [
+        66,
+        634,
+        720
+      ],
+      "branching_budget": 2,
+      "influence": "159/128",
+      "entropy_numeric": 3.054744833706815
+    },
+    {
+      "n": 10,
+      "cuts": [
+        127,
+        189,
+        820
+      ],
+      "branching_budget": 2,
+      "influence": "203/128",
+      "entropy_numeric": 3.4851798646933236
+    },
+    {
+      "n": 10,
+      "cuts": [
+        22,
+        281,
+        296
+      ],
+      "branching_budget": 2,
+      "influence": "119/256",
+      "entropy_numeric": 1.5058085796568768
+    },
+    {
+      "n": 10,
+      "cuts": [
+        252,
+        598,
+        815
+      ],
+      "branching_budget": 2,
+      "influence": "465/256",
+      "entropy_numeric": 3.1684593136264385
+    }
+  ],
+  "halfspace_budget_examples": [
+    {
+      "N": 2,
+      "influence": "5/4",
+      "threshold_budget": "7/2",
+      "budget_ratio": "14/5",
+      "entropy_numeric": 1.7012377755992936
+    },
+    {
+      "N": 4,
+      "influence": "9/8",
+      "threshold_budget": "15/4",
+      "budget_ratio": "10/3",
+      "entropy_numeric": 0.7012057533558846
+    },
+    {
+      "N": 6,
+      "influence": "67/64",
+      "threshold_budget": "63/16",
+      "budget_ratio": "252/67",
+      "entropy_numeric": 0.24017391199362023
+    },
+    {
+      "N": 8,
+      "influence": "65/64",
+      "threshold_budget": "131/32",
+      "budget_ratio": "262/65",
+      "entropy_numeric": 0.07586285978765395
+    },
+    {
+      "N": 10,
+      "influence": "1029/1024",
+      "threshold_budget": "1083/256",
+      "budget_ratio": "1444/343",
+      "entropy_numeric": 0.022886979883204258
+    },
+    {
+      "N": 12,
+      "influence": "2051/2048",
+      "threshold_budget": "2229/512",
+      "budget_ratio": "8916/2051",
+      "entropy_numeric": 0.00669942479703147
+    }
+  ],
+  "limitations": "No huge tiny-coordinate truth cube enumeration; analytic proof establishes infinite families. Lacunary qualitative FEI already known; full nearby-three-crossing FEI open."
+}

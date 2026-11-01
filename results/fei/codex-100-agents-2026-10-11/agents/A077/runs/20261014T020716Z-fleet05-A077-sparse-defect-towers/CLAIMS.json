@@ -1,0 +1,58 @@
+[
+  {
+    "claim_id": "A077-RARE-RARE-ACTIVATED-COLLISION",
+    "version": 1,
+    "exact_statement": "For every even k>=2 and integer r>=1 on independent uniform physical bits, let G(s,x)=1-2*1{s=0,x=0}, H(s)=(-1)^(sum paired s-coordinate products), A=1{r fresh controls all zero}, Gp=1+A(G-1),Hp=1+A(H-1), and W choose Gp/Hp with one fresh fair selector z. Put a=2^-k,b=2^(-k/2),q=2^-r,c=(1-b+a)/2. All x,shared,selector,activation influences are respectively qa/2,q(a+1/2)/2,qc,qc, and I(W)=q[k/4+(k+1)a/2+(r+1)c]. The exact signed private-query correction D=B_x(W)-B_x(Gp)/2 equals q(2^k-1)S(-a,a;b)+q(1-q)S(-a,a;b-1)+S(1-qa,qa;1-q+qb), S(u,d;v)=[Phi((u+v)^2,d^2)+Phi((u-v)^2,d^2)]/4-Phi(u^2,d^2)/2. For even k>=4 its ratio D/Inf_x(W)>=k-4 and Q_x(W)/Inf_x(W)>=k-11/2 uniformly in r. Taking r=k makes both branch minority probabilities, every root influence and total I(W) tend to zero. Nevertheless an activation-first complete physical policy has B_tree,Q_tree<=5I(W) and H(W)<8I(W). Its activation prefix consumes rqc, has B<=4rqc and retains exactly qH(F), including both terminal core entropies; the surviving base policy consumes qI(F), including final zero-erasure selector influence, at B<=5qI(F). This refutes a universal prescribed-private-query price under rarity/weak-influence hypotheses, not selected-pivot admission or FEI.",
+    "hypotheses": [
+      "Actual Boolean truth formulas above; k even>=2,r integer>=1",
+      "Independent uniform physical inputs; entropy bits",
+      "Divergence bounds require k even>=4",
+      "Activation-first paid policy is explicit; arbitrary interleavings are not priced"
+    ],
+    "statement_sha256": "762db927fedc98675c034d4af6854182c4fd5153972d099707ee635ee4271904",
+    "contributors": [
+      "A077/fleet05"
+    ],
+    "proof_source": {
+      "proof": "PROOF.md sections1-5",
+      "checks": "code/check.py; out/full.json; out/review.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A078-PAIRED-QUARTER-PROFILE-AND-PADDING",
+        "version": 2,
+        "scope": "stage3 actual family and private-row obstruction; independently reconstructed scoped HOLDS"
+      },
+      {
+        "claim_id": "A076-STRUCTURED-SPECTRA",
+        "version": 4,
+        "scope": "OWNED_PIVOT_PROOF sections1-4; independently reconstructed scoped HOLDS"
+      },
+      {
+        "claim_id": "A076-TRIBES-PAYMENT-DISCRIMINATION",
+        "version": 4,
+        "scope": "OWNED_PIVOT_PROOF sections2-5 including fixture paid policy; independently reconstructed scoped HOLDS"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACT_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Uniform prescribed-query |D|<=C Inf for both rare branches with all root influences and total influence tending to zero",
+      "Uniform prescribed-query Q<=C Inf under the same rarity and weak-influence hypotheses"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A076",
+      "A078",
+      "A037",
+      "A064",
+      "A091",
+      "A097",
+      "A092",
+      "A088",
+      "claude/B16",
+      "B20"
+    ]
+  }
+]

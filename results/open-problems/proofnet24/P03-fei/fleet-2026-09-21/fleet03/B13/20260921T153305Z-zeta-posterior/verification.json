@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "PASS_EXACT_WITNESS_AND_ANALYTIC_IDENTITY_REVIEW",
+  "full_fei_status": "OPEN",
+  "witness": {
+    "variables": 4,
+    "mask0_hex": "0x8116",
+    "mask1_hex": "0x8117",
+    "truth_table_disagreement": "1/16",
+    "endpoint1_bent": true,
+    "endpoint0_walsh_abs_numerator_counts": {"2": 10, "6": 6},
+    "endpoint1_walsh_abs_numerator_counts": {"4": 16},
+    "B_can_P0": 1.7437893265455354,
+    "B_can_P1": 2.0,
+    "B_can_midpoint": 2.0779634961543973,
+    "G_zeta": 0.20606883288162958,
+    "G_zeta_over_disagreement": 3.2971013261060733,
+    "two_over_ln2": 2.885390081777927
+  },
+  "exact_refutation_certificate": {
+    "claim": "G_zeta > 3/16 = 3*delta, hence G_zeta > (2/ln2)*delta",
+    "lhs_expression": "3^58 * 11^30",
+    "rhs_expression": "2^3 * 13^13 * 5^54 * 7^6",
+    "lhs": "82188930376475602525557232479634993583630695816964049371889",
+    "rhs": "15824210126901038540925270581283257342875003814697265625000",
+    "integer_comparison": "lhs > rhs",
+    "ln2_bound": "ln(2) > 2/3, so 2/ln(2) < 3"
+  },
+  "analytic_results": [
+    "For arbitrary finite mixtures, B_can(M)-sum_y lambda_y B_can(P_y) = sum_A M(A) D_2(P(Y|S=A) || P(Y|S superset A)).",
+    "At the uniform subset law, the Hessian in relative direction r is -(1/ln2) E[(r-Kr)^2], where K is upper-cone averaging."
+  ],
+  "scope_notes": [
+    "The exact witness refutes only the proposed raw payment with coefficient 2/ln2 (indeed any coefficient at most 3).",
+    "The finite and heuristic searches do not establish a universal direct-payment constant.",
+    "Neither result proves or refutes full FEI."
+  ]
+}

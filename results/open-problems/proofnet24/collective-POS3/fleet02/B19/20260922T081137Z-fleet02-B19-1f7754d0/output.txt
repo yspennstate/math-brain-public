@@ -1,0 +1,36 @@
+P_1: n=10 E=299 width=3 connected_incomp=True
+  gate_counts 0<9:221/299, 9<1:204/299, 1<7:185/299, 1<10:244/299, 7<10:230/299
+  gate_gt_2/3 [True, True, False, True, True]
+  autonomous_nontrivial=[]
+P_2: n=11 E=533 width=3 connected_incomp=True
+  gate_counts 0<9:389/533, 9<1:360/533, 1<7:364/533, 1<10:448/533, 7<10:408/533
+  gate_gt_2/3 [True, True, True, True, True]
+  autonomous_nontrivial=[('c1', 'c2')]
+CONTRACTION P_2/{c1,c2} == P_1: True
+P_2 incomparable_pairs=19
+  0||4  Pr(0<4)=18/41 balanced=True
+  0||c1  Pr(0<c1)=360/533 balanced=False
+  0||c2  Pr(0<c2)=457/533 balanced=False
+  0||8  Pr(0<8)=108/533 balanced=False
+  0||9  Pr(0<9)=389/533 balanced=False
+  0||10  Pr(0<10)=525/533 balanced=False
+  1||c1  Pr(1<c1)=83/533 balanced=False
+  1||c2  Pr(1<c2)=15/41 balanced=True
+  1||7  Pr(1<7)=28/41 balanced=False
+  1||9  Pr(1<9)=173/533 balanced=False
+  1||10  Pr(1<10)=448/533 balanced=False
+  2||9  Pr(2<9)=34/533 balanced=False
+  2||10  Pr(2<10)=264/533 balanced=True
+  3||10  Pr(3<10)=132/533 balanced=False
+  4||9  Pr(4<9)=435/533 balanced=False
+  c1||9  Pr(c1<9)=25/41 balanced=True
+  c2||9  Pr(c2<9)=215/533 balanced=True
+  7||9  Pr(7<9)=105/533 balanced=False
+  7||10  Pr(7<10)=408/533 balanced=False
+P_2 balanced_pairs=[(0, 4, '18/41'), (1, 'c2', '15/41'), (2, 10, '264/533'), ('c1', 9, '25/41'), ('c2', 9, '215/533')]
+GRID C_3xC_3 E=42 coherent_F1_F3_patterns=0
+GRID C_4xC_3 E=462 coherent_F1_F3_patterns=0
+GRID C_5xC_3 E=6006 coherent_F1_F3_patterns=0
+GRID C_6xC_3 E=87516 coherent_F1_F3_patterns=0
+GRID C_7xC_3 E=1385670 coherent_F1_F3_patterns=0
+POS3_COHERENT_GATE_MODULE_PHASE_PASS

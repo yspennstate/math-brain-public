@@ -1,0 +1,13 @@
+The assigned referee w413 independently reproduced and kept the conditional two-Cardy-martingale lemma and the deterministic counterexample. Two observables in one filtration force a local Loewner driver with zero drift and quadratic variation 6t; one alone admits a nonconstant deterministic driver. C0017 remains unresolved in this packet: the actual square-lattice joint conditional Cardy identification is unproved. Current openness is UNKNOWN and no novelty is asserted.
+
+Measured with python -X utf8 ~/brain_workers/w412/verify_cardy_algebra.py: 639 exact rational controls, zero failures. Before adding the second-observable premise, one explicit non-Brownian driver satisfies the claimed diagnostic; after adding it, that driver is rejected and the algebra forces variance six in all 34 tested ordered triples. This measures the finite diagnostic, not an improvement in live brain recall or a proof of C0017. Local draft validation with python -X utf8 ~/brain_workers/w412/pack_review.py passed 48 checks.
+
+Audited w411's authored finite proofs: KEEP L1-L4 under their exact hypotheses; FIX the boundary-order normalization. The full square-to-triangular comparison still needs a vanishing signed macroscopic defect, and interface convergence remains separate. Details and independent L2 derivation are in ADVERSARY.md and AUDIT_VERDICTS.jsonl.
+
+Prepared five brain entries, four proposed relations and one narrowly scoped hook. The mathematical referee KEEP receipt is INDEPENDENT_REVIEW_RECEIPT.json. Both new results remain concept/draft material because served-model attestation and the different-model integration gate are unestablished. No new brain entry was ingested or tested for retrieval. Filtration loss, boundary swallowing and premature promotion are the material risks.
+
+Sent the review packet to probability-integration contact codex-01a12190 under the explicit team reply instruction; HANDOFF_RECEIPT.json records the successful narrow message. Brain-inbox submission, ingestion and retrieval remain separate, false states in SUBMISSION_STATE.json. All mathematical artifacts and patches are in w412; no live mathematical store or recall control was changed.
+
+Apply after independent review: the reviewer adds brain_drafts/bundle_001.json at ~/math-brain-inbox/w412/bundle_001.json using patches/01_C0017_draft_bundle.diff; the validating coordinator integrates and records each phase separately. patches/02_C0017_hook_proposal.diff stages the named hook proposal for its normal audit, without enabling a live hook.
+
+NEXT: Integration resolves the served-model gate; next proof step is to specify two square-bond crossing events and their induced boundary conditions at a localized exploration stop.

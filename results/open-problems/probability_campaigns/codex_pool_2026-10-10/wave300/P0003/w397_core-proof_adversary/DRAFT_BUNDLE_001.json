@@ -1,0 +1,160 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w397",
+  "bundle_slug": "p0003-circulation-and-collar-audit-20261010",
+  "entries": [
+    {
+      "key": "vertex-equation",
+      "namespace": "probability.saw",
+      "logical_name": "honeycomb-homogeneous-vertex-equation",
+      "kind": "definition",
+      "title": "Honeycomb homogeneous vertex equation",
+      "statement": "For a honeycomb graph embedded in the complex plane with edge midpoints p, the homogeneous vertex equation for a complex field F is sum_(p adjacent v)(p-v)F(p)=0 at every interior vertex v. This equation alone does not define F as a self-avoiding-walk observable.",
+      "proof_text": null,
+      "assumptions": [
+        "Honeycomb embedded in the complex plane"
+      ],
+      "domain": "probability theory and discrete complex analysis",
+      "source": {
+        "source_id": "owner-probability-w397-p0003-20261010:vertex-equation",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": "Campaign derivation and source-status record in w397/ATTEMPT.md; review states are separate."
+      }
+    },
+    {
+      "key": "face-obstruction",
+      "namespace": "probability.saw",
+      "logical_name": "honeycomb-face-circulation-compactness-obstruction",
+      "kind": "lemma",
+      "title": "Interior face circulation obstructs identity-alone compactness",
+      "statement": "Finite lemma independently checked by w398; P0003 remains unresolved. On an interior regular hexagon of side delta with ordered vertices v_j and midpoints p_j, H(p_j)=delta/(v_(j+1)-v_j), zero on all other midpoints, satisfies the homogeneous vertex equation with zero boundary values. Its norm is1, successive values differ by1 at distance sqrt(3)*delta/2. Thus the local equation plus fixed boundary data and a uniform bound imply neither uniqueness nor local uniform compactness. This field need not be a genuine SAW observable.",
+      "proof_text": "At v_j the preceding edge contributes(-delta/2) and the following edge(+delta/2); elsewhere all values vanish. Adjacent directions differ by60 degrees, so unit-modulus reciprocal directions differ by1. Shrinking faces in a fixed interior neighborhood violate equicontinuity. Adding cH to any solution preserves its boundary values. Reviewer w398 independently rederived these steps in REVIEW_w397.md; finite exact arithmetic checked96 configurations.",
+      "assumptions": [
+        "Interior regular hexagonal face",
+        "Only the homogeneous vertex equation and fixed boundary data are imposed"
+      ],
+      "domain": "probability theory and discrete complex analysis",
+      "source": {
+        "source_id": "owner-probability-w397-p0003-20261010:face-obstruction",
+        "url": null,
+        "revision": "2026-10-10-w398-checked-finite-only",
+        "license": "owner-own-work",
+        "excerpt": "Campaign derivation and source-status record in w397/ATTEMPT.md; review states are separate."
+      }
+    },
+    {
+      "key": "invalid-inference",
+      "namespace": "probability.saw",
+      "logical_name": "honeycomb-local-identity-alone-compactness-inference-refuted",
+      "kind": "concept",
+      "title": "Refuted inference: vertex identity alone supplies compactness",
+      "statement": "REFUTED INFERENCE, not a SAW convergence theorem: claiming that the honeycomb homogeneous vertex identity, fixed boundary values and uniform boundedness force a unique locally uniform continuous limit is false. An interior face circulation has zero boundary, bounded amplitude and mesh-scale jumps. A valid observable proof must supply an additional estimate for the genuine walk sums.",
+      "proof_text": null,
+      "assumptions": [
+        "Inference uses only local linear equations, boundary values and a magnitude bound"
+      ],
+      "domain": "probability theory and discrete complex analysis",
+      "source": {
+        "source_id": "owner-probability-w397-p0003-20261010:invalid-inference",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": "Campaign derivation and source-status record in w397/ATTEMPT.md; review states are separate."
+      }
+    },
+    {
+      "key": "collar-reduction",
+      "namespace": "probability.saw",
+      "logical_name": "finite-saw-collar-martingale-reduction-draft",
+      "kind": "concept",
+      "title": "Draft finite collar control isolates the static SAW gap",
+      "statement": "DRAFT reduction: in a finite positive weighted simple-path ensemble, for forbidden vertex sets A subset B, D_k=P(avoid A|F_k)-P(avoid B|F_k) is a bounded nonnegative martingale and P(max_k D_k>=lambda)<=D_0/lambda. Its conditional probabilities use completion partition functions on the slit graph deleting previous vertices. This transfers a small initial collar difference to exploration control; it proves no initial collar decay or conformal exponent5/8. Independent derivation by w397; integration referee pending.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite graph and positive inherited weights",
+        "Positive total endpoint partition function",
+        "Stopped prefix filtration and retained terminal indicators",
+        "A subset B disjoint from endpoints",
+        "lambda>0"
+      ],
+      "domain": "probability theory and discrete complex analysis",
+      "source": {
+        "source_id": "owner-probability-w397-p0003-20261010:collar-reduction",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": "Campaign derivation and source-status record in w397/ATTEMPT.md; review states are separate."
+      }
+    },
+    {
+      "key": "target-scope",
+      "namespace": "probability.saw",
+      "logical_name": "hexagonal-saw-fixed-length-chordal-ensemble-scope",
+      "kind": "concept",
+      "title": "P0003 fixed-length and chordal ensemble scope",
+      "statement": "SOURCE STATUS RECORD; current openness UNKNOWN. Grimmett, arXiv:2205.07318v1 Question2.2 page3, asks about a uniformly selected n-step hexagonal-lattice SAW from the origin after suitable rescaling. Duminil-Copin--Smirnov, arXiv:1007.0575v2 Conjecture1 page9, separately state critical variable-length boundary-to-boundary convergence to chordal SLE(8/3). A proof of the second formulation is a related subproblem and needs an additional fixed-length/geometry bridge to answer the first. Neither conjecture is proved by this packet.",
+      "proof_text": null,
+      "assumptions": [
+        "Historical P0003 citation is Grimmett Question2.2",
+        "No equivalence between the two ensembles is assumed"
+      ],
+      "domain": "probability theory and discrete complex analysis",
+      "source": {
+        "source_id": "owner-probability-w397-p0003-20261010:target-scope",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": "Campaign derivation and source-status record in w397/ATTEMPT.md; review states are separate."
+      }
+    },
+    {
+      "key": "avoidance-stability",
+      "namespace": "probability.saw",
+      "logical_name": "curve-avoidance-event-stability-required-draft",
+      "kind": "concept",
+      "title": "Draft warning: weak curve limits need avoidance-event stability",
+      "statement": "DRAFT finite counterexample; independent check pending. In D=(-3,3)x(0,3), paths from(-2,0) vertically to height5/4+1/n, horizontally to x=2 and vertically to(2,0) all avoid the closed disk centered(0,1) of radius1/4. They converge uniformly to a path tangent to that disk, which does not avoid it. Passing closed-obstacle avoidance probabilities through a weak curve limit therefore requires a zero-probability boundary-event condition or a proved vanishing inner/outer collar squeeze.",
+      "proof_text": null,
+      "assumptions": [
+        "Fixed closed disk obstacle",
+        "Corresponding three-segment parametrizations"
+      ],
+      "domain": "probability theory and discrete complex analysis",
+      "source": {
+        "source_id": "owner-probability-w397-p0003-20261010:avoidance-stability",
+        "url": null,
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": "Campaign derivation and source-status record in w397/ATTEMPT.md; review states are separate."
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "face-obstruction",
+      "to_key": "vertex-equation",
+      "kind": "depends_on",
+      "rationale": "The finite face field is a homogeneous solution of exactly the vertex equation defined in the target entry."
+    },
+    {
+      "from_key": "face-obstruction",
+      "to_key": "invalid-inference",
+      "kind": "refutes",
+      "rationale": "The source entry constructs zero-boundary fields of norm1 and adjacent jumps1 at shrinking distances, contradicting the target entry's identity-alone uniqueness/compactness implication."
+    },
+    {
+      "from_key": "collar-reduction",
+      "to_key": "target-scope",
+      "kind": "semantic_association",
+      "rationale": "The finite collar reduction belongs to the positive chordal route, whose ensemble distinction and unproved bridge are recorded in the target scope entry."
+    },
+    {
+      "from_key": "avoidance-stability",
+      "to_key": "collar-reduction",
+      "kind": "semantic_association",
+      "rationale": "The collar reduction controls a given static difference; the avoidance example explains why limiting that initial difference needs an additional stability input."
+    }
+  ]
+}

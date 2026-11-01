@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "CHECKPOINT.md",
+      "sha256": "040c181565f566220a1c6534210422c7cea27b64739f974ade5b805475d2e070",
+      "bytes": 718
+    },
+    {
+      "path": "CLAIMS.json",
+      "sha256": "db622b84a658b7af5e3485fc90766741d09095d0a1402e0c24f68c6011eddd06",
+      "bytes": 7327
+    },
+    {
+      "path": "DUAL.md",
+      "sha256": "dfc9b739871dc3395acd089473563c13a0f45de22b64c6694265d96d82b5265e",
+      "bytes": 3974
+    },
+    {
+      "path": "FROZEN_SPEC.json",
+      "sha256": "681b7829dd5f4a2a6965a541e9599c521010d80430b2fd017b7df1be76516937",
+      "bytes": 1409
+    },
+    {
+      "path": "PACKET_DELTA.json",
+      "sha256": "1fe6c21929e31efdb5281fa06b0fac63005914eca51068c62a646c47831f3b5b",
+      "bytes": 2532
+    },
+    {
+      "path": "PROGRESS.json",
+      "sha256": "1fe6c21929e31efdb5281fa06b0fac63005914eca51068c62a646c47831f3b5b",
+      "bytes": 2532
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "d09b9754328b8255e40b7c67b5c253edfa63e9eefc1be80087c99f1b481caebb",
+      "bytes": 6724
+    },
+    {
+      "path": "RETUNING_OBSTRUCTION.md",
+      "sha256": "73d1811d89c1f7a8d56767e7dddb1c8c937a5ead3f889bf38a9d2a7d6277a085",
+      "bytes": 3607
+    },
+    {
+      "path": "REVIEW_A006.md",
+      "sha256": "016af1d75e22e131c16dadff904633bf3cb71a2a1bfc462820689494feb70a5f",
+      "bytes": 3326
+    },
+    {
+      "path": "code\\check.py",
+      "sha256": "2264ea08a086600670c8a0217123df83e52e920ecb89b11599b32c339068061d",
+      "bytes": 6365
+    },
+    {
+      "path": "code\\persist.py",
+      "sha256": "4a066b7bd0474cfc23b95d8915267fd4681a75bc4b6cac10656aeb9f4e3743b8",
+      "bytes": 16552
+    },
+    {
+      "path": "out\\CHECK.json",
+      "sha256": "34f4855d5d7746f951914e6851a4a980c4082832b1b77d7d44b3602ecb9f094e",
+      "bytes": 4060
+    },
+    {
+      "path": "out\\PILOT.json",
+      "sha256": "c501f4973d00a9b9201994a7d206f386c0cf9e00d5bcbd3278be45ede9de5267",
+      "bytes": 1060
+    },
+    {
+      "path": "out\\SOURCE_PINS.json",
+      "sha256": "9b9136aecd01c97a28c65a88e42fadf6808a545430b18a3ff3b2ca53bd448c77",
+      "bytes": 1559
+    }
+  ],
+  "rolling": [
+    {
+      "path": "agents\\A009\\STATUS.md",
+      "sha256": "a36a3d6a8df949b2f0c25279e6eba431e134c932d472294d3a7cf804c9ec5f01"
+    },
+    {
+      "path": "agents\\A009\\WORKLOG.md",
+      "sha256": "f0b95d43f9f4a7a99464daa3c23f752528fa6d36c47f9b1737c47ed2bbb7a393"
+    },
+    {
+      "path": "agents\\A009\\LEARNED.md",
+      "sha256": "753f3b093ede074a83fed03725f0197b333bc034b2cc6bab9dcd6580dde76f5c"
+    }
+  ],
+  "checks": [
+    "exact protocol fields",
+    "new claim statement hashes",
+    "source version unchanged",
+    "JSON readback",
+    "progress/delta byte equality",
+    "all files under20MB",
+    "actual domain counts",
+    "local persistence only"
+  ]
+}

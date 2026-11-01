@@ -1,0 +1,116 @@
+[
+  {
+    "service": "arxiv",
+    "url": "http://export.arxiv.org/api/query?search_query=all%3A%22nearest+unvisited%22&max_results=30",
+    "date": "2026-10-12",
+    "ok": true,
+    "bytes": 11875
+  },
+  {
+    "service": "arxiv_https",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22nearest+unvisited%22&max_results=30",
+    "date": "2026-10-12",
+    "ok": true,
+    "bytes": 11875
+  },
+  {
+    "service": "openalex",
+    "url": "https://api.openalex.org/works?search=The+Nearest+Unvisited+Vertex+Walk&per-page=30",
+    "date": "2026-10-12",
+    "ok": false,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "crossref",
+    "url": "https://api.crossref.org/works?query=nearest+unvisited+vertex+walk&rows=30",
+    "date": "2026-10-12",
+    "ok": true,
+    "bytes": 106436
+  },
+  {
+    "service": "semantic",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1912.13175?fields=title,year,authors,citationCount,citations.title,citations.year,citations.externalIds",
+    "date": "2026-10-12",
+    "ok": true,
+    "bytes": 416
+  },
+  {
+    "service": "github",
+    "url": "https://api.github.com/search/repositories?q=%22nearest+unvisited%22",
+    "date": "2026-10-12",
+    "ok": true,
+    "bytes": 23205
+  },
+  {
+    "service": "openalex_greedy",
+    "url": "https://api.openalex.org/works?search=greedy+walk+random+points+nearest+neighbor+limit&per-page=30",
+    "date": "2026-10-12",
+    "ok": false,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "openalex_doi",
+    "url": "https://api.openalex.org/works/https://doi.org/10.1017/S0269964821000115",
+    "date": "2026-10-12",
+    "ok": false,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "crossref_endless",
+    "url": "https://api.crossref.org/works/10.1080/07468342.2023.2201150",
+    "date": "2026-10-12",
+    "ok": true,
+    "bytes": 4550
+  },
+  {
+    "service": "semantic_search",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=nearest+unvisited+vertex&limit=20&fields=title%2Cyear%2CexternalIds%2Cabstract",
+    "date": "2026-10-12",
+    "ok": false,
+    "error": "HTTP Error 429: "
+  },
+  {
+    "service": "arxiv_greedy",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22greedy+walk%22+OR+all%3A%22nearest+neighbor+algorithm%22&max_results=50",
+    "date": "2026-10-12",
+    "ok": true,
+    "bytes": 102030
+  },
+  {
+    "service": "openalex_citing_doi",
+    "url": "https://api.openalex.org/works?filter=cites%3Ahttps%3A%2F%2Fdoi.org%2F10.1017%2FS0269964821000115&per-page=100",
+    "date": "2026-10-12",
+    "ok": false,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "aldous_publications",
+    "url": "https://www.stat.berkeley.edu/~aldous/Papers/papers.html",
+    "date": "2026-10-12",
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "service": "endless_publisher",
+    "url": "https://www.tandfonline.com/doi/pdf/10.1080/07468342.2023.2201150",
+    "date": "2026-10-12",
+    "ok": false,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "service": "primary-fetch",
+    "query": "meanfield_related_pdf",
+    "url": "https://arxiv.org/pdf/1206.6991",
+    "date": "2026-10-12",
+    "ok": true,
+    "bytes": 190709
+  },
+  {
+    "service": "primary-fetch",
+    "query": "aldous_endless_pdf",
+    "url": "https://www.stat.berkeley.edu/~aldous/Papers/endless.pdf",
+    "date": "2026-10-12",
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+  }
+]

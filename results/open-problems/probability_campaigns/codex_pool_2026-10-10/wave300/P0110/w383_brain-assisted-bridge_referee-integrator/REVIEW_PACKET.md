@@ -1,0 +1,15 @@
+# P0110 referee handoff
+
+**Verdict:** KEEP w381 L0–L9 within the exact conditional and abstract-counterexample scopes; KEEP w382's rare-tail, directional, all-t exponential upgrade and small-displacement deductions. FIX the wording that treats Uniform[1,2] as satisfying Auffinger–Damron's literally printed (2.2) lower wandering premise. FIX stored math-brain card `claim_cdf706646c2b45447e641263ec41ed5425512f1b415ae6923ee1a889e83be95c` as specified in `CORRECTIONS.jsonl`. P0110 is not solved; current openness is UNKNOWN.
+
+Reproductions: `ATTEMPT.md` gives independent derivations; `CLAIMS.jsonl` has exact hypotheses, sources, proof steps, independent reviewer and remaining gap for each kept mathematical claim. Source comparison: Auffinger–Damron Theorem 2.2, Eq. (2.2), and Chatterjee Theorem 1.1 A1–A4, linked in `SOURCE_STATUS.json` and `CORRECTIONS.jsonl`. The one-vertex proof of the Uniform[1,2] limitation is in `CLAIMS.jsonl` row `w383-review-w382-small-displacement`.
+
+Brain packet: `drafts/bundle_001.json` has three DRAFT entries and three supported relations, with both ends quoted in `EDGE_SUPPORT.jsonl`. `BUNDLE_VALIDATION.json` reports structural validation. This draft is staged locally for the validating coordinator and has **not** been submitted, ingested or shown retrievable. The source-correction concept needs a second independent source audit before promotion. The separate hook proposal is in `proposals/math-w383.jsonl`; its application diff is in `patches/01_math_hook_proposal.diff`.
+
+The engineering recall diff in w382/patches is a narrow display-only change for stale retractions; its author reports one observed stale label and snippet removed and 25 synthetic cases passing. I inspected its logic but did not apply it or run an end-to-end recall after patching. Its engineering reviewer must verify byte-preserving application and reproduce the display test. The P0110 mathematical verdict does not depend on that code patch.
+
+w381's curvature source check is KEEP as a source-hypothesis clarification: Chatterjee Theorem 1.1 lists no separate uniform-curvature premise, although its proof exploits norm geometry. This is a theorem-statement correction and should receive the named Claude manager's additional audit before editing an existing theorem card. w381's one-query routing pilot remains a proposal, with its own reported 0→1 exact-target hit; it has not been installed. w382's six-entry draft is mathematically KEEP within its explicit abstract/conditional scopes; its small-displacement boundary claim, added after that draft, is independently checked here and included in this separate local draft.
+
+The final-model/served-model gate and any further cross-account audit belong to the coordinator. A KEEP of these auxiliary statements is not a proof of the parent open problem.
+
+The one conditional corollary newly composed by w383 is explicitly **pending w386**. Its exact claim is in `CLAIMS.jsonl` row `w383-conditional-directional-endpoint`; a narrow request is in `REVIEW_REQUEST_w386.md`. Do not promote it as an independently checked theorem from this packet.

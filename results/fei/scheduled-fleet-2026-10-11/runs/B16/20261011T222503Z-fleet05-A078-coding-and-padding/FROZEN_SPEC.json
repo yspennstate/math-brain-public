@@ -1,0 +1,13 @@
+{
+  "helper_version": "A078-exact-code-v1",
+  "family": "Actual signs f_A,t(x)=(-1)^(t.x) f(Ax), A full row rank over F2; systematic parity padding; disjoint Boolean tensors",
+  "domain": "All labelled Boolean tables on m=1,2,3; every rank2 map with N=3; every systematic m=3,N=4 map; all modulations; all pairs of two-bit Boolean tables; declared point-defect tensors; simplex padding m=2,3",
+  "case_count": {"basis_tables": 276, "rank2_lifts": 5376, "systematic_lifts": 32768, "tensor_pairs": 256, "tensor_bases_per_pair": 840, "point_defect_tensor_tuples": 7, "simplex_examples": 2},
+  "symmetry": "No truth-table quotient; unordered bases remove only basis order, which cannot affect their cost. All modulation words are included in the code checks.",
+  "arithmetic": "Integers for physical disagreement and FWHT; exact Fraction for compressed products. Entropy identities certified through exact spectral-law bijections, with no numerical log comparison.",
+  "memory_estimate_mb": 70,
+  "maximum_runtime_seconds": 60,
+  "pilot": "m<=2 basis tables; first two rank2 seeds; first four systematic seeds; first two-by-two tensor seeds; same declared compressed families",
+  "automatic_dimension_escalation": false,
+  "gpu": false
+}

@@ -1,0 +1,111 @@
+[
+  {
+    "claim_id": "A051-CRITICAL-CONDITIONAL-GIBBS-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For every finite uniform Boolean sign f, C>0, c>=2/ln(2), and nonempty proper original coordinate block A of size r, retain every complete physical child g_x, t=E a(g_x), R=E I(g_x)-t, D=H(f)-C I(f), S=E[C a(g_x)-H(g_x)], sigma=I_A(f), and J=H(f)-E H(g_x)-H(Z_A|Z_B). With theta=1/(1+2^(C-c)), Q=Ber(theta)^r, W=D_2(P_AB||Q tensor P_B), and G=c sigma-J, the exact identity is D+S+C R+W+G=r log2(1+2^(c-C)), with R,W,G>=0. At a least-essential-dimension positive-C-deficit witness S>=0, so W+G+C R+S is strictly below this capacity. For any nontrivial A-event with occupation v and Q-probability q, W=d2(v||q)+v W1+(1-v)W0, retaining unconditional P_B in both conditional references. Thus v>=eta*capacity implies W1<1/eta for eta>0 at such a critical witness. No such occupation lower bound is asserted. Actual point defects at C_n=n,c=3 have W->0 but occupied W1>=n/2-2 for n>=3; they are not high-C critical witnesses. Shifted-threshold terminal errors H-Ka<=epsilon a use C=K+epsilon and finite minimality, without an infinite optimizer.",
+    "hypotheses": [
+      "Uniform Boolean signs, normalized Walsh spectrum, entropy in bits; finite n>=2",
+      "C>0; c>=2/ln2; actual proper physical block and complete optimized children",
+      "Only critical inequalities use least essential dimension at the SAME C and positive deficit",
+      "Event division requires v>0; complement omitted at v=1; eta>0 is a supplied lower-occupation parameter",
+      "Capacity is shared with all full child reserves and savings; no old debit is renewed"
+    ],
+    "statement_sha256": "453d5418cbe040bef2343bac429f371e9f139572e8dde4405b0eba3da6c06d6d",
+    "contributors": [
+      "fleet04/A051"
+    ],
+    "proof_source": {
+      "path": "agents\\A051\\runs\\20261027T043314Z-fleet04-A051-near-extremizer-definition\\PROOF.md",
+      "sha256": "9e53b1a0b3d3d35796a007469a0ff53e15cfb2d0da92ee895d1c22dbd0081d4e",
+      "locator": "Sections1--5"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "B11-R1",
+        "version": "lead-v2",
+        "scope": "uniform fibrewise log-Sobolev inequality only"
+      },
+      {
+        "claim_id": "A054-RESET-COMPONENT-CROSSING-INTERFACE",
+        "version": 4,
+        "acceptance": "A051 scoped independent reconstruction Sections1--4",
+        "scope": "complete child capacity; all extra entropy identities rederived here"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATION_PASS_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered inference: vanishing unnormalized conditional Gibbs divergence implies a uniform occupied-law divergence bound without an occupation lower bound"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A052",
+      "A054",
+      "A055",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A054-RESET-COMPONENT-CROSSING-INTERFACE",
+    "version": 4,
+    "exact_statement": "For every uniform Boolean sign f and nonempty proper block A of size r, K>0, let sigma=I_A(f), g_x be all complete children, a(g) their minimum affine-input/output-character influence, Rchild=E I(g)-E a(g)>=0, S*=E[Ka(g)-H(g)] and D=H(f)-KI(f), with entropy bits. Then D+S*+K Rchild=H(f)-E H(g)-K sigma <= r[h2(sigma/r)-(K-2/ln2)sigma/r] <= r log2(1+exp(2)2^(-K)) <= r log2(1+2^(3-K)). If f has positive D, all n coordinates essential, and least essential dimension among positive-deficit signs at the SAME K, then S*>=0, sigma>0, sigma<exp(3)r2^(-K), and D,S*,K Rchild are each bounded by that same full capacity (strict for the last two). No phase price Pi or old debit is removed. Universal query selection and FEI remain open.",
+    "hypotheses": [
+      "Finite uniform Boolean sign n>=2; proper nonempty ORIGINAL coordinate block; bits",
+      "K>0; all complete child spectra and actual affine/character minima retained",
+      "Only critical corollaries require all coordinates essential and least essential dimension at the SAME K",
+      "All earlier phase prices and debits remain; this upper bound is not new funding"
+    ],
+    "statement_sha256": "1bc69f7334519736a1a6a9573c1c25d4b023349c6bdff73d677c6c89379b8cc9",
+    "contributors": [
+      "fleet04/A054"
+    ],
+    "proof_source": {
+      "path": "agents\\A054\\runs\\20261026T222013Z-fleet04-A054-connectedness-alternatives\\PROOF.md",
+      "sha256": "7749fd37dba762d6ac0298ed0e855a3d6c018741316c451739d9e057f6a3d5d2",
+      "locator": "Sections1--5; conditional scoped A052 review Section6"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "B11-R1",
+        "version": "lead-v2-2026-10-11",
+        "acceptance": "SCOPED_FIBREWISE_LOG_SOBOLEV_REDERIVATION",
+        "used_scope": "uniform cube Ent(v^2)<=2 sum E(D_i v)^2 only"
+      },
+      {
+        "claim_id": "A054-RESET-COMPONENT-CROSSING-INTERFACE",
+        "version": 3,
+        "acceptance": "AUTHOR_PROOF_PENDING_REVIEW",
+        "used_scope": "interpretation of original phase price Pi; not needed for inequalities1--5"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A051",
+        "verdict": "HOLDS_SCOPED_UNCHANGED",
+        "scope": "PROOF Sections1--4: complete child ledger, fibrewise entropy bound, binary Gibbs capacity and genuine-critical consequences; excludes stage20 phase-interface dependencies and Section6 A052 review",
+        "source_proof_sha256": "7749fd37dba762d6ac0298ed0e855a3d6c018741316c451739d9e057f6a3d5d2",
+        "reconstruction": "agents\\A051\\runs\\20261027T043314Z-fleet04-A051-near-extremizer-definition\\PROOF.md Sections1--3 and exact finite validation",
+        "repair_contribution": false
+      }
+    ],
+    "status": "INDEPENDENT_RECONSTRUCTION_ACCEPTED_AT_STATED_SCOPE",
+    "supersedes": [
+      "A054-RESET-COMPONENT-CROSSING-INTERFACE@3 (extended; prior exact rank and phase-price statements retained)"
+    ],
+    "refutes": [
+      "Unregistered shortcut: positivity alone allows deleting a negative complete-child reserve; exact dummy and essential3bit K1 guards"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A054",
+      "A052",
+      "A055",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

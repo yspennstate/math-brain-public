@@ -1,0 +1,67 @@
+{
+  "command": "python -X utf8 verify_obstructions.py",
+  "gaussian_raw_moments": [
+    {
+      "n": 1,
+      "squared_hs_norm": 9
+    },
+    {
+      "n": 2,
+      "squared_hs_norm": 12
+    },
+    {
+      "n": 4,
+      "squared_hs_norm": 18
+    },
+    {
+      "n": 8,
+      "squared_hs_norm": 30
+    },
+    {
+      "n": 16,
+      "squared_hs_norm": 54
+    },
+    {
+      "n": 64,
+      "squared_hs_norm": 198
+    }
+  ],
+  "exact_exponential_tilt_variances": [
+    {
+      "theta": "0",
+      "variance": "1"
+    },
+    {
+      "theta": "1/2",
+      "variance": "4"
+    },
+    {
+      "theta": "3/4",
+      "variance": "16"
+    },
+    {
+      "theta": "9/10",
+      "variance": "100"
+    }
+  ],
+  "regularized_tilt_limit_coefficient": 0.3633802276324186,
+  "posterior_factorization_diagnostic": {
+    "s": 1,
+    "f": "x",
+    "quadrature_domain": [
+      -10.0,
+      28.0
+    ],
+    "points": 38001,
+    "density_mass_on_domain": 0.9999999999995816,
+    "E_A_approx": 0.41178424765919786,
+    "E_A_squared_approx": 0.23622060293061078,
+    "square_E_A_approx": 0.1695662666202516,
+    "strict_gap_approx": 0.06665433631035919,
+    "lhs_to_false_rhs_ratio_approx": 1.3930872433467762,
+    "status": "numerical diagnostic; strict positivity proved separately by nonconstant posterior variance"
+  },
+  "elapsed_seconds": 0.09710020001512021,
+  "within_compute_gate": true,
+  "full_target_proved": false
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "A029-physical-cut-slack-flow/1",
+  "baseline": "B06 STREAM_NOTES v1 R2; D_K(root)=weighted actual terminal deficits + signed node increments",
+  "ownership_key": ["physical_node", "reach_probability", "terminal_or_increment"],
+  "expansion_rule": "Replace an internal child deficit by its weighted physical-child deficits and its signed increment; do not retain both representations as spendable resources",
+  "negative_terminal_deficits": "Retained with their signs; nonnegativity requires a separately proved fact or an explicitly stated induction hypothesis",
+  "AND2_K2": {
+    "root": {"H": 2, "I": 1, "D": 0},
+    "children": [{"weight": "1/2", "H": 0, "I": 0, "D": 0}, {"weight": "1/2", "H": 0, "I": 1, "D": 2}],
+    "root_increment": -1,
+    "weighted_dictator_query_credit": 1,
+    "terminal_deficits": 0,
+    "net_root_deficit": 0
+  },
+  "bent_mask854_K2": {
+    "root": {"H": 4, "I": 2, "D": 0},
+    "root_coordinate": 0,
+    "children": [{"mask": 30, "weight": "1/2", "H": 2, "I": 2, "D": 2}, {"mask": 17, "weight": "1/2", "H": 2, "I": 1, "D": 0}],
+    "root_increment": -1,
+    "character_query_in_mask30": {"child_coordinate": 2, "entropy_drop": 0, "influence_drop": 1, "weighted_credit": 1},
+    "terminal_entropy": 2,
+    "terminal_influence": 1,
+    "terminal_deficits": 0,
+    "net_root_deficit": 0
+  },
+  "B05_K4": {
+    "parameters": "even k>=4; r=2k, delta=2^-k, p=2^-r",
+    "child_deficit_status": "PROVED_DIRECTLY_FOR_BOTH_CHILDREN",
+    "each_actual_child_deficit_lower": "p(k-3)",
+    "selector_debt_upper": "p delta (3k+1/2)",
+    "root_deficit_lower": "p[k-3-delta(3k+1/2)]>0",
+    "terminal_entropy": "Included in actual D_4(G),D_4(H); not discarded"
+  },
+  "repeated_slack_falsifier": {
+    "family": "m-bit parity, K>0",
+    "actual_root_deficit": "Km",
+    "incorrect_internal_reserve_sum": "Km(m+1)/2",
+    "overcount_factor": "(m+1)/2"
+  },
+  "arbitrary_seed_guard": {
+    "family": "signed AND2 times arbitrary disjoint Boolean seed h",
+    "paid_tree": {"Pi_H": 2, "Pi_I": 1},
+    "actual_terminal_functions": "signed copies of h",
+    "root_deficit": "D_K(h)+(K-2)",
+    "unpaid_term": "D_K(h) for an arbitrary seed"
+  }
+}

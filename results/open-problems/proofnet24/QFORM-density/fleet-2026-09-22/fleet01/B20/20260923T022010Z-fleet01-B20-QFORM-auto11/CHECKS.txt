@@ -1,0 +1,33 @@
+QFORM fleet01/B20 auto11 exact arithmetic checks
+
+1. Quarter-mix theorem:
+K_lower = 1/(24*3^(3/4)) = 0.018278805735451285
+C = 18*sqrt(e)*(24*3^(3/4))^(2/9) = 72.21934819432884 < 72.220
+
+2. Fractional mixed theorem specialization:
+lambda = 1/32
+rho = 493/500
+kbar = 65/32 = 2.03125
+rho*kbar = 32045/16000 = 2.0028125 > 2
+K_Omega_lower = 2^(1/32)*(32/31)^(31/32)/48 = 0.0219544898803007
+K_rho = (493/500)^(-493/500)*(7/500)^(-7/500) = 1.0764443172245997
+C_frac = [2*rho*kbar*sqrt(e)/(rho*kbar-2)] * K_rho^(-1/(2*rho*kbar))*K_Omega_lower^(-1/(2*kbar))
+       = 5901.721937774547 < 5902
+
+If q_j<=49/100 then alpha_j<=(1+31*(49/100))/32=1619/3200.
+rho*alpha_j <= 798167/1600000 = 0.498854375 < 1/2.
+
+3. Balanced two-anchor cascade:
+C0 = 8000/493.
+s_* = (15+2*C0)/47 = 23395/23171 = 1.0096672564843987.
+(s_*-1)/48 = 14/69513 = 0.0002014011767583042.
+(2*C0-31*s_*-1)/768 = 14/69513 exactly.
+
+4. Deshear identities:
+For D=[[d,r^T],[c,C]],
+sum_{k,q} det([[d,r_q],[c_k,C_kq]])^2 = ||d*C-c*r^T||_F^2.
+
+For a two-row/two-column anchor P, each augmented 3x3 determinant equals
+det(P)*C_kq - V_k,:*adj(P)*U_:,q,
+so the total squared anchored third-minor mass is
+||det(P)C - V adj(P) U||_F^2.

@@ -1,0 +1,178 @@
+{
+  "command": "python -X utf8 verify_boundary.py",
+  "compute_gate": {
+    "checked_utc": "2026-10-10T07:20:49.950924+00:00",
+    "source": "~\\.claude\\compute\\compute_state.json",
+    "age_seconds": 6.242021799087524,
+    "mode": "owner_present_polite",
+    "status": "warn",
+    "limits": "Fresh <=120s; no distress/throttle/stop. Single process, standard library, max n=5 enumeration, no GPU.",
+    "policy_source": "~/<private-repo>/12_cognitive_architecture/compute_governor/COMPUTE_DOCTRINE.md:128-130; compute_sense.py:1193-1196",
+    "passed": true
+  },
+  "all_checks_passed": true,
+  "proof_status": "Exact finite checks only; not a formal proof or independent review.",
+  "partition_checks": [
+    {
+      "n": 1,
+      "original_matrices": 2,
+      "partition_pairs": 1,
+      "all_passed": true,
+      "specified_cross_collision_count": 0
+    },
+    {
+      "n": 2,
+      "original_matrices": 16,
+      "partition_pairs": 4,
+      "all_passed": true,
+      "specified_cross_collision_count": 8
+    },
+    {
+      "n": 3,
+      "original_matrices": 512,
+      "partition_pairs": 25,
+      "all_passed": true,
+      "specified_cross_collision_count": 64
+    }
+  ],
+  "partition_pair_checks": 30,
+  "collision_checks": [
+    {
+      "n": 1,
+      "normalized_matrices": 1,
+      "no_collision_count": 1,
+      "collision_probability": "0",
+      "formula_error": 0,
+      "incorrect_independence_probability": "0",
+      "incorrect_independence_absolute_error": "0"
+    },
+    {
+      "n": 2,
+      "normalized_matrices": 2,
+      "no_collision_count": 1,
+      "collision_probability": "1/2",
+      "formula_error": 0,
+      "incorrect_independence_probability": "3/4",
+      "incorrect_independence_absolute_error": "1/4"
+    },
+    {
+      "n": 3,
+      "normalized_matrices": 16,
+      "no_collision_count": 6,
+      "collision_probability": "5/8",
+      "formula_error": 0,
+      "incorrect_independence_probability": "55/64",
+      "incorrect_independence_absolute_error": "15/64"
+    },
+    {
+      "n": 4,
+      "normalized_matrices": 512,
+      "no_collision_count": 174,
+      "collision_probability": "169/256",
+      "formula_error": 0,
+      "incorrect_independence_probability": "54511/65536",
+      "incorrect_independence_absolute_error": "11247/65536"
+    },
+    {
+      "n": 5,
+      "normalized_matrices": 65536,
+      "no_collision_count": 24360,
+      "collision_probability": "5147/8192",
+      "formula_error": 0,
+      "incorrect_independence_probability": "50339839/67108864",
+      "incorrect_independence_absolute_error": "8175615/67108864"
+    }
+  ],
+  "counterexample_checks": [
+    {
+      "n": 5,
+      "exact_rank": 4,
+      "kernel_support": 4,
+      "two_sparse_singular_value_squared": [
+        2,
+        2
+      ],
+      "all_passed": true
+    },
+    {
+      "n": 6,
+      "exact_rank": 5,
+      "kernel_support": 4,
+      "two_sparse_singular_value_squared": [
+        2,
+        2
+      ],
+      "all_passed": true
+    },
+    {
+      "n": 7,
+      "exact_rank": 6,
+      "kernel_support": 4,
+      "two_sparse_singular_value_squared": [
+        2,
+        2
+      ],
+      "all_passed": true
+    },
+    {
+      "n": 8,
+      "exact_rank": 7,
+      "kernel_support": 4,
+      "two_sparse_singular_value_squared": [
+        2,
+        2
+      ],
+      "all_passed": true
+    },
+    {
+      "n": 9,
+      "exact_rank": 8,
+      "kernel_support": 4,
+      "two_sparse_singular_value_squared": [
+        2,
+        2
+      ],
+      "all_passed": true
+    },
+    {
+      "n": 10,
+      "exact_rank": 9,
+      "kernel_support": 4,
+      "two_sparse_singular_value_squared": [
+        2,
+        2
+      ],
+      "all_passed": true
+    },
+    {
+      "n": 11,
+      "exact_rank": 10,
+      "kernel_support": 4,
+      "two_sparse_singular_value_squared": [
+        2,
+        2
+      ],
+      "all_passed": true
+    },
+    {
+      "n": 12,
+      "exact_rank": 11,
+      "kernel_support": 4,
+      "two_sparse_singular_value_squared": [
+        2,
+        2
+      ],
+      "all_passed": true
+    }
+  ],
+  "total_normalized_matrices": 66067,
+  "gaussian_finite_law_correction": {
+    "n": 1,
+    "t": 0.1,
+    "exact_CDF": 0.07965567455405796,
+    "limiting_CDF": 0.0996754774137344,
+    "absolute_difference": 0.020019802859676444
+  },
+  "elapsed_seconds": 0.41444980003871024,
+  "cpu_seconds": 0.234375
+}

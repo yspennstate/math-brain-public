@@ -1,0 +1,12 @@
+g(1/2)-A^2 = 0
+g'(1/2) = 3*(u - v - w)**2/32
+stationarity iff u=v+w (positive weights)
+g(1) = (3*u**2 + 3*v**2 + w**2)/8
+R1(t) = 4*(3*t**2 + 3*t + 2)/(3*t + 2)**2
+R1'(t) = 12*(t - 2)/(3*t + 2)**3
+R1 minimum at t=2 = 5/4
+alpha_diagonal_max = log(2)/log(5/4) = 3.10628371950538988
+compare 3.52: barrier < 3.52 = True
+ALL_EXACT_CHECKS_PASS = True
+
+Execution note: reproduced during the 2026-09-20 PROB10-04 run with symbolic exact arithmetic in SymPy. Assertions use exact rational/symbolic identities; only the displayed decimal approximation of log(2)/log(5/4) is non-exact orientation.

@@ -1,0 +1,525 @@
+{
+ "checks": {
+  "n=1": {
+   "D=B+J": 0.0,
+   "B identity vs direct": 0.0,
+   "lam formulas": 0.0,
+   "lam KL form": 0.0,
+   "D<=lam+3d/ln2 violation": 0.0,
+   "lam<=B violation": 0.0,
+   "J<=2d/ln2 violation": 0.0,
+   "B<=lam+d/ln2 violation": 0.0,
+   "D>=0 violation": 0.0
+  },
+  "n=2": {
+   "D=B+J": 0.0,
+   "B identity vs direct": 0.0,
+   "lam formulas": 0.0,
+   "lam KL form": 0.0,
+   "D<=lam+3d/ln2 violation": 0.0,
+   "lam<=B violation": 0.0,
+   "J<=2d/ln2 violation": 0.0,
+   "B<=lam+d/ln2 violation": 0.0,
+   "D>=0 violation": 0.0
+  },
+  "n=3": {
+   "D=B+J": 0.0,
+   "B identity vs direct": 8.881784197001252e-16,
+   "lam formulas": 2.220446049250313e-16,
+   "lam KL form": 2.7755575615628914e-16,
+   "D<=lam+3d/ln2 violation": 0.0,
+   "lam<=B violation": 0.0,
+   "J<=2d/ln2 violation": 0.0,
+   "B<=lam+d/ln2 violation": 0.0,
+   "D>=0 violation": 0.0
+  },
+  "n=4": {
+   "D=B+J": 0.0,
+   "B identity vs direct": 8.881784197001252e-16,
+   "lam formulas": 3.885780586188048e-16,
+   "lam KL form": 3.885780586188048e-16,
+   "D<=lam+3d/ln2 violation": 0.0,
+   "lam<=B violation": 0.0,
+   "J<=2d/ln2 violation": 0.0,
+   "B<=lam+d/ln2 violation": 0.0,
+   "D>=0 violation": 0.0
+  }
+ },
+ "constants": {
+  "n=1": {
+   "C_n=max H/I": 0.0,
+   "argmax_truth_table": 1,
+   "K_n=max_g min_i D_i/d_i": 0.0,
+   "argmax_K": 1,
+   "H/I at argmax_K": 0.0,
+   "KL_n=max_g min_i lambda_i/d_i": 0.0,
+   "argmax_KL": 1,
+   "max_g (min_i D_i/d_i - H/I)": 0.0,
+   "argmax_gap": 1,
+   "pointwise bound min_i D_i/d_i <= H/I + 2/ln2 violation": -2.8853900817779268,
+   "pointwise bound min_i lam_i/d_i <= B/I violation": 0.0,
+   "count functions with min_i D_i/d_i > H/I": 0,
+   "nonconstant functions": 2
+  },
+  "n=2": {
+   "C_n=max H/I": 2.0,
+   "argmax_truth_table": 1,
+   "K_n=max_g min_i D_i/d_i": 4.0,
+   "argmax_K": 1,
+   "H/I at argmax_K": 2.0,
+   "KL_n=max_g min_i lambda_i/d_i": 1.0,
+   "argmax_KL": 1,
+   "max_g (min_i D_i/d_i - H/I)": 2.0,
+   "argmax_gap": 1,
+   "pointwise bound min_i D_i/d_i <= H/I + 2/ln2 violation": -0.8853900817779268,
+   "pointwise bound min_i lam_i/d_i <= B/I violation": 0.0,
+   "count functions with min_i D_i/d_i > H/I": 8,
+   "nonconstant functions": 14
+  },
+  "n=3": {
+   "C_n=max H/I": 2.9558895822515994,
+   "argmax_truth_table": 1,
+   "K_n=max_g min_i D_i/d_i": 4.8676687467547985,
+   "argmax_K": 1,
+   "H/I at argmax_K": 2.9558895822515994,
+   "KL_n=max_g min_i lambda_i/d_i": 1.5804820237218407,
+   "argmax_KL": 1,
+   "max_g (min_i D_i/d_i - H/I)": 2.0,
+   "argmax_gap": 3,
+   "pointwise bound min_i D_i/d_i <= H/I + 2/ln2 violation": -0.8853900817779268,
+   "pointwise bound min_i lam_i/d_i <= B/I violation": 0.0,
+   "count functions with min_i D_i/d_i > H/I": 104,
+   "nonconstant functions": 254
+  },
+  "n=4": {
+   "C_n=max H/I": 3.402475551198588,
+   "argmax_truth_table": 1,
+   "K_n=max_g min_i D_i/d_i": 4.8676687467547985,
+   "argmax_K": 3,
+   "H/I at argmax_K": 2.9558895822515994,
+   "KL_n=max_g min_i lambda_i/d_i": 1.5804820237218407,
+   "argmax_KL": 3,
+   "max_g (min_i D_i/d_i - H/I)": 2.0,
+   "argmax_gap": 15,
+   "pointwise bound min_i D_i/d_i <= H/I + 2/ln2 violation": -0.8853900817779268,
+   "pointwise bound min_i lam_i/d_i <= B/I violation": 0.0,
+   "count functions with min_i D_i/d_i > H/I": 22384,
+   "nonconstant functions": 65534
+  }
+ },
+ "trees": {
+  "minInf": {
+   "n=1": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 0.0,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.0,
+     "4": 0.0,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 0,
+     "4": 0,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=2": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 1.5,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.298762224400706,
+     "4": 0.0,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 0,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=3": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 2.095728907677653,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.6875725481192075,
+     "4": 0.28922291558493285,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 1,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=4": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 2.362234539337668,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.850618887799647,
+     "4": 0.402475551198588,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 1,
+     "6.5218": 0,
+     "8": 0
+    }
+   }
+  },
+  "maxInf": {
+   "n=1": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 0.0,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.0,
+     "4": 0.0,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 0,
+     "4": 0,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=2": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 1.5,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.298762224400706,
+     "4": 0.0,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 0,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=3": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 2.095728907677653,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.6875725481192075,
+     "4": 0.28922291558493285,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 1,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=4": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 2.362234539337668,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.850618887799647,
+     "4": 0.402475551198588,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 1,
+     "6.5218": 0,
+     "8": 0
+    }
+   }
+  },
+  "greedyD": {
+   "n=1": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 0.0,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.0,
+     "4": 0.0,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 0,
+     "4": 0,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=2": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 1.5,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.298762224400706,
+     "4": 0.0,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 0,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=3": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 2.095728907677653,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.6875725481192075,
+     "4": 0.28922291558493285,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 1,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=4": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 2.362234539337668,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.850618887799647,
+     "4": 0.402475551198588,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 1,
+     "6.5218": 0,
+     "8": 0
+    }
+   }
+  },
+  "greedyL": {
+   "n=1": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 0.0,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.0,
+     "4": 0.0,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 0,
+     "4": 0,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=2": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 1.5,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.298762224400706,
+     "4": 0.0,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 0,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=3": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 2.095728907677653,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.6875725481192075,
+     "4": 0.28922291558493285,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 1,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=4": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 2.362234539337668,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.850618887799647,
+     "4": 0.402475551198588,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 1,
+     "6.5218": 0,
+     "8": 0
+    }
+   }
+  },
+  "lex": {
+   "n=1": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 0.0,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.0,
+     "4": 0.0,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 0,
+     "4": 0,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=2": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 1.5,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.298762224400706,
+     "4": 0.0,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 0,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=3": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 2.095728907677653,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.6875725481192075,
+     "4": 0.28922291558493285,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 1,
+     "6.5218": 0,
+     "8": 0
+    }
+   },
+   "n=4": {
+    "max |E sum D - H| (telescope)": 0.0,
+    "max |E sum d - I| (telescope)": 0.0,
+    "upper sandwich violation max(E sum lam - H)": 0.0,
+    "lower sandwich violation max(H - 3I/ln2 - E sum lam)": 0.0,
+    "max (H - E sum lam)/I": 2.362234539337668,
+    "min (H - E sum lam)/I": 0.0,
+    "Qstar_root/I max": {
+     "C4": 0.850618887799647,
+     "4": 0.402475551198588,
+     "6.5218": 0.0,
+     "8": 0.0
+    },
+    "Qstar_root/I argmax": {
+     "C4": 1,
+     "4": 1,
+     "6.5218": 0,
+     "8": 0
+    }
+   }
+  },
+  "n=4 max over g of (max_rule - min_rule) E sum lam / I": 0.15604822779595776
+ },
+ "potential": {},
+ "runtime_seconds": 1.4707982540130615
+}

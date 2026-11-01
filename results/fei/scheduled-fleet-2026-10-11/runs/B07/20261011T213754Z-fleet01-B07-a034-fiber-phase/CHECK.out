@@ -1,0 +1,28 @@
+granularity_checker:
+PASS
+exhaustive_boolean_functions=256
+exhaustive_split=X^2_by_Y^1
+degree_hist={0: 4, 1: 32, 2: 220}
+named_cases=5
+exact_and_interval_assertions=3975
+case=addressing_2 assertions=75 X_degree=1 I_Y=1
+case=parity_lift_point_defect assertions=23 X_degree=3 I_Y=1/4
+case=majority_parity_selector assertions=23 X_degree=3 I_Y=3/4
+case=near_tensor assertions=43 X_degree=3 I_Y=1
+case=activation_equivalence assertions=23 X_degree=3 I_Y=1
+log_bounds=exact rational atanh intervals, 72 terms
+random_seed=None
+
+conditional_fiber_checker:
+PASS
+exhaustive_boolean_functions=256
+exhaustive_split=X^2_by_Y^1
+fiber_K_hist={1: 80, 2: 176}
+exact_assertions=2168
+seed=two-data_one-selector
+tensor=three_bit_point_defect
+tensor_power=1 support_multiplier=8 seed_fiber_bound=16
+tensor_power=2 support_multiplier=64 seed_fiber_bound=128
+tensor_power=3 support_multiplier=512 seed_fiber_bound=1024
+tensor_power=4 support_multiplier=4096 seed_fiber_bound=8192
+random_seed=None

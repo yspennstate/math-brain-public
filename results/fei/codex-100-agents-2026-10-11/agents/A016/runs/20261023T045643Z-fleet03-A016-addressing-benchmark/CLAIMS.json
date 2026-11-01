@@ -1,0 +1,82 @@
+[
+  {
+    "claim_id": "A016-REVIEW-A020-RARE-GHOST-OBSTRUCTION-AND-CLEANUP",
+    "version": 1,
+    "exact_statement": "A020-RARE-HISTORY-FULL-RESERVE-NOGO@1 and A020-ZERO-INFLUENCE-GHOST-CLEANUP@1 HOLDS at their exact scoped hashes: same original eligible Q and old U give both reserves<-241/256 at k5,r4096 on all1 history; exact zero-influence cleanup restores both>5/4 for all k>=5,r>=3. This does not refute FEI or fixed-subset averaged payment.",
+    "hypotheses": [
+      "Exact Boolean g3-product rare selector/mask family and original reference specified in source versions",
+      "No reference reset or omitted conversion; all physical histories and both q signs retained",
+      "Acceptance applies only to these two source versions"
+    ],
+    "statement_sha256": "ec1d06259f816cfec1c80fe774cab4d0e91fd5fcc57c9e00133e0a658e74f64d",
+    "contributors": [
+      "A016"
+    ],
+    "proof_source": "REPORT.md; code/check.py; out/CHECK.json",
+    "proof_dependencies": [
+      "A020-RARE-HISTORY-FULL-RESERVE-NOGO@1 sha256 8a76b9866791ba6e6934d993cd7f7a0d06b4ee2a7263ca2a5666d0fe6d880128",
+      "A020-ZERO-INFLUENCE-GHOST-CLEANUP@1 sha256 cd5392886b73d70b8513dacce27af411278a09d3f73b526c6e4683cca8f63d2c"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A016",
+        "at_utc": "2026-10-23T05:17:53.118354+00:00",
+        "source_claim": "A020-RARE-HISTORY-FULL-RESERVE-NOGO@1",
+        "source_statement_sha256": "8a76b9866791ba6e6934d993cd7f7a0d06b4ee2a7263ca2a5666d0fe6d880128",
+        "result": "HOLDS_AT_STATED_SCOPE",
+        "method": "Independent seed Walsh/projection, literal physical histories and original reference marginals; complete-row CE and both signs; analytic row mass7rho/64 and factor5/8; direct cleanup domination. No source repair."
+      },
+      {
+        "reviewer": "A016",
+        "at_utc": "2026-10-23T05:17:53.118354+00:00",
+        "source_claim": "A020-ZERO-INFLUENCE-GHOST-CLEANUP@1",
+        "source_statement_sha256": "cd5392886b73d70b8513dacce27af411278a09d3f73b526c6e4683cca8f63d2c",
+        "result": "HOLDS_AT_STATED_SCOPE",
+        "method": "Independent seed Walsh/projection, literal physical histories and original reference marginals; complete-row CE and both signs; analytic row mass7rho/64 and factor5/8; direct cleanup domination. No source repair."
+      }
+    ],
+    "status": "INDEPENDENT_RECONSTRUCTION_HOLDS",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Universal cleanup for interacting restrictions with no irrelevant coordinate remains open.",
+    "next_consumers": [
+      "A020",
+      "A019",
+      "A018",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A016-CLEANUP-CLOSED-ALL-FIRST-BIT-OUTCOMES",
+    "version": 1,
+    "exact_statement": "For every k>=5,r>=3 in A020 family G_(r+1)=g3^(r+1), query q and one specified bit from each of r seeds, then both remaining bits of every seed whose first outcome was1. EVERY complete cleanup terminal, BOTH q signs and EVERY first-bit pattern retain full signed reserve4I-CE-U>3/4 under the ONE original reference and old U=L_q+E<5/8. All1 patterns retain>5/4. All physical reaches and cleanup outcomes are retained.",
+    "hypotheses": [
+      "Uniform physical bits; A=point_k(v)(1-G)/2; h=chi_u off A and chi_q on A; F=1 at gate0 and h times fixed two-bit mask at gate1",
+      "Original Q_h=(P_h+point_q)/2; Q_F(e,T)=(Q_h P_mask+point_empty)/4 at both gate frequencies; descendants use frequency marginals",
+      "Clean only exact zero-influence coordinates; retain surviving g2 seeds; never replace original mu,p,U by conditional parameters",
+      "Guarantee is for these complete cleanup endpoints, not arbitrary intermediate or interacting queries"
+    ],
+    "statement_sha256": "aa54978a16328428fc452a1bdb93990d433894f8cfdc0c553850878f451dae99",
+    "contributors": [
+      "A016"
+    ],
+    "proof_source": "REPORT.md; code/check.py; out/CHECK.json",
+    "proof_dependencies": [
+      "A020 stage7/A016 stage8 original Q and U interface, reconstructed in REPORT steps1,3",
+      "Direct seed spectrum identity; product CE; latent-mixture log-sum; no assumed general FEI inequality"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Query a second relevant bit in a surviving g2 while retaining original mu,p,U and zero-mean/constant children.",
+    "next_consumers": [
+      "A020",
+      "A019",
+      "A018",
+      "A094",
+      "B20"
+    ]
+  }
+]

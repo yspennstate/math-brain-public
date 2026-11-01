@@ -1,0 +1,71 @@
+== 1-2. hitting table, t_hit = 2k^2+k+1, E_x T_s and Var_x T_s, k = 3..14
+   k= 3  t_hit=22  ok
+   k= 4  t_hit=37  ok
+   k= 5  t_hit=56  ok
+   k= 6  t_hit=79  ok
+   k= 7  t_hit=106  ok
+   k= 8  t_hit=137  ok
+   k= 9  t_hit=172  ok
+   k=10  t_hit=211  ok
+   k=11  t_hit=254  ok
+   k=12  t_hit=301  ok
+   k=13  t_hit=352  ok
+   k=14  t_hit=407  ok
+== 3. leaf-completion clock V = T_s + Lambda_{k,r}: (4.6)-(4.7), k = 3..12
+   k= 3  E V and Var V match (4.6)-(4.7) from all four start types
+   k= 4  E V and Var V match (4.6)-(4.7) from all four start types
+   k= 5  E V and Var V match (4.6)-(4.7) from all four start types
+   k= 6  E V and Var V match (4.6)-(4.7) from all four start types
+   k= 7  E V and Var V match (4.6)-(4.7) from all four start types
+   k= 8  E V and Var V match (4.6)-(4.7) from all four start types
+   k= 9  E V and Var V match (4.6)-(4.7) from all four start types
+   k=10  E V and Var V match (4.6)-(4.7) from all four start types
+   k=11  E V and Var V match (4.6)-(4.7) from all four start types
+   k=12  E V and Var V match (4.6)-(4.7) from all four start types
+== 4. cover time itself: bracket (5.3) and residual, k = 3..12
+   k  start   E tau - m_{k,x}   (E tau - m)/(k log^2 k)   Var tau / (2k^4 log k + (2g+pi^2/6+chi)k^4)
+   3  s          7.5000     2.0713     0.8437
+   3  leaf       8.8936     2.4562     0.7687
+   3  g          3.3191     0.9167     0.8505
+   3  q          1.2286     0.3393     0.9192
+   4  s          7.8260     1.0180     0.7833
+   4  leaf       9.0135     1.1725     0.7090
+   4  g          3.0760     0.4001     0.8524
+   4  q          1.4926     0.1942     0.9014
+   5  s          8.0345     0.6204     0.8047
+   5  leaf       9.0740     0.7006     0.7424
+   5  g          2.8369     0.2190     0.8796
+   5  q          1.5375     0.1187     0.9114
+   6  s          8.1740     0.4243     0.8335
+   6  leaf       9.0994     0.4724     0.7820
+   6  g          2.6213     0.1361     0.9023
+   6  q          1.5108     0.0784     0.9236
+   7  s          8.2698     0.3120     0.8583
+   7  leaf       9.1039     0.3435     0.8153
+   7  g          2.4315     0.0917     0.9190
+   7  q          1.4585     0.0550     0.9339
+   8  s          8.3369     0.2410     0.8784
+   8  leaf       9.0958     0.2629     0.8417
+   8  g          2.2653     0.0655     0.9313
+   8  q          1.3979     0.0404     0.9421
+   9  s          8.3844     0.1930     0.8943
+   9  leaf       9.0805     0.2090     0.8626
+   9  g          2.1196     0.0488     0.9405
+   9  q          1.3365     0.0308     0.9486
+  10  s          8.4184     0.1588     0.9070
+  10  leaf       9.0611     0.1709     0.8793
+  10  g          1.9912     0.0376     0.9475
+  10  q          1.2771     0.0241     0.9538
+  11  s          8.4428     0.1335     0.9174
+  11  leaf       9.0396     0.1429     0.8928
+  11  g          1.8777     0.0297     0.9531
+  11  q          1.2211     0.0193     0.9580
+  12  s          8.4602     0.1142     0.9259
+  12  leaf       9.0172     0.1217     0.9039
+  12  g          1.7766     0.0240     0.9576
+  12  q          1.1690     0.0158     0.9615
+== 4b. lumping cross-checked against the full visited-set chain, k = 3, 4, 5
+   k=3: brute force == lumped for all four start types: s: E=827969/25740, Var=4113636677/12046320, leaf: E=23317/780, Var=14560439/46800, g: E=900533/25740, Var=273718762283/662547600, q: E=16331/468, Var=97788023/219024
+   k=4: brute force == lumped for all four start types: s: E=821252643/15595580, Var=349385301384323843/312714148546800, leaf: E=59199409/1199660, Var=65495248694965/64763285202, g: E=949916047/15595580, Var=11416029316960195/7959996508464, q: E=583205845/9357348, Var=3319507715025602629/2188999039827600
+   k=5: brute force == lumped for all four start types: s: E=44701225557228983/558059563786725, Var=89772331268475958658583777898891/29660045403221884668693926250, leaf: E=97167400825424/1282895548935, Var=3309226038968844475995632627/1184991112423609185336642, g: E=5946655462817372/62006618198525, Var=126486239800922033232030926324129/32782155445666293581188023750, q: E=172498411011457/1749403021275, Var=164492988893442057447031440347/41145524736930874490855625
+CLIQUE_STAR_EXACT_CHECKS_PASS

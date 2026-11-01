@@ -1,0 +1,42 @@
+[
+  {
+    "claim_id": "A053-TENSOR-CRITICAL-REPAIR-DENSITY",
+    "version": 1,
+    "exact_statement": "For K>=0 and a coordinate product F=product_j h_j on n bits, let G differ from F on R vertices. For any nonempty proper factor subproduct h_J on m bits let r be its exact vertex distance to the class H<=KI. If all complete original m-bit cofactors of G are K-certified, then R>=2^(n-m)r. More generally at least max(0,2^(n-m)-floor(R/r)) cofactors violate K when r>0. With rho=r/2^m and mu=min_{dist(g,h_J)<r}(H(g)-KI(g))>0, the full signed terminal deficit is at least mu-(mu+Km)min(1,delta/rho), delta=R/2^n. A genuine least-essential-dimension positive K-witness on its n essential coordinates therefore has delta>=max_J rho_K(h_J) for every comparison product. For the three-bit point defect at K2 rho=1/8, sharp for the original one-factor-terminal criterion via the XOR edit family; repaired factor fibres do not imply all proper descendants are certified.",
+    "hypotheses": [
+      "Uniform Boolean signs; normalized Walsh entropy in bits; physical influence",
+      "At least two nonempty disjoint factor blocks; retained J nonempty and proper",
+      "Critical corollary uses least ESSENTIAL dimension and a root represented on exactly its essential coordinates",
+      "For r>0 only: finite positive mu, all original physical terminal fibres retained"
+    ],
+    "statement_sha256": "f0b72c5fca306e1ed9fa60ee8543a299d597b9c010a3d2a34044a8f18117d98c",
+    "contributors": [
+      "A053"
+    ],
+    "proof_source": "PROOF.md Sections1--3; out/CHECKS.json; out/INDEPENDENT.json",
+    "proof_dependencies": [
+      "Finite disjoint physical-fibre counting; sign invariance; elementary H>=0,I<=m; tensor additivity only for stated optional corollary"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A053",
+        "kind": "author proof, separate exact arithmetic implementations and sharp scope counterguard",
+        "outcome": "85237 exact assertions PASS; independent-agent acceptance pending; HELD_NO_CERTIFICATE"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "No gap claimed in finite repair-density statement. No universal critical-source proximity theorem or high-K original-block funding including Pi is proved.",
+    "next_consumers": [
+      "A051",
+      "A052",
+      "A054",
+      "A055",
+      "A090",
+      "A094",
+      "B11",
+      "B20"
+    ]
+  }
+]

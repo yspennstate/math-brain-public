@@ -1,0 +1,127 @@
+{
+  "target_id": "P0043",
+  "date": "2026-10-10",
+  "exact_source_verified": true,
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "full_problem_solved_in_this_packet": false,
+  "exact_target": "Independent Bernoulli bond percolation on an infinite connected locally finite quasi-transitive graph G with p_c(G)<1 has no infinite cluster almost surely at p_c(G).",
+  "ranking": {
+    "date": "2026-09-07",
+    "tier": 5,
+    "status": "attempted_un",
+    "caveat": "Short reason omits the necessary p_c<1 restriction."
+  },
+  "original_ledger_records": [
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 46,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "quasitransitive_no_infinite_cluster_at_pc",
+        "historical_status": "source_says_open",
+        "locator": "Conjecture 8.15, printed p.285",
+        "problem_id": "P0043",
+        "recorded_at": "2026-09-06T16:41:32Z",
+        "result_status": "not_started",
+        "schema": "probability-problem.v1",
+        "source_id": "lyons_peres_20260819",
+        "statement": "If G is quasi-transitive and p_c(G)<1, is there almost surely no infinite Bernoulli cluster at p_c(G)?",
+        "statement_caveat": "Do not count each lattice dimension as a separate problem. Known nonamenable and high-dimensional cases do not settle the entire assertion.",
+        "title": "Absence of infinite clusters at critical percolation",
+        "verification": "unreviewed"
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 143,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "quasitransitive_no_infinite_cluster_at_pc",
+        "historical_status": "source_says_open",
+        "locator": "Conjecture 8.15, printed p.285",
+        "problem_id": "P0043",
+        "recorded_at": "2026-09-06T19:17:12Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "lyons_peres_20260819",
+        "statement": "If G is quasi-transitive and p_c(G)<1, is there almost surely no infinite Bernoulli cluster at p_c(G)?",
+        "statement_caveat": "Do not count each lattice dimension as a separate problem. Known nonamenable and high-dimensional cases do not settle the entire assertion.",
+        "title": "Absence of infinite clusters at critical percolation",
+        "verification": "author_checked_limited_argument"
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 43,
+      "record": {
+        "attempt_id": "P0043-A001",
+        "depth": "first_pass",
+        "full_problem_solved": false,
+        "independent_check": "The strict inequality can also be obtained from the binomial generating function lying strictly above its tangent at one. This excludes the deterministic b=1 exception, whose p_c is one.",
+        "independent_review": "none",
+        "method": "Critical branching-process extinction",
+        "novelty": "not_claimed",
+        "obstruction": "Critical clusters in a general quasi-transitive graph are not independent branching trees. Their loop dependence is not captured by this fixed-point proof.",
+        "problem_id": "P0043",
+        "recorded_at": "2026-09-06T17:47:59Z",
+        "result": "For the regular tree at p=1/b, an infinite descendant cluster would have survival probability x satisfying x=1-(1-px)^b. For b>=2 strict concavity gives 1-(1-x/b)^b<x for every x>0, so only x=0 is possible.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_limited_argument"
+      }
+    }
+  ],
+  "primary_sources": [
+    {
+      "source": "Benjamini--Schramm (1996)",
+      "locator": "Conjecture 4, printed p.75",
+      "url": "https://www.kurims.kyoto-u.ac.jp/EMIS/journals/EJP-ECP/article/download/978/1171.pdf",
+      "verified": "Exact conjecture and p_c<1 restriction; original exposition uses site percolation and discusses bond transfer.",
+      "quote": "Critical percolation dies in every almost transitive graph (assuming pc < 1)."
+    },
+    {
+      "source": "Hutchcroft (2016)",
+      "locator": "Conjecture 1.1 and Theorem 1.2",
+      "url": "https://comptes-rendus.academie-sciences.fr/mathematique/item/10.1016/j.crma.2016.07.013.pdf",
+      "verified": "Precise bond target with connectedness and local finiteness; exponential-growth subclass is proved.",
+      "quote": "has no infinite clusters almost surely."
+    },
+    {
+      "source": "Cerf, arXiv:2608.23661",
+      "locator": "Abstract, submitted 2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23661",
+      "verified": "Partial result explicitly for Bernoulli site percolation on Z^d; does not by itself certify a bond extension."
+    },
+    {
+      "source": "OpenAI math primary scope note 213",
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/docs/213.md",
+      "paper_date": "2026-09-24",
+      "verified": "Source claims the entire bond target, including multiplicities, and links comparator statements.",
+      "proof_audit": "NOT PERFORMED here; w434 is inspecting the associated paper. No kernel, theorem-type, or trusted-axiom receipt is claimed."
+    }
+  ],
+  "owner_status_check": {
+    "scope": "Named P0043/C0084 intake rows and prior attempts; Big Open project README identifies a different p_c<p_2-to-2 target; cited solved register targeted grep.",
+    "complete_worldwide_or_owner_search": false
+  },
+  "canonical_store_check": {
+    "population": "Read-only selected P0043/C0084 cards in INPUT_RECEIPT.json",
+    "math_research_brain_path": "~/math-research-brain",
+    "additional_store_receipt": "CANONICAL_RECEIPT.json if present; no whole-store export read"
+  },
+  "independent_review": {
+    "w433": "Statement-first msg-35afdcf200 delivered; independent analysis predated proof exchange. Peer reports L02-L06 survive as scoped claims and supplies tightening 12 in place of 27; w432 independently rederived it as L08.",
+    "w434": "Pending packet review"
+  },
+  "formal_check": {
+    "run": false,
+    "theorem": null,
+    "assumptions": null,
+    "trusted_axioms": null,
+    "receipt": null
+  },
+  "single_remaining_proof_gap": "G01: symmetry-dependent vanishing of the entire critical-window pivotal mass, including centres escaping in the mass-transport representation."
+}

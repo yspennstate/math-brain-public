@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "ids_are": "package-local; not native Brain claim IDs",
+  "claims": [
+    {
+      "id": "LOCAL-T384-20261024-01",
+      "row": "T384",
+      "status": "internally_proved_and_reviewed",
+      "title": "All-label scalar stable ReLU training limit and nonfreezing",
+      "statement": "For standard iid symmetric alpha-stable weights, 0<alpha<2, one input x=1, no biases, continuous both-layer squared-loss gradient flow at rate (log m)^(2/alpha), normalized output (m log m)^(-1/alpha), the output path converges in C[0,T] to y-(y-F)exp(-Qt). F,Q,D are mutually independent with stated stable transforms; initial full kernel tends to Q+D and positive-time kernel to Q, D>0 a.s.",
+      "proofs": [
+        "research/T384_SCALAR_LIMIT.md",
+        "research/T384_joint_limit.md",
+        "research/T384_scalar_dynamics.md"
+      ],
+      "reviews": [
+        "reviews/T384_joint_review.md",
+        "reviews/T384_dynamics_review.md",
+        "reviews/T384_final_statement_review.md"
+      ],
+      "limits": "Scalar fixed-time theorem; no assertion of differing infinite-training-time predictions; no general deep-row closure."
+    },
+    {
+      "id": "LOCAL-T384-20261024-02",
+      "row": "T384",
+      "status": "internally_proved_and_reviewed",
+      "title": "Marked-Poisson switching boundary layer",
+      "statement": "At time s/(log m)^(1/alpha), the scalar kernel converges in J1 on bounded s intervals to C+integral z^2 1{u>0,u+(y-F)zs>0} N(dz,du), with independent marked PPP, F and C.",
+      "proofs": [
+        "research/T384_marked_PPP.md",
+        "research/T384_boundary_layer.md"
+      ],
+      "reviews": [
+        "reviews/T384_boundary_review.md"
+      ],
+      "limits": "Scalar, continuous flow; finite microscopic horizon. No interchange of microscopic s to infinity with width needed for the separate macroscopic theorem."
+    },
+    {
+      "id": "LOCAL-T384-20261024-03",
+      "row": "T384",
+      "status": "internally_proved_and_reviewed",
+      "title": "Fixed standard-coordinate multi-input training limit",
+      "statement": "For fixed k=d and x_j=e_j in the iid stable coordinate basis, output paths converge to y_j-(y_j-F_j)exp(-Q_jt), and the kernel is asymptotically diagonal after its initial layer. The exact conditional Laplace transform of Q given F is supplied; the Q vector generally depends on the initial residual sign partition.",
+      "proofs": [
+        "research/T384_COORDINATE_LIMIT.md",
+        "research/T384_orthogonal_initialization.md",
+        "research/T384_orthogonal_dynamics.md"
+      ],
+      "reviews": [
+        "reviews/T384_orthogonal_probability_review.md",
+        "reviews/T384_orthogonal_dynamics_review.md",
+        "reviews/T384_orthogonal_initialization_review.md"
+      ],
+      "limits": "Standard coordinate inputs only; not arbitrary orthogonal rotations, nonorthogonal inputs, deep networks or discrete steps. Explicit absorbing flow selection."
+    },
+    {
+      "id": "LOCAL-T384-20261024-04",
+      "row": "T384",
+      "status": "internally_proved_and_reviewed",
+      "title": "Annealed fractional-loss decay",
+      "statement": "For scalar input and 0<p<alpha, expected absolute residual to power p converges uniformly on bounded time intervals to E|y-F|^p exp[-(3c_alpha/2)Gamma(1-alpha/2)(pt)^(alpha/2)]. The limiting expected squared loss is infinite for finite time.",
+      "proofs": [
+        "research/T384_fractional_loss.md"
+      ],
+      "reviews": [
+        "reviews/T384_fractional_review.md"
+      ],
+      "limits": "Fractional moments only; no finite-population-MSE or m/time limit interchange claim."
+    },
+    {
+      "id": "LOCAL-T384-20261024-05",
+      "row": "T384",
+      "status": "numerical_validation_not_proof",
+      "title": "Exact gate-event flow solver and 48-path independent audit",
+      "proofs": [
+        "research/T384_event_clock_validation.md",
+        "code/t384_event_clock.py",
+        "code/t384_validate_solver.py",
+        "code/t384_solver_root_readback.json"
+      ],
+      "limits": "alpha=1.5 finite widths do not resolve the predicted kernel limit; negative evidence retained."
+    },
+    {
+      "id": "LOCAL-T262-20261024-01",
+      "row": "T262",
+      "status": "internally_proved_and_reviewed_scoped",
+      "title": "Clipped compact-state inverse-angle generator",
+      "proofs": [
+        "research/T262_generator.md"
+      ],
+      "reviews": [
+        "reviews/T262_review.md"
+      ],
+      "limits": "Entrance, containment, unclipped long-time process and joint norm diffusion remain open."
+    },
+    {
+      "id": "LOCAL-T084-20261024-01",
+      "row": "T084",
+      "status": "internally_derived_not_independently_reviewed",
+      "title": "Small-fugacity Rayleigh endpoint expansion",
+      "proofs": [
+        "agents/b01.md"
+      ],
+      "limits": "Graph-dependent small-fugacity window only; full conjecture open."
+    },
+    {
+      "id": "LOCAL-T268-20261024-01",
+      "row": "T268",
+      "status": "internally_derived_novelty_uncertain",
+      "title": "Analytic activation spectral-product obstruction and subcritical layer-norm bound",
+      "proofs": [
+        "agents/b02.md"
+      ],
+      "limits": "Original ReLU obstruction already known; separate product versus layerwise budgets; related 2025 results require priority review."
+    },
+    {
+      "id": "LOCAL-T364-20261024-01",
+      "row": "T364",
+      "status": "internally_derived_finite_certificate",
+      "title": "Finite robust off-component quartic maximum",
+      "proofs": [
+        "agents/b03.md"
+      ],
+      "limits": "Positive probability at each fixed dimension, not asymptotic high probability."
+    },
+    {
+      "id": "LOCAL-T336-20261024-01",
+      "row": "T336",
+      "status": "candidate_requires_independent_review",
+      "title": "Finite hierarchical RBF-mixture encoding/evidence/NLL-ERM composition",
+      "proofs": [
+        "agents/b04.md"
+      ],
+      "limits": "Builds on prior 30-agent package; not a new scalar finite-rank closure; no general hierarchical process or SGD guarantee."
+    }
+  ]
+}
+

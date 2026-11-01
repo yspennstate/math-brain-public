@@ -1,0 +1,42 @@
+[
+  {
+    "claim_id": "A044-ALL-PROFILE-TRUNCATION-BENT-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer r>=1, the actual Boolean f_r(x)=(-1)^(sum_{j=1}^r x_(2j-1)x_(2j)) on 2r independent fair bits has P(S)=4^(-r), H_bits=2r, I=r and Delta=r-1+4^(-r). For integer m>=0, applying A043 scalar reserve truncation phi_m separately to every actual integer mixed profile with |mean|<=1, retaining exact h at |mean|>1, has error D_(r,m)=sum_{k=1}^r binom(2r,k)4^(1-k)(phi(t_k)-phi_m(t_k)), t_k=2^(k-1-r). This error is at least 2^(-m-1)(9/8)^r/((m+1)(m+2))-2^(-m-r)/((m+1)(m+2)), and for fixed m is asymptotic to 4(9/8)^r/(m+1). Hence no dimension-independent K_m bounds D_(r,m) by K_m Delta. If r is a positive multiple of four and m+1<=2^(r/4-1), D_(r,m)>=[(9/8)^r/18-2^(-r-1)]/(m+1). The complete uniform reference Q=P instead has ordinary KL zero and full cross entropy 2I. This refutes only the all-profile approximation extension, not A043 singleton theorem or FEI.",
+    "hypotheses": [
+      "Physical independent fair bits; no repeated wires.",
+      "r is an integer >=1 and m is an integer >=0.",
+      "h(t)=t^2 ln(1/t^2), continuous zero at t=0; phi=2t(1-t)-h(t); phi_m=t(1-t)sum_{j=1}^m 2(1-t)^j/[j(j+1)] on [0,1].",
+      "All cofactor profiles and packets come from the SAME Boolean function.",
+      "Growing-order clause requires r divisible by four and m+1<=2^(r/4-1).",
+      "Natural units for residuals and approximation error; H_bits explicitly uses log base two."
+    ],
+    "statement_sha256": "75ecb79b377e491b6a62f6c08fc25c5c3decc0c1b3c2a40b44109e75fafcc088",
+    "contributors": [
+      "A044/fleet03"
+    ],
+    "proof_source": {
+      "run": "20261022T223250Z-fleet03-A044-non-symmetric-gate-classes",
+      "path": "PROOF.md",
+      "sha256": "54304c42a8e72c617ee060ffcee191ebb9647ed645b1793ab407e510793d1468"
+    },
+    "proof_dependencies": [
+      "Direct two-bit Walsh tensorization, physical mixed-profile Parseval, positive log series and finite tail telescope; reconstructed in PROOF.md."
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_WITH_EXACT_FINITE_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unsupported dimension-independent error extension of fixed-order singleton hierarchy to all mixed profiles, even with exact zero-mean refunds and all negative higher-mean terms retained."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A043",
+      "A042",
+      "A045",
+      "A090",
+      "A091",
+      "A094"
+    ]
+  }
+]

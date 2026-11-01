@@ -1,0 +1,179 @@
+\section{The product least singular value}\label{app:product}
+
+This appendix proves the bracket of \Cref{thm:product} and explains the sharp constant. Recall
+$M_N^{(k)}(\alpha)=\min_{S_0,\dots,S_k}\smin(P_{S_k}A_k\cdots P_{S_1}A_1P_{S_0})$ with all supports of
+size $n=\lfloor\alpha N\rfloor$, and set $\rho_k=-N^{-1}\log M_N^{(k)}(\alpha)$. \Cref{thm:product}
+asserts $2H(\alpha)/\dF\le\liminf\rho_k\le\limsup\rho_k\le(k+1)H(\alpha)/\dF$, with the upper end the
+sharp value. The two ends are \Cref{prop:prod-upper,prop:prod-lower}; the sharp value and the
+mechanism are \Cref{rem:achieve}.
+
+\subsection{The union bound: $\rho_k\le(k+1)H/\dF$}
+\begin{proposition}\label{prop:prod-upper}
+For every $\eps>0$, $\PP\bigl(M_N^{(k)}(\alpha)\le e^{-((k+1)H(\alpha)/\dF+\eps)N}\bigr)\to0$; hence
+$\limsup_N\rho_k\le(k+1)H(\alpha)/\dF$.
+\end{proposition}
+\begin{proof}
+Fix a support tuple $(S_0,\dots,S_k)$. The compressed product $M=F_k\cdots F_1$, with
+$F_j=A_j[S_j,S_{j-1}]$ independent $n\times n$ Gaussian blocks, satisfies $\smin(M)\ge\prod_{j=1}^k\smin(F_j)$.
+Writing $X_j=-\log\smin(F_j)\ge0$, the hard-edge tail \eqref{eq:hardedge} gives
+$\PP(X_j\ge x)=\PP(\smin(F_j)\le e^{-x})\le C_\F(\sqrt n\,e^{-x})^{\dF}=C_\F n^{\dF/2}e^{-\dF x}$, so each
+$X_j$ has an exponential upper tail of rate $\dF$ and prefactor $a=C_\F n^{\dF/2}$. The $X_j$ are
+independent, so the sum $\Sigma=\sum_{j=1}^kX_j$ has, by the standard convolution bound for exponential
+tails,
+\[
+  \PP(\Sigma\ge L)\ \le\ C_k\,a^k\,\frac{L^{k-1}}{(k-1)!}\,e^{-\dF L}\qquad(L\ge k\log a),
+\]
+by stochastic domination of each $X_j$ by a shifted exponential $\tfrac{\log a}{\dF}+\mathrm{Exp}(\dF)$
+and the Gamma tail of their sum; this is the only range used, since $L=\Theta(N)$ below.
+With $L=-\log t$ and $t=e^{-((k+1)H/\dF+\eps)N}$, this is $e^{o(N)}t^{\dF}$ (since $a^kL^{k-1}=e^{o(N)}$ for
+fixed $k$, $n\le N$, $L=O(N)$), so $\PP(\smin(M)\le t)\le e^{o(N)}t^{\dF}$. A union bound over the
+$\binom Nn^{k+1}=e^{(k+1)H(\alpha)N+o(N)}$ tuples gives
+$\PP(M_N^{(k)}\le t)\le e^{(k+1)H(\alpha)N+o(N)}t^{\dF}=e^{-\dF\eps N+o(N)}\to0$.
+\end{proof}
+
+\subsection{A two-sided-singular factor: $\rho_k\ge 2H/\dF$}
+\begin{proposition}\label{prop:prod-lower}
+For every $\eps>0$, $\PP\bigl(M_N^{(k)}(\alpha)>e^{-(2H(\alpha)/\dF-\eps)N}\bigr)\to0$; hence
+$\liminf_N\rho_k\ge2H(\alpha)/\dF$.
+\end{proposition}
+\begin{proof}
+By \Cref{thm:twosided} applied to $A_1$, w.h.p.\ there are supports $S_0,S_1$ and a unit vector
+$u\in\F^{S_0}$ (the least right singular vector of $F_1=A_1[S_1,S_0]$) with
+$\|F_1u\|=\smin(F_1)\le e^{-(2H(\alpha)/\dF-\eps/2)N}$. Extend to any supports $S_2,\dots,S_k$. Then, with
+$F_j=A_j[S_j,S_{j-1}]$,
+\[
+  M_N^{(k)}(\alpha)\ \le\ \smin(F_k\cdots F_1)\ \le\ \|F_k\cdots F_1u\|\ \le\
+  \Bigl(\prod_{j=2}^k\|F_j\|_\op\Bigr)\|F_1u\|.
+\]
+Each $\|F_j\|_\op\le 2\sqrt n(1+o(1))$ w.h.p.\ by Bai--Yin (choosing, say, $S_j=[n]$; here the entries
+are standard, so the edge is at scale $\sqrt n$), so the product of the $k-1$ operator norms is at most
+$(2\sqrt n)^{k-1}(1+o(1))=e^{o(N)}$ for fixed $k$, and
+$M_N^{(k)}\le e^{-(2H(\alpha)/\dF-\eps/2)N}e^{o(N)}\le e^{-(2H(\alpha)/\dF-\eps)N}$ w.h.p. The rate is
+insensitive to the entry normalization, since scaling $A_j$ by a constant shifts $-N^{-1}\log\smin$ by
+$o(1)$.
+\end{proof}
+
+This already improves the lower end of the bracket recorded in \cite{shmaloProducts} from $H(\alpha)/\dF$
+(one one-sided-singular factor) to $2H(\alpha)/\dF$ (one two-sided-singular factor): the two-sided
+construction of \Cref{app:twosided} is strictly better than making a single factor one-sided singular.
+
+\subsection{The sharp constant and why the cascade is not enough}
+\begin{remark}[Achievability of $(k+1)H/\dF$]\label{rem:achieve}
+The numerics of \Cref{sec:numerics} determine $\rho_k=(k+1)H(\alpha)/\dF$: at $k=2$, $N=8$ the exhaustive
+minimum over all support triples has rate $2.087$, on the predicted $3H(1/2)=2.079$, and the ratio
+$\rho_2/\rho_1=1.53$ matches the value $1.5$ that $(k+1)H/\dF$ requires and excludes the $2H/\dF$ guess of
+\cite{shmaloProducts} (ratio $1$). The following records what is and is not proved about the
+achievability of this value.
+
+The upper end $(k+1)H/\dF$ is a first-moment threshold: there are $e^{(k+1)H(\alpha)N}$ support tuples, and
+a single fixed product $F_k\cdots F_1$, being a product of $k$ independent square Gaussian blocks, has the
+product hard edge $\PP(\smin\le t)=t^{\dF+o(1)}$ (the extra factors contribute logarithms, not a power;
+Akemann--Ipsen--Kieburg, Forrester), so the expected number of tuples with $\smin\le
+e^{-((k+1)H/\dF-\eps)N}$ is $e^{(k+1)H(\alpha)N}e^{-((k+1)H(\alpha)-\dF\eps)N}=e^{\dF\eps N}\to\infty$. The
+mean diverges below the threshold, so a matching second moment gives achievability.
+
+The construction that realizes it is a cascade, but not the naive one. Suppose $S_0,\dots,S_{k-1}$ are
+already chosen so that the partial product $Q=F_{k-1}\cdots F_1$ (an $n\times n$ matrix on rows $S_{k-1}$,
+columns $S_0$) has $\smin(Q)\le e^{-(kH(\alpha)/\dF-\eps)N}$, with right singular vector $v\in\F^{S_0}$ (so
+$\|Qv\|=\smin(Q)$). Adjoin the last factor by choosing the rows $S_k$: the composite
+$M(S_k)=A_k[S_k,S_{k-1}]\,Q$ has rows $m_i=a_i^\top Q$ with $a_i=A_k[i,S_{k-1}]$ i.i.d.\ standard Gaussian,
+so $M(\,\cdot\,)$ is the row-selection of an $N\times n$ matrix whose i.i.d.\ rows have covariance
+$\Sigma=Q^\top Q$ (acting on $\F^{S_0}$). Minimizing $\smin(M(S_k))$ over row supports is therefore the
+one-sided extremal least singular value problem of \cite{shmaloBAMS} for an \emph{anisotropic} Gaussian
+row ensemble, and the marked-row construction there makes $\smin$ small at the one-sided rate
+$H(\alpha)/\dF$ times the scale $\sqrt{\lambda_{\min}(\Sigma)}=\smin(Q)$ of the covariance's smallest
+eigenvalue: $\Sigma$ inherits the tiny eigenvalue $\smin(Q)^2$ along $v$, and the row selection adds its
+own $H(\alpha)/\dF$ of entropy on top. This yields $\smin(M(S_k))\le e^{-((k+1)H(\alpha)/\dF-\eps')N}$, one
+more $H(\alpha)/\dF$ per layer,
+telescoping from the two-sided base $\rho_1=2H(\alpha)/\dF$ to $\rho_k=(k+1)H(\alpha)/\dF$. The naive
+cascade that fixes the carried direction $\eta$ and steers it --- minimizing $\|P_{S_k}A_k\eta\|$ over
+$S_k$ --- gains only the $O(1)$ factor $\sqrt{\kcheck(\alpha)}$ and reaches merely $2H(\alpha)/\dF$; the
+gain comes instead from re-optimizing the null direction of the whole composite, which the anisotropic
+one-sided law does.
+
+The first-moment side of this cascade step is rigorous, with no condition on $\Sigma$; only the
+second moment remains. This is the content of \Cref{prop:aniso-mean} below, which shows that the
+anisotropic marked count diverges in mean below the threshold $(k+1)H(\alpha)/\dF$. What obstructs a
+full proof is the covariance $\Sigma=Q^\top Q$ being \emph{exponentially} ill-conditioned --- its
+condition number is $\smax(Q)^2/\smin(Q)^2=e^{\Theta(N)}$ --- so the second-moment concentration cannot
+be quoted from the subexponential-covariance regime of \cite{shmaloBAMS}, and must be re-run with the
+configuration-dependent prefactor identified in \Cref{prop:aniso-mean}. The numerics of
+\Cref{sec:numerics} confirm the value (the cascade reaches $(k+1)H/\dF$; at $k=2$, $N=8$ the greedy
+cascade rate is $1.95$, approaching $3H=2.08$ from below while the exhaustive minimum sits on $3H$), and
+the anisotropic scaling itself is checked directly in \texttt{verify\_anisotropic\_onesided.py}. The
+bracket of \Cref{thm:product} is what is proved; the sharp value is the numerically determined answer
+inside it.
+\end{remark}
+
+\begin{proposition}[First moment of the anisotropic cascade step]\label{prop:aniso-mean}
+Let $M$ be $N\times n$ with i.i.d.\ rows $m_i\sim N(0,\Sigma)$, $\Sigma\succ0$ with least eigenvalue
+$\lambda_{\min}$, and let $\mathcal M\subseteq[N]$ be a marked set with $|\mathcal M|=\lceil\sqrt N\rceil$.
+For a configuration $c=(R,y)$ with $R\subseteq[N]\setminus\mathcal M$, $|R|=n-1$, and $y\in\mathcal M$, let
+$u_R$ be a unit normal to $\{m_i:i\in R\}$ and $E_c=\{|\langle m_y,u_R\rangle|\le t\}$; set
+$W=\sum_c\one_{E_c}$. Then:
+\begin{enumerate}
+\item[(i)] $W>0$ implies $\min_{|T|=n}\smin(M[T,\cdot])\le t$;
+\item[(ii)] writing $\nu$ for the (Haar-distributed) unit normal to $n-1$ i.i.d.\ standard Gaussian
+vectors, $\|\Sigma^{1/2}u_R\|=1/\|\Sigma^{-1/2}\nu\|$ in law, and $\PP(E_c\mid\{m_i\}_{i\in R})=p\bigl(t\,\|\Sigma^{-1/2}\nu\|\bigr)$
+exactly, so
+\[
+  \EE W=\binom{N}{n-1}|\mathcal M|\;\EE_\nu\!\bigl[p\bigl(t\,\|\Sigma^{-1/2}\nu\|\bigr)\bigr];
+\]
+\item[(iii)] consequently $\EE W\ \ge\ c\,\binom{N}{n-1}|\mathcal M|\;\dfrac{t}{\sqrt{n\,\lambda_{\min}}}$
+for a constant $c=c(\F)>0$ and all $t\le\sqrt{n\lambda_{\min}}$, so $\EE W\to\infty$ whenever
+$t\ge\sqrt{n\lambda_{\min}}\,e^{-(H(\alpha)/\dF-\eps)N}$.
+\end{enumerate}
+Applied along the cascade with $\Sigma=Q^\top Q$ and $\lambda_{\min}=\smin(Q)^2=e^{-(2kH(\alpha)/\dF-o(1))N}$,
+part (iii) gives $\EE W\to\infty$ for every $t\ge e^{-((k+1)H(\alpha)/\dF-\eps)N}$: the first moment
+diverges below the sharp threshold.
+\end{proposition}
+
+\begin{proof}
+(i) On $E_c$ the row set $T=R\cup\{y\}$ has $|T|=n$, and $\|M[T,\cdot]\,u_R\|^2=\sum_{i\in T}|\langle m_i,u_R\rangle|^2=|\langle m_y,u_R\rangle|^2\le t^2$
+since $\langle m_i,u_R\rangle=0$ for $i\in R$; as $u_R$ is a unit vector, $\smin(M[T,\cdot])\le t$.
+
+(ii) Write $m_i=\Sigma^{1/2}g_i$ with $g_i$ i.i.d.\ standard Gaussian. The condition $m_i\perp u_R$ for
+$i\in R$ reads $\langle g_i,\Sigma^{1/2}u_R\rangle=0$, so $\Sigma^{1/2}u_R$ is parallel to the unit normal
+$\nu$ of $\{g_i:i\in R\}$, which is Haar because the $g_i$ are isotropic. Thus $\Sigma^{1/2}u_R=c\nu$ with
+$c=\|\Sigma^{1/2}u_R\|$, and $u_R=c\,\Sigma^{-1/2}\nu$; unit norm forces $c=1/\|\Sigma^{-1/2}\nu\|$. Since
+$y\notin R$, $g_y$ is independent of $u_R$, and $\langle m_y,u_R\rangle=\langle g_y,\Sigma^{1/2}u_R\rangle=c\langle g_y,\nu\rangle$
+is $N(0,c^2)$ given the defining rows, so $\PP(E_c\mid\{m_i\}_{i\in R})=p(t/c)=p(t\|\Sigma^{-1/2}\nu\|)$.
+Taking expectations and multiplying by the number $\binom{N}{n-1}|\mathcal M|$ of configurations gives the
+stated mean.
+
+(iii) Diagonalize $\Sigma=\sum_j\lambda_j w_jw_j^\top$ with $\lambda_{\min}=\lambda_n$ the least eigenvalue
+and eigenvector $w_n$. Then $\|\Sigma^{-1/2}\nu\|^2=\sum_j\lambda_j^{-1}\langle\nu,w_j\rangle^2\ge\lambda_n^{-1}\langle\nu,w_n\rangle^2$,
+so $\|\Sigma^{-1/2}\nu\|\ge\lambda_n^{-1/2}|\langle\nu,w_n\rangle|$. Using $p(s)\ge c_\F\min(s,1)$ (valid for
+every standard $\F$-Gaussian small-ball probability) and $t\le\sqrt{n\lambda_n}$,
+\[
+  \EE_\nu\bigl[p(t\|\Sigma^{-1/2}\nu\|)\bigr]\ \ge\ c_\F\,\EE_\nu\bigl[\min\bigl(t\lambda_n^{-1/2}|\langle\nu,w_n\rangle|,\,1\bigr)\bigr]\ \ge\ c_\F'\,t\,\lambda_n^{-1/2}\,\EE_\nu|\langle\nu,w_n\rangle|,
+\]
+where the last step keeps only the part of the range where the minimum equals its first argument, which
+has $\Theta(1)$ probability. For Haar $\nu$ on $\Sph^{n-1}$, $\EE_\nu|\langle\nu,w_n\rangle|=\Theta(1/\sqrt n)$,
+so $\EE_\nu[p(t\|\Sigma^{-1/2}\nu\|)]\ge c''\,t/\sqrt{n\lambda_n}$, and (iii) follows from (ii) with
+$\binom{N}{n-1}|\mathcal M|=e^{H(\alpha)N+o(N)}$.
+\end{proof}
+
+\begin{remark}[The remaining second moment]\label{rem:aniso-second}
+By \Cref{prop:aniso-mean}(i) and the second-moment method, achievability of the cascade step reduces to
+$\Var(W)=o((\EE W)^2)$. Two configurations $c,c'$ with distinct marked rows are, unlike the isotropic
+case of \Cref{app:twosided}, no longer exactly independent: the conditional probability
+$p(t\|\Sigma^{-1/2}\nu\|)$ depends on the configuration through its normal $\nu$, so
+$\PP(E_c\cap E_{c'})=\EE[\one_{E_{c'}}p(t\|\Sigma^{-1/2}\nu_c\|)]$ carries a covariance between the
+prefactor $\|\Sigma^{-1/2}\nu_c\|$ and the event $E_{c'}$ whenever the defining row sets $R,R'$ overlap.
+This covariance is the sole obstruction: it vanishes for disjoint $R,R'$ and is otherwise controlled by
+the overlap of the two Haar normals, exactly the quantity the two-direction estimate
+\Cref{lem:twoslab} bounds --- the anisotropy enters only through the scalar prefactor, since
+$\Sigma^{1/2}u_R/\|\Sigma^{1/2}u_R\|=\nu$ is Haar regardless of $\Sigma$. Carrying the overlap-region
+analysis of \Cref{app:twosided} through with this varying prefactor is the remaining step, and the one
+this paper leaves open.
+\end{remark}
+
+\begin{remark}[What the network application needs]\label{rem:app-needs}
+The certification-gap theorem (\Cref{thm:cert-gap}) uses only the \emph{proved} bracket: a pattern-uniform
+certificate must tolerate the worst-conditioned pattern, whose least singular value is at most
+$e^{-2H(\alpha)N/\dF}$ by the proved achievability of \Cref{prop:prod-lower} and at most
+$e^{-(k+1)H(\alpha)N/\dF}$ at the sharp (numerically determined) rate. So the gap is proved to be at least
+$e^{2H(\alpha)N/\dF}$ and equals $e^{(k+1)H(\alpha)N/\dF}$ at the sharp rate; the qualitative conclusion ---
+that pattern-uniform certificates degrade exponentially in $N$ --- is unconditional.
+\end{remark}

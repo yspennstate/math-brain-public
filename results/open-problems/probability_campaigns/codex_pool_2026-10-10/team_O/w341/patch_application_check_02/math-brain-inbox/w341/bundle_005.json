@@ -1,0 +1,98 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w341",
+  "bundle_slug": "w341-p0456-checked-results-20261010",
+  "entries": [
+    {
+      "key": "k-one-matching-isolation-formula",
+      "namespace": "probability.randomgraphs",
+      "logical_name": "p0456-k-one-matching-isolation-formula",
+      "kind": "lemma",
+      "title": "Bilateral k=1 graph: exact isolation probability [audit pending w347]",
+      "statement": "Give each edge of K_n one independent identically distributed continuous weight and retain it if both endpoints rank it among their single lowest incident weights. For n>=2 the graph is a matching, a fixed edge is present with probability 1/(2n-3), and a fixed vertex is isolated with probability (n-2)/(2n-3). The expected number of isolates is n(n-2)/(2n-3); connectivity is impossible for n>2.",
+      "proof_text": "# P0456: finite bilateral-preference calibration\n\nStatus: proof of boundary cases and a finite obstruction, pending w347. The cached primary source is Hossein Dabirian and Vijay Subramanian, *Connectivity of a Family of Bilateral Preference Random Graphs* (2025 cached version), introductory Open Problems, lines 103-120. It proves a first-order logarithmic threshold but leaves a smaller window. The model assigns one shared independent continuous weight per undirected edge, and both endpoints must rank an edge among their k lowest incident weights. This is not a model with independent preference orders at different vertices.\n\nFor k=1 and n>=2, the resulting graph is a matching. A specified edge {i,j} is mutually preferred exactly when its weight is the minimum among the 2n-3 edges incident to either endpoint. Its probability is 1/(2n-3), by exchangeability of independent continuous weights. Events for different mutually preferred neighbors of a fixed i are disjoint. Thus P(deg(i)=1)=(n-1)/(2n-3), P(i isolated)=(n-2)/(2n-3), and E[number isolated]=n(n-2)/(2n-3). Connectivity is impossible for n>2.\n\nAbsence of isolated vertices is not a deterministic characterization of connectivity. For n=6,k=2, give all six internal edges of two disjoint triples lower weights than all nine cross edges. Each vertex chooses its two triple neighbors, so the graph is two triangles and has minimum degree two. This ordering event has probability 1/binomial(15,6)=1/5005 under independent continuous weights. More generally two (k+1)-cliques give the same finite obstruction for n=2(k+1). The example does not prove that nontrivial components survive in the asymptotic fine window; such a claim would require its own probability estimate.\n\nExhaustive checks evaluated 2,173 (edge ordering,k) cases for n=2,3,4. At n=4,k=1 the isolated expectation is 8/5 and the probability of having no isolates is 1/5, while connectivity probability is zero. At n=4,k=2 the isolated expectation is 4/15 and connectivity probability is 11/15. The exact six-vertex two-triangle example is saved separately. The previous mean-matching route remains invalid: a central mean/CLT calculation does not control the isolation far tail or small components.\n\nAudit the shared-weight assumption, incident-edge count 2n-3, disjointness of root matching events and the distinction between a finite obstruction and an asymptotic one. No window width or limiting connectivity probability is claimed.\n",
+      "assumptions": [
+        "n>=2",
+        "one shared i.i.d. continuous weight per undirected edge",
+        "k=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:p0456-k-one-matching-isolation-formula",
+        "url": "file:///~/brain_workers/w341/proofs/P0456_finite_calibration.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "no-isolates-finite-disconnection-obstruction",
+      "namespace": "probability.randomgraphs",
+      "logical_name": "p0456-no-isolates-finite-disconnection-obstruction",
+      "kind": "lemma",
+      "title": "No isolates need not imply bilateral-preference connectivity [audit pending w347]",
+      "statement": "In the same shared-weight bilateral model with n=6 and k=2, the event that all six edges inside two vertex triples precede all nine cross edges produces two disjoint triangles. It has probability 1/binomial(15,6)=1/5005, yet minimum degree is two. Thus absence of isolates is not a deterministic connectivity criterion. This finite event does not settle the asymptotic fine window.",
+      "proof_text": "# P0456: finite bilateral-preference calibration\n\nStatus: proof of boundary cases and a finite obstruction, pending w347. The cached primary source is Hossein Dabirian and Vijay Subramanian, *Connectivity of a Family of Bilateral Preference Random Graphs* (2025 cached version), introductory Open Problems, lines 103-120. It proves a first-order logarithmic threshold but leaves a smaller window. The model assigns one shared independent continuous weight per undirected edge, and both endpoints must rank an edge among their k lowest incident weights. This is not a model with independent preference orders at different vertices.\n\nFor k=1 and n>=2, the resulting graph is a matching. A specified edge {i,j} is mutually preferred exactly when its weight is the minimum among the 2n-3 edges incident to either endpoint. Its probability is 1/(2n-3), by exchangeability of independent continuous weights. Events for different mutually preferred neighbors of a fixed i are disjoint. Thus P(deg(i)=1)=(n-1)/(2n-3), P(i isolated)=(n-2)/(2n-3), and E[number isolated]=n(n-2)/(2n-3). Connectivity is impossible for n>2.\n\nAbsence of isolated vertices is not a deterministic characterization of connectivity. For n=6,k=2, give all six internal edges of two disjoint triples lower weights than all nine cross edges. Each vertex chooses its two triple neighbors, so the graph is two triangles and has minimum degree two. This ordering event has probability 1/binomial(15,6)=1/5005 under independent continuous weights. More generally two (k+1)-cliques give the same finite obstruction for n=2(k+1). The example does not prove that nontrivial components survive in the asymptotic fine window; such a claim would require its own probability estimate.\n\nExhaustive checks evaluated 2,173 (edge ordering,k) cases for n=2,3,4. At n=4,k=1 the isolated expectation is 8/5 and the probability of having no isolates is 1/5, while connectivity probability is zero. At n=4,k=2 the isolated expectation is 4/15 and connectivity probability is 11/15. The exact six-vertex two-triangle example is saved separately. The previous mean-matching route remains invalid: a central mean/CLT calculation does not control the isolation far tail or small components.\n\nAudit the shared-weight assumption, incident-edge count 2n-3, disjointness of root matching events and the distinction between a finite obstruction and an asymptotic one. No window width or limiting connectivity probability is claimed.\n",
+      "assumptions": [
+        "n=6",
+        "k=2",
+        "shared i.i.d. continuous edge weights"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:p0456-no-isolates-finite-disconnection-obstruction",
+        "url": "file:///~/brain_workers/w341/proofs/P0456_finite_calibration.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-limited-status-20261010",
+      "namespace": "probability.randomgraphs",
+      "logical_name": "p0456-source-limited-status-20261010",
+      "kind": "concept",
+      "title": "Source-limited status and scope for P0456 [audit pending w347]",
+      "statement": "Dabirian-Subramanian (cached 2025 version) establish a first-order logarithmic connectivity threshold for shared-weight bilateral preference graphs, while their introductory Open Problems leave a finer window. The supplied cache contains no later answer. The finite calibrations here establish no window width or limiting connectivity law.",
+      "proof_text": null,
+      "assumptions": [
+        "only the supplied local caches and prior records were consulted",
+        "independent review pending"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:p0456-source-limited-status-20261010",
+        "url": "file:///~/brain_workers/w341/proofs/P0456_finite_calibration.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "no-isolates-finite-disconnection-obstruction",
+      "to_key": "k-one-matching-isolation-formula",
+      "kind": "analogous_to",
+      "rationale": "From: \"In the same shared-weight bilateral model with n=6 and k=2, the event that all six edges inside two vertex triples precede all nine cross edges produces two disjoint triangles. It has probability 1/binomial(15,6)=1/5005, yet minimum degree is two. Thus absence of isolates is not a deterministic connectivity criterion. This finite event does not settle the asymptotic fine window.\" To: \"Give each edge of K_n one independent identically distributed continuous weight and retain it if both endpoints rank it among their single lowest incident weights. For n>=2 the graph is a matching, a fixed edge is present with probability 1/(2n-3), and a fixed vertex is isolated with probability (n-2)/(2n-3). The expected number of isolates is n(n-2)/(2n-3); connectivity is impossible for n>2.\"."
+    },
+    {
+      "from_key": "k-one-matching-isolation-formula",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"Give each edge of K_n one independent identically distributed continuous weight and retain it if both endpoints rank it among their single lowest incident weights. For n>=2 the graph is a matching, a fixed edge is present with probability 1/(2n-3), and a fixed vertex is isolated with probability (n-2)/(2n-3). The expected number of isolates is n(n-2)/(2n-3); connectivity is impossible for n>2.\" To: \"Dabirian-Subramanian (cached 2025 version) establish a first-order logarithmic connectivity threshold for shared-weight bilateral preference graphs, while their introductory Open Problems leave a finer window. The supplied cache contains no later answer. The finite calibrations here establish no window width or limiting connectivity law.\"."
+    },
+    {
+      "from_key": "no-isolates-finite-disconnection-obstruction",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"In the same shared-weight bilateral model with n=6 and k=2, the event that all six edges inside two vertex triples precede all nine cross edges produces two disjoint triangles. It has probability 1/binomial(15,6)=1/5005, yet minimum degree is two. Thus absence of isolates is not a deterministic connectivity criterion. This finite event does not settle the asymptotic fine window.\" To: \"Dabirian-Subramanian (cached 2025 version) establish a first-order logarithmic connectivity threshold for shared-weight bilateral preference graphs, while their introductory Open Problems leave a finer window. The supplied cache contains no later answer. The finite calibrations here establish no window width or limiting connectivity law.\"."
+    },
+    {
+      "from_key": "source-limited-status-20261010",
+      "to_existing_logical": "math:probability.core:open-problem-p0456-the-fine-connectivity-window-for-bilateral-preference-graphs",
+      "kind": "cites",
+      "rationale": "From: \"Dabirian-Subramanian (cached 2025 version) establish a first-order logarithmic connectivity threshold for shared-weight bilateral preference graphs, while their introductory Open Problems leave a finer window. The supplied cache contains no later answer. The finite calibrations here establish no window width or limiting connectivity law.\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status unsolved). Locate the sharp connectivity window and limiting connectivity probability of LK(n,k) inside the source remaining band around log(n). Source: Dabirian and Subramanian: Connectivity of a family of bilateral preference random graphs, Open Problems; PDF2-3. Status notes: 2026-09-07 bounded primary searches for EWT, La-Kabkab and bilateral preference degree results; 2025 connectivity theorem credited. No current-open or novelty certification.\". "
+    }
+  ]
+}

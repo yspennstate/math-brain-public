@@ -1,0 +1,171 @@
+{
+  "Phi": "Phi_n(f)=n(sum_S |fhat(S)|^(2-1/n)-1)",
+  "coded_F8": {
+    "hybrid_selector_status": "UNVERIFIED",
+    "physical_inputs": 2040,
+    "reason": "2^2040 truth table unavailable in a bounded run; no compressed certificate for the new hybrid selector is proved.",
+    "truth_table_enumerated": false
+  },
+  "exhaustive_small_boolean": {
+    "2": {
+      "functions_up_to_global_sign": 8,
+      "proper_block_cases": 16,
+      "witness_proper_block_mask": 1,
+      "witness_proper_canonical_mask": 1,
+      "witness_singleton_block_mask": 1,
+      "witness_singleton_canonical_mask": 1,
+      "worst_best_proper_block_hybrid_ratio": 3.6568542494923806,
+      "worst_best_singleton_hybrid_ratio": 3.6568542494923806
+    },
+    "3": {
+      "functions_up_to_global_sign": 128,
+      "proper_block_cases": 768,
+      "witness_proper_block_mask": 3,
+      "witness_proper_canonical_mask": 1,
+      "witness_singleton_block_mask": 1,
+      "witness_singleton_canonical_mask": 1,
+      "worst_best_proper_block_hybrid_ratio": 4.69287404088211,
+      "worst_best_singleton_hybrid_ratio": 4.778826567326777
+    },
+    "4": {
+      "functions_up_to_global_sign": 32768,
+      "proper_block_cases": 458752,
+      "witness_proper_block_mask": 1,
+      "witness_proper_canonical_mask": 1,
+      "witness_singleton_block_mask": 1,
+      "witness_singleton_canonical_mask": 1,
+      "worst_best_proper_block_hybrid_ratio": 4.815942330747497,
+      "worst_best_singleton_hybrid_ratio": 4.815942330747497
+    }
+  },
+  "full_FEI_proved": false,
+  "hybrid_quantity": "B_A(f)+A_A(f), A_A=Phi_n(f)-2^(-|A|) sum_a Phi_(n-|A|)(f_{A=a})",
+  "independent_audit": false,
+  "limitations": [
+    "Floating-point Walsh/entropy calculations are finite self-checks, not proof.",
+    "Named cases use all singleton, all pair, all-but-one, and listed structural blocks, not every proper block when dimension exceeds four.",
+    "No inference to the universal existential proper-block selector is made."
+  ],
+  "max_abs_block_influence_budget_error": 0.0,
+  "named_stress": {
+    "Gamma3_Maj3_n6": {
+      "H": 1.9512377755992936,
+      "I": 0.5625,
+      "Phi": 0.8157595298653977,
+      "best_singleton_hybrid_ratio": 3.3380296018845144,
+      "best_singleton_mask": 8,
+      "best_tested_components": {"A": 0.07453090360456738, "B": 0.13409594651321477, "I_A": 0.0625},
+      "best_tested_proper_hybrid_ratio": 3.3380296018845144,
+      "best_tested_proper_mask": 8,
+      "max_singleton_hybrid_ratio": 4.7170739200600735,
+      "n": 6,
+      "tested_proper_blocks": 29
+    },
+    "addressing_2_to_4_n6": {
+      "H": 4.0,
+      "I": 2.0,
+      "Phi": 1.5595262993692387,
+      "best_singleton_hybrid_ratio": -0.15205301798092918,
+      "best_singleton_mask": 4,
+      "best_tested_components": {"A": -0.038013254495232296, "B": 0.0, "I_A": 0.25},
+      "best_tested_proper_hybrid_ratio": -0.15205301798092918,
+      "best_tested_proper_mask": 4,
+      "max_singleton_hybrid_ratio": 3.6320690487681286,
+      "n": 6,
+      "tested_proper_blocks": 28
+    },
+    "bent_quadratic_n4": {
+      "H": 4.0,
+      "I": 2.0,
+      "Phi": 1.6568542494923806,
+      "best_singleton_hybrid_ratio": 3.7541821996155225,
+      "best_singleton_mask": 1,
+      "best_tested_components": {"A": 0.8284271247461903, "B": 2.0, "I_A": 1.0},
+      "best_tested_proper_hybrid_ratio": 2.8284271247461903,
+      "best_tested_proper_mask": 3,
+      "max_singleton_hybrid_ratio": 3.7541821996155225,
+      "n": 4,
+      "tested_proper_blocks": 14
+    },
+    "majority3_of_majority3_n9": {
+      "H": 5.0,
+      "I": 2.25,
+      "Phi": 1.9358485175311362,
+      "best_singleton_hybrid_ratio": -0.11128518892552819,
+      "best_singleton_mask": 8,
+      "best_tested_components": {"A": -0.027821297231382047, "B": 0.0, "I_A": 0.25},
+      "best_tested_proper_hybrid_ratio": -0.11128518892552819,
+      "best_tested_proper_mask": 8,
+      "max_singleton_hybrid_ratio": -0.11128518892551398,
+      "n": 9,
+      "tested_proper_blocks": 59
+    },
+    "majority5": {
+      "H": 3.325375780033049,
+      "I": 1.875,
+      "Phi": 1.3172277023101708,
+      "best_singleton_hybrid_ratio": -0.12469005445149861,
+      "best_singleton_mask": 1,
+      "best_tested_components": {"A": -0.04675877041931198, "B": 0.0, "I_A": 0.375},
+      "best_tested_proper_hybrid_ratio": -0.12469005445149861,
+      "best_tested_proper_mask": 1,
+      "max_singleton_hybrid_ratio": -0.12469005445149861,
+      "n": 5,
+      "tested_proper_blocks": 20
+    },
+    "one_point_w6": {
+      "H": 0.7012057533558846,
+      "I": 0.1875,
+      "Phi": 0.31846757319173236,
+      "best_singleton_hybrid_ratio": 4.3903345382316274,
+      "best_singleton_mask": 1,
+      "best_tested_components": {"A": 0.065565300000201, "B": 0.07163265431953736, "I_A": 0.03125},
+      "best_tested_proper_hybrid_ratio": 4.3903345382316274,
+      "best_tested_proper_mask": 1,
+      "max_singleton_hybrid_ratio": 4.3903345382316274,
+      "n": 6,
+      "tested_proper_blocks": 29
+    },
+    "padded_bent_marker_m4_k3_n8": {
+      "H": 6.38148094217301,
+      "I": 3.0625,
+      "Phi": 2.5871865366087157,
+      "best_singleton_hybrid_ratio": 2.92645326956522,
+      "best_singleton_mask": 8,
+      "best_tested_components": {"A": 0.8681795547346569, "B": 1.8607483630758175, "I_A": 1.125},
+      "best_tested_proper_hybrid_ratio": 2.4257137047204216,
+      "best_tested_proper_mask": 6,
+      "max_singleton_hybrid_ratio": 8.171585023095716,
+      "n": 8,
+      "tested_proper_blocks": 47
+    },
+    "tensor_w3_w3_n6": {
+      "H": 4.433834373377399,
+      "I": 1.5,
+      "Phi": 1.8159787134282332,
+      "best_singleton_hybrid_ratio": 4.730063797373603,
+      "best_singleton_mask": 1,
+      "best_tested_components": {"A": 0.8751807552167445, "B": 2.2169171866887, "I_A": 0.75},
+      "best_tested_proper_hybrid_ratio": 4.122797255873926,
+      "best_tested_proper_mask": 7,
+      "max_singleton_hybrid_ratio": 4.730063797373603,
+      "n": 6,
+      "tested_proper_blocks": 29
+    }
+  },
+  "one_point_singleton_sequence": {
+    "2": {"A_over_Inf": 1.6568542494923806, "B_over_Inf": 2.0, "hybrid_over_Inf": 3.6568542494923806},
+    "3": {"A_over_Inf": 2.1063375833535742, "B_over_Inf": 2.672488983973203, "hybrid_over_Inf": 4.778826567326777},
+    "4": {"A_over_Inf": 2.1819389398611193, "B_over_Inf": 2.6340033908863774, "hybrid_over_Inf": 4.815942330747497},
+    "5": {"A_over_Inf": 2.1477419694219293, "B_over_Inf": 2.453729842624943, "hybrid_over_Inf": 4.6014718120468725},
+    "6": {"A_over_Inf": 2.098089600006432, "B_over_Inf": 2.2922449382251955, "hybrid_over_Inf": 4.3903345382316274},
+    "7": {"A_over_Inf": 2.0582918402402584, "B_over_Inf": 2.1780849471567834, "hybrid_over_Inf": 4.236376787397042},
+    "8": {"A_over_Inf": 2.031535952116542, "B_over_Inf": 2.1048446026339427, "hybrid_over_Inf": 4.136380554750485},
+    "9": {"A_over_Inf": 2.015117105621812, "B_over_Inf": 2.060278957062252, "hybrid_over_Inf": 4.075396062684064},
+    "10": {"A_over_Inf": 2.005666126651249, "B_over_Inf": 2.034056751494653, "hybrid_over_Inf": 4.039722878145902},
+    "11": {"A_over_Inf": 2.0005363674499677, "B_over_Inf": 2.018984254482085, "hybrid_over_Inf": 4.0195206219320525},
+    "12": {"A_over_Inf": 1.9979436154226278, "B_over_Inf": 2.0104693779233855, "hybrid_over_Inf": 4.008412993346013}
+  },
+  "proof_assistant_used": false,
+  "status": "PASS"
+}

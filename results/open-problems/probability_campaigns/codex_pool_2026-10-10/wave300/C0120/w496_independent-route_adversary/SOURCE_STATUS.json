@@ -1,0 +1,62 @@
+{
+  "candidate_id": "C0120",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "historical_openness": "Section 12(3) of arXiv:0810.4221v2 lists exponent improvement as open in 2008.",
+  "primary_source": {
+    "author": "Sourav Chatterjee",
+    "title": "Chaos, concentration, and multiple valleys",
+    "id": "arXiv:0810.4221v2",
+    "url": "https://arxiv.org/pdf/0810.4221",
+    "locator": "Section 8, pp. 37-39; Section 12(3), p. 59",
+    "access": "public primary PDF read through web tool",
+    "local_intake_recorded_sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+    "hash_status": "Independently recomputed from public versioned PDF; this is provenance, not proof.",
+    "independent_download_sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+    "independent_download_bytes": 586944,
+    "matches_recorded_intake_hash": true
+  },
+  "source_quote": "Improve the fluctuation exponent in directed polymers.",
+  "source_model": "iid standard Gaussian vertex weights on Z^2, n-vertex paths from the origin moving right/up, free endpoint, M_n=max_path sum g_v; Theorem 8.1 bounds Var(M_n)<=C n/log n.",
+  "precise_task_formalization": "Find constants epsilon in (0,1), C<infinity independent of n such that Var(M_n)<=C n^(1-epsilon) for every n>=2.",
+  "formalization_note": "The epsilon formulation follows this worker brief; the original problem asks to improve the exponent without specifying epsilon.",
+  "intake_verdict": "FIX: cited source does not support replacing M_n by log Z_n or claiming this theorem in general dimension. Those are separate extensions requiring distinct sources and assumptions.",
+  "prior_attempt": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 98,
+    "method": "quantitative chaos / transversal exponent; no new input",
+    "gap": "No justified quantitative decay or exponent bound."
+  },
+  "recall_status": "60-second timeout; exact named memory-file fallback used",
+  "scars_read": [
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "proof_steps_need_derived_joint_structure_2026_09_09",
+    "fpp_gap_event_is_the_overlap_event_2026_08_22"
+  ],
+  "paired_proof_access": "Independent derivation saved first; subsequently read w495 precommit, S1/L0, and its originator ATTEMPT.md L1-L5.",
+  "novelty_claim": false,
+  "store_promotion": "none",
+  "population_store_scope_check": {
+    "read_only": true,
+    "report": "STORE_SCOPE_REPORT.json",
+    "hit_count_capped_at_20": 3,
+    "exports": "Targeted export search for C0120/source id found no match."
+  },
+  "recent_primary_literature": [
+    {
+      "url": "https://arxiv.org/abs/2604.01214",
+      "date": "2026-04-01",
+      "scope": "Power variance bound for rotationally invariant planar Riemannian FPP, a different model; no automatic transfer to iid Gaussian lattice last-passage maxima."
+    },
+    {
+      "url": "https://arxiv.org/abs/2603.06574",
+      "date": "2026-03-06",
+      "scope": "Continuous spatially correlated Gaussian polymers, with a high-temperature higher-dimensional result; different assumptions from the source-model maximum."
+    },
+    {
+      "url": "https://arxiv.org/abs/2509.16694",
+      "date": "2025-09-20",
+      "scope": "Intermediate-temperature correlated 1+2 polymer CLT; does not certify the source-model power variance bound."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "artifact validation, not mathematical certification",
+  "boolean_searches_executed": 0,
+  "upstream_exact_checkers_rerun": false,
+  "source_files_hashed": 44,
+  "dag_nodes": 9,
+  "dag_edges": 6,
+  "open_leaves": 4,
+  "label_count": 15,
+  "tex_references_resolved": true,
+  "dag_acyclic": true,
+  "protocol_progress_exact_field_set": true,
+  "protocol_key_annotation": "packet_ids (one primary ID, for compatibility) normalized to packet_ids, as required by protocol compatibility section",
+  "claims_exact_field_set": "vacuously true; empty claims array; no new math",
+  "A097_statement_hash_verified": true,
+  "build": {
+    "compiler": "~\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE",
+    "timeout_seconds_per_pass": 60,
+    "passes": [
+      {
+        "command": [
+          "~\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE",
+          "--disable-installer",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "-output-directory=out",
+          "CANDIDATE_MANUSCRIPT.tex"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "~\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE",
+          "--disable-installer",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "-output-directory=out",
+          "CANDIDATE_MANUSCRIPT.tex"
+        ],
+        "exit_code": 0
+      }
+    ],
+    "pdf_exists": true
+  },
+  "elapsed_seconds": 17.621611900045536
+}

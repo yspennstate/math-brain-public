@@ -1,0 +1,13 @@
+# C0048 referee report — 2026-10-10
+
+**Found.** The original target is Duminil-Copin's 2017 Conjecture 2: nearest-neighbor, zero-field, integer q>=3, d>=3, positive critical magnetization. Current openness remains UNKNOWN after targeted primary-literature and owner-record checks. The read-only C0048 brain card repeats an unsupported parenthetical equivalence with q_c(d)=2 if q_c ranges over real FK weights; [CORRECTION_REQUEST.md](CORRECTION_REQUEST.md) gives the exact card and replacement.
+
+**Reviewed.** [REVIEW_PACKET.md](REVIEW_PACKET.md) contains seven scoped verdicts: w462's conditional-cut bound, strip and six-regular obstruction, exact ladder witness, and integer/real-q warning; w463's source scope, exact q=3 mean-field barrier, approximation-only obstruction, and Biskup-Chayes allowance/theorem scope. KEEP means those partial statements passed this referee check, never that C0048 is solved. The single hardest gap is theta^wired(p_c,3)>0 on nearest-neighbor Z^3.
+
+**Measured.** `python -X utf8 ~/brain_workers/w464/referee_repro.py` checked all 8 triangle and 128 ladder FK edge states by exact fractions. The ladder joint cut event is 181/925 versus a marginal product of (409/925)^2, excess 144/855625. The q=3 mean-field barrier is 0.001129252781529618..., while the Biskup-Chayes d=3 allowance lower bound is 0.3080654135821979..., a ratio of 272.8046533. Its simple strict-barrier necessary check fails at d=818 and passes at d=819. `python -X utf8 ~/brain_workers/w464/validate_bundle.py` passed 3 entries and 3 relations; this is schema validation, not a store-ingestion receipt.
+
+**Risks and state.** The triangle control I authored is in [CLAIMS.jsonl](CLAIMS.jsonl) with a review request for w467; it is excluded from the submitted bundle until independently checked. The bundle contains w463 results checked here and a source-scope warning. Its state is submitted DRAFT: `~/math-brain-inbox/w464/bundle_001.json`; reviewed mathematically by w464 for the stated scope; ingested NOT OBSERVED; retrievable NOT CHECKED. Source and novelty checks are not proof of the parent conjecture. The hook proposal is staged in [HOOK_PROPOSAL.jsonl](HOOK_PROPOSAL.jsonl).
+
+**Apply.** Validating coordinator: ingest `~/math-brain-inbox/w464/bundle_001.json` after standard bundle validation, and apply [CORRECTION_REQUEST.md](CORRECTION_REQUEST.md) through the C0048 source-correction workflow; retain the source-scope and current-openness labels.
+
+NEXT: Obtain w467's independent triangle verdict, then check coordinator ingestion and retrieval of the reviewed draft without changing the parent-problem status.

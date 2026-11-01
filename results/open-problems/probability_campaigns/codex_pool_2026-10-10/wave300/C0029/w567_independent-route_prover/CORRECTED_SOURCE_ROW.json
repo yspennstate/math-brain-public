@@ -1,0 +1,15 @@
+{
+  "attempt_id": "C0029-A001",
+  "author": "claude-probability-1000-continue-0907",
+  "independent_check": "",
+  "key_identity": "Limiting real Gaussian law: for each fixed t>=0, lim_{n->infinity} P(sqrt(n) s_min(G_n)<=t)=1-exp(-t^2/2-t). This is not a finite-n exact law; its limiting slope at zero is 1.",
+  "method": "Test whether the constant 1 in front of t is forced by the Gaussian comparison and whether the Bernoulli case can beat it.",
+  "obstruction": "Hard-edge universality covers t >= n^{-c}; the conjecture needs the constant 1 down to exponentially small t.",
+  "problem_id": "C0029",
+  "recorded_at": "2026-09-07T06:38:45Z",
+  "result": "For real Gaussian G_n, Edelman's limiting law gives P(sqrt(n) s_min(G_n)<=t)=1-exp(-t^2/2-t)+o(1) for each fixed t>=0 as n tends to infinity. Its limiting slope at zero is 1; the finite-n law differs, as already seen at n=1, whose CDF is erf(t/sqrt(2)) and slope is sqrt(2/pi). Tao-Vu 2010 hard-edge universality gives a uniform O(n^-c) distributional error under its moment hypotheses, which can yield coefficient one in a polynomial-size t regime but does not by itself cover exponentially small t. This dated attempt made no improvement. Later source update: Sah-Sahasrabudhe-Sawhney arXiv:2405.20308v2, Theorem 1.1, proves (1+O((log n)^(-1/16)))t+exp(-Omega(n)); this still does not supply the exact coefficient-one target. The parent target remains unsolved by this record.",
+  "schema": "probability-attempt.v1",
+  "substantive": true,
+  "correction_source": "https://arxiv.org/pdf/0903.0614 Theorem 1.1 equations (1)-(2); https://arxiv.org/html/2405.20308v2 Theorem 1.1",
+  "correction_status": "DRAFT w567 2026-10-10; independent review pending"
+}

@@ -1,0 +1,36 @@
+import pathlib,json,xml.etree.ElementTree as E
+P=pathlib.Path(__file__).resolve().parent
+rows=json.loads((P/'search_results.json').read_text())+json.loads((P/'followup_results.json').read_text())
+lines=['# Literature check: C0036','',
+'Date: 2026-10-12 Asia/Jerusalem (2026-10-11 UTC at retrieval).',
+'Outcome: no matching solution found in the material successfully retrieved. This is not a definitive claim that no solution exists. OpenAlex and Semantic Scholar returned HTTP 429, so source citation coverage is incomplete. No SOLVED_IN_LITERATURE verdict is warranted.','',
+'## Verified primary source','',
+'Russell Lyons, *Determinantal Probability: Basic Properties and Conjectures*, Proceedings of the International Congress of Mathematicians, Seoul 2014, vol. III, pp. 137–161; arXiv:1406.2707v1 (10 June 2014). Retrieved https://arxiv.org/pdf/1406.2707; saved as lyons2014.pdf and lyons2014.txt. Conjecture 5.7 is on printed/PDF page 23.','',
+'The preceding paragraph says: “Write FK(Q) := exp tr log |Q| for the Fuglede-Kadison determinant of Q when Q is a Γ-equivariant operator. The following would extend Theorem 5.2. It is open even for finite groups.”','',
+'Exact conjecture wording (mathematical subscripts typeset in Markdown):','',
+'> Conjecture 5.7. For all Γ-equivariant positive contractions Q on ℓ²(Γ), the process P_Q stochastically dominates product measure P_{FK(Q)I} and is stochastically dominated by product measure P_{I−FK(I−Q)I}, and these bounds are optimal.','',
+'The positive contraction is self-adjoint, 0<=Q<=I; the Γ action is the regular translation action, and the normalized group trace is evaluated at the identity. The conjecture has no invertibility requirement. Section 5.2 begins in a sofic-group setting; the conjecture sentence itself does not repeat this restriction. The requested all-group version is at least as strong, and neither version is solved in this attempt.','',
+'## Search log (every API request)','']
+for r in rows:
+ lines.extend(['- Service: '+r['service']+'; query: '+r.get('query','')+'; UTC date: '+r.get('date','2026-10-11')+'.',
+ '  URL: '+r['url'],
+ '  Result: '+(r.get('error') or 'HTTP '+str(r.get('http_status',r.get('status')))+'; saved '+r.get('raw_file',''))])
+lines.extend(['',
+'Citation-search caveat: source-title lookup in OpenAlex was rate limited, preventing verification of an OpenAlex work ID. The later W2102466745 filter was an unverified diagnostic ID and also returned 429; it is NOT evidence about citations of Lyons. Likewise the source DOI lookup was not verified because of 429. The valid arXiv-keyed Semantic Scholar source/citation request was also rate limited. We did not retrieve a verified list of works citing the source.','',
+'## Relevant works and why they do not settle this question','',
+'1. Russell Lyons and Jeffrey E. Steif, *Stationary determinantal processes: Phase multiplicity, Bernoullicity, entropy, and domination*, Duke Mathematical Journal 120(3) (2003), 515–575. DOI 10.1215/S0012-7094-03-12032-3; arXiv:math/0204324. Source Theorem 5.2, p.22, quotes the sharp geometric-mean comparisons for scalar symbols f:T^d->[0,1] and Γ=Z^d. This is the known special case, not arbitrary Γ. Both the source bibliography and current Crossref results confirm the reference.','',
+'2. Russell Lyons and Andreas Thom, *Invariant Coupling of Determinantal Measures on Sofic Groups*, arXiv:1402.0969 (2014). Current arXiv abstract and source bibliography read. It compares equivariant kernels under Q1<=Q2 and produces invariant couplings. FK(Q)I<=Q need not hold (FK lies between extreme eigenvalues), so this does not give the requested bounds.','',
+'3. Raghavendra Tripathi, *Determinantal Processes and Stochastic Domination*, M.S. thesis, Indian Institute of Science (2019); arXiv:2009.09141v1 (19 September 2020), 60 PDF pages. Abstract and full-text theorem/keyword passages inspected; PDF and extraction saved. It studies projection-kernel domination and comparisons under different reference measures, with last-passage-percolation applications. No Fuglede-Kadison product bound or matching theorem found.','',
+'4. Tim Austin, *Entropy and determinants for unitary representations*, arXiv:2412.13751v4 (20 March 2026; first submitted 18 December 2024), 80 pages. Abstract and full-text relevant passages inspected; PDF and extraction saved. It provides FK formulas for representation-theoretic entropy and noncommutative Szegő limits. No determinantal point-process stochastic domination theorem matching this question found.','',
+'5. Alexander I. Bufetov, Yanqi Qiu and Alexander Shamov, *Kernels of conditional determinantal measures and the proof of the Lyons–Peres Conjecture*, arXiv:1612.06751v3. Current arXiv abstract inspected: Theorem 1.5 establishes completeness of sampled reproducing kernels; Theorem 1.7 concerns tail triviality. These are different conjectures, not Conjecture 5.7.','',
+'6. Justin Cyr, *Stationary Determinantal Processes on Z^d with N Labeled Objects per Site, Part I: Basic Properties and Full Domination*, Journal of Theoretical Probability (online 2 January 2021), DOI 10.1007/s10959-020-01062-5. Crossref title/author/DOI metadata retrieved. This is a lead for matrix-valued symbols on Z^d; no full-text theorem was verified, and no general-group solution is inferred from the title.','',
+'7. Guillaume Baverez, Alexander I. Bufetov and Yanqi Qiu, *A survey on determinantal point processes*, Advanced Studies in Pure Mathematics 87 (2021), DOI 10.2969/aspm/08710059. Crossref metadata retrieved. A survey lead, not a verified solution.','',
+'arXiv query totals and full abstracts are retained in the raw Atom files. Irrelevant hits (quantum chemistry, algebraic determinantal ideals, etc.) were not treated as leads. GitHub repository searches returned zero items. Crossref Fuglede–Kadison results chiefly concerned operator determinants/entropy, without the stochastic domination objects.','',
+'## Read-only brain and earlier private work','',
+'Read math-store card claim_1e3f205f561f7c54656563b1c8fea5afca86c07c42b7412bde1de30d0bb243cb in full; recalled “determinantal stochastic domination mistakes” and “Fuglede Kadison determinantal processes”. The card is a private harmonic-mean draft, not independent literature.','',
+'Searched C0036 in the intake ledgers and codex_pool_2026_10_10. Read team_O/w343/C0036_proof.md (two-site result and finite necessary bounds). Read-only git origin/master was searched for C0036; no working tree modification was made. Read these origin/master files:',
+'- research7_2026-09-17/R7-03/artifacts/2026-09-19/2026-09-19T224000Z__C0036_z6_spectral_mixture_local_periodic.md',
+'- research7_2026-09-17/R7-03/artifacts/2026-09-20/2026-09-20T152000Z__C0036_full_S3_eventwise_subgroup_cover.md',
+'The first reports cardinality comparison, lower-order cyclic work, a local Hessian and periodic lifting. The second labels a full S3 proof as a candidate requiring exact symbolic certificates and independent review. Neither is a published all-group resolution; neither was used here as a proved premise. Their mathematical proposals are leads for future checking.',''])
+P.joinpath('LITERATURE.md').write_text('\n'.join(lines),encoding='utf8')
+print('LITERATURE.md recorded',len(rows),'API searches, source retrieval and read-only prior-work searches')

@@ -1,0 +1,57 @@
+{
+  "schema": "fei-run-progress/2",
+  "stream": "B11",
+  "run_id": "20261012T052348Z-fleet01-B11-a052-annealed-upper-set",
+  "primary_packet_id": "A052",
+  "packet_ids": ["A052"],
+  "gap_id": "G-CRITICAL-U-PAYMENT",
+  "attempt_id": "A052-ANNEALED-UPPERSET-4",
+  "attempt_counter": 4,
+  "claim_versions": ["B11-A052-ANNEALED-UPPERSET-v1"],
+  "source_owner_control_revision": "2026-10-12.1",
+  "source_owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+  "source_plan_head": "d41dd05c667aa82d22d66f02d93c067d794d809a",
+  "source_protocol_revision": "2026-10-11-execution-v2",
+  "source_contract_blob": "faaa0875ddb129d134bb62abb513f3795e88b590",
+  "source_dependency_blobs": [
+    "9f0d4ec16e611bc845c92b6b2173b0eae7d34ac7",
+    "a8affd77c47ac63e8b37dbffe03436c6851097fd",
+    "f490ce01f24431ee2a8b54d8e64cc9336c46ac6f"
+  ],
+  "prior_status": "A052 had an exact child-ratio slack identity and a lower persistence theorem for U on random restriction frontiers, but no independently derived upper-set envelope or coordinate-local asymmetry witness.",
+  "new_status": "An all-dimensional phase-free Jensen envelope and exact coordinate charge decomposition are proved. Combined with persistence, high-ratio maximizers force a physical coordinate with normalized conditional-absence surprisal at least R/4-O(1). Pending independent review; full FEI remains open.",
+  "mathematical_delta": "Introduced F_t(p), proved E U(f_{J,X})<=F_t(p), decomposed F_t into nonnegative coordinate absence-surprise charges, and extracted a quantitative useful-coordinate condition for fixed-n H/I maximizers while retaining terminal variance and empty-coefficient entropy.",
+  "class_extension": "The envelope holds for all genuine Boolean functions in all dimensions and every retention t; the structural witness applies to every finite-dimensional ratio maximizer.",
+  "previous_bound": "Only a lower persistence bound on expected U/I was available.",
+  "new_bound": "For t=1/2, some coordinate satisfies C_i/p_i >= F_{1/2}/I >= (R-2)/4-1/(2 ln 2) plus nonnegative normalized terminal terms.",
+  "deliverables": {
+    "A052-D1": "COMPLETE_PENDING_INDEPENDENT_REVIEW",
+    "A052-D2": "COMPLETE_PENDING_INDEPENDENT_REVIEW"
+  },
+  "acceptance_evidence": [
+    "REPORT.md",
+    "ANNEALED_UPPER_SET_ENVELOPE.tex",
+    "verify_envelope.py",
+    "CHECK.out"
+  ],
+  "finite_verification": {
+    "scope": "All 65812 Boolean truth tables through n=4, including 65804 nonconstant functions; named point-defect, disjoint near-tensor, fresh-selector, and parity controls.",
+    "status": "PASS",
+    "limitations": "Diagnostic only; the proof artifact supplies the all-dimensional argument."
+  },
+  "remaining_obstacle": "No universal K is known for max_i C_i(1/2)/p_i<=K on every ratio-critical Boolean spectrum. An existential low-charge coordinate would not pair with the high-charge witness; without a maximum-coordinate upper payment, the useful-coordinate lower witness does not bound R.",
+  "next_consumers": ["A055", "A096", "A099", "B20"],
+  "independent_reviewers": ["A090", "A094"],
+  "next_action": "Combine the all-block erasure inequalities and signed Boolean convolution constraints to bound the maximum coordinate charge max_i C_i(1/2)/p_i on critical spectra, or construct a genuine Boolean critical family falsifying such a bound.",
+  "delivery_status": {
+    "local_artifacts": "COMPLETE_AND_NONEMPTY_READBACK_VERIFIED",
+    "canonical": "DELIVERED_AND_BYTE_READBACK_VERIFIED",
+    "canonical_initial_commit": "4f6254ff7ea2064aed023fe9efc7c27156b51cde",
+    "brain_mirror": "DELIVERED_AND_BYTE_READBACK_VERIFIED",
+    "brain_initial_commit": "4eca7ce27d4b7f2dfdac1a7e8ef690a5da1e945a",
+    "readback_method": "All seven remote Git blob SHAs matched git hash-object of the local artifacts in both repositories.",
+    "independent_review": "PENDING",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN"
+}

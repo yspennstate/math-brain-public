@@ -1,0 +1,9 @@
+These files document the padding failure of the first extension
+attempt.  slabs_neg8_ext.json (committed at repo root) is the
+original defective input, generated 13:01 local with gen_slabs
+default pads.  failed_pads_slab0.log and failed_pads_slab0.json here
+were produced at 11:22:01Z as a post-audit reproduction run of that
+seed's first slab: every inward check returns a zero-centered ball
+and the certifier exits FAIL in seconds.  gen8v2.log is the
+regeneration walk that replaced it (complete 10:35:39Z); smoke3.log
+is the three-point pre-launch smoke of the corrected file.

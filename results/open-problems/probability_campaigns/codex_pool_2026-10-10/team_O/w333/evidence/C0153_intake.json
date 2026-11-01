@@ -1,0 +1,40 @@
+[
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 153,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0153",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Question 14.19, p. 215",
+      "problem_id": "C0153",
+      "recorded_at": "2026-09-07T09:31:51Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "pete_pgg_notes",
+      "statement": "If finite graphs G_n converge locally weakly to a nonamenable transitive graph G, is the local limit of the FK(p,q) random-cluster measures on G_n (especially q > 1) the wired measure on G? Known for the WUSF (q = p = 0) and for Ising on regular trees (Montanari-Mossel-Sly: symmetric mixture of plus and minus).",
+      "status_search": "",
+      "title": "Local limits of random-cluster models converging to nonamenable transitive graphs are wired",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 136,
+    "record": {
+      "attempt_id": "C0153-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "Finite-graph complement of a ball connected in the percolation configuration <=> wired boundary condition in the limit.",
+      "method": "Separate the random-cluster question from its spin-model consequence.",
+      "obstruction": "Giant uniqueness for non-transitive local approximants.",
+      "problem_id": "C0153",
+      "recorded_at": "2026-09-07T09:31:51Z",
+      "result": "For q = 2 the Montanari-Mossel-Sly result is about the ISING local limit on regular trees, which is the symmetric mixture of the plus and minus extremal measures; in random-cluster language this corresponds to the wired measure (the mixture of the two spin phases is the Edwards-Sokal image of the wired FK measure). So the q = 2, tree case is consistent with the question. For general q > 1 and a general nonamenable limit, a route: the finite-volume random-cluster measure on G_n is sandwiched (for q >= 1) between free and wired measures on any finite ball by monotonicity, and the local limit is sandwiched between the free and wired limits on G; the question is whether the limit hits the wired end. Wired is favoured because finite graphs have no 'boundary' (a ball's complement in G_n is connected and large), which acts like wired boundary conditions provided the complement percolates, i.e. for p above the threshold where the free and wired measures differ the finite graph's complement of a ball is itself supercritical and connected, wiring the boundary. For p below that threshold free = wired and the question is empty. So for q >= 1 the answer is yes whenever the complement of a ball in G_n is connected within the percolation configuration with high probability, which is a uniqueness-of-the-giant statement on G_n (C0141-type, proved for transitive G_n by Easo-Hutchcroft); for non-transitive G_n it is exactly the open part. Reduction: for transitive G_n and q >= 1 the answer should be yes via giant uniqueness; general G_n open.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "assignment_id": "FEI-20260922-fleet01-B07",
+  "run_id": "fleet01-B07-20260922T110315Z-fei",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "B-ZEROKL-ARITY3-GENERIC-RIGIDITY-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Essential three-input Boolean gates at a common interior product bias outside the explicit eleven-point algebraic exceptional set.",
+      "statement": "K_occ=0 iff, up to output sign, the gate is a one-point defect or three-bit parity. Hence no composition-prime zero-KL gate occurs on this generic common-bias locus.",
+      "verification": {
+        "analytic_reduction": true,
+        "exact_symbolic_certificate_executed": true,
+        "independent_review": false,
+        "certificate_source_commit": "7bf0ab0a25fbde5aa6d5da6e49b0d1655c7d1088",
+        "certificate_output_commit": "26dd7aed602c52a92b0e8b98774f8df751f9195d"
+      },
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "result": "occurrence I-projection and K_occ=0 iff P=Q_r"
+        },
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "a63ce409fd2c5ecd1923f0db902e0493cc3c40a7",
+          "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet02/B13/20260922T105348Z-selector-conditional-booleanity/REPORT.md",
+          "result": "exact biased selector coefficient transform"
+        }
+      ]
+    },
+    {
+      "claim_id": "B-ZEROKL-PRIME-THRESHOLD-EXCEPTION-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "The symmetric threshold gate f=+1 on Hamming weights 0,1 and -1 on weights 2,3, at common bias p=1/2 +/- sqrt(2)/4.",
+      "statement": "The seven nonempty squared biased-Fourier coefficients are equal, so the nonempty spectral law is uniform on seven subsets and equals its occurrence I-projection. Thus K_occ=0. Every proper two-coordinate block has exactly three distinct cofactors, hence the gate is composition-prime.",
+      "verification": {
+        "analytic_proof": true,
+        "exact_symbolic_certificate_executed": true,
+        "independent_review": false,
+        "certificate_source_commit": "86a2cf06841e5d1baeedb522890761e319123b9f",
+        "certificate_output_commit": "54fd73f17eeb9a8df129ed81af357ee403eda686"
+      },
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "result": "occurrence I-projection"
+        },
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "d99ffba1e2cb9dc61f7a6d77f8ba961239694ea3",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet01/B13/20260922T002604Z-gate-composition-prime/REPORT.md",
+          "result": "exact cofactor criterion for disjoint Boolean composition"
+        }
+      ]
+    },
+    {
+      "claim_id": "B-ZEROKL-ARITY3-PRIME-MAP-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Essential three-input Boolean gates with common interior bias.",
+      "statement": "Composition-prime zero-KL gates occur only on seven nonbalanced algebraic factor loci listed in ADDENDUM_PRIME_MAP.md; the exact mask list on each locus is certified. At p=1/2 no essential toric candidate is composition-prime. Outside the eleven-point exceptional set there are no composition-prime zero-KL gates.",
+      "verification": {
+        "exact_symbolic_certificate_executed": true,
+        "independent_review": false,
+        "certificate_source_commit": "1bcca3b356b5d9fa8a9e3a78eaf484902f7d156f",
+        "certificate_output_commit": "bdf9a6bdf4d58ba4a028a28e5bbfcd9949de5103"
+      },
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "d99ffba1e2cb9dc61f7a6d77f8ba961239694ea3",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet01/B13/20260922T002604Z-gate-composition-prime/REPORT.md",
+          "result": "cofactor criterion"
+        },
+        {
+          "mode": "context_only",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "84c69136ca6b008badb76f15bf1071d029c927aa",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet03/B15/20260922T085625Z-product-equality-rigidity/REPORT.md",
+          "result": "balanced uniform character-times-bent equality classification"
+        }
+      ]
+    }
+  ],
+  "rejected_or_revised_targets": [
+    {
+      "id": "B-ZEROKL-PRIME-RIGIDITY-v1-unqualified",
+      "status": "REFUTED_AT_EXPLICIT_ALGEBRAIC_BIASES",
+      "replacement": "B-ZEROKL-PRIME-RIGIDITY-v2",
+      "note": "Any higher-arity rigidity statement must allow explicit algebraic exceptional bias loci and cannot assert composition-prime implies strictly positive K_occ everywhere."
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newcommand{\F}{\mathbb F_2}
+\newcommand{\rk}{\operatorname{rank}}
+\newcommand{\I}{\mathrm I}
+\newcommand{\Ent}{\mathrm H}
+\begin{document}
+\title{A017 stage 2: point-flipped quadratic fibers and a terminal-inclusive stopping ledger}
+\author{A017 / B04}
+\date{20261011T234546Z; independent review pending}
+\maketitle
+Entropy is measured in bits. Controls $x\in\F^n$ and sign data
+$(y_z)_{z\in\F^a}$ are independent and uniform; $n\ge1$.
+Set $b(x)=(-1)^{q(x)}$ for quadratic $q$ with $q(0)=0$ and
+\[
+ g(x)=b(x)-2\mathbf1_{x=0},\qquad F^*(x,y)=g(x)y_{Mx},
+\]
+where $M:\F^n\to\F^a$ is fixed and linear. This is an actual Boolean
+point flip, not an arbitrary perturbation of Fourier probabilities.
+Write $Q$ for the zero-diagonal symmetric polar matrix, $\ell$ for the
+linear coefficients, $r=\rk M$, $D=n-r$, and
+$k=\rk(Q|_{\ker M})$. All formulas include $D=0$ and $k=0$.
+
+\begin{theorem}[Exact surgery ledger]
+Put $\alpha=2^{-k/2}$, $\epsilon=2^{1-D}$, and
+\[
+ N_+=\frac{2^k+2^{k/2}}2,\quad N_-=\frac{2^k-2^{k/2}}2,
+ \quad N_0=2^D-2^k.
+\]
+The flipped zero fiber has squared Fourier masses
+$(\alpha-\epsilon)^2$, $(\alpha+\epsilon)^2$, and $\epsilon^2$
+with multiplicities $N_+,N_-,N_0$, respectively (zero masses omitted).
+Call the entropy of this probability list $E_{D,k}$. Then
+\[
+ \Ent(F^*)=2r+k+2^{-r}(E_{D,k}-k).
+\]
+If $c,b_0,d_0$ denote the previous quadratic ledger's counts of
+active address columns, inactive columns with nonzero polar row,
+and inactive columns with zero polar row and $\ell_i=1$, then
+\[
+ \I(F^*)=1+\frac{c+b_0}{2}+d_0
+       +2^{1-n}\sum_{i:Me_i=0}(1-2\ell_i).
+\]
+Each active address control still has influence $1/2$. Each inactive
+control's influence changes by $(1-2\ell_i)2^{1-n}$. The total data
+influence stays one.
+\end{theorem}
+\begin{proof}
+For $F_0=b(x)y_{Mx}$ only the zero-label signed indicator changes:
+\[
+ \widehat F^*(u,\{y_0\})=\widehat F_0(u,\{y_0\})-2^{1-n}.
+\]
+Every other coefficient is unchanged. On the zero fiber, the original
+quadratic spectrum has $2^k$ nonzero coefficients of magnitude
+$\alpha$ and $2^D-2^k$ zeros. Its coefficients sum to $b(0)=1$.
+Therefore the numbers of positive and negative coefficients satisfy
+$N_++N_-=2^k$ and $\alpha(N_+-N_-)=1$, which gives the displayed
+histogram. Quadratic fiber rank is even, as proved in stage 1.
+The other fibers have entropy $k$. The general fiber identity from
+stage 1, $\Ent(g(x)y_{Mx})=2r+2^{-r}\sum_z\Ent(g|_{Mx=z})$,
+gives the entropy formula.
+
+For an inactive address control, precisely the two directed edge
+endpoints $0,e_i$ change pivotal status. They were pivotal iff
+$b(0)\ne b(e_i)$, equivalently $\ell_i=1$. The probability change is
+$(1-2\ell_i)2^{1-n}$. Active address controls still select distinct
+independent data signs, so disagreement remains $1/2$.
+Data bit $y_z$ is pivotal exactly on $Mx=z$; its probability does
+not depend on the phase. This proves every physical influence statement.
+\end{proof}
+
+\paragraph{Fixed-r asymptotics with an error bound.}
+Take even $n$, $q=\sum_{j=1}^{n/2}x_{2j-1}x_{2j}$, and let $M$ project
+onto the first $r$ coordinates. Put $t=r\bmod2$, $\delta=2^{-n}$,
+$D=n-r$, and $\theta=2^{-t}$. Then $k=D-t$ and
+\[
+ \I(F^*)=1+\frac n2+2(n-r)\delta.
+\]
+Whenever $u=2^{1-D+k/2}\le1/2$,
+\[
+ \Ent(F^*)=n+r-t+4\delta(1-\theta)(D+t-2)
+              +\frac{4-12\theta}{\ln2}\delta+R,
+ \qquad |R|\le\frac{16}{\ln2}\,2^r\delta^2.
+\]
+In particular at fixed $r$, along even $n\to\infty$,
+$\Ent(F^*)/\I(F^*)\to2$. Even $r$ gives the small negative correction
+$-8\delta/\ln2+O(2^r\delta^2)$; odd $r$ gives
+$2\delta(D-1-1/\ln2)+O(2^r\delta^2)$, reflecting leakage into the
+previously zero Fourier sector of the unpaired fiber coordinate.
+
+Here is a direct remainder proof. Put $p=2^{-D}$, and let
+$\alpha=2^{-k/2}$, $u=2p/\alpha$. The zero-spectrum leakage mass is
+$L=4p(1-\theta)$, and the histogram yields
+\[
+ E_{D,k}-k=L(2D-2-k)-\frac2{\ln2}
+ \sum_{\sigma=\pm1}\frac{1+\sigma\alpha}{2}
+ (1-\sigma u)^2\ln(1-\sigma u).
+\]
+For $|z|<1$,
+\[
+ (1-z)^2\ln(1-z)=-z+\tfrac32z^2
+ -\sum_{j\ge3}\frac{2z^j}{j(j-1)(j-2)}.
+\]
+The weighted sum is $\frac32u^2-\alpha u$ plus a remainder of
+absolute value at most $u^4/6+(2/3)\alpha u^3$ when $u\le1/2$.
+Since $u^2=4\theta p$ and $\alpha u=2p$, multiplying by $2/\ln2$
+bounds the entropy remainder by
+$(16\theta^2+32\theta)p^2/(3\ln2)\le16p^2/\ln2$.
+Scaling by $2^{-r}$ proves the advertised enclosure.
+
+\paragraph{Which physical coordinates carry the root boundary charge.}
+For any physical coordinate $i$, define
+$D_i=(F^*|_{x_i=0}-F^*|_{x_i=1})/2$ on the other physical variables,
+and the real-function Dirichlet influence
+\[
+ C_i:=2\I(D_i)=2\sum_{S\ni i}(|S|-1)\widehat F^*(S)^2.
+\]
+For the preceding matching/prefix family, let $L=n-r$. Addressed
+control $i$ has
+\[
+ C_i=\frac{n+1}{2}+2L\delta.
+\]
+Unaddressed control $i$ has
+\[
+ C_i=\frac{n+1}{2}+2\delta(n+1+2\tau_i),
+ \qquad \tau_i=\mathbf1_{\text{partner of }i\text{ unaddressed}}.
+\]
+For data coordinate $y_z$, put $w(z)=0$ if $r$ is even, and let
+$w(z)$ be the last address bit if $r$ is odd. Then
+\[
+ C_{y_z}=2^{-r}(r+k+2w(z))+\mathbf1_{z=0}\,4L\delta,
+ \quad \sum_zC_{y_z}=n+4L\delta.
+\]
+Thus
+\[
+ \sum_i C_i+\sum_zC_{y_z}
+ =\frac{n(n+3)}2+2\delta\{L(n+r+3)+2k\}.
+\]
+The unlocalized root charge divided by $\I(F^*)$ grows linearly
+in $n$. This is a charge-accounting obstruction, not an FEI counterexample.
+
+To verify these identities, the control marginal of the unflipped
+matching phase is uniform: its control autocorrelation is zero off
+$h=0$ because $Q$ is nondegenerate (and differing address labels
+also give zero correlation). Hence control inclusion probabilities
+are $1/2$, and joint inclusions are $1/4$. Surgery changes the latter by
+\[
+ \Delta P(i,j\in S)=\delta\{\mathbf1_{Me_i=0}
+ +\mathbf1_{Me_j=0}
+ -\mathbf1_{Me_i=Me_j}(-1)^{Q_{ij}}\}.
+\]
+This follows by summing the changed zero-label squared coefficients
+on $u_i=u_j=1$, or evaluating the four-point inverse Walsh projection
+of its signed indicator at $0,e_i,e_j,e_i+e_j$. Sum those joint
+inclusions and the data-coordinate contribution $P(i\in S)$ to get
+$C_i$. At zero-label data, the spectral degree change is
+$\sum_i\Delta\operatorname{Inf}_i=2L\delta$, so its boundary charge
+changes by $4L\delta$. Other data labels are unchanged. Their original
+conditional control degree is $(r+k)/2+w(z)$.
+
+\begin{theorem}[A physical stopping tree with zero bad-node boundary bill]
+Suppose the quadratic polynomial has zero linear term,
+$q(x)=\sum_{i<j}Q_{ij}x_ix_j$. For arbitrary linear address map $M$,
+there is a finite physical restriction tree that queries only controls,
+has terminal-inclusive payment
+\[
+ \Ent(F^*)\le4(\I(F^*)-1),
+\]
+and satisfies, for every internal node $v$ with chosen pivot $i_v$,
+\[
+ B_{i_v}(F_v):=\Ent(S_{i_v}\mid S_{-i_v})\le2\operatorname{Inf}_{i_v}(F_v).
+\]
+In particular the B04 localized boundary bill at threshold $K=2$ is
+exactly zero:
+\[
+ \sum_{v:\, B_{i_v}>2\operatorname{Inf}_{i_v}}
+        w_v\,2\I(D_{i_v})=0.
+\]
+The bound retains the actual entropy and influence of all terminal leaves.
+\end{theorem}
+\begin{proof}
+First query all $c$ coordinates with nonzero $M$ columns, in a fixed
+order. At each node the pivot changes the terminal data label to a
+distinct data sign, so its influence is $1/2$. When these queries finish,
+the data label is fixed. All nonzero physical assignments to the queried
+controls exclude the flipped point; stop at those leaves, whose phase
+is quadratic (possibly with a linear part).
+
+On the remaining all-zero branch the phase is the zero-linear
+quadratic induced by the unqueried controls, with its origin flipped.
+If this graph has an edge, choose a coordinate with a nonzero polar
+row. The unflipped coordinate has influence $1/2$ and its edge at
+the origin is not pivotal, so its flipped influence is
+$1/2+2^{1-d}$, where $d$ is the current number of unqueried controls.
+Query it. Stop on its one-child at a quadratic phase; on the zero-child
+repeat. No nonzero linear coefficients are created on that zero-child.
+If the graph has no edge, the zero-child is the point-defect sign
+$1-2\mathbf1_0$ times its fixed data sign; stop there. This includes
+the case $d=0$, a constant phase.
+
+Every pivot has influence at least $1/2$. The binary conditional
+entropy $B_i$ is at most one bit, so $B_i\le2\operatorname{Inf}_i$.
+This proves the zero bad-node bill without invoking an unproved
+universal boundary-payment lemma. Also every one-bit physical entropy
+drop is at most two bits: $\Delta_i\Ent=B_i+\mathrm{JS}_i$, with
+both terms at most one. Thus $\Delta_i\Ent\le4\operatorname{Inf}_i$.
+
+Quadratic sign leaves obey $\Ent\le2\I$: polar rank is at most the
+number of nonzero polar rows, each contributing influence $1/2$;
+linear-only directions increase influence without increasing entropy.
+For a point defect on $d\ge2$ controls, $p=2^{-d}$ gives
+\[
+ \Ent= -2(1-2p)^2\log_2(1-2p)+8p(1-p)(d-1),\quad \I=2dp.
+\]
+The first entropy term is at most $4p/\ln2<8p$, since
+$-\ln(1-2p)\le2p/(1-2p)$ and $\ln2>1/2$. Consequently
+$\Ent\le8dp=4\I$. Cases $d=0,1$ have zero entropy and also satisfy
+the inequality. Every terminal phase is multiplied by one independent
+data sign, which adds exactly one influence and no entropy. Thus
+each terminal has $\Ent\le4(\I-1)$.
+
+Let $P=\sum_vw_v\operatorname{Inf}_{i_v}$, and let $L$ be the
+random terminal. Exact physical restriction identities give
+\[
+ \I(F^*)=P+\mathbb E\I(F_L),\qquad
+ \Ent(F^*)=\sum_vw_v\Delta_{i_v}\Ent+\mathbb E\Ent(F_L).
+\]
+The terminal data influence remains exactly one on every leaf.
+Combining the proved pivot and terminal payments gives
+$\Ent(F^*)\le4P+4(\mathbb E\I(F_L)-1)=4(\I(F^*)-1)$.
+No ancestral influence is spent a second time at a terminal.
+\end{proof}
+
+\paragraph{Exact spend in the matching/prefix tree.}
+For even $n$, prefix address rank $r$, and $s=k/2$ remaining edges,
+the tree has phase pivots only on the origin-containing path.
+Their weights are $2^{-(r+j)}$, $j=0,\ldots,s-1$.
+Its entire queried influence budget is
+\[
+ P=\frac r2+2^{-r}(1-2^{-s})+2s\delta.
+\]
+The final point-defect leaf has $d=n-r-s$ controls, probability
+$2^{-(r+s)}$, and exact weighted phase influence $2d\delta$.
+Its entropy is retained as $2^{-(r+s)}\Ent(1-2\mathbf1_0)$.
+Most of the order-$n$ initial entropy and influence remains in the
+quadratic terminal leaves; the small pivot budget is not asserted to
+pay that terminal core for free.
+
+\paragraph{Scope and first unsupported line.}
+The exact surgery histogram and physical influence identities allow
+linear terms; the zero-bad-node tree theorem requires zero linear term
+at the flipped point. This is a controlled nonquadratic family, outside
+the unperturbed rank ledger. Its constant four is sharp on the
+$M=0,q=0$ point-defect subfamily, whose $\Ent/(\I-1)\to4$.
+The tree proof is a proper C019 payment, not a universal theorem.
+For an arbitrary Boolean phase, the first unsupported line is the
+existence of a physical pivot with $B_i\le K\operatorname{Inf}_i$
+or a globally paid bad-node boundary bill, together with certified
+terminal core entropy. A global quadratic graph and a single known
+defect point supply that pivot here; arbitrary coherent overlapping
+defect sets need not preserve it.
+\end{document}

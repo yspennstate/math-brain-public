@@ -1,0 +1,28 @@
+n=1024 d=3 k=10 groups=103 m=19 P=33554467 (26 bits) key bits=23 seed tries=1
+first layer (projection + key bits): 1196 params, weights as exact fractions up to ~2^58 (roundable)
+relu nodes=2016 params(nonzero weights+biases)=6675 max |integer weight| after layer 1 ~2^49
+params by part: layer 1 1196, group lookup 663 (6.44 per group), hash 4318, parity readout 498
+wrong=0 of 1024 evaluated (all n points satisfy the GF(2) systems by construction)
+params/n=6.5186  params*log2(n)/n=65.186  lower bound n/(B+log2 W)=17
+
+n=4096 d=3 k=12 groups=342 m=23 P=536870923 (30 bits) key bits=27 seed tries=1
+first layer (projection + key bits): 1620 params, weights as exact fractions up to ~2^65 (roundable)
+relu nodes=3192 params(nonzero weights+biases)=10425 max |integer weight| after layer 1 ~2^57
+params by part: layer 1 1620, group lookup 2105 (6.15 per group), hash 6114, parity readout 586
+wrong=0 of 4096 evaluated (all n points satisfy the GF(2) systems by construction)
+params/n=2.5452  params*log2(n)/n=30.542  lower bound n/(B+log2 W)=58
+
+n=16384 d=3 k=14 groups=1171 m=27 P=17179869209 (35 bits) key bits=34 seed tries=1
+first layer (projection + key bits): 2516 params, weights as exact fractions up to ~2^73 (roundable)
+relu nodes=5838 params(nonzero weights+biases)=18933 max |integer weight| after layer 1 ~2^69
+params by part: layer 1 2516, group lookup 7093 (6.06 per group), hash 8643, parity readout 681
+wrong=0 of 400 evaluated (all n points satisfy the GF(2) systems by construction)
+params/n=1.1556  params*log2(n)/n=16.178  lower bound n/(B+log2 W)=197
+
+n=65536 d=3 k=16 groups=4096 m=30 P=68719476767 (37 bits) key bits=33 seed tries=1
+first layer (projection + key bits): 2376 params, weights as exact fractions up to ~2^75 (roundable)
+relu nodes=12271 params(nonzero weights+biases)=37985 max |integer weight| after layer 1 ~2^70
+params by part: layer 1 2376, group lookup 24641 (6.02 per group), hash 10228, parity readout 740
+wrong=0 of 200 evaluated (all n points satisfy the GF(2) systems by construction)
+params/n=0.5796  params*log2(n)/n=9.274  lower bound n/(B+log2 W)=769
+

@@ -1,0 +1,13 @@
+{
+ "helper_version":"A043-quadratic-slack-polynomial-v1",
+ "family":"same actual prime56067, polynomial sufficient condition S_poly>=4T; all eight sign choices for c_a,c_x,c_y, with c_z nonnegative",
+ "domain":"whole unit box (alpha,e,d,q); eight rational polynomials; inspect full-box Bernstein coefficients only, no automatic subdivision",
+ "case_count":8,
+ "symmetry":"none; all sign choices retained as polynomial extensions",
+ "arithmetic":"exact symbolic rational polynomial expansion and tensor power-to-Bernstein transform at exact coordinate degrees; all coefficient signs rational",
+ "memory_estimate_mb":120,
+ "max_runtime_seconds":60,
+ "pilot":"the same8 polynomial transforms; stop after frozen scope; no numerical optimizer",
+ "command":"python -X utf8 code/bernstein.py",
+ "purpose":"attempt an analytic sharp-Cstar certificate, distinct from passing finite log checks; negative Bernstein coefficients mean this certificate attempt is inconclusive, not a Boolean counterexample"
+}

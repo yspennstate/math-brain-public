@@ -1,0 +1,81 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w386",
+  "bundle_slug": "p0117-source-and-referee-reductions-20261010",
+  "entries": [
+    {
+      "key": "p0117-source-scope",
+      "namespace": "probability.core",
+      "logical_name": "p0117-primary-statement-and-2026-claim-scope",
+      "kind": "concept",
+      "title": "P0117 primary conjecture and 2026 claim scope (draft)",
+      "statement": "Damron-Hanson Conjecture 1 asks whether iid continuous nonnegative nearest-neighbor edge weights on Z^2 almost surely admit no bigeodesic, with no moment hypothesis stated there. A public preprint dated 2026-09-24 claims this conclusion when the minimum of four independent weights has finite second moment. This later proof claim has not passed independent full-paper review in this packet. Current openness is UNKNOWN; do not infer that the moment-free conjecture is settled.",
+      "proof_text": null,
+      "assumptions": ["Conjecture 1 is read in Damron-Hanson's nonnegative Z^2 edge-weight setup", "Recent paper is a public claim, not a certified theorem here"],
+      "domain": "planar first-passage percolation",
+      "source": {
+        "source_id": "arxiv:1512.00804v2:conjecture-1",
+        "url": "https://arxiv.org/pdf/1512.00804",
+        "revision": "v2, read 2026-10-10; recent claim compared at 2026-09-24 public PDF Theorem 1.1",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "Almost surely there are no bigeodesics in dimension two."
+      }
+    },
+    {
+      "key": "p0117-edge-threshold",
+      "namespace": "probability.core",
+      "logical_name": "p0117-deleted-edge-bigeodesic-threshold-draft",
+      "kind": "concept",
+      "title": "P0117 deleted-edge threshold reduction (reviewed draft)",
+      "statement": "Under iid finite positive nonatomic weights on nearest-neighbor Z^2, fix an edge e={u,v} and condition on all other weights. Let d be the metric with e deleted, C_e(x,y)=min(d(x,u)+d(v,y),d(x,v)+d(u,y)), and H_n=max(0,max_{x,y in S_n}[d(x,y)-C_e(x,y)]) for infinity-norm shells S_n containing e strictly inside. H_n decreases to H_infinity and P(e belongs to a bigeodesic | other weights)=F(H_infinity). Thus absence by this route requires H_infinity<=essential infimum(F) almost surely, which is UNPROVED here. One independent referee KEEP supports only the reduction; second-login review is pending.",
+      "proof_text": null,
+      "assumptions": ["iid finite positive nonatomic weights", "nearest-neighbor Z^2", "e fixed, n large enough that e lies strictly inside the shell"],
+      "domain": "planar first-passage percolation",
+      "source": {
+        "source_id": "owner-campaign:P0117:w384:S1.4",
+        "url": "~/brain_workers/w384/ATTEMPT.md",
+        "revision": "2026-10-10; referee w386 REVIEWS.jsonl",
+        "license": "owner-own-work (attributed, not reproduced)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0117-shell-union-obstruction",
+      "namespace": "probability.core",
+      "logical_name": "p0117-fixed-pair-shell-union-obstruction-draft",
+      "kind": "concept",
+      "title": "P0117 fixed-pair shell union obstruction (reviewed draft)",
+      "statement": "Let S_n be the infinity-norm shell of radius n in Z^2 and q_n=max_{u!=v in S_n} P(0 lies on Geo(u,v)). Under iid atomless weights with the min-of-four second moment condition, a positive norm shape theorem yields a deterministic C>=2 for which (2n+1)q_n+2 sum_{r=n+1}^{Cn}q_r>=1-o(1). Hence q_n cannot be o(1/n) on all scales. The raw bound P(some S_n-pair geodesic through 0)<=min(1,binom(8n,2)q_n) therefore cannot prove vanishing by improving q_n alone. This gives no positive lower bound for the union event. One independent referee KEEP supports this route obstruction; second-login review is pending.",
+      "proof_text": null,
+      "assumptions": ["iid atomless finite nonnegative nearest-neighbor weights on Z^2", "finite second moment of the minimum of four iid weights", "positive norm and uniform shape theorem"],
+      "domain": "planar first-passage percolation",
+      "source": {
+        "source_id": "owner-campaign:P0117:w385:S1.6",
+        "url": "~/brain_workers/w385/INDEPENDENT.md",
+        "revision": "2026-10-10; referee w386 REVIEWS.jsonl",
+        "license": "owner-own-work (attributed, not reproduced)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0117-source-scope",
+      "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+      "kind": "semantic_association",
+      "rationale": "The existing card says 'For nondegenerate continuous iid planar passage-time laws ... determine whether a bi-infinite geodesic exists'; the new card quotes the primary conjecture's scope and distinguishes the later moment-restricted proof claim."
+    },
+    {
+      "from_key": "p0117-edge-threshold",
+      "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+      "kind": "semantic_association",
+      "rationale": "The existing card asks whether a bi-infinite geodesic exists; the new card's conditional probability F(H_infinity) is exactly the fixed-edge witness reformulation, with support collapse explicitly unproved."
+    },
+    {
+      "from_key": "p0117-shell-union-obstruction",
+      "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+      "kind": "semantic_association",
+      "rationale": "The existing card asks for absence of bi-infinite geodesics; the new card says the maximum fixed-pair midpoint bound cannot by itself control the all-shell-pair witness union."
+    }
+  ]
+}

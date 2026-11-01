@@ -1,0 +1,2 @@
+STATE: A006 stage6 saved: FULL partition star gap<91I/24 all-m and<I/3 m2..32;63 full n4 graph gap<41I/10,3824 actual runs,57 cap gains; A010 whole HOLDS;192 recovered joint slices PASS; FEI OPEN.
+NEXT: Pay complete full-family occupation numerator on adjacent shared high-degree/leafless incidence using exact spectral rows, vertex-price root caps and factorial posterior credit; A010/A008/A086 review.

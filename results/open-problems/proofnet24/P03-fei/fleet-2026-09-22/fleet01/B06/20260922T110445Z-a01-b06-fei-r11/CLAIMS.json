@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "control_revision": "2026-09-22.3",
+  "run_id": "20260922T110445Z-a01-b06-fei-r11",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN",
+  "claims": [
+    {
+      "claim_id": "FEI-B06-NEAR-CHARACTER-DESCENT-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope_kind": "AUXILIARY_LEMMA",
+      "statement": "Let F be balanced with I(F)>1, rho=H(F)/(I(F)-1), L=I(F)-1, and let coordinate j have Inf_j(F)=1-epsilon with 0<=epsilon<=1/2. If V is the common output variance of the gauged children F_+ and -F_-, then at least one nonconstant raw restriction G in {F_+,F_-} satisfies H(G)/I(G) >= rho-[(rho+2/ln2)epsilon+V h2(epsilon/V)]/(L+epsilon). The sharper exact version replaces the numerator correction by rho epsilon + Delta_j H.",
+      "hypotheses": [
+        "F is a finite genuine Boolean function on the uniform cube",
+        "E[F]=0",
+        "I(F)>1",
+        "Inf_j(F)>=1/2",
+        "V is the common child variance after the character gauge"
+      ],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "b0dfb959fe6e8d8ad098d9d7a6251f2db1435dc1",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet01/B06/20260922T110445Z-a01-b06-fei-r11/REPORT.md",
+        "section": "3. Main theorem: a near-character coordinate forces a lower-dimensional near-extremizer"
+      },
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "source": "yspennstate/math-open-problems@374c4874e914c7414abc9109fadf77cfc3947298:proofnet24/P03-fei/fleet-2026-09-22/fleet01/B06/b06-20260922T103931Z-fei-r11/REPORT.md",
+          "result": "RAW-RESTRICTION-SUSPENSION-LEDGER-v1"
+        },
+        {
+          "mode": "uses_premise",
+          "source": "yspennstate/math-open-problems@11640269577cb955ad32c15f615ddd0da5df8ce9:proofnet24/P03-fei/fleet-2026-09-22/fleet03/B06/20260922T104822Z-fleet03-B06-fei-r11/REPORT.md",
+          "result": "FEI-CHARACTER-FOLD-LEDGER-v1 and the output-conditioned entropy-debit bound"
+        }
+      ],
+      "verification_provenance": "Complete proof in this source; no independent end-to-end review claimed."
+    },
+    {
+      "claim_id": "FEI-B06-RECORD-CHARACTER-EXCLUSION-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope_kind": "AUXILIARY_LEMMA",
+      "statement": "Let M_{n-1}=max H(g)/I(g) over nonconstant Boolean g on at most n-1 variables. For balanced F on n variables with rho=H(F)/(I(F)-1)>M_{n-1}, put gamma=rho-M_{n-1} and L=I(F)-1. Every coordinate with Inf_j(F)=1-epsilon>=1/2 satisfies gamma L <= V h2(epsilon/V)+(M_{n-1}+2/ln2)epsilon <= h2(epsilon)+(M_{n-1}+2/ln2)epsilon. Hence every high-influence coordinate is quantitatively separated from 1 by the inverse of the strictly increasing displayed function; in particular no strict new record has an influence-one coordinate.",
+      "hypotheses": [
+        "F is balanced and I(F)>1",
+        "rho exceeds the exact lower-dimensional ordinary FEI record M_{n-1}",
+        "the coordinate considered has influence at least 1/2"
+      ],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "b0dfb959fe6e8d8ad098d9d7a6251f2db1435dc1",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet01/B06/20260922T110445Z-a01-b06-fei-r11/REPORT.md",
+        "section": "4. Strict dimension-record extremizers are quantitatively separated from the character boundary"
+      },
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "claim_id": "FEI-B06-NEAR-CHARACTER-DESCENT-v1"
+        }
+      ],
+      "verification_provenance": "Complete proof in this source; no independent review claimed."
+    },
+    {
+      "claim_id": "FEI-B06-GAPFREE-CHARACTER-CLOSURE",
+      "status": "OPEN",
+      "scope_kind": "MISSING_IMPLICATION",
+      "statement": "Prove a gap-free descent-or-payment alternative: if the strict dimension-record gap degenerates while a high-influence coordinate approaches the character boundary, then either one genuinely descends to a lower-dimensional ordinary Boolean function without losing the target ratio, or exact hierarchy/I-projection/Booleanity credit pays the suspension loss rho epsilon + Delta_j H. Equivalently exclude an extremizing sequence with gamma(I-1)->0 and epsilon->0 that does neither.",
+      "dependencies": [
+        {
+          "mode": "uses_context",
+          "claim_id": "FEI-B06-RECORD-CHARACTER-EXCLUSION-v1"
+        }
+      ]
+    }
+  ],
+  "partner_status": {
+    "named_partner": "fleet02/B06",
+    "compatible_completed_current_programme_result_observed": false,
+    "other_account_result_consumed": "fleet03/B06 FEI-CHARACTER-FOLD-LEDGER-v1 @ 11640269577cb955ad32c15f615ddd0da5df8ce9"
+  },
+  "independent_full_proof_review": false,
+  "full_brain_connected": false
+}

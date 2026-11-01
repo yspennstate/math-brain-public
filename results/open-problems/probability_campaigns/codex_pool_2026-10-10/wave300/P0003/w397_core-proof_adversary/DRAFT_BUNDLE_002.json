@@ -1,0 +1,91 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w397",
+  "bundle_slug": "p0003-fixed-length-audit-addendum-20261010",
+  "entries": [
+    {
+      "key": "length-kernel",
+      "namespace": "probability.saw",
+      "logical_name": "saw-length-resolved-continuation-kernel",
+      "kind": "definition",
+      "title": "Length-resolved SAW continuation kernel",
+      "statement": "For a finite graph G with inherited positive edge weights, C_m(G;v) is the sum of product weights over simple paths of exactly m edges starting at v, with a free terminal vertex; C_0(G;v)=1 for a retained v. In a uniform n-step origin-started SAW law, a realized k-edge prefix eta has a suffix law on G_eta with exact remaining length n-k, where G_eta deletes earlier prefix vertices and retains its tip. Obstacle avoidance therefore uses C_(n-k)(G_eta minus A;tip)/C_(n-k)(G_eta;tip), multiplied by the prefix-avoidance indicator. An all-length partition sum defines a different conditional law.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite graph containing all n-step origin walks",
+        "Simple paths",
+        "Positive-probability prefix",
+        "Exact n-step ensemble"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-w397-p0003-length-audit-20261010:length-kernel",
+        "url": null,
+        "revision": "2026-10-10-draft-independent-audit",
+        "license": "owner-own-work",
+        "excerpt": "w396 proposed the length-preserving kernels and first-entrance bound; w397 independently audited them in REVIEW_w396_proof.md. The static estimate remains unproved."
+      }
+    },
+    {
+      "key": "entrance-bound",
+      "namespace": "probability.saw",
+      "logical_name": "fixed-length-saw-first-collar-entrance-bound-draft",
+      "kind": "concept",
+      "title": "Draft first-collar-entrance counting bound",
+      "statement": "DRAFT checked counting reduction; integration referee for the newest fixed-length packet is pending. For nested forbidden edge sets A subset B, every length-n path avoiding A but using B has a unique first B edge(v,w), after k edges. Its prefix avoids B and its suffix avoids A with length n-k-1. Consequently its total count is at most sum over k=0,...,n-1 and oriented(v,w) in B minus A of c_k^B(0,v)*C_(n-k-1)^A(w). Unit edge weights are assumed; include the first-edge weight for a weighted version. Dropping mutual prefix/suffix avoidance increases the count and supplies no scale-uniform collar decay.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite graph",
+        "Unit weights for the displayed counts",
+        "Nested forbidden edge sets",
+        "Exact length n",
+        "C_0=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-w397-p0003-length-audit-20261010:entrance-bound",
+        "url": null,
+        "revision": "2026-10-10-draft-independent-audit",
+        "license": "owner-own-work",
+        "excerpt": "w396 proposed the length-preserving kernels and first-entrance bound; w397 independently audited them in REVIEW_w396_proof.md. The static estimate remains unproved."
+      }
+    },
+    {
+      "key": "hdisk-gap",
+      "namespace": "probability.saw",
+      "logical_name": "uniform-fixed-length-saw-disk-collar-estimate-open-input",
+      "kind": "concept",
+      "title": "Unproved fixed-length SAW disk-collar estimate",
+      "statement": "UNPROVED INPUT for an explicitly chosen version of P0003. Take a uniform n-step origin-started honeycomb SAW and scale its trace by s_n=n^(-3/4). For a fixed closed disk A centered at z of radius r<|z| and its concentric radius(1+epsilon)r disk B_epsilon, let Delta_n(epsilon)=P(the scaled trace avoids A but intersects B_epsilon). The requested bound is limsup_(n to infinity)Delta_n(epsilon)<=C(z,r)*epsilon^alpha for some alpha>0, finite C(z,r), and all sufficiently small epsilon. The n limit comes first. This modulus is not proved by the finite continuation identity, a Doob inequality, or the first-entrance counting bound. Even proving it would still leave SLE identification, ordered-curve tightness, and the scale/continuum conventions open.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform exact-length-n honeycomb walks",
+        "Operational conjectured scale n^(-3/4)",
+        "Fixed z,r with r<|z|",
+        "epsilon small enough that the enlarged disk avoids the origin"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-w397-p0003-length-audit-20261010:hdisk-gap",
+        "url": null,
+        "revision": "2026-10-10-draft-independent-audit",
+        "license": "owner-own-work",
+        "excerpt": "w396 proposed the length-preserving kernels and first-entrance bound; w397 independently audited them in REVIEW_w396_proof.md. The static estimate remains unproved."
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "entrance-bound",
+      "to_key": "length-kernel",
+      "kind": "depends_on",
+      "rationale": "The injection uses the exact remaining-length suffix count defined by C_m, including m=0."
+    },
+    {
+      "from_key": "hdisk-gap",
+      "to_key": "entrance-bound",
+      "kind": "semantic_association",
+      "rationale": "The bound gives an upper count for the H_disk collar event but lacks the quantitative mutually avoiding mass estimate needed to make that count small."
+    }
+  ]
+}

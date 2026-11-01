@@ -1,0 +1,43 @@
+{
+  "mss_endpoint": {
+    "delta": 0.05555555555555555,
+    "c_delta": 0.11111111111111113,
+    "delta_over_c": 0.4999999999999999,
+    "density_constant_exact": 203.39433660307503,
+    "simple_upper_23_over_c": 206.99999999999997,
+    "tail_threshold_c_over_16": 0.006944444444444446
+  },
+  "tilted_plane_family": [
+    {
+      "r": 1.0,
+      "eigenvalues": [-0.9999999999999998, -9.974659986866641e-17, 1.0, 1.0],
+      "detD_abs": 0.4999999999999999,
+      "theta": 0.7071067811865475,
+      "Omega": 0.4999999999999999,
+      "bound": 15.119052598738477
+    },
+    {
+      "r": 2.0,
+      "eigenvalues": [-1.0, -3.608224830031759e-16, 1.0, 1.0],
+      "detD_abs": 0.19999999999999998,
+      "theta": 0.7071067811865475,
+      "Omega": 0.4999999999999999,
+      "bound": 12.926608140191302
+    },
+    {
+      "r": 10.0,
+      "eigenvalues": [-1.0, 2.220446049250313e-16, 1.0, 1.0000000000000002],
+      "detD_abs": 0.0099009900990099,
+      "theta": 0.7071067811865475,
+      "Omega": 0.4999999999999999,
+      "bound": 12.03986740250507
+    }
+  ],
+  "checks": {
+    "mss_endpoint_exact_identities": "PASS: c_(1/18)=1/9 and delta/c=1/2",
+    "tail_threshold": "PASS: c/16=1/144",
+    "target_family_spectrum": "PASS: three nonzero eigenvalues are numerically {-1,1,1} for r=1,2,10",
+    "tilted_plane_currency": "PASS: theta^2=Omega=1/2",
+    "bound_monotonicity_sample": "PASS: bound decreases from 15.1191 at r=1 toward 12 as r increases"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "run": "20261023T232238Z",
+  "recorded_at": "2026-10-23T23:36:16.925Z",
+  "root_model": "UNKNOWN",
+  "workers_selected": [
+    {
+      "agent": "e01_nonsmooth_obstruction",
+      "model": "gpt-6-sol",
+      "reasoning_effort": "max"
+    },
+    {
+      "agent": "e02_endpoint_selection",
+      "model": "gpt-6-sol",
+      "reasoning_effort": "max"
+    },
+    {
+      "agent": "e03_discrete_sliding",
+      "model": "gpt-6-sol",
+      "reasoning_effort": "max"
+    },
+    {
+      "agent": "e04_boundary_audit",
+      "model": "gpt-6-sol",
+      "reasoning_effort": "max"
+    }
+  ],
+  "worker_backend_attestation": "UNKNOWN",
+  "parallel_workers": 4,
+  "available_concurrency_including_root": 7,
+  "thirty_workers_spawned_this_run": false,
+  "latest_continuation_trees": {
+    "math": "575fb932592b539569d3188ec27aa8c1b28a60b5",
+    "brain": "575fb932592b539569d3188ec27aa8c1b28a60b5"
+  },
+  "latest_prior_run": "20261023T224735Z",
+  "fresh_reads_both_repositories": [
+    {
+      "path": "CLAIMS.json",
+      "math_blob": "2e2464997f3f19c6b31f2c8b76b18b3aaa86b6ae",
+      "brain_blob": "2e2464997f3f19c6b31f2c8b76b18b3aaa86b6ae",
+      "full_content_equal": true
+    },
+    {
+      "path": "agents/d01_k_input_extension.md",
+      "math_blob": "908fa78a7a7c85377c1d6c8e6d7723606f73268d",
+      "brain_blob": "908fa78a7a7c85377c1d6c8e6d7723606f73268d",
+      "full_content_equal": true
+    },
+    {
+      "path": "SENSITIVITY_LEMMA.md",
+      "math_blob": "1a9404d0e7249f2dc06edfbf9dfaf528ec14615c",
+      "brain_blob": "1a9404d0e7249f2dc06edfbf9dfaf528ec14615c",
+      "full_content_equal": true
+    },
+    {
+      "path": "agents/d02_discrete.md",
+      "math_blob": "21e69b2049380a28082f15c3fc40a8ac9bd3f8dd",
+      "brain_blob": "21e69b2049380a28082f15c3fc40a8ac9bd3f8dd",
+      "full_content_equal": true
+    },
+    {
+      "path": "DIRECTIONS.md",
+      "math_blob": "9226450811a331b806f774aabc8b289ed8780205",
+      "brain_blob": "9226450811a331b806f774aabc8b289ed8780205",
+      "full_content_equal": true
+    },
+    {
+      "path": "reviews/d02_k_input_review.md",
+      "math_blob": "d4b006d833a7b66653fa2a77e9cad7475815424c",
+      "brain_blob": "d4b006d833a7b66653fa2a77e9cad7475815424c",
+      "full_content_equal": true
+    },
+    {
+      "path": "reviews/d04_sensitivity_review.md",
+      "math_blob": "88632925b2042118d27bd88c98f7fdf9fdfc972d",
+      "brain_blob": "88632925b2042118d27bd88c98f7fdf9fdfc972d",
+      "full_content_equal": true
+    }
+  ],
+  "catalog_blob": "b8d4607e60eafcce5b3e8286cf882e8931737bd6",
+  "catalog_rows": 422,
+  "row_moves_blob": "6289f46595e36a85cd9388d16c84f89bc57fc774",
+  "start_inbox_tree": "7f68d62a748a3a7d40703ad1ca0a842b36ec4331",
+  "prior_revision_7_delivery": {
+    "blob": "3d80297df64a6595753734744e7b6a6a59df2b19",
+    "delivered_at": "2026-10-23T23:11:51.060Z",
+    "recipient": "claude:a08bb916",
+    "recipient_state": "live",
+    "is_native_ingestion": false
+  },
+  "native_ingestion_confirmed": false,
+  "external_priority": "UNVERIFIED",
+  "recovered_access_error": "Initial inbox lookup used Brain repository and returned 404; corrected to established Math Brain inbox and read successfully. No blocked or protected source bypass.",
+  "holds_preserved": [
+    "HOUSE/RECENT/reason1k/hard1k/prospective banks",
+    "PR229 held source",
+    "REQ-2026100617117951 payload",
+    "held19:38 reroute"
+  ],
+  "no_public_release": true,
+  "no_core_store_deployment": true,
+  "no_routine_email": true,
+  "no_paid_compute": true,
+  "proof_status_meaning": "PROVED is internal derivation plus stated independent review, with explicit dependencies; not external certification.",
+  "execution_record": "outputs/EXECUTION_READBACK.json",
+  "scope": "Private git-backed research package; no duplicate Library export."
+}

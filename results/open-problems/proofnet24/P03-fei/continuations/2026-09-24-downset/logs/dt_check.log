@@ -1,0 +1,14 @@
+~\AppData\Local\Temp\claude\<project>\28de8af7-af40-4a4d-b525-63747a350bce\scratchpad\mono2\dt_check.py:75: RuntimeWarning: invalid value encountered in divide
+  osss = (maxinf * E / Var)[nonconst]
+~\AppData\Local\Temp\claude\<project>\28de8af7-af40-4a4d-b525-63747a350bce\scratchpad\mono2\dt_check.py:81: RuntimeWarning: invalid value encountered in divide
+  rel = (maxinf / m)[nonconst]
+all monotone n=1                  1 fns | min maxInf*E*/Var 1.0000 | E*<=log2 s* True | E*<=D* True | max (H/I)/bound -0.000 | min max Inf/m 2.0000 | max E* 1.000, max L 1.000
+all monotone n=2                  4 fns | min maxInf*E*/Var 1.0000 | E*<=log2 s* True | E*<=D* True | max (H/I)/bound 0.238 | min max Inf/m 2.0000 | max E* 1.500, max L 1.500
+all monotone n=3                 18 fns | min maxInf*E*/Var 1.0000 | E*<=log2 s* True | E*<=D* True | max (H/I)/bound 0.342 | min max Inf/m 1.0000 | max E* 2.500, max L 2.500
+all monotone n=4                166 fns | min maxInf*E*/Var 1.0000 | E*<=log2 s* True | E*<=D* True | max (H/I)/bound 0.389 | min max Inf/m 0.8571 | max E* 3.125, max L 3.125
+all monotone n=5               7579 fns | min maxInf*E*/Var 1.0000 | E*<=log2 s* True | E*<=D* True | max (H/I)/bound 0.412 | min max Inf/m 0.7500 | max E* 4.125, max L 4.125
+random monotone DNF n=8          60 fns | min maxInf*E*/Var 1.0000 | E*<=log2 s* True | E*<=D* True | max (H/I)/bound 0.435 | min max Inf/m 0.6457 | max E* 5.141, max L 5.141
+random monotone DNF n=9          60 fns | min maxInf*E*/Var 1.0000 | E*<=log2 s* True | E*<=D* True | max (H/I)/bound 0.437 | min max Inf/m 0.5882 | max E* 5.926, max L 5.926
+random monotone DNF n=10         25 fns | min maxInf*E*/Var 1.0000 | E*<=log2 s* True | E*<=D* True | max (H/I)/bound 0.439 | min max Inf/m 0.5855 | max E* 6.164, max L 6.164
+smallest max_v Inf_v * E*(f) / Var over all cases: 1.0000 (OSSS says >= 1)
+largest (H/I) / (4.6355 + Psi(2L-2)): 0.4390 (the corollary says <= 1)

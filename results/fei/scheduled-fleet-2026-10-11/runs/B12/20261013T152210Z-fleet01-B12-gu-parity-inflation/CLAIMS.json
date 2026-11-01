@@ -1,0 +1,38 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261013T152210Z-fleet01-B12-gu-parity-inflation",
+  "claims": [
+    {
+      "claim_id": "B12-A056-GU-BALANCED-CHAIN-v1",
+      "status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+      "scope": "For every Boolean outer gate and pairwise-disjoint balanced Boolean children, U(g(h))=U(g)+sum_j Inf_j(g)U(h_j), and I(g(h))=sum_j Inf_j(g)I(h_j).",
+      "quantifiers": "All finite arities, dimensions, and genuine Boolean outer and inner functions satisfying pairwise disjointness and zero child means.",
+      "artifact": "GU_PARITY_INFLATION.tex"
+    },
+    {
+      "claim_id": "B12-A056-GU-PARITY-INFLATION-v1",
+      "status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+      "scope": "For F=g(P_1,...,P_m) with nonempty disjoint parity blocks of sizes d_j, U(F)=U(g), I(F)=sum_j d_j Inf_j(g), and G(F)=sum_{j:d_j=1} Delta_j U(g).",
+      "quantifiers": "Every finite arity, every genuine Boolean outer gate, and all positive integer block sizes.",
+      "new_bound": "If all d_j>=2, G(F)=0, giving the sharp class constant K=0 independent of dimension, arity, width, and flattened parity depth.",
+      "artifact": "GU_PARITY_INFLATION.tex"
+    },
+    {
+      "claim_id": "B12-A056-GU-SIGNED-DELTA-OBSTRUCTION-v1",
+      "status": "REFUTED_CANDIDATE_BY_EXACT_GENUINE_BOOLEAN_WITNESS",
+      "candidate_refuted": "Coordinatewise nonnegativity Delta_i U>=0, and the resulting monotonicity of G under parity inflation.",
+      "witness": "Three-bit truth vector (+,+,-,+,+,-,-,-) has Delta U=(1/2,-1/2,-1/2) and G=-1/2; widths (1,2,2) give G=1/2.",
+      "scope_limit": "This does not refute the upper bound G<=K I, universal GU, or FEI.",
+      "artifact": "GU_PARITY_INFLATION.tex"
+    },
+    {
+      "claim_id": "B12-A056-GU-COMPOSITION-v1",
+      "status": "OPEN_ADVANCED",
+      "scope": "Pay the complete biased upper-mass composition defect after physical restriction of a generic balanced child.",
+      "unpaid_step": "Derive a signed biased-child defect identity and pay its coherent remainder with one source-influence or terminal-reserve ledger across adaptive restrictions."
+    }
+  ],
+  "universal_gu_status": "OPEN",
+  "full_fei_status": "OPEN"
+}
+

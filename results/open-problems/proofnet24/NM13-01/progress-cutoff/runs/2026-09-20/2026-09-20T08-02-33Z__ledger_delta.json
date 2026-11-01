@@ -1,0 +1,32 @@
+{
+  "slot": "NM13-01",
+  "parent": "T08",
+  "source": "Salez arXiv:2508.21055v1 Problem 2.3",
+  "runtime_model": "GPT-5.6 Sol",
+  "runtime_reasoning": "UNVERIFIED",
+  "parent_status_before": "PARTIAL / OPEN",
+  "parent_status_after": "PARTIAL / OPEN",
+  "original_problem_scope_before": "all bounded-degree vertex-transitive spectral expanders; unresolved",
+  "original_problem_scope_after": "all bounded-degree vertex-transitive spectral expanders; unresolved",
+  "new_restricted_theorem": "growing-fiber semidirect Cayley cutoff transfer; explicit 103-regular non-LRE Cayley expander family with source-convention cutoff",
+  "new_class_center": "(103/52) log_5 n, where n is the size of the 6-regular Ramanujan base before the K2 factor",
+  "new_class_window": "O(sqrt(log n)); equivalently O(sqrt(log N)) for output size N because the growing fiber is chosen subpolynomial",
+  "new_class_degree": 103,
+  "new_class_vertex_transitive": true,
+  "new_class_spectral_expander": true,
+  "new_class_long_range_expander": false,
+  "mechanism_advance": "conditional fiber L2 contraction for nontrivial semidirect twists with growing fibers, plus a necessary macroscopic likelihood-phase coexistence lemma for any hypothetical non-cutoff vertex-transitive expander",
+  "general_obstruction_removed": "large varentropy cannot be caused only by local spikes, orbit-rank artifacts, or vanishing-mass exceptional fibers: non-cutoff forces two positive-heat-mass root-stabilizer-invariant information phases separated by Theta(log n) in log-likelihood and graph distance",
+  "partner_split": "P26 remains on Green/spherical/radial-clock transfer, now including biregular exact-distance-four halves; NM13-01 remains on algebraic transitivity, semidirect extensions, and stabilizer likelihood structure",
+  "proof_status": "CANDIDATE_FULL for restricted transfer/class and phase-separation lemma; pending later independent review",
+  "publication_novelty": "UNVERIFIED",
+  "sanity_checker": "2026-09-20T08-02-33Z__semidirect-growing-fiber-checker.py",
+  "sanity_output": "2026-09-20T08-02-33Z__semidirect-growing-fiber-checker.out",
+  "sanity_result": "ALL_CHECKS_PASS",
+  "prewrite_master": "59c1b2d67a673a9937ab3435e5f272fa68566ff0",
+  "failed_routes": [
+    "A direct stationary-Poincare bound on heat-kernel log-likelihood does not control varentropy because varentropy is under the evolving heat-kernel law rather than stationarity.",
+    "Stationary concentration of root-stabilizer orbit sizes is not the missing dynamic estimate; the previous run's exact likelihood cancellation removes orbit-size rank from the dynamic information variable."
+  ],
+  "next_attack": "Exploit the phase-coexistence lemma: use transitivity to compare two positive-mass likelihood phases under automorphic translates and try to force either excessive boundary flow or rapid entropy dissipation, contradicting coexistence at a mixing time."
+}

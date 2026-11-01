@@ -1,0 +1,1 @@
+Stage9 mechanism: independently consume A052 rank ownership; prove SAME-K loss-of-compactness guard and explicit tail-certified finite Boolean approximation. No optimizer assumed; no critical pair selected. FEI OPEN.

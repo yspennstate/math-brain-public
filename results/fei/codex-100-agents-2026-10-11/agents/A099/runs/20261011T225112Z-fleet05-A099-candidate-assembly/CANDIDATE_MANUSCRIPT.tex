@@ -1,0 +1,566 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref,longtable}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{conjecture}[lemma]{Conjecture}
+\newtheorem{proposition}[lemma]{Proposition}
+\newcommand{\E}{\mathbb E}
+\newcommand{\I}{\mathcal I}
+\newcommand{\KL}{D_2}
+\newcommand{\CE}{\operatorname{CE}}
+\newcommand{\Ent}{\operatorname{Ent}}
+\title{FEI candidate assembly: proved reductions and explicit unpaid leaves}
+\author{A099, stream B20}
+\date{11 October 2026; assembly version 1}
+\begin{document}
+\maketitle
+\begin{abstract}
+We assemble the uniform-cube reduction C005--C006--C018, the
+C019 stopping-tree criterion, and A097's compatible transfer of complete
+terminal references. All proofs needed for these implications are included.
+The dimension-independent erasure payment is an explicit conjecture.
+The B05 Boolean obstruction excludes only a specified all-coordinate local
+refund. Full FEI remains open. This is an assembly of existing arguments,
+with no new mathematical claim. Independent full-chain reviews by A090 and
+A094 have not been received. Historical C024 is kept separate from the
+finite-tree transfer, and no biased-measure, percolation or threshold theorem
+is silently imported.
+\end{abstract}
+
+\section{Conventions and mathematical scope}
+For every finite $n\ge0$, $f:\{-1,1\}^n\to\{-1,1\}$ is Boolean,
+$a_S=\E f\chi_S$, $P_f(S)=p_S=a_S^2$,
+$H(f)=\sum_Sp_S\log_2(1/p_S)$, and
+$I(f)=\sum_S|S|p_S=\sum_i d_i(f)$, where
+$d_i(f)=\Pr(f(x)\ne f(x^{\oplus i}))$.
+Every unmarked entropy, cross-entropy and divergence is in bits;
+$c_0=2/\ln2$. Zero entropy atoms contribute zero. Spectral conditioning
+does not mean physical restriction. We write
+\[
+ B_i(f)=H(S_i\mid S_{-i}),\quad B(f)=\sum_i B_i(f),\quad
+ \mathcal L(f)=\sum_{S:p_S>0}p_S\sum_{i\in S}
+                    \log_2(1+p_{S\setminus\{i\}}/p_S).
+\]
+The symbol $\mathcal L$ is the aggregate C018 downward charge. B05's
+quantity named $L$ is instead a single $B_i$; Section~\ref{sec:b05}
+calls it $B_y$ to prevent an erroneous substitution.
+\[
+C_{\rm FEI}=\sup_{n,f:I(f)>0} H(f)/I(f),\quad
+K_E=\sup_{n,f:I(f)>0} B(f)/I(f),\quad
+K_{\mathcal L}=\sup_{n,f:I(f)>0}\mathcal L(f)/I(f).
+\]
+These suprema may be infinite and need not be attained.
+
+\section{C005: actual singleton restrictions}
+\begin{lemma}[Entropy and influence identities, source ER Sections 1--4]
+\label{lem:single}
+For every Boolean $f$ and coordinate $i$, write $f_\pm=f_{i=\pm1}$.
+Then
+\[
+H(f)-\tfrac12(H(f_+)+H(f_-))=B_i(f)+J_i(f),\qquad
+I(f)=d_i(f)+\tfrac12(I(f_+)+I(f_-)),
+\]
+where $J_i$ is the Jensen--Shannon divergence of $P_{f_+},P_{f_-}$,
+and
+\[
+0\le J_i\le c_0\sum_{T\not\ni i}\min(p_T,p_{T\cup\{i\}})
+             \le c_0\min(d_i,1-d_i).
+\]
+\end{lemma}
+\begin{proof}
+Set $u=a_T$, $v=a_{T\cup\{i\}}$, $m=u^2+v^2$.
+The two actual coefficients are $u+v,u-v$ and their mean squared
+mass is $m$. The chain rule gives
+$B_i=\sum_T[h(u^2)+h(v^2)-h(m)]$, where $h(t)=-t\log_2t$.
+Meanwhile
+$J_i=\sum_T[h(m)-\tfrac12h((u+v)^2)-\tfrac12h((u-v)^2)]$.
+Adding cancels $h(m)$ and proves the identity. The child laws are
+normalized by Booleanity and Parseval, so $J_i\ge0$ by concavity.
+
+For $0\le z\le1$, let
+$D(z)=\tfrac12[(1+z)\ln(1+z)+(1-z)\ln(1-z)]$.
+Then $D(z)\le1-\sqrt{1-z^2}$: both vanish at zero;
+their derivatives are $\operatorname{atanh}z$ and
+$z/\sqrt{1-z^2}$, and the derivative of the difference of these
+derivatives is $(1-z^2)^{-3/2}-(1-z^2)^{-1}\ge0$.
+Continuity handles $z=1$.
+At $m>0$ the JS contribution is $mD(2|uv|/m)/\ln2$,
+at most $(m-|u^2-v^2|)/\ln2=c_0\min(u^2,v^2)$.
+Zero fibers vanish. Sum over $T$ and use
+$\sum_Tv^2=d_i$, $\sum_Tu^2=1-d_i$.
+For $j\ne i$, averaging the $j$-pivotal indicator over the fixed
+$i$ coordinate gives $d_j(f)=\tfrac12(d_j(f_+)+d_j(f_-))$.
+Summation proves the influence identity.
+\end{proof}
+
+\section{C006: actual blocks and their channel price}
+\begin{lemma}[Cube log-Sobolev inequality in the required normalization]
+\label{lem:lsi}
+For $g\ge0$ on a finite uniform cube,
+\[
+ \Ent(g^2):=\E[g^2\ln(g^2/\E g^2)]
+ \le\tfrac12\sum_i\E(g(x)-g(x^{\oplus i}))^2.
+\]
+\end{lemma}
+\begin{proof}
+On one bit, by homogeneity the required inequality for values $t,1$
+is $F(t)\ge0$, where
+\[
+F(t)=(t^2+1)\ln((t^2+1)/2)-2t^2\ln t+(t-1)^2.
+\]
+Here $F(1)=0$ and
+$F'(t)=2t\ln((t^2+1)/(2t^2))+2(t-1)$.
+For $t\ge1$, the difference
+$1-1/t-\ln(2t^2/(t^2+1))$ is zero at 1 and has derivative
+$(t-1)^2/[t^2(t^2+1)]\ge0$, proving $F'\ge0$.
+The identity $F(t)=t^2F(1/t)$ handles $t<1$, and continuity
+handles zero values.
+
+For completeness, entropy tensorization follows as follows. For a
+nonnegative $w$ with mean $m>0$, put $R(x)=w(x)2^{-n}/m$.
+Then $\Ent(w)/m=D_{\rm nat}(R\|U)$.
+The divergence chain rule writes this as the sum of the divergences
+of $R(X_i\mid X_{<i})$ from the uniform one-bit law.
+Replacing $X_{<i}$ by $X_{-i}$ increases each mean divergence,
+because conditioning decreases entropy. Direct substitution of the
+density shows that the resulting $i$th term, multiplied by $m$, is
+$\E_{U,-i}\Ent_{U,i}(w)$.
+Thus $\Ent(w)\le\sum_i\E_{-i}\Ent_i(w)$.
+Apply the one-bit bound to $w=g^2$ on each fiber. The case $m=0$
+is immediate.
+\end{proof}
+
+\begin{lemma}[Block identity and paid channel, source BR Sections 1--3]
+\label{lem:block}
+Let $A$ be a nonempty physical block, $C=[n]\setminus A$,
+$X$ a uniform assignment on $A$, and conditionally on $X=x$ let
+$T$ have the spectral law of $f_x$. Then
+\[
+H(f)-\E_xH(f_x)=B_A(f)+J_A(f),\quad
+B_A(f)=H(S_A\mid S_C),\quad J_A(f)=I(X;T),
+\]
+\[
+0\le J_A(f)\le c_0 I_A(f),\qquad
+I(f)=I_A(f)+\E_xI(f_x),\quad I_A=\sum_{i\in A}d_i.
+\]
+\end{lemma}
+\begin{proof}
+Let $v_T(x)=\E_y f(x,y)\chi_T(y)$,
+$P_x(T)=v_T(x)^2$, and $q(T)=\E_xP_x(T)$.
+Parseval in $x$ gives $q(T)=\sum_{U\subseteq A}a_{U\cup T}^2$,
+the actual $C$-marginal. Hence
+$H(f)=H(q)+H(S_A\mid S_C)$ and
+$J_A=H(q)-\E_xH(P_x)$, proving the first identity.
+For $q(T)>0$, apply Lemma~\ref{lem:lsi} to
+$g_T(x)=|v_T(x)|/\sqrt{q(T)}$, multiply by $q(T)$ and sum.
+The left side is $(\ln2)J_A$; the right side is at most
+\[
+\tfrac12\sum_{i\in A}\E_x\sum_T(v_T(x)-v_T(x^{\oplus i}))^2
+=\tfrac12\sum_{i\in A}\E_{x,y}(f(x,y)-f(x^{\oplus i},y))^2
+=2I_A(f).
+\]
+The middle equality is Parseval on $C$; the last uses Boolean
+values. Zero $q$ fibers vanish. Averaging each pivotal indicator
+on $C$ over $X$ proves influence conservation.
+\end{proof}
+
+\section{C018: the proved equivalence and its open Boolean leaf}
+\begin{lemma}[Erasure comparison and downward charge, ER Sections 3--6]
+\label{lem:downward}
+For every Boolean $f$,
+\[
+\mathcal L(f)\le B(f)\le\mathcal L(f)+I(f)/\ln2,\qquad B(f)\le H(f).
+\]
+The coefficients also satisfy
+\[
+\sum_Sa_S^2=1,\qquad \sum_Sa_Sa_{S\triangle U}=0
+\quad(\varnothing\ne U\subseteq[n]).
+\]
+Conversely these identities for real $a$ imply its inverse Walsh
+transform is Boolean.
+\end{lemma}
+\begin{proof}
+For nonnegative $r,s$,
+$h(r)+h(s)-h(r+s)=r\log_2(1+s/r)+s\log_2(1+r/s)$,
+with continuous endpoint conventions. On each edge $(T,T\cup\{i\})$
+the second term is the downward charge. The first is at most
+$s/\ln2$, by $\ln(1+t)\le t$, including zero endpoints by continuity.
+Sum to prove the sandwich. In any coordinate order,
+$H(S_i\mid S_{-i})\le H(S_i\mid S_{<i})$; the entropy chain
+rule proves $B\le H$. Fourier transforming $f^2=1$ gives the
+convolution identities. Conversely they say all nonconstant
+coefficients of the square of the inverse transform vanish and its
+constant coefficient is 1, so its square is pointwise 1.
+\end{proof}
+
+\begin{theorem}[C018; implication proved, payment open]
+\label{thm:erasure}
+In the extended real sense,
+\[
+K_E\le C_{\rm FEI}\le K_E+c_0,\qquad
+K_{\mathcal L}\le K_E\le K_{\mathcal L}+1/\ln2.
+\]
+In particular any uniform bound $B(f)\le KI(f)$ implies
+$H(f)\le(K+c_0)I(f)$; any uniform bound
+$\mathcal L(f)\le KI(f)$ implies
+$H(f)\le(K+3/\ln2)I(f)$.
+\end{theorem}
+\begin{proof}
+The lower bound follows from Lemma~\ref{lem:downward}.
+Assume $K_E<\infty$. Summing Lemma~\ref{lem:single} gives
+$\sum_i\Delta_iH\le(K_E+c_0)I(f)$.
+Irrelevant coordinates have $B_i=J_i=\Delta_iH=0$.
+If $f$ is nonconstant, some relevant coordinate satisfies
+$\Delta_iH\le(K_E+c_0)d_i$ by weighted averaging.
+Induct on dimension, restricting that coordinate, and use the exact
+influence identity to obtain $H(f)\le(K_E+c_0)I(f)$.
+Constant functions have $H=I=0$. If $K_E=\infty$ the upper
+comparison is vacuous. The remaining comparisons and constant follow
+from the sandwich.
+\end{proof}
+
+\begin{conjecture}[OPEN-C018-L: the universal Boolean payment]
+\label{conj:universal}
+There exists a finite $K\ge0$ such that for every integer $n\ge0$
+and every real coefficient vector $(a_S)_{S\subseteq[n]}$ satisfying
+all the convolution identities of Lemma~\ref{lem:downward},
+\[
+\sum_{S:a_S\ne0}a_S^2\sum_{i\in S}
+ \log_2(1+a_{S\setminus\{i\}}^2/a_S^2)
+ \le K\sum_S|S|a_S^2.
+\]
+\end{conjecture}
+This is FEI-equivalent; neither normalization alone nor Jensen
+proves it. Jensen only gives
+$\mathcal L\le I\log_2(n/I)$ when $I>0$: weight each occupied
+oriented edge by $p_S/I$, and the weighted ratio sum is at most
+$(n-I)/I$. Independent Bernoulli spectral bits would have
+$B/I=h_2(\theta)/\theta\to\infty$; they are not an admissible
+general Boolean spectrum. Full signed Booleanity cannot be removed.
+
+\section{C019: finite adaptive stopping trees and one influence budget}
+At an internal node $h$, let $f_h$ be the actual remaining Boolean
+function. Choose a nonempty block $A_h$ using only the physical
+history. Query it uniformly; its child assignments $x$ each have
+conditional probability $\alpha_h=2^{-|A_h|}$.
+No previously fixed coordinate may be queried along the same path.
+The tree is finite; it may stop before reaching constants.
+Let $\pi_h$ be its actual reach probability and put
+\[
+B_h=B_{A_h}(f_h),\quad J_h=J_{A_h}(f_h),\quad
+I_{\rm rem}=\sum_{h\text{ internal}}\pi_h I_{A_h}(f_h),\quad
+I_{\rm term}=\sum_{l\text{ leaf}}\pi_l I(f_l).
+\]
+\begin{theorem}[C019 telescope and conditional endpoint]
+\label{thm:tree}
+For every such tree,
+\[
+H(f)=\sum_h\pi_h(B_h+J_h)+\sum_l\pi_lH(f_l),\quad
+I(f)=I_{\rm rem}+I_{\rm term},\quad
+\sum_h\pi_hJ_h\le c_0 I_{\rm rem}.
+\]
+If $K,C_{\rm leaf}\ge0$ satisfy
+$\sum_h\pi_hB_h\le K I_{\rm rem}$ and
+$H(f_l)\le C_{\rm leaf} I(f_l)$ for every positive-reach leaf,
+then $H(f)\le\max(K+c_0,C_{\rm leaf})I(f)$.
+\end{theorem}
+\begin{proof}
+Multiply each identity of Lemma~\ref{lem:block} by $\pi_h$.
+Since $\pi_{hx}=\pi_h\alpha_h$, all interior child terms cancel
+on the finite tree; only the root and terminal terms remain.
+Summing its channel bound proves the inequality. Substitute the
+two payment hypotheses and influence conservation. These are actual
+reach weights, not unweighted counts of nodes. Influence removed at
+ancestors is absent from the residual child budget and cannot be
+spent again.
+\end{proof}
+
+\begin{conjecture}[OPEN-C019-TREE: a certified stopping payment]
+\label{conj:tree}
+There exist finite $K,C_{\rm leaf}\ge0$ and a specified terminal
+class $\mathcal F_{\rm leaf}$ with a complete proof of
+$H(g)\le C_{\rm leaf}I(g)$ for every $g$ in that class,
+such that every finite-cube Boolean $f$ admits a finite tree of the
+above form with leaves in $\mathcal F_{\rm leaf}$ and
+$\sum_h\pi_hB_h\le KI_{\rm rem}$.
+\end{conjecture}
+No useful universal tree is provided here. A full-coordinate block
+does not supply an independent shortcut: its $B_A$ equals $H(f)$.
+The payment must retain terminal entropy whenever leaves are nonconstant.
+
+\section{A097: complete references and their compatible telescope}
+This section assembles A097 version 1, REPORT Sections 1--5,
+not an independently accepted full-FEI premise.
+For a probability $P$ and a supported subprobability $Q$, define
+\[
+\CE(P,Q)=\sum P\log_2(1/Q),\qquad
+\KL(P\|Q)=\sum P\log_2(P/Q)=\CE(P,Q)-H(P).
+\]
+Support means $Q(s)>0$ whenever $P(s)>0$. Gibbs' inequality holds
+for this generalized divergence: complete $Q$ by a failure atom
+and assign that atom zero $P$ mass.
+
+\begin{lemma}[Complete nonempty reference interface]
+\label{lem:complete}
+Let $v=P(S\ne\varnothing)$ and let $R$ be a subprobability on
+nonempty sets positive on their actual support. Put
+$Q(\varnothing)=1-v$ and $Q(S)=vR(S)$ for nonempty $S$.
+Then $Q$ is complete and
+\[
+\CE(P,Q)=h_2(v)+\sum_{S\ne\varnothing}P(S)\log_2(1/R(S)).
+\]
+For $v=0$, choose $Q=\delta_\varnothing$; for $v=1$ the empty
+mass is zero.
+\end{lemma}
+\begin{proof}
+The total mass is at most $1-v+v=1$. Expand the cross-entropy and
+collect $-(1-v)\log_2(1-v)-v\log_2v=h_2(v)$.
+\end{proof}
+
+At each leaf of a fixed physical tree choose any complete reference
+$Q_l$ supported on $P_l=P_{f_l}$. Its total mass is at most one;
+it may depend on the terminal history but is fixed before sampling
+a Fourier set. Define references recursively upwards as follows.
+At a node with block $A$, complement $C$, and $m=2^{|A|}$, write
+\[
+q(T)=\sum_{U\subseteq A}a_{U\cup T}^2=m^{-1}\sum_xP_x(T),\quad
+r(T)=m^{-1}\sum_xQ_x(T),\quad
+\theta(U\mid T)=a_{U\cup T}^2/q(T),
+\]
+\[
+Q_h(U\cup T)=\theta(U\mid T)r(T).\tag{G}\label{eq:G}
+\]
+When $q(T)=0$ fix any normalized $\theta$, for example a point
+mass at $U=\varnothing$. Reference mass on such a fiber must be
+kept, even though its true mass vanishes. At $q(T)>0$ put
+\[
+k_P(x\mid T)=P_x(T)/(mq(T)),\qquad
+k_Q(x\mid T)=Q_x(T)/(mr(T)).
+\]
+\[
+\kappa_h=\sum_Tq(T)\KL(k_P(\cdot\mid T)\|k_Q(\cdot\mid T)).
+\]
+These are normalized posteriors on each positive true fiber.
+
+\begin{theorem}[Compatible reference transfer, A097 version 1]
+\label{thm:reference}
+The recursive $Q_h$ are supported complete subprobabilities and
+\[
+\CE(P_f,Q_{\rm root})
+=\sum_h\pi_h(B_h+J_h-\kappa_h)+\sum_l\pi_l\CE(P_l,Q_l),\tag{T}
+\]
+\[
+\KL(P_f\|Q_{\rm root})
+=\sum_l\pi_l\KL(P_l\|Q_l)-\sum_h\pi_h\kappa_h.\tag{S}
+\]
+Consequently $0\le\sum_h\pi_h\kappa_h\le
+\sum_l\pi_l\KL(P_l\|Q_l)$.
+If $\CE(P_l,Q_l)\le C_{\rm leaf}I(f_l)$ and
+\[
+\sum_h\pi_h(B_h-\kappa_h)\le K I_{\rm rem},\tag{R}\label{eq:R}
+\]
+then $H(f)\le\max(K+c_0,C_{\rm leaf})I(f)$.
+\end{theorem}
+\begin{proof}
+From (G), $\sum Q_h=m^{-1}\sum_x\sum Q_x\le1$.
+If $a_{U\cup T}^2>0$, some $P_x(T)>0$; inductive support gives
+$r(T)>0$ and $Q_h(U\cup T)>0$.
+For the true/reference laws on $(x,T)$ with masses $P_x(T)/m$
+and $Q_x(T)/m$, expansion first by $x$, then by $T$, gives
+\[
+m^{-1}\sum_x\KL(P_x\|Q_x)=\KL(q\|r)+\kappa_h.
+\]
+The true parent and reference share $\theta$, whence
+$\KL(P_h\|Q_h)=\KL(q\|r)$.
+Combine this with the block entropy identity to get
+\[
+\CE(P_h,Q_h)=B_h+J_h+m^{-1}\sum_x\CE(P_x,Q_x)-\kappa_h.
+\]
+Finite telescoping proves (T). Telescope the divergence identity
+to obtain (S); nonnegativity proves the stated credit ceiling.
+Finally use $H(f)\le\CE(P_f,Q_{\rm root})$, the paid channel
+bound, (R), and influence conservation.
+\end{proof}
+
+\begin{conjecture}[OPEN-REF-TRANSFER: universal complete-reference payment]
+\label{conj:reference}
+There exist finite $K,C_{\rm leaf}\ge0$ such that for every
+$n\ge0$ and every Boolean $f$ there exist a finite actual stopping
+tree and supported complete leaf subprobabilities $Q_l$ satisfying
+$\CE(P_l,Q_l)\le C_{\rm leaf}I(f_l)$ for every leaf and (R),
+with every interior reference constructed by (G).
+\end{conjecture}
+Neither Gibbs positivity nor the existence of $Q_l$ proves (R).
+For $Q_l=P_l$, all interior references equal the actual spectra,
+all $\kappa_h$ vanish, and (T) is exactly the entropy telescope.
+Positive reference credit is constrained by terminal divergence
+slack; it is not an additional freely reusable physical influence.
+An interior reference reset is outside (G) and would require its
+own correction. C020 costs, if inserted at leaves via
+Lemma~\ref{lem:complete}, retain their empty-atom entropy, root
+normalizer, scale prior, labels, ranks, attachments and all other
+complete-description terms.
+
+\section{B05: scope-correct Boolean local obstruction}\label{sec:b05}
+\begin{proposition}[B05 version 1; B19 accepted at stated scope]
+\label{prop:b05}
+For every finite $K,A_0,B_0\ge0$ there is a genuine Boolean
+singleton split with children $G,H$, and
+\[
+q_W=(\widehat G(W)^2+\widehat H(W)^2)/2,\quad
+e_W=(\widehat G(W)-\widehat H(W))^2/4,\quad
+\vartheta_W=e_W/q_W,\quad d=\sum_We_W,
+\]
+such that
+\[
+B_y:=\sum_Wq_Wh_2(\vartheta_W)>Kd+A_0V+B_0M,\quad
+V=\sum_Wq_W(\vartheta_W-d)^2,\quad
+M=\sum_j(d_j(G)-d_j(H))^2.
+\]
+Thus a fixed-price bound of this form cannot hold at every coordinate.
+\end{proposition}
+\begin{proof}
+Use $0/1$ physical labels for this construction; this relabeling
+does not change influence or squared Fourier coefficients.
+Let even $k\ge4$, $\delta=2^{-k}$, $p=2^{-2k}$,
+$d=p\delta=2^{-3k}$,
+\[
+b(x)=(-1)^{x_1x_2+\cdots+x_{k-1}x_k},\quad
+b'(x)=b(x)-2\mathbf1_{x=0},\quad A(z)=\mathbf1_{z=0},
+\]
+on $k$ data bits and $2k$ controls, and set
+$G=1+A(b-1)$, $H=1+A(b'-1)$.
+These are Boolean, since $b(0)=1$ and the point flip exchanges
+that value with $-1$. They disagree at one point of a $3k$ cube.
+Every Walsh coefficient $c_T$ of $b$ has magnitude $\sqrt\delta$:
+each quadratic pair has four coefficients of magnitude $1/2$,
+and the pairs tensorize. Also $c_\varnothing=\sqrt\delta$.
+The point flip and activation give a coefficient difference $2d$
+for all $2^{3k}$ residual packets, so $e_W=d^2$ and $\sum e=d$.
+For nonempty data index $T$ the coefficient midpoint is
+$p(c_T-\delta)$, and
+\[
+q_W/e_W=(c_T/\delta-1)^2+1\ge1/(4\delta).
+\]
+For empty $T$ and nonempty control index the midpoint is
+$p(\sqrt\delta-1-\delta)$, giving the same bound.
+For the all-empty index it is $1+p(\sqrt\delta-1-\delta)$,
+whose magnitude is at least $1-p$; its ratio is larger still.
+Hence $\max\vartheta\le4\delta$.
+Since $h_2(t)\ge t\log_2(1/t)$, summing just the
+$(2^k-1)2^{2k}$ nonempty-data packets gives
+$B_y\ge(1-\delta)d(k-2)$.
+Furthermore $V=\sum q\vartheta^2-d^2\le4\delta d$.
+Every one-bit neighbor of the flipped point has common value $+1$.
+Exactly one undirected edge per residual coordinate changes pivotal
+status; the directed-edge convention gives $d_j(H)-d_j(G)=2d$.
+Thus $M=3k(2d)^2=12kd^2$.
+Consequently
+\[
+(B_y-Kd-A_0V-B_0M)/d
+\ge(1-\delta)(k-2)-K-4A_0\delta-12B_0kd\longrightarrow\infty.
+\]
+Finally the parent's queried-coordinate spectral probability in
+fiber $W$ is $e_W/q_W$, so this is precisely its $B_y$.
+\end{proof}
+This does not refute Conjectures~\ref{conj:universal},
+\ref{conj:tree}, or \ref{conj:reference}. Its quantifier is an
+adversarial \emph{specified} coordinate; the reduction chooses a
+coordinate or a whole tree. Child influence is of order $kp$,
+whereas the bad local charge is of order $kp\delta$.
+No unbounded $H/I$ Boolean family follows.
+
+\section{Historical C024 and the retained frontier}
+The seed ledger's C024 is an actual-source continuous-history
+payment target in natural units, not the finite-tree reference
+identity of Theorem~\ref{thm:reference}. Its pinned route-map
+Sections 11.13--11.16 use a particular actual Boolean ancestry and
+history-integrated cost $C_{\rm path}$, with comparison
+$H_{\rm nat}-3I\le C_{\rm path}\le H_{\rm nat}+I$.
+No construction or proof of that source-specific comparison is
+imported as a premise here. The exact policy and cost must be
+reconstructed from that source before a proposed payment is applied.
+Those trajectory states are generally real multivalued functions,
+not Boolean physical restrictions, so Lemma~\ref{lem:block} cannot
+be applied to them without a separate argument.
+An explicitly defined source-aware alternate bank from RM Section
+11.13 is as follows. For $0<\theta<1$, let $\eta_i$ be independent
+signs with $\E\eta_i=\sqrt{1-\theta}$, and for each uniform sign
+vector $x$ let $\mu_\theta^x$ be the squared Fourier law of the
+actual Boolean function $\eta\mapsto f(x_1\eta_1,\ldots,x_n\eta_n)$
+in the orthonormal basis of this biased product measure. Set
+\[
+Q_{\rm bias}(f)=\int_0^1\E_x\left[
+\sum_i H_{\rm nat,\mu_\theta^x}(S_i\mid S_{-i})
+\right]\,\frac{d\theta}{\theta}.
+\]
+The integral is interpreted as a nonnegative improper integral.
+\begin{conjecture}[OPEN-C024-HISTORY: explicit biased-history bank]
+There exists a finite $K\ge0$ such that for every $n\ge0$ and
+every Boolean $f:\{-1,1\}^n\to\{-1,1\}$,
+$Q_{\rm bias}(f)\le K I(f)$ in natural units.
+\end{conjecture}
+RM reports $|Q_{\rm bias}-C_{\rm path}|\le(1+2\ln2)I$.
+This comparison has not been reconstructed here and is not a premise
+in our self-contained reduction. This leaf is an explicit target,
+not a self-contained alternate proof: no unnamed history process may
+replace the pinned one.
+The assembly's self-contained universal target is
+Conjecture~\ref{conj:universal}; the finite-tree alternative is
+Conjecture~\ref{conj:reference}. No implication from that alternative
+to the specific continuous-policy C024 cost is claimed.
+
+\section{Dependencies, review and sources}
+The mathematical DAG is Lemma~\ref{lem:single} plus
+Lemma~\ref{lem:downward} to Theorem~\ref{thm:erasure};
+Lemma~\ref{lem:lsi} to Lemma~\ref{lem:block} to
+Theorem~\ref{thm:tree}; Lemma~\ref{lem:block} plus Gibbs and
+the explicit generator (G) to Theorem~\ref{thm:reference}.
+Proposition~\ref{prop:b05} is an obstruction with its own proof,
+not a positive payment premise. Open leaves have no outgoing edge
+into an unconditional FEI theorem. Threshold/percolation results
+are contextual and are not needed for this DAG.
+
+All local source hashes, exact paths, upstream claimed validation
+outputs and review status are recorded in the accompanying
+\texttt{ASSEMBLY\_STATUS.json} and \texttt{out/SOURCE\_RECEIPTS.json}.
+The integrated assembly awaits two independent complete-chain
+reconstructions, A090 and A094. B20's source check is not either
+independent acceptance. This document does not inherit acceptance
+merely from a status label and asserts no novelty or formal certification.
+
+\begin{thebibliography}{9}
+\bibitem{ER} Campaign supplemental source,
+\emph{An erasure-entropy reformulation of FEI},
+\texttt{sources/ERASURE\_REDUCTION.md}, Sections 1--6.
+Packaged under \texttt{research\_pushes/2026-10-11-full-fei-100-agents}.
+\bibitem{BR} Campaign supplemental source,
+\emph{Block restriction identity and its exact surviving term},
+\texttt{sources/BLOCK\_RESTRICTION\_IDENTITY\_2026-09-18.md}, Sections 1--5.
+\bibitem{B05} fleet01/B05,
+\emph{Sparse-activation no-go for local variance-refund payment},
+run \texttt{20261011T193057Z-fleet01-B05-rare-restrictions},
+REPORT Sections 2--7;
+\texttt{math-open-problems@80cc2e5027efa56d79c4ecdf7d4949759ef2068b}.
+\bibitem{B19} fleet01/B19,
+\emph{Independent audit of the B05 sparse-activation no-go},
+run \texttt{20261011T195038Z-fleet01-B19-independent-review},
+REPORT Sections 2--5;
+\texttt{math-open-problems@7955d427222392911dc6af2e4ee3aa8aab67ac8c}.
+\bibitem{A097} A097, \emph{Complete leaf references transferred into physical
+stopping trees}, version 1,
+run \texttt{20261011T221240Z-fleet05-A097-cross-route-transfer},
+REPORT Sections 1--5. Local complete source; independent review pending.
+\bibitem{RM} Campaign supplemental source,
+\emph{Route map curated}, \texttt{sources/ROUTE\_MAP\_CURATED.md},
+Sections 11.13--11.16; historical C024 external interface.
+\bibitem{P} Y. Shmalo, \emph{Fourier entropy of threshold functions and
+their compositions}, current 38-page text, Sections 5 and 8,
+with 29-page earlier version retained separately. Context only.
+\bibitem{Q} Y. Shmalo, \emph{Entropy and singularity of spectral and
+pivotal sets in planar percolation}, current 30-page text,
+Theorems 3.1--3.2, with 31-page other version retained separately.
+Context only; local guard statements are lower entropy bounds.
+\end{thebibliography}
+\end{document}

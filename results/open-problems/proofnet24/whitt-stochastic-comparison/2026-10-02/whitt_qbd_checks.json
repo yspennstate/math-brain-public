@@ -1,0 +1,120 @@
+{
+  "arithmetic": "exact rational Fraction; decimals are display only",
+  "models": [
+    {
+      "model": "base_H2",
+      "lambda_positive": "11/10",
+      "small_probability": "3/7",
+      "mu_small": "5",
+      "mu_large": "5/8",
+      "root_interval_epsilon": "1/10000000000",
+      "center_integer_over_10^12": [
+        [
+          645435924416,
+          49602947283,
+          1418851601
+        ],
+        [
+          57824475940,
+          180926269658,
+          1000913825
+        ],
+        [
+          5450513476,
+          10688133781,
+          103306610564
+        ]
+      ],
+      "weight_integer_over_1000": [
+        [
+          12081,
+          5279,
+          1625
+        ],
+        [
+          3773,
+          2173,
+          1203
+        ],
+        [
+          2385,
+          1615,
+          1115
+        ]
+      ],
+      "weighted_contraction_constant_display": "0.917211448339491899787880640529515939646494570967147036128222",
+      "P_delay_lower_display": "0.392872616812253851534562873661922895888448992345270776845846",
+      "P_delay_upper_display": "0.392872621943210771400384443717859428973844088409107000214694",
+      "checks": [
+        "0<L<=U",
+        "L<=phi(L)",
+        "phi(U)<=U",
+        "J(U)W<W",
+        "maximum row sum of U <1",
+        "boundary inverse positive",
+        "stationary probability bounded monotonically"
+      ]
+    },
+    {
+      "model": "spread_zero_H2",
+      "lambda_positive": "121/140",
+      "small_probability": "3/11",
+      "mu_small": "5/2",
+      "mu_large": "5/8",
+      "root_interval_epsilon": "1/10000000000",
+      "center_integer_over_10^12": [
+        [
+          586680778400,
+          40002694466,
+          1185264216
+        ],
+        [
+          81777989182,
+          240684772329,
+          1984662856
+        ],
+        [
+          14780864226,
+          25599440016,
+          153162276790
+        ]
+      ],
+      "weight_integer_over_1000": [
+        [
+          9144,
+          4036,
+          1362
+        ],
+        [
+          4484,
+          2426,
+          1187
+        ],
+        [
+          3007,
+          1880,
+          1123
+        ]
+      ],
+      "weighted_contraction_constant_display": "0.890642017700201361884432750574482857947424876558734826451362",
+      "P_delay_lower_display": "0.391709812331424374140340429690690776126439653136786843998069",
+      "P_delay_upper_display": "0.391709815891175348285396281496080565490386714017916407379556",
+      "checks": [
+        "0<L<=U",
+        "L<=phi(L)",
+        "phi(U)<=U",
+        "J(U)W<W",
+        "maximum row sum of U <1",
+        "boundary inverse positive",
+        "stationary probability bounded monotonically"
+      ]
+    }
+  ],
+  "certified_gap_lower_display": "0.00116280092107850324916659216584233039806227832735436946629087",
+  "exact_assertions": [
+    "P_delay(base)>.39287",
+    "P_delay(spread)<.39172",
+    "gap>.00115"
+  ],
+  "conclusion": "Proposed strict counterexample to Whitt1983 Conjecture1.1 at threshold0"
+}

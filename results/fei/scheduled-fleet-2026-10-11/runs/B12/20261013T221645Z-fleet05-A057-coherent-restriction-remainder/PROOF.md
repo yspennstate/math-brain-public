@@ -1,0 +1,107 @@
+# Selector variance cap and exclusive priority payment (bits)
+
+## 1. General selector lemma
+Let u be a Boolean core, independent of an arbitrary auxiliary physical cube z. Let C(z) be a {0,1} indicator, q=E C>0, and W(z) satisfy CW=0 and W^2=1-C. Thus F=C u+W is Boolean. At any actual core restriction put m=E u, v=1-m^2, beta=hat u({i}), t=beta^2, and d=Inf_i(u). Write a=W+m C and c=C in the ordinary orthonormal Fourier basis on z, and define
+
+    M(s)=sum_T Phi(ahat(T)^2,s chat(T)^2),
+    Phi(A,B)=(A+B)h2(B/(A+B)).
+
+The exact signed split is B_i(F)=q[B_i(u)-Phi(m^2,t)]+M(t). Nonempty core frequencies give the first term by Parseval on C; the empty core frequency gives M(t). In particular the subtracted pair cannot be discarded as an identity. Inf_i(F)=q d. The current recentered cap is
+
+    cap=min{M(v),(t/v)M(v)+qt log2(v/t)},
+
+and zero when t=0 or v=0. Concavity gives M(t)<=M(v). For the other branch, g(z)=Phi(A,z)/z+log2(z) has derivative [z-A ln(1+z/A)]/(z^2 ln2)>=0, with the A=0 endpoint by continuity. Comparing z=t c^2 and z=v c^2 and summing gives the stated envelope M(t)<=cap. The auxiliary cube may include another independent core; it need not consist of control bits alone.
+
+The homogeneous binary-entropy packet is concave. Equivalently, its sum is the conditional entropy of a two-valued label given T and is at most the entropy of that label. Parseval and pointwise disjointness give
+
+    sum ahat^2=1-qv,  sum v chat^2=qv,
+    M(v)<=Phi(1-qv,qv)=h2(qv).
+
+Using h2(x)<=x log2(e/x), without rounding its rarity logarithm, the second cap branch therefore satisfies
+
+    cap<=qt[log2(1/q)+1/ln2+log2(1/v)]+qt log2(v/t)
+       =qt[log2(1/q)+1/ln2]+qt log2(1/t).
+
+This is exact cancellation of the variance logarithm, not an O(t) replacement. The Boolean derivative gives |beta|<=d and t<=d. Maximizing x ln(1/x) proves t log2(1/t)<=c0 d, c0=2/(e ln2). Consequently
+
+    cap <= c_data q d + q log2(1/q)t,
+    c_data=1/ln2+2/(e ln2)<4.
+
+On every actual adaptive core-query prefix, with physical reach weights w,
+
+    sum w cap <= c_data q Pi_I(u)+q log2(1/q)V_drop,
+    V_drop=Var(u)-E Var(u_leaf)=sum w beta^2.
+
+The same formula applies to interleaved independent cores, separately for each core. Only its queried steps change that core's conditional variance in expectation; conditioning on the other independent core does not. Thus no reserve is reopened at a syntactic depth. Actual partial leaves must be retained. For q=0 all charges are zero; q=1 has zero variance-reserve coefficient.
+
+## 2. Two-core shared-control gate
+Use A091's priority gate: r,s>=1 private point widths, p=2^-r, k=2^-s, one fair shared bit x. Event C selects u at x=0,A=1. Event D selects v at x=o,B=1 unless C already selects u. C,D are disjoint. Let P=p/2, Q=k/2, R=(1-p)Q for o=0 and R=Q for o=1; let a=1-Eu, b=1-Ev. Both cores are arbitrary Boolean functions on independent cubes. They can be constant.
+
+The lemma applies to u with q=P, W=Dv+(1-C-D), and to v with q=R, W=Cu+(1-C-D). All current means are recomputed after every data restriction. In particular the exact positive-sector M includes coherent Fourier amplitudes of both fallback terms; they are not replaced by two independent activations.
+
+For a complete adaptive data-only tree, ending with both cores constant, its capped positive bank satisfies
+
+    bank <= c_data I_data + P(r+1)Var(u)+R log2(1/R)Var(v),
+    I_data=P I(u)+R I(v).
+
+For partial trees use the corresponding V_drop and actually spent data influences. Variance never exceeds its root value. Thus the upper bound below also holds for every partial prefix, retaining its actual leaves.
+
+For same orientation A091's exact physical budgets are
+
+    Inf_x=P a+R b,
+    Inf_A=p[(1-k)a/2+k(1-Eu Ev)/2] >= P a/2,
+    Inf_B=R b.
+
+Hence I_ctrl>= (r/2+1)P a+(s+1)R b. Since Var(u)<=2a, Var(v)<=2b, and log2(1/R)=s+1+log2(1/(1-p))<=s+2,
+
+    reserve <=2(r+1)P a+2(s+2)R b <=4 I_ctrl.
+
+The last comparison uses r+1<=r+2 and s+2<=2(s+1). For opposite orientation Inf_A=P a and Inf_B=Q b; discard the nonnegative shared-bit influence only for this lower bound. Since r,s>=1,
+
+    reserve <=2(r+1)P a+2(s+1)Q b
+            <=4[r P a+s Q b] <=4 I_ctrl.
+
+Therefore every complete or partial adaptive data-only prefix has bank<=4 I(F), with a more informative bound c_data I_data+4 I_ctrl. This pays both recentered caps against a single exclusive control budget. It does not assert that the entire physical erasure or entropy tree costs at most 4 I(F).
+
+## 3. Arbitrary exclusive controller: stronger payment
+The preceding width-specific bound can be replaced by a controller-independent argument. Let a finite uniform control cube choose one of finitely many independent Boolean cores u_j, on pairwise disjoint data cubes. Constants may be additional output states. Let C_j be the disjoint selector indicators, q_j=E C_j, m_j=E u_j and V_j=1-m_j^2. The control partition is arbitrary; its events may share any physical controls. The query tree exposes only data coordinates, adaptively and interleaved, retaining the actual remaining control functions at its leaves.
+
+An indicator on a uniform cube satisfies q log2(1/q)<=I(C)/2, including q=0,1. Here I(C) means the probability-of-change influence of its 0/1 values. A short induction supplies a proof: for two slices of measures q0,q1, the crossing influence is at least |q0-q1|. The two inductive slice bounds imply I(C)>=q0 log2(1/q0)+q1 log2(1/q1)+|q0-q1|. With q=(q0+q1)/2, the difference from 2q log2(1/q) is nonnegative because h2(z)>=2 min(z,1-z), z=q0/(2q). This last inequality follows from concavity and the points (0,0),(1/2,1),(1,0). The zero-measure endpoint is immediate.
+
+At a control edge switching from core j to core k, disjoint-core independence gives mismatch probability (1-m_j m_k)/2, and
+
+    V_j+V_k <=2(1-m_j m_k)=4*mismatch.
+
+For a switch to a constant, use its mean +/-1 and variance zero, giving the identical inequality. Edges staying within one selector state contribute zero to the selector influences. Summing over the original physical control edges therefore proves
+
+    sum_j V_j I(C_j)<=4 I_ctrl(F),
+    sum_j q_j log2(1/q_j)V_j<=2 I_ctrl(F).
+
+Apply Section 1 separately to every core. Conditional on a reached data-only leaf, unrevealed disjoint cubes remain independent; selectors and their probabilities are unchanged. Each variance loss is nonnegative and at most its root V_j. The original data influence is sum_j q_j I(u_j), and the actual data-prefix telescope cannot exceed it. Thus on every partial or complete adaptive data-only tree
+
+    sum_nodes w cap <= c_data Pi_I,data
+                      +sum_j q_j log2(1/q_j)V_drop,j
+                   <= c_data I_data(F)+2 I_ctrl(F)
+                   <= c_data I(F),
+    c_data=(1+2/e)/ln2, 2<c_data<4.
+
+The stated inequalities for c_data follow, for example, from e in (2,3), ln2 in (1/2,3/4) for the upper bound and lower bound: c_data<4 and c_data>20/9>2. The checker supplies sharper rational enclosures. This pays the positive recentered cap for every exclusive independent-core controller, with no nominal event accounts added. It specializes to the priority gate regardless of private widths (even width zero); Section 2 remains a separate direct-budget cross-check for r,s>=1.
+
+## 4. Coherent remainder corollary
+At the same data node define N=sum_T [paird(ahat(T),beta chat(T))-Phi(ahat(T)^2,t chat(T)^2)], where paird(a,b)=phi(a^2)+phi(b^2)-[phi((a+b)^2)+phi((a-b)^2)]/2 and phi(s)=s log2(1/s). The exact biased-child identity is
+
+    Delta_i H(F)=q[Delta_i H(u)-paird(m,beta)]+M(t)+N.
+
+The scalar two-point Jensen-Shannon bound already proved/reviewed in the A056 interface gives 0<=N<=2qt/ln2. Summing its physical singleton budget once gives sum w N<=2 Pi_I,data/ln2. Therefore the capped coherent outer remainder (cap+N), on the identical exclusive-controller tree, is at most
+
+    [(3+2/e)/ln2] I_data(F)+2 I_ctrl(F)
+    <=[(3+2/e)/ln2] I(F).
+
+This corollary consumes the scoped scalar bound; it does not discard the signed inner subtraction paird(m,beta). The exact sign/price is additionally checked row by row on the arbitrary-controller finite domain.
+
+## 5. Fresh activation improvement and exact remainder
+For one fresh r-bit point activation, q=p and log2(1/p)=r. The complete core prefix costs at most c_data pI(u)+rp Var(u)<=c_data pI(u)+2rp a. The previously checked point-defect control suffix costs <=3rp a. Thus the same capped-prefix-plus-control-suffix bank previously priced at 4+2/(e ln2) is <=5 I(F). This is a bound on the identical bank, not a new definition. The partial-prefix selector lemma also improves the variance coefficient without paying an arbitrary core's inner entropy.
+
+For the priority tree stopped with both cores constant, the terminal reserve is exactly E H(1+C(u_leaf-1)+D(v_leaf-1)). At each data query the full entropy decrement retains the scaled inner decrement minus its empty-core pair, plus M and its Jensen-Shannon remainder N. The cap dominating M is paid by Sections 1-3; data-node N is additionally paid by Section 4. The inner signed sums, any further control-node entropy/reset/conversion prices, and that actual terminal entropy remain explicit unpaid terms. A control-first tree instead has terminal reserve P H(u)+R H(v); this is a different stopping frontier, and is not substituted for the data-first terminal reserve.
+
+First unsupported line for full FEI: there exists a universally admissible physical exposure policy paying the remaining inner/reset terms and its actual terminal entropy from nonreused remaining influence. The selector inequality proves no such policy. It also does not pay q log2(1/q)Var(u) for an arbitrary controller from that controller's actual physical influence; the payment here uses the explicit priority budgets and r,s>=1.

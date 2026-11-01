@@ -1,0 +1,12 @@
+{
+ "helper_version":"A080-variance-influence-excursion-budget-v1",
+ "family":"Actual matched h on six inputs and one-flip J=-h(x xor1), substituted into six identical disjoint Boolean cores. Named policy: common h at minority p<=7/32, complemented inputs otherwise; optional full J-escape episodes only at minority p<=1/16.",
+ "domain":"Sixteen fixed degree-six Bernstein boxes partitioning [0,1]. Fixed eight common-policy minority biases 1/16,1/8,7/32,1/4,3/8,1/2,1/32,1/64; four J biases 1/16,1/32,1/64,1/256. Full physical domain all14 nonconstant two-bit cores under both gates. One additional compressed J profile at the saved actual g3 bias.",
+ "case_count":{"pilot":"16 polynomial boxes, four scalar profiles and two physical compositions","full":"16 polynomial boxes,13 scalar profiles,28 physical compositions"},
+ "symmetry":"No output-sign quotient or block-sign quotient; all six physical outer influences checked independently. No symmetry reduction in the two-bit census.",
+ "arithmetic":"Fraction polynomial coefficients and exact rational Bernstein positivity; integer Walsh and physical edges; certified logarithm intervals using positive32-term atanh expansion with tail, dyadic2^-128 argument brackets and outward2^-80 output rounding. All-dimensional theorem proved analytically.",
+ "memory_estimate_MB":100,
+ "maximum_runtime_seconds":{"pilot":60,"full":180},
+ "no_automatic_escalation":true,
+ "target":"Prove uniform variance/influence contraction at common-gate steps, no increase at J steps, and one global upper H/I correction budget for any number of escape/return cycles. Retain starting H/I; no FEI proof claimed."
+}

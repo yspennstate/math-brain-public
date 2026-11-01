@@ -1,0 +1,32 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "claim_id": "RS-2026-CL-A",
+  "date_utc": "2026-09-20",
+  "status": "PROVED PARTIAL / LATENT-PRODUCT-ALL-TEST-TRANSFER / AUDIT-PENDING",
+  "E_framework_before": 1,
+  "E_framework_after": 1,
+  "captured_master_before_report": "59afa7d51cc7231a5b13d465c8881925f079dc5c",
+  "newest_prior_report": "runs/2026-09-20/2026-09-20T10-39-27Z__report.md",
+  "old_claim": "The 10:39 signed-local-frame theorem transfers bounded source LDA to a broad signed local score class under a forward correlation-frame condition and small local spectral tail, but still restricts the distinguisher representation.",
+  "new_claim": "For any Rademacher latent-product planted law whose latent diagonal energy E||b||^2 is bounded by C_obs times the Frobenius norm of its observable off-diagonal second-moment tensor, bounded degree-2 LDA A implies Aff(T_rho P,U) >= 2^{-(rho^2/2) C_obs A} and TV(T_rho P,U) <= sqrt(1-2^{-rho^2 C_obs A}). Thus bounded LDA excludes strong distinction for every test, not merely structured polynomials.",
+  "proof_mechanism": "Degree-2 LDA exactly bounds the off-diagonal latent second-moment tensor. The coercivity condition converts this to a bound on latent bias energy. A one-bit Hellinger inequality tensorizes conditionally, and affinity concavity plus Jensen passes the fixed-component bound through the latent mixture, yielding a total-variation bound on the full noisy law.",
+  "strictness_example": "For the homogeneous de Finetti mixture P=int R_theta^{tensor N} dnu(theta), C_obs=sqrt(2N/(N-1)); degree two alone therefore gives an all-test bound. Exact pairwise matching forces E theta^2=0 and hence P=U exactly.",
+  "mao_boundary": "Mao has exact zero pair correlations. Any latent-product representation satisfying finite C_obs would then have zero latent energy and hence be the uniform law, contradiction. Therefore Mao violates the observability condition maximally: its low-degree observation tensor has a nontrivial hidden latent-energy kernel.",
+  "exact_gap": "General S_n-invariant graph laws need not be observable latent-product mixtures; higher-order dependence can lie in the kernel of the quadratic observation map. The theorem does not yet control such high-order latent directions or prove Kireeva's unrestricted conditions question.",
+  "next_attack": "Develop a higher-order observability hierarchy relating latent energy to moment tensors of orders 2,...,D, then seek a vertex-exchangeable/Aldous-Hoover graph specialization. Mao calibrates which high-order directions must remain outside any valid coercive class.",
+  "report": {
+    "path": "runs/2026-09-20/2026-09-20T11-49-00Z__report.md",
+    "commit": "86e9db8ddd6f9c43a576fcb2076ae3cd6c8118cf",
+    "blob": "921dbf2ca6d929b147fa9e3359c3eee76062254c"
+  },
+  "handoff": {
+    "path": "artifacts/2026-09-20T11-49-00Z__P08_P09_hypercontractive_handoff.md",
+    "commit": "09000ae179bd924a965b3d034505dc2b3d27fbbc",
+    "blob": "95dc00a02c2e84bc45c3d834a941d9aca2881886"
+  },
+  "source_ownership_preserved": true,
+  "full_source_claim": false,
+  "email": false,
+  "drive": false,
+  "public_posting": false
+}

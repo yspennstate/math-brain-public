@@ -1,0 +1,36 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261013T232500Z-fleet01-B12-affine-support-collision",
+  "stream": "B12",
+  "primary_packet_id": "A058",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "B12-A058-AFFINE-SUPPORT-COLLISION",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every affine-subspace indicator q of codimension r and every Boolean F, Eraw(Fq)<=H(F)+Eraw(q)=H(F)+2r E[q]. Every signing b with |b|=q satisfies Eraw(b)>=Eraw(q), so the corrected coherent endpoint H(F)-Eraw(Fq)+Eraw(b) is nonnegative.",
+      "scope": "All finite dimensions, codimensions, affine shifts, Boolean F, and signings; restriction hereditary."
+    },
+    {
+      "claim_id": "B12-A058-TRANSVERSE-AFFINE-SOURCE-FEI",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "If every physical coordinate is transverse to the affine support of a signed mask b, then Eraw(b)<=4 I(b), with equality for point support.",
+      "scope": "Arbitrary sign pattern on the affine support; constant 4 independent of dimension, codimension, density and overlap."
+    },
+    {
+      "claim_id": "B12-A058-UNSIGNED-SUPPORT-CORRECTION",
+      "version": "v1",
+      "status": "REFUTED_OUTSIDE_AFFINE_SUPPORT",
+      "statement": "The universal inequality Eraw(Fq)<=H(F)+Eraw(q) fails on the corrected seven-bit X007 witness by 0.122617694991922... bits. A repair c H(2q-1) requires c>=0.294682136281410... on that witness.",
+      "scope": "Exact Boolean F and indicator q; sign certified by an exact prime-exponent integer comparison."
+    },
+    {
+      "claim_id": "B12-A058-SHARED-COORDINATE-OVERLAP",
+      "version": "v4",
+      "status": "OPEN",
+      "statement": "Affine disagreement supports now have a complete signed-collision ledger and a sharp source-piece influence payment under transversality. Arbitrary supports still require a single-use affine-mixture or activation credit."
+    }
+  ]
+}

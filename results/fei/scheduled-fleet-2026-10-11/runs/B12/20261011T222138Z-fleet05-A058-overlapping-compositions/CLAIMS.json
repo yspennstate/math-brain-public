@@ -1,0 +1,35 @@
+[
+  {
+    "claim_id": "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER",
+    "version": 1,
+    "exact_statement": "For uniform Boolean F and b_j on disjoint shared blocks, private bits x_i, and any binary incidence matrix A, f=F(x_i product_j b_j^A_ji) has H(f)=H(F)+sum_j d_j H(b_j) and I(f)=I(F)+sum_j d_j I(b_j), where d_j=Pr_{T~Fhat^2}((A1_T)_j=1); H(F)=H(A1_T)+H(T|A1_T). A common FEI constant for F and the b_j transfers unchanged. Products of at-most-two-bit gates yield unconditional H(f)<=2I(f), including the all-k nonlinear common-block family H=2k+1, I=k+1/2, posterior=2k-1.",
+    "hypotheses": [
+      "uniform cube; sign-valued Boolean gates",
+      "all shared blocks pairwise physically disjoint",
+      "one private uniform bit x_i for every outer input, disjoint from all shared blocks",
+      "arbitrary binary incidence matrix; all Fourier atoms retained; entropy in bits",
+      "FEI closure implication assumes a stated bound for every outer/shared component; unconditional constant-2 corollary restricts those components to disjoint products of gates of arity at most two"
+    ],
+    "statement_sha256": "c165ad3f7fac08f1c99945a8d29381e7141cd429e02c78c0e067b85917e0a19a",
+    "contributors": [
+      "fleet05/A058"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A058\\runs\\20261011T222138Z-fleet05-A058-overlapping-compositions\\OVERLAP_ENTROPY_LEDGER.md",
+      "theorem_source": "~\\brain_workers\\FEI100_20261011\\agents\\A058\\runs\\20261011T222138Z-fleet05-A058-overlapping-compositions\\OVERLAPPING_COMPOSITION_CLASS.tex"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCAL_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A059",
+      "A060",
+      "A091",
+      "A090",
+      "B20"
+    ]
+  }
+]

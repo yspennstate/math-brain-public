@@ -1,0 +1,35 @@
+R02 I0095 exact checker
+A17 discrepancy=7 argmask=430 ratio^2=49/17
+H20 class 1 discrepancy=6 argmask=3179
+H20 class 1 all 20 punctures discrepancy=7
+H20 class 2 discrepancy=6 argmask=3175
+H20 class 2 all 20 punctures discrepancy=7
+H20 class 3 discrepancy=6 argmask=3179
+H20 class 3 all 20 punctures discrepancy=7
+H16 completion verified
+H16 support-size maxima (k:maxdisc:count):
+1:1:16
+2:2:120
+3:3:560
+4:4:1792
+5:5:1344
+6:4:8008
+7:5:10992
+8:6:352
+9:5:11440
+10:6:4200
+11:5:4368
+12:6:1792
+13:5:560
+14:6:120
+15:7:16
+16:6:1
+H16 deformation certificate: every even support <=6; every odd support <=7; all 16 punctures have 7
+heuristic exact uncovered n15/R4=233 n18/R5=4301 n20/R6=4432
+n17 radius4 ball=3214 17*B4=54638 quotient=65536
+ALL EXACT CHECKS PASS
+
+Local SHA-256 of source used for this run: a5375fa3342dd775d7287e5387168c014c428819a950df4fef672844c2583e1e
+Local SHA-256 of raw checker stdout: 59e99b21f4ec0252e32ddc90a4c65b2873b005a0311c4737609021eb8403d2f0
+Compilation/execution: g++ -O3 -std=c++20 <source> -o checker && ./checker
+Finite arithmetic is exact integer arithmetic; the current-status/literature classification dependencies are separate from this self-check.

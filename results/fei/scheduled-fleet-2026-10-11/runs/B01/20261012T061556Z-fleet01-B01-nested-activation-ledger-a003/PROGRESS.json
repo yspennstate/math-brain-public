@@ -1,0 +1,118 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2 plus owner control 2026-10-12.1",
+  "run_id": "20261012T061556Z-fleet01-B01-nested-activation-ledger-a003",
+  "stream": "B01",
+  "packet_id": "A003",
+  "packet_ids": ["A003"],
+  "gap_id": "G-UPPER-SET-ASYMMETRY",
+  "related_gap_ids": ["O-ACTIVATION-EQUIV", "B05_RARE_REFUNDS"],
+  "attempt_id": "A003-GUP-NESTED-ACTIVATION-LEDGER-3",
+  "bounded_objective": "Retain the majority no-go's exact pL_1(g) charge and determine whether its physical Fourier scaling gives a single-use, depth-free ledger along arbitrary nested fresh one-word activations.",
+  "method": "Prove a second-difference modulus for phi(x)=x^2log_2(1/x^2); derive a repaired local transfer retaining W_1+L_1; compute exact singleton spectra after cumulative activation; sum the weighted charges using geometric moments of distinct cumulative depths; test the resulting identities and inequalities by direct Walsh computation.",
+  "prior_status": "The previous A003 run refuted selector-plus-new-U local payment and isolated pL_1(g) as the unpaid majority mismatch. No nonreused hierarchy credit was proved.",
+  "new_status": "DEPTH_FREE_FIXED_CORE_NESTED_ACTIVATION_LEDGER_AUTHOR_PROVED_PENDING_REVIEW; EXPANDING_RESTRICTION_CLOSED_CLASS_ESTABLISHED; ARBITRARY_CHANGING_CORE_HIERARCHY_OPEN; FULL_FEI_OPEN",
+  "mathematical_delta": "The local charge is bounded by 320p(W_1+L_1). Across a nested chain, inherited singleton coefficients scale by q_s and control singletons equal 2q_sr, giving an exact ledger bounded by 2q_mL_1+6q_mW_1+(28+8/(e ln2))I_ctl. Hence G has an all-depth constant C_chain<10324. Nested fresh activations over fixed terminal FEI classes inherit a dimension-free constant; signed-parity terminals give H<20650I.",
+  "deliverable_status": {
+    "A003-D1": "ADVANCED_PENDING_INDEPENDENT_REVIEW: implication graph gains a proved all-depth fixed-core activation bridge",
+    "A003-D2": "ADVANCED_PENDING_INDEPENDENT_REVIEW: previous logarithmic mismatch is retained and single-use on the stated hierarchy",
+    "packet_target": "STRICTLY_WEAKER_NONTRIVIAL_ENDPOINT_WITH_EXPLICIT_UNPAID_CHANGING_CORE_LEAF"
+  },
+  "claim_versions_used": [
+    "source-pinned upper-set Theorem G: H<=2I+2U",
+    "source-pinned GU' restriction induction interface",
+    "B01-A003-FRESH-ACTIVATION-GUP-TRANSFER-v1 at proof blob fd291e847f0f7a21591398af6b415fa00787cd17",
+    "B01-A003-MAJORITY-ACTIVATION-LOCAL-NOGO-v1 at proof blob 0d53cfb8dbb41786ea281065b4f72271059a9da9"
+  ],
+  "claims_created_or_changed": [
+    "B01-A003-RETAINED-SINGLETON-TRANSFER-v1",
+    "B01-A003-NESTED-ACTIVATION-LEDGER-v1",
+    "B01-A003-NESTED-PARITY-FEI-v1",
+    "B01-A003-NESTED-ACTIVATION-CHECK-v1"
+  ],
+  "source_plan": {
+    "source_head_at_research": "862bef2a2f671ed8ed3b8e71054614f074865763",
+    "owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "owner_order_blob": "81b6d6f988aee4489512c6e62543253900620453",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "assignment_path": "reports/fei-2026-10-11/assignments/B01.json",
+    "assignment_blob": "ac038a028831d59ad053dd56b2b527e2a71ffdee",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "current_status_blob": "c416d4b4a83fc67965cb95d06a0cc80c5c29a520",
+    "obstruction_registry_blob": "e111933338dff1d7798c5e59b43700bbf30f7b96"
+  },
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "8e917b7f2190d0d624de3469053f5cda4625978f",
+      "path": "reports/fei-2026-10-11/runs/B01/20261012T051555Z-fleet01-B01-majority-activation-no-go-a003/MAJORITY_ACTIVATION_NOGO.tex",
+      "blob": "0d53cfb8dbb41786ea281065b4f72271059a9da9",
+      "use": "accepted-as-input author argument identifying the exact L_1 mismatch; independent review still pending"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "8344aa4aa688790494e3ebd46bb94b13f659ce18",
+      "path": "reports/fei-2026-10-11/runs/B01/20261012T041121Z-fleet01-B01-activation-transfer-a003/ACTIVATION_TRANSFER.tex",
+      "blob": "fd291e847f0f7a21591398af6b415fa00787cd17",
+      "use": "exact activation identity rederived and sharpened here"
+    }
+  ],
+  "acceptance_evidence": [
+    "NESTED_ACTIVATION_LEDGER.tex: analytic local modulus, exact hierarchy formulas, geometric summation, restricted-class endpoint",
+    "CHECK.py and CHECK.out: 1434 local and 2664 hierarchy direct-Walsh cases"
+  ],
+  "remaining_obstacle": "Arbitrary Boolean restriction hierarchies may change coherent cores at every node; their singleton logarithms do not descend from one fixed terminal spectrum. A global single-use credit or a genuine Boolean falsifier remains missing.",
+  "next_consumers": ["A005", "A023", "A063", "A086", "A094", "B20"],
+  "independent_reviewers": ["A086", "A094"],
+  "next_action": "Test whether the fixed-core ledger extends to a branching fresh-selector tree whose leaf cores have pairwise orthogonal singleton spectra; identify the exact overlap term when singleton supports collide, without recharging terminal H.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "The theorem fixes one terminal core across the chain and does not control changing coherent cores.",
+    "No dimension-independent aggregate upper-set asymmetry bound is proved for arbitrary Boolean spectra.",
+    "Full FEI remains open."
+  ],
+  "validation": {
+    "command": "python CHECK.py",
+    "seed": 2026101203,
+    "arithmetic": "exact Fraction Walsh probabilities and upper masses; Decimal 70-digit logarithms",
+    "local_cases": 1434,
+    "hierarchy_cases": 2664,
+    "mandatory_controls": ["majority", "one-point defect", "addressing", "near tensor", "overlap product", "parity", "exact-one prime control"],
+    "status": "PASS",
+    "scope_note": "Finite falsifier search and normalization check only; the theorem is analytic."
+  },
+  "literature": {
+    "primary_sources_checked": [
+      "source-pinned upper-set identities and GU' interface",
+      "previous canonical B01 activation proof and majority obstruction"
+    ],
+    "novelty_claim": "NONE; this is a campaign-internal source-bound strengthening."
+  },
+  "delivery_status": {
+    "canonical": {
+      "status": "SEVEN_FILE_SUBSTANTIVE_CORE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-open-problems",
+      "core_complete_commit": "dfd680b0c4efac2c754c4d0c6aafe10541ff37b8",
+      "path": "reports/fei-2026-10-11/runs/B01/20261012T061556Z-fleet01-B01-nested-activation-ledger-a003/",
+      "verified_files": 7,
+      "report_blob": "770e35cb5fa74448afefc3876e1e4f0f3c9d743c"
+    },
+    "brain_mirror": {
+      "status": "SEVEN_FILE_SUBSTANTIVE_CORE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-research-brain",
+      "core_complete_commit": "e28123aff27060c8aecbad16e97f6c330deb009e",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B01/20261012T061556Z-fleet01-B01-nested-activation-ledger-a003/",
+      "verified_files": 7,
+      "report_blob": "770e35cb5fa74448afefc3876e1e4f0f3c9d743c"
+    },
+    "independent_review": "NOT YET; A086/A094 requested",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {
+    "model": "Codex on GPT-5 as exposed by the runtime instructions",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  }
+}

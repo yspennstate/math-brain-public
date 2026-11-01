@@ -1,0 +1,165 @@
+PDF PAGE 2
+Theorem 1 For the hexagonal lattice,
+µ =
+√
+2 +
+√
+2.
+It will be convenient to consider walks between mid-edges of H, i.e. centers of edges
+of H (the set of mid-edges will be denoted by H). We will write γ : a→ E if a walk γ
+starts at a and ends at some mid-edge of E⊂H. In the case E ={b}, we simply write
+γ :a→b. The length ℓ(γ) of the walk is the number of vertices visited by γ.
+We will work with the partition function
+Z(x) =
+∑
+γ : a→H
+xℓ(γ) ∈ (0, +∞].
+This sum does not depend on the choice of a, and is increasing in x. Establishing the
+identityµ =
+√
+2 +
+√
+2 is equivalent to showing thatZ(x) = +∞ forx> 1/
+√
+2 +
+√
+2 and
+Z(x) < +∞ for x <1/
+√
+2 +
+√
+2. To this end, we analyze walks restricted to bounded
+domains and weighted depending on their winding. The modiﬁed sum can be deﬁned as
+a parafermionic observable arising from a disorder operator. Such observables exist for
+other models, see [1, 2, 11].
+The paper is organized as follows. In Section 2, the parafermionic observable is intro-
+duced and its key property is derived. Section 3 contains the proof of Theorem 1. Section
+4 discusses conformal invariance conjectures for self-avoiding walks. To simplify formulæ,
+below we set xc := 1/
+√
+2 +
+√
+2 and j = ei2π/3.
+2 Parafermionic observable
+A (hexagonal lattice) domain Ω⊂H is a union of all mid-edges emanating from a given
+collection of verticesV (Ω) (see Fig. 1): a mid-edge z belongs to Ω if at least one end-point
+of its associated edge is in Ω, it belongs to ∂Ω if only one of them is in Ω. We further
+assume Ω to be simply connected, i.e. having a connected complement.
+For a self-avoiding walk γ between mid-edges a and b (not necessarily the start and
+the end), we deﬁne its winding Wγ(a,b ) as the total rotation of the direction in radians
+when γ is traversed from a to b, see Fig. 1.
+Our main tool is given by the following
+Deﬁnition 1 The parafermionic observable for a∈∂Ω, z∈ Ω, is deﬁned by
+F (z) =F (a,z,x,σ ) =
+∑
+γ⊂Ω: a→z
+e−iσWγ(a,z)xℓ(γ).
+Lemma 1 If x = xc and σ = 5
+8, then F satisﬁes the following relation for every vertex
+v∈V (Ω):
+(p−v)F (p) + (q−v)F (q) + (r−v)F (r) = 0, (1)
+wherep,q,r are the mid-edges of the three edges adjacent to v.
+2
+
+PDF PAGE 9
+of the strip of width T , namely, c
+T ≤Bxc
+T ≤ 1.
+In paragraphs 3.3.3 and 3.4.3 of [6], precise behaviors are conjectured for the number
+of self-avoiding walks between two points on the boundary of a domain, which yields the
+following (conjectured) estimate:
+∑
+γ⊂ST :0→T +iyT
+xℓ(γ)
+c ≈T−5/4H(0, 1 + iy)5/4
+where H is the boundary derivative of the Poisson kernel. Integrating with respect to y,
+we obtain that Bxc
+T should decay as T−1/4 when T goes to inﬁnity. Similar estimates are
+conjectured for walks in ST from 0 to iyT .
+4 Conjectures
+In [8, 9], Nienhuis proposed a more precise asymptotical behavior for the number of
+self-avoiding walks:
+cn ∼ A nγ−1
+√
+2 +
+√
+2
+n
+, (7)
+withγ = 43/32. Here the symbol∼ means that the ratio of two sides is of the order no(1),
+or perhaps even tends to a constant. Moreover, Nienhuis gave arguments in support of
+Flory’s prediction that the mean-square displacement ⟨|γ(n)|2⟩ satisﬁes
+⟨|γ(n)|2⟩ = 1
+cn
+∑
+γ n−step SAW
+|γ(n)|2 = n2ν+o(1) , (8)
+with ν = 3/4. Despite the precision of the predictions (7) and (8), the best rigorously
+known bounds are very far apart and almost 50 years old (see [4] for an exposition).
+The derivation of these exponents seems to be one of the most challenging problems in
+probability.
+It was shown by G. Lawler, O. Schramm and W. Werner in [6] that γ and ν could
+be computed if the self-avoiding walk would posses a conformally invariant scaling limit.
+More precisely, let Ω̸= C be a simply connected domain in the complex plane C with two
+pointsa andb on the boundary. For δ >0, we consider the discrete approximation given
+by the largest ﬁnite domain Ω δ of δH included in Ω, and aδ and bδ to be the vertices of
+Ωδ closest to a andb respectively. A probability measure Px,δ is deﬁned on the set of self-
+avoiding trajectories γ between aδ and bδ that remain in Ω δ by assigning to γ a weight
+proportional to xℓ(γ). We obtain a random curve denoted γδ. Conjectured conformal
+invariance of self-avoiding walks can be stated as follows, see [6]:
+Conjecture 1 Let Ω be a simply connected domain (not equal to C) with two distinct
+pointsa,b on its boundary. For x =xc, the law of γδ in (Ωδ,aδ,bδ) converges whenδ→ 0
+to the (chordal) Schramm-Loewner Evolution with parameter κ = 8/3 in Ω froma to b.
+9
+
+PDF PAGE 10
+As discussed in [7, 10], to prove convergence of a random curve to SLE it is suﬃcient
+to ﬁnd a discrete observable with a conformally covariant scaling limit.
+Thus it would suﬃce to show that a normalized version of Fδ has a conformally in-
+variant scaling limit, which can be achieved by showing that it is holomorphic and has
+prescribed boundary values.
+As discussed in [11], the winding of an interface leading to a boundary edge z is
+uniquely determined, and coincides with the winding of the boundary itself. Thus one can
+say that Fδ satisﬁes a discrete version of the following Riemann boundary value problem
+(a homogeneous version of the Riemann-Hilbert-Privalov BVP):
+Im
+(
+F (z)· (tangent to ∂Ω)5/8
+)
+= 0 , z ∈∂Ω , (9)
+with a singularity at a. Note that the problem above has conformally covariant solutions
+(as (dz)5/8-forms), and so is well deﬁned even in domains with fractal boundaries.
+As noted in Remark 1, relation (1) amounts to saying that discrete contour integrals
+of Fδ vanish. So any (subsequential) scaling limit of Fδ would have to be holomorphic.
+Unfortunately, relation (1) alone, is unsuﬃcient to deduce the existence of such a limit,
+unlike in the Ising case [2]. The reason is that for a domain with E edges, (1) imposes
+≈ 2
+3E relations (one per vertice) for E values of Fδ, making it impossible to reconstruct
+Fδ from its boundary values. So Fδ is not exactly holomorphic, it can be rather thought
+of as a divergence-free vector ﬁeld, which seems to have non-trivial curl. However, we
+expect that in the limit the curl vanishes, which is equivalent to Fδ(z) having the same
+limit regardless of the orientation of the edge z.
+The Riemann BVP (9) is easily solved, and we arrive at the following conjecture:
+Conjecture 2 Let Ω be a simply connected domain (not equal to C), let z∈ Ω, and let
+a, b be two distinct points on the boundary of Ω. We assume that the boundary of Ω is
+smooth near b. For δ > 0, let Fδ be the holomorphic observable in the domain (Ωδ,aδ)
+approximating (Ω,a ), and let zδ be the closest point in Ωδ to z. Then
+lim
+δ→0
+Fδ(zδ)
+Fδ(bδ) =
+(φ′(z)
+φ′(b)
+)5/8
+(10)
+where Φ is a conformal map from Ω to the upper half-plane mapping a to∞ and b to 0.
+The right-hand side of (10) is well-deﬁned, since the conformal map φ is unique up
+to multiplication by a real factor. Proving this conjecture would be a major step toward
+Conjecture 1 and the derivation of critical exponents.
+Acknowledgements. The authors would like to thank G. Slade for useful comments on
+the manuscript, and G. Lawler for suggesting Remark 2. This research was supported by
+the EU Marie-Curie RTN CODY, the ERC AG CONFRA, as well as by the Swiss FNS.
+The second author was partially supported by the Chebyshev Laboratory (Department
+of Mathematics and Mechanics, St.-Petersburg State University) under RF governement
+grant 11.G34.31.0026
+10

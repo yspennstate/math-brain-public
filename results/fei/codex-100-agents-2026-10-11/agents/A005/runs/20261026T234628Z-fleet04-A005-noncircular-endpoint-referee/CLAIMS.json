@@ -1,0 +1,70 @@
+[
+  {
+    "claim_id": "A005-NORMALIZED-OPTIMIZED-CHILD-DEFICIT",
+    "version": 1,
+    "exact_statement": "For any nonconstant uniform Boolean f on n>=2 relevant coordinates and K>=0, put D=H-KI, t_i=E_b[I(f_i^b)-a(f_i^b)], s_i*=E_b[K a(f_i^b)-H(f_i^b)], N*=sum_i(-s_i*)_+, and T=H-sum_i H(S_i|S_-i). Then N*>=(n-1)D+T+K sum_i t_i-(2/ln2)I. Therefore H/I<=K+[(2/ln2)+N*/I]/(n-1); growing relevant-dimension ratio-preserving embeddings of a seed with H/I>K cannot have N*=o(nI). a is the full affine-input/output-character minimum influence, and children are complete Boolean physical restrictions.",
+    "hypotheses": [
+      "Uniform Boolean signs; entropy bits; K>=0; nonconstant f; n>=2 relevant physical coordinates",
+      "Complete physical children including constants; a minimizes over full invertible affine inputs and output characters"
+    ],
+    "statement_sha256": "43900ec26e2d3ad4b960b07017ec8f82a06ad83d4774a611f7bcdc4a615fd39a",
+    "contributors": [
+      "A005"
+    ],
+    "proof_source": "PROOF.md equations(1)--(3)",
+    "proof_dependencies": [
+      "A005 stage2 signed restriction identity, rederived here",
+      "C005 Boolean JS row bound <=(2/ln2) influence; B17 independent packet-scalar proof recorded on BOARD",
+      "Finite entropy chain rule and exact influence restriction identity"
+    ],
+    "review_records": [],
+    "status": "PROOF_AUTHOR_CHECKED_EXACT_VALIDATION; INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A052",
+      "A055",
+      "A051",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A052-RARE-PHASE-RIGIDITY",
+    "version": 1,
+    "exact_statement": "For finite uniform Boolean signs f and degree<=d phase P, let delta=Pr[f=-1], gamma=2^(1-d)-4delta>=0, a be full affine/character minimum influence, r the affine spectral rank of P, and m=K*gamma-1>0. Any joint degree<=d-phase/affine competitor g with H(g)-K I(g)>=H(f)-K a(f)-epsilon has r<=epsilon/m in its one-phase normal form. Thus epsilon<m forces that reduced phase to be a signed character. Actual root maximality additionally requires I(f)=a(f). This is a scoped rigidity corollary, not a child-funding theorem or FEI bound.",
+    "hypotheses": [
+      "Finite uniform cube; entropy bits",
+      "d>=1; K>=0; gamma>=0; m>0; epsilon>=0"
+    ],
+    "statement_sha256": "536025d9389779afd129202d5d7c78ebecea93e6148eefed490bc018ba3a4110",
+    "contributors": [
+      "A052"
+    ],
+    "proof_source": "RIGIDITY_REVIEW.md Sections1--4",
+    "proof_dependencies": [
+      "A055-RARE-CUBIC-PHASE-ORBIT-EXTREMAL-CORE-GUARD@1 Sections1--2 independently reconstructed here; no embedding dependency"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A005",
+        "verdict": "HOLDS_SCOPED",
+        "source": "PROOF.md scoped review; out/RIGIDITY.json",
+        "scope": "Analytic corollary and elementary rank/cost proof only; no giant certificate or arbitrary-core embedding dependency; no repair",
+        "exact_checks": 3616
+      }
+    ],
+    "status": "INDEPENDENT_SCOPED_RECONSTRUCTION_HOLDS; SHARED_ADOPTION_UNVERIFIED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A051",
+      "A054",
+      "A055",
+      "B11",
+      "B20"
+    ]
+  }
+]

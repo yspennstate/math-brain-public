@@ -1,0 +1,121 @@
+[
+  {
+    "claim_id": "A010-WIDTH2-UNIFORM-SCALE-VERSUS-INFIMUM",
+    "version": 1,
+    "exact_statement": "For every positive width-two graph prime table with both endpoint orders, pi=1/4 and positive globally packing-feasible weights, its full source-SCC partition-forest surrogate mass and exact partition-event probability satisfy Q_part(A)<=W_B(A)/D<=72^|A| Q_part(A) for every covered nonempty A. On the actual Boolean family f_m=[x0 AND OR_(i=1)^m xi] OR [y AND z] with m>=2, keeping precisely all positive primes and both orders, the fully optimized conditional posterior at uniform weights1/m has R_uniform/I_m>(7/25)log2 m-9. Thus m=2^(25t) gives actual functions with R_uniform/I_m>7t-9. The SAME primes and orders with star weights1/m and isolated-edge weight1 have complete maximal-matching star queue cross-entropy and R at most11I_m, so the all-weight variational infimum is bounded on this family. Holding star weights1/m and optimizing the isolated-edge weight over every beta in(0,1] yields the unique global joint-posterior slice optimum beta=(4/3)D_star/[(1+D_star)(1-q_m)] in(8/15,8/9), where D_star=(1+1/(4m))^m-1 and q_m=(1+2^-m)/2. This is failure of a uniform weight scale, not a PI-J or FEI disproof, nor a global optimum over all star weights/orders.",
+    "hypotheses": [
+      "Uniform physical Boolean signs; entropy in bits; gamma=6/5",
+      "R is eq:foresttarget surrogate residual without h2(variance) or K_ref I",
+      "Exactly positive edge prime gates; both full endpoint orders per gate fixed before sampling A; no extra gates",
+      "All events are distinct once-per-gate partition forests with one initial root per original source SCC",
+      "Exact complete queue probabilities retain subset1/4 for singleton,1/6 for pair, count/multiset and nonempty-root conditioning",
+      "Family star and isolated edge have disjoint physical supports; weights remain globally fixed and packing-feasible",
+      "Slice optimizer holds star weights at1/m; it does not justify symmetry reduction for all-weight infimum"
+    ],
+    "statement_sha256": "dc2afe0ebe6b0d91ce63f02ef8d72c86f00455a1fca00e61b7a451b835da07ae",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": {
+      "path": "DIAGNOSTIC.md",
+      "report": "REPORT.md",
+      "code": [
+        "code/family.py",
+        "code/logs.py"
+      ],
+      "certificate": [
+        "out/family.json",
+        "out/occupation.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locators": [
+          "original queue",
+          "eq:forestcost",
+          "eq:forestconditioning",
+          "eq:foresttarget"
+        ],
+        "acceptance": "Definitions compared directly; no universal expected cost assumed"
+      },
+      {
+        "claim_id": "A008-MATCHING-OCCUPATION-MASS-COLLISION-CREDIT",
+        "version": 1,
+        "statement_sha256": "905b7f9689e68f23e9c1e3fb2ef75261095fd83eda91094cd653db0435d7f02b",
+        "acceptance": "Whole unchanged claim independently accepted in REVIEW_A008.md; family complete numerator also reconstructed directly"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A008",
+        "verdict": "HOLDS_WHOLE_SCOPE_NO_REPAIR",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261014T050954Z-fleet05-A008-gate-label-compression\\REVIEW_A010.md",
+        "source_sha256": "fc82c6f785ead230e6407a780713f588c575acb125636bc9feffe3e0bec60311"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_LOCALLY; UNIVERSAL_OPEN",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "Claude/B02",
+      "A006",
+      "A008",
+      "A009",
+      "A014",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A010-ROOT-LAW-GAP-OBSTRUCTION-AND-PACKING-CAPS",
+    "version": 1,
+    "exact_statement": "For every actual positive star edge DNF f_m, m>=2, its entire positive prime table with pi=1/4, every positive feasible global weight vector, and every fixed finite distinct once-per-gate actual partition event family covering the positive nonempty spectrum, the A006 full-simplex tangent gap Gamma=max_T sum_A P(A)K_AT/Q_A-v is at least m^m/4-1+4^-m. Thus Gamma/I is unbounded uniformly over the weights, while the uniform both-order matching-star complete cost has a choice C_MS<=11I. For star root laws every k-gate subset obeys p_lambda(T)<=4^(1-k)/k^k. Restricting the root-law relaxation to these caps gives a globally valid joint weight/posterior lower certificate G(lambda0)-Gamma_cap, with Gamma_cap exactly the capped-simplex linear-program maximum of h dot p minus v and bit gap at most 2Gamma_cap. At lambda0_i=1/m in the both-order matching-star family every m=2,...,8 has Gamma_cap<I/6, certified by rational LP primal-dual equality. No all-m capped payment, full-forest lower bound from selected events, variational residual growth or FEI disproof is asserted.",
+    "hypotheses": [
+      "Uniform cube and physical squared Fourier spectrum; entropy/cost bits, G natural units",
+      "All positive star prime edges, fixed table and orders before sampling; pi=1/4; weights strictly positive and sum at the hub at most one",
+      "Distinct actual partition events visit gates once, have complete factors and positive mass at every positive nonempty spectral set",
+      "Finite capped numerical certificate concerns matching-star events and m=2,...,8 only; every fixed-family posterior is optimized",
+      "The cost upper lemma is the complete star numerator payment reconstructed in the previous run and independently reviewed by A008"
+    ],
+    "statement_sha256": "8fe13a285543eed587ae80558a5a84279ee27e45240ee127db4b14005140ef84",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": {
+      "derivation": "~\\brain_workers\\FEI100_20261011\\agents\\A010\\runs\\20261014T062324Z-fleet05-A010-universal-residual-falsifier\\PROOF.md",
+      "code": "~\\brain_workers\\FEI100_20261011\\agents\\A010\\runs\\20261014T062324Z-fleet05-A010-universal-residual-falsifier\\code\\rootlaw.py",
+      "LP_certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A010\\runs\\20261014T062324Z-fleet05-A010-universal-residual-falsifier\\out\\caps.json"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261014T035304Z-fleet05-A006-posterior-forest-optimization\\ROOT_LAW_RELAXATION.md",
+        "sha256": "4719548182b00fdff159735d98bc99bdc01051f1e29d581f2f101f519e79a924",
+        "acceptance": "WHOLE_DOCUMENT_HOLDS_NO_REPAIR; no registered claim version present"
+      },
+      {
+        "claim_id": "A010-WIDTH2-UNIFORM-SCALE-VERSUS-INFIMUM",
+        "version": 1,
+        "statement_sha256": "dc2afe0ebe6b0d91ce63f02ef8d72c86f00455a1fca00e61b7a451b835da07ae",
+        "acceptance": "A008 whole review accepted; complete star numerator sublemma used"
+      }
+    ],
+    "review_records": [],
+    "status": "PROVED_ANALYTICALLY_AND_EXACT_FINITE_CERTIFICATES; INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Gamma_cap<=K I in all dimensions for complete full-forest coefficients on shared/leafless incidence.",
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A009",
+      "A086",
+      "A094",
+      "Claude/B02",
+      "B20"
+    ]
+  }
+]

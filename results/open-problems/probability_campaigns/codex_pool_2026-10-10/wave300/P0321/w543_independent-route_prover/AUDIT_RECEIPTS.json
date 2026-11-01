@@ -1,0 +1,100 @@
+{
+  "recorded_utc": "2026-10-10T06:04:45.931927+00:00",
+  "scope": "H1-H4 Gaussian auxiliary model only; not a P0321 proof or cross-account admission",
+  "referee": "w545",
+  "referee_path": "~\\brain_workers\\w545\\VERDICTS.jsonl",
+  "referee_verdicts": [
+    {
+      "target": "w543:P0321-H1",
+      "verdict": "KEEP",
+      "scope": "Gaussian model with mu>0",
+      "reproduction": "f_theta=T/[4(mu+kappa k^2)]; integration over disk is T log(1+kappa Lambda^2/mu)/(16 pi kappa) for kappa>0; multiplying covariance difference by -36 gives plateau (1+kappa Lambda^2/mu)^(-9T/(4 pi kappa)), with kappa=0 limit exp(-9T Lambda^2/(4 pi mu)).",
+      "remaining_gap": "Positive-shear auxiliary plateau does not exclude a defect-bearing hexatic Gibbs state."
+    },
+    {
+      "target": "w543:P0321-H2",
+      "verdict": "KEEP",
+      "scope": "Gaussian model with fixed mu>0",
+      "reproduction": "Decompose 1/[k^2(mu+kappa k^2)]=1/(mu k^2)-kappa/[mu(mu+kappa k^2)]. The second and longitudinal spectra are infrared integrable. Angular identity leaves log coefficient T|G|^2/(4 pi mu).",
+      "remaining_gap": "No microscopic displacement or density-wave transfer."
+    },
+    {
+      "target": "w543:P0321-H3",
+      "verdict": "KEEP",
+      "scope": "Gaussian angle increments with kappa>0",
+      "reproduction": "Subtract exact exponents: log(C6_mu/C6_0)=9T int(1-cos(k.x))mu/[kappa k^2(mu+kappa k^2)] dk/(2pi)^2. Bound 1-cos<=k^2R^2/2 and integrate disk to obtain 9T mu R^2 log(1+kappa Lambda^2/mu)/(8 pi kappa^2). The mu=0 scalar integral gives exponent 9T/(2 pi kappa).",
+      "remaining_gap": "Fixed-window closeness cannot establish a particle hexatic phase or commute the limits."
+    },
+    {
+      "target": "w543:P0321-H4",
+      "verdict": "KEEP",
+      "scope": "IR-cutoff zero-shear Gaussian model",
+      "reproduction": "Expand 1-cos(k.x)=(k.x)^2/2+O(k^4|x|^4). The angular fourth moment is pi[|G|^2|x|^2+2(G1 x2-G2 x1)^2]/4; radial dk/k yields T/[32 pi kappa] times the bracket multiplying log(1/epsilon).",
+      "remaining_gap": "Divergent displacement increments do not construct the compact angle or defect Gibbs state."
+    }
+  ],
+  "adversary": "w544",
+  "adversary_path": "~\\brain_workers\\w544\\AUDIT_VERDICTS.jsonl",
+  "adversary_verdicts": [
+    {
+      "claim_id": "P0321-A01",
+      "target": "w543 ATTEMPT.md H1-H2",
+      "verdict": "KEEP",
+      "exact_statement": "At fixed T>0, mu>0, finite Lambda, kappa>=0 and 0<=s<2 in the stipulated Gaussian model, orientational correlation has a positive limiting plateau and positional characteristic-function decay exponent T|G|^2/(4pi mu).",
+      "assumptions": [
+        "Exactly the Fourier model in the frozen audit snapshot; no microscopic particle identification."
+      ],
+      "source": {
+        "snapshot": "audit_snapshots/w543_ATTEMPT.md",
+        "receipt": "AUDIT_SNAPSHOT.json"
+      },
+      "proof_or_counterexample": "Independent derivation before peer read agrees at kappa=0. Integrable transverse correction and radial frequency integral establish kappa>0 cases; see AUDIT.md.",
+      "independent_reviewer": "w544; distinct worker, different-login provenance unverified",
+      "remaining_gap": "Actual neutral Riesz Gibbs and compact-angle transfer not established.",
+      "status": "independently checked proof",
+      "scope": "Auxiliary Gaussian assertions only; not P0321 admission."
+    },
+    {
+      "claim_id": "P0321-A02",
+      "target": "w543 ATTEMPT.md H3",
+      "verdict": "KEEP",
+      "exact_statement": "For kappa>0, fixed R and mu>0, the bounded-window log correlation ratio lies between zero and 9T mu R^2 log(1+kappa Lambda^2/mu)/(8pi kappa^2).",
+      "assumptions": [
+        "The two exact orientational Gaussian correlations in the snapshot; |x|<=R."
+      ],
+      "source": {
+        "snapshot": "audit_snapshots/w543_ATTEMPT.md",
+        "receipt": "AUDIT_SNAPSHOT.json"
+      },
+      "proof_or_counterexample": "Subtract exact frequency kernels and apply 1-cos(k dot x)<=|k|^2 R^2/2. No bound uniform in arbitrary distance is inferred.",
+      "independent_reviewer": "w544; distinct worker, different-login provenance unverified",
+      "remaining_gap": "Bounded-window approximation cannot by itself transfer a vanishing long-distance power law.",
+      "status": "independently checked proof",
+      "scope": "Both raw iterated correlation limits are zero; a difference remains for normalized decay rates, as explained in AUDIT.md."
+    },
+    {
+      "claim_id": "P0321-A03",
+      "target": "w543 ATTEMPT.md H4",
+      "verdict": "KEEP",
+      "exact_statement": "At mu=0, kappa>0, fixed x!=0 and G!=0, the infrared-cutoff positional exponent has logarithmic divergence with coefficient T(|G|^2|x|^2+2(G1 x2-G2 x1)^2)/(32pi kappa).",
+      "assumptions": [
+        "Infrared cutoff epsilon tends to zero at fixed nonzero x,G; longitudinal exponent 0<=s<2."
+      ],
+      "source": {
+        "snapshot": "audit_snapshots/w543_ATTEMPT.md",
+        "receipt": "AUDIT_SNAPSHOT.json"
+      },
+      "proof_or_counterexample": "Rotate x to an axis and integrate cos^2(phi)(-g1 sin(phi)+g2 cos(phi))^2. Quadratic small-k term gives the logarithm; fourth-order remainder is integrable. Nine angular quadratures have max error 8.53e-14.",
+      "independent_reviewer": "w544; distinct worker, different-login provenance unverified",
+      "remaining_gap": "A Gaussian field modulo affine functions is not a particle Gibbs construction.",
+      "status": "independently checked proof",
+      "scope": "To test characteristic-function continuity, hold x fixed and vary G."
+    }
+  ],
+  "audited_snapshot_path": "~\\brain_workers\\w544\\audit_snapshots\\w543_ATTEMPT.md",
+  "author_proof_matches_audited_snapshot_byte_for_byte": true,
+  "different_login_provenance": "UNVERIFIED",
+  "store_or_source_admission": false,
+  "formal_proof_receipt": null,
+  "proof_statement_changed": false
+}

@@ -1,0 +1,189 @@
+PAGE 1
+1
+A special aggregation-fragmentation process
+Consider the state space Sn = {m = (mj) : mj ≥0, !
+j jmj = n}. Picture
+a state as a partition of n items into clusters, with mj clusters of size j,
+1 ≤j ≤n. Picture each cluster as a linear polymer, with j items linked
+by j −1 edges. Fix a parameter 0 < β < ∞, and deﬁne a continuous-time
+chain (M(t)) on Sn as follows. Let each edge disappear at rate β, splitting
+a size-j (say) item into two items of sizes i and j −i, for some 1 ≤i ≤j/2.
+And for each distinct pair of clusters, of sizes i and j −i say, let them merge
+into one cluster of size j (by creation of a linking edge) at rate 2/n. So the
+transition rates are as follows. Write δj for the unit vector δj
+i = 1(i=j).
+m →
+m −δj + δi + δj−i
+: rate 2βmj,
+1 ≤i < j/2
+(fragmentation)
+: rate βmj,
+i = j/2
+m →
+m + δj −δi −δj−i
+: rate 2mimj−i/n,
+1 ≤i < j/2
+(aggregation)
+: rate mi(mi −1)/n,
+i = j/2.
+Writing c(m) = !
+j mj for the number of clusters in conﬁguration m, it is
+easy to check that the chain is reversible with stationary distribution
+π(m) ∝(βn)c(m) "
+j
+1
+mj!.
+In fact this model is a particular case of general reversible models of ag-
+gregation and fragmentation: see Kelly [?] Chapter 8. We will use special
+structure of this particular case to prove a bound on the relaxation time.
+Proposition 1 For the aggregation-fragmentation chain (M(t)) speciﬁed
+above,
+(1 −o(1))(β2 + 4β)−1/2 ≤τ2 ≤β−1 as n →∞.
+Proof. Consider the following interacting particle process B(t) = (Bi(t), 1 ≤
+i ≤n) on the edges of the n-cycle. Each edge can be in state 0 or state 1,
+so the states are b = (b1, . . . , bn) ∈Cn := {0, 1}n. The transition rates at
+each edge are:
+0 →1
+rate β
+1 →0
+rate s(b)−1
+n
+, where s(b) :=
+#
+i
+bi.
+2
+
+PAGE 2
+This chain is reversible with stationary distribution
+π(b) ∝(βn)s(b)/(s(b) −1)!.
+Now we can specify a function f : Cn →Sn as follows. In a conﬁguration
+b, cut each edge in state 1. Let mj be the resulting number of connected
+components with exactly j vertices, and let f(b) = (mj). We claim that the
+chain on Sn induced by f (recall Chapter 4 section 6.1) from the interact-
+ing particle process B(t) on Cn is precisely the aggregation-fragmentation
+chain (M(t)). The key fact is that the process (Bi(t)) is exchangeable in
+the edge-labels i. So conditional on f(B(t)) = m, for ﬁxed t and m, the
+blocks comprising m are in uniform random order. Thus if a particular edge
+changes state from 1 to 0 at time t, the chance that it causes some size-i
+block and some size-(j −i) block to join together equals
+2mimj−1
+s(b)(s(b)−1), where
+b = B(t). Since there are s(b) edges in state 1 and each makes a transition
+at rate (s(b) −1)/n, the total rate of aggregation of size-i and size-(j −i)
+blocks equals 2mimj−i/n, as required. Verifying the other transition rates
+is similar.
+So the contraction principle (Chapter 4 section 6.1) says τ2 ≤˜τ2, where
+˜τ2 is the relaxation time of the process B(t). We shall bound ˜τ2 by coupling.
+Let D = {(b, b) : b ∈Cn} be the diagonal in Cn × Cn and let
+D1
+=
+{(b, b′) : b′ −b = δe for some edge e}
+D2
+=
+{(b, b′) : b′ −b = δe −δe′ for some edges e, e′}.
+We now specify a coupling (B(t), B′(t)) such that, from any initial states
+(b, b′) ∈D1, the coupled process stays in D1 until entering D ∪D2. Specify
+the transition rates for the coupled process at each edge to be
+(0, 0) →(1, 1)
+;
+rate β
+(0, 1) →(1, 1)
+:
+rate β
+(1, 1) →(0, 0)
+:
+rate (s(b) −1)/n
+(1, 1) →(1, 0)
+:
+rate 1/n.
+Note that the coupled process exits D1 at rate β+(s(b)−1)/n ≥β, We next
+specify a coupling (B(t), B′(t)) such that, from any initial states (b, b′) ∈
+D2, the coupled process stays in D2 until entering D. In this coupling, if e, e′
+are the initially unmatched edges, then the other edges remain matched and
+we specify that when one of the unmatched edges in B(t) makes a transition
+3
+
+PAGE 3
+then the other unmatched edge in B′(t) makes the same transition. So the
+process becomes coupled at rate 2β + 2(s(B(t)) −1)/n ≥2β.
+Combining the two couplings, it is easy to deduce from the coupling
+inequality that for any (b, b′) ∈D1 ∪D2
+||Pb(B(t) ∈·) −Pb′(B(t) ∈·)|| = O(e−(β−ε)t) as t →∞
+for any ε > 0. Using the triangle inequality this extends to any (b, b′) ∈
+Cn × Cn and so
+||Pb(B(t) ∈·) −π(·)|| = O(e−(β−ε)t).
+So by the characterization of relaxation time as asymptotic rate of conver-
+gence to stationarity, (Chapter 4 Lemma yyy; currently sitting as Lemma 16
+of Chapter 13), we have ˜τ2 ≤1/(β + ε) and the upper bound in Proposition
+1 follows.
+The process s(B(t)) is clearly the continuous-time birth-and-death chain
+(Qt, say) on states {1, 2, . . . , n} with transition rates
+i →i + 1 : rate β(n −i);
+i →i −1 : rate i(i −1)/n.
+One can check that in the aggregation-fragmentation process M(t) the num-
+ber c(M(t)) of clusters also evolves as this birth-and-death chain Qt. Ap-
+pealing again to the contraction principle, the relaxation time τ ∗
+2 for Qt is
+a lower bound for the relaxation time τ2 for M(t). So to prove the lower
+bound in Proposition 1 it is enough to prove
+τ ∗
+2 ≥(1 −o(1))(β2 + 4β)−1/2 as n →∞.
+From the explicit formula for the stationary distribution πQ of Qt it is
+straightforward to show that πQ is asymptotically Normal(nµ, nσ2) as n →
+∞, where
+µ =
+$
+β2/4 + β −β/2,
+σ2 := µ(1 −µ)/(2 −µ)
+and µ is the positive solution of µ2 = β(1 −µ). We apply the extremal
+characterization with test function f(i) := i and ﬁnd
+varπf
+∼
+nσ2
+E(f, f)
+=
+#
+i
+πQ(i)q(i, i + 1) ∼qi∗,i∗+1 ∼β(1 −µ)n where i∗:= ⌊µn⌋.
+4
+
+PAGE 4
+The extremal characterization now implies
+τ ∗
+2 ≥(1 −o(1))
+σ2
+β(1 −µ).
+Finally,
+σ2
+β(1 −µ)
+=
+µ
+β(2 −µ) (deﬁnition of σ)
+=
+1
+β + 2µ (use quadratic satisﬁed by µ to check µ(β + 2µ) = β(2 −µ))
+=
+(β2 + 4β)−1/2 (deﬁnition of µ).
+Remarks. From the stationary distribution of B(t) we see that the size
+of a typical cluster has geometric(µ) distribution, asymptotically.
+Our arguments continue to apply in the setting where β = βn ∼b/n,
+say, though here the upper and lower bounds on τ2 have orders n and n1/2.
+Here the size of a typical cluster is geometric(µ = β1/2
+n ) and it gets split at
+rate βn/µ = order n−1/2, suggesting that the relaxation time should indeed
+be order n1/2. The coupling analysis we gave is very crude in this setting
+and can perhaps to improved. In particular, since the exit rate from D1 is
+typically about β + µ one might hope to get 1/(β + µ) as an upper bound
+for τ2, and this would be the same order of magnitude as the lower bound.
+2
+Example: horizontally convex polyominoes
+Here we give an elementary, but non-obvious, example of a reversible chain
+arising in the study of the uniform distribution on a combinatorial set.
+Consider horizontally convex polyominoes, which we’ll abbreviate to poly-
+ominoes. A size-n polyomino is obtained by breaking unit cells {1, 2, . . . , n}
+into consecutive blocks, and placing each block on top of the previous block,
+where “on top” means that some component of the current block is imme-
+diately above some component of the previous block. The ﬁgure shows a
+polyomino with n = 17.
+5

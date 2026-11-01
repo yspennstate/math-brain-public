@@ -1,0 +1,33 @@
+{
+  "run_id": "20260923T185112Z-fleet03-B04-auto11-r39",
+  "status": "PASS",
+  "new_results": [
+    "QFORM-FIXED-CARDINALITY-ENTROPY-v1",
+    "QFORM-GROUPED-CROSSING-SHARP-SUBSET-ENTROPY-v1",
+    "QFORM-INCIDENT-E3-SHARP-ENTROPY-v1",
+    "QFORM-CROSS-E3-SHARP-ENTROPY-MARGINALFREE-v1"
+  ],
+  "constants": {
+    "incident_E3": 7.559526299369239,
+    "threshold_h": "131/256",
+    "diffuse_E3": 8.457367696480155,
+    "heavy_E3_at_h": 8.452581375662268,
+    "strong_cut_Z0": 0.000023061517378361292,
+    "strong_cut_density_bound": 50.12879125997171
+  },
+  "explicit_target": {
+    "L": 64,
+    "epsilon": "1/64",
+    "projected_E2": "50360325/4096",
+    "heavy_incident_E2": 12289,
+    "heavy_pair_marginal": "50335744/50360325",
+    "residual_E1_max_marginal": "4096/12289",
+    "density_bound": 1.1127394714023402,
+    "nonzero_cross_entries": true,
+    "at_least_four_eigenvalues_abs_gt_1_after_same_bank_perturbation": true
+  },
+  "notes": [
+    "Finite checks verify algebraic constants and the explicit matrix only; they are not a proof of the analytic inequalities.",
+    "The analytic proof is in REPORT.md and depends on the checked projected-crossing source at 4f92aeb74083c6f95cb314a11fed1b812eacef9a plus the exact physical descent identities from fleet03/B02 r35."
+  ]
+}

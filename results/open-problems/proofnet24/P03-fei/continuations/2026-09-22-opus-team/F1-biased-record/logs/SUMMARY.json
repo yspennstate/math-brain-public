@@ -1,0 +1,92 @@
+{
+ "record_C": "6.521845710923046575",
+ "validation_p0_3over8": {
+  "p_out": "967/2048",
+  "It_0": "855/4096",
+  "sum_other_It": "465/256",
+  "Htilde_float": 6.744254737056314
+ },
+ "symmetry": {
+  "automorphisms": 72,
+  "dual_isomorphisms": 72,
+  "transitive_on_core_and_aux": true,
+  "checker": "code/check_local.py"
+ },
+ "Lambda": {
+  "core_diag": "5613/32768",
+  "aux_diag": "117/32768",
+  "eigs_full": [
+   -0.228651,
+   0.00337,
+   "0.003616 x8",
+   "0.221268 x8"
+  ],
+  "balanced_subspace_min_LDL_pivot": 0.003584513,
+  "Lambda_plus_ccT_min_LDL_pivot": 0.003581705
+ },
+ "RO_gamma_at_record": {
+  "cusp_slope": 31,
+  "max_near_0.49": 6.616,
+  "Gamma_0.45": 6.47,
+  "Gamma_0.25": "C-2"
+ },
+ "pairs_fixed_point_at_record": {
+  "V_half_minus_C": 0.0,
+  "slope_at_half": 0.89,
+  "max_lowering_vs_RO": [
+   0.0937,
+   0.4917
+  ],
+  "balanced_min_excess_smallest_bias": {
+   "cc+-": 0.00171,
+   "ca": 0.0027,
+   "ac0": 2.9e-05,
+   "aa": 3.05e-05,
+   "AND_split": 0.0094
+  }
+ },
+ "aux_only_balanced": {
+  "symmetric_k1_m0.1": 0.000508,
+  "symmetric_k4_m0.99": 0.0673,
+  "random_starts_converge_to_centre": "9 of 9"
+ },
+ "optimistic_cap_pairs": "V(1/2)=C (no divergence)",
+ "bellman_18input_at_pairs_fixed_point": {
+  "min_D_found": -0.000162,
+  "at_p_out": 0.5039,
+  "direction": "all core inputs same sign"
+ },
+ "uniform_core_family_standard_grid": {
+  "C_rec": "diverges sweep 70, V(1/2)-C=-7.4e-7",
+  "C_rec+1e-7": "diverges, -1.2e-6",
+  "C_rec+1e-6": "diverges, -1.3e-6",
+  "C_rec+1e-5": "converges",
+  "C_rec+1e-4": "converges"
+ },
+ "fine_grid_4x_on_0.44_0.56_at_C_rec": {
+  "max_dG_sweep30": 6.48e-05,
+  "max_dG_sweep40": 0.000246,
+  "standard_grid_same_sweeps": [
+   0.00366,
+   0.0042
+  ],
+  "note": "cascade 20-56x slower; consistent with chord-interpolation error ~ h^2"
+ },
+ "fine_grid_4x": {
+  "C_rec+1e-6": "converging (max dG 3.2e-7 at sweep 20; standard grid diverged at this C)",
+  "C_rec+3e-7": "slow creep (max dG 1.7e-5 at 20, 2.9e-5 at 30); stopped for time",
+  "C_rec": "cascade 20-56x slower than standard grid at same sweep; stopped for time"
+ },
+ "second_order_moves_W_bookkeeping": {
+  "A_all_core": "Delta = -(0.0446 log2(1/eps^2) + 3.76) eps^2",
+  "B_one_core": "+0.95 eps^2",
+  "Ba_one_aux": "+0.02 eps^2",
+  "balanced_core_pair": "+2.30 eps^2",
+  "aux_pair_F_notF": "+0.045 eps^2",
+  "idealised_best_balanced_after_A_chain": {
+   "core_pair": "+5.2 t^2",
+   "aux_pair": "+0.11 t^2"
+  }
+ },
+ "verdict": "no gain from biased inputs into g established; grid divergence with the uniform-core family is a discretisation artifact"
+}

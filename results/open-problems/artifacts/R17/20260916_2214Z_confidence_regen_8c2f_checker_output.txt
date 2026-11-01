@@ -1,0 +1,34 @@
+X014 finite-sample confidence obstruction
+  M=1: P(all ones)=1/4 > 0 while true mean=1/4
+  M=2: P(all ones)=1/16 > 0 while true mean=1/4
+  M=5: P(all ones)=1/1024 > 0 while true mean=1/4
+  M=10: P(all ones)=1/1048576 > 0 while true mean=1/4
+  M=100: P(all ones)=1/1606938044258990275541962092341162602522202993782792835301376 > 0 while true mean=1/4
+X014 exact logical counterexample: PASS
+n=1, W=1: E[beam]=1/2, E[LCS]=1/2
+n=1, W=2: E[beam]=1/2, E[LCS]=1/2
+n=1, W=3: E[beam]=1/2, E[LCS]=1/2
+n=2, W=1: E[beam]=9/8, E[LCS]=9/8
+n=2, W=2: E[beam]=9/8, E[LCS]=9/8
+n=2, W=3: E[beam]=9/8, E[LCS]=9/8
+n=3, W=1: E[beam]=29/16, E[LCS]=29/16
+n=3, W=2: E[beam]=29/16, E[LCS]=29/16
+n=3, W=3: E[beam]=29/16, E[LCS]=29/16
+n=4, W=1: E[beam]=161/64, E[LCS]=323/128
+n=4, W=2: E[beam]=323/128, E[LCS]=323/128
+n=4, W=3: E[beam]=323/128, E[LCS]=323/128
+n=5, W=1: E[beam]=1651/512, E[LCS]=831/256
+n=5, W=2: E[beam]=831/256, E[LCS]=831/256
+n=5, W=3: E[beam]=831/256, E[LCS]=831/256
+n=6, W=1: E[beam]=63/16, E[LCS]=8151/2048
+n=6, W=2: E[beam]=8147/2048, E[LCS]=8151/2048
+n=6, W=3: E[beam]=8151/2048, E[LCS]=8151/2048
+n=7, W=1: E[beam]=38115/8192, E[LCS]=19339/4096
+n=7, W=2: E[beam]=38631/8192, E[LCS]=19339/4096
+n=7, W=3: E[beam]=19339/4096, E[LCS]=19339/4096
+Beam <= LCS exhaustive checks: 65532
+Exact two-block concatenation checks: 768
+superadditivity regression n=1: E[L_2]=9/8 >= 2E[L_1]=1
+superadditivity regression n=2: E[L_4]=323/128 >= 2E[L_2]=9/4
+superadditivity regression n=3: E[L_6]=8151/2048 >= 2E[L_3]=29/8
+ALL_EXACT_CHECKS_PASS

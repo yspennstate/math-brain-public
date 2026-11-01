@@ -1,0 +1,10 @@
+T357 (agent A, 20 Oct 2026): closed form for k_FM = lim alpha lam_FM, from the identity train FM = -lam |w_hat|^2.
+At the fixed point of rf_cgmt.py a training prediction is P = prox_{c rho_y}(Q) = Q - c rho'(P), while a fresh prediction has
+the law of Q. With g(z, y) = (sig(z) - y) z, the population FM is E g(Q) and the train FM is E g(P), so
+    gap = E g(Q) - E g(P) = c E[g'(Q) rho'(Q)] + O(c^2),   g'(z) rho'(z) = (sig'(z) z + sig(z) - y)(sig(z) - y),
+and c = (1/n) tr Sig G -> N/(n Vh) = psi/(alpha Vh) as lam -> 0 (Sig full rank), Vh = E sig'(zhat). At lam_FM, FM_pop = 0, so
+    lam_FM |w_hat|^2 = gap   =>   k_FM = alpha lam_FM -> psi E[(sig' zhat + sig - y)(sig - y)] / (Vh |a_0|^2),
+every expectation at the n = inf population fit (lam -> 0+, zhat = q0 u, y | u from the teacher). Compared with the alpha
+sweep's alpha lam_FM (0.095 at beta 2, 0.034 at beta 5, d 1000, N/d 1, F seed 100). argv: beta psi [d] [seed]
+beta 5.0 psi 1.0 lam0 1e-08: q0 2.48442  Vh 0.13164  E[g'rho'] 0.133377  |a0|^2 29.64548  k_FM predicted 0.03418
+beta 5.0 psi 1.0 lam0 1e-06: q0 2.48413  Vh 0.13165  E[g'rho'] 0.133374  |a0|^2 29.63550  k_FM predicted 0.03418

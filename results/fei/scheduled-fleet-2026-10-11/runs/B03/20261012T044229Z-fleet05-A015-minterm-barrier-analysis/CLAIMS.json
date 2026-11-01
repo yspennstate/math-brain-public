@@ -1,0 +1,112 @@
+[
+  {
+    "claim_id": "A012-CONTROL-FIRST-POSTERIOR-REPAIR",
+    "version": 1,
+    "exact_statement": "For every balanced Boolean g, integer r>=1 and complete nonempty core spectral subprobability reference R_g of finite cost c_g, with p=2^(-r) and F=1+A_r(g-1) on fresh independent point controls, the explicit complete output subprobability reference Q_F has vacuum mass (1-p)^2, control-only nonempty mass p^2 per set, and mass p^2 R_g(T) for every control set U and nonempty data set T. It has total mass 1-p+p sum R_g and exact cost CE(P_F,Q_F)=p*c_g+A_r, A_r=2rp(2-p)+(1-p)^2 log2(1/(1-p)^2). The sharp universal selector coefficient is max_{r>=1} A_r/(rp)=C_act=15/4+(49/12)log2(8/7) in (4.536,4.537), uniquely attained at r=3. For the true control-first witness W retaining its physical stopping/core leaf J, actual leaf spectrum and queried membership bits, H(W|S)=2(1-p)+sum_{k=1}^r 2^(-(r-k)) B_k-A_r, B_k=q_k h2(epsilon_k)+(1-m_k^2)/2, m_k=1-2^(-(k-1)), q_k=(1+m_k^2)/2, epsilon_k=2^(-2(k-1))/(2(1+m_k^2)). This posterior is independent of the balanced core and tends to two bits. Disjoint-reference composition and fresh-character balancing preserve the full core bill; no arbitrary-core influence bound or shared-control transfer is assumed.",
+    "hypotheses": [
+      "Uniform finite data cube, Boolean sign g, Eg=0",
+      "r>=1 fresh independent point controls",
+      "Fixed complete nonempty spectral subprobability core reference with finite cross entropy; all costs in bits",
+      "Actual control-first coupling using the original Boolean child coefficients; zero packets omitted",
+      "Ideal cross-entropy cost; one-symbol integer prefix rounding is separate",
+      "Disjoint original variable blocks for reference-product claims"
+    ],
+    "statement_sha256": "b5b1d941a3fd7511b0ce648ad4d4f6573d0e89f7f04dffc6c1ff9a8943ba1895",
+    "contributors": [
+      "fleet05/A012"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T234525Z-fleet05-A012-sparse-activation-accounting\\DERIVATION.md",
+      "tex": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T234525Z-fleet05-A012-sparse-activation-accounting\\POSTERIOR_ACTIVATION.tex",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T234525Z-fleet05-A012-sparse-activation-accounting\\out\\EXACT_RESULTS.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A015/fleet05",
+        "verdict": "ACCEPT_AT_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A015\\runs\\20261012T044229Z-fleet05-A015-minterm-barrier-analysis\\A012_REVIEW.md",
+        "source_statement_sha256": "b5b1d941a3fd7511b0ce648ad4d4f6573d0e89f7f04dffc6c1ff9a8943ba1895",
+        "method": "Independent actual-child Fourier recursion for full (physical leaf, output) law; exact entropy in a formal log-prime basis; complete subprobability generator and all-r coefficient reconstruction",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A015\\runs\\20261012T044229Z-fleet05-A015-minterm-barrier-analysis\\out\\EXACT_RESULTS.json",
+        "reviewer_contributed_repair": false,
+        "scope": "Entire original balanced-core control-first repair, sharp constant, exact posterior and explicitly disjoint reference/balancing iteration; not shared-control/collision transfer or original queue-infimum payment",
+        "timestamp_utc": "2026-10-12T04:59:57.366977+00:00"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_ORIGINAL_SCOPE_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A011",
+      "A013",
+      "A015",
+      "A039",
+      "A097",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A015-CONDITIONED-MINTERM-LOCATION-BARRIER",
+    "version": 1,
+    "exact_statement": "For any nonconstant Boolean f on n>=1 declared uniform coordinates, its N positive full-cell conjunctions with pi=2^-n, weights lambda_l=1/N and a common rank order have conditioned exactly-one-root probability eta=pi/((1+pi/N)^N-1), with exp(-pi)<=eta<=1. Summing their identical one-root/no-child subset laws cancels both gate labels and root rarity up to -log2 eta. A globally uniform common permutation prior gives the complete nonempty subprobability R_sym(A)=eta/[2*s*(s+1)*binom(n,s)], s=|A|>=1, of mass eta*n/[2*(n+1)]. For every probability law P on subsets, the infimum of CE(P,Q) over exchangeable subprobabilities Q is H(|S|)+E log2 binom(n,|S|), whose exact excess over H(P) is sum_s W_s D(P(.|s)||Uniform_s). For the actual balanced Boolean family M_r=y+A_r(z-y), r>=1,p=2^-r,n=r+2, every coordinate is relevant, I=1+r*p, H=(1-p)^2 log2(1/(1-p)^2)+2*r*(2*p-p^2)->0, and W_1=(1-p)^2+p^2. Every exchangeable reference has CE/I>=W_1 log2(r+2)/(1+r*p)->infinity; its best CE is log2(r+2)+o(1). The explicit ordered full-minterm one-root reference with y ranked first and exponent-two subset weights has CE<(639/80)*I<8*I for all r. For a balanced regular core with a desirability order, the same mandatory-one-gate exponent-two reference has mass n/[2*(n+1)] and c_g<=K_ord*I(g), K_ord=3+log2(6)+3*log2(e)<101/10, by the stated regular rank mean. The accepted A012 fresh-activation output construction transfers it with full mass 1-p+p*z and CE=p*c_g+A_r<=K_ord I(F), retaining D(P_F||Q_F)=p D(P_g||R_g). The exponent-two ordered reference is explicitly modified from the original exponent-6/5 PI-J law; this refutes only a universal exchangeable-reference payment, not FEI or an arbitrary function-adapted posterior reference.",
+    "hypotheses": [
+      "Uniform finite Boolean cubes; entropy, CE and all log quantities in bits",
+      "All full-cell supports have the same declared coordinate set and a common chosen order",
+      "Exactly-one-root/no-child finite-run subreference conditioned on nonempty initial roots",
+      "Exchangeable means invariant under all permutations of physical coordinates",
+      "Exponent two for the explicit rational ordered-cost repair; the averaged subset identity holds for any exponent >1",
+      "Balanced core and fresh independent controls for activation; regular rank mean is a source-bound input only for the stated grouped-gate application",
+      "Ideal complete subprobability cross entropy; failure mass retained and single-sample integer-code rounding separate"
+    ],
+    "statement_sha256": "d41a4c62d86b18e4c46905972d1c207540e93a750f0ac65323b1804457c10b49",
+    "contributors": [
+      "A015/fleet05"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A015\\runs\\20261012T044229Z-fleet05-A015-minterm-barrier-analysis\\REPORT.md",
+      "locators": "complete derivation Sections 2--7",
+      "validation": [
+        "out/EXACT_RESULTS.json",
+        "out/TRANSFER_RESULTS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A012-CONTROL-FIRST-POSTERIOR-REPAIR",
+        "version": 1,
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T234525Z-fleet05-A012-sparse-activation-accounting\\DERIVATION.md",
+        "status": "INDEPENDENTLY_ACCEPTED_IN_THIS_STAGE",
+        "scope": "Only the final balanced-core reference-transfer application"
+      },
+      {
+        "source": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\baseline\\current-threshold-paper.tex",
+        "sha256": "5d87f625fbadad4aa9841416712b8193a869fa9dffcb4e9c200d2f39a62e6a10",
+        "locator": "lem:ranktail and one-regular-gate derivative-law rank expectation",
+        "status": "SOURCE_COMPLETE_BASELINE_READ",
+        "scope": "Only grouped regular-core CE bound"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPED_MECHANISM_DIAGNOSTIC_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Every balanced Boolean spectrum has an exchangeable complete output subprobability reference with CE<=K I for one absolute K",
+      "Root/name erasure followed by exchangeable size coding is sufficient for universal influence-paid complete cost"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A011",
+      "A012",
+      "A013",
+      "A006",
+      "B03",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  }
+]

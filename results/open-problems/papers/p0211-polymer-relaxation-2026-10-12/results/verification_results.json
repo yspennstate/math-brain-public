@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "generated_at_utc": "2026-10-12T00:31:35.757013+00:00",
+  "python_version": "3.12.14",
+  "scope": "Exact finite checks and optional numerical checks; not a formal proof of the full theorem.",
+  "polynomial_identities": {
+    "identities": [
+      "double_reciprocal_death_killing_cancellation",
+      "count_reciprocal_positive_remainder",
+      "harmonic_sector_death_killing_cancellation",
+      "coupling_stage_II_death_killing_cancellation",
+      "up_down_tower_induction_coefficient"
+    ],
+    "all_residual_coefficients_zero": true
+  },
+  "stationary_projection": {
+    "n_range": [
+      2,
+      8
+    ],
+    "parameter_cases": 21,
+    "distinct_cut_sets_enumerated": 501,
+    "averaged_transition_rate_identities": 654,
+    "polymer_detailed_balance_identities": 654,
+    "includes_n_2_and_two_cluster_double_boundaries": true
+  },
+  "count_intertwining": {
+    "n_range": [
+      2,
+      12
+    ],
+    "parameter_cases": 33,
+    "exact_matrix_entry_identities": 1716
+  },
+  "scalar_certificates": {
+    "checked_parameter_point_counts": {
+      "double_reciprocal_upper": 770,
+      "final_parameter_combination": 93,
+      "count_reciprocal_lower": 210,
+      "harmonic_sector_reciprocal_lower": 1152,
+      "coupling_stage_II_reciprocal_lower": 212
+    },
+    "minimum_ratios_on_checked_points": {
+      "count_reciprocal_over_sqrt_beta": {
+        "exact": "2266547/2016000",
+        "decimal": 1.1242792658730159
+      },
+      "sector_reciprocal_over_sqrt_beta": {
+        "exact": "501/1000",
+        "decimal": 0.501
+      },
+      "coupling_stage_II_over_sqrt_beta": {
+        "exact": "250499/499500",
+        "decimal": 0.5014994994994995
+      }
+    },
+    "sampling_scope": "All relevant k and degrees for n <= 31; selected boundary and interior points for n = 100, 1000."
+  },
+  "coupling": {
+    "n_range": [
+      2,
+      7
+    ],
+    "stage_I_state_parameter_cases": 1482,
+    "stage_II_state_parameter_cases": 2046,
+    "marginals_internal_rates_and_absorption_rates_exact": true
+  },
+  "numerical_spectra": {
+    "status": "passed",
+    "numpy_version": "2.3.5",
+    "n_range": [
+      2,
+      8
+    ],
+    "parameter_cases": 35,
+    "largest_full_cut_matrix_dimension": 255,
+    "maximum_full_spectrum_absolute_discrepancy": 1.4779288903810084e-12,
+    "maximum_full_spectrum_scaled_discrepancy": 2.1060219432721796e-15,
+    "absolute_discrepancy_tolerance": "1e-10 times max(1, spectral radius)",
+    "beta_equals_one_over_n_samples": [
+      {
+        "n": 2,
+        "beta": "1/2",
+        "polymer_gap": 1.5,
+        "count_gap": 1.5,
+        "cut_gap": 0.4999999999999999,
+        "polymer_gap_over_sqrt_beta": 2.1213203435596424
+      },
+      {
+        "n": 3,
+        "beta": "1/3",
+        "polymer_gap": 1.1461490623970563,
+        "count_gap": 1.1461490623970563,
+        "cut_gap": 0.4606553370833678,
+        "polymer_gap_over_sqrt_beta": 1.985188409119133
+      },
+      {
+        "n": 4,
+        "beta": "1/4",
+        "polymer_gap": 0.9634741395828197,
+        "count_gap": 0.9634741395828198,
+        "cut_gap": 0.4257323639091812,
+        "polymer_gap_over_sqrt_beta": 1.9269482791656394
+      },
+      {
+        "n": 5,
+        "beta": "1/5",
+        "polymer_gap": 0.8495531723898624,
+        "count_gap": 0.8495531723898626,
+        "cut_gap": 0.3957433366436995,
+        "polymer_gap_over_sqrt_beta": 1.8996586439643297
+      },
+      {
+        "n": 6,
+        "beta": "1/6",
+        "polymer_gap": 0.770273159799775,
+        "count_gap": 0.770273159799775,
+        "cut_gap": 0.370266704774642,
+        "polymer_gap_over_sqrt_beta": 1.8867762040707365
+      },
+      {
+        "n": 7,
+        "beta": "1/7",
+        "polymer_gap": 0.7110226740287712,
+        "count_gap": 0.711022674028771,
+        "cut_gap": 0.3485883356046108,
+        "polymer_gap_over_sqrt_beta": 1.8811891720082725
+      },
+      {
+        "n": 8,
+        "beta": "1/8",
+        "polymer_gap": 0.6644929358605918,
+        "count_gap": 0.664492935860592,
+        "cut_gap": 0.3300072094554012,
+        "polymer_gap_over_sqrt_beta": 1.879469843990328
+      }
+    ]
+  }
+}

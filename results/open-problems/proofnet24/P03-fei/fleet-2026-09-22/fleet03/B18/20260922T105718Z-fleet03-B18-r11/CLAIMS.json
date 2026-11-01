@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T105718Z-fleet03-B18-r11",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "C-LOW-CROSSING-ROBUST-TRIGGER-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "statement": "On a centered minimum-dimensional F/J critical core with rho>4, every relative-1/16 robust row i has a physical trigger k_i with c_{k_i<-i}<7 q_i/44, h_{k_i i}>63 q_i/44, and (4+j'(q_{k_i})) h_{k_i i}>9 q_i.",
+      "scope": "genuine ratio-critical core; relative-1/16 robust rows only",
+      "dependencies": [
+        "TERMINAL_CORE@85ffa60db26997421d980b1f86c03d82259504ca",
+        "ROBUST_ROW@a1b2a93210fe7cc871cd10c5bbbf43b1b983a254",
+        "ROBUST-TRIGGER-OVERLAP-COLLAPSE-v1@fleet04/B18"
+      ]
+    },
+    {
+      "id": "C-NONREUSED-ROBUST-FOREST-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "statement": "Choosing one low-crossing physical trigger per robust row and deleting the minimum-q tail from each directed cycle produces a forest T retaining Q_* >= Q_R/2. Its selected support-hidden bank satisfies H_T>9 Q_* >= (9/2)Q_R and H_T<=2(4+2/ln2)J.",
+      "scope": "same critical-core robust-row scope; original physical coordinates only",
+      "dependencies": [
+        "C-LOW-CROSSING-ROBUST-TRIGGER-v1"
+      ]
+    },
+    {
+      "id": "C-FOREST-ORIENTATION-LEDGER-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "statement": "For the selected physical forest T, the exact spectral identity sum_{e in T} r_e = sum_{v in V(T)} q_v - E[kappa_T(X)] implies O_T <= 4(4+2/ln2)J. Thus opposite-sign overlap is paid once and the negative component credit is retained.",
+      "scope": "all finite Boolean sources for any physical forest; applied here to the selected critical-core forest",
+      "dependencies": [
+        "COPAIR_BARRIER@85ffa60db26997421d980b1f86c03d82259504ca"
+      ]
+    },
+    {
+      "id": "C-SELECTED-HIDDEN-BANK-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "statement": "The exact selected hidden ledger U_T^sel=sum w_k[p_{ki}-2c_{k<-i}+4o_{ki}] is dimension-freely bounded by 6(4+2/ln2)J, while its support-hidden part remains > (9/2)Q_R.",
+      "scope": "selected robust-pair forest, not raw H4 or U4",
+      "dependencies": [
+        "C-NONREUSED-ROBUST-FOREST-v1",
+        "C-FOREST-ORIENTATION-LEDGER-v1"
+      ]
+    },
+    {
+      "id": "C-TENSOR-SURGERY-FOREST-STRESS-v1",
+      "status": "PROVED_FAMILY_CHECK_IN_THIS_REPORT",
+      "statement": "On the exact phi_6 tensor family, cross-factor pairs have p=c=h=0 and cannot be robust trigger edges; on the one-point surgery family the original codimension-five row supports remain relative-1/16 robust and the selector continues to use factor-local triggers. Any cross-factor forest has O_T=O(J) and surgery support-hidden contribution o(J), so the raw-U4 divergence mechanism does not survive nonreused forest selection.",
+      "scope": "the source tensor and one-point-surgery families; mechanism stress test, not a claim that these are rho>4 critical cores",
+      "dependencies": [
+        "COPAIR_BARRIER@85ffa60db26997421d980b1f86c03d82259504ca",
+        "C-FOREST-ORIENTATION-LEDGER-v1"
+      ]
+    }
+  ],
+  "consumed_peer_artifact": {
+    "account": "fleet04",
+    "slot": "B18",
+    "run": "20260922T101158Z-robust-trigger-overlap-collapse",
+    "application": "Used h_{ki}=p_{ki}-2c_{k<-i} and the proof-scoped separation of support-hidden H4 from opposite-sign O4, then replaced aggregate all-pair spending by an explicit cycle-broken physical forest."
+  },
+  "remaining_implication": "Use the selected forest support-hidden endpoint mass H_T>(9/2)Q_R to obtain one affordable physical restriction/block contradiction to rho>4, or prove Q_R universally small and transfer to the nonrobust-row branch. Do not return to raw H4/U4 payment.",
+  "next_recipient": "fleet01/B19"
+}

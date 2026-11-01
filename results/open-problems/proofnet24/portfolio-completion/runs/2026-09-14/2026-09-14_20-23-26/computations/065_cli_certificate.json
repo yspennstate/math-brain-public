@@ -1,0 +1,162 @@
+{
+  "certificate_schema": "four-type-qso-residual-v1",
+  "operator": {
+    "pairs": [
+      {
+        "i": 0,
+        "j": 0,
+        "p": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "i": 0,
+        "j": 1,
+        "p": [
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      },
+      {
+        "i": 0,
+        "j": 2,
+        "p": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "i": 0,
+        "j": 3,
+        "p": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "i": 1,
+        "j": 1,
+        "p": [
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      },
+      {
+        "i": 1,
+        "j": 2,
+        "p": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "i": 1,
+        "j": 3,
+        "p": [
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      },
+      {
+        "i": 2,
+        "j": 2,
+        "p": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "i": 2,
+        "j": 3,
+        "p": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "i": 3,
+        "j": 3,
+        "p": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    ]
+  },
+  "cap": "2/5",
+  "candidate": [
+    "24999999977/75000000000",
+    "24999999977/75000000000",
+    "16666666651/50000000000",
+    "139/150000000000"
+  ],
+  "exact_residual_l1": "139/75000000000",
+  "certified_error_l1_upper": "139/15000000000",
+  "coordinate_intervals": [
+    [
+      "49999999259/150000000000",
+      "16666666883/50000000000"
+    ],
+    [
+      "49999999259/150000000000",
+      "16666666883/50000000000"
+    ],
+    [
+      "24999999629/75000000000",
+      "6250000081/18750000000"
+    ],
+    [
+      "0",
+      "139/25000000000"
+    ]
+  ],
+  "certificate_basis": "FOUR_TYPE_UNIQUENESS.md equation (10), q=2/5; agents/065.md",
+  "arithmetic": "exact integers and rational arithmetic throughout",
+  "requested_tolerance": "1/100000000",
+  "tolerance_met": true,
+  "exact_grid_iterations": 38,
+  "exact_grid_plan": {
+    "grid_denominator": "150000000000",
+    "candidate_grid_numerators": [
+      "49999999954",
+      "49999999954",
+      "49999999953",
+      "139"
+    ],
+    "initial_point": [
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    "averaging_weight": "2/5",
+    "contraction_factor": "23/25",
+    "one_step_rounding_l1_upper": "1/37500000000",
+    "accumulated_rounding_l1_upper": "1/3000000000",
+    "guaranteed_iteration_limit": 297,
+    "transient_l1_upper_at_limit": "1/4294967296",
+    "factor_five_residual_upper_at_limit": "14247983/1677721600000000",
+    "stopping_rule": "5 * exact_residual_l1 <= requested_tolerance"
+  }
+}

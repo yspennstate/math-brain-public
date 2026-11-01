@@ -1,0 +1,113 @@
+{
+  "command": "python -B -X utf8 check_results.py",
+  "seconds": 0.47838009998667985,
+  "checks": [
+    {
+      "name": "P0342_exact_split_and_small_boundary_checks",
+      "cases": 1600,
+      "status": "PASS"
+    },
+    {
+      "name": "C0057_adapted_supermartingale_and_stopping_bound",
+      "cases": 10200,
+      "status": "PASS",
+      "max_bound_fraction": 0.7836514681722833
+    },
+    {
+      "name": "C0057_false_necessity_counterexample",
+      "cases": 1,
+      "status": "PASS",
+      "discovery_probability": 1,
+      "stopped_hazard_sum": 1
+    },
+    {
+      "name": "P0024_independent_annular_reflection_discretization",
+      "cases": 80000,
+      "status": "PASS",
+      "max_endpoint_error": 2.2292890684037405e-06
+    },
+    {
+      "name": "P0218_logarithmic_threshold_algebra",
+      "cases": 60,
+      "status": "PASS",
+      "note": "Checks the conditional process lemma, not the primary model rate."
+    },
+    {
+      "name": "C0005_original_coordinate_poisson_integrals",
+      "cases": 27,
+      "status": "PASS",
+      "max_relative_error": 2.220446049250313e-16,
+      "old_integral_at_t2": 26.799075016572118,
+      "correct_truncated_mean_at_t2": 14.7781121978613
+    },
+    {
+      "name": "C0065_exact_counterexamples_to_derivative_inference",
+      "cases": 1000,
+      "status": "PASS"
+    },
+    {
+      "name": "C0065_C0143_independent_tree_progeny_coefficients",
+      "cases": 6000,
+      "status": "PASS",
+      "max_conditional_mean_error": 1.4210854715202004e-14,
+      "scaled_chi": [
+        0.6607451508092657,
+        0.7405597369410319,
+        0.749050599736177,
+        0.7499050060031492
+      ]
+    },
+    {
+      "name": "C0143_supercritical_extinction_and_subcritical_duality",
+      "cases": 21,
+      "status": "PASS",
+      "max_conditional_mean": 0.9599999999997499
+    },
+    {
+      "name": "C0090_exact_weight_configuration_enumeration",
+      "cases": 24,
+      "status": "PASS",
+      "edge_covariances": [
+        0.0034373998606210404,
+        0.009604790005015018,
+        0.00042002598942070257
+      ],
+      "small_s_probability_over_s": [
+        2.2190845121249536,
+        2.2468783719918504,
+        2.2496875337469895,
+        2.249968750337497,
+        2.249996875003375
+      ]
+    },
+    {
+      "name": "P0019_holder_boundary_direction_bound",
+      "cases": 3000,
+      "status": "PASS",
+      "note": "Does not verify the reversed-bridge sketch."
+    },
+    {
+      "name": "P0048_arbitrary_finite_residue_class_forest",
+      "cases": 49,
+      "status": "PASS"
+    },
+    {
+      "name": "P0218_verified_model_disk_and_population_bound",
+      "cases": 8193,
+      "status": "PASS",
+      "seconds": 0.022026400081813335,
+      "scope": "Numerical checks of all positive population compositions for total population 1..10 and eight beta values, plus d=0 process thresholds; the continuum area argument is proved in the accompanying text."
+    }
+  ],
+  "check_groups": 13,
+  "cases": 110175,
+  "invalid_prior_routes_detected": 3,
+  "full_open_problems_solved": 0,
+  "independent_keeps": 0,
+  "lean_checked_mathematical_claims": 0,
+  "scope": "Finite exact checks and numerical diagnostics supplement the written arguments; they do not certify general theorems.",
+  "additional_commands": [
+    "python -B -X utf8 check_city_rate.py"
+  ],
+  "additional_python_seconds": 0.022026400081813335
+}

@@ -1,0 +1,12 @@
+T357 (agent A, 20 Oct 2026): check of the identity FM_inf(lam) = -lam |a_lam|^2 on the n = inf ridge path of
+rf_ridge_inf.py (same F, same Gaussian-equivalence model). Proof: the population ridge objective A(q) - kappa a.m + lam|a|^2/2,
+q = |a|_Sig, is stationary where A'(q) Sig a / q - kappa m + lam a = 0; dotting with a gives q A'(q) - kappa c = -lam |a|^2,
+and FM = E[(sig(zhat) - y) zhat] = q A'(q) - kappa c (E sig(q u) q u = q A'(q); E y zhat = kappa c by Stein). The same
+computation on the empirical objective gives train FM = -lam |w_hat|^2 exactly at every n.
+argv: beta psi [d] [seed]
+  lam     1e-05  FM -2.937616e-04  -lam|a|^2 -2.954514e-04  rel diff +5.8e-03  OC +0.00334
+  lam    0.0001  FM -2.866033e-03  -lam|a|^2 -2.867705e-03  rel diff +5.8e-04  OC +0.00187
+  lam 0.0001677  FM -4.704602e-03  -lam|a|^2 -4.706262e-03  rel diff +3.5e-04  OC +0.00081
+  lam     0.001  FM -2.244215e-02  -lam|a|^2 -2.244369e-02  rel diff +6.8e-05  OC -0.01007
+  lam      0.01  FM -7.924673e-02  -lam|a|^2 -7.924778e-02  rel diff +1.3e-05  OC -0.05807
+  lam       0.1  FM -9.972515e-02  -lam|a|^2 -9.972560e-02  rel diff +4.5e-06  OC -0.13864

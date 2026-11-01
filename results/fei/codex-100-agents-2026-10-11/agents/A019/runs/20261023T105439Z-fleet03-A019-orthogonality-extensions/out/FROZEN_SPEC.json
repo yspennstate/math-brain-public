@@ -1,0 +1,13 @@
+{
+ "helper_version":"A019 exact arithmetic extracted from stage 20261014T055119Z check_exposure.py; new standalone event tree implementation",
+ "family":"Actual cores h0=u, hA=(1-A)u+A; exact nonlinear two-bit mask; original contaminated core references and frequency-marginal descendants",
+ "domain":"Six unions of overlapping zero-pattern events of width k=8,9,10 and overlap k-1 or k-2; two arbitrary support sets {0,3,5} and {0,3,5,170} on 9 bits. Three fixed orders per event, with stopping when event is determined. Additional small diagnostics on 2,3,4 event bits outside theorem's sparse range.",
+ "cases":8,
+ "policies_per_case":3,
+ "symmetry":"No event equivalence assumed; all outcomes and stopped sibling costs retained. Analytic argument covers any adaptive policy, enumeration only fixed displayed orders.",
+ "arithmetic":"Integer Walsh; Fraction; prime-log forms and 36-term rational atanh sign enclosures; scalar activation CE cross-checked against full arrays in small diagnostics",
+ "memory_estimate_mb":140,
+ "max_runtime_seconds":60,
+ "pilot":"k8 overlap7, one order; run before main",
+ "automatic_dimension_escalation":false
+}

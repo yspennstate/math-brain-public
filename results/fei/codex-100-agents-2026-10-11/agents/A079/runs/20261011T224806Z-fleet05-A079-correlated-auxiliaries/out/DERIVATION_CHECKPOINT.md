@@ -1,0 +1,1 @@
+For F=(-1)^(a dot b) h_b(x), fhat(v,s,t)=2^-m (-1)^(s dot t) hhat_s(v). Thus p(v,s,t)=2^-2m hhat_s(v)^2; H=2m+avg_s H(h_s), I_Y=m, I_X=avg_s I(h_s); H(Y|X)=2m-I(S;V). Rare tags h_b=seed except seed point-flipped at x=u when b=embed(u): marginal p_X=(1-2^(2-m))p_seed+2^(2-m)Uniform; I_X=I_seed+2^(1-m)(k-2I_seed). All branches bent and pairwise distinct for m>=k+1.

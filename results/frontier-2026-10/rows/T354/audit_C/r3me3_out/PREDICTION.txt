@@ -1,0 +1,7 @@
+10:38:43
+b (6,2,-1) w (.1,.1,.8), eps 1, beta1 0.9, n d 2, rows at d .02 .01 .005 .0025 (n 100 200 400 800).
+Closed form c(2) = -0.408672 (beta1 free). Prediction, written before the runs:
+- every row sits ABOVE -0.4087 and falls monotonically with d (as at n d 1, beta1 .9: gaps .557 .381 .228 .125);
+- the gap at d .01 is several times the beta1 .5 gap (0.0125), roughly 0.05-0.15;
+- the highest-order Richardson value lands within 5e-3 of -0.4087.
+A row below the limit, or an extrapolation off by more than 0.01, counts against "c does not depend on beta1" at n d 2.

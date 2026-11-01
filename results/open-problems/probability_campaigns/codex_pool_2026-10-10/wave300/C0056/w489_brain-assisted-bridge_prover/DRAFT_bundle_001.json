@@ -1,0 +1,209 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w489",
+  "bundle_slug": "c0056-cavity-poisson-bridge-w489-001",
+  "entries": [
+    {
+      "key": "l1",
+      "namespace": "analysis.spectral",
+      "logical_name": "atomic-poisson-first-moment-counterexample",
+      "kind": "lemma",
+      "title": "DRAFT: a bounded first Poisson moment permits an atom",
+      "statement": "For the positive probability measure mu=delta_0 and P_eta(E)=eta/(E^2+eta^2), integral_R P_eta(E)dE=pi for every eta>0 although mu is purely atomic; integral_R P_eta(E)^2 dE=pi/(2 eta). A uniform first energy moment does not imply absolute continuity.",
+      "proof_text": "## L1: first moments do not exclude atoms\n\nFor mu=delta_0 its unnormalised Poisson transform is P_eta(E)=eta/(E^2+eta^2). Direct substitution gives integral_R P_eta=pi and integral_R P_eta^2=pi/(2 eta). Thus a bounded first energy moment is consistent with a purely atomic measure. The second equality exhibits the obstruction at heights tending to zero. This example concerns a scalar spectral measure and is not a counterexample to the lattice conjecture.",
+      "assumptions": [
+        "eta>0",
+        "P_eta is the unnormalised Poisson transform of mu=delta_0"
+      ],
+      "domain": "spectral theory / random Schrodinger operators",
+      "source": {
+        "source_id": "owner:probability-campaign:C0056:w489:l1",
+        "url": "file:///~/brain_workers/w489/ATTEMPT.md",
+        "revision": "draft-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l2",
+      "namespace": "analysis.spectral",
+      "logical_name": "annealed-spectral-density-does-not-imply-quenched-absolute-continuity",
+      "kind": "lemma",
+      "title": "DRAFT: an annealed density can conceal atomic sample measures",
+      "statement": "If S is Uniform[-1,1] and H_S is the scalar self-adjoint operator S, its sample spectral measure is mu_S=delta_S, but E mu_S has density (1/2)1_[-1,1]. For every real E and eta>0, E Im(S-E-i eta)^(-1)<=pi/2. Thus uniform expected first resolvent imaginary parts do not imply samplewise absolute continuity.",
+      "proof_text": "## L2: an annealed density can conceal purely atomic sample measures\n\nLet S be Uniform[-1,1], let H_S be multiplication by S on a one-dimensional Hilbert space, and let mu_S=delta_S. Each sample spectral measure is atomic, but E mu_S has density (1/2)1_[-1,1]. For every E and eta>0,\n\nE Im(S-E-i eta)^(-1)=(1/2) integral_[-1,1] eta/((s-E)^2+eta^2) ds <= pi/2.\n\nThis follows by extending a nonnegative integral to R. A uniform bound on the expected scalar imaginary part therefore cannot be promoted to samplewise absolute continuity. Conditioning on the other variables does not alter this one-dimensional counterexample.",
+      "assumptions": [
+        "S is Uniform[-1,1]",
+        "H_S acts on a one-dimensional Hilbert space",
+        "E is real and eta>0"
+      ],
+      "domain": "spectral theory / random Schrodinger operators",
+      "source": {
+        "source_id": "owner:probability-campaign:C0056:w489:l2",
+        "url": "file:///~/brain_workers/w489/ATTEMPT.md",
+        "revision": "draft-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l3",
+      "namespace": "analysis.spectral",
+      "logical_name": "uniform-expected-higher-poisson-moments-imply-local-absolute-continuity",
+      "kind": "lemma",
+      "title": "DRAFT: higher Poisson moments imply almost-sure absolute continuity",
+      "statement": "Let mu_omega be random positive Borel measures on R of mass at most one, I a bounded open interval, p>1, and eta_n a deterministic positive sequence decreasing to zero. Put P_omega,eta(E)=integral eta/((t-E)^2+eta^2)dmu_omega(t). If sup_n E integral_I P_omega,eta_n(E)^p dE<=C<infinity, then almost surely mu_omega restricted to I has an Lp density f_omega, and E integral_I |f_omega(E)|^p dE<=C/pi^p.",
+      "proof_text": "## L3: a higher Poisson moment is sufficient\n\nLet mu_omega be random positive Borel measures of mass at most one, let I be a bounded open interval, and let p>1. Define P_omega,eta(E)=integral eta/((t-E)^2+eta^2) dmu_omega(t). Assume for a fixed deterministic sequence eta_n decreasing to zero that\n\nsup_n E integral_I P_omega,eta_n(E)^p dE <= C < infinity.\n\nThen almost surely mu_omega restricted to I has an Lp density f_omega, and E integral_I |f_omega|^p <= C/pi^p.\n\nProof. Put X_n=integral_I P_eta_n^p. Fatou gives E liminf_n X_n<=C, hence liminf X_n is finite almost surely. For such a sample, choose a subsequence along which X_n tends to its finite lower limit. Boundedness in reflexive Lp(I) gives a weakly convergent further subsequence, with limit h. For each phi in C_c(I), extend phi by zero to R. The normalised Poisson convolution of phi converges uniformly to phi. Fubini, and the bound on total measure, therefore give lim integral_I phi P_eta_n=pi integral phi dmu. Weak convergence identifies h dE=pi dmu on I. This proves absolute continuity on the whole open interval, not merely on a prescribed full-Lebesgue-measure subset. Weak lower semicontinuity gives pi^p ||f||_p^p<=liminf X_n. Fatou yields the expected norm bound. The density and its norm are measurable; for example, approximate identities give a jointly measurable representative and the norm bound also follows from a countable dense family of continuous tests. The hypothesis is on a genuine pth moment, not the pth power of an expectation.",
+      "assumptions": [
+        "random positive Borel measures with measurable integrals and mass at most one",
+        "I is bounded and open",
+        "p>1",
+        "eta_n decreases deterministically to zero",
+        "uniform expected pth energy moment is finite"
+      ],
+      "domain": "spectral theory / random Schrodinger operators",
+      "source": {
+        "source_id": "owner:probability-campaign:C0056:w489:l3",
+        "url": "file:///~/brain_workers/w489/ATTEMPT.md",
+        "revision": "draft-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l4",
+      "namespace": "analysis.spectral",
+      "logical_name": "inverse-cavity-width-moments-imply-quenched-spectral-absolute-continuity",
+      "kind": "lemma",
+      "title": "DRAFT: inverse cavity-width moments give quenched spectral absolute continuity",
+      "statement": "Let H be bounded self-adjoint on l2(Z^3), with bounded deterministic hopping and iid real site variables of bounded support and bounded probability density rho, scaled by a fixed lambda>0. Delete x to obtain H^x and its hopping vector b_x, and put Gamma_x(E,eta)=eta+Im<b_x,(H^x-E-i eta)^(-1)b_x>. Fix 0<q<1 and an open interval I. If for each x and each compact interval J contained in I, sup_{0<eta<1} E integral_J Gamma_x(E,eta)^(-q)dE<infinity, then almost surely all site spectral measures restricted to I are absolutely continuous, with locally L^(1+q) densities, and chi_I(H)l2(Z^3) is contained in the absolutely continuous subspace. This is a conditional criterion; the moment bound is not established for the lattice Anderson model here. Nonzero spectral weight is a separate requirement.",
+      "proof_text": "## L4: conditional cavity negative moments supply L3\n\nLet H be a bounded self-adjoint lattice Hamiltonian with bounded deterministic hopping, iid real site variables V_x of probability density rho in L-infinity(R), and diagonal lambda V_x with lambda>0 fixed. Bounded support is sufficient for boundedness and is imposed here. Delete site x to obtain the compression H^x. Write b_x for its hopping vector and\n\nM_x(z)=z+<b_x,(H^x-z)^(-1)b_x>,\nGamma_x(E,eta)=Im M_x(E+i eta)>0.\n\nFor p=1+q with 0<q<1, the Schur complement and own-site independence give\n\nG_xx(z)=(lambda V_x-M_x(z))^(-1),\nE[(Im G_xx(E+i eta))^p | {V_y:y!=x}]\n<= (||rho||_infinity/lambda) c_p Gamma_x(E,eta)^(1-p),\nc_p=integral_R (1+u^2)^(-p)du=sqrt(pi) Gamma(p-1/2)/Gamma(p).\n\nProof. Freeze the complement so that M_x=a+i gamma is fixed and gamma>0. Integrate [gamma/((lambda v-a)^2+gamma^2)]^p against rho(v)dv, bound rho by its supremum, extend to all real v, and substitute u=(lambda v-a)/gamma. The result is exactly the displayed upper bound. This proof uses independence of the own-site variable from the full complement, not independence of different neighbours.\n\nConsequently, if for every x and every compact interval J contained in I there is C_x,J<infinity such that\n\nsup_{0<eta<1} E integral_J Gamma_x(E,eta)^(-q)dE <= C_x,J,\n\nthen almost surely every basis spectral measure is absolutely continuous on I, locally with L^(1+q) density. To prove it, apply the conditional inequality, Tonelli, and L3 to J's interior along eta_n=1/(n+1). Countably many intervals with rational endpoints exhaust I. Countably many sites give one event on which all site measures are absolutely continuous on I. If B is a null Borel subset of I then <delta_x,chi_B(H)delta_x>=0 for all x, so chi_B(H)delta_x=0 for every basis vector and chi_B(H)=0. This is precisely pure absolute continuity of the spectral restriction. This conclusion by itself permits the projection on I to vanish; nonzero mass must be established separately.\n\nThe hypothesis is an unproved sufficient condition for the lattice model, not a theorem asserting that the lattice satisfies it. It is stronger than the qualitative cavity-boundary-positivity route used in recent primary literature. No necessity is asserted.",
+      "assumptions": [
+        "bounded self-adjoint H on the countable lattice",
+        "bounded deterministic hopping",
+        "bounded-support iid site law with rho in L-infinity",
+        "fixed lambda>0",
+        "own-site variable independent of the entire complement",
+        "0<q<1",
+        "uniform inverse cavity-width energy moment on each compact interval J contained in I"
+      ],
+      "domain": "spectral theory / random Schrodinger operators",
+      "source": {
+        "source_id": "owner:probability-campaign:C0056:w489:l4",
+        "url": "file:///~/brain_workers/w489/ATTEMPT.md",
+        "revision": "draft-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l5",
+      "namespace": "analysis.spectral",
+      "logical_name": "bounded-potential-resolvent-perturbation-leaves-the-zero-height-gap",
+      "kind": "lemma",
+      "title": "DRAFT: bounded-potential perturbation stops at positive height",
+      "statement": "For the six-neighbour lattice, H_lambda^x=H_0^x+lambda V^x with ||V^x||<=1, lambda>0 and z=E+i eta with eta>0, ||(H_lambda^x-z)^(-1)-(H_0^x-z)^(-1)||<=lambda/eta^2. With ||b_x||^2=6, the corresponding cavity escape widths differ by at most 6 lambda/eta^2. A free lower bound Gamma_0,x>=c>0 yields Gamma_lambda,x>=c/2 by this estimate only under the sufficient restriction eta^2>=12 lambda/c. This estimate supplies no uniform control as eta tends to zero at fixed positive lambda.",
+      "proof_text": "## L5: the bounded-potential perturbation route stops at positive height\n\nTake the six-neighbour lattice and ||V||_infinity<=1. Let H_lambda^x=H_0^x+lambda V^x. At z=E+i eta the resolvent identity and ||(H_lambda^x-z)^(-1)||<=1/eta give\n\n||R_lambda^x(z)-R_0^x(z)||<=lambda/eta^2,\n|Gamma_lambda,x(E,eta)-Gamma_0,x(E,eta)|<=6 lambda/eta^2.\n\nThe factor six is ||b_x||^2. If a free lower bound Gamma_0,x>=c>0 holds on an energy set and at the heights under consideration, this proves Gamma_lambda,x>=c/2 only when eta^2>=12 lambda/c. For a fixed positive lambda it leaves a whole interval of arbitrarily small heights uncontrolled. It cannot prove L4's supremum over all heights. The displayed restriction is sufficient, not a claimed necessary bound or a physical transition scale.",
+      "assumptions": [
+        "six-neighbour deterministic hopping of magnitude one",
+        "bounded site potential of norm at most one",
+        "lambda>0 and eta>0",
+        "the lower-bound consequence additionally assumes Gamma_0,x>=c>0"
+      ],
+      "domain": "spectral theory / random Schrodinger operators",
+      "source": {
+        "source_id": "owner:probability-campaign:C0056:w489:l5",
+        "url": "file:///~/brain_workers/w489/ATTEMPT.md",
+        "revision": "draft-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "invalid-first-moment-route",
+      "namespace": "analysis.spectral",
+      "logical_name": "invalid-first-moment-route-to-sample-spectral-absolute-continuity",
+      "kind": "concept",
+      "title": "DRAFT: rejected first-moment route to sample spectral absolute continuity",
+      "statement": "Rejected inference: a uniform first energy moment of a scalar Poisson transform, or a bounded density of the disorder-averaged spectral measure, implies almost-sure absolute continuity of the sample measures. This implication is false: delta_0 and the random scalar operator with uniform eigenvalue give exact counterexamples. A higher moment or another argument excluding sample singular mass is required.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "spectral theory / proof obstructions",
+      "source": {
+        "source_id": "owner:probability-campaign:C0056:w489:invalid-first-moment-route",
+        "url": "file:///~/brain_workers/w489/ATTEMPT.md",
+        "revision": "draft-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "cavity-moment-gap",
+      "namespace": "analysis.spectral",
+      "logical_name": "weak-disorder-cubic-lattice-inverse-cavity-width-moment-gap",
+      "kind": "concept",
+      "title": "DRAFT OPEN GAP: inverse cavity-width moments on the cyclic cubic lattice",
+      "statement": "Proposed sufficient-condition research target, not an established theorem: for H=-A+lambda V on l2(Z^3), V_x iid Uniform[-1,1], find q in (0,1), lambda_0>0 and a deterministic nonempty bounded open interval I of nonzero spectral weight such that for each fixed 0<lambda<lambda_0, each site x and each compact interval J contained in I, sup_{0<eta<1} E integral_J [eta+Im<b_x,(H^x-E-i eta)^(-1)b_x>]^(-q)dE<infinity. H^x is the compression deleting x and b_x has the six hopping coefficients. This bound would supply a conditional spectral route; it would not prove GOE microscopic statistics. No proof of this bound is supplied.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "spectral theory / proof obstructions",
+      "source": {
+        "source_id": "owner:probability-campaign:C0056:w489:cavity-moment-gap",
+        "url": "file:///~/brain_workers/w489/ATTEMPT.md",
+        "revision": "draft-2026-10-10-independent-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "l4",
+      "to_key": "l3",
+      "kind": "depends_on",
+      "rationale": "Own-site conditioning yields the higher Poisson moment to which the pathwise Lp compactness criterion is applied."
+    },
+    {
+      "from_key": "l1",
+      "to_key": "invalid-first-moment-route",
+      "kind": "refutes",
+      "rationale": "The atom has uniformly bounded first Poisson energy moment but is singular."
+    },
+    {
+      "from_key": "l2",
+      "to_key": "invalid-first-moment-route",
+      "kind": "refutes",
+      "rationale": "An absolutely continuous expected spectral measure coexists with purely atomic measures in every sample."
+    },
+    {
+      "from_key": "l4",
+      "to_key": "cavity-moment-gap",
+      "kind": "semantic_association",
+      "rationale": "The conditional theorem identifies exactly the still-unproved lattice hypothesis required by this route."
+    },
+    {
+      "from_key": "l5",
+      "to_key": "cavity-moment-gap",
+      "kind": "semantic_association",
+      "rationale": "The deterministic perturbation estimate loses its lower bound as eta tends to zero and does not close the gap."
+    },
+    {
+      "from_key": "l3",
+      "to_existing_logical": "math:analysis.functional:lp-lq-duality-with-its-sigma-finiteness-hypothesis",
+      "kind": "depends_on",
+      "rationale": "Uses Lp reflexivity with 1<p<infinity on the finite Lebesgue interval; excludes the p=1 endpoint."
+    },
+    {
+      "from_key": "l3",
+      "to_existing_logical": "math:probability.random-matrices:stieltjes-inversion-formula-density-from-the-boundary-imaginary-part",
+      "kind": "cites",
+      "rationale": "The Poisson approximate-identity representation is compatible with inversion; the returned pointwise density clause already assumes absolute continuity and is not used to prove it."
+    },
+    {
+      "from_key": "cavity-moment-gap",
+      "to_existing_logical": "math:probability.random-matrices:attempt-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor",
+      "kind": "cites",
+      "rationale": "Continues the recorded closed-recursion and fixed-coupling limit obstruction without reusing a spanning-tree transfer."
+    }
+  ]
+}

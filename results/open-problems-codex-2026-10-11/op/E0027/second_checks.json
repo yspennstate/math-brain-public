@@ -1,0 +1,35 @@
+{
+  "seed": 27002,
+  "counts": {
+    "tuples": 6000,
+    "noncancellation_cases": 3022,
+    "complement_cases": 4621,
+    "exceptional_cases": 1379,
+    "hellinger_cases": 3000
+  },
+  "passed": true,
+  "envelope": "f(a)=1+a/(1+a), bounded nondecreasing and admissible",
+  "free_scalar_model": [
+    {
+      "R": 10,
+      "sum_clipped_remainder_integral_exact_formula": 1.549766778368582,
+      "sum_unclipped_remainder_integral_exact_formula": 4.61512051684126
+    },
+    {
+      "R": 100,
+      "sum_clipped_remainder_integral_exact_formula": 5.786410685285851,
+      "sum_unclipped_remainder_integral_exact_formula": 9.210440366976517
+    },
+    {
+      "R": 1000,
+      "sum_clipped_remainder_integral_exact_formula": 10.355483208193117,
+      "sum_unclipped_remainder_integral_exact_formula": 13.815511557963774
+    },
+    {
+      "R": 10000,
+      "sum_clipped_remainder_integral_exact_formula": 14.957052405513707,
+      "sum_unclipped_remainder_integral_exact_formula": 18.420680753952364
+    }
+  ],
+  "limitations": "Finite rational checks of algebra; analytic proofs establish integrability. The free scalar model is not realizable as Levy exponents."
+}

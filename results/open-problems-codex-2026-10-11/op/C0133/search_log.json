@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-12",
+  "queries": {
+    "arxiv_velocity": "https://export.arxiv.org/api/query?search_query=all%3A%22excited%20random%20walk%22%20AND%20%28all%3Avelocity%20OR%20all%3A%22law%20of%20large%20numbers%22%29&max_results=40",
+    "openalex_source": "https://api.openalex.org/works?search=Excited%20random%20walks%20results%20methods%20open%20problems&per-page=5",
+    "openalex_velocity": "https://api.openalex.org/works?search=excited%20random%20walks%20zero%20velocity%20non%20transient&per-page=30",
+    "crossref": "https://api.crossref.org/works?query=excited%20random%20walks%20law%20large%20numbers%20zero%20velocity&rows=30",
+    "semantic": "https://api.semanticscholar.org/graph/v1/paper/search?query=excited%20random%20walks%20velocity&limit=30&fields=title,authors,year,externalIds,abstract,url",
+    "github": "https://api.github.com/search/repositories?q=excited%20random%20walks&per_page=30"
+  },
+  "results": [
+    [
+      "arxiv_velocity",
+      200,
+      11822
+    ],
+    [
+      "openalex_source",
+      200,
+      81804
+    ],
+    [
+      "openalex_velocity",
+      200,
+      569144
+    ],
+    [
+      "crossref",
+      200,
+      152062
+    ],
+    [
+      "semantic",
+      "HTTP Error 429: "
+    ],
+    [
+      "github",
+      "HTTP Error 403: rate limit exceeded"
+    ]
+  ]
+}

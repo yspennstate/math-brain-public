@@ -1,0 +1,344 @@
+{
+  "P0007": [
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 7,
+      "row": {
+        "schema": "probability-problem.v1",
+        "problem_id": "P0007",
+        "title": "Unbounded mirror component trapping every ray",
+        "source_id": "grimmett_2022_selected",
+        "locator": "Question 3.3, PDF page 6",
+        "statement": "Can an unbounded component of a mirror complement contain an origin from which every reflected ray stays bounded?",
+        "historical_status": "source_says_open",
+        "current_status": "unverified",
+        "admitted": true,
+        "dedup_key": "deterministic_mirror_unbounded_component_all_rays_bounded",
+        "result_status": "not_started",
+        "verification": "unreviewed"
+      }
+    },
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 109,
+      "row": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "deterministic_mirror_unbounded_component_all_rays_bounded",
+        "historical_status": "source_says_open",
+        "locator": "Question 3.3, PDF page 6",
+        "problem_id": "P0007",
+        "recorded_at": "2026-09-06T19:17:12Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "grimmett_2022_selected",
+        "statement": "Can an unbounded component of a mirror complement contain an origin from which every reflected ray stays bounded?",
+        "title": "Unbounded mirror component trapping every ray",
+        "verification": "author_checked_limited_argument"
+      }
+    },
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 9,
+      "row": {
+        "attempt_id": "P0007-A001",
+        "depth": "first_pass",
+        "full_problem_solved": false,
+        "independent_check": "The corridor is only a counterexample to the topological inference. It is not asserted to be a configuration of the source mirror model.",
+        "independent_review": "none",
+        "method": "Attempted reduction to straight visibility",
+        "novelty": "not_claimed",
+        "obstruction": "Unboundedness of the vacant component gives a continuous route, not a realizable billiard route. No mirror configuration trapping all angles, or theorem preventing one, was constructed.",
+        "problem_id": "P0007",
+        "recorded_at": "2026-09-06T17:37:31Z",
+        "result": "An unbounded unobstructed straight ray from the origin immediately rules out the proposed all-directions trapped configuration. However an unbounded connected planar open set need not contain any unbounded straight ray: a sufficiently narrow unbounded spiral corridor is a topological counterexample to that inference.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_limited_argument"
+      }
+    }
+  ],
+  "P0034": [
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 37,
+      "row": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "planar_horizontal_new_vertical_old_balanced_excited_walk",
+        "historical_status": "source_says_open",
+        "locator": "Question 2.27, printed p.56",
+        "problem_id": "P0034",
+        "recorded_at": "2026-09-06T16:41:32Z",
+        "result_status": "not_started",
+        "schema": "probability-problem.v1",
+        "source_id": "lyons_peres_20260819",
+        "statement": "Start at the origin in Z^2; after first visiting a site step horizontally with either sign equally likely, and after a repeat visit step vertically with either sign equally likely. Does any site receive infinitely many visits with positive probability?",
+        "statement_caveat": "The source indexing omits the first step; use its intended new-site rule also at time zero. The analogous four- and three-dimensional results do not decide this planar model.",
+        "title": "Recurrence of the planar horizontal-new vertical-old walk",
+        "verification": "unreviewed"
+      }
+    },
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 134,
+      "row": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "planar_horizontal_new_vertical_old_balanced_excited_walk",
+        "historical_status": "source_says_open",
+        "locator": "Question 2.27, printed p.56",
+        "problem_id": "P0034",
+        "recorded_at": "2026-09-06T19:17:12Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "lyons_peres_20260819",
+        "statement": "Start at the origin in Z^2; after first visiting a site step horizontally with either sign equally likely, and after a repeat visit step vertically with either sign equally likely. Does any site receive infinitely many visits with positive probability?",
+        "statement_caveat": "The source indexing omits the first step; use its intended new-site rule also at time zero. The analogous four- and three-dimensional results do not decide this planar model.",
+        "title": "Recurrence of the planar horizontal-new vertical-old walk",
+        "verification": "author_checked_limited_argument"
+      }
+    },
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 34,
+      "row": {
+        "attempt_id": "P0034-A001",
+        "depth": "first_pass",
+        "full_problem_solved": false,
+        "independent_check": "The predictable quadratic variation of the horizontal coordinate counts first visits, and the vertical one counts repeat visits; their sum is exactly n.",
+        "independent_review": "none",
+        "method": "Martingale estimates for the axis-switching walk",
+        "novelty": "not_claimed",
+        "obstruction": "Zero speed and a diffusive second moment do not imply recurrence. The occupation-dependent balance of the two coordinate clocks remains uncontrolled.",
+        "problem_id": "P0034",
+        "recorded_at": "2026-09-06T17:47:59Z",
+        "result": "The axis of the next step is predictable from the past, while its sign is fair. Both coordinates are martingales, their cross quadratic covariation is zero, and E|X_n|^2=n. Bounded increments and Azuma give summable bounds for P(|X_n|>epsilon n), so X_n/n tends to zero almost surely.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_limited_argument"
+      }
+    }
+  ],
+  "P0087": [
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 95,
+      "row": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "forced_network_urn_convergence_and_diffusion_scaling",
+        "historical_status": "source_says_open",
+        "locator": "OpenProblem16, PDF pp.14-16",
+        "problem_id": "P0087",
+        "recorded_at": "2026-09-06T18:46:28Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "reinforcement_matrix_2023",
+        "statement": "For Z_(n+1)=(1-r-f)Z_n+r X_(n+1)+f p with E[X_(n+1)|F_n]=Q Z_n, Q=A^T irreducible row-stochastic and X binary coordinatewise, determine nonconvergence and the continuous-time limit when r tends to0 and f is asymptotic to c r^2.",
+        "statement_caveat": "Assume r,f>0 and r+f<=1. The source permits 0<=p<=1, including extreme vectors; those have a different convergence answer. The displayed conditional mean alone does not specify the cross-coordinate noise covariance.",
+        "title": "Forced network urn convergence and diffusion scaling",
+        "verification": "primary_statement_checked"
+      }
+    },
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 88,
+      "row": {
+        "attempt_id": "P0087-A001",
+        "depth": "first_pass",
+        "full_problem_solved": false,
+        "independent_check": "The proof needs no conditional independence. The strong law follows from summable variances of martingale increments divided by n, then Kronecker. The maximum principle can also be checked by propagating the set of zero coordinates backwards through irreducibility.",
+        "independent_review": "none",
+        "method": "Forced network urn convergence and diffusion scaling structural argument",
+        "novelty": "not_claimed",
+        "obstruction": "This resolves the fixed-step convergence subquestion under the stated assumptions, but not the whole diffusion question. Fast synchronization, an initial layer, and the covariance specification must be treated before a full solution label.",
+        "problem_id": "P0087",
+        "recorded_at": "2026-09-06T18:46:28Z",
+        "result": "A complete fixed-step classification follows. On any event Z_n->z, the update forces X_n to converge to a binary vector x and hence eventually equal it. The bounded martingale-difference strong law gives x=Qz. The update limit gives z=(r x+f p)/(r+f). A binary coordinate of Qz can equal0 or1 only when all its positive-weight predecessors have the same x-value and matching p-value. Irreducibility then forces x and p to be the all-zero or all-one vector. Conversely if p=0, the positive stationary vector pi gives E[pi.Z_n]=(1-f)^n E[pi.Z_0], and Markov plus Borel-Cantelli yields Z_n->0; p=1 follows by complementing.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_limited_argument"
+      }
+    }
+  ],
+  "P0208": [
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 279,
+      "row": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "extremal_arc-transitive_walk_parameters_away_from_cycles",
+        "historical_status": "source_says_open",
+        "locator": "Open Problem7.27, PDFp259; definitionp254",
+        "problem_id": "P0208",
+        "proof_path": "proofs/P0208_wreath_graph_counterexample_candidate.md",
+        "recorded_at": "2026-09-06T22:32:05Z",
+        "result_status": "candidate_complete_counterexample",
+        "schema": "probability-problem.v1",
+        "source_id": "aldous_fill_2014",
+        "source_statement_date": "1994;2002manuscript;2014recompilation",
+        "statement": "On arc-transitive n-vertex graphs other than n-cycles, are maximal commute time O(n log n), relaxation time O(n), and the maximal-commute to twice stationary-average-hitting ratio asymptotic to1?",
+        "statement_caveat": "The three linked bounds are one question. The source definition has a variable-assignment typo; the intended standard ordered-edge transitivity is used, as in the surrounding tori examples. Wreath graphs themselves are established prior art.",
+        "status_search": "Focused primary searches2026-09-06 found source question and related established results, but no verified later disposition. Absence from search is not proof of current openness or novelty.",
+        "title": "Extremal arc-transitive walk parameters away from cycles",
+        "verification": "author_checked_not_independently_reviewed"
+      }
+    },
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 371,
+      "row": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "extremal_arc-transitive_walk_parameters_away_from_cycles",
+        "historical_status": "source_says_open",
+        "locator": "Open Problem7.27, PDFp259; definitionp254",
+        "problem_id": "P0208",
+        "proof_file": "proofs/P0208_wreath_graph_counterexample_candidate.md",
+        "proof_path": "proofs/P0208_wreath_graph_counterexample_candidate.md",
+        "recorded_at": "2026-09-07T00:19:46Z",
+        "result_status": "candidate_full_solution",
+        "schema": "probability-problem.v1",
+        "source_id": "aldous_fill_2014",
+        "source_statement_date": "1994;2002manuscript;2014recompilation",
+        "statement": "On arc-transitive n-vertex graphs other than n-cycles, are maximal commute time O(n log n), relaxation time O(n), and the maximal-commute to twice stationary-average-hitting ratio asymptotic to1?",
+        "statement_caveat": "The three linked bounds are one question. The source definition has a variable-assignment typo; the intended standard ordered-edge transitivity is used, as in the surrounding tori examples. Wreath graphs themselves are established prior art.",
+        "status_search": "Focused primary searches2026-09-06 found source question and related established results, but no verified later disposition. Absence from search is not proof of current openness or novelty.",
+        "title": "Extremal arc-transitive walk parameters away from cycles",
+        "verification": "author_checked_not_independently_reviewed"
+      }
+    },
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 209,
+      "row": {
+        "attempt_id": "P0208-A001",
+        "depth": "complete_candidate",
+        "full_problem_solved": false,
+        "independent_check": "The invariant fiber-constant and fiber-antisymmetric subspaces give the full transition spectrum: cycle eigenvalues plus m zeros. Its fundamental trace agrees with the direct stationary hitting-time sum. Neighbor hitting equals2m-1=n-1 as required by the source lemma.",
+        "independent_review": "none",
+        "method": "Extremal arc-transitive walk parameters away from cycles explicit counterexample",
+        "novelty": "unverified",
+        "obstruction": "Verify prior disposition of this1994 question: the graph construction is classical. The source typo and rate-one convention are explicit. No mathematical gap found by the author, but independent review and novelty remain pending.",
+        "problem_id": "P0208",
+        "proof_path": "proofs/P0208_wreath_graph_counterexample_candidate.md",
+        "recorded_at": "2026-09-06T22:32:05Z",
+        "result": "For odd m>=5 the established wreath graph C_m[edgeless K2] is simple, connected,4-regular and arc-transitive on n=2m vertices. Its base projection is cycle walk. Exact hitting means are j*(m-j)+m between different fibers and2m between twins. Thus tau_star=2*floor(m^2/4)+2m, tau0=(m^2-1)/6+m, and tau2=1/(1-cos(2*pi/m)). The first two scale quadratically in n, and tau_star/(2*tau0) tends to3/2, refuting all three proposed bounds.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_complete_candidate"
+      }
+    }
+  ],
+  "P0294": [
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 389,
+      "row": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "compute_a_first_order_bias_correction_for_continuous_workload_mean_field_models",
+        "historical_status": "source_says_open",
+        "locator": "Numbered open problem2,PDF3",
+        "problem_id": "P0294",
+        "recorded_at": "2026-09-07T01:11:32Z",
+        "result_status": "unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "queues_refined_meanfield_pdf_2022",
+        "source_statement_date": "2022-02-02",
+        "statement": "Develop an effective first-order stationary bias correction for continuous-state mean-field models such as least-loaded-of-d queues, with a justified improved error order.",
+        "statement_caveat": "This asks for a computable correction after the source accuracy question, not merely a fitted constant from simulations.",
+        "title": "Compute a first order bias correction for continuous workload mean field models"
+      }
+    },
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 603,
+      "row": {
+        "admitted": true,
+        "current_status": "partially_resolved_in_literature",
+        "dedup_key": "compute_a_first_order_bias_correction_for_continuous_workload_mean_field_models",
+        "historical_status": "source_says_open",
+        "locator": "Numbered open problem2,PDF3",
+        "problem_id": "P0294",
+        "recorded_at": "2026-09-14T09:24:22Z",
+        "result_status": "PARTIALLY RESOLVED. The problem asks for an effective first-order stationary bias correction for continuous-state mean-field models such as the least-loaded-of-d queue, with a justified improved error order. That is the refined mean-field programme: Gast and Van Houdt, 'A refined mean field approximation' (SIGMETRICS 2017), introduce the order 1/N correction; Gast, Bortolussi and Tribastone (2021) and Allmeier and Gast, 'Mean field and refined mean field approximations for heterogeneous systems: it works!' (SIGMETRICS 2022), prove the correction reaches order 1/N^2 accuracy for the stationary behaviour of density-dependent Markov systems including load-balancing models. Whether that matches the source's exact formulation was not confirmed.",
+        "schema": "probability-problem.v1",
+        "source_id": "queues_refined_meanfield_pdf_2022",
+        "source_statement_date": "2022-02-02",
+        "statement": "Develop an effective first-order stationary bias correction for continuous-state mean-field models such as least-loaded-of-d queues, with a justified improved error order.",
+        "statement_caveat": "This asks for a computable correction after the source accuracy question, not merely a fitted constant from simulations.",
+        "title": "Compute a first order bias correction for continuous workload mean field models",
+        "status_search": "Sampling audit of 2026-09-14. THE SEARCH INFRASTRUCTURE FAILED THAT SESSION: the web search tool reported its quota exhausted before the first call, two engines returned unrelated cached pages, and the preprint and citation APIs were rate limited throughout. The searcher said so unprompted and asked for the batch to be re-run. Only the two positive findings from that batch were recorded; its negatives were NOT treated as checks, and the other ten rows of the batch are left as they were.",
+        "author": "claude-prob1000-0913-20h"
+      }
+    },
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 288,
+      "row": {
+        "attempt_id": "P0294-A001",
+        "candidate_full_solution": false,
+        "depth": "individual_analytic_attempt",
+        "full_problem_solved": false,
+        "independent_check": "The orthogonal projection onto the constant vector and its complement diagonalizes the linear drift. Their independent Brownian projections give the two variances, and summing them reproduces the one-coordinate stationary variance directly from the Lyapunov equation.",
+        "independent_review": "none",
+        "method": "Explicit model calculation, comparison identities and remaining hypothesis obstruction",
+        "novelty": "not_claimed",
+        "obstruction": "This classical Gaussian calculation is a baseline, not a solution for the least-workload PDMP. Its interaction involves routing minima and a reflecting or sticky empty boundary; the appropriate infinite-dimensional covariance and response equations must be derived and solved with certified truncation and tail error. The source empirical approximation lambda^2/[2(1-lambda)] is not asserted exact.",
+        "problem_id": "P0294",
+        "recorded_at": "2026-09-07T01:11:32Z",
+        "result": "An exactly solvable continuous-state control model shows how covariance enters the correction. Let dX_i=(-a*X_i+b*M_N)dt+sigma*dB_i with a>b>=0 and independent Brownian motions. The empirical mean is an OU process of rate a-b and variance sigma^2/[2(a-b)N]. Orthogonal deviations have marginal variance sigma^2*(1-1/N)/(2a). Therefore E X_i^2=sigma^2/(2a)+(sigma^2/(2N))*(1/(a-b)-1/a), an exact first-order correction with no further error.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_partial"
+      }
+    }
+  ],
+  "P0458": [
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 558,
+      "row": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "the_standardized_degree_law_in_growing_bilateral_preference_graphs",
+        "historical_status": "source_says_open",
+        "locator": "Open Problems; PDF3 first additional question",
+        "problem_id": "P0458",
+        "proof_path": "proofs/Bilateral_degree_fluctuations_partial.md",
+        "recorded_at": "2026-09-07T07:49:20Z",
+        "result_status": "candidate_partial_counterexample",
+        "schema": "probability-problem.v1",
+        "source_id": "bilateral_connectivity_2025",
+        "source_statement_date": "2025-07-08",
+        "statement": "Determine the limiting law of (D-E[D])/sqrt(Var(D)) for a typical LK(n,k) degree as the preference budget grows.",
+        "statement_caveat": "A private packet covers k->infinity with k=o(n^(2/5)), including the source mean-asymptotic regime k=o(n^(1/3)). Other growth regimes and novelty are not settled.",
+        "status_search": "2026-09-07 bounded primary searches for EWT, La-Kabkab and bilateral preference degree results; 2025 connectivity theorem credited. No current-open or novelty certification.",
+        "title": "The standardized degree law in growing bilateral preference graphs"
+      }
+    },
+    {
+      "file": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 444,
+      "row": {
+        "attempt_id": "P0458-A001",
+        "depth": "individual_analytic_attempt",
+        "full_problem_solved": false,
+        "independent_check": "All 720 rank permutations on four vertices for k=1,2 satisfy D<=D0<=D+2J; degree means 3/5 and 8/5 agree with independent two-endpoint rank probabilities. The separate fixed-k EWT root mixture followed by a gamma limit yields the same g(Z). Exact conditioning, L2 comparison, uniform integrability and a polar calculation of v are detailed in the packet.",
+        "independent_review": "none",
+        "method": "Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics",
+        "novelty": "not_claimed",
+        "obstruction": "Author-only partial candidate for the broader source question. No independent review, current-openness or novelty certificate, and no assertion for every k regime.",
+        "problem_id": "P0458",
+        "recorded_at": "2026-09-07T07:49:20Z",
+        "result": "The packet uses the exact root (k+1)st order statistic X~Beta(k+1,n-k-1). Ignoring internal edges among the root preferred neighbors gives D0|X~Bin(k,1-q(X)), where q(X)=E[(X-T)+]/X and T~Beta(k,n-2k). The actual error satisfies E[(D0-D)^2/k]=O(k^2/n+k^5/n^2). Beta central limits and explicit moment controls then give (k-D)/sqrt(k)->g(Z), g(z)=phi(z)+z*Phi(z), with convergence of its first two moments. The variance constant is v=1/3+(sqrt(3)-2)/(2*pi), and the standardized degree limit is (1/sqrt(pi)-g(Z))/sqrt(v), which is non-Gaussian.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_partial"
+      }
+    }
+  ]
+}

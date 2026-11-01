@@ -1,0 +1,275 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w353/verify_packet.py",
+  "measured_utc": "2026-10-10T05:42:34.505698+00:00",
+  "accepted": true,
+  "fresh_host_gate_passed": true,
+  "experiment_status": "PASS",
+  "gate": {
+    "captured_utc": "2026-10-10T05:42:34.113426+00:00",
+    "decision": "ALLOW",
+    "allowed_scope": "7 peer cases at 2 meshes of <=8192 panels, 15 closed-form posterior cases, 3 Gaussian checks; one bounded read-only title query",
+    "wall_budget_seconds": 50,
+    "threads_requested": 1,
+    "gpu": false,
+    "training": false,
+    "network": false,
+    "store_writes": false,
+    "delete": false,
+    "cpu_count": 16,
+    "resource_gates_changed": false,
+    "method": "Fresh local scope gate; no heavy computation or process/service changes",
+    "fresh_resource_probe": {
+      "checked_at_utc": "2026-10-10T05:42:34.364273+00:00",
+      "available_physical_bytes": 5960785920,
+      "cpu_busy_fraction": 0.72265625,
+      "minimum_available_physical_bytes": 2147483648,
+      "maximum_cpu_busy_fraction": 0.8,
+      "admit": true
+    }
+  },
+  "w352_independent_reproduction": [
+    {
+      "p": 2,
+      "closed_form_Dp": 0.6666666666666659,
+      "quadrature_Dp": 0.6666666666666679,
+      "relative_error": 2.9976021664879262e-15,
+      "mesh_relative_difference": 4.996003610813211e-15,
+      "Dp_over_p": 0.3333333333333329,
+      "conditional_mean_variance": 0.3333333333333333,
+      "input_dirichlet_energy": 1,
+      "moments_by_quadrature": {
+        "EY2": 0.4999999999999995,
+        "EX": 1.4999999999999996,
+        "VarX": 1.4999999999999942
+      }
+    },
+    {
+      "p": 4,
+      "closed_form_Dp": 1.0966717945067126,
+      "quadrature_Dp": 1.096671794506712,
+      "relative_error": 6.074140122065632e-16,
+      "mesh_relative_difference": 2.227184711424065e-15,
+      "Dp_over_p": 0.27416794862667815,
+      "conditional_mean_variance": 0.2,
+      "input_dirichlet_energy": 1,
+      "moments_by_quadrature": {
+        "EY2": 0.33798912003364234,
+        "EX": 1.249999999999998,
+        "VarX": 1.2500000000000007
+      }
+    },
+    {
+      "p": 8,
+      "closed_form_Dp": 2.265203565902493,
+      "quadrature_Dp": 2.2652035659024707,
+      "relative_error": 9.802412828030545e-15,
+      "mesh_relative_difference": 1.2547088419879097e-14,
+      "Dp_over_p": 0.2831504457378116,
+      "conditional_mean_variance": 0.1111111111111111,
+      "input_dirichlet_energy": 1,
+      "moments_by_quadrature": {
+        "EY2": 0.3146342659193028,
+        "EX": 1.1249999999999998,
+        "VarX": 1.1250000000000002
+      }
+    },
+    {
+      "p": 16,
+      "closed_form_Dp": 4.818471684828934,
+      "quadrature_Dp": 4.818471684828895,
+      "relative_error": 8.110424429772887e-15,
+      "mesh_relative_difference": 1.898576627878653e-14,
+      "Dp_over_p": 0.30115448030180836,
+      "conditional_mean_variance": 0.058823529411764705,
+      "input_dirichlet_energy": 1,
+      "moments_by_quadrature": {
+        "EY2": 0.31748751591742586,
+        "EX": 1.0624999999999998,
+        "VarX": 1.0624999999999996
+      }
+    },
+    {
+      "p": 32,
+      "closed_form_Dp": 10.082029450579496,
+      "quadrature_Dp": 10.08202945057947,
+      "relative_error": 2.6428560560763124e-15,
+      "mesh_relative_difference": 1.7619040373842082e-15,
+      "Dp_over_p": 0.31506342033060925,
+      "conditional_mean_variance": 0.030303030303030304,
+      "input_dirichlet_energy": 1,
+      "moments_by_quadrature": {
+        "EY2": 0.32349830119198125,
+        "EX": 1.0312499999999998,
+        "VarX": 1.03125
+      }
+    },
+    {
+      "p": 64,
+      "closed_form_Dp": 20.709430864759476,
+      "quadrature_Dp": 20.709430864759316,
+      "relative_error": 7.719773497883585e-15,
+      "mesh_relative_difference": 2.401707310452671e-15,
+      "Dp_over_p": 0.3235848572618668,
+      "conditional_mean_variance": 0.015384615384615385,
+      "input_dirichlet_energy": 1,
+      "moments_by_quadrature": {
+        "EY2": 0.3278882621188203,
+        "EX": 1.015625,
+        "VarX": 1.015625
+      }
+    },
+    {
+      "p": 128,
+      "closed_form_Dp": 42.02185105949859,
+      "quadrature_Dp": 42.02185105949818,
+      "relative_error": 9.638065653267055e-15,
+      "mesh_relative_difference": 2.198155324429328e-15,
+      "Dp_over_p": 0.3282957114023327,
+      "conditional_mean_variance": 0.007751937984496124,
+      "input_dirichlet_energy": 1,
+      "moments_by_quadrature": {
+        "EY2": 0.3304715924617848,
+        "EX": 1.0078125,
+        "VarX": 1.0078125
+      }
+    }
+  ],
+  "posterior_obstruction": [
+    {
+      "t": 0.25,
+      "y": -0.75,
+      "alpha": 0.0,
+      "posterior_variance_over_t": 0.3633802276324186,
+      "violates_candidate_pointwise_margin_0_9": false
+    },
+    {
+      "t": 0.25,
+      "y": -0.25,
+      "alpha": -1.0,
+      "posterior_variance_over_t": 0.6296862857766052,
+      "violates_candidate_pointwise_margin_0_9": false
+    },
+    {
+      "t": 0.25,
+      "y": 0.25,
+      "alpha": -2.0,
+      "posterior_variance_over_t": 0.8864519483114236,
+      "violates_candidate_pointwise_margin_0_9": false
+    },
+    {
+      "t": 0.25,
+      "y": 1.25,
+      "alpha": -4.0,
+      "posterior_variance_over_t": 0.9994646442304618,
+      "violates_candidate_pointwise_margin_0_9": true
+    },
+    {
+      "t": 0.25,
+      "y": 3.25,
+      "alpha": -8.0,
+      "posterior_variance_over_t": 0.9999999999999596,
+      "violates_candidate_pointwise_margin_0_9": true
+    },
+    {
+      "t": 1.0,
+      "y": 0.0,
+      "alpha": 0.0,
+      "posterior_variance_over_t": 0.3633802276324186,
+      "violates_candidate_pointwise_margin_0_9": false
+    },
+    {
+      "t": 1.0,
+      "y": 1.0,
+      "alpha": -1.0,
+      "posterior_variance_over_t": 0.6296862857766052,
+      "violates_candidate_pointwise_margin_0_9": false
+    },
+    {
+      "t": 1.0,
+      "y": 2.0,
+      "alpha": -2.0,
+      "posterior_variance_over_t": 0.8864519483114236,
+      "violates_candidate_pointwise_margin_0_9": false
+    },
+    {
+      "t": 1.0,
+      "y": 4.0,
+      "alpha": -4.0,
+      "posterior_variance_over_t": 0.9994646442304618,
+      "violates_candidate_pointwise_margin_0_9": true
+    },
+    {
+      "t": 1.0,
+      "y": 8.0,
+      "alpha": -8.0,
+      "posterior_variance_over_t": 0.9999999999999596,
+      "violates_candidate_pointwise_margin_0_9": true
+    },
+    {
+      "t": 4.0,
+      "y": 3.0,
+      "alpha": 0.0,
+      "posterior_variance_over_t": 0.3633802276324186,
+      "violates_candidate_pointwise_margin_0_9": false
+    },
+    {
+      "t": 4.0,
+      "y": 5.0,
+      "alpha": -1.0,
+      "posterior_variance_over_t": 0.6296862857766052,
+      "violates_candidate_pointwise_margin_0_9": false
+    },
+    {
+      "t": 4.0,
+      "y": 7.0,
+      "alpha": -2.0,
+      "posterior_variance_over_t": 0.8864519483114236,
+      "violates_candidate_pointwise_margin_0_9": false
+    },
+    {
+      "t": 4.0,
+      "y": 11.0,
+      "alpha": -4.0,
+      "posterior_variance_over_t": 0.9994646442304618,
+      "violates_candidate_pointwise_margin_0_9": true
+    },
+    {
+      "t": 4.0,
+      "y": 19.0,
+      "alpha": -8.0,
+      "posterior_variance_over_t": 0.9999999999999596,
+      "violates_candidate_pointwise_margin_0_9": true
+    }
+  ],
+  "gaussian_identity_checks": [
+    {
+      "t": 0.25,
+      "input_variance": 1,
+      "mean_posterior_variance": 0.2,
+      "variance_of_conditional_mean": 0.8,
+      "gradient_energy_contraction_for_linear_f": 0.64
+    },
+    {
+      "t": 1.0,
+      "input_variance": 1,
+      "mean_posterior_variance": 0.5,
+      "variance_of_conditional_mean": 0.5,
+      "gradient_energy_contraction_for_linear_f": 0.25
+    },
+    {
+      "t": 4.0,
+      "input_variance": 1,
+      "mean_posterior_variance": 0.8,
+      "variance_of_conditional_mean": 0.2,
+      "gradient_energy_contraction_for_linear_f": 0.04
+    }
+  ],
+  "claims": {
+    "peer_asymptotic": "proved analytically in REVIEW_PACKET.md; finite quadrature is not an asymptotic proof",
+    "own_tail_limit": "proved analytically in ATTEMPT.md; not inferred from rounded numbers",
+    "full_KLS_proof_checked": false
+  },
+  "max_peer_relative_error": 9.802412828030545e-15,
+  "candidate_pointwise_margin_0_9_violations": 6,
+  "numerical_elapsed_seconds": 0.14047810004558414
+}

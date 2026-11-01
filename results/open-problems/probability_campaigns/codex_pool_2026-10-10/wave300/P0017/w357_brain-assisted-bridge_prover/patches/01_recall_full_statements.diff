@@ -1,0 +1,91 @@
+--- a/~/math-brain-build/src/math_brain/cli.py
++++ b/~/math-brain-build/src/math_brain/cli.py
+@@ -97,6 +97,12 @@
+     recall.add_argument("query")
+     recall.add_argument("--limit", type=int, default=10)
+     recall.add_argument(
++        "--with-statements",
++        action="store_true",
++        help="include each selected card's complete statement and stored review "
++        "provenance for checking theorem hypotheses",
++    )
++    recall.add_argument(
+         "--skip-unknown-edges",
+         action="store_true",
+         help="skip edge rows whose kind this build does not define (one warning per kind) "
+@@ -137,6 +143,22 @@
+     trigger.add_argument("--config", type=Path, default=Path("config/triggers.toml"))
+     return parser
+ 
++
++
++def _include_recall_statements(output, hits, enabled: bool) -> None:
++    """Expose complete selected statements without promoting their review status."""
++    if not enabled:
++        return
++    nodes = {hit.node.id: hit.node for hit in hits}
++    rows = output if isinstance(output, list) else output["hits"]
++    for row in rows:
++        node = nodes[row["id"]]
++        row["statement"] = node.body
++        row["statement_provenance"] = {
++            "logical_id": node.metadata.get("logical_id"),
++            "truth_status": node.metadata.get("truth_status"),
++            "statement_fidelity_reviewed": node.metadata.get("statement_fidelity_reviewed"),
++        }
+ 
+ 
+ def _decision_json(result) -> dict:
+@@ -289,6 +311,7 @@
+                                         "warning_score": hit.warning_score}
+                                        for hit in result.hits]}
+                 output["background"] = _background_json(result)
++                _include_recall_statements(output, result.hits, args.with_statements)
+                 print(json.dumps(output, ensure_ascii=False))
+                 return 0
+             if args.decision:
+@@ -303,7 +326,9 @@
+                     min_support_score=args.min_support,
+                     min_margin=args.min_margin,
+                 )
+-                print(json.dumps(_decision_json(result), ensure_ascii=False))
++                output = _decision_json(result)
++                _include_recall_statements(output, result.hits, args.with_statements)
++                print(json.dumps(output, ensure_ascii=False))
+                 return 0
+             hits = search(
+                 args.query,
+@@ -311,21 +336,18 @@
+                 edges=store.iter_edges(skip_unknown=args.skip_unknown_edges),
+                 limit=args.limit,
+             )
+-        print(
+-            json.dumps(
+-                [
+-                    {
+-                        "id": hit.node.id,
+-                        "kind": hit.node.kind.value,
+-                        "title": hit.node.title,
+-                        "score": hit.total_score,
+-                        "warning_score": hit.warning_score,
+-                    }
+-                    for hit in hits
+-                ],
+-                ensure_ascii=False,
+-            )
+-        )
++        output = [
++            {
++                "id": hit.node.id,
++                "kind": hit.node.kind.value,
++                "title": hit.node.title,
++                "score": hit.total_score,
++                "warning_score": hit.warning_score,
++            }
++            for hit in hits
++        ]
++        _include_recall_statements(output, hits, args.with_statements)
++        print(json.dumps(output, ensure_ascii=False))
+         return 0
+     if args.command == "triggers":
+         matches = match_triggers(args.text, load_triggers(args.config))

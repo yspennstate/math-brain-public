@@ -1,0 +1,23 @@
+{
+  "source_blob": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+  "findings": [
+    {
+      "line": 62,
+      "status": "FALSE",
+      "repair": "replace 'whatever constant multiplies A' by 'whatever nonzero constant multiplies A'",
+      "impact": "expository only"
+    },
+    {
+      "line": 435,
+      "status": "GAP",
+      "repair": "replace 'Jacobian' by 'absolute Jacobian'",
+      "impact": "zero constant loss; no theorem counterexample"
+    }
+  ],
+  "line511": {
+    "status": "PASS",
+    "reason": "s=0 is a null endpoint of the layer-cake integral"
+  },
+  "whole_source_lines_accounted": true,
+  "rendered_pdf": "UNCHECKED"
+}

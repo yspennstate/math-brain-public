@@ -1,0 +1,58 @@
+{
+  "worker": "w370",
+  "date": "2026-10-10",
+  "reason": "Resume after network drop; complete pending validation and consume referee decisions.",
+  "runtime_check": {
+    "command": "python -X utf8 ~/brain_workers/w370/test_read_lock.py",
+    "status": "not_run",
+    "cpu_percent": 85.5,
+    "maximum_cpu_percent": 75,
+    "available_ram_bytes": 4468535296,
+    "minimum_available_ram_bytes": 2147483648,
+    "budget_seconds": 20,
+    "admitted": false,
+    "thresholds_unchanged": true,
+    "successful_fixture_tests": 0,
+    "code_status": "superseded unvalidated proposal"
+  },
+  "independent_math_verdicts": {
+    "reviewer": "w371",
+    "source": "~/brain_workers/w371/PEER_VERDICTS.jsonl",
+    "decisions": [
+      {
+        "claim_id": "w370-P0104-002",
+        "verdict": "KEEP",
+        "source_line": 1,
+        "scope": "Abstract rare-event counterexample; no lattice FPP realization."
+      },
+      {
+        "claim_id": "w370-P0104-003",
+        "verdict": "KEEP",
+        "source_line": 2,
+        "scope": "Conditional variance bridge; lattice kurtosis and weak scaling remain unproved."
+      },
+      {
+        "claim_id": "w370-P0104-005",
+        "verdict": "KEEP",
+        "source_line": 3,
+        "scope": "Uniform interval premise implies a variance lower bound; no restatement of the paper theorem."
+      }
+    ],
+    "mathematical_check": true,
+    "formal_check": false,
+    "cross_account_admission_certified": false,
+    "live_integration_performed": false
+  },
+  "NEXT": "Integrate independently checked math drafts; validate the current live fallback separately rather than apply the archived patch.",
+  "live_source_drift": {
+    "date": "2026-10-10",
+    "old_sha256": "cc0f2cdf6eed4698155c8ec18df63b5df9abef68984a21feed83810c5dcb3c97",
+    "current_sha256": "f326206c1b73d85e7c66595ab521a336c708898288fd2ebb040c7591f36e5318",
+    "old_bytes": 36483,
+    "current_bytes": 38547,
+    "live_changed_since_copy": true,
+    "live_modified_by_worker": false,
+    "difference_file": "review/live_drift.diff",
+    "NEXT": "Check overlap with the copied reader repair before choosing rebase or supersession."
+  }
+}

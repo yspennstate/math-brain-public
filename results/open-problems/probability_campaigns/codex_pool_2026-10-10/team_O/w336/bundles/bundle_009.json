@@ -1,0 +1,74 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w336",
+  "bundle_slug": "w336-p0007-checked-attempt-20261010",
+  "audit_status": "PENDING_W346_KEEP; do not promote to audited or solved",
+  "entries": [
+    {
+      "key": "unbounded-open-convex-domain-contains-ray-from-every-point",
+      "namespace": "geometry.billiards",
+      "logical_name": "unbounded-open-convex-domain-contains-ray-from-every-point",
+      "kind": "lemma",
+      "title": "Convex vacant components have an escaping straight ray",
+      "statement": "Every unbounded open convex set in finite-dimensional Euclidean space contains an infinite straight ray starting at each of its points. If such a set is a mirror-complement component, that ray never collides with a mirror and is an escaping launch direction. The assertion needs convexity and does not settle the general all-reflected-rays trapping problem.",
+      "proof_text": "# P0007: convex escape and an explicit no-ray corridor\n\nStatus: proofs written; w346 KEEP pending. Neither result constructs an all-ray trapping mirror configuration.\n\nLemma 1. Every unbounded open convex set C in R^d contains an unbounded straight ray starting at each x in C. Therefore, if a mirror-complement component is unbounded, open and convex, an origin in it has an unobstructed escaping launch direction and cannot have every reflected ray bounded.\n\nProof: choose r>0 with B(x,r) contained in C and y_k in C with |y_k-x| tending to infinity. A subsequence of d_k=(y_k-x)/|y_k-x| tends to a unit direction d. For fixed t>=0 and sufficiently large k, convexity gives a ball centered at x+t*d_k with radius (1-t/|y_k-x|)*r contained in C. Eventually this radius exceeds 3r/4 and the center is within r/4 of x+t*d, so B(x+t*d,r/2) is in C. This holds for every fixed t with the same subsequential direction d, proving the entire ray stays inside C. No collision occurs along it.\n\nLemma 2. C={(x,y): x>0 and |y-x^2|<1} is open, connected and unbounded but contains no unbounded straight ray.\n\nProof: (x,u)->(x,x^2+u) is a homeomorphism from (0,infinity) times (-1,1), proving the first three properties. For a ray (a+bt,c+dt), t>=0, with nonzero direction: b<0 eventually violates x>0; b=0 and d!=0 eventually violates the strip condition; b>0 makes y-x^2 a quadratic with leading coefficient -b^2, whose magnitude diverges. Thus all possible directions leave C in finite time.\n\nThis gives an explicit algebraic version of the previous spiral-corridor obstruction: unbounded connected vacancy alone does not supply a straight ray. The corridor is not represented as a permitted mirror arrangement, and absence of straight rays does not establish trapping of reflected rays. Convexity is a sufficient special-case condition, not a necessary one.\n\nChecks: algebraic ray exit times for a finite angle grid, openness/connectedness via the explicit parametrization, and the nonconvex midpoint pair (1,1),(3,9), whose midpoint is outside C.\n",
+      "assumptions": [
+        "All hypotheses and scope restrictions in the statement apply."
+      ],
+      "domain": "Euclidean geometry and billiards",
+      "source": {
+        "source_id": "owner:campaign:w336:P0007:unbounded-open-convex-domain-contains-ray-from-every-point",
+        "url": "~\\brain_workers\\w336\\proofs\\P0007.md",
+        "revision": "author-proof-2026-10-10; independent audit w346 pending",
+        "license": "owner-own-work; campaign proof, no novelty claim",
+        "excerpt": "Every unbounded open convex set in finite-dimensional Euclidean space contains an infinite straight ray starti"
+      }
+    },
+    {
+      "key": "parabolic-open-corridor-contains-no-infinite-ray",
+      "namespace": "geometry.billiards",
+      "logical_name": "parabolic-open-corridor-contains-no-infinite-ray",
+      "kind": "lemma",
+      "title": "An unbounded connected open corridor with no straight ray",
+      "statement": "The planar set C={(x,y): x>0 and |y-x^2|<1} is open, connected and unbounded, but contains no straight ray with nonzero direction. A ray with negative x direction exits x>0, a vertical ray exits the bounded vertical strip at its fixed x, and a ray with positive x direction has y-x^2 tending to minus infinity quadratically. This is a geometric counterexample to an unbounded-component implies straight-visibility inference; no permitted mirror configuration or reflected-ray trapping is asserted.",
+      "proof_text": "# P0007: convex escape and an explicit no-ray corridor\n\nStatus: proofs written; w346 KEEP pending. Neither result constructs an all-ray trapping mirror configuration.\n\nLemma 1. Every unbounded open convex set C in R^d contains an unbounded straight ray starting at each x in C. Therefore, if a mirror-complement component is unbounded, open and convex, an origin in it has an unobstructed escaping launch direction and cannot have every reflected ray bounded.\n\nProof: choose r>0 with B(x,r) contained in C and y_k in C with |y_k-x| tending to infinity. A subsequence of d_k=(y_k-x)/|y_k-x| tends to a unit direction d. For fixed t>=0 and sufficiently large k, convexity gives a ball centered at x+t*d_k with radius (1-t/|y_k-x|)*r contained in C. Eventually this radius exceeds 3r/4 and the center is within r/4 of x+t*d, so B(x+t*d,r/2) is in C. This holds for every fixed t with the same subsequential direction d, proving the entire ray stays inside C. No collision occurs along it.\n\nLemma 2. C={(x,y): x>0 and |y-x^2|<1} is open, connected and unbounded but contains no unbounded straight ray.\n\nProof: (x,u)->(x,x^2+u) is a homeomorphism from (0,infinity) times (-1,1), proving the first three properties. For a ray (a+bt,c+dt), t>=0, with nonzero direction: b<0 eventually violates x>0; b=0 and d!=0 eventually violates the strip condition; b>0 makes y-x^2 a quadratic with leading coefficient -b^2, whose magnitude diverges. Thus all possible directions leave C in finite time.\n\nThis gives an explicit algebraic version of the previous spiral-corridor obstruction: unbounded connected vacancy alone does not supply a straight ray. The corridor is not represented as a permitted mirror arrangement, and absence of straight rays does not establish trapping of reflected rays. Convexity is a sufficient special-case condition, not a necessary one.\n\nChecks: algebraic ray exit times for a finite angle grid, openness/connectedness via the explicit parametrization, and the nonconvex midpoint pair (1,1),(3,9), whose midpoint is outside C.\n",
+      "assumptions": [
+        "All hypotheses and scope restrictions in the statement apply."
+      ],
+      "domain": "Euclidean geometry and billiards",
+      "source": {
+        "source_id": "owner:campaign:w336:P0007:parabolic-open-corridor-contains-no-infinite-ray",
+        "url": "~\\brain_workers\\w336\\proofs\\P0007.md",
+        "revision": "author-proof-2026-10-10; independent audit w346 pending",
+        "license": "owner-own-work; campaign proof, no novelty claim",
+        "excerpt": "The planar set C={(x,y): x>0 and |y-x^2|<1} is open, connected and unbounded, but contains no straight ray wit"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "unbounded-open-convex-domain-contains-ray-from-every-point",
+      "to_existing_logical": "math:probability.core:open-problem-p0007-unbounded-mirror-component-trapping-every-ray",
+      "kind": "cites",
+      "rationale": "New: \"Every unbounded open convex set in finite-dimensional Euclidean space contains an infinite straight ray starting at each of its points. If such a set is a mirror-complement compone\"; existing: \"Can an unbounded component of a mirror complement contain an origin from which every reflected ray stays bounded?\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
+    },
+    {
+      "from_key": "unbounded-open-convex-domain-contains-ray-from-every-point",
+      "to_existing_logical": "math:probability.core:attempt-p0007-unbounded-mirror-component-trapping-every-ray",
+      "kind": "cites",
+      "rationale": "New: \"Every unbounded open convex set in finite-dimensional Euclidean space contains an infinite straight ray starting at each of its points. If such a set is a mirror-complement compone\"; existing: \"An unbounded unobstructed straight ray from the origin immediately rules out the proposed all-directions trapped configuration. However an unbounded connected planar open set need not contain any unbounded straight ray: a sufficiently narro\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
+    },
+    {
+      "from_key": "parabolic-open-corridor-contains-no-infinite-ray",
+      "to_existing_logical": "math:probability.core:open-problem-p0007-unbounded-mirror-component-trapping-every-ray",
+      "kind": "cites",
+      "rationale": "New: \"The planar set C={(x,y): x>0 and |y-x^2|<1} is open, connected and unbounded, but contains no straight ray with nonzero direction. A ray with negative x direction exits x>0, a vert\"; existing: \"Can an unbounded component of a mirror complement contain an origin from which every reflected ray stays bounded?\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
+    },
+    {
+      "from_key": "parabolic-open-corridor-contains-no-infinite-ray",
+      "to_existing_logical": "math:probability.core:attempt-p0007-unbounded-mirror-component-trapping-every-ray",
+      "kind": "cites",
+      "rationale": "New: \"The planar set C={(x,y): x>0 and |y-x^2|<1} is open, connected and unbounded, but contains no straight ray with nonzero direction. A ray with negative x direction exits x>0, a vert\"; existing: \"An unbounded unobstructed straight ray from the origin immediately rules out the proposed all-directions trapped configuration. However an unbounded connected planar open set need not contain any unbounded straight ray: a sufficiently narro\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
+    }
+  ]
+}

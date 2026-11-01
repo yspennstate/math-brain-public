@@ -1,0 +1,15 @@
+{
+ "helper_version":"A082-true-erasure-v2-sharp",
+ "family":"all Boolean sign functions on n=1,2,3,4 uniform variables",
+ "case_count":32906,
+ "counts_by_n":{"1":2,"2":8,"3":128,"4":32768},
+ "symmetry":"global output sign only, f(0)=+1; Gray order in remaining N-1 truth bits",
+ "target":"some relevant i has B_i<=Kstar I_i, Kstar=4+(5/2)log2(5)-(9/2)log2(3); Kstar<107/40",
+ "arithmetic":"integer Walsh update and exact integer products after prime factorization; independent butterfly replay plus rational log intervals with 40 atanh terms; symbolic prime vector detects equality",
+ "memory_estimate_mb":40,
+ "maximum_runtime_seconds":1800,
+ "pilot_observed_seconds":0.0011722,
+ "full_discovery_observed_seconds":0.590185,
+ "no_dimension_escalation":true,
+ "bridge":"affine Fourier dimension<=4, hereditary physical restrictions, independent disjoint products; arbitrary dimension reduction remains unproved"
+}

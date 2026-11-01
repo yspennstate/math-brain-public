@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "assertions": 72,
+  "runtime_seconds": 0.04030520003288984,
+  "family": "full-support three-vertex path",
+  "cases": [
+    {
+      "n": 2,
+      "dimension": 3,
+      "negative_vertices": [
+        0,
+        1,
+        3
+      ],
+      "truth_table": [
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "full_root_support": true,
+      "both_children_nonconstant": true,
+      "q0": "1/8",
+      "qa": "1/8",
+      "p0": "1/4",
+      "p": "1/4",
+      "M": 4,
+      "TV_upper": "1/8",
+      "query_influence": "1/4",
+      "total_influence": "5/4",
+      "root_entropy_interval": [
+        "351284550295275919788497901409/158456325028528675187087900672",
+        "2810276402362207358307983211357/1267650600228229401496703205376"
+      ],
+      "expected_reset_interval": [
+        "482626859414429170323580748015/1267650600228229401496703205376",
+        "482626859414429170323580748045/1267650600228229401496703205376"
+      ],
+      "active_reset_interval": [
+        "965253718828858340647161496031/1267650600228229401496703205376",
+        "965253718828858340647161496089/1267650600228229401496703205376"
+      ],
+      "refund": "exactly zero",
+      "reset_changed_atoms": [
+        0,
+        1
+      ],
+      "all_other_terminals_unchanged": true,
+      "finite_root_H_le_8I": true
+    },
+    {
+      "n": 3,
+      "dimension": 4,
+      "negative_vertices": [
+        0,
+        1,
+        3
+      ],
+      "truth_table": null,
+      "full_root_support": true,
+      "both_children_nonconstant": true,
+      "q0": "13/32",
+      "qa": "1/32",
+      "p0": "9/16",
+      "p": "1/16",
+      "M": 16,
+      "TV_upper": "1/32",
+      "query_influence": "1/8",
+      "total_influence": "1",
+      "root_entropy_interval": [
+        "902783224213548026096340243341/316912650057057350374175801344",
+        "3611132896854192104385360973517/1267650600228229401496703205376"
+      ],
+      "expected_reset_interval": [
+        "297853866270737421400979970185/633825300114114700748351602688",
+        "595707732541474842801959940407/1267650600228229401496703205376"
+      ],
+      "active_reset_interval": [
+        "297853866270737421400979970185/316912650057057350374175801344",
+        "595707732541474842801959940407/633825300114114700748351602688"
+      ],
+      "refund": "exactly zero",
+      "reset_changed_atoms": [
+        0,
+        1
+      ],
+      "all_other_terminals_unchanged": true,
+      "finite_root_H_le_8I": true
+    }
+  ],
+  "helper_sha256": "09ce2083ce717f9519682729137ae7bf1353d5b3eabebbee9af0ea97b112addf",
+  "log_helper_sha256": "5226b47bf86c02af156e72a906b86be40f980334bac3baa9759dda70d9349f1c"
+}

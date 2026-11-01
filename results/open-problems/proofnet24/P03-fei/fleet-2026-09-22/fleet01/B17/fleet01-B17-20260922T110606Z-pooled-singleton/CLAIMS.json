@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "fleet01-B17-20260922T110606Z-pooled-singleton",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "control_revision": "2026-09-22.3",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "B17-POOLED-SINGLETON-PAYMENT-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For every genuine Boolean gate at interior product bias, every singleton-channel set J and nonnegative weights w, the sign-compatible Rayleigh packet Pi_J(w) defined in REPORT.md is bounded above by K_occ.",
+      "dependencies": [
+        "B08-LOG-WEIGHTED-MULTISHIFT-v1",
+        "B-BIASED-BOOLEANITY-GAP-v1",
+        "IPROJ"
+      ]
+    },
+    {
+      "id": "B17-PRIME-PACKET-SAFE-REGIME-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For every symmetric potential Gamma and genuine Boolean gate, R_Gamma >= Lambda_phys - T_Gamma + Pi_J^*. Hence Pi_J^* >= T_Gamma-Lambda_phys implies nonnegative gate residual; this includes composition-prime gates.",
+      "dependencies": [
+        "B17-POOLED-SINGLETON-PAYMENT-v1",
+        "B10-PHYSICAL-MARGINAL-CAP",
+        "IPROJ"
+      ]
+    },
+    {
+      "id": "B17-SIXBIT-POOLING-WITNESS-v1",
+      "status": "COMPUTATIONAL_CERTIFICATE_IN_SOURCE",
+      "statement": "For the balanced six-bit distance-five two-flip dictator perturbation at center C=6.5584452830718245, each singleton B08 packet is below the negative B_inf debt, while the optimized sign-compatible six-singleton packet is above that debt.",
+      "verification": {
+        "checker_sha256": "b1fa149e9c96a6c69f01ef830fa49caedda93cbb9a12a9a6dc3e87edabf881b9",
+        "output_sha256": "036e7096deb92ec17235f3b27ab82ec9a67bacd38dc7fa9d8d5faf698f1779ea"
+      }
+    }
+  ],
+  "partner_consumed": {
+    "account": "fleet02",
+    "slot": "B17",
+    "run_id": "fleet02-B17-20260922T104426Z-eba4746f",
+    "application": "Used its center-neutral KL-insurance no-go to keep the new theorem source-dependent and its restriction exchange ledger to forbid double spending reference-movement KL."
+  },
+  "remaining_implication": "Prove universal coercivity for a sufficiently rich non-double-spent packet on every dangerous composition-prime source, or construct a genuine Boolean prime counterfamily.",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN"
+}

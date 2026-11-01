@@ -1,0 +1,28 @@
+ledger_delta:
+  track: NM13-08
+  parent: T07_uniform_forest_pairwise_negative_edge_correlation
+  source_scope: "uniform measure on all acyclic spanning edge subsets of arbitrary finite simple graphs"
+  parent_status_before: OPEN
+  parent_status_after: OPEN
+  complete_all_graph_vertex_order_before: 9
+  complete_all_graph_vertex_order_after: 9
+  source_counterexample_order_lower_bound_before: ">=10"
+  source_counterexample_order_lower_bound_after: ">=10"
+  mechanism_before: "transparent two-terminal substitution; series/parallel activity/J calculus; transparent theta expansions of unit-pNC cores including wheels"
+  mechanism_after: "one-port-field Rayleigh property proved closed under arbitrary terminal series and parallel composition; K4-join-independent_n minus a clique port is proved one-port-field Rayleigh for every n>=1; arbitrary SP macro-networks of these non-series-parallel atoms are unit-pNC"
+  new_claims:
+    - T07_PORT_FIELD_SP_CLOSURE_06
+    - T07_SPLIT4_ONE_PORT_FIELD_07
+    - T07_SPLIT4_MACRONETWORK_08
+  application_class: "arbitrary finite series/parallel expression trees with leaves Q_n=(K4 join independent_n)-g, n>=1, disjoint interiors; optional subsequent transparent-theta substitutions preserved from prior NM13-08 work"
+  exact_certificate: "2026-09-20T01-39-00Z__portfield_sp_checker.py; output ends ALL_EXACT_CHECKS_PASS"
+  atom_orbits_checked: 22
+  nonport_field_orbits: 18
+  port_edge_orbits: 4
+  exceptional_quadratic_sign_cases: 3
+  status: "PARTIAL parent / CANDIDATE_FULL restricted theorems pending later independent review"
+  novelty_priority: UNVERIFIED
+  unchanged_substantive_runs: 0
+  failed_recovery_routes: 0
+  residual_obstruction: "arbitrary 3-connected graphs need not admit the two-terminal macro-decomposition; the method controls one distinguished port field, not arbitrary simultaneous edge weights"
+  next_attack: "seek a three-terminal analogue of port-field closure, or prove a second independent port field for split atoms to allow tree-of-2-sums without a fixed terminal decomposition"

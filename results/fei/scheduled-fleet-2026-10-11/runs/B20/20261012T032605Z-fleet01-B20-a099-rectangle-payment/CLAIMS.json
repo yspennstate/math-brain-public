@@ -1,0 +1,55 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B20-A099-RECTANGLE-PAYMENT",
+      "version": 1,
+      "packet_id": "A099",
+      "attempt_id": "A099-RECTANGLE-PAYMENT-1",
+      "gap_id": "G-CRITICAL-INTERFACE",
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every finite uniform Boolean cube, every genuine Boolean f(x_A,y_B), and every nontrivial physical cut A|B, the multiplicative rectangle defect rho_A(f) is at most min(I_A(f),I_B(f)).",
+      "quantifiers": "Every n>=2; every Boolean f:{-1,1}^n->{-1,1}; every nonempty proper A subset [n].",
+      "units": "probabilities and physical influences under uniform measure",
+      "hypotheses": ["Genuine Boolean signs", "Uniform product cube", "Physical disjoint cut"],
+      "proof_method": "Conditional rectangle probability equals Var(r)/2; cube Poincare; pivotality-XOR union bound",
+      "scope_exclusions": [
+        "Does not bound A054's entropy-continuity excess linearly",
+        "Does not assert overlap-product additivity",
+        "Does not prove FEI"
+      ],
+      "next_consumers": ["A054", "A087", "A090", "A092", "A094", "A096", "A099", "B20"],
+      "independent_reviewers": ["A090", "A094"]
+    },
+    {
+      "claim_id": "B20-A099-SINGLETON-TREE-BUDGET",
+      "version": 1,
+      "packet_id": "A099",
+      "attempt_id": "A099-RECTANGLE-PAYMENT-1",
+      "gap_id": "G-CRITICAL-INTERFACE",
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every Boolean f and coordinate i, rho_i(f)=I_i(f)(1-I_i(f)). For every physical restriction tree querying a coordinate at most once per path, the reach-probability weighted sum of rho_i at internal nodes is at most I(f), with exact queried-influence telescope I(f)-sum_leaf w_leaf I(f_leaf).",
+      "quantifiers": "Every finite uniform Boolean cube; every coordinate; every finite nonreusing physical restriction tree.",
+      "units": "probabilities and physical influences under uniform measure",
+      "scope_exclusions": ["No entropy-decrement bound is included", "No full FEI conclusion"],
+      "next_consumers": ["A027", "A028", "A029", "A087", "A090", "A094", "A099", "B20"],
+      "independent_reviewers": ["A090", "A094"]
+    },
+    {
+      "claim_id": "B20-A099-CRITICAL-RECTANGLE-DECREMENT",
+      "version": 1,
+      "packet_id": "A099",
+      "attempt_id": "A099-RECTANGLE-PAYMENT-1",
+      "gap_id": "G-CRITICAL-RECTANGLE-DECREMENT-v1",
+      "status": "OPEN_CANDIDATE_INEQUALITY",
+      "statement": "There exists an absolute C_rect such that every nonconstant descendant-critical tensor-prime Boolean f has an essential coordinate i with Delta_i H(f)<=C_rect I_i(f)(1-I_i(f)).",
+      "quantifiers": "Proposed for all finite dimensions and every genuine Boolean descendant-critical tensor-prime source.",
+      "units": "bits for entropy; dimensionless probabilities and ratio",
+      "conditional_consequence": "Together with A096 critical pruning and A052 tensor-prime reduction, this implies full FEI with C=C_rect.",
+      "evidence": "NUMERICAL exhaustive floating probe through n=4 gives maximum observed min_i Delta_i H/rho_i=8; not a certificate.",
+      "scope_exclusions": ["Not proved", "Constant 8 not established", "Finite evidence does not cover arbitrary n"],
+      "next_consumers": ["A085", "A087", "A090", "A092", "A094", "A099", "B20"],
+      "independent_reviewers": ["A090", "A094"]
+    }
+  ]
+}

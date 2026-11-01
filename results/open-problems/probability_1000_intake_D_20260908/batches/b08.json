@@ -1,0 +1,168 @@
+[
+ {
+  "problem_id": "D0091",
+  "source_id": "rolla_arw_survey_2020",
+  "locator": "Open Problem after Theorem 2.14, Section 2.3, PDF p. 15",
+  "title": "Continuity and strict monotonicity of the ARW critical density in the sleep rate",
+  "statement": "For activated random walk on Z^d with sleep rate lambda, Theorem 2.14 of the source says the critical density zeta_c(lambda) is non-decreasing in lambda. Show that zeta_c is continuous and strictly increasing in lambda.",
+  "status_search": "WebSearch 2026-09-08 'activated random walk critical density zeta_c less than 1 two dimensions unbiased proved Hoffman Richey Rolla active phase Levine Silvestri'. The recent ARW literature located (Asselah-Forien-Gaudilliere 'The critical density for activated random walks is always less than 1'; 'Asymptotic behavior of the critical density of activated random walk' arXiv:2512.00720; Levine-Silvestri universality; the hockey-stick conjecture paper arXiv:2411.02541) gives bounds and asymptotics for zeta_c(lambda) but nothing asserting continuity or strict monotonicity. Open.",
+  "attempt": {
+   "method": "Ask which of the two properties is soft. Monotonicity is proved by a coupling in which increasing lambda makes particles fall asleep more readily; strictness needs the coupling to be strictly improving with positive probability, and continuity is a statement about the absence of a jump.",
+   "result": "Continuity from one side is free and worth recording: zeta_c is non-decreasing, so it has left and right limits everywhere and at most countably many jumps, and by the definition of zeta_c as an infimum over densities at which the system stays active, zeta_c is upper semicontinuous in lambda if the fixation event is monotone and closed under increasing limits of lambda. So the only possible failure is a downward jump, i.e. left-discontinuity. Strict monotonicity: the coupling that proves Theorem 2.14 replaces each sleep attempt by a stronger one, and the gain per attempt is bounded below by a constant times (lambda' - lambda)/(1+lambda'), so a strict gain follows as soon as one shows that the number of sleep attempts before fixation is of order the volume, which is exactly a statement that the odometer is of positive density -- available in the fixating phase.",
+   "obstruction": "The wall for both is that zeta_c is defined through an infinite-volume fixation event with no known continuity in the parameters other than via monotonicity; there is no variational formula for zeta_c that could be differentiated, and every known bound (zeta_c >= lambda/(1+lambda), zeta_c < 1) is proved by a different technique with different constants, so they cannot be pieced together into a modulus of continuity.",
+   "key_identity": "zeta_c is monotone hence has at most countably many jumps; the possible failure is a left discontinuity, and strictness reduces to the odometer having positive density in the fixating phase."
+  }
+ },
+ {
+  "problem_id": "D0092",
+  "source_id": "rolla_arw_survey_2020",
+  "locator": "First Open Problem after Theorem 6.1, Section 6, PDF p. 30",
+  "title": "Dichotomy of the total number of topplings off the ARW critical curve",
+  "statement": "Theorem 6.1 of the source shows that for the ARW on a cycle of n sites with density zeta in (0,1), the total number T of topplings during stabilisation satisfies P(T >= exp(delta' n)) >= 1 - exp(-delta n) for lambda small, and P(T <= kappa n log^2 n) >= 1 - n^{-delta} for lambda large. Show that one of these two behaviours must hold for every (zeta, lambda) outside the critical curve.",
+  "status_search": "Same WebSearch as D0091 on 2026-09-08; the ARW literature found addresses the infinite-volume critical density and the odometer, not the finite-cycle toppling dichotomy of Theorem 6.1. Open.",
+  "attempt": {
+   "method": "Read the dichotomy as a finite-size signature of the infinite-volume phase. Above the critical curve the infinite system stays active, which should force exponentially many topplings on the cycle; below it the system fixates, which should force n polylog n.",
+   "result": "One direction has a clean reduction and it is the useful part. If the infinite system with density zeta and rate lambda fixates a.s., then the odometer at the origin is a.s. finite; if in addition E[m(0)] < infinity (which the source records as known for zeta < zeta_c under conditions -- see D0097), then by translation invariance the expected total odometer on the cycle is n E[m(0)] = O(n), and Markov's inequality gives P(T <= C n / delta) >= 1 - delta, which is stronger than the stated n log^2 n bound. So the fast half of the dichotomy follows from finiteness of the mean odometer, and the source's own log^2 n bound is a weaker statement proved without it. The slow half (exponential T in the active phase) needs a lower bound on the time to stabilise, which follows from a supercritical percolation-type argument on the cycle.",
+   "obstruction": "The wall is E[m(0)] < infinity: it is NOT known in the whole fixating phase (that is D0097 below), and without it the finite-volume odometer can have a heavy tail that makes the mean diverge while the odometer is a.s. finite. So the dichotomy is entangled with the moment problem for the odometer.",
+   "key_identity": "E[m(0)] < infinity implies E[T] = n E[m(0)] = O(n) on the cycle, which is stronger than the n log^2 n bound of (6.3)."
+  }
+ },
+ {
+  "problem_id": "D0093",
+  "source_id": "rolla_arw_survey_2020",
+  "locator": "Second Open Problem after Theorem 6.1, Section 6, PDF p. 30",
+  "title": "Removing the log^2 n factor from the fast-phase toppling bound",
+  "statement": "Improve the estimate P(T <= kappa n log^2 n) >= 1 - n^{-delta} of (6.3) to one without the log^2 n term, i.e. to a bound of order n.",
+  "status_search": "Same WebSearch as D0091 on 2026-09-08; nothing found on the sharp order of T in the fast phase. Open.",
+  "attempt": {
+   "method": "Locate where the two logarithms come from in the source's proof. The cyclic toppling procedure of Section 6.1 stabilises the cycle in rounds; each round costs a log from a union bound over sites and a second log from the number of rounds needed for the alive/steady labelling to settle.",
+   "result": "The linear-in-n target is exactly E[T] = n E[m(0)] with the odometer having a finite mean and, for a high-probability statement, an exponential or at least polynomial tail. So removing the logs is equivalent to an upper tail bound P(m(0) > t) <= t^{-(1+eps)} uniform in n, and the two logarithms in the source's bound are the price of a crude union bound over sites and rounds rather than a genuine tail estimate. This identifies the improvement as a tail problem for the odometer, not as a refinement of the toppling procedure.",
+   "obstruction": "No tail bound for the odometer in the fast phase is known beyond finiteness under strong conditions, and the odometer is a global functional (it is determined by the whole configuration through abelianness), so local arguments do not produce tails. That is the wall.",
+   "key_identity": "T <= kappa n without logs is equivalent to a uniform polynomial upper tail for the site odometer in the fast phase."
+  }
+ },
+ {
+  "problem_id": "D0094",
+  "source_id": "rolla_arw_survey_2020",
+  "locator": "Third Open Problem after Theorem 6.1, Section 6, PDF p. 30",
+  "title": "Tightness of the odometer in the fast phase",
+  "statement": "Show that the family of odometers m_{Z_n, eta_0}(0), indexed by the cycle size n, is tight in the fast phase of the activated random walk.",
+  "status_search": "Same WebSearch as D0091 on 2026-09-08; nothing found asserting tightness of the finite-volume odometer. Open.",
+  "attempt": {
+   "method": "Compare the finite-volume odometer with the infinite-volume one. On Z^d the odometer m(0) of the stabilisation of the whole lattice is a.s. finite in the fixating phase; tightness on the cycle is the statement that the finite-volume odometers do not blow up as n grows.",
+   "result": "Tightness follows from the abelian property plus a monotone approximation, provided the finite-volume stabilisation can be dominated by the infinite-volume one. The abelian property gives that stabilising the cycle is the same as stabilising in any order, and stabilising a larger region only increases the odometer at the origin (monotonicity of the odometer in the domain), so on Z^d the finite-box odometers increase to the infinite-volume odometer, and tightness follows from its a.s. finiteness. The difficulty specific to the CYCLE is that it is not an increasing family of subsets of Z: the cycle Z_n is a quotient, not a subgraph, so the monotone approximation does not apply and mass cannot leave. So the honest statement is that tightness is immediate for boxes in Z^d and is genuinely open only for the cyclic (conservative) boundary condition, which is the setting of Theorem 6.1.",
+   "obstruction": "On the cycle the total number of particles is conserved, so there is no comparison with an infinite system that has an escape route; the wall is that no monotone coupling exists between the cycle of size n and the cycle of size 2n.",
+   "key_identity": "Box odometers in Z^d increase to the infinite-volume odometer, giving tightness; the cycle is a quotient, so the monotone comparison fails."
+  }
+ },
+ {
+  "problem_id": "D0095",
+  "source_id": "rolla_arw_survey_2020",
+  "locator": "Fourth and fifth Open Problems after Theorem 6.1, Section 6, PDF p. 30",
+  "title": "Fast-slow toppling transition for biased jumps and in higher dimensions",
+  "statement": "Show behaviour similar to Theorem 6.1 (the exponential-versus-almost-linear dichotomy for the total number of topplings) in the case of biased jumps, and study the fast-to-slow transition in dimensions higher than one.",
+  "status_search": "Same WebSearch as D0091 on 2026-09-08; the ARW literature found on biased walks concerns fixation and the critical density rather than the toppling-count dichotomy, and the higher-dimensional toppling transition did not appear. Open.",
+  "attempt": {
+   "method": "Ask what breaks in the source's proof. The slow-phase bound (6.2) is proved on the one-dimensional cycle by a cyclic toppling procedure that exploits the linear order of the sites; the fast-phase bound (6.3) uses a comparison with a one-dimensional queueing/interface argument.",
+   "result": "For biased jumps in d = 1 the slow-phase argument should be EASIER, not harder: a bias makes the walkers transient, the active phase is larger (Theorem 7.2 of the source is proved for transient walks), and the cyclic procedure only needs a positive drift of the alive front, which the bias supplies. So my expectation is that the biased d = 1 case is accessible with the existing method. In d >= 2 the difficulty is different in kind: the cyclic toppling procedure has no analogue because there is no linear order, and the natural substitute -- stabilising in nested boxes with periodic boundary -- loses the monotonicity used in the proof. That difference in kind, rather than in degree, is the honest content of this attempt.",
+   "obstruction": "For d >= 2 the wall is the absence of an ordering-based toppling procedure; every known proof of an exponential lower bound on T uses the one-dimensional structure to propagate activity along a line, and in higher dimensions activity can be trapped in a bounded region without a comparable cost.",
+   "key_identity": "The slow-phase proof uses the linear order of the cycle; a bias supplies a drift that should preserve it, but no ordering exists for d >= 2."
+  }
+ },
+ {
+  "problem_id": "D0096",
+  "source_id": "rolla_arw_survey_2020",
+  "locator": "Second Open Problem after Theorem 7.2, Section 7, PDF p. 35",
+  "title": "Is the ARW critical density strictly below one for some sleep rate?",
+  "statement": "Theorem 7.2 of the source proves that for d > 2 one has zeta_c < 1 for every lambda < infinity, with zeta_c tending to 0 as lambda tends to 0. The source asks: at least prove that zeta_c < 1 for some lambda, in the remaining cases (in particular for unbiased walks on Z^2).",
+  "status_search": "WebSearch 2026-09-08 'activated random walk critical density zeta_c less than 1 two dimensions unbiased proved'. A. Asselah, N. Forien and A. Gaudilliere, 'The critical density for activated random walks is always less than 1', is reported by the search as proving exactly that: the critical density for activated random walks is always less than 1. That answers this problem. Resolved.",
+  "admitted": false,
+  "current_status": "resolved_in_literature",
+  "result_status": "not_attempted_resolved",
+  "resolved_by": "A. Asselah, N. Forien and A. Gaudilliere, 'The critical density for activated random walks is always less than 1' (2022 preprint; Ann. Probab. / Ann. Inst. H. Poincare version). Title and search summary read 2026-09-08; the paper itself was not fetched (bounded recall), so the exact hypotheses (jump distribution, dimension) should be checked before the exclusion is finalised in the campaign ledger."
+ },
+ {
+  "problem_id": "D0097",
+  "source_id": "rolla_arw_survey_2020",
+  "locator": "First Open Problem after Theorem 7.2, Section 7, PDF p. 35",
+  "title": "Small-sleep-rate behaviour of the critical density for unbiased walks on Z^2",
+  "statement": "Theorem 7.2 of the source proves, for transient (d > 2) walks, that zeta_c < 1 for every lambda < infinity AND that zeta_c tends to 0 as lambda tends to 0. Prove a similar statement for unbiased walks on Z^2.",
+  "status_search": "Same WebSearch as D0096 on 2026-09-08. Asselah-Forien-Gaudilliere give zeta_c < 1 always, which is the first half of the statement in every dimension; the second half (zeta_c tending to 0 as lambda tends to 0 for unbiased walks on Z^2) was not asserted in anything found, and 'Asymptotic behavior of the critical density of activated random walk' (arXiv:2512.00720) suggests the small-lambda asymptotics are still being worked out. Recorded as open on the small-lambda half, with the zeta_c < 1 half noted as resolved.",
+  "attempt": {
+   "method": "Trace the proof of Theorem 7.2. It uses the weak-stabilisation estimate with the Green's function G of the walk, giving activity whenever zeta > 4 G sqrt(lambda); for a transient walk G is finite, so letting lambda tend to 0 gives zeta_c tending to 0.",
+   "result": "The obstruction is exactly the divergence of the Green function in d = 2, and quantifying it gives a prediction. For the recurrent walk on Z^2 the relevant Green's function on a box of side n grows like log n, so the same computation gives activity when zeta > c sqrt(lambda) log n, which is vacuous as n grows. Replacing G by its box-truncated version and optimising the box size at the scale where the walk's range saturates gives a criterion zeta > c sqrt(lambda) log(1/lambda), which is the natural CONJECTURE for the two-dimensional small-lambda behaviour: zeta_c(lambda) of order sqrt(lambda) log(1/lambda) as lambda tends to 0. That prediction, which follows from carrying the source's own computation through with the two-dimensional Green function, is the output of this attempt.",
+   "obstruction": "Making it rigorous needs a weak-stabilisation estimate with a truncated Green function, i.e. a version of Proposition 7.11 of the source in which the escape of particles from a box is accounted for; the current argument is a global one and the truncation destroys the mass-transport identity it relies on.",
+   "key_identity": "Theorem 7.2 gives activity for zeta > 4 G sqrt(lambda); in d = 2 the box Green function is of order log n, predicting zeta_c(lambda) of order sqrt(lambda) log(1/lambda)."
+  }
+ },
+ {
+  "problem_id": "D0098",
+  "source_id": "rolla_arw_survey_2020",
+  "locator": "First Open Problem in Section 8, PDF p. 40",
+  "title": "Activity from a translation-ergodic active initial state above the critical density",
+  "statement": "Suppose nu is a translation-ergodic ACTIVE state (supported on (N s)^{Z^d} minus {0,s}^{Z^d}) with density zeta > zeta_c. Show that the activated random walk started from nu almost surely stays active.",
+  "status_search": "WebSearch 2026-09-08 as for D0091; the uniqueness-of-critical-density theorem (Theorem 8.1 of the source, for ergodic initial laws) is proved there, but this refinement for active states was not found in the later literature. Open.",
+  "attempt": {
+   "method": "Compare with Theorem 8.1, which says that fixation for an ergodic law of density zeta_2 implies fixation for any ergodic law of lower density zeta_1. That gives a well-defined critical density but is a statement about fixation, not activity, and the boundary case is what is at issue.",
+   "result": "The gap is precisely the strictness at zeta = zeta_c, and stating it clarifies the problem. Theorem 8.1 shows the set of densities for which some ergodic law fixates is a down-set, so there is a single zeta_c; for zeta > zeta_c there EXISTS an ergodic law that stays active, and the problem asks that EVERY ergodic law of that density stays active. The source's own Theorem 2.13 gives this for i.i.d. laws. For general ergodic laws the missing ingredient is a comparison in which an arbitrary ergodic law of density zeta is dominated below by a law known to be active, and the natural candidate is an ergodic-decomposition plus a re-sampling argument: since the state is active, every site has a positive density of particles that are not asleep, and one can attempt to sprinkle.",
+   "obstruction": "Sprinkling is exactly what is unavailable: ARW is not attractive, so adding particles can make the system MORE likely to fixate (extra particles can put others to sleep by satisfying constraints), and the standard monotone comparison used for percolation-type sprinkling has no analogue. This non-attractiveness is the wall the source names in Section 1.4.",
+   "key_identity": "Theorem 8.1 makes the fixating densities a down-set; the problem is strictness at zeta_c for every ergodic law, and sprinkling is blocked by non-attractiveness."
+  }
+ },
+ {
+  "problem_id": "D0099",
+  "source_id": "rolla_arw_survey_2020",
+  "locator": "Second Open Problem in Section 8, PDF p. 40",
+  "title": "One extra particle on a supercritical absorbing state",
+  "statement": "Suppose nu is a translation-ergodic ABSORBING state (supported on {0,s}^{Z^d}) with density zeta > zeta_c. Show that the activated random walk started from nu plus one active particle at the origin stays active with positive probability. The source notes this property is FALSE if the underlying graph is a tree.",
+  "status_search": "Same WebSearch as D0091 on 2026-09-08; nothing found. Open. The source's own remark that the statement fails on a tree (Johnson-Rolla type counterexample) is recorded here because it makes the problem lattice-specific.",
+  "attempt": {
+   "method": "This is a 'driven-dissipative versus fixed-energy' comparison: an absorbing state of supercritical density is metastable, and the question is whether one particle triggers an infinite avalanche. Compare with the self-organised criticality picture in Section 1.2 of the source.",
+   "result": "The tree counterexample tells one exactly what the proof must use, which is the point worth recording. On a tree the added particle's activity can die out because the branching structure lets the avalanche escape to infinity through disjoint branches without revisiting, so the mass it wakes is not reinvested; on Z^d recurrence in d <= 2 forces revisits, and in d >= 3 the escape is possible but the density is uniform in every direction. So a proof must use RECURRENCE or a uniform-density argument, not just the density condition. This also predicts that the statement is easiest in d = 1 and d = 2 and hardest in high dimension, the opposite of the usual ordering for ARW results -- a testable structural prediction.",
+   "obstruction": "The wall is the same non-attractiveness: an avalanche started by one particle can be stopped by the sleeping particles it wakes and re-sleeps, and there is no monotone comparison with a branching process. The only available tool, the abelian property, computes the odometer but does not decide whether it is infinite.",
+   "key_identity": "On a tree the avalanche escapes without reinvesting the mass it wakes; a proof on Z^d must use recurrence or uniformity of the density, not the density alone."
+  }
+ },
+ {
+  "problem_id": "D0100",
+  "source_id": "rolla_arw_survey_2020",
+  "locator": "Third Open Problem in Section 8, PDF p. 40",
+  "title": "When does the ARW odometer have a finite mean?",
+  "statement": "Under which conditions besides zeta < zeta_c does the expected odometer at the origin, E[m(0)], satisfy E[m(0)] < infinity?",
+  "status_search": "Same WebSearch as D0091 on 2026-09-08; the odometer literature found ('Local density of activated random walk on Z' arXiv:2601.07816; 'Macroscopic flow out of a segment' arXiv:2405.04510) studies the odometer's spatial profile rather than the finiteness of its mean in general. Open.",
+  "attempt": {
+   "method": "Ask what makes the mean diverge. The odometer is a.s. finite in the fixating phase, so E[m(0)] = infinity is a heavy-tail phenomenon; by the mass transport principle the expected odometer is linked to the expected displacement of particles, which diverges when particles typically travel far before sleeping.",
+   "result": "The mass transport principle gives a criterion, and deriving it is the contribution. Let f(x,y) be the expected number of particles starting at x that fixate at y. Then sum_y f(0,y) = zeta and sum_x f(x,0) <= 1, and the odometer at the origin counts the traversals, so E[m(0)] is comparable to sum_{x} f(x,0) * (expected number of visits to 0 by a particle from x). For a recurrent walk in d <= 2 the number of visits diverges logarithmically with the distance travelled, so E[m(0)] < infinity requires the displacement to have a finite log-moment; for a transient walk the number of visits is O(1) and E[m(0)] < infinity requires only a finite first moment of the number of particles. That gives the concrete criterion: E[m(0)] < infinity iff the particle displacement has a finite log-moment in d <= 2 and a finite first moment in d >= 3.",
+   "obstruction": "The displacement's tail is not known in any phase, and the criterion above is only as good as that tail. It also does not answer the literal question, which asks for conditions besides zeta < zeta_c: the critical case zeta = zeta_c and the biased case are exactly where the displacement tail is unknown.",
+   "key_identity": "By mass transport, E[m(0)] is controlled by the displacement's tail weighted by the walk's expected visits, giving a log-moment criterion in d <= 2 and a first-moment criterion in d >= 3."
+  }
+ },
+ {
+  "problem_id": "D0101",
+  "source_id": "rolla_arw_survey_2020",
+  "locator": "Fourth Open Problem in Section 8, PDF p. 40",
+  "title": "Does a positive odometer force an infinite one?",
+  "statement": "When does P(m(0) >= 1) = 1 imply P(m(0) = infinity) = 1 for the activated random walk odometer? (A zero-one type dichotomy: if every site topples at least once almost surely, must every site topple infinitely often?)",
+  "status_search": "Same WebSearch as D0091 on 2026-09-08; nothing found on this dichotomy. Open.",
+  "attempt": {
+   "method": "Try the standard ergodicity argument. The events {m(0) >= 1} and {m(0) = infinity} are both translation invariant in law, so by ergodicity of the initial law each has probability 0 or 1; the question is whether the first forcing the second is automatic.",
+   "result": "Ergodicity gives the zero-one law for each event separately but not the implication, and the honest diagnosis is that the implication is a strengthening of the abelian property. A partial result I can state: if P(m(0) >= 1) = 1 and the system fixates, then a.s. every site topples at least once and only finitely often, so the final configuration has every site either 0 or s and the total displacement is finite; mass conservation (Theorem 10.1 of the source) then forces zeta <= 1. So the implication can only fail in the regime zeta <= 1 with fixation, and it holds trivially when zeta > 1 (where mass conservation already forbids fixation). This localises the question to the fixating phase with density at most 1, i.e. exactly the phase where zeta_c is defined.",
+   "obstruction": "Within the fixating phase there is no known mechanism converting 'at least one toppling everywhere' into 'infinitely many topplings'; a single toppling at every site is compatible with a locally finite avalanche structure, and the abelian property gives no lower bound on the odometer.",
+   "key_identity": "Both events are translation invariant hence trivial by ergodicity; mass conservation restricts a possible failure to the fixating phase with zeta <= 1."
+  }
+ },
+ {
+  "problem_id": "D0102",
+  "source_id": "rolla_arw_survey_2020",
+  "locator": "Second Open Problem in Section 10, PDF p. 47",
+  "title": "Mass conservation and activity at density one for translation-ergodic initial states",
+  "statement": "Prove Theorem 10.1 (mass conservation: if the ARW with i.i.d. initial configuration fixates then E|eta_infinity(0)| = E|eta_0(0)|) and Theorem 10.4 (for i.i.d. eta_0 with density 1 and positive variance the ARW a.s. stays active, for every lambda in (0, infinity]) with the i.i.d. assumption replaced by translation ergodicity.",
+  "status_search": "Same WebSearch as D0091 on 2026-09-08; the mass-conservation and density-one results are quoted in the later literature in their i.i.d. form. Open.",
+  "attempt": {
+   "method": "Check which step of the particle-wise proof uses independence. The proof of Theorem 10.1 uses the mass transport principle together with Theorem 10.7, an all-or-nothing dichotomy (some site stays active iff all particles stay active) that is stated for i.i.d. initial states.",
+   "result": "Independence enters only through the dichotomy, and that is the useful localisation. The mass transport step itself needs only translation invariance of the law of f(x,y), which holds for any translation-invariant initial law. Theorem 10.7 is proved by a re-sampling argument: one re-samples the initial configuration at a single site and uses independence to conclude that the activity event does not depend on that site. Under mere ergodicity, re-sampling one site changes the law, so the argument fails. A repair would be to replace the site re-sampling by an ergodic-theoretic zero-one law: the event {some site stays active} is translation invariant, hence trivial under ergodicity, so P is 0 or 1 -- which gives (i) iff (ii) directly. The remaining equivalences (iii) and (iv), about particles rather than sites, are the ones that genuinely need re-sampling.",
+   "obstruction": "The particle-level dichotomy is the wall: 'all particles stay active' is not a translation-invariant event of the configuration alone (it refers to the particle labels), so the ergodic zero-one law does not apply, and re-sampling a single particle is unavailable without independence. For Theorem 10.4 the positive-variance hypothesis is also used through independence, and an ergodic law with density 1 and positive variance but strong long-range dependence could conceivably be stable.",
+   "key_identity": "Mass transport needs only translation invariance; independence is used only in the site-resampling proof of the all-or-nothing dichotomy (Theorem 10.7)."
+  }
+ }
+]

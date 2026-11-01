@@ -1,0 +1,166 @@
+[
+  {
+    "claim_id": "A095-RANK-KL-EQUIVALENCE",
+    "version": 5,
+    "exact_statement": "For every Boolean f and every order sigma, normalize Q_(sigma,k)(S)=prod_{i in positions_sigma(S)}i^(-2)/Z_(n,k), set beta_(n,k)=ln(Z_(n,k)(k!)^2), D_sigma=sum_k P(|S|=k)D_nat(P(S||S|=k)||Q_(sigma,k)), and T_sigma=2R_sigma-D_sigma. Then (ln2)H(f)=H_nat(|S|)+T_sigma+E beta, with 0<=beta_(n,k)<=k ln(pi^2/4). If K_T=sup_nonconstant_f min_sigma T_sigma/I(f) and C_FEI=sup H/I, then K_T/ln2<=C_FEI<=log2(4+e)+log2(pi^2/4)+K_T/ln2 in the extended real sense. Thus K_T finite iff uniform-cube FEI holds. Concrete paid application: for any Boolean g with known bias mu and supplied normalized core reference R positive on its spectrum, empty calibration to R0(empty)=mu^2 is CE-nonincreasing. For r>=1,p=2^-r,F=1+A_r(g-1), the full reference Q(vac)=[1-p(1-mu)]^2, Q(U!=empty,T=empty)=p^2(1-mu)^2, Q(U,T!=empty)=p^2 R0(T) is normalized and has CE_F-H(F)=p D(P_g||R0) and CE_F<=p CE_g_cal+6rp(1-mu). For g=q product_j(1-2 A_(L_j)) on disjoint private blocks and a supplied terminal reference, its fixed occupied-block/uniform-nonempty-subset reference gives CE_F<=p CE_q_cal+4p sum_j I(h_j)+6rp(1-mu_g), with I(F)=p[I(q)+sum_j I(h_j)+r(1-mu_g)]. Thus a terminal cost <=C I(q) yields full cost <=max(C,6)I(F); q=1 yields CE<=6I uniformly in r, widths and number of blocks. For r=0,q=1 the same block reference has CE=H<4I. No universal terminal reference bound or incompatible shared-control extension is claimed. Further complete-reference application: for every integer t>=2, Boolean children G(s,X), H(s,Y) sharing a uniform t-bit block s with disjoint arbitrary private cubes, fresh selector z and F=(G+H)/2+z(G-H)/2, put d=Inf_z(F), d*=min(d,1-d). Shared-collision minority mass delta obeys delta<=min(d*,2^t d*^2) and B_C<=h2(delta). Consequently Delta=H(F)-(H(G)+H(H))/2 <= (t+2+3/ln2)d*. Every supplied normalized finite-cost positive-support child reference can be calibrated at all shared-only atoms, decreasing CE by exact categorical KL; their lifted single normalized full-output reference Q retains exact debt D(P_F||Q)=(D(P_G||R_Gc)+D(P_H||R_Hc))/2 and CE_F<=(c_Gc+c_Hc)/2+(t+2+3/ln2)d*. I(F)=(I(G)+I(H))/2+d, counting shared physical bits once. Given supplied child CE bounds K_G I(G), K_H I(H), this closes CE_F<=max(K_G,K_H,t+2+3/ln2)I(F). If kappa_t=sup Delta/d* over all such children and private dimensions with 0<d*<=1/2, then t-1-log2(16/9)<=kappa_t<=t+2+3/ln2 for t>=4, and kappa_t/t tends to 1. These dimension-dependent transfers do not give an absolute selector-only coefficient, a universal arbitrary-terminal reference, or a full FEI bound. Further support-completion application: let any Boolean core g on k>=1 bits have true Fourier support S and supplied normalized positive-support finite-cost reference R, CE c; pad by m>=0 dummy bits, n=k+m, delta=2^-n, flip any full vertex a to h_a=g-2g(a_x)1_a and select g,h_a by one fresh fair bit. M_a has full Fourier support; if j is the original incident pivotal degree then I(M_a)=I(g)+delta(n+1-2j). Calibrate R to S with cost c_S=c+log2 R(S)<=c. Set w=2delta-|S|delta^2 and use Q_M=(1-w)R_S on selector/padding-absent old-support atoms, delta^2 on every complementary atom. This is a normalized complete reference with D_M=(1-w)D(P_M(.|old)||R_S) and CE_M<=c_S+delta[(5/4)2^k c_S+4n+3]. For K>=4 the single source bank KI(g)-c sufficient payment is at least delta[(5/4)2^k c+(4-K)n+K(2j-1)+3]. If c<=K0 I(g), K0>=0, K>=4 and K>K0, then every edit vertex is paid at CE_M<=K I(M_a) whenever 2^-m[(5/4)K0+kK+(3-K)/2]<=K-K0; constant cores are paid at4 for every m. In particular a supplied4I core admits6I output for 2^m>=3k+7/4, uniformly in growing core dimensions and all vertices. This applies to the explicit occupied-block references of products of disjoint point-defect signs. Any independent prescribed terminal q retains c_q+D_q through a product reference; one fresh point activation retains p times total debt minus its exact empty-sector KL saving, and costs at most p c_q+p K I(M_a)+6rp(1-mu). The padding/slack and supplied-core hypotheses remain explicit. A fixed one-bit dictator/constant edit with R(empty)=2^-b and R(character)=1-2^-b has unchanged-source cost<=1 but same-R lifted cost 1+[b-log2(1-2^-b)]/2 unbounded; the support-completed reference costs2. This is a reference-shock obstruction, not an FEI counterexample. Further SAME-reference finite-history application: retain the support-completed Q_M of version4 and let any finite deterministic adaptive tree query only unrevealed original core coordinates, leaving selector,padding and an independent prescribed terminal untouched. At each node inherit actual posterior-weighted child references from marginal r(T)=Q(T)+Q(T+i): raw Q_b=2r P_b/(P_0+P_1), explicit normalized zero-true-row posteriors, actual Z_b normalizers, and Q_b/Z_b. The exact nonnegative release is Gamma_T=sum reach[Delta+L-avg log2 Z], with E CE_leaf=CE_M-Gamma_T and D_M-E D_leaf=sum reach[L-avg log2 Z]. If Pi_g is the actual original-core queried influence, t_a the queried count on the edited-vertex path, j_a its originally pivotal queried edges and j_rem=j-j_a, then Pi_M=Pi_g+delta(t_a-2j_a) and E I_Mleaf=I(g)-Pi_g+delta[n+1-t_a-2j_rem]. One source bank S_K=KI(g)-c therefore suffices for terminal-average payment under S_K-KPi_g+Gamma_T >=delta[(5/4)2^k c+(4-K)n+K(t_a+2j_rem-1)+3], with no child-bank renewal. For supplied c<=K0 I(g),K0>=0,K>=4,K>K0,nonconstant g,beta=Pi_g/I(g), the sufficient condition2^-m[(5/4)K0+kK+(3-K)/2]<=K-K0-Kbeta proves E CE(inherited leaf)<=K E I(actual leaf). Thus supplied4I cores with beta<=1/6 and2^m>=6k+7/2 have complete inherited terminal average paid at6 for every such adaptive tree; individual child ratios need not be bounded. An arbitrary independent terminal reference retains c_q and D_q unchanged throughout product-compatible transport. The actual unequal-spectrum h3*h2 core has I=7/4 and a weak edge-destroying first query Pi_g=1/4 with two nonconstant children, paid at m6; a second query on its zero branch gives Pi_g=1/2 and is paid at m7 by the SAME source bank. Histories beyond the explicit cumulative-spend/padding condition and universal original-core admission remain unpaid.",
+    "hypotheses": [
+      "Boolean sign function",
+      "uniform measure",
+      "H in bits, D and beta in nats",
+      "zero-mass levels omitted",
+      "k=0 reference assigns mass one to empty set",
+      "References normalized and positive on actual support",
+      "Earlier activation application only: Shared controls form one common signed conjunction; all remaining private blocks and terminal cube are disjoint",
+      "Bias is fixed known instance data; references chosen before spectral sampling",
+      "Ideal negative-log probability costs; no optional binary prefix-rounding bit included",
+      "The new selector application uses t>=2 arbitrary shared uniform bits and disjoint private cubes; it does not use the common-spine hypothesis of the earlier activation application",
+      "d*=min(d,1-d) is justified by sign folding; child spectra and all entropy costs are preserved",
+      "All references are calibrated and fixed before spectral sampling; complete off-target reference mass retained",
+      "New support-completion application: arbitrary Boolean core with supplied normalized R and known original support; no universal core admission",
+      "Padding condition or signed source-bank certificate is required for new K-output bound; all edit vertices and lost original edges retained",
+      "K0>=0,K>=4,K>K0 for explicit padding consequence; exact debt remains conditional old-sector KL",
+      "New history theorem: finite deterministic queries of original core coordinates only, no selector/padding/terminal queries, and no repeated physical coordinate along a path",
+      "One fixed incoming reference; each descendant uses actual normalized posterior transport with every zero-row reference mass retained",
+      "Terminal-average payment requires stated cumulative original-core influence-spend/padding condition; no individual child FEI-reference admission is assumed"
+    ],
+    "statement_sha256": "d439846b335640f45f7c6f0aad837f2152c5b655bd44eee09f5a178b184d69de",
+    "contributors": [
+      "A095; A097/A086 collision-calibration transfer and bent-flip lower witness credited as prior inputs",
+      "A095 support-completed arbitrary nonuniform core-reference continuation; earlier arbitrary leaf shock/created-erased-edge guard credited to A011 and all-vertex sharp stress to A094",
+      "A095 finite adaptive point-path/source-bank theorem; generic one-query normalized reference transport credited to A094 stage5"
+    ],
+    "proof_source": {
+      "retained_v4": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T034647Z-fleet05-A095-restricted-result-extraction\\DERIVATION.md",
+      "earlier_sources": {
+        "retained_v3": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T010024Z-fleet05-A095-restricted-result-extraction\\DERIVATION.md",
+        "older_v2_and_equivalence": {
+          "original_equivalence": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261011T231526Z-fleet05-A095-restricted-result-extraction\\REPORT.md",
+          "retained_v2": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261013T213857Z-fleet05-A095-restricted-result-extraction\\DERIVATION.md",
+          "new_linear_tax_and_sharpness": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T010024Z-fleet05-A095-restricted-result-extraction\\DERIVATION.md",
+          "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T010024Z-fleet05-A095-restricted-result-extraction\\out\\EXACT_RESULTS.json"
+        },
+        "new_support_completion": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T034647Z-fleet05-A095-restricted-result-extraction\\DERIVATION.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T034647Z-fleet05-A095-restricted-result-extraction\\out\\EXACT_RESULTS.json"
+      },
+      "new_history_theorem": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T074829Z-fleet05-A095-restricted-result-extraction\\DERIVATION.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T074829Z-fleet05-A095-restricted-result-extraction\\out\\EXACT_RESULTS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 4,
+        "scope": "Support-completed point-selector root reference, exact physical edit budget and arbitrary terminal product; older statements retained",
+        "status": "Author-proved with review pending; this stage further directly validates its root reference in every history case"
+      },
+      {
+        "claim_id": "A094-INCOMING-PAID-FLOOR-DESCENDANT-SHOCK-AND-OWNER",
+        "version": 1,
+        "scope": "Only generic one-query posterior/normalizer CE-KL identity and independent-terminal product transport",
+        "status": "Independently reconstructed at stated clauses here; no blanket new audit of its shock family or34/3 owner"
+      },
+      "Finite reference-cost and influence telescoping; exact edited-point path enumeration; Boolean Fourier/influence granularity"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A094/fleet05/B19",
+        "at": "2026-10-14T03:31:29.050055+00:00",
+        "verdict": "HOLDS_AT_EXPLICIT_DEPENDENCY_CLAUSES_ONLY",
+        "scope": "Only new shared-t linear-tax/collision-cap/complete-reference/sharp-leading-coefficient clauses and retained biased-activation normalization/calibration/debt/six-influence clauses. Older rank/KL equivalence and common-spine/block applications are not blanket reviewed.",
+        "method": "Independent complete signed Fourier/physical edge/entropy-sector/KL reconstruction; own exact checker and outward rational certificates, no author checker imported",
+        "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T031253Z-fleet05-A094-proof-chain-challenger\\AUDIT.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T031253Z-fleet05-A094-proof-chain-challenger\\out\\EXACT_RESULTS.json",
+        "source_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T010024Z-fleet05-A095-restricted-result-extraction\\CLAIMS.json",
+        "source_claims_sha256": "435124421626f94b5c73f3f062324a804f3a411f0ac5735f3c39413187e0caa8",
+        "substantive_repair_supplied": false,
+        "contributor_conflict": false,
+        "declared_statement_sha256": "0e0f8156b244b72893f9cdd56d20be4257ff2cceb04252dc0805766411a2c4cb",
+        "plain_statement_sha256": "0e0f8156b244b72893f9cdd56d20be4257ff2cceb04252dc0805766411a2c4cb",
+        "canonical_statement_hypotheses_sha256": "5e7ad9716415733e1d7a2fd91a0bca81afd813503049cacc5cc0e796874d5dcf",
+        "known_hash_form_match": true,
+        "reviewed_version": 3
+      }
+    ],
+    "status": "AUTHOR_PROVED_NEW_HISTORY_PENDING_INDEPENDENT_REVIEW; LEGACY_SCOPED_REVIEWS_PRESERVED",
+    "supersedes": [
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 4,
+        "scope": "Existing C020 candidate retained; quantitatively paid adaptive SAME-reference C024 continuation added"
+      }
+    ],
+    "refutes": [
+      "Prospective bounded unchanged-reference point-edit terminal shock inferred solely from an influence-paid original core reference"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A094",
+      "A097",
+      "A011",
+      "A039",
+      "A086",
+      "A099",
+      "B19",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A094-INCOMING-PAID-FLOOR-DESCENDANT-SHOCK-AND-OWNER",
+    "version": 1,
+    "exact_statement": "For every integer n>=2 take the source g=1-2AND_1 on n data bits with n-1 dummies, one fresh fair point-control bit and an actual negative-data/zero-control point flip. Its source spectral law is delta_A on the active singleton. Prescribe the normalized source reference R(A)=1/2,R(empty)=0,R(T)=1/[2(2^n-2)] otherwise, with source CE exactly1, and carry the A097 negative-cell reference floor and actual control kernel. Put t=2^-n. The root I=1+(n-1)t and its complete reference CE is at most12I. Exposing the active physical bit, whose influence is1-t, gives a constant positive child and a negative actual child h=-1+2*1_zero on n bits, with I_h=2nt and H_h<4I_h. Inherit references using marginal r_T of the same parent Q, actual physical-child posterior pi_b=P_b/(2m), an explicitly normalized posterior on zero true fibers, raw reference2r*pi_b and Z_b normalizers. Then q_A=1-2t+2t^2,Rprime_A=(1-2t)/2+2t^2,rv=t^2+Rprime_A(1-t)^2/q_A,Z_positive=rv/q_A,Z_negative=2-Z_positive, and R_negative(empty)=(1-2t)^2*rv/(2q_A-rv)<1/3 for all n>=2. For n>=3 CE_negative/I_h>9*2^n/(32n), diverging, so a uniformly influence-priced normalized inherited descendant reference is impossible even from these paid roots. This does not refute FEI or the A097 source-floor statement. For any normalized positive-support complete parent reference, the same transport obeys CE_parent=avg CE_child+Delta_j+L_j-avg log2 Z_b and D_parent-avg D_child=L_j-avg log2 Z_b>=0, where L_j is the actual conditional queried spectral-bit divergence and Delta_j=H_parent-avg H_child. For the declared Boolean family the ENTIRE retained-core ledger is paid once: CE_root<=1+10(n+1)t<=(34/3)(1-t). For an independent arbitrary Boolean terminal and normalized positive-support finite-cost reference, product-compatible zero-fiber posteriors give exact product inherited child references and preserve whole terminal CE and KL additively outside this one-use core account. No fresh descendant bank or weak-query universal payment is asserted.",
+    "hypotheses": [
+      "finite uniform physical Boolean cubes; n>=2 and exactly the declared actual source, control and negative-cell edit",
+      "fixed normalized source reference declared before spectral sampling; same incoming complete parent model carried through the active data restriction",
+      "actual child posterior on true fibers and normalized choices preserving all reference mass on zero true fibers; product-compatible choice for independent terminal tensors",
+      "arbitrary independent terminal reference normalized, positive on true support and finite CE; whole terminal cost remains separately owned",
+      "all entropy/CE/KL in bits; ideal complete reference cost and separate word rounding; charge the entire root ledger at most once"
+    ],
+    "statement_sha256": "dc3141c6a3d6c0fef6a81a2411ca1ec0d7208f4288d1ae8cf767857642e598ff",
+    "contributors": [
+      "A094/fleet05; root floor dependence credited to A097 and signed physical-mixture machinery to A086"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T061347Z-fleet05-A094-proof-chain-challenger\\AUDIT.md",
+      "locators": "Sections 4–6; all-n exact out/INCOMING_SHOCK_CERTIFICATE.json, full terminal out/TENSOR_RESULTS.json and out/OWNER_RESULTS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK",
+        "version": 1,
+        "status": "independently fully reconstructed locally in this run; supplied cost1 root price12 and full one-use root cost bound used"
+      },
+      {
+        "statement": "one-query normalized-reference disintegration and product-compatible zero-fiber transport",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T061347Z-fleet05-A094-proof-chain-challenger\\AUDIT.md",
+        "locators": "Section4",
+        "status": "independently reconstructed identity; no novelty claim"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A095",
+        "verdict": "HOLDS_AT_GENERIC_ONE_QUERY_AND_TERMINAL_PRODUCT_CLAUSES",
+        "scope": "CE/KL posterior transport including actual child Z normalizers, nonnegative disintegration release and arbitrary terminal product; original all-n shock/owner family not newly blanket reviewed",
+        "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T074829Z-fleet05-A095-restricted-result-extraction\\DERIVATION.md",
+        "locator": "Section2",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261014T074829Z-fleet05-A095-restricted-result-extraction\\out\\EXACT_RESULTS.json",
+        "source_claims_sha256": "ae31a16d6b7f1031d98d01578cf409ed31708a3f9c9a91538f7ed1e1d0e9886f",
+        "substantive_repair_supplied": false,
+        "contributor_conflict": false
+      }
+    ],
+    "status": "PARTIALLY_INDEPENDENTLY_RECONSTRUCTED_AT_EXPLICIT_TRANSPORT_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      "Prospective dimension-independent CE_child<=K I_child for normalized same-incoming-reference descendants of paid A097 roots; not an accepted source claim or FEI"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A086",
+      "A085",
+      "A097",
+      "A039",
+      "B19",
+      "B20"
+    ]
+  }
+]

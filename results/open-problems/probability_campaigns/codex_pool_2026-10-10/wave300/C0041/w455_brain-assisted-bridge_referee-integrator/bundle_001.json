@@ -1,0 +1,38 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w455",
+  "bundle_slug": "c0041-preprint-status-20261010",
+  "entries": [
+    {
+      "key": "c0041-2026-claimed-resolution",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "c0041-2026-claimed-resolution-status",
+      "kind": "concept",
+      "title": "C0041: claimed 2026 resolution of directional transience implying ballisticity",
+      "statement": "As of 2026-10-10, a September 23, 2026 OpenAI preprint states this result: for an iid law of nearest-neighbor site transition rows on Z^d, d >= 2, with a deterministic positive lower bound on every directional transition probability, annealed almost-sure transience X_n dot l -> +infinity in a fixed unit direction l implies X_n/n -> v almost surely for a deterministic v with v dot l > 0. The paper thus claims a resolution of C0041. Its formalization manifest names OAI.DirectionalTransience.directional_transience_implies_ballisticity in OAI/Probability/Ballisticity/Main.lean, separate from a ComparatorChallenges template containing sorry. This status entry reports the preprint claim; an independent mathematical audit and reproduced Lean build with trusted-axiom inspection are pending, so the claim is not certified by this entry.",
+      "proof_text": null,
+      "assumptions": [
+        "d >= 2",
+        "nearest-neighbor random walk on Z^d in iid site transition rows",
+        "uniform ellipticity: one deterministic kappa > 0 bounds all allowed transition probabilities below almost surely",
+        "annealed P_0(X_n dot l -> +infinity) = 1 for a fixed unit vector l"
+      ],
+      "domain": "probability; random walk in random environment; literature status as of 2026-10-10",
+      "source": {
+        "source_id": "openai-math:directional-transience-implies-ballisticity:2026-09-23",
+        "url": "https://github.com/openai/math/blob/main/preprints/Directional-transience-implies-ballisticity-September-23-2026/paper.pdf",
+        "revision": "as-read-2026-10-10; local-pdf-sha256:8b305d1fbb11b2a62d76f7decbc45accf5d1c02362937d0af5c4108dd0cc1411",
+        "license": "Apache-2.0",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "c0041-2026-claimed-resolution",
+      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0041-transience-in-a-direction-implies-ballisticity-for-uniformly-elliptic",
+      "kind": "semantic_association",
+      "rationale": "The new concept quotes the 2026 paper's claim that transience in one fixed direction yields positive velocity; the existing C0041 card asks whether transience in direction l under UE and IID implies ballisticity. The relation records this exact matching target, not an audited proof."
+    }
+  ]
+}

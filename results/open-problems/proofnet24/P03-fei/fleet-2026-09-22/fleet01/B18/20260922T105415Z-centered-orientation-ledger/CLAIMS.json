@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T105415Z-centered-orientation-ledger",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "claims": [
+    {
+      "id": "CENTERED-HIDDEN-POINTWISE-NONNEG-REFUTED",
+      "status": "REFUTED",
+      "statement": "The direct tensor-centered hidden remainder omega_{i<-j}-4 q_i q_j is nonnegative for every Boolean source.",
+      "counterexample": "Any two-bit non-affine Boolean function has q_i=q_j=1/2, r_ij=1/4, c_{i<-j}=1/2 and omega_{i<-j}=0, hence omega_{i<-j}-4q_iq_j=-1.",
+      "scope": "Intermediate tensor-centering rule only; not FEI."
+    },
+    {
+      "id": "PAIR-IPROJECTION-CURRENCY",
+      "status": "PROVED_IN_THIS_RUN",
+      "statement": "With delta_ij=r_ij-q_iq_j, the exact pair mutual information I(X_i;X_j)=D_KL,2(P_ij||P_i tensor P_j)=Psi_{q_i,q_j}(delta_ij) is nonnegative and vanishes for exact cross-factor tensor pairs.",
+      "scope": "Every genuine Boolean spectral law; boundary cases by the standard KL limiting convention."
+    },
+    {
+      "id": "CRITICAL-BLOCK-TC-LEDGER",
+      "status": "PROVED_IN_THIS_RUN",
+      "statement": "For a centered minimum-dimensional F/J ratio-critical core of ratio rho and every nonempty physical block A, TC(X_A)+rho C_A+W_A <= sum_{i in A}[h2(q_i)-rho q_i].",
+      "scope": "True ratio-critical cores under the TERMINAL_CORE restriction identities; all physical corrections retained."
+    },
+    {
+      "id": "CRITICAL-FOREST-ORIENTATION-LEDGER",
+      "status": "PROVED_IN_THIS_RUN",
+      "statement": "For every forest T on a physical block A of a true ratio-critical core, sum_{ij in E(T)} I(X_i;X_j)+rho C_A+W_A <= sum_{i in A}[h2(q_i)-rho q_i]. Consequently (8/ln2) sum_{ij in E(T)}(r_ij-q_iq_j)^2 plus the same corrections is bounded by that surplus.",
+      "scope": "Every finite Boolean ratio-critical core and every forest on original coordinates. Exact mutual information is primary; the Pinsker square is only a corollary.",
+      "dependencies": [
+        "TERMINAL_CORE",
+        "COPAIR_BARRIER"
+      ]
+    }
+  ],
+  "consumed_partner": {
+    "account": "fleet02",
+    "slot": "B18",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1d39bc35fbb7ce60be36242c3bee6ea6bec55445",
+    "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B18/20260922T101659Z-c-admission-failure-logweight-redirect/REPORT.md",
+    "applied_result": "LOG-WEIGHT-NECESSITY-v1; it prevents promotion of the bounded quadratic Pinsker corollary into the universal logarithmic entropy payment, so the exact mutual-information/KL currency is retained."
+  },
+  "next_unpaid_implication": "Convert a genuinely obstructive signed complete-graph centered orientation contribution into a dimension-independent physical block/forest selection paid by the exact mutual-information ledger, or book the remaining cyclic dependence into another unspent block-information term, without free absolute values/positive parts or dimension loss."
+}

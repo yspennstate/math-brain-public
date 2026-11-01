@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-23T04:09:38.467081+00:00",
+  "helper_version": "A099-v8 independent checker, d92fecb51d7f34bf00e2b05d4bafb7c390cfa43e2b9fc130f946b34e7d3411c1",
+  "actual_Boolean_family": "ALL labelled n=2 pilot; ALL labelled n=3 primary; parity3 profile-change control",
+  "parameter_domain": "eta in {1/4,1/2}, gamma in {1/2,3/4}; calibrated true/uniform source; occupied-support subprobability; Q vacuum fixed and uniform residual nonempty mass",
+  "case_count": "pilot16 tables*4 source/floor pairs*3 policies=192; main256*4*3=3072 full adaptive ledgers; no count combines pilot/main",
+  "symmetry": "NONE; every labelled table",
+  "arithmetic": "Fraction, exact prime-log expressions;18-term atanh rational intervals with proved remainder",
+  "memory_estimate_MB": 120,
+  "max_runtime_seconds_per_command": 55,
+  "automatic_dimension_increase": false,
+  "policies": "0 no reset;1 first reset when first outcome0, repeat on descendants and stop old outcome1 at depth2;2 first eligible reset at depth>=2 when last outcome1; every branch retained",
+  "max_physical_dimension": 3,
+  "source_checker_imported": false
+}

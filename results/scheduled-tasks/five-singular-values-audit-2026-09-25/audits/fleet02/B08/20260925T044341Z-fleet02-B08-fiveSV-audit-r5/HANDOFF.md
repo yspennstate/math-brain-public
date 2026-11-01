@@ -1,0 +1,3 @@
+fleet02/B08 pass 5. Exact source ec211ba2d77a4a9850168c6af1574ea651feaa7c.
+New C10: lines 505/507/509, PDF p11, local GAP. The source defines log_+ only for positive real arguments, but h(y)=6+log_+(16/|y|) is then used as a function on R and called even/nonincreasing on [0,infinity). Set h(0)=+infinity. Lemma 5.5 explicitly permits [0,infinity]-valued functions; no integral or theorem constant changes.
+C01/C02/C03/C08/C09 remain zero-loss local repairs. Repaired chain again closes at 270 K^2/s and 77 K/sqrt(s). Direct private-PDF raster comparison remains unavailable; binary identity and 14-page structure were checked. Audit continues.

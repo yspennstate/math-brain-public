@@ -1,0 +1,115 @@
+{
+  "target_id": "P0104",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "historical_status": "attempted_unsolved in the September 2026 campaign; primary source says open",
+  "historical_ranking": {
+    "tier": 5,
+    "date": "2026-09-07",
+    "reason": "FPP fluctuation exponents (chi=1/3)"
+  },
+  "exact_ledger_record": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json",
+    "entry_key": "op-p0104",
+    "statement": "Under suitable nondegenerate iid passage-time assumptions, prove a fluctuation exponent strictly below 1/2, identify the planar exponent as 1/3, and establish a positive exponent in a suitable dimension.",
+    "status_in_record": "source_says_open; current status unverified; attempted_unsolved"
+  },
+  "primary_source": {
+    "title": "50 years of first passage percolation",
+    "authors": [
+      "Antonio Auffinger",
+      "Michael Damron",
+      "Jack Hanson"
+    ],
+    "url": "https://arxiv.org/pdf/1511.03262v2",
+    "revision": "1511.03262v2 (2016-09-23)",
+    "locations": [
+      "Section 3.1, equation (3.1), printed pages 34-35",
+      "Questions 13 and 15, printed page 37, PDF page index 36"
+    ],
+    "exact_condition_excerpt": "under suitable conditions on F",
+    "question_13_paraphrase": "For d>=2 obtain chi<1/2 under suitable passage-time laws; for d=2 obtain chi=1/3.",
+    "question_15_paraphrase": "Obtain chi>0 in an appropriate dimension.",
+    "hypothesis_warning": "The question does not enumerate all suitable-law conditions. The preceding discussion anticipates moment conditions and no flat edges, and leaves the meaning of asymptotic equivalence open. Do not replace it with a universal assertion for all nondegenerate laws.",
+    "working_exponent_definition": "For a fixed nonzero lattice direction v, when it exists and the variance is positive eventually, chi_var(v)=lim[n->infinity] log Var(T(0,nv))/(2 log n). This is the logarithmic variance convention, not a claim of strong asymptotic equivalence."
+  },
+  "prior_work": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006a04.json",
+      "entry_key": "at-p0104",
+      "result": "n/log n does not force chi<1/2; the attempted route needs a polynomial saving and matching lower bound.",
+      "independent_review": false
+    },
+    {
+      "paths_searched": [
+        "probability_1000_attempts_H_20260912",
+        "probability_1000_attempts_I_20260914",
+        "prob1000_lean_20260908"
+      ],
+      "query": "P0104 / Subdiffusive and KPZ / fluctuation exponents",
+      "result": "No additional exact P0104 proof found in the targeted matches; absence of a match is not a retired-work clearance."
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "result": "P0104 is listed unchecked at line 555; no target-specific completion was recovered from that board."
+    }
+  ],
+  "recent_primary_checks": [
+    {
+      "url": "https://arxiv.org/pdf/2302.11367",
+      "title": "Chaos, concentration and multiple valleys in first-passage percolation",
+      "authors": [
+        "Daniel Ahlberg",
+        "Maria Deijfen",
+        "Matteo Sfragara"
+      ],
+      "locations": [
+        "Introduction, equations (2)-(8)",
+        "Covariance formula (13)"
+      ],
+      "scope": "Dynamical resampling and variance/chaos relations. Conditions and geodesic conventions must be kept exact. This does not certify the numeric KPZ exponent."
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.03211",
+      "title": "Noise sensitivity and variance lower bound for minimal left-right crossing of a square in first-passage percolation",
+      "revision": "2505.03211v1 (2025-05-06)",
+      "scope": "Constrained square-crossing observable, including conditional curvature results. It is not the point-to-point exponent statement."
+    },
+    {
+      "url": "https://arxiv.org/abs/2601.05361",
+      "title": "Noise sensitivity in last-passage percolation",
+      "scope": "Geometric last-passage model; no transfer to general undirected FPP is established here."
+    }
+  ],
+  "working_precise_statement": "Audit exact boundary-profile composition in unrestricted planar iid FPP with edge weights uniform on {1,2} and endpoints (0,0),(1,1). The asymptotic chi=1/3 question remains unresolved.",
+  "hardest_open_piece": "A quantitative, noncircular power-scale estimate for the actual point-to-point fluctuations, with a matching lower bound; for the independent block route, endpoint-matching penalties, covariance and interface recrossing errors require control.",
+  "brain_scars_read": [
+    "proof_steps_need_derived_joint_structure_2026_09_09",
+    "perceptron_proof_open_gaps_fleet_2026_07_12"
+  ],
+  "source_hash_check_is_proof": false,
+  "independent_reviewer": "w365",
+  "verification_limit": "A finite targeted primary-source search cannot certify absence of a recent or owner-retired proof. Current openness stays UNKNOWN.",
+  "brain_recall": {
+    "command": "python -B -X utf8 readonly_call.py brain",
+    "top_n": 3,
+    "elapsed_seconds": 37.61235010006931,
+    "guard": "External writes, non-read-only SQLite, child processes and model/network loading blocked; returned results are from the guarded recall, not a full-corpus attestation.",
+    "returned_slugs": [
+      "fpp_width3_strip_time_constant_solved_2026_07_12",
+      "four_two_hour_transcripts_2026_09_16",
+      "mathbrain_dedup_blind_to_191_no_logical_id_nodes_2026_08_22"
+    ]
+  },
+  "owner_prior_work_check": {
+    "memory_slug": "fpp_width3_strip_time_constant_solved_2026_07_12",
+    "scope": "Memory reports a solved directed width-three strip time constant and a finite interface-state method. That observable and geometry do not settle unrestricted planar fluctuation exponents. The underlying old proof was not re-audited."
+  },
+  "live_target_check": {
+    "store": "~/math-brain-build/local/population/brain.sqlite3",
+    "connection": "mode=ro; PRAGMA query_only=ON",
+    "node_id": "claim_32684d2ece2943d218971312722a87f42333b030b9c7a29f034d6c11f31f8f1d",
+    "result": "Same historical target record found by exact primary-key lookup; no current solved proof certified."
+  }
+}

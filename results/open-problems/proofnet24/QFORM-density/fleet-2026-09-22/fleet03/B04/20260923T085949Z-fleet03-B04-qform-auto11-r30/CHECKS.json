@@ -1,0 +1,35 @@
+{
+  "run_id": "20260923T085949Z-fleet03-B04-qform-auto11-r30",
+  "theorem": "QFORM-OVERLAP1-PIVOT-PAIRVOLUME-v1",
+  "dependency": {
+    "name": "QFORM-PAIRVOLUME-HALF-RIESZ-UNCONDITIONAL-v1",
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1f3af9dc58afb9e902b972466d6da01cece89734",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md"
+  },
+  "constants": {
+    "C_E2_formula": "12*2^(5/6)*e^(5/24)",
+    "C_E2": 26.334046180759735,
+    "C_overlap1_formula": "sqrt(2)*C_E2 = 12*2^(4/3)*e^(5/24)",
+    "C_overlap1": 37.24196526098982
+  },
+  "random_identity_check": {
+    "seed": 23092330,
+    "trials": 20,
+    "dimension": 7,
+    "max_relative_error_Delta_equals_a2_Ddisj": 6.462424808297114e-16,
+    "max_relative_error_cut_expectation_equals_Ddisj_over_16": 4.312308485360849e-16
+  },
+  "explicit_family": {
+    "definition": "A_m=[1] direct_sum [[0,J_p/p],[J_p/p,0]], m=2p",
+    "exact_nonzero_spectrum": [-1,1,1],
+    "Delta0_formula": "(1-2/m)^2",
+    "samples": [
+      {"m":4,"Delta0":0.25,"bound":44.28841006505326},
+      {"m":6,"Delta0":0.44444444444444453,"bound":41.21500960844491},
+      {"m":10,"Delta0":0.6400000000000001,"bound":39.37858386102239}
+    ],
+    "asymptotic_bound": 37.24196526098982
+  },
+  "status": "finite checks passed; full QFORM remains open"
+}

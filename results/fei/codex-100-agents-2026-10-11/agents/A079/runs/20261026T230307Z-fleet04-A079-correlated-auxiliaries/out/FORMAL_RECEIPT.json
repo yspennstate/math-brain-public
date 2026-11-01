@@ -1,0 +1,10 @@
+{
+  "statement": "example : (8 * (10:Nat)^9 + ((10:Nat)^3 + 11^3)^3)^5 > 4 * (3 * (10:Nat)^5 + 11^5)^9 := by norm_num",
+  "memok": "OK: physical free5.5GB (need4.0), commit free19.7GB (need8.0)",
+  "wrapper_result": "RUNTIME_UNVERIFIED in15.6s; Compute admission held (hung window or under3000MB free); no new compiler process",
+  "source_sha256": "2ed4479ec6b20e13ab2d136b53a7ec262f5bafdd89aeacccf0b7f1ceac69dbe4",
+  "exit_code": 1,
+  "translation_fidelity": "UNVERIFIED",
+  "formal_theorem_claimed": false,
+  "note": "The wrapper makes a fresh admission decision after memok; the observations have different times. No compiler launched."
+}

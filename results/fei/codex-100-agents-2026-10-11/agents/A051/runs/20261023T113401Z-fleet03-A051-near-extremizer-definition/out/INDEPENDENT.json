@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "assertions": 26,
+  "fixtures": [
+    {
+      "k": 2,
+      "t": 1,
+      "n": 4,
+      "expected_depth": "2",
+      "error_probability": "1/16",
+      "error_weighted_depth": "1/4",
+      "expected_query_influence": "1/2"
+    },
+    {
+      "k": 3,
+      "t": 1,
+      "n": 5,
+      "expected_depth": "2",
+      "error_probability": "1/32",
+      "error_weighted_depth": "5/32",
+      "expected_query_influence": "5/16"
+    },
+    {
+      "k": 2,
+      "t": 2,
+      "n": 6,
+      "expected_depth": "5/2",
+      "error_probability": "3/32",
+      "error_weighted_depth": "9/16",
+      "expected_query_influence": "7/8"
+    },
+    {
+      "k": 2,
+      "t": 4,
+      "n": 10,
+      "expected_depth": "7/2",
+      "error_probability": "15/128",
+      "error_weighted_depth": "75/64",
+      "expected_query_influence": "47/32"
+    }
+  ],
+  "runtime_seconds": 0.5739568999997573,
+  "helper_sha256": "a4cfea2fd84608e3c10476de48e66f4b26b88324b1977ac91df3af09fd67087b",
+  "arithmetic": "separate direct Boolean exponents, original-input path lengths/errors, physical edge counts and exact Fraction",
+  "large_guard": {
+    "seed": "bent2",
+    "k": 10,
+    "t": 1024,
+    "dimension": 2058,
+    "expected_depth": "2047/512",
+    "actual_entropy_loss_lower": "1933/1024",
+    "false_expected_depth_budget_upper": "116/1024",
+    "actual_D1_lower": "889/1024",
+    "complete_terminal_D1": "0"
+  },
+  "scope": "independent implementation by A051, not independent-agent acceptance"
+}

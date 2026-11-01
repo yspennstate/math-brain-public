@@ -1,0 +1,665 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/solLHCawx60hYkYlkjNff9UcpIg</id>
+  <title>arXiv Query: search_query=all:"discounted" AND all:"branching"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-11T21:06:39Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22discounted%22+AND+all:%22branching%22&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>46</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.11315v1</id>
+    <title>Deflating the Hessian: Rank-4 W4A4 Quantization for Multimodal Diffusion Transformers</title>
+    <updated>2026-10-08T06:22:19Z</updated>
+    <link href="https://arxiv.org/abs/2610.11315v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.11315v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In diffusion transformers, low-rank branches can mitigate 4-bit weight--activation (W4A4) post-training quantization (PTQ) loss by decomposing each weight into a low-bit residual and a high-precision low-rank component. Existing low-rank PTQ approaches, however, either optimize low-rank compensation and residual quantization separately, often requiring higher ranks, or rely on second-order weight updates without explicitly modeling activation quantization error, which becomes particularly pronounced under 4-bit quantization. To address these limitations, we present \method{}, a unified framework modeling low-rank-assisted W4A4 PTQ as a coupled calibration problem and deriving optimization-based solvers from the joint objective. Eliminating the output-side low-rank factor yields a \emph{deflated Hessian} that discounts residual errors already captured by the low-rank component, while an activation-noise surrogate is incorporated to suppress activation quantization error. Across five diffusion backbones, rank-4 \method{} consistently outperforms rank-4 SVDQuant in PSNR and LPIPS. It further surpasses rank-32 SVDQuant on SANA-1.6B, FLUX.1-schnell, and FLUX.1-dev with an $8\times$ smaller rank and up to $6.25\times$ faster quantization. Furthermore, on the Qwen3-8B LLM, rank-4 \method{} improves MMLU accuracy from 61.50\% to 68.17\% over rank-32 SVDQuant. Overall, \method{} achieves better W4A4 performance with substantially lower rank and quantization cost.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-08T06:22:19Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Shiwen Wang</name>
+    </author>
+    <author>
+      <name>Pengxiang Zhao</name>
+    </author>
+    <author>
+      <name>Xiaoming Yuan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.06260v1</id>
+    <title>CentriQ: Calibration-Free Quantization of Diffusion Transformers via Exact Mean Centering</title>
+    <updated>2026-10-05T12:54:46Z</updated>
+    <link href="https://arxiv.org/abs/2610.06260v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.06260v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion transformers (DiTs) achieve state-of-the-art image generation, but their sampling cost limits deployment. Quantizing both weights and activations to 4 bits reduces this cost, yet existing methods fall short in one of two ways. Calibration-based methods are tied to a specific checkpoint and prompt distribution, whereas data-free Hadamard rotation, effective for LLMs, loses quality on DiTs. We show that this loss has a structural cause. Adaptive layer-norm conditioning adds a per-token mean to the activations, and at the widths of the evaluated DiTs, the Hadamard rotations used by data-free methods cannot spread this mean uniformly across coordinates. A single dominant direction therefore survives the rotation and sets the quantization range. We introduce CentriQ, a calibration-free quantizer that centers each token before rotation and restores the mean exactly through a rank-1 full-precision branch, so that per-token scales follow in closed form without data. Weights are fitted under a robust $\ell_p$ objective that tracks the dense mode of each group and discounts heavy tails. Across three DiTs, CentriQ matches the quality of calibrated SVDQuant at 4 bits, whereas calibration-free weight quantizers with plain per-token activation quantization collapse or degrade substantially. CentriQ outperforms the strongest calibration-free method reported to date at 2-bit weights. It is also the first calibration-free method to retain usable image quality at 2-bit activations.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-05T12:54:46Z</published>
+    <arxiv:comment>Code and project page will be released soon</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Nataša Jovanović</name>
+    </author>
+    <author>
+      <name>Mathieu Salzmann</name>
+    </author>
+    <author>
+      <name>Saqib Javed</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.35315v1</id>
+    <title>Collaborative Principle Evolution via Evidence Transfer for Scientific Discovery</title>
+    <updated>2026-09-28T14:48:57Z</updated>
+    <link href="https://arxiv.org/abs/2609.35315v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.35315v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Model (LLM)-based agents promise to automate scientific discovery, yet exploring the vast hypothesis space remains costly. Existing principle-evolution methods accelerate this loop, but operate sequentially, which caps exploration breadth and wastes wall-clock time on challenging problems. To address this, we formulate collaborative scientific discovery as evidence transfer between parallel principle-evolution branches. We present COEVOLVE, which realizes this transfer through a coordination core over parallel branches. By integrating value-of-information-gated routing and context-discounted likelihood injection, COEVOLVE enables branches to collaborate through shared measurements while keeping their principle posteriors separate. Across six scientific-discovery tasks under a matched evaluation budget, COEVOLVE attains a mean solution quality of 66.5% versus 57.0% for single-branch principle evolution, with a 1.80x mean wall-clock speedup on the GPT-5.6-Terra backbone; on five auto-research tasks delegated to an autonomous research harness, it is the only arm whose mean stays above the published SOTA anchor on every task. These results establish when evidence sharing accelerates parallel discovery and when transfer safeguards are necessary to limit negative or inert transfers</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-28T14:48:57Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yingming Pu</name>
+    </author>
+    <author>
+      <name>Hongyu Chen</name>
+    </author>
+    <author>
+      <name>Tao Lin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.31535v1</id>
+    <title>Discounted Hitting Domination on Graphs with Submodularity, Complexity and Exact Algorithms</title>
+    <updated>2026-09-25T17:08:55Z</updated>
+    <link href="https://arxiv.org/abs/2609.31535v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.31535v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>On a network with a fixed set of verified sources, discounted averaging induces an equilibrium support $h_i^S=\mathbb{E}_i[λ^{T_S}]$, the discounted probability that a random walk reaches $S$ before attenuation. We define the \emph{discounted hitting domination number} $δ_{λ,τ}(G)$ as the minimum number of sources required to guarantee $h_i^S\geτ$ at every vertex. Although this potential is known through penalized and group hitting probabilities, the associated minimum-cardinality uniform-coverage problem appears to be new. Aggregate support is monotone submodular, while the uniform-floor problem is an exact submodular-cover problem. Moreover, if $λ^{r+1}&lt;τ\le\left(\fracλΔ\right)^r$, then $δ_{λ,τ}(G)$ equals the distance-$r$ domination number. This yields NP-completeness and APX-completeness at $(λ,τ)=(1/4,1/14)$ on graphs of maximum degree three. For spiders, we obtain an exact finite-state characterization and a polynomial-time algorithm for every fixed rational pair $(λ,τ)$, and show that the branching vertex need not belong to a minimum source set. Finally, an exact mixed-integer linear formulation certifies optimal placements on a real network and a synthetic graph and demonstrates substantial differences from degree, closeness, and classical domination.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-25T17:08:55Z</published>
+    <arxiv:comment>19 pages, 2 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Julian D. Allagan</name>
+    </author>
+    <author>
+      <name>Kevin Pereyra</name>
+    </author>
+    <author>
+      <name>William A. Massey</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.04247v1</id>
+    <title>CAD: Conflict-Aware Decoding to Mitigate Cross-Modal Hallucinations in Omnimodal Large Language Models</title>
+    <updated>2026-08-26T09:01:10Z</updated>
+    <link href="https://arxiv.org/abs/2609.04247v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.04247v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Omnimodal large language models (Omni-LLMs) integrate audio, video, and text, yet remain vulnerable to cross-modal hallucinations, where one modality improperly influences predictions about another. Existing training-free decoders modulate modality influence through perturbation or relevance weighting, but do not assess predictive compatibility within the joint audio-visual branch. Because joint-branch discrepancies may indicate either harmful interference or useful complementarity, reliable intervention requires assessing both discrepancy magnitude and actionability. To this end, we propose Conflict-Aware Decoding (CAD), a training-free framework comprising Potential Conflict Magnitude Estimation (PCME) and Conflict Actionability Assessment (CAA). PCME quantifies potential conflict using audio-video disagreement and the deviation of the joint prediction from a relevance-weighted unimodal reference. CAA then applies Dempster-Shafer reliability discounting to task-space answer relations, using query relevance and answer decisiveness to determine whether intervention is warranted. When an actionable conflict is identified, CAD selectively reallocates decoding weight from the joint branch to the unimodal branches. Experiments on CMM, AVHBench, WorldSense, and VideoMME show that CAD consistently outperforms the base decoder and competitive training-free methods across multiple audio-visual backbones. On Qwen2.5-Omni-7B, CAD improves overall accuracy by 14.1 and 8.0 percentage points on CMM and AVHBench, respectively, without model retraining.</summary>
+    <category term="eess.AS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-26T09:01:10Z</published>
+    <arxiv:primary_category term="eess.AS"/>
+    <author>
+      <name>Yuchen Deng</name>
+    </author>
+    <author>
+      <name>Chang Sun</name>
+    </author>
+    <author>
+      <name>Hai-Tao Zheng</name>
+    </author>
+    <author>
+      <name>Feidiao Yang</name>
+    </author>
+    <author>
+      <name>Yuxing Han</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.16112v1</id>
+    <title>Strategic Technical Debt: A Real Options Approach to Early-Stage Software Experimentation</title>
+    <updated>2026-08-17T05:05:28Z</updated>
+    <link href="https://arxiv.org/abs/2608.16112v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.16112v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Technical debt is treated almost universally as an engineering pathology. This paper argues that under the conditions defining early-stage software work (high hypothesis uncertainty, cheap experiments, and the freedom to abandon), deliberately incurred technical debt is a rationally priced financial instrument: a call option on the validated product, purchased at a discount that is largest exactly when uncertainty is highest. We make three contributions. First, a demarcation: debt is strategic when its expected cost loads on the success branch of the venture (repaid only if the hypothesis validates) and toxic when it imposes unconditional cost while held (security exposure, data loss, corrupted experimental signal), a boundary stated formally that renders the popular "prudent vs. reckless" intuition testable. Second, a sequential model: a finite-horizon dynamic program over belief and debt stock yielding four results: a shadow price of debt equal to the risk-discounted probability of repayment; a technical-debt overhang (the belief threshold for scaling rises with the debt stock, proved via an envelope Lipschitz bound); a refactoring-pivot theorem (optimal repayment concentrates at the commitment boundary, predicting the practitioner-reported refactoring burst at product-market fit, registered here as a falsifiable prediction); and a volatility result under risk-neutral valuation. A pivot-salvage correction shows the folk rule "maximum debt at maximum uncertainty" fails whenever failure redirects rather than terminates the venture and the salvage differential clears the discounted cost premium. Third, a two-test primary empirical program (validation-event refactoring timing; the first repository measurement of pivot salvage), pre-registered with frozen analyzers before any data contact. Calibrations are illustrative, not estimates.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-17T05:05:28Z</published>
+    <arxiv:comment>25 pages, 4 figures. Pre-registered empirical program: OSF bs3cr (EP3'), rvx5t (EP-Pi)</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Rashid Azarang</name>
+    </author>
+    <author>
+      <name>Mohammad Reza Azarang Esfandiari</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.14965v1</id>
+    <title>Social Discounting Enables Fast and Reliable Collective Escape</title>
+    <updated>2026-08-15T01:38:21Z</updated>
+    <link href="https://arxiv.org/abs/2608.14965v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.14965v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Solitary animals face a tradeoff when detecting threats: faster detection means accepting more false alarms. We show that groups can manage this tradeoff better by treating an undisturbed neighbor as evidence against a threat, becoming both faster and more accurate than lone individuals. Modeling each animal as a noisy evidence-accumulator that flees when its belief crosses a threshold, we find that a neighbor's flight signals danger while its stillness signals safety. A naive responder reacts only to flights and inflates false alarms as the group grows; a Bayesian responder weighs both, approximated by a single social discounting rate that interpolates between these limits. This yields closed-form expressions for group performance, including cascade branching ratios that stay strongly subcritical in safety and turn supercritical under threat, so the rate at which an animal discounts a threat while its neighbors stay still can be inferred from behavior alone, and it sets a ceiling on how many neighbors an animal can attend before discounting alone can no longer hold its false-alarm rate. Wild sulphur molly shoals under bird attack are best described by discounting rates well above what individually Bayesian updating supplies over any neighborhood they could plausibly attend, and the same model, at the inferred value, predicts a false-alarm rate that stays constant as shoals grow.</summary>
+    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.bio-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-15T01:38:21Z</published>
+    <arxiv:comment>34 pages; 11 figures</arxiv:comment>
+    <arxiv:primary_category term="q-bio.PE"/>
+    <author>
+      <name>Zachary P Kilpatrick</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.11549v1</id>
+    <title>Poisson Tangent Limits and Critical Policy Switching for Sampled Bellman Operators</title>
+    <updated>2026-08-12T01:34:50Z</updated>
+    <link href="https://arxiv.org/abs/2608.11549v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.11549v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Consider a discounted Markov decision process with continuous action space in which, at each state visit, the controller draws a random pool of $N$ candidate actions and selects among them. When the optimal action set has zero mass under the sampling distribution, the value of this random-candidate model converges to the optimal value as $N$ grows, but the rate of convergence and the asymptotic selection rule are governed jointly by the geometry of the optimal set and by the transition kernels of the near-optimal candidates. This paper develops an exact first-order theory of both. The rescaled near-optimal candidates converge to a marked Poisson point process, and the leading term of the value gap is the fixed point of a nonlinear tangential Bellman operator, a stochastic generalization of the classical resolvent that emerges when several optimal actions compete. The asymptotic selection at exact ties is genuinely dynamic, driven by the transition kernels through the fixed point, and admits an explicit Mecke integral formula at the limiting Poisson level; perturbing the tie at the critical rate yields a switching layer in which the value gap and the selection interpolate continuously between the branch regimes, and in the unique-optimum heterogeneous case the critical class is propagated at the slowest global scale through the discounted reachability of the limit policy. Numerical experiments confirm the predicted rates, constants, and selection probabilities.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-12T01:34:50Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Ming-Zhe Dai</name>
+    </author>
+    <author>
+      <name>Chengxi Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.03904v1</id>
+    <title>Why do we need social singularity? A mechanism-based critique of gradual scenarios in AI existential-risk discourse</title>
+    <updated>2026-08-04T16:30:12Z</updated>
+    <link href="https://arxiv.org/abs/2608.03904v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03904v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper critiques recent gradual and cumulative AI existential-risk scenarios, arguing that, despite their substantive contributions, they remain insufficiently sociologically specified. In particular, these scenarios lack a reflexive perspective, retain a largely technologically deterministic structure, and underestimate the role of collective agency and other social processes. As a result, they also discount the possibility of major social conflict accompanying AI diffusion, which limits their overall plausibility. The paper further identifies a set of social mechanisms likely to become significant before or during AI deployment, including interpretive and performative dynamics, mobilisation and countermobilisation, path dependence and lock-in, cross-regime divergence and multi-speed diffusion, and social-psychological mechanisms such as attachment and reactance. It argues that these mechanisms will interact recursively with AI diffusion and reshape future trajectories, which may subsequently branch, reverse, or undergo discontinuous shifts, thereby expanding the space of plausible AI futures. On this basis, the paper also proposes a novel analytic distinction between technological singularity and social singularity. Whereas the former refers to a putative technological threshold in AI development, the latter denotes a social discontinuity produced by the anticipated approach of that threshold. The central implication is that the most consequential disruptions may emerge not only from advanced AI itself, but also from the social dynamics provoked by the expectation of its arrival.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T16:30:12Z</published>
+    <arxiv:comment>20 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Petr O. Jedlicka</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.03108v1</id>
+    <title>Convex-Hull-Neighborhood Smooth Dual Generalization: Controlling Local Correction Propagation in Offline RL</title>
+    <updated>2026-08-04T04:30:02Z</updated>
+    <link href="https://arxiv.org/abs/2608.03108v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.03108v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Offline reinforcement learning (offline RL) can benefit from nearby out-of-distribution (OOD) actions, but estimation errors at these actions may be amplified by bootstrapping. Existing regularization and local-generalization methods control either the admissible OOD region or the influence of generalized targets, often through separate mechanisms. We propose Convex Hull Neighborhood Smooth Dual Generalization (CSDG), which expresses the Bellman backup as an in-sample value target plus a CHN-local correction. This formulation makes the generalized contribution explicit and separates it from the in-sample reference path. The correction is obtained by smoothing in-sample-oriented and OOD-oriented candidates sampled at different perturbation radii. A mixture coefficient lambda scales its contribution to each backup, while the recursive discount remains gamma. Under boundedness and fixed perturbation kernels, we derive an exact one-step correction identity, a time-varying iterate bound, and a fixed-point bound that depends only on the branch discrepancy at the fixed point. We further characterize the implicit policies induced by the idealized operators and give a conditional non-degradation criterion. The practical algorithm approximates these quantities using asymmetric bounded noise and expectile regression, without exact support classification or an additional pessimistic OOD penalty. Experiments on Gym-MuJoCo and AntMaze show strong aggregate performance and stable value estimation. Code is available at: https://github.com/YOUNG-fnxm/CSDG</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-04T04:30:02Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yi Yang</name>
+    </author>
+    <author>
+      <name>Zhennan Chen</name>
+    </author>
+    <author>
+      <name>Mingfeng Lv</name>
+    </author>
+    <author>
+      <name>Hanlei Li</name>
+    </author>
+    <author>
+      <name>Zhengsen Ruan</name>
+    </author>
+    <author>
+      <name>Lvqing Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.24056v1</id>
+    <title>Decorated stable $p$-adic self-similar processes with stationary increments</title>
+    <updated>2026-06-23T02:03:00Z</updated>
+    <link href="https://arxiv.org/abs/2606.24056v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.24056v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We construct new classes of examples of self-similar processes with stationary increments indexed by $\mathbb Q_p$ via stable integrals. Classical constructions arise from the real counterpart and from discounted branching random walks. We discuss a new decoration technique that significantly enlarges these classes. The decoration technique makes use of the special symmetry of $\mathbb{Q}_p$ to obtain self-similarity and stationarity of increments, and it does not have an analogue on the real line. We also show that these enlarged classes of decorated processes are pairwise incomparable under inclusion.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-23T02:03:00Z</published>
+    <arxiv:comment>22 pages, 1 table</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Yi Shen</name>
+    </author>
+    <author>
+      <name>Zhenyuan Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.07884v1</id>
+    <title>Value-Refined Modal Fixed-Point Semantics with Certified Choice and Public Share-Alike Certificates</title>
+    <updated>2026-06-05T22:36:09Z</updated>
+    <link href="https://arxiv.org/abs/2606.07884v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.07884v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents a finite modal semantics where truth is closed under admissible continuation, then refined by discounted value, and finally certified by residual tests. The admissibility kernel is the classical greatest fixed point of a one-step predecessor expressing that some choice cell has all compatible successors inside a set. Certified choices are exactly local witnesses; the discounted value transformer is defined only over those witnesses; value-refined modal bisimulation is the coarsest local equivalence preserving formulas, kernel, certified choices, Bellman values, greedy sets, residual certificates, and public release certificates. A canonical pseudometric refines this equivalence: it is the unique fixed point of a Hausdorff-lifted choice-matching transformer over certified choices; its zero set is the value-refined bisimulation, and the optimal discounted value is one-Lipschitz with respect to it. Any approximate quotient incurs only a distance-bounded value error. Branching choice-cell and locus presentations place choice inside the model; the transition presentation is a conservative retraction. The same engine is applied to a public share-alike release fragment: attribution as label preservation, same-license propagation as derivative closure, no downstream restriction as admissibility, and the BY-SA witness as a residual-stable certificate. Finite examples show that altering the order of truth, admissibility, value, quotienting, public derivation, and certification changes the semantics.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-05T22:36:09Z</published>
+    <arxiv:comment>73 pages, no figures</arxiv:comment>
+    <arxiv:primary_category term="cs.LO"/>
+    <author>
+      <name>Faruk Alpay</name>
+    </author>
+    <author>
+      <name>Levent Sarioglu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.00414v1</id>
+    <title>Auditing Near-Optimal Policies Can Be Exponentially Hard: Conditional Query Lower Bounds via Occupancy Rashomon Capacity</title>
+    <updated>2026-05-29T23:09:01Z</updated>
+    <link href="https://arxiv.org/abs/2606.00414v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.00414v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>When many reinforcement-learning policies achieve near-optimal return, a post-hoc auditor may have to distinguish among many behaviorally distinct but return-equivalent policies. We formalize this phenomenon through an occupancy-measure analogue of Rashomon capacity: the metric entropy of the near-optimal occupancy region, computed relative to an audited deployment class. Because occupancy measures identify behavior only up to occupancy equivalence, we formulate auditing at the occupancy-class level and distinguish exact local-query oracles from noisy sample-query oracles. Our main exact-query result is conditional: if the audited class contains a $2/H$-separated near-optimal packing whose local signatures are $b$-sparse, then exact local-query auditing requires $Ω(M/b)$ queries; when the packing realizes deployment-class capacity and $b=O(1)$, this becomes $Ω(2^{\Hopt^\cF(\eps)})$. We give a finite discounted hidden-branch MDP attaining this bound and show the exact Bayes success law. For noisy hidden-trigger testing, we prove a mixture lower bound of order $M/β$, where $β$ is the per-sample KL signal, yielding $Ω(2^{\Hopt^\cF(\eps)}/(ρ^2Δ^2))$ for capacity-order packings with $β=O(ρ^2Δ^2)$. We also provide a static target-recognition information lower bound, a transcript-compatible oracle-cover verification upper bound, and a canonical occupancy regularizer whose regularized audited capacity collapses when a trusted reference occupancy is available. Controlled benchmarks distinguish positive sparse-signature instances from high-capacity negative controls where exact auditing is easy, and map the noisy-trigger law to post-processed continuous-control and visual-RL auditing regimes.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-29T23:09:01Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ibne Farabi Shihab</name>
+    </author>
+    <author>
+      <name>Sanjeda Akter</name>
+    </author>
+    <author>
+      <name>Anuj Sharma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.00183v1</id>
+    <title>Agentic Transformers Provably Learn to Search via Reinforcement Learning</title>
+    <updated>2026-05-29T14:58:03Z</updated>
+    <link href="https://arxiv.org/abs/2606.00183v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.00183v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Tree search is a central abstraction behind many language-agent reasoning and decision-making tasks: agents must explore actions, remember failures, and backtrack toward promising alternatives. Yet, we lack a theoretical understanding of how transformer-based policies acquire such search capabilities from the training dynamics of reinforcement learning (RL). We study this question in a stochastic $k$-ary tree environment, where an agentic transformer observes only its trajectory history through interaction and receives a terminal reward for reaching a hidden leaf goal node. We first construct a two-head transformer that implements randomized depth-first search (DFS): one head tracks previous actions, while the other detects failure outcomes and triggers backtracking. We then analyze the training dynamics of policy gradient under a depth-wise curriculum, showing that this same DFS mechanism emerges in stages from sparse reinforcement feedback without expert demonstrations. The resulting policy exhibits depth generalization: after training only on depth-$1$ and depth-$2$ trees, it succeeds on deeper full trees. We further show that, under imbalanced goal distributions, discounting the return leads to a ranked DFS policy that prioritizes higher-probability branches. Overall, our results identify a mechanistic normal form for transformer-based search, in which attention heads specialize and cooperate to extract decision-relevant traces from context and convert them into agentic action selection via RL training.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-29T14:58:03Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Tong Yang</name>
+    </author>
+    <author>
+      <name>Yu Huang</name>
+    </author>
+    <author>
+      <name>Yingbin Liang</name>
+    </author>
+    <author>
+      <name>Yuejie Chi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.11264v1</id>
+    <title>Uniform sampling of multitype continuous-time Bienaymé-Galton-Watson trees</title>
+    <updated>2026-05-11T21:42:31Z</updated>
+    <link href="https://arxiv.org/abs/2605.11264v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.11264v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the genealogy of a sample of $k$ individuals taken uniformly without replacement from a continuous-time multitype Bienaymé--Galton--Watson process at fixed times. Our results are quite general, requiring only that the process be non-simple and conservative, and that every type has a positive probability to ``eventually lead to'' all other types within the population. The corresponding single-type case has recently been studied by Johnston (2019), Harris, Johnston, and Roberts (2020), and Harris, Johnston, and Pardo (2024).
+  Our approach is based on a $k$-spine decomposition and a suitable change of measure under which the distinguished spines form a uniform sample at time $T$, while the population size is subject to $k$-size biasing and exponential discounting. This construction preserves a branching Markov property and yields an explicit description of the genealogical tree at fixed times.
+  In particular, we characterise spine splitting times, offspring distributions, and type-dependent ancestral structures, revealing rich interactions between types that are absent in the single-type setting. The present results form the basis of a forthcoming series of papers in which limiting genealogical behaviour is analysed under various asymptotic regimes and more general sampling schemes by the authors, see Angtuncio et al. (2026b), (2026c) and (2026d).</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-11T21:42:31Z</published>
+    <arxiv:comment>53 pages, 7 figures. First part of the paper 'The coalescent structure of multitype continuous-time Bienaymé-Galton-Watson trees'</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Osvaldo Angtuncio Hernández</name>
+    </author>
+    <author>
+      <name>Juan Carlos Pardo</name>
+    </author>
+    <author>
+      <name>Simon C. Harris</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.18919v1</id>
+    <title>Boundedness of discounted branching random walks via generic chaining</title>
+    <updated>2026-02-21T18:06:31Z</updated>
+    <link href="https://arxiv.org/abs/2602.18919v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.18919v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Consider a discrete-time supercritical discounted branching random walk, in which increments at depth $k$ are independent and identically distributed with the same law as $m^{-kH}Y$, where $Y$ has a fixed law, $H&gt;0$, and $m&gt;1$ is the expected number of offspring at depth one. We provide a clean characterization of the boundedness of the discounted branching random walk: under mild conditions on the offspring distribution, the process is almost surely bounded if and only if $\mathbb{E}[|Y|^{1/H}]&lt;\infty$. This extends results of Athreya (1985) and Aïdékon--Hu--Shi (2024), and provides a partial answer to Open Problem 31 of Aldous--Bandyopadhyay (2005).</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-21T18:06:31Z</published>
+    <arxiv:comment>18 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Zhenyuan Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.15066v1</id>
+    <title>Social Contagion and Bank Runs: An Agent-Based Model with LLM Depositors</title>
+    <updated>2026-02-13T19:41:23Z</updated>
+    <link href="https://arxiv.org/abs/2602.15066v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.15066v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Digital banking and online communication have made modern bank runs faster and more networked than the canonical queue-at-the-branch setting. While equilibrium models explain why strategic complementarities generate run risk, they offer limited guidance on how beliefs synchronize and propagate in real time. We develop a process-based agent-based model that makes the information and coordination layer explicit. Banks follow cash-first withdrawal processing with discounted fire-sale liquidation and an endogenous stress index. Depositors are heterogeneous in risk tolerance and in the weight placed on fundamentals versus social information, communicating on a heavy-tailed network calibrated to Twitter activity during March 2023. Depositor behavior is generated by a constrained large language model that maps each agent's information set into a discrete action and an optional post; we validate this policy against laboratory coordination evidence and theoretical benchmarks. Across 4,900 configurations and full LLM simulations, three findings emerge. Within-bank connectivity raises the likelihood and speed of withdrawal cascades holding fundamentals fixed. Cross-bank contagion exhibits a sharp phase transition near spillover rates of 0.10. Depositor overlap and network amplification interact nonlinearly, so channels weak in isolation become powerful in combination. In an SVB, First Republic, and regional bank scenario disciplined by crisis-era data, the model reproduces the observed ordering of failures and predicts substantially higher withdrawal rates among uninsured depositors. The results frame social correlation as a measurable amplifier of run risk alongside balance-sheet fundamentals.</summary>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-13T19:41:23Z</published>
+    <arxiv:primary_category term="physics.soc-ph"/>
+    <author>
+      <name>Chris Ruano</name>
+    </author>
+    <author>
+      <name>Shreshth Rajan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.16233v2</id>
+    <title>Policy-Embedded Graph Expansion: Networked HIV Testing with Diffusion-Driven Network Samples</title>
+    <updated>2026-06-17T20:02:11Z</updated>
+    <link href="https://arxiv.org/abs/2601.16233v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.16233v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>HIV is a retrovirus that attacks the human immune system and can lead to death without proper treatment. In collaboration with the WHO and the University of Witwatersrand, we study how to improve the efficiency of HIV testing with the goal of eventual deployment, directly supporting progress toward UN Sustainable Development Goal 3.3. While prior work has demonstrated the promise of intelligent algorithms for sequential, network-based HIV testing, existing approaches rely on assumptions that are impractical in our real-world implementations. Here, we study sequential testing on incrementally revealed disease networks and introduce Policy-Embedded Graph Expansion (PEGE), a novel framework that directly embeds a generative distribution over graph expansions into the decision-making policy rather than attempting explicit topological reconstruction. We further propose Dynamics-Driven Branching (DDB), a diffusion-based graph expansion model that supports decision making in PEGE and is designed for data-limited settings where forest structures arise naturally, as in our real-world referral process. Experiments on real HIV transmission networks show that the combined approach (PEGE + DDB) consistently outperforms baselines (e.g., 17.3% improvement in discounted reward and 15.4% more HIV detections with 25% of the population tested) and explore key tradeoffs that drive solution quality.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-20T22:44:59Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Akseli Kangaslahti</name>
+    </author>
+    <author>
+      <name>Davin Choo</name>
+    </author>
+    <author>
+      <name>Lingkai Kong</name>
+    </author>
+    <author>
+      <name>Milind Tambe</name>
+    </author>
+    <author>
+      <name>Alastair van Heerden</name>
+    </author>
+    <author>
+      <name>Cheryl Johnson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.12952v2</id>
+    <title>Integrated demand-side management and timetabling for an urban rail transit line: A Benders decomposition approach</title>
+    <updated>2025-11-07T04:11:41Z</updated>
+    <link href="https://arxiv.org/abs/2502.12952v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.12952v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The intelligent upgrading of metropolitan rail transit systems has made it feasible to implement demand-side management policies that integrate multiple operational strategies in practical operations. However, the tight interdependence between supply and demand necessitates a coordinated approach combining demand-side management policies and supply-side resource allocations to enhance the urban rail transit ecosystem. In this study, we propose a mathematical and computational framework that optimizes train timetables, passenger flow control strategies, and trip-shifting plans through the pricing policy. Our framework incorporates an emerging trip-booking approach that transforms waiting at the stations into waiting at home, thereby mitigating station overcrowding. Additionally, it ensures service fairness by maintaining an equitable likelihood of delays across different stations. We formulate the problem as an integer linear programming model, aiming to minimize passengers' waiting time and government subsidies required to offset revenue losses from fare discounts used to encourage trip shifting. To improve the computational efficiency, we develop a Benders decomposition-based algorithm within the branch-and-cut method, which decomposes the model into train timetabling with partial passenger assignment and passenger flow control subproblems. We propose valid inequalities based on our model's properties to strengthen the linear relaxation bounds at each node of the branch-and-bound tree. Computational results from proof-of-concept and real-world case studies on the Beijing metro show that our solution method outperforms commercial solvers in terms of computational efficiency.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-18T15:33:19Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Lixing Yang</name>
+    </author>
+    <author>
+      <name>Yahan Lu</name>
+    </author>
+    <author>
+      <name>Jiateng Yin</name>
+    </author>
+    <author>
+      <name>Shadi Sharif Azadeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.20078v1</id>
+    <title>Quantifying discriminability of evaluation metrics in link prediction for real networks</title>
+    <updated>2024-09-30T08:29:52Z</updated>
+    <link href="https://arxiv.org/abs/2409.20078v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.20078v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Link prediction is one of the most productive branches in network science, aiming to predict links that would have existed but have not yet been observed, or links that will appear during the evolution of the network. Over nearly two decades, the field of link prediction has amassed a substantial body of research, encompassing a plethora of algorithms and diverse applications. For any algorithm, one or more evaluation metrics are required to assess its performance. Because using different evaluation metrics can provide different assessments of the algorithm performance, how to select appropriate evaluation metrics is a fundamental issue in link prediction. To address this issue, we propose a novel measure that quantifiers the discriminability of any evaluation metric given a real network and an algorithm. Based on 131 real networks and 20 representative algorithms, we systematically compare the discriminabilities of eight evaluation metrics, and demonstrate that H-measure and Area Under the ROC Curve (AUC) exhibit the strongest discriminabilities, followed by Normalized Discounted Cumulative Gain (NDCG). Our finding is robust for networks in different domains and algorithms of different types. This study provides insights into the selection of evaluation metrics, which may further contribute to standardizing the evaluating process of link prediction algorithms.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-30T08:29:52Z</published>
+    <arxiv:comment>20 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Shuyan Wan</name>
+    </author>
+    <author>
+      <name>Yilin Bi</name>
+    </author>
+    <author>
+      <name>Xinshan Jiao</name>
+    </author>
+    <author>
+      <name>Tao Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.01048v2</id>
+    <title>Boundedness of discounted tree sums</title>
+    <updated>2025-06-06T11:51:49Z</updated>
+    <link href="https://arxiv.org/abs/2409.01048v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.01048v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Let $(V(u),\, u\in \mathcal{T})$ be a (supercritical) branching random walk and $(η_u,\,u\in \mathcal{T})$ be marks on the vertices of the tree, distributed in an i.i.d.\ fashion. Following Aldous and Bandyopadhyay \cite{AB05}, for each infinite ray $ξ$ of the tree, we associate the {\it discounted tree sum} $D(ξ)$ which is the sum of the $e^{-V(u)}η_u$ taken along the ray. The paper deals with the finiteness of $\sup_ξD(ξ)$. To this end, we study the extreme behaviour of the local time processes of the paths $(V(u),\,u\in ξ)$. It answers a question of Nicolas Curien, and partially solves Open Problem 31 of Aldous and Bandyopadhyay \cite{AB05}. We also present several open questions.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-02T08:21:57Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Elie Aïdékon</name>
+      <arxiv:affiliation>LAGA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Yueyun Hu</name>
+      <arxiv:affiliation>LAGA</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Zhan Shi</name>
+      <arxiv:affiliation>CAS</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2407.06237v1</id>
+    <title>Discounted Pseudocosts in MILP</title>
+    <updated>2024-07-07T19:41:38Z</updated>
+    <link href="https://arxiv.org/abs/2407.06237v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2407.06237v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this article, we introduce the concept of discounted pseudocosts, inspired by discounted total reward in reinforcement learning, and explore their application in mixed-integer linear programming (MILP). Traditional pseudocosts estimate changes in the objective function due to variable bound changes during the branch-and-bound process. By integrating reinforcement learning concepts, we propose a novel approach incorporating a forward-looking perspective into pseudocost estimation. We present the motivation behind discounted pseudocosts and discuss how they represent the anticipated reward for branching after one level of exploration in the MILP problem space. Initial experiments on MIPLIB 2017 benchmark instances demonstrate the potential of discounted pseudocosts to enhance branching strategies and accelerate the solution process for challenging MILP problems.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-07-07T19:41:38Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Krunal Kishor Patel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2307.11147v1</id>
+    <title>Isotopic enrichment of planetary systems from Asymptotic Giant Branch stars</title>
+    <updated>2023-07-20T18:00:01Z</updated>
+    <link href="https://arxiv.org/abs/2307.11147v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2307.11147v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Short-lived radioisotopes, in particular 26-Al and 60-Fe, are thought to contribute to the internal heating of the Earth, but are significantly more abundant in the Solar System compared to the Interstellar Medium. The presence of their decay products in the oldest Solar System objects argues for their inclusion in the Sun's protoplanetary disc almost immediately after the star formation event that formed the Sun. Various scenarios have been proposed for their delivery to the Solar System, usually involving one or more core-collapse supernovae of massive stars. An alternative scenario involves the young Sun encountering an evolved Asymptotic Giant Branch (AGB) star. AGBs were previously discounted as a viable enrichment scenario for the Solar System due to the presumed low probability of an encounter between an old, evolved star and a young pre-main sequence star. We report the discovery in Gaia data of an interloping AGB star in the star-forming region NGC2264, demonstrating that old, evolved stars can encounter young forming planetary systems. We use simulations to calculate the yields of 26-Al and 60-Fe from AGBs and their contribution to the long-term geophysical heating of a planet, and find that these are comfortably within the range previously calculated for the Solar System.</summary>
+    <category term="astro-ph.EP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-07-20T18:00:01Z</published>
+    <arxiv:comment>8 pages, 4 figures, accepted for publication in ApJL</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.EP"/>
+    <author>
+      <name>Richard J. Parker</name>
+      <arxiv:affiliation>University of Sheffield, UK</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Christina Schoettler</name>
+      <arxiv:affiliation>Imperial College London, UK</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.3847/2041-8213/ace24a</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3847/2041-8213/ace24a" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2303.02630v1</id>
+    <title>D-HAL: Distributed Hierarchical Adversarial Learning for Multi-Agent Interaction in Autonomous Intersection Management</title>
+    <updated>2023-03-05T10:10:56Z</updated>
+    <link href="https://arxiv.org/abs/2303.02630v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2303.02630v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Autonomous Intersection Management (AIM) provides a signal-free intersection scheduling paradigm for Connected Autonomous Vehicles (CAVs). Distributed learning method has emerged as an attractive branch of AIM research. Compared with centralized AIM, distributed AIM can be deployed to CAVs at a lower cost, and compared with rule-based and optimization-based method, learning-based method can treat various complicated real-time intersection scenarios more flexibly. Deep reinforcement learning (DRL) is the mainstream approach in distributed learning to address AIM problems. However, the large-scale simultaneous interactive decision of multiple agents and the rapid changes of environment caused by interactions pose challenges for DRL, making its reward curve oscillating and hard to converge, and ultimately leading to a compromise in safety and computing efficiency. For this, we propose a non-RL learning framework, called Distributed Hierarchical Adversarial Learning (D-HAL). The framework includes an actor network that generates the actions of each CAV at each step. The immediate discriminator evaluates the interaction performance of the actor network at the current step, while the final discriminator makes the final evaluation of the overall trajectory from a series of interactions. In this framework, the long-term outcome of the behavior no longer motivates the actor network in terms of discounted rewards, but rather through a designed adversarial loss function with discriminative labels. The proposed model is evaluated at a four-way-six-lane intersection, and outperforms several state-of-the-art methods on ensuring safety and reducing travel time.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-03-05T10:10:56Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Guanzhou Li</name>
+    </author>
+    <author>
+      <name>Jianping Wu</name>
+    </author>
+    <author>
+      <name>Yujing He</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.04207v1</id>
+    <title>Vehicle Utilization in Hub Network Design: Exploiting Economies of Scale in Transportation</title>
+    <updated>2023-01-10T21:00:04Z</updated>
+    <link href="https://arxiv.org/abs/2301.04207v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2301.04207v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study a vehicle-based hub network design problem (HNDPv) with the main applications in freight distribution and parcel delivery systems, where the economies of scale stem from the effective utilization of vehicles that move consolidated freight. The HNDPv is a generalization of the classical single allocation hub location problem, in which the transportation costs are stepwise functions of the number (and type) of vehicles that move the demand. We present the quadratic mixed-integer programming formulation of the problem and its linear reformulation. Exploiting the special structures of the linearized model, we develop a branch-and-cut method based on Benders decomposition with solely feasibility subproblems. We derive closed-form solutions for the extreme rays of the feasibility subproblems that improve the efficiency of the proposed algorithm through generating stronger feasibility cuts. We also address the HNDPv under demand uncertainty and show the flexibility of our solution methodology in handling the stochastic variant of the problem. To evaluate the efficiency of our models and solution approaches, we perform extensive computational experiments on uncapacitated and capacitated instances of the problem derived from the classical Australian Post dataset. The results show a considerable advantage of using HNDPv compared to the classical HLP with constant discount factors in terms of vehicle utilization and total transportation costs. Our computational experiments also demonstrate the efficiency of our proposed solution method in solving large-scale problem instances.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-01-10T21:00:04Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Mohammad Saleh Farham</name>
+    </author>
+    <author>
+      <name>Borzou Rostami</name>
+    </author>
+    <author>
+      <name>Michael Haughton</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2210.11570v3</id>
+    <title>Online Resource Allocation with Cancellations</title>
+    <updated>2025-09-03T17:28:42Z</updated>
+    <link href="https://arxiv.org/abs/2210.11570v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2210.11570v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We initiate the study of two-sided online resource allocation with costly cancellations. Our focus is on edge-weighted online bipartite matching (and several of its extensions), where nodes arrive online and request offline resources. In contrast to the classic literature, any fraction of an offline resource that was preallocated to an earlier online node can be reclaimed, resulting in the loss of the previously allocated edge-weight plus an additional penalty equal to a non-negative constant factor $f$ times the edge-weight. Parameterizing the problem by the buyback factor $f$, our main result is the development of optimal competitive algorithms for \emph{all possible values} of $f$ through a novel primal-dual family of algorithms in the fractional (or equivalently, large capacity) setting, and establishing their optimality by deriving matching lower bounds. Interestingly, our results reveal a phase transition: for the small buyback regime ($f &lt; \frac{e-2}{2}$), the optimal competitive ratio is $\frac{e}{e-(1+f)}$, and for the large buyback regime ($f \geq \frac{e-2}{2}$), the competitive ratio is $-W_{-1}\left(\frac{-1}{e(1+f)}\right)$, where $W_{-1}$ is the non-principal branch of the Lambert $W$ function. We also study variants of this model, such as matching with deterministic integral allocations. We again show a phase transition: for the small buyback regime ($f &lt; \frac{1}{3}$), the optimal competitive ratio is $\frac{2}{1-f}$, while for the large buyback regime ($f \geq \frac{1}{3}$), the competitive ratio is $1 + 2f + 2\sqrt{f(1+f)}$. We further consider various extensions, including to configuration allocations and submodular welfare maximization, as well as negative values of $f$, modeling a secondary supply channels or overflow capacities available at discounted rates. Our unifying primal-dual framework achieves the exact optimal competitive ratio across all these variants</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-10-20T20:12:43Z</published>
+    <arxiv:comment>A preliminary conference version of this work has appeared in the ACM Economics and Computations(EC) 2023 conference under the title "Online Resource Allocation with Buyback: Optimal Algorithms via Primal-Dual." ; An earlier version of this paper was distributed under the title "Online Matching with Cancellation Costs."</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Farbod Ekbatani</name>
+    </author>
+    <author>
+      <name>Yiding Feng</name>
+    </author>
+    <author>
+      <name>Rad Niazadeh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.04680v1</id>
+    <title>Some Optimisation Problems in Insurance with a Terminal Distribution Constraint</title>
+    <updated>2022-06-08T20:39:47Z</updated>
+    <link href="https://arxiv.org/abs/2206.04680v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.04680v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study two optimisation settings for an insurance company, under the constraint that the terminal surplus at a deterministic and finite time $T$ follows a normal distribution with a given mean and a given variance. In both cases, the surplus of the insurance company is assumed to follow a Brownian motion with drift. First, we allow the insurance company to pay dividends and seek to maximise the expected discounted dividend payments or to minimise the ruin probability under the terminal distribution constraint. Here, we find explicit expressions for the optimal strategies in both cases: in discrete and continuous time settings. Second, we let the insurance company buy a reinsurance contract for a pool of insured or a branch of business. To achieve a certain level of sustainability (i.e. the collected premia should be sufficient to buy reinsurance and to pay the occurring claims) the initial capital is set to be zero. We only allow for piecewise constant reinsurance strategies producing a normally distributed terminal surplus, whose mean and variance lead to a given Value at Risk or Expected Shortfall at some confidence level $α$. We investigate the question which admissible reinsurance strategy produces a smaller ruin probability, if the ruin-checks are due at discrete deterministic points in time.</summary>
+    <category term="q-fin.MF" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-fin.RM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-08T20:39:47Z</published>
+    <arxiv:comment>23 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="q-fin.MF"/>
+    <author>
+      <name>Katia Colaneri</name>
+    </author>
+    <author>
+      <name>Julia Eisenberg</name>
+    </author>
+    <author>
+      <name>Benedetta Salterini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.09157v1</id>
+    <title>Optimal dividends for a two-dimensional risk model with simultaneous ruin of both branches</title>
+    <updated>2022-05-18T18:15:01Z</updated>
+    <link href="https://arxiv.org/abs/2205.09157v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.09157v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We consider the optimal dividend problem in the so-called degenerate bivariate risk model under the assumption that the surplus of one branch may become negative. More specific, we solve the stochastic control problem of maximizing discounted dividends until simultaneous ruin of both branches of an insurance company by showing that the optimal value function satisfies a certain Hamilton-Jacobi-Bellman (HJB) equation. Further, we prove that the optimal value function is the smallest viscosity solution of said HJB equation, satisfying certain growth conditions. Under some additional assumptions, we show that the optimal strategy lies within a certain subclass of all admissible strategies and reduce the two-dimensional control problem to a one-dimensional one. The results are illustrated by a numerical example and Monte-Carlo simulated value functions.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-18T18:15:01Z</published>
+    <arxiv:comment>25 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Philipp Lukas Strietzel</name>
+    </author>
+    <author>
+      <name>Henriette Elisabeth Heinrich</name>
+    </author>
+    <arxiv:doi>10.3390/risks10060116</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3390/risks10060116" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.05243v1</id>
+    <title>A Closer Look at Debiased Temporal Sentence Grounding in Videos: Dataset, Metric, and Approach</title>
+    <updated>2022-03-10T08:58:18Z</updated>
+    <link href="https://arxiv.org/abs/2203.05243v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.05243v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Temporal Sentence Grounding in Videos (TSGV), which aims to ground a natural language sentence in an untrimmed video, has drawn widespread attention over the past few years. However, recent studies have found that current benchmark datasets may have obvious moment annotation biases, enabling several simple baselines even without training to achieve SOTA performance. In this paper, we take a closer look at existing evaluation protocols, and find both the prevailing dataset and evaluation metrics are the devils that lead to untrustworthy benchmarking. Therefore, we propose to re-organize the two widely-used datasets, making the ground-truth moment distributions different in the training and test splits, i.e., out-of-distribution (OOD) test. Meanwhile, we introduce a new evaluation metric "dR@n,IoU@m" that discounts the basic recall scores to alleviate the inflating evaluation caused by biased datasets. New benchmarking results indicate that our proposed evaluation protocols can better monitor the research progress. Furthermore, we propose a novel causality-based Multi-branch Deconfounding Debiasing (MDD) framework for unbiased moment prediction. Specifically, we design a multi-branch deconfounder to eliminate the effects caused by multiple confounders with causal intervention. In order to help the model better align the semantics between sentence queries and video moments, we enhance the representations during feature encoding. Specifically, for textual information, the query is parsed into several verb-centered phrases to obtain a more fine-grained textual feature. For visual information, the positional information has been decomposed from moment features to enhance representations of moments with diverse locations. Extensive experiments demonstrate that our proposed approach can achieve competitive results among existing SOTA approaches and outperform the base model with great gains.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-10T08:58:18Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Xiaohan Lan</name>
+    </author>
+    <author>
+      <name>Yitian Yuan</name>
+    </author>
+    <author>
+      <name>Xin Wang</name>
+    </author>
+    <author>
+      <name>Long Chen</name>
+    </author>
+    <author>
+      <name>Zhi Wang</name>
+    </author>
+    <author>
+      <name>Lin Ma</name>
+    </author>
+    <author>
+      <name>Wenwu Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.00258v1</id>
+    <title>When A Conventional Filter Meets Deep Learning: Basis Composition Learning on Image Filters</title>
+    <updated>2022-03-01T06:34:54Z</updated>
+    <link href="https://arxiv.org/abs/2203.00258v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.00258v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Image filters are fast, lightweight and effective, which make these conventional wisdoms preferable as basic tools in vision tasks. In practical scenarios, users have to tweak parameters multiple times to obtain satisfied results. This inconvenience heavily discounts the efficiency and user experience. We propose basis composition learning on single image filters to automatically determine their optimal formulas. The feasibility is based on a two-step strategy: first, we build a set of filtered basis (FB) consisting of approximations under selected parameter configurations; second, a dual-branch composition module is proposed to learn how the candidates in FB are combined to better approximate the target image. Our method is simple yet effective in practice; it renders filters to be user-friendly and benefits fundamental low-level vision problems including denoising, deraining and texture removal. Extensive experiments demonstrate that our method achieves an appropriate balance among the performance, time complexity and memory efficiency.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-01T06:34:54Z</published>
+    <arxiv:comment>14 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Fu Lee Wang</name>
+    </author>
+    <author>
+      <name>Yidan Feng</name>
+    </author>
+    <author>
+      <name>Haoran Xie</name>
+    </author>
+    <author>
+      <name>Gary Cheng</name>
+    </author>
+    <author>
+      <name>Mingqiang Wei</name>
+    </author>
+  </entry>
+</feed>

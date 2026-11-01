@@ -1,0 +1,18 @@
+{
+  "comparison": "8^4 < 2*7^4",
+  "left": 4096,
+  "right": 4802,
+  "integer_margin": 706,
+  "conclusion": "log2(8/7)<1/4",
+  "precision_refinement": "NONE; integer sign determined",
+  "family": "All finite disjoint products of Boolean factors on at most three coordinates",
+  "input_certificate": "MAIN_CHECK.json: all256 three-bit tables satisfy S4(g)>=1-|E g|",
+  "identities": [
+    "S4(product g_j)=sum S4(g_j)",
+    "|E product g_j|=product |E g_j|",
+    "sum(1-a_j)>=1-product a_j for 0<=a_j<=1",
+    "Var(h)<=2(1-|E h|)",
+    "D(p_h||r_h^(1/8))<=Var(h)log2(8/7)<=S4(h)/2"
+  ],
+  "scope": "New initial WHOLE-core supplier; no free conversion from a product reference; hereditary under physical restrictions"
+}

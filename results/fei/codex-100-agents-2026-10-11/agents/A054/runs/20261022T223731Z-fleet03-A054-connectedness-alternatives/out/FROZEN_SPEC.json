@@ -1,0 +1,13 @@
+{
+  "helper_version": "check_admission.py v1; read-only mathcore.py from 20261014T055856Z",
+  "actual_boolean_family": "All labeled indicator truth tables on n=1,2,3; their signs f=1-2g. Four fixed fixtures only beyond this domain.",
+  "parameter_domain": "pilot n=1,2; full n=1,2,3; every nonempty proper coordinate block, empty supports excluded only from normalized identities",
+  "case_count": "pilot 20 truth tables plus four fixtures; full 276 truth tables plus four fixtures; no symmetry reduction",
+  "fixtures": ["n4 support {0,1,5,7,14,15}","n5 two paths {0,4,12,13,15,3,19,27,26,24}","n5 majority lower half |x|<=2", "n4 even parity support"],
+  "justified_symmetry_reduction": "none",
+  "arithmetic": "Fraction; exact prime-log vectors for identities; 32-term range-reduced atanh, explicit tail, outward 112-bit dyadic bounds for inequalities",
+  "memory_estimate_mb": 100,
+  "maximum_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "purpose": "Try to falsify singleton-normalization, factor2, chain-rule direction, nonnegative slack, and necessity of edge-constant component labels; not a universal FEI search"
+}

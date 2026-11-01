@@ -1,0 +1,223 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w492",
+  "bundle_slug": "c0120-gaussian-spectral-scope-w492-001",
+  "entries": [
+    {
+      "key": "model",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-gaussian-ground-state-free-endpoint-model",
+      "kind": "definition",
+      "title": "C0120 exact Gaussian ground-state scope",
+      "statement": "Scope definition for C0120: iid N(0,1) site weights on Z_+^2; n-vertex up/right paths from the origin with free endpoint; M_n is the maximum path sum including the origin. The attached 2008 source proves Var(M_n)<=C n/log n; the session asks for Var(M_n)<=C n^(1-epsilon) for some epsilon>0. Current openness UNKNOWN; no solution claim.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-c0120-w492-20261010",
+        "url": "owner-own-work://C0120/w492/ATTEMPT.md",
+        "revision": "author-written-20261010-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "spectral",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-gaussian-hermite-gradient-energy-draft",
+      "kind": "concept",
+      "title": "Gaussian polymer gradient spectral identity (draft)",
+      "statement": "[DRAFT: author analytic proof; independent review pending.] For the exact Gaussian ground-state model, write a_k=||Proj_k(M_n-E M_n)||_2^2 in normalized Gaussian Hermite chaos. Then sum k a_k=n, Var(M_n)=sum a_k, and Q_n(t)=E|P(g) intersect P(g^t)|=sum k a_k exp(-(k-1)t).",
+      "proof_text": null,
+      "assumptions": [
+        "iid N(0,1) site weights on Z_+^2; n-vertex up/right paths from the origin with free endpoint; M_n is the maximum path sum including the origin.",
+        "t>=0; g^t=exp(-t)g+sqrt(1-exp(-2t))g_prime with independent g_prime"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-c0120-w492-20261010",
+        "url": "owner-own-work://C0120/w492/ATTEMPT.md",
+        "revision": "author-written-20261010-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "reduction",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-low-degree-spectral-escape-reduction-draft",
+      "kind": "concept",
+      "title": "Polynomial spectral escape variance reduction (draft)",
+      "statement": "[DRAFT: conditional reduction; input unproved.] In the exact Gaussian ground-state model let D_n(K)=sum_{k<=K} k||Proj_k(M_n-E M_n)||_2^2. For integer K>=1, Var(M_n)<=D_n(K)+n/(K+1) and D_n(K)<=K Var(M_n). If a,b>0 and D_n(floor n^a)<=C n^(1-b) uniformly for large n, then Var(M_n)<=(C+1)n^(1-min(a,b)). A variance power epsilon gives D_n(floor n^(epsilon/2))<=C n^(1-epsilon/2).",
+      "proof_text": null,
+      "assumptions": [
+        "iid N(0,1) site weights on Z_+^2; n-vertex up/right paths from the origin with free endpoint; M_n is the maximum path sum including the origin.",
+        "Normalized total-degree Gaussian Hermite chaos",
+        "All conditional bounds are uniform for sufficiently large n"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-c0120-w492-20261010",
+        "url": "owner-own-work://C0120/w492/ATTEMPT.md",
+        "revision": "author-written-20261010-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-polynomial-low-degree-spectral-mass-open-input",
+      "kind": "concept",
+      "title": "C0120 unproved polynomial spectral mass input",
+      "statement": "[UNPROVED INPUT G1.] For the exact Gaussian quadrant/free-endpoint maximum M_n, seek constants a,b>0,C,n_0<infinity such that sum_{k<=floor n^a} k||Proj_k(M_n-E M_n)||_2^2<=C n^(1-b) for every n>=n_0. The conditional reduction is proved by its author; this premise is not proved. The known n/log n variance estimate supplies only D_n(K)<=C K n/log n.",
+      "proof_text": null,
+      "assumptions": [
+        "iid N(0,1) site weights on Z_+^2; n-vertex up/right paths from the origin with free endpoint; M_n is the maximum path sum including the origin."
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-c0120-w492-20261010",
+        "url": "owner-own-work://C0120/w492/ATTEMPT.md",
+        "revision": "author-written-20261010-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "noise",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-gaussian-noise-spectral-cutoff-bridge-draft",
+      "kind": "concept",
+      "title": "Noise overlap to Hermite cutoff bridge (draft)",
+      "statement": "[DRAFT: author analytic proof; independent review pending.] In the exact Gaussian ground-state model and notation D_n(K),Q_n(t) above, for integer K>=1 and t>=0, Q_n(t)<=D_n(K)+n exp(-Kt), and D_n(K)<=exp((K-1)t)Q_n(t). These inequalities do not supply a polynomial decorrelation rate.",
+      "proof_text": null,
+      "assumptions": [
+        "iid N(0,1) site weights on Z_+^2; n-vertex up/right paths from the origin with free endpoint; M_n is the maximum path sum including the origin.",
+        "OU coupling and normalized Hermite chaos as in the spectral identity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-c0120-w492-20261010",
+        "url": "owner-own-work://C0120/w492/ATTEMPT.md",
+        "revision": "author-written-20261010-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "generic",
+      "namespace": "probability.gaussian",
+      "logical_name": "gaussian-path-small-influence-power-variance-inference-invalid",
+      "kind": "concept",
+      "title": "Small-influence power variance inference has a scope gap",
+      "statement": "[REFUTED GENERIC ROUTE; not a refutation of C0120.] Gaussianity, fixed path length n, squared gradient norm n, and nonroot vertex marginal influences at most 1/n do not alone imply a uniform O(n^(1-epsilon)) variance bound with any fixed epsilon>0 over arbitrary directed path families. Additional graph-specific information is needed.",
+      "proof_text": null,
+      "assumptions": [
+        "Path family on an arbitrary directed acyclic graph",
+        "Independent standard Gaussian vertex weights"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-c0120-w492-20261010",
+        "url": "owner-own-work://C0120/w492/ATTEMPT.md",
+        "revision": "author-written-20261010-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "corridor",
+      "namespace": "probability.gaussian",
+      "logical_name": "parallel-gaussian-corridor-logarithmic-variance-obstruction-draft",
+      "kind": "concept",
+      "title": "Parallel Gaussian corridors: logarithmic obstruction (draft)",
+      "statement": "[DRAFT: author analytic proof; independent review pending.] A common root with m disjoint corridors of n-1 vertices has maximum T=g_0+sqrt(n-1) max_{j<=m}G_j. For n>=2,m>=8, its squared gradient norm equals n and each nonroot influence is 1/m, while 1+c(n-1)/log(2m)<=Var(T)<=1+2(n-1)/log m with c=(1-exp(-exp(-3/2)*log(2)/10))/4>0. Setting m=n refutes the generic inference; the graph is not the C0120 quadrant lattice.",
+      "proof_text": null,
+      "assumptions": [
+        "All g_0,G_j independent standard normal",
+        "Independent standard Gaussian site weights along disjoint corridors",
+        "Gaussian hypercontractivity for upper bound; elementary Mills bounds for lower bound"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-c0120-w492-20261010",
+        "url": "owner-own-work://C0120/w492/ATTEMPT.md",
+        "revision": "author-written-20261010-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "scope",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-max-versus-log-partition-source-scope-correction-draft",
+      "kind": "concept",
+      "title": "C0120 source scope correction (draft)",
+      "statement": "[DRAFT SOURCE CORRECTION; independent statement review pending.] The C0120 citation arXiv:0810.4221v2 Section 8 and Section 12(3) concerns a zero-temperature Gaussian maximum in 1+1 dimensions with free endpoint. The intake and its two exported cards replace this by Var(log Z_n) in general dimension; that broader attribution is unsupported by the cited Theorem 8.1. Preserve their historical record and add the exact source scope.",
+      "proof_text": null,
+      "assumptions": [
+        "Primary source version v2 dated 2008-12-16",
+        "Scope comparison of named intake row and two exported C0120 cards"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-c0120-w492-20261010",
+        "url": "owner-own-work://C0120/w492/ATTEMPT.md",
+        "revision": "author-written-20261010-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "spectral",
+      "to_key": "model",
+      "kind": "depends_on",
+      "rationale": "The weak-gradient energy n uses n equal-length paths and the exact source model."
+    },
+    {
+      "from_key": "reduction",
+      "to_key": "spectral",
+      "kind": "depends_on",
+      "rationale": "The tail bound uses total Hermite gradient energy n."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "reduction",
+      "kind": "semantic_association",
+      "rationale": "G1 is the unproved premise sufficient for the conditional reduction; no proof edge is asserted."
+    },
+    {
+      "from_key": "noise",
+      "to_key": "spectral",
+      "kind": "depends_on",
+      "rationale": "Both cutoff inequalities follow termwise from the nonnegative overlap series."
+    },
+    {
+      "from_key": "corridor",
+      "to_key": "generic",
+      "kind": "refutes",
+      "rationale": "At m=n, influence 1/n coexists with variance at least c(n-1)/log(2n), contradicting every fixed power gain in the generic graph class."
+    },
+    {
+      "from_key": "scope",
+      "to_key": "model",
+      "kind": "cites",
+      "rationale": "The model node states the recovered primary-source conventions."
+    },
+    {
+      "from_key": "scope",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro",
+      "kind": "cites",
+      "rationale": "Named exported problem card is the first exact source-scope correction target."
+    },
+    {
+      "from_key": "scope",
+      "to_existing_logical": "math:probability.gaussian:attempt-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro",
+      "kind": "cites",
+      "rationale": "Named exported historical attempt card is the second exact source-scope correction target."
+    }
+  ]
+}

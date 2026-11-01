@@ -1,0 +1,41 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w577/check_starvation.py",
+  "method": "Exact geometric-series arithmetic plus 64 exact finite-horizon square-martingale identities",
+  "fresh_compute_gate": {
+    "harmonicity_vertices": 61,
+    "time_horizon": 64,
+    "maximum_states": 65,
+    "gpu": false,
+    "training": false,
+    "wall_limit_seconds": 60
+  },
+  "full_support_initial_measure_mass": "1",
+  "original_measure_energy": "10/153",
+  "original_measure_escape_variance": "57/340",
+  "cesaro_energy_bound": "57/(340*N), proved for the full-support initial measure",
+  "finite_horizon_checks": [
+    {
+      "N": 1,
+      "mean_energy_from_zero_approx": 0.1111111111111111,
+      "exact_bound": "1/4"
+    },
+    {
+      "N": 8,
+      "mean_energy_from_zero_approx": 0.028817474748196414,
+      "exact_bound": "1/32"
+    },
+    {
+      "N": 32,
+      "mean_energy_from_zero_approx": 0.007807226169533185,
+      "exact_bound": "1/128"
+    },
+    {
+      "N": 64,
+      "mean_energy_from_zero_approx": 0.0039062383900625194,
+      "exact_bound": "1/256"
+    }
+  ],
+  "elapsed_seconds": 0.09995549998711795,
+  "iid_spatial_stationarity": false,
+  "target_solved": false
+}

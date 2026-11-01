@@ -1,0 +1,98 @@
+[
+  {
+    "claim_id": "B02-A008-DICTIONARY-QUOTIENT-CODE",
+    "version": 1,
+    "exact_statement": "For every finite fixed rational gate table with nonempty supports, positive normalized dictionary-size and local-subset laws, the dictionary-first generator and its finite output quotient admit computable prefix decoders with each selected gate name occurring once in the record and canonical roots/attachments requiring no extra fields. On the sunflower f_m=x0-(1+x0)*prod_i(1-x_i)/2 for every integer m>=1, the specified normalized output reference has nonempty spectral expected ideal cost <25I(f_m)/4 and full-output prefix expected length <33I(f_m)/4; raw latent-record cost is at least (1-2^-m)^2 log2(m). Ordinary addressing has a dedicated exact 2a-bit code.",
+    "hypotheses": [
+      "uniform sign cube for Boolean application",
+      "all logarithms base two",
+      "fixed rational structural model known to encoder and decoder",
+      "dictionary subset laws positive on all nonempty local subsets",
+      "sample-dependent model selection is paid by a fixed normalized prior",
+      "output quotient need not recover original latent record"
+    ],
+    "statement_sha256": "ea1737df5842d834546a101d59cc86c0824308079accf5039f2261b893586367",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": {
+      "run_id": "20261011T221357Z-fleet05-A008-gate-label-compression",
+      "path": "WHOLE_SET_CODEC.tex",
+      "validation": "code/check.py and out/CHECK.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A006",
+        "verdict": "ACCEPT_AT_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261011T231903Z-fleet05-A006-posterior-forest-optimization\\AUDIT_A008.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261011T231903Z-fleet05-A006-posterior-forest-optimization\\out\\A008_REVIEW_CHECK.json",
+        "method": "Independent four-state dictionary trace pushforward and complete analytic proof reconstruction; author checker not imported",
+        "reviewer_contributed_repair": false,
+        "timestamp_utc": "2026-10-11T23:42:34.136633+00:00"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_STATED_SCOPE_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A011",
+      "A069",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A006-MAJORITY-PRIME-IMPLICANT-POSTERIOR-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every odd integer n>=1, let k=(n+1)/2 and Maj_n be uniform majority. Its positive prime-implicant table consists of every k-subset conjunction, with one cover ordered by a common physical order, lambda_R=1/binom(n-1,k-1), pi_R=2^(-k), and gamma=6/5. The conditioned posterior residual optimized over distinct actual finite partition-forest runs is at most [49/5+(6/5)*log2(e)]*I(Maj_n), strictly less than (58/5)*I(Maj_n) and at most (58/5)*sqrt(n). An admissible certificate uses the uniform posterior over all single-root containing-clause runs when |A|<=k, and one actual two-clause partition run with alternating ownership and one attachment when |A|>k. The same table construction, for an arbitrary Boolean spectrum, gives residual <=(43/5)*I+(6/(5*ln2))*E G(A), where G(A)=sum_{j in A}ln(j/(|A intersect [j-1]|+1)); the majority rank bound is E G<= (1+ln2)*I. No universal rank payment or all-Boolean PI-J bound is asserted.",
+    "hypotheses": [
+      "uniform cube and bits for entropy/cost; natural units for G",
+      "all positive prime implicants of odd majority; globally fixed support table and fractional weights",
+      "partition subsets disjoint; every used gate visited exactly once; chronological child labels define actual run identity",
+      "failed/infinite runs omitted and reference conditioned on nonempty initial roots",
+      "no output-dependent reference-table or scale selection"
+    ],
+    "statement_sha256": "74658e2a6934ff6f1ab437e6937db91c59cd40bca32894e4c57163ced69b02ba",
+    "contributors": [
+      "A006"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261011T231903Z-fleet05-A006-posterior-forest-optimization\\REPORT.md",
+      "sections": "complete derivation, Sections 2-6"
+    },
+    "proof_dependencies": [
+      {
+        "source": "source_material/reductions/paper/forests.tex",
+        "locator": "thm:posteriorforest and eq:forestcost",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "status": "SOURCE_COMPLETE_BASELINE_READ"
+      },
+      {
+        "source": "baseline/current-threshold-paper.tex",
+        "locator": "lem:pivotal-antichain, lem:antichain-noise, lem:ranktail; derivative-law rank expectation",
+        "sha256": "5d87f625fbadad4aa9841416712b8193a869fa9dffcb4e9c200d2f39a62e6a10",
+        "status": "SOURCE_COMPLETE_BASELINE_PROOF_CHAIN_READ"
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTICALLY_PROVED_CERTIFIED_SMALL_CASES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B02",
+      "A007",
+      "A008",
+      "A009",
+      "A010",
+      "A015",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  }
+]

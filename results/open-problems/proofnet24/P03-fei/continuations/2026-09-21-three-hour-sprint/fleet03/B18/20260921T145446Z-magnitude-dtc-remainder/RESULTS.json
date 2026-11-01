@@ -1,0 +1,64 @@
+{
+  "status": "PASS_NEW_IDENTITIES_AND_EXACT_COUNTEREXAMPLE",
+  "execution": "native Python standard library; selected exact Boolean witnesses only, no repeated FEI sweep",
+  "identities_checked": [
+    "P_mag = H - same_packet_conditional",
+    "P_mag = H(M) + E[DTC(U_A_M)]",
+    "P_mag = DTC(S) + sum_i H(M|S_-i)",
+    "same_packet_conditional <= 2 I"
+  ],
+  "cases": {
+    "one_point_n3": {
+      "H": 2.216917186688699,
+      "I": 0.75,
+      "H_M": 0.9886994082884974,
+      "packet_DTC": 0.10321777840020174,
+      "global_DTC": 0.21255044870879702,
+      "magnitude_ambiguity_sum": 0.8793667379799024,
+      "same_packet_conditional": 1.125,
+      "P_mag": 1.0919171866886992
+    },
+    "event_entropy_counterexample_n4_mask_0x7": {
+      "H": 2.8486815658857725,
+      "I": 1.0,
+      "H_M": 1.507845042008818,
+      "packet_DTC": 0.15333652387695448,
+      "global_DTC": 0.14452836025635607,
+      "magnitude_ambiguity_sum": 1.5166532056294164,
+      "same_packet_conditional": 1.1875,
+      "P_mag": 1.6611815658857725,
+      "refuting_carry_event": {
+        "depth": 1,
+        "jump": 1,
+        "mass": "1",
+        "top_masses": ["3/16", "13/16"],
+        "odd_numerators": [1, 1],
+        "signed_net": 1.0,
+        "packet_mixing_entropy": 0.6962122601251458,
+        "violation": 0.3037877398748542
+      }
+    },
+    "plateaued_n3_mask_23": {
+      "H": 2.0,
+      "I": 1.5,
+      "H_M": 0.0,
+      "packet_DTC": 2.0,
+      "global_DTC": 2.0,
+      "magnitude_ambiguity_sum": 0.0,
+      "same_packet_conditional": 0.0,
+      "P_mag": 2.0
+    },
+    "negative_carry_n5_mask_0xd974b822": {
+      "H": 3.3436820618674963,
+      "I": 2.4375,
+      "H_M": 2.219871629644985,
+      "packet_DTC": 0.7019354322225115,
+      "global_DTC": 1.568012426896186,
+      "magnitude_ambiguity_sum": 1.3537946349713095,
+      "same_packet_conditional": 0.421875,
+      "P_mag": 2.9218070618674963
+    }
+  },
+  "dead_route": "Eventwise signed carry payment by the Shannon mixing entropy of the top components is false; the n=4 mask 0x7 second carry event has signed net 1 while its packet-mixing entropy is h2(3/16)=0.6962122601251458.",
+  "full_FEI": "OPEN_NOT_PROVED"
+}

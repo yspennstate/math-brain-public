@@ -1,0 +1,63 @@
+{
+  "id": "P0389",
+  "ledger_rows": [
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 488,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "arw_389",
+        "historical_status": "source_says_open",
+        "locator": "Conjecture 27; PDF15",
+        "problem_id": "P0389",
+        "recorded_at": "2026-09-07T05:22:23Z",
+        "result_status": "candidate_partial_counterexample",
+        "schema": "probability-problem.v1",
+        "source_id": "arw_universality_2024",
+        "source_statement_date": "2023-06-14",
+        "statement": "Determine the subcritical linear-variance and critical/supercritical subvolume-variance regimes for particle counts in windows of the free-chain torus configuration.",
+        "statement_caveat": "The literal source permits every box with size-uniform constants. That lower bound fails for boxes filling almost the whole torus. The intended mesoscopic or bounded-volume-fraction regime remains open.",
+        "status_search": "Focused searches on 2026-09-07 for ARW density, cutoff, local limits, hyperuniformity and incompressibility; four later primary papers read at stated theorem scope. No certificate of present openness.",
+        "title": "Onset of mesoscopic hyperuniformity in the ARW free chain"
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 380,
+      "record": {
+        "attempt_id": "P0389-A001",
+        "depth": "individual_analytic_attempt",
+        "full_problem_solved": false,
+        "independent_check": "On a cycle, S_B=k-I_x for the omitted site x. Therefore Var(S_B)=Var(I_x)<=1/4 exactly. Translation invariance from uniform driving even gives Var(I_x)=(k/L)*(1-k/L).",
+        "independent_review": "none",
+        "method": "Conservation, explicit coupling reduction, exact law comparison or spectral calculation",
+        "novelty": "not_claimed",
+        "obstruction": "This is a scope counterexample to the unrestricted window quantifier. It does not settle variance growth for windows small compared with the torus, nor the critical exponent.",
+        "problem_id": "P0389",
+        "proof_path": "proofs/ARW_fixed_mass_window_obstructions.md",
+        "recorded_at": "2026-09-07T05:22:23Z",
+        "result": "At step k the free chain has exactly k sleeping particles on N=L^d sites. Thus Var(S_B)=Var(S_Bc) and Var(S_B)<=min(|B|,N-|B|)^2/4. Taking the proper box B=[0,L-2] times the full other d-1 coordinate intervals leaves only L^(d-1) sites outside B. In d=1, B has L-1 sites and Var(S_B)<=1/4, contradicting a size-uniform lower bound c*(L-1) at any fixed positive subcritical density. The contradiction does not depend on a simulation or the full-torus endpoint.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_partial"
+      }
+    }
+  ],
+  "store_cards": [
+    {
+      "id": "claim_811d3f862df7cafff3aae62323c7bffac7a3b8acc795711b18c35a94f8ecbb46",
+      "kind": "claim",
+      "title": "Open problem: Onset of mesoscopic hyperuniformity in the ARW free chain",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Determine the subcritical linear-variance and critical/supercritical subvolume-variance regimes for particle counts in windows of the free-chain torus configuration. Source: Levine and Silvestri: Universality conjectures for activated random walk, Conjecture 27; PDF15. Status notes: Focused searches on 2026-09-07 for ARW density, cutoff, local limits, hyperuniformity and incompressibility; four later primary papers read at stated theorem scope. No certificate of present openness.\nPosed in Levine and Silvestri: Universality conjectures for activated random walk\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "metadata_json": "{\"artifact_digest\":\"sha256:fc5b93ad75eb63f8451ad96a85cfc38dbd612f69d1e1cb02d0092c47a9843cb9\",\"artifact_path\":\"objects/sha256/fc/fc5b93ad75eb63f8451ad96a85cfc38dbd612f69d1e1cb02d0092c47a9843cb9.md\",\"bundle_digest\":\"sha256:ddd293f4ed06be48fe9cbeb6bd86eef5f0277c23c9d035ac24c184c235a410cc\",\"bundle_entry_key\":\"op-p0389\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-02\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_010.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0389-onset-of-mesoscopic-hyperuniformity-in-the-arw-free-chain\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:8e767f585adadfafded15d7807a186bb88344da7557453dc19b6b57f2f862f8f\",\"revision_digest\":\"sha256:811d3f862df7cafff3aae62323c7bffac7a3b8acc795711b18c35a94f8ecbb46\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0389\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_7d5370abb1ae20e829252a4cd2cdb2aab6a51b51c7a011122d9f6519f62af838",
+      "kind": "claim",
+      "title": "Attempt on Onset of mesoscopic hyperuniformity in the ARW free chain",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Conservation, explicit coupling reduction, exact law comparison or spectral calculation Result: At step k the free chain has exactly k sleeping particles on N=L^d sites. Thus Var(S_B)=Var(S_Bc) and Var(S_B)<=min(|B|,N-|B|)^2/4. Taking the proper box B=[0,L-2] times the full other d-1 coordinate intervals leaves only L^(d-1) sites outside B. In d=1, B has L-1 sites and Var(S_B)<=1/4, contradicting a size-uniform lower bound c*(L-1) at any fixed positive subcritical density. The contradiction does not depend on a simulation or the full-torus endpoint. Check: On a cycle, S_B=k-I_x for the omitted site x. Therefore Var(S_B)=Var(I_x)<=1/4 exactly. Translation invariance from uniform driving even gives Var(I_x)=(k/L)*(1-k/L). Obstruction: This is a scope counterexample to the unrestricted window quantifier. It does not settle variance growth for windows small compared with the torus, nor the critical exponent.\nRefers to the open problem node open-problem-p0389-onset-of-mesoscopic-hyperuniformity-in-the-arw-free-chain\nNo independent review",
+      "metadata_json": "{\"artifact_digest\":\"sha256:403c99f8de590e488a7028c7cff9986c66c1d3b522bbfd59d4446b1629072fc9\",\"artifact_path\":\"objects/sha256/40/403c99f8de590e488a7028c7cff9986c66c1d3b522bbfd59d4446b1629072fc9.md\",\"bundle_digest\":\"sha256:eb454590da264abd9c57c60c3191f916b323e3458b64d5d132e727dbbc7d6100\",\"bundle_entry_key\":\"at-p0389\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-05\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_013.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0389-onset-of-mesoscopic-hyperuniformity-in-the-arw-free-chain\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:d8b4e74f8a108ad4690efcbb85218be43273e7604dff1773dd51d7866037d260\",\"revision_digest\":\"sha256:7d5370abb1ae20e829252a4cd2cdb2aab6a51b51c7a011122d9f6519f62af838\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0389\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    }
+  ]
+}

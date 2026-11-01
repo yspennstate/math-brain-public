@@ -1,0 +1,81 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w446",
+  "bundle_slug": "c0041-source-status-and-proof-gates-20261010",
+  "entries": [
+    {
+      "key": "c0041-source-status-20261010",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "c0041-claimed-resolution-status-20261010",
+      "kind": "concept",
+      "title": "C0041: 2026 solution claim requires proof audit",
+      "statement": "The 2026-09-07 C0041 intake recorded directional transience implying ballisticity for iid uniformly elliptic nearest-neighbor RWRE in d>=2 as an open conjecture after a bounded search. A manuscript dated 2026-09-23 now claims the exact implication as Theorem 1.1. As of 2026-10-10 this worker has not independently certified its main estimate or an actual formal proof. Track status as claimed resolution pending independent audit; do not treat the dated open label or the new claim as a final verdict.",
+      "proof_text": null,
+      "assumptions": ["C0041 concerns a fixed direction under annealed almost-sure transience", "This is a time-stamped source-status note, not a theorem"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w446:c0041-source-audit-20261010",
+        "url": "~/brain_workers/w446/SOURCE_STATUS.json",
+        "revision": "2026-10-10",
+        "license": "owner-own-work (source audit; no manuscript text reproduced)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "c0041-crossing-gate",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "c0041-crossing-estimate-proof-gate",
+      "kind": "concept",
+      "title": "C0041 proof gate: quenched crossing estimate",
+      "statement": "For C0041, almost-sure existence of directional regeneration cuts does not by itself give a finite mean time between cuts. The 2026-09-23 claimed proof uses a stronger input: for some epsilon in (0,1), the probability over iid environments that the quenched chance a_N of reaching height N before -1 is below N^(-epsilon) decays faster than every polynomial. Its derivation from directional transience alone is the main proof gate still requiring independent audit; only with a valid quantitative input does the time-tail reduction apply.",
+      "proof_text": null,
+      "assumptions": ["iid uniformly elliptic nearest-neighbor RWRE", "d>=2", "one-direction annealed transience", "Claimed route, not a certified theorem"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w446:c0041-proof-audit-20261010",
+        "url": "~/brain_workers/w446/ATTEMPT.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work (referee analysis)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "c0041-first-step-factor",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "c0041-upward-step-factor-review-pending",
+      "kind": "concept",
+      "title": "C0041 crossing route: retain the first-step factor",
+      "statement": "In a quenched path argument that first forces an upward step from y and then a height crossing from y+e1, the prescribed route has probability omega(y,+e1) times the conditional crossing probability, hence at least kappa times that crossing probability under uniform ellipticity. The finite-region visit-count consequence is drafted in the w446 audit and awaits w449 review. This local correction does not establish C0041.",
+      "proof_text": null,
+      "assumptions": ["nearest-neighbor quenched Markov walk", "uniform ellipticity bound kappa>0", "Fixed environment"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w446:c0041-first-step-audit-20261010",
+        "url": "~/brain_workers/w446/ATTEMPT.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work (independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "c0041-source-status-20261010",
+      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0041-transience-in-a-direction-implies-ballisticity-for-uniformly-elliptic",
+      "kind": "semantic_association",
+      "rationale": "Both cards concern the exact C0041 implication; this status note dates the old card's no-resolution-found label and points to the later claimed proof."
+    },
+    {
+      "from_key": "c0041-crossing-gate",
+      "to_key": "c0041-source-status-20261010",
+      "kind": "semantic_association",
+      "rationale": "The crossing estimate is the load-bearing unchecked input of the newly claimed C0041 resolution."
+    },
+    {
+      "from_key": "c0041-first-step-factor",
+      "to_key": "c0041-crossing-gate",
+      "kind": "semantic_association",
+      "rationale": "The first-step factor is needed in the proposed conversion from a quenched crossing lower bound to an exit-time tail."
+    }
+  ]
+}

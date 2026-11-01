@@ -1,0 +1,14 @@
+{
+ "helper_version":"A058-coherent-pair-v1",
+ "family":"Boolean outer F with two first private anchors identified; one shared two-bit Boolean gate b reused according to a binary incidence row, optional sign on second child",
+ "pilot":{"outer_arity":2,"outer_truth_tables":16,"shared_truth_tables":16,"incidence_rows":4,"second_child_signs":2,"case_count":2048,"max_runtime_seconds":60},
+ "main":{"outer_arity":3,"outer_truth_tables":256,"shared_truth_tables":16,"incidence_rows":8,"second_child_signs":2,"case_count":65536,"max_runtime_seconds":180},
+ "symmetry":"none",
+ "arithmetic":"integer Walsh, exact squared dyadic masses, integer-coefficient prime-log entropy/KL/posterior signatures; no floating sign decisions",
+ "memory_estimate_bytes":30000000,
+ "dimension_escalation":"none; outer arity three fixed before pilot",
+ "additional_controls":{"bent_counterfamily_k":[1,2,3,4],"X004":"actual zy truth table","X009_even_core_dimensions":[2,4,6]},
+ "checkpoints":"after each complete outer table",
+ "max_job_runtime_seconds":180,
+ "frozen_before_search":true
+}

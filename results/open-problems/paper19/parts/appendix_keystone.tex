@@ -1,0 +1,221 @@
+% Appendix B: the pair-correlation condition reduces to one decorrelation estimate.
+% Promotes notes/keystone_{tail,assembly_bar,typical}.md into the manuscript. Real case in full;
+% complex identical with d_F=2. Uses manuscript macros and \varrho.
+
+Throughout, $A_m\in\F^{N_m\times m}$ has iid entries that are mean zero, unit variance, with a
+symmetric (real) / circular (complex) law of bounded Lebesgue density $\le K$ and sub-Gaussian.
+Fix the distinguished row $x=a_{N_m}$.  For an $(m-1)$-set $S$ let $u_S$ be a unit normal to
+$\spn\{a_i:i\in S\}$; for $S\ne T$ with $|S\cap T|=m-D$ write $\varrho=\langle u_S,u_T\rangle$ for
+their overlap and, conditioning on the shared rows, work in the $D$-dimensional orthocomplement
+$E^\perp$ of their span, where $u_S,u_T$ are the unit null vectors of the $D-1$ projected disjoint
+rows.  Put $X=1-|\varrho|^2\in(0,1]$ and $a=d_\F/2$.  The pair-correlation condition of
+Section~\ref{sec:universality} requires $\Var Z_m(s)/(\EE Z_m(s))^2\to0$, which (after
+Lemma~\ref{lem:two-proj} and Proposition~\ref{prop:small-D-negligible}) is the bulk overlap moment
+$\EE[X^{-a};\,D\ge\varepsilon m]\le1+o(1)$.  We reduce this to a single decorrelation estimate.
+
+\begin{lemma}[Polar-cap lower tail]\label{appB:tail}
+There are $C,c>0$ depending only on $(K,\F)$ such that, for the null vector $u$ of $D-1$ iid
+isotropic sub-Gaussian bounded-density vectors in $\F^D$ and any fixed unit $e\in\F^D$,
+\[
+  \PP\{\,|\langle e,u\rangle|^2\ge 1-y\,\}\le (C\sqrt y\,)^{\,d_\F(D-1)}+2e^{-cD},
+  \qquad 0<y<1 ,
+\]
+\end{lemma}
+
+\begin{proof}[Proof (real case; complex replaces $D-1$ by $2(D-1)$)]
+Let $G=[g_1\,|\cdots|\,g_{D-1}]$ and $A=G^*$, so $u$ is the unit right-null vector of $A$, and
+$\|A\|=\|G\|$.  For iid isotropic sub-Gaussian columns, the operator-norm bound
+\cite{Vershynin2018} gives $\PP\{\|A\|>R\sqrt D\}\le2e^{-c_1R^2D}$ for $R\ge C_1(K)$.  The polar
+cap $\mathrm{Cap}=\{v\in S^{D-1}:|\langle e,v\rangle|\ge\sqrt{1-y}\}$ has transverse radius
+$\sin\theta=\sqrt y$, so it admits a $\delta$-net $\mathcal N$ with
+$|\mathcal N|\le(C_0\sqrt y/\delta)^{D-1}$.  If $u\in\mathrm{Cap}$ and $\|A\|\le R\sqrt D$, choose
+$z\in\mathcal N$ with $\|z-u\|\le\delta$; since $Au=0$, $\|Az\|=\|A(z-u)\|\le R\sqrt D\,\delta$.
+Hence
+\[
+  \PP\{u\in\mathrm{Cap}\}\le 2e^{-c_1R^2D}+\sum_{z\in\mathcal N}\PP\{\|Az\|\le R\sqrt D\,\delta\}.
+\]
+For fixed unit $z$, $\|Az\|^2=\sum_{i=1}^{D-1}|\langle g_i,z\rangle|^2$ is a sum of $D-1$ iid
+nonnegative variables with unit mean and marginal small-ball $\le Kr$ (bounded density); the
+tensorized Laplace bound \cite{RudelsonVershynin2008} gives
+$\PP\{\|Az\|^2\le R^2D\delta^2\}\le(C_2KR\delta)^{D-1}$.  Therefore
+\[
+  \PP\{u\in\mathrm{Cap}\}\le2e^{-c_1R^2D}+(C_0\sqrt y/\delta)^{D-1}(C_2KR\delta)^{D-1}
+   =2e^{-c_1R^2D}+(C_0C_2KR\sqrt y\,)^{D-1};
+\]
+the $\delta$ cancels --- the cap's smallness $\sqrt y$ is exactly the per-coordinate small-ball
+gain --- so no $\sqrt D$ factor survives.  Take $R=C_1$.
+\end{proof}
+
+\begin{proposition}[Assembly: the bar is $\EE|\varrho|^2=o(1)$]\label{appB:assembly}
+Let $\mu_1=\EE|\varrho|^2=\EE[1-X]$.  Using Lemma~\ref{appB:tail} (tuned $R=y^{-1/4}$ for the
+singular part),
+\[
+  \EE[X^{-a}]\le 1+O(\sqrt{\mu_1})+o(1),
+\]
+where $o(1)\to0$ as $D\to\infty$ uniformly.  In particular $\EE[X^{-a}]=1+o(1)$ if and only if
+$\mu_1=o(1)$.
+\end{proposition}
+
+\begin{proof}
+Split $\EE[X^{-a}]=\EE[X^{-a};X\le y_1]+\EE[X^{-a};y_1<X\le\tfrac12]+\EE[X^{-a};X>\tfrac12]$ with
+$y_1$ a small constant.  (i) By Lemma~\ref{appB:tail}, $\EE[X^{-a};X\le y_1]\le\sum_{k\ge k_1}
+2^{(k+1)a}\PP\{X\le2^{-k}\}=o(1)$, independent of $\mu_1$ (the geometric/tuned-tail series
+converges).  (ii) Markov on $1-X$: $\PP\{X\le\tfrac12\}\le2\mu_1$, so
+$\EE[X^{-a};y_1<X\le\tfrac12]\le y_1^{-a}\cdot2\mu_1=O(\mu_1)$.  (iii) On $X>\tfrac12$ write
+$X^{-a}=1+(X^{-a}-1)$; splitting at $1-\eta$, the part $X>1-\eta$ has $X^{-a}-1\le C_a\eta$, and the
+part $\tfrac12<X\le1-\eta$ has $X^{-a}-1\le2^a$ with $\PP\{X\le1-\eta\}\le\mu_1/\eta$, so
+$\EE[X^{-a};X>\tfrac12]\le1+C_a\eta+2^a\mu_1/\eta$.  Optimizing $\eta=\sqrt{\mu_1}$ gives
+$1+O(\sqrt{\mu_1})$.  Summing the three parts gives the claim; necessity follows from
+$\EE[X^{-a}]\ge\EE[1+aX^{-1}(1-X)]\ge1+a\mu_1$ via $(1-t)^{-a}\ge1+at$.
+\end{proof}
+
+\begin{proposition}[Exact decorrelation for disjoint sets]\label{appB:disjoint}
+For every $(m-1)$-set $S$, $\EE[u_Su_S^*]=\tfrac1m I_m$.  Consequently, for disjoint $S,T$,
+$\EE|\varrho|^2=\tfrac1m$.
+\end{proposition}
+
+\begin{proof}
+The iid entry law is invariant under coordinate permutations $\pi$ and under sign flips (real) /
+coordinate phase rotations (complex); the normal direction is equivariant, $u_{S}\mapsto P_\pi u_S$
+resp.\ $D_\phi u_S$, under the corresponding action on all rows.  Hence the projector
+$\Pi_S=u_Su_S^*$ has a law invariant under conjugation by the signed-permutation (resp.\
+phase-permutation) group, so $\EE[\Pi_S]$ commutes with that group; the only such matrices are
+scalars, and $\tr\EE[\Pi_S]=1$ forces $\EE[\Pi_S]=\tfrac1m I_m$.  For disjoint $S,T$ the normals
+$u_S,u_T$ are independent, so $\EE|\varrho|^2=\EE[\,u_T^*\EE[u_Su_S^*]\,u_T]=\tfrac1m\EE\|u_T\|^2=\tfrac1m$.
+\end{proof}
+
+\begin{theorem}[Reduction of the pair-correlation condition]\label{appB:reduction}
+For the iid bounded-density sub-Gaussian ensemble above, the pair-correlation condition --- hence
+the universality upper side of Theorem~\ref{thm:conditional-univ} --- holds provided
+\begin{equation}\label{appB:residual}
+  \EE\big[|\langle u_S,u_T\rangle|^2\ \big|\ D(S,T)\big]=o(1)\qquad(D(S,T)\ge\varepsilon m),
+\end{equation}
+equivalently the delocalization in expectation
+$\sup_{\|w\|=1}\EE[|\langle u,w\rangle|^2\mid E]=o(1)$ of the null vector $u$ in $E^\perp$.  The
+estimate \eqref{appB:residual} is exact ($=1/m$) for disjoint sets
+(Proposition~\ref{appB:disjoint}), and is the only remaining input: Lemmas
+\ref{appB:tail}--\ref{appB:assembly} are unconditional.
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:two-proj} and Proposition~\ref{prop:small-D-negligible} the second-moment ratio
+reduces to $\EE[X^{-a};D\ge\varepsilon m]$.  Proposition~\ref{appB:assembly} bounds this by
+$1+O(\sqrt{\mu_1})+o(1)$ with $\mu_1=\EE[|\varrho|^2;D\ge\varepsilon m]$, which is $o(1)$ under
+\eqref{appB:residual} (and $\EE|\varrho|^2\mid D=\EE[\,u_T^*(\EE[u_Su_S^*\mid E])u_T\,]\le
+\sup_w\EE[|\langle u,w\rangle|^2\mid E]$).  Thus the ratio $\to1$ and the pair-correlation
+condition holds.
+\end{proof}
+
+The residual \eqref{appB:residual} is met by a single, standard application of the local law,
+through a resolvent inequality that sidesteps the hard edge.
+
+\begin{proposition}[Resolvent reduction; conditional closure of \eqref{appB:residual}]\label{appB:resolvent}
+Conditionally on $E$ the projected rows are isotropic, $\EE[g_ig_i^*\mid E]=I_{E^\perp}$; let
+$Q=\tfrac{1}{D-1}GG^*$ on $E^\perp\cong\F^D$, the normalized sample-covariance matrix of $D-1$ isotropic
+vectors (aspect ratio $\to1$), of which $u$ is the null eigenvector.  For every $\eta>0$,
+\[
+  uu^*\ \preceq\ \eta\,(Q+\eta)^{-1},\qquad\text{hence}\qquad
+  \lambda_{\max}\!\big(\EE[uu^*\mid E]\big)\le \eta\,\big\|\EE[(Q+\eta)^{-1}\mid E]\big\| ,
+\]
+since $uu^*$ and $\eta(Q+\eta)^{-1}$ are simultaneously diagonal in the eigenbasis of $Q$ and their
+difference is the positive-semidefinite $\operatorname{diag}(0,\tfrac{\eta}{\lambda_2+\eta},\dots)$.
+Conditionally on $E$, $(D-1)Q$ equals the compression $P_{E^\perp}(AA^*)P_{E^\perp}$ of an iid-entry sample
+covariance, realized through the separable model to which the anisotropic local law
+\cite{KnowlesYin2017} (isotropic \cite{BEKYY2014} in the Gaussian sub-case) applies with population
+$P_{E^\perp}$; the rank-deficient kernel decouples, and off support the resolvent is $\eta$-Lipschitz in
+the population so the projection is admissible.  Its direction-uniform form at the off-support point
+$z=-\eta$, together with the deterministic bound $\|(Q+\eta)^{-1}\|\le\eta^{-1}$ on the local law's
+exceptional event (of probability $o(\eta^{1/2})$), gives the operator-norm-in-expectation estimate
+$\|\EE[(Q+\eta)^{-1}\mid E]\|=(1+o(1))\,m(-\eta)$, where $m$ is the Stieltjes transform of the
+Mar\v{c}enko--Pastur law at aspect one; as $m(-\eta)=(1+o(1))\eta^{-1/2}$ for $\eta\to0$,
+\[
+  \lambda_{\max}\!\big(\EE[uu^*\mid E]\big)\le(1+o(1))\sqrt\eta\ \xrightarrow[\ \eta=1/\log D\ ]{}\ 0 .
+\]
+This is \eqref{appB:residual}.  The hard edge is never resolved: the resolvent is evaluated off the
+spectrum at distance $\eta\gg D^{-1}$, the robust regime of the local law.
+\end{proposition}
+
+\begin{remark}[The off-support bound is self-contained]\label{appB:selfcontained}
+The estimate $\|\EE[(Q+\eta)^{-1}\mid E]\|\le(1+o(1))m(-\eta)$ does not require the anisotropic local
+law as a black box; in the off-support regime $\eta=1/\log D\gg\lambda_{\min}(Q)\sim D^{-2}$ it is
+elementary, and Lemma~\ref{appB:offsupport} gives a complete self-contained proof (the local law an
+optional alternative).  The mechanism is that $\lambda_{\max}(R)\approx\eta^{-1}$ (a spike on the
+random null vector $u$) while $\EE[R]$ is near-scalar, so
+$\lambda_{\max}(\EE[R])=(1+o(1))m(-\eta)=(1+o(1))\eta^{-1/2}$ --- confirmed distribution-free in
+simulation (Rademacher entries, $D=40$--$320$: $\lambda_{\max}(\EE R)/m(-\eta)\approx1.03$, against
+$\eta^{-1}/m(-\eta)\approx2.5$--$3$).
+\end{remark}
+
+\begin{lemma}[Off-support resolvent law]\label{appB:offsupport}
+Let $g_i=B^*a_i$ ($i=1,\dots,n=D-1$) be the projected rows, $a_i\in\F^N$ having independent mean-zero
+unit-variance sub-Gaussian entries with $\max_k\|a_{1,k}\|_{\psi_2}\le K$; put
+$Q=\tfrac1n\sum_i g_ig_i^*$, $\eta=1/\log D$, $R=(Q+\eta)^{-1}$, $m_D=\tfrac1D\tr R$, and let
+$m(-\eta)=\tfrac{\sqrt{\eta^2+4\eta}-\eta}{2\eta}\sim\eta^{-1/2}$ be the aspect-one
+Mar\v{c}enko--Pastur transform.  Then there is $C=C(K)$ with
+\[
+  \sup_{\|w\|=1}\big|\,\EE[\langle w,Rw\rangle]-m(-\eta)\,\big|\le C\,\frac{(\log D)^{7/4}}{\sqrt D}\,m(-\eta),
+\]
+so $\|\EE[R]\|=\lambda_{\max}(\EE[R])=(1+o(1))m(-\eta)$.
+\end{lemma}
+
+\begin{proof}
+\emph{Leave-one-out.}  With $Q^{(i)}=\tfrac1n\sum_{j\ne i}g_jg_j^*$, $R^{(i)}=(Q^{(i)}+\eta)^{-1}$ and
+$\beta_i=(1+\tfrac1n g_i^*R^{(i)}g_i)^{-1}\in(0,1]$, Sherman--Morrison gives $Rg_i=\beta_iR^{(i)}g_i$,
+and from $\eta R=I-\tfrac1n\sum_i g_ig_i^*R$ the exact identity
+$\eta R=I-\tfrac1n\sum_i\beta_i g_ig_i^*R^{(i)}$.  Deterministically $0\preceq R,R^{(i)}\preceq\eta^{-1}I$
+and $\|R^{(i)}\|_F\le\sqrt D\,\eta^{-1}$; applying $\tfrac1D\tr$ gives
+$\eta m_D=1-\tfrac nD+\tfrac1D\sum_i\beta_i$.
+
+\emph{Quadratic forms.}  By Hanson--Wright in variance form \cite{RudelsonVershynin2013},
+$\Var(a^*Ma)\le b_\F\|M\|_F^2$ with $b_\F\le CK^4$ for independent-entry $a$, Hermitian $M$.  Since
+$B^*B=I_D$, $g_i^*Mg_i=a_i^*(BMB^*)a_i$ with $\|BMB^*\|_F=\|M\|_F$, so this transfers to $g_i$ with no
+loss --- the one place the projected-iid structure is used, a bare isotropic $g_i$ need not have
+independent coordinates.  Thus $s_i:=\tfrac1n g_i^*R^{(i)}g_i$ has $\EE[s_i\mid R^{(i)}]=t_i:=\tfrac1n\tr R^{(i)}$
+and $\Var(s_i\mid R^{(i)})\le2b_\F\eta^{-2}/D$.
+
+\emph{Trace law.}  Rank-one interlacing gives the deterministic $0\le\tr R^{(j)}-\tr R\le\eta^{-1}$,
+so $\Var(m_D)\le\eta^{-2}/(2D)$ by Efron--Stein.  Let $\bar m$ solve $\eta\bar m^2+\eta\bar m-1=0$
+(so $\bar m=m(-\eta)$), i.e.\ $(\eta+\bar\beta)\bar m=1$, $\bar\beta=(1+\bar m)^{-1}\asymp\eta^{1/2}$.
+With $\Phi(x)=1-\tfrac nD+\tfrac nD(1+\phi x)^{-1}-\eta x$ ($\phi=D/n$), Taylor-expanding $\beta_i$
+around $t_i$ (via $\Var(s_i\mid R^{(i)})$) and $t_i$ around $\phi\bar m$ gives
+$|\Phi(\EE m_D)|\le Cb_\F\eta^{-2}/D$; as $\Phi'\le-\eta$, the mean value theorem yields
+$|\EE m_D-\bar m|\le Cb_\F\eta^{-3}/D=O((\log D)^{5/2}/D)\bar m$.  (Stability uses $\inf|\Phi'|\ge\eta$,
+not contraction of the iteration, whose derivative is $\asymp1$.)
+
+\emph{Direction-uniform law.}  Fix unit $w$, $T_w=\EE[w^*Rw]\le\eta^{-1}$, and $\beta_i'=(1+t_i)^{-1}$
+(a function of $R^{(i)}$ only).  Testing the identity against $w$ and taking $\EE$,
+$\eta T_w=1-\tfrac1n\sum_i\EE[\beta_i(w^*g_i)(g_i^*R^{(i)}w)]$.  Split $\beta_i=\beta_i'+(\beta_i-\beta_i')$:
+for the main term, exact isotropy $\EE[g_ig_i^*\mid\{g_j\}_{j\ne i}]=I$ gives
+$\EE[\beta_i'(w^*g_i)(g_i^*R^{(i)}w)]=\EE[\beta_i'\,w^*R^{(i)}w]$, removing the $w$-dependence, with
+$\beta_i'\to\bar\beta$ costing $O(\eta^{-3/2}T_w^{1/2}/\sqrt D)$; the cross term is, by
+Cauchy--Schwarz, $\le(\EE|\beta_i-\beta_i'|^2)^{1/2}(\EE|w^*g_i|^2|g_i^*R^{(i)}w|^2)^{1/2}
+\le CK^2\sqrt{b_\F}\,\eta^{-3/2}T_w^{1/2}/\sqrt D$ (using $\Var(s_i\mid R^{(i)})$ and the transferred
+sub-Gaussian fourth moment).  With the removal bound $T_w\le T_w^{(i)}\le T_w(1+O(\tfrac{\log D}{D}))$,
+$(\eta+\bar\beta)T_w=1+\mathcal E_w$, $|\mathcal E_w|\le C(\tfrac{\log D}{D}\bar\beta T_w
++K^2\sqrt{b_\F}\eta^{-3/2}T_w^{1/2}/\sqrt D)$.  The a priori $T_w\le\eta^{-1}$ makes $\mathcal E_w=o(1)$,
+so $T_w=(1+o(1))\bar m\asymp\eta^{-1/2}$; re-inserting sharpens
+$|\mathcal E_w|\le CK^4(\log D)^{7/4}/\sqrt D$ uniformly in $w$.  With
+$\bar m=m(-\eta)(1+O(\sqrt{\log D}/D))$ this is the claim, and $\sup_w T_w=\lambda_{\max}(\EE R)$.
+\end{proof}
+
+\begin{corollary}\label{appB:closure}
+By Proposition~\ref{appB:resolvent}, whose off-support resolvent estimate is supplied either
+self-contained (Remark~\ref{appB:selfcontained}) or by citing \cite{BEKYY2014,KnowlesYin2017}, the
+non-Gaussian universality upper side of
+Theorem~\ref{thm:conditional-univ} holds for iid bounded-density sub-Gaussian entries.  The same estimate
+supplies the second-moment (pair-correlation) input to the fluctuation analysis of
+Section~\ref{sec:open}, hence the one-sided Gumbel bound; the full Gumbel law of
+Conjecture~\ref{conj:gumbel} requires in addition the higher $k$-point correlations and is not implied by
+the pair-correlation alone.
+\end{corollary}
+
+\begin{remark}
+Estimate \eqref{appB:residual} is a no-gaps delocalization \emph{in expectation} for the null
+vector of projections of iid rows.  Isotropy of the projected rows pins only $\tr\EE[uu^*\mid E]=1$,
+so a soft central-limit argument does not establish the spectral bound directly; this is why the
+resolvent route of Proposition~\ref{appB:resolvent} --- which trades the spectral bound for an
+off-support resolvent norm controlled by the local law --- is the natural one.  The estimate holds
+with the sharp rate $(1+o(1))/D$ in simulation, distribution-free.  We state the clean local-law
+input separately as Problem~\ref{prob:pc} for readers who wish to avoid invoking
+\cite{BEKYY2014,KnowlesYin2017}.
+\end{remark}

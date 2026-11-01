@@ -1,0 +1,44 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261012T095500Z-fleet01-B19-b09-composition-review-a091",
+  "primary_packet_id": "A091",
+  "claims": [
+    {
+      "claim_id": "B09-BIASED-BLOCK-UNCERTAINTY-01",
+      "version": "source-v1",
+      "status": "INDEPENDENTLY_ACCEPTED",
+      "statement": "For every finite Boolean function under every interior product measure and every physical block A, L_A=M_A+J_A and 0<=J_A<=M_A+Delta_A(p).",
+      "evidence": ["COMPOSITION_REVIEW.md sections 2-3", "CHECK.py", "CHECK.out"]
+    },
+    {
+      "claim_id": "B09-TAXFREE-BIASED-UNCERTAINTY",
+      "version": "source-v1-repaired-certificate",
+      "status": "REFUTED",
+      "statement": "The universal claim J_A<=M_A fails for the two-bit AND sign gate at p=1/8,q=1/4 by more than 0.1195 bits.",
+      "evidence": ["source-bound repaired certificate blobs c3adb486..., 0a6917fe..., d3db5bd0..."]
+    },
+    {
+      "claim_id": "B09-EXACT-TENSOR-TRANSFER",
+      "version": "review-v1",
+      "status": "INDEPENDENTLY_ACCEPTED",
+      "statement": "M,J,L,Delta add for exact product functions on disjoint variable sets with aligned revealed blocks.",
+      "evidence": ["COMPOSITION_REVIEW.md section 5", "CHECK.py"]
+    },
+    {
+      "claim_id": "B09-GENERAL-COMPOSITION-TRANSFER",
+      "version": "source-section5-prose",
+      "status": "NOT_ACCEPTED_AT_GENERAL_SCOPE",
+      "statement": "The supplied exact tensor calculation does not prove a single-use M,J,Delta transfer through arbitrary Boolean compositions.",
+      "gap": "An interface to the O'Donnell-Tan biased FEI+ cocycle is absent; shared variables are excluded."
+    },
+    {
+      "claim_id": "B19-B09-AND-ENDPOINT-LOWER-BOUND",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_BY_REVIEWER_PENDING_FRESH_A085_A090_REVIEW",
+      "statement": "For g(X,Y)=(-1)^(XY), reveal X, P(X=1)=p->0 and fixed 0<q=P(Y=1)<1/2, J-M=[4q(1-2q)+o(1)]p log2(1/p); at q=1/4 the coefficient is 1/2.",
+      "consequence": "No uniform O(p) correction can replace the rare logarithmic tax.",
+      "evidence": ["COMPOSITION_REVIEW.md section 4", "CHECK.py", "CHECK.out"]
+    }
+  ],
+  "global_status": "FULL_FEI_OPEN"
+}

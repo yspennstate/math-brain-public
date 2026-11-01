@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A026: exact good-coordinate certificate for affine Fourier dimension four}
+\author{A026, B06}\maketitle
+All entropies are in bits. Let $f:\{-1,1\}^n\to\{-1,1\}$,
+$a_S=\widehat f(S)$, $I_i=\sum_{S\ni i}a_S^2$, and
+$B_i=H(S_i\mid S_{-i})$ for the law $\Pr(S)=a_S^2$.
+Define the amplitude proxy
+\[
+ A_i=2\sum_{T\not\ni i}|a_Ta_{T\cup\{i\}}|.
+\]
+\paragraph{Scalar bound.} $h_2(p)\le2\sqrt{p(1-p)}$ on $[0,1]$, hence $B_i\le A_i$.
+For completeness put $F(p)=2\sqrt{p(1-p)}-h_2(p)$.
+Symmetry reduces to $0\le p\le1/2$, where $F(0)=F(1/2)=0$.
+Writing $t=\sqrt{(1-p)/p}$ gives
+$F'(p)=G(t)=t-t^{-1}-2\ln(t)/\ln2$.
+Here $G'(t)=1+t^{-2}-2/(t\ln2)$ has exactly one zero on $(1,\infty)$,
+is negative before it and positive after it. Since $G(1)=0$ and $G(t)\to\infty$,
+$G$ has one further zero. Thus $F'$ is positive then negative as $p$ increases
+from zero to $1/2$, proving $F\ge0$. The packet bound follows by multiplying
+by $a_T^2+a_{T+i}^2$ and summing, omitting zero packets.
+
+\paragraph{Exact finite lemma.} Every nonconstant Boolean function on at most
+four variables has a relevant $i$ with $A_i\le(7/2)I_i$.
+This is a finite integer certificate, not an asserted symbolic classification.
+For $N=2^n$ use integer Walsh coefficients $W_S=N a_S$. The selected inequality is
+\[
+4\sum_{T\not\ni i}|W_T W_{T+i}|\le7\sum_{T\not\ni i}W_{T+i}^2,
+\qquad \sum_{T\not\ni i}W_{T+i}^2>0.
+\]
+The two independent enumerations cover all truth tables modulo global sign
+for $n=1,2,3,4$: $2,8,128,32768$ cases. The exact maxima of
+$\min_{i:I_i>0}A_i/I_i$ are $0,2,3,7/2$. The last three maxima are attained
+by a one-point defect. Butterfly and Gray-update implementations and their
+integer outputs are included in the run. No floating logarithm is used.
+
+\paragraph{Hereditary extension.} Suppose the nonzero Fourier support is
+contained in an affine space $c+V$ over $\mathbb F_2$, with $\dim V\le4$.
+If a relevant coordinate $i$ has $e_i\notin V$, no two support points differ
+by $e_i$, so $A_i=B_i=0$. Its two child squared spectra agree packetwise,
+and the exact entropy decrement is zero. If every relevant $e_i$ lies in $V$,
+these independent unit vectors show that at most four coordinates are relevant.
+The finite lemma then supplies a relevant $i$ with $B_i\le A_i\le(7/2)I_i$.
+Under a physical coordinate restriction, the child Fourier support lies in
+the projection of $c+V$, whose affine dimension is at most four. Hence the
+hypothesis holds at every reached nonconstant child.
+
+\paragraph{Physical induction.} For a queried coordinate the exact identities are
+\[
+H(f)-\tfrac12[H(f_+)+H(f_-)]=B_i+\operatorname{JS}(P_+,P_-),\quad
+I(f)=I_i+\tfrac12[I(f_+)+I(f_-)].
+\]
+The recovered bound $\operatorname{JS}\le(2/\ln2)\min(I_i,1-I_i)$ gives
+\[
+ H(f)\le(7/2+2/\ln2)I(f)
+\]
+through induction in the number of physical coordinates. For the $e_i\notin V$
+steps the actual JS and erasure are both zero; this proof retains that exact
+rebate rather than paying a marginal binary entropy.
+
+\paragraph{Disjoint tensor closure.} The same selection constant holds for
+$f(x)=\prod_j f_j(x_{J_j})$, where the $J_j$ are disjoint and every factor has
+affine Fourier dimension at most four. Squared spectra are independent across
+factors, so both $B_i$ and $I_i$ for $i\in J_j$ equal the factor values.
+Restricting a coordinate preserves the factorization and each affine-dimension
+bound. Choose any nonconstant factor and apply the preceding rule.
+
+\paragraph{Exact mismatch rebate.} If $g,h$ are the children, set
+$q_T=(\widehat g(T)^2+\widehat h(T)^2)/2$,
+$m_T=(|\widehat g(T)|-|\widehat h(T)|)^2/4$, $M=\sum_Tm_T$ and
+$\nu=m/M$ when $M>0$. Packetwise sign changes merely exchange the two parent
+probabilities, so $B_i=\sum_Tq_Th_2(m_T/q_T)$. Using
+$-(1-t)\ln(1-t)\le t$ gives the recovered estimate
+\[
+B_i\le M\big[\log_2(1/M)-D_2(\nu\Vert q)+1/\ln2\big].
+\]
+For $M=0$, $B_i=\operatorname{JS}=0$ exactly. The selection can use the minimum
+of this rebate, $A_i$, and the exact packet entropy. The finite proof only needs
+the amplitude certificate; it discards no rebate in its zero-cost reduction.
+
+\paragraph{Universal frontier.} For arbitrary Boolean functions, the first
+unproved line is the existence of a relevant $i$ with $B_i\le K I_i$ for a
+dimension-independent finite $K$. The affine-dimension hypothesis cannot be
+removed by treating a general linear Fourier change as physical queries.
+Even the stronger proxy $A_i\le4I_i$ fails simultaneously at every coordinate
+of the symmetric threshold on $32$ variables with Hamming threshold $24$:
+$A_i/I_i=2220940451/536870912>4$. This exact finite stress does not establish
+unboundedness of the proxy, a failure of $B_i\le4I_i$ on that witness, or a
+disproof of FEI. Known recovered controls already rule out universal $K=4$
+for the true erasure mechanism. This restricted result makes no priority claim.
+\end{document}

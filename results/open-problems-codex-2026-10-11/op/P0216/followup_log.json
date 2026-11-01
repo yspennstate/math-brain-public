@@ -1,0 +1,36 @@
+[
+  {
+    "service": "original",
+    "url": "https://www.stat.berkeley.edu/~aldous/Research/OP/common_subs.pdf",
+    "bytes": 83865,
+    "status": "ok"
+  },
+  {
+    "service": "notes",
+    "url": "https://www.stat.berkeley.edu/~aldous/Research/OP/substructures_posets.pdf",
+    "bytes": 174499,
+    "status": "ok"
+  },
+  {
+    "service": "arxiv_specific",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22common%22%20AND%20%28all%3A%22posets%22%20OR%20all%3A%22two-dimensional%20partial%22%29&max_results=50",
+    "bytes": 100137,
+    "status": "ok"
+  },
+  {
+    "service": "crossref_specific",
+    "url": "https://api.crossref.org/works?query=common%20induced%20random%20partial%20orders&rows=20",
+    "bytes": 84166,
+    "status": "ok"
+  },
+  {
+    "service": "openalex_retry",
+    "url": "https://api.openalex.org/works?search=Aldous%20common%20substructures&per_page=10",
+    "status": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "semantic_retry",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=common%20random%20posets&limit=10&fields=title,authors,year,url,externalIds",
+    "status": "HTTP Error 429: "
+  }
+]

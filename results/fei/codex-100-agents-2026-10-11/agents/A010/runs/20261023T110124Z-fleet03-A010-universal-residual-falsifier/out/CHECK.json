@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "helper": "A010-multireference-review-v1",
+  "pilot": false,
+  "assertions": 75948,
+  "seconds": 8.264050799999495,
+  "families": [
+    {
+      "w": 1,
+      "r": 2,
+      "inputs": 16,
+      "positive_primes": 2,
+      "negative_primes": 3,
+      "joint_targets": 4,
+      "gate_pair_clause_tests": 16,
+      "I": "1"
+    },
+    {
+      "w": 2,
+      "r": 4,
+      "inputs": 65536,
+      "positive_primes": 64,
+      "negative_primes": 20,
+      "joint_targets": 144,
+      "gate_pair_clause_tests": 65536,
+      "I": "27/16"
+    }
+  ],
+  "moment_root_cases": 117,
+  "connector": [
+    {
+      "m": 2,
+      "I0": "21/16",
+      "I1": "5/4",
+      "cylinder_energy": "3/16",
+      "fixed_first_double_root_choices": 3
+    },
+    {
+      "m": 3,
+      "I0": "315/512",
+      "I1": "299/512",
+      "cylinder_energy": "1/16",
+      "fixed_first_double_root_choices": 13
+    },
+    {
+      "m": 4,
+      "I0": "465/2048",
+      "I1": "441/2048",
+      "cylinder_energy": "5/256",
+      "fixed_first_double_root_choices": 85
+    }
+  ],
+  "exact_insertion_outputs": 92,
+  "budget_scalar_pairs": 579,
+  "phi_upper": "1149498064757657361334262224020267423621/1467795007078400000000000000000000000000",
+  "new_theorem_scope": "w>=64; at most floor(2^(w/4)) positive original-prime queues; any fixed negative-prime mixture; all feasible weights/orders/posteriors"
+}

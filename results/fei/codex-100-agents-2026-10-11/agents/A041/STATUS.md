@@ -1,0 +1,2 @@
+STATE: Stage 5 complete: complete per-set max quadratic reference has Z<=D_mixed+M and mass tax<=2D_mixed/e; one-direction entropy payment refuted; recovered guards preserved; 61,804 exact checks. Prior obstruction review consumed; quadratic source scoped HOLDS. Full FEI OPEN.
+NEXT: Pay selected C_star or its signed ordinary-KL remainder from the same mixed deficit with full off-support/terminal costs; A045/A044 consume; A090/A091/A085 review new reference and one-direction lower bound.

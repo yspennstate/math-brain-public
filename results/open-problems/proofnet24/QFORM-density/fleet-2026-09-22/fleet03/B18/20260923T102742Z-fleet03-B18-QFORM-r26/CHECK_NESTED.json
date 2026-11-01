@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T102742Z-fleet03-B18-QFORM-r26",
+  "status": "PASS",
+  "new_result_id": "QFORM-NESTED-PIVOT-RANK2-CROSS-COMPILER-v1",
+  "duplicate_scope_detected": {
+    "prior_run": "20260923T092851Z-fleet03-B18-QFORM-r26",
+    "prior_scientific_commit": "dfbc17f17b702ed7c7191ba24648a70f67dda851",
+    "duplicated_base_result": "rank-two cross half-Riesz constant 8 and one-pivot Schur consequence",
+    "handling": "preserved this run's immutable independent derivation but did not register it as a new fleet result"
+  },
+  "recurrence": {
+    "M1": "8*|a1|^(-1/2)*Delta^(-1/4)",
+    "Mj": "2*|aj|^(-1/2)*M_(j-1)^(1/2)",
+    "closed_form": "2^(2+2^(1-m))*Delta^(-1/2^(m+1))*prod_{j=1}^m |aj|^(-1/2^(m-j+1))"
+  },
+  "constant_exponents": {
+    "m1": 3.0,
+    "m2": 2.5,
+    "m3": 2.25,
+    "limit": 2.0
+  },
+  "m2_exact": "4*sqrt(2)*|a2|^(-1/2)*|a1|^(-1/4)*Delta^(-1/8)",
+  "target_example": {
+    "spectrum": ["(9+sqrt(65))/8","(9-sqrt(65))/8","1","-1","1/4","-1/4"],
+    "large_eigenvalue_count_abs_ge_1": 3,
+    "a1": 0.25,
+    "a2": 1.0,
+    "Delta": 0.25,
+    "nested_bound_exact": "8*2^(1/4)",
+    "nested_bound_numeric": 9.513656920021769,
+    "direct_outer_one_pivot_bound_numeric": 11.313708498984761,
+    "strict_improvement": true
+  },
+  "partner_source": {
+    "account": "fleet04",
+    "slot": "B18",
+    "commit": "441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3",
+    "result": "QFORM-DEPENDENT-SQUARE-SMOOTHING-v1"
+  },
+  "monte_carlo_used": false
+}

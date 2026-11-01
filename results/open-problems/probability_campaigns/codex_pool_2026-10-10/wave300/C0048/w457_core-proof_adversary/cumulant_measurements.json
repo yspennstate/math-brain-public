@@ -1,0 +1,94 @@
+{
+  "command": "python -X utf8 validate_cumulant_mixture.py",
+  "gate": {
+    "task": "Independent spin-versus-FK check of the fourth-cumulant variance term",
+    "max_vertices": 4,
+    "max_spin_assignments_per_case": 81,
+    "max_fk_configurations_per_case": 16,
+    "max_cases": 2,
+    "max_elapsed_seconds": 30,
+    "max_output_bytes": 16384,
+    "command": "python -X utf8 validate_cumulant_mixture.py",
+    "write_root": "~/brain_workers/w457",
+    "proof_limit": "Finite exact cases only, not critical-limit estimates"
+  },
+  "cases": [
+    {
+      "case": "one-edge-q3-half",
+      "vertices": 2,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "spin_assignments": 9,
+      "fk_configurations": 2,
+      "partition_numerator": 12,
+      "direct_spin_cumulants": {
+        "2": "5/9",
+        "3": "7/27",
+        "4": "-8/27"
+      },
+      "fk_cluster_cumulants": {
+        "2": "5/9",
+        "3": "7/27",
+        "4": "-8/27"
+      },
+      "variance_h2": "3/4",
+      "baseline_omitted_variance_kappa4": "-11/27",
+      "corrected_kappa4": "-8/27",
+      "baseline_absolute_error": "1/9",
+      "corrected_absolute_error": "0",
+      "pressure_kappa4": "-4/27",
+      "baseline_pressure_absolute_error": "1/18"
+    },
+    {
+      "case": "cycle4-q3-half",
+      "vertices": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "spin_assignments": 81,
+      "fk_configurations": 16,
+      "partition_numerator": 258,
+      "direct_spin_cumulants": {
+        "2": "572/387",
+        "3": "1220/1161",
+        "4": "-70388/49923"
+      },
+      "fk_cluster_cumulants": {
+        "2": "572/387",
+        "3": "1220/1161",
+        "4": "-70388/49923"
+      },
+      "variance_h2": "16932/1849",
+      "baseline_omitted_variance_kappa4": "-3212/1161",
+      "corrected_kappa4": "-70388/49923",
+      "baseline_absolute_error": "22576/16641",
+      "corrected_absolute_error": "0",
+      "pressure_kappa4": "-17597/49923",
+      "baseline_pressure_absolute_error": "5644/16641"
+    }
+  ],
+  "equalities_checked": 6,
+  "baseline_wrong_fourth_cumulants": 2,
+  "corrected_wrong_fourth_cumulants": 0,
+  "elapsed_seconds": 0.0015510000521317124,
+  "scope": "Tests the omitted-variance shortcut, which w456 correctly did not use"
+}

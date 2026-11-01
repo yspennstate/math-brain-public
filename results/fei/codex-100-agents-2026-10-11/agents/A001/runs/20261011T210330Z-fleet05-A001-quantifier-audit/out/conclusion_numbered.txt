@@ -1,0 +1,177 @@
+1: \section{Universal estimates that remain open}\label{sec:remaining}
+2: 
+3: The posterior forest inequality~\eqref{eq:foresttarget} is a concrete sufficient condition for unrestricted FEI. Its quantifiers matter: the representation, incidence weights, and distribution on realizable forests may depend on the function, but the final constant must not. Naming the optimal posterior does not bound its cost. The addressing calculation proves that sharing and posterior information can remove real losses; it does not prove that the remaining cost is universally bounded.
+4: 
+5: Restriction induction offers a different sufficient condition. A universal choice of a coordinate with bounded entropy increment per unit influence, or a corresponding amortized bound for a complete stopping tree, would suffice. The bent splice excludes a bound at every coordinate and the maximum-influence rule. The simultaneous reduction in Theorem~\ref{thm:simultaneous} shows that small total influence, small relative influences, near constancy, and separated Fourier supports do not collectively remove the full problem. It leaves valid existential selection and global tree accounting open.
+6: 
+7: The corrected product-measure composition identities remain useful for classes of gates. However, a claim for every Boolean outer gate of every arity at uniform input probabilities already includes the original conjecture. Likewise, a formula representation using independent occurrences cannot be transferred through the diagonal without an additional estimate. The following example makes that failure explicit.
+8: 
+9: \begin{proposition}[Independent occurrence cloning]\label{prop:cloning}
+10: There are read-once formulas $F_m$ whose total influence and Fourier entropy both tend to zero, such that identifying occurrences of the same original variable gives $\Maj_{2m-1}$, whose Fourier entropy is at least $2$.
+11: \end{proposition}
+12: \begin{proof}
+13: The positive prime DNF of $\Maj_{2m-1}$ has all
+14: $M=\binom{2m-1}{m}$ conjunctions of $m$ positive literals. Every clause is essential: the input with exactly its $m$ coordinates positive satisfies no other clause. Replace each literal occurrence by an independent bit. The lifted formula is an OR of $M$ independent $m$-conjunctions.
+15: 
+16: Put $p=2^{-m}$ and $\mu=Mp$. Counting pivotal inputs gives
+17: \[
+18:  \I(F_m)=M m\,2^{1-m}(1-p)^{M-1}
+19:         =2m\mu(1-p)^{M-1}.
+20: \]
+21: The central binomial coefficient is at least the average coefficient in its row, so $\mu\ge2^{m-2}/m$, whereas $\mu\le2^{m-1}$. Hence $\I(F_m)\le2m\mu e^{-\mu+p}\to0$.
+22: 
+23: The false output probability is $u_m=(1-p)^M\le e^{-\mu}$ and the dimension is $n_m=Mm$. For any Boolean function on $n$ coordinates, splitting off the empty spectral atom gives
+24: \begin{equation}\label{eq:dimensionbound}
+25:  \HH(f)\le h_2(\Var(f))+\Var(f)\log(2^n-1).
+26: \end{equation}
+27: Here $\Var(F_m)\le4e^{-\mu}$ and $n_m\le m2^{2m-1}$, so both terms tend to zero.
+28: 
+29: Identifying the copies recovers majority. This function is balanced, and for $m\ge2$ its coordinate influences are at most $1/2$. For every nonempty $S$, choose $i\in S$ and use
+30: \[
+31:  |\wh f(S)|=|\wh{d_i f}(S\setminus\{i\})|
+32:  \le\E|d_i f|=\I_i(f)\le\tfrac12.
+33: \]
+34: Every spectral atom has probability at most $1/4$, so its spectral entropy is at least $2$.
+35: \end{proof}
+36: 
+37: The generic minterm representation has a different limitation. Even after eliminating all latent minterm names, the uniform reference on nonempty subsets gives only~\eqref{eq:dimensionbound}, or $\HH(f)\le2\I(f)+n\Var(f)$. For balanced majority, $\Var(f)=1$ and $\I(f)\le\sqrt n$, so the last term cannot be absorbed into a universal multiple of influence. A universal forest theorem must exploit more than the existence of a finite formula.
+38: 
+39: For comparison, the general bound in~\cite[Theorem 1.3]{KKLMS20}, after taking the cutoff to be the full dimension, has the form
+40: \[
+41:  \HH(f)\le K\sum_S |S|\log(|S|+1)P_f(S)+K\I(f)
+42: \]
+43: for an absolute $K$. The class theorems discussed here remove logarithmic losses by using additional structure. Percolation supplies a spatial hierarchy whose expected occupancy costs can be summed through arm estimates~\cite{GPS10,Percolation}; ordered thresholds supply rank estimates; disjoint composition supplies a unique spectral decomposition. None of these mechanisms has yet been shown here to pay the corresponding cost for every Boolean function.
+44: 
+45: \section{Finite verification and source scope}\label{sec:verification}
+46: 
+47: The accompanying scripts verify exact identities on finite examples. They are checks of the derivations, and the proofs above do not depend on their output.
+48: 
+49: The activation and systematic-code checker visits all $256$ Boolean functions on three variables, takes two tensor copies, activates behind two controls, and applies a code with four redundant bits and distance three. It verifies $1{,}114{,}112$ Walsh coefficient identities using integer arithmetic, the exact influence and variance identities, and $3{,}840$ spectral projection injectivity checks. Entropy preservation is checked by equality of coefficient multisets. Only the separate entropy expansion check uses floating logarithms; its maximum discrepancy was less than $3\times10^{-16}$.
+50: 
+51: The auxiliary-smoothing checker treats all $16$ two-variable seeds, using rational Fourier coefficients on $26$ final coordinates. It checks the influence identities, spectral distance at least three, $5{,}616$ projection injectivity tests, and $1{,}600$ direct comparisons between the sparse Fourier expansion and the truth function. No floating arithmetic is used in these comparisons.
+52: 
+53: The multiplexer checker treats all $256$ ordered pairs of two-variable branches, including all $96$ orthogonal pairs. Entropy identities are represented as rational combinations of logarithms of primes; inequalities are reduced to integer comparisons. It also checks four addressing spectra, balanced and unbalanced subcube partitions, root conditioning, and posterior label cancellation. The restriction checker enumerates all $65{,}536$ four-variable truth tables. Walsh coefficients and influence budgets are exact dyadic quantities, while entropy rankings use floating arithmetic. Exact formulas for the reported witnesses are independently evaluated at high precision; no interval certificate for the ordering of all candidates is claimed.
+54: 
+55: \section*{Acknowledgements and funding}
+56: The research presented in this paper was supported by the European Research
+57: Council (ERC) under the European Union's Horizon Europe research and
+58: innovation programme (grant agreement No.~101041711), by the Simons
+59: Foundation as part of the Collaboration on the Mathematical and Scientific
+60: Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+61: the Israel Science Foundation (grant number 2258/19), and by the Israel
+62: Science Foundation (ISF Grant 4101/25). Computational resources were
+63: provided in part by Google Cloud through its education credits program
+64: (credit 530550103).
+65: 
+66: \section*{Declaration of competing interest}
+67: The author holds equity in Heights Labs and in Convex Nexus Capital and
+68: has a management role at Convex Nexus Capital. These entities are included
+69: in the funding declaration above.
+70: 
+71: \section*{Declaration of generative AI and AI-assisted technologies}
+72: This paper forms part of Math Brain, an ongoing project on the use of AI
+73: systems for research mathematics, and builds on earlier notes in that
+74: project. In October 2026, OpenAI's GPT-6 Astra Pro, working in ChatGPT with
+75: collaborating agents, was used to examine proof routes, derive and challenge
+76: reductions, search the literature and the research archive, carry out finite
+77: computations, and prepare the manuscript. Separate agents studied
+78: restriction induction, witness forests, and biased composition, and checked
+79: the combined constructions. These checks are not peer review. The author
+80: directed the work and is responsible for its content and dissemination.
+81: 
+82: \section*{Data and code availability}
+83: The source package accompanying this manuscript contains the LaTeX source,
+84: proof notes, finite verification scripts, their recorded outputs, and a
+85: source manifest. No experimental data were used. The package is supplied
+86: with the manuscript.
+87: 
+88: \begin{thebibliography}{99}
+89: \bibitem{FK96}
+90: E.~Friedgut and G.~Kalai,
+91: \emph{Every monotone graph property has a sharp threshold},
+92: Proc. Amer. Math. Soc. \textbf{124} (1996), no.~10, 2993--3002.
+93: \href{https://doi.org/10.1090/S0002-9939-96-03732-X}{doi:10.1090/S0002-9939-96-03732-X}.
+94: 
+95: \bibitem{GPS10}
+96: C.~Garban, G.~Pete and O.~Schramm,
+97: \emph{The Fourier spectrum of critical percolation},
+98: Acta Math. \textbf{205} (2010), 19--104.
+99: \href{https://doi.org/10.1007/s11511-010-0051-x}{doi:10.1007/s11511-010-0051-x}.
+100: \href{https://arxiv.org/abs/0803.3750}{arXiv:0803.3750}.
+101: 
+102: \bibitem{GMP26}
+103: M.~J.~Gonz\'alez, P.~MacManus and M.~C.~Pereyra,
+104: \emph{Further evidence towards the Fourier entropy--influence conjecture},
+105: preprint, 2026.
+106: \href{https://arxiv.org/abs/2606.00246v2}{arXiv:2606.00246v2}.
+107: 
+108: \bibitem{KKLMS20}
+109: E.~Kelman, G.~Kindler, N.~Lifshitz, D.~Minzer and M.~Safra,
+110: \emph{Towards a proof of the Fourier--entropy conjecture?},
+111: preprint, 2019, revised 2020.
+112: \href{https://arxiv.org/abs/1911.10579v2}{arXiv:1911.10579v2}.
+113: 
+114: \bibitem{OD14}
+115: R.~O'Donnell,
+116: \emph{Analysis of Boolean Functions}, Cambridge University Press, 2014.
+117: \href{https://www.cs.cmu.edu/~odonnell/papers/Analysis-of-Boolean-Functions-by-Ryan-ODonnell.pdf}{Author's edition}.
+118: 
+119: \bibitem{ODT13}
+120: R.~O'Donnell and L.-Y.~Tan,
+121: \emph{A composition theorem for the Fourier entropy--influence conjecture},
+122: in: ICALP 2013, Lecture Notes in Comput. Sci. \textbf{7965}, Springer, 2013, 780--791.
+123: \href{https://doi.org/10.1007/978-3-642-39206-1_66}{doi:10.1007/978-3-642-39206-1\_66}.
+124: \href{https://arxiv.org/abs/1304.1347}{arXiv:1304.1347}.
+125: 
+126: \bibitem{OWZ11}
+127: R.~O'Donnell, J.~Wright and Y.~Zhou,
+128: \emph{The Fourier entropy--influence conjecture for certain classes of Boolean functions},
+129: in: ICALP 2011, Lecture Notes in Comput. Sci. \textbf{6755}, Springer, 2011, 330--341.
+130: \href{https://doi.org/10.1007/978-3-642-22006-7_28}{doi:10.1007/978-3-642-22006-7\_28}.
+131: 
+132: \bibitem{Percolation}
+133: Y.~Shmalo,
+134: \emph{Entropy and singularity of spectral and pivotal sets in planar percolation},
+135: preprint, 2026.
+136: \href{https://arxiv.org/abs/2609.15388}{arXiv:2609.15388}.
+137: Only its entropy and spatial encoding results are used for comparison here.
+138: 
+139: \bibitem{Threshold}
+140: Y.~Shmalo,
+141: \emph{Fourier entropy of threshold functions and their compositions},
+142: companion manuscript, 11 October 2026.
+143: 
+144: \bibitem{Shalev18}
+145: G.~Shalev,
+146: \emph{On the Fourier entropy influence conjecture for extremal classes},
+147: preprint, 2018, revised 2019.
+148: \href{https://arxiv.org/abs/1806.03646v2}{arXiv:1806.03646v2}.
+149: 
+150: \bibitem{BrainErasure}
+151: Math Brain research notes,
+152: \emph{FEI: a corrected reduction and constant-preserving erasure obstructions},
+153: 18 September 2026, unpublished.
+154: Repository path: \texttt{research\_pushes/2026-09-18-sidorenko-fei-ising/FEI.md}.
+155: 
+156: \bibitem{BrainCritical}
+157: Math Brain research notes,
+158: \emph{FEI continuation: global attempts and bounded critical-core search},
+159: 30 September 2026, unpublished.
+160: Repository path: \texttt{research\_pushes/2026-09-30-fei-critical-search/ATTEMPTS.md}.
+161: 
+162: \bibitem{BrainAllocation}
+163: Math Brain research notes,
+164: \emph{FEI logarithmic allocation report}, 30 September 2026, unpublished.
+165: Repository path: \texttt{research\_pushes/2026-09-30-fei-log-allocation/REPORT.md}.
+166: 
+167: \bibitem{BrainGate}
+168: Math Brain research notes,
+169: \emph{FEI gate reformulation}, 22 September 2026, unpublished.
+170: Repository continuation: \texttt{proofnet24/P03-fei/continuations/2026-09-22-gate-reformulation}.
+171: 
+172: \bibitem{BrainMonotone}
+173: Math Brain research notes,
+174: \emph{Monotone and full-monotone FEI continuations},
+175: 24 September 2026, unpublished.
+176: Repository continuations: \texttt{2026-09-24-monotone} and \texttt{2026-09-24-full-monotone}.
+177: \end{thebibliography}

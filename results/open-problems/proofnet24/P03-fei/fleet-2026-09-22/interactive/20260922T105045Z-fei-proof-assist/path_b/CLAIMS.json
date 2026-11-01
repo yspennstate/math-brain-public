@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "independent_review_status": "PENDING",
+  "source_scope": "Iterates of a fixed balanced regular b-input Boolean gate with equal input influences alpha=mu/b and 1<mu<b.",
+  "claims": [
+    {
+      "id": "FEI-HYBRID-REFERENCE-MULTISCALE-v1",
+      "status": "PROVED_AUXILIARY_SELF_CHECKED",
+      "statement": "One normalized hybrid reference that uses true spectral child branching at retained physical heights and occurrence-reference branching elsewhere yields a single variational KL lower certificate; its loss is the exact sum of omitted source-weighted conditional branch divergences.",
+      "proof": "REPORT.md Sections3-4",
+      "full_fei_implication": "Conditional family mechanism only; arbitrary prime gates need not have the physical hierarchy."
+    },
+    {
+      "id": "FEI-LOGSCALE-KL-ADDITIVE-RECOVERY-v1",
+      "status": "PROVED_AUXILIARY_SELF_CHECKED",
+      "statement": "For each fixed regular balanced generator and epsilon in (0,1], O_g(log m+log(1/epsilon)) retained physical hierarchy heights recover K_occ to additive epsilon I at every depth m. Explicit finite-depth remainder and bottom/top cutoffs are given.",
+      "proof": "REPORT.md Theorems5.1 and6.1",
+      "full_fei_implication": "No full FEI conclusion; provides coefficient-one KL recovery up to prescribed additive influence scale on the stated actual Boolean family."
+    },
+    {
+      "id": "FEI-RM3-LOGSCALE-CENTER6-CERTIFICATE-v1",
+      "status": "PROVED_AUXILIARY_SELF_CHECKED",
+      "statement": "On recursive ternary majority of depth m, retaining bottom min(m,ceil(log_(3/2)(4(m+1)))) heights yields a normalized variational credit at least Hmax-6(I-1) for every m.",
+      "proof": "REPORT.md Corollary7.1",
+      "full_fei_implication": "Center6 is only the certified extraction threshold for this family; it is not a new universal FEI constant and this family already has H=4(I-1)."
+    },
+    {
+      "id": "FEI-RM3-LOGSCALE-NECESSITY-v1",
+      "status": "PROVED_AUXILIARY_SELF_CHECKED",
+      "statement": "In the bottom-prefix/top-suffix hybrid architecture, if height L+1 is omitted, m>=16 and L<=m/(2log2(3)), the lost KL is at least mI/[8(3/2)^(L+1)]. Thus additive BI loss requires L>=log_(3/2)(m/(8B))-1.",
+      "proof": "REPORT.md Corollary7.2",
+      "full_fei_implication": "Architecture-specific necessity; not a lower bound for every possible variational statistic."
+    }
+  ],
+  "verification": {
+    "checker_status": "PASS",
+    "finite_remainder_checks": 266,
+    "small_boolean_truth_table_entries": 512,
+    "hybrid_leaf_sets_checked": 511,
+    "generators": [
+      3,
+      5
+    ],
+    "maximum_depth": 128,
+    "independent_full_proof_review": false
+  }
+}

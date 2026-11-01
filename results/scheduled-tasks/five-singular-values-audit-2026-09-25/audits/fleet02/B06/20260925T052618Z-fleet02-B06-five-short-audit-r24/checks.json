@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "run_id": "20260925T052618Z-fleet02-B06-five-short-audit-r24",
+  "pass_id": "P6-B06-extended-real-domain-order",
+  "new_findings": [
+    {
+      "id": "B06-N04",
+      "lines": "505,507,509",
+      "status": "GAP",
+      "repair": "h(0)=+infinity",
+      "constant_change": false
+    },
+    {
+      "id": "B06-N05",
+      "lines": "613",
+      "status": "GAP",
+      "repair": "atomlessness first or J(0)=+infinity",
+      "constant_change": false
+    }
+  ],
+  "branch_regression": {
+    "nopivot": "<167",
+    "diagonal": "sqrt(12)*77<267",
+    "definite_pair": "16*pi<51",
+    "indefinite_pair": "266.951346...<269"
+  },
+  "lower_threshold_research": false
+}

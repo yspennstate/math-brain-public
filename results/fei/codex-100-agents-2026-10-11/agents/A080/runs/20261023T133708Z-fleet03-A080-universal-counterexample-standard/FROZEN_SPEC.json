@@ -1,0 +1,14 @@
+{
+  "helper_version": "A080-tensor-bank-exact-prime-log-v1",
+  "family": "All ordered pairs of labelled two-bit Boolean functions; all labelled two-bit outer gates with every labelled two-bit first core and the fixed two-bit point defect as second core",
+  "domain": {"pair_roots":256,"pair_rates":["0","1/2","1","3/2","2","4"],"composition_roots":256,"composition_rates":["0","1","2","4"],"pilot_pair_roots":4,"pilot_rates":["1"],"pilot_composition_roots":4},
+  "case_count": {"main_tensor_rows":1536,"main_bank_rows":1024,"pilot_tensor_rows":4,"pilot_bank_rows":16},
+  "symmetry": "none; all labelled truth tables retained; no dimension increase",
+  "arithmetic": "Exact Fraction arithmetic and rational linear forms in logarithms of primes. Every order comparison is reduced to a comparison of positive integers after clearing denominators. Identical log forms are exact equalities, not interval overlap. Influence independently counted from physical edges.",
+  "memory_estimate_mb":100,
+  "max_runtime_seconds":55,
+  "max_dimension":4,
+  "pilot_max_runtime_seconds":55,
+  "independence_limit": "Author validation only. A separate direct-character verifier will validate saved terminal policies without importing the hull recurrence. Independent human-agent review remains pending.",
+  "normalization_controls": "Symbolic all-t two-bit point-defect tensor family; literal t=1..4 checks are validation only, not the proof of the infinite family."
+}

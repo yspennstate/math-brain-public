@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{Independent review of the B10 half-tax rare/collision asymptotic}
+
+\paragraph{Frozen claim.}
+For the genuine two-bit point-defect gate, let
+\[
+s=4q(1-q),\qquad c=4q^2,
+\]
+\[
+J=h_2(sp)-p h_2(s),\quad
+M=(1-sp)h_2\!\left(\frac{cp(1-p)}{1-sp}\right)+sp h_2(p),
+\]
+\[
+\Delta=p\log_2\frac{1-p}{p},\qquad R=M+\frac12\Delta-J.
+\]
+The audited assertion is that, for every joint limit $p\downarrow0$ and
+$q\to1/4$, with $\eta=q-1/4$,
+\[
+\frac{R(p,q)}p=8\eta^2\log_2\frac1p
++1-\frac1{2\ln2}+o(1).                                      \tag{A}
+\]
+
+\paragraph{Independent derivation.}
+Put $L=\ln(1/p)$ and let $h$ denote entropy in nats.  In a fixed compact
+neighborhood of $q=1/4$, both $c$ and $s$ stay away from zero and $s$ stays
+away from one.  Thus, uniformly there,
+\[
+h(ap)=ap(L-\ln a+1)+O(p^2),
+\]
+and, since
+\[
+r:=\frac{cp(1-p)}{1-sp}=cp+O(p^2),
+\]
+the mean-value theorem (whose derivative is $O(L)$ at scale $p$) gives
+\[
+(1-sp)h(r)=cp(L-\ln c+1)+O(p^2L).
+\]
+Also $sp\,h(p)=O(p^2L)$, while
+\[
+h(sp)-p h(s)=sp(L-\ln s+1)-p h(s)+O(p^2)
+\]
+and
+\[
+\frac12p\ln\frac{1-p}{p}=\frac12pL+O(p^2).
+\]
+Therefore
+\[
+(\ln2)R=p\left[(c+\tfrac12-s)L+C(q)\right]+O(p^2L),             \tag{B}
+\]
+uniformly near $1/4$, where
+\[
+C(q)=c(1-\ln c)-s(1-\ln s)+h(s)
+=c-s-c\ln c-(1-s)\ln(1-s).                                    \tag{C}
+\]
+Direct algebra gives
+\[
+c+\tfrac12-s=8(q-\tfrac14)^2.                                  \tag{D}
+\]
+At $q=1/4$, $(s,c)=(3/4,1/4)$ and
+\[
+C(1/4)=-\frac12-\frac14\ln\frac14-\frac14\ln\frac14
+=\ln2-\frac12.                                                  \tag{E}
+\]
+Dividing (B) by $p\ln2$, then subtracting the right side of (A), leaves
+\[
+\frac{C(q)-C(1/4)}{\ln2}+O(pL)=o(1).
+\]
+This is uniform along every joint sequence, including regimes in which
+$\eta^2L$ tends to zero, a finite limit, or infinity.  Hence (A) is correct.
+
+\paragraph{Open collar.}
+The logarithmic coefficient in (B) is nonnegative.  Continuity gives a
+$\delta>0$ such that $C(q)>\tfrac12(\ln2-1/2)$ whenever
+$|q-1/4|<\delta$.  Uniformity of the remainder then gives an
+$\varepsilon>0$ for which $R>0$ when $0<p<\varepsilon$ and
+$|q-1/4|<\delta$.  This proves existence, not effective values.
+
+\paragraph{Verdict and first unsupported line.}
+The asymptotic theorem and the existence of a favorable open collar pass
+without repair.  The first unsupported extension is a uniform, effective
+two-bit tail join: the theorem does not cover all $p<1/64$ outside its
+unspecified $q$-collar, nor $0.49<p\le1/2$.  It also supplies no higher-arity
+or single-use hierarchy transport.  Thus it is not a universal GU proof and
+does not change the open status of FEI.
+\end{document}

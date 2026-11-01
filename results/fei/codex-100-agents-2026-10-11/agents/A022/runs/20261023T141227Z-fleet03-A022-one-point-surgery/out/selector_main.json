@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "mode": "main",
+  "cases": 256,
+  "assertions": 768,
+  "sign_counts": {
+    "R": {
+      "positive": 176,
+      "negative": 24,
+      "zero": 56
+    },
+    "GR": {
+      "positive": 168,
+      "negative": 48,
+      "zero": 40
+    }
+  },
+  "witnesses": {
+    "R_zero": {
+      "a_mask": 0,
+      "c_mask": 0,
+      "R": {},
+      "GR": {},
+      "R_sign": "zero",
+      "GR_sign": "zero",
+      "R_interval": [
+        "0",
+        "0"
+      ],
+      "GR_interval": [
+        "0",
+        "0"
+      ]
+    },
+    "GR_zero": {
+      "a_mask": 0,
+      "c_mask": 0,
+      "R": {},
+      "GR": {},
+      "R_sign": "zero",
+      "GR_sign": "zero",
+      "R_interval": [
+        "0",
+        "0"
+      ],
+      "GR_interval": [
+        "0",
+        "0"
+      ]
+    },
+    "R_positive": {
+      "a_mask": 0,
+      "c_mask": 1,
+      "R": {
+        "2": "3/16"
+      },
+      "GR": {
+        "2": "1/8"
+      },
+      "R_sign": "positive",
+      "GR_sign": "positive",
+      "R_interval": [
+        "3/16",
+        "3/16"
+      ],
+      "GR_interval": [
+        "1/8",
+        "1/8"
+      ]
+    },
+    "GR_positive": {
+      "a_mask": 0,
+      "c_mask": 1,
+      "R": {
+        "2": "3/16"
+      },
+      "GR": {
+        "2": "1/8"
+      },
+      "R_sign": "positive",
+      "GR_sign": "positive",
+      "R_interval": [
+        "3/16",
+        "3/16"
+      ],
+      "GR_interval": [
+        "1/8",
+        "1/8"
+      ]
+    },
+    "GR_negative": {
+      "a_mask": 1,
+      "c_mask": 2,
+      "R": {},
+      "GR": {
+        "2": "-1/4"
+      },
+      "R_sign": "zero",
+      "GR_sign": "negative",
+      "R_interval": [
+        "0",
+        "0"
+      ],
+      "GR_interval": [
+        "-1/4",
+        "-1/4"
+      ]
+    },
+    "R_negative": {
+      "a_mask": 1,
+      "c_mask": 8,
+      "R": {
+        "2": "-1/2"
+      },
+      "GR": {
+        "2": "-3/2"
+      },
+      "R_sign": "negative",
+      "GR_sign": "negative",
+      "R_interval": [
+        "-1/2",
+        "-1/2"
+      ],
+      "GR_interval": [
+        "-3/2",
+        "-3/2"
+      ]
+    }
+  },
+  "elapsed_seconds": 1.0180717000002915,
+  "peak_memory": "unmeasured",
+  "scope": "finite signs and exact all-coordinate identity; no universal upper bound inferred"
+}

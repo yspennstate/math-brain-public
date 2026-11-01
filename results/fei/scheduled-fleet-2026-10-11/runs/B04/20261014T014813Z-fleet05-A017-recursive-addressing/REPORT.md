@@ -1,0 +1,52 @@
+# A017 recursive addressing: stage 4
+
+## exact target, quantifiers, hypotheses and units
+
+Uniform actual Boolean signs, entropy in bits. Continue the recorded three-edit threshold test and close the exact cases it exposes. PROOF.md proves for EVERY n, quadratic phase q including arbitrary linear part, linear physical-address M, and edit set E of size<=6 in one address fiber: H(F)<=(4+2/ln2)(I(F)-1), F=(-1)^q(1-2*1_E)y_(Mx). The physical address-first/polar-row tree has zero K4 localized bad-boundary bill with terminal phase cost <=(4+log2 6)I_phase and one weighted data influence retained. Generic critical local certificates cover every four-bit Boolean coordinate and every five-bit coordinate with exactly two pivotal query edges. A seven-edit fixed-order obstruction and adaptive repair are exact. Independent full-chain review is pending; full FEI remains OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Read BOARD.md supervisor snapshot2026-10-14 01:41 UTC, B04 STREAM_NOTES v2 (2026-10-11 23:25 UTC), incoming own STATUS, complete execution protocol 2026-10-11-execution-v2, and own previous claim/proof/helper. Read A022 stage3 REPORT, CLAIMS and PROOF section2, independently reconstructing its complete sparse-terminal subclaim in REVIEW_A022.json. Its fair-selector paired-access theorem is not repeated or accepted wholesale. Read A016 stage4 REPORT (owned two-separator private accounts) and A069 stage3 REPORT/DERIVATION (simultaneous cell refund, equations1-10); the latter is context, not a physical stopping-reserve premise. Exact source byte receipts and the incoming status snapshot are in out/. Mutable board receipts do not imply the initial snapshot remained unchanged. Campaign/paper context from earlier stages is not claimed as a fresh literature review. No brain query or external search was needed for these local derivations.
+
+## complete derivation or exact first unsupported line
+
+Complete scoped proof is PROOF.md; DERIVATION.md is an exact copy preserving the preceding two-edit theorem and K2 obstruction. The initial three-edit influence lower bound permits1/8 at D4 but does not produce an actual bad pivot: full census found zero. An independent direct-character-sum certificate reduces every one-edge four-control query to128 normalized three-bit Boolean cores and two amplitude histograms. B<1/2 is certified by pure integer products. At the next two-edge D5 threshold, a query-independent normalization produces a three-bit ternary core; all2187 cores,13 histograms, satisfy B<=1/2 by integer arithmetic. These normalizations transfer ONLY selected-coordinate B and influence, never a boundary or remaining physical budget. For six edits, D>=6 pivots have influence>=5/16; D5 has influence>=1/8, covered by the two-edge certificate or h2(3/16)<3/4 (exact3^3*13^13>2^52). D<=4 is covered generically. All access nodes are thus K4-good.
+
+Sparse leaf entropy is reconstructed from tail mass4u(1-u) and edge isoperimetry, giving coefficient4+log2 6<K. Dense small fibers use the actual character-multiplied function and influence granularity, avoiding false character invariance of influence. The complete weighted influence partition keeps data cost1 exactly once. Exact signed amplitude and edited-boundary edge ledgers permit arbitrary physical reuse M_t=A_t M_(t-1)+B_t and quadratic phase updates; repeated labels remain the same physical data bit.
+
+Seven-edit root q=x0x1+x1x2+x3x4, E={x:x0=x1=1} minus(1,1,0,0,0), has x0 influence1/16, C=3/8 and B=1-45log2(3)/64-25log2(5)/32+39log2(13)/64>1/4. Badness is the integer inequality2^192*13^156>3^180*5^200. The minimum-index tree has one bad node and bill3/8. Query x1 first gives zero bad bill, queried influence7/8 and terminal phase influence21/16, exactly summing to35/16. All terminal entropy remains paid. This is a specified-order refutation and named-fixture repair, not a full seven-edit theorem or FEI disproof.
+
+First unsupported universal line: choose a K4-good polar pivot, or pay its unavoidable boundary once, for every seven-edit five-control quadratic phase; then obtain a point-count-independent terminal/refinement policy for arbitrary Boolean sources. Neither follows from the local certificates or A069's cell-resampling code refund.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Every search has a frozen spec, helper SHA, named family/domain, case count, justified normalization, arithmetic, memory estimate and runtime cap. Commands from this run, all python -X utf8:
+
+- code/search.py --pilot:6,720 labelled roots,116,240 assertions,0.868s PASS. Full code/search.py:107,520 roots,376,320 polar coordinates,21,504 critical1/8 queries,1,778,688 assertions,24.595s PASS; zero K4 bad polar queries.
+- code/critical.py:128 complete normalized Boolean cores,2 histograms,513 integer assertions,0.004663s PASS.
+- code/ternary.py:2187 complete normalized ternary cores,13 histograms,2187 exact comparisons,0.070763s PASS; all histogram integer slacks audited in TERNARY_INTEGER_AUDIT.json.
+- code/validate.py --pilot and full:16 pilot roots; 496 full roots,2412 queried nodes,2908 leaves,1618 terminal sets minimized over ALL characters,66,454 assertions,16.294s PASS for the intermediate five-edit repair.
+- code/validate6.py --pilot and full:14 pilot roots; 464 full roots,2244 queried nodes,2708 leaves,3284 terminal sets minimized over ALL characters,65,584 assertions,8.688s PASS for six edits, zero K4 bad queries.
+- code/seven.py:one fixed root and two complete stopping policies,23 exact assertions,0.026837s PASS.
+
+The n4 census has all1024 quadratic/linear codes and all105 translated three-point sets. Root integration has fixed n3..6 matching/path/star/complete graphs, phases0/all-ones, four address matrices including reused rows[3,5], and fixed kernel edit patterns. Terminal checks exhaust small dimensions and normalized-origin five/six-point D4 sets; exact independent influence complementation covers all characters. No all-functions n6 exhaustion is claimed. Integer Walsh and physical edge/mixed-face rational counts validate signed corrections, influence changes, explicit kernel-basis fiber H, query/terminal telescoping and node entropy decrements. Entropy signs outside the product certificates use rational prime-log forms with32-term atanh intervals and proved remainder; no float decision.
+
+One bookkeeping correction is retained honestly: TREE6_FROZEN_SPEC initially inherited the five-edit root counts16/496; exact domain planning produced14/464 because first-six edit sets merge by equality in small kernels. TREE6_FROZEN_SPEC_CORRECTED records these smaller counts and the reason, with unchanged helper, domain, dimensions and resource caps. No extra search case was admitted. Estimated memory was at most100MB, not measured; no >300MB job was expected or memok trigger needed. Pilots stayed under60s, full jobs under their fixed caps, processes sequential; no GPU or automatic dimension escalation.
+
+## proof dependencies and changed downstream conclusions
+
+A017-TWO-EDIT-SHARED-ADDRESS-STOPPING@2 preserves all v1 conclusions and appends the six-edit theorem, critical certificates and seven-edit fixture. It supersedes the old live version without modifying that run or creating an unrelated broad candidate. The inherited own scalar proof remains author-proved pending review; the exact source is reproduced. A022's s<=4 terminal lemma is independently accepted ONLY at that scope after a complete entropy/edge reconstruction, before extending the same argument to6. Its fair-selector access and odd-face ledgers are not dependencies. Independent whole-chain acceptance of the new version remains pending. A016's half-private accounts and A069's code-cell refund are useful ownership context but are not converted into unpaid physical reserves.
+
+Downstream: three edits do not establish failure of K4; the critical alphabet repairs access through six arbitrary-quadratic edits without a fair reference branch. Seven edits establish a real fixed-order boundary bill, with an explicit zero-bill alternative. Future C019 arguments should retain both the bad fixture and its repair, and distinguish a selected-coordinate normalization from transport of all remaining influences.
+
+## one next mathematical action and independent reviewer
+
+Check NEXT_DERIVATION.md: if all seven-edit D5 polar pivots are weak, reconstruct the rank-two affine-coset/zero-row-character point-defect collapse; otherwise select a >=3/16 polar pivot. Validate the stopping rule against the exact 3/8 fixture and its x1 repair before claiming a seven-edit extension. A091 is primary independent reviewer, A090 alternate. A022/A018 can reconstruct the local integer alphabets and terminal payment; A020/A067/A069 can challenge the seven-edit pivot/reserve interface. Handoffs are source-bound saved artifacts; no messages were sent.
+
+## actual persistence receipts or precise save blocker
+
+REPORT, CLAIMS, PROGRESS, identical PACKET_DELTA, PROOF, inherited DERIVATION, REVIEW_A022, code and all frozen specs/certificates are saved only inside A017. STATUS is two lines, WORKLOG appended and LEARNED current. out/PERSISTENCE_RECEIPTS.json records final byte counts/SHA256 after exact schema, statement-hash and compatibility checks; all files are under20MB. No shared index, other-agent source, brain, Git or external message was modified. Local save is verified; supervisor copying, registry adoption, mirror verification and full independent acceptance remain unverified.
+
+## Universal bridge
+
+C019 stopping-tree payment advances from two to six coherent shared-fiber quadratic edits in EVERY dimension with zero K4 localized boundary bill, full terminal entropy and one data influence paid once, retaining H<=(4+2/ln2)(I-1). C018 gains exact critical local alphabets for one-edge D4 and two-edge D5 queries. At seven edits, the actual fixed-order bill3/8 exposes the first weak-polar collision and an alternate pivot removes it with the same terminal partition. Universal pivot selection or a one-use boundary reserve, and point-count-independent terminal/refinement admission, remain open. NEXT_DERIVATION.md records an unvalidated rank-two all-weak affine-coset/zero-row-character collapse route; NEXT checks that algebra and its pivot policy against the named obstruction and repair. This directly tests the missing terminal admission instead of repeating a solved bent/fair-selector class.

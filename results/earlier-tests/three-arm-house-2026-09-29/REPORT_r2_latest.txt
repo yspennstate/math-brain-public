@@ -1,0 +1,33 @@
+Three versions, one test: sonnet solver, graded 2026-09-30 00:01
+statement answers: graders agree on correct-or-not for 688 of 755; a third grader decided the rest
+estimand: latest after retry (a sensitivity; the primary is the first attempt); retried cells nodata 9, data 3, data_brain 0, data_nav 1, data_recall 1; first attempts reconstructed from the logs: nodata 9, data 3
+labels: graded on the sheet built from each cell's latest record, which equals the latest sheet on 151 of 151 statement items
+seal bffcb213a60f1c2229eae6d4: items_affected; 46 flagged items adjudicated: no text added since 2026-09-29 18:52:05 holds their keys; it binds data_nav, data_recall; nodata, data, data_brain were served before the freeze and are not bound to it
+allocation: derived from the banks at report time, not sealed: 281 items
+cells: 281 items x 5 arms = 1405 allocated, every one with a verdict
+
+bank                 n      nodata        data  data_brain    data_nav data_recall
+cards_v4            14           2          10          10          11          11
+carry46             44           8          37          37          27          36
+fei_heldout         16           9          13          14          13          12
+house_blind         77          24          62          66          63          68
+locate_l1           60           5          56          60          58          54
+locate_l2           40           0          40          40          40          40
+locate_l3           30           1          18          30          30          26
+ALL                281          49         236         257         242         247
+
+data       vs nodata   paired n=281: data only 188, nodata only 1, exact McNemar p=4.84e-55
+data_brain vs nodata   paired n=281: data_brain only 210, nodata only 2, exact McNemar p=6.86e-60
+data_brain vs data     paired n=281: data_brain only 35, data only 14, exact McNemar p=0.0038
+data_nav   vs data     paired n=281: data_nav only 28, data only 22, exact McNemar p=0.48
+data_recall vs data     paired n=281: data_recall only 32, data only 21, exact McNemar p=0.169
+data_brain vs data_nav paired n=281: data_brain only 31, data_nav only 16, exact McNemar p=0.04
+data_brain vs data_recall paired n=281: data_brain only 23, data_recall only 13, exact McNemar p=0.132
+
+arm              n tok_in_med turns_med  sec_med  usd_sum retry_usd no_usage
+nodata         281       2984         1      4.9     3.72      1.40        2
+data           281      36017         7     16.6    14.06      0.21        0
+data_brain     281       7320         1      5.6     4.45      0.00        0
+data_nav       281      36622         7     16.2    12.20      0.03        0
+data_recall    281      33591         5     22.2     9.92      0.04        0
+(no_usage: cells whose scored record carries no usage - a first attempt reconstructed from the logs, or a failure that returned nothing; they are left out of the medians and usd_sum, so usd_sum is a floor; retry_usd leaves out 2 retries that recorded no cost)

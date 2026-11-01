@@ -1,0 +1,114 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w362",
+  "bundle_slug": "p0104-referee-calibration-20261010",
+  "entries": [
+    {
+      "key": "square-selection",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "square-fpp-minimum-path-selection-dependent-edge-costs",
+      "kind": "lemma",
+      "title": "Minimum-path selection makes iid square-edge costs dependent",
+      "statement": "On a square with opposite terminals and four independent edge costs uniform on {1,2}, select the two-edge upper path when its total cost is no larger than the lower path. Given upper selection, the covariance of its successive edge costs is -5/121. Without conditioning, the covariance of the two selected edge costs is -9/256. Their total has variance 23/64, whereas the sum of their individual variances is 55/128. This finite example refutes independence inferred solely from the iid input edges after global minimizing-path selection; it gives no lattice fluctuation exponent.",
+      "proof_text": "The upper pairs (1,1),(1,2),(2,1),(2,2) have respectively 4,3,3,1 compatible lower pairs among 16 equally likely configurations, giving 11 upper-selection cases. Conditional means are 15/11 and product mean 20/11, so covariance is -5/121. Including strict lower wins gives selected-pair counts 7,4,4,1. The individual mean is 21/16 and product mean 27/16, so covariance is -9/256. Direct total-cost moments give variance 23/64; each selected cost has variance 55/256. Independently recounted by w362 and exactly reproduced on all 16 configurations.",
+      "assumptions": [
+        "finite square graph with opposite terminals",
+        "four iid Uniform{1,2} edge costs",
+        "upper path selected on ties"
+      ],
+      "domain": "probability, first-passage percolation, proof auditing",
+      "source": {
+        "source_id": "owner-own-work:w361:p0104:square-selection",
+        "url": "file:///~/brain_workers/w361/INDEPENDENT_OBSTRUCTION.md",
+        "revision": "as-checked-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "finite-box",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "one-two-bounded-lattice-fpp-exact-finite-box-reduction",
+      "kind": "lemma",
+      "title": "Exact finite-box reduction for lattice costs in [1,2]",
+      "statement": "For every configuration of edge costs in [1,2] on the undirected nearest-neighbor lattice Z^2 and integer n>=1, the passage time from (0,0) to (n,0) equals the minimum over simple paths in the induced finite graph on [-2n,2n]^2 intersect Z^2. It lies between n and 2n. No iid or continuity hypothesis is needed. The reduction gives no fluctuation exponent.",
+      "proof_text": "The horizontal n-edge path costs at most 2n, and any terminal path has at least n edges and costs at least n. A path leaving the box takes at least 2n+1 edges before its first outside vertex, so costs more than 2n. Positive-cost loops can be removed. The finite graph has finitely many simple paths, hence its minimum exists and equals the full-lattice infimum. Independently checked by w362 against w360-C1.",
+      "assumptions": [
+        "undirected nearest-neighbor Z^2",
+        "all edge costs in [1,2]",
+        "integer n>=1"
+      ],
+      "domain": "probability, first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:w360:p0104:finite-reduction",
+        "url": "file:///~/brain_workers/w360/ATTEMPT.md",
+        "revision": "as-checked-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "conditional-crossover",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "planar-fpp-noise-crossover-conditional-exponent-calibration-draft",
+      "kind": "concept",
+      "title": "DRAFT: sufficient noise crossover for the planar variance exponent",
+      "statement": "Unproved-input proof route for iid Uniform[1,2] undirected nearest-neighbor Z^2 FPP, T_n=T(0,n e1). Refresh every edge independently at rate one. Let C_n(t)=Cov(T_n(W),T_n(W^t)) and H_n(t)=-C_n'(t). Finite-product orthogonality proves H_n>=0, H_n decreasing, Var(T_n)=integral_0^infinity H_n(t)dt and H_n(0)<=2n. If, for every epsilon in (0,1/3) and all large n, H_n(n^(-1/3-epsilon))>=c_epsilon n and C_n(n^(-1/3+epsilon))<=C_epsilon n^(2/3+epsilon), with positive constants independent of n, then c_epsilon n^(2/3-epsilon)<=Var(T_n)<=(2+C_epsilon)n^(2/3+epsilon), yielding variance exponent 1/3. BOTH crossover bounds remain unproved. The conditional implication awaits independent w365 review. Product structure and a linear geodesic-length bound alone only give order n; no parent solution or novelty is claimed.",
+      "proof_text": null,
+      "assumptions": [
+        "explicit bounded planar FPP model",
+        "independent rate-one coordinate refresh",
+        "both crossover estimates are unproved inputs"
+      ],
+      "domain": "probability, first-passage percolation, draft proof route",
+      "source": {
+        "source_id": "owner-own-work:w362:p0104:conditional-calibration",
+        "url": "file:///~/brain_workers/w362/PRODUCT_RESAMPLING.md",
+        "revision": "as-checked-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-scope",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0104-grouped-exponent-target-primary-source-scope-audit",
+      "kind": "concept",
+      "title": "P0104 source scope and unresolved proof boundary",
+      "statement": "The campaign's P0104 record groups Questions 13 and 15 of Auffinger--Damron--Hanson's 50 years of first passage percolation (arXiv:1511.03262v2, PDF page 37): strict exponent below 1/2 in dimensions at least two under suitable edge-law conditions; exponent 1/3 in the plane; and a positive exponent in a suitable dimension. The source leaves suitable hypotheses and the exact variance-scaling convention to be specified. A bounded Uniform[1,2] planar variance-exponent attempt covers a restricted slice. The April 2026 arXiv:2604.01214v1 polynomial improvement is for its specified isotropic Riemannian continuum model and supplies no proved iid square-lattice transfer. October 2026 current openness is UNKNOWN under this targeted check, and no P0104 solution is claimed. Verified source hashes establish provenance, not mathematical proof.",
+      "proof_text": null,
+      "assumptions": [
+        "statement about the cited source record and the checked paper hypotheses",
+        "no assertion that the long published proofs were independently checked"
+      ],
+      "domain": "probability, first-passage percolation, source audit",
+      "source": {
+        "source_id": "owner-own-work:w362:p0104:source-scope",
+        "url": "file:///~/brain_workers/w362/SOURCE_STATUS.json",
+        "revision": "as-checked-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "conditional-crossover",
+      "to_key": "finite-box",
+      "kind": "depends_on",
+      "rationale": "The route uses 'Finite-product orthogonality' for this bounded lattice model; the finite-box endpoint supplies an 'induced finite graph' exactly, so no infinite-volume cutoff extrapolation is needed."
+    },
+    {
+      "from_key": "square-selection",
+      "to_key": "conditional-crossover",
+      "kind": "semantic_association",
+      "rationale": "The square endpoint refutes 'independence inferred solely from the iid input edges after global minimizing-path selection'; the route instead uses 'Refresh every edge independently at rate one' and an actual product-space covariance identity. The counterexample does not refute that valid identity."
+    },
+    {
+      "from_key": "conditional-crossover",
+      "to_key": "source-scope",
+      "kind": "semantic_association",
+      "rationale": "The route leaves 'BOTH crossover bounds remain unproved'; the source endpoint identifies a 'restricted slice' of the grouped P0104 targets. This records the relation without claiming the conditional route proves the parent problem."
+    }
+  ]
+}

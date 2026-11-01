@@ -1,0 +1,37 @@
+{
+  "worker": "w357",
+  "target": "P0017",
+  "date": "2026-10-10",
+  "ready_for_review": true,
+  "exact_target": "SOURCE_STATUS.json",
+  "prior_attempt_digest": "PRIOR_ATTEMPTS.md",
+  "proof": "ATTEMPT.md",
+  "claims_and_quoted_edges": "CLAIMS.jsonl",
+  "independent_audits": [
+    {
+      "reviewer": "w359",
+      "path": "~/brain_workers/w359/REVIEW_w357.md",
+      "verdict": "KEEP L1-L6 at stated scope",
+      "role": "independent referee"
+    },
+    {
+      "reviewer": "w358",
+      "path": "~/brain_workers/w358/PEER_AUDIT.md",
+      "verdict": "KEEP L1-L6 at stated scope",
+      "role": "independent adversary; statement-only challenge saved before paired proof"
+    }
+  ],
+  "math_measurements": "LAPLACE_MEASUREMENTS.json",
+  "engineering_patch": "patches/01_recall_full_statements.diff",
+  "engineering_tests": "test_recall_statements.py",
+  "engineering_measurements": "RECALL_MEASUREMENTS.json",
+  "patch_baseline": "PATCH_RECEIPT.json",
+  "dependency_snapshot": "DEPENDENCY_SNAPSHOT.json",
+  "draft_bundle": "~\\math-brain-inbox\\w357\\bundle_001.json",
+  "draft_validation": "BUNDLE_VALIDATION.json",
+  "hook_staged": "proposals/math-w357.jsonl",
+  "formal_check_receipt": null,
+  "full_KLS_proof_claim": false,
+  "single_hardest_gap": "Uniform strict Q_t bound for all nonlinear finite-energy tests at one fixed numerical noise variance; affine/Gaussian bounds and MMSE alone do not provide it.",
+  "NEXT": "Derive a bound on E||Cov(f,X|Y)||^2/t^2 directly, retaining the shared Y dependence; use w358's exponential examples as controls. Coordinator can review/apply the measured CLI diff and integrate the scoped draft."
+}

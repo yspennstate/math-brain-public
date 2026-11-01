@@ -1,0 +1,40 @@
+POS3_ASYMMETRIC_CHAIN_CONTRACTION_BEGIN
+P(m,r) = disjoint union C2 + C(m+2) + Cr; width exactly 3 for r>=1
+M = top m vertices B3,...,B(m+2) of the middle chain; M is an autonomous chain
+contracting M to one vertex gives Q(r)=C2 + C3 + Cr
+formula m=1: Pr(A1<B1)=2/5
+formula m=2: Pr(A1<B1)=1/3
+formula m=3: Pr(A1<B1)=2/7
+formula m=4: Pr(A1<B1)=1/4
+formula m=5: Pr(A1<B1)=2/9
+formula m=6: Pr(A1<B1)=1/5
+formula m=7: Pr(A1<B1)=2/11
+formula m=8: Pr(A1<B1)=1/6
+THRESHOLD_FORMULA_PASS: contracted m=1 gives 2/5; expanded m>=3 gives <1/3
+CONTRACTED_Q: E=60 A1_before_B1=24/60=2/5 BALANCED
+EXPANDED_P: E=168 A1_before_B1=48/168=2/7 UNBALANCED_below_1/3
+WIDTH=3 witness={A1,B1,C1}; no antichain can use two vertices from one chain
+INCOMPARABILITY_GRAPH_CONNECTED: complete tripartite K(2,5,1)
+AUTONOMOUS_MODULE M={B3,B4,B5}: B1,B2 below every M vertex; all A,C vertices incomparable with every M vertex
+ALL_17_INCOMPARABLE_PAIR_PROBABILITIES
+A1<B1: 48/168=2/7 UNBALANCED
+A1<B2: 88/168=11/21 BALANCED
+A1<B3: 120/168=5/7 UNBALANCED
+A1<B4: 144/168=6/7 UNBALANCED
+A1<B5: 160/168=20/21 UNBALANCED
+A2<B1: 8/168=1/21 UNBALANCED
+A2<B2: 24/168=1/7 UNBALANCED
+A2<B3: 48/168=2/7 UNBALANCED
+A2<B4: 80/168=10/21 BALANCED
+A2<B5: 120/168=5/7 UNBALANCED
+A1<C1: 112/168=2/3 BALANCED
+A2<C1: 56/168=1/3 BALANCED
+B1<C1: 140/168=5/6 UNBALANCED
+B2<C1: 112/168=2/3 BALANCED
+B3<C1: 84/168=1/2 BALANCED
+B4<C1: 56/168=1/3 BALANCED
+B5<C1: 28/168=1/6 UNBALANCED
+SUMMARY incomparable_pairs=17 balanced_pairs=7
+ORDINAL_SUM_FAMILY: C2 ordinal P(3,1) ordinal C3 has n=13, width=3, E=168, same 17 incomparable-pair probabilities
+ORDINAL_PRESERVATION_PASS
+POS3_ASYMMETRIC_CHAIN_CONTRACTION_PASS

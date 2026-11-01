@@ -1,0 +1,50 @@
+A1. The decomposition L = Q + S and the bounds on Q and S (Lemma 2.1)
+  16383 checks for y <= 4096
+A2. Lemma 2.2: exact maxima over the allocations of m = 2^(i+1) balls with Y_(2) <= m/8 (any number of boxes)
+   i     m              L*         max L-sum (L*-max)/m^3  S-deficit   8^(i-1)  Q-excess m^2/4+2m  chain  control
+   2     8              85                94    -0.0176          9         8        18        32  False      -15
+   3    16             693               690     0.0007         70        64        70        96  False      -63
+   4    32            5461              5146     0.0096        540       512       270       320  False     -255
+   5    64           43029             39402     0.0138       4243      4096      1054      1152   True    -1023
+   6   128          340885            307594     0.0159      33354     32768      4158      4352   True    -4095
+   7   256         2712213           2439308     0.0163     266744    262144     16510     16896   True   -16383
+   8   512        21635221          19478350     0.0161    2129847   2097152     65790     66560   True   -65535
+   9  1024       172825749         155682782     0.0160   17034607  16777216    262654    264192   True  -262143
+  10  2048      1381569685        1244851729     0.0159  136272678 134217728   1049598   1052672   True -1048575
+  11  4096     11048387733        9956424977     0.0159 1090177309 1073741824   4196350   4202496   True -4194303
+  12  8192     88370373781       79641712421     0.0159 8721413844 8589934592  16781310  16793600   True -16777215
+  S-deficit = S(a*) + S(b*) - max S-sum; Q-excess = max Q-sum - Q(a*) - Q(b*); chain: m^2/4 + 2m - 6/7 <= m^3/128;
+  control: L* - max L-sum for d_j = j at every j
+A3. log P(Y_(2) <= m/8) for the weights of Theorem 1.1, against the bound m log(m+n) - m^3/128
+     m      n     log P            bound        control (no spikes): log P
+     64     32        -4085.8        -1755.9         2.27e-13
+     64     64        -4087.3        -1737.5         2.27e-13
+     64     65        -4087.3        -1737.0         2.27e-13
+     64    128        -4088.7        -1711.5         4.55e-13
+    128    128       -37584.7       -15674.2        -9.09e-13
+    128    129       -37584.7       -15673.7        -9.09e-13
+    128    256       -37586.1       -15622.3        -1.82e-12
+    256    512      -311281.6      -129371.2          not run
+B1. Lemma 3.1: the facts about g
+  29824 checks (cliff sequences J_1 = 1..12, J_{r+1} = 2J_r + 6, +7, +9, j <= 400); control with spacing 2J_r + 4: g(J-3) = 3(J-3) fails at 58 cliffs
+B2. Lemma 3.1: nu and sigma^2: nu < 0.7 for every cliff sequence, nu_0 for g(j) = 3j
+  no cliffs: Phi(1) = 2.110586, nu_0 = 0.624335 (closed form 0.624335), sigma^2 = 0.647818
+  J_1 = 1 (most weight removed): nu = 0.503957; for J_1 = 1..12 all nu lie in (0, nu_0)
+B3. Pair counts N(s) = #{a, b in [B, 2B): a + b = 3B + s} >= B - |s| - 1 (Section 4)
+  32748 checks, J = 3..14, every |s| < B (brute force for B <= 64)
+B4. Lemma 4.1 (truncated exponential bound) against exact probabilities
+  120 cases (N <= 100, h <= 32, x/h in {1,2,4,8,12}); all hold, largest ratio exact/bound 0.0858
+  control without the event max X_i <= h: the bound fails in 41 of 120 cases
+B5. Theorem 1.2: P(Y_(2) < N/8) with the cliffs J_1 < J_2 < ... (N = 2^J, J a cliff), and P(Y_(2) >= N/8)
+    for the weights without cliffs (g(j) = 3j, nu = nu_0); lambda - nu = 1: n = K, m = K + floor(nu n); tree: m = n - 1, n = ceil((K + 1)/(1 - nu))
+    no cliffs (a): the same (m, n); no cliffs (b): (m, n) from the same rule with nu_0 (the control)
+    J  J_1  case      n      m    nu        P(Y_(2) < N/8)   P(Y_(2) < N/4)   no cliffs (a): P(Y_(2) >= N/8)   (b)
+    8    8     1    384    623  0.62433        5.157e-05        5.404e-03                        2.402e-03  2.402e-03
+    9    9     1    768   1247  0.62433        8.293e-08        4.515e-04                        4.643e-04  4.643e-04
+   10   10     1   1536   2494  0.62434        2.106e-10        5.290e-05                        9.055e-05  9.055e-05
+    8    1     1    384    577  0.50396        1.553e-06        2.122e-03                        5.299e-03  2.402e-03
+    8    8  tree   1025   1024  0.62433        3.451e-02        1.350e-01                        7.056e-03  7.056e-03
+    9    9  tree   2048   2047  0.62433        1.757e-04        7.459e-03                        1.310e-03  1.310e-03
+   10   10  tree   4092   4091  0.62434        1.085e-07        3.406e-04                        2.511e-04  2.511e-04
+    8    1  tree    777    776  0.50396        6.747e-05        8.896e-03                        2.728e-02  7.056e-03
+ALL CHECKS PASS

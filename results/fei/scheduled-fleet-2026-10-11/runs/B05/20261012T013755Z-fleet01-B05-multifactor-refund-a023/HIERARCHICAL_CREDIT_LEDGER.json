@@ -1,0 +1,52 @@
+{
+  "schema": "fei-a023-multifactor-credit-ledger/1",
+  "family": "finite disjoint products of genuine Boolean point defects q_n",
+  "units": "bits",
+  "packet": {
+    "definition": "R(B)=F(p_B)",
+    "p_B": "[1-product_{i in B}(1-2*2^{-n_i})]/2",
+    "empty": 0,
+    "scope": "complete conditional-label plus phase selector packet against a constant"
+  },
+  "interaction": {
+    "definition": "Omega(B)=sum_{C subseteq B} (-1)^{|B|-|C|} R(C)",
+    "reconstruction": "R(A)=sum_{nonempty B subseteq A} Omega(B)",
+    "pair_only_sufficient": false,
+    "reason": "For every fixed r>=3, the equal-factor r-way interaction is c_r*delta^2+O_r(delta^3 log(1/delta)) with c_r nonzero."
+  },
+  "ownership": {
+    "order": "any fixed deterministic total order pi on factors",
+    "owner_rule": "owner(B) is the earliest element of B in pi",
+    "owner_total": "For stage A_j, sum of interactions owned by i_j equals R(A_j)-R(A_{j+1}).",
+    "physical_realization": "exhaust q_{n_i_j} before proceeding to the next factor",
+    "single_use": true,
+    "canonical_or_symmetric": false
+  },
+  "signed_payment": {
+    "stage": "P_j-N_j=R(A_j)-R(A_{j+1})",
+    "complete": "R(A)+sum_j N_j=sum_j P_j",
+    "ancestor_credit_reuse": false,
+    "terminal_packet_reuse": false,
+    "interaction_reuse": false
+  },
+  "equal_factor_asymptotics": {
+    "delta": "2^{-n}",
+    "formula": "Omega_r(n)=c_r delta^2+O_r(delta^3 log(1/delta))",
+    "coefficient": "c_r=-2 sum_{j=1}^r (-1)^{r-j} binom(r,j) j^2 log_2(j)",
+    "coefficient_sign": "(-1)^r",
+    "r3": "24-18 log_2(3)=-4.52932501298...",
+    "warning": "higher interactions are order delta^2, not delta^r"
+  },
+  "tests": {
+    "sparse_defects": "the theorem family itself",
+    "near_tensors": "all finite disjoint products in the declared family",
+    "rare_activation": "fresh activation scales all conditional reached terms by the same reach probability; its own control packet remains separate",
+    "prime_gates": "each q_n is an AND/OR-type prime gate up to signs and relabeling",
+    "bent_selector": "not used and not contradicted",
+    "addressing": "not covered",
+    "shared_variables": "not covered",
+    "parity_zero_erasure": "not used; complete L+Q packet retained"
+  },
+  "remaining_obligation": "Find an order or stopping rule for which total positive credits plus final terminals are bounded by a dimension-independent multiple of nonreused influence, first uniformly for arbitrarily many point-defect factors and then for general Boolean branching trees.",
+  "full_fei_status": "OPEN"
+}

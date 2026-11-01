@@ -1,0 +1,95 @@
+{
+  "verdict": "PASS",
+  "fresh_gate": {
+    "max_collision_dimension": 4,
+    "max_normalized_matrices": 512,
+    "max_corank_dimension": 12,
+    "no_gpu_or_external_compute": true
+  },
+  "author_artifact": "~\\brain_workers\\w570\\ATTEMPT.md",
+  "author_artifact_sha256": "1decd3062f68318c93125d7bcd047bac9015bff156c423a7698e63125fc6991a",
+  "snapshot": "~\\brain_workers\\w571\\source_snapshots\\w570_ATTEMPT_audited.md",
+  "collision_checks": [
+    {
+      "n": 1,
+      "normalized_matrices": 1,
+      "collision_count": 0,
+      "collision_probability": "0",
+      "specified_cross_pair_count": 0
+    },
+    {
+      "n": 2,
+      "normalized_matrices": 2,
+      "collision_count": 1,
+      "collision_probability": "1/2",
+      "specified_cross_pair_count": 1
+    },
+    {
+      "n": 3,
+      "normalized_matrices": 16,
+      "collision_count": 10,
+      "collision_probability": "5/8",
+      "specified_cross_pair_count": 2
+    },
+    {
+      "n": 4,
+      "normalized_matrices": 512,
+      "collision_count": 338,
+      "collision_probability": "169/256",
+      "specified_cross_pair_count": 16
+    }
+  ],
+  "corank_checks": [
+    {
+      "n": 5,
+      "rank": 4,
+      "no_projective_collisions": true,
+      "kernel_support": 4
+    },
+    {
+      "n": 6,
+      "rank": 5,
+      "no_projective_collisions": true,
+      "kernel_support": 4
+    },
+    {
+      "n": 7,
+      "rank": 6,
+      "no_projective_collisions": true,
+      "kernel_support": 4
+    },
+    {
+      "n": 8,
+      "rank": 7,
+      "no_projective_collisions": true,
+      "kernel_support": 4
+    },
+    {
+      "n": 9,
+      "rank": 8,
+      "no_projective_collisions": true,
+      "kernel_support": 4
+    },
+    {
+      "n": 10,
+      "rank": 9,
+      "no_projective_collisions": true,
+      "kernel_support": 4
+    },
+    {
+      "n": 11,
+      "rank": 10,
+      "no_projective_collisions": true,
+      "kernel_support": 4
+    },
+    {
+      "n": 12,
+      "rank": 11,
+      "no_projective_collisions": true,
+      "kernel_support": 4
+    }
+  ],
+  "P2_boundary": "FIX: add n>=2 to the support-at-most-two witness equivalence; n=1,epsilon=1 disproves the unqualified sentence.",
+  "scope": "Exact bounded checks accompany the direct mathematical audit; they are not a proof of C0029 or a served-model receipt.",
+  "elapsed_seconds": 0.009490899974480271
+}

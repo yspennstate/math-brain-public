@@ -1,0 +1,14 @@
+{
+  "helper_version": "A033-post-tag-seed-query-v1",
+  "family": "Actual Boolean A+z B h; all 16 disjoint ternary one-controller masks and all 16 two-bit seeds, plus fixed A079 four-controller mask and all 256 three-bit seeds",
+  "domain": "Every active seed coordinate; both tag signs and both physical seed children; incoming source R(empty)=1/2 with uniform or seed-conditional nonempty tail, followed by A032 actual 1/8 uniform target mixture; fresh epsilon 0 and 1/8 with a prescribed nonempty point target; skip nonexistent tails without division",
+  "case_count": "512 one-controller parent queries at one source profile plus 1536 fixed-A079 parent queries at two source profiles, before skipping constant seeds; 2048 parent query/profile cases, four actual terminals each; explicit phase-only fixture separately",
+  "symmetry": "None; bit of weight 1 first, truth values +1 then -1 selected by bit",
+  "arithmetic": "Integer Walsh transforms, Fraction probabilities, exact prime-log coefficient identities; rational atanh log intervals for witness signs only; no floating sign certificates",
+  "memory_estimate_MB": 90,
+  "pilot_max_seconds": 60,
+  "max_runtime_seconds": 180,
+  "automatic_dimension_escalation": false,
+  "outputs": ["out/validation.json", "out/phase_fixture.json"],
+  "regenerate": "python -B -X utf8 runs/20261023T023201Z-fleet03-A033-derivative-hierarchy/code/check.py"
+}

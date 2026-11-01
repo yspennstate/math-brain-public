@@ -1,0 +1,74 @@
+--- a/~/math-brain-inbox/w443/bundle_001.json
++++ b/~/math-brain-inbox/w443/bundle_001.json
+@@ -0,0 +1,71 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w443",
++  "bundle_slug": "p0043-criticality-source-bridge-001",
++  "entries": [
++    {
++      "key": "hutchcroft-exponential",
++      "namespace": "probability.percolation",
++      "logical_name": "critical-bond-percolation-exponential-growth-quasitransitive",
++      "kind": "theorem",
++      "title": "Critical bond percolation has no infinite clusters on quasi-transitive graphs of exponential growth",
++      "statement": "Let G be an infinite, connected, locally finite, quasi-transitive graph of exponential volume growth: gr(G)=lim_{r to infinity}|B(o,r)|^(1/r)>1. In independent Bernoulli bond percolation on G at its critical probability p_c(G), there is almost surely no infinite open cluster.",
++      "proof_text": "Hutchcroft's proof sets kappa_p(n)=inf{P_p(x connected to y):d(x,y)<=n}. Subcritical finite susceptibility, supermultiplicativity of kappa_p, Fekete's lemma and left continuity in p give kappa_{p_c}(n)<=gr(G)^(-n). If there were a unique infinite critical cluster, positive association and quasi-transitivity would bound all two-point connection probabilities uniformly away from zero, contradicting this decay. Prior theorems of Burton-Keane/Gandolfi-Keane-Newman, Benjamini-Lyons-Peres-Schramm and Timar rule out infinitely many infinite critical clusters across the amenable, unimodular nonamenable and nonunimodular cases; Newman-Schulman leaves only zero, one or infinitely many. Thus there are none.",
++      "assumptions": [
++        "G is infinite, connected and locally finite",
++        "G is quasi-transitive (finitely many vertex orbits)",
++        "gr(G)>1, i.e. exponential volume growth",
++        "iid Bernoulli bond percolation"
++      ],
++      "domain": "probability theory, percolation",
++      "source": {
++        "source_id": "arxiv:1605.05301v1:Theorem-1.2",
++        "url": "https://arxiv.org/abs/1605.05301",
++        "revision": "v1; source theorem checked 2026-10-10",
++        "license": "arxiv-nonexclusive",
++        "excerpt": "Then G[p_c] has no infinite clusters almost surely."
++      }
++    },
++    {
++      "key": "public-source-status",
++      "namespace": "probability.percolation",
++      "logical_name": "p0043-public-source-status-october-2026",
++      "kind": "concept",
++      "title": "P0043 source status: September 2026 full-scope proof claim",
++      "statement": "The 2026-09-24 OpenAI mathematics manuscript 'No percolation at criticality on quasi-transitive graphs', Theorem 1.1, publicly claims that iid Bernoulli bond percolation at p_c(G) has no infinite cluster on every infinite connected locally finite quasi-transitive graph G with p_c(G)<1. Its companion Lean comparator names BondGraph.no_percolation_at_criticality and a separate solution module. The comparator challenge contains a placeholder by design; this source-status pointer is not an independent check of the whole proof or imported Lean axioms. Earlier open-problem labels dated 2026-09-07 must be treated as historical.",
++      "proof_text": null,
++      "assumptions": [
++        "This is a dated claim-status and source pointer, not a theorem promoted by w443",
++        "The result concerns bond percolation; general site percolation is not asserted"
++      ],
++      "domain": "probability theory, percolation",
++      "source": {
++        "source_id": "openai-math:result-213:no-percolation-at-criticality-on-quasitransitive-graphs",
++        "url": "https://github.com/openai/math/blob/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf",
++        "revision": "as-read-2026-10-10",
++        "license": "apache-2.0",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "hutchcroft-exponential",
++      "to_existing_logical": "math:probability.core:open-problem-p0043-absence-of-infinite-clusters-at-critical-percolation",
++      "kind": "specializes",
++      "rationale": "The theorem assumes exponential growth in addition to the quasi-transitive critical-bond setting of P0043 and proves that subclass."
++    },
++    {
++      "from_key": "public-source-status",
++      "to_key": "hutchcroft-exponential",
++      "kind": "cites",
++      "rationale": "The 2026 manuscript explicitly invokes Hutchcroft's exponential-growth theorem before handling subexponential growth."
++    },
++    {
++      "from_key": "public-source-status",
++      "to_existing_logical": "math:probability.core:open-problem-p0043-absence-of-infinite-clusters-at-critical-percolation",
++      "kind": "semantic_association",
++      "rationale": "The 2026 claim has the full P0043 bond scope and supersedes the dated source-says-open label as a status lead, pending independent validation."
++    }
++  ]
++}

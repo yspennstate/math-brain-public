@@ -1,0 +1,191 @@
+% R7-06 additive theorem artifact, 2026-09-17 UTC.
+% This is a restricted theorem for the I0114 / omega*_9 program.
+% It does NOT prove the full striped-theta inequality, omega*_9 universal
+% optimality, or Serfaty Conjecture 11.1.
+
+\section*{A rigorous horizontal-axis theorem for the striped index-three blocker}
+
+Let
+\[
+ e_1=(1,0),\qquad e_2=(1/2,\sqrt3/2),\qquad
+ \Lambda=\langle e_1,e_2\rangle,
+\]
+and let
+\[
+ M_0=\langle e_1,3e_2\rangle,\qquad
+ H=\Lambda\setminus M_0.
+\]
+For $b>0$ define
+\[
+ T_b(X,Y)=\sum_{h\in H}\exp\bigl(-b\lvert (X,Y)+h\rvert^2\bigr).
+\]
+The full near-orbit blocker in the R7-06 reduction is
+\[
+ T_b(X,Y)\ge T_b(0,0)\qquad (b>0,\ (X,Y)\in\mathbb R^2).
+\]
+Here we prove this completely on the entire horizontal symmetry axis $Y=0$.
+
+For $c>0$ write the one-dimensional Gaussian comb
+\[
+ \vartheta_c(t)=\sum_{n\in\mathbb Z}e^{-c(n+t)^2}.
+\]
+It is positive, even and $1$-periodic.  Put
+\[
+ U_0=\vartheta_b(0),\qquad U_1=\vartheta_b(1/2),
+\]
+and
+\[
+ A=2\vartheta_{27b}(1/3),\qquad
+ B=2\vartheta_{27b}(1/6).
+\]
+The rectangular decomposition already obtained for $H$ gives, at $Y=0$,
+\[
+ \boxed{T_b(X,0)=A\vartheta_b(X)+B\vartheta_b(X+1/2).}\tag{1}
+\]
+Also
+\[
+ T_b(0,0)=A U_0+B U_1.\tag{2}
+\]
+
+\subsection*{Lemma 1: a half-shift product inequality}
+For every $c>0$ and $t\in\mathbb R$,
+\[
+ \boxed{\vartheta_c(t)\vartheta_c(t+1/2)
+ \ge \vartheta_c(0)\vartheta_c(1/2).}\tag{3}
+\]
+Moreover, $\vartheta_c(t)\le\vartheta_c(0)$.
+
+\paragraph{Proof.}
+Set $q=e^{-\pi^2/c}$.  Poisson summation gives
+\[
+ \vartheta_c(t)=\sqrt{\frac\pi c}\,\theta_3(\pi t,q),\qquad
+ \vartheta_c(t+1/2)=\sqrt{\frac\pi c}\,\theta_4(\pi t,q).
+\]
+The Jacobi duplication identity is
+\[
+ \theta_3(z,q)\theta_4(z,q)
+ =\theta_4(0,q^2)\theta_4(2z,q^2).\tag{4}
+\]
+For real $w$, the Jacobi triple product writes
+\[
+ \theta_4(w,Q)=\prod_{n\ge1}(1-Q^{2n})
+ \bigl(1-2Q^{2n-1}\cos(2w)+Q^{4n-2}\bigr).
+\]
+Every factor depending on $w$ is minimized when $\cos(2w)=1$, hence
+\[
+ \theta_4(w,Q)\ge\theta_4(0,Q).
+\]
+Applying this to (4) and then evaluating (4) at $z=0$ yields (3).
+Finally, the Poisson Fourier series for $\vartheta_c$ has positive cosine
+coefficients, so its maximum is attained at an integer; thus
+$\vartheta_c(t)\le\vartheta_c(0)$. \qed
+
+\subsection*{Lemma 2: the conductor-$27$ coefficient ratio}
+For every $b>0$,
+\[
+ \boxed{
+ \frac{\vartheta_{27b}(1/6)}{\vartheta_{27b}(1/3)}
+ >\frac{\vartheta_b(0)}{\vartheta_b(1/2)}.}\tag{5}
+\]
+
+\paragraph{Proof.}
+Let
+\[
+ r=e^{-\pi^2/(27b)}\in(0,1).
+\]
+Poisson summation converts the two sides of (5) to
+\[
+ L(r):=\frac{\theta_3(\pi/6,r)}{\theta_3(\pi/3,r)},\qquad
+ R(r):=\frac{\theta_3(0,r^{27})}{\theta_4(0,r^{27})}.
+\]
+For $0<x<1$ define
+\[
+ h(x)=\log\frac{1+x}{1-x}.
+\]
+Then $h$ is positive and strictly increasing.  In the triple product for
+$\theta_3$, the ratio between the factors at $\pi/6$ and $\pi/3$, for an odd
+exponent $m=2n-1$, is
+\[
+ \frac{1+r^m+r^{2m}}{1-r^m+r^{2m}}
+ =\frac{1+r^m}{1-r^m}\frac{1-r^{3m}}{1+r^{3m}}.
+\]
+Therefore, with absolutely convergent sums,
+\[
+ \begin{aligned}
+ \log L(r)
+ &=\sum_{m\ge1\atop m\ {\rm odd}}
+   \bigl(h(r^m)-h(r^{3m})\bigr)\\
+ &=\sum_{k\ge1\atop k\ {\rm odd},\ 3\nmid k}h(r^k).\tag{6}
+ \end{aligned}
+\]
+Similarly the triple products at $0$ give
+\[
+ \log R(r)=2\sum_{m\ge1\atop m\ {\rm odd}}h(r^{27m}).\tag{7}
+\]
+For every positive odd $m$, select the two indices
+\[
+ k_1(m)=27m-2,\qquad k_2(m)=27m-4.
+\]
+They are positive odd integers, neither is divisible by $3$, and all selected
+indices are pairwise distinct (their residues modulo $27$ are $25$ and $23$).
+Moreover $k_i(m)<27m$, hence, because $0<r<1$ and $h$ is strictly increasing,
+\[
+ h(r^{k_1(m)})+h(r^{k_2(m)})
+ >2h(r^{27m}).\tag{8}
+\]
+The left side of (8), summed over odd $m$, is only a subseries of the positive
+sum in (6).  Comparing with (7) proves $\log L(r)>\log R(r)$, and hence (5).
+\qed
+
+\subsection*{Theorem: global minimum on the horizontal axis}
+For every $b>0$ and $X\in\mathbb R$,
+\[
+ \boxed{T_b(X,0)\ge T_b(0,0).}\tag{9}
+\]
+Equality holds precisely when $X\in\mathbb Z$.
+
+\paragraph{Proof.}
+Set
+\[
+ u=\vartheta_b(X),\qquad v=\vartheta_b(X+1/2),\qquad p=U_0U_1.
+\]
+By Lemma 1,
+\[
+ uv\ge p,\qquad u\le U_0.\tag{10}
+\]
+By Lemma 2,
+\[
+ \frac BA>\frac{U_0}{U_1},\qquad\text{equivalently}\qquad
+ \frac{Bp}{U_0^2}>A.\tag{11}
+\]
+Using $v\ge p/u$ in (1),
+\[
+ T_b(X,0)\ge Au+\frac{Bp}{u}=:g(u).\tag{12}
+\]
+For every $0<u\le U_0$,
+\[
+ g'(u)=A-\frac{Bp}{u^2}
+ \le A-\frac{Bp}{U_0^2}<0.\tag{13}
+\]
+Thus $g$ is strictly decreasing on the entire permitted interval for $u$, and
+because $u\le U_0$,
+\[
+ T_b(X,0)\ge g(u)\ge g(U_0)
+ =AU_0+BU_1=T_b(0,0).
+\]
+If equality holds, (13) forces $u=U_0$, hence $X\in\mathbb Z$; conversely
+$T_b$ is $M_0$-periodic and $e_1\in M_0$, so every integral $X$ gives equality.
+\qed
+
+\subsection*{Interpretation for the near rigid-pair orbit}
+In the R7-06 rigid-pair reduction, the original Gaussian scale and common
+translation are related by $b=a/9$ and $y=3t$.  The theorem therefore proves
+that the near pair $\{0,e_1/3\}$ cannot lower the Gaussian energy under any
+common translation parallel to $e_1$.  Integrating the Gaussian inequality
+against a positive Bernstein measure extends this restricted theorem to every
+source-admissible completely monotone function of squared distance for which
+the periodic energy is finite.
+
+This is a genuine two-defect theorem but only a one-dimensional slice of the
+full striped inequality.  It does not move the frozen source metric $m_{\rm sq}$
+from $2$ and does not prove global universal optimality of $\omega^*_9$.

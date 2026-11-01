@@ -1,0 +1,1 @@
+The repaired critical level q=v is a union of two affine lines, hence has zero probability under the joint density. Therefore the whole pushforward is absolutely continuous. Old C03 is independently verified as repaired. No new defect was found in lines 409-450. PDF visual verification remains UNCHECKED. WITHOUT_VERIFIED_BRAIN.

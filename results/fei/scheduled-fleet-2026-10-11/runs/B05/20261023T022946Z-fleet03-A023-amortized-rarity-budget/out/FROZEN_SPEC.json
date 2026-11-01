@@ -1,0 +1,12 @@
+{
+  "helper_version": "A023-same-source-smoothed-mixed-v1",
+  "family": "z-balanced canonical quadratic bent seed and two distinct point edits, two fair controls, prescribed smoothed restricted seed references, original projected controller reference, old U=m/8",
+  "parameter_domain": "m=4,v=0,w=1..15; m=6,v=0,w in{1,3}; every partial control assignment and zero or one original data query; plus m=8,v=0,w=1 sequential-until-first1 deep-cut guard",
+  "case_count": "1449 shallow states plus17 deep-tree states; dynamic programming covers every adaptive stopping policy with at most one DATA query per path on17 declared roots",
+  "symmetry": "No symmetry exhaustion claim; explicit representative vertices only. All-dimensional/all-bent assertion has a separate analytic proof.",
+  "arithmetic": "integer FWHT, Fraction physical edges and references, exact prime-log forms, positive atanh intervals with explicit remainder and outward dyadic signs",
+  "memory_estimate_mb": 160,
+  "max_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "failure_checks": ["both complete terminal KLs", "controller reference is original marginal projection", "all reference-support zeros", "actual conditional pi and physical reaches", "signed negative branch retained", "same R bank and old U", "data/control owner separation", "all adaptive one-DATA stopping frontiers", "expected-depth deep cut"]
+}

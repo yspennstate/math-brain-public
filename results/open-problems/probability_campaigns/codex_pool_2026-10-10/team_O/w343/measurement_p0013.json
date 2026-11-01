@@ -1,0 +1,38 @@
+{
+  "graphs_certified": 75,
+  "max_n": 4,
+  "failures": 0,
+  "finite_only": true,
+  "rows": [
+    {
+      "n": 1,
+      "graphs": 1,
+      "expected_theta": 1.0,
+      "product_defect": 0.0,
+      "imbalance_defect": 0.0
+    },
+    {
+      "n": 2,
+      "graphs": 2,
+      "expected_theta": 1.5,
+      "product_defect": -1.1102230246251565e-16,
+      "imbalance_defect": 0.06066017177982141
+    },
+    {
+      "n": 3,
+      "graphs": 8,
+      "expected_theta": 2.0,
+      "product_defect": 0.11602540378443876,
+      "imbalance_defect": 0.038675134594812866
+    },
+    {
+      "n": 4,
+      "graphs": 64,
+      "expected_theta": 2.359375,
+      "product_defect": 0.15451209908171756,
+      "imbalance_defect": 0.025175400918282593
+    }
+  ],
+  "command": "python -X utf8 ~/brain_workers/w343/check_remaining.py",
+  "audit_status": "pending-w347"
+}

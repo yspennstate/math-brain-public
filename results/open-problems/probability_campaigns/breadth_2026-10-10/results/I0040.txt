@@ -1,0 +1,221 @@
+{
+  "problem_id": "I0040",
+  "source_checks": [
+    {
+      "method": "Memory only; no web search, browsing, or child agents.",
+      "source_id": "garban_pete_schramm_2010",
+      "authors": ["Christophe Garban", "Gabor Pete", "Oded Schramm"],
+      "year": 2010,
+      "title": "The Fourier spectrum of critical percolation",
+      "publication": "Acta Mathematica 205, 19–104",
+      "url": "https://arxiv.org/abs/0803.3750",
+      "finding": "This paper resolves the concentration assertion around exponent 3/4 for triangular-lattice critical percolation and proves sharp lower-tail estimates. I cannot certify from memory that it resolves the entire recorded request for arbitrary exponent intervals.",
+      "source_inspected_this_session": false
+    },
+    {
+      "method": "Memory only.",
+      "source_id": "smirnov_werner_2001",
+      "authors": ["Stanislav Smirnov", "Wendelin Werner"],
+      "year": 2001,
+      "title": "Critical exponents for two-dimensional percolation",
+      "publication": "Mathematical Research Letters 8, 729–744",
+      "url": "https://arxiv.org/abs/math/0109120",
+      "finding": "The alternating four-arm exponent on the triangular lattice is 5/4.",
+      "source_inspected_this_session": false
+    },
+    {
+      "source_id": "schramm_2006_v2",
+      "revision": "Problem 5.1 as transcribed by the user",
+      "finding": "Only the supplied transcription was inspected. Its preceding definitions were unavailable. No current-openness certificate or novelty claim is made."
+    }
+  ],
+  "exact_statement": {
+    "recorded_question": "Does tilde_mu_f_R([R^alpha1,R^alpha2]) tend to 1 whenever alpha1 < 3/4 < alpha2? Determine its asymptotic behavior for all 0 <= alpha1 < alpha2 <= 2.",
+    "working_model": "Critical p=1/2 site percolation on the triangular lattice, with f_R representing a left-right crossing of a fixed-shape rectangle of linear size R.",
+    "normalization": "Use f_R=2*1_crossing-1 and hat_f_R(S)=E[f_R product_{i in S} x_i], where the x_i are independent unbiased spins. Define tilde_mu_f_R({k})=sum_{|S|=k} hat_f_R(S)^2/Var(f_R), for k>=1. Let K_R have this conditional nonempty spectral-size law. Using the crossing indicator instead gives the same conditional law.",
+    "scope": "The supplied excerpt does not define the lattice or tilde_mu. The conclusions below explicitly use this triangular-lattice model and nonempty normalization."
+  },
+  "answer": "partial",
+  "proof_or_counterexample": {
+    "main_concentration_status": "resolved_in_literature under the stated interpretation, by Garban, Pete and Schramm (2010).",
+    "proved_scope": [
+      {
+        "range": "0 <= alpha1 < alpha2 < 3/4",
+        "result": "tilde_mu_f_R([R^alpha1,R^alpha2]) = R^(-1/2 + 2alpha2/3 + o(1))."
+      },
+      {
+        "range": "0 <= alpha1 < alpha2 = 3/4",
+        "result": "log(tilde_mu_f_R([R^alpha1,R^(3/4)]))/log R tends to 0. This does not determine the probability limit."
+      },
+      {
+        "range": "0 <= alpha1 < 3/4 < alpha2 <= 2",
+        "result": "tilde_mu_f_R([R^alpha1,R^alpha2]) tends to 1."
+      },
+      {
+        "range": "3/4 < alpha1 < alpha2 <= 2",
+        "result": "The window mass is at most R^(3/4-alpha1+o(1)) and tends to zero. This upper bound is not claimed to be sharp."
+      }
+    ],
+    "proof": {
+      "label": "Complete elementary derivation conditional on explicitly stated literature inputs. These imported percolation theorems are not independently reproved here.",
+      "literature_inputs": [
+        "L1. Write a(r)=alpha_4(1,r) for the alternating four-arm probability. Then a(r)=r^(-5/4+o(1)), and quasi-multiplicativity gives alpha_4(r,R) asymp a(R)/a(r). The notation asymp means bounds by positive constant factors independent of scale.",
+        "L2. The Garban-Pete-Schramm sharp lower-tail estimate, in conditional nonempty normalization, gives P(K_R <= r^2 a(r)) asymp (R/r)^2 alpha_4(r,R)^2 at intermediate scales 1 << r << R. Constant-factor variants of the threshold give the same logarithmic deductions below.",
+        "L3. The first-moment estimate gives E[K_R] <= C R^2 a(R), with C independent of R."
+      ],
+      "steps": [
+        "Set F_R(t)=P(K_R<=t). For fixed 0<b<1 and r=floor(R^b), L1 gives r^2 a(r)=R^(3b/4+o(1)) and alpha_4(r,R)=R^(-5(1-b)/4+o(1)). L2 therefore gives F_R(r^2 a(r))=R^(-(1-b)/2+o(1)).",
+        "Fix 0<alpha<3/4 and b=4alpha/3. Choose epsilon>0 with 0<b-epsilon<b+epsilon<1. The scales r_minus=floor(R^(b-epsilon)) and r_plus=floor(R^(b+epsilon)) have thresholds R^(alpha-3epsilon/4+o(1)) and R^(alpha+3epsilon/4+o(1)), respectively. They eventually bracket R^alpha. Monotonicity bounds log F_R(R^alpha)/log R between -1/2+b/2-epsilon/2+o(1) and -1/2+b/2+epsilon/2+o(1). Sending epsilon to zero proves F_R(R^alpha)=R^(-1/2+2alpha/3+o(1)).",
+        "At alpha=3/4, choose r=floor(R^(1-epsilon)). Its threshold is eventually below R^(3/4), so F_R(R^(3/4)) >= R^(-epsilon/2+o(1)). Since F_R<=1 and epsilon is arbitrary, log F_R(R^(3/4))/log R tends to zero.",
+        "For 0<alpha1<alpha2<=3/4, these estimates imply F_R(R^alpha1)/F_R(R^alpha2) tends to zero. The window mass lies between F_R(R^alpha2)-F_R(R^alpha1) and F_R(R^alpha2), so it has exponent -1/2+2alpha2/3. If alpha1=0, the lower endpoint is 1 and no positive spectral sizes are removed.",
+        "For alpha1<3/4<alpha2, the probability below the lower endpoint tends to zero by the preceding estimate, or is zero when alpha1=0. L1 and L3 give E[K_R]<=R^(3/4+o(1)). Markov's inequality bounds the probability above the upper endpoint by R^(3/4-alpha2+o(1)), which tends to zero. The window mass consequently tends to 1.",
+        "For 3/4<alpha1<alpha2, Markov's inequality bounds the entire window mass by E[K_R]/R^alpha1 <= R^(3/4-alpha1+o(1)), which tends to zero."
+      ]
+    },
+    "limiting_family": {
+      "natural_scale": "lambda_R=R^2 alpha_4(1,R)=R^(3/4+o(1)).",
+      "limitation": "A limiting distribution at the unadjusted threshold R^(3/4) is not obtained here."
+    },
+    "exact_computation": {
+      "label": "Exact finite computation, using integer and rational arithmetic; not asymptotic numerical evidence.",
+      "model": "Vertices (i,j), 0<=i,j<n, have triangular-lattice edges with differences ±(1,0), ±(0,1), ±(1,-1). Each site is independently open with probability 1/2. The event is an open crossing from i=0 to i=n-1.",
+      "results": [
+        {
+          "side": 1,
+          "configurations": 2,
+          "crossing_probability": "1/2",
+          "spectral_mass_by_size": {"1": "1"},
+          "mean_spectral_size": "1"
+        },
+        {
+          "side": 2,
+          "configurations": 16,
+          "crossing_probability": "1/2",
+          "spectral_mass_by_size": {
+            "1": "5/8",
+            "2": "1/4",
+            "3": "1/8"
+          },
+          "mean_spectral_size": "3/2"
+        },
+        {
+          "side": 3,
+          "configurations": 512,
+          "crossing_probability": "1/2",
+          "spectral_mass_by_size": {
+            "1": "7765/16384",
+            "2": "973/4096",
+            "3": "403/2048",
+            "4": "255/4096",
+            "5": "185/8192",
+            "6": "19/4096",
+            "7": "1/512",
+            "8": "1/4096",
+            "9": "1/16384"
+          },
+          "mean_spectral_size": "249/128"
+        },
+        {
+          "side": 4,
+          "configurations": 65536,
+          "crossing_probability": "1/2",
+          "spectral_mass_by_size": {
+            "1": "26516323/67108864",
+            "2": "3397193/16777216",
+            "3": "14333761/67108864",
+            "4": "813479/8388608",
+            "5": "3698675/67108864",
+            "6": "358215/16777216",
+            "7": "656889/67108864",
+            "8": "14425/4194304",
+            "9": "96513/67108864",
+            "10": "7895/16777216",
+            "11": "11195/67108864",
+            "12": "359/8388608",
+            "13": "681/67108864",
+            "14": "25/16777216",
+            "15": "11/67108864"
+          },
+          "mean_spectral_size": "2405/1024"
+        }
+      ],
+      "method": "Enumerate every configuration, determine crossing by graph reachability, compute the integer Walsh-Hadamard transform, and aggregate squared coefficients by subset size.",
+      "verification": "All cases passed Parseval and total-probability checks. Their spectral means also agreed exactly with independently counted pivotal probabilities. The four-site distribution has the standalone algebraic proof below.",
+      "code_path": "~/brain_workers/teams/PROBABILITY300_20261010/coverage/results/I0040/spectral_small_cases.py",
+      "data_path": "~/brain_workers/teams/PROBABILITY300_20261010/coverage/results/I0040/spectral_small_cases.json"
+    },
+    "conjecture": null,
+    "numerical_evidence": null,
+    "sketch": null,
+    "novelty": "No novelty is claimed for the asymptotic literature consequences. All proposed nodes remain drafts pending independent audit."
+  },
+  "hardest_remaining_gap": "This answer does not determine probability limits for intervals having an endpoint exactly at 3/4, although it determines the logarithmic exponent for windows ending there. It also does not determine sharp upper-tail decay. Those deductions require additional control of the spectral distribution and of the relation between R^(3/4) and R^2 alpha_4(1,R). These are gaps in this answer, not claims that the questions remain open in current literature.",
+  "evidence_status": "partial",
+  "draft_brain_nodes": [
+    {
+      "key": "I0040.def.nonempty_spectral_size",
+      "namespace": "probability.percolation.fourier",
+      "logical_name": "conditional_nonempty_spectral_size_law",
+      "kind": "definition",
+      "title": "Nonempty Fourier spectral-size law",
+      "statement": "For nonconstant f:{-1,1}^N->{-1,1}, let hat_f(S)=E[f(x) product_{i in S} x_i]. Define P(K=k)=sum_{|S|=k} hat_f(S)^2/Var(f), k>=1. Parseval gives total mass 1.",
+      "assumptions": [
+        "Finite N.",
+        "Independent unbiased spins.",
+        "Var(f)>0."
+      ],
+      "domain": "Probability; Boolean Fourier analysis",
+      "source": {
+        "source_id": "I0040_campaign_20261010",
+        "url": null,
+        "revision": "2026-10-10; draft pending independent audit",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0040.lemma.four_site_crossing_spectrum",
+      "namespace": "probability.percolation.fourier",
+      "logical_name": "four_site_triangular_rhombus_spectral_law",
+      "kind": "lemma",
+      "title": "Exact spectrum of the four-site triangular rhombus crossing",
+      "statement": "For independent p=1/2 site states on the graph with edges ab,ac,bc,bd,cd, left boundary {a,c}, and right boundary {b,d}, the conditional nonempty spectral-size law is P(K=1)=5/8, P(K=2)=1/4, P(K=3)=1/8, P(K=4)=0. Its mean is 3/2.",
+      "proof_text": "Denote the open indicators by a,b,c,d in {0,1}. Any left-right path must use an edge between {a,c} and {b,d}; those edges are exactly ab,bc,cd. Conversely, any such edge with both endpoints open supplies a crossing. Thus the crossing event is ab=1 or bc=1 or cd=1. Its complement indicator is (1-ab)(1-bc)(1-cd)=1-ab-bc-cd+abc+bcd, using the idempotence of the indicators. Therefore the crossing spin f=2*1_crossing-1 equals -1+2ab+2bc+2cd-2abc-2bcd. Put A=2a-1, B=2b-1, C=2c-1, D=2d-1. Expansion gives f=(A+D)/4+(B+C)/2+(AB+CD-AC-BD)/4-(ABC+BCD)/4. Products of distinct independent unbiased spins are orthonormal: the expectation of the product of two different characters vanishes because some spin occurs to an odd power. Hence this is the Fourier expansion. There is no constant coefficient. The squared degree-1 coefficients sum to 2/16+2/4=5/8; the squared degree-2 coefficients sum to 4/16=1/4; the squared degree-3 coefficients sum to 2/16=1/8. There are no degree-4 terms. These masses sum to 1 and give the stated conditional law. Its mean is 5/8+2*(1/4)+3*(1/8)=3/2.",
+      "assumptions": [
+        "The stated graph and boundary sets.",
+        "Independent p=1/2 site states.",
+        "Conditional nonempty Fourier normalization."
+      ],
+      "domain": "Probability; exact finite percolation crossings",
+      "source": {
+        "source_id": "I0040_campaign_20261010",
+        "url": null,
+        "revision": "2026-10-10; complete finite proof, pending independent audit",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0040.theorem.conditional_exponent_windows",
+      "namespace": "probability.percolation.fourier",
+      "logical_name": "polynomial_windows_from_four_arm_spectral_estimates",
+      "kind": "theorem",
+      "title": "Polynomial spectral windows from four-arm and lower-tail inputs",
+      "statement": "Under the explicit assumptions below, for 0<=alpha1<alpha2<=3/4 the window probability equals R^(-1/2+2alpha2/3+o(1)); at alpha2=3/4 this means only logarithmic exponent zero. For alpha1<3/4<alpha2 it tends to 1. For 3/4<alpha1<alpha2 it is at most R^(3/4-alpha1+o(1)) and tends to zero. This is a conditional elementary consequence of published estimates, with no novelty claim.",
+      "proof_text": "Let F_R(t)=P(K_R<=t). For fixed 0<b<1, take r=floor(R^b). The arm assumptions imply r^2 a(r)=R^(3b/4+o(1)) and alpha_4(r,R)=R^(-5(1-b)/4+o(1)). Substituting into the assumed lower-tail estimate gives F_R(r^2 a(r))=R^(-(1-b)/2+o(1)). For 0<alpha<3/4 set b=4alpha/3. Choose epsilon>0 with b-epsilon>0 and b+epsilon<1. The thresholds at r=floor(R^(b-epsilon)) and r=floor(R^(b+epsilon)) eventually lie below and above R^alpha. Monotonicity therefore bounds log F_R(R^alpha)/log R between -1/2+b/2-epsilon/2+o(1) and -1/2+b/2+epsilon/2+o(1). Sending epsilon to zero proves F_R(R^alpha)=R^(-1/2+2alpha/3+o(1)). For alpha=3/4, the scale r=floor(R^(1-epsilon)) has threshold below R^(3/4), giving F_R(R^(3/4))>=R^(-epsilon/2+o(1)). Together with F_R<=1, arbitrary epsilon gives logarithmic exponent zero. If 0<alpha1<alpha2<=3/4, the ratio F_R(R^alpha1)/F_R(R^alpha2) tends to zero, so subtracting the mass below R^alpha1 leaves the same logarithmic exponent. When alpha1=0 there is no lower loss because K_R>=1. This proves the first assertion. For a window straddling 3/4, its lower loss tends to zero by that estimate. The moment assumption gives E[K_R]<=R^(3/4+o(1)); Markov bounds its upper loss by R^(3/4-alpha2+o(1)), which tends to zero. This proves concentration. For a window strictly above 3/4, Markov instead bounds its entire mass by R^(3/4-alpha1+o(1)), proving the final assertion.",
+      "assumptions": [
+        "K_R>=1 has the conditional nonempty spectral law of the stated fixed-shape triangular-lattice crossing.",
+        "a(r)=alpha_4(1,r)=r^(-5/4+o(1)).",
+        "alpha_4(r,R) asymp a(R)/a(r), with constants independent of scale.",
+        "P(K_R<=r^2 a(r)) asymp (R/r)^2 alpha_4(r,R)^2 for intermediate scales, as supplied by the Garban-Pete-Schramm lower-tail theorem.",
+        "E[K_R]<=C R^2 a(R), with C independent of R.",
+        "The percolation estimates are imported literature inputs, not independently proved campaign results."
+      ],
+      "domain": "Probability; critical planar percolation; conditional asymptotic theorem",
+      "source": {
+        "source_id": "I0040_campaign_20261010",
+        "url": null,
+        "revision": "2026-10-10; conditional proof pending independent audit",
+        "license": "owner-own-work (campaign result)"
+      }
+    }
+  ]
+}

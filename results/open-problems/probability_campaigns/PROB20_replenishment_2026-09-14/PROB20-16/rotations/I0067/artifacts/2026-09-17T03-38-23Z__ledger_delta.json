@@ -1,0 +1,64 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "I0067",
+  "report_kind": "STUCK_RECOVERY_2",
+  "input_snapshot_sha": "e29bd3168446ca799d03a15a9c2a3f971051f804",
+  "previous_report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/I0067/runs/2026-09-17/2026-09-17T02-36-58Z__report.md",
+  "previous_report_commit": "f6035e9749b08cafbf7abb7197237af0ec13dc1f",
+  "report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/I0067/runs/2026-09-17/2026-09-17T03-38-23Z__report.md",
+  "report_creation_commit": "4718a1828af52fc83198b220acda00c2e74a1ca4",
+  "source": {
+    "authors": "Antonio Agresti and Mark Veraar",
+    "year": 2025,
+    "title": "Nonlinear SPDEs and Maximal Regularity: An Extended Survey",
+    "locator": "arXiv:2501.18561v5 / NoDEA 32 (2025), Article 123, Problem 10",
+    "current_version_checked": "2026-09-17",
+    "source_status": "OPEN_IN_BOUNDED_SEARCH"
+  },
+  "frozen_metric": {
+    "name": "E_endpoint",
+    "before": 0,
+    "after": 0,
+    "movement": "NO_MOVEMENT"
+  },
+  "unchanged_count": 4,
+  "stuck_recovery_cycle": 2,
+  "methods_tried": [11, 12, 8],
+  "method_outcomes": {
+    "B11": "Exact Piola decomposition P[(b.grad)u] = G_b u + P[(u.grad)b-(div b)u] for divergence-free u; all first derivatives of u lie in the geometric Piola generator and the remainder is zero order. Structural reduction only.",
+    "B12": "For the nonconstant periodic shear, the flow gradient and pullback metric have determinant one and reciprocal nontrivial eigenvalues; no ellipticity collapse. Restricted geometric analysis only.",
+    "B8": "Brownian Holder regularity plus smooth spatial shear gives pathwise parabolic-Dini coefficient oscillation O(r^gamma), dyadically summable. This isolates a non-autonomous endpoint generalized-Stokes/Hodge stability lemma; it does not prove it."
+  },
+  "mathematical_status": "PARTIAL",
+  "remaining_obligation": "Prove or refute source-valid local well-posedness for arbitrary admissible nonzero smooth transport coefficients in a scaling-critical space of smoothness <= -1/2 and determine the optimal threshold. Immediate analytic module: endpoint stability for the Piola-conjugated non-autonomous/random generalized Stokes-Hodge operator plus critical convection and zero-order residual noise.",
+  "source_status_checks": [
+    "Agresti-Sauerbrey-Veraar arXiv:2511.12692 stochastic-flow transform recovered",
+    "Auscher-Frey BMO^{-1} tent-space Navier-Stokes-type theory recovered",
+    "Tolksdorf generalized Stokes rough-coefficient theory, published 2026-01-12, recovered",
+    "Haardt arXiv:2609.10427 submitted 2026-09-09, generalized Stokes Lp/gradient/smoothing estimates, recovered",
+    "Hu-Nguyen-Shao-Wei-Zhang arXiv:2606.20207 deterministic VMO^{-1} coefficient-freezing analogue recovered",
+    "No direct source-matching endpoint theorem or counterexample surfaced in bounded 2026-09-17 search; this is not a novelty certificate"
+  ],
+  "audit_refs": [],
+  "artifact_refs": [
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/I0067/artifacts/2026-09-17T03-38-23Z__shear_geometry_check.py",
+      "creation_commit": "4d4c42f169665fbbd3be1f7192fedea729996db5",
+      "readback_blob": "b5e209c17473178230326815d0e8d6642d5fc914"
+    },
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/I0067/artifacts/2026-09-17T03-38-23Z__shear_geometry_check.out",
+      "creation_commit": "689b3831024f7f67116edcaca084f75bd8f9a50d",
+      "readback_blob": "82623fea827f70768af93100002af8c68273cdde",
+      "status": "PASS",
+      "exit_code": 0,
+      "scope": "self-check only; source endpoint certified=false"
+    }
+  ],
+  "next_methods_if_continued": [10, 22, 27],
+  "next_run_rule": "If the next run remains source-level unchanged/stuck, preserve an I0067 handoff and rotate this HARD slot; do not spend a third recovery cycle on another local lemma.",
+  "runtime_model": "GPT-5.6 Sol",
+  "reasoning_level": "UNVERIFIED",
+  "model_selector_exposed": false,
+  "reasoning_selector_exposed": false
+}

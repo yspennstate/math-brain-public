@@ -1,0 +1,31 @@
+{
+  "problem_id": "C0044",
+  "checked_at": "2026-10-10",
+  "exact_historical_statement": "For every fixed direction l on the unit sphere in Z^d, does an iid elliptic nearest-neighbor RWRE have annealed P_0(A_l) in {0,1}, where A_l is directional transience X_n·l -> +infinity? The unresolved range in the 2013 source was d>=3.",
+  "historical_source": {
+    "authors": "Alexander Drewitz and Alejandro F. Ramirez",
+    "title": "Selected Topics in Random Walks in Random Environment",
+    "locator": "Open question 3.2 and equation (3.2), arXiv:1309.2589v1, 2013; definitions 2.1-2.3",
+    "url": "https://arxiv.org/html/1309.2589v1",
+    "source_quote_short": "Consider a RWRE satisfying the assumptions (E) and (IID).",
+    "assumptions": {"E": "all nearest-neighbor transition probabilities strictly positive almost surely", "IID": "transition rows at lattice sites independent and identically distributed", "probability": "annealed law P_0 from origin", "direction": "each fixed nonzero direction, normalized in source to unit sphere"}
+  },
+  "local_prior": {
+    "ranking": "2026-09-07 RANKING_2026-09-07.csv marks C0044 attempted_un; this is dated history, not a current-status certificate",
+    "intake": "problems.jsonl line 44, C0044-A002 in attempts.jsonl corrects a vacuous intersection statement; retains 2013 unresolved gap",
+    "owner_solved_or_retired_check": "pending targeted check"
+  },
+  "recent_primary_claim": {
+    "title": "A directional zero-one law under strict ellipticity",
+    "author": "OpenAI",
+    "release_date": "2026-09-23",
+    "manuscript_url": "https://github.com/openai/math/blob/main/preprints/A-directional-zero-one-law-under-strict-ellipticity-September-23-2026/paper.pdf",
+    "scope_url": "https://github.com/openai/math/blob/main/lean/docs/220.md",
+    "claimed_scope": "iid strictly elliptic nearest-neighbor RWRE in d>=3, every fixed nonzero real direction; annealed probability from origin",
+    "comparator_url": "https://github.com/openai/math/blob/main/lean/ComparatorChallenges/DirectionalWalk.lean",
+    "comparator_observation": "The publicly linked comparator statement has theorem directional_zero_one ... := by sorry; the comparator alone is not a formal-check receipt.",
+    "independent_manuscript_and_formal_review": "pending"
+  },
+  "current_openness": "UNKNOWN: a matching recent solution is claimed in a primary public release, but this referee has not verified its proof, trusted axioms, or comparator equivalence.",
+  "novelty_policy": "No independent solution or novelty claim for C0044. Continue with scoped boundary audits and source verification."
+}

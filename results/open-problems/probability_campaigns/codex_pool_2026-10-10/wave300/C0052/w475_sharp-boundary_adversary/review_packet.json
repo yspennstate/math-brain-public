@@ -1,0 +1,97 @@
+{
+  "worker": "w475",
+  "target": "C0052",
+  "parent_problem_solved": false,
+  "source_openness": "UNKNOWN",
+  "proof_artifact": "~\\brain_workers\\w475\\ATTEMPT.md",
+  "artifact_sha256": {
+    "ATTEMPT.md": "59788ab6ffc7dc549fbb6df1e6f92ff2c3b1ffc2b2380fb9702b89773d2a6049",
+    "CLAIMS.jsonl": "5cb646c5996c2f80db69e9c3a4f2b86438e762b9189175c9873d1a741ee08a10",
+    "SOURCE_STATUS.json": "bba22e9e03de97f50d480d91fb090ce77aa68ce96d6b29291ae300c021d9526f",
+    "PEER_REVIEW.md": "cf2c079f1c183f910c6d12586464f3fd84511d5ca0a5fa4ce9a56e30affde6c9",
+    "AUDIT_ROWS.jsonl": "7435ef6ced76daa4ca359ec252624ba5ce1edc57760de2b1d7c359c12114ad33",
+    "REPORT.md": "d4e8b5a0105efa672e9cba95cd468c473b8a1acf69219434c816239b3c3c0fd7",
+    "measurements.json": "51708ce9978b072aaf44d819e46f247ae014af47ac3489e99b3e5a7cc2d45a7a",
+    "bridge_measurements.json": "313200a7e89a5eb6e03dee7e8eee578758ddb518c422d8a23ec1a266ff8e3cdc",
+    "COMPUTE_GATE.json": "3be37013f6d68163cbec4322db41430724abfe70436ce106c06e4c2695f6c062",
+    "BRIDGE_COMPUTE_GATE.json": "74ac1a56fa15d42861293e9c924cfc575bf453971074ace8561c899924ab2c33",
+    "verify_contact.py": "37af8a9e93dd5c052b7d9bd928b181a5b27b9c021a27ea66ef6c4d0eee9c4d25",
+    "verify_bridges.py": "f99854aea6f47b586b7fe5330f8ed5b33da30360575b8fd989dbfc29e48d817b",
+    "bundle_001.json": "0441d04b3a5a55f0522225e52ed1e2dc5dc61b52121db8bf389a1a4cbf56e5f9",
+    "HOOK_PROPOSAL.jsonl": "2be6943dbfe039a8aeee2a1a45b887ccd863b4556a5489c690626ccc166ac489",
+    "patches/01_current_sprinkling_hook.diff": "094fbe0c126ade54a3e245cb8661fc3e15a39f04327b8e0187655bcd4fbc8260",
+    "w474_ATTEMPT_reviewed.md": "9a462ceb336d2a26e72a1e0dfc987bbdacc7b4db2ba9f2207b9a89a1d1b49260",
+    "live_target_receipt.json": "387baeefb1ac441cd3140facb0170ce61e3ae9dd7f6ab4c89a39f163e900f5c5"
+  },
+  "paired_proof_snapshot": {
+    "path": "~\\brain_workers\\w475\\w474_ATTEMPT_reviewed.md",
+    "sha256": "9a462ceb336d2a26e72a1e0dfc987bbdacc7b4db2ba9f2207b9a89a1d1b49260",
+    "scope": "w474 L1-L3 and C1; compare with AUDIT_ROWS.jsonl"
+  },
+  "independent_review_receipts": {
+    "path": "~/brain_workers/w476/REVIEW.jsonl",
+    "keeps": {
+      "R2": "finite weighted/transitive contact bound",
+      "R3": "path reverse-sprinkling obstruction"
+    },
+    "pending": [
+      "general block rate",
+      "source-normalized exact count",
+      "nontransitive sharpness example"
+    ],
+    "frozen_hash_bound": false
+  },
+  "model_gate": {
+    "author_response_side_evidence": null,
+    "referee_response_side_evidence": null,
+    "different_account_verified": false,
+    "different_model_verified": false,
+    "promotion_allowed": false
+  },
+  "measurements": {
+    "cube_checks": 10,
+    "bridge_and_boundary_checks": 17,
+    "exact_formula_errors": 0,
+    "cube_seconds": 39.549496500054374,
+    "bridge_seconds": 0.08967050001956522,
+    "no_live_recall_improvement_claim": true
+  },
+  "brain_output": {
+    "draft": "~\\math-brain-inbox\\w475\\bundle_001.json",
+    "schema_local_check": "PASS: two concept entries, allowed source license and exact existing target ends",
+    "submitted": true,
+    "reviewed": "partial scoped mathematical KEEP; deployment/model gates pending",
+    "ingested": false,
+    "retrievable": false,
+    "live_store_mutated": false
+  },
+  "hook_output": {
+    "proposal": "~\\brain_workers\\w475\\HOOK_PROPOSAL.jsonl",
+    "patch": "~\\brain_workers\\w475\\patches\\01_current_sprinkling_hook.diff",
+    "submitted": false,
+    "applied": false,
+    "reason": "worker write restriction; reviewer applies the ready unified diff"
+  },
+  "formal_verification": {
+    "receipt": null,
+    "no_admitted_placeholder": true,
+    "method": "written derivation plus exact finite corroboration; no formal proof claim"
+  },
+  "NEXT": "Finish independent checks of later contact extensions; seek a model-specific lower bound for distinct-site exact two-current Ursell mass.",
+  "handoff": {
+    "w474": {
+      "kind": "found",
+      "sent": 1
+    },
+    "w476": {
+      "kind": "review",
+      "sent": 1
+    },
+    "transport": "existing NOVEL campaign, direct recipients only; no team creation or membership change",
+    "progress_page": "logged at both measurement and packet checkpoints",
+    "packet": "review_packet.json",
+    "proof_sha256": "59788ab6ffc7dc549fbb6df1e6f92ff2c3b1ffc2b2380fb9702b89773d2a6049"
+  },
+  "final_integrity_check": "FINAL_CHECKS.json: PASS, 17 artifact hashes verified",
+  "worker_state": "NEEDS_REVIEW"
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T105123Z-fleet03-B04-qform-auto11-r32",
+  "theorem": "QFORM-EXACT-CROSS-RANK-PLANCHEREL-v1",
+  "symbolic_checks": {
+    "R_transpose_R": "I_3",
+    "S_transpose_S": "I_3",
+    "B": [
+      ["32/21", "-2/7", "19/21"],
+      ["-34/21", "10/7", "10/21"],
+      ["-31/21", "-2/7", "40/21"]
+    ],
+    "all_B_entries_nonzero": true,
+    "det_B": 6,
+    "eigenvalues_B_transpose_B": [9, 4, 1],
+    "singular_values_B": [3, 2, 1],
+    "A0_eigenvalues": [-3, -2, -1, 1, 2, 3],
+    "self_block_perturbation_operator_norm": 0.15,
+    "certified_large_eigenvalue_count_for_A": 4,
+    "certified_min_abs_for_four_outer_eigenvalues": 1.85
+  },
+  "constants": {
+    "rank3_general_projection_cap_bound_at_det6": 3.3019272488946267,
+    "rank3_square_bank_sharp_cap_bound_at_det6": 1.6509636244473134,
+    "hub_h6_eta_1_over_16_coefficient": 12.097978152622812,
+    "hub_h6_eta_1_over_16_with_Z_ge_2_minus18": 96.7838252209825,
+    "exact_infeasible_h4_rank3_pattern_coefficient": 9.422506814850118
+  },
+  "formula_checks": {
+    "general_exact_rank_r_bound": "2r/(r-2) * (product nonzero singular values)^(-1/r)",
+    "rank3_cauchy_binet": "E3(B)=(sigma1*sigma2*sigma3)^2 for rank(B)=3",
+    "rank3_general_bound": "6*E3(B)^(-1/6)",
+    "rank3_square_bank_bound": "3*(sigma1*sigma2*sigma3)^(-1/3)"
+  },
+  "full_target_solved": false,
+  "continuity_scope": "proved for the exact-cross-rank and rank-three hub-pattern branches only"
+}

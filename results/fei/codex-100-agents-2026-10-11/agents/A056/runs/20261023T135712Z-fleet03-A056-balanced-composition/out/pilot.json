@@ -1,0 +1,229 @@
+{
+  "status": "PASS",
+  "helper": "A056-per-set-witness-physical-kernel-v1",
+  "pilot": true,
+  "lane": null,
+  "assertions_executed": 731,
+  "single_queries": 2,
+  "full_trees": 2,
+  "physical_nodes_checked": 12,
+  "reference_only_pair_fibers": 0,
+  "constant_child_laws": 12,
+  "runtime_seconds": 0.1819063000002643,
+  "examples": [
+    {
+      "code": 23,
+      "uniform": false,
+      "i": 0,
+      "Z": [
+        "1/2",
+        "1/2"
+      ],
+      "lambda": {
+        "2": "-1/4",
+        "3": "1/4"
+      },
+      "rho": {
+        "2": "1/12"
+      },
+      "base_release": {},
+      "joint_release": {
+        "2": "-1/4",
+        "3": "1/4"
+      },
+      "base_terminal": {
+        "2": "2"
+      },
+      "joint_terminal": {
+        "2": "9/4"
+      },
+      "I_spent": "1/2"
+    },
+    {
+      "code": 23,
+      "uniform": true,
+      "i": 0,
+      "Z": [
+        "1/2",
+        "1/2"
+      ],
+      "lambda": {
+        "2": "-1/4",
+        "3": "1/4"
+      },
+      "rho": {
+        "2": "1/12"
+      },
+      "base_release": {
+        "2": "-2",
+        "7": "1"
+      },
+      "joint_release": {
+        "2": "-9/4",
+        "3": "1/4",
+        "7": "1"
+      },
+      "base_terminal": {
+        "2": "2"
+      },
+      "joint_terminal": {
+        "2": "9/4"
+      },
+      "I_spent": "1/2"
+    }
+  ],
+  "trees": [
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "2": "2"
+      },
+      "full_joint_debit": {
+        "2": "2",
+        "3": "1/4"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "25/12",
+        "3": "1/4"
+      },
+      "code": 23,
+      "uniform": false
+    },
+    {
+      "nodes": 5,
+      "leaves": 6,
+      "initial_I": "3/2",
+      "old_base_debit": {
+        "7": "1"
+      },
+      "full_joint_debit": {
+        "3": "1/4",
+        "7": "1"
+      },
+      "full_terminal_CE": {},
+      "lambda_total": {
+        "3": "1/4"
+      },
+      "reselection_entropy_total": {
+        "2": "1/12"
+      },
+      "combined_bill": {
+        "2": "1/12",
+        "3": "1/4",
+        "7": "1"
+      },
+      "code": 23,
+      "uniform": true
+    }
+  ],
+  "parity_cases": [
+    {
+      "degree": 2,
+      "lambda": {
+        "2": "1"
+      },
+      "rho": {},
+      "full_character_tree_rho": {}
+    },
+    {
+      "degree": 3,
+      "lambda": {
+        "2": "-1",
+        "3": "1"
+      },
+      "rho": {
+        "2": "1/3"
+      },
+      "full_character_tree_rho": {
+        "2": "1/3"
+      }
+    },
+    {
+      "degree": 4,
+      "lambda": {
+        "2": "2",
+        "3": "-1"
+      },
+      "rho": {
+        "3": "1/4"
+      },
+      "full_character_tree_rho": {
+        "2": "1/3",
+        "3": "1/4"
+      }
+    },
+    {
+      "degree": 5,
+      "lambda": {
+        "2": "-2",
+        "5": "1"
+      },
+      "rho": {
+        "2": "2/5"
+      },
+      "full_character_tree_rho": {
+        "2": "11/15",
+        "3": "1/4"
+      }
+    },
+    {
+      "degree": 6,
+      "lambda": {
+        "2": "1",
+        "3": "1",
+        "5": "-1"
+      },
+      "rho": {
+        "5": "1/6"
+      },
+      "full_character_tree_rho": {
+        "2": "11/15",
+        "3": "1/4",
+        "5": "1/6"
+      }
+    },
+    {
+      "degree": 7,
+      "lambda": {
+        "2": "-1",
+        "3": "-1",
+        "7": "1"
+      },
+      "rho": {
+        "2": "1/7",
+        "3": "1/7"
+      },
+      "full_character_tree_rho": {
+        "2": "92/105",
+        "3": "11/28",
+        "5": "1/6"
+      }
+    },
+    {
+      "degree": 8,
+      "lambda": {
+        "2": "3",
+        "7": "-1"
+      },
+      "rho": {
+        "7": "1/8"
+      },
+      "full_character_tree_rho": {
+        "2": "92/105",
+        "3": "11/28",
+        "5": "1/6",
+        "7": "1/8"
+      }
+    }
+  ],
+  "full_FEI": "OPEN"
+}

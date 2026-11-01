@@ -1,0 +1,160 @@
+\section*{A spectral-level majorant for the critical half-restriction envelope}
+
+All logarithms are base two. Let $p$ be any probability law on subsets of
+$[n]$, let $Y\sim p$, and put
+\[
+ I(p)=\mathbb E|Y|.
+\]
+Retain each coordinate independently with probability $t$, call the retained
+set $J$, and define
+\[
+ m_J(A)=\Pr[Y\cap J=A],\qquad
+ \pi(A)=\Pr[Y\supseteq A],
+\]
+and
+\[
+ F_t(p)=\mathbb E_J\sum_{A\subseteq J}
+ m_J(A)\log_2\frac{\pi(A)}{m_J(A)}.
+\]
+Zero-mass terms vanish.
+
+\begin{theorem}[exponential spectral-level majorant]
+For every probability law $p$ and every $t\in[0,1]$,
+\[
+ \boxed{\quad F_t(p)\le {1\over\ln2}
+ \mathbb E\bigl[(1+t)^{|Y|}-1\bigr].\quad}             \tag{1}
+\]
+Consequently, for the squared Fourier law of every Boolean function $f$,
+\[
+ \mathbb E_{J,X}U(f_{J,X})
+ \le {1\over\ln2}\sum_S\widehat f(S)^2
+       \bigl((1+t)^{|S|}-1\bigr).                      \tag{2}
+\]
+\end{theorem}
+
+\begin{proof}
+Use the repaired coordinate telescope for $F_t$. Fix an order on $[n]$.
+For $i\in J\setminus A$, write
+\[
+ Z_{<i}=\{j\in J\setminus A:j<i\},
+\]
+and set
+\[
+ a=\Pr[Y\supseteq A,\ Y\cap Z_{<i}=\varnothing],\qquad
+ b=\Pr[Y\supseteq A,\ Y\cap(Z_{<i}\cup\{i\})=\varnothing],
+\]
+$c=a-b$.  Exact intersection with $J$ implies the event defining $b$, so
+$m_J(A)\le b$.  The charge at $(J,A,i)$ therefore obeys
+\[
+ d_{J,A,i}=m_J(A)\log_2(1+c/b)
+ \le {m_J(A)c\over b\ln2}\le {c\over\ln2}.             \tag{3}
+\]
+
+Let $L_i=\{j:j>i\}$.  For fixed $J,i$ and a fixed spectral set $Y$ containing
+$i$, the number of $A\subseteq J\setminus\{i\}$ contributing to $c$ is
+exactly
+\[
+ 2^{|Y\cap J\cap L_i|}.
+\]
+Indeed every retained earlier member of $Y$ is forced into $A$, while every
+retained later member of $Y$ may either be put into $A$ or left unexposed.
+Thus the corrected coordinate charge satisfies
+\[
+ C_i(t)\le {t\over\ln2}\,
+ \mathbb E\left[\mathbf1_{\{i\in Y\}}
+ (1+t)^{|Y\cap L_i|}\right].                           \tag{4}
+\]
+For a fixed $Y$ of size $k$, the numbers $|Y\cap L_i|$, as $i$ ranges over
+$Y$, are $0,1,\ldots,k-1$. Summing (4) and using
+$F_t=\sum_iC_i(t)$ gives
+\[
+ F_t(p)\le {t\over\ln2}\mathbb E\sum_{r=0}^{|Y|-1}(1+t)^r
+ ={1\over\ln2}\mathbb E[(1+t)^{|Y|}-1].
+\]
+The $t=0$ endpoint follows by continuity (both sides are zero). Equation (2)
+then follows from the independently reconstructed annealed upper-set envelope
+$\mathbb E U(f_{J,X})\le F_t(\widehat f^{,2})$. \qed
+\end{proof}
+
+\subsection*{Critical-maximizer consequence}
+
+Let $f$ attain $c_n=R=H(f)/I(f)$ and take $t=1/2$. Put
+\[
+ M_{3/2}(f)=\sum_S\widehat f(S)^2\bigl((3/2)^{|S|}-1\bigr).
+\]
+Combining (1) with the source-complete critical persistence lower bound gives
+\[
+ \boxed{\quad
+ R\le 2+{2\over\ln2}+{4\over\ln2}{M_{3/2}(f)\over I(f)}
+ -{4\mathbb E\operatorname{Var}(f_{J,X})
+        +2\mathbb E b(f_{J,X})\over I(f)}.\quad}        \tag{5}
+\]
+In particular, if every finite-dimensional maximizer satisfies
+$M_{3/2}(f)\le\kappa I(f)$ for one absolute $\kappa$, then full FEI holds
+with
+\[
+ C=2+{2\over\ln2}+{4\kappa\over\ln2}.                 \tag{6}
+\]
+This is a genuine dimension-independent class theorem, but its hypothesis is
+not universal.
+
+If the Fourier degree is at most $d$, then monotonicity of
+$((3/2)^k-1)/k$ gives
+\[
+ {M_{3/2}(f)\over I(f)}\le{(3/2)^d-1\over d}.          \tag{7}
+\]
+Thus (5) supplies an explicit arity-independent exclusion bound for
+bounded-degree critical candidates.
+
+\subsection*{Why the raw moment cannot close the universal gap}
+
+Let $\phi_n$ be the $n$-bit point defect. With $\delta=2^{-n}$, its squared
+spectrum is
+\[
+ p(\varnothing)=(1-2\delta)^2,\qquad p(S)=4\delta^2
+ \quad(S\ne\varnothing),
+\]
+and $I(\phi_n)=2n\delta$. Direct summation gives
+\[
+ {M_{3/2}(\phi_n)\over I(\phi_n)}
+ ={2\over n}\left((5/4)^n-1\right),                   \tag{8}
+\]
+which diverges exponentially although $H(\phi_n)/I(\phi_n)\to4$.
+
+By contrast the exact half-envelope stays bounded. Conditional on $|J|=j$,
+all nonempty cells contribute
+\[
+ 4\delta^2j(2^{n-1}-2^{n-j}).
+\]
+Averaging at general $t$ and retaining the empty cell gives
+\[
+ {F_t(\widehat\phi_n^{,2})\over I(\phi_n)}
+ =t\bigl[1-(1-t/2)^{n-1}\bigr]
+ +{\mathbb E\bigl[m_J(\varnothing)
+       \log_2(1/m_J(\varnothing))\bigr]\over2n\delta},                \tag{9}
+\]
+where
+\[
+ 0\le {\mathbb E[m_J(\varnothing)\log_2(1/m_J(\varnothing))]
+          \over2n\delta}
+ \le {2\over n\ln2}\bigl[1-(1-t/2)^n\bigr].           \tag{10}
+\]
+Hence $F_{1/2}/I\to1/2$, while the majorant (8) diverges.
+
+The loss occurs exactly at the last inequality in (3): replacing
+$m_J(A)c/b$ by $c$ discards the posterior exact-cell collision factor
+$m_J(A)/b$. The next universal attempt must retain and pay
+\[
+ \Lambda_t(p)=\mathbb E_J\sum_{i\in J}
+ \sum_{A\subseteq J\setminus\{i\}}{m_J(A)\over b_{J,A,i}}c_{J,A,i},   \tag{11}
+\]
+for which $F_t(p)\le\Lambda_t(p)/\ln2$. A raw spectral-degree moment cannot
+replace this factor. Equation (11) is a structured sufficient payment, not a
+proved universal bound.
+
+\paragraph{Scope.}
+Equations (1)--(10) are proved. Equation (11) defines the next candidate
+payment; $\Lambda_{1/2}\le K I$ on Boolean maximizers remains open. Point
+defects refute use of the raw exponential moment as a universal Boolean
+payment, not FEI and not the aggregate $F_{1/2}$ conjecture. Full FEI remains
+open.

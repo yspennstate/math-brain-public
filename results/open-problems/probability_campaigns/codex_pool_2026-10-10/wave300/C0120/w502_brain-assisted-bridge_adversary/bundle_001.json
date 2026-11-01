@@ -1,0 +1,186 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w502",
+  "bundle_slug": "c0120-source-and-bridge-caveats-w502-001",
+  "entries": [
+    {
+      "key": "model",
+      "namespace": "probability.gaussian",
+      "logical_name": "gaussian-directed-polymer-free-endpoint-source-model",
+      "kind": "definition",
+      "title": "Gaussian directed-polymer maximum: exact C0120 source model",
+      "statement": "In Chatterjee 0810.4221v2 Section 8, a path p has n vertices in Z^2_+, starts at (0,0), and takes right/up unit steps with final endpoint unrestricted on i+j=n-1. With independent standard Gaussian vertex weights g_v, X_p=sum_{v in p}g_v and M_n=max_p X_p. Distinct path sums tie with probability zero. Each path has variance n and Cov(X_p,X_q)=|p intersection q|. This is the zero-temperature Gaussian maximum; log Z at fixed finite inverse temperature is a different observable. Theorem 8.1 gives Var(M_n)<=C n/log n for n>=2. No current-openness conclusion is asserted.",
+      "proof_text": null,
+      "assumptions": [
+        "n>=2",
+        "independent standard Gaussian vertex weights",
+        "right/up steps",
+        "origin start",
+        "free endpoint"
+      ],
+      "domain": "directed polymers and Gaussian concentration",
+      "source": {
+        "source_id": "owner-campaign:w502:C0120:model",
+        "url": "file:///~/brain_workers/w502/ATTEMPT.md",
+        "revision": "2026-10-10 author-derived draft; referee pending; see w502/ATTEMPT.md",
+        "license": "owner-own-work (campaign proof and source-caveat, not source prose reproduced)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "ou-rate",
+      "namespace": "probability.gaussian",
+      "logical_name": "directed-polymer-polynomial-ou-overlap-rate-reduction-draft",
+      "kind": "concept",
+      "title": "DRAFT: exact polynomial OU-overlap to variance reduction",
+      "statement": "AUTHOR-DERIVED DRAFT, referee pending. For the preceding Gaussian path model, set g^t=e^{-t}g+sqrt(1-e^{-2t})g' with independent g', and Q_n(t)=E|P_n(g) intersection P_n(g^t)|. Var(M_n)=integral_0^infinity e^{-t}Q_n(t)dt; Q_n is nonnegative, nonincreasing, Q_n(0)=n. Thus (1-e^{-h})Q_n(h)<=Var(M_n)<=n(1-e^{-h})+e^{-h}Q_n(h). If Q_n(n^{-a})<=K n^{1-b} for fixed a,b in (0,1) and K uniform in n, then Var(M_n)<=(1+K)n^{1-min(a,b)}. Conversely a bound K n^{1-delta} on variance gives Q_n(n^{-a})<=2K n^{1-delta+a} for 0<a<delta. None of these conclusions establishes the assumed power overlap bound. OU time h has noise amplitude of order sqrt(h).",
+      "proof_text": null,
+      "assumptions": [
+        "the exact source model",
+        "unique Gaussian maximizer",
+        "fixed positive exponents",
+        "constants uniform in n"
+      ],
+      "domain": "directed polymers and Gaussian concentration",
+      "source": {
+        "source_id": "owner-campaign:w502:C0120:ou-rate",
+        "url": "file:///~/brain_workers/w502/ATTEMPT.md",
+        "revision": "2026-10-10 author-derived draft; referee pending; see w502/ATTEMPT.md",
+        "license": "owner-own-work (campaign proof and source-caveat, not source prose reproduced)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "missing-rate",
+      "namespace": "probability.gaussian",
+      "logical_name": "gaussian-polymer-polynomial-overlap-loss-missing-premise",
+      "kind": "concept",
+      "title": "DRAFT missing premise: overlap loss at polynomial OU time",
+      "statement": "UNPROVED MISSING PREMISE, not a theorem: establish fixed a,b in (0,1), K<infinity and n0 such that for every n>=n0, Q_n(n^{-a})<=K n^{1-b} in the exact Gaussian directed-polymer source model. Known Q_n(t)<=C n/((1-e^{-t})log n) is only the trivial bound n at t=n^{-a} for fixed a>0. Qualitative chaos at a logarithmic time and logarithmic variance savings do not prove this premise. The gap is joint optimal-path geometry beyond the one-site hypercontractive certificate; parent C0120 remains unsolved.",
+      "proof_text": null,
+      "assumptions": [
+        "same source model and OU convention",
+        "a,b,K,n0 cannot depend on n"
+      ],
+      "domain": "directed polymers and Gaussian concentration",
+      "source": {
+        "source_id": "owner-campaign:w502:C0120:missing-rate",
+        "url": "file:///~/brain_workers/w502/ATTEMPT.md",
+        "revision": "2026-10-10 author-derived draft; referee pending; see w502/ATTEMPT.md",
+        "license": "owner-own-work (campaign proof and source-caveat, not source prose reproduced)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "beta-transfer",
+      "namespace": "probability.gaussian",
+      "logical_name": "finite-path-softmax-maximum-standard-deviation-comparison-draft",
+      "kind": "concept",
+      "title": "DRAFT: finite-temperature to maximum variance comparison",
+      "statement": "AUTHOR-DERIVED DRAFT, referee pending. For a nonempty finite path set P and square-integrable real energies X_p, beta>0, M=max_p X_p and F_beta=beta^{-1}log(sum_p exp(beta X_p)), put A=log(|P|)/beta. Then 0<=F_beta-M<=A and |sqrt(Var(F_beta))-sqrt(Var(M))|<=A/2. Proof: D=F_beta-M lies in [0,A], so Var(D)<=A^2/4; apply the reverse triangle inequality to centered L2 norms. For the source paths, A=(n-1)log(2)/beta. To transfer an O(n^{1-epsilon}) bound by this comparison it suffices to have beta(n)>=c n^{(1+epsilon)/2} and a variance constant uniform along beta(n). A theorem at fixed beta with arbitrary C(beta) does not supply that uniform premise. This is a limitation of this comparison, not a necessity claim for the actual model.",
+      "proof_text": null,
+      "assumptions": [
+        "finite nonempty path family",
+        "all X_p square integrable",
+        "beta>0",
+        "unnormalized partition sum"
+      ],
+      "domain": "directed polymers and Gaussian concentration",
+      "source": {
+        "source_id": "owner-campaign:w502:C0120:beta-transfer",
+        "url": "file:///~/brain_workers/w502/ATTEMPT.md",
+        "revision": "2026-10-10 author-derived draft; referee pending; see w502/ATTEMPT.md",
+        "license": "owner-own-work (campaign proof and source-caveat, not source prose reproduced)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "indicator-caveat",
+      "namespace": "probability.gaussian",
+      "logical_name": "talagrand-rare-indicator-magnitude-norm-ratio-caveat-draft",
+      "kind": "concept",
+      "title": "DRAFT correction: rare indicator derivatives do gain in L1-L2",
+      "statement": "AUTHOR-DERIVED DRAFT CAVEAT, referee pending. If |D|=c*1_A, c>0, P(A)=p in (0,1], then ||D||_1=cp and ||D||_2=c*sqrt(p), so ||D||_2/||D||_1=p^{-1/2}. The Talagrand denominator 1+log(||D||_2/||D||_1) is 1+(1/2)log(1/p), greater than one for p<1. A valid cube example is f(x)=x_1*1{x_2=x_3=1} on uniform {-1,1}^3: Delta_1 f=x_1*1{x_2=x_3=1}, norms 1/4 and 1/2. This refutes only the existing card explanatory no-gain clause for an indicator in magnitude; its displayed cube variance inequality is retained. Cube-flip derivatives do not directly apply to continuous Gaussian weights; obtain a Gaussian theorem with matching hypotheses.",
+      "proof_text": null,
+      "assumptions": [
+        "0<p<=1",
+        "c>0",
+        "for the example: uniform discrete cube",
+        "Delta_i f=(f(x)-f(x flipped at i))/2"
+      ],
+      "domain": "directed polymers and Gaussian concentration",
+      "source": {
+        "source_id": "owner-campaign:w502:C0120:indicator-caveat",
+        "url": "file:///~/brain_workers/w502/ATTEMPT.md",
+        "revision": "2026-10-10 author-derived draft; referee pending; see w502/ATTEMPT.md",
+        "license": "owner-own-work (campaign proof and source-caveat, not source prose reproduced)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-caveat",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-gaussian-maximum-versus-log-partition-source-scope-caveat",
+      "kind": "concept",
+      "title": "DRAFT source caveat: C0120 finite-temperature attribution",
+      "statement": "SOURCE-SCOPE CORRECTION DRAFT, independent source review pending. The C0120 intake and stored open-problem card cite Chatterjee 0810.4221v2 Section 12(3) while stating a general-dimensional finite-temperature Var(log Z_n) target. The cited paper Section 8 actually studies the (1+1)-dimensional Gaussian free-endpoint zero-temperature maximum M_n and Theorem 8.1 bounds its variance by C n/log n. Section 12(3) asks to improve its fluctuation exponent. The finite-temperature general-dimensional formulation is related research and needs separate sources and model assumptions, such as 1204.1819 or 2103.09199. Neither a solution nor present-day openness follows from the dated intake. Current openness UNKNOWN.",
+      "proof_text": null,
+      "assumptions": [
+        "primary version 0810.4221v2",
+        "a citation-fidelity caveat, not a refutation of the research target"
+      ],
+      "domain": "directed polymers and Gaussian concentration",
+      "source": {
+        "source_id": "owner-campaign:w502:C0120:source-caveat",
+        "url": "file:///~/brain_workers/w502/ATTEMPT.md",
+        "revision": "2026-10-10 author-derived draft; referee pending; see w502/ATTEMPT.md",
+        "license": "owner-own-work (campaign proof and source-caveat, not source prose reproduced)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "ou-rate",
+      "to_key": "model",
+      "kind": "depends_on",
+      "rationale": "The overlap/variance identity uses exactly this Gaussian maximum and path-indicator gradient."
+    },
+    {
+      "from_key": "missing-rate",
+      "to_key": "ou-rate",
+      "kind": "depends_on",
+      "rationale": "The unproved overlap rate is the hypothesis of the quantitative reduction."
+    },
+    {
+      "from_key": "beta-transfer",
+      "to_key": "model",
+      "kind": "semantic_association",
+      "rationale": "The general finite-family comparison specializes numerically to 2^(n-1) source paths, without asserting temperature-uniform estimates."
+    },
+    {
+      "from_key": "source-caveat",
+      "to_key": "model",
+      "kind": "cites",
+      "rationale": "The exact source model explains the mismatch."
+    },
+    {
+      "from_key": "source-caveat",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro",
+      "kind": "semantic_association",
+      "rationale": "Caveat only: this old card has a log Z/general-dimension attribution that does not match the named 2008 source; the open target is not refuted."
+    },
+    {
+      "from_key": "indicator-caveat",
+      "to_existing_logical": "math:probability.concentration:talagrand-l1-l2-variance-inequality",
+      "kind": "semantic_association",
+      "rationale": "Correct the no-gain-for-indicator explanatory clause only. Retain the cube inequality and its assumptions."
+    },
+    {
+      "from_key": "ou-rate",
+      "to_existing_logical": "math:probability.gaussian:ornstein-uhlenbeck-semigroup-and-mehler-formula",
+      "kind": "depends_on",
+      "rationale": "Mehler semigroup standard-Gaussian normalization and L2 self-adjointness underpin the independent overlap reduction."
+    }
+  ]
+}

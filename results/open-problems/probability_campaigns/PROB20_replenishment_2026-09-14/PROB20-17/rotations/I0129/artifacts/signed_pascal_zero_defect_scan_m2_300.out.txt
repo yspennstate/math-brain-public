@@ -1,0 +1,11 @@
+Exact signed-Pascal zero-defect scan
+range: 2 <= m <= 300
+equation: kappa(m,r0)-kappa(m+1,r1)-kappa(m+2,r2)+kappa(m+4,r4)=0
+kappa(k,r)=(-1)^(k-1-r)*k*C(k-1,r)
+exceptions (m, exact_solution_count, one_witness=(r0,r1,r2,r4,X)):
+(3, 4, (1, 0, 0, 0, 1))
+(4, 1, (3, 2, 1, 1, 1))
+(6, 4, (2, 3, 4, 2, -3))
+(10, 2, (2, 3, 10, 2, -9))
+(12, 2, (9, 2, 12, 15, 10))
+no exact-zero defect classes for every 13 <= m <= 300

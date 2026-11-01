@@ -1,0 +1,66 @@
+[
+  {
+    "claim_id": "A078-PAIRED-QUARTER-PROFILE-AND-PADDING",
+    "version": 3,
+    "exact_statement": "For every actual Boolean split f=u+zv on independent uniform bits, Q=sum min(uhat^2,vhat^2)log2((uhat^2+vhat^2)/min)<=L=6 sum |uhat|^(1/2)|vhat|^(3/2). If the physical support of v is an antichain on r remaining bits and k A_k<=(r-k+1)D_(k-1) for every 1<=k<=r, then L<=69 Inf_z/2 and the entropy decrement is <=39 Inf_z. Verified Boolean tensor spectators may be factored with their terminal entropy retained; zero-overlap splits have zero entropy decrement. Every equal-weight shifted threshold admits these conditions hereditarily. For every Boolean core g and even m>=2, F=sign(sum_m x+g) has core-query L(F,i)=a_m L(g,i), Inf_i(F)=a_m Inf_i(g), I(F)=a_m(m+I(g)), and H(F)=H(Maj_(m+1))+a_m H(g). For activation F=1+A(g-1), p=2^-s, each core query has L(F,i)<=p L(g,i)+15 Inf_i(F), I(F)=p I(g)+s p(1-Eg), and every complete core-first tree satisfies H(F)<=p L_tree(g)+(39/2)p I(g)+4s p(1-Eg). These are conditional transport/payment results and do not bound arbitrary core L_tree universally. Extension: For every even k>=2, with k shared bits s, private bit x and fresh selector z, let G=1-2*1{s=0,x=0}, H=(-1)^(sum paired shared-bit products), and F select G/H by z. Writing N=2^k, a=1/N, b=2^(-k/2), Inf_x(F)=a/2, Inf_z(F)=(1-b+a)/2, and I(F)=k/4+(k+1)/(2N)+(1-b+a)/2. Its exact private-query signed correction B_x(F)-B_x(G)/2 equals (N-1)S(-a,a;b)+S(1-a,a;b), where S is the exact symmetric Phi comparison. For every even k>=4, D_x/Inf_x>=k-4 and Q_x/Inf_x>=k-11/2; its L_x/Inf_x>=3*2^(k/4) for every even k>=2. Yet Q_z<=4Inf_z, L_z<8Inf_z and H(F)<4I(F). Thus no constant correction price holds at every arbitrary multishared data query, without refuting selected-coordinate payment or FEI. The literal factor2 already fails at k=4 by an exact interval certificate. Interleaved extension: For every actual Boolean core g, s>=1 fresh point controls and V=1+A_s(g-1), p0=2^-s, any finite deterministic fresh-coordinate physical restriction tree T has an active core-only shadow Pi obtained by taking every control zero child. At each active history w*p_remaining=p0*pi. If P_D,P_C are consumed physical data/control influences and L_Pi the quarter-profile bill on that exact projected core policy, then p0 L_Pi-6P_D<=L_T,D<=p0 L_Pi+15P_D, and L_T,C<=3(1+sqrt(2))P_C<=(15/2)P_C. Terminal influence equals p0 E_Pi[I(g_leaf)+l_leaf(1-Eg_leaf)], and terminal entropy equals p0 E_Pi[H(V_leaf)/p_leaf]; the two consumed influence accounts and terminal account partition I(V) exactly. H(V)<=p0 L_Pi+(39/2)P_D+12P_C+E_T H(V_leaf). For a complete constant-leaf tree whose projected core policy has L_Pi<=K I(g), K>=0, H(V)<=max(K+39/2,12)I(V). The inherited core bill is a hypothesis, not universally paid. Consequently the common-activation version W of the prior bent/spike family has local L_x(W)/Inf_x(W)>=3*2^(k/4)-6, including rare/rare activation depths r=k.",
+    "hypotheses": [
+      "Actual Boolean sign functions, independent uniform physical bits; entropy in bits",
+      "Antichain and degree-transport conditions required only for the conditional local payment",
+      "Mixed-majority ordinary block even; activation s>=1 fresh controls",
+      "Any tensor spectator is explicitly verified and paid at the terminal leaf",
+      "No all-dimensional payment assumption on arbitrary cores",
+      "Interleaved extension: fresh independent point controls; arbitrary finite deterministic physical tree, actual stopping leaves retained",
+      "Conditional complete-tree conclusion assumes K>=0 and a paid projected core policy"
+    ],
+    "statement_sha256": "09ce97449ca8468dfb51fe7a7ac534437b74e0267b59453620f97044b0daedb8",
+    "contributors": [
+      "A078/fleet05"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A078\\runs\\20261012T023229Z-fleet05-A078-coding-and-padding\\PROFILE_LEMMA.md; ~\\brain_workers\\FEI100_20261011\\agents\\A078\\runs\\20261012T023229Z-fleet05-A078-coding-and-padding\\CORE_TRANSPORT_PROOF.md; this run PROOF.md sections1-4; code/check.py; out/full.json; this run PROOF.md sections1-5; code/check.py; out/full.json",
+    "proof_dependencies": [
+      {
+        "claim_id": "A077-ONE-SHARED-BIT-SIGNED-TRANSPORT",
+        "version": 1,
+        "scope": "Exact common-row identity; independently reconstructed and accepted at original one-shared-bit scope in REVIEW_A077.md"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A076",
+        "verdict": "HOLDS_AT_LOCATORS_ONLY",
+        "scope": "Previous v2 stage3 Sections1-2; observed in A076 stage4 REPORT, not acceptance of all bundled quarter clauses"
+      },
+      {
+        "reviewer": "A077",
+        "verdict": "HOLDS_AT_LOCATORS_ONLY",
+        "scope": "Previous v2 stage3 Sections1-2; observed in A077 stage4 REPORT, not acceptance of v3"
+      }
+    ],
+    "status": "AUTHOR_PROVED_EXACT_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A078-PAIRED-QUARTER-PROFILE-AND-PADDING",
+        "version": 2,
+        "reason": "Prior statement preserved verbatim; append interleaved paired-quarter transport with exact terminal accounts"
+      }
+    ],
+    "refutes": [
+      "Unqualified overlap<=2 Inf at every shifted-threshold query: m=10,t=2 gives 515/256",
+      "Uniform |D_i|<=C Inf_i for every multishared Boolean data query",
+      "Uniform Q_i<=C Inf_i or L_i<=C Inf_i at every coordinate; selected-coordinate versions remain open"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A027",
+      "A037",
+      "A057",
+      "A064",
+      "A076",
+      "A077",
+      "A092",
+      "A088",
+      "claude/B16",
+      "B20"
+    ]
+  }
+]

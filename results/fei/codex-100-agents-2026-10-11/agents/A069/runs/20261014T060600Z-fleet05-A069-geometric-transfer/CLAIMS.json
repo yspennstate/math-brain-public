@@ -1,0 +1,49 @@
+[
+  {
+    "claim_id": "A069-EXPOSED-CANCELLATION-COMMON-REFERENCE-HISTORY",
+    "version": 1,
+    "exact_statement": "On disjoint uniform coordinates c,u,Z,Y with |Z|=m>=1 and |Y|>=1, let four arbitrary Boolean Y cores define G(c,u,Y), q1=1-2*1{c=c*,u=u*}, q2=1-2*1{c=c*,Z=z*}, g=q1G and q=q1q2, so F=gq=q2G. For any single positive normalized common core reference R_Y and B=average_cu C_R(h_cu), a complete normalized product final reference Q has H(F)<=C_Q(F)<=B+2I_Y(F)+4I_{c,u}(F)+(4+log2(20/7))I_Z(F). R_Y is retained unchanged, B is the actual final terminal average, and source/final core marginals coincide. If each C_R(h_cu)<=K I(h_cu), H(F)<=max(K+2,4+log2(20/7))I(F), with 4+log2(20/7)<28/5. The output-only q2=1 case is included. After any one actual core query i, carry R_Y by frequency marginalization to the SAME reference Rprime for all actual child cores and update only actual child flag priors: the complete reference decrement equals sum_T P_F(S_Y=T)log2(Rprime(T minus i)/R_Y(T)) plus h2(alpha)-average h2(alpha_child). For every K the signed ledger is K I(F)-C_Q(F)=average_child[K I(child)-C_Qchild(child)]+K Inf_i(F)-Delta C_Q. No positivity of its final signed term, universal paid core references or same-constant induction is asserted.",
+    "hypotheses": [
+      "Finite uniform cubes, actual Boolean signs; entropy/reference costs bits and ordinary physical influences.",
+      "Source cancellation normal form g=q1G with G independent of the remaining private Z; arbitrary four unequal Y cores.",
+      "ONE common positive normalized R_Y supplied before the Fourier sample, retained across all actual source/final core terminals; separate entropy bounds cannot substitute.",
+      "Five fixed control cells cover all nonempty subsets, including unoccupied cells; weights1/4,1/4,1/16,7/20,7/80; only final empty/nonempty prior depends on alpha.",
+      "Zero/one tail endpoints use normalized supported laws and zero-mass continuity, not deletion of a positive output row.",
+      "Paid common-reference core inequalities are additional hypotheses; constants remain included in the retained-B statement.",
+      "Core query carries the same marginal reference to both actual children and preserves signed query budget; no independently available or renewed child reserve is assumed."
+    ],
+    "statement_sha256": "6798ad4aa4df7c25f754fd38e700ad0cc75cf3e5fe27b0833ff84b1a984dff62",
+    "contributors": [
+      "fleet05/A069; Boolean global flag lemma credited to A067 and independent A088 review"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A069\\runs\\20261014T060600Z-fleet05-A069-geometric-transfer\\DERIVATION.md",
+      "sha256": "74490e83ae26a40520c3bc8100e27afdb8f5d1a73f85f087c75da1577494e7f9",
+      "locators": "Sections1-6, equations(1)-(11)"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A067-BOOLEAN-FLAG-FOUR-BRANCH-FINAL-REFERENCE",
+        "version": 1,
+        "statement_sha256": "92eacd157bc8b527dc2e8d38d2bdb5be1dfbf179105280ad82707f5c587c1948",
+        "scope": "ONLY universal Boolean h2(control-tail mass)<=2I; proof reproduced in DERIVATION Section4",
+        "acceptance": "Independent A088 full-scope acceptance without repair",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261014T053751Z-fleet05-A088-booleanity-referee\\CLAIMS.json"
+      }
+    ],
+    "review_records": [],
+    "status": "NARROW_SCOPED_TRANSFER_AUTHOR_PROVED_EXACT_CHECKS_PASS_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A067",
+      "A096",
+      "B14",
+      "B20"
+    ]
+  }
+]

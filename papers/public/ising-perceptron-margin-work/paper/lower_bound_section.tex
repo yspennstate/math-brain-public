@@ -1,0 +1,332 @@
+% The lower bound at general margin: what is missing, what is not.
+
+\section{Toward the matching lower bound}\label{sec:lower}
+
+Krauth and M\'ezard conjectured the value of the limiting ratio
+$M_N(\kappa)/N$ for every margin, not only at
+$\kappa=0$~\cite{krauth1989storage}; the constant $0.833$ is the
+zero-margin point of the conjectured curve $\alpha_\star(\kappa)$.
+At $\kappa=0$ the conjecture is resolved: Ding and
+Sun~\cite{ding2019capacity} proved $\alpha_\star$ is a lower bound
+with positive probability, the sharp-threshold sequence of Nakajima
+and Sun~\cite{nakajimasun2022} upgrades positive probability to
+convergence in probability, Huang~\cite{huang2024capacity} proved the
+matching upper bound, and the numerical hypotheses of both proofs are
+certified~\cite{shmalo2026capacity}.  Away from $\kappa=0$ the upper
+half is Theorem~\ref{thm:main}; the lower half has, at present, no
+analytic theorem to certify.  This section delimits the gap: a lemma
+on why unconditioned moment methods cannot close it at nonnegative
+margins, an embedded bound that does give nonzero-margin capacity
+lower bounds on the negative side, and a numerical verification that
+the $\kappa$-dependent inputs of the Ding--Sun program hold at
+five certified margins and at $\kappa=0$.
+
+\subsection{Plain second moments fail at every margin}
+
+Write $Z=Z_{N,\kappa}$ for the number of $w\in\{-1,+1\}^N$ satisfying
+all $M=\lceil\alpha N\rceil$ constraints, and
+$q_\rho(\kappa)=\Prob(X\ge\kappa,\,Y\ge\kappa)$ for $(X,Y)$ bivariate
+standard Gaussian with correlation $\rho$.
+
+\begin{lemma}\label{lem:secondmoment}
+For every $\kappa\in\R$ and $\alpha>0$,
+\[
+\liminf_{N\to\infty}\frac1N\log\frac{\E[Z^2]}{(\E Z)^2}
+\;\ge\; c(\alpha,\kappa)\;>\;0 .
+\]
+Consequently the guarantee of the Paley--Zygmund bound,
+$\Prob(Z>0)\ge(\E Z)^2/\E[Z^2]$, is at most $e^{-cN+o(N)}$, and no
+bound depending on $\E Z$ and
+$\E[Z^2]$ alone can certify more, since a distribution placing mass
+$(\E Z)^2/\E[Z^2]$ at $\E[Z^2]/\E Z$ and the rest at zero matches
+both moments.  For $\kappa\ge0$ the same conclusion holds for every
+weighted count $Z_f=\sum_w\prod_a f(\langle g_a,w\rangle/\sqrt N)$
+with $f\ge0$ supported on $[\kappa,\infty)$ and
+$0<\int f\,d\Phi<\infty$.
+\end{lemma}
+
+\begin{proof}
+$\E Z=2^N\Psi(\kappa)^M$ by independence over constraints.  For a
+pair $w,w'$ at overlap $\rho$ the constraint fields are bivariate
+Gaussian with correlation $\rho$, so counting ordered pairs by
+Hamming distance $k$,
+\[
+\E[Z^2]=2^N\sum_{k=0}^N\binom Nk\,q_{1-2k/N}(\kappa)^M .
+\]
+Fix $\rho_0\in(0,1)$, let $k^*=\lceil N(1-\rho_0)/2\rceil$ and
+$\rho^*=1-2k^*/N$.  Keeping the single term $k^*$ and using
+$\binom Nk\ge e^{N H(k/N)}/(N+1)$ with $H$ the natural-log binary
+entropy ($H(p)=H(1-p)$, so the exponent may be written with
+$(1+\rho_0)/2$),
+\[
+\frac1N\log\frac{\E[Z^2]}{(\E Z)^2}
+\ge\underbrace{H\Bigl(\tfrac{1+\rho_0}2\Bigr)-\log2
++\alpha\bigl[\log q_{\rho_0}(\kappa)-2\log\Psi(\kappa)\bigr]}
+_{=:\,\psi_{\alpha,\kappa}(\rho_0)}\;+\;O(N^{-1}\log N),
+\]
+the error, of order $N^{-1}\log N$, collecting the binomial
+prefactor, the $|\rho^*-\rho_0|\le
+2/N$ continuity of $\rho\mapsto\log q_\rho$ (differentiable, below),
+and $|M-\alpha N|\le1$.  Now $q_0=\Psi(\kappa)^2$ and $H(1/2)=\log2$
+give $\psi_{\alpha,\kappa}(0)=0$.  Reflecting the orthant to a joint
+CDF, $q_\rho(\kappa)=\Phi_2(-\kappa,-\kappa;\rho)$, and Plackett's
+identity $\partial\Phi_2/\partial\rho=\varphi_2$ with the symmetry
+$\varphi_2(-\kappa,-\kappa;\rho)=\varphi_2(\kappa,\kappa;\rho)$ give
+$\partial q_\rho/\partial\rho=\varphi_2(\kappa,\kappa;\rho)$ on
+$(-1,1)$; at $\rho=0$ this is $\varphi(\kappa)^2$.  Since
+$\frac{d}{d\rho}H(\tfrac{1+\rho}2)=\tfrac12\log\tfrac{1-\rho}{1+\rho}$
+vanishes at $0$,
+\[
+\psi_{\alpha,\kappa}'(0)=\alpha\,
+\frac{\varphi(\kappa)^2}{\Psi(\kappa)^2}\;>\;0 ,
+\]
+so $\psi_{\alpha,\kappa}(\rho_0)\ge\rho_0\,\psi'(0)/2>0$ for all
+small $\rho_0>0$; fix such a $\rho_0$ and set
+$c=\psi_{\alpha,\kappa}(\rho_0)$.  For the weighted counts, the diagonal
+term of $\E[Z_f^2]$ is $2^N\E[f(X)^2]^M$, so either
+$\E[Z_f^2]=\infty$ and the claim is trivial, or $f\in L^2(\Phi)$ and
+Mehler's expansion gives
+$\E[f(X)f(Y)]=\sum_{j\ge0}\rho^j\langle f,\mathrm{He}_j\rangle^2/j!$,
+whose $\rho$-derivative at $0$ is $(\int xf\varphi\,dx)^2$; for
+$f\ge0$ supported on $[\kappa,\infty)$ with $\kappa\ge0$ the
+integrand $xf(x)\varphi(x)$ is nonnegative, and it vanishes almost
+everywhere only if $f$ vanishes almost everywhere off the origin,
+which $0<\int f\,d\Phi$ excludes; the argument
+then runs unchanged.
+\end{proof}
+
+The mechanism is the asymmetry: pairs of solutions at small positive
+overlap are exponentially favored over independent pairs at every
+margin, which is what the AMP-conditioned second moment
+of~\cite{ding2019capacity} is built to circumvent at $\kappa=0$, and
+what any lower-bound proof must circumvent at every other margin.
+The zero-margin instance of this failure is classical
+(see the introduction of~\cite{ding2019capacity}); the content here
+is the uniform mechanism and the closure over nonnegative-margin
+weights.  For $\kappa<0$ the weighted closure genuinely fails, and
+profitably so: a window weight symmetric about the origin has zero
+linear Mehler coefficient, which is the next observation.
+
+\subsection{A capacity lower bound at negative margins}
+
+\begin{prop}\label{prop:embedded}
+Let $\kappa<0$ and let $\alpha^{\mathrm{sym}}_c(K)=
+\log2/(-\log\Prob(|X|\le K))$ denote the symmetric binary perceptron
+threshold at width $K$.  For every
+$\alpha<\alpha^{\mathrm{sym}}_c(|\kappa|)$, with probability
+$1-o(1)$ the margin-$\kappa$ perceptron admits a solution:
+$M_N(\kappa)/N\ge\alpha$ whp.
+\end{prop}
+
+\begin{proof}
+If $|\langle g_a,w\rangle|/\sqrt N\le-\kappa$ for all $a$ then in
+particular $\langle g_a,w\rangle/\sqrt N\ge\kappa$, so the symmetric
+solution set at width $|\kappa|$ embeds in the margin-$\kappa$
+solution set.  The symmetric threshold is
+$\alpha^{\mathrm{sym}}_c$~\cite{aubin2019storage}; for Gaussian
+disorder the satisfiability side below it holds with high
+probability by Altschuler's critical-window
+theorem~\cite{altschuler2022}.  (The lognormal limit of Abbe, Li,
+and Sly~\cite{abbelisly2021} is proved for Rademacher disorder, and
+Perkins and Xu~\cite{perkinsxu2021} treat the Gaussian case under a
+single-critical-point hypothesis, so neither alone covers the model
+here.)
+\end{proof}
+
+The bound is far from sharp --- at $\kappa=-0.05$ it gives
+$0.215$ against the predicted $0.889$, at $\kappa=-0.45$ it gives
+$0.655$ against $1.558$ --- and it is not alone: Li, Schramm, and
+Zhou~\cite{lsz2024} prove lower bounds on the satisfiability
+threshold of the same one-sided perceptron at negative margin by a
+different route, with the sharpest statements in the
+$\kappa\to-\infty$ regime.  What the embedding adds is its
+elementary proof and margin-explicit values at the certified
+points, strictly positive on the whole negative axis.
+
+\subsection{The Ding--Sun condition at general margin}
+
+The construction underlying the $\kappa=0$ lower bound
+of~\cite{ding2019capacity} is written at general margin throughout
+their Section~2: their equations (34)--(48) define, for parameters
+$(\kappa_{\mathrm{all}},\alpha_{\mathrm{all}})$, an explicit
+univariate function $S_{\kappa,\alpha}(\lambda)$ on
+$[\lambda_{\min},1]$ built from the fixed point $(q_\star,\psi_\star)$
+--- an entropy term through the two-spin measure $P_{H,D}$, a
+constraint term through the conditional Mills law
+$\varphi_\xi$, and a convex $\inf_s$ correction --- and their
+Condition~1.2 is the statement $S_{0,\alpha_\star}(\lambda)<0$ for
+$\lambda\notin\{0,1\}$.  The $\kappa$-analog of that hypothesis is
+therefore already defined in their own notation, and every
+$\kappa$-dependent ingredient it consumes is an object this paper
+certifies: the fixed point, its uniqueness rectangle, and the
+crossing (Theorem~\ref{thm:strip} and the deep enclosures of
+Theorem~\ref{thm:main}).
+
+We evaluated $S_{\kappa,\alpha_\star(\kappa)}$ in floating point
+(the driver \texttt{ds\_condition.py} uses Gauss--Hermite and
+conditional Gauss--Legendre quadrature) at five of the certified
+margins and at $\kappa=0$, checking the six endpoint identities
+$H(0)=P(0)=A(0)=0$, $H(1)=-H_\star$, $P(1)=-P_\star$,
+and $G_\star=H_\star+P_\star\approx0$ (with $H_\star$, $P_\star$ the
+entropy and constraint halves of the free energy), and that the
+conditional-mean check resolves at $10^{-12}$ or better at every
+margin, as implementation controls.  The result is uniform
+(Figure~\ref{fig:dscondition}): at every margin the curve is
+strictly negative off $\{0,1\}$, at most
+$-5\cdot10^{-5}$ outside windows of half-width $0.02$ around the two
+roots (inside them it climbs to its maxima at the roots, reaching
+$-1.6\cdot10^{-6}$ at the closest grid points), the maximum at
+$\lambda=0$ is degenerate exactly as
+at $\kappa=0$, and the whole family collapses nearly onto a single
+shape, with $\lambda_{\min}$ drifting from $-0.441$ at
+$\kappa=-0.45$ to $-0.421$ at $\kappa=0.13$.  These are diagnostics,
+not certificates; certifying $S_{\kappa,\alpha_\star}<0$ off the
+roots is a univariate problem of exactly the species the
+Condition~\ref{cond:2var} machinery already handles, and we expect it
+to be far easier than the two-variable certification carried out
+here.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\linewidth]{ds_condition.png}
+\caption{The general-margin Ding--Sun lower-bound condition,
+evaluated at five of the certified margins and $\kappa=0$: the
+univariate function $S_{\kappa,\alpha_\star(\kappa)}$ of their
+equation (48), whose nonpositivity off $\{0,1\}$ is the numerical
+hypothesis of their second-moment argument.  All six curves are
+negative off the two roots and nearly coincide.}
+\label{fig:dscondition}
+\end{figure}
+
+What separates these verified inputs from a general-margin lower
+bound is the probabilistic body of~\cite{ding2019capacity}: the
+AMP-conditioned moment computation of their Sections~2--7, whose
+displays carry $\kappa_{\mathrm{all}}$ explicitly but whose proofs
+are executed at $\kappa=0$.  An audit of that body would need, beyond
+the certified inputs above: a priori bounds at margin (the upper one
+is free at every $\kappa$ from the first moment, since
+$\E Z\to0$ exponentially above the annealed threshold
+$-\log2/\log\Psi(\kappa)$; the lower one is
+Proposition~\ref{prop:embedded} for $\kappa<0$ and open for
+$\kappa>0$), the state-evolution inputs (generic in the
+nonlinearity, hence in $\kappa$), and the sharp-threshold transfer
+of~\cite{nakajimasun2022} if convergence in probability rather than
+positive probability is wanted.  We record this as the concrete
+route to the exact threshold at the certified margins: the numerical
+side is done at six points and the analytic side is a
+$\kappa$-generalization audit of an existing proof, not a new
+construction.
+
+That audit is now carried out for their Sections~2--8.  Sections
+2--6 generalize verbatim: the margin rides through the TAP
+conditioning, the change of measure, and the admissibility and
+volume estimates, entering only through $(q_\star,\psi_\star)$ and
+the shifted constraint kernels.  In Section~7 one proof step is
+genuinely $\kappa=0$: the monotonicity argument of their Lemma~7.3
+regroups the Gaussian under a reflection available only at zero
+margin; its conclusion is exactly the $\partial R/\partial q$
+positivity that Lemma~\ref{lem:dR} proves at every $\kappa$, so the
+repaired statement is what our certificates consume.  In Section~8
+the analytic skeletons --- the sandwich bounds on the entropy
+parametrization, the square-root singularity of the constraint term
+at $\lambda=1$, and the special-function inequalities behind both
+--- hold at every margin, while the five numerical constants they
+instantiate at $\kappa=0$ become per-margin certified integrals over
+the located $(q_\star,\psi_\star)$ boxes.  The grid bounds of their
+Section~9 are not ported at all: at the certified margins their role
+is played by the certificates of this paper.  Of the endpoint
+package their assembled proof consumes, the derivative divergence at
+$\lambda=1$ and the second-derivative sign at $\lambda=0$ become
+per-margin certified objects once the ported constants of their
+Section~8 land (their status is tracked in the audit file); the
+value at $\lambda=1$ is analytic.  Their Section~2 already states
+$P(1)=-P_\star$ at general margin; what the following lemma adds is
+the full tilted family and the assembly --- $I_s\to0$ for every
+$s$, hence $A(1)=0$ and the sum --- with the dominated-convergence
+argument written out.
+
+\begin{lemma}\label{lem:S1}
+For every $\kappa$ and every $\alpha$ in a certified window,
+$S_{\kappa,\alpha}(1)=-G_\star$, where
+$G_\star=H_\star+P_\star$ is the first-moment exponent at
+$(\kappa,\alpha)$.  Moreover the $s$-tilted constraint term
+satisfies $I_s(\lambda)\to0$ as $\lambda\uparrow1$ for every fixed
+$s$.  Here and throughout, values at $\lambda=1$ denote the
+$\lambda\uparrow1$ limits: the integral formulas are singular at
+$\lambda=1$ itself, and this is the convention under which
+Ding--Sun consume the endpoint.
+\end{lemma}
+
+\begin{proof}
+The explicit middle term of the constraint half carries the factor
+$(1-\lambda)$ and vanishes at $\lambda=1$.  For the integral term,
+condition on the first copy's variables: the second copy's field
+$\nu$ follows the Mills law $\varphi_\xi$ on the ray $\nu>\xi$,
+whose support does not depend on $\lambda$, and the constraint
+factor is $\log\Psi$ of
+\[
+\frac{\xi-\lambda\nu}{\sqrt{1-\lambda^2}}
+-\frac{E(\xi)\,s}{\psi_\star^{1/2}\sqrt{1-q_\star}}
+=\frac{\xi(1-\lambda)-\lambda(\nu-\xi)}{\sqrt{1-\lambda^2}}
+-\frac{E(\xi)\,s}{\psi_\star^{1/2}\sqrt{1-q_\star}}\,.
+\]
+On the open support $\nu-\xi>0$ the first fraction tends to
+$-\infty$ as $\lambda\uparrow1$, and a fixed finite $s$-shift does
+not affect the divergence, so $\log\Psi\to0$ pointwise for
+$\varphi_\xi$-almost every $\nu$.  Domination needs no case split:
+for every $0\le\lambda<1$ and every $\nu\ge\xi$ the argument is at
+most
+\[
+\xi_+\sqrt{\frac{1-\lambda}{1+\lambda}}
++\frac{E(\xi)\,|s|}{\psi_\star^{1/2}\sqrt{1-q_\star}}
+\;\le\; |\xi| + \frac{(|\xi|+1)\,|s|}{\psi_\star^{1/2}
+\sqrt{1-q_\star}} \;=:\; M(z)\,,
+\]
+using $E(\xi)\le|\xi|+1$ (Lemma~\ref{lem:mills} gives
+$E'\in(0,1)$, so $E$ is increasing with unit-bounded slope, and
+$E(0)=\sqrt{2/\pi}<1$); since $|\log\Psi|$ is increasing and
+$\xi=(\kappa-q_\star^{1/2}z)/\sqrt{1-q_\star}$ is affine in $z$,
+so that $M(z)$ is affine in $|z|$, the
+integrand is bounded by $|\log\Psi(M(z))|\le C_s(1+z^2)$ for every
+$\lambda$ and $\nu$ at once, and this majorant is
+$\varphi(z)\,dz$-integrable because it does not depend on $\nu$.
+Dominated convergence gives $I_s(\lambda)\to0$ for every
+$s$; in particular $P(1)=-P_\star$.
+
+For the $\inf_s$ correction, write $B_\lambda(s)$ for the bracket,
+so $A(\lambda)=\inf_s B_\lambda(s)$, and note that fixed-$s$
+convergence alone does not pass through an infimum: the limit and
+the infimum must be exchanged with care.  Three facts do it.
+First, $B_\lambda(0)=0$ identically ($I_0=I$), so $A(\lambda)\le0$.
+Second, $s\mapsto B_\lambda(s)$ is convex --- the convexity of the
+$s$-tilt recorded with their Lemma~5.7.  Third, the dominated
+convergence above runs uniformly over $|s|\le1$: the majorant at
+$s=1$ dominates every $|s|\le1$ since $M(z)$ is increasing in
+$|s|$, and $\sup_{|s|\le1}$ of the integrand still vanishes
+pointwise because $|\log\Psi|$ is increasing and the supremum of
+the argument over $|s|\le1$ also tends to $-\infty$; hence
+$\sup_{|s|\le1}|I_s(\lambda)-I(\lambda)|\to0$.  Now fix $\lambda$
+close enough to $1$ that $B_\lambda(\pm1)\ge\tfrac14$, possible by
+the fixed-$s$ limits $B_\lambda(\pm1)\to\tfrac12$.  For $|s|>1$,
+convexity through the points $0$ and $s$ gives
+$B_\lambda(s/|s|)\le B_\lambda(s)/|s|$, so $B_\lambda(s)<0$ would
+force $B_\lambda(\pm1)<0$; hence every $s$ with $B_\lambda(s)<0$
+lies in $[-1,1]$, and since $B_\lambda(0)=0$,
+$A(\lambda)=\inf_{|s|\le1}B_\lambda(s)$.  On that interval,
+$B_\lambda(s)\ge -c_\lambda-\sup_{|s|\le1}|I_s(\lambda)-I(\lambda)|$
+with $c_\lambda=\psi_\star^{1/2}\sqrt{1-q_\star}\,
+\sqrt{(1-\lambda)/(1+\lambda)}\to0$ the linear coefficient, and
+together with $A(\lambda)\le0$ this gives $A(\lambda)\to0$, that
+is, $A(1)=0$.  The entropy half is prior-side, with
+$\kappa$ entering only through $(q_\star,\psi_\star)$, and
+$H(1)=-H_\star$ as at zero margin.  Summing,
+$S(1)=-P_\star-H_\star=-G_\star$.
+\end{proof}
+
+For the second-moment argument only $S(1)\le-c<0$ is consumed, and
+below the crossing $G_\star>0$ strictly, so the lemma supplies the
+endpoint with margin.  What remains open on this route is
+quantitative rather than structural: the per-margin constants of
+Section~8 and the slack they leave against our wider
+$(q_\star,\psi_\star)$ enclosures, both objects of the same
+certified species as everything above.

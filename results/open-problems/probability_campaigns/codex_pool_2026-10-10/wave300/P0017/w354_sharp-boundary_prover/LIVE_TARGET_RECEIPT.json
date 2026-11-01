@@ -1,0 +1,65 @@
+{
+  "store": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "mode": "ro",
+  "query": "title LIKE '%Dimension-free log-concave Poincare%' LIMIT 4",
+  "rows": [
+    {
+      "id": "claim_d2e9e3d859a16e515c09803220b9b26608e8a6b5a6ce584d2e99cf6613f89694",
+      "kind": "claim",
+      "title": "Open problem: Dimension-free log-concave Poincare or Cheeger constant",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Is there a universal positive lower bound for the Euclidean Cheeger constant of every isotropic log-concave probability measure, in every dimension? Source: Randomstrasse101: Open Problems of 2025, Conjecture 30, Entry 13.\nPosed in Randomstrasse101: Open Problems of 2025\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "metadata": {
+        "artifact_digest": "sha256:65eb3ed5bd40bb1d7a62e672ed14b516f52c3898b4c18a9a7119b202d48174e9",
+        "artifact_path": "objects/sha256/65/65eb3ed5bd40bb1d7a62e672ed14b516f52c3898b4c18a9a7119b202d48174e9.md",
+        "bundle_digest": "sha256:58d74c8da229fa6b81fe6bac4abdfaadf798d61b07728701a8922a92ccd764b6",
+        "bundle_entry_key": "op-p0017",
+        "bundle_id": "population.probability-codex-ledger-problems-c006-01",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_009.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.core:open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:772492982336f844e436033d99bbb6870cb26f16b277731cabc6cb87e48d4e89",
+        "revision_digest": "sha256:d2e9e3d859a16e515c09803220b9b26608e8a6b5a6ce584d2e99cf6613f89694",
+        "source_id": "owner-probability-campaign-codex-20260906:op-p0017",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    },
+    {
+      "id": "claim_fbc7554cdcce8efc8484f98a5982f7add13464aa5d5d53dfb9ca2710fc43e19f",
+      "kind": "claim",
+      "title": "Attempt on Dimension-free log-concave Poincare or Cheeger constant",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Gaussian special case by orthogonal expansion Result: For standard Gaussian measure, expand a polynomial f in orthonormal multivariate Hermite polynomials with coefficients a_alpha. Then Var(f)=sum_(|alpha|>=1) a_alpha^2 <= sum |alpha| a_alpha^2 = E||gradient f||^2. Closure in Gaussian Sobolev norm extends the inequality to its natural domain. Check: The constant is attained by any nonconstant linear function, checking both normalization and dimension independence. Obstruction: A general isotropic log-concave measure lacks this diagonal Hermite generator. This special case does not prove its uniform Poincare or Cheeger bound.\nRefers to the open problem node open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant\nNo independent review",
+      "metadata": {
+        "artifact_digest": "sha256:10412fd423170d3a59b5bb9efaa42ded9b1ebc5d04a3ab5790b1b36734b89d9d",
+        "artifact_path": "objects/sha256/10/10412fd423170d3a59b5bb9efaa42ded9b1ebc5d04a3ab5790b1b36734b89d9d.md",
+        "bundle_digest": "sha256:f3e0d4cb2f270970b3a7e311e549325fd4a447f22688326d8e681b699cda8afb",
+        "bundle_entry_key": "at-p0017",
+        "bundle_id": "population.probability-codex-ledger-attempts-c006-04",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_012.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.core:attempt-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:705337efabf29cd94bdc3e6e7eb6e032d19e1a439ab1ed1610b6421824e2eead",
+        "revision_digest": "sha256:fbc7554cdcce8efc8484f98a5982f7add13464aa5d5d53dfb9ca2710fc43e19f",
+        "source_id": "owner-probability-campaign-codex-20260906:at-p0017",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    }
+  ]
+}

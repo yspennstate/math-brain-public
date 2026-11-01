@@ -1,0 +1,13 @@
+{
+ "helper_version":"A001-prime-log-refund-review-v1",
+ "actual_Boolean_family":"Eight explicit seeds (constants +/- on one bit, dictator, AND2, parity2, majority3, quadratic bent4, point-defect4), tensor/parity/point activation; additionally point seeds at n=2,3,4 for bounded-degree coarse-graining",
+ "review_domain":{"seed_count":8,"m":"1,2 for seed dimension <=2; otherwise 1","ell":[2,3],"k":[1,2,4],"cases":78},
+ "coarse_domain":{"point_seed_n":[2,3,4],"m":"1,2 for n<=3; otherwise 1","L":[0,1,2],"ell":"L+2","k":[1,2],"cases":30},
+ "symbolic_domain":{"point_seed_n":[6,8,12,20],"m":"2^n","k":"n","L":[0,1,2],"cases":12},
+ "case_count":120,
+ "symmetry":"None in the finite truth-table checks; symbolic cases use proved exact factorized spectra, without constructing exponential ambient truth tables",
+ "arithmetic":"Integer Walsh transforms, direct physical flips, Fraction probabilities, exact dictionaries of prime logarithms; rational analytic comparisons for symbolic cases",
+ "memory_estimate_MB":80,
+ "maximum_runtime_seconds_per_job":55,
+ "automatic_dimension_escalation":false
+}

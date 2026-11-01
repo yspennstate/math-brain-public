@@ -1,0 +1,37 @@
+{
+  "schema": "fei-restriction-gaps/1",
+  "primary_packet_id": "A087",
+  "reviewed_claim": "B06-A027-MODULATION-BLOCK-HIERARCHY@1",
+  "target_verdict": "ACCEPTED_AT_STATED_RESTRICTED_SCOPE",
+  "failed_lines_within_target": [],
+  "source_bound_correction": {
+    "kind": "STRICT_STRENGTHENING_NOT_REPAIR_OF_A_FAILURE",
+    "old_bound": "H(q_m)/I(q_m) <= 9/2",
+    "new_bound": "H(q_m)/I(q_m) < 4 for every m>=2, equality approached as m tends to infinity; m=1 has ratio zero",
+    "effect": "The point-defect modulation hierarchy has constant max(C_0,4).",
+    "review_status": "CONTRIBUTOR_PROVED_PENDING_FRESH_REVIEW"
+  },
+  "first_universal_gap": {
+    "gap_id": "G-ADAPTIVE-BLOCK-PAYMENT",
+    "status": "OPEN",
+    "location": "Attempted extension beyond the common squared-branch modulation class",
+    "reason": "For unequal physical branch squared spectra the mixing term M_Z is no longer zero. The source provides neither a universal proper-block selector nor a compensator paying M_Z and the terminal cost without reusing influence.",
+    "controls": [
+      "bent-splice low-selector-energy obstruction",
+      "rare logarithmic costs",
+      "shared signed-dictator FEI-hardness",
+      "addressing",
+      "near tensors"
+    ],
+    "repair_target": "Control the first block at which branch squared spectra differ, preserving actual path probabilities, terminal entropy, and the disjoint influence ledger."
+  },
+  "checked_quantifiers": {
+    "dimensions": "all finite",
+    "depth": "all finite",
+    "blocks": "fresh, finite, pairwise disjoint",
+    "children": "actual physical restrictions",
+    "path_probabilities": "uniform fair-tree weights",
+    "terminal": "sign-flipped base retained exactly",
+    "nonreuse": "each fresh block queried once"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "track": "NM13-10",
+  "assignment": "progress-extrapolation",
+  "source": "Agresti-Veraar arXiv:2501.18561 / NoDEA 32 (2025), Problem 3",
+  "frozen_pair": {
+    "spaces": "X0=H^{-1}(T), X1/2=L^2(T), X1=H^1(T)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "brownian_dimension": 1
+  },
+  "predecessor_handoff": "NM13-10 admission screen 52 remained ADMISSION_PENDING with UNMEASURED->UNMEASURED; PROGRESS20 redirects this slot to P24 theory without deleting predecessor history.",
+  "fixed_source_endpoint_before": "r_*=3, endpoint excluded",
+  "fixed_source_endpoint_after": "r_*=3, endpoint excluded",
+  "fixed_source_endpoint_movement": false,
+  "successor_metric": "optimal stochastic-input constant C_p^g(T) for the exact frozen pair, 2<p<3",
+  "successor_before": "R_*(p,1) <= C_p^g(T) <= C_hat_p, where C_hat_p was the previous cross-Hessian improvement and (3-p)C_hat_p -> 3(1+sqrt(3))/2",
+  "successor_after": "C_p^g(T)=R_*(p,1)=1/(sqrt(2/(p-1))-1) for every T>0 and 2<=p<3; hence lim_{p->3-}(3-p)C_p^g(T)=4",
+  "mechanism_gain": "sharp weighted Bellman-Hessian contraction D2Psi_p(z)[A^(1/2)y,A^(1/2)y] <= (p-1)||z||^(p-2)||y||^2, obtained by interpolating two Cauchy bounds with weight 1/p and integrating an exact derivative",
+  "claim_id": "NM10-AVP3-HESSIAN-CONTRACTION-02",
+  "claim_status": "CANDIDATE_FULL_SELF_CHECKED_PENDING_INDEPENDENT_REVIEW",
+  "source_problem_status": "PARTIAL; arbitrary-pair pair-dependent large-range clause remains unresolved",
+  "essential_checker": "2026-09-20T03-45-45+0300__exact_hessian_checker.py",
+  "essential_output": "2026-09-20T03-45-45+0300__exact_hessian_checker.out",
+  "checker_result": "CHECK_PASS",
+  "literature_check_date": "2026-09-20",
+  "literature_scope": "Agresti-Veraar current survey/NoDEA publication; Bechtel-Veraar variational extrapolation; Evangelopoulos-Ntemiris/Veraar discrete SMR; 2026 fully discrete SMR. No exact source-matching resolution found in bounded search.",
+  "next": "test whether the sharp Hessian contraction extends from self-adjoint B=beta A^(1/2) to a genuinely noncommuting quantitative class relevant to the arbitrary-pair Problem 3 clause; do not reopen Problems 4-5"
+}

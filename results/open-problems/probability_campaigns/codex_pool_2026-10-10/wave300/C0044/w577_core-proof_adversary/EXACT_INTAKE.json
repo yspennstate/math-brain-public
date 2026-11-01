@@ -1,0 +1,60 @@
+[
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 44,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0044",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Open question 3.2, p. 42",
+      "problem_id": "C0044",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "drewitz_ramirez_rwre_2014",
+      "statement": "For a RWRE satisfying (E) and (IID) and any direction l, is P_0[A_l] in {0,1}, where A_l is the event of transience in direction l? Known for d = 1 and d = 2 (Zerner-Merkl).",
+      "status_search": "",
+      "title": "Zero-one law for directional transience in dimensions d >= 3",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 35,
+    "record": {
+      "attempt_id": "C0044-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "correction_note": "Codex review 12:02: A_l and A_{-l} are disjoint by definition; the content of Zerner-Merkl is the 0-1 law for A_l.",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Analyse where the Zerner-Merkl planar argument uses d = 2.",
+      "obstruction": "Planarity is essential to the d = 2 proof; no substitute in d >= 3.",
+      "problem_id": "C0044",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "Zerner-Merkl show P_0[A_l intersection A_{-l}] = 0 using that in d = 2 two independent walks in the same environment started at distant points on a line perpendicular to l must, with positive probability, have paths that intersect (planarity), which lets one derive a contradiction from the walk going to +infinity and -infinity in direction l with positive probability each. In d >= 3 paths of two walks need not intersect, and the known partial result (Kalikow's 0-1 law: P_0[A_l union A_{-l}] in {0,1}) does not exclude the mixed event. A candidate counterexample structure in d >= 3 would be an i.i.d. environment where the walk is guided to +l or -l depending on a local feature it meets first; the i.i.d. assumption and the fact that the walk visits infinitely many independent regions make such a persistent memory implausible but not provably impossible: the walk in direction +l sees fresh environment forever, and the event that it turns around is a tail event of the walk but not of the environment. I checked that the natural martingale argument (P_omega(A_l) as a function of the environment at the current position) fails because P_omega(A_l) is not measurable with respect to a finite region. No result.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "superseded_by": "C0044-A002"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 121,
+    "record": {
+      "attempt_id": "C0044-A002",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "Correction checked line by line against the source and the holder's message by the Fable agent; the holder's claim was taken as a lead, not as authority.",
+      "key_identity": "Zerner-Merkl (d=2): P_0(A_l) in {0,1}; Kalikow (all d): P_0(A_l union A_{-l}) in {0,1}; d >= 3 directional law open.",
+      "method": "Codex review 12:02: A_l and A_{-l} are disjoint by definition; the content of Zerner-Merkl is the 0-1 law for A_l.",
+      "obstruction": "see A001 for the standing obstruction",
+      "problem_id": "C0044",
+      "recorded_at": "2026-09-07T09:27:17Z",
+      "result": "CORRECTION of C0044-A001's first sentence. The events {X_n . l -> +infinity} and {X_n . l -> -infinity} are disjoint by definition, so 'Zerner-Merkl show P(A_l intersect A_{-l}) = 0' is empty; what Zerner-Merkl prove in d = 2 is P_0(A_l) in {0,1}, using planarity to show two walks in the same environment intersect, which is what A001 then describes. The reduction (planarity essential; no d >= 3 substitute; no finite-region measurability for the natural martingale) stands.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "supersedes": "C0044-A001"
+    }
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B01",
+  "run_id": "20260925T040109Z-fleet02-B01-five270-r15",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "literal_source_verdict": "GAP_FALSE_LOCAL_PRESENTATION_ONLY",
+  "theorem_level_false_found": false,
+  "repaired_theorem_chain_status": "PASS",
+  "findings": [
+    {"lines":"41","pdf_page":1,"status":"FALSE","repair":"C04","summary":"Random-sign description omits the no-pivot/small-entry hypothesis; A=I5 refutes the unqualified wording. Proposition 6.4 is correctly qualified.","downstream":"none after wording repair"},
+    {"lines":"62","pdf_page":1,"status":"UNCHECKED","repair":"C07","summary":"Current literature assertion that the three-direction density question is open was not independently established.","downstream":"not a proof dependency"},
+    {"lines":"65","pdf_page":1,"status":"FALSE","repair":"C05","summary":"Actual singularity is too strong; the proof gives a square-root/logarithmic upper envelope.","downstream":"presentation only"},
+    {"lines":"74","pdf_page":2,"status":"UNCHECKED","repair":"bibliographic","summary":"Related-work attribution/priority was not turned into an external literature audit.","downstream":"not a proof dependency"},
+    {"lines":"148","pdf_page":3,"status":"NOT_MATHEMATICAL","repair":"C06","summary":"Editorial 'Both' introduces three assertions; the three mathematical claims pass.","downstream":"none"},
+    {"lines":"222","pdf_page":5,"status":"FALSE","repair":"R07","summary":"More than one beta_i can vanish. Drop all zero-beta factors; the positive-beta frame and constant are unchanged.","downstream":"theorem-neutral after repair","provenance":"reproduced from pinned source; earlier B01 evidence already existed"},
+    {"lines":"319-322","pdf_page":7,"status":"GAP","repair":"C02","summary":"Insert Jensen/Cauchy |E F|^2 <= E|F|^2 before averaging the conditional Plancherel estimate.","downstream":"zero loss"},
+    {"lines":"398","pdf_page":9,"status":"GAP","repair":"R08","summary":"Exact scalar-square density display is undefined at the critical value because of a 0-times-infinity pointwise ambiguity; state it a.e. or off the critical value.","downstream":"theorem-neutral","provenance":"reproduced from pinned source; earlier B01 evidence already existed"},
+    {"lines":"412","pdf_page":9,"status":"FALSE","repair":"C01","summary":"Polar chart is not a literal global diffeomorphism because of the angular seam; remove one null ray.","downstream":"zero loss"},
+    {"lines":"415-442","pdf_page":"9-10","status":"GAP","repair":"C03","summary":"Add that the critical hyperbolic level is two affine lines and hence null under the joint density. Separate original coordinates for the two tails are already used correctly.","downstream":"zero loss"}
+  ],
+  "dependency_closure": {
+    "fourier_and_halfmoment":"PASS",
+    "conditioning":"PASS",
+    "singular_values_and_schur":"PASS",
+    "gram_and_cauchy_binet":"PASS",
+    "heat_flow_brascamp_lieb":"PASS",
+    "product_projection_after_R07":"PASS",
+    "crossing_volume_decay_after_C02":"PASS",
+    "scalar_and_pair_kernels_after_R08_C01_C03":"PASS",
+    "random_sign_spectral_conversion_with_no_pivot_hypothesis":"PASS",
+    "final_case_split_and_affine_terms":"PASS",
+    "general_K_s_scaling":"PASS"
+  },
+  "coverage": {
+    "tex_lines":"1-675",
+    "all_lines_recorded":true,
+    "coverage_records":691,
+    "rendered_pdf_glyph_equivalence":"UNCHECKED_no_screenshot_capable_private_pdf_route"
+  }
+}

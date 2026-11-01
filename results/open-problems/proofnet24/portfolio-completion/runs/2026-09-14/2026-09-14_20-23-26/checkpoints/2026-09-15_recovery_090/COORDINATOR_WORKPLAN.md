@@ -1,0 +1,5 @@
+# Remaining worker plan after recovery
+
+Only execution_ledger.json records execution. Target100 completed agents; expected107 actual launches after7 interruptions. Actual079–084 are now running. No worker spawns children or writes GitHub; root owns archive writes. Every worker uses requested gpt-6-astra/max.
+
+085 spectral entropy/fermionic bounds;086 QSO support/interiority;087 P15 audit;088 boundary-diagonal entropy;089 Benjamini–Schramm encoding;090 higher-degree QSO;091 five-type primary literature;092 six-site entropy route;093 integrated notes audit;094 coefficient continuation;095 P24 ANOVA;096 independent081 Fisher/quartic audit;097 reconstruct070 three-site sufficient theorem;098 algebraic-degree057 audit;099 dependency audit;100 claim/source audit;101 independent085 audit;102 leakage060 audit;103 continuous dynamics012/recovery069;104 diagonal-direction recovery076;105 P20 inverse delocalization;106 independent full090 cubic uniqueness and averaged algorithm audit (replaces the less urgent065 repeat);107 unlabeled projection-diamond criterion reconstruction.

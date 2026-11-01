@@ -1,0 +1,253 @@
+{
+  "command": "python -X utf8 validate_fk.py",
+  "gate": {
+    "task": "C0048 exact finite-graph FK conditioning and counterexample check",
+    "authorized_scope": "Small local exact-arithmetic experiment; no training, no GPU, no live stores",
+    "max_graph_edges": 12,
+    "max_configurations_per_case": 4096,
+    "max_cases": 7,
+    "max_elapsed_seconds": 30,
+    "max_output_bytes": 32768,
+    "write_root": "~/brain_workers/w457",
+    "command": "python -X utf8 validate_fk.py",
+    "proof_limit": "Finite enumeration validates formulas and exact counterexamples; it is not an infinite-volume or C0048 proof."
+  },
+  "cases": [
+    {
+      "case": "cycle4-free-half-q3",
+      "vertices": 4,
+      "edges": 4,
+      "p": "1/2",
+      "q": 3,
+      "wired_groups": [],
+      "configurations": 16,
+      "conditionals_checked": 32,
+      "conditional_values": [
+        "1/2",
+        "1/4"
+      ],
+      "conditional_mismatches": [],
+      "partition_numerator": 258,
+      "edge_marginals": [
+        "11/43",
+        "11/43",
+        "11/43",
+        "11/43"
+      ],
+      "all_open": "1/86",
+      "product_of_marginals": "14641/3418801",
+      "joint_to_product_ratio": "79507/29282",
+      "joint_to_product_ratio_decimal": 2.7152175397855336
+    },
+    {
+      "case": "cycle4-wired-half-q3",
+      "vertices": 4,
+      "edges": 4,
+      "p": "1/2",
+      "q": 3,
+      "wired_groups": [
+        [
+          0,
+          2
+        ]
+      ],
+      "configurations": 16,
+      "conditionals_checked": 32,
+      "conditional_values": [
+        "1/2",
+        "1/4"
+      ],
+      "conditional_mismatches": [],
+      "partition_numerator": 108,
+      "edge_marginals": [
+        "1/3",
+        "1/3",
+        "1/3",
+        "1/3"
+      ],
+      "all_open": "1/36",
+      "product_of_marginals": "1/81",
+      "joint_to_product_ratio": "9/4",
+      "joint_to_product_ratio_decimal": 2.25
+    },
+    {
+      "case": "cycle4-free-half-q1",
+      "vertices": 4,
+      "edges": 4,
+      "p": "1/2",
+      "q": 1,
+      "wired_groups": [],
+      "configurations": 16,
+      "conditionals_checked": 32,
+      "conditional_values": [
+        "1/2"
+      ],
+      "conditional_mismatches": [],
+      "partition_numerator": 16,
+      "edge_marginals": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      "all_open": "1/16",
+      "product_of_marginals": "1/16",
+      "joint_to_product_ratio": "1",
+      "joint_to_product_ratio_decimal": 1.0
+    },
+    {
+      "case": "cycle4-free-half-q2",
+      "vertices": 4,
+      "edges": 4,
+      "p": "1/2",
+      "q": 2,
+      "wired_groups": [],
+      "configurations": 16,
+      "conditionals_checked": 32,
+      "conditional_values": [
+        "1/2",
+        "1/3"
+      ],
+      "conditional_mismatches": [],
+      "partition_numerator": 82,
+      "edge_marginals": [
+        "14/41",
+        "14/41",
+        "14/41",
+        "14/41"
+      ],
+      "all_open": "1/41",
+      "product_of_marginals": "38416/2825761",
+      "joint_to_product_ratio": "68921/38416",
+      "joint_to_product_ratio_decimal": 1.794070179092045
+    },
+    {
+      "case": "cube-free-tenth-q3",
+      "vertices": 8,
+      "edges": 12,
+      "p": "1/10",
+      "q": 3,
+      "wired_groups": [],
+      "configurations": 4096,
+      "conditionals_checked": 24576,
+      "conditional_values": [
+        "1/10",
+        "1/28"
+      ],
+      "conditional_mismatches": [],
+      "partition_numerator": 2866948328301474,
+      "edge_marginals": [
+        "17068182886247/477824721383579",
+        "17068182886247/477824721383579",
+        "17068182886247/477824721383579",
+        "17068182886247/477824721383579",
+        "17068182886247/477824721383579",
+        "17068182886247/477824721383579",
+        "17068182886247/477824721383579",
+        "17068182886247/477824721383579",
+        "17068182886247/477824721383579",
+        "17068182886247/477824721383579",
+        "17068182886247/477824721383579",
+        "17068182886247/477824721383579"
+      ],
+      "all_open": "1/955649442767158",
+      "product_of_marginals": "611290226677240084221955162475109570895303277665010425518431496483571980035576471152626560472116630058823350830399781909675042538671885067292122789187578561441/141652219224107831630800491577640938630946097346981561097379767390030599965924779433918974427721626592342848203065364878528030196040770119534161942566383235613428244648931039441",
+      "joint_to_product_ratio": "296452261435830921861210907087077062514294158474088497577017107865241561555964967525913101823585650998483370178576658926777825590079209312230559359841697070597379/1222580453354480168443910324950219141790606555330020851036862992967143960071152942305253120944233260117646701660799563819350085077343770134584245578375157122882",
+      "joint_to_product_ratio_decimal": 242.480779585862
+    },
+    {
+      "case": "cube-free-half-q3",
+      "vertices": 8,
+      "edges": 12,
+      "p": "1/2",
+      "q": 3,
+      "wired_groups": [],
+      "configurations": 4096,
+      "conditionals_checked": 24576,
+      "conditional_values": [
+        "1/2",
+        "1/4"
+      ],
+      "conditional_mismatches": [],
+      "partition_numerator": 219042,
+      "edge_marginals": [
+        "9679/36507",
+        "9679/36507",
+        "9679/36507",
+        "9679/36507",
+        "9679/36507",
+        "9679/36507",
+        "9679/36507",
+        "9679/36507",
+        "9679/36507",
+        "9679/36507",
+        "9679/36507",
+        "9679/36507"
+      ],
+      "all_open": "1/73014",
+      "product_of_marginals": "676029858912907717205391257237974798200554802241/5604201601393656235144862666552063292136515724651221201",
+      "joint_to_product_ratio": "153510329564019399982054473568139351141877331050243/1352059717825815434410782514475949596401109604482",
+      "joint_to_product_ratio_decimal": 113.5381281907224
+    },
+    {
+      "case": "cube-wired-two-fifths-q3",
+      "vertices": 8,
+      "edges": 12,
+      "p": "2/5",
+      "q": 3,
+      "wired_groups": [
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "configurations": 4096,
+      "conditionals_checked": 24576,
+      "conditional_values": [
+        "2/11",
+        "2/5"
+      ],
+      "conditional_mismatches": [],
+      "partition_numerator": 6491462745,
+      "edge_marginals": [
+        "50/179",
+        "50/179",
+        "50/179",
+        "579718/2417677",
+        "579718/2417677",
+        "579718/2417677",
+        "579718/2417677",
+        "2379974/12088385",
+        "579718/2417677",
+        "579718/2417677",
+        "2379974/12088385",
+        "2379974/12088385"
+      ],
+      "all_open": "4096/2163820915",
+      "product_of_marginals": "511702276805128593152730933497450110791300950315173376000/16186151593605336249842995368903557948344792875282936075095097743",
+      "joint_to_product_ratio": "37401781915961691889467191347726569942006482720597365321/624636568365635489688392252804504529774537292865201875",
+      "joint_to_product_ratio_decimal": 59.87766936832345
+    }
+  ],
+  "configurations_total": 12352,
+  "conditionals_checked_total": 73856,
+  "mismatches_total": 0,
+  "local_positive_nonpercolation_example": {
+    "d": 3,
+    "q": 3,
+    "p": "1/10",
+    "conditional_lower": "1/28",
+    "one_arm_upper_bounds": {
+      "1": "3/5",
+      "4": "3/40",
+      "8": "3/640",
+      "16": "3/163840",
+      "32": "3/10737418240"
+    },
+    "infinite_volume_limit_from_analytic_bound": 0,
+    "at_criticality": false
+  },
+  "elapsed_seconds": 0.6785006000427529,
+  "proof_scope": "Exact finite-graph sanity check; analytic infinite-volume proof is ATTEMPT.md I1"
+}

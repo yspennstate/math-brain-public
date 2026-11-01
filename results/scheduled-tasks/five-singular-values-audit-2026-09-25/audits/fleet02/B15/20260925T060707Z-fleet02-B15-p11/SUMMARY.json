@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B15",
+  "run_id": "20260925T060707Z-fleet02-B15-p11",
+  "pass_id": "P11",
+  "source": {
+    "commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+    "tex_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+    "tex_lines": 676,
+    "pdf_blob": "8be3aae36ecad7a9dc9b7c95978aad09499f32d0",
+    "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+    "pdf_bytes": 484310,
+    "pdf_pages": 14
+  },
+  "coverage": "complete physical lines 1-676 in four JSONL chunks",
+  "literal_findings": [
+    {
+      "line": 41,
+      "page": 1,
+      "status": "FALSE",
+      "repair": "C04",
+      "note": "abstract crossing conversion omits no-pivot hypothesis; theorem proof is qualified"
+    },
+    {
+      "line": 62,
+      "page": 1,
+      "status": "UNCHECKED",
+      "repair": "C07",
+      "note": "present-day literature status is external"
+    },
+    {
+      "line": 65,
+      "page": 1,
+      "status": "FALSE",
+      "repair": "C05",
+      "note": "actual-singularity wording should be upper-envelope wording"
+    },
+    {
+      "line": 148,
+      "page": 3,
+      "status": "GAP",
+      "repair": "P11-R01",
+      "note": "zero-padded singular-value indices need a separate trivial case"
+    },
+    {
+      "line": 319,
+      "page": 7,
+      "status": "GAP",
+      "repair": "C02",
+      "note": "insert Jensen/Cauchy before averaging"
+    },
+    {
+      "line": 398,
+      "page": 9,
+      "status": "GAP",
+      "repair": "P11-R02",
+      "note": "density display needs z!=v/a.e. representative convention"
+    },
+    {
+      "line": 412,
+      "page": 9,
+      "status": "FALSE",
+      "repair": "C01",
+      "note": "half-open angular chart is not a global diffeomorphism"
+    },
+    {
+      "line": 442,
+      "page": 10,
+      "status": "GAP",
+      "repair": "C03",
+      "note": "exclude atom at hyperbolic critical level"
+    },
+    {
+      "line": 505,
+      "page": 11,
+      "status": "GAP",
+      "repair": "P11-R03",
+      "note": "define h(0)=+infinity before extended-valued rearrangement"
+    },
+    {
+      "line": 613,
+      "page": 13,
+      "status": "GAP",
+      "repair": "P11-R04",
+      "note": "J(R-a) is written before J(0) or no-atom convention is established"
+    }
+  ],
+  "b15": {
+    "corollary_4_4": "PASS after C02: E3 gives L1 Fourier decay and continuity; E2 gives only half-moment; E1 is used via Gaussian smoothing",
+    "conditioning": "PASS: absolute continuity and a.e./essential domination only, not continuity",
+    "gaussian_inversion": "PASS for arbitrary law; Gaussian majorant pays Fubini",
+    "riesz_halfpotential": "PASS; constant 1/sqrt(2pi) and envelope integral 8 sqrt(u)",
+    "rough_law_scope": "PASS: no approximation step is used to upgrade essential boundedness to continuity"
+  },
+  "theorem_level": "literal manuscript has local gaps; independently reproduced repairs preserve s5 density <=270 K^2/s and s3 half-moment <=77 K/sqrt(s); no lower-threshold research performed",
+  "blocked": [
+    "fresh pixel/render screenshot of private PDF; authenticated blob/byte identity verified",
+    "external open-status/bibliographic claims not exhaustively verified"
+  ],
+  "full_brain_connected": false,
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": "UNKNOWN",
+  "reasoning_effort_self_report": "UNKNOWN"
+}

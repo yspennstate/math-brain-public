@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/R7IvRsiib2TPYTwU0VrxvGB/NgA</id>
+  <title>arXiv Query: search_query=all:rotation AND all:walk AND submittedDate:"202609070000 TO 202610122359"&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-11T23:08:58Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:rotation+AND+(all:walk+AND+submittedDate:%22202609070000+TO+202610122359%22)&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>14</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.32178v1</id>
+    <title>Analytic-Walk Rotary Positional Encodings for Graphs</title>
+    <updated>2026-09-26T03:00:22Z</updated>
+    <link href="https://arxiv.org/abs/2609.32178v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.32178v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Rotary position encodings make attention sensitive to relative position, but extending them to graphs requires choosing how graph structure enters the rotation. Previous works assign each node a rotation from spectral coordinates, so the rotary factor between two nodes depends only on their endpoints and cannot distinguish the routes connecting them. We introduce \textit{Analytic-Walk Rotary Positional Encodings} (AW-RoPE), which place the rotations on edges and sum the transported features over all walks, so contributions along different routes can reinforce or cancel. An exact variant evaluates the complete sum by a differentiable linear solve, and a sparse variant truncates it at a finite depth. We prove forward and parameter-derivative truncation bounds at fixed inputs and parameters. Both variants act on projected queries and keys, and the sparse recurrence also augments message-passing networks. Across five synthetic tasks both variants reduce nRMSE by $15$--$58\%$ relative to the strongest baseline, and on real superpixel, peptide and OGB benchmarks the sparse recurrence attains the best mean on every dataset with Performer kernels and on twelve of thirteen datasets with GIN. Analysis shows that AW-RoPE can distinguish routes whose only cue is how two endpoints are connected, while node-wise rotary encodings cannot.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-26T03:00:22Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jiaqing Xie</name>
+    </author>
+    <author>
+      <name>Yuxin Wang</name>
+    </author>
+    <author>
+      <name>Xipeng Qiu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.08018v1</id>
+    <title>Resolvent characteristics and quadratic mixing of Kac's walk on $SO(n)$</title>
+    <updated>2026-09-07T22:01:49Z</updated>
+    <link href="https://arxiv.org/abs/2609.08018v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.08018v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the coordinate-plane Kac walk on $\mathrm{SO}(n)$ with independent uniform rotation angles. For the unnormalized Hilbert-Schmidt Riemannian distance, we prove that the Wasserstein-$2$ Lipschitz coefficient of a block of $2\binom n2$ steps is at most $2n^{-1/200}$ for sufficiently large $n$. This gives a fixed-accuracy $O(n^2)$ Wasserstein mixing bound and inverse-polynomial accuracy in a constant number of blocks. We also obtain an $O(n^2)$ total-variation upper bound. The coupling averages each component of a regularized-inverse angle correction over its own angle, so its exact flow preserves the joint angle law. A deterministic decreasing regularization parameter cancels the main scalar and matrix-valued resolvent drifts. Its stability factor is polynomial in the inverse regularization, and the matrix estimates close on two partial traces. The same scalar estimate bounds the fraction of deficient covariance directions; independent cores and a cutoff integration-by-parts argument give the total-variation transfer. We provide the parameter estimates, conditioning arguments, and finite-time singular-mass treatment explicitly. The results imply total-variation pre-cutoff on the quadratic scale, but do not establish either the presence or the absence of cutoff.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-07T22:01:49Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Yunjiang Jiang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.40164v2</id>
+    <title>Spectral gaps and slow modes of Pauli rotations and random quantum circuits</title>
+    <updated>2026-10-04T16:06:59Z</updated>
+    <link href="https://arxiv.org/abs/2609.40164v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.40164v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We determine which representation sectors control the slowest convergence of random Pauli rotations and several local random quantum circuits. For $d=2^n$, the continuous Pauli walk has exact all-representation gaps $$Δ_{\mathsf{SU}(d)}=\frac{d-8}{8(d-1)}\quad(n\ge4),\qquad Δ_{\mathsf{PU}(d)}=\frac{d(d-3)}{8(d^2-1)}\quad(n\ge3).$$ The special-unitary gap is attained in $\bigwedge^8\mathbb{C}^d$ and is invisible to balanced moments, while the projective gap is already attained in a balanced fourth-moment representation. We obtain exact discrete and orthogonal Pauli analogues, exact finite-Clifford chain/path gaps, and dimension-independent all-representation Haar brickwork lower bounds; on three qubits every weighted Haar-$\mathsf{SU}(4)$ edge walk reduces to one universal principal-angle constant. For real complete-graph models, the entire ordinary fourth-tensor gap reduces to a quadratic-size occupation operator, is simple for every $n\ge4$, and has an expansion beginning $$Δ_n^{(4)}=\frac{10}{9n}-\frac{88}{105n^2}+O(n^{-3}),$$ with competing branches separated only beyond all algebraic orders. For the two finite real Clifford complete-graph walks, this fourth-tensor mode is the exact all-representation group gap for every $n\ge144$; in the same range it simultaneously governs every ordinary even tensor degree $k\ge4$. Thus different representation scopes can have genuinely different slow modes.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-30T16:58:33Z</published>
+    <arxiv:comment>79 pages</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Ziyuan Dong</name>
+    </author>
+    <author>
+      <name>Xiang Fan</name>
+    </author>
+    <arxiv:doi>10.5281/zenodo.23099545</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.5281/zenodo.23099545" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.02728v1</id>
+    <title>Around the World: Unified Learned Locomotion on a 270 g Continuous-Rotation Quadruped</title>
+    <updated>2026-10-02T03:03:22Z</updated>
+    <link href="https://arxiv.org/abs/2610.02728v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.02728v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Closed-loop learned locomotion is established on commercial quadrupeds but remains uncommon at the sub-kilogram scale. Continuous-rotation legs give MiNI-Q, a 270 g quadruped, access to supporting configurations on either side of the body. We exploit this range with a single posture-conditioned reinforcement-learning policy that runs entirely onboard. A continuous joint-space reference on the torus $T^8$ and its gravity-conditioned transformation connect upright walking, inverted walking, and landing recovery without state machines or phase switching. Coordinated posture and release curricula train this behavior family; identified actuation, cross-engine validation, and embedded execution support hardware transfer. The same sub-100k-parameter network tracks forward velocity with RMSE of 0.037 m/s upright and 0.050 m/s inverted, resumes walking in 24 of 30 release trials, and operates with four interchangeable foot geometries across four indoor surfaces. Hardware experiments and simulation ablations connect these capabilities to the representation, conditioning, and training choices that exploit the platform's motion range. Demonstration videos and supplementary material are available on the project website: https://submissionreview.github.io/around-the-world/.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-02T03:03:22Z</published>
+    <arxiv:comment>13 pages, including appendices. Project website: https://submissionreview.github.io/around-the-world/</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Arturo Flores Alvarez</name>
+    </author>
+    <author>
+      <name>Nathan Lintu</name>
+    </author>
+    <author>
+      <name>Dennis Hong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.13424v2</id>
+    <title>Wasserstein mixing of a systematic-scan random rotation sampler</title>
+    <updated>2026-09-21T04:15:03Z</updated>
+    <link href="https://arxiv.org/abs/2609.13424v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.13424v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the mixing time of a systematic-scan analogue of Kac's walk that was proposed as a fast surrogate for Haar-distributed orthogonal matrices in randomized high-dimensional algorithms and was conjectured to approach Haar measure after only logarithmically many sweeps. We show that this conjectured speed-up does not occur for convergence of the full matrix law to Haar measure in Frobenius Wasserstein distance. At fixed normalized accuracy, the mixing time lies between order $n/\log n$ and order $n$ sweeps; at fixed absolute Frobenius accuracy, the corresponding bounds are between order $n$ and order $n\log n$. More strongly, below the scale $n/\log n$, the normalized Wasserstein distance remains asymptotically at its extremal value. We also show that the output law is singular with respect to Haar measure for fewer than $n/2$ sweeps. Thus the sampler may provide effective application-specific randomization without exhibiting the much faster full-Haar mixing.</summary>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-11T18:40:33Z</published>
+    <arxiv:primary_category term="stat.CO"/>
+    <author>
+      <name>Amir Sepehri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.26546v2</id>
+    <title>Simple symmetric Venn diagrams with 17, 19 and 23 curves</title>
+    <updated>2026-10-06T14:22:12Z</updated>
+    <link href="https://arxiv.org/abs/2609.26546v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.26546v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We exhibit simple, rotationally symmetric Venn diagrams with 17 curves, with 19 curves and with 23 curves: $n$ Jordan curves carried to one another by rotation through $2π/n$, with every one of the $2^n$ regions present and connected and, since the diagrams are simple, every crossing on exactly two curves. Symmetric Venn diagrams exist for every prime number of curves (Griggs, Killian and Savage, 2004), but those diagrams have many curves through a point; simple ones were known only up to 13 curves (Mamakani and Ruskey, 2014). Four 17-curve, nine 19-curve and five 23-curve diagrams were found by a Metropolis walk on rotation-invariant quadrangulations of the sphere in which regions may temporarily be duplicated, started from the Griggs-Killian-Savage diagram with its multiple crossings resolved. At 23 curves the walk was held for two weeks by duplicated regions near the poles; the two lineages that finished were the first whose $E=92$ states had none. Every diagram is given by a machine-checkable certificate; one certificate each of the 17- and 19-curve sizes has been verified by a formal proof in Lean 4. All of the diagrams are non-monotone, which is why the crossing-sequence searches that found the 11- and 13-curve diagrams could not have found them.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-22T15:02:46Z</published>
+    <arxiv:comment>14 pages, 2 figures. Certificates, independent checker, Lean 4 verifications and search code are archived at doi:10.5281/zenodo.22885649 and at https://github.com/dzoba/venn17. v2: five simple symmetric 23-curve diagrams added (found 5 and 6 October 2026); title changed accordingly</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Chris Dzoba</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.00628v1</id>
+    <title>Preliminary Evaluation of Transition-Aware Controller Locomotion Adaptations for Supporting Postural Stability in VR</title>
+    <updated>2026-09-30T19:31:53Z</updated>
+    <link href="https://arxiv.org/abs/2610.00628v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.00628v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present three locomotion adaptation approaches: Motion Acceleration, Turn Acceleration, and Motion Deceleration to improve postural stability during body-state transitions in virtual reality (VR). The system detects standing-to-walking, turning, and walking-to-stopping transitions and applies adaptive locomotion smoothing. Motion Acceleration gradually increases locomotion speed when users begin walking, Turn Acceleration smooths rotation while turning, and Motion Deceleration gradually reduces movement speed before stopping. We evaluated these techniques in a virtual navigation task using objective and subjective balance measures. Preliminary results show reduced center of pressure (COP) velocity and improved balance confidence. These findings suggest that locomotion adaptations can improve balance and navigation experience.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-30T19:31:53Z</published>
+    <arxiv:comment>4 pages, 3 figures, accepted in ISMAR 2026 poster track</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Ramisa Fariha Joyee</name>
+    </author>
+    <author>
+      <name>M. Rasel Mahmud</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.12680v1</id>
+    <title>Chirality enhances diffusion in disordered environments</title>
+    <updated>2026-09-11T10:25:09Z</updated>
+    <link href="https://arxiv.org/abs/2609.12680v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.12680v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Chirality, a systematic rotational bias in the motion of a particle, arises in a wide range of physical and biological systems, from charged colloids in magnetic fields to swimming bacteria near surfaces. While its effects in homogeneous environments are well understood, the interplay between chirality and structural disorder has remained largely unexplored. Here we investigate the chiral random walk on two-dimensional percolation clusters above the percolation threshold, combining numerical simulations with an analytically tractable annealed-disorder approximation. We find that the long-time diffusion coefficient depends non-monotonically on both the chirality parameter and the obstacle density: for every obstacle density above the percolation threshold, there exists an optimal chirality that enhances diffusion relative to the achiral walk. We show that the optimal chirality is set by an edge-adhering mechanism: maximum diffusion is achieved when the persistence length of the wall-adhering motion matches half the typical obstacle cluster perimeter. This yields a closed-form prediction for the optimal chirality in terms of geometric properties of the medium alone, which we verify across the full range of obstacle densities studied. The enhancement extends to first-passage statistics, where chirality shortens typical search times at strong disorder while lengthening them at weak disorder, with direct implications for biological navigation in disordered environments.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.soft" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.bio-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-11T10:25:09Z</published>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <arxiv:journal_ref>J. Chem. Phys. 165, 124118 (2026)</arxiv:journal_ref>
+    <author>
+      <name>Joshua Uhlig</name>
+    </author>
+    <author>
+      <name>Jan Wójcik</name>
+    </author>
+    <author>
+      <name>Ralf Metzler</name>
+    </author>
+    <author>
+      <name>Erik Kalz</name>
+    </author>
+    <arxiv:doi>10.1063/5.0352851</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/5.0352851" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.10457v3</id>
+    <title>AnimateCanvas: Learning Implicit Motion Planning from Composable Kinematic Cues</title>
+    <updated>2026-09-18T06:51:37Z</updated>
+    <link href="https://arxiv.org/abs/2609.10457v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.10457v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Professional character animation requires both natural motion and precise, versatile control. For example, creators often define the timing of a specified action, control the motion range of the character's arm swing, or specify the route the character walks through--effectively placing various kinematic cues on a motion canvas. This motivates us to propose AnimateCanvas, a model that supports cue-conditioned implicit motion planning to faithfully and coherently connect all cues, dense or sparse, full or partial, into one full-body motion sequence. Specifically, AnimateCanvas represents heterogeneous kinematic cues on a shared motion canvas, where position and rotation values are specified across body joints and time. A shared flow-matching model generates motion conditioned on this canvas, with optional language and input motion; cue imputation keeps the specified canvas values fixed in both training and sampling. To learn coherent completion across different cue sets, we train with a compositional cue sampler that varies the timing of cue application, the positions or rotations specified, and how they are combined. Together, these designs enable a single generator to integrate heterogeneous kinematic cues into coherent full-body actions, giving creators fine-grained control over selected frames, joints, and position or rotation channels. We evaluate this planning ability on temporal, root, and body-part cues--alone and combined--as well as language-guided editing, and naturally extend it to sequential generation and motion repair. AnimateCanvas achieves state-of-the-art results in temporal completion, spatial control, sequential generation, language-guided editing, and motion repair, while retaining strong text-to-motion capability.</summary>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-09T17:06:18Z</published>
+    <arxiv:comment>This paper was posted before completion of the required internal review and approval process. It is being withdrawn pending approval for public release</arxiv:comment>
+    <arxiv:primary_category term="cs.MM"/>
+    <author>
+      <name>Zeyu Ling</name>
+    </author>
+    <author>
+      <name>Di Kang</name>
+    </author>
+    <author>
+      <name>Qing Shuai</name>
+    </author>
+    <author>
+      <name>Yuxin Wen</name>
+    </author>
+    <author>
+      <name>Jing Li</name>
+    </author>
+    <author>
+      <name>Zhanke Wang</name>
+    </author>
+    <author>
+      <name>Heng Li</name>
+    </author>
+    <author>
+      <name>Chunchao Guo</name>
+    </author>
+    <author>
+      <name>Changqing Zou</name>
+    </author>
+    <author>
+      <name>Linchao Bao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.06228v1</id>
+    <title>Hiding a Vertex from the Temporal Explorer: A Lower Bound for Degree-Bounded Temporal Graphs</title>
+    <updated>2026-10-05T12:33:13Z</updated>
+    <link href="https://arxiv.org/abs/2610.06228v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.06228v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A temporal graph is a sequence of graphs on a common set of $n$ vertices, its snapshots, one for each time step. An agent, knowing the entire sequence in advance, may at each time step wait or move along an edge of the current snapshot, and the temporal graph is explored once the agent has visited every vertex. We consider always-connected temporal graphs, in which every snapshot is connected, and ask how long exploration can be forced to take when the underlying graph, the union of all snapshots, has maximum degree at most~$Δ$. Two lower bounds were known in this setting, $Ω(Δn)$ and $Ω(n\log n)$, realised by different constructions. We establish a stronger lower bound, answering a question of Bastide, Groenland, Michel and Rambaud. Specifically, for every $n$ and $Δ$ with $Δ_0\leΔ\le n-1$ we construct an always-connected temporal graph on $n$ vertices with underlying maximum degree at most~$Δ$ that cannot be explored in fewer than $γ\,Δn\,(1+\log(n/Δ))$ time steps from any start vertex, where $γ&gt;0$ and $Δ_0$ are absolute constants. The construction is deterministic, and every snapshot is a spanning tree with exactly one vertex of degree greater than three. Time is divided into phases. In each phase, a rotating-cycle gadget prevents the agent from reaching more than half of the trees attached to it. Between phases, we reassign target vertices among these trees using walks on a constant-degree expander, and a Gray code order of the targets keeps the underlying degree bounded. The reassignment guarantees that, for any walk of the agent, some target remains unvisited throughout all phases.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-05T12:33:13Z</published>
+    <arxiv:comment>21 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Daniele Carnevale</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.32992v1</id>
+    <title>Smelling the Way: Olfactory Modulation of Spatial Estimation and Path Integration in Virtual Reality</title>
+    <updated>2026-09-26T22:40:59Z</updated>
+    <link href="https://arxiv.org/abs/2609.32992v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.32992v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Spatial cognition enables individuals to perceive and interpret spatial relationships, estimate locations, and navigate within their surroundings. While vision plays a dominant role, other sensory modalities, particularly olfaction, can support spatial processing when visual cues are limited. This paper explores the effects of scent-delivery within virtual reality (VR) environments by using fan-mediated olfactory devices. We conducted two formal studies to evaluate the effects on spatial information acquisition. Study 1 (N=24) examined the participants' ability to localize a scent source while walking a linear path using two different olfactory devices. Study 2 (N=19) employed a triangle completion task, in which participants attempted to return to their starting point under varying rotation angles and olfactory conditions. Results indicate that scent-delivery feedback influenced spatial behavior in distinct ways across the two studies. In Study 1, visual-olfactory misalignment produced systematic directional biases without improving absolute localization accuracy. In Study 2, distance-modulated scent-delivery feedback reduced terminal homing error but also increased traveled distance and completion time, suggesting a more deliberate goal-confirmation strategy.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-26T22:40:59Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Siyeon Bak</name>
+    </author>
+    <author>
+      <name>Junho Kim</name>
+    </author>
+    <author>
+      <name>Dongyun Han</name>
+    </author>
+    <author>
+      <name>Sun-Jeong Kim</name>
+    </author>
+    <author>
+      <name>Isaac Cho</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.25374v1</id>
+    <title>Angular momentum analysis on Karate roundhouse kicks: a longitudinal case study</title>
+    <updated>2026-09-21T20:13:50Z</updated>
+    <link href="https://arxiv.org/abs/2609.25374v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.25374v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Human gait in reality extends beyond straight-line walking, with some situations even requiring drastic back-and-forth rotations. A smooth and stable execution may seem intuitive, but the underlying mechanics remains unknown. The Karate roundhouse kick may be an extreme case of exhibiting dynamic back-and-forth rotations, but investigating the angular momentum (AM) management can potentially inform stability analysis in dynamic human motions and smoother gait in robots and exoskeletons. This paper introduces two new AM-based measures and analyzes AM-related variables to study the target-less retractable back-leg Karate roundhouse kick. The purpose is to understand the underlying AM management, analyze the differences between stable and unstable kicks, and investigate how these variables and measures change over time with improvement. A one-year longitudinal study was conducted with the first author as a Karate student, and a Karate instructor was also recruited for one session as an expert, whose data is used for comparison. Results show that unstable kicks have higher peak total AM before Strike and smaller braking peak after Strike. The proposed AM-based measures are able to identify the cause of some unstable kicks, though no clear distinction could be made between stable and unstable kicks since kicks can be unstable for different reasons. Nonetheless, the proposed measures can be applied as performance measures to analyze other types of dynamic motions. To incorporate them as stability criteria, however, it is recommended to also consider their coordination with time, kinematics, and center of pressure.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-21T20:13:50Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Jan C. L. Lau</name>
+    </author>
+    <author>
+      <name>Christian Mele</name>
+    </author>
+    <author>
+      <name>Jonathan Feng-Shun Lin</name>
+    </author>
+    <author>
+      <name>Katja Mombaur</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.08372v2</id>
+    <title>Reading a Legal Question Word by Word: Embedding Trajectories of 2,144 Vietnamese Legal Headlines</title>
+    <updated>2026-09-09T03:59:52Z</updated>
+    <link href="https://arxiv.org/abs/2609.08372v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.08372v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A dense retriever encodes a question as one vector, but the question arrives one word at a time. We read 2,144 held-out headlines from Thu Vien Phap Luat (Vietnamese legal library) word by word with Nemotron-3-Embed 8B/1B and Qwen3-Embedding 8B/0.6B, encoding 65,444 prefixes against 20,034 articles, plus every prefix of 3,438 sub-questions from 1,112 multi-question headlines and of 168 answers. (i) The gold article becomes rank 1 after a median of 6-7 content words in every encoder, before the interrogative frame is read, and stays there to the end in 78-85% of cases. (ii) In a multi-question headline the lock is inside the first sub-question 94-98% of the time; the second leaves rank unchanged in 89-95%; encoded alone, the second reaches rank 1 in 42-58% vs 91-96% for the first, at the same lock word (95-97% identical). (iii) Numbers, dates and instrument identifiers move the embedding twice as far as content words and four times as far as interrogative words; 72-78% of steps move toward the gold article, and the closing interrogative frame moves against that direction in 95-99% of headlines. (iv) Rank/cosine clustering yields six archetypes (instant, typical, unstable, late, never-locking) that differ by legal area and form (chi-squared p &lt; 1e-8): real-estate and litigation headlines never lock on a number; environmental and accounting headlines do so a third of the time. (v) An answer read word by word retrieves its article after 8-16 words and addresses the sub-questions in order asked in 83-89% of cases. (vi) A word's step keeps a consistent direction across headlines (cosine 0.25-0.33; 0.44-0.60 for numbers); a preceding question rotates that step by about 60 degrees and a greeting by about 30 degrees; steps shrink as i^{-0.8}; and a two-question headline is within 12-17 degrees of a linear mix of its two questions. We call this a context-modulated additive walk.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-08T07:37:21Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Tran Minh Quan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.34015v1</id>
+    <title>A Computer Vision Approach to Visual Fraud Detection in Phishing Websites Using YOLOv8</title>
+    <updated>2026-09-27T23:19:12Z</updated>
+    <link href="https://arxiv.org/abs/2609.34015v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.34015v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Phishing remains one of the most common vectors for financial and identity fraud, and most detection systems still rely on inspecting a page's URL, HTML markup, or domain registration history. These signals are easy for an attacker to rotate or obfuscate, and they say very little about what actually convinces a victim to hand over a password or a card number: the way the page looks. This paper describes a visual, image-based approach to phishing detection that treats a rendered webpage the same way a human eye would, as a picture that either matches a trusted brand or doesn't. A YOLOv8 convolutional neural network was trained to classify full-page website screenshots as phishing or legitimate based on layout, logo placement, color scheme, and login-form structure, rather than on text extracted from the page. The system reached 92% classification accuracy on a held-out test set, processed a single screenshot in roughly 100 milliseconds, and, after a round of data augmentation aimed specifically at lighting, compression, and scaling variation, cut the false-positive rate by 11% relative to the pre-augmentation baseline. The paper walks through the dataset construction, the augmentation strategy, the model architecture and training setup, and the resulting performance, and closes with a discussion of where this kind of visual detector fits alongside, rather than instead of, existing URL- and content-based defenses.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-27T23:19:12Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Basil Sajid Shaikh</name>
+    </author>
+    <author>
+      <name>Hajar Homayouni</name>
+    </author>
+  </entry>
+</feed>

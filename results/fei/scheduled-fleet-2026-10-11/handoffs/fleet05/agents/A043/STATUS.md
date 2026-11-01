@@ -1,0 +1,2 @@
+STATE: A043 stage5 complete: prime56067 all biases paid with Hplus<=(2+6/ln2)Delta; A042 endpoint claim independently accepted; polynomial slack strengthening exactly false; sharp upper/full FEI OPEN; new proof review pending.
+NEXT: Prove actual logarithmic cofactor payment G<=S+2T with nonreused packet ownership; generalize to pair profiles depending on two remaining coordinates; A042/A091 review global ledger.

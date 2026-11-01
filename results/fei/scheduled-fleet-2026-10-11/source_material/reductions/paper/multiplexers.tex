@@ -1,0 +1,126 @@
+\section{Multiplexers with shared data variables}\label{sec:multiplexers}
+
+Let $x\in\bits^a$ be a selector and let $(g_b)_{b\in\bits^a}$ be Boolean functions on a common data cube $\bits^n$. Define
+\[
+ f(x,y)=g_x(y),\qquad N=2^a.
+\]
+The branches may depend on overlapping data variables. Write $\I_{\rm sel}(f)$ and $\I_{\rm data}(f)$ for the sums of influences in the two groups of inputs.
+
+\begin{proposition}[Shared-data entropy and the collision identity]\label{prop:muxcollision}
+For each data Fourier set $T$, put
+\[
+ R_T=\frac1N\sum_b\wh g_b(T)^2.
+\]
+When $R_T>0$, define a probability vector and a unit Euclidean vector on the selector labels by
+\[
+ r_T(b)=\frac{\wh g_b(T)^2}{NR_T},\qquad
+ u_T(b)=\frac{\wh g_b(T)}{\sqrt{NR_T}}.
+\]
+Let $\nu_T$ be the squared-coordinate law of the normalized Walsh--Hadamard transform of $u_T$:
+\[
+ \nu_T(S)=\left(\frac1{\sqrt N}\sum_b\chi_S(b)u_T(b)\right)^2.
+\]
+Then
+\begin{equation}\label{eq:muxcollision}
+ \HH(f)=a+\frac1N\sum_b\HH(g_b)
+ +\sum_{T:R_T>0}R_T\bigl[\HH(\nu_T)-\HH(r_T)\bigr],
+\end{equation}
+where $\HH$ on probability vectors denotes Shannon entropy. In particular,
+\begin{equation}\label{eq:muxupper}
+ \HH(f)\le2a+\frac1N\sum_b\HH(g_b).
+\end{equation}
+The influence identities are
+\begin{align}
+ \I_{\rm data}(f)&=\frac1N\sum_b\I(g_b),\label{eq:muxdata}\\
+ \I_{x_j}(f)&=\frac1N\sum_b\P_y\bigl(g_b(y)\ne g_{b^{(j)}}(y)\bigr),\label{eq:muxselector}\\
+ \I_{\rm sel}(f)&=\sum_T R_T\sum_S|S|\nu_T(S),\label{eq:muxspectralinfluence}
+\end{align}
+where $b^{(j)}$ is obtained by flipping the $j$th selector sign.
+\end{proposition}
+\begin{proof}
+The Fourier coefficients of $f$ are
+\[
+ \wh f(S,T)=\frac1N\sum_b\chi_S(b)\wh g_b(T).
+\]
+Parseval in the selector coordinates gives $\sum_S\wh f(S,T)^2=R_T$. Thus $R$ is the data-set marginal of the spectral law, and $\nu_T$ is exactly its conditional selector-set law. Consider also the probability law
+\[
+ \P(B=b,T)=\frac1N\wh g_b(T)^2.
+\]
+Its entropy is $a+N^{-1}\sum_b\HH(g_b)$, its $T$-marginal is $R$, and its conditional label law is $r_T$. The two applications of the entropy chain rule give
+\[
+ \HH(R)=a+\frac1N\sum_b\HH(g_b)-\sum_T R_T\HH(r_T),
+ \qquad
+ \HH(f)=\HH(R)+\sum_T R_T\HH(\nu_T),
+\]
+which proves~\eqref{eq:muxcollision}. Since $\HH(R)\le a+N^{-1}\sum_b\HH(g_b)$ and $\HH(\nu_T)\le a$, inequality~\eqref{eq:muxupper} follows. Conditioning on the physical selector proves~\eqref{eq:muxdata} and~\eqref{eq:muxselector}; the spectral interpretation gives~\eqref{eq:muxspectralinfluence}.
+\end{proof}
+
+\begin{corollary}[Orthogonal neighboring branches]\label{cor:muxorthogonal}
+Suppose
+\[
+ \E[g_b g_{b^{(j)}}]=0\qquad\text{for every }b,j,
+ \qquad \HH(g_b)\le C\I(g_b)\qquad\text{for every }b.
+\]
+Then $\I_{\rm sel}(f)=a/2$ and
+\[
+ \HH(f)\le\max\{4,C\}\I(f).
+\]
+More generally, the condition $\I_{\rm sel}(f)\ge ca$ gives the constant $\max\{2/c,C\}$ for any $c>0$.
+\end{corollary}
+\begin{proof}
+For Boolean branches, orthogonality is equivalent to disagreement probability $1/2$. Apply~\eqref{eq:muxselector}, then bound the two terms of~\eqref{eq:muxupper} by $4\I_{\rm sel}(f)$ and $C\I_{\rm data}(f)$, respectively. The last assertion uses $2a\le(2/c)\I_{\rm sel}(f)$.
+\end{proof}
+
+\begin{corollary}[Recursive threshold multiplexers]\label{cor:thresholdmux}
+Start with regular Boolean functions as leaves. At each later node, select between previously constructed branches using a fresh independent selector, allowing the branches to share data variables. Suppose neighboring branches at each node are orthogonal as in Corollary~\ref{cor:muxorthogonal}. Every resulting function satisfies
+\[
+ \HH(f)\le13.415\,\I(f).
+\]
+The constant is independent of the number of branches, the depth, and the pattern of data reuse.
+\end{corollary}
+\begin{proof}
+The companion manuscript~\cite{Threshold} gives the stated constant for every regular leaf. Corollary~\ref{cor:muxorthogonal} preserves it at every node, since $13.415>4$. Induction proves the assertion.
+\end{proof}
+
+For a concrete pair with shared data, take
+\[
+ g_+(y)=\Maj_3(y_1,y_2,y_3),\qquad
+ g_-(y)=\Maj_3(y_1,-y_2,y_4).
+\]
+Their only common nonzero Fourier indices are $\{1\}$ and $\{2\}$, whose inner-product contributions cancel. Thus the two branches are orthogonal despite sharing two inputs. The one-bit multiplexer has two spectral atoms of mass $1/4$ and eight of mass $1/16$, giving $\HH(f)=3$ and $\I(f)=2$.
+
+\begin{remark}
+If all branches are identical, $r_T$ is uniform and $\nu_T$ is concentrated at the empty selector set, so~\eqref{eq:muxcollision} cancels the entire label term $a$. For an addressing function, $r_T$ is concentrated at one label and $\nu_T$ is uniform, giving entropy $2a$. A uniform bound for the increment in~\eqref{eq:muxcollision} solely by selector influence is false: Proposition~\ref{prop:bentsplice} supplies Boolean branches for which that ratio is unbounded. Corollary~\ref{cor:muxorthogonal} retains its stated hypothesis.
+\end{remark}
+
+\subsection{Nonuniform subcube partitions}
+
+\begin{proposition}[Balanced branches on separate blocks]\label{prop:subcubemux}
+Let $(C_b)_b$ be a partition of a selector cube into subcubes of codimensions $d_b$, and put $p_b=2^{-d_b}$. Let $g_b$ be balanced Boolean functions on mutually disjoint data blocks. Set $f(x,y)=g_b(y_b)$ for $x\in C_b$. Then
+\begin{align}
+ \HH(f)&=2\sum_b p_bd_b+\sum_b p_b\HH(g_b),\label{eq:subcubemuxH}\\
+ \I(f)&=\frac12\sum_b p_bd_b+\sum_b p_b\I(g_b).\label{eq:subcubemuxI}
+\end{align}
+Consequently, a common branch FEI constant $C$ gives the constant $\max\{4,C\}$ for $f$. The partition need not arise from a decision tree. The identities also hold for branches on a common data block when their nonempty Fourier supports are pairwise disjoint.
+\end{proposition}
+\begin{proof}
+The indicator of $C_b$ has $2^{d_b}$ nonzero Fourier coefficients, each of magnitude $p_b$. Every spectral term of the balanced branch $g_b$ contains a nonempty data set, which identifies the branch uniquely under either stated disjointness hypothesis. Its total spectral mass is $p_b$. Conditional on this branch, the selector set is uniform on subsets of the $d_b$ fixed coordinates, independently of the data set with law $P_{g_b}$. The entropy contribution is
+\[
+ p_b\bigl[\log(1/p_b)+d_b+\HH(g_b)\bigr]
+ =p_b\bigl[2d_b+\HH(g_b)\bigr],
+\]
+and the influence contribution is $p_b[d_b/2+\I(g_b)]$. Summation proves the formulas and the FEI assertion.
+\end{proof}
+
+For completeness, unbalanced separate branches have an additional selector-only term. Put
+\[
+ \mu_b=\E g_b,\quad v_b=1-\mu_b^2,\quad
+ m(x)=\sum_b\mu_b1_{C_b}(x),\quad
+ \HH^+(g)=\sum_{T\ne\varnothing}\wh g(T)^2\log\frac1{\wh g(T)^2}.
+\]
+For a real-valued function $u$, write $\HH_{\rm spec}(u)=\sum_T\wh u(T)^2\log(1/\wh u(T)^2)$ and $\I_2(u)=\sum_T|T|\wh u(T)^2$. The same disjoint expansion gives
+\begin{align}
+ \HH(f)&=\HH_{\rm spec}(m)+\sum_b p_b\bigl[\HH^+(g_b)+2d_bv_b\bigr],\label{eq:unbalancedmuxH}\\
+ \I(f)&=\I_2(m)+\sum_b p_b\bigl[\I(g_b)+(d_b/2)v_b\bigr].\label{eq:unbalancedmuxI}
+\end{align}
+The Fourier expansion of $m$ accounts precisely for those terms with empty data set; all other terms remain separated by their branch blocks.

@@ -1,0 +1,42 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w336",
+  "bundle_slug": "w336-c0116-checked-attempt-20261010",
+  "audit_status": "PENDING_W346_KEEP; do not promote to audited or solved",
+  "entries": [
+    {
+      "key": "visited-subset-exact-cover-time-recursion",
+      "namespace": "probability.markov-chains",
+      "logical_name": "visited-subset-exact-cover-time-recursion",
+      "kind": "lemma",
+      "title": "Exact rational cover times by visited-subset recursion",
+      "statement": "For a finite irreducible rational n-state transition matrix P, set V_full=0. For each nonempty proper visited set S, solve (I-P_SS)V_S=1+(sum_(v outside S)P_uv V_(S union {v})(v))_(u in S), in descending size of S. The killed matrix has spectral radius less than one. V_{ {u} }(u) is the exact cover time from u, and their maximum is the worst-start cover time. The method uses O(2^n*n^3) rational arithmetic operations and does not give a polynomial-time approximation algorithm.",
+      "proof_text": "# C0116: exact exponential cover-time oracle\n\nStatus: proof written; w346 KEEP pending. This is an exact finite-instance oracle, not a deterministic polynomial-time (1+epsilon) algorithm.\n\nLet P be a finite irreducible rational transition matrix on n states. For a nonempty visited set S and current state u in S, let V_S(u) be the expected remaining number of steps until every state has been visited. Set V_full=0. For every proper S solve\n\n    (I-P_SS)*V_S = 1 + [sum_{v outside S} P_uv*V_(S union {v})(v)]_(u in S).\n\nEvaluate visited sets in descending cardinality. The exact answer starting at u is V_{ {u} }(u), and the worst-start cover time is their maximum. This takes O(2^n*n^3) rational arithmetic operations; no polynomial bit-complexity bound is claimed.\n\nProof: the right-hand values concern larger visited sets and are already known. First-step conditioning gives the equation. The killed matrix P_SS has spectral radius less than one: from each state in S, irreducibility provides an at-most-n-step positive-probability path to the complement; taking the minimum of finitely many such probabilities yields a geometric exit bound. Therefore I-P_SS is invertible and its inverse is sum_{k>=0}P_SS^k. This proves existence, uniqueness and the recursion by descending induction. Rational elimination gives exact rational expectations.\n\nIndependent controls for simple random walks:\n\n* Complete graph K_n, n>=2: (n-1)*H_(n-1) from every start, because with k visited vertices the probability of a new one is (n-k)/(n-1).\n* A path of L edges: expected cover time from i is L^2+i(L-i), by first hitting an endpoint and then the other. Hence worst-start cover time L^2+floor(L^2/4).\n* Star with k leaves, k>=2: 2k*H_k-1 from the center and 2k*H_(k-1) from a leaf. Coupon trials are center-to-leaf excursions of length two except the final step. For k=1 both starts have cover time one; that boundary case must be handled separately.\n\nThe cached earlier attempt's GFF asymptotic discussion gives no effective finite-instance error bound or deterministic Gaussian-maximum algorithm. This oracle permits exact checks of proposed approximations on small graphs while keeping that unresolved requirement explicit. Its computational approach is classical and no novelty claim is made.\n\nChecks: exact Fraction arithmetic against the three controls, and Bellman residuals on all connected labeled graphs up to four vertices. The checks deliberately keep the exponential algorithm outside any polynomial-time claim.\n",
+      "assumptions": [
+        "All hypotheses and scope restrictions in the statement apply."
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:campaign:w336:C0116:visited-subset-exact-cover-time-recursion",
+        "url": "~\\brain_workers\\w336\\proofs\\C0116.md",
+        "revision": "author-proof-2026-10-10; independent audit w346 pending",
+        "license": "owner-own-work; campaign proof, no novelty claim",
+        "excerpt": "For a finite irreducible rational n-state transition matrix P, set V_full=0. For each nonempty proper visited "
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "visited-subset-exact-cover-time-recursion",
+      "to_existing_logical": "math:probability.core:open-problem-c0116-deterministic-1-epsilon-approximation-of-the-cover-time",
+      "kind": "cites",
+      "rationale": "New: \"For a finite irreducible rational n-state transition matrix P, set V_full=0. For each nonempty proper visited set S, solve (I-P_SS)V_S=1+(sum_(v outside S)P_uv V_(S union {v})(v))_\"; existing: \"Is there, for every epsilon > 0, a deterministic polynomial-time algorithm approximating the cover time t_cov(G) of a graph within a factor 1 + epsilon? (Known for trees by Feige-Zeitouni; constant-factor approximation by Ding-Lee-Peres.)\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
+    },
+    {
+      "from_key": "visited-subset-exact-cover-time-recursion",
+      "to_existing_logical": "math:probability.core:attempt-c0116-deterministic-1-epsilon-approximation-of-the-cover-time",
+      "kind": "cites",
+      "rationale": "New: \"For a finite irreducible rational n-state transition matrix P, set V_full=0. For each nonempty proper visited set S, solve (I-P_SS)V_S=1+(sum_(v outside S)P_uv V_(S union {v})(v))_\"; existing: \"DLP show t_cov ≍ |E| (E max GFF)^2; the later result of Ding (2012, 'Asymptotics of cover times via Gaussian free fields: bounded-degree graphs and general trees') gives asymptotic equality t_cov ~ |E| (E max eta)^2 for bounded-degree graph\". The new result addresses the stated problem or continues the recorded route within its explicit scope."
+    }
+  ]
+}

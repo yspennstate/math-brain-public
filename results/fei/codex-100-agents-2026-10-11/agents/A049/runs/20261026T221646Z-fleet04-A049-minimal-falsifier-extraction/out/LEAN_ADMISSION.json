@@ -1,0 +1,7 @@
+{
+  "status": "HELD",
+  "command": "LEAN_CHECK_DIR=<this run>/out/lean; python -B -X utf8 lean_check.py --core --stmt \"theorem certificate_sign : 4 < (5 : Nat) /\\ 5 < 16 := by decide\" --target certificate_sign --timeout 30 --json",
+  "output": "SETUP_UNVERIFIED: Compute admission held (hung window or under 5500 MB free); no new compiler process",
+  "exit_code": 1,
+  "rung": "Analytic proof and exact certificates; NOT Lean-checked"
+}

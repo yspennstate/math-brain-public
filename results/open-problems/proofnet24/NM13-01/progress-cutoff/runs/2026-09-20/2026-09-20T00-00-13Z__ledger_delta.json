@@ -1,0 +1,32 @@
+{
+  "worker": "NM13-01",
+  "target": "T08 / Salez arXiv:2508.21055 Problem 2.3",
+  "status": "PARTIAL",
+  "runtime_model": "GPT-5.6 Sol",
+  "reasoning_level": "UNVERIFIED",
+  "source_level": {
+    "before": "General bounded-degree vertex-transitive-expander cutoff conjecture OPEN; no prior NM13-01 T08 theorem under LIVE20. Historical R16/I0112 had a provisional synchronous-tensor special-class theorem with sqrt(log n) window.",
+    "after": "General conjecture remains OPEN. Added a proved source-valid class: line graphs L(G_n) of fixed-degree edge-transitive long-range-expander sequences G_n. These line graphs are bounded-degree vertex-transitive spectral expanders, fail every fixed-c long-range-expansion condition, and have Salez-convention continuous-time cutoff.",
+    "cutoff_location": "T_n = [2(d-1)/(d-2)] log_{d-1}|V(G_n)| = [2(d-1)/(d-2)] log_{d-1}(2|V(L(G_n))|/d)",
+    "window": "O(sqrt(log |V(L(G_n))|))",
+    "relative_window": "O(1/sqrt(log |V(L(G_n))|)) -> 0"
+  },
+  "mechanism_progress": {
+    "new_identity": "With C=edge-to-endpoint and D=vertex-to-incident-edge, Q_line-I = [d/(d-1)](CD-I) and DC=(I+P_base)/2.",
+    "obstruction_removed": "The extensive endpoint-invisible local-cycle sector ker(D) is a zero-mode of CD and hence decays at exact continuous-time rate d/(d-1); abundant cliques/short cycles and failure of long-range expansion are not by themselves cutoff obstructions.",
+    "long_range_status": "For line degree 2(d-1), singleton balls grow at most O((d-1)^r), while LRE would require a fixed multiple of (2d-3)^r up to mesoscopic radii; therefore no fixed LRE constant exists."
+  },
+  "dependencies": [
+    "Salez arXiv:2508.21055v1, Problem 2.3 and continuous-time convention",
+    "Altschuler arXiv:2609.14945v1, Ramanujan=>LRE and lazy-walk Gaussian cutoff for fixed-degree LRE sequences",
+    "Kaufman-Lubotzky arXiv:1108.2960, explicit fixed-degree edge-transitive Ramanujan families (nonempty instance class)"
+  ],
+  "prior_art_label": "NEW REPOSITORY THEOREM / PUBLICATION NOVELTY UNVERIFIED. Bounded searches found no exact line-graph cutoff-transfer theorem. Some arithmetic instances may overlap older covered-expander frameworks; no disjointness claim is made.",
+  "artifacts": [
+    "2026-09-20T00-00-13Z__line_graph_incidence_checker.py",
+    "2026-09-20T00-00-13Z__line_graph_incidence_checker.out"
+  ],
+  "checker": "ALL_EXACT_CHECKS_PASS",
+  "historical_handoff": "Preserve NM13-01 admission-screen history and terminal P0292 handoff; LIVE20 supersedes the intake-only loop. No old claim or peer file was modified.",
+  "next_step": "Try to replace edge-transitive-LRE ancestry by a condition stated directly on an arbitrary vertex-transitive spectral expander, using transitive incidence/fiber decompositions rather than entropy/Green transfer."
+}

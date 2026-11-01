@@ -1,0 +1,171 @@
+\section*{A097: rowwise minimum cut for the complete singleton KL layer}
+
+All logarithms are base two.  Let $f:\{-1,1\}^n\to\{-1,1\}$ be a
+genuine Boolean function.  Put $p(S)=\widehat f(S)^2$ and
+$\pi(A)=\sum_{S\supseteq A}p(S)$.  In the exact signed restriction identity
+write
+\[
+ G=D_{\ge2}+K^{(0)}+K^{(1)},\qquad
+ D_{\ge2}=\sum_i(B_i-\Gamma_i)+\sum_i\sum_{|A|\ge2}K_{i,A}.       \tag{1}
+\]
+Thus the signed term and every KL row of order at least two remain intact.
+
+For a singleton $A=\{j\}$ define
+\[
+ r_j=\sum_{i\ne j}p(ij),\qquad
+ s_j=\sum_{\substack{|S|\ge3\\j\in S}}p(S),                    \tag{2}
+\]
+\[
+ V_j=\sum_{i\ne j}(p(j)+p(ij))
+ \log_2\frac{\pi(j)}{p(j)+p(ij)}.                               \tag{3}
+\]
+Zero-mass summands are omitted.  Finally put
+\[
+ M_1=\sum_i\min\{p(\varnothing),p(i)\},\qquad c_0={2\over\ln2}. \tag{4}
+\]
+
+\subsection*{The rowwise minimum theorem}
+
+For every $j$ the complete row with lower set $\{j\}$ obeys both
+\[
+ \sum_{i\ne j}K_{i,\{j\}}
+ \le {1\over2}V_j+{1\over\ln2}r_j                               \tag{5}
+\]
+and
+\[
+ \sum_{i\ne j}K_{i,\{j\}}
+ \le {9\over\ln2}(2r_j+s_j).                                   \tag{6}
+\]
+Consequently
+\[
+ \boxed{
+ K^{(1)}\le\sum_j\min\left\{
+ {1\over2}V_j+{r_j\over\ln2},
+ {9\over\ln2}(2r_j+s_j)\right\}.}                              \tag{7}
+\]
+The minimum is taken before summing over $j$; it is therefore at least as
+strong as the minimum of the two previously available global payments.
+
+Equation (5) is the genuine-child singleton estimate.  For completeness,
+fix $i\ne j$, write $a=\widehat f(j)$, $b=\widehat f(ij)$,
+$m=a^2+b^2$, $M=\pi(j)$, and retain the signed upper correlation $C$.
+Boolean granularity in the two physical children gives
+\[
+ K_{i,\{j\}}\le {1\over2}m\log_2{M\over m}
+                   +{1\over\ln2}p(ij).                          \tag{8}
+\]
+Summing in $i$ proves (5).
+
+We include the Boolean-specific proof of (6), because retaining its sharper
+level weights is the new assembly step.  Form the physical derivative
+\[
+ g=D_jf\in\{-1,0,1\}.
+\]
+For a coordinate $i\ne j$ set
+\[
+ a=\widehat g(\varnothing),\quad b=\widehat g(i),\quad
+ M=\mathbb E g^2,\quad C={1\over2}\widehat{g^2}(i),\quad m=a^2+b^2.
+\]
+The identity $|g|=g^2$ gives the signed branch constraints
+\[
+ |a\pm b|\le M\pm2C.                                             \tag{9}
+\]
+With $A=a/M$, $B=b/M$, $\gamma=2C/M$, $S=A^2+B^2$, the row is
+$mD_2(P\|Q)$, where
+\[
+ P_\pm={(A\pm B)^2\over2S},\qquad Q_\pm={1\pm\gamma\over2}.
+\]
+If $|\gamma|\le1/3$, $D\le\chi^2$ and
+\[
+ S D(P\|Q)\le{(2AB-\gamma S)^2\over S(1-\gamma^2)}
+ \le9(B^2+\gamma^2).                                             \tag{10}
+\]
+If $|\gamma|>1/3$, (9) yields $P_\pm/Q_\pm\le2/S$, so
+\[
+ S D(P\|Q)\le S\log(2/S)\le2/e<9\gamma^2.                       \tag{11}
+\]
+Converting natural logarithms to base two and multiplying by $M^2$ gives
+\[
+ K_{i,\{j\}}\le {9\over\ln2}(b^2+4C^2).                        \tag{12}
+\]
+After summing in $i$, Parseval and $|\widehat g(\varnothing)|\le M$ give
+\[
+ \sum_{i\ne j}K_{i,\{j\}}
+ \le {9\over\ln2}\bigl(2W_1(g)+W_{\ge2}(g)\bigr)
+ ={9\over\ln2}(2r_j+s_j),                                      \tag{13}
+\]
+which is (6).  Notice that no unsigned replacement of $C$ occurs.
+
+Summing (6) alone retains the sharper global weights
+\[
+ \boxed{K^{(1)}\le {1\over\ln2}
+ \left(36W_2+9\sum_{d\ge3}dW_d\right).}                         \tag{14}
+\]
+This improves the coarser $36(W_2+\sum_{d\ge3}dW_d)/\ln2$ statement.
+
+\subsection*{New universal row cut and exact unpaid leaf}
+
+The sharp root theorem $K^{(0)}\le c_0M_1$, (1), and (7) give
+\[
+ \boxed{
+ G\le D_{\ge2}+c_0M_1+
+ \sum_j\min\left\{{V_j\over2}+{r_j\over\ln2},
+ {9\over\ln2}(2r_j+s_j)\right\}.}                              \tag{15}
+\]
+This is universal, dimension independent, dummy invariant, and preserves
+all signed, normalization, and higher-row terms.
+
+Freeze $R=G-4I-3U/4$.  Tensor additivity, the degree-at-most-two theorem,
+and dimension-minimal descent show that it is sufficient to prove
+\[
+ \boxed{
+ D_{\ge2}+c_0M_1+
+ \sum_j\min\left\{{V_j\over2}+{r_j\over\ln2},
+ {9\over\ln2}(2r_j+s_j)\right\}
+ \le4I+{3\over4}U}                                               \tag{16}
+\]
+only for tensor-prime genuine Boolean functions with $R>0$ and Fourier
+degree at least three.  Combining (15) and (16) gives the frozen GU pair.
+The audited restriction induction then gives $U\le16I$, and
+$H\le2I+2U$ gives $H\le34I$.
+
+Equation (16), not universal GU, is the remaining obligation.  Relative to
+the previous high-degree-reserve leaf it replaces the global $V_1/2$ charge
+by a rowwise minimum.  In particular, the one-point-surgery family for
+which $V_1/2$ grows linearly while $Q_{\ge3}$ stays bounded no longer creates
+an unbounded singleton charge: (14) depends only on genuine level-two and
+higher spectral energy.  The signed $D_{\ge2}$ term remains unpaid and must
+not be separated from the final estimate.
+
+For that exact surgery spectrum, the certified lower bound on the former
+global singleton budget exceeds (14) already at defect parameter $d=50$:
+$13.2213475204>12.9842553680$.  The former bound then grows linearly in
+$d$, whereas (14) converges to $9/\ln2$.  Hence the new cut is strictly
+stronger on the precise family that invalidated a separate $V_1$ payment.
+
+\subsection*{Verified conditional reduction to FEI}
+
+For clarity we record the induction used above.  Suppose universally
+$G\le aI+bU$ with $b<1$, and put $C=a/(1-b)$.  Constants have
+$I=U=0$.  For a nonconstant $f$, since
+$\sum_i\Delta_iU=G$ and $\sum_i\operatorname{Inf}_i=I$, some relevant
+coordinate $i$ satisfies
+\[
+ \Delta_iU\le {aI+bU\over I}\operatorname{Inf}_i.                \tag{17}
+\]
+Induction on the two physical children gives
+\[
+ {U(f_{i,+})+U(f_{i,-})\over2}
+ \le C\bigl(I-\operatorname{Inf}_i\bigr).                        \tag{18}
+\]
+Writing $r=U/I$ and $t=\operatorname{Inf}_i/I>0$, (17)--(18) imply
+\[
+ r\le C(1-t)+(a+br)t=C+bt(r-C).
+\]
+Hence $(1-bt)(r-C)\le0$, and $r\le C$.  Thus $U\le aI/(1-b)$.
+The separately proved source inequality
+$H\le2(I-\operatorname{Var}f)+2U\le2I+2U$ then gives
+\[
+ H\le\left(2+{2a\over1-b}\right)I.                              \tag{19}
+\]
+For $(a,b)=(4,3/4)$ this is $H\le34I$.

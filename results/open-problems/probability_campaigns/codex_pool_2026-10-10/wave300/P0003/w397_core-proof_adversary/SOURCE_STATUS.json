@@ -1,0 +1,129 @@
+{
+  "worker": "w397",
+  "target_id": "P0003",
+  "date": "2026-10-10",
+  "historical_title": "Hexagonal self-avoiding-walk scaling limit",
+  "historical_ranking": {
+    "date": "2026-09-07",
+    "tier": 5,
+    "status": "attempted_un"
+  },
+  "current_openness": "UNKNOWN",
+  "current_openness_reason": "The cited primary papers formulate conjectures. Bounded public arXiv searches did not verify a resolution as of the task date; absence of search results is not proof of openness.",
+  "exact_historical_question": "Does a uniformly distributed n-step SAW from the origin of H converge weakly, when suitably rescaled, to the Schramm–Loewner random curve SLE8/3?",
+  "target_source": {
+    "author": "Geoffrey R. Grimmett",
+    "title": "Selected problems in probability theory",
+    "arxiv": "2205.07318v1",
+    "url": "https://arxiv.org/abs/2205.07318v1",
+    "locator": "Question 2.2; printed/PDF page 3",
+    "H": "hexagonal lattice",
+    "scope_gap": "Source leaves rescaling, SLE geometry/stopping rule and curve topology unspecified; no silent chordal replacement is permitted."
+  },
+  "related_chordal_subproblem": {
+    "source": "Duminil-Copin--Smirnov, arXiv:1007.0575v2, Conjecture 1, page 9",
+    "ensemble": "Variable-length walks between two prescribed boundary points weighted by x_c^length",
+    "x_c": "1/sqrt(2+sqrt(2))",
+    "remaining_gap": "Equivalence or transfer to the uniform fixed-length origin-started question has not been proved."
+  },
+  "primary_identity": {
+    "source": "arXiv:1007.0575v2, Definition 1 and Lemma 1, page 2",
+    "statement": "At x=x_c and sigma=5/8, sum_(p adjacent v)(p-v)F(p)=0",
+    "verified_against_pdf": true
+  },
+  "hardest_missing_input": "Full-target identification from the length-resolved fixed-length kernels (H_len), after fixing continuum conventions, remains unproved. H_disk is the concrete collar estimate attempted, not a proved single hardest lemma of the whole conjecture.",
+  "other_unproved_inputs": [
+    "H_len: SLE identification from length-resolved continuation kernels",
+    "Ordered-curve tightness and simplicity",
+    "Scale, continuum geometry and stopping conventions",
+    "Related chordal H_5/8 asymptotics and ensemble transfer",
+    "Genuine observable regularity suppressing circulation modes"
+  ],
+  "sources": [
+    {
+      "slug": "grimmett_2205.07318v1",
+      "url": "https://arxiv.org/pdf/2205.07318v1",
+      "sha256": "21d15bcfb892c8b19b4ca593f87ba8dfc58504de3c02aaad896ec65551aee167",
+      "pages_extracted": [
+        3
+      ],
+      "excerpt_path": "~\\brain_workers\\w397\\sources\\grimmett_2205.07318v1_excerpts.txt",
+      "bytes": 357423,
+      "status": "downloaded"
+    },
+    {
+      "slug": "dcs_1007.0575v2",
+      "url": "https://arxiv.org/pdf/1007.0575v2",
+      "sha256": "11335571f5118514b5f761ad3d750e11b5537b1390aa3444742339b86e65bb8a",
+      "pages_extracted": [
+        2,
+        9,
+        10
+      ],
+      "excerpt_path": "~\\brain_workers\\w397\\sources\\dcs_1007.0575v2_excerpts.txt",
+      "bytes": 340228,
+      "status": "downloaded"
+    }
+  ],
+  "additional_primary_sources_read": [
+    {
+      "url": "https://arxiv.org/abs/math/0204277v2",
+      "title": "On the scaling limit of planar self-avoiding walk",
+      "read_scope": "Abstract and fixed-endpoint ensemble context; web read only"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0209343",
+      "title": "Conformal restriction: the chordal case",
+      "read_scope": "Introduction and simple-curve restriction identification; web read only"
+    }
+  ],
+  "prior_work_checks": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "result": "P0003 row checked; historical label only"
+    },
+    {
+      "path": "Named probability_1000_intake_* folders, attempts_H_20260912, attempts_I_20260914 and prob1000_lean_20260908",
+      "method": "Bounded text/file searches for exact ID P0003; no corpus export or model load",
+      "result": "Historical ranking and related C0095/C0096 context located; no complete P0003 proof verified. This is not an exhaustive solved/retired audit."
+    },
+    {
+      "path": "~/math-brain-build/export/population/nodes.jsonl",
+      "locator": "claim_1f7a2a12ab2a649bf165699aa2efee71c08bca2100b4609c325b8f2d99b4f0dd",
+      "result": "Canonical served P0003 row matches the Grimmett question, and labels current status unverified."
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "result": "Related observable lane C0095 belongs to w334. This worker's finite circulation counterexample and independent collar audit do not duplicate its exact computations."
+    }
+  ],
+  "brain_scars": [
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "proof_steps_need_derived_joint_structure_2026_09_09"
+  ],
+  "independence": {
+    "saved_before_paired_proof": "INDEPENDENT.md",
+    "paired_statement_read_after_saving": true,
+    "paired_full_proof_audit": {
+      "verdict": "KEEP finite/conditional L0,L0prime,L1,L2,L3 under(C), and first-entrance injection(U); full P0003 unproved",
+      "artifact": "REVIEW_w396_proof.md",
+      "snapshot_receipt": "review_packet/w396_snapshot_receipt.json",
+      "snapshot_sha256": "70ba12644f98947e603adecc9f40b1bffb380006583c679715e2feed131d023d"
+    },
+    "independent_finite_lemma_referee": "w398",
+    "review_artifact": "review_packet/REVIEW_w397_by_w398.md",
+    "latest_referee_receipts": [
+      "review_packet/REVIEW_w397_by_w398_latest.md",
+      "review_packet/REVIEW_w396_by_w398_latest.md"
+    ]
+  },
+  "formal_check_receipt": null,
+  "landing_states": {
+    "prepared": true,
+    "submitted": true,
+    "reviewed": false,
+    "ingested": false,
+    "retrievable": false
+  },
+  "hardest_missing_input_scope": "H_disk controls a partial collar step; it does not supply H_len, tightness, or the full SLE law."
+}

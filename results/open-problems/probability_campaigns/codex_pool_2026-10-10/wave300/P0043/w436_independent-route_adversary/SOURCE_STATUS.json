@@ -1,0 +1,122 @@
+{
+  "target_id": "P0043",
+  "checked_date": "2026-10-10",
+  "exact_statement": "For Bernoulli bond percolation on every infinite connected locally finite quasi-transitive undirected graph G with p_c(G)<1, the probability of any infinite cluster at p_c(G) is zero.",
+  "assumptions": [
+    "Infinite connected locally finite undirected graph",
+    "Finitely many vertex orbits under graph automorphisms",
+    "Independent Bernoulli bond retention",
+    "p_c(G)<1"
+  ],
+  "critical_probability_definition": "Infimum of parameters p for which some infinite open cluster has positive probability; equivalently positivity of a fixed-vertex percolation probability on a connected graph for p>0.",
+  "current_openness": "UNKNOWN",
+  "status_reason": "A public primary preprint dated 2026-09-24 states the full target as Theorem 1.1. Its proof has not been independently verified in this worker packet. Its linked comparator is an admitted statement stub, not an acceptable formal proof receipt. Neither the dated ranking nor the comparator alone establishes current openness or a solution.",
+  "historical_primary": {
+    "authors": [
+      "Russell Lyons",
+      "Yuval Peres"
+    ],
+    "title": "Probability on Trees and Networks",
+    "locator": "Conjecture 8.15, printed page 285, paperback electronic version 19 August 2026",
+    "url": "https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf",
+    "excerpt": "If G is any quasi-transitive graph with p_c(G) < 1, then theta(p_c(G)) = 0.",
+    "verification": "Verified directly in the 19 August 2026 paperback PDF, page 302 (printed page 285).",
+    "local_page": "sources/lyons_peres_pb_2026.page302.txt"
+  },
+  "recent_primary_claim": {
+    "author": "OpenAI",
+    "title": "No percolation at criticality on quasi-transitive graphs",
+    "date": "2026-09-24",
+    "locator": "Theorem 1.1, PDF page 2",
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf",
+    "local_file": "sources/critical_quasitransitive_20260924.pdf",
+    "statement_verified": true,
+    "proof_independently_verified": false,
+    "novelty_claim_by_this_worker": false
+  },
+  "formal_check": {
+    "comparator_url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/CriticalPercolation.lean",
+    "actual_theorem": "OAI.CriticalPercolation.BondGraph.no_percolation_at_criticality",
+    "assumptions": [
+      "Infinite V",
+      "G.fullGraph.Connected",
+      "G.LocallyFinite",
+      "G.QuasiTransitive",
+      "G.criticalProbability<1"
+    ],
+    "conclusion": "G.law G.criticalProbability G.percolates = 0",
+    "inspected_body": "by sorry",
+    "compiled_in_this_packet": false,
+    "trusted_axioms_receipt": null,
+    "accepted_proof_receipt": false,
+    "scope_note": "The comparator may intentionally be a statement stub; this does not refute the paper or rule out another implementation."
+  },
+  "established_special_class": {
+    "source": "Tom Hutchcroft (2016), arXiv:1605.05301",
+    "url": "https://arxiv.org/abs/1605.05301",
+    "exact_scope": "Critical Bernoulli percolation has no infinite clusters on quasi-transitive graphs of exponential volume growth.",
+    "primary_abstract_verified": true
+  },
+  "prior_local_work": {
+    "ranking": "RANKING_2026-09-07.csv row 549 records P0043 as attempted_un.",
+    "alias": "C0084 has the same mathematical target in problems.jsonl row 84 and attempts.jsonl row 72.",
+    "recorded_method": "Split by volume-growth type; the historical row leaves general polynomial/intermediate cases unresolved.",
+    "attempt_directories_H_I": "Targeted exact-ID and critical-quasi-transitive searches found no relevant record.",
+    "lean_prior": "Only the annotated ranked-list match was located; no P0043 proof receipt was found.",
+    "team_O": "C0084 is assigned to w344; no board indication of an accepted complete proof.",
+    "owner_percolation_directory": "The inspected open-status header concerns p_c<p_u on nonamenable graphs, a different target; it is not evidence for P0043's status.",
+    "solved_or_retired_full_proof_found_locally": false,
+    "recorded_p0043_method": "The existing attempt card records homogeneous regular-tree critical branching-process extinction; the current method uses an inhomogeneous dyadic offspring second moment and quenched energy noninheritance.",
+    "core_lane_distinction": "w432/STATUS.md describes a critical-window uniform-integrability reduction and a distinct tree/derivative calculation. This packet uses the host-to-critical-component ray-energy obstruction."
+  },
+  "brain_orientation": {
+    "recall_command": "python -X utf8 ~/.claude/dreaming/brain.py recall \"P0043 critical percolation independent proof mistakes\" -n 3",
+    "receipt": "reports/RECALL_RECEIPT.json",
+    "result": "60-second supervised timeout; no healthy recall receipt claimed",
+    "fallback": "Targeted MEMORY.md search produced no relevant hit; packet-named proof scars were read directly.",
+    "memory_slugs": [
+      "perceptron_proof_open_gaps_fleet_2026_07_12",
+      "proof_steps_need_derived_joint_structure_2026_09_09"
+    ]
+  },
+  "own_route_status": "Self-contained boundary obstruction and original-prover audit saved; no proof of the full P0043 target.",
+  "source_input_receipts": [
+    {
+      "key": "paper2026",
+      "url": "https://raw.githubusercontent.com/openai/math/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf",
+      "file": "sources\\critical_quasitransitive_20260924.pdf",
+      "checked_at_utc": "2026-10-10T05:05:10.421501+00:00",
+      "status": "fetched",
+      "bytes": 573471,
+      "sha256": "5929ccea200fd7433c5ac519c924316ccdd56fc0208ea0cc65d5a424bb2e425f"
+    },
+    {
+      "key": "comparator",
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/CriticalPercolation.lean",
+      "file": "sources\\CriticalPercolation.lean",
+      "checked_at_utc": "2026-10-10T05:05:35.391672+00:00",
+      "status": "fetched",
+      "bytes": 2253,
+      "sha256": "cff7e946579873434b64ed4679d21ad9f07ac77958af69952d28826136b7e528"
+    },
+    {
+      "key": "doc213",
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/docs/213.md",
+      "file": "sources\\doc213.md",
+      "checked_at_utc": "2026-10-10T05:05:36.304769+00:00",
+      "status": "fetched",
+      "bytes": 1491,
+      "sha256": "c42f93f6e99657086bb87d66e4b8c84e13f501decad985dde4474b5a0bb3d728"
+    },
+    {
+      "key": "book",
+      "url": "https://rdlyons.pages.iu.edu/prbtree/book_pb.pdf",
+      "file": "sources\\lyons_peres_pb_2026.pdf",
+      "checked_at_utc": "2026-10-10T05:09:59.419595+00:00",
+      "status": "fetched",
+      "bytes": 21010205,
+      "sha256": "5c9a799b2333b58c7f8b29a608567bd1133713c934ec6cf654386dc1b01fbaf5"
+    }
+  ],
+  "existing_target_logical": "math:probability.core:open-problem-p0043-absence-of-infinite-clusters-at-critical-percolation"
+}

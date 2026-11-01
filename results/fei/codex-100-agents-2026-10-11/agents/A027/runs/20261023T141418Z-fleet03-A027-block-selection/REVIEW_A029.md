@@ -1,0 +1,3 @@
+# Scoped reconstruction of A029@4
+
+DERIVATION sections7-10: reconstructed row identity, eta physical supermartingale, T-S signed target debt and finite frontier telescope. The stated eta/2 row bound is valid. This stage strengthens that component to4eta/9 with sharp scalar infimum coefficient log2(e)-1. The supplied-reference hypothesis and physical reference ownership are essential. Review scope excludes blanket acceptance of earlier clauses, original universal suppliers, author claims about arbitrary terminal classes, and any full FEI implication. Scope is recorded in SOURCE_READS.json by source hash; no write or review receipt is sent to another agent.

@@ -1,0 +1,31 @@
+{
+  "at_utc": "2026-10-13T21:49:31.228282+00:00",
+  "verdicts": [
+    {
+      "target": "certlog.py advertised 600-term 2^-46 S bound",
+      "verdict": "ERROR",
+      "witness": "out/small_failure_certificate.json",
+      "impact": "General helper error budget must change; source sign threshold and actual census constants survive"
+    },
+    {
+      "target": "B17-KB4-CENSUS@1",
+      "verdict": "HOLDS_SOURCE_LOGIC_WITH_NO_FULL_RERUN",
+      "checked": "Actual m54 screen bound, integer ranges, attaining values, 64/32/192 orbit saturation; A074 exact equality-mask set",
+      "limitation": "A085 did not rerun bundled all-table four-metric census"
+    },
+    {
+      "target": "B17-KB5-CUTOFF@1",
+      "verdict": "ACCEPT_AT_STATED_SCOPE",
+      "checked": "All coordinates, exact coefficients/influences, K5>107/40>K4"
+    },
+    {
+      "target": "A071-EXACT-FIVEBIT-ERASURE-SELECTION@1",
+      "verdict": "HOLDS_LOOKUP_COVERAGE_AUDIT_WITH_PRIOR_REPLAY_RECONCILIATION",
+      "checked": "289 lookup upper bounds, seed lower, integer bounds, covering filters, 640 orbit, A071/A082 full replay hashes/counts",
+      "limitation": "A085 did not rerun 2^31-mask census"
+    }
+  ],
+  "A074_64_masks_match": true,
+  "A071_A082_complete_replay_receipts_match": true,
+  "own_census_rerun": false
+}

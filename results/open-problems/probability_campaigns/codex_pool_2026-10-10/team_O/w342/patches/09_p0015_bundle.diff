@@ -1,0 +1,129 @@
+--- a/~/math-brain-inbox/w342/bundle_009.json
++++ b/~/math-brain-inbox/w342/bundle_009.json
+@@ -0,0 +1,126 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w342",
++  "bundle_slug": "w342-p0015-partial-results",
++  "entries": [
++    {
++      "key": "p0015-w342-result-scope",
++      "namespace": "probability.research.attempts",
++      "logical_name": "p0015-w342-result-scope",
++      "kind": "concept",
++      "title": "Result scope and audit status for P0015",
++      "statement": "For N=4M-5 complex Gaussian measurements, the cached conjecture asks both p_M<1 and p_M->0. The explicit transverse-frame proof candidate establishes the first clause for every M>=2 and gives p_2=p_3=0. It supplies no uniform probability bound in M, so the asymptotic clause remains unresolved. No solution is reported before w346 KEEP and full proof audit; novelty is unverified.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:P0015:p0015-w342-result-scope",
++        "url": "file:///~/brain_workers/w342/proofs/P0015.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "complex-four-m-minus-five-open-noninjective-frame-set",
++      "namespace": "probability.phase-retrieval",
++      "logical_name": "complex-four-m-minus-five-open-noninjective-frame-set",
++      "kind": "theorem",
++      "title": "Open sets of noninjective complex frames at 4M-5 measurements",
++      "statement": "For every integer M>=2 and N=4M-5, a nonempty open subset of complex N-by-M measurement frames fails phaseless injectivity modulo global phase. At H_0=diag(1,-1,0,...,0), the explicit isotropic frame in the proof has a rank-two Hermitian chart Jacobian of determinant 8*64^{M-2}. The implicit function theorem preserves an indefinite rank-two kernel witness under all sufficiently small frame perturbations. Therefore a full-support complex Gaussian frame has failure probability strictly greater than zero, so p_M<1. No bound uniform in M or conclusion p_M->0 is asserted.",
++      "proof_text": "# P0015: a nonempty open set of failing frames for every M>=2\n\nStatus: complete proof of the first clause submitted to w346; no KEEP yet, and no open problem is reported solved. The asymptotic question p_M -> 0 remains unresolved here. No novelty claim.\n\nFor every M>=2, among complex frames with N=4M-5 measurement vectors there is a nonempty open set that fails phaseless injectivity modulo global phase. A Gaussian frame has positive probability of belonging to this set. Consequently p_M<1, subject to acceptance of this proof. In addition p_2=p_3=0, with deterministic obstructions for every frame.\n\n## Explicit transverse failing frame\n\nPut H_0=diag(1,-1,0,...,0). Use the following N vectors:\n\n    e_1+e_2, e_1-e_2, e_1+i e_2;\n    e_1+e_2+e_j, e_1+e_2+i e_j,\n    e_1-e_2+e_j, e_1-e_2+i e_j   for each j=3,...,M.\n\nEvery vector a has a^* H_0 a=0. They span C^M.\n\nA real-analytic chart of rank-two Hermitian matrices near H_0, with H_11 fixed at one, is\n\n    H(A,B) = [[A, B], [B^*, B^* A^{-1} B]],\n    A=[[1,z],[conjugate(z),beta]], beta real, z complex,\n    B an arbitrary complex 2-by-(M-2) matrix.\n\nHere A is invertible with one positive and one negative eigenvalue near diag(1,-1). By its zero Schur complement, H has rank exactly two and the same nonzero inertia. The chart has 3+4(M-2)=N real parameters.\n\nLet G_i(a,A,B)=a_i^* H(A,B)a_i. At H_0 the derivative of the bottom-right block with respect to chart parameters is zero. In the first three rows the derivative in (beta,Re z,Im z) is\n\n    [[1,2,0],[1,-2,0],[1,0,-2]],\n\nwhich has determinant eight. For each j, subtract the derivative of e_1+e_2 or e_1-e_2 from its corresponding extra row. The remaining four rows, in (Re B_1j,Im B_1j,Re B_2j,Im B_2j), are\n\n    [[2,0,2,0],[0,-2,0,-2],[2,0,-2,0],[0,-2,0,2]],\n\nwhich has determinant 64. The full chart derivative is therefore invertible, with determinant 8*64^{M-2} in this ordering.\n\nThe real implicit function theorem provides, for every frame sufficiently close to this explicit frame, a chart point with all N equations G_i=0. Its matrix H remains nonzero, rank two and indefinite. Its spectral decomposition is H=xx^*-yy^* with noncollinear nonzero x,y. Thus |a_i^*x|^2=|a_i^*y|^2 for every i, while x and y are not equivalent under global phase. This proves an open set of noninjective frames. The Gaussian law on C^{N M} has a strictly positive density everywhere, so this open set has positive probability. No quantitative lower bound uniform in M follows.\n\n## Deterministic low-dimensional cases\n\nIf the measurement vectors do not span C^M, a nonzero blind vector and zero give the same measurements. Otherwise a nonzero positive or negative semidefinite Hermitian matrix cannot lie in the measurement kernel: a_i^* H a_i=0 for a spanning set would force its square root, and hence H, to vanish.\n\nFor M=2,N=3, the real dimension of the Hermitian space is four, so the kernel contains a nonzero matrix. It is indefinite and rank two, giving the ambiguity above.\n\nFor M=3,N=7, the Hermitian space has real dimension nine, so the kernel contains linearly independent H,K. Along the nonzero circle cos(t)H+sin(t)K, the determinant is continuous and changes sign under t -> t+pi, being homogeneous of odd degree three. The intermediate value theorem gives a nonzero singular kernel matrix. It cannot be semidefinite; hence it has rank two and one eigenvalue of each sign. This gives a phaseless ambiguity for every spanning frame too.\n\nSource and continuation: P0015-A001 established M=2 only. This extends it to M=3 and proves the positive-probability failure clause by an explicit invertible Jacobian for all M. The cached Randomstrasse conjecture's separate asymptotic clause is untouched.\n",
++      "assumptions": [
++        "M>=2 integer",
++        "Complex Gaussian law has positive density everywhere"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:P0015:complex-four-m-minus-five-open-noninjective-frame-set",
++        "url": "file:///~/brain_workers/w342/proofs/P0015.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "complex-three-and-seven-measurement-deterministic-noninjectivity",
++      "namespace": "probability.phase-retrieval",
++      "logical_name": "complex-three-and-seven-measurement-deterministic-noninjectivity",
++      "kind": "lemma",
++      "title": "Deterministic noninjectivity in complex dimensions two and three",
++      "statement": "Every complex frame with M=2,N=3 or M=3,N=7 fails phaseless injectivity modulo global phase. If the vectors span, a nonzero Hermitian kernel matrix cannot be semidefinite. In dimension two a nonzero kernel matrix exists and has rank two. In dimension three a two-dimensional kernel contains a nonzero singular matrix by the odd cubic determinant and the intermediate value theorem; this matrix is indefinite of rank two. If the vectors do not span, a nonzero blind vector already gives failure. Thus p_2=p_3=0.",
++      "proof_text": "# P0015: a nonempty open set of failing frames for every M>=2\n\nStatus: complete proof of the first clause submitted to w346; no KEEP yet, and no open problem is reported solved. The asymptotic question p_M -> 0 remains unresolved here. No novelty claim.\n\nFor every M>=2, among complex frames with N=4M-5 measurement vectors there is a nonempty open set that fails phaseless injectivity modulo global phase. A Gaussian frame has positive probability of belonging to this set. Consequently p_M<1, subject to acceptance of this proof. In addition p_2=p_3=0, with deterministic obstructions for every frame.\n\n## Explicit transverse failing frame\n\nPut H_0=diag(1,-1,0,...,0). Use the following N vectors:\n\n    e_1+e_2, e_1-e_2, e_1+i e_2;\n    e_1+e_2+e_j, e_1+e_2+i e_j,\n    e_1-e_2+e_j, e_1-e_2+i e_j   for each j=3,...,M.\n\nEvery vector a has a^* H_0 a=0. They span C^M.\n\nA real-analytic chart of rank-two Hermitian matrices near H_0, with H_11 fixed at one, is\n\n    H(A,B) = [[A, B], [B^*, B^* A^{-1} B]],\n    A=[[1,z],[conjugate(z),beta]], beta real, z complex,\n    B an arbitrary complex 2-by-(M-2) matrix.\n\nHere A is invertible with one positive and one negative eigenvalue near diag(1,-1). By its zero Schur complement, H has rank exactly two and the same nonzero inertia. The chart has 3+4(M-2)=N real parameters.\n\nLet G_i(a,A,B)=a_i^* H(A,B)a_i. At H_0 the derivative of the bottom-right block with respect to chart parameters is zero. In the first three rows the derivative in (beta,Re z,Im z) is\n\n    [[1,2,0],[1,-2,0],[1,0,-2]],\n\nwhich has determinant eight. For each j, subtract the derivative of e_1+e_2 or e_1-e_2 from its corresponding extra row. The remaining four rows, in (Re B_1j,Im B_1j,Re B_2j,Im B_2j), are\n\n    [[2,0,2,0],[0,-2,0,-2],[2,0,-2,0],[0,-2,0,2]],\n\nwhich has determinant 64. The full chart derivative is therefore invertible, with determinant 8*64^{M-2} in this ordering.\n\nThe real implicit function theorem provides, for every frame sufficiently close to this explicit frame, a chart point with all N equations G_i=0. Its matrix H remains nonzero, rank two and indefinite. Its spectral decomposition is H=xx^*-yy^* with noncollinear nonzero x,y. Thus |a_i^*x|^2=|a_i^*y|^2 for every i, while x and y are not equivalent under global phase. This proves an open set of noninjective frames. The Gaussian law on C^{N M} has a strictly positive density everywhere, so this open set has positive probability. No quantitative lower bound uniform in M follows.\n\n## Deterministic low-dimensional cases\n\nIf the measurement vectors do not span C^M, a nonzero blind vector and zero give the same measurements. Otherwise a nonzero positive or negative semidefinite Hermitian matrix cannot lie in the measurement kernel: a_i^* H a_i=0 for a spanning set would force its square root, and hence H, to vanish.\n\nFor M=2,N=3, the real dimension of the Hermitian space is four, so the kernel contains a nonzero matrix. It is indefinite and rank two, giving the ambiguity above.\n\nFor M=3,N=7, the Hermitian space has real dimension nine, so the kernel contains linearly independent H,K. Along the nonzero circle cos(t)H+sin(t)K, the determinant is continuous and changes sign under t -> t+pi, being homogeneous of odd degree three. The intermediate value theorem gives a nonzero singular kernel matrix. It cannot be semidefinite; hence it has rank two and one eigenvalue of each sign. This gives a phaseless ambiguity for every spanning frame too.\n\nSource and continuation: P0015-A001 established M=2 only. This extends it to M=3 and proves the positive-probability failure clause by an explicit invertible Jacobian for all M. The cached Randomstrasse conjecture's separate asymptotic clause is untouched.\n",
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:P0015:complex-three-and-seven-measurement-deterministic-noninjectivity",
++        "url": "file:///~/brain_workers/w342/proofs/P0015.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0015-w342-validation-evidence",
++      "namespace": "probability.research.attempts",
++      "logical_name": "p0015-w342-validation-evidence",
++      "kind": "concept",
++      "title": "Finite validation evidence for P0015",
++      "statement": "Measured validation evidence for P0015: {\"command\": \"python -X utf8 verify_remaining.py\", \"dimensions\": [{\"M\": 2, \"N\": 3, \"jacobian_determinant\": \"8\"}, {\"M\": 3, \"N\": 7, \"jacobian_determinant\": \"512\"}, {\"M\": 4, \"N\": 11, \"jacobian_determinant\": \"32768\"}, {\"M\": 5, \"N\": 15, \"jacobian_determinant\": \"2097152\"}, {\"M\": 6, \"N\": 19, \"jacobian_determinant\": \"134217728\"}, {\"M\": 7, \"N\": 23, \"jacobian_determinant\": \"8589934592\"}, {\"M\": 8, \"N\": 27, \"jacobian_determinant\": \"549755813888\"}], \"exact_jacobian_checks\": 7, \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"scope\": \"exact derivatives verify transversality; the IFT and probability conclusion are in the written proof\", \"seconds\": 0.557, \"violations\": 0}. These finite checks support the written proof and do not replace its independent audit or establish the full open problem.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:P0015:p0015-w342-validation-evidence",
++        "url": "file:///~/brain_workers/w342/p0015_measurements.json",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "p0015-w342-result-scope",
++      "kind": "cites",
++      "rationale": "FROM \"For N=4M-5 complex Gaussian measurements, the cached conjecture asks both p_M<1 and p_M->0. The explicit transverse-frame proof candidate establishes the first clause for every M>=2 and gives p_2=p_3=0. It supplies no uniform probability bound in M, so the\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Let p_M be the probability that a complex Gaussian (4M-5)-by-M matrix gives an injective phaseless measurement map modulo global\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.core:open-problem-p0015-random-complex-phase-retrieval-injectivity-at-4m-5-measurements"
++    },
++    {
++      "from_key": "complex-four-m-minus-five-open-noninjective-frame-set",
++      "kind": "cites",
++      "rationale": "FROM \"For every integer M>=2 and N=4M-5, a nonempty open subset of complex N-by-M measurement frames fails phaseless injectivity modulo global phase. At H_0=diag(1,-1,0,...,0), the explicit isotropic frame in the proof has a rank-two Hermitian chart Jacobian of\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Let p_M be the probability that a complex Gaussian (4M-5)-by-M matrix gives an injective phaseless measurement map modulo global\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.core:open-problem-p0015-random-complex-phase-retrieval-injectivity-at-4m-5-measurements"
++    },
++    {
++      "from_key": "complex-four-m-minus-five-open-noninjective-frame-set",
++      "kind": "cites",
++      "rationale": "FROM \"For every integer M>=2 and N=4M-5, a nonempty open subset of complex N-by-M measurement frames fails phaseless injectivity modulo global phase. At H_0=diag(1,-1,0,...,0), the explicit isotropic frame in the proof has a rank-two Hermitian chart Jacobian of\"; TO \"For N=4M-5 complex Gaussian measurements, the cached conjecture asks both p_M<1 and p_M->0. The explicit transverse-frame proof candidate establishes the first clause for every M>=2 and gives p_2=p_3=0. It supplies no uniform probability bound in M, so the\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "p0015-w342-result-scope"
++    },
++    {
++      "from_key": "complex-three-and-seven-measurement-deterministic-noninjectivity",
++      "kind": "cites",
++      "rationale": "FROM \"Every complex frame with M=2,N=3 or M=3,N=7 fails phaseless injectivity modulo global phase. If the vectors span, a nonzero Hermitian kernel matrix cannot be semidefinite. In dimension two a nonzero kernel matrix exists and has rank two. In dimension three a\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Let p_M be the probability that a complex Gaussian (4M-5)-by-M matrix gives an injective phaseless measurement map modulo global\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.core:open-problem-p0015-random-complex-phase-retrieval-injectivity-at-4m-5-measurements"
++    },
++    {
++      "from_key": "complex-three-and-seven-measurement-deterministic-noninjectivity",
++      "kind": "cites",
++      "rationale": "FROM \"Every complex frame with M=2,N=3 or M=3,N=7 fails phaseless injectivity modulo global phase. If the vectors span, a nonzero Hermitian kernel matrix cannot be semidefinite. In dimension two a nonzero kernel matrix exists and has rank two. In dimension three a\"; TO \"For N=4M-5 complex Gaussian measurements, the cached conjecture asks both p_M<1 and p_M->0. The explicit transverse-frame proof candidate establishes the first clause for every M>=2 and gives p_2=p_3=0. It supplies no uniform probability bound in M, so the\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "p0015-w342-result-scope"
++    },
++    {
++      "from_key": "p0015-w342-validation-evidence",
++      "kind": "cites",
++      "rationale": "FROM \"Measured validation evidence for P0015: {\"command\": \"python -X utf8 verify_remaining.py\", \"dimensions\": [{\"M\": 2, \"N\": 3, \"jacobian_determinant\": \"8\"}, {\"M\": 3, \"N\": 7, \"jacobian_determinant\": \"512\"}, {\"M\": 4, \"N\": 11, \"jacobian_determinant\": \"32768\"}, {\"M\":\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Let p_M be the probability that a complex Gaussian (4M-5)-by-M matrix gives an injective phaseless measurement map modulo global\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.core:open-problem-p0015-random-complex-phase-retrieval-injectivity-at-4m-5-measurements"
++    },
++    {
++      "from_key": "p0015-w342-validation-evidence",
++      "kind": "cites",
++      "rationale": "FROM \"Measured validation evidence for P0015: {\"command\": \"python -X utf8 verify_remaining.py\", \"dimensions\": [{\"M\": 2, \"N\": 3, \"jacobian_determinant\": \"8\"}, {\"M\": 3, \"N\": 7, \"jacobian_determinant\": \"512\"}, {\"M\": 4, \"N\": 11, \"jacobian_determinant\": \"32768\"}, {\"M\":\"; TO \"For N=4M-5 complex Gaussian measurements, the cached conjecture asks both p_M<1 and p_M->0. The explicit transverse-frame proof candidate establishes the first clause for every M>=2 and gives p_2=p_3=0. It supplies no uniform probability bound in M, so the\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "p0015-w342-result-scope"
++    }
++  ]
++}

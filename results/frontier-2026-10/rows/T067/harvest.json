@@ -1,0 +1,132 @@
+{
+ "routes": [],
+ "claims": [
+  {
+   "id": "T067-LIT-001",
+   "version": "1",
+   "folder": "worker R",
+   "statement": "Known literature finding, not new: Mossel-Sly-Sohn (2025) Theorem 1.12 proves q=3,4 Kesten-Stigum tightness including nonreconstruction at equality on sufficiently large-mean Galton-Watson trees under Assumptions 1.10 and 1.11; the supplied list omits this progress.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "literature"
+  },
+  {
+   "id": "T067-CHI-001",
+   "version": "1",
+   "folder": "worker R",
+   "statement": "Auxiliary-route counterexample, not a solution of T067: universal second-moment contraction x_out<=d lambda^2 x_in is false over color-symmetric Bayes-consistent posterior laws, already for q=3,d=2,lambda=7/10; q=4 has such failures arbitrarily near the uniform posterior at positive KS criticality.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "special"
+  },
+  {
+   "id": "T067-MOM-001",
+   "version": "1",
+   "folder": "worker R",
+   "statement": "Auxiliary finite obstruction: for q=3,d=2,lambda=2/3, two symmetric Bayes-consistent input posterior laws have identical second moment 1/6 but next moments 46/297 and 40/297; no universal exact scalar closure using only this moment exists.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "route-failure"
+  },
+  {
+   "id": "T067-KL-001",
+   "version": "1",
+   "folder": "worker R",
+   "statement": "Known-type auxiliary-route limitation: for every q>=3 and 0<lambda<1, the uniform-prior KL contraction coefficient of the ferromagnetic Potts channel is strictly greater than lambda^2, so a one-edge scalar KL criterion cannot reach regular-tree KS criticality.",
+   "status": "proof (unaudited)",
+   "audit": "",
+   "kind": "route-failure"
+  },
+  {
+   "id": "T067-SRC-DIFF-001",
+   "version": "1",
+   "folder": "worker R",
+   "statement": "Source transcription finding: in MSS arXiv:2212.03362v2, the coefficients of (E binom(gamma,2))^2 lambda^6 x_n^3 in equations (15) and (105) differ by a factor four; equation (106) agrees algebraically with (105).",
+   "status": "proof (unaudited)",
+   "audit": "",
+   "kind": "other"
+  },
+  {
+   "id": "T067-CENSOR-001",
+   "version": "1",
+   "folder": "worker R",
+   "statement": "Auxiliary route obstruction: the universal second-moment inequality x_out<=2lambda^2*x_in fails even for posterior laws obtained by deterministic censoring of grandchildren in a finite q=3 binary ferromagnetic Potts tree, with every edge lambda=2/3. Here x_in=16/405 and the exact positive excess is 10240/55643841.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "route-failure"
+  },
+  {
+   "id": "T067-BP-UPPER-001",
+   "version": "3",
+   "folder": "worker R",
+   "statement": "Exact computer-assisted bounds (novelty unverified): for uniform-root q=3 Potts broadcasting on the regular binary tree, 0<lambda<=707107/1000000 gives x_n<27/1000 and Bayes accuracy<7/15 for n>=100; for n>=500 it gives x_n<=57830850920489/5066549580791808<3/250 and accuracy<19/45. Includes positive KS equality.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "other"
+  },
+  {
+   "id": "T067-GRID-ERROR-001",
+   "version": "1",
+   "folder": "worker R",
+   "statement": "Auxiliary quantization fact: the q=3 symmetric barycentric N-grid refinement increases one-step posterior second moment by exactly sum_i r_i(1-r_i)/N^2<=2/(3N^2); rounding s orbit masses down to quantum 2^-B and replacing discarded mass by full revelation adds at most (2/3)s2^-B. This is not an infinite-step error bound.",
+   "status": "proof (unaudited)",
+   "audit": "",
+   "kind": "other"
+  },
+  {
+   "id": "T067-CUBIC-CAND-001",
+   "version": "1",
+   "folder": "worker R",
+   "statement": "Unproved candidate: for symmetric Bayes-consistent 3-state posterior laws with nonnegative averaged cubic moment, at binary-tree 0<lambda<=1/sqrt(2), the BP update preserves cubic nonnegativity and has x_out<=2lambda^2*x_in. Critical zero-limit would require a strict drift estimate beyond this candidate.",
+   "status": "conjecture",
+   "audit": "",
+   "kind": "other"
+  },
+  {
+   "id": "T067-FIXEDPOINT-001",
+   "version": "1",
+   "folder": "worker R",
+   "statement": "Standard reduction, no novelty claim: for uniform-root q-state Potts broadcasting on a regular d-ary tree with q,d>=2 and 0<lambda<1, the fully observed level posterior law converges to a symmetric uniform-mean BP fixed point. A certified tail second-moment upper bound bounds this fixed point; a valid local exclusion radius would imply nonreconstruction.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "bound"
+  },
+  {
+   "id": "T067-LOCAL-001",
+   "version": "2",
+   "folder": "worker R",
+   "statement": "Proposed strengthened local theorem: any symmetric uniform-mean q=3 binary Potts BP fixed point with 0<lambda<=1/sqrt(2) and x=E|p-u|^2<=23/2000 is uniform. Uses the new exact fourth-moment certificate and explicit third/fourth moment identities.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "other"
+  },
+  {
+   "id": "T067-FOURTH-001",
+   "version": "1",
+   "folder": "worker R",
+   "statement": "Proposed exact computer-assisted auxiliary theorem: for every fully symmetric uniform-mean q=3 posterior law and binary Potts BP with 0<lambda<=1/sqrt(2), V_out<=[96059601/192080000]V_in+(3/2)m_in^2, where m=E|3lambda(p-u)|^2 and V=E|3lambda(p-u)|^4. All 233289 Bernstein coefficients of the explicitly derived all-domain integer polynomial are nonnegative.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "other"
+  },
+  {
+   "id": "T067-BINARY-001",
+   "version": "1",
+   "folder": "worker R",
+   "statement": "Proposed computer-assisted special case, novelty unverified: the uniform-root 3-state ferromagnetic Potts broadcast on the regular binary tree is nonreconstructible for 0<lambda<=1/sqrt(2), including equality. Together with the known KS implication above equality this would give q=3,d=2 tightness.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "special"
+  },
+  {
+   "id": "T067-RATE-001",
+   "version": "1",
+   "folder": "worker R",
+   "statement": "Conditional critical decay, no novelty assertion: at q=3,d=2,lambda=1/sqrt(2), if the canonical posterior second moment x_n tends to zero, then the exact global fourth-moment inequality and tensor identities imply lim n*x_n=8/3. T067-BINARY-001 supplies the now reviewer-passed nonreconstruction supposition, with second audit pending.",
+   "status": "proof (unaudited)",
+   "audit": "",
+   "kind": "other"
+  }
+ ],
+ "at": "2026-10-15T00:34:31+03:00"
+}

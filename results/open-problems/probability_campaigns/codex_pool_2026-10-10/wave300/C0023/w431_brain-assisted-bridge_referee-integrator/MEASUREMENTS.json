@@ -1,0 +1,73 @@
+{
+  "command": "python -X utf8 verify_bridge.py",
+  "checks": 303,
+  "elapsed_seconds": 0.04792569996789098,
+  "fresh_compute_gate": {
+    "checked_at": "2026-10-10T07:12:33.416350+00:00",
+    "policy": "Existing compute_sense permits short light work while forbidding model-heavy/GPU launches; deterministic arithmetic only.",
+    "cpu_percent": 80.8,
+    "available_memory_mb": 5222,
+    "workers": 1,
+    "uses_gpu": false,
+    "model_loads": 0,
+    "bounded_work": "12 small window geometries; 256 truth tables on three bits; exact integer controls."
+  },
+  "counterexamples": [
+    {
+      "d": 3,
+      "L": 1000,
+      "good_density_exact": "7988005999/8036030007",
+      "good_density": 0.9940239138034368,
+      "range": 2002,
+      "all_components_finite": true,
+      "component_size_upper_bound": 8012006001,
+      "unguarded_false_positive": true,
+      "guard_status": "ABSTAIN",
+      "criterion_exponent": 24072054
+    },
+    {
+      "d": 3,
+      "L": 10000,
+      "good_density_exact": "7998800059999/8003600300007",
+      "good_density": 0.9994002399135304,
+      "range": 20002,
+      "all_components_finite": true,
+      "component_size_upper_bound": 8001200060001,
+      "unguarded_false_positive": true,
+      "guard_status": "ABSTAIN",
+      "criterion_exponent": 2400720054
+    },
+    {
+      "d": 3,
+      "L": 100000,
+      "good_density_exact": "7999880000599999/8000360003000007",
+      "good_density": 0.9999400023999135,
+      "range": 200002,
+      "all_components_finite": true,
+      "component_size_upper_bound": 8000120000600001,
+      "unguarded_false_positive": true,
+      "guard_status": "ABSTAIN",
+      "criterion_exponent": 240007200054
+    }
+  ],
+  "positive_controls": [
+    {
+      "r": 0,
+      "bad_bound": "1/128",
+      "status": "SUFFICIENT_CONDITIONAL_BRIDGE"
+    },
+    {
+      "r": 1,
+      "bad_bound": "1/33554432",
+      "status": "SUFFICIENT_CONDITIONAL_BRIDGE"
+    },
+    {
+      "r": 2,
+      "bad_bound": "1/36028797018963968",
+      "status": "SUFFICIENT_CONDITIONAL_BRIDGE"
+    }
+  ],
+  "unguarded_false_certificates": 3,
+  "guarded_false_certificates": 0,
+  "scope": "Constructed deterministic reasoning controls, not a live retrieval benchmark, general recall gain, or proof of C0023."
+}

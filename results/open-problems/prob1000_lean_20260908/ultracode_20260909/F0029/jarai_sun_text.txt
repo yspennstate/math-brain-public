@@ -1,0 +1,897 @@
+       
+  
+Citation for published version:
+Jarai, A & Sun, M 2019, 'Toppling and height probabilities in sandpiles', Journal of Statistical Mechanics-Theory
+and Experiment, vol. 2019, 113204.
+Publication date:
+2019
+Document Version
+Peer reviewed version
+Link to publication
+This is an author-created, un-copyedited version of an article published in Journal of Statistical Mechanics:
+Theory and Experiment
+. IOP Publishing Ltd is not responsible for any errors or omissions in this version of the manuscript or any
+version derived from it. The Version of Record is available online at
+https://iopscience.iop.org/article/10.1088/1742-5468/ab2ccb/meta
+University of Bath
+Alternative formats
+If you require this document in an alternative format, please contact:
+openaccess@bath.ac.uk
+General rights
+Copyright and moral rights for the publications made accessible in the public portal are retained by the authors and/or other copyright owners
+and it is a condition of accessing publications that users recognise and abide by the legal requirements associated with these rights.
+Take down policy
+If you believe that this document breaches copyright please contact us providing details, and we will remove access to the work immediately
+and investigate your claim.
+Download date: 09. Sep. 2026
+Toppling and height probabilities in sandpiles
+Antal A. J´ arai Minwei Sun ∗
+13th June 2019
+Abstract
+We study Abelian sandpiles numerically, using exact samplin g. Our method uses a
+combination of Wilson’s algorithm to generate uniformly distri buted spanning trees, and
+Majumdar and Dhar’s bijection with sandpiles. We study the pro bability of topplings
+of individual vertices in avalanches initiated at the centre o f large cubic lattices in
+dimensions d = 2 , 3 and 5. Based on these, we estimate the values of the toppling
+probability exponent in the inﬁnite volume limit in dimensio ns d = 2 , 3, and ﬁnd good
+agreement with theoretical results on the mean-ﬁeld value of th e exponent in d ≥ 5. We
+also study the distribution of the number of waves in 2D avalan ches. Our simulation
+method, combined with a variance reduction idea, lends itself well to studying some
+problems even in very high dimensions. We illustrate this with a n estimation of the
+single site height probability distribution in d = 32, and compare this to the asymptotic
+behaviour as d → ∞ .
+JSTAT Keywords: Sandpile models, Avalanches, Critical exponents, Numeric al simulations,
+Self-organized criticality
+Additional Keywords: Wave, Uniform spanning tree, Wilson’s algorithm, Exact samp ling,
+Burning algorithm, Avalanche cluster size, Toppling proba bility
+1 Introduction
+1.1 Abelian sandpile model
+We start with the deﬁnition of and some fundamental facts abo ut the Abelian sandpile model
+on a ﬁnite graph G. Sandpiles are a lattice model of self-organized criticali ty, introduced by
+Bak, Tang and Wiesenfeld [
+1], and have been studied in both physics and mathematics. We
+refer to [ 2] for an overview. After discovering the Abelian group struc ture of addition operators
+in this model, Dhar [ 3] generalized it to arbitrary ﬁnite graphs and called it the A belian sandpile
+model. He studied the self-organized critical nature of the stationary measure and gave an
+algorithmic characterization of recurrent conﬁgurations , the so-called “burning algorithm”.
+This algorithm gives a one-to-one correspondence between t he recurrent conﬁgurations of the
+Abelian sandpile models and rooted spanning trees [ 4]. This bijection is essential for our
+numerical simulations.
+∗Department of Mathematical Sciences, University of Bath, C laverton Down, Bath BA2 7AY, United
+Kingdom
+Email: A.Jarai@bath.ac.uk, m.sun@bath.ac.uk
+1
+1.1.1 Basic properties
+Let G = ( V ∪ { ρ}, E) be a ﬁnite, connected graph, where we allow multiple edges be tween
+vertices. V is a ﬁnite set of vertices and the distinguished vertex ρ is called the sink. E is
+the set of edges and loop-edges are excluded for simplicity. Let degG(x) be the degree of the
+vertex x in the graph G and let x ∼ y denote that vertices x and y are connected by at least
+one edge.
+Two examples we will be concerned with are as follows. Let V ⊂ Zd be a ﬁnite d-
+dimensional box: V = VL = [ − L, L]d ∩ Zd. All vertices in V c = Zd \V are identiﬁed to the
+sink, ρ. All loop-edges created at ρ are removed. This is called the wired graph induced by V .
+A second example is obtained, if we take V = VL \ {s}, where s = (L, . . . , L), with periodic
+boundary conditions. This is called the torus graph .
+A sandpile is a collection of indistinguishable grains on the vertices in V . A sandpile is
+speciﬁed by a map η : V → { 0, 1, 2, . . .}. We say that η is stable at x ∈ V , if η(x) < degG(x)
+(the latter being = 2 d when V ⊂ Zd). We say that η is stable, if η(x) < degG(x), for all
+x ∈ V . Sometimes, especially in physics, a sandpile is speciﬁed b y a map η∗ : V → { 1, 2, . . .}.
+A stable sandpile is then deﬁned as having one of the values 1, 2, . . . ,degG(x) at all x. This
+deﬁnes the same model after a trivial shift of coordinates.
+If η is unstable (i.e. η(x) ≥ degG(x) for some x ∈ V ), x is allowed to topple which means
+that x passes one grain along each edge to its neighbours. When the v ertex x topples, the
+grains are re-distributed as follows:
+η(x) → η(x) − degG(x);
+η(y) → η(y) + nxy, y ∈ V, y ̸= x.
+where nxy is the number of edges between x and y. In the examples we are concerned with,
+we have nxy = 1 for all x, y ∈ V . Grains arriving at ρ are lost, so we do not keep track of
+them. Toppling a vertex may generate further unstable verti ces. Given a sandpile ξ on V, we
+deﬁne its stabilization
+ξ◦ ∈ ΩG := {all stable sandpiles on V } =
+∏
+x∈ V
+{0, 1, ..., degG(x) − 1}
+by carrying out all possible topplings, in any order, until a stable sandpile is reached. It was
+shown by Dhar [
+3] that the map ξ ↦→ ξ◦ is well-deﬁned, that is, the order of topplings does
+not matter.
+We now deﬁne the sandpile Markov chain with inital state η0. The state space is the set
+of stable sandpiles, ΩG. Fix a positive probability distribution p on V , i.e. ∑
+x∈ V p(x) = 1
+and p(x) > 0 for all x ∈ V . Starting at η ∈ ΩG, choose a random vertex X ∈ V according to
+p, add one grain at X and stabilize. The one step transition of the Markov chain mo ves from
+η to (η + 1X)◦. Considering the sandpile Markov chain on a ﬁnite connect gr aph G, there is
+only one recurrent class [ 3]. We denote the set of recurrent sandpiles by RG.
+1.2 Toppling probability exponent
+Consider the stationary sandpile in the box VL = [ − L, L]d ∩ Zd with Dirichlet boundary
+conditions. Let us add a grain at the origin o, and carry out the resulting avalanche. We are
+going to abbreviate the event ‘when a grain is added at o, vertex x topples in the resulting
+2
+avalanche’ to simply ‘ x topples’. Thus let PL[x topples] denote the probability that x topples
+in the avalanche initiated at o in volume VL, and let P[x topples] = lim L→∞ PL[x topples]
+be the inﬁnite volume limit of this probability.
+It was shown by Dhar [ 3], [2] that in the stationary sandpile in the box VL = [− L, L]d ∩ Zd,
+the expected number of topplings at x, when a grain is added at o is given by the Green function
+GL(o, x) (the inverse of the graph Laplacian). In dimensions d ≥ 3, this has inﬁnite volume
+limit
+lim
+L→∞
+GL(o, x) = G(o, x) ∼ cd|x|2− d, as |x| → ∞ ,
+where we write |x| for the Euclidean distance of x from o. Due to Markov’s inequality,
+we have P[x topples] ≤ G(o, x). It was shown in [ 5] that in d ≥ 5 it also holds that
+P[x topples] ≥ c G(o, x) with some constant c = c(d) > 0, and hence in these dimensions
+P[x topples] ≈ | x|2− d. (1.1)
+In analogy with other statistical physics models at critica lity (such as percolation at the critical
+threshold), the authors of [ 5] conjecture that in all dimensions d ≥ 2 one has the behaviour
+P[x topples] ≈ | x|2− d− η (1.2)
+with a critical exponent η = η(d) ≥ 0. Then (1.1) shows that the mean-ﬁeld value of η equals
+0 (d > 4), and one expects that η(d) > 0 in dimensions d = 2 , 3, and that η(4) = 0 with a
+logarithmic correction.
+In this paper we carry out a numerical study of the conjecture (1.2) in dimensions d = 2, 3,
+and also study the behaviour of PL[x topples]|x|d− 2 in d = 5 . We also consider the scaling
+limit of the toppling probability PL[x topples] in ﬁnite volumes when |x|/L is bounded away
+from 0.
+1.3 Related work
+To the best of our knowledge, individual toppling probabili ties were not studied numerically
+previously in the literature. Manna [
+6] and Grassberger and Manna [ 7] studied average ‘cluster
+sizes’ related to our ﬁndings. In order to explain what these are, let
+tL(x; z) = PL[x topples if a grain is added at z],
+where PL refers to probabilities in the stationary state in volume [− L, L]d, with Dirichlet
+boundary conditions. Let us write n(z, x) for the random variable that is the number of
+topplings at x, given a grain is added at z. The above papers considered the average number
+of topplings in an avalanche initiated at a randomly chosen s ite:
+⟨s⟩ = 1
+|VL|
+∑
+z∈ VL
+EL[
+∑
+x∈ VL
+n(z, x)] = 1
+|VL|
+∑
+z∈ VL
+∑
+x∈ VL
+GL(z, x) ∼ c(d)L2, as L → ∞ . (1.3)
+They also considered the average number of distinct sites to ppled in such avalanches. This is
+given by an average over the vertex z ∈ VL where the avalanche is initiated of the expected
+number of x ∈ VL that topple at least once, that is, where n(z, x) ≥ 1. Thus
+⟨sdistinct⟩ = 1
+|VL|
+∑
+z∈ VL
+EL[
+∑
+x∈ VL
+1n(z,x)≥ 1] = 1
+|VL|
+∑
+z∈ VL
+∑
+x∈ VL
+tL(x; z). (1.4)
+3
+4 5 6 7 8 9
+6 8 10 12 14 16 18
+Average number of topplings
+log(L)
+log <s>0 and log <sdistinct>0
+Figure 1: Log-log plot of average cluster size ⟨s⟩o (black) and average number of distinct
+sites toppled ⟨sdistinct⟩o (red) versus lattice size L with Dirichlet boundary conditions in d = 2,
+when considering L = 2 n with 6 ≤ n ≤ 13 with sample sizes 107, 107, 107, 107, 107, 2.5 × 106
+and 6 × 105,6 × 105 respectively. The slope of the black line is 2, and the slope of the red line
+is 1.58.
+In [ 7] it was found that this scales as ≈ L1.64 in d = 2 . In order to conﬁrm that our
+methods give results consistent with earlier work, we check ed both of the exponents (1.3)
+and (1.4) with our simulation methods for lattice sizes compa rable to those in [ 6] and [ 7]
+(L = 64, 128, 256, 512), and found very close agreement with the above exponents. A nother
+test we performed was to check that our methods yield the exac tly known height probabilities
+in 2D [ 8].
+In the present paper we restrict to avalanches started at the origin o, which yield the
+somewhat modiﬁed average cluster sizes:
+⟨s⟩o = EL[
+∑
+x∈ VL
+n(o, x)] =
+∑
+x∈ VL
+GL(o, x) ∼ c′(d)L2, as L → ∞ . (1.5)
+and
+⟨sdistinct⟩o = EL[
+∑
+x∈ VL
+1n(o,x)≥ 1] =
+∑
+x∈ VL
+tL(x; o). (1.6)
+For the latter, we ﬁnd an exponent somewhat diﬀerent from tha t of (1.4), namely ≈ L1.58 in
+d = 2, when considering lattice sizes L = 2 n, 6 ≤ n ≤ 13; see Figure 1.
+The diﬀerence could be due to large avalanches started close r to the boundary having
+signiﬁcantly smaller size than those started at the center o f the box.
+In 3D, Grassberger and Manna [ 7] found the behaviour of (1.4) to be very close to L2,
+and suggest that the diﬀerence from (1.3) could be only a logar ithmic correction. When we
+restricted to avalanches started at o, we found that (1.6) also diﬀers very little from (1.5);
+see Figure 2. However, our analysis of individual toppling p robabilities in 3D suggest that
+4
+3.5 4.0 4.5 5.0 5.5
+0.20 0.21 0.22 0.23 0.24 0.25
+Average number of topplings in 3D
+log(L)
+<s>0 and <sdistinct>0 rescaled by L2
+Figure 2: Average cluster size ⟨s⟩o and average number of distinct sites toppled ⟨sdistinct⟩o
+rescaled by L2 versus log L with Dirichlet boundary conditions in d = 3 . We considered the
+values L = 32, 64, 128, 256 (with sample sizes 107, 107, 4 × 106 and 4 × 105).
+η(3) > 0 (≈ 0.09). The reason why this positive exponent does not aﬀect the av erage
+number of topplings could be that the averages are dominated by very large avalanches.
+We also collected data on the number of waves in 2D avalanches initiated at the origin.
+Let wL(n) be the probability of observing n waves in a box of radius L. It has been pointed
+out in [ 9] that although the expected scaling (in the limit L → ∞ ) is w(n) ∼ n− 2, the data
+is better ﬁt with an exponent larger than 2 (about 2.1 in [ 9]). In Section 3.2, we present
+data restricting to avalanches initiated at the middle of th e box, and see that there is better
+agreement with the theoretically predicted exponent 2 [4, Eqn. (5.11)].
+Grassberger and Manna [ 7] observed that convergence to stationarity is faster, espe cially
+in high dimensions, starting from a uniformly random sandpi le compared to an empty sandpile.
+As a partial explanation, in the present paper we state an asy mptotic formula for the single
+site marginals in stationarity (and in the inﬁnite volume li mit) that approaches a uniform
+distribution as d → ∞ . We give the exact asymptotic formula for the probabilities of small
+heights given in terms of the Poisson distribution. Our asym ptotic formula, whose proof will be
+published elsewhere, coincides with the asymptotics of the exact results of Dhar and Majumdar
+[10] on regular trees of high degree (see formula (8.2) in [ 10]).
+2 Simulation methods
+2.1 Overview
+We use an exact sampling method. By this we mean that we use an a lgorithm that, given
+perfectly random numbers as input, will output a recurrent s andpile conﬁguration that is
+exactly uniformly distributed (which is the steady-state of the mod el). First, we generate a
+5
+uniformly distributed spanning tree (or part thereof) on th e underlying graph using Wilson’s
+algorithm [ 11]. This is an eﬃcient algorithm, and good estimates on its run ning time are
+available on cubic lattices. Note that since the number of sp anning trees grows exponentially
+in the number of vertices, it is not a straightforward task to sample one uniformly at random.
+However, the algorithm in [ 11], described below, achieves this in polynomial time. Secon d, we
+convert the spanning tree into a sandpile conﬁguration (or p art thereof) based on a version
+of Majumdar and Dhar’s burning bijection [ 4]. The sandpile conﬁguration thus obtained is an
+unbiased sample from the stationary distribution of the mod el. This allows us to avoid any
+issues arising from having to estimate mixing properties of the underlying Markovian dynamics.
+A grain is added to the sampled conﬁguration, and the resulti ng avalanche computed. The
+above is repeated a large number of times to obtain independent samples of avalanches in the
+steady-state. Independence allows us to estimate sampling errors accurately, and avoid issues
+arising from unknown eﬀects due to correlated samples.
+As random number generator, we used the 32 bit version of the M ersenne Twister [12], that
+is known to have a very large period ( > 219,000). An additional advantage of this generator is
+that it allows one to ’jump ahead’ by a given number of steps in t he pseudo-random sequence
+[13], which allowed us to run computations in parallel with sequ ences that were guaranteed to
+be disjoint (we used jump-ahead with diﬀerent multiples of 2100 steps on each node).
+In 2D only about 44% of conﬁgurations yield an avalanche, and in high dimensions only
+about fraction 1/2d. Therefore, in dimensions d = 5 and higher we used an importance
+sampling technique that allows us to sample only those conﬁg urations that yield an avalanche,
+and thereby increase the accuracy of our estimates compared to simple sampling. This is
+described in Section 2.3.
+2.2 Wilson’s algorithm
+Let G = (V ∪ { ρ}, E) be a ﬁnite connected graph, where ρ plays the role of the sink for the
+sandpile. A loop-erased random walk (LERW) from vertex x ∈ V with target set F ∋ ρ is
+deﬁned as follows. Consider a simple random walk on G started from x and stopped at the
+ﬁrst time it hits F . Then erase the loops in the path chronologically, as they ar e created,
+yielding a simple path between x and F . (When x ∈ F , we deﬁne this as the trivial path of
+zero steps.)
+Wilson’s algorithm generates a random spanning tree of G as follows. Enumerate the
+vertices in V as V = {x1, . . . , xn}, and set F0 = {ρ}. Run a LERW from x1 with target
+set F0, and let γ1 be the path of the LERW. Set F1 = F0 ∪ γ1. Next, run a LERW from x2
+with target set F1, and let γ2 be the path of the LERW. Set F2 = F1 ∪ γ2, etc. The union
+of the loop-erased walks γ1, . . . , γn form a random spanning tree of G. Wilson proved that
+the tree is uniformly distributed over all spanning trees of G [
+11], regardless of the chosen
+enumeration of V . Wilson also showed that the running time of the above algori thm is the
+mean commute time between ρ and a randomly chosen vertex that is distributed according t o
+the stationary distribution of the simple random walk on G. Here the commute time between
+vertices x and y of G is deﬁned to be ExTy + EyTx, where Tx is the ﬁrst hitting time of x,
+and Ex is expectation over random walk started at x.
+In our 2D simulations we used two diﬀerent boundary conditio ns: (i) G is the 2L × 2L
+torus with ρ equal one of the vertices (periodic boundary conditions); ( ii) G is given by the
+box VL = [− L + 1, L− 1]2, with ρ equal to the entire boundary of this box (Dirichlet boundary
+6
+conditions). In case (i), the mean commute time between ρ and a random vertex of the torus
+is of order L2 log L; see [ 14, Proposition 10.13], and it is of the same order with the bound ary
+condition (ii); see [ 14, Proposition 10.6]. Hence the entire spanning tree can be gen erated in
+time O(L2 log L).
+In 3D, we only used the Dirichlet boundary condition, and in t his case the entire tree can
+be generated in time O(L3); see [ 14, Proposition 10.13].
+In 5D and higher, avalanches typically take place on a small s ubset of the box. (The upper
+critical dimension for the model is dc = 4 ; [ 15].) Hence on high-dimensional lattices we only
+generated those LERWs that were necessary to compute the ava lanche; see Sections 2.3 and
+2.4 below. The time required to compute a single LERW from the b ulk of the lattice to the
+boundary is O(L2), as this is the number of random walk steps required. We used h ashing
+[16, Sections 6.5,6.6] to store the generated random walk steps, an d the resulting LERW, so
+the memory requirement for a single LERW is also O(L2). This method of simulation allowed
+us to investigate the height distribution at the origin in ve ry high dimensions ( d = 32 ), on
+lattices of radius up to L = 128, as this only requires running LERWs from the origin and its
+neighbours.
+2.3 Bijection and importance sampling
+We ﬁrst recall Majumdar and Dhar’s burning bijection [
+4]. Given a sandpile conﬁguration η in
+volume V , ﬁrst burn the sink vertex ρ. Then at each step t ≥ 1, burn all vertices x such that
+η(x) ≥ #{unburnt neighbours after step t − 1}.
+Let Bt = {x ∈ V : x burnt at step t}. Connect a vertex in Bt to a neighbour in Bt− 1 by
+an edge. If there are more than one such neighbours, the choic e can be made depending
+on the value of η(x), in a bijective fashion. This maps the sandpile η to a spanning tree.
+In order to invert the map at a vertex x, it is suﬃcient to know the length of the paths in
+the spanning tree from x and its neighbours to ρ. For this purpose, when we generate our
+LERWs, we also record their lengths. Then the tree-distance dist(x, ρ) from any vertex x to
+ρ is given by the sum of the length of the LERW γx from x to its endpoint y in its target set
+and the tree-distance dist(y, ρ) from y to ρ. (This is already available when γx is generated,
+if we record the tree-distance along each LERW after they wer e generated.) We checked the
+one-site marginals obtained with the above method in 2D agai nst the exactly known values
+[8], [ 17], [ 18], [ 19] and there was very close agreement.
+We will need the following modiﬁcation of the above burning r ule [8]. Let us burn vertices
+as above, with the exception that the origin o is not allowed to burn. This way there will be
+a set W ⊂ V , such that o ∈ W , and W did not burn yet. Once only W is left unburnt, we
+burn o and complete the process by burning W . The following fact will be important. Let
+qd(i) = P[degW (o) = i], i = 0, . . . ,2d − 1,
+where degW (o) denotes the degree of vertex o in the subgraph of V induced by W , in other
+words, degW (o) = # {y ∈ W : y ∼ o}. Then conditioned on the random variable degW (o), we
+have that the random variable η(o) is uniformly distributed over the set {degW (o), . . . ,2d− 1}
+[8]. Then we have
+pd(i) = P[η(o) = i] =
+i∑
+j=0
+qd(j)
+2d − j .
+7
+Let us modify the bijection based on the above burning proces s, as follows: from vertices in
+V \W , we choose an outgoing edge of the spanning tree as in Majumda r and Dhar’s original
+bijection. We choose an outgoing edge from o to the set V \W according to the value of
+η(o) ∈ { degW (o), . . . ,2d − 1} in a bijective fashion. Finally, we choose outgoing edges fr om
+vertices in W , again as in the standard burning bijection. In the resultin g spanning tree we
+have that W equals the set of descendants of o.
+For the purposes of simulating degW (o), ﬁrst note that
+{y ∼ o : y ∈ W } ⊂ { y ∼ o : dist(y, ρ) > dist(o, ρ)},
+but the containment may be strict: there can exist z ∼ o, z ̸∈ W such that dist(z, ρ) >
+dist(o, ρ). In order to distinguish the vertices in W , we proceeded as follows. We ﬁrst
+generated the LERW γo from o to ρ. We added a large constant SHIFT to its length, and
+set d′(o) = dist( o, ρ) + SHIFT . Then we generated the remaining LERWs, and computed
+d′(x) = |γx|+ d′(y), where y is the vertex in the target set of γx where the LERW hits. The
+added shift at o ensures that if x ̸∈ W , then d′(x) = dist( x, ρ), while for x ∈ W , we have
+d′(x) = dist( x, ρ) + SHIFT. Choosing SHIFT suﬃciently large ensures that
+{y ∈ W : y ∼ o} = {y ∼ o : d′(y) > d ′(o)},
+and hence degW (o) is readily available from the simulated spanning tree. In d = 2, 3 we chose
+SHIFT to be the volume of the box (2L)d, and in d ≥ 5 we chose it to be the size of the
+hashtable.
+2.3.1 5D variance estimate
+In dimension d = 5 , in order to only sample conﬁgurations where avalanches occ ur, we
+disregard the value of η at o, and set it equal to 2d − 1. This biases the toppling probabilities
+in a computable way.
+Let Q = deg W (o) and P = η(o) be random variables, then, according to the bijection, we
+have
+PL[P = j|Q = i] = 1
+2d − i , 0 ≤ i ≤ j ≤ 2d − 1. (2.1)
+Let the avalanche cluster be Av := {x ∈ V : x topples at least once after adding at o }.
+Then we get the toppling probability
+PL[x ∈ Av] = PL[x ∈ Av|P = 2d − 1] × PL[P = 2d − 1]
+=
+2d− 1∑
+i=0
+PL[x ∈ Av|P = 2d − 1, Q = i] × PL[P = 2d − 1|Q = i] × PL[Q = i].
+By (2.1), we have PL[P = 2 d − 1|Q = i] = 1 /(2d − i). Let pL(i, x) = PL[x ∈ Av|P =
+2d − 1, Q = i]. This is estimated as follows. In each sample, we record the v alue of Q = i,
+set η(o) = 2 d − 1, add a grain at o, and simulate the avalanche. We check whether x toppled
+or not. Summing over all possible values of Q, we compute the toppling probability.
+In order to estimate the standard error of the toppling proba bility estimate, let Zx = I[x ∈
+Av] be a random variable, PL[Zx = 1 |P = 2 d − 1, Q = i] = pL(i, x). Conditioned on
+8
+{Q = i} ∩ { P = 2 d − 1}, we deﬁne the random variable Yx = 1
+2d− i Zx. Then the adjusted
+toppling probability
+PL
+[
+Yx = 1
+2d − i
+⏐
+⏐
+⏐Q = i
+]
+= pL(i, x)
+with the expectation and variance conditioned on Q
+EL[Yx|Q] = pL(Q, x)
+2d − Q and VarL(Yx|Q) = pL(Q, x)(1 − pL(Q, x))
+(2d − Q)2 .
+The toppling probability PL[x ∈ Av] ≃ 1
+n
+∑n
+k=1 Y (k)
+x , where each Y (k)
+x takes values 0 or
+1/(2d − Q). Comparing with Zx, we expect that the variance of Yx is smaller than that of
+Zx.
+Denote qL(i) = PL[Q = i]. Since EL[Yx] = EL[EL[Yx|Q]] = PL[x ∈ Av] = tL(x; o) =:
+tL(x) and tL(x) = ∑2d− 1
+i=0 qL(i) pL(i,x)
+2d− i , we have
+VarL(EL[Yx|Q]) = EL
+[ pL(Q, x)2
+(2d − Q)2
+]
+− tL(x)2,
+EL[VarL(Yx|Q)] = EL
+[ pL(Q, x)(1 − pL(Q, x))
+(2d − Q)2
+]
+,
+VarL(Yx) = EL(VarL(Yx|Q)) + VarL(EL[Yx|Q]) = EL
+[ pL(Q, x)
+(2d − Q)2
+]
+− tL(x)2
+=
+2d− 1∑
+i=0
+qL(i) pL(i, x)
+(2d − i)2 − tL(x)2 ≤ tL(x) − tL(x)2 = tL(x)(1 − tL(x)).
+Based on the above, we recorded ∑2d− 1
+i=0
+ˆpL(i,x)
+(2d− i)2 − ˆtL(x)2, where ˆp and ˆt denote simulation
+estimates. This gives an approximation to the variance of th e toppling probability estimate at
+x.
+As a comparison with simple sampling we note the following. L et d = 5, L = 32, and let x
+be a neighbour of the origin. Then simple sampling with 1.5 × 106 avalanches (on 64 nodes)
+took 16, 901 seconds of CPU time per node, resulting in the estimate ˆtL(x) = 0 .0157 ± 0.0001
+With variance reduction, the same precision was obtained wi th 1.5 × 105 avalanches (on 64
+nodes) and took 3455 seconds of CPU time per node, with a time save of a factor 4.89.
+2.3.2 Variance of height probability estimates in d = 32
+We recorded the estimated probabilities ˆqd(i) for i = 0, . . . ,2d − 1 while simulating the height
+probabilities ˆpd(i) in d = 32 . Then we can compute the variance of the height probability
+estimates as follows. We have
+ˆpd(i) =
+i∑
+j=0
+ˆqd(j)
+2d − j , i = 0, . . . ,2d − 1.
+Since the estimates ˆqd(j) are almost independent, except for the constraint ∑2d− 1
+j=0 ˆqd(j) = 1 ,
+the variance of the height probability estimates is
+Var(ˆpd(i)) ≃
+i∑
+j=0
+1
+(2d − j)2 Var(ˆqd(j)) =
+i∑
+j=0
+1
+(2d − j)2
+ˆqd(j)(1 − ˆqd(j))
+n ,
+where i = 0, 1, . . . ,2d − 1 and n is the number of samples generated.
+9
+2.4 Avalanche simulation
+Using the Abelian property of the model, Ivashkevich, Ktita rev and Priezzhev [
+20] introduced
+a special order of topplings of non-stable vertices during a n avalanche. We use this to generate
+the avalanche in d = 2 , 3 and 5 as follows. First, adding a grain to o, if o is unstable, we
+topple it once and then topple all possible vertices without toppling o a second time. The
+toppled vertices form the ﬁrst wave of topplings in the avala nche. Then, we allow the vertex
+o to topple a second time creating a second wave and so on. The pr ocess terminates when o
+becomes stable. Hence, we obtain the representation of the a valanche as a sequence of waves.
+In each wave, no vertex can topple more than once. We made use o f this property as follows:
+whenever a vertex reached the height 2d, we pushed it onto a stack containing vertices to be
+toppled, and popped from this stack until it became empty.
+The avalanches are expected to behave diﬀerently in dimensi ons d ≥ 5, compared to
+d = 2 , 3. Long loops are unlikely, and the loop erased random walk beh aves similarly to the
+random walk, in particular it scales diﬀusively [ 21, Section 7.7]. Also, independent random
+walks starting from two neighbouring vertices are likely to either meet after a few steps or
+not to meet at all, i.e. they are likely to connect to the sink wi th disjoint paths. Considering
+the Dirichlet boundary conditions, the number of vertices i n d dimensions is O(Ld) and the
+number of steps that the random walk takes to exit a box is O(L2). In high dimensions, the
+order of the number of vertices grows much faster than that of the number of steps of the
+random walk. Therefore, it is very ineﬃcient to store the ent ire box, since we are likely to only
+use a small part of the box. The idea is to only generate loop er ased random walks when they
+are needed. The way to do this is the following.
+First, the loop erased random walks starting from o and its neighbours are generated. This
+allows the computation of the random variable Q. We then set η(o) = 2 d − 1. We compute
+the sand heights of the neighbours by running loop erased ran dom walks starting from their
+neighbours. This allows the toppling of o to be carried out. We repeat the above steps as
+long as there are topplings.
+We used hashing [ 16, Sections 6.5,6.6] to store the steps of the walk in such a way tha t it
+is easy to locate intersections. We used a hash function of th e form
+f (x) =
+2d∑
+i=1
+xi ∗ mi− 1 (mod HASHSIZE)
+for a point x in the box {1, . . . ,2L − 1}d, where L, m and HASHSIZE are powers of 2.
+In high dimension, avalanches are 4 dimensional and an avala nche that reaches all the way
+to the boundary has about O(L4) vertices. Each of these L4 vertices will have its own random
+walk. This means we need at most O(L6) random walk steps to be stored, independently of
+the dimension. A sample was discarded when the hashtable was full.
+3 2D results
+3.1 Toppling probabilities in the bulk
+We simulated the toppling probability both with Dirichlet a nd periodic boundary conditions.
+We found similar behaviour in diﬀerent radial directions; s ee Figure 3. It appears that asymp-
+totically, the toppling probability only depends on the Euc lidean distance from the origin (in
+10
+log P[x topples]
+Figure 3: A heat-plot of the logarithm of the toppling probab ility with Dirichlet boundary
+conditions in d = 2 for a system with L = 4096. The values are shown for vertices in the box
+[− 256, 256]2.
+the inﬁnite volume limit). In the case of periodic boundary c onditions, with the largest system
+size considered L = 4096, we occasionally encountered some extremely long avalanch es.
+Assuming the behaviour t(x) := P[x topples] ∼ c |x|− η for |x| ≫ 1 (that is, in the inﬁnite
+volume limit L → ∞ ), we want to estimate η = η(2). A log-log plot of the numerical
+estimates ˆtL(x) are shown in Figure 4.
+We have attempted to ﬁt a ﬁnite-size scaling form tL(x) ≈ c |x|− a f2(|x|/L1/ν), with a
+scaling function f2, to the data. For this, we minimized the sum of squares of the p airwise
+diﬀerences between tL(x)|x|a and tL′(x′)|x′|a, with |x|/L1/ν = |x′|/(L′)1/ν, normalized by
+the standard error of the diﬀerence. First, this clearly sho wed that we must have ν = 1 .
+Second, we obtained a reasonable collapse of the data for a = 0 .43, when small |x| values
+(|x/L|< 50/512) were excluded from the least squares sum; see Figure 5.
+Alternatively, a least squares ﬁt of log ˆtL(x) against log |x|, for vertices x along the positive
+x-axis with 20 ≤ | x| ≤ 150 gives the estimate η(2) ≈ ˆη(2) = 0 .42; see Figure 6.
+Multiplying ˆtL(x) by |x|ˆη we found little deviation from a constant; see Figure 7.
+We also simulated the toppling probability with periodic bo undary conditions, and this gave
+similar results. The agreement with the power law appears to extends to a longer interval, and
+the estimated exponent, based on a least squares ﬁt to the log -log data over 20 ≤ | x| ≤ 500,
+gave ˆη(2) ≈ 0.41. Figure 8 shows the toppling probabilities rescaled by |x|0.41 in systems of
+size L = 512 , 1024, 2048, 4096. Figure 9 compares the L = 4096 data rescaled with varying
+η.
+The least squares ﬁt of log ˆtL(x) against log |x|, for all vertices x with Euclidean distance
+20 ≤ | x| ≤ 100 gives an estimate ˆη′(2) ≈ ˆη(2), that is, ˆη′(2) ≈ 0.42. Multiplying ˆtL(x) by
+|x|ˆη′
+the graph settles to be horizontal for moderate values of |x|; see Figure 10.
+11
+0 2 4 6 8
+−10 −8 −6 −4 −2
+Toppling probabilities with Dirichlet b.c.
+log |x|
+log P[x topples]
+Figure 4: The logarithm of the toppling probabilities again st the logarithm of |x|’s with
+Dirichlet boundary conditions in d = 2 for systems with L = 512 (blue), 1024 (yellow), 2048
+(green), 4096 (red), and 8192 (black) with sample sizes 6 × 107, 3 × 107, 7.5 × 106, 4 × 106
+and 106 respectively. The probabilities are shown for vertices in t he positive x-axis up to L− 1.
+−6 −5 −4 −3 −2 −1 0
+0.0 0.1 0.2 0.3 0.4
+Finite−size scaling
+log (x/L)
+tL(x) |x|a
+Figure 5: The estimates ˆtL(x) rescaled by the |x|a, where a = 0 .43 is obtained from ﬁnite
+scaling for 50/512 ≤ | x/L| ≤ 1, when considering Dirichlet boundary conditions in d = 2
+for systems with L = 512 (blue), 1024 (yellow), 2048 (green), 4096 (red), and 8192 (black).
+Sample sizes are as in Figure 4.
+12
+0 2 4 6 8
+−10 −8 −6 −4 −2
+Least squares fit
+log |x|
+log P[x topples]
+Figure 6: The logarithm of the toppling probability against the logarithm of |x|with Dirichlet
+boundary conditions in d = 2 for a systems with L = 8192 (black dots). The probabilities are
+shown for vertices in the positive x-axis up to L − 1. The line of best ﬁt with slope 0.42 is
+from the least squares method (red line).
+0 2 4 6 8
+0.0 0.1 0.2 0.3 0.4
+Rescaled toppling probability
+log |x|
+P[x topples] * |x|^η
+Figure 7: The toppling probability with Dirichlet boundary conditions in a system with L =
+8192, rescaled by |x|ˆη (ˆη = 0 .42) against the logarithm of |x|, where x is taken along the
+positive x-axis between 1 and L − 1. The error bars show ± 2 standard deviations (for every
+power of 2 only, for readability). The number of samples taken was 106.
+13
+0 2 4 6 8
+0.0 0.1 0.2 0.3 0.4 0.5
+Rescaled toppling probability
+log |x|
+P_L[x topples] * |x|^0.41
+Figure 8: Rescaled toppling probabilities against the loga rithm of |x| with periodic boundary
+conditions in d = 2 for systems with L = 512 (yellow), 1024 (green), 2048 (red), and 4096
+(black) (with sample sizes 2 × 107, 1.5 × 107, 3 × 106 and 7.5 × 105). The probabilities are
+shown for vertices in the positive x-axis up to L.
+0 2 4 6 8
+0.20 0.25 0.30 0.35 0.40
+Rescaled toppling probability
+log |x|
+Figure 9: Toppling probabilities against the logarithm of |x|with periodic boundary conditions
+in d = 2 for a system with L = 4096 rescaled by |x|η with η = ˆη ≈ 0.425 (black), η = 0.405
+(blue), η = 0.38 (red). The probabilities are shown for vertices in the posit ive x-axis up to L.
+Error bars (green) shown for |x| a power of 2.
+14
+0 20 40 60 80 100
+0.28 0.30 0.32 0.34 0.36 0.38
+All vertices within radius 100
+|x|
+P[x topples] * |x|^η
+Figure 10: The toppling probability with Dirichlet boundar y conditions in d = 2 for a system
+with L = 4096 , rescaled by |x|ˆη (ˆη = 0 .42). The probabilities are shown for all vertices in a
+disk of radius 100.
+Based on the above, we make the following conjecture for the t oppling probability in the
+inﬁnite volume limit L → ∞ :
+P[x topples] = |x|− η+o(1),
+where η = η(2) = 0 .4 ± 0.03.
+Toppling probabilities in the scaling limit. Finally, we comment on the toppling probability
+of those vertices x whose distance from the origin is of the same order as L. Rescaling by
+|x|ˆa, where ˆa = 0 .43 was obtained from the ﬁnite-size scaling analysis, and plot ting against
+|x|/L, yields the graph in Figure 11. The graph suggests that as lon g as |x|/L is bounded
+away from 0, the rescaled quantity tL(x)|x|a has a scaling limit f2(y), as x/L → y ∈ [− 1, 1]2.
+3.2 The number of waves in 2D
+In this section we present results on the number of waves in av alanches initiated at the origin.
+The distribution of the number of waves is the most interesti ng in 2D, since the average
+number of waves diverges logarithmically as L → ∞ :
+EL[number of waves ] = GL(o, o) ∼ 1
+2π log L, as L → ∞ . (3.1)
+Recalling that n(o, o) denotes the number of topplings at o caused by addition of a grain at
+o, let us put
+wL(n) = PL[n(o, o) = n], w (n) = lim
+L→∞
+wL(n).
+15
+0.2 0.4 0.6 0.8 1.0
+0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35
+Toppling probabilities in the scaling limit
+x/L
+tL(x) |x|a
+Figure 11: The rescaled toppling probability with Dirichle t boundary conditions in d = 2 for
+systems with L = 512 (yellow), 1024 (green), 2048 (red), and 4096 (black). The probabilities
+are shown for points on the positive x-axis with 50/512 ≤ | x/L| ≤ 1.
+(The existence of the limit deﬁning w(n) is known rigorously; see [ 22].) Let us deﬁne the
+complementary distribution functions
+WL(n) = PL[n(o, o) ≥ n] =
+∑
+m≥ n
+wL(m) and W (n) = P[n(o, o) ≥ n] =
+∑
+m≥ n
+w(m).
+Assuming that w(n) decays as a power law: w(n) ≈ n− δ, and from the divergence of the mean
+as in (3.1), it has been predicted that W (n) ≈ n− 1 (and hence δ = 2); see [
+4, Eqn. (5.11)].
+In Figure 12 we show for L = 8192 the rescaled quantity wL(n)n2. Error bars are shown
+up to n = 200. Beyond this bound, avalanches with particular values of n are too infrequent
+to estimate from our data. There is no clear indication of the rescaled values settling down to
+a constant for moderate n.
+The data is a lot smoother for WL(n), and the errors for the rescaled quantity WL(n)n
+are also smaller. In Figure 13 we show for L = 8192 the rescaled quantity WL(n)n against
+log n for 1 ≤ n ≤ 2000. It is apparent that the graph does not settle to a constant va lue
+for moderate values of n. Therefore, if W (n) indeed satisﬁes an asymptotic of the form
+W (n) ∼ cn− 1, convergence to this asymptotic is reached only for very lar ge values of L and
+n. It has been pointed out in [ 7] that the simulation data in that paper better ﬁts with δ ≈ 2.1.
+However, any exponent > 2 can be ruled out, as
+∑
+n≥ 1
+nw(n) = lim
+L→∞
+GL(o, o) = ∞ . (3.2)
+An alternative possibility is that the scaling behaviour of WL(n) depends in a more complicated
+way on L and n. For example, it is consistent with (3.2) to have W (n) ∼ cn− 1(log n)− β with
+16
+0 2 4 6
+0.0 0.2 0.4 0.6 0.8 1.0 1.2
+wL(n) rescaled by n2 for L=8192
+log n
+Figure 12: wL(n) n2 with Dirichlet boundary conditions in d = 2, when considering L = 8192,
+against log n for 1 ≤ n ≤ 2000. Error bars show ± 2 standard deviations. The sample size is
+106.
+some 0 < β < 1. Note that we cannot have WL(n) satisfy this behaviour with a cut-oﬀ at
+some Lσ, since 1
+Lσ
+∑
+n=2
+1
+n logβ n ∼ c(σ) (log L)1− β
+Hence a logarithmic correction of the form above would requi re that for ﬁnite L there is
+suﬃcient weight on very large avalanches (whose size diverg es with L) to yield GL(o, o) ∼
+(2π)− 1 log L. In Figure 14, we show the eﬀect of scaling the data with diﬀer ent powers
+(log n)β. Scaling with β = 0 .4 describes the data fairly well for moderate values of n.
+However, our conclusion from the above is that understandin g the scaling of w(n) or W (n)
+requires further work.
+4 3D results
+In 3D we found that with periodic boundary conditions there were s ome extremely long ava-
+lanches. In this paper we only include our data with Dirichle t boundary conditions. Assuming
+the behaviour t(x) ∼ c |x|− 1− η in the inﬁnite volume limit L → ∞ , we want to estimate
+η = η(3). A log-log plot of the numerical estimates ˆtL(x) are shown in Figure 15.
+Fitting a ﬁnite size-scaling form tL(x) = |x|− 1− af3(|x|/L) yielded a ≈ 0.0, when small
+values of x (those with |x|/L < 5/32) were excluded; see Figure 16.
+On the other hand, for the largest system size ( L = 256), the least squares ﬁt of log ˆtL(x)
+against log |x|, for vertices x along the positive x-axis with 7 ≤ | x| ≤ 55 gives the somewhat
+diﬀerent estimate η(3) ≈ ˆη(3) = 0 .09; see Figure 17.
+1We thank an anonymous referee for calling our attention to th is.
+17
+0 2 4 6
+0.0 0.1 0.2 0.3 0.4 0.5
+WL(n) rescaled by n for L=8192
+log n
+Figure 13: WL(n) n with Dirichlet boundary conditions in d = 2, when considering L = 8192,
+against log n for 1 ≤ n ≤ 2000. Error bars show ± 2 standard deviations. The sample size is
+106.
+0 2 4 6
+0.0 0.1 0.2 0.3 0.4 0.5
+WL(n) rescaled by n (log n)β for L=8192
+log n
+Figure 14: WL(n) n (log n)β, with Dirichlet boundary conditions in d = 2 , when considering
+L = 8192 , for β = 0 .3 (red), β = 0 .4 (black), β = 0 .5 (blue). The horizontal axis shows
+log n for 1 ≤ n ≤ 2000.
+18
+0 1 2 3 4 5
+−14 −12 −10 −8 −6 −4
+Toppling probabilities in 3D
+log |x|
+log P[x topples]
+Figure 15: The logarithm of the toppling probabilities agai nst the logarithm of |x|’s with
+Dirichlet boundary conditions in d = 3 for systems with L = 32 (yellow), 64 (green), 128
+(red), and 256 (black) (with sample sizes 8 × 107, 2 × 107, 4.5 × 106, 4 × 106).
+−3.5 −3.0 −2.5 −2.0 −1.5 −1.0 −0.5 0.0
+0.02 0.04 0.06 0.08
+Finite−size scaling in 3D
+log (x/L)
+tL(x) |x|1+a
+Figure 16: The estimates ˆtL(x) rescaled by the |x|1+a, where a = 0 .0 is obtained from ﬁnite
+scaling for 5/32 ≤ | x/L| ≤ 1, when considering Dirichlet boundary conditions in d = 3 for
+systems with L = 32 (yellow), 64 (green), 128 (red), and 256 (black).
+19
+0 1 2 3 4 5
+−14 −12 −10 −8 −6 −4
+Least squares fit in 3D
+log |x|
+log P[x topples]
+Figure 17: The logarithm of the toppling probability agains t the logarithm of |x|with Dirichlet
+boundary conditions in a systems with L = 256 (black dots). The line of best ﬁt with slope
+1 + ˆη, where ˆη = 0.09, from the least squares method (red line).
+The estimate ˆtL(x) rescaled by |x|1+ˆη appear to approach a constant with little deviation;
+see Figure 18.
+Based on the above, we believe that the exponent describing t he toppling probability in
+the inﬁnite volume limit diﬀers from the one describing it in the scaling limit x/L → y. We
+make the following conjecture:
+P[x topples] = |x|− 1− η+o(1)
+with η = η(3) ≈ 0.1.
+Toppling probabilities in the scaling limit. We comment on the toppling probability of
+those vertices x whose distance from the origin is of the same order as L. Rescaling by |x|1+ˆa,
+where ˆa = 0 .0 was obtained from the ﬁnite-size scaling analysis, and plot ting against |x|/L,
+yields the graph in Figure 19. The graph suggests that as long as |x|/L is bounded away from
+0, the rescaled quantity tL(x)|x|1+a has a scaling limit f3(y), as x/L → y ∈ [− 1, 1]3.
+From the assumed scaling form tL(x) = |x|− 1− af3(x/L), the diﬀerence of logarithms
+1
+log 2 (log tL(x) − log t2L(2x)) ≈ a.
+We show these diﬀerences in Figure 20 for L = 128 , 64, 32, together with the horizontal line
+corresponding to a = 0.0.
+The above raises the question: if you rescale with |x|, does the limit exist? In other words:
+is there a function f3 : [− 1, 1]3 → R such that
+|x|PL[x topples] ∼ f3(x/L), as L → ∞ ?
+20
+0 10 20 30 40 50
+0.00 0.02 0.04 0.06 0.08 0.10
+Rescaled toppling probability in 3D
+|x|
+P[x topples]*|x|1+η
+Figure 18: The toppling probability with Dirichlet boundar y conditions in systems with L = 32
+(yellow), 64 (green), 128 (red), and 256 (black), rescaled by |x|1+ˆη, where x is taken along the
+positive x-axis between 1 and 55, and ˆη ≈ 0.1. The error bars show ± 2 standard deviations
+of the toppling probability with L = 256 (for every 3-rd point only, for readability). Sample
+sizes are same as in Figure 15.
+0.2 0.4 0.6 0.8 1.0
+0.01 0.02 0.03 0.04 0.05 0.06 0.07
+Toppling probabilities in the scaling limit in 3D
+x/L
+tL(x) |x|
+Figure 19: The rescaled toppling probability tL(x)|x| with Dirichlet boundary conditions in
+d = 3 for systems with L = 32 (yellow), 64 (green), 128 (red), and 256 (black). The
+probabilities are shown for points on the positive x-axis with 5/32 ≤ | x/L| ≤ 1.
+21
+0.5 0.6 0.7 0.8 0.9 1.0
+0.0 0.2 0.4 0.6 0.8 1.0 1.2
+Approximate value of a
+|x|/L
+[log tL(x) − log t2L(2x)] / log 2
+Figure 20: The diﬀerence of logarithms in d = 3 for L = 32 (green), 64 (red), and 128
+(black). A horizontal line with y = 1 (black line), corresponding to a = 0.
+5 High-dimensional results
+5.1 Toppling probability simulations in 5D
+In dimensions d ≥ 5, it has been proved [
+5] that η = η(d) = 0 , in the sense that
+c|x|2− d ≤ P[x topples] ≤ C|x|2− d.
+Based on this we can expect that the toppling probability (in the inﬁnite volume limit L → ∞ )
+rescaled by |x|d− 2 is asymptotic to a constant as |x| → ∞ . Figure 21 shows our simulation
+results which appear consistent with this conjecture.
+5.2 Asymptotic height probabilities
+Recall that pd(i) = P[η(o) = i] denotes the height probability in d dimensions (in the inﬁnite
+volume limit L → ∞ ). The following theorem states the asymptotic form of the he ight
+probabilities as d → ∞ . The proof of this theorem, that relies on analyzing Wilson’s algorithm
+on the inﬁnite graph Zd, will be published separately from the present paper [
+23].
+Theorem 5.1. (i) For 0 ≤ i ≤ d1/2, we have
+pd(i) =
+i∑
+j=0
+e− 1 1
+j!
+2d − j + O
+( i
+d2
+)
+= 1
+2d
+i∑
+j=0
+e− 1 1
+j! + O
+( i
+d2
+)
+.
+(ii) If d1/2 < i ≤ 2d − 1, we have
+pd(i) = pd(d1/2) + O(d− 3/2).
+In particular, pd(i) ∼ (2d)− 1, if i, d → ∞ .
+22
+0 5 10 15 20 25 30
+0.005 0.010 0.015 0.020
+Rescaled toppling probability in 5D
+|x|
+P[x topples]*|x|^3
+Figure 21: The toppling probability in the box with radius L = 32 in 5D, rescaled by |x|d− 2,
+where x is taken along the ﬁrst coordinate axis. The error bars show ± 2 standard deviations.
+The number of samples taken was 4 × 107, with approximately 400 samples discarded due to
+a full hashtable.
+0 10 20 30 40 50 60
+0.006 0.008 0.010 0.012 0.014 0.016
+Height probabilties in d=32
+i
+P[η(o) = i]
++
++
++
+++++++ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ++ + + + +
+Figure 22: Simulated height probabilities (black dots) in d = 32 for a system with L = 128
+(with sample size 4 × 106), and the asymptotic formula (red pluses).
+23
+The asymptotic formula appearing in part (i) of the theorem i s the same as obtained by
+Dhar and Majumdar [ 10] on the Bethe lattice with large coordination number. Figur e 22
+compares the formula to simulations in d = 32 in the ﬁnite volume L = 128.
+Acknowledgements. We thank two anonymous referees for their constructive crit icism.
+24
+References
+[1] Bak P, Tang C and Wiesenfeld K, Self-organized criticality: An explanation of the 1/f
+noise, 1987 Phys. Rev. Lett. 59 381
+[2] Dhar D, Theoretical studies of self-organized criticality, 2006 Phys. A (Amsterdam,
+Neth.) 369 29
+[3] Dhar D, Self-organized critical state of sandpile automation mode ls, 1990 Phys. Rev.
+Lett. 64 1613
+[4] Majumdar S N and Dhar D, Equivalence between the abelian sandpile model and the
+q → 0 limit of the Potts model, 1992 Phys. A (Amsterdam, Neth.) 185 129
+[5] Jarai A A, Redig F and Saada E, Approaching criticality via the zero dissipation limit in
+the abelian avalanche model, 2015 J. Stat. Phys. 159 1369
+[6] Manna S S, Large-scale simulation of avalanche cluster distribution in sand pile model
+1990 J. Stat. Phys. 59 509
+[7] Grassberger P and Manna S S, Some more sandpiles, 1990 J. Phys. (Paris) 51 1077
+[8] Priezzhev V B, Structure of two-dimensional sandpile. I. Height probabil ities, 1994 J.
+Stat. Phys. 74 955
+[9] Ktitarev D V, Lubeck S, Grassberger P and Priezzhev V B, Scaling of waves in the
+Bak-Tang-Wiesenfeld sandpile model, 2000 Phys. Rev. E: Stat. Phys., Plasmas, Fluids,
+Relat. Interdiscip. Top. 61 81
+[10] Dhar D and Majumdar S N, Abelian sandpile model on the bethe lattice, 1990 J. Phys.
+A: Math. Gen. 23 4333
+[11] Wilson D B, Generating random spanning trees more quickly than the cove r time, 1996
+Proceedings of the twenty-eight annual acm symposium on the theory of computing,
+296
+[12] Matsumoto M and Nishimura T, Mersenne twister: a 623-dimensionally equidistributed
+uniform pseudo-random number generator, 1998 ACM. T. Model. Comput. S. 8 3
+[13] Haramoto H, Matsumoto M, Nishimura T, Panneton F and L’Ec uyer P, Eﬃcient jump
+ahead for F2-linear random number generators, 2008 INFORMS. J. Comput 20 385
+[14] Levin D A, Peres Y and Wilmer E L, Markov chains and mixing times, 2009 American
+Mathematical Society.
+[15] Priezzhev V B, The upper critical dimension of the abelian sandpile model, 2000 J. Stat.
+Phys. 98 667
+[16] Kernighan, B W, and Ritchie D M, The C Programming Language, 1988 2nd. ed.,
+Prentice Hall.
+25
+[17] Jeng M, Piroux G and Ruelle P, Height variables in the abelian sandpile model: scaling
+ﬁelds and correlations, 2006 J. Stat. Mech.: Theory Exp. 2006 10015
+[18] Poghosyan V S, Priezzhev V B and Ruelle P, Return probability for the loop-erased
+random walk and mean height in the Abelian sandpile model: A p roof, 2011 J. Stat.
+Mech.: Theory Exp. 2011 12
+[19] Kenyon R W and Wilson D B, Spanning trees of graphs on surfaces and the intensity
+of loop-erased random walk on planar graphs, 2015 J. Am. Math. Sco. 28 985
+[20] Ivashkevich E V, Ktitarev D V and Priezzhev V B, Waves of topplings in an abelian
+sandpile 1994 Phys. A (Amsterdam, Neth.) 209 347
+[21] Lawler G F, Intersections of Random Walks, 2013 Springer New York: Imprint:
+Birkhauser.
+[22] Bhupatiraju S, Hanson J and Jarai A A, Inequalities for critical exponents in d-
+dimensional sandpiles, 2017 Electron. J. Probab. 22 85
+[23] Jarai A A and Sun M, Asymptotic height distribution in high-dimensional sandp iles,
+2019 In preparation.
+26

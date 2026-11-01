@@ -1,0 +1,10 @@
+RANDOM-CUT SIMPLE-CYCLE CHECK
+PASS k=2..64: maximal threshold with tail >=1/2 is ceil((k-1)/4).
+P3 DEPENDENCE CHECK
+P(1 in C0) = (x - 1)*(3*x - 1)*(x**2 + x + 1)/(6*x**4)
+P(2 in C0) = (x - 1)**2*(3*x**2 + 2*x + 1)/(6*x**4)
+P({1,2} subset C0) = (x - 1)**2*(x**2 + x + 1)/(3*x**4)
+joint-product = (x - 1)**2*(x**2 + x + 1)*(3*x**4 + 6*x**3 + 2*x**2 + 2*x - 1)/(36*x**8)
+PASS: for x=e^t>1, all covariance factors are positive; final polynomial is increasing and equals 12 at x=1.
+Therefore the two cycle-membership events are strictly positively correlated for every t>0.
+ALL_EXACT_CHECKS_PASS

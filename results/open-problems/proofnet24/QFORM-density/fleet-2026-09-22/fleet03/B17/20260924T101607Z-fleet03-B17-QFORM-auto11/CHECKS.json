@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "theorem": "QFORM-CUBE-HOUSEHOLDER-BALL-DOMINATION-v1",
+  "run_id": "20260924T101607Z-fleet03-B17-QFORM-auto11",
+  "constants": {
+    "R": 0.8660254037844386,
+    "ball_density_cap": 3.847649490485592,
+    "partner_theta_0p01_lower": 4.117251705266084,
+    "known_sharp_obstruction": 4.242640687119286,
+    "partner_gap": 0.2696022147804924,
+    "gap_to_3sqrt2": 0.39499119663369386
+  },
+  "exact_certificates": {
+    "canonical_matrix": "(1/3)*[[1,-2,-2],[-2,1,-2],[-2,-2,1]]",
+    "canonical_eigenvalues": ["1", "1", "-1"],
+    "ball_cap_formula": "pi*sqrt(3/2)",
+    "strict_under_4": "pi*sqrt(3/2) < 4; for example pi<22/7 and (3/2)*(22/7)^2<16",
+    "partner_strict_over_4": "3*sqrt(2)*exp(-0.03)>4, supplied by the completed fleet04/B17 source-valid witness theorem"
+  },
+  "mass_check": {
+    "ball_volume": 2.720699046351326,
+    "integral_piecewise_density": 2.720699046351326,
+    "difference": 0.0
+  },
+  "privacy_scan": {
+    "scope": "this CHECKS.json and REPORT.md draft; narrow regex fallback only",
+    "credential_patterns_found": false
+  },
+  "status": "PASS"
+}

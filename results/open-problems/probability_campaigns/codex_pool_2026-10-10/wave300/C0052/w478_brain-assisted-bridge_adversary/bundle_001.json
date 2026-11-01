@@ -1,0 +1,168 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w478",
+  "bundle_slug": "c0052-adversary-current-bridge-001",
+  "entries": [
+    {
+      "key": "moment",
+      "namespace": "probability.ising.scaling",
+      "logical_name": "negative-fourth-deficit-portmanteau-transfer",
+      "kind": "concept",
+      "title": "[DRAFT] Fourth-deficit transfer without fourth-moment convergence",
+      "statement": "DRAFT conditional lemma: If real X_n converge in law, E X_n=0, E X_n^2=1 and E X_n^4<=3-epsilon for one fixed 0<epsilon<=2, then the limit X is centered, has variance one and E X^4<=3-epsilon, so it is non-Gaussian. Fourth-power uniform integrability is unnecessary: the fourth bound gives second-power uniform integrability, and Portmanteau bounds the limiting fourth moment. This does not supply an Ising deficit or field tightness.",
+      "proof_text": null,
+      "assumptions": [
+        "real variables",
+        "weak convergence",
+        "mean zero",
+        "unit second moment",
+        "fixed positive fourth deficit"
+      ],
+      "domain": "probability / Ising scaling limits",
+      "source": {
+        "source_id": "owner-own-work:probability300:C0052:w478:moment",
+        "url": "~/brain_workers/w478/ATTEMPT.md",
+        "revision": "author-checkpoint-2026-10-10",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "invalid-mean",
+      "namespace": "probability.ising.scaling",
+      "logical_name": "rejected-diverging-overlap-mean-inference",
+      "kind": "concept",
+      "title": "[DRAFT] Rejected first-moment shortcut",
+      "statement": "REJECTED INFERENCE: A diverging mean E N_n of a nonnegative overlap count by itself implies a scale-uniform positive probability P(N_n>0). The implication is false without an anti-concentration or relative second-moment premise, even when the count is finite at each scale.",
+      "proof_text": null,
+      "assumptions": [
+        "this entry labels a false inference; it is not a theorem"
+      ],
+      "domain": "probability / Ising scaling limits",
+      "source": {
+        "source_id": "owner-own-work:probability300:C0052:w478:invalid-mean",
+        "url": "~/brain_workers/w478/ATTEMPT.md",
+        "revision": "author-checkpoint-2026-10-10",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "counterexample",
+      "namespace": "probability.ising.scaling",
+      "logical_name": "rare-overlap-counterexample-and-second-moment-premise",
+      "kind": "concept",
+      "title": "[DRAFT] Rare-overlap counterexample",
+      "statement": "DRAFT counterexample to the first-moment inference: For integer n>=2, let N_n=n^2 with probability 1/n and zero otherwise. Then E N_n=n tends to infinity, P(N_n>0)=1/n tends to zero, and E N_n^2/(E N_n)^2=n. For any nonnegative witness N with 0<E N and E N^2<=C(E N)^2, Cauchy-Schwarz instead guarantees P(N>0)>=1/C. This is a logical counterexample, not an Ising-current construction.",
+      "proof_text": null,
+      "assumptions": [
+        "integer n>=2",
+        "nonnegative witness; finite second moment for the sufficient bound"
+      ],
+      "domain": "probability / Ising scaling limits",
+      "source": {
+        "source_id": "owner-own-work:probability300:C0052:w478:counterexample",
+        "url": "~/brain_workers/w478/ATTEMPT.md",
+        "revision": "author-checkpoint-2026-10-10",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "weighted",
+      "namespace": "probability.ising.scaling",
+      "logical_name": "endpoint-weighted-two-current-cumulant-bridge",
+      "kind": "concept",
+      "title": "[DRAFT] Exact endpoint-weighted bridge",
+      "statement": "DRAFT conditional current bridge: On a finite ferromagnetic Ising graph at finite beta, zero external field and free boundary, choose nonzero nonnegative f. Set G_xy=E sigma_x sigma_y, V=sum f_x f_y G_xy and mu(x,y)=f_x f_y G_xy/V. For positive-weight pairs sample independent currents with source sets {x} symmetric-difference {y} and {z} symmetric-difference {t}; q is the probability x is connected to z in their union, with reflexive connectivity. Repeated sources cancel. Then 3-E[(sum f_x sigma_x/sqrt(V))^4]=2 sum mu(x,y)mu(z,t)q(x,y,z,t). A witness's relative second-moment bound must hold under this endpoint-weighted law and for the original connection event. No critical 3D bound is supplied.",
+      "proof_text": null,
+      "assumptions": [
+        "finite graph",
+        "ferromagnetic couplings",
+        "zero field; free boundary",
+        "finite beta",
+        "nonnegative nonzero weights",
+        "source parity cancellation"
+      ],
+      "domain": "probability / Ising scaling limits",
+      "source": {
+        "source_id": "owner-own-work:probability300:C0052:w478:weighted",
+        "url": "~/brain_workers/w478/ATTEMPT.md",
+        "revision": "author-checkpoint-2026-10-10",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "event",
+      "namespace": "probability.ising.scaling",
+      "logical_name": "augmented-current-lower-bound-direction-obstruction",
+      "kind": "concept",
+      "title": "[DRAFT] Enlarged-current event obstruction",
+      "statement": "DRAFT route obstruction: Adding independent sourceless currents enlarges source clusters and can give an upper bound on the exact two-sourced-current connection probability in the fourth-Ursell identity. A lower bound on the enlarged event cannot be reversed into a lower bound on the original event. A valid overlap witness for nontriviality must imply connection in the original union, or a separate quantitative comparison must be proved.",
+      "proof_text": null,
+      "assumptions": [
+        "exact original two-current event distinguished from enlarged clusters",
+        "no lower comparison supplied"
+      ],
+      "domain": "probability / Ising scaling limits",
+      "source": {
+        "source_id": "owner-own-work:probability300:C0052:w478:event",
+        "url": "~/brain_workers/w478/ATTEMPT.md",
+        "revision": "author-checkpoint-2026-10-10",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "comparison",
+      "namespace": "probability.ising.scaling",
+      "logical_name": "near-critical-block-deficit-to-renormalized-coupling-comparison",
+      "kind": "concept",
+      "title": "[DRAFT] Block deficit to source coupling comparison",
+      "statement": "DRAFT conditional comparison: In a translation-invariant, spin-flip symmetric zero-field Ising state on Z^3 assume U4<=0, 0<chi,xi<infinity and A=sum_{y,z,t} -U4(0,y,z,t)<infinity. Put g=-A/(chi^2 xi^3). For any nonempty finite block B, let M=|B|, S=sum_{x in B}sigma_x, V=E S^2>0 and R=3-E S^4/V^2. Then -g>=R V^2/(M chi^2 xi^3). Thus along beta_n increasing to beta_c, bounds R_n>=r>0 and V_n/[chi_n sqrt(M_n xi_n^3)]>=b>0 imply -g(beta_n)>=r b^2>0. These near-critical premises have not been proved for C0052.",
+      "proof_text": null,
+      "assumptions": [
+        "translation invariance; spin-flip symmetry",
+        "U4<=0",
+        "positive finite chi and xi",
+        "finite nonnegative origin Ursell sum",
+        "nonempty finite block with positive variance"
+      ],
+      "domain": "probability / Ising scaling limits",
+      "source": {
+        "source_id": "owner-own-work:probability300:C0052:w478:comparison",
+        "url": "~/brain_workers/w478/ATTEMPT.md",
+        "revision": "author-checkpoint-2026-10-10",
+        "license": "owner-own-work (campaign deductions; independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "counterexample",
+      "to_key": "invalid-mean",
+      "kind": "refutes",
+      "rationale": "The explicit N_n family has diverging mean and vanishing positivity probability."
+    },
+    {
+      "from_key": "weighted",
+      "to_key": "moment",
+      "kind": "depends_on",
+      "rationale": "An actual uniform averaged connection lower bound gives a fourth deficit; the moment criterion then transfers it to any given weak scalar limit."
+    },
+    {
+      "from_key": "event",
+      "to_key": "weighted",
+      "kind": "semantic_association",
+      "rationale": "The weighted identity uses the original two-current event; the enlarged event cannot supply its lower bound without another premise."
+    },
+    {
+      "from_key": "comparison",
+      "to_key": "weighted",
+      "kind": "semantic_association",
+      "rationale": "Near-critical block deficits can be compared to the original infinite-volume source coupling when the explicit normalization premises hold."
+    }
+  ]
+}

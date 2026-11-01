@@ -1,0 +1,13 @@
+{
+  "helper_version": "A097-reference-lift-v1",
+  "actual_Boolean_family": "All truth tables in dimensions 0 through 3",
+  "parameter_domain": "n=0,1,2,3; terminal remaining-coordinate cutoff 0,1,2; leaf reference mode uniform or history-dependent tilted subprobability",
+  "case_count": 1668,
+  "symmetry_reduction": "None; 278 truth tables times 3 stopping rules times 2 reference modes",
+  "arithmetic": "Integer direct Walsh sums, Fraction probabilities, exact rational coefficient vectors of log2 primes; no numerical logarithms",
+  "memory_estimate_MB": 60,
+  "maximum_runtime_seconds": 60,
+  "policy": "At each live node reveal a coordinate of smallest positive physical influence, ties by original coordinate; stop at cutoff or constant",
+  "checks": "Actual spectral marginals; subprobability root mass; entropy and cross-entropy telescopes; local/global posterior KL equality; influence conservation; physical path law; terminal costs retained",
+  "finite_to_infinite": "Analytic proof supplies all finite trees; finite checks only validate algebra and implementation"
+}

@@ -1,0 +1,101 @@
+[
+  {
+    "peer": "w355",
+    "file": "~\\math-brain-inbox\\w355\\bundle_001.json",
+    "key": "p0017-status",
+    "namespace": "probability.concentration",
+    "logical_name": "p0017-kls-primary-resolution-claims-october-2026",
+    "title": "P0017: October primary resolution claims require a current proof audit",
+    "statement": "As checked on 2026-10-10, P0017 asks for a universal C_P bound for all centered covariance-identity log-concave probabilities in every dimension, equivalently a universal positive Euclidean Cheeger lower bound. Its cited source is Randomstrasse101, arXiv:2603.29571v1, Entry 13, Conjecture 30. arXiv:2610.05474v1 (2026-10-04), Theorem 1.1, announces the full Poincare bound; arXiv:2610.07728v2 (2026-10-08 revision) announces C_P<=25. This card records primary announcements only: mathematical validity and current openness have not been independently settled in this packet. The September attempted-unsolved label is dated provenance, not a current-openness certificate."
+  },
+  {
+    "peer": "w355",
+    "file": "~\\math-brain-inbox\\w355\\bundle_001.json",
+    "key": "simplex-fibers",
+    "namespace": "probability.concentration",
+    "logical_name": "isotropic-regular-simplex-conditional-poincare-extremes",
+    "title": "DRAFT: isotropic regular simplex has rare long conditional fibers",
+    "statement": "Unreviewed independent derivation: for n>=2 work on H={x in R^(n+1):sum x_i=0} with its Euclidean metric, and take X uniform on vertices v_i=sqrt((n+1)(n+2))(e_i-1/(n+1)). Covariance on H is identity. Put u=(e_0-e_1)/sqrt(2), T=<X,u>, Y=X-Tu and S=lambda_0+lambda_1 in barycentric coordinates. Conditional on Y, T is uniform on an interval of length sqrt(2(n+1)(n+2)) S, and S~Beta(2,n-1). Thus ess sup conditional C_P=2(n+1)(n+2)/pi^2, mean conditional C_P=12/pi^2, ess sup conditional variance=(n+1)(n+2)/6 and mean conditional variance=1. Cheeger uses boundary/min(mass,1-mass): ess inf conditional h=sqrt(2/((n+1)(n+2))). Near-extremal fibers have positive marginal probability: P(S>1-delta)=delta^(n-1)[n-(n-1)delta] for 0<delta<1. This blocks transferring global isotropy to a uniform conditional bound; it is not a KLS refutation or novelty claim."
+  },
+  {
+    "peer": "w355",
+    "file": "~\\math-brain-inbox\\w355\\bundle_001.json",
+    "key": "weighted-slice-energy",
+    "namespace": "probability.concentration",
+    "logical_name": "conditional-poincare-constant-average-cannot-separate-from-energy",
+    "title": "DRAFT: unweighted average slice constants do not control directional energy",
+    "statement": "Unreviewed independent counterexample: for each n>=2 let X be uniform on the covariance-identity regular simplex in sum-zero R^(n+1), with vertices sqrt((n+1)(n+2))(e_i-1/(n+1)). For u=(e_0-e_1)/sqrt(2), T=<X,u>, Y=X-Tu, and barycentric S=lambda_0+lambda_1, the conditional law of T is uniform of length sqrt(2(n+1)(n+2)) S. Set f=T(S-1/2)_+^2, a C1 function. Then E[f|Y]=0, partial_u f=(S-1/2)_+^2, and E Var(f|Y)/E|partial_u f|^2>(n+1)(n+2)/24, while mean conditional C_P=12/pi^2. Hence no universal directional conditional-variance bound follows by taking the unweighted average of slice constants. The valid slice estimate keeps C_P(T|Y) times conditional directional energy inside one expectation. Transverse derivatives and the conditional-mean variance require separate control in a full-gradient argument. This refutes only the stronger auxiliary bridge, not KLS; no novelty claim."
+  },
+  {
+    "peer": "w356",
+    "file": "~\\math-brain-inbox\\w356\\bundle_001.json",
+    "key": "constants",
+    "namespace": "probability.logconcave",
+    "logical_name": "euclidean-poincare-and-cheeger-constant-conventions",
+    "title": "Poincare and Cheeger constants: Euclidean conventions",
+    "statement": "For a probability measure nu, C_P(nu) is the least coefficient in Var_nu(f)<=C_P(nu) integral |grad f|^2 dnu for locally Lipschitz L2 functions; infinite energy makes the inequality automatic. h(nu) is inf nu^+(B)/min(nu(B),1-nu(B)) over Borel sets with 0<nu(B)<1, where nu^+(B)=liminf_{epsilon down to 0}(nu(B+epsilon EuclideanBall)-nu(B))/epsilon. On a line the gradient uses Euclidean arclength. Isotropic means barycenter zero and covariance identity."
+  },
+  {
+    "peer": "w356",
+    "file": "~\\math-brain-inbox\\w356\\bundle_001.json",
+    "key": "parent",
+    "namespace": "probability.logconcave",
+    "logical_name": "p0017-normalized-kls-source-status-20261010",
+    "title": "P0017: normalized KLS target and October proof-claim status",
+    "statement": "The P0017 target asks for a finite universal C with C_P(mu)<=C for every dimension n>=1 and every isotropic log-concave probability on R^n; equivalently a universal positive Euclidean Cheeger lower bound. Original source: Randomstrasse101: Open Problems of 2025, 2603.29571v1, Entry 13, Conjecture 30. On 2026-10-10 primary preprints 2610.05474v1, 2610.01447v2 and 2610.07728v2 claim full proofs; the last claims C_P<=25. This draft verifies their statement/version metadata, not their proofs. The September attempted_unsolved label cannot certify current openness. Openness UNKNOWN in this audit; no new solution or novelty claim. A partial slice lemma does not settle the parent."
+  },
+  {
+    "peer": "w356",
+    "file": "~\\math-brain-inbox\\w356\\bundle_001.json",
+    "key": "pointwise-bridge",
+    "namespace": "probability.logconcave",
+    "logical_name": "refuted-ambient-isotropy-uniform-line-fiber-bridge",
+    "title": "Refuted bridge: ambient isotropy bounds every line fiber",
+    "statement": "FALSE auxiliary claim: one finite universal B bounds C_P(mu(.|P_{u-perp}X=z)) for every dimension, every isotropic log-concave mu, every unit u, and projected-almost-every z, without restandardizing the conditional law. The isotropic-simplex edge-fiber family forces essential supremum 2(n+1)(n+2)/pi^2. This stronger bridge's failure does not refute normalized KLS."
+  },
+  {
+    "peer": "w356",
+    "file": "~\\math-brain-inbox\\w356\\bundle_001.json",
+    "key": "simplex",
+    "namespace": "probability.logconcave",
+    "logical_name": "isotropic-simplex-edge-fiber-poincare-extremes",
+    "title": "Isotropic simplex: exact extremes and average of edge-fiber constants",
+    "statement": "Author-proved special case; independent review pending. For each n>=2 an isotropic uniform regular-simplex probability mu_n and an edge-parallel unit u have orthogonal-projection fibers whose inherited-arclength constants satisfy ess sup C_P=2(n+1)(n+2)/pi^2, E C_P=12/pi^2, ess sup Var=(n+1)(n+2)/6 and E Var=1. The ess sup uses the projected law and every near-extremal range has positive mass. Each fiber itself satisfies C_P=(12/pi^2)Var, so it is the conditional covariance control that fails."
+  },
+  {
+    "peer": "w356",
+    "file": "~\\math-brain-inbox\\w356\\bundle_001.json",
+    "key": "averaging-bridge",
+    "namespace": "probability.logconcave",
+    "logical_name": "refuted-unweighted-average-fiber-energy-bridge",
+    "title": "Refuted bridge: separate the average constant from fiber energy",
+    "statement": "FALSE auxiliary inference: E C_P(fiber)=B implies E Var(f|Z)<=B E |partial_u f|^2 for all Lipschitz f. The valid conditional inequality is E Var(f|Z)<=E[C_P(fiber) E(|partial_u f|^2|Z)]. Removing this covariance between fiber size and energy is unjustified. The isotropic-simplex cosine test family has a quotient 50.5 times B at n=100,k=10, although B=12/pi^2."
+  },
+  {
+    "peer": "w356",
+    "file": "~\\math-brain-inbox\\w356\\bundle_001.json",
+    "key": "weighted",
+    "namespace": "probability.logconcave",
+    "logical_name": "isotropic-simplex-cosine-weighted-directional-energy-counterexample",
+    "title": "Simplex cosine family: exact failure of unweighted fiber-energy averaging",
+    "statement": "Author-proved special case; independent review pending. In the preceding simplex let a=(n+1)(n+2), T=1-sum_{i>=2}X_i and f_k(Y)=T^k cos(pi X_1/T), extended by zero at T=0, for integer k>=1. It is Lipschitz and E[f_k|Z]=0. Its conditional-variance/directional-energy quotient is R(n,k)=(2a/pi^2)(2k)(2k+1)/((n+2k-1)(n+2k)). For k>1 it exceeds 12/pi^2; for n=100,k=10 its ratio to that mean fiber constant is exactly 50.5. As k grows, R tends to 2a/pi^2. No assertion uses this directional energy in place of the full gradient in KLS."
+  },
+  {
+    "peer": "w356",
+    "file": "~\\math-brain-inbox\\w356\\bundle_001.json",
+    "key": "interval",
+    "namespace": "probability.logconcave",
+    "logical_name": "uniform-interval-sharp-poincare-cheeger-scale-boundary",
+    "title": "Uniform interval: exact Poincare, Cheeger and scale boundary",
+    "statement": "Independently rederived by w356 from w354's claim. Uniform probability on a Euclidean interval of length L>0 has variance L^2/12, C_P=L^2/pi^2 and h=2/L. At variance one these are C_P=12/pi^2 and h=1/sqrt(3). Arbitrary dilation therefore forbids an unnormalized universal C_P upper bound or h lower bound, without contradicting the normalized KLS target."
+  },
+  {
+    "peer": "w356",
+    "file": "~\\math-brain-inbox\\w356\\bundle_001.json",
+    "key": "triangle-polynomial",
+    "namespace": "probability.logconcave",
+    "logical_name": "isotropic-triangle-polynomial-full-gradient-accounting",
+    "title": "Isotropic triangle: a smooth polynomial separates directional and full energy",
+    "statement": "Independently rederived by w356 from w354's polynomial claim. On the whitened uniform standard triangle, use the edge direction u from the simplex construction, T=<u,Y>, S=X_2 and f(Y)=T(1-S)^2. Then E[f|Z]=0, E Var(f|Z)=1/2, E|partial_u f|^2=1/3 and E|grad f|^2=13/27. Replacing the mean fiber constant 12/pi^2 in the directional conditional inequality would require 1/2<=4/pi^2, which is false. The full-gradient Rayleigh quotient is 27/26; this calculation does not refute KLS."
+  }
+]

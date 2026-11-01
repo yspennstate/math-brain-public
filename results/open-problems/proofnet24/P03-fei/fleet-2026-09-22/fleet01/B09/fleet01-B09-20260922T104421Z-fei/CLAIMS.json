@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "run_id": "fleet01-B09-20260922T104421Z-fei",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "FEI-PHYSICAL-KL-TREE-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "statement": "For any law P on nonempty subsets of a finite physical coordinate set, its occurrence-I-projection KL D_2(P||Q_r) equals the sum over any rooted physical partition tree of the history-conditioned child-occupancy KL divergences against the inherited global Q_r references q_v. Convexity and data processing give additive no-double-spending lower bounds from local occupancy statistics.",
+      "hypotheses": [
+        "finite physical coordinate set",
+        "P is a probability law on nonempty subsets",
+        "Q_r is the maximum-entropy conditional-product law matching the occurrence marginals",
+        "the rooted tree recursively partitions the physical coordinates into disjoint child blocks"
+      ],
+      "source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "8413bf3a80d120ac515a94f3be2321c9f011e968",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet01/B09/fleet01-B09-20260922T104421Z-fei/REPORT.md",
+        "section": "4"
+      },
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "source_id": "IPROJ",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "scope": "definition and conditional-product form of Q_r"
+        },
+        {
+          "mode": "applies_named_other_account_result",
+          "source_id": "HIERARCHY",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "2bf247373576eb406ca91bb3ea5f3ce5e5ab8588",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md",
+          "scope": "the one-level inherited-reference chain rule is recovered as the first split of the new arbitrary physical-tree identity"
+        }
+      ],
+      "verification_provenance": "Complete analytic proof in REPORT.md; not independently reviewed in this run."
+    },
+    {
+      "id": "FEI-RM3-PHYSICAL-KL-ALLSCALE-v1",
+      "status": "PROVED_IN_THIS_REPORT_WITH_SOURCE_PREMISE",
+      "statement": "For depth-m recursive ternary majority, the exact occurrence KL is sum_{ell=0}^{m-1}(3/2)^ell k(u_{m,ell}), with k(u)=log2((3-3u+u^2)/4)-(3/2)log2(1-u)-(1/2)log2 u and u_{m,ell}=1-(1-c_m2^{-m})^{3^{m-ell-1}}. In particular K_occ >= (3/2)^{m-1}(m/2+log2(7/16)).",
+      "source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "8413bf3a80d120ac515a94f3be2321c9f011e968",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet01/B09/fleet01-B09-20260922T104421Z-fei/REPORT.md",
+        "section": "6"
+      },
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "source_id": "LOWLEVEL_BARRIER",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "bff0d7b6c21485f386841c42582eb04f32705046",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md",
+          "scope": "exact recursive-majority spectral branching law, occurrence marginals, influence and entropy formula"
+        },
+        {
+          "mode": "uses_premise",
+          "claim_id": "FEI-PHYSICAL-KL-TREE-v1"
+        }
+      ],
+      "verification_provenance": "Analytic derivation in REPORT.md; no independent end-to-end review in this run."
+    },
+    {
+      "id": "FEI-TREE-PAY-BINF-v1",
+      "status": "OPEN",
+      "statement": "Choose source-valid physical tree statistics whose additive inherited-reference KL payments universally dominate [-B_inf^Gamma]_+ for a surviving finite-cap all-gate potential, or retain the full history-conditioned tree terms when coarse statistics are insufficient.",
+      "source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "8413bf3a80d120ac515a94f3be2321c9f011e968",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet01/B09/fleet01-B09-20260922T104421Z-fei/REPORT.md",
+        "section": "7"
+      },
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "claim_id": "FEI-PHYSICAL-KL-TREE-v1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "roots": 3,
+  "data_coordinates_with_profile": 27,
+  "assertions": 209,
+  "seconds": 0.19334860000526533,
+  "representation": "direct character amplitudes and independently coded pair matrix; only exact log-vector primitive shared",
+  "rows": [
+    {
+      "m": 0,
+      "Z_interval": [
+        "0",
+        "0"
+      ],
+      "total_endpoint_cost_interval": [
+        "67740670769427/4503599627370496",
+        "135481341538899/9007199254740992"
+      ]
+    },
+    {
+      "m": 1,
+      "Z_interval": [
+        "189960241331605/9007199254740992",
+        "94980120665827/4503599627370496"
+      ],
+      "total_endpoint_cost_interval": [
+        "67740670769427/4503599627370496",
+        "135481341538899/9007199254740992"
+      ]
+    },
+    {
+      "m": 2,
+      "Z_interval": [
+        "360560389329007/9007199254740992",
+        "11267512166533/281474976710656"
+      ],
+      "total_endpoint_cost_interval": [
+        "67740670769427/4503599627370496",
+        "135481341538899/9007199254740992"
+      ]
+    }
+  ],
+  "guards": {
+    "m0": {
+      "Z_exact": "0",
+      "positive_endpoint_interval": [
+        "67740670769427/4503599627370496",
+        "135481341538899/9007199254740992"
+      ]
+    },
+    "quarter": {
+      "cost_interval": [
+        "239930997326811/9007199254740992",
+        "479861994653703/18014398509481984"
+      ],
+      "inherited_Z_interval": [
+        "189960241331605/9007199254740992",
+        "94980120665827/4503599627370496"
+      ],
+      "shortfall_interval": [
+        "49970755995157/9007199254740992",
+        "99941511990493/18014398509481984"
+      ]
+    },
+    "controller_query": {
+      "old_profile_rho": [
+        "2621/5152",
+        "2531/5152"
+      ],
+      "changed_profile_rho": [
+        "53357/106720",
+        "53363/106720"
+      ],
+      "meaning": "DATA profile-independence of physical branch normalizers does not extend to controller queries"
+    }
+  }
+}

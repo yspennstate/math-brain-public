@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "pilot": true,
+  "root_tables": 22,
+  "roundings": 58,
+  "rank_family_checks": 44,
+  "small_tail_entropy_checks": 24,
+  "activation_fixtures": [
+    {
+      "name": "bent",
+      "n": 4,
+      "t": 1,
+      "k": 2,
+      "I": "1/2",
+      "H": {
+        "2": "6",
+        "7": "-49/32"
+      },
+      "norm_error_squared": "1/4"
+    },
+    {
+      "name": "point3",
+      "n": 5,
+      "t": 1,
+      "k": 2,
+      "I": "5/16",
+      "H": {
+        "2": "8",
+        "3": "-225/128",
+        "5": "-225/128"
+      },
+      "norm_error_squared": "1/8"
+    }
+  ],
+  "assertions": 894,
+  "own_assertions": 784,
+  "utility_assertions": 110,
+  "runtime_seconds": 0.10732919996371493,
+  "helper_sha256": "02d86e7f3830b343b4d7d49c47f7c8c3fe203264d0cd48e06f87a05ede98c376",
+  "utility_sha256": "ce976e9b0bd12307c2ba55b35c1263be419325ca5d6f2549027d1db2668920c5",
+  "arithmetic": "integer Walsh, physical errors, Fraction, prime-log identities and rational atanh intervals; no float sign decisions",
+  "limitations": "all-k escape and approximation bounds proved analytically; finite checks do not prove the universal pair selection"
+}

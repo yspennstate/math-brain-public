@@ -1,0 +1,47 @@
+{
+  "claim_id": "A092-EXACT-ORIGINAL-INFLUENCE-AND-SUMMARY-ONLY-NOGO",
+  "version": 1,
+  "exact_statement": "For every Boolean seed g on n>=1 uniform bits and k>=2 fresh bits, N=n+k, let F(x,z)=g(x)(-1)^{1[wt(x,z)<=1]}. Put D0=sum_i 1[g(0)!=g(e_i)] and D1=sum_{i!=j} 1[g(e_j)!=g(e_i+e_j)]. Then I(F)=I(g)+2^{1-N}[N(N-1)-2kD0-2D1]. Any deterministic finite r-bit summary E(z) from which the entire fresh-block residual row is decodable satisfies sum_j I(E_j)>=k^2*2^{1-k}; no such summary exists for r=1 and equality is attainable for every r>=2. For g=-1 only at 00, I(F_k)=1+(k^2-k+2)*2^{-k-1}, H(F_k)>1 for every k>=32, and H(F_k)->2. Hence H(F_k)/(inf_E sum_j I(E_j)) tends to infinity but H(F_k)/I(F_k)->2. This refutes only universal payment of total entropy from fresh-summary influence alone, not FEI.",
+  "hypotheses": [
+    "all physical inputs are independent uniform bits; Boolean signs; complete squared normalized Fourier entropy in bits",
+    "summary is a deterministic function of the fresh bits alone and must decode the full residual truth-matrix row",
+    "summary influence is measured on its actual fresh physical inputs; output independence is not assumed",
+    "D1 counts edges between weight one and two once; g may be constant for the exact formula",
+    "explicit counterfamily fixes the two-bit seed with its only negative value at 00; k is an integer >=2"
+  ],
+  "statement_sha256": "0593001031a86f0238c0168231506adc9d83611c8ff79df24879ab1d5fc387a0",
+  "contributors": [
+    "A092; A080 arbitrary-seed prime perturbation and A071 sharp two-output summary credited antecedents"
+  ],
+  "proof_source": "agents\\A092\\runs\\20261027T092049Z-fleet04-A092-counterexample-referee\\PROOF.md",
+  "proof_dependencies": [
+    "A080-COMPOSITION-PRIME-APPROXIMATION@1",
+    "A071-PRIME-CHEAP-TWO-OUTPUT-SUMMARY@1"
+  ],
+  "review_records": [
+    {
+      "reviewer": "A092 author",
+      "verdict": "AUTHOR_ANALYTIC_PROOF_WITH_EXACT_FINITE_VALIDATION",
+      "checks": [
+        "out/RESULT.json",
+        "out/AUDIT_RESULT.json"
+      ],
+      "formal_status": "SETUP_UNVERIFIED"
+    }
+  ],
+  "status": "PROVED_AUTHOR_INDEPENDENT_REVIEW_PENDING",
+  "supersedes": [],
+  "refutes": [
+    "PROPOSED-STRATEGY-ONLY: an absolute C with H(F)<=C inf_E sum_j I(E_j), for all fresh-block-decodable summaries; not attributed to another agent"
+  ],
+  "first_unproved_line": "For full FEI: pay the retained arbitrary original core from ONE unused original O(I) account, with old bookings and both full terminals.",
+  "next_consumers": [
+    "A071",
+    "A074",
+    "A075",
+    "A080",
+    "A084",
+    "A089",
+    "B20"
+  ]
+}

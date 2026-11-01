@@ -1,0 +1,87 @@
+[
+  {
+    "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+    "version": 2,
+    "exact_statement": "For every balanced Boolean b, integers t,k>=1, q=2^-k and c=1/ln2, F=1+A_k(product_{j=1}^t b_j-1) has H(F)=q[tH(b)+4k+2c]-q^2(2k+3c)+R(q), I(F)=q[tI(b)+k], where R(q)=+4c sum_{j>=3}q^j/[j(j-1)(j-2)] and 0<R(q)<=2cq^3/[3(1-q)]. Therefore [tH(b)+4k+2c-q(2k+3c)]/[tI(b)+k] <= H(F)/I(F) <= that lower bound +2cq^2/[3(1-q)(tI(b)+k)]. The exact entropy is q t H(b)+(4q-2q^2)k-2(1-q)^2 log2(1-q); variance is 2q-q^2 and minority probability q/2. If k=o(t) and 2^-k t->0 for a fixed seed, H(F)/I(F)->H(b)/I(b) with influence tending to zero. The entropy control decrement remainder G_s=R(u)-R(2u)/2 at u=2^-s, s>=2, is negative and bounded below by -8cu^3/[3(1-2u)].",
+    "hypotheses": [
+      "uniform physical cube",
+      "Boolean sign seed with mean zero",
+      "disjoint independent seed copies and fresh point controls",
+      "bit entropy"
+    ],
+    "statement_sha256": "8aa9a5e9cccb59f5a2a4f5c5d947e6bb95d449ecebad5e17575492fd4e0fc923",
+    "contributors": [
+      "A021",
+      "Claude B05 lead: sign correction"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T232653Z-fleet05-A021-rare-core-asymptotics\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "Claude B05",
+        "verdict": "ERROR_FOUND_IN_V1; CONTRIBUTOR_TO_V2",
+        "source": "~\\brain_workers\\FEI100_20261011\\claude\\B05\\runs\\20261011T225000Z-claude-B05-odd-face-transport\\REPORT.md",
+        "independent_acceptance_of_v2": false
+      }
+    ],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+        "version": 1
+      }
+    ],
+    "refutes": [
+      "A021 v1 assertion -2cq^3/[3(1-q)]<=R(q)<=0",
+      "A021 stage-1 positive decrement remainder G_s"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A025",
+      "A026",
+      "A029",
+      "A064",
+      "A087",
+      "A094",
+      "B05",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A021-LOCALIZED-ODDFACE-ORDER-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "Let b=z times the selector between the four-bit quadratic bent sign and its value flip at zero. For every t,k>=1, g_t is its disjoint t-fold tensor, q=2^-k and F=1+A_k(g_t-1). For strict badness B_i>4 Inf_i, the complete control-first order controls/selectors/bent-data/balancing-signs has Q_bad=qt/4, and the complete data-first order selectors/bent-data/balancing-signs/controls has Q_bad=qt(k+4)/16. In both orders exactly selector nodes are bad. I(F)=q(53t/16+k), so the first ratio is <=4/53 while the second diverges for t=k^2. Any adaptive selector/control-only prefix, followed by bent-data/balancing-signs/remaining-controls, has exact Q_bad=q[4t+sum_j E r_j]/16, where r_j counts unqueried controls at its j-th selector on the hypothetical all-active control branch and expectation uses fair selector histories. More generally, for every finite K,Kprime>=0 there exist balanced tensor point-activations and a complete selector-first data tree with Q_bad,K>Kprime I(F): take an even fixed m>=4 with m-2>K, the balanced bent_m/zero-flip splice seed of influence i_m=1+m/2+(m+1)2^-m, and t=k^2. Its charge ratio is at least t2^-m(m+k)/(ti_m+k), which diverges. This refutes every-tree payment, not existential selection or stopping with paid terminal entropy.",
+    "hypotheses": [
+      "actual uniform-cube Boolean signs",
+      "fresh independent point controls and seed blocks",
+      "strict spectral conditional erasure threshold",
+      "physical reach weights",
+      "specified complete query orders and specified adaptive prefix class"
+    ],
+    "statement_sha256": "0d85079adac032d37279584901486c3ac006060a4c1002569678eee10d84a332",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T232653Z-fleet05-A021-rare-core-asymptotics\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "There exist finite fixed K,Kprime such that EVERY complete physical restriction tree of EVERY Boolean function has Q_bad,K<=Kprime I."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A025",
+      "A026",
+      "A029",
+      "A064",
+      "A087",
+      "A094",
+      "B05",
+      "B20"
+    ]
+  }
+]

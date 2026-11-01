@@ -1,0 +1,223 @@
+{
+ "label": "AGENTS100",
+ "run": "<local>/run_agents100_0907",
+ "graded_at": "2026-09-07 19:08:24",
+ "protocol": "PROTOCOL_PLIT.md",
+ "keys_file": "<quarantined keys file>",
+ "sample": {
+  "n": 100,
+  "seed": 20260907,
+  "pool_size": 11867,
+  "bank_items": 12193,
+  "excluded_defect_flagged": 326,
+  "bank_file": "<local>/plit.jsonl",
+  "drawn_by": "claude-mathbank-100q-0907"
+ },
+ "extra_arms": {},
+ "per_arm": {
+  "none": {
+   "served": 100,
+   "flawed_n": 67,
+   "full_credit": 37,
+   "full_credit_rate": 0.5522388059701493,
+   "detected_any_step": 40,
+   "detected_rate": 0.5970149253731343,
+   "full_credit_with_reason_receipt": 29,
+   "clean_guard": {
+    "clean_n": 33,
+    "false_positives": 6,
+    "fp_rate": 0.18181818181818182
+   }
+  },
+  "brain": {
+   "served": 100,
+   "flawed_n": 67,
+   "full_credit": 36,
+   "full_credit_rate": 0.5373134328358209,
+   "detected_any_step": 38,
+   "detected_rate": 0.5671641791044776,
+   "full_credit_with_reason_receipt": 27,
+   "clean_guard": {
+    "clean_n": 33,
+    "false_positives": 5,
+    "fp_rate": 0.15151515151515152
+   }
+  }
+ },
+ "contrasts": [
+  {
+   "contrast": "brain vs none (PRIMARY, full credit)",
+   "n_paired": 67,
+   "a_correct": 36,
+   "b_correct": 37,
+   "diff_pp": -1.4925373134328357,
+   "ci95_pp": [
+    -11.188317800238,
+    8.203243173372329
+   ],
+   "discordant_a_only": 5,
+   "discordant_b_only": 6,
+   "mcnemar_exact_two_sided_p": 1.0,
+   "room_to_fail_pp": 44.776119402985074,
+   "a_only_ids": [
+    "plit_053d70628355f8f467571e07",
+    "plit_2077cdd130414d53bdfe0bb2",
+    "plit_39a7ea19abd653dd88f480f5",
+    "plit_6fed50e707af33b005726366",
+    "plit_c4c99d4097438966e8f76430"
+   ],
+   "b_only_ids": [
+    "plit_724bb6a07c1aafa408d7da7a",
+    "plit_ae70542618afb7c135f5288f",
+    "plit_bc9d4b32fc2075290ab80778",
+    "plit_d419c6471d38ebf3a7f6a10e",
+    "plit_e42f83cdf0b78c1bd5179ae8",
+    "plit_f5bf8edf7024c3d8a0ae1c41"
+   ]
+  },
+  {
+   "contrast": "brain vs none (detection only)",
+   "n_paired": 67,
+   "a_correct": 38,
+   "b_correct": 40,
+   "diff_pp": -2.9850746268656714,
+   "ci95_pp": [
+    -12.208260944052537,
+    6.238111690321194
+   ],
+   "discordant_a_only": 4,
+   "discordant_b_only": 6,
+   "mcnemar_exact_two_sided_p": 0.75390625,
+   "room_to_fail_pp": 40.29850746268657,
+   "a_only_ids": [
+    "plit_053d70628355f8f467571e07",
+    "plit_2077cdd130414d53bdfe0bb2",
+    "plit_39a7ea19abd653dd88f480f5",
+    "plit_6fed50e707af33b005726366"
+   ],
+   "b_only_ids": [
+    "plit_a1ec56a185e1a3b5223a7968",
+    "plit_ae70542618afb7c135f5288f",
+    "plit_bc9d4b32fc2075290ab80778",
+    "plit_d419c6471d38ebf3a7f6a10e",
+    "plit_e42f83cdf0b78c1bd5179ae8",
+    "plit_f5bf8edf7024c3d8a0ae1c41"
+   ]
+  }
+ ],
+ "guard_flags": {
+  "brain": {
+   "fp_diff_pp_vs_none": -3.0303030303030303,
+   "flag": false
+  }
+ },
+ "pilot_rule": {
+  "none_full_credit_rate": 0.5522388059701493,
+  "ceiling": false,
+  "discordance_rate": 0.16417910447761194,
+  "powered_n_flawed": 129
+ },
+ "by_operator": {
+  "const_change": {
+   "none": "3/4",
+   "brain": "3/4"
+  },
+  "hypothesis_drop": {
+   "none": "0/2",
+   "brain": "0/2"
+  },
+  "hypothesis_swap": {
+   "none": "0/7",
+   "brain": "1/7"
+  },
+  "index_shift": {
+   "none": "1/4",
+   "brain": "2/4"
+  },
+  "ineq_flip": {
+   "none": "14/17",
+   "brain": "12/17"
+  },
+  "ineq_to_eq": {
+   "none": "1/6",
+   "brain": "1/6"
+  },
+  "limit_target": {
+   "none": "0/1",
+   "brain": "1/1"
+  },
+  "limop_swap": {
+   "none": "4/4",
+   "brain": "3/4"
+  },
+  "setop_swap": {
+   "none": "2/4",
+   "brain": "2/4"
+  },
+  "sign_flip": {
+   "none": "4/5",
+   "brain": "4/5"
+  },
+  "theorem_swap": {
+   "none": "2/2",
+   "brain": "1/2"
+  },
+  "word_flip": {
+   "none": "6/11",
+   "brain": "6/11"
+  }
+ },
+ "by_tier": {
+  "A": {
+   "none": "27/41",
+   "brain": "26/41"
+  },
+  "B": {
+   "none": "10/26",
+   "brain": "10/26"
+  }
+ },
+ "by_external_refs": {
+  "0": {
+   "none": "14/26",
+   "brain": "11/26"
+  },
+  "1": {
+   "none": "13/24",
+   "brain": "14/24"
+  },
+  "2": {
+   "none": "10/17",
+   "brain": "11/17"
+  }
+ },
+ "by_kind": {
+  "corollary": {
+   "none": "3/3",
+   "brain": "3/3"
+  },
+  "lemma": {
+   "none": "22/42",
+   "brain": "22/42"
+  },
+  "proposition": {
+   "none": "9/19",
+   "brain": "8/19"
+  },
+  "theorem": {
+   "none": "3/3",
+   "brain": "3/3"
+  }
+ },
+ "by_year": {
+  "2025": {
+   "none": "13/23",
+   "brain": "10/23"
+  },
+  "2026": {
+   "none": "24/44",
+   "brain": "26/44"
+  }
+ },
+ "notes_coverage": {}
+}

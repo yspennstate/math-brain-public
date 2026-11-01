@@ -1,0 +1,134 @@
+{
+  "assembly_id": "A099-assembly-v1",
+  "run_id": "20261011T225112Z-fleet05-A099-candidate-assembly",
+  "full_fei_status": "OPEN",
+  "deliverable_status": "COMPLETE_LOCAL",
+  "new_mathematical_claims": 0,
+  "nodes": [
+    {
+      "id": "C005",
+      "version": "supplement-2026-10-11/ER",
+      "kind": "PROVED_BASELINE_REPRODUCED",
+      "parents": [],
+      "tex_label": "lem:single"
+    },
+    {
+      "id": "LSI",
+      "version": "A099-assembly-v1",
+      "kind": "STANDARD_LEMMA_REPRODUCED",
+      "parents": [],
+      "tex_label": "lem:lsi"
+    },
+    {
+      "id": "C006",
+      "version": "supplement-2026-10-11/BR",
+      "kind": "PROVED_BASELINE_REPRODUCED",
+      "parents": [
+        "LSI"
+      ],
+      "tex_label": "lem:block"
+    },
+    {
+      "id": "DOWNWARD",
+      "version": "supplement-2026-10-11/ER",
+      "kind": "PROVED_BASELINE_REPRODUCED",
+      "parents": [],
+      "tex_label": "lem:downward"
+    },
+    {
+      "id": "C018",
+      "version": "supplement-2026-10-11/ER",
+      "kind": "PROVED_IMPLICATION_PAYMENT_OPEN",
+      "parents": [
+        "C005",
+        "DOWNWARD"
+      ],
+      "tex_label": "thm:erasure"
+    },
+    {
+      "id": "C019",
+      "version": "A099-assembly-v1",
+      "kind": "PROVED_IMPLICATION_PAYMENT_OPEN",
+      "parents": [
+        "C006"
+      ],
+      "tex_label": "thm:tree"
+    },
+    {
+      "id": "COMPLETE",
+      "version": "A097-v1",
+      "kind": "PROVED_INTERFACE_REPRODUCED",
+      "parents": [],
+      "tex_label": "lem:complete"
+    },
+    {
+      "id": "A097-COMPATIBLE-LEAF-REFERENCE-TRANSFER",
+      "version": 1,
+      "kind": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "parents": [
+        "C006",
+        "COMPLETE"
+      ],
+      "tex_label": "thm:reference"
+    },
+    {
+      "id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+      "version": 1,
+      "kind": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE",
+      "parents": [],
+      "tex_label": "prop:b05"
+    }
+  ],
+  "open_leaves": [
+    {
+      "id": "OPEN-C018-L",
+      "quantifiers": "exists finite K>=0; all n>=0; all real a satisfying complete signed Boolean convolution",
+      "first_unproved_line": "L(f)<=K I(f)",
+      "tex_label": "conj:universal",
+      "effect": "FEI with K+3/ln(2)"
+    },
+    {
+      "id": "OPEN-C019-TREE",
+      "quantifiers": "exists finite K,C_leaf and uniformly certified leaf class; for every Boolean f exists finite actual tree",
+      "first_unproved_line": "sum_h pi_h B_h<=K I_removed with certified terminal entropies",
+      "tex_label": "conj:tree",
+      "effect": "FEI with max(K+2/ln(2),C_leaf)"
+    },
+    {
+      "id": "OPEN-REF-TRANSFER",
+      "quantifiers": "exists finite K,C_leaf; for every Boolean f exists actual tree and supported complete terminal references, interior lift G",
+      "first_unproved_line": "sum_h pi_h(B_h-kappa_h)<=K I_removed AND CE(P_l,Q_l)<=C_leaf I(f_l)",
+      "tex_label": "conj:reference",
+      "effect": "FEI with max(K+2/ln(2),C_leaf)"
+    },
+    {
+      "id": "OPEN-C024-HISTORY",
+      "quantifiers": "exists finite K>=0; all n>=0 and Boolean f; explicitly defined Q_bias improper integral in nats",
+      "first_unproved_line": "Q_bias(f)<=K I(f)",
+      "tex_label": null,
+      "effect": "Historical source reports comparison to C_path; comparison not imported or independently reconstructed here"
+    }
+  ],
+  "independent_integrated_audits": [
+    {
+      "reviewer": "A090",
+      "verdict": "PENDING"
+    },
+    {
+      "reviewer": "A094",
+      "verdict": "PENDING"
+    }
+  ],
+  "acceptance_guard": "No open leaf may become a theorem by source status, finite tests, or artifact completion; both substantive independent chain audits required for a major candidate.",
+  "B05_scope": "Refutes specified all-coordinate local Kd+A V+B M payment; does not refute selectable-coordinate, stopping-tree or FEI targets.",
+  "A097_credit_scope": "Posterior credit bounded by terminal reference KL slack; must use compatible lift G with no unpriced resets.",
+  "historical_C024": "Real multivalued trajectory process, not Boolean physical restrictions; external comparison not imported. Explicit Q_bias leaf supplied.",
+  "source_manifest": "out/SOURCE_RECEIPTS.json",
+  "validation": "out/VALIDATION.json",
+  "persistence": {
+    "local": "saved",
+    "supervisor_copy": "NOT_VERIFIED",
+    "brain_mirror": "NOT_VERIFIED",
+    "public_release": "NONE"
+  }
+}

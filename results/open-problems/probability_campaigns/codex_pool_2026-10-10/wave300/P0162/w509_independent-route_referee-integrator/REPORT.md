@@ -1,0 +1,15 @@
+# P0162 referee report — 2026-10-10
+
+The exact target is the Boolean Fourier entropy–influence conjecture: `H(f) <= C I(f)` for all Boolean sign functions on the uniform cube. O'Donnell–Wright–Zhou state it with the full formulas; the original Friedgut–Kalai 1996 paper is identified. May and September 2026 papers still treat general FEI as a conjecture while proving special classes. A complete October 2026 openness check was not established, so `SOURCE_STATUS.json` says UNKNOWN. The local F0090 percolation crossing result is a special case, not a retirement of P0162.
+
+I independently checked w507's restriction ledger, bent-splice sign counts, exact influence range, and parity-twist counterexample; w508's one-point and sparse-flip bounds and coordinate logarithmic bound; and w504's good base coordinate inequality and corrected bundle_003. `REVIEW_PACKET.md` gives each derivation and its limit. `REVIEW_VERDICTS.jsonl` has 11 KEEP rows and two FIX rows: w506 withdrew a sign-misstated duplicate draft, and w504's two stale drafts should be withdrawn before its corrected revision is integrated. The hardest open piece is a justified dimension-free good-coordinate or aggregate entropy charge for arbitrary Boolean functions. None of these partial results proves general FEI.
+
+I submitted one small source-revision draft at `~/math-brain-inbox/w509/bundle_001.json`, linking the exact conjecture statement to the existing failed-route card. It uses the accepted CC-BY-SA source tag and requests a revision of the existing P0162 card. The bundle was JSON parsed but has not been independently bundle-audited, ingested, or probed for retrieval; `BUNDLE_STATUS.json` records those separately. W507 and w508 already submitted the obstruction nodes, so I did not resubmit duplicates. A scoped proof-audit hook was proposed at `~/primary_directive/hooks1000/proposals/math-w509.jsonl`.
+
+Reproduction: `python -X utf8 reproduce_bent.py > REPRODUCTION.json` returned selector defect ratios 8.0300138475, 8.0300138475, and 9.8458561834 at `(m,K)=(4,1),(6,2),(8,3)`. This was an auxiliary bounded run under a self-imposed cap, without a central fresh compute-gate receipt; the analytic checks, not the run, support the verdicts. JSON parsing of the submitted and w506 draft bundles succeeded. No live store or recall control was changed, so no brain-performance improvement is claimed.
+
+Apply: the validating coordinator reviews `BUNDLE_001_DRAFT.json` against the staged inbox copy, consolidates duplicate restriction-ledger drafts, then uses the normal bundle validator and integrator and checks ingestion and retrieval receipts. No code patch is needed.
+
+Risk: the superseding P0162 draft updates an existing concept, and the external-source license and relation should be checked before ingestion. The original 1996 PDF's exact conjecture text was not extracted; the full modern statement was verified from the O'Donnell–Wright–Zhou primary research paper.
+
+NEXT: Coordinator audit the staged P0162 source revision and dedupe peer ledger cards before integration.

@@ -1,0 +1,382 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B06",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A026",
+      "stream": "B06",
+      "topic": "Good-coordinate erasure",
+      "target_statement": "Attack the existential inequality B_i(f)<=K I_i(f) for some relevant i. Use the exact entropy decrement identity and distinguish a genuine coordinate-selection theorem from an all-coordinate claim.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A026-D1",
+          "description": "GOOD_COORDINATE_TARGET.tex: exact selection rule and proposed universal or restricted theorem",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A026-D2",
+          "description": "SELECTION_SCOPE.md: tested controls, first open line, and FEI implication",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "For each nonconstant function select a coordinate with I_i>0 and prove B_i≤K I_i with one stated K, or explicitly restrict the class.",
+        "Use the exact mismatch/KL rebate and recovered mechanism lower-bound controls; do not restart a known-false all-coordinate or K=4 erasure claim.",
+        "If a universal selection theorem is obtained, give the full physical induction and constant K+2/ln2; otherwise keep that universal target unproved."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A018",
+          "interface": "exact block/one-coordinate erasure interface"
+        },
+        {
+          "agent_id": "A021",
+          "interface": "rare mismatch/KL obstruction"
+        },
+        {
+          "agent_id": "A061",
+          "interface": "entropy telescope"
+        },
+        {
+          "agent_id": "A062",
+          "interface": "influence telescope"
+        },
+        {
+          "agent_id": "A030",
+          "interface": "restriction-plateau controls"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A003",
+          "interface_use": "existential erasure target"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A new selection inequality for a named class, or a proved obstruction to the precise selection rule, supports another pilot.",
+      "source_ids": [
+        "reductions_restrictions",
+        "reductions_multiplexers",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F06",
+        "F07"
+      ]
+    },
+    {
+      "agent_id": "A027",
+      "stream": "B06",
+      "topic": "Block selection",
+      "target_statement": "Use the recovered exact block identity B_W=Σ_T R_T H(ν_T), M_W=a−Σ_T R_T H(r_T), Δ_WH=B_W+M_W, with the mixing term controlled by queried influence. Seek a proved adaptive proper-block or stopping-tree selection theorem paying the remaining conditional entropy. The choice W=[n] leaves the full entropy H(f) and is not a reduction.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A027-D1",
+          "description": "ADAPTIVE_BLOCK_SELECTION.tex: block rule, influence loss, and conditional charge",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A027-D2",
+          "description": "BLOCK_CONTROLS.md: plateau, bent-splice, and proper-block comparisons",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Start with B_W=Σ_T R_T H(ν_T) and 0≤M_W≤(2/ln2)I_W; define I_W as the total queried influence under the appropriate block telescope.",
+        "Prove a structural rule selecting proper/adaptive blocks or paying a complete tree; selecting W=[n] leaves B_W=H(f) and is not a simplification.",
+        "State every physical conditioning law and show a quantified benefit on a coded plateau while retaining the bent-splice obstruction."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A018",
+          "interface": "B_W/M_W collision-to-restriction interface"
+        },
+        {
+          "agent_id": "A062",
+          "interface": "block influence telescope"
+        },
+        {
+          "agent_id": "A030",
+          "interface": "long restriction plateaux"
+        },
+        {
+          "agent_id": "A023",
+          "interface": "scoped rarity amortization"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A065",
+          "interface_use": "proposed block selection rule"
+        },
+        {
+          "agent_id": "A087",
+          "interface_use": "block selection"
+        },
+        {
+          "agent_id": "A097",
+          "interface_use": "exact block debt"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A nontrivial proper-block selection/payment theorem or a rigorous failure of the proposed rule is delivered.",
+      "source_ids": [
+        "reductions_restrictions",
+        "reductions_multiplexers",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F06",
+        "F07"
+      ]
+    },
+    {
+      "agent_id": "A028",
+      "stream": "B06",
+      "topic": "Stopping-tree payment",
+      "target_statement": "Design trees stopping at the recovered regular, bounded-overlap, or threshold-formula classes. Prove the full expected path cost plus terminal cost is at most a fixed multiple of root influence.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A028-D1",
+          "description": "TERMINAL_CLASS_STOPPING.tex: physical tree and terminal membership proof",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A028-D2",
+          "description": "PATH_AND_LEAF_PAYMENT.md: expected cost plus terminal entropy",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Prove that every leaf belongs to a published terminal class with uniformly controlled class parameters; calling a leaf a threshold/formula is insufficient without membership.",
+        "Bound the complete weighted path sum and terminal H together, and identify the single root influence budget from which both are paid.",
+        "Treat any assertion that all Boolean functions cheaply reach those leaves as the new theorem to prove, never an assumed representation premise."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A023",
+          "interface": "rare first-revelation payment"
+        },
+        {
+          "agent_id": "A029",
+          "interface": "two-child deficit recurrence"
+        },
+        {
+          "agent_id": "A061",
+          "interface": "entropy telescope"
+        },
+        {
+          "agent_id": "A062",
+          "interface": "influence telescope"
+        },
+        {
+          "agent_id": "A013",
+          "interface": "terminal-class stability"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A059",
+          "interface_use": "stopping at known terminals"
+        },
+        {
+          "agent_id": "A065",
+          "interface_use": "stopping policy and terminal claim"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A fully paid stopping theorem on an unbounded family, or a quantified hitting-cost obstruction, is the required next increment.",
+      "source_ids": [
+        "reductions_restrictions",
+        "reductions_multiplexers",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F06",
+        "F07"
+      ]
+    },
+    {
+      "agent_id": "A029",
+      "stream": "B06",
+      "topic": "Child-deficit transport",
+      "target_statement": "Keep the actual deficits of both physical children in an induction. Derive conditions under which a difficult split is compensated by child slack, and test that the slack is not counted repeatedly.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A029-D1",
+          "description": "CHILD_DEFICIT_TRANSPORT.tex: recurrence for D_K(f)=K I(f)−H(f)",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A029-D2",
+          "description": "SLACK_FLOW.json: parent/child accounting with no duplicate credits",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Derive D_K(f)=average D_K(children)+K I_i(f)−Δ_iH(f) using the actual two children and all signs/means.",
+        "State when child nonnegativity is an induction hypothesis, a proved terminal fact, or still open; zero child slack cannot be assumed.",
+        "Show that one child's slack is not spent once at its parent and again at a descendant; hand the finite-tree transport interface to A064."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A061",
+          "interface": "exact entropy process"
+        },
+        {
+          "agent_id": "A062",
+          "interface": "influence process"
+        },
+        {
+          "agent_id": "A037",
+          "interface": "released-credit bookkeeping"
+        },
+        {
+          "agent_id": "A024",
+          "interface": "actual physical-child normalizations"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A028",
+          "interface_use": "two-child deficit recurrence"
+        },
+        {
+          "agent_id": "A052",
+          "interface_use": "actual child-deficit identity"
+        },
+        {
+          "agent_id": "A064",
+          "interface_use": "two-child deficit transport"
+        },
+        {
+          "agent_id": "A087",
+          "interface_use": "child-deficit transport"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A correct compensated split lemma with a proved application, or an exact counterexample to its proposed slack rule.",
+      "source_ids": [
+        "reductions_restrictions",
+        "reductions_multiplexers",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F06",
+        "F07"
+      ]
+    },
+    {
+      "agent_id": "A030",
+      "stream": "B06",
+      "topic": "Restriction plateau tests",
+      "target_statement": "Use separated Fourier-support coding to create functions with long entropy-preserving restriction plateaux. Determine what a global selection or stopping argument sees that bounded-depth local statistics miss.",
+      "work_type": "interface_derivation",
+      "priority": "P0",
+      "mathematical_design_status": "RECOVERED_BASELINE",
+      "deliverables": [
+        {
+          "deliverable_id": "A030-D1",
+          "description": "RESTRICTION_PLATEAUX.tex: explicit coded Boolean family and persistence depth",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A030-D2",
+          "description": "PLATEAU_SELECTION_DIAGNOSTIC.md: what each proposed local/block rule observes",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Prove entropy preservation or its stated quantitative error for every restriction in the declared bounded-depth regime.",
+        "Give the actual truth-table/circuit construction and track added influence from the auxiliary code.",
+        "Distinguish an obstruction to a bounded-depth statistic from an obstruction to all global coordinate or block choices."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A002",
+          "interface": "separated-support coding transform"
+        },
+        {
+          "agent_id": "A017",
+          "interface": "controlled input reuse"
+        },
+        {
+          "agent_id": "A065",
+          "interface": "candidate stopping policies"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A026",
+          "interface_use": "restriction-plateau controls"
+        },
+        {
+          "agent_id": "A027",
+          "interface_use": "long restriction plateaux"
+        },
+        {
+          "agent_id": "A065",
+          "interface_use": "coded plateau controls"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One reusable parameterized plateau control isolates a concrete weakness of a live selection rule.",
+      "source_ids": [
+        "reductions_restrictions",
+        "reductions_multiplexers",
+        "brain_route_map",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F05",
+        "F06",
+        "F07"
+      ]
+    }
+  ]
+}

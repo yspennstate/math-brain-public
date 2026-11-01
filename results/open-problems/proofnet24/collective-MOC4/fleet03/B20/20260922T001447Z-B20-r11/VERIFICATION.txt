@@ -1,0 +1,12 @@
+Independent in-run exact symbolic/rational check: PASS
+
+For the rational orthogonal U, complex spectra a,b and eta=-4-5i in REPORT.md:
+K* = 2515/2
+V* = 1825/2
+Delta = 345
+A = 2563648/390625
+S = 225456591/390625
+A+S = 228020239/390625
+A+S-Delta = 93254614/390625 > 0
+
+The in-run calculation also verified D=(H P H^T)_{mean-zero block} exactly and F0=K*-A-S exactly. The companion verify_scalar_slack.py reproduces these identities using only fractions.Fraction arithmetic.

@@ -1,0 +1,13 @@
+{
+  "helper_version": "shifted-row-v1; code/check_shifted.py",
+  "actual_Boolean_family": "Every Boolean core on n=0,1,2,3 uniform signs; physical OR(x,G) and AND(x,G)",
+  "parameter_domain": "n in {0,1,2,3}; every truth table; no escalation",
+  "case_count": {"cores":278,"wrappers":556,"data_splits":1608,"adaptive_trees":2224},
+  "symmetry_reduction": "none; exhaustive truth tables in the frozen domain",
+  "policies": "At each current physical core choose largest or smallest influence, ties by current coordinate index; complete and stop at at most one residual bit/constant; then query x",
+  "arithmetic": "Integer FWHT, rational spectra/influences, exact rational log-product identities; signed outward log intervals using 24-term atanh series, 70-bit dyadic rounding",
+  "memory_estimate_MB":100,
+  "maximum_runtime_seconds":60,
+  "certificate_target": "Exact spectra, signed empty-row transport and entropy potential; |D|<=d nodewise and |sum wD|<=consumed core influence; terminal x charge <=4 original x influence",
+  "finite_to_infinite": "SHIFTED_ROW_PROOF.md is the analytic proof; finite enumeration verifies implementation, not the all-dimensional step"
+}

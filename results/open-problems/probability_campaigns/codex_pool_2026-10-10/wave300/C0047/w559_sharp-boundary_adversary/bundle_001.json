@@ -1,0 +1,155 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w559",
+  "bundle_slug": "c0047-triangle-boundary-source-correction-w559-001",
+  "entries": [
+    {
+      "key": "spectral-criterion",
+      "namespace": "probability.percolation",
+      "logical_name": "benjamini-schramm-sufficient-spectral-criterion-normalized-srw",
+      "kind": "concept",
+      "title": "Benjamini-Schramm spectral criterion with explicit normalization",
+      "statement": "KNOWN SUFFICIENT CRITERION; source audit pending. For independent Bernoulli bond percolation on an infinite connected d-regular simple Cayley graph G, write rho=||A_G||/d for simple random walk. If d*rho*p_c(G)<1, then p_c(G)<p_u(G). The condition is sufficient and cannot be inferred from nonamenability alone for the prescribed generators.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite connected locally finite d-regular simple Cayley graph",
+        "Independent Bernoulli bond percolation",
+        "rho is the normalized simple-random-walk spectral radius"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "doi:10.1214/ECP.v1-978:theorem-4",
+        "url": "https://www.maths.tcd.ie/EMIS/journals/EJP-ECP/article/download/978/978-3321-1-PB.pdf",
+        "revision": "published-1996-as-read-20261010-theorem-4",
+        "license": "cc-by-3.0",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "false-bridge",
+      "namespace": "probability.percolation",
+      "logical_name": "false-universal-nonamenability-spectral-criterion-bridge",
+      "kind": "concept",
+      "title": "False universal spectral bridge for prescribed Cayley generators",
+      "statement": "FALSE AUXILIARY CLAIM, recorded for refutation: every infinite connected nonamenable d-regular simple Cayley graph with independent Bernoulli bond percolation satisfies d*rho*p_c<1, where rho=||A||/d. This is stronger than the nonuniqueness conjecture and fails on the explicitly specified simple C_2*C_3 graph.",
+      "proof_text": null,
+      "assumptions": [
+        "This entry records a false proposed bridge, not an accepted theorem",
+        "rho=||A||/d"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:false-spectral-bridge",
+        "url": "urn:owner-own-work:w559:false-spectral-bridge",
+        "revision": "author-checked-20261010-draft-v1",
+        "license": "owner-own-work (campaign derivation; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "triangle-boundary",
+      "namespace": "probability.percolation",
+      "logical_name": "simple-c2-free-c3-bond-threshold-and-spectral-obstruction",
+      "kind": "concept",
+      "title": "Simple C_2*C_3 triangle-block boundary and spectral obstruction",
+      "statement": "DRAFT AUTHOR PROOF; independent review pending; no novelty claim. Let G be the simple undirected Cayley graph of <a,b | a^2=b^3=1> with the symmetric generating set {a,b,b^-1}. Each unordered a-edge appears once. In iid Bernoulli bond percolation, p_c=q, the unique root in (0,1) of 2q^2+2q^3-2q^4=1, with 0.63<q<0.64, and p_u=1. No infinite cluster exists at p<=q; for each fixed q<p<1 there are almost surely infinitely many; at p=1 there is one. The edge Cheeger constant is 1/3. For rho=||A||/3, the triangle Rayleigh bound gives 3*rho*p_c>=2q>1.26. This refutes universal satisfaction of the sufficient spectral criterion while proving this special case of nonuniqueness.",
+      "proof_text": null,
+      "assumptions": [
+        "Simple undirected graph: one a-edge, not two parallel a-bonds",
+        "Independent common-p bond edges",
+        "Fixed-p almost-sure assertions",
+        "w560 independent infinite-graph proof review pending"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:triangle-block-boundary",
+        "url": "urn:owner-own-work:w559:triangle-block-boundary",
+        "revision": "author-checked-20261010-draft-v1",
+        "license": "owner-own-work (campaign derivation; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-correction",
+      "namespace": "probability.percolation",
+      "logical_name": "c0047-a001-normalized-spectral-source-correction",
+      "kind": "concept",
+      "title": "C0047-A001 source normalization correction",
+      "statement": "AUDIT CORRECTION (w559, 2026-10-10; independent review pending) of the 2026-09-07 C0047-A001 spectral route. For independent Bernoulli bond percolation on an infinite connected d-regular simple Cayley graph G, let rho=||A_G||/d denote the normalized simple-random-walk spectral radius. Benjamini-Schramm 1996, Theorem 4, printed p.76 (bond extension in section 2), and Juschenko-Nagnibeda 2015, Theorem 2, give the sufficient condition d*rho*p_c(G)<1 for p_c(G)<p_u(G). The original p_c<1/rho quotation omitted d and is not that criterion: it is automatic when rho<1 and p_c<=1. Nonamenability does not imply the repaired criterion for a prescribed generating set. In the simple Cayley graph C_2*C_3 with generators {a,b,b^-1}, p_c=q is the root of 2q^2+2q^3-2q^4=1 in (0.63,0.64), p_u=1, and ||A||>=2, so d*rho*p_c>1.26. This counterexample refutes only the stronger universal spectral bridge. An existence theorem for a favorable generating multiset does not establish the result for every prescribed simple generating set. The parent conjecture is not solved by this packet; current 2026 openness is UNKNOWN because a recent public full-result claim has not received a mathematical or comparator proof check here.",
+      "proof_text": null,
+      "assumptions": [
+        "A correction to the unreviewed 2026-09-07 attempt record",
+        "Canonical historical node is preserved",
+        "No full-conjecture solution or current-openness certification"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:c0047-source-correction",
+        "url": "urn:owner-own-work:w559:c0047-source-correction",
+        "revision": "author-checked-20261010-draft-v1",
+        "license": "owner-own-work (campaign derivation; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "multiplicity",
+      "namespace": "probability.percolation",
+      "logical_name": "c2-order-two-bond-edge-multiplicity-threshold-boundary",
+      "kind": "concept",
+      "title": "Order-two Cayley edge multiplicity changes bond thresholds",
+      "statement": "DRAFT AUTHOR MODEL CHECK; independent review pending. In the simple C_2*C_3 triangle graph with one a-edge per unordered pair, the forward branching mean is 2p^2+2p^3-2p^4. Replacing every a-edge by two independent parallel Bernoulli(p) bonds changes its connection probability to 2p-p^2 and the branching mean to 4p^2+2p^3-6p^4+2p^5. Its critical equation is 2p^5-6p^4+2p^3+4p^2-1=0, with root in (0.51,0.53), rather than the simple-graph root in (0.63,0.64). These polynomials are checked by 32 and 128 exact local configurations respectively. Kozakova 2008 reports the latter polynomial with Cayley edge multiplicity; that published number must not be transplanted into the simple graph at the same p.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent bond model, not site percolation",
+        "Parallel bonds are distinct random variables",
+        "Published-model interpretation is identified as an inference in MODEL_CONVENTIONS.md"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:order-two-multiplicity-boundary",
+        "url": "urn:owner-own-work:w559:order-two-multiplicity-boundary",
+        "revision": "author-checked-20261010-draft-v1",
+        "license": "owner-own-work (campaign derivation; independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "triangle-boundary",
+      "to_key": "false-bridge",
+      "kind": "refutes",
+      "rationale": "The triangle graph is nonamenable but 3*rho*p_c>1.26, so the stated universal inequality fails."
+    },
+    {
+      "from_key": "triangle-boundary",
+      "to_key": "spectral-criterion",
+      "kind": "semantic_association",
+      "rationale": "The special case has a nonuniqueness phase despite failing this sufficient criterion."
+    },
+    {
+      "from_key": "source-correction",
+      "to_key": "spectral-criterion",
+      "kind": "cites",
+      "rationale": "The corrected attempt records the primary theorem with its missing degree factor restored."
+    },
+    {
+      "from_key": "source-correction",
+      "to_existing_logical": "math:probability.statmech:attempt-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+      "kind": "semantic_association",
+      "rationale": "Corrects the exact normalized-SRW criterion quotation in this historical attempt; it does not refute the parent conjecture."
+    },
+    {
+      "from_key": "triangle-boundary",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+      "kind": "specializes",
+      "rationale": "The prescribed simple C_2*C_3 Cayley graph is one nonamenable group/generating-set instance of the universally quantified target."
+    },
+    {
+      "from_key": "multiplicity",
+      "to_key": "triangle-boundary",
+      "kind": "semantic_association",
+      "rationale": "Distinguishes the single-a-edge graph from a parallel-a-bond model on the same vertices."
+    }
+  ]
+}

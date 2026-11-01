@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "stream_id": "B01",
+  "primary_packet_id": "A003",
+  "claims": [
+    {
+      "claim_id": "B01_A003_PARITY_TOWER_GU_TRANSFER",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_RESTRICTED_ALL_DEPTH_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "exact_statement": "For every Boolean P and d>=1, the parity-balanced fair half-activation tower T_d(P) satisfies the exact G recurrence in PROOF.md and G(T_d(P))<=2^-d G(P)+K_*, K_*=15/4-(27/16)log2(4/3). Hence GU'(a,b) for P, with a>=0 and 0<=b<1, implies GU'(a+K_*,b) for T_d(P).",
+      "hypotheses": [
+        "genuine Boolean base P",
+        "fresh independent fair selector at every level",
+        "fresh independent parity character before every activation",
+        "bits normalization"
+      ],
+      "proof_source": "PROOF.md",
+      "proof_dependencies": [],
+      "review_records": [],
+      "status_detail": "The proof is self-contained; earlier activation work and B19 review are used for comparison and scope only.",
+      "first_unproved_line": "No perturbed scalar recurrence is proved for imperfect balancing, biased selectors, or shared variables.",
+      "next_consumers": ["A005", "A023", "A086", "A094", "B05", "B18", "B20"],
+      "full_fei_status": "OPEN"
+    }
+  ]
+}
+

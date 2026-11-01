@@ -1,0 +1,9 @@
+STATE: NEEDS_REVIEW
+NEXT: Finish K1/gate/edge admission audits; next proof step is a microscopic Riesz six-fold orientational lower bound.
+
+2026-10-10: Session started; source recovery and bounded brain recall pending.
+2026-10-10: First source-audit row saved. Lewin arXiv:2202.09240v2 VI.2 recovered; current openness UNKNOWN. Recall timed out after 62.271 seconds with zero output; consulted perceptron_proof_open_gaps_fleet_2026_07_12. Selected candidate lane: finite-window Delaunay bond stabilization and covariance/mixing obstruction.
+2026-10-10: G1-G6 and hardest remaining microscopic orientational lower-bound gap saved in BRIDGE_PROOF.md. STUCK: team_comm say rejected twice because w549 has no campaign membership; switching to the existing direct mesh send interface. No message is counted as sent until receipt.
+2026-10-10: Source-only packet sent to w550 (msg-31122bcb17). Direct referee send found w551 unregistered; team_comm campaign route is being used for its automatic registration retry. Exact checks PASS in 0.008066 seconds: shield slack 159/1024; all 15 pairs independent in the 32-state negative fixture, yet full block alpha=1/4. The scope gate changes false admission 1 to 0 on this single fixture; no live gain claimed. Other active P0321 provers w543 and w546 use Fourier/shear and Gaussian boundary routes, disjoint from this geometry lane.
+2026-10-10: STUCK: PowerShell stripped quotes in two inline Python probes; all subsequent Python probes use saved script files, which ran successfully.
+2026-10-10T06:16:33.758834+00:00: Submitted 8-entry/8-relation draft, four proof-bearing entries; w551 and w550 conditionally kept G1-G6. Exact checks PASS; code/hook proposals and complete review_packet saved. No P0321 solution, live-store write, ingestion, new-node retrievability, or verified distinct-login admission claimed.

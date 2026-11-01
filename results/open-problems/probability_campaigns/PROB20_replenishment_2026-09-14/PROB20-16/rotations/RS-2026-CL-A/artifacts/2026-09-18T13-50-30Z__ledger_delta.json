@@ -1,0 +1,89 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target": "RS-2026-CL-A",
+  "report_kind": "research_run",
+  "input_snapshot_sha": "4d113ae1bdf6dee87e21ce2a9f34f0046b259629",
+  "pre_delivery_snapshot_sha": "be65665f35320049dc1cf1611a628fe7daad2fd2",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-18/2026-09-18T12-50-30Z__report.md",
+    "creation_commit": "c2b6e77c67d12f7214cd77cd15f07ab80f75172c",
+    "blob": "ffbb89c92e240a975ca5a5cf8ad917e406ee05d1"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-18/2026-09-18T13-50-30Z__report.md",
+    "creation_commit": "daf5b49778de3409b6f9a55188c2e5c7a326b67f",
+    "blob": "d80ed5cf5f2a06b584df1a569f5c83258a3defed"
+  },
+  "source": {
+    "author": "Anastasia Kireeva",
+    "post": "Low-degree hardness of finding the largest clique in Erdos-Renyi graph (problems 36-38)",
+    "posted": "2026-06-05",
+    "displayed_problem": "Open Problem 35",
+    "url": "https://randomstrasse101.math.ethz.ch/posts/clique-low-degree/",
+    "fresh_check_date": "2026-09-18",
+    "fresh_status": "live/open"
+  },
+  "metric": {
+    "name": "E_framework",
+    "before": 1,
+    "after": 1,
+    "movement": "no frozen-metric movement; material remaining-obligation movement"
+  },
+  "methods": [
+    {
+      "id": "B7",
+      "name": "TAKE THE LIMIT",
+      "outcome": "Defined the D-scale pressure and critical reference radius; proved a coefficient-root/abscissa sufficient criterion for scalar degree noise."
+    },
+    {
+      "id": "B21",
+      "name": "ASK WHO ELSE HAS THIS SHAPE",
+      "outcome": "Combined the exact symmetrized-code orbit collision formula with weighted Cauchy and the classical MacWilliams identity to prove 1+chi2 >= 4^{-k}(1+q)^E for every coordinate-permutation symmetrization."
+    },
+    {
+      "id": "B29",
+      "name": "ADD THE POINTS AT INFINITY",
+      "outcome": "Applied the MacWilliams collision lower bound to Mao's alternating-form construction and proved D-scale pressure diverges for every fixed q>0, so q_c=0; identified the obstruction at ambient degree j/D -> infinity rather than degree reassembly."
+    }
+  ],
+  "new_results": [
+    "For a binary linear code C <= F_2^E of dimension k and any finite coordinate-permutation group G, the symmetrized noised law satisfies 1+chi2(T_sqrt(q) P_{C,G} || U_E) >= 4^{-k}(1+q)^E for 0<=q<=1.",
+    "If k_n/E_n -> R and E_n/D_n -> infinity, then every q with log(1+q)>2R log 2 has infinite D-scale pressure; in the low-rate case R=0 the critical reference radius is q_c=0.",
+    "Mao's construction is uniform on the image of a linear map from Alt(K) before vertex relabeling, with k_n <= binom(K,2)=O((log n)^{2r}), E_n=binom(n,2), and D_n=Theta((log n)^{r-1}); hence its D-scale noised chi-square pressure tends to +infinity at every fixed q>0.",
+    "For arbitrary scalar degree spectra, Gamma=limsup_n sup_{j>D_n} b_{n,j}^{1/j}; if q Gamma<1 then the noised high-degree tail vanishes geometrically."
+  ],
+  "mathematical_status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / CRITICAL_PRESSURE_AND_MACWILLIAMS_COLLISION_PROGRESS",
+  "remaining_obligation_stagnation_count": 0,
+  "hard_recoveries_consumed": 1,
+  "qualifying_audits": {
+    "count": "0/2",
+    "p26": "missing",
+    "distinct_other": "missing"
+  },
+  "history_gaps": [
+    "No canonical probability_1000_intake row is exposed for this later Randomstrasse item; it entered through the later queue/claim path."
+  ],
+  "prior_art": {
+    "classical": [
+      "MacWilliams/Delsarte weight-enumerator identities",
+      "Reed-Muller weight-distribution and list-decoding theory including Kaufman-Lovett-Porat 2012",
+      "finite-group averaging and orbit decompositions",
+      "positive-coefficient root tests/log-sum-exp convexity",
+      "degree-diagonal Boolean product noise"
+    ],
+    "novelty": "UNVERIFIED",
+    "bounded_search_note": "No exact source-complete characterization or exact inference formulation of the MacWilliams-orbit-collision lower bound was recovered; negative search is not novelty proof."
+  },
+  "mandatory_comparators": [
+    "Hsieh-Kane-Kothari-Li-Mohanty-Tiegel arXiv:2601.05850",
+    "Songtao Mao arXiv:2607.20318",
+    "Xuan Chen-Shuangping Li arXiv:2608.06279",
+    "Buhai-Hsieh-Jain-Kothari arXiv:2505.17360"
+  ],
+  "next_methods": [
+    "B4 PROVE SOMETHING WEAKER, COMPLETELY: derive one-reference pressure from a concrete Chen-Li positive subclass.",
+    "B12 FIND WHAT IS CONSERVED: seek a model-level Renyi/collision-entropy or codimension quantity upper-controlling reference pressure.",
+    "B26 HUNT THE SPORADIC CASE: test high-rate codes with source-superlog dual distance for positive critical radius."
+  ],
+  "delivery": "GitHub only; no shared RESULTS/QUEUE/POSTED edits; no checker created because no new finite computational core required certification."
+}

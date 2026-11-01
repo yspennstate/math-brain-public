@@ -1,0 +1,41 @@
+{
+  "problem_id": "P0038",
+  "command": "python -X utf8 check_remaining.py",
+  "label": "finite checks; independent audit pending",
+  "elapsed_seconds": 18.799674000008963,
+  "exact_layer_checks": [
+    {
+      "depth": 4,
+      "linear_corridor_resistance": 1.625,
+      "linear_exact": "13/8",
+      "exponential_corridor_resistance": 4
+    },
+    {
+      "depth": 8,
+      "linear_corridor_resistance": 1.9609375,
+      "linear_exact": "251/128",
+      "exponential_corridor_resistance": 8
+    },
+    {
+      "depth": 16,
+      "linear_corridor_resistance": 1.999725341796875,
+      "linear_exact": "65527/32768",
+      "exponential_corridor_resistance": 16
+    },
+    {
+      "depth": 32,
+      "linear_corridor_resistance": 1.9999999920837581,
+      "linear_exact": "4294967279/2147483648",
+      "exponential_corridor_resistance": 32
+    },
+    {
+      "depth": 64,
+      "linear_corridor_resistance": 2.0,
+      "linear_exact": "18446744073709551583/9223372036854775808",
+      "exponential_corridor_resistance": 64
+    }
+  ],
+  "linear_limit": 2,
+  "exponential_limit": "infinity",
+  "scope": "Subdivided binary trees and conditional finite-energy embedding; not general Bernoulli clusters."
+}

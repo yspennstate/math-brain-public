@@ -1,0 +1,39 @@
+Referee W2-A, 23 September 2026. Worst ratios (left side / bound; each must be <= 1).
+All from code/ in this folder (ltf_ref.py and scripts), none from the authors' code.
+
+self-test against definitions (n <= 7, 60 integer LTFs; truth table, fhat, Inf, exact flip enumeration): 0 mismatches
+
+structured families (exact Walsh transform)
+  n=12: 326 distinct functions, pointwise Lemma 2 on every coordinate of every function
+  n=16: 413 distinct functions, pointwise Lemma 2 on every coordinate of every function
+  n=20: 451 distinct functions (lemma checks); 11 targeted functions with pointwise Lemma 2 on every coordinate
+  n=22: targeted majority (theta 0, -2), near-AND and lexicographic near-edge, pointwise Lemma 2 on every coordinate (targeted_n22.log; run stopped after 4 of 11 cases for time)
+                                   n=12      n=16      n=20      n=22(targeted)
+  Lemma 2, average form            0.7675    0.7675    0.7675    0.6991
+  Lemma 2 pointwise vs lemma bound 0.7675    0.7675    0.7675    0.6991
+  pointwise vs E min(1,sqrt-LO)    0.9693    0.9794    0.9754    0.9660
+  pointwise vs exact E min(1,LO)   1.000000  1.000000  1.000000  1.000000   (attained, never exceeded)
+  Lemma 3 per coordinate           0.2301    0.2440    0.2535    0.2572
+  Lemma 3 tail, every integer K    0.4824    0.4824    0.4824    0.4824
+  Lemma 4                          0.1288    0.1384    0.1452    0.1479
+  Lemma 5 (ODWZ Thm 5)             0.8156    0.8254    0.8262    0.7928
+  Lemma 6                          0.3650    0.3910    0.4074    0.3887
+  Theorem 1 (H/(14.2142 I))        0.2786    0.2796    0.2801    0.2748
+  max H/I                          3.9601    3.9750    3.9808    3.9066
+
+annealing, integer weights, integer theta (exact ties), n = 9 and 11, 4 restarts x 1500 steps
+  L3 0.2266 | L3tail 0.4824 | L4 0.1269 | L5 0.8392 | L6 0.3556 | T1 0.2780 | pointwise-vs-lemma 0.7675 | pointwise-vs-exact-LO 1.000000000
+
+majority closed form (large n): Lemma 3 ratio 0.25592 (n=21), 0.29824 (101), 0.32260 (1001), 0.32828 (4001), 0.33142 (20001);
+  limit 2 ln 2 / L1 = 0.333958 (arcsine law of |S|/n under the size-biased spectral sample)
+  Lemma 4 ratio 0.14709, 0.18043, 0.20243, 0.20790, 0.21098; limit (2 ln 2 - 1/2)/L1 = 0.213508
+
+Corollary 2 (co-monotone integer weights, independent signs, per-l extra ties)
+  n=10,k=2 (all 16 F, pointwise): L3cor 0.2120 tail 0.2754 L4cor 0.0965 Thm 0.2344 pointwise-vs-lemma 0.7675 pointwise-vs-exact 1.000000
+  n=10,k=3 (24 random F per trial, pointwise): L3cor 0.2056 tail 0.1887 L4cor 0.0885 Thm 0.2182 pointwise-vs-lemma 0.5780 pointwise-vs-exact 1.000000
+  n=14,k=2: L3cor 0.2246 tail 0.2529 L4cor 0.1055 Thm 0.2295 ; n=14,k=3: L3cor 0.2086 tail 0.1936 L4cor 0.0912 Thm 0.2200
+
+identity E[ |S cap U_i| : i in S ] = (N_i - 1)/2 : exact on 2,228 (function, i) pairs (max deviation 0.0)
+
+constants (mpmath, 40 digits): B = 2.9316150714175195295, L1 = 4.1511069801549289, a* = 1.2006422748676162407,
+  C = 14.214188086005913764 (direct minimisation agrees); C_2 16.567249, C_3 17.909058, C_4 18.849592, C_16 23.287225, C_100 29.002655

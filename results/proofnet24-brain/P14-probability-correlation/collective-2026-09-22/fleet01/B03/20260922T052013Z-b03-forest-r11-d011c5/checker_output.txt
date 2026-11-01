@@ -1,0 +1,19 @@
+n=3: graphs=8, edge_splits=12, tau>=0 PASS, sigma>=0 PASS
+n=4: graphs=64, edge_splits=192, tau>=0 PASS, sigma>=0 PASS
+n=5: graphs=1024, edge_splits=5120, tau>=0 PASS, sigma>=0 PASS
+n=6: graphs=32768, edge_splits=245760, tau>=0 PASS, sigma>=0 PASS
+n=7: graphs=2097152, edge_splits=22020096, tau>=0 PASS, sigma>=0 PASS
+TOTAL_GRAPHS=2131016
+TOTAL_EDGE_SPLITS=22271180
+NEGATIVE_S2_INSTANCES=41544
+P_TAU_NONNEGATIVE=PASS
+SIGMA_DERIVATIVE_NONNEGATIVE_FOR_W_GE_0=PASS
+SMALLEST_NEGATIVE_S2_WITNESS:
+  n=6, edge_count=7, graph_edges=[(0, 4), (0, 5), (1, 3), (1, 5), (2, 3), (2, 5), (3, 4)], g=(1, 5)
+  v0=(30, 3, 13, 9, 7), v1=(10, 11, 1, 13, 17), s1=536, s2=-30, s3=92
+  tau(w)=27+118*w+3*w^2
+  sigma(w)=162+536*w+(-30)*w^2+92*w^3
+WORST_NEGATIVE_S2_DERIVATIVE_RATIO=0.158411716986
+STATUS=PASS
+
+Execution note: this is finite exact-integer regression evidence only. It does not establish the inequalities for arbitrary graphs.

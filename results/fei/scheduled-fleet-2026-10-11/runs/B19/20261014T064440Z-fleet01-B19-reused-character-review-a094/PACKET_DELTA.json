@@ -1,0 +1,50 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "stream": "B19",
+  "run_id": "20261014T064440Z-fleet01-B19-reused-character-review-a094",
+  "primary_packet_id": "A094",
+  "packet_id": "A094",
+  "packet_ids": ["A094"],
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "gap_ids": ["GU-ASYMMETRY-MISMATCH", "B05_RARE_REFUNDS"],
+  "attempt_id": "B19-A094-REUSED-CHARACTER-REVIEW-01",
+  "method": "Independent algebraic reconstruction with rational character sums and prime-exponent entropy certificates; adversarially test the producer's proposed zero-cone repair.",
+  "source_control_revision": "GU-LASER-20261014 / 2026-10-14.1",
+  "assignment_blob": "ee688080aba90acd2daed1b26e809e38285dcb85",
+  "claim_versions_used": [
+    "B05-A023-REUSED-CHARACTER-EQUIVALENCE-v1",
+    "B05-A023-ACTIVATION-SMR-v1"
+  ],
+  "claims_created_or_changed": [
+    "B19-A094-REUSED-CHARACTER-REVIEW-v1",
+    "B19-A094-REUSED-CONE-REFUTATION-v1"
+  ],
+  "source_artifacts": [
+    "Reviewed canonical commit b8b379a1cc66a71c064195bf65c4714999419d81",
+    "Reviewed report/proof/claims blobs 13d1abca96b206ef053adb6a27bb221d9a85acbe, d256e922d22dd12b86bb785b5fbd2310b4d0c6b2, bcd750a3679db45392eac41c2467730a38c6b9fd",
+    "Prior B19 review commit c2ac9af96162bd73098656fac5624c18993f8900"
+  ],
+  "prior_status": "B05 reused-character equivalence and half-contraction no-go were author-proved pending independent review; zero-cone preservation at c=7/4,eta=1/4 was proposed as the next route.",
+  "mathematical_delta": "Accepted the B05 route obstruction at exact scope. Independently found and exactly certified a four-bit witness refuting the proposed zero-cone repair at c=7/4, eta=1/4. The new witness is a reviewer contribution requiring fresh independent review.",
+  "deliverable_status": "COMPLETE_REVIEW_AND_NEW_COUNTEREXAMPLE_PACKAGE_PENDING_FRESH_REVIEW_OF_COUNTEREXAMPLE",
+  "mathematical_status": "B05_CLAIM_INDEPENDENTLY_ACCEPTED; INHERITED_PAIR_CONE_REPAIR_EXACTLY_REFUTED; UNIVERSAL_GU_OPEN",
+  "acceptance_evidence": ["PROOF_AUDIT.md", "REPRODUCE.py", "REPRODUCE.out", "REVIEW_VERDICT.json"],
+  "remaining_obstacle": "No fixed larger c or terminal reserve is controlled. The finite witness does not establish an unbounded obstruction and does not refute GU or FEI.",
+  "next_consumers": ["B05", "B20", "A085", "A090"],
+  "reviewer_targets": ["A085", "A090"],
+  "next_action": "Independently review the mask-10049 certificate, then optimize c for this witness and test tensor/rare-suspension amplification to decide whether all fixed-c zero-cone rules fail or only the inherited pair.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [],
+  "delivery_status": {
+    "state": "DELIVERED_AND_EXACT_READBACK_VERIFIED",
+    "canonical_bundle_head_observed": "6b1e143a18a20abe95d6c46592411a622d440b9e",
+    "brain_bundle_head_observed": "7eb52eda58bfa5db42cae0fd80fd0644e2771626",
+    "verified_files_before_status_update": 12,
+    "canonical_native_ingestion": "NOT_CLAIMED",
+    "brain_native_ingestion": "NOT_CLAIMED"
+  },
+  "model": "Codex",
+  "reasoning_effort": "UNKNOWN",
+  "full_fei_status": "OPEN"
+}

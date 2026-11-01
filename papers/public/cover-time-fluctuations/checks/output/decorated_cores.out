@@ -1,0 +1,37 @@
+== pseudoinverse of the two-vertex Laplacian
+   L^+ = (1/4) [[1,-1],[-1,1]]  ok
+== Penrose equations for L^+ of every core
+   edge: L L+ L = L, L+ L L+ = L+, both products symmetric, L+ 1 = 0  ok
+   path3: L L+ L = L, L+ L L+ = L+, both products symmetric, L+ 1 = 0  ok
+   triangle: L L+ L = L, L+ L L+ = L+, both products symmetric, L+ 1 = 0  ok
+   path4: L L+ L = L, L+ L L+ = L+, both products symmetric, L+ 1 = 0  ok
+   star3: L L+ L = L, L+ L L+ = L+, both products symmetric, L+ 1 = 0  ok
+   cycle4: L L+ L = L, L+ L L+ = L+, both products symmetric, L+ 1 = 0  ok
+   K4: L L+ L = L, L+ L L+ = L+, both products symmetric, L+ 1 = 0  ok
+   paw: L L+ L = L, L+ L L+ = L+, both products symmetric, L+ 1 = 0  ok
+   cycle5: L L+ L = L, L+ L L+ = L+, both products symmetric, L+ 1 = 0  ok
+== (9.1)-(9.3): equal decorations, k = 1..4
+   edge: (9.1), (9.2), leaf-start rule and (9.3) hold for k = 1..4; t_hit at k=4 is 27
+   path3: (9.1), (9.2), leaf-start rule and (9.3) hold for k = 1..4; t_hit at k=4 is 56
+   triangle: (9.1), (9.2), leaf-start rule and (9.3) hold for k = 1..4; t_hit at k=4 is 40
+   path4: (9.1), (9.2), leaf-start rule and (9.3) hold for k = 1..4; t_hit at k=4 is 95
+   star3: (9.1), (9.2), leaf-start rule and (9.3) hold for k = 1..4; t_hit at k=4 is 76
+   cycle4: (9.1), (9.2), leaf-start rule and (9.3) hold for k = 1..4; t_hit at k=4 is 60
+   K4: (9.1), (9.2), leaf-start rule and (9.3) hold for k = 1..4; t_hit at k=4 is 55
+   paw: (9.1), (9.2), leaf-start rule and (9.3) hold for k = 1..4; t_hit at k=4 is 81
+   cycle5: (9.1), (9.2), leaf-start rule and (9.3) hold for k = 1..4; t_hit at k=4 is 80
+== (9.11): unequal decorations
+   edge: (9.11) and the generalised (9.1) hold for all leaf vectors in {1,2,3}^2
+   path3: (9.11) and the generalised (9.1) hold for all leaf vectors in {1,2,3}^3
+   triangle: (9.11) and the generalised (9.1) hold for all leaf vectors in {1,2,3}^3
+   path4: (9.11) and the generalised (9.1) hold for all leaf vectors in {1,2,3}^4
+   star3: (9.11) and the generalised (9.1) hold for all leaf vectors in {1,2,3}^4
+   cycle4: (9.11) and the generalised (9.1) hold for all leaf vectors in {1,2,3}^4
+   K4: (9.11) and the generalised (9.1) hold for all leaf vectors in {1,2,3}^4
+   paw: (9.11) and the generalised (9.1) hold for all leaf vectors in {1,2,3}^4
+   cycle5: (9.11) and the generalised (9.1) hold for all leaf vectors in {1,2,3}^5
+== double star: t_hit(D_k) = 6k + 3 for k = 1..25
+   ok
+== path3 core closed forms: t_hit(P3^(k)) = 12k + 8, H(a, c) = 6k + 4
+   ok
+DECORATED_CORE_CHECKS_PASS

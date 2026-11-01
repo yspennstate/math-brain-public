@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "assertions": 672,
+  "physical_k3_n8_full_spectrum_and_edges": "PASS",
+  "compressed_k": [
+    3,
+    5,
+    7,
+    9
+  ],
+  "cases": [
+    {
+      "k": 3,
+      "n": 8,
+      "seed_dimension": 4,
+      "edit_count": 9,
+      "selector_influence": "7/128",
+      "occupied_off_anchor_mass": "49/1024",
+      "price_lower": "7/4",
+      "price_lower_over_edit_count": "7/36",
+      "root_FEI3": "analytic certified"
+    },
+    {
+      "k": 5,
+      "n": 32,
+      "seed_dimension": 26,
+      "edit_count": 33,
+      "selector_influence": "31/2147483648",
+      "occupied_off_anchor_mass": "961/68719476736",
+      "price_lower": "93/4",
+      "price_lower_over_edit_count": "31/44",
+      "root_FEI3": "analytic certified"
+    },
+    {
+      "k": 7,
+      "n": 128,
+      "seed_dimension": 120,
+      "edit_count": 129,
+      "selector_influence": "127/170141183460469231731687303715884105728",
+      "occupied_off_anchor_mass": "16129/21778071482940061661655974875633165533184",
+      "price_lower": "7493/64",
+      "price_lower_over_edit_count": "7493/8256",
+      "root_FEI3": "analytic certified"
+    },
+    {
+      "k": 9,
+      "n": 512,
+      "seed_dimension": 502,
+      "edit_count": 513,
+      "selector_influence": "511/6703903964971298549787012499102923063739682910296196688861780721860882015036773488400937149083451713845015929093243025426876941405973284973216824503042048",
+      "occupied_off_anchor_mass": "261121/3432398830065304857490950399540696608634717650071652704697231729592771591698828026061279820330727277488648155695740429018560993999858321906287014145557528576",
+      "price_lower": "63875/128",
+      "price_lower_over_edit_count": "63875/65664",
+      "root_FEI3": "analytic certified"
+    }
+  ],
+  "runtime_seconds": 0.013772099999187049,
+  "arithmetic": "integer Hamming-kernel basis and physical Walsh/edges; exact Fraction; rational entropy intervals only for actual n8 fixture"
+}

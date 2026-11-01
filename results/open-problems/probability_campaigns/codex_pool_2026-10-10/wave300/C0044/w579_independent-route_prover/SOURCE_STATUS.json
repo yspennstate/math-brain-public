@@ -1,0 +1,52 @@
+{
+  "target": "C0044",
+  "checked_at": "2026-10-10",
+  "dated_ranking": "2026-09-07",
+  "current_openness": "UNKNOWN",
+  "exact_statement": "For iid strictly elliptic nearest-neighbor transition rows on Z^d, d>=3, and each fixed nonzero real ell, is annealed P_0(lim_n X_n dot ell=+infinity) in {0,1}?",
+  "assumptions": ["IID probability rows over +/- coordinate steps", "All allowed transition probabilities positive almost surely", "Environment fixed in time", "Walk starts at 0", "Fixed nonzero ell"],
+  "statement_recovery": {
+    "intake": "probability_1000_intake_claude_20260907/problems.jsonl:44",
+    "cited_source": "Drewitz-Ramirez, Selected Topics in Random Walk in Random Environment, Open Question 3.2, p. 42",
+    "cited_url": "https://www.mat.uc.cl/~aramirez/rwre-lecturepasi2012.pdf",
+    "cited_source_access": "Primary university PDF search result displays (E), (IID), and the exact question; full PDF retrieval timed out.",
+    "primary_model_and_question": "https://arxiv.org/html/0706.0745v1",
+    "primary_sections_read": "Zerner 2007 introduction and statement of Theorem 1; exact ellipticity definitions, A_ell, union law versus directional law",
+    "status": "EXACT_TARGET_RECOVERED; current status not certified by historical source"
+  },
+  "prior_attempt_check": {
+    "exact_attempts": ["C0044-A001 at attempts.jsonl:35", "C0044-A002 at attempts.jsonl:121"],
+    "digest": "Planar walk intersection, corrected from the tautology that opposite directional events are disjoint. No higher-dimensional forced crossing or finite-region measurability bridge.",
+    "H_I_search": "Targeted C0044 text searches found no matching new proof in the named H/I directories; filename inventories were not treated as mathematical proof.",
+    "lean_ranking": "prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md:472 says attempted_un",
+    "artifact": "C0044_PRIOR_EXTRACT.json"
+  },
+  "owner_solved_retired_check": {
+    "status": "UNKNOWN",
+    "scope": "Two exact canonical store cards and named intake/attempt directories; no whole-store export or unrelated owner corpus read",
+    "queried_card_ids": ["claim_77b8c8b3e552560382a17be2fac6b00021e3a08ff74f780812e6f39787d2abb8", "claim_4b1317a4c7b663b925ef6da8c356e0c7f99b89503f70b7d0d4a8e76475ed3df5"],
+    "certificate_found_in_scope": false,
+    "limitation": "Absence in this narrow check is not proof that no owner result exists. Current openness remains UNKNOWN."
+  },
+  "recent_primary_claim": {
+    "scope_url": "https://github.com/openai/math/blob/main/lean/docs/220.md",
+    "claim": "Scope page claims a formal directional zero-one solution under iid strict ellipticity.",
+    "comparator_url": "https://github.com/openai/math/blob/main/lean/ComparatorChallenges/DirectionalWalk.lean",
+    "comparator_theorem": "OAI.DirectionalZeroOne.directional_zero_one",
+    "comparator_assumptions": ["d>=3", "probability row law mu", "StrictEllipticity mu", "nonzero real direction ell"],
+    "comparator_body": "by sorry",
+    "classification": "Admitted comparator specification, not an implementation proof receipt; a separate implementation is neither refuted nor certified here.",
+    "implementation_receipt": false,
+    "trusted_axioms": "NOT CHECKED",
+    "peer_lane": "w580 independently checking the public preprint coexistence/spatial-radius bridge; its receipt is peer data, not a mathematical KEEP"
+  },
+  "served_model_evidence": {
+    "author": {"agent":"w579", "requested":"gpt-6.1-sol; max; Fast", "response_side":"UNAVAILABLE in this tool surface; requested settings are not served-model evidence"},
+    "referee": {"agent":"w581", "response_side":"PENDING"},
+    "adversary": {"agent":"w580", "response_side":"PENDING"}
+  },
+  "author_outcome": "Restricted UI zero-one criterion and quantitative density-concentration implications only; GAP-G1 remains unproved.",
+  "independently_checked_proofs": 0,
+  "parent_problem_solved": false,
+  "novelty_claim": false
+}

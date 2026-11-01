@@ -1,0 +1,3171 @@
+{
+  "helper_version": 2,
+  "pilot": false,
+  "status": "PASS",
+  "base_cases": [
+    {
+      "q": 5,
+      "I_x": "15/8",
+      "I_z": "45/32",
+      "polar_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        4,
+        2,
+        4,
+        2,
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        4,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "raw_walsh_sha256": "aebaefba0c1190fe6abae93b046e5902afe7ec37a7019adcd27c9c607b40b69b",
+      "zero_coefficients": 828
+    },
+    {
+      "q": 7,
+      "I_x": "35/16",
+      "I_z": "105/64",
+      "polar_ranks": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        4,
+        2,
+        4,
+        2,
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        4,
+        4,
+        6,
+        4,
+        6,
+        2,
+        4,
+        4,
+        4,
+        4,
+        6,
+        4,
+        6,
+        2,
+        4,
+        4,
+        4,
+        4,
+        6,
+        4,
+        6,
+        4,
+        6,
+        6,
+        6,
+        4,
+        6,
+        6,
+        6,
+        2,
+        4,
+        4,
+        4,
+        4,
+        6,
+        4,
+        6,
+        4,
+        6,
+        6,
+        6,
+        4,
+        6,
+        6,
+        6,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        6,
+        6,
+        4,
+        4,
+        6,
+        6,
+        4,
+        4,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        4,
+        4,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        2,
+        4,
+        4,
+        4,
+        4,
+        6,
+        4,
+        6,
+        4,
+        6,
+        6,
+        6,
+        4,
+        6,
+        6,
+        6,
+        4,
+        4,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        4,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "raw_walsh_sha256": "dcec87eb8c0f6be42426da5a66fad04b5f8562336158b1d2554473bb894b82cb",
+      "zero_coefficients": 14052
+    }
+  ],
+  "edit_case_count": 96,
+  "assertions": 2589,
+  "arithmetic": "integer Walsh, F2 rank, exact Fraction influence and reference; outward rational log intervals",
+  "log_series_terms": 22,
+  "outward_dyadic_bits": 64,
+  "cases": [
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 0,
+      "z0": 0,
+      "I_x": "965/512",
+      "I_z_including_padding": "725/512",
+      "entropy_bits": {
+        "lower": "2994353563159/500000000000",
+        "upper": "5988707126319/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "274722338951/40000000000",
+        "upper": "429253654611/62500000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "345065555507/31250000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11921449123681/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 60,
+        "1156": 100,
+        "8836": 10,
+        "9604": 6,
+        "36100": 15,
+        "37636": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 0,
+      "z0": 31,
+      "I_x": "965/512",
+      "I_z_including_padding": "725/512",
+      "entropy_bits": {
+        "lower": "2994353563159/500000000000",
+        "upper": "5988707126319/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "274722338951/40000000000",
+        "upper": "429253654611/62500000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "345065555507/31250000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11921449123681/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 60,
+        "1156": 100,
+        "8836": 10,
+        "9604": 6,
+        "36100": 15,
+        "37636": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 0,
+      "z0": 1,
+      "I_x": "965/512",
+      "I_z_including_padding": "725/512",
+      "entropy_bits": {
+        "lower": "2994353563159/500000000000",
+        "upper": "5988707126319/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "274722338951/40000000000",
+        "upper": "429253654611/62500000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "345065555507/31250000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11921449123681/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 60,
+        "1156": 100,
+        "8836": 10,
+        "9604": 6,
+        "36100": 15,
+        "37636": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 0,
+      "z0": 21,
+      "I_x": "965/512",
+      "I_z_including_padding": "721/512",
+      "entropy_bits": {
+        "lower": "5964284218811/1000000000000",
+        "upper": "1491071054703/250000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6839846669311/1000000000000",
+        "upper": "6679537763/976562500"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "690917786293/62500000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2982561757797/250000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 84,
+        "1156": 76,
+        "8836": 6,
+        "9604": 10,
+        "36100": 13,
+        "37636": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 31,
+      "z0": 0,
+      "I_x": "965/512",
+      "I_z_including_padding": "725/512",
+      "entropy_bits": {
+        "lower": "2994353563159/500000000000",
+        "upper": "5988707126319/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "274722338951/40000000000",
+        "upper": "429253654611/62500000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "345065555507/31250000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11921449123681/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 60,
+        "1156": 100,
+        "8836": 10,
+        "9604": 6,
+        "36100": 15,
+        "37636": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 31,
+      "z0": 31,
+      "I_x": "965/512",
+      "I_z_including_padding": "725/512",
+      "entropy_bits": {
+        "lower": "2994353563159/500000000000",
+        "upper": "5988707126319/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "274722338951/40000000000",
+        "upper": "429253654611/62500000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "345065555507/31250000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11921449123681/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 60,
+        "1156": 100,
+        "8836": 10,
+        "9604": 6,
+        "36100": 15,
+        "37636": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 31,
+      "z0": 1,
+      "I_x": "965/512",
+      "I_z_including_padding": "725/512",
+      "entropy_bits": {
+        "lower": "2994353563159/500000000000",
+        "upper": "5988707126319/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "274722338951/40000000000",
+        "upper": "429253654611/62500000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "345065555507/31250000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11921449123681/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 60,
+        "1156": 100,
+        "8836": 10,
+        "9604": 6,
+        "36100": 15,
+        "37636": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 31,
+      "z0": 21,
+      "I_x": "965/512",
+      "I_z_including_padding": "721/512",
+      "entropy_bits": {
+        "lower": "5964284218811/1000000000000",
+        "upper": "1491071054703/250000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6839846669311/1000000000000",
+        "upper": "6679537763/976562500"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "690917786293/62500000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2982561757797/250000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 84,
+        "1156": 76,
+        "8836": 6,
+        "9604": 10,
+        "36100": 13,
+        "37636": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 1,
+      "z0": 0,
+      "I_x": "965/512",
+      "I_z_including_padding": "725/512",
+      "entropy_bits": {
+        "lower": "5964284218811/1000000000000",
+        "upper": "1491071054703/250000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "3419895363447/500000000000",
+        "upper": "1367958145379/200000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "2214073104621/200000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2986468007797/250000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 84,
+        "1156": 76,
+        "8836": 6,
+        "9604": 10,
+        "36100": 13,
+        "37636": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 1,
+      "z0": 31,
+      "I_x": "965/512",
+      "I_z_including_padding": "719/512",
+      "entropy_bits": {
+        "lower": "5964284218811/1000000000000",
+        "upper": "1491071054703/250000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "3419895363447/500000000000",
+        "upper": "1367958145379/200000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "2209385604621/200000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2980608632797/250000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 84,
+        "1156": 76,
+        "8836": 6,
+        "9604": 10,
+        "36100": 13,
+        "37636": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 1,
+      "z0": 1,
+      "I_x": "965/512",
+      "I_z_including_padding": "725/512",
+      "entropy_bits": {
+        "lower": "5964284218811/1000000000000",
+        "upper": "1491071054703/250000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "3419895363447/500000000000",
+        "upper": "1367958145379/200000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "2214073104621/200000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2986468007797/250000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 84,
+        "1156": 76,
+        "8836": 6,
+        "9604": 10,
+        "36100": 13,
+        "37636": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 1,
+      "z0": 21,
+      "I_x": "959/512",
+      "I_z_including_padding": "723/512",
+      "entropy_bits": {
+        "lower": "744803162807/125000000000",
+        "upper": "5958425302457/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "3416720248481/500000000000",
+        "upper": "6833440496963/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "10975153253037/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11850168447543/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 84,
+        "1156": 76,
+        "8836": 10,
+        "9604": 6,
+        "36100": 11,
+        "37636": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 3,
+      "z0": 0,
+      "I_x": "959/512",
+      "I_z_including_padding": "725/512",
+      "entropy_bits": {
+        "lower": "744803162807/125000000000",
+        "upper": "5958425302457/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6823089604033/1000000000000",
+        "upper": "3411544802017/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "5496658322983/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11857980947543/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 84,
+        "1156": 76,
+        "8836": 10,
+        "9604": 6,
+        "36100": 11,
+        "37636": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 3,
+      "z0": 31,
+      "I_x": "959/512",
+      "I_z_including_padding": "721/512",
+      "entropy_bits": {
+        "lower": "744803162807/125000000000",
+        "upper": "5958425302457/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6823089604033/1000000000000",
+        "upper": "3411544802017/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "5488845822983/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11842355947543/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 84,
+        "1156": 76,
+        "8836": 10,
+        "9604": 6,
+        "36100": 11,
+        "37636": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 3,
+      "z0": 1,
+      "I_x": "959/512",
+      "I_z_including_padding": "723/512",
+      "entropy_bits": {
+        "lower": "744803162807/125000000000",
+        "upper": "5958425302457/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6823089604033/1000000000000",
+        "upper": "3411544802017/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "5492752072983/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11850168447543/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 84,
+        "1156": 76,
+        "8836": 10,
+        "9604": 6,
+        "36100": 11,
+        "37636": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 0,
+      "N": 10,
+      "x0": 3,
+      "z0": 21,
+      "I_x": "959/512",
+      "I_z_including_padding": "719/512",
+      "entropy_bits": {
+        "lower": "744803162807/125000000000",
+        "upper": "5958425302457/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6843277897457/1000000000000",
+        "upper": "3421638948729/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "5474845426271/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11834543447543/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 828,
+        "900": 84,
+        "1156": 76,
+        "8836": 10,
+        "9604": 6,
+        "36100": 11,
+        "37636": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 0,
+      "z0": 0,
+      "I_x": "3845/2048",
+      "I_z_including_padding": "2887/2048",
+      "entropy_bits": {
+        "lower": "2971040400849/500000000000",
+        "upper": "5942080801699/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6818858472691/1000000000000",
+        "upper": "1704714618173/250000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1377501089351/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11896786385801/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 60,
+        "16900": 100,
+        "145924": 10,
+        "148996": 6,
+        "586756": 15,
+        "592900": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 0,
+      "z0": 31,
+      "I_x": "3845/2048",
+      "I_z_including_padding": "2887/2048",
+      "entropy_bits": {
+        "lower": "2971040400849/500000000000",
+        "upper": "5942080801699/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6818858472691/1000000000000",
+        "upper": "1704714618173/250000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1377501089351/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11896786385801/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 60,
+        "16900": 100,
+        "145924": 10,
+        "148996": 6,
+        "586756": 15,
+        "592900": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 0,
+      "z0": 1,
+      "I_x": "3845/2048",
+      "I_z_including_padding": "2887/2048",
+      "entropy_bits": {
+        "lower": "2971040400849/500000000000",
+        "upper": "5942080801699/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6818858472691/1000000000000",
+        "upper": "1704714618173/250000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1377501089351/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11896786385801/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 60,
+        "16900": 100,
+        "145924": 10,
+        "148996": 6,
+        "586756": 15,
+        "592900": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 0,
+      "z0": 21,
+      "I_x": "3845/2048",
+      "I_z_including_padding": "2883/2048",
+      "entropy_bits": {
+        "lower": "2967986336583/500000000000",
+        "upper": "5935972673167/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6811790312841/1000000000000",
+        "upper": "3405895156421/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "5511585312329/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11898988264333/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 84,
+        "16900": 76,
+        "145924": 6,
+        "148996": 10,
+        "586756": 13,
+        "592900": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 31,
+      "z0": 0,
+      "I_x": "3845/2048",
+      "I_z_including_padding": "2887/2048",
+      "entropy_bits": {
+        "lower": "2971040400849/500000000000",
+        "upper": "5942080801699/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6818858472691/1000000000000",
+        "upper": "1704714618173/250000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1377501089351/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11896786385801/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 60,
+        "16900": 100,
+        "145924": 10,
+        "148996": 6,
+        "586756": 15,
+        "592900": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 31,
+      "z0": 31,
+      "I_x": "3845/2048",
+      "I_z_including_padding": "2887/2048",
+      "entropy_bits": {
+        "lower": "2971040400849/500000000000",
+        "upper": "5942080801699/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6818858472691/1000000000000",
+        "upper": "1704714618173/250000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1377501089351/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11896786385801/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 60,
+        "16900": 100,
+        "145924": 10,
+        "148996": 6,
+        "586756": 15,
+        "592900": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 31,
+      "z0": 1,
+      "I_x": "3845/2048",
+      "I_z_including_padding": "2887/2048",
+      "entropy_bits": {
+        "lower": "2971040400849/500000000000",
+        "upper": "5942080801699/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6818858472691/1000000000000",
+        "upper": "1704714618173/250000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1377501089351/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11896786385801/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 60,
+        "16900": 100,
+        "145924": 10,
+        "148996": 6,
+        "586756": 15,
+        "592900": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 31,
+      "z0": 21,
+      "I_x": "3845/2048",
+      "I_z_including_padding": "2883/2048",
+      "entropy_bits": {
+        "lower": "2967986336583/500000000000",
+        "upper": "5935972673167/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6811790312841/1000000000000",
+        "upper": "3405895156421/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "5511585312329/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11898988264333/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 84,
+        "16900": 76,
+        "145924": 6,
+        "148996": 10,
+        "586756": 13,
+        "592900": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 1,
+      "z0": 0,
+      "I_x": "3845/2048",
+      "I_z_including_padding": "2887/2048",
+      "entropy_bits": {
+        "lower": "2967986336583/500000000000",
+        "upper": "5935972673167/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "3405894715699/500000000000",
+        "upper": "6811789431399/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11027077756101/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11902894514333/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 84,
+        "16900": 76,
+        "145924": 6,
+        "148996": 10,
+        "586756": 13,
+        "592900": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 1,
+      "z0": 31,
+      "I_x": "3845/2048",
+      "I_z_including_padding": "2881/2048",
+      "entropy_bits": {
+        "lower": "2967986336583/500000000000",
+        "upper": "5935972673167/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "3405894715699/500000000000",
+        "upper": "6811789431399/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11021218381101/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11897035139333/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 84,
+        "16900": 76,
+        "145924": 6,
+        "148996": 10,
+        "586756": 13,
+        "592900": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 1,
+      "z0": 1,
+      "I_x": "3845/2048",
+      "I_z_including_padding": "2887/2048",
+      "entropy_bits": {
+        "lower": "2967986336583/500000000000",
+        "upper": "5935972673167/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "3405894715699/500000000000",
+        "upper": "6811789431399/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11027077756101/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11902894514333/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 84,
+        "16900": 76,
+        "145924": 6,
+        "148996": 10,
+        "586756": 13,
+        "592900": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 1,
+      "z0": 21,
+      "I_x": "3839/2048",
+      "I_z_including_padding": "2885/2048",
+      "entropy_bits": {
+        "lower": "2967253918291/500000000000",
+        "upper": "5934507836583/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "1702547442857/250000000000",
+        "upper": "6810189771429/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11003286791071/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11878968725917/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 84,
+        "16900": 76,
+        "145924": 10,
+        "148996": 6,
+        "586756": 11,
+        "592900": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 3,
+      "z0": 0,
+      "I_x": "3839/2048",
+      "I_z_including_padding": "2887/2048",
+      "entropy_bits": {
+        "lower": "2967253918291/500000000000",
+        "upper": "5934507836583/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6807607510293/1000000000000",
+        "upper": "3403803755147/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "5503911088603/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11880921850917/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 84,
+        "16900": 76,
+        "145924": 10,
+        "148996": 6,
+        "586756": 11,
+        "592900": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 3,
+      "z0": 31,
+      "I_x": "3839/2048",
+      "I_z_including_padding": "2883/2048",
+      "entropy_bits": {
+        "lower": "2967253918291/500000000000",
+        "upper": "5934507836583/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6807607510293/1000000000000",
+        "upper": "3403803755147/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "5501957963603/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11877015600917/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 84,
+        "16900": 76,
+        "145924": 10,
+        "148996": 6,
+        "586756": 11,
+        "592900": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 3,
+      "z0": 1,
+      "I_x": "3839/2048",
+      "I_z_including_padding": "2885/2048",
+      "entropy_bits": {
+        "lower": "2967253918291/500000000000",
+        "upper": "5934507836583/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6807607510293/1000000000000",
+        "upper": "3403803755147/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "5502934526103/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11878968725917/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 84,
+        "16900": 76,
+        "145924": 10,
+        "148996": 6,
+        "586756": 11,
+        "592900": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 2,
+      "N": 12,
+      "x0": 3,
+      "z0": 21,
+      "I_x": "3839/2048",
+      "I_z_including_padding": "2881/2048",
+      "entropy_bits": {
+        "lower": "2967253918291/500000000000",
+        "upper": "5934507836583/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "3406328079993/500000000000",
+        "upper": "6812656159987/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "10996914152513/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11875062475917/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 3900,
+        "15876": 84,
+        "16900": 76,
+        "145924": 10,
+        "148996": 6,
+        "586756": 11,
+        "592900": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 0,
+      "z0": 0,
+      "I_x": "15365/8192",
+      "I_z_including_padding": "11529/8192",
+      "entropy_bits": {
+        "lower": "59259794003/10000000000",
+        "upper": "5925979400301/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "340116025633/50000000000",
+        "upper": "6802320512661/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1377157445683/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "185837510591/15625000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 60,
+        "264196": 100,
+        "2353156": 10,
+        "2365444": 6,
+        "9424900": 15,
+        "9449476": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 0,
+      "z0": 31,
+      "I_x": "15365/8192",
+      "I_z_including_padding": "11529/8192",
+      "entropy_bits": {
+        "lower": "59259794003/10000000000",
+        "upper": "5925979400301/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "340116025633/50000000000",
+        "upper": "6802320512661/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1377157445683/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "185837510591/15625000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 60,
+        "264196": 100,
+        "2353156": 10,
+        "2365444": 6,
+        "9424900": 15,
+        "9449476": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 0,
+      "z0": 1,
+      "I_x": "15365/8192",
+      "I_z_including_padding": "11529/8192",
+      "entropy_bits": {
+        "lower": "59259794003/10000000000",
+        "upper": "5925979400301/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "340116025633/50000000000",
+        "upper": "6802320512661/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1377157445683/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "185837510591/15625000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 60,
+        "264196": 100,
+        "2353156": 10,
+        "2365444": 6,
+        "9424900": 15,
+        "9449476": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 0,
+      "z0": 21,
+      "I_x": "15365/8192",
+      "I_z_including_padding": "11525/8192",
+      "entropy_bits": {
+        "lower": "185139135333/31250000000",
+        "upper": "5924452330657/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "272022129329/40000000000",
+        "upper": "3400276616613/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11018050282399/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "1486768898121/125000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 84,
+        "264196": 76,
+        "2353156": 6,
+        "2365444": 10,
+        "9424900": 13,
+        "9449476": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 31,
+      "z0": 0,
+      "I_x": "15365/8192",
+      "I_z_including_padding": "11529/8192",
+      "entropy_bits": {
+        "lower": "59259794003/10000000000",
+        "upper": "5925979400301/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "340116025633/50000000000",
+        "upper": "6802320512661/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1377157445683/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "185837510591/15625000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 60,
+        "264196": 100,
+        "2353156": 10,
+        "2365444": 6,
+        "9424900": 15,
+        "9449476": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 31,
+      "z0": 31,
+      "I_x": "15365/8192",
+      "I_z_including_padding": "11529/8192",
+      "entropy_bits": {
+        "lower": "59259794003/10000000000",
+        "upper": "5925979400301/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "340116025633/50000000000",
+        "upper": "6802320512661/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1377157445683/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "185837510591/15625000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 60,
+        "264196": 100,
+        "2353156": 10,
+        "2365444": 6,
+        "9424900": 15,
+        "9449476": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 31,
+      "z0": 1,
+      "I_x": "15365/8192",
+      "I_z_including_padding": "11529/8192",
+      "entropy_bits": {
+        "lower": "59259794003/10000000000",
+        "upper": "5925979400301/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "340116025633/50000000000",
+        "upper": "6802320512661/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1377157445683/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "185837510591/15625000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 60,
+        "264196": 100,
+        "2353156": 10,
+        "2365444": 6,
+        "9424900": 15,
+        "9449476": 5
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 31,
+      "z0": 21,
+      "I_x": "15365/8192",
+      "I_z_including_padding": "11525/8192",
+      "entropy_bits": {
+        "lower": "185139135333/31250000000",
+        "upper": "5924452330657/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "272022129329/40000000000",
+        "upper": "3400276616613/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11018050282399/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "1486768898121/125000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 84,
+        "264196": 76,
+        "2353156": 6,
+        "2365444": 10,
+        "9424900": 13,
+        "9449476": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 1,
+      "z0": 0,
+      "I_x": "15365/8192",
+      "I_z_including_padding": "11529/8192",
+      "entropy_bits": {
+        "lower": "185139135333/31250000000",
+        "upper": "5924452330657/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6800553219447/1000000000000",
+        "upper": "850069152431/125000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11019026858677/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2973781936867/250000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 84,
+        "264196": 76,
+        "2353156": 6,
+        "2365444": 10,
+        "9424900": 13,
+        "9449476": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 1,
+      "z0": 31,
+      "I_x": "15365/8192",
+      "I_z_including_padding": "11523/8192",
+      "entropy_bits": {
+        "lower": "185139135333/31250000000",
+        "upper": "5924452330657/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6800553219447/1000000000000",
+        "upper": "850069152431/125000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11017562014927/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "5946831451859/500000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 84,
+        "264196": 76,
+        "2353156": 6,
+        "2365444": 10,
+        "9424900": 13,
+        "9449476": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 1,
+      "z0": 1,
+      "I_x": "15365/8192",
+      "I_z_including_padding": "11529/8192",
+      "entropy_bits": {
+        "lower": "185139135333/31250000000",
+        "upper": "5924452330657/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6800553219447/1000000000000",
+        "upper": "850069152431/125000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11019026858677/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2973781936867/250000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 84,
+        "264196": 76,
+        "2353156": 6,
+        "2365444": 10,
+        "9424900": 13,
+        "9449476": 7
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 1,
+      "z0": 21,
+      "I_x": "15359/8192",
+      "I_z_including_padding": "11527/8192",
+      "entropy_bits": {
+        "lower": "5924086119831/1000000000000",
+        "upper": "740510764979/125000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "1360030622707/200000000000",
+        "upper": "106252392399/15625000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11013079308339/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11889146302043/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 84,
+        "264196": 76,
+        "2353156": 10,
+        "2365444": 6,
+        "9424900": 11,
+        "9449476": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 3,
+      "z0": 0,
+      "I_x": "15359/8192",
+      "I_z_including_padding": "11529/8192",
+      "entropy_bits": {
+        "lower": "5924086119831/1000000000000",
+        "upper": "740510764979/125000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6799507635041/1000000000000",
+        "upper": "3399753817521/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11014213068083/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11889634583293/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 84,
+        "264196": 76,
+        "2353156": 10,
+        "2365444": 6,
+        "9424900": 11,
+        "9449476": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 3,
+      "z0": 31,
+      "I_x": "15359/8192",
+      "I_z_including_padding": "11525/8192",
+      "entropy_bits": {
+        "lower": "5924086119831/1000000000000",
+        "upper": "740510764979/125000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6799507635041/1000000000000",
+        "upper": "3399753817521/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11013236505583/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11888658020793/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 84,
+        "264196": 76,
+        "2353156": 10,
+        "2365444": 6,
+        "9424900": 11,
+        "9449476": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 3,
+      "z0": 1,
+      "I_x": "15359/8192",
+      "I_z_including_padding": "11527/8192",
+      "entropy_bits": {
+        "lower": "5924086119831/1000000000000",
+        "upper": "740510764979/125000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6799507635041/1000000000000",
+        "upper": "3399753817521/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "11013724786833/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11889146302043/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 84,
+        "264196": 76,
+        "2353156": 10,
+        "2365444": 6,
+        "9424900": 11,
+        "9449476": 9
+      }
+    },
+    {
+      "q": 5,
+      "padding": 4,
+      "N": 14,
+      "x0": 3,
+      "z0": 21,
+      "I_x": "15359/8192",
+      "I_z_including_padding": "11523/8192",
+      "entropy_bits": {
+        "lower": "5924086119831/1000000000000",
+        "upper": "740510764979/125000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "6800769822119/1000000000000",
+        "upper": "170019245553/25000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "2202297207451/200000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "11888169739543/1000000000000",
+      "original_zero_coefficients": 828,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 16188,
+        "260100": 84,
+        "264196": 76,
+        "2353156": 10,
+        "2365444": 6,
+        "9424900": 11,
+        "9449476": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 0,
+      "z0": 0,
+      "I_x": "17927/8192",
+      "I_z_including_padding": "13447/8192",
+      "entropy_bits": {
+        "lower": "7424963021069/1000000000000",
+        "upper": "742496302107/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "136174095171/15625000000",
+        "upper": "1743028418189/200000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1207465283093/100000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2672966380161/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 952,
+        "16900": 840,
+        "64516": 168,
+        "66564": 280,
+        "407044": 28,
+        "412164": 36,
+        "6543364": 21,
+        "6563844": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 0,
+      "z0": 127,
+      "I_x": "17927/8192",
+      "I_z_including_padding": "13447/8192",
+      "entropy_bits": {
+        "lower": "7424963021069/1000000000000",
+        "upper": "742496302107/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "136174095171/15625000000",
+        "upper": "1743028418189/200000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1207465283093/100000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2672966380161/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 952,
+        "16900": 840,
+        "64516": 168,
+        "66564": 280,
+        "407044": 28,
+        "412164": 36,
+        "6543364": 21,
+        "6563844": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 0,
+      "z0": 1,
+      "I_x": "17927/8192",
+      "I_z_including_padding": "13447/8192",
+      "entropy_bits": {
+        "lower": "7424963021069/1000000000000",
+        "upper": "742496302107/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "136174095171/15625000000",
+        "upper": "1743028418189/200000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1207465283093/100000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2672966380161/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 952,
+        "16900": 840,
+        "64516": 168,
+        "66564": 280,
+        "407044": 28,
+        "412164": 36,
+        "6543364": 21,
+        "6563844": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 0,
+      "z0": 85,
+      "I_x": "17927/8192",
+      "I_z_including_padding": "13447/8192",
+      "entropy_bits": {
+        "lower": "1485017011961/200000000000",
+        "upper": "3712542529903/500000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "1089398013773/125000000000",
+        "upper": "1743036822037/200000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1207461081169/100000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13364709862069/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 856,
+        "16900": 936,
+        "64516": 216,
+        "66564": 232,
+        "407044": 36,
+        "412164": 28,
+        "6543364": 19,
+        "6563844": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 127,
+      "z0": 0,
+      "I_x": "17927/8192",
+      "I_z_including_padding": "13447/8192",
+      "entropy_bits": {
+        "lower": "7424963021069/1000000000000",
+        "upper": "742496302107/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "136174095171/15625000000",
+        "upper": "1743028418189/200000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1207465283093/100000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2672966380161/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 952,
+        "16900": 840,
+        "64516": 168,
+        "66564": 280,
+        "407044": 28,
+        "412164": 36,
+        "6543364": 21,
+        "6563844": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 127,
+      "z0": 127,
+      "I_x": "17927/8192",
+      "I_z_including_padding": "13447/8192",
+      "entropy_bits": {
+        "lower": "7424963021069/1000000000000",
+        "upper": "742496302107/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "136174095171/15625000000",
+        "upper": "1743028418189/200000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1207465283093/100000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2672966380161/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 952,
+        "16900": 840,
+        "64516": 168,
+        "66564": 280,
+        "407044": 28,
+        "412164": 36,
+        "6543364": 21,
+        "6563844": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 127,
+      "z0": 1,
+      "I_x": "17927/8192",
+      "I_z_including_padding": "13447/8192",
+      "entropy_bits": {
+        "lower": "7424963021069/1000000000000",
+        "upper": "742496302107/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "136174095171/15625000000",
+        "upper": "1743028418189/200000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1207465283093/100000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2672966380161/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 952,
+        "16900": 840,
+        "64516": 168,
+        "66564": 280,
+        "407044": 28,
+        "412164": 36,
+        "6543364": 21,
+        "6563844": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 127,
+      "z0": 85,
+      "I_x": "17927/8192",
+      "I_z_including_padding": "13447/8192",
+      "entropy_bits": {
+        "lower": "1485017011961/200000000000",
+        "upper": "3712542529903/500000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "1089398013773/125000000000",
+        "upper": "1743036822037/200000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1207461081169/100000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13364709862069/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 856,
+        "16900": 936,
+        "64516": 216,
+        "66564": 232,
+        "407044": 36,
+        "412164": 28,
+        "6543364": 19,
+        "6563844": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 1,
+      "z0": 0,
+      "I_x": "17927/8192",
+      "I_z_including_padding": "13447/8192",
+      "entropy_bits": {
+        "lower": "1485017011961/200000000000",
+        "upper": "3712542529903/500000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8715184207369/1000000000000",
+        "upper": "871518420737/100000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "2414922142901/200000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13364709862069/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 856,
+        "16900": 936,
+        "64516": 216,
+        "66564": 232,
+        "407044": 36,
+        "412164": 28,
+        "6543364": 19,
+        "6563844": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 1,
+      "z0": 127,
+      "I_x": "17927/8192",
+      "I_z_including_padding": "13447/8192",
+      "entropy_bits": {
+        "lower": "1485017011961/200000000000",
+        "upper": "3712542529903/500000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8715184207369/1000000000000",
+        "upper": "871518420737/100000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "2414922142901/200000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13364709862069/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 856,
+        "16900": 936,
+        "64516": 216,
+        "66564": 232,
+        "407044": 36,
+        "412164": 28,
+        "6543364": 19,
+        "6563844": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 1,
+      "z0": 1,
+      "I_x": "17927/8192",
+      "I_z_including_padding": "13447/8192",
+      "entropy_bits": {
+        "lower": "1485017011961/200000000000",
+        "upper": "3712542529903/500000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8715184207369/1000000000000",
+        "upper": "871518420737/100000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "2414922142901/200000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13364709862069/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 856,
+        "16900": 936,
+        "64516": 216,
+        "66564": 232,
+        "407044": 36,
+        "412164": 28,
+        "6543364": 19,
+        "6563844": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 1,
+      "z0": 85,
+      "I_x": "17927/8192",
+      "I_z_including_padding": "13443/8192",
+      "entropy_bits": {
+        "lower": "7423179615809/1000000000000",
+        "upper": "742317961581/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "1742588734041/200000000000",
+        "upper": "4356471835103/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12075874689169/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2673127748713/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 920,
+        "16900": 872,
+        "64516": 224,
+        "66564": 224,
+        "407044": 28,
+        "412164": 36,
+        "6543364": 17,
+        "6563844": 11
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 7,
+      "z0": 0,
+      "I_x": "17919/8192",
+      "I_z_including_padding": "13447/8192",
+      "entropy_bits": {
+        "lower": "7422569264919/1000000000000",
+        "upper": "185564231623/25000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "2177809779273/250000000000",
+        "upper": "8711239117093/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "6035371652391/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2671882631391/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 920,
+        "16900": 872,
+        "64516": 224,
+        "66564": 224,
+        "407044": 36,
+        "412164": 28,
+        "6543364": 15,
+        "6563844": 13
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 7,
+      "z0": 127,
+      "I_x": "17919/8192",
+      "I_z_including_padding": "13441/8192",
+      "entropy_bits": {
+        "lower": "7422569264919/1000000000000",
+        "upper": "185564231623/25000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "2177809779273/250000000000",
+        "upper": "8711239117093/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1508659807629/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2671589662641/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 920,
+        "16900": 872,
+        "64516": 224,
+        "66564": 224,
+        "407044": 36,
+        "412164": 28,
+        "6543364": 15,
+        "6563844": 13
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 7,
+      "z0": 1,
+      "I_x": "17919/8192",
+      "I_z_including_padding": "13445/8192",
+      "entropy_bits": {
+        "lower": "7422569264919/1000000000000",
+        "upper": "185564231623/25000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "2177809779273/250000000000",
+        "upper": "8711239117093/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "3017563755883/250000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2671784975141/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 920,
+        "16900": 872,
+        "64516": 224,
+        "66564": 224,
+        "407044": 36,
+        "412164": 28,
+        "6543364": 15,
+        "6563844": 13
+      }
+    },
+    {
+      "q": 7,
+      "padding": 0,
+      "N": 14,
+      "x0": 7,
+      "z0": 85,
+      "I_x": "17919/8192",
+      "I_z_including_padding": "13441/8192",
+      "entropy_bits": {
+        "lower": "7422569264919/1000000000000",
+        "upper": "185564231623/25000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8713349380821/1000000000000",
+        "upper": "4356674690411/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12067168197303/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2671589662641/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 14052,
+        "15876": 920,
+        "16900": 872,
+        "64516": 224,
+        "66564": 224,
+        "407044": 36,
+        "412164": 28,
+        "6543364": 15,
+        "6563844": 13
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 0,
+      "z0": 0,
+      "I_x": "71687/32768",
+      "I_z_including_padding": "53769/32768",
+      "entropy_bits": {
+        "lower": "7420733365189/1000000000000",
+        "upper": "742073336519/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8710789632137/1000000000000",
+        "upper": "4355394816069/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072718668643/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362774935591/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 952,
+        "264196": 840,
+        "1044484": 168,
+        "1052676": 280,
+        "6543364": 28,
+        "6563844": 36,
+        "104816644": 21,
+        "104898564": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 0,
+      "z0": 127,
+      "I_x": "71687/32768",
+      "I_z_including_padding": "53769/32768",
+      "entropy_bits": {
+        "lower": "7420733365189/1000000000000",
+        "upper": "742073336519/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8710789632137/1000000000000",
+        "upper": "4355394816069/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072718668643/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362774935591/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 952,
+        "264196": 840,
+        "1044484": 168,
+        "1052676": 280,
+        "6543364": 28,
+        "6563844": 36,
+        "104816644": 21,
+        "104898564": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 0,
+      "z0": 1,
+      "I_x": "71687/32768",
+      "I_z_including_padding": "53769/32768",
+      "entropy_bits": {
+        "lower": "7420733365189/1000000000000",
+        "upper": "742073336519/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8710789632137/1000000000000",
+        "upper": "4355394816069/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072718668643/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362774935591/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 952,
+        "264196": 840,
+        "1044484": 168,
+        "1052676": 280,
+        "6543364": 28,
+        "6563844": 36,
+        "104816644": 21,
+        "104898564": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 0,
+      "z0": 85,
+      "I_x": "71687/32768",
+      "I_z_including_padding": "53769/32768",
+      "entropy_bits": {
+        "lower": "3710381941137/500000000000",
+        "upper": "296830555291/40000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "4355400087543/500000000000",
+        "upper": "8710800175087/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "2414541625139/200000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362744418507/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 856,
+        "264196": 936,
+        "1044484": 216,
+        "1052676": 232,
+        "6543364": 36,
+        "6563844": 28,
+        "104816644": 19,
+        "104898564": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 127,
+      "z0": 0,
+      "I_x": "71687/32768",
+      "I_z_including_padding": "53769/32768",
+      "entropy_bits": {
+        "lower": "7420733365189/1000000000000",
+        "upper": "742073336519/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8710789632137/1000000000000",
+        "upper": "4355394816069/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072718668643/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362774935591/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 952,
+        "264196": 840,
+        "1044484": 168,
+        "1052676": 280,
+        "6543364": 28,
+        "6563844": 36,
+        "104816644": 21,
+        "104898564": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 127,
+      "z0": 127,
+      "I_x": "71687/32768",
+      "I_z_including_padding": "53769/32768",
+      "entropy_bits": {
+        "lower": "7420733365189/1000000000000",
+        "upper": "742073336519/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8710789632137/1000000000000",
+        "upper": "4355394816069/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072718668643/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362774935591/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 952,
+        "264196": 840,
+        "1044484": 168,
+        "1052676": 280,
+        "6543364": 28,
+        "6563844": 36,
+        "104816644": 21,
+        "104898564": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 127,
+      "z0": 1,
+      "I_x": "71687/32768",
+      "I_z_including_padding": "53769/32768",
+      "entropy_bits": {
+        "lower": "7420733365189/1000000000000",
+        "upper": "742073336519/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8710789632137/1000000000000",
+        "upper": "4355394816069/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072718668643/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362774935591/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 952,
+        "264196": 840,
+        "1044484": 168,
+        "1052676": 280,
+        "6543364": 28,
+        "6563844": 36,
+        "104816644": 21,
+        "104898564": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 127,
+      "z0": 85,
+      "I_x": "71687/32768",
+      "I_z_including_padding": "53769/32768",
+      "entropy_bits": {
+        "lower": "3710381941137/500000000000",
+        "upper": "296830555291/40000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "4355400087543/500000000000",
+        "upper": "8710800175087/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "2414541625139/200000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362744418507/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 856,
+        "264196": 936,
+        "1044484": 216,
+        "1052676": 232,
+        "6543364": 36,
+        "6563844": 28,
+        "104816644": 19,
+        "104898564": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 1,
+      "z0": 0,
+      "I_x": "71687/32768",
+      "I_z_including_padding": "53769/32768",
+      "entropy_bits": {
+        "lower": "3710381941137/500000000000",
+        "upper": "296830555291/40000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8710800176613/1000000000000",
+        "upper": "4355400088307/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072708124167/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362744418507/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 856,
+        "264196": 936,
+        "1044484": 216,
+        "1052676": 232,
+        "6543364": 36,
+        "6563844": 28,
+        "104816644": 19,
+        "104898564": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 1,
+      "z0": 127,
+      "I_x": "71687/32768",
+      "I_z_including_padding": "53769/32768",
+      "entropy_bits": {
+        "lower": "3710381941137/500000000000",
+        "upper": "296830555291/40000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8710800176613/1000000000000",
+        "upper": "4355400088307/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072708124167/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362744418507/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 856,
+        "264196": 936,
+        "1044484": 216,
+        "1052676": 232,
+        "6543364": 36,
+        "6563844": 28,
+        "104816644": 19,
+        "104898564": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 1,
+      "z0": 1,
+      "I_x": "71687/32768",
+      "I_z_including_padding": "53769/32768",
+      "entropy_bits": {
+        "lower": "3710381941137/500000000000",
+        "upper": "296830555291/40000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8710800176613/1000000000000",
+        "upper": "4355400088307/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072708124167/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362744418507/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 856,
+        "264196": 936,
+        "1044484": 216,
+        "1052676": 232,
+        "6543364": 36,
+        "6563844": 28,
+        "104816644": 19,
+        "104898564": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 1,
+      "z0": 85,
+      "I_x": "71687/32768",
+      "I_z_including_padding": "53765/32768",
+      "entropy_bits": {
+        "lower": "1484057502863/200000000000",
+        "upper": "1855071878579/250000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "87102400487/10000000000",
+        "upper": "8710240048701/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "2414604822291/200000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "167037208073/12500000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 920,
+        "264196": 872,
+        "1044484": 224,
+        "1052676": 224,
+        "6543364": 28,
+        "6563844": 36,
+        "104816644": 17,
+        "104898564": 11
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 7,
+      "z0": 0,
+      "I_x": "71679/32768",
+      "I_z_including_padding": "53769/32768",
+      "entropy_bits": {
+        "lower": "1484026985287/200000000000",
+        "upper": "1855033731609/250000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8709813913687/1000000000000",
+        "upper": "1088726739211/125000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12071741262093/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2672284049869/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 920,
+        "264196": 872,
+        "1044484": 224,
+        "1052676": 224,
+        "6543364": 36,
+        "6563844": 28,
+        "104816644": 15,
+        "104898564": 13
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 7,
+      "z0": 127,
+      "I_x": "71679/32768",
+      "I_z_including_padding": "53763/32768",
+      "entropy_bits": {
+        "lower": "1484026985287/200000000000",
+        "upper": "1855033731609/250000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8709813913687/1000000000000",
+        "upper": "1088726739211/125000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "3017843762789/250000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "1670131754801/125000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 920,
+        "264196": 872,
+        "1044484": 224,
+        "1052676": 224,
+        "6543364": 36,
+        "6563844": 28,
+        "104816644": 15,
+        "104898564": 13
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 7,
+      "z0": 1,
+      "I_x": "71679/32768",
+      "I_z_including_padding": "53767/32768",
+      "entropy_bits": {
+        "lower": "1484026985287/200000000000",
+        "upper": "1855033731609/250000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8709813913687/1000000000000",
+        "upper": "1088726739211/125000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12071619191781/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13361298179033/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 920,
+        "264196": 872,
+        "1044484": 224,
+        "1052676": 224,
+        "6543364": 36,
+        "6563844": 28,
+        "104816644": 15,
+        "104898564": 13
+      }
+    },
+    {
+      "q": 7,
+      "padding": 2,
+      "N": 16,
+      "x0": 7,
+      "z0": 85,
+      "I_x": "71679/32768",
+      "I_z_including_padding": "53763/32768",
+      "entropy_bits": {
+        "lower": "1484026985287/200000000000",
+        "upper": "1855033731609/250000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "1088792686497/125000000000",
+        "upper": "8710341491977/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "6035423736433/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "1670131754801/125000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 63204,
+        "260100": 920,
+        "264196": 872,
+        "1044484": 224,
+        "1052676": 224,
+        "6543364": 36,
+        "6563844": 28,
+        "104816644": 15,
+        "104898564": 13
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 0,
+      "z0": 0,
+      "I_x": "286727/131072",
+      "I_z_including_padding": "215051/131072",
+      "entropy_bits": {
+        "lower": "7419399125893/1000000000000",
+        "upper": "3709699562947/500000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8709424933379/1000000000000",
+        "upper": "435471246669/50000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072420159393/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362445966879/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 952,
+        "4202500": 840,
+        "16760836": 168,
+        "16793604": 280,
+        "104816644": 28,
+        "104898564": 36,
+        "1677557764": 21,
+        "1677885444": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 0,
+      "z0": 127,
+      "I_x": "286727/131072",
+      "I_z_including_padding": "215051/131072",
+      "entropy_bits": {
+        "lower": "7419399125893/1000000000000",
+        "upper": "3709699562947/500000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8709424933379/1000000000000",
+        "upper": "435471246669/50000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072420159393/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362445966879/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 952,
+        "4202500": 840,
+        "16760836": 168,
+        "16793604": 280,
+        "104816644": 28,
+        "104898564": 36,
+        "1677557764": 21,
+        "1677885444": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 0,
+      "z0": 1,
+      "I_x": "286727/131072",
+      "I_z_including_padding": "215051/131072",
+      "entropy_bits": {
+        "lower": "7419399125893/1000000000000",
+        "upper": "3709699562947/500000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8709424933379/1000000000000",
+        "upper": "435471246669/50000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072420159393/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362445966879/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 952,
+        "4202500": 840,
+        "16760836": 168,
+        "16793604": 280,
+        "104816644": 28,
+        "104898564": 36,
+        "1677557764": 21,
+        "1677885444": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 0,
+      "z0": 85,
+      "I_x": "286727/131072",
+      "I_z_including_padding": "215051/131072",
+      "entropy_bits": {
+        "lower": "92742584441/12500000000",
+        "upper": "7419406755281/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "1741885513943/200000000000",
+        "upper": "2177356892429/250000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "6036208761529/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362438337493/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 856,
+        "4202500": 936,
+        "16760836": 216,
+        "16793604": 232,
+        "104816644": 36,
+        "104898564": 28,
+        "1677557764": 19,
+        "1677885444": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 127,
+      "z0": 0,
+      "I_x": "286727/131072",
+      "I_z_including_padding": "215051/131072",
+      "entropy_bits": {
+        "lower": "7419399125893/1000000000000",
+        "upper": "3709699562947/500000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8709424933379/1000000000000",
+        "upper": "435471246669/50000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072420159393/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362445966879/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 952,
+        "4202500": 840,
+        "16760836": 168,
+        "16793604": 280,
+        "104816644": 28,
+        "104898564": 36,
+        "1677557764": 21,
+        "1677885444": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 127,
+      "z0": 127,
+      "I_x": "286727/131072",
+      "I_z_including_padding": "215051/131072",
+      "entropy_bits": {
+        "lower": "7419399125893/1000000000000",
+        "upper": "3709699562947/500000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8709424933379/1000000000000",
+        "upper": "435471246669/50000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072420159393/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362445966879/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 952,
+        "4202500": 840,
+        "16760836": 168,
+        "16793604": 280,
+        "104816644": 28,
+        "104898564": 36,
+        "1677557764": 21,
+        "1677885444": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 127,
+      "z0": 1,
+      "I_x": "286727/131072",
+      "I_z_including_padding": "215051/131072",
+      "entropy_bits": {
+        "lower": "7419399125893/1000000000000",
+        "upper": "3709699562947/500000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "8709424933379/1000000000000",
+        "upper": "435471246669/50000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12072420159393/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362445966879/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 952,
+        "4202500": 840,
+        "16760836": 168,
+        "16793604": 280,
+        "104816644": 28,
+        "104898564": 36,
+        "1677557764": 21,
+        "1677885444": 7
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 127,
+      "z0": 85,
+      "I_x": "286727/131072",
+      "I_z_including_padding": "215051/131072",
+      "entropy_bits": {
+        "lower": "92742584441/12500000000",
+        "upper": "7419406755281/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "1741885513943/200000000000",
+        "upper": "2177356892429/250000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "6036208761529/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362438337493/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 856,
+        "4202500": 936,
+        "16760836": 216,
+        "16793604": 232,
+        "104816644": 36,
+        "104898564": 28,
+        "1677557764": 19,
+        "1677885444": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 1,
+      "z0": 0,
+      "I_x": "286727/131072",
+      "I_z_including_padding": "215051/131072",
+      "entropy_bits": {
+        "lower": "92742584441/12500000000",
+        "upper": "7419406755281/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "4354713784869/500000000000",
+        "upper": "8709427569739/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "6036208761517/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362438337493/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 856,
+        "4202500": 936,
+        "16760836": 216,
+        "16793604": 232,
+        "104816644": 36,
+        "104898564": 28,
+        "1677557764": 19,
+        "1677885444": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 1,
+      "z0": 127,
+      "I_x": "286727/131072",
+      "I_z_including_padding": "215051/131072",
+      "entropy_bits": {
+        "lower": "92742584441/12500000000",
+        "upper": "7419406755281/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "4354713784869/500000000000",
+        "upper": "8709427569739/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "6036208761517/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362438337493/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 856,
+        "4202500": 936,
+        "16760836": 216,
+        "16793604": 232,
+        "104816644": 36,
+        "104898564": 28,
+        "1677557764": 19,
+        "1677885444": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 1,
+      "z0": 1,
+      "I_x": "286727/131072",
+      "I_z_including_padding": "215051/131072",
+      "entropy_bits": {
+        "lower": "92742584441/12500000000",
+        "upper": "7419406755281/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "4354713784869/500000000000",
+        "upper": "8709427569739/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "6036208761517/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362438337493/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 856,
+        "4202500": 936,
+        "16760836": 216,
+        "16793604": 232,
+        "104816644": 36,
+        "104898564": 28,
+        "1677557764": 19,
+        "1677885444": 9
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 1,
+      "z0": 85,
+      "I_x": "286727/131072",
+      "I_z_including_padding": "215047/131072",
+      "entropy_bits": {
+        "lower": "3709643831591/500000000000",
+        "upper": "7419287663183/1000000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "4354643768931/500000000000",
+        "upper": "8709287537863/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "6036248259877/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2672499278887/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 920,
+        "4202500": 872,
+        "16760836": 224,
+        "16793604": 224,
+        "104816644": 28,
+        "104898564": 36,
+        "1677557764": 17,
+        "1677885444": 11
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 7,
+      "z0": 0,
+      "I_x": "286719/131072",
+      "I_z_including_padding": "215051/131072",
+      "entropy_bits": {
+        "lower": "7419249516209/1000000000000",
+        "upper": "741924951621/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "13608095319/1562500000",
+        "upper": "8709181004161/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "6036087903681/500000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362107295313/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 920,
+        "4202500": 872,
+        "16760836": 224,
+        "16793604": 224,
+        "104816644": 36,
+        "104898564": 28,
+        "1677557764": 15,
+        "1677885444": 13
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 7,
+      "z0": 127,
+      "I_x": "286719/131072",
+      "I_z_including_padding": "215045/131072",
+      "entropy_bits": {
+        "lower": "7419249516209/1000000000000",
+        "upper": "741924951621/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "13608095319/1562500000",
+        "upper": "8709181004161/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "3018021063657/250000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362015742579/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 920,
+        "4202500": 872,
+        "16760836": 224,
+        "16793604": 224,
+        "104816644": 36,
+        "104898564": 28,
+        "1677557764": 15,
+        "1677885444": 13
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 7,
+      "z0": 1,
+      "I_x": "286719/131072",
+      "I_z_including_padding": "215049/131072",
+      "entropy_bits": {
+        "lower": "7419249516209/1000000000000",
+        "upper": "741924951621/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "13608095319/1562500000",
+        "upper": "8709181004161/1000000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "1509018161223/125000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "2672415355547/200000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 920,
+        "4202500": 872,
+        "16760836": 224,
+        "16793604": 224,
+        "104816644": 36,
+        "104898564": 28,
+        "1677557764": 15,
+        "1677885444": 13
+      }
+    },
+    {
+      "q": 7,
+      "padding": 4,
+      "N": 18,
+      "x0": 7,
+      "z0": 85,
+      "I_x": "286719/131072",
+      "I_z_including_padding": "215045/131072",
+      "entropy_bits": {
+        "lower": "7419249516209/1000000000000",
+        "upper": "741924951621/100000000000"
+      },
+      "full_reference_cost_bits": {
+        "lower": "348372515957/40000000000",
+        "upper": "4354656449463/500000000000"
+      },
+      "margin_to_8Ix_plus_2Iz_lower": "12071952359863/1000000000000",
+      "entropy_margin_to_8Ix_plus_2Iz_lower": "13362015742579/1000000000000",
+      "original_zero_coefficients": 14052,
+      "edited_spectrum_full_support": true,
+      "edited_squared_coefficient_histogram": {
+        "4": 259812,
+        "4186116": 920,
+        "4202500": 872,
+        "16760836": 224,
+        "16793604": 224,
+        "104816644": 36,
+        "104898564": 28,
+        "1677557764": 15,
+        "1677885444": 13
+      }
+    }
+  ],
+  "runtime_seconds": 23.458254600001965,
+  "analytic_slack_coefficient": "287/1920",
+  "independent_reviewer": false
+}

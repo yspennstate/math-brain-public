@@ -1,0 +1,2 @@
+STATE: Stage 6 complete: A096 no-reset identity and six A001 payment bounds independently HOLD; same fixture ALL adaptive no-reset trees paid once with full terminal KL and >111/200 reserve;286705 exact assertions PASS; shadow comparison unreviewed;FEI OPEN.
+NEXT: A097/A094 expose one prescribed weak non-flat fresh-reference reset with SAME old debit/unused bank; A086/A094 review all-tree corollary; require formula for A001 shadow reservation.

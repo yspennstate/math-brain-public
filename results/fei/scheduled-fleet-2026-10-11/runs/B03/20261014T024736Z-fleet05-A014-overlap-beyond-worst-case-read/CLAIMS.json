@@ -1,0 +1,67 @@
+[
+  {
+    "claim_id": "A014-INTERFERENCE-COMPLETE-CRITERION-AND-PP-GUARD",
+    "version": 3,
+    "exact_statement": "For every uniform Boolean OR of gates each combining at most M regular functions, the disjoint least-pivotal-gate derivative partition defines normalized laws nu_j and rho_j. For every kappa_j>=1, epsilon_j=sum_T(nu_j(T)-kappa_j*rho_j(T))_+, E_nu_j G_j <= E0+(24/5)log2(M*kappa_j)+epsilon_j*Gmax_j, where E0=(24/5)[log2(sqrt(2e)+2^(3/5))+log2 e]. For the source-component forest with global root odds lambda*pi_l, 0<lambda<=1, the explicit congestion Gamma in REPORT equation (2) yields H(f)<=[K0+E0+(29/5)log2 M+Gamma]I(f), with every root/label/subset/normalization cost retained. Addressing on a selectors has read 2^a, kappa_j<=2, epsilon_j=0, Gamma<3/4+24/5 and H<=50I for all integers a>=1; this is a known class calibration. For the projective-plane line union over any prime q with delta_q=(q^2+q)2^(-q)<1, worst-event derivative congestion is at least (q+1)(1-delta_q)^2, hence is unbounded. Least-gate masses lie between 2^(-q)(1-delta_q) and 2^(-q). More generally, ideal pieces with disjoint Fourier supports outside E certify epsilon_j(4)<=nu_j(E)+(4*sum_l||a_l-d_jl||_2^2+2*||sum_l(a_l-d_jl)||_2^2)/alpha_j. On PP_q this gives epsilon_j(4)*Gmax_j<=308/5 for every prime q, and sum_j alpha_j E_nu_j G_j<93 I(PP_q). The complete PP root/label/subset payment and universal FEI remain open. For every pairwise-disjoint positive width-w clause union, w>=2,m>=1, put p=2^-w,c=(1-p)^(m-1). All distant-blocker conditioned derivative remainders and local pressures vanish, but the off-clause spectral degree mass is I(f)*(1-c). The normalized derivative entropy is w-1+(m-1)*h_g, h_g=h2(p)+p*log2(2^w-1), and diverges at fixed w. With a=(1-p)^m, the exact whole-function entropy is h2(4*a*(1-a))+4*a*(m*h_g-h2(a)); this is a known disjoint-product calibration. Hence conditioned-error-only off-support transfer is false and is not a FEI disproof. For any finite disjoint private cubes Y,Z and Boolean indicators h1<=h0,k1<=k0, f=1-2 h_x k_x has the exact terminal-inclusive influence and signed entropy ledger in DERIVATION equations (1)-(5). With a_i=E h_i,b_i=E k_i,A_i=a_i*b_i,s=(A0+A1)/2, lambda_i=A_i/(2s), normalized component references Q_hi,Q_ki positive on their blocker spectra give R=sum_i lambda_i Q_hi Q_ki, Q_C(T,xi)=R(T)/2 and, for 0<s<1, Q_f(empty)=1-v,Q_f(A)=v Q_C(A)/(1-q_e) for nonempty A, where v=4s(1-s),q_e=Q_C(empty). These are normalized whole-set references with complete CE(f,Q_f)=h2(v)+4s[CE(P_C,Q_C)-s log2(1/q_e)+(1-s)log2(1-q_e)]. The exact excess is v KL(P_C conditioned nonempty || Q_C conditioned nonempty). Zero branch masses are omitted and constant outputs use an empty point mass. No universal influence bound on this excess is claimed.",
+    "hypotheses": [
+      "Uniform finite cube; Boolean +/-1 output; OR of nonconstant structured gates",
+      "Each outer gate combines at most M regular functions; source signed rank and rarity tails",
+      "Disjoint physical least-pivotal-gate derivative pieces; zero pieces omitted",
+      "Bits; 0<lambda<=1; deterministic minimizing assignment and source-component forest",
+      "The PP infinite family is restricted to prime q, sufficient for unbounded read",
+      "New identities only: disjoint positive equal-width clauses, integers w>=2,m>=1; no overlap conclusion inferred",
+      "New interface: finite disjoint private cubes, one shared bit, nested Boolean blocker branches; component reference support positivity; all bits uniform"
+    ],
+    "statement_sha256": "a474f8a47d9b5c1e02cdfc865f914ec0e520b0b71a2460776c6b6f1047c86406",
+    "contributors": [
+      "A014"
+    ],
+    "proof_source": {
+      "prior_version_source": "~\\brain_workers\\FEI100_20261011\\agents\\A014\\runs\\20261013T235200Z-fleet05-A014-overlap-beyond-worst-case-read\\CLAIMS.json",
+      "prior_version_sha256": "c967aa0e59e3799e3e406957758e85b03ee72f1aada945374d32763b6cee481f",
+      "new_proof": "~\\brain_workers\\FEI100_20261011\\agents\\A014\\runs\\20261014T024736Z-fleet05-A014-overlap-beyond-worst-case-read\\DERIVATION.md",
+      "new_proof_sha256": "559adf96ab821e67b205c9657bf94b300d010a4a6475c5fc072e353e7a447117",
+      "locators": [
+        "equations (1)-(10)",
+        "First unsupported line and downstream use"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A014-INTERFERENCE-COMPLETE-CRITERION-AND-PP-GUARD",
+        "version": 2,
+        "scope_used": "Unchanged inherited statements; author-proved pending independent review"
+      },
+      {
+        "claim_id": "ELEMENTARY-PARSEVAL-PRODUCT-ENTROPY-LOGSUM",
+        "version": "standard",
+        "scope_used": "Self-contained new interface/reference proof"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A014-INTERFERENCE-COMPLETE-CRITERION-AND-PP-GUARD",
+        "version": 2
+      }
+    ],
+    "refutes": [
+      {
+        "statement": "off-clause degree mass <= sum_j conditioned remainder norm squared",
+        "witness": "w=2,m=2: left=3/8,right=0",
+        "scope": "proposed substitution, not A009 original transfer"
+      }
+    ],
+    "first_unproved_line": "Pay complete reference excess and terminal conversions by one dimension-independent physical influence account, iterably through overlapping blockers.",
+    "next_consumers": [
+      "A008",
+      "A009",
+      "A006",
+      "A015",
+      "B03",
+      "A086",
+      "A094"
+    ]
+  }
+]

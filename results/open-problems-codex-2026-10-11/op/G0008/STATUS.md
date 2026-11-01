@@ -1,0 +1,12 @@
+STATE: DONE
+NEXT: Prove or disprove tau_2(p)>=tau_3(p), starting at p=1/2; retain cyclic boundary attachment data to constrain exterior mergers beyond hit flags.
+VERDICT: PARTIAL
+
+2026-10-11 initial pass: Source arXiv:2601.00291v1 checked; bounded follow-up literature searches found no complete solution, with OpenAlex rate-limited. Exact queries and references are in LITERATURE.md. Corrected earlier crude uniform path counting and the unsupported truncated/full supercritical inference.
+2026-10-11 initial pass: Proved critical n=1 gap >=9/2048 and explicit small/high-p first-step intervals by exact free/wired comparison. Preserved their complete proofs and checks in ATTEMPT.md.
+2026-10-11 requested serious continuation: Read ATTEMPT.md and queried the brain on the exact boundary/width-uniform gap and on Messager--Miracle-Sole / random-cluster reflection positivity. Recorded two untried approaches and pursued the common-exterior signed comparison.
+2026-10-11 continuation result: PROVED tau_1(p)-tau_2(p)>=p(1-p)^6>0 for EVERY 0<p<1 on infinite Z^2. A radius-two punctured patch with 36 iid edges, D4 orbit averaging and boundary-hit constrained coarsenings produces an exact global degree-40 coefficient certificate. Complete computer-assisted proof, all 80 state arrays and all 41 signed coefficients are saved.
+2026-10-11 checks: Forward/reverse state counts, independent D4/star enumeration, independent integer convolution, independently generated admissible coarsenings, D4 covariance of all count arrays, and exhaustive nontrivial boundary-flag tests passed. JointCertificate.lean verifies the 34 integer dominance inequalities using decide +kernel; no sorry or native_decide. The graph enumeration and probabilistic proof are not fully formalized.
+2026-10-11 secondary route: Exact three-terminal random-cluster join matrix has negative quadratic form q(q-1)(q-2) for 1<q<2, blocking the proposed generic reflection-positivity continuation. This is not a G0008 counterexample.
+2026-10-11 extension tests: The next-distance common-boundary lower bound at p=1/2 is negative for 49-edge and 97-edge rectangles. Wider test took 76.22 seconds under memory/time guards. These are failed certificates, not lattice counterexamples.
+2026-10-11 final: Completed the requested additional attempt. Verdict remains PARTIAL, but the first comparison is now proved for all parameters. All n>=2 and the higher-dimensional axis question remain unresolved; novelty of the special-case theorem is unverified.

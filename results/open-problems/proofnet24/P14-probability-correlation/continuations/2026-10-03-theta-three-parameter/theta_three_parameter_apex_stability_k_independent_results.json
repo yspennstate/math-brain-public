@@ -1,0 +1,718 @@
+{
+  "status": "PASS; independent component reconstruction and exact certificates",
+  "implementation": "64 backbone subsets with component factors; no author import",
+  "sympy_version": "1.14.0",
+  "backbone_forests": 54,
+  "apex_polynomial_terms": 32,
+  "unit_activity_augmented_forests": 712,
+  "pair_orbits": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "exact_certificate_checks": 31,
+  "positive_form_determinants": {
+    "Phi_A": "(p + q + 1)*(2*p*q + p + q + 1)",
+    "Phi_01": "(p*r + 1)*(q*r + 1)*(p + q + 1)*(p**2*q*r**2 + 2*p**2*q*r + p**2*r + p*q**2*r**2 + 2*p*q**2*r + p*q*r**2 + 2*p*q*r + 2*p*q + p*r + p + q**2*r + q*r + q + 1)",
+    "Phi_03": "r**2*(p + 1)*(q + 1)*(p + q + 1)*(p**2*q*r**2 + 2*p**2*q*r + p**2*r + p*q**2*r**2 + 2*p*q**2*r + p*q*r**2 + 2*p*q*r + 2*p*q + p*r + p + q**2*r + q*r + q + 1)",
+    "Phi_23": "p**2*q**2*r**2*(p**2*q*r**2 + p**2*q*r + p**2*r + p*q**2*r**2 + p*q**2*r + p*q*r**2 + 2*p*q*r + p*q + p*r + p + q**2*r + q*r + q + 1)",
+    "Phi_34": "p**2*q**2*(p + q + 1)*(2*p*q + p + q + 1)",
+    "Phi_E": "2*p**2*q**2*(p*r + p + q*r + q + 2)**2*(p**2*q*r**2 + 2*p**2*q*r + p**2*r + p*q**2*r**2 + 2*p*q**2*r + p*q*r**2 + 2*p*q*r + 2*p*q + p*r + p + q**2*r + q*r + q + 1)"
+  },
+  "univariate_profile_cases": [
+    {
+      "trial": 0,
+      "p": "5/3",
+      "q": "7/5",
+      "r": "1/5",
+      "profile": [
+        "3/5",
+        "3",
+        "0",
+        "5/4",
+        "2/5"
+      ],
+      "degree": 4,
+      "negative_roots_counting_multiplicity": 4,
+      "coefficients_descending": [
+        "363/250",
+        "1199239/37500",
+        "2944523/15625",
+        "1158451/3750",
+        "330986/5625"
+      ]
+    },
+    {
+      "trial": 1,
+      "p": "3",
+      "q": "6",
+      "r": "1/2",
+      "profile": [
+        "0",
+        "2",
+        "2/3",
+        "1/2",
+        "4/3"
+      ],
+      "degree": 4,
+      "negative_roots_counting_multiplicity": 4,
+      "coefficients_descending": [
+        "68/9",
+        "2666/9",
+        "31769/9",
+        "13410",
+        "2980"
+      ]
+    },
+    {
+      "trial": 2,
+      "p": "3/4",
+      "q": "1",
+      "r": "3",
+      "profile": [
+        "3/4",
+        "5/4",
+        "1/4",
+        "4/3",
+        "1/3"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "5/48",
+        "11147/2304",
+        "584075/9216",
+        "232403/768",
+        "186637/384",
+        "3971/32"
+      ]
+    },
+    {
+      "trial": 3,
+      "p": "1/2",
+      "q": "1/2",
+      "r": "2",
+      "profile": [
+        "1",
+        "1",
+        "4",
+        "4",
+        "2"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "32",
+        "264",
+        "704",
+        "669",
+        "228",
+        "19"
+      ]
+    },
+    {
+      "trial": 4,
+      "p": "2",
+      "q": "6",
+      "r": "1/5",
+      "profile": [
+        "1/2",
+        "6",
+        "0",
+        "6",
+        "5"
+      ],
+      "degree": 4,
+      "negative_roots_counting_multiplicity": 4,
+      "coefficients_descending": [
+        "234",
+        "18564/5",
+        "701019/50",
+        "141939/10",
+        "20277/25"
+      ]
+    },
+    {
+      "trial": 5,
+      "p": "7/3",
+      "q": "3",
+      "r": "1",
+      "profile": [
+        "3",
+        "2/5",
+        "0",
+        "0",
+        "1"
+      ],
+      "degree": 3,
+      "negative_roots_counting_multiplicity": 3,
+      "coefficients_descending": [
+        "722/15",
+        "154052/135",
+        "651244/135",
+        "29602/27"
+      ]
+    },
+    {
+      "trial": 6,
+      "p": "7/4",
+      "q": "3",
+      "r": "1",
+      "profile": [
+        "1/2",
+        "5",
+        "1/2",
+        "1/3",
+        "2"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "5/6",
+        "615/16",
+        "37251/64",
+        "106389/32",
+        "568675/96",
+        "22747/32"
+      ]
+    },
+    {
+      "trial": 7,
+      "p": "1",
+      "q": "3",
+      "r": "1/2",
+      "profile": [
+        "1",
+        "1/3",
+        "1/5",
+        "0",
+        "4"
+      ],
+      "degree": 4,
+      "negative_roots_counting_multiplicity": 4,
+      "coefficients_descending": [
+        "4/3",
+        "251/5",
+        "2339/5",
+        "4067/4",
+        "735/4"
+      ]
+    },
+    {
+      "trial": 8,
+      "p": "4/3",
+      "q": "1/2",
+      "r": "5/2",
+      "profile": [
+        "2/5",
+        "0",
+        "0",
+        "4/3",
+        "0"
+      ],
+      "degree": 2,
+      "negative_roots_counting_multiplicity": 2,
+      "coefficients_descending": [
+        "5653/270",
+        "111605/648",
+        "42925/432"
+      ]
+    },
+    {
+      "trial": 9,
+      "p": "4/5",
+      "q": "2",
+      "r": "1/2",
+      "profile": [
+        "5/4",
+        "4/5",
+        "5",
+        "2",
+        "1/2"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "5",
+        "497/5",
+        "70989/125",
+        "561151/500",
+        "831041/1250",
+        "8702/125"
+      ]
+    },
+    {
+      "trial": 10,
+      "p": "7/3",
+      "q": "3",
+      "r": "1",
+      "profile": [
+        "3",
+        "6/5",
+        "1/2",
+        "3",
+        "3/2"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "81/10",
+        "243",
+        "22889/10",
+        "370459/45",
+        "1361692/135",
+        "29602/27"
+      ]
+    },
+    {
+      "trial": 11,
+      "p": "3",
+      "q": "1/2",
+      "r": "3/2",
+      "profile": [
+        "0",
+        "6",
+        "4/3",
+        "1",
+        "0"
+      ],
+      "degree": 3,
+      "negative_roots_counting_multiplicity": 3,
+      "coefficients_descending": [
+        "318",
+        "15645/8",
+        "74475/32",
+        "8937/32"
+      ]
+    },
+    {
+      "trial": 12,
+      "p": "2",
+      "q": "3",
+      "r": "7/4",
+      "profile": [
+        "5",
+        "2/3",
+        "6/5",
+        "1/4",
+        "0"
+      ],
+      "degree": 4,
+      "negative_roots_counting_multiplicity": 4,
+      "coefficients_descending": [
+        "6",
+        "294",
+        "306783/80",
+        "488061/40",
+        "3429/2"
+      ]
+    },
+    {
+      "trial": 13,
+      "p": "1/5",
+      "q": "2",
+      "r": "3/2",
+      "profile": [
+        "1",
+        "1/2",
+        "4/3",
+        "1",
+        "3/5"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "2/5",
+        "707/60",
+        "68693/750",
+        "504158/1875",
+        "534128/1875",
+        "8032/125"
+      ]
+    },
+    {
+      "trial": 14,
+      "p": "4",
+      "q": "7",
+      "r": "3",
+      "profile": [
+        "3/2",
+        "1/2",
+        "5/4",
+        "4/3",
+        "1/2"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "5/8",
+        "731/8",
+        "11497/3",
+        "183767/3",
+        "325496",
+        "64032"
+      ]
+    },
+    {
+      "trial": 15,
+      "p": "1",
+      "q": "5/4",
+      "r": "7/4",
+      "profile": [
+        "1",
+        "5/2",
+        "2/3",
+        "4/3",
+        "1"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "20/9",
+        "1073/24",
+        "348067/1152",
+        "120811/144",
+        "1766557/2048",
+        "135889/1024"
+      ]
+    },
+    {
+      "trial": 16,
+      "p": "1/2",
+      "q": "4",
+      "r": "1",
+      "profile": [
+        "2/3",
+        "3",
+        "1/2",
+        "3/2",
+        "4"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "6",
+        "579/4",
+        "6613/6",
+        "13119/4",
+        "80707/24",
+        "2783/8"
+      ]
+    },
+    {
+      "trial": 17,
+      "p": "2/3",
+      "q": "1",
+      "r": "1/3",
+      "profile": [
+        "1",
+        "3/4",
+        "1",
+        "5",
+        "5/4"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "75/16",
+        "2525/48",
+        "42077/216",
+        "92413/324",
+        "4160/27",
+        "4160/243"
+      ]
+    },
+    {
+      "trial": 18,
+      "p": "1",
+      "q": "1/5",
+      "r": "7/2",
+      "profile": [
+        "1/5",
+        "2/3",
+        "4/5",
+        "5/2",
+        "2"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "8/15",
+        "2942/125",
+        "1234129/7500",
+        "27089441/75000",
+        "769637/3000",
+        "20801/500"
+      ]
+    },
+    {
+      "trial": 19,
+      "p": "1",
+      "q": "2",
+      "r": "1",
+      "profile": [
+        "4/3",
+        "2",
+        "1",
+        "1/2",
+        "4"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "16/3",
+        "104",
+        "1990/3",
+        "1649",
+        "4240/3",
+        "160"
+      ]
+    },
+    {
+      "trial": 20,
+      "p": "1/2",
+      "q": "4/5",
+      "r": "5/2",
+      "profile": [
+        "3/2",
+        "3/4",
+        "1/2",
+        "6",
+        "3/2"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "81/16",
+        "30321/320",
+        "384183/800",
+        "2650317/3200",
+        "713851/1600",
+        "17411/400"
+      ]
+    },
+    {
+      "trial": 21,
+      "p": "1",
+      "q": "3",
+      "r": "6",
+      "profile": [
+        "3/2",
+        "0",
+        "2/3",
+        "3/4",
+        "3"
+      ],
+      "degree": 4,
+      "negative_roots_counting_multiplicity": 4,
+      "coefficients_descending": [
+        "225/4",
+        "13731/8",
+        "100501/8",
+        "289325/12",
+        "4075"
+      ]
+    },
+    {
+      "trial": 22,
+      "p": "1",
+      "q": "1/5",
+      "r": "5/3",
+      "profile": [
+        "1",
+        "2/5",
+        "5/2",
+        "6",
+        "5/3"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "10",
+        "1783/15",
+        "33371/75",
+        "626339/1125",
+        "774851/3375",
+        "4466/225"
+      ]
+    },
+    {
+      "trial": 23,
+      "p": "4/5",
+      "q": "3/5",
+      "r": "1",
+      "profile": [
+        "6/5",
+        "2/5",
+        "2/5",
+        "6",
+        "6"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "coefficients_descending": [
+        "864/125",
+        "71856/625",
+        "1759536/3125",
+        "2735712/3125",
+        "193536/625",
+        "13824/625"
+      ]
+    }
+  ],
+  "direct_marked_cases": [
+    {
+      "p": "1",
+      "q": "2",
+      "r": "3",
+      "profile": [
+        "1",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      "A_E_F_C": [
+        "598958/9",
+        "367154/9",
+        "314054/9",
+        "192410/9"
+      ],
+      "EF_minus_AC": "749056",
+      "strict": true
+    },
+    {
+      "p": "2/3",
+      "q": "5/2",
+      "r": "4/3",
+      "profile": [
+        "0",
+        "1",
+        "3",
+        "0",
+        "0"
+      ],
+      "A_E_F_C": [
+        "272374685/5184",
+        "428334695/15552",
+        "13230085/576",
+        "20798495/1728"
+      ],
+      "EF_minus_AC": "1875878125/8748",
+      "strict": true
+    },
+    {
+      "p": "7/4",
+      "q": "1/5",
+      "r": "2",
+      "profile": [
+        "0",
+        "0",
+        "1",
+        "2",
+        "0"
+      ],
+      "A_E_F_C": [
+        "413014951/48000",
+        "51216041/9600",
+        "219472363/48000",
+        "135912601/48000"
+      ],
+      "EF_minus_AC": "238164814503/8000000",
+      "strict": true
+    },
+    {
+      "p": "3",
+      "q": "4",
+      "r": "5/3",
+      "profile": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "5"
+      ],
+      "A_E_F_C": [
+        "121617911/27",
+        "246224533/135",
+        "39799487/27",
+        "80563981/135"
+      ],
+      "EF_minus_AC": "435398944",
+      "strict": true
+    },
+    {
+      "p": "1",
+      "q": "3",
+      "r": "7/2",
+      "profile": [
+        "2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "A_E_F_C": [
+        "211575/4",
+        "151125/4",
+        "133455/4",
+        "95325/4"
+      ],
+      "EF_minus_AC": "0",
+      "strict": false
+    },
+    {
+      "p": "5/4",
+      "q": "2",
+      "r": "1/7",
+      "profile": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "A_E_F_C": [
+        "183413/3136",
+        "183413/3136",
+        "183413/3136",
+        "183413/3136"
+      ],
+      "EF_minus_AC": "0",
+      "strict": false
+    }
+  ],
+  "summary": {
+    "exact_certificate_checks": 31,
+    "exact_univariate_root_cases": 24,
+    "direct_marked_cases": 6,
+    "strict_marked_cases": 4,
+    "equality_marked_cases": 2,
+    "counterexamples": 0
+  }
+}

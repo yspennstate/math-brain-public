@@ -1,0 +1,12 @@
+{
+  "rung": "ANALYTIC_PROOF_EXACT_CHECKS",
+  "command": "python -X utf8 lean_check.py --stmt \"example (x y : ℝ) : (x+y)^2 ≤ 2*(x^2+y^2) := by nlinarith [sq_nonneg (x-y)]\"",
+  "compute_admission": "memok exited 0: physical free16.5GB; commit free24.4GB",
+  "exit_code": 1,
+  "result": "RUNTIME_UNVERIFIED",
+  "wall_seconds": 130.5,
+  "source_sha256": "d5d608430b50db552fb1dd8c675698699b73fa4b0a06e8aa75e103e65ecccc20",
+  "translation_fidelity": "UNVERIFIED",
+  "retry": false,
+  "scope": "Only the scalar two-term Cauchy inequality was submitted. No Lean/compiler/axiom certificate or formal acceptance of the full theorem is claimed."
+}

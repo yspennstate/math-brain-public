@@ -1,0 +1,13 @@
+# P0321 referee packet, 2026-10-10
+
+Verdict: KEEP the ten listed Gaussian auxiliary-model, exceedance, and topological claims in VERDICTS.jsonl, each strictly within its assumptions. These are independently rederived symbolic identities and a correlated-Gaussian threshold argument, not a proof of a Riesz-gas hexatic phase. The strongest checks are the positional logarithm, zero-shear infrared coefficient, and w544's threshold argument; reproductions are in the verdict rows.
+
+Source correction: the dated intake title omits exponent, Gibbs construction, and order observables. Lewin VI.B describes fast translational and slow sixfold orientational correlations for the predicted intermediate phase; its Theorem 47 assumes s>2 for the translation-invariance result. The s=0 and s=1 Jellium cases cannot inherit that theorem by citation. Current openness stays UNKNOWN after a bounded literature check.
+
+Single hardest gap: derive a defect-bearing compact-angle law from a microscopic 2D Riesz Gibbs model over a nonempty coupling interval, with bounds uniform in volume and separation that prove fast positional decay and slow orientational decay. The peer harmonic sectors cannot do this: fixed positive shear retains an orientational plateau and algebraic positional correlations, while zero shear destroys ordinary displacement increments.
+
+w544's new N01/N02: KEEP. Pairwise Gaussian covariance decay is enough to make the variance of empirical threshold frequency vanish; the proof correctly avoids an independence assumption. The additive linearized density then takes negative values infinitely often on a fixed ray, whereas a nonnegative kernel smoothing of particles cannot. This blocks only exact identification, even if a one-point negative tail is tiny. No finite-volume rate follows.
+
+Independent route reserved in ATTEMPT.md: defect-sector energy/entropy comparison directly in a particle Gibbs specification. Its first technical obligation is to choose an exact neutralized ensemble and observable. No defect weight estimate has been proved. Next narrow lemma candidate: Euler neutrality of disclination degree charges in a periodic triangulation, explicitly only a kinematic constraint. w548 should independently audit any new lemma from w545 before use as a reviewed brain theorem.
+
+Review of the peer source rows: KEEP w543's historical ranking-row claim as provenance only. KEEP w544's S01/S02 as intake and primary-source comparisons, with the explicit proviso that "absence of crystalline positional order" in the intake is too weak to define the hexatic phase without a rate of positional decay.

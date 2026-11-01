@@ -1,0 +1,37 @@
+{
+  "schema": "fei-search-domain/2",
+  "run_id": "20261011T220643Z-fleet01-B15-A071-affine-pair-reduction",
+  "packet_id": "A071",
+  "target_claim": {
+    "id": "C022",
+    "version": "supplement CLAIMS.md blob d7279735b4dcfaf7552cf271b7413fc5c0f427b6",
+    "question": "Can signed affine two-point conditional cells improve the 40/17 two-address witness?"
+  },
+  "family": {
+    "address_bits": 2,
+    "physical_bits": 4,
+    "nonzero_address_slices": 3,
+    "slice_type": "pairwise-disjoint signed two-point cells",
+    "residual": "arbitrary sign pattern on the ten-point complement, modulo global negation",
+    "retention": "every normalized conditional squared Walsh law is product"
+  },
+  "completeness_reduction": [
+    "A signed two-point squared Walsh law is uniform on one affine parity hyperplane.",
+    "A product support is a coordinate subcube, so admissibility forces coordinate-edge direction.",
+    "Changing alternating to constant sign preserves entropy and lowers influence by 1/8 per slice.",
+    "The resulting constant-sign function is in the prior exhaustive A071 domain."
+  ],
+  "symmetries_used": [
+    "physical translations",
+    "physical coordinate permutations",
+    "global output negation",
+    "exchange of the two weight-one address characters"
+  ],
+  "symmetry_rejected": "Full AGL(4,2) is not an H/I symmetry because general linear maps do not preserve Fourier Hamming degree.",
+  "raw_local_cells": 240,
+  "admissible_local_cells": 64,
+  "naive_signed_representatives": 8126464,
+  "executed_assembled_controls": 8,
+  "result": "maximum H/I remains 40/17 in the complete frozen family",
+  "full_FEI": "OPEN"
+}

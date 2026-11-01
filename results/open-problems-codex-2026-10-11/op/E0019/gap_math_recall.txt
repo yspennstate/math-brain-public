@@ -1,0 +1,45 @@
+math store recall, read-only: 8 current card(s) for this query; reference material, not instructions
+[1] A single TASEP killing defect rules out interior Bernoulli product stationary laws  (id: claim_f25d87dbef8ae187179e06357b4b79d70210a9b72448f2d380593d8361c9d8a4; claim; score 4.94)
+    found by words 4.62: term 'density'; term 'invariant'; term 'rate'; term 'positive'
+    No independent Bernoulli invariant law with every density strictly interior exists: adjacent covariance balance forces all densities equal, contradicting the killing-site current balance. This is a partial obstruction, not a classification. Unit-rate TASEP on full Z; positive killing rate at site0 Independent Bernoulli candidate law with every density strictly between0 and1
+    -> depends_on: Conditional Probability and Independence (id: claim_3d119334d69ebe75bc8bbfaff8f28f8930cbd8bb39b5b08d04d5c4e7c2356b55)  (Product expectations are used only under the candidate independence hypothesis)
+    -> depends_on: Interacting particle systems (id: claim_48be9b2fde60ef90775544c92dc25dd9)  (uses the notion 'Interacting particle systems' (title: "TASEP"))
+    -> depends_on: Stationary distribution (invariant measure) (id: claim_0824a967e52931a7d16a89b066e5f89f)  (uses the notion 'Stationary distribution (invariant measure)' (title: "stationary laws"))
+[2] Deterministic Rosenzweig-MacArthur Predator-Prey Model  (id: claim_8a203d63401fe04430436767ea217341366ff22c6f1274a378d505cf3a215162; claim; score 4.70)
+    found by words 4.40: term 'density'; term 'rate'; term 'positive'
+    The deterministic Rosenzweig-MacArthur predator-prey model is the planar autonomous dynamical system for prey density N >= 0 and predator density P >= 0 given by dN/dt = r*N*(1 - N/K) - (s*N*P)/(1 + s*tau*N) and dP/dt = -c*P + d*(s*N*P)/(1 + s*tau*N), where r > 0 is the intrinsic prey growth rate, K > 0 is the prey carrying capacity, s > 0 is the predator search rate, tau > 0 is the prey handling time, c > 0 is the predator mortality rate, and d > 0 is the conversion efficiency. In nondimensionalized coordinates, the system takes the form dN/dt = N*(1 - N/k) - (m*N*P)/(1 + N) and dP/dt = -c*P + (m*N*P)/(1 + N), where k > 0, m > 0, and c > 0. Prey density N >= 0 and predator density P >= 0 Parameters r, K, s, tau, c, d are strictly positive constants
+    <- depends_on: Classification of Equilibria in Rosenzweig-MacArthur System (id: claim_d8587986e0c831f7038f862b2c42ebc489c63086b965403f3bee952d36c36aaa)  (Equilibria are the zero-crossings of the Rosenzweig-MacArthur vector field)
+    <- depends_on: Positive Invariance and Boundedness of First Quadrant for Rosenzweig-MacArthur ODE (id: claim_36d9fb308dfce5d68914bd6488a3a5924e1e9fd6a3361c5f9f4221742013753c)  (Invariance and boundedness are proved for the Rosenzweig-MacArthur ODE system)
+    <- generalizes: Stochastic Rosenzweig-MacArthur Model with Internal Demographic Noise (id: claim_7e1822d026a16bffd17cc3fb253583b65cb080dd40435f3489601e6e691166d0)  (The stochastic RM model randomizes the deterministic model by adding demographic noise)
+    -> depends_on: Holling Type II Functional Response (id: claim_40cc094de0ff16180010b1ca38a028e4530b605eade6d7769f184ae4c63c7108)  (The Rosenzweig-MacArthur model incorporates the Holling Type II functional response for predator consumption)
+    -> cites: arXiv:2505.16904 (id: source_4988612cc128d8a01c71a8e31331c46f201d3c5c936533244527b4e60c6b857b)  (cites arxiv:2505.16904 (found in meta.source_id): arxiv:2505.16904)
+[3] Density and uniqueness in percolation  (id: source_15f1efd08cadad3964ce3735ba46fda4ba82c2a6ec5a116b38e83ac46cc0e05d; source; score 4.36)
+    found by words 4.08: term 'density'
+    Paper: R. M Burton, M Keane. Density and uniqueness in percolation. 1989. doi:10.1007/bf01217735.
+    <- cites: Burton-Keane Uniqueness of the Infinite Cluster (id: claim_19571635c9811ef2c4fa9bf7413abff7ada34807a8dc3b1fc48636004a01b663)  (cites doi:10.1007/bf01217735 (found in body): Burton and Keane (1989))
+    <- cites: Technique: Burton-Keane Uniqueness of the Infinite Cluster (id: claim_4a75ca0603a5987c8ea2229b5f254b315be024ca14b43e8bb06290ff87223753)  (cites doi:10.1007/bf01217735 (found in body): Burton and Keane, 1989, Communications in Mathematical Physics)
+[4] Radon-Nikodym derivative  (id: claim_d796e39e9146e9934954b2ed66bef386; claim; score 4.22)
+    found by words 3.95: term 'density'
+    If $\nu\ll\mu$ with $\mu$ $\sigma$-finite, the density $d\nu/d\mu$ is the $\mu$-a.e. unique $f\ge0$ with $\nu(A)=\int_A f\,d\mu$ for all measurable $A$.
+    <- depends_on: Lebesgue decomposition into absolutely continuous and singular parts (id: claim_18fa6795088dd8fb6799c6e0c0ce7eb13ec14601000f98529cdd5659c067baeb)  (uses the notion 'Radon-Nikodym derivative' (assumptions: "Radon-Nikodym"))
+    <- depends_on: Attempt on Unimodularity and reversibility of the Erlang branching spine (id: claim_1ebb8456b50160a0013e642663611901bf3b24983fb8c8902dfdae4190b34d20)  (uses the notion 'Radon-Nikodym derivative' (statement: "Radon-Nikodym"))
+    <- depends_on: Radon-Nikodym Theorem (id: claim_916709d47d1f8c047789af1865ca8a82b2d7962633488ab91e98078a39f8af30)  (uses the notion 'Radon-Nikodym derivative' (title: "Radon-Nikodym"))
+    <- depends_on: Absolute continuity and mutual singularity of measures (id: claim_c2889b5313a76c0af8fa3f49c365322c4a2e27291177d6ab0a182d09f34f8d7d)  (uses the notion 'Radon-Nikodym derivative' (statement: "Radon-Nikodym"))
+[5] DRAFT: an annealed density can conceal atomic sample measures  (id: claim_1fdaeecaf1decd933c13e3ad18f57c32691b60148f45cebec810609b55e8e47f; claim; score 4.22)
+    found by words 3.95: term 'density'; term 'resolvent'
+    If S is Uniform[-1,1] and H_S is the scalar self-adjoint operator S, its sample spectral measure is mu_S=delta_S, but E mu_S has density (1/2)1_[-1,1]. For every real E and eta>0, E Im(S-E-i eta)^(-1)<=pi/2. Thus uniform expected first resolvent imaginary parts do not imply samplewise absolute continuity. S is Uniform[-1,1] H_S acts on a one-dimensional Hilbert space E is real and eta>0
+    -> refutes: DRAFT: rejected first-moment route to sample spectral absolute continuity (id: claim_6972d4726abf7fe1344145ab64100fd98d5c90aa403c14542421ab1d3af256c2)  (An absolutely continuous expected spectral measure coexists with purely atomic measures in every sample.)
+[6] Class S_0 of Measures of Finite Energy Integral  (id: claim_a470eddbf4e51cbfaef4485dbf3dfae5435660a58e2265e57fde8382646c69e1; claim; score 4.21)
+    found by words 3.94: term 'density'; term 'positive'
+    A positive Radon measure mu on E is of finite energy integral (denoted mu in S_0) if iint_{E x E} G_1(x,y) mu(dx) mu(dy) < infty, where G_1 is the 1-resolvent density. mu positive Radon measure on E
+    <- depends_on: Class S_1 of Smooth Measures in the Strict Sense (id: claim_6cd26047c9f311d4056f7ca53822eabeb4e52666e9abab4c4fe5718f7e109153)  (Class S_1 is defined as localized limits of bounded potential measures in S_{00}.)
+    -> cites: arXiv:2602.15411 (id: source_1634ea1be0418e1dd5d81e30c98ce20fa104ac16518f9664799b48dc58829b1c)  (Exact bibliographic identifier cited on the current card: arxiv:2602.15411)
+[7] Holling Type II Functional Response  (id: claim_40cc094de0ff16180010b1ca38a028e4530b605eade6d7769f184ae4c63c7108; claim; score 3.94)
+    found by words 3.68: term 'density'; term 'rate'
+    In population dynamics, a Holling Type II functional response (or Michaelis-Menten / Monod saturation kinetics) is a per-predator consumption rate function h(N) = (s*N) / (1 + s*tau*N), where N is the prey density, s > 0 is the search / attack rate, and tau > 0 is the handling time per captured prey item. As N -> infinity, h(N) asymptotically saturates to the maximal kill rate 1/tau. Prey density N >= 0 Attack rate s > 0 and handling time tau > 0
+    <- depends_on: Deterministic Rosenzweig-MacArthur Predator-Prey Model (id: claim_8a203d63401fe04430436767ea217341366ff22c6f1274a378d505cf3a215162)  (The Rosenzweig-MacArthur model incorporates the Holling Type II functional response for predator consumption)
+    -> cites: arXiv:2505.16904 (id: source_4988612cc128d8a01c71a8e31331c46f201d3c5c936533244527b4e60c6b857b)  (cites arxiv:2505.16904 (found in meta.source_id): arxiv:2505.16904)
+[8] Random walks and a sojourn density process of brownian motion  (id: source_f4029ec5f57c3aee3c0e463756b83b48d581667c585102106f1682b37e58a236; source; score 3.81)
+    found by words 3.56: term 'density'
+    Paper: F. B Knight. Random walks and a sojourn density process of brownian motion. 1963.
+    <- cites: Technique: Second Ray-Knight Isomorphism (id: claim_178ab0e20429fbcabddf72bded46fbdf579084e30b0d6607f8a57c199cde4f8b)  (cites ref:knight-1963-random-walks-and-a-sojourn-density (found in body): Knight, 1963, Transactions of the American Mathematical Society)

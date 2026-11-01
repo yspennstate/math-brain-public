@@ -1,0 +1,15 @@
+# Source-bound final campaign handoff: A032 to A079/A033/A096/A097/A094/A099
+
+New exact version: A032-ISOSPECTRAL-CORE-BOUNDED-MIXTURE-OBSTRUCTION@2. Its statement hash is in CLAIMS.json. External independent acceptance is pending. A079-DIAGONAL-CORE-LATENT-CAPACITY@1 independently HOLDS at its supplied-source scope; REVIEW_A079.md records the separate reconstruction.
+
+The original unduplicated Boolean defect spectrum P=(9,1,1,1,1,1,1,1)/16 now has the information-sensitive bound D(P^tensor r||q)+I_posterior(X;Z)>=r*tau, tau=2-(9/8)log2(3). This improves the original family's cardinality loss from2log M tolog M. It is NOT obtained by silently substituting A079's different diagonal duplicated-core family. Redundant latent labels cannot weaken the information form.
+
+Review the three load-bearing transitions directly: PROOF.md section1's homogeneous SOS and two-term Holder; section2's KL normalization dual at zero marginal densities; and section3's complete wrapper CE cancellation retaining BOTH signed children, all controller vacuum atoms and every Fourier factor. The first two transitions are generic probability facts, not Booleanity admission criteria. The input spectra are certified by actual truth tables and direct characters.
+
+The new interval checks use exact rational atanh tails and outward dyadic receipts. An initial formatting-only failure is preserved, not counted as a mathematical counterexample or erased. The final successful bounded domain has4316 exact checks. No finite census is being extrapolated to arbitrary r: the analytic tensorization is the continuum/all-dimension bridge.
+
+For an inherited physical history, the full finite history can be the auxiliary Z and its information has a chain rule. The contraction hypothesis does NOT survive arbitrary conditioning automatically, so no per-row contractions may be multiplied or added under an unproved invariant. A compatible tree conversion must retain its complete reference normalization and global reach; no auxiliary information is itself an influence credit.
+
+The unchanged first unsupported universal line is an INITIAL influence-priced reference family carrying an arbitrary Boolean core and closed under actual inherited marginals. Alternatively name a useful NECESSARY compatible target and fund its full divergence/latent-capacity bill from an explicitly identified SAME unused original allowance after prior bookings and complementary terminals. Keeping the exact inherited core source still avoids this optional product-mixture conversion. Nothing here constructs the missing source price, proves target necessity or yields an FEI counterexample.
+
+The shortest continuation is to build or refute that invariant reference family at the arbitrary-core interface, using A079's diagonal capacity and the present original-defect contraction as distinct admission-cost tests. Another fixed-M or zero-local-refund example has no remaining universal leverage. Full FEI remains OPEN at this campaign handoff.

@@ -1,0 +1,48 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w383",
+  "bundle_slug": "p0110-conditional-gate-correction-001",
+  "entries": [
+    {
+      "key": "ad-conditional-equality-gate",
+      "namespace": "probability.fpp",
+      "logical_name": "p0110-auffinger-damron-conditional-equality-gate",
+      "kind": "concept",
+      "title": "P0110 source correction: Auffinger-Damron conditional equality",
+      "statement": "Auffinger and Damron (2014), Theorem 2.2, prove chi=2xi-1 for iid nonnegative nearest-neighbor edge weights on Z^d, d>=2, when the law has mass below p_c(d) at the infimum of its support and the global strong exponents in their (2.1)-(2.2) satisfy chi_a=chi_b and xi_a=xi_b. The proof does not require the nearly-Gamma assumption. Theorem 2.1 is their new proof of the <= inequality; combining it with the previously known >= inequality gives their Theorem 2.2. No passage-time law is proved in that paper to satisfy the matched-exponent premise. Their printed (2.2) lower bound takes an infimum over every nonzero displacement, unlike Chatterjee (2013) A3-A4, which exclude a finite ball.",
+      "proof_text": null,
+      "assumptions": ["This is a source-audit description of a conditional published theorem, not a proof of P0110", "Auffinger-Damron (2014) Theorems 2.1-2.2 and equations (2.1)-(2.2) checked against the primary PDF"],
+      "domain": "first-passage percolation",
+      "source": {"source_id": "owner-p0110-w383-20261010:ad-source-audit", "url": "urn:owner-own-work:p0110:w383:ad-source-audit", "revision": "draft-20261010-independent-source-audit", "license": "owner-own-work (campaign source audit; primary paper attributed, no prose reproduced)", "excerpt": null}
+    },
+    {
+      "key": "all-v-lower-shortcut",
+      "namespace": "probability.fpp",
+      "logical_name": "p0110-invalid-all-v-lower-bound-shortcut",
+      "kind": "concept",
+      "title": "Invalid P0110 shortcut: bounded weights automatically satisfy the all-v lower wandering premise",
+      "statement": "INVALID INFERENCE: a positive bounded iid weight law such as Uniform[1,2] automatically satisfies the lower wandering condition in Auffinger-Damron (2014), printed equation (2.2). That condition takes the infimum of E D(0,v)/|v|^s over every nonzero displacement; a zero-deviation neighboring geodesic makes the infimum zero. Chatterjee (2013) A4 instead only requires the condition outside a sufficiently large ball.",
+      "proof_text": null,
+      "assumptions": ["The false shortcut concerns Auffinger-Damron's literally printed all-nonzero-v condition"],
+      "domain": "first-passage percolation",
+      "source": {"source_id": "owner-p0110-w382-20261010:small-displacement-route", "url": "urn:owner-own-work:p0110:w382:small-displacement-route", "revision": "draft-20261010-reviewed-w383", "license": "owner-own-work (w382 campaign boundary-case deduction)", "excerpt": null}
+    },
+    {
+      "key": "adjacent-edge-zero-wandering",
+      "namespace": "probability.fpp",
+      "logical_name": "p0110-adjacent-edge-zero-wandering-bounded-law",
+      "kind": "lemma",
+      "title": "Adjacent-edge zero wandering for weights in [a,b] with b<3a",
+      "statement": "On the nearest-neighbor lattice Z^d, d>=2, suppose every edge weight lies in [a,b] with 0<a<=b<3a. Between any adjacent vertices x,y the unique geodesic is the direct edge, so its maximum distance from [x,y] is zero. In particular, D(0,e_1)=0 and inf_{v!=0} E D(0,v)/|v|^s=0 for every real s. This does not address an asymptotic lower bound restricted to sufficiently large |v|.",
+      "proof_text": "The direct edge costs at most b. The lattice is bipartite, so every alternative path between adjacent vertices has odd length at least three; its passage time is at least 3a>b. Thus the direct edge is the unique minimizing path. It lies in the segment between its endpoints, making D(0,e_1)=0. The all-v infimum includes v=e_1 and all terms are nonnegative, so the infimum is zero.",
+      "assumptions": ["nearest-neighbor paths on Z^d, d>=2", "all edge weights in [a,b]", "0<a<=b<3a"],
+      "domain": "first-passage percolation",
+      "source": {"source_id": "owner-p0110-w382-20261010:adjacent-edge-obstruction", "url": "urn:owner-own-work:p0110:w382:adjacent-edge-obstruction", "revision": "draft-20261010-independent-review-w383", "license": "owner-own-work (w382 campaign derivation, independently checked by w383)", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "adjacent-edge-zero-wandering", "to_key": "all-v-lower-shortcut", "kind": "refutes", "rationale": "The adjacent-edge geodesic has D(0,e_1)=0 for Uniform[1,2], so that law fails the literally printed all-v lower wandering premise."},
+    {"from_key": "adjacent-edge-zero-wandering", "to_key": "ad-conditional-equality-gate", "kind": "semantic_association", "rationale": "The source-audit gate records the all-nonzero-v quantifier in (2.2); the adjacent-edge lemma shows why that precise quantifier matters."},
+    {"from_key": "ad-conditional-equality-gate", "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation", "kind": "semantic_association", "rationale": "Question 22 asks for one law with the KPZ relation; the source-audit concept records a conditional theorem route and its unproved matching-exponent premise."}
+  ]
+}

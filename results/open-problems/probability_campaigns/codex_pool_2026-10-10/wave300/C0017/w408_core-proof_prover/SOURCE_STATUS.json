@@ -1,0 +1,45 @@
+{
+  "target_id": "C0017",
+  "worker": "w408",
+  "checked_date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "ranking_record": {"tier": 5, "dated": "2026-09-07", "status": "attempted_un", "location": "RANKING_2026-09-07.csv:538"},
+  "primary_sources": [
+    {"url": "https://arxiv.org/abs/2409.03235", "author": "Wang Zhou", "status": "claims-full-target; proof-not-yet-audited"},
+    {"url": "https://arxiv.org/abs/2012.11672", "status": "rotational-invariance-result; stronger-conformal-conclusion-not-licensed"}
+  ],
+  "exact_statement_recovery": "verified intake C0017 and primary Garban-Steif Chapter II section 4",
+  "primary_historical_source": {
+    "url": "https://arxiv.org/pdf/1102.5761v3",
+    "locator": "Chapter II section 4; PDF page 26, printed page 24",
+    "quote": "proving the conformal invariance is still a challenging open problem",
+    "scope": "historical conformal scaling-limit problem; not current-open certification"
+  },
+  "exact_targets": {
+    "crossing": "For each bounded Jordan quad mapped to (0,u,1,infinity) in H, iid critical square-bond crossing probabilities between first and third boundary arcs tend to C(u)=B(1/3,1/3)^(-1) integral_0^u [v(1-v)]^(-2/3)dv.",
+    "interface": "Dobrushin square-bond medial exploration in a naturally approximated Jordan domain converges in the uniform curve metric modulo increasing reparametrization to chordal SLE_6."
+  },
+  "claimed_solution_theorem": {
+    "url": "https://arxiv.org/pdf/2409.03235v6",
+    "locator": "Theorem 2, PDF page 6; Condition C, PDF page 5",
+    "assumptions": ["bounded simply connected domain", "Caratheodory-convergent medial Dobrushin approximations", "technical mesoscopic polygonal boundary Condition C"],
+    "assertion": "weak convergence in the uniform curve metric modulo increasing reparametrization to SLE_6",
+    "proof_audit": "NOT COMPLETED",
+    "not_a_solved_receipt": true
+  },
+  "prior_attempt": {
+    "id": "C0017-A001",
+    "path": "probability_1000_intake_claude_20260907/attempts.jsonl:17",
+    "route": "additional discrete analyticity relation for a parafermionic observable",
+    "outcome": "no new observable found",
+    "normalization_correction": "standard sigma in [0,1] solving sin(pi sigma/2)=sqrt(q)/2 gives q=1 sigma=1/3, not positive 2/3; sigma-1 convention gives -2/3",
+    "correction_primary": "https://arxiv.org/pdf/1208.3787, Definition 3, PDF page 7"
+  },
+  "H_I_search": "no C0017 record returned by targeted ID search",
+  "lean_check": "annotation only; no target-specific formal receipt located",
+  "owner_solved_retired_check": "bounded named archive and prior-record search found no complete C0017 proof; archive completeness UNKNOWN",
+  "recall": {"status": "TIMEOUT_60_SECONDS", "fallback_memory_slug": "perceptron_proof_open_gaps_fleet_2026_07_12"},
+  "formal_check": null,
+  "full_target_solved": false
+}

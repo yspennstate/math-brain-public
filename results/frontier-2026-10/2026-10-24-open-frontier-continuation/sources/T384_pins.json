@@ -1,0 +1,43 @@
+{
+  "catalog_row": {
+    "rank": 362,
+    "problem_id": "T384",
+    "title": "Heavy-tailed weights at infinite width: the stable process limit",
+    "domain": "NNR",
+    "domain_name": "Deep learning: random networks and infinite-width or infinite-depth limits",
+    "statement": "If the weights of a deep fully connected network are iid with an α-stable law (α < 2) and scaled by n^{-1/α}, the infinite-width limit of the network is a stable process rather than a Gaussian process (Favaro, Fortini and Peluchetti). Characterize the training dynamics of such networks in the infinite-width limit: is there an analogue of the neural tangent kernel (a deterministic or random kernel limit), and does gradient descent in this limit perform feature learning?",
+    "statement_caveat": "The kernel in the stable limit is random (it does not concentrate); training-dynamics results exist for special cases (to verify 2023-25 work).",
+    "source": "S. Favaro, S. Fortini and S. Peluchetti, Stable behaviour of infinitely wide deep neural networks, arXiv:2003.00394 (2020)",
+    "locator": "to verify: Favaro et al., conclusion.",
+    "url": "https://arxiv.org/abs/2003.00394",
+    "why_important": "Trained network weights are often heavy-tailed (Martin and Mahoney); the stable limit is the matching probabilistic model.",
+    "where_it_stands": "Open as far as the writer knows.",
+    "where_it_stands_checked": false,
+    "note": "Fame: AISTATS 2020.",
+    "ledger_status": "unverified",
+    "retired_reason": "",
+    "list": "TOP200_DL",
+    "list_version": "2026-10-14",
+    "audit": {},
+    "changed_since_audit": false
+  },
+  "repository": "<private-repo>",
+  "dossier": {
+    "path": "06_math_research/frontier/rows/T384/DOSSIER.md",
+    "sha": "ba319f075261925a8747ce1bf31fc4f4b5c29241"
+  },
+  "moves": {
+    "path": "06_math_research/frontier/rows/T384/moves.jsonl",
+    "sha": "6289f46595e36a85cd9388d16c84f89bc57fc774"
+  },
+  "script": {
+    "path": "06_math_research/frontier/rows/T384/stable_ntk_move.py",
+    "sha": "dd40da57d955aa8b7d8d0f3991cfd3d7f0153374"
+  },
+  "primary_sources": [
+    "https://arxiv.org/pdf/2206.08065",
+    "https://iris.unibocconi.it/retrieve/1d4101f5-ffcd-480d-8966-6c0f01de8f2b/2651_Large_width_asymptotics_a.pdf"
+  ],
+  "checked_at_utc": "2026-10-23T21:33:00Z",
+  "status": "First-layer freezing unresolved in read dossier and published source; earlier numerical evidence credited. No native closure asserted."
+}

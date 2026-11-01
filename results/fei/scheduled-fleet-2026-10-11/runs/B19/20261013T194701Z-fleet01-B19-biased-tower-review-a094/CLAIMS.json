@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "run_id": "20261013T194701Z-fleet01-B19-biased-tower-review-a094",
+  "stream_id": "B19",
+  "primary_packet_id": "A094",
+  "reviewed_packet_id": "A023",
+  "claims": [
+    {
+      "claim_id": "B05_A023_NEGATIVE_HALF_SCALAR_v1",
+      "review_status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_SCOPE",
+      "statement": "R(t) <= 1 for every real t in [-1,0].",
+      "evidence": ["PROOF_REVIEW.md#3-one-sided-scalar-lemma", "INDEPENDENT_CHECK.py", "INDEPENDENT_CHECK.out"]
+    },
+    {
+      "claim_id": "B05_A023_BIASED_TOWER_ENDPOINT_v1",
+      "review_status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_SCOPE",
+      "statement": "For c >= 48/35, every fresh negative-half biased activation tower over a Boolean base P satisfying U(P) <= c I(P) has U(F_d) <= c I(F_d) at every finite depth.",
+      "scope": "Fresh disjoint blocks; fair selectors; fixed two-bit balancer of mean -1/2; endpoint-valid base. The constant is sufficient, not certified optimal.",
+      "evidence": ["PROOF_REVIEW.md#4-endpoint-recurrence", "INDEPENDENT_CHECK.py", "INDEPENDENT_CHECK.out"]
+    },
+    {
+      "claim_id": "B05_A023_BIASED_TOWER_RETAINED_CREDIT_v1",
+      "review_status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_SCOPE",
+      "statement": "For any finite adaptive or pruned physical-variable restriction tree and one common disjoint Boolean core h, the root-minus-leaves U payment is at most c I(F_d).",
+      "scope": "Endpoint telescope only; no nodewise positivity, restriction closure, changing/leaf-dependent core, or shared-variable conclusion.",
+      "evidence": ["PROOF_REVIEW.md#5-restriction-tree-payment", "INDEPENDENT_CHECK.py", "INDEPENDENT_CHECK.out"]
+    },
+    {
+      "claim_id": "B19_A094_BIASED_TOWER_REVIEW_v1",
+      "status": "PROVED",
+      "statement": "The three reviewed B05 v1 claims are independently accepted exactly at the stated scope; the arbitrary changing-core hierarchy and full FEI remain open.",
+      "depends_on": [
+        "B05_A023_NEGATIVE_HALF_SCALAR_v1",
+        "B05_A023_BIASED_TOWER_ENDPOINT_v1",
+        "B05_A023_BIASED_TOWER_RETAINED_CREDIT_v1"
+      ]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

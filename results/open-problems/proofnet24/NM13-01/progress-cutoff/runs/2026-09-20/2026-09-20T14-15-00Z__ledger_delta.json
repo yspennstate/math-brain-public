@@ -1,0 +1,49 @@
+{
+  "task": "NM13-01 / LIVE20 T08 transitive-expander cutoff",
+  "run": "2026-09-20T14-15-00Z",
+  "runtime_model": "GPT-5.6 Sol",
+  "runtime_effort": "UNVERIFIED",
+  "parent_problem": {
+    "source": "Salez arXiv:2508.21055 Problem 2.3",
+    "before": "OPEN / PARTIAL",
+    "after": "OPEN / PARTIAL",
+    "source_convention": "rate-one continuous time P_t=exp(t(P-I))",
+    "no_closure_claim": true
+  },
+  "restricted_theorem_status": "CANDIDATE_FULL pending independent review",
+  "publication_novelty": "UNVERIFIED",
+  "new_scope": {
+    "name": "Schreier-Hecke stochastic-fiber lifts",
+    "general_transfer": "For a d-regular Cayley cutoff base and a fixed finite uniform fiber, arbitrary symmetric doubly-stochastic k-regular cross kernels K_s plus an r-regular refresh kernel of gap eta give d_G(at)<=d_H(t)<=d_G(at)+0.5*sqrt(m-1)*exp(-b*eta*t), a=kd/(kd+r), b=r/(kd+r), and gap(H)>=min(a gap(G), b eta). Cross kernels need not be permutations, normalizers, commuting, or individually gapped.",
+    "explicit_class": "Degree-18 vertex-transitive Schreier-fiber lifts of degree-6 Kaufman-Lubotzky Ramanujan Cayley graphs using S4/<(12)> orbital kernels.",
+    "cutoff_center": "(9/4) log_5 n = (9/4) log_5 N + O(1)",
+    "window": "O(sqrt(log N))",
+    "gap_lower_bound": "2(3-sqrt(5))/9 = 0.169762671666713...",
+    "not_LRE": "At r=floor((1/2)log_17 N), ball/tree-benchmark ratio is <=N^{-beta+o(1)}, beta=(1/2)(1-log(5)/log(17))=0.2159695164...>0."
+  },
+  "mechanism_advance": {
+    "removed_obstruction": "The prior algebraic transfers needed hidden kicks to be translations/isometries, or switched hidden kernels to have a common positive gap. The new pathwise argument allows singular noncommuting stochastic averaging kicks: doubly stochastic kernels are L2 contractions, while all strict contraction is supplied by a separate refresh semigroup.",
+    "exact_certificate": "On S4/<(12)>, K_A has eigenvalue 1 with multiplicity 4 (zero one-sided gap), refresh R has gap 2/3, and ||[K_A,R]||_{2->2}=sqrt(2)/3.",
+    "general_conjecture_reduction": "Every finite vertex-transitive graph X=A/H is exactly the right-coset projection of an H-bi-invariant random walk on a transitive automorphism group A, started from uniform H. The lift preserves TV, every f-divergence, and the full information-variable law exactly. Thus absence of an algebraic group/factor representation is not an obstruction; the remaining obstacle is controlling a possibly large nonnormal stabilizer/Hecke algebra without a separated refresh direction."
+  },
+  "partner_complement": "Latest P26 read: 2026-09-20_15-59-31__partitioned-green-clique-insertion-transfer.md. P26 owns quotient-conditioned Green/shell/radial transfer; this run is homogeneous-space/Hecke algebra and pathwise stochastic-fiber contraction.",
+  "preserved_failures": [
+    "Global point-mass L2 on an undivided growing hidden state can pay a fatal sqrt(cardinality) factor.",
+    "Normal-quotient/translation voltage structure is not available in arbitrary transitive graphs.",
+    "A common positive gap for every cross/switched kernel is too strong; the explicit K_A here has gap zero."
+  ],
+  "residual_obstruction": "For the canonical Hecke lift of a general vertex-transitive spectral expander, the stabilizer H may be large and nonnormal and the Hecke convolution may have no bounded residual refresh component. Need a transitivity-supplied decomposition or direct varentropy/representation estimate for the H-bi-invariant walk.",
+  "next_attack": "Decompose the canonical H-bi-invariant transition in the permutation representation Ind_H^A(1); seek a bounded-rank or energy-refresh component forced by the graph spectral gap, or prove a direct information-varentropy bound for subgroup-uniform starts using matrix coefficients of the Hecke algebra.",
+  "sources": {
+    "Salez_2508.21055": "Problem 2.3 exact source and rate-one continuous-time convention recovered",
+    "Altschuler_2609.14945_2026-09-14": "fixed-degree long-range-expander Gaussian cutoff; strict Ramanujan => LRE => spectral hierarchy with neither converse",
+    "Pedrotti_Salez_2607.05345_2026-07-06": "local-product/non-equilibrium-Poincare sufficient criterion, not ordinary transitivity+gap",
+    "Kaufman_Lubotzky_1108.2960": "Theorem 3 supplies (q+1)-regular edge-transitive Ramanujan Cayley graphs; q=5 gives degree six"
+  },
+  "sanity_check": {
+    "script": "2026-09-20T14-15-00Z__schreier-hecke-fiber-check.py",
+    "output": "2026-09-20T14-15-00Z__schreier-hecke-fiber-check.out",
+    "result": "ALL_EXACT_AND_SANITY_CHECKS_PASS",
+    "finite_checks_are_not_asymptotic_proof": true
+  }
+}

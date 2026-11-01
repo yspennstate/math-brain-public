@@ -1,0 +1,109 @@
+[
+ {
+  "claim_id": "B12-L1-MONOTONE-ERASURE",
+  "version": 1,
+  "exact_statement": "Let F=g(h_1,...,h_m) on pairwise disjoint blocks of independent uniform signs, g Boolean on m bits, every h_k Boolean and balanced. Fix a coordinate i in block j; write a_T=ghat(T), b_T=ghat(T+{j}) for T not containing j, q=Inf_j(g)=sum_T b_T^2, alpha=hhat_j({i}), phi(u,v)=(u+v)ln(u+v)-u ln u-v ln v and L_j(x)=sum_T phi(a_T^2, x b_T^2) (nats). Then L_j is nondecreasing and concave on [0,1] with L_j'(x)=sum_T b_T^2 ln(1+a_T^2/(x b_T^2)) and L_j(1)=B_j(g); hence L_j(alpha^2) <= min{B_j(g), alpha^2 B_j(g)+q alpha^2 ln(1/alpha^2)} and, by the A057 erasure split, B_i(F) <= q B_i(h_j) + min{B_j(g), alpha^2 B_j(g)+q alpha^2 ln(1/alpha^2)}.",
+  "hypotheses": [
+   "disjoint blocks",
+   "uniform product measure",
+   "children balanced",
+   "B_i = erasure entropy H(1[i in S] | S minus i) of the squared Fourier law, nats"
+  ],
+  "statement_sha256": "f46847a9a363b79c09c980ca018a16f735e54a3fc124060e1557dbce5266f27a",
+  "contributors": [
+   "claude-B12-lead"
+  ],
+  "proof_source": "REPORT.md section L1 (one-line derivative of phi in v; L_j(1) is the packet form of B_j(g); concavity from second derivative)",
+  "proof_dependencies": [
+   "A057-COHERENT-ERASURE-SPLIT v1 (identity only; lead re-derived it and replayed it exactly on 6,468 cases)"
+  ],
+  "review_records": [],
+  "status": "PROVED",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A057 (outer-erasure transport)",
+   "A059 (depth)",
+   "A091 review"
+  ]
+ },
+ {
+  "claim_id": "B12-L2-DEFICIT-LOG-BANK",
+  "version": 1,
+  "exact_statement": "For every balanced Boolean h on finitely many independent uniform signs, Lambda(h) := sum_i hhat({i})^2 ln(1/hhat({i})^2) <= (4+6/e)(I(h)-1) nats. Consequently, in a balanced disjoint composition F=g(h_1,...,h_m), sum_j q_j Lambda(h_j) <= (4+6/e)(I(F)-I(g)), q_j=Inf_j(g).",
+  "hypotheses": [
+   "h Boolean, E h = 0",
+   "I = total influence",
+   "natural logarithms"
+  ],
+  "statement_sha256": "8378ccdef65a051456789177218d34e9c5d643718904a185ae15fca31b47a57c",
+  "contributors": [
+   "claude-B12-lead"
+  ],
+  "proof_source": "REPORT.md section L2: with M=max|hhat({i})|, u=1-M, s=sum of the other influences, I-1>=s-u and I-1>=1-W1>=u(2-u)-(1-u)s give I-1>=u/2 and s<=3(I-1); M^2 ln(1/M^2)<=2Mu<=2u and r^2 ln(1/r^2)<=(2/e)r with |hhat({i})|<=Inf_i(h)",
+  "proof_dependencies": [
+   "|hhat({i})| <= Inf_i(h) (half-difference)",
+   "I(F)=sum_j q_j I(h_j) for balanced disjoint children (A056 identity)"
+  ],
+  "review_records": [],
+  "status": "PROVED",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A057",
+   "A059",
+   "A091 review"
+  ]
+ },
+ {
+  "claim_id": "B12-R1-FORMULA-BANK-REUSE-IS-DEPTH-LOSSY",
+  "version": 1,
+  "exact_statement": "For k>=2 let g_k(y,z_1,...,z_k)=sign((k-1)y+z_1+...+z_k), u=2^(1-k), and let F_{k,d} be the read-once chain F_0=x_0, F_{t+1}=g_k(F_t, fresh z^(t)). Then F_{k,d} is odd, so B(F_{k,d})=sum_i B_i(F_{k,d})=0; I(F_{k,d})=1+(k-1)(1-(1-u)^d)<k; H(F_{k,d})=H(g_k)(1-(1-u)^d)/u. The level-by-level iteration of the A057 root ledger charges the coherent bank sum_{s=0}^{d-1}(1-u)^{s+1} Lambda(F_{k,d-1-s}) nats, and for d=2^(k-1) this is >= e^(-2-2u)(2^(k-1)-1). Hence bank/I(F) >= e^(-3)(2^(k-1)-1)/k, unbounded: no constant-factor, depth-uniform bound follows from iterating the root ledger over formula depth with the q*Lambda bank (a fortiori with the (2/e)I bank), although B=0 and H<=4I-type bounds hold on the family. The L1 bound evaluates every L-term of the family exactly (all 0).",
+  "hypotheses": [
+   "read-once chain of balanced odd threshold gates",
+   "uniform measure"
+  ],
+  "statement_sha256": "64b716ddc2e96d0d89e68a18d1b24dc2fcb34cc185b3aac87187cddaa75128b6",
+  "contributors": [
+   "claude-B12-lead"
+  ],
+  "proof_source": "REPORT.md section R1; exact brute-force certificate for (k,d) in {(2,1..4),(3,1..3)} and closed-form table k=2..14 in out/results.json",
+  "proof_dependencies": [
+   "A056 balanced chain rule (H, I, coefficient formula)",
+   "oddness kills every erasure pair"
+  ],
+  "review_records": [],
+  "status": "PROVED",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A059 (do not iterate the root ledger over depth)",
+   "A057 (bank must be charged on a non-reusing physical tree)"
+  ]
+ },
+ {
+  "claim_id": "B12-REPLAY-A056-A057-A058",
+  "version": 1,
+  "exact_statement": "Finite exact statements: (i) AND2(maj3(x,a,b),z) with x=+1 has mean -1/4, I=5/4, H=4-(9/8)log2(3) bits; (ii) the A057 erasure split B_i(F)=q B_i(h_j)+L_j(alpha_i^2) holds exactly on all 6468 coordinate checks over the 1476 frozen (g,h) pairs, and J:=D_i(F)-qD_i(h_j)-L_j lies in [0,2q alpha^2] on 3972 cases (max J/(q alpha^2) = 1.8403); (iii) A058 example f_k has H=2k+1 bits, I=k+1/2 for k=1,2,3, and the anchored identities H(f)=H(F)+sum d_j H(b_j), I(f)=I(F)+sum d_j I(b_j) hold exactly on 200 random instances.",
+  "hypotheses": [
+   "domains frozen in out/FROZEN_SPEC.json"
+  ],
+  "statement_sha256": "38c1b020a026e04339b4ae9b4a74129a238ff520801c18072f564db079f81b68",
+  "contributors": [
+   "claude-B12-lead"
+  ],
+  "proof_source": "code/b12_verify.py, out/results.json (prime-log exact identities; 40-digit evaluation with explicit margin for the J and L1 inequalities)",
+  "proof_dependencies": [],
+  "review_records": [],
+  "status": "CERTIFIED",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A091/A090 (lead replay is not the protocol review)"
+  ]
+ }
+]

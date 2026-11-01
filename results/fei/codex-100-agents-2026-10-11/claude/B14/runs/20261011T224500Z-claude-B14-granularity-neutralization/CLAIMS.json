@@ -1,0 +1,39 @@
+[
+ {
+  "claim_id": "B14-LEAD-POINT-DEFECT-NEUTRALIZATION",
+  "version": 1,
+  "exact_statement": "Let f be a Boolean function on n bits, N > n, x0 in {-1,1}^N, p = 2^(-N), and g_N(x) = f(x_1..x_n)(1 - 2*1{x = x0}). (a) ghat_N(S) = fhat(S)*1{S subset [n]} - 2p f(x0) chi_S(x0) for every S subset [N]; for every A subset [N] the coefficient of g_N*chi_A at [N] is nonzero, so d_{g_N chi_A}(S) = N for every S and every anchor A, and U(g_N) = N Var(g_N) - I(g_N). (b) |I_i(g_N) - I_i(f)| <= 2p for every i, so |I(g_N) - I(f)| <= 2Np. (c) the spectral laws satisfy ||p(g_N) - p(f)||_1 <= 4p(2^(n/2) + 1), and |H(g_N) - H(f)| <= eps N + h2(eps) with eps = 2p(2^(n/2) + 1). (d) for nonconstant f, H(g_N) -> H(f), I(g_N) -> I(f) and U(g_N)/I(g_N) -> infinity. (e) if psi(s,N) >= 0 with max_s psi(s,N) = o(2^N) and Psi(g) = sum over nonempty S with ghat(S) != 0 of ghat(S)^2 psi(|S|, d_g(S)), then Psi(g_N) - sum_{S nonempty} fhat(S)^2 psi(|S|, N) -> 0; hence an inequality H <= alpha I + beta Var + Psi valid for all Boolean functions implies H(f) <= alpha I(f) + beta Var(f) + liminf_N sum_{S nonempty} fhat(S)^2 psi(|S|, N) for all Boolean f. (f) FEI with constant C on the class {g_N} implies FEI with constant C for all Boolean functions.",
+  "hypotheses": [
+   "uniform measure on the Boolean cube; Boolean outputs in {-1,1}",
+   "entropy in bits; p_S = fhat(S)^2; I = sum |S| p_S; Var = 1 - p_empty",
+   "d_g(S) = max{|T| : T contains S, ghat(T) != 0}; U(g) = sum over nonempty S with p_S > 0 of p_S (d_g(S) - |S|)",
+   "N > n; f fixed while N -> infinity in (c)-(f)"
+  ],
+  "statement_sha256": "233e5abc09dff09c66474766a47eaa87f9ae79fb4aa7cf01447d6a78630ad50e",
+  "contributors": [
+   "claude-B14-lead"
+  ],
+  "proof_source": "~/brain_workers/FEI100_20261011/claude/B14/runs/20261011T224500Z-claude-B14-granularity-neutralization/REPORT.md section 3.2 (anchor case: REPORT addendum A1)",
+  "proof_dependencies": [
+   "Parseval",
+   "Cauchy-Schwarz",
+   "sharp Shannon continuity bound |H(P)-H(Q)| <= T log2(M-1) + h2(T)"
+  ],
+  "review_records": [],
+  "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "supersedes": [],
+  "refutes": [
+   "one-shot support functionals of (|S|, d_f(S)) or anchored envelopes as a universal FEI mechanism (the tail-stable arithmetic option in the A067 next action); no registry claim asserted the contrary"
+  ],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A067",
+   "A070",
+   "A088",
+   "A094",
+   "B14 stream",
+   "any stream using exact dyadic granularity"
+  ],
+  "validation": "out/CHECK.json block N1 (exact d = N, U = N Var - I, influence and L1 bounds; x1, AND2, Maj3, addressing a=2; N <= 14); out/ANCHOR.json (every anchor keeps a nonzero top coefficient, 19,344 cases, exact)"
+ }
+]

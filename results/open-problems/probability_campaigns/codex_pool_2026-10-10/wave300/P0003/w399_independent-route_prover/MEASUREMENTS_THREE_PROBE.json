@@ -1,0 +1,78 @@
+{
+  "command": "python -B -X utf8 check_three_probe.py",
+  "elapsed_seconds": 0.023991,
+  "passed": true,
+  "exact_arithmetic": "fractions.Fraction",
+  "checks": 744,
+  "parameter_reconstruction_cases": 48,
+  "ito_and_laurent_cases": 324,
+  "residual_corner_cases": 8,
+  "matrix": [
+    [
+      "-1/2",
+      "-3/4",
+      "1/4"
+    ],
+    [
+      "1/2",
+      "-3/4",
+      "1/4"
+    ],
+    [
+      "-3/4",
+      "-9/16",
+      "9/16"
+    ]
+  ],
+  "determinant": "9/32",
+  "inverse": [
+    [
+      "-1",
+      "1",
+      "0"
+    ],
+    [
+      "-5/3",
+      "-1/3",
+      "8/9"
+    ],
+    [
+      "-3",
+      "1",
+      "8/3"
+    ]
+  ],
+  "inverse_row_norms": [
+    "2",
+    "26/9",
+    "20/3"
+  ],
+  "maximum_reconstruction_error": "0 (exact)",
+  "before_two_symmetric_probes": {
+    "rank": 2,
+    "mu": "0",
+    "variance": "14/3",
+    "alpha": "29/14",
+    "normalized_initial_drift_residuals": [
+      "0",
+      "0"
+    ],
+    "identifies_target_coefficients": false
+  },
+  "after_three_probes": {
+    "rank": 3,
+    "wrong_parameter_third_residual": "9/8",
+    "target_mu": "0",
+    "target_variance": "8/3",
+    "target_alpha": "5/8",
+    "all_target_residuals": "0"
+  },
+  "stability_constants": {
+    "mu": "2 epsilon",
+    "variance": "(52/9) epsilon",
+    "exponent": "(31/(2 v_min)) epsilon, requiring v>=v_min>0",
+    "jet_inverse_norm": "20/3"
+  },
+  "scope": "Algebra and conditional-lemma checks only. No measured SAW scaling limit, Brownian driver approximation, global probe cover, retrieval lift, or novelty claim.",
+  "formal_checker": null
+}

@@ -1,0 +1,85 @@
+{
+  "all_exact_checks_pass": true,
+  "arithmetic": "Python standard-library fractions.Fraction",
+  "check_count": 10,
+  "checks": [
+    {
+      "actual": "10007/1000000",
+      "expected": "10007/1000000",
+      "name": "derivative_perturbation",
+      "passed": true,
+      "relation": "=="
+    },
+    {
+      "actual": "99010707/100000000",
+      "expected": "99010707/100000000",
+      "name": "q",
+      "passed": true,
+      "relation": "=="
+    },
+    {
+      "actual": "99010707/100000000",
+      "expected": "1",
+      "name": "q_less_than_one",
+      "passed": true,
+      "relation": "<"
+    },
+    {
+      "actual": "989293/100000000",
+      "expected": "989293/100000000",
+      "name": "margin",
+      "passed": true,
+      "relation": "=="
+    },
+    {
+      "actual": "980007/1000000",
+      "expected": "980007/1000000",
+      "name": "eta_one_bound",
+      "passed": true,
+      "relation": "=="
+    },
+    {
+      "actual": "19603/10000",
+      "expected": "19603/10000",
+      "name": "h2_lower",
+      "passed": true,
+      "relation": "=="
+    },
+    {
+      "actual": "20403/10000",
+      "expected": "20403/10000",
+      "name": "h2_upper",
+      "passed": true,
+      "relation": "=="
+    },
+    {
+      "actual": "7532467/125000000",
+      "expected": "7532467/125000000",
+      "name": "normal_rational_margin",
+      "passed": true,
+      "relation": "=="
+    },
+    {
+      "actual": "7532467/125000000",
+      "expected": "0",
+      "name": "normal_rational_margin_positive",
+      "passed": true,
+      "relation": ">"
+    },
+    {
+      "actual": "1501/500",
+      "expected": "1501/500",
+      "name": "mixed_label",
+      "passed": true,
+      "relation": "=="
+    }
+  ],
+  "parameters": {
+    "delta": "1/1000",
+    "eta_high": "101/100",
+    "eta_low": "99/100"
+  },
+  "passed_count": 10,
+  "scope": "Ten displayed rational identities and inequalities; not a full proof verification.",
+  "title": "T228 exact arithmetic verification"
+}

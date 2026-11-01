@@ -1,0 +1,16 @@
+name = "paper2_lean"
+version = "0.1.0"
+defaultTargets = ["UdcAffineTransferArithmetic"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+
+# Reuse the mathlib package that is already downloaded and fully built under
+# the sibling project used by paper12/lean, avoiding any network fetch.
+[[require]]
+name = "mathlib"
+path = "../../../phase_retrieval_omega/lean/omega_comb/.lake/packages/mathlib"
+
+[[lean_lib]]
+name = "UdcAffineTransferArithmetic"

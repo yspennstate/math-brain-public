@@ -1,0 +1,7 @@
+{
+  "status": "SETUP_UNVERIFIED",
+  "exit_code": 1,
+  "output": "Compute admission held (hung window or under 5500 MB free); no new compiler process",
+  "statement": "example (w a b c : Nat) (hw : 2 <= w) (h : (w-1 <= a ∧ w-1 <= b) ∨ (w-1 <= a ∧ 1 <= c) ∨ w <= c) : w <= a+b+c := by omega",
+  "scope": "Only the induction-case arithmetic was submitted, not the whole cube boundary theorem. No Lean-checked result claimed."
+}

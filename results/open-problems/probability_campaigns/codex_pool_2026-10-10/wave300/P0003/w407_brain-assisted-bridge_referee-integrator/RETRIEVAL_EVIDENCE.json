@@ -1,0 +1,16 @@
+{
+  "measured_at": "2026-10-10",
+  "command": "python -X utf8 ~/.claude/dreaming/math_sense.py --query \"hexagonal self avoiding walk scaling limit SLE 8/3 parafermionic observable local relation missing compactness\"",
+  "elapsed_seconds_from_subprocess": 5.657,
+  "returncode": 0,
+  "served_hits": 3,
+  "hits": [
+    {"source_id":"claim_1f7a2a12ab2a649bf165699aa2efee71c08bca2100b4609c325b8f2d99b4f0dd","title":"Open problem: Hexagonal self-avoiding-walk scaling limit","finding":"Correctly names the fixed-n origin question but does not address the requested parafermionic relation or missing compactness."},
+    {"source_id":"external_69ea82d2126c8c4fc3bad35866a7750bfb04fa02cb17e076e443b2633ae1c991","title":"saw_enum.py","finding":"External tool reference, unrelated to the requested bridge."},
+    {"source_id":"claim_7d17eca1121391c711c3f35ad1dfd9fec7313bf8f51990c4a397f115c4d88f69","title":"Attempt on Hexagonal self-avoiding-walk scaling limit","finding":"Domain Markov property note explicitly says it supplies neither tightness nor conformal invariance; it does not describe the local cycle-kernel obstruction."}
+  ],
+  "targeted_bridge_hits": 0,
+  "bounded_failure": "For this one exact query, the production injection returned zero of three hits explaining the local parafermionic relation's cycle kernel or the fixed-n versus chordal ensemble transfer gap. This is not a population-level recall rate.",
+  "bounded_repair": "Submit reviewed draft concepts for the two distinct ensembles and their missing transfer, plus an independently checked cycle-kernel lemma with typed relations. After integration, rerun the exact query and inspect the served text and status tags.",
+  "improvement_claim": "none yet; draft only"
+}

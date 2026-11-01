@@ -1,0 +1,36 @@
+{
+  "problem_id": "C0056",
+  "checked_at": "2026-10-10",
+  "primary_source": {
+    "author": "Paul Bourgade",
+    "title": "Random band matrices",
+    "year": 2018,
+    "section": "2.1, PDF page 7 (printed page 6)",
+    "url": "https://cims.nyu.edu/~bourgade/papers/ICMProceedings.pdf",
+    "model": "H_RS = Delta + lambda V on Z^d; V(x) iid, centered, variance 1; lambda>0",
+    "infinite_volume_target": "Existence of absolutely continuous spectrum (extended states) in d=3 at sufficiently small disorder.",
+    "finite_volume_target": "GOE microscopic bulk eigenvalue statistics for periodic-box restrictions H_RS^N.",
+    "source_caution": "The survey reports both as open in 2018 and explicitly says that a.c. spectrum would not by itself explain GOE. It does not specify a full class of single-site laws for a theorem to prove."
+  },
+  "intake": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:56",
+    "status": "unverified / attempted_unsolved as recorded 2026-09-07",
+    "scope_caution": "The intake combines a.c. spectrum and GOE in one problem; the 2018 source treats them as distinct unresolved questions."
+  },
+  "recent_primary_literature": {
+    "title": "Absolutely Continuous Spectrum for Weak-Disorder Anderson Models in Dimensions at Least Three",
+    "author": "OpenAI",
+    "date": "2026-09-23",
+    "url": "https://github.com/openai/math/blob/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/build/paper.tex",
+    "theorem_url": "https://raw.githubusercontent.com/openai/math/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/build/01-introduction.tex",
+    "claim": "For each fixed d>=3 and sufficiently small fixed lambda>0, iid uniform site potentials give almost-surely purely a.c. spectrum with nonzero weight on a nonempty open interval independent of lambda.",
+    "scope": "Uniform site potentials only; no GOE or diffusion conclusion in the preprint.",
+    "verification": "Existence and stated scope checked against the authors' primary text; mathematical correctness has not been independently checked by w485.",
+    "repository_license": "Apache-2.0 according to https://raw.githubusercontent.com/openai/math/main/LICENSE",
+    "repository_caution": "The repository README says unformalized results could have issues; no Anderson entry was found in its formalization catalogue by exact-title or Anderson text search. Absence of a catalogue hit is not a proof audit.",
+    "ac_branch_status": "claimed_solved_in_unreviewed_preprint",
+    "goe_branch_status": "UNKNOWN",
+    "combined_C0056_status": "UNKNOWN"
+  },
+  "owner_solved_or_retired_check": "No C0056 row found in STAGE1_BOARD.md or Team O board; a broader owner solved/retired index check remains pending."
+}

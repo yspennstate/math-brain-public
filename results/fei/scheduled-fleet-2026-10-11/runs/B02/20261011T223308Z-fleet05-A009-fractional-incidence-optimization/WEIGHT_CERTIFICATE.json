@@ -1,0 +1,200 @@
+{
+  "schema": "A009-weight-certificate/1",
+  "family": {
+    "r": "any integer >=1",
+    "m": "any integer >=1",
+    "lambda_l": "1/m for every gate",
+    "pi_l": "2^(-r-1)",
+    "incidence_core": "1",
+    "incidence_private": "1/m",
+    "posterior": "uniform m roots for core-only; uniform t inside roots and (t-1)! child sequences for core+private; point mass for empty-core",
+    "R_bound": "8 I",
+    "paid_scale_prior_R_bound": "10 I",
+    "optimality_claim": "feasible bounded-cost certificate, not optimum"
+  },
+  "abstract_KKT": [
+    {
+      "lambda": [
+        "1/3",
+        "2/3"
+      ],
+      "pi": [
+        "1/4",
+        "1/8"
+      ],
+      "v": "3/4",
+      "c": [
+        "317/300",
+        "517/300"
+      ],
+      "root_marginals": [
+        "13/25",
+        "13/25"
+      ],
+      "shared_coordinate_price": "2",
+      "private_coordinate_prices": [
+        "0",
+        "0"
+      ],
+      "root_distribution": [
+        "12/25",
+        "12/25",
+        "1/25"
+      ],
+      "stationarity_exact": true,
+      "scope": "Abstract fixed-posterior optimization data, not asserted realizable Boolean run marginals"
+    },
+    {
+      "lambda": [
+        "2/5",
+        "3/5"
+      ],
+      "pi": [
+        "1/8",
+        "1/2"
+      ],
+      "v": "1/2",
+      "c": [
+        "941/730",
+        "1629/730"
+      ],
+      "root_marginals": [
+        "13/73",
+        "63/73"
+      ],
+      "shared_coordinate_price": "3",
+      "private_coordinate_prices": [
+        "0",
+        "0"
+      ],
+      "root_distribution": [
+        "10/73",
+        "60/73",
+        "3/73"
+      ],
+      "stationarity_exact": true,
+      "scope": "Abstract fixed-posterior optimization data, not asserted realizable Boolean run marginals"
+    },
+    {
+      "lambda": [
+        "1/2",
+        "1/2"
+      ],
+      "pi": [
+        "1/4",
+        "1/4"
+      ],
+      "v": "3/4",
+      "c": [
+        "61/68",
+        "61/68"
+      ],
+      "root_marginals": [
+        "9/17",
+        "9/17"
+      ],
+      "shared_coordinate_price": "1",
+      "private_coordinate_prices": [
+        "0",
+        "0"
+      ],
+      "root_distribution": [
+        "8/17",
+        "8/17",
+        "1/17"
+      ],
+      "stationarity_exact": true,
+      "scope": "Abstract fixed-posterior optimization data, not asserted realizable Boolean run marginals"
+    }
+  ],
+  "actual_Boolean_KKT": {
+    "r": 1,
+    "m": 2,
+    "v": "15/16",
+    "c_each": "17/32",
+    "lambda_each": "1/2",
+    "pi_each": "1/4",
+    "root_marginal_each": "9/17",
+    "shared_coordinate_price": "19/272",
+    "private_coordinate_prices": [
+      "0",
+      "0"
+    ],
+    "scope": "actual Boolean fixed-posterior instance"
+  },
+  "joint_optimization_nonconvex": {
+    "function": "duplicate dictators f=x1=x1 OR x1",
+    "lambda": "exp(t+s), exp(t-s)",
+    "t": "ln(1/4)",
+    "second_derivative_natural_units": "-1/17"
+  },
+  "lead_direction": {
+    "sunflower_global_rule": "lambda_l=2^-l; first-positive-index derivative tie",
+    "sunflower_pressure_bound": "<41 I",
+    "affine_plane_all_weight_obstruction": "pressure >=7 I log2((Q+1)/2), prime powers Q>=16",
+    "uniform_affine_upper": "<=7 I log2(Q+1)",
+    "scope": "positive coordinatewise pressure only; not full conditioned residual, PI-J, or FEI disproof",
+    "finite_exact_bound_checks": [
+      {
+        "Q": 16,
+        "points": 256,
+        "lines": 272,
+        "read": 17,
+        "uniform_lambda": "1/17",
+        "epsilon": "17/2048",
+        "alpha_lower": "34527/67108864",
+        "piece_mass_upper": "2048/34527",
+        "pressure_lower": "7 I log2((Q+1)/2)",
+        "scope": "all-feasible-weight analytic lower bound; exact finite bound arithmetic; no truth-table enumeration"
+      },
+      {
+        "Q": 32,
+        "points": 1024,
+        "lines": 1056,
+        "read": 33,
+        "uniform_lambda": "1/33",
+        "epsilon": "33/67108864",
+        "alpha_lower": "2214591423/144115188075855872",
+        "piece_mass_upper": "67108864/2214591423",
+        "pressure_lower": "7 I log2((Q+1)/2)",
+        "scope": "all-feasible-weight analytic lower bound; exact finite bound arithmetic; no truth-table enumeration"
+      },
+      {
+        "Q": 64,
+        "points": 4096,
+        "lines": 4160,
+        "read": 65,
+        "uniform_lambda": "1/65",
+        "epsilon": "65/144115188075855872",
+        "alpha_lower": "9367487224930627455/1329227995784915872903807060280344576",
+        "piece_mass_upper": "144115188075855872/9367487224930627455",
+        "pressure_lower": "7 I log2((Q+1)/2)",
+        "scope": "all-feasible-weight analytic lower bound; exact finite bound arithmetic; no truth-table enumeration"
+      },
+      {
+        "Q": 128,
+        "points": 16384,
+        "lines": 16512,
+        "read": 129,
+        "uniform_lambda": "1/129",
+        "epsilon": "129/1329227995784915872903807060280344576",
+        "alpha_lower": "171470411456254147604591110776164433663/226156424291633194186662080095093570025917938800079226639565593765455331328",
+        "piece_mass_upper": "1329227995784915872903807060280344576/171470411456254147604591110776164433663",
+        "pressure_lower": "7 I log2((Q+1)/2)",
+        "scope": "all-feasible-weight analytic lower bound; exact finite bound arithmetic; no truth-table enumeration"
+      },
+      {
+        "Q": 256,
+        "points": 65536,
+        "lines": 65792,
+        "read": 257,
+        "uniform_lambda": "1/257",
+        "epsilon": "257/226156424291633194186662080095093570025917938800079226639565593765455331328",
+        "alpha_lower": "58122201042949730905972154584439047496660910271620361246368357597722020085247/13093562431584567480052758787310396608866568184172259157933165472384535185618698219533080369303616628603546736510240284036869026183541572213314110357504",
+        "piece_mass_upper": "226156424291633194186662080095093570025917938800079226639565593765455331328/58122201042949730905972154584439047496660910271620361246368357597722020085247",
+        "pressure_lower": "7 I log2((Q+1)/2)",
+        "scope": "all-feasible-weight analytic lower bound; exact finite bound arithmetic; no truth-table enumeration"
+      }
+    ]
+  }
+}

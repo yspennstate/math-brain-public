@@ -1,0 +1,8 @@
+# The population export is a byte-deterministic snapshot: export_store.py compares it
+# against the live store and import_store.py rebuilds from it, so it must check out
+# identically on every machine. core.autocrlf is on for this checkout, which would
+# rewrite these files to CRLF on Windows and make a cross-OS digest comparison lie.
+export/population/*.jsonl text eol=lf
+export/population/MANIFEST.json text eol=lf
+
+*.py text eol=lf

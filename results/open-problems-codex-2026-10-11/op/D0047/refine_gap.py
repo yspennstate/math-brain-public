@@ -1,0 +1,10 @@
+﻿from pathlib import Path
+p=Path('ATTEMPT.md');t=p.read_text(encoding='utf8')
+t=t.replace('## 8. Exact remaining gap\n','## 8. Original remaining gap (updated by Sections 13–16)\n',1)
+t=t.replace('then deriving sufficient extra small-gap data to exclude the exponential sigma branch.','then supplying the branch data. The additional attempt in Sections 13–15 now supplies a generator-side vanishing quadratic remainder and excludes the exponential branch, while physical selection remains unproved.',1)
+t=t.replace('The characteristic polynomial is a useful hint,','The characteristic polynomial is a useful hint,')
+p.write_text(t,encoding='utf8')
+f=Path('new_symbolic_checks.txt')
+if f.exists():f.write_text(f.read_text(encoding='utf8').replace('Formal gap:','Formal candidate G(2r):'),encoding='utf8')
+status=Path('STATUS.md');t=status.read_text(encoding='utf8').splitlines();t[1]='NEXT: Finish verification of the generator-side moment bound and conditional formal PV uniqueness; record the remaining global physical-selection gap.';t.append('2026-10-12: Additional attempt proved a generator-only remainder of order s^(p+1), p=min(2,(1+sqrt(1+2beta))/2)>1, excluding the exponential branch; also proved conditional formal/analytic PV germ uniqueness.');status.write_text('\n'.join(t)+'\n',encoding='utf8')
+print('Remaining-gap and progress records updated.')

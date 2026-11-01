@@ -1,0 +1,55 @@
+import sympy as sp
+
+d,a,b,h = sp.symbols('d a b h', positive=True)
+q=d+b-a
+r=d+b
+s=d-a
+
+def pair_mat(xi,yj,den):
+    M=sp.zeros(4)
+    i=xi-1
+    j=1+yj
+    c=sp.Rational(1,2)/den
+    M[i,i]+=c
+    M[j,j]+=c
+    M[i,j]-=c
+    M[j,i]-=c
+    return M
+
+M = pair_mat(1,1,d)+pair_mat(2,2,q)-pair_mat(1,2,r)-pair_mat(2,1,s)
+T=sp.factor(sp.trace(M))
+P=sp.factor((T**2-sp.trace(M*M))/2)
+A=4*d*(d-a)*(d+b)*(d+b-a)
+B=4*a*b*(2*d+b-a)
+C=-((2*d+b-a)**2+2*(a*a+b*b))
+assert sp.simplify(T + B/A)==0
+assert sp.simplify(P - C/A)==0
+assert sp.simplify(M.det())==0
+print('PASS general_2x2_charpoly: lambda^2*(A lambda^2 + B lambda + C)/A')
+print('PASS trace_and_expected_gap = -B/A < 0 under 0<a<d, b>0')
+
+Ms=sp.simplify(M.subs({a:h,b:h}))
+lam_pos=1/d
+lam_neg=-(d**2+h**2)/(d*(d**2-h**2))
+assert sp.simplify(sp.trace(Ms)-(lam_pos+lam_neg))==0
+assert sp.simplify((sp.trace(Ms)**2-sp.trace(Ms*Ms))/2-lam_pos*lam_neg)==0
+print('PASS symmetric_eigenvalues = {0,0,1/d,-(d^2+h^2)/(d(d^2-h^2))}')
+Mc=Ms.subs({d:sp.Integer(2),h:sp.Integer(1)})
+ev=Mc.eigenvals()
+assert ev.get(sp.Rational(1,2),0)==1 and ev.get(-sp.Rational(5,6),0)==1 and ev.get(0,0)==2
+print('PASS canonical_eigenvalues = {-5/6,0,0,1/2}')
+p=sp.Rational(1,2)+sp.asin(sp.Rational(1,4))/sp.pi
+print('PASS canonical_monotone_win_probability = 1/2 + asin(1/4)/pi')
+print('NUM canonical_monotone_win_probability =', sp.N(p,18))
+
+x,y=sp.symbols('x y', real=True)
+Jt=sp.Rational(1,2)
+Jp=sp.integrate(sp.integrate(1/(y-x),(y,2,3)),(x,0,1))
+Ja=sp.integrate(1/(3-2*x),(x,0,1))
+assert sp.simplify(Jp-sp.log(sp.Rational(27,16)))==0
+assert sp.simplify(Ja-sp.log(3)/2)==0
+print('PASS J_translation = 1/2')
+print('PASS J_product = log(27/16)')
+print('PASS J_antimonotone = log(3)/2')
+print('NUM J_product =',sp.N(Jp,18))
+print('NUM J_antimonotone =',sp.N(Ja,18))

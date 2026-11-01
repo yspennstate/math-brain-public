@@ -1,0 +1,2 @@
+# pass 8 repair ledger
+C01 open angular chart; C02 insert Jensen; C03 exclude critical-level atom; C04 qualify no-pivot in abstract; C05 upper-envelope wording; C06 editorial pluralization; C07 safer non-open-status wording; C08 define square-density representative at critical value; C09 define J(0)=+infinity or use atomlessness first; C10 define h(0)=+infinity; C11 extend log_+ at infinity or state the null-event convention; C12 split p(y)=0 before taking log p(y). All load-bearing local repairs preserve constants in the audited chain.

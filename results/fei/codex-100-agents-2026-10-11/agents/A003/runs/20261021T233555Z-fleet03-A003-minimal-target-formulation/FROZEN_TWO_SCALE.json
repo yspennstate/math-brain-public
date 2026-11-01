@@ -1,0 +1,23 @@
+{
+  "helper_version": "A003-reset-two-scale-v1",
+  "motivation": "The first 3012-case grid has no positive candidate; isolate a near-singleton source with a dummy-only secondary tail, which the grid did not include.",
+  "family": "a=4,b=1; r in fixed list; source R nonvacuum=(1-e-e^3) point_j + e point_dummy + e^3 conditional true source",
+  "domain": {
+    "r": [
+      3,
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "query": 0
+  },
+  "case_count": 6,
+  "symmetry": "none",
+  "arithmetic": "exact Fraction reference formulas, floating locator only; independent exact witness at r=8 preselected",
+  "memory_estimate_mb": 100,
+  "maximum_runtime_seconds": 55,
+  "actual_witness_dimension": 13,
+  "no_dimension_escalation": "all r fixed before execution; aggregated formula only except fixed r8"
+}

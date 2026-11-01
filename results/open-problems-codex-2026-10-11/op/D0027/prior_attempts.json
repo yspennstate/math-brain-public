@@ -1,0 +1,38 @@
+[
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_D_20260908\\attempts.jsonl",
+    "row": {
+      "attempt_id": "D0027-A001",
+      "author": "claude-prob1000-D-0908",
+      "independent_check": "",
+      "key_identity": "Exponential relaxation follows from any subexponential bound T(l,q) <= exp(o(l)) on the finite-volume relaxation time of a box of size l containing at least one infection.",
+      "method": "Try to reduce to a finite-volume statement. Under the hypothesis the initial law has an infection within distance l of the origin except with probability exp(-kappa l); on that event one wants to relax the box [-l,l] in time exp(o(l)).",
+      "obstruction": "The wall is the same as in D0026 but quantitative: no bound on T(l,q) is known that is uniform over initial configurations with a single infection, because the worst case is an infection at the edge of a completely healthy box, and moving it across requires the front to advance, whose speed is only controlled by contact-process comparison at large q. A second obstacle is that the hypothesis is on nu but the dynamics can locally heal all infections in a region, so the property 'an infection within distance l' is not preserved in time; a proof needs a renewal or restart argument that the source explicitly says is unavailable because of non-attractiveness.",
+      "problem_id": "D0027",
+      "recorded_at": "2026-09-08T09:06:52Z",
+      "result": "The reduction is clean and isolates a single missing ingredient: a bound on the FINITE-VOLUME relaxation time of FA-1f in a box of size l with at least one infection present, valid for all q. If T(l,q) denotes that relaxation time, then the hypothesis plus a union bound gives exponential convergence at rate min(kappa/2, 1/T(l,q)) with l chosen of order t, so exponential relaxation holds as soon as T(l,q) grows subexponentially in l for fixed q. In equilibrium T is O(1) by the spectral gap, but the conditioning on a single infection destroys the product structure and the known bounds on the constrained relaxation time carry the bootstrap-percolation length exp(c/q), which is l-independent -- so in fact the reduction shows the conjecture would follow from any bound T(l,q) <= exp(o(l)) uniform over configurations with one infection in the box.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_D_20260908\\problems.jsonl",
+    "row": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "kcm_facilitated_open_2025::conjecture_2",
+      "historical_status": "source_says_open",
+      "intake": "D_20260908",
+      "locator": "Conjecture 2, Section 1.1, PDF p. 2",
+      "problem_id": "D0027",
+      "recorded_at": "2026-09-08T09:06:52Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "kcm_facilitated_open_2025",
+      "statement": "For FA-1f on Z: if there is kappa > 0 with nu(no infected vertices in [-l, l]) = O(exp(-kappa l)) for all large l, then for every q > 0 the convergence of E_nu(f(eta(t))) to pi(f) is exponentially fast.",
+      "status_search": "Same WebSearch as D0026 on 2026-09-08. The source itself says the available results are limited to q above a threshold, citing its references [3,8,17], and gives the East model as the only case understood for all q. No evidence of resolution.",
+      "title": "Exponential relaxation of FA-1f from an initial law with exponentially rare infection gaps",
+      "verification": "unreviewed"
+    }
+  }
+]

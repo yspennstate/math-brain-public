@@ -1,0 +1,657 @@
+--- a/~/math-brain-inbox/w337/bundle_001.json
++++ b/~/math-brain-inbox/w337/bundle_001.json
+@@ -0,0 +1,654 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w337",
++  "bundle_slug": "team-o-ten-problem-checks-w337-20261010",
++  "entries": [
++    {
++      "key": "result-p0209",
++      "namespace": "probability.markov-chains",
++      "logical_name": "rare-state-four-state-uniform-clt-counterexample",
++      "kind": "lemma",
++      "title": "[Blind audit pending] rare state four state uniform clt counterexample",
++      "statement": "For every integer s>=2 let A=1-s^(-2), epsilon=(1-A^2)/(5-4A), B=(5-4A)/(2-A), R=s^4. Take independent stationary chains Y in {0,1}, with rates epsilon and 1-epsilon, and Z in {-1,1}, flipping at rate R/2. The observable g=AZ+B(Y-epsilon) has mean zero, variance one and sup norm two, and the product chain has relaxation time one. At time t=s its integral normalized by its asymptotic standard deviation times sqrt(s) tends to zero in probability, has second moment tending to one, and has normal Kolmogorov distance tending to 1/2. Thus the cached chain-independent CLT bound using only sup norm and t/relaxation time is false.",
++      "proof_text": "The cached Aldous-Fill 4.30 statement asks whether a chain-independent function psi(b,s), tending to zero for each fixed b as s tends to infinity, bounds the normal Kolmogorov distance of the stationary continuous-time integral S_t/(sigma sqrt(t)) when g has stationary mean zero, variance one and sup norm b, and s=t/tau_2. The exact cached locator is *Reversible Markov Chains and Random Walks on Graphs*, Open Problem 4.30, PDF page 137; no current online status was checked.\n\nFor an integer s >= 2 put A=1-s^(-2), epsilon=(1-A^2)/(5-4A), B=(5-4A)/(2-A), R=s^4 and t=s. Let Y be the stationary two-state chain with rates 0->1 equal to epsilon and 1->0 equal to 1-epsilon. Independently let Z be a stationary fair sign that flips at rate R/2. Set g(Y,Z)=AZ+B(Y-epsilon). These rational parameters give the same rare-state mechanism as the existing radical parameterization, while allowing exact arithmetic checks.\n\nThe product chain is finite, irreducible and reversible. Its generator eigenvalues are 0,-1,-R,-(R+1), so tau_2=1. Its stationary distribution is the product of Bernoulli(epsilon) and a fair sign. Directly, Eg=0. Since 1-epsilon=(2-A)^2/(5-4A), B(1-epsilon)=2-A, and\n\n    A^2+B^2 epsilon(1-epsilon)=A^2+(1-A^2)=1.\n\nAlso B>0 and 0<epsilon<1/2. The largest absolute value of g is A+B(1-epsilon)=2: the other positive component is smaller and the largest negative absolute value is A+B epsilon <= A+B(1-epsilon). Thus b=2 at every s, exactly.\n\nOrthogonality and independence give\n\n    Cov(g(X_0),g(X_u)) = A^2 exp(-Ru)+B^2 epsilon(1-epsilon) exp(-u),\n    sigma^2 = 2A^2/R+2B^2 epsilon(1-epsilon).\n\nLet H_s be the event that Y starts at zero and never jumps before t=s. Its probability is (1-epsilon)exp(-epsilon s), which tends to one because epsilon is asymptotic to 2/s^2. On H_s the slow contribution to W_s=S_s/(sigma sqrt(s)) is the deterministic center c_s=-B epsilon sqrt(s)/sigma, which tends to zero. The normalized fast contribution V_s has mean zero and variance at most v_s=(2A^2/R)/sigma^2, which is asymptotic to 1/(2s^2). Chebyshev's inequality therefore proves W_s -> 0 in probability. All distributions here are exact; Z is not replaced by a Gaussian.\n\nFor a directly checkable Kolmogorov bound set delta_s=s^(-1/2), x_s=c_s+delta_s. Since x_s tends to zero,\n\n    P(W_s <= x_s) >= P(H_s)-v_s/delta_s^2,\n    d_K(W_s,N(0,1)) >= (1-epsilon)exp(-epsilon s)-s v_s-Phi(x_s) -> 1/2.\n\nFor the matching upper limit, fix eta>0. Convergence in probability to zero makes F_s(-eta) tend to zero and F_s(eta) tend to one. Monotonicity bounds the difference from Phi, outside [-eta,eta], by 1/2 plus a vanishing term and, inside that interval, by Phi(eta) plus a vanishing term. Send s to infinity then eta to zero to obtain limsup d_K <= 1/2. Consequently d_K tends to 1/2, so the proposed uniform bound cannot tend to zero even at b=2 and tau_2=1.\n\nThe exact finite-time second moment is\n\n    E W_s^2 = {2A^2[s/R-(1-exp(-Rs))/R^2]\n                 +2B^2 epsilon(1-epsilon)[s-1+exp(-s)]}/(sigma^2 s) -> 1.\n\nThere is no contradiction: W_s converges to zero in probability but W_s^2 is not uniformly integrable. A nonvanishing variance does not disprove convergence in probability; a second-moment limit needs uniform integrability of the squares. The original September 6 proof and the stored attempt already gave the correct uniform-integrability explanation; this correction targets the later memory explanation. An independent audit of the full negative answer is still required.\n\nThe construction also survives a total-jump-rate bound of one: replace Q by Q/R and observe for time Rs. The maximum outgoing rate is at most 1/2+1/R<=1; relaxation time becomes R, the asymptotic variance rate becomes R sigma^2, and the integral has law R S_s. Thus its normalized law and the ratio time/relaxation time remain unchanged. This check closes the source's clock/rate convention boundary as in the original proof.",
++      "assumptions": [
++        "s is an integer at least two",
++        "Independent stationary Y and Z chains with the displayed rates",
++        "The normalization uses the displayed additive-functional asymptotic variance"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:P0209:20261010",
++        "url": "file:///~/brain_workers/w337/P0209.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "result-p0459",
++      "namespace": "probability.random-graphs",
++      "logical_name": "bilateral-preference-mean-deficit-and-simultaneous-bound",
++      "kind": "lemma",
++      "title": "[Blind audit pending] bilateral preference mean deficit and simultaneous bound",
++      "statement": "Let LK(n,k) retain edges of K_n chosen among the k cheapest incident costs at both endpoints, where edge costs are iid and continuous, n>=2 and 1<=k<=n-1. If D_v is degree and mu=E D_v, then 0<=k-mu<=sqrt(k(n-1-k)/(2n)). For 0<eta<1, P(max_v |D_v-mu|>2 sqrt(2k log(2n/eta)))<=eta. For k<n-1 the exact mean is (n-1) times the integral on [0,1] of P(Bin(n-2,u)<=k-1)^2. In particular k/log n tending to infinity suffices for relative simultaneous concentration around mu.",
++      "proof_text": "Model: K_n has independent identically distributed continuous edge costs. Each vertex chooses its k cheapest incident edges, 1 <= k <= n-1. The bilateral preference graph LK(n,k) retains an edge exactly when both endpoints choose it. Write D_v for its degree and mu=E D_v. Exchangeability makes mu independent of v. Applying the common continuous distribution function reduces costs to independent uniform ranks (ties have probability zero).\n\nFor k<n-1 let F(u)=P(Bin(n-2,u)<=k-1). Conditional on the cost u of a fixed edge, the competing costs at its two endpoints are disjoint independent collections. Consequently\n\n    mu=(n-1) integral_0^1 F(u)^2 du.\n\nLet U,V be independent Beta(k,n-1-k) variables, the kth order statistics of n-2 independent uniforms. F(u)=P(U>u). Hence\n\n    mu=(n-1) E min(U,V),\n    k-mu=(n-1) E|U-V|/2\n          <= sqrt(k(n-1-k)/(2n)) <= sqrt(k/2).\n\nThe equality follows from min(U,V)=(U+V-|U-V|)/2 and E U=k/(n-1). The inequality is Cauchy-Schwarz and Var U=k(n-1-k)/[(n-1)^2 n]. For k=n-1, mu=k exactly, so the same zero-deficit bound holds without a degenerate beta law. This proves a bound on the ACTUAL mean, rather than replacing it by k without justification.\n\nFor 0<eta<1 put a=sqrt(2k log(2n/eta)). Then\n\n    P(max_v |D_v-mu| > 2a) <= eta.\n\nProof: if a>=k, |D_v-mu|<=k<=2a deterministically. Otherwise threshold costs at t=(k-a)/(n-1). The threshold degree B_v is Bin(n-1,t), with mean k-a. Bernstein's upper-tail inequality gives P(B_v>k)<=exp(-a^2/[2(k-a+a/3)])<=exp(-a^2/(2k)); the lower-tail Chernoff bound gives P(B_v<k-2a)<=exp(-a^2/[2(k-a)])<=exp(-a^2/(2k)) (and is trivial if k-2a<0). A union bound, without any independence assumption on vertex degrees, gives simultaneous k-2a<=B_v<=k with probability at least 1-2n exp(-a^2/(2k))=1-eta.\n\nOn this event every threshold edge is among the k cheapest edges at each endpoint, so it belongs to LK(n,k). Thus k-2a<=D_v<=k. The proved mean-deficit bound gives k-mu<=sqrt(k/2)<2a and mu<=k, so every D_v in that interval has |D_v-mu|<=2a. This completes the probability bound.\n\nIn particular k/log n -> infinity implies mu/k -> 1 and max_v|D_v-mu|/mu -> 0 in probability. To see the latter choose eta=1/n for each n, so a=sqrt(2k log(2n^2)) and a/k -> 0. The statement uses 1<=k<=n-1 and a common continuous edge law; arbitrary dependent edge costs are outside its scope.",
++      "assumptions": [
++        "n>=2 and 1<=k<=n-1",
++        "Common iid continuous edge costs",
++        "Both endpoints choose their k lowest costs",
++        "0<eta<1"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:P0459:20261010",
++        "url": "file:///~/brain_workers/w337/P0459.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "result-c0130",
++      "namespace": "probability.random-walks",
++      "logical_name": "bounded-cookie-finite-interval-escape-upper-bounds",
++      "kind": "lemma",
++      "title": "[Blind audit pending] bounded cookie finite interval escape upper bounds",
++      "statement": "For a deterministic nearest-neighbor excited walk on Z with at most M cookies per site, then fair transitions, assume every transition probability lies in [epsilon,1-epsilon] for fixed epsilon>0. Starting at 1 with positive-site cookies unused, q_L=P_1(T_L<T_0) decreases to P_1(T_0=infinity). Each q_L is the absorption probability of a finite chain with at most (L-1)(M+1)^(L-1) transient states (position and capped visit counts). This state bound grows with L; bounded cookies per site do not give a finite-state representation on the whole half-line. Finite truncations provide upper bounds, not certified lower bounds on escape.",
++      "proof_text": "Consider a fixed deterministic environment on Z. Each site has at most M cookies with right-step probabilities in [epsilon,1-epsilon], for fixed epsilon>0; after these cookies its probability is 1/2. For the walk started at 1 with all positive-site cookies fresh, let q_L=P_1(T_L<T_0), L>=2, and q=P_1(T_0=infinity).\n\nStopping on first hitting 0 or L gives a finite chain with state (x,c_1,...,c_{L-1}), 1<=x<L and 0<=c_i<=M, where c_i is the number of departures from site i capped at M. There are at most (L-1)(M+1)^(L-1) transient states. Its boundary conditions are q(0,c)=0 and q(L,c)=1. At an interior state the equation is\n\n    q(x,c)=p(x,c_x) q(x+1,c')+[1-p(x,c_x)]q(x-1,c'),\n\nwhere c' increments c_x unless it is already M. This is exact and retains the visited-site history. The bound grows with L; a vector whose length can grow indefinitely is not a finite state space. The old attempt's phrase \"a finite vector\" cannot justify its claimed finite-state whole-half-line reduction.\n\nThe events {T_L<T_0} decrease with L. Uniform ellipticity implies absorption on every finite interval almost surely: from any interior state, the probability of taking enough consecutive left steps to hit 0 in the next L steps is at least epsilon^L, regardless of cookie history. Iterating this bound proves that remaining forever inside a fixed interval has probability zero. Thus on {T_0=infinity} the walk reaches every L almost surely, and\n\n    q_L decreases to q.\n\nConsequently each finite-interval calculation is an UPPER bound on half-line escape. Convergence without a quantitative tail estimate gives no certified positive lower bound on q. In a right-transient environment where trajectories from -1 tend to +infinity almost surely, a first step left must return through 0. The escape probability from 0 is then p(0,0) q. The same factor applied to q_L is only an upper bound; right transience is an additional hypothesis.\n\nTwo boundary cases can be checked separately. With all cookies fair, q_L=1/L and q=0. If every site's first cookie forces a right step, a walk started at 0 visits a new positive site at each step and never returns, so its escape probability is 1; this deterministic case does not satisfy the uniform-ellipticity hypothesis above.",
++      "assumptions": [
++        "Deterministic nearest-neighbor environment with at most M cookies per site, then fair transitions",
++        "Uniform ellipticity by a fixed epsilon>0",
++        "Start at one with fresh positive-site cookies",
++        "Fixed finite interval for the finite-state representation"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:C0130:20261010",
++        "url": "file:///~/brain_workers/w337/C0130.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "result-p0088",
++      "namespace": "probability.random-graphs",
++      "logical_name": "marked-bernoulli-poisson-adaptive-coupling",
++      "kind": "lemma",
++      "title": "[Blind audit pending] marked bernoulli poisson adaptive coupling",
++      "statement": "For a finite family of probabilities p_i in [0,1], let B_i be independent Bernoulli(p_i) and N_i independent Poisson(p_i), retaining the target label i. Under total variation defined as the supremum of event-probability differences, d_TV(Law((B_i)_i),Law((N_i)_i))<=sum_i p_i(1-exp(-p_i))<=sum_i p_i^2. Any target-marked point measure obtained from these vectors satisfies the same bound. For at most m adaptive exposure steps in countable history and exposure spaces whose conditional kernels, whenever histories agree, satisfy corresponding bounds epsilon_j, a sequential maximal coupling fails with probability at most sum_j epsilon_j. This requires control of the actual conditional marked kernels; count approximation alone proves no local graph limit.",
++      "proof_text": "For p_i in [0,1], take independent B_i~Bernoulli(p_i) and independent N_i~Poisson(p_i). Keep the older-vertex target i as a mark; counts alone discard it. Total variation here means sup_A |P(A)-Q(A)|, half the l1 distance.\n\nFor one coordinate the only positive difference Bernoulli-minus-Poisson occurs at value 1. Indeed exp(-p)>=1-p at zero, and Poisson has additional mass at values >=2. Thus\n\n    d_TV(Bernoulli(p),Poisson(p))=p(1-exp(-p))<=p^2.\n\nUse an optimal coupling independently in each coordinate. A union bound gives\n\n    d_TV(Law((B_i)_i),Law((N_i)_i))\n       <= sum_i p_i(1-exp(-p_i)) <= sum_i p_i^2.\n\nTaking any measurable pushforward, including sum_i B_i delta_i or target-age/type marks attached to i, cannot increase total variation. Equivalently the Poisson vector can be sampled by a Poisson outgoing count of mean Lambda=sum_i p_i followed by iid labels with probabilities p_i/Lambda (when Lambda>0). This describes the required MATCHED, frozen-weight Poisson birth kernel, not arbitrary sequential degree-updating attachment.\n\nFor a finite-graph exploration in countable exposure and history spaces, exposing at most m conditional birth/neighbor kernels, suppose that whenever the two histories agree, their next marked conditional kernels have total variation at most epsilon_j, uniformly over every matched history at step j. A sequential maximal coupling keeps the histories matched except with probability at most sum_{j=1}^m epsilon_j: condition on agreement up to the preceding step, couple that conditional pair, and union-bound the first failure events. Countability makes the history-indexed maximal couplings measurable. For a random exploration size with P(size>m)<=rho, the bound becomes rho+sum_j epsilon_j. If an additional finite-graph-to-tree comparison has collision probability kappa, add kappa as a separate error.\n\nIf max_i p_i<=a and sum_i p_i<=L, the marked one-step error is at most aL. This moves the cached count-only approximation to target-marked kernels. It still does not verify the local limit: actual parent and incoming-neighbor explorations may have different conditional kernels, high-degree early vertices may violate the uniform small-p condition, and sequential updating within a Poisson birth is an extra discrepancy. No assumption about these points is silently made.\n\nA simple exact counterexample shows why matching counts is inadequate. The vectors (B,0) and (0,B), with B~Bernoulli(p), have identical outgoing counts but their target-marked laws have total variation p. In particular p=1/2 gives count distance zero and marked distance 1/2.",
++      "assumptions": [
++        "Finite family of probabilities in [0,1] and independent coordinates",
++        "Full target labels are retained",
++        "Countable adaptive exposure and history spaces",
++        "Conditional kernel error bounds hold uniformly whenever histories agree"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:P0088:20261010",
++        "url": "file:///~/brain_workers/w337/P0088.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "result-p0336",
++      "namespace": "probability.optimal-transport",
++      "logical_name": "separated-rectangles-opposite-vanishing-tilts",
++      "kind": "lemma",
++      "title": "[Blind audit pending] separated rectangles opposite vanishing tilts",
++      "statement": "For uniform probability marginals on [0,1]^2 and [2,3]x[0,1], write d=y_1-x_1 in [1,3] and h=y_2-x_2. The minimum mean Euclidean cost is 2 and every optimal coupling preserves the vertical coordinate. For every epsilon>0, the cost sqrt(d^2+h^2)+epsilon d^2 uniquely selects y=(x_1+2,x_2). The cost sqrt(d^2+h^2)-epsilon d^2 uniquely selects y=(3-x_1,x_2). Both costs converge uniformly to Euclidean distance as epsilon decreases to zero, but their optimizing plans have distinct limits. Thus convergence of costs and marginals by itself cannot select the empirical optimizer of the original unperturbed problem.",
++      "proof_text": "Let the first marginal be uniform on [0,1]^2 and the second uniform on [2,3]x[0,1]. Put d=y_1-x_1 and h=y_2-x_2. Every coupling has d in [1,3] and E d=2. Since sqrt(d^2+h^2)>=d, the minimum Euclidean cost is 2, achieved by any coupling that preserves the vertical coordinate. Equality requires h=0 almost surely. This is the existing reduction, not a claim that the horizontal coupling has been determined.\n\nFor every epsilon>0 consider c_+=sqrt(d^2+h^2)+epsilon d^2. Jensen's inequality gives E c_+>=2+epsilon E d^2>=2+4epsilon. Equality is achieved by y=(x_1+2,x_2). Equality in both steps requires h=0 and d=2 almost surely, so this plan is the unique optimizer.\n\nFor c_-=sqrt(d^2+h^2)-epsilon d^2, write X=x_1 and U=y_1-2. Both X and U are uniform on [0,1], even under arbitrary dependence. Then\n\n    E d^2=4+E(U-X)^2\n          =4+1/6-2 Cov(U,X) <= 4+1/3=13/3.\n\nCauchy-Schwarz gives Cov(U,X)>=-1/12. Equality holds only when U-1/2=-(X-1/2) almost surely, hence U=1-X. Thus E c_->=2-(13/3)epsilon, with equality achieved only by y=(3-x_1,x_2). That plan is the unique optimizer for every epsilon>0. For 0<epsilon<1/3 the perturbed pointwise cost is also nonnegative, although nonnegativity is not needed for the comparison.\n\nBoth perturbations are within 9epsilon of Euclidean distance uniformly on these rectangles. Nevertheless their uniquely selected limits as epsilon decreases to zero are distinct: horizontal translation versus horizontal reversal. For example E(d-2)^2 is zero for the translation and 1/3 for the reversal. Therefore convergence of costs and marginals, or merely identifying the set of population optimizers, cannot choose the empirical limiting plan in the original question. The perturbations prove an obstruction to that inference; they are not substituted for the actual sampling mechanism.\n\nThe existing stability bound remains useful: sqrt(d^2+h^2)-d=h^2/[sqrt(d^2+h^2)+d], between h^2/(sqrt(10)+3) and h^2/2. Thus cost excess delta above the mean horizontal displacement bounds E h^2 by (sqrt(10)+3)delta. It forces equal vertical coordinates in a limiting optimizer but leaves the horizontal choice free.",
++      "assumptions": [
++        "Uniform probability marginals on the two stated rectangles",
++        "Euclidean distance is the primary cost",
++        "epsilon>0 for each perturbed cost"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:P0336:20261010",
++        "url": "file:///~/brain_workers/w337/P0336.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "result-c0022",
++      "namespace": "probability.percolation",
++      "logical_name": "summable-separators-for-random-set-law-singularity",
++      "kind": "lemma",
++      "title": "[Blind audit pending] summable separators for random set law singularity",
++      "statement": "Let P and Q be probability laws on the same measurable space of random compact sets. If measurable events A_j satisfy sum_j[P(A_j^c)+Q(A_j)]<infinity, then the measurable event liminf_j A_j has P-probability one and Q-probability zero, hence P and Q are mutually singular. A difference of any finite moments alone does not imply singularity. If both laws have positive mass at the empty set, their full unconditioned laws are not mutually singular; any intended singularity claim must remove that common atom or condition on nonemptiness.",
++      "proof_text": "Let P and Q be laws on the same measurable space of compact subsets of a square. Suppose measurable events A_j, each defined from the observed compact set itself, satisfy\n\n    sum_j [P(A_j^c)+Q(A_j)] < infinity.\n\nThe first Borel-Cantelli lemma gives P(A_j^c infinitely often)=0 and Q(A_j infinitely often)=0. Therefore A=liminf_j A_j is measurable, P(A)=1 and Q(A)=0. This proves P and Q are mutually singular. Independence of the events A_j is not required. The required events must be functions of the limiting random set, not functions of an unavailable discrete configuration or extra randomness.\n\nA quantitative route is to find, at finer spatial scales, a set statistic T_j and threshold separating the laws with summable wrong-side probabilities. Merely obtaining different limiting distributions for T_j does not give these bounds. Likewise, any finite collection of count moments can differ between mutually absolutely continuous laws.\n\nFor an exact illustration on counts {0,1,2,3}, let P=(1/4,1/4,1/4,1/4) and Q=(5/24,9/24,3/24,7/24). Both laws have full support, so they are mutually absolutely continuous. They have the same first moment 3/2 and second moment 7/2, but their third moments are 9 and 37/4. Their total variation distance is 1/6. Thus even a third-moment difference after matching the first two moments does not establish singularity. The example can be realized by compact sets of these four possible cardinalities.\n\nThere is also a mandatory atom check. If both P and Q assign positive probability to the same compact set (in particular the empty set), their unconditioned laws cannot be mutually singular: any P-full event must contain that atom and so has positive Q probability. This is a conditional warning, not an assertion that both of the actual crossing-event laws have an empty atom under the convention in use. The crossing encoding and any conditioning on nonemptiness must be fixed first.\n\nAs a test of the criterion, for infinite iid binary sequences take P with success probability 1/4 and Q with success probability 3/4. Define A_j by fewer than half successes among the first 16j entries. Hoeffding gives each wrong-side probability at most exp(-2j), which is summable. The events overlap heavily but the same Borel-Cantelli proof separates the two laws. c0022_check.py verifies the finite errors by exact binomial sums and checks the count-moment example in Fraction arithmetic.",
++      "assumptions": [
++        "P and Q are probability laws on the same measurable space",
++        "The separating events are measurable functions of the observed object",
++        "The two wrong-side probability sums are finite"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:C0022:20261010",
++        "url": "file:///~/brain_workers/w337/C0022.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "result-c0076",
++      "namespace": "probability.percolation",
++      "logical_name": "intrinsic-one-arm-normalization-and-tightness-obstruction",
++      "kind": "lemma",
++      "title": "[Blind audit pending] intrinsic one arm normalization and tightness obstruction",
++      "statement": "If c/n<=P(A_n)<=C/n for constants 0<c<=C<infinity and n^gamma P(A_n) tends to a finite strictly positive limit, then gamma=1. This necessary one-arm normalization does not prove path tightness. On [1,2], for n>=8 let U be uniform on [5/4,7/4] and Y_n(t)=1+max(1-n|t-U|,0). These continuous processes converge in every fixed finite-dimensional distribution to the constant-one process, yet their laws are not tight in the uniform path topology. Activating these processes independently with probability 1/n and setting them to zero otherwise gives exactly 1/n survival probabilities with the same obstruction under the n-scaled, survival-restricted measures. This is a general counterexample to that inference, not a percolation counterexample.",
++      "proof_text": "If the intrinsic survival/one-arm event A_n has c/n<=P(A_n)<=C/n for fixed positive c,C, and n^gamma P(A_n) converges to a finite strictly positive limit, necessarily gamma=1. For gamma<1 the upper bound tends to zero; for gamma>1 the lower bound tends to infinity. A two-sided order bound does NOT imply that n P(A_n) has a limit or identify its constant. It also does not prove that the hypotheses hold for every d>6 and every nearest-neighbor percolation model.\n\nThe scaled laws n P are finite only after suitable restrictions away from the zero excursion; their total mass on all paths is n. Any convergence to a canonical excursion measure must specify the restriction or a sigma-finite measure topology. It is not ordinary weak convergence of probability laws on all paths.\n\nOne-arm bounds and finite-dimensional convergence alone cannot supply tightness. Here is an explicit continuous-process obstruction on [1,2]. Let U be uniform on [5/4,7/4], n>=8, and put\n\n    Y_n(t)=1+max(1-n|t-U|,0).\n\nFor any fixed time t, P(Y_n(t)!=1)<=4/n, and for k fixed times the union bound is at most 4k/n. Hence all fixed finite-dimensional distributions converge to the constant-one process. But at the peak t=U and endpoint t=U+1/n, the value difference is exactly 1. Therefore for every delta>0 and sufficiently large n the modulus of continuity at delta is at least 1 on EVERY path. The family is not tight in C([1,2]) with uniform topology, by the necessary compact equicontinuity condition.\n\nThe same spike also obstructs Skorokhod J1 tightness: the three times U-1/n,U,U+1/n exhibit an up-then-down oscillation of height one in an interval of length 2/n. Equivalently any proposed J1 subsequential limit, from the fixed-time distributions at a dense set of its continuity times, would be the constant-one path, and convergence in J1 to a continuous constant implies uniform convergence. Its supremum distance is identically one, a contradiction.\n\nNow activate Y_n with an independent Bernoulli variable B_n of probability 1/n, setting it to the zero path otherwise. Survival at every time in [1,2] has probability exactly 1/n. Restricting n Law(B_n Y_n) to nonzero paths gives the above non-tight law with total mass one. Thus even exact one-arm normalization plus finite-dimensional convergence under the restricted scaled measure does not repair the missing path control. This toy process is not a percolation cluster and makes no claim against the conjectured limit itself.\n\nThe actual route still requires intrinsic-distance r-point information, enough control to identify distributions (including moment determinacy if moment methods are used), and a separate tightness/modulus or compact-containment argument in the specified measure-valued path topology. The source's number-of-pivotals two-point theorem cannot be silently replaced by an intrinsic-distance theorem. Spatial diffusivity v also needs the appropriate intrinsic two-point result, not only survival asymptotics.",
++      "assumptions": [
++        "The two-sided one-arm bounds are hypotheses",
++        "A finite strictly positive scaled-event-mass limit is assumed for the exponent lemma",
++        "n>=8 and the spike center is uniform on [5/4,7/4]",
++        "Path non-tightness is a toy-process obstruction, not a percolation counterexample"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:C0076:20261010",
++        "url": "file:///~/brain_workers/w337/C0076.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "result-c0117",
++      "namespace": "probability.random-walks",
++      "logical_name": "complete-graph-cover-variance-and-exponential-tail",
++      "kind": "lemma",
++      "title": "[Blind audit pending] complete graph cover variance and exponential tail",
++      "statement": "For simple random walk on K_n from a fixed vertex, put m=n-1. In discrete time the cover time is a sum of independent geometric(k/m) variables on {1,2,...}; its mean is m H_m and variance m^2 H_m^(2)-m H_m. In continuous time with independent mean-one exponential holding times the gaps are Exp(k/m), giving variance m^2 H_m^(2) and the same mean. Maximal expected hitting time is m in both conventions. Discrete K_6 has Var(tau_cov)/t_hit^2=145/144>1; continuous K_3 has ratio 5/4>1. These refute only a unit-constant standard-deviation bound. In both conventions P(|tau_cov-E tau_cov|>=s m)<=2 exp(1/4-s/4) for s>=0. This proves the scale and tail for complete graphs, not the all-graph universal-constant conjecture.",
++      "proof_text": "Let m=n-1. Start simple random walk on K_n at a fixed vertex. When k vertices remain unvisited, the probability that the next step discovers one is k/m, regardless of which visited vertex is current. The strong Markov property gives independent waiting times G_k with geometric(k/m) laws on {1,2,...}. Thus\n\n    tau_cov=sum_{k=1}^m G_k,\n    E tau_cov=m H_m,\n    Var(tau_cov)=m^2 H_m^(2)-m H_m.\n\nFor a target vertex different from the start, its discrete hitting time is geometric(1/m), so t_hit=m. In particular for K_6,\n\n    Var(tau_cov)/t_hit^2=H_5^(2)-H_5/5=145/144>1.\n\nThis refutes a UNIT-CONSTANT interpretation of sd(tau_cov)<=t_hit. It does not refute a bound C t_hit for some universal C. The ratio tends to pi/sqrt(6), so any such discrete-time universal C must be at least pi/sqrt(6).\n\nThe primary paper states that it works in continuous time with mean-one exponential holding times (cached lines 426-430). In that convention the discovery waiting times are independent Exp(k/m), rather than geometric. The expectation and t_hit remain m H_m and m, while Var(tau_cov)=m^2 H_m^(2). Already K_3 gives variance/t_hit^2=5/4>1. This clock difference must not be lost when reusing a cover-time formula. The limiting standard-deviation ratio is again pi/sqrt(6).\n\nBoth conventions have a uniform exponential centered tail. For geometric G with success probability p, write K(lambda)=log E exp(lambda G). Then K''(lambda)=(1-p)exp(lambda)/[1-(1-p)exp(lambda)]^2. For |lambda|<=p/4, (1-p)exp(lambda)<=exp(-3p/4) and 1-exp(-3p/4)>=p/2 for 0<p<=1. Hence K''<=4/p^2. Integrating twice around zero gives\n\n    log E exp(lambda(G-EG)) <= 2 lambda^2/p^2.\n\nAt lambda=theta/m, |theta|<=1/4 and p=k/m, independence implies\n\n    log E exp(theta(tau_cov-E tau_cov)/m)\n       <=2 theta^2 sum_{k=1}^m 1/k^2 <=4 theta^2.\n\nThe last inequality follows from sum_{k>=1}1/k^2<=2 by an integral bound. For independent Exp(k/m) gaps the centered cumulant second derivative after division by m is 1/(k-theta)^2<=4/k^2 for |theta|<=1/4, giving the same bound. Apply Chernoff at theta=1/4 and -1/4 to obtain, for s>=0,\n\n    P(|tau_cov-E tau_cov|>=s t_hit)<=2 exp(1/4-s/4).\n\nFor K_n the mean cover time is the same at every starting vertex, so E tau_cov is also the source's t_cov. This settles the requested fluctuation scale for complete graphs only. No transfer from GFF comparison estimates to centered tails for arbitrary graphs is asserted.",
++      "assumptions": [
++        "n>=2 and the graph is K_n",
++        "Simple random walk from one fixed vertex",
++        "Continuous holding times, if used, are independent mean-one exponentials",
++        "s>=0 for the centered tail bound"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:C0117:20261010",
++        "url": "file:///~/brain_workers/w337/C0117.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "result-p0009",
++      "namespace": "probability.random-walks",
++      "logical_name": "manhattan-pinball-localization-not-pathwise-monotone",
++      "kind": "lemma",
++      "title": "[Blind audit pending] manhattan pinball localization not pathwise monotone",
++      "statement": "Orient even horizontal rows east and odd rows west; even vertical columns north and odd columns south. A mirror switches the outgoing axis and an empty vertex keeps it. With mirrors exactly at (-3,0),(0,0),(-3,3),(0,3), the trajectory starting in incoming horizontal state at (0,0) has period 12. Adding one mirror at (0,1) makes it escape indefinitely west along row 1. Thus localization is not an increasing event under pointwise addition of mirrors. This deterministic configuration does not refute almost-sure localization in an iid positive-density mirror environment.",
++      "proof_text": "Fix Manhattan orientations: even horizontal rows point east and odd rows west; even vertical columns point north and odd columns south. A directed state (x,y,a) records the vertex and the incoming axis a (horizontal or vertical). At a mirror the outgoing axis is switched; otherwise it is unchanged. Movement follows the orientation of that outgoing row or column.\n\nThe state map is a bijection. Each incoming edge has a unique predecessor vertex, and the local straight or switched routing is a permutation of the two incoming axes to the two outgoing axes. Therefore a bounded infinite trajectory is periodic from its first state: it visits finitely many directed states, and any later repeat can be pulled back by the inverse map to a return to the initial state. This explains why finite-orbit routing, not monotone edge deletion, is the relevant mechanism.\n\nPlace mirrors at exactly (-3,0),(0,0),(-3,3),(0,3), with no mirrors elsewhere. Start in incoming horizontal state at (0,0). The trajectory goes north along column 0, west along row 3, south along column -3 and east along row 0. It returns to its initial directed state after 12 steps and is localized.\n\nNow add one mirror at (0,1). The trajectory's first step still goes from (0,0) to (0,1). The new mirror switches its incoming vertical axis to horizontal; row 1 points west. There are no other mirrors anywhere on row 1. The path therefore continues (-1,1),(-2,1),... indefinitely. Adding a mirror has changed a periodic trajectory into an unbounded one.\n\nThus localization is not an increasing event in the pointwise partial order on mirror configurations. This gives an explicit obstruction to borrowing a pathwise percolation monotonicity argument. These configurations have only finitely many mirrors and have probability zero under every iid density 0<q<1. Consequently the example proves neither nonmonotonicity of the iid localization probability as a function of q nor failure of the conjecture at any positive density. The distinction is essential.\n\nAt q=0 there is no turn and a ray travels indefinitely. At q=1 every vertex switches the axis; the trajectory has period four (check the two parities of row and column and both incoming axes). These endpoint checks also do not determine the interval 0<q<1.",
++      "assumptions": [
++        "Manhattan orientations are exactly as stated",
++        "A mirror switches axes and a blank vertex keeps the axis",
++        "The displayed configurations have no additional mirrors",
++        "The example concerns pathwise monotonicity, not iid almost-sure localization"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:P0009:20261010",
++        "url": "file:///~/brain_workers/w337/P0009.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "result-p0035",
++      "namespace": "probability.random-walks",
++      "logical_name": "inward-biased-speed-on-products-of-regular-trees",
++      "kind": "lemma",
++      "title": "[Blind audit pending] inward biased speed on products of regular trees",
++      "statement": "Let G be the Cartesian product of m infinite (b_i+1)-regular trees, each rooted, with integers b_i>=2. A nearest-neighbor lambda-biased walk gives weight lambda to each neighbor closer to the product root and weight one to each farther neighbor. If 0<lambda<min_i b_i, then its distance from the root divided by time converges almost surely to (sum_i b_i-m lambda)/(sum_i b_i+m lambda)>0. In the balanced case b_i=b this is (b-lambda)/(b+lambda), and the graph has exponential growth rate b. Thus products of equal-degree tree Cayley graphs satisfy the cached speed claim throughout 1<lambda<b; arbitrary Cayley graphs are not covered.",
++      "proof_text": "Let G be the Cartesian product of m infinite (b_i+1)-regular trees rooted at their chosen identities, with integers b_i>=2. Use the radial lambda-bias: an edge to a closer neighbor has transition weight lambda, and an edge to a farther neighbor has weight one. There are no same-level edges in this product. Suppose 0<lambda<min_i b_i.\n\nLet R_i(n) be the distance in coordinate i and R(n)=sum_i R_i(n). If coordinate i is nonzero, its b_i farther edges have total weight b_i and its one closer edge has weight lambda. If it is zero, its b_i+1 edges all go farther and have weight one. The total graph degree D=sum_i(b_i+1) is finite. The conditional probability of updating any particular coordinate is bounded below by a positive constant depending only on D and lambda. For example min(1,lambda)(b_i+1)/[max(1,lambda)D] is a valid lower bound. Iterating the probability of no coordinate update shows every coordinate updates infinitely often almost surely.\n\nAt the successive update times of coordinate i, its radius is a birth-death chain: from a positive state it moves up with probability b_i/(b_i+lambda) and down with probability lambda/(b_i+lambda); from zero it moves to one. The embedded transition probabilities are unaffected by the random times at which other coordinates update. Starting at one, the probability of hitting zero is lambda/b_i<1, as follows by solving the finite gambler's-ruin equation with harmonic function (lambda/b_i)^r and sending the upper boundary to infinity. The strong Markov property makes the number of returns to zero finite almost surely. Each interval while a coordinate waits at zero is finite because of its positive update-probability bound. With finitely many coordinates there is therefore a finite random time after which ALL coordinates are positive.\n\nAfter that time, putting B=sum_i b_i, the conditional probabilities for the total radius are\n\n    P(delta R=+1 | past)=B/(B+m lambda),\n    P(delta R=-1 | past)=m lambda/(B+m lambda).\n\nIts conditional drift is the constant v=(B-m lambda)/(B+m lambda)>0. Subtract each conditional drift from the radius increment to obtain a martingale with bounded increments. Azuma and Borel-Cantelli give M_n/n -> 0 almost surely. The finitely many earlier drift terms contribute o(n), so\n\n    R(n)/n -> (sum_i b_i-m lambda)/(sum_i b_i+m lambda) almost surely.\n\nThis proof does not use the last visit time as a stopping time; it uses the pathwise fact that only finitely many pre-constant drift terms occur. No unjustified optional-stopping or localization limit is involved.\n\nIf all b_i=b, the speed is (b-lambda)/(b+lambda). The product is a Cayley graph: each regular tree is the Cayley graph of a free product of b+1 involutions, and the coordinate generators give the product Cayley graph. Its exponential growth rate is b. For the growth claim, one coordinate gives a sphere-size lower bound proportional to b^r, while summing all m coordinate radii gives an upper bound C(r+1)^(m-1)b^r; balls have the same exponential rate. Thus this non-tree family satisfies the original range 1<lambda<b in full. For unequal b_i the growth rate is max_i b_i, while this proof only covers lambda<min_i b_i; it does not silently fill the intervening range.",
++      "assumptions": [
++        "Finite Cartesian product of infinite regular rooted trees",
++        "Integer b_i>=2",
++        "0<lambda<min_i b_i",
++        "Closer neighbors have weight lambda and farther neighbors weight one"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:P0035:20261010",
++        "url": "file:///~/brain_workers/w337/P0035.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "rare-state-standardization",
++      "namespace": "probability.markov-chains",
++      "logical_name": "rational-four-state-rare-mode-standardization",
++      "kind": "lemma",
++      "title": "[Blind audit pending] rational four state rare mode standardization",
++      "statement": "For s>=2, let A=1-s^(-2), epsilon=(1-A^2)/(5-4A), B=(5-4A)/(2-A), and R=s^4. For independent stationary Y with rates 0->1=epsilon, 1->0=1-epsilon and fair sign Z flipping at R/2, g=AZ+B(Y-epsilon) has stationary mean zero, variance one, and sup norm two. The product generator has eigenvalues 0,-1,-R,-(R+1), and its additive-functional asymptotic variance rate is 2A^2/R+2B^2 epsilon(1-epsilon).",
++      "proof_text": "Since 1-epsilon=(2-A)^2/(5-4A), B(1-epsilon)=2-A and B^2 epsilon(1-epsilon)=1-A^2. Independence gives the mean and variance. Positivity and epsilon<1/2 give sup norm A+B(1-epsilon)=2. The eigenbasis is 1,Y-epsilon,Z,(Y-epsilon)Z with the displayed eigenvalues. The two orthogonal nonconstant components have covariance A^2 exp(-Ru)+B^2 epsilon(1-epsilon)exp(-u). Twice its integral over positive u gives the asymptotic variance rate, either by exact covariance integration or domination by these integrable exponentials for this fixed chain.",
++      "assumptions": [
++        "s is an integer at least two",
++        "Independent stationary Y and Z chains with the displayed rates",
++        "The normalization uses the displayed additive-functional asymptotic variance"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:P0209:rare-state-standardization:20261010",
++        "url": "file:///~/brain_workers/w337/P0209.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "bilateral-mean",
++      "namespace": "probability.random-graphs",
++      "logical_name": "bilateral-preference-exact-mean-and-beta-deficit",
++      "kind": "lemma",
++      "title": "[Blind audit pending] bilateral preference exact mean and beta deficit",
++      "statement": "For LK(n,k) obtained by retaining edges among the k cheapest iid continuous costs at both endpoints of K_n, n>=2 and 1<=k<=n-1, the common mean degree mu satisfies 0<=k-mu<=sqrt(k(n-1-k)/(2n)). When k<n-1, mu=(n-1) integral_0^1 P(Bin(n-2,u)<=k-1)^2 du; when k=n-1, mu=k.",
++      "proof_text": "Uniformize the common continuous cost distribution. Given an edge cost u, its two endpoint competitor arrays are disjoint and independent, each accepting it with probability F(u)=P(Bin(n-2,u)<=k-1). Integrate F^2. For k<n-1 use independent kth order statistics U,V from n-2 uniforms, of law Beta(k,n-1-k), to write mu=(n-1)E min(U,V). Therefore k-mu=(n-1)E|U-V|/2, bounded by (n-1)sqrt(2 Var U)/2. The beta variance is k(n-1-k)/[(n-1)^2 n]. The full-degree boundary is deterministic.",
++      "assumptions": [
++        "n>=2 and 1<=k<=n-1",
++        "Common iid continuous edge costs",
++        "Both endpoints choose their k lowest costs"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:P0459:bilateral-mean:20261010",
++        "url": "file:///~/brain_workers/w337/P0459.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "cookie-interval-state",
++      "namespace": "probability.random-walks",
++      "logical_name": "finite-interval-bounded-cookie-state-representation",
++      "kind": "definition",
++      "title": "[Blind audit pending] finite interval bounded cookie state representation",
++      "statement": "For a deterministic nearest-neighbor cookie walk stopped on first reaching 0 or L, with at most M cookies at each site and fair transitions after exhaustion, its interior state is (x,c_1,...,c_{L-1}). Here 1<=x<L and c_i in {0,...,M} counts departures from i capped at M. An interior transition consumes the next cookie at x, increments c_x unless exhausted, and moves to x+1 or x-1 with that cookie probability. The resulting finite representation has at most (L-1)(M+1)^(L-1) interior states. This definition is for a fixed interval; it does not make the whole half-line finite-state.",
++      "proof_text": null,
++      "assumptions": [
++        "Fixed finite interval [0,L]",
++        "Deterministic nearest-neighbor cookie stacks, at most M cookies per site, then fair transitions"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:C0130:cookie-interval-state:20261010",
++        "url": "file:///~/brain_workers/w337/C0130.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "adaptive-marked-coupling",
++      "namespace": "probability.random-graphs",
++      "logical_name": "adaptive-countable-exposure-coupling-failure-bound",
++      "kind": "lemma",
++      "title": "[Blind audit pending] adaptive countable exposure coupling failure bound",
++      "statement": "Consider two adaptive explorations with countable exposure and history spaces. At step j<=m, assume their conditional exposure kernels, whenever past histories agree, have total variation at most epsilon_j uniformly in that history. There is a sequential coupling under which some history mismatch by step m has probability at most sum_{j=1}^m epsilon_j. If the exploration may exceed m steps with probability at most rho, add rho to this bound.",
++      "proof_text": "On each matched history use the discrete maximal coupling: put their common probability mass on the diagonal and couple the residual masses. Its mismatch probability equals the kernel total variation. The probability that the first mismatch occurs at step j is at most epsilon_j times the probability of previous agreement, hence at most epsilon_j. Sum those disjoint first-failure probabilities. Union with the event that more than m steps are needed. Countability ensures these history-indexed couplings form a measurable kernel.",
++      "assumptions": [
++        "Countable history and exposure spaces",
++        "Uniform conditional kernel variation bounds at matched histories",
++        "At most m steps, except a separately bounded tail event"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:P0088:adaptive-marked-coupling:20261010",
++        "url": "file:///~/brain_workers/w337/P0088.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "rectangle-vertical-stability",
++      "namespace": "probability.optimal-transport",
++      "logical_name": "separated-rectangle-cost-excess-controls-vertical-displacement",
++      "kind": "lemma",
++      "title": "[Blind audit pending] separated rectangle cost excess controls vertical displacement",
++      "statement": "For any coupling of uniform laws on [0,1]^2 and [2,3]x[0,1], put d=y_1-x_1 and h=y_2-x_2. If its mean Euclidean cost is 2+delta, then delta>=0 and E h^2<=(sqrt(10)+3)delta. Cost 2 is optimal and occurs exactly for couplings with h=0 almost surely; it does not specify the horizontal coupling.",
++      "proof_text": "The marginals force E d=2 and 1<=d<=3, |h|<=1. Rationalization gives sqrt(d^2+h^2)-d=h^2/[sqrt(d^2+h^2)+d], with denominator at most sqrt(10)+3 and at least 2. Integrate the lower bound. Any vertically matched coupling attains cost 2; conversely nonnegative excess has expectation zero only when h=0 almost surely.",
++      "assumptions": [
++        "The two stated uniform probability marginals",
++        "Euclidean distance cost"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:P0336:rectangle-vertical-stability:20261010",
++        "url": "file:///~/brain_workers/w337/P0336.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "moment-nonsingularity",
++      "namespace": "probability.measure",
++      "logical_name": "third-moment-difference-with-equivalent-finite-laws",
++      "kind": "lemma",
++      "title": "[Blind audit pending] third moment difference with equivalent finite laws",
++      "statement": "The probability laws P=(1/4,1/4,1/4,1/4) and Q=(5/24,9/24,3/24,7/24) on {0,1,2,3} are mutually absolutely continuous. Their first moments equal 3/2 and second moments equal 7/2, but their third moments are respectively 9 and 37/4. Their total variation distance is 1/6. Thus a third-moment difference even after matching the first two moments does not imply singularity.",
++      "proof_text": "All four atoms have strictly positive mass for both laws. Direct sums of x^r against each mass give the displayed moments. Half the sum of absolute mass differences is (1+3+3+1)/48=1/6. The full-support property implies that a zero-probability event for either law is empty on their common support, so the two laws are equivalent.",
++      "assumptions": [
++        "The two probability vectors on the stated common four-point support"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:C0022:moment-nonsingularity:20261010",
++        "url": "file:///~/brain_workers/w337/C0022.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "one-arm-exponent",
++      "namespace": "probability.percolation",
++      "logical_name": "one-arm-order-forces-nontrivial-excursion-normalization-exponent",
++      "kind": "lemma",
++      "title": "[Blind audit pending] one arm order forces nontrivial excursion normalization exponent",
++      "statement": "Let A_n be events such that c/n<=P(A_n)<=C/n for fixed constants 0<c<=C<infinity. If n^gamma P(A_n) converges to a finite strictly positive number, then gamma=1. The order bounds alone neither prove convergence of n P(A_n) nor identify its constant.",
++      "proof_text": "For gamma<1 the upper bound C n^(gamma-1) tends to zero. For gamma>1 the lower bound c n^(gamma-1) tends to infinity. Both contradict the specified finite positive limit. For gamma=1 the two bounds only confine the mass between c and C and permit oscillation.",
++      "assumptions": [
++        "Fixed 0<c<=C<infinity",
++        "The two-sided event-probability bounds",
++        "A finite strictly positive scaled-mass limit is assumed"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:C0076:one-arm-exponent:20261010",
++        "url": "file:///~/brain_workers/w337/C0076.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "complete-clock-variance",
++      "namespace": "probability.random-walks",
++      "logical_name": "complete-graph-cover-variance-depends-on-clock",
++      "kind": "lemma",
++      "title": "[Blind audit pending] complete graph cover variance depends on clock",
++      "statement": "For simple random walk on K_n, n>=2 and m=n-1, the cover time has expectation m H_m and maximal expected hitting time m. Its variance is m^2 H_m^(2)-m H_m in discrete time, and m^2 H_m^(2) in continuous time with iid mean-one exponential holding times. Thus the two clock conventions have equal mean cover and hitting times but different cover-time variance.",
++      "proof_text": "With k unvisited vertices, each next transition discovers one with probability k/m from any visited current vertex. The independent discovery gaps are geometric(k/m) by the strong Markov property. Their means sum to m H_m and variances to m^2 H_m^(2)-m H_m. Adding independent mean-one exponential holding times preserves the mean and adds E tau_cov=m H_m to the variance by conditional variance; equivalently the continuous discovery gaps are independent Exp(k/m). A single target has mean hitting time m in either clock.",
++      "assumptions": [
++        "Simple random walk on K_n, n>=2",
++        "Independent mean-one exponential holding times for the continuous-time convention"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:C0117:complete-clock-variance:20261010",
++        "url": "file:///~/brain_workers/w337/C0117.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "bijective-pinball-routing",
++      "namespace": "probability.random-walks",
++      "logical_name": "manhattan-pinball-bijective-routing-bounded-orbits-periodic",
++      "kind": "lemma",
++      "title": "[Blind audit pending] manhattan pinball bijective routing bounded orbits periodic",
++      "statement": "In the Manhattan grid, represent a ray by its vertex and incoming horizontal or vertical axis. If each vertex routes the two incoming edges bijectively to its two outgoing edges, either straight or switched by a mirror, the global directed-state map is a bijection. Its forward trajectory has bounded spatial range if and only if it is periodic from its initial state.",
++      "proof_text": "For each incoming directed edge its predecessor vertex is uniquely determined by the street orientation, and the local routing has a unique inverse. Therefore the global state map is invertible. A bounded spatial range contains only finitely many directed states, so two forward states coincide. Apply inverse iterations to deduce a return to the initial state and periodicity from time zero. A periodic trajectory plainly has bounded range.",
++      "assumptions": [
++        "Two incoming and two outgoing edges per Manhattan vertex",
++        "The local routing is a permutation of incoming edges to outgoing edges"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:P0009:bijective-pinball-routing:20261010",
++        "url": "file:///~/brain_workers/w337/P0009.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "tree-product-coordinate",
++      "namespace": "probability.random-walks",
++      "logical_name": "tree-product-biased-walk-embedded-coordinate-return-probability",
++      "kind": "lemma",
++      "title": "[Blind audit pending] tree product biased walk embedded coordinate return probability",
++      "statement": "For a lambda-biased walk on a finite Cartesian product of (b_i+1)-regular rooted trees, giving closer neighbors weight lambda>0 and farther neighbors weight one, observe coordinate i at its update times. Its radius moves from a positive state up with probability b_i/(b_i+lambda) and down with probability lambda/(b_i+lambda), and moves from zero to one. If lambda<b_i, its probability of returning to zero after leaving zero is lambda/b_i<1. Each coordinate has a uniformly positive update probability. A coordinate satisfying lambda<b_i has only finitely many visits to zero in full time almost surely; all coordinates do so when lambda<min_i b_i.",
++      "proof_text": "Conditioning on selection of coordinate i divides its b_i farther-edge weight and lambda closer-edge weight by b_i+lambda. The full degree is finite and every edge has weight between min(1,lambda) and max(1,lambda), giving a uniform positive lower bound for coordinate selection. Hence coordinate updates occur infinitely often. For the embedded birth-death chain, (lambda/b_i)^r is harmonic away from zero; the finite gambler-ruin formula followed by an upper-boundary limit gives return probability lambda/b_i from radius one. Strong Markov gives a geometric number of returns; every wait at zero is finite by the update bound.",
++      "assumptions": [
++        "Finite product of regular rooted trees",
++        "lambda>0",
++        "lambda<b_i for the coordinate-transience conclusion; lambda<min b_i for all coordinates"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w337:P0035:tree-product-coordinate:20261010",
++        "url": "file:///~/brain_workers/w337/P0035.md",
++        "revision": "author-check-2026-10-10",
++        "license": "owner-own-work (campaign proof; blind audit pending)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "result-p0209",
++      "kind": "cites",
++      "rationale": "Source: \"For every integer s>=2 let A=1-s^(-2), epsilon=(1-A^2)/(5-4A), B=(5-4A)/(2-A), R=s^4. Take independent stationary chains Y in {0,1}, with rates epsilon and 1-epsilon, and Z in {-1,1}, flipping at rate R/2. The observable g=AZ+B(Y-epsilon) has mean zero, variance one and sup norm two, and the product chain has relaxation time one. At time t=s its integral normalized by its\". Target: \"For stationary finite reversible continuous-time chains and Epi g=0,Epi g^2=1, does a universal normal-approximation error bound psi(||g||infinity,t/tau2) tend to0 at fixed first argument?\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:open-problem-p0209-uniform-stationary-normal-approximation-from-gap-and-bounded-observabl"
++    },
++    {
++      "from_key": "result-p0209",
++      "kind": "cites",
++      "rationale": "Source: \"For every integer s>=2 let A=1-s^(-2), epsilon=(1-A^2)/(5-4A), B=(5-4A)/(2-A), R=s^4. Take independent stationary chains Y in {0,1}, with rates epsilon and 1-epsilon, and Z in {-1,1}, flipping at rate R/2. The observable g=AZ+B(Y-epsilon) has mean zero, variance one and sup norm two, and the product chain has relaxation time one. At time t=s its integral normalized by its\". Target: \"Let epsilon=s^-2,R=s^4, Y have rates0to1=epsilon,1to0=1-epsilon, and independently let fair sign Z flip at R/2. Gap=1. Set A=2*epsilon+sqrt((1-epsilon)*(1-4*epsilon)),B=(2-A)/(1-epsilon),g=A*Z+B*(Y-epsilon). Then mean0,variance1,supnorm2 exactly and sigma^2=2*A^2/R+2*B^2*epsilon*(1-epsilon). By time s the chance ever Y=1 is at most epsilon*(s+1); off that event the slow\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:attempt-p0209-uniform-stationary-normal-approximation-from-gap-and-bounded-observabl"
++    },
++    {
++      "from_key": "result-p0459",
++      "kind": "cites",
++      "rationale": "Source: \"Let LK(n,k) retain edges of K_n chosen among the k cheapest incident costs at both endpoints, where edge costs are iid and continuous, n>=2 and 1<=k<=n-1. If D_v is degree and mu=E D_v, then 0<=k-mu<=sqrt(k(n-1-k)/(2n)). For 0<eta<1, P(max_v |D_v-mu|>2 sqrt(2k log(2n/eta)))<=eta. For k<n-1 the exact mean is (n-1) times the integral on [0,1] of P(Bin(n-2,u)<=k-1)^2. In\". Target: \"Find growth conditions and quantitative bounds for LK(n,k) degrees to concentrate simultaneously around their mean.\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:open-problem-p0459-simultaneous-concentration-of-bilateral-preference-degrees"
++    },
++    {
++      "from_key": "result-p0459",
++      "kind": "cites",
++      "rationale": "Source: \"Let LK(n,k) retain edges of K_n chosen among the k cheapest incident costs at both endpoints, where edge costs are iid and continuous, n>=2 and 1<=k<=n-1. If D_v is degree and mu=E D_v, then 0<=k-mu<=sqrt(k(n-1-k)/(2n)). For 0<eta<1, P(max_v |D_v-mu|>2 sqrt(2k log(2n/eta)))<=eta. For k<n-1 the exact mean is (n-1) times the integral on [0,1] of P(Bin(n-2,u)<=k-1)^2. In\". Target: \"Put delta=sqrt(6*k*log(n)) and assume k>2*delta. Threshold edge weights at t=(k-delta)/(n-1). Each threshold degree B_v is binomial with mean k-delta. Chernoff and a union bound give k-2*delta<=B_v<=k for all vertices with probability at least 1-2/n^2. On that event every threshold edge is preferred at both endpoints, so k-2*delta<=D_v<=k simultaneously. Thus\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:attempt-p0459-simultaneous-concentration-of-bilateral-preference-degrees"
++    },
++    {
++      "from_key": "result-p0459",
++      "kind": "generalizes",
++      "rationale": "Source: \"Let LK(n,k) retain edges of K_n chosen among the k cheapest incident costs at both endpoints, where edge costs are iid and continuous, n>=2 and 1<=k<=n-1. If D_v is degree and mu=E D_v, then 0<=k-mu<=sqrt(k(n-1-k)/(2n)). For 0<eta<1, P(max_v |D_v-mu|>2 sqrt(2k log(2n/eta)))<=eta. For k<n-1 the exact mean is (n-1) times the integral on [0,1] of P(Bin(n-2,u)<=k-1)^2. In\". Target: \"Put delta=sqrt(6*k*log(n)) and assume k>2*delta. Threshold edge weights at t=(k-delta)/(n-1). Each threshold degree B_v is binomial with mean k-delta. Chernoff and a union bound give k-2*delta<=B_v<=k for all vertices with probability at least 1-2/n^2. On that event every threshold edge is preferred at both endpoints, so k-2*delta<=D_v<=k simultaneously. Thus\". Extends the sufficient threshold regime to an explicit actual-mean bound and arbitrary error probability.",
++      "to_existing_logical": "math:probability.core:attempt-p0459-simultaneous-concentration-of-bilateral-preference-degrees"
++    },
++    {
++      "from_key": "result-c0130",
++      "kind": "cites",
++      "rationale": "Source: \"For a deterministic nearest-neighbor excited walk on Z with at most M cookies per site, then fair transitions, assume every transition probability lies in [epsilon,1-epsilon] for fixed epsilon>0. Starting at 1 with positive-site cookies unused, q_L=P_1(T_L<T_0) decreases to P_1(T_0=infinity). Each q_L is the absorption probability of a finite chain with at most\". Target: \"Compute, for a transient excited random walk on Z, the probability P_0(X_n not 0 for all n >= 1) of never returning to the starting point.\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0130-escape-probability-of-a-transient-one-dimensional-excited-random-walk"
++    },
++    {
++      "from_key": "result-c0130",
++      "kind": "cites",
++      "rationale": "Source: \"For a deterministic nearest-neighbor excited walk on Z with at most M cookies per site, then fair transitions, assume every transition probability lies in [epsilon,1-epsilon] for fixed epsilon>0. Starting at 1 with positive-site cookies unused, q_L=P_1(T_L<T_0) decreases to P_1(T_0=infinity). Each q_L is the absorption probability of a finite chain with at most\". Target: \"In the deterministic environment with one cookie of strength p at each site (M = 1, delta = 2p - 1... transient iff delta > 1 which needs more than one cookie; take M = 2 cookies of strength p each, delta = 2(2p - 1) > 1 iff p > 3/4). The event of never returning to 0 after the first step: the walk must never come back, which in the branching-process picture (right excursions\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.randomenvironment:attempt-c0130-escape-probability-of-a-transient-one-dimensional-excited-random-walk"
++    },
++    {
++      "from_key": "result-c0130",
++      "kind": "refutes",
++      "rationale": "Source: \"For a deterministic nearest-neighbor excited walk on Z with at most M cookies per site, then fair transitions, assume every transition probability lies in [epsilon,1-epsilon] for fixed epsilon>0. Starting at 1 with positive-site cookies unused, q_L=P_1(T_L<T_0) decreases to P_1(T_0=infinity). Each q_L is the absorption probability of a finite chain with at most\". Target: \"sited matter only through the remaining cookie counts, which for M bounded is a finite vector, and the walk's returns to 0 require descending through all visited sites; the escape probability then equals the probability of survival of a Markov chain on finite cookie-count vectors, computable numerically for given (M, p) but with no closed form in general. Recorded: reduction\". Refutes only the whole-half-line finite-state interpretation; fixed-interval truncations remain valid.",
++      "to_existing_logical": "math:probability.randomenvironment:attempt-c0130-escape-probability-of-a-transient-one-dimensional-excited-random-walk"
++    },
++    {
++      "from_key": "result-p0088",
++      "kind": "cites",
++      "rationale": "Source: \"For a finite family of probabilities p_i in [0,1], let B_i be independent Bernoulli(p_i) and N_i independent Poisson(p_i), retaining the target label i. Under total variation defined as the supremum of event-probability differences, d_TV(Law((B_i)_i),Law((N_i)_i))<=sum_i p_i(1-exp(-p_i))<=sum_i p_i^2. Any target-marked point measure obtained from these vectors satisfies the\". Target: \"Relate the local weak limit of the Dereich-Morters Bernoulli preferential-attachment model, whose older vertices are chosen independently with probability f(in_degree)/(n-1), to an appropriately matched model with iid Poisson outgoing degree and attachment based on in-degree.\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:open-problem-p0088-matching-local-limits-of-bernoulli-and-poisson-outdegree-attachment"
++    },
++    {
++      "from_key": "result-p0088",
++      "kind": "cites",
++      "rationale": "Source: \"For a finite family of probabilities p_i in [0,1], let B_i be independent Bernoulli(p_i) and N_i independent Poisson(p_i), retaining the target label i. Under total variation defined as the supremum of event-probability differences, d_TV(Law((B_i)_i),Law((N_i)_i))<=sum_i p_i(1-exp(-p_i))<=sum_i p_i^2. Any target-marked point measure obtained from these vectors satisfies the\". Target: \"Conditional on current degrees, the Bernoulli outgoing count has mean Lambda_n=sum_i p_ni. Its total variation distance to Poisson(Lambda_n) is at most sum_i p_ni^2 by the elementary independent Bernoulli-to-Poisson coupling. If max_i p_ni->0 and Lambda_n stays bounded, this error tends to0. Check: Use sum p_i^2<=max p_i sum p_i. This verifies the count approximation only; the\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:attempt-p0088-matching-local-limits-of-bernoulli-and-poisson-outdegree-attachment"
++    },
++    {
++      "from_key": "result-p0088",
++      "kind": "generalizes",
++      "rationale": "Source: \"For a finite family of probabilities p_i in [0,1], let B_i be independent Bernoulli(p_i) and N_i independent Poisson(p_i), retaining the target label i. Under total variation defined as the supremum of event-probability differences, d_TV(Law((B_i)_i),Law((N_i)_i))<=sum_i p_i(1-exp(-p_i))<=sum_i p_i^2. Any target-marked point measure obtained from these vectors satisfies the\". Target: \"Conditional on current degrees, the Bernoulli outgoing count has mean Lambda_n=sum_i p_ni. Its total variation distance to Poisson(Lambda_n) is at most sum_i p_ni^2 by the elementary independent Bernoulli-to-Poisson coupling. If max_i p_ni->0 and Lambda_n stays bounded, this error tends to0. Check: Use sum p_i^2<=max p_i sum p_i. This verifies the count approximation only; the\". The vector coupling retains marks and implies the older count bound by projection.",
++      "to_existing_logical": "math:probability.core:attempt-p0088-matching-local-limits-of-bernoulli-and-poisson-outdegree-attachment"
++    },
++    {
++      "from_key": "result-p0336",
++      "kind": "cites",
++      "rationale": "Source: \"For uniform probability marginals on [0,1]^2 and [2,3]x[0,1], write d=y_1-x_1 in [1,3] and h=y_2-x_2. The minimum mean Euclidean cost is 2 and every optimal coupling preserves the vertical coordinate. For every epsilon>0, the cost sqrt(d^2+h^2)+epsilon d^2 uniquely selects y=(x_1+2,x_2). The cost sqrt(d^2+h^2)-epsilon d^2 uniquely selects y=(3-x_1,x_2). Both costs converge\". Target: \"For independent uniform samples from [0,1]^2 and [2,3]x[0,1], find the limiting empirical optimal transport plan for Euclidean distance as sample size tends to infinity.\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:open-problem-p0336-selected-limit-of-empirical-euclidean-transport-between-separated-rect"
++    },
++    {
++      "from_key": "result-p0336",
++      "kind": "cites",
++      "rationale": "Source: \"For uniform probability marginals on [0,1]^2 and [2,3]x[0,1], write d=y_1-x_1 in [1,3] and h=y_2-x_2. The minimum mean Euclidean cost is 2 and every optimal coupling preserves the vertical coordinate. For every epsilon>0, the cost sqrt(d^2+h^2)+epsilon d^2 uniquely selects y=(x_1+2,x_2). The cost sqrt(d^2+h^2)-epsilon d^2 uniquely selects y=(3-x_1,x_2). Both costs converge\". Target: \"Write a horizontal displacement d=y1-x1 in[1,3] and vertical displacement h=y2-x2. The excess Euclidean cost over horizontal displacement is sqrt(d^2+h^2)-d=h^2/(sqrt(d^2+h^2)+d). Since |h|<=1, this lies between h^2/(sqrt(10)+3) and h^2/2. Therefore any sequence of couplings with cost tending to2 must have mean squared vertical displacement tending to0. Check: The mean\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:attempt-p0336-selected-limit-of-empirical-euclidean-transport-between-separated-rect"
++    },
++    {
++      "from_key": "result-c0022",
++      "kind": "cites",
++      "rationale": "Source: \"Let P and Q be probability laws on the same measurable space of random compact sets. If measurable events A_j satisfy sum_j[P(A_j^c)+Q(A_j)]<infinity, then the measurable event liminf_j A_j has P-probability one and Q-probability zero, hence P and Q are mutually singular. A difference of any finite moments alone does not imply singularity. If both laws have positive mass at\". Target: \"Prove that the scaling limits of (1/n) S_{f_n} (spectral sample) and (1/n) P_{f_n} (pivotal set) of the crossing event are singular random compact sets, and in particular that the spectral sample has a scaling limit.\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0022-singularity-of-the-scaling-limits-of-the-spectral-sample-and-of-the-pi"
++    },
++    {
++      "from_key": "result-c0022",
++      "kind": "cites",
++      "rationale": "Source: \"Let P and Q be probability laws on the same measurable space of random compact sets. If measurable events A_j satisfy sum_j[P(A_j^c)+Q(A_j)]<infinity, then the measurable event liminf_j A_j has P-probability one and Q-probability zero, hence P and Q are mutually singular. A difference of any finite moments alone does not imply singularity. If both laws have positive mass at\". Target: \"The pivotal set and the spectral sample have the same one-point intensity (alpha_4 at each point) and the same two-point function up to constants (both are asymp alpha_4(|x-y|) alpha_4(|x-y|, n) ...), so any singularity must come from higher-order structure. The known difference is in the third moment: E|S|^3 and E|P|^3 differ, and more precisely the conditional law of S given\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.percolation:attempt-c0022-singularity-of-the-scaling-limits-of-the-spectral-sample-and-of-the-pi"
++    },
++    {
++      "from_key": "result-c0076",
++      "kind": "cites",
++      "rationale": "Source: \"If c/n<=P(A_n)<=C/n for constants 0<c<=C<infinity and n^gamma P(A_n) tends to a finite strictly positive limit, then gamma=1. This necessary one-arm normalization does not prove path tightness. On [1,2], for n>=8 let U be uniform on [5/4,7/4] and Y_n(t)=1+max(1-n|t-U|,0). These continuous processes converge in every fixed finite-dimensional distribution to the constant-one\". Target: \"Show that for d > 6 there are gamma, v such that the measure-valued process X^{(n)}_{nt} = n^{-gamma} sum over vertices at intrinsic distance nt of delta at x/sqrt(vn), under n^gamma P_{p_c}, converges to the canonical measure of super-Brownian motion.\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0076-super-brownian-motion-limit-of-critical-percolation-clusters-in-high-d"
++    },
++    {
++      "from_key": "result-c0076",
++      "kind": "cites",
++      "rationale": "Source: \"If c/n<=P(A_n)<=C/n for constants 0<c<=C<infinity and n^gamma P(A_n) tends to a finite strictly positive limit, then gamma=1. This necessary one-arm normalization does not prove path tightness. On [1,2], for n>=8 let U be uniform on [5/4,7/4] and Y_n(t)=1+max(1-n|t-U|,0). These continuous processes converge in every fixed finite-dimensional distribution to the constant-one\". Target: \"gamma = 1: the intrinsic one-arm probability is of order 1/n (Kozma-Nachmias), so n P_{p_c}(intrinsic radius >= n) is bounded, matching the canonical measure normalisation; v is the variance per intrinsic step of the spatial displacement, given by the lace expansion two-point function through the intrinsic-distance two-point function (C0079). The finite-dimensional\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.percolation:attempt-c0076-super-brownian-motion-limit-of-critical-percolation-clusters-in-high-d"
++    },
++    {
++      "from_key": "result-c0117",
++      "kind": "cites",
++      "rationale": "Source: \"For simple random walk on K_n from a fixed vertex, put m=n-1. In discrete time the cover time is a sum of independent geometric(k/m) variables on {1,2,...}; its mean is m H_m and variance m^2 H_m^(2)-m H_m. In continuous time with independent mean-one exponential holding times the gaps are Exp(k/m), giving variance m^2 H_m^(2) and the same mean. Maximal expected hitting time\". Target: \"Is the standard deviation of the cover time tau_cov bounded by the maximal hitting time t_hit for every graph, and does (tau_cov - t_cov)/t_hit have an exponentially decaying tail with a universal rate?\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:open-problem-c0117-concentration-of-the-cover-time-at-the-scale-of-the-maximal-hitting-ti"
++    },
++    {
++      "from_key": "result-c0117",
++      "kind": "cites",
++      "rationale": "Source: \"For simple random walk on K_n from a fixed vertex, put m=n-1. In discrete time the cover time is a sum of independent geometric(k/m) variables on {1,2,...}; its mean is m H_m and variance m^2 H_m^(2)-m H_m. In continuous time with independent mean-one exponential holding times the gaps are Exp(k/m), giving variance m^2 H_m^(2) and the same mean. Maximal expected hitting time\". Target: \"Upper tail: for any graph, P(tau_cov > t_cov + s t_hit) <= e^{-cs}? The standard argument: after time 2 t_hit... using the Markov property at multiples of the 'maximal hitting time' scale, the probability that a fixed uncovered vertex remains uncovered for another 2 t_hit is at most 1/2 by Markov's inequality on hitting times, but the union over uncovered vertices costs the\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:attempt-c0117-concentration-of-the-cover-time-at-the-scale-of-the-maximal-hitting-ti"
++    },
++    {
++      "from_key": "result-p0009",
++      "kind": "cites",
++      "rationale": "Source: \"Orient even horizontal rows east and odd rows west; even vertical columns north and odd columns south. A mirror switches the outgoing axis and an empty vertex keeps it. With mirrors exactly at (-3,0),(0,0),(-3,3),(0,3), the trajectory starting in incoming horizontal state at (0,0) has period 12. Adding one mirror at (0,1) makes it escape indefinitely west along row 1. Thus\". Target: \"Does every positive mirror density localize the Manhattan-oriented pinball trajectory?\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:open-problem-p0009-manhattan-pinball-localization"
++    },
++    {
++      "from_key": "result-p0009",
++      "kind": "cites",
++      "rationale": "Source: \"Orient even horizontal rows east and odd rows west; even vertical columns north and odd columns south. A mirror switches the outgoing axis and an empty vertex keeps it. With mirrors exactly at (-3,0),(0,0),(-3,3),(0,3), the trajectory starting in incoming horizontal state at (0,0) has period 12. Adding one mirror at (0,1) makes it escape indefinitely west along row 1. Thus\". Target: \"At q=0 a ray moves indefinitely along its Manhattan street. The event that its first N potential collisions contain no mirror has probability (1-q)^N. This only controls a finite initial flight and gives no positive lower bound as N increases at fixed q. Check: The finite-run probability agrees with independence and has the correct q=0 endpoint. Adding a mirror changes routing\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:attempt-p0009-manhattan-pinball-localization"
++    },
++    {
++      "from_key": "result-p0035",
++      "kind": "cites",
++      "rationale": "Source: \"Let G be the Cartesian product of m infinite (b_i+1)-regular trees, each rooted, with integers b_i>=2. A nearest-neighbor lambda-biased walk gives weight lambda to each neighbor closer to the product root and weight one to each farther neighbor. If 0<lambda<min_i b_i, then its distance from the root divided by time converges almost surely to (sum_i b_i-m lambda)/(sum_i b_i+m\". Target: \"For a Cayley graph of exponential growth rate b and 1<lambda<b, does the distance from the identity divided by time for RW_lambda converge almost surely to a strictly positive speed?\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:open-problem-p0035-positive-speed-of-inward-biased-walks-below-the-cayley-growth-rate"
++    },
++    {
++      "from_key": "result-p0035",
++      "kind": "cites",
++      "rationale": "Source: \"Let G be the Cartesian product of m infinite (b_i+1)-regular trees, each rooted, with integers b_i>=2. A nearest-neighbor lambda-biased walk gives weight lambda to each neighbor closer to the product root and weight one to each farther neighbor. If 0<lambda<min_i b_i, then its distance from the root divided by time converges almost surely to (sum_i b_i-m lambda)/(sum_i b_i+m\". Target: \"On the (b+1)-regular rooted tree, away from the root the radial walk steps out with probability b/(b+lambda) and in with probability lambda/(b+lambda). For lambda<b its speed is (b-lambda)/(b+lambda)>0: the root is visited finitely often and the bounded-difference martingale law of large numbers applies to the radial drift. Check: The speed tends to zero at lambda=b and to one\". Addresses the cached question or continues this author-only attempt; it does not certify full resolution.",
++      "to_existing_logical": "math:probability.core:attempt-p0035-positive-speed-of-inward-biased-walks-below-the-cayley-growth-rate"
++    },
++    {
++      "from_key": "result-p0035",
++      "kind": "generalizes",
++      "rationale": "Source: \"Let G be the Cartesian product of m infinite (b_i+1)-regular trees, each rooted, with integers b_i>=2. A nearest-neighbor lambda-biased walk gives weight lambda to each neighbor closer to the product root and weight one to each farther neighbor. If 0<lambda<min_i b_i, then its distance from the root divided by time converges almost surely to (sum_i b_i-m lambda)/(sum_i b_i+m\". Target: \"On the (b+1)-regular rooted tree, away from the root the radial walk steps out with probability b/(b+lambda) and in with probability lambda/(b+lambda). For lambda<b its speed is (b-lambda)/(b+lambda)>0: the root is visited finitely often and the bounded-difference martingale law of large numbers applies to the radial drift. Check: The speed tends to zero at lambda=b and to one\". The product result includes the old regular-tree calculation at m=1.",
++      "to_existing_logical": "math:probability.core:attempt-p0035-positive-speed-of-inward-biased-walks-below-the-cayley-growth-rate"
++    },
++    {
++      "from_key": "result-p0209",
++      "kind": "depends_on",
++      "rationale": "Source: \"For every integer s>=2 let A=1-s^(-2), epsilon=(1-A^2)/(5-4A), B=(5-4A)/(2-A), R=s^4. Take independent stationary chains Y in {0,1}, with rates epsilon and 1-epsilon, and Z in {-1,1}, flipping at rate R/2. The observable g=AZ+B(Y-epsilon) has mean zero, variance one and sup norm two, and the product chain has relaxation time one. At time t=s its integral normalized by its\". Target: \"For s>=2, let A=1-s^(-2), epsilon=(1-A^2)/(5-4A), B=(5-4A)/(2-A), and R=s^4. For independent stationary Y with rates 0->1=epsilon, 1->0=1-epsilon and fair sign Z flipping at R/2, g=AZ+B(Y-epsilon) has stationary mean zero, variance one, and sup norm two. The product generator has eigenvalues 0,-1,-R,-(R+1), and its additive-functional asymptotic variance rate is 2A^2/R+2B^2\". This explicit reusable step is proved or defined within the same problem report.",
++      "to_key": "rare-state-standardization"
++    },
++    {
++      "from_key": "result-p0459",
++      "kind": "depends_on",
++      "rationale": "Source: \"Let LK(n,k) retain edges of K_n chosen among the k cheapest incident costs at both endpoints, where edge costs are iid and continuous, n>=2 and 1<=k<=n-1. If D_v is degree and mu=E D_v, then 0<=k-mu<=sqrt(k(n-1-k)/(2n)). For 0<eta<1, P(max_v |D_v-mu|>2 sqrt(2k log(2n/eta)))<=eta. For k<n-1 the exact mean is (n-1) times the integral on [0,1] of P(Bin(n-2,u)<=k-1)^2. In\". Target: \"For LK(n,k) obtained by retaining edges among the k cheapest iid continuous costs at both endpoints of K_n, n>=2 and 1<=k<=n-1, the common mean degree mu satisfies 0<=k-mu<=sqrt(k(n-1-k)/(2n)). When k<n-1, mu=(n-1) integral_0^1 P(Bin(n-2,u)<=k-1)^2 du; when k=n-1, mu=k.\". This explicit reusable step is proved or defined within the same problem report.",
++      "to_key": "bilateral-mean"
++    },
++    {
++      "from_key": "result-c0130",
++      "kind": "depends_on",
++      "rationale": "Source: \"For a deterministic nearest-neighbor excited walk on Z with at most M cookies per site, then fair transitions, assume every transition probability lies in [epsilon,1-epsilon] for fixed epsilon>0. Starting at 1 with positive-site cookies unused, q_L=P_1(T_L<T_0) decreases to P_1(T_0=infinity). Each q_L is the absorption probability of a finite chain with at most\". Target: \"For a deterministic nearest-neighbor cookie walk stopped on first reaching 0 or L, with at most M cookies at each site and fair transitions after exhaustion, its interior state is (x,c_1,...,c_{L-1}). Here 1<=x<L and c_i in {0,...,M} counts departures from i capped at M. An interior transition consumes the next cookie at x, increments c_x unless exhausted, and moves to x+1 or\". This explicit reusable step is proved or defined within the same problem report.",
++      "to_key": "cookie-interval-state"
++    },
++    {
++      "from_key": "result-p0088",
++      "kind": "depends_on",
++      "rationale": "Source: \"For a finite family of probabilities p_i in [0,1], let B_i be independent Bernoulli(p_i) and N_i independent Poisson(p_i), retaining the target label i. Under total variation defined as the supremum of event-probability differences, d_TV(Law((B_i)_i),Law((N_i)_i))<=sum_i p_i(1-exp(-p_i))<=sum_i p_i^2. Any target-marked point measure obtained from these vectors satisfies the\". Target: \"Consider two adaptive explorations with countable exposure and history spaces. At step j<=m, assume their conditional exposure kernels, whenever past histories agree, have total variation at most epsilon_j uniformly in that history. There is a sequential coupling under which some history mismatch by step m has probability at most sum_{j=1}^m epsilon_j. If the exploration may\". This explicit reusable step is proved or defined within the same problem report.",
++      "to_key": "adaptive-marked-coupling"
++    },
++    {
++      "from_key": "result-p0336",
++      "kind": "depends_on",
++      "rationale": "Source: \"For uniform probability marginals on [0,1]^2 and [2,3]x[0,1], write d=y_1-x_1 in [1,3] and h=y_2-x_2. The minimum mean Euclidean cost is 2 and every optimal coupling preserves the vertical coordinate. For every epsilon>0, the cost sqrt(d^2+h^2)+epsilon d^2 uniquely selects y=(x_1+2,x_2). The cost sqrt(d^2+h^2)-epsilon d^2 uniquely selects y=(3-x_1,x_2). Both costs converge\". Target: \"For any coupling of uniform laws on [0,1]^2 and [2,3]x[0,1], put d=y_1-x_1 and h=y_2-x_2. If its mean Euclidean cost is 2+delta, then delta>=0 and E h^2<=(sqrt(10)+3)delta. Cost 2 is optimal and occurs exactly for couplings with h=0 almost surely; it does not specify the horizontal coupling.\". This explicit reusable step is proved or defined within the same problem report.",
++      "to_key": "rectangle-vertical-stability"
++    },
++    {
++      "from_key": "result-c0022",
++      "kind": "depends_on",
++      "rationale": "Source: \"Let P and Q be probability laws on the same measurable space of random compact sets. If measurable events A_j satisfy sum_j[P(A_j^c)+Q(A_j)]<infinity, then the measurable event liminf_j A_j has P-probability one and Q-probability zero, hence P and Q are mutually singular. A difference of any finite moments alone does not imply singularity. If both laws have positive mass at\". Target: \"The probability laws P=(1/4,1/4,1/4,1/4) and Q=(5/24,9/24,3/24,7/24) on {0,1,2,3} are mutually absolutely continuous. Their first moments equal 3/2 and second moments equal 7/2, but their third moments are respectively 9 and 37/4. Their total variation distance is 1/6. Thus a third-moment difference even after matching the first two moments does not imply singularity.\". This explicit reusable step is proved or defined within the same problem report.",
++      "to_key": "moment-nonsingularity"
++    },
++    {
++      "from_key": "result-c0076",
++      "kind": "depends_on",
++      "rationale": "Source: \"If c/n<=P(A_n)<=C/n for constants 0<c<=C<infinity and n^gamma P(A_n) tends to a finite strictly positive limit, then gamma=1. This necessary one-arm normalization does not prove path tightness. On [1,2], for n>=8 let U be uniform on [5/4,7/4] and Y_n(t)=1+max(1-n|t-U|,0). These continuous processes converge in every fixed finite-dimensional distribution to the constant-one\". Target: \"Let A_n be events such that c/n<=P(A_n)<=C/n for fixed constants 0<c<=C<infinity. If n^gamma P(A_n) converges to a finite strictly positive number, then gamma=1. The order bounds alone neither prove convergence of n P(A_n) nor identify its constant.\". This explicit reusable step is proved or defined within the same problem report.",
++      "to_key": "one-arm-exponent"
++    },
++    {
++      "from_key": "result-c0117",
++      "kind": "depends_on",
++      "rationale": "Source: \"For simple random walk on K_n from a fixed vertex, put m=n-1. In discrete time the cover time is a sum of independent geometric(k/m) variables on {1,2,...}; its mean is m H_m and variance m^2 H_m^(2)-m H_m. In continuous time with independent mean-one exponential holding times the gaps are Exp(k/m), giving variance m^2 H_m^(2) and the same mean. Maximal expected hitting time\". Target: \"For simple random walk on K_n, n>=2 and m=n-1, the cover time has expectation m H_m and maximal expected hitting time m. Its variance is m^2 H_m^(2)-m H_m in discrete time, and m^2 H_m^(2) in continuous time with iid mean-one exponential holding times. Thus the two clock conventions have equal mean cover and hitting times but different cover-time variance.\". This explicit reusable step is proved or defined within the same problem report.",
++      "to_key": "complete-clock-variance"
++    },
++    {
++      "from_key": "result-p0009",
++      "kind": "cites",
++      "rationale": "Source: \"Orient even horizontal rows east and odd rows west; even vertical columns north and odd columns south. A mirror switches the outgoing axis and an empty vertex keeps it. With mirrors exactly at (-3,0),(0,0),(-3,3),(0,3), the trajectory starting in incoming horizontal state at (0,0) has period 12. Adding one mirror at (0,1) makes it escape indefinitely west along row 1. Thus\". Target: \"In the Manhattan grid, represent a ray by its vertex and incoming horizontal or vertical axis. If each vertex routes the two incoming edges bijectively to its two outgoing edges, either straight or switched by a mirror, the global directed-state map is a bijection. Its forward trajectory has bounded spatial range if and only if it is periodic from its initial state.\". This explicit reusable step is proved or defined within the same problem report.",
++      "to_key": "bijective-pinball-routing"
++    },
++    {
++      "from_key": "result-p0035",
++      "kind": "depends_on",
++      "rationale": "Source: \"Let G be the Cartesian product of m infinite (b_i+1)-regular trees, each rooted, with integers b_i>=2. A nearest-neighbor lambda-biased walk gives weight lambda to each neighbor closer to the product root and weight one to each farther neighbor. If 0<lambda<min_i b_i, then its distance from the root divided by time converges almost surely to (sum_i b_i-m lambda)/(sum_i b_i+m\". Target: \"For a lambda-biased walk on a finite Cartesian product of (b_i+1)-regular rooted trees, giving closer neighbors weight lambda>0 and farther neighbors weight one, observe coordinate i at its update times. Its radius moves from a positive state up with probability b_i/(b_i+lambda) and down with probability lambda/(b_i+lambda), and moves from zero to one. If lambda<b_i, its\". This explicit reusable step is proved or defined within the same problem report.",
++      "to_key": "tree-product-coordinate"
++    }
++  ]
++}

@@ -1,0 +1,130 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w389",
+  "bundle_slug": "p0117-occupation-and-impossible-shell-closure-20261010-v2-reviewed",
+  "entries": [
+    {
+      "key": "centered-certificate",
+      "namespace": "probability.fpp",
+      "logical_name": "planar-fpp-centered-two-arm-geodesic-certificate",
+      "kind": "definition",
+      "title": "Centered two-arm finite geodesic certificate",
+      "statement": "For a finite nonnegative edge-weight field on nearest-neighbor Z^2, H_m(v) is the event that there is a self-avoiding finite path (z_-m,...,z_m) with z_0=v, consecutive vertices adjacent, and total cost equal to the infimum over ALL finite lattice paths between z_-m and z_m. The two arms each have m edges. Minimize in the entire lattice; confined shortest paths are not this certificate.",
+      "proof_text": null,
+      "assumptions": [
+        "m>=1",
+        "finite nonnegative edge weights",
+        "nearest-neighbor Z^2",
+        "global minimization and simple path witnesses"
+      ],
+      "domain": "probability theory; planar first-passage percolation",
+      "source": {
+        "source_id": "owner-probability-campaign:w389:C02-definition",
+        "url": "urn:owner:probability:P0117:w389:C02-definition",
+        "revision": "independently-checked-by-w392-2026-10-10-v2",
+        "license": "owner-own-work (w392 independent KEEP for exact scope; draft ingestion pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "occupation-density",
+      "namespace": "probability.fpp",
+      "logical_name": "stationary-planar-fpp-boundary-geodesic-occupation-density-draft",
+      "kind": "concept",
+      "title": "DRAFT P0117: stationary boundary-geodesic occupation density",
+      "statement": "INDEPENDENTLY KEPT BY w392 for the stated scope; DRAFT ingestion pending; no novelty or solution claim. For stationary measurable finite nonnegative edge weights on nearest-neighbor Z^2, let B_n=[-n,n]^2 intersect Z^2, A be the vertices on self-avoiding bigeodesics, and D_n be the vertices in B_n on ANY self-avoiding globally minimizing finite path with endpoints on the vertex boundary of B_2n. Paths may leave B_2n, and all geodesics are included if ties occur. Let H_n(0) mean existence of a self-avoiding globally minimizing path (z_-n,...,z_n) with z_0=0 and adjacent consecutive vertices. Then P(0 in A)<=E|D_n|/|B_n|<=P(H_n(0)). Centered-prefix compactness gives P(H_n(0)) decreasing to P(0 in A); hence the expected occupation density tends to P(0 in A). Almost-sure absence of ALL bigeodesics is equivalent to E|D_n|=o(n^2). This iid decay estimate is not proved here.",
+      "proof_text": null,
+      "assumptions": [
+        "translation stationarity",
+        "finite nonnegative edge weights",
+        "global, self-avoiding geodesics",
+        "union over all finite geodesics with the specified endpoints"
+      ],
+      "domain": "probability theory; planar first-passage percolation",
+      "source": {
+        "source_id": "owner-probability-campaign:w389:C02",
+        "url": "urn:owner:probability:P0117:w389:C02",
+        "revision": "independently-checked-by-w392-2026-10-10-v2",
+        "license": "owner-own-work (w392 independent KEEP for exact scope; draft ingestion pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "shell-lower-bound",
+      "namespace": "probability.fpp",
+      "logical_name": "infinite-geodesic-ray-shell-incidence-positive-lower-bound-draft",
+      "kind": "concept",
+      "title": "DRAFT P0117 audit scar: an infinite ray must cross every shell",
+      "statement": "INDEPENDENTLY KEPT BY w392 for the stated scope; DRAFT ingestion pending. Let T_0 be the union of all infinite simple nearest-neighbor paths from 0 in Z^2 whose every finite segment globally minimizes passage time, q(x)=P(x in T_0), and S_n={x:||x||_infinity=n}. Every such ray hits S_n, so sum_{x in S_n}q(x)=E|T_0 intersect S_n|>=P(T_0 nonempty). If a ray exists almost surely, the sum is at least 1 for every n and sup_{x in S_n}q(x)>=1/(8n). Thus vanishing raw forward-ray shell incidence and the uniform rate o(1/n) are impossible in this setting. This concerns forward rays and does not imply a bigeodesic exists.",
+      "proof_text": null,
+      "assumptions": [
+        "n>=1",
+        "simple infinite nearest-neighbor rays from 0",
+        "P(T_0 nonempty)=1 for the numerical lower bound 1"
+      ],
+      "domain": "probability theory; planar first-passage percolation",
+      "source": {
+        "source_id": "owner-probability-campaign:w389:C03",
+        "url": "urn:owner:probability:P0117:w389:C03",
+        "revision": "independently-checked-by-w392-2026-10-10-v2",
+        "license": "owner-own-work (w392 independent KEEP for exact scope; draft ingestion pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "refuted-shell-route",
+      "namespace": "probability.fpp",
+      "logical_name": "planar-fpp-vanishing-forward-ray-shell-sum-refuted-route",
+      "kind": "concept",
+      "title": "REFUTED closing step: make forward-ray shell incidence vanish",
+      "statement": "AUDIT SCAR INDEPENDENTLY KEPT BY w392 for the stated scope; DRAFT ingestion pending; not a theorem proving absence. A proposed route defines T_x as the union of all infinite geodesic rays from x and uses the valid stationary inequality P(bigeodesic through 0)<=one-half times sum_{x in S_n}P(-x in T_0). Its proposed closing estimate, that this raw shell sum vanishes along a subsequence or that the shell maximum is o(1/n), is unattainable whenever a ray exists from 0 almost surely: every ray crosses every surrounding shell and the sum is always at least 1. Keep the counting inequality; replace the closing quantity by genuinely two-sided extension witnesses or full boundary-geodesic occupation. The parent P0117 conjecture remains unresolved in this packet.",
+      "proof_text": null,
+      "assumptions": [
+        "translation-stationary nearest-neighbor FPP",
+        "simple geodesic rays",
+        "P(T_0 nonempty)=1",
+        "S_n is the vertex boundary of [-n,n]^2"
+      ],
+      "domain": "probability theory; planar first-passage percolation",
+      "source": {
+        "source_id": "owner-probability-campaign:w389:R03-C03",
+        "url": "urn:owner:probability:P0117:w389:R03-C03",
+        "revision": "independently-checked-by-w392-2026-10-10-v2",
+        "license": "owner-own-work (w392 independent KEEP for exact scope; draft ingestion pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "occupation-density",
+      "to_key": "centered-certificate",
+      "kind": "depends_on",
+      "rationale": "The density sandwich uses centered globally minimizing simple paths; a finitely branching prefix tree identifies their intersection with a bigeodesic through the center. Independent w392 KEEP recorded in AUDIT_RECEIPTS.jsonl; no occupation decay is proved."
+    },
+    {
+      "from_key": "shell-lower-bound",
+      "to_key": "refuted-shell-route",
+      "kind": "refutes",
+      "rationale": "The lower-bound card gives shell sum >=1 when a ray exists almost surely. The refuted route proposes that exactly this raw forward-ray shell sum tend to zero. These two numerical assertions are incompatible. Independent w392 KEEP recorded in AUDIT_RECEIPTS.jsonl."
+    },
+    {
+      "from_key": "occupation-density",
+      "to_key": "refuted-shell-route",
+      "kind": "semantic_association",
+      "rationale": "Occupation by all long boundary-to-boundary finite geodesics is a logically equivalent but unproved target for bigeodesic absence, while the raw forward-ray shell sum cannot vanish. No proof of occupation decay is supplied."
+    },
+    {
+      "from_key": "occupation-density",
+      "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+      "kind": "semantic_association",
+      "rationale": "The existing P0117 concept asks for absence of bi-infinite geodesics under continuous iid planar weights. This stationary occupation reduction expresses that absence as a precise subquadratic expected occupation estimate without importing an unproved directional regularity condition."
+    },
+    {
+      "from_key": "centered-certificate",
+      "to_existing_logical": "math:probability.core:attempt-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+      "kind": "semantic_association",
+      "rationale": "The existing attempt warns that unanchored opposite-endpoint geodesics can escape each fixed ball. The certificate explicitly requires the center and two arms of growing length, which supplies an anchor for compactness; it does not show such certificates occur or disappear."
+    }
+  ]
+}

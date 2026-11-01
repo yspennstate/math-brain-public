@@ -1,0 +1,154 @@
+[
+  {
+    "name": "nonflat_A079",
+    "truth": [
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "frequency_bit": 2,
+    "Walsh": [
+      -8,
+      0,
+      0,
+      0,
+      4,
+      4,
+      -4,
+      4,
+      8,
+      0,
+      0,
+      0,
+      4,
+      4,
+      -4,
+      4
+    ],
+    "influence": "3/2",
+    "data_influence": "1",
+    "entropy_bits": "3",
+    "conditional_entropy_bits": "2",
+    "branches": [
+      {
+        "truth": [
+          0,
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "Walsh": [
+          -4,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        "N": 0,
+        "m": 1,
+        "mass": "1/2",
+        "a": "1/2",
+        "entropy_bits": 1
+      },
+      {
+        "truth": [
+          1,
+          -1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Walsh": [
+          2,
+          2,
+          -2,
+          2,
+          2,
+          2,
+          -2,
+          2
+        ],
+        "N": 0,
+        "m": 3,
+        "mass": "1/2",
+        "a": "3/2",
+        "entropy_bits": 3
+      }
+    ]
+  },
+  {
+    "name": "two_bit_point_defect",
+    "truth": [
+      -1,
+      1,
+      1,
+      1
+    ],
+    "frequency_bit": 0,
+    "Walsh": [
+      2,
+      -2,
+      -2,
+      -2
+    ],
+    "influence": "1",
+    "data_influence": "1/2",
+    "entropy_bits": "2",
+    "conditional_entropy_bits": "1",
+    "branches": [
+      {
+        "truth": [
+          0,
+          1
+        ],
+        "Walsh": [
+          1,
+          -1
+        ],
+        "N": 0,
+        "m": 1,
+        "mass": "1/2",
+        "a": "1/2",
+        "entropy_bits": 1
+      },
+      {
+        "truth": [
+          -1,
+          0
+        ],
+        "Walsh": [
+          -1,
+          -1
+        ],
+        "N": 0,
+        "m": 1,
+        "mass": "1/2",
+        "a": "1/2",
+        "entropy_bits": 1
+      }
+    ]
+  }
+]

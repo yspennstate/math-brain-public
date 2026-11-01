@@ -1,0 +1,2204 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\EE}{\mathbb{E}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+\title{Open Problems Session --- Master Index\\
+\large Eighteen numbered papers (19 manuscript PDFs), 2026-06-10/28}
+\author{Yitzchak Shmalo}
+\date{June 15, 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Overview}
+
+Nineteen manuscript PDFs, grouped as eighteen numbered papers, were produced in
+one research session, each solving or substantially advancing a known open
+problem connected to the author's work in dynamical systems, probability, random
+matrix theory, and the mathematics of deep learning.  PDFs and \LaTeX{} sources are stored in the private repository
+\texttt{yspennstate/math-open-problems} (one folder per paper, with generated
+PDFs beside the sources where present; copies may also exist in
+\texttt{Downloads}).  Five threads:
+
+\textbf{Thread A --- non-autonomous dynamics (papers 1, 3, 4, 13).}
+Source problems: the open problem in the author's May-2026 manuscript on
+strict cubical horseshoes (\S14), and the genericity problem stated as open by
+Balibrea--Ruck\'a (arXiv:2410.10288; Topology Appl.\ 2026).
+
+\textbf{Thread B --- Toeplitz matrices: stability and discrepancy (papers 5,
+12, 14, 16).}  Source problems: the ``Toeplitz open problem'' on asymptotic
+stability of random banded Toeplitz operators (Manrique-Mir\'on's line of work),
+the Matrix Spencer conjecture (Dadush--Jiang--Reis) specialized to Toeplitz and
+related structured contractions, and the least-singular-value (conditioning)
+question for random banded Toeplitz matrices.
+
+\textbf{Thread C --- the uniform doubling condition (papers 2, 6--11, 15).}
+Source problem: which data satisfy the uniform doubling condition of the
+author's Ann.\ Math.\ Artif.\ Intell.\ (2024) paper --- left open there ---
+culminating in the complete critical-scaling phase diagram and its extension
+beyond the orthogonal model.
+
+\textbf{Thread D --- implied-volatility surfaces and options mathematics
+(paper 17).}  Source problem: build a theorem-level program for arbitrage-free
+pricing, IV surfaces, IV percentiles, opening prices, gamma extraction, robust
+pricing, and stochastic/rough-volatility models, with a concrete 100-problem
+atlas and a route toward a long options-market research PDF.
+
+\textbf{Thread E --- the extremal hard edge and phase-retrieval stability
+(paper 19).}  Source problem: the author's ACHA paper on the minimum least
+singular value over square row submatrices of a Gaussian matrix and the
+Balan--Wang phase-retrieval stability exponential base (Randomstrasse Open
+Problem 21), extended as far as possible to general random-matrix ensembles, the
+three division algebras, rectangular/higher/two-sided geometries, large
+deviations, a deterministic finite-alphabet injectivity obstruction, and the
+hard-edge fluctuation (Gumbel) law, with the non-Gaussian upper side reduced to a
+single explicit overlap-moment open problem.
+
+\section*{The papers}
+
+\textbf{1. \texttt{Residual\_Hilbert\_Cube\_Fusion\_v1.pdf}} (11pp).
+On the Hilbert cube, depth-$N$ strict brick schemes are open and dense for
+every $N$, hence residually a full hierarchy exists, with exact one-step
+Poincar\'e--Miranda covering and residual entropy bursts of every order in
+every tail; an obstruction theorem (the exact-horseshoe class has empty
+interior) explains why the full conclusions of the \S14 problem cannot follow
+from finite-depth certificates.  The remaining gap is stated precisely as an
+open problem in the paper.
+
+\textbf{2. \texttt{UDC\_High\_Probability\_v1.pdf}} (12pp).
+I.i.d.\ samples with density bounded above and below on a convex body satisfy
+the uniform doubling condition with probability $1-1/N$, with $N$-independent
+$(\kappa,\delta,\sigma,\beta)$ and scaling factor
+$\ell_N=O((\log N/N)^{1/n})$, simultaneously over all uniformly thick
+truncation families.  Tools: a one-dimensional log-concave dichotomy,
+Brunn--Minkowski, a cone lemma, VC relative deviations.  Two sharpness
+examples included.
+Lean companion: \texttt{paper2/lean/UdcAffineTransferArithmetic.lean}
+machine-checks the arithmetic core of Proposition
+\texttt{prop:affine-transfer}: width pullback under $t\mapsto t/a$, grid and
+continuous-width transfer under $\mu_A(t)=\mu(t/a)$, and grid interpolation
+with multiplier loss $\kappa\mapsto\kappa^2$.  Slab geometry, singular values,
+and empirical pushforward equality remain paper-level hypotheses.
+
+\textbf{3. \texttt{DC1\_Generic\_Convergent\_v1.pdf}} (7pp).
+Resolves Balibrea--Ruck\'a's stated open problem: DC1 \emph{is} generic in
+uniformly convergent surjective interval non-autonomous systems --- the DC1
+class is not open, but contains the open dense class of systems whose limit
+map carries a strict one-step horseshoe.  Chain: zigzag density, margin
+openness, Schweizer--Sm\'{\i}tal, \v{S}tef\'ankov\'a inheritance.
+
+\textbf{4. \texttt{Pointwise\_Baire\_Degeneracy\_v1.pdf}} (7pp).
+The pointwise-metric half of the same problem: integral-type metrics make the
+system spaces meager in themselves (genericity degenerates); Baire is restored
+on equicontinuity strata, where the question reduces to horseshoe density ---
+established conditionally, with the unconditional statement formulated as an
+open problem with two identified obstructions.
+
+\textbf{5. \texttt{Toeplitz\_Stability\_Parity\_v1.pdf}} (16pp).
+The parity obstruction for random banded Toeplitz stability:
+$\nu_m(\mathbb D)\equiv\mathbf 1\{G(1)G(-1)<0\}\pmod 2$ and the central limit
+behavior of $(G(\pm1))$ give $\mathbb P(\text{stable})\le\frac12+o(1)$ for
+every band; at odd degrees the endpoint sign has the exact finite-sample formula
+\(\frac12(1-\mathbb P\{|E_q|=|O_q|\})\), and hence is exactly fair for
+non-atomic laws; for Littlewood coefficients both parities are explicit
+central-binomial formulas, giving
+\(1/2-\sqrt{2/(\pi(m+1))}+O(m^{-1})\) at odd degree and, at even degree, exact
+fairness for \(m\equiv2\pmod4\) but
+\(1/2-2/(\pi m)+O(m^{-2})\) for \(m\equiv0\pmod4\); and for Gaussian
+coefficients every finite degree has the exact endpoint bias
+\(1/2-\pi^{-1}\arcsin((m+1)^{-1}\sum_{j=0}^m(-1)^j)\).  These endpoint
+probabilities now feed a finite-degree parity envelope for every
+\(\mathbb P(\nu=k)\) and every band stability event, refining the asymptotic
+\(\frac12+o(1)\) cap, with explicit Gaussian/Littlewood specializations
+including a strict odd-degree Littlewood stability cap
+\(1/2-\sqrt{2/(\pi(m+1))}+O(m^{-1})\), and the paper now records the exact
+finite-degree equality of complementary band stability probabilities;
+documents a gap in a recent claimed proof of generic stability; a corrected
+strong-asymmetry instability theorem; proves
+\(\operatorname{Var}(\nu_m(\mathbb D))=O(m)\) for Gaussian coefficients; and
+leaves the matching lower bound, sharp constant, CLT, and LLT as open problems
+(see paper 5, \S6).
+
+\textbf{6. \texttt{UDC\_Critical\_Scaling\_v1.pdf}} (7pp).
+The critical-scaling dichotomy: for \emph{pure} slabs over rolling-ball bodies
+the scaling factor improves to $\ell_N=O((\log N/N)^{2/(n+1)})$ (sharp
+exponent), via a depth-integral slab-volume lemma (anchor dichotomy plus
+Brunn--Minkowski unimodality); one thick conical truncation forces
+$\ell\ge cN^{-1/n}$, so truncations shift the critical exponent from
+$\frac{2}{n+1}$ to $\frac1n$.
+
+\textbf{7. \texttt{UDC\_Log\_Necessity\_v1.pdf}} (5pp).
+The logarithm is necessary: a second-moment argument over
+$\asymp(N/\log N)^{(n-1)/(n+1)}$ disjoint boundary caps shows the pure-slab
+condition fails with probability $1-o(1)$ below
+$c(\log N/N)^{2/(n+1)}$.  With paper 6: the $k=0$ critical scaling is
+$\Theta((\log N/N)^{2/(n+1)})$ exactly.
+
+\textbf{8. \texttt{UDC\_Truncated\_Exact\_v1.pdf}} (4pp).
+The truncated critical scaling is $\Theta((\log N/N)^{1/n})$ exactly: a
+multi-cone second moment over $\asymp N/\log N$ orthant truncations
+(overlapping bodies, disjoint apex caps).
+
+\textbf{9. \texttt{UDC\_Edge\_Exponent\_v1.pdf}} (5pp).
+A single transversal half-space truncation of the ball forces
+$\ell\ge c(\log N/N)^{2/(n+2)}$ with probability $1-o(1)$ ($n\ge3$): edge
+caps of mass $\asymp h^{(n+2)/2}$ along the $(n-2)$-dimensional edge.  States
+the interpolation conjecture: critical exponent $\frac{2}{2n-j}$ for lowest
+transversal stratum dimension $j$.
+
+\textbf{10. \texttt{UDC\_Edge\_Exact\_v1.pdf}} (5pp).
+The matching upper bound for paper 9 via a three-case section lemma for the
+ball-halfspace region ($A_u(h)\ge a(n)h^{n/2}$ in every direction) and the
+anchor--unimodality scheme: the edge exponent is exactly
+$\Theta((\log N/N)^{2/(n+2)})$.
+
+\textbf{11. \texttt{UDC\_Interpolation\_Law\_v1.pdf}} (7pp).
+The general law, in the orthogonal model
+$G_k=B^n\cap\{x_1\le0,\dots,x_k\le0\}$: for every lowest-stratum dimension
+$j=n-1-k\ge1$, the critical scaling is
+$\Theta((\log N/N)^{2/(2n-j)})$, both bounds with the logarithm.  Lower bound:
+stratum-cap second moment on $S^j$.  Upper bound: a witness-box section lemma
+whose engine is the orthogonality $\langle w,\tilde u\rangle=0$ in the
+decomposition $x=y\tilde p+w$, plus an induction on $k$ trading one dimension
+per truncation.  With papers 6--10 this completes the program: the exponent
+ladder $\frac2{n+1},\frac2{n+2},\dots,\frac1n$ is fully proved.
+
+\textbf{12. \texttt{Matrix\_Spencer\_Lifts\_v1.pdf}} (564pp, Thread B).
+Deterministic Matrix Spencer / operator-norm discrepancy bounds for structured
+self-adjoint contractions via a reusable finite-lift principle: a $K$-bounded
+lift into a block-diagonal algebra
+$\mathcal B=\bigoplus_\alpha\mathrm M_{r_\alpha}(\mathbb C)$ gives
+$\mathrm{disc}_{\mathrm{op}}(A_1,\dots,A_n)\le
+CK\sqrt{n\log(e+\mathsf E(\mathcal B)/n)}$, where
+$\mathsf E(\mathcal B)=(\max_\alpha r_\alpha)\sum_\alpha r_\alpha$, as a
+consequence of the block-diagonal theorem of Levy--Ramadas--Rothvoss and
+Dadush--Jiang--Reis.  Instances:
+scalar Toeplitz and Hankel contractions, one-level fixed-block
+Toeplitz/Hankel classes, banded multilevel block-Toeplitz/Hankel classes,
+matrices in a common finite-dimensional C*-algebra, and finite-group
+convolution algebras with controlled irreducible dimensions.  Records the
+correct entropy accounting for direct sums and entropy obstructions for exact
+finite block lifts onto \(\mathrm M_D(\mathbb C)\), fixed-error faithful lifts
+whose images \(\delta\)-approximate the full matrix unit ball, and
+full-compressed-span finite-block reductions (entropy \(\ge D^2\) in these
+full-span/full-unit-ball cases), showing that this exact or fixed-error
+faithful finite-lift route alone cannot settle the square case of the full
+conjecture at the class/full-unit-ball level.  The boundary section now
+formalizes the tuple invariant \(\mathsf L_{K,\Lambda}\), proving discrepancy
+directly in terms of finite-lift entropy and recording that structured
+Toeplitz/Hankel and bounded-block classes have small \(\mathsf L\), while
+full-span generic matrix tuples have \(\mathsf L=D^2\).
+
+Current-strength upgrade folded in: Akbas--Sra's June-2026 algebraic Matrix
+Spencer theorem gives the \(O(\sqrt n)\) bound for contractions in any
+finite-dimensional C*-algebra with intrinsic dimension
+\(\dim_{\mathbb C}\mathcal A=O(n)\).  Paper 12 now records this as an external
+stage theorem, derives an AF approximation corollary for stages
+\(\dim_{\mathbb C}A_k=O(n)\), and upgrades arbitrary nonabelian group
+convolution in the square group-algebra regime \(|G|=O(n)\) without a
+bounded-irrep hypothesis, and the perturbative version allows self-adjoint
+low-Frobenius, hence rank-\(n/\log^3(en)\), noise on top of those convolution
+cores.  It also folds in Akbas--Sra's low-Frobenius
+perturbation theorem to get a represented-AF corollary: self-adjoint
+low-Frobenius tails
+\(\|L_i\|_{\mathrm F}^2\le n/\log^3(en)\) may be added to a dimension-controlled
+AF-stage core at only the usual AF approximation cost; in particular the same
+statement holds for operator-norm-one tails of rank at most
+\(n/\log^3(en)\).  The same perturbative theorem is now packaged as a
+distribution-free random ensemble result: arbitrary random algebraic cores of
+intrinsic dimension \(O(n)\), including full \(D\times D\) random self-adjoint
+models in the \(D^2=O(n)\) range, remain Spencer-scale with the same probability
+as their structural event after adding arbitrary dependent low-Frobenius,
+low-rank, spiked, compressed, or coordinate-supported self-adjoint tails.  The
+random section now starts with a distribution-free all-plus gauge for arbitrary
+self-adjoint or rectangular random matrices: after pathwise scaling by
+\[
+  \max\left\{\max_i\|X_i\|_{\rm op},
+  n^{-1/2}\left\|\sum_iX_i\right\|_{\rm op}\right\},
+\]
+the all-plus signing gives discrepancy at most \(\sqrt n\), and active-menu
+deterministic scales only have to dominate this gauge eventually.  A new
+moment-schedule corollary makes this deterministic-scale check explicit:
+\(\sum_{m,h}\mathbb E(G_{m,h}/s_{m,h})^p<\infty\) already gives eventual
+almost-sure contraction normalization and the same all-plus certificate, with
+rowwise quantile budgets as a direct specialization; the closed-form schedule
+version gives all-integer and sparse-dimension thresholds when the active menu
+size is polynomial in the ambient dimension.  A tail-profile schedule version
+accepts direct sub-Weibull or user-supplied gauge tails and gives logarithmic
+deterministic normalizations, again without independence.  A finite-confidence
+version gives one-row or finite-library certificates with explicit
+\(\delta\)-dependent scales, and the conditional version lets those scales be
+chosen from side information through conditional moment or tail envelopes.
+Random active finite-confidence menus also pay only their selected conditional
+error budget rather than a deterministic ambient library size.  The same
+conditional budgets now have a Borel--Cantelli schedule form, giving adaptive
+almost-sure normalizations from summable conditional moment or tail budgets,
+with the same selected-budget rule for random active submenus.  It also
+records a full-matrix average-case route: centered, possibly dependent,
+Gaussian-operator-tail ensembles stable under scalar \(\ell_2\) sums, including
+GOE/GUE and centered sub-Gaussian Wigner-type models, satisfy Matrix Spencer in
+every ambient dimension after deterministic scaling by
+\(K(\sqrt D+\sqrt{\log(en)})\), since the all-plus signing already has norm at
+most \(\sqrt n\) with high probability; random active operator-tail libraries
+pay only their selected expected tail count, with the same selected-cost
+principle for rectangular/non-self-adjoint operator-tail libraries.  A sign-symmetry transfer now shows
+that for coordinatewise sign-invariant random tuples any all-plus
+\(O(\sqrt n)\) tail is automatically a discrepancy tail for the same
+realization-normalized ensemble; its Borel--Cantelli active-menu form gives
+simultaneous eventual signings for finite or countably exhausted
+sign-symmetric model libraries whenever the all-plus failure series is
+summable.  Independent and conditionally independent bounded sign-symmetric
+arrays get a concrete matrix-Bernstein active-menu criterion from the all-plus
+variance proxy, with summable environmental envelope failures, all-integer and
+sparse dimension schedules under logarithmic-square sample growth, and
+closed-form discrepancy-margin constants; symmetric scalar-multiplier
+environments inherit these explicit constants from the conditional
+second-moment profile \(\|\sum_iq_iB_i^2\|_{\mathrm{op}}\), and unbounded
+symmetric sub-Gaussian multipliers are covered after cap normalization with the
+matrix-Laplace margins \(K>\sqrt{2\beta(\Gamma+1)}\) and
+\(K>\sqrt{2\beta\Gamma}\).  Arbitrary symmetric multiplier tails are covered by
+a tail-capped companion whenever cap failures are summable; sub-Weibull tails
+pay \(2\sum_i e^{-(L/a_i)^\alpha}\) and retain the bounded-Bernstein margins
+\(\Theta(\Gamma+1,a,\beta)\) and \(\Theta(\Gamma,a,\beta)\).  Common-exponent
+sub-Weibull operator tails with
+\(\mathbb P\{\|X_i\|_{\mathrm{op}}>t\mid\mathcal P_i\}\le
+A\exp\{-(t/s)^\alpha\}\) now have the direct dominated schedule
+\(r=s(\log(e nA/\varepsilon))^{1/\alpha}\) and
+\(V=C_\alpha nAs^2\).  Polynomial
+moment proxies of any order \(p>0\) are handled explicitly by writing
+\(r=p\wedge2\), paying cap cost \(\sum_i(a_i/L)^p\), and controlling the
+truncated variance by \(L^{-r}\|\sum_i a_i^rB_i^2\|_{\mathrm{op}}\); the same
+criteria allow environment-measurable adaptive caps and moment proxies before
+the multipliers are sampled.  Common finite-moment operator tails also have a
+dominated-increment schedule: if
+\(\mathbb E(\|X_i\|_{\mathrm{op}}^p\mid\mathcal P_i)\le As^p\), then
+\(S\le nAs^p\) and, for \(p\ge2\), \(W\le nA^{2/p}s^2\), yielding explicit
+\(n\)- and \(D\)-power normalizations from the common-moment optimizer.  A mixed
+active-library corollary lets active streams in the same row be tagged either
+sub-Weibull or finite-moment, with per-stream exponents and the same cap-budget
+and matrix-tail summability, so countable mixed dominated-tail libraries are
+exhausted by one active prefix.  A signed-core companion lets any active-prefix
+core library with one common signing absorb these mixed dominated perturbations
+after per-stream scaling, with the same all-integer and sparse thresholds.  A
+raw noncentered version keeps matrices \(W=B+Y\) together, normalizes by
+\(\max\{1,\lambda\}\), and therefore covers structured conditional-mean cores
+plus mixed dominated centered fluctuations directly; a scaled version replaces
+the unit structured-mean bound by an environment-measurable size \(\rho\) and
+normalizes by \(\max\{\rho,\lambda\}\), while a two-scale version decouples the
+row size \(\rho\) from the signed-core size \(\sigma\) and uses
+\(\max\{\rho,\sigma,\lambda\}\); finite-lift and algebraic structured cores now
+plug into this raw two-scale form directly.  A
+finite-lift specialization now packages that directly for active-prefix
+finite-lift core menus, replacing the full Gaussian operator-tail scale by
+per-stream mixed dominated \(q_{m,h}\) normalizations.  An algebraic-core menu
+specialization uses Akbas--Sra on the direct-sum active algebra, so active menus
+with total intrinsic C*-dimension \(O(n)\) absorb the same mixed dominated
+perturbations.  A catalogue corollary records the named cases explicitly:
+Toeplitz/Hankel, banded multilevel, finite C*-algebra, and finite group
+convolution core menus are covered under the corresponding active-prefix
+entropy or intrinsic-dimension budgets.  A concrete size-budget version makes
+the tests explicit through \(\sum_h D_{m,h}\),
+\(\sum_h\prod_j(2w_{m,h,j}+1)\),
+\(\sum_h\dim_{\mathbb C}\mathcal A_{m,h}\), or \(\sum_h |G_{m,h}|\)
+bounded by \(O(n)\).  A random-orbit closure version preserves the same
+mixed-tail conclusion under random unitary or permutation conjugacy, corners,
+fixed-size tensor amplification, block direct sums, and bounded self-adjoint
+images with the corresponding summed charge.  A selected-submenu version lets
+the active structured library be chosen randomly or adaptively from the row
+environment when its cardinality and realized total charge are summably
+controlled.  A Bernstein-selected version checks those selection failures from
+independent candidate indicators using deterministic probability and charge
+envelopes; a Laplace-dominated version covers negatively dependent selections
+through product-mgf bounds; a random-envelope Laplace version permits
+environment-measurable probability envelopes once aggregate cardinality, charge,
+and quadratic-charge profiles are summably certified; a random-envelope
+Poisson-count version covers proposal-count and occupancy catalogues through
+compound-Poisson cardinality and charge profiles; a Cox-Poisson
+occupied-support refinement charges labels by \(1-e^{-\Lambda}\), so repeated
+proposals do not increase the occupied-support budget; a product-categorical
+version handles randomized one-template-per-slot library choices with
+deterministic cardinality and a scalar Bernstein charge tail; an
+adaptive-categorical version allows sequential
+one-template-per-slot choices under predictable probability envelopes and a
+Freedman charge tail; a random-envelope adaptive-categorical version allows
+state-dependent predictable envelopes once their aggregate charge drift and
+quadratic charge are summably certified; a Freedman-selected version removes
+conditional independence for adaptive sequential indicators with predictable
+probability envelopes; a random-envelope Freedman-selected version makes those
+predictable envelopes random once aggregate cardinality, charge, and
+quadratic-charge profiles are summably certified; and a Serfling-selected
+version handles fixed-size and stratified sampling without replacement from
+finite-population charge averages.  A hybrid composition corollary combines
+these selection mechanisms componentwise with no cross-mechanism independence,
+provided the component failure, cardinality, and charge budgets are summably
+certified; a random-budget hybrid version allows the component budgets
+themselves to be environment-random after summable aggregate certification.
+A hierarchical random-budget version flattens recursive random trees, branching
+catalogues, adaptive search frontiers, and random forests of structured cores
+to selected terminal antichains with summably certified frontier size and
+charge.
+The two
+random routes combine:
+any already-signed random core class, including dimension-controlled algebraic,
+finite-lift, Toeplitz, and Hankel cores, remains Spencer-scale after adding
+full random operator-tail noise whose scalar linear combinations obey the same
+Gaussian tail conditionally on the core, in arbitrary ambient dimension after
+the same natural spectral scaling of the noise.  For active-prefix finite-lift
+core libraries this is simultaneous after the union cost
+\(J_m(n_m+1)e^{-\tau_m^2}\) and noise scaling \(\sqrt{D_m}+\tau_m\);
+the explicit schedules are arbitrary-growth
+\(\tau_m^2\gtrsim\log(J_m(n_m+1))+\log m\), all-integer
+\(\tau_D^2=R\log(eD)\) with \(R>\Gamma+1\), and sparse \(R>\Gamma\)
+when \(J_m(n_m+1)\le(eD_m)^\Gamma\).
+A rank-sensitive matrix-series specialization improves this perturbation scale
+to \(q_{m,h}(\sqrt{\log(e\kappa_{m,h})}+\tau_m)\) for conditionally Gaussian,
+Rademacher, or scalar sub-Gaussian coefficient series with predictable
+self-adjoint directions, realized coefficient square-function bounds
+\(\max_i\|\sum_rG_{i,r}^2\|\le q_{m,h}^2\),
+\(\|\sum_{i,r}G_{i,r}^2\|\le n_mq_{m,h}^2\), and rank envelope
+\(\kappa_{m,h}\); the full-rank fallback is \(\kappa_{m,h}=D_m\).
+A common-projection specialization makes this directly checkable for low-rank,
+spiked, block-localized, and random-subspace matrix-series noise: once all
+coefficient directions live in a rank-\(\kappa_{m,h}\) projection, only the two
+square-function bounds remain.
+An atomic norm-budget specialization reduces those two checks to scalar
+amplitude sums, covering rank-one spike fields, self-adjoint edge atoms, and
+finite frame/dictionary matrix-series noise inside the same low-rank support.
+A block-load version lets atoms touch several orthogonal blocks and pays only
+the maximum incident block energy, while the logarithmic factor sees the total
+rank of the active block family.
+Bounded weighted block-designs, including regular, matching, permutation, and
+balanced without-replacement designs, need no load-concentration payment once
+their weighted block degrees are deterministic or fail only summably.
+A bounded-overlap block-hypergraph specialization gives the direct
+\(q/\sqrt d\) rule for block designs, regular block hypergraphs, and balanced
+block dictionaries with overlap degree \(d\).
+A heterogeneous degree-profile version uses local row-block and total-block
+degrees, avoiding worst-block normalization for irregular block hypergraphs.
+A row-wise block-permutation specialization gives the concrete \(q/\sqrt d\)
+amplitude normalization for \(d\)-round permutation, matching, and balanced
+without-replacement assignments.
+Conditional scalar Bernstein verifies these block-load budgets for independent
+random block choices, random edge-atom supports, and clustered frame
+dictionaries, and a weighted version allows random atom amplitudes,
+compound-thinned atom fields, and random weighted dictionaries.
+A uniform block-support specialization gives explicit budgets for atoms choosing
+fixed-size random block sets, Bernoulli block thinnings, or random block
+hyperedges.
+A profile schedule form turns the resulting Bernstein exponents into
+all-integer and sparse Borel--Cantelli thresholds.
+Its homogeneous form reduces those exponents to the expected number of active
+atom incidences per block.
+A predictable block-support profile form removes independence for sequential
+support exposure by using one-step inclusion probabilities and predictable
+amplitude envelopes.
+Its profile schedule has the same active block-count logarithm as the weighted
+Freedman schedule, with the predictable-support exponents in place of the
+weighted incident-load exponents.
+An inhomogeneous incidence-mass specialization replaces the raw exponents by
+row-block and total-block predictable probability masses, retaining the same
+\(8/3\) threshold constants for biased adaptive block samplers.
+Its homogeneous predictable uniform schedule has the same
+\(8(\Gamma+1)/3\) all-integer and \(8\Gamma/3\) sparse incidence thresholds as
+the independent homogeneous block-support schedule.
+A predictable weighted version replaces independence by scalar Freedman budgets,
+covering adaptive atom sampling, online random weighted dictionaries, and
+without-replacement block exposure.
+Both weighted block-load variants now have profile schedules once their
+Bernstein or Freedman exponents dominate the active block count.
+A bounded weighted incidence specialization needs only the normalized
+row-block and total-block mean loads \(\rho/\omega\), with the same \(8/3\)
+threshold constants.
+A quadratic-form-to-operator-tail criterion verifies this input from conditional
+scalar sub-Gaussian bounds on \(\langle u,\sum_i a_iY_i u\rangle\), so
+conditionally Gaussian, correlated Gaussian, and Wigner-type active-prefix noise
+libraries enter with scale \(q_{m,h}(\sqrt{D_m}+\tau_m)\).
+For conditionally independent upper-triangular sub-Gaussian entries, the proxy is
+the entry square-function envelope \(Q_{m,h}\), and uniform entry scale
+\(\sigma_{m,h}\) gives the usual
+\(\sigma_{m,h}(\sqrt{D_m}+\tau_m)\) Wigner/GOE/GUE normalization.
+A row-variance envelope gives sparse and banded entry-profile libraries the
+explicit scale
+\((\alpha^2+2\Delta\beta^2)^{1/2}(\sqrt{D_m}+\tau_m)\).
+At normalized graph scale \(\beta\lesssim\Delta^{-1/2}\), this keeps the same
+all-integer and sparse-dimension active-prefix schedules without degree loss.
+Independent random graph masks are now included after a scalar Bernstein
+max-degree exception; inhomogeneous Erdos--Renyi supports use expected-degree
+normalization once the expected degree dominates the active-prefix union
+logarithm, while random regular, matching, and other dependent bounded-degree
+masks need no support exception.  A weighted random-mask variant replaces degree
+by a scalar-Bernstein bound for the realized row-variance profile
+\(2\sum_q\eta_{pq}c_{pq}^2\), covering highly inhomogeneous variance-profile
+entry masks; its schedule corollary gives arbitrary-growth, all-integer, and
+sparse-dimension thresholds when the support Bernstein exponent dominates the
+active-prefix union logarithm.  A bounded-incidence specialization reduces this
+to the normalized mean row variance \(\rho/\omega\), retaining the same \(8/3\)
+threshold constants.  A predictable-profile extension allows the
+inclusion probabilities, proxy caps, and Bernstein budgets themselves to be
+chosen from the core environment, paying only a summable envelope-exception
+probability; adaptive and randomly sampled variance-profile masks therefore use
+the same schedules.  A dependent weighted-budget mask corollary removes support
+independence altogether once the realized weighted row budgets are controlled,
+so random regular, matching, without-replacement, determinantal, and other
+correlated masks enter at the same finite-lift scale.  Its bounded
+weighted-degree specialization gives the usual \(d^{-1/2}\) edge normalization
+for arbitrary dependent weighted-degree-bounded masks with no support
+exception.
+Full random matrix ensembles with scalar-combination Gaussian operator tails
+also have a direct active-menu all-plus certificate: after normalization by
+\(K_{m,h}(\sqrt{D_m}+\tau_m)\), the all-plus signing works simultaneously for
+finite or countable libraries whenever \(J_m(n_m+1)e^{-\tau_m^2}\) is
+summable, with no sign-symmetry assumption.  A quadratic-form net criterion
+makes the self-adjoint hypothesis checkable from scalar tails for
+\(\langle u,\sum_i a_iY_i u\rangle\); Hermitian sub-Gaussian coefficient
+series are controlled by their atom square functions.  Independent
+upper-triangular Hermitian entries have an explicit quadratic-form square
+function, bounded by \(\sqrt2\,\sigma\) in the homogeneous case and by row
+variance budgets for sparse or banded profiles.  A Bernstein quadratic-form
+variant covers centered rank-one covariance and averaged Wishart blocks at scale
+\(\kappa^2((\sqrt D+\tau)/\sqrt r+(\sqrt D+\tau)^2/r)\), and Hermitian
+independent entries with Bernstein variance/jump proxies at scale
+\(Q(\sqrt D+\tau)+B(\sqrt D+\tau)^2\).  The same active all-plus
+certificate covers rectangular and non-self-adjoint full operator-tail matrices
+with \(D_m^{\rm rec}=d_{m,1}+d_{m,2}\).  A bilinear-form net lemma makes this
+checkable from scalar sub-Gaussian tails for
+\(\langle u,\sum_i a_iX_i v\rangle\), with selected-cost random-active forms
+for environment-selected bilinear libraries, at scale
+\(q_{m,h}(\sqrt{D_m^{\rm rec}}+\tau_m)\).  Haar unitary/orthogonal active menus
+have \(q=O(D^{-1/2})\), so they need only a constant normalization when
+\(\tau=O(\sqrt D)\).  Independent-entry rectangular
+sub-Gaussian arrays have \(q_{m,h}\) bounded by the worst weighted bilinear
+entry proxy, in particular by \(\max_{i,r,s}\sigma_{m,h,i,r,s}\).  More general
+rectangular sub-Gaussian coefficient series are controlled by the worst
+fixed-bilinear atom energy, bounded by the left/right atom variance operators.
+A Bernstein bilinear-form variant gives the same rectangular all-plus
+certificate at scale
+\(q(\sqrt{D_m^{\rm rec}}+\tau_m)+b(\sqrt{D_m^{\rm rec}}+\tau_m)^2\), with the
+same selected-cost random-active form for environment-selected Bernstein
+bilinear libraries, covering bounded, Poissonized, exponential-entry, and
+gamma-entry rectangular libraries and selected independent-entry rectangular
+arrays through explicit variance and jump proxies; conditionally independent
+entrywise Bernstein mgf assumptions now imply those proxies directly, with a
+one-row finite-confidence version for finite selected libraries,
+and bounded-entry finite-confidence certificates require only conditional
+second-moment proxies plus uniform entry caps,
+and balanced Haar rank-one dyads after only constant amplitude normalization.
+A bounded matrix-Bernstein/Freedman all-plus route removes sign symmetry for
+independent or adapted centered bounded self-adjoint and rectangular blocks
+under summable ordinary or predictable all-plus variance budgets, covering
+centered random projections, bounded sparse increments, finite-confidence
+independent and adapted selected libraries, online feature blocks,
+adaptive measurement increments, and martingale-difference matrix streams.
+A quantum-effect finite-confidence specialization covers centered random POVM
+effects and density matrices, with variance controlled by
+\(\|\sum_i\mathbb E(E_i\mid\mathcal F)\|_{\rm op}\).
+An explicit schedule corollary turns the half-budget profile
+\(v\le\beta s^2n/\log(e\Delta)\) into active-menu, all-integer, and sparse
+thresholds through
+\(\gamma(K,\beta,B)=K^2/(2(\beta+KB/3))\).
+A proxy-scale variant separates the typical variance scale \(q\) from the
+largest jump \(b\): if \(b\le Rq\) and
+\(v\le\beta q^2n/\log(e\Delta)\), the same active schedules hold after
+normalization by \(\max\{R,K\}q\), with
+\(\gamma_{\rm pr}=K^2/(2(\beta+KRB/3))\).
+A tail-capped centered Bernstein/Freedman variant now covers unbounded
+independent or adapted self-adjoint and rectangular streams: after cap failures
+are summable, the capped centered ordinary or predictable variance obeys the
+same half-budget profile, and the truncated mean drift is at most
+\(\eta q\sqrt n\), normalization by \(\max\{R,K+\eta\}q\) gives the
+all-plus certificate with
+\(\gamma_{\rm tc}=K^2/(2(\beta+2KRB/3))\).  Its finite-confidence selected-library
+form pays only the selected cap failures and centered matrix
+Bernstein/Freedman tails.
+A one-row sub-Weibull finite-confidence specialization chooses caps from
+\(\log(A_*Mn/\delta)\), while the asymptotic cap-selection form chooses
+\(b=sL^{1/\alpha}\) and
+\(q=s\max\{L^{1/\alpha},\sqrt{\log(e\Delta)}\}\), pays only
+\(J_mn_m e^{-L_m}\) for cap failures, and gives all-integer and sparse
+active-menu schedules when \(L_m=c\log(e\Delta_m)\).
+A finite-moment finite-confidence companion and its asymptotic operator-tail
+schedule use \(U_m\)-Markov caps
+\(b=sU_m^{1/p}\) and
+\(q=s\max\{U_m^{1/p},\sqrt{\log(e\Delta)}U_m^{(2-p)_+/(2p)}\}\), giving the
+same active schedules with polynomial cap-tail cost \(J_mn_mU_m^{-1}\).
+A heterogeneous cap-profile form then lets each increment use its own cap
+\(b_i\), with jump scale \(\max_i b_i\) but variance scale determined by the
+aggregate truncated row/column second-moment profile; its finite-confidence
+version pays only selected per-increment cap budgets and the selected matrix
+tail.  Heterogeneous
+sub-Weibull norm-tail scales use
+\(q=\max\{\max_i s_iL^{1/\alpha},
+(\log(e\Delta)n^{-1}\sum_i s_i^2)^{1/2}\}\).
+A heterogeneous finite-moment selector similarly lets \(p_i,s_i,U_i\) vary,
+using cap cost \(\sum_iU_i^{-1}\) and variance energy
+\(\sum_i s_i^2U_i^{(2-p_i)_+/p_i}\) in the same profile; its
+finite-confidence form pays the selected Markov cap budgets and the selected
+matrix tail.
+A fully tail-profile version, also with a finite-confidence form, accepts
+deterministic survival profiles \(\pi_i\), with cap cost
+\(\sum_i\pi_i(u_i)\) and variance energy
+\(2\sum_i s_i^2\int_0^{u_i}t\pi_i(t)\,dt\), so exact distributional or
+quantile bounds can be used directly without first replacing the increments by
+a common tail class.
+A quantile-budget selector then chooses
+\(u_i=Q_i(\varepsilon\omega_i)\), charging only the stream budget
+\(\varepsilon\) while allowing the weights \(\omega_i\) to be optimized across
+heterogeneous increments.
+A mixed sub-Weibull specialization makes this explicit for increment-dependent
+tail constants and exponents through
+\(b_i=s_i\log(eA_i/(\varepsilon\omega_i))^{1/\alpha_i}\) and variance energy
+\(\sum_i(2A_i/\alpha_i)\Gamma(2/\alpha_i)s_i^2\), so the normalization keeps
+average tail energy while the shares tune the worst cap.
+When \(\alpha_i=\alpha\) is common, the optimal common cap is the smallest
+\(r\) with \(\sum_iA_i\exp\{-(r/s_i)^\alpha\}\le\varepsilon/e\); the exact
+capped variance energy is then
+\(2\sum_i s_i^2\int_0^{r/s_i}t\min\{1,A_ie^{-t^\alpha}\}\,dt\).
+The checkable envelope \(r=s_{\max}\log(e\sum_iA_i/\varepsilon)^{1/\alpha}\)
+and \(V=(2/\alpha)\Gamma(2/\alpha)\sum_iA_is_i^2\) gives the same schedule,
+and is the exact optimized cap when the scales are common.
+A mixed finite-moment specialization similarly uses
+\(\lambda_i=eA_i/(\varepsilon\omega_i)\), caps
+\(b_i=s_i\lambda_i^{1/p_i}\), and moment energy
+\(\sum_i\widehat\rho_i\), with
+\(\widehat\rho_i=A_is_i^2\lambda_i^{(2-p_i)/p_i}\) for \(p_i<2\) and
+\(\widehat\rho_i=A_i^{2/p_i}s_i^2\) for \(p_i\ge2\).
+When \(p_i=p\) is common, the optimized shares are proportional to
+\(A_is_i^p\); the resulting common cap is
+\((e\sum_iA_is_i^p/\varepsilon)^{1/p}\), and the variance energy is
+\((e/\varepsilon)^{(2-p)/p}(\sum_iA_is_i^p)^{2/p}\) for \(p<2\), or
+\(\sum_iA_i^{2/p}s_i^2\) for \(p\ge2\).
+Envelope schedules replace these exact aggregates by deterministic bounds
+\(\bar S\ge\sum_iA_is_i^p\) and, for \(p\ge2\),
+\(\bar W\ge\sum_iA_i^{2/p}s_i^2\), giving explicit power-growth
+normalizations when \(\bar S,\bar W\) are polynomial in \(e\Delta\).
+A variance-profile route
+via noncommutative Khintchine gives \(O(\sqrt n)\) on every realization with
+\(\|\sum_i A_i^2\|_{\mathrm{op}}=O(n/\log(eD))\).  Matrix Bernstein verifies this
+profile for independent random contractions with
+\(\|\sum_i\mathbb E A_i^2\|_{\mathrm{op}}=O(n/\log(eD))\), including
+Haar-random rotations of fixed or random spectra with average Frobenius-square
+\(O(D/\log(eD))\), and more generally conditional square-twirl and exact
+finite-design rotations, including finite irreducible unitary-group rotations
+and signed-permutation/monomial twirls, under the same average
+Frobenius-square profile.  A block-design twirl theorem covers partially
+randomized bases and random orthogonal decompositions by replacing the scalar
+energy with the block-energy operator
+\(\|\sum_{i,\alpha}d_{i,\alpha}^{-1}
+\operatorname{tr}(P_{i,\alpha}T_i^2P_{i,\alpha})P_{i,\alpha}\|_{\mathrm{op}}\).
+Approximate scalar and block designs are covered by the dominated-twirl
+variant, which adds only the aggregate positive semidefinite twirl-error
+profile to the same square-function budget.  A common-sign self-adjoint
+square-profile menu version direct-sums active streams, pays
+\(\log(eJ_mD_m)\), and removes the \(J_m\) factor from a sampled shared sign
+search.  Its rank-sensitive version replaces \(J_mD_m\) by the certified total
+active square-function rank \(R_m\), so low-rank active libraries pay
+\(\log(eR_m)\).  Hermitian upper-triangular
+independent-entry streams are controlled by their maximum cumulative row
+variance, with whole-matrix cap tails giving Wigner/GOE/GUE-type unbounded
+variants and one sign per whole matrix.  A Hermitian-dilation addendum gives
+the same square-profile route for rectangular or non-self-adjoint random
+operators from the left and right profiles
+\(\|\sum_iX_iX_i^*\|_{\mathrm{op}}\) and
+\(\|\sum_iX_i^*X_i\|_{\mathrm{op}}\), with predictable and active-menu
+Borel--Cantelli versions; for centered conditionally independent-entry
+rectangular matrices this is checked by maximum cumulative row and column
+variance, with one sign per whole matrix, and whole-matrix cap tails give
+sub-Weibull or finite-moment unbounded variants.  Its low-overlap specialization
+gives checkable rectangular sparse-support criteria: row and column weighted
+occupancies control the two profiles.  A realized-profile common-sign menu
+version direct-sums the active rectangular library, pays
+\(\log(eJ_m(d_{m,1}+d_{m,2}))\), and removes the \(J_m\) factor from a sampled
+shared sign search.  Its rank-sensitive form replaces the ambient active
+rectangular dimension by the certified total active left-plus-right
+square-profile rank.  The dependent overlap-budget active-menu version only
+needs summable certification of the realized left/right overlap budgets; a
+tail-capped dependent version adds sub-Weibull or finite-moment coefficients by
+paying cap-tail summability plus the capped realized overlap certificate.  A
+support-rank common-sign overlap version replaces \(J_m(d_{m,1}+d_{m,2})\) by
+the total active row-plus-column support-envelope rank, and the same rank
+accounting survives tail capping under summable cap failures.  A coordinate-window
+Bernstein version checks the row/column occupancy budgets at this support rank;
+its predictable Freedman version allows adaptive row/column support exposure and
+adds explicit arbitrary-growth, all-support-rank, and sparse-support-rank
+schedules.
+The parallel subspace-envelope Bernstein version checks random row/column
+projection budgets inside deterministic low-rank envelopes.  Its predictable
+Freedman analogue allows adaptive row/column projection supports under
+conditional overlap budgets and has matching explicit support-rank schedules.
+Scalar Bernstein verifies inhomogeneous bipartite support models.  A
+rectangular random-subspace Bernstein variant replaces row/column
+occupancies by the expected row and column projection sums, with Haar ranks
+entering through \(d_1^{-1}\sum_i\rho_i^2r_i^L\) and
+\(d_2^{-1}\sum_i\rho_i^2r_i^R\); both support variants have explicit
+active-menu schedules paying \(J_m(d_{m,1}+d_{m,2})\), with
+\(c_0a>\Gamma+2\) on all integer rectangular dimensions,
+\(c_0a>\Gamma+1\) on sparse schedules, and sampled-certificate costs
+\(J_m2^{-M_m}\).  A tail-capped coordinate-support form pays deterministic
+operator-norm cap tails plus the capped row/column occupancy series, with a
+cap-selection schedule for sub-Weibull and finite-moment sparse rectangular
+blocks.  A tail-capped random-subspace form pays operator-norm cap exceptions
+for unbounded low-rank or block coefficients; its cap-selection schedule has
+the all-integer \(R>\Gamma+1\) and sparse \(R>\Gamma\) cap-tail thresholds.
+Its rank-one dyad
+specialization uses only the two expected
+weighted frame operators, covering Haar-isotropic dyads, randomized feature
+outer products, and nonuniform sampled rectangular atom dictionaries, again with
+active-menu schedules for countable libraries.  Tail-capped dyad variants add
+Gaussian, sub-Gaussian, sub-exponential, and heavy-tailed scalar weights by
+paying the cap-exception probabilities plus the capped frame-Bernstein term;
+their cap-selection schedule gives explicit sub-Weibull and finite-moment
+scalar-weight criteria with the same all-integer and sparse cap-tail thresholds,
+and its homogeneous isotropic specialization gives closed-form
+\(R>\Gamma+1,\ c_0a>\Gamma+2\) all-integer and
+\(R>\Gamma,\ c_0a>\Gamma+1\) sparse schedules.  A coordinate-sampled dyad
+specialization replaces the frame budget by the largest row or column marginal
+load, giving the same schedule for iid sampled-entry, random bipartite-edge,
+and sparse observation matrices; its predictable form covers adaptive sampling,
+without-replacement exposure, and permutation or matching windows from
+one-step marginal-load envelopes, while a profile-capped variant keeps the full
+row and column load arrays for nonuniform coordinate laws and varying caps,
+with finite-menu all-integer/sparse schedules and sampled certificates; an
+entry-intensity specialization checks adaptive inhomogeneous sparse matrices
+from predictable weighted row/column degrees, with a closed-form cap schedule
+for sub-Weibull or finite-moment entry weights and a position-dependent
+cap profile charging rare heavy coordinates by \(q_{i,r,s}^2p_{i,r,s}\).
+A matrix-Freedman version covers adapted dependent
+random contractions whose predictable square profile is \(O(n/\log(eD))\); its
+rank-sensitive common-corner form replaces \(D\) by the joint support rank
+\(\kappa\) in both the logarithm and the Freedman dimension factor, and the
+corresponding active-menu schedule pays \(\sum_h\kappa_{m,h}\).  A
+two-scale square-function certificate now handles a rank-\(\kappa\) core plus a
+full ambient residual under one signing; its predictable menu schedule pays
+\(\sum_h\kappa_{m,h}\) for the low-rank core and \(J_mD_m\) only for the
+residual.  A finite-depth multiscale version handles several low-rank layers
+plus one ambient residual, with active structural cost
+\(\sum_{h,q}\kappa_{m,h,q}+J_mD_m\).  A summable-depth version permits
+countably many low-rank layers under a summable \(\sum_q\sqrt{a_q}\) budget,
+with active menus paying the corresponding \(\sum_{m,h,q}\) structural tail.
+A flag-compressible specialization generates those countable layers from
+nested initial projection flags, covering multiresolution, wavelet,
+spectral-window, and hierarchical basis streams under summable shell square
+profiles.  A compression-error flag version replaces shell-square estimates by
+predictable approximation budgets
+\(\sum_i(\tau_{i,q-1}+\tau_{i,q})^2\), making spectral truncation and low-rank
+tail estimates directly checkable.  A tail-envelope specialization gives
+explicit common-flag rate criteria: polynomial tails beat
+\(\exp(\gamma q^s)\) flag-rank growth when \(p>1+s/2\), and any positive power
+tail works for geometrically growing rank windows.
+A
+rank-sensitive dominated square-twirl corollary gives the same replacement for
+Haar, finite-design, signed-permutation, and approximate random-basis rotations
+inside a common random low-rank corner; the matching finite-menu version makes
+active low-rank random-basis libraries simultaneous at cost
+\(\sum_h\kappa_{m,h}\).  A rank-sensitive predictable dominated-twirl version
+gives the same low-rank replacement for online adaptive random-basis streams
+chosen from the past.  Its
+finite-menu schedule gives simultaneous almost-sure signings for active
+libraries of arbitrary adapted square-profile streams after replacing \(D_m\)
+by \(J_mD_m\), with common sampled batches paying only \(J_m2^{-M_m}\).  Its
+predictable dominated-twirl specialization permits online adaptive scalar,
+block, and approximate random-basis samplers with only the one-step PSD twirl
+error added to the same budget.  The corresponding Borel--Cantelli array theorem
+gives almost-sure eventual signings and sampled certificates whenever the row
+budget tails and \(2^{-M_m}\) search losses are summable; explicit schedule
+forms give all integer dimensions once \(n(D)\gtrsim\log^2(eD)\), and sparse
+stretched-exponential dimension schedules under the one-row logarithmic-square
+threshold.  A finite-menu predictable twirl schedule gives simultaneous
+signings for active families of online random-basis samplers after replacing
+the one-row structural count \(D_m\) by \(J_mD_m\), with common sampled batches
+paying only \(J_m2^{-M_m}\).  Independent random sign search finds a certified
+signing under the
+same profile event with only an additional \(2^{-m}\) failure after \(m\) trials.
+A
+subspace-localized specialization covers adaptive coordinate supports, online
+random subspaces, and conditionally sampled localized Wigner/GOE/GUE blocks
+under the same predictable overlap scale.  Its finite-menu schedule gives
+simultaneous signings for active adaptive support/subspace libraries after
+replacing \(D_m\) by \(J_mD_m\), with common sampled batches paying only
+\(J_m2^{-M_m}\).  A
+conditional scalar-multiplier corollary covers arbitrary
+deterministic or random self-adjoint contraction directions after independent
+bounded Bernoulli thinning or scalar amplitudes with conditional second moments
+\(O(1/\log(eD))\), and a predictable version covers adaptive online directions
+without conditional independence; its triangular-array schedule form gives the
+same all-integer \(n(D)\gtrsim\log^2(eD)\) and sparse stretched-exponential
+almost-sure regimes under the half-budget conditional second-moment bound.
+Finite menus of such adaptive scalar-multiplier streams are simultaneous after
+replacing \(D_m\) by \(|\mathcal H_m|D_m\), with common sampled batches paying
+only \(|\mathcal H_m|2^{-M_m}\).  Exhaustive countable scalar-multiplier menus
+are controlled on prefixes \(h\le J_m\) at cost \(J_mD_m\), so every fixed
+stream is eventually covered.  A
+hybrid centered-noise version preserves any already-known
+\(K\sqrt n\) core signing, including algebraic or finite-lift core signings,
+after adding independent bounded scalar noise in arbitrary matrix directions,
+with an explicit matrix-Bernstein tail; a martingale-difference version removes
+that conditional independence and allows bounded matrix-valued martingale noise,
+and the predictable matrix-noise branch has a Borel--Cantelli schedule theorem
+for all integer dimensions and stretched-exponential sparse dimensions whenever
+the predictable quadratic-variation budget is \(O(n/\log(eD))\);
+its active-prefix countable-menu version pays \(J_mD_m\), so every fixed
+already-signed core-plus-noise model in a countable library is eventually
+covered;
+its sampled localized specialization gives the same almost-sure schedules for
+adaptive coordinate-support and conditional Haar-subspace matrix-noise arrays
+under the predictable weighted-overlap or average-rank budget;
+the localized branch also has an active-prefix countable-library form at the
+same \(J_mD_m\) cost, using weighted-overlap or Haar average-rank budgets
+directly;
+a scalar variance-domination corollary gives the same signed-core tail whenever
+\(\mathbb E(Y_i^2\mid\mathcal F_{i-1})\preceq\theta_i\rho_i^2I\) with
+independent random variance intensities, and an anisotropic matrix-profile
+version allows random PSD variance profiles with a matrix-Bernstein budget tail;
+a trace-budget variant removes the ambient-dimension factor from the budget
+exception when the total random variance trace is controlled, and a
+trace-envelope/low-rank specialization makes this explicit for random
+low-rank, spiked, and effective-dimension variance profiles; the corresponding
+Schatten-envelope corollary interpolates between trace, Frobenius-plus-rank,
+and operator-plus-rank control, and a sub-gamma trace-envelope variant allows
+unbounded envelopes with a Bernstein-type total-envelope tail, while a
+quantile/finite-moment trace-envelope variant covers heavy-tailed total trace
+budgets without independence, and its summable Borel--Cantelli form gives
+eventual Spencer-scale bounds for triangular arrays with trace-budget quantiles
+at \(n/\log(eD)\); normalized \(r\)-th moment summability of those heavy-tailed
+budgets is enough to check this criterion, and a termwise moment version checks
+random spike, low-rank, trace-class, and Schatten atoms without independence;
+a termwise-tail version only needs summable individual truncation failures, and
+a scale-mixture specialization handles deterministic atom weights with
+heavy-tailed multipliers via aggregate tail summability; when all atoms share
+one multiplier, a common-scale version removes the atom-count union factor,
+and finite or countable grouped-scale versions pay one tail per volatility
+group.  An optimized tail-profile form allows exact survival functions and
+log-Weibull/lognormal tails, while the heterogeneous polynomial and sub-Weibull
+specializations have optimized share-cost criteria.  A common-profile aggregate
+criterion handles shared tail shapes by proportional mass shares, and an
+optimized profile-menu version aggregates mixed tail families by best
+class-level trace shares.  A finite heterogeneous polynomial-index menu is
+controlled by the worst tail exponent \(\alpha_0\), with the same
+\(\alpha_0 b>p+\alpha_0 u+(\alpha_0+1)w+1\) count/trace rule, while a
+countable weighted heterogeneous power-decay version gives
+\(\alpha_0 b>p+\alpha_0 u+1\) under summable class-share/trace decay.  A finite
+heterogeneous stretched-exponential profile menu has logarithmic budget rule
+\(\delta>p+w+1\), with \(\delta=c_0a^{\beta_0}\), after paying the active
+class-count exponent; its countable weighted trace-decay version removes this
+penalty and gives \(\delta>p+1\).  The analogous finite log-Weibull menu has
+the same exponent rule with a subpolynomial budget margin, and the countable
+weighted log-Weibull version removes the count penalty once the residual
+class-index log-Weibull series is summable.  In the
+common-index polynomial case there is a closed-form effective class mass and
+schedule rule
+\(\alpha b>(\alpha+1)p+1\), with logarithmic endpoint
+\((\alpha+1)q-\alpha c<-1\).  A finite class-count version reduces to
+\(\alpha b>p+\alpha u+(\alpha+1)w+1\), and a countable power-decaying class
+version reduces to \(\alpha b>p+\alpha u+1\) when
+\(r+\alpha s>\alpha+1\).
+A stretched-exponential schedule has \(ca^\beta>p+1\) and endpoint
+\(q-ca^\beta b<-1\), plus a log-Weibull schedule for subpolynomial budget
+ratios; a regularly varying log-corrected schedule has exponent rule
+\(\alpha a>p+1\) and endpoint \(q+\gamma-\alpha b<-1\); the group-level
+common-index polynomial case has its own explicit effective tail mass.
+The sub-gamma hypothesis is
+verified termwise from independent sub-gamma envelopes and specialized to
+atomized and countable bounded, gamma/chi-square, gamma-atom, countable gamma-atom,
+weighted-chi-square/real-Wishart,
+weighted-exponential/complex-Wishart, noncentral/correlated Gaussian/Wishart,
+compound-Poisson, and mixed-atom trace
+envelopes when available;
+the scalar specialization allows predictable directions with the matching
+matrix-Freedman tail.  Localized specializations handle online
+coordinate-supported or subspace-localized matrix/scalar martingale noise through
+realized predictable overlap, conditional predictable overlap, and
+weighted-overlap operators.
+The signed-core matrix-noise theorem is also specialized to adaptively sampled
+coordinate supports with coordinate-dependent predictable inclusion bounds and
+conditional Haar subspaces via random weighted conditional inclusion-probability
+and average-rank budgets, with an explicit budget-tail term.
+Predictable amplitude weights sharpen the conditional-overlap parameter from
+\(\sum_i\mathbb E(P_i\mid\mathcal{F}_{i-1})\) to
+\(\sum_i\rho_i^2\mathbb E(P_i\mid\mathcal{F}_{i-1})\).
+For coordinate supports with deterministic or independent random inclusion
+profiles, and for Haar subspaces with independent random amplitudes, scalar
+Bernstein makes the weighted-budget exception explicit; in the homogeneous
+coordinate case the overlap scale becomes \(p\sum_i\mathbb E\rho_i^2\), while
+fixed orthogonal block decompositions have the same tail with the coordinate
+union factor replaced by the number of blocks, and
+fixed or random Haar ranks use the scalar budget
+\(\sum_i\mathbb E[(R_i/D)\rho_i^2]\).  The Haar assumption may be replaced by
+conditional isotropy, or by the weaker spectral domination
+\(\mathbb E(P_i\mid\mathcal F_{i-1})\preceq\alpha_iI\), with random intensity
+\(\alpha_i\).  Mixed
+coordinate-or-Haar samples are
+covered by the same profile after replacing the coordinate inclusion bound by
+\(M_iQ_{ij}+(1-M_i)R_i/D\).  A random-amplitude localized-noise menu converts
+all these scalar Bernstein budget tails into Borel--Cantelli all-integer and
+sparse dimension schedules whenever the budget exceptions and matrix-Freedman
+row tails are summable; in the homogeneous subcases this reduces to the
+effective-energy rule \(\beta\sum_i\mathbb E\rho_i^2=O(n/\log(eD))\), with
+\(\sum_i\mathbb E\rho_i^2\gtrsim\log(eD)\) only needed to make the scalar
+budget exception summable after the relevant coordinate/block union count.
+The countable-menu version controls active prefixes by replacing \(N_m\) with
+\(\sum_{h\le J_m}N_{m,h}\), so every fixed localized random-amplitude model is
+eventually covered.
+A common-sign version says that when one core signing balances every
+active-prefix core, that same signing survives all active-prefix localized
+random-amplitude perturbations under the same union-count payment.
+A finite-lift common-menu corollary supplies such shared core signings
+deterministically whenever the active-prefix direct-sum lift entropy is \(O(n)\).
+Consequently finite-lift core libraries absorb localized random-amplitude noise
+under the same active-prefix union-count and homogeneous energy schedules.
+Its homogeneous active-prefix specialization pays
+\(\Lambda_m^{(J)}=\sum_{h\le J_m}N_{m,h}\), giving all-integer energy margin
+\(R>8(\Gamma+1)/3\) under \(\Lambda_D^{(J)}\le(eD)^\Gamma\) and sparse margin
+\(R>8\Gamma/3\).
+The homogeneous energy rule also has the same common-sign form whenever the
+active-prefix cores share one signing.
+It also covers random localized,
+projection, frame, and sparse-support ensembles whenever their weighted empirical
+overlap or weighted frame-operator norm is \(O(n/\log(eD))\).  An active-menu
+dependent version only needs summable certification of realized overlap budgets,
+and a tail-capped dependent version adds sub-Weibull or finite-moment localized
+blocks by paying cap-tail summability plus the capped overlap certificate.  A
+common-sign version direct-sums the active menu and gives one signing for all
+dependent localized streams after replacing \(\log(eD)\) by
+\(\log(eJ_mD_m)\).  A support-rank common-sign variant replaces \(J_mD_m\)
+by the total active support-envelope rank for localized libraries, including
+tail-capped unbounded versions with summable cap failures.  A coordinate-window
+Bernstein version checks the active support-rank budgets from scalar occupancy
+tails, while a predictable Freedman version allows adaptive coordinate-support
+exposure and gives explicit arbitrary-growth, all-support-rank, and
+sparse-support-rank schedules.  A subspace-envelope Bernstein version does the
+same for random projection supports inside deterministic low-rank envelopes.
+The predictable subspace-envelope Freedman version removes independence for
+adaptive projection supports with controlled conditional overlap and has
+matching explicit support-rank schedules.  For independent inhomogeneous
+coordinate supports, a scalar Bernstein union bound
+verifies this event from the weighted occupancies \(\max_j\sum_i\rho_i^2{\bf 1}_{\{j\in S_i\}}\);
+the old support-density \(O(1/\log(eD))\) theorem is the homogeneous
+specialization.  For independent random subspace projections, matrix Bernstein
+gives the same conclusion when
+\(\|\sum_i\rho_i^2\mathbb E P_i\|_{\mathrm{op}}=O(n/\log(eD))\), including Haar
+weighted-rank condition \(D^{-1}\sum_i\rho_i^2r_i=O(n/\log(eD))\).  Independent
+random amplitudes are also covered after replacing these budgets by
+\(\max_j\sum_i p_{ij}\mathbb E\rho_i^2\) and
+\(\|\sum_i\mathbb E(\rho_i^2P_i)\|_{\mathrm{op}}\), with an explicit
+random-amplitude schedule corollary giving the same all-integer, sparse,
+arbitrary-growth, and sampled-certificate thresholds.  Fixed orthogonal
+block-support ensembles pay the block count \(B\), not the ambient coordinate
+count \(D\), with budget \(\max_\alpha\sum_iq_{i\alpha}\mathbb E\rho_i^2\) and
+schedule margin \(\log(eB_m)\).  Random conditional inclusion profiles are
+also allowed, replacing deterministic budgets by
+\(\max_j\sum_i\mathbb E(\rho_i^2Q_{ij})\) or
+\(\max_\alpha\sum_i\mathbb E(\rho_i^2Q_{i\alpha})\), which covers random support
+sizes even when they are correlated with amplitudes.  The random-profile route
+now has its own variance-sensitive Borel--Cantelli array form: with
+\(N_m=D_m\) or \(B_m\), summable
+\(N_m\exp\{-t_m^2/(2(\sigma_m^2+t_m/3))\}\) gives eventual profile signings and
+sampled certificates.  A predictable profile/Freedman variant also permits
+online coordinate or block sampling from \(\mathcal F_{i-1}\)-measurable
+profiles, paying only the realized predictable-overlap budget exception; its
+schedule form has the same \(\log(eN_m)\) arbitrary-growth rule and the same
+all-integer/sparse thresholds, conditional on summable budget exceptions.
+Finite menus of such predictable coordinate/block support models are
+simultaneous after replacing \(N_m\) by \(L_m=\sum_hN_{m,h}\) and summing the
+budget exceptions.  Exhaustive countable menus are diagonalized by controlling
+prefixes \(h\le J_m\) at cost \(L_m^{(J)}=\sum_{h\le J_m}N_{m,h}\), so every
+fixed online support model is eventually covered.  A
+deterministic-envelope specialization has no budget exception: fully adaptive
+supports with conditional inclusion bounds \(p_{ij}\) or \(q_{i\alpha}\) and
+deterministic amplitude caps use budgets
+\(\max_j\sum_i a_i^2p_{ij}\) or
+\(\max_\alpha\sum_i a_i^2q_{i\alpha}\).  The deterministic-envelope schedule
+form keeps the same \(\log(eN_m)\) arbitrary-growth, all-integer, sparse, and
+sampled-certificate thresholds with no budget-exception summability term.
+Finite menus of such coordinate/block envelope models are simultaneous after
+replacing \(N_m\) by \(L_m=\sum_hN_{m,h}\), with common sampled batches paying
+only \(|\mathcal H_m|2^{-M_m}\).  Exhaustive countable deterministic-envelope
+menus control prefixes \(h\le J_m\) at cost
+\(L_m^{(J)}=\sum_{h\le J_m}N_{m,h}\), with no budget-exception series.  A
+Borel--Cantelli triangular-array corollary makes these
+coordinate and subspace conclusions eventual almost-sure statements under the
+corresponding summable Bernstein failure series; under the half-budget condition
+this is automatic
+along all integer dimensions from \(n_D\ge a\log^2(eD)\), \(a>32/(3C_0)\), and
+along sparse stretched-exponential dimension schedules from \(a>16/(3C_0)\).
+The same weighted support families have
+sampled-sign certificates with only an additional \(2^{-M}\) finite-search
+failure; logarithmically many trials give eventual sampled certificates:
+\((1+\delta)\log_2(eD)\) trials along all integer dimensions and
+\((1+\delta)\log_2(e+m)\) trials along sparse schedules.  More generally,
+\(n_m\ge(16/(3C_0))\log(eD_m)(\log(eD_m)+(1+\gamma)\log(e+m))\) makes the
+weighted-support and sampled-search failures summable for arbitrary triangular
+arrays.  The
+commutative AF specialization is now explicit: a clopen
+partition with \(M\) atoms and oscillation \(\eta\) gives discrepancy
+\(C\sqrt{n\log(e+M/n)}+2n\eta\), while interval-range functions force
+\(\Omega(\eta^{-1})\) atoms for any finite-stage certificate at scale \(\eta\),
+hence \(\Omega(\sqrt n)\) atoms at the Spencer approximation scale.  A metric
+version bounds the discrepancy by a common modulus of continuity and the clopen
+partition growth function \(M_X(r)\); for \((L,\alpha)\)-Hölder tuples with
+\(M_X(r)\le Ar^{-d}\) it gives \(O(\sqrt{n\log n})\), and the Spencer scale
+\(O(\sqrt n)\) follows when \(d\le2\alpha\).  Equivalently, for compact
+zero-dimensional metric spaces, finite upper clopen Minkowski dimension gives
+the \(O(\sqrt{n\log n})\) metric AF bound, and
+\(\overline{\dim}_{\rm cl}X<2\alpha\) gives Spencer scale for Hölder tuples;
+the critical endpoint \(\overline{\dim}_{\rm cl}X=2\alpha\) is also
+Spencer-scale whenever the upper clopen \(2\alpha\)-Minkowski content is finite.
+At the logarithmic critical window
+\(M_X(r)\lesssim r^{-2\alpha}(\log(e/r))^\beta\), the bound is still
+\(O(\sqrt n)\) for \(\beta\le0\) and improves the generic logarithmic loss to
+\(O(\sqrt{n\log\log n})\) for \(\beta>0\).
+The clopen-growth input can now be replaced by ordinary metric covering
+numbers: every finite ball cover of a compact zero-dimensional space has a
+clopen shrinking with the same cardinality, so \(N_X(\rho)\lesssim\rho^{-d}\)
+implies the same H\"older threshold \(d\le2\alpha\), and the same logarithmic
+critical-window estimates hold with \(N_X\) in place of \(M_X\).
+Equivalently, finite ordinary upper metric Minkowski dimension gives the
+\(O(\sqrt{n\log n})\) bound, ordinary dimension \(<2\alpha\) gives Spencer
+scale, and finite ordinary upper metric \(2\alpha\)-Minkowski content gives the
+critical endpoint.
+The same package is stated in Assouad/doubling language: upper Assouad growth
+\((A,s)\) gives the identical \(s\le2\alpha\) threshold, and a \(D\)-doubling
+zero-dimensional model is Spencer-scale whenever \(\log_2D\le2\alpha\).
+Finite unions keep the largest ordinary covering exponent and the largest
+ordinary upper metric dimension, with the same largest-exponent rule in
+Assouad/doubling language; finite max-metric products add ordinary covering
+exponents, ordinary Minkowski dimensions, critical contents, and
+Assouad/doubling exponents, so the product threshold is governed by the sum of
+the factor exponents.  Combining the two rules, finite product-stratified
+unions are governed by the maximum, over strata, of the sum of the factor
+exponents in that stratum.
+Zero-dimensional H\"older resolutions transfer the same entropy bound to
+non-AF targets.  Every compact metric space has scale-flexible zero-dimensional
+Lipschitz resolutions: for \(0<\theta<1\), the profile is preserved as
+\(N_X(s)\le N_Y(\theta s)\) with Lipschitz loss \(2/(1-\theta)\).  This gives
+the direct bound
+\(C\sqrt{n\log(e+N_Y(\rho)/n)}+2n\omega(16\rho)\) by \(\theta=1/2\).
+Consequently every fixed compact target has qualitative \(o(n)\) discrepancy
+for any sequence of contraction \(n\)-tuples sharing one equicontinuity modulus.
+Equivalently, every relatively compact class of real contraction test functions
+has hereditary discrepancy \(o(n)\).
+In fact, the qualitative principle is Banach-space level:
+every totally bounded subset of the unit ball of a normed space satisfies
+\(\Delta_n\le N_{\mathcal K}(\eta)+n\eta\), hence hereditary \(o(n)\);
+polynomial Banach entropy \(N_{\mathcal K}(\eta)\lesssim\eta^{-d}\) gives
+\(\Delta_n=O(n^{d/(d+1)})\), pure stretched-exponential Banach entropy gives
+\(\Delta_n=O(n/(\log n)^{1/q})\), and signed-log stretched entropy
+\(\exp(A\eta^{-q}(\log(e/\eta))^\gamma)\) gives the refined rate
+\(n(\log n)^{-1/q}(\log\log n)^{\gamma/q}\).  Thus compact operator images of
+unit balls have sublinear signed sums, with rates governed by their image
+entropy.
+Direct dyadic entropy-number data now gives the sharper scale-by-scale package
+\(\Delta_n\le2^{k-1}+n e_k^{\rm int}\): polynomial decay
+\(e_k^{\rm int}\lesssim k^{-s}\) yields
+\(\Delta_n\lesssim n(\log n)^{-s}\), log-refined decay adds the expected
+\((\log\log n)^\beta\) factor, and \(e_k^{\rm int}\lesssim e^{-bk}\) gives
+\(\Delta_n\lesssim n^{\log2/(b+\log2)}\).  The package now converts standard
+external entropy numbers to internal ones at only a factor \(2\), and records
+the finite-union and finite-Minkowski-sum rules for carrying these rates through
+compact class decompositions.  It also handles exponentially weighted summable
+Minkowski series: uniform \(e_k\lesssim k^{-s}(\log k)^\beta\) component
+entropy gives \(e_m\lesssim m^{-s}(\log m)^{s+\beta_+}\) and hence
+\(\Delta_n\lesssim n(\log n)^{-s}(\log\log n)^{s+\beta_+}\), while exponential
+component entropy gives \(\Delta_n\lesssim n\exp(-c\sqrt{\log n})\).
+The weighted-series statement now has a profile form:
+\[
+  e_m\lesssim \inf_{r\le m}\{S_r\varphi(1+\lfloor(m-1)/r\rfloor)+T_r\},
+\]
+with the analogous dyadic \(\Delta_n\) bound, where
+\(S_r=\sum_{j\le r}a_jb_j\) when
+\(e_k(\mathcal K_j)\lesssim b_j\varphi(k)\), and \(T_r\) is the remaining
+radius tail.
+The same profile is optimized abstractly: if
+\(S_r\lesssim r^\delta(\log r)^\eta\),
+\(T_r\lesssim r^{-\gamma}(\log r)^{-\tau}\), and
+\(\varphi(k)\lesssim k^{-s}(\log k)^\beta\), then
+\[
+  e_m\lesssim
+  m^{-s\gamma/(s+\delta+\gamma)}
+  (\log m)^{(\gamma(\beta+\eta)-\tau(s+\delta))/(s+\delta+\gamma)}.
+\]
+Thus polynomial weights with component amplitudes
+\(j^\rho(\log j)^\eta\), \(\rho>u-1\), yield
+\[
+  e_m\lesssim
+  m^{-s(u-1)/(s+\rho)}
+  (\log m)^{((u-1)(\beta+\eta)-v(s+\rho))/(s+\rho)}.
+\]
+More generally, stretched-exponential weights \(a_j\lesssim e^{-cj^\theta}\)
+replace the finite polynomial entropy log-power by \(s/\theta+\beta_+\), and
+turn exponential component entropy into
+\(\Delta_n\lesssim n\exp(-c(\log n)^{\theta/(1+\theta)})\).
+For polynomial weights \(a_j\lesssim j^{-u}\), \(u>1\), the optimized exponent
+is \(\sigma=s(u-1)/(s+u-1)\); exponentially entropic summands are then limited
+by the tail scale \(u-1\), up to logarithmic powers.
+A log-balanced refinement covers
+\(a_j\lesssim j^{-u}(\log(e+j))^{-v}\): if component entropy is
+\(e_k\lesssim k^{-s}(\log k)^\beta\), then
+\[
+  e_m\lesssim m^{-\sigma}(\log m)^\lambda,
+  \qquad
+  \lambda=\frac{(u-1)\beta-sv}{s+u-1},
+\]
+with the matching dyadic
+\(n(\log n)^{-\sigma}(\log\log n)^\lambda\) discrepancy rate; exponentially
+entropic summands give the tail-limited log power \(u-1-v\).
+H\"older images are now included as well:
+an \(\alpha\)-H\"older parametrization multiplies the entropy exponent and
+log-power by \(\alpha\), so parametrized compact classes inherit the matching
+logarithmic discrepancy rates.
+The Banach section now also records a finite-rank approximation envelope:
+if a compact image is within \(a_m\) of an \(m\)-dimensional subspace, then
+\[
+  \Delta_n\le 3(1+6/\eta)^m+n(\eta+a_m),
+\]
+so approximation-number decay \(a_m\lesssim m^{-s}\) gives
+\(\Delta_n\lesssim n(\log\log n/\log n)^s\), log-refined decay
+\(a_m\lesssim m^{-s}(\log m)^\beta\) gives the same rate multiplied by
+\((\log\log n)^\beta\), while
+\(a_m\lesssim\exp(-bm^\theta)\) gives
+\(\Delta_n\lesssim n\exp(-c(\log n)^{\theta/(1+\theta)})\), including
+\(\exp(-c\sqrt{\log n})\) for \(\theta=1\).
+Hilbert singular-value decay gives the same rates; Schatten \(p\)-class gives
+exponent \(1/p\).
+
+For compact metric targets with \(N_Y(\rho)\le A\rho^{-d}\), the loss is
+\[
+  O\!\left(\sqrt{n\log(e+n^{d/(2\alpha)-1})}\right),
+\]
+and it is Spencer-scale when \(d\le2\alpha\); the logarithmic critical window
+and Minkowski/content thresholds also hold without zero-dimensionality.  Local
+Assouad/doubling
+profiles also pass to arbitrary compact targets: upper Assouad exponent
+\(s\le2\alpha\), in particular \(\log_2D\le2\alpha\) for compact
+\(D\)-doubling targets, gives Spencer scale, and signed logarithmic Assouad
+profiles have the same critical-window split.  Beyond polynomial entropy,
+stretched-exponential compact targets with
+\(\log N_Y(\rho)\lesssim\rho^{-q}(\log(e/\rho))^\gamma\) still have sublinear
+H\"older discrepancy
+\[
+  O\!\left(n^{(\alpha+q)/(2\alpha+q)}
+    (\log n)^{\alpha\gamma/(2\alpha+q)}\right).
+\]
+H\"older quotient maps divide
+the model exponent by the quotient exponent: if \(Y\) is a
+\(\beta\)-H\"older image of a compact model with covering exponent \(s\), the
+threshold is \(s\le2\alpha\beta\), and a \(\beta\)-H\"older quotient of a
+compact \(D\)-doubling model is Spencer-scale when
+\(\log_2D\le2\alpha\beta\).  The quotient version also keeps the signed
+logarithmic critical window: at \(s=2\alpha\beta\), nonpositive log power remains
+Spencer-scale and positive log power costs only \(\sqrt{n\log\log n}\).  For
+snowflaked metrics \(d^\vartheta\), this becomes \(s\le2\alpha\vartheta\),
+with the same signed logarithmic endpoint at \(s=2\alpha\vartheta\).
+Finite unions of arbitrary
+compact metric targets keep the largest covering, Minkowski, and
+Assouad/doubling exponent, while finite max-metric products add ordinary
+covering exponents, Minkowski contents, and Assouad/doubling exponents after
+the same resolution, so the Spencer threshold is governed by the maximum for
+unions and the sum for products.  The same finite-union/product rules now track
+signed logarithmic covering powers: only top polynomial exponents contribute to
+the log correction, while products add the log powers.  Finite unions of
+product-parametrized strata use the maximum over stratum sums, and H\"older
+stratum parametrizations divide each stratum sum by the parametrization
+exponent; at critical exponent \(2\alpha\), this gives Spencer scale for
+nonpositive top log power and otherwise the
+\(\sqrt{n\log\log n}\) window.  The binary Cantor
+resolution gives \([0,1]^D\), and compact subsets for \(0<\alpha\le1\), the
+Euclidean threshold \(D\le2\alpha\); compact targets with finite
+\(\beta\)-H\"older \(D\)-atlases have the divided threshold
+\(D/\beta\le2\alpha\), with compact Lipschitz manifolds and finite polyhedra as
+the \(\beta=1\) case.  More generally, finite H\"older atlases whose chart
+domains have profiles \(\rho^{-d_\ell}(\log(e/\rho))^{\gamma_\ell}\) inherit
+the same critical-window rule with top divided exponent
+\(\max_\ell d_\ell/\beta_\ell\) and top log power among the critical charts.
+An exhaustive finite-scale atlas corollary now tracks one-sided Hausdorff stage
+error \(\delta_r\) and stage entropy budgets \(A_r\): at the signing scale
+\(\rho_n\asymp n^{-1/(2\alpha)}\), the loss is exactly
+\(\sqrt{n\log(e+A_{r_n}n^{s/(2\alpha)-1}(\log n)^\gamma)}\), so growing stages
+are allowed up to the unused entropy slack.  In particular, if
+\(\delta_r\lesssim r^{-\eta}\) and \(A_r\lesssim
+r^\lambda(\log r)^\kappa\), the effective exponent is
+\(s+\lambda/\eta\) with log power \(\gamma+\kappa\).  If instead
+\(\delta_r\lesssim e^{-cr^\theta}\) and \(A_r\lesssim
+r^\lambda(\log r)^\kappa\), there is no polynomial exponent penalty: only the
+log power changes to \(\gamma+\lambda/\theta\), with a secondary
+\((\log\log n)^\kappa\) factor.
+The ultrametric specialization gives the same bounds from ball-covering growth,
+and for the \(q\)-symbol Cantor shift with scale \(\theta\) the threshold is
+\(\alpha\ge\frac12\log q/\log(1/\theta)\); finite products add these
+dimensions, giving the threshold
+\(\alpha\ge\frac12\sum_j\log q_j/\log(1/\theta_j)\) for product symbolic
+models with the max metric.
+
+Recent additions record the tensor-reversal proof for arbitrary banded
+multilevel block Hankel matrices, the sample-optimal norming-grid count and
+formal anisotropic $\prod_j(2w_j+1)$ banded theorem, its matching anisotropic
+circulant lower bound already in the self-adjoint/block-circulant subclass, the
+self-adjoint product-bandwidth regime
+$\prod_j(2w_j+1)\le n$ with unrestricted ambient dimension, and the fixed-level
+full-bandwidth multilevel block Toeplitz/Hankel theorem via the
+Carlsson--Perfekt symbol extension, with constants depending on \(r,b\).  Lean
+companions:
+\texttt{paper12/lean} machine-checks the entropy-obstruction inequality, the
+one-dimensional and multilevel interior-index counts, the grid-norming
+arithmetic, the tensor-reversal and reversal-symmetry index/matrix arithmetic,
+the multilevel band constant, and the entropy-absorption/direct-sum bookkeeping
+(not the analytic norm-equality step), with no \texttt{sorry}/\texttt{admit}.
+
+\textbf{13. \texttt{Residual\_Finite\_Horizon\_Fusion\_v1.pdf}} (18pp, Thread A).
+The finite-horizon layer of paper 1's Hilbert-cube problem.  A positive
+residual theorem: for any countable family of dense-open window sequences there
+is a comeager set in $\mathcal F(Q_\infty)=C(Q_\infty,Q_\infty)^{\mathbb N}$
+whose every system admits finite-horizon windowed DC1 witnesses of every order,
+at every tail, every rational proximal scale and tolerance, and the fixed
+separation scale --- the engine is a finite-horizon stability lemma whose
+tracking modulus does \emph{not} decay with coordinate depth, against the depth
+obstruction of paper 1.  The residual set now also contains finite scrambled
+packets of every prescribed cardinality: after binary coding across the
+separation blocks, all points in the packet share the same high-density
+proximal times while each pair has a positive-density separation set.  And a
+sharp finite-certificate obstruction: every
+open set certified by a bounded window of coordinate maps that lies in the
+infinite-metric-mean-dimension (or scale-law entropy) class is empty, by an
+explicit coordinate squeeze past the certifying window.  This rules out the
+natural finite-horizon method class for the full all-tail conclusions of
+Problem 7.1 without deciding whether those conclusions are comeager.  The same
+squeeze also rules out a finite-horizon certificate for the all-tail symbolic
+semifactor, but it does not rule out a bare uncountable DC1 scrambled set; the
+obstruction applies to the growth/entropy-bundled conclusions, not to
+cardinality-only DC1.
+
+\textbf{14. \texttt{Random\_Toeplitz\_Discrepancy\_v1.pdf}} (215pp, Thread B).
+Operator-norm discrepancy
+\[
+  \mathrm{disc}_{\mathrm{op}}(A_1,\dots,A_n)
+  =\min_{\varepsilon\in\{\pm1\}^n}
+  \left\|\sum_i\varepsilon_iA_i\right\|_{\mathrm{op}}
+\]
+for independent random banded Toeplitz/Hankel contractions.  When the
+half-bandwidth $w\le n$ (and $d\ge4w$)
+the deterministic banded theorem of paper 12 already gives $O(\sqrt n)$ on every
+realization, with a constant free of the dimension $d$ and $w\mapsto w^r$ at
+multilevel.  For full bandwidth the paper records three settled endpoints: the
+deterministic bound \(C\sqrt{n\log(e+d/n)}\), which pathwise settles bounded
+aspect ratio \(d/n=O(1)\); a fixed-sign theorem showing that the
+expected-normalized full random Toeplitz/Hankel model already has
+\(O(\sqrt n)\) discrepancy with high probability, every polynomial-sized
+prescribed deterministic sign list, and every independent random sign list with
+polynomial expected size, is simultaneously \(O(\sqrt n)\). More generally,
+every finite sign family of size \(M\) is simultaneously controlled at scale
+\[
+  O_K\!\left(\sqrt{n\left(1+\frac{\log M}{\log d}\right)}\right),
+\]
+so the whole signing cube has scale
+\(O_K(\sqrt{n(1+n/\log d)})\), and in the logarithmic sample window
+\(n\le\lambda\log d\) every sign pattern is simultaneously
+\(O_{\lambda}(\sqrt n)\).  A profile-normalized fixed-sign theorem extends this
+deterministic sign control to independent non-identical lag variables with
+arbitrary deterministic sub-Gaussian variance envelopes, normalized by
+\((\sum_{|k|<d}\sigma_{i,k}^2)^{1/2}\sqrt{\log(e+d)}\), and its entropy form
+controls every sign family of size \(M\) at scale
+\(O_K(\sqrt{n(1+\log M/\log d)})\), with an almost-sure triangular-array
+version under the summability condition \(\sum_m d_m^{-L_m}<\infty\) and
+explicit polynomial/stretched-exponential dimension schedules for polynomial
+sign families and whole-cube logarithmic windows.  A coefficient-family
+entropy variant replaces signs by arbitrary finite coefficient sets with
+\(\ell^2\)-radius \(R\), giving scale
+\(O_K(R\sqrt{1+\log M/\log d})\), and the same Borel transfer gives eventual
+\(O(R_m)\) control for coefficient catalogs of size at most \(d_m^\alpha\) in
+the polynomial and stretched-exponential dimension schedules.  The
+expected-normalized sampled robust-certificate package also transfers to actual
+full Toeplitz/Hankel operator norm in the
+unbounded-aspect range, because the same fixed-sign theorem with \(n=1\)
+supplies the needed uniform \(O(1)\) bound on the normalized summands; and a
+realization-normalized convex-concentration
+theorem.  The key input is the empirical edge profile
+\[
+  \max_{\omega^d=1}\sum_i
+  |P_i(\omega)|^2/\|T_d(\xi^{(i)})\|_{\mathrm{op}}^2
+  =O(n/\log d)
+\]
+for samples with \(n\le d\), \(\log d=o(n)\), proved by splitting off rare
+low-normalizer samples.  A normalizer-tail criterion shows that this profile,
+and hence \(O(\sqrt n)\) discrepancy, follows for any sub-Gaussian law satisfying
+\(\Pr\{\|T_d(\xi)\|_{\mathrm{op}}<a\,\mathbb E\|T_d(\xi)\|_{\mathrm{op}}\}
+\,\min\{n,\log^2(e+d)\}=o(1)\); the same profile also gives scalar edge-grid sign moments
+\((Ck\,n/\log d)^k\) for every \(2k\)-th moment and a sign-averaged edge
+maximum \(O(\sqrt n)\).  The empirical core is now data-dependent: if \(M_a\)
+is the realized low-normalizer count, then outside the standard \(d^{-A}\)
+events the profile is \(O(n/\log d+M_a\log d)\), and the signing scale is
+\(O(\sqrt{n+M_a\log^2 d})\).  In particular, when
+\(M_a=O(n/\log^2 d)\), the profile, random-sign tail, sign-averaged maximum,
+randomized-search amplification with success-count tails, deterministic certificate, logarithmic-radius
+Hamming stability with sampled robust-center tails, and scalar edge-grid moment bounds all recover the
+\(O(\sqrt n)\) scale.  A deterministic Borel transfer template upgrades every
+eventual edge-grid robust-center count in the full-bandwidth range
+\(d_m/n_m\to\infty\), \(\log d_m=o(n_m)\), to actual Toeplitz/Hankel
+operator-norm robust certificates with the same centers and Hamming radii.  A
+dyadic normalizer refinement now replaces the single
+bad-count penalty by
+\(W_a=\sum_r4^rM_{a,r}+\ell M_{a,\infty}\), \(\ell=\log(e+d)\), so samples
+whose normalizers are only moderately low are charged by their dyadic depth;
+the full profile/signing/moment package holds at scale
+\(O(\sqrt{n+W_a\ell})\), and returns to \(O(\sqrt n)\) whenever
+\(W_a=O(n/\ell)\).  The same dyadic budget now has a one-matrix tail
+criterion: if \(\mu_{d,a}^{\rm dy}=\mathbb E W_a/n\), Markov gives matrix
+failure \(O(d^{-A})+O(\ell\mu_{d,a}^{\rm dy})\), while the large-sample
+condition \(\mu_{d,a}^{\rm dy}\le\theta/\ell\) gives the sharper Bernstein
+cost \(\exp\{-c n/\ell^2\}\).  An inverse-moment criterion further bounds
+\(\mu_{d,a}^{\rm dy}\) by the truncated mass
+\(\mathbb E[1_{\{\|T_d\|<aN_d\}}\min\{(aN_d/\|T_d\|)^2,\ell\}]\), and by
+inverse \(p\)-moments with an explicit logarithmic loss; its Borel form gives
+eventual profiles, sampled robust certificates, robust-fraction tests,
+polynomial-size all-robust batches, and vanishing discarded-fraction tests for
+arbitrary sampled batches under summability of \(\ell_m\nu_{d_m,a}^{(2)}\), with
+the Bernstein replacement when the truncated mass is \(O(1/\ell_m)\).  The finite inverse-moment
+form also carries the
+random-search, success-count, Hamming-stability, robust-fraction, and
+polynomial-batch robust-certificate package under the same matrix exception, and
+allows arbitrary-size sampled batches with discarded fraction
+\(\rho\ge e d^{-\tau}\).
+Its schedule form
+gives all-integer and polynomial
+dimension consequences from polynomial inverse-moment decay, sparse
+stretched-exponential consequences from logarithmic decay, and the critical
+\(\log^3d\) integer-window consequence from \(O(1/\log d)\) truncated mass.
+A power-curve
+sufficient condition now makes this
+checkable directly from one matrix: if
+\(\Pr\{\|T_d(\xi)\|_{\mathrm{op}}<t aN_d\}\le L\ell^{-\gamma}t^\beta\) with
+\(\beta>2\), then \(\mu_{d,a}^{\rm dy}\le C_\beta L\ell^{-\gamma}\); at
+\(\gamma=1\), top-scale low-normalizer mass \(O(1/\log d)\) is compatible with
+the Chernoff transfer whenever \(R>C_\beta L\).  The same power-curve exception
+now carries the finite random-search, success-count, and Hamming-stable
+robust-center package, so the weaker critical-density input yields actual
+randomized certificates, not only a deterministic existence bound.  Its finite
+abundance, robust-fraction, and polynomial-batch forms also match the Chernoff
+branch: \(O_{\rho,S}(1)\) sampled signs certify a \(1-\rho\) robust fraction
+with added \(d^{-S}\) failure, and \(M\le d^\beta\) batches are entirely robust
+with added \(d^{-\sigma}\) failure under the same power-curve matrix exception.
+Its
+Borel--Cantelli form gives eventual randomized certificates whenever
+\(\sum_m(d_m^{-A}+\ell_m^{1-\gamma})<\infty\); in the critical density
+\(\gamma=1\), the Bernstein form instead needs only
+\(\sum_m[d_m^{-A}+\exp\{-c n_m/\ell_m^2\}]<\infty\), giving all-integer
+eventual certificates from \(n(d)\gtrsim\log^3 d\).  Adding
+\(\sum_m d_m^{-\alpha}<\infty\) upgrades this to actual sampled-list success:
+\(O_\alpha(1)\) random signs per dimension eventually contain robust
+certificates almost surely, including in the critical power-curve regime.  The
+same Borel branch now carries the finite abundance package: after adding
+\(\sum_m d_m^{-S}<\infty\), \(O_{\rho,S}(1)\) sampled signs eventually have a
+\(1-\rho\) robust-center fraction, and after adding
+\(\sum_m d_m^{-\sigma}<\infty\), every sign in any batch \(M_m\le d_m^\beta\)
+is eventually robust.  More generally, a power-curve sampled-count theorem allows
+growing batches \(M_m\) and thresholds \(r_m\): if the sampled-list tail and
+\(\binom{M_m}{r_m}d_m^{-B r_m}\) are summable, then eventually the whole list is
+controlled and at least \(M_m-r_m+1\) sampled signs are good robust centers.  The
+explicit full-integer critical corollary therefore
+gives the same robust-fraction conclusion for \(S>1\), and all-robust polynomial
+batches for \(\sigma>1\), from the same \(n(d)\gtrsim\log^3 d\) window; its
+sampled-count variant also allows arbitrary batch sizes with a discarded
+fraction \(\rho_d\to0\) whenever \(\rho_d\gtrsim d^{-\tau}\) for any
+\(\tau<B-1\).  On stretched-exponential
+dimension schedules \(d_m\ge\exp(c m^\kappa)\), this becomes explicit:
+\(\gamma>1+1/\kappa\) is enough in the Markov form, while the critical
+\(\gamma=1\) Bernstein form follows from any \(n_m\gtrsim\ell_m^{2+\rho}\),
+\(\rho>0\); because \(\sum_m d_m^{-\alpha}<\infty\) for every \(\alpha>0\) on
+such schedules, the same sparse windows give actual sampled-list robust
+certificates, robust fractions, and all-robust polynomial batches from the
+corresponding finite random sign trials.  The growing-count sparse variant also
+handles polynomial-in-\(d_m\) and subcritical stretched-exponential sampled
+batches after the binomial count tail is summable; taking
+\(r_m=\lceil\rho M_m\rceil\) gives an eventual \(1-\rho\) robust-center fraction
+for arbitrary sampled batch sizes, with only the list maximum retaining its
+\(\log M_m\) entropy factor.  Quantitatively, the finite-size profile failure is
+bounded by \(C d^{-A}+p_d(a)\min\{n,\log^2(e+d)\}\), and the same exceptional
+probability now carries the finite random-search and logarithmic Hamming-stable
+center package.  Thus a batch of \(M\) independent sign trials has the
+entropy-sensitive maximum bound and amplifies the square-root failure to
+\(d^{-AM}\), with matching binomial tails for successful certificates and robust
+centers; equivalently, \(O_B(1)\) sampled signs find a logarithmically robust
+certificate with added failure \(d^{-B}\).  The finite non-Chernoff package now
+also has the same abundance, robust-fraction, and polynomial-batch forms as the
+Chernoff branch: outside the same matrix exception and explicit sign tails,
+\(O_{\rho,S}(1)\) sampled signs certify a \(1-\rho\) robust fraction with
+additional \(d^{-S}\) failure, and every sign in a batch \(M\le d^\beta\) is
+robust with additional \(d^{-\sigma}\) failure.  On sparse power-curve,
+logarithmic-window, and Chernoff schedules, the same
+\(r_m=\lceil\rho M_m\rceil\) count trick gives eventual \(1-\rho\)
+robust-center fractions for arbitrary sampled batch sizes, again with only the
+whole-list maximum retaining its \(\log M_m\) factor; in the sparse power-curve
+and Chernoff count branches the discarded fraction may even vary with \(m\) and
+tend to zero under any power threshold \(\rho_m\gtrsim d_m^{-\tau}\) with
+\(\tau<B\).
+Consequently a polylogarithmic
+lower-tail rate \(p_d(a)\lesssim(\log d)^{-B}\), \(B>2\), gives a profile
+failure \(O((\log d)^{2-B})\), while in \(n=O(\log d)\) windows \(B>1\)
+suffices, and polynomial tails give polynomial failure with any smaller
+exponent; these same explicit rates now apply to the full random-search and
+robust-center package.  The summable version gives almost-sure eventual edge profiles along
+triangular arrays, and carries the same random-search and logarithmic
+Hamming-stable robust-center package eventually on the same matrix array; with
+\(\sum_m d_m^{-\alpha}<\infty\), \(O_\alpha(1)\) sampled signs per dimension
+themselves eventually find robust certificates almost surely over both the
+matrices and sign samples.  The non-Chernoff count form also handles growing
+sampled batches: once the sampled-list maximum and binomial count tails are
+summable, all but the prescribed number of sampled signs are eventually good and
+robust; under polynomial lower-normalizer tails, polynomial-size batches are
+eventually entirely robust along the full integer sequence whenever the
+sign-count exponent beats the batch growth by more than one, and along
+polynomial dimension schedules \(d_m\gtrsim m^\kappa\) whenever
+\((A-\beta)\kappa>1\).  Taking \(r_d=\lceil\rho M_d\rceil\) instead gives
+eventual \(1-\rho\) robust-center fractions for arbitrary sampled batch sizes
+along the full integer sequence as soon as the count exponent is \(A>1\), and
+the same full-integer polynomial-tail count theorem lets \(\rho_d\to0\) whenever
+\(\rho_d\gtrsim d^{-\tau}\) for any \(\tau<A-1\), again with no upper bound on
+the sampled batch size.
+Polynomial lower-normalizer tails \(p_d(a)\lesssim d^{-B}\)
+with \(B>1\) need no dimension sparsification: the profile holds eventually
+along the full sequence of integer dimensions.  More generally, polynomial tails
+make this automatic along polynomial dimension schedules
+\(d_m\gtrsim m^\kappa\) whenever \(B\kappa>1\), after choosing the auxiliary
+matrix-event exponent \(A\kappa>1\).  The actual sampled-list version on the
+same polynomial schedules adds only \(\alpha\kappa>1\), so \(O_\alpha(1)\)
+random signs eventually contain robust certificates.  The matching
+robust-fraction version needs only \(S\kappa>1\) for the fraction-confidence
+summability, and under polynomial lower-normalizer tails it works in every
+admissible sample window.  Polynomial lower-normalizer tails, as well
+as logarithmic tails with exponent \(B>3\), make the same conclusion automatic
+along exponentially sparse dimension schedules; because \(\sum_m d_m^{-\alpha}\)
+is then summable for every \(\alpha>0\), the sparse exponential schedules also
+give actual sampled-list robust certificates from a constant number of sign
+trials.  In logarithmic sample windows
+\(n_m\lesssim\log^\gamma d_m\) along stretched-exponential schedules
+\(d_m\ge\exp(c m^\kappa)\), the sparse almost-sure logarithmic threshold
+improves to \(B>\min\{\gamma,2\}+1/\kappa\); on log-corrected schedules
+\(d_m\ge\exp(c m^\kappa(\log m)^\lambda)\), the endpoint
+\(\kappa(B-\min\{\gamma,2\})=1\) is allowed when
+\(\lambda(B-\min\{\gamma,2\})>1\); if this endpoint is itself critical, a
+second \(\log\log m\) correction recovers the next integral-test boundary.  A
+summability-only sampled-count form covers arbitrary schedules with
+\(\sum_m(\log(e+d_m))^{\min\{\gamma,2\}-B}<\infty\), equivalently it is enough
+to design a lower logarithmic profile \(h_m\le\log(e+d_m)\) with
+\(\sum_mh_m^{\min\{\gamma,2\}-B}<\infty\).  In the raw summability form, fixed
+robust fractions for arbitrary sampled batches need only
+\(\sum_m d_m^{-(A-\tau_0)}<\infty\) for some \(0<\tau_0<A\), in addition to the
+logarithmic matrix and sampled-list tails.  The same schedules give actual
+sampled-list robust certificates from \(O_\alpha(1)\) signs for every
+\(\alpha>0\), vanishing discarded-fraction robust-center tests for arbitrary
+sampled batches, and the log-corrected sampled-count forms support all-robust
+polynomial-in-\(d_m\), subcritical log-corrected, and second-order log-corrected
+stretched-exponential batches.  The matching
+robust-fraction version gives, for every \(S>0\)
+and \(0<\rho\le1\), a constant-size sampled list with an eventual \(1-\rho\)
+fraction of logarithmically robust centers.  The matching sparse count version
+also supports growing batches:
+polynomial-in-\(d_m\) batches are eventually entirely robust whenever
+\(\beta<A\), and \(M_m\le\exp(bm^\sigma)\) is allowed when
+\(\sigma<\kappa\), or \(\sigma=\kappa\) and \(b<Ac\).
+In the large-sample window
+\(n/\log^2 d\to\infty\), there is a
+tunable Chernoff tradeoff: if \(p_d(a)\le\theta/\log^2 d\) and the empirical
+budget is \(Rn/\log^2 d\) with \(R\ge1\) and \(R>\theta\), the excess-count cost is
+\(\exp\{-I(R,\theta)n/\log^2 d\}\), \(I(R,\theta)=R\log(R/\theta)-R+\theta\).
+In particular \(p_d(a)\le L/\log^2 d\) permits any relative excess budget
+\((1+\eta)Ln/\log^2 d\) with cost
+\(\exp\{-Lh(\eta)n/\log^2 d\}\), \(h(\eta)=(1+\eta)\log(1+\eta)-\eta\);
+taking \(\eta=1\) gives profile failure
+\(O(d^{-A}+\exp\{-c_Ln/\log^2 d\})\), and the same Chernoff-improved
+exception controls the random-search and robust-center certificate package.
+The finite Chernoff search package is now joint in matrices and signs:
+sampled-list maxima add only the \(e^{-u}\) sign tail, while good-sign and
+robust-center counts add the same binomial tails as in the deterministic
+edge-profile theorem.  In particular, \(O_B(1)\) sampled signs find a robust
+certificate with additional failure \(d^{-B}\); more generally, for any batch
+and fraction \(\rho\), the sampled-list maximum and a \(1-\rho\) robust fraction
+hold simultaneously outside the explicit binomial tail
+\(\binom{M}{\lceil\rho M\rceil}d^{-B\lceil\rho M\rceil}\).  Choosing
+\(M=O_{\rho,S}(1)\) and the count exponent large enough gives the same
+\(1-\rho\) robust fraction with additional failure \(d^{-S}\), and any finite batch
+\(M\le d^\beta\) is entirely robust with additional failure \(d^{-\sigma}\)
+after choosing the count exponent above \(\beta\).  The corresponding Borel count
+form handles growing batches: under the summable maximum and binomial
+failure-count tails, all but the prescribed number of sampled signs are
+eventually robust centers.  In particular the constant-size
+\(1-\rho\)-robust-fraction test persists almost surely whenever
+\(\sum_m d_m^{-S}<\infty\); on polynomial dimension schedules
+\(d_m\gtrsim m^\kappa\), this is the condition \(S\kappa>1\).  Polynomial-size batches are eventually entirely
+robust when the sign-tail exponent beats the batch growth by more than one.  The
+summable Chernoff version gives almost-sure eventual edge profiles, signing
+certificates, scalar moments, random search, and robust-center certificates under
+\(\sum_m(d_m^{-A}+\exp\{-c n_m/\log^2 d_m\})<\infty\).  Adding
+\(\sum_m d_m^{-\alpha}<\infty\) gives actual sampled-list robust certificates
+from \(O_\alpha(1)\) random signs per dimension; along all integer dimensions
+this adds the condition \(\alpha>1\).  Equivalently, once
+\(\sum_m d_m^{-A}<\infty\), the critical-log window
+\(n_m\gtrsim\log^2(d_m)\log m\) is enough, and on the full integer sequence
+\(n(d)\gtrsim\log^3d\) also supports arbitrary sampled batches with robust-center
+fractions tending to one when \(\rho_d\gtrsim d^{-\tau}\) for any \(\tau<B-1\);
+along stretched-exponential
+dimension schedules any window \(n_m\gtrsim\log^{2+\rho}d_m\), \(\rho>0\), is
+enough, and the same sparse schedules give actual sampled-list certificates for
+every \(\alpha>0\).  They also give the constant-size \(1-\rho\)
+robust-fraction test for every confidence exponent \(S>0\), removing the
+all-integer summability restriction \(S>1\).  The sparse count version also improves growing-batch
+search: if \(M_m\le d_m^\beta\), then every sampled sign is eventually robust
+as soon as the sign-count exponent satisfies \(B>\beta\), and batches
+\(M_m\le\exp(bm^\sigma)\) are allowed whenever \(\sigma<\kappa\), or
+\(\sigma=\kappa\) and \(b<Bc_0\).  Along all integer dimensions
+\(n(d)\gtrsim\log^3 d\) suffices, with \(\alpha>1\) for the actual sampled-list version.
+Convex
+concentration verifies this condition, so the
+full realization-normalized theorem holds for real or complex Gaussian and
+bounded coefficient laws, for Rademacher coefficients, and now also for
+strongly log-concave real or complex coefficient laws, when
+\(n\le d\le e^{o(n)}\) and \(d/n\to\infty\). A finite-convolution closure also
+covers fixed independent linear combinations of convex-concentrated laws, such
+as Gaussian plus Rademacher or bounded noise, after variance normalization.
+Bounded Gaussian scale mixtures with volatility bounded above and below are
+covered by a separate conditional-Gaussian lower-tail argument. Arbitrary
+positive matrix-level radial amplitudes are also allowed, with no moment or
+tail assumptions, because they cancel pathwise under realization normalization.
+The heterogeneous lower-normalizer library theorem also removes the identical-law
+restriction: the matrices may be drawn from different laws in any uniform
+convex, strongly log-concave, finite-convolution, bounded Gaussian
+scale-mixture, or other polynomial lower-normalizer library, and finite
+matrix-level mixtures are included by conditioning on the selected laws. The
+uniform-library input can now be relaxed
+to an aggregate lower-tail budget
+\(\sum_i p_{d,i}(a)\min\{1,\log^2(e+d)/n\}=o(1)\), allowing sparse bad-law
+contamination or nonuniform law quality. A sharper heterogeneous dyadic-budget
+variant charges each bad law by depth below the cutoff and only requires
+\(\log(e+d)n^{-1}\sum_i\mathbb E Y_{d,i,a}^{\rm dy}\to0\), allowing top-scale
+low-normalizer contamination at density \(o(1/\log d)\). The dyadic budget is
+checkable from the aggregate truncated inverse-square normalizer mass
+\(\log(e+d)n^{-1}\sum_i\nu_{d,i,a}^{(2)}\to0\), with the same explicit
+inverse-\(p\)-moment loss as in the iid theory. Its Borel sampled-operator
+schedule gives eventual Toeplitz/Hankel robust centers under summable aggregate
+inverse-moment matrix failure and sampled-count tails; the extracted fraction
+form gives fixed robust fractions for arbitrary sampled batch sizes, vanishing
+discarded fractions, and all-robust polynomial batches under the same matrix
+budget plus a summable sign-tail power. A batch-maximal heterogeneous
+inverse-moment form additionally keeps the whole sampled-list maximum at the
+entropy-sensitive scale, both on the edge grid and in full Toeplitz/Hankel
+operator norm; its schedule corollary gives explicit all-integer,
+polynomial-dimension, stretched-exponential, and Bernstein-window thresholds for
+fixed fractions, vanishing discarded fractions, and all-robust polynomial
+batches. The inverse-\(p\) schedule version replaces the aggregate inverse-square
+budget by explicit average inverse-\(p\) decay, with stretched-exponential
+threshold \(B>1+(2-p)_+/2+1/\kappa\). A random-environment version permits the
+coefficient laws themselves to be selected randomly, including random sparse
+contamination patterns, provided the empirical inverse-\(p\) budget exceeds the
+deterministic schedule only on summably many dimensions. The expectation
+criterion verifies those tails from \(\sum m^B\beta_m\),
+\(\sum d_m^B\beta_m\), or \(\sum\ell_m^B\beta_m\) summability, and countable
+random law catalogs reduce to marginal catalog-weight averages. If the catalog
+choices are independent, or are exposed predictably with deterministic one-step
+envelopes, and the selected inverse-\(p\) weights are bounded by \(L_m\),
+Bernstein/Freedman criteria replace the Markov loss by the sharper tail
+\(\exp(-c n_m\alpha_m/L_m)\); a truncated Freedman variant also covers
+unbounded predictable catalogs after adding a summable excess-tail budget, with
+conditional moment envelopes giving a direct check of that excess and an
+automatic truncation choice reducing it to one moment series. The
+active-menu version makes the same automatic truncation simultaneous over
+finite predictable-catalog menus, paying \(J_m\) in the environment,
+matrix, and sampled-sign summability terms; the active-prefix schedule
+corollary gives explicit all-integer, polynomial-dimension,
+stretched-exponential, and logarithmic-prefix thresholds, and a random
+active-count version adds only a summable overflow-tail requirement, with
+sub-Poisson proposal-count envelopes and predictable one-step intensity budgets
+providing direct overflow tests, even when the intensity budget itself is
+certified outside a summable random exceptional set; moment tests make those
+random intensity-envelope failures directly checkable, while bounded and
+truncated scalar Freedman tests replace moments by predictable mean,
+square-function, jump, and excess envelopes; automatic moment truncation then
+gives concrete all-integer, polynomial-dimension, stretched-exponential, and
+logarithmic-prefix rate tests for heavy-tailed predictable loads, and the
+deterministic active prefix can be chosen directly as
+\(\lceil\max\{2\nu_m,Q\log(e+m)\}\rceil\); an end-to-end
+corollary couples this automatic prefix with the active-menu catalog moment
+budget, so the sampled Toeplitz/Hankel certificates follow from the activation
+and catalog moment series plus the matrix/sign tail schedules, with concrete
+rate tests for all-integer, polynomial-dimension, stretched-exponential
+polynomial-active, and logarithmic-active schedules, plus sample-size lower
+bounds and unbounded-aspect compatibility windows under real aggregate
+catalog-moment growth exponents, with per-stream row-catalog budgets converted
+by the automatic prefix size and the remaining mean-budget parameter tuned from
+the per-stream first-moment decay exponent.
+The same
+heterogeneous,
+average-budget, dyadic-budget, and inverse-moment-budget inputs now have the
+sampled operator-certificate package:
+constant-size searches, fixed-size robust-fraction tests, polynomial-size
+all-robust sampled batches, and almost-sure sampled-batch schedules. In these
+same concentration classes,
+constant-size sampled sign lists also contain
+logarithmic-radius Hamming balls that are robust certificates for both full
+Toeplitz and full Hankel operator norm, with probability tending to one; fixed
+lists have \(1-\rho\) robust-center fractions, and polynomial-size sampled
+batches are entirely robust with high probability. The same lower-tail input now
+has an almost-sure sampled-batch schedule form: on summable schedules,
+and in particular on stretched-exponential dimension schedules, polynomial-size
+sampled batches are eventually entirely Toeplitz/Hankel operator-robust. Thus the
+remaining open full-bandwidth problem is narrowed to arbitrary sub-Gaussian laws
+without this aggregate lower-tail, dyadic-depth, or inverse-moment input, even
+after allowing heterogeneous uniform libraries and sparse bad-law budgets, where
+deterministic contraction tools still certify only
+\(\sqrt{n\log(e+d/n)}\).  The paper
+explains why the intrinsic-freeness theory of
+Bandeira--Boedihardjo--van Handel does not by itself reach $O(\sqrt n)$
+(Toeplitz matrices are Hilbert--Schmidt delocalized, so the free-deviation
+correction is not lower order), and adds an edge-variance criterion: if the
+realization-normalized Fourier samples have empirical square mass
+\(O(n/\log d)\) at every edge node, then independent signs already give
+\(O(\sqrt n)\).  The residual input is therefore a one-matrix low-normalizer
+tail beyond these concentration, finite-convolution, and bounded scale-mixture
+classes, not another generic discrepancy
+theorem.  The moment section now proves exact fixed-edge fourth- and
+sixth-moment identities.  The fourth identity is
+\[
+\mathbb E_\varepsilon\Big|\sum_i\varepsilon_i a_i\Big|^4
+=2\Big(\sum_i|a_i|^2\Big)^2+\Big|\sum_i a_i^2\Big|^2
+-2\sum_i|a_i|^4,
+\]
+and proves that in the expected-normalized model the phase-square term
+\(\max_{\omega^d=1,\omega^2\ne1}|\sum_i v_i(\omega)^2|\) is
+\(O(\sqrt{n/\log d})\) with high probability, yielding the uniform
+expected-normalized fourth-moment profile
+\(\max_{\omega^d=1}\mathbb E_\varepsilon|\sum_i\varepsilon_i v_i(\omega)|^4
+ =O((n/\log d)^2)\) and the non-real complex improvement with leading constant
+2.  The sixth identity adds only the weighted phase-square statistic and
+diagonal fourth/sixth masses, gives a perturbative criterion for the complex
+constant \(6\), and combines with phase-square cancellation plus a uniform
+expected-normalized root-entry bound to give
+\(\max_{\omega^d=1}\mathbb E_\varepsilon|\sum_i\varepsilon_i v_i(\omega)|^6
+=O((n/\log d)^3)\) in the expected-normalized model, with the non-real
+refinement
+\(\mathbb E_\varepsilon|\sum_i\varepsilon_i v_i(\omega)|^6
+=6(\sum_i|v_i(\omega)|^2)^3+O((n/\log d)^2)\).  A final scalar moment corollary
+gives, simultaneously for every \(k\ge1\),
+\[
+\max_{\omega^d=1}\mathbb E_\varepsilon
+  \Big|\sum_i\varepsilon_i v_i(\omega)\Big|^{2k}
+\le \big(Ck\,n/\log d\big)^k
+\]
+on the same expected-normalized edge-profile event.  A deterministic max-edge
+moment corollary sums these scalar bounds over the \(d\) edge nodes, choosing
+\(k\asymp\log d\) recovers the high-probability edge-control criterion by Markov,
+and the expected-normalized edge-maximum package gives an \(O(\sqrt n)\)
+sign-averaged edge maximum, \(d^{-B}\) sign-tail, deterministic signing, and
+constant-size sampled robust certificates with logarithmic Hamming stability on
+the same high-probability matrix event.  Thus the residual higher-moment route must control the higher
+pairing analogues uniformly over all edge nodes in the realization-normalized
+model, not merely scalar edge moments under the variance profile.  The meeting
+remark separates the
+disk-count fluctuation problem of paper 5 from the one-symbol Gaussian boundary
+small-ball input proved in paper 16.
+
+\textbf{15. \texttt{UDC\_General\_Position\_v1.pdf}} (13pp) and
+\texttt{UDC\_Curved\_Truncations\_v1.pdf} (19pp, Thread C).
+The interpolation law beyond the orthogonal model for general-position flat
+truncations, with a fixed-family curved companion and curvature-band-uniform
+curved lower/slab constants left open.  The first paper treats a $C^2$ strictly convex body with curvatures
+in a fixed band, truncated by $k$ half-spaces in general position along a
+$j$-stratum ($j=n-1-k$), and proves the critical scaling is
+$\Theta((\log N/N)^{2/(2n-j)})$, exponent and logarithm exact; the mechanism
+replacing the orthogonal model's axis windows and reflection fraction $2^{-k}$
+is the conjugate frame (dual basis to the truncating normals) and the normalized
+solid angle of the normal cone, with a proof that John-position rounding
+provably cannot reduce to the orthogonal case.  The companion removes the
+remaining flatness by treating a \emph{fixed} smooth strictly convex truncation
+family: the stratum cap still has volume $\asymp h^{(2n-j)/2}$ and the
+constraint slice stays admissible with fixed-configuration constants (closing the slicing induction), via a
+steep/shallow trichotomy at the angular threshold $\sqrt h$, so the same law
+holds for fixed curved data.  A constant uniform over all curved families with
+curvatures in a fixed band, near the multiply-tangent directions, is stated as
+the residual open estimate.  The curved paper now also proves a conditional
+uniformity theorem under resolved multi-tangent geometry (uniform slice-curvature
+floor plus projected-normal Gram lower bound), records that every finite atlas
+and every compact resolved atlas of fixed curved configurations is uniform with
+atlas-dependent constants, proves that resolved geometry is stable under
+\(C^2\)-small perturbations, so every compact \(C^2\)-continuous resolved atlas
+is uniform by a finite-subcover argument, extends this to compact-stage
+uniformity on \(\sigma\)-compact exhaustive resolved atlases, and
+proves a fully uniform one-curved-cut corollary when the cut splays quantitatively away
+from \(\partial K\), now
+extended to the curvature-dominated oblique one-cut regime
+\(c_K-\max(\langle\nu_K,n_1\rangle,0)C_g/\gamma_0>0\), with
+nonobtuse contact \(\langle\nu_K,n_1\rangle\le0\) as an explicit corollary.
+The remaining
+uniformity question is localized to one-cut curvature-separation failures and
+genuine multi-tangent degeneration.
+
+\textbf{16. \texttt{Banded\_Toeplitz\_Conditioning\_v1.pdf}} (102pp, Thread B).
+The conditioning (least-singular-value) question for random balanced banded
+Toeplitz matrices, addressing the balanced-regime gap left open by paper 5.  The
+current draft proves the finite-section reduction on the zero-winding/stable
+event, a sharp Kac--Rice Gaussian single-arc boundary small-ball estimate away
+from \(z=\pm1\), the matching away-from-endpoint first moment for crossings, an
+explicit fixed-bulk Kac--Rice down-crossing density
+\(t\sqrt N/\sqrt{12\pi}\) per unit arclength, and the corresponding
+continuum-scale fixed-bulk limit
+\((2\pi-4\delta)\tau/\sqrt{12\pi}\) at \(t=\tau/\sqrt N\),
+the resulting fixed-bulk first-moment probability upper bound with the same
+down-crossing constant, and a Paley--Zygmund transfer showing that a
+second-factorial-moment bound for the fixed-bulk down-crossing count gives a
+matching small-\(\tau\) fixed-bulk lower tail with leading constant
+\((2\pi-4\delta)/\sqrt{12\pi}\). Combining the two gives the fixed-bulk
+first-order probability law as \(\tau\downarrow0\); combining the fixed-bulk
+upper bound with endpoint-neighborhood separation gives the sharp whole-circle
+continuum upper constant \(\sqrt{\pi/3}\,\tau\), and if the same factorial
+moment bound is uniform as \(\delta\downarrow0\), the whole-circle first-order
+probability law follows as \(\tau\downarrow0\). The sharp global upper tail also
+implies that the inverse scaled minimum
+\((\sqrt N\min_{\mathbb T}|G_m|)^{-1}\) is uniformly weak \(L^1\), with
+finite-window sharp weak constant \(\sqrt{\pi/3}\), gives inverse upper-tail
+quantiles \(O(\alpha^{-1})\) with sharp limsup constant
+\(\sqrt{\pi/3}\,\alpha^{-1}\), gives simultaneous finite-batch weak-\(L^1\)
+and quantile bounds with the same sharp constant times the batch size, gives
+finite-batch bad-clearance count and order-statistic quantile bounds, summable
+first-bad, total bad-mass, jump/Stieltjes-weighted and powered clearance-deficit mass,
+normalized deficit-budget, subcritical inverse-clearance mass, Stieltjes inverse-gauge mass,
+confidence/menu and aggregate-menu budgets, and sparse bad-count growing-batch clearance schedules,
+subcritical inverse-power bounds, and critical
+truncated/logarithmic inverse-moment bounds with the same linear batch-size
+factor, gives critical
+truncated inverse expectation \(O(\log R)\) with the
+same sharp finite-window coefficient, gives uniform
+logarithmic inverse moments of every positive order with limsup constant at
+most \(\sqrt{\pi/3}\Gamma(p+1)\), and hence uniform negative
+moments of every order \(q<1\) for
+\(\sqrt N\min_{\mathbb T}|G_m|\), with small-window coefficient
+\(\sqrt{\pi/3}/(1-q)\). It also includes the
+endpoint Kac--Rice estimate, endpoint lower sharpness, the exact bivariate
+two-endpoint Gaussian formula and sharp second-order expansion
+\(\mathbb P\{\min(|G_m(1)|,|G_m(-1)|)\le t\}
+=2\sqrt{2/\pi}\,t/\sqrt N-(2/\pi)t^2/\sqrt{N^2-\rho_N^2}
++O(t^3/N^{3/2})\), where \(N=m+1\) and
+\(\rho_N=\sum_{j=0}^{N-1}(-1)^j\).  At \(t=\tau/\sqrt N\) this gives endpoint
+probability \(2\sqrt{2/\pi}\,\tau/N+O_\tau(N^{-2})\), separating the parity
+endpoints from the \(O(1)\) non-real continuum law; the full natural
+\(O(1/m)\) endpoint neighborhoods also contribute only \(O_{C_0}(\tau/N)\).
+The draft also proves the
+global endpoint floor, the sharp uniform
+Gaussian boundary small-ball law, bounded-density fixed-point,
+deterministic-grid, deterministic and independent-random subquadratic-grid-miss,
+quadratic, independent uniform random-grid, stratified random-grid, variance-only, and
+speed-tail grid detection,
+and speed-conditional local/uniform
+anti-concentration, the
+exact Gaussian \(N\)-th-root-grid law, including the full-grid endpoint
+survival factors, showing the \(t^2\) pointwise grid artifact and its
+fixed pointwise Rayleigh moment expansion and exact \(N^{-1}\) continuum-scale grid
+coefficient, the
+reduction from a polynomial speed tail to the polynomial-scale boundary law,
+all-polynomial-moment and subexponential bounded-density verifications of that
+speed-tail input, the variance-only polynomial derivative cutoff, tail-free
+polynomial boundary separation, fixed-power and arbitrary-confidence
+polynomial-grid detection, plus the resulting sampling bracket, the
+bounded-density conditioning theorem under circle clearance, and the
+endpoint/order-\(q\) root-of-unity, fixed-grid, and bounded-denominator
+Rademacher lattice anti-concentration scales, the matching \(N^{-1}\)
+fixed-radius lower bound at every fixed non-real rational angle, and the exact
+fixed-root atom law: at a primitive \(q\)-th root the zero atom has a local
+limit \(\gamma_qN^{-\varphi(q)/2}\), with an explicit kernel-covolume constant,
+on the admissible parity residue classes and is absent on the inadmissible
+classes; finite sets of cyclotomic orders have leading exact-zero asymptotics
+on their first nonempty totient layer; consequently fixed bounded-denominator
+non-real grids have a peeled exact-zero coefficient after removing all primitive
+orders below any fixed cyclotomic degree threshold.  The unpeeled fixed-\(Q\)
+union is now expanded through the second order:
+\(c_Q(N)/N+e_Q(N)/N^2+o_Q(N^{-2})\).  The leading coefficient \(c_Q(N)\) is the
+sum of the primitive quadratic pair constants: \(2\sqrt3/\pi\) from each of
+\(q=3,6\) on \(3\mid N\), and \(4/\pi\) from \(q=4\) on \(4\mid N\).  The
+second coefficient \(e_Q(N)\) combines the second-order corrections to those
+three single atoms, their pairwise overlaps
+\((48/\pi^2\) for \(E_3\cap E_6\) on \(6\mid N\), and \(8\sqrt3/\pi^2\) for
+\(E_3\cap E_4\) and \(E_4\cap E_6\) on \(12\mid N)\), and the first
+nonquadratic layer.  After removing cyclotomic degree two, that layer is also
+explicit: primitive orders \(5,8,10,12\) give the complete \(N^{-2}\)
+coefficient on their admissible divisibility classes.  Adding the two endpoints
+gives the full bounded-denominator root-of-unity exact-zero expansion through
+order \(N^{-1}\): an exact central-binomial endpoint-union term plus the same
+non-real coefficient \(c_Q(N)/N\).
+Therefore, for standard Gaussian coefficients, the arbitrary fixed
+polynomial-in-\(n\) conditioning conclusion on the event \(\{\nu=r\}\) is now
+unconditional, using the Konyagin--Schlag circle-clearance estimate plus a
+deterministic uniform finite-section threshold under a clearance floor.  For
+non-Gaussian bounded-density laws satisfying the same
+circle-clearance input, the same finite-section conclusion now follows without
+any tail assumption beyond variance one; the finite-grid, speed-cutoff
+continuum, variance-only boundary separation with explicit
+\(O_{A,K}(m^{-2(A-1)/3})\) exceptional probability and grid detection with
+\(O_\delta(m^{1-2\delta})\) miss probability, the finite-confidence
+variance-only derivative cutoff
+\(\Pr\{\sup_{\mathbb T}|G_m'|>R\}\le Cm^4/R^2\), its
+\(\eta\)-level grid detector at mesh
+\(O(\tau\sqrt\eta/(m^2\sqrt N))\), and its bounded-density boundary loss
+\(\eta+C_{B,K}mt/\sqrt\eta\), fixed-power
+\(O_\beta(N^{5-2\beta})\) miss rates for \(\beta>5/2\), equivalently
+\(O_A(m^{-A})\) after \(O_{A,\tau}(N^{(A+5)/2})\) grid points, and under a
+natural speed tail the sharper \(O_{A,\tau}(N^2\sqrt{\log N})\) grid
+sufficiency with the same polynomial miss probability, while independent
+uniform random grids have the corresponding
+\(O_{A,\tau}(N^2(\log N)^{3/2})\) sufficiency and stratified one-point-per-cell
+random grids avoid that coupon overhead at the deterministic
+\(O_{A,\tau}(N^2\sqrt{\log N})\) scale; speed-tail
+boundary/grid reductions, deterministic sampling brackets, all-polynomial-moment speed-tail, subexponential
+speed-tail, variance-only cutoff, and
+bounded-density-conditioning theorem under clearance are proved.  The stable-event
+conditioning loss is now quantitative and tunable: if the clearance event fails
+with probability \(q_m\), the additive loss is
+\(q_m+C_{A,K}m^{-2(A-1)/3}+(m+1)/R_m^2\), hence the coefficient-size term may be
+made \(O(m^{-D})\) for any fixed \(D\) after enlarging only the deterministic
+threshold; choosing the boundary floor and envelope together gives the packaged
+loss \(q_m+O_D(m^{-D})\), and conditioning on \(\{\nu=r\}\) divides this loss by
+\(\Pr\{\nu=r\}\).  The
+cutoff-free non-Gaussian speed/crossing law remains open for the full
+polynomial-scale boundary small-ball theorem.  Sharp
+constants, anti-clustering/decorrelation for the global two-sided boundary
+minimum law, continuum non-Gaussian universality at full bounded-density
+generality, and the continuum/local-CLT discrete analogue beyond
+bounded-denominator lattice scales remain open, and the result is not an
+unconditional high-probability resolution of balanced stability.
+
+\textbf{17. \texttt{Master\_File\_for\_Solving\_IV\_Surface\_and\_Options\_Open\_Problems.pdf}}
+(286pp, Thread D).  A new options-market master file saved in
+\texttt{paper17/}.  It now includes a repo-local imported theorem bank under
+\texttt{paper17/imported\_results/}, with a manifest distinguishing verified
+packets from candidates still needing a final skeptic gate.  It records the
+local IV solved-result bank from \texttt{iv\_stoch\_research} and companion
+workspaces (SSVI/eSSVI no-arbitrage, Lee/Benaim--Friz wings,
+BBF short-time harmonic mean, one-half slope, Heston ATM skew, local-variance
+Jensen gap, variance/VIX convexity adjustments, CIR spectral skew decay,
+CIR-versus-lognormal-vol discrimination, rough-volatility short-time skew, and
+large-maturity flattening), states 100 stable open problems across static
+surface geometry, IV dynamics, short-maturity/event asymptotics, rough/Volterra
+volatility, wings and moment explosions, IV percentiles, gamma and hedging,
+robust/MOT pricing, quote microstructure, and learning/calibration/formal
+verification, proves the finite-grid arbitrage-free projection theorem for
+quote repair, adds a distribution-free finite-sample theorem package for
+surface IV percentile ranks and confidence bands, adds a finite-mesh
+gamma-carry theorem package with transaction-cost lower bounds and a local-time
+limit, adds a finite-scenario robust-pricing/MOT package with bid-ask surface
+uncertainty, frictional hedge libraries, roughness budgets, and quote-error
+multiplier allocation, adds a distribution-free opening-price and opening-IV
+surface package using conformal prediction bands, Lipschitz price transfer, and
+overnight tail reserves, adds a finite bid-ask no-arbitrage feasibility and
+liquidity-weighted repair package with Farkas certificates, interval relaxation,
+and one-quote influence bounds, adds a finite-sample density-recovery package
+with no-arbitrage confidence intervals for strike-bin masses and a lowest-strike
+atom bound, adds a certified implied-volatility inversion package with
+price-interval inversion, vega-stability, and Greek interval propagation, adds a
+finite-library data-snooping control package with holdout lower confidence
+bounds, block validation, and familywise signal gates, adds a latency-aware
+surface risk package with deterministic and high-probability stale-surface
+pricing reserves, Greek reserves, and execution gates, adds an exchange-comparable
+surface-coordinate package with forward-normalized call coordinates, gauge
+invariance, common venue polytopes, and repair-stability bounds, adds a short-end
+skew-exponent diagnostics package with log-slope confidence sets, Hurst intervals,
+second-order extrapolation bands, and finite model-class rejection certificates,
+adds a finite wing-envelope and tail-reserve package with no-arbitrage wing
+completion polytopes, certified finite-strike wing-slope intervals, cutoff
+variance-swap reserves, and tail-robust calibration gates, adds a robust VIX
+convexity-envelope package with bucketed moment/tail LP bounds for
+\(\mathbb E[\sqrt W]\), finite-support exact bounds, convexity-gap reserves, and VIX
+calibration gates, adds a monitored-barrier and IV-factor superhedging package
+with finite IV-factor path-market duality, monitored barrier price intervals,
+continuity-bracket reserves, and marginal value tests for tradable IV factors,
+adds a robust Bermudan/American exercise package with finite stopping-policy
+reduction, robust seller and buyer exercise intervals, exercise-policy
+certificates, and mesh-to-continuous exercise reserves, adds a hard-shape
+learning-layer package with no-arbitrage projection layers, convex-template
+layers, approximation inheritance, and finite-sample risk bounds, adds an
+uncertainty-aware surface-ensemble package with convex no-arbitrage ensembles,
+conformal surface balls, Lipschitz price intervals, and projection-stable
+preprocessing, adds a theorem-fingerprint model-selection package with
+finite fingerprint boxes, convex rejection certificates, stable relaxed gates,
+and survivor holdout selection bounds, adds a differentiable-pricing error
+certificate package with implemented-graph AD, deterministic truncation
+intervals, Monte Carlo price/Greek confidence radii, and book-level aggregation,
+adds an end-to-end theorem-to-trading audit package with finite certificate
+ledgers, robust interval action gates, realized P\&L residual intervals, and
+replayable pipeline certificates, adds a finite Wasserstein calibration package
+with transport-loss existence, empirical stability, identifiable-parameter
+consistency, misspecification bounds, and calibration-to-price intervals, adds a
+proof-carrying finite no-arbitrage verification package with exact rational
+acceptance/rejection certificates, finite Breeden--Litzenberger checks, and
+deterministic replay ledgers, adds a finite no-arbitrage neural-operator package
+with projected approximation, parameter-covering generalization, empirical-risk
+oracle bounds, and deployment certificates, adds a finite calibration-landscape
+topology package with compact sublevel stability, identifiable-basin
+localization, finite graph bracketing, and local-minimum exclusion certificates,
+adds a finite eSSVI projection-certificate package with compact-image
+existence, distance stability, finite-net global certificates, and conditional
+uniqueness under quadratic separation, adds a finite SSVI density-frontier
+package with residual representation, mesh-certified safe/unsafe bands,
+parameter-distance margins, and cellwise frontier localization, adds a finite-to-continuum
+no-arbitrage transfer package with common-grid interpolation, node-noise margin
+conditions, projection-to-continuum repair, and explicit piecewise-linear
+density/calendar measures, adds a finite missing-tenor interpolation package
+with exact insertion polytopes, LP value bands, projection repair,
+infeasibility certificates, and node-noise acceptance margins, adds a finite
+no-arbitrage polytope regularity package with active tangent and normal cones,
+sharp feasible step lengths, KKT calibration certificates, active-face
+stratification, and finite zero-curvature geometry, adds a finite no-arbitrage
+stress-deformation package with factor stress cones, exact amplitudes, safe
+factor boxes, LP book-impact bands, projection repair, and smooth-factor
+first-order transfer, adds a finite minimal static-statistics package with
+facet-test minimality, redundancy LP/Farkas certificates, residual
+distance-to-repair bounds, and exact finite/affine parametric-family gates,
+adds a finite multi-asset consistency package with joint-state component/index
+feasibility, Farkas separating portfolios, projection repair, and
+dispersion/correlation LP bands, adds a finite dynamic surface no-arbitrage
+package with scenario-tree martingale feasibility, drift-hull restrictions,
+separating self-financing certificates, and diffusion-skeleton gates, adds a
+finite minimal Markov surface-state package with calibrated-tree quotients,
+feature-state exactness gates, cardinality lower bounds, and approximate
+lumpability price bands, adds a finite recalibration-limit package with
+projected no-arbitrage recursions, normal-cone repair accounting, stopped
+interior diffusion limits, and linear covariance bands, adds a finite surface
+covariance-operator package with active-facet admissibility, tangent covariance
+projection, no-arbitrage PCA, shrinkage, and portfolio variance bands, adds a
+finite forward-start smile package with two-date martingale-coupling
+consistency, conditional forward-smile kernels, projection repair, and
+cliquet/forward-volatility LP envelopes, adds a finite self-financing surface
+drift package with discounted-price drift-span restrictions, factor-map Itô
+drift gates, instantaneous separators, boundary-compatible drift tests, and
+projection repair, adds a finite IV surface filtering package with hidden-state
+no-arbitrage Bayes recursions, asynchronous quote likelihoods, posterior
+no-arbitrage means, credible price bands, quote infeasibility certificates, and
+robust action gates, adds a finite surface-jump structure package with static
+no-arbitrage jump cones, event martingale hulls, event payoff LP envelopes,
+jump-library amplitude polytopes, and repair multipliers, adds a finite surface
+transport metric package with common-grid law extraction, maturity transport LPs,
+no-arbitrage interpolation paths, transport shock-ball reserves, barycenter
+regime prototypes, and repair-stability budgets, adds a finite no-arbitrage PCA
+package with active-face factor admissibility, exact lineality-constrained PCA,
+score polytopes, box-safe score radii, factor hedge residual bands, and raw-factor
+repair/rejection certificates, adds a finite uniform BBF convergence package with
+strike-window grid-to-window bounds, quote-error confidence bands, rate
+certificates, adaptive mesh gates, and zero-DTE extrapolation intervals, and
+adds a finite second-order one-half-slope package with certified ATM skew extraction,
+two-term coefficient polytopes, zero-DTE skew extrapolation bands, and candidate
+local-vol coefficient rejection, adds a finite short-time curvature package with
+ATM-curvature extraction, curvature coefficient polytopes, zero-DTE curvature
+bands, and butterfly/broken-wing price reserves, adds a finite event-time smile-jump
+package with martingale event-kernel convolution, feasible kernel polytopes,
+event variance/straddle bands, smile-jump bands, and event-calendar reserves, adds
+a finite open-auction option-asymptotics package with indication-to-print kernels,
+opening option/book price bands, opening-gap scaling certificates, and first-print
+IV transfer, adds a finite barrier short-time correction package with terminal-law
+mass intervals, local-vol bridge hit bands, barrier-hit LP certificates, and
+knock-in/knock-out correction intervals, adds a finite zero-DTE gamma/cost package
+with gamma-theta-cost scaling tubes, hedge-cadence cost bands, and
+convexity-survival gates, adds a finite stochastic-rate short-smile package with
+stochastic-carry cell LPs, rate/dividend price corrections, IV transfer bands, and
+first-two-smile-term inclusion gates, adds a finite expiration-pinning package with
+pinning-window mass LPs, point/node atom certificates, call-convexity spike tests, IV curvature
+transfer, and smooth-density rejection gates, adds a finite rough-Heston skew-constant package with
+signed constant tubes, pairwise maturity consistency tests, candidate formula audits, and
+parameter-cell rejection certificates, adds a finite Volterra kernel-identifiability package with
+kernel response polytopes, functional bands, invisible-nullspace certificates, and kernel-cell
+rejection gates, adds a finite sum-of-exponentials error-propagation package with kernel-error
+ledgers, state perturbation envelopes, price/Greek/IV reserves, and calibration-safe acceptance
+gates, adds a finite rough-vol dynamic no-arbitrage package with variance-forward cash-mark
+martingale feasibility, rolling-state bridge constraints, rough-kernel drift gates, bounded
+stock-martingale certificates, and parameter-cell rejection tests, adds a finite second-order
+rough-smile certificate package with coefficient intervals, reserve regression, Lean-ready
+Hurst-cell envelopes, and zero-DTE IV/price gates, adds a finite rough-leverage identifiability
+package with product tubes, signed-product ambiguity certificates, product-plus-magnitude lifted
+feasible sets, Lean-ready interval-cell witnesses, and calibration-safe \(\rho\)/vol-of-vol
+projection gates, adds a finite rough-vol path-dependent exotic certificate package with
+vanilla-calibrated scenario envelopes, Asian/lookback SOE transfer reserves, barrier shift brackets,
+point-model model-risk intervals, Lean-ready rational cell witnesses, and LP dual certificates, adds
+a finite rough forward-start smile certificate package with conditional-smile tubes,
+martingale-coupling polytopes, LP forward-start and forward-vol envelopes, IV transfer, aggregate
+asymptotic coefficient certificates, Lean-ready rational cell witnesses, and rough-model rejection
+tests, adds a finite rough-to-classical limit certificate package with Hurst-cell bridges to
+\(H=1/2\), kernel/state coupling error budgets, price/IV/Greek continuity bands, Lean-ready rational
+cell witnesses, and rough-versus-classical justification gates, adds a finite Lee limsup-to-limit
+classification package with declared tail-regularity cells, Lee-slope stabilization bands,
+oscillation-witness rejection certificates, finite-strike extrapolation eligibility gates, and
+Lean-ready rational witnesses, adds a finite Heston moment-explosion monotonicity package with
+right/left explosion-branch interval enclosures, critical \(p^*(T)\)/\(q^*(T)\) bands,
+maturity-grid monotonicity signs, convexity diagnostic intervals, Lee-wing sanity gates,
+no-false-rejection Heston parameter-cell tests, and Lean-ready rational witnesses, adds a finite
+stochastic-time-change tail-transfer package with base-cumulant and clock-domain cells,
+martingale-normalization checks, critical-moment transfer brackets, active-boundary labels,
+Lee-slope bands, finite-strike slope gates, limit/limsup/rejected/unknown classifications,
+calibration-safe no-false-rejection tests, tail-reserve price/IV audit ledgers, and replayable
+rational point or Farkas witnesses, adds a finite rough-kernel moment-explosion package with
+Volterra--Riccati envelope cells, finite blow-up/non-blow-up brackets, critical
+\(p^*(T)\)/\(q^*(T)\) bands, Lee-slope transfer, rough-Heston wing sanity gates,
+no-false-rejection rough-affine parameter-cell tests, and replayable rational point or Farkas
+witnesses, adds a finite tail-robust calibration objective package with quote/error input packets,
+weighted loss ledgers, declared tail-weight cells, no-arbitrage wing-envelope gates,
+accepted/rejected tail-cell ledgers, recovery bands for left and right tail parameters,
+calibration-to-wing reserve transfer, no-false-rejection desk acceptance rules, and replayable
+rational point or Farkas witnesses, adds a finite universal wing-stress package with bounded
+wing-budget ledgers, admissible stress directions, LP extrema for wing steepening, flattening, and
+book impact, active-facet and dual-multiplier explanations, Lee-slope and variance-reserve handoffs,
+accepted/rejected stress ledgers, and replayable rational point, dual, or Farkas witnesses, adds a
+finite transport-percentile package with quote/projection input ledgers, quote-to-law extraction
+maps, declared ground metrics, maturitywise optimal-transport LP scores, historical regime prototype
+distances, empirical tie-rank intervals, DKW confidence bands, repair-sensitivity reserves,
+accepted/rejected percentile alerts, and replayable rational point, dual, or Farkas witnesses, adds a
+finite joint realized-implied percentile package with paired realized-volatility and IV-surface score
+ledgers, declared dependence cells, empirical joint-rank boxes, fixed-cell lower-orthant confidence
+bands, measurement and repair reserves, variance-risk-premium alert gates, and replayable rational
+point, dual, or Farkas witnesses, adds a finite extreme-percentile stability package with
+top/bottom-tail rank buckets, order-statistic threshold bands, tie and score-box reserves,
+repair/shock stability margins, abstaining crisis-state alert gates, and replayable rational point,
+dual, or Farkas witnesses, adds a finite cross-asset percentile-transfer package with source/target
+asset cells, exchange-normalized no-arbitrage surface ledgers, monotone quantile and score-transfer
+maps, cross-asset score-box and transport reserves, holdout, DKW, and block-validation confidence
+bands, abstaining relative-rich/cheap alert gates, and replayable rational point, dual, or Farkas
+witnesses, adds a finite model-error percentile package with calibrated model-family distance
+ledgers, per-family and nearest-family residual score boxes, quote/repair/discretization and
+calibration reserves, empirical tie-rank intervals, DKW, holdout, and block-validation confidence
+bands, abstaining model-break percentile alert gates, and replayable rational point, dual, or
+Farkas witnesses, adds a finite causal implied-volatility percentile package with frozen causal
+driver cells, adjustment ledgers, counterfactual repaired-surface score boxes, realized-volatility,
+jump, rate/dividend, liquidity, and event-shock attribution intervals, DKW, holdout, and
+block-validation confidence bands, abstaining no-false-cause alert gates, and replayable rational
+point, dual, or Farkas witnesses, adds a finite discrete hedging CLT-certificate package with
+declared hedge-error triangular arrays, martingale-difference centering ledgers, conditional
+variance and Lindeberg/Berry--Esseen gates, Studentized normal-approximation bands,
+transaction-cost, remainder, and jump reserves, abstaining rehedging-risk alert rules, and
+replayable rational witnesses, adds a finite jump-corrected gamma-carry package with pre-jump
+delta accounting, declared jump/event cells, jump residual and surface-repricing reserves,
+event-kernel jump-loss LP bands, after-cost convexity-survival and jump-defeat gates, abstaining
+no-false gamma-risk alerts, and replayable rational witnesses, adds a finite portfolio
+gamma/vanna/volga aggregation package with common surface-atlas Greeks, joint spot-surface
+covariance projection, signed covariance-contracted convexity bands, scenario and moment LP
+aggregation, after-cost survival and deficit gates, abstaining no-false book-level alerts, and
+replayable rational witnesses, adds finite vanilla-quote gamma-bound certificates with today's
+vanilla quote polytope, declared path-class constraints, model-independent gamma P\&L bands,
+primal/dual LP attribution, after-cost survival and deficit gates, abstaining no-false robust-gamma
+alerts, and replayable rational witnesses, adds a finite gamma-crowding feedback package with
+declared dealer-inventory and hedge-flow cells, signed gamma/vanna/volga exposure ledgers,
+realized-volatility and surface-drift response intervals, fixed-point/contraction feedback gates,
+squeeze/dampening alert rules, abstaining no-false feedback alerts, and replayable rational
+witnesses, adds a finite gamma-percentile package with declared historical surface and
+realized-volatility state cells, expected gamma-carry score boxes, empirical tie-rank intervals,
+DKW, holdout, and block-validation confidence bands, repair, jump, cost, crowding, and selection
+reserves, abstaining rich/cheap opportunity alert gates, and replayable rational point, dual, or
+Farkas witnesses, adds a finite asynchronous quote-filtering package with timestamped executable
+quote ledgers, stale-underlying and spread reserves, bid-ask interval transfer to a common decision
+time, quote-feasibility and repair LP/Farkas certificates, handoff gates to the finite IV surface
+filter, abstaining no-false intraday surface alerts, and replayable rational point, dual, or Farkas
+witnesses, adds a finite microstructure-noise IV percentile package with quote-bounce, spread,
+stale-time, repair, and IV-inversion reserve ledgers, covered IV-surface score boxes, empirical
+tie-rank intervals, DKW, holdout, and block-validation confidence bands, abstaining no-false
+IV-rank alert gates, and replayable rational point, dual, or Farkas witnesses, adds a finite
+opening-auction surface-formation equilibrium package with pre-open indication, imbalance,
+auction-order, and first-print quote ledgers, finite clearing and no-arbitrage surface cells,
+equilibrium residual and selection bands, first-print surface-formation maps, accepted/rejected
+formation gates, abstaining no-false auction-surface alerts, and replayable rational point, dual, or
+Farkas witnesses, adds a finite adaptive live data-snooping/e-process package with predictable live
+strategy menus, nonnegative e-process capital ledgers, optional-stopping and anytime-valid lower
+confidence bounds, wealth-split and alpha-spending reuse gates, abstaining no-false live signal
+alerts, and replayable rational witnesses, adds a finite adaptive IV-regime segmentation and
+conditional percentile package with predictable feature and segment-library ledgers, split/holdout or
+earlier-sample segmentation freezes, segment-membership score boxes, empirical tie-rank intervals,
+DKW, holdout, and block-validation confidence bands, selection, repair, and feature-membership
+reserve ledgers, abstaining rich/cheap conditional-percentile alert gates, and replayable rational
+point, dual, or Farkas witnesses, adds a finite dependent IV-percentile confidence-band package with
+declared dependence ledgers, score boxes, empirical tie-rank intervals, block, effective-sample,
+mixing, or e-process confidence radii, simultaneous confidence rows, abstaining rich/cheap
+IV-percentile alert gates, and replayable rational point, dual, or Farkas witnesses, adds a finite
+liquidity-adjusted gamma-capacity and position-sizing package with executable-liquidity ledgers,
+per-size gamma-carry score boxes, capacity intervals, spread, impact, fill, jump, crowding, and
+selection reserves, after-cost survival and deficit gates, abstaining no-false size and capacity
+alerts, and replayable rational point, dual, or Farkas witnesses, adds a finite robust
+calibration-error allocation and ambiguity-budgeted exotic-pricing package with quote/error budget
+ledgers, finite ambiguity balls, exotic price and reserve intervals, multiplier budget attribution,
+abstaining no-false acceptance and action gates, and replayable rational point, dual, recession, or
+Farkas witnesses, adds a finite quote-outlier/source localization and robust live-calibration
+influence package with common-time quote and normalization ledgers, candidate source
+counterfactual sets, repaired-surface and calibration-output influence boxes, localization and
+rejection gates, abstaining no-false calibration/source alerts, and replayable rational point,
+dual, recession, or Farkas witnesses, and
+defines the first solution queue for the 500-page options PDF.
+
+\section*{Dependency graph}
+
+Papers 1, 3, 4, and 5 are self-contained (3 and 4 form a pair).  Paper 12's
+deterministic discrepancy theorems are logically independent of paper 5, but
+paper 12 now cites paper 5 as companion context for the random-banded-Toeplitz
+stability obstruction.  Paper 13 is the finite-horizon companion to paper 1 and
+cites it.  Within Thread B, paper 14 cites papers 12 (deterministic banded
+theorem) and 5 (spectral-edge phenomenon), and paper 16 cites paper 5
+(balanced-regime gap).  Within Thread C:
+paper 2 is the foundation (proof skeleton, population dichotomy, VC lemma);
+papers 6--11 each cite predecessors as ``companion'' manuscripts ---
+6 needs 2; 7 needs 2, 6; 8 needs 2, 6, 7; 9 needs 2--8 (citations to 3, 5 of
+the thread are to its own numbering: see each paper's bibliography);
+10 needs 9 and the skeleton; 11 needs all of 2, 6--10; the paper-15 pair should
+be treated as cross-citing companions: both use 11, the general-position paper
+cites the curved fixed-family extension, and the curved paper cites the
+general-position flat companion.  For submission, Thread
+C can be bundled as: (i) paper 2 alone; (ii) papers 6+7+8 as ``critical
+scaling, I''; (iii) papers 9+10+11+15 as ``critical scaling, II: stratified
+and curved truncations'' --- or kept as is.  Paper 17 is the new Thread D
+master file and now carries a repo-local import of the current IV theorem
+packets under \texttt{paper17/imported\_results/}; the remaining integration
+work is to promote verified imported packets into self-contained theorem
+sections and keep candidates with unresolved skeptic gates clearly labeled.
+
+\textbf{19. \texttt{Extremal\_Hard\_Edge\_v1.pdf}} ($\sim$81pp, Thread E).
+The extremal hard edge: the minimum least singular value
+$M_m=\min_{|T|=m}\sigma_{\min}(A_T)$ over all square row submatrices of a tall
+random matrix, generalizing the author's ACHA paper on extreme least singular
+values of Gaussian row submatrices and the Balan--Wang phase-retrieval stability
+problem (Randomstrasse Open Problem 21).  The base is entropy over small-ball
+exponent, $\tfrac1m\log M_m\to-h(\gamma)/d_\F$, and the chapter relaxes each
+Gaussian hypothesis by moving one of these two inputs.  \emph{Proved}: an abstract
+extremal small-ball (first/second moment) principle; a distribution-free lower
+side for essentially every continuous ensemble (bounded or subexponential
+density, entrywise density profiles, directional anti-concentration, isotropic
+log-concave rows, smoothed deterministic frames, row/column-normalized and
+diagonally preconditioned Gaussian frames), with summable-budget almost-sure
+lower envelopes and a random-count (Poissonization) transfer; the matching exact
+base for all rotationally invariant radially-concentrated ensembles, including a
+new exact quaternionic law $M_m=c_\gamma^{-m/4+o_\PP(m)}$ that completes the
+division algebras $d_\F\in\{1,2,4\}$; the exact rectangular ($d_\F(r{+}1)$),
+$k$-th-singular ($d_\F k^2$), and two-sided (entropy-addition) lower bases; an
+upper-tail large-deviation rate; and a deterministic finite-alphabet
+projective-pair obstruction whose $\{\pm1\}$ case shows that critical random sign
+frames fail real phase-retrieval injectivity with probability one.  The
+non-Gaussian \emph{upper} side is reduced --- via a proved two-projection local
+central limit theorem (appendix) and a proved high-overlap negligibility estimate
+--- to a single overlap moment
+$\mathbb E[(1-|\varrho|^2)^{-d_\F/2};\,D\ge\varepsilon m]\le1+o(1)$, which is then
+\emph{established} for all iid bounded-density entries by a resolvent-monotonicity
+bound (the null projector $uu^*\preceq\eta(GG^*+\eta)^{-1}$) plus an elementary
+off-support resolvent estimate --- proved self-contained by a leave-one-out argument
+(Sherman--Morrison, the Marchenko--Pastur fixed point, and Hanson--Wright), with the
+anisotropic local law (Knowles--Yin; Bloemendal--Erd\H{o}s--Knowles--Yau--Yin) an
+optional citation --- with full error control (Efron--Stein variance, Hanson--Wright bias, fixed-point
+stability at $-\eta$) for the projected-iid rows of the present setting, so the universality base holds
+unconditionally for iid bounded-density entries.  A Gershgorin bound on the
+$r$-normal Gram matrix and a Chen--Stein argument then collapse the higher
+correlations to two-point terms, reducing the explicit fluctuation law
+$1-e^{-e^{d_\F x}}$ (numerically confirmed, Kolmogorov--Smirnov $p\approx0.96$) to a
+single critical-scale two-point estimate; the point-process intensity and a
+one-sided Gumbel bound are proved outright.  All bases and the Gumbel shape are
+confirmed by simulation.  No Toeplitz or structured-symbol content.  Remaining open:
+the sharp rate of the self-contained off-support estimate and its extension beyond
+bounded density, the critical-scale small-codimension Gumbel residual, the complex phase-retrieval base,
+and sharp concentration of the extremal stability constant.  Sources in
+\texttt{paper19/}.
+
+\section*{Author verification list (before submission)}
+
+\begin{itemize}
+\item Papers 3/4: verify the exact statement of \v{S}tef\'ankov\'a's
+inheritance theorem (DCDS 2016) covers the stated form.
+\item Paper 2: complete the Berlyand--Jabin--Safsten journal data.
+\item Paper 5: verify the Konyagin--Schlag citation page numbers and the
+identity quoted from Manrique-Mir\'on's reference [4]; the documented gap
+should be communicated to the author of arXiv:2602.12581 before public
+posting.
+\item Papers 6--11: the companion-paper cross-references currently cite
+``manuscript, 2026''; assign arXiv identifiers in dependency order (2, then
+6--8, then 9--11).
+\item Paper 11: the constants in the witness-box lemma were corrected once
+(the $\mathcal Z$-sum bound); the shipped version uses the
+$9kh$-budget and is self-consistent.
+\item Paper 13: confirm the cited statements of the companion paper~1
+(margin-stable depth hierarchy, empty-interior obstruction) and of the
+underlying May-2026 manuscript (all-tail semifactor, windowed DC1, metric mean
+dimension) match the forms used in the finite-horizon stability lemma and the
+coordinate squeeze.
+\item Paper 14: the expected-normalized full-bandwidth random model is now a
+fixed-sign theorem; keep this clearly separated from the residual
+realization-normalized contraction question, and verify the
+Bandeira--Boedihardjo--van Handel intrinsic-freeness reference for the
+delocalization remark.
+\item Paper 15: cross-check the general-position and curved companions against
+paper 11 (exponent $2/(2n-j)$); the curved paper states a residual estimate
+(curvature-band-uniform constant) as open --- ensure it is labelled, not
+claimed.
+\item Paper 16: source and 102pp PDF are present in \texttt{paper16/}; before
+submission, keep the abstract/index aligned with the proved/conditional split:
+finite-section reduction on the zero-winding event, deterministic
+clearance-floor uniformization, sharp Gaussian off-endpoint and endpoint
+Kac--Rice estimates, the fixed-bulk first-moment probability upper bound, the
+sharp global continuum upper constant, and the conditional fixed-bulk/global
+first-order sandwiches plus the subcritical negative-moment consequence, the
+exact two-endpoint formula and sharp second-order
+expansion, the continuum-scale \(O_\tau(N^{-1})\) endpoint contribution, the
+continuum-scale \(O_{C_0}(\tau/N)\) natural-endpoint-neighborhood contribution,
+the global endpoint floor,
+and the sharp uniform
+small-ball bound are proved; the
+bounded-density fixed-point/grid and speed-conditional local/uniform estimates,
+all-moment and subexponential speed-tail verifications, the variance-only
+derivative cutoff with quantitative separation/grid detection and
+grid-rate bracket, bounded-density
+conditioning under circle clearance, and Rademacher endpoint/root-of-unity,
+fixed-grid, and bounded-denominator lattice scales are also proved, the
+fixed-order \(N^{-1}\)
+small-ball scale is shown sharp at a constant lattice radius, and the exact
+atom at every fixed primitive \(q\)-th root is shown to have scale
+\(\gamma_qN^{-\varphi(q)/2}\) with an explicit kernel-covolume constant exactly
+on the admissible parity residue classes, and to vanish on the inadmissible
+classes, with the resulting bounded-denominator exact-zero grid floor, the
+finite-cyclotomic-layer asymptotic, the primitive quadratic divisibility
+classes/constants, the quadratic overlap and second-order corrections, the
+degree-four constants, the first two bounded-denominator leading coefficients,
+and the full unpeeled bounded-denominator expansion through
+\(N^{-2}\), plus the endpoint-inclusive bounded-denominator root-of-unity
+expansion through order \(N^{-1}\), also recorded; more generally, the peeled bounded-denominator layer
+coefficient is proved after removing all lower cyclotomic degrees. Sharp
+constants/two-sided minimum law and continuum non-Gaussian universality at full
+bounded-density generality remain open/conditional. For
+Gaussian coefficients the balanced conditioning conclusion is unconditional on
+the zero-winding event, using Konyagin--Schlag clearance.
+\item Paper 17: expand the imported theorem packets and 100-problem atlas into
+self-contained theorem sections, keep unresolved candidates labeled, and keep
+market applications separate from proved mathematical claims.
+\item All papers carry a generative-AI declaration and the author's standing
+grant acknowledgments; review both before submission.
+\end{itemize}
+
+\section*{Open problems left on the table}
+
+(1) Full conclusions-residuality on the Hilbert cube (paper 1, Problem 7.1);
+paper 13 closes the finite-horizon layer and rules out the finite-certificate
+method class, but the infinite-horizon question stays open for non-finite-horizon
+methods.  (2) Unconditional DC1-genericity on Lipschitz strata (paper 4; rigidity
+phenomena documented in the workspace STATE file).  (3) The local limit
+theorem and variance asymptotics for $\nu_m(\mathbb D)$ (paper 5).  (4) The
+exact critical \emph{constant} for the UDC (paper 7).  (5) The $n=2$ edge case
+of paper 9's high-probability statement.  (6) The full-bandwidth
+realization-normalized random Toeplitz contraction question --- whether the
+worst-case $\sqrt{\log(d/n)}$ is a deterministic artifact after normalizing each
+sample to an honest contraction, in the regime \(d/n\to\infty\) (paper 14).
+(7) A curvature-band-uniform constant for the
+interpolation law near multiply-tangent directions (paper 15, curved
+truncations).  (8) Sharpen and universalize paper 16: prove sharp constants and
+the two-sided boundary minimum law, prove the polynomial-scale boundary
+hypothesis at full bounded-density generality without tail or speed-cutoff
+assumptions, and formulate continuum/local-CLT discrete analogues beyond the
+fixed-rational, bounded-denominator, and exact-zero grid scales.  (9) Execute
+paper 17's options-market program: turn its 100 open problems into solved
+theorem packages for arbitrage-free surfaces, IV percentiles, opening prices,
+gamma carry, robust pricing, and rough/stochastic volatility.  (10) Paper 19's
+keystone, now proved via a resolvent-monotonicity bound plus a self-contained
+off-support resolvent estimate (leave-one-out with full error control; the
+anisotropic local law optional): obtain the sharp rate $M(D)=1+d_\F/(2D)$ for the overlap moment
+$\mathbb E[(1-|\varrho|^2)^{-d_\F/2};\,D\ge\varepsilon m]\le1+o(1)$ of non-Gaussian
+isotropic normals, and supply the critical-scale small-codimension two-point estimate
+that completes the explicit hard-edge Gumbel fluctuation law; also the complex phase-retrieval exponential base
+at the sharp threshold, and sharp concentration of the extremal Balan--Wang
+stability constant.
+
+\end{document}
+

@@ -1,0 +1,4 @@
+CHECK f == QSO form: True
+CHECK g(x0)(3-b)^2/C == H : True  expr= 4*A*C - 4*B**2 + 4*B - 4*C + 3
+Q = A*C - 2*B*C + 2*B + C**2 - 2*C + x**2*(A**2 - 4*A*B + 2*A*C + 4*B**2 - 4*B*C + C**2) + x*(2*A*B - 2*A*C + A - 4*B**2 + 6*B*C - 2*B - 2*C**2 + C) + 1
+disc(Q) factored: -(A - 2*B + C)**2*(4*A*C - 4*B**2 + 4*B - 4*C + 3)

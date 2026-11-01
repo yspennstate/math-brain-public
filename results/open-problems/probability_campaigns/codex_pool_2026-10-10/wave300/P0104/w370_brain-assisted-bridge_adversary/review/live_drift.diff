@@ -1,0 +1,57 @@
+--- saved-baseline
++++ current-live
+@@ -466,12 +466,54 @@
+     _assert_regular(_node_path(mem_path, safe_slug), "parent memory node")
+     # If no bundle existed at this observation, an empty result is a valid pre-write snapshot.
+     # Avoid creating a synchronization sidecar for nodes that have never used attachments.
+     if not os.path.lexists(bundle_dir(mem_path, safe_slug)):
+         return _load_documents_unlocked(mem_path, safe_slug, missing_ok=missing_ok)
++    if not _lock_writable(mem_path):
++        return _load_documents_snapshot(mem_path, safe_slug, missing_ok=missing_ok)
+     with _attachment_write_lock(mem_path):
+         return _load_documents_unlocked(mem_path, safe_slug, missing_ok=missing_ok)
++
++
++# 10 Oct 2026 (claude-9bb7da02): a Codex worker's sandbox lets it read the memory directory but not open the lock
++# sidecar for writing. The lock loop retried that refusal for its 10 s bootstrap deadline on each of the 41 bundles,
++# so every recall from a sandboxed solver timed out at its 60 s limit with no attachment read at all (w356, w370).
++_LOCK_WRITABLE: dict = {}
++
++
++def _lock_writable(mem: Path) -> bool:
++    """False when this process is refused a write open of the lock sidecar; asked once per process and memory root."""
++    key = os.path.normcase(os.path.abspath(str(mem)))
++    if key not in _LOCK_WRITABLE:
++        try:
++            os.close(os.open(mem / WRITE_LOCK_NAME, os.O_RDWR))
++            _LOCK_WRITABLE[key] = True
++        except PermissionError:
++            _LOCK_WRITABLE[key] = False
++        except OSError:
++            # missing (the lock path creates it) or anything else: keep the locked path and its own errors
++            _LOCK_WRITABLE[key] = True
++    return _LOCK_WRITABLE[key]
++
++
++def _load_documents_snapshot(mem: Path, slug: str, *, missing_ok: bool = True,
++                             tries: int = 3) -> list[NodeDocument]:
++    """Read a bundle without the lock, for a reader that may not take it.
++
++    Safe because the unlocked read verifies the whole bundle: the manifest is replaced atomically, the documents on
++    disk must be exactly the manifest's names, and each document's length and SHA-256 must match its row. A read that
++    races a writer's publish therefore raises rather than returning a mixed bundle; it is retried briefly (a publish
++    takes milliseconds) and the last error is raised as before.
++    """
++    for attempt in range(tries):
++        try:
++            return _load_documents_unlocked(mem, slug, missing_ok=missing_ok)
++        except (AttachmentError, OSError):
++            if attempt == tries - 1:
++                raise
++            time.sleep(0.05 * (attempt + 1))
++    return []
+ 
+ 
+ def _attach_unlocked(mem: str | os.PathLike[str] | Path, slug: str,
+                      source: str | os.PathLike[str] | Path, *, name: str = "",
+                      description: str = "", required: bool = True,

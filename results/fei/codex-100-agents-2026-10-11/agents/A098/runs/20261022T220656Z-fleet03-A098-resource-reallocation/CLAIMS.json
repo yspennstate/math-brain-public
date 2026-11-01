@@ -1,0 +1,80 @@
+[
+  {
+    "claim_id": "A073-DUMMY-DATA-RESET-SAME-ANCESTOR",
+    "version": 1,
+    "exact_statement": "For every a>=1,b>=0,r>=1 with d=b+r>=2, and every normalized finite-cost source reference R_raw for g=1-2A_a with CE(P_g,R_raw)<=C0 I(g), C0>=0, empty-calibrate the source and use the A097 canonical complete floor. Every adaptive surviving-edited-branch policy consisting of A096 active resets, dummy-data resets to the empty-calibrated source marginal while b>=1, and A097 control resets while r>=2, including the A096 final active point boundary, has booked expected erasure plus all full terminal cross entropy <=(2C0+10)I(F)-12e_root for F=1-2A_a+2A_(a+b+r), e_root=2^(1-a-b-r). Complementary children retain complete inherited references; all old debits remain booked. A dummy step alone costs <W+8e, where W=c+10e(a+b+r). Structural source gives unchanged rate18. No universal source/reference construction is asserted.",
+    "hypotheses": [
+      "Uniform physical cube; entropy in bits.",
+      "Point-source negative-cell edit and supplied finite-cost reference as specified.",
+      "Canonical reset only on surviving edited branch; full off terminals retained.",
+      "No control reset at r=1; no reset inside retained off-branches."
+    ],
+    "statement_sha256": "a401aa4e8fbc271219f0edd6985a2c6594aaf1ba7d461957fbda24e556be907e",
+    "contributors": [
+      "A073"
+    ],
+    "proof_source": [
+      "DERIVATION.md sections1-4",
+      "code/certify_dummy.py",
+      "out/RESULT.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "880fb220d1fc83bf09b9dfca52d0f140e30153bf914870518799efdd2074d91c"
+      },
+      {
+        "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "880fb220d1fc83bf09b9dfca52d0f140e30153bf914870518799efdd2074d91c"
+      },
+      {
+        "claim_id": "A097-MIXED-ACTIVE-CONTROL-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "5088d7a3a3a3b0711a953971e4faf8a884d2f24692a79bb4d1766378f33d91bf"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A073",
+        "kind": "direct character sums plus physical-edge reconstruction and fixed rational log intervals",
+        "verdict": "PASS",
+        "assertions": 13420,
+        "independent_acceptance": false
+      },
+      {
+        "reviewer": "A098",
+        "run_id": "20261022T220656Z-fleet03-A098-resource-reallocation",
+        "verdict": "HOLDS_LOCAL_DUMMY_EXTENSION; GLOBAL_ASSEMBLY_CONDITIONAL_ON_PINNED_ACTIVE_CONTROL_VERSIONS",
+        "scope": "DERIVATION sections1-3 independently reconstructed; section4 arithmetic and reach counting hold conditional on exact imported local substitutions. No full independent upstream-chain acceptance.",
+        "method": "Independent integer butterfly Walsh implementation, direct edge counts, Fraction probabilities, fixed outward rational logarithm intervals; all dummy labels in frozen domain; asymmetric and off-support-spiked references",
+        "executed_validation": {
+          "status": "PASS",
+          "pilot": false,
+          "physical_roots": 12,
+          "reference_roots": 36,
+          "dummy_queries": 54,
+          "assertions": 9152,
+          "elapsed_seconds": 9.830195399990771,
+          "arithmetic": "exact Fraction / outward rational logarithm intervals",
+          "scope": "local dummy extension only; global mixed history uses imported active/control theorems",
+          "helper_sha256": "6c246a385c4ff7572f4a5076fd750d660523142ca06ae4c3e0dbfc20acd5c4cc"
+        },
+        "proof_source": "REVIEW.md"
+      }
+    ],
+    "status": "PROOF_COMPLETE_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Generic signed non-point source construction, or prescribed reset in a retained off-branch from the diminished SAME original bank.",
+    "next_consumers": [
+      "A096",
+      "A097",
+      "A085",
+      "A094",
+      "A099",
+      "B20"
+    ]
+  }
+]

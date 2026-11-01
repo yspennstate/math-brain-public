@@ -1,0 +1,105 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w341",
+  "bundle_slug": "w341-c0126-checked-results-20261010",
+  "entries": [
+    {
+      "key": "underlying-walk-backward-steps",
+      "namespace": "probability.percolation",
+      "logical_name": "c0126-underlying-walk-backward-steps",
+      "kind": "lemma",
+      "title": "Undirected cluster walk can return despite oriented bonds [audit pending w347]",
+      "statement": "Orient a diamond as 0->a,b->c and let simple random walk use its underlying undirected unit-edge graph. Its probability of returning to 0 at two steps is 1/2, although a forward-only walk has return probability zero. Thus bond orientation in oriented percolation does not justify forbidding backward steps in the undirected random-walk spectral-dimension problem.",
+      "proof_text": "# C0126: oriented bonds do not force a directed random walk\n\nStatus: route refutation and deterministic reduction, pending w347. Kumagai's cached Saint-Flour notes, Section 6.3, lines 3801-3869, need a zigzag estimate summing m^((4-d)/2) and leave d=5,6 open. Reference [18] is Barlow, Jarai, Kumagai and Slade, *Random walk on the incipient infinite cluster for oriented percolation in high dimensions*, Communications in Mathematical Physics 278 (2008), 385-431. No later answer was verified from the supplied caches.\n\nThe simple random walk in the spectral-dimension question traverses the underlying open cluster as an undirected graph. Oriented percolation defines which bonds and connections form the cluster; it does not prohibit backward steps of this walk. If it were forward-only, time would strictly increase and every positive-time return probability to the origin would be zero, incompatible with the heat-kernel question.\n\nAn explicit boundary check is the oriented diamond 0 -> a,b -> c. The underlying graph has two length-two paths in parallel. Ordinary simple random walk returns from 0 to 0 at two steps with probability 1/2: each of its two first-step choices contributes (1/2)(1/2). A forward-only walk has return probability zero. Therefore the previous argument that backward zigzags disappear by orientation changes the process and cannot justify a resistance or spectral-dimension estimate.\n\nA legitimate deterministic reduction uses cutsets. In a unit-conductance network from an origin to a target boundary, suppose there are m distinct singleton edge cuts separating them. Every unit flow has net current of magnitude one through each of those edges. Its energy is at least m. Taking the infimum of energy gives effective resistance at least m (Thomson's principle). More generally disjoint cutsets C_j give the Nash-Williams bound sum_j 1/|C_j| by Cauchy-Schwarz on the currents in each cutset.\n\nThe missing random step is quantitative: on the d=5,6 IIC one would need the appropriate distribution/tail estimates for such bottlenecks or cutsets together with volume and heat-kernel assumptions. The deterministic inequality does not supply those estimates. As a finite independent check, exact grounded-Laplacian solves on m=1,2,3,4 diamonds each followed by a bridge gave resistances 2m with m separating singleton bridge cuts. The bare diamond has resistance one.\n\nAudit the walk convention, return probability, current conservation across cuts, edge-disjointness and the gap between a deterministic inequality and random IIC tail bounds. No d=5,6 exponent is proved.\n",
+      "assumptions": [
+        "simple random walk uses the underlying undirected cluster",
+        "unit conductances",
+        "the four-edge diamond"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:c0126-underlying-walk-backward-steps",
+        "url": "file:///~/brain_workers/w341/proofs/C0126_walk_direction.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "singleton-cutset-resistance-reduction",
+      "namespace": "probability.percolation",
+      "logical_name": "c0126-singleton-cutset-resistance-reduction",
+      "kind": "lemma",
+      "title": "Separating singleton cuts give a deterministic resistance lower bound [audit pending w347]",
+      "statement": "In a finite unit-conductance network between an origin and a target boundary, if m distinct singleton edge cuts separate them, effective resistance is at least m. Every unit flow has current of magnitude one through each cut edge, so its energy is at least m. More generally pairwise edge-disjoint separating cutsets C_j give the lower bound sum_j 1/|C_j|. This alone provides no random IIC bottleneck tail estimate.",
+      "proof_text": "# C0126: oriented bonds do not force a directed random walk\n\nStatus: route refutation and deterministic reduction, pending w347. Kumagai's cached Saint-Flour notes, Section 6.3, lines 3801-3869, need a zigzag estimate summing m^((4-d)/2) and leave d=5,6 open. Reference [18] is Barlow, Jarai, Kumagai and Slade, *Random walk on the incipient infinite cluster for oriented percolation in high dimensions*, Communications in Mathematical Physics 278 (2008), 385-431. No later answer was verified from the supplied caches.\n\nThe simple random walk in the spectral-dimension question traverses the underlying open cluster as an undirected graph. Oriented percolation defines which bonds and connections form the cluster; it does not prohibit backward steps of this walk. If it were forward-only, time would strictly increase and every positive-time return probability to the origin would be zero, incompatible with the heat-kernel question.\n\nAn explicit boundary check is the oriented diamond 0 -> a,b -> c. The underlying graph has two length-two paths in parallel. Ordinary simple random walk returns from 0 to 0 at two steps with probability 1/2: each of its two first-step choices contributes (1/2)(1/2). A forward-only walk has return probability zero. Therefore the previous argument that backward zigzags disappear by orientation changes the process and cannot justify a resistance or spectral-dimension estimate.\n\nA legitimate deterministic reduction uses cutsets. In a unit-conductance network from an origin to a target boundary, suppose there are m distinct singleton edge cuts separating them. Every unit flow has net current of magnitude one through each of those edges. Its energy is at least m. Taking the infimum of energy gives effective resistance at least m (Thomson's principle). More generally disjoint cutsets C_j give the Nash-Williams bound sum_j 1/|C_j| by Cauchy-Schwarz on the currents in each cutset.\n\nThe missing random step is quantitative: on the d=5,6 IIC one would need the appropriate distribution/tail estimates for such bottlenecks or cutsets together with volume and heat-kernel assumptions. The deterministic inequality does not supply those estimates. As a finite independent check, exact grounded-Laplacian solves on m=1,2,3,4 diamonds each followed by a bridge gave resistances 2m with m separating singleton bridge cuts. The bare diamond has resistance one.\n\nAudit the walk convention, return probability, current conservation across cuts, edge-disjointness and the gap between a deterministic inequality and random IIC tail bounds. No d=5,6 exponent is proved.\n",
+      "assumptions": [
+        "finite connected unit-conductance network",
+        "origin separated from wired target boundary",
+        "cutsets edge-disjoint",
+        "Thomson variational principle"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:c0126-singleton-cutset-resistance-reduction",
+        "url": "file:///~/brain_workers/w341/proofs/C0126_walk_direction.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-limited-status-20261010",
+      "namespace": "probability.percolation",
+      "logical_name": "c0126-source-limited-status-20261010",
+      "kind": "concept",
+      "title": "Source-limited status and scope for C0126 [audit pending w347]",
+      "statement": "Kumagai Section 6.3 asks for random walk on oriented-percolation IIC in spatial dimensions five and six; its displayed mean-field resistance proof needs dimension greater than six. This packet corrects the walk convention and gives a deterministic cutset reduction. Neither the needed random estimates nor a later answer were established.",
+      "proof_text": null,
+      "assumptions": [
+        "only the supplied local caches and prior records were consulted",
+        "independent review pending"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:c0126-source-limited-status-20261010",
+        "url": "file:///~/brain_workers/w341/proofs/C0126_walk_direction.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "singleton-cutset-resistance-reduction",
+      "to_key": "underlying-walk-backward-steps",
+      "kind": "cites",
+      "rationale": "From: \"In a finite unit-conductance network between an origin and a target boundary, if m distinct singleton edge cuts separate them, effective resistance is at least m. Every unit flow has current of magnitude one through each cut edge, so its energy is at least m. More generally pairwise edge-disjoint separating cutsets C_j give the lower bound sum_j 1/|C_j|. This alone provides no random IIC bottleneck tail estimate.\" To: \"Orient a diamond as 0->a,b->c and let simple random walk use its underlying undirected unit-edge graph. Its probability of returning to 0 at two steps is 1/2, although a forward-only walk has return probability zero. Thus bond orientation in oriented percolation does not justify forbidding backward steps in the undirected random-walk spectral-dimension problem.\"."
+    },
+    {
+      "from_key": "underlying-walk-backward-steps",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"Orient a diamond as 0->a,b->c and let simple random walk use its underlying undirected unit-edge graph. Its probability of returning to 0 at two steps is 1/2, although a forward-only walk has return probability zero. Thus bond orientation in oriented percolation does not justify forbidding backward steps in the undirected random-walk spectral-dimension problem.\" To: \"Kumagai Section 6.3 asks for random walk on oriented-percolation IIC in spatial dimensions five and six; its displayed mean-field resistance proof needs dimension greater than six. This packet corrects the walk convention and gives a deterministic cutset reduction. Neither the needed random estimates nor a later answer were established.\"."
+    },
+    {
+      "from_key": "singleton-cutset-resistance-reduction",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"In a finite unit-conductance network between an origin and a target boundary, if m distinct singleton edge cuts separate them, effective resistance is at least m. Every unit flow has current of magnitude one through each cut edge, so its energy is at least m. More generally pairwise edge-disjoint separating cutsets C_j give the lower bound sum_j 1/|C_j|. This alone provides no random IIC bottleneck tail estimate.\" To: \"Kumagai Section 6.3 asks for random walk on oriented-percolation IIC in spatial dimensions five and six; its displayed mean-field resistance proof needs dimension greater than six. This packet corrects the walk convention and gives a deterministic cutset reduction. Neither the needed random estimates nor a later answer were established.\"."
+    },
+    {
+      "from_key": "source-limited-status-20261010",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0126-random-walk-on-the-incipient-infinite-cluster-of-oriented-percolation",
+      "kind": "cites",
+      "rationale": "From: \"Kumagai Section 6.3 asks for random walk on oriented-percolation IIC in spatial dimensions five and six; its displayed mean-field resistance proof needs dimension greater than six. This packet corrects the walk convention and gives a deterministic cutset reduction. Neither the needed random estimates nor a later answer were established.\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). The critical dimension of oriented percolation is 4; describe the behaviour of simple random walk on the IIC of oriented percolation (Z^d x Z_+) for d = 5 and 6, where the mean-field heat-kernel proof (which needs d > 6) does not apply. Source: Kumagai: Random walks on disordered media and their scaling limits, Saint-Flour XL 2010, author version, Section 6.3 open problem, p. 58.\". "
+    },
+    {
+      "from_key": "underlying-walk-backward-steps",
+      "to_existing_logical": "math:probability.percolation:attempt-c0126-random-walk-on-the-incipient-infinite-cluster-of-oriented-percolation",
+      "kind": "refutes",
+      "rationale": "From: \"Orient a diamond as 0->a,b->c and let simple random walk use its underlying undirected unit-edge graph. Its probability of returning to 0 at two steps is 1/2, although a forward-only walk has return probability zero. Thus bond orientation in oriented percolation does not justify forbidding backward steps in the undirected random-walk spectral-dimension problem.\" To: \"paths in the oriented IIC cannot return to earlier times\". This refutes its use as a prohibition on backward steps of the underlying undirected random walk, not the definition of a directed percolation path."
+    }
+  ]
+}

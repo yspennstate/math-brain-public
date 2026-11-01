@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B18",
+  "run_id": "20260925T021136Z-fleet02-B18-fiveSV-audit-r13",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "source_sha256": "f4a4f4c6db7f0ad4feffbe04041af3cf1a759fb4cb51f4979b6fd884eba26037",
+  "pdf_blob": "8be3aae36ecad7a9dc9b7c95978aad09499f32d0",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "literal_source_verdict": "GAP_LOCAL_REPAIRABLE",
+  "repaired_argument_verdict": "NO_FATAL_DEFECT_FOUND; SUPPORTS_S5_270_AND_S3_HALF_77",
+  "findings": [
+    {
+      "id": "C04",
+      "lines": "41",
+      "page": "1",
+      "status": "FALSE",
+      "kind": "descriptive",
+      "repair": "add no-pivot qualifier"
+    },
+    {
+      "id": "C07",
+      "lines": "62",
+      "page": "1",
+      "status": "UNCHECKED",
+      "kind": "external current-status",
+      "repair": "weaken to present-argument statement unless independently established"
+    },
+    {
+      "id": "C05",
+      "lines": "65",
+      "page": "1",
+      "status": "FALSE",
+      "kind": "descriptive",
+      "repair": "say upper envelope rather than actual singularity"
+    },
+    {
+      "id": "C06",
+      "lines": "148",
+      "page": "3",
+      "status": "PASS",
+      "kind": "editorial",
+      "repair": "optional grammar only"
+    },
+    {
+      "id": "C02",
+      "lines": "319-321",
+      "page": "7",
+      "status": "GAP",
+      "kind": "proof",
+      "repair": "insert |E F|^2 <= E|F|^2"
+    },
+    {
+      "id": "B18-C08",
+      "lines": "398",
+      "page": "9",
+      "status": "GAP",
+      "kind": "density-version domain",
+      "repair": "state formula off z=v and choose version at singleton"
+    },
+    {
+      "id": "C01",
+      "lines": "412",
+      "page": "9",
+      "status": "FALSE",
+      "kind": "topology wording",
+      "repair": "open-angle chart omitting one null ray"
+    },
+    {
+      "id": "C03",
+      "lines": "441",
+      "page": "10",
+      "status": "GAP",
+      "kind": "absolute continuity",
+      "repair": "critical level is two affine lines and joint-density null"
+    },
+    {
+      "id": "B18-C09",
+      "lines": "613",
+      "page": "13",
+      "status": "GAP",
+      "kind": "definition/use order",
+      "repair": "move no-atom statement earlier or extend J at zero"
+    }
+  ],
+  "imported_reference_status": {
+    "BGKS Theorem 2.1": "PASS hypothesis/content match",
+    "Rudelson-Vershynin Theorem 1.2 / Rogozin+Ball attribution": "PASS",
+    "RV/LPP projection-marginal description": "PASS",
+    "Ball/Barthe + CLL/BCCT geometric BL heat-flow description": "PASS",
+    "CTV discrete quadratic description": "PASS",
+    "de la Pena-Gine decoupling background": "PASS",
+    "Carbery-Wright historical priority phrase": "UNCHECKED"
+  },
+  "cross_reference_audit": {
+    "labels": 50,
+    "unique_labels": 50,
+    "ref_eqref_occurrences": 89,
+    "bibitems": 11,
+    "citation_key_occurrences": 12,
+    "unresolved_refs": 0,
+    "unresolved_cites": 0,
+    "duplicate_labels": 0,
+    "duplicate_bibitems": 0,
+    "uncited_bibitems": 0,
+    "unused_labels": [
+      "sec:intro",
+      "eq:decay",
+      "eq:logmoment",
+      "lem:kernels",
+      "eq:boundedhalf",
+      "def:pivot"
+    ]
+  },
+  "complete_source_passes_this_invocation": 2,
+  "direct_pdf_raster_passes": 0,
+  "pdf_note": "Page map imported only after independent source derivation from a separate exact-PDF text-stream audit; direct B18 raster/source comparison remains UNCHECKED.",
+  "lower_threshold_research": false
+}

@@ -1,0 +1,35 @@
+{
+  "helper_version": "A041-group-partition-v1",
+  "family": "actual three-weight Boolean thresholds plus universal occupation-pattern arithmetic",
+  "domain": {
+    "group_sizes": [
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        2
+      ]
+    ],
+    "weights": [
+      1,
+      2,
+      3
+    ],
+    "thresholds": "all integers 1 through total weight",
+    "bias_profiles": "all fair; periodic 1/8,1/2,7/8",
+    "occupation_patterns": "r=1..6, every occupied size in {1,2,3}"
+  },
+  "case_count": {
+    "actual_thresholds": 42,
+    "occupation_patterns": 1092
+  },
+  "symmetry": "none",
+  "arithmetic": "exact Fraction spectra and integer algebra; no floating signs",
+  "memory_estimate_MB": 25,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false
+}

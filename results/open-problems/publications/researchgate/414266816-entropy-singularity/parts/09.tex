@@ -1,0 +1,219 @@
+If $h_R=\rho_R^3m(R)\to\infty$, use $m_R=m(R)/\sqrt{h_R}$ in \eqref{eq:thinning_noface}. Then
+\[
+ \Prob(K_R^{(\rho_R)}=0)
+ \le\Prob(X_R<m_R)+\exp\{-\astar\sqrt{h_R}/7\}\longrightarrow0.
+\]
+The event containing a full interior face separates this law from every $\lambda_R$ in the statement.
+
+Finally, every elementary face contains three sites, and every site lies in at most six elementary faces. Hence $K_R(S)\le2|S|$. Independent thinning and the influence estimate give
+\[
+ \Prob(K_R^{(\rho_R)}>0)\le\E K_R^{(\rho_R)}
+ =\rho_R^3\E K_R(\cS_R)\le2\rho_R^3\E|\cS_R|
+ \le C\rho_R^3m(R).
+\]
+This proves the converse.
+\end{proof}
+
+Thus $m(R)^{-1/3}=R^{-1/4+o(1)}$ is the threshold scale for this triangular-face detector, in the two regimes above. The converse concerns this detector only and makes no assertion about total variation below that scale.
+
+\subsection{Testing and relative entropy}\label{sec:testing}
+
+The exact overlap exponent also controls statistical distinguishability after removal of the empty atom. Write
+\[
+ \mu_R^+=\mu_R(\,\cdot\mid S\ne\varnothing),\qquad
+ \nu_R^+=\nu_R(\,\cdot\mid P\ne\varnothing).
+\]
+For laws $\lambda,\rho$ on a finite space, let
+\[
+ \operatorname{KL}(\lambda\Vert\rho)
+ =\sum_A\lambda(A)\ln\frac{\lambda(A)}{\rho(A)},
+\]
+with value $+\infty$ if $\lambda$ charges a $\rho$-null atom.
+
+\begin{corollary}[Nonempty overlap and information]\label{cor:testing}
+For critical triangular-site square crossings,
+\begin{align}
+ 1-\TV(\mu_R^+,\nu_R^+)&=R^{-11/12+o(1)},\label{eq:nonempty_overlap}\\
+ \liminf_{R\to\infty}\frac{\operatorname{KL}(\nu_R^+\Vert\mu_R^+)}{\ln R}
+ &\ge\frac{11}{12}.\label{eq:relative_entropy}
+\end{align}
+For all sufficiently large $R$, $\operatorname{KL}(\mu_R^+\Vert\nu_R^+)=+\infty$. With equal prior probabilities, the minimum error probability for distinguishing the two nonempty laws is $\frac12R^{-11/12+o(1)}$.
+\end{corollary}
+\begin{proof}
+The nonempty spectral probability tends to one. The nonempty pivotal probability is bounded below: apply the bulk one- and two-point estimates to the number of pivotals in a fixed interior square and use Paley--Zygmund. Consequently both normalizing probabilities lie in $[c,1]$ for all sufficiently large $R$. Dividing the nonempty atoms by these probabilities changes their total overlap by at most a fixed factor. The nonempty overlap estimate in the proof of Theorem~\ref{thm:TVrate} gives \eqref{eq:nonempty_overlap}.
+
+Here is the information inequality needed for \eqref{eq:relative_entropy}. Put $O=\sum_A\min\{\lambda(A),\rho(A)\}$ and $a=\sum_A\sqrt{\lambda(A)\rho(A)}$. Cauchy--Schwarz gives
+\[
+ a^2\le\left(\sum_A\min\{\lambda(A),\rho(A)\}\right)
+ \left(\sum_A\max\{\lambda(A),\rho(A)\}\right)=O(2-O).
+\]
+When the relative entropy is finite, Jensen's inequality under $\lambda$ gives $\operatorname{KL}(\lambda\Vert\rho)\ge-2\ln a$; the same lower bound is automatic when it is infinite. Hence
+\[
+ \operatorname{KL}(\lambda\Vert\rho)\ge-\ln\bigl(O(2-O)\bigr).
+\]
+Apply this to $\lambda=\nu_R^+$ and $\rho=\mu_R^+$ and use \eqref{eq:nonempty_overlap}. In the reverse direction, the face event has positive spectral probability and zero pivotal probability, proving infinite relative entropy. Finally, the pointwise optimal test chooses the more likely atom; summing its error gives $O/2$.
+\end{proof}
+
+The face test alone has error of order $R^{-1/2+o(1)}$ under equal nonempty priors, by Theorem~\ref{thm:rate}. The optimal test achieves the smaller overlap scale in \eqref{eq:nonempty_overlap}; no efficient implementation of that optimal test is asserted.
+
+\section{Scope and remaining questions}\label{sec:scope}
+
+The two questions in \cite[Section~11]{GPS} require different inputs. The entropy argument uses spatial refinement, arm bounds, and local guards. The singularity argument additionally uses a local pattern forbidden for pivotal sets and coercive for the spectrum. The main conclusions, including their normalizations, can be summarized as follows.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.285\textwidth}>{\raggedright\arraybackslash}p{.315\textwidth}>{\raggedright\arraybackslash}X@{}}
+\hline
+Setting & Entropy & Geometric separation\\
+\hline
+Critical square-bond rectangles & Both set entropies $\asymp m(R)$; matching nonroot resolution bounds & No bond singularity conclusion here\\[5pt]
+Triangular-site sandwich measures, $R\le L_\varepsilon(p_*)$ & The same comparisons, uniform over parameter profiles & Finite face bounds with $a_\delta$; no asymptotic assertion without size and boundary inputs\\[5pt]
+Critical triangular-site squares & Both entropies $\asymp m(R)$ & Discrete singularity, sharp rare-event and overlap rates, transport and thinning bounds\\[5pt]
+Critical triangular-site Jordan quads & No new entropy assertion for arbitrary rough quads & Conditioned discrete singularity; explicit common-empty-atom correction\\
+\hline
+\end{tabularx}
+\end{center}
+
+Two limitations are structural. First, the triangular-face certificate does not apply directly to square-lattice bonds. A bond analogue would need a forbidden local support pattern and a corresponding local Fourier coercivity estimate, or a different separating statistic. Second, all separators used here are microscopic. They do not themselves distinguish the continuum laws: even measures whose discrete total variation equals one can have identical weak limits. For example, $\delta_{1/n}$ and $\delta_{-1/n}$ converge to the same point mass. Thus the continuum alternative in GPS Question~5 remains a separate problem.
+
+The thinning result identifies the transition scale for the face detector, but does not determine whether the full laws remain separated below that scale. Likewise, the general-quad argument provides qualitative separation after conditioning; it does not supply rates uniform over Jordan boundaries. The near-critical finite coercivity bound isolates the additional inputs required for an asymptotic extension: nonempty spectral size must escape bounded sets, and the untested boundary region must have negligible spectral mass under the chosen normalization.
+
+The arguments do not establish the unrestricted Fourier entropy--influence conjecture or the other open questions in \cite[Section~11]{GPS}.
+
+\section*{Funding}
+The author acknowledges support from the European Research Council under the European Union's Horizon Europe programme (grant 101041711), the Simons Foundation, Heights Labs, Convex Nexus Capital, and Israel Science Foundation grants 2258/19 and 4101/25.
+
+\section*{Use of artificial intelligence}
+During 2026, OpenAI Codex and GPT-6 were used extensively for mathematical development, literature searches, proof review, and preparation of this manuscript. The author directed the work and is responsible for the mathematical content and final version. No artificial-intelligence system is listed as an author.
+
+\begin{thebibliography}{99}
+\bibitem{BKS}
+I.~Benjamini, G.~Kalai and O.~Schramm,
+\emph{Noise sensitivity of Boolean functions and applications to percolation},
+Publ. Math. Inst. Hautes \`Etudes Sci. \textbf{90} (1999), 5--43.
+\href{https://arxiv.org/abs/math/9811157}{arXiv:math/9811157}.
+
+\bibitem{CKLS}
+S. Chakraborty, R. Kulkarni, S. V. Lokam and N. Saurabh.
+Upper bounds on Fourier entropy.
+\emph{Theoret. Comput. Sci.} \textbf{654} (2016), 92--112.
+\href{https://doi.org/10.1016/j.tcs.2016.05.006}{doi:10.1016/j.tcs.2016.05.006}.
+\href{https://eccc.weizmann.ac.il/report/2013/052/revision/2/}{ECCC TR13-052, revision~2}.
+
+\bibitem{Chang}
+F. Chang.
+A lower bound for the Fourier entropy of Boolean functions on the biased hypercube.
+Preprint, 2025, revised 2026.
+\href{https://arxiv.org/abs/2511.07739v3}{arXiv:2511.07739v3}.
+
+\bibitem{FK}
+E. Friedgut and G. Kalai.
+Every monotone graph property has a sharp threshold.
+\emph{Proc. Amer. Math. Soc.} \textbf{124} (1996), no.~10, 2993--3002.
+\href{https://doi.org/10.1090/S0002-9939-96-03732-X}{doi:10.1090/S0002-9939-96-03732-X}.
+
+\bibitem{GMP}
+M. J. Gonz\'alez, P. MacManus and M. C. Pereyra.
+Further evidence towards the Fourier entropy--influence conjecture.
+Preprint, 2026.
+\href{https://arxiv.org/abs/2606.00246v2}{arXiv:2606.00246v2}.
+
+\bibitem{GPS}
+C.~Garban, G.~Pete and O.~Schramm,
+\emph{The Fourier spectrum of critical percolation},
+Acta Math. \textbf{205} (2010), no.~1, 19--104.
+Corrected version: \href{https://arxiv.org/abs/0803.3750}{arXiv:0803.3750v4} (2013).
+
+\bibitem{GS}
+C.~Garban and J.~E.~Steif,
+\emph{Noise Sensitivity of Boolean Functions and Percolation},
+Institute of Mathematical Statistics Textbooks, vol.~5,
+Cambridge University Press, Cambridge, 2014.
+
+\bibitem{Han}
+X. Han.
+A new bound for the Fourier-entropy-influence conjecture.
+\emph{Combinatorica} \textbf{45} (2025), article~4.
+\href{https://doi.org/10.1007/s00493-024-00133-z}{doi:10.1007/s00493-024-00133-z}.
+\href{https://arxiv.org/abs/2312.08271v2}{arXiv:2312.08271v2}.
+
+\bibitem{KKLMS}
+E. Kelman, G. Kindler, N. Lifshitz, D. Minzer and M. Safra.
+Towards a proof of the Fourier-entropy conjecture?
+\emph{Geom. Funct. Anal.} \textbf{30} (2020), no.~4, 1097--1138.
+\href{https://doi.org/10.1007/s00039-020-00544-2}{doi:10.1007/s00039-020-00544-2}.
+\href{https://arxiv.org/abs/1911.10579v2}{arXiv:1911.10579v2}.
+
+\bibitem{KMS}
+N. Keller, E. Mossel and T. Schlank.
+A note on the entropy/influence conjecture.
+\emph{Discrete Math.} \textbf{312} (2012), no.~22, 3364--3372.
+\href{https://doi.org/10.1016/j.disc.2012.07.031}{doi:10.1016/j.disc.2012.07.031}.
+\href{https://arxiv.org/abs/1105.2651v1}{arXiv:1105.2651v1}.
+
+\bibitem{Kalai}
+G. Kalai.
+Three puzzles on mathematics, computation, and games.
+In \emph{Proceedings of the International Congress of Mathematicians (ICM 2018)}, Vol.~I, World Scientific, 2019, 551--606.
+\href{https://doi.org/10.1142/9789813272880_0023}{doi:10.1142/9789813272880\_0023}.
+\href{https://arxiv.org/abs/1801.02602v1}{arXiv:1801.02602v1}.
+
+\bibitem{Nolin}
+P.~Nolin,
+\emph{Near-critical percolation in two dimensions},
+Electron. J. Probab. \textbf{13} (2008), no.~55, 1562--1623.
+\href{https://doi.org/10.1214/EJP.v13-565}{doi:10.1214/EJP.v13-565}.
+Numbering follows the published version.
+\href{https://arxiv.org/abs/0711.4948}{arXiv:0711.4948}.
+
+\bibitem{OT}
+R. O'Donnell and L.-Y. Tan.
+A composition theorem for the Fourier entropy--influence conjecture.
+In \emph{Automata, Languages, and Programming (ICALP 2013)},
+Lecture Notes in Computer Science \textbf{7965}, Springer, 2013, 780--791.
+\href{https://doi.org/10.1007/978-3-642-39206-1_66}{doi:10.1007/978-3-642-39206-1\_66}.
+\href{https://arxiv.org/abs/1304.1347v1}{arXiv:1304.1347v1}.
+
+\bibitem{OWZ}
+R. O'Donnell, J. Wright and Y. Zhou.
+The Fourier entropy--influence conjecture for certain classes of Boolean functions.
+In \emph{Automata, Languages and Programming (ICALP 2011), Part~I},
+Lecture Notes in Computer Science \textbf{6755}, Springer, 2011, 330--341.
+\href{https://doi.org/10.1007/978-3-642-22006-7_28}{doi:10.1007/978-3-642-22006-7\_28}.
+
+\bibitem{Pete}
+G. Pete.
+Noise sensitivity in critical percolation and what else might we learn from it.
+Talk slides, Metric Geometry, Algorithms, and Groups trimester,
+Institut Henri Poincar\'e, Paris, 2011.
+\href{https://math.bme.hu/~gabor/IHP.pdf}{Slides}.
+
+\bibitem{SS}
+O. Schramm and J. E. Steif.
+Quantitative noise sensitivity and exceptional times for percolation.
+\emph{Ann. of Math. (2)} \textbf{171} (2010), no.~2, 619--672.
+\href{https://doi.org/10.4007/annals.2010.171.619}{doi:10.4007/annals.2010.171.619}.
+
+\bibitem{SW}
+S.~Smirnov and W.~Werner,
+\emph{Critical exponents for two-dimensional percolation},
+Math. Res. Lett. \textbf{8} (2001), no.~5--6, 729--744.
+\href{https://arxiv.org/abs/math/0109120}{arXiv:math/0109120}.
+
+\bibitem{Smirnov}
+S.~Smirnov,
+\emph{Critical percolation in the plane: conformal invariance, Cardy's formula, scaling limits},
+C.~R. Acad. Sci. Paris S\'er. I Math. \textbf{333} (2001), no.~3, 239--244.
+
+\bibitem{TV}
+V. Tassion and H. Vanneuville.
+Noise sensitivity of percolation via differential inequalities.
+\emph{Proc. Lond. Math. Soc. (3)} \textbf{126} (2023), no.~4, 1063--1091.
+\href{https://doi.org/10.1112/plms.12507}{doi:10.1112/plms.12507}.
+\href{https://arxiv.org/abs/2011.04572v2}{arXiv:2011.04572v2}.
+
+\bibitem{WWW}
+A. Wan, J. Wright and C. Wu.
+Decision trees, protocols and the entropy-influence conjecture.
+In \emph{Proceedings of the 5th Conference on Innovations in Theoretical
+Computer Science (ITCS 2014)}, ACM, 2014, 67--80.

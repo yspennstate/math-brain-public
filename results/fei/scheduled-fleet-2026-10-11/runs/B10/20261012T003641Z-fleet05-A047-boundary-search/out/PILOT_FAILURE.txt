@@ -1,0 +1,4 @@
+First pilot exited before persisting its first row: parser variable a was
+shadowed by a per-fiber interval endpoint in the inner pair loop.
+The fix renames those two endpoints fl,fh. No mathematical result from
+the failed invocation is used; domain and arithmetic remain frozen.

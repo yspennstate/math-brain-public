@@ -1,0 +1,96 @@
+--- a/math-brain-inbox/w544/bundle_001.json
++++ b/math-brain-inbox/w544/bundle_001.json
+@@ -0,0 +1,93 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w544",
++  "bundle_slug": "p0321-gaussian-density-positivity-draft-20261010",
++  "entries": [
++    {
++      "key": "linear-density-comparison",
++      "namespace": "probability.gibbs",
++      "logical_name": "linear-gaussian-density-comparison-with-riesz-elastic-spectrum",
++      "kind": "definition",
++      "title": "Draft linear Gaussian density comparison",
++      "statement": "DRAFT comparison model: Let X be a centered stationary real Gaussian field on R^2 with spectral density rho^2 |k|^(2-s)/(beta a) on 0<|k|<=Lambda and zero elsewhere, using d^2k/(2pi)^2. The additive linear density is rho+X. Its variance is rho^2 Lambda^(4-s)/(2pi beta a (4-s)). This definition does not identify a Riesz Gibbs point process.",
++      "proof_text": null,
++      "assumptions": [
++        "rho,beta,a,Lambda>0 and 0<s<2.",
++        "A stipulated Gaussian model, not a microscopic Gibbs construction; draft awaits independent review."
++      ],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "owner-probability-campaign:p0321:linear-density-comparison",
++        "url": "urn:math-research:p0321:linear-density-comparison",
++        "revision": "draft-2026-10-10-unreviewed",
++        "license": "owner-own-work; campaign derivation pending independent review",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "correlated-gaussian-exceedances",
++      "namespace": "probability.gaussian",
++      "logical_name": "negative-exceedances-on-decorrelating-stationary-gaussian-rays",
++      "kind": "concept",
++      "title": "Draft correlated Gaussian negative-exceedance argument",
++      "statement": "DRAFT, unreviewed: If a stationary centered real Gaussian sequence X_n has variance 0<sigma^2<infinity and Cov(X_1,X_(1+h)) tends to zero, then for any finite rho>0 the values rho+X_n are negative infinitely often almost surely. The one-point probability is Phi(-rho/sigma)>0. Bivariate Gaussian convergence gives covariance decay of threshold indicators; the variance of their average tends to zero. No joint independence of cells is assumed.",
++      "proof_text": null,
++      "assumptions": [
++        "Joint Gaussianity, stationarity, positive finite variance, and covariance decay.",
++        "Fixed finite rho>0.",
++        "Author derivation complete in review packet; independent mathematical review pending."
++      ],
++      "domain": "probability",
++      "source": {
++        "source_id": "owner-probability-campaign:p0321:correlated-gaussian-exceedances",
++        "url": "urn:math-research:p0321:correlated-gaussian-exceedances",
++        "revision": "draft-2026-10-10-unreviewed",
++        "license": "owner-own-work; campaign derivation pending independent review",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "positive-density-obstruction",
++      "namespace": "probability.gibbs",
++      "logical_name": "exact-additive-gaussian-density-positivity-obstruction",
++      "kind": "concept",
++      "title": "Draft positivity obstruction to exact Gaussian particle density",
++      "statement": "DRAFT, unreviewed: The nondegenerate additive density rho+X in the cutoff Gaussian comparison has a positive negative tail and is negative infinitely often along an equally spaced ray. It cannot have the exact one-point law of a finite particle smoothing with a nonnegative kernel. This rejects an exact additive-density identification only. Approximate fluctuation limits, nonlinear positive observables, and the existence of a hexatic Riesz Gibbs phase remain possible and require separate proofs.",
++      "proof_text": null,
++      "assumptions": [
++        "The stated cutoff Gaussian comparison with rho,beta,a,Lambda>0 and 0<s<2.",
++        "A finite point-configuration smoothing with a nonnegative kernel.",
++        "Integrable frequency density implies covariance decay; the ray argument uses the correlated-Gaussian claim.",
++        "No microscopic transfer, phase interval, or independent mathematical acceptance is claimed."
++      ],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "owner-probability-campaign:p0321:positive-density-obstruction",
++        "url": "urn:math-research:p0321:positive-density-obstruction",
++        "revision": "draft-2026-10-10-unreviewed",
++        "license": "owner-own-work; campaign derivation pending independent review",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "positive-density-obstruction",
++      "to_key": "linear-density-comparison",
++      "kind": "depends_on",
++      "rationale": "The obstruction concerns exactly the stipulated additive Gaussian density and its nonzero variance."
++    },
++    {
++      "from_key": "positive-density-obstruction",
++      "to_key": "correlated-gaussian-exceedances",
++      "kind": "depends_on",
++      "rationale": "Integrability of the comparison spectrum gives covariance decay, allowing the ray exceedance argument."
++    },
++    {
++      "from_key": "positive-density-obstruction",
++      "to_existing_logical": "math:probability.core:open-problem-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases",
++      "kind": "semantic_association",
++      "rationale": "P0321 requires actual positional and bond-orientational Gibbs correlations. The draft only excludes one exact Gaussian-density identification; it neither proves nor refutes the target."
++    }
++  ]
++}

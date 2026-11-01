@@ -1,0 +1,176 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w350",
+  "bundle_slug": "p0017-gaussian-retention-and-source-status-w350-001",
+  "entries": [
+    {
+      "key": "retention-definition",
+      "namespace": "probability.core",
+      "logical_name": "gaussian-observation-variance-retention-coefficient",
+      "kind": "definition",
+      "title": "Gaussian observation variance retention",
+      "statement": "Let X have a full-dimensional probability law mu on R^n, let G be an independent N(0,I_n) vector, and let t>0. For Y=sqrt(t)X+G define R_mu(t)=inf E[Var(f(X)|Y)]/Var_mu(f), where the infimum is over all f in L^2(mu) with positive variance. The conditioning is on the Gaussian observation; no independence between coordinates of X is assumed.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-w350-20261010:gaussian-retention",
+        "url": "urn:owner-probability-campaign:P0017:w350:gaussian-retention",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; campaign derivation; independent review requested from w353",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "forward-bridge",
+      "namespace": "probability.core",
+      "logical_name": "poincare-to-gaussian-observation-variance-retention",
+      "kind": "concept",
+      "title": "Poincare implies Gaussian observation variance retention",
+      "statement": "DRAFT REDUCTION; independent review pending. If a probability law mu satisfies its Sobolev Poincare inequality with finite constant C, then R_mu(t)>=1/(1+Ct) for every t>0, with R defined using Y=sqrt(t)X+G and all L^2 functions. The constant C is an assumption in this direction. The proof in w350 ATTEMPT.md uses Gaussian Bessel inequality, prior Poincare, total variance and the adjoint of conditional expectation.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite prior Sobolev Poincare constant C",
+        "Independent standard Gaussian observation noise"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-w350-20261010:gaussian-retention",
+        "url": "urn:owner-probability-campaign:P0017:w350:gaussian-retention",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; campaign derivation; independent review requested from w353",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "reverse-bridge",
+      "namespace": "probability.core",
+      "logical_name": "gaussian-observation-variance-retention-to-poincare",
+      "kind": "concept",
+      "title": "Gaussian observation variance retention implies Poincare",
+      "statement": "DRAFT REDUCTION; independent review pending. For a full-dimensional log-concave law mu, suppose deterministic t0>0 and eta>0 satisfy R_mu(t0)>=eta, with the infimum over all nonconstant L^2 functions. Then C_P(mu)<=1/(eta*t0). The posterior potential is V(x)+t0|x|^2/2-sqrt(t0)y.x, so its generalized strong-log-concavity Poincare bound is 1/t0. Average the posterior variance bound by the tower property, then combine with the assumed retention. The retention hypothesis is not proved in this packet.",
+      "proof_text": null,
+      "assumptions": [
+        "Full-dimensional log-concave law on convex support",
+        "All-function retention R_mu(t0)>=eta>0",
+        "Generalized uniformly-log-concave Poincare input, Klartag 2303.14938v2 (1.7)"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-w350-20261010:gaussian-retention",
+        "url": "urn:owner-probability-campaign:P0017:w350:gaussian-retention",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; campaign derivation; independent review requested from w353",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "uniform-input",
+      "namespace": "probability.core",
+      "logical_name": "uniform-log-concave-gaussian-observation-variance-retention-input",
+      "kind": "concept",
+      "title": "Uniform variance retention input for log-concave Poincare",
+      "statement": "UNPROVED INPUT IN THIS PACKET. Universal deterministic constants t0>0 and eta>0 are sought such that R_mu(t0)>=eta for every isotropic log-concave probability law in every dimension, where R takes an infimum over all L^2 test functions. Together with the recorded reductions this is equivalent, up to explicit constants, to a uniform Poincare bound. Linear or quadratic tests alone do not discharge this all-function hypothesis. Recent primary preprints claim the parent target; this packet has not audited their complete proofs.",
+      "proof_text": null,
+      "assumptions": [
+        "Mean zero and covariance I_n",
+        "Log-concavity",
+        "All dimensions and all L^2 functions"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-w350-20261010:gaussian-retention",
+        "url": "urn:owner-probability-campaign:P0017:w350:gaussian-retention",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; campaign derivation; independent review requested from w353",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gaussian-benchmark",
+      "namespace": "probability.core",
+      "logical_name": "standard-gaussian-observation-variance-retention-benchmark",
+      "kind": "concept",
+      "title": "Exact Gaussian variance retention benchmark",
+      "statement": "GAUSSIAN SPECIAL CASE; independent review of the new bridge pending. For mu=N(0,I_n) and independent G=N(0,I_n), the channel Y=sqrt(t)X+G has R_mu(t)=1/(1+t). Sharp Gaussian C_P=1 gives the lower bound through the forward bridge; a unit linear function and posterior covariance I_n/(1+t) give equality. This checks channel normalization. The reverse bridge yields only C_P<=(1+t)/t, while the prior Hermite proof gives exact C_P=1.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-w350-20261010:gaussian-retention",
+        "url": "urn:owner-probability-campaign:P0017:w350:gaussian-retention",
+        "revision": "2026-10-10-draft-v1",
+        "license": "owner-own-work; campaign derivation; independent review requested from w353",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-status",
+      "namespace": "probability.core",
+      "logical_name": "p0017-october-2026-primary-resolution-claim-status",
+      "kind": "concept",
+      "title": "P0017 primary-source status on 10 October 2026",
+      "statement": "SOURCE AUDIT, 2026-10-10. The September P0017 ranking records attempted_unsolved and its old attempt proves only the Gaussian special case. Randomstrasse101 2603.29571v1 Conjecture 30 states the log-concave Cheeger target. Bizeul-Klartag-Lehec 2610.05474v1 Theorem 1.1, Song-Zhang 2610.01447v2, and Balasubramanian-Kasiviswanathan 2610.07728v2 report dimension-free bounds. The existence of these claims is checked; their full proofs are not independently certified here. Current openness is UNKNOWN in this packet, with reported resolution YES. Randomstrasse psi is the Cheeger constant; Klartag 2303.14938 psi is its reciprocal.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-w350-20261010:source-audit",
+        "url": "https://arxiv.org/html/2603.29571v1",
+        "revision": "as-read-2026-10-10",
+        "license": "owner-own-work; primary-source audit in own words",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "forward-bridge",
+      "to_key": "retention-definition",
+      "kind": "depends_on",
+      "rationale": "The statement uses the all-function coefficient R_mu(t) defined for the normalized Gaussian channel."
+    },
+    {
+      "from_key": "reverse-bridge",
+      "to_key": "retention-definition",
+      "kind": "depends_on",
+      "rationale": "The statement uses the all-function coefficient R_mu(t) defined for the normalized Gaussian channel."
+    },
+    {
+      "from_key": "uniform-input",
+      "to_key": "retention-definition",
+      "kind": "depends_on",
+      "rationale": "The statement uses the all-function coefficient R_mu(t) defined for the normalized Gaussian channel."
+    },
+    {
+      "from_key": "gaussian-benchmark",
+      "to_key": "retention-definition",
+      "kind": "depends_on",
+      "rationale": "The statement uses the all-function coefficient R_mu(t) defined for the normalized Gaussian channel."
+    },
+    {
+      "from_key": "gaussian-benchmark",
+      "to_key": "forward-bridge",
+      "kind": "specializes",
+      "rationale": "The Gaussian law has sharp C_P=1 and attains the forward retention bound with a linear function."
+    },
+    {
+      "from_key": "uniform-input",
+      "to_key": "reverse-bridge",
+      "kind": "semantic_association",
+      "rationale": "A universal version of the retention hypothesis supplies the reverse bridge in every dimension; the input remains unproved here."
+    },
+    {
+      "from_key": "source-status",
+      "to_existing_logical": "math:probability.core:open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
+      "kind": "cites",
+      "rationale": "The historical P0017 target is the subject of the dated source-status audit."
+    },
+    {
+      "from_key": "gaussian-benchmark",
+      "to_existing_logical": "math:probability.core:attempt-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
+      "kind": "cites",
+      "rationale": "The existing at-p0017 Hermite special case supplies the exact Gaussian Poincare normalization."
+    }
+  ]
+}

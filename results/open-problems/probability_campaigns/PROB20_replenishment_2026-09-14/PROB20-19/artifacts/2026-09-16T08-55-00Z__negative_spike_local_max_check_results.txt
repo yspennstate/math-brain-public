@@ -1,0 +1,32 @@
+PROB20-19 negative-spike local-max checker results
+Run date: 2026-09-16
+Deterministic seed: 20260916
+Monte Carlo sample count: 900000
+Status: supporting self-review only; analytic proof is in runs/2026-09-16/2026-09-16T08-45-00Z__report.md
+
+symbolic_hadamard_identities=PASS
+symbolic_branch_second_derivatives=PASS
+E_M_exact=2*sqrt(3)/pi ~= 1.102657790843584
+singular_curvature_exact=-4*sqrt(3)/(3*pi) ~= -0.735105193895723
+analytic_KL_gap_lower_bound_gamma0 ~= 0.033961981523997
+balanced_singular_mc=2.604331807943
+balanced_singular_exact=2.602657790844
+balanced_singular_abs_error=0.001674017100
+singular_curvature_fd=-0.695870848967 +/- 0.008795863453
+singular_curvature_exact=-0.735105193896
+lambda=0 KL=2.807302803 balanced=2.604331808 KL_minus_balanced=0.202970995 se=0.001713472
+lambda=0.0001 KL=2.807302829 balanced=2.604384275 KL_minus_balanced=0.202918554 se=0.001713114
+lambda=0.001 KL=2.807305638 balanced=2.604861888 KL_minus_balanced=0.202443750 se=0.001712023
+lambda=0.01 KL=2.807568744 balanced=2.610144888 KL_minus_balanced=0.197423856 se=0.001704336
+local lambda=0.0001 theta=0.030 delta=-3.703566858e-04 se=6.069181166e-05
+local lambda=0.0001 theta=0.060 delta=-1.297210800e-03 se=1.212773875e-04
+local lambda=0.001 theta=0.030 delta=-3.577439440e-04 se=6.002005444e-05
+local lambda=0.001 theta=0.060 delta=-1.265652932e-03 se=1.199851605e-04
+local lambda=0.01 theta=0.030 delta=-2.970576204e-04 se=5.791128794e-05
+local lambda=0.01 theta=0.060 delta=-1.078181964e-03 se=1.158200363e-04
+
+Interpretation:
+- symbolic identities used in the analytic proof passed;
+- the finite-difference singular curvature is negative and of the predicted order, though finite-difference switching noise makes it a self-check rather than a proof;
+- KL exceeds the balanced orientation throughout this deterministic sanity bank;
+- for the sampled small positive lambdas, the balanced point itself decreases along the tested tangent, consistent with (but not required by) the existence theorem for nearby non-KL local maxima.

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<script id="vangus-cdn-fallback" nowprocket data-cfasync="false" data-no-optimize="1" data-no-defer="1">
+(function(){
+var P="https:\/\/vangus-cdn.com\/";
+function O(u){if(!u||u.indexOf(P)!==0)return null;var r=u.slice(P.length),i=r.indexOf('/');if(i<1)return null;var h=r.slice(0,i);try{h=decodeURIComponent(h)}catch(e){}return'https://'+h+r.slice(i)}
+function S(s){if(!s)return s;var a=s.split(','),o=[],e,p,u,d,g,i;for(i=0;i<a.length;i++){e=a[i].replace(/^\s+|\s+$/g,'');if(!e)continue;p=e.indexOf(' ');u=p>-1?e.slice(0,p):e;d=p>-1?e.slice(p):'';g=O(u);o.push((g||u)+d)}return o.join(', ')}
+document.addEventListener('error',function(ev){
+var el=ev.target;
+if(!el||el.tagName!=='IMG'||el.getAttribute('data-vcdn-fb'))return;
+var o=O(el.currentSrc||el.getAttribute('src'));
+if(!o)return;
+el.setAttribute('data-vcdn-fb','1');
+var pa=el.parentNode,ss,f,i;
+if(pa&&pa.tagName==='PICTURE'){ss=pa.getElementsByTagName('source');for(i=0;i<ss.length;i++){f=S(ss[i].getAttribute('srcset'));if(f)ss[i].setAttribute('srcset',f)}}
+f=el.getAttribute('srcset');if(f)el.setAttribute('srcset',S(f));
+el.src=O(el.getAttribute('src'))||o;
+},true);
+})();
+</script>
+        
+	<!-- This site is optimized with the Yoast SEO plugin v18.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Markov chains and mixing times - Yuval Peres books</title>
+<link data-rocket-preload as="style" href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CInter%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPlayfair%20Display%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" rel="preload">
+<link href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CInter%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPlayfair%20Display%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" media="print" onload="this.media=&#039;all&#039;" rel="stylesheet">
+<noscript data-wpr-hosted-gf-parameters=""><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CInter%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPlayfair%20Display%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap"></noscript><link rel="preload" as="image" href="https://vangus-cdn.com/www.yuval-peres-books.com/wp-content/uploads/2022/03/book4b.jpg" imagesrcset="https://vangus-cdn.com/www.yuval-peres-books.com/wp-content/uploads/2022/03/book4b.jpg 595w, https://vangus-cdn.com/www.yuval-peres-books.com/wp-content/uploads/2022/03/book4b-212x300.jpg 212w" imagesizes="(max-width: 595px) 100vw, 595px" fetchpriority="high">
+<link rel="preload" as="image" href="https://i.ytimg.com/vi/ID/hqdefault.jpg" fetchpriority="high">
+
+	<link rel="canonical" href="https://www.yuval-peres-books.com/markov-chains-and-mixing-times/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Markov chains and mixing times - Yuval Peres books" />
+	<meta property="og:description" content="Markov chain Monte Carlo (MCMC) is a widely used algorithm in Mathematical Physics, Computer Science and Statistics, in order to sample from intractable distributions. The main component in the running time of the MCMC algorithm is the &#8220;mixing time&#8221; of the underlying Markov chain., i.e., the number of steps one needs to run the chain [&hellip;]" />
+	<meta property="og:url" content="https://www.yuval-peres-books.com/markov-chains-and-mixing-times/" />
+	<meta property="og:site_name" content="Yuval Peres books" />
+	<meta property="article:modified_time" content="2022-12-25T08:35:27+00:00" />
+	<meta property="og:image" content="https://www.yuval-peres-books.com/wp-content/uploads/2022/03/book4b.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="4 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.yuval-peres-books.com/#website","url":"https://www.yuval-peres-books.com/","name":"Yuval Peres books","description":"Yuval Peres books","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.yuval-peres-books.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.yuval-peres-books.com/markov-chains-and-mixing-times/#primaryimage","inLanguage":"en-US","url":"https://www.yuval-peres-books.com/wp-content/uploads/2022/03/book4b.jpg","contentUrl":"https://www.yuval-peres-books.com/wp-content/uploads/2022/03/book4b.jpg","width":595,"height":842,"caption":"Markov chains and mixing times - Yuval Peres"},{"@type":"WebPage","@id":"https://www.yuval-peres-books.com/markov-chains-and-mixing-times/#webpage","url":"https://www.yuval-peres-books.com/markov-chains-and-mixing-times/","name":"Markov chains and mixing times - Yuval Peres books","isPartOf":{"@id":"https://www.yuval-peres-books.com/#website"},"primaryImageOfPage":{"@id":"https://www.yuval-peres-books.com/markov-chains-and-mixing-times/#primaryimage"},"datePublished":"2022-03-10T21:52:26+00:00","dateModified":"2022-12-25T08:35:27+00:00","breadcrumb":{"@id":"https://www.yuval-peres-books.com/markov-chains-and-mixing-times/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.yuval-peres-books.com/markov-chains-and-mixing-times/"]}]},{"@type":"BreadcrumbList","@id":"https://www.yuval-peres-books.com/markov-chains-and-mixing-times/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.yuval-peres-books.com/"},{"@type":"ListItem","position":2,"name":"Markov chains and mixing times"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Yuval Peres books &raquo; Feed" href="https://www.yuval-peres-books.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Yuval Peres books &raquo; Comments Feed" href="https://www.yuval-peres-books.com/comments/feed/" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='hello-elementor-css' href='https://www.yuval-peres-books.com/wp-content/themes/hello-elementor/style.min.css?ver=2.5.0' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://www.yuval-peres-books.com/wp-content/themes/hello-elementor/theme.min.css?ver=2.5.0' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://www.yuval-peres-books.com/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.5.6' media='all' />
+<link rel='stylesheet' id='elementor-post-4-css' href='https://www.yuval-peres-books.com/wp-content/uploads/elementor/css/post-4.css?ver=1648395942' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-css' href='https://www.yuval-peres-books.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=1788154201' media='all' />
+<link rel='stylesheet' id='elementor-pro-css' href='https://www.yuval-peres-books.com/wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.6.3' media='all' />
+<link rel='stylesheet' id='elementor-global-css' href='https://www.yuval-peres-books.com/wp-content/uploads/elementor/css/global.css?ver=1648395942' media='all' />
+<link rel='stylesheet' id='elementor-post-288-css' href='https://www.yuval-peres-books.com/wp-content/cache/background-css/1/www.yuval-peres-books.com/wp-content/uploads/elementor/css/post-288.css?ver=1671970420&wpr_t=1790959681' media='all' />
+<style id="rocket-lazyload-inline-css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:var(--wpr-bg-e401eb48-6151-430d-9f37-28bf9e967706) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+/*# sourceURL=rocket-lazyload-inline-css */
+</style>
+
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://www.yuval-peres-books.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://www.yuval-peres-books.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=1788154201' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-regular-css' href='https://www.yuval-peres-books.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=1788154201' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://www.yuval-peres-books.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=1788154201' media='all' />
+<script id="jquery-core-js" src="https://www.yuval-peres-books.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.yuval-peres-books.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<link rel="https://api.w.org/" href="https://www.yuval-peres-books.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.yuval-peres-books.com/wp-json/wp/v2/pages/288" /><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /><link rel='stylesheet' id='e-animations-css' href='https://www.yuval-peres-books.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.5.6' media='all' />
+
+<style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">.elementor-288 .elementor-element.elementor-element-73f1044a > .elementor-background-overlay{--wpr-bg-d93f11de-7834-40ae-807e-a5a6bf323382: url('https://www.yuval-peres-books.com/wp-content/uploads/2022/03/5570863-scaled.jpg');}.elementor-288 .elementor-element.elementor-element-bc66cf1 > .elementor-background-overlay{--wpr-bg-72903228-c13b-4f4e-99be-a2521531b279: url('https://www.yuval-peres-books.com/wp-content/uploads/2022/03/book-library-with-open-textbook-1.jpg');}.rll-youtube-player .play{--wpr-bg-e401eb48-6151-430d-9f37-28bf9e967706: url('https://vangus-cdn.com/www.yuval-peres-books.com/wp-content/plugins/vangus-cache/assets/img/youtube.png');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".elementor-288 .elementor-element.elementor-element-73f1044a > .elementor-background-overlay","style":".elementor-288 .elementor-element.elementor-element-73f1044a > .elementor-background-overlay{--wpr-bg-d93f11de-7834-40ae-807e-a5a6bf323382: url('https:\/\/www.yuval-peres-books.com\/wp-content\/uploads\/2022\/03\/5570863-scaled.jpg');}","hash":"d93f11de-7834-40ae-807e-a5a6bf323382","url":"https:\/\/www.yuval-peres-books.com\/wp-content\/uploads\/2022\/03\/5570863-scaled.jpg"},{"selector":".elementor-288 .elementor-element.elementor-element-bc66cf1 > .elementor-background-overlay","style":".elementor-288 .elementor-element.elementor-element-bc66cf1 > .elementor-background-overlay{--wpr-bg-72903228-c13b-4f4e-99be-a2521531b279: url('https:\/\/www.yuval-peres-books.com\/wp-content\/uploads\/2022\/03\/book-library-with-open-textbook-1.jpg');}","hash":"72903228-c13b-4f4e-99be-a2521531b279","url":"https:\/\/www.yuval-peres-books.com\/wp-content\/uploads\/2022\/03\/book-library-with-open-textbook-1.jpg"},{"selector":".rll-youtube-player .play","style":".rll-youtube-player .play{--wpr-bg-e401eb48-6151-430d-9f37-28bf9e967706: url('https:\/\/vangus-cdn.com\/www.yuval-peres-books.com\/wp-content\/plugins\/vangus-cache\/assets\/img\/youtube.png');}","hash":"e401eb48-6151-430d-9f37-28bf9e967706","url":"https:\/\/vangus-cdn.com\/www.yuval-peres-books.com\/wp-content\/plugins\/vangus-cache\/assets\/img\/youtube.png"}]; const rocket_excluded_pairs = [];</script></head>
+<body class="wp-singular page-template page-template-elementor_canvas page page-id-288 wp-theme-hello-elementor elementor-default elementor-template-canvas elementor-kit-4 elementor-page elementor-page-288">
+			<div data-rocket-location-hash="b4a2fa3c57274eff5cbad9cbc392a3b4" data-elementor-type="wp-page" data-elementor-id="288" class="elementor elementor-288" data-elementor-settings="[]">
+							<div data-rocket-location-hash="6485a55749de352b89ad5bb63f34ad6e" class="elementor-section-wrap">
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-73f1044a elementor-section-height-min-height elementor-section-items-stretch elementor-section-content-middle elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default" data-id="73f1044a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-18bdad66" data-id="18bdad66" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-4ee25f6a elementor-invisible elementor-widget elementor-widget-image" data-id="4ee25f6a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInLeft&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;],&quot;sticky_parent&quot;:&quot;yes&quot;,&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.5.6 - 28-02-2022 */
+.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style>												<img data-no-lazy="1" fetchpriority="high" decoding="async" width="595" height="842" src="https://vangus-cdn.com/www.yuval-peres-books.com/wp-content/uploads/2022/03/book4b.jpg" class="attachment-large size-large" alt="Markov chains and mixing times - Yuval Peres" srcset="https://vangus-cdn.com/www.yuval-peres-books.com/wp-content/uploads/2022/03/book4b.jpg 595w, https://vangus-cdn.com/www.yuval-peres-books.com/wp-content/uploads/2022/03/book4b-212x300.jpg 212w" sizes="(max-width: 595px) 100vw, 595px" />															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d81f531" data-id="d81f531" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-ac4f2cb elementor-widget elementor-widget-breadcrumbs" data-id="ac4f2cb" data-element_type="widget" data-widget_type="breadcrumbs.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="https://www.yuval-peres-books.com/wp-content/plugins/elementor-pro/assets/css/widget-theme-elements.min.css"><p id="breadcrumbs"><span><span><a href="https://www.yuval-peres-books.com/">Home</a> &raquo; <span class="breadcrumb_last" aria-current="page">Markov chains and mixing times</span></span></span></p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3b597d3 animated-slow elementor-invisible elementor-widget elementor-widget-heading" data-id="3b597d3" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.5.6 - 28-02-2022 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h1 class="elementor-heading-title elementor-size-default">Markov chains and mixing times</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-37f42c03 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="37f42c03" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:200}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.5.6 - 28-02-2022 */
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#818a91;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#818a91;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				<p>Markov chain Monte Carlo (MCMC) is a widely used algorithm in Mathematical Physics, Computer Science and Statistics, in order to sample from intractable distributions. <br><br>The main component in the running time of the MCMC algorithm is the &#8220;mixing time&#8221; of the underlying Markov chain., i.e., the number of steps one needs to run the chain to approximate the stationary distribution well. The modern mathematical theory of Markov chain mixing was initiated by Aldous and Diaconis in the 1980s. They described the &#8220;cutoff phenomenon&#8221; where the distribution of the Markov chain approaches the limiting stationary distribution abruptly. They wrote &#8220;From a theoretical viewpoint, there are interesting questions concerning the cut-off phenomenon. This occurs in all the examples we can explicitly calculate, but we know no general result which says that the phenomenon must happen for all &#8220;reasonable&#8221; shuffling methods&#8221;.&nbsp; <br><br>This book introduces the modern theory of Markov chain mixing, starting from basic notions and inequalities, and later developing the key tools used in analysis of Markov chains; Coupling, expansion, strong stationary times, electrical networks, eigenvalues, comparison inequalities, transportation methods (path coupling) and martingales. These tools are then applied to a variety of interesting chains, including random walks on graphs, card shuffling, Glauber dynamics for the Ising model, birth and death chains and lamplighter walks. Advanced chapters are devoted to the cutoff phenomenon, the exclusion process, and chains on infinite state spaces. The book has been used in undergraduate and graduate. courses in many universities.</p>						</div>
+				</div>
+				<div class="elementor-element elementor-element-37cc880b elementor-mobile-align-justify animated-fast elementor-invisible elementor-widget elementor-widget-button" data-id="37cc880b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:400}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="https://www.amazon.com/Probability-Cambridge-Statistical-Probabilistic-Mathematics/dp/1107160154/ref=sr_1_9?keywords=yuval+peres&#038;qid=1638425621&#038;s=books&#038;sr=1-9" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-float" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon elementor-align-icon-left">
+				<i aria-hidden="true" class="fas fa-shopping-cart"></i>			</span>
+						<span class="elementor-button-text">Order Now</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section data-rocket-location-hash="5e2781d8addf3ea2cdfb5928f3297b4c" class="elementor-section elementor-top-section elementor-element elementor-element-3abcf492 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3abcf492" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-487dd29" data-id="487dd29" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-2af39842 elementor-widget elementor-widget-heading" data-id="2af39842" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Related links</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-92960ef elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="92960ef" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.5.6 - 28-02-2022 */
+.elementor-widget.elementor-icon-list--layout-inline .elementor-widget-container{overflow:hidden}.elementor-widget .elementor-icon-list-items.elementor-inline-items{margin-right:-8px;margin-left:-8px}.elementor-widget .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item{margin-right:8px;margin-left:8px}.elementor-widget .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after{width:auto;left:auto;right:auto;position:relative;height:100%;border-top:0;border-bottom:0;border-right:0;border-left-width:1px;border-style:solid;right:-8px}.elementor-widget .elementor-icon-list-items{list-style-type:none;margin:0;padding:0}.elementor-widget .elementor-icon-list-item{margin:0;padding:0;position:relative}.elementor-widget .elementor-icon-list-item:after{position:absolute;bottom:0;width:100%}.elementor-widget .elementor-icon-list-item,.elementor-widget .elementor-icon-list-item a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:inherit}.elementor-widget .elementor-icon-list-icon+.elementor-icon-list-text{-ms-flex-item-align:center;align-self:center;padding-left:5px}.elementor-widget .elementor-icon-list-icon{display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-widget .elementor-icon-list-icon svg{width:var(--e-icon-list-icon-size,1em);height:var(--e-icon-list-icon-size,1em)}.elementor-widget .elementor-icon-list-icon i{width:1.25em;font-size:var(--e-icon-list-icon-size)}.elementor-widget.elementor-widget-icon-list .elementor-icon-list-icon{text-align:var(--e-icon-list-icon-align)}.elementor-widget.elementor-widget-icon-list .elementor-icon-list-icon svg{margin:var(--e-icon-list-icon-margin,0 calc(var(--e-icon-list-icon-size, 1em) * .25) 0 0)}.elementor-widget.elementor-list-item-link-full_width a{width:100%}.elementor-widget.elementor-align-center .elementor-icon-list-item,.elementor-widget.elementor-align-center .elementor-icon-list-item a{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.elementor-widget.elementor-align-center .elementor-icon-list-item:after{margin:auto}.elementor-widget.elementor-align-center .elementor-inline-items{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.elementor-widget.elementor-align-left .elementor-icon-list-item,.elementor-widget.elementor-align-left .elementor-icon-list-item a{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:left}.elementor-widget.elementor-align-left .elementor-inline-items{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.elementor-widget.elementor-align-right .elementor-icon-list-item,.elementor-widget.elementor-align-right .elementor-icon-list-item a{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:right}.elementor-widget.elementor-align-right .elementor-icon-list-items{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.elementor-widget:not(.elementor-align-right) .elementor-icon-list-item:after{left:0}.elementor-widget:not(.elementor-align-left) .elementor-icon-list-item:after{right:0}@media (max-width:1024px){.elementor-widget.elementor-tablet-align-center .elementor-icon-list-item,.elementor-widget.elementor-tablet-align-center .elementor-icon-list-item a,.elementor-widget.elementor-tablet-align-center .elementor-icon-list-items{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.elementor-widget.elementor-tablet-align-center .elementor-icon-list-item:after{margin:auto}.elementor-widget.elementor-tablet-align-left .elementor-icon-list-items{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.elementor-widget.elementor-tablet-align-left .elementor-icon-list-item,.elementor-widget.elementor-tablet-align-left .elementor-icon-list-item a{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:left}.elementor-widget.elementor-tablet-align-right .elementor-icon-list-items{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.elementor-widget.elementor-tablet-align-right .elementor-icon-list-item,.elementor-widget.elementor-tablet-align-right .elementor-icon-list-item a{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:right}.elementor-widget:not(.elementor-tablet-align-right) .elementor-icon-list-item:after{left:0}.elementor-widget:not(.elementor-tablet-align-left) .elementor-icon-list-item:after{right:0}}@media (max-width:767px){.elementor-widget.elementor-mobile-align-center .elementor-icon-list-item,.elementor-widget.elementor-mobile-align-center .elementor-icon-list-item a,.elementor-widget.elementor-mobile-align-center .elementor-icon-list-items{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.elementor-widget.elementor-mobile-align-center .elementor-icon-list-item:after{margin:auto}.elementor-widget.elementor-mobile-align-left .elementor-icon-list-items{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.elementor-widget.elementor-mobile-align-left .elementor-icon-list-item,.elementor-widget.elementor-mobile-align-left .elementor-icon-list-item a{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:left}.elementor-widget.elementor-mobile-align-right .elementor-icon-list-items{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.elementor-widget.elementor-mobile-align-right .elementor-icon-list-item,.elementor-widget.elementor-mobile-align-right .elementor-icon-list-item a{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:right}.elementor-widget:not(.elementor-mobile-align-right) .elementor-icon-list-item:after{left:0}.elementor-widget:not(.elementor-mobile-align-left) .elementor-icon-list-item:after{right:0}}</style>		<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://www.youtube.com/channel/UCh350gdSQb_mqtrQ3e8_AYg/videos">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-arrow-alt-circle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Multiple related videos in the Youtube channel >></span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://link.springer.com/article/10.1007/s00283-018-9839-x?noAccess=true">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-arrow-alt-circle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Review by David Aldous >></span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://yuval-peres-presentations.com/characterization-of-cutoff-for-reversible-markov-chains/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-arrow-alt-circle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Related Presentation >></span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://www.maa.org/press/maa-reviews/markov-chains-and-mixing-times-0">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-arrow-alt-circle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Review by Rick Durrett >> </span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://en.wikipedia.org/wiki/Markov_Chains_and_Mixing_Times#:~:text=The%20mixing%20time%20of%20a,chain%2C%20and%20slowly%20mixing%20otherwise.">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-arrow-alt-circle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Wikipedia page of the book, authored by: David A. Levin, Yuval Peres and Elizabeth Wilmer </span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-arrow-alt-circle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Link to PDF of the book >> </span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://markov-chains.com/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-arrow-alt-circle-right"></i>						</span>
+										<span class="elementor-icon-list-text">Web page of a course on Markov chain mixing</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-8329b32 elementor-widget elementor-widget-heading" data-id="8329b32" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Related open problems</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-f73f98c elementor-widget elementor-widget-text-editor" data-id="f73f98c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>If you have ideas or comments pertaining to the open problems listed below, please send email to <a href="mailto:yuval@yuvalperes.com">yuval@yuvalperes.com</a></p>						</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-d8c2612 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d8c2612" data-element_type="section">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-ba86509" data-id="ba86509" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-b133dc3 elementor-widget elementor-widget-heading" data-id="b133dc3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">1.</h2>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7af5903" data-id="7af5903" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-384bcda elementor-widget elementor-widget-text-editor" data-id="384bcda" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Let V be a monotone subset of the hypercube {0,1}^n, i.e., if x is in V and y in the hypercube is greater or equal than x in each coordinate, then y must be in V as well. Assuming that the volume of V is at least a half of the hypercube, what is the best upper bound one can prove for the mixing time of lazy simple random walk on V? See Ding, Jian, and Elchanan Mossel. &#8220;Mixing under monotone censoring.&#8221; Electronic Communications in Probability 19 (2014): 1-6 where an upper bound of order n^3 is proved. It is conjectured that the answer is O(n log n).</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-c16b2f6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c16b2f6" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-6eeb540" data-id="6eeb540" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-d3177af elementor-widget elementor-widget-heading" data-id="d3177af" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">2.</h2>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-46e419f" data-id="46e419f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-de1e2c9 elementor-widget elementor-widget-text-editor" data-id="de1e2c9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Consider the Markov chain on the set GL_n(2) of n by n invertible matrices, defined as follows. Given a matrix A, choose two distinct rows i and j uniformly at random, and add row i to row j modulo 2. What is the mixing time of this chain? The best upper bound known, due to Kassabov, is O(n^3), and the best lower bound known is of order n^2/(log n). See the discussion in page 2 of the paper: Ben-Hamou, Anna, and Yuval Peres. &#8220;Cutoff for a stratified random walk on the hypercube.&#8221; Electronic Communications in Probability 23 (2018): 1-10. (<a href="https://projecteuclid.org/journals/electronic-communications-in-probability/volume-23/issue-none/Cutoff-for-a-stratified-random-walk-on-the-hypercube/10.1214/18-ECP132.pdf">Link to PDF</a>).</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-a95d3e3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a95d3e3" data-element_type="section">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d411786" data-id="d411786" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-26c6f8b elementor-widget elementor-widget-heading" data-id="26c6f8b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">3.</h2>		</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-07ea53e" data-id="07ea53e" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-b3b6692 elementor-widget elementor-widget-text-editor" data-id="b3b6692" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Consider supercritical bond percolation on the hypercube {0,1}^d, i.e., each edge is independently retained with probability p=c/d, where c&gt;1. Let G=(V,E) denote the giant component, so with high probability, |V| is of order 2^d. What is the mixing time of lazy SRW on G? Recently, an upper bound of order d^{11} was proved in <a href="http://Consider supercritical bond percolation on the hypercube {0,1}^d, i.e., each edge is independently retained with probability p=c/n, where c&gt;1. Let G=(V,E) denote the giant component, so with high probability, |V| is of order 2^d. What is the mixing time of lazy SRW on G? Recently, an upper bound of order d^{11} was proved in https://arxiv.org/pdf/2111.06752.pdf, but no lower bound is known beyond order d log(d)." data-wplink-url-error="true">https://arxiv.org/pdf/2111.06752.pdf</a>, but no lower bound is known beyond order d log(d).</p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-bc66cf1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bc66cf1" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-74a6fd2a" data-id="74a6fd2a" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-27d84a01 animated-slow elementor-invisible elementor-widget elementor-widget-heading" data-id="27d84a01" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Contact me</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-42be6005 elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="42be6005" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items elementor-inline-items">
+							<li class="elementor-icon-list-item elementor-inline-item">
+											<a href="https://yuvalperes.com/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-globe"></i>						</span>
+										<span class="elementor-icon-list-text">My Website</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-images"></i>						</span>
+										<span class="elementor-icon-list-text">My Presentations</span>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-linkedin"></i>						</span>
+										<span class="elementor-icon-list-text">LinkedIn</span>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-youtube"></i>						</span>
+										<span class="elementor-icon-list-text">Youtube</span>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-google"></i>						</span>
+										<span class="elementor-icon-list-text">Scholar</span>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-facebook-square"></i>						</span>
+										<span class="elementor-icon-list-text">Facebook</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+						</div>
+					</div>
+		<script type="speculationrules">
+{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)","/wp-login.php","/*logout*"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prerender, .no-prerender a"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"moderate"}]}
+</script>
+<script id="rocket_lazyload_css-js-extra">
+var rocket_lazyload_css_data = {"threshold":"300"};
+//# sourceURL=rocket_lazyload_css-js-extra
+</script>
+<script id="rocket_lazyload_css-js-after">
+!function o(n,c,a){function u(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(s)return s(t,!0);throw(e=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",e}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return u(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var s="function"==typeof require&&require,e=0;e<a.length;e++)u(a[e]);return u}({1:[function(e,t,r){"use strict";{const c="undefined"==typeof rocket_pairs?[]:rocket_pairs,a=(("undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs).map(t=>{var e=t.selector;document.querySelectorAll(e).forEach(e=>{e.setAttribute("data-rocket-lazy-bg-"+t.hash,"excluded")})}),document.querySelector("#wpr-lazyload-bg-container"));var o=rocket_lazyload_css_data.threshold||300;const u=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&c.filter(e=>t.target.matches(e.selector)).map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,a.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{u.unobserve(e),e.setAttribute("data-rocket-lazy-bg-"+t.hash,"loaded")}))})})},{rootMargin:o+"px"});function n(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&c.forEach(t=>{try{document.querySelectorAll(t.selector).forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&(u.observe(e),(t.elements||=[]).push(e))})}catch(e){console.error(e)}})}n(),function(){const r=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType)return(t=new r(t)).observe(e,{attributes:!0,childList:!0,subtree:!0}),t}}()(document.querySelector("body"),n)}},{}]},{},[1]);
+//# sourceURL=rocket_lazyload_css-js-after
+</script>
+<script id="hello-theme-frontend-js" src="https://www.yuval-peres-books.com/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0"></script>
+<script id="elementor-pro-webpack-runtime-js" src="https://www.yuval-peres-books.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.6.3"></script>
+<script id="elementor-webpack-runtime-js" src="https://www.yuval-peres-books.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.5.6"></script>
+<script id="elementor-frontend-modules-js" src="https://www.yuval-peres-books.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.5.6"></script>
+<script id="wp-hooks-js" src="https://www.yuval-peres-books.com/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://www.yuval-peres-books.com/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/www.yuval-peres-books.com\/wp-admin\/admin-ajax.php","nonce":"248630dad3","urls":{"assets":"https:\/\/www.yuval-peres-books.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/www.yuval-peres-books.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/www.yuval-peres-books.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+</script>
+<script id="elementor-pro-frontend-js" src="https://www.yuval-peres-books.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.6.3"></script>
+<script id="elementor-waypoints-js" src="https://www.yuval-peres-books.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"></script>
+<script id="jquery-ui-core-js-before">
+jQuery.uiBackCompat = true;
+//# sourceURL=jquery-ui-core-js-before
+</script>
+<script id="jquery-ui-core-js" src="https://www.yuval-peres-books.com/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.5.6","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"a11y_improvements":true,"e_import_export":true,"additional_custom_breakpoints":true,"e_hidden_wordpress_widgets":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true,"page-transitions":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/www.yuval-peres-books.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_footer_logo_type":"logo"},"post":{"id":288,"title":"Markov%20chains%20and%20mixing%20times%20-%20Yuval%20Peres%20books","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script id="elementor-frontend-js" src="https://www.yuval-peres-books.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.5.6"></script>
+<script id="pro-elements-handlers-js" src="https://www.yuval-peres-books.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.6.3"></script>
+<script id="e-sticky-js" src="https://www.yuval-peres-books.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.6.3"></script>
+<script nowprocket>
+(function(){
+	var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+	var wasPre = (document.prerendering === true) || (nav && nav.activationStart > 0);
+	if (!wasPre) { return; }
+	var heal = function () {
+		try {
+			// 1) Let every width-branching handler re-decide against the
+			//    real viewport — Elementor listens on window resize.
+			window.dispatchEvent(new Event('resize'));
+			window.dispatchEvent(new Event('orientationchange'));
+		} catch (e) {}
+		// 2) Belt: nav menus still uninitialized after the resize pass.
+		//    The stale wrong-mode handler blocks re-init (Elementor
+		//    dedups per element), so: fire the 'destroy' event the base
+		//    handler listens for, then runReadyTrigger — a GENUINE
+		//    Elementor init with their own config, so styling is
+		//    pixel-identical. Direct SmartMenus only as last resort,
+		//    with Elementor-matching options. Idempotent throughout.
+		setTimeout(function () {
+			try {
+				if (!window.jQuery) { return; }
+				var uninit = function ($w) {
+					var $u = $w.find('ul.elementor-nav-menu').first();
+					return $u.length && !$u.data('smartmenus') && !$u.closest('.elementor-nav-menu--dropdown').length ? $u : null;
+				};
+				jQuery('.elementor-widget-nav-menu').each(function () {
+					var $w = jQuery(this);
+					var $u = uninit($w);
+					if (!$u) { return; }
+					try {
+						$w.trigger('destroy'); // Tear down the wrong-mode handler.
+						if (window.elementorFrontend && elementorFrontend.elementsHandler && elementorFrontend.elementsHandler.runReadyTrigger) {
+							elementorFrontend.elementsHandler.runReadyTrigger($w[0]); // Their init, their config.
+						}
+					} catch (e) {}
+					setTimeout(function () {
+						var $r = uninit($w);
+						if ($r && jQuery.fn.smartmenus) {
+							// Byte-identical to Elementor's own init (verified
+							// against a healthy page's opts dump), RTL derived
+							// from the document — belt-initialized menus are
+							// indistinguishable from native ones.
+							var rtl = document.documentElement.dir === 'rtl' || getComputedStyle($r[0]).direction === 'rtl';
+							$r.smartmenus({
+								subIndicators: false,
+								subIndicatorsText: '',
+								subIndicatorsPos: 'append',
+								subMenusMinWidth: '10em',
+								subMenusMaxWidth: '1000px',
+								rightToLeftSubMenus: rtl,
+								bottomToTopSubMenus: false,
+								showTimeout: 250,
+								hideTimeout: 500,
+								markCurrentItem: false,
+								keepInViewport: true
+							});
+						}
+					}, 250);
+				});
+			} catch (e) {}
+		}, 350);
+	};
+	var run = function () { if (window.jQuery) { jQuery(heal); } else { heal(); } };
+	if (document.prerendering) {
+		document.addEventListener('prerenderingchange', function () { setTimeout(run, 0); }, { once: true });
+	} else {
+		run(); // Executed post-activation (late release) — heal now.
+	}
+})();
+</script>
+		<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.yuval-peres-books.com/wp-content/plugins/vangus-cache/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt,l){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img data-no-lazy="1" fetchpriority="high" src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="Play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi/ID/hqdefault.jpg'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});</script>	</body>
+</html>
+
+<!-- Cached by Vangus Cache - Debug: cached@1790959681 -->

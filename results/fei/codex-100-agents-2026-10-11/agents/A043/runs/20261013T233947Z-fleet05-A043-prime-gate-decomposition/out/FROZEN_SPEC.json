@@ -1,0 +1,13 @@
+{
+ "helper_version":"A043-ternary-prime-catalogue-v1",
+ "family":"all 256 labeled sign truth tables on three inputs; essential genuine disjoint primes only",
+ "domain":"n=3 fixed, all masks 0..255",
+ "case_count":256,
+ "symmetry":"complete 96-element input-permutation/input-reflection/output-negation group; exact orbits checked, not assumed free",
+ "arithmetic":"integer truth-table transformations, row comparisons, Walsh numerators and Mobius coefficients",
+ "memory_estimate_mb":20,
+ "max_runtime_seconds":60,
+ "pilot":"same fixed 256-table catalogue, expected below one second",
+ "purpose":"exclude source-complete majority and mux orbits, identify remaining prime targets without another bias-grid census",
+ "command":"python -X utf8 code/catalogue.py"
+}

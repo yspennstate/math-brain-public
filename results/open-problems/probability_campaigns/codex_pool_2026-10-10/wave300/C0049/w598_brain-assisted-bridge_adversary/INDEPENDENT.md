@@ -1,0 +1,11 @@
+﻿# Independent derivation for C0049 (before paired proof)
+
+Frozen at this file creation on 2026-10-10. No w597 proof has been read.
+
+Primary local relation: Duminil-Copin, arXiv:1208.3787v2, Proposition 4, Eq. (3.1). After positively oriented rotation of medial coordinates it reads H_E-H_W+i(V_N-V_S)=0. H denotes horizontal edges, V vertical edges. This is an algebraic edge relation; interpreting both orientations as one scalar function needs a further premise.
+
+Candidate obstruction, exact at every mesh size: take a real smooth compactly supported nonharmonic function psi in the interior of a rectangle. Sample it at face centers. For a horizontal edge e set H_delta(e)=i[psi(face above e)-psi(face below e)]/delta. For a vertical edge e set V_delta(e)=-[psi(face right of e)-psi(face left of e)]/delta. Expanding H_E-H_W+i(V_N-V_S) cancels the same four face values with opposite signs, identically. All edge values vanish near the boundary. The directional limits are H=i psi_y and V=-psi_x; both are bounded and smooth. Averaging gives f=(i psi_y-psi_x)/2=-partial_z psi, with partial_bar_z f=-Delta psi/4. Thus f is not holomorphic wherever Delta psi is nonzero. Adding this field to any solution preserves the same local identities and boundary edge values. This refutes the implication from local identities, direction-wise smooth compactness and boundary data alone to a holomorphic scalar limit. It is not a counterexample to the actual FK probability observable, whose additional probabilistic constraints were not imposed.
+
+Minimal sufficient bridge to attempt: require H_delta and V_delta to have the same local L1 limit (or their average to be locally L1 compact and their difference to tend to zero locally in L1). Discrete summation by parts then yields partial_x f+i partial_y f=0 distributionally, hence holomorphicity of the representative. The FK-specific task is to prove this directional compatibility and precompactness at the correctly normalized scale. Nothing in the single local equation establishes it.
+
+Source boundary cases: the general-q conjecture is not a q=2 theorem; q<1 cannot inherit FKG-based estimates; the unmodified q=4 observable degenerates, so q up to 4 requires a separate endpoint argument. Parent C0049 not solved. Independent referee w599 must check this derivation and any conditional lemma before promotion.

@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "run_id": "20261013T073110Z-fleet01-B12-adjacent-two-coset",
+  "slot": "B12",
+  "account": "fleet01",
+  "primary_packet_id": "A057",
+  "packet_ids": ["A057"],
+  "gap_id": "B12-A057-COHERENT-HIERARCHY-v13",
+  "attempt": 13,
+  "prior_status": "Two disjoint affine defect cosets were covered only at physical distance at least two, with constant 16 ln 2.",
+  "new_status": "PROVED_CONTRIBUTOR",
+  "mathematical_delta": "Removed the distance-two hypothesis, covered arbitrary adjacency, and improved the constant to the asymptotically sharp 8 ln 2 by coupling an exact Hadamard spectral refund to a joining-column rank lemma.",
+  "acceptance_evidence": [
+    "ADJACENT_TWO_COSET.tex",
+    "check_all_two_cosets.py",
+    "check_all_two_cosets.out"
+  ],
+  "verification_scope": {
+    "disjoint_affine_pair_decompositions_through_m4": 23000,
+    "adjacent_pairs": 19484,
+    "genuinely_nonaffine_pairs": 22148,
+    "scalar_rank_tuples": 518400,
+    "violations": 0,
+    "seed": null
+  },
+  "remaining_obstacle": "Couple the rank slack and signed collision refunds for unions of three or more affine pieces without recharging a physical derivative; arbitrary Boolean sources and the complete universal coherent remainder remain open.",
+  "next_action": "Form the collision graph of three affine cosets, derive its quotient-column rank inequality, and test whether the total common-spectrum Hadamard refund dominates all internal physical edges with one source budget.",
+  "consumers": ["B20"],
+  "reviewers": ["A090", "A091"],
+  "independent_review": "PENDING",
+  "packet_complete": false,
+  "full_fei_solved": false,
+  "delivery": "PENDING_REPOSITORY_WRITE"
+}

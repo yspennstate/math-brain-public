@@ -1,0 +1,57 @@
+\section*{Sharp auxiliary constant for point-defect modulation}
+
+Let \(q_m:\{-1,1\}^m\to\{-1,1\}\) be negative at one cube point
+and positive elsewhere. Put \(N=2^m\). Its squared Fourier law has mass
+\((N-2)^2/N^2\) at the empty set and mass \(4/N^2\) at every nonempty set.
+Consequently
+\[
+ I(q_m)=\frac{2m}{N},
+ \qquad
+ H(q_m)=h_2(\delta)+\delta\log_2(N-1),
+ \qquad
+ \delta=\frac{4(N-1)}{N^2}.
+\]
+
+For \(0<u<1\),
+\[
+ h_2(u)\le u\log_2(e/u).
+\]
+Indeed, in natural logarithms,
+\(-(1-u)\log(1-u)\le u\), which follows from
+\(-\log(1-u)\le u/(1-u)\).
+Using the exact value of \(\delta\),
+\[
+\begin{aligned}
+ H(q_m)
+ &\le \delta\log_2\frac{e(N-1)}{\delta}\\
+ &=\delta\log_2\frac{eN^2}{4}\\
+ &=\delta\bigl(2m+\log_2e-2\bigr).
+\end{aligned}
+\]
+For \(m\ge2\), the bracket is positive and \(\delta<4/N\). Hence
+\[
+ \frac{H(q_m)}{I(q_m)}
+ <
+ \frac{2}{m}\bigl(2m+\log_2e-2\bigr)
+ <4.
+\]
+For \(m=1\), \(q_1\) is a character and \(H(q_1)=0\).
+The exact formulas also give
+\[
+ \lim_{m\to\infty}\frac{H(q_m)}{I(q_m)}=4.
+\]
+Thus constant \(4\), rather than \(9/2\), is valid for every point-defect
+auxiliary product and is asymptotically sharp within this family.
+
+In the B06 modulation hierarchy where every modulator at a level is \(q_m\),
+the occupied auxiliary products are either \(1\) or \(q_m\). The accepted
+one-block identities therefore give
+\[
+ H(f_L)\le\max(C_0,4)\,I(f_L)
+\]
+at every finite depth, with the base entropy retained as terminal debt and
+each fresh-block influence charged once.
+
+This sharpening is contributor-proved and requires a fresh reviewer. It is
+not a universal FEI bound and does not cover blocks whose physical branches
+have unequal squared spectra.

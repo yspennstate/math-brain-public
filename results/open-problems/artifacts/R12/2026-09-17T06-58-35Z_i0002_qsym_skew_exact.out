@@ -1,0 +1,11 @@
+n=2 p_n(q)=sum c_j(1-q^2)^j coefficients: {1: Fraction(1, 8)}
+n=4 p_n(q)=sum c_j(1-q^2)^j coefficients: {0: Fraction(1, 32), 2: Fraction(3, 128)}
+n=6 p_n(q)=sum c_j(1-q^2)^j coefficients: {0: Fraction(3, 128), 1: Fraction(3, 512), 2: Fraction(3, 1024), 3: Fraction(5, 1024)}
+n=8 p_n(q)=sum c_j(1-q^2)^j coefficients: {0: Fraction(5, 256), 1: Fraction(3, 1024), 2: Fraction(7, 2048), 3: Fraction(1, 512), 4: Fraction(35, 32768)}
+fixed axis word HVVHVV: {0: Fraction(1, 16), 2: Fraction(1, 8), 4: Fraction(1, 16)} =(1+q^2)^2/16
+charpoly G0 = lambda(lambda+4)(lambda^2+8lambda+56/3)
+charpoly G1 = lambda(lambda+4)(lambda^2+8lambda+20)
+A,B Frobenius-orthogonal; G0,G1 valid Eulerian generators with same symmetric part.
+Hence at t=pi: Tr exp(tG1)-Tr exp(tG0)
+=2 exp(-4pi)[1-cos(2pi sqrt(6)/3)] > 0 exactly.
+ALL_EXACT_CHECKS_PASS

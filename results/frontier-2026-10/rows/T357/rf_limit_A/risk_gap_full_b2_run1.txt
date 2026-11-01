@@ -1,0 +1,21 @@
+T357 (agent A, 21 Oct 2026): risk_gap_coefficient.py with the curvature move added. The 20 Oct version held H
+fixed along the ridge path; dH/dlam has full-rank part Vh' Sig with Vh' = -gam K, K = a'Sig H^-1 a (since dq^2/dlam = -2K),
+so the variance term carries (mean(1/s) + Vh') where it had mean(1/s). The 20 Oct text quoted K = 23.3; it is about 112.
+Original docstring follows.
+T357 (agent A, 20 Oct 2026): closed form for k_risk = lim alpha lam_risk, the companion of fm_gap_coefficient.py.
+Exact at every n: dw_hat/dlam = -Hh^{-1} w_hat (Hh = empirical Hessian + lam), and grad Rhat(w_hat) = -lam w_hat, so the
+population risk R(w_hat_lam) is stationary where
+    lam_risk = [grad R - grad Rhat](w_hat) . v / (w_hat' Hh^{-1} w_hat),   v = Hh^{-1} w_hat,
+the same shape as lam_FM = [grad R - grad Rhat](w_hat) . w_hat / |w_hat|^2 with w_hat replaced by v. The numerator is the
+train-test gap of the statistic rho'(zhat) zeta, zeta = x.v. Leave one out: x_i.Hh^{-1} = x_i.H_{-i}^{-1}/(1 + c rho''_i) and
+w_hat = w_{-i} - (1/n) H_{-i}^{-1} x_i rho'(P_i), so a training zeta_i = (zeta_cav - c2 rho'(P_i))/(1 + c rho''(P_i)) with
+c = (1/n) tr Sig H^{-1}, c2 = (1/n) tr Sig H^{-2}. (The move of the other points' Hessian weights by w_hat - w_{-i} enters with
+E sig''(zhat) = 0 and drops.) To first order in 1/alpha
+    gap = 2 c E[rho'' rho' zeta] + c2 E rho'^2,
+H = E sig'(zhat) x x' = Vh Sig + gam Sig a a' Sig (Stein, gam = E sig'''(zhat)), all at the n = inf fit a_0 = kappa Sig^{-1} m / Vh.
+So k_risk = psi [2 E(rho'' rho' zeta) / Vh + mean(1/s) E rho'^2 / Vh^2] / (a_0' H^{-1} a_0), s the spectrum of Sig.
+Compared with the alpha sweep's alpha lam_risk (rf_cgmt_*_v2.txt). argv: beta psi [d] [seed]
+beta 2.0 psi 1.0 lam0 1e-08: q0 1.48432 Vh 0.17760 gam -0.03776 E rho'^2 0.17783 E rho''rho'zeta +0.01064 mean(1/s) 8.7205 a'H^-1 a 951.6752 (spike-free 699.4922)  k_risk predicted 0.05178  (variance term alone 0.05166)
+   K = a'Sig H^-1 a 112.0875; Vh' = -gam K 4.2326; with the curvature move k_risk 0.07686 (variance term alone 0.07673)
+beta 2.0 psi 1.0 lam0 1e-06: q0 1.48425 Vh 0.17761 gam -0.03776 E rho'^2 0.17783 E rho''rho'zeta +0.01049 mean(1/s) 8.7205 a'H^-1 a 951.3833 (spike-free 699.2932)  k_risk predicted 0.05180  (variance term alone 0.05167)
+   K = a'Sig H^-1 a 112.0602; Vh' = -gam K 4.2319; with the curvature move k_risk 0.07687 (variance term alone 0.07675)

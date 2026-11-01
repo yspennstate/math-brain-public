@@ -1,0 +1,401 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\Nn}{\mathbb N}
+\newcommand{\cx}{\le_{\mathrm{cx}}}
+\newcommand{\icx}{\le_{\mathrm{icx}}}
+
+\title{Ballisticity for One-Dimensional Positive Cookie Environments Without Bounded Stacks}
+\author{Working proof package for Kosygina--Zerner Problem 5.3}
+\date{18 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Kosygina and Zerner asked whether the bounded-stack assumption in the one-dimensional excited-random-walk ballisticity criterion can be replaced by positivity of every cookie.  We give a proof, conditional only on the standard monotonicity and backward-branching identities already used in the bounded theory.  The only new endpoint is $\delta=2$.  Bernoulliizing each positive cookie and moving the resulting deterministic-right cookies to the front reduces the endpoint to a critical Galton--Watson chain with random emigration.  Every integrable mean-two emigration law with positive mass at zero dominates, in the convex order relevant to the branching kernel, an explicit three-point bounded mean-two emigration law.  The bounded comparator is exactly a source-valid bounded cookie environment at $\delta=2$, so its stationary first moment is infinite.  Increasing-convex comparison transfers that divergence to the arbitrary random-emigration chain.  This yields zero speed at $\delta=2$; finite-coordinate strengthening gives all $\delta<2$, while finite-depth truncation gives positive speed for $\delta>2$.
+\end{abstract}
+
+\section{Source statement and notation}
+
+We use the notation of Kosygina--Zerner, \emph{Excited random walks: results, methods, open problems}, arXiv:1204.1895v2, Problem 5.3.  In dimension one, at each site $x$ there is a cookie stack $(p_{x,i})_{i\ge1}$, where $p_{x,i}$ is the conditional probability of stepping to the right on the $i$th visit to $x$.  We assume:
+\begin{itemize}
+\item[(IID)] the site stacks are independent and identically distributed;
+\item[(POS1)] $p_{x,i}\ge1/2$ almost surely for every $i$;
+\item[(WEL)] the source weak-ellipticity condition: for each direction there is positive environment probability that all cookie transition probabilities in that direction are positive.
+\end{itemize}
+Set
+\[
+ d_i:=2p_{0,i}-1\in[0,1],
+ \qquad
+ \delta:=\E\sum_{i\ge1}d_i\in[0,\infty].
+\]
+The bounded-stack theorem states, under (IID), (BD), and (WEL), that the limiting speed $v$ satisfies $v=0$ for $\delta\in[-2,2]$ and $v>0$ for $\delta>2$.  Problem 5.3 asks whether (BD) may be replaced by (POS1).
+
+Our target is therefore the following positive branch.
+
+\begin{theorem}[Kosygina--Zerner Problem 5.3, positive branch]\label{thm:main}
+Under \emph{(IID)+(WEL)+(POS1)},
+\[
+ \delta\le2 \Longrightarrow v=0,
+ \qquad
+ \delta>2 \Longrightarrow v>0.
+\]
+The second implication includes $\delta=+\infty$.
+\end{theorem}
+
+We use two standard facts from the one-dimensional cookie-walk theory.
+
+\begin{enumerate}
+\item \emph{Monotonicity.} Strengthening cookies coordinatewise cannot decrease the limiting speed.
+\item \emph{Backward branching representation.} In the right-transient regime, let $V$ denote the usual backward branching-like chain.  When $V$ is positive recurrent with invariant law $\pi$, finite invariant mean gives
+\[
+ v=\frac{1}{1+2\E_\pi V};
+\]
+if $\E_\pi V=\infty$, the speed is zero.  These are the standard downcrossing/hitting-time identities used in the bounded proof.
+\end{enumerate}
+
+The only genuinely new part of the argument is to prove the infinite invariant first moment at the critical value $\delta=2$ without a bounded stack.
+
+\section{The easy parameter regimes}
+
+\subsection{The case $\delta>2$}
+
+For $M\ge1$ set
+\[
+ \delta_M:=\E\sum_{i=1}^{M}d_i.
+\]
+By monotone convergence, $\delta_M\uparrow\delta$.  If $\delta>2$, including $\delta=+\infty$, there exists a finite $M$ with $\delta_M>2$.  Replace every cookie after depth $M$ by a fair cookie.  The resulting environment satisfies (IID)+(BD)+(WEL), has drift parameter $\delta_M>2$, and therefore has positive speed by the bounded theorem.  The original environment is coordinatewise stronger, so monotonicity gives $v>0$.
+
+\subsection{Reduction of $\delta<2$ to $\delta=2$}
+
+Suppose $\delta<2$.  Since $\sum_i\E d_i=\delta<\infty$, we have $\E d_i\to0$ and hence $\E(1-d_i)\to1$.  We may choose finitely many coefficients $a_i\in[0,1/2]$ so that
+\[
+ \sum_i a_i\E(1-d_i)=2-\delta.
+\]
+Define, for those finitely many coordinates,
+\[
+ p_i^+:=p_i+a_i(1-p_i),
+\]
+and leave all other coordinates unchanged.  The new drift satisfies
+\[
+ 2p_i^+-1=d_i+a_i(1-d_i),
+\]
+so the strengthened environment has drift exactly two.  It remains (IID)+(POS1).  It also remains (WEL): if the original left probability $1-p_i$ is positive then the strengthened left probability $(1-a_i)(1-p_i)$ is still positive, and only finitely many coordinates were changed.  Thus, once the endpoint $\delta=2$ has been proved to have zero speed, monotonicity yields
+\[
+ 0\le v\le v^+=0.
+\]
+It remains only to treat $\delta=2$.
+
+\section{Bernoulliization and front-loading at the endpoint}
+
+Assume from now on that $\delta=2$.
+
+\subsection{Bernoulliization}
+
+Conditionally on a site stack $(p_i)_{i\ge1}$, let
+\[
+ A_i\sim\mathrm{Bernoulli}(d_i),\qquad d_i=2p_i-1,
+\]
+independently in $i$, and let $C_i$ be independent fair Bernoulli variables.  Define the actual success bit
+\[
+ B_i=\begin{cases}
+ 1,&A_i=1,\\
+ C_i,&A_i=0.
+ \end{cases}
+\]
+Then
+\[
+ \Pp(B_i=1\mid(p_j)_j)=d_i+\frac{1-d_i}{2}=p_i,
+\]
+and the $B_i$ are conditionally independent.  Thus this enlargement leaves the annealed cookie coin sequence, and hence the annealed backward branching chain, unchanged.
+
+Let
+\[
+ N:=\sum_{i\ge1}A_i.
+\]
+By Tonelli,
+\[
+ \E N=\E\sum_i d_i=2,
+\]
+so $N<\infty$ almost surely.
+
+Moreover,
+\begin{equation}\label{eq:p0}
+ \Pp(N=0)>0.
+\end{equation}
+Indeed, the left-direction part of (WEL) gives positive probability of a stack on which $p_i<1$ for every $i$, equivalently $d_i<1$ for every $i$.  Since $\sum_i d_i<\infty$ almost surely, on that event
+\[
+ \prod_i(1-d_i)>0.
+\]
+This product is the conditional probability that every $A_i$ vanishes.  Averaging gives \eqref{eq:p0}.
+
+\subsection{Front-loading}
+
+Fix a realization of the marked/fair sequence.  Swap adjacent pairs of the form
+\[
+ [\text{fair bit},\,1]\quad\longmapsto\quad[1,\,\text{fair bit}].
+\]
+Each swap weakly increases the cumulative number of successes at every prefix.  After all swaps, the first $N$ cookies are deterministic successes and all later cookies are fair.  If $F_m$ is the number of failures before the $m$th success, then under this coupling
+\begin{equation}\label{eq:front}
+ F_m^{\mathrm{front}}\le F_m^{\mathrm{original}}
+ \qquad\text{for every }m.
+\end{equation}
+Because $m\mapsto F_m$ is nondecreasing, the associated backward chains can be coupled in the same order.
+
+For the front-loaded chain, conditionally on $N$, the failures after the deterministic successes are sums of iid geometric$(1/2)$ variables on $\{0,1,2,\dots\}$ with mean one.  Thus the endpoint is reduced to the following statement.
+
+\begin{theorem}[Critical random-emigration theorem]\label{thm:RE}
+Let $N$ be any nonnegative integer-valued random variable with
+\[
+ \E N=2,\qquad \Pp(N=0)>0.
+\]
+Let $N_n$ be iid copies of $N$, and let $\xi_{n,j}$ be iid variables with
+\[
+ \Pp(\xi=k)=2^{-(k+1)},\qquad k\ge0,
+\]
+independent of the $N_n$.  Define
+\begin{equation}\label{eq:RE}
+ Z_{n+1}=\sum_{j=1}^{(Z_n+1-N_n)_+}\xi_{n,j}.
+\end{equation}
+Then the positive recurrent chain \eqref{eq:RE} has invariant law $\pi_N$ satisfying
+\[
+ \E_{\pi_N}Z=\infty.
+\]
+\end{theorem}
+
+Positive recurrence in Theorem~\ref{thm:RE} is elementary from the bounded theory: since $\E(N\wedge M)\uparrow2$, choose $M$ with $\E(N\wedge M)>1$.  The chain with bounded emigration $N\wedge M$ is the backward chain of a bounded positive cookie environment with drift greater than one and is positive recurrent.  The chain with emigration $N$ is pathwise no larger, so its return time to zero is no larger.
+
+\section{Convex-order proof of the critical random-emigration theorem}
+
+\subsection{A universal three-point comparator}
+
+Set
+\[
+ p_0:=\Pp(N=0),
+ \qquad
+ a:=\min\left\{\frac{p_0}{2},\frac16\right\}>0.
+\]
+Define $N_*$ by
+\begin{equation}\label{eq:Nstar}
+ \Pp(N_*=0)=a,
+ \quad
+ \Pp(N_*=2)=1-3a,
+ \quad
+ \Pp(N_*=3)=2a.
+\end{equation}
+Then $\E N_*=2$.
+
+\begin{lemma}\label{lem:cx}
+We have
+\[
+ N_*\cx N.
+\]
+\end{lemma}
+
+\begin{proof}
+For integrable integer-valued variables of equal mean, convex order is equivalent to the stop-loss inequalities
+\[
+ \E(X-k)_+\le\E(Y-k)_+\qquad(k=0,1,2,\dots).
+\]
+This is the discrete hinge representation of a convex function: its second differences are nonnegative, so after subtracting an affine function it is a nonnegative linear combination of $(x-k)_+$.
+
+At $k=0$ both stop-loss transforms equal the common mean $2$.  At $k=1$,
+\[
+ \E(N-1)_+=\E N-\Pp(N\ge1)=1+p_0,
+\]
+whereas
+\[
+ \E(N_*-1)_+=(1-3a)+2(2a)=1+a\le1+p_0.
+\]
+At $k=2$, equality of the mean to two gives
+\[
+ \E(N-2)_+=\E(2-N)_+=2p_0+\Pp(N=1)\ge2a,
+\]
+while
+\[
+ \E(N_*-2)_+=2a.
+\]
+For $k\ge3$ the stop-loss transform of $N_*$ is zero.  This proves the claim.  (For real thresholds, both stop-loss transforms are affine between consecutive integers.)
+\end{proof}
+
+\subsection{The random-sum kernel preserves increasing convexity}
+
+Let
+\[
+ S_r:=\xi_1+\cdots+\xi_r,\qquad S_0=0.
+\]
+For an increasing convex function $\varphi:\mathbb Z_+\to[0,\infty)$ put
+\[
+ h(r):=\E\varphi(S_r).
+\]
+
+\begin{lemma}\label{lem:hconvex}
+The function $h$ is increasing and convex on $\mathbb Z_+$.
+\end{lemma}
+
+\begin{proof}
+It is increasing because $S_{r+1}=S_r+\xi_{r+1}\ge S_r$ under the natural coupling.  For convexity define
+\[
+ g(s):=\E[\varphi(s+\xi)-\varphi(s)].
+\]
+For each fixed $k$, convexity of $\varphi$ makes $s\mapsto\varphi(s+k)-\varphi(s)$ nondecreasing; hence $g$ is nondecreasing.  Therefore
+\[
+ h(r+1)-h(r)=\E g(S_r)
+\]
+is nondecreasing in $r$, because $S_{r+1}\ge S_r$ stochastically.
+\end{proof}
+
+For an emigration law $L$, write
+\[
+ (K_L\varphi)(x):=\E\varphi\bigl(S_{(x+1-L)_+}\bigr).
+\]
+
+\begin{lemma}\label{lem:kernel}
+For every increasing convex $\varphi$,
+\[
+ K_{N_*}\varphi(x)\le K_N\varphi(x)\qquad(x\ge0),
+\]
+and, for either emigration law, $x\mapsto K_L\varphi(x)$ is increasing and convex.
+\end{lemma}
+
+\begin{proof}
+Extend the discrete convex function $h$ from Lemma~\ref{lem:hconvex} linearly between consecutive integers; the extension is convex and nondecreasing.  For fixed $x$, the function
+\[
+ q_x(n):=(x+1-n)_+
+\]
+is convex in $n$.  Hence $n\mapsto h(q_x(n))$ is convex.  Lemma~\ref{lem:cx} yields the first inequality.
+
+For the second assertion, fix $l$.  The map $x\mapsto(x+1-l)_+$ is increasing and convex; composing it with the convex nondecreasing $h$ remains increasing and convex.  Averaging over $l$ preserves these properties.
+\end{proof}
+
+\begin{proposition}\label{prop:icx}
+Let $D$ be the chain \eqref{eq:RE} with emigration $N_*$, and let $Z$ be the chain with emigration $N$.  If $D_0=Z_0=0$, then
+\[
+ D_n\icx Z_n\qquad\text{for every }n\ge0.
+\]
+In particular,
+\[
+ \E_0D_n\le\E_0Z_n.
+\]
+\end{proposition}
+
+\begin{proof}
+The assertion is trivial at time zero.  If it holds at time $n$, then for any increasing convex $\varphi$, Lemma~\ref{lem:kernel} gives
+\[
+\begin{aligned}
+ \E\varphi(D_{n+1})
+ &=\E(K_{N_*}\varphi)(D_n)\\
+ &\le\E(K_N\varphi)(D_n)\\
+ &\le\E(K_N\varphi)(Z_n)\\
+ &=\E\varphi(Z_{n+1}).
+\end{aligned}
+\]
+The middle inequality uses that $K_N\varphi$ is increasing convex.  Induction completes the proof.
+\end{proof}
+
+\subsection{The comparator has divergent stationary mean}
+
+The law $N_*$ corresponds exactly to a bounded iid cookie environment: at a site, the first $N_*$ cookies are deterministic-right and every later cookie is fair.  This environment satisfies (BD) with bound three and has drift parameter
+\[
+ \delta_*=\E N_*=2.
+\]
+It also satisfies the source (WEL): every right probability is positive; for the left direction, the event $\{N_*=0\}$ has probability $a>0$ and makes all cookies fair.
+
+Consequently the bounded theorem gives speed zero.  Its backward chain is exactly $D$.  Since $\delta_*=2>1$, $D$ is positive recurrent; if its invariant mean were finite, the standard speed identity would give strictly positive speed.  Hence, with invariant law $\pi_*$,
+\begin{equation}\label{eq:infmeanD}
+ \E_{\pi_*}D=\infty.
+\end{equation}
+
+The chain is irreducible and aperiodic: from zero, $N_*=0$ followed by one geometric variable reaches every state with positive probability, and $0$ has a self-loop.  Therefore
+\[
+ \mathcal L_0(D_n)\longrightarrow\pi_*.
+\]
+For every finite $R$,
+\[
+ \E_0(D_n\wedge R)\longrightarrow\E_{\pi_*}(D\wedge R).
+\]
+Using \eqref{eq:infmeanD} and then letting $R$ grow shows
+\begin{equation}\label{eq:EDdiverge}
+ \E_0D_n\longrightarrow\infty.
+\end{equation}
+
+\subsection{Completion of Theorem~\ref{thm:RE}}
+
+The kernel of $Z$ is stochastically monotone in the state: for $x\le y$, use the same $N$ and the same geometric sequence to obtain
+\[
+ \sum_{j=1}^{(x+1-N)_+}\xi_j
+ \le
+ \sum_{j=1}^{(y+1-N)_+}\xi_j.
+\]
+Let $\pi_N$ be the invariant law.  Suppose, toward a contradiction, that
+\[
+ \E_{\pi_N}Z<\infty.
+\]
+Couple a chain $Z^{(0)}$ started at zero with a stationary chain $Z^{(\pi)}$ started with law $\pi_N$, using identical transition randomness.  Since $0\le Z^{(\pi)}_0$,
+\[
+ Z_n^{(0)}\le Z_n^{(\pi)}\qquad\text{for all }n.
+\]
+Thus
+\[
+ \E_0 Z_n\le \E_{\pi_N}Z
+\]
+uniformly in $n$.  On the other hand Proposition~\ref{prop:icx} and \eqref{eq:EDdiverge} give
+\[
+ \E_0 Z_n\ge\E_0D_n\longrightarrow\infty,
+\]
+a contradiction.  Therefore $\E_{\pi_N}Z=\infty$, proving Theorem~\ref{thm:RE}.
+
+\section{Return to the original cookie environment}
+
+By front-loading, the random-emigration chain of Theorem~\ref{thm:RE} is pathwise no larger than the Bernoulliized backward chain of the original critical environment.  The front chain has infinite invariant first moment.  Both chains are positive recurrent; using the same finite-time/stationary comparison as above forces the original critical backward chain to have infinite invariant first moment as well.  Hence its speed is zero.  This proves the endpoint $\delta=2$.
+
+Section 2 then gives every $\delta<2$ case by finite-coordinate strengthening and every $\delta>2$ case by finite-depth truncation.  Theorem~\ref{thm:main} follows.
+
+\section{Prior-art and verification status}
+
+This manuscript is a working proof package, not a novelty assertion.  A dated search on 18 September 2026 found the following especially relevant works.
+
+\begin{itemize}
+\item O. Chakhtoun, \emph{One-Dimensional Excited Random Walk with Unboundedly Many Excitations Per Site}, Ph.D. dissertation, CUNY Graduate Center, 2019.  Its public abstract states that a tail-decay estimate on the number of excitations per site is assumed and that ballisticity/zero-speed criteria are obtained under that wider class.  The complete thesis must be compared theorem-by-theorem with the no-tail-assumption statement here.
+\item T.-M. Nguyen, \emph{Speed of Excited Random Walks with Long Backward Steps}, J. Stat. Phys. (2022), which contains a critical multi-type Galton--Watson theorem with deterministic emigration for a different ERW model.
+\item P. Carper, \emph{A Branching Process with Geometric Emigration and the ``Have Your Cookie and Eat It'' Random Walk}, arXiv:2609.06311 (submitted 5 September 2026), which treats a special geometric-emigration law.
+\item Classical critical branching-with-emigration/migration papers of Vatutin, Kaverin, Nagaev--Khan, and Yanev--Mitov.  Their exact hypotheses should be checked before any novelty claim for Theorem~\ref{thm:RE}.
+\end{itemize}
+
+No bounded search located a later source explicitly claiming the full no-tail-assumption resolution of Kosygina--Zerner Problem 5.3.  That is negative evidence only.
+
+Under the repository owner protocol this package remains operationally \textbf{PARTIAL} until it receives an actual independent P26 full-proof audit, one distinct OTHER-track audit, and complete prior-art reconciliation.  No finite computational core is used in the proof.
+
+\begin{thebibliography}{9}
+\bibitem{KZ}
+E. Kosygina and M. P. W. Zerner,
+\emph{Excited random walks: results, methods, open problems},
+Bull. Inst. Math. Acad. Sin. (N.S.) 8 (2013), 105--157;
+arXiv:1204.1895v2.
+
+\bibitem{Chakhtoun}
+O. Chakhtoun,
+\emph{One-Dimensional Excited Random Walk with Unboundedly Many Excitations Per Site},
+Ph.D. dissertation, CUNY Graduate Center, 2019.
+
+\bibitem{Nguyen}
+T.-M. Nguyen,
+\emph{Speed of Excited Random Walks with Long Backward Steps},
+J. Stat. Phys. (2022).
+
+\bibitem{Carper}
+P. Carper,
+\emph{A Branching Process with Geometric Emigration and the ``Have Your Cookie and Eat It'' Random Walk},
+arXiv:2609.06311, 2026.
+\end{thebibliography}
+
+\end{document}

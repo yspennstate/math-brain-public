@@ -1,0 +1,29 @@
+# Rec-Maj_3: Recursive Majority Optimal Query Complexity Visualizer
+
+Interactive visualization portal for the **Recursive Majority of 3 ($\text{Rec-Maj}_3$)** optimal query complexity, featuring exact Dynamic Programming (DP) policy stepping and structural tree certificate marking.
+
+## Applications
+
+1. **Query Algorithm Stepper (`algo.html`)**:
+   - Interactive DP oracle evaluation on a 27-leaf ternary tree ($h = 3$).
+   - Exact optimal cost: $C(3) = 18.6923$ (computed over 103,383 canonical orbits).
+   - Dynamic user response input ($0$ or $1$) at each optimal query node, with live majority propagation, expected remaining cost, and undo/redo history.
+
+2. **Interactive Tree & Marker (`tree.html`)**:
+   - Ternary tree canvas with canonical path addressing (e.g., `012`).
+   - Node value cycling (`?` $\to$ `0` $\to$ `1`) and certificate starring.
+
+## Complexity Overview
+
+| Depth $h$ | Leaves ($3^h$) | Optimal Cost $C(h)$ | Skip Bound $(8/3)^h$ | Literature Optimum |
+|:---:|:---:|:---:|:---:|:---:|
+| $h = 1$ | 3 | **2.6667** | 2.6667 | 2.6667 |
+| $h = 2$ | 9 | **7.0494** | 7.1111 | 7.0494 |
+| $h = 3$ | 27 | **18.6923** | 18.9630 | 18.7280 (Magniez et al.) |
+| $h = 4$ | 81 | **48.2262** | 50.5679 | — |
+
+## Tech Stack
+
+- Zero build steps required (Pure HTML5, Vanilla JavaScript)
+- Tailwind CSS & FontAwesome via public CDNs
+- Hosted on GitHub Pages

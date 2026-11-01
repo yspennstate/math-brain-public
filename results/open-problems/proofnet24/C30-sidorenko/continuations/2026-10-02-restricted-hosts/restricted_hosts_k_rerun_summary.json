@@ -1,0 +1,17 @@
+{
+  "continuation_20261002_klein4_schur": {
+    "source_sha256": "050e577b5f3f26792be7927b3f541350e75401dc3cf8d228bff5a697e5f97cfb",
+    "exact_json_match": true,
+    "stdout": "{'nonzero_polynomial_terms': 476, 'raw_negative_quotient_coefficients': 164, 'ordered_nonzero_terms': 436, 'ordered_test_pass': True}"
+  },
+  "continuation_20261002_klein4_independent_transfer_audit": {
+    "source_sha256": "ce61ba667527ed02eb7b039341d05178e41df12776ad0943a7a42ccc7b87916b",
+    "exact_json_match": true,
+    "stdout": "{\n  \"status\": \"independent exact transfer-polynomial and long-division audit PASS\",\n  \"transfer_dimension\": 16,\n  \"transfer_length\": 5,\n  \"polynomial_coefficients_match\": true,\n  \"ordered_nonnegative_terms\": 436,\n  \"pure_difference_coefficient\": 61440,\n  \"quantitative_schur_gap_coefficient\": 1024\n}"
+  },
+  "continuation_20261002_rankone_certificate": {
+    "source_sha256": "72413ba1506bb170c0ac278f9e7f668990361e8151adfcdad88733ec2c873894",
+    "exact_json_match": true,
+    "stdout": "{\n  \"status\": \"exact combinatorial and rational-bound PASS\",\n  \"edges\": [\n    [\n      0,\n      5\n    ],\n    [\n      0,\n      6\n    ],\n    [\n      0,\n      9\n    ],\n    [\n      1,\n      5\n    ],\n    [\n      1,\n      6\n    ],\n    [\n      1,\n      7\n    ],\n    [\n      2,\n      6\n    ],\n    [\n      2,\n      7\n    ],\n    [\n      2,\n      8\n    ],\n    [\n      3,\n      7\n    ],\n    [\n      3,\n      8\n    ],\n    [\n      3,\n      9\n    ],\n    [\n      4,\n      5\n    ],\n    [\n      4,\n      8\n    ],\n    [\n      4,\n      9\n    ]\n  ],\n  \"degree_counts\": {\n    \"0,0\": 1,\n    \"0,10\": 1,\n    \"2,8\": 15,\n    \"3,6\": 10,\n    \"4,0\": 5,\n    \"4,2\": 5,\n    \"4,4\": 15,\n    \"4,6\": 75,\n    \"5,2\": 10,\n    \"5,4\": 60,\n    \"6,0\": 15,\n    \"6,2\": 60,\n    \"6,4\": 145,\n    \"7,2\": 70,\n    \"8,0\": 30,\n    \"8,2\": 95,\n    \"10,0\": 13\n  },\n  \"negative_degree_types\": [\n    [\n      4,\n      2,\n      5\n    ],\n    [\n      6,\n      2,\n      60\n    ],\n    [\n      5,\n      4,\n      60\n    ],\n    [\n      8,\n      2,\n      95\n    ],\n    [\n      4,\n      6,\n      75\n    ],\n    [\n      0,\n      10,\n      1\n    ]\n  ],\n  \"F_polynomial_coefficients\": {\n    \"z^0 r^0\": 5,\n    \"z^2 r^0\": 15,\n    \"z^2 r^1\": -5,\n    \"z^3 r^1\": 10,\n    \"z^4 r^0\": 30,\n    \"z^4 r^1\": -60,\n    \"z^4 r^2\": 15,\n    \"z^5 r^1\": 70,\n    \"z^5 r^2\": -60,\n    \"z^5 r^3\": 10,\n    \"z^6 r^0\": 13,\n    \"z^6 r^1\": -95,\n    \"z^6 r^2\": 145,\n    \"z^6 r^3\": -75,\n    \"z^6 r^4\": 15,\n    \"z^6 r^5\": -1\n  },\n  \"negative_bound_coefficients\": [\n    \"5\",\n    \"15/4\",\n    \"21/10\",\n    \"15/16\",\n    \"75/256\",\n    \"1/256\"\n  ],\n  \"sum_negative_bounds\": \"3867/320\",\n  \"remaining_z2_coefficient\": \"933/320\",\n  \"theorem\": \"t(H,1+lambda f tensor f)>=1+5lambda^4+2lambda^6 when mean f=0, second moment1 and kernel nonnegative\"\n}"
+  }
+}

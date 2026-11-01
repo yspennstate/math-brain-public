@@ -1,0 +1,90 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w378",
+  "bundle_slug": "w378-p0110-sharp-support-boundary-001",
+  "entries": [
+    {
+      "key": "l1",
+      "namespace": "probability.fpp",
+      "logical_name": "sharp-support-width-axial-fpp-geodesic-threshold",
+      "kind": "lemma",
+      "title": "DRAFT: Sharp support-width threshold for axial FPP geodesics",
+      "statement": "Author-proved special case; independent review pending. For nearest-neighbor FPP on Z^d, d>=2, with every edge weight in [a,b], 0<a<b, the n-edge axial path is uniquely minimizing whenever n(b-a)<2a. In the iid nondegenerate case its passage-time variance is exactly n Var(tau), and transverse displacement is zero.",
+      "proof_text": "Every nonaxial path has at least n+2 edges and cost >=(n+2)a>nb; the axial path has cost <=nb. Its iid edge sum has variance n Var(tau).",
+      "assumptions": [
+        "undirected nearest-neighbor edges",
+        "integer n>=1",
+        "all weights in [a,b] with a>0",
+        "iid and positive variance only for the variance conclusion"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w378:P0110:L1",
+        "url": "file:///~/brain_workers/w378/BOUNDARY_LEMMA.md",
+        "revision": "2026-10-10 author proof, independent review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l2",
+      "namespace": "probability.fpp",
+      "logical_name": "no-law-uniform-strict-fpp-variance-contraction",
+      "kind": "lemma",
+      "title": "DRAFT: No law-uniform strict FPP variance contraction",
+      "statement": "Author-proved special case; independent review pending. For any fixed M>=2 and rho<1, no law-independent integer N makes Var T(0,Mn e1)<=rho M Var T(0,n e1) hold for all n>=N and every nondegenerate continuous iid weight law supported in [1,2].",
+      "proof_text": "Given N choose n>=max(1,N), then 0<epsilon<min(1,2/(Mn)). L1 makes both times sums of iid Uniform weights; their variance ratio Var(T_Mn)/(M Var(T_n)) equals 1 exactly, violating the claimed strict contraction.",
+      "assumptions": [
+        "d>=2 undirected nearest-neighbor FPP",
+        "integer M>=2",
+        "rho<1",
+        "class includes every Uniform[1,1+epsilon] with 0<epsilon<=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w378:P0110:L2",
+        "url": "file:///~/brain_workers/w378/BOUNDARY_LEMMA.md",
+        "revision": "2026-10-10 author proof, independent review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "l3",
+      "namespace": "probability.fpp",
+      "logical_name": "uniform-weight-fpp-almost-sure-axial-cutoff",
+      "kind": "lemma",
+      "title": "DRAFT: Exact almost-sure axial cutoff for Uniform FPP weights",
+      "statement": "Author-proved special case; independent review pending. For a fixed epsilon>0, iid Uniform[1,1+epsilon] undirected nearest-neighbor FPP on Z^d, d>=2, has the axial n-edge path uniquely minimizing almost surely if and only if n epsilon<=2. In that range Var T(0,n e1)=n epsilon^2/12. Above it a cheaper parallel detour has probability at least ((n epsilon-2)/((4n+4)epsilon))^(2n+2)>0.",
+      "proof_text": "Use L1 below equality and the almost-sure strict axial upper-endpoint bound at equality. Above equality choose delta=(n epsilon-2)/(4n+4); condition the n axial edges within delta of the upper endpoint and the n+2 edge-disjoint detour edges within delta of the lower endpoint. The detour saves at least (n epsilon-2)/2 and the 2n+2 independent edge intervals have the displayed probability.",
+      "assumptions": [
+        "fixed epsilon>0",
+        "integer n>=1",
+        "d>=2 undirected nearest-neighbor FPP",
+        "iid Uniform[1,1+epsilon] weights"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w378:P0110:L3",
+        "url": "file:///~/brain_workers/w378/BOUNDARY_LEMMA.md",
+        "revision": "2026-10-10 author proof, independent review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "l2",
+      "to_key": "l1",
+      "kind": "depends_on",
+      "rationale": "Apply L1 at n and Mn with epsilon<2/(Mn); both passage times are iid sums and their normalized variance ratio is exactly one."
+    },
+    {
+      "from_key": "l3",
+      "to_key": "l1",
+      "kind": "depends_on",
+      "rationale": "The strict half of the Uniform-law cutoff follows from L1; the explicit endpoint and detour arguments prove equality and sharpness."
+    }
+  ]
+}

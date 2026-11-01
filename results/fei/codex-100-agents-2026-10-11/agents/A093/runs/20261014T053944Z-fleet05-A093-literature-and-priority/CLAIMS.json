@@ -1,0 +1,49 @@
+[
+  {
+    "claim_id": "GMP26-PROPOSITION-5.1-SOURCE-AUDIT",
+    "version": "arxiv-v2-A093-review1",
+    "exact_statement": "For every K>0 there exist n and an actual monotone Boolean F:{-1,1}^{n+1}->{-1,1} with sum_T |Fhat_plus(T)^2-Fhat_minus(T)^2| > K sum_T (Fhat_plus(T)-Fhat_minus(T))^2 at the specified last-coordinate split. This is GMP26 Proposition5.1 at its original stronger-surrogate scope.",
+    "hypotheses": [
+      "Uniform measure, sign-valued monotone Boolean F",
+      "Plus/minus children are physical restrictions at the specified last coordinate",
+      "K>0 fixed; dimension may depend on K"
+    ],
+    "statement_sha256": "aa4e9fffa2ff04307bb927b2b8737130fdf7adf3c397bf0000c1ed77ac473664",
+    "contributors": [
+      "Maria Jose Gonzalez",
+      "Paul MacManus",
+      "Maria Cristina Pereyra"
+    ],
+    "proof_source": [
+      "GMP26 arXiv:2606.00246v2 Proposition5.1, PDF pp18-19",
+      "DERIVATION.md, explicit width-three Boolean product spectrum",
+      "code/audit_prop51.py",
+      "out/VALIDATION.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A093",
+        "reviewed_at_utc": "2026-10-14T05:50:45.020838+00:00",
+        "verdict": "HOLDS",
+        "scope": "Original V-versus-D Proposition5.1 only; additional true-decrement bounds remain author calculations pending external review",
+        "independence": "Explicit product coefficients and exact binomial packet multiplicities; direct Boolean Fourier and influence reproduction instead of the source l1-growth recurrence"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_SOURCE_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B19 lead",
+      "A090",
+      "A085",
+      "A028",
+      "A061",
+      "A064",
+      "A095",
+      "A099",
+      "A100"
+    ]
+  }
+]

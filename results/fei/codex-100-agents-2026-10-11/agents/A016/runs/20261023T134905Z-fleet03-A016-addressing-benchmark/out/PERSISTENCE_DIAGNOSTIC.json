@@ -1,0 +1,10 @@
+{
+  "status": "REPAIRED",
+  "mathematics_affected": false,
+  "diagnostics": [
+    "First finalizer traversed legacy CLAIMS containers assuming every JSON was a list; fixed by searching newest existing list source with named claim.",
+    "Second finalizer assumed source statement+hypotheses serialization; source A019 explicitly hashes exact_statement UTF-8 bytes alone. Read its finalizer, verified that exact convention, preserved original hash; own new claims still use canonical sorted compact statement+hypotheses JSON."
+  ],
+  "no_research_hypothesis_changed": true,
+  "source_hash_convention": "A019 sha256(exact_statement.encode(utf-8)); own claims canonical sha256 JSON {exact_statement,hypotheses}"
+}

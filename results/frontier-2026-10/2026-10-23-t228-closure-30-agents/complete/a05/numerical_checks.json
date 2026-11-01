@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "checks": {
+    "gaussian_kl_inequality": {
+      "cases": 20000,
+      "max_ratio": 0.9832009108729816
+    },
+    "gaussian_tail_moment": {
+      "cases": 3000,
+      "max_ratio": 0.9192907187137708
+    },
+    "explicit_tail_threshold": {
+      "cases": 10000
+    },
+    "bounded_context_mean": {
+      "cases": 1000
+    },
+    "query_normalization_counterexample": [
+      {
+        "layer": 0,
+        "context": 0.0,
+        "query": 0.0,
+        "exact_posterior_mean": 0.05,
+        "raw_predictive_variance": 2.0
+      },
+      {
+        "layer": 1,
+        "context": 0.5,
+        "query": 0.5,
+        "exact_posterior_mean": 0.05,
+        "raw_predictive_variance": 1.95
+      },
+      {
+        "layer": 2,
+        "context": 0.5,
+        "query": -1.75,
+        "exact_posterior_mean": 0.05,
+        "raw_predictive_variance": 2.175
+      },
+      {
+        "layer": 3,
+        "context": 0.5,
+        "query": 7.25,
+        "exact_posterior_mean": 0.05,
+        "raw_predictive_variance": 1.275
+      },
+      {
+        "layer": 4,
+        "context": 0.5,
+        "query": -28.75,
+        "exact_posterior_mean": 0.05,
+        "raw_predictive_variance": 4.875
+      },
+      {
+        "layer": 5,
+        "context": 0.5,
+        "query": 115.25,
+        "exact_posterior_mean": 0.05,
+        "raw_predictive_variance": -9.525
+      },
+      {
+        "layer": 6,
+        "context": 0.5,
+        "query": -460.75,
+        "exact_posterior_mean": 0.05,
+        "raw_predictive_variance": 48.075
+      },
+      {
+        "layer": 7,
+        "context": 0.5,
+        "query": 1843.25,
+        "exact_posterior_mean": 0.05,
+        "raw_predictive_variance": -182.32500000000002
+      },
+      {
+        "layer": 8,
+        "context": 0.5,
+        "query": -7372.75,
+        "exact_posterior_mean": 0.05,
+        "raw_predictive_variance": 739.2750000000001
+      }
+    ],
+    "chebyshev_formula": {
+      "cases": 25
+    }
+  }
+}

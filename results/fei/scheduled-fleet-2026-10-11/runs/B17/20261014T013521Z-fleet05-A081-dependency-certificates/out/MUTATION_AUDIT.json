@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "fixtures": [
+    {
+      "fixture": "Final FEI cycle via refund",
+      "PASS": true,
+      "rejection": [
+        "CYCLE_THROUGH_FINAL_FEI:FEI-FINAL@1 -> A096-TERMINAL-KL-REFUND-AUDIT@1 -> FEI-FINAL@1"
+      ]
+    },
+    {
+      "fixture": "Admitted refund assumes refuted degree payment",
+      "PASS": true,
+      "rejection": [
+        "ACCEPTED_DEPENDS_ON_UNRESOLVED:A096-TERMINAL-KL-REFUND-AUDIT@1"
+      ]
+    },
+    {
+      "fixture": "Drop within-cell refund",
+      "PASS": true,
+      "rejection": [
+        "LOST_CONDITIONAL_REFUND:A081-COARSENING-REFUND-CONTRACT@1"
+      ]
+    },
+    {
+      "fixture": "Condition reference onto derivative support",
+      "PASS": true,
+      "rejection": [
+        "REFERENCE_MASS_RESET:A081-COARSENING-REFUND-CONTRACT@1"
+      ]
+    },
+    {
+      "fixture": "Borrow spectator influence for unpaid core",
+      "PASS": true,
+      "rejection": [
+        "SPECTATOR_INFLUENCE_REUSE:A081-COARSENING-REFUND-CONTRACT@1"
+      ]
+    },
+    {
+      "fixture": "Shared-bit source hypothesis silently generalized",
+      "PASS": true,
+      "rejection": [
+        "STATEMENT_HASH:A097-ONE-SHARED-DATA-COLLISION-TRANSFER@1"
+      ]
+    },
+    {
+      "fixture": "Literal dependency alias replaces canonical content hash",
+      "PASS": true,
+      "rejection": [
+        "DEPENDENCY_HASH:A097-ONE-SHARED-DATA-COLLISION-TRANSFER@1"
+      ]
+    },
+    {
+      "fixture": "Route presumes final FEI",
+      "PASS": true,
+      "rejection": [
+        "ROUTE_ASSUMES_CONCLUSION:R-C018-COMPLETE-KL"
+      ]
+    }
+  ],
+  "contract_check_scope": "Declaration checks only, not automated inference validity"
+}

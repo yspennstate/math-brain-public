@@ -1,0 +1,80 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "RS-2026-CL-A",
+  "report_kind": "research_run",
+  "run_timestamp_utc": "2026-09-18T08:46:42Z",
+  "input_snapshot_sha": "d90941d1cf6950e9547248d13ef60d0d85ec08ca",
+  "source": {
+    "author": "Anastasia Kireeva",
+    "venue": "Randomstrasse 101",
+    "date": "2026-06-05",
+    "locator": "first displayed Open Problem 35 in Low-degree hardness of finding the largest clique in Erdos-Renyi graph (problems 36-38)",
+    "target": "conditions on (P_n,Q_n) under which bounded low-degree advantage through D=(log n)^{1+Omega(1)} rigorously implies polynomial indistinguishability"
+  },
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-18/2026-09-18T07-40-19Z__report.md",
+    "creation_commit": "6853c0a69eb058f98b61adf60e683d0d4ee59eb6",
+    "blob": "066fd3adf5000e3736b686094846c7489acdeaeb"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-18/2026-09-18T08-46-42Z__report.md",
+    "creation_commit": "1ad4ca412f7cc6bffedd0a324ddc8b858d99ad37",
+    "blob": "8ee451513fce7a987c7e348603a6c524fb3af40f"
+  },
+  "metric": {
+    "name": "E_framework",
+    "domain": [0, 1],
+    "before": 1,
+    "after": 1,
+    "movement": "no frozen-metric movement; material remaining-obligation movement"
+  },
+  "methods": [
+    {
+      "id": "B24",
+      "name": "FIND THE EXTREMAL OBJECT",
+      "reuse": "deliberate nonconsecutive",
+      "outcome": "proved Hamming-slice tensor amplification: any fixed nonzero local source-degree matrix element yields epsilon_D >= c sqrt((r+1)(m-r)) and non-vanishing epsilon_D/lambda_D along macroscopic cutoffs"
+    },
+    {
+      "id": "B18",
+      "name": "SAY IT IN ANOTHER LANGUAGE",
+      "reuse": "deliberate nonconsecutive",
+      "outcome": "proved finite-block/Fock theorem lambda_D >= g ceil((D+1)/r) for independent fixed nonproduct blocks in the ordinary source algebraic filtration"
+    },
+    {
+      "id": "B2",
+      "name": "ATTACK THE NEGATION FIRST",
+      "reuse": "deliberate nonconsecutive",
+      "outcome": "constructed exact three-spin pairwise Ising block with Dobrushin row-sum <=2/7 and nonzero degree-1 to degree-2 generator coupling; tensorization and padding refute Dobrushin uniqueness => epsilon_D=o(lambda_D) even at a superlogarithmic source cutoff"
+    }
+  ],
+  "mathematical_status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / BLOCK_FOCK_AND_DOBRUSHIN_COMMUTATOR_BARRIER",
+  "remaining_obligation_stagnation_count": 0,
+  "hard_recovery_cycles_consumed": 1,
+  "audits": {
+    "qualifying_count": 0,
+    "required": 2,
+    "p26": null,
+    "distinct_other": null
+  },
+  "history_gaps": [
+    "no canonical row for this later Randomstrasse target in the old probability_1000_intake_* family; target entered through later queue/claim admission"
+  ],
+  "prior_art_status": "UNVERIFIED novelty. Dobrushin uniqueness, tensorized spectral gaps, higher-order concentration for weakly dependent Ising models, Fock/tensor decompositions, and Hamming-slice incidence operators are classical; bounded search found no source-complete characterization or exact source-degree commutator inference composition.",
+  "artifacts": [
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-18T08-46-42Z__pairwise_ising_block_checker.py",
+      "creation_commit": "c1bd56a69afa15c156bc70937805e646fb2cd268",
+      "blob": "7614bf22f9cc7500c91c5493eea7781d96456df9"
+    },
+    {
+      "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-18T08-46-42Z__pairwise_ising_block_checker.out",
+      "creation_commit": "4533f286dc1d81259bf2df8689b159366b1510e0",
+      "blob": "a38ad52d1fe322c031a9a96534d49f64433db15c",
+      "result": "EXACT_PAIRWISE_ISING_BLOCK_PASS"
+    }
+  ],
+  "next_methods": ["B5", "B3", "B21"],
+  "next_attack": "derive an interaction-strength-dependent bound on epsilon_D/lambda_D rather than asking for vanishing relative commutator; strengthen the semigroup theorem for fixed relative leakage; reconcile with higher-order concentration, spectral-independence, Dobrushin comparison and block-Jacobi/Fock literature",
+  "delivery": "GitHub only; no shared RESULTS/QUEUE/POSTED edits"
+}

@@ -1,0 +1,1699 @@
+{
+ "spec": "mathbrain-draft-v1",
+ "author_agent": "claude-probability-1000-continue-0907",
+ "bundle_slug": "probability-intake-claude-technique-cards-c005",
+ "entries": [
+  {
+   "key": "lace-expansion",
+   "namespace": "probability.percolation",
+   "logical_name": "lace-expansion-technique",
+   "kind": "concept",
+   "title": "Technique: Lace Expansion",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). The lace expansion writes the two-point function of self-avoiding walk, Bernoulli percolation, oriented percolation or lattice trees as a renormalised random-walk Green function plus a correction series: for SAW, c_n(x) = sum_y D(y) c_{n-1}(x - y) + sum_{m=2}^{n} sum_y pi_m(y) c_{n-m}(x - y), with pi_m the alternating-sign lace coefficients obtained by inclusion-exclusion over self-intersections (for percolation the analogous expansion is in terms of pivotal bonds and sausages). The expansion is an exact identity; its use requires a bootstrap showing the coefficients are small in a norm controlled by a random-walk diagram: the bubble diagram for SAW (finite for d > 4), the triangle diagram for percolation (finite for d > 6) and the square diagram for lattice trees (d > 8). Proved regimes: nearest-neighbour SAW for d >= 5 (Hara-Slade), spread-out SAW for d > 4, nearest-neighbour percolation for d >= 11 (Fitzner-van der Hofstad) and spread-out percolation for d > 6 (Hara-Slade). Conclusions there: mean-field exponents (gamma = 1, eta = 0, beta = 1 and delta = 2 in bounded-ratio senses), Gaussian or super-Brownian scaling limits, and asymptotic expansions of critical points. It gives nothing at or below the upper critical dimension, and for nearest-neighbour percolation in 7 <= d <= 10 there is no small parameter, so the expansion holds only as an identity, not as a bound. Typical failure: Applying the expansion's mean-field conclusions (eta=0, Gaussian or super-Brownian scaling limit) to a model at or below its upper critical dimension without re-verifying the triangle or bubble condition; the coefficients pi_m are not shown small there, the bootstrap can fail to close, and the diagrammatic control silently assumed at the outset is exactly the open problem, which is why four-dimensional nearest-neighbor percolation mean-field behavior remains open despite the spread-out and high-dimension cases being resolved. Canonical reference: Hara and Slade, 1990, Communications in Mathematical Physics; Madras and Slade, The Self-Avoiding Walk, 1993, Birkhauser.",
+   "proof_text": null,
+   "assumptions": [
+    "A small parameter: bubble (SAW), triangle (percolation) or square (lattice trees) diagram small at criticality",
+    "Above the upper critical dimension: d > 4 (SAW), d > 6 (percolation), d > 8 (lattice trees)",
+    "Nearest-neighbour models need d >= 5 (SAW) or d >= 11 (percolation) with current methods"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:lace-expansion",
+    "url": "urn:probability-research:20260907:claude-intake:technique:lace-expansion",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "infrared-bound",
+   "namespace": "probability.statmech",
+   "logical_name": "infrared-bound-technique",
+   "kind": "concept",
+   "title": "Technique: Infrared Bound via Reflection Positivity",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For statistical mechanics models on a torus whose Hamiltonian and lattice satisfy reflection positivity across midplanes between sites, the Gaussian domination (infrared) bound gives an upper bound on the Fourier transform of the two-point function: hat{G}(k) <= C / (beta E(k)), where E(k) is the quadratic energy form of the interaction (e.g. E(k)=sum_i (1-cos k_i) for nearest-neighbor coupling) and C is an explicit constant (often 1/2; exact value depends on normalization and is not always recalled precisely across variants). Combined with a spin-wave/Gaussian domination inequality this yields, for models such as the classical Heisenberg or XY model in dimension d>=3, or the Ising model in sufficiently high dimension, existence of long-range order at low temperature via a second-moment argument applied to the infrared-bounded Fourier integral. It does not give critical exponent values, does not apply in dimension d<=2 where the infrared integral diverges (consistent with the Mermin-Wagner theorem ruling out continuous-symmetry breaking there), and requires the specific reflection-positive algebraic structure; it gives no control for models lacking this symmetry, such as many disordered, frustrated, or non-bipartite systems. Typical failure: Assuming reflection positivity survives a seemingly minor modification of the Hamiltonian, such as adding next-nearest-neighbor terms, a random field, or working on a non-bipartite lattice, without re-checking the checkerboard decomposition; reflection positivity is a delicate algebraic property that most natural perturbations destroy, so the infrared bound and everything built on it, including the Frohlich-Simon-Spencer long-range order conclusion, silently stops applying. Canonical reference: Frohlich, Simon and Spencer, 1976, Communications in Mathematical Physics; Frohlich, Israel, Lieb and Simon, 1978, Communications in Mathematical Physics.",
+   "proof_text": null,
+   "assumptions": [
+    "reflection positivity of the Gibbs measure with respect to lattice reflections",
+    "translation invariance, typically verified on a torus with periodic boundary conditions",
+    "finite-range or sufficiently decaying interaction with a well-defined quadratic energy function E(k)",
+    "dimension d>=3 so the infrared integral of 1/E(k) is finite"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:infrared-bound",
+    "url": "urn:probability-research:20260907:claude-intake:technique:infrared-bound",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "osss-inequality",
+   "namespace": "probability.percolation",
+   "logical_name": "osss-inequality-technique",
+   "kind": "concept",
+   "title": "Technique: OSSS Inequality for Randomized Algorithms",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). Let f: {0,1}^n -> {0,1} be evaluated exactly by a randomized decision-tree algorithm T that, over its internal randomness, queries coordinate i with probability delta_i(T) (its revealment), and let Var(f) denote the variance of f under a product probability measure on the input. The OSSS inequality states Var(f) <= sum_{i=1}^n delta_i(T) Inf_i(f), where Inf_i(f) is the influence of coordinate i under the same measure. Consequently, exhibiting an algorithm with small maximal revealment forces the sum of influences to be large, giving lower bounds on total influence and noise sensitivity via algorithmic constructions; for critical planar percolation, an exploration-path algorithm gives revealments comparable to arm-event probabilities, and combined with quasi-multiplicativity this yields sharp bounds on noise sensitivity and, via the Duminil-Copin-Raoufi-Tassion route, on sharpness of the phase transition in all dimensions without reflection positivity or duality. The inequality does not directly compute Inf_i itself, does not apply to non-product (dependent-coordinate) measures without a separate generalization, and it is an inequality rather than an identity, so it can be loose or even vacuous if the algorithm chosen is not well matched to f's structure. Typical failure: Plugging in a naive, non-adaptive algorithm (e.g. querying coordinates in a fixed deterministic order) and expecting a sharp bound; the inequality is only informative when the algorithm is cleverly matched to the function's geometric structure, such as an exploration process for a crossing event, and a poorly chosen algorithm produces a valid but essentially vacuous bound that is easy to mistake for a genuine obstruction to sharper influence or sensitivity estimates. Canonical reference: O'Donnell, Saks, Schramm and Servedio, 2005, Proceedings of the 46th Annual IEEE Symposium on Foundations of Computer Science; Duminil-Copin, Raoufi and Tassion, 2019, Annals of Mathematics.",
+   "proof_text": null,
+   "assumptions": [
+    "independent (product) probability measure on the input coordinates",
+    "f is a bounded, typically boolean, function of finitely many coordinates",
+    "existence of a randomized decision tree computing f exactly, with well-defined per-coordinate revealments",
+    "revealments computed under the same measure used for Var(f) and Inf_i(f)"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:osss-inequality",
+    "url": "urn:probability-research:20260907:claude-intake:technique:osss-inequality",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "holley-inequality",
+   "namespace": "probability.percolation",
+   "logical_name": "holley-inequality-technique",
+   "kind": "concept",
+   "title": "Technique: Holley's Inequality",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). Let mu_1, mu_2 be strictly positive probability measures on a common finite distributive lattice (e.g. {0,1}^E ordered coordinatewise). If the Holley condition holds, mu_1(x v y) mu_2(x ^ y) >= mu_1(x) mu_2(y) for all configurations x, y, then mu_1 stochastically dominates mu_2, meaning mu_1(A) >= mu_2(A) for every increasing (monotone) event A. This is a purely combinatorial, pointwise sufficient condition for stochastic domination between two measures that need not be product measures, and it strictly generalizes the FKG inequality, which is recovered as the special case mu_1 = mu_2. It is the standard tool for comparing Gibbs measures with different boundary conditions or parameters in the Ising model, the random-cluster model, and other lattice systems, and for monotone-coupling arguments more generally. The theorem does not establish the Holley condition itself, which can be as hard to verify as the comparison one is trying to prove; it gives only qualitative stochastic domination, with no quantitative bound on the total-variation distance between mu_1 and mu_2; and it requires strict positivity of both measures on the entire lattice. Typical failure: Assuming the Holley condition holds because mu_1 looks larger than mu_2 in some averaged or marginal sense; the condition is a pointwise, multiplicative statement that must hold for every pair of configurations including their join and meet, and it can fail even when mu_1 does stochastically dominate mu_2 for unrelated reasons, or when only checked on a generating set of configurations rather than genuinely all pairs. Canonical reference: Holley, 1974, Communications in Mathematical Physics; Georgii, Haggstrom and Maes, 2001, in Phase Transitions and Critical Phenomena, vol. 18, Academic Press.",
+   "proof_text": null,
+   "assumptions": [
+    "mu_1 and mu_2 strictly positive on a common finite distributive lattice closed under meet and join",
+    "the pointwise Holley ratio condition mu_1(x v y) mu_2(x ^ y) >= mu_1(x) mu_2(y) holding for all pairs x, y",
+    "events being compared are increasing with respect to the same partial order used to define the lattice"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:holley-inequality",
+    "url": "urn:probability-research:20260907:claude-intake:technique:holley-inequality",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "fkg-harris-inequality",
+   "namespace": "probability.percolation",
+   "logical_name": "fkg-harris-inequality-technique",
+   "kind": "concept",
+   "title": "Technique: FKG (Harris) Inequality",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). Let mu be a probability measure on a finite distributive lattice satisfying the FKG lattice condition mu(x v y) mu(x ^ y) >= mu(x) mu(y) for all x, y, a condition automatically satisfied by any product measure on {0,1}^E, in which case the conclusion is called the Harris inequality. Then for any two increasing (or two decreasing) functions f, g in L^2(mu), E[fg] >= E[f]E[g]; equivalently, for increasing events A, B, mu(A ^ B) >= mu(A) mu(B), so increasing events are positively correlated. This is the basic monotone-coupling tool throughout percolation and interacting particle systems, lower-bounding joint probabilities of increasing events, such as several disjoint crossings occurring together, by the product of their individual probabilities, and it justifies a wide range of comparison and sprinkling arguments. It does not give any upper bound on the correlation, which requires separate and generally harder tools such as the van den Berg-Kesten inequality for disjoint occurrence; it does not apply to a mix of an increasing and a decreasing event without flipping a sign; and the strength of the positive correlation is not quantified beyond nonnegativity. Typical failure: Applying FKG to a pair of events where one is increasing and the other decreasing without flipping the sign, which reverses the direction of the inequality; or invoking FKG for a non-product Gibbs measure, such as a random-cluster model outside the ferromagnetic regime with cluster weight q<1, without checking the lattice condition, which is known to fail there. Canonical reference: Fortuin, Kasteleyn and Ginibre, 1971, Communications in Mathematical Physics; Harris, 1960, Proceedings of the Cambridge Philosophical Society.",
+   "proof_text": null,
+   "assumptions": [
+    "mu satisfies the FKG lattice condition, automatic for independent product measures but requiring verification for dependent Gibbs measures",
+    "f, g, or the events A, B, are both increasing, or both decreasing, with respect to the same partial order",
+    "the state space is finite or otherwise compactified so that all expectations involved are well defined"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:fkg-harris-inequality",
+    "url": "urn:probability-research:20260907:claude-intake:technique:fkg-harris-inequality",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "russo-formula-pivotals",
+   "namespace": "probability.percolation",
+   "logical_name": "russo-formula-pivotals-technique",
+   "kind": "concept",
+   "title": "Technique: Russo's Formula and Pivotal Edges",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For the product measure mu_p on {0,1}^E with each coordinate independently open with probability p and an increasing event A depending on finitely many edges, Russo's formula states d/dp mu_p(A) = sum_{e in E} mu_p(e is pivotal for A), where e is pivotal for A at a configuration omega if flipping the state of e changes the indicator of A. When different edges carry different parameters p_e, the analogous statement is d/dp_e mu(A) = mu(e is pivotal for A). This identity converts questions about how quickly an event's probability crosses a threshold into questions about counting or bounding pivotal edges, which is the basic engine behind sharp-threshold theorems when combined with the Margulis-Russo framework and tools such as hypercontractivity, the Benjamini-Kalai-Schramm influence bound, or the OSSS inequality. Russo's formula does not by itself give sharp thresholds; it requires monotonicity of A, since non-monotone events need a more complex signed-pivotal generalization; and it is stated for independent-coordinate measures, so applying it to dependent measures such as the random-cluster model requires a separate Glauber-dynamics-based generalization rather than the naive product-measure formula. Typical failure: Using Russo's formula on a non-monotone event without its signed-pivotal generalization, or applying the plain product-measure version of the formula to a dependent measure such as a random-cluster or Ising Gibbs measure, where the correct analogue requires the generator of an associated Glauber dynamics rather than a simple coordinatewise derivative; both errors produce a derivative formula that looks structurally similar but is simply wrong. Canonical reference: Russo, 1981, Zeitschrift fur Wahrscheinlichkeitstheorie und verwandte Gebiete; Margulis, 1974, Problemy Peredachi Informatsii; Grimmett, Percolation, second edition, 1999, Springer, Chapter 2.",
+   "proof_text": null,
+   "assumptions": [
+    "independent (product) Bernoulli measure, possibly with coordinate-dependent parameters",
+    "A is a monotone (increasing) event depending on finitely many coordinates",
+    "differentiability in p, automatic for finite-dimensional product measures"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:russo-formula-pivotals",
+    "url": "urn:probability-research:20260907:claude-intake:technique:russo-formula-pivotals",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "russo-seymour-welsh",
+   "namespace": "probability.percolation",
+   "logical_name": "russo-seymour-welsh-technique",
+   "kind": "concept",
+   "title": "Technique: Russo-Seymour-Welsh (RSW) Crossing Estimates",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). In two-dimensional critical or near-critical percolation, RSW theory states that if crossing probabilities of n x n squares are uniformly bounded away from 0 as n grows, then crossing probabilities of rho n x n rectangles, for any fixed aspect ratio rho, are also uniformly bounded away from 0 (and from 1) by a constant depending on rho but not on n. The classical proof glues together several square-crossing events using the FKG inequality and translation and reflection symmetry of the lattice. RSW estimates are the essential multi-scale input for proving arm-exponent bounds, conformal-invariance-adjacent results, and, via the Duminil-Copin-Tassion approach, for establishing sharpness of the phase transition without relying on exact self-duality. RSW does not by itself prove existence of a scaling limit as n -> infinity, does not give the exact value of any crossing probability, only two-sided bounds; and the classical form required exact self-duality (p=1/2 on the square lattice), so extending the theory to general planar lattices or to p != 1/2 required a genuinely new, duality-free argument (Tassion, 2016). Typical failure: Assuming that RSW-type bounded-away-from-0/1 crossing estimates transfer automatically to a new planar model merely because it is monotone and planar; RSW requires either exact self-duality or the more robust but still nontrivial Tassion-style construction, and models without FKG, or with strong enough long-range dependence, can fail to admit the needed gluing arguments even though they look superficially similar to Bernoulli percolation. Canonical reference: Russo, 1978, Zeitschrift fur Wahrscheinlichkeitstheorie und verwandte Gebiete; Seymour and Welsh, 1978, Annals of Discrete Mathematics; Tassion, 2016, Probability Theory and Related Fields.",
+   "proof_text": null,
+   "assumptions": [
+    "two-dimensional planar lattice model satisfying the FKG inequality",
+    "translation invariance and, in the classical gluing constructions, reflection symmetry of the lattice",
+    "an a priori lower bound on square-crossing probabilities, which is a hypothesis to be separately established, not a free consequence of RSW",
+    "independence, or at least positive association, of the underlying edge or site variables"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:russo-seymour-welsh",
+    "url": "urn:probability-research:20260907:claude-intake:technique:russo-seymour-welsh",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "quasi-multiplicativity-arm-events",
+   "namespace": "probability.percolation",
+   "logical_name": "quasi-multiplicativity-arm-events-technique",
+   "kind": "concept",
+   "title": "Technique: Quasi-Multiplicativity of Arm Events",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For critical planar percolation on Z^2 or the triangular lattice, let alpha_k(r,R) be the probability of k disjoint arms of prescribed colours, at least one of each colour (polychromatic), crossing the annulus from radius r to radius R. Quasi-multiplicativity: there are constants 0 < c <= C < infinity depending only on k such that c alpha_k(r,r') alpha_k(r',R) <= alpha_k(r,R) <= C alpha_k(r,r') alpha_k(r',R) for all r <= r' <= R (Kesten 1987; Nolin 2008 for a complete account). It follows from RSW crossing estimates, FKG and the separation-of-arms lemma; it holds for polychromatic arm events of every k and, with a separate argument, for the monochromatic one-arm event; monochromatic k-arm events for k >= 2 need extra care. Consequence: alpha_k(1,R) is comparable to the product over dyadic scales of the one-scale factors alpha_k(2^j, 2^{j+1}), each bounded between constants. It does NOT give the existence of an exponent: that needs the one-scale factors to have a Cesaro-convergent logarithm, which on the triangular lattice comes from SLE(6) and on Z^2 is open (only the universal exponents, the 5-arm exponent 2 and the half-plane 2- and 3-arm exponents 1 and 2, are known there). Typical failure: Treating quasi-multiplicativity as exact multiplicativity, dropping the universal constants, when telescoping the estimate across many scales to compute an exponent; the accumulated multiplicative error, while bounded at each step, need not be negligible over a growing number of scales, and applying the estimate to arm counts or configurations outside the range covered by the underlying construction, without re-deriving the necessary cross-scale independence, is a further common overreach. Canonical reference: Kesten, 1987, Communications in Mathematical Physics; Nolin, 2008, Electronic Journal of Probability; Schramm and Steif, 2010, Annals of Mathematics.",
+   "proof_text": null,
+   "assumptions": [
+    "RSW crossing estimates and FKG at the critical point",
+    "Polychromatic arm events (or the monochromatic one-arm event)",
+    "Planarity and the separation-of-arms lemma"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:quasi-multiplicativity-arm-events",
+    "url": "urn:probability-research:20260907:claude-intake:technique:quasi-multiplicativity-arm-events",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "sharpness-phase-transition",
+   "namespace": "probability.percolation",
+   "logical_name": "sharpness-phase-transition-technique",
+   "kind": "concept",
+   "title": "Technique: Sharpness of the Phase Transition (Duminil-Copin-Tassion)",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For Bernoulli percolation, and more generally for FKG-satisfying, translation-invariant models with finite energy (including the random-cluster model for cluster weight q>=1), the sharpness-of-phase-transition theorem shows that below the critical point p_c, the probability of connection to distance n decays exponentially in n, proved without duality via a finite-size criterion: a box functional phi_p(S), built from crossing probabilities and a weighted sum over pivotal edges, is shown to satisfy a differential inequality in p that forces it to either stay bounded (subcritical, exponential decay) or blow up past a threshold (supercritical), with the threshold identified as p_c. This unifies and reproves the classical results of Menshikov and of Aizenman-Barsky with a single argument that is robust enough to extend to Z^d for every d, to general transitive graphs, and to the random-cluster model. The theorem does not give the exact value of p_c, does not determine critical behavior exactly at p_c (critical exponents are a separate, generally much harder, question), and the exponential-decay rate produced is not claimed to be sharp or explicit. Typical failure: Assuming the Duminil-Copin-Tassion argument extends automatically to a non-FKG regime, such as random-cluster parameters q<1 or certain long-range or antiferromagnetic models, where positive association fails; the driving differential inequality depends essentially on FKG-type monotonicity and on finite energy, and dropping either hypothesis breaks the exponential-decay conclusion outright rather than merely weakening it. Canonical reference: Duminil-Copin and Tassion, 2016, Communications in Mathematical Physics; Duminil-Copin, Raoufi and Tassion, 2019, Annals of Mathematics.",
+   "proof_text": null,
+   "assumptions": [
+    "translation-invariant (or vertex-transitive) graph structure",
+    "the FKG inequality for the measure, which for the random-cluster model restricts to cluster weight q>=1",
+    "finite energy, or an analogous positive-conditional-probability condition, for the percolation-type model",
+    "existence of the box functional phi_p(S) and the differential inequality relating its p-derivative to itself"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:sharpness-phase-transition",
+    "url": "urn:probability-research:20260907:claude-intake:technique:sharpness-phase-transition",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "burton-keane-uniqueness",
+   "namespace": "probability.percolation",
+   "logical_name": "burton-keane-uniqueness-technique",
+   "kind": "concept",
+   "title": "Technique: Burton-Keane Uniqueness of the Infinite Cluster",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For a translation-invariant, ergodic percolation measure on Z^d, or more generally on an amenable transitive graph, satisfying finite energy (insertion and deletion tolerance for each edge conditionally on the rest of the configuration), the number N of infinite open clusters is almost surely a constant in {0, 1, infinity}, and Burton and Keane's argument rules out 2 <= N < infinity as well as N = infinity: if there were at least two infinite clusters with positive density, a positive density of trifurcation points (local configurations forcing at least three disjoint infinite paths) would be forced, but a discrete isoperimetric counting argument on a large box shows the number of trifurcation points cannot exceed a quantity of the order of the box's boundary, contradicting positive density in the bulk unless N <= 1. It follows that N is almost surely 0 or 1. The argument does not apply to non-amenable graphs, where coexistence of infinitely many infinite clusters is a genuine, well-studied phenomenon rather than a proof artifact, and constancy of N itself (ruling out a mixture over the value of N) is a separate ergodic-theory step, not part of the trifurcation-counting argument. Typical failure: Applying Burton-Keane uniqueness to a non-amenable graph, such as a regular tree or a graph with exponential volume growth, and expecting a unique infinite cluster; the trifurcation-point isoperimetric argument fundamentally requires amenability, and on non-amenable graphs the coexistence of infinitely many infinite clusters, studied by Haggstrom, Peres and others, is a real phenomenon that this theorem simply does not rule out. Canonical reference: Burton and Keane, 1989, Communications in Mathematical Physics; Gandolfi, Keane and Newman, 1992, Probability Theory and Related Fields.",
+   "proof_text": null,
+   "assumptions": [
+    "translation invariance, or more generally a transitive amenable group action, of the percolation measure",
+    "ergodicity of the measure under the translation group, needed to conclude N is almost surely constant",
+    "amenability of the underlying graph, i.e. subexponential boundary-to-volume ratio along a Folner sequence",
+    "finite energy or insertion and deletion tolerance for each edge's conditional state"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:burton-keane-uniqueness",
+    "url": "urn:probability-research:20260907:claude-intake:technique:burton-keane-uniqueness",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "second-moment-method",
+   "namespace": "probability.core",
+   "logical_name": "second-moment-method-technique",
+   "kind": "concept",
+   "title": "Technique: The Second-Moment Method",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For a nonnegative random variable X, typically a count of some combinatorial structure written as X = sum_i X_i for indicator random variables X_i, the Paley-Zygmund inequality gives P(X > 0) >= (E[X])^2 / E[X^2]. Expanding E[X^2] = E[X] + sum_{i != j} E[X_i X_j], the method succeeds in proving P(X>0) is bounded away from 0 exactly when the pair-correlation sum sum_{i != j} E[X_i X_j] is of the same order as (E[X])^2, that is, when correlations between the indicators do not overwhelm the square of the mean. This is the standard route to existence results, such as an infinite cluster, a long crossing, or a large clique, once a first-moment computation has already established that E[X] is large or diverging, complementing the first-moment method, which by Markov's inequality only ever gives upper bounds on P(X>0). The method does not give any rate of convergence beyond the crude Paley-Zygmund ratio, gives no lower bound at all if the correlation structure is not controlled, and can produce a vacuous (near-0) bound whenever the variance is dominated by rare, strongly correlated configurations even though the mean itself is large. Typical failure: Computing a large or diverging first moment E[X] and declaring existence of the structure without bounding E[X^2]; if the indicators X_i are strongly positively correlated (a common situation for overlapping structures), the pair-correlation term can dominate (E[X])^2, making the Paley-Zygmund bound vacuous even as E[X] -> infinity, which is exactly the situation where a large first moment gives a false sense of near-certain existence. Canonical reference: Paley and Zygmund, 1932, Proceedings of the Cambridge Philosophical Society; Alon and Spencer, The Probabilistic Method, fourth edition, Wiley.",
+   "proof_text": null,
+   "assumptions": [
+    "a well-defined nonnegative counting or indicator-sum random variable X = sum_i X_i",
+    "a computable or boundable first moment E[X]",
+    "a computable or boundable second moment E[X^2], in particular control of the pairwise correlations E[X_i X_j]",
+    "the correlation sum not growing asymptotically faster than (E[X])^2"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:second-moment-method",
+    "url": "urn:probability-research:20260907:claude-intake:technique:second-moment-method",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "efron-stein-bks-influence",
+   "namespace": "probability.concentration",
+   "logical_name": "efron-stein-bks-influence-technique",
+   "kind": "concept",
+   "title": "Technique: Efron-Stein Inequality and the Benjamini-Kalai-Schramm Influence Bound",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). Efron-Stein: for f(X_1,...,X_n) with independent coordinates, Var f <= (1/2) sum_i E[(f(X) - f(X^{(i)}))^2], where X^{(i)} resamples coordinate i; for a Boolean function under a product measure the right side is a constant times the total influence sum_i I_i(f). This bounds variance by total influence and needs no monotonicity. Benjamini-Kalai-Schramm (1999): if f_n : {0,1}^{m_n} -> {0,1} satisfy sum_i I_i(f_n)^2 -> 0 then (f_n) is noise sensitive, i.e. Cov(f_n(omega), f_n(omega^eps)) -> 0 for every fixed noise level eps > 0; for monotone functions the converse also holds. The quantitative engine is Talagrand's inequality Var f <= C sum_i I_i(f)/log(e/I_i(f)) (hypercontractivity), which for functions with all influences at most n^{-a} improves Efron-Stein by a factor log n; the same mechanism gives the BKS sublinear variance bound Var(first-passage time to distance n) <= C n/log n for first-passage percolation with suitable edge weights. What these do NOT give: a lower bound on any individual influence (that is Kahn-Kalai-Linial: max_i I_i >= c Var(f) log n / n), or a power improvement n^{1-eps} on the variance, which remains open outside integrable models. Typical failure: Using the plain Efron-Stein variance bound and mistaking it for the BKS lower bound on the maximal individual influence, which is a distinct and much sharper statement requiring monotonicity and a total-influence hypothesis; conflating the two leads to claiming individual-coordinate sensitivity conclusions, needed for noise-sensitivity theorems, from a tool that in its basic form only controls the aggregate variance. Canonical reference: Efron and Stein, 1981, The Annals of Statistics; Benjamini, Kalai and Schramm, 1999, Publications Mathematiques de l'IHES.",
+   "proof_text": null,
+   "assumptions": [
+    "Independent coordinates (product measure)",
+    "BKS noise sensitivity criterion: sum of squared influences tends to zero",
+    "Talagrand's logarithmic improvement needs hypercontractivity of the product measure"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:efron-stein-bks-influence",
+    "url": "urn:probability-research:20260907:claude-intake:technique:efron-stein-bks-influence",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "hypercontractivity-bonami-beckner",
+   "namespace": "probability.concentration",
+   "logical_name": "hypercontractivity-bonami-beckner-technique",
+   "kind": "concept",
+   "title": "Technique: Hypercontractivity (Bonami-Beckner Inequality)",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For f: {-1,1}^n -> R with Fourier-Walsh expansion f = sum_S hat{f}(S) chi_S and the noise operator T_rho, which independently resamples each coordinate to a fresh uniform sign with probability (1-rho)/2, the Bonami-Beckner inequality states ||T_rho f||_q <= ||f||_p whenever 1 <= p <= q and 0 <= rho <= sqrt((p-1)/(q-1)). Equivalently, T_rho f = sum_S rho^{|S|} hat{f}(S) chi_S, and the inequality forces the Fourier weight of f on high-degree levels to decay geometrically once rho<1, giving sum_S rho^{2|S|} hat{f}(S)^2 <= (E[|f|^p])^{2/p} for suitable p. This is the central tool converting L^2 Fourier information into higher-moment (typically L^4) control, and it underlies the Kahn-Kalai-Linial theorem on the existence of an influential coordinate, the Benjamini-Kalai-Schramm noise-sensitivity theorems, and Friedgut's junta theorem for low-influence functions. It does not directly give influence bounds without further combination with such machinery, and the sharp constant and range of rho given here hold for the uniform measure on {-1,1}^n; biased-p product measures or non-product (dependent) measures require different, generally weaker, p-biased or dependency-adjusted hypercontractive inequalities. Typical failure: Applying the sharp uniform-measure {-1,1}^n hypercontractive constant to a biased-p product measure or to a dependent measure such as the random-cluster or Ising Gibbs measure without switching to the correct p-biased or dependency-adjusted hypercontractivity inequality, whose constants generally degrade as p approaches 0 or 1; this silently invalidates quantitative noise-sensitivity conclusions claimed for critical percolation at p != 1/2 or for genuinely non-product models. Canonical reference: Bonami, 1970, Annales de l'Institut Fourier; Beckner, 1975, Annals of Mathematics; O'Donnell, Analysis of Boolean Functions, 2014, Cambridge University Press.",
+   "proof_text": null,
+   "assumptions": [
+    "uniform (or explicitly known-bias) product measure on {-1,1}^n or {0,1}^n",
+    "f in the relevant L^p space, typically boolean or bounded",
+    "the noise parameter rho within the sharp Bonami-Beckner range 0<=rho<=sqrt((p-1)/(q-1))",
+    "a well-defined Fourier-Walsh expansion, i.e. finite n or a suitable limiting argument"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:hypercontractivity-bonami-beckner",
+    "url": "urn:probability-research:20260907:claude-intake:technique:hypercontractivity-bonami-beckner",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "talagrand-convex-distance",
+   "namespace": "probability.concentration",
+   "logical_name": "talagrand-convex-distance-technique",
+   "kind": "concept",
+   "title": "Technique: Talagrand's Convex Distance Concentration Inequality",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). On a product probability space (Omega_1 x ... x Omega_n, mu), define the convex distance d_T(x,A) = sup_{alpha>=0, |alpha|=1} inf_{y in A} sum_i alpha_i 1_{x_i != y_i}, a weighted Hamming-type distance from x to a set A, maximized over convex combinations of nonnegative unit-norm weight vectors. Talagrand's inequality states integral exp(d_T(x,A)^2/4) dmu(x) <= 1/mu(A), which implies mu(A) mu({x : d_T(x,A) >= t}) <= exp(-t^2/4), a strong concentration of any set A around itself in convex distance. Applied to a function f that is certifiable, meaning any difference f(x) - f(y) can be witnessed by a bounded number of coordinates with bounded weight, this yields subgaussian concentration of f around its median without requiring f to be linear or even close to it, making the method far more flexible than Azuma-Hoeffding for combinatorial optimization functionals such as the longest increasing subsequence, bin-packing cost, or chromatic number. It does not directly give concentration around the mean, only the median, so a separate median-to-mean gap argument is needed, and it requires exhibiting an explicit certificate structure for f, which can be technically demanding to construct. Typical failure: Applying Talagrand concentration by treating f as ordinary Hamming-Lipschitz (uniform weight 1 per coordinate change) when the natural certificate for f actually requires nonuniform or superlinear weighting, since changing one coordinate can move f by an amount depending on many other coordinates; using the wrong or absent certificate yields either the wrong concentration scale or, more commonly, no valid proof at all, since the convex-distance formulation is easy to state and easy to misapply. Canonical reference: Talagrand, 1995, Publications Mathematiques de l'IHES; Steele, Probability Theory and Combinatorial Optimization, 1997, SIAM.",
+   "proof_text": null,
+   "assumptions": [
+    "a product probability measure on independent, not necessarily identically distributed coordinates",
+    "the function or event of interest admits a certifiable Lipschitz-type structure with bounded, possibly nonuniform, weights",
+    "measurability of the relevant sets",
+    "typically only median concentration is obtained directly; mean concentration needs a separate argument"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:talagrand-convex-distance",
+    "url": "urn:probability-research:20260907:claude-intake:technique:talagrand-convex-distance",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "borell-tis-slepian-sudakov-fernique",
+   "namespace": "probability.gaussian",
+   "logical_name": "borell-tis-slepian-sudakov-fernique-technique",
+   "kind": "concept",
+   "title": "Technique: Borell-TIS Inequality and Slepian / Sudakov-Fernique Comparison",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For a centered, almost surely bounded Gaussian process (X_t)_{t in T}, let M = sup_t X_t and sigma^2 = sup_t Var(X_t). The Borell-TIS inequality states P(|M - E[M]| >= u) <= 2 exp(-u^2/(2 sigma^2)) for all u >= 0, giving Gaussian concentration of the supremum around its mean at the scale of the process's maximal pointwise variance, regardless of the cardinality or geometry of the index set. Separately, Slepian's inequality compares two centered Gaussian processes on the same index set with equal marginal variances: if E[(X_s-X_t)^2] <= E[(Y_s-Y_t)^2] for all s,t, then E[sup X] <= E[sup Y], and in its classical strong form also gives a tail comparison, typically under an additional nonnegative-correlation condition. The Sudakov-Fernique inequality removes the equal-variance requirement, needing only the pointwise increment domination, but concludes only the expectation comparison E[sup X] <= E[sup Y], not the stronger distributional comparison. Together these tools reduce bounding E[sup] of a complicated Gaussian field to bounding it for a simpler, dominating comparison field. Borell-TIS does not give the value of E[M] itself, which requires a separate chaining or Dudley-integral bound, and Sudakov-Fernique is strictly weaker in conclusion than the classical Slepian inequality even when both sets of hypotheses happen to hold. Typical failure: Invoking the classical Slepian inequality's tail or distributional comparison after only verifying the weaker Sudakov-Fernique hypotheses, namely increment domination without equal variances or a correlation-sign condition; Sudakov-Fernique licenses comparing E[sup X] to E[sup Y] only, and treating the two comparison theorems as interchangeable overstates what has actually been proven. Canonical reference: Borell, 1975, Inventiones Mathematicae; Tsirelson, Ibragimov and Sudakov, 1976, in Proceedings of the School-Seminar on Random Processes; Slepian, 1962, Bell System Technical Journal; Fernique, 1975, Ecole d'Ete de Probabilites de Saint-Flour, Springer Lecture Notes in Mathematics.",
+   "proof_text": null,
+   "assumptions": [
+    "a centered Gaussian process, almost surely bounded on the index set, for Borell-TIS",
+    "for Slepian/Sudakov-Fernique: two Gaussian processes on the same index set with pointwise increment-variance domination E[(X_s-X_t)^2]<=E[(Y_s-Y_t)^2]",
+    "for the classical Slepian tail comparison specifically: equal marginal variances or a nonnegative-correlation condition, beyond the plain increment domination Sudakov-Fernique needs",
+    "measurability and separability of the process so the supremum is well defined"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:borell-tis-slepian-sudakov-fernique",
+    "url": "urn:probability-research:20260907:claude-intake:technique:borell-tis-slepian-sudakov-fernique",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "kahane-interpolation",
+   "namespace": "probability.gaussian",
+   "logical_name": "kahane-interpolation-technique",
+   "kind": "concept",
+   "title": "Technique: Kahane's Gaussian Interpolation",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For two independent centered Gaussian fields X, Y indexed by a common finite (or suitably truncated) set T with covariance functions C_X, C_Y, Kahane's interpolation forms Z(t,u) = sqrt(u) X(t) + sqrt(1-u) Y(t) for u in [0,1] and computes d/du E[F(Z(.,u))] for a smooth test function F, obtaining an integral expression involving (C_Y(s,t) - C_X(s,t)) times a mixed second derivative of F, evaluated against the law of Z(.,u). When C_X <= C_Y pointwise (or the relevant difference has a consistent sign) and F is chosen with matching sign of mixed partials, this yields a comparison inequality between functionals of X and Y, an approach that both generalizes Slepian-type comparisons and, in the Gaussian multiplicative chaos literature, is used to show that different regularizations of a log-correlated field, such as the two-dimensional Gaussian free field, converge to the same limiting chaos measure regardless of the approximation scheme, a key technical step in constructing Liouville quantum gravity measures. It does not apply to non-Gaussian fields, it requires the two fields being compared to be independent for the interpolation construction itself, and the sign or convexity conditions on F needed to obtain a clean inequality must be verified case by case rather than assumed. Typical failure: Applying the interpolation to fields that are not independent, or to a family of regularizations whose covariance difference does not have a consistent sign across the whole index set, which is common when comparing regularizations of a log-correlated field near its singular set; either error breaks the monotonicity the interpolation is meant to exploit, and the resulting comparison can go in the wrong direction with no explicit error term to control it. Canonical reference: Kahane, 1986, Annales des Sciences Mathematiques du Quebec; Robert and Vargas, 2010, Comptes Rendus Mathematique; Berestycki, 2017, Electronic Communications in Probability.",
+   "proof_text": null,
+   "assumptions": [
+    "two independent centered Gaussian fields on a common finite or suitably truncated index set",
+    "existence and enough regularity of the covariance functions to differentiate the interpolated expectation under the integral",
+    "a consistent-sign comparison, or specific structural relation, between the two covariance kernels",
+    "the test functional F smooth with the correct sign of mixed partial derivatives for the interpolation identity to yield a useful inequality rather than an uncontrolled remainder"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:kahane-interpolation",
+    "url": "urn:probability-research:20260907:claude-intake:technique:kahane-interpolation",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "concentric-decomposition-gff",
+   "namespace": "probability.gaussian",
+   "logical_name": "concentric-decomposition-gff-technique",
+   "kind": "concept",
+   "title": "Technique: Concentric Decomposition of the 2D Gaussian Free Field",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). The concentric decomposition (Biskup-Louidor) describes the two-dimensional discrete Gaussian free field h in a box of side N as seen from a point x where the field is near its maximum. Around x one takes nested dyadic annuli; conditioning on the values of h on the boundaries of the concentric boxes, the Gibbs-Markov property splits h into (i) a random walk S_k along the scales, whose increments are the Gaussian binding fields' values at x, with variance of order g log 2 per scale, with the maximum constraint acting as a barrier the walk must stay below (entropic repulsion), (ii) independent zero-boundary fields in the annuli, and (iii) explicit bounded error terms from the non-exact scale invariance of the lattice Green function. The maximum-at-x event becomes a ballot-type event for the walk S_k, handled by random-walk-below-a-barrier estimates, which yield tightness of the centred maximum, the local limit law of the maximum, and the description of the cluster of near-maximal points around x (the cluster law nu). It is the tool behind the full extremal process of the DGFF (Biskup-Louidor 2016, 2018) and the intermediate level sets. It does not by itself give universality for other log-correlated fields: the binding-field structure uses the DGFF's exact Gibbs-Markov property. Typical failure: Treating the annulus fields phi_k as exactly independent rather than approximately so, and carrying a multiscale second-moment computation through without tracking the coupling error terms; because the GFF is only log-correlated rather than an exact branching random walk, the independence used in the concentric decomposition is an approximation that must be explicitly controlled, and skipping this step is a common source of unjustified exponent claims for GFF level-set percolation. Canonical reference: Biskup and Louidor, 2016, Communications in Mathematical Physics; Biskup and Louidor, 2018, Advances in Mathematics; Biskup, Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes, 2020, Springer.",
+   "proof_text": null,
+   "assumptions": [
+    "Discrete Gaussian free field on a two-dimensional lattice domain with Dirichlet boundary conditions",
+    "Gibbs-Markov (domain Markov) property and lattice Green function asymptotics",
+    "Random-walk-below-a-barrier (ballot) estimates for the scale walk"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:concentric-decomposition-gff",
+    "url": "urn:probability-research:20260907:claude-intake:technique:concentric-decomposition-gff",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "gibbs-markov-gff",
+   "namespace": "probability.gaussian",
+   "logical_name": "gibbs-markov-gff-technique",
+   "kind": "concept",
+   "title": "Technique: Gibbs-Markov Property of the Gaussian Free Field",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). Let h be a (discrete or continuum) Gaussian free field on a domain D with Dirichlet boundary conditions, and let U be a deterministic subdomain of D. The Gibbs-Markov (domain Markov) property states that h decomposes as h = h_U + phi_U, where h_U is a zero-boundary Gaussian free field on U, phi_U is the harmonic extension into U of the values of h on the boundary of U, h_U and phi_U are independent of each other, and phi_U is measurable with respect to the sigma-field generated by h restricted to the complement of U. This is the discrete and continuum analogue of the strong Markov property for Brownian motion and harmonic functions, and it is the fundamental tool enabling induction-on-scale arguments, the theory of local sets, and the construction of conformally invariant objects such as Liouville quantum gravity from the field. It does not hold for general non-Gibbsian or non-Gaussian log-correlated fields without separate verification, and it requires exact specification of the domain and boundary conditions, since the decomposition depends on the harmonic extension operator for the particular pair (D,U) being used. Typical failure: Applying the plain Gibbs-Markov decomposition with U chosen depending on the field h itself, such as a random subdomain determined by a level set or an exploration process, without checking that U is a valid stopping domain for the field's filtration; naively random domains destroy the independence between h_U and phi_U, and the correct fix requires the more delicate theory of local sets developed by Schramm and Sheffield, not the plain domain Markov property. Canonical reference: Sheffield, 2007, Probability Theory and Related Fields; Schramm and Sheffield, 2013, Probability Theory and Related Fields.",
+   "proof_text": null,
+   "assumptions": [
+    "h is a Gaussian free field with Dirichlet (or otherwise precisely specified) boundary conditions on domain D",
+    "U is a deterministic, or at least suitably measurable stopping-domain, subdomain of D",
+    "the Green's function and harmonic measure for D and U are well defined, requiring sufficient domain regularity",
+    "correct identification of phi_U as harmonic in U with boundary values equal to h on the boundary of U"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:gibbs-markov-gff",
+    "url": "urn:probability-research:20260907:claude-intake:technique:gibbs-markov-gff",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "second-ray-knight-isomorphism",
+   "namespace": "probability.gaussian",
+   "logical_name": "second-ray-knight-isomorphism-technique",
+   "kind": "concept",
+   "title": "Technique: Second Ray-Knight Isomorphism",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). Generalised second Ray-Knight theorem (Eisenbaum, Kaspi, Marcus, Rosen and Shi, 2000): let X be a recurrent symmetric Markov process on a countable state space (for instance continuous-time random walk on a finite connected graph, or on Z^2), started at a base point o, and let tau(u) be the inverse local time at o, the first time the local time at o reaches u. Let (phi_x) be the Gaussian free field on the state space with covariance the Green function of X killed at o, independent of X. Then the field (L^{tau(u)}_x + (1/2) phi_x^2)_x has the same law as ((1/2)(phi_x + sqrt(2u))^2)_x. Dynkin-type isomorphisms exist for transient processes killed at an independent exponential time (there the shift is absent). Uses: transfer of DGFF extremal results to local-time level sets and cover times (Ding-Lee-Peres via the Gaussian free field maximum), thick points of random walk, and the Sabot-Tarres and Lupu loop-soup couplings. Limits: the isomorphism identifies laws, not couplings, of the two sides unless the stronger Lupu coupling is used; the sign of phi is lost in the square, so events about level sets of the local time correspond to two-sided level sets of phi + sqrt(2u). Typical failure: Using the generalized second Ray-Knight isomorphism but omitting or misplacing the additive shift sqrt(2T) term that appears when T is a fixed constant rather than an inverse-local-time stopping time, as in the classical Brownian motion Ray-Knight theorems; dropping or mislocating this shift silently changes which boundary or starting condition the isomorphism is actually describing. Canonical reference: Ray, 1963, Illinois Journal of Mathematics; Knight, 1963, Transactions of the American Mathematical Society; Eisenbaum, Kaspi, Marcus, Rosen and Shi, 2000, Annals of Probability; Lupu, 2016, Annals of Probability.",
+   "proof_text": null,
+   "assumptions": [
+    "Recurrent symmetric Markov process; base point o; inverse local time at o",
+    "GFF with covariance the Green function of the process killed at o, independent of the process",
+    "Identity in law, not a pathwise coupling"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:second-ray-knight-isomorphism",
+    "url": "urn:probability-research:20260907:claude-intake:technique:second-ray-knight-isomorphism",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "random-current-switching-lemma",
+   "namespace": "probability.statmech",
+   "logical_name": "random-current-switching-lemma-technique",
+   "kind": "concept",
+   "title": "Technique: Random-Current Representation and the Switching Lemma",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For the Ising model with ferromagnetic couplings J_xy >= 0, the random-current representation writes correlation functions as sums over integer-valued edge configurations n = (n_xy) weighted by prod_{xy} (beta J_xy)^{n_xy} / n_xy!, subject to a source condition specifying a subset A of vertices where the total current degree is odd (and even elsewhere); the two-point function <sigma_x sigma_y> is proportional to the sum of weights over currents with sources {x,y}, with higher correlations expressed via larger source sets. The switching lemma is the key combinatorial identity underlying this representation: summing over pairs of independent currents with sources A and B and comparing to pairs with sources determined by the symmetric difference of A and B allows swapping which edges are assigned to which current while preserving all parity constraints, reducing correlation inequalities such as the Griffiths and Lebowitz inequalities, and Aizenman's tree-graph inequality used in proving triviality of the phi^4 field theory scaling limit in dimension d>=4 (or d=4 with logarithmic corrections), to purely combinatorial statements about current configurations. The representation does not extend beyond the Ising model or closely related models admitting an analogous high-temperature expansion, and it requires ferromagnetic couplings for the current weights to be nonnegative and hence probabilistically interpretable. Typical failure: Attempting to apply the random-current representation and switching lemma to models with mixed-sign (non-ferromagnetic) couplings, where the current weights are no longer nonnegative and the entire probabilistic interpretation, along with any downstream FKG-type consequences, breaks down; a further common error is misidentifying the source-set parity condition when composing several currents, which silently produces an identity for a different correlation function than intended. Canonical reference: Griffiths, Hurst and Sherman, 1970, Journal of Mathematical Physics; Aizenman, 1982, Communications in Mathematical Physics.",
+   "proof_text": null,
+   "assumptions": [
+    "Ising model, or a model with an analogous current/high-temperature expansion, with ferromagnetic couplings J_xy>=0",
+    "finite volume, or a well-defined infinite-volume limit, so the current sums converge",
+    "correct bookkeeping of source sets and the associated parity constraints defining valid currents",
+    "the switching lemma's precise combinatorial hypotheses on which pairs of currents are being exchanged"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:random-current-switching-lemma",
+    "url": "urn:probability-research:20260907:claude-intake:technique:random-current-switching-lemma",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "simon-lieb-inequality",
+   "namespace": "probability.statmech",
+   "logical_name": "simon-lieb-inequality-technique",
+   "kind": "concept",
+   "title": "Technique: Simon-Lieb Inequality",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For the Ising model, or more generally ferromagnetic spin systems with finite-range or summable interactions, let G(x,y) = <sigma_x sigma_y> be the two-point function. The Simon-Lieb inequality bounds G(x,y) across any finite set Lambda separating x from y (x in Lambda, y outside Lambda) by G(x,y) <= sum_{u in Lambda, v not in Lambda, u~v} G(x,u) J_{uv} G(v,y), a one-step recursive bound relating the two-point function across a separating surface to the two-point function up to the boundary of Lambda times the coupling crossing it. Iterating the inequality over a sequence of nested separating sets, such as concentric boxes, yields exponential decay of G(x,y) once the associated generating function drops below its self-consistency threshold, giving a classical route, predating and complementary to the Duminil-Copin-Tassion approach, to sharpness of the phase transition and analyticity of the free energy in the high-temperature regime. It does not determine the exact critical temperature directly, only characterizing it implicitly through the inequality's self-consistency condition, and it applies specifically to ferromagnetic spin systems with a workable notion of finite separating surfaces; it does not transfer automatically to percolation, which uses combinatorially different, though philosophically related, inequalities. Typical failure: Iterating the Simon-Lieb inequality across many nested separating surfaces while implicitly assuming a geometric decay rate that has not actually been verified to be summable; turning the one-step recursive bound into exponential decay requires checking that the relevant generating function, summing G times J over the boundary, lies strictly below its self-consistency threshold, and this check is exactly where the difficulty of locating beta_c resides, so skipping it silently assumes the conclusion. Canonical reference: Simon, 1980, Communications in Mathematical Physics; Lieb, 1980, Communications in Mathematical Physics.",
+   "proof_text": null,
+   "assumptions": [
+    "ferromagnetic pairwise interactions, finite-range or with summable coupling strengths",
+    "finite volume, or an infinite-volume Gibbs state for which the relevant correlation inequalities (e.g. Griffiths inequalities) hold",
+    "existence of a family of finite sets separating the two points of interest",
+    "the model's symmetry, such as spin-flip Z_2 symmetry, used in the classical derivation of the inequality"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:simon-lieb-inequality",
+    "url": "urn:probability-research:20260907:claude-intake:technique:simon-lieb-inequality",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "aizenman-barsky-differential-inequalities",
+   "namespace": "probability.statmech",
+   "logical_name": "aizenman-barsky-differential-inequalities-technique",
+   "kind": "concept",
+   "title": "Technique: Aizenman-Barsky Differential Inequalities",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). Aizenman-Barsky (1987), for Bernoulli percolation on Z^d (and general transitive graphs), work with the magnetisation M(p,h) = P(0 is connected to a ghost vertex attached to every site with probability 1 - e^{-h}) and prove two differential inequalities: M <= h dM/dh + M^2 + p M dM/dp and dM/dp <= |J| M dM/dh (|J| the coordination constant), the first of Simon-Lieb type via the pivotal decomposition, the second from Russo's formula. Integrating them gives: (i) sharpness of the phase transition, i.e. the susceptibility chi(p) is finite for every p < p_c, hence exponential decay of connectivities below p_c; (ii) the mean-field bounds M(p_c,h) >= c h^{1/2} (delta >= 2) and theta(p) >= c (p - p_c) for p > p_c (beta <= 1). What they do NOT prove: continuity of theta at p_c (theta(p_c) = 0 is open for 3 <= d <= 10), or the matching upper bounds beta >= 1, delta <= 2 (those need the triangle condition, i.e. the lace expansion in high dimensions). The same inequalities transfer to the Ising model via the random-current representation (Aizenman-Barsky-Fernandez). Typical failure: Conflating the auxiliary percolation ghost field h with an actual physical parameter of the underlying model, or applying the conclusion theta(p_c)=0 to a percolation variant where FKG fails for the ghost-augmented measure, such as certain dependent percolation models; the entire argument rests on FKG holding for the specific augmented construction, and this needs to be re-verified for each new model rather than assumed to transfer automatically from ordinary Bernoulli percolation. Canonical reference: Aizenman and Barsky, 1987, Communications in Mathematical Physics; Aizenman, Kesten and Newman, 1987, Communications in Mathematical Physics.",
+   "proof_text": null,
+   "assumptions": [
+    "Bernoulli percolation with the ghost-field magnetisation M(p,h)",
+    "Russo's formula and the pivotal decomposition (Simon-Lieb type inequality)",
+    "Conclusions are one-sided mean-field bounds and sharpness, never continuity at p_c"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:aizenman-barsky-differential-inequalities",
+    "url": "urn:probability-research:20260907:claude-intake:technique:aizenman-barsky-differential-inequalities",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "sznitman-zerner-regeneration",
+   "namespace": "probability.randomenvironment",
+   "logical_name": "sznitman-zerner-regeneration-technique",
+   "kind": "concept",
+   "title": "Technique: Sznitman-Zerner Regeneration Structure for RWRE",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For random walk in a random environment on Z^d satisfying a directional transience condition, such as Sznitman's condition (T) or the stronger (T') in a direction l, or a simpler ballisticity/non-nestling condition, one constructs regeneration times tau_1 < tau_2 < ... at which the walk achieves a new running maximum in direction l and never backtracks below that level afterward. Under condition (T'), or the weaker (T), the increments (X_{tau_{k+1}} - X_{tau_k}, tau_{k+1} - tau_k), for k >= 1, form an i.i.d. sequence, reducing the walk, which is not itself Markovian once the environment is averaged out, to a genuine i.i.d.-increment structure from which a law of large numbers (a deterministic limiting velocity) follows directly, and, with additional finite-moment control on the regeneration increments, a central limit theorem follows via classical tools for sums of i.i.d. variables. This does not establish the directional transience condition itself, verifying (T) or (T') for a given environment law is typically the hard remaining step; it does not directly give a central limit theorem without separately checking finite second moments of the regeneration increments, which can genuinely fail in slow or near-critical regimes; and it is specific to the static, fixed-in-time environment model. Typical failure: Assuming the regeneration increments automatically have finite variance, and hence a central limit theorem follows, once ballisticity or condition (T') has been established; ballisticity under (T') only guarantees a finite mean regeneration time, and a genuine central limit theorem requires an additional, often delicate, verification of finite second moments, a point on which the Kesten-Kozlov-Spitzer branching-with-migration machinery exists precisely because these moments can fail. Canonical reference: Sznitman and Zerner, 1999, Annals of Probability; Sznitman, 2002, Ecole d'Ete de Probabilites de Saint-Flour, Springer Lecture Notes in Mathematics.",
+   "proof_text": null,
+   "assumptions": [
+    "an i.i.d., or ergodic and suitably mixing, random environment",
+    "a directional transience condition, typically Sznitman's (T) or (T'), or an equivalent ballisticity condition, in some direction l",
+    "uniform ellipticity of the transition probabilities, standard though sometimes relaxed in specific results",
+    "existence of well-defined regeneration times with positive probability of never backtracking, verified from the environment's independence or mixing structure"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:sznitman-zerner-regeneration",
+    "url": "urn:probability-research:20260907:claude-intake:technique:sznitman-zerner-regeneration",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "kesten-kozlov-spitzer",
+   "namespace": "probability.randomenvironment",
+   "logical_name": "kesten-kozlov-spitzer-technique",
+   "kind": "concept",
+   "title": "Technique: Kesten-Kozlov-Spitzer Branching Process with Migration",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For one-dimensional nearest-neighbor random walk in an i.i.d. random environment in the subballistic or intermediate regime, parametrized by an index kappa solving E[rho^kappa]=1 for rho the local odds ratio of the environment, hitting times of successive integers admit a classical Kesten construction as a branching process with migration: individuals reproduce according to an environment-dependent offspring law with an added immigration/emigration term reflecting the local environment. The Kesten-Kozlov-Spitzer theorem shows that for kappa in the relevant range below 2, the hitting time of level n, normalized by n^{1/kappa}, converges to a kappa-stable distribution, via a result on the total population size of the associated branching-with-migration process, which itself has heavy-tailed, stable-scaling behavior. This gives the precise non-Gaussian scaling limits characterizing anomalous, subdiffusive or index-dependent, behavior in one-dimensional random walk in random environment, a phenomenon absent for simple random walk. It does not extend to higher dimensions, since the explicit branching correspondence is a genuinely one-dimensional, nearest-neighbor phenomenon, and it requires the environment to be i.i.d. with a moment condition admitting a solution kappa in the relevant range. Typical failure: Extending the branching-process-with-migration correspondence and its kappa-stable scaling conclusion to multi-dimensional random walk in random environment, or to environments with dependence rather than i.i.d. structure, where no analogous exact combinatorial bijection to a branching process is known; the Kesten construction is a special, essentially exact identity in one dimension that does not generalize by analogy, so claiming kappa-stable scaling outside the one-dimensional i.i.d. setting requires an entirely separate justification. Canonical reference: Kesten, Kozlov and Spitzer, 1975, Compositio Mathematica.",
+   "proof_text": null,
+   "assumptions": [
+    "one-dimensional, nearest-neighbor random walk in an i.i.d. random environment",
+    "existence of kappa in (0,2) solving E[rho^kappa]=1 for the environment's local odds ratio rho",
+    "transience of the walk, or the appropriate directional condition for the regime under study",
+    "technical non-lattice or non-degeneracy conditions on the environment law needed for the stable-law convergence"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:kesten-kozlov-spitzer",
+    "url": "urn:probability-research:20260907:claude-intake:technique:kesten-kozlov-spitzer",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "kalikow-zero-one-law",
+   "namespace": "probability.randomenvironment",
+   "logical_name": "kalikow-zero-one-law-technique",
+   "kind": "concept",
+   "title": "Technique: Kalikow's Zero-One Law",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). Kalikow's zero-one law (1981; Zerner-Merkl 2001 for the sharp form): for random walk in an i.i.d. elliptic random environment on Z^d and a direction l, let A_l = {X_n . l -> +infinity}. Then P_0(A_l union A_{-l}) is 0 or 1. It does NOT say that P_0(A_l) itself is 0 or 1: the directional zero-one law P_0(A_l) in {0,1} is a theorem in d = 1 (Solomon) and d = 2 (Zerner-Merkl, using planarity: two walks in the same environment must intersect), and is an OPEN PROBLEM for d >= 3 (Drewitz-Ramirez Open Question 3.2; Kalikow's law is often misquoted as the directional one). Kalikow's proof: the event A_l union A_{-l} is invariant under a coupling of walks started at different points that follow the same environment after they meet in a slab, and its probability is a function of the environment's tail sigma-field, hence 0 or 1 by Kolmogorov. Consequences: under transience in some direction the regeneration structure of Sznitman-Zerner applies to the union event; Zerner's law of large numbers then gives X_n/n -> v or -c v. Typical failure: Treating Kalikow's zero-one law as if it determines transience, mistaking the statement that the probability is 0 or 1 for a claim that it equals 1; the theorem only rules out intermediate probabilities and leaves open, often genuinely unresolved, which side of the dichotomy holds for a specific environment law, which is precisely the content of the still largely open general ballisticity conjecture for random walk in random environment in dimension d>=2. Canonical reference: Kalikow, 1981, Annals of Probability; Zeitouni, 2004, Ecole d'Ete de Probabilites de Saint-Flour, Springer Lecture Notes in Mathematics.",
+   "proof_text": null,
+   "assumptions": [
+    "i.i.d. (or stationary ergodic with care) elliptic environment on Z^d",
+    "The statement concerns the UNION of the two directional events",
+    "Directional 0-1 law is open for d >= 3"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:kalikow-zero-one-law",
+    "url": "urn:probability-research:20260907:claude-intake:technique:kalikow-zero-one-law",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "rayleigh-monotonicity-effective-resistance",
+   "namespace": "probability.core",
+   "logical_name": "rayleigh-monotonicity-effective-resistance-technique",
+   "kind": "concept",
+   "title": "Technique: Rayleigh Monotonicity and Effective Resistance",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For an electrical network on a graph with nonnegative edge conductances c_e, the effective resistance R_eff(a,b) between vertices a, b is defined variationally, via Thomson's principle, as the minimum of sum_e (1/c_e) i_e^2 over unit flows i from a to b obeying Kirchhoff's node law, or equivalently via Dirichlet's principle over voltage functions. Rayleigh's monotonicity law states that R_eff(a,b) is monotone nonincreasing as a function of each conductance: increasing any conductance, adding an edge, or short-circuiting (identifying) any pair of vertices can only decrease or preserve R_eff(a,b), while decreasing a conductance, or deleting an edge, can only increase or preserve it. This purely variational fact underlies comparisons between random walks on different graphs via the resistance-recurrence correspondence, that a network is recurrent for its associated random walk if and only if R_eff(a,infinity)=infinity, comparisons of hitting and commute times, and resistance-based bounds on percolation-type crossing quantities. It gives only monotone comparisons, no quantitative rates, and using it for random-walk conclusions requires the standard electrical network-reversible Markov chain correspondence, with conductances proportional to transition rates, to be correctly set up first. Typical failure: Applying Rayleigh monotonicity to compare effective resistances between two networks that differ in more than conductance values on a shared edge set, such as networks on genuinely different vertex sets or after a modification that is not literally a conductance increase/decrease, edge addition/deletion, or vertex identification; the monotonicity is a coupling statement about the same underlying network with modified weights, and applying it across structurally different networks without an explicit embedding produces an unjustified comparison. Canonical reference: Rayleigh, 1871, Philosophical Magazine; Doyle and Snell, Random Walks and Electric Networks, 1984, Mathematical Association of America; Lyons and Peres, Probability on Trees and Networks, 2016, Cambridge University Press.",
+   "proof_text": null,
+   "assumptions": [
+    "a well-defined electrical network with nonnegative conductances, on a finite graph or an infinite graph with appropriate limiting or boundary conditions",
+    "the comparison is between two networks differing only in conductance values on a common edge set, or related by a clean edge addition, deletion, or vertex identification",
+    "finite total energy for the relevant flows or potentials, so the variational characterization is well posed",
+    "for random-walk conclusions, the standard correspondence between the electrical network and a reversible Markov chain"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:rayleigh-monotonicity-effective-resistance",
+    "url": "urn:probability-research:20260907:claude-intake:technique:rayleigh-monotonicity-effective-resistance",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "commute-time-identity",
+   "namespace": "probability.core",
+   "logical_name": "commute-time-identity-technique",
+   "kind": "concept",
+   "title": "Technique: The Commute-Time Identity",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For an irreducible, reversible Markov chain arising from a weighted graph with conductances c_e and total conductance c_G equal to the sum of conductances over all edges, the commute time C(a,b) = E_a[tau_b] + E_b[tau_a] between two vertices a, b satisfies the exact identity C(a,b) = 2 c_G R_eff(a,b), where R_eff(a,b) is the effective resistance in the associated electrical network. The identity is derived by checking that h(x) = P_x(hit a before b) is harmonic away from {a,b} and coincides with the network's voltage function, then relating expected hitting times to the network's energy dissipation. It converts questions about hitting, commute, and cover times of a reversible random walk into purely electrical or combinatorial resistance computations, enabling resistance-based bounds via series-parallel laws, Rayleigh monotonicity, or the Nash-Williams inequality on infinite graphs, on quantities such as cover time and mixing time. It does not directly give the individual one-way hitting time E_a[tau_b] alone, only the symmetrized commute time; and it is specific to reversible chains, since non-reversible walks lack the electrical-network correspondence and require substantially different techniques. Typical failure: Using the commute-time identity to bound a one-directional hitting time E_a[tau_b] alone by simply halving C(a,b), which is valid only under a separate symmetry argument between a and b; in general E_a[tau_b] and E_b[tau_a] can differ substantially even though their sum equals 2 c_G R_eff(a,b), so treating the identity as giving each one-way time individually, without additional justification, is a common overreach. Canonical reference: Chandra, Raghavan, Ruzzo, Smolensky and Tiwari, 1996, Random Structures and Algorithms; Lyons and Peres, Probability on Trees and Networks, 2016, Cambridge University Press, Chapter 2.",
+   "proof_text": null,
+   "assumptions": [
+    "a finite, irreducible, reversible Markov chain arising from a weighted graph with conductances c_e",
+    "the two states a, b are distinct vertices of the graph",
+    "the graph is connected, so hitting and commute times, and R_eff, are all finite",
+    "consistent normalization of the total conductance c_G matching the specific convention used for R_eff"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:commute-time-identity",
+    "url": "urn:probability-research:20260907:claude-intake:technique:commute-time-identity",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "nash-inequality-heat-kernel",
+   "namespace": "probability.core",
+   "logical_name": "nash-inequality-heat-kernel-technique",
+   "kind": "concept",
+   "title": "Technique: Nash Inequality and Heat-Kernel Bounds via Resistance",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). A Nash inequality on a graph with Dirichlet form E and reference measure mu has the form ||f||_2^{2+4/d} <= C E(f,f) ||f||_1^{4/d} for all f in the domain of the form, where d is an effective dimension parameter. Such an inequality is classically equivalent, by results of Nash and later Carlen-Kusuoka-Stroock, to an on-diagonal heat-kernel upper bound p_t(x,x) <= C' t^{-d/2} for the associated Markov semigroup, and combining it with matching volume-growth and effective-resistance-growth estimates, within the general framework relating resistance growth to heat-kernel decay used for fractal-like and random graphs, yields two-sided sub-Gaussian or Gaussian heat-kernel bounds. On graphs where effective resistance to the complement of a ball of radius n grows like n^zeta and volume grows like n^alpha, this gives sub-Gaussian heat-kernel estimates with off-diagonal decay governed by the exponent alpha+zeta, a technique central to analysis on fractals and on random graphs such as critical percolation clusters or random walk among random conductances. The technique does not give the resistance or volume exponents themselves, which are separate geometric inputs, and a full two-sided heat-kernel estimate typically requires both the Nash-type inequality, giving the upper bound, and a separate lower-bound argument, often via a chaining construction or an elliptic Harnack inequality. Typical failure: Assuming ordinary Euclidean Gaussian heat-kernel scaling, of the t^{-d/2} exp(-|x-y|^2/4t) form, transfers automatically to a random or fractal-like graph without re-deriving the resistance exponent zeta; on structures such as the incipient infinite cluster of critical percolation, or random conductance models with heavy-tailed conductances, the correct scaling is sub-Gaussian with zeta != 1, and using the Euclidean exponent silently mis-states both the walk dimension and the tail behavior of the heat kernel. Canonical reference: Nash, 1958, American Journal of Mathematics; Carlen, Kusuoka and Stroock, 1987, Annales de l'Institut Henri Poincare; Barlow, 2004, Annals of Probability; Kumagai, Random Walks on Disordered Media and their Scaling Limits, 2014, Springer.",
+   "proof_text": null,
+   "assumptions": [
+    "a well-defined Dirichlet form and reversible Markov chain with a reference measure mu",
+    "a valid Nash-type functional inequality with a specified effective dimension d",
+    "for two-sided estimates: matching volume-growth and effective-resistance-growth bounds on balls",
+    "typically also an elliptic Harnack inequality, or comparable regularity, to establish the matching lower heat-kernel bound"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:nash-inequality-heat-kernel",
+    "url": "urn:probability-research:20260907:claude-intake:technique:nash-inequality-heat-kernel",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "kesten-subdiffusivity",
+   "namespace": "probability.percolation",
+   "logical_name": "kesten-subdiffusivity-technique",
+   "kind": "concept",
+   "title": "Technique: Kesten's Subdiffusivity Argument",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For simple random walk on the incipient infinite cluster of critical percolation, or more generally on critical random media with anomalous volume growth, Kesten's argument establishes subdiffusive behavior, that the walk's typical displacement after n steps scales as n^{1/(2+theta)} for some theta>0 rather than the diffusive n^{1/2}, by combining a volume-growth estimate showing balls of radius r typically contain of order r^{d_f} points, with d_f the fractal (volume) dimension of the cluster, and an effective-resistance estimate showing R_eff(0, B(0,r)^c) grows faster than linearly, of order r^{1+theta}, reflecting the long dangling ends and low-conductance bottlenecks characteristic of the critical cluster. Combining volume growth and resistance growth via the Nash/heat-kernel machinery, or a direct expected-exit-time computation, gives the subdiffusive exponent. The argument does not give the exact value of the subdiffusivity exponent in most dimensions, only bounds, with the precise exponent known rigorously only in specific settings such as sufficiently high dimension or tree-like/hierarchical models, and it is specific to critical (not subcritical or supercritical) percolation geometry, where the fractal, tree-like structure with many bottlenecks is essential to the argument. Typical failure: Assuming the subdiffusivity exponent established for one setting, such as high-dimensional or tree-based incipient infinite clusters where exact computation is possible, transfers to two-dimensional critical percolation, where the exact random-walk dimension remains a major open problem; volume-growth and resistance-growth exponents are model- and dimension-specific quantities that must be independently estimated rather than imported across models with superficially similar critical geometry. Canonical reference: Kesten, 1986, Annales de l'Institut Henri Poincare, Probabilites et Statistiques; Barlow, Jarai, Kumagai and Slade, 2008, Communications in Mathematical Physics.",
+   "proof_text": null,
+   "assumptions": [
+    "the walk is on the incipient infinite cluster or a similarly statistically self-similar critical random graph",
+    "a known or boundable volume-growth exponent d_f for balls in the cluster",
+    "a known or boundable effective-resistance-growth exponent reflecting the bottleneck/dangling-end structure",
+    "typically also requires the cluster's law to have appropriate scale-invariance, or at least comparable behavior across scales"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:kesten-subdiffusivity",
+    "url": "urn:probability-research:20260907:claude-intake:technique:kesten-subdiffusivity",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "local-weak-convergence-objective-method",
+   "namespace": "probability.core",
+   "logical_name": "local-weak-convergence-objective-method-technique",
+   "kind": "concept",
+   "title": "Technique: Local Weak Convergence and the Objective Method",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For a sequence of finite, possibly random, rooted graphs G_n, local weak (Benjamini-Schramm) convergence means that for every finite radius r, the distribution of the isomorphism class of the r-ball around the (uniformly, or otherwise canonically) chosen root converges weakly to that of a limiting, typically infinite, random rooted graph (G*, o). The objective method, due to Aldous and Steele, is the broader program of analyzing this limiting infinite object directly, such as a Poisson weighted infinite tree or a unimodular Galton-Watson tree, to compute limiting constants for combinatorial optimization functionals on the finite graphs, such as the minimum spanning tree constant or the limiting value in the random assignment problem, by solving a recursive distributional (fixed-point) equation on the infinite limit rather than working with finite-n computations directly. It does not by itself establish that a given sequence converges locally weakly, which typically must be separately verified via a subsequential compactness argument together with uniqueness of subsequential limits, and it does not directly give convergence of global, extensive functionals without an additional concentration or summation argument beyond the purely local statement. Typical failure: Assuming that local weak convergence of the underlying random graph automatically implies convergence of a global extensive functional, such as the total weight of a minimum spanning tree, at the same per-vertex limiting rate; local convergence controls only typical local neighborhoods, and passing to a global average requires an additional uniform-integrability or concentration argument, often the genuinely hard part of an objective-method proof, which is easy to overlook once the local limit has been identified. Canonical reference: Benjamini and Schramm, 2001, Electronic Journal of Probability; Aldous and Steele, 2004, in Probability on Discrete Structures, Springer; Aldous and Lyons, 2007, Electronic Journal of Probability.",
+   "proof_text": null,
+   "assumptions": [
+    "a sequence of (random) rooted graphs with controlled local neighborhoods, such as bounded degree, sufficient for tightness",
+    "existence of a limiting infinite, typically unimodular, random rooted graph as the local weak limit",
+    "the functional of interest is expressible as, or well approximated by, a sum or average of local, root-based quantities",
+    "for extensive functionals: an additional argument, such as subadditivity or concentration, to pass from the local limit to a law of large numbers for the global sum"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:local-weak-convergence-objective-method",
+    "url": "urn:probability-research:20260907:claude-intake:technique:local-weak-convergence-objective-method",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "aldous-exploration-multiplicative-coalescent",
+   "namespace": "probability.core",
+   "logical_name": "aldous-exploration-multiplicative-coalescent-technique",
+   "kind": "concept",
+   "title": "Technique: Aldous's Exploration Process and the Multiplicative Coalescent",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For the Erdos-Renyi random graph G(n,p) near the critical window p = 1/n + lambda n^{-4/3}, Aldous's exploration process encodes a depth-first search of the graph as a random-walk-like process Z_n(t) whose excursions above past running minima correspond exactly to the connected components, with excursion lengths equal to component sizes. After rescaling space by n^{-2/3} and time correspondingly, this process converges to a limiting process W(t) = B(t) + lambda t - t^2/2, a Brownian motion with parabolic drift, whose excursions above its running minimum encode the limiting rescaled sizes of the largest components in the critical window; the associated merging dynamics of component sizes as edges are added form the \"standard multiplicative coalescent\", a Markov process on sequences of masses matching the excursion structure. This gives the precise scaling limit, order n^{2/3} for the largest components with an explicit limiting joint law, for the Erdos-Renyi critical phase transition. It does not extend directly to other random graph models without re-deriving an analogous exploration or walk encoding, which may not exist in closed form, and the specific n^{2/3} spatial and n^{-1/3} time-window scaling is particular to models in the Erdos-Renyi (mean-field) universality class. Typical failure: Applying the Erdos-Renyi n^{2/3} critical scaling window and multiplicative-coalescent limit directly to a random graph model with heavy-tailed degrees, infinite third moment, or strong local clustering, where the correct scaling exponents and even the limiting process, as established for configuration models with power-law degree exponent tau in (3,4) by Bhamidi, van der Hofstad and van Leeuwaarden, differ substantially; universality of the Erdos-Renyi picture is a theorem for specific model classes, not a generic property of all critical random graphs. Canonical reference: Aldous, 1997, Annals of Probability; Aldous and Limic, 1998, Electronic Journal of Probability; Bhamidi, van der Hofstad and van Leeuwaarden, 2010, Annals of Probability.",
+   "proof_text": null,
+   "assumptions": [
+    "Erdos-Renyi, or configuration-model-type with matching degree-tail conditions, random graph in the critical window p ~ 1/n + O(n^{-4/3})",
+    "a valid exploration (depth-first search) encoding of the graph as a walk whose excursions correspond to components",
+    "appropriate moment conditions, such as finite third moment of the degree for configuration models, for the walk-to-Brownian-motion scaling limit",
+    "the specific n^{2/3} spatial and n^{-1/3} time-window scaling matching the model's universality class"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:aldous-exploration-multiplicative-coalescent",
+    "url": "urn:probability-research:20260907:claude-intake:technique:aldous-exploration-multiplicative-coalescent",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "doob-h-transform-kesten-tree",
+   "namespace": "probability.branching",
+   "logical_name": "doob-h-transform-kesten-tree-technique",
+   "kind": "concept",
+   "title": "Technique: Doob h-Transform and Kesten's Tree (Conditioned Galton-Watson Tree)",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). Given a Markov chain with kernel P and a nonnegative P-harmonic function h, the Doob h-transform defines a new Markov chain with kernel P^h(x,y) = P(x,y) h(y)/h(x), representing the law of the original chain conditioned, in an appropriate limiting sense such as conditioning to survive forever or on an asymptotic event, to respect the weighting given by h. Applied to a critical or subcritical Galton-Watson branching process conditioned to survive forever, or, for critical trees, conditioned to have total size n with n -> infinity, the Kesten tree construction realizes the limiting law as an explicit infinite random tree: a single infinite spine, with each spine vertex additionally carrying an independent number of extra children distributed according to the size-biased-minus-one offspring law, each extra child then supporting an ordinary, unconditioned Galton-Watson subtree. This gives the exact local weak limit of large conditioned critical or subcritical branching trees and underlies scaling-limit results, such as convergence to the continuum random tree, that first pass through this explicit infinite-tree description. It does not directly give scaling limits of the whole tree's metric structure, which requires an additional contour or height-function argument, and the exact form of the spine's offspring law is specific to the conditioning event used, since conditioning on survival forever and conditioning on total size n give related but generally distinct limiting infinite trees. Typical failure: Confusing the different conditioning regimes for the conditioned Galton-Watson tree, such as conditioning on survival to infinity versus conditioning on total progeny exactly n as n -> infinity versus conditioning on height n, as if they all give the identical Kesten tree limit; they give related but generally distinct limiting infinite trees, differing in the spine's offspring bias and finer distributional details, and using one variant's known properties for a computation set up under a different conditioning is a frequent, easy-to-miss error. Canonical reference: Doob, 1957, Annales de l'Institut Fourier; Kesten, 1986, Annales de l'Institut Henri Poincare, Probabilites et Statistiques; Lyons, Pemantle and Peres, 1995, Annals of Probability.",
+   "proof_text": null,
+   "assumptions": [
+    "a Markov chain, here a Galton-Watson branching process, with an identified P-harmonic function h appropriate to the conditioning event",
+    "for Kesten's tree specifically: finite-mean offspring distribution with criticality or subcriticality correctly identified, and a precisely specified conditioning event",
+    "existence of the relevant weak-convergence limit of the conditioned law to the h-transformed law, which must be checked rather than assumed",
+    "correct identification of the size-biased offspring law along the spine, which differs from the original offspring law"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:doob-h-transform-kesten-tree",
+    "url": "urn:probability-research:20260907:claude-intake:technique:doob-h-transform-kesten-tree",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "moment-determinacy-carleman",
+   "namespace": "probability.core",
+   "logical_name": "moment-determinacy-carleman-technique",
+   "kind": "concept",
+   "title": "Technique: Moment Determinacy and the Carleman Condition",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). A probability measure mu on R is moment-determinate if it is the unique probability measure sharing its full sequence of moments (m_k)_{k>=0}. The Carleman condition gives a simple sufficient criterion: if sum_{k=1}^infinity m_{2k}^{-1/(2k)} = infinity, then mu is moment-determinate. In practice this is most often invoked via a stronger, easier-to-check sub-condition, such as subgaussian or lighter tails, for instance P(|X|>t) <= C exp(-ct^2), which implies the even moments grow at most at Gaussian rate and hence satisfy Carleman's sum divergence; a common proof strategy in random matrix theory and random measure convergence is to show convergence of all moments to those of a known moment-determinate limit, such as the compactly supported semicircle law, and then invoke Carleman's condition, or compact support directly, to upgrade moment convergence to convergence in distribution. It does not hold automatically for every measure with finite moments of all orders: the classical log-normal distribution is the standard counterexample, having finite moments of every order yet failing to be moment-determinate, so other measures share its entire moment sequence, meaning that verifying Carleman's sum diverges, or invoking compact support, is a genuinely necessary step, not a formality. Typical failure: Assuming that finiteness of all moments, or even termwise convergence of a sequence's moments to a limit's moments, is sufficient to conclude convergence in distribution, without checking that the limit measure is itself moment-determinate; the log-normal-type failure of moment determinacy is the standard cautionary example, and in random matrix or random measure contexts, using the method of moments toward a limit whose determinacy has not been separately established, as happens for some heavy-tailed spectral limits, can produce a plausible-looking but invalid convergence claim. Canonical reference: Carleman, 1926, Les Fonctions Quasi Analytiques, Gauthier-Villars; Akhiezer, The Classical Moment Problem, 1965, Hafner Publishing; Anderson, Guionnet and Zeitouni, An Introduction to Random Matrices, 2010, Cambridge University Press.",
+   "proof_text": null,
+   "assumptions": [
+    "all moments m_k of the measure are finite",
+    "the specific growth rate of the even moments m_{2k}, needed to check whether sum m_{2k}^{-1/(2k)} diverges",
+    "if a simpler sufficient condition is invoked instead, such as compact support or subgaussian tails, that condition must itself be independently verified",
+    "the moment-convergence method is being used to establish convergence in distribution to a specific candidate limit that is separately known to be moment-determinate"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:moment-determinacy-carleman",
+    "url": "urn:probability-research:20260907:claude-intake:technique:moment-determinacy-carleman",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "steins-method",
+   "namespace": "probability.concentration",
+   "logical_name": "steins-method-technique",
+   "kind": "concept",
+   "title": "Technique: Stein's Method",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). To bound the distance, in Kolmogorov, Wasserstein, or total variation metric, between the law of a random variable W and a target distribution, classically the standard normal but also Poisson, exponential, and other targets, Stein's method characterizes the target law via a characterizing (Stein) equation: for the normal, E[f'(Z) - Zf(Z)] = 0 for all sufficiently smooth f if and only if Z is standard normal. Given a test function h, one solves the associated Stein equation f'(x) - xf(x) = h(x) - E[h(Z)] for f, and then bounds E[f'(W) - Wf(W)] directly using structural information about W, typically supplied by an auxiliary coupling such as an exchangeable pair, a size-biased coupling, or a dependency-graph/local-dependence construction, without going through characteristic functions or moment matching. This yields explicit, often near-optimal-rate, quantitative bounds on distributional distance for sums of dependent or weakly dependent random variables and for counts in combinatorial structures, settings where classical central limit theorem machinery is difficult to apply directly because of dependence. It does not automatically give a good bound for an arbitrary random variable, since constructing the right coupling matched to the problem's dependence structure is the substantive and typically hardest step, and the quality of the final bound is entirely determined by the quality of that coupling. Typical failure: Treating Stein's method as an automatic black box that produces a good rate on its own, when in fact the rate is entirely determined by the quality of the coupling constructed for the specific problem, such as an exchangeable pair with a large error term or a dependency graph with high maximum degree; a poorly constructed coupling yields a valid but far-from-optimal, or even useless, bound, and this construction step, rather than the abstract Stein equation itself, is where nearly all the technical difficulty and risk of error lies. Canonical reference: Stein, 1972, Proceedings of the Sixth Berkeley Symposium on Mathematical Statistics and Probability; Chen, Goldstein and Shao, Normal Approximation by Stein's Method, 2011, Springer.",
+   "proof_text": null,
+   "assumptions": [
+    "a specified target distribution with a known, workable Stein characterizing operator or equation",
+    "an auxiliary coupling structure connecting to W, such as an exchangeable pair, a size-biased coupling, or a dependency graph",
+    "sufficient smoothness or explicit derivative bounds on the solution f of the Stein equation for the specific target distribution",
+    "control of the resulting expectation bound in terms of the coupling's own closeness or error parameters"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:steins-method",
+    "url": "urn:probability-research:20260907:claude-intake:technique:steins-method",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "fekete-lemma-subadditive",
+   "namespace": "probability.core",
+   "logical_name": "fekete-lemma-subadditive-technique",
+   "kind": "concept",
+   "title": "Technique: Fekete's Lemma and Approximate Subadditivity",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). If a real sequence (a_n)_{n>=1} is subadditive, meaning a_{m+n} <= a_m + a_n for all m,n>=1, then lim_{n->infinity} a_n/n exists, possibly equal to -infinity, and equals inf_n a_n/n. This elementary but powerful lemma converts a one-directional combinatorial inequality into existence of a limit, and is the deterministic backbone behind results such as convergence of the free energy per site in statistical mechanics or the growth rate of a combinatorial quantity, for instance existence of the connective constant for self-avoiding walks, or existence of free energy limits in the Ising or Potts models under volume-doubling or concatenation subadditivity. An approximate or almost-subadditive version, a_{m+n} <= a_m + a_n + e(m,n) with a controlled error term, such as e(m,n)=o(m+n) or a summable correction, still yields convergence of a_n/n to an infimum-type limit under mild additional conditions, a form often needed when exact subadditivity fails because of boundary effects. It does not give any rate of convergence, only existence of the limit, and it does not apply to sequences that are only superadditive or that fail monotonicity entirely without the appropriate sign flip; Kingman's theorem is the random, ergodic-theoretic generalization for stationary sequences and is not itself implied by Fekete's lemma. Typical failure: Verifying subadditivity only for a convenient special subsequence, such as powers of 2 or specific volume shapes like cubes, and then applying Fekete's lemma as though the inequality had been established for all m, n; the lemma genuinely requires the inequality for all pairs, or at least a cofinal family closed under addition, and skipping intermediate cases silently assumes exactly the regularity, such as shape-independence of the volume limit in statistical mechanics, that itself needs a separate van Hove or Fisher-type argument. Canonical reference: Fekete, 1923, Mathematische Zeitschrift; Steele, Probability Theory and Combinatorial Optimization, 1997, SIAM, Chapter 1.",
+   "proof_text": null,
+   "assumptions": [
+    "a real-valued sequence, or for the approximate version a sequence with a controlled, typically o(n) or summable, subadditivity defect",
+    "the subadditive inequality a_{m+n} <= a_m + a_n holding for all, or eventually all, pairs m, n",
+    "boundedness of a_n/n from below, or explicit acceptance that the limit may be -infinity, for the limit to be meaningful in context",
+    "for statistical-mechanics applications: correct identification of the quantity, such as a log partition function, as subadditive under the relevant combination operation, such as concatenation or union of volumes"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:fekete-lemma-subadditive",
+    "url": "urn:probability-research:20260907:claude-intake:technique:fekete-lemma-subadditive",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "kingman-subadditive-ergodic",
+   "namespace": "probability.core",
+   "logical_name": "kingman-subadditive-ergodic-technique",
+   "kind": "concept",
+   "title": "Technique: Kingman's Subadditive Ergodic Theorem",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). Let (X_{m,n})_{0<=m<n} be a doubly indexed family of random variables satisfying subadditivity X_{m,n} <= X_{m,k} + X_{k,n} for m<k<n, stationarity, that the joint law of (X_{m+1,n+1})_{m<n} equals that of (X_{m,n})_{m<n} under a measure-preserving shift, and integrability, E[X_{0,1}^+] < infinity together with a lower bound such as E[X_{0,n}] >= -cn preventing a trivially degenerate -infinity limit. Then X_{0,n}/n converges almost surely and in L^1 to a random variable X, equal to lim_n E[X_{0,n}]/n = inf_n E[X_{0,n}]/n, and X is almost surely constant if the underlying shift is ergodic rather than merely measure-preserving. This is the random, non-i.i.d. generalization of Fekete's lemma, which is its deterministic special case, and of the classical ergodic theorem, which is its additive special case, and it is the fundamental tool establishing existence of limiting growth rates in first-passage percolation (the time constant), longest increasing subsequence problems, and last-passage percolation, with the closely related Furstenberg-Kesten theorem giving Lyapunov exponents for random matrix products via an analogous but distinct subadditive argument. It does not give the value of the limit X, only its existence as an abstract limit or infimum, and does not by itself give a rate of convergence or determine whether X is almost surely constant unless ergodicity, not merely stationarity, of the shift has been separately established. Typical failure: Invoking Kingman's theorem to conclude the limiting growth rate is deterministic without separately verifying ergodicity of the underlying probability-preserving transformation, checking only stationarity; stationarity alone gives convergence to a possibly random limit X that can be a genuine mixture over ergodic components, so asserting a single deterministic time constant or growth rate without checking ergodicity is a common gap, especially in models built from a mixture of environments. Canonical reference: Kingman, 1968, Journal of the Royal Statistical Society, Series B; Kingman, 1973, Annals of Probability; Steele, Probability Theory and Combinatorial Optimization, 1997, SIAM.",
+   "proof_text": null,
+   "assumptions": [
+    "subadditivity of the doubly indexed array X_{m,n} under the relation X_{m,n}<=X_{m,k}+X_{k,n}",
+    "joint stationarity of the array under the shift (m,n) -> (m+1,n+1)",
+    "integrability, E[X_{0,1}^+]<infinity, together with a lower bound preventing a degenerate -infinity limit",
+    "for an almost-surely-constant limit: ergodicity, not merely measure-preservation, of the underlying shift"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:kingman-subadditive-ergodic",
+    "url": "urn:probability-research:20260907:claude-intake:technique:kingman-subadditive-ergodic",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "lindeberg-exchange-four-moment",
+   "namespace": "probability.random-matrices",
+   "logical_name": "lindeberg-exchange-four-moment-technique",
+   "kind": "concept",
+   "title": "Technique: Lindeberg Exchange Principle and the Four-Moment Theorem",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). The Lindeberg exchange (swapping) principle proves distributional limit theorems by replacing the summands or matrix entries of a random object one at a time with Gaussian (or other reference) analogues, bounding the resulting change in E[F] for a sufficiently smooth test function F via a Taylor expansion at each swap, provided the relevant moments, typically up to third or fourth order depending on the smoothness assumed of F, agree between the original and replacement distributions. In random matrix theory, the Tao-Vu four-moment theorem states that for Wigner matrices, local eigenvalue statistics such as gap distributions at a fixed bulk location are universal, independent of the specific entry distribution, provided the first four moments of the off-diagonal entries match those of the Gaussian (GOE/GUE) case up to a small, quantified error, with a weaker three-moment matching sufficing for some global statistics; this is the primary technical engine behind Wigner-Dyson-Mehta universality results beyond the exactly solvable Gaussian ensembles. It does not apply directly to test functions or statistics that are insufficiently smooth, requiring a separate regularization step, typically via a local relaxation flow or Dyson Brownian motion argument, to pass from smooth test functions to eigenvalue counting functions or individual eigenvalue locations, and it requires the specific moment-matching order assumed, with fewer matched moments giving correspondingly weaker conclusions. Typical failure: Applying the four-moment theorem's universality conclusion directly to a non-smooth statistic, such as the exact location or gap of a specific eigenvalue or an indicator-type event, without the additional Green's function comparison or local relaxation machinery needed to pass from smooth test functions to such statistics; the raw Lindeberg swapping argument by itself only controls E[F(eigenvalues)] for smooth F, and asserting the full local universality conclusion from moment matching alone skips this substantial extra step. Canonical reference: Lindeberg, 1922, Mathematische Zeitschrift; Tao and Vu, 2011, Acta Mathematica; Erdos and Yau, A Dynamical Approach to Random Matrix Theory, 2017, American Mathematical Society (Courant Lecture Notes).",
+   "proof_text": null,
+   "assumptions": [
+    "independence of the matrix entries or summands, each with finite moments up to the order being matched, typically four",
+    "matching of the first four (or the relevant number of) moments between the actual entry distribution and the Gaussian reference, up to a specified small error",
+    "sufficient smoothness, typically several bounded derivatives, of the test function F used in the swapping argument",
+    "a separate mechanism, such as local relaxation flow or a priori rigidity estimates, to transfer from smooth-test-function statements to the actual eigenvalue statistics of interest"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:lindeberg-exchange-four-moment",
+    "url": "urn:probability-research:20260907:claude-intake:technique:lindeberg-exchange-four-moment",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "hermitization-girko",
+   "namespace": "probability.random-matrices",
+   "logical_name": "hermitization-girko-technique",
+   "kind": "concept",
+   "title": "Technique: Hermitization (Girko's Method) for Non-Hermitian Random Matrices",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). To study the empirical spectral distribution of a non-Hermitian random matrix M, such as an i.i.d.-entry matrix in the circular law problem, Girko's Hermitization method associates to each z in C the 2n x 2n Hermitian matrix H_z with off-diagonal blocks M-zI and (M-zI)^*, whose eigenvalues are plus and minus the singular values of M-zI. The identity log|det(M-zI)| = (1/2) sum_i log(s_i(M-zI)^2) relates the real part of the logarithmic potential of M's empirical spectral distribution at z to the empirical distribution of singular values of M-zI, a Hermitian and hence more tractable object accessible via Stieltjes transform and local law techniques from Hermitian random matrix theory. Establishing, first, convergence of the singular-value distribution of M-zI for almost every z, and second, a uniform bound preventing accumulation of small singular values near 0, needed because log is singular there, together imply, via potential-theoretic uniqueness, convergence of the empirical spectral distribution of M itself, for example to the circular law for i.i.d. entries. It does not work without the delicate small-singular-value control, typically the hardest and most technical part of the proof, requiring separate anti-concentration or least-singular-value estimates, and the method inherently gives information about the logarithmic potential, from which the actual distribution is recovered only via a separate potential-theoretic uniqueness argument. Typical failure: Establishing convergence of the singular-value distribution of M-zI and concluding convergence of the eigenvalue distribution of M without separately proving the required small-singular-value control; without a quantitative lower bound on the least singular value, which can be genuinely delicate for matrices with dependent or heavy-tailed entries, the logarithmic potential argument can fail even though the easier half of Girko's method has been verified, historically the main obstruction in proving circular-law universality under weak entry assumptions. Canonical reference: Girko, 1984, Theory of Probability and its Applications; Bai, 1997, Annals of Probability; Tao and Vu, 2010, Annals of Probability.",
+   "proof_text": null,
+   "assumptions": [
+    "i.i.d., or otherwise well-structured, entries of the non-Hermitian matrix M with matching moment and normalization conditions, e.g. mean 0, variance 1/n",
+    "convergence, for almost every z or in an appropriately averaged sense, of the empirical singular-value distribution of M-zI, established via Hermitian random matrix methods",
+    "a uniform bound preventing the smallest singular values of M-zI from concentrating excess mass near 0, i.e. a least-singular-value or anti-concentration estimate",
+    "sufficient regularity to justify exchanging limits with the singular logarithm in the potential-theoretic identity"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:hermitization-girko",
+    "url": "urn:probability-research:20260907:claude-intake:technique:hermitization-girko",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "poisson-dirichlet-smoothing-transform",
+   "namespace": "probability.branching",
+   "logical_name": "poisson-dirichlet-smoothing-transform-technique",
+   "kind": "concept",
+   "title": "Technique: Poisson-Dirichlet Limits and the Durrett-Liggett Smoothing Transform",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). The smoothing transform concerns fixed points of the distributional equation W =_d sum_i T_i W_i, where (T_i) is a given, typically random, sequence of nonnegative weights and (W_i) are i.i.d. copies of W independent of (T_i); such fixed points arise as limits of branching random walk martingales, including derivative martingale limits, or of Mandelbrot multiplicative cascades, and their tail behavior, characterized by a power-law index alpha solving E[sum_i T_i^alpha]=1 or a related equation, governs the limit's regular variation. Durrett and Liggett characterized the solution set of the smoothing transform equation, establishing existence, uniqueness up to a scaling constant, and the precise tail index under moment conditions on (T_i), a result foundational for analyzing branching random walk boundary and derivative martingale limits and related models such as the random energy model. Separately, Poisson-Dirichlet distributions PD(alpha,theta) arise as the limiting law of ranked, normalized jump sizes of a subordinator, of ranked cycle lengths in random permutations, or of ranked masses in fragmentation and coalescent processes, characterized via the stick-breaking (GEM) construction or via a Poisson process of jumps of a stable subordinator normalized by its total mass. Neither result gives an explicit closed-form density for the general fixed point or limit; the smoothing transform's fixed point is typically characterized only implicitly, through its tail index and functional equation, and both results require specific moment or regular-variation conditions on the input weights or subordinator to hold. Typical failure: Assuming the smoothing transform has a unique nontrivial fixed point up to scale without checking that the characteristic equation E[sum T_i^alpha]=1 actually has a solution in the admissible range, or without the Durrett-Liggett/Biggins regularity conditions, particularly in boundary cases such as the critical branching random walk where the derivative martingale, rather than the ordinary martingale, is the relevant object; applying the generic smoothing-transform tail behavior in a boundary or degenerate parameter regime without re-deriving it is a common source of incorrect tail-index claims. Canonical reference: Durrett and Liggett, 1983, Zeitschrift fur Wahrscheinlichkeitstheorie und verwandte Gebiete; Biggins and Kyprianou, 2005, Electronic Journal of Probability; Pitman and Yor, 1997, Annals of Probability.",
+   "proof_text": null,
+   "assumptions": [
+    "for the smoothing transform: existence of alpha solving E[sum_i T_i^alpha]=1 in the admissible range, plus regularity conditions such as E[sum_i T_i^alpha log^+ T_i]<infinity from Durrett-Liggett/Biggins theory",
+    "for Poisson-Dirichlet: a well-defined subordinator, or fragmentation/coalescent structure, whose ranked, normalized jump sizes are being studied",
+    "independence of (T_i) from the i.i.d. copies (W_i) in the smoothing transform equation",
+    "non-degeneracy conditions ruling out the trivial Dirac-mass-at-0 solution"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:poisson-dirichlet-smoothing-transform",
+    "url": "urn:probability-research:20260907:claude-intake:technique:poisson-dirichlet-smoothing-transform",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  },
+  {
+   "key": "schur-complement-determinantal-conditionals",
+   "namespace": "probability.determinantal",
+   "logical_name": "schur-complement-determinantal-conditionals-technique",
+   "kind": "concept",
+   "title": "Technique: Schur Complement Identity for Determinantal Conditional Kernels",
+   "statement": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For a determinantal point process with correlation kernel K, Hermitian and satisfying 0<=K<=I in the discrete finite-space setting, the conditional law of the process restricted to a subset given the exact configuration on the complementary subset is again determinantal, with a kernel given by a Schur-complement formula. Partitioning the index set into A, the observed subset, and B, the remaining subset, and writing K in block form with entries K_AA, K_AB, K_BA, K_BB, the conditional kernel on B given the exact points observed in A is expressed via a Schur-complement expression such as K_BB - K_BA (K_AA - I)^{-1} K_AB, with the precise form depending on the convention used (correlation kernel versus L-ensemble) and on whether one conditions on points being present or absent in A. This identity is the fundamental tool for analyzing conditioning, dynamics, and Gibbs-type properties of determinantal processes, including eigenvalues of random matrices, non-intersecting paths, discrete orthogonal polynomial ensembles, and, via the transfer-current theorem, uniform spanning trees, reducing conditional analysis to linear algebra on the kernel matrix. It does not apply outside the determinantal class of point processes, or its Pfaffian analogue for orthogonal and symplectic ensembles, which has a related but distinct formula, and the exact form of the Schur complement depends sensitively on the specific conditioning event and on invertibility of the relevant block, which can fail or require a pseudo-inverse or limiting argument at special parameter values. Typical failure: Applying a Schur-complement conditional-kernel formula derived under one convention, such as conditioning an L-ensemble on a fixed exact sample, to a different conditioning question, such as conditioning on a sub-event like at least one point in a region, or mixing up the correlation-kernel and L-ensemble conventions, without re-deriving the correct formula; determinantal-process conditioning identities are convention-sensitive, and mixing them up produces a kernel that still looks plausible, expressed via some Schur complement, but does not correctly describe the actual conditional process. Canonical reference: Shirai and Takahashi, 2003, Journal of Functional Analysis; Borodin and Rains, 2005, Journal of Statistical Physics; Lyons, 2003, Annals of Probability.",
+   "proof_text": null,
+   "assumptions": [
+    "the point process is exactly determinantal, or Pfaffian with the analogous but distinct formula, with a well-defined correlation kernel K satisfying the standard positivity and boundedness conditions",
+    "the conditioning event is of the specific form covered by the Schur-complement formula, i.e. an exact configuration on a subset, or the corresponding L-ensemble conditioning",
+    "invertibility, or a well-defined limiting or pseudo-inverse procedure, for the relevant diagonal block appearing in the formula, e.g. K_AA - I",
+    "the block partition A, B is taken with respect to the same index set on which K is originally defined"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:technique:schur-complement-determinantal-conditionals",
+    "url": "urn:probability-research:20260907:claude-intake:technique:schur-complement-determinantal-conditionals",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   }
+  }
+ ],
+ "relations": [
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0063-critical-exponent-beta-1-in-the-asymptotic-sense-for-high-dimensional",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0081-lace-expansion-free-derivation-and-higher-coefficients-of-the-1-d-expa",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0093-lace-expansion-for-the-random-cluster-model-with-q-not-in-1-2",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0063-critical-exponent-beta-1-in-the-asymptotic-sense-for-high-dimensional",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0064-infrared-bound-for-nearest-neighbour-percolation-in-every-dimension-d",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0065-existence-and-equality-of-the-supercritical-exponents-gamma-nu-nu-2-in",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0066-sharp-intrinsic-and-extrinsic-one-arm-exponents-in-high-dimensions",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0076-super-brownian-motion-limit-of-critical-percolation-clusters-in-high-d",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0078-mean-field-behaviour-of-nearest-neighbour-oriented-percolation-for-all",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0079-intrinsic-distance-two-point-function-asymptotics-in-high-dimensions",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0080-borel-summability-of-the-1-d-expansion-of-the-percolation-threshold",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0081-lace-expansion-free-derivation-and-higher-coefficients-of-the-1-d-expa",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0082-first-coefficient-where-the-1-d-expansions-of-p-c-on-z-d-and-on-the-hy",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0084-no-infinite-cluster-at-criticality-on-quasi-transitive-graphs-with-p-c",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0085-two-point-function-of-high-dimensional-invasion-percolation",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0093-lace-expansion-for-the-random-cluster-model-with-q-not-in-1-2",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lace-expansion",
+   "to_existing_logical": "math:probability.percolation:attempt-c0097-divergence-of-the-1-d-expansion-of-the-connective-constant",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "infrared-bound",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0064-infrared-bound-for-nearest-neighbour-percolation-in-every-dimension-d",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "infrared-bound",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0093-lace-expansion-for-the-random-cluster-model-with-q-not-in-1-2",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "infrared-bound",
+   "to_existing_logical": "math:probability.statmech:attempt-c0051-improved-two-point-function-bounds-for-the-critical-three-dimensional",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "infrared-bound",
+   "to_existing_logical": "math:probability.percolation:attempt-c0064-infrared-bound-for-nearest-neighbour-percolation-in-every-dimension-d",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "infrared-bound",
+   "to_existing_logical": "math:probability.percolation:attempt-c0078-mean-field-behaviour-of-nearest-neighbour-oriented-percolation-for-all",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "infrared-bound",
+   "to_existing_logical": "math:probability.percolation:attempt-c0093-lace-expansion-for-the-random-cluster-model-with-q-not-in-1-2",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "osss-inequality",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0092-sharp-phase-transition-for-the-random-cluster-model-with-q-1",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "osss-inequality",
+   "to_existing_logical": "math:probability.percolation:attempt-c0020-optimal-exponent-for-the-computational-complexity-of-randomised-algori",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "osss-inequality",
+   "to_existing_logical": "math:probability.percolation:attempt-c0092-sharp-phase-transition-for-the-random-cluster-model-with-q-1",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "fkg-harris-inequality",
+   "to_existing_logical": "math:probability.percolation:attempt-c0084-no-infinite-cluster-at-criticality-on-quasi-transitive-graphs-with-p-c",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "fkg-harris-inequality",
+   "to_existing_logical": "math:probability.percolation:attempt-c0092-sharp-phase-transition-for-the-random-cluster-model-with-q-1",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "fkg-harris-inequality",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0122-chaos-implies-multiple-peaks-without-nonnegative-correlations",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "russo-formula-pivotals",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0022-singularity-of-the-scaling-limits-of-the-spectral-sample-and-of-the-pi",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "russo-formula-pivotals",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0079-intrinsic-distance-two-point-function-asymptotics-in-high-dimensions",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "russo-formula-pivotals",
+   "to_existing_logical": "math:probability.percolation:attempt-c0020-optimal-exponent-for-the-computational-complexity-of-randomised-algori",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "russo-formula-pivotals",
+   "to_existing_logical": "math:probability.percolation:attempt-c0022-singularity-of-the-scaling-limits-of-the-spectral-sample-and-of-the-pi",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "russo-formula-pivotals",
+   "to_existing_logical": "math:probability.percolation:attempt-c0067-notions-of-criticality-for-percolation-on-high-dimensional-tori",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "russo-formula-pivotals",
+   "to_existing_logical": "math:probability.percolation:attempt-c0076-super-brownian-motion-limit-of-critical-percolation-clusters-in-high-d",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "russo-formula-pivotals",
+   "to_existing_logical": "math:probability.percolation:attempt-c0079-intrinsic-distance-two-point-function-asymptotics-in-high-dimensions",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "russo-formula-pivotals",
+   "to_existing_logical": "math:probability.percolation:attempt-c0093-lace-expansion-for-the-random-cluster-model-with-q-not-in-1-2",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "russo-formula-pivotals",
+   "to_existing_logical": "math:probability.percolation:attempt-c0126-random-walk-on-the-incipient-infinite-cluster-of-oriented-percolation",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "russo-seymour-welsh",
+   "to_existing_logical": "math:probability.statmech:attempt-c0049-convergence-of-random-cluster-interfaces-to-sle-kappa-for-q-in-0-4-q-n",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "russo-seymour-welsh",
+   "to_existing_logical": "math:probability.percolation:attempt-c0095-convergence-of-the-holomorphic-observable-of-the-honeycomb-self-avoidi",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "russo-seymour-welsh",
+   "to_existing_logical": "math:probability.percolation:attempt-c0096-interfaces-of-the-honeycomb-o-n-loop-model-converge-to-sle-kappa",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "quasi-multiplicativity-arm-events",
+   "to_existing_logical": "math:probability.percolation:resolved-c0019-absence-of-logarithmic-corrections-in-arm-exponents-on-the-triangular",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "quasi-multiplicativity-arm-events",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0066-sharp-intrinsic-and-extrinsic-one-arm-exponents-in-high-dimensions",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "quasi-multiplicativity-arm-events",
+   "to_existing_logical": "math:probability.percolation:resolved-c0107-bounded-ratios-in-arm-probabilities-of-critical-percolation-on-the-tri",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "quasi-multiplicativity-arm-events",
+   "to_existing_logical": "math:probability.percolation:attempt-c0020-optimal-exponent-for-the-computational-complexity-of-randomised-algori",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "quasi-multiplicativity-arm-events",
+   "to_existing_logical": "math:probability.percolation:attempt-c0066-sharp-intrinsic-and-extrinsic-one-arm-exponents-in-high-dimensions",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "quasi-multiplicativity-arm-events",
+   "to_existing_logical": "math:probability.percolation:attempt-c0072-scaling-of-the-largest-critical-cluster-in-a-high-dimensional-box-unde",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "quasi-multiplicativity-arm-events",
+   "to_existing_logical": "math:probability.percolation:attempt-c0076-super-brownian-motion-limit-of-critical-percolation-clusters-in-high-d",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "quasi-multiplicativity-arm-events",
+   "to_existing_logical": "math:probability.percolation:attempt-c0077-incipient-infinite-super-brownian-motion-limit-of-the-high-dimensional",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "quasi-multiplicativity-arm-events",
+   "to_existing_logical": "math:probability.percolation:attempt-c0079-intrinsic-distance-two-point-function-asymptotics-in-high-dimensions",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "sharpness-phase-transition",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0089-quenched-invariance-principle-for-random-walk-on-the-vacant-set-of-ran",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "sharpness-phase-transition",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0092-sharp-phase-transition-for-the-random-cluster-model-with-q-1",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "burton-keane-uniqueness",
+   "to_existing_logical": "math:probability.statmech:open-problem-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "burton-keane-uniqueness",
+   "to_existing_logical": "math:probability.percolation:attempt-c0084-no-infinite-cluster-at-criticality-on-quasi-transitive-graphs-with-p-c",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "second-moment-method",
+   "to_existing_logical": "math:probability.random-matrices:resolved-c0027-universality-of-the-elliptic-law",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "second-moment-method",
+   "to_existing_logical": "math:probability.gaussian:open-problem-c0122-chaos-implies-multiple-peaks-without-nonnegative-correlations",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "second-moment-method",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0001-joint-scaling-limit-of-all-intermediate-level-sets-of-the-2d-dgff",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "second-moment-method",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0007-profile-of-near-extremal-level-sets-of-the-2d-dgff",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "second-moment-method",
+   "to_existing_logical": "math:probability.percolation:attempt-c0066-sharp-intrinsic-and-extrinsic-one-arm-exponents-in-high-dimensions",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "second-moment-method",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0103-limiting-distribution-of-the-fluctuations-of-the-maximum-of-zeta-on-sh",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "second-moment-method",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0122-chaos-implies-multiple-peaks-without-nonnegative-correlations",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "second-moment-method",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0123-bridges-between-multiple-peaks-in-the-nk-fitness-landscape",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "efron-stein-bks-influence",
+   "to_existing_logical": "math:probability.gaussian:open-problem-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "efron-stein-bks-influence",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0119-chaos-in-directed-polymers-in-dimensions-d-3",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "efron-stein-bks-influence",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "hypercontractivity-bonami-beckner",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0119-chaos-in-directed-polymers-in-dimensions-d-3",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "talagrand-convex-distance",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kahane-interpolation",
+   "to_existing_logical": "math:probability.core:resolved-c0114-limit-of-the-independence-number-of-random-regular-graphs",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kahane-interpolation",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0008-universality-of-level-sets-and-extremal-process-for-log-correlated-gau",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kahane-interpolation",
+   "to_existing_logical": "math:probability.percolation:attempt-c0064-infrared-bound-for-nearest-neighbour-percolation-in-every-dimension-d",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kahane-interpolation",
+   "to_existing_logical": "math:probability.percolation:attempt-c0080-borel-summability-of-the-1-d-expansion-of-the-percolation-threshold",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kahane-interpolation",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0122-chaos-implies-multiple-peaks-without-nonnegative-correlations",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "concentric-decomposition-gff",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0006-existence-of-the-limit-of-e-alpha-h-e-nu-f-h-for-the-dgff-cluster-law",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "concentric-decomposition-gff",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0010-dgff-over-an-ergodic-uniformly-elliptic-random-conductance-model-level",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "concentric-decomposition-gff",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0014-limit-of-the-normalised-log-effective-resistance-of-the-dgff-electric",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "gibbs-markov-gff",
+   "to_existing_logical": "math:probability.gaussian:open-problem-c0003-bypassing-the-laplace-transform-tail-condition-for-the-dgff-extremal-m",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "gibbs-markov-gff",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0001-joint-scaling-limit-of-all-intermediate-level-sets-of-the-2d-dgff",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "gibbs-markov-gff",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0003-bypassing-the-laplace-transform-tail-condition-for-the-dgff-extremal-m",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "gibbs-markov-gff",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0008-universality-of-level-sets-and-extremal-process-for-log-correlated-gau",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "second-ray-knight-isomorphism",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0011-scaling-limit-of-local-time-level-sets-of-planar-random-walk-in-the-fu",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "second-ray-knight-isomorphism",
+   "to_existing_logical": "math:probability.core:attempt-c0117-concentration-of-the-cover-time-at-the-scale-of-the-maximal-hitting-ti",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "random-current-switching-lemma",
+   "to_existing_logical": "math:probability.statmech:attempt-c0051-improved-two-point-function-bounds-for-the-critical-three-dimensional",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "random-current-switching-lemma",
+   "to_existing_logical": "math:probability.percolation:attempt-c0093-lace-expansion-for-the-random-cluster-model-with-q-not-in-1-2",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "simon-lieb-inequality",
+   "to_existing_logical": "math:probability.statmech:attempt-c0051-improved-two-point-function-bounds-for-the-critical-three-dimensional",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "aizenman-barsky-differential-inequalities",
+   "to_existing_logical": "math:probability.percolation:attempt-c0063-critical-exponent-beta-1-in-the-asymptotic-sense-for-high-dimensional",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "aizenman-barsky-differential-inequalities",
+   "to_existing_logical": "math:probability.percolation:attempt-c0065-existence-and-equality-of-the-supercritical-exponents-gamma-nu-nu-2-in",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "aizenman-barsky-differential-inequalities",
+   "to_existing_logical": "math:probability.percolation:attempt-c0078-mean-field-behaviour-of-nearest-neighbour-oriented-percolation-for-all",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "aizenman-barsky-differential-inequalities",
+   "to_existing_logical": "math:probability.percolation:attempt-c0092-sharp-phase-transition-for-the-random-cluster-model-with-q-1",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "sznitman-zerner-regeneration",
+   "to_existing_logical": "math:probability.randomenvironment:attempt-c0040-absolutely-continuous-invariant-measure-for-the-environment-seen-from",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "sznitman-zerner-regeneration",
+   "to_existing_logical": "math:probability.randomenvironment:attempt-c0042-ballisticity-under-the-ellipticity-moment-condition",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "sznitman-zerner-regeneration",
+   "to_existing_logical": "math:probability.randomenvironment:attempt-c0045-does-positive-velocity-imply-the-polynomial-ballisticity-condition-p-m",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "sznitman-zerner-regeneration",
+   "to_existing_logical": "math:probability.randomenvironment:attempt-c0133-zero-velocity-on-the-non-transient-event-for-excited-random-walks",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kesten-kozlov-spitzer",
+   "to_existing_logical": "math:probability.randomenvironment:attempt-c0129-recurrence-transience-criterion-for-excited-random-walks-under-station",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kesten-kozlov-spitzer",
+   "to_existing_logical": "math:probability.randomenvironment:attempt-c0130-escape-probability-of-a-transient-one-dimensional-excited-random-walk",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kesten-kozlov-spitzer",
+   "to_existing_logical": "math:probability.randomenvironment:attempt-c0134-ballisticity-criterion-under-the-positivity-assumption-instead-of-boun",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kesten-kozlov-spitzer",
+   "to_existing_logical": "math:probability.randomenvironment:attempt-c0135-running-maximum-limit-theorem-at-the-critical-parameter-delta-1-under",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kalikow-zero-one-law",
+   "to_existing_logical": "math:probability.randomenvironment:attempt-c0040-absolutely-continuous-invariant-measure-for-the-environment-seen-from",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kalikow-zero-one-law",
+   "to_existing_logical": "math:probability.randomenvironment:attempt-c0044-zero-one-law-for-directional-transience-in-dimensions-d-3",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kalikow-zero-one-law",
+   "to_existing_logical": "math:probability.randomenvironment:attempt-c0131-recurrence-transience-dichotomy-for-excited-random-walks-in-dimension",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "rayleigh-monotonicity-effective-resistance",
+   "to_existing_logical": "math:probability.gaussian:open-problem-c0014-limit-of-the-normalised-log-effective-resistance-of-the-dgff-electric",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "rayleigh-monotonicity-effective-resistance",
+   "to_existing_logical": "math:probability.gaussian:open-problem-c0015-scaling-limit-of-the-current-minimising-path-in-the-dgff-network",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "rayleigh-monotonicity-effective-resistance",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0012-subdiffusive-upper-bound-for-the-liouville-random-walk-on-the-dgff",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "rayleigh-monotonicity-effective-resistance",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0014-limit-of-the-normalised-log-effective-resistance-of-the-dgff-electric",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "rayleigh-monotonicity-effective-resistance",
+   "to_existing_logical": "math:probability.percolation:attempt-c0074-scaling-limit-of-random-walk-on-the-high-dimensional-incipient-infinit",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "commute-time-identity",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0012-subdiffusive-upper-bound-for-the-liouville-random-walk-on-the-dgff",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "nash-inequality-heat-kernel",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0010-dgff-over-an-ergodic-uniformly-elliptic-random-conductance-model-level",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kesten-subdiffusivity",
+   "to_existing_logical": "math:probability.gaussian:open-problem-c0012-subdiffusive-upper-bound-for-the-liouville-random-walk-on-the-dgff",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kesten-subdiffusivity",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0012-subdiffusive-upper-bound-for-the-liouville-random-walk-on-the-dgff",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "kesten-subdiffusivity",
+   "to_existing_logical": "math:probability.percolation:attempt-c0125-spectral-dimension-of-random-walk-on-the-incipient-infinite-cluster-be",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "local-weak-convergence-objective-method",
+   "to_existing_logical": "math:probability.core:resolved-c0111-parisi-s-exact-formula-for-the-expected-random-assignment-cost",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "local-weak-convergence-objective-method",
+   "to_existing_logical": "math:probability.core:resolved-c0112-variance-asymptotics-of-the-random-assignment-cost",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "local-weak-convergence-objective-method",
+   "to_existing_logical": "math:probability.core:open-problem-c0113-is-the-minimal-spanning-forest-of-a-poisson-process-in-r-d-a-single-tr",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "local-weak-convergence-objective-method",
+   "to_existing_logical": "math:probability.core:resolved-c0114-limit-of-the-independence-number-of-random-regular-graphs",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "local-weak-convergence-objective-method",
+   "to_existing_logical": "math:probability.random-matrices:attempt-c0031-almost-sure-convergence-in-the-heavy-tailed-circular-law",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "local-weak-convergence-objective-method",
+   "to_existing_logical": "math:probability.random-matrices:attempt-c0032-explicit-form-of-the-heavy-tailed-circular-law-density",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "aldous-exploration-multiplicative-coalescent",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0069-scaling-limit-of-critical-percolation-cluster-sizes-on-the-hypercube",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "aldous-exploration-multiplicative-coalescent",
+   "to_existing_logical": "math:probability.percolation:open-problem-c0071-multiplicative-coalescent-scaling-limit-of-critical-percolation-on-hig",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "aldous-exploration-multiplicative-coalescent",
+   "to_existing_logical": "math:probability.percolation:attempt-c0069-scaling-limit-of-critical-percolation-cluster-sizes-on-the-hypercube",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "aldous-exploration-multiplicative-coalescent",
+   "to_existing_logical": "math:probability.percolation:attempt-c0088-scaling-limit-of-the-minimal-spanning-tree-on-high-dimensional-tori",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "doob-h-transform-kesten-tree",
+   "to_existing_logical": "math:probability.percolation:attempt-c0077-incipient-infinite-super-brownian-motion-limit-of-the-high-dimensional",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "doob-h-transform-kesten-tree",
+   "to_existing_logical": "math:probability.percolation:attempt-c0086-scaling-limit-of-high-dimensional-invasion-percolation",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "fekete-lemma-subadditive",
+   "to_existing_logical": "math:probability.percolation:attempt-c0084-no-infinite-cluster-at-criticality-on-quasi-transitive-graphs-with-p-c",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lindeberg-exchange-four-moment",
+   "to_existing_logical": "math:probability.random-matrices:resolved-c0026-universality-of-local-spectral-statistics-for-non-hermitian-i-i-d-matr",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "lindeberg-exchange-four-moment",
+   "to_existing_logical": "math:probability.random-matrices:attempt-c0109-rate-of-convergence-in-the-circular-law-as-a-function-of-the-moment-as",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "hermitization-girko",
+   "to_existing_logical": "math:probability.random-matrices:resolved-c0027-universality-of-the-elliptic-law",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "hermitization-girko",
+   "to_existing_logical": "math:probability.random-matrices:resolved-c0110-central-limit-theorem-for-the-log-determinant-of-i-i-d-non-gaussian-ma",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "hermitization-girko",
+   "to_existing_logical": "math:probability.random-matrices:attempt-c0031-almost-sure-convergence-in-the-heavy-tailed-circular-law",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "hermitization-girko",
+   "to_existing_logical": "math:probability.random-matrices:attempt-c0032-explicit-form-of-the-heavy-tailed-circular-law-density",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "hermitization-girko",
+   "to_existing_logical": "math:probability.random-matrices:attempt-c0109-rate-of-convergence-in-the-circular-law-as-a-function-of-the-moment-as",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  },
+  {
+   "from_key": "poisson-dirichlet-smoothing-transform",
+   "to_existing_logical": "math:probability.gaussian:attempt-c0003-bypassing-the-laplace-transform-tail-condition-for-the-dgff-extremal-m",
+   "kind": "cites",
+   "rationale": "The recorded attempt or problem text invokes this technique"
+  }
+ ]
+}

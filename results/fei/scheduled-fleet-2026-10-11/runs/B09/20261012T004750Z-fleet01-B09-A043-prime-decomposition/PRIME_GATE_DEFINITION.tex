@@ -1,0 +1,76 @@
+\section*{A043: genuine disjoint prime gates}
+
+All Boolean functions in this note take values in $\{-1,1\}$.  Before
+factorization, delete every inessential variable.  The resulting function is
+called its \emph{essential core}.
+
+\paragraph{Honest disjoint factorization.}
+Let $f$ have essential variable set $X$ of size $n$.  An honest nontrivial
+disjoint factorization is an identity
+\[
+ f(x)=G\bigl(g_1(x_{B_1}),\ldots,g_k(x_{B_k})\bigr),             \tag{1}
+\]
+where $(B_1,\ldots,B_k)$ is a partition of $X$, $2\le k<n$, every
+$g_i$ is nonconstant and depends essentially on every variable in $B_i$,
+and $G$ depends essentially on all $k$ input ports.  The restriction $k<n$
+excludes the tautological representation using $n$ literals.
+
+An essential function of arity at least two is \emph{disjoint-prime} if it
+has no factorization (1).  Constants are nullary atoms and signed literals
+are unary atoms; neither is called prime.  Prime classes are taken modulo
+permutation of variables and input/output negations: an input negation is
+absorbed into the adjacent child and an output negation into the parent.
+
+Affine parity follows the same convention.  Parity on $n\ge3$ variables is
+composite, since it factors through a binary XOR/XNOR gate and parity on the
+remaining variables.  Binary XOR and XNOR are prime only because arity two
+is the base arity.  One may flatten consecutive parity nodes for display,
+but this is not a different factorization notion.
+
+\begin{theorem}[Existence and termination]
+Every finite Boolean function has a rooted composition tree whose leaves are
+constants or signed literals and whose internal nodes are disjoint-prime
+gates.  At each internal node, its child subtrees use pairwise disjoint sets
+of the original variables.  Every root-to-leaf path has length at most
+$n-1$.
+\end{theorem}
+
+\begin{proof}
+Pass to the essential core.  Constants and literals are atoms.  If an
+essential function of arity $m\ge2$ is prime, stop.  Otherwise choose an
+honest factorization (1), and recursively factor both the outer gate $G$ and
+every non-atomic child $g_i$.
+
+Every recursive successor has strictly smaller arity than $m$: the outer
+gate has arity $k<m$, and every child block has size at most $m-k+1<m$.
+Thus arity strictly decreases along every branch.  Since branching is finite,
+the recursion terminates, and its depth is at most $n-1$.  Disjointness is
+preserved because factoring a child only partitions that child's block, while
+factoring an outer gate partitions its already-disjoint input ports.
+\end{proof}
+
+No uniqueness is asserted.  Associative gates, especially parity, AND and
+OR, have many valid trees.  The theorem supplies existence and a terminating
+induction parameter, which is all that the entropy implication needs.
+
+\begin{proposition}[A structural restriction on genuine primes]
+Every essential disjoint-prime Boolean gate of arity $n\ge3$ is
+non-canalizing: neither section in any coordinate is constant.
+\end{proposition}
+
+\begin{proof}
+Suppose the section $f|_{x_i=a}$ is the constant $c$.  Let
+$g(x_{X\setminus\{i\}})=f|_{x_i=1-a}$.  Essentiality of $f$ implies that
+$g$ depends on every remaining variable.  Define the binary gate $G$ by
+$G(a,v)=c$ and $G(1-a,v)=v$.  Then
+\[
+ f(x)=G(x_i,g(x_{X\setminus\{i\}})).
+\]
+Both inputs of $G$ are essential, and $2<n$, so this is an honest
+factorization, contradicting primality.
+\end{proof}
+
+Thus all essential canalizing gates of arity at least three, including the
+usual iterated AND/OR and selector forms, are removed before the prime
+obligation.  This restriction does not solve the remaining class: arbitrary
+non-canalizing gates can still be prime.

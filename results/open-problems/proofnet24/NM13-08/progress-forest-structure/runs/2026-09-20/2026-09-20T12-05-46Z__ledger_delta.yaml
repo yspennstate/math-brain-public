@@ -1,0 +1,67 @@
+run_id: NM13-08-T07-2026-09-20T12-05-46Z
+owner_slot: NM08
+source_target: T07_uniform_all_forests_pairwise_negative_edge_correlation
+repository: yspennstate/math-open-problems
+branch: master
+status:
+  parent: OPEN
+  restricted_theorem: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+  novelty_priority: UNVERIFIED
+parent_scope:
+  before_complete_all_graph_order: 9
+  after_complete_all_graph_order: 9
+  before_counterexample_order_lower_bound: 10
+  after_counterexample_order_lower_bound: 10
+mechanism_gain:
+  before: independent-terminal response strip for P1..P11,C3,C4
+  after: 52-state cycle-tail annihilator plus arbitrary-multiplicity P1..P11,C3..C8 response-strip theorem
+new_claims:
+  - id: T07-CYCLE-TAIL-ANNIHILATOR-22
+    statement: p(E)^3=0 for the 52-state unmarked cycle-tail extension operator, p(lambda)=(lambda-1)(lambda^2-6lambda+2), yielding exact A/B/C recurrences
+    proof_status: COMPUTER_ASSISTED_EXACT
+  - id: T07-FINITE-ATOM-STRIP-ADMISSION-22
+    statement: finite local strip positivity transfers to arbitrary multiplicities of a finite three-terminal atom library
+    proof_status: PROVED
+  - id: T07-INDEPENDENT-PATH-CYCLE8-STRIP-22
+    statement: pairwise forest negative correlation for bar(K3) join disjoint unions of arbitrary P1..P11 and C3..C8 multiplicities; strict except K3,1
+    proof_status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+application:
+  clean_subfamily: bar(K3) join (a*C8 disjoint_union r*K1), a>=1,r>=0
+  vertices: 3+8*a+r
+  edges: 32*a+3*r
+  first_member:
+    vertices: 11
+    edges: 32
+    forests: 22846206
+    min_rayleigh_numerator: 32050067832
+exact_certificate:
+  cycle_tail_states: 52
+  rank_pE_pE2_pE3: [20,5,0]
+  response_strip_low: 8600440931/72010387275
+  response_strip_high: 1/8
+  local_representatives: 48704
+  unique_response_polynomials: 4654
+  regular_certificates: 4571
+  discriminant_certificates: 82
+  boundary_equalities: 1
+  failures: 0
+  min_positive_discriminant_K: 207792
+  terminal_marker: ALL_EXACT_CHECKS_PASS
+artifacts:
+  report: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T12-05-46Z__cycle-tail-c8-response-strip-report.md
+  checker: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T12-05-46Z__cycle-tail-c8-response-strip-checker.py
+  output: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T12-05-46Z__cycle-tail-c8-response-strip-checker.out
+  ledger_delta: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T12-05-46Z__ledger_delta.yaml
+next_attack: derive marked cycle-tail recurrences for q02,q20,q01,q11 and the h-independent discriminant invariant K; seek all-cycle positivity or an exact negative obstruction
+constraints_respected:
+  posted_registry_read: true
+  historical_or_peer_overwrite: false
+  email: false
+  drive: false
+  public_posting: false
+  paid_compute: false
+  access_change: false
+  schedule_change: false
+runtime:
+  model: GPT-5.6 Sol
+  reasoning_effort: UNVERIFIED

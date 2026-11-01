@@ -1,0 +1,54 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T051555Z-fleet01-B01-majority-activation-no-go-a003",
+  "stream": "B01",
+  "packet_id": "A003",
+  "gap_id": "G-UPPER-SET-ASYMMETRY",
+  "claims": [
+    {
+      "claim_id": "B01-A003-MAJORITY-ACTIVATION-LOCAL-NOGO",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "label": "PROVED_AT_STATED_SCOPE",
+      "statement": "For every finite real A,B there is an odd n such that, for the one-fresh-bit activation F_n of balanced n-bit majority g_n, G(F_n)-(1/2)G(g_n) > A I_ctl + B[U(F_n)-(1/2)U(g_n)].",
+      "quantifiers": "For all A,B in R with finite values, there exists an odd positive integer n and the displayed genuine Boolean pair (g_n,F_n).",
+      "exact_values": {
+        "activation_probability": "1/2",
+        "selector_influence": "1/2",
+        "retained_U_increment": "1",
+        "G_excess": "(1/pi) log_2 n + O(1)"
+      },
+      "proof_artifact": "MAJORITY_ACTIVATION_NOGO.tex",
+      "limitations": [
+        "Refutes the local selector-plus-new-U transfer template, not global GU'.",
+        "Does not refute FEI and does not give unbounded H/I.",
+        "Independent A086/A094 review is outstanding."
+      ]
+    },
+    {
+      "claim_id": "B01-A003-FIRSTLEVEL-LOG-MISMATCH",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "label": "PROVED_AT_STATED_SCOPE",
+      "statement": "For the same family, the singular data-coordinate part of the exact activation ledger equals (1/2)n a_n^2 log_2(1/a_n^2), where a_n=binom(n-1,(n-1)/2)/2^(n-1), while the summed smooth remainder is O(n a_n^2)=O(1).",
+      "role": "Identifies the aggregate upper-set asymmetry mismatch that prevents deletion of the child structural charge.",
+      "proof_artifact": "MAJORITY_ACTIVATION_NOGO.tex"
+    },
+    {
+      "claim_id": "B01-A003-MAJORITY-DIRECT-CHECK",
+      "version": "v1",
+      "status": "COMPUTATION_PASS_NOT_INDEPENDENT_REVIEW",
+      "label": "NUMERICAL_CORROBORATION",
+      "statement": "Direct Walsh/restriction computation agrees with the scalar identity for n=1,3,5,7 to at least 60 decimal places; exact-binomial scalar evaluation passed 1008 assertions through n=1001.",
+      "artifacts": ["CHECK.py", "CHECK.out"],
+      "scope": "Finite corroboration only; the all-n conclusion is analytic."
+    },
+    {
+      "claim_id": "FULL-FEI",
+      "version": "campaign-current",
+      "status": "OPEN",
+      "label": "OPEN",
+      "statement": "No complete proof or genuine Boolean counterfamily with unbounded H/I is established by this run."
+    }
+  ]
+}

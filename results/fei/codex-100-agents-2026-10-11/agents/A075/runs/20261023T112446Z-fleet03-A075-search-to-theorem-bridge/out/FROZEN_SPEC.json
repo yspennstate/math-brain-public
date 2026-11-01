@@ -1,0 +1,19 @@
+{
+  "version": "A075-independent-guard-review-v1",
+  "actual_family": "G_d=disjoint parity times seed if all d physical selectors zero, else parity; full24bit seed Fplus retained",
+  "pilot": "4 one-bit seeds,d=0,1,r=0,1:16 complete Walsh/edge/entropy checks",
+  "domain": "all16 two-bit seeds,d=0,1,2,r=0,1,2:144 complete spectra; seed24 by16 occupied sectors; toy seed negativeonly00,d=0,1,2,r=2,K=1,3/2:6 complete augmented DAGs; no automatic expansion",
+  "case_count": {
+    "pilot": 16,
+    "spectra": 144,
+    "seed": 1,
+    "augmented_DAGs": 6
+  },
+  "symmetry": "none; every physical admission/query retained in toy DAGs",
+  "arithmetic": "integer FWHT/direct characters, Fraction edges, prime-log exact identities, own192bit80term atanh directed intervals; floating time only",
+  "memory_estimate_mb": 180,
+  "pilot_max_seconds": 55,
+  "maximum_runtime_seconds_per_command": 180,
+  "helper_sha256": "29a8c8374f05c078866ad52155528ff0b741e0d4417532e2a90027cab224b462",
+  "peer_executable_imported": false
+}

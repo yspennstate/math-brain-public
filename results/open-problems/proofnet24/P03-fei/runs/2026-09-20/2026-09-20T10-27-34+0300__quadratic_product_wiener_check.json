@@ -1,0 +1,53 @@
+{
+  "exhaustive_n4": {
+    "incident_coordinate_checks": 12288,
+    "max_B_i_minus_1": 0.0,
+    "max_exact_half_influence_count_error": 0,
+    "structured_functions": 3840
+  },
+  "factor_count_demo": [
+    {
+      "H": 2.216917186688699,
+      "H_over_I": 2.955889582251599,
+      "I": 0.75,
+      "blocks": 1,
+      "core_lambda2": 2.5,
+      "n": 3
+    },
+    {
+      "H": 4.680994171850973,
+      "H_over_I": 2.3404970859254863,
+      "I": 2.0,
+      "blocks": 2,
+      "core_lambda2": 2.5,
+      "n": 6
+    },
+    {
+      "H": 7.184780251992037,
+      "H_over_I": 2.2107016159975497,
+      "I": 3.25,
+      "blocks": 3,
+      "core_lambda2": 2.5,
+      "n": 9
+    }
+  ],
+  "notes": [
+    "The exhaustive n=4 family ranges over all Boolean 2-bit cores and all nonempty cross-block quadratic edge sets; within-block quadratic and affine terms are absorbed into the arbitrary cores.",
+    "The n=6 test samples arbitrary 3-bit cores, nonempty cross-block quadratic edge sets, arbitrary within-block quadratic edges, affine terms and constants.",
+    "Finite checks are sanity checks only; the report contains the all-dimensional proof."
+  ],
+  "quadratic_normalized_3bit_core_values": [
+    1.0,
+    2.5
+  ],
+  "sampled_n6": {
+    "cases": 2000,
+    "incident_coordinate_checks": 10584,
+    "max_H_minus_CI": -20.5,
+    "max_H_over_I": 2.1084585933443494,
+    "max_exact_half_influence_count_error": 0
+  },
+  "seed": 20260920,
+  "status": "PASS",
+  "theorem_checked": "quadratic-block cross-edge half-influence and sampled FEI bound"
+}

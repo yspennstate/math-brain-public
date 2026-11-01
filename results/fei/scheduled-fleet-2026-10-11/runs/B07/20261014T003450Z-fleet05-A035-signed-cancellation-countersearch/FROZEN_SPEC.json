@@ -1,0 +1,45 @@
+{
+    "domain":  {
+                   "L":  [
+                             1,
+                             2
+                         ],
+                   "m":  [
+                             2,
+                             4,
+                             6
+                         ],
+                   "y0":  [
+                              0,
+                              1,
+                              3
+                          ],
+                   "selector_prefix":  "all histories before each selector, no core/data exposure"
+               },
+    "helper_version":  "A035-collision-v1",
+    "maximum_runtime_seconds":  180,
+    "selector_context_count":  36,
+    "case_count":  18,
+    "symmetry":  "none; frozen three representative point locations, not exhaustive",
+    "memory_estimate_MB":  100,
+    "targets":  [
+                    "B = p beta versus collision ledger",
+                    "Bbar = p beta + latent phase ambiguity",
+                    "signed B-Bbar sign",
+                    "root entropy and full terminal entropy retained",
+                    "exact d,W and signed convolution identity"
+                ],
+    "pilot":  {
+                  "L":  1,
+                  "case_count":  3,
+                  "m":  2,
+                  "y0":  [
+                             0,
+                             1,
+                             3
+                         ],
+                  "maximum_runtime_seconds":  50
+              },
+    "family":  "b_m(y) product b4(x_j) (-1)^((1-a(y))/2 sum 1_{x_j=0} z_j), a=parity flipped at y0",
+    "arithmetic":  "integer FWHT and physical edge counts, Fraction 28-term atanh log intervals with proved geometric remainder"
+}

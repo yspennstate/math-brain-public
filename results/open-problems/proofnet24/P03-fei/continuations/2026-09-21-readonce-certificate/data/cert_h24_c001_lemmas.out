@@ -1,0 +1,8 @@
+certificate cert_vi_h24k40.npz: C0=6.4548000, 1801 nodes, K=40, c=0.01, tail slope 4.909600 -> C_cert = 6.4573000
+  |G_hat'| <= 30.085, |Psi'| <= 21.892 on (0,1/2]
+  T1 (both p, q < 2^-K): b_t - b* = -5.906e-14, margin lower bound +1.000e-02 -> OK
+  region 2, v < 2^-K: lower bound +120.486 -> OK
+  region 3, u < 2^-60: max Lambda' = 198.99, lower bound +7.98 -> OK
+  region 3, both u, v <= 2^-K: lower bound +7.083 -> OK
+RESULTS: {'T1': np.True_, 'R2deep': np.True_, 'R3deep': np.True_, 'R3both': np.True_}
+ALL VERIFIED -> H(f) <= 6.4573000 I(f) for every read-once formula

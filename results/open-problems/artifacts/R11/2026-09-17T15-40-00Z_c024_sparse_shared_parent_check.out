@@ -1,0 +1,12 @@
+R11 C024 exact self-check
+checks=4001
+N4 alpha=1/2 mu=1/10 rho=1/8
+N4 baseline p13=5/64 p22=3/64 ratio=5/3
+N4 shared-parent-event p13=3/40 p22=11/240 ratio=18/11
+N4 C024 p13=199/2560 p22=359/7680 ratio=597/359
+C024-C023 ratio difference=-4/1077
+parent-sharing excess formula=rho*(1-1/N)>0
+U008 scale rho/Delta=Delta^2 -> 0
+ALL_EXACT_CHECKS_PASS
+sha256_stdout=25b6e752d6357c0fbe6f7f40ed8b6555704dc133a52ba93e3ac9236968ed9e2a
+sha256_checker=e0bcec91c5ee8db22f3ff2edece7e827f1619be97322c3a3620b50d92ec79c9e

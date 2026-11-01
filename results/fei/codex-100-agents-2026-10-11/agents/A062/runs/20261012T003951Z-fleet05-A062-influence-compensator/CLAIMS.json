@@ -1,0 +1,52 @@
+[
+  {
+    "claim_id": "A062-B05-MINIMAL-RESERVE-CREDIT",
+    "version": 1,
+    "exact_statement": "For every even k>=4, r>=2k, and C>=6, let F be the canonical quadratic bent k-bit function and its zero-vertex point flip, activated by r fresh point controls and selected by a fair physical selector. On the complete selector-controls-adjacent-data-pairs tree with irrelevant inputs skipped and constant leaves, the minimal nonnegative reserve Q*_v=[D_v-C Inf_v+average Q*_children]_+ vanishes at every control node and even point-edited paired-data entry. Odd edited data states have Q*<=2. For physical minority mu(g)=min(P[g=-1],P[g=+1]), every node obeys Q*_v<=4mu(g_v)log2(1/mu(g_v)); at the root Q*=[D_selector-C 2^{-(r+k)}]_+<4*2^{-k}mu(F)log2(1/mu(F))<=mu(F)log2(1/mu(F))/4 and Q*<=2^{1-k}I(F). At r=2k and fixed finite C, Q*/I(F) is asymptotic to (2/5)2^{-k}. In particular the C=6 reserve certificate gives H(F)<=(6+2^{1-k})I(F)<=49I(F)/8. Pointwise credit domination is not a local drift assertion for the rarity function, which remains false on these selector roots for fixed coefficients.",
+    "hypotheses": [
+      "Actual Boolean signs on uniform finite cubes; entropy in bits; ordinary total influence",
+      "Canonical b_k=(-1)^(x1*x2+...+x_{k-1}*x_k), flipped only at zero; k even >=4",
+      "r fresh point controls with r>=2k; independent fair physical selector",
+      "Complete fresh-input order selector then controls then adjacent data pairs; skip irrelevant coordinates; zero constant leaves",
+      "Physical output minority, not spectral minority-fiber mass; psi(0)=0",
+      "Fixed finite C>=6 for the stated asymptotic; larger finite C allowed for inequalities"
+    ],
+    "statement_sha256": "9a939a4b57ebee969f4cecf617af126f6ad6bf837d6f5f36d29abe5c7ddb9508",
+    "contributors": [
+      "A062; target and Bellman convention from B13 lead; local-rarity obstruction credited to A064; empty-fiber correction credited to A089"
+    ],
+    "proof_source": {
+      "path": "DERIVATION.md",
+      "certificate": "out/CERTIFICATES.json",
+      "full_tree_oracle": "out/TREE_ORACLE.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A062-INFLUENCE-STOPPING-INTERFACE",
+        "version": 1,
+        "scope": "finite same-tree budgets only",
+        "review_status": "B13 lead v2 records both prior A062 claims checked and holding"
+      },
+      {
+        "source": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_REDUCTION.md",
+        "sha256": "eab8a37cae78930ad4c252be2297e024fc585a063969b6829433fe496a6008b1",
+        "scope": "section 2 singleton JS scalar bound"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A064",
+      "A065",
+      "A087",
+      "A094",
+      "A097",
+      "A099",
+      "B13",
+      "B20"
+    ]
+  }
+]

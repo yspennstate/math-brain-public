@@ -1,0 +1,48 @@
+{
+  "candidate_id": "C0023",
+  "checked_utc_date": "2026-10-10",
+  "historical_intake": {
+    "file": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:23",
+    "source_id": "garban_steif_noise_2012",
+    "locator": "Chapter XI Section 1, p. 136",
+    "intake_statement": "Prove theta(p_c) = 0 for Bernoulli percolation on Z^d for every d >= 3; open for 3 <= d <= 10 (known for d >= 11 by Fitzner and van der Hofstad, and for d = 2).",
+    "status_date": "2026-09-07",
+    "primary_text_directly_checked": true,
+    "primary_pdf": "garban_steif_1102_5761.pdf",
+    "primary_quote": "It is a major open question to prove that this is also the case for intermediate dimensions; the consensus is that this should be the case.",
+    "quote_context": "Chapter XI, printed p. 134 (PDF p. 136); preceding sentence says no percolation at criticality for d>=19, and the proof on that page refers to open edges. The 3..10 bound is a later update, not the 2012 text."
+  },
+  "working_exact_bond_statement": "For each integer 3 <= d <= 10, independent Bernoulli(p) nearest-neighbor edges of Z^d form no infinite open cluster almost surely at p=p_c(d), where p_c(d)=inf{p in [0,1]: P_p(|C(0)|=infinity)>0}.",
+  "status": "REPORTED_SOLVED_IN_NEW_PRIMARY_PREPRINTS__INDEPENDENT_PROOF_AUDIT_PENDING",
+  "independently_verified_openness": "UNKNOWN",
+  "novelty_claim_allowed": false,
+  "new_primary_evidence": [
+    {
+      "source": "OpenAI, Critical bond and site percolation on the cubic lattice, 2026-09-24, Theorem 1.1",
+      "url": "https://github.com/openai/math/blob/main/preprints/Critical-bond-and-site-percolation-on-the-cubic-lattice-September-24-2026/paper.pdf",
+      "local_copy": "openai_critical_z3_20260924.pdf",
+      "exact_quote": "For nearest-neighbor Bernoulli bond percolation on Z3, there is almost surely no infinite open cluster at the bond critical parameter. The same assertion holds for nearest-neighbor Bernoulli site percolation at the site critical parameter.",
+      "scope": "d=3 only; manuscript proof not independently refereed here"
+    },
+    {
+      "source": "OpenAI math Lean scope note 213",
+      "url": "https://github.com/openai/math/blob/main/lean/docs/213.md",
+      "quote": "The formalization proves absence of an infinite cluster at criticality for Bernoulli bond percolation on every infinite connected locally finite quasi-transitive graph with critical probability p_c<1.",
+      "scope": "All assigned d if its formalized theorem and lattice instantiation audit clean; comparator challenge file contains a deliberate sorry, so challenge alone is not a proof receipt"
+    },
+    {
+      "source": "OpenAI, No percolation at criticality on quasi-transitive graphs, 2026-09-24, Theorem 1.1",
+      "url": "https://github.com/openai/math/blob/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf",
+      "local_copy": "openai_quasi_transitive_20260924.pdf",
+      "exact_quote": "Let G be an infinite connected locally finite quasi-transitive undirected graph. If pc(G) < 1, then Ppc(G)(there is an infinite open cluster) = 0.",
+      "scope": "Includes nearest-neighbor bond percolation on Z^d for all d>=2, provided its proof is sound; this 42-page manuscript has not received a full independent audit by w422"
+    }
+  ],
+  "formal_check": {"performed_by_w422": false, "trusted_axioms_verified_by_w422": false, "warning": "Do not count challenge-file sorry or documentation alone as proof."},
+  "brain_pipeline": {"prepared": true, "submitted": true, "submitted_path": "~/math-brain-inbox/w422/bundle_001.json", "reviewed": false, "ingested": false, "retrievable": false},
+  "primary_pdf_sha256": {
+    "garban_steif_1102_5761.pdf": "fb1c1b1381c6cfe089b5038832f8c98e9800b09241835b69e931f7cfee822ea1",
+    "openai_critical_z3_20260924.pdf": "9c32c0ba2d3d7e3dd0b37c912a8690725773753784c9bdb08220c70bcff90d2a",
+    "openai_quasi_transitive_20260924.pdf": "5929ccea200fd7433c5ac519c924316ccdd56fc0208ea0cc65d5a424bb2e425f"
+  }
+}

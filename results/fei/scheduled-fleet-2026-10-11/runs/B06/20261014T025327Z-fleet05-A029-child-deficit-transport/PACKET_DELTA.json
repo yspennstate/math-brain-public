@@ -1,0 +1,65 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261014T025327Z-fleet05-A029-child-deficit-transport",
+  "stream": "B06",
+  "packet_id": "A029",
+  "gap_id": "G-R-MISMATCH",
+  "attempt_id": "A029-child-deficit-transport-04",
+  "method": "Independent source-bound A023 whole-block review; exact nested physical-child owner accounting and grouped-event refund",
+  "mathematical_delta": "A023@3 whole-block scoped HOLDS; two-level signed condition keeps all3 core deficits; exact data surcharge2a(1-a)b(1-b)I12 and future-control debit; grouping refund pays both redundancy parts on constant-failure chains;248751+28816 exact assertions PASS",
+  "deliverable_status": "COMPLETE_LOCAL_SAVED",
+  "mathematical_status": "DEPENDENCY_SCOPED_REVIEW_HOLDS_NESTED_APPLICATION_CHECKED_UNIVERSAL_PAYMENT_OPEN",
+  "claim_versions_used": [
+    {
+      "claim_id": "A023-OVERLAP-EXPOSURE-GOOD-CONTROL-LEDGER",
+      "version": 3,
+      "statement_sha256": "32444a38f9d32b7d226f04c6322d4a7ea0a271e808d5a3e5da35cdef76e5605c",
+      "status": "INDEPENDENTLY_RECONSTRUCTED_WHOLE_BLOCK_CLAUSE_ONLY"
+    },
+    {
+      "claim_id": "B06-R2",
+      "version": "STREAM_NOTES v2,2026-10-11 23:26Z",
+      "status": "ACCEPTED_BASELINE_NOT_REPROVED"
+    }
+  ],
+  "claims_created_or_changed": [
+    {
+      "claim_id": "A023-OVERLAP-EXPOSURE-GOOD-CONTROL-LEDGER",
+      "version": 3,
+      "change": "LOCAL_SOURCE_BOUND_SCOPED_REVIEW_RECORD_ONLY_NO_SHARED_MODIFICATION"
+    }
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "DERIVATION.md",
+    "REVIEW_A023.md",
+    "SPEC.json",
+    "VERIFY_SPEC.json",
+    "code/check.py",
+    "code/verify_grouping.py",
+    "out/checks.json",
+    "out/grouping.json",
+    "out/chains.json"
+  ],
+  "next_consumers": [
+    "A023",
+    "A027",
+    "A028",
+    "A030",
+    "A064",
+    "A087",
+    "A094",
+    "B06 lead",
+    "B20"
+  ],
+  "next_action": "At three genuinely distinct shared cores, prove or refute payment of the exact hierarchical surcharge from unused signed terminal deficits after future-control debit; preserve original terminal weights. A023/A087/A094 review DERIVATION.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Symmetric pairwise R_star has not been proved to pay actual nested entropy; hierarchy surcharge and future-control debit cannot be deleted",
+    "General terminal-core deficit certificate remains unproved",
+    "Independent review of new nested application and remote copying/adoption unverified"
+  ],
+  "packet_ids": [
+    "A029"
+  ]
+}

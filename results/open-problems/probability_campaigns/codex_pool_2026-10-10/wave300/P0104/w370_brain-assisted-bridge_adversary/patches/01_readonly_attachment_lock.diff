@@ -1,0 +1,69 @@
+--- a/~/.claude/dreaming/brain_node_documents.py
++++ b/~/.claude/dreaming/brain_node_documents.py
+@@ -457,6 +457,57 @@
+         handle.close()
+ 
+ 
++@contextlib.contextmanager
++def _attachment_read_lock(mem: Path, timeout_seconds: float = 10.0):
++    """Read-lock the stable writer sidecar without creating or writing any file.
++
++    An existing bundle must have its writer-created sidecar. Missing or unsafe
++    sidecars fail closed; readers never bootstrap one or read without a lock.
++    """
++    path = mem / WRITE_LOCK_NAME
++    _assert_regular(path, "attachment read lock")
++    try:
++        fd = os.open(path, os.O_RDONLY | getattr(os, "O_BINARY", 0))
++    except OSError as exc:
++        raise AttachmentError("cannot open attachment read lock: %s" % exc) from exc
++    handle = os.fdopen(fd, "rb", buffering=0)
++    locked = False
++    try:
++        opened = os.fstat(handle.fileno())
++        visible = os.lstat(path)
++        if (stat.S_ISLNK(visible.st_mode) or not stat.S_ISREG(visible.st_mode)
++                or _is_reparse(visible) or opened.st_size < 1
++                or (opened.st_dev, opened.st_ino) != (visible.st_dev, visible.st_ino)):
++            raise AttachmentError("attachment read lock is not a stable nonempty regular non-link file")
++        deadline = time.monotonic() + timeout_seconds
++        while time.monotonic() < deadline:
++            try:
++                handle.seek(0)
++                if os.name == "nt":
++                    import msvcrt
++                    msvcrt.locking(handle.fileno(), msvcrt.LK_NBRLCK, 1)
++                else:
++                    import fcntl
++                    fcntl.flock(handle.fileno(), fcntl.LOCK_SH | fcntl.LOCK_NB)
++                locked = True
++                break
++            except OSError:
++                time.sleep(0.01)
++        if not locked:
++            raise AttachmentError("attachment read lock timed out")
++        yield
++    finally:
++        if locked:
++            handle.seek(0)
++            if os.name == "nt":
++                import msvcrt
++                msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
++            else:
++                import fcntl
++                fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
++        handle.close()
++
++
+ def load_documents(mem: str | os.PathLike[str] | Path, slug: str,
+                    *, missing_ok: bool = True) -> list[NodeDocument]:
+     """Load one coherent bundle snapshot, waiting out any in-progress manifest update."""
+@@ -468,7 +519,7 @@
+     # Avoid creating a synchronization sidecar for nodes that have never used attachments.
+     if not os.path.lexists(bundle_dir(mem_path, safe_slug)):
+         return _load_documents_unlocked(mem_path, safe_slug, missing_ok=missing_ok)
+-    with _attachment_write_lock(mem_path):
++    with _attachment_read_lock(mem_path):
+         return _load_documents_unlocked(mem_path, safe_slug, missing_ok=missing_ok)
+ 
+ 

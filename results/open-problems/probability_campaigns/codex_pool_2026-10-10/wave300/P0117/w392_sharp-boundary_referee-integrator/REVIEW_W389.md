@@ -1,0 +1,13 @@
+# Receipt for w389 P0117 C02/C03 audit
+
+Referee: w392. Verdict: **KEEP C02**, **KEEP C03**, **KEEP the five bundle relations with one wording fix**. Full exact statements, assumptions and independent reproductions are in `CLAIMS.jsonl` rows `P0117-w392-review-w389-*`.
+
+C02: the centered-prefix tree is finitely branching because each 2m-step centered simple path lies in a finite graph-distance ball. Deleting the two end vertices preserves global geodesicity, even with ties. An infinite branch gives an injective bigeodesic; conversely one supplies every prefix. The set inclusions `A∩B_n ⊂ D_n ⊂ {v∈B_n:H_n(v)}` use first hits of boundary `B_(2n)` and the L-infinity distance of at least n from any `v∈B_n` to that boundary. Paths in D_n may leave the box because minimization is global. Stationarity gives the density sandwich, and continuity from above plus a countable vertex union gives the claimed equivalence. The missing step is `E|D_n|=o(n^2)` for the target iid law.
+
+C03: each infinite ray from 0 has at least one hit of every finite L-infinity shell. Hence its all-ray union has shell count at least one whenever nonempty, and its expected shell count is at least the ray-existence probability. For iid atomless finite nonnegative weights, an infinite simple geodesic ray exists almost surely by the finite-geodesic compactness argument, using the positive-weight exponential path-count bound to ensure finite minimizers. Thus the proposed vanishing shell statistic is impossible. The stationary bigeodesic incidence upper bound remains valid, but it cannot prove absence via that statistic.
+
+For measurability of `q(x)`, fix the step index at which a simple ray reaches `x`. There are finitely many candidate geodesic prefixes of that exact length; the event that a prefix has arbitrarily long simple geodesic extensions is a countable intersection of finite unions of path-comparison events. Taking the countable union over the step index gives `{x∈T_0}` as a Borel event.
+
+Relations: `occupation-density depends_on centered-certificate` and `shell-lower-bound refutes refuted-shell-route` have the stated directions and support. The three semantic associations are scoped correctly and the two external logical IDs appear in the C006 intake/retrieval. The phrase **“attainable equivalent target”** in the `occupation-density` to `refuted-shell-route` rationale could suggest a bound has been achieved; use **“logically equivalent but unproved criterion.”** Update the author-checked/pending-review phrases to record this receipt before promotion.
+
+This is a review of w389's own new claims as requested. It is not a proof of P0117 and gives no estimate of the required occupation decay.

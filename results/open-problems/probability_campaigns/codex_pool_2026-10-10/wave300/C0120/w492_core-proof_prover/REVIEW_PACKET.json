@@ -1,0 +1,121 @@
+{
+  "worker": "w492",
+  "candidate": "C0120",
+  "referee": "w494",
+  "independent_referee_for_referee": "w497",
+  "status": "READY_FOR_REVIEW",
+  "parent_problem_solved": false,
+  "current_openness": "UNKNOWN",
+  "novelty": "UNKNOWN",
+  "statement_first_delivery": {
+    "recipient": "w493",
+    "message_id": "msg-c517d1fc6b",
+    "inserted": 1
+  },
+  "claims": [
+    "w492-L1",
+    "w492-L2",
+    "w492-L3",
+    "w492-L4"
+  ],
+  "source_correction": "w492-S1.2",
+  "hardest_gap": "w492-G1: polynomial low-degree Hermite gradient spectral escape in the actual quadrant model.",
+  "review_questions": [
+    "Check the weak-gradient/Hermite spectral identities, all constants and cutoff exponents.",
+    "Check Mills-ratio corridor obstruction and whether its scope is kept separate from the actual lattice.",
+    "Review the max/log-Z source correction; route a theorem/source statement correction to Claude.",
+    "Keep only finite/conditional lemmas; do not upgrade G1 or assert a solved parent problem."
+  ],
+  "served_identity": {
+    "status": "UNVERIFIED",
+    "reason": "No response-side served-model evidence available in this conversation; requested settings are not proof."
+  },
+  "formal_check": {
+    "performed": false,
+    "receipt": null,
+    "admitted_placeholders_counted": false
+  },
+  "different_model_review_gate": "not established; requested settings and peer identifiers are not served-model evidence",
+  "bundle": "bundle_001.json",
+  "brain_submission_policy": "all proof claims remain concept/DRAFT pending review",
+  "files": {
+    "STATEMENT.md": {
+      "path": "~\\brain_workers\\w492\\STATEMENT.md",
+      "sha256": "21424ee178ce4c3975c407f4c3c9299284eae33cde02e7f1959569b9b4a5cf90",
+      "bytes": 1811
+    },
+    "ATTEMPT.md": {
+      "path": "~\\brain_workers\\w492\\ATTEMPT.md",
+      "sha256": "f25bd0dcf66f0f0fa143648f2a60e0d9ec85a9f0c97e358ec0986b98a69637fe",
+      "bytes": 8872
+    },
+    "CLAIMS.jsonl": {
+      "path": "~\\brain_workers\\w492\\CLAIMS.jsonl",
+      "sha256": "45cabd086ceddb3326158cba0d09f9f250a434f3812d9bb04622da33df48741f",
+      "bytes": 6636
+    },
+    "SOURCE_STATUS.json": {
+      "path": "~\\brain_workers\\w492\\SOURCE_STATUS.json",
+      "sha256": "b014d9121fc9b69215fbb9daa3a5bfacfbc7c7c658ff100dda0eb31f98cc08c5",
+      "bytes": 2426
+    },
+    "STORE_CORRECTIONS.json": {
+      "path": "~\\brain_workers\\w492\\STORE_CORRECTIONS.json",
+      "sha256": "316a5f7d025eb303f5df8f4986ca95dbe1f2ddd7e8a2bcacd7fd99b1a837251b",
+      "bytes": 1567
+    },
+    "CHECK_RECEIPT.json": {
+      "path": "~\\brain_workers\\w492\\CHECK_RECEIPT.json",
+      "sha256": "6979ce22f849bc39608e22ad46076dd5c13838b8288cf5be434f5a9e775841a4",
+      "bytes": 4143
+    },
+    "COMPUTE_GATE.json": {
+      "path": "~\\brain_workers\\w492\\COMPUTE_GATE.json",
+      "sha256": "bf14c52d031d0eaa5685cf7e6d79cc0cfee6468efeb61f23fc341eb974e14c8a",
+      "bytes": 292
+    },
+    "check_corridor.py": {
+      "path": "~\\brain_workers\\w492\\check_corridor.py",
+      "sha256": "d24602d0e80ae306adeb92df9c558b92dbbd1b540c83f59cd0a762e960d2196f",
+      "bytes": 3596
+    },
+    "bundle_001.json": {
+      "path": "~\\brain_workers\\w492\\bundle_001.json",
+      "sha256": "4c7a25f76d69ca4ed9f0d0802767bec78b7f6db527fb2fd500b1de86038994fb",
+      "bytes": 11318
+    },
+    "patches/01_c0120_source_scope.diff": {
+      "path": "~\\brain_workers\\w492\\patches\\01_c0120_source_scope.diff",
+      "sha256": "5c045c93eb8b1c5c6627b20cbbe887462481907e2540df88ca0d76e0a32c60f6",
+      "bytes": 2652
+    },
+    "patches/02_c0120_scope_hook.diff": {
+      "path": "~\\brain_workers\\w492\\patches\\02_c0120_scope_hook.diff",
+      "sha256": "7d3bc4d8a5da5dd4f76d59951bce52a2a68ee5adf888843011c8373a8b9eb5ef",
+      "bytes": 893
+    },
+    "REPORT.md": {
+      "path": "~\\brain_workers\\w492\\REPORT.md",
+      "sha256": "6a7753032a3a364f4562282393a8091ec22d456061aa0b71dc526038ef3ec93c",
+      "bytes": 3270
+    },
+    "RELATION_EVIDENCE.jsonl": {
+      "path": "~\\brain_workers\\w492\\RELATION_EVIDENCE.jsonl",
+      "sha256": "f5b2ed47314caa6bf9decfa8770c8fff5b916e65a4f62360f9c1c52b6fef6bca",
+      "bytes": 7267
+    },
+    "verify_packet.py": {
+      "path": "~\\brain_workers\\w492\\verify_packet.py",
+      "sha256": "31f617fe126f88e3c02da0788ac93e6813a3bf946d04d791dde1a83adbcb594d",
+      "bytes": 5934
+    }
+  },
+  "bundle_submission": {
+    "path": "~\\math-brain-inbox\\w492\\bundle_001.json",
+    "submitted_at_utc": "2026-10-10T07:09:06.546349+00:00",
+    "sha256": "4c7a25f76d69ca4ed9f0d0802767bec78b7f6db527fb2fd500b1de86038994fb",
+    "reviewed": false,
+    "ingested": false,
+    "retrievable": false
+  }
+}

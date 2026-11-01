@@ -1,0 +1,73 @@
+{
+  "schema": "fei-progress/2",
+  "run_id": "20261014T032000Z-fleet01-B12-indicator-coefficient4",
+  "stream": "B12",
+  "account": "fleet01",
+  "primary_packet_id": "A058",
+  "packet_ids": ["A058"],
+  "attempt_id": "A058-INDICATOR-COEFFICIENT4-07",
+  "attempt_counter": 7,
+  "gap_id": "B12-A058-SHARED-COORDINATE-OVERLAP",
+  "prior_status": "The exact indicator tensor ledger was proved and coefficient two was refuted by an all-depth seed requiring K>=3.921809106893846..., but coefficient four remained a possible unsigned payment for the agreement/disagreement activation split.",
+  "new_status": "INDICATOR_COEFFICIENT_FOUR_REFUTED; CO_SINGLETON_ALL_DEPTH_FAMILY_PROVED; EXACT_K_GREATER_THAN_4_5_SEED_PROVED",
+  "mathematical_delta": "Derived the exact r-bit co-singleton family and proved Phi/I>4 for every r>=3 with tensor-depth invariance; certified a six-bit seed with Phi/I=4.512256384896659...>4.5 and propagated it to every tensor depth; bounded the corresponding genuine-Boolean FEI ratios.",
+  "claim_versions": [
+    "B12-A058-CO-SINGLETON-INDICATOR-FAMILY-v1",
+    "B12-A058-INDICATOR-COEFFICIENT-FOUR-v1",
+    "B12-A058-SIX-BIT-INDICATOR-LOWER-BOUND-v1",
+    "B12-A058-GENUINE-BOOLEAN-TENSOR-CONTROL-v2",
+    "B12-A058-SHARED-COORDINATE-OVERLAP-v8"
+  ],
+  "source_pins": {
+    "owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "current_assignment_blob": "40935ac651643a17815d0addf664ec4c1c0313cc",
+    "current_case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "current_obstruction_registry_blob": "e111933338dff1d7798c5e59b43700bbf30f7b96",
+    "preceding_canonical_delivery": "22a132311c74840ba761d218b22ca42300922710",
+    "preceding_brain_delivery": "23a8b7f9cd9d5045f3419aee07125abbdff9878f",
+    "open_problems_head_inspected": "9e6482990f0c41d77844709348d4fffc99985c5f",
+    "brain_head_inspected": "a72cbc5d71450408f6388e92d3c0efb021392efd"
+  },
+  "case_extension": {
+    "previous_positive_class": "all tensor powers of a fixed indicator had an exact normalized-remainder ledger, with an exact seed lower bound K>=3.921809106893846...",
+    "new_positive_class": "the full co-singleton family q_r and every tensor power q_r^{tensor k}, with an explicit ratio above four for all r>=3; an additional exact six-bit seed and all tensor powers force K>4.5",
+    "previous_bound": "coefficient two was false, while coefficient four remained viable",
+    "new_bound": "coefficient four is false; every universal Phi(q)<=K I(q) requires K>=4.512256384896659... and in particular K>4.5",
+    "parameter_dependence": "the ratios are independent of tensor depth, product-block count, and activation probability decay; the co-singleton formula is uniform in r and tends to four from above"
+  },
+  "verification": {
+    "status": "PASS",
+    "method": "integer Walsh transforms, exact rational Parseval and influence, exact integer log-sign comparisons, closed-form co-singleton proof, deterministic simulated annealing, direct tensor checks",
+    "co_singleton_range_checked": "r=1..10",
+    "co_singleton_all_dimension_proof": "K_r>4 for every r>=3",
+    "three_bit_required_coefficient": 4.174257772798386,
+    "three_bit_exact_certificate": "7^7<2^20",
+    "five_bit_co_singleton_required_coefficient": 4.407467891752582,
+    "five_bit_exact_certificate": "31^155<2^768",
+    "six_bit_mask": "18446708751093190623",
+    "six_bit_required_coefficient": 4.512256384896659,
+    "six_bit_exact_certificate": "2^3024>3^547*19^475*7^49",
+    "search_seed": 20261014032000,
+    "search_scope": "dimensions 5..9; 40 restarts; 20000 flips per restart; floating candidates only beyond the exact six-bit seed",
+    "output_artifacts": ["CHECK.out", "SEARCH.out"]
+  },
+  "obstruction_controls": [
+    "The result concerns the normalized indicator remainder and is not confused with RAW_CONV_TENSOR.",
+    "Tensor powers show that the coefficient failure is multiplicative and is not an additive support term erased by depth.",
+    "The sign companions are genuine Boolean functions with bounded H/I, so no FEI counterexample is claimed.",
+    "The tensor identity is disjoint-product exact and is not misreported as overlapping-input closure; OVERLAP_PRODUCT remains live.",
+    "The failure blocks only an independently unsigned activation projection; it does not refute a joint signed, posterior, or terminal-reserve payment.",
+    "Numerical candidates above the certified six-bit value are preserved as leads and are not promoted to exact claims."
+  ],
+  "remaining_obstacle": "Pay the changing coherent remainder over an actual adaptive physical hierarchy with one source-influence or terminal-reserve budget. The coefficient-four independent indicator projection is impossible; the signed near/separated kernel must retain companion-sign, posterior-activation, or terminal-reserve information under changing node weights.",
+  "next_action": "Return to the exact split |a_T+mu b_T|<=c|alpha b_T| versus its complement and derive a joint four-channel signed inequality rather than separate indicator estimates. Stress-test any unsigned subterm on the six-bit tensor family and require coefficient at least 4.512256384896659....",
+  "consumer_targets": ["A057", "A059", "A060", "B09", "B15", "B16", "B17", "B18", "B19", "B20"],
+  "reviewer_targets": ["A091", "A090", "A094"],
+  "independent_review": "NONE_OBSERVED",
+  "canonical_delivery": "f046e9cca345e4dec41d75e1dff7e83de91cb410; 12_OF_12_FILES_NONEMPTY_AND_BLOB_EXACT",
+  "brain_handoff_delivery": "344aa53d0edbc340fc949498b571d4facb64431c; 12_OF_12_FILES_NONEMPTY_AND_BLOB_EXACT",
+  "native_ingestion": "NOT_OBSERVED",
+  "packet_completion_status": "IN_PROGRESS",
+  "full_fei_status": "OPEN"
+}
+

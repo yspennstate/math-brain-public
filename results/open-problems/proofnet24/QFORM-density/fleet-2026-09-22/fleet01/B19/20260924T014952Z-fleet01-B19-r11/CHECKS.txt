@@ -1,0 +1,22 @@
+QFORM B19 r11 deterministic/numerical regression notes
+
+Claim checked:
+  ||Delta + V^T T V||op >= (1-alpha)||T||op/4
+for real 2xm Parseval frames V (V V^T=I2), alpha=max column norm^2<1,
+real symmetric nonzero 2x2 T, arbitrary real diagonal Delta.
+
+Private in-run numerical regression:
+- 5000 random Parseval 2-frames / symmetric T / arbitrary diagonals: 0 violations.
+- Minimum observed ratio LHS / [(1-alpha)||T||op/4] was about 7.46.
+- Additional 5000 trials with arbitrary symmetric residual E scaled below half the deterministic margin: 0 violations of
+    ||Delta+V^T T V+E||op >= (1-alpha)||T||op/4 - ||E||op.
+- Minimum observed ratio to the residual lower bound was about 14.14.
+
+These are regression checks only. The report proof is exact trace/nuclear-norm algebra.
+
+Constant checks:
+3*400^(1/3)*32^(1/6) = 39.38518727672824
+39.38518727672824*2^10 = 40330.43177136972
+32*0.00039811307176481383 = 0.012739618296474043
+
+Terminal marker: QFORM_B19_PUNCTURED_COMMONPLANE_CHECK_PASS

@@ -1,0 +1,68 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w525",
+  "bundle_slug": "p0297-gaussian-soft-min-endpoint-counterexample-w525-002",
+  "entries": [
+    {
+      "key": "endpoint-counter",
+      "namespace": "probability.lqg",
+      "logical_name": "growing-gaussian-paths-endpoint-soft-min-bias-counterexample",
+      "kind": "lemma",
+      "title": "Growing Gaussian paths can change the integrated soft-min endpoint limit",
+      "statement": "Let n>=1, L_n=beta_n=n and M_n=2^(n^2). Take M_n distinct singleton paths, each with deterministic zero Gaussian field and positive weight exp(n), and one long path of M_n independent N(0,n) coordinates, each of weight 1/M_n. The covariance is PSD and its maximum diagonal is n. Put S_n(xi)=M_n^(-1) sum_i exp(xi X_i), H_n(xi)=min(n,log S_n(xi)), and F_n(xi)=-(1/n)log(exp[-n^2(1-log 2)]+exp[-n log S_n(xi)]). Then E[H_n(2)-H_n(0)]/n -> 1 whereas E[F_n(2)-F_n(0)]/n -> 1-log 2. Hard-min median exponents converge, beta_n->infinity and maximum variance is O(L_n), but normalized integrated soft-min response has the wrong endpoint limit when uniform smoothing error is omitted. This is a finite Gaussian counterexample, not planar LFPP.",
+      "proof_text": "At xi=0 the long-path cost is 1, so H_n(0)=0 and F_n(0)/n tends to zero. At xi=2, E S_n=exp(2n) and Var(S_n)/(E S_n)^2=(exp(4n)-1)/M_n, by independence and the Gaussian exponential moment formula. Chebyshev implies P(S_n(2)<exp(n)) <= (exp(4n)-1)/(M_n*(1-exp(-n))^2) -> 0. Jensen gives log S_n(2)>=2 Xbar with E|2 Xbar|=2 sqrt(2n/(pi M_n)). For 0<c<=1, 0<=c n-E min(c n,log S_n(2)) <= c n P(S_n(2)<exp(n))+2 sqrt(2n/(pi M_n)), so its normalized limit is c. Use c=1 for the hard minimum. The displayed soft minimum differs from min((1-log 2)n,log S_n(2)) by at most log 2/n; use c=1-log 2 to get its limit. The fixed-n Gaussian interpolation identity equals the soft endpoint difference exactly. Here log(M_n+1)/(beta_n L_n)->log 2, explicitly violating the sufficient entropy premise of the valid scale bridge. No network was materialized or sampled.",
+      "assumptions": [
+        "Integer n>=1; L_n=beta_n=n",
+        "M_n=2^(n^2) deterministic zero-field singleton paths of weight exp(n)",
+        "One long path with M_n independent centered N(0,n) coordinates of weight 1/M_n",
+        "Positive deterministic path weights; finite family; PSD Gaussian covariance",
+        "Endpoints xi=0 and xi=2",
+        "Generic finite Gaussian network only, not a planar LFPP discretization"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w526:C526.6",
+        "url": "~/brain_workers/w526/FINITE_BRIDGE_INDEPENDENT.md",
+        "revision": "author-proof-2026-10-10; independent referee w527 pending",
+        "license": "owner-own-work (adversary campaign proof; attribution to w526)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "unsafe-transfer",
+      "namespace": "probability.lqg",
+      "logical_name": "refuted-uncontrolled-growing-network-integrated-soft-min-transfer",
+      "kind": "concept",
+      "title": "Refuted route: exchange LFPP smoothing and mesh limits without uniform error",
+      "statement": "REFUTED proof route: for growing finite Gaussian path networks, beta_n->infinity and maximum variance O(L_n) by themselves suffice to replace normalized hard-min endpoint differences by normalized integrated soft-min Gaussian response, without a uniform entropy/error estimate. The explicit C526.6 example satisfies these two premises and has convergent hard-min median exponents, yet the two endpoint limits differ by log 2. The valid w525 scale lemma also requires log|P_n|/(beta_n L_n)->0 and is not refuted.",
+      "proof_text": null,
+      "assumptions": [
+        "Growing finite Gaussian path families",
+        "Only beta_n->infinity and variance O(L_n) assumed",
+        "Uniform smoothing control omitted"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w526:C526.6",
+        "url": "~/brain_workers/w526/FINITE_BRIDGE_INDEPENDENT.md",
+        "revision": "author-proof-2026-10-10; independent referee w527 pending",
+        "license": "owner-own-work (adversary campaign proof; attribution to w526)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "endpoint-counter",
+      "to_key": "unsafe-transfer",
+      "kind": "refutes",
+      "rationale": "The hard endpoint limit is 1 and the integrated soft response limit is 1-log 2, under the stated finite premises."
+    },
+    {
+      "from_key": "unsafe-transfer",
+      "to_existing_logical": "math:probability.core:attempt-p0297-exact-hausdorff-dimension-of-liouville-quantum-gravity",
+      "kind": "semantic_association",
+      "rationale": "A warning for attempts to compute the unresolved normalization exponent through a growing-network smoothing argument; not a claim of a planar counterexample."
+    }
+  ]
+}

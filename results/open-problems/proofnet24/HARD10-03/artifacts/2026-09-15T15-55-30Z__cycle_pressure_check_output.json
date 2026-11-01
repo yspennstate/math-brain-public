@@ -1,0 +1,48 @@
+{
+  "status": "numerical_sanity_check_only",
+  "analytic_report": "proofnet24/HARD10-03/runs/2026-09-15/2026-09-15T15-55-30Z__report.md",
+  "script": "proofnet24/HARD10-03/artifacts/2026-09-15T15-55-30Z__cycle_pressure_check.py",
+  "kappa_3_zeta_5_2_over_4pi_3_2": 0.03011422948715941,
+  "runs": [
+    {
+      "t": 4.0,
+      "radius": 1,
+      "vertices": 27,
+      "p_t_00": 0.0029507755829320413,
+      "tau": 0.07967094073916511,
+      "event_probability_from_determinant": 0.07847107453469682,
+      "sandwich_lower": 0.0765798436477576,
+      "sandwich_upper": 0.07967094073916511,
+      "min_eigenvalue": 6.726103597988538e-10,
+      "max_eigenvalue": 0.06204436999681269,
+      "normalized_q1_pressure": 0.024213663057881536
+    },
+    {
+      "t": 8.0,
+      "radius": 2,
+      "vertices": 125,
+      "p_t_00": 0.0010164128043154217,
+      "tau": 0.1270516005394277,
+      "event_probability_from_determinant": 0.12322101003615682,
+      "sandwich_lower": 0.1193117725629338,
+      "sandwich_upper": 0.1270516005394277,
+      "min_eigenvalue": 1.1883936339499113e-19,
+      "max_eigenvalue": 0.08967836412210681,
+      "normalized_q1_pressure": 0.02380410155872106
+    },
+    {
+      "t": 16.0,
+      "radius": 2,
+      "vertices": 125,
+      "p_t_00": 0.0003549579142551298,
+      "tau": 0.044369739281891224,
+      "event_probability_from_determinant": 0.044079592803693446,
+      "sandwich_lower": 0.04339980059283566,
+      "sandwich_upper": 0.044369739281891224,
+      "min_eigenvalue": -1.2926405558876253e-19,
+      "max_eigenvalue": 0.03703663446370654,
+      "normalized_q1_pressure": 0.02308128023937221
+    }
+  ],
+  "note": "The tiny negative eigenvalue in the last run is floating-point roundoff. These boxes are not in the R/sqrt(t)->infinity asymptotic regime, so the normalized pressures are not expected to be close to kappa_3 yet. The determinant sandwich holds in all three runs."
+}

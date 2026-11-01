@@ -1,0 +1,32 @@
+QFORM_B08_R51_TRANSVERSE_STAR_CHECK_PASS
+
+Analytic constants:
+rho_star = 0.0006247538095703261
+zeta = 0.25
+tau0 = sqrt(3/8) = 0.6123724356957945
+q0 = zeta*tau0/2 = 0.07654655446197431
+theta = q0/[4(1+q0)] = 0.017775950827372714
+m0 = sqrt(47/48) = 0.9895285072531598
+volume coefficient = tau0/[32(1+q0)^2] = 0.01651201311610402
+beta_min/L = zeta*rho_star = 0.00015618845239258152
+crossing constant = 6^(4/3) * [volume_coefficient * beta_min/L * m0^2]^(-1/3) = 800.6323698240689
+partner constant = 64/(theta*m0) = 3638.470209892449
+child window threshold / L = theta*m0/64 = 0.0002748407826127452
+localized row witness / L = theta*m0/512 = 3.435509782659315e-05
+
+Seeded coefficient-level regression (seed 510824):
+- random dimensions 80..149;
+- generated Haar-type orthonormal N x 2 child frames and retained only max row leverage <=1/16;
+- generated arbitrary unit u orthogonal to the frame, with no coordinate cap on u;
+- searched Bernoulli physical half-cuts and verified the analytic cut inequalities;
+- generated Lambda=diag(1.7,-1), star with beta/||b||=1/4, and tail E orthogonal to the top-two frame with ||E||op=0.9*theta;
+- formed the actual physical crossing, applied the proof's row contraction, and compared the three-singular-value product to formula (3.21).
+
+Admissible tests: 67
+maximum observed combined cut functional Z: 0.0012682535776317617 (<1/16)
+minimum observed restricted-frame lambda_min: 0.46662419469694116 (>1/4)
+minimum observed residual transverse distance squared: 0.4999137883231893 (>3/8)
+minimum observed (actual singular-product)/(analytic lower bound): 8.906148086186887
+violations: 0
+
+These numerical checks are regression evidence only. The proof in REPORT.md is analytic and does not rely on simulation.

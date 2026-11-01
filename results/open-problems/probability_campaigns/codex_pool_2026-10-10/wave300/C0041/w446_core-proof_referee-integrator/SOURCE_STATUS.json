@@ -1,0 +1,35 @@
+{
+  "candidate_id": "C0041",
+  "checked_at": "2026-10-10",
+  "exact_target": "For a nearest-neighbor walk on Z^d with d>=2 in an iid uniformly elliptic field of transition rows, does annealed almost-sure transience in a fixed direction ell imply ballisticity in that direction?",
+  "premise": "P_0(X_n dot ell -> +infinity)=1",
+  "conclusion": "P_0(liminf_n (X_n dot ell)/n > 0)=1; the 2026 claimed proof states the stronger deterministic vector limit X_n/n -> v with v dot ell>0",
+  "primary_historical_source": {
+    "citation": "David Campos and Alejandro F. Ramirez, Ellipticity criteria for ballistic behavior of random walks in random environment, Conjecture 1.1, Probability Theory and Related Fields 160 (2014)",
+    "url": "https://doi.org/10.1007/s00440-013-0527-7",
+    "quote": "Consider a random walk in a uniformly elliptic i.i.d. environment in dimension d>=2, which is transient in direction l. Then it is ballistic in direction l."
+  },
+  "intake_source": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:41",
+    "locator": "Drewitz and Ramirez, Selected Topics in Random Walk in Random Environment, Open question 2.20, p. 24",
+    "quote": "Let d >= 2 and the RWRE satisfy (UE) and (IID) and be transient in direction l. Is the walk necessarily ballistic in direction l?",
+    "historical_result": "attempted_unsolved; bounded search 2026-09-07 found no resolution",
+    "prior_gap": "Regeneration time finite almost surely does not establish integrability; prior C0041-A001 could not exclude a heavy tail."
+  },
+  "new_primary_claim": {
+    "citation": "OpenAI, Directional transience implies ballisticity, manuscript dated 2026-09-23, Theorem 1.1",
+    "url": "https://github.com/openai/math/blob/main/preprints/Directional-transience-implies-ballisticity-September-23-2026/paper.pdf",
+    "local_copy": "~/brain_workers/w446/source_directional_ballisticity_20260923.pdf",
+    "scope_note": "https://raw.githubusercontent.com/openai/math/main/lean/docs/220.md",
+    "claim": "Theorem 1.1 asserts deterministic positive directional velocity under the exact target assumptions.",
+    "key_unverified_step": "Manuscript estimate (5): for some epsilon in (0,1), P_env(a_N < N^(-epsilon)) decays faster than every power of N; Sections 3-8 purport to prove it."
+  },
+  "formal_check": {
+    "linked_file": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalBallisticity.lean",
+    "main_statement_lines": "80-84",
+    "theorem_lines": "86-87",
+    "finding": "The linked comparator theorem ends with sorry; it is a statement template and does not certify the manuscript. A separate completed Lean theorem and trusted-axiom receipt were not verified."
+  },
+  "current_openness": "UNKNOWN; full resolution claimed by new primary manuscript, mathematical proof not independently checked",
+  "novelty_claim": false
+}

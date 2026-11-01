@@ -1,0 +1,12 @@
+{
+ "helper_version":"A084-stopped-continuity-v1",
+ "family":"16 two-bit Boolean seeds padded to eight bits; flip physical point0; paired identical seed controls; separately radius-one ball edits of the same seeds",
+ "parameter_domain":"Analytic: all real delta in[0,1/16], all K in[0,Kmax] for arbitrary fixed finite Kmax. Exact check: Kmax=6, N=8, one-point delta=1/256. Radius-one family uses fixed N=8,12,16,24,32 analytic Fourier formulas, no automatic increase.",
+ "case_count":"pilot2 seed pairs; main16 seed pairs and every reachable disagreement-containing restriction; at most4096 live paired states; all stopping policies represented by exact Bellman envelope; boundary and independent Walsh controls",
+ "symmetry":"No seed symmetry quotient. Branches excluding the unique flipped point agree identically and contribute0, proved before pruning.",
+ "arithmetic":"integer Walsh/FWHT; rational influence; prime-log entropy expressions; directed exact rational logarithm intervals; rational square root upper brackets",
+ "memory_estimate_mb":60,
+ "pilot_max_seconds":55,
+ "maximum_runtime_seconds":180,
+ "purpose":"uniform-in-policy terminal payoff continuity; does not price arbitrary query-KL transactions or initial arbitrary-core source"
+}

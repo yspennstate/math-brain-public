@@ -1,0 +1,243 @@
+# P0336 — marked tangent degeneracy (final corrected artifact)
+
+Worker: `R7-05`  
+Canonical target: `P0336`  
+Source: del Barrio–González-Sanz–Loubes–Rodríguez-Vítores, *Distributional Limit Theory for Optimal Transport*, arXiv:2505.19104v2, Problem 4.  
+Status: **OPEN / PARTIAL**. Frozen metric: `SEL_ID = 0`.
+
+This file is the final corrected artifact for the run. It supersedes the earlier same-run draft `2026-09-19T085100Z__P0336_marked_tangent_degeneracy.md`, whose displayed optimizer had a notation typo (`nu_*` instead of `u_*`). No mathematical claim is changed.
+
+## 1. Setup
+
+Write source and target coordinates as
+\[
+X=(a,s),\qquad Y=(b,t),\qquad a\in[0,1],\quad b\in[2,3],\quad s,t\in[0,1].
+\]
+Every population-optimal plan is supported on `t=s`. An absolutely continuous horizontal disintegration has the form
+\[
+\pi_0^k(da\,ds\,db\,dt)=k(a,b,s)\,da\,db\,ds\,\delta_s(dt),
+\]
+where for almost every `s`, `k_s` is bistochastic:
+\[
+\int_2^3 k(a,b,s)\,db=1,
+\qquad
+\int_0^1 k(a,b,s)\,da=1.
+\]
+Therefore, level by level,
+\[
+\iint k(a,b,s)(b-a)\,da\,db
+=\int_2^3b\,db-\int_0^1a\,da=2.
+\tag{1}
+\]
+
+Consider smooth perturbations
+\[
+d\mu_\varepsilon=(1+\varepsilon f(a,s))\,da\,ds,
+\qquad
+d\nu_\varepsilon=(1+\varepsilon g(b,s))\,db\,ds,
+\]
+with equal total mass. Put
+\[
+F(s)=\int_0^1 f(a,s)\,da,
+\qquad
+G(s)=\int_2^3 g(b,s)\,db,
+\]
+and
+\[
+m(s)=\int_0^s(F(r)-G(r))\,dr.
+\tag{2}
+\]
+Thus `m(0)=m(1)=0`.
+
+A tangent transport perturbation has edge-density correction `q(a,b,s)` and vertical displacement
+\[
+t=s+\varepsilon u(a,b,s).
+\]
+The first-order marginal equations are
+\[
+\int_2^3q(a,b,s)\,db=f(a,s),
+\tag{3}
+\]
+\[
+\int_0^1q(a,b,s)\,da
+-\partial_s\left(\int_0^1k(a,b,s)u(a,b,s)\,da\right)
+=g(b,s).
+\tag{4}
+\]
+The second-order Euclidean excess above the horizontal baseline is
+\[
+\mathcal E_k(u)
+=\int_0^1\iint
+\frac{k(a,b,s)u(a,b,s)^2}{2(b-a)}\,da\,db\,ds.
+\tag{5}
+\]
+Indeed, since `1<=b-a<=3`,
+\[
+\sqrt{(b-a)^2+\varepsilon^2u^2}-(b-a)
+=\varepsilon^2\frac{u^2}{2(b-a)}+O(\varepsilon^4)
+\]
+uniformly for bounded `u`.
+
+## 2. B18: only the scalar vertical flux carries second-order energy
+
+Let
+\[
+M_u(s)=\iint k(a,b,s)u(a,b,s)\,da\,db.
+\]
+Integrating (4) over `b` and using (3) gives
+\[
+G(s)=F(s)-M_u'(s).
+\]
+Hence every tangent-feasible perturbation satisfies
+\[
+\boxed{M_u(s)=m(s).}
+\tag{6}
+\]
+Thus the full horizontal-mark fluctuations enter the energy-bearing part of the tangent problem only through the single scalar cumulative discrepancy `m`.
+
+## 3. B6: exact marked tangent minimum
+
+### Theorem
+
+For every bistochastic kernel `k`, every tangent-feasible pair `(q,u)` obeys
+\[
+\boxed{\mathcal E_k(u)\ge\frac14\int_0^1m(s)^2\,ds.}
+\tag{7}
+\]
+At every `s`, equality is attained by the common-slope field
+\[
+\boxed{u_\star(a,b,s)=\frac{m(s)}2(b-a).}
+\tag{8}
+\]
+Consequently the minimum second-order energy is independent of the horizontal coupling `k`, even if `k` varies with `s`.
+
+### Proof
+
+Fix `s` and put `D=b-a`. By (6),
+\[
+m(s)=\iint ku.
+\]
+Cauchy–Schwarz gives
+\[
+\begin{aligned}
+m(s)^2
+&=\left(\iint \sqrt{kD}\,\frac{\sqrt{k}u}{\sqrt D}\right)^2\\
+&\le\left(\iint kD\right)\left(\iint k\frac{u^2}{D}\right).
+\end{aligned}
+\]
+By (1), `\iint kD=2`; therefore
+\[
+m(s)^2\le4\iint k\frac{u^2}{2D}.
+\]
+Integrating over `s` proves (7).
+
+Equality in Cauchy–Schwarz requires `u/D` to be constant on the support of `k`. Write `u=lambda(s)D`. Then
+\[
+m=\iint ku=\lambda\iint kD=2\lambda,
+\]
+so `lambda=m/2`, which is exactly (8). Substitution yields energy `m(s)^2/4`. ∎
+
+## 4. B27: every interior kernel realizes the equality field for every smooth marked perturbation
+
+Assume now that `k` is `C^1` and bounded below by a positive constant `kappa`.
+
+Set `u=u_star` from (8) and define
+\[
+J_\star(b,s)=\int_0^1k(a,b,s)u_\star(a,b,s)\,da.
+\tag{9}
+\]
+Because `\int_bJ_star=\iint ku_star=m`, define
+\[
+C(b,s)=g(b,s)+\partial_sJ_\star(b,s).
+\tag{10}
+\]
+Then
+\[
+\int_2^3C(b,s)\,db=G(s)+m'(s)=F(s).
+\tag{11}
+\]
+Now set
+\[
+\boxed{q_\star(a,b,s)=f(a,s)+C(b,s)-F(s).}
+\tag{12}
+\]
+The row marginal is
+\[
+\int_2^3q_\star\,db=f+\int C-F=f,
+\]
+and the column marginal is
+\[
+\int_0^1q_\star\,da=C.
+\]
+Therefore
+\[
+\int_0^1q_\star\,da-\partial_sJ_\star=g,
+\]
+so (3)-(4) hold exactly.
+
+Since `q_star` is bounded, `k+epsilon q_star>=0` for all sufficiently small `|epsilon|`. Thus this is the tangent of an actual nonnegative nearby edge-density family, and the target pushforward agrees with `nu_epsilon` through first order.
+
+Hence the quantifiers can be put in the strong order
+\[
+\boxed{
+\text{for every strictly positive bistochastic }k
+\text{ and every smooth marked perturbation }(f,g),
+\text{ the same minimum }\frac14\int m^2\text{ is attainable.}
+}
+\tag{13}
+\]
+This is pathwise; averaging over the empirical Gaussian field cannot create a first-tangent selector that is absent before averaging.
+
+## 5. Consequence: the previous prospective selector is eliminated
+
+The prior run left open the possibility that full two-dimensional marked compatibility might select a particular horizontal coupling even though the scalar vertical cell problem was degenerate. Equations (6)-(13) eliminate that possibility at the complete smooth tangent level.
+
+In particular, product coupling `k=1` is not selected over any other strictly positive bistochastic kernel by:
+
+- the vertical empirical bridge;
+- the horizontal-mark first-order fluctuations;
+- their full first-order compatibility equations; or
+- expectation/self-averaging of that tangent problem.
+
+The selection mechanism, if deterministic, must occur below this level: discrete permutation/integrality effects, a higher asymptotic correction, or a boundary/singular-kernel tangent-cone effect.
+
+## 6. A sharp predicted excess-cost law (not yet a P0336 theorem)
+
+For empirical samples, the scalar cumulative discrepancy `m` should converge after `sqrt(n)` scaling to `B_X-B_Y`, the difference of two independent Brownian bridges. If a discrete Gamma-limit/recovery theorem upgrades the smooth tangent calculation, then the natural prediction is
+\[
+ n\left[
+ \frac1n\sum_i\|X_i-Y_{\sigma_n(i)}\|
+ -\left(\bar B_n-\bar A_n\right)
+ \right]
+\Longrightarrow
+\frac14\int_0^1(B_X-B_Y)^2\,ds.
+\tag{14}
+\]
+Since `B_X-B_Y` has the law of `sqrt(2)B`, this equals in law
+\[
+\frac12\int_0^1B(s)^2\,ds
+=\frac12\sum_{r\ge1}\frac{Z_r^2}{\pi^2r^2},
+\tag{15}
+\]
+whose mean is
+\[
+\frac1{12}.
+\tag{16}
+\]
+Equations (14)-(16) are explicitly **predictions**, not source-level results claimed here.
+
+## 7. Remaining gap and next attacks
+
+`SEL_ID` remains `0`: the weak limit of the empirical optimal plan is still unidentified.
+
+The clean residual question is now sub-tangent:
+
+> after the universal order-`epsilon^2` marked energy is removed, what is the first scale at which two different bistochastic horizontal kernels have different achievable empirical matching cost?
+
+Next nonrepeating methods:
+
+- **B8 (discretize):** two- and three-horizontal-bin models, including tangent cones of singular kernels;
+- **B16 (small exact cases):** exact finite-bin assignment calculations to locate the first kernel-dependent correction;
+- **B24 (extremal object):** once that correction is identified, compare product, monotone/translation and anti-monotone kernels as candidate selectors.
+
+The current source, arXiv:2505.19104v2 dated 13 July 2026, still poses Problem 4. A bounded 2026-09-19 follow-up search found no source-matching later resolution; that remains negative evidence only.

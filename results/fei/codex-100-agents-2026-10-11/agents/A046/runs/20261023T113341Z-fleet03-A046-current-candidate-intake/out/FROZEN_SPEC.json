@@ -1,0 +1,28 @@
+{
+  "helper_version": "rare-gate-whole-block-v1",
+  "family": "g=chi_z times width-r point times width-(k+1) point, queried gate i; whole-essential-block spike (not factor tensor); both activation signs",
+  "pilot_domain": [
+    [
+      2,
+      1
+    ]
+  ],
+  "main_domain": [
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      2
+    ]
+  ],
+  "case_count": "pilot2 selector cases; main4 selectors,8 actual children; grouped theorem all k>=1",
+  "symmetry": "none; both signs explicitly checked",
+  "arithmetic": "integer FWHT and direct pivots; Fraction transport,32-term atanh log bounds with explicit tail",
+  "memory_estimate_MB": 100,
+  "maximum_runtime_seconds": 55,
+  "automatic_dimension_increase": false,
+  "reset_rule": "fresh samealpha1/7 whole ESSENTIAL core block; recompute essential full mask after query; constants/characters exact",
+  "purpose": "test actual inherited reset bill versus explicit formula and positive constant; no floating-point sign"
+}

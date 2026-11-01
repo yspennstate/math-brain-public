@@ -1,0 +1,7 @@
+python REVIEW_CHECK.py
+python -m json.tool CLAIMS.json
+python -m json.tool PROGRESS.json
+python -m json.tool PACKET_DELTA.json
+python -m json.tool DELIVERY.json
+sha256sum -c MANIFEST.sha256
+

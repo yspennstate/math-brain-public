@@ -1,0 +1,130 @@
+[
+  {
+    "claim_id": "A016-TWO-WEAK-SEPARATORS-OWNED-PAYMENT",
+    "version": 1,
+    "exact_statement": "For all a>=1, even m>=4, and arbitrary two-bit activation masks A_j, the actual Boolean product of disjoint paired-quadratic private m-bit cores point-edited by A_j on two shared bits has delta=2^-m, J=am/2+2m delta sum E A_j, I=J+d and d<=4delta sum E A_j. Its prescribed two-shared-query stopping tree has exact raw derivative bill T=T_private+2E_zw, exclusive private allocations T_private=2sum u_j with u_j<=J_j, and 2E_zw<=d, hence exact-K4-localized bill<=T<=2I. With every terminal uniform-mask cost am retained, am+T+(3/ln2)d<=4I. The explicit fixed reference Q(L,R)=2^-am times the actual shared spectral conditional derived from the four closed terminal spectra is normalized and has complete CE=am+B_block<=am+2<=3I; the same owned ledger also pays this reference. For a=2, A1=AND and A2=OR, the root is ANF-connected, both shared influences are delta, I=m+(2m+2)delta, T=(4m+1)delta(1+delta), root B/Inf>=(1-delta)^2(m-1)/2 and both descendants B/Inf>=m-1. All three nodes are K4-bad for every even m>=12, although T/I tends to0 and CE/I tends to2. No universal arbitrary-core or unbounded-separator-width policy is claimed.",
+    "hypotheses": [
+      "uniform independent physical bits; Boolean signs; entropy/CE in bits",
+      "a>=1; even m>=4; two shared coordinates; disjoint private m-bit blocks",
+      "private cores are the specified paired quadratic signs with value+1 at origin",
+      "arbitrary two-bit activation masks, including constants and unequal nonlinear masks",
+      "actual prescribed z-then-w stopping tree; complete private terminal costs retained",
+      "Dirichlet energy for signed real derivatives; exact B threshold4",
+      "rate4 ledger uses reviewed B04-NODE-BOUNDARY@1; other statements self-contained"
+    ],
+    "statement_sha256": "456dc42a0b7488348330e173466177b564bb5e50fc0f6bb46f115ee93fa28aaa",
+    "contributors": [
+      "A016/fleet05"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T011255Z-fleet05-A016-addressing-benchmark\\REPORT.md",
+      "locators": [
+        "complete derivation sections1-7"
+      ],
+      "code": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T011255Z-fleet05-A016-addressing-benchmark\\code\\check.py",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T011255Z-fleet05-A016-addressing-benchmark\\code\\formula.py"
+      ],
+      "exact_certificates": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T011255Z-fleet05-A016-addressing-benchmark\\out\\CHECK.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T011255Z-fleet05-A016-addressing-benchmark\\out\\FORMULA_CHECK.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "B04-NODE-BOUNDARY",
+        "version": 1,
+        "scope": "terminal-inclusive rate4 ledger only",
+        "acceptance": "A018 stage2 independent reconstruction, consumed previously"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A018/fleet05",
+        "reviewed_at": "2026-10-14T02:41:54.168298+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "claim": "A016-TWO-WEAK-SEPARATORS-OWNED-PAYMENT@1",
+        "statement_sha256": "456dc42a0b7488348330e173466177b564bb5e50fc0f6bb46f115ee93fa28aaa",
+        "source_path": "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T011255Z-fleet05-A016-addressing-benchmark\\CLAIMS.json",
+        "source_sha256": "2deb58dd953e26b48b56ae0968a0189d72cf4981d52fc7c01e5573bdef573648",
+        "reconstruction": "REPORT.md Section5 all-parameter reconstruction and own truth/physical-edge/recursive-Walsh accounts and normalized reference on eighteen fixtures. No A016 helper imported.",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A018\\runs\\20261014T022025Z-fleet05-A018-shared-data-collision-law\\REPORT.md",
+        "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A018\\runs\\20261014T022025Z-fleet05-A018-shared-data-collision-law\\out\\TWO_PIVOT_REVIEW.json",
+        "substantive_repair": false,
+        "universal_status": "Arbitrary-core replacement and width-independent policy remain OPEN"
+      }
+    ],
+    "status": "INDEPENDENT_A018_HOLDS_AT_STATED_SCOPE; SUPERVISOR_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Necessary heuristic: a paid shared-first stopping prefix requires a shared first pivot with constant positive influence or B<=4Inf. Unequal AND/OR gives weak bad pivots with a paid prefix."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B04-lead",
+      "A018",
+      "A019",
+      "A020",
+      "A028",
+      "A064",
+      "A090",
+      "A091",
+      "A095",
+      "A097",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A018-SHARED-POINT-COLLISION-EXCESS",
+    "version": 1,
+    "exact_statement": "Let f_j(z,y_j) be -1 exactly when z=0 and y_j=0, and +1 otherwise, on independent uniform bits with one common physical z and mutually disjoint private blocks. F=f_1 f_2. For n_1=n_2=5, F is eleven-dimensional and G=H(F)-H(f_1)-H(f_2)>0; in natural units 131072 G_nat=491071 ln31-231361 ln481-27900 ln15-262144 ln2, certified by 31^491071>481^231361*15^27900*2^262144. For equal private dimensions m>=4, delta=2^-m, I(F)=2(m+1)delta-2delta^2 and L=sum_j I(f_j)-I(F)=2delta^2. The exact spectrum yields G_nat=delta^2[(4m-24)ln2+6]+R with |R|<=delta^3[(16m+48)ln2+1000]. Thus G>0 for every m>=12 and G/L=2m+3/ln2-12+O(m2^-m) tends to infinity: neither Boolean shared-bit entropy subadditivity nor a universal entropy-excess price G<=K L holds. Nevertheless the fixed normalized compatible reference Q_*(A,T_1,T_2)=nu_*(A|T_1,T_2)R_1(T_1)R_2(T_2), with actual module data marginals and actual parent conditional, has CE_*=H(F)+TC and TC<=8delta^2. For every m>=12, CE_*<=4I(F); this is paid by the two module slacks 4I(f_j)-H(f_j), each used once, including both terminal costs, physical loss and TC. Full FEI is not refuted.",
+    "hypotheses": [
+      "all physical bits independent fair bits; Boolean signs",
+      "modules share exactly the one physical bit z; private blocks disjoint",
+      "entropies, CE, TC and influence-price ratios in bits; G_nat=ln2 times G",
+      "specified point-defect modules; equal m for asymptotic and reference bounds",
+      "fixed references are given by the explicit spectra, not assumed supplied for arbitrary Boolean terminals"
+    ],
+    "statement_sha256": "9d256f537d12ce521b5cd48fe4d53324c735579863a896e9aa62eaefe023b581",
+    "contributors": [
+      "A018/fleet05"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A018\\runs\\20261014T022025Z-fleet05-A018-shared-data-collision-law\\REPORT.md",
+      "locators": [
+        "Sections1-4"
+      ],
+      "code": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A018\\runs\\20261014T022025Z-fleet05-A018-shared-data-collision-law\\code\\check_boolean.py",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A018\\runs\\20261014T022025Z-fleet05-A018-shared-data-collision-law\\code\\verify_integer_witness.py",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A018\\runs\\20261014T022025Z-fleet05-A018-shared-data-collision-law\\code\\check_formula.py"
+      ],
+      "certificates": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A018\\runs\\20261014T022025Z-fleet05-A018-shared-data-collision-law\\out\\INTEGER_WITNESS.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A018\\runs\\20261014T022025Z-fleet05-A018-shared-data-collision-law\\out\\BOOLEAN_CHECK.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A018\\runs\\20261014T022025Z-fleet05-A018-shared-data-collision-law\\out\\FORMULA_CHECK.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPED_BOOLEAN_OBSTRUCTION_AND_PAID_CONTROL_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "For all Boolean modules sharing exactly one bit with private blocks otherwise disjoint, H(product)<=sum module H (unproved optional target, A018 stage3 REPORT Section5).",
+      "There exists dimension-free K such that positive shared-bit product entropy excess is <=K times the lost shared physical influence for all such Boolean modules."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B04 lead",
+      "A016",
+      "A019",
+      "A020",
+      "A086",
+      "A090",
+      "A091",
+      "A095",
+      "A097",
+      "B20"
+    ]
+  }
+]

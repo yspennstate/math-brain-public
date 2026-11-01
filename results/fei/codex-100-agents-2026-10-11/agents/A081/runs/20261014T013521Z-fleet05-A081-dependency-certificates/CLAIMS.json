@@ -1,0 +1,302 @@
+[
+  {
+    "claim_id": "A090-DEGREE-COARSENED-REFUND-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer w>=4, set m=2^w,p=1/m,beta=1-p,n=mw and let f_w=1-2 product_(b=1..m)(1-A_w(x_b)) be the actual Boolean OR sign of disjoint width-w point conjunctions. For each coordinate i define epsilon_i=Inf_i, mu_i(T)=fhat(T+i)^2/epsilon_i, r_i(T)=fhat(T)^2+fhat(T+i)^2, and let bar_mu_i,bar_r_i be their pushforwards under T->|T|. Every epsilon_i=epsilon=2p beta^(m-1), I=2w beta^(m-1), and 0<=D2(bar_mu_i||bar_r_i)<=3+log2(w+1/2). Defining M=sum_i epsilon_i[log2(1/epsilon_i)-D2(mu_i||r_i)] and M_degree=sum_i epsilon_i[log2(1/epsilon_i)-D2(bar_mu_i||bar_r_i)], one has M_degree/I>=w-4-log2(w+1/2), hence M_degree/I>=w/2 for w>=32, while 0<=M<=B<=H<=6I for all w>=4. The exact discarded conditional refund is M_degree-M=sum_i epsilon_i sum_t bar_mu_i(t) D2(mu_i(.|t)||r_i(.|t)), and divided by I it is at least w/2-6 for w>=32. Thus no absolute K makes M_degree<=K I for all actual Boolean signs; no FEI disproof or obstruction to full function-specific row references is asserted.",
+    "hypotheses": [
+      "Finite uniform physical cube, actual Boolean OR sign of independent point conjunctions",
+      "w>=4 integer; m=2^w; disjoint width-w blocks; all coordinates relevant",
+      "Normalized Fourier probabilities; entropy and KL in bits; ordinary physical influence",
+      "Coarsening is residual Fourier degree, not physical restriction or full-subset exchangeability",
+      "Complete normalized derivative and reference row laws; zero terms by continuity"
+    ],
+    "statement_sha256": "77477f4e2ad5394997a282fdb2b72d2db7769435417f5cd37ad072d7108c1ba0",
+    "contributors": [
+      "A090"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A090\\runs\\20261014T010003Z-fleet05-A090-independent-reconstruction\\REPORT.md",
+      "locators": [
+        "equations (1)-(19)",
+        "DEGREE_REFUND_PROOF.tex"
+      ],
+      "checker": "code/check_degree.py",
+      "certificates": [
+        "out/PILOT.json",
+        "out/CHECK.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A094",
+        "verdict": "PENDING"
+      },
+      {
+        "reviewer": "A085",
+        "verdict": "PENDING_ALTERNATE"
+      },
+      {
+        "reviewer": "A081",
+        "timestamp": "2026-10-14T01:46:54.420486+00:00",
+        "verdict": "ACCEPT_AT_FULL_ORIGINAL_STATED_SCOPE",
+        "method": "Independent occupancy-count/head-tail proof and exact rational polynomial, direct-character and partition checks",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261014T013521Z-fleet05-A081-dependency-certificates\\REVIEW.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261014T013521Z-fleet05-A081-dependency-certificates\\out\\EXACT_CONTRACT_AUDIT.json",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A081",
+    "supersedes": [],
+    "refutes": [
+      "There exists one finite absolute K such that the actual normalized derivative/reference refund coarsened to residual Fourier degree satisfies M_degree(f)<=K I(f) for every finite uniform-cube Boolean sign. This is a tested downstream shortcut, not an assertion attributed to A096 or A099."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A001",
+      "A073",
+      "A099",
+      "A064",
+      "A094",
+      "A085",
+      "B18",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-TERMINAL-KL-REFUND-AUDIT",
+    "version": 1,
+    "exact_statement": "For every finite Boolean seed f, every m,k>=1 and ell>=2 on disjoint uniform blocks, let h=chi_Z product_b f_b, J=mI(f)+ell, F=1+A_k(h-1), q=2^-k, d=(1-q)^2+q^2. For each relevant coordinate use mu_i(T)=p_(T+i)/Inf_i and r_i(T)=p_T+p_(T+i); both normalize to one. Let M=sum_i Inf_i[log2(1/Inf_i)-D(mu_i||r_i)] and D_f be the KL divergence of the normalized joint derivative/reference laws, with I(f)D_f=0 for constants. Original core-coordinate divergences obey D_i(F)=D_i(h)+k, D_i(h)=D_i(f) on seed blocks and D_i(h)=0 on parity bits. Every control divergence is D_c=(1-q)(k-1)+q log2(q/d). Consequently I(F)=q(J+k), I(F)D_F=q[mI(f)D_f+kJ+kD_c], M(F)=qmM(f)+k[q(1-q)+q^2 log2(d/q^2)], and M_ge2(F)=qmM(f)+kq(1-kq). For every fixed ell>=2 and finite nonnegative s(N)=o(N), the supremum of M_geell/I over 0<I<=2^-s(N) equals the unrestricted supremum K_M in the extended reals. No finiteness of K_M, universal refund payment or full FEI conclusion is asserted.",
+    "hypotheses": [
+      "Actual Boolean signs, normalized Fourier spectrum and ordinary physical influence",
+      "Uniform finite disjoint blocks; m,k>=1 and ell>=2; entropy/KL in bits",
+      "Zero terms by continuity; irrelevant coordinates omitted; constants treated by I D=0 convention",
+      "Sublinear cutoff finite nonnegative, not required monotone"
+    ],
+    "statement_sha256": "cb4a8a64144952a20f8810bc491b7a4202ec07d7381b7f8e361484fd3dfcbfce",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261013T220343Z-fleet05-A096-live-gap-ledger\\DERIVATION.md",
+      "locator": "Equations (2)-(6) and low-influence refund completeness"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A073",
+        "timestamp": "2026-10-13T23:51:48.476724+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent complete probability-channel/likelihood-ratio reconstruction and cutoff proof; direct normalized joint Q construction, truth-table Walsh and physical edge verification, prime-log cancellation; support-conditioning mutation",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261013T234148Z-fleet05-A073-certified-logarithms\\REFUND_REVIEW.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261013T234148Z-fleet05-A073-certified-logarithms\\out\\REFUND_SUMMARY.json",
+        "scope": "All stated finite transport formulas and sublinear-cutoff equality in extended reals; no finite K_M or universal payment",
+        "reviewer_contributed_repair": false
+      },
+      {
+        "reviewer": "A001/fleet05",
+        "verdict": "ACCEPT_AT_FULL_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "scope": "Every finite Boolean seed including constants; finite tensor/parity/point activation, complete row and joint KL, all listed finite formulas, every fixed ell>=2 and finite nonnegative sublinear cutoff including nonmonotone cutoffs. No universal payment theorem accepted.",
+        "method": "Independent complete-row likelihood-ratio and KL chain reconstruction; separately implemented direct physical flips/integer Walsh and exact prime-log identity checker; explicit cutoff-tail quantifier proof",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261014T011101Z-fleet05-A001-quantifier-audit\\REPORT.md",
+        "locator": "complete derivation section 1",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261014T011101Z-fleet05-A001-quantifier-audit\\out\\REVIEW.json",
+        "source_statement_sha256": "cb4a8a64144952a20f8810bc491b7a4202ec07d7381b7f8e361484fd3dfcbfce",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_FULL_STATED_SCOPE_BY_A073_AND_A001_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Activation rarity cancellation alone supplies a universal terminal-core retained-KL payment"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A001",
+      "A073",
+      "A090",
+      "A098",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A097-ONE-SHARED-DATA-COLLISION-TRANSFER",
+    "version": 1,
+    "exact_statement": "For all Boolean G(s,X),H(s,Y) with one shared fair physical bit s, disjoint private uniform blocks X,Y and a fresh fair selector z, and normalized complete finite-cost references R_G,R_H, calibrate each reference separately on the two atoms empty and {s} to the true Fourier probabilities and rescale its complement. Costs c_G^c,c_H^c do not increase; the exact decrease is the categorical KL of those two atoms and the complement. The normalized compatible reference Q=rK, r=(R_G^c+R_H^c)/2 and K the actual conditional selector spectrum with a fixed normalized kernel on zero true fibers, has zero posterior mismatch kappa and D(P_F||Q)=[D(P_G||R_G^c)+D(P_H||R_H^c)]/2. Its complete cost is CE_F=(c_G^c+c_H^c)/2+Delta<=(c_G^c+c_H^c)/2+(2+4/ln2)Inf_z(F), where F=(G+H)/2+z(G-H)/2, Delta=B_z+J_z and I(F)=[I(G)+I(H)]/2+Inf_z(F), including s only through its actual averaged influence. Thus supplied child bounds transfer with constant max(K_G,K_H,2+4/ln2). For a t-bit shared block the same constant holds if both conditional-mean Fourier vectors have l1 norm <=1; without that hypothesis a proved coefficient is 2+(2*2^(t/2)+2)/ln2. No absolute selector-only coefficient holds for unrestricted sharing: selecting the even-k quadratic bent sign and its actual singleton flip has Inf_z=2^-k and Delta/Inf_z>=k-log2(16/9) for every even k>=4. This is a scoped reference transfer and an actual Boolean obstruction to its unrestricted selector-only extension, not a disproof of FEI.",
+    "hypotheses": [
+      "Boolean signs on finite uniform physical cubes; one shared bit, private blocks disjoint, selector fresh; private blocks may be empty",
+      "Normalized complete references fixed before the spectral sample, positive on true supports and with finite cross entropy",
+      "Both collision atoms calibrated separately; all complement normalizers and complete calibrated seed costs retained",
+      "All information units bits, ordinary total physical influence; ideal costs with separate integer-word rounding",
+      "Larger shared-block extension uses the expressly stated l1 admission or the dimension-dependent coefficient; no repeated allocation of selector or shared data influence"
+    ],
+    "statement_sha256": "a0b36345e9b8eb02731703c849109a548a1738428547c88e303ece41c8419b3b",
+    "contributors": [
+      "A097"
+    ],
+    "proof_source": {
+      "run_id": "20261013T222610Z-fleet05-A097-cross-route-transfer",
+      "files": [
+        "REPORT.md",
+        "DERIVATION.md",
+        "BOUNDARY.md",
+        "TRANSFER_HYPOTHESIS_CHECK.json",
+        "code/check.py",
+        "code/check_boundary.py",
+        "out/EXACT_RESULTS.json",
+        "out/BOUNDARY_RESULTS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A097-COMPATIBLE-LEAF-REFERENCE-TRANSFER",
+        "version": 1,
+        "statement_sha256": "408ea90dea600f4f8f1b9ffa66c29e34cc87a87a518ec3f87273d2905bef9246",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A097\\runs\\20261011T221240Z-fleet05-A097-cross-route-transfer\\CLAIMS.json",
+        "status": "Prior theorem; one-node KL identity reconstructed directly here"
+      },
+      {
+        "claim_id": "A086-DISJOINT-SELECTOR-PRESCRIBED-REFERENCE",
+        "version": 1,
+        "statement_sha256": "4ca5e14de151b95b20b31bb43aa71189213ec529966dd1342424bb5961b7e8b3",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261013T220217Z-fleet05-A086-joint-code-referee\\CLAIMS.json",
+        "status": "Author-proved pending review; collision packet and scalar JS lemmas independently reconstructed here, no full claim acceptance assumed"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A094/fleet05/B19",
+        "at": "2026-10-14T00:39:56.030043+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "scope": "Entire exact statement: one-bit transfer, categorical calibration, retained full seed KL, l1-admitted larger block and dimension-dependent fallback, actual Boolean bent/flip boundary. No universal seed/reference cost inferred.",
+        "method": "Independent complete signed-coefficient/KL/physical-edge reconstruction and separate exact implementation; no author checker imported",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T001244Z-fleet05-A094-proof-chain-challenger\\AUDIT.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A094\\runs\\20261014T001244Z-fleet05-A094-proof-chain-challenger\\out\\EXACT_RESULTS.json",
+        "source_claims_path": "~\\brain_workers\\FEI100_20261011\\agents\\A097\\runs\\20261013T222610Z-fleet05-A097-cross-route-transfer\\CLAIMS.json",
+        "source_claims_sha256": "a7e602279e1f3fff6e0c2efa76287a9a749692f53af18a4c9e5d500c34d3dd1f",
+        "substantive_repair_supplied": false,
+        "contributor_conflict": false,
+        "declared_statement_sha256": "a0b36345e9b8eb02731703c849109a548a1738428547c88e303ece41c8419b3b",
+        "plain_statement_sha256": "a0b36345e9b8eb02731703c849109a548a1738428547c88e303ece41c8419b3b",
+        "canonical_statement_hypotheses_sha256": "3bfe75e51c66a9c77b76ea9b31690b1724e93d91959a83df8672600ec1316435",
+        "known_hash_form_match": true
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE_LOCALLY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A086",
+      "A094",
+      "A011",
+      "A012",
+      "A095",
+      "A039",
+      "A064",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A081-COARSENING-REFUND-CONTRACT",
+    "version": 1,
+    "exact_statement": "For every actual finite uniform Boolean f and deterministic finite partition C_i of each complete residual subset space, D(mu_i||r_i)=D(C_i mu_i||C_i r_i)+W_i, W_i=sum_c mu_i(c)D(mu_i(.|c)||r_i(.|c))>=0, and L^C-L=sum_i e_i W_i exactly. Reference-only cells retain their mass. For a disjoint tensor f(x)g(y), each f-coordinate has mu_i^fg=mu_i^f tensor p_g and r_i^fg=r_i^f tensor p_g. Retaining the full core residual subset with any deterministic spectator partition preserves full row KL and gives W_i=0; retaining separate core/spectator degrees preserves only the core degree KL. These identities do not pay the arbitrary core L or terminal CE.",
+    "hypotheses": [
+      "Complete normalized mu_i,r_i; relevant coordinates; bits",
+      "Partition fixed for the function before a spectral draw",
+      "Physical tensor blocks disjoint; i belongs to f",
+      "Zero-true/reference-only cells are not deleted or renormalized"
+    ],
+    "statement_sha256": "7b796f8479807b4d070e4a731c8ebed27c244f64f250e809cb347cc17d41e6c0",
+    "contributors": [
+      "A081; partition KL chain credited to the existing A090/A001 mechanism"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261014T013521Z-fleet05-A081-dependency-certificates\\REVIEW.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261014T013521Z-fleet05-A081-dependency-certificates\\out\\EXACT_CONTRACT_AUDIT.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_key": "A081-COMPLETE-ROW-KL-INTERFACE@1",
+        "statement_sha256": "dbf4bff3820b49694bae568a6607b49e5a8d555da91ea3b17c12b96efb17660f",
+        "hypothesis_instantiation": "Same complete row laws and influence; no paid endpoint inferred",
+        "unit_conversion": null
+      }
+    ],
+    "review_records": [],
+    "status": "EXACTLY_CERTIFIED_SCOPED_ADAPTER_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A001",
+      "A073",
+      "A099",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A081-VERSIONED-DEPENDENCY-CERTIFICATE",
+    "version": 4,
+    "exact_statement": "A081 stage-4 dependency certificate has 61 exact nodes, 98 source byte pins and an acyclic graph. It independently accepts A090 degree-coarsening obstruction v1, consumes full scoped A096 refund and A097 shared-bit reviews, retains the complete conditional refund under arbitrary declared partitions, and preserves unpaid terminal-core and shared-collision leaves. It passes 8225 exact assertions and eight mutation fixtures. All 10 FEI routes remain conditional; no universal constant is obtained.",
+    "hypotheses": [
+      "Exact pinned source versions and graph hashes",
+      "Finite implementation checks do not replace all-dimensional proofs",
+      "Integrated certificate acceptance remains pending"
+    ],
+    "statement_sha256": "b15569f88fc3604c159cd96897b2630a70917bb32341d6b9379d51d48e44d0ce",
+    "contributors": [
+      "A081"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261014T013521Z-fleet05-A081-dependency-certificates\\PROOF_DEPENDENCIES.json",
+      "files": [
+        "REVIEW.md",
+        "out/GRAPH_VALIDATION.json",
+        "out/MUTATION_AUDIT.json",
+        "out/REFUTATION_DELTA.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A090-DEGREE-COARSENED-REFUND-OBSTRUCTION",
+        "version": 1,
+        "statement_sha256": "77477f4e2ad5394997a282fdb2b72d2db7769435417f5cd37ad072d7108c1ba0"
+      },
+      {
+        "claim_id": "A096-TERMINAL-KL-REFUND-AUDIT",
+        "version": 1,
+        "statement_sha256": "cb4a8a64144952a20f8810bc491b7a4202ec07d7381b7f8e361484fd3dfcbfce"
+      },
+      {
+        "claim_id": "A097-ONE-SHARED-DATA-COLLISION-TRANSFER",
+        "version": 1,
+        "statement_sha256": "a0b36345e9b8eb02731703c849109a548a1738428547c88e303ece41c8419b3b"
+      },
+      {
+        "claim_id": "A081-COARSENING-REFUND-CONTRACT",
+        "version": 1,
+        "statement_sha256": "7b796f8479807b4d070e4a731c8ebed27c244f64f250e809cb347cc17d41e6c0"
+      }
+    ],
+    "review_records": [],
+    "status": "EXACTLY_VALIDATED_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A081-VERSIONED-DEPENDENCY-CERTIFICATE",
+        "version": 3
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A094",
+      "A085",
+      "B20"
+    ]
+  }
+]

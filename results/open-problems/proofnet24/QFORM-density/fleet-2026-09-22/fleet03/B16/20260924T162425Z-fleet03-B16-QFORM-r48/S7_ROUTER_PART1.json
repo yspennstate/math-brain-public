@@ -1,0 +1,13 @@
+{
+  "theorem": "QFORM-S7-OVERLAP-ROUTER-B16-CHECK-v1",
+  "assumptions": [
+    "cap one",
+    "s7(A)>=1",
+    "no eta pivot"
+  ],
+  "eta": "1/100",
+  "kappa": "4/81",
+  "step_V1": "If V1<kappa then ||A||<1/100+2/9<1, contradiction.",
+  "step_V2": "If V2<kappa V1, order-one completion has ||E||<4/9, rank R<=3, rank R_LL<=1. Then s4(D)>5/9. Two complement defects give |R_ii|>491/900 while |R_ij|<491/900, so strict diagonal dominance contradicts rank R_LL<=1.",
+  "conclusion": "V2>=kappa^2"
+}

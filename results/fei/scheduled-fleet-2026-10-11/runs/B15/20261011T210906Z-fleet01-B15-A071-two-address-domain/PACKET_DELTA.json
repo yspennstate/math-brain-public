@@ -1,0 +1,60 @@
+{
+  "schema": "fei-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T210906Z-fleet01-B15-A071-two-address-domain",
+  "stream": "B15",
+  "packet_id": "A071",
+  "packet_ids": ["A071"],
+  "gap_id": "G-BOOLEANITY",
+  "attempt_id": "A071-attempt-01-C022-edge-partition",
+  "method": "Exact exhaustive Walsh search over a symmetry-reduced actual-Boolean two-address edge-partition family",
+  "previous_status": "C022 open; constant 2 refuted by H/I=40/17; no optimality statement in the immediate edge-partition neighborhood",
+  "mathematical_delta": "Exhausted 1,015,808 representatives; all 3,584 product-residual candidates satisfy H/I<=40/17, with exactly two metric signatures and no ambiguous comparison",
+  "deliverable_status": {
+    "A071-D1": "COMPLETE_PENDING_REVIEW",
+    "A071-D2": "COMPLETE_PENDING_REVIEW",
+    "required_run_artifacts": "SAVED_AND_BYTE_EXACT_READBACK_VERIFIED"
+  },
+  "mathematical_status": "FINITE_DOMAIN_EXHAUSTED_PENDING_INDEPENDENT_REVIEW; C022_OPEN; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "C016 PROVED_BASELINE at supplement CLAIMS.md blob d7279735b4dcfaf7552cf271b7413fc5c0f427b6",
+    "C022 OPEN_TARGET at the same blob",
+    "two-address witness source ONE_BIT_ENDPOINT.md blob 0848515367f7fc3493f51820de999a30234905a4"
+  ],
+  "claims_created_or_changed": ["B15-A071-C022-EDGE-DOMAIN-MAX-v1"],
+  "source_artifacts": [
+    "open-problems head 3246f3d914cc3fe70f29f65aab13e795b99419bb",
+    "CURRENT_STATUS.md blob 8c9c63579ecdd4afa385bb94caf79ee6296addcf",
+    "assignments/B15.json blob 0b1f8d825bdfcc0bf36b86dab00edd1648a27444",
+    "EXECUTION_PROTOCOL.json blob 457358ff62cbf1141a72096bcabdf95bf18c1be2"
+  ],
+  "acceptance_items_met": [
+    "fixed lemma/version and exact target",
+    "proved symmetry reduction at H/I scope",
+    "precomputed exact case count",
+    "explicit CPU/RAM/runtime/case caps",
+    "measured complete-run rate",
+    "actual Boolean truth table and exact Walsh normalization",
+    "rational logarithm comparison with zero ambiguous cases"
+  ],
+  "acceptance_items_remaining": [
+    "independent review by A085 or A092",
+    "A072 reusable-engine adoption",
+    "any result beyond the frozen finite family"
+  ],
+  "next_consumers": ["A072", "A075", "A085", "A092"],
+  "next_action": "Enlarge exactly one axis to disjoint affine two-point conditional cells with signed characters and a full affine-automorphism quotient; do not increase physical dimension without a new count proof.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [],
+  "review": {
+    "requested": ["A085", "A092"],
+    "observed": [],
+    "independent_review_status": "NOT_RUN"
+  },
+  "delivery": {
+    "canonical": "SAVED_AND_BYTE_EXACT_READBACK_VERIFIED; artifact commit 5aca95345e9eaef015d406af6f84bf74c5a3e01d",
+    "brain_mirror": "SAVED_AND_BYTE_EXACT_READBACK_VERIFIED; artifact commit 85bf841e43b6e08d76014ab06725b16465dca245",
+    "native_brain_ingestion": "NOT_CLAIMED",
+    "full_FEI": "OPEN"
+  }
+}

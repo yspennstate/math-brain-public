@@ -1,0 +1,13 @@
+from pathlib import Path
+R=Path(__file__).resolve().parent
+p=R/'ATTEMPT.md';s=p.read_text(encoding='utf8')
+marker='## Second attempt at the wall-edge gap (2026-10-12)'
+if marker not in s:
+ s+='\n'+marker+'''\n\nThe user's reopening request led to two new approaches: reflected pinning/contact ratios, and exact coarea/subset recursion. The coarea route was selected and pursued. Complete new proofs and the referee audit are in SECOND_ATTEMPT.md.\n\nNew proved results: positive-domain partition recursion; exact partial-wall partition/contact/moment formulas; log-supermodularity of positive-domain partitions and their sign-set weights; an attractive pure-death-process representation of positive SOS heights; gamma total energy and temperature-independent sign-law identities; and a sufficient sign-buffer criterion for uniform edge/corner logarithmic repulsion. Exact rational tests ran on three-site, 3x3 and buffered 4x4 lattice domains. The tempting universal reflected-contact inequality was disproved, with a structural reverse inequality on root-separator graphs. An initial hand-integration coefficient error was caught and corrected by the exact recursion before being recorded as a checked claim.\n\nPrecise remaining gap after this attempt: for A=B_M and N-M>=delta M, either prove that Z(A union (i+B_R))/Z(A) tends to 1 uniformly over i in A for some R comparable to M^alpha (a sufficient sign-buffer assertion), or directly prove that the attractive death chain with random initial sign set distributed as z(S)z(V minus S)/Z(A), S containing A, retains each i in A until time a log M with probability tending to 1 uniformly (an exact equivalent of the desired pointwise lower-tail bound). Neither assertion is proved. Boolean lattice attractiveness and coarse cut/volume estimates do not supply it; the individual killing rates are nonlocal partition ratios. No general-potential extension is proved. Verdict remains PARTIAL.\n'''
+ p.write_text(s,encoding='utf8')
+p=R/'STATUS.md';s=p.read_text(encoding='utf8')
+s=s.replace(s.splitlines()[1], 'NEXT: Finish the corrected Lean cross-product verification, then close this second attempt with the precise sign-buffer/death-chain survival gap.',1)
+log='2026-10-12: Second attempt proved exact coarea recursions, sign-lattice attractiveness, and an attractive death-chain representation; exact finite tests refuted the proposed reflection lemma. Computations completed in 8.881 and 1.279 seconds, with the latter sampled at 34.2 MB RSS. New quantitative sign-buffer/survival estimate remains unproved.'
+if log not in s:s+='\n'+log+'\n'
+p.write_text(s,encoding='utf8')
+print('Linked complete second-attempt proofs and updated WORKING status',flush=True)

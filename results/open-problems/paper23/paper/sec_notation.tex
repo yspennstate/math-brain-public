@@ -1,0 +1,77 @@
+\section{Notation and constants}\label{sec:notation}
+
+Throughout, $\F\in\{\R,\C\}$ is the scalar field, $\dF=\dim_\R\F\in\{1,2\}$ ($d_\R=1$, $d_\C=2$),
+and a \emph{standard $\F$-Gaussian} scalar $\zeta$ has $\EE\zeta=0$ and $\EE|\zeta|^2=1$: real
+$N(0,1)$ when $\F=\R$, and a circularly symmetric complex Gaussian with $\EE|\zeta|^2=1$ when
+$\F=\C$. A standard $\F$-Gaussian vector has independent standard $\F$-Gaussian coordinates, and a
+matrix with independent standard $\F$-Gaussian entries is called a \emph{Gaussian matrix}. When we
+speak of weights of a network we usually normalize a $p\times q$ Gaussian weight to have entry
+variance $1/q$, so that the map is $O(1)$ in operator norm; the normalization is stated where it
+matters and absorbed into the constants otherwise.
+
+For $S\subseteq[N]:=\{1,\dots,N\}$ let $P_S$ denote the orthogonal projection of $\F^N$ onto the
+coordinates in $S$, and for a matrix $A$ and $S,T\subseteq[N]$ let $A[T,S]$ be the submatrix on rows
+$T$ and columns $S$; thus $P_TAP_S$ and $A[T,S]$ have the same nonzero singular values.
+$\smin(\cdot)$ and $\smax(\cdot)=\|\cdot\|_\op$ are the least and largest singular values, the least
+meaning the $\min(\text{rows},\text{cols})$-th one. We write $\Sph^{d-1}(R)$ for the Euclidean sphere
+of radius $R$ in $\R^d$ and $\Sph^{d-1}=\Sph^{d-1}(1)$, and $\mu$ for the uniform probability measure
+on it. Landau notation is as $N\to\infty$ (or as the relevant width $\to\infty$) with the depth
+$L$ and the densities fixed unless noted; $\xrightarrow{\PP}$ is convergence in probability. A
+statement holds \emph{with high probability} (w.h.p.) if its probability tends to $1$.
+
+\subsection{Entropy}
+The binary entropy and its aspect-ratio companion are
+\[
+  H(\alpha)=-\alpha\log\alpha-(1-\alpha)\log(1-\alpha),\qquad
+  h(\gamma)=\gamma\log\gamma-(\gamma-1)\log(\gamma-1),
+\]
+in natural logarithms, related by
+\begin{equation}\label{eq:Hident}
+  H(\alpha)=\alpha\,h(1/\alpha),
+\end{equation}
+which converts a per-column rate at aspect ratio $\gamma=1/\alpha$ into a per-$N$ rate at density
+$\alpha$. The number of coordinate sets of size $\alpha N$ is $\binom N{\alpha N}=e^{H(\alpha)N+o(N)}$.
+
+\subsection{Gate gains}
+Let $Z$ be a standard real Gaussian with density $\varphi$ and distribution function $\Phi$. For
+$\alpha\in(0,1]$ define thresholds $t_\alpha,s_\alpha\ge0$ by
+\[
+  \PP(|Z|\ge t_\alpha)=\alpha,\qquad \PP(|Z|\le s_\alpha)=\alpha,
+\]
+and the \emph{retained} and \emph{co-retained square-mass constants}
+\begin{align}
+  \kappa(\alpha)&=\EE\bigl[Z^2\,\one\{|Z|\ge t_\alpha\}\bigr]=\alpha+2t_\alpha\varphi(t_\alpha),\label{eq:kappa}\\
+  \kcheck(\alpha)&=\EE\bigl[Z^2\,\one\{|Z|\le s_\alpha\}\bigr]=\alpha-2s_\alpha\varphi(s_\alpha).\label{eq:kcheck}
+\end{align}
+Thus $\kappa(\alpha)$ is the fraction of the second moment of a Gaussian coordinate carried by its
+largest $\alpha$-fraction, and $\kcheck(\alpha)$ the fraction carried by its smallest, so
+\[
+  0\le\kcheck(\alpha)\le\alpha\le\kappa(\alpha)\le1,\qquad
+  \kappa(\alpha)+\kcheck(1-\alpha)=1,\qquad \kappa(1)=\kcheck(1)=1 .
+\]
+Both are increasing; numerically $\kappa(1/2)=0.928674$, $\sqrt{\kappa(1/2)}=0.963677$,
+$\kcheck(1/2)=0.071326$, $\sqrt{\kcheck(1/2)}=0.267070$. These are the sharp extreme gains a density-%
+$\alpha$ diagonal gate imposes on a fixed direction: if $g$ is a standard Gaussian vector in $\R^N$
+and $T$ ranges over sets of size $\alpha N$, then $N^{-1}\max_{|T|=\alpha N}\|P_Tg\|^2\to\kappa(\alpha)$
+and $N^{-1}\min_{|T|=\alpha N}\|P_Tg\|^2\to\kcheck(\alpha)$ almost surely, by the order-statistic law
+(\Cref{lem:order} in \Cref{app:brackets}). The complex analogues replace $Z^2$ by an $\mathrm{Exp}(1)$
+variable and give $\kappa_\C(\alpha)=\alpha(1-\log\alpha)$, $\kcheck_\C(\alpha)=\alpha+ (1-\alpha)\log(1-\alpha)$;
+we write $\kappa,\kcheck$ for the real case and insert $\dF$ where the field enters.
+
+\subsection{Small-ball constants}
+For a standard $\F$-Gaussian scalar $\zeta$ and $0<t\le1$ put $p(t)=\PP(|\zeta|\le t)$; then
+\begin{equation}\label{eq:pball}
+  c_\F\,t^{\dF}\ \le\ p(t)\ \le\ C_\F\,t^{\dF},
+\end{equation}
+with $p(t)=2\varphi(0)t(1+O(t^2))$ for $\F=\R$ and $p(t)=1-e^{-t^2}$ for $\F=\C$. For a standard
+$\F$-Gaussian vector $g^{(j)}\in\F^j$, $p_j(t)=\PP(\|g^{(j)}\|\le t)$ satisfies
+$c_{\F,j}t^{\dF j}\le p_j(t)\le C_{\F,j}t^{\dF j}$, since $\|g^{(j)}\|^2$ is a chi-square with
+$\dF j$ real degrees of freedom. Constants $c_\F,C_\F,c_{\F,j},C_{\F,j}$ depend only on their
+subscripts and change from line to line.
+
+\subsection{The quarter-circle quantile}
+$s^*(\alpha)$ is the top-$\alpha$ quantile of the quarter-circle law, defined by
+$\int_{s^*(\alpha)}^{2}\tfrac1\pi\sqrt{4-x^2}\,\dd x=\alpha$; it is the top-$\alpha$ quantile of the
+limiting singular spectrum of an $N\times N$ Gaussian matrix with entry variance $1/N$, and
+$s^*(1/2)=0.807946$. It bounds the largest least singular value achievable by deleting rows and
+columns (\Cref{prop:B5}).

@@ -1,0 +1,46 @@
+{
+  "helper_version": "A015-v4-occupation-and-component-review",
+  "actual_Boolean_family": "Fresh point activations of parity cores; distributed lifts of OR(x0,x1,x2), OR(x0*x1,x0*x2), OR(x0*x1,x0*x2,x3), with signed Boolean convention",
+  "parameter_domain": {
+    "pilot_sizes_total_max": 4,
+    "full_sizes_total_max": 8,
+    "used_gates_max": 4,
+    "selected_core_size": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "physical_parity_core_dimension": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "physical_activation_r": [
+      1,
+      2,
+      3
+    ],
+    "lift_core_u": [
+      1,
+      2,
+      3
+    ]
+  },
+  "case_count": {
+    "occupation": 648,
+    "physical_parity_activations": 12,
+    "lift_fixtures": 3,
+    "pilot_occupation": 60
+  },
+  "symmetry": "None for ordered owned-size compositions or labelled core ownership maps; formula includes every ownership map through exact multinomial coefficients",
+  "arithmetic": "Fraction, integer FWHT, exact fifth-root dyadic enclosures (64 bits), integer chronological BFS counts",
+  "memory_estimate_MB": 100,
+  "maximum_runtime_seconds": {
+    "pilot": 60,
+    "full": 180
+  },
+  "dimension_escalation": false,
+  "scope": "Independent unchanged-scope A007 proof review plus narrow maximal-overlap occupation diagnostic; no new broad universal candidate"
+}

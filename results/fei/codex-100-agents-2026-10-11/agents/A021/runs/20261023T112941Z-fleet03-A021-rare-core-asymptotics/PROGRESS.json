@@ -1,0 +1,56 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261023T112941Z-fleet03-A021-rare-core-asymptotics",
+  "stream": "B05",
+  "packet_id": "A021",
+  "gap_id": "C024-UNEQUAL-DATA-DEPTH-STOPPING-TRANSFER",
+  "attempt_id": "A021-stage20-conditional-stopping",
+  "method": "Global complete controller cross-overhead bound; conditioning on full controller assignment; analytic all-t seed/edit bounds; exact exceptional t2 stopping certificate and independent replay",
+  "mathematical_delta": "Removes DATA-depth synchronization through the existing paid depth cap. SAME actual bank >=t/32 (t2),>=t/16 (t>=3), hence >=13t/576; no fresh source admission. Arbitrary controller liability remains explicit.",
+  "deliverable_status": "COMPLETE_LOCAL",
+  "mathematical_status": "SCOPED_AUTHOR_PROOF; ALL_DECLARED_CHECKS_PASS; EXTERNAL_REVIEW_PENDING; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    {
+      "claim_id": "A021-NONFLAT-INHERITED-REFERENCE-DATA-QUERY",
+      "version": 2,
+      "scope": "prior assertions unchanged; exact original-versus-conditional cross overhead independently reconstructed"
+    },
+    {
+      "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+      "version": 8,
+      "statement_sha256": "2068af9e40a535fe53d818446e8582772ff2410016e77669a8074b0b0600d535",
+      "scope": "prescribed q/R mixed-history interface; NO numerical admission consumed; whole bundle remains pending external review"
+    }
+  ],
+  "claims_created_or_changed": [
+    "A021-NONFLAT-INHERITED-REFERENCE-DATA-QUERY@3"
+  ],
+  "source_artifacts": [
+    "PROOF.md",
+    "out/SOURCE_RECEIPTS.json",
+    "out/PILOT.json",
+    "out/BELLMAN.json",
+    "out/INDEPENDENT.json",
+    "out/MIXED.json",
+    "out/LOCAL.json"
+  ],
+  "next_consumers": [
+    "A022",
+    "A025",
+    "A028",
+    "A029",
+    "A087",
+    "A094",
+    "B05"
+  ],
+  "next_action": "Transport the arbitrary ORIGINAL controller entropy liability to its compatible descendant owner without supplying it again, retaining the same original budget, current q/R, old U, spent source account and BOTH full terminal KLs. The DATA depth cap is not removed.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Independent-person review pending",
+    "Universal controller liability/source transfer and depth-cap removal unpaid",
+    "Checklist working attempt returned lock held too long; administrative completion retry recorded separately"
+  ],
+  "packet_ids": [
+    "A021"
+  ]
+}

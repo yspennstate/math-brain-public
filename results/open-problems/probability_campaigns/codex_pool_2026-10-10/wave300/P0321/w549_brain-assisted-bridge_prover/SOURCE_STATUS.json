@@ -1,0 +1,101 @@
+{
+  "target_id": "P0321",
+  "date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 556,
+    "tier": 5,
+    "dated_status": "unsolved"
+  },
+  "primary_source": {
+    "author": "Mathieu Lewin",
+    "title": "Coulomb and Riesz gases: The known and the unknown",
+    "arxiv": "2202.09240v2",
+    "doi": "10.1063/5.0086835",
+    "url": "https://arxiv.org/html/2202.09240v2",
+    "locator": "VI.2, dimension-two phase-diagram discussion; intake locator VI.B PDF66-67",
+    "short_quote": "fast decay of translational correlations and slow decay of (six-fold) orientational correlations",
+    "exact_quantified_theorem_present": false
+  },
+  "source_statement": "Investigate an intermediate hexatic phase for 2D Riesz gases, having rapid positional decorrelation and slow six-fold orientational decorrelation. The source discusses s>2, and jellium s=0,1, without a single fixed quantified statement.",
+  "working_precisification": "Classical short-range s>2, positive activity, a nonempty beta interval, stationary isotropic DLR states, truncated density two-point decay bounded by C(1+r)^(-q) with q>2, and two-sided bond covariance decay c(1+r)^(-eta) to C(1+r)^(-eta) with 0<eta<2 for an explicitly specified six-fold bond field. This stronger precisification is ours; exponential positional decay is not required.",
+  "status_search": {
+    "primary_pages_checked": [
+      "https://arxiv.org/abs/2202.09240",
+      "https://arxiv.org/html/2202.09240v2"
+    ],
+    "recent_queries": [
+      "hexatic Riesz rigorous proof",
+      "site.arxiv.org hexatic Riesz 2025 2026"
+    ],
+    "result": "No verified phase-existence proof recovered; bounded search does not establish present openness."
+  },
+  "prior_attempt": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006a05.json",
+    "key": "at-p0321",
+    "result": "Global-angle mixture: zero one-point sixth harmonic does not imply vanishing two-point orientational order.",
+    "review_state": "author-checked only"
+  },
+  "brain_recall": {
+    "receipt": "recall_measurement.json",
+    "timeout_seconds": 60,
+    "elapsed_seconds": 62.27119690005202,
+    "output_bytes": 0
+  },
+  "scar": {
+    "slug": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "lesson": "A successful local calculation or green pipeline is not proof of the hardest unchecked piece."
+  },
+  "independent_review": {
+    "adversary": "w550",
+    "referee": "w551",
+    "status": "partial: w551 and w550 conditional KEEP for G1-G6",
+    "evidence": "~\\brain_workers\\w551\\REVIEW_PACKET.md",
+    "remaining": "parity/gate/entry-specific admission pending",
+    "additional_evidence": "~\\brain_workers\\w550\\AUDIT_W549.md",
+    "account_independence_verified": false
+  },
+  "canonical_repository_probe": {
+    "command": "python -X utf8 canonical_target_probe.py",
+    "database": "~\\math-research-brain\\local\\audits\\jmlr-two-paper-zip-audit-v1\\mathbrain_v2.sqlite3",
+    "mode": "ro",
+    "scope": "audit snapshot found in canonical repository, not certified current live store",
+    "cards": [],
+    "table_names": [
+      "schema_meta",
+      "nodes",
+      "claims",
+      "evidence",
+      "mistakes",
+      "reflexes",
+      "reflex_sources",
+      "verification_events",
+      "edges"
+    ],
+    "nodes_columns": [
+      "body",
+      "created_at",
+      "digest",
+      "id",
+      "kind",
+      "metadata_json",
+      "title"
+    ],
+    "elapsed_seconds": 0.057496300083585083
+  },
+  "recent_primary_check": {
+    "authors": "Pawel Matus and Tobias Holder",
+    "title": "Theory of two-dimensional Wigner crystals with defects: Interactions, melting transitions and collective modes",
+    "version": "arXiv:2607.18477v1, 2026-07-20",
+    "url": "https://arxiv.org/html/2607.18477v1",
+    "locators_checked": [
+      "abstract",
+      "II model and quadratic effective action",
+      "IV opening KTHNY/dislocation-proliferation discussion"
+    ],
+    "short_quote": "a zero-temperature version of the hexatic Wigner crystal",
+    "scope_inference": "The checked passages use an elastic effective action and a KTHNY phase description; no microscopic positive-temperature classical Riesz DLR phase-existence theorem was recovered from these passages. This is a limited scope check, not a proof of absence from all literature."
+  }
+}

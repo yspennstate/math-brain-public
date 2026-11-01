@@ -1,0 +1,5 @@
+HARD7-01 exact symbolic Robin-kernel identities
+CHECK_1 grad identity modulo sphere: 2*(x**2 + y**2 + z**2 - 1)*(a11*x**2 - a11*z**2 + 2*a12*x*y + 2*a13*x*z + a22*y**2 - a22*z**2 + 2*a23*y*z)*(c11*x**2 - c11*z**2 + 2*c12*x*y + 2*c13*x*z + c22*y**2 - c22*z**2 + 2*c23*y*z)
+CHECK_2 div identity modulo sphere: 3*(x**2 + y**2 + z**2 - 1)*(a11*x**2 - a11*z**2 + 2*a12*x*y + 2*a13*x*z + a22*y**2 - a22*z**2 + 2*a23*y*z)
+CHECK_3 H2 evaluation-frame norm: 2*(x**2 + y**2 + z**2)**2/3
+ALL_EXACT_CHECKS_PASS = True

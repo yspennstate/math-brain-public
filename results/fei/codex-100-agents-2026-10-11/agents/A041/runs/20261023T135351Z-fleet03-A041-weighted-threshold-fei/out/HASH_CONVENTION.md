@@ -1,0 +1,1 @@
+Own new statement hash: SHA256 of exact UTF-8 exact_statement. Source A045 original compound statement hash is preserved as supplied; raw source CLAIMS and PROOF bytes are additionally pinned. No different source hash convention is asserted.

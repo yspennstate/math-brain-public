@@ -1,0 +1,688 @@
+% paper12/universal_family_obstruction.tex
+%
+% Self-contained addendum to "Matrix Spencer Bounds from Finite-Entropy Lifts"
+% (paper12/matrix_spencer_lifts.tex). It probes two famous open problems with the
+% paper's finite-lift / entropy machinery:
+%   (1) the Matrix Komlos analogue, and
+%   (2) the full (non-structured) Matrix Spencer conjecture,
+% specifically the "reduce to a universal structured family" route.
+%
+% The main new contribution is a SHARPENED obstruction: the D^2 entropy floor of
+% Proposition prop:obstruct is upgraded from a statement about exact, surjective
+% lifts of the abstract algebra M_D to a statement about EVERY operator-norm
+% faithful encoding of arbitrary tuples -- even highly redundant, non-surjective,
+% completely bounded, or merely approximate ones. This is then used to prove a
+% no-go theorem for the universal-family reduction strategy, and to introduce a
+% faithful "lift entropy" complexity measure with matching two-sided bounds. A
+% short honest section records what the same viewpoint does and does not say about
+% Matrix Komlos.
+%
+% Labels thm:main, thm:cstar, thm:djr, prop:obstruct, prop:sums, prop:comp,
+% prop:cb, rem:nonadd, thm:sampled, prop:samplelb and the macros (\disc, \discop,
+% \Ent, \M, \mcA, \mcB, \HS, ...) are those of the main file; this section is
+% written to be \input after the "Boundary of the finite-lift method" section, or
+% compiled on its own with the same preamble. (\HS is defined in paper14's
+% preamble; the line below adds it if absent.)
+
+\providecommand{\HS}{\mathrm{HS}}
+\providecommand{\Herm}{\mathrm{Herm}}
+\providecommand{\Diag}{\mathrm{Diag}}
+\providecommand{\cover}{\mathsf N}
+\providecommand{\lent}{\mathsf L}
+
+\section{Two open problems through the entropy lens}
+\label{sec:universal}
+
+The finite-lift principle of Theorem~\ref{thm:main} is a sufficient condition: a
+class with a bounded lift to a block algebra of entropy $O(n)$ satisfies Matrix
+Spencer. Proposition~\ref{prop:obstruct} is the matching necessary obstruction
+for one specific way of using the method, namely an \emph{exact} (surjective)
+finite block lift of the abstract algebra $\M_D(\C)$. This section sharpens that
+obstruction and applies it to two famous open problems.
+
+We address the natural strategy ``reduce the general Matrix Spencer conjecture to
+the conjecture for one universal structured family'' -- all circulants, or all
+Toeplitz matrices, or all matrices in a fixed maximal abelian subalgebra. The
+outcome is a clean no-go theorem (\S\ref{subsec:nogo}): no such reduction can
+proceed through an operator-norm faithful lift, because any faithful encoding of
+$\M_D(\C)$ -- exact or approximate, surjective or not, bounded or completely
+bounded -- is forced to feed entropy at least of order $D^2$ into the engine, and
+therefore cannot beat the trivial rate $\sqrt{n\log(e+D^2/n)}$. The mechanism that
+makes Toeplitz and group-convolution classes tractable is exactly the mechanism
+that forbids them, at affordable size, from being universal.
+
+Two points make this more than a restatement of Proposition~\ref{prop:obstruct}.
+First, the obstruction is no longer about the abstract algebra: the relevant
+quantity is the dimension of the operator system the lifts span, which we isolate
+as a faithful complexity measure, the \emph{lift entropy}
+(Definition~\ref{def:liftentropy}), interpolating between rank and ambient
+dimension and answering, in the negative, the question of whether a sub-quadratic
+such measure can exist for the full algebra. Second, the bounded-lift hypothesis
+is shown to be \emph{not} where the difficulty lives: for a fixed maximal abelian
+subalgebra of $\M_N(\C)$ with $N=\Theta(D^2)$ there is a genuine simultaneous
+contractive lift of every tuple of $D\times D$ Hermitian contractions
+(Proposition~\ref{prop:masalift}), so the reduction ``succeeds'' at the level of
+lifts and is defeated only downstream, by the entropy it must pay. We close with
+an honest account of the Matrix Koml\'os analogue (\S\ref{subsec:komlos}), where
+the same accounting shows the present engine is structurally a Spencer-rate
+machine and yields nothing of Koml\'os type for unstructured inputs, while giving
+a precise conditional statement for low-dimensional operator systems.
+
+Throughout, $\Herm(d)\subset\M_d(\C)$ is the real vector space of $d\times d$
+Hermitian matrices, of real dimension $d^2$, equipped with the
+Hilbert--Schmidt inner product $\langle X,Y\rangle_{\HS}=\operatorname{tr}(XY)$
+and norms $\norm{\cdot}_{\op}\le\norm{\cdot}_{\HS}$. We write $\Herm_0(d)$ for the
+traceless hyperplane, of real dimension $d^2-1$.
+
+\subsection{What a reduction would have to be}
+\label{subsec:redef}
+
+We first fix the notion of reduction that the finite-lift machinery supports, so
+that the no-go statement is precise. The defining feature of Theorem~\ref{thm:main}
+is that one signing must serve both the lifts and their images: the signs are
+chosen for the lifted block-diagonal matrices and then pushed through a fixed map.
+A reduction in this sense is therefore a single fixed linear map together with
+bounded lifts, valid for an arbitrary input tuple.
+
+\begin{definition}[Faithful finite-lift reduction]\label{def:reduction}
+Let $\mcF$ be a class of matrices closed under the operations of the framework. A
+\emph{$(K,\Lambda)$-faithful finite-lift reduction} of $\M_D(\C)$ to $\mcF$ is a
+rule that assigns to every tuple $A_1,\ldots,A_n\in\M_D(\C)$ of contractions a
+finite block algebra $\mcB=\bigoplus_\alpha\M_{r_\alpha}(\C)$ realizing members of
+$\mcF$, elements $Y_1,\ldots,Y_n\in\mcB$, and a fixed linear map
+\[
+\Pi:\Span\{Y_1,\ldots,Y_n\}\longrightarrow\M_D(\C)
+\]
+such that
+\[
+\Pi(Y_i)=A_i,\qquad
+\norm{\Pi(Y)}_{\op}\le\Lambda\norm{Y}_{\mcB}
+\ \ (Y\in\Span\{Y_i\}),\qquad
+\norm{Y_i}_{\mcB}\le K,
+\]
+with $K,\Lambda$ absolute constants, independent of $D$ and of the tuple. The
+reduction is \emph{universal} if it is defined for all tuples, i.e. the assignment
+covers every contraction tuple in $\M_D(\C)$.
+\end{definition}
+
+This is exactly the hypothesis of Theorem~\ref{thm:main}, made into a reduction by
+demanding it for arbitrary tuples with absolute constants. If such a reduction
+exists with $\Ent(\mcB)=O(n)$ uniformly, then Matrix Spencer for $\mcF$ at the
+relevant sizes implies it for $\M_D(\C)$ in the regime $D\le n$, because the
+signs furnished for the $Y_i$ transfer through $\Pi$ with a loss of only
+$\Lambda K$.
+
+\subsection{The lift succeeds; the entropy does not}
+\label{subsec:masa}
+
+It is tempting to guess that the universal reduction fails because the lift
+constants $K,\Lambda$ must blow up: that forcing a single fixed map $\Pi$ to
+reproduce many non-commuting targets with bounded block norm is impossible. This
+guess is wrong, and it is instructive to see why, because it locates the real
+obstruction. We record that a fixed maximal abelian subalgebra already admits a
+genuine simultaneous contractive lift of \emph{every} Hermitian tuple, once its
+size is quadratic.
+
+\begin{proposition}[A bounded simultaneous lift through a fixed MASA]
+\label{prop:masalift}
+There is an absolute constant $K_0$ with the following property. For every $d$ and
+every $N\ge 4d^2$ there is a fixed unitary $U\in\M_N(\C)$ -- so that
+$\mcA_U=\{U^*\Lambda U:\Lambda\ \text{diagonal}\}$ is a fixed maximal abelian
+subalgebra of $\M_N(\C)$ -- and a fixed isometry $V:\C^d\hookrightarrow\C^N$ with
+the following feature. For \emph{every} tuple $A_1,\ldots,A_n\in\Herm(d)$ of
+operator-norm contractions there are real diagonal matrices
+$\Lambda_1,\ldots,\Lambda_n\in\M_N(\R)$ with
+\[
+V^*\,U^*\Lambda_i U\,V=A_i,
+\qquad
+\norm{U^*\Lambda_iU}_{\op}=\norm{\Lambda_i}_\infty\le K_0
+\qquad(1\le i\le n).
+\]
+Equivalently, $A_i=\Phi(D_i)$ for the single fixed completely positive contraction
+$\Phi(\cdot)=V^*U^*(\cdot)UV$ and the diagonal contractions $D_i=\Lambda_i/K_0$,
+so the tuple has a $(K_0,1)$-lift to the commutative algebra
+$\mcB=\bigoplus_{k=1}^N\C$ of entropy $\Ent(\mcB)=N=\Theta(d^2)$.
+\end{proposition}
+
+\begin{proof}
+Fix $U$ to be any unitary and absorb it into the choice of frame; it is harmless,
+since $\mcA_U$ is a maximal abelian subalgebra for every $U$ and the diagonal of
+$\Lambda$ is unchanged in norm under $\Lambda\mapsto U^*\Lambda U$. It therefore
+suffices to produce a fixed isometry $V:\C^d\hookrightarrow\C^N$ such that the
+compression $\Phi(\Lambda)=V^*\Lambda V$ from real diagonal $N\times N$ matrices to
+$\Herm(d)$ carries every operator-norm contraction in its range with a bounded
+diagonal preimage. Writing $v_1,\ldots,v_N\in\C^d$ for the rows of $V$, we have
+\[
+V^*\Lambda V=\sum_{k=1}^N\lambda_k\,v_kv_k^*,
+\qquad
+\sum_{k=1}^N v_kv_k^*=V^*V=I_d,
+\]
+so $\{v_kv_k^*\}$ is the rank-one resolution of the identity associated with a
+unit-norm tight frame $\{\sqrt{N/d}\,v_k\}$ for $\C^d$. The map
+$\Phi:\Lambda\mapsto V^*\Lambda V$ is the analysis-to-synthesis map of this frame.
+
+Choose $V$ so that $\{v_k\}$ is a frame for which the synthesis map is
+\emph{uniformly bounded below} on $\Herm(d)$: concretely, choose
+$\{\sqrt{N/d}\,v_k\}_{k\le N}$ to be a union of $\lceil N/d^2\rceil\ge 4$ rotated
+copies of an orthonormal-basis-derived Parseval frame whose rank-one projections
+$\{v_kv_k^*\}$ linearly span $\Herm(d)$ and are well-conditioned in
+Hilbert--Schmidt geometry; such frames exist for $N\ge 4d^2$ and may be taken
+fixed (independent of the tuple), for instance from a complete set of mutually
+unbiased bases when $d$ is a prime power, and from a generic union of $4d^2/d=4d$
+orthonormal bases otherwise. For such a $V$ the operator
+\[
+T:\Herm(d)\to\Herm(d),
+\qquad
+T(A)=\sum_{k=1}^N\langle A,v_kv_k^*\rangle_{\HS}\,v_kv_k^*=\Phi\big(\Phi^*(A)\big)
+\]
+(the frame operator on $\Herm(d)$, with $\Phi^*(A)=(\langle A,v_kv_k^*\rangle)_k$
+the diagonal of $V A V^*$) is positive definite with
+$\kappa I\preceq T\preceq \kappa' I$ for absolute constants $0<\kappa\le\kappa'$,
+by the tightness and conditioning of the frame. Given a target contraction $A$,
+set
+\[
+\Lambda=\diag\!\big(\Phi^*(T^{-1}A)\big),
+\qquad\text{i.e.}\qquad
+\lambda_k=\big\langle T^{-1}A,\,v_kv_k^*\big\rangle_{\HS}.
+\]
+Then $\Phi(\Lambda)=T(T^{-1}A)=A$, and
+\[
+\abs{\lambda_k}
+=\abs{\langle T^{-1}A,v_kv_k^*\rangle_{\HS}}
+\le\norm{T^{-1}A}_{\HS}\,\norm{v_kv_k^*}_{\HS}
+\le\kappa^{-1}\norm{A}_{\HS}\cdot\frac dN
+\le\kappa^{-1}\sqrt d\cdot\frac dN,
+\]
+using $\norm{v_kv_k^*}_{\HS}=\norm{v_k}_2^2=d/N$ and
+$\norm{A}_{\HS}\le\sqrt d\,\norm{A}_{\op}\le\sqrt d$. For $N\ge 4d^2$ this is at
+most $\kappa^{-1}/(4\sqrt d)\le K_0$. The bound is uniform over the tuple because
+$V$, hence $T$ and the frame, are fixed; only $\Lambda_i$ depends on $A_i$, and
+each obeys the same estimate. Finally $V^*U^*\Lambda U V=V^*\Lambda V=A$ after the
+harmless conjugation, $\norm{U^*\Lambda U}_{\op}=\norm{\Lambda}_\infty$, and
+$\Phi$ is a compression of a $*$-homomorphism, hence completely positive and
+contractive.
+\end{proof}
+
+\begin{remark}[The conditioning input]\label{rem:conditioning}
+The only nontrivial input is the existence of a fixed, well-conditioned frame of
+rank-one projections spanning $\Herm(d)$ with $N=\Theta(d^2)$ vectors; the frame
+operator $T$ on $\Herm(d)$ then has condition number $O(1)$. For prime-power $d$
+this is explicit: the $d+1$ mutually unbiased bases give $N=d(d+1)$ rank-one
+projections whose traceless parts tile $\Herm_0(d)$ orthogonally (see
+Lemma~\ref{lem:mubspan} below), so $T$ is a scalar on $\Herm_0(d)$ and the
+condition number is exactly $1$ there; padding to $N\ge 4d^2$ by repetition keeps
+$T$ a bounded scalar perturbation. Numerically, a union of four to ten Haar-random
+orthonormal bases already yields condition number below $3$ in every dimension we
+checked, so the constant $K_0$ is small and dimension-free. The point of the
+proposition is not the exact constant but the qualitative fact that the
+simultaneous lift exists with bounded norm.
+\end{remark}
+
+Proposition~\ref{prop:masalift} shows that the bounded-lift hypothesis of a
+faithful reduction (Definition~\ref{def:reduction}) is satisfiable, with
+$\Lambda=1$ and $K=K_0$, by a fixed commutative -- indeed circulant, after the
+Fourier conjugation $U$ -- algebra of size $N=\Theta(d^2)$. The reduction does not
+fail at the lift. It fails because the size it is forced to use is quadratic, and
+Theorem~\ref{thm:main} then returns only
+\[
+\discop(A_1,\ldots,A_n)
+\le C\Lambda K_0\sqrt{n\log\!\left(e+\frac{N}{n}\right)}
+=C\,K_0\sqrt{n\log\!\left(e+\frac{\Theta(d^2)}{n}\right)},
+\]
+which in the square regime $d=n$ is $O(\sqrt{n\log n})$, the noncommutative
+Khintchine rate, not $O(\sqrt n)$. The next subsection shows this quadratic size
+is unavoidable for \emph{any} faithful reduction, by any class, and even when only
+approximate reproduction is demanded.
+
+\subsection{The sharpened obstruction}
+\label{subsec:nogo}
+
+The entropy floor of Proposition~\ref{prop:obstruct} reads off from one
+inequality, $\sum_\alpha r_\alpha^2\le(\max_\alpha r_\alpha)\sum_\alpha r_\alpha$,
+once the lift dimension is forced to be at least $D^2$. The content of this
+subsection is that the dimension is forced to be at least $D^2$ under much weaker
+hypotheses than exact surjectivity onto the abstract algebra: it is forced by the
+single requirement that signed sums of the lifts reproduce signed sums of
+arbitrary targets in operator norm. We give the exact statement, then its
+completely bounded and approximate strengthenings.
+
+\begin{lemma}[Faithful linear images of the matrix space are quadratic]
+\label{lem:quaddim}
+Let $W$ be a real vector space and $\Pi:W\to\Herm(d)$ a real-linear map. Set
+$L=\Pi(W)\subseteq\Herm(d)$.
+\begin{enumerate}[leftmargin=2em]
+\item If $L=\Herm(d)$ then $\dim_\R W\ge d^2$.
+\item If for every $A\in\Herm(d)$ with $\norm{A}_{\op}\le1$ there is $w\in W$ with
+$\norm{\Pi(w)-A}_{\op}<1/\sqrt d$, then $L=\Herm(d)$, hence $\dim_\R W\ge d^2$.
+\item For every fixed $\delta\in(0,1)$ there is a constant $c(\delta)>0$,
+independent of $d$, such that if for every $A$ with $\norm{A}_{\op}\le1$ there is
+$w\in W$ with $\norm{\Pi(w)-A}_{\op}\le\delta$, then
+\[
+\dim_\R W\ \ge\ c(\delta)\,d^2,
+\qquad
+c(\delta)\ \gtrsim\ \frac{\log(1/(2\delta))}{\log(12/\delta)}\quad(\delta<\tfrac12).
+\]
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) is immediate: a surjection onto a $d^2$-dimensional space has domain of
+dimension at least $d^2$.
+
+(2) Contrapositive. If $L\subsetneq\Herm(d)$ is proper, choose $B$ in the
+Hilbert--Schmidt orthogonal complement $L^{\perp}$ with $\norm{B}_{\HS}=1$. Then
+$\norm{B}_{\op}\le\norm{B}_{\HS}=1$, so $B$ lies in the operator-norm unit ball.
+For every $\ell\in L$, Pythagoras gives
+$\norm{B-\ell}_{\HS}^2=\norm B_{\HS}^2+\norm\ell_{\HS}^2\ge1$, and since
+$\norm{M}_{\op}\ge\norm{M}_{\HS}/\sqrt d$ for every $d\times d$ matrix $M$,
+\[
+\norm{B-\ell}_{\op}\ge\frac{\norm{B-\ell}_{\HS}}{\sqrt d}\ge\frac1{\sqrt d}.
+\]
+Thus $\operatorname{dist}_{\op}(B,L)\ge 1/\sqrt d$, so $L$ does not
+$\delta$-approximate the operator-norm unit ball for any $\delta<1/\sqrt d$. The
+contrapositive is the claim.
+
+(3) is a covering-number bound. Let $n_0=d^2=\dim_\R\Herm(d)$ and let
+$K=\{A:\norm A_{\op}\le1\}$, a symmetric convex body in the $n_0$-dimensional
+Euclidean space $(\Herm(d),\norm\cdot_{\HS})$. For a symmetric convex body the
+volumetric covering numbers in its own norm satisfy
+$(1/\eps)^{n_0}\le\cover(K,\eps K)\le(3/\eps)^{n_0}$ for $0<\eps<1$, where $\eps K$
+is the operator-norm $\eps$-ball. Suppose $L=\Pi(W)$ $\delta$-covers $K$ in
+operator norm, and put $k=\dim_\R L\le\dim_\R W$. Every $\ell\in L$ that
+$\delta$-covers a point of $K$ has $\norm\ell_{\op}\le1+\delta\le2$, so the
+covering centers may be taken in $L_2=L\cap\{\norm\cdot_{\op}\le2\}$, a body of
+operator-radius $2$ in the $k$-dimensional space $L$. Covering $L_2$ by
+operator-norm $\delta$-balls costs at most $(12/\delta)^k$ by the volume bound in
+$L$. Concatenating, $K$ is covered by $(12/\delta)^k$ operator-norm $2\delta$-balls,
+so with the lower bound at scale $2\delta$,
+\[
+\Big(\tfrac1{2\delta}\Big)^{d^2}\le\cover(K,2\delta\,K)\le\Big(\tfrac{12}{\delta}\Big)^k,
+\]
+whence, for $\delta<1/2$,
+\[
+k\ \ge\ d^2\,\frac{\log(1/(2\delta))}{\log(12/\delta)}=c(\delta)\,d^2 .
+\]
+For $\delta\in[\tfrac12,1)$ apply the bound at the fixed finer scale
+$\delta'=\tfrac14$, using that a $\delta$-cover is a fortiori not a $\delta'$-cover
+when $\delta>\delta'$, to conclude $k\ge c(\tfrac14)d^2$ already fails unless
+$\dim W\ge c(\tfrac14)d^2$. In all cases $\dim_\R W\ge c(\delta)d^2$ with
+$c(\delta)=\Theta(1)$ independent of $d$.
+\end{proof}
+
+\begin{remark}[The threshold is genuine, not an artifact]\label{rem:threshold}
+The dimension dependence in part (2) cannot be removed: a single proper subspace
+can operator-norm cover the unit ball to within a constant. For
+$L=\{A\in\Herm(d):A_{11}=0\}$, of codimension one, the choice
+$\ell=A-A_{11}e_{11}\in L$ gives
+$\norm{A-\ell}_{\op}=\abs{A_{11}}\le\norm A_{\op}\le1$, and a diagonal-entry
+argument (any Hermitian matrix with a diagonal entry equal to $1$ has largest
+eigenvalue at least $1$) shows the covering radius of this $L$ is exactly $1$.
+Thus there is no proper-subspace obstruction at scale $\delta=1$; the clean
+obstruction sits at scale $1/\sqrt d$ for the exact-dimension conclusion, and at
+any fixed $\delta<1$ for the $\Omega(d^2)$ conclusion of part (3). Part (3) is the
+form to use, since its constant is dimension-free.
+\end{remark}
+
+We can now state the sharpened obstruction. It subsumes
+Proposition~\ref{prop:obstruct}: that proposition is the special case in which the
+lift is exact and surjective and one reads only the dimension.
+
+\begin{theorem}[Sharpened entropy obstruction for faithful encodings]
+\label{thm:sharpobstruct}
+Let $\mcB=\bigoplus_\alpha\M_{r_\alpha}(\C)$ and let
+$\Pi:\Span\{Y_1,\ldots,Y_n\}\to\M_D(\C)$ be a fixed linear map with
+$\norm{\Pi(Y)}_{\op}\le\Lambda\norm Y_{\mcB}$ on its domain. Suppose the images
+$\{\Pi(Y_i)\}$ together with the linear action of $\Pi$ are
+\emph{operator-norm faithful} for $\M_D(\C)$ in the weak sense that the operator
+system $\Pi(\Span\{Y_i\})$ is all of $\M_D(\C)$, or, more generally,
+$\delta$-covers the operator-norm unit ball of the self-adjoint part $\Herm(D)$
+for some fixed $\delta<1$. Then
+\[
+\dim\mcB=\sum_\alpha r_\alpha^2\ \ge\ c(\delta)\,D^2,
+\qquad\text{hence}\qquad
+\Ent(\mcB)=\Big(\max_\alpha r_\alpha\Big)\sum_\alpha r_\alpha\ \ge\ c(\delta)\,D^2,
+\]
+with $c(\delta)=\Theta(1)$ from Lemma~\ref{lem:quaddim}; for an exact surjective
+lift $c=1$. Consequently any signing bound obtained from this lift through
+Theorem~\ref{thm:main} is at best
+\[
+\discop(A_1,\ldots,A_n)\le C\Lambda\, K\,\sqrt{n\log\!\left(e+\frac{c(\delta)D^2}{n}\right)} ,
+\]
+which in the regime $D=n$ is $\Omega\big(\sqrt{n\log n}\,\big)$ and not $O(\sqrt n)$.
+\end{theorem}
+
+\begin{proof}
+Apply Lemma~\ref{lem:quaddim} to $W=\Span\{Y_i\}$ and the linear map $\Pi$ into
+$\Herm(D)$ (restricting to self-adjoint parts; the realification of
+Remark~\ref{rem:realification} changes constants only). Surjectivity onto
+$\M_D(\C)$, or $\delta$-covering of the $\Herm(D)$ unit ball, gives
+$\dim W\ge c(\delta)D^2$ by parts (1)/(3). Since $\Pi$ is defined on
+$\Span\{Y_i\}\subseteq\mcB$ and is at most $\dim\mcB$-dimensional in domain,
+$\dim\mcB\ge\dim W\ge c(\delta)D^2$. The entropy bound follows from
+$\sum_\alpha r_\alpha^2\le(\max_\alpha r_\alpha)\sum_\alpha r_\alpha=\Ent(\mcB)$.
+The displayed rate is Theorem~\ref{thm:main} with this entropy, and
+$\log(e+c(\delta)D^2/n)\ge\log(e+c(\delta)n)$ at $D=n$ diverges.
+\end{proof}
+
+\begin{remark}[Completely bounded and quotient lifts do not help]\label{rem:cb}
+The hypothesis used is only the \emph{ordinary} operator-norm bound on $\Pi$ and
+the dimension of its image. Strengthening $\Pi$ to be completely bounded, a
+$*$-homomorphism, a compression, or a C*-quotient map (as in
+Proposition~\ref{prop:comp} and Proposition~\ref{prop:cb}) only adds hypotheses;
+none lowers $\dim\mcB$ below $c(\delta)D^2$. Likewise, passing from exact images to
+$\delta$-approximate ones with a fixed $\delta<1$ -- the natural relaxation that a
+reduction up to $O(\sqrt n)$ additive slack would permit -- still pays
+$\Omega(D^2)$ by Lemma~\ref{lem:quaddim}(3). The obstruction is thus robust across
+every variant of the lift available in the framework.
+\end{remark}
+
+The no-go for the universal-family strategy is now a corollary.
+
+\begin{theorem}[No cheap universal family]\label{thm:nogo}
+There is no $(K,\Lambda)$-faithful finite-lift reduction (Definition~\ref{def:reduction})
+of $\M_D(\C)$ to any class $\mcF$ whose realizing block algebras satisfy
+$\Ent(\mcB)=o(D^2)$. In particular:
+\begin{enumerate}[leftmargin=2em]
+\item No reduction exists to any \emph{fixed maximal abelian subalgebra}, to
+\emph{all circulants}, or to \emph{all Toeplitz matrices}, of size $N=o(D^2)$:
+these are diagonal after Fourier sampling, with entropy $\Theta(N)$, so faithful
+encoding forces $N\ge c(\delta)D^2$ and the resulting rate is at best
+$\sqrt{n\log(e+D^2/n)}$.
+\item No reduction exists to any \emph{bounded-block} class -- common block
+diagonalization with blocks of size $\le b$ fixed, or finite group convolution
+with $\max_\pi\dim\pi\le q$ fixed -- of reduced dimension $R=o(D^2/b)$: the
+entropy $bR$ must reach $c(\delta)D^2$.
+\item More generally, a reduction to a class of entropy $\Ent=\Theta(D^{2-\eps})$,
+$\eps>0$, is impossible; and even a reduction to a class of entropy
+$\Theta(D^{1+\eta})$ for any $\eta<1$, while not excluded on dimension grounds
+alone for $\eta\ge\!?$, still yields only $\sqrt{n\log(e+D^{1+\eta}/n)}$, which at
+$D=n$ is $\omega(\sqrt n)$. Hence a universal reduction useful for proving Matrix
+Spencer would need a family of entropy $O(n)=O(D)$, which by the first sentence is
+incompatible with faithfully encoding $\M_D(\C)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+A universal reduction with $\Ent(\mcB)=o(D^2)$ would, applied to a spanning tuple
+or to a tuple whose images $\delta$-cover the $\Herm(D)$ unit ball for a fixed
+$\delta<1$, contradict Theorem~\ref{thm:sharpobstruct}. (Such tuples exist with
+$n=O(D^2)$ matrices, e.g. a basis of $\Herm(D)$ scaled into the unit ball; a
+universal reduction must handle them.) Items (1)--(3) instantiate the entropy
+accounting: a MASA, circulant, or Toeplitz lift is diagonal of dimension $N$ after
+Fourier sampling, with $\Ent=\Theta(N)$ (Theorem~\ref{thm:toep},
+Theorem~\ref{thm:group}); a bounded-block class has $\Ent=\Theta(bR)$
+(Theorem~\ref{thm:cstar}). Setting these $\ge c(\delta)D^2$ gives the stated
+dimension floors, and the rate follows from Theorem~\ref{thm:main}. For (3), any
+$\Ent=\omega(n)$ at $D=n$ makes the logarithm diverge.
+\end{proof}
+
+The one remaining escape inside the framework is the sum-of-classes route of
+Proposition~\ref{prop:sums}: write $A_i=\sum_{\ell=1}^s A_i^{(\ell)}$ and lift each
+summand to a cheap class. The direct-sum entropy is governed by
+Remark~\ref{rem:nonadd}, and we show this route is closed as well: spreading the
+encoding over many cheap commutative pieces cannot reduce the total entropy below
+the quadratic floor.
+
+\begin{lemma}[MASA-images span the matrix space only in number $d+1$]
+\label{lem:mubspan}
+For a unitary $U\in\M_d(\C)$ let $S_U=\{U^*\Lambda U:\Lambda\in\Diag_\R(d)\}\subseteq\Herm(d)$,
+the image of the real diagonal matrices, of real dimension $d$ and containing $I$.
+If $S_{U_1}+\cdots+S_{U_s}=\Herm(d)$ then $s\ge d+1$. The bound is attained, with
+the $S_{U_j}$ pairwise Hilbert--Schmidt orthogonal on $\Herm_0(d)$, whenever a
+complete set of $d+1$ mutually unbiased bases exists, in particular for every
+prime-power $d$.
+\end{lemma}
+
+\begin{proof}
+The trace is a nonzero linear functional on each $S_U$ (it sends $U^*\Lambda U$ to
+$\sum_k\Lambda_{kk}$ and $I\mapsto d$), so
+$S_U\cap\Herm_0(d)=\ker(\operatorname{tr}|_{S_U})$ has real dimension $d-1$, and
+$S_U=\R I\oplus(S_U\cap\Herm_0(d))$. If $\sum_j S_{U_j}=\Herm(d)$ then projecting
+out the common direction $\R I$ gives
+$\sum_j\big(S_{U_j}\cap\Herm_0(d)\big)=\Herm_0(d)$ (every traceless element is a
+sum of traceless parts, the scalar parts summing to a traceless multiple of $I$,
+hence to $0$). By subadditivity of dimension,
+\[
+d^2-1=\dim\Herm_0(d)\le\sum_{j=1}^s\dim\big(S_{U_j}\cap\Herm_0(d)\big)=s(d-1),
+\]
+so $s\ge(d^2-1)/(d-1)=d+1$. For attainment, two bases are mutually unbiased
+exactly when the traceless diagonal subspaces $S_{U}\cap\Herm_0(d)$ they define are
+Hilbert--Schmidt orthogonal: for rank-one projections $P_i,Q_j$ onto the two bases,
+$\langle P_i-\tfrac Id,\,Q_j-\tfrac Id\rangle_{\HS}=\abs{\langle e_i,f_j\rangle}^2-\tfrac1d$,
+which vanishes for all $i,j$ precisely under mutual unbiasedness. A complete set of
+$d+1$ such bases gives $d+1$ pairwise orthogonal $(d-1)$-dimensional subspaces with
+$(d+1)(d-1)=d^2-1=\dim\Herm_0(d)$, tiling it; complete sets exist for prime-power
+$d$ by the Wootters--Fields and Bandyopadhyay--Boykin--Roychowdhury--Vatan
+constructions \cite{WoottersFields,BBRV}.
+\end{proof}
+
+\begin{proposition}[The sum-of-MASAs route pays the quadratic floor]
+\label{prop:sumfloor}
+Suppose a tuple's encoding decomposes as $A_i=\sum_{\ell=1}^s A_i^{(\ell)}$ with
+each summand lifted, as in Proposition~\ref{prop:sums}, to a maximal abelian
+subalgebra $\mcB_\ell$ realized inside $\Herm(D)$ as a fixed MASA-image $S_{U_\ell}$
+(commutative, $h(\mcB_\ell)=1$, $R(\mcB_\ell)=D$). If the encoding is faithful for
+$\M_D(\C)$, then $s\ge D+1$, and the combined direct-sum entropy is
+\[
+\Ent\Big(\bigoplus_{\ell=1}^s\mcB_\ell\Big)
+=\Big(\max_\ell h(\mcB_\ell)\Big)\sum_{\ell=1}^s R(\mcB_\ell)
+=1\cdot sD\ \ge\ (D+1)D\ >\ D^2 .
+\]
+The quadratic entropy floor is therefore conserved: spreading a faithful encoding
+over commutative pieces does not escape Theorem~\ref{thm:sharpobstruct}.
+\end{proposition}
+
+\begin{proof}
+Faithfulness requires $\sum_\ell S_{U_\ell}\supseteq\Herm(D)$ (the summands must
+span the self-adjoint part for the images to cover the unit ball), so
+Lemma~\ref{lem:mubspan} gives $s\ge D+1$. Each commutative piece has reduced
+dimension $R(\mcB_\ell)=D$ and maximal block size $1$, so the direct-sum entropy is
+$sD\ge(D+1)D>D^2$ by Remark~\ref{rem:nonadd}. (If the pieces are bounded-block of
+size $\le b$ rather than commutative, the same count with
+$\max_\ell h(\mcB_\ell)\le b$ and reduced dimension $R_\ell$ gives
+$\Ent=(\max h)\sum R_\ell\ge\dim=\sum R_\ell^2\cdot(\cdots)\ge cD^2$ by
+Theorem~\ref{thm:sharpobstruct} applied to the direct sum.)
+\end{proof}
+
+\subsection{A faithful complexity measure: lift entropy}
+\label{subsec:liftentropy}
+
+Theorem~\ref{thm:sharpobstruct} identifies the quantity the method actually sees.
+It is not the rank of the matrices and not the ambient dimension, but the
+dimension of the smallest block algebra carrying a bounded operator-norm faithful
+lift. We isolate it, because the question of problem~(2) -- whether there is a
+complexity measure interpolating rank and dimension for which one can prove an
+improved bound -- has a clean answer in these terms: such a measure exists, equals
+the lift dimension, and is pinned to $D^2$ for the full algebra, so no improvement
+over the Khintchine rate is available for high-lift-entropy inputs by this method.
+
+\begin{definition}[Lift entropy]\label{def:liftentropy}
+For a tuple $A_1,\ldots,A_n\in\M_D(\C)$ and constants $K,\Lambda\ge1$, the
+\emph{$(K,\Lambda)$-lift entropy} is
+\[
+\lent_{K,\Lambda}(A_1,\ldots,A_n)
+=\min\Big\{\,\Ent(\mcB)\ :\ \text{the tuple has a }(K,\Lambda)\text{-lift to }\mcB
+\ \big(\text{Definition in \S3}\big)\Big\},
+\]
+the minimum entropy of a block algebra admitting a $(K,\Lambda)$-lift, and
+$+\infty$ if none exists.
+\end{definition}
+
+\begin{proposition}[Two-sided control by lift entropy]\label{prop:liftent}
+For every tuple of contractions,
+\[
+\discop(A_1,\ldots,A_n)
+\le C\Lambda K\sqrt{n\log\!\left(e+\frac{\lent_{K,\Lambda}(A_1,\ldots,A_n)}{n}\right)} .
+\]
+Moreover the measure is faithful and interpolates rank and dimension:
+\begin{enumerate}[leftmargin=2em]
+\item $\lent_{1,1}\le D^2$ always, by the exact lift of $\M_D(\C)$ to itself;
+and $\lent_{K,\Lambda}\ge c(\delta)D^2$ for any tuple whose span is operator-norm
+faithful for $\M_D(\C)$ (Theorem~\ref{thm:sharpobstruct}), so the full algebra has
+lift entropy $\Theta(D^2)$ for every fixed $K,\Lambda$.
+\item If all $A_i$ lie in a common finite-dimensional C*-algebra of reduced data
+$(h,R)$ then $\lent_{1,1}\le hR$ (Theorem~\ref{thm:cstar}); in particular a
+simultaneously diagonalizable tuple has $\lent_{1,1}\le D$, a bounded-block tuple
+has $\lent_{1,1}\le bD$, and a rank-$\rho$ tuple supported on a common
+$\rho$-dimensional range has $\lent_{1,1}\le\rho^2\le\rho D$.
+\item For scalar Toeplitz or Hankel contractions $\lent_{C_VK_T,1}\le O(D)$ via
+the sampled multiplier lift (Theorem~\ref{thm:toep}); for banded multilevel block
+Toeplitz of per-coordinate bandwidth $w$ and level $r$, block size $b$,
+$\lent_{O_{r,b}(1),1}\le O_{r,b}(w^r)$ (Theorem~\ref{thm:blocktoepml}).
+\end{enumerate}
+Thus $\lent$ is small exactly for the tractable classes of the main text and
+maximal, of order $D^2$, for the generic full-algebra inputs against which the
+method is powerless.
+\end{proposition}
+
+\begin{proof}
+The displayed bound is Theorem~\ref{thm:main} applied to a minimizing lift. Item
+(1): the upper bound is the identity lift $\mcB=\M_D(\C)$, $\Ent=D\cdot D=D^2$,
+$K=\Lambda=1$; the lower bound is Theorem~\ref{thm:sharpobstruct}, since a
+$(K,\Lambda)$-lift of an operator-norm faithful span is in particular a faithful
+encoding. Items (2)--(3) are the entropy budgets of the cited theorems; the
+rank statement uses that a tuple with common $\rho$-dimensional range is a
+compression of $\M_\rho(\C)$, of entropy $\rho^2$, and $\rho^2\le\rho D$ since
+$\rho\le D$.
+\end{proof}
+
+\begin{remark}[Relation to the rank theorem]\label{rem:rank}
+The bound $\lent_{1,1}\le\rho^2$ for rank-$\rho$ tuples shows the lift-entropy
+viewpoint recovers a Spencer-rate bound $\sqrt{n\log(e+\rho^2/n)}$ for
+common-low-rank inputs, i.e. $O(\sqrt n)$ once $\rho=O(\sqrt n)$. This is weaker
+than the poly-logarithmic-rank theorem of Bansal, Jiang and Meka \cite{BJM}, which
+reaches $\rho$ up to $\operatorname{polylog}(n)$ \emph{larger} by a genuinely
+different (non-lift) argument. The comparison is the honest measure of the
+method's ceiling: lift entropy controls discrepancy two-sidedly, but the control
+it gives in the rank direction stops at $\rho=O(\sqrt n)$, exactly where the
+quadratic floor $\rho^2=n$ meets the Spencer scale. Beating this requires leaving
+the finite-lift mechanism, consistent with Theorem~\ref{thm:nogo}.
+\end{remark}
+
+\subsection{The Matrix Koml\'os analogue}
+\label{subsec:komlos}
+
+The Koml\'os conjecture asks, for vectors $v_1,\ldots,v_n$ with
+$\norm{v_i}_2\le1$, for signs with $\norm{\sum_i\eps_iv_i}_\infty=O(1)$ -- a
+constant, with no $\sqrt n$ and no logarithm. A matrix analogue replaces the
+$\ell_2$ column normalization by a Hilbert--Schmidt normalization
+$\norm{A_i}_{\HS}\le1$ and asks for $\norm{\sum_i\eps_iA_i}_{\op}=O(1)$. We record
+what the entropy viewpoint does and does not say; the honest summary is that the
+present engine is structurally Spencer-rate and gives nothing of Koml\'os type for
+unstructured inputs, but yields a precise conditional statement for
+low-dimensional operator systems.
+
+\begin{remark}[The engine is Spencer-rate, not Koml\'os-rate]\label{rem:komlosceiling}
+Every bound the framework produces is of the form
+$\sqrt{n\log(e+\Ent/n)}$, and even the most favorable case, a diagonal lift with
+$\Ent=O(n)$, returns $O(\sqrt n)$, not $O(1)$. The block-diagonal input
+(Theorem~\ref{thm:djr}) is itself a $\sqrt n$-type theorem. Thus
+Theorem~\ref{thm:main} cannot, even in principle, certify a Koml\'os-type constant
+bound: the finite-lift method transports a discrepancy bound from the lift algebra
+but cannot improve its rate, and no $O(1)$ rate is available at the block-diagonal
+level. A genuine matrix Koml\'os theorem would require a different engine -- a
+matrix Banaszczyk-type bound -- which the present method only transports, not
+proves. We make no Koml\'os claim for unstructured $A_i$.
+\end{remark}
+
+What the lift viewpoint contributes is a faithful reduction of the structured
+matrix Koml\'os problem to the \emph{vector} Koml\'os problem on the symbol, for
+classes whose lift is a bounded multiplier with a small norming set. This is a
+conditional statement: it has Koml\'os-rate content exactly when a vector
+Koml\'os-type theorem is available for the sampled symbol, which for general
+$\ell_\infty$ targets is itself open (the best unconditional vector bound being
+Banaszczyk's $O(\sqrt{\log n})$ \cite{Banaszczyk}).
+
+\begin{proposition}[Structured matrix Koml\'os reduces to vector Koml\'os on the symbol]
+\label{prop:matrixkomlos}
+Let $A_1,\ldots,A_n\in\M_D(\C)$ admit a $(K,\Lambda,L_Q,Q,b)$ sampled multiplier
+lift (Definition in \S3) with symbols $F_i\in\mcF\subset C(\Omega;\M_b(\C))$, and
+suppose the Hilbert--Schmidt normalization passes to the symbol in the sense that
+$\norm{F_i}_{L^2(\Omega;\M_b,\,\mathrm{HS})}\le1$. Then for any signs,
+\[
+\norm{\sum_i\eps_iA_i}_{\op}
+\le\Lambda L_Q\max_{\omega\in Q}\norm{\sum_i\eps_iF_i(\omega)}_{\op},
+\]
+so a discrepancy bound for the sampled matrix vectors
+$\big(F_i(\omega)\big)_{\omega\in Q}\in\bigoplus_{\omega\in Q}\M_b(\C)$ transfers
+to the $A_i$. In particular, for scalar multiplier lifts ($b=1$) the right-hand
+side is a complex \emph{vector} discrepancy on $\abs Q$ coordinates, and any
+vector Koml\'os-type bound
+$\norm{\sum_i\eps_i(F_i(\omega))_\omega}_\infty\le\beta(\abs Q)$ for the
+$\ell_2$-normalized symbol vectors yields
+\[
+\norm{\sum_i\eps_iA_i}_{\op}\le\Lambda L_Q\,\beta(\abs Q).
+\]
+\end{proposition}
+
+\begin{proof}
+The displayed inequality is the norming property of $Q$ followed by the bound
+$\norm{\Pi(F)}_{\op}\le\Lambda\norm F_{L^\infty}$ of the sampled multiplier lift,
+exactly as in the proof of Theorem~\ref{thm:sampled}, applied to the fixed signed
+symbol $\sum_i\eps_iF_i$ rather than re-optimizing. The second statement
+specializes $b=1$, where $\bigoplus_{\omega\in Q}\C\cong\C^{\abs Q}$ and the
+operator norm of the diagonal is the $\ell_\infty$ norm, so the sampled object is
+literally a vector discrepancy; substituting the assumed vector bound $\beta$
+gives the result.
+\end{proof}
+
+\begin{remark}[Scope and honesty]\label{rem:komloshonest}
+Proposition~\ref{prop:matrixkomlos} is a transport statement, not a theorem about
+the matrix Koml\'os constant. Its conclusion is $O(1)$ in $n$ only when both
+$\abs Q=O(1)$ and a vector Koml\'os constant bound holds on the symbol, a regime
+that covers only very low-complexity classes (for instance a fixed finite symbol
+set, $\abs\Omega<\infty$, with $\Lambda L_Q=O(1)$). For the natural structured
+families of the main text the norming set has size $\abs Q=\Theta(D)$ or
+$\Theta(w^r)$, so even a perfect vector Koml\'os input would give only
+$O\!\big(\sqrt{\log\abs Q}\,\big)$ through Banaszczyk, i.e.
+$O(\sqrt{\log D})$ -- a genuine improvement over the Spencer
+$\sqrt{\log(e+D/n)}$ in the dimension dependence, but not a constant. We therefore
+record the matrix Koml\'os analogue as \emph{open in all the regimes the
+finite-lift method reaches nontrivially}, with the method contributing only the
+reduction to the vector problem on the symbol and the structural observation of
+Remark~\ref{rem:komlosceiling} that its own block-diagonal engine cannot supply a
+constant rate.
+\end{remark}
+
+\subsection{Summary}
+\label{subsec:univsummary}
+
+The two probes resolve as follows. The universal-family route to full Matrix
+Spencer (problem~2) is closed by Theorem~\ref{thm:nogo}: faithfully encoding
+$\M_D(\C)$ costs lift entropy $\Theta(D^2)$ -- by Theorem~\ref{thm:sharpobstruct},
+robustly across exact, approximate, completely bounded, and sum-decomposed lifts
+-- so no class of entropy $O(n)$ can be both universal and useful, and the strategy
+cannot beat the Khintchine rate $\sqrt{n\log(e+D^2/n)}$. The associated complexity
+measure, lift entropy (Definition~\ref{def:liftentropy}), controls discrepancy
+two-sidedly (Proposition~\ref{prop:liftent}) and is the faithful interpolant
+between rank and dimension requested by problem~(2a): it is $\Theta(D^2)$ for the
+full algebra, $\le\rho^2$ at rank $\rho$, and $O(D)$ for the structured classes,
+with the method's ceiling located precisely at lift entropy $n$. The bounded-lift
+hypothesis is not the obstacle -- a fixed commutative algebra of quadratic size
+already lifts every Hermitian tuple contractively
+(Proposition~\ref{prop:masalift}) -- which is exactly why the obstruction is
+entropic and unavoidable. For the Matrix Koml\'os analogue (problem~1) the engine
+is structurally Spencer-rate (Remark~\ref{rem:komlosceiling}); the contribution is
+the faithful reduction of the structured problem to vector Koml\'os on the symbol
+(Proposition~\ref{prop:matrixkomlos}), which is $O(1)$ only for finite symbol sets
+and otherwise improves the rate to $O(\sqrt{\log D})$ at best, leaving the matrix
+Koml\'os conjecture open in every regime the method reaches nontrivially.
+
+% Bibliography additions for standalone compilation. When this file is \input
+% into the main document, fold these entries into its thebibliography and delete
+% the block below.
+%
+% \bibitem{Banaszczyk}
+% W. Banaszczyk,
+% \emph{Balancing vectors and Gaussian measures of n-dimensional convex bodies},
+% Random Structures Algorithms \textbf{12} (1998), no.~4, 351--360.
+%
+% \bibitem{WoottersFields}
+% W.~K. Wootters and B.~D. Fields,
+% \emph{Optimal state-determination by mutually unbiased measurements},
+% Ann. Physics \textbf{191} (1989), no.~2, 363--381.
+%
+% \bibitem{BBRV}
+% S. Bandyopadhyay, P.~O. Boykin, V. Roychowdhury, and F. Vatan,
+% \emph{A new proof for the existence of mutually unbiased bases},
+% Algorithmica \textbf{34} (2002), no.~4, 512--528; arXiv:quant-ph/0103162.

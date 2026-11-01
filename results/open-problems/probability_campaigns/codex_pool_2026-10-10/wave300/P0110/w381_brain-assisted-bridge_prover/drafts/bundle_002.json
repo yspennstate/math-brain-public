@@ -1,0 +1,85 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w381",
+  "bundle_slug": "p0110-variance-regularity-20261010-002",
+  "entries": [
+    {
+      "key": "variance-tightness-matching-shortcut",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0110-w381-variance-tightness-matching-shortcut",
+      "kind": "concept",
+      "title": "Rejected inference from variance-normalized concentration to matching thresholds",
+      "statement": "REJECTED GENERIC INFERENCE: uniform exponential concentration normalized by the actual standard deviation, bounded positive path weights, and linear mean passage times do not alone force the uniform upper concentration exponent to equal the uniform lower variance exponent. Uniform power regularity of the variance scale or additional model structure is required. This rejects a generic shortcut and does not assert failure for an iid stationary lattice FPP law.",
+      "proof_text": null,
+      "assumptions": [
+        "The rejected implication concerns general passage-time families; it must not be attributed to the original iid-lattice theorem"
+      ],
+      "domain": "probability / fluctuation exponent matching",
+      "source": {
+        "source_id": "owner-p0110-w381-20261010:variance-tightness-matching-shortcut",
+        "url": "urn:owner-own-work:p0110:w381:20261010:variance-tightness-matching-shortcut",
+        "revision": "draft-20261010-independently-unchecked",
+        "license": "owner-own-work (campaign deduction; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bounded-ray-oscillating-variance",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0110-w381-bounded-ray-oscillating-variance",
+      "kind": "lemma",
+      "title": "A bounded positive dependent ray metric has tight normalized concentration and unmatched thresholds",
+      "statement": "Let S={4^k:k>=1}, sigma_n=min(sqrt(n)/4,1+dist(n,S)/4) for n>=0, and let epsilon be one fair random sign. On the ray with edges j-1 to j assign tau_j=1+(sigma_j-sigma_(j-1)) epsilon. These weights lie in [3/4,5/4], and their unique minimizing path to n has T_n=n+sigma_n epsilon. Its mean is n, variance is sigma_n^2, and E exp(alpha |T_n-E T_n|/sqrt(Var T_n))=exp(alpha) for every alpha>0. Define a as the upper uniform concentration threshold: inf q for which some alpha>0 makes sup_(n>=1) E exp(alpha |T_n-E T_n|/n^q) finite. Define b as the lower uniform variance threshold: sup q for which some N has inf_(n>N) Var T_n/n^(2q)>0. Then a=1/2 and b=0. The weights share epsilon and are nonstationary; this is not an iid undirected Z^2 law.",
+      "proof_text": "variance-normalized tight concentration need not match fluctuation thresholds\n\nThis continuation addresses the remaining matching gap, not a new target. Let S={4^k:k>=1} and, for integers n>=0, set sigma_n=min(sqrt(n)/4, 1+dist(n,S)/4). Let epsilon be a single fair random sign shared by ALL n. Define tau_j=1+(sigma_j-sigma_(j-1)) epsilon, j>=1. Both functions inside the minimum are 1/4-Lipschitz on nonnegative integers, and their minimum has the same property. Since sigma_0=0, every tau_j lies in [3/4,5/4], and the unique path along the ray from 0 to n has passage time T_n=n+sigma_n epsilon. These edge weights are DEPENDENT and NONSTATIONARY, and the graph is a ray: this is not an iid Z^2 FPP counterexample.\n\nHere E T_n=n, Var T_n=sigma_n^2, and E exp(alpha |T_n-E T_n|/sqrt(Var T_n))=exp(alpha) for every alpha>0 and n>=1. Thus concentration normalized by the actual standard deviation is uniformly tight, with zero nonrandom mean bias.\n\nFor n=4^k, k>=2, sigma_n=1. For n=2*4^k, the nearest element of S is 4^k and its distance is 4^k, so sigma_n=sqrt(n)/4. Also 1/4<=sigma_n<=sqrt(n)/4 for n>=1. Consequently the upper threshold a=inf{q: there is alpha>0 with sup_n E exp(alpha |T_n-E T_n|/n^q)<infinity} equals 1/2. The lower threshold b=sup{q: for some N, inf_(n>N) Var T_n/n^(2q)>0} equals 0. Indeed the midpoint subsequence forces a>=1/2 and the global upper bound gives a<=1/2; the anchor subsequence prevents b>0 and sigma_n>=1/4 gives b>=0. This refutes the GENERIC inference from variance-normalized tight concentration, path additivity, bounded positive weights and linear means to matching fluctuation thresholds. Iid/stationary lattice structure has not been preserved in this countermodel.",
+      "assumptions": [
+        "A ray graph",
+        "Dependent nonstationary edge weights driven by a common fair sign",
+        "The stated sigma_n sequence"
+      ],
+      "domain": "probability / fluctuation exponent matching",
+      "source": {
+        "source_id": "owner-p0110-w381-20261010:bounded-ray-oscillating-variance",
+        "url": "urn:owner-own-work:p0110:w381:20261010:bounded-ray-oscillating-variance",
+        "revision": "draft-20261010-independently-unchecked",
+        "license": "owner-own-work (campaign deduction; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "variance-regularity-matches-fluctuation-exponents",
+      "namespace": "probability.first-passage-percolation",
+      "logical_name": "p0110-w381-variance-regularity-matches-fluctuation-exponents",
+      "kind": "lemma",
+      "title": "Normalized concentration plus uniform two-sided variance power regularity matches chi",
+      "statement": "Let T_v, v in Z^d excluding 0, have finite means and 0<sigma(v)^2=Var T_v<infinity; put X_v=T_v-E T_v. Define chi_a as the infimum of q such that some alpha_q>0 gives sup_v E exp(alpha_q |X_v|/|v|^q)<infinity, and chi_b as the supremum of q such that some R gives inf_(|v|>R) Var T_v/|v|^(2q)>0. Suppose some alpha>0,K<infinity give sup_v E exp(alpha |X_v|/sigma(v))<=K. Suppose also that there is chi>=0 such that for every eta>0 there are c_eta,C_eta,R_eta>0 with c_eta |v|^(chi-eta)<=sigma(v)<=C_eta |v|^(chi+eta) for ALL |v|>=R_eta. Then chi_a=chi_b=chi. This is a sufficient criterion, not evidence that the uniform variance regularity or normalized concentration has been proved for iid Uniform[1,2] FPP. It addresses fluctuation matching only, not wandering matching.",
+      "proof_text": "the exact additional variance regularity that would match chi\n\nLet (T_v) be real random variables indexed by nonzero v in Z^d, with X_v=T_v-E T_v and 0<sigma(v)^2=Var T_v<infinity. Define chi_a by the uniform exponential upper threshold and chi_b by the uniform large-displacement variance lower threshold in STATEMENT.md. Suppose (i) some alpha>0, K<infinity satisfy sup_v E exp(alpha |X_v|/sigma(v))<=K; and (ii) there is chi>=0 such that, for EVERY eta>0, some c_eta,C_eta,R_eta>0 satisfy\n\nc_eta |v|^(chi-eta) <= sigma(v) <= C_eta |v|^(chi+eta), for ALL |v|>=R_eta.\n\nThen chi_a=chi_b=chi. Proof: for q>chi take eta=(q-chi)/2. The ratio sigma(v)/|v|^q is bounded for large v by (ii) and for the finitely many smaller lattice v by finiteness and positivity of sigma(v). Rescale alpha by that uniform ratio bound to obtain the upper exponential envelope, so chi_a<=chi. For q<chi take eta=(chi-q)/2 in the variance lower bound, proving chi_b>=chi. Finally chi_b<=chi_a for every such family: an upper exponential bound at exponent q implies E X_v^2<=2K |v|^(2q)/alpha_q^2, by e^t>=t^2/2. A variance lower bound at any r>q contradicts this as |v| tends to infinity. These three inequalities force equality.\n\nThe hypothesis is UNIFORM over all lattice displacements, not a fitted variance exponent on one ray or a subsequence. It is not proved here for Uniform[1,2]. L8 demonstrates why its regularity content cannot be erased. L9 addresses fluctuation matching only; wandering matching and the actual-law inputs remain unproved. No numerical experiment or formal check is claimed for L8--L9; both are exact written auxiliary deductions pending independent review.",
+      "assumptions": [
+        "Finite positive variance at every nonzero lattice displacement",
+        "The stated uniform normalized exponential-moment bound",
+        "The stated two-sided variance power envelope for every positive exponent slack and every sufficiently large displacement"
+      ],
+      "domain": "probability / fluctuation exponent matching",
+      "source": {
+        "source_id": "owner-p0110-w381-20261010:variance-regularity-matches-fluctuation-exponents",
+        "url": "urn:owner-own-work:p0110:w381:20261010:variance-regularity-matches-fluctuation-exponents",
+        "revision": "draft-20261010-independently-unchecked",
+        "license": "owner-own-work (campaign deduction; independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "bounded-ray-oscillating-variance",
+      "to_key": "variance-tightness-matching-shortcut",
+      "kind": "refutes",
+      "rationale": "The positive bounded dependent ray metric has exact normalized tight concentration and linear means, but its upper/lower thresholds are 1/2 and 0."
+    },
+    {
+      "from_key": "variance-regularity-matches-fluctuation-exponents",
+      "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
+      "kind": "semantic_association",
+      "rationale": "An explicit sufficient bridge for the fluctuation-matching input in P0110; its variance regularity and normalized concentration have not been established for the concrete iid law, and wandering matching is still missing."
+    }
+  ]
+}

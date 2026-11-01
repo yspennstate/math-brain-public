@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "command": "python -X utf8 ~/brain_workers/w580/verify_exact.py",
+  "observable_stencil_states": 128,
+  "density_stencil_states": 64,
+  "uniform_ellipticity_lower_bound": "1/12",
+  "before_expectation": "1/6",
+  "after_one_step_expectation": "25/144",
+  "stationarity_residual": "1/144",
+  "chi_square": "1/72",
+  "total_variation": "1/24",
+  "density_histogram": {
+    "1": 32,
+    "5/6": 16,
+    "7/6": 16
+  },
+  "fresh_site_expectation_before_and_after": "1/6",
+  "deterministic_density_control": "1",
+  "wall_seconds": 0.04306529997847974,
+  "gate": {
+    "ts": "2026-10-10 10:20:42",
+    "status": "warn",
+    "mode": "owner_present_polite",
+    "reasons": [
+      "process_pressure"
+    ],
+    "cpu_pct": 86.8,
+    "mem_avail_mb": 4702,
+    "commit_eff_used_pct": 56.9,
+    "commit_eff_avail_mb": 70299,
+    "hung_windows": 0,
+    "age_seconds": 21.754901,
+    "scope": "one serial finite-stencil rational check, at most 128 states; no models, GPU, parallelism or sweep",
+    "allowed": true
+  },
+  "proof_receipt": false,
+  "meaning": "Exact finite example check; does not prove the general lemma or resolve C0044."
+}

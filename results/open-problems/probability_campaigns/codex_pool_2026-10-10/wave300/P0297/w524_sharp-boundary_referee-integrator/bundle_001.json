@@ -1,0 +1,47 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w524",
+  "bundle_slug": "p0297-dependent-kpz-guard-reviewed-001",
+  "entries": [
+    {
+      "key": "kpz-scope",
+      "namespace": "probability.lqg.metric",
+      "logical_name": "metric-kpz-independent-set-scope",
+      "kind": "concept",
+      "title": "Scope of exact metric KPZ",
+      "statement": "For each fixed gamma in (0,2), h a planar GFF, D_h its gamma-LQG metric, Q=2/gamma+gamma/2 and xi=gamma/d_gamma, the exact metric KPZ equality dim_E(X)=xi Q dim_D(X)-(xi^2/2)dim_D(X)^2 is proved for a deterministic Borel set X or a random Borel set independent of h. It cannot be applied unchanged to arbitrary h-dependent sets.",
+      "proof_text": null,
+      "assumptions": ["0<gamma<2 fixed", "X deterministic Borel or random Borel independent of h"],
+      "domain": "probability; Liouville quantum gravity",
+      "source": {"source_id": "gwynne-pfeffer-1905.11790-theorem-1.4", "url": "https://arxiv.org/html/1905.11790", "revision": "v3, as-read-2026-10-10", "license": "arxiv-nonexclusive", "excerpt": "deterministic Borel set or a random Borel set independent from h"}
+    },
+    {
+      "key": "thick-dims",
+      "namespace": "probability.lqg.metric",
+      "logical_name": "gamma-thick-point-two-dimensions",
+      "kind": "concept",
+      "title": "Dimensions of gamma-thick points",
+      "statement": "For each fixed gamma in (0,2), with h a whole-plane GFF and D_h its gamma-LQG metric, the h-dependent set T_h^gamma of gamma-thick points has almost-sure Euclidean Hausdorff dimension 2-gamma^2/2 and D_h-Hausdorff dimension d_gamma. The first follows from the thick-point dimension formula with deterministic ambient C; the second is the full-dimension corollary.",
+      "proof_text": null,
+      "assumptions": ["0<gamma<2 fixed", "h whole-plane GFF", "D_h gamma-LQG metric"],
+      "domain": "probability; Liouville quantum gravity",
+      "source": {"source_id": "gwynne-pfeffer-1905.11790-eq1.11-cor1.7", "url": "https://arxiv.org/html/1905.11790", "revision": "v3, as-read-2026-10-10", "license": "arxiv-nonexclusive", "excerpt": null}
+    },
+    {
+      "key": "dependent-counterexample",
+      "namespace": "probability.lqg.metric",
+      "logical_name": "gamma-thick-points-refute-unrestricted-metric-kpz",
+      "kind": "concept",
+      "title": "Thick-point counterexample to unrestricted metric KPZ",
+      "statement": "For every fixed gamma in (0,2), the h-dependent Borel set X=T_h^gamma refutes an extension of the independent-set metric KPZ equality to all random Borel sets. Its true Euclidean dimension is 2-gamma^2/2 and its metric dimension is d_gamma, whereas plugging d_gamma into that equality gives gamma Q-gamma^2/2=2. The discrepancy is gamma^2/2>0. This does not compute d_gamma or refute the correctly scoped theorem. Independently checked by w524 on 2026-10-10; proof uses Gwynne-Pfeffer equation (1.11) and Corollary 1.7.",
+      "proof_text": null,
+      "assumptions": ["0<gamma<2 fixed", "X is the gamma-thick-point set of the same field h that defines D_h", "xi=gamma/d_gamma", "Q=2/gamma+gamma/2"],
+      "domain": "probability; Liouville quantum gravity",
+      "source": {"source_id": "owner:P0297:w523:C3-reviewed-w524", "url": null, "revision": "2026-10-10 independent review in w524/REVIEW_PACKET.md", "license": "owner-own-work", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "dependent-counterexample", "to_key": "thick-dims", "kind": "depends_on", "rationale": "Both dimensions of the same gamma-thick set are the inputs to the counterexample."},
+    {"from_key": "dependent-counterexample", "to_key": "kpz-scope", "kind": "semantic_association", "rationale": "The counterexample explains why the theorem's independence premise cannot be erased."}
+  ]
+}

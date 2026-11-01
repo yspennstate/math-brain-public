@@ -1,0 +1,63 @@
+{
+  "candidate_id": "C0048",
+  "checked_date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "exact_statement": "For every integer q>=3 and integer d>=3, the standard zero-field nearest-neighbor ferromagnetic Potts model on Z^d has positive color-boundary spontaneous magnetization at its first critical inverse temperature.",
+  "convention": "Weight exp(beta sum_edges 1{sigma_x=sigma_y}); M(beta)=(q*mu_beta^1(sigma_0=1)-1)/(q-1), beta_c=inf{beta:M(beta)>0}. The target is M(beta_c)>0, equivalently phi^wired_{p_c,q}(0 connected by ordinary edges to infinity)>0, with p=1-exp(-beta).",
+  "normalization_warning": "Biskup-Chayes use J=2*d*beta in the delta-spin convention and their rescaled spin inner product has kappa=(q-1)/q. This packet uses their probability-vector F_J. Lecture unit-spin conventions rescale beta.",
+  "primary_sources": [
+    {
+      "source_id": "duminil_copin_ising_potts_2017",
+      "url": "https://arxiv.org/abs/1707.00520",
+      "read_url": "https://www.ihes.fr/~duminil/publi/2017PIMS.pdf",
+      "locator": "Conjecture 2, printed p.93; critical magnetization definition, printed p.5",
+      "historical_status": "source calls it a conjecture",
+      "intake_reported_pdf_sha256": "cc442344d0cc21c5d57163719b06dfaf1d243dee8731716bf89d21c593f98a5b",
+      "hash_verification": "intake-reported only; not a new source-hash check"
+    },
+    {
+      "source_id": "biskup_chayes_2003",
+      "url": "https://www.math.ucla.edu/~lchayes/lchayes_website_folder/old_publications_folder/bc_mft.pdf",
+      "arxiv": "https://arxiv.org/abs/math/0207242",
+      "doi": "10.1007/s00220-003-0828-2",
+      "locators": [
+        "Main Theorem (1.12)-(1.13)",
+        "Potts normalization (2.3),(2.7)",
+        "Theorem 2.1 and following paragraph",
+        "proof of Theorem 2.1: delta_d=(q-1)^2 I_d/(2q)"
+      ],
+      "scope": "fixed integer q>=3, sufficiently large d; cited theorem alone does not identify J_t=J_c"
+    },
+    {
+      "url": "https://journals.aps.org/prb/abstract/10.1103/x1qn-x6xb",
+      "date": "2025-07-24",
+      "role": "recent primary finite-size/fuzzy-sphere evidence; different quantum regularization, not a proof of the classical nearest-neighbor universal target"
+    }
+  ],
+  "prior_work": {
+    "recovered": "C0048-A001 in probability_1000_intake_claude_20260907/attempts.jsonl line 38; no result",
+    "targeted_negative_searches": [
+      "probability_1000_attempts_H_20260912",
+      "probability_1000_attempts_I_20260914",
+      "prob1000_lean_20260908",
+      "intake_H_20260914",
+      "intake_I_20260914",
+      "named Potts/C0048 filenames in Big Open problem in probability theory"
+    ],
+    "team_O": "targeted board search found no C0048 lane",
+    "retirement_certificate": "NOT established; no owner-wide search performed"
+  },
+  "store_check": {
+    "receipt": "~\\brain_workers\\w463\\STORE_SOURCE_REPORT.json",
+    "read_only": true,
+    "matching_ids": [
+      "claim_38c945c83e6d9f9dc77b20f936b660e811e528c284f76bd513990e6ed06ecc6a",
+      "claim_9830d2b5c32b82afa88de780611e6b0fe5e81b7d425ff5fabff71dad19cc6930"
+    ],
+    "interpretation": "matching problem and prior-attempt nodes, not a proof or exhaustive solved/retired certificate"
+  },
+  "status_search_limits": "Targeted public primary searches did not locate a rigorous full-target solution; a search miss cannot certify current openness.",
+  "brain_scar": "perceptron_proof_open_gaps_fleet_2026_07_12",
+  "recall_receipt": "~\\brain_workers\\w463\\RECALL_REPORT.json"
+}

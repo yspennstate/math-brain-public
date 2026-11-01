@@ -1,0 +1,15 @@
+P0321 is unproved here. Its stored campaign formulation and Lewin's primary discussion are recovered; present openness remains UNKNOWN. The precise chosen subtarget is classical density-one 1/r jellium with Palm/Delaunay bond observables. A recent Wigner effective-action paper does not supply the required microscopic estimate.
+
+Saved three conditional lemmas and two exact obstructions in ATTEMPT.md, with six rows in CLAIMS.jsonl including the unproved input M. Absolute connected-cumulant bounds give algebraic vertex correlations; transferring them needs a nonzero microscopic bond amplitude and a stated error/limit criterion. Logarithmic variance alone fails. The volume-only wording was corrected after w541's audit: errors vanishing at fixed separation can suffice when volume tends to infinity first.
+
+Measurement command: python -X utf8 verify_transfer.py. All 11 counterexample controls and 27 positive toy controls passed in 0.085 seconds. Removing the first mode of a positive wrapped Gaussian changes its coefficient from 0.25 to 3.72e-17 at TV distance 0.1591549587; its density stays at least 0.15791154. The exact answer is zero with TV 1/(2pi). These are arithmetic controls, not a microscopic phase proof, a formal certificate, or a recall-performance measurement. MEASUREMENTS.json contains the full numbers.
+
+w541 independently checked the conditional proofs and counterexamples; its one wording fix is applied. w542 reports scoped KEEP verdicts for the original five mathematical claims. The final version makes L2's nonnegative bound coefficients explicit and adds L3's iterated-limit alternative; these clarifications and the phase precisification await final snapshot review. Different-login and response-side served-model gates are not verified; MODEL_EVIDENCE.json says so explicitly.
+
+Version 002 supersedes version 001, preserved as bundle_001.json.superseded outside the JSON ingestion queue. Six DRAFT concept entries and five supported relations are submitted at ~/math-brain-inbox/w540/bundle_002.json. Submission, review, ingestion and retrievability are tracked separately in BUNDLE_STATE.json. No live mathematical store was changed by this worker and no live integrator was run. Three narrow hook proposals are staged locally and appended to the authorized hooks proposal file.
+
+Apply: review REVIEW_PACKET.md and the scoped receipts, then have the validating coordinator integrate the labeled concept bundle; patches/02_p0321_cumulant_transfer_corrected.diff is the reviewable new-file diff for that already-submitted draft, not a second ingestion request.
+
+The risk is using these conditional results as if M were proved, or applying a fixed-r argument to simultaneous volume/distance limits. The single missing step is a microscopic connected-defect/insertion estimate that controls lifted angles, dislocations and disclinations on a nonempty temperature interval and proves positional disorder in the same Gibbs state.
+
+NEXT: Prove or refute an anchored all-order connected-cumulant estimate for a specified microscopic jellium coarse-graining, with the physical bond projection and exact limit order recorded.

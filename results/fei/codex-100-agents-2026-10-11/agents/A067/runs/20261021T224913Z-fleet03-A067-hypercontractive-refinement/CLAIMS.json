@@ -1,0 +1,31 @@
+[
+  {
+    "claim_id": "A067-POSTCORE-BENT-FLAG-SAME-CHILD-BANK",
+    "version": 1,
+    "exact_statement": "For every integer m>=2, let b_m(Y)=(-1)^(sum_j Y_(2j-1)Y_(2j)) on 2m bits, G_m(w,Y,z)=b_m(Y)+1{w=0,Y=0}(z-1), c_m=b_m-2*1{w=0,Y=0}, and delta=2^(-(2m+1)). In bits, with both actual z terminals retained, D_z=H(G_m)-(H(b_m)+H(c_m))/2=B_z+JS_z and S_2=(2I(b_m)-H(b_m)+2I(c_m)-H(c_m))/2 satisfy S_2-D_z>delta/4. In particular both terminals and G_m satisfy H<=2I. For every C>=2 the same payment holds with S_C, including any independent spectator q with available H(q)<=C I(q), retaining its full terminal entropy. No assertion about arbitrary cores or already debited ancestor banks is made.",
+    "hypotheses": [
+      "Uniform finite Boolean signs; actual specified quadratic bent phase and marked all-zero vertex",
+      "m>=2; full core Fourier label including w; both actual terminals retained",
+      "Spectator extension requires actual unused C-certified independent spectator; no reset of an inherited bank"
+    ],
+    "statement_sha256": "c8972812430c4b66c2874a9746d9fe2f5305397434ca62d56dc42755c2c3bee1",
+    "contributors": [
+      "fleet03/A067; A088 credited for physical post-core obstruction family"
+    ],
+    "proof_source": "agents\\A067\\runs\\20261021T224913Z-fleet03-A067-hypercontractive-refinement\\DERIVATION.md",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_WITH_EXACT_BOUNDARY_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A088",
+      "A070",
+      "A094",
+      "A096",
+      "B14",
+      "B20"
+    ]
+  }
+]

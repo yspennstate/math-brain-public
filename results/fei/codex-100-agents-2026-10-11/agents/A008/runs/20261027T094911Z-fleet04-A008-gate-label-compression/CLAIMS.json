@@ -1,0 +1,127 @@
+[
+  {
+    "claim_id": "A007-POSITIVE-CORE-DOMINATED-FINITE-EXTRACTION",
+    "version": 1,
+    "exact_statement": "For every nonconstant monotone Boolean sign core g on s>=1 uniform bits and 0<delta<=1, choose h=g or h(z)=-g(-z) with false density q<=1/2, fix ANY finite positive CNF for h with nonempty anchors, and repeat each anchor with L=2s+2ceil(log2(16/delta)) distinct positive private bits to obtain A015 F_L. Every fixed subprobability nonempty reference R covering F_L and satisfying complete C(F_L;R)<=K I(F_L), K>=0, induces a normalized nonempty core reference r with C_g(r)<=(1+delta)K I(g). Specifically epsilon=2^-L, rho=2^s qepsilon<1, a=(1-rho)^2, u_S=Fhat_L(S,empty)^2>=a p_S for p_S=ghat(S)^2, E=all nonempty core sets, Z=sum_E R, D=sum_E u log2(1/R), and B=sum_E(u-ap)log2(1/R)>=0 give the EXACT C_g(r)=(D-B)/a+Var(g)log2 Z. For ANY raw successful reference Q with total mass<=theta=Pr(initial roots nonempty)>0 and R=Q/theta, the TWO normalizers cancel exactly: C_g(r)=(D_Q-B_Q)/a+Var(g)log2 Q_E, Q_E=sum_E Q>0. This retains rare-sector surprisal and surplus for all 0<Q_E<=theta<=1. It refunds one nested conditioning event, not repeated-root/label/attachment costs. No common amplitude scaling, universal source, free adaptive reset, empty/nonempty wrapper absorption or full FEI solution is asserted.",
+    "hypotheses": [
+      "Finite uniform physical cubes, sign Boolean targets and bit-valued entropy; monotone positive anchors, distinct fresh private bits; g nonconstant.",
+      "All representation, orientation and reference choices fixed before the Fourier target; reference mass<=1 with complete output coverage.",
+      "The paid complete source C(F_L;R)<=K I(F_L) is a hypothesis; every original decoding cost is included in R.",
+      "For raw-source cancellation Q is the SAME generator with total successful nonempty output mass<=theta; no actual queue supplier is constructed.",
+      "Core-only denominator a>0 follows from the stated finite L; domination and reference mass are used before discarding B."
+    ],
+    "statement_sha256": "fe4b376aa14ef436f48c8d89d4e4707024532c818303cee0f7a6231a573f0bfd",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": [
+      "agents\\A007\\runs\\20261027T062000Z-fleet04-A007-root-normalization\\DOMINATED_EXTRACTION.md",
+      "REVIEW_A007.md",
+      "out/checks.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A015-POSITIVE-ANCHOR-MONOTONE-UNIVERSALITY",
+        "version": 1,
+        "statement_sha256": "fa6418ad173c2582449548f9624efe7f01b61b9c37c659b7844978c42b767c92",
+        "acceptance": "Independent A007 reconstruction in REVIEW_A015.md"
+      },
+      "Direct finite cross-entropy algebra, Boolean nonzero coefficient granularity, monotone duality, Poincare, explicit scalar bounds proved in DOMINATED_EXTRACTION.md"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A007",
+        "role": "Author analytic proof and exact finite checks; not independent acceptance",
+        "verdict": "PASS",
+        "evidence": [
+          "out/checks.json",
+          "out/root_checks.json"
+        ]
+      },
+      {
+        "reviewer": "A008",
+        "verdict": "HOLDS_FULL_STATED_SCOPE",
+        "role": "Independent physical edge, coefficient, scalar and exact two-normalizer reconstruction; no substantive repair",
+        "reviewed_at": "2026-10-27T10:22:07.619268+00:00",
+        "evidence": [
+          "REVIEW_A007.md",
+          "out/checks.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_A008_FULL_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A008",
+      "A015",
+      "A086",
+      "A094",
+      "B02",
+      "B03",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A008-SHARP-SECTOR-EXTRACTION-AND-CHEAP-SOURCE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For any finite Omega, sector E with at least two atoms, nonnegative target weights p on E of positive total mass and nonnegative source weights u on Omega, and beta>0, C_p(R/R(E))<=beta C_u(R) for EVERY strictly positive subprobability reference R if and only if p(e)<=beta u(e) for every e in E; necessity still holds with any fixed finite additive allowance. Costs use log2. For the positive prime-clause core g_s=2[z OR AND_i x_i]-1 and lift F_s,L=2 AND_(i,l<=L)(z OR x_i OR y_i,l)-1, the exact best extraction factor is (1-2^-L)^(-2s); thus factor <=1+delta requires L>=ceil(log2(2s/delta)) and L>=ceil(log2(4s/delta)) suffices for this family, 0<delta<=1. For L=1 there is an explicit fixed complete FULL spectral-output reference Q_s with cost<=24 I(F_s,1) and a canonical binary prefix code of expected length<=25 I(F_s,1), whose normalized nonempty-core restriction r_s has C_g_s(r_s)>=4^s-5, while I(g_s)<=5/4. Namely on nonempty atoms set R_s(A)=u_s(A)/2 except at j={x_1,...,x_s}, where multiply by 2^(-16^s); normalize R_s to R_s prime, then Q_s(empty)=1-v_s, Q_s(A)=v_s R_s prime(A), v_s=sum_nonempty u_s. Both conditioning refunds are retained. This refutes fixed-L extraction from EVERY cheap supplied reference, not optimized source existence, original PI-J references, A007 finite extraction, or FEI.",
+    "hypotheses": [
+      "Finite uniform physical Boolean cubes; entropy and ideal costs in bits; all references fixed before the target sample.",
+      "The sharp generic necessity has |E|>=2, positive reference masses, beta>0 and no negative costs; zero target weights use the usual zero convention.",
+      "Lift variables are distinct positive private bits and all clauses share the displayed z anchor; s,L>=1.",
+      "The bad reference is an explicit complete OUTPUT source, not claimed to be generated by the original prime-implicant queue. Full empty/nonempty wrapper and one global rounding bit are paid.",
+      "Extraction conditions the SAME supplied reference. Existence of a better chosen core reference is not excluded."
+    ],
+    "statement_sha256": "854d98f32e04dac41a1fd528940ecaa05610b652af9f1bd188960b0bdfc05ca2",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": [
+      "SHARP_EXTRACTION.md",
+      "FROZEN_SPEC.json",
+      "REFERENCE_SPEC.json",
+      "code/check.py",
+      "out/checks.json",
+      "CODE_SPEC.json",
+      "code/code_check.py",
+      "out/code_checks.json"
+    ],
+    "proof_dependencies": [
+      "Direct finite cross-entropy algebra and rare-atom limit with fixed sector mass",
+      "Explicit physical polynomial and exact influence of z OR AND_i(x_i OR AND_l y_i,l)",
+      "Elementary geometric sum, Bernoulli inequalities, entropy splitting and Shannon/Kraft coding; no FEI premise"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A008",
+        "role": "Author analytic proof and exact physical validation, not independent acceptance",
+        "verdict": "AUTHOR_PROOF_EXACT_FINITE_CHECKS",
+        "evidence": [
+          "SHARP_EXTRACTION.md",
+          "out/checks.json",
+          "out/PILOT_FAILURE.md"
+        ]
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_CHECKS_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "For a dimension-independent fixed private multiplicity L, EVERY complete O(I)-paid source on a positive prime-clause lift conditions to an O(I)-paid original core reference.",
+        "witness": "Explicit F_s,1 and Q_s; full source cost<=24 I, extracted cost>=4^s-5.",
+        "scope": "All-supplied-reference conditional extraction only; not optimized references or FEI."
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A007",
+      "A015",
+      "A086",
+      "A094",
+      "B02",
+      "B20"
+    ]
+  }
+]

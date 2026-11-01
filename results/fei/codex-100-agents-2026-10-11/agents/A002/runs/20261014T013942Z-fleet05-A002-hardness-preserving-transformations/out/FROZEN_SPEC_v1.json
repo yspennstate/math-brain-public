@@ -1,0 +1,25 @@
+{
+  "helper_version": "A002-signed-price-v1",
+  "helper_sha256": "e392a82b6a3fa53d702f8930e0f81ea675665a86c411d7a6226acfbf53c55fb4",
+  "family": "all seed signs n=1,2,3, disjoint physical tensor powers; balanced tensor point activation followed by two dummies and one point flip; exact A005 12-bit witness",
+  "domain": {
+    "tensors": "n=1,2 all seeds t=1,2,3; n=3 all256 seeds t=1,2; C=0,2,8/3,3,4",
+    "activation": "all20 n=1,2 seeds t=1,2 controls k=1,2; direct edits addtwo dummies",
+    "witness": "three-bit point defect padded to12 then flipzero, C=8/3"
+  },
+  "case_count": {
+    "tensor": 572,
+    "activation": 80,
+    "edited_activation": 80,
+    "witness": 1,
+    "total": 733,
+    "pilot_total": 76
+  },
+  "symmetry": "none, intentional duplicate functions and roots allowed",
+  "arithmetic": "Integer FWHT/Fraction/formal rational prime-log entropy plus64-term proved logarithm bounds roundedoutward at2^-128",
+  "memory_estimate_mb": 100,
+  "pilot_max_runtime_seconds": 60,
+  "full_max_runtime_seconds": 120,
+  "max_dimension": 12,
+  "no_auto_escalation": true
+}

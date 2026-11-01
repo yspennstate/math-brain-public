@@ -1,0 +1,18 @@
+{
+  "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "mode": "ro",
+  "tables": [
+    {
+      "name": "nodes",
+      "schema": "CREATE TABLE nodes (\n    id TEXT PRIMARY KEY,\n    kind TEXT NOT NULL,\n    title TEXT NOT NULL,\n    body TEXT NOT NULL,\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "claims",
+      "schema": "CREATE TABLE claims (\n    id TEXT PRIMARY KEY REFERENCES nodes(id),\n    payload_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "claim_provenance",
+      "schema": "CREATE TABLE claim_provenance (\n    claim_id       TEXT PRIMARY KEY,\n    evidence_class TEXT NOT NULL,\n    source_kind    TEXT NOT NULL DEFAULT '',\n    source_ref     TEXT NOT NULL DEFAULT '',\n    artifact_path  TEXT NOT NULL DEFAULT '',\n    bundle_id      TEXT NOT NULL DEFAULT '',\n    fire_id        TEXT NOT NULL DEFAULT '',\n    measurement    TEXT NOT NULL DEFAULT '',\n    status         TEXT NOT NULL DEFAULT '',\n    read_from      TEXT NOT NULL DEFAULT '[]',\n    recorded_at    TEXT NOT NULL\n)"
+    }
+  ]
+}

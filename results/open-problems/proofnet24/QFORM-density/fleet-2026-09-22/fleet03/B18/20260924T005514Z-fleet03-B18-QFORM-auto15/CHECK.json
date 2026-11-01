@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T005514Z-fleet03-B18-QFORM-auto15",
+  "status": "PASS",
+  "checks": {
+    "bathtub_negative_moment": {
+      "claim": "For k>=2 and density cap H, E||W||^{-1} <= k/(k-1)*(H v_k)^(1/k)",
+      "derivation": "R=(Hv_k)^(-1/k); H*k*v_k*R^(k-1)/(k-1)"
+    },
+    "lpp_scaling": {
+      "projection_cap": "2^(k/2)",
+      "after_diag_sigma": "2^(k/2)/Delta_k",
+      "final_constant": "2*k/(k-1)*v_k^(1/k)*Delta_k^(-1/k)"
+    },
+    "k2_constant": {
+      "M_form": "4*sqrt(pi)/sqrt(sigma1(M)*sigma2(M))",
+      "quadratic_cross_B_form": "2*sqrt(pi)/sqrt(beta1(B)*beta2(B))",
+      "numeric_quadratic_cross": 3.5449077018110318
+    },
+    "stress_family": {
+      "matrix": "[[0,0,1,0],[0,0,0,1],[1,0,t,0],[0,1,0,0]]",
+      "spectrum": "{1,-1,(t+sqrt(t^2+4))/2,(t-sqrt(t^2+4))/2}",
+      "target_gate_for_t_ge_0": "at least three eigenvalues have modulus >=1"
+    },
+    "partner_application": {
+      "matrix": "[[0,1,0,0],[1,0,0,0],[0,0,1,0],[0,0,0,0]]",
+      "spectrum": "{1,-1,1,0}",
+      "s": 1,
+      "L": 1,
+      "a": 1,
+      "bound": "576^(1/3)",
+      "numeric_bound": 8.320335292207616
+    },
+    "continuity": "NOT_CLAIMED",
+    "full_target": "OPEN"
+  }
+}

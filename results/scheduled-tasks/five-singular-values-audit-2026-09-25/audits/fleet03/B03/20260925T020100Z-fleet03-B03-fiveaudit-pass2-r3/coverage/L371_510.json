@@ -1,0 +1,31 @@
+{
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "account": "fleet03",
+  "slot": "B03",
+  "run_id": "20260925T020100Z-fleet03-B03-fiveaudit-pass2-r3",
+  "pass_id": "pass2-reverse",
+  "statement_label": "decay and pivot lemmas",
+  "tex_line_start": 371,
+  "tex_line_end": 510,
+  "clause_id": "P2-L371-510",
+  "pdf_page": "8-11",
+  "status": "PASS_AFTER_C01_C03",
+  "hypotheses_used": [
+    "prior lemmas",
+    "rough product laws"
+  ],
+  "dependencies": [
+    "Fourier inversion",
+    "half moment",
+    "change of variables",
+    "layer cake"
+  ],
+  "derivation_or_objection": "Greedy decay compiler passes. Square and concentration lemmas pass. Definite chart has C01 seam error; hyperbola proof has C03 critical-level omission; both local repairs preserve constants. Kernel/pair-half calculations pass.",
+  "checks_performed": "Reverse derivation and constant recomputation.",
+  "downstream_impact": "Pivot receivers valid after repairs.",
+  "repair_reference": "C01,C03",
+  "independence_note": "Hyperbolic tails always use original coordinates."
+}

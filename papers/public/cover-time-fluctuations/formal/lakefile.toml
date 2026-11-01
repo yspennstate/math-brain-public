@@ -1,0 +1,11 @@
+name = "cover_time_fluctuations"
+defaultTargets = ["CoverTime"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.33.1"
+
+[[lean_lib]]
+name = "CoverTime"
+globs = ["CoverTime.*"]

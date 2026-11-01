@@ -1,0 +1,72 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target": "RS-2026-CL-A",
+  "category": "HARD_OUTSIDE",
+  "run_date_utc": "2026-09-19",
+  "captured_master_sha": "baf6357e7e23860782ef443d1cdc2cd71569b2ac",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T13-43-00Z__report.md",
+    "creation_commit": "21e77cdb191172d598461dcaf632482f1680647d",
+    "blob": "ece9aaeed8ad15e3729d3d925238a0f0e0a9b1d6"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T14-54-00Z__report.md",
+    "creation_commit": "75282f54c5394fe40c383c46ccf5d525bc1a4577",
+    "blob": "5047ae6b97300df2c73cdf2c9cf76b252cd07c36"
+  },
+  "model_requested": "GPT-6",
+  "reasoning_requested": "maximum",
+  "model_actual": "GPT-5.6 Sol",
+  "reasoning_actual": "UNVERIFIED",
+  "model_control": "prompt-only; exposed task-control surface has no authenticated model-family or reasoning-effort selector",
+  "metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": false
+  },
+  "status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / FINITE_GROUP_SPECTRUM_PAIRWISE_ISING_AND_EXTREMAL_WEIGHT_PROGRESS",
+  "source_status": "OPEN on fresh 2026-09-19 check; source-general characterization not settled",
+  "historical_initial_methods": ["B2", "B27", "B21"],
+  "previous_methods": ["B1", "B15", "B30"],
+  "methods": [
+    {
+      "id": "B14",
+      "outcome": "success_partial",
+      "summary": "Exact finite-local-group representation-support enumerator: subgroup/coset likelihood Fourier energy is d_pi times H-fixed multiplicity; local Haar-refresh evaluates the enumerator at e^{-2t}."
+    },
+    {
+      "id": "B6",
+      "outcome": "success_partial",
+      "summary": "Complete all-degree bound for a global-parity alternative on a connected 1D pairwise Ising null using an exact degree-preserving Markov innovation basis; in the previously certified weak-coupling aligned interval natural single-site heat-bath gives TV convergence."
+    },
+    {
+      "id": "B24",
+      "outcome": "success_partial",
+      "summary": "Sharp extremal interior weight-enumerator bound under a private-coordinate budget: W_C(z) <= (1+z^u)^M with equality only for disjoint size-u rows; repeated-common-overlap blocks worsen pressure per row as block size grows."
+    }
+  ],
+  "key_new_results": [
+    "For Omega=Gamma^N and P uniform on H<=Omega, 1+G_h^rep(z)=sum_pi d_pi dim(V_pi^H) z^{wt(pi)} and local Haar-refresh gives 1+chi2(P S_t||Q)=W_H^rep(e^{-2t}).",
+    "For the free-boundary Ising chain with rho=tanh(epsilon), n=2q, and P=Q conditioned on full parity +1, Adv^{<=D} <= [2 C_rho^D/(1-|rho|^q)] (en/D)^{D/2} |rho|^{q-D/2}; therefore Adv^{<=D_n}->0 for D_n=(log n)^{1+eta}.",
+    "For the same chain chi2=(1-rho^q)/(1+rho^q)=O(1); combining with prior aligned weak-Ising heat-bath damping gives TV(P_n S_t,Q_n)->0 for every fixed t>0 on the certified weak-coupling interval.",
+    "Under at least u private coordinates per parity generator, W_C(z)<= (1+z^u)^M for 0<=z<=1, with equality at 0<z<1 exactly for disjoint size-u rows; no bounded generator-intersection degree or KP assumption is needed in this subclass.",
+    "For q rows sharing one common s-coordinate block and otherwise u private coordinates, B_q(z)=0.5[(1+z^s)(1+z^u)^q+(1-z^s)(1-z^u)^q] and B_q(z)^(1/q) is nondecreasing in q."
+  ],
+  "audit_state": {
+    "qualifying_independent_full_claim_audits": "0/2",
+    "p26_pass": false,
+    "distinct_other_pass": false
+  },
+  "recovery_state": {
+    "hard_recovery_cycles_consumed": 1,
+    "same_obligation_stagnation": 0,
+    "stuck": false
+  },
+  "prior_art_state": "UNVERIFIED novelty. Nonabelian group-code duality/MacWilliams, complete weight enumerators, finite-group Fourier analysis, Markov innovations, 1D Ising bond methods, KP/tree expansions, semigroup damping, Kato/Toda and Renyi/collision tools are prior art.",
+  "mandatory_stress": "Mao arXiv:2607.20318 remains active and is excluded only by substantive interior-spectrum/alignment conditions, never by name.",
+  "next_methods": ["B3", "B28", "B17"],
+  "next_attack": "Extend the pairwise-Ising parity theorem to many long parity generators; replace hard minimum distance by a low-weight spectral profile allowing rare exceptional codewords/irreps; port sharp expander/Tanner/LDPC and nonabelian group-code weight-enumerator estimates into the interior-pressure framework.",
+  "closure": false
+}

@@ -1,0 +1,9 @@
+S8 NO-PIVOT CLOSURE
+
+The robust two-row anchor has Gram determinant greater than 8/25. Its rank-two leverage law can have at most one coordinate above 2/3; two such coordinates would force a physical 2x2 cross minor larger than allowed by the no-pivot entry bound.
+
+On every other coordinate the complementary leverage is at least 1/3. The leave-one Gram identity then produces a zero-diagonal projected error with squared Frobenius norm at most 3 V3/g. Under V3<kappa^3 this is below 10^(-10).
+
+After subtracting the induced diagonal and this tiny error, the remaining matrix has global rank at most 5 and restricted rank at most 2. Rank shifting from s8 forces three diagonal defects above 99/100. Their 3x3 restricted block has diagonal above 49/50 and each off-diagonal below 51/500, hence is strictly diagonally dominant and rank 3: contradiction.
+
+Therefore V3>=kappa^3. A fair cut and the audited order-three receiver give density <=160 C3<2371.

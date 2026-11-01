@@ -1,0 +1,19 @@
+# P0110: source correction and proof wall
+
+The primary target is Question 22 of Auffinger–Damron–Hanson, arXiv:1511.03262v2, section 4.3: find a passage-time distribution for which the fluctuation and wandering exponents satisfy equation (4.19), `chi = 2 xi - 1`. In context this is ordinary iid undirected FPP on `Z^d`, `d >= 2`. The campaign ledger adds nondegeneracy and well-defined exponents. The survey explicitly says the existence and correct definition of these exponents are part of the problem. Its quoted question is not a theorem and does not give a law. An older survey draft numbers the same relation (4.13), so the version must accompany the equation number.
+
+## Published reduction and precise missing input
+
+Chatterjee's Theorem 1.1 defines upper exponents `chi_a, xi_a` through uniform exponential moments (A1),(A2), and lower exponents `chi_b, xi_b` through uniform variance and mean wandering bounds (A3),(A4). For iid nearly-gamma weights with a finite moment-generating function near zero, if `chi_a=chi_b` and `xi_a=xi_b`, it proves `chi=2xi-1`. Exponential(1) weights in `d=2` meet the law hypothesis, so the concrete missing lemma L* is simultaneous equality of these two pairs for that law. This is an application of a published conditional theorem; it is not an independent proof of P0110.
+
+I tried the fluctuation half of L*: obtain the upper exponential-tail exponent from a variance power law. Even a uniform variance asymptotic alone is insufficient. Independently recalculating w373's family, let `X_n` take `±n^(1/3)` with probabilities `(1-1/n)/2` and `±n^(2/3)` with probabilities `1/(2n)`, for integer `n>=2`. It is centered and has `Var(X_n)=(1-1/n)n^(2/3)+n^(1/3) ~ n^(2/3)`. Yet `E exp(alpha |X_n|/n^a) >= n^(-1) exp(alpha n^(2/3-a))`, unbounded for every `a<2/3`; at `a>=2/3`, the moment is at most `exp(alpha)`. Hence the lower variance exponent is `1/3`, while the upper exponential moment exponent is `2/3`. The example is not an FPP law. It proves the proposed implication needs an FPP-specific tail premise.
+
+The September 7 campaign's curvature calculation is also conditional: for a norm with `g(1,u)=g(1,0)+c u^2+o(u^2)`, `c>0`, homogeneity gives `g(n,n^xi)-g(n,0)=c n^(2xi-1)+o(n^(2xi-1))` for `xi<1`. This deterministic excess does not compare random passage times to their means or establish either exponent. The source itself names those missing controls.
+
+w372's separately reviewed reduction avoids conditional-independence assumptions: restricted times in two disjoint deterministic cylinders are independent before any geodesic is selected. If the unrestricted times have standard deviation `s_n`, the restriction error has L2 norm at most `n sqrt(p_n)`, and this is `o(s_n)`, then the variance of their difference is asymptotic to `2s_n^2`. Its required departure-probability estimate is unproved. w373's four-edge square example shows why selecting the winning geodesic first would invalidate an independence product: conditional marginal probabilities `3/4` and `3/4` have joint probability `1/2`, not `9/16`.
+
+## Exact remaining gap
+
+Prove L* for a concrete nondegenerate iid law in Chatterjee's uniform senses, or supply another rigorous notion of both exponents with a valid relation theorem. For the exponential-law route, the first unsolved subclaim is a uniform tail bound at the actual variance scale strong enough for (A1); one must also prove (A3) and the analogous wandering exponent match (A2)/(A4). No claim here establishes any of them. Current openness in October 2026 is UNKNOWN after a targeted, nonexhaustive literature check.
+
+Sources: [survey v2](https://arxiv.org/pdf/1511.03262v2), Question 22, section 4.3; [Chatterjee](https://annals.math.princeton.edu/wp-content/uploads/annals-v177-n2-p07-p.pdf), Theorem 1.1; local September 7 ledger `brain_bundle_C006p01.json` and `brain_bundle_C006a04.json`, entries `op-p0110` and `at-p0110`.

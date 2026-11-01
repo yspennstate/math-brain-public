@@ -1,0 +1,13 @@
+[
+  {
+    "attempt": "finite initial reproduction",
+    "result": "PASS: 20 A047 cases and 18 A042 finite ratios; interval overlap only",
+    "followup": "Strengthen acceptance criterion to independent interval containment"
+  },
+  {
+    "attempt": "finite containment v2 first execution",
+    "result": "Output serialization stopped at A047 unequal interval: Python 4300-digit integer-to-string guard",
+    "mathematical_failure": false,
+    "repair": "Explicit 100000-digit serialization ceiling; use fixed-scale certified logs for A042, whose outward 1e-10 certificates need no pure large-rational refinement. Domain and sign checks unchanged."
+  }
+]

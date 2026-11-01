@@ -1,0 +1,38 @@
+fleet03/B05 r37 deterministic checks
+
+1. Exact root identities for d != 0.
+For q=a*x^2+2*c*x*y+d*y^2 and D=c^2-a*d, define
+s=sqrt(D*x^2+d*t), y_+=( -c*x+s)/d, y_-=( -c*x-s)/d.
+Symbolic differentiation returned exact zero residuals for
+  d^2/dx^2 y_+ - D*t/s^3 = 0,
+  d^2/dx^2 y_- + D*t/s^3 = 0,
+and for
+  partial_y q(x,y_+) - 2*s = 0,
+  partial_y q(x,y_-) + 2*s = 0.
+These are algebraic identities, not numerical evidence.
+
+2. Dyadic constant.
+(16*sqrt(2))^(2/3)=8 exactly, since 16*sqrt(2)=2^(9/2).
+The dyadic geometric sums are
+  sum_{k>=0}2^{-k}=2,
+  sum_{j>=1}2^{-j/2}=1/(sqrt(2)-1)=1+sqrt(2).
+Hence
+  C_H=8(3+sqrt(2))=35.31370849898476... <35.314.
+
+3. Ratio-packet constant.
+With scalar density caps <=sqrt(2), the cap factor is 2^(2/3).
+With H=10/sqrt(|lambda|m), the one-third Riesz factor is 3*10^(2/3).
+Thus
+  C_RP=C_H*3*20^(2/3)
+      =780.5808866643874... <781.
+For m>=3/20,
+  C_RP*(20/3)^(1/3)
+      =1469.1094756141745... <1470.
+
+4. Scope checks.
+- The proof never diagonalizes B probabilistically.
+- X and Y are kept as the original independent scalar banks.
+- The pair estimate is uniform under deterministic translations, so after conditioning on the first-bank environment it applies to W+h(V).
+- The dependent first-bank residual R is not conditioned separately; it remains inside T(V)=lambda*m*S^2+b^T V+const.
+- No moment/support/log-concavity/Gaussian hypothesis is used.
+- The theorem does not claim continuity of the final density.

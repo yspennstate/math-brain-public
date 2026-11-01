@@ -1,0 +1,826 @@
+\section{Convolution bounds for independent coordinate blocks}
+\label{sec:gluing}
+
+The estimates in this section use disjoint groups of the original
+independent coordinates.  A phase carried by one group may be arbitrary,
+but the independence required of a separate smoothing term is explicit.
+
+\subsection{Product densities and two-coordinate quadratic forms}
+
+\begin{lemma}[A sharp product-density estimate]\label{fg:product}
+Let $U,V$ be independent real random variables with probability
+densities $f\leq M$ and $g\leq N$.  The density $q$ of $UV$ satisfies
+\begin{equation}\label{fg:product-l2}
+ \|q\|_2^2\leq4MN.
+\end{equation}
+Equality holds for the centered uniform densities of heights $M,N$.
+Consequently, for independent cap-one variables $U,V$ and $c\ne0$,
+\begin{equation}\label{fg:edge-l2}
+ \|p_{2cUV+\alpha U+\beta V+\gamma}\|_2
+ \leq\sqrt2\,|c|^{-1/2}
+\end{equation}
+for all real $\alpha,\beta,\gamma$.
+\end{lemma}
+
+\begin{proof}
+The change of variables $(x,y)\mapsto(x,xy)$, away from the
+null set $x=0$, gives
+$q(z)=\int f(x)g(z/x)\,dx/|x|$ for almost every $z$.
+All integrands in the following calculation are nonnegative,
+so Tonelli's theorem applies even before finiteness is known.
+Expanding the square, putting $z=xy$, and then $x=rx'$ gives
+\begin{align*}
+ \|q\|_2^2
+ &=\int_{\mathbb R^2}\frac{f(x)f(x')}{|xx'|}
+       \int_{\mathbb R}g(z/x)g(z/x')\,dz\,dx\,dx'\\
+ &=\int_{\mathbb R}K_f(r)K_g(r)\,dr,\qquad
+ K_f(r)=\int_{\mathbb R}f(x)f(rx)\,dx .
+\end{align*}
+The mass and height bounds imply
+$K_f(r)\leq M\min(1,|r|^{-1})$ and
+$K_g(r)\leq N\min(1,|r|^{-1})$ for $r\ne0$.
+Since the integral of $\min(1,|r|^{-1})^2$ over the real line
+equals $4$, this proves \eqref{fg:product-l2}.
+For centered uniform densities both correlation inequalities
+are equalities, proving sharpness.
+
+Finally,
+\[
+ 2cUV+\alpha U+\beta V+\gamma
+ =2c\left(U+\frac{\beta}{2c}\right)
+       \left(V+\frac{\alpha}{2c}\right)
+        +\gamma-\frac{\alpha\beta}{2c}.
+\]
+Translations preserve the caps and independence.
+For a scalar dilation by $a\ne0$, the squared $L^2$ norm of a
+density is divided by $|a|$.  Apply \eqref{fg:product-l2}
+with $M=N=1$ and $a=2c$.
+\end{proof}
+
+\begin{theorem}[Two coordinates with an independent $L^2$ remainder]
+\label{fg:two-hub}
+Let $H=(H_1,H_2)$ and $Y=(Y_1,\ldots,Y_m)$ consist of independent
+cap-one original coordinates.  Let $Z$ be independent of $(H,Y)$
+and have a density in $L^2(\mathbb R)$.  Suppose
+\[
+ Q=H^TCH+2H^T(BY+d)+R(Y)+Z,
+\]
+where $C$ is real symmetric, $B$ is a real $2$-by-$m$ matrix
+of rank two, $d\in\mathbb R^2$, and $R$ is an arbitrary finite
+measurable function.  Put
+\[
+ D=\det(BB^T),\qquad P=\|p_{BY+d}\|_2,\qquad R_2=\|p_Z\|_2 .
+\]
+Then $Q$ has a density in $C_0(\mathbb R)$ and
+\begin{equation}\label{fg:two-hub-bound}
+ \|p_Q\|_\infty
+ \leq3\,2^{-2/3}(PR_2)^{2/3}
+ \leq3\,2^{-1/3}D^{-1/6}R_2^{2/3}.
+\end{equation}
+If $Z=2cUV+\alpha U+\beta V+\gamma$, where $U,V$ are
+independent cap-one coordinates independent of $(H,Y)$ and
+$c\ne0$, then
+\begin{equation}\label{fg:two-hub-edge}
+ \|p_Q\|_\infty\leq3D^{-1/6}|c|^{-1/3}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{four:projection}, the density of $S=BY+d$ is at
+most $2D^{-1/2}$.  Thus $P\leq\sqrt2 D^{-1/4}$.
+For fixed $t$, push the complex measure
+$e^{itR(Y)}\,d\mathbb P_Y$ forward under $Y\mapsto S$.
+Its total variation is dominated by the law of $S$, so it has
+a density $a_t$ with $|a_t|\leq p_S$ almost everywhere.
+In particular, $\|a_t\|_2\leq P$.
+
+Let $V=Q-Z$.  The joint density of $H$ has $L^2$ norm at most
+one.  Cauchy--Schwarz in the original $H$ coordinates,
+followed by two-dimensional Plancherel, yields
+\begin{align*}
+ |\varphi_V(t)|
+ &\leq
+ \left(\int_{\mathbb R^2}
+       \left|\int_{\mathbb R^2}e^{2it h^Ts}a_t(s)\,ds\right|^2
+       dh\right)^{1/2}\\
+ &=(2|t|)^{-1}\|\widehat a_t\|_2
+   =\frac{\pi}{|t|}\|a_t\|_2
+   \leq\frac{\pi P}{|t|}\qquad(t\ne0).
+\end{align*}
+The factor $e^{it h^TCh}$ has modulus one throughout this
+argument.  In particular, no sign condition on $C$ is needed.
+
+Independence of $Z$ gives
+$\varphi_Q=\varphi_V\varphi_Z$.  For any $T>0$, Plancherel
+and Cauchy--Schwarz give
+\begin{align*}
+ \int_{\mathbb R}|\varphi_Q(t)|\,dt
+ &\leq2T+\pi P
+       \int_{|t|>T}|t|^{-1}|\varphi_Z(t)|\,dt\\
+ &\leq2T+
+       \pi P(2/T)^{1/2}(2\pi)^{1/2}R_2\\
+ &=2T+2\pi^{3/2}PR_2T^{-1/2}.
+\end{align*}
+Take $T=(\pi^{3/2}PR_2/2)^{2/3}$.  The last expression is $6T$.
+Fourier inversion therefore gives a $C_0$ density with bound
+$6T/(2\pi)=3\,2^{-2/3}(PR_2)^{2/3}$.
+Substituting the bound for $P$ proves \eqref{fg:two-hub-bound}.
+Equation \eqref{fg:edge-l2} proves \eqref{fg:two-hub-edge}.
+\end{proof}
+
+\begin{remark}
+The independence of $Z$ is a hypothesis of
+Theorem~\ref{fg:two-hub}.  The function $R(Y)$ can depend on the
+entire slope bank $Y$, but the proof does not permit replacing
+$Z$ by a variable coupled to that bank.  For example, if
+$BB^T=\kappa^2 I_2$ and $|c|=\kappa^{-2}$, the bound in
+\eqref{fg:two-hub-edge} is $3$, independently of $\kappa$ and
+of the measurable phase $R$.
+\end{remark}
+
+\subsection{A quadratic pair and an independent square}
+
+\begin{lemma}[Fractional integrals of a capped density]
+\label{fg:bathtub-power}
+For a probability density $f\leq1$, $a\in\mathbb R$, and
+$0<\alpha<1$,
+\begin{equation}\label{fg:fractional-bathtub}
+ \int_{\mathbb R}f(x)|x-a|^{-\alpha}\,dx
+ \leq\frac{2^\alpha}{1-\alpha}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Layer cake and the density cap bound the left side by
+\[
+ \int_0^\infty\min(1,2t^{-1/\alpha})\,dt
+ =\frac{2^\alpha}{1-\alpha}.
+\]
+The bound is attained by the uniform density on
+$[a-1/2,a+1/2]$.
+\end{proof}
+
+\begin{lemma}[A pair with one zero quadratic coefficient]
+\label{fg:pair-lp}
+Let $X,Y$ be independent cap-one variables and let
+$b\ne0$.  For every $1<p<\infty$, the variable
+\[
+ T=aX^2+2bXY+2uX+2vY+c
+\]
+has a density satisfying
+\begin{equation}\label{fg:pair-lp-bound}
+ \|p_T\|_p\leq p\,|b|^{-1+1/p}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For almost every $x$, conditioning on $X=x$ leaves an affine
+function of $Y$ of nonzero slope $2(bx+v)$.
+Writing $\alpha=1-1/p$, its density has $L^p$ norm at most
+$|2(bx+v)|^{-\alpha}$, since $\|f_Y\|_p\leq1$.
+Minkowski's integral inequality and
+Lemma~\ref{fg:bathtub-power} give
+\[
+ \|p_T\|_p
+ \leq (2|b|)^{-\alpha}
+      \int f_X(x)|x+v/b|^{-\alpha}\,dx
+ \leq p\,|b|^{-\alpha}.
+\]
+The quadratic term $aX^2$ and the remaining terms only
+translate the conditional density.
+\end{proof}
+
+\begin{lemma}[An $L^p$ bound for a square]\label{fg:square-lp}
+For a cap-one variable $X$, $\gamma\ne0$, and $1<p<2$,
+\begin{equation}\label{fg:square-lp-bound}
+ \|p_{\gamma X^2+2wX}\|_p^p
+ \leq |\gamma|^{1-p}\frac{2^{p-1}}{2-p}.
+\end{equation}
+In particular,
+$\|p_{\gamma X^2+2wX}\|_{3/2}\leq2|\gamma|^{-1/3}$.
+\end{lemma}
+\begin{proof}
+Complete the square and put $m=-w/\gamma$.
+The two-root density formula and $ds=2|\gamma|r\,dr$ give
+\begin{align*}
+ \|p_{\gamma X^2+2wX}\|_p^p
+ &=(2|\gamma|)^{1-p}
+     \int_0^\infty
+      \bigl(f_X(m+r)+f_X(m-r)\bigr)^p r^{1-p}\,dr\\
+ &\leq|\gamma|^{1-p}
+       \int_{\mathbb R}f_X(x)|x-m|^{-(p-1)}\,dx .
+\end{align*}
+Here the sum of the two density values is at most two.
+Apply \eqref{fg:fractional-bathtub} with $\alpha=p-1$.
+\end{proof}
+
+\begin{theorem}[A physical pair and a square]\label{fg:pair-square}
+Suppose $A$ has an original-coordinate principal block
+\[
+ \begin{pmatrix}
+  a&b&0\\
+  b&0&0\\
+  0&0&\gamma
+ \end{pmatrix},
+ \qquad b\gamma\ne0.
+\]
+All other blocks of $A$ and all affine terms are arbitrary.
+Then $Q=X^TAX+b_0^TX+c_0$ has a density in $C_0(\mathbb R)$
+and
+\begin{equation}\label{fg:pair-square-bound}
+ \|p_Q\|_\infty\leq6|b|^{-2/3}|\gamma|^{-1/3}.
+\end{equation}
+If $b^2\geq|a|+1$ and $|\gamma|\geq1$, this is at most $6$;
+these conditions also guarantee three eigenvalues of modulus
+at least one in the displayed principal block.
+\end{theorem}
+\begin{proof}
+Condition on all coordinates outside the displayed block.
+The remaining polynomial is a sum of two independent
+variables of the forms in Lemmas~\ref{fg:pair-lp} and
+\ref{fg:square-lp}, with arbitrary induced affine coefficients.
+Young's inequality with exponents $3$ and $3/2$ gives
+\[
+ \|p_T*p_S\|_\infty
+ \leq\|p_T\|_3\|p_S\|_{3/2}
+ \leq6|b|^{-2/3}|\gamma|^{-1/3}.
+\]
+The convolution belongs to $C_0$: approximate its two
+factors in their respective $L^p$ norms by continuous
+compactly supported functions and use Young's inequality
+to obtain uniform convergence of the convolutions.
+The bound is uniform in the conditioned coordinates.
+Measurable conditional versions may be obtained by taking
+limits of centered interval averages of the conditional laws.
+Dominated convergence then shows that their average is
+continuous and vanishes at infinity, and retains the bound.
+
+The two eigenvalues of the upper-left pair are
+$(a\pm\sqrt{a^2+4b^2})/2$.  Both have modulus at least one
+exactly when $b^2\geq|a|+1$.
+The third eigenvalue of the displayed block is $\gamma$.
+\end{proof}
+
+\section{Qualitative regularity and variational formulations}
+\label{sec:regularity-normal-forms}
+
+Absolute continuity, continuity of a density, and a bound uniform over
+all dimensions and matrices are distinct conclusions.  We first prove
+that every fixed quadratic matrix of rank at least three has a $C_0$
+density for the product laws under consideration.  The estimates used
+for this regularity statement may depend on the matrix.
+
+\subsection{Continuity for rough product densities}
+
+\begin{lemma}[A quadratic integral near its critical point]
+\label{fg:critical-ball}
+Let $B$ be an invertible real symmetric $d$-by-$d$ matrix,
+where $d=3$ or $4$.  Write
+$\Lambda=\|B\|$, $\sigma=s_d(B)>0$, and
+$q(x)=x^TBx$.  The pushforward under $q$ of Lebesgue measure
+restricted to $|x|\leq r$ has a density bounded by
+\begin{equation}\label{fg:critical-bound}
+ C_d\Lambda^{(d-2)/2}|\det B|^{-1/2}r^{d-2},
+ \qquad C_3=2\pi,\quad C_4=4\pi.
+\end{equation}
+If $F(x)=\prod_{i=1}^d f_i(x_i)$ with probability densities
+$f_i\leq1$, the pushforward of
+$F(x){\bf1}_{\{|x|>R\}}\,dx$ has density at most
+\begin{equation}\label{fg:far-bound}
+ \frac{d^{3/2}}{\sigma R}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Use the linear change of variables $z=|B|^{1/2}x$, followed
+by an orthogonal change in this deterministic integral.
+Its Jacobian is $|\det B|^{-1/2}$, the quadratic is a sum
+of positive squares minus a sum of negative squares, and
+the image of the ball lies in $|z|\leq\rho=\sqrt\Lambda r$.
+
+For a definite form, polar coordinates give the bound
+$|\mathbb S^{d-1}|\rho^{d-2}/2$.
+This is $2\pi\rho$ for $d=3$ and $\pi^2\rho^2$ for $d=4$.
+For signature $(p,m)$ with $p,m>0$ and $p+m=d$, put
+$u=|z_+|^2$ and $v=|z_-|^2$.
+The quadratic is $u-v$, while the radial measure is
+\[
+ \frac{|\mathbb S^{p-1}||\mathbb S^{m-1}|}{4}
+       u^{p/2-1}v^{m/2-1}\,du\,dv,
+ \qquad u,v\geq0,\quad u+v\leq\rho^2 .
+\]
+In dimension three, signature $(2,1)$ gives a density at
+most $\pi\int_0^{\rho^2}v^{-1/2}\,dv=2\pi\rho$;
+the opposite signature follows by reflection of the output.
+In dimension four, signature $(2,2)$ gives at most
+$\pi^2\rho^2/2$, because the allowed radial interval on
+$u-v=t$ has length at most $\rho^2/2$.
+For signature $(3,1)$, the density is at most
+$2\pi\rho\int_0^{\rho^2}v^{-1/2}\,dv=4\pi\rho^2$.
+Reflection treats $(1,3)$.  These estimates prove
+\eqref{fg:critical-bound}.
+
+For the second assertion, $|Bx|\geq\sigma R$ when $|x|>R$.
+Hence at least one coordinate satisfies
+$|\partial_iq(x)|=2|(Bx)_i|\geq2\sigma R/\sqrt d$.
+For fixed $x_{-i}$, a quadratic in $x_i$ has at most two
+inverse branches.  On the indicated set their inverse
+derivatives are each at most $\sqrt d/(2\sigma R)$.
+The cap on $f_i$ and change of variables therefore bound
+the conditional pushforward density by
+$\sqrt d/(\sigma R)$.
+Integrating the other probability densities and summing
+over the possible $i$ proves \eqref{fg:far-bound}.
+\end{proof}
+
+\begin{lemma}[The region with only one large derivative]
+\label{fg:thin-tubes}
+In the notation of Lemma~\ref{fg:critical-ball}, fix
+$0<r<R<\infty$.  Let
+\[
+ E_{r,R,\delta}
+ =\{x:r\leq|x|\leq R,\ 
+       \text{at most one }|\partial_iq(x)|\text{ exceeds }\delta\}.
+\]
+For $0<\delta\leq1$, the pushforward of
+$F{\bf1}_{E_{r,R,\delta}}\,dx$ has density at most
+\begin{equation}\label{fg:tube-bound}
+ C(B,r,R)\delta^{d-2},
+\end{equation}
+uniformly over all products of cap-one probability densities.
+\end{lemma}
+
+\begin{proof}
+Partition the set measurably according to an index $i$
+maximizing $|(Bx)_i|$, breaking ties by the smallest index.
+On this part,
+\[
+ |\partial_iq|\geq2\sigma r/\sqrt d,\qquad
+ |(Bx)_j|\leq\delta/2\quad(j\ne i).
+\]
+Write $Bx=se_i+v$, where $v_i=0$.
+Then $|s|\leq\Lambda R$, $|v|\leq\sqrt{d-1}\delta/2$, and
+\[
+ x=sB^{-1}e_i+B^{-1}v.
+\]
+The projection onto the $d-1$ coordinates other than $i$
+therefore lies within distance
+$\epsilon=\sqrt{d-1}\delta/(2\sigma)$ of a line segment of
+length at most $2\Lambda R/\sigma$.
+In $\mathbb R^{d-1}$ the volume of this neighborhood is at
+most
+\[
+ \frac{2\Lambda R}{\sigma}\,
+          \omega_{d-2}\epsilon^{d-2}
+       +\omega_{d-1}\epsilon^{d-1}
+ \leq C(B,R)\delta^{d-2},
+\]
+where $\omega_j$ is the volume of the unit ball in
+$\mathbb R^j$.  The estimate also holds when the projected
+segment is a point.
+
+For each fixed value of these $d-1$ coordinates, the
+inverse-branch argument from the preceding lemma bounds
+the one-dimensional pushforward density by
+$\sqrt d/(\sigma r)$.
+Here all density factors are bounded by one, so integration
+over the projected set costs at most its Lebesgue volume.
+Summing over $i$ proves \eqref{fg:tube-bound}.
+\end{proof}
+
+\begin{lemma}[Continuity in three or four invertible coordinates]
+\label{fg:invertible-continuity}
+Let $d=3$ or $4$, let $B$ be invertible and symmetric, and let
+$X_1,\ldots,X_d$ be independent with densities bounded by one.
+For every affine term, $X^TBX+b^TX+c$ has a density in
+$C_0(\mathbb R)$.  A height bound independent of the affine
+term and of the coordinate laws is
+\begin{equation}\label{fg:fixed-block-height}
+ M_B=C_d\|B\|^{(d-2)/2}|\det B|^{-1/2}
+                +d^{3/2}/s_d(B).
+\end{equation}
+For fixed $B,b,c$, convergence of all coordinate densities
+in $L^1$ implies uniform convergence of these continuous
+output densities.
+\end{lemma}
+
+\begin{proof}
+Translation of the original independent coordinates removes
+the affine term, up to a constant shift of the output.
+It suffices to consider $q(x)=x^TBx$.
+Splitting into the unit ball and its complement in
+Lemma~\ref{fg:critical-ball} immediately gives
+\eqref{fg:fixed-block-height}.
+
+We give the regularity argument in detail to allow rough,
+disconnected, and unbounded coordinate supports.
+For a product density $F$ and measurable set $E$, denote by
+$p_{F;E}$ the density of the restricted pushforward
+$q_*(F{\bf1}_E\,dx)$.
+These restrictions are absolutely continuous because they
+are dominated by the full pushforward, which is absolutely
+continuous by Lemma~\ref{geom:ac}.
+
+Let $F=\prod_i f_i$ and $G=\prod_i g_i$ be two products of
+cap-one probability densities.  On the set
+\[
+ \mathcal G_\delta
+ =\{x:\text{at least two }|\partial_iq(x)|\text{ exceed }\delta\},
+\]
+the telescoping identity
+\[
+ F-G=\sum_{i=1}^d(f_i-g_i)
+              \prod_{k<i}f_k\prod_{k>i}g_k
+\]
+and coordinatewise change of variables give
+\begin{equation}\label{fg:good-stability}
+ \|p_{F;\mathcal G_\delta}-p_{G;\mathcal G_\delta}\|_\infty
+ \leq\frac{2(d-1)}{\delta}
+             \sum_{i=1}^d\|f_i-g_i\|_1 .
+\end{equation}
+Indeed, for the summand containing $f_i-g_i$, every point
+of $\mathcal G_\delta$ has some $j\ne i$ with
+$|\partial_jq|>\delta$.
+Sum over those $d-1$ choices.  On each choice, solve for
+$x_j$ along the at most two inverse branches.
+The $j$th density factor is at most one and the inverse
+derivative is at most $\delta^{-1}$.
+Integration of the remaining factors gives
+$\|f_i-g_i\|_1$, since all other factors have mass one.
+The same estimate holds with an arbitrary measurable subset
+of $\mathcal G_\delta$ in place of that set.
+
+Fix a desired error $\eta>0$.
+Choose $r$ sufficiently small and $R$ sufficiently large
+that \eqref{fg:critical-bound} and \eqref{fg:far-bound} are
+each less than $\eta$.
+For these fixed $r,R$, choose $\delta$ sufficiently small
+that \eqref{fg:tube-bound} is less than $\eta$.
+The complement of $\mathcal G_\delta$ is covered by these
+three regions.  Thus both $F$ and $G$ contribute at most
+$3\eta$ in density there.  Equation
+\eqref{fg:good-stability} gives the uniform estimate
+\begin{equation}\label{fg:rough-stability}
+ \|p_F-p_G\|_\infty
+ \leq6\eta+\frac{2(d-1)}{\delta}
+                    \sum_{i=1}^d\|f_i-g_i\|_1.
+\end{equation}
+The parameters depend only on $B,\eta$, not on the
+coordinate densities.
+
+Each probability density $f_i\leq1$ can be approximated in
+$L^1$ by smooth compactly supported probability densities
+with the same cap.  One explicit construction first
+truncates to a large bounded interval, places the missing
+mass with height one on a disjoint interval, and then
+convolves with a nonnegative smooth compactly supported
+approximate identity.  Truncation and the added mass cost
+at most twice the discarded mass in $L^1$; convolution
+preserves the total mass and the cap.
+
+For a smooth compactly supported product density, its
+pushforward under $q$ belongs to $C_0$.
+To see this without assuming regularity at the critical
+value, remove a ball of radius $r$ about the origin by a
+smooth cutoff.  On the compact support that remains, the
+gradient of $q$ never vanishes.  Cover that support by
+finitely many coordinate charts with one nonzero partial
+derivative and take a smooth partition of unity.
+In each chart the coordinates $(q,x_{-i})$ form a smooth
+change of variables.  The transformed integrand is smooth
+with compact support, and integration in $x_{-i}$ gives a
+smooth compactly supported function of $q$.
+The removed part has density bounded by a constant times
+$r^{d-2}$, by \eqref{fg:critical-bound}.
+Letting $r\downarrow0$ shows that the full density is a
+uniform limit of functions in $C_0$, and hence is in $C_0$.
+
+Apply \eqref{fg:rough-stability} to the smooth product
+approximations.  Their output densities are uniformly
+Cauchy and therefore converge uniformly to a function in
+$C_0$.  The input products converge in $L^1$, so their
+pushforward measures converge in total variation.
+The limiting continuous function is consequently a
+density of $q(X)$.  Finally, the same inequality, first
+choosing $\eta$ and then the input $L^1$ error, proves the
+stability assertion.
+\end{proof}
+
+\begin{theorem}[Every fixed rank-three-or-higher matrix]
+\label{fg:fixed-matrix-continuity}
+Let $A$ be any real symmetric matrix of rank at least three.
+For independent cap-one coordinates and arbitrary affine
+terms, $Q=X^TAX+b^TX+c$ has a bounded density in
+$C_0(\mathbb R)$.
+\end{theorem}
+
+\begin{proof}
+There is an invertible original-coordinate principal
+submatrix $B=A_{II}$ of order $d=3$ or $4$.
+For completeness, symmetric elimination proves this as
+follows.  If a nonzero diagonal entry is available, use it
+as an invertible one-coordinate pivot.  If all diagonal
+entries vanish but the remaining matrix is nonzero, a
+nonzero off-diagonal entry gives the invertible block
+$\left(\begin{smallmatrix}0&a\\a&0\end{smallmatrix}\right)$.
+An invertible pivot reduces rank by its order, through its
+Schur complement.  Continue until the total pivot order
+first reaches three.  The rank assumption permits doing
+so, and the total is either three or four.
+The corresponding principal submatrix of the original
+matrix is invertible, since its determinant is the product
+of the successive nonzero pivot determinants.
+
+Condition on $Y=X_{I^c}$.  The conditional quadratic matrix
+in the coordinates $X_I$ is the fixed invertible matrix
+$B$; all conditioning effects are affine.
+Lemma~\ref{fg:invertible-continuity} supplies for every $y$
+a conditional density $p_y\in C_0$ bounded by $M_B$.
+There is a jointly measurable choice: for each $(y,t)$
+take the limit of
+\[
+ \frac{m}{2}\,
+ \mathbb P\bigl(|X_I^TBX_I+b(y)^TX_I+c(y)-t|<1/m\bigr)
+ \quad\text{as }m\to\infty.
+\]
+The limit exists at every $t$ because the conditional
+continuous density exists.
+Its average $p(t)=\mathbb E p_Y(t)$ is a density of $Q$.
+The bound $M_B$ permits dominated convergence both as
+$t$ approaches a finite point and as $|t|\to\infty$.
+Thus $p$ is continuous, vanishes at infinity, and is bounded.
+\end{proof}
+
+\begin{remark}
+The constant $M_B$ in this proof can deteriorate when the
+selected principal block becomes ill-conditioned.
+Theorem~\ref{fg:fixed-matrix-continuity} therefore gives a
+qualitative regularity statement for every fixed matrix;
+the dimension-independent constant in
+Conjecture~\ref{conj:main} remains a separate question.
+\end{remark}
+
+\subsection{Recovery from one fixed smoothing kernel}
+
+Let $\mathfrak C$ be the optimal constant in Conjecture~\ref{conj:main},
+as an extended nonnegative real number:
+\[
+ \mathfrak C
+ =\sup_{\substack{n\geq3,\ A=A^T,\ s_3(A)\geq1\\
+                  X\ {\rm independent},\ 0\leq f_i\leq1\\
+                  b\in\mathbb R^n,\ c\in\mathbb R}}
+       \|p_{X^TAX+b^TX+c}\|_\infty .
+\]
+Every density in this definition exists by
+Lemma~\ref{geom:ac}.  The next identities are valid whether
+$\mathfrak C$ is finite or infinite.
+
+\begin{lemma}[Approximate-identity recovery]\label{fg:kernel-recovery}
+Let $K\geq0$ be any probability density in $L^1(\mathbb R)$,
+and set $K_r(x)=r^{-1}K(x/r)$.  For every probability
+density $p$ and every $r_0>0$,
+\begin{equation}\label{fg:kernel-recovery-eq}
+ \sup_{0<r\leq r_0}\|K_r*p\|_\infty=\|p\|_\infty .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Young's inequality gives the upper bound.
+Translation continuity in $L^1$ and dominated convergence
+give
+\[
+ \|K_r*p-p\|_1
+ \leq\int_{\mathbb R}K(z)\,
+           \|p(\,\cdot-rz)-p\|_1\,dz\longrightarrow0 .
+\]
+If the left side of \eqref{fg:kernel-recovery-eq} were a
+finite number $M$ smaller than $\|p\|_\infty$, take
+$r_j\downarrow0$ and an almost-everywhere convergent
+subsequence of the $L^1$ approximations.
+The limit would satisfy $p\leq M$ almost everywhere,
+a contradiction.  The same argument treats
+$\|p\|_\infty=\infty$.
+\end{proof}
+
+\begin{theorem}[An exact fixed-kernel formulation]
+\label{fg:fixed-kernel}
+For every fixed probability density $K\in L^1(\mathbb R)$,
+\begin{equation}\label{fg:fixed-kernel-eq}
+ \mathfrak C
+ =\sup_{\substack{A,X,b,c\ {\rm as\ above}\\s_3(A)\geq1}}
+       s_3(A)\,\|K*p_Q\|_\infty .
+\end{equation}
+In particular,
+\begin{equation}\label{fg:fixed-box-eq}
+ \mathfrak C
+ =\sup_{\substack{A,X,b,c\ {\rm as\ above}\\s_3(A)\geq1,\ y\in\mathbb R}}
+       \frac{s_3(A)}2\,\mathbb P(|Q-y|\leq1).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+First observe the equivalent weighted form
+\[
+ \mathfrak C=\sup s_3(A)\|p_Q\|_\infty .
+\]
+The weighted supremum is at least the original one because
+$s_3(A)\geq1$.  For the reverse inequality, normalize each
+instance by $Q\mapsto Q/s_3(A)$, including its affine term.
+The new matrix has third singular value one and its density
+height is $s_3(A)\|p_Q\|_\infty$.
+
+Let the right side of \eqref{fg:fixed-kernel-eq} be
+$\mathfrak C_K$.  Young's inequality gives
+$\mathfrak C_K\leq\mathfrak C$.
+Fix an admissible instance and write $s=s_3(A)$.
+For $0<r\leq s$, the form $Q/r$ is still admissible,
+with matrix $A/r$ and density $p_r(u)=r p_Q(ru)$.
+Direct substitution gives
+\[
+ (K*p_r)(y/r)=r(K_r*p_Q)(y),
+ \qquad
+ \frac{s}{r}\|K*p_r\|_\infty
+     =s\|K_r*p_Q\|_\infty .
+\]
+Taking the supremum over $0<r\leq s$ and applying
+Lemma~\ref{fg:kernel-recovery} shows
+$\mathfrak C_K\geq s\|p_Q\|_\infty$.
+The supremum over the original instance proves equality.
+
+Take $K=\frac12{\bf1}_{[-1,1]}$ for
+\eqref{fg:fixed-box-eq}.  For an absolutely continuous
+law the endpoints carry no mass, and the box convolution
+is the continuous function
+$y\mapsto\frac12\mathbb P(|Q-y|\leq1)$.
+Its essential supremum is therefore its pointwise
+supremum, as used in that identity.
+\end{proof}
+
+\begin{lemma}[Stability at a fixed interval width]
+\label{fg:fixed-box-stability}
+Suppose probability laws $\mu_j$ converge weakly to an
+atomless probability law $\mu$.  For every fixed $a>0$,
+\begin{equation}\label{fg:box-stability}
+ \sup_{y\in\mathbb R}
+ \bigl|\mu_j([y-a,y+a])-\mu([y-a,y+a])\bigr|
+ \longrightarrow0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $F_j,F$ be the distribution functions.
+Because $\mu$ is atomless, $F$ is continuous.
+Weak convergence gives $F_j(t)\to F(t)$ at every $t$.
+A finite grid whose successive $F$ values differ by at
+most a prescribed $\epsilon$, together with two tail
+points of total $\mu$ mass at most $2\epsilon$, proves by
+monotonicity that $\sup_t|F_j(t)-F(t)|\to0$.
+For clarity, one may choose a bounded interval containing
+all but $\epsilon$ of each tail of $\mu$, subdivide it
+finely using uniform continuity of $F$, and bracket each
+$t$ between adjacent grid points.
+The same uniform bound controls $F_j(t-)$, since
+$F(t-)=F(t)$.
+Now
+$\mu_j([y-a,y+a])=F_j(y+a)-F_j((y-a)-)$.
+Subtract the corresponding expression for $\mu$ to obtain
+\eqref{fg:box-stability}.
+\end{proof}
+
+\subsection{A countable heat-kernel formulation}
+
+Let $\mathcal U$ be the countable class of finite unions of
+bounded half-open intervals with rational endpoints and
+total Lebesgue measure exactly one.
+For $n\geq3$, let $\mathcal A_n$ consist of real symmetric
+matrices with rational entries such that every entry and
+every principal minor is nonzero, the spectrum is simple,
+and $s_3(A)>1$.
+Put
+\[
+ \gamma_\epsilon(t)=
+    \frac{1}{\sqrt{2\pi}\epsilon}
+                 \exp\left(-\frac{t^2}{2\epsilon^2}\right).
+\]
+
+\begin{theorem}[A countable exact formulation]\label{fg:countable-heat}
+The full optimal constant satisfies
+\begin{equation}\label{fg:countable-heat-eq}
+ \mathfrak C=
+ \sup_{\substack{
+       n\geq3,\ A\in\mathcal A_n,\ b\in\mathbb Q^n\\
+       E_1,\ldots,E_n\in\mathcal U\\
+       \epsilon\in\mathbb Q_{>0},\ y\in\mathbb Q}}
+ \int_{E_1\times\cdots\times E_n}
+       \gamma_\epsilon(x^TAx+b^Tx-y)\,dx .
+\end{equation}
+There is no bound here on $n$, the number of intervals,
+their locations, or their rational denominators.
+\end{theorem}
+
+\begin{proof}
+Lemma~\ref{fg:kernel-recovery}, with a Gaussian kernel, shows
+that for each output law
+\[
+ \|p_Q\|_\infty
+   =\sup_{\epsilon>0,\ y\in\mathbb R}
+                   \mathbb E\gamma_\epsilon(Q-y).
+\]
+The convolution at every positive $\epsilon$ is continuous,
+so a pointwise supremum in $y$ is appropriate.
+Constants in $Q$ can be absorbed into $y$.
+Every value on the right side of
+\eqref{fg:countable-heat-eq} comes from an admissible product
+law, and is at most $\mathfrak C$.
+We prove the reverse inequality by approximating an
+arbitrary fixed smoothed value.
+
+First, for any bounded nonnegative measurable payoff $h$,
+\begin{equation}\label{fg:bathtub-linear}
+ \sup_{\substack{0\leq f\leq1\\\int f=1}}\int hf
+       =\sup_{|E|=1}\int_Eh .
+\end{equation}
+Here the suprema need not be attained.
+One elementary proof chooses
+$\tau=\inf\{t\geq0:|\{h>t\}|\leq1\}$.
+Monotone convergence from levels above $\tau$ gives
+$|\{h>\tau\}|\leq1$.
+For $\delta>0$, choose a set $E$ of measure one that contains
+$\{h>\tau\}$ and whose remaining points have
+$h\geq\tau-\delta$; if $\tau=0$, fill with arbitrary points.
+Such a set exists by the definition of $\tau$ and the
+nonatomic nature of Lebesgue measure.
+In the identity
+$\int h(f-{\bf1}_E)=\int(h-\tau)(f-{\bf1}_E)$,
+the contribution from $\{h>\tau\}$ is nonpositive.
+The contribution outside $E$ is also nonpositive, and
+the remaining contribution is at most $\delta$.
+This proves \eqref{fg:bathtub-linear} by letting
+$\delta\downarrow0$.
+
+Apply \eqref{fg:bathtub-linear} successively to each original
+coordinate of the bounded payoff
+$\gamma_\epsilon(x^TAx+b^Tx-y)$, averaging over the others.
+At each step the smoothed value can be preserved up to an
+arbitrarily small prescribed error.
+After finitely many steps the input laws are uniform on
+measurable sets $E_i$ of measure one.
+
+Each such set can be approximated in symmetric difference
+by a member of $\mathcal U$.
+Indeed, Lebesgue regularity gives a finite bounded union of
+rational intervals $F$ with $|E_i\mathbin\triangle F|$
+arbitrarily small.  Its total length is rational.
+If that length exceeds one, remove or shorten interval
+pieces, retaining rational endpoints, until the length is
+one.  If it is less than one, add a disjoint rational
+interval of the missing rational length.
+The additional change has measure $||F|-1|$, which is at
+most $|E_i\mathbin\triangle F|$.
+Thus the final symmetric difference can also be made
+arbitrarily small.
+The telescoping inequality
+\[
+ \left\|\prod_i f_i-\prod_i g_i\right\|_1
+       \leq\sum_i\|f_i-g_i\|_1
+\]
+shows that these replacements alter the fixed smoothed
+value by at most the last sum times
+$\|\gamma_\epsilon\|_\infty$.
+
+The resulting product set is bounded.
+Next replace $A$ by $(1+\delta)A$ and then by a nearby
+rational symmetric matrix $A_\delta$ whose entries and
+principal minors are all nonzero and whose spectrum is
+simple.  Such matrices are dense: each forbidden condition
+is the zero set of a nonzero polynomial in the independent
+matrix entries, including the spectral discriminant.
+Their finite union has empty interior, and its complement
+is open and contains rational points in every sufficiently
+small ball.
+Choose
+$\|A_\delta-(1+\delta)A\|<\delta/2$.
+Singular-value stability gives
+$s_3(A_\delta)>1$, while $A_\delta\to A$.
+Also approximate $b$ by rational vectors.
+On the fixed bounded product set, the corresponding
+quadratic polynomials converge uniformly.
+Continuity of the Gaussian payoff therefore preserves
+the smoothed integral in the limit.
+
+Finally approximate $\epsilon>0$ and $y$ by positive
+rational and rational parameters, respectively.
+The kernels are uniformly bounded in a neighborhood of
+the fixed positive $\epsilon$, and depend continuously
+on all their parameters.  Dominated convergence preserves
+the integral.
+All approximation errors can be chosen arbitrarily small.
+Every smoothed value in the full problem is therefore
+bounded by the right side of
+\eqref{fg:countable-heat-eq}, proving equality.
+\end{proof}
+
+\begin{remark}
+The fixed-kernel and countable formulations are exact
+identities for the optimal density bound.  Neither identity
+by itself gives a finite bound for the supremum.
+The fixed-width stability in
+Lemma~\ref{fg:fixed-box-stability} also does not assert
+uniform control as the interval width tends to zero.
+\end{remark}

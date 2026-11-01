@@ -1,0 +1,123 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w474",
+  "bundle_slug": "ising-gaussian-sign-boundary-w474-20261010",
+  "entries": [
+    {
+      "key": "gaussian-sign-residual",
+      "namespace": "probability.ising",
+      "logical_name": "sharp-gaussian-sign-rank-one-residual-bound",
+      "kind": "concept",
+      "title": "DRAFT: sharp Gaussian-sign residual bound (author proof; review pending)",
+      "statement": "AUTHOR PROOF DRAFT; mathematical review pending. If X,Y are centered jointly Gaussian with unit variances and correlation r in [0,1], b=sqrt(2/pi), and H(t)=sign(t)-bt, then E[H(X)H(Y)]=(2/pi)(arcsin(r)-r), between 0 and (1-2/pi)r^3. The upper constant is optimal, with equality at r=1. This elementary Gaussian statement does not establish a property of critical nearest-neighbor Ising spins.",
+      "proof_text": null,
+      "assumptions": [
+        "jointly Gaussian centered variables",
+        "unit variances",
+        "correlation r in [0,1]",
+        "author proof is not yet independently reviewed"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w474:C0052-boundary-2026-10-10",
+        "url": "file:///~/brain_workers/w474/ATTEMPT.md",
+        "revision": "2026-10-10-author-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gaussian-sign-scaling",
+      "namespace": "probability.ising",
+      "logical_name": "bounded-associated-gaussian-sign-power-law-scaling-counterexample",
+      "kind": "concept",
+      "title": "DRAFT: bounded associated spins with Gaussian power-law scaling (review pending)",
+      "statement": "AUTHOR PROOF DRAFT; mathematical review pending; C0052 is not solved or refuted. Fix 0<gamma<3. Let G_x, x in Z^3, be a stationary centered unit-variance Gaussian field with covariance R_gamma(x-y)=(1+|x-y|^2)^(-gamma/2), and sigma_x=sign(G_x). These are stationary spin-flip symmetric positively associated +/-1 spins with E[sigma_0 sigma_x]=(2/pi)arcsin R_gamma(x), asymptotic to (2/pi)|x|^(-gamma), and on-site fourth cumulant -2. For every finite list of compactly supported smooth real tests f, N^(-3+gamma/2)sum_x f(x/N)sigma_x converges jointly to a Gaussian vector with covariance (2/pi)integral integral f(u)h(v)|u-v|^(-gamma)du dv. The nonlinear remainder after subtracting sqrt(2/pi) times the similarly scaled G-field has squared L2 norm O(N^(-2gamma)) for gamma<1, O(N^(-2)log N) at gamma=1, and O(N^(-(3-gamma))) for gamma>1; constants depend on fixed gamma and test. No nearest-neighbor Ising Gibbs, reflection-positivity, random-current, distribution-space tightness, or fourth-moment-convergence assertion is made.",
+      "proof_text": null,
+      "assumptions": [
+        "fixed gamma in (0,3)",
+        "specified Gaussian covariance",
+        "sigma is its sign field",
+        "fixed finite family of compactly supported smooth real tests",
+        "finite-dimensional-distribution limit only",
+        "author proof is not yet independently reviewed"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w474:C0052-boundary-2026-10-10",
+        "url": "file:///~/brain_workers/w474/ATTEMPT.md",
+        "revision": "2026-10-10-author-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "false-two-point-bridge",
+      "namespace": "probability.ising",
+      "logical_name": "refuted-two-point-and-local-cumulant-nongaussianity-bridge",
+      "kind": "concept",
+      "title": "DRAFT refuted route: two-point decay and local cumulants do not force non-Gaussianity",
+      "statement": "AUTHOR COUNTEREXAMPLE DRAFT; mathematical review pending. The following auxiliary implication is false: stationarity, spin-flip symmetry, +/-1 bounded spins, positive association, two-point decay proportional to |x|^(-(1+eta)) for a fixed eta in (0,2), and a nonzero on-site fourth cumulant force a non-Gaussian smeared finite-dimensional-distribution scaling limit. The sign field of the Gaussian covariance (1+|x-y|^2)^(-(1+eta)/2) satisfies all these hypotheses and has a Gaussian smeared limit under N^(-3+(1+eta)/2) normalization. This does not refute the nearest-neighbor Ising target or a random-current argument with an adequate second-moment assumption.",
+      "proof_text": null,
+      "assumptions": [
+        "the invalid implication has exactly the listed hypotheses",
+        "no Ising Gibbs or random-current hypothesis is included",
+        "author counterexample is not yet independently reviewed"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w474:C0052-boundary-2026-10-10",
+        "url": "file:///~/brain_workers/w474/ATTEMPT.md",
+        "revision": "2026-10-10-author-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "anchored-contact-mass",
+      "namespace": "probability.ising",
+      "logical_name": "exact-anchored-fourth-cumulant-contact-mass",
+      "kind": "concept",
+      "title": "DRAFT: exact contact mass in the renormalized Ising coupling (scoped peer KEEP)",
+      "statement": "AUTHOR PROOF DRAFT; w475 scoped mathematical KEEP, served identity and formal referee gates pending. Let sigma be a translation-invariant mean-zero +/-1 field on Z^3 or a finite abelian group, with 0<=G(x)=E[sigma_0 sigma_x]<=1 and finite chi=sum_x G(x). Put B=sum_x G(x)^2. For the ordered triples D such that (0,x2,x3,x4) has at least two equal sites, sum_D[-U4(0,x2,x3,x4)]=12chi^2-16chi-6B+12, between 0 and 12chi^2. Here U4 is the mean-zero fourth cumulant. For any xi>0 the contact contribution normalized by chi^2 xi^3 is at most 12/xi^3, and therefore vanishes if xi diverges. Since B<=chi, the unnormalized contact mass divided by chi^2 tends to 12 when chi diverges. The coefficient is sharp over the stated class, as N perfectly correlated spins on a cyclic group give 12N^2-22N+12. Exact coincident tuples only are controlled; the distinct-site mass required for C0052 is not lower-bounded.",
+      "proof_text": null,
+      "assumptions": [
+        "translation invariance",
+        "mean-zero +/-1 spins",
+        "nonnegative two-point function",
+        "finite susceptibility",
+        "xi>0 for the normalized assertion",
+        "exact coincidences only",
+        "formal referee/model gates pending"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w474:C0052-boundary-2026-10-10",
+        "url": "file:///~/brain_workers/w474/ATTEMPT.md",
+        "revision": "2026-10-10-author-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "gaussian-sign-scaling",
+      "to_key": "gaussian-sign-residual",
+      "kind": "depends_on",
+      "rationale": "The scaling proof bounds the sign field minus its Gaussian projection by the exact arcsin residual inequality; both ends have the same fixed Gaussian assumptions."
+    },
+    {
+      "from_key": "gaussian-sign-scaling",
+      "to_key": "false-two-point-bridge",
+      "kind": "refutes",
+      "rationale": "Setting gamma=1+eta in the explicitly constructed sign field supplies every hypothesis in the bridge while giving a Gaussian smeared FDD limit."
+    },
+    {
+      "from_key": "anchored-contact-mass",
+      "to_key": "false-two-point-bridge",
+      "kind": "semantic_association",
+      "rationale": "The bridge treats a nonzero on-site cumulant as evidence of a non-Gaussian scaling limit. The contact identity quantifies the vanishing of exact coincidences under the Ising coupling normalization; no vanishing of all distinct-site terms is inferred."
+    }
+  ]
+}

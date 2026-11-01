@@ -1,0 +1,8 @@
+{
+  "helper_version": "A003-stage2-v2",
+  "inherits": "FROZEN_SPEC.json",
+  "change": "Serialize rational logarithmic certificates by outward rounding to denominator 10^12, checked using exact Fraction comparisons. The original complete Fraction expansion exceeded Python's integer-string conversion limit. No search domain, arithmetic precision, runtime limit, or mathematical target changed.",
+  "max_runtime_seconds": 60,
+  "memory_estimate_MB": 120,
+  "case_count": {"labelled_sources": 276, "X009": 4, "B05": 7}
+}

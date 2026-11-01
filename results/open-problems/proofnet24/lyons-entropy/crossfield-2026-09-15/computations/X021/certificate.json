@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "exact_assertions": 168,
+  "small_example": {
+    "K": "Matrix([[1/2, I/4, -I/4], [-I/4, 1/2, I/4], [I/4, -I/4, 1/2]])",
+    "A": "Matrix([[-4, 3, 3], [3, -4, 3], [3, 3, -4]])",
+    "adj_A": "Matrix([[7, 21, 21], [21, 7, 21], [21, 21, 7]])",
+    "atom_masses": [
+      "1/32",
+      "5/32",
+      "5/32",
+      "5/32",
+      "5/32",
+      "5/32",
+      "5/32",
+      "1/32"
+    ],
+    "atom_scores": [
+      "108",
+      "4",
+      "4",
+      "-4",
+      "4",
+      "-4",
+      "-4",
+      "-108"
+    ],
+    "fisher": "744",
+    "marginal_D": "192",
+    "endpoint_fisher": "2010",
+    "six_conditional_determinants": "all zero exactly",
+    "old_curvature_upper_bound": "-64+42*log(5)>0",
+    "new_curvature_upper_bound": "-734+42*log(5)<0",
+    "actual_curvature": "-744+42*log(5)"
+  },
+  "unbalanced_example": {
+    "K": "Matrix([[1/5, 1/10, I/20], [1/10, 3/5, 1/10], [-I/20, 1/10, 4/5]])",
+    "B": "Matrix([[11/194, 203/1552 - I, -1 + 61*I/776], [203/1552 + I, 61/776, -325/1552 - I], [-1 - 61*I/776, -325/1552 + I, 11/194]])",
+    "det_B": "874502161/467288576",
+    "e2_B": "-37931/12416",
+    "conditional_odds": [
+      [
+        "209/159",
+        "219/169"
+      ],
+      [
+        "4369/3869",
+        "39321/35321"
+      ],
+      [
+        "209/159",
+        "219/169"
+      ]
+    ],
+    "six_null_forms": "all zero exactly",
+    "trace_MB": "strictly positive by positive B diagonals and conditional log ratios"
+  },
+  "scope": "Exact identities and finite examples; no universal endpoint comparison or unrestricted entropy concavity asserted."
+}

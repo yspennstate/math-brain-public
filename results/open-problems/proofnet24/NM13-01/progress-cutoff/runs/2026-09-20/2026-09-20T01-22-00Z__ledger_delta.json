@@ -1,0 +1,31 @@
+{
+  "worker": "NM13-01",
+  "target": "T08 / Salez arXiv:2508.21055 Problem 2.3",
+  "status": "PARTIAL_PARENT__CANDIDATE_FULL_RESTRICTED_THEOREM",
+  "runtime_model": "GPT-5.6 Sol",
+  "reasoning_level": "UNVERIFIED",
+  "source_level": {
+    "before": "Salez Problem 2.3 OPEN. NM13-01 had already proved an O(sqrt(log n)) cutoff theorem for line graphs of edge-transitive long-range expanders and had a finite-fiber lexicographic-product transfer recorded; P26 independently developed the overlapping finite-fiber/lexicographic route. Long-range expansion remained strictly stronger than arbitrary spectral expansion.",
+    "after": "Salez Problem 2.3 remains OPEN. Added a structurally distinct source-valid class: graph truncations Tr(G_n), equivalently K_d replacement products of fixed-degree arc-transitive long-range-expander bases G_n. Tr(G_n) is d-regular, vertex-transitive, spectrally expanding, fails every fixed long-range-expansion constant, and its Salez-convention rate-one continuous-time SRW has total-variation cutoff.",
+    "cutoff_location": "T_n = d(d+2)/(d-2) * log_{d-1}|V(G_n)| = d(d+2)/(d-2) * log_{d-1}|V(Tr(G_n))| + O_d(1)",
+    "window": "O_{d,c,epsilon}(sqrt(log |V(Tr(G_n))|))",
+    "relative_window": "O(1/sqrt(log |V(Tr(G_n))|)) -> 0",
+    "non_LRE_strength": "A singleton-ball test forces any LRE constant for Tr(G_n) to be O_d(|V(Tr(G_n))|^{-1/4}); in particular no fixed positive LRE constant is possible."
+  },
+  "mechanism_progress": {
+    "non_lumpable_port_memory": "The tail projection from Tr(G) to G is not a Markov lumping and the inter-fiber edges are matchings, so the P26 lexicographic exact-fiber decomposition and the ordinary-cover theorem do not apply. Arc transitivity instead makes every fixed-first-edge NBRW sector have the same entropy.",
+    "spectral_transfer": "If the base normalized one-sided gap is gamma, then gap(Tr(G)) >= gamma/(gamma+2d), via an exact tail-average/fiber Dirichlet decomposition.",
+    "radial_chain": "On Tr(T_d), the orientation type is a two-state Markov chain with stationary weights d/(d+2), 2/(d+2), radial speed v*=(d-2)/(d(d+2)), Poisson corrector g(+)=2/(d+2), g(-)=0, and root-return probability 2/d.",
+    "entropy_at_hitting": "At first hitting of tree radius j, arc transitivity and Altschuler's NBRW endpoint entropy imply KL deficit O_{d,c}(log log n) for the hitting-state law, uniformly in the hitting-time conditioning.",
+    "obstruction_removed": "Uniform O(1) damping of a local fiber is not necessary for cutoff. A persistent finite port/orientation state that is essential to macroscopic movement is harmless when transitivity reduces it to a finite-state Markov-additive radial process with positive speed and bounded corrector."
+  },
+  "sanity_check": {
+    "script": "2026-09-20T01-22-00Z__truncation_radial_checker.py",
+    "output": "2026-09-20T01-22-00Z__truncation_radial_checker.out",
+    "verdict": "ALL_EXACT_CHECKS_PASS"
+  },
+  "prior_art": "Bounded 2026-09-20 searches for truncation/replacement-product random-walk cutoff did not locate this exact theorem. Replacement products and graph truncation are classical, so publication novelty is UNVERIFIED. Kaufman--Lubotzky arXiv:1108.2960 supplies fixed-degree edge/arc-symmetric Ramanujan Cayley families; Altschuler arXiv:2609.14945 proves Ramanujan => long-range expansion and fixed-degree LRE cutoff but does not cover the truncation outputs, which fail uniform LRE.",
+  "historical_handoff": "Preserve the pre-LIVE20 NM13-01 admission/P0292 handoff and the earlier T08 line-graph result. The lexicographic finite-fiber route is not counted as the present complementary advance because P26 independently proved that mechanism; this run pivots to non-lumpable truncation dynamics.",
+  "remaining_obstruction": "Arbitrary vertex-transitive spectral expanders need not arise from an arc-transitive LRE ancestor or admit any bounded-state tree-radial factor. The next T08 step is to extract a finite-state directional process directly from transitivity/orbital structure, or prove a quantitative entropy statement without such a factor.",
+  "next_attack": "Replace full arc transitivity by finitely many directed-edge orbit types. Derive a matrix-valued port chain on the universal cover and identify a checkable irreducibility/drift condition under which sector entropies from a transitive spectral expander can still be synchronized."
+}

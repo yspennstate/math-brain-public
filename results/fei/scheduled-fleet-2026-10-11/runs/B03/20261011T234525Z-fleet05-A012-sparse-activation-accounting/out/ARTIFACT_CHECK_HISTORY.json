@@ -1,0 +1,9 @@
+{
+  "initial_check":"Canonical statement+hypotheses hashing assertion failed for the copied A013 original claim.",
+  "diagnosis":"A013 original code/finalize.py line 33 computes hashlib.sha256(statement.encode()).hexdigest(), rather than the registry canonical JSON digest.",
+  "source_author_digest":"e60bd6b7e7914e7efd3f2935533670c55b685819a5ab6e5cc2a9c9b1658c3804",
+  "same_source_statement_canonical_json_digest":"8854b72c9d6c5bfe62716a9a014dd3c4dae2c0c9db2657e58e8b888a0458ec60",
+  "resolution":"Preserve the author's original source digest and verify it under its declared raw-statement convention; retain the canonical JSON convention for the new A012 repair. Record the distinction in review_records.",
+  "mathematical_statement_changed":false,
+  "source_files_modified":false
+}

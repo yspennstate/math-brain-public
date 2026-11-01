@@ -1,0 +1,179 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w445",
+  "bundle_slug": "rwre-regeneration-cost-audit-20261010",
+  "entries": [
+    {
+      "key": "geometric-attempt-count-inference",
+      "namespace": "probability.rwre.proof_audit",
+      "logical_name": "geometric-attempt-count-inference",
+      "kind": "concept",
+      "title": "Invalid inference from geometric attempts to finite expected duration",
+      "statement": "Invalid general inference: a geometric number of attempts and almost-sure finiteness of every attempt imply finite expected total duration. An integrable accounting of elapsed costs is additionally needed.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent referee review pending; apply only the hypotheses stated in this concept"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:geometric-attempt-count-inference",
+        "url": "urn:math:rwre-proof-audit:geometric-attempt-count-inference",
+        "revision": "2026-10-10; unreviewed draft",
+        "license": "owner-own-work (campaign derivation; draft)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "geometric-attempt-count-infinite-cost-counterexample",
+      "namespace": "probability.rwre.proof_audit",
+      "logical_name": "geometric-attempt-count-infinite-cost-counterexample",
+      "kind": "concept",
+      "title": "Finite geometric attempts with infinite mean cost",
+      "statement": "Unreviewed draft result. Let B_i be iid Bernoulli(q), 0<q<1. Independently, let L_i be iid with P(L_i=2^k)=2^(-k-1), k>=0. With N the first success and C=1+sum_{i<N} L_i, C is finite almost surely but E C is infinite. Truncation L_i to min(L_i,2^K) gives E C=1+((1-q)/q)(K/2+1). This is an abstract cost model, not an RWRE counterexample.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent referee review pending; apply only the hypotheses stated in this concept"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:geometric-attempt-count-infinite-cost-counterexample",
+        "url": "urn:math:rwre-proof-audit:geometric-attempt-count-infinite-cost-counterexample",
+        "revision": "2026-10-10; unreviewed draft",
+        "license": "owner-own-work (campaign derivation; draft)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "conditional-attempt-cost-summability",
+      "namespace": "probability.rwre.proof_audit",
+      "logical_name": "conditional-attempt-cost-summability",
+      "kind": "concept",
+      "title": "Conditional cost premise for integrable repeated attempts",
+      "statement": "Unreviewed draft reduction. Let F_i be an increasing filtration and S_i nested events with S_1 the whole space and S_i in F_i. If E[1_{S_{i+1}}|F_i]<=r 1_{S_i}, 0<=r<1, and nonnegative costs A_i satisfy E[1_{S_i} A_i|F_i]<=a 1_{S_i}, a finite, then E[sum_i 1_{S_i} A_i]<=a/(1-r). Tower iteration and Tonelli suffice; independence is unnecessary. The cost premise still needs proof in an application.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent referee review pending; apply only the hypotheses stated in this concept"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:conditional-attempt-cost-summability",
+        "url": "urn:math:rwre-proof-audit:conditional-attempt-cost-summability",
+        "revision": "2026-10-10; unreviewed draft",
+        "license": "owner-own-work (campaign derivation; draft)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "fixed-center-rarity-adaptive-center-inference",
+      "namespace": "probability.rwre.proof_audit",
+      "logical_name": "fixed-center-rarity-adaptive-center-inference",
+      "kind": "concept",
+      "title": "Invalid transfer of fixed-center rarity to an unrestricted selected center",
+      "statement": "Invalid general inference: if a finite environment pattern is rare at every deterministic center in an iid environment, it is equally rare at a center chosen by searching the entire environment. A deterministic search budget, an appropriate independence argument, or another selection-bias estimate is needed.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent referee review pending; apply only the hypotheses stated in this concept"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:fixed-center-rarity-adaptive-center-inference",
+        "url": "urn:math:rwre-proof-audit:fixed-center-rarity-adaptive-center-inference",
+        "revision": "2026-10-10; unreviewed draft",
+        "license": "owner-own-work (campaign derivation; draft)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "inward-box-rarity-unrestricted-selection",
+      "namespace": "probability.rwre.proof_audit",
+      "logical_name": "inward-box-rarity-unrestricted-selection",
+      "kind": "concept",
+      "title": "An unrestricted search finds rare inward boxes almost surely",
+      "statement": "Unreviewed draft result. In Z^d, d>=2, set kappa=1/(4d). Independently at each site choose +e_1 or -e_1 with equal probability; assign kappa to each direction and an additional 1/2 to the chosen direction. For B(x,r)=x+[-r,r]^d, require drift >=1/2 in coordinate 1 below x_1 and <=-1/2 above it. For fixed x,r>=1 the probability is 4^(-r(2r+1)^(d-1)). Disjoint boxes centered at j(2r+1)e_1 are independent. The first matching box exists almost surely, so its environment-measurable center matches with probability 1. The location is unrestricted; no directional-transience or full-target counterexample is asserted.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent referee review pending; apply only the hypotheses stated in this concept"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:inward-box-rarity-unrestricted-selection",
+        "url": "urn:math:rwre-proof-audit:inward-box-rarity-unrestricted-selection",
+        "revision": "2026-10-10; unreviewed draft",
+        "license": "owner-own-work (campaign derivation; draft)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "quantitative-delay-certificate-for-regeneration-mean",
+      "namespace": "probability.rwre.proof_audit",
+      "logical_name": "quantitative-delay-certificate-for-regeneration-mean",
+      "kind": "concept",
+      "title": "A quantitative certificate sufficient for a conditioned duration mean",
+      "statement": "Unreviewed draft reduction. Let T be a nonnegative integer duration, Q=P(.|E), P(E)=q>0, d>=2, and let environment events A(x,r) satisfy P_env(A(x,r))<=exp(-a r^d), a>0. Fix c>0 and r(t)=floor(c log(t+2)). Suppose eventually Q(T>t)<=epsilon_t+Q(union_{|x|_infinity<=t} A(x,r(t))), with epsilon_t>=0 and sum epsilon_t finite. A union bound gives a summable term q^(-1)(2t+1)^d exp(-a r(t)^d), hence E_Q T is finite. The classification premise for actual regeneration is unproved.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent referee review pending; apply only the hypotheses stated in this concept"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:quantitative-delay-certificate-for-regeneration-mean",
+        "url": "urn:math:rwre-proof-audit:quantitative-delay-certificate-for-regeneration-mean",
+        "revision": "2026-10-10; unreviewed draft",
+        "license": "owner-own-work (campaign derivation; draft)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "finite-volume-visit-hazard-duration-bound",
+      "namespace": "probability.rwre.proof_audit",
+      "logical_name": "finite-volume-visit-hazard-duration-bound",
+      "kind": "concept",
+      "title": "Finite-volume visit hazards control elapsed time",
+      "statement": "Unreviewed draft reduction. Let T be a stopping time for a discrete process and B a deterministic finite set of M>=1 states. At every kth visit to any x in B before T, assume conditional probability at least h, 0<h<1, of no further visit to x before T, using that visit's sigma-field. Then for integer t>=M, P(T>t and all pre-exit states lie in B)<=M(1-h)^(floor(t/M)-1). Iterate conditional next-visit bounds and use a union bound over B. This controls time only after the visit hazard and confinement are proved.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent referee review pending; apply only the hypotheses stated in this concept"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:finite-volume-visit-hazard-duration-bound",
+        "url": "urn:math:rwre-proof-audit:finite-volume-visit-hazard-duration-bound",
+        "revision": "2026-10-10; unreviewed draft",
+        "license": "owner-own-work (campaign derivation; draft)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "geometric-attempt-count-infinite-cost-counterexample",
+      "to_key": "geometric-attempt-count-inference",
+      "kind": "refutes",
+      "rationale": "The explicit model has a geometric attempt count and finite individual costs but infinite expected total cost."
+    },
+    {
+      "from_key": "inward-box-rarity-unrestricted-selection",
+      "to_key": "fixed-center-rarity-adaptive-center-inference",
+      "kind": "refutes",
+      "rationale": "Every deterministic inward-box center is rare, while the first unrestricted matching center satisfies the event almost surely."
+    },
+    {
+      "from_key": "conditional-attempt-cost-summability",
+      "to_key": "geometric-attempt-count-infinite-cost-counterexample",
+      "kind": "semantic_association",
+      "rationale": "The sufficient conditional-cost premise identifies the integrability estimate missing from the geometric-count inference."
+    },
+    {
+      "from_key": "quantitative-delay-certificate-for-regeneration-mean",
+      "to_key": "inward-box-rarity-unrestricted-selection",
+      "kind": "semantic_association",
+      "rationale": "The duration reduction retains a deterministic polynomial search budget, whose absence causes the adaptive-selection counterexample."
+    },
+    {
+      "from_key": "finite-volume-visit-hazard-duration-bound",
+      "to_key": "conditional-attempt-cost-summability",
+      "kind": "semantic_association",
+      "rationale": "Both duration estimates iterate conditional survival bounds at a specified filtration and include an explicit finite cost accounting."
+    }
+  ]
+}

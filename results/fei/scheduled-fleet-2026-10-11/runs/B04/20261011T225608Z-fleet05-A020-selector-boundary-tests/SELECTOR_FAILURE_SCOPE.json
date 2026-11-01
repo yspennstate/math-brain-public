@@ -1,0 +1,37 @@
+{
+  "full_fei_status": "OPEN",
+  "controls": [
+    {
+      "name": "affine_parity_coincident_support",
+      "false_statement": "Disjoint-support entropy and influence mixture identities remain valid for disjoint physical selector cells without leaf Fourier-support separation",
+      "actual_boolean_witness": "F(x0,x1,y)=(-1)^(x0+x1)*y",
+      "actual_H_I": [0, 3],
+      "false_predicted_H_I": [2, 2],
+      "failed_hypothesis": "Leaf Fourier supports coincide; signed cross terms omitted",
+      "baseline_provenance": "COUNTEREXAMPLES X004; affine-parity extension in A020"
+    },
+    {
+      "name": "unequal_affine_cells",
+      "false_statement": "Unequal disjoint affine selector cells remove interference between repeated signed character branches",
+      "actual_boolean_witness": "Cells x0=0, (x0,x1)=(1,0), (1,1), masses 1/2,1/4,1/4; leaves y,-y,y",
+      "actual_H_I": [2, 2],
+      "false_predicted_H_I": [3, "7/4"],
+      "failed_hypothesis": "Nonempty leaf Fourier-support separation; actual selector disagreement is not the indicator-cell spectral average"
+    },
+    {
+      "name": "nearly_identical_bent_splice",
+      "false_statement": "There exists an absolute K such that every splice of distinct nearly identical branches with coincident Fourier supports has Delta <= K*I_sel",
+      "actual_boolean_witness": "m even >=4; g=(-1)^(sum paired data-bit products); g'=g-2*1_{y=0}; splice with one selector bit",
+      "selector_influence": "delta=2^-m",
+      "exact_coefficients": "g_hat=e*sigma; g'_hat=e*sigma-2delta; parent empty-selector=e*sigma-delta; occupied-selector=delta, e=sqrt(delta)",
+      "analytic_ratio": "Delta/I_sel=m+3/ln2+O(2^-m) -> infinity",
+      "full_influence": "m/2+(m+1)*2^-m",
+      "failed_hypothesis": "No fixed positive disagreement lower bound; closeness is not orthogonality or spectral separation",
+      "does_not_refute": ["Full FEI", "B04 logarithmic selector bound", "A019 rare-translation KL-credit mechanism with its actual stated hypotheses"],
+      "baseline_provenance": "O-BENT-SPLICE; exact analytic reconstruction in SELECTOR_FALSIFIER_SUITE.tex"
+    }
+  ],
+  "finite_validation": "131620 exhaustive tables satisfy 171/200 times the lead logarithmic selector bound; 1056 larger targeted cases satisfy the lead bound",
+  "candidate_specific_universal_exclusion": "Any selector-only constant-increment closure must exclude or pay the bent point-flip family even when both branch supports are full and identical",
+  "independent_review": "PENDING A091 primary, A090 alternate"
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B05",
+  "primary_packet_id": "A023",
+  "claims": [
+    {
+      "claim_id": "B05-A023-ACTIVATION-RESIDUAL-IDENTITY-v1",
+      "status": "PROVED",
+      "statement": "For every genuine Boolean core q and every c>=0, eta>0, the fair activation satisfies L_{c,eta}(A(q))=(1/2)L_{c,eta}(q)+D_R(q)+(2+eta)R(m)-B_z(m)-sum_i C_i(m,p_i)-c(1-m)/2, with all terms defined in PROOF.md.",
+      "evidence": ["PROOF.md", "check_activation_smr.py", "check_activation_smr.out"]
+    },
+    {
+      "claim_id": "B01-A003-SMR-2-ONE-QUARTER-v2",
+      "status": "REFUTED_EXACT_FINITE_PENDING_INDEPENDENT_REPRODUCTION",
+      "supersedes": "B01-A003-SMR-2-ONE-QUARTER-v1 OPEN_NUMERICALLY_SUPPORTED",
+      "statement": "The universal inequality M+(5/4)U<=2I is false. The fair activation of four-bit mask 56242 has exact positive residual, numerically 0.092343554500715 bits.",
+      "evidence": ["certify_activation_falsifier.py", "certify_activation_falsifier.out"]
+    },
+    {
+      "claim_id": "B05-A023-FAIR-ACTIVATION-NONPOSITIVE-NODE-v1",
+      "status": "REFUTED_EXACT_FINITE",
+      "statement": "At c=2 and eta=1/4, the complete fair-activation node charge need not be nonpositive, even when the child residual is exactly zero."
+    },
+    {
+      "claim_id": "GU-ASYMMETRY-MISMATCH",
+      "version": "v4.0",
+      "status": "OPEN",
+      "statement": "Find some absolute finite c and eta>0 for which the aggregate signed refund L_{c,eta}<=0 holds universally, or prove GU by another signed aggregate payment. The sharp c=2, eta=1/4 candidate is retired."
+    }
+  ],
+  "full_fei_status": "OPEN"
+}
+

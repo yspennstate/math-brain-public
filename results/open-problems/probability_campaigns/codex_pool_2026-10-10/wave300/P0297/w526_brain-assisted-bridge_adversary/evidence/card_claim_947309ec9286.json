@@ -1,0 +1,28 @@
+{
+  "id": "claim_947309ec928615f9dbb7adf2e8d0772e4ada248270d9924e007bfa120575ef81",
+  "title": "Gaussian Poincare Inequality (Sharp Constant 1)",
+  "body": "Let gamma be the standard Gaussian measure on R^n and let f be locally Lipschitz with f and its gradient in L^2(gamma). Then Var_gamma(f) <= E_gamma[ |grad f|^2 ]. The constant 1 is SHARP and is attained exactly by the affine functions: for f(x) = a . x + b both sides equal |a|^2. The inequality is DIMENSION-FREE - the same constant 1 for every n - which is what makes it useful in high dimension, and it follows from the one-dimensional case by tensorization of the variance. It is strictly weaker than the Gaussian logarithmic Sobolev inequality, which implies it by applying the log-Sobolev inequality to 1 + eps f and expanding to second order in eps. Note the direction: the inequality bounds the variance by the gradient energy, so it gives concentration only at the level of variance, not exponential tails; exponential tails require the log-Sobolev inequality and the Herbst argument. [standard; e.g. Boucheron, Lugosi and Massart, Concentration Inequalities, Theorem 3.20]\ngamma the standard Gaussian measure on R^n\nf locally Lipschitz (or weakly differentiable) with f and grad f in L^2(gamma)\nthe constant 1 is sharp; there is no dimension dependence",
+  "metadata_json": {
+    "artifact_digest": "sha256:42849064e49cf809561674ef6c6b52f7d4b5034a61dd7a8de91594f52fe582fe",
+    "artifact_path": "objects/sha256/42/42849064e49cf809561674ef6c6b52f7d4b5034a61dd7a8de91594f52fe582fe.md",
+    "bundle_digest": "sha256:38b5db6fa95e8893d8a7a3f7c9b4b5bf2145169724a7d2b266005044d60c4d07",
+    "bundle_entry_key": "thm-gaussian-poincare",
+    "bundle_id": "population.martingales-and-concentration-001",
+    "claim_kind": "theorem",
+    "conditions": [],
+    "domain": "probability theory",
+    "draft": "claude-8e06e1f7-M9/bundle_ap02.json",
+    "evidence_ids": [],
+    "logical_id": "math:probability.gaussian:gaussian-poincare-inequality",
+    "overlay_schema_version": 1,
+    "proof_text": "Expand in the orthonormal Hermite basis of L^2(gamma). For a multi-index alpha in the nonnegative integers to the n, let H_alpha(x) = prod_{i=1}^n h_{alpha_i}(x_i)/sqrt(alpha_i!) where h_k is the probabilists' Hermite polynomial, so that {H_alpha} is an orthonormal basis of L^2(gamma) and H_0 = 1. Write f = sum_alpha c_alpha H_alpha, so E[f] = c_0 and Var(f) = sum_{|alpha| >= 1} c_alpha^2, where |alpha| = alpha_1 + ... + alpha_n. The Hermite polynomials satisfy h_k' = k h_{k-1}, which in the normalised basis becomes the derivative relation d/dx_i H_alpha = sqrt(alpha_i) H_{alpha - e_i}. Hence grad f has i-th component sum_alpha c_alpha sqrt(alpha_i) H_{alpha - e_i}, and by orthonormality E[ |grad f|^2 ] = sum_i sum_alpha c_alpha^2 alpha_i = sum_alpha |alpha| c_alpha^2. Comparing termwise with Var(f) = sum_{|alpha| >= 1} c_alpha^2 and using |alpha| >= 1 on that index set gives Var(f) <= E|grad f|^2, with equality exactly when c_alpha = 0 for every alpha with |alpha| >= 2, that is when f is affine. The extension from smooth f to locally Lipschitz f is by mollification, using that Lipschitz functions are differentiable almost everywhere and that mollification does not increase the Lipschitz constant.",
+    "release_manifest_digest": "sha256:65bc8bd338d9119f2b8ee6c53a7945a71c4d874c489921ae4c702fb50c6fd474",
+    "revision_digest": "sha256:947309ec928615f9dbb7adf2e8d0772e4ada248270d9924e007bfa120575ef81",
+    "source_id": "rederived:claude-8e06e1f7-M9",
+    "source_revision": "re-derived-2026-08-22; statement and the Hermite-expansion proof written and checked by the author, including the derivative relation in the normalised basis; textbook cross-reference in the statement, source not fetched this session",
+    "statement_fidelity_reviewed": false,
+    "supersedes": [],
+    "trust_class": "curated_secondary",
+    "truth_status": "unverified"
+  }
+}

@@ -1,0 +1,202 @@
+--- /dev/null
++++ b/~/math-brain-inbox/w384/bundle_001.json
+@@ -0,0 +1,199 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w384",
++  "bundle_slug": "p0117-deleted-edge-threshold-w384-20261010",
++  "entries": [
++    {
++      "key": "capacity",
++      "namespace": "probability.fpp",
++      "logical_name": "deleted-edge-boundary-extension-capacity",
++      "kind": "definition",
++      "title": "Deleted-edge boundary extension capacity",
++      "statement": "Fix an edge e={u,v} of Z^2 and strictly positive weights on every other edge. Assume the graph with e deleted has finite passage distances d, finite metric balls and finite geodesic minimizers. Put C_e(x,y)=min(d(x,u)+d(v,y),d(x,v)+d(u,y)) and D_e(x,y)=d(x,y)-C_e(x,y). For S_n={z:||z||_infinity=n} and n with u,v strictly inside the box, define H_n=max(0,max_{x,y in S_n} D_e(x,y)). These quantities use no weight for e.",
++      "proof_text": null,
++      "assumptions": [
++        "positive deleted-edge weights",
++        "deleted-edge metric finite and proper",
++        "u,v inside the boundary"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w384:p0117-threshold-20261010",
++        "url": "file:///~/brain_workers/w384/ATTEMPT.md",
++        "revision": "author-proof-draft-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "properness",
++      "namespace": "probability.fpp",
++      "logical_name": "positive-iid-fpp-properness-without-upper-tail-moment-draft",
++      "kind": "concept",
++      "title": "DRAFT: properness for positive iid FPP without an upper-tail moment",
++      "statement": "Author-proved reduction awaiting independent review, not an audited theorem card. For iid finite positive weights on Z^2, choose delta>0 with p=P(t_e<=delta)<1/144. The probability that a simple n-edge path from a fixed x costs at most delta*n/2 is at most (4/3)*(6*sqrt(p))^n: use independence along each fixed simple path, at most 2^n cheap-edge subsets, at most 4*3^(n-1) paths and a union bound. Borel-Cantelli and countable intersection over x imply properness and finite minimizers. Finite positive weight changes and deletion of one edge preserve these properties. No upper-tail moment is used. This proves existence and compactness prerequisites, not absence of bigeodesics. Full proof: local ATTEMPT.md Lemma 1.",
++      "proof_text": null,
++      "assumptions": [
++        "iid finite strictly positive weights",
++        "nearest-neighbor Z^2"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w384:p0117-threshold-20261010",
++        "url": "file:///~/brain_workers/w384/ATTEMPT.md",
++        "revision": "author-proof-draft-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "identity",
++      "namespace": "probability.fpp",
++      "logical_name": "single-edge-bigeodesic-conditional-threshold-identity-draft",
++      "kind": "concept",
++      "title": "DRAFT: conditional probability of a bigeodesic through one edge",
++      "statement": "Author-proved conditional identity awaiting independent review. Use a proper positive deleted-edge environment and the capacity H_n defined in this bundle. Giving e={u,v} weight s>0 yields T_s(x,y)=min(d(x,y),s+min(d(x,u)+d(v,y),d(x,v)+d(u,y))). The clipped capacities H_n decrease to H_infinity in [0,d(u,v)]: strictly e-using outer geodesics restrict to strictly e-using inner geodesics. Two-sided diagonal compactness identifies geodesics anchored at e on every boundary scale with a bigeodesic through e. If t_e is independent of the outside and has a nonatomic law F with P(t_e>0)=1, the equalities t_e=H_n and t_e=H_infinity are null. Thus P(e lies on a bigeodesic | all other weights)=F(H_infinity). No independence between scales or endpoint capacities is used. Full proof: ATTEMPT.md Lemmas 2-3 and Proposition 4.",
++      "proof_text": null,
++      "assumptions": [
++        "proper positive deleted-edge metric with finite minimizers",
++        "independent positive nonatomic distinguished-edge weight"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w384:p0117-threshold-20261010",
++        "url": "file:///~/brain_workers/w384/ATTEMPT.md",
++        "revision": "author-proof-draft-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "gap",
++      "namespace": "probability.fpp",
++      "logical_name": "planar-iid-fpp-limiting-capacity-support-collapse-conjecture",
++      "kind": "concept",
++      "title": "UNPROVED: support collapse of the limiting bigeodesic capacity",
++      "statement": "Conjecture and exact unresolved input, not a proved theorem. In iid finite nonnegative nonatomic nearest-neighbor FPP on Z^2, put a=essential infimum of the weight law and use the deleted-edge capacity H_infinity of this bundle. The support-collapse assertion is H_infinity<=a almost surely for either orientation of a fixed edge. Since F(h)=0 exactly for h<=a, the conditional threshold identity makes this equivalent to zero probability of a bigeodesic through the fixed edge. Countably many edges then give simultaneous absence everywhere. For the standard literature regime additionally assume E[min(t_1,t_2,t_3,t_4)^2]<infinity for independent samples. Local detours give only H_infinity<=d(u,v); this is insufficient. No proof of support collapse is supplied. Current literature openness is UNKNOWN because a September 24, 2026 primary manuscript claims the moment-restricted result but has not been fully audited here.",
++      "proof_text": null,
++      "assumptions": [
++        "iid finite nonnegative nonatomic weights on Z^2",
++        "min-of-four second moment for the moment-restricted literature formulation"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w384:p0117-threshold-20261010",
++        "url": "file:///~/brain_workers/w384/ATTEMPT.md",
++        "revision": "author-proof-draft-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "pinning",
++      "namespace": "probability.fpp",
++      "logical_name": "one-edge-fpp-resampling-preserves-bigeodesic-with-bypass-penalty-draft",
++      "kind": "concept",
++      "title": "DRAFT: one-edge lowering gives a uniform bypass penalty",
++      "statement": "Author-proved reduction awaiting independent review. In a proper strictly positive weighted graph, if a bigeodesic gamma uses an edge e of weight t_e, replacing only that weight by s in (0,t_e) preserves the entire bigeodesic. A finite straddling segment decreases by Delta=t_e-s; a simple competitor decreases by either Delta if it uses e or zero if it avoids e. Thus every e-avoiding competitor has new excess cost at least Delta. A subsegment on one side stays minimizing because it sits inside a minimizing straddling segment. In iid nonatomic positive FPP, positive probability of a bigeodesic through e implies positive probability of such a uniformly pinned bigeodesic under the same iid law: choose a<b<c with F(b)>0 and P(A_e,t_e>=c)>0, where a is the essential infimum, then independently resample s with law F. The event has probability F(b)*P(A_e,t_e>=c)>0 and penalty at least c-b. This multiplication uses exactly the fresh independent coordinate. No planar exclusion of these pinned paths is proved.",
++      "proof_text": null,
++      "assumptions": [
++        "proper strictly positive metric for deterministic preservation",
++        "iid positive nonatomic finite edge law for the probability reduction"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w384:p0117-threshold-20261010",
++        "url": "file:///~/brain_workers/w384/ATTEMPT.md",
++        "revision": "author-proof-draft-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "atomic",
++      "namespace": "probability.fpp",
++      "logical_name": "constant-weight-fpp-bigeodesic-capacity-control",
++      "kind": "concept",
++      "title": "DRAFT boundary control: constant weights retain bigeodesics",
++      "statement": "Author-proved boundary control awaiting independent review. With every edge of Z^2 of weight c>0, each horizontal line is a bigeodesic, since every finite segment has the minimum possible number of edges. For e={(0,0),(1,0)} and x=(-n,0), y=(n,0), deleting e gives d(x,y)=(2n+2)c and C_e(x,y)=(2n-1)c, hence D_e(x,y)=3c. The e-free detour has cost d(u,v)=3c, so H_n=H_infinity=3c. Thus positivity, properness and planarity alone do not imply support collapse. This atomic law is excluded from the nonatomic target and is not a counterexample to it.",
++      "proof_text": null,
++      "assumptions": [
++        "constant positive edge weights on Z^2",
++        "atomic control outside the target hypotheses"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w384:p0117-threshold-20261010",
++        "url": "file:///~/brain_workers/w384/ATTEMPT.md",
++        "revision": "author-proof-draft-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "selection",
++      "namespace": "probability.fpp",
++      "logical_name": "deterministic-endpoint-bounds-do-not-control-adaptive-maxima",
++      "kind": "concept",
++      "title": "DRAFT proof guard: deterministic endpoints and adaptive maxima",
++      "statement": "An elementary probability control, not an FPP counterexample. If J is uniform on {1,...,m} and A_i={J=i}, each deterministic event has probability 1/m, while P(union_i A_i)=1. Equivalently, each threshold indicator has mean 1/m and their maximum is always one. Therefore an estimate for every deterministic pair of endpoints does not automatically control a pair chosen after observing the environment. For the square boundary S_n in Z^2 there are 8n sites and at most 64n^2 ordered endpoint pairs; a raw union bound needs a per-pair bound o(n^-2) to vanish. Qualitative midpoint decay supplies no such conclusion. Independence of the resampled edge from its outside environment is valid; multiplying success probabilities for correlated endpoint capacities or selected corridors needs an additional justified filtration or independence argument.",
++      "proof_text": null,
++      "assumptions": [
++        "uniform m-point toy probability space for the control",
++        "square lattice boundary for the endpoint count"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w384:p0117-threshold-20261010",
++        "url": "file:///~/brain_workers/w384/ATTEMPT.md",
++        "revision": "author-proof-draft-2026-10-10-v1",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "identity",
++      "to_key": "capacity",
++      "kind": "depends_on",
++      "rationale": "The conditional identity uses exactly the deleted-edge capacity definition."
++    },
++    {
++      "from_key": "identity",
++      "to_key": "properness",
++      "kind": "depends_on",
++      "rationale": "The iid application obtains finite deleted-edge minimizers and compactness prerequisites from the positive-weight properness proof."
++    },
++    {
++      "from_key": "gap",
++      "to_key": "identity",
++      "kind": "depends_on",
++      "rationale": "The identity translates support collapse into zero bigeodesic probability."
++    },
++    {
++      "from_key": "pinning",
++      "to_key": "gap",
++      "kind": "semantic_association",
++      "rationale": "The finite-energy route turns existence into a uniform bypass-penalty event; excluding that event is the same remaining geometric obstacle."
++    },
++    {
++      "from_key": "atomic",
++      "to_key": "capacity",
++      "kind": "specializes",
++      "rationale": "The capacity is computed exactly for constant weights; this specialization lies outside nonatomic assumptions."
++    },
++    {
++      "from_key": "selection",
++      "to_key": "gap",
++      "kind": "semantic_association",
++      "rationale": "The endpoint maximum in the unresolved capacity bound is an environment-adaptive selection."
++    },
++    {
++      "from_key": "gap",
++      "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
++      "kind": "semantic_association",
++      "rationale": "This draft explicitly states the residual lemma for the existing P0117 problem card; it does not certify current openness."
++    }
++  ]
++}

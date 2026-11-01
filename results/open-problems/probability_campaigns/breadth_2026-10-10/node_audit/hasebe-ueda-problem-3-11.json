@@ -1,0 +1,31 @@
+{
+ "verdicts": {
+  "hasebe-ueda-problem-3-11-cauchy-free-classical-convolution-identity": {
+   "verdict": "FAITHFUL",
+   "why": "The statement matches the record's identity mu boxplus C_t = mu * C_t for every probability measure mu and every t>0, and the transform form G_{mu boxplus C_t}(z)=G_mu(z+it). It keeps the record's prior-art disclaimer that the identity is classical. The proof text is the record's derivation verbatim (constant R-transform -it, then the Poisson integral), with no invented steps. The problem is named correctly.",
+   "statement": ""
+  },
+  "hasebe-ueda-problem-3-11-cauchy-not-freely-strongly-unimodal": {
+   "verdict": "FAITHFUL",
+   "why": "This is the record's Proposition at full strength: every C_t, t>0, is not freely strongly unimodal. It is proved by combining the identity with Ibragimov's theorem, which says the Cauchy density is not log-concave, so some unimodal nu has nu*C_t non-unimodal. The proof text is verbatim. Leaving out the record's explicit numerical witness (the uniform mixture at t=1) is an omission of supplementary material, not a misstatement. The Ibragimov assumption is accurately scoped.",
+   "statement": ""
+  },
+  "hasebe-ueda-problem-3-11-cauchy-attraction-obstruction": {
+   "verdict": "FAITHFUL",
+   "why": "This matches the record's Corollary. A non-delta lambda whose affinely normalized free powers (D_{1/b_n} then shift by a_n, i.e. x -> x/b_n + a_n) converge weakly to C_1 is not freely strongly unimodal. Normalizing the limit to C_1 loses no generality, because the affine normalization absorbs scale and location. The proof text is the record's argument verbatim: induction on free powers, dilation, weak continuity of boxplus, and weak closedness of unimodal laws. The auxiliary facts listed (preservation under positive dilation and translation, weak closedness) are the ones the record's proof uses.",
+   "statement": ""
+  },
+  "hasebe-ueda-problem-3-11-stable-limit-candidate-reduction": {
+   "verdict": "FIX",
+   "why": "There are several discrepancies. (1) The record asserts that the general closure argument SHOWS lambda is disqualified when attracted to any free stable law that is not freely strongly unimodal. The draft weakens this to 'would exclude'. (2) The record explicitly reduces Problem 3.11 to two questions: is some free stable law of index alpha in (0,2), alpha != 1, freely strongly unimodal; and is some measure lying in no free domain of attraction freely strongly unimodal. The draft replaces this with a vague 'proposes testing'. It also never mentions that alpha=2 is already handled by the source's Lemma 3.1. (3) The draft calls the tested laws 'symmetric free stable laws', but the record specifies them only by K(w)=1/w - i(iw)^{alpha-1}. (4) The draft calls the numerics 'evidence' without saying what they show: two interior maxima for the specific witness nu at each tested index, so those lambda_alpha and everything attracted to them are excluded numerically. (5) It omits the record's negative finding: below about 0.65 the witness gives a single maximum, which the record explicitly says is not evidence of free strong unimodality.",
+   "statement": "[campaign result 2026-09-14, author checked] This is the remaining-problem reduction in the partial answer to Problem 3.11 of Takahiro Hasebe and Yuki Ueda's Large time unimodality for classical and free Brownian motions with initial distributions, ALEA 15 (2018), 353-374, DOI:10.30757/ALEA.v15-15 (arXiv:1710.08240). A probability measure is unimodal if, for some mode m, it is an atom at m plus an absolutely continuous measure whose density is nondecreasing to the left of m and nonincreasing to the right. Write boxplus for additive free convolution. A law lambda is freely strongly unimodal if lambda boxplus nu is unimodal for every unimodal nu. The source's Theorem 1.4 shows that no nondelta law of finite variance (equivalently, in the free domain of attraction of the semicircle) is freely strongly unimodal. The record's proved Cauchy obstruction excludes every nondelta lambda in the free domain of attraction of a Cauchy law. The same closure argument shows, more generally, that a nondelta lambda is not freely strongly unimodal whenever it lies in the free domain of attraction of a free stable law that is itself not freely strongly unimodal. Problem 3.11 therefore reduces to two questions. (1) Is some free stable law of index alpha in (0,2), alpha != 1, freely strongly unimodal? (The index-1 case is settled by the Cauchy identity, and index 2 by the source's Lemma 3.1.) (2) Is some measure lying in no free domain of attraction freely strongly unimodal? Numerically, for the free stable laws lambda_alpha with K(w)=1/w - i(iw)^{alpha-1}, the unimodal witness nu = (1/10)U[0,0.05] + (9/10)U[0,16] gives lambda_alpha boxplus nu two interior maxima at alpha = 1.95, 1.8, 1.6, 1.4, 1.2, 1.0, 0.9, 0.8, 0.7. This was computed by Belinschi-Bercovici subordination and calibrated against the exact Cauchy case at alpha=1. So those laws, and the laws attracted to them, are excluded numerically; only alpha=1 is a theorem. For alpha = 0.6 down to 0.3 the same nu, and three other one-sided uniform mixtures tried at alpha=0.5, give a single maximum. This is not evidence that those laws are freely strongly unimodal. The case alpha below about 0.65 remains open. This does not answer the existence question. This is an unrefereed campaign result."
+  }
+ },
+ "served": [
+  "claude-opus-5-5"
+ ],
+ "stop_reason": "end_turn",
+ "rc": 0,
+ "cost_usd": 0.1774326,
+ "raw": ""
+}

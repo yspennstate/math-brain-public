@@ -1,0 +1,53 @@
+[
+  {
+    "claim_id": "A017-FOUR-EDGE-COMPATIBILITY",
+    "version": 1,
+    "exact_statement": "On the uniform six-dimensional Boolean cube, let a selected physical coordinate have four pivotal pairs whose five-dimensional child locations form an affine two-plane. If the child sign on this plane is bent, and zero through six of the other seven parallel slices are affine (the rest bent), then its spectral erasure satisfies B_i<=4 Inf_i=1/2. For seven affine slices this assertion fails: the saved actual Boolean truth table has B_i=(136 log2(17)+120 log2(5)-704)/256>1/2, H=21/4 and I=9/4, with a K4-good alternative physical coordinate. Its exact nearest quadratic distances are 12 without a polar constraint and 14 when the selected quadratic polar row is nonzero. For any quadratic phase on six physical controls edited at at most twelve vertices, a nonzero polar coordinate with four pivotal pairs is K4-good whenever the surviving pivotal child set is an affine two-plane. All affine-phase mask terminals with at most twelve edits on D>=6 controls retain the unchanged K=4+2/ln(2) payment. Consequently the inherited physical stopping policy extends at the same K through twelve coherent same-fiber edits conditional on every reached four-pair critical node having planar surviving pivotal set; the general affine-span-three critical case remains open.",
+    "hypotheses": [
+      "Boolean signs on a uniform physical cube; entropy and erasure in bits; exact Fourier probabilities.",
+      "Affine changes of unqueried coordinates are used solely to preserve the selected coordinate erasure and influence, never to transport another physical influence.",
+      "The twelve-edit node lemma requires a nonzero selected quadratic polar row and an affine two-plane surviving pivotal set.",
+      "The twelve-edit stopping consequence is conditional on planar critical nodes at every reached restriction and uses the complete inherited five-control, JS and terminal proofs."
+    ],
+    "statement_sha256": "3f44561efcf8088c17a4fc04814b33d9931cde03222efde64aa1a8fe76fc7d37",
+    "contributors": [
+      "A017"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "out/position_certificate.json",
+      "out/boolean_counterexample.json",
+      "out/quadratic_distance.json",
+      "out/distance_bitset.json",
+      "out/critical12_certificate.json",
+      "INHERITED_STAGE6_PROOF.md"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A017-TWO-EDIT-SHARED-ADDRESS-STOPPING",
+        "version": 4,
+        "status": "AUTHOR_CHECKED_PENDING_INDEPENDENT_REVIEW",
+        "used_scope": "affine-on-plane quinary certificate; generic five-control good query; odd five-edge certificate; JS and sparse-terminal inequalities"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_CHECKED_PROOF_AND_EXACT_CERTIFICATES_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "Every six-variable physical coordinate with four pivotal edges satisfies B_i<=4 Inf_i.",
+        "scope": "unproved stage6 frontier helper, even for affine-plane disagreement with bent phase and seven affine parallel slices",
+        "witness": "out/boolean_counterexample.json"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A018",
+      "A020",
+      "A030",
+      "A090",
+      "A091",
+      "B04"
+    ]
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "helper_version": "A071-prime-ball-v1; stage20 arithmetic/profile_engine byte copies",
+  "family": "b_n(x)=-1 iff popcount(x)<=1, else +1",
+  "domain": {
+    "pilot_dimensions": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "main_dimensions": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "audited_blocks": "all proper coordinate subsets with size>=2 for n<=6; arbitrary block sizes analytic"
+  },
+  "case_count": {
+    "pilot_functions": 4,
+    "direct_Walsh_coefficients": 120,
+    "main_dimension_rows": 30,
+    "main_binomial_spectral_rows": 555
+  },
+  "symmetries": "permutation invariance groups coefficients by Hamming weight; input translations/output complement used only by analytic invariance, no completeness outside this family",
+  "arithmetic": "integers/Fraction, exact Walsh and edges, prime-log entropy, 192-bit outward log bounds with proved atanh tail; no floating sign verdict",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": 55,
+  "stop_rule": "no dimension growth; explicit timer checks; fail closed on unresolved sign",
+  "target": "Refute positive universal entropy-saving by proper disjoint Boolean decompositions; retain full initial bank and all terminals; full FEI remains open"
+}

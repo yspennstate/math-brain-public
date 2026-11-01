@@ -1,0 +1,91 @@
+{
+  "command": "python -X utf8 verify_packet.py --gate-receipt evidence/compute_gate.json",
+  "gate_receipt": {
+    "checked_epoch": 1791616490.0512087,
+    "state_timestamp": "2026-10-10 10:14:30",
+    "state_file_age_seconds": 19.461915016174316,
+    "status": "warn",
+    "reasons": [
+      "process_pressure"
+    ],
+    "cpu_pct_reported": 81.6,
+    "physical_free_gib": 7.042877197265625,
+    "commit_headroom_gib": 11.390625,
+    "disk_free_gib": 50.588600158691406,
+    "allow_small_check": true,
+    "scope": "One foreground stdlib arithmetic check; no GPU, no model, no background worker; <=2 CPU seconds.",
+    "policy_source": "12_cognitive_architecture/compute_governor/COMPUTE_DOCTRINE.md (live-state and direct checks; no distress override)."
+  },
+  "method": "Exact Fraction arithmetic for n=2,3; Sylvester positive definiteness; sign-row enumeration for Hadamard n=2,4,8.",
+  "counts": {
+    "strict_gap_cases": 1200,
+    "boundary_equalities": 392,
+    "cases": 3168,
+    "exact_mismatches": 0,
+    "naive_mismatches": 192,
+    "skeleton_below_or_equal_threshold": 1968
+  },
+  "first_naive_failure": {
+    "matrix": [
+      [
+        -1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        1
+      ],
+      [
+        -1,
+        1,
+        -1
+      ]
+    ],
+    "r_squared": "1",
+    "true_small_singular_event": true,
+    "erased_denominator_event": false
+  },
+  "hadamard": [
+    {
+      "n": 2,
+      "sign_rows_enumerated": 4,
+      "singular_rows": 2,
+      "sign_atom": "1/2",
+      "r": "1/24",
+      "gaussian_upper_bound": "1/12",
+      "replacement_gap_lower_bound": "5/12"
+    },
+    {
+      "n": 4,
+      "sign_rows_enumerated": 16,
+      "singular_rows": 6,
+      "sign_atom": "3/8",
+      "r": "1/40",
+      "gaussian_upper_bound": "1/20",
+      "replacement_gap_lower_bound": "13/40"
+    },
+    {
+      "n": 8,
+      "sign_rows_enumerated": 256,
+      "singular_rows": 70,
+      "sign_atom": "35/128",
+      "r": "1/72",
+      "gaussian_upper_bound": "1/36",
+      "replacement_gap_lower_bound": "283/1152"
+    }
+  ],
+  "finite_gaussian_diagnostic": {
+    "n": 1,
+    "epsilon": 1,
+    "actual_cdf": 0.6826894921370857,
+    "mislabelled_limiting_cdf": 0.7768698398515702,
+    "absolute_difference": 0.09418034771448447,
+    "analytic_proof": "At n=1 the CDF is erf(t/sqrt(2)) with derivative sqrt(2/pi) at zero, unlike the limiting expression whose derivative is 1."
+  },
+  "cpu_seconds": 0.34375,
+  "formal_certificate": false,
+  "independent_review": "pending",
+  "parent_target": "UNPROVED: H is the remaining signed averaged inequality."
+}

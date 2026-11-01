@@ -1,0 +1,1195 @@
+diff --git a/math-brain-inbox/w341/bundle_001.json b/math-brain-inbox/w341/bundle_001.json
+--- a/math-brain-inbox/w341/bundle_001.json
++++ b/math-brain-inbox/w341/bundle_001.json
+@@ -0,0 +1,98 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w341",
++  "bundle_slug": "w341-p0288-checked-results-20261010",
++  "entries": [
++    {
++      "key": "killed-walk-definition",
++      "namespace": "probability.markov",
++      "logical_name": "p0288-killed-walk-definition",
++      "kind": "definition",
++      "title": "Two-ended killed continuous-time walk [audit pending w347]",
++      "statement": "On the transient class Z, the chain jumps from i to i+1 and i-1 at rate one each and jumps to a separate absorbing cemetery at rate kappa+v*1_{i=0}, with kappa>0 and v>0. Its transient generator is Delta-kappa I-v|0><0|, where Delta f(i)=f(i+1)+f(i-1)-2f(i).",
++      "proof_text": null,
++      "assumptions": [
++        "kappa>0",
++        "v>0"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:p0288-killed-walk-definition",
++        "url": "file:///~/brain_workers/w341/proofs/P0288_recheck.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "positive-rank-two-asymptotic-kernel",
++      "namespace": "probability.markov",
++      "logical_name": "p0288-positive-rank-two-asymptotic-kernel",
++      "kind": "lemma",
++      "title": "Existing killed-walk candidate: explicit rank-two minor [audit pending w347]",
++      "statement": "For the two-ended killed walk just defined, lambda=kappa, the class is lambda-transient, and for fixed integers i,j the limit of t^(3/2)*exp(kappa*t)*p_t(i,j) is [max(ij,0)+(|i|+|j|)/v+2/v^2]/(2*sqrt(pi)). This strictly positive kernel has rank two and its {0,1} minor is 1/(4*pi*v^2). It cannot factor as a rank-one product. This rechecks an existing campaign candidate and does not certify novelty.",
++      "proof_text": "# P0288: recheck of the existing killed-walk candidate\n\nStatus: a proof and independent recheck of an existing campaign candidate, pending w347. This is not a novelty or literature-status certificate. The cached primary source is Phil Pollett, *Quasi-stationary distributions for queueing and other models*, arXiv:2202.05428 (2022), Section 2. Its conjecture (ii) is the rank-one assertion. Foley and McDonald, *Yaglom limits can depend on the starting state*, arXiv:1709.07578v1, 22 September 2017, is the existing prior-art lead; its cached abstract concerns a discrete R-transient example, not this continuous-time formula.\n\nOn the transient labels Z, jump to each nearest neighbor at rate one, kill at rate kappa>0 everywhere and at extra rate v>0 at lattice zero, into a separate cemetery state. The full generator is conservative, bounded-rate, nonexplosive and has an irreducible transient class. Uniform killing ensures almost sure absorption. Put K=-Delta+v|0><0|, where Delta f(i)=f(i+1)+f(i-1)-2f(i); then p_t(i,j)=exp(-kappa t)<delta_i,exp(-tK)delta_j>.\n\nFor s>0, set D=sqrt(s(s+4)) and r=(s+2-D)/2. The free resolvent is r^|i-j|/D: substitution in its second-order recurrence and decay at both ends determine it. The rank-one perturbation identity gives\n\nR_s(i,j)=[r^|i-j|-v r^(|i|+|j|)/(D+v)]/D.\n\nWrite a=|i-j|, b=|i|+|j| and q=sqrt(s). Expanding D=2q+q^3/4+O(q^5), log r=-q+q^3/24+O(q^5), and v/(D+v)=1-2q/v+4q^2/v^2+O(q^3), gives\n\nR_s(i,j)=(b-a)/2+1/v-L_ij sqrt(s)+O(s), where L_ij=(b^2-a^2)/4+b/v+2/v^2=max(ij,0)+(|i|+|j|)/v+2/v^2.\n\nFor rigor in passing to time, use the explicit spectral boundary values rather than an off-diagonal Tauberian claim. At s=-E+i0 for 0<E<4, D=i sqrt(E(4-E)), r=1-E/2-i sqrt(E(4-E))/2. Near zero the boundary value is analytic in sqrt(E), so Stieltjes inversion gives spectral density (L_ij/pi) sqrt(E)+O(E^(3/2)). There is no atom at zero because sR_s(i,j) tends to zero. The remainder of the finite spectral measure, supported above any fixed positive epsilon, contributes exponentially little. Laplace integration of the density therefore gives\n\nlim_{t->infinity} t^(3/2) exp(kappa t) p_t(i,j)=C_ij=L_ij/(2 sqrt(pi)).\n\nIn particular, C_ij is strictly positive, the decay parameter is lambda=kappa, and the integrated exp(lambda t) kernel is (b-a)/2+1/v, which is finite. Thus the chain satisfies the source's lambda-transience and absorption hypotheses. Define h_+(i)=max(i,0)+1/v and h_-(i)=max(-i,0)+1/v. These are distinct positive K-harmonic functions and L_ij=h_+(i)h_+(j)+h_-(i)h_-(j). The leading kernel has rank exactly two; its minor on labels {0,1} is 1/(4*pi*v^2)>0. No rank-one factorization can have that minor.\n\nIndependent checks: checks.py evaluated 784 resolvent recurrences in exact fractions, 72 harmonic recurrences and four exact rank/minor checks. Independent integration of the spectral density at t=20,80,320 gave maximum absolute errors 0.06132234, 0.01689538, 0.00433960 against the scaled limits. These numerical results support, rather than replace, the spectral proof. A proof audit must check the branch convention, absence of a zero atom, signed off-diagonal inversion, positivity, and all source hypotheses. Novelty remains unestablished.\n\nLocal primary passages: Downloads/Probability_1000_20h_20260906/sources/queues_qsd_pollett_2022/text.txt:15-32,122-127; prior-art abstract: sources/foley_mcdonald_yaglom_2017/text.txt:3-16. Existing brain target: math:probability.open-problems:p0288-pollett-rank-two-limit-kernel-refuted, whose current title says CANDIDATE REFUTATION.\n",
++      "assumptions": [
++        "rate-one nearest-neighbor jumps on Z",
++        "uniform killing kappa>0",
++        "extra killing v>0 at lattice zero",
++        "separate absorbing cemetery"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:p0288-positive-rank-two-asymptotic-kernel",
++        "url": "file:///~/brain_workers/w341/proofs/P0288_recheck.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "source-limited-status-20261010",
++      "namespace": "probability.markov",
++      "logical_name": "p0288-source-limited-status-20261010",
++      "kind": "concept",
++      "title": "Source-limited status and scope for P0288 [audit pending w347]",
++      "statement": "The supplied campaign already contains a candidate refutation of the rank-one polynomial-limit assertion for a lambda-transient killed chain. Its source and formula were rechecked here; independent audit and novelty remain unverified. Foley-McDonald arXiv:1709.07578v1 is a prior-art lead, not an established identification with this continuous-time example.",
++      "proof_text": null,
++      "assumptions": [
++        "only the supplied local caches and prior records were consulted",
++        "independent review pending"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:p0288-source-limited-status-20261010",
++        "url": "file:///~/brain_workers/w341/proofs/P0288_recheck.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "positive-rank-two-asymptotic-kernel",
++      "to_key": "killed-walk-definition",
++      "kind": "depends_on",
++      "rationale": "From: \"For the two-ended killed walk just defined, lambda=kappa, the class is lambda-transient, and for fixed integers i,j the limit of t^(3/2)*exp(kappa*t)*p_t(i,j) is [max(ij,0)+(|i|+|j|)/v+2/v^2]/(2*sqrt(pi)). This strictly positive kernel has rank two and its {0,1} minor is 1/(4*pi*v^2). It cannot factor as a rank-one product. This rechecks an existing campaign candidate and does not certify novelty.\" To: \"On the transient class Z, the chain jumps from i to i+1 and i-1 at rate one each and jumps to a separate absorbing cemetery at rate kappa+v*1_{i=0}, with kappa>0 and v>0. Its transient generator is Delta-kappa I-v|0><0|, where Delta f(i)=f(i+1)+f(i-1)-2f(i).\"."
++    },
++    {
++      "from_key": "killed-walk-definition",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"On the transient class Z, the chain jumps from i to i+1 and i-1 at rate one each and jumps to a separate absorbing cemetery at rate kappa+v*1_{i=0}, with kappa>0 and v>0. Its transient generator is Delta-kappa I-v|0><0|, where Delta f(i)=f(i+1)+f(i-1)-2f(i).\" To: \"The supplied campaign already contains a candidate refutation of the rank-one polynomial-limit assertion for a lambda-transient killed chain. Its source and formula were rechecked here; independent audit and novelty remain unverified. Foley-McDonald arXiv:1709.07578v1 is a prior-art lead, not an established identification with this continuous-time example.\"."
++    },
++    {
++      "from_key": "positive-rank-two-asymptotic-kernel",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"For the two-ended killed walk just defined, lambda=kappa, the class is lambda-transient, and for fixed integers i,j the limit of t^(3/2)*exp(kappa*t)*p_t(i,j) is [max(ij,0)+(|i|+|j|)/v+2/v^2]/(2*sqrt(pi)). This strictly positive kernel has rank two and its {0,1} minor is 1/(4*pi*v^2). It cannot factor as a rank-one product. This rechecks an existing campaign candidate and does not certify novelty.\" To: \"The supplied campaign already contains a candidate refutation of the rank-one polynomial-limit assertion for a lambda-transient killed chain. Its source and formula were rechecked here; independent audit and novelty remain unverified. Foley-McDonald arXiv:1709.07578v1 is a prior-art lead, not an established identification with this continuous-time example.\"."
++    },
++    {
++      "from_key": "source-limited-status-20261010",
++      "to_existing_logical": "math:probability.open-problems:p0288-pollett-rank-two-limit-kernel-refuted",
++      "kind": "cites",
++      "rationale": "From: \"The supplied campaign already contains a candidate refutation of the rank-one polynomial-limit assertion for a lambda-transient killed chain. Its source and formula were rechecked here; independent audit and novelty remain unverified. Foley-McDonald arXiv:1709.07578v1 is a prior-art lead, not an established identification with this continuous-time example.\" To: \"[campaign status: candidate_full_solution - author-checked, unrefereed] Pollett's Section 2 conjecture (ii) asks whether, for a lambda-transient irreducible countable transient class with almost sure absorption, every finite strictly positive limit of t^a e^{lambda t} p_t(i,j) must factor as A x_i m_j. Our result (id P0288, 2026-09-08): NO. Take the nearest-neighbour continuous-time walk on Z (rate 1 each side), killed at rate kappa everywhere plus an extra rate v at the origin. The class is lambda-transient with lambda = kappa, and t^{3/2} e^{kappa t} p_t(i,j) tends to [(|i| + 2/v)(|j| + 2/v) + i j] / (4 sqrt pi). The i j term makes the limit a rank-two form - its 2x2 minor on rows and columns {0,1} equals (2/v)^2/(16 pi) > 0 for every v - so no rank-one A x_i m_j factorisation exists; the reason is structural, a chain with two ends carries one degree of freedom per end. Verification as the source words it: the Feynman-Kac semigroup was solved directly at t = 100, 400, 1600, 6400, and against the claimed limits 0.141047, 0.282095, 0.705237, 0.423142 for (i,j) = (0,0), (0,1), (1,1), (1,-1) at v = 2 the computed values converge monotonically to 0.141010, 0.282004, 0.705018, 0.422932, with the minor formed from the measured entries 0.019879 against the predicted 0.019894. PRIOR ART WARNING carried in the ledger row itself: Foley and McDonald published a discrete two-end construction from which the same continuous-time obstruction follows, so treat this as confirmed mathematics and probably known. continuous-time nearest-neighbour walk on Z at rate 1 each side killing rate kappa everywhere plus extra rate v at the origin lambda = kappa\". "
++    }
++  ]
++}
+diff --git a/math-brain-inbox/w341/bundle_002.json b/math-brain-inbox/w341/bundle_002.json
+--- a/math-brain-inbox/w341/bundle_002.json
++++ b/math-brain-inbox/w341/bundle_002.json
+@@ -0,0 +1,196 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w341",
++  "bundle_slug": "w341-c0034-checked-results-20261010",
++  "entries": [
++    {
++      "key": "projection-singleton-pair-laws",
++      "namespace": "probability.determinantal",
++      "logical_name": "c0034-projection-singleton-pair-laws",
++      "kind": "definition",
++      "title": "Rank-one and rank-two finite projection laws [audit pending w347]",
++      "statement": "For finite E and orthogonal unit vectors u,v in C^E, the projection law on span(u) chooses singleton {i} with mass |u_i|^2. The law on span(u,v) chooses {i,j}, i<j, with mass |u_i*v_j-u_j*v_i|^2. These are fixed-cardinality determinantal projection laws.",
++      "proof_text": null,
++      "assumptions": [
++        "E finite",
++        "u and v orthogonal unit vectors"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0034-projection-singleton-pair-laws",
++        "url": "file:///~/brain_workers/w341/proofs/C0034_rank_two.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "constructive-rank-two-union-coupling",
++      "namespace": "probability.determinantal",
++      "logical_name": "c0034-constructive-rank-two-union-coupling",
++      "kind": "lemma",
++      "title": "Constructive disjoint coupling for two rank-one projections [audit pending w347]",
++      "statement": "For finite E and orthogonal unit vectors u,v in C^E, there is a coupling of singleton projection laws on span(u) and span(v) whose disjoint union has projection law on span(u,v). A capacitated flow splits edge masses q_ij=|u_i*v_j-u_j*v_i|^2 between endpoints with first marginal |u_i|^2. Every required cut holds because its internal mass is U_A*V_A-|c_A|^2<=U_A, where U_A=sum_A|u_i|^2, V_A=sum_A|v_i|^2 and c_A=sum_A u_i*conjugate(v_i).",
++      "proof_text": "# C0034: an exact finite rank-two special case\n\nStatus: proof of a special case, awaiting w347's blind audit. No general solution or novelty claim.\n\nLet E be finite and u,v be orthogonal unit vectors in C^E. The rank-one projection laws choose singleton {i} with probabilities a_i=|u_i|^2 and b_i=|v_i|^2. The rank-two law for span(u,v) chooses {i,j} with probability q_ij=|u_i v_j-u_j v_i|^2, for i<j.\n\nThere is a coupling of these two singleton laws with disjoint sets and union law q. To construct it, distribute each edge mass q_ij between its endpoints, giving vertex i total mass a_i. This is a finite flow network: source-to-edge capacities q_ij, edge-to-its-two-endpoints capacities 1, and endpoint-to-sink capacities a_i. A unit flow exists exactly when every subset A of vertices can absorb its internal edge mass: sum_{i<j in A} q_ij <= sum_{i in A} a_i. This is the capacitated Hall condition, or equivalently the max-flow min-cut condition. Total source and sink capacity are both one.\n\nThe required inequality is explicit. Put U_A=sum_A |u_i|^2, V_A=sum_A |v_i|^2 and c_A=sum_A u_i conjugate(v_i). Expanding the determinant gives sum_{i<j in A} q_ij=U_A V_A-|c_A|^2 <= U_A, since V_A<=1. Thus all cuts pass.\n\nGiven the unit flow, sample an edge {i,j} with law q and select its first endpoint according to the two flow portions. Call that singleton X_1; call the other endpoint X_2. The first marginal is a. Expanding and using global orthogonality gives sum_{j != i} q_ij=a_i+b_i. Consequently the second marginal is (a_i+b_i)-a_i=b_i. The union marginal is q by construction. Zero capacities cause no difficulty; an edge with q_ij=0 is never sampled.\n\nThe previous ledger C0034-A002 correctly says that its floating-point LP feasibility was not an exact certificate. This proof supplies a constructive exact certificate for the finite rank-two case. It does not settle arbitrary higher ranks, because one-vertex inclusion probabilities do not determine a larger subset's law.\n\nA broader EXISTING-THEOREM reduction is available when either summand has rank one and the other has finite rank. Lyons's cached Theorem 2.7 says that projection laws are stochastically ordered by subspace inclusion; Strassen gives a coupling X_other subset X_H. The difference has size one. At every i its inclusion probability is P(i in X_H)-P(i in X_other), the diagonal of the rank-one complementary projection. These probabilities determine the law of a singleton. Thus the difference has the required rank-one law. This is a short consequence of the published domination theorem, not a new general solution. The flow proof above makes the both-rank-one construction explicit without relying on determinantal stochastic domination.\n\nMeasured checks: checks.py produced and independently replayed 64 rational certificates, checked 2,580 subset inequalities exactly, and found a rational naive-splitting counterexample with marginal total variation 0.1136890368. The exact vectors and fraction are saved in measurements/C0034_naive_counterexample.json.\n\nThe separate higher_rank_certificates.py goes beyond the singleton special case as EXACT EVIDENCE, not a theorem. It produced eight rational feasible couplings for rank-2 plus rank-2 projections in dimensions five and six. The float LP was used only to propose a support; a rational linear solve and independent Gram-determinant replay verified nonnegative masses and all three marginals with exactly zero residual. The eight certificates are in measurements/C0034_higher_rank_certificates.jsonl. Finite examples do not establish the general conjecture.\n\nChecks run: exact orthogonality and normalization; all cut inequalities; nonnegative rational flows; all three marginals; zero-coordinate boundaries; a counterexample to the naive conditional splitting rule. The real rational cases are executable in checks.py; the proof itself also covers complex vectors. A blind proof audit must independently check the capacitated Hall direction and the second marginal. Higher-rank replay must use exact arithmetic.\n\nCached primary source: Russell Lyons, *Determinantal probability: basic properties and conjectures*, arXiv:1406.2707 (2014), Theorem 2.7 and Question 2.8. Local text: Downloads/Probability_1000_intake_claude_20260907/sources/lyons_determinantal_2014/text.txt:337-350. The general question is open in that cached source; no later disposition was verified.\n\nSource target: ~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:34, \"Given H = H_1 (+) H_2 orthogonal in l^2(E), is there a coupling ... whose union has law P_H?\" Prior attempt: attempts.jsonl:116, \"Feasibility asserted to solver tolerance only; exact rational verification is the next step.\"\n",
++      "assumptions": [
++        "E finite",
++        "u and v orthogonal unit vectors"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0034-constructive-rank-two-union-coupling",
++        "url": "file:///~/brain_workers/w341/proofs/C0034_rank_two.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "rank-one-complement-domination-reduction",
++      "namespace": "probability.determinantal",
++      "logical_name": "c0034-rank-one-complement-domination-reduction",
++      "kind": "lemma",
++      "title": "Rank-one summand: reduction to published stochastic domination [audit pending w347]",
++      "statement": "If H=H_1 orthogonal-sum H_2 on a finite ground set and one summand has rank one, the union-marginal coupling exists. Couple the other summand as a subset of a sample from P_H using projection stochastic domination and Strassen. The set difference is a singleton with inclusion masses equal to the rank-one projection diagonal, hence has exactly that summand law. This is a consequence of Lyons (2014), Theorem 2.7.",
++      "proof_text": "# C0034: an exact finite rank-two special case\n\nStatus: proof of a special case, awaiting w347's blind audit. No general solution or novelty claim.\n\nLet E be finite and u,v be orthogonal unit vectors in C^E. The rank-one projection laws choose singleton {i} with probabilities a_i=|u_i|^2 and b_i=|v_i|^2. The rank-two law for span(u,v) chooses {i,j} with probability q_ij=|u_i v_j-u_j v_i|^2, for i<j.\n\nThere is a coupling of these two singleton laws with disjoint sets and union law q. To construct it, distribute each edge mass q_ij between its endpoints, giving vertex i total mass a_i. This is a finite flow network: source-to-edge capacities q_ij, edge-to-its-two-endpoints capacities 1, and endpoint-to-sink capacities a_i. A unit flow exists exactly when every subset A of vertices can absorb its internal edge mass: sum_{i<j in A} q_ij <= sum_{i in A} a_i. This is the capacitated Hall condition, or equivalently the max-flow min-cut condition. Total source and sink capacity are both one.\n\nThe required inequality is explicit. Put U_A=sum_A |u_i|^2, V_A=sum_A |v_i|^2 and c_A=sum_A u_i conjugate(v_i). Expanding the determinant gives sum_{i<j in A} q_ij=U_A V_A-|c_A|^2 <= U_A, since V_A<=1. Thus all cuts pass.\n\nGiven the unit flow, sample an edge {i,j} with law q and select its first endpoint according to the two flow portions. Call that singleton X_1; call the other endpoint X_2. The first marginal is a. Expanding and using global orthogonality gives sum_{j != i} q_ij=a_i+b_i. Consequently the second marginal is (a_i+b_i)-a_i=b_i. The union marginal is q by construction. Zero capacities cause no difficulty; an edge with q_ij=0 is never sampled.\n\nThe previous ledger C0034-A002 correctly says that its floating-point LP feasibility was not an exact certificate. This proof supplies a constructive exact certificate for the finite rank-two case. It does not settle arbitrary higher ranks, because one-vertex inclusion probabilities do not determine a larger subset's law.\n\nA broader EXISTING-THEOREM reduction is available when either summand has rank one and the other has finite rank. Lyons's cached Theorem 2.7 says that projection laws are stochastically ordered by subspace inclusion; Strassen gives a coupling X_other subset X_H. The difference has size one. At every i its inclusion probability is P(i in X_H)-P(i in X_other), the diagonal of the rank-one complementary projection. These probabilities determine the law of a singleton. Thus the difference has the required rank-one law. This is a short consequence of the published domination theorem, not a new general solution. The flow proof above makes the both-rank-one construction explicit without relying on determinantal stochastic domination.\n\nMeasured checks: checks.py produced and independently replayed 64 rational certificates, checked 2,580 subset inequalities exactly, and found a rational naive-splitting counterexample with marginal total variation 0.1136890368. The exact vectors and fraction are saved in measurements/C0034_naive_counterexample.json.\n\nThe separate higher_rank_certificates.py goes beyond the singleton special case as EXACT EVIDENCE, not a theorem. It produced eight rational feasible couplings for rank-2 plus rank-2 projections in dimensions five and six. The float LP was used only to propose a support; a rational linear solve and independent Gram-determinant replay verified nonnegative masses and all three marginals with exactly zero residual. The eight certificates are in measurements/C0034_higher_rank_certificates.jsonl. Finite examples do not establish the general conjecture.\n\nChecks run: exact orthogonality and normalization; all cut inequalities; nonnegative rational flows; all three marginals; zero-coordinate boundaries; a counterexample to the naive conditional splitting rule. The real rational cases are executable in checks.py; the proof itself also covers complex vectors. A blind proof audit must independently check the capacitated Hall direction and the second marginal. Higher-rank replay must use exact arithmetic.\n\nCached primary source: Russell Lyons, *Determinantal probability: basic properties and conjectures*, arXiv:1406.2707 (2014), Theorem 2.7 and Question 2.8. Local text: Downloads/Probability_1000_intake_claude_20260907/sources/lyons_determinantal_2014/text.txt:337-350. The general question is open in that cached source; no later disposition was verified.\n\nSource target: ~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:34, \"Given H = H_1 (+) H_2 orthogonal in l^2(E), is there a coupling ... whose union has law P_H?\" Prior attempt: attempts.jsonl:116, \"Feasibility asserted to solver tolerance only; exact rational verification is the next step.\"\n",
++      "assumptions": [
++        "finite ground set",
++        "orthogonal summands",
++        "one summand has rank one",
++        "published projection stochastic domination theorem"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0034-rank-one-complement-domination-reduction",
++        "url": "file:///~/brain_workers/w341/proofs/C0034_rank_two.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "exact-higher-rank-coupling-certificates",
++      "namespace": "probability.determinantal",
++      "logical_name": "c0034-exact-higher-rank-coupling-certificates",
++      "kind": "concept",
++      "title": "Eight exact certificates for rank-two plus rank-two projections [audit pending w347]",
++      "statement": "Finite evidence for the general union-marginal coupling question: eight rational orthogonal-matrix instances with summand ranks (2,2), four each in dimensions five and six, admit nonnegative rational coupling masses with all three determinantal marginals exactly correct. All eight saved points were independently replayed using Gram determinants. A float LP supplied only a support; exact arithmetic certified the points. These examples do not prove the general question.",
++      "proof_text": null,
++      "assumptions": [
++        "the eight matrices and rational masses in measurements/C0034_higher_rank_certificates.jsonl"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0034-exact-higher-rank-coupling-certificates",
++        "url": "file:///~/brain_workers/w341/proofs/C0034_rank_two.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "conditional-splitting-exact-failure",
++      "namespace": "probability.determinantal",
++      "logical_name": "c0034-conditional-splitting-exact-failure",
++      "kind": "concept",
++      "title": "Naive conditional splitting has an exact rational counterexample [audit pending w347]",
++      "statement": "Sampling a rank-two projection pair C, choosing a singleton i in C with probability proportional to |u_i|^2, and giving the remaining endpoint to the second marginal need not reproduce either intended rank-one law. The saved rational three-coordinate counterexample has second-marginal total variation about 0.1136890368; the exact fraction and vectors are preserved. This refutes this splitting rule, not existence of another coupling.",
++      "proof_text": null,
++      "assumptions": [
++        "the rational vectors in measurements/C0034_naive_counterexample.json",
++        "orthogonal rank-one summands"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0034-conditional-splitting-exact-failure",
++        "url": "file:///~/brain_workers/w341/proofs/C0034_rank_two.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "source-limited-status-20261010",
++      "namespace": "probability.determinantal",
++      "logical_name": "c0034-source-limited-status-20261010",
++      "kind": "concept",
++      "title": "Source-limited status and scope for C0034 [audit pending w347]",
++      "statement": "Lyons arXiv:1406.2707 (2014), Question 2.8, asks whether orthogonal projection laws can be coupled with their union having the summed projection law. The supplied caches give no later general disposition. This packet proves rank-one-summand special cases and supplies eight exact higher-rank examples; the general question remains unresolved here.",
++      "proof_text": null,
++      "assumptions": [
++        "only the supplied local caches and prior records were consulted",
++        "independent review pending"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0034-source-limited-status-20261010",
++        "url": "file:///~/brain_workers/w341/proofs/C0034_rank_two.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "constructive-rank-two-union-coupling",
++      "to_key": "projection-singleton-pair-laws",
++      "kind": "depends_on",
++      "rationale": "From: \"For finite E and orthogonal unit vectors u,v in C^E, there is a coupling of singleton projection laws on span(u) and span(v) whose disjoint union has projection law on span(u,v). A capacitated flow splits edge masses q_ij=|u_i*v_j-u_j*v_i|^2 between endpoints with first marginal |u_i|^2. Every required cut holds because its internal mass is U_A*V_A-|c_A|^2<=U_A, where U_A=sum_A|u_i|^2, V_A=sum_A|v_i|^2 and c_A=sum_A u_i*conjugate(v_i).\" To: \"For finite E and orthogonal unit vectors u,v in C^E, the projection law on span(u) chooses singleton {i} with mass |u_i|^2. The law on span(u,v) chooses {i,j}, i<j, with mass |u_i*v_j-u_j*v_i|^2. These are fixed-cardinality determinantal projection laws.\"."
++    },
++    {
++      "from_key": "rank-one-complement-domination-reduction",
++      "to_key": "projection-singleton-pair-laws",
++      "kind": "cites",
++      "rationale": "From: \"If H=H_1 orthogonal-sum H_2 on a finite ground set and one summand has rank one, the union-marginal coupling exists. Couple the other summand as a subset of a sample from P_H using projection stochastic domination and Strassen. The set difference is a singleton with inclusion masses equal to the rank-one projection diagonal, hence has exactly that summand law. This is a consequence of Lyons (2014), Theorem 2.7.\" To: \"For finite E and orthogonal unit vectors u,v in C^E, the projection law on span(u) chooses singleton {i} with mass |u_i|^2. The law on span(u,v) chooses {i,j}, i<j, with mass |u_i*v_j-u_j*v_i|^2. These are fixed-cardinality determinantal projection laws.\"."
++    },
++    {
++      "from_key": "exact-higher-rank-coupling-certificates",
++      "to_key": "constructive-rank-two-union-coupling",
++      "kind": "analogous_to",
++      "rationale": "From: \"Finite evidence for the general union-marginal coupling question: eight rational orthogonal-matrix instances with summand ranks (2,2), four each in dimensions five and six, admit nonnegative rational coupling masses with all three determinantal marginals exactly correct. All eight saved points were independently replayed using Gram determinants. A float LP supplied only a support; exact arithmetic certified the points. These examples do not prove the general question.\" To: \"For finite E and orthogonal unit vectors u,v in C^E, there is a coupling of singleton projection laws on span(u) and span(v) whose disjoint union has projection law on span(u,v). A capacitated flow splits edge masses q_ij=|u_i*v_j-u_j*v_i|^2 between endpoints with first marginal |u_i|^2. Every required cut holds because its internal mass is U_A*V_A-|c_A|^2<=U_A, where U_A=sum_A|u_i|^2, V_A=sum_A|v_i|^2 and c_A=sum_A u_i*conjugate(v_i).\"."
++    },
++    {
++      "from_key": "conditional-splitting-exact-failure",
++      "to_key": "constructive-rank-two-union-coupling",
++      "kind": "cites",
++      "rationale": "From: \"Sampling a rank-two projection pair C, choosing a singleton i in C with probability proportional to |u_i|^2, and giving the remaining endpoint to the second marginal need not reproduce either intended rank-one law. The saved rational three-coordinate counterexample has second-marginal total variation about 0.1136890368; the exact fraction and vectors are preserved. This refutes this splitting rule, not existence of another coupling.\" To: \"For finite E and orthogonal unit vectors u,v in C^E, there is a coupling of singleton projection laws on span(u) and span(v) whose disjoint union has projection law on span(u,v). A capacitated flow splits edge masses q_ij=|u_i*v_j-u_j*v_i|^2 between endpoints with first marginal |u_i|^2. Every required cut holds because its internal mass is U_A*V_A-|c_A|^2<=U_A, where U_A=sum_A|u_i|^2, V_A=sum_A|v_i|^2 and c_A=sum_A u_i*conjugate(v_i).\"."
++    },
++    {
++      "from_key": "projection-singleton-pair-laws",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"For finite E and orthogonal unit vectors u,v in C^E, the projection law on span(u) chooses singleton {i} with mass |u_i|^2. The law on span(u,v) chooses {i,j}, i<j, with mass |u_i*v_j-u_j*v_i|^2. These are fixed-cardinality determinantal projection laws.\" To: \"Lyons arXiv:1406.2707 (2014), Question 2.8, asks whether orthogonal projection laws can be coupled with their union having the summed projection law. The supplied caches give no later general disposition. This packet proves rank-one-summand special cases and supplies eight exact higher-rank examples; the general question remains unresolved here.\"."
++    },
++    {
++      "from_key": "constructive-rank-two-union-coupling",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"For finite E and orthogonal unit vectors u,v in C^E, there is a coupling of singleton projection laws on span(u) and span(v) whose disjoint union has projection law on span(u,v). A capacitated flow splits edge masses q_ij=|u_i*v_j-u_j*v_i|^2 between endpoints with first marginal |u_i|^2. Every required cut holds because its internal mass is U_A*V_A-|c_A|^2<=U_A, where U_A=sum_A|u_i|^2, V_A=sum_A|v_i|^2 and c_A=sum_A u_i*conjugate(v_i).\" To: \"Lyons arXiv:1406.2707 (2014), Question 2.8, asks whether orthogonal projection laws can be coupled with their union having the summed projection law. The supplied caches give no later general disposition. This packet proves rank-one-summand special cases and supplies eight exact higher-rank examples; the general question remains unresolved here.\"."
++    },
++    {
++      "from_key": "rank-one-complement-domination-reduction",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"If H=H_1 orthogonal-sum H_2 on a finite ground set and one summand has rank one, the union-marginal coupling exists. Couple the other summand as a subset of a sample from P_H using projection stochastic domination and Strassen. The set difference is a singleton with inclusion masses equal to the rank-one projection diagonal, hence has exactly that summand law. This is a consequence of Lyons (2014), Theorem 2.7.\" To: \"Lyons arXiv:1406.2707 (2014), Question 2.8, asks whether orthogonal projection laws can be coupled with their union having the summed projection law. The supplied caches give no later general disposition. This packet proves rank-one-summand special cases and supplies eight exact higher-rank examples; the general question remains unresolved here.\"."
++    },
++    {
++      "from_key": "exact-higher-rank-coupling-certificates",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"Finite evidence for the general union-marginal coupling question: eight rational orthogonal-matrix instances with summand ranks (2,2), four each in dimensions five and six, admit nonnegative rational coupling masses with all three determinantal marginals exactly correct. All eight saved points were independently replayed using Gram determinants. A float LP supplied only a support; exact arithmetic certified the points. These examples do not prove the general question.\" To: \"Lyons arXiv:1406.2707 (2014), Question 2.8, asks whether orthogonal projection laws can be coupled with their union having the summed projection law. The supplied caches give no later general disposition. This packet proves rank-one-summand special cases and supplies eight exact higher-rank examples; the general question remains unresolved here.\"."
++    },
++    {
++      "from_key": "conditional-splitting-exact-failure",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"Sampling a rank-two projection pair C, choosing a singleton i in C with probability proportional to |u_i|^2, and giving the remaining endpoint to the second marginal need not reproduce either intended rank-one law. The saved rational three-coordinate counterexample has second-marginal total variation about 0.1136890368; the exact fraction and vectors are preserved. This refutes this splitting rule, not existence of another coupling.\" To: \"Lyons arXiv:1406.2707 (2014), Question 2.8, asks whether orthogonal projection laws can be coupled with their union having the summed projection law. The supplied caches give no later general disposition. This packet proves rank-one-summand special cases and supplies eight exact higher-rank examples; the general question remains unresolved here.\"."
++    },
++    {
++      "from_key": "source-limited-status-20261010",
++      "to_existing_logical": "math:probability.determinantal:open-problem-c0034-coupling-of-determinantal-projection-measures-with-union-marginal",
++      "kind": "cites",
++      "rationale": "From: \"Lyons arXiv:1406.2707 (2014), Question 2.8, asks whether orthogonal projection laws can be coupled with their union having the summed projection law. The supplied caches give no later general disposition. This packet proves rank-one-summand special cases and supplies eight exact higher-rank examples; the general question remains unresolved here.\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status partial_result). Given H = H_1 (+) H_2 orthogonal in l^2(E), is there a coupling of P_{H_1} and P_{H_2} whose union has law P_H? Source: Lyons: Determinantal probability, basic properties and conjectures, ICM 2014, Question 2.8, p. 6.\". "
++    }
++  ]
++}
+diff --git a/math-brain-inbox/w341/bundle_003.json b/math-brain-inbox/w341/bundle_003.json
+--- a/math-brain-inbox/w341/bundle_003.json
++++ b/math-brain-inbox/w341/bundle_003.json
+@@ -0,0 +1,92 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w341",
++  "bundle_slug": "w341-c0151-checked-results-20261010",
++  "entries": [
++    {
++      "key": "fiid-independent-density-thinning",
++      "namespace": "probability.factors",
++      "logical_name": "c0151-fiid-independent-density-thinning",
++      "kind": "lemma",
++      "title": "Factor independent-set densities are downward closed; endpoint qualified [audit pending w347]",
++      "statement": "If an automorphism-equivariant factor-of-i.i.d. independent set on the d-regular tree has root density a>0, every b in [0,a] is also attainable by independently retaining its vertices with probability b/a, using an independent label family obtained by splitting the i.i.d. labels. If A is the supremum of attainable densities, the attainable set contains [0,A) and is contained in [0,A]; inclusion of A requires an attainment argument.",
++      "proof_text": "# C0151: thinning, endpoint qualification, and literature status\n\nStatus: proof of a closure property and a conditional literature reduction, pending w347. The historical question is Szegedy's Conjecture 14.16 in Gabor Pete's cached *Probability and geometry on groups* notes, lines 14624-14628. The local intake's C0151-A001 says the maximum-density conjecture was refuted using Rahman-Virag and Ding-Sly-Sun, but also says those papers were not re-fetched. That is a literature lead, not a fresh primary-source verification. The source files supplied here did not contain either answer paper. Record the lead as Rahman and Virag, *Local algorithms for independent sets are half-optimal*, and Ding, Sly and Sun, *Maximum independent sets on random regular graphs*. Their precise theorem hypotheses and publication metadata must be checked before promoting the literature status.\n\nLet I be an automorphism-equivariant factor-of-i.i.d. independent set on the d-regular tree, with root density a>0. An i.i.d. uniform label can measurably be split into independent uniform labels (for example split its binary digits, ignoring the null set of ambiguous expansions). Use one label family to construct I and the other as independent marks V_v. For any b in [0,a], retain v in I exactly when V_v<=b/a. This remains an equivariant factor of i.i.d., stays independent, and has root density a*(b/a)=b. Density zero is available as the empty set, including when a=0.\n\nConsequently, if A is the supremum of attainable factor densities, every b<A is attainable: choose an attained a>b and thin. The attainable set contains [0,A) and is contained in [0,A]. Inclusion of A requires an attainment argument. Downward closure alone does not imply it; the abstract set [0,1) is a counterexample to that inference. The old sentence calling the attainable set automatically [0,alpha_factor] is therefore unjustified without its endpoint hypothesis. This does not assert nonattainment for this particular tree problem.\n\nThe literature-gap reduction is precise even before importing the two papers. Assume their large-d bounds give factor-density supremum A_d<=(1+epsilon)log(d)/d and attainable random-regular independent-set density at least (2-epsilon)log(d)/d for every sufficiently large d. Taking epsilon=1/4 gives 5/4<7/4 and disproves equality of the attainable sets. No claim about a fixed small d follows just from these asymptotics.\n\nSmall case: the radius-one factor that keeps a vertex when its label is the strict minimum among it and its d neighbors is independent and has density 1/(d+1). Exact enumeration for d=2,3,4,5 checked 6,24,120,720 label orders, respectively. Independent thinning gives half those densities. These are checks of a basic factor and its boundary behavior, not estimates of the optimal density or a proof of the cited asymptotics.\n\nAudit checks: independent auxiliary labels, equivariance, the zero case, the distinction between supremum and maximum, and the exact scope of the literature gap. No solution of a new open problem is claimed.\n",
++      "assumptions": [
++        "d-regular tree",
++        "automorphism-equivariant factor of independent uniform labels",
++        "root density a>0"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0151-fiid-independent-density-thinning",
++        "url": "file:///~/brain_workers/w341/proofs/C0151_thinning.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "large-degree-gap-conditional-refutation",
++      "namespace": "probability.factors",
++      "logical_name": "c0151-large-degree-gap-conditional-refutation",
++      "kind": "lemma",
++      "title": "Conditional reduction of Szegedy density equality to known asymptotic bounds [audit pending w347]",
++      "statement": "Suppose for every sufficiently large d the factor-of-i.i.d. density supremum on the d-regular tree is at most (5/4)*log(d)/d, while random d-regular graphs admit asymptotic independent-set density at least (7/4)*log(d)/d. Then the two attainable-density sets differ for those d. The cited Rahman-Virag and Ding-Sly-Sun asymptotics are a local literature lead; their primary statements were not reverified here.",
++      "proof_text": "# C0151: thinning, endpoint qualification, and literature status\n\nStatus: proof of a closure property and a conditional literature reduction, pending w347. The historical question is Szegedy's Conjecture 14.16 in Gabor Pete's cached *Probability and geometry on groups* notes, lines 14624-14628. The local intake's C0151-A001 says the maximum-density conjecture was refuted using Rahman-Virag and Ding-Sly-Sun, but also says those papers were not re-fetched. That is a literature lead, not a fresh primary-source verification. The source files supplied here did not contain either answer paper. Record the lead as Rahman and Virag, *Local algorithms for independent sets are half-optimal*, and Ding, Sly and Sun, *Maximum independent sets on random regular graphs*. Their precise theorem hypotheses and publication metadata must be checked before promoting the literature status.\n\nLet I be an automorphism-equivariant factor-of-i.i.d. independent set on the d-regular tree, with root density a>0. An i.i.d. uniform label can measurably be split into independent uniform labels (for example split its binary digits, ignoring the null set of ambiguous expansions). Use one label family to construct I and the other as independent marks V_v. For any b in [0,a], retain v in I exactly when V_v<=b/a. This remains an equivariant factor of i.i.d., stays independent, and has root density a*(b/a)=b. Density zero is available as the empty set, including when a=0.\n\nConsequently, if A is the supremum of attainable factor densities, every b<A is attainable: choose an attained a>b and thin. The attainable set contains [0,A) and is contained in [0,A]. Inclusion of A requires an attainment argument. Downward closure alone does not imply it; the abstract set [0,1) is a counterexample to that inference. The old sentence calling the attainable set automatically [0,alpha_factor] is therefore unjustified without its endpoint hypothesis. This does not assert nonattainment for this particular tree problem.\n\nThe literature-gap reduction is precise even before importing the two papers. Assume their large-d bounds give factor-density supremum A_d<=(1+epsilon)log(d)/d and attainable random-regular independent-set density at least (2-epsilon)log(d)/d for every sufficiently large d. Taking epsilon=1/4 gives 5/4<7/4 and disproves equality of the attainable sets. No claim about a fixed small d follows just from these asymptotics.\n\nSmall case: the radius-one factor that keeps a vertex when its label is the strict minimum among it and its d neighbors is independent and has density 1/(d+1). Exact enumeration for d=2,3,4,5 checked 6,24,120,720 label orders, respectively. Independent thinning gives half those densities. These are checks of a basic factor and its boundary behavior, not estimates of the optimal density or a proof of the cited asymptotics.\n\nAudit checks: independent auxiliary labels, equivariance, the zero case, the distinction between supremum and maximum, and the exact scope of the literature gap. No solution of a new open problem is claimed.\n",
++      "assumptions": [
++        "both explicitly stated large-d bounds",
++        "same independent-set and density conventions",
++        "d sufficiently large"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0151-large-degree-gap-conditional-refutation",
++        "url": "file:///~/brain_workers/w341/proofs/C0151_thinning.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "source-limited-status-20261010",
++      "namespace": "probability.factors",
++      "logical_name": "c0151-source-limited-status-20261010",
++      "kind": "concept",
++      "title": "Source-limited status and scope for C0151 [audit pending w347]",
++      "statement": "Pete Conjecture 14.16 historically asks whether independent-set densities on random d-regular graphs equal factor-of-i.i.d. independent-set densities on the d-regular tree. The supplied ranking and C0151-A001 record a large-d refutation attributed to Rahman-Virag and Ding-Sly-Sun, but those primary answer papers were not verified here. The thinning endpoint correction is independently proved; current literature classification stays a lead pending source review.",
++      "proof_text": null,
++      "assumptions": [
++        "only the supplied local caches and prior records were consulted",
++        "independent review pending"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0151-source-limited-status-20261010",
++        "url": "file:///~/brain_workers/w341/proofs/C0151_thinning.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "large-degree-gap-conditional-refutation",
++      "to_key": "fiid-independent-density-thinning",
++      "kind": "cites",
++      "rationale": "From: \"Suppose for every sufficiently large d the factor-of-i.i.d. density supremum on the d-regular tree is at most (5/4)*log(d)/d, while random d-regular graphs admit asymptotic independent-set density at least (7/4)*log(d)/d. Then the two attainable-density sets differ for those d. The cited Rahman-Virag and Ding-Sly-Sun asymptotics are a local literature lead; their primary statements were not reverified here.\" To: \"If an automorphism-equivariant factor-of-i.i.d. independent set on the d-regular tree has root density a>0, every b in [0,a] is also attainable by independently retaining its vertices with probability b/a, using an independent label family obtained by splitting the i.i.d. labels. If A is the supremum of attainable densities, the attainable set contains [0,A) and is contained in [0,A]; inclusion of A requires an attainment argument.\"."
++    },
++    {
++      "from_key": "fiid-independent-density-thinning",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"If an automorphism-equivariant factor-of-i.i.d. independent set on the d-regular tree has root density a>0, every b in [0,a] is also attainable by independently retaining its vertices with probability b/a, using an independent label family obtained by splitting the i.i.d. labels. If A is the supremum of attainable densities, the attainable set contains [0,A) and is contained in [0,A]; inclusion of A requires an attainment argument.\" To: \"Pete Conjecture 14.16 historically asks whether independent-set densities on random d-regular graphs equal factor-of-i.i.d. independent-set densities on the d-regular tree. The supplied ranking and C0151-A001 record a large-d refutation attributed to Rahman-Virag and Ding-Sly-Sun, but those primary answer papers were not verified here. The thinning endpoint correction is independently proved; current literature classification stays a lead pending source review.\"."
++    },
++    {
++      "from_key": "large-degree-gap-conditional-refutation",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"Suppose for every sufficiently large d the factor-of-i.i.d. density supremum on the d-regular tree is at most (5/4)*log(d)/d, while random d-regular graphs admit asymptotic independent-set density at least (7/4)*log(d)/d. Then the two attainable-density sets differ for those d. The cited Rahman-Virag and Ding-Sly-Sun asymptotics are a local literature lead; their primary statements were not reverified here.\" To: \"Pete Conjecture 14.16 historically asks whether independent-set densities on random d-regular graphs equal factor-of-i.i.d. independent-set densities on the d-regular tree. The supplied ranking and C0151-A001 record a large-d refutation attributed to Rahman-Virag and Ding-Sly-Sun, but those primary answer papers were not verified here. The thinning endpoint correction is independently proved; current literature classification stays a lead pending source review.\"."
++    }
++  ]
++}
+diff --git a/math-brain-inbox/w341/bundle_004.json b/math-brain-inbox/w341/bundle_004.json
+--- a/math-brain-inbox/w341/bundle_004.json
++++ b/math-brain-inbox/w341/bundle_004.json
+@@ -0,0 +1,102 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w341",
++  "bundle_slug": "w341-p0127-checked-results-20261010",
++  "entries": [
++    {
++      "key": "uniform-rooted-line-lattice-tree-sampler",
++      "namespace": "probability.latticetrees",
++      "logical_name": "p0127-uniform-rooted-line-lattice-tree-sampler",
++      "kind": "lemma",
++      "title": "Exact uniform rooted lattice-tree sampler on the line [audit pending w347]",
++      "statement": "The n-vertex lattice trees in Z containing zero are exactly the n intervals [-L,n-1-L], L=0,...,n-1. Uniform L gives exact uniform rooted sampling using expected O(log n) unbiased random bits and a compact O(log n)-bit endpoint representation. Listing vertices takes O(n) word operations on an O(log n)-bit word RAM and O(n log n) bits of coordinate output. Trees modulo translation instead have one class.",
++      "proof_text": "# P0127: exact line sampler and a failed growth route\n\nStatus: proved special case and exact counterexample, pending w347. Schramm, *Conformally invariant scaling limits: an overview and a collection of problems* (2006v2), Problem 2.9, asks for efficient approximate uniform lattice-tree sampling. Cached text lines 730-740 use trees with n vertices containing the origin. The prior campaign gave a finite but inefficient exact enumeration and warned that a uniform stationary measure does not imply polynomial mixing. The general higher-dimensional question remains unresolved by this packet; current literature status was not verified beyond these caches.\n\nFor Z, every n-vertex lattice tree containing zero is an interval [-L,n-1-L] for a unique L in {0,...,n-1}. Choose L uniformly to obtain the exact uniform rooted sampler. It uses O(log n) unbiased random bits in expectation with integer rejection sampling; a compact endpoint representation uses O(log n) bits. Listing all vertices takes O(n) word operations on a RAM with words of O(log n) bits, and its explicit coordinate encoding occupies O(n log n) bits. If trees are instead identified up to translation, there is just one such interval class. These representation and complexity conventions matter.\n\nUniform frontier growth is biased already at n=3 vertices, in every dimension d>=1. Put D=2d. Start at the origin, choose one of its D edges uniformly, then one of the 2(D-1) available boundary edges uniformly. There are 2D(D-1) equally likely ordered histories. A tree with the root at its center has two histories; a tree with the root at an endpoint has one. There are D(D-1)/2 center-rooted trees and D(D-1) endpoint-rooted trees, for a total of 3D(D-1)/2. Comparing their growth masses with reciprocal total tree count gives total variation exactly 1/6. Therefore this uncorrected growth rule cannot be called an approximately uniform sampler with error tending to zero merely because each local choice was uniform.\n\nExact enumeration checked d=1,2,3,4: 4,24,60,112 histories and 3,18,45,84 distinct trees; every total variation was 1/6. Audit the rooted-versus-translation convention, vertex-versus-edge count, frontier cardinality, history multiplicities and complexity claim. This counterexample concerns this growth rule, not all possible efficient samplers.\n",
++      "assumptions": [
++        "n positive integer",
++        "rooted trees containing zero",
++        "vertex count n",
++        "nearest-neighbor lattice Z",
++        "unbiased random bits",
++        "word RAM for the stated word-operation bound"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:p0127-uniform-rooted-line-lattice-tree-sampler",
++        "url": "file:///~/brain_workers/w341/proofs/P0127_growth_bias.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "uniform-frontier-growth-tv-obstruction",
++      "namespace": "probability.latticetrees",
++      "logical_name": "p0127-uniform-frontier-growth-tv-obstruction",
++      "kind": "lemma",
++      "title": "Uniform frontier growth is biased at three vertices [audit pending w347]",
++      "statement": "On Z^d, d>=1, grow a rooted tree from the origin by choosing uniformly from available boundary edges at each step. At three vertices the resulting distribution has total variation exactly 1/6 from the uniform rooted lattice-tree law. With D=2d there are 2D(D-1) equiprobable growth histories, but center-rooted trees have two histories and endpoint-rooted trees have one. This obstruction concerns this uncorrected growth rule.",
++      "proof_text": "# P0127: exact line sampler and a failed growth route\n\nStatus: proved special case and exact counterexample, pending w347. Schramm, *Conformally invariant scaling limits: an overview and a collection of problems* (2006v2), Problem 2.9, asks for efficient approximate uniform lattice-tree sampling. Cached text lines 730-740 use trees with n vertices containing the origin. The prior campaign gave a finite but inefficient exact enumeration and warned that a uniform stationary measure does not imply polynomial mixing. The general higher-dimensional question remains unresolved by this packet; current literature status was not verified beyond these caches.\n\nFor Z, every n-vertex lattice tree containing zero is an interval [-L,n-1-L] for a unique L in {0,...,n-1}. Choose L uniformly to obtain the exact uniform rooted sampler. It uses O(log n) unbiased random bits in expectation with integer rejection sampling; a compact endpoint representation uses O(log n) bits. Listing all vertices takes O(n) word operations on a RAM with words of O(log n) bits, and its explicit coordinate encoding occupies O(n log n) bits. If trees are instead identified up to translation, there is just one such interval class. These representation and complexity conventions matter.\n\nUniform frontier growth is biased already at n=3 vertices, in every dimension d>=1. Put D=2d. Start at the origin, choose one of its D edges uniformly, then one of the 2(D-1) available boundary edges uniformly. There are 2D(D-1) equally likely ordered histories. A tree with the root at its center has two histories; a tree with the root at an endpoint has one. There are D(D-1)/2 center-rooted trees and D(D-1) endpoint-rooted trees, for a total of 3D(D-1)/2. Comparing their growth masses with reciprocal total tree count gives total variation exactly 1/6. Therefore this uncorrected growth rule cannot be called an approximately uniform sampler with error tending to zero merely because each local choice was uniform.\n\nExact enumeration checked d=1,2,3,4: 4,24,60,112 histories and 3,18,45,84 distinct trees; every total variation was 1/6. Audit the rooted-versus-translation convention, vertex-versus-edge count, frontier cardinality, history multiplicities and complexity claim. This counterexample concerns this growth rule, not all possible efficient samplers.\n",
++      "assumptions": [
++        "nearest-neighbor lattice Z^d",
++        "d>=1",
++        "rooted trees containing origin",
++        "two uniform frontier additions"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:p0127-uniform-frontier-growth-tv-obstruction",
++        "url": "file:///~/brain_workers/w341/proofs/P0127_growth_bias.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "source-limited-status-20261010",
++      "namespace": "probability.latticetrees",
++      "logical_name": "p0127-source-limited-status-20261010",
++      "kind": "concept",
++      "title": "Source-limited status and scope for P0127 [audit pending w347]",
++      "statement": "Schramm (2006v2), Problem 2.9, asks for efficient approximate uniform sampling of n-vertex lattice trees containing the origin. The supplied prior attempt only gives inefficient enumeration. This packet solves the line special case and disproves uncorrected uniform frontier growth; general higher-dimensional status is unresolved from the supplied caches.",
++      "proof_text": null,
++      "assumptions": [
++        "only the supplied local caches and prior records were consulted",
++        "independent review pending"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:p0127-source-limited-status-20261010",
++        "url": "file:///~/brain_workers/w341/proofs/P0127_growth_bias.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "uniform-frontier-growth-tv-obstruction",
++      "to_key": "uniform-rooted-line-lattice-tree-sampler",
++      "kind": "analogous_to",
++      "rationale": "From: \"On Z^d, d>=1, grow a rooted tree from the origin by choosing uniformly from available boundary edges at each step. At three vertices the resulting distribution has total variation exactly 1/6 from the uniform rooted lattice-tree law. With D=2d there are 2D(D-1) equiprobable growth histories, but center-rooted trees have two histories and endpoint-rooted trees have one. This obstruction concerns this uncorrected growth rule.\" To: \"The n-vertex lattice trees in Z containing zero are exactly the n intervals [-L,n-1-L], L=0,...,n-1. Uniform L gives exact uniform rooted sampling using expected O(log n) unbiased random bits and a compact O(log n)-bit endpoint representation. Listing vertices takes O(n) word operations on an O(log n)-bit word RAM and O(n log n) bits of coordinate output. Trees modulo translation instead have one class.\"."
++    },
++    {
++      "from_key": "uniform-rooted-line-lattice-tree-sampler",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"The n-vertex lattice trees in Z containing zero are exactly the n intervals [-L,n-1-L], L=0,...,n-1. Uniform L gives exact uniform rooted sampling using expected O(log n) unbiased random bits and a compact O(log n)-bit endpoint representation. Listing vertices takes O(n) word operations on an O(log n)-bit word RAM and O(n log n) bits of coordinate output. Trees modulo translation instead have one class.\" To: \"Schramm (2006v2), Problem 2.9, asks for efficient approximate uniform sampling of n-vertex lattice trees containing the origin. The supplied prior attempt only gives inefficient enumeration. This packet solves the line special case and disproves uncorrected uniform frontier growth; general higher-dimensional status is unresolved from the supplied caches.\"."
++    },
++    {
++      "from_key": "uniform-frontier-growth-tv-obstruction",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"On Z^d, d>=1, grow a rooted tree from the origin by choosing uniformly from available boundary edges at each step. At three vertices the resulting distribution has total variation exactly 1/6 from the uniform rooted lattice-tree law. With D=2d there are 2D(D-1) equiprobable growth histories, but center-rooted trees have two histories and endpoint-rooted trees have one. This obstruction concerns this uncorrected growth rule.\" To: \"Schramm (2006v2), Problem 2.9, asks for efficient approximate uniform sampling of n-vertex lattice trees containing the origin. The supplied prior attempt only gives inefficient enumeration. This packet solves the line special case and disproves uncorrected uniform frontier growth; general higher-dimensional status is unresolved from the supplied caches.\"."
++    },
++    {
++      "from_key": "source-limited-status-20261010",
++      "to_existing_logical": "math:probability.core:open-problem-p0127-efficient-approximately-uniform-sampling-of-lattice-trees",
++      "kind": "cites",
++      "rationale": "From: \"Schramm (2006v2), Problem 2.9, asks for efficient approximate uniform sampling of n-vertex lattice trees containing the origin. The supplied prior attempt only gives inefficient enumeration. This packet solves the line special case and disproves uncorrected uniform frontier growth; general higher-dimensional status is unresolved from the supplied caches.\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Give a provably efficient algorithm to sample approximately uniformly from the n-vertex lattice trees containing the origin, or prove an appropriate computational obstruction. Source: Schramm: Conformally invariant scaling limits, overview and collection of problems, 2006v2, Problem2.9, PDF p.18.\". "
++    }
++  ]
++}
+diff --git a/math-brain-inbox/w341/bundle_005.json b/math-brain-inbox/w341/bundle_005.json
+--- a/math-brain-inbox/w341/bundle_005.json
++++ b/math-brain-inbox/w341/bundle_005.json
+@@ -0,0 +1,98 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w341",
++  "bundle_slug": "w341-p0456-checked-results-20261010",
++  "entries": [
++    {
++      "key": "k-one-matching-isolation-formula",
++      "namespace": "probability.randomgraphs",
++      "logical_name": "p0456-k-one-matching-isolation-formula",
++      "kind": "lemma",
++      "title": "Bilateral k=1 graph: exact isolation probability [audit pending w347]",
++      "statement": "Give each edge of K_n one independent identically distributed continuous weight and retain it if both endpoints rank it among their single lowest incident weights. For n>=2 the graph is a matching, a fixed edge is present with probability 1/(2n-3), and a fixed vertex is isolated with probability (n-2)/(2n-3). The expected number of isolates is n(n-2)/(2n-3); connectivity is impossible for n>2.",
++      "proof_text": "# P0456: finite bilateral-preference calibration\n\nStatus: proof of boundary cases and a finite obstruction, pending w347. The cached primary source is Hossein Dabirian and Vijay Subramanian, *Connectivity of a Family of Bilateral Preference Random Graphs* (2025 cached version), introductory Open Problems, lines 103-120. It proves a first-order logarithmic threshold but leaves a smaller window. The model assigns one shared independent continuous weight per undirected edge, and both endpoints must rank an edge among their k lowest incident weights. This is not a model with independent preference orders at different vertices.\n\nFor k=1 and n>=2, the resulting graph is a matching. A specified edge {i,j} is mutually preferred exactly when its weight is the minimum among the 2n-3 edges incident to either endpoint. Its probability is 1/(2n-3), by exchangeability of independent continuous weights. Events for different mutually preferred neighbors of a fixed i are disjoint. Thus P(deg(i)=1)=(n-1)/(2n-3), P(i isolated)=(n-2)/(2n-3), and E[number isolated]=n(n-2)/(2n-3). Connectivity is impossible for n>2.\n\nAbsence of isolated vertices is not a deterministic characterization of connectivity. For n=6,k=2, give all six internal edges of two disjoint triples lower weights than all nine cross edges. Each vertex chooses its two triple neighbors, so the graph is two triangles and has minimum degree two. This ordering event has probability 1/binomial(15,6)=1/5005 under independent continuous weights. More generally two (k+1)-cliques give the same finite obstruction for n=2(k+1). The example does not prove that nontrivial components survive in the asymptotic fine window; such a claim would require its own probability estimate.\n\nExhaustive checks evaluated 2,173 (edge ordering,k) cases for n=2,3,4. At n=4,k=1 the isolated expectation is 8/5 and the probability of having no isolates is 1/5, while connectivity probability is zero. At n=4,k=2 the isolated expectation is 4/15 and connectivity probability is 11/15. The exact six-vertex two-triangle example is saved separately. The previous mean-matching route remains invalid: a central mean/CLT calculation does not control the isolation far tail or small components.\n\nAudit the shared-weight assumption, incident-edge count 2n-3, disjointness of root matching events and the distinction between a finite obstruction and an asymptotic one. No window width or limiting connectivity probability is claimed.\n",
++      "assumptions": [
++        "n>=2",
++        "one shared i.i.d. continuous weight per undirected edge",
++        "k=1"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:p0456-k-one-matching-isolation-formula",
++        "url": "file:///~/brain_workers/w341/proofs/P0456_finite_calibration.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "no-isolates-finite-disconnection-obstruction",
++      "namespace": "probability.randomgraphs",
++      "logical_name": "p0456-no-isolates-finite-disconnection-obstruction",
++      "kind": "lemma",
++      "title": "No isolates need not imply bilateral-preference connectivity [audit pending w347]",
++      "statement": "In the same shared-weight bilateral model with n=6 and k=2, the event that all six edges inside two vertex triples precede all nine cross edges produces two disjoint triangles. It has probability 1/binomial(15,6)=1/5005, yet minimum degree is two. Thus absence of isolates is not a deterministic connectivity criterion. This finite event does not settle the asymptotic fine window.",
++      "proof_text": "# P0456: finite bilateral-preference calibration\n\nStatus: proof of boundary cases and a finite obstruction, pending w347. The cached primary source is Hossein Dabirian and Vijay Subramanian, *Connectivity of a Family of Bilateral Preference Random Graphs* (2025 cached version), introductory Open Problems, lines 103-120. It proves a first-order logarithmic threshold but leaves a smaller window. The model assigns one shared independent continuous weight per undirected edge, and both endpoints must rank an edge among their k lowest incident weights. This is not a model with independent preference orders at different vertices.\n\nFor k=1 and n>=2, the resulting graph is a matching. A specified edge {i,j} is mutually preferred exactly when its weight is the minimum among the 2n-3 edges incident to either endpoint. Its probability is 1/(2n-3), by exchangeability of independent continuous weights. Events for different mutually preferred neighbors of a fixed i are disjoint. Thus P(deg(i)=1)=(n-1)/(2n-3), P(i isolated)=(n-2)/(2n-3), and E[number isolated]=n(n-2)/(2n-3). Connectivity is impossible for n>2.\n\nAbsence of isolated vertices is not a deterministic characterization of connectivity. For n=6,k=2, give all six internal edges of two disjoint triples lower weights than all nine cross edges. Each vertex chooses its two triple neighbors, so the graph is two triangles and has minimum degree two. This ordering event has probability 1/binomial(15,6)=1/5005 under independent continuous weights. More generally two (k+1)-cliques give the same finite obstruction for n=2(k+1). The example does not prove that nontrivial components survive in the asymptotic fine window; such a claim would require its own probability estimate.\n\nExhaustive checks evaluated 2,173 (edge ordering,k) cases for n=2,3,4. At n=4,k=1 the isolated expectation is 8/5 and the probability of having no isolates is 1/5, while connectivity probability is zero. At n=4,k=2 the isolated expectation is 4/15 and connectivity probability is 11/15. The exact six-vertex two-triangle example is saved separately. The previous mean-matching route remains invalid: a central mean/CLT calculation does not control the isolation far tail or small components.\n\nAudit the shared-weight assumption, incident-edge count 2n-3, disjointness of root matching events and the distinction between a finite obstruction and an asymptotic one. No window width or limiting connectivity probability is claimed.\n",
++      "assumptions": [
++        "n=6",
++        "k=2",
++        "shared i.i.d. continuous edge weights"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:p0456-no-isolates-finite-disconnection-obstruction",
++        "url": "file:///~/brain_workers/w341/proofs/P0456_finite_calibration.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "source-limited-status-20261010",
++      "namespace": "probability.randomgraphs",
++      "logical_name": "p0456-source-limited-status-20261010",
++      "kind": "concept",
++      "title": "Source-limited status and scope for P0456 [audit pending w347]",
++      "statement": "Dabirian-Subramanian (cached 2025 version) establish a first-order logarithmic connectivity threshold for shared-weight bilateral preference graphs, while their introductory Open Problems leave a finer window. The supplied cache contains no later answer. The finite calibrations here establish no window width or limiting connectivity law.",
++      "proof_text": null,
++      "assumptions": [
++        "only the supplied local caches and prior records were consulted",
++        "independent review pending"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:p0456-source-limited-status-20261010",
++        "url": "file:///~/brain_workers/w341/proofs/P0456_finite_calibration.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "no-isolates-finite-disconnection-obstruction",
++      "to_key": "k-one-matching-isolation-formula",
++      "kind": "analogous_to",
++      "rationale": "From: \"In the same shared-weight bilateral model with n=6 and k=2, the event that all six edges inside two vertex triples precede all nine cross edges produces two disjoint triangles. It has probability 1/binomial(15,6)=1/5005, yet minimum degree is two. Thus absence of isolates is not a deterministic connectivity criterion. This finite event does not settle the asymptotic fine window.\" To: \"Give each edge of K_n one independent identically distributed continuous weight and retain it if both endpoints rank it among their single lowest incident weights. For n>=2 the graph is a matching, a fixed edge is present with probability 1/(2n-3), and a fixed vertex is isolated with probability (n-2)/(2n-3). The expected number of isolates is n(n-2)/(2n-3); connectivity is impossible for n>2.\"."
++    },
++    {
++      "from_key": "k-one-matching-isolation-formula",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"Give each edge of K_n one independent identically distributed continuous weight and retain it if both endpoints rank it among their single lowest incident weights. For n>=2 the graph is a matching, a fixed edge is present with probability 1/(2n-3), and a fixed vertex is isolated with probability (n-2)/(2n-3). The expected number of isolates is n(n-2)/(2n-3); connectivity is impossible for n>2.\" To: \"Dabirian-Subramanian (cached 2025 version) establish a first-order logarithmic connectivity threshold for shared-weight bilateral preference graphs, while their introductory Open Problems leave a finer window. The supplied cache contains no later answer. The finite calibrations here establish no window width or limiting connectivity law.\"."
++    },
++    {
++      "from_key": "no-isolates-finite-disconnection-obstruction",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"In the same shared-weight bilateral model with n=6 and k=2, the event that all six edges inside two vertex triples precede all nine cross edges produces two disjoint triangles. It has probability 1/binomial(15,6)=1/5005, yet minimum degree is two. Thus absence of isolates is not a deterministic connectivity criterion. This finite event does not settle the asymptotic fine window.\" To: \"Dabirian-Subramanian (cached 2025 version) establish a first-order logarithmic connectivity threshold for shared-weight bilateral preference graphs, while their introductory Open Problems leave a finer window. The supplied cache contains no later answer. The finite calibrations here establish no window width or limiting connectivity law.\"."
++    },
++    {
++      "from_key": "source-limited-status-20261010",
++      "to_existing_logical": "math:probability.core:open-problem-p0456-the-fine-connectivity-window-for-bilateral-preference-graphs",
++      "kind": "cites",
++      "rationale": "From: \"Dabirian-Subramanian (cached 2025 version) establish a first-order logarithmic connectivity threshold for shared-weight bilateral preference graphs, while their introductory Open Problems leave a finer window. The supplied cache contains no later answer. The finite calibrations here establish no window width or limiting connectivity law.\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status unsolved). Locate the sharp connectivity window and limiting connectivity probability of LK(n,k) inside the source remaining band around log(n). Source: Dabirian and Subramanian: Connectivity of a family of bilateral preference random graphs, Open Problems; PDF2-3. Status notes: 2026-09-07 bounded primary searches for EWT, La-Kabkab and bilateral preference degree results; 2025 connectivity theorem credited. No current-open or novelty certification.\". "
++    }
++  ]
++}
+diff --git a/math-brain-inbox/w341/bundle_006.json b/math-brain-inbox/w341/bundle_006.json
+--- a/math-brain-inbox/w341/bundle_006.json
++++ b/math-brain-inbox/w341/bundle_006.json
+@@ -0,0 +1,105 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w341",
++  "bundle_slug": "w341-c0058-checked-results-20261010",
++  "entries": [
++    {
++      "key": "nonsimple-boundary-colour-word-obstruction",
++      "namespace": "probability.planarmaps",
++      "logical_name": "c0058-nonsimple-boundary-colour-word-obstruction",
++      "kind": "lemma",
++      "title": "A site-colour word does not retain boundary vertex identity [audit pending w347]",
++      "statement": "For independent Bernoulli(p) site colours, 0<p<1, boundary incidence patterns [a,b,a,c] and [a,b,c,d] both initially have colour word UUUU but induce different occurrence-colour laws. After exposing occurrence zero as black, occurrence two is black with probability 1 in the first pattern and p in the second. The full-law total variation is 2p(1-p). Thus the word alone cannot determine transitions uniformly conditional on each full boundary configuration. Retain incidence identities or supply a valid averaging/lumping theorem; no impossibility of weak lumping for a particular process is asserted.",
++      "proof_text": "# C0058: colours alone lose vertex identity\n\nStatus: proved necessary-state correction, pending w347. Curien's cached *Peeling random planar maps* notes pose the site-percolation exploration question at text lines 4180-4181. The same notes explicitly allow nonsimple boundaries (lines 1458-1459 and 2112). The original attempt's assertion that Markov peeling exists exactly for bounded face degrees is unsupported; it also treats a colour word as sufficient without a simplicity hypothesis. No site threshold is computed here.\n\nSite labels attach to vertices, not to boundary occurrences. Compare two boundary incidence patterns of length four: [a,b,a,c] and [a,b,c,d]. The first can arise as the boundary walk around a two-edge tree; the second around a square. Both may be bipartite planar-map boundaries and both have colour word UUUU before labels are exposed. Give distinct vertices independent Bernoulli(p) colours. In the first pattern, exposing occurrence zero also fixes occurrence two. In the second, occurrence two is still Bernoulli(p), independent of occurrence zero. After a black first exposure, its conditional black probability is respectively 1 and p. Thus a state recording only the word UUUU and its length cannot determine the next colour transition across these boundary configurations.\n\nFor p=1/2 the full four-occurrence colour laws have total variation 1/2; in general it is 2p(1-p). The shared-vertex law is supported on equality of bits zero and two; the distinct-vertex law puts probability 2p(1-p) on disagreement, and on the equality outcomes the shared law exceeds the distinct one. The exact checks at p=1/3,1/2,2/3 gave 4/9,1/2,4/9.\n\nA state meant to give the conditional transition law for every full boundary configuration must therefore retain vertex identities or their incidence partition, or justify an averaging/lumping theorem that removes that information. The example rules out configurationwise lumping by the colour word alone; it does not rule out weak lumping under the special law of a particular exploration. This correction does not prove that a partition-and-colour state suffices for every geometry transition or threshold calculation. Adaptive revelation of independent labels preserves independence of distinct unseen vertices provided the reveal choice does not inspect hidden labels. Unbounded but finite face degrees permit finitely many new labels per step; they do not, by themselves, rule out a Markov description with a larger state. Conversely, bounded face degrees do not automatically bound the accumulated boundary length.\n\nAudit the nonsimple-boundary convention, repeated-vertex correlations, the two conditional laws and the limited scope of the proposed state. This result refutes a compression assumption, not the existence of useful peeling algorithms.\n",
++      "assumptions": [
++        "independent colours on distinct vertices",
++        "0<p<1",
++        "general boundaries may repeat vertices",
++        "same unexposed word and length",
++        "configurationwise transition rule, without a proved averaging theorem"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0058-nonsimple-boundary-colour-word-obstruction",
++        "url": "file:///~/brain_workers/w341/proofs/C0058_boundary_identity.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "bounded-faces-markov-iff-not-established",
++      "namespace": "probability.planarmaps",
++      "logical_name": "c0058-bounded-faces-markov-iff-not-established",
++      "kind": "concept",
++      "title": "Bounded face degree is not a demonstrated criterion for Markov peeling [audit pending w347]",
++      "statement": "The prior claim that a Markov description of site-percolation peeling exists exactly for bounded face degrees is unsupported. Unbounded finite faces expose finitely many labels per step and allow larger states; bounded face degrees alone do not bound the accumulated boundary length. The proven correction here is only that nonsimple boundaries require vertex-identity information in addition to a colour word. No threshold or sufficient compressed state is established.",
++      "proof_text": null,
++      "assumptions": [
++        "finite degrees at each exposed face",
++        "general-boundary site-percolation exploration"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0058-bounded-faces-markov-iff-not-established",
++        "url": "file:///~/brain_workers/w341/proofs/C0058_boundary_identity.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "source-limited-status-20261010",
++      "namespace": "probability.planarmaps",
++      "logical_name": "c0058-source-limited-status-20261010",
++      "kind": "concept",
++      "title": "Source-limited status and scope for C0058 [audit pending w347]",
++      "statement": "Curien, Peeling random planar maps (cached 2019 notes), asks for useful site-percolation peeling leading to threshold computation. This packet proves a necessary vertex-identity correction for nonsimple boundaries. It supplies neither that threshold nor a sufficient compressed exploration process; later literature status is unverified.",
++      "proof_text": null,
++      "assumptions": [
++        "only the supplied local caches and prior records were consulted",
++        "independent review pending"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0058-source-limited-status-20261010",
++        "url": "file:///~/brain_workers/w341/proofs/C0058_boundary_identity.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "bounded-faces-markov-iff-not-established",
++      "to_key": "nonsimple-boundary-colour-word-obstruction",
++      "kind": "cites",
++      "rationale": "From: \"The prior claim that a Markov description of site-percolation peeling exists exactly for bounded face degrees is unsupported. Unbounded finite faces expose finitely many labels per step and allow larger states; bounded face degrees alone do not bound the accumulated boundary length. The proven correction here is only that nonsimple boundaries require vertex-identity information in addition to a colour word. No threshold or sufficient compressed state is established.\" To: \"For independent Bernoulli(p) site colours, 0<p<1, boundary incidence patterns [a,b,a,c] and [a,b,c,d] both initially have colour word UUUU but induce different occurrence-colour laws. After exposing occurrence zero as black, occurrence two is black with probability 1 in the first pattern and p in the second. The full-law total variation is 2p(1-p). Thus the word alone cannot determine transitions uniformly conditional on each full boundary configuration. Retain incidence identities or supply a valid averaging/lumping theorem; no impossibility of weak lumping for a particular process is asserted.\"."
++    },
++    {
++      "from_key": "nonsimple-boundary-colour-word-obstruction",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"For independent Bernoulli(p) site colours, 0<p<1, boundary incidence patterns [a,b,a,c] and [a,b,c,d] both initially have colour word UUUU but induce different occurrence-colour laws. After exposing occurrence zero as black, occurrence two is black with probability 1 in the first pattern and p in the second. The full-law total variation is 2p(1-p). Thus the word alone cannot determine transitions uniformly conditional on each full boundary configuration. Retain incidence identities or supply a valid averaging/lumping theorem; no impossibility of weak lumping for a particular process is asserted.\" To: \"Curien, Peeling random planar maps (cached 2019 notes), asks for useful site-percolation peeling leading to threshold computation. This packet proves a necessary vertex-identity correction for nonsimple boundaries. It supplies neither that threshold nor a sufficient compressed exploration process; later literature status is unverified.\"."
++    },
++    {
++      "from_key": "bounded-faces-markov-iff-not-established",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"The prior claim that a Markov description of site-percolation peeling exists exactly for bounded face degrees is unsupported. Unbounded finite faces expose finitely many labels per step and allow larger states; bounded face degrees alone do not bound the accumulated boundary length. The proven correction here is only that nonsimple boundaries require vertex-identity information in addition to a colour word. No threshold or sufficient compressed state is established.\" To: \"Curien, Peeling random planar maps (cached 2019 notes), asks for useful site-percolation peeling leading to threshold computation. This packet proves a necessary vertex-identity correction for nonsimple boundaries. It supplies neither that threshold nor a sufficient compressed exploration process; later literature status is unverified.\"."
++    },
++    {
++      "from_key": "source-limited-status-20261010",
++      "to_existing_logical": "math:probability.planarmaps:open-problem-c0058-a-peeling-algorithm-exploring-site-percolation-on-boltzmann-maps",
++      "kind": "cites",
++      "rationale": "From: \"Curien, Peeling random planar maps (cached 2019 notes), asks for useful site-percolation peeling leading to threshold computation. This packet proves a necessary vertex-identity correction for nonsimple boundaries. It supplies neither that threshold nor a sufficient compressed exploration process; later literature status is unverified.\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Can one find a peeling algorithm exploring site percolation on Boltzmann planar maps in the same spirit as the algorithm for bond percolation, so as to compute the site percolation threshold? Source: Curien: Peeling random planar maps, Saint-Flour XLIX 2019 lecture notes, author preliminary version, Open question, p. 79.\". "
++    },
++    {
++      "from_key": "nonsimple-boundary-colour-word-obstruction",
++      "to_existing_logical": "math:probability.planarmaps:attempt-c0058-a-peeling-algorithm-exploring-site-percolation-on-boltzmann-maps",
++      "kind": "refutes",
++      "rationale": "From: \"For independent Bernoulli(p) site colours, 0<p<1, boundary incidence patterns [a,b,a,c] and [a,b,c,d] both initially have colour word UUUU but induce different occurrence-colour laws. After exposing occurrence zero as black, occurrence two is black with probability 1 in the first pattern and p in the second. The full-law total variation is 2p(1-p). Thus the word alone cannot determine transitions uniformly conditional on each full boundary configuration. Retain incidence identities or supply a valid averaging/lumping theorem; no impossibility of weak lumping for a particular process is asserted.\" To: \"The frontier becomes Markov if one records the boundary word\". This refutes that compression when boundary occurrences may repeat a vertex; it makes no threshold claim."
++    }
++  ]
++}
+diff --git a/math-brain-inbox/w341/bundle_007.json b/math-brain-inbox/w341/bundle_007.json
+--- a/math-brain-inbox/w341/bundle_007.json
++++ b/math-brain-inbox/w341/bundle_007.json
+@@ -0,0 +1,99 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w341",
++  "bundle_slug": "w341-c0082-checked-results-20261010",
++  "entries": [
++    {
++      "key": "degree-matched-square-six-cycle-counts",
++      "namespace": "probability.percolation",
++      "logical_name": "c0082-degree-matched-square-six-cycle-counts",
++      "kind": "lemma",
++      "title": "Exact square and six-cycle counts at equal lattice/cube degree [audit pending w347]",
++      "statement": "Let D=2d. Unoriented simple cycles through a fixed vertex in Z^d have square count 4*binomial(d,2) and six-cycle count 12*binomial(d,2)+96*binomial(d,3). In Q_D the corresponding counts are binomial(D,2) and 12*binomial(D,3). Thus lattice-minus-cube differences are -D/2 for squares and -(9/2)D(D-2) for six-cycles. The graphs are compared at the same degree, not the same dimension.",
++      "proof_text": "# C0082: count at equal degree before inferring coefficients\n\nStatus: proof of short-cycle counts and a route correction, pending w347. Heydenreich and van der Hofstad's cached high-dimensional percolation text, Open Problem 15.9, lines 14708-14713, says the critical-probability expansion coefficients a_1,a_2,a_3 agree and asks for the first difference. Neither that coefficient nor a later literature resolution is established here.\n\nCompare Z^d with Q_{2d}, so both have degree D=2d. Count unoriented simple cycles through a specified vertex (count each cycle once, not once per traversal direction). The square counts are 4*binomial(d,2)=D(D-2)/2 for the lattice and binomial(D,2)=D(D-1)/2 for the cube. A lattice square selects two axes and one sign in each; a cube square selects two coordinates. They already differ by D/2.\n\nThe lattice six-cycle count is 12*binomial(d,2)+96*binomial(d,3). With two axes a simple six-cycle must be a 2-by-1 rectangle: two choices of long axis and six positions for the root give twelve per axis pair. With three axes every coordinate is traversed once each way, so the cycle lies in a unique unit three-cube. There are eight sign choices for that cube around the root and twelve six-cycles through its corner, giving ninety-six per axis triple.\n\nFor Q_D every simple six-cycle uses exactly three coordinates; two coordinates have only four vertices. Its count is 12*binomial(D,3). To see the factor twelve, a three-cube has sixteen simple six-cycles, each missing one vertex of each parity. There is one such cycle for each of the sixteen missing opposite-parity pairs; those pairs have distance one or three, and either case has a unique six-cycle. By vertex symmetry, 16*6/8=12 cycles contain a given vertex.\n\nAt equal degree the difference lattice-minus-cube in six-cycle counts is -(9/2)D(D-2). Thus the existence of lattice rectangles does not imply that the lattice has more total six-cycles after degree matching. Exhaustive simple-cycle traversal independently verified four degree-matched pairs D=2,4,6,8. At D=4 the square counts are 4 versus 6 and the six-cycle counts 12 versus 48; at D=8 the six-cycle counts are 456 versus 672.\n\nThese combinatorial facts do not determine a coefficient of p_c. Lace diagrams have weights and cancellation, and the finite cube's critical parameter has its own definition. The original prediction a_4 based only on extra rectangles remains a heuristic; it must not be served as a proved coefficient or as an exhaustive diagram calculation. Audit the equal-degree convention, cycle rooting and orientation, classification of six-cycles and the final polynomial difference.\n",
++      "assumptions": [
++        "d positive integer",
++        "Q_D is the D-dimensional hypercube",
++        "cycles simple and unoriented",
++        "fixed root vertex",
++        "D=2d"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0082-degree-matched-square-six-cycle-counts",
++        "url": "file:///~/brain_workers/w341/proofs/C0082_cycle_counts.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "cycle-counts-do-not-certify-critical-coefficient",
++      "namespace": "probability.percolation",
++      "logical_name": "c0082-cycle-counts-do-not-certify-critical-coefficient",
++      "kind": "concept",
++      "title": "The rectangle heuristic does not identify a critical expansion coefficient [audit pending w347]",
++      "statement": "Lattice two-axis rectangles are absent from a hypercube, but at equal degree the hypercube has more total six-cycles. Therefore a comparison that counts only the extra lattice rectangles omits other subleading cycle-count changes. These exact counts do not identify the first distinct coefficient of the critical-probability expansions: lace-diagram weights, cancellation and the cube critical-parameter convention still require analysis. The earlier a_4 prediction remains a heuristic.",
++      "proof_text": null,
++      "assumptions": [
++        "bond-percolation critical expansion comparison",
++        "equal-degree cycle counting"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0082-cycle-counts-do-not-certify-critical-coefficient",
++        "url": "file:///~/brain_workers/w341/proofs/C0082_cycle_counts.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "source-limited-status-20261010",
++      "namespace": "probability.percolation",
++      "logical_name": "c0082-source-limited-status-20261010",
++      "kind": "concept",
++      "title": "Source-limited status and scope for C0082 [audit pending w347]",
++      "statement": "Heydenreich-van der Hofstad, Open Problem 15.9, asks for the first difference between lattice and cube critical-probability expansion coefficients after the first three agree. Exact short-cycle counts here correct an earlier heuristic but do not determine that index; later literature status is unverified.",
++      "proof_text": null,
++      "assumptions": [
++        "only the supplied local caches and prior records were consulted",
++        "independent review pending"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0082-source-limited-status-20261010",
++        "url": "file:///~/brain_workers/w341/proofs/C0082_cycle_counts.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "cycle-counts-do-not-certify-critical-coefficient",
++      "to_key": "degree-matched-square-six-cycle-counts",
++      "kind": "cites",
++      "rationale": "From: \"Lattice two-axis rectangles are absent from a hypercube, but at equal degree the hypercube has more total six-cycles. Therefore a comparison that counts only the extra lattice rectangles omits other subleading cycle-count changes. These exact counts do not identify the first distinct coefficient of the critical-probability expansions: lace-diagram weights, cancellation and the cube critical-parameter convention still require analysis. The earlier a_4 prediction remains a heuristic.\" To: \"Let D=2d. Unoriented simple cycles through a fixed vertex in Z^d have square count 4*binomial(d,2) and six-cycle count 12*binomial(d,2)+96*binomial(d,3). In Q_D the corresponding counts are binomial(D,2) and 12*binomial(D,3). Thus lattice-minus-cube differences are -D/2 for squares and -(9/2)D(D-2) for six-cycles. The graphs are compared at the same degree, not the same dimension.\"."
++    },
++    {
++      "from_key": "degree-matched-square-six-cycle-counts",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"Let D=2d. Unoriented simple cycles through a fixed vertex in Z^d have square count 4*binomial(d,2) and six-cycle count 12*binomial(d,2)+96*binomial(d,3). In Q_D the corresponding counts are binomial(D,2) and 12*binomial(D,3). Thus lattice-minus-cube differences are -D/2 for squares and -(9/2)D(D-2) for six-cycles. The graphs are compared at the same degree, not the same dimension.\" To: \"Heydenreich-van der Hofstad, Open Problem 15.9, asks for the first difference between lattice and cube critical-probability expansion coefficients after the first three agree. Exact short-cycle counts here correct an earlier heuristic but do not determine that index; later literature status is unverified.\"."
++    },
++    {
++      "from_key": "cycle-counts-do-not-certify-critical-coefficient",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"Lattice two-axis rectangles are absent from a hypercube, but at equal degree the hypercube has more total six-cycles. Therefore a comparison that counts only the extra lattice rectangles omits other subleading cycle-count changes. These exact counts do not identify the first distinct coefficient of the critical-probability expansions: lace-diagram weights, cancellation and the cube critical-parameter convention still require analysis. The earlier a_4 prediction remains a heuristic.\" To: \"Heydenreich-van der Hofstad, Open Problem 15.9, asks for the first difference between lattice and cube critical-probability expansion coefficients after the first three agree. Exact short-cycle counts here correct an earlier heuristic but do not determine that index; later literature status is unverified.\"."
++    },
++    {
++      "from_key": "source-limited-status-20261010",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0082-first-coefficient-where-the-1-d-expansions-of-p-c-on-z-d-and-on-the-hy",
++      "kind": "cites",
++      "rationale": "From: \"Heydenreich-van der Hofstad, Open Problem 15.9, asks for the first difference between lattice and cube critical-probability expansion coefficients after the first three agree. Exact short-cycle counts here correct an earlier heuristic but do not determine that index; later literature status is unverified.\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Extend the expansion of the critical value to the hypercube {0,1}^d and find the first index i for which the coefficients a_i for Z^d and for the hypercube are distinct (they agree for i = 1, 2, 3). Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 15.9, p. 232.\". "
++    }
++  ]
++}
+diff --git a/math-brain-inbox/w341/bundle_008.json b/math-brain-inbox/w341/bundle_008.json
+--- a/math-brain-inbox/w341/bundle_008.json
++++ b/math-brain-inbox/w341/bundle_008.json
+@@ -0,0 +1,105 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w341",
++  "bundle_slug": "w341-c0126-checked-results-20261010",
++  "entries": [
++    {
++      "key": "underlying-walk-backward-steps",
++      "namespace": "probability.percolation",
++      "logical_name": "c0126-underlying-walk-backward-steps",
++      "kind": "lemma",
++      "title": "Undirected cluster walk can return despite oriented bonds [audit pending w347]",
++      "statement": "Orient a diamond as 0->a,b->c and let simple random walk use its underlying undirected unit-edge graph. Its probability of returning to 0 at two steps is 1/2, although a forward-only walk has return probability zero. Thus bond orientation in oriented percolation does not justify forbidding backward steps in the undirected random-walk spectral-dimension problem.",
++      "proof_text": "# C0126: oriented bonds do not force a directed random walk\n\nStatus: route refutation and deterministic reduction, pending w347. Kumagai's cached Saint-Flour notes, Section 6.3, lines 3801-3869, need a zigzag estimate summing m^((4-d)/2) and leave d=5,6 open. Reference [18] is Barlow, Jarai, Kumagai and Slade, *Random walk on the incipient infinite cluster for oriented percolation in high dimensions*, Communications in Mathematical Physics 278 (2008), 385-431. No later answer was verified from the supplied caches.\n\nThe simple random walk in the spectral-dimension question traverses the underlying open cluster as an undirected graph. Oriented percolation defines which bonds and connections form the cluster; it does not prohibit backward steps of this walk. If it were forward-only, time would strictly increase and every positive-time return probability to the origin would be zero, incompatible with the heat-kernel question.\n\nAn explicit boundary check is the oriented diamond 0 -> a,b -> c. The underlying graph has two length-two paths in parallel. Ordinary simple random walk returns from 0 to 0 at two steps with probability 1/2: each of its two first-step choices contributes (1/2)(1/2). A forward-only walk has return probability zero. Therefore the previous argument that backward zigzags disappear by orientation changes the process and cannot justify a resistance or spectral-dimension estimate.\n\nA legitimate deterministic reduction uses cutsets. In a unit-conductance network from an origin to a target boundary, suppose there are m distinct singleton edge cuts separating them. Every unit flow has net current of magnitude one through each of those edges. Its energy is at least m. Taking the infimum of energy gives effective resistance at least m (Thomson's principle). More generally disjoint cutsets C_j give the Nash-Williams bound sum_j 1/|C_j| by Cauchy-Schwarz on the currents in each cutset.\n\nThe missing random step is quantitative: on the d=5,6 IIC one would need the appropriate distribution/tail estimates for such bottlenecks or cutsets together with volume and heat-kernel assumptions. The deterministic inequality does not supply those estimates. As a finite independent check, exact grounded-Laplacian solves on m=1,2,3,4 diamonds each followed by a bridge gave resistances 2m with m separating singleton bridge cuts. The bare diamond has resistance one.\n\nAudit the walk convention, return probability, current conservation across cuts, edge-disjointness and the gap between a deterministic inequality and random IIC tail bounds. No d=5,6 exponent is proved.\n",
++      "assumptions": [
++        "simple random walk uses the underlying undirected cluster",
++        "unit conductances",
++        "the four-edge diamond"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0126-underlying-walk-backward-steps",
++        "url": "file:///~/brain_workers/w341/proofs/C0126_walk_direction.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "singleton-cutset-resistance-reduction",
++      "namespace": "probability.percolation",
++      "logical_name": "c0126-singleton-cutset-resistance-reduction",
++      "kind": "lemma",
++      "title": "Separating singleton cuts give a deterministic resistance lower bound [audit pending w347]",
++      "statement": "In a finite unit-conductance network between an origin and a target boundary, if m distinct singleton edge cuts separate them, effective resistance is at least m. Every unit flow has current of magnitude one through each cut edge, so its energy is at least m. More generally pairwise edge-disjoint separating cutsets C_j give the lower bound sum_j 1/|C_j|. This alone provides no random IIC bottleneck tail estimate.",
++      "proof_text": "# C0126: oriented bonds do not force a directed random walk\n\nStatus: route refutation and deterministic reduction, pending w347. Kumagai's cached Saint-Flour notes, Section 6.3, lines 3801-3869, need a zigzag estimate summing m^((4-d)/2) and leave d=5,6 open. Reference [18] is Barlow, Jarai, Kumagai and Slade, *Random walk on the incipient infinite cluster for oriented percolation in high dimensions*, Communications in Mathematical Physics 278 (2008), 385-431. No later answer was verified from the supplied caches.\n\nThe simple random walk in the spectral-dimension question traverses the underlying open cluster as an undirected graph. Oriented percolation defines which bonds and connections form the cluster; it does not prohibit backward steps of this walk. If it were forward-only, time would strictly increase and every positive-time return probability to the origin would be zero, incompatible with the heat-kernel question.\n\nAn explicit boundary check is the oriented diamond 0 -> a,b -> c. The underlying graph has two length-two paths in parallel. Ordinary simple random walk returns from 0 to 0 at two steps with probability 1/2: each of its two first-step choices contributes (1/2)(1/2). A forward-only walk has return probability zero. Therefore the previous argument that backward zigzags disappear by orientation changes the process and cannot justify a resistance or spectral-dimension estimate.\n\nA legitimate deterministic reduction uses cutsets. In a unit-conductance network from an origin to a target boundary, suppose there are m distinct singleton edge cuts separating them. Every unit flow has net current of magnitude one through each of those edges. Its energy is at least m. Taking the infimum of energy gives effective resistance at least m (Thomson's principle). More generally disjoint cutsets C_j give the Nash-Williams bound sum_j 1/|C_j| by Cauchy-Schwarz on the currents in each cutset.\n\nThe missing random step is quantitative: on the d=5,6 IIC one would need the appropriate distribution/tail estimates for such bottlenecks or cutsets together with volume and heat-kernel assumptions. The deterministic inequality does not supply those estimates. As a finite independent check, exact grounded-Laplacian solves on m=1,2,3,4 diamonds each followed by a bridge gave resistances 2m with m separating singleton bridge cuts. The bare diamond has resistance one.\n\nAudit the walk convention, return probability, current conservation across cuts, edge-disjointness and the gap between a deterministic inequality and random IIC tail bounds. No d=5,6 exponent is proved.\n",
++      "assumptions": [
++        "finite connected unit-conductance network",
++        "origin separated from wired target boundary",
++        "cutsets edge-disjoint",
++        "Thomson variational principle"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0126-singleton-cutset-resistance-reduction",
++        "url": "file:///~/brain_workers/w341/proofs/C0126_walk_direction.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "source-limited-status-20261010",
++      "namespace": "probability.percolation",
++      "logical_name": "c0126-source-limited-status-20261010",
++      "kind": "concept",
++      "title": "Source-limited status and scope for C0126 [audit pending w347]",
++      "statement": "Kumagai Section 6.3 asks for random walk on oriented-percolation IIC in spatial dimensions five and six; its displayed mean-field resistance proof needs dimension greater than six. This packet corrects the walk convention and gives a deterministic cutset reduction. Neither the needed random estimates nor a later answer were established.",
++      "proof_text": null,
++      "assumptions": [
++        "only the supplied local caches and prior records were consulted",
++        "independent review pending"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:c0126-source-limited-status-20261010",
++        "url": "file:///~/brain_workers/w341/proofs/C0126_walk_direction.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "singleton-cutset-resistance-reduction",
++      "to_key": "underlying-walk-backward-steps",
++      "kind": "cites",
++      "rationale": "From: \"In a finite unit-conductance network between an origin and a target boundary, if m distinct singleton edge cuts separate them, effective resistance is at least m. Every unit flow has current of magnitude one through each cut edge, so its energy is at least m. More generally pairwise edge-disjoint separating cutsets C_j give the lower bound sum_j 1/|C_j|. This alone provides no random IIC bottleneck tail estimate.\" To: \"Orient a diamond as 0->a,b->c and let simple random walk use its underlying undirected unit-edge graph. Its probability of returning to 0 at two steps is 1/2, although a forward-only walk has return probability zero. Thus bond orientation in oriented percolation does not justify forbidding backward steps in the undirected random-walk spectral-dimension problem.\"."
++    },
++    {
++      "from_key": "underlying-walk-backward-steps",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"Orient a diamond as 0->a,b->c and let simple random walk use its underlying undirected unit-edge graph. Its probability of returning to 0 at two steps is 1/2, although a forward-only walk has return probability zero. Thus bond orientation in oriented percolation does not justify forbidding backward steps in the undirected random-walk spectral-dimension problem.\" To: \"Kumagai Section 6.3 asks for random walk on oriented-percolation IIC in spatial dimensions five and six; its displayed mean-field resistance proof needs dimension greater than six. This packet corrects the walk convention and gives a deterministic cutset reduction. Neither the needed random estimates nor a later answer were established.\"."
++    },
++    {
++      "from_key": "singleton-cutset-resistance-reduction",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"In a finite unit-conductance network between an origin and a target boundary, if m distinct singleton edge cuts separate them, effective resistance is at least m. Every unit flow has current of magnitude one through each cut edge, so its energy is at least m. More generally pairwise edge-disjoint separating cutsets C_j give the lower bound sum_j 1/|C_j|. This alone provides no random IIC bottleneck tail estimate.\" To: \"Kumagai Section 6.3 asks for random walk on oriented-percolation IIC in spatial dimensions five and six; its displayed mean-field resistance proof needs dimension greater than six. This packet corrects the walk convention and gives a deterministic cutset reduction. Neither the needed random estimates nor a later answer were established.\"."
++    },
++    {
++      "from_key": "source-limited-status-20261010",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0126-random-walk-on-the-incipient-infinite-cluster-of-oriented-percolation",
++      "kind": "cites",
++      "rationale": "From: \"Kumagai Section 6.3 asks for random walk on oriented-percolation IIC in spatial dimensions five and six; its displayed mean-field resistance proof needs dimension greater than six. This packet corrects the walk convention and gives a deterministic cutset reduction. Neither the needed random estimates nor a later answer were established.\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). The critical dimension of oriented percolation is 4; describe the behaviour of simple random walk on the IIC of oriented percolation (Z^d x Z_+) for d = 5 and 6, where the mean-field heat-kernel proof (which needs d > 6) does not apply. Source: Kumagai: Random walks on disordered media and their scaling limits, Saint-Flour XL 2010, author version, Section 6.3 open problem, p. 58.\". "
++    },
++    {
++      "from_key": "underlying-walk-backward-steps",
++      "to_existing_logical": "math:probability.percolation:attempt-c0126-random-walk-on-the-incipient-infinite-cluster-of-oriented-percolation",
++      "kind": "refutes",
++      "rationale": "From: \"Orient a diamond as 0->a,b->c and let simple random walk use its underlying undirected unit-edge graph. Its probability of returning to 0 at two steps is 1/2, although a forward-only walk has return probability zero. Thus bond orientation in oriented percolation does not justify forbidding backward steps in the undirected random-walk spectral-dimension problem.\" To: \"paths in the oriented IIC cannot return to earlier times\". This refutes its use as a prohibition on backward steps of the underlying undirected random walk, not the definition of a directed percolation path."
++    }
++  ]
++}
+diff --git a/math-brain-inbox/w341/bundle_009.json b/math-brain-inbox/w341/bundle_009.json
+--- a/math-brain-inbox/w341/bundle_009.json
++++ b/math-brain-inbox/w341/bundle_009.json
+@@ -0,0 +1,163 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w341",
++  "bundle_slug": "w341-p0014-checked-results-20261010",
++  "entries": [
++    {
++      "key": "circulant-theta-frequency-lp",
++      "namespace": "combinatorics.spectral",
++      "logical_name": "p0014-circulant-theta-frequency-lp",
++      "kind": "lemma",
++      "title": "Known Fourier LP for the Lovasz theta number, with even frequencies explicit [audit pending w347]",
++      "statement": "For a simple undirected circulant graph on Z/nZ, let S contain one representative of each included unordered nonzero generator pair and m=floor(n/2). Its Lovasz theta number is n times the maximum z_0 subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j*cos(2*pi*j*s/n)=0 for every s in S. Paired Fourier frequencies are aggregated; the zero and even-n self-inverse frequency remain unpaired. This is a rederivation of the LP already described in the cached 2025 source.",
++      "proof_text": "# P0014: Fourier calibration and exact small expectations\n\nStatus: a rederivation of a known computational reduction, exact small cases and numerical evidence, pending w347. The cached *Randomstrasse101: Open Problems of 2025*, Entry 9, Conjecture 18, lines 749-810, poses E theta=(1+o(1))sqrt(n). It already describes the Fourier LP and cites the partial-bound paper Bandeira, Blasiok, Dmitriev, Faure, Kireeva and Kunisky, *The Lovasz number of random circulant graphs*, arXiv:2502.16227 (2025), at lines 1393-1397. Its quoted upper bound is O(sqrt(n) log log n), not a solution of the asymptotic conjecture. This packet does not claim the LP reduction as new.\n\nFor a simple undirected circulant graph on Z/nZ with nonzero generator set S=-S, theta is the SDP maximum <J,X> over real symmetric positive semidefinite X with trace one and X_ij=0 at graph edges. Average X over cyclic shifts; this preserves feasibility and objective and makes X circulant. Fourier diagonalization gives nonnegative eigenvalues y_j summing to one, with y_j=y_{n-j}. Its edge constraint is sum_j y_j cos(2*pi*j*s/n)=0 for each s in S, and its objective is n*y_0.\n\nEquivalently let m=floor(n/2) and aggregate z_j=y_j+y_{n-j} for paired frequencies, leaving z_0=y_0 and the self-inverse frequency unpaired when n is even. Then\n\ntheta(G)=n*max z_0, subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j cos(2*pi*j*s/n)=0 for each unordered generator representative s.\n\nConversely any such z, split equally over paired frequencies, reconstructs a real positive semidefinite circulant X, proving equality of the LP and SDP. The even self-inverse generator and frequency require no extra factor of two after aggregation.\n\nFor independent fair inclusion of each unordered nonzero generator pair, exact small expectations are 3/2 at n=2, 2 at n=3, 9/4 at n=4, and (3+sqrt(5))/2 at n=5. At n=4 the four graphs are empty, a four-cycle, a perfect matching, and complete, with theta 4,2,2,1. At n=5 they are empty, two five-cycles and complete. The five-cycle LP has cosines (sqrt(5)-1)/4 and -(sqrt(5)+1)/4, maximized by putting nonconstant mass on the latter; z_0=1/sqrt(5), so theta=sqrt(5).\n\nThe earlier complement-identity reduction is still necessary: theta(G)theta(complement G)=n for vertex-transitive G, and the fair model is complement invariant. With Z=log(theta(G)/sqrt(n)), E theta/sqrt(n)=E cosh Z. Hence the desired result implies E Z^2->0, because cosh Z>=1+Z^2/2. Convergence in probability alone is insufficient without exponential-tail control. A sufficient stronger route would be an MGF bound E exp(tZ)<=exp(t^2*sigma_n^2/2) at t=1 with sigma_n->0; it would sandwich the expectation ratio between one and exp(sigma_n^2/2). That bound is not established here.\n\nThe implemented LP enumerated all 60 graphs for n=2,...,9 in double precision. Maximum constraint residual was 1.12e-15 and maximum complement-product discrepancy 8.89e-15. These are numerical checks, not exact certificates or evidence of a large-n limit. Audit the theta convention, cyclic averaging, normalization, pairing at even n, exact small cases and tail gap.\n",
++      "assumptions": [
++        "simple undirected circulant graph",
++        "trace-one PSD primal theta convention",
++        "nonzero generator pairs"
++      ],
++      "domain": "graph theory and probability",
++      "source": {
++        "source_id": "owner-work:w341:p0014-circulant-theta-frequency-lp",
++        "url": "file:///~/brain_workers/w341/proofs/P0014_fourier.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "fair-circulant-theta-exact-small-expectations",
++      "namespace": "combinatorics.spectral",
++      "logical_name": "p0014-fair-circulant-theta-exact-small-expectations",
++      "kind": "lemma",
++      "title": "Exact small expected theta values for fair random circulants [audit pending w347]",
++      "statement": "Include every unordered nonzero generator pair of Z/nZ independently with probability 1/2. Expected Lovasz theta is 3/2 for n=2, 2 for n=3, 9/4 for n=4, and (3+sqrt(5))/2 for n=5. At n=4 the four theta values are 4,2,2,1; at n=5 they are 5,sqrt(5),sqrt(5),1. These finite values do not establish the conjectured large-n asymptotic.",
++      "proof_text": "# P0014: Fourier calibration and exact small expectations\n\nStatus: a rederivation of a known computational reduction, exact small cases and numerical evidence, pending w347. The cached *Randomstrasse101: Open Problems of 2025*, Entry 9, Conjecture 18, lines 749-810, poses E theta=(1+o(1))sqrt(n). It already describes the Fourier LP and cites the partial-bound paper Bandeira, Blasiok, Dmitriev, Faure, Kireeva and Kunisky, *The Lovasz number of random circulant graphs*, arXiv:2502.16227 (2025), at lines 1393-1397. Its quoted upper bound is O(sqrt(n) log log n), not a solution of the asymptotic conjecture. This packet does not claim the LP reduction as new.\n\nFor a simple undirected circulant graph on Z/nZ with nonzero generator set S=-S, theta is the SDP maximum <J,X> over real symmetric positive semidefinite X with trace one and X_ij=0 at graph edges. Average X over cyclic shifts; this preserves feasibility and objective and makes X circulant. Fourier diagonalization gives nonnegative eigenvalues y_j summing to one, with y_j=y_{n-j}. Its edge constraint is sum_j y_j cos(2*pi*j*s/n)=0 for each s in S, and its objective is n*y_0.\n\nEquivalently let m=floor(n/2) and aggregate z_j=y_j+y_{n-j} for paired frequencies, leaving z_0=y_0 and the self-inverse frequency unpaired when n is even. Then\n\ntheta(G)=n*max z_0, subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j cos(2*pi*j*s/n)=0 for each unordered generator representative s.\n\nConversely any such z, split equally over paired frequencies, reconstructs a real positive semidefinite circulant X, proving equality of the LP and SDP. The even self-inverse generator and frequency require no extra factor of two after aggregation.\n\nFor independent fair inclusion of each unordered nonzero generator pair, exact small expectations are 3/2 at n=2, 2 at n=3, 9/4 at n=4, and (3+sqrt(5))/2 at n=5. At n=4 the four graphs are empty, a four-cycle, a perfect matching, and complete, with theta 4,2,2,1. At n=5 they are empty, two five-cycles and complete. The five-cycle LP has cosines (sqrt(5)-1)/4 and -(sqrt(5)+1)/4, maximized by putting nonconstant mass on the latter; z_0=1/sqrt(5), so theta=sqrt(5).\n\nThe earlier complement-identity reduction is still necessary: theta(G)theta(complement G)=n for vertex-transitive G, and the fair model is complement invariant. With Z=log(theta(G)/sqrt(n)), E theta/sqrt(n)=E cosh Z. Hence the desired result implies E Z^2->0, because cosh Z>=1+Z^2/2. Convergence in probability alone is insufficient without exponential-tail control. A sufficient stronger route would be an MGF bound E exp(tZ)<=exp(t^2*sigma_n^2/2) at t=1 with sigma_n->0; it would sandwich the expectation ratio between one and exp(sigma_n^2/2). That bound is not established here.\n\nThe implemented LP enumerated all 60 graphs for n=2,...,9 in double precision. Maximum constraint residual was 1.12e-15 and maximum complement-product discrepancy 8.89e-15. These are numerical checks, not exact certificates or evidence of a large-n limit. Audit the theta convention, cyclic averaging, normalization, pairing at even n, exact small cases and tail gap.\n",
++      "assumptions": [
++        "fair independent inclusion of unordered nonzero generator pairs",
++        "n in {2,3,4,5}"
++      ],
++      "domain": "graph theory and probability",
++      "source": {
++        "source_id": "owner-work:w341:p0014-fair-circulant-theta-exact-small-expectations",
++        "url": "file:///~/brain_workers/w341/proofs/P0014_fourier.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "log-theta-tail-reduction",
++      "namespace": "combinatorics.spectral",
++      "logical_name": "p0014-log-theta-tail-reduction",
++      "kind": "lemma",
++      "title": "A necessary log-variance condition and a sufficient MGF route [audit pending w347]",
++      "statement": "For fair random circulants on n vertices set Z=log(theta(G)/sqrt(n)). Vertex transitivity and complement symmetry give E theta(G)/sqrt(n)=E cosh(Z)>=1+E[Z^2]/2. Hence asymptotic expectation ratio one requires E[Z^2]->0. If also E exp(Z)<=exp(sigma_n^2/2) with sigma_n->0, that expectation ratio tends to one. The latter MGF bound is a sufficient hypothesis, not a bound proved for the random graph here.",
++      "proof_text": "# P0014: Fourier calibration and exact small expectations\n\nStatus: a rederivation of a known computational reduction, exact small cases and numerical evidence, pending w347. The cached *Randomstrasse101: Open Problems of 2025*, Entry 9, Conjecture 18, lines 749-810, poses E theta=(1+o(1))sqrt(n). It already describes the Fourier LP and cites the partial-bound paper Bandeira, Blasiok, Dmitriev, Faure, Kireeva and Kunisky, *The Lovasz number of random circulant graphs*, arXiv:2502.16227 (2025), at lines 1393-1397. Its quoted upper bound is O(sqrt(n) log log n), not a solution of the asymptotic conjecture. This packet does not claim the LP reduction as new.\n\nFor a simple undirected circulant graph on Z/nZ with nonzero generator set S=-S, theta is the SDP maximum <J,X> over real symmetric positive semidefinite X with trace one and X_ij=0 at graph edges. Average X over cyclic shifts; this preserves feasibility and objective and makes X circulant. Fourier diagonalization gives nonnegative eigenvalues y_j summing to one, with y_j=y_{n-j}. Its edge constraint is sum_j y_j cos(2*pi*j*s/n)=0 for each s in S, and its objective is n*y_0.\n\nEquivalently let m=floor(n/2) and aggregate z_j=y_j+y_{n-j} for paired frequencies, leaving z_0=y_0 and the self-inverse frequency unpaired when n is even. Then\n\ntheta(G)=n*max z_0, subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j cos(2*pi*j*s/n)=0 for each unordered generator representative s.\n\nConversely any such z, split equally over paired frequencies, reconstructs a real positive semidefinite circulant X, proving equality of the LP and SDP. The even self-inverse generator and frequency require no extra factor of two after aggregation.\n\nFor independent fair inclusion of each unordered nonzero generator pair, exact small expectations are 3/2 at n=2, 2 at n=3, 9/4 at n=4, and (3+sqrt(5))/2 at n=5. At n=4 the four graphs are empty, a four-cycle, a perfect matching, and complete, with theta 4,2,2,1. At n=5 they are empty, two five-cycles and complete. The five-cycle LP has cosines (sqrt(5)-1)/4 and -(sqrt(5)+1)/4, maximized by putting nonconstant mass on the latter; z_0=1/sqrt(5), so theta=sqrt(5).\n\nThe earlier complement-identity reduction is still necessary: theta(G)theta(complement G)=n for vertex-transitive G, and the fair model is complement invariant. With Z=log(theta(G)/sqrt(n)), E theta/sqrt(n)=E cosh Z. Hence the desired result implies E Z^2->0, because cosh Z>=1+Z^2/2. Convergence in probability alone is insufficient without exponential-tail control. A sufficient stronger route would be an MGF bound E exp(tZ)<=exp(t^2*sigma_n^2/2) at t=1 with sigma_n->0; it would sandwich the expectation ratio between one and exp(sigma_n^2/2). That bound is not established here.\n\nThe implemented LP enumerated all 60 graphs for n=2,...,9 in double precision. Maximum constraint residual was 1.12e-15 and maximum complement-product discrepancy 8.89e-15. These are numerical checks, not exact certificates or evidence of a large-n limit. Audit the theta convention, cyclic averaging, normalization, pairing at even n, exact small cases and tail gap.\n",
++      "assumptions": [
++        "vertex-transitive complement theta identity",
++        "complement-invariant fair model",
++        "MGF hypothesis for the sufficient direction only"
++      ],
++      "domain": "graph theory and probability",
++      "source": {
++        "source_id": "owner-work:w341:p0014-log-theta-tail-reduction",
++        "url": "file:///~/brain_workers/w341/proofs/P0014_fourier.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "small-circulant-numerical-lp-evidence",
++      "namespace": "combinatorics.spectral",
++      "logical_name": "p0014-small-circulant-numerical-lp-evidence",
++      "kind": "concept",
++      "title": "Sixty numerical circulant-theta LP checks [audit pending w347]",
++      "statement": "Double-precision Fourier LP enumeration for all 60 fair-generator configurations on n=2,...,9 agrees with the exact n=2,...,5 expectations. Maximum equality residual was 1.1102230246251565e-15 and maximum theta-complement product discrepancy was 8.881784197001252e-15. These are numerical solver checks, not rational feasibility certificates and not proof of a large-n limit.",
++      "proof_text": null,
++      "assumptions": [
++        "the saved n=2,...,9 floating-point LP outputs"
++      ],
++      "domain": "graph theory and probability",
++      "source": {
++        "source_id": "owner-work:w341:p0014-small-circulant-numerical-lp-evidence",
++        "url": "file:///~/brain_workers/w341/proofs/P0014_fourier.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "source-limited-status-20261010",
++      "namespace": "combinatorics.spectral",
++      "logical_name": "p0014-source-limited-status-20261010",
++      "kind": "concept",
++      "title": "Source-limited status and scope for P0014 [audit pending w347]",
++      "statement": "Randomstrasse101 (2025), Conjecture 18, asks whether fair random circulants have expected theta asymptotic to sqrt(n). Its cached source already knows the Fourier LP and cites Bandeira et al., arXiv:2502.16227, for a partial bound. This packet rederives that reduction, proves small expectations and states a tail criterion; it does not resolve the asymptotic conjecture.",
++      "proof_text": null,
++      "assumptions": [
++        "only the supplied local caches and prior records were consulted",
++        "independent review pending"
++      ],
++      "domain": "graph theory and probability",
++      "source": {
++        "source_id": "owner-work:w341:p0014-source-limited-status-20261010",
++        "url": "file:///~/brain_workers/w341/proofs/P0014_fourier.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "fair-circulant-theta-exact-small-expectations",
++      "to_key": "circulant-theta-frequency-lp",
++      "kind": "depends_on",
++      "rationale": "From: \"Include every unordered nonzero generator pair of Z/nZ independently with probability 1/2. Expected Lovasz theta is 3/2 for n=2, 2 for n=3, 9/4 for n=4, and (3+sqrt(5))/2 for n=5. At n=4 the four theta values are 4,2,2,1; at n=5 they are 5,sqrt(5),sqrt(5),1. These finite values do not establish the conjectured large-n asymptotic.\" To: \"For a simple undirected circulant graph on Z/nZ, let S contain one representative of each included unordered nonzero generator pair and m=floor(n/2). Its Lovasz theta number is n times the maximum z_0 subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j*cos(2*pi*j*s/n)=0 for every s in S. Paired Fourier frequencies are aggregated; the zero and even-n self-inverse frequency remain unpaired. This is a rederivation of the LP already described in the cached 2025 source.\"."
++    },
++    {
++      "from_key": "small-circulant-numerical-lp-evidence",
++      "to_key": "circulant-theta-frequency-lp",
++      "kind": "cites",
++      "rationale": "From: \"Double-precision Fourier LP enumeration for all 60 fair-generator configurations on n=2,...,9 agrees with the exact n=2,...,5 expectations. Maximum equality residual was 1.1102230246251565e-15 and maximum theta-complement product discrepancy was 8.881784197001252e-15. These are numerical solver checks, not rational feasibility certificates and not proof of a large-n limit.\" To: \"For a simple undirected circulant graph on Z/nZ, let S contain one representative of each included unordered nonzero generator pair and m=floor(n/2). Its Lovasz theta number is n times the maximum z_0 subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j*cos(2*pi*j*s/n)=0 for every s in S. Paired Fourier frequencies are aggregated; the zero and even-n self-inverse frequency remain unpaired. This is a rederivation of the LP already described in the cached 2025 source.\"."
++    },
++    {
++      "from_key": "log-theta-tail-reduction",
++      "to_key": "fair-circulant-theta-exact-small-expectations",
++      "kind": "analogous_to",
++      "rationale": "From: \"For fair random circulants on n vertices set Z=log(theta(G)/sqrt(n)). Vertex transitivity and complement symmetry give E theta(G)/sqrt(n)=E cosh(Z)>=1+E[Z^2]/2. Hence asymptotic expectation ratio one requires E[Z^2]->0. If also E exp(Z)<=exp(sigma_n^2/2) with sigma_n->0, that expectation ratio tends to one. The latter MGF bound is a sufficient hypothesis, not a bound proved for the random graph here.\" To: \"Include every unordered nonzero generator pair of Z/nZ independently with probability 1/2. Expected Lovasz theta is 3/2 for n=2, 2 for n=3, 9/4 for n=4, and (3+sqrt(5))/2 for n=5. At n=4 the four theta values are 4,2,2,1; at n=5 they are 5,sqrt(5),sqrt(5),1. These finite values do not establish the conjectured large-n asymptotic.\"."
++    },
++    {
++      "from_key": "circulant-theta-frequency-lp",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"For a simple undirected circulant graph on Z/nZ, let S contain one representative of each included unordered nonzero generator pair and m=floor(n/2). Its Lovasz theta number is n times the maximum z_0 subject to z_j>=0, sum_{j=0}^m z_j=1, and sum_{j=0}^m z_j*cos(2*pi*j*s/n)=0 for every s in S. Paired Fourier frequencies are aggregated; the zero and even-n self-inverse frequency remain unpaired. This is a rederivation of the LP already described in the cached 2025 source.\" To: \"Randomstrasse101 (2025), Conjecture 18, asks whether fair random circulants have expected theta asymptotic to sqrt(n). Its cached source already knows the Fourier LP and cites Bandeira et al., arXiv:2502.16227, for a partial bound. This packet rederives that reduction, proves small expectations and states a tail criterion; it does not resolve the asymptotic conjecture.\"."
++    },
++    {
++      "from_key": "fair-circulant-theta-exact-small-expectations",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"Include every unordered nonzero generator pair of Z/nZ independently with probability 1/2. Expected Lovasz theta is 3/2 for n=2, 2 for n=3, 9/4 for n=4, and (3+sqrt(5))/2 for n=5. At n=4 the four theta values are 4,2,2,1; at n=5 they are 5,sqrt(5),sqrt(5),1. These finite values do not establish the conjectured large-n asymptotic.\" To: \"Randomstrasse101 (2025), Conjecture 18, asks whether fair random circulants have expected theta asymptotic to sqrt(n). Its cached source already knows the Fourier LP and cites Bandeira et al., arXiv:2502.16227, for a partial bound. This packet rederives that reduction, proves small expectations and states a tail criterion; it does not resolve the asymptotic conjecture.\"."
++    },
++    {
++      "from_key": "log-theta-tail-reduction",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"For fair random circulants on n vertices set Z=log(theta(G)/sqrt(n)). Vertex transitivity and complement symmetry give E theta(G)/sqrt(n)=E cosh(Z)>=1+E[Z^2]/2. Hence asymptotic expectation ratio one requires E[Z^2]->0. If also E exp(Z)<=exp(sigma_n^2/2) with sigma_n->0, that expectation ratio tends to one. The latter MGF bound is a sufficient hypothesis, not a bound proved for the random graph here.\" To: \"Randomstrasse101 (2025), Conjecture 18, asks whether fair random circulants have expected theta asymptotic to sqrt(n). Its cached source already knows the Fourier LP and cites Bandeira et al., arXiv:2502.16227, for a partial bound. This packet rederives that reduction, proves small expectations and states a tail criterion; it does not resolve the asymptotic conjecture.\"."
++    },
++    {
++      "from_key": "small-circulant-numerical-lp-evidence",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"Double-precision Fourier LP enumeration for all 60 fair-generator configurations on n=2,...,9 agrees with the exact n=2,...,5 expectations. Maximum equality residual was 1.1102230246251565e-15 and maximum theta-complement product discrepancy was 8.881784197001252e-15. These are numerical solver checks, not rational feasibility certificates and not proof of a large-n limit.\" To: \"Randomstrasse101 (2025), Conjecture 18, asks whether fair random circulants have expected theta asymptotic to sqrt(n). Its cached source already knows the Fourier LP and cites Bandeira et al., arXiv:2502.16227, for a partial bound. This packet rederives that reduction, proves small expectations and states a tail criterion; it does not resolve the asymptotic conjecture.\"."
++    },
++    {
++      "from_key": "source-limited-status-20261010",
++      "to_existing_logical": "math:probability.core:open-problem-p0014-expected-lovasz-theta-of-a-random-circulant-graph",
++      "kind": "cites",
++      "rationale": "From: \"Randomstrasse101 (2025), Conjecture 18, asks whether fair random circulants have expected theta asymptotic to sqrt(n). Its cached source already knows the Fourier LP and cites Bandeira et al., arXiv:2502.16227, for a partial bound. This packet rederives that reduction, proves small expectations and states a tail criterion; it does not resolve the asymptotic conjecture.\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For the graph on Z/nZ formed by independently including each unordered nonzero generator pair {k,-k} with probability 1/2, is E theta(G)=(1+o(1)) sqrt(n)? Source: Randomstrasse101: Open Problems of 2025, Conjecture 18, Entry 9.\". "
++    }
++  ]
++}
+diff --git a/math-brain-inbox/w341/bundle_010.json b/math-brain-inbox/w341/bundle_010.json
+--- a/math-brain-inbox/w341/bundle_010.json
++++ b/math-brain-inbox/w341/bundle_010.json
+@@ -0,0 +1,97 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w341",
++  "bundle_slug": "w341-p0042-checked-results-20261010",
++  "entries": [
++    {
++      "key": "tree4-two-neighbor-bootstrap-critical-boundary",
++      "namespace": "probability.bootstrap",
++      "logical_name": "p0042-tree4-two-neighbor-bootstrap-critical-boundary",
++      "kind": "lemma",
++      "title": "Two-neighbor bootstrap on the four-regular tree: infimum and boundary [audit pending w347]",
++      "statement": "For Bernoulli initial infection probability p on the four-regular tree, two-neighbor bootstrap has complete occupation almost surely for p>1/9 and fails almost surely for p<=1/9. Thus the complete-occupation critical infimum is 1/9. At p=1/9 the probability a specified root remains vacant is 21/32. Directed vacancy messages converge to the largest solution x=q(3x^2-2x^3), q=1-p; the critical largest solution is x=3/4 at q=8/9. This is a tree special case, not the general group characterization.",
++      "proof_text": "# P0042: four-regular tree and its critical boundary\n\nStatus: proof of a standard tree special case and explicit boundary probabilities, pending w347. The target is Lyons and Peres, *Probability on Trees and Networks*, cached electronic version 19 August 2026, Question 7.42: characterize amenable groups by endpoint-only bootstrap thresholds on every Cayley graph. The earlier campaign checked the line and the three-regular tree. We continue with the four-regular tree, a Cayley graph of the nonamenable free group F_2. No group characterization is proved, and no novelty is claimed.\n\nStart with independent infected density p and vacant density q=1-p. Under k-neighbor bootstrap on a d-regular tree, the final vacant set is the maximal (d-k+1)-core of the initial vacant graph: repeatedly remove vacant vertices with fewer than d-k+1 vacant neighbors. A directed branch survives, with its parent held vacant, precisely when its initial vertex is vacant and at least d-k of its d-1 child branches survive. Independence of branches gives the monotone message iteration\n\nx_0=q; x_{t+1}=q*P(Binomial(d-1,x_t)>=d-k).\n\nIt decreases to the largest fixed point x_* in [0,1]. This follows by monotonicity and by bounding any fixed point by every iterate. Gluing surviving branches at the root gives final vacant probability q*P(Binomial(d,x_*)>=d-k+1). These messages can be obtained from finite-depth trees with vacant outer boundary and then decreasing the boundary influence; their limiting stable core is the maximal one. The invariant complete-occupation event has probability zero or one under the ergodic Bernoulli group action.\n\nFor d=4,k=2 the equation is x=q(3x^2-2x^3). A positive fixed point requires 1=q(3x-2x^2). The quadratic satisfies 3x-2x^2=9/8-2(x-3/4)^2. Thus there is no positive fixed point for q<8/9, while q=8/9 has largest fixed point x_*=3/4 and larger q has a positive largest root. Complete occupation is almost sure when p>1/9 and fails almost surely when p<=1/9. Consequently its critical probability, defined as an infimum, is 1/9; the event need not hold at that infimum.\n\nAt p=1/9 the final vacant probability at a fixed root is\n\n(8/9)[4*(3/4)^3*(1/4)+(3/4)^4]=21/32.\n\nAt q=9/10 the largest branch fixed point is 5/6 and the vacant root probability is 25/32. By contrast, for d=3,k=2, x=q(2x-x^2) has a positive fixed point only for q>1/2, so complete occupation holds at p=1/2. At q=3/4 its branch value is 2/3 and root vacancy is 5/9. This illustrates why a threshold's endpoint must be checked, rather than inferred from its numerical value.\n\nAll displayed fixed points, tangency derivative, and root probabilities were checked in exact fractions. Iterating the recursion 2,000 times was only numerical calibration: at critical q=8/9 it approaches 3/4 slowly and remains about 0.75037. Audit the directed message convention, maximal-core limit, largest-versus-smallest fixed point, Bernoulli ergodicity, and the critical endpoint. This is a tractable special case of a still-unresolved general question in the cached source.\n",
++      "assumptions": [
++        "four-regular infinite tree",
++        "two-neighbor bootstrap",
++        "independent Bernoulli initial infections",
++        "complete occupation on the infinite graph"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:p0042-tree4-two-neighbor-bootstrap-critical-boundary",
++        "url": "file:///~/brain_workers/w341/proofs/P0042_tree4.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "bootstrap-critical-endpoint-comparison",
++      "namespace": "probability.bootstrap",
++      "logical_name": "p0042-bootstrap-critical-endpoint-comparison",
++      "kind": "concept",
++      "title": "Tree bootstrap infima need their own endpoint check [audit pending w347]",
++      "statement": "Two-neighbor bootstrap on the three-regular tree completes almost surely at its critical infimum p=1/2, whereas on the four-regular tree it fails at its critical infimum p=1/9. The latter has positive critical residual vacancy 21/32 at the root. A critical threshold specified as an infimum therefore does not automatically assert occupation at the threshold itself.",
++      "proof_text": null,
++      "assumptions": [
++        "the three- and four-regular tree Bernoulli models"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:p0042-bootstrap-critical-endpoint-comparison",
++        "url": "file:///~/brain_workers/w341/proofs/P0042_tree4.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "source-limited-status-20261010",
++      "namespace": "probability.bootstrap",
++      "logical_name": "p0042-source-limited-status-20261010",
++      "kind": "concept",
++      "title": "Source-limited status and scope for P0042 [audit pending w347]",
++      "statement": "Lyons-Peres (19 August 2026 cached version), Question 7.42, asks whether endpoint-only bootstrap thresholds for every finite generating set characterize amenable groups. Four-regular-tree calculations here are standard special cases with explicit critical vacancy. They do not settle all generating sets or the group characterization.",
++      "proof_text": null,
++      "assumptions": [
++        "only the supplied local caches and prior records were consulted",
++        "independent review pending"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w341:p0042-source-limited-status-20261010",
++        "url": "file:///~/brain_workers/w341/proofs/P0042_tree4.md",
++        "revision": "author-checked-2026-10-10; independent audit pending w347",
++        "license": "owner-own-work (campaign mathematics; literature attributed)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "bootstrap-critical-endpoint-comparison",
++      "to_key": "tree4-two-neighbor-bootstrap-critical-boundary",
++      "kind": "cites",
++      "rationale": "From: \"Two-neighbor bootstrap on the three-regular tree completes almost surely at its critical infimum p=1/2, whereas on the four-regular tree it fails at its critical infimum p=1/9. The latter has positive critical residual vacancy 21/32 at the root. A critical threshold specified as an infimum therefore does not automatically assert occupation at the threshold itself.\" To: \"For Bernoulli initial infection probability p on the four-regular tree, two-neighbor bootstrap has complete occupation almost surely for p>1/9 and fails almost surely for p<=1/9. Thus the complete-occupation critical infimum is 1/9. At p=1/9 the probability a specified root remains vacant is 21/32. Directed vacancy messages converge to the largest solution x=q(3x^2-2x^3), q=1-p; the critical largest solution is x=3/4 at q=8/9. This is a tree special case, not the general group characterization.\"."
++    },
++    {
++      "from_key": "tree4-two-neighbor-bootstrap-critical-boundary",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"For Bernoulli initial infection probability p on the four-regular tree, two-neighbor bootstrap has complete occupation almost surely for p>1/9 and fails almost surely for p<=1/9. Thus the complete-occupation critical infimum is 1/9. At p=1/9 the probability a specified root remains vacant is 21/32. Directed vacancy messages converge to the largest solution x=q(3x^2-2x^3), q=1-p; the critical largest solution is x=3/4 at q=8/9. This is a tree special case, not the general group characterization.\" To: \"Lyons-Peres (19 August 2026 cached version), Question 7.42, asks whether endpoint-only bootstrap thresholds for every finite generating set characterize amenable groups. Four-regular-tree calculations here are standard special cases with explicit critical vacancy. They do not settle all generating sets or the group characterization.\"."
++    },
++    {
++      "from_key": "bootstrap-critical-endpoint-comparison",
++      "to_key": "source-limited-status-20261010",
++      "kind": "cites",
++      "rationale": "From: \"Two-neighbor bootstrap on the three-regular tree completes almost surely at its critical infimum p=1/2, whereas on the four-regular tree it fails at its critical infimum p=1/9. The latter has positive critical residual vacancy 21/32 at the root. A critical threshold specified as an infimum therefore does not automatically assert occupation at the threshold itself.\" To: \"Lyons-Peres (19 August 2026 cached version), Question 7.42, asks whether endpoint-only bootstrap thresholds for every finite generating set characterize amenable groups. Four-regular-tree calculations here are standard special cases with explicit critical vacancy. They do not settle all generating sets or the group characterization.\"."
++    },
++    {
++      "from_key": "source-limited-status-20261010",
++      "to_existing_logical": "math:probability.core:open-problem-p0042-bootstrap-thresholds-as-a-characterization-of-amenable-groups",
++      "kind": "cites",
++      "rationale": "From: \"Lyons-Peres (19 August 2026 cached version), Question 7.42, asks whether endpoint-only bootstrap thresholds for every finite generating set characterize amenable groups. Four-regular-tree calculations here are standard special cases with explicit critical vacancy. They do not settle all generating sets or the group characterization.\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Is a finitely generated group amenable exactly when every Cayley graph from every finite generating set has bootstrap complete-occupation critical probability p(G,k) in {0,1} for every threshold k? Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 7.42, printed p.266.\". "
++    }
++  ]
++}

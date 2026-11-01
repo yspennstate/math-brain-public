@@ -1,0 +1,44 @@
+[
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 489,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "arw_390",
+      "historical_status": "source_says_open",
+      "locator": "Question28; PDF15-16",
+      "problem_id": "P0390",
+      "recorded_at": "2026-09-07T05:22:23Z",
+      "result_status": "candidate_partial_counterexample",
+      "schema": "probability-problem.v1",
+      "source_id": "arw_universality_2024",
+      "source_statement_date": "2023-06-14",
+      "statement": "Determine whether stationary wake-chain configurations have linear window variance below criticality and a power saving at and above criticality.",
+      "statement_caveat": "As with the free chain, a fixed global particle count requires a restriction on observation windows for a positive uniform lower bound. The stationary and transient free ensembles are distinct source questions.",
+      "status_search": "Focused searches on 2026-09-07 for ARW density, cutoff, local limits, hyperuniformity and incompressibility; four later primary papers read at stated theorem scope. No certificate of present openness.",
+      "title": "Hyperuniformity transition in stationary ARW wake states"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 381,
+    "record": {
+      "attempt_id": "P0390-A001",
+      "depth": "individual_analytic_attempt",
+      "full_problem_solved": false,
+      "independent_check": "Under the uniform k-subset comparison law, E I_x=k/N and E I_x I_y=k*(k-1)/(N*(N-1)); substitution yields the displayed variance. This comparison law is not asserted to be the ARW stationary distribution.",
+      "independent_review": "none",
+      "method": "Conservation, explicit coupling reduction, exact law comparison or spectral calculation",
+      "novelty": "not_claimed",
+      "obstruction": "The literal all-window lower bound is false; the meaningful small-window transition is unresolved. Exact global covariance cancellation alone cannot prove a subvolume variance bound.",
+      "problem_id": "P0390",
+      "proof_path": "proofs/ARW_fixed_mass_window_obstructions.md",
+      "recorded_at": "2026-09-07T05:22:23Z",
+      "result": "Every wake-chain state has the same total k. On a cycle, the complement-of-one-site window therefore has variance rho_N*(1-rho_N)<=1/4 under the unique stationary law, where rho_N=k/N; the whole torus has variance zero. More generally, translation invariance forces sum_y Cov(I_x,I_y)=Cov(I_x,k)=0, but this finite-volume cancellation does not imply mesoscopic hyperuniformity. For comparison, uniform k-subsets have Var(S_B)=|B|*rho_N*(1-rho_N)*(N-|B|)/(N-1), which is volume order for |B|=o(N).",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_partial"
+    }
+  }
+]

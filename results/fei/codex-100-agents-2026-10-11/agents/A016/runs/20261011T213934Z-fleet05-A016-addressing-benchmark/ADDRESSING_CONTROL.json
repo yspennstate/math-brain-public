@@ -1,0 +1,80 @@
+{
+  "packet_id": "A016",
+  "family": "Addr_a",
+  "units": "bits",
+  "a_domain": "all nonnegative integers",
+  "H": "2a",
+  "I": "1+a/2",
+  "H_over_I": "4a/(a+2)",
+  "a_zero": {
+    "H": 0,
+    "I": 1,
+    "optimal_code": 0,
+    "repeated_complete_code": 0,
+    "literal_original_queue": "log2(12)",
+    "literal_conditioned_queue": 2,
+    "coarse_forest_residual": 0
+  },
+  "costs": [
+    {
+      "definition": "mask then address repeated s times",
+      "expected": "a(2+a/2)",
+      "ratio": "a+2a/(a+2)",
+      "asymptotic": "a+2+o(1)"
+    },
+    {
+      "definition": "whole-set address and mask",
+      "expected": "2a",
+      "ratio": "4a/(a+2)",
+      "limit": 4
+    },
+    {
+      "definition": "singleton posterior of whole-set code",
+      "expected": "2a",
+      "posterior_entropy": 0,
+      "limit": 4
+    },
+    {
+      "definition": "source optimized coordinatewise pressure component",
+      "expected": "(7/2)a^2+(11/5)a",
+      "ratio": "7a-48/5+96/(5(a+2))",
+      "asymptotic": "7a+O(1)"
+    },
+    {
+      "definition": "literal unconditioned scalar queue, one root",
+      "expected": "Lambda_0+a+2+L_a",
+      "limit": "2+2G"
+    },
+    {
+      "definition": "literal conditioned incidence queue, singleton one-root posterior",
+      "expected": "Lambda_f+log2 Z_f+2a+2+L_a",
+      "limit": "2+2G",
+      "posterior_entropy": 0
+    },
+    {
+      "definition": "coarse conditioned forest residual",
+      "expected": "Lambda_f+log2 Z_f+2a+1+(6/5)R_a",
+      "limit": "16/5"
+    },
+    {
+      "definition": "complete coarse conditioned forest RHS",
+      "expected": "K_ref I + residual",
+      "limit": "K_ref+16/5"
+    },
+    {
+      "definition": "threshold-paper complete one-root envelope",
+      "limit": "log2(6e)+16/5"
+    }
+  ],
+  "literal_queue_limit_interval": [
+    "4",
+    "4+(6/5)(1-1/(2 ln 2))"
+  ],
+  "validation": {
+    "assertions": 18734,
+    "failures": 0,
+    "elapsed_seconds": 1.0430492999730632,
+    "output": "out/CHECK.json"
+  },
+  "scope": "All-partition optimization not claimed. Full FEI open. Baseline reproduction only."
+}

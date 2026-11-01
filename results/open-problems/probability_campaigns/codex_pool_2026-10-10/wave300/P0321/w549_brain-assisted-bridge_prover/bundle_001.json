@@ -1,0 +1,231 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w549",
+  "bundle_slug": "p0321-delaunay-covariance-bridge-001",
+  "entries": [
+    {
+      "key": "def-spatial-sixfold",
+      "namespace": "probability.pointprocesses",
+      "logical_name": "spatial-nearest-cell-delaunay-sixfold-bond-mark",
+      "kind": "definition",
+      "title": "Spatial nearest-cell Delaunay six-fold bond mark",
+      "statement": "DRAFT; independent review pending. For a simple locally finite planar point configuration with unique nearest nucleus p_x to a deterministic observation point x and finite nonempty Delaunay edge-neighbor set N(p_x), identify R^2 with C and set F6(x)=|N(p_x)|^(-1) sum_{q in N(p_x)} ((q-p_x)/|q-p_x|)^6. Here two nuclei are neighbors when their Voronoi cells share an edge. This bounded complex spatial mark satisfies |F6|<=1 and differs from a mark evaluated at Palm-conditioned particles.",
+      "proof_text": null,
+      "assumptions": [
+        "bounded Voronoi cells and finite nonempty edge-neighbor sets",
+        "no four points cocircular, no three collinear, unique nearest nuclei at deterministic observation points",
+        "spatial nearest-cell field, without Palm conditioning"
+      ],
+      "domain": "probability theory; planar point processes",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w549:def-spatial-sixfold",
+        "url": "urn:owner:probability-campaign:20261010:w549:def-spatial-sixfold",
+        "revision": "worker-draft-2026-10-10-partial-independent-audit",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; DRAFT)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "def-local-alpha",
+      "namespace": "probability.pointprocesses",
+      "logical_name": "local-event-alpha-dependence-for-point-process-windows",
+      "kind": "definition",
+      "title": "Local event alpha dependence for point-process windows",
+      "statement": "DRAFT; independent review pending. For a point process Phi and Borel regions A,B, define alpha_Phi(A,B)=sup |P(E intersect H)-P(E)P(H)| over all events E measurable from Phi restricted to A and H from Phi restricted to B. This is a dependence coefficient of entire local event sigma fields, not a particle-density pair covariance. A bound for growing regions must state uniform dependence on their sizes; a fixed-pair qualitative dynamical mixing limit is a different condition.",
+      "proof_text": null,
+      "assumptions": [
+        "a point process and two Borel regions"
+      ],
+      "domain": "probability theory; planar point processes",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w549:def-local-alpha",
+        "url": "urn:owner:probability-campaign:20261010:w549:def-local-alpha",
+        "revision": "worker-draft-2026-10-10-partial-independent-audit",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; DRAFT)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "lem-shield",
+      "namespace": "probability.pointprocesses",
+      "logical_name": "seven-disk-shield-for-delaunay-bond-localization",
+      "kind": "lemma",
+      "title": "Seven-disk shield for Delaunay bond localization",
+      "statement": "DRAFT; one independent conditional KEEP from w551, further admission pending. For a simple locally finite planar configuration in general position with a unique nearest nucleus p_x, if B(x,r/8) and the six disks B(x+(r/2)exp(ij*pi/3),r/32), j=0,...,5, are occupied, then p_x's Voronoi cell is contained in B(x,r) and its complete Delaunay-neighbor set is determined by the restriction to B(x,3r).",
+      "proof_text": "For r>0, assume the seven disks B(x,r/8) and B(x+(r/2)u_j,r/32), j=0,...,5, with u_j=exp(ij*pi/3), each contain a point. Then the Voronoi cell of p_x is inside B(x,r), and both that cell and all of its Delaunay neighbors are determined by Phi restricted to B(x,3r).\n\nProof. Translate x to 0. The central disk gives |p_x|<r/8. Given z with |z|=t>=r, choose j with angle(z,u_j)<=pi/6 and a shield point q in its disk. Since cos(pi/6)>=3/4,\n\nz dot (q-p_x) >= t(3r/8-r/32-r/8) = 7tr/32.\n\nAlso |q|<17r/32. Hence\n\n|z-p_x|^2-|z-q|^2 = 2 z dot(q-p_x)+|p_x|^2-|q|^2\n >= (7/16)tr - (289/1024)r^2\n >= (159/1024)r^2 > 0.\n\nThus no such z belongs to the cell, even when the cell is computed using only the seven witness points and p_x. For z inside B(0,r), any point outside B(0,3r) is at distance >=2r from z, whereas |z-p_x|<9r/8. Outside points cannot cut this already shielded cell. Its local and global versions coincide. A neighbor q has a shared-edge point z with |z|<r and |q-z|=|p_x-z|<9r/8, hence |q|<17r/8<3r. General position identifies the same edge-neighbor set in both diagrams. This proves the complete mark, including its random degree, is local on the shield event.",
+      "assumptions": [
+        "r>0",
+        "unique nearest nucleus",
+        "no four cocircular points and no three collinear points",
+        "the seven stated disks are occupied"
+      ],
+      "domain": "probability theory; planar point processes",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w549:lem-shield",
+        "url": "urn:owner:probability-campaign:20261010:w549:lem-shield",
+        "revision": "worker-draft-2026-10-10-partial-independent-audit",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; DRAFT)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "lem-covariance",
+      "namespace": "probability.pointprocesses",
+      "logical_name": "delaunay-sixfold-covariance-localization-with-void-error",
+      "kind": "lemma",
+      "title": "Delaunay six-fold covariance localization with void error",
+      "statement": "DRAFT; one independent conditional KEEP from w551, further admission pending. Let Phi be a stationary simple locally finite planar point process with finite positive intensity, bounded Voronoi cells, finite nonempty edge-neighbor sets, no four cocircular points, no three collinear points, and almost surely unique nearest nuclei p_x at deterministic observation points. Define F6(x) as the mean of ((q-p_x)/|q-p_x|)^6 over its Delaunay edge-neighbors. Put C6(x,y)=E[F6(x)conjugate(F6(y))]-E[F6(x)]E[conjugate(F6(y))], V(t)=P(Phi intersect B(0,t) is empty), and alpha(A,B)=sup |P(E intersect H)-P(E)P(H)| over events of the restrictions to A and B. Then for every r>0 and deterministic x,y, |C6(x,y)| <=16alpha(B(x,3r),B(y,3r))+28V(r/32). No independence of empty-disk events is needed.",
+      "proof_text": "There is an F_6^(r)(x) measurable from Phi restricted to B(x,3r), bounded by one, such that E|F_6(x)-F_6^(r)(x)| <= 7V(r/32).\n\nProof. Use the local-diagram mark on the shield event, and zero otherwise. G1 proves equality on that event. Its complement is a union of seven empty-disk events. Stationarity gives six probabilities V(r/32), and the central probability V(r/8)<=V(r/32). The union bound gives a failure probability <=7V(r/32). Because the approximant is zero off the shield, the pointwise error there is at most one. No independence of disk events is used.\n\nTheorem G3 (quantitative covariance bridge).\n\nFor any deterministic x,y and r>0,\n\n|C_6(x,y)| <= 16 alpha(B(x,3r),B(y,3r)) + 28 V(r/32).\n\nProof. For real random variables f,g with values in [-1,1] measurable in the two regions, the indicator layer-cake formula over [-1,1]^2 gives |Cov(f,g)|<=4alpha. For complex variables of modulus <=1, expand the real and imaginary parts into four such covariances; the triangle inequality gives <=16alpha. Apply this to the two local approximants. Replacing the two factors in their joint expectation costs at most two expected approximation errors. Replacing the two factors in the product of means costs at most two more. G2 therefore bounds the total replacement error by 28V(r/32). All expectations are of bounded variables, so no integrability beyond the stated assumptions is needed.",
+      "assumptions": [
+        "stationary simple locally finite planar point process of finite positive intensity",
+        "bounded Voronoi cells and finite nonempty edge-neighbor sets",
+        "no four points cocircular, no three collinear, unique nearest nuclei at deterministic observation points",
+        "spatial nearest-cell field, without Palm conditioning"
+      ],
+      "domain": "probability theory; planar point processes",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w549:lem-covariance",
+        "url": "urn:owner:probability-campaign:20261010:w549:lem-covariance",
+        "revision": "worker-draft-2026-10-10-partial-independent-audit",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; DRAFT)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "lem-polynomial",
+      "namespace": "probability.pointprocesses",
+      "logical_name": "delaunay-bond-polynomial-mixing-transfer-up-to-logarithms",
+      "kind": "lemma",
+      "title": "Delaunay bond polynomial mixing transfer up to logarithms",
+      "statement": "DRAFT; one independent conditional KEEP from w551, further admission pending. Let Phi be a stationary simple locally finite planar point process with finite positive intensity, bounded Voronoi cells, finite nonempty edge-neighbor sets, no four cocircular points, no three collinear points, and almost surely unique nearest nuclei p_x at deterministic observation points. Define F6(x) as the mean of ((q-p_x)/|q-p_x|)^6 over its Delaunay edge-neighbors. Put C6(x,y)=E[F6(x)conjugate(F6(y))]-E[F6(x)]E[conjugate(F6(y))], V(t)=P(Phi intersect B(0,t) is empty), and alpha(A,B)=sup |P(E intersect H)-P(E)P(H)| over events of the restrictions to A and B. Suppose for D=|x-y|>6r and r>=r0, uniformly in x,y,r, alpha(B(x,3r),B(y,3r))<=Am(1+r)^kappa(1+D-6r)^(-p), and V(t)<=Av exp(-a t^nu) for t>=t0, with p,a,nu>0, kappa>=0, and finite Am,Av. Then |C6(x,y)|=O(D^(-p)(log D)^(kappa/nu)). Thus an eventual lower bound cD^(-eta), c,eta>0, is impossible when p>eta. This is a conditional correlation-transfer result and does not construct a Riesz Gibbs phase.",
+      "proof_text": "Suppose uniformly in x,y and r>=r_0 with D>6r,\n\nalpha(B(x,3r),B(y,3r)) <= A_m(1+r)^kappa (1+D-6r)^(-p),\nV(t) <= A_v exp(-a t^nu) for t>=t_0,\n\nwhere p,nu,a>0 and kappa>=0. Choose r_D=32[((p+1)/a) log(2+D)]^(1/nu); for sufficiently large D this satisfies r_D>=r_0, r_D/32>=t_0, and 6r_D<=D/2. G3 then gives\n\n|C_6(x,y)| <= 16A_m(1+r_D)^kappa (1+D/2)^(-p) + 28A_v(2+D)^(-(p+1))\n = O(D^(-p) (log D)^(kappa/nu)).\n\nConsequently an eventual algebraic lower bound cD^(-eta) requires p<=eta if this uniform mixing hypothesis is to hold. For p>eta the ratio of the upper bound to the lower bound tends to zero. This explicitly identifies the hypothesis that a successful hexatic construction must violate, while allowing summable density pair correlations.",
+      "assumptions": [
+        "stationary simple locally finite planar point process of finite positive intensity",
+        "bounded Voronoi cells and finite nonempty edge-neighbor sets",
+        "no four points cocircular, no three collinear, unique nearest nuclei at deterministic observation points",
+        "spatial nearest-cell field, without Palm conditioning",
+        "uniform window-size dependence Am(1+r)^kappa and spatial rate p",
+        "stretched exponential empty-disk bound with constants a,nu>0"
+      ],
+      "domain": "probability theory; planar point processes",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w549:lem-polynomial",
+        "url": "urn:owner:probability-campaign:20261010:w549:lem-polynomial",
+        "revision": "worker-draft-2026-10-10-partial-independent-audit",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; DRAFT)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "lem-parity",
+      "namespace": "probability.pointprocesses",
+      "logical_name": "shared-parity-blocks-with-pair-independence-and-long-range-event-dependence",
+      "kind": "lemma",
+      "title": "Shared parity blocks: independent pairs and persistent event dependence",
+      "statement": "DRAFT; author-proved special case, independent audit pending. For independent uniform signs H and (A_k,B_k), let the three variables in block k be A_k,B_k,H A_k B_k. Every distinct variable pair is independent, but products of all three variables in distinct blocks have covariance 1 and the strong event-mixing coefficient of the two complete block sigma fields equals 1/4. Thus pair decorrelation alone does not imply full local-event mixing.",
+      "proof_text": "Exact obstruction to inferring full local mixing from pair decorrelation\n\nLet H and (A_k,B_k), k in Z, be mutually independent uniform signs. Put the three variables in block k equal to A_k, B_k, H A_k B_k. Every variable is centered and every two distinct variables are independent, including two in the same block. This follows by summing over the unused independent sign, or directly enumerating their four equally likely outcomes.\n\nBut the product of the three variables in every block is H. Products in different blocks therefore have covariance one at every separation. The event that the block product is positive has probability 1/2 and is the same event in all blocks. Its event covariance is 1/4. The strong mixing coefficient between any two whole blocks equals 1/4, since 1/4 is also the universal upper bound for indicator covariance. Thus zero pair correlations do not bound dependence of arbitrary local observables.\n\nThis is a stationary discrete block process, not a Riesz gas or a claimed point-process realization. It rigorously refutes the general probabilistic step 'pair decorrelation implies strong mixing'. It does not refute any specially proved Riesz implication that uses additional hypotheses.\n\n",
+      "assumptions": [
+        "all seeds are independent uniform signs",
+        "discrete block process; no asserted Riesz or point-process realization"
+      ],
+      "domain": "probability theory; planar point processes",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w549:lem-parity",
+        "url": "urn:owner:probability-campaign:20261010:w549:lem-parity",
+        "revision": "worker-draft-2026-10-10-partial-independent-audit",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; DRAFT)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "route-pair-mixing",
+      "namespace": "probability.pointprocesses",
+      "logical_name": "invalid-pair-decorrelation-to-local-event-mixing-inference",
+      "kind": "concept",
+      "title": "Invalid pair-decorrelation to local-event-mixing inference",
+      "statement": "DRAFT; independent review pending. INVALID GENERAL INFERENCE: decay of centered particle-density or coordinate pair correlations is sufficient by itself to infer decay of dependence between every local event or every nonlinear bond observable. The pair-correlation hypotheses omit higher-order joint information. The shared-parity-block counterexample has all distinct variable pairs independent but whole-block dependence alpha=1/4 at every separation. This diagnostic refutes the general probabilistic inference; it asserts no Riesz point-process realization.",
+      "proof_text": null,
+      "assumptions": [
+        "general probabilistic inference; no Riesz-specific extra theorem supplied"
+      ],
+      "domain": "probability theory; planar point processes",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w549:route-pair-mixing",
+        "url": "urn:owner:probability-campaign:20261010:w549:route-pair-mixing",
+        "revision": "worker-draft-2026-10-10-partial-independent-audit",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; DRAFT)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap-mixing-scope",
+      "namespace": "probability.pointprocesses",
+      "logical_name": "dynamical-mixing-card-missing-quantitative-growing-window-hypotheses",
+      "kind": "concept",
+      "title": "Dynamical mixing misses quantitative growing-window hypotheses",
+      "statement": "DRAFT; independent review pending. A measure-preserving map T is dynamically mixing when mu(T^(-n)A intersect B) tends to mu(A)mu(B) for each fixed event pair. That condition supplies no rate, no growing-window size control, no planar Delaunay stabilization, and no empty-disk estimate. It cannot by itself be used as the quantitative point-process alpha hypothesis of a Delaunay covariance bridge. A Bernoulli shift illustrates the quantifier distinction: for an event B of probability 1/2 and A_n=T^nB, the unrestricted event covariance equals 1/4 for every n despite fixed-event mixing. This does not deny independence of separated finite Bernoulli windows.",
+      "proof_text": null,
+      "assumptions": [
+        "fixed-event qualitative mixing is the only supplied dynamical hypothesis"
+      ],
+      "domain": "probability theory; planar point processes",
+      "source": {
+        "source_id": "owner-probability-campaign-20261010:w549:gap-mixing-scope",
+        "url": "urn:owner:probability-campaign:20261010:w549:gap-mixing-scope",
+        "revision": "worker-draft-2026-10-10-partial-independent-audit",
+        "license": "owner-own-work (campaign auxiliary proof or refuted route; DRAFT)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "lem-covariance",
+      "to_key": "lem-shield",
+      "kind": "depends_on",
+      "rationale": "The shield says 'determined by the restriction to B(x,3r)'; the covariance bridge uses '28V(r/32)' as its localization error."
+    },
+    {
+      "from_key": "lem-covariance",
+      "to_key": "def-spatial-sixfold",
+      "kind": "depends_on",
+      "rationale": "Both ends explicitly define F6 from the Delaunay neighbors of the nearest spatial nucleus, so the theorem matches this observable."
+    },
+    {
+      "from_key": "lem-covariance",
+      "to_key": "def-local-alpha",
+      "kind": "depends_on",
+      "rationale": "The conclusion uses '16alpha(B(x,3r),B(y,3r))'; the definition takes the supremum over 'entire local event sigma fields'."
+    },
+    {
+      "from_key": "lem-polynomial",
+      "to_key": "lem-covariance",
+      "kind": "depends_on",
+      "rationale": "The polynomial transfer substitutes explicit size and void bounds into '|C6(x,y)| <=16alpha+28V'."
+    },
+    {
+      "from_key": "lem-parity",
+      "to_key": "route-pair-mixing",
+      "kind": "refutes",
+      "rationale": "The lemma has 'Every distinct variable pair is independent' but 'strong event-mixing coefficient ... equals 1/4'; this refutes the route that pair decay alone implies full local-event decay."
+    },
+    {
+      "from_key": "lem-polynomial",
+      "to_existing_logical": "math:probability.core:open-problem-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases",
+      "kind": "semantic_association",
+      "rationale": "The target requires orientational order with absent crystalline positional order; the conditional transfer identifies uniform local-event mixing that would exclude a slower algebraic orientational lower bound. It does not prove or refute phase existence."
+    },
+    {
+      "from_key": "lem-covariance",
+      "to_existing_logical": "math:probability.core:attempt-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases",
+      "kind": "semantic_association",
+      "rationale": "The prior warns that zero one-point orientation does not eliminate two-point order; this bridge controls the centered two-point mark covariance rather than inferring it from the mean. The prior is author-only unreviewed."
+    },
+    {
+      "from_key": "gap-mixing-scope",
+      "to_existing_logical": "math:dynamics.ergodic:mixing-definition",
+      "kind": "semantic_association",
+      "rationale": "The retrieved definition uses a limit for each fixed measurable A,B and gives no rate. The draft scope gap distinguishes this from a supremum over spatial restriction events with growing-window control; it does not refute the definition."
+    }
+  ]
+}

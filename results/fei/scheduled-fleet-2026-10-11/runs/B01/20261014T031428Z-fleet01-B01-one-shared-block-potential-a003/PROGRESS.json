@@ -1,0 +1,35 @@
+{
+  "schema": "fei-run-progress/2",
+  "stream": "B01",
+  "run_id": "20261014T031428Z-fleet01-B01-one-shared-block-potential-a003",
+  "primary_packet_id": "A003",
+  "packet_ids": ["A003"],
+  "attempt_id": "B01-A003-ONE-SHARED-BLOCK-01",
+  "claim_version": "B01-ONE-SHARED-BLOCK-POTENTIAL-v1",
+  "gap_ids": ["OVERLAP_PRODUCT", "B05_RARE_REFUNDS"],
+  "source_control_revision": "FULL-FEI-ONLY-20261012 / 2026-10-12.1",
+  "source_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+  "assignment_blob": "ac038a028831d59ad053dd56b2b527e2a71ffdee",
+  "relied_on_sources": [
+    "B01 disjoint closure 35fc5702937287ff0c792bb4bca4eb4861452e2e",
+    "B05 overlap counterfamily 71c9d6a3127c9d893aa5b6b89ca615e26bcf1be2",
+    "B19 counterfamily review 3436a2bd588b39166a9eb1a4a30446304099d81b"
+  ],
+  "prior_status": "Disjoint branched closure proved; every fixed scalar shared-pivotal extension refuted",
+  "new_status": "AUTHOR_PROVED_ONE_SHARED_COORDINATE_BLOCK_POTENTIAL_PENDING_REVIEW",
+  "mathematical_delta": "Introduced an x-orbit block potential retaining singleton and degree-shift coefficients. Proved coefficient-one product and physical-revelation inequalities for arbitrary Boolean cores sharing exactly x.",
+  "acceptance_evidence": ["REPORT.md", "PROOF.md", "ENDPOINT_INTERFACES.tex", "OPEN_LEMMAS.json", "CHECK.py", "CHECK.out"],
+  "remaining_obstacle": "No single-use signed ownership theorem prevents repeated charging of the same block across two or more reused coordinates.",
+  "next_action": "Derive the exact two-reused-coordinate block evolution and test first-revelation telescoping against the B05 rare majority gate nested twice.",
+  "consumers": ["A005", "A023", "A064", "A086", "A094", "A096", "B20"],
+  "independent_reviewers": ["A086", "A094"],
+  "delivery_status": {
+    "state": "DELIVERED_AND_EXACT_READBACK_VERIFIED",
+    "canonical_full_bundle_commit": "caedfbe205c111e1f8f64f88f8cf2114c4dea069",
+    "brain_full_bundle_commit": "9b4db935ae168b2f7f60200ec02b4ab09dbcd550",
+    "verified_files": 11,
+    "canonical_native_ingestion": "NOT_CLAIMED",
+    "brain_native_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN"
+}

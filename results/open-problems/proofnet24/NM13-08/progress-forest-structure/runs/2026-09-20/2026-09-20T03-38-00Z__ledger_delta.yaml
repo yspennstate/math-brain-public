@@ -1,0 +1,52 @@
+task: NM13-08
+parent: T07
+status: PARTIAL_PARENT__CANDIDATE_FULL_RESTRICTED
+runtime:
+  model: GPT-5.6 Sol
+  reasoning: UNVERIFIED
+parent_theorem:
+  statement: pairwise negative edge correlation for the uniform measure on all forests of every finite graph
+  before: OPEN; complete all-simple-graph vertex order 9
+  after: OPEN; complete all-simple-graph vertex order 9
+  source_metric_moved: false
+mechanism:
+  before:
+    - two-terminal PF-Rayleigh series/parallel calculus
+    - transparent edge substitution and internal transparent insertion
+    - PF split-4/split-5 atoms and transparent neutralizers
+  after:
+    - exact three-terminal layer algebra S=4I+N, P=23I+12N+(5/3)N^2 with N^3=0
+    - exact marked-layer commutation and 14 orbit sign certificates
+    - strict unit p-NC for G_{k,r}=K_{3,2k+r} plus a size-k matching inside the large side, for every k>=1,r>=0
+new_theorems:
+  - id: T07-THREE-TERMINAL-MATCHING-ALGEBRA-09
+    verdict: CANDIDATE_FULL
+    statement: the ordinary 3-star layer and the matched-pair layer lie in the same nilpotent 3-terminal partition algebra; all required marked operators commute, giving finite quadratic layer powers
+  - id: T07-K3N-RIGHT-MATCHING-PNC-09
+    verdict: CANDIDATE_FULL
+    statement: for every k>=1 and r>=0, every two distinct edges of K_{3,2k+r} with k disjoint added edges on the large side are strictly negatively correlated under the uniform measure on all forests
+application_novelty:
+  genuinely_uncovered_tail: k>=28
+  reason:
+    - tau(G_{k,r})=min(2k+r,k+3), hence tau>=31 for k>=28
+    - every minor of a currently certified biclique K_{a,b} with min(a,b)<=30 has vertex-cover number <=30
+    - every minor of the NM13-04 split-5 core family has vertex-cover number <=5
+    - for 2k+r>=3 the graph contains K_{3,3}, hence is nonplanar and not series-parallel or a wheel
+  priority: UNVERIFIED; bounded public search found no exact right-matching theorem
+p14_scope_recovered:
+  - Grimmett-Winkler public scope: all graphs <=8 vertices and 9 vertices with <=18 edges
+  - repository dense-nine continuation: all simple graphs through 9 vertices
+  - Cocks fixed-graph result upgrades a source-valid unit-pNC graph to independence correlation at all positive weights; correlated matroids are closed under 2-sum
+  - minimal source counterexample may be taken 3-connected using preserved block/two-separator transfer
+  - degree-3 star-mesh mixed-polarization route remains unresolved in general
+literature_scope:
+  - Erickson 1008.3660: all-positive-weight SOS/Rayleigh theorem for series-parallel graphs
+  - Huang 2311.00965: restricted arboreal-gas negative-correlation results; general problem remains open
+  - Bado DOI 10.1016/j.spl.2026.110960: wheel graphs
+  - Tang-Zhang 2603.10738: specified complete-graph ensembles including fixed-component forests; not arbitrary-graph all-forest law
+exact_artifacts:
+  checker: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T03-38-00Z__right-matching-transfer-checker.py
+  output: proofnet24/NM13-08/progress-forest-structure/runs/2026-09-20/2026-09-20T03-38-00Z__right-matching-transfer-checker.out
+  terminal_line: ALL_EXACT_CHECKS_PASS
+residual_obstruction: the nilpotent 3-terminal algebra uses a very special right-side matching decomposition and does not yet control arbitrary 3-connected graphs or a general 3-sum
+next_attack: replace matched-pair layers by a 3-terminal right-side path layer and test whether the common nilpotent algebra/sign cone survives, aiming toward arbitrary linear forests on the large side

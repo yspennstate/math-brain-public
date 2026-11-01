@@ -1,0 +1,75 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w411",
+  "bundle_slug": "c0017-finite-boundary-replacement-obstructions-20261010",
+  "review_status": "DRAFT_UNREVIEWED",
+  "entries": [
+    {
+      "key": "boundary-partition",
+      "namespace": "probability.percolation",
+      "logical_name": "finite-percolation-gadget-boundary-partition-law",
+      "kind": "definition",
+      "title": "Boundary partition law of a finite percolation gadget",
+      "statement": "For a finite undirected graph with labeled terminal vertices and a random open-edge configuration, its terminal partition puts two terminals in the same block exactly when an open path joins them inside the graph. The boundary-partition law is the probability distribution on these terminal partitions. When the graph attaches to an exterior only through those terminals, ordinary open-path connectivity in the union is determined by this partition and the exterior connectivity.",
+      "proof_text": null,
+      "assumptions": ["The gadget meets the exterior only at the named terminal vertices.", "Connectivity uses open paths."],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w411:C0017:boundary-partition", "url": "~/brain_workers/w411/ATTEMPT.md", "revision": "self-authored-2026-10-10-v1-unreviewed", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "finite-gadget-obstruction",
+      "namespace": "probability.percolation",
+      "logical_name": "independent-bond-gadgets-cannot-realize-nondegenerate-all-or-none-terminal-selector",
+      "kind": "lemma",
+      "title": "Finite independent-bond obstruction to an all-or-none selector",
+      "statement": "Let G be a finite undirected graph with k>=3 distinct terminals and mutually independent Bernoulli edges with probabilities in [0,1]. If the all-separated and all-connected terminal partitions both have positive probability, some strictly intermediate terminal partition has positive probability. Thus no such graph realizes a terminal law supported only on the two extreme partitions with both masses positive. If G has m optional edges whose probabilities lie in [epsilon,1-epsilon], 0<epsilon<=1/2, its partition law has total variation distance at least min(q,1-q,epsilon^m) from the selector assigning probability q to all-connected and 1-q to all-separated, for 0<q<1.",
+      "proof_text": "Delete forced-closed edges and contract forced-open connected components. Positive all-separated probability keeps the terminals distinct after contraction. Positive all-connected probability gives a possible-edge component containing every terminal. Choose a tree connecting them and prune nonterminal leaves. Deleting a tree edge splits its terminals into two nonempty blocks. Open the remaining tree edges and close all other optional edges. Every optional-edge assignment has positive probability, and this one has at least epsilon^m under the quantitative hypothesis. Its two terminal blocks form an intermediate partition because k>=3. Test the set of intermediate partitions to obtain the TV bound. If an extreme partition has zero probability instead, test that extreme event to get q or 1-q. The bound has no claimed uniformity as m grows.",
+      "assumptions": ["Finite undirected graph; k>=3 distinct labeled terminal vertices.", "All Bernoulli edges are mutually independent.", "The quantitative conclusion requires m optional edges and 0<epsilon<=1/2 bounding their probabilities away from zero and one."],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w411:C0017:L2", "url": "~/brain_workers/w411/ATTEMPT.md", "revision": "self-authored-2026-10-10-v1-unreviewed", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "replacement-identity",
+      "namespace": "probability.percolation",
+      "logical_name": "finite-product-local-replacement-identity-with-exterior-sensitivity",
+      "kind": "lemma",
+      "title": "Exact finite replacement identity and exterior sensitivity bound",
+      "statement": "For finite coordinate state spaces S_i, product probability laws mu=product_i mu_i and nu=product_i nu_i, and F:product_i S_i->[0,1], define H_i as the independent exterior law using nu_j for j<i and mu_j for j>i. Then E_nu F-E_mu F equals sum_i E_H_i[sum_s (nu_i(s)-mu_i(s)) F(s,X_-i)]. If osc_i is the range of the local values of F over supp(mu_i) union supp(nu_i), the absolute expectation difference is at most sum_i TV(mu_i,nu_i) E_H_i osc_i. For an indicator F, osc_i is the indicator of exterior sensitivity to an admissible local state change. Sensitivity events for different i need not be independent.",
+      "proof_text": "Telescope the N+1 product laws whose first j coordinates use nu and whose remaining coordinates use mu. Adjacent laws have the same exterior H_i. Independence of the coordinate being replaced gives the conditional signed sum. The local signed measure nu_i-mu_i has total mass zero and positive mass TV(mu_i,nu_i). Subtract the minimum local value of F and bound the signed sum in absolute value by TV times the local oscillation. Average over H_i and use the triangle inequality. No multiplication of sensitivity probabilities is used.",
+      "assumptions": ["Finitely many finite coordinate state spaces.", "Endpoint and hybrid laws are products on the same state spaces.", "F takes values in [0,1]."],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w411:C0017:L3", "url": "~/brain_workers/w411/ATTEMPT.md", "revision": "self-authored-2026-10-10-v1-unreviewed", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "pair-marginal-counterexample",
+      "namespace": "probability.percolation",
+      "logical_name": "matched-terminal-pair-probabilities-can-change-a-wired-crossing",
+      "kind": "lemma",
+      "title": "Matched pair probabilities can change an exterior crossing",
+      "statement": "Let S be a fair all-or-none selector on three terminals a,b,c, and let T be a three-arm star whose arms are mutually independent Bernoulli(1/sqrt(2)). Every pair connection probability is 1/2 in both S and T. Add identical deterministic exterior wiring joining a to c, and ask whether b is connected to that wired pair. The crossing probability is 1/2 for S and 1-1/(2sqrt(2)) for T, differing by (2-sqrt(2))/4>0. Equal terminal-pair marginals therefore do not suffice for an exact gadget transfer in arbitrary exterior connectivity events.",
+      "proof_text": "With s=1/sqrt(2), a star pair is connected with probability s^2=1/2 and all three terminals are connected with probability s^3=1/(2sqrt(2)). The two events a~b and c~b have triple connection as their intersection. Inclusion-exclusion gives the wired crossing probability 2s^2-s^3. For the selector, both pair events occur exactly when its one fair hyperedge is open. The same deterministic exterior has been used in both cases. This is a finite replacement counterexample, not a refutation of asymptotic conformal invariance.",
+      "assumptions": ["Three distinct labeled terminals.", "The star arms are mutually independent with probability 1/sqrt(2).", "The selector is one Bernoulli(1/2) hyperedge.", "Exterior wiring a~c is deterministic and crossing means b connected to a or c."],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w411:C0017:L4", "url": "~/brain_workers/w411/ATTEMPT.md", "revision": "self-authored-2026-10-10-v1-unreviewed", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "comparison-gap",
+      "namespace": "probability.percolation",
+      "logical_name": "c0017-square-bond-to-triangular-site-signed-replacement-gap",
+      "kind": "concept",
+      "title": "Unproved signed replacement gap for C0017",
+      "statement": "DRAFT OPEN PROOF OBLIGATION, not a theorem: for critical square-lattice bond percolation at p=1/2, this route has not constructed and controlled a comparison with critical triangular-lattice site percolation. It needs the actual endpoint laws and a proof that the total signed macroscopic crossing defect tends to zero, including boundary and exploration-conditioning controls. Exact finite independent-bond selectors with at least three terminals are obstructed, and equality of terminal-pair marginals cannot replace equality of boundary-partition laws. Even a crossing comparison would require further justification for interface tightness and SLE(6) identification. Current openness of C0017 is UNKNOWN in the bounded 2026-10-10 check because target-proof preprints exist but have not been audited here.",
+      "proof_text": null,
+      "assumptions": ["Target concerns actual square-bond p=1/2 laws, not transformed or conditioned substitutes.", "A mesh-dependent comparison and its limiting estimate remain unproved."],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w411:C0017:gap", "url": "~/brain_workers/w411/ATTEMPT.md", "revision": "self-authored-2026-10-10-v1-unreviewed", "license": "owner-own-work", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "finite-gadget-obstruction", "to_key": "boundary-partition", "kind": "depends_on", "rationale": "The lemma's 'all-separated and all-connected terminal partitions' use the definition 'two terminals in the same block exactly when an open path joins them'."},
+    {"from_key": "pair-marginal-counterexample", "to_key": "boundary-partition", "kind": "depends_on", "rationale": "The counterexample's 'Equal terminal-pair marginals' concerns the definition's full 'probability distribution on these terminal partitions'; these are different data."},
+    {"from_key": "comparison-gap", "to_key": "finite-gadget-obstruction", "kind": "cites", "rationale": "The gap's 'Exact finite independent-bond selectors with at least three terminals are obstructed' is supported by the lemma's 'no such graph realizes a terminal law supported only on the two extreme partitions'."},
+    {"from_key": "comparison-gap", "to_key": "replacement-identity", "kind": "cites", "rationale": "The gap requires 'total signed macroscopic crossing defect tends to zero'; the identity gives the exact finite 'sum_i E_H_i[sum_s (nu_i(s)-mu_i(s)) F(s,X_-i)]' to control when a product comparison exists."},
+    {"from_key": "comparison-gap", "to_key": "pair-marginal-counterexample", "kind": "cites", "rationale": "The gap's 'equality of terminal-pair marginals cannot replace equality of boundary-partition laws' is witnessed by the lemma's positive wired-crossing difference '(2-sqrt(2))/4'."}
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "NOT_REPRODUCED",
+  "target": "P0043",
+  "checked_date": "2026-10-10",
+  "actual_theorem": "OAI.CriticalPercolation.BondGraph.no_percolation_at_criticality",
+  "solution_module": "OAI.Probability.CriticalPercolation.Main",
+  "solution_url": "https://raw.githubusercontent.com/openai/math/main/lean/OAI/Probability/CriticalPercolation/Main.lean",
+  "comparator_url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/CriticalPercolation.json",
+  "assumptions": [
+    "BondGraph V E with labelled bonds, allowing loops and multiplicities",
+    "Infinite V",
+    "G.fullGraph.Connected",
+    "G.LocallyFinite (incident bonds finite)",
+    "G.QuasiTransitive (finite vertex orbits under bond-preserving automorphisms)",
+    "G.criticalProbability<1"
+  ],
+  "conclusion": "G.law G.criticalProbability G.percolates = 0",
+  "permitted_axioms_in_configuration": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "actual_trusted_axioms": "UNKNOWN; no dependency-closure or kernel/comparator run performed",
+  "visible_solution_body": "Located: proof uses main_failure_topological_classification_counterexample and compact_open_virtually_nilpotent_quotient_of_sparse_polynomial. The imported dependency chain was not exhaustively read or verified.",
+  "challenge_placeholder": "The comparator challenge has an intentional sorry. It is not the separately supplied solution and does not count as proof.",
+  "kernel_verification": "NOT_RUN",
+  "statement_fidelity": "Top-level assumptions inspected; full measure and imported-definition semantics not independently verified",
+  "mathematical_proof_certified": false,
+  "primary_manuscript_access": "Public PDF linked by scope note; web raw access returned unsupported octet-stream, and shell public download failed DNS. No mathematical verdict on that PDF is claimed."
+}

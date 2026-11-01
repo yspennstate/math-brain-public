@@ -1,0 +1,39 @@
+{
+  "as_of_source_commit": "034ae6a0fe7388b61bcb5530513fbff1b02ef153",
+  "full_FEI": "OPEN",
+  "accepted": [
+    {
+      "claim": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO-v1",
+      "scope": "No universal fixed-price local L<=Kd+AV+BM",
+      "source_blob": "1b7e3cb572354cac4e506d7de0a3ed8af720472b",
+      "review_blob": "dcec4cb77233a7b233b4798b25aab5f2dd5c82b6"
+    }
+  ],
+  "proved_review_pending": [
+    {
+      "claim": "B09-BIASED-BLOCK-UNCERTAINTY-01",
+      "scope": "Product-biased physical blocks",
+      "source_blob": "71b68e4decf9658a42fef6bb2668e19f25bd214a"
+    },
+    {
+      "claim": "B20-A097-ACTIVATION-WEIGHTED-ENDPOINT-TAX-v1",
+      "scope": "Exact B05 family",
+      "local_source": "REPORT.md"
+    }
+  ],
+  "refuted": [
+    {
+      "claim": "Universal fixed-price local L<=Kd+AV+BM",
+      "source": "B05/B19"
+    },
+    {
+      "claim": "Tax-free biased J_A<=M_A",
+      "source_blob": "c3adb486c8ca9f7a35f384ee82942eef66bd64be"
+    }
+  ],
+  "nearest_unpaid_lemma": {
+    "claim": "Overlap-safe activation-weighted endpoint-tax lift",
+    "target": "Create and spend p*Delta(delta) once without fresh-coordinate independence",
+    "first_tests": ["B05 sparse activation", "whole-set addressing", "reused selectors", "biased two-bit AND"]
+  }
+}

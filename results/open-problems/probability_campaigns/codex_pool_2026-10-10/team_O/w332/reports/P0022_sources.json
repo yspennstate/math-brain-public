@@ -1,0 +1,81 @@
+{
+  "id": "P0022",
+  "ledger_rows": [
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 24,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "planar_brownian_trace_percolation_dimension_one",
+        "historical_status": "source_says_open",
+        "locator": "Problem 3",
+        "problem_id": "P0022",
+        "recorded_at": "2026-09-06T16:09:05Z",
+        "result_status": "not_started",
+        "schema": "probability-problem.v1",
+        "source_id": "burdzy_open_20260906",
+        "statement": "Is the infimum of Hausdorff dimensions of nontrivial Jordan arcs contained in a planar Brownian trace on [0,1] equal to one almost surely?",
+        "statement_caveat": "A nontrivial arc contains at least two distinct points. The lower bound one alone is not a solution.",
+        "title": "Percolation dimension of a planar Brownian trace",
+        "verification": "unreviewed"
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 124,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "planar_brownian_trace_percolation_dimension_one",
+        "historical_status": "source_says_open",
+        "locator": "Problem 3",
+        "problem_id": "P0022",
+        "recorded_at": "2026-09-06T19:17:12Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "burdzy_open_20260906",
+        "statement": "Is the infimum of Hausdorff dimensions of nontrivial Jordan arcs contained in a planar Brownian trace on [0,1] equal to one almost surely?",
+        "statement_caveat": "A nontrivial arc contains at least two distinct points. The lower bound one alone is not a solution.",
+        "title": "Percolation dimension of a planar Brownian trace",
+        "verification": "author_checked_limited_argument"
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 24,
+      "record": {
+        "attempt_id": "P0022-A001",
+        "depth": "first_pass",
+        "full_problem_solved": false,
+        "independent_check": "This argument does not require rectifiability or a parametrized simple curve, and hence applies to the connectivity notion in a percolation-dimension lower bound.",
+        "independent_review": "none",
+        "method": "Universal dimension lower bound for connecting sets",
+        "novelty": "not_claimed",
+        "obstruction": "Polygonal approximations of a Brownian path are not subsets of its trace. The missing step is constructing sufficiently thin connecting subsets inside the trace itself.",
+        "problem_id": "P0022",
+        "recorded_at": "2026-09-06T17:37:31Z",
+        "result": "Any connected set containing distinct x and y has Hausdorff dimension at least one. Orthogonal projection onto their joining line is Lipschitz and has connected image containing the interval between the projections, so its dimension is at least one.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_limited_argument"
+      }
+    }
+  ],
+  "store_cards": [
+    {
+      "id": "claim_95f8e57a3bd33dc598d359b8665528b8f2807ce5f0f440c895d57fdb709763ee",
+      "kind": "claim",
+      "title": "Open problem: Percolation dimension of a planar Brownian trace",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Is the infimum of Hausdorff dimensions of nontrivial Jordan arcs contained in a planar Brownian trace on [0,1] equal to one almost surely? Source: Krzysztof Burdzy: My favorite open problems, Problem 3.\nPosed in Krzysztof Burdzy: My favorite open problems\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "metadata_json": "{\"artifact_digest\":\"sha256:1ca6d6c5374006ada227ff9313436669b4c6fe0b8f6e2522dd52a0753bdae48f\",\"artifact_path\":\"objects/sha256/1c/1ca6d6c5374006ada227ff9313436669b4c6fe0b8f6e2522dd52a0753bdae48f.md\",\"bundle_digest\":\"sha256:58d74c8da229fa6b81fe6bac4abdfaadf798d61b07728701a8922a92ccd764b6\",\"bundle_entry_key\":\"op-p0022\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-01\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_009.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0022-percolation-dimension-of-a-planar-brownian-trace\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:772492982336f844e436033d99bbb6870cb26f16b277731cabc6cb87e48d4e89\",\"revision_digest\":\"sha256:95f8e57a3bd33dc598d359b8665528b8f2807ce5f0f440c895d57fdb709763ee\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0022\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    },
+    {
+      "id": "claim_286dc872da2c56eeeb2b9a3f310fa563e5e5dc39c0b43d75d61bd21dd9c94f8c",
+      "kind": "claim",
+      "title": "Attempt on Percolation dimension of a planar Brownian trace",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Universal dimension lower bound for connecting sets Result: Any connected set containing distinct x and y has Hausdorff dimension at least one. Orthogonal projection onto their joining line is Lipschitz and has connected image containing the interval between the projections, so its dimension is at least one. Check: This argument does not require rectifiability or a parametrized simple curve, and hence applies to the connectivity notion in a percolation-dimension lower bound. Obstruction: Polygonal approximations of a Brownian path are not subsets of its trace. The missing step is constructing sufficiently thin connecting subsets inside the trace itself.\nRefers to the open problem node open-problem-p0022-percolation-dimension-of-a-planar-brownian-trace\nNo independent review",
+      "metadata_json": "{\"artifact_digest\":\"sha256:c8b8ec13e5f3daa44d80e5a2788a822df4d6b13a3c363f63a3b133623da24329\",\"artifact_path\":\"objects/sha256/c8/c8b8ec13e5f3daa44d80e5a2788a822df4d6b13a3c363f63a3b133623da24329.md\",\"bundle_digest\":\"sha256:f3e0d4cb2f270970b3a7e311e549325fd4a447f22688326d8e681b699cda8afb\",\"bundle_entry_key\":\"at-p0022\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-04\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_012.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0022-percolation-dimension-of-a-planar-brownian-trace\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:705337efabf29cd94bdc3e6e7eb6e032d19e1a439ab1ed1610b6421824e2eead\",\"revision_digest\":\"sha256:286dc872da2c56eeeb2b9a3f310fa563e5e5dc39c0b43d75d61bd21dd9c94f8c\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0022\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}"
+    }
+  ]
+}

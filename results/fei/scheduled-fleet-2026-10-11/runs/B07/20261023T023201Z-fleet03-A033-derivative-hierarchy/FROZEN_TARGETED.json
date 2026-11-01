@@ -1,0 +1,15 @@
+{
+  "helper_version": "A033-post-tag-seed-query-v3-targeted",
+  "family": "All 16 one-controller complementary signed masks with every two-bit Boolean seed; fixed A079 mask with fixed panel of 24 three-bit seeds",
+  "domain": "Every seed query, both tag signs, both seed children; one reference profile for small masks, two for A079; old actual 1/8 uniform tag mixture and fresh epsilon 0 or 1/8 point mixture",
+  "three_bit_panel": "All 16 two-bit truth tables repeated over a spectator bit, plus truth bitmasks 0x01,0x02,0x04,0x08,0x69,0x96,0x17,0xe8. No symmetry reduction; assert 24 unique.",
+  "case_count": 656,
+  "symmetry": "None",
+  "arithmetic": "Unchanged exact Fraction, integer FWHT and prime-log equalities; all-target sign from analytic likelihood floor and independent integer-power fixtures",
+  "memory_estimate_MB": 140,
+  "pilot_max_seconds": 55,
+  "max_runtime_seconds": 120,
+  "reason_for_domain_change": "Two full 2048-case attempts hit their180s limit; neither is counted as completed. This panel is a separate reduced exact certificate, not the abandoned full sweep.",
+  "outputs": ["out/targeted.json"],
+  "regenerate": "python -B -X utf8 runs/20261023T023201Z-fleet03-A033-derivative-hierarchy/code/check.py --targeted"
+}

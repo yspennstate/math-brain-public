@@ -1,0 +1,10 @@
+{
+  "status": "RUNTIME_UNVERIFIED",
+  "elapsed_seconds": 120.8,
+  "translation_fidelity": "UNVERIFIED",
+  "statement": "example (d b : \u211d) (hb0 : 0 \u2264 b) (hb1 : b < 1/3) (hd0 : 0 \u2264 d) (hd1 : d \u2264 b) (heq : 1 - 4*b + 2*b^2 = 0) : 0 \u2264 1 - 4*d + 2*d^2 := by nlinarith [mul_nonneg (sub_nonneg.mpr hd1) (show 0 \u2264 4 - 2*(d+b) by linarith)]",
+  "rung": "No Lean certificate; analytic proof and rational certificate only",
+  "admission": "memok PASS before Mathlib hook; physical free12.5GB, commit free17.9GB",
+  "compiler_import_axiom_audit": "Not reached; no trusted formalization claim",
+  "lean_source_sha256": "34e7c0dbb85fbdf25208754deb1c2fa8a222d7e49f0c9e88edbe1a710fb46546"
+}

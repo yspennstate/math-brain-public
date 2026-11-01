@@ -1,0 +1,32 @@
+PROB20-16 EIGHT-PARAMETER S_RE DIRECT C082 CERTIFICATE
+Run provenance: 2026-09-16. Exact sympy.QQ tensor-product Bernstein calculations.
+Certified width: |w| <= 1/2000.
+
+The first combined process completed all low-degree certificates and rho12_lo, then hit the local wall-clock limit while moving to later high-degree certificates. To bound memory/time without changing the mathematics, the remaining high-degree certificates were executed individually with the same exact expressions/substitution/Bernstein transform. All listed assertions passed. No floating-point sign test is used below; decimals are displays of exact rational minima.
+
+LOW-DEGREE / FIRST HIGH-DEGREE RESULTS
+Delta: degree=(3,3,2,2,2,2,2,2), coefficients=11664, min=86267837329519/1563078900000000, approx=0.05519096785806462
+R1: degree=(3,3,2,2,2,2,2,2), coefficients=11664, min=2176349709414571/23446183500000000, approx=0.09282319697850061
+R2: degree=(3,3,2,2,2,2,2,2), coefficients=11664, min=2176349709414571/23446183500000000, approx=0.09282319697850061
+P: degree=(3,3,2,2,2,2,2,2), coefficients=11664, min=383840275630661/4689236700000000, approx=0.08185559829612803
+ell1_lo: degree=(3,3,2,2,2,2,2,2), coefficients=11664, min=265368048117967/2605131500000000, approx=0.10186359042450141
+ell1_hi: degree=(3,3,2,2,2,2,2,2), coefficients=11664, min=10080063869/521026300000000, approx=1.934655480731011e-05
+ell2_lo: degree=(3,3,2,2,2,2,2,2), coefficients=11664, min=265368048117967/2605131500000000, approx=0.10186359042450141
+ell2_hi: degree=(3,3,2,2,2,2,2,2), coefficients=11664, min=10080063869/521026300000000, approx=1.934655480731011e-05
+ell3_lo: degree=(3,3,2,2,2,2,2,2), coefficients=11664, min=346184389845391/4689236700000000, approx=0.07382531784872173
+ell3_hi: degree=(3,3,2,2,2,2,2,2), coefficients=11664, min=2746143364037/23446183500000000, approx=0.00011712538904410605
+rho12_lo: degree=(6,6,4,4,4,4,4,4), coefficients=765625, min=33002878262321194765114412585767/549723520715672250000000000000000, approx=0.06003541238212896
+
+INDIVIDUALLY EXECUTED HIGH-DEGREE RESULTS
+rho12_hi: degree=(6,6,4,4,4,4,4,4), coefficients=765625, min=67085632121965674574992373/1050845439838800000000000000, approx=0.06383967573029259
+rho13_lo: degree=(6,6,4,4,4,4,4,4), coefficients=765625, min=12024498914188881968275192309/175911526629015120000000000000, approx=0.06835537809610222
+rho13_hi: degree=(6,6,4,4,4,4,4,4), coefficients=765625, min=49085743948036410813870935037259/61080391190630250000000000000000, approx=0.8036252386603276
+rho23_lo: degree=(6,6,4,4,4,4,4,4), coefficients=765625, min=12024498914188881968275192309/175911526629015120000000000000, approx=0.06835537809610222
+rho23_hi: degree=(6,6,4,4,4,4,4,4), coefficients=765625, min=49085743948036410813870935037259/61080391190630250000000000000000, approx=0.8036252386603276
+
+PHYSICAL MARGINS
+kernel spectral lower margin = 51/1000
+complement spectral lower margin = 413/3000
+
+ALL SIXTEEN DIRECT C082 SIGN CERTIFICATES HAVE STRICTLY POSITIVE EXACT BERNSTEIN COEFFICIENTS.
+STATUS: EXACT CERTIFICATE PASSED.

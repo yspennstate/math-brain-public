@@ -1,0 +1,170 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Cay}{\operatorname{Cay}}
+
+\title{A non-normal transitive quotient not arising from a normal transitive quotient}
+\author{Internal ProofNet24 note; P20}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We answer the literal Question 4.5 of Grimmett and Li, \emph{Self-avoiding walks and connective constants}, in the affirmative.  We construct an infinite simple locally finite transitive graph $G$, a transitive group $\Gamma\leq\Aut(G)$, and a non-normal subgroup $A\leq\Gamma$ acting freely such that $G_A\cong K_3$, while no normal subgroup of any transitively acting $\Gamma'\leq\Aut(G)$ has quotient graph isomorphic to $G_A$.  The construction uses the graphical-regular-representation theorem of Leemann and de la Salle for finitely generated non-virtually-abelian groups.  This note records the audited mathematical argument only; publication novelty is not claimed.
+\end{abstract}
+
+\section{The source question}
+
+Grimmett and Li consider the class of infinite, simple, locally finite, transitive rooted graphs.  For a transitive $\Gamma\leq\Aut(G)$ and a subgroup $A\leq\Gamma$, the quotient graph $G_A$ has the $A$-orbits as vertices, with two distinct orbits adjacent when some representatives are adjacent in $G$.  Their Question 4.5 asks whether there can be a \emph{non-normal} $A$ such that
+\begin{enumerate}
+\item $G_A$ is transitive, and
+\item there is no normal subgroup $N$ of any transitively acting $\Gamma'\leq\Aut(G)$ for which $G_N\cong G_A$.
+\end{enumerate}
+They also ask whether it may be relevant to assume that $A$ acts freely.  Our example has a free $A$-action.
+
+\section{A relative graphical regular representation input}
+
+We use P.-H. Leemann and M. de la Salle, ``Cayley graphs with few automorphisms: the case of infinite groups'', \emph{Annales Henri Lebesgue} \textbf{5} (2022), 73--92, DOI 10.5802/ahl.118.
+
+Their Theorem 1.1 says that every finitely generated non-virtually-abelian group admits a finite-degree Cayley graph whose automorphism group consists exactly of the left translations.  We need the mild relative feature visible in their construction: one may prescribe a finite symmetric generating set and retain it in the final generating set.  Indeed, Theorem 3.1 starts from an arbitrary finite symmetric generating set $S_0$ and forms
+\[
+S_1=(S_0\cup S_0^2\cup S_0^3)\setminus\{1\},
+\]
+so $S_0\subseteq S_1$, and Proposition 3.2 enlarges the supplied generating set while retaining it.  The proof of Theorem 1.1 combines these steps.  Consequently, for every prescribed finite symmetric generating set $S_*$ of a finitely generated non-virtually-abelian group $\Lambda$, there is a finite symmetric generating set $S\supseteq S_*$ such that
+\[
+\Aut(\Cay(\Lambda,S))=\Lambda_L,
+\]
+where $\Lambda_L$ denotes the left-regular translation group.
+
+\section{The construction}
+
+Let
+\[
+\Lambda=S_3*A_5
+\]
+be the free product.  Let
+\[
+\pi:\Lambda\longrightarrow S_3
+\]
+be the homomorphism which is the identity on the $S_3$ free factor and trivial on the $A_5$ free factor.  Put
+\[
+H=\langle(12)\rangle<S_3,
+\qquad
+A=\pi^{-1}(H).
+\]
+Finally set
+\[
+S_*=(S_3\setminus\{1\})\cup(A_5\setminus\{1\}),
+\]
+where the two finite groups are viewed as the canonical free factors of $\Lambda$.
+
+The group $\Lambda$ is finitely generated and infinite by the normal-form theorem for free products.  It is not virtually abelian: choosing an element of order two in $S_3$ and an element of order three in $A_5$ gives a subgroup isomorphic to $C_2*C_3$, which is not virtually abelian.  Since every subgroup of a virtually abelian group is virtually abelian, $\Lambda$ itself cannot be virtually abelian.
+
+Apply the Leemann--de la Salle construction relative to $S_*$.  There is a finite symmetric generating set $S\supseteq S_*$, with $1\notin S$, such that
+\[
+G=\Cay(\Lambda,S)
+\]
+has
+\[
+\Aut(G)=\Lambda_L.
+\]
+Because $S$ is finite, symmetric, identity-free and generating, $G$ is infinite, simple, connected, locally finite and transitive.  Let $\Gamma=\Lambda_L$ and identify $A$ with the corresponding subgroup of left translations.
+
+\begin{theorem}\label{thm:main}
+The triple $(G,\Gamma,A)$ answers Grimmett--Li Question 4.5 affirmatively.  More precisely, $A$ is non-normal and acts freely, $G_A\cong K_3$, and there is no normal subgroup $N$ of any transitively acting $\Gamma'\leq\Aut(G)$ for which $G_N\cong G_A$.
+\end{theorem}
+
+\begin{proof}
+We verify the claims in turn.
+
+\medskip\noindent
+\textbf{Non-normality and freeness.}
+The subgroup $H=\langle(12)\rangle$ has order two and index three in $S_3$, and it is not normal: conjugation by a 3-cycle sends it to a different transposition subgroup.  Since $\pi$ is surjective, if $A=\pi^{-1}(H)$ were normal in $\Lambda$, then $\pi(A)=H$ would be normal in $S_3$, a contradiction.  Thus $A$ is non-normal.  Since $\Gamma=\Lambda_L$ acts regularly, every subgroup of $\Gamma$, in particular $A$, acts freely.
+
+\medskip\noindent
+\textbf{The quotient is $K_3$.}
+The $A$-orbits under left multiplication are the left cosets $Ag$.  The map
+\[
+Ag\longmapsto H\pi(g)
+\]
+is a well-defined bijection from the orbit set to the three left cosets of $H$ in $S_3$.
+
+Take two distinct quotient vertices and choose representatives $r,t\in S_3$ in the corresponding distinct $H$-cosets.  Then $r^{-1}t\neq1$, and hence
+\[
+r^{-1}t\in S_3\setminus\{1\}\subseteq S_*\subseteq S.
+\]
+By the Cayley-graph convention, $r$ is adjacent to $t=r(r^{-1}t)$.  Thus every pair of distinct $A$-orbits is adjacent.  Since the quotient is simple and loops are suppressed, this gives
+\[
+G_A\cong K_3.
+\]
+In particular $G_A$ is transitive.
+
+\medskip\noindent
+\textbf{The universal transitive-overgroup quantifier collapses.}
+We have $\Aut(G)=\Lambda_L$, acting regularly.  If $\Gamma'\leq\Lambda_L$ acts transitively on the vertex set $\Lambda$, then the orbit of the identity under $\Gamma'$ is all of $\Lambda$.  In a left-regular action that orbit is precisely the subset of group elements represented by $\Gamma'$.  Therefore
+\[
+\Gamma'=\Lambda_L.
+\]
+So there is only one transitively acting subgroup of the full automorphism group.
+
+\medskip\noindent
+\textbf{No normal quotient is $K_3$.}
+Suppose, for contradiction, that a normal subgroup $N\triangleleft\Lambda_L$ has
+\[
+G_N\cong K_3.
+\]
+Under the regular identification, $N$ corresponds to a normal subgroup $N_0\triangleleft\Lambda$, and the $N$-orbits are the left cosets of $N_0$.  Since $K_3$ has exactly three vertices,
+\[
+[\Lambda:N_0]=3.
+\]
+Normality therefore gives a group quotient of order three, necessarily
+\[
+\Lambda/N_0\cong C_3.
+\]
+But abelianization of a free product is the direct product of the abelianizations, so
+\[
+\Lambda^{\mathrm{ab}}
+=(S_3*A_5)^{\mathrm{ab}}
+\cong S_3^{\mathrm{ab}}\times A_5^{\mathrm{ab}}
+\cong C_2\times 1
+\cong C_2.
+\]
+Every homomorphism from $\Lambda$ to the abelian group $C_3$ factors through $\Lambda^{\mathrm{ab}}\cong C_2$, so no surjection $\Lambda\twoheadrightarrow C_3$ exists.  This contradiction rules out every normal quotient isomorphic to $G_A$.
+
+Thus both source conditions hold, including the quantifier over all transitively acting $\Gamma'\leq\Aut(G)$, and $A$ is free as well.
+\end{proof}
+
+\section{Finite exact core and audit status}
+
+The accompanying script \texttt{check.py} verifies exactly the finite facts used above: $H$ is a non-normal index-three subgroup of $S_3$; the finite coset quotient induced by all nonidentity $S_3$ elements is exactly $K_3$; $[S_3,S_3]=A_3$; and $A_5$ is perfect.  Its archived output \texttt{check.out} ends \texttt{ALL\_EXACT\_CHECKS\_PASS}.  The infinite free-product and GRR steps are theorem-sized and are intentionally not represented as machine-checked.
+
+The canonical $K_3$ source witness has two distinct independent full-proof audits:
+\begin{itemize}
+\item P19: \texttt{P19-AUDIT-P20-D0072-ENDTOEND-23 = PASS}, creation commit \texttt{8debd604cb2090d04a64564ba6d29a8d70198bde};
+\item P26: \texttt{P26-AUDIT-P20-D0072-ENDTOEND-30 = PASS\_FULL\_MATHEMATICAL\_PROOF}, creation commit \texttt{20863efed6afdd5f78a8832ca82e7a00f57f01de}.
+\end{itemize}
+P26's reconciliation is \texttt{P26-RECONCILE-P20-D0072-2OF2-30 = PASS}.
+
+\section{Prior-art limitation}
+
+Bounded searches dated 17 September 2026 checked the original Grimmett--Li question, exact phrases around Question 4.5, later-author and citing literature, and the Leemann--de la Salle GRR paper.  They recovered the source and the 2022 GRR theorem but did not locate a later paper explicitly resolving the exact Question 4.5 quantifiers.  A search miss is not a novelty certificate.  We therefore record publication novelty as \textbf{UNVERIFIED} and make no claim of public posting.
+
+\begin{thebibliography}{9}
+\bibitem{GL}
+G.~R. Grimmett and Z.~Li,
+\emph{Self-avoiding walks and connective constants},
+arXiv:1704.05884v2 (2019); in \emph{Sojourns in Probability Theory and Statistical Physics -- III}, Springer Proceedings in Mathematics \& Statistics 300 (2020), 215--241.
+
+\bibitem{LdS}
+P.-H. Leemann and M. de la Salle,
+\emph{Cayley graphs with few automorphisms: the case of infinite groups},
+Annales Henri Lebesgue \textbf{5} (2022), 73--92, DOI 10.5802/ahl.118.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,34 @@
+orbit_counts 48 11 11 2
+ALGEBRA J4=K4=0 COMMUTE=True DIMENSION=7
+A_pq= (42*p + 45*q + 280)/70
+B_pq= (1568*p**2 + 4830*p*q + 12152*p + 3375*q**2 + 22875*q + 9800)/9800
+C_pq= (175616*p**3 + 893760*p**2*q + 1393952*p**2 + 1464750*p*q**2 + 5403090*p*q + 1174432*p + 759375*q**3 + 5229375*q**2 + 2341250*q)/8232000
+RHO_STRIP 43/360 < rho_pq <= 1/8 exact
+same progress 8 reg 8 disc 0 fail 0
+same progress 16 reg 16 disc 0 fail 0
+same progress 24 reg 23 disc 1 fail 0
+same progress 32 reg 31 disc 1 fail 0
+same progress 40 reg 38 disc 2 fail 0
+same progress 48 reg 45 disc 3 fail 0
+same FINAL 45 3 0
+DISC ('ds', 0, 0) ('x', 0, 1) 1 1 27*(586236*p**2 + 1237600*p*q + 8006348*p + 660375*q**2 + 8448400*q + 27783766)/29412250000
+DISC ('b', 0, 0) ('x', 1, 1) 0 2 9*(27440196*p**2 + 57947820*p*q + 372904840*p + 30862350*q**2 + 393618225*q + 1284376950)/578509309952
+DISC ('x', 0, 0) ('x', 1, 1) 0 2 27*(5244372*p**2 + 11197760*p*q + 70282688*p + 5980950*q**2 + 75025475*q + 235939650)/3615683187200
+mixed_single FINAL 11 0 0
+msfails []
+core_mixed FINAL 11 0 0
+cmfails []
+UNIVERSAL ('core_single', ('core', 0, 1), ('s', 0), (True, 44))
+UNIVERSAL ('core_single', ('core', 0, 1), ('s', 2), (True, 6))
+UNIVERSAL ('core_core', (True, 2))
+UNIVERSAL ('single_same', (True, 44))
+UNIVERSAL ('single_cross_same_terminal', (True, 346))
+UNIVERSAL ('single_cross_different_terminal', (True, 148))
+TOTAL_SCHEMES=76 REGULAR=73 DISCRIMINANT=3 FAIL=0
+ALL_EXACT_CHECKS_PASS
+--- INDEPENDENT BRUTE SANITY ---
+GRAPH=K3_vee_D_2_1 vertices=8 edges=22
+FORESTS=100962
+MIN_GAP=4686984 pair=7,18
+MAX_GAP=291383224
+BRUTE_FORCE_PASS

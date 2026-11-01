@@ -1,0 +1,14 @@
+{
+  "helper_version": "A003-stage2-v1",
+  "actual_Boolean_family": "All labelled Boolean f on 1..3 bits retaining coordinate 0 and replacing other bits by disjoint Majority_3 encoders; X009 bent point-surgery k=4,6,8,10; canonical B05 k=4 full truth table and k=4,6,8,10,12,14,16 compressed exact packets; symbolic majority-diluted B05 for every even k>=4",
+  "parameter_domain": {"source_n": [1,2,3], "encoder_size": 3, "X009_k": [4,6,8,10], "B05_k": [4,6,8,10,12,14,16], "explicit_B05_k": [4], "cutoff_c": "1/2", "symbolic_M": "2^(2k+3)+1"},
+  "case_count": {"labelled_sources": 276, "X009": 4, "B05": 7},
+  "symmetry": "None for labelled sources; exact quadratic and control-coordinate symmetry used only with analytic proof for the named families",
+  "arithmetic": "Integer FWHT, Fraction masses and log2-prime expressions; rational atanh-series intervals where needed; no floating sign proof",
+  "memory_estimate_MB": 120,
+  "max_runtime_seconds": 60,
+  "max_explicit_truth_table_dimension": 13,
+  "automatic_dimension_escalation": false,
+  "heavy_job": false,
+  "purpose": "Certify retained-coordinate erasure invariance under balanced substitution, the new inner erasure formula, high-average-influence eligibility, and the maximum-coordinate obstruction."
+}

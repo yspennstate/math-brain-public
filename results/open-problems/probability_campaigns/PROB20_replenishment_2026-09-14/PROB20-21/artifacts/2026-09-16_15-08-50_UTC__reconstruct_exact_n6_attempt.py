@@ -1,0 +1,78 @@
+#!/usr/bin/env python3
+"""Reconstruct the exact byte-for-byte n=6 diagnostic source that was executed.
+
+Input: the archived n=5 checker source from this run.
+Output: n6_timeout_attempt_exact.cpp
+Expected SHA-256: d58f69c4b849ff247953a2c7c25de2c9b17be826ae3025eeafc49a7bc9262f04
+
+This intentionally reproduces the timed-out invalid diagnostic adaptation,
+including its post-run identified defects. It is for provenance only, not
+for mathematical coverage.
+"""
+from pathlib import Path
+import hashlib, sys
+src_path=Path(sys.argv[1]) if len(sys.argv)>1 else Path('2026-09-16_15-08-50_UTC__n5_full_interval.cpp')
+out_path=Path(sys.argv[2]) if len(sys.argv)>2 else Path('n6_timeout_attempt_exact.cpp')
+s=src_path.read_text()
+s=s.replace('static constexpr int NV=5;','static constexpr int NV=6;')
+s=s.replace('static constexpr int N=32;','static constexpr int N=64;')
+s=s.replace('static const int BINOM[6]={1,5,10,10,5,1};','static const int BINOM[7]={1,6,15,20,15,6,1};')
+s=s.replace('std::array<uint32_t,N> pred{},succ{};','std::array<uint64_t,N> pred{},succ{};')
+s=s.replace('std::vector<uint32_t>', 'std::vector<uint64_t>')
+s=s.replace('uint32_t mask', 'uint64_t mask')
+s=s.replace('uint32_t m', 'uint64_t m')
+s=s.replace('uint32_t base', 'uint64_t base')
+s=s.replace('uint32_t v00', 'uint64_t v00')
+s=s.replace('uint32_t v01', 'uint64_t v01')
+s=s.replace('uint32_t v10', 'uint64_t v10')
+s=s.replace('uint32_t v11', 'uint64_t v11')
+s=s.replace('uint32_t q=', 'uint64_t q=')
+s=s.replace('uint32_t y=', 'uint64_t y=')
+s=s.replace('uint32_t bit=', 'uint64_t bit=')
+s=s.replace('int minimal(uint32_t avail)', 'int minimal(uint64_t avail)')
+s=s.replace('void rec(uint32_t avail,uint32_t included', 'void rec(uint64_t avail,uint64_t included')
+s=s.replace('uint32_t avail', 'uint64_t avail')
+s=s.replace('uint32_t included', 'uint64_t included')
+s=s.replace('uint32_t d=', 'uint64_t d=')
+s=s.replace('uint32_t z=', 'uint64_t z=')
+s=s.replace('1u<<', '1ull<<')
+s=s.replace('~y+1u', '~y+1ull')
+s=s.replace('__builtin_ctz(y)', '__builtin_ctzll(y)')
+s=s.replace('__builtin_popcount(m)', '__builtin_popcountll(m)')
+s=s.replace('__builtin_popcount((unsigned)(x^y))', '__builtin_popcountll((unsigned long long)(x^y))')
+s=s.replace('__builtin_popcount((unsigned)(x&S))', '__builtin_popcountll((unsigned long long)(x&S))')
+s=s.replace('0xffffffffu', '0xffffffffffffffffull')
+s=s.replace('using Poly=std::array<mpq_class,6>;', 'using Poly=std::array<mpq_class,7>;')
+s=s.replace('int c[6]={0,0,0,0,0,0};', 'int c[7]={0,0,0,0,0,0,0};')
+s=s.replace('mpq_class row[6][6]; for(int i=0;i<6;i++)', 'mpq_class row[7][7]; for(int i=0;i<7;i++)')
+s=s.replace('for(int r=1;r<6;r++) for(int i=0;i<6-r;i++)', 'for(int r=1;r<7;r++) for(int i=0;i<7-r;i++)')
+s=s.replace('Poly L,R; for(int i=0;i<6;i++){ L[i]=row[i][0]; R[i]=row[5-i][i]; }', 'Poly L,R; for(int i=0;i<7;i++){ L[i]=row[i][0]; R[i]=row[6-i][i]; }')
+s=s.replace('for(int i=1;i<6;i++){', 'for(int i=1;i<7;i++){')
+s=s.replace('S_5','S_6').replace('N<=5','N<=6')
+s=s.replace('assert(reps.size()==119);', 'assert(reps.size()==1173);')
+s=s.replace('assert(constants==2 && dictators==1 && nontriv==116);', 'assert(constants==2 && dictators==1 && nontriv==1170);')
+s=s.replace('__builtin_popcountll(m)==16', '__builtin_popcountll(m)==32')
+s=s.replace('std::setw(8)', 'std::setw(16)')
+s=s.replace('mpq_class A0=Q(1,8192),A1=Q(63,128);', 'mpq_class A0=Q(1,1048576),A1=Q(127,256);')
+s=s.replace('h15L,h15U', 'h31L,h31U')
+s=s.replace('entropy_bounds(Q(15,32),h15L,h15U);', 'entropy_bounds(Q(31,64),h31L,h31U);')
+s=s.replace('h15U.v', 'h31U.v')
+s=s.replace('assert(have && minAS==Q(11,8));', 'assert(have && minAS==Q(5,4));')
+s=s.replace('c0=c0*c0*c0*c0;', 'c0=c0*c0*c0*c0*c0;')
+s=s.replace('MP ln8192L,ln8192U,ln5L,ln5U', 'MP ln1048576L,ln1048576U,ln6L,ln6U')
+s=s.replace('ln_integer_bounds(8192,ln8192L,ln8192U); ln_integer_bounds(5,ln5L,ln5U);','ln_integer_bounds(1048576,ln1048576L,ln1048576U); ln_integer_bounds(6,ln6L,ln6U);')
+s=s.replace('ln8192L.v', 'ln1048576L.v').replace('ln5U.v','ln6U.v')
+s=s.replace('low_noise_alpha=[0,1/8192]', 'low_noise_alpha=[0,1/1048576]')
+s=s.replace('rho0=Q(1,64)', 'rho0=Q(1,128)')
+s=s.replace('high_noise_alpha=[63/128,1/2]', 'high_noise_alpha=[127/256,1/2]')
+s=s.replace('middle_interval=[1/8192,63/128]', 'middle_interval=[1/1048576,127/256]')
+s=s.replace('all_119_pairwise_compressed_n5_functions', 'all_1173_pairwise_compressed_n6_functions')
+s=s.replace('all_2^32_truth_tables_covered', 'all_2^64_truth_tables_covered')
+s=s.replace('source_corollary_count_expected=119', 'source_corollary_count_expected=1173')
+s=s.replace('every n=5 function', 'every n=6 function').replace('119 pairwise-compressed functions','1173 pairwise-compressed functions').replace('116 remaining functions','1170 remaining functions').replace('n<5 embeds','n<6 embeds')
+out_path.write_text(s)
+h=hashlib.sha256(out_path.read_bytes()).hexdigest()
+print(h)
+expected='d58f69c4b849ff247953a2c7c25de2c9b17be826ae3025eeafc49a7bc9262f04'
+assert h==expected, (h,expected)
+print('EXACT_N6_ATTEMPT_RECONSTRUCTION: PASS')

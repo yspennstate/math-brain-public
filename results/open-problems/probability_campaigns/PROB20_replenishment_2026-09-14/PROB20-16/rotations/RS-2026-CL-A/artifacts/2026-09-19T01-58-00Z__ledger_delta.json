@@ -1,0 +1,77 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "claim": "RS-2026-CL-A",
+  "category": "HARD OUTSIDE",
+  "captured_master_sha": "b58143a82563c2f67d39dad591c7cf6a2c5a8978",
+  "source": {
+    "author": "Anastasia Kireeva",
+    "venue": "Randomstrasse 101",
+    "post": "Low-degree hardness of finding the largest clique in Erdős–Rényi graph (problems 36-38)",
+    "posted": "2026-06-05",
+    "displayed_problem": "Open Problem 35",
+    "status_check_date": "2026-09-19",
+    "live_open": true
+  },
+  "metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": false
+  },
+  "status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / BLOCK_TODA_CATALAN_TRANSPORT_PROGRESS",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T00-45-00Z__report.md",
+    "creation_commit": "8231d57f434db932cb5f67ae6f9f0d282df7f1ab",
+    "blob": "1c4bdad74fd02ee01b5efd5cabefb02a9a4f9441"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T01-58-00Z__report.md",
+    "creation_commit": "f06c545a8982e31085884e8b622f4c374cd857da",
+    "readback_blob": "51287fd408019893acea1e443739afbcfed61c30"
+  },
+  "historical_initial_methods": ["B2", "B27", "B21"],
+  "methods": [
+    {
+      "id": "B10",
+      "outcome": "Exact source-flag Kato flow identified with block symmetric Toda/QR; pairwise degree bandwidth 2 is invariant; connected Taylor coefficients satisfy an explicit Catalan rooted majorant with positive system-size-independent radius."
+    },
+    {
+      "id": "B20",
+      "outcome": "Higher degree-gap explosion and rooted coefficient explosion are ruled out inside the explicit Catalan small-coupling region; the genuine algorithmic obstruction is quasi-local spatial QR fill-in, which requires a summable rooted norm."
+    },
+    {
+      "id": "B24",
+      "outcome": "All connected local graph shapes are rigorously dominated by a scalar Catalan binary-commutator-tree recursion; stars/wedges describe low orders but are not asserted globally extremal."
+    }
+  ],
+  "new_mechanism": {
+    "toda_recursion": "(m+1) H_{m+1} = -sum_{p+q=m} [H_N(H_p), H_q]",
+    "bandwidth": "Pairwise Ising source-degree bandwidth 2 is preserved exactly by the block Toda flow.",
+    "rooted_majorant": "h_{m+1} <= 16 sum_{p+q=m} h_p h_q, hence h_m <= C_m 16^m h_0^{m+1} and convergence for 64 h_0 |alpha| < 1.",
+    "local_table_certificate": "Finite star conditional tables plus the Kato/Toda majorant give an algorithmic positive tilted-coercivity interval for sufficiently weak bounded-degree zero-field pairwise Ising."
+  },
+  "audits": {
+    "qualifying": 0,
+    "required": 2,
+    "p26_full_source_pass": false,
+    "distinct_other_full_source_pass": false
+  },
+  "hard_recovery_cycles_consumed": 1,
+  "same_obligation_stagnation": 0,
+  "stuck_triggered": false,
+  "remaining_obligation": [
+    "Instantiate the two-copy polymer/interface reference-pressure certificate end-to-end on the same genuinely overlapping weak-Ising or bounded-arity class.",
+    "Join local tilted transport, prior-typical reference pressure, and bounded source LDA through D=(log n)^{1+Omega(1)} in one direct local-specification theorem with explicit fixed-noise and polynomial-degree quantifiers.",
+    "Reconcile the block-Toda/Kato rooted majorant with quasi-local spectral-flow/KAM literature, especially De Roeck–Schütz, and preserve novelty discipline.",
+    "Obtain actual P26 plus one distinct OTHER full theorem/source audit before closure."
+  ],
+  "next_methods": ["B4", "B22", "B14"],
+  "model_control": {
+    "requested": "GPT-6 / maximum",
+    "actual_exposed_model": "GPT-5.6 Sol",
+    "reasoning": "UNVERIFIED",
+    "scheduler_model_selector": false,
+    "scheduler_reasoning_selector": false
+  }
+}

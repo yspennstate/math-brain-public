@@ -1,0 +1,173 @@
+--- a/~/math-brain-inbox/w351/bundle_001.json
++++ b/~/math-brain-inbox/w351/bundle_001.json
+@@ -0,0 +1,170 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w351",
++  "bundle_slug": "p0017-conditional-fiber-obstruction-w351-20261010",
++  "entries": [
++    {
++      "key": "w351-L0",
++      "namespace": "probability.poincare",
++      "logical_name": "affine-normalization-covariance-weighted-poincare",
++      "kind": "concept",
++      "title": "DRAFT: Affine normalization of a Poincare target",
++      "statement": "DRAFT: independent mathematical review pending; no novelty claim. If every full-dimensional isotropic log-concave probability law nu on R^n satisfies Var_nu(g) <= C integral |grad g|^2 dnu for admissible locally Lipschitz g, then every full-dimensional log-concave law mu with covariance Sigma satisfies Var_mu(f) <= C integral grad f^T Sigma grad f dmu for locally Lipschitz f with finite variance and covariance-weighted energy. Conversely, take Sigma=I.",
++      "proof_text": null,
++      "assumptions": [
++        "positive-definite finite covariance Sigma",
++        "locally Lipschitz f with finite variance and covariance-weighted Dirichlet energy",
++        "universal isotropic inequality assumed"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w351:P0017:w351-L0",
++        "url": "~\\brain_workers\\w351\\ATTEMPT.md",
++        "revision": "author-draft-2026-10-10",
++        "license": "owner-own-work (campaign proof draft; independent review pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "w351-L1",
++      "namespace": "probability.poincare",
++      "logical_name": "two-block-poincare-maximal-correlation-criterion",
++      "kind": "concept",
++      "title": "DRAFT: Two-block variance criterion requires maximal correlation",
++      "statement": "DRAFT: independent mathematical review pending; no novelty claim. If the maximal correlation between centered U-measurable and V-measurable L2 functions is at most rho<1, Var(f(U,V)) <= [E Var(f|U)+E Var(f|V)]/(1-rho). If conditional Euclidean-block Poincare constants are bounded by M_U,M_V a.e., C_P(U,V)<=max(M_U,M_V)/(1-rho).",
++      "proof_text": null,
++      "assumptions": [
++        "joint probability law",
++        "f in L2",
++        "maximal correlation bound for all centered functions, not only linear correlations",
++        "conditional Poincare and slicing hypotheses for the Euclidean-gradient conclusion",
++        "M_U bounds U conditional on V; M_V bounds V conditional on U"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w351:P0017:w351-L1",
++        "url": "~\\brain_workers\\w351\\ATTEMPT.md",
++        "revision": "author-draft-2026-10-10",
++        "license": "owner-own-work (campaign proof draft; independent review pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "w351-L2",
++      "namespace": "probability.poincare",
++      "logical_name": "isotropic-simplex-edge-conditional-poincare-blowup",
++      "kind": "concept",
++      "title": "DRAFT: Isotropic simplex fibers have large conditional constants",
++      "statement": "DRAFT: independent mathematical review pending; no novelty claim. For every n>=2 there is an isotropic log-concave law on R^n and a unit direction e such that ess sup_Y Var(<e,X>|Y)=(n+1)(n+2)/6 and ess sup_Y C_P(law(<e,X>|Y))=2(n+1)(n+2)/pi^2, where Y is the perpendicular projection of X.",
++      "proof_text": null,
++      "assumptions": [
++        "n>=2",
++        "uniform law on the explicitly normalized regular simplex",
++        "direction parallel to a simplex edge"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w351:P0017:w351-L2",
++        "url": "~\\brain_workers\\w351\\ATTEMPT.md",
++        "revision": "author-draft-2026-10-10",
++        "license": "owner-own-work (campaign proof draft; independent review pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "w351-L3",
++      "namespace": "probability.poincare",
++      "logical_name": "averaged-conditional-poincare-shortcut-simplex-obstruction",
++      "kind": "concept",
++      "title": "DRAFT: Averaging conditional Poincare constants fails",
++      "statement": "DRAFT: independent mathematical review pending; no novelty claim. In the isotropic simplex of L2, E C_P(law(<e,X>|Y))=12/pi^2 for every n>=2, but the best B such that E Var(f(X)|Y)<=B E|partial_e f(X)|^2 for all admissible f equals 2(n+1)(n+2)/pi^2. Hence replacing a random slice constant by its mean is invalid.",
++      "proof_text": null,
++      "assumptions": [
++        "same simplex and axis as L2",
++        "locally Lipschitz functions with finite full Euclidean Dirichlet energy"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w351:P0017:w351-L3",
++        "url": "~\\brain_workers\\w351\\ATTEMPT.md",
++        "revision": "author-draft-2026-10-10",
++        "license": "owner-own-work (campaign proof draft; independent review pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "w351-L4",
++      "namespace": "probability.poincare",
++      "logical_name": "isotropic-simplex-nonlinear-block-correlation",
++      "kind": "concept",
++      "title": "DRAFT: Isotropy does not remove nonlinear block dependence",
++      "statement": "DRAFT: independent mathematical review pending; no novelty claim. In the simplex of L2, the edge coordinate T and its perpendicular projection Y have zero linear cross-covariance but maximal correlation at least sqrt((N-2)(7N+9)/[3(N-1)(5N+6)]), N=n+1>=3; the lower bound tends to sqrt(7/15).",
++      "proof_text": null,
++      "assumptions": [
++        "same isotropic regular simplex and edge direction as L2",
++        "maximal correlation is over all centered square-integrable functions of the separate blocks"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w351:P0017:w351-L4",
++        "url": "~\\brain_workers\\w351\\ATTEMPT.md",
++        "revision": "author-draft-2026-10-10",
++        "license": "owner-own-work (campaign proof draft; independent review pending)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "source-status",
++      "namespace": "probability.poincare",
++      "logical_name": "p0017-kls-publication-status-2026-10-10",
++      "kind": "concept",
++      "title": "P0017 source status as of 10 October 2026",
++      "statement": "The September 2026 campaign label attempted_unsolved for P0017 does not certify current openness. As of 10 October 2026, primary preprints arXiv:2610.05474v1 (Bizeul, Klartag, Lehec), arXiv:2610.01447v2 (Song, Zhang), and arXiv:2610.07728 (Balasubramanian, Kasiviswanathan) claim a universal Poincare constant for isotropic log-concave measures. This campaign worker checked the exact theorem statements of the first two, not their complete proofs. Current openness is UNKNOWN for this packet; neither a new proof nor independent validation of those papers is asserted.",
++      "proof_text": null,
++      "assumptions": [
++        "dated primary-source access on 2026-10-10",
++        "source verification is separate from mathematical proof audit"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w351:P0017:source-status-20261010",
++        "url": "~\\brain_workers\\w351\\SOURCE_STATUS.json",
++        "revision": "as-read-2026-10-10",
++        "license": "owner-own-work (original dated source-status annotation; public papers attributed)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "w351-L3",
++      "to_key": "w351-L2",
++      "kind": "depends_on",
++      "rationale": "The averaged-constant obstruction uses exactly the isotropic simplex and its edge conditional interval from L2."
++    },
++    {
++      "from_key": "w351-L4",
++      "to_key": "w351-L2",
++      "kind": "depends_on",
++      "rationale": "The nonlinear-correlation calculation uses the same T,Y split and the conditional uniform interval from L2."
++    },
++    {
++      "from_key": "source-status",
++      "to_existing_logical": "math:probability.core:open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
++      "kind": "cites",
++      "rationale": "The existing P0017 card explicitly says current status unverified and records 2026-09-07; this dated annotation supplies subsequently accessed primary publication claims without declaring a theorem."
++    },
++    {
++      "from_key": "w351-L1",
++      "to_existing_logical": "math:probability.core:open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
++      "kind": "semantic_association",
++      "rationale": "The conditional-variance criterion supplies an additional-hypothesis route to the P0017 Poincare target, with missing uniform dependence and slice hypotheses stated."
++    },
++    {
++      "from_key": "w351-L2",
++      "to_existing_logical": "math:probability.core:attempt-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
++      "kind": "semantic_association",
++      "rationale": "Both are bounded-scope P0017 attempt records: the old card treats the Gaussian/Hermite case; this draft treats a conditional-fiber obstruction and does not prove general KLS."
++    }
++  ]
++}

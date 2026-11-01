@@ -1,0 +1,41 @@
+[
+  {
+    "claim_id": "A072-UNIFORM-ERASURE-WITNESSES",
+    "version": 1,
+    "exact_statement": "For the uniform sign functions encoded by negative-bit masks 4194372 on five variables and 1103806792023 on six variables, the exact integer Walsh/sign-inverse/physical-edge and child checks pass. Each coordinate has an exact rational prime-log erasure B_i, Jensen-Shannon term JS_i and entropy decrement Delta_iH, with Delta_iH=B_i+JS_i. The saved prime-log E(f)=min_i B_i/Inf_i has the saved minimizing coordinates and is greater than 539/200 and 368/125 respectively; both exceed Kstar=4+(5/2)log2(5)-(9/2)log2(3). The six-bit E is strictly greater than the five-bit E.",
+    "hypotheses": [
+      "Little-endian uniform assignments x=0..2^n-1",
+      "Negative-bit mask m means f(x)=1-2*((m>>x)&1)",
+      "B_i=H(S_i|S_-i); JS_i=H((mu_0+mu_1)/2)-(H(mu_0)+H(mu_1))/2",
+      "All logarithms base two; integer/Fraction arithmetic; exact integer-product sign comparisons"
+    ],
+    "statement_sha256": "d0a4998da41082a6c6b9cbcbf7ce9356336e4bb9ad6c36d628ca568955ae0db3",
+    "contributors": [
+      "A072 reconstruction",
+      "Claude B15 witness discovery"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "EXACT_WALSH_INTERFACE.py",
+      "code/verify.py",
+      "out/witness_n5.json",
+      "out/witness_n6.json",
+      "out/comparison.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "EXACT_FINITE_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A073",
+      "A074",
+      "A075",
+      "A085",
+      "A092",
+      "B15",
+      "B20"
+    ]
+  }
+]

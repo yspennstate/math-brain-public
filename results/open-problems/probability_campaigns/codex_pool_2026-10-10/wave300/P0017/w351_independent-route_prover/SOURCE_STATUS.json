@@ -1,0 +1,74 @@
+{
+  "target_id": "P0017",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "reason": "September attempted_un ranking is stale: primary arXiv sources now claim the full dimension-free theorem. This worker has verified the precise claimed statement, not audited the complete published proofs or certified mathematical acceptance.",
+  "exact_target": "There exists a numerical C independent of n and mu such that every isotropic log-concave probability measure mu on R^n has Var_mu(f) <= C integral |grad f|^2 dmu for every locally Lipschitz f in L^2(mu) with finite Dirichlet energy.",
+  "assumptions": [
+    "n >= 1",
+    "probability measure with a log-concave density, permitting convex bounded support",
+    "mean zero and covariance I_n",
+    "locally Lipschitz f with finite variance and Dirichlet energy"
+  ],
+  "primary_sources": [
+    {
+      "id": "arxiv:2603.29571v1",
+      "url": "https://arxiv.org/html/2603.29571v1",
+      "title": "Randomstrasse101: Open Problems of 2025",
+      "location": "Entry 13, Conjecture 30; covariance-scaled Cheeger formulation and Poincare discussion",
+      "verification": "Exact original target recovered. The printed halfspace expression has a dummy-variable inconsistency; this packet uses the unambiguous covariance formulation."
+    },
+    {
+      "id": "arxiv:2610.05474v1",
+      "url": "https://arxiv.org/html/2610.05474v1",
+      "authors": [
+        "Pierre Bizeul",
+        "Boaz Klartag",
+        "Joseph Lehec"
+      ],
+      "submitted": "2026-10-04",
+      "location": "Definition (5), Theorem 1.1 and equivalence (6)",
+      "verification": "Exact theorem statement read; full proof not audited",
+      "claim": "Universal Poincare bound for all isotropic log-concave measures",
+      "short_quote": "There exists a universal constant C>0"
+    },
+    {
+      "id": "arxiv:2610.01447v2",
+      "url": "https://arxiv.org/html/2610.01447v2",
+      "authors": [
+        "Zhao Song",
+        "Xinzhi Zhang"
+      ],
+      "version_date": "2026-10-04",
+      "location": "Theorem 1.1 and Section 1.2",
+      "verification": "Exact theorem statement read; full proof not audited",
+      "claim": "Universal Poincare bound, including nonsmooth bounded-support measures"
+    },
+    {
+      "id": "arxiv:2610.07728",
+      "url": "https://arxiv.org/abs/2610.07728",
+      "authors": [
+        "Krishnakumar Balasubramanian",
+        "Shiva Kasiviswanathan"
+      ],
+      "submitted": "2026-10-06",
+      "verification": "Primary abstract accessed; proof not audited",
+      "claim": "Dimension-free Poincare inequality"
+    }
+  ],
+  "local_record": {
+    "ranking": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:548",
+    "dated_status": "attempted_un",
+    "exact_intake_record": "Recovered from population/nodes.jsonl:7594 (problem) and :9049 (prior Gaussian attempt); no literal P0017 in the original Claude intake problems.jsonl."
+  },
+  "owner_solved_retired_check": "Targeted P0017 lookup in the required H/I attempts, Lean ranking, Team O board and population export found a prior Gaussian special case and no certified owner solved/retired receipt. This is not an exhaustive absence certificate; no novelty claim.",
+  "novelty_claim": false,
+  "research_scope": "Independent conditional-variance route and exact obstruction; no claim to solve an open problem.",
+  "cheeger_target": "There exists a numerical c>0 independent of dimension and measure such that every full-dimensional log-concave probability law mu with covariance Sigma has h_mu>=c/sqrt(||Sigma||_op). Here h_mu is the infimum of mu^+(A)/min(mu(A),1-mu(A)) over measurable A of mass strictly between zero and one, using outer Euclidean Minkowski boundary content mu^+(A)=liminf_(epsilon down to 0) [mu(A+epsilon B_2)-mu(A)]/epsilon. For isotropic laws, Sigma=I.",
+  "formal_check": {
+    "performed": false,
+    "theorem": null,
+    "trusted_axioms": null,
+    "placeholder_proof_claimed": false
+  }
+}

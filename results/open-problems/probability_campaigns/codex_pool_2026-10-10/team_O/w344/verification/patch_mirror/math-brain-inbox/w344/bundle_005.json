@@ -1,0 +1,63 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w344",
+  "bundle_slug": "w344-open-problem-c0004-checked-partials-20261010",
+  "entries": [
+    {
+      "key": "dgff-maximum-joint-density-source-scope",
+      "namespace": "probability.gaussian_fields",
+      "logical_name": "dgff-maximum-joint-density-source-scope",
+      "kind": "concept",
+      "title": "DGFF Problem 16.4 concerns joint maximum position and height density",
+      "statement": "Source correction: Biskup arXiv:1712.09972v4, Theorem 12.19, equation (12.86), and Problem 16.4 concern the joint density rho^D(x,t) in maximizer position x and centered maximum height t. At fixed t its measure in position is A -> exp(-alpha t) E[Z^D(A)exp(-alpha^-1 exp(-alpha t)Z^D(D))]. Integrating over t gives the related marginal E[Z^D(A)/Z^D(D)] when the total mass is almost surely finite and positive. A marginal-only intake statement narrows the primary target; neither explicit joint nor marginal density is resolved by this correction.",
+      "proof_text": null,
+      "assumptions": [
+        "Positive finite total extremal mass for the marginal integration identity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:dgff-maximum-joint-density-source-scope",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; source-backed scope correction; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "Source correction: Biskup arXiv:1712.09972v4, Theorem 12.19, equation (12.86), and Problem 16.4 concern the joint density rho^D(x,t) in maximizer"
+      }
+    },
+    {
+      "key": "zero-covariance-normalized-random-measure-criterion",
+      "namespace": "probability.random_measures",
+      "logical_name": "zero-covariance-normalized-random-measure-criterion",
+      "kind": "lemma",
+      "title": "Zero covariance rather than independence characterizes normalized-average equality",
+      "statement": "Let Z be a random finite measure on D with total mass T>0 almost surely and 0<E[T]<infinity. Put U_A=Z(A)/T. Then E[Z(A)]/E[T]-E[U_A]=Cov(T,U_A)/E[T] for each measurable A. Consequently mean normalized measure equals normalized mean measure exactly when Cov(T,U_A)=0 for every A. Independence of total mass and normalized measure is sufficient but unnecessary: three equally likely outcomes T=(1,2,3), U_first=(1,0,1) on two sites give both averages (2/3,1/3), yet T and the normalized measure are dependent. No integrability or independence claim for DGFF extremal mass is inferred from this finite example.",
+      "proof_text": "Biskup, arXiv:1712.09972v4 (17 August 2019), Theorem 12.19, equation (12.86), and Problem 16.4, request the joint density rho^D(x,t) of the rescaled maximizer location and centered maximum height. The intake instead states a marginal location-density problem. The source's measure at height t is\n\n    A -> e^(-alpha t) E[Z^D(A) exp(-alpha^-1 e^(-alpha t) Z^D(D))].\n\nIts density in x, combined with dt, is the joint law. Integrating in t yields E[Z^D(A)/Z^D(D)], assuming 0<Z^D(D)<infinity almost surely. Indeed, conditional on Z, substitute s=alpha^-1 e^(-alpha t); the integral becomes Z(A) int_0^infinity exp(-s Z(D)) ds=Z(A)/Z(D). This explains the related marginal question without replacing the actual joint-density target. The cached paper supplies no explicit general answer; no current-status certificate is claimed.\n\nThe intake's C0004-A002 also falsely says equality of normalized averages requires independence. For a general random finite measure Z with T=Z(D)>0 and 0<E T<infinity, write U_A=Z(A)/T. Then\n\n    E[Z(A)]/E[T] - E[U_A] = Cov(T,U_A)/E[T].\n\nEquality for every measurable A is exactly zero covariance for every such U_A. Independence is sufficient but unnecessary. On two sites, take three equally likely outcomes with T=(1,2,3), U_{first}=(1,0,1), and Z=T(U_{first},1-U_{first}). Both averaging procedures give (2/3,1/3), but P(T=2,U_{first}=1)=0 whereas P(T=2)P(U_{first}=1)=2/9. This is an exact counterexample to the necessity direction in A002. It does not establish equality or inequality for the actual DGFF extremal measure; integrability must be checked before using normalized intensity.\n\nFraction arithmetic verifies the example. C0004Counterexample.lean formalizes only its denominator-cleared arithmetic. lean_check_receipt.json records SETUP_UNVERIFIED: Compute status is distressed or unknown. It is not Lean-checked, and no admission setting was changed.",
+      "assumptions": [
+        "Positive total mass",
+        "Finite positive mean total mass",
+        "0<=U_A<=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:zero-covariance-normalized-random-measure-criterion",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; proof; Lean unavailable; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "Let Z be a random finite measure on D with total mass T>0 almost surely and 0<E[T]<infinity. Put"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "dgff-maximum-joint-density-source-scope",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0004-explicit-density-of-the-position-of-the-dgff-maximum",
+      "kind": "cites",
+      "rationale": "New end: \"Source correction: Biskup arXiv:1712.09972v4, Theorem 12.19, equation (12.86), and Problem 16.4 concern the joint density rho^D(x,t) in maximizer\"; existing end: \"Determine explicitly, or characterise by a PDE with a unique solution, the density rho^D of the limit law\". This result addresses or audits C0004; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    },
+    {
+      "from_key": "zero-covariance-normalized-random-measure-criterion",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0004-explicit-density-of-the-position-of-the-dgff-maximum",
+      "kind": "analogous_to",
+      "rationale": "New end: \"Let Z be a random finite measure on D with total mass T>0 almost surely and 0<E[T]<infinity. Put\"; existing end: \"Determine explicitly, or characterise by a PDE with a unique solution, the density rho^D of the limit law\". This result addresses or audits C0004; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+\section{Counterexamples to stronger assertions and open cases}\label{sec:limitations}
+
+The following counterexamples delimit several stronger intermediate estimates. None is a counterexample to Conjecture~\ref{conj:main}.
+
+\subsection{A bounded joint density cannot replace a product law}
+
+\begin{proposition}[A thin quadratic shell]\label{lim:shell}
+There is no bound for the density of a nondegenerate three-variable quadratic that depends only on an upper bound for the joint input density and a lower bound for the three eigenvalue moduli.
+\end{proposition}
+\begin{proof}
+Fix $0<\delta<1$ and put $R=e^{1/\delta}$. In the change of variables
+\[
+ x_1=r,\quad x_3=z,\quad x_2=(t-z^2)/r,
+ \qquad 1<r<R,\quad0<z<1,\quad0<t<\delta,
+\]
+the Jacobian is $1/r$. The resulting region $E_\delta\subset\mathbb R^3$ has volume $\delta\log R=1$. Give $X$ the density $\mathbf1_{E_\delta}\le1$. Then $x_1x_2+x_3^2=t$ is uniform on $(0,\delta)$. The quadratic
+\[
+ Q=2X_1X_2+2X_3^2
+\]
+has matrix eigenvalues $1,-1,2$, yet its density equals $1/(2\delta)$ on $(0,2\delta)$. This tends to infinity. The coordinates of $X$ are dependent.
+\end{proof}
+
+\begin{example}[Conditional densities can be arbitrarily high]\label{lim:conditional}
+Let $X_1,X_2$ be independent uniforms on $(0,1)$, and set $L=(X_1+X_2)/\sqrt2$, $V=(X_1-X_2)/\sqrt2$. For $0<\ell<1/\sqrt2$, the conditional law of $V$ given $L=\ell$ is uniform on $(-\ell,\ell)$ and has density $1/(2\ell)$. The marginal density of $L$ there is $2\ell$. Thus the conditional density norm is unbounded, and its $p$th moment is infinite for every $p\ge2$. Both coordinates before rotation have density one. An unconditional projection theorem therefore cannot be substituted for a conditional-density estimate.
+\end{example}
+
+\subsection{Uniform pointwise Fourier decay is too strong}
+
+\begin{proposition}\label{lim:pointwise}
+Even for $Q=X_1^2+X_2^2+X_3^2$, there is no function $b(t)\to0$ as $t\to\infty$ such that $|\mathbb E e^{itQ}|\le b(t)$ uniformly over all independent coordinate densities bounded by one.
+\end{proposition}
+\begin{proof}
+Fix $t>0$ and $0<\eta<\pi/2$. The set
+\[
+ F=\{x>0:\operatorname{dist}(tx^2,2\pi\mathbb Z)<\eta\}
+\]
+has infinite measure. Indeed, its intervals near $\sqrt{2\pi j/t}$ have lengths comparable, for large $j$, to $\eta/(\sqrt t\sqrt j)$, whose sum diverges. Choose a measurable subset $E\subset F$ of measure one, and take all three coordinate densities equal to $\mathbf1_E$. Each expectation $\mathbb E e^{itX_i^2}$ has real part at least $\cos\eta$, hence modulus at least $\cos\eta$. Independence gives $|\mathbb E e^{itQ}|\ge(\cos\eta)^3$. Since $\eta$ is arbitrary, the supremum over admissible laws equals one for every fixed $t>0$. The laws may depend on $t$. This is consistent with the Riemann--Lebesgue lemma for each fixed law and with the bounded density in Theorem~\ref{geom:diagonal}.
+\end{proof}
+
+\subsection{An arbitrarily small aligned quadratic phase can destroy an integral bound}
+
+\begin{theorem}[Aligned-twist obstruction]\label{lim:twist}
+Let $p=(1,1)/\sqrt2$ and fix $\kappa\ne0$. Among independent coordinate densities $f_1,f_2\le1$, the quantity
+\[
+ J_\kappa=\int_{\mathbb R}\left|\mathbb E
+ e^{iu\langle p,X\rangle+i\kappa\langle p,X\rangle^2}\right|\,du
+\]
+is unbounded. In contrast, $J_0\le2\pi\sqrt2$ for every such pair. Thus small operator norm of a quadratic phase is insufficient for a law-uniform bound on this Fourier integral, even when both frame leverages equal $1/2$.
+\end{theorem}
+\begin{proof}
+For an integer $N\ge2$, set $\sigma=1/N$. Choose a spacing $D>0$ sufficiently large below, and take
+\[
+ f_1(x)=\frac1N\sum_{j=0}^{N-1}\gamma_\sigma(x-\sqrt2Dj),
+ \qquad
+ f_2(x)=\frac1N\sum_{k=0}^{N-1}\gamma_\sigma(x-\sqrt2DNk),
+\]
+where $\gamma_\sigma$ is the centered Gaussian density of variance $\sigma^2$. Each isolated bump has height $1/\sqrt{2\pi}<1$. The tails of other bumps converge uniformly to zero as $D$ grows. More explicitly, choose the nearest center: all other centers are at least $(m-1/2)\sqrt2D$ away for integers $m\ge1$, so their contribution is bounded by a convergent Gaussian tail series tending to zero. Thus $f_1,f_2\le1$ for sufficiently large $D$.
+
+The linear statistic $L=\langle p,X\rangle$ is an equally weighted mixture of $N^2$ Gaussians with variance $\sigma^2$ and distinct means $m_{jk}=D(j+Nk)$. For one component of mean $m$, completing the square in its Gaussian integral gives
+\[
+ |T_m(u)|=(1+4\kappa^2\sigma^4)^{-1/4}
+ \exp\left[-\frac{\sigma^2(u+2\kappa m)^2}
+ {2(1+4\kappa^2\sigma^4)}\right].
+\]
+Its $L^1$ norm is
+\[
+ A_N=\frac{\sqrt{2\pi}}\sigma(1+4\kappa^2\sigma^4)^{1/4}
+ \ge\sqrt{2\pi}N.
+\]
+The frequency centers are separated by $2|\kappa|D$. Choose $D$ so large that the disjoint windows
+$U_m=\{|u+2\kappa m|<|\kappa|D\}$ each contain at least $(1-\eta)A_N$ of their own component, with a fixed $\eta<1/4$. The reverse triangle inequality on these windows yields
+\[
+ J_\kappa\ge\frac1{N^2}\sum_m
+ \left(\int_{U_m}|T_m|-\int_{U_m^c}|T_m|\right)
+ \ge(1-2\eta)A_N.
+\]
+To see the first inequality, sum the cross-component errors over disjoint windows: for each component, their union is contained in the complement of its own window. The lower bound grows linearly with $N$.
+
+For $\kappa=0$, independence and Cauchy--Schwarz give
+\[
+ J_0=\sqrt2\int|\widehat f_1(v)\widehat f_2(v)|\,dv
+ \le\sqrt2\,\|\widehat f_1\|_2\|\widehat f_2\|_2
+ \le2\pi\sqrt2,
+\]
+by Plancherel and $\int f_i^2\le\int f_i=1$.
+\end{proof}
+
+The input laws in this construction consist of many narrow separated components. Their final density caps arise from separation of component locations. They need not obey the average component-peak condition in the Gaussian-mixture theorem of Section~\ref{sec:hubs}. That theorem and the present obstruction have different hypotheses.
+
+Two further failures are proved in the supplement: Proposition~\ref{supp:interpolation-obstruction} shows that a bounded $L^3$ density norm and a square-root interval profile do not imply a bounded density, and Proposition~\ref{supp:moving-ridge} shows that an independent hub together with a bounded joint density for a dependent triple can still leave an unbounded output density. Neither provides an admissible product-law counterexample.
+
+\subsection{An independent-block estimate for separated phases}
+
+\begin{lemma}[Phase-weighted projection]\label{lim:phase-L2}
+Let $Z=T X$ be a rank-$k$ linear image of a product vector, and let $\psi(X)$ be any real measurable phase. Then
+\[
+ \int_{\mathbb R^k}|\mathbb E e^{i\langle u,Z\rangle+i\psi(X)}|^2\,du
+ \le(2\pi)^k\|p_Z\|_\infty
+ \le(2\pi)^k2^{k/2}\det(TT^T)^{-1/2}.
+\]
+\end{lemma}
+\begin{proof}
+The complex pushforward has density $m(z)=\mathbb E[e^{i\psi(X)}\mid Z=z]p_Z(z)$, so $|m|\le p_Z$ and $\int|m|^2\le\|p_Z\|_\infty$. Apply Plancherel and the projection theorem of \citet{LPP2016}. This uses a bound on the complex pushforward, not on a conditional input density.
+\end{proof}
+
+\begin{theorem}[Two independent blocks]\label{lim:block-phase}
+Let the coordinates split as $K\sqcup I\sqcup J$, and let $P$ be an $n\times k$ matrix. Put $G_K=P_K^TP_K$ and $G_I=P_I^TP_I$, and assume both are positive definite. Let $E$ be any symmetric matrix with $E_{KI}=0$. Then, allowing also an arbitrary extra phase depending on $X_J$,
+\[
+ \int_{\mathbb R^k}|\mathbb E e^{i\langle Pu,X\rangle+iX^TEX+i\psi(X_J)}|\,du
+ \le(2\pi)^k2^{k/2}(\det G_K\det G_I)^{-1/4}.
+\]
+\end{theorem}
+\begin{proof}
+Condition on $X_J$. The phase splits into one function of $X_K$ and one function of $X_I$, together with a constant. Independence factors the conditional expectation. Apply Cauchy--Schwarz in $u$ and Lemma~\ref{lim:phase-L2} to each factor. The bound is independent of the frozen coordinates, so the triangle inequality and Fubini finish the proof.
+\end{proof}
+
+\begin{corollary}\label{lim:block-quadratic}
+Let $U$ have three orthonormal columns, let $\Lambda=\operatorname{diag}(\lambda_1,\lambda_2,\lambda_3)$ be invertible, and let $A=U\Lambda U^T+B$. If a split $K\sqcup I\sqcup J$ has $B_{KI}=0$ and positive definite $G_K=U_K^TU_K$, $G_I=U_I^TU_I$, then every affine perturbation satisfies
+\[
+ \|p_Q\|_\infty\le6|\lambda_1\lambda_2\lambda_3|^{-1/3}
+ (\det G_K\det G_I)^{-1/6}.
+\]
+\end{corollary}
+\begin{proof}
+Fresnel-linearize the three displayed squares, using the regularization justified in Theorem~\ref{four:fresnel}. The preceding theorem, with the phase $tX^TBX$ and the affine phase absorbed into its coordinate blocks, gives
+\[
+ |\varphi_Q(t)|\le(2\pi)^{3/2}|\det\Lambda|^{-1/2}
+ (\det G_K\det G_I)^{-1/4}|t|^{-3/2}.
+\]
+Integrating its minimum with one gives $(3/\pi)$ times the $2/3$ power of the displayed coefficient, which is the stated bound. Arbitrary within-block quadratic terms are permitted, but the cross-block zero condition is exact.
+\end{proof}
+
+\subsection{The remaining uniform estimate}
+
+A normalized family illustrating the remaining difficulty is
+\begin{equation}\label{eq:remaining-core}
+ Q_\varepsilon=2X_0L+V^2+2\varepsilon LP,
+\end{equation}
+where $X_0$ is an independent physical coordinate and $L,V,P$ are orthonormal linear statistics of the other coordinates with a spread frame. In the orthonormal basis formed by the hub coordinate and these three vectors, its matrix is
+\[
+ \begin{pmatrix}
+ 0&1&0&0\\1&0&0&\varepsilon\\0&0&1&0\\0&\varepsilon&0&0
+ \end{pmatrix}.
+\]
+The characteristic polynomial is $z(z-1)(z^2-1-\varepsilon^2)$, so its three nonzero eigenvalues are $1,\sqrt{1+\varepsilon^2},-\sqrt{1+\varepsilon^2}$. The third eigenvalue modulus does not deteriorate when $\varepsilon\downarrow0$.
+
+For $\varepsilon=0$, the independent-hub/transverse-square argument gives a uniform bound. For every fixed nonzero $\varepsilon$, Fourier decay gives a bounded density. The bounds for arbitrary cap-one coordinate laws deteriorate as $\varepsilon\downarrow0$, even after symmetric-window recovery. The Gaussian-mixture results give uniform bounds under the additional hypotheses in Section~\ref{sec:hubs}.
+
+An estimate for \eqref{eq:remaining-core} alone does not cover the affine, hub-diagonal, and light-block terms that arise in more general matrices. In addition, the sufficient conditions above do not imply that every no-pivot matrix has a coordinate decomposition satisfying one of them.
+
+To deduce the unrestricted conjecture from the results above, one would need a bound for the uncovered analytic cases and a quantitative decomposition covering all admissible matrices. A uniform estimate for the adapted-hub functional, extended to the additional quadratic terms, could address the analytic cases. The constants must be independent of dimension and of a vanishing leakage parameter. No counterexample to the unrestricted conjecture follows from the results above.

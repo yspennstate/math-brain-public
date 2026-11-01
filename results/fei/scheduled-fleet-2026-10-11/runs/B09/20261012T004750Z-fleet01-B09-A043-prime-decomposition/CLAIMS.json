@@ -1,0 +1,60 @@
+{
+  "schema": "fei-claims/2",
+  "primary_packet_id": "A043",
+  "claims": [
+    {
+      "claim_id": "B09-A043-PRIME-DECOMPOSITION",
+      "version": 1,
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "Every finite Boolean function admits a terminating rooted composition tree whose internal nodes are irreducible under honest nontrivial disjoint composition and whose leaves are constants or signed literals. Every branch has depth at most n-1.",
+      "hypotheses": [
+        "inessential variables are deleted before factorization",
+        "each factorization partitions the essential variables",
+        "each child and outer port is essential",
+        "nontrivial means 2<=k<n"
+      ],
+      "proof_source": "PRIME_GATE_DEFINITION.tex; REPORT.md Section 2",
+      "full_fei_status": "OPEN",
+      "review_records": []
+    },
+    {
+      "claim_id": "B09-A043-PRIME-NONCANALIZING",
+      "version": 1,
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "Every essential disjoint-prime Boolean gate of arity at least three is non-canalizing.",
+      "proof_source": "PRIME_GATE_DEFINITION.tex; exhaustive n=3,4 control in CHECK.py/CHECK.out",
+      "full_fei_status": "OPEN",
+      "review_records": []
+    },
+    {
+      "claim_id": "B09-A043-PRIME-POTENTIAL-EQUIVALENCE",
+      "version": 1,
+      "status": "AUTHOR_PROVED_CONDITIONAL_EQUIVALENCE_PENDING_INDEPENDENT_REVIEW",
+      "statement": "Uniform FEI holds with constant C iff there is one symmetric nonnegative dyadic potential Gamma with Gamma(1/2)<=C satisfying the exact gate-potential inequality for every honest disjoint-prime gate at every interior dyadic bias vector. The implication preserves C with no depth or fan-in loss.",
+      "hypotheses": [
+        "ordinary squared-Fourier entropy and total influence in bits",
+        "deterministic ports are contracted",
+        "the same Gamma is used at every prime arity",
+        "all inherited biases are retained"
+      ],
+      "proof_source": "PRIME_ENDPOINT_IMPLICATION.md; REPORT.md Sections 3-4",
+      "dependencies": [
+        {
+          "claim": "source-exact disjoint product-measure Fourier composition and dyadic gate potential",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "10bd8f25e7f93509b1ccb4daf9d8999fcb776f98",
+          "path": "reports/fei-2026-10-11/source_material/reductions/paper/biased.tex",
+          "blob": "b620357b573b2906e8cb2df5966576c27ce3ffcd"
+        }
+      ],
+      "scope_exclusions": [
+        "not a proof that the prime inequality holds",
+        "not an all-real-bias extension without a continuous potential",
+        "not valid for repeated or shared-variable children"
+      ],
+      "full_fei_status": "OPEN",
+      "first_unproved_line": "Construct one arity-uniform potential satisfying the prime inequality for every non-canalizing prime gate and every inherited dyadic bias, or find a rigorous prime obstruction.",
+      "review_records": []
+    }
+  ]
+}

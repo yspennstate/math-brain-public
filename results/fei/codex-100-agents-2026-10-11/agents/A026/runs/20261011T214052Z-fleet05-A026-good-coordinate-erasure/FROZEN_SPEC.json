@@ -1,0 +1,12 @@
+{
+  "helper_version": "A026-edge-amplitude-v1",
+  "actual_Boolean_family": "all sign truth tables on n=1,2,3,4",
+  "parameter_domain": [1,2,3,4],
+  "case_count": 33034,
+  "symmetry": "global sign complement: fix f(0)=+1; B_i and I_i unchanged",
+  "arithmetic": "integer Walsh coefficients; Fraction ratios; no entropy approximations used in certificates",
+  "memory_estimate_MB": 20,
+  "maximum_runtime_seconds": 60,
+  "hypothesis": "some relevant i has 2 sum_T |W(T) W(T+i)| <= K sum_T W(T+i)^2",
+  "note": "Find the maximum minimum exact ratio, then assess whether the amplitude proxy has an analytic obstruction; no automatic n increase."
+}

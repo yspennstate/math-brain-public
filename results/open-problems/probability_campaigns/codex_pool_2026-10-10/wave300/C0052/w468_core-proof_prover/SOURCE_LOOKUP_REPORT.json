@@ -1,0 +1,65 @@
+{
+  "query": "C0052 or Ising titles involving triviality/Gaussianity/scaling",
+  "stores": [
+    {
+      "store": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+      "mode": "ro",
+      "matches": [
+        {
+          "id": "claim_8155eb9223844b2b91e0bc3b4ae43a49",
+          "kind": "claim",
+          "title": "FPP chi=1/3 campaign, 2026-08-15 fire 5: rho_n = Q_n^2/D_n is NOT a target of the reduced engine, and the first measurement of (L2'). TARGET-MAP CORRECTION: CRUX 9.2's consequence reads verbatim 'Under (L1)+(L2), CONSTANT-strength chaos delivers the halving. No envelope, no fluctuation-scale concentration, no value of chi is used anywhere', and 9.3 calls section 2's eps <~ log^4 n/n^2 'an artifact of routing the fourth moment through a lossy envelope, not an intrinsic demand of the engine', with 'the wall persists INSIDE (L1)'. So the honest ledger is 9.5's: (L1') is THE WALL, (L2') a scale-free shape condition, (L3) worth exactly one power of n, and eps <= 1/(16 kappa4 beta^2 C_occ) is a CONSTANT. This confirms rather than disturbs the campaign's other 08-15 findings - the fire-1 ratio R = D_Mn/D_n, fire-3's constant-A doubling and (L1') are one object. It STRIKES two of my own sentences: 'the wall is rho alone' (fire 2) and 'the remaining target is rho = O(1), i.e. H1+H3' (fire 4). FIRST MEASUREMENT OF (L2'), the one reduction condition that is not the wall and that nobody had examined; it is scale-free, which is why a small lattice can speak to it at all. U[1,2] on Z^2, exact Dijkstra, zero boundary escapes: axis-block conditional kurtosis medians 2.886/2.973/2.927 at N=16/24/32, flat, at the Gaussian value; power diagnostic shows m4 bulk-carried (top-1 share of sum d^4 only 0.015-0.035, bootstrap 5-95% inside [2.72,3.22]). DEFLATED BY ITS OWN ARTIFACT TEST: rerouting is common and rising (fraction 0.170 at occupation 3.94 edges to 0.388 at 6.04, carrying 15-36 pct of E[Delta^2], kappa4 = 3.02 within the rerouted subpopulation) so it is not a pure no-reroute CLT - but the geodesic spends only 4 to 6 EDGES inside these blocks, and a fixed-length sum of L iid uniforms has kurtosis exactly 3 - (6/5)/L (2.70 at L=4, 2.80 at L=6), so every measured value sits within ~0.1-0.2 of trivial arithmetic. CONCLUSION: (L2') is NOT refuted (a refutation would have killed the 9.5 reduction outright) and is NOT supported either at this block size. RECORDED TRAP: kappa4 ~ 3 invites '(L2') follows from a CLT', but convergence in distribution gives fourth-moment convergence only under uniform integrability of Delta^4, which IS the tail control (L2') asks for - the CLT renames the difficulty. NEXT: bigger blocks before more reps; then the engine's aspect ratio W ~ sqrt(nQ); then 10x conditional samples on one axis block. chi = 1/3 UNMOVED.",
+          "body_excerpt": "iid U[1,2] edge weights on Z^2 with exact Dijkstra geodesics, N in {16,24,32}, square blocks - a regime 16 orders of magnitude below the engine's own threshold l_0 ~ 1e18, so the measurement bounds nothing asymptotic"
+        },
+        {
+          "id": "claim_db355f188daf0592950298d6e3b23e5f2b7e6eb0f3a21694083ad47fdadd0048",
+          "kind": "claim",
+          "title": "Non-triviality of the 3D Ising scaling limit reduces to a uniform lower bound on the intersection probability of two random currents",
+          "body_excerpt": "PRIVATE REDUCTION, author-recorded. By Aizenman's random-current identity the four-point Ursell function is expressed through the probability that the currents from x_1 to x_2 and from x_3 to x_4 share a cluster; non-triviality (nonvanishing renormalised coupling) is equivalent to inf over scales L of P(two independent random-current clusters at scale L intersect) > 0. The 4D case is now trivial (Aizenman-Duminil-Copin 2021); in 3D the heuristic is favourable because the current-cluster dimension (5 - eta)/2 = 2.48 exceeds 3/2, so independent fractals of that dimension would intersect with positive probability. A second-moment argument on the number of intersection points reduces the uniform lower bound to (a) a two-point function lower bound with exponent 2 - eps in d = 3 (Duminil-Copin's Conjecture 5, PIMS lectures) and (b) a variance bound on the intersection count, which involves six-point correlations beyond the Lebowitz inequality. Both inputs are open; (b) is the genuinely new obligation.\nNearest-neighbour Ising model on Z^3 at beta_c\nRandom-current representation and switching lemma"
+        },
+        {
+          "id": "claim_a94609c488a771db849aa4652f16d72ef28bd7936a30360b90d31bd51c4b0481",
+          "kind": "claim",
+          "title": "Open problem: Scaling limit of the current-minimising path in the DGFF network",
+          "body_excerpt": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove that the joint law of the DGFF and the random path P minimising the effective-resistance energy between two boundary points admits a non-degenerate scaling limit. Source: Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes, Problem 16.15, p. 228.\nPosed in Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes\nCurrent status unverified as of 2026-09-07"
+        },
+        {
+          "id": "claim_93dc043f691fa62549866c90e84e26aa836d69164fd798c69ba9c0dc431b1fc0",
+          "kind": "claim",
+          "title": "Open problem: Non-triviality of the scaling limit of the three-dimensional Ising model",
+          "body_excerpt": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove that the three-dimensional Ising model is non-trivial: its scaling limit is not a Gaussian field (the renormalised coupling constant does not vanish). Source: Duminil-Copin: Lectures on the Ising and Potts models on the hypercubic lattice, PIMS 2017, Conjecture 6, p. 94. Status notes: The second half of the source's Conjecture 6 (triviality in d = 4) was proved by Aizenman and Duminil-Copin, 'Marginal triviality of the scaling limits of critical 4D Ising and phi^4 models', Ann. of Math. 194 (2021) 163-235 (arXiv 1912.07973); the d = 3 non-triviality half remains open per the bounded search of 2026-09-07.\nPosed in Duminil-Copin: Lectures on the Ising and Potts models on the hypercubic lattice, PIMS 2017\nCurrent status unverified as of 2026-09-07"
+        },
+        {
+          "id": "claim_cd3dd582efb889d33437bf5723604242e270b44497f4cc0d9a8651d212ee6d24",
+          "kind": "claim",
+          "title": "Attempt on Scaling limit of the current-minimising path in the DGFF network",
+          "body_excerpt": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Tightness of the path via the exponential metric (Liouville first passage percolation) comparison. Result: The energy-minimising path between two points concentrates on paths of small total resistance, i.e. on near-geodesics of the discrete metric with edge weights e^{beta h}; this is the Liouville first passage percolation metric, whose scaling limit (the LQG metric) exists for beta below the critical value by Ding-Dubedat-Dunlap-Falconet and Gwynne-Miller. Tightness of P is then plausible via geodesic tightness in that metric, but P is not a geodesic: the current spreads over many paths and the minimiser of the quadratic energy is a flow, not a path; the notes' 'path' is the sampled path of the current. Its scaling limit would be a random path sampled from the limiting current, which requires the continuum current on LQG, an object not yet constructed. I record the reduction: existence of the limit of P is equivalent to existence of the continuum electrical current between boundary points on the LQG surface. Obstruction: No continuum electrical current on LQG has been constructed; the path is a functional of it.\nRefers to the open problem node open-problem-c0015-scaling-limit-of-the-current-minimising-path-in-the-dgff-network\nNo independent review; result status attempted_unsolved"
+        },
+        {
+          "id": "claim_37054e50510de802a0e4ad1311fd8c397b772396f3754db4d36d9b3d24f9b106",
+          "kind": "claim",
+          "title": "Attempt on Improved two-point function bounds for the critical three-dimensional Ising model",
+          "body_excerpt": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Check what the random-current and infrared bounds give and where each half of the conjecture sits. Result: Upper bound: the infrared bound gives <sigma_0 sigma_x> <= C |x|^{-(d-2)} = C|x|^{-1} in d = 3, and improving to |x|^{-(1+eps)} is the statement eta > 0 (anomalous dimension), known numerically eta = 0.036; an argument would need to show the two-point function is strictly smaller than the Gaussian one in a scale-invariant way, e.g. via the random-current intersection probabilities (the same quantity that gives non-triviality, C0052): if two independent currents from 0 to x and from y to z intersect with probability bounded below uniformly, one gets a strict improvement of Simon-Lieb at every scale which iterates to a power gain. Lower bound: Simon-Lieb / Lebowitz give <sigma_0 sigma_x> >= c |x|^{-(d-1)} = c|x|^{-2} in d = 3 (the source's Theorem 4.8), and improving the exponent below 2 needs a lower bound on the two-point function from the connectivity of the random-current clusters better than the trivial one-path bound. I verified that the one-path bound cannot give better than d - 1 because the number of self-avoiding paths of length n weighted by tanh(beta_c)^n is exactly balanced at criticality, so the improvement must come from multi-path (cluster) contributions. No quantitative result. Obstruction: Both halves need scale-invariant intersection estimates for random currents in d = 3, which are not available.\nRefers to the open problem node open-problem-c0051-improved-two-point-function-bounds-for-the-critical-three-dimensional\nNo independent review; result status attempted_unsolved"
+        }
+      ],
+      "status": "bounded targeted lookup completed",
+      "seconds": 0.06337079999502748
+    },
+    {
+      "store": "~\\math-research-brain\\local\\audits\\jmlr-two-paper-zip-audit-v1\\mathbrain.sqlite3",
+      "mode": "ro",
+      "matches": [],
+      "status": "bounded targeted lookup completed",
+      "seconds": 0.0066500999964773655
+    },
+    {
+      "store": "~\\math-research-brain\\local\\audits\\jmlr-two-paper-zip-audit-v1\\mathbrain_v2.sqlite3",
+      "mode": "ro",
+      "matches": [],
+      "status": "bounded targeted lookup completed",
+      "seconds": 0.0039709999691694975
+    }
+  ],
+  "current_openness": "UNKNOWN",
+  "scope": "Bounded lookup only; no exhaustive novelty or retired-work certificate."
+}

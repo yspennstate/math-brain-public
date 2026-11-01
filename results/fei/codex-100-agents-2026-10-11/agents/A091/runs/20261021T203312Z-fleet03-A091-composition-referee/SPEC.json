@@ -1,0 +1,12 @@
+{
+  "helper_version": "A091-stage17-private-before-Y-v1",
+  "family": "F=(1-Y)G+Y[A*u+(1-A)*(B*v+(1-B)*G)], disjoint physical blocks; one actual G",
+  "domain": "A point width r in {1,2,3}; B all 16 two-bit Boolean events; u,v,G all 4 one-bit sign tables; supplemental signed AND2 cores and actual coordinate restrictions",
+  "case_count": "pilot 2; main 3072 base plus 14 restricted-core cases = 3086",
+  "symmetry": "none; constants and both signs retained",
+  "arithmetic": "integer FWHT; Fraction spectra and edge counts; exact prime-log identities; rational logarithm enclosures from saved stage6 helper",
+  "memory_estimate_mb": 180,
+  "max_runtime_seconds_per_command": 55,
+  "dimension_escalation": false,
+  "claims": "verify grouped exact erasure, actual influence and reserve drift, B<=12*Inf and D<=15*Inf; finite tests do not prove all dimensions"
+}

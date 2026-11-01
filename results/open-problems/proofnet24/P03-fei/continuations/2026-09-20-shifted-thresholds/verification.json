@@ -1,0 +1,86 @@
+{
+  "status": "ALL_CHECKS_PASS",
+  "full_FEI_proved": false,
+  "independent_audit": false,
+  "lean_used": false,
+  "small_thresholds_FWHT_crosschecked": 55,
+  "small_dimensions": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "finite_counterexample_to_constant_two": {
+    "n": 32,
+    "negative_count_cutoff": 21,
+    "ratio_numerator": "2314378859",
+    "ratio_denominator": "1073741824",
+    "ratio_interval": {"lower": "2.155433277599", "upper": "2.155433277600"}
+  },
+  "shifted_threshold_sequence": [
+    {
+      "m": 2, "n": 5, "negative_count_cutoff": 1,
+      "ratio_interval": {"lower": "1.250000000000", "upper": "1.250000000001"},
+      "all_coordinates_identical": true,
+      "partial_low_level_ratios": [
+        {"max_level": 4, "ratio_interval": {"lower": "0.625000000000", "upper": "0.625000000001"}}
+      ],
+      "ratio_numerator_bits": 3, "ratio_denominator_bits": 3
+    },
+    {
+      "m": 4, "n": 17, "negative_count_cutoff": 6,
+      "ratio_interval": {"lower": "1.538757324218", "upper": "1.538757324219"},
+      "all_coordinates_identical": true,
+      "partial_low_level_ratios": [
+        {"max_level": 4, "ratio_interval": {"lower": "0.576049804687", "upper": "0.576049804688"}},
+        {"max_level": 16, "ratio_interval": {"lower": "0.871063232421", "upper": "0.871063232422"}}
+      ],
+      "ratio_numerator_bits": 15, "ratio_denominator_bits": 15
+    },
+    {
+      "m": 8, "n": 65, "negative_count_cutoff": 28,
+      "ratio_interval": {"lower": "1.809236947286", "upper": "1.809236947287"},
+      "all_coordinates_identical": true,
+      "partial_low_level_ratios": [
+        {"max_level": 4, "ratio_interval": {"lower": "0.567358423916", "upper": "0.567358423917"}},
+        {"max_level": 16, "ratio_interval": {"lower": "0.858814222235", "upper": "0.858814222236"}},
+        {"max_level": 64, "ratio_interval": {"lower": "1.130321082971", "upper": "1.130321082972"}}
+      ],
+      "ratio_numerator_bits": 63, "ratio_denominator_bits": 63
+    },
+    {
+      "m": 16, "n": 257, "negative_count_cutoff": 120,
+      "ratio_interval": {"lower": "2.094632518348", "upper": "2.094632518349"},
+      "all_coordinates_identical": true,
+      "partial_low_level_ratios": [
+        {"max_level": 4, "ratio_interval": {"lower": "0.565282796513", "upper": "0.565282796514"}},
+        {"max_level": 16, "ratio_interval": {"lower": "0.858338396258", "upper": "0.858338396259"}},
+        {"max_level": 64, "ratio_interval": {"lower": "1.125874851772", "upper": "1.125874851773"}},
+        {"max_level": 256, "ratio_interval": {"lower": "1.412887789347", "upper": "1.412887789348"}}
+      ],
+      "ratio_numerator_bits": 256, "ratio_denominator_bits": 255
+    },
+    {
+      "m": 32, "n": 1025, "negative_count_cutoff": 496,
+      "ratio_interval": {"lower": "2.374536336226", "upper": "2.374536336227"},
+      "all_coordinates_identical": true,
+      "partial_low_level_ratios": [
+        {"max_level": 4, "ratio_interval": {"lower": "0.564769129541", "upper": "0.564769129542"}},
+        {"max_level": 16, "ratio_interval": {"lower": "0.857636508606", "upper": "0.857636508607"}},
+        {"max_level": 64, "ratio_interval": {"lower": "1.123119548645", "upper": "1.123119548646"}},
+        {"max_level": 256, "ratio_interval": {"lower": "1.413743174541", "upper": "1.413743174542"}}
+      ],
+      "ratio_numerator_bits": 1024, "ratio_denominator_bits": 1023
+    },
+    {
+      "m": 64, "n": 4097, "negative_count_cutoff": 2016,
+      "ratio_interval": {"lower": "2.654791031287", "upper": "2.654791031288"},
+      "all_coordinates_identical": true,
+      "partial_low_level_ratios": [
+        {"max_level": 4, "ratio_interval": {"lower": "0.564641029366", "upper": "0.564641029367"}},
+        {"max_level": 16, "ratio_interval": {"lower": "0.857431861213", "upper": "0.857431861214"}},
+        {"max_level": 64, "ratio_interval": {"lower": "1.123467999243", "upper": "1.123467999244"}},
+        {"max_level": 256, "ratio_interval": {"lower": "1.406730138634", "upper": "1.406730138635"}}
+      ],
+      "ratio_numerator_bits": 4096, "ratio_denominator_bits": 4095
+    }
+  ],
+  "scope": "Exact finite Walsh coefficients, Parseval, directional influence, all-coordinate overlap, and rational intervals. Infinite divergence uses the report proof, not extrapolation.",
+  "script_sha256": "da946d8de5d35c6c8369f5754d4926a7d5a157f696567eb42e74631e262b5fa3",
+  "elapsed_seconds": 0.528
+}

@@ -1,0 +1,29 @@
+ledger_delta:
+  track: NM13-08
+  parent: T07
+  source: "Grimmett-Winkler uniform-all-forests pairwise edge negative correlation"
+  source_status_before: OPEN
+  source_status_after: OPEN
+  complete_all_graph_order_before: 9
+  complete_all_graph_order_after: 9
+  source_counterexample_order_lower_bound_before: 10
+  source_counterexample_order_lower_bound_after: 10
+  mechanism_before: "P6 all-parameter right-path theorem plus order-8 15-state path-tail recurrence"
+  mechanism_after: "explicit A/B/C path-layer coefficient recurrences plus P7 all-parameter sign theorem; 104/110 Newton-positive orbit polynomials and six exact two-corner certificates"
+  restricted_claim: T07-RIGHT-P7-FOREST-PNC-15
+  restricted_status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+  new_class: "F7_{p,r}=K_{3,7p+r} + (p P7 disjoint_union r K1), all p,r>=0, three independent terminals"
+  first_uncovered_member: "F7_{1,0}: n=10, m=27, Z=2334848, min unit Rayleigh gap=413667072"
+  new_decomposition_lemma: "If T_{P_n}=A_n I+B_n N+C_n N^2, N^3=0, then A is annihilated by q=lambda^2-6lambda+2, B by q^2, C by q^3; exact recurrences proved from the 15-state tail operator."
+  orbit_certificate: "110 pair orbits; 104 Newton-positive; six failures exactly same-P7 different-terminal spokes at path distance >=3, all positive by exact two-corner lattice certificates"
+  exceptional_corner_thresholds:
+    "(0,3)": [2, 13]
+    "(0,4)": [8, 55]
+    "(0,5)": [24, 173]
+    "(0,6)": [60, 448]
+    "(1,4)": [3, 16]
+    "(1,5)": [9, 63]
+  exact_checker_result: ALL_EXACT_CHECKS_PASS
+  novelty_priority: UNVERIFIED
+  residual_obstruction: "Arbitrary 3-connected graphs need not have the three-terminal right-path decomposition; the exceptional-spoke corner thresholds grow rapidly with path length, so a uniform-in-length sign theorem is not yet proved."
+  next_attack: "Use the q(lambda)=lambda^2-6lambda+2 spectral recurrence to derive closed recurrences/asymptotics for the six exceptional marked-spoke quartics as path length varies; refute-first before any P8 finite orbit census."

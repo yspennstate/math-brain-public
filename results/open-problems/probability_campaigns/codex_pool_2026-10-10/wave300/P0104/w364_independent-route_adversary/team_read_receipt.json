@@ -1,0 +1,23 @@
+{
+  "mode": "team",
+  "command": [
+    "~\\<private-repo>\\12_cognitive_architecture\\agent_mesh\\team_comm.py",
+    "read",
+    "--as",
+    "w364",
+    "--peek",
+    "--max",
+    "8"
+  ],
+  "elapsed_seconds": 0.12247639999259263,
+  "error": "SystemExit 4",
+  "denied_operations": [
+    {
+      "event": "os.mkdir",
+      "reason": "filesystem mutation disabled during the read call"
+    }
+  ],
+  "output_file": "team_read.txt",
+  "sqlite_connections": "mode=ro plus query_only",
+  "mutations_outside_worker": 0
+}

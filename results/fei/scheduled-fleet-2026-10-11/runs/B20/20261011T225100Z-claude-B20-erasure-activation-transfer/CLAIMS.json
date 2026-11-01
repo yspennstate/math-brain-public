@@ -1,0 +1,196 @@
+[
+ {
+  "claim_id": "B20-ERASURE-TENSOR-ADDITIVE",
+  "version": 1,
+  "exact_statement": "For Boolean f, h on disjoint coordinate sets, B(f (x) h) = B(f) + B(h) and I(f (x) h) = I(f) + I(h).",
+  "hypotheses": [
+   "uniform measure on {-1,1}^n",
+   "f Boolean (+-1 valued)",
+   "B(f) = sum_i H(S_i|S_{-i}) under P_f(S)=fhat(S)^2, bits",
+   "I(f) = total influence, ordinary flip convention"
+  ],
+  "statement_sha256": "3df667565b3d8a1811408e02376f733e9ff43176b5a3d785ff61c58ebae35fe9",
+  "contributors": [
+   "claude-B20"
+  ],
+  "proof_source": "REPORT.md section 1",
+  "proof_dependencies": [
+   "definitions"
+  ],
+  "review_records": [
+   {
+    "reviewer": "A090",
+    "status": "pending"
+   },
+   {
+    "reviewer": "A094",
+    "status": "pending (alternate)"
+   }
+  ],
+  "status": "PROVED",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A096",
+   "A099"
+  ]
+ },
+ {
+  "claim_id": "B20-ACTIVATION-ERASURE-FORMULA",
+  "version": 1,
+  "exact_statement": "For Boolean h on n coordinates and F(x,y) = h(x) if y = y* else 1 on n+k coordinates, with delta = 2^-k and c = 1 - hhat(empty): I(F) = delta (I(h) + k c) and B(F) is given exactly by formula (A) of REPORT.md section 2; in particular B(F) >= delta [B(h) - sum_i phi(hhat(empty)^2, hhat({i})^2)].",
+  "hypotheses": [
+   "uniform measure on {-1,1}^n",
+   "f Boolean (+-1 valued)",
+   "B(f) = sum_i H(S_i|S_{-i}) under P_f(S)=fhat(S)^2, bits",
+   "I(f) = total influence, ordinary flip convention",
+   "k >= 1"
+  ],
+  "statement_sha256": "474250ee4cc99312d8b12f207a9bd79517c2012e48a2dec41f1602e29666384b",
+  "contributors": [
+   "claude-B20"
+  ],
+  "proof_source": "REPORT.md section 2",
+  "proof_dependencies": [
+   "definitions",
+   "Parseval"
+  ],
+  "review_records": [
+   {
+    "reviewer": "A090",
+    "status": "pending"
+   },
+   {
+    "reviewer": "A094",
+    "status": "pending (alternate)"
+   }
+  ],
+  "status": "PROVED",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A097",
+   "A099"
+  ]
+ },
+ {
+  "claim_id": "B20-ROOT-BIAS-ERASURE-PAID",
+  "version": 1,
+  "exact_statement": "For every Boolean h, sum_i phi(hhat(empty)^2, hhat({i})^2) <= (2/(sqrt(e) ln 2)) I(h), where phi(a,b) = (a+b) h2(b/(a+b)) in bits.",
+  "hypotheses": [
+   "uniform measure on {-1,1}^n",
+   "f Boolean (+-1 valued)",
+   "B(f) = sum_i H(S_i|S_{-i}) under P_f(S)=fhat(S)^2, bits",
+   "I(f) = total influence, ordinary flip convention"
+  ],
+  "statement_sha256": "036d1cd72383f787b60c1e3fbf353148a9255f90d867596be086c0921046b978",
+  "contributors": [
+   "claude-B20"
+  ],
+  "proof_source": "REPORT.md section 3",
+  "proof_dependencies": [
+   "Parseval",
+   "|hhat({i})| <= Inf_i"
+  ],
+  "review_records": [
+   {
+    "reviewer": "A090",
+    "status": "pending"
+   },
+   {
+    "reviewer": "A094",
+    "status": "pending (alternate)"
+   }
+  ],
+  "status": "PROVED",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A096",
+   "A099"
+  ]
+ },
+ {
+  "claim_id": "B20-ERASURE-LOW-INFLUENCE-COMPLETE",
+  "version": 1,
+  "exact_statement": "Let s(N) = o(N) and K_E(s) = sup {B(F)/I(F): F Boolean on N coordinates, 0 < I(F) <= 2^(-s(N))}. Then for every Boolean f with I(f) > 0, B(f) <= (K_E(s) + 2/(sqrt(e) ln 2)) I(f); hence K_E <= K_E(s) + 1.7501 and, by C018, C_FEI <= K_E(s) + 4.636.",
+  "hypotheses": [
+   "uniform measure on {-1,1}^n",
+   "f Boolean (+-1 valued)",
+   "B(f) = sum_i H(S_i|S_{-i}) under P_f(S)=fhat(S)^2, bits",
+   "I(f) = total influence, ordinary flip convention",
+   "s: N -> [0,inf), s(N) = o(N)"
+  ],
+  "statement_sha256": "8bba845603f7c98e3af04cb959bfd02586691f167ea584f65258b2de6d587edc",
+  "contributors": [
+   "claude-B20"
+  ],
+  "proof_source": "REPORT.md section 4",
+  "proof_dependencies": [
+   "B20-ERASURE-TENSOR-ADDITIVE",
+   "B20-ACTIVATION-ERASURE-FORMULA",
+   "B20-ROOT-BIAS-ERASURE-PAID",
+   "C018 inequality (5) for the C_FEI corollary"
+  ],
+  "review_records": [
+   {
+    "reviewer": "A090",
+    "status": "pending"
+   },
+   {
+    "reviewer": "A094",
+    "status": "pending (alternate)"
+   }
+  ],
+  "status": "PROVED",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A096",
+   "A097",
+   "A099",
+   "A100"
+  ]
+ },
+ {
+  "claim_id": "C000-B20-VIEW",
+  "version": 1,
+  "exact_statement": "There is an absolute C with H(f) <= C I(f) for every Boolean f on the uniform cube; equivalently (C018) sup B/I < inf; equivalently (this run) sup B/I over functions with I(F) <= 2^(-s(N)) is finite for some s = o(N).",
+  "hypotheses": [
+   "uniform measure on {-1,1}^n",
+   "f Boolean (+-1 valued)",
+   "B(f) = sum_i H(S_i|S_{-i}) under P_f(S)=fhat(S)^2, bits",
+   "I(f) = total influence, ordinary flip convention"
+  ],
+  "statement_sha256": "9cb3f7cacb138ee79a66f2145ca2fdee095e64981856d984104a3f2649aff020",
+  "contributors": [
+   "claude-B20"
+  ],
+  "proof_source": "REPORT.md sections 4 and Universal bridge",
+  "proof_dependencies": [
+   "C018",
+   "B20-ERASURE-LOW-INFLUENCE-COMPLETE"
+  ],
+  "review_records": [
+   {
+    "reviewer": "A090",
+    "status": "pending"
+   },
+   {
+    "reviewer": "A094",
+    "status": "pending (alternate)"
+   }
+  ],
+  "status": "OPEN",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": "a bound of the pairs (S, S+i) with |S| >= 1 in B by C I(f) for arbitrary Boolean f",
+  "next_consumers": [
+   "all streams"
+  ]
+ }
+]

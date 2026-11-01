@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "randomness": "NONE",
+  "arithmetic": "fractions.Fraction; rational atanh remainder; four endpoint quotients",
+  "terms": 1200,
+  "source_commit": "adb671ffcda143fa68347806bb96e8c305621a7d",
+  "source_script_blob": "d8a3849f1fed3f2c879aa4c6cd12407d08e6f383",
+  "source_script_sha256": "3147bc3d2dfeb54a2ecabce7c074131d9985a22fcd55b9a9fda3c4656b5af1fc",
+  "regression_checks": {
+    "status": "PASS",
+    "original_endpoint_inversion_reproduced": true,
+    "original_inversion_argument": "225/256",
+    "original_inversion_terms": 12,
+    "exact_power_of_two_logarithm_cases": 11,
+    "sign_sensitive_exact_quotient_cases": 3,
+    "zero_one_probability_cases": "PASS",
+    "invalid_domain_cases_rejected": 4
+  },
+  "gate": "(-1)^(X*Y)",
+  "p": "1/8",
+  "q": "1/4",
+  "block": [
+    "X"
+  ],
+  "squared_biased_fourier_masses": [
+    "225/256",
+    "7/256",
+    "3/256",
+    "21/256"
+  ],
+  "M_interval": [
+    "0.227909707141212807",
+    "0.227909707141212808"
+  ],
+  "J_interval": [
+    "0.347454723165637765",
+    "0.347454723165637766"
+  ],
+  "J_minus_M_interval": [
+    "0.119545016024424957",
+    "0.119545016024424958"
+  ],
+  "certified_strict_lower_bound": "1195/10000 bits = 0.1195 bits",
+  "certificate_scope": "Only the biased two-bit AND counterexample to J_A<=M_A and repaired interval arithmetic.",
+  "full_B09_theorem_audit": "NOT_COMPLETED",
+  "full_FEI": "OPEN",
+  "execution_class": "interactive_independent_repair; not a natural scheduled B18 run"
+}

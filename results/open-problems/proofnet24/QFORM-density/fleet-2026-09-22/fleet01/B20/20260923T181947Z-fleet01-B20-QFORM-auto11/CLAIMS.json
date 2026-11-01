@@ -1,0 +1,40 @@
+{
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260923T181947Z-fleet01-B20-QFORM-auto11",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_SEPARATE",
+  "valid_target_counterexample": null,
+  "source_partner": {
+    "account": "fleet02",
+    "slot": "B20",
+    "claims_commit": "391bc53a0249051fde8383684519350051ae4384",
+    "report_commit": "cbbf02361424fcf02504cf6f7f786aef1760bc8a",
+    "run_id": "20260923T172757Z-fleet02-B20-QFORM-auto11"
+  },
+  "claims": [
+    {
+      "id": "QFORM-R5-124CORE-CROSS-E3-EXIT-v1",
+      "status": "PROVED_SUPPORTING_PAYMENT",
+      "statement": "Under the completed fleet02/B20 finite-core branch, if the literal physical cross block C=A[H,H^c] has s3(C)>=1/64, then e3(CC^T)>=64^-6 and the marginal-free physical E3 theorem gives a continuous C0 density with ||p_Q||_infinity<=64 K3<675.211. Thus every unpaid state additionally satisfies s3(A[H,H^c])<1/64."
+    },
+    {
+      "id": "QFORM-R5-STRONGMODE-CROSS-OR-OUTSIDE-v1",
+      "status": "PROVED_DETERMINISTIC_CONSEQUENCE",
+      "statement": "Let S0=U Lambda U^T have rank<=5, s3(S0)>1597/2000 and ||A-S0||op<403/2000. In the fleet02/B20 unpaid core with s3(A[H,H])<1/64, set G=U_H^T U_H. There exists a unit w in the strong top-three spectral subspace of Lambda with ||G^(1/2)Lambda G^(1/2)w||<1737/8000. Writing a=w^T G w: if a>=1/2 then ||A[H,H^c]||op>(sqrt(7184467)-1612)/8000>2/15; if a<1/2 then ||U_{H^c}w||^2>1/2."
+    },
+    {
+      "id": "QFORM-R5-CROSS-R1R2-OR-TWOSOURCE-v1",
+      "status": "PROVED_SUPPORTING_REDUCTION",
+      "statement": "After the cross-E3 exit is removed, the strong-cross alternative yields either s1(A[H,L])s2(A[H,L])>1/480 with s3<1/64, or dist_op(A[H,L],rank<=1)<1/64 with s1>2/15. In the outside alternative, because H is the r35 heavy set and every L-row carrier leverage is <=1/25, L can be partitioned into two disjoint original-coordinate banks L1,L2 with ||U_{Lq}w||^2>23/100 for q=1,2, while w remains in the strong spectral three-plane and satisfies the near-core-kernel relation. No rotated independence is asserted."
+    },
+    {
+      "id": "QFORM-R5-124CORE-CROSS/R1R2-OR-DIFFUSESTRONGMODE-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_REDUCTION",
+      "statement": "Every fleet02/B20 finite-core carrier state is either paid continuously by the literal H-L E3 receiver below 675.211, or reduced to a quantitative physical rank-two cross packet, a quantitative physical rank-one tube, or a two-original-bank diffuse strong-mode carrier packet, retaining arbitrary same-bank curvature, residual A-S0, all outside couplings and nonzero tails."
+    }
+  ],
+  "first_unpaid_implication": {
+    "id": "QFORM-R5-R1/R2-CROSS-OR-TWOSOURCE-STRONGMODE-PAYMENT-v1",
+    "scope": "Pay the quantitative H-to-L rank-one/rank-two packets or the two-light-bank strong-mode near-core-kernel packet by a full-law grouped/half-Riesz/projected-crossing receiver, retaining the 1/64 cross tail, arbitrary same-bank curvature, the full operator residual and all extra spectrum, and without treating carrier rotations as independent random coordinates."
+  }
+}

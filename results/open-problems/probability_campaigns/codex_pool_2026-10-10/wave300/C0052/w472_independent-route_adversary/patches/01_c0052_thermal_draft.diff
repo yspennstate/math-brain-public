@@ -1,0 +1,118 @@
+--- a/~/math-brain-inbox/w472/bundle_001.json
++++ b/~/math-brain-inbox/w472/bundle_001.json
+@@ -0,0 +1,115 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w472",
++  "bundle_slug": "c0052-thermal-normalization-w472-001",
++  "entries": [
++    {
++      "key": "thermal-normalization",
++      "namespace": "probability.ising",
++      "logical_name": "ising-binder-to-thermal-coupling-normalization",
++      "kind": "concept",
++      "title": "DRAFT: volume factor in Ising thermal coupling",
++      "statement": "DRAFT, independent mathematical review pending. Fix 0<beta<beta_c and dimension d. For zero-field free-boundary box magnetization M_n, let v_n be its volume, chi_n=kappa_2(M_n)/v_n and B_n=-kappa_4(M_n)/kappa_2(M_n)^2. If chi_n->chi>0, kappa_4(M_n)/v_n->-A and 0<xi<infinity, then lim_n B_n v_n/xi^d=A/(chi^2 xi^d)=g_+(beta). In particular B_n->0 at fixed beta does not imply g_+(beta)=0.",
++      "proof_text": null,
++      "assumptions": [
++        "Thermodynamic limit at each fixed subcritical beta precedes the critical limit.",
++        "Stated second- and fourth-cumulant density limits exist and are finite.",
++        "Correlation length xi is the source's exponential length for the infinite-volume law."
++      ],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "owner-work:w472:c0052-thermal-transfer-2026-10-10",
++        "url": "~/brain_workers/w472/THERMAL_TRANSFER.md",
++        "revision": "DRAFT-2026-10-10-independent-review-pending",
++        "license": "owner-own-work (campaign derivations and refuted route; primary inputs attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "zero-mass",
++      "namespace": "probability.ising",
++      "logical_name": "ising-variance-weighted-lee-yang-zero-mass-criterion",
++      "kind": "concept",
++      "title": "DRAFT: variance mass of Lee-Yang zeros at correlation-volume scale",
++      "statement": "DRAFT, independent mathematical review pending. For the same finite-volume Lee-Yang magnetization, list positive imaginary zeros alpha_j with multiplicity. Put r_j=alpha_j sqrt(chi_n xi^d) and nu_n=(2/kappa_2(M_n)) sum_j alpha_j^(-2) delta_{r_j}. Then nu_n is a probability measure and g_n=B_n v_n/xi^d=6 integral r^(-2)d nu_n. If fixed p>0,R<infinity give liminf_n nu_n((0,R])>=p uniformly for all beta sufficiently close to beta_c from below, the thermodynamic coupling satisfies liminf_{beta->beta_c} g_+(beta)>=6p/R^2. The uniform positive zero-mass condition for the actual 3D Ising model remains unproved. A bounded first support point alone does not supply it: nu_n=(1/n)delta_1+(1-1/n)delta_n has first point 1 but inverse-square moment tending to zero. This abstract measure example is not asserted to be an Ising zero measure.",
++      "proof_text": null,
++      "assumptions": [
++        "Bounded symmetric finite-volume magnetization, nonzero variance, paired Lee-Yang product with all multiplicities.",
++        "chi_n=kappa_2/v_n; 0<xi(beta)<infinity.",
++        "The cumulant-density limits in claim 002.",
++        "The constants p,R are uniform near criticality; the volume limit is taken at fixed beta."
++      ],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "owner-work:w472:c0052-thermal-transfer-2026-10-10",
++        "url": "~/brain_workers/w472/THERMAL_TRANSFER.md",
++        "revision": "DRAFT-2026-10-10-independent-review-pending",
++        "license": "owner-own-work (campaign derivations and refuted route; primary inputs attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "failed-inference",
++      "namespace": "probability.ising",
++      "logical_name": "ising-fixed-temperature-binder-triviality-shortcut",
++      "kind": "concept",
++      "title": "REFUTED ROUTE: vanishing block deficit at fixed temperature implies thermal triviality",
++      "statement": "REFUTED generic inference: B_n->0 at fixed subcritical beta implies g_+(beta)=0 or critical thermal triviality. The implication drops the required volume factor v_n/xi^d and replaces the ordered thermodynamic-then-critical limits with a different limit. The exact 1D Ising chain below is a counterexample to this generic inference, not to the three-dimensional conjecture.",
++      "proof_text": null,
++      "assumptions": [
++        "B_n=-kappa_4(M_n)/kappa_2(M_n)^2 is a variance-normalized block deficit.",
++        "The source coupling uses infinite-volume cumulant densities and exponential correlation length."
++      ],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "owner-work:w472:c0052-thermal-transfer-2026-10-10",
++        "url": "~/brain_workers/w472/THERMAL_TRANSFER.md",
++        "revision": "DRAFT-2026-10-10-independent-review-pending",
++        "license": "owner-own-work (campaign derivations and refuted route; primary inputs attributed)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "one-dimensional-control",
++      "namespace": "probability.ising",
++      "logical_name": "one-dimensional-ising-binder-thermal-coupling-control",
++      "kind": "concept",
++      "title": "DRAFT: exact 1D Ising control for coupling normalization",
++      "statement": "DRAFT, independent mathematical review pending. For the 1D nearest-neighbor zero-field ferromagnetic Ising chain with beta>0, a=exp(2 beta), t=tanh beta, chi=a and xi=-1/log t. The fourth cumulant density is a-3a^3, so g_+=(3a-1/a)/xi>0 and tends to 6 as beta->infinity. In periodic N-site boxes the variance-normalized fourth deficit B_N tends to zero at every fixed beta, while B_N N/xi tends to this positive coupling.",
++      "proof_text": null,
++      "assumptions": [
++        "Dimension one, beta>0 and dimensionless external field h.",
++        "Periodic N-site chain for finite controls, N>=4; infinite-volume nearest-neighbor chain for density limits.",
++        "This tests a generic normalization/limit inference, not C0052 in dimension three."
++      ],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "owner-work:w472:c0052-thermal-transfer-2026-10-10",
++        "url": "~/brain_workers/w472/THERMAL_TRANSFER.md",
++        "revision": "DRAFT-2026-10-10-independent-review-pending",
++        "license": "owner-own-work (campaign derivations and refuted route; primary inputs attributed)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "zero-mass",
++      "to_key": "thermal-normalization",
++      "kind": "depends_on",
++      "rationale": "The zero criterion states \"g_n=B_n v_n/xi^d=6 integral r^(-2)d nu_n\"; the normalization states \"lim_n B_n v_n/xi^d=A/(chi^2 xi^d)=g_+(beta)\". The latter transfers the finite zero integral to the source coupling."
++    },
++    {
++      "from_key": "one-dimensional-control",
++      "to_key": "thermal-normalization",
++      "kind": "specializes",
++      "rationale": "The control states \"B_N N/xi tends to this positive coupling\" in d=1; the normalization states \"lim_n B_n v_n/xi^d=A/(chi^2 xi^d)=g_+(beta)\". Here v_n=N and d=1."
++    },
++    {
++      "from_key": "one-dimensional-control",
++      "to_key": "failed-inference",
++      "kind": "refutes",
++      "rationale": "The control states \"g_+=(3a-1/a)/xi>0\" and \"B_N tends to zero at every fixed beta\"; the failed route asserts \"B_n->0 at fixed subcritical beta implies g_+(beta)=0\". The same 1D law satisfies the antecedent and contradicts the conclusion."
++    }
++  ]
++}

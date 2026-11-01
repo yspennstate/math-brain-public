@@ -1,0 +1,58 @@
+{
+  "applied": false,
+  "checks": [
+    {
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "~\\brain_workers\\w381\\patches\\01_p0110_math_route.diff"
+      ],
+      "form": "requested live-path diff against an empty local base",
+      "working_directory": "~\\brain_workers\\w381\\patch_checks\\empty_bases",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "~\\brain_workers\\w381\\patches\\01_p0110_math_route.git.patch"
+      ],
+      "form": "Git new-file creation patch",
+      "working_directory": "~\\brain_workers\\w381",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "~\\brain_workers\\w381\\patches\\02_p0110_hooks.diff"
+      ],
+      "form": "requested live-path diff against an empty local base",
+      "working_directory": "~\\brain_workers\\w381\\patch_checks\\empty_bases",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "~\\brain_workers\\w381\\patches\\02_p0110_hooks.git.patch"
+      ],
+      "form": "Git new-file creation patch",
+      "working_directory": "~\\brain_workers\\w381",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "failures": 0
+}

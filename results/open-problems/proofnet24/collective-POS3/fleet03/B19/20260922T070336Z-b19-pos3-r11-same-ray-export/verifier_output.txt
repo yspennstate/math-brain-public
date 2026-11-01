@@ -1,0 +1,15 @@
+RIGHT_NESTED_LOCAL_CLOSURE_COUNTEREXAMPLE
+  n = 8 E = 128
+  state (x,y,a,s,u) = (1, 2, 0, 4, 7)
+  covers = [(0, 5), (0, 7), (1, 2), (1, 4), (2, 5), (3, 4), (3, 6), (4, 7), (5, 6)]
+  key_counts = {'x<a': 89, 'y<a': 42, 'y<s': 90, 'y<u': 120, 'a<s': 105}
+  D(a,s) = [1, 3, 5, 6] D(y,s) = [3, 5, 6, 7]
+  balanced_pairs_elsewhere = [(0, 3, 57, 71), (1, 3, 82, 46), (4, 5, 83, 45), (6, 7, 55, 73)]
+RIGHT_WIDTH_SATURATING_LOCAL_CLOSURE_COUNTEREXAMPLE
+  n = 7 E = 62
+  state (x,y,a,s,u) = (0, 2, 1, 3, 4)
+  covers = [(0, 2), (0, 3), (0, 4), (1, 4), (1, 5), (2, 5), (5, 6)]
+  key_counts = {'x<a': 42, 'y<a': 18, 'y<s': 45, 'y<u': 51, 'a<s': 52}
+  D(a,s) = [0, 4, 5, 6] D(y,s) = [5, 6]
+  balanced_pairs_elsewhere = [(3, 4, 36, 26), (3, 5, 34, 28), (4, 5, 28, 34)]
+POS3_B19_SAME_RAY_EXPORT_CERTIFICATE_PASS

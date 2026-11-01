@@ -1,0 +1,87 @@
+{
+  "problem_id": "P0017",
+  "author_agent": "w349",
+  "as_of_local_date": "2026-10-10",
+  "exact_statement": "There exists a universal finite C such that for every n>=1, every full-dimensional isotropic log-concave probability measure mu on R^n, and every locally Lipschitz f in L^2(mu), Var_mu(f) <= C integral |grad f|^2 dmu. Isotropic means mean zero and covariance I_n. Log-concavity allows a convex extended-real potential and convex supports.",
+  "normalization": "C_P is a variance-to-Dirichlet-energy constant, not its square root or the spectral gap. C_P>=1 for isotropic laws.",
+  "current_openness": "UNKNOWN",
+  "literature_state": "Two accessible October 2026 primary preprints claim complete proofs. The September attempted_un label is historical; independent validity and community acceptance have not been established in this packet.",
+  "novelty_claim": false,
+  "sources": [
+    {
+      "id": "randomstrasse-2603.29571v1",
+      "title": "Randomstrasse101: Open Problems of 2025",
+      "url": "https://arxiv.org/html/2603.29571v1",
+      "locator": "Entry 13, Conjecture 30, covariance formulation",
+      "license_as_displayed": "CC-BY-4.0",
+      "inspection": "Primary conjecture, covariance normalization and Poincare formulation inspected. Source's half-space display mixes H and S notation; the covariance formulation is unambiguous. For arbitrary sets this packet uses the standard liminf boundary convention rather than presuming existence of the source's displayed limit."
+    },
+    {
+      "id": "bizeul-klartag-lehec-2610.05474v1",
+      "title": "Presenting a proof of the Kannan-Lovasz-Simonovits conjecture",
+      "url": "https://arxiv.org/html/2610.05474v1",
+      "authors": [
+        "Pierre Bizeul",
+        "Boaz Klartag",
+        "Joseph Lehec"
+      ],
+      "submitted": "2026-10-04",
+      "locators": [
+        "Theorem 1.1",
+        "equation (5)",
+        "Theorem 3.1",
+        "Lemma 4.2"
+      ],
+      "short_quote": "There exists a universal constant $C>0$ such that",
+      "inspection": "Primary HTML and abstract inspected. Exact full target verified at Theorem 1.1; proof not independently checked in full.",
+      "license_as_displayed": "arXiv perpetual non-exclusive license"
+    },
+    {
+      "id": "balasubramanian-kasiviswanathan-2610.07728",
+      "title": "A Dimension-Free Bound on the Poincare Constant of Isotropic Log-Concave Measures",
+      "url": "https://arxiv.org/abs/2610.07728v2",
+      "submitted": "2026-10-06",
+      "inspection": "Primary current v2 abstract inspected: claims C_P<=25 using a deterministic variational argument. Full proof not audited here; initial search summary described v1 and is superseded.",
+      "version": "v2",
+      "revised": "2026-10-08"
+    },
+    {
+      "id": "klartag-2303.14938",
+      "title": "Logarithmic bounds for isoperimetry and slices of convex sets",
+      "url": "https://arxiv.org/abs/2303.14938",
+      "submitted": "2023-03-27",
+      "inspection": "Primary abstract inspected as historical context; older dimension-dependent bound, not evidence of October 2026 openness."
+    }
+  ],
+  "historical_record": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 548,
+    "quote": "5,P0017,Dimension-free log-concave Poincare or Cheeger constant,attempted_un,KLS-type dimension-free Poincare/Cheeger for log-concave",
+    "interpretation": "Dated ranking only; no exact original intake statement or proof is supplied by this row."
+  },
+  "prior_work_check": {
+    "attempts_H": "Targeted P0017/KLS search in named mathematical text files returned no direct match.",
+    "attempts_I": "Targeted P0017/KLS search in named mathematical text files returned no direct match.",
+    "lean": "Only historical annotated ranking matched P0017; no formal receipt for this theorem found in that targeted search.",
+    "Team_O": "TEAM_BOARD.md line 553 lists P0017 as unclaimed in the inspected snapshot.",
+    "owner_solved_retired": "No solved/retired P0017 card appeared in the two targeted store hits. This is a bounded query result, not a certification of all private owner work. Reported public proof claims are recorded separately.",
+    "canonical_population_store": {
+      "path": "~/math-brain-build/local/population/brain.sqlite3",
+      "mode": "read-only plus PRAGMA query_only=ON",
+      "targeted_record_count": 2,
+      "records": [
+        "Historical Cheeger open-problem card",
+        "Author-checked Gaussian Hermite special-case attempt"
+      ],
+      "evidence": "LIVE_STORE_P0017.json and TARGETED_STATUS_STORE.json"
+    },
+    "original_ledger_path": "The old worktree path cited by the intake README is absent. Exact primary statement was recovered directly and original relevant store cards were read; no whole ledger export was read."
+  },
+  "source_hash_is_proof": false,
+  "formal_proof_receipt": null,
+  "independent_reviewer": "w350 (pending)",
+  "remaining_gap": "Verify weighted covariance input (W), or audit the actual deepest step of an available peer proof; do not infer full-target validity from abstracts or a source hash.",
+  "last_updated_utc": "2026-10-10T04:54:03.204586+00:00",
+  "reported_complete_resolution": true,
+  "original_cheeger_statement": "A universal c>0 satisfies h(mu)>=c/sqrt(||Cov(mu)||_op) for every full-dimensional log-concave probability law, where h is the Euclidean outer-Minkowski boundary ratio infimum over sets of mass strictly between 0 and 1. In isotropic position the bound is h(mu)>=c."
+}

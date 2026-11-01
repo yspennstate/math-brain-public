@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T110507Z-fleet02-B15-qform-pivot-r1",
+  "account": "fleet02",
+  "slot": "B15",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.5",
+  "assignment": "Absolute continuity and regularity",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "claim_id": "QFORM-DIAGONAL-CONTINUOUS-PI-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For every diagonal form in the original independent coordinates with at least three coefficients of magnitude >=1, Q(X) has a bounded uniformly continuous density with ||p_Q||_infinity<=pi.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "c64fcff680b0a252a3c92002c60eedba02bbb9ec",
+          "path": "qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md",
+          "scope": "same-sign diagonal pair has bounded density <=pi"
+        }
+      ],
+      "source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "d5392d73398e2811f58b612fb8f191aa79d8ee5e",
+        "path": "proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md",
+        "section": "1"
+      }
+    },
+    {
+      "claim_id": "QFORM-3VAR-AFFINE-PRINCIPAL-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For independent Y1,Y2,Y3 with densities <=1 and any symmetric invertible 3x3 B with sigma_min(B)=kappa, every affine quadratic Y^T B Y+2b^T Y+c has an absolutely continuous law with density norm <=(2*pi+3*sqrt(3))/kappa.",
+      "source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "d5392d73398e2811f58b612fb8f191aa79d8ee5e",
+        "path": "proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md",
+        "section": "2"
+      }
+    },
+    {
+      "claim_id": "QFORM-PRINCIPAL-TRIPLE-CONDITIONING-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "If A has a principal coordinate 3x3 block with sigma_min>=kappa, then ||p_{X^TAX}||_infinity <=(2*pi+3*sqrt(3))/kappa, allowing arbitrary cross-couplings to conditioned coordinates.",
+      "dependencies": [
+        {"mode": "uses_premise", "claim_id": "QFORM-3VAR-AFFINE-PRINCIPAL-v1"}
+      ],
+      "source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "d5392d73398e2811f58b612fb8f191aa79d8ee5e",
+        "path": "proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md",
+        "section": "3"
+      }
+    },
+    {
+      "claim_id": "QFORM-FLAT-RANK3-PRINCIPAL-TRIPLE-OBSTRUCTION-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For infinitely many n there are rank-three orthogonal projections A with three eigenvalues exactly1 such that every 3x3 principal coordinate block has sigma_min<=3/n, while sum_{|I|=3} det(A_II)=1. Hence selecting one coordinate triple cannot be dimension-free.",
+      "source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "d5392d73398e2811f58b612fb8f191aa79d8ee5e",
+        "path": "proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md",
+        "section": "4"
+      }
+    },
+    {
+      "claim_id": "QFORM-AGGREGATE-TRIPLE-BRIDGE-v1",
+      "status": "OPEN",
+      "statement": "Convert the aggregate determinant/minor resource of delocalized three-dimensional spectral directions into P(X^TAX in J)<=C|J| without selecting one principal triple. Under the fleet03/B15 product-set reduction this is equivalently a shell-volume bound for Cartesian products of unit-measure measurable sets."
+    },
+    {
+      "claim_id": "QFORM-CONTINUOUS-REPRESENTATIVE-GENERAL",
+      "status": "OPEN",
+      "statement": "For the fully rotated target, interval domination gives an L-infinity density but not automatically a continuous representative. The stronger continuity assertion remains separate; this run proves it only on the full diagonal branch."
+    }
+  ],
+  "partner_result_applied": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "1ce0598e1c9c4e0681f8f6b86d3dfef990ec5d4e",
+    "path": "qform/fleet-2026-09-22/fleet03/B15/fleet03-B15-20260922T112830Z/REPORT.md",
+    "use": "Its exact bathtub reduction converts the remaining aggregate-minor target into the geometric shell-volume statement for products E_1 x ... x E_n with |E_i|=1. The principal-triple theorem proves that geometric statement whenever one 3x3 principal block has uniform singular gap; the flat projector shows the partner reduction's first genuinely delocalized case cannot be solved by selecting one triple."
+  }
+}

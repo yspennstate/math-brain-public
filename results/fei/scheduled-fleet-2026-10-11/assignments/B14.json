@@ -1,0 +1,361 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B14",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A066",
+      "stream": "B14",
+      "topic": "Semigroup dissipation",
+      "target_statement": "Express a relevant entropy quantity through a noise semigroup and identify an integral whose universal influence bound would imply FEI. Check both small-time and large-time integrability.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A066-D1",
+          "description": "SEMIGROUP_ENTROPY_REPRESENTATION.tex: exact integral and candidate dissipation",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A066-D2",
+          "description": "TIME_BOUNDARIES.md: small-time, large-time, and dimension dependence",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Define the semigroup, normalized or unnormalized evolving law, and the entropy quantity being differentiated.",
+        "Prove the integral identity with all boundary terms and dominate both t→0 and t→∞ in the proposed scope.",
+        "Identify the precise unproved influence bound that would close FEI; rewriting entropy as an integral does not pay that integral."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A061",
+          "interface": "known physical-process comparison"
+        },
+        {
+          "agent_id": "A036",
+          "interface": "reference normalization"
+        },
+        {
+          "agent_id": "A070",
+          "interface": "analytic scope adversary"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A067",
+          "interface_use": "exact dissipation term"
+        },
+        {
+          "agent_id": "A070",
+          "interface_use": "semigroup target"
+        },
+        {
+          "agent_id": "A088",
+          "interface_use": "semigroup theorem"
+        }
+      ],
+      "independent_reviewers": [
+        "A088",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A proved new dissipation estimate on a declared regime or a sharp boundary obstruction to the proposed integral payment.",
+      "source_ids": [
+        "threshold_source",
+        "brain_route_map",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F04",
+        "F07",
+        "F08",
+        "F09",
+        "F13",
+        "F18"
+      ]
+    },
+    {
+      "agent_id": "A067",
+      "stream": "B14",
+      "topic": "Hypercontractive refinement",
+      "target_statement": "Locate exactly where standard hypercontractivity loses a logarithmic degree or dimension factor. Seek a Boolean-specific improvement on a measurable regime, not a restatement of an already general real-valued bound.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A067-D1",
+          "description": "BOOLEAN_HYPERCONTRACTIVE_REFINEMENT.tex: precise loss and proposed improvement",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A067-D2",
+          "description": "REGIME_COMPARISON.md: old bound, new bound, and separating family",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Locate the exact logarithmic degree/dimension loss in a primary-source inequality or the recovered proof.",
+        "State a measurable regime and prove the extra Boolean hypothesis is used; a bound valid for arbitrary real functions cannot silently gain a Boolean-only conclusion.",
+        "Demonstrate a strict quantitative gain on an explicit family and replay the relevant fixed-order/near-Boolean controls.",
+        "A fixed-order spectral Rényi strengthening with α<1 is already false on a one-point defect; any scale-dependent order/correction must be stated and its full cost proved."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A066",
+          "interface": "exact dissipation term"
+        },
+        {
+          "agent_id": "A033",
+          "interface": "full-Booleanity consequence"
+        },
+        {
+          "agent_id": "A070",
+          "interface": "non-Boolean relaxation controls"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A070",
+          "interface_use": "hypercontractive refinement"
+        }
+      ],
+      "independent_reviewers": [
+        "A088",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A real Boolean-specific improvement to one named inequality, not a renamed standard hypercontractive bound.",
+      "source_ids": [
+        "threshold_source",
+        "brain_route_map",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F04",
+        "F07",
+        "F08",
+        "F09",
+        "F13",
+        "F18"
+      ]
+    },
+    {
+      "agent_id": "A068",
+      "stream": "B14",
+      "topic": "Antichain beyond one order",
+      "target_statement": "Generalize the recovered pivotal-antichain estimate to a broader partially ordered or multi-scale geometry. Prove a rank-reference theorem for a class not already covered by desirability width.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A068-D1",
+          "description": "NEW_RANK_GEOMETRY.tex: combinatorial antichain substitute and spectral reference",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A068-D2",
+          "description": "WIDTH_SEPARATION_EXAMPLE.md: new class outside the published desirability-width bound",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Define the partial order or multiscale geometry and prove the pivotal property replacing the total-order antichain argument.",
+        "Construct and normalize the new rank reference; code/entropy costs must include the complexity of the geometry.",
+        "Give a family with an actual improvement over the published width/logarithmic-multiple-order theorem, rather than calling width by another name.",
+        "The mass-sensitive K_eff rank refinement is already derived under disjoint-support/fiber-antichain conditions; new geometry or global cost payment must go beyond rederiving that lemma."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A014",
+          "interface": "desired congestion improvement"
+        },
+        {
+          "agent_id": "A011",
+          "interface": "structured gate geometries"
+        },
+        {
+          "agent_id": "A004",
+          "interface": "regular-function rank conventions"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A070",
+          "interface_use": "geometric rank theorem"
+        }
+      ],
+      "independent_reviewers": [
+        "A088",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A rank/reference theorem for an explicitly broader geometry with a demonstrated quantitative improvement.",
+      "source_ids": [
+        "threshold_source",
+        "brain_route_map",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F04",
+        "F07",
+        "F08",
+        "F09",
+        "F13",
+        "F18"
+      ]
+    },
+    {
+      "agent_id": "A069",
+      "stream": "B14",
+      "topic": "Geometric transfer",
+      "target_statement": "Extract an abstract encoding property from the percolation proof and ask which nongeometric Boolean families satisfy it. Prove the property directly for a new family instead of assuming spatial estimates are universal.",
+      "work_type": "new_math",
+      "priority": "P2",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A069-D1",
+          "description": "ABSTRACT_GEOMETRIC_ENCODING.tex: extracted property with exact hypotheses",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A069-D2",
+          "description": "NONSPATIAL_FAMILY_PROOF.md: direct verification and cost bound",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Read the original percolation encoding proof and separate geometric arm estimates from the abstract decoding/influence statement.",
+        "Prove the extracted property directly for a named nongeometric Boolean family; spatial estimates cannot be assumed universally.",
+        "Show the full entropy cost and explain whether the new family was already covered by a different published structured theorem."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A008",
+          "interface": "explicit decodable code requirements"
+        },
+        {
+          "agent_id": "A011",
+          "interface": "candidate nongeometric class"
+        },
+        {
+          "agent_id": "A093",
+          "interface": "primary percolation theorem and scope"
+        }
+      ],
+      "next_consumers": [],
+      "independent_reviewers": [
+        "A088",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "Continue only if one concrete abstract lemma and a plausible new class verification are isolated within the pilot.",
+      "source_ids": [
+        "threshold_source",
+        "brain_route_map",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F04",
+        "F07",
+        "F08",
+        "F09",
+        "F13",
+        "F18"
+      ]
+    },
+    {
+      "agent_id": "A070",
+      "stream": "B14",
+      "topic": "Analytic route referee",
+      "target_statement": "Compare every new functional inequality against normalized non-Boolean spectra and known cyclic-law failures. Identify the indispensable Boolean hypothesis and test whether it is actually used.",
+      "work_type": "independent_scope_review",
+      "priority": "P1",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A070-D1",
+          "description": "ANALYTIC_SCOPE_AUDIT.md: indispensable hypotheses and their proof uses",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A070-D2",
+          "description": "RELAXATION_CONTROL_RESULTS.json: actual Boolean versus non-Boolean diagnostics",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Test each statement on its exact domain and on the strongest applicable non-Boolean relaxation as a diagnostic, labeling the two outcomes separately.",
+        "Identify the line where actual Booleanity, granularity, or geometry is used; normalization and bounded L4 alone do not replace full Booleanity.",
+        "Do not reject a valid Boolean theorem solely because a non-Boolean law violates it; locate the missing or sufficient hypothesis precisely."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A031",
+          "interface": "signed entropy-weighted inequality"
+        },
+        {
+          "agent_id": "A033",
+          "interface": "full-Booleanity constraints"
+        },
+        {
+          "agent_id": "A066",
+          "interface": "semigroup target"
+        },
+        {
+          "agent_id": "A067",
+          "interface": "hypercontractive refinement"
+        },
+        {
+          "agent_id": "A068",
+          "interface": "geometric rank theorem"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A031",
+          "interface_use": "non-Boolean relaxation tests"
+        },
+        {
+          "agent_id": "A066",
+          "interface_use": "analytic scope adversary"
+        },
+        {
+          "agent_id": "A067",
+          "interface_use": "non-Boolean relaxation controls"
+        },
+        {
+          "agent_id": "A088",
+          "interface_use": "scope diagnostics"
+        }
+      ],
+      "independent_reviewers": [
+        "A088",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "One full candidate receives a reconstructible scope audit, with either a specific gap or a verified chain of hypothesis uses.",
+      "source_ids": [
+        "threshold_source",
+        "brain_route_map",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F04",
+        "F07",
+        "F08",
+        "F09",
+        "F13",
+        "F18"
+      ]
+    }
+  ]
+}

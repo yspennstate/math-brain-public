@@ -1,0 +1,314 @@
+                   SOLUTIONS TO TWO PROBLEMS ON PERMANENTS
+
+
+                                           PETTER BR¨AND´EN
+2011
+
+                                 Abstract. In this note we settle two open problems in the theory of perma-
+                                       nents by using recent results from other areas of mathematics. Both problemsJun
+                                    were recently discussed in Bapat’s survey [2]. Bapat conjectured that certain
+30                                   cave.quotientsWe ofprovepermanents,this conjecturewhich generalizeby using symmetricconcavity functionpropertiesmeans,of hyperbolicare con-
+                                       polynomials. Motivated by problems on random point processes, Shirai and
+                                     Takahashi raised the problem: Determine all real numbers α for which the
+                                   α-permanent (or α-determinant) is nonnegative for all positive semideﬁnite
+                                         matrices. We give a complete solution to this problem by using recent results
+                                             of Scott and Sokal on completely monotone functions.  It turns out that the
+                                       conjectured answer to the problem is false.
+
+
+                                          1. Bapat’s conjecture on quotients of permanents[math.RA]
+                           Recently Gurvits [6] successfully used hyperbolic polynomials to prove inequal-
+                                 ities for permanents and determinants. In this section we show how a conjecture
+                         (Conjecture 1.1 below) of Bapat on the concavity of certain quotients of perma-
+                         nents follows from concavity properties of hyperbolic polynomials. Recall that if
+               A = (aij)ni,j=1 is a matrix, then the permanent of A is deﬁned by
+
+                    X Yn
+                                                  per(A) =           aiσ(i),
+                                                      σ∈Sn i=1
+                       where Sn is the symmetric group on {1, . . ., n}.
+                     Conjecture 1.1 (Bapat, [1]). Let b0, b1, . . . , bk be ﬁxed vectors in Rn++ := (0, ∞)n,
+                        where 0 ≤k < n. The functionarXiv:1104.3531v2                                                      per(b1, . . . , bk, x, . . . , x)                                        x 7→                                                   (1)
+                                                           per(b0, b1, . . . , bk, x, . . . , x)
+                                 is concave on Rn++.
+
+                 A motivation for Conjecture 1.1 is the case when b0, b1, . . . , bk are all equal to
+                         the vector of all ones. Then (1) is equal to a constant multiple of
+
+                                                           en−k(x)
+                                              x 7→ en−k−1(x),                               (2)
+
+
+                              2010 Mathematics Subject Classiﬁcation. Primary: 15A15, 15A45; Secondary: 26B25.
+                          Key words and phrases. Permanent, α-permanent, α-determinant, positivity, hyperbolic poly-
+                              nomial, complete monotonicity, symmetric function mean.
+                      PB is a Royal Swedish Academy of Sciences Research Fellow supported by a grant from the
+                        Knut and Alice Wallenberg Foundation.
+
+                                                                          1
+2                                           P. BR¨AND´EN
+
+where ek(x) is the k’th elementary symmetric function in the variables x = (x1, . . . , xn).
+The function (2) is a symmetric function mean and such are known to be concave
+[7].
+  A homogeneous polynomial h(x) ∈R[x1, . . . , xn] is hyperbolic with respect to
+a vector e ∈Rn  if h(e) ̸= 0, and  if for all x ∈Rn the univariate polynomial
+t 7→h(x + et) has only real zeros, see [3, 5, 8, 9].  Here are some examples of
+hyperbolic polynomials:
+
+    (1) Let h(x) = x1 · · · xn. Then h(x) is hyperbolic with respect to any vector
+       e ∈Rn that has no coordinate equal to zero:
+
+              Yn
+                        h(x + et) =    (xj + ejt).
+                                       j=1
+
+    (2) Let x = (xij)ni,j=1 be a matrix of variables where we impose xij = xji.
+      Then det(x) is hyperbolic with respect to I = diag(1, . . . , 1). Indeed t 7→
+       det(x + tI) is the characteristic polynomial of the symmetric matrix x, so
+          it has only real zeros.
+    (3) Let h(x) = x21 −x22 −· · · −x2n.  Then h is hyperbolic with respect to
+         (1, 0, . . . , 0).
+
+  Suppose that h is hyperbolic with respect to e, and of degree d. We may write
+
+              Yd
+                      h(x + et) = h(e)    (t + λj(x)),
+                                        j=1
+
+where λ1(x) ≤· · · ≤λd(x). The hyperbolicity cone is the set
+
+               Λ++ = Λ++(e) = {x ∈Rn : λ1(x) > 0}.
+
+G˚arding [5] proved that hyperbolicity cones are convex. The hyperbolicity cones
+for the examples above are:
+    (1) Λ++(e) = {x ∈Rn : xiei > 0 for all i}.
+    (2) Λ++(I) is the cone of symmetric positive deﬁnite matrices.
+    (3) Λ++(1, 0, . . . , 0) is the Lorentz cone
+                  q
+                    x ∈Rn : x1 >   x22 + · · · + x2n    .
+
+Let h(x1, . . . , xn) be a homogeneous polynomial of degree d. Let vj = (v1j, . . . , vnj)T
+for 1 ≤j ≤d. The complete polarized form of h may be deﬁned as the form
+H : (Rn)d →R deﬁned by
+                              !
+             Yd Xn                                1            ∂
+                 H(v1, . . . , vd) =               vij      h(x),
+                                        d!            ∂xi                                     j=1  i=1
+
+see G˚arding [5]. Note that H is multilinear, symmetric in v1, . . . , vd, and H(v, . . . , v) =
+h(v). Now if h = x1 · · · xn, then
+
+                                    1
+                     H(v1, . . . , vn) =    per(v1, . . . , vn).                     (3)
+                                        n!
+                 TWO PROBLEMS ON PERMANENTS                          3
+
+                     Pn
+For u = (u1, . . . , un)T ∈Rn let Du =   i=1 ui∂/∂xi. It follows that
+                                 !
+                                       d−kY Xn                          (d −k)!   1              ∂
+  H(v1, . . . , vk, u, . . . , u) =                           ui     Dv1Dv2 · · · Dvkh(x)
+                                 d!   (d −k)!           ∂xi                                          j=1   i=1
+                          (d −k)!
+              =       Dv1Dv2 · · · Dvkh(u).
+                                 d!
+
+Lemma 1.2 (G˚arding, [5]). Suppose that h is hyperbolic, and that v ∈Λ++. Then
+Dvh is hyperbolic and its hyperbolicity cone contains Λ++.
+
+  The following lemma was proved in [3, Corollary 4.6], see also [9] where Lemma 1.3
+is strengthened.
+
+Lemma 1.3 (Bauschke et al., [3]). Suppose that h is hyperbolic and that v ∈Λ++.
+The function
+                                      h(x)
+                           x 7→
+                                 Dvh(x)
+is concave on Λ++.
+
+   In view of (3) we see that Conjecture 1.1 is the special case of Corollary 1.4 when
+h = x1 · · · xn.
+
+Corollary 1.4. Let h be a hyperbolic polynomial in R[x1, . . . , xn] and let b0, b1, . . . , bk
+be ﬁxed vectors in Λ++. The function
+
+                             H(b1, . . . , bk, x, . . . , x)
+                    x 7→                                                  (4)
+                            H(b0, b1, . . . , bk, x, . . . , x)
+
+is concave on Λ++.
+
+Proof. Suppose that the degree of h is d. By Lemma 1.2 the polynomial
+
+                                            (d −k)!
+            g(x) := H(b1, . . . , bk, x, . . . , x) =        Db1 · · · Dbkh(x)
+                                                      d!
+
+is hyperbolic with hyperbolicity cone containing Λ++. The function (4) is equal to
+g(x)/Db0g(x), and so the proof follows from Lemma 1.3.              □
+
+Remark 1.5. If h(x) = det(x), acting on symmetric matrices of size n × n, then the
+complete homogenized form is the mixed discriminant
+                                   !
+                               1    ∂n   Xn
+             H(A1, . . . , An) =              det     xiAi    .
+                                   n! ∂x1 · · · ∂xn                                                        i=1
+
+Hence if A0, . . . , Ak are ﬁxed positive deﬁnite matrices, then the function
+
+                         H(A1, . . . , Ak, A, . . . , A)
+              A 7→
+                        H(A0, A1, . . . , Ak, A, . . . , A)
+
+is concave on the cone of positive deﬁnite matrices. This also holds for complex
+hermitian matrices since the determinant on complex hermitian matrices is again
+hyperbolic.
+4                                           P. BR¨AND´EN
+
+                2.  α-permanents and complete monotonicity
+
+  The α-permanent, introduced by Vere–Jones [13], interpolates between the de-
+terminant and the permanent. Let α ∈R and A = (aij) be an n × n matrix. The
+α-permanent and α-determinant of A are deﬁned by
+
+      X  Yn
+        perα(A) =      αc(σ)     aiσ(i)   and   detα(A) = αn per1/α(A),
+                σ∈Sn      i=1
+
+where c(σ) denotes the number of disjoint cycles of σ. Motivated by problems on
+random point processes, Shirai and Takahashi [11, 12] posed the following problem:
+
+Problem 2.1. For which α ∈R is
+    (1) detα(A) ≥0 for all real symmetric positive semideﬁnite matrices A? Let
+     DR be the set of such α’s.
+    (2) detα(A) ≥0 for all complex hermitian positive semideﬁnite matrices A?
+        Let DC be the set of such α’s.
+
+   Shirai [12] proved that
+     {±1/(m + 1) : m ∈N} ⊆DC ⊆{−1/(m + 1) : m ∈N} ∪[0, 1]  and
+
+{−1/(m+1) : m ∈N}∪{2/(m+1) : m ∈N} ⊆DR ⊆{−1/(m+1) : m ∈N}∪[0, 2].
+
+Moreover, Shirai and Takahashi conjectured:
+
+Conjecture 2.2 (Shirai and Takahashi, [11, 12]).
+              DR = {−1/(m + 1) : m ∈N} ∪[0, 2] and
+              DC = {−1/(m + 1) : m ∈N} ∪[0, 1].
+
+  We shall see that Conjecture 2.2 is false, infact
+
+Theorem 2.3.
+
+       DR = {−1/(m + 1) : m ∈N} ∪{2/(m + 1) : m ∈N} ∪{0} and
+       DC = {±1/(m + 1) : m ∈N} ∪{0}.
+
+  The proof of Theorem 2.3 relies on recent results on complete monotonicity due
+to Scott and Sokal [10].
+  For n = (n1, . . . , nm) ∈Nm and A = (aij)mi,j=1, let A[n] be the |n| × |n| matrix,      Pm
+where |n| =   i=1 ni, obtained by replacing the (i, j)’th entry of A by an ni × nj
+matrix whose entries are all equal to aij. The next theorem is a generalization of
+the MacMahon Master Theorem.
+
+Theorem 2.4 (Foata and Zeilberger, [4]; Vere-Jones, [13]). Let A = (aij)mi,j=1,
+X = diag(x1, . . . , xm) and α ∈R. Then
+            X
+                     det(I −XA)−α =     perα(A[n])xn and
+                                                      n!
+                                n∈Nm
+            X
+                  det(I −αXA)−1/α =     detα(A[n])xn ,
+                                                      n!                                n∈Nm
+where xn = xn11   · · · xnmm  and n! = n1! · · · nm!.
+                 TWO PROBLEMS ON PERMANENTS                          5
+
+Remark 2.5.  If A is a hermitian positive semideﬁnite m × m matrix and n ∈Nm,
+then A[n] is positive semideﬁnite. Indeed, if y is the column vector with entries yij
+for 1 ≤i ≤m and 1 ≤j ≤ni, then
+                           yT A[n]y = xT Ax ≥0
+                              Pni
+where x = (x1, . . . , xm)T has entries xi =   j=1 yij.
+   Recall that a C∞-function f : Rm++ →R is completely monotone if
+                               ∂n1    ∂nm                          (−1)|n|         · · ·      f(x) ≥0,
+                             ∂xn11    ∂xnmm
+for all n ∈Nm and x ∈Rm++. For m ≥1 let
+      C(m) = N ∪{x ∈R : x ≥m −1} and R(m) = {x/2 : x ∈C(m)}.
+
+Theorem 2.6 (Scott and Sokal, [10]). Let A1, . . . , An be m × m real or complex
+hermitian matrices, and form the polynomial
+                            !
+             Xn
+                        P(x) = det     xiAi    .
+                                           i=1
+Assume that P ̸≡0 and β ≥0.
+    (1) If A1, . . . , An are real symmetric and positive semideﬁnite, then P −β  is
+        completely monotone for all β ∈R(m).  If A1, . . . , An span the space of
+    m × m symmetric matrices, then P −β fails to be completely monotone for
+       each β ̸∈R(m).
+    (2) If A1, . . . , An are complex hermitian positive semideﬁnite, then P −β is com-
+         pletely monotone for all β ∈C(m). If A1, . . . , An span the space of m × m
+       complex hermitian matrices, then P −β fails to be completely monotone for
+       each β ̸∈C(m).
+
+  We will use the following elementary but useful lemma.
+
+Lemma 2.7. Let A be an m × n matrix and B be an n × m matrix, then
+
+                          det(I −AB) = det(I −BA).
+
+Proof of Theorem 2.3. We prove Theorem 2.3 for real symmetric matrices, the
+proof for complex hermitian matrices is almost identical.
+  The cases left to consider is for α ∈[0, 2] \ {2/(k + 1) : k ∈N}. Then β = 1/α /∈
+R(m) for some m ∈N. Choose positive semideﬁnite rank one matrices A1, . . . , An
+that span the space of real symmetric m × m matrices. Then
+                            !
+             Xn
+                        P(x) = det     xiAi
+                                            i=1
+is not completely monotone by Theorem 2.6. Hence there is a vector y ∈Rn++
+such that x 7→P(y −x)−β fails to have only nonnegative Taylor coeﬃcients. Since
+   Pn
+A :=   i=1 yiAi is positive deﬁnite we may write A = B−1/2B−1/2 for some positive
+deﬁnite matrix B.  Let Bi = B1/2AiB1/2 and write Bi = uiuTi  for some vector
+ui ∈Rm. Collect the ui’s as columns in an m × n matrix U. Then, by Lemma 2.7,
+                      !               !
+          Xn        Xn
+        P(y −x) = det A −    xiAi = det(A) det  I −    xiBi
+                                 i=1                           i=1
+           = det(A) det(I −UXU T) = det(A) det(I −XU T U).
+6                                           P. BR¨AND´EN
+
+By Theorem 2.4 and the fact that P(y −x)−β has at least one negative Tay-
+lor coeﬃcient, there is a vector n ∈Nn such that perβ(U T U[n]) < 0, so that
+detα(U T U[n]) < 0. The matrix U T U[n] is positive semideﬁnite by Remark 2.5. □
+
+                          References
+
+ [1] R. B. Bapat, Symmetric function means and permanents, Linear Algebra Appl. 182 (1993),
+    101–108.
+ [2] R. B. Bapat, Recent developments and open problems in the theory of permanents, Math.
+    Student 76 (2007), 55–69.
+ [3] H. H. Bauschke, O. G¨uler, A. S. Lewis, H. S. Sendov, Hyperbolic polynomials and convex
+     analysis, Canad. J. Math. 53 (2001), 470–488.
+ [4] D. Foata, D. Zeilberger, Laguerre polynomials, weighted derangements, and positivity, SIAM
+     J. Discrete Math. 1 (1988), 425–433.
+ [5] L. G˚arding, An inequality for hyperbolic polynomials, J. Math. Mech. 8 (1959), 957–965.
+ [6] L. Gurvits, Van der Waerden/Schrijver-Valiant like conjectures and stable (aka hyperbolic)
+    homogeneous polynomials: one theorem for all. With a corrigendum. Electron. J. Combin.
+    15 (2008), Research Paper 66, 26 pp.
+ [7] M. Marcus, L. Lopes, Inequalities for symmetric functions and Hermitian matrices, Canad.
+     J. Math. 9 (1957), 305–312.
+ [8] J. Renegar, Hyperbolic programs, and their derivative relaxations, Found. Comput. Math., 6
+     (2006), 59–79.
+ [9] J. Renegar, Central swaths (A generalization of the central path), arXiv:1005.5495v1.
+[10] A. D. Scott, A. D. Sokal, Complete monotonicity for inverse powers of some combinatorially
+    deﬁned polynomials, preprint.
+[11] T. Shirai, Y. Takahashi, Random point ﬁelds associated with certain Fredholm determinants.
+      I. Fermion, Poisson and boson point processes, J. Funct. Anal. 205 (2003), 414–463.
+[12] T. Shirai, Remarks on the positivity of α-determinants, Kyushu J. Math. 61 (2007), 169–189.
+[13] D. Vere–Jones, A generalization of permanents and determinants, Linear Algebra Appl. 111
+     (1988), 119–124.
+
+  Department of Mathematics, Royal Institute of Technology, SE-100 44 Stockholm,
+Sweden
+   E-mail address: pbranden@math.kth.se

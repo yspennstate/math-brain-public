@@ -1,0 +1,436 @@
+~\mop_fei100\reports\fei-2026-10-11\PACKET_STATUS.json
+{
+  "packet_id": "A039",
+  "stream": "B08",
+  "topic": "Projection under restrictions",
+  "execution_status": "OPEN",
+  "deliverable_status": "NOT_YET_ADOPTED_IN_THIS_INDEX",
+  "mathematical_status": "UNPROVED_TARGET",
+  "gap_id": null,
+  "attempt_history": [],
+  "latest_verified_artifact": null,
+  "next_action": "Select the packet at dispatch; freeze its exact gap, source versions and bounded first cycle from AGENT_ASSIGNMENTS.json.",
+  "unreviewed_complete_claims": 0,
+  "work_type": "new_math",
+  "design_target_id": "FEI-B08-A039-INITIAL"
+}
+
+~\mop_fei100\reports\fei-2026-10-11\AGENT_ASSIGNMENTS.json
+{
+  "agent_id": "A039",
+  "interface_use": "physical child law"
+}
+
+~\mop_fei100\reports\fei-2026-10-11\AGENT_ASSIGNMENTS.json
+{
+  "agent_id": "A039",
+  "interface_use": "actual information projection and support normalization"
+}
+
+~\mop_fei100\reports\fei-2026-10-11\AGENT_ASSIGNMENTS.json
+{
+  "agent_id": "A039",
+  "interface_use": "common probability space for credits"
+}
+
+~\mop_fei100\reports\fei-2026-10-11\AGENT_ASSIGNMENTS.json
+{
+  "agent_id": "A039",
+  "stream": "B08",
+  "stream_name": "Relative entropy and posterior credit",
+  "topic": "Projection under restrictions",
+  "assignment": "Study how an information projection changes under a physical restriction. Establish a monotonicity or compensated identity that remains valid when the two child spectra interfere coherently.",
+  "original_assignment": "Study how an information projection changes under a physical restriction. Establish a monotonicity or compensated identity that remains valid when the two child spectra interfere coherently.",
+  "assignment_revision_note": "Original task retained; packet-specific tests include recovered baselines and scope corrections.",
+  "work_type": "new_math",
+  "priority": {
+    "band": "P1",
+    "rationale": "Substantial parallel route or class theorem; renew only for a quantitative lemma, a rigorous obstruction, or a necessary review."
+  },
+  "initial_execution_status": "OPEN",
+  "mathematical_status": "UNPROVED_TARGET",
+  "gap_id": "FEI-B08-A039-INITIAL",
+  "claim_id": null,
+  "target_statement": "Study how an information projection changes under a physical restriction. Establish a monotonicity or compensated identity that remains valid when the two child spectra interfere coherently.",
+  "baseline_source_ids": [
+    "brain_route_map",
+    "brain_phase_energy",
+    "reductions_restrictions"
+  ],
+  "advisory_method_tags": [
+    "F03",
+    "F05",
+    "F07",
+    "F08",
+    "F09"
+  ],
+  "upstream_packets": [
+    {
+      "agent_id": "A036",
+      "interface": "actual information projection and support normalization",
+      "dependency_kind": "ADVISORY_REUSE",
+      "required_to_start": false,
+      "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+    },
+    {
+      "agent_id": "A037",
+      "interface": "common probability space for credits",
+      "dependency_kind": "ADVISORY_REUSE",
+      "required_to_start": false,
+      "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+    },
+    {
+      "agent_id": "A024",
+      "interface": "physical child law",
+      "dependency_kind": "ADVISORY_REUSE",
+      "required_to_start": false,
+      "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+    }
+  ],
+  "proof_dependencies": [],
+  "proof_dependency_status": "DECLARE_AND_SOURCE_PIN_PER_ATTEMPT; empty design list does not assert a dependency-free proof.",
+  "deliverables": [
+    {
+      "deliverable_id": "A039-D1",
+      "description": "PROJECTION_RESTRICTION.tex: compensated restriction identity or monotonicity theorem",
+      "initial_status": "OPEN"
+    },
+    {
+      "deliverable_id": "A039-D2",
+      "description": "COHERENT_CHILD_EXAMPLES.json: exact child spectra and reference changes",
+      "initial_status": "OPEN"
+    }
+  ],
+  "acceptance_criteria": [
+    "Construct the proposed stochastic map explicitly before invoking data processing; physical restriction produces coherent child spectra and need not be a channel on squared parent coefficients.",
+    "Track reoptimization of the reference, its normalizer, and support changes in both children.",
+    "Verify equality on an isospectral split and locate the compensating term for a non-isospectral Boolean control."
+  ],
+  "next_consumers": [],
+  "reviewers": [
+    {
+      "agent_id": "A088",
+      "role": "PRIMARY_INDEPENDENT_REVIEW",
+      "required_when": "A completed mathematical, baseline, certificate, or review artifact is proposed for acceptance.",
+      "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+    },
+    {
+      "agent_id": "A094",
+      "role": "SECOND_OR_ALTERNATE_REVIEW",
+      "required_when": "A major new theorem/counterfamily needs another review, or the primary reviewer must recuse; full-FEI complete-chain requirements are specified separately.",
+      "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+    }
+  ],
+  "initial_pilot": {
+    "work_cycles": 3,
+    "budget_kind": "CAP_NOT_MANDATORY_SPEND",
+    "first_cycle_output": "PROJECTION_RESTRICTION.tex: compensated restriction identity or monotonicity theorem",
+    "final_cycle_gate": "Apply the packet-specific acceptance criteria, save the complete derivation or exact first gap, and route the result to the nominated independent reviewer.",
+    "renewal_milestone": "A proved restriction identity with a usable compensation term or a minimal coherent-child counterexample.",
+    "no_progress_action": "After the pilot, record the exact unresolved line and changed approach needed. Retire an accepted baseline; pause a falsified helper; otherwise choose a distinct hypothesis, proof mechanism, or targeted falsifier before renewal.",
+    "actual_cycles_used": 0
+  },
+  "concurrent_contract_at_a1ff935": {
+    "input_packet_ids": [
+      "A036",
+      "A037"
+    ],
+    "completion_criterion": "A physical-restriction information-projection identity retains both child spectra and their interference; monotonicity is proved under stated conditions or refuted by an actual Boolean split.",
+    "suggested_review_packets": [
+      "A088",
+      "A094"
+    ],
+    "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+    "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+  },
+  "owner_native_stream": "B08",
+  "input_packet_ids": [
+    "A024",
+    "A036",
+    "A037"
+  ],
+  "completion_criterion": "Construct the proposed stochastic map explicitly before invoking data processing; physical restriction produces coherent child spectra and need not be a channel on squared parent coefficients. Track reoptimization of the reference, its normalizer, and support changes in both children. Verify equality on an isospectral split and locate the compensating term for a non-isospectral Boolean control.",
+  "suggested_review_packets": [
+    "A088",
+    "A094"
+  ],
+  "baseline_guard": "Use OBSTRUCTION_REGISTRY.json and the matrix recovered baselines at their exact scopes; do not repeat already proved positive-energy selector closure or the three already refuted weighted-threshold payments.",
+  "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap.",
+  "supplemental_F_groups": [
+    "F03",
+    "F05",
+    "F07",
+    "F08",
+    "F09"
+  ]
+}
+
+~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_26_CRITICAL_RARE_MOMENT.md
+
+
+~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md
+Thus this witness defeats raw entropy subadditivity even over actual connected components. It does NOT defeat the weaker maximum-component-ratio inequality, prove or refute strict physical-criticality implies connected support, or change the finite n<=4 certificate in11.43. Components are not generally physical restrictions. No universal FEI constant follows.
+
+~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\BLOCK_RESTRICTION_IDENTITY_2026-09-18.md
+Status: proved below, self-checked, novelty UNVERIFIED. This generalizes the one-coordinate erasure/JS identity already recorded. It is a framework, not a proof of FEI. The parity construction in `ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md` proves that the block conditional term cannot be replaced by average restriction erasure.
+For |A|=1, the first term is B_i and the second is the Jensen--Shannon term from `ERASURE_REDUCTION.md`.
+## 4. Why average fiber erasure cannot replace the conditional term
+One might hope to strengthen (8) by replacing H(Z_A|Z_C), or by bounding the C-side erasure of q, using the average erasure of the restriction laws q_x plus O(I_A). The semi-bent parity construction proves this impossible.
+With one selector input and m data coordinates, its two q_x laws are uniform on even and odd parity respectively. Each has aggregate erasure zero. Their mixture q is uniform on all m bits and has aggregate erasure m, while I_A=1/2 and I(X;D)=1. Hence
+Equation (4) remains valid because it uses full entropy of the restrictions. In this example H(q)-E H(q_x)=1, exactly the channel information. It is the attempted replacement of full restriction entropy by erasure entropy that loses m-1 bits of parity constraint.
+A useful block choice in (9) would need to detect and include enough coordinates from every high-order spectral constraint, while paying each physical influence only once through (10). The existing one-coordinate bent-marker obstruction says arbitrary singleton blocks do not work; the parity synergy obstruction says averaging fiber erasure does not repair larger-block induction.
+
+~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_REDUCTION.md
+# An erasure-entropy reformulation of FEI
+For any random binary vector, conditioning reduces entropy. In an arbitrary fixed coordinate order,
+Coordinate restriction induction and the local binary-entropy expression are present in González–MacManus–Pereyra, arXiv:2606.00246v2, section 4 and Appendix B. Equations (1)-(5) are written here in conditional-entropy/Jensen–Shannon language, with all constants checked directly. The prior-art search has not established that the aggregate erasure formulation or the sharpened scalar constant is new. Ordinary chain rules, Jensen–Shannon divergence and tensorization are standard.
+
+~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_RIGIDITY.md
+# Exact spectral independence and the remaining aggregate erasure gap
+20 September 2026. Further mathematical work on the unrestricted FEI target. **Full FEI is not proved here.** The statements below have direct proofs. Their publication priority has not been checked. The companion checker is `check_erasure_rigidity.py`; its actual output is `erasure_rigidity_checks.json`.
+## 2. Almost independent spectral bits can still have an unbounded local erasure ratio
+Let Z(f)=sum_i JS(q_i^+,q_i^-), with the restriction spectral laws as in the existing erasure reduction. The retained valid theorem is Z<=2J/ln 2. The stronger proposal Z<=2J is false.
+It computes the entropy and the binary erasure expression with rational logarithm intervals, so this is not just the floating-point observation from the initial search. It is not a claim that the supremum of Z/J has been determined, and the old 2/ln2 payment remains valid.
+    python3 check_erasure_rigidity.py --output erasure_rigidity_checks.json
+
+~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md
+# Erasure synergy and the dual-correlation barrier
+## 1. One mixing bit can create m erasure bits
+Uniform even or odd parity on m>=3 bits has entropy m-1. Every coordinate is determined by the other m-1 coordinates, so its aggregate erasure entropy is zero. Every coordinate marginal is fair, so its mean Hamming weight, hence Fourier influence, is m/2.
+The two restriction supports are disjoint and partition all subsets S. Equation (2) consequently has squared magnitude 2^(-(m+1)) for every (b,S). Thus F has the uniform spectral law on m+1 bits. Its entropy and erasure entropy are m+1, and its influence is (m+1)/2. Finally g_0 and g_1 differ precisely when y_m=1, proving selector influence 1/2. The parity of S identifies which restriction law generated S, giving one bit of selector/spectrum mutual information. QED.
+The general log-Sobolev control of the one-bit mutual information does not repair (3): aggregate erasure can amplify one latent parity bit into m conditional bits.
+Together with the earlier erasure reduction, both summands in H=B+D can independently carry the full difficulty under Boolean-preserving transformations. For B the equivalence was obtained through restriction induction; for D equation (5) is a direct explicit reduction.
+`check_erasure_synergy.py` performs exact integer Walsh transforms for m=3,5,7, verifies every claimed signed coefficient and the full spectral laws, checks the pair lift on every Boolean truth table through three original variables, and checks the sharper parity lift on every Boolean truth table through four original variables. It also records the exploratory small-dimension maxima of D/I from complete enumeration through four variables; those floating entropy values are not used in a theorem.
+The logarithmic edge target K<=C I remains open. A recursive proof cannot replace the restriction entropy by erasure entropy alone: parity-supported restriction spectra have zero B, yet their mixture has maximal B. Nor can the missing D be bounded separately without confronting an FEI-equivalent problem.
+
+~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\GAMMA_ENDPOINT_LEDGER.md
+For a different coordinate j, an observation is a channel of S_without_i. KL chain rule gives an expected decrease of Gamma_i, because after conditioning on that observation the remaining conditional KL is precisely the updated Gamma_i. For the infinitesimal one-click channel define
+This is the finite-channel version of the same KL chain rule. It remains valid when the forced bit is deterministic, with zero terms omitted. No Boolean amplitude, source quantization or marginal-product hypothesis is used.
+The coordinating researcher reconstructed the endpoint identity, fixed-finite-n terminal limit, own-coordinate generator, KL-chain-rule sign and integrated correction. The coordinating researcher then read this complete written note and checked both generator components, including the infinitesimal no-click KL term, the forced chain-rule loss and finite-n integrability. The trajectory researcher independently read the complete written note and checked the same endpoint, scalar, generator, forced-loss and integration claims. Both reviews retain the right-continuous post-cascade convention and the distinction between weighted lifetime and dissipation. No executable replay was performed or needed for this analytic note. No executable test or formal certification is claimed.
+
+~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ISOSPECTRAL_SPLICING_CURATED.md
+The hereditary erasure cost is therefore exactly
+Equation (2.8) is consistent with P03's previously proved one-step erasure/recombination identity; the new point is the common Hellinger defect `M_i` below.
+### Theorem 3.2 — exact KL rebate for hereditary allocation
+### Corollary 3.4 — full one-step decrement with KL rebate
+There exists a set `P` of `r` physical coordinates and a full `r`-layer physical restriction tree querying exactly those coordinates such that:
+Choose pivot coordinates `P` so that projection `pi_P:V->F_2^P` is bijective. Reorder coordinates only for notation, writing `x=(y,z)` with `y\in F_2^r` the pivot coordinates and `z\in F_2^{n-r}`. Row-reducing a basis of `V` gives a unique representation
+- KL-rebate allocation bound: `0.0` violation;
+- KL-rebate full-decrement bound: `0.0` violation.
+- **One-step structure is sharper:** the same Hellinger defect controls allocation and recombination, and the allocation charge has an explicit KL rebate.
+
+~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\LOG_ALLOCATION_CURATED.md
+follows by considering beta<=eta or beta>=eta, using the monotonicity of t(1-t) for t<=1/2. Therefore the total mass in nonempty residual packets satisfies
+
+~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ONE_BIT_ENDPOINT.md
+The constant two is attained by a two-bit bent Boolean function. This is a coupled arithmetic result: an individual half-difference/half-sum projection need not be Boolean or have fair conditional marginals, but its complementary slice cannot simultaneously be product with incompatible mass.
+Its four partial Walsh projections on y are exactly g,h1,h2,h3. Their masses are
+The full squared Fourier law has eight atoms of mass 1/16 and thirty-two atoms of mass 1/64. Hence H(F)=5. Directly from the four projection laws, or from pivotal-edge counting, its physical influence vector in order `(y1,y2,x0,x1,x2,x3)` is
+
+~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\OVERLAPPING_PRODUCT_NOTE.md
+
+
+~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ROUTE_MAP_CURATED.md
+Read the [complete erasure reduction](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/solo-2026-09-17/ERASURE_REDUCTION.md) before reconstructing it. Its downward-edge residual L_down satisfies L_down<=B<=L_down+I/ln 2. The blind Jensen bound L_down<=I log(n/I) discards precisely the structure needed for closure. L_down is **not** the all-shift collision L in Section 4.
+### 2.1 First use the recovered September 20 mismatch/KL theorem
+When M=0, B_i=JS=Delta_i H=0 exactly. If the child squared spectra agree coordinatewise, the parent inherits their FEI constant with zero extra cost. An r-dimensional signed physical translation symmetry can be removed by r actual coordinate queries at zero allocation/decrement, preserving H and weakly decreasing I. A minimum-dimensional counterexample to a proposed constant may therefore be assumed to have no nontrivial signed-translation symmetry.
+[Full proof, Theorems 3.1–5.1](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md). Preserve the KL rebate and recognize exact isospectral splits before replacing M by j or charging a scalar child statistic. This is stronger structural information than a blind kappa surcharge, although the different numerical upper bounds need not be pointwise ordered.
+The latter constant is 6.078162672495945.... [Variance proof](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/research_pushes/2026-09-30-fei-log-allocation/VARIANCE_LOCAL.md). Summing loses sum_i d_i log(v/d_i); it does not pay the universal aggregate erasure bound.
+## 4. Collision/KL route: keep the normalization and both directions separate
+- Full unweighted convolution L2 payment and fixed/low-depth labelled KL extraction underpay rare logarithms
+Hence K=4 aggregate or existential erasure targets are stale, and potential-free one-coordinate restriction induction cannot have constant below 7.05. Conservative floors are 4.5388, 4.5048, and 7.0518 respectively. The source's outward numerical certificate assumes numpy log2/log1p accuracy within 8 ulp; this map did not replay it. Limits 4.58825, 4.55771, 7.11162 are numerical observations, not certified universal limits. None raises the lower bound on the actual FEI constant merely by measuring this proof mechanism.
+1. **Restriction/erasure:** prove B<=K I for one finite universal K, or construct a physical stopping argument paying actual packet mismatch/KL charges with a nonreused influence budget and uniformly paid leaves
+3. **KL:** pay K_occ>=[-B_inf^Gamma]_+ with actual source signs, bias, normalizations and reference changes retained. On the balanced slice this is already full-FEI-strength. Nonlinear/multiscale payment remains possible; fixed positive reserves and low-level truncations do not supply it
+
+~\brain_workers\FEI100_20261011\context\percolation_spectral_pivotal_entropy_30pp.txt
+
+without any independence assumption.
+
+Lemma 2.1 (Refinement cost). Let Ort be the root occupancy vector. For arbitrary leaf depths,
+
+         H(A)  H(Ort) +  pv log2(2dv - 1) +  pv log2(2|Cv| - 1).
+
+         v internal                              v leaf
+
+In particular, suppose terminal cells have at most M  1 elements and every internal cell has at
+
+most b  1 children. For a single tree with all terminal cells at depth L, let Zj be its occupied-cell
+pattern at depth j and Nj = |Zj|. Then, for 0  k  L,
+
+                                            L-1
+
+(10)     H(A)  h2(P(A = )) + log2(2b - 1)  ENj + log2(2M - 1)ENL,
+
+                                            j=0
+
+                                            k-1
+
+(11)     H(Zk)  h2(P(A = )) + log2(2b - 1)  ENj.
+
+                                            j=0
+
+Proof. List the root occupancy vector and then the child masks, with each parent preceding its
+
+descendants. The occupancy of a vertex is known when its mask is exposed. Its mask is empty when
+
+it is unoccupied and has at most 2dv - 1 possible values when it is occupied. The chain rule bounds
+
+~\brain_workers\FEI100_20261011\context\percolation_spectral_pivotal_entropy_31pp_other_version.txt
+
+without any independence assumption.
+
+Lemma 2.1 (Refinement cost). Let Ort be the root occupancy vector. For arbitrary leaf depths,
+
+      H(A)  H(Ort) +              pv log2(2dv - 1) +          pv log2(2|Cv| - 1).
+
+                      v internal                      v leaf
+
+In particular, suppose terminal cells have at most M  1 elements and every internal cell has at
+
+most b  1 children. For a single tree with all terminal cells at depth L, let Zj be its occupied-cell
+pattern at depth j and Nj = |Zj|. Then, for 0  k  L,
+
+                                  L-1
+
+(11)  H(A)  h2(P(A = )) + log2(2b - 1) ENj + log2(2M - 1)ENL,
+
+                                  j=0
+
+                                  k-1
+
+(12)  H(Zk)  h2(P(A = )) + log2(2b - 1) ENj.
+
+                                  j=0
+
+Proof. List the root occupancy vector and then the child masks, with each parent preceding its
+
+descendants. The occupancy of a vertex is known when its mask is exposed. Its mask is empty when
+
+it is unoccupied and has at most 2dv - 1 possible values when it is occupied. The chain rule bounds
+
+~\brain_workers\FEI100_20261011\context\threshold_paper_29pp_earlier_version.txt
+                                     T
+
+The right side is nonnegative even when d takes both signs.
+   We shall use Gibbs' inequality also for subprobability reference measures. If P is a probability
+
+law and Q is nonnegative, Q  1, and Q > 0 on the support of P , then
+
+(12)                      H(P )                     log  1
+                                                           .
+                                                EP       Q
+
+This follows by normalizing Q and applying nonnegativity of relative entropy.
+
+Lemma 2.1 (Spectral-level entropy [17, Theorem 5]). If S has law P(S = S) = f (S)2, then
+
+                          H(|S|)  3I(f ).
+
+                  FOURIER ENTROPY OF THRESHOLD FUNCTIONS                                                    5
+
+Proof. Put v = Var(f ). The geometric reference 2-k on positive integers gives vH(|S| | |S| > 0) 
+
+I(f ). The edge-isoperimetric inequality gives I(f )  2p log(1/p), where p = min{P(f = 1), P(f =
+
+-1)}. It implies
+
+                                       I(f )    v+  1  v  log(1/v).
+                                                    2
+
+For completeness, after writing q = 1 - 2p = 1 - v, the latter comparison is equivalent to
+
+                  (q - 1) log(1 - q) + (1 + q) log(1 + q) - 2q  0.
+
+~\brain_workers\FEI100_20261011\context\threshold_paper_38pp.txt
+arities and induced output biases. The proof and further formula consequences appear in Sections 6
+and 7.
+
+   The joint witness estimate in Proposition 5.5 retains the cost of the gates used by an entire
+Fourier set and gives a constant bound for addressing inside the same queue construction. Section 8
+derives exact selector identities and constant-preserving closure under suitable Fourier-support
+separation. It also shows that unrestricted two-cell selectors and arbitrarily rare activations preserve
+the optimal constant of full FEI. These reductions specify the scope of the structured hypotheses.
+
+1.1. Earlier work. O'Donnell, Wright and Zhou [18] proved FEI for symmetric and fixed-part
+symmetric functions and for read-once decision trees. Their method relates derivative noise
+stability to spectral entropy; the spectral-level argument below refines their bound. Chakraborty,
+Kulkarni, Lokam and Saurabh [5] proved, among other results, an O( n) entropy bound for linear
+threshold functions. The corrected version of their manuscript removes an earlier all-threshold claim.
+Chakraborty, Karmalkar, Kundu, Lokam and Saurabh [4] proved FEI with high probability for
+specified random models of linear threshold functions.
+
+   Shalev [21] studied the read-k DNF question and proved a min-entropy result for a restricted
+class of such formulas. Arunachalam, Chakraborty, Kouck�, Saurabh and de Wolf [1] established the
+min-entropy conjecture for read-k DNF with fixed k. Theorem C bounds the full Shannon entropy
+and applies more generally to unions and intersections of regular functions. Fourier concentration
+for small-read DNF was studied by Lecomte and Tan [14]; Section 9 records a direct concentration
+consequence of the entropy bound.
+
+4                         YITZCHAK SHMALO
+
+   O'Donnell and Tan [17] introduced the product-measure strengthening of FEI used in composition
+and proved its closure under disjoint substitution. They obtained FEI for read-once formulas over
+any fixed finite gate basis. Our formula results use their composition principle; the additional input
+is a bound uniform in the arity of symmetric threshold gates, together with the threshold and
+regular-gate bounds above.
+
+The right side is nonnegative even when d takes both signs.
+
+   We shall use Gibbs' inequality also for subprobability reference measures. If P is a probability
+
+law and Q is nonnegative, Q  1, and Q > 0 on the support of P , then
+
+(12)                      H(P )                     log  1
+                                                           .
+                                                EP       Q
+
+                       FOURIER ENTROPY OF THRESHOLD FUNCTIONS                               5
+
+This follows by normalizing Q and applying nonnegativity of relative entropy.
+
+Lemma 2.1 (Spectral-level entropy). If S has law P(S = S) = f (S)2, then
+                                      H(|S|)  ClevI(f ), Clev = log(4 + e).
+
+Proof. Put K = |S| and v = Var(f ) = P(K > 0). If v = 0, the conclusion is immediate. As in the
+spectral-level argument of [18, Theorem 5], the edge-isoperimetric inequality gives I(f )  2p log(1/p),
+
+where p = min{P(f = 1), P(f = -1)}. It implies
+
+                                    I(f )    v+  1  v  log(1/v).
+                                                 2
+
+For completeness, after writing q = 1 - 2p = 1 - v, the latter comparison is equivalent to
+
+                       (q - 1) log(1 - q) + (1 + q) log(1 + q) - 2q  0.
+
+The left side vanishes at 0 and 1 and has second derivative -2q/((1 - q2) ln 2)  0. Since -(1 -
+The notation T includes the attachment choices and an ordering of children sharing an attachment
+coordinate.
+
+Proposition 5.5 (Variational witness bound). For every such assignment and forest,
+
+                                            1
+                                   log Q1,(A)   + C(A; , T ).
+
+Consequently, for v = Var(f ),
+
+      H(f )  h2(v) + v +                                        f (A)2 min C(A; , T ).
+                                                                  ,T
+                                                       A=
+
+                                                       f (A)=0
+
+Proof. Prescribe the root set, the subset Al at each visited gate, and exactly the forest children
+
+with their attachments. This is a successful finite run and visits every gate in F once. The root-set
+
+probability is 2- rR r. The remaining factors in the run probability are precisely the subset,
+
+size, child-count, multiset and gate-label probabilities defining C. Thus the probability of this run
+is 2--C, proving the first bound. Apply Gibbs' inequality to Q() = 1 - v and Q(A) = vQ1,(A)
+
+for A = . Minimization is valid because each finite witness separately gives a lower bound for the
+
+same reference mass Q1,(A).                                                                                 
+
+The variational minimum must be taken over descriptions of A as a whole. Minimizing one

@@ -1,0 +1,331 @@
+#include <gmp.h>
+#include <gmpxx.h>
+#include <algorithm>
+#include <array>
+#include <cassert>
+#include <chrono>
+#include <cmath>
+#include <cstdint>
+#include <cstdio>
+#include <cstdlib>
+#include <iomanip>
+#include <iostream>
+#include <map>
+#include <numeric>
+#include <set>
+#include <sstream>
+#include <string>
+#include <tuple>
+#include <utility>
+#include <vector>
+
+extern "C" {
+typedef long mpfr_prec_t;
+typedef int mpfr_sign_t;
+typedef long mpfr_exp_t;
+typedef enum { MPFR_RNDN=0, MPFR_RNDZ=1, MPFR_RNDU=2, MPFR_RNDD=3, MPFR_RNDA=4, MPFR_RNDF=5 } mpfr_rnd_t;
+typedef struct { mpfr_prec_t _mpfr_prec; mpfr_sign_t _mpfr_sign; mpfr_exp_t _mpfr_exp; mp_limb_t *_mpfr_d; } __mpfr_struct;
+typedef __mpfr_struct mpfr_t[1];
+typedef __mpfr_struct* mpfr_ptr;
+typedef const __mpfr_struct* mpfr_srcptr;
+void mpfr_init2(mpfr_ptr, mpfr_prec_t);
+void mpfr_clear(mpfr_ptr);
+int mpfr_set_q(mpfr_ptr, mpq_srcptr, mpfr_rnd_t);
+int mpfr_set_ui(mpfr_ptr, unsigned long, mpfr_rnd_t);
+int mpfr_set_si(mpfr_ptr, long, mpfr_rnd_t);
+int mpfr_set(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+int mpfr_log(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+int mpfr_neg(mpfr_ptr, mpfr_srcptr, mpfr_rnd_t);
+int mpfr_add(mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t);
+int mpfr_sub(mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t);
+int mpfr_mul(mpfr_ptr, mpfr_srcptr, mpfr_srcptr, mpfr_rnd_t);
+int mpfr_div_ui(mpfr_ptr, mpfr_srcptr, unsigned long, mpfr_rnd_t);
+int mpfr_cmp_si(mpfr_srcptr, long);
+double mpfr_get_d(mpfr_srcptr, mpfr_rnd_t);
+}
+
+static constexpr int NV=5;
+static constexpr int N=32;
+static constexpr mpfr_prec_t PREC=256;
+static const int BINOM[6]={1,5,10,10,5,1};
+
+static mpq_class Q(long n,long d=1){ mpq_class q(n,d); q.canonicalize(); return q; }
+
+struct MP {
+    mpfr_t v;
+    MP(){ mpfr_init2(v,PREC); mpfr_set_ui(v,0,MPFR_RNDN); }
+    ~MP(){ mpfr_clear(v); }
+    MP(const MP&)=delete; MP& operator=(const MP&)=delete;
+};
+static void setq(MP& x,const mpq_class& q,mpfr_rnd_t r){ mpfr_set_q(x.v,q.get_mpq_t(),r); }
+static double getd(const MP& x){ return mpfr_get_d(x.v,MPFR_RNDN); }
+
+static void neglog_bounds(const mpq_class& q,MP& lo,MP& hi){
+    MP qlo,qhi,lgu,lgd;
+    setq(qlo,q,MPFR_RNDD); setq(qhi,q,MPFR_RNDU);
+    mpfr_log(lgu.v,qhi.v,MPFR_RNDU); mpfr_neg(lo.v,lgu.v,MPFR_RNDD);
+    mpfr_log(lgd.v,qlo.v,MPFR_RNDD); mpfr_neg(hi.v,lgd.v,MPFR_RNDU);
+}
+static void entropy_bounds(const mpq_class& q,MP& lo,MP& hi){
+    if(q==0 || q==1){ mpfr_set_ui(lo.v,0,MPFR_RNDN); mpfr_set_ui(hi.v,0,MPFR_RNDN); return; }
+    assert(q>0 && q<1);
+    mpq_class r=1-q;
+    MP qlo,qhi,rlo,rhi,nlqlo,nlqhi,nlrlo,nlrhi,t1lo,t1hi,t2lo,t2hi;
+    setq(qlo,q,MPFR_RNDD); setq(qhi,q,MPFR_RNDU);
+    setq(rlo,r,MPFR_RNDD); setq(rhi,r,MPFR_RNDU);
+    neglog_bounds(q,nlqlo,nlqhi); neglog_bounds(r,nlrlo,nlrhi);
+    mpfr_mul(t1lo.v,qlo.v,nlqlo.v,MPFR_RNDD); mpfr_mul(t1hi.v,qhi.v,nlqhi.v,MPFR_RNDU);
+    mpfr_mul(t2lo.v,rlo.v,nlrlo.v,MPFR_RNDD); mpfr_mul(t2hi.v,rhi.v,nlrhi.v,MPFR_RNDU);
+    mpfr_add(lo.v,t1lo.v,t2lo.v,MPFR_RNDD); mpfr_add(hi.v,t1hi.v,t2hi.v,MPFR_RNDU);
+}
+static void ln_integer_bounds(unsigned long a,MP& lo,MP& hi){
+    MP x; mpfr_set_ui(x.v,a,MPFR_RNDN);
+    mpfr_log(lo.v,x.v,MPFR_RNDD); mpfr_log(hi.v,x.v,MPFR_RNDU);
+}
+
+struct Poset {
+    std::array<uint32_t,N> pred{},succ{};
+    Poset(){
+        for(int i=0;i<NV;i++) for(int j=i+1;j<NV;j++){
+            for(uint32_t base=0;base<(1u<<NV);base++){
+                if(base & ((1u<<i)|(1u<<j))) continue;
+                uint32_t v00=base;
+                uint32_t v01=base|(1u<<j);
+                uint32_t v10=base|(1u<<i);
+                uint32_t v11=base|(1u<<i)|(1u<<j);
+                pred[v01] |= (1u<<v00);
+                pred[v10] |= (1u<<v01);
+                pred[v11] |= (1u<<v10);
+            }
+        }
+        for(int pass=0;pass<N;pass++){
+            bool changed=false;
+            for(int v=0;v<N;v++){
+                uint32_t q=pred[v], y=q;
+                while(y){ uint32_t bit=y&(~y+1u); int b=__builtin_ctz(y); q |= pred[b]; y-=bit; }
+                if(q!=pred[v]){ pred[v]=q; changed=true; }
+            }
+            if(!changed) break;
+        }
+        for(int u=0;u<N;u++){
+            uint32_t y=pred[u];
+            while(y){ uint32_t bit=y&(~y+1u); int v=__builtin_ctz(y); succ[v]|=(1u<<u); y-=bit; }
+        }
+    }
+    int minimal(uint32_t avail) const{
+        uint32_t y=avail;
+        while(y){ int v=__builtin_ctz(y); uint32_t bit=1u<<v; if((pred[v]&avail)==0) return v; y-=bit; }
+        return -1;
+    }
+    void rec(uint32_t avail,uint32_t included,std::vector<uint32_t>& out) const{
+        if(!avail){ out.push_back(included); return; }
+        int m=minimal(avail); assert(m>=0); uint32_t bit=1u<<m;
+        rec(avail&~bit,included|bit,out);
+        rec(avail&~bit&~succ[m],included,out);
+    }
+    std::vector<uint32_t> ideals() const{
+        std::vector<uint32_t> out; rec(0xffffffffu,0u,out);
+        std::sort(out.begin(),out.end()); out.erase(std::unique(out.begin(),out.end()),out.end());
+        return out;
+    }
+};
+
+static bool pair_compressed(uint32_t mask){
+    for(int i=0;i<NV;i++) for(int j=i+1;j<NV;j++){
+        for(uint32_t base=0;base<(1u<<NV);base++){
+            if(base & ((1u<<i)|(1u<<j))) continue;
+            uint32_t v[4]={base,base|(1u<<j),base|(1u<<i),base|(1u<<i)|(1u<<j)};
+            bool seen0=false;
+            for(int k=0;k<4;k++){
+                bool in=(mask>>v[k])&1u;
+                if(!in) seen0=true; else if(seen0) return false;
+            }
+        }
+    }
+    return true;
+}
+static bool is_constant(uint32_t m){ return m==0u || m==0xffffffffu; }
+static bool is_dictator(uint32_t m){
+    for(int i=0;i<NV;i++){
+        uint32_t d=0;
+        for(uint32_t x=0;x<(1u<<NV);x++) if((x>>i)&1u) d|=(1u<<x);
+        if(m==d || m==(0xffffffffu^d)) return true;
+    }
+    return false;
+}
+
+using Poly=std::array<mpq_class,6>;
+static Poly qpoly(uint32_t mask,int y){
+    int c[6]={0,0,0,0,0,0};
+    for(int x=0;x<N;x++) if((mask>>x)&1u) c[__builtin_popcount((unsigned)(x^y))]++;
+    Poly p; for(int d=0;d<=NV;d++) p[d]=Q(c[d],BINOM[d]); return p;
+}
+static std::pair<Poly,Poly> subdivide(const Poly& c,const mpq_class& t){
+    mpq_class row[6][6]; for(int i=0;i<6;i++) row[0][i]=c[i];
+    for(int r=1;r<6;r++) for(int i=0;i<6-r;i++) row[r][i]=(1-t)*row[r-1][i]+t*row[r-1][i+1];
+    Poly L,R; for(int i=0;i<6;i++){ L[i]=row[i][0]; R[i]=row[5-i][i]; } return {L,R};
+}
+static Poly restrict_poly(const Poly& c,const mpq_class& a,const mpq_class& b){
+    Poly left=c; if(b!=1) left=subdivide(c,b).first; if(a==0) return left; return subdivide(left,a/b).second;
+}
+static mpq_class eval_poly(const Poly& c,const mpq_class& a){
+    std::vector<mpq_class> cur(c.begin(),c.end());
+    while(cur.size()>1){ std::vector<mpq_class> nxt; for(size_t i=0;i+1<cur.size();i++) nxt.push_back((1-a)*cur[i]+a*cur[i+1]); cur.swap(nxt); }
+    return cur[0];
+}
+static std::string pkey(const Poly& p){ std::ostringstream os; for(auto &q:p) os<<q.get_num()<<'/'<<q.get_den()<<';'; return os.str(); }
+struct Group { Poly p; int mult; };
+static std::vector<Group> make_groups(uint32_t mask){
+    std::map<std::string,std::pair<Poly,int>> tmp;
+    for(int y=0;y<N;y++){ Poly q=qpoly(mask,y); std::string k=pkey(q); auto it=tmp.find(k); if(it==tmp.end()) tmp[k]={q,1}; else it->second.second++; }
+    std::vector<Group> out; for(auto &kv:tmp) out.push_back({kv.second.first,kv.second.second}); return out;
+}
+static void entropy_min_endpoint(const mpq_class& loq,const mpq_class& hiq,MP& hlo,MP& hhi){
+    mpq_class dlo=abs(2*loq-1),dhi=abs(2*hiq-1); entropy_bounds(dlo>=dhi?loq:hiq,hlo,hhi);
+}
+static void D_point(uint32_t mask,const mpq_class& a,const std::vector<Group>& groups,MP& dlo,MP& dhi,const MP& ln2lo,const MP& ln2hi){
+    mpq_class p=Q(__builtin_popcount(mask),N);
+    MP haL,haU,hpL,hpU,sumL,sumU;
+    entropy_bounds(a,haL,haU); entropy_bounds(p,hpL,hpU);
+    mpfr_set(dlo.v,ln2lo.v,MPFR_RNDD); mpfr_set(dhi.v,ln2hi.v,MPFR_RNDU);
+    mpfr_sub(dlo.v,dlo.v,haU.v,MPFR_RNDD); mpfr_sub(dhi.v,dhi.v,haL.v,MPFR_RNDU);
+    mpfr_sub(dlo.v,dlo.v,hpU.v,MPFR_RNDD); mpfr_sub(dhi.v,dhi.v,hpL.v,MPFR_RNDU);
+    mpfr_set_ui(sumL.v,0,MPFR_RNDN); mpfr_set_ui(sumU.v,0,MPFR_RNDN);
+    for(const auto& g:groups){
+        mpq_class q=eval_poly(g.p,a); MP qL,qU; entropy_bounds(q,qL,qU);
+        for(int k=0;k<g.mult;k++){ mpfr_add(sumL.v,sumL.v,qL.v,MPFR_RNDD); mpfr_add(sumU.v,sumU.v,qU.v,MPFR_RNDU); }
+    }
+    mpfr_div_ui(sumL.v,sumL.v,N,MPFR_RNDD); mpfr_div_ui(sumU.v,sumU.v,N,MPFR_RNDU);
+    mpfr_add(dlo.v,dlo.v,sumL.v,MPFR_RNDD); mpfr_add(dhi.v,dhi.v,sumU.v,MPFR_RNDU);
+}
+static void D_interval_lower(uint32_t mask,const mpq_class& a,const mpq_class& b,const std::vector<Group>& groups,MP& dlo,const MP& ln2lo){
+    mpq_class p=Q(__builtin_popcount(mask),N);
+    MP hbL,hbU,hpL,hpU,sumL;
+    entropy_bounds(b,hbL,hbU); entropy_bounds(p,hpL,hpU);
+    mpfr_set(dlo.v,ln2lo.v,MPFR_RNDD); mpfr_sub(dlo.v,dlo.v,hbU.v,MPFR_RNDD); mpfr_sub(dlo.v,dlo.v,hpU.v,MPFR_RNDD);
+    mpfr_set_ui(sumL.v,0,MPFR_RNDN);
+    for(const auto& g:groups){
+        Poly r=restrict_poly(g.p,a,b); mpq_class lo=r[0],hi=r[0]; for(int i=1;i<6;i++){ if(r[i]<lo)lo=r[i]; if(r[i]>hi)hi=r[i]; }
+        MP hL,hU; entropy_min_endpoint(lo,hi,hL,hU); for(int k=0;k<g.mult;k++) mpfr_add(sumL.v,sumL.v,hL.v,MPFR_RNDD);
+    }
+    mpfr_div_ui(sumL.v,sumL.v,N,MPFR_RNDD); mpfr_add(dlo.v,dlo.v,sumL.v,MPFR_RNDD);
+}
+
+static std::array<mpq_class,N> walsh_pm(uint32_t mask){
+    std::array<mpq_class,N> c;
+    for(int S=0;S<N;S++){
+        int s=0;
+        for(int x=0;x<N;x++){
+            int v=((mask>>x)&1u)?-1:1; int chi=(__builtin_popcount((unsigned)(x&S))&1)?-1:1; s+=v*chi;
+        }
+        c[S]=Q(s,N);
+    }
+    return c;
+}
+static mpq_class avg_sensitivity(uint32_t mask){
+    long ss=0; for(int x=0;x<N;x++) for(int i=0;i<NV;i++) ss += (((mask>>x)&1u)!=((mask>>(x^(1<<i)))&1u)); return Q(ss,N);
+}
+
+struct IntervalStats{ long long nodes=0,leaves=0; int maxdepth=0; double min_lb=1e300; uint32_t worstmask=0; };
+static bool certify_middle(uint32_t mask,const std::vector<Group>& groups,const mpq_class& A0,const mpq_class& A1,const MP& ln2lo,IntervalStats& st,int maxdepth=30){
+    struct Node{ mpq_class a,b; int d; };
+    std::vector<Node> stack; stack.push_back({A0,A1,0});
+    while(!stack.empty()){
+        Node z=stack.back(); stack.pop_back(); st.nodes++; st.maxdepth=std::max(st.maxdepth,z.d);
+        MP lb; D_interval_lower(mask,z.a,z.b,groups,lb,ln2lo);
+        if(mpfr_cmp_si(lb.v,0)>0){ st.leaves++; double v=getd(lb); if(v<st.min_lb){st.min_lb=v;st.worstmask=mask;} continue; }
+        if(z.d>=maxdepth){ std::cerr<<"UNCERTIFIED mask="<<mask<<" depth="<<z.d<<" a="<<z.a<<" b="<<z.b<<" lb="<<std::setprecision(17)<<getd(lb)<<"\n"; return false; }
+        mpq_class mid=(z.a+z.b)/2; stack.push_back({mid,z.b,z.d+1}); stack.push_back({z.a,mid,z.d+1});
+    }
+    return true;
+}
+
+int main(){
+    auto t0=std::chrono::steady_clock::now();
+    std::cout<<std::setprecision(17);
+    Poset P; std::vector<uint32_t> reps=P.ideals();
+    assert(reps.size()==119); for(uint32_t m:reps) assert(pair_compressed(m));
+    int constants=0,dictators=0,nontriv=0,balanced=0,biased=0;
+    std::vector<uint32_t> work;
+    for(uint32_t m:reps){
+        if(is_constant(m)){ constants++; continue; }
+        if(is_dictator(m)){ dictators++; continue; }
+        work.push_back(m); nontriv++; if(__builtin_popcount(m)==16)balanced++; else biased++;
+    }
+    assert(constants==2 && dictators==1 && nontriv==116);
+
+    std::cout<<"PROB20-21 N<=5 FULL-NOISE-INTERVAL CERTIFICATE\n";
+    std::cout<<"model_runtime_metadata=GPT-5.6_Sol; reasoning_level=UNVERIFIED; requested_GPT6_maximum_not_verified\n";
+    std::cout<<"metric_before=4\nmetric_after=5\n";
+    std::cout<<"compression_family_count="<<reps.size()<<" constants="<<constants<<" dictators="<<dictators<<" nontrivial="<<nontriv<<" balanced_nontrivial="<<balanced<<" biased_nontrivial="<<biased<<"\n";
+    std::cout<<"compressed_masks_hex="; for(size_t i=0;i<reps.size();i++){ if(i)std::cout<<","; std::cout<<std::hex<<std::setw(8)<<std::setfill('0')<<reps[i]; } std::cout<<std::dec<<std::setfill(' ')<<"\n";
+
+    std::map<uint32_t,std::vector<Group>> groups; for(uint32_t m:work) groups[m]=make_groups(m);
+    MP ln2lo,ln2hi; ln_integer_bounds(2,ln2lo,ln2hi);
+
+    long long grid_points=0; int grid_negative=0,grid_inconclusive=0; double min_grid_lb=1e300; uint32_t min_grid_mask=0; int min_grid_j=0;
+    for(uint32_t m:work){
+        for(int j=1;j<=255;j++){
+            mpq_class a=Q(j,512); MP lo,hi; D_point(m,a,groups[m],lo,hi,ln2lo,ln2hi); grid_points++;
+            if(mpfr_cmp_si(hi.v,0)<0){ grid_negative++; }
+            if(mpfr_cmp_si(lo.v,0)<=0 && mpfr_cmp_si(hi.v,0)>=0) grid_inconclusive++;
+            double v=getd(lo); if(v<min_grid_lb){min_grid_lb=v;min_grid_mask=m;min_grid_j=j;}
+        }
+    }
+    assert(grid_negative==0 && grid_inconclusive==0);
+    std::cout<<"counterexample_grid_alpha=j/512,j=1..255 points="<<grid_points<<" certified_negative="<<grid_negative<<" inconclusive="<<grid_inconclusive
+             <<" min_lower_gap_nats="<<min_grid_lb<<" min_mask=0x"<<std::hex<<min_grid_mask<<std::dec<<" min_alpha="<<min_grid_j<<"/512\n";
+
+    mpq_class A0=Q(1,8192),A1=Q(63,128);
+    MP hA0L,hA0U,h15L,h15U,biasedGap;
+    entropy_bounds(A0,hA0L,hA0U); entropy_bounds(Q(15,32),h15L,h15U);
+    mpfr_set(biasedGap.v,ln2lo.v,MPFR_RNDD); mpfr_sub(biasedGap.v,biasedGap.v,hA0U.v,MPFR_RNDD); mpfr_sub(biasedGap.v,biasedGap.v,h15U.v,MPFR_RNDD);
+    assert(mpfr_cmp_si(biasedGap.v,0)>0);
+
+    mpq_class minAS; uint32_t minASMask=0; bool have=false;
+    for(uint32_t m:work) if(__builtin_popcount(m)==16){ mpq_class av=avg_sensitivity(m); if(!have||av<minAS){have=true;minAS=av;minASMask=m;} }
+    assert(have && minAS==Q(11,8));
+    mpq_class c0=1-A0; c0=c0*c0*c0*c0;
+    mpq_class coeff=minAS*c0-1; assert(coeff>0);
+    MP ln8192L,ln8192U,ln5L,ln5U,coeffL,term1,coefSL,term2,balGap,one;
+    ln_integer_bounds(8192,ln8192L,ln8192U); ln_integer_bounds(5,ln5L,ln5U);
+    setq(coeffL,coeff,MPFR_RNDD); mpfr_mul(term1.v,coeffL.v,ln8192L.v,MPFR_RNDD);
+    setq(coefSL,minAS,MPFR_RNDU); mpfr_mul(term2.v,coefSL.v,ln5U.v,MPFR_RNDU);
+    mpfr_sub(balGap.v,term1.v,term2.v,MPFR_RNDD); mpfr_set_ui(one.v,1,MPFR_RNDN); mpfr_sub(balGap.v,balGap.v,one.v,MPFR_RNDD);
+    assert(mpfr_cmp_si(balGap.v,0)>0);
+    mpq_class emax=1; for(int k=0;k<NV;k++) emax*=1-A0; emax=1-emax; assert(emax<Q(1,2));
+    std::cout<<"low_noise_alpha=[0,1/8192] biased_capacity_minus_entropy_lower="<<getd(biasedGap)
+             <<" balanced_min_avg_sensitivity="<<minAS<<" mask=0x"<<std::hex<<minASMask<<std::dec
+             <<" balanced_analytic_lower_after_dividing_alpha="<<getd(balGap)<<"\n";
+
+    mpq_class rho0=Q(1,64),minMargin; uint32_t minMarginMask=0; bool haveMargin=false; mpq_class minDelta; uint32_t minDeltaMask=0; bool haveDelta=false;
+    for(uint32_t m:work){
+        auto c=walsh_pm(m); mpq_class mu=abs(c[0]),var=1-mu*mu,W1=0,L1=0;
+        for(int i=0;i<NV;i++) W1+=c[1<<i]*c[1<<i];
+        for(int S=1;S<N;S++) L1+=abs(c[S]);
+        mpq_class delta=var-W1; assert(var>0 && delta>0);
+        if(!haveDelta||delta<minDelta){haveDelta=true;minDelta=delta;minDeltaMask=m;}
+        mpq_class R=mu+rho0*L1; assert(R<1);
+        mpq_class M3=2*R/((1-R*R)*(1-R*R));
+        mpq_class margin=(1-rho0*rho0)*delta/(2*var) - M3*L1*var*rho0/6;
+        assert(margin>0);
+        if(!haveMargin||margin<minMargin){haveMargin=true;minMargin=margin;minMarginMask=m;}
+    }
+    assert(haveDelta && haveMargin);
+    std::cout<<"high_noise_alpha=[63/128,1/2] min_higher_level_mass="<<minDelta<<" mask=0x"<<std::hex<<minDeltaMask<<std::dec
+             <<" min_Taylor_gap_coefficient="<<minMargin<<" approx="<<minMargin.get_d()<<" margin_mask=0x"<<std::hex<<minMarginMask<<std::dec<<"\n";
+
+    IntervalStats st;
+    for(uint32_t m:work){ bool ok=certify_middle(m,groups[m],A0,A1,ln2lo,st,30); if(!ok) return 2; }
+    std::cout<<"middle_interval=[1/8192,63/128] certified_functions="<<work.size()<<" subdivision_nodes="<<st.nodes<<" certified_leaves="<<st.leaves
+             <<" max_depth="<<st.maxdepth<<" min_certified_interval_lower_nats="<<st.min_lb<<" worst_mask=0x"<<std::hex<<st.worstmask<<std::dec<<"\n";
+
+    std::cout<<"coverage_manifest=all_119_pairwise_compressed_n5_functions; full_alpha_interval=[0,1/2]; by_source_compression_all_2^32_truth_tables_covered\n";
+    std::cout<<"source_corollary_count_expected=119 source_corollary_count_reproduced="<<reps.size()<<"\n";
+    std::cout<<"certificate_status=PASS\n";
+
+    auto t1=std::chrono::steady_clock::now();
+    double sec=std::chrono::duration<double>(t1-t0).count();
+    std::cout<<"checker_wall_seconds_observed="<<sec<<"\n";
+    return 0;
+}

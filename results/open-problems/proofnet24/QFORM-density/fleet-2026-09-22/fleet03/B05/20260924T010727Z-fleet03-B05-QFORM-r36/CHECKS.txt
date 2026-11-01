@@ -1,0 +1,60 @@
+fleet03/B05 r36 exact checks
+run_id: 20260924T010727Z-fleet03-B05-QFORM-r36
+
+1. Matrix factorization.
+For D=c^2-ad>0 and kappa=c+sign(c)*sqrt(D), alpha=d/kappa, beta=a/kappa:
+  kappa*(y+alpha*z)*(z+beta*y)
+= a*y^2 + kappa*(1+ad/kappa^2)*y*z + d*z^2.
+Since kappa^2-2*c*kappa+ad=0, kappa+ad/kappa=2*c.
+Residual: 0 exactly.
+
+2. Jacobian invariant.
+The map (y,z)->(u,v)=(y+alpha*z,z+beta*y) has
+  delta=1-alpha*beta
+       =1-ad/kappa^2
+       =2*(kappa-c)/kappa
+       =2*sqrt(D)/abs(kappa)>0.
+Hence abs(kappa)*delta=2*sqrt(D) exactly.
+
+3. Collar bounds for epsilon=1/5.
+abs(ad)<=D/25 and c^2=D+ad imply
+  sqrt(24/25)<=abs(c)/sqrt(D)<=sqrt(26/25).
+Thus gamma=abs(kappa)/sqrt(D)=1+abs(c)/sqrt(D)
+  <=1+sqrt(26/25)=2.0198039027185573.
+Also
+  max(abs(alpha),abs(beta))
+  <=(1/5)/(1+sqrt(24/25))
+  =0.1010205144... <1/8.
+Therefore abs(alpha*beta)<1/64 and 63/64<delta<65/64.
+
+4. Kernel constants.
+With M=sqrt(2), delta<65/64:
+  32*M*delta/7 < 6.566 < 7,
+so I(w)<=7*abs(w)^(-1/2).
+Also 16*M*delta <22.981<23,
+so I(w)<=23+4*log_+(1/abs(w))
+          <=23*(1+log_+(1/abs(w))).
+
+5. Layer-cake scalars.
+For x>=1,
+  x^(-2/3)*(3+2*log x)
+is decreasing, with maximum 3 at x=1.
+For 0<x<=1,
+  x^(1/3)*(1+log(1/x))
+has maximum 3*exp(-2/3), attained at x=exp(-2).
+
+6. Final constant.
+gamma_max = 1+sqrt(26/25) = 2.0198039027185573.
+C = [69*2^(1/3)+21*2^(1/3)*exp(-2/3)]*gamma_max^(1/3)
+  = 127.06228980161316 <128.
+
+7. Standard packet numerical specialization.
+128*(20/3)^(1/3) = 240.90522339354328 <240.906.
+Earlier designated-partner heavy exact-slope specialization:
+51.6*(4/(3/20))^(1/3) = 154.16032328156646 <154.161.
+
+8. Logical scope check.
+The theorem needs only the marginal cap of S and allows the correlated environment E to enter F,G. It does NOT allow an arbitrary additive H(E) in the output. In a higher-rank conditional packet, a residual null-direction affine term hR therefore remains a separate debt. No claim in REPORT.md discards it.
+
+9. Partner scope check.
+At q_Y=q_Z=1, the normalized scalar projections are literal original coordinates up to signs. Their physical principal block is sign-conjugate to B, so determinant magnitude and definiteness are unchanged. The fresh fleet04/B05 definite-pair theorem therefore gives pi/sqrt(abs(det B)) on that literal definite endpoint.

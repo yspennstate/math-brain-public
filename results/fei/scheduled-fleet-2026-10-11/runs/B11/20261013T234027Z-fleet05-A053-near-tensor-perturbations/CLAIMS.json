@@ -1,0 +1,36 @@
+[
+  {
+    "claim_id": "A053-SIGNED-COLLISION-SURGERY-STABILITY",
+    "version": 1,
+    "exact_statement": "The joint-row collision functional Gamma is TV-Lipschitz with constant a+(sqrt(2^a)+1)/ln2 independent of retained alphabet. Every one-point surgery satisfies |delta Gamma_A|<10*2^(-n/2) uniformly over proper blocks. With u_n=2^(1-floor(n/2)), n>=4, |delta V_A|<=a*u_n+h2(u_n)+rho_(n,a), rho=[a+(2^(a/2)+1)/ln2]*2^(1-a)*sqrt(2^(-(n-a))*(1-2^(-(n-a)))); strict fixed-price slack exceeding this plus2Ka2^-n transfers V_A<KI_A. A Boolean G at disagreement epsilon from a product across A admits lower-dimensional Boolean row phases with mass-weighted squared amplitude error<=16epsilon. A least-essential-dimension K-violation obtained by one-point surgery of that product obeys D_K(G)<=10sqrt(p)+psi_a(min(1,4sqrt(p)))+Ka min(1,4sqrt(p)). For the pinned NAND6 seed h, every one-point edit of h^(tensor t), t>=4, is prime/full-support, has H>(12/5)I, has all singleton collision prices above12/5 and a mask48 joint collision price below12/5, and retains a proper descendant +/-h violating12/5. This is not an unbounded-ratio family or a universal payment theorem.",
+    "hypotheses": [
+      "Finite uniform cube, Boolean signs, entropy in bits; zero retained rows omitted",
+      "Nonempty proper physical queried block A, a=|A|, n>=2; one-point surgery p=2^-n",
+      "Conditional entropy certificate continuity uses n>=4 and u_n=2^(1-floor(n/2))",
+      "Phase payment requires FEI(K) below essential dimension n, K>=0; comparison phases need not be physical descendants",
+      "The named tensor family uses actual NAND6 case0006, t>=4 and fixed K=12/5; it is not dimension-critical and its ratio remains bounded"
+    ],
+    "statement_sha256": "a127316b4030ab04f0e4ea4557a66d994a7a3dde58891b2f9de11c2dc18a1e6b",
+    "contributors": [
+      "A053/fleet05"
+    ],
+    "proof_source": "COLLISION_STABILITY_PROOF.md sections1-5; code/check_collision.py; code/check_tensor_boundary.py; out/EXACT_CHECK.json; out/TENSOR_BOUNDARY.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_ANALYTIC_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unversioned qualitative inference: tensor-primitivity and failure of every singleton collision price certify dimension-criticality or remove hidden tensor joint cuts"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B11-lead",
+      "A051",
+      "A052",
+      "A055",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

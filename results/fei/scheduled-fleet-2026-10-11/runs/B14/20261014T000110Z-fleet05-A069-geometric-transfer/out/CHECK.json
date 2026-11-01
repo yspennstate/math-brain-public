@@ -1,0 +1,63 @@
+{
+  "helper_version": "A069-stage3-resampling-v1",
+  "result": "PASS",
+  "cases": 69890,
+  "pair_cases": 65536,
+  "triple_cases": 4096,
+  "overlapping_cases": 256,
+  "assertions": 144390,
+  "seconds": 6.4991813999949954,
+  "controller_rows": [
+    {
+      "r": 1,
+      "s": 1,
+      "t": 1,
+      "core_bits": 1,
+      "I_net": "3/2",
+      "W_net": "4",
+      "ratio_W_I": "8/3"
+    },
+    {
+      "r": 2,
+      "s": 1,
+      "t": 1,
+      "core_bits": 1,
+      "I_net": "1",
+      "W_net": "3",
+      "ratio_W_I": "3"
+    },
+    {
+      "r": 1,
+      "s": 2,
+      "t": 1,
+      "core_bits": 1,
+      "I_net": "3/2",
+      "W_net": "19/4",
+      "ratio_W_I": "19/6"
+    },
+    {
+      "r": 1,
+      "s": 1,
+      "t": 2,
+      "core_bits": 1,
+      "I_net": "3/2",
+      "W_net": "19/4",
+      "ratio_W_I": "19/6"
+    },
+    {
+      "r": 1,
+      "s": 1,
+      "t": 1,
+      "core_bits": 2,
+      "I_net": "3/2",
+      "W_net": "4",
+      "ratio_W_I": "8/3"
+    }
+  ],
+  "fixtures": {
+    "A070_positive_cross": "1/2",
+    "simultaneous_refund": "3",
+    "identical_mask_boundary": "net I=0, input I>0"
+  },
+  "arithmetic": "integer FWHT, Fraction, direct resampling and physical edges"
+}

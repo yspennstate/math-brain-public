@@ -1,0 +1,108 @@
+# Fixed-product eligibility pays non-affine carrier resets: a sharp half bit
+
+Entropy and KL are in bits. Every physical input is an independent uniform bit. References are normalized and positive on source support; coherent kernels use the fair extension on zero-source rows. This is a reference-payment theorem, not full FEI.
+
+## 1. Original source, genuine eligibility and admissible cuts
+
+Let g,h be ANY Boolean signs on the same finite n-bit physical cube y. Add fresh independent physical bits u,v and define the actual Boolean source
+
+    F(u,v,y)=g(y) if v=0; (-1)^u h(y) if v=1.
+
+Thus F=(-1)^(uv)g(y)(g(y)h(y))^v; the phase g*h can be arbitrary non-affine. Let d_bj be the actual influence of y_j in g (b=0) or h (b=1), beta_j=(d_0j+d_1j)/2, and R=product_j Ber(beta_j). The original reference Q is the ACTUAL marginal product of F: u,v each have influence1/2 and y_j has influence beta_j. This is a substantive fixed-original-root condition. An arbitrary transported Q is NOT substituted. K_root=KL(p_F||Q)=TC(F) is separately booked and remains in the initial account.
+
+The next physical query is v (or stop in the original reference). In each actual child one may independently retain the actual normalized Bayes reference or make ONE actual product-reference replacement. After that choice allow ANY adaptive physical query tree, with all stops retaining their current transported references. No further reset is free. Both full terminal H and terminal KL remain. In particular a reset can be genuinely intermediate, followed by nonzero-influence ordinary queries. Cuts immediately after v but BEFORE the reference choice are explicitly admitted below. No prefix before this first v query is claimed.
+
+## 2. Exact spectrum, reference prediction and source-zero rows
+
+Direct Fourier summation in u,v gives
+
+    p_F(su=0,sv,T)=p_g(T)/4,
+    p_F(su=1,sv,T)=p_h(T)/4,
+
+for both sv values. Consequently H(F)=2+(H(g)+H(h))/2 and M(F)=2+sum_j h2(beta_j). Querying v has erased source p_g(T)/2 in su=0 and p_h(T)/2 in su=1. On positive-source rows the physical kernel selects the matching child deterministically; every other row gets (1/2,1/2). Define
+
+    a_0=R(supp p_g), a_1=R(supp p_h).
+
+The ACTUAL predicted physical outcomes are
+
+    r_0=1/2+(a_0-a_1)/4, r_1=1-r_0,
+    1/4<=r_b<=3/4.                                    (1)
+
+The reference-only rows cause the a_b terms and cannot be deleted. Product support is automatic: beta_j=0 or1 forces both child marginal indicators to that same value. On positive source rows each original v fiber is uniform under source and reference, so E_v=0. The normalized KL chain therefore reads
+
+    K_root=O_v+(K_0+K_1)/2,
+    O_v=KL(fair||r)=-log2(4r_0r_1)/2.                  (2)
+
+Both r_b are positive, including constants, characters, empty-coordinate cubes and endpoint marginals.
+
+## 3. Complete signed branch liability and the half-bit reserve
+
+Let M_b be the FULL remaining marginal entropy in the actual v child, including u. Multiplication of h by (-1)^u makes u's spectral indicator deterministic, so M_0=M(g), M_1=M(h), and H_0=H(g), H_1=H(h). Put TC_b=M_b-H_b. Define the marginal projection loss
+
+    A_b=sum_j KL(Ber(d_bj)||Ber(beta_j))>=0.
+
+Endpoint terms are defined on their common deterministic support, contributing0. On each child's positive-source support its inherited reference is R(T)/(2r_b), in the correct deterministic u sector. Full reference-only mass remains elsewhere. Hence
+
+    K_b=KL(p_b||R)+log2(2r_b)
+       =TC_b+A_b+log2(2r_b).                          (3)
+
+The COMPLETE signed actual-reset debit is therefore
+
+    J_b=TC_b-K_b=-A_b-log2(2r_b).                     (4)
+
+The exact nonnegative pending root reserve, allowing each child separately to stop with inherited KL or reset, is
+
+    B_* = ([J_0]_+ + [J_1]_+)/2.                     (5)
+
+This is the minimal reserve for those actual one-pivot options, since E_v=0 and after an outcome the larger terminal requirement must be taken BEFORE fair averaging. At most one r_b is below1/2. Its contribution is at most -log2(2r_b)<=1; the other J is nonpositive. Thus
+
+    0<=B_*<=1/2 = Inf_u(F).                           (6)
+
+The original half-bit allowance is allocated ONCE. At root use P=K_root+B_*. Immediately after v, before any replacement, use P_b=max(K_b,TC_b)=K_b+[J_b]_+. Equations(2),(5) give exact conditional drift O_v. At the actual reset, P_b dominates TC_b; retaining the reference costs K_b. After either choice use current K only. The finite KL chain at every later physical query gives K-parent minus fair mean K-child=E+O>=O, so no descendant receives a new half bit. Thus for every admitted stopping cut tau,
+
+    E K_tau + E sum_(queries before tau) O <=K_root+B_*
+                                           <=K_root+1/2. (7)
+
+All potentials are nonnegative; they may grow on individual rare branches. This supplies controlled expected terminal value even after an actual non-affine reset and arbitrary subsequent physical queries. Full cross entropy obeys (7) with E H_tau added to BOTH sides. That entropy and the separately booked initial K_root are not declared paid by the extra half bit.
+
+For an original supplied capacity S with already booked K_root, unrelated old expenditure omega and pending theta for a nested subclass, eligibility requires S-omega-K_root>=1/2. Allocate only (1/2)-theta if theta<=1/2 is already part of this SAME pending booking. If a caller already reserved the half bit, additional owner charge is0. Earlier consumed debits remain omega, and a numerical influence value is not a proof that its allocation is unused. The uniform bound is physically priced by Inf_u(F)=1/2, but no retirement or redistribution of already spent directional influence is asserted.
+
+## 4. Paid continuation variants and the endpoint trap
+
+If reset child b has a separately PROVED continuation certificate with initial potential TC_b+C_b, C_b>=0, replace (4) by J_b+C_b. A sufficient pending reserve for these supplied continuation certificates is mean_b[J_b+C_b]_+, bounded by
+
+    1/2 + (C_0+C_1)/2.                               (8)
+
+At the pre-reset boundary keep max(K_b,TC_b+C_b). C_b is an existing liability to price from the same original owner, not a renewed allowance. This permits an additional final product reset only when its entire continuation certificate is supplied. For arbitrary physical continuations with just inherited-reference stops, C_b=0 as already proved. Taking C_b=M_b gives the known generic K+M certificate with one final product-conversion-and-stop, at the explicitly larger original booking (8).
+
+The aggregate signed endpoint expression is
+
+    mean J_b=O_v-Gamma,
+    Gamma=sum_j h2(beta_j)-(M(g)+M(h))/2>=0.            (9)
+
+It does NOT equal the pending reserve (5). Although O_v<=log2(4/3)/2, that smaller constant cannot pay all branch-dependent reset cuts: discarding a negative sibling debit is a different option, and the maximum must precede averaging. This is why an expected endpoint calculation alone would underfund the stated policy.
+
+## 5. Sharpness by actual Boolean functions
+
+For even n>=4 let
+
+    g_n(y)=(-1)^(y0*(y1+...+y_(n-1))),
+    h_n(y)=(-1)^(y0*y1+y2*y3+...+y_(n-2)*y_(n-1)).
+
+Sums and products in the exponents are over GF(2). The star quadratic g_n has a flat four-atom Fourier spectrum (its two independent linear forms are y0 and sum of the others); h_n is a tensor of independent two-bit bent signs and has the full uniform spectrum. Every physical influence of BOTH functions is1/2, by direct derivative counting. Thus R is uniform, A_b=0, a_0=2^(2-n), a_1=1, and
+
+    r_0=(1+2^(2-n))/4,
+    J_0=1-log2(1+2^(2-n))>0, J_1<0,
+    B_*=(1-log2(1+2^(2-n)))/2 ->1/2.                  (10)
+
+The actual asymmetric policy resets g_n and retains the h_n sibling's ACTUAL inherited reference. It forces exactly B_* beyond K_root while paying O_v, so no smaller uniform constant replaces1/2 in (6). At n4 the predictions are5/16,11/16, B_*=(1-log2(5/4))/2, and B_* exceeds the tempting endpoint cap log2(4/3)/2 because 8/5>4/3. All these are actual Boolean sources, not synthetic spectral laws. The sharpness cut itself stops after reset; the theorem independently includes actual post-reset queries. Continued queries can release KL credit, so the sharpness statement is not a lower bound on every prescribed nontrivial continuation.
+
+## 6. Independent source reconstruction and universal unpaid line
+
+A087-PROTECTED-PIVOT-PHASE-LIABILITY@1 is independently reconstructed without repair. For arbitrary F,Q and protected v, W_v=M(F[v=0])+M(F[v=1]) decreases in fair expectation under every other coordinate restriction, by separate physical-edge concavity in the two counterfactual children. K+W_v therefore pays prefix O. At v its allocation becomes K_b+2M_b; this dominates both K_b+M_b for retained-reference continuation and TC_b+M_b after reset by Gibbs and H_b>=0. Full H stays explicit on both sides. The derivative-sign product entropy inequality gives M(hg)<=M(g)+M(h), hence the phase increment W_v-2M(g)=M(hg)-M(g)<=M(h). This reconstruction is independent of the new fixed-product half-bit theorem.
+
+Its arbitrary-Q obstruction also holds. For point_n with Q=p_F, the active point_(n-1) child retains K=0. Writing m=n-1,a=2^(1-m), its M>=m a(m-1), while its nonzero-frequency spectral mass epsilon=2a-a^2 lies in[a,2a]. Splitting the entropy into the empty/nonempty atom and uniform conditional nonempty law gives H<=2a(2m+1), using log2(e)<2. The expected terminal TC divided by I(point_n)=n a/2 is therefore at least n-7+4/n, unbounded. The critical distinction in the NEW theorem is actual original product eligibility, not an arbitrary source-matching Q. No source statement is changed.
+
+The first unpaid universal line is preserving or buying this fixed-product eligibility at a useful later pivot of a general Boolean source from an actually unused original influence-scale owner. The original K_root can itself be expensive, and a general function need not supply the fresh carrier factor. Returning to an actual product after arbitrary prefixes or paying another nonempty-profile change is not free. A sharp half-bit local supplier under exact eligibility is an advance in reference/owner transfer, not full FEI or an arbitrary-Q rescue.
+
+In fact a universal influence price for this original PRODUCT K is false, not merely unproved. Tensor N=2^(m-1) independent point_m signs into f_m and set g=h=f_m in the present carrier. With d=2^(1-m), direct tensor additivity gives I(f_m)=m and K(f_m)>=m^2-5m-2 by the point entropy bounds above. The full carrier has I(F)=m+1 and the same product KL K(F)=K(f_m), so K(F)/I(F)>=m-6+4/(m+1), unbounded. This is an actual Boolean reference-price obstruction, not FEI. A full route must use a differently priced original reference or inherited signed credit; it must not attempt the false universal K_product<=C I. The new half-bit supplier applies precisely where its original reference and owner have already been funded.

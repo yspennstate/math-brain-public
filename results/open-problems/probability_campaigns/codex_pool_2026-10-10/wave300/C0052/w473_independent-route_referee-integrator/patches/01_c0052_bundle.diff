@@ -1,0 +1,68 @@
+--- a/~/math-brain-inbox/w473/bundle_001.json
++++ b/~/math-brain-inbox/w473/bundle_001.json
+@@ -0,0 +1,65 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w473",
++  "bundle_slug": "c0052-lee-yang-conditional-bridge-reviewed-001",
++  "entries": [
++    {
++      "key": "c0052-source-target",
++      "namespace": "probability.statmech",
++      "logical_name": "c0052-source-coupling-target-2017",
++      "kind": "concept",
++      "title": "C0052: exact 2017 near-critical coupling target",
++      "statement": "In Duminil-Copin's 2017 Conjecture 6 for the nearest-neighbor zero-field Ising model on Z^3, let G_beta(x)=E_beta[sigma_0 sigma_x], chi(beta)=sum_x G_beta(x), xi(beta)=(-lim_{n to infinity} n^(-1) log G_beta(n e_1))^(-1), and U4 be the connected four-spin correlation. The coupling g(beta)=sum_{x2,x3,x4} U4(0,x2,x3,x4)/(chi(beta)^2 xi(beta)^3) is called trivial if it tends to zero as beta increases to beta_c. The 3D problem asks that it not tend to zero. This records the 2017 source formulation; it does not certify current openness or construction of a full field limit.",
++      "proof_text": null,
++      "assumptions": ["Nearest-neighbor ferromagnetic Ising model on Z^3", "Zero external field", "0<beta<beta_c"],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "arxiv:1707.00520:section7-conjecture6",
++        "url": "https://arxiv.org/abs/1707.00520",
++        "revision": "2017 lecture notes, equations (7.1)-(7.2), printed p.94; source checked by w473 2026-10-10",
++        "license": "arxiv-nonexclusive",
++        "excerpt": "If g(beta) tends to 0 as beta approaches beta_c, the field is said to be trivial."
++      }
++    },
++    {
++      "key": "zero-cumulant",
++      "namespace": "probability.statmech",
++      "logical_name": "symmetric-lee-yang-variable-fourth-cumulant-zero-bounds",
++      "kind": "lemma",
++      "title": "Fourth cumulant bounds from the first Lee-Yang zero",
++      "statement": "Let S be a bounded, symmetric, nondegenerate real random variable whose entire moment generating function has only imaginary zeros. Let V=Var(S)>0, let i rho_1 be its nearest zero in the upper imaginary half-plane, and put r=rho_1 sqrt(V). Then B=-kappa_4(S)/V^2 satisfies 12/r^4 <= B <= 6/r^2. For a sequence of such normalized variables, convergence in law to N(0,1) is equivalent to r tending to infinity.",
++      "proof_text": "F(z)=E exp(zS) is even of exponential type. H(w)=F(sqrt(w)) is entire of order at most 1/2, so Hadamard factorization gives H(w)=product_j(1+w/rho_j^2), counting zeros. Log differentiation yields V=2 sum_j rho_j^-2 and -kappa_4=12 sum_j rho_j^-4. For a_j=(V rho_j^2)^-1, sum a_j=1/2 and a_1=max a_j; hence a_1^2<=sum a_j^2<=a_1/2. The product also gives E exp(tS/sqrt(V))<=exp(t^2/2), which makes fourth moments uniformly integrable. Gaussian weak convergence therefore forces B to zero and r to infinity; conversely r to infinity makes log MGFs converge locally to t^2/2 by the same product and sum a_j^2<=1/(2r^2).",
++      "assumptions": ["S bounded, real, symmetric, and nondegenerate", "Every MGF zero is purely imaginary, with multiplicities counted"],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "owner-own-work:w471-C0052-L1:review-w473-20261010",
++        "url": "~/brain_workers/w471/ATTEMPT.md",
++        "revision": "w471 author derivation 2026-10-10; independently rederived and KEEP by w473 in REVIEW_PACKET.md",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "coupling-bridge",
++      "namespace": "probability.statmech",
++      "logical_name": "ising-3d-coupling-lower-bound-from-block-lee-yang-zero",
++      "kind": "lemma",
++      "title": "Conditional bridge from a block Lee-Yang zero to 3D Ising coupling",
++      "statement": "For the zero-field nearest-neighbor Ising free state on Z^3 at 0<beta<beta_c, assume G>=0, finite chi and positive finite xi, U4<=0 including repeated sites, and absolute summability of -U4. Let ell capture at least half of chi inside the infinity-norm ball of radius ell. Put R=max(1,ceil(xi),ell), Lambda=[-2R,2R]^3, S=sum_{x in Lambda}sigma_x, V=Var(S), and r=rho_1 sqrt(V) for the first positive imaginary zero of E exp(hS). With g_+(beta)=-sum U4(0,x2,x3,x4)/(chi^2 xi^3), one has g_+(beta)>=3/r^4. A bounded r along a beta-to-beta_c subsequence would prove nonvanishing of the source coupling, but no such bound is established here.",
++      "proof_text": "Write K=-U4>=0, A=sum_{x2,x3,x4}K(0,x2,x3,x4)=g_+ chi^2 xi^3, and N=|Lambda|=(4R+1)^3. Translation invariance and positivity give -kappa_4(S)<=N A. The inner cube [-R,R]^3 contains at least N/8 sites, each with its full R-neighborhood inside Lambda and contributing chi/2 to the variance sum, so V>=N chi/16. Since R>=xi, N>=64 xi^3. Thus g_+>=B V^2/(N chi^2 xi^3)>=B/4, where B=-kappa_4(S)/V^2. The zero-cumulant lemma gives B>=12/r^4. Lee-Yang for the actual block Gibbs marginal follows from finite-volume multivariate Lee-Yang with zero outside fields by Hurwitz and then local weak convergence. The premise r bounded is not proved.",
++      "assumptions": ["Nearest-neighbor, zero-field, translation-invariant symmetric free Ising state on Z^3", "0<beta<beta_c; G>=0, 0<chi<infinity, 0<xi<infinity", "-U4>=0 even with repeated indices and is absolutely summable", "The selected block uses the actual infinite-volume Gibbs marginal"],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "owner-own-work:w471-C0052-L2:review-w473-20261010",
++        "url": "~/brain_workers/w471/ATTEMPT.md",
++        "revision": "w471 author derivation 2026-10-10; independently rederived and KEEP by w473 in REVIEW_PACKET.md",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {"from_key": "coupling-bridge", "to_key": "zero-cumulant", "kind": "depends_on", "rationale": "The last inequality B>=12/r^4 is the zero-cumulant lemma."},
++    {"from_key": "coupling-bridge", "to_key": "c0052-source-target", "kind": "semantic_association", "rationale": "The bridge lower-bounds the source's positive-sign near-critical coupling but leaves the normalized-zero bound unproved."}
++  ]
++}

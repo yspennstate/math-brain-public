@@ -1,0 +1,61 @@
+[
+  {
+    "claim_id": "A052-SIGNED-PAIR-ORIENTATION-REFUND",
+    "version": 1,
+    "exact_statement": "For every finite uniform-cube Boolean sign f and distinct physical coordinates i,j, let C_i,C_j,C_ij be the weighted squared-density row collisions and O_k=Inf_k-beta_k the singleton excess orientation energies. For Fourier quartets (alpha,beta,gamma,delta), q=sum amplitudes squared, define P_ij=sum_t 4(alpha delta+beta gamma)^2/q, M_i=sum_t[4alpha^2 beta^2/(alpha^2+beta^2)+4gamma^2 delta^2/(gamma^2+delta^2)-4(alpha beta+gamma delta)^2/q], and M_j analogously interchanging beta,gamma. Zero-mass fractions are zero. Then M_i,M_j>=0 and C_ij=C_i+C_j+P_ij-M_i-M_j exactly; P_ij<=2(Inf_i+Inf_j), and C_ij<=2(C_i+C_j)+2(O_i+O_j). On a least-essential-dimension FEI(K) violating witness, K>0, deficit D>0 and actual singleton child reserves S_i,S_j>=0, the reviewed scalar bound r_K=log2(1+2^(2/ln2-K)) yields C_ij<=2(C_i+C_j)+(2/K)(2r_K-2D-S_i-S_j). The unconditional singleton-only bound is still false on the exact three-bit parity guard. The orientation coefficient2 is sharp for arbitrary real quartets, not claimed sharp for Boolean functions. For K>=4, the displayed bound can substitute into the reviewed two-bit phase-bank upper bound by monotonicity, but supplies no pair-selection theorem or universal FEI constant.",
+    "hypotheses": [
+      "Uniform finite Boolean signs and physical singleton/pair cuts; entropy bits; zero Fourier row masses omitted",
+      "Algebra/refund inequalities hold without criticality and also for arbitrary real quartets",
+      "Reserve substitution requires K>0 and least essential dimension among all Boolean K-violators; child deficits are actual physical deficits",
+      "The two-bit phase-bank corollary requires K>=4 and a proper queried pair",
+      "No claimed sharp Boolean coefficient, global optimizer, selected affordable pair or full FEI resolution"
+    ],
+    "statement_sha256": "0d5d1b3a63e30b4dd8764721c26540119443affc0750d61c11e42b7931ef71c7",
+    "contributors": [
+      "fleet05/A052"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A052\\runs\\20261014T015635Z-fleet05-A052-critical-source-structure\\SIGNED_PAIR_PROOF.md",
+      "sha256": "7f64bd1e5a4102533835bb0552dc674107acc56f3368304104134c5786c44be1",
+      "locator": "Sections1--4"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A051-TWO-BIT-CRITICAL-PHASE-RESERVE",
+        "version": 1,
+        "statement_sha256": "25d00942803b7fd8918a198dc313101701674dc04a88f5919f6624bf28288e09",
+        "reviewer": "A052",
+        "verdict": "HOLDS_AT_COMPLETE_ANALYTIC_SCOPE_WITH_INDEPENDENT_FINITE_REPLAY",
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A052\\runs\\20261014T015635Z-fleet05-A052-critical-source-structure\\DEPENDENCY_REVIEW.md",
+        "review_sha256": "8f02957a650fc2872a5974f61e0bcbf0bb201ad91cd375a630170b3bec4090c2",
+        "contributor_conflict": false,
+        "registry_adoption": "PENDING"
+      },
+      {
+        "claim_id": "A055-SINGLETON-CRITICAL-RESERVE",
+        "version": 1,
+        "statement_sha256": "bfc2c09293d9446e7301b5c562668288de096d6758459530ec93bf1db80c09bf",
+        "reviewer": "A052",
+        "verdict": "HOLDS_AT_COMPLETE_ANALYTIC_SCOPE_WITH_INDEPENDENT_FINITE_REPLAY",
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A052\\runs\\20261014T015635Z-fleet05-A052-critical-source-structure\\DEPENDENCY_REVIEW.md",
+        "review_sha256": "8f02957a650fc2872a5974f61e0bcbf0bb201ad91cd375a630170b3bec4090c2",
+        "contributor_conflict": false,
+        "registry_adoption": "PENDING"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPED_APPLICATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "claude/B11",
+      "A051",
+      "A053",
+      "A055",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

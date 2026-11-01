@@ -1,0 +1,54 @@
+[
+  {
+    "claim_id": "A006-SUNFLOWER-POSTERIOR-FOREST-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every integer m>=1, f_m=2*1[x0=1]*1[at least one xi=1 for 1<=i<=m]-1 on the uniform (m+1)-cube, represented as the union of the m distinct clauses (x0 AND xi), with supports ordered (0,i), M_i=1, pi_i=1/4 and lambda_i=1/m, has exact finite posterior partition weights S_B({0})=1/4, S_B(T)=m^(-t)*(a/4)^t, and S_B({0} union T)=t!*a^(t-1)/(4*m^t)*(1+(1-t/m)*a), where t=|T|>=1 and a=2^(-6/5). Its complete conditioned all-partition residual is <=(43/10) I(f_m), and its exact conditioned all-partition run-cost expectation is <=(23/2) I(f_m). A normalized prior w_k=1/((k+1)(k+2)) on lambda_i^(k)=2^(-k)/m pays at most v additional bits, giving bounds (53/10) I and (25/2) I respectively. Every point-mass posterior choice in this representation has residual/I tending to infinity as m tends to infinity.",
+    "hypotheses": [
+      "integer m>=1",
+      "uniform independent physical signs",
+      "specified fixed sunflower DNF and support orders",
+      "distinct actual finite partition-forest runs only, including ordered child-label draws",
+      "base-two entropy and costs, gamma=6/5, natural logarithms for rank F",
+      "failed/infinite paths have zero output mass; reference is conditioned on nonempty initial roots"
+    ],
+    "statement_sha256": "7e7317fec14ec08f79bad0d58f97d00f9b8f632634d84aca4509375a674ab5c5",
+    "contributors": [
+      "fleet05/A006"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A006\\runs\\20261011T210855Z-fleet05-A006-posterior-forest-optimization\\REPORT.md",
+      "sections": "complete derivation, Sections 2-6"
+    },
+    "proof_dependencies": [
+      {
+        "source": "source_material/reductions/paper/forests.tex",
+        "locator": "thm:posteriorforest and eq:forestcost",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "status": "SOURCE_COMPLETE_BASELINE_READ"
+      },
+      {
+        "source": "SEED_LEMMAS.md",
+        "locator": "Section 2 normalized prior over complete reference laws",
+        "sha256": "7381273c5e374727f6069a06390e60a6463bccead35c46a9ff1f652e55366dc3",
+        "status": "SOURCE_COMPLETE_BASELINE_READ"
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "uniform dimension-independent deterministic forest residual payment in the specified sunflower DNF"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A007",
+      "A008",
+      "A009",
+      "A010",
+      "A014",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  }
+]

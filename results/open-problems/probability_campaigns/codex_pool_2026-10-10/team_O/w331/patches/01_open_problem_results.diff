@@ -1,0 +1,703 @@
+--- a/~/math-brain-inbox/w331/bundle_001.json
++++ b/~/math-brain-inbox/w331/bundle_001.json
+@@ -0,0 +1,700 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w331",
++  "bundle_slug": "probability-open-problems-w331-20261010",
++  "entries": [
++    {
++      "key": "and-or-tree-disagreement-contracts",
++      "namespace": "probability.recursive-trees",
++      "logical_name": "and-or-tree-disagreement-contracts",
++      "kind": "lemma",
++      "title": "Quantitative disagreement contraction for the binary/ternary AND/OR tree",
++      "statement": "For a Galton-Watson tree with P(D=2)=3/5 and P(D=3)=2/5, apply AND at degree 2 and OR at degree 3 to independent Bernoulli(1/2) spins at depth n. If q_n is the conditional root-one probability given the truncated unmarked tree, then d_n=2 E[q_n(1-q_n)] satisfies d_0=1/2 and d_(n+1)=0.9 d_n-0.6 d_n^2+0.1 d_n^3 <=0.9 d_n. Thus E[q_n(1-q_n)]<=0.25*(0.9)^n, and the limiting conditional root probability is a measurable binary colour with both colours of probability 1/2. The truncated-tree Bayes colour-prediction error is at most 0.5*(0.9)^n; exact arithmetic gives variance at most 1e-6 at depth 118 and prediction-error bound at most 1e-6 at depth 125.",
++      "proof_text": "# P0033: quantitative rederivation of the recorded AND/OR candidate\n\nLabel: proof of the following construction, pending w347 KEEP and source-statement audit. This is a continuation of the September candidate, not a novelty claim or an accepted solution.\n\nLet GW have offspring D=2 with probability 3/5 and D=3 with probability 2/5. At a two-child vertex use AND; at a three-child vertex use OR. Independent Bernoulli(1/2) boundary spins at depth n induce a root spin with marginal 1/2, since (3/5)(1/2)^2+(2/5)(1-(1/2)^3)=1/2.\n\nLet F_n reveal the offspring numbers above depth n, and q_n be the conditional probability of root spin 1 given F_n. Integrating one extra generation replaces each new subtree by an independent Bernoulli(1/2) spin, so q_n is a bounded martingale. Couple two root spins by the same finite tree and independent boundary spins. The child pair has marginal 1/2 and disagreement d_n=2 E[q_n(1-q_n)]. Distinct child pairs are independent, because the GW subtrees and their boundary spins are independent. AND of two pairs has disagreement d-d^2/2; OR of three has disagreement 3d/4-3d^2/4+d^3/4. Consequently\n\n    d_(n+1) = (9/10)d_n - (3/5)d_n^2 + (1/10)d_n^3 <= (9/10)d_n,\n    d_0 = 1/2,    E[q_n(1-q_n)] <= (1/4)(9/10)^n.\n\nThe inequality holds for 0<=d<=1 because the difference from (9/10)d is d^2(d-6)/10 <=0. Martingale convergence gives q_n -> q_infinity in L2 and almost surely. Taking expectations yields E[q_infinity(1-q_infinity)]=0, so q_infinity is a {0,1}-valued measurable function C(T), with probability 1/2 of each value. Since q_n=E[C(T)|F_n], predicting C by whether q_n is at least 1/2 has mean error E min(q_n,1-q_n)<=2 E[q_n(1-q_n)]<=0.5*(0.9)^n. Exact arithmetic verifies posterior variance <=1e-6 at depth 118 and this prediction-error bound <=1e-6 at depth 125. These are theoretical depth guarantees, not claims that an exponentially large tree prefix is cheap to enumerate. Taking limits in the polynomial recursions at every vertex shows that C obeys the AND/OR rule almost surely. There are countably many vertices; intersect their probability-one events. This construction ignores child ordering, so it descends to unlabelled rooted trees and is equivariant.\n\nUnanimity preservation guarantees a child of the parent's colour: an AND=1 parent has all children 1, AND=0 has at least one 0; OR=0 has all 0, OR=1 has at least one 1. Choose uniformly among children with that colour. The transition weights sum to one and multiplying successive weights defines a consistent flow. The colour and the good set on which every descendant satisfies this binary limiting rule are Borel, because they are constructed from limits of finite-tree polynomials and countably many descendant conditions. To define a Borel rule on all infinite locally finite rooted trees, use the colour selector on this GW-full good set; elsewhere choose uniformly among children with infinite descendant subtrees. An infinite locally finite tree always has such a child, and this predicate is Borel and equivariant. Thus the fallback extends the flow rule without changing it GW-almost surely.\n\nFor any bounded measurable test function f of a child subtree, condition on the parent's degree and the entire child-colour vector. Independence of the GW subtrees implies that each eligible child has the distribution GW conditioned on C=c, where c is the parent colour. The eligible-child count depends only on this vector; averaging uniformly among them therefore has conditional expected f equal to E_GW[f(T) | C(T)=c]. Integrating over the parent colour, whose distribution is also Bernoulli(1/2), returns E_GW f(T). Thus GW itself is stationary, hence equivalent to GW.\n\nEvery transition preserves C. Since C is nonconstant with both values of mass 1/2, the stationary chain is not ergodic. The only claimed resolution is this precise construction under the flow convention in the cited source; prior art and the original source statement still require audit.\n\nSource: REPORT_thirteen_settled_2026-09-08.md, section 10; store logical math:probability.open-problems:p0033-lyons-peres-question-17-18-refuted (candidate revision claim_94db0dee1d2ddaa48514c8d55f228d27c4d573e1cf1e757815403f5e1e40d56c). New contribution here: explicit quantitative disagreement bound and selected-child conditioning proof.\n",
++      "assumptions": [
++        "Independent GW child subtrees",
++        "Independent Bernoulli(1/2) boundary spins"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:P0033:and-or-tree-disagreement-contracts",
++        "url": "file:///~/brain_workers/w331/proofs/P0033.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "and-or-same-colour-flow-stationarity",
++      "namespace": "probability.recursive-trees",
++      "logical_name": "and-or-same-colour-flow-stationarity",
++      "kind": "lemma",
++      "title": "The AND/OR same-colour selector preserves GW and is nonergodic",
++      "statement": "For GW offspring P(D=2)=3/5, P(D=3)=2/5, use the measurable limiting AND/OR colour obtained from Bernoulli(1/2) boundary spins. Choosing uniformly among children with the root colour preserves the unmarked GW law. The colour is invariant along the selected-subtree chain and has both values with mass 1/2, so that stationary chain is nonergodic. The rule extends equivariantly and in a Borel manner to all infinite locally finite rooted trees by choosing uniformly among infinite children off the GW-full good set. Multiplying successive transition weights gives a consistent flow.",
++      "proof_text": "# P0033: quantitative rederivation of the recorded AND/OR candidate\n\nLabel: proof of the following construction, pending w347 KEEP and source-statement audit. This is a continuation of the September candidate, not a novelty claim or an accepted solution.\n\nLet GW have offspring D=2 with probability 3/5 and D=3 with probability 2/5. At a two-child vertex use AND; at a three-child vertex use OR. Independent Bernoulli(1/2) boundary spins at depth n induce a root spin with marginal 1/2, since (3/5)(1/2)^2+(2/5)(1-(1/2)^3)=1/2.\n\nLet F_n reveal the offspring numbers above depth n, and q_n be the conditional probability of root spin 1 given F_n. Integrating one extra generation replaces each new subtree by an independent Bernoulli(1/2) spin, so q_n is a bounded martingale. Couple two root spins by the same finite tree and independent boundary spins. The child pair has marginal 1/2 and disagreement d_n=2 E[q_n(1-q_n)]. Distinct child pairs are independent, because the GW subtrees and their boundary spins are independent. AND of two pairs has disagreement d-d^2/2; OR of three has disagreement 3d/4-3d^2/4+d^3/4. Consequently\n\n    d_(n+1) = (9/10)d_n - (3/5)d_n^2 + (1/10)d_n^3 <= (9/10)d_n,\n    d_0 = 1/2,    E[q_n(1-q_n)] <= (1/4)(9/10)^n.\n\nThe inequality holds for 0<=d<=1 because the difference from (9/10)d is d^2(d-6)/10 <=0. Martingale convergence gives q_n -> q_infinity in L2 and almost surely. Taking expectations yields E[q_infinity(1-q_infinity)]=0, so q_infinity is a {0,1}-valued measurable function C(T), with probability 1/2 of each value. Since q_n=E[C(T)|F_n], predicting C by whether q_n is at least 1/2 has mean error E min(q_n,1-q_n)<=2 E[q_n(1-q_n)]<=0.5*(0.9)^n. Exact arithmetic verifies posterior variance <=1e-6 at depth 118 and this prediction-error bound <=1e-6 at depth 125. These are theoretical depth guarantees, not claims that an exponentially large tree prefix is cheap to enumerate. Taking limits in the polynomial recursions at every vertex shows that C obeys the AND/OR rule almost surely. There are countably many vertices; intersect their probability-one events. This construction ignores child ordering, so it descends to unlabelled rooted trees and is equivariant.\n\nUnanimity preservation guarantees a child of the parent's colour: an AND=1 parent has all children 1, AND=0 has at least one 0; OR=0 has all 0, OR=1 has at least one 1. Choose uniformly among children with that colour. The transition weights sum to one and multiplying successive weights defines a consistent flow. The colour and the good set on which every descendant satisfies this binary limiting rule are Borel, because they are constructed from limits of finite-tree polynomials and countably many descendant conditions. To define a Borel rule on all infinite locally finite rooted trees, use the colour selector on this GW-full good set; elsewhere choose uniformly among children with infinite descendant subtrees. An infinite locally finite tree always has such a child, and this predicate is Borel and equivariant. Thus the fallback extends the flow rule without changing it GW-almost surely.\n\nFor any bounded measurable test function f of a child subtree, condition on the parent's degree and the entire child-colour vector. Independence of the GW subtrees implies that each eligible child has the distribution GW conditioned on C=c, where c is the parent colour. The eligible-child count depends only on this vector; averaging uniformly among them therefore has conditional expected f equal to E_GW[f(T) | C(T)=c]. Integrating over the parent colour, whose distribution is also Bernoulli(1/2), returns E_GW f(T). Thus GW itself is stationary, hence equivalent to GW.\n\nEvery transition preserves C. Since C is nonconstant with both values of mass 1/2, the stationary chain is not ergodic. The only claimed resolution is this precise construction under the flow convention in the cited source; prior art and the original source statement still require audit.\n\nSource: REPORT_thirteen_settled_2026-09-08.md, section 10; store logical math:probability.open-problems:p0033-lyons-peres-question-17-18-refuted (candidate revision claim_94db0dee1d2ddaa48514c8d55f228d27c4d573e1cf1e757815403f5e1e40d56c). New contribution here: explicit quantitative disagreement bound and selected-child conditioning proof.\n",
++      "assumptions": [
++        "Zero weights to wrong-coloured children are permitted",
++        "Stationary law is GW itself"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:P0033:and-or-same-colour-flow-stationarity",
++        "url": "file:///~/brain_workers/w331/proofs/P0033.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "strict-discount-zero-mark-frechet-nonendogeny",
++      "namespace": "probability.recursive-trees",
++      "logical_name": "strict-discount-zero-mark-frechet-nonendogeny",
++      "kind": "lemma",
++      "title": "Strict-discount zero-mark Frechet fixed points are nonendogenous",
++      "statement": "The deterministic binary recursion X=(1/2) max(X_1,X_2) has, for every a>0, the nonminimal fixed distribution P(X<=x)=exp(-a/x) for x>0 and zero for x<=0. Its invariant recursive tree process is nonendogenous because all innovations are deterministic while the root law is nondegenerate. The r-th moment is finite exactly for 0<r<1. This is a zero-additive-mark special case, not the positive-mark conjecture.",
++      "proof_text": "# P0355: strict-discount example and a moment obstruction\n\nLabels: proofs of special cases and a sufficient condition, pending w347 KEEP. These do not settle Conjecture 34 under Corollary 33 and condition (39). The source's exact hypotheses are not silently replaced.\n\nThe prior attempt uses the degenerate homogeneous recursion with N=2, eta=0, and xi_1=xi_2=1. Constant positive roots are then endogenous; strict discounts invalidate that particular constant example.\n\nFor a genuinely nondegenerate homogeneous strict-discount example, let X=(1/2) max(X_1,X_2), with no random innovations. For each a>0 the distribution F_a(x)=exp(-a/x), x>0, F_a(x)=0 for x<=0, is a fixed point: F_a(2x)^2=F_a(x). It is nonminimal, since the zero distribution is also a fixed point. A consistent invariant RTP exists: assign independent F_a variables at each finite boundary and propagate upward; the distributions at every fixed finite set of generations are unchanged when an extra boundary generation is added, so Kolmogorov consistency supplies the infinite process. All innovations are deterministic. A nondegenerate root cannot be measurable with respect to their trivial sigma-field, hence this RTP is nonendogenous. This establishes a special case supporting the nondegenerate direction, not a verified instance of every hypothesis of the source's parametrisation.\n\nA separate sufficient condition explains why a simple contraction does not settle these heavy-tailed fixed points. Consider a deterministic b-ary invariant RTP with recursion X=g(xi;X_1,...,X_b), iid child variables with the root law, and the usual independence of innovations from descendant root variables. Assume |g(xi;x)-g(xi;y)| <= c max_i |x_i-y_i|, where 0<c<1. If E|X|^r<infinity for some r>0 and b*c^r<1, then the RTP is endogenous.\n\nProof: reveal the innovations down to depth n and independently sample two conditional continuations. Recursion gives |X-X'|^r <= c^(nr) sum_{|v|=n}|X_v-X'_v|^r. Taking expectations bounds this by (b*c^r)^n K, with finite K=E|X-X'|^r (use |x-y|^r <= max(1,2^(r-1))(|x|^r+|y|^r)). Thus the two conditional roots differ by more than epsilon with probability tending to zero. For every bounded Lipschitz test function h, their squared h-difference also tends to zero, so the expected conditional variance of h(X) tends to zero. The conditional expectations converge to the expectation given all innovations. A countable separating family of such h then shows that the full conditional root law is a point mass; equivalently X is measurable from all innovations.\n\nIn the F_a example, P(X>x)~a/x, so E X^r is finite exactly for 0<r<1, whereas 2*(1/2)^r<1 exactly for r>1. The two conditions never overlap. At r=1 the moment diverges and the contraction is critical. Thus this contraction cannot certify endogeny of the nonminimal example.\n\nSource: existing open-problem and attempt cards for P0355. Novelty is unestablished; all results here are elementary continuations, not literature solutions.\n",
++      "assumptions": [
++        "IID children at each finite boundary",
++        "All innovations deterministic",
++        "a>0"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:P0355:strict-discount-zero-mark-frechet-nonendogeny",
++        "url": "file:///~/brain_workers/w331/proofs/P0355.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "max-lipschitz-r-moment-endogeny",
++      "namespace": "probability.recursive-trees",
++      "logical_name": "max-lipschitz-r-moment-endogeny",
++      "kind": "lemma",
++      "title": "A max-Lipschitz moment contraction implies endogeny",
++      "statement": "For an invariant deterministic b-ary recursive tree process X=g(xi;X_1,...,X_b), assume the usual independent child root laws and innovation independence, and |g(xi;x)-g(xi;y)|<=c max_i|x_i-y_i| with 0<c<1. If E|X|^r is finite for some r>0 and b*c^r<1, then X is measurable from all innovations. Conditional root-copy differences have r-th moment at most (b*c^r)^n E|X-X_prime|^r after revealing n generations. For the binary c=1/2 Frechet fixed points, finite moments require r<1 while contraction requires r>1, so this criterion never applies.",
++      "proof_text": "# P0355: strict-discount example and a moment obstruction\n\nLabels: proofs of special cases and a sufficient condition, pending w347 KEEP. These do not settle Conjecture 34 under Corollary 33 and condition (39). The source's exact hypotheses are not silently replaced.\n\nThe prior attempt uses the degenerate homogeneous recursion with N=2, eta=0, and xi_1=xi_2=1. Constant positive roots are then endogenous; strict discounts invalidate that particular constant example.\n\nFor a genuinely nondegenerate homogeneous strict-discount example, let X=(1/2) max(X_1,X_2), with no random innovations. For each a>0 the distribution F_a(x)=exp(-a/x), x>0, F_a(x)=0 for x<=0, is a fixed point: F_a(2x)^2=F_a(x). It is nonminimal, since the zero distribution is also a fixed point. A consistent invariant RTP exists: assign independent F_a variables at each finite boundary and propagate upward; the distributions at every fixed finite set of generations are unchanged when an extra boundary generation is added, so Kolmogorov consistency supplies the infinite process. All innovations are deterministic. A nondegenerate root cannot be measurable with respect to their trivial sigma-field, hence this RTP is nonendogenous. This establishes a special case supporting the nondegenerate direction, not a verified instance of every hypothesis of the source's parametrisation.\n\nA separate sufficient condition explains why a simple contraction does not settle these heavy-tailed fixed points. Consider a deterministic b-ary invariant RTP with recursion X=g(xi;X_1,...,X_b), iid child variables with the root law, and the usual independence of innovations from descendant root variables. Assume |g(xi;x)-g(xi;y)| <= c max_i |x_i-y_i|, where 0<c<1. If E|X|^r<infinity for some r>0 and b*c^r<1, then the RTP is endogenous.\n\nProof: reveal the innovations down to depth n and independently sample two conditional continuations. Recursion gives |X-X'|^r <= c^(nr) sum_{|v|=n}|X_v-X'_v|^r. Taking expectations bounds this by (b*c^r)^n K, with finite K=E|X-X'|^r (use |x-y|^r <= max(1,2^(r-1))(|x|^r+|y|^r)). Thus the two conditional roots differ by more than epsilon with probability tending to zero. For every bounded Lipschitz test function h, their squared h-difference also tends to zero, so the expected conditional variance of h(X) tends to zero. The conditional expectations converge to the expectation given all innovations. A countable separating family of such h then shows that the full conditional root law is a point mass; equivalently X is measurable from all innovations.\n\nIn the F_a example, P(X>x)~a/x, so E X^r is finite exactly for 0<r<1, whereas 2*(1/2)^r<1 exactly for r>1. The two conditions never overlap. At r=1 the moment diverges and the contraction is critical. Thus this contraction cannot certify endogeny of the nonminimal example.\n\nSource: existing open-problem and attempt cards for P0355. Novelty is unestablished; all results here are elementary continuations, not literature solutions.\n",
++      "assumptions": [
++        "Finite r-th root moment",
++        "b*c^r<1",
++        "Standard invariant RTP independence assumptions"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:P0355:max-lipschitz-r-moment-endogeny",
++        "url": "file:///~/brain_workers/w331/proofs/P0355.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "normalised-moment-measures-determine-random-measure-limit",
++      "namespace": "probability.random-measures",
++      "logical_name": "normalised-moment-measures-determine-random-measure-limit",
++      "kind": "lemma",
++      "title": "All normalised moment measures determine a random probability-measure limit",
++      "statement": "Let S be Polish and mu_n, mu be random Borel probability measures on S. If E[mu_n^{tensor r}] converges weakly to E[mu^{tensor r}] on S^r for every integer r>=1, then mu_n converges in law to mu in P(S) with the weak topology. First-moment convergence yields tightness of the random-measure laws by Markov bounds on compact complements. All mixed moments of bounded continuous integral vectors then determine their compactly supported laws. Every normalised r-th moment measure has total mass exactly one; no factorial-mass or Carleman argument is needed.",
++      "proof_text": "# C0075: normalised moment measures give a precise conditional reduction\n\nLabel: proof of a general random-probability-measure lemma and a refuted finite-moment route, pending w347 KEEP. No percolation scaling limit is claimed proved.\n\nLet S be Polish, let mu_n and mu be random Borel probability measures on S, and assume that for every integer r>=1 the deterministic probability measures E[mu_n^{tensor r}] converge weakly on S^r to E[mu^{tensor r}]. Then mu_n converges in distribution to mu in the space P(S) with its weak topology.\n\nProof of tightness: the first moment measures converge and hence form a uniformly tight family. Given epsilon>0, choose compact K_j with sup_n E[mu_n(K_j^c)] <= epsilon*2^(-2j), j>=1. Markov's inequality and a union bound show that with probability at least 1-epsilon, all inequalities mu_n(K_j^c)<=2^(-j) hold. The corresponding set A of measures is closed (K_j^c is open, so nu -> nu(K_j^c) is lower semicontinuous) and uniformly tight; Prokhorov makes A compact. Hence the laws of mu_n are tight.\n\nProof of uniqueness: any subsequential law limit has the same expectations of products of bounded continuous integrals nu(f_1)...nu(f_r) as mu, by the assumed moment-measure convergence. For a finite family of bounded f_i the integral vector lies in a compact box. Polynomial approximation on that box determines its distribution from all mixed moments. A countable family of bounded continuous functions determining the weak Borel structure on P(S) then determines the law of the random measure. Every subsequential limit therefore has law mu.\n\nThe normalisation matters. E[mu^{tensor r}](S^r)=1 for every r, not a factorially growing quantity. No Carleman bound is needed for these bounded evaluation vectors. Pointwise limits of characteristic functions of these probability moment measures imply their weak convergence if the limiting characteristic function is continuous at the origin; mass one alone is not a tightness proof (delta_n escapes on R).\n\nKnowing only the first few moment measures is insufficient. On S={0,1}, set mu_P=(1-P)delta_0+P delta_1. Compare P uniform on [0,1] with P supported on {0,1/2,1} of weights {1/6,2/3,1/6}. They have the same moments through degree 3, so the first three moment measures agree, but E P^4 is 1/5 versus 5/24. Their fourth moment measures, and their laws, differ.\n\nFor the critical-cluster empirical measure n^(-1) sum_{x in C(0)} delta_{n^(-1/4)x}, conditioned on |C(0)|=n, apply the lemma only after checking convergence of every normalised moment measure to the corresponding ISE moment measure. Verifying those lace-expansion asymptotics, particularly the nearest-neighbour regime and the correct scaling constants, remains the substantive gap. A theorem about two or three point functions cannot be promoted to the required all-order statement.\n\nSource: C0075 problem and attempt in the 2026-09-07 intake; cached Heydenreich-van der Hofstad Open Problem 15.1. The prior attempt's factorial mass and unverified all-order inference are not used.\n\nPrimary-source check: the cached survey section 15.1 expressly distinguishes the conditioned three-point Hara-Slade result from missing higher-point results in that source. Its reference [141] is T. Hara and G. Slade, The scaling limit of the incipient infinite cluster in high-dimensional percolation. II. Integrated super-Brownian excursion, J. Math. Phys. 41(3):1244-1293 (2000). With the origin fixed, a (k+1)-point cluster function corresponds to the k-th empirical moment measure after normalisation; this indexing must also be checked.\n",
++      "assumptions": [
++        "Probability measures, not unnormalised cluster counting measures",
++        "All integer orders r>=1",
++        "Polish state space"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:C0075:normalised-moment-measures-determine-random-measure-limit",
++        "url": "file:///~/brain_workers/w331/proofs/C0075.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "three-moment-measures-do-not-determine-law",
++      "namespace": "probability.random-measures",
++      "logical_name": "three-moment-measures-do-not-determine-law",
++      "kind": "lemma",
++      "title": "First three moment measures can agree while the random-measure laws differ",
++      "statement": "On S={0,1}, let mu_P=(1-P) delta_0+P delta_1. Compare P uniform on [0,1] with P taking 0,1/2,1 with probabilities 1/6,2/3,1/6. Their random probability measures have identical first, second and third moment measures, but the fourth moments of their mass at 1 are 1/5 and 5/24, differing by 1/120. Therefore finitely many low-order moment-measure limits cannot certify an ISE random-measure limit.",
++      "proof_text": "# C0075: normalised moment measures give a precise conditional reduction\n\nLabel: proof of a general random-probability-measure lemma and a refuted finite-moment route, pending w347 KEEP. No percolation scaling limit is claimed proved.\n\nLet S be Polish, let mu_n and mu be random Borel probability measures on S, and assume that for every integer r>=1 the deterministic probability measures E[mu_n^{tensor r}] converge weakly on S^r to E[mu^{tensor r}]. Then mu_n converges in distribution to mu in the space P(S) with its weak topology.\n\nProof of tightness: the first moment measures converge and hence form a uniformly tight family. Given epsilon>0, choose compact K_j with sup_n E[mu_n(K_j^c)] <= epsilon*2^(-2j), j>=1. Markov's inequality and a union bound show that with probability at least 1-epsilon, all inequalities mu_n(K_j^c)<=2^(-j) hold. The corresponding set A of measures is closed (K_j^c is open, so nu -> nu(K_j^c) is lower semicontinuous) and uniformly tight; Prokhorov makes A compact. Hence the laws of mu_n are tight.\n\nProof of uniqueness: any subsequential law limit has the same expectations of products of bounded continuous integrals nu(f_1)...nu(f_r) as mu, by the assumed moment-measure convergence. For a finite family of bounded f_i the integral vector lies in a compact box. Polynomial approximation on that box determines its distribution from all mixed moments. A countable family of bounded continuous functions determining the weak Borel structure on P(S) then determines the law of the random measure. Every subsequential limit therefore has law mu.\n\nThe normalisation matters. E[mu^{tensor r}](S^r)=1 for every r, not a factorially growing quantity. No Carleman bound is needed for these bounded evaluation vectors. Pointwise limits of characteristic functions of these probability moment measures imply their weak convergence if the limiting characteristic function is continuous at the origin; mass one alone is not a tightness proof (delta_n escapes on R).\n\nKnowing only the first few moment measures is insufficient. On S={0,1}, set mu_P=(1-P)delta_0+P delta_1. Compare P uniform on [0,1] with P supported on {0,1/2,1} of weights {1/6,2/3,1/6}. They have the same moments through degree 3, so the first three moment measures agree, but E P^4 is 1/5 versus 5/24. Their fourth moment measures, and their laws, differ.\n\nFor the critical-cluster empirical measure n^(-1) sum_{x in C(0)} delta_{n^(-1/4)x}, conditioned on |C(0)|=n, apply the lemma only after checking convergence of every normalised moment measure to the corresponding ISE moment measure. Verifying those lace-expansion asymptotics, particularly the nearest-neighbour regime and the correct scaling constants, remains the substantive gap. A theorem about two or three point functions cannot be promoted to the required all-order statement.\n\nSource: C0075 problem and attempt in the 2026-09-07 intake; cached Heydenreich-van der Hofstad Open Problem 15.1. The prior attempt's factorial mass and unverified all-order inference are not used.\n\nPrimary-source check: the cached survey section 15.1 expressly distinguishes the conditioned three-point Hara-Slade result from missing higher-point results in that source. Its reference [141] is T. Hara and G. Slade, The scaling limit of the incipient infinite cluster in high-dimensional percolation. II. Integrated super-Brownian excursion, J. Math. Phys. 41(3):1244-1293 (2000). With the origin fixed, a (k+1)-point cluster function corresponds to the k-th empirical moment measure after normalisation; this indexing must also be checked.\n",
++      "assumptions": [
++        "Only finite-moment sufficiency is refuted; no percolation theorem is refuted"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:C0075:three-moment-measures-do-not-determine-law",
++        "url": "file:///~/brain_workers/w331/proofs/C0075.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "ise-hara-slade-three-point-source-scope",
++      "namespace": "probability.percolation",
++      "logical_name": "ise-hara-slade-three-point-source-scope",
++      "kind": "concept",
++      "title": "Source scope of the conditioned Hara-Slade ISE calculation",
++      "statement": "The cached Heydenreich-van der Hofstad survey, section 15.1, identifies the conditioned three-point calculation of Hara and Slade and describes higher-point convergence as missing in that source. The reference is T. Hara and G. Slade, The scaling limit of the incipient infinite cluster in high-dimensional percolation. II. Integrated super-Brownian excursion, J. Math. Phys. 41(3):1244-1293 (2000). Thus the September attempt did not establish all-order conditioned moment-measure convergence. A general moment-measure lemma remains a conditional reduction; it is not a literature solution or a current-openness certificate.",
++      "proof_text": null,
++      "assumptions": [
++        "Cached survey only; no fresh global literature verification"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:C0075:ise-hara-slade-three-point-source-scope",
++        "url": "file:///~/brain_workers/w331/proofs/C0075.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "attainable-peak-sets-are-independent",
++      "namespace": "probability.random-labelings",
++      "logical_name": "attainable-peak-sets-are-independent",
++      "kind": "lemma",
++      "title": "Attainable peak sets on finite connected graphs are precisely nonempty independent sets",
++      "statement": "For a finite nonempty connected simple graph, a vertex set S is exactly the set of strict local maxima of some bijective vertex labeling if and only if S is nonempty and independent. Assign the largest labels to S and assign the other labels in decreasing order of distance from S to construct such a labeling. Consequently any nonadjacent two vertices can be the only peaks. On n-by-n grids both graph distances 2 (n>=3) and 2(n-1) occur with positive probability conditioned on two peaks. This support statement does not determine whether distance/n converges to zero.",
++      "proof_text": "# P0029: attainable peak sets and exact finite-grid controls\n\nLabel: proof of a support lemma plus exact finite numerical evidence, pending w347 KEEP. The source asks whether distance/n tends to zero, despite its informal repel wording; we retain the displayed question.\n\nFor a finite connected graph G, a subset S is the exact set of strict local maxima of some bijective vertex labeling if and only if S is nonempty and independent. Necessity: the globally largest label is a local maximum, and two adjacent vertices cannot both exceed each other. Sufficiency: give S the |S| largest labels. Order the other vertices by nonincreasing distance from S, giving nearer vertices larger labels; resolve equal-distance ties arbitrarily. Every nonroot has a neighbour one step closer to S, hence a neighbour with a larger label. Every root has only nonroot neighbours and hence is a peak. There are no other peaks.\n\nConsequently any two nonadjacent prescribed vertices can be the two peaks with positive probability under a uniform random permutation. On square grids, both graph distance 2 (n>=3) and distance 2(n-1) are in the conditional support. Support alone cannot determine concentration or an asymptotic probability: rare configurations at macroscopic distance do not refute distance/n ->0, and close configurations do not prove it.\n\nExact permutation counts for the 2x2, 2x3 and 3x3 grids accompany this proof. They extend the prior 2x2 count of 8/24. They are finite controls and do not establish a limiting separation law. The remaining route is a quantitative bound on the weighted counts of acyclic orientations with two sinks (each orientation is weighted by its number of linear extensions), not merely existence of orientations.\n\nSource: existing P0029 open-problem and attempt cards, citing Burdzy, My favorite open problems, Problem 9.\n",
++      "assumptions": [
++        "Distinct vertex labels",
++        "Connected finite graph"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:P0029:attainable-peak-sets-are-independent",
++        "url": "file:///~/brain_workers/w331/proofs/P0029.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "two-peak-small-grid-exact-counts",
++      "namespace": "probability.random-labelings",
++      "logical_name": "two-peak-small-grid-exact-counts",
++      "kind": "concept",
++      "title": "Exact two-peak counts on small rectangular grids",
++      "statement": "Exhaustive uniform-permutation enumeration gives 8 two-peak labelings out of 24 on the 2-by-2 grid, 424 out of 720 on the 2-by-3 grid, and 143808 out of 362880 on the 3-by-3 grid. On the 3-by-3 grid the graph-distance counts are 63552 at distance 2, 64512 at distance 3 and 15744 at distance 4. These are exact finite controls, with no asserted asymptotic separation law.",
++      "proof_text": null,
++      "assumptions": [
++        "Nearest-neighbour rectangular grid; strict local maxima"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:P0029:two-peak-small-grid-exact-counts",
++        "url": "file:///~/brain_workers/w331/proofs/P0029.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "continuous-cost-field-infinite-mean-supremum",
++      "namespace": "probability.spatial-networks",
++      "logical_name": "continuous-cost-field-infinite-mean-supremum",
++      "kind": "lemma",
++      "title": "Continuity and pointwise mean-length bounds do not ensure an integrable sampled supremum",
++      "statement": "There exists a random continuous finite nonnegative field L on the closed unit disk with L(0)=0, L(z)>=|z| and E L(z)<=3|z|, whose supremum has infinite expectation. Let P(J=j)=2^(-j), use disjoint continuous bumps of radius 2^(-j-5) centred at (1/2+2^(-j-2),0), and set L(z)=|z|+(2^J/J) psi_J(z). Its bump supremum has expectation sum_j 1/j. An independent infinite IID uniform sample is dense and has the same supremum. This field is not asserted to satisfy compatible-route or SIRSN axioms.",
++      "proof_text": "# P0229: continuity and first moments do not give an integrable sampled supremum\n\nLabels: proof of an obstruction in the class of continuous cost fields, and a conditional chaining reduction. Pending w347 KEEP. This is not a counterexample satisfying all SIRSN route axioms.\n\nLet J>=1 have P(J=j)=2^(-j). Inside the unit disk choose disjoint balls centred at z_j=(1/2+2^(-j-2),0), radius r_j=2^(-j-5). Let psi_j be a continuous nonnegative bump supported in that ball, bounded by 1 and equal to 1 at its centre. Define B(z)=(2^J/J) psi_J(z), and L(z)=|z|+B(z). Each realised field is continuous, finite, has L(0)=0, and L(z)>=|z|. Since the supports are disjoint, E B(z)<=1/j at a point in support j and is zero elsewhere. Every support is at distance greater than 1/2 from the origin, so E L(z)<=3|z|. Nevertheless sup B=2^J/J and E sup B=sum_{j>=1}1/j=infinity. The supremum of L is finite almost surely but has infinite mean.\n\nAn infinite independent iid uniform sample is dense in the disk almost surely. By continuity its supremum of L equals the full supremum. Thus the infinite-sample version has the same failure. Truncating to J<=N gives expected bump supremum H_N, while the pointwise first-moment bound stays unchanged. The construction does not supply compatible routes or scale-invariant spatial-network geometry, so it refutes only an inference from continuity and individual mean-length bounds.\n\nThe previous stronger increment route remains valid under its stated assumptions: on a containing square suppose a jointly measurable L has one integrable anchor and E|L(x)-L(y)|^p<=C|x-y|^p for p>2. At dyadic level k there are O(2^(2k)) parent-child and neighbour edges of length O(2^(-k)). The expected maximum increment is bounded by the p-th root of the sum of p-th moments, hence O(2^(-k*(1-2/p))). The sum is finite. Dyadic telescoping, including neighbouring edges, gives a continuous modification and an integrable supremum. Stochastic continuity identifies this modification at each deterministic point; joint measurability and independence of the uniform sample permit Fubini, identifying it at each sampled point, and countability handles the whole sequence. The required increment estimate still has to be derived from a genuine route model.\n\nSource: P0229 open-problem and attempt cards, citing Aldous, Scale-invariant random spatial networks, Open Problem 34, PDF p.50. This makes precise why the previous increment assumption is materially stronger than a first-moment hypothesis.\n",
++      "assumptions": [
++        "Random continuous cost fields only; no route-geometry counterexample claimed"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:P0229:continuous-cost-field-infinite-mean-supremum",
++        "url": "file:///~/brain_workers/w331/proofs/P0229.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "spatial-lp-increments-give-integrable-sample-supremum",
++      "namespace": "probability.spatial-networks",
++      "logical_name": "spatial-lp-increments-give-integrable-sample-supremum",
++      "kind": "lemma",
++      "title": "Spatial Lp increments with p greater than two give an integrable sampled supremum",
++      "statement": "Let L be jointly measurable on a bounded square containing the unit disk, with E|L(z_0)| finite at one anchor and E|L(x)-L(y)|^p<=C|x-y|^p for all x,y and some p>2. Then dyadic chaining gives a continuous modification with finite expected absolute supremum; at level k the expected maximum parent-child and neighbour increment is O(2^(-k*(1-2/p))). Independence and Fubini identify that modification with L at every point of an infinite IID uniform sample, simultaneously almost surely, so the sampled absolute supremum is integrable. Deriving the increment hypothesis for actual routes is a separate task.",
++      "proof_text": "# P0229: continuity and first moments do not give an integrable sampled supremum\n\nLabels: proof of an obstruction in the class of continuous cost fields, and a conditional chaining reduction. Pending w347 KEEP. This is not a counterexample satisfying all SIRSN route axioms.\n\nLet J>=1 have P(J=j)=2^(-j). Inside the unit disk choose disjoint balls centred at z_j=(1/2+2^(-j-2),0), radius r_j=2^(-j-5). Let psi_j be a continuous nonnegative bump supported in that ball, bounded by 1 and equal to 1 at its centre. Define B(z)=(2^J/J) psi_J(z), and L(z)=|z|+B(z). Each realised field is continuous, finite, has L(0)=0, and L(z)>=|z|. Since the supports are disjoint, E B(z)<=1/j at a point in support j and is zero elsewhere. Every support is at distance greater than 1/2 from the origin, so E L(z)<=3|z|. Nevertheless sup B=2^J/J and E sup B=sum_{j>=1}1/j=infinity. The supremum of L is finite almost surely but has infinite mean.\n\nAn infinite independent iid uniform sample is dense in the disk almost surely. By continuity its supremum of L equals the full supremum. Thus the infinite-sample version has the same failure. Truncating to J<=N gives expected bump supremum H_N, while the pointwise first-moment bound stays unchanged. The construction does not supply compatible routes or scale-invariant spatial-network geometry, so it refutes only an inference from continuity and individual mean-length bounds.\n\nThe previous stronger increment route remains valid under its stated assumptions: on a containing square suppose a jointly measurable L has one integrable anchor and E|L(x)-L(y)|^p<=C|x-y|^p for p>2. At dyadic level k there are O(2^(2k)) parent-child and neighbour edges of length O(2^(-k)). The expected maximum increment is bounded by the p-th root of the sum of p-th moments, hence O(2^(-k*(1-2/p))). The sum is finite. Dyadic telescoping, including neighbouring edges, gives a continuous modification and an integrable supremum. Stochastic continuity identifies this modification at each deterministic point; joint measurability and independence of the uniform sample permit Fubini, identifying it at each sampled point, and countability handles the whole sequence. The required increment estimate still has to be derived from a genuine route model.\n\nSource: P0229 open-problem and attempt cards, citing Aldous, Scale-invariant random spatial networks, Open Problem 34, PDF p.50. This makes precise why the previous increment assumption is materially stronger than a first-moment hypothesis.\n",
++      "assumptions": [
++        "Joint measurability",
++        "Uniform p-th increment bound with p>2",
++        "Sample independent of field"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:P0229:spatial-lp-increments-give-integrable-sample-supremum",
++        "url": "file:///~/brain_workers/w331/proofs/P0229.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "bounded-common-gaussian-mode-shifts-extrema",
++      "namespace": "probability.gaussian-fields",
++      "logical_name": "bounded-common-gaussian-mode-shifts-extrema",
++      "kind": "lemma",
++      "title": "A bounded common Gaussian covariance mode changes centred extremal limits",
++      "statement": "Let Y_N(x)=X_N(x)+Z for a finite Gaussian field X_N and independent Z~N(0,sigma^2), sigma>0, shared by every site. All covariance entries change by sigma^2. For any deterministic centring m_N, max Y_N-m_N=max X_N-m_N+Z, and if the latter X maximum tends in law to a real M, the Y maximum tends to M+Z, a different law. Heights and level-set thresholds translate exactly by Z. Thus a uniformly bounded covariance difference alone cannot force identical extremal limit laws. This changes the off-diagonal finite covariance limit and need not meet a specified continuum Green-function hypothesis.",
++      "proof_text": "# C0008: an exact common-Gaussian-mode check on covariance comparisons\n\nLabel: proof of a limitation of bounded covariance perturbations, pending w347 KEEP. No disproof of Problem 16.8 or full universality result is claimed.\n\nFor any finite centred Gaussian field X_N and an independent Z~N(0,sigma^2) with sigma>0, let Y_N(x)=X_N(x)+Z at every site. Then Cov(Y_N(x),Y_N(y))-Cov(X_N(x),X_N(y))=sigma^2 uniformly. For any deterministic centring m_N, max Y_N-m_N=max X_N-m_N+Z exactly. If max X_N-m_N converges in law to M, independence gives max Y_N-m_N -> M+Z. The laws of M and M+Z differ: equality would imply phi_M(t)=phi_M(t) exp(-sigma^2 t^2/2); continuity and phi_M(0)=1 make this impossible at sufficiently small nonzero t.\n\nThe full point measure of heights is translated by Z, and the number of sites above a threshold t for Y is the number above t-Z for X. A bounded covariance difference therefore cannot alone force identical centred-maximum, extremal-process, or level-set limit laws. A universality claim must specify any allowed model-dependent smooth mode, centring, constant, intensity or decoration law.\n\nThis example changes the off-diagonal O(1) covariance limit. It may fail the exact continuum Green-function hypothesis in the source and is expressly not a counterexample to that complete hypothesis package. The prior conditional interpolation route needs its own theorem with the correct limit identification; an O(1) comparison by itself only provides comparisons, not equality of laws.\n\nSource: C0008-A001 and the exact question in the 2026-09-07 intake, citing Biskup, Problem 16.8, p.222. The intake records the centred-maximum result of Ding-Roy-Zeitouni (Ann. Probab. 2017) but leaves the full level-set/extremal-process generality unverified.\n\nExact reference for the already-known centred-maximum part, checked in the cached Biskup bibliography, item 59: J. Ding, R. Roy and O. Zeitouni (2017), Convergence of the centered maximum of log-correlated Gaussian fields, Ann. Probab. 45(6A), 3886-3928. This is a maximum theorem, not a verified answer to the full level-set/extremal-process question.\n",
++      "assumptions": [
++        "Independent nonzero common Gaussian mode",
++        "No disproof of the full Problem 16.8 hypotheses"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:C0008:bounded-common-gaussian-mode-shifts-extrema",
++        "url": "file:///~/brain_workers/w331/proofs/C0008.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "susceptibility-value-comparison-does-not-control-log-derivative",
++      "namespace": "probability.percolation",
++      "logical_name": "susceptibility-value-comparison-does-not-control-log-derivative",
++      "kind": "lemma",
++      "title": "Uniform value comparison does not control a logarithmic-derivative maximiser",
++      "statement": "For V tending to infinity there are positive increasing C1 functions f_V and g_V on [0,1] with f_V<=g_V<=exp(0.1) f_V, for which the log derivative of f_V is maximised at 1/2 but that of g_V is outside every fixed K V^(-1/3) window around 1/2 for sufficiently large V. Set a=V^(1/3), f_V=a exp(arctan(a(p-1/2))) and g_V=f_V exp(S((p-3/4)V^2)/10), where S is the increasing cubic smoothstep from 0 to 1 with derivative 3/4 at 0. The added log derivative at 3/4 is (3/40)V^2. This is a calculus counterexample to a value-to-derivative inference, not a percolation susceptibility or a refutation of torus criticality.",
++      "proof_text": "# C0067: comparable susceptibility values do not locate the derivative maximum\n\nLabel: proof of a counterexample to a calculus inference, pending w347 KEEP. The constructed functions are not percolation susceptibilities; this does not refute Open Problem 13.1.\n\nFor V>=1000 set a=V^(1/3), p_c=1/2, p_0=3/4, h=V^(-2), and f_V(p)=a exp(arctan(a(p-p_c))). This positive increasing C1 function has logarithmic derivative a/(1+a^2(p-p_c)^2), maximised at p_c. Let S(t)=0 for t<=-1, S(t)=1 for t>=1, and S(t)=1/2+3t/4-t^3/4 between -1 and 1. This is C1 and increasing, with S'(0)=3/4. Define g_V(p)=f_V(p) exp(S((p-p_0)/h)/10).\n\nAt every point f_V<=g_V<=exp(1/10) f_V. Yet the logarithmic derivative of g_V at p_0 is a/(1+a^2/16)+(3/40)V^2, whereas throughout |p-p_c|<=V^(-1/3) the perturbation derivative is zero and the logarithmic derivative is at most a. The maximum is therefore outside this window. The same holds outside every fixed K V^(-1/3) window for sufficiently large V. The perturbation preserves monotonicity and value bounds while changing derivative location drastically.\n\nThus two-sided plateau bounds for susceptibility itself cannot by themselves establish the location of the maximum of its logarithmic derivative. A precise sufficient missing input is an interior lower bound for this derivative that strictly beats a uniform exterior upper bound. The source's actual percolation structure may prohibit the constructed narrow bump; proving such derivative or pivotal control is the work still required. This attempt concerns p_c^(1); no assertion about the other definitions follows from it.\n\nSource: C0067-A001, whose recorded obstruction is that two-sided derivative control is unavailable, and Heydenreich-van der Hofstad, Open Problem 13.1.\n",
++      "assumptions": [
++        "Constructed C1 functions; no actual percolation model asserted"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:C0067:susceptibility-value-comparison-does-not-control-log-derivative",
++        "url": "file:///~/brain_workers/w331/proofs/C0067.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "recurrent-z2-nonnegative-superharmonic-is-constant",
++      "namespace": "probability.sandpiles",
++      "logical_name": "recurrent-z2-nonnegative-superharmonic-is-constant",
++      "kind": "lemma",
++      "title": "Finite nonnegative superharmonic functions on recurrent Z2 are constant",
++      "statement": "If u:Z^2->[0,infinity) is finite at every site and sum_{y~x}u(y)-4u(x)<=0 for every x, then u is constant. For nearest-neighbour simple random walk started at x, stopping on hitting y or at time n gives u(x)>=u(y) P_x(T_y<=n). Recurrence makes the probability tend to one, and reversing x and y proves equality. No boundedness or finite spatial average of u is assumed.",
++      "proof_text": "# C0098: a decidable {3,4} subfamily and a corrected finite-perturbation claim\n\nLabel: proofs of boundary cases, pending w347 KEEP. The general five-probability algorithm is not obtained.\n\nUse the standard Z2 sandpile convention: a site of height at least 4 topples by losing 4 and sending one chip to each of its four neighbours. A stable configuration has heights at most 3. Under any fair legal schedule, every deterministic configuration s>=3 with at least one site of height 4 is nonstabilising, and every site topples infinitely often.\n\nProof: if every site toppled only finitely often, its finite nonnegative integer odometer u would satisfy s+Delta u<=3, with Delta u(x)=sum_{y~x}u(y)-4u(x). Thus Delta u<=0 everywhere and Delta u<=-1 at a height-4 site. Every finite nonnegative superharmonic function on recurrent Z2 is constant: for simple random walk started at x and stopped on hitting y or at n, superharmonicity and nonnegativity give u(x)>=u(y) P_x(T_y<=n); recurrence makes this probability tend to 1. Interchanging x and y proves equality. Constancy contradicts the strict inequality at the seed. Hence some site must topple infinitely. Infinite topplings send infinitely many chips to every neighbour, and fairness then forces that neighbour to topple infinitely; connectedness propagates this to all sites.\n\nFor iid heights supported on {3,4}, if P(s=4)=0, the field is identically 3 and is already stable. If P(s=4)>0, almost surely there is a height-4 site (indeed infinitely many), so the preceding deterministic argument gives probability one of infinite toppling at every site. For rationally specified probabilities this gives a finite algorithm on that face by testing P(4)=0 exactly. The probability classification holds for arbitrary real probabilities; we do not claim a decidable zero test for an unspecified real-number encoding. Every law supported on {0,1,2,3} is also already stable.\n\nIn particular the stable background s=3 plus one chip at the origin is explosive. This corrects the prior attempt's blanket claim that a stable configuration plus a finite perturbation has answer zero. Such a claim needs extra restrictions on the background. The recurrence/superharmonic proof has no finite expected-odometer assumption and does not use uncertain density-threshold recollections.\n\nFinite sink-box stabilisations are recorded only as numerical controls; they terminate because of boundary dissipation and are not a proof of the infinite-volume assertion. The main inputs are recurrence of the nearest-neighbour Z2 walk and the existence of a finite odometer if a fair legal evolution stabilises, both stated explicitly.\n\nSource: C0098-A001, Levine-Peres sandpile problem (1), p.26, and the elementary least-action odometer relation. The deterministic counterexample is classical in nature; novelty is not claimed.\n",
++      "assumptions": [
++        "Recurrence of nearest-neighbour Z2 simple random walk",
++        "Pointwise finiteness and nonnegativity"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:C0098:recurrent-z2-nonnegative-superharmonic-is-constant",
++        "url": "file:///~/brain_workers/w331/proofs/C0098.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "sandpile-three-four-face-is-decidable",
++      "namespace": "probability.sandpiles",
++      "logical_name": "sandpile-three-four-face-is-decidable",
++      "kind": "lemma",
++      "title": "The iid sandpile face supported on heights three and four is decidable",
++      "statement": "Under a fair legal Z2 sandpile schedule with toppling threshold 4, every configuration at least 3 everywhere with a height-4 seed has every site topple infinitely often. A finite nonnegative odometer would be superharmonic everywhere and strictly so at the seed, contradicting recurrence. Infinite topplings then propagate to neighbours. Thus an IID law on {3,4} has infinite toppling probability zero if P(4)=0 and one if P(4)>0. For rationally specified probabilities, testing P(4)=0 gives a finite decision algorithm on this face; for arbitrary real inputs this is a probability criterion without a claimed computable zero test. Every law on {0,1,2,3} is already stable. In particular the stable background of height 3 plus one extra chip need not stabilise; a blanket stable-background-plus-finite-perturbation claim is false.",
++      "proof_text": "# C0098: a decidable {3,4} subfamily and a corrected finite-perturbation claim\n\nLabel: proofs of boundary cases, pending w347 KEEP. The general five-probability algorithm is not obtained.\n\nUse the standard Z2 sandpile convention: a site of height at least 4 topples by losing 4 and sending one chip to each of its four neighbours. A stable configuration has heights at most 3. Under any fair legal schedule, every deterministic configuration s>=3 with at least one site of height 4 is nonstabilising, and every site topples infinitely often.\n\nProof: if every site toppled only finitely often, its finite nonnegative integer odometer u would satisfy s+Delta u<=3, with Delta u(x)=sum_{y~x}u(y)-4u(x). Thus Delta u<=0 everywhere and Delta u<=-1 at a height-4 site. Every finite nonnegative superharmonic function on recurrent Z2 is constant: for simple random walk started at x and stopped on hitting y or at n, superharmonicity and nonnegativity give u(x)>=u(y) P_x(T_y<=n); recurrence makes this probability tend to 1. Interchanging x and y proves equality. Constancy contradicts the strict inequality at the seed. Hence some site must topple infinitely. Infinite topplings send infinitely many chips to every neighbour, and fairness then forces that neighbour to topple infinitely; connectedness propagates this to all sites.\n\nFor iid heights supported on {3,4}, if P(s=4)=0, the field is identically 3 and is already stable. If P(s=4)>0, almost surely there is a height-4 site (indeed infinitely many), so the preceding deterministic argument gives probability one of infinite toppling at every site. For rationally specified probabilities this gives a finite algorithm on that face by testing P(4)=0 exactly. The probability classification holds for arbitrary real probabilities; we do not claim a decidable zero test for an unspecified real-number encoding. Every law supported on {0,1,2,3} is also already stable.\n\nIn particular the stable background s=3 plus one chip at the origin is explosive. This corrects the prior attempt's blanket claim that a stable configuration plus a finite perturbation has answer zero. Such a claim needs extra restrictions on the background. The recurrence/superharmonic proof has no finite expected-odometer assumption and does not use uncertain density-threshold recollections.\n\nFinite sink-box stabilisations are recorded only as numerical controls; they terminate because of boundary dissipation and are not a proof of the infinite-volume assertion. The main inputs are recurrence of the nearest-neighbour Z2 walk and the existence of a finite odometer if a fair legal evolution stabilises, both stated explicitly.\n\nSource: C0098-A001, Levine-Peres sandpile problem (1), p.26, and the elementary least-action odometer relation. The deterministic counterexample is classical in nature; novelty is not claimed.\n",
++      "assumptions": [
++        "Nearest-neighbour Z2, threshold 4, fair legal dynamics",
++        "Rationally specified probabilities for the algorithm claim",
++        "No general five-probability algorithm claimed"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:C0098:sandpile-three-four-face-is-decidable",
++        "url": "file:///~/brain_workers/w331/proofs/C0098.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "fk-positive-q-monotone-coupling-question",
++      "namespace": "probability.random-cluster",
++      "logical_name": "fk-positive-q-monotone-coupling-question",
++      "kind": "concept",
++      "title": "Random-cluster monotone coupling question for positive q below one",
++      "statement": "For a finite graph with free boundary, FK(p,q) assigns an edge set A probability proportional to p^|A|(1-p)^(|E|-|A|) q^k(A), where k(A) includes isolated components. For 0<q<1, the cited Question 13.2 asks for an inclusion-monotone joint realisation for all p in [0,1] on general graphs. The source also mentions q=0; that endpoint needs a separate limiting convention and is not settled by positive-q formulae. This is a historical problem statement, not a fresh global status claim.",
++      "proof_text": null,
++      "assumptions": [
++        "q>0 for the normalised probability formula",
++        "Free boundary conditions"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:C0146:fk-positive-q-monotone-coupling-question",
++        "url": "file:///~/brain_workers/w331/proofs/C0146.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "finite-cactus-fk-monotone-p-coupling",
++      "namespace": "probability.random-cluster",
++      "logical_name": "finite-cactus-fk-monotone-p-coupling",
++      "kind": "lemma",
++      "title": "Finite cactus random-cluster graphs have a monotone coupling in p for every positive q",
++      "statement": "For every finite simple cactus graph with free boundary conditions and q>0, the FK(p,q) laws have a simultaneous inclusion-monotone coupling for all p in [0,1]. The component count is |V|-|A| plus the number of completely open edge-disjoint cycles, so the law factors over bridge and cycle blocks. Bridges are Bernoulli(p/(p+q(1-p))). A cycle block is a uniform K-subset given K, with K mass proportional to binomial(m,k) (p/(q(1-p)))^k q^(1_{k=m}). Likelihood-ratio order couples K monotonically by one uniform quantile; one independent uniform edge permutation nests the subsets. This includes 0<q<1 and uses no FKG.",
++      "proof_text": "# C0146: monotone coupling on finite cactus graphs, with exact finite tests\n\nLabels: proof of a graph-class special case; finite parameter tests on other graphs are numerical evidence only. Pending w347 KEEP. The arbitrary-graph q<1 problem, and any q=0 limiting convention, remain unresolved here.\n\nLet G be a finite simple cactus graph (each edge belongs to at most one simple cycle) with free boundary conditions. Fix q>0. The FK(p,q) weight of an edge set A is p^|A| (1-p)^(|E|-|A|) q^k(A), where k(A) counts connected components including isolated vertices. There is a simultaneous monotone coupling for all p in [0,1].\n\nProof of factorisation: in a cactus, the cycle rank of A is exactly the number of original cycles fully present in A. Euler's identity gives k(A)=|V|-|A|+sum_cycles 1_{cycle subset A}. After removing the constant q^|V|, weights factor over bridge edges and the edge-disjoint cycle blocks. A bridge is Bernoulli with parameter t=p/(p+q(1-p)), which increases in p.\n\nFor a cycle of length m, the number K of open edges has mass proportional to binomial(m,k) w^k q^(1_{k=m}), with w=p/[q(1-p)]. Conditional on K=k its edge set is a uniform k-subset, independent of p. For p_2>p_1 the ratio of the two K-masses is a positive constant times (w_2/w_1)^k, increasing in k. This likelihood-ratio order implies stochastic order: multiplying a distribution by an increasing function makes the expectation of every increasing function larger, since their covariance is nonnegative (expand as the average of (f(i)-f(j))(h(i)-h(j))). Couple K_p by the inverse CDF using one uniform U for all p. Couple the uniform subsets by taking the first K_p edges of one uniform random permutation. Both choices are nested as p increases. Use independent U and permutations for different cycle blocks and independent bridge uniforms; the factorisation then gives the required FK marginal and inclusion simultaneously for all p. Endpoint p=0 is all closed and p=1 all open. This proof works also for 0<q<1 without using FKG.\n\nThis factorisation fails on theta graphs and K4 because cycles share edges. A separate exact finite-parameter experiment checks all increasing events at each tested (p,q) on those graphs. It uses d/dlogit(p) P(A)=Cov(1_A, |omega|). With integer-scaled weights W_omega, the derivative sign is the sign of sum_{omega in A} W_omega (|omega| Z-Z_1), where Z=sum W and Z_1=sum |omega|W. Minimising that sum over upward-closed subsets of the Boolean lattice is a minimum-cut problem: negative-cost vertices receive source arcs, positive-cost vertices receive sink arcs, and each one-edge inclusion implication receives a capacity larger than all finite costs. A negative optimum is an explicit increasing-event violation. Zero is expected when no negative derivative exists, since the empty and full events have derivative zero. Triangle cases are cross-checked by brute force over all event sets. These pointwise tests cannot prove monotonicity throughout the parameter domain or a simultaneous coupling on arbitrary graphs.\n\nSource: C0146-A001, Pete, Probability and geometry on groups, Question 13.2, p.185. The previous attempt proposed a theta/K4 test but did not run it. Only positive q is treated mathematically; FK at q=0 requires a separate definition.\n",
++      "assumptions": [
++        "Finite simple cactus graph",
++        "Free boundary; positive q",
++        "No q=0 claim"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:C0146:finite-cactus-fk-monotone-p-coupling",
++        "url": "file:///~/brain_workers/w331/proofs/C0146.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "fk-small-graph-exact-increasing-event-derivative-controls",
++      "namespace": "probability.random-cluster",
++      "logical_name": "fk-small-graph-exact-increasing-event-derivative-controls",
++      "kind": "concept",
++      "title": "Exact increasing-event derivative controls for small random-cluster graphs",
++      "statement": "The w331 finite run tested q in {1/10,1/4,1/2,3/4,9/10,1} and p in {1/10,1/4,1/2,3/4,9/10} on a path, a triangle, two triangles sharing one vertex, K_(2,3) and K4. At all 150 graph/parameter pairs, an exact integer minimum-cut calculation over all increasing events found no negative derivative of FK event probability in p. The triangle runs were checked against 600 brute-force upward-closed events, and an artificial negative derivative control was detected. These rational point checks do not prove monotonicity at every p,q or coupling on arbitrary graphs.",
++      "proof_text": null,
++      "assumptions": [
++        "Exact finite parameter evidence only"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:C0146:fk-small-graph-exact-increasing-event-derivative-controls",
++        "url": "file:///~/brain_workers/w331/proofs/C0146.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "sierpinski-carpet-boundary-remainder-has-a-segment",
++      "namespace": "probability.brownian-geometry",
++      "logical_name": "sierpinski-carpet-boundary-remainder-has-a-segment",
++      "kind": "lemma",
++      "title": "A Sierpinski-carpet boundary remainder contains a nontrivial segment",
++      "statement": "Let K be the standard Sierpinski carpet in the unit square. Remove the boundaries of all connected components of R^2 minus K. The remaining set contains {(1/4,y):0<y<1}, hence is not totally disconnected, although K is compact, connected and has area zero. The number 1/4 has ternary expansion 0.020202..., lies in the Cantor set and is not a gap endpoint; every deleted-square horizontal projection is contained in a closed Cantor gap, so the segment avoids all hole boundaries and the outer boundary. This deterministic set is not claimed to be a Brownian trace.",
++      "proof_text": "# P0021: boundary deletion need not disconnect a general planar zero-area continuum\n\nLabel: proof of a deterministic obstruction to a generic topological route, pending w347 KEEP. This is not a Brownian-trace counterexample.\n\nLet K be the standard Sierpinski carpet in [0,1]^2, obtained by repeatedly deleting the open middle square from each retained square. It is compact and connected and has area zero, since the area of the stage-n approximant is (8/9)^n. Its complement has the deleted open squares as bounded connected components and the exterior of the unit square as its unbounded component.\n\nTake x=1/4. Its ternary expansion is 0.020202...; therefore it belongs to the middle-third Cantor set and is not an endpoint of a complementary interval. The horizontal projection of every closed deleted square is contained in a closed middle-third gap from a finite stage, so none contains x. Consequently every point (1/4,y) with 0<y<1 lies in K and on none of the boundaries of any complementary component. The exterior component's boundary is the perimeter of the unit square and also misses this open vertical segment. After deleting all component boundaries, K therefore retains a connected nontrivial segment and is not totally disconnected.\n\nZero area, empty interior and connectedness of the original planar continuum cannot suffice to prove the Brownian assertion. Brownian-specific geometry must rule out this mechanism. The earlier time-set argument remains invalid too: a continuous image of a totally disconnected compact set can be connected (the Cantor-function example). Neither route settles the spatial remainder. Numerical controls below check the exact x=1/4 witness against the first ten Cantor deletion stages; the ternary expansion proves the claim at every stage.\n\nSource: existing P0021 problem and attempt cards, citing Burdzy, My favorite open problems, Problem 2(ii). This example is an elementary topological control, with no novelty claim.\n",
++      "assumptions": [
++        "Standard planar Sierpinski carpet",
++        "Generic topology only; no Brownian counterexample"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:P0021:sierpinski-carpet-boundary-remainder-has-a-segment",
++        "url": "file:///~/brain_workers/w331/proofs/P0021.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "brownian-remainder-needs-spatial-geometry",
++      "namespace": "probability.brownian-geometry",
++      "logical_name": "brownian-remainder-needs-spatial-geometry",
++      "kind": "concept",
++      "title": "Brownian trace remainder requires a spatial geometric argument",
++      "statement": "Neither zero area and connectedness of the original compact set nor total disconnectedness of a surviving time set alone establishes total disconnectedness of a planar Brownian spatial remainder. The Sierpinski-carpet boundary deletion retains a segment, and a continuous map of a totally disconnected compact time set can map onto an interval, as the Cantor function does. The Brownian assertion therefore needs geometry specific to the spatial trace; these obstructions do not answer it.",
++      "proof_text": null,
++      "assumptions": [
++        "No current-status or solution claim"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign:w331:P0021:brownian-remainder-needs-spatial-geometry",
++        "url": "file:///~/brain_workers/w331/proofs/P0021.md",
++        "revision": "2026-10-10-local-rederivation-pending-w347-KEEP",
++        "license": "owner-own-work (campaign derivation; literature cited, not reproduced)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "open-problem-campaign-w331-receipt-20261010",
++      "namespace": "probability.research-audit",
++      "logical_name": "open-problem-campaign-w331-receipt-20261010",
++      "kind": "concept",
++      "title": "w331 ten-problem mathematical campaign receipt, 10 October 2026",
++      "statement": "The w331 local batch on 2026-10-10 prepared 20 mathematical draft nodes for ten named problems, with 10 proof/attempt reports and 10 saved measurement receipts. Exact controls include 362880 permutations on the 3-by-3 peak grid, 150 FK increasing-event derivative parameter checks and 80 selected-child stationarity configurations. Recorded test-body runtime totals 2.148538 seconds, excluding startup and reading. At preparation, accepted results and new global open-problem solution claims are both zero; all claims await independent audit. The Lean check returned setup-unverified, not a proof certificate. Token usage was unavailable and is not estimated.",
++      "proof_text": null,
++      "assumptions": [
++        "Receipt describes the local draft, not deployment or accepted solutions"
++      ],
++      "domain": "probability research reproducibility",
++      "source": {
++        "source_id": "owner-campaign:w331:run-receipt-20261010",
++        "url": "file:///~/brain_workers/w331/RUN_RECEIPT.json",
++        "revision": "2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "and-or-tree-disagreement-contracts",
++      "to_existing_logical": "math:probability.open-problems:p0033-lyons-peres-question-17-18-refuted",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"For a Galton-Watson tree with P(D=2)=3/5 and P(D=3)=2/5, apply AND at degree 2 and OR at degree 3 to independent Bernoulli(1/2) spins at depth n. If q_n is the conditional root-one probability given the truncated unmarked tree, then d_n=2 ...\" To: \"[campaign status: candidate_full_solution - author-checked, unrefereed] Lyons and Peres, Probability on Trees and Networks (version 19 August 2026), Question 17.18 (p. 575) asks whether a consistent equivariant flow rule admitting a ...\""
++    },
++    {
++      "from_key": "and-or-same-colour-flow-stationarity",
++      "to_existing_logical": "math:probability.open-problems:p0033-lyons-peres-question-17-18-refuted",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"For GW offspring P(D=2)=3/5, P(D=3)=2/5, use the measurable limiting AND/OR colour obtained from Bernoulli(1/2) boundary spins. Choosing uniformly among children with the root colour preserves the unmarked GW law. The colour is invariant ...\" To: \"[campaign status: candidate_full_solution - author-checked, unrefereed] Lyons and Peres, Probability on Trees and Networks (version 19 August 2026), Question 17.18 (p. 575) asks whether a consistent equivariant flow rule admitting a ...\""
++    },
++    {
++      "from_key": "strict-discount-zero-mark-frechet-nonendogeny",
++      "to_existing_logical": "math:probability.core:open-problem-p0355-endogeny-of-nonminimal-discounted-tree-fixed-points",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"The deterministic binary recursion X=(1/2) max(X_1,X_2) has, for every a>0, the nonminimal fixed distribution P(X<=x)=exp(-a/x) for x>0 and zero for x<=0. Its invariant recursive tree process is nonendogenous because all innovations are ...\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Determine whether every positive-index invariant RTP from Corollary33 and condition39 is ...\""
++    },
++    {
++      "from_key": "max-lipschitz-r-moment-endogeny",
++      "to_existing_logical": "math:probability.core:open-problem-p0355-endogeny-of-nonminimal-discounted-tree-fixed-points",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"For an invariant deterministic b-ary recursive tree process X=g(xi;X_1,...,X_b), assume the usual independent child root laws and innovation independence, and |g(xi;x)-g(xi;y)|<=c max_i|x_i-y_i| with 0<c<1. If E|X|^r is finite for some r>0 ...\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_partial_counterexample). Determine whether every positive-index invariant RTP from Corollary33 and condition39 is ...\""
++    },
++    {
++      "from_key": "normalised-moment-measures-determine-random-measure-limit",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0075-ise-scaling-limit-of-critical-high-dimensional-percolation-clusters-of",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"Let S be Polish and mu_n, mu be random Borel probability measures on S. If E[mu_n^{tensor r}] converges weakly to E[mu^{tensor r}] on S^r for every integer r>=1, then mu_n converges in law to mu in P(S) with the weak topology. First-moment ...\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For critical percolation on Z^d, d > 6, show that the empirical measure of the cluster of the origin, rescaled by n^{-1/4} in space, conditioned ...\""
++    },
++    {
++      "from_key": "three-moment-measures-do-not-determine-law",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0075-ise-scaling-limit-of-critical-high-dimensional-percolation-clusters-of",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"On S={0,1}, let mu_P=(1-P) delta_0+P delta_1. Compare P uniform on [0,1] with P taking 0,1/2,1 with probabilities 1/6,2/3,1/6. Their random probability measures have identical first, second and third moment measures, but the fourth moments ...\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For critical percolation on Z^d, d > 6, show that the empirical measure of the cluster of the origin, rescaled by n^{-1/4} in space, conditioned ...\""
++    },
++    {
++      "from_key": "ise-hara-slade-three-point-source-scope",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0075-ise-scaling-limit-of-critical-high-dimensional-percolation-clusters-of",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"The cached Heydenreich-van der Hofstad survey, section 15.1, identifies the conditioned three-point calculation of Hara and Slade and describes higher-point convergence as missing in that source. The reference is T. Hara and G. Slade, The ...\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For critical percolation on Z^d, d > 6, show that the empirical measure of the cluster of the origin, rescaled by n^{-1/4} in space, conditioned ...\""
++    },
++    {
++      "from_key": "attainable-peak-sets-are-independent",
++      "to_existing_logical": "math:probability.core:open-problem-p0029-separation-of-two-peaks-in-random-square-grid-labelings",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"For a finite nonempty connected simple graph, a vertex set S is exactly the set of strict local maxima of some bijective vertex labeling if and only if S is nonempty and independent. Assign the largest labels to S and assign the other ...\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Uniformly label an n-by-n square grid and condition on exactly two local maxima. Does their graph distance divided ...\""
++    },
++    {
++      "from_key": "two-peak-small-grid-exact-counts",
++      "to_existing_logical": "math:probability.core:open-problem-p0029-separation-of-two-peaks-in-random-square-grid-labelings",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"Exhaustive uniform-permutation enumeration gives 8 two-peak labelings out of 24 on the 2-by-2 grid, 424 out of 720 on the 2-by-3 grid, and 143808 out of 362880 on the 3-by-3 grid. On the 3-by-3 grid the graph-distance counts are 63552 at ...\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Uniformly label an n-by-n square grid and condition on exactly two local maxima. Does their graph distance divided ...\""
++    },
++    {
++      "from_key": "continuous-cost-field-infinite-mean-supremum",
++      "to_existing_logical": "math:probability.core:open-problem-p0229-integrable-supremum-of-routes-to-a-bounded-region",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"There exists a random continuous finite nonnegative field L on the closed unit disk with L(0)=0, L(z)>=|z| and E L(z)<=3|z|, whose supremum has infinite expectation. Let P(J=j)=2^(-j), use disjoint continuous bumps of radius 2^(-j-5) ...\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Under what additional assumptions does the expected supremum of route lengths from0 to an infinite independent ...\""
++    },
++    {
++      "from_key": "spatial-lp-increments-give-integrable-sample-supremum",
++      "to_existing_logical": "math:probability.core:open-problem-p0229-integrable-supremum-of-routes-to-a-bounded-region",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"Let L be jointly measurable on a bounded square containing the unit disk, with E|L(z_0)| finite at one anchor and E|L(x)-L(y)|^p<=C|x-y|^p for all x,y and some p>2. Then dyadic chaining gives a continuous modification with finite expected ...\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Under what additional assumptions does the expected supremum of route lengths from0 to an infinite independent ...\""
++    },
++    {
++      "from_key": "bounded-common-gaussian-mode-shifts-extrema",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0008-universality-of-level-sets-and-extremal-process-for-log-correlated-gau",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"Let Y_N(x)=X_N(x)+Z for a finite Gaussian field X_N and independent Z~N(0,sigma^2), sigma>0, shared by every site. All covariance entries change by sigma^2. For any deterministic centring m_N, max Y_N-m_N=max X_N-m_N+Z, and if the latter X ...\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For Gaussian fields on D_N whose covariance scales to the continuum Green function and has a shift-invariant local limit, prove the analogues of ...\""
++    },
++    {
++      "from_key": "susceptibility-value-comparison-does-not-control-log-derivative",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0067-notions-of-criticality-for-percolation-on-high-dimensional-tori",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"For V tending to infinity there are positive increasing C1 functions f_V and g_V on [0,1] with f_V<=g_V<=exp(0.1) f_V, for which the log derivative of f_V is maximised at 1/2 but that of g_V is outside every fixed K V^(-1/3) window around ...\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For percolation on the torus of side n in dimension d > 6, show that the maximiser p_c^{(1)} of the derivative of log of the torus susceptibility ...\""
++    },
++    {
++      "from_key": "recurrent-z2-nonnegative-superharmonic-is-constant",
++      "to_existing_logical": "math:probability.core:open-problem-c0098-decidability-of-infinite-toppling-for-i-i-d-sandpiles-on-z-2",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"If u:Z^2->[0,infinity) is finite at every site and sum_{y~x}u(y)-4u(x)<=0 for every x, then u is constant. For nearest-neighbour simple random walk started at x, stopping on hitting y or at time n gives u(x)>=u(y) P_x(T_y<=n). Recurrence ...\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For i.i.d. initial heights s(x) in {0,1,2,3,4} on Z^2 (with a given law), the event that every site topples infinitely often has probability 0 or ...\""
++    },
++    {
++      "from_key": "sandpile-three-four-face-is-decidable",
++      "to_existing_logical": "math:probability.core:open-problem-c0098-decidability-of-infinite-toppling-for-i-i-d-sandpiles-on-z-2",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"Under a fair legal Z2 sandpile schedule with toppling threshold 4, every configuration at least 3 everywhere with a height-4 seed has every site topple infinitely often. A finite nonnegative odometer would be superharmonic everywhere and ...\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For i.i.d. initial heights s(x) in {0,1,2,3,4} on Z^2 (with a given law), the event that every site topples infinitely often has probability 0 or ...\""
++    },
++    {
++      "from_key": "finite-cactus-fk-monotone-p-coupling",
++      "to_key": "fk-positive-q-monotone-coupling-question",
++      "kind": "cites",
++      "rationale": "The source question is the positive-q FK coupling target. From: \"For every finite simple cactus graph with free boundary conditions and q>0, the FK(p,q) laws have a simultaneous inclusion-monotone coupling for all p in [0,1]. The component count is |V|-|A| plus the number of completely open ...\" To: \"For a finite graph with free boundary, FK(p,q) assigns an edge set A probability proportional to p^|A|(1-p)^(|E|-|A|) q^k(A), where k(A) includes isolated components. For 0<q<1, the cited Question 13.2 asks for an inclusion-monotone joint ...\""
++    },
++    {
++      "from_key": "fk-small-graph-exact-increasing-event-derivative-controls",
++      "to_key": "fk-positive-q-monotone-coupling-question",
++      "kind": "cites",
++      "rationale": "The source question is the positive-q FK coupling target. From: \"The w331 finite run tested q in {1/10,1/4,1/2,3/4,9/10,1} and p in {1/10,1/4,1/2,3/4,9/10} on a path, a triangle, two triangles sharing one vertex, K_(2,3) and K4. At all 150 graph/parameter pairs, an exact integer minimum-cut calculation ...\" To: \"For a finite graph with free boundary, FK(p,q) assigns an edge set A probability proportional to p^|A|(1-p)^(|E|-|A|) q^k(A), where k(A) includes isolated components. For 0<q<1, the cited Question 13.2 asks for an inclusion-monotone joint ...\""
++    },
++    {
++      "from_key": "sierpinski-carpet-boundary-remainder-has-a-segment",
++      "to_existing_logical": "math:probability.core:open-problem-p0021-interior-remainder-of-planar-brownian-trace",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"Let K be the standard Sierpinski carpet in the unit square. Remove the boundaries of all connected components of R^2 minus K. The remaining set contains {(1/4,y):0<y<1}, hence is not totally disconnected, although K is compact, connected ...\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Delete from a planar Brownian trace on [0,1] all boundaries of connected components of its complement. Is the ...\""
++    },
++    {
++      "from_key": "brownian-remainder-needs-spatial-geometry",
++      "to_existing_logical": "math:probability.core:open-problem-p0021-interior-remainder-of-planar-brownian-trace",
++      "kind": "cites",
++      "rationale": "Relates this result to the exact assigned problem/candidate; it does not certify a general solution. From: \"Neither zero area and connectedness of the original compact set nor total disconnectedness of a surviving time set alone establishes total disconnectedness of a planar Brownian spatial remainder. The Sierpinski-carpet boundary deletion ...\" To: \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Delete from a planar Brownian trace on [0,1] all boundaries of connected components of its complement. Is the ...\""
++    },
++    {
++      "from_key": "and-or-same-colour-flow-stationarity",
++      "to_key": "and-or-tree-disagreement-contracts",
++      "kind": "depends_on",
++      "rationale": "The measurable binary colour follows from the disagreement contraction. From: \"For GW offspring P(D=2)=3/5, P(D=3)=2/5, use the measurable limiting AND/OR colour obtained from Bernoulli(1/2) boundary spins. Choosing uniformly among children with the root colour preserves the unmarked GW law. The colour is invariant ...\" To: \"For a Galton-Watson tree with P(D=2)=3/5 and P(D=3)=2/5, apply AND at degree 2 and OR at degree 3 to independent Bernoulli(1/2) spins at depth n. If q_n is the conditional root-one probability given the truncated unmarked tree, then d_n=2 ...\""
++    },
++    {
++      "from_key": "max-lipschitz-r-moment-endogeny",
++      "to_key": "strict-discount-zero-mark-frechet-nonendogeny",
++      "kind": "analogous_to",
++      "rationale": "The Frechet example shows why the sufficient finite-moment criterion does not apply. From: \"For an invariant deterministic b-ary recursive tree process X=g(xi;X_1,...,X_b), assume the usual independent child root laws and innovation independence, and |g(xi;x)-g(xi;y)|<=c max_i|x_i-y_i| with 0<c<1. If E|X|^r is finite for some r>0 ...\" To: \"The deterministic binary recursion X=(1/2) max(X_1,X_2) has, for every a>0, the nonminimal fixed distribution P(X<=x)=exp(-a/x) for x>0 and zero for x<=0. Its invariant recursive tree process is nonendogenous because all innovations are ...\""
++    },
++    {
++      "from_key": "ise-hara-slade-three-point-source-scope",
++      "to_key": "normalised-moment-measures-determine-random-measure-limit",
++      "kind": "cites",
++      "rationale": "The general conditional reduction requires all orders. From: \"The cached Heydenreich-van der Hofstad survey, section 15.1, identifies the conditioned three-point calculation of Hara and Slade and describes higher-point convergence as missing in that source. The reference is T. Hara and G. Slade, The ...\" To: \"Let S be Polish and mu_n, mu be random Borel probability measures on S. If E[mu_n^{tensor r}] converges weakly to E[mu^{tensor r}] on S^r for every integer r>=1, then mu_n converges in law to mu in P(S) with the weak topology. First-moment ...\""
++    },
++    {
++      "from_key": "ise-hara-slade-three-point-source-scope",
++      "to_key": "three-moment-measures-do-not-determine-law",
++      "kind": "cites",
++      "rationale": "Low-order moment data cannot replace the missing all-order hypothesis. From: \"The cached Heydenreich-van der Hofstad survey, section 15.1, identifies the conditioned three-point calculation of Hara and Slade and describes higher-point convergence as missing in that source. The reference is T. Hara and G. Slade, The ...\" To: \"On S={0,1}, let mu_P=(1-P) delta_0+P delta_1. Compare P uniform on [0,1] with P taking 0,1/2,1 with probabilities 1/6,2/3,1/6. Their random probability measures have identical first, second and third moment measures, but the fourth moments ...\""
++    },
++    {
++      "from_key": "two-peak-small-grid-exact-counts",
++      "to_key": "attainable-peak-sets-are-independent",
++      "kind": "cites",
++      "rationale": "The exact counts check nonadjacency and attainable supports. From: \"Exhaustive uniform-permutation enumeration gives 8 two-peak labelings out of 24 on the 2-by-2 grid, 424 out of 720 on the 2-by-3 grid, and 143808 out of 362880 on the 3-by-3 grid. On the 3-by-3 grid the graph-distance counts are 63552 at ...\" To: \"For a finite nonempty connected simple graph, a vertex set S is exactly the set of strict local maxima of some bijective vertex labeling if and only if S is nonempty and independent. Assign the largest labels to S and assign the other ...\""
++    },
++    {
++      "from_key": "spatial-lp-increments-give-integrable-sample-supremum",
++      "to_key": "continuous-cost-field-infinite-mean-supremum",
++      "kind": "analogous_to",
++      "rationale": "The increment hypothesis is stronger than continuity and first-moment bounds. From: \"Let L be jointly measurable on a bounded square containing the unit disk, with E|L(z_0)| finite at one anchor and E|L(x)-L(y)|^p<=C|x-y|^p for all x,y and some p>2. Then dyadic chaining gives a continuous modification with finite expected ...\" To: \"There exists a random continuous finite nonnegative field L on the closed unit disk with L(0)=0, L(z)>=|z| and E L(z)<=3|z|, whose supremum has infinite expectation. Let P(J=j)=2^(-j), use disjoint continuous bumps of radius 2^(-j-5) ...\""
++    },
++    {
++      "from_key": "sandpile-three-four-face-is-decidable",
++      "to_key": "recurrent-z2-nonnegative-superharmonic-is-constant",
++      "kind": "depends_on",
++      "rationale": "A stabilising odometer would violate the recurrence lemma. From: \"Under a fair legal Z2 sandpile schedule with toppling threshold 4, every configuration at least 3 everywhere with a height-4 seed has every site topple infinitely often. A finite nonnegative odometer would be superharmonic everywhere and ...\" To: \"If u:Z^2->[0,infinity) is finite at every site and sum_{y~x}u(y)-4u(x)<=0 for every x, then u is constant. For nearest-neighbour simple random walk started at x, stopping on hitting y or at time n gives u(x)>=u(y) P_x(T_y<=n). Recurrence ...\""
++    },
++    {
++      "from_key": "fk-small-graph-exact-increasing-event-derivative-controls",
++      "to_key": "finite-cactus-fk-monotone-p-coupling",
++      "kind": "cites",
++      "rationale": "Cactus cases give theorem controls for the numerical closure test. From: \"The w331 finite run tested q in {1/10,1/4,1/2,3/4,9/10,1} and p in {1/10,1/4,1/2,3/4,9/10} on a path, a triangle, two triangles sharing one vertex, K_(2,3) and K4. At all 150 graph/parameter pairs, an exact integer minimum-cut calculation ...\" To: \"For every finite simple cactus graph with free boundary conditions and q>0, the FK(p,q) laws have a simultaneous inclusion-monotone coupling for all p in [0,1]. The component count is |V|-|A| plus the number of completely open ...\""
++    },
++    {
++      "from_key": "brownian-remainder-needs-spatial-geometry",
++      "to_key": "sierpinski-carpet-boundary-remainder-has-a-segment",
++      "kind": "depends_on",
++      "rationale": "The carpet refutes a generic area/connectivity route. From: \"Neither zero area and connectedness of the original compact set nor total disconnectedness of a surviving time set alone establishes total disconnectedness of a planar Brownian spatial remainder. The Sierpinski-carpet boundary deletion ...\" To: \"Let K be the standard Sierpinski carpet in the unit square. Remove the boundaries of all connected components of R^2 minus K. The remaining set contains {(1/4,y):0<y<1}, hence is not totally disconnected, although K is compact, connected ...\""
++    },
++    {
++      "from_key": "open-problem-campaign-w331-receipt-20261010",
++      "to_key": "and-or-tree-disagreement-contracts",
++      "kind": "cites",
++      "rationale": "Records this problem as part of the measured draft batch. From: \"The w331 local batch on 2026-10-10 prepared 20 mathematical draft nodes for ten named problems, with 10 proof/attempt reports and 10 saved measurement receipts. Exact controls include 362880 permutations on the 3-by-3 peak grid, 150 FK ...\" To: \"For a Galton-Watson tree with P(D=2)=3/5 and P(D=3)=2/5, apply AND at degree 2 and OR at degree 3 to independent Bernoulli(1/2) spins at depth n. If q_n is the conditional root-one probability given the truncated unmarked tree, then d_n=2 ...\""
++    },
++    {
++      "from_key": "open-problem-campaign-w331-receipt-20261010",
++      "to_key": "strict-discount-zero-mark-frechet-nonendogeny",
++      "kind": "cites",
++      "rationale": "Records this problem as part of the measured draft batch. From: \"The w331 local batch on 2026-10-10 prepared 20 mathematical draft nodes for ten named problems, with 10 proof/attempt reports and 10 saved measurement receipts. Exact controls include 362880 permutations on the 3-by-3 peak grid, 150 FK ...\" To: \"The deterministic binary recursion X=(1/2) max(X_1,X_2) has, for every a>0, the nonminimal fixed distribution P(X<=x)=exp(-a/x) for x>0 and zero for x<=0. Its invariant recursive tree process is nonendogenous because all innovations are ...\""
++    },
++    {
++      "from_key": "open-problem-campaign-w331-receipt-20261010",
++      "to_key": "normalised-moment-measures-determine-random-measure-limit",
++      "kind": "cites",
++      "rationale": "Records this problem as part of the measured draft batch. From: \"The w331 local batch on 2026-10-10 prepared 20 mathematical draft nodes for ten named problems, with 10 proof/attempt reports and 10 saved measurement receipts. Exact controls include 362880 permutations on the 3-by-3 peak grid, 150 FK ...\" To: \"Let S be Polish and mu_n, mu be random Borel probability measures on S. If E[mu_n^{tensor r}] converges weakly to E[mu^{tensor r}] on S^r for every integer r>=1, then mu_n converges in law to mu in P(S) with the weak topology. First-moment ...\""
++    },
++    {
++      "from_key": "open-problem-campaign-w331-receipt-20261010",
++      "to_key": "attainable-peak-sets-are-independent",
++      "kind": "cites",
++      "rationale": "Records this problem as part of the measured draft batch. From: \"The w331 local batch on 2026-10-10 prepared 20 mathematical draft nodes for ten named problems, with 10 proof/attempt reports and 10 saved measurement receipts. Exact controls include 362880 permutations on the 3-by-3 peak grid, 150 FK ...\" To: \"For a finite nonempty connected simple graph, a vertex set S is exactly the set of strict local maxima of some bijective vertex labeling if and only if S is nonempty and independent. Assign the largest labels to S and assign the other ...\""
++    },
++    {
++      "from_key": "open-problem-campaign-w331-receipt-20261010",
++      "to_key": "continuous-cost-field-infinite-mean-supremum",
++      "kind": "cites",
++      "rationale": "Records this problem as part of the measured draft batch. From: \"The w331 local batch on 2026-10-10 prepared 20 mathematical draft nodes for ten named problems, with 10 proof/attempt reports and 10 saved measurement receipts. Exact controls include 362880 permutations on the 3-by-3 peak grid, 150 FK ...\" To: \"There exists a random continuous finite nonnegative field L on the closed unit disk with L(0)=0, L(z)>=|z| and E L(z)<=3|z|, whose supremum has infinite expectation. Let P(J=j)=2^(-j), use disjoint continuous bumps of radius 2^(-j-5) ...\""
++    },
++    {
++      "from_key": "open-problem-campaign-w331-receipt-20261010",
++      "to_key": "bounded-common-gaussian-mode-shifts-extrema",
++      "kind": "cites",
++      "rationale": "Records this problem as part of the measured draft batch. From: \"The w331 local batch on 2026-10-10 prepared 20 mathematical draft nodes for ten named problems, with 10 proof/attempt reports and 10 saved measurement receipts. Exact controls include 362880 permutations on the 3-by-3 peak grid, 150 FK ...\" To: \"Let Y_N(x)=X_N(x)+Z for a finite Gaussian field X_N and independent Z~N(0,sigma^2), sigma>0, shared by every site. All covariance entries change by sigma^2. For any deterministic centring m_N, max Y_N-m_N=max X_N-m_N+Z, and if the latter X ...\""
++    },
++    {
++      "from_key": "open-problem-campaign-w331-receipt-20261010",
++      "to_key": "susceptibility-value-comparison-does-not-control-log-derivative",
++      "kind": "cites",
++      "rationale": "Records this problem as part of the measured draft batch. From: \"The w331 local batch on 2026-10-10 prepared 20 mathematical draft nodes for ten named problems, with 10 proof/attempt reports and 10 saved measurement receipts. Exact controls include 362880 permutations on the 3-by-3 peak grid, 150 FK ...\" To: \"For V tending to infinity there are positive increasing C1 functions f_V and g_V on [0,1] with f_V<=g_V<=exp(0.1) f_V, for which the log derivative of f_V is maximised at 1/2 but that of g_V is outside every fixed K V^(-1/3) window around ...\""
++    },
++    {
++      "from_key": "open-problem-campaign-w331-receipt-20261010",
++      "to_key": "recurrent-z2-nonnegative-superharmonic-is-constant",
++      "kind": "cites",
++      "rationale": "Records this problem as part of the measured draft batch. From: \"The w331 local batch on 2026-10-10 prepared 20 mathematical draft nodes for ten named problems, with 10 proof/attempt reports and 10 saved measurement receipts. Exact controls include 362880 permutations on the 3-by-3 peak grid, 150 FK ...\" To: \"If u:Z^2->[0,infinity) is finite at every site and sum_{y~x}u(y)-4u(x)<=0 for every x, then u is constant. For nearest-neighbour simple random walk started at x, stopping on hitting y or at time n gives u(x)>=u(y) P_x(T_y<=n). Recurrence ...\""
++    },
++    {
++      "from_key": "open-problem-campaign-w331-receipt-20261010",
++      "to_key": "fk-positive-q-monotone-coupling-question",
++      "kind": "cites",
++      "rationale": "Records this problem as part of the measured draft batch. From: \"The w331 local batch on 2026-10-10 prepared 20 mathematical draft nodes for ten named problems, with 10 proof/attempt reports and 10 saved measurement receipts. Exact controls include 362880 permutations on the 3-by-3 peak grid, 150 FK ...\" To: \"For a finite graph with free boundary, FK(p,q) assigns an edge set A probability proportional to p^|A|(1-p)^(|E|-|A|) q^k(A), where k(A) includes isolated components. For 0<q<1, the cited Question 13.2 asks for an inclusion-monotone joint ...\""
++    },
++    {
++      "from_key": "open-problem-campaign-w331-receipt-20261010",
++      "to_key": "sierpinski-carpet-boundary-remainder-has-a-segment",
++      "kind": "cites",
++      "rationale": "Records this problem as part of the measured draft batch. From: \"The w331 local batch on 2026-10-10 prepared 20 mathematical draft nodes for ten named problems, with 10 proof/attempt reports and 10 saved measurement receipts. Exact controls include 362880 permutations on the 3-by-3 peak grid, 150 FK ...\" To: \"Let K be the standard Sierpinski carpet in the unit square. Remove the boundaries of all connected components of R^2 minus K. The remaining set contains {(1/4,y):0<y<1}, hence is not totally disconnected, although K is compact, connected ...\""
++    },
++    {
++      "from_key": "fk-positive-q-monotone-coupling-question",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0091-negative-association-for-the-random-cluster-model-with-q-1",
++      "kind": "analogous_to",
++      "rationale": "The intake explicitly relates C0146 to C0091. Both concern positive q below one; no implication between negative association and monotone p coupling is claimed. From: \"For a finite graph with free boundary, FK(p,q) assigns an edge set A probability proportional to p^|A|(1-p)^(|E|-|A|) q^k(A), where k(A) includes isolated components. For 0<q<1, the cited Question 13.2 asks for an inclusion-monotone joint ...\" To: \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove any form of negative association (e.g. negative correlation of edge occupations, or the stronger negative association of increasing ...\""
++    },
++    {
++      "from_key": "sandpile-three-four-face-is-decidable",
++      "to_existing_logical": "math:probability.core:attempt-c0098-decidability-of-infinite-toppling-for-i-i-d-sandpiles-on-z-2",
++      "kind": "refutes",
++      "rationale": "Refutes only the blanket finite-perturbation stabilisation claim in the prior attempt; other density claims were not checked. From: \"Under a fair legal Z2 sandpile schedule with toppling threshold 4, every configuration at least 3 everywhere with a height-4 seed has every site topple infinitely often. A finite nonnegative odometer would be superharmonic everywhere and ...\" To: \"a natural decidable sufficient condition is: if s is a.s. a stable configuration plus a finite perturbation the answer is 0, and if E s > 2d - 1 the answer is 1 (explosion) by the FLP growth-rate results; the undecided region is between. ...\""
++    },
++    {
++      "from_key": "strict-discount-zero-mark-frechet-nonendogeny",
++      "to_existing_logical": "math:probability.core:attempt-p0355-endogeny-of-nonminimal-discounted-tree-fixed-points",
++      "kind": "analogous_to",
++      "rationale": "The strict-discount nondegenerate root is compared with the earlier unit-discount constant-root boundary example. From: \"The deterministic binary recursion X=(1/2) max(X_1,X_2) has, for every a>0, the nonminimal fixed distribution P(X<=x)=exp(-a/x) for x>0 and zero for x<=0. Its invariant recursive tree process is nonendogenous because all innovations are ...\" To: \"Result: Set N=2, eta=0, xi1=xi2=1 and Y=1 deterministically. Every ray sum is0, the homogeneous equation fixes Y, condition39 holds, and every iterate from aY has law delta_a. The all-a tree process is invariant and endogenous because its ...\""
++    },
++    {
++      "from_key": "continuous-cost-field-infinite-mean-supremum",
++      "to_existing_logical": "math:probability.core:attempt-p0229-integrable-supremum-of-routes-to-a-bounded-region",
++      "kind": "analogous_to",
++      "rationale": "The new continuous-field obstruction explains why the earlier uniform Lp increment assumption is substantive; it does not refute the conditional chaining lemma. From: \"There exists a random continuous finite nonnegative field L on the closed unit disk with L(0)=0, L(z)>=|z| and E L(z)<=3|z|, whose supremum has infinite expectation. Let P(J=j)=2^(-j), use disjoint continuous bumps of radius 2^(-j-5) ...\" To: \"Result: Let L(x)=len R(0,x). Suppose on a containing square E|L(x)-L(y)|^p<=C*|x-y|^p for a p>2, with a jointly measurable version and finite mean at one anchor. On the dyadic grid of mesh2^-k there are order2^(2k) parent-child or neighbor ...\""
++    }
++  ]
++}

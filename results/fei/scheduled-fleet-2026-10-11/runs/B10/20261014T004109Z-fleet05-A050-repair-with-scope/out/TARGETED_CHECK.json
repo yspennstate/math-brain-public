@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "cases": 3,
+  "assertions": 832,
+  "runtime_seconds": 0.08780720000504516,
+  "fixtures": [
+    {
+      "name": "three-bit-parity-adaptive",
+      "a": "3",
+      "R": "2",
+      "terminal_I": "1",
+      "terminal_active_I": "1",
+      "active_injection_vector": {
+        "2": "1"
+      },
+      "capacity_vector": {
+        "2": "-2",
+        "3": "3"
+      },
+      "root_information_vector": {},
+      "descendant_information_vector": {
+        "2": "1"
+      },
+      "output_information_vector": {},
+      "leaf_query_sets": [
+        3,
+        5
+      ],
+      "joint_atoms": 4,
+      "normalization_and_marginals": "EXACT"
+    },
+    {
+      "name": "shared-data-positive-terminal-entropy",
+      "a": "11/16",
+      "R": "11/16",
+      "terminal_I": "5/8",
+      "terminal_active_I": "0",
+      "active_injection_vector": {},
+      "capacity_vector": {},
+      "root_information_vector": {
+        "2": "6",
+        "5": "-5/32",
+        "3": "9/64",
+        "73": "-73/128",
+        "17": "-17/64"
+      },
+      "descendant_information_vector": {
+        "3": "-39/32",
+        "7": "-21/32",
+        "2": "19/4"
+      },
+      "output_information_vector": {
+        "5": "-5/32",
+        "2": "9/2",
+        "3": "-39/16"
+      },
+      "leaf_query_sets": [
+        1,
+        3,
+        7
+      ],
+      "joint_atoms": 46,
+      "normalization_and_marginals": "EXACT",
+      "retained_terminal_fourier_entropy_vector": {
+        "2": "1/4"
+      }
+    },
+    {
+      "name": "indexed-positive-injection-r2-k3",
+      "a": "9/2",
+      "R": "3/2",
+      "terminal_I": "4",
+      "terminal_active_I": "3",
+      "active_injection_vector": {
+        "2": "-2",
+        "5": "5/4"
+      },
+      "capacity_vector": {
+        "3": "9/2",
+        "2": "-3"
+      },
+      "root_information_vector": {
+        "2": "4",
+        "5": "-5/4"
+      },
+      "descendant_information_vector": {
+        "2": "2"
+      },
+      "output_information_vector": {},
+      "leaf_query_sets": [
+        73,
+        137,
+        265,
+        521
+      ],
+      "joint_atoms": 200,
+      "normalization_and_marginals": "EXACT",
+      "retained_terminal_fourier_entropy_vector": {
+        "2": "2"
+      }
+    }
+  ],
+  "arithmetic": "exact coherent joints, rational probabilities, integer-log vectors and certified bounds"
+}

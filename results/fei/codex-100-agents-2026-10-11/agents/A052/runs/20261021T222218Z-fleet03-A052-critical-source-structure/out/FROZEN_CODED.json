@@ -1,0 +1,17 @@
+{
+  "helper_version": "coded_rows_v1",
+  "family": "actual Boolean f_C(x,y)=(-1)^(x dot phi_C(y)), x in F2^4,y in F2^3; phi_C lexicographic bijection onto C",
+  "domain": "all 8-element subsets C of F2^4, original x coordinates satisfying full minimum-basis inequalities; y coordinates already fair",
+  "case_count": 12870,
+  "symmetry": "none; only exact necessary affine-min test filters",
+  "arithmetic": "integer support counts; integer Walsh and Fraction collision; all code maps lexicographic",
+  "memory_estimate_mb": 60,
+  "max_runtime_seconds": 55,
+  "targets": [
+    "Q<=2(Ci+Cj) on all x pairs",
+    "affine full span",
+    "exact Boolean inverse construction"
+  ],
+  "no_automatic_dimension_increase": true,
+  "reason_for_new_family": "target nonlinear full-span spectral supports after four-bit exhaustive test passed; deliberate fixed seven-bit addressing construction, no truth-table exhaustive search"
+}

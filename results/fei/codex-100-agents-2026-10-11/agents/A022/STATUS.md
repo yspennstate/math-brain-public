@@ -1,0 +1,2 @@
+STATE: A022 stage6 complete: any k>=4 seed I>=k/2, arbitrary dependent full-support edits with expected density<=1/8 have H<=7I_data+delta sum H(controllers); exact root mixture/refund; recursive rate7; 13403 checks PASS; review pending; FEI OPEN.
+NEXT: A087/A094 review; replace ambient k by a complete supplied seed reference and pay its signed conditional-data loss from one unused physical bank, retaining full controller L and booked-history debts.

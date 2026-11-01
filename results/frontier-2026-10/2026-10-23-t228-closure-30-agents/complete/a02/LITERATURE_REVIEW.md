@@ -1,0 +1,13 @@
+# Bounded literature check, 2026-10-23
+
+No novelty certification is claimed. Searches used primary papers and were bounded. The construction combines established components.
+
+- Bai, Chen, Wang, Xiong, Mei, [arXiv:2306.04637](https://arxiv.org/abs/2306.04637), PDF Definitions 1–3, p. 5: supplies the exact normalized ReLU attention and residual MLP architecture used here. It already gives algorithmic in-context constructions and pretraining guarantees. Browser references: turn22view0, turn25view1.
+- Kang, Lee, Cheng, [arXiv:2605.26713v1](https://arxiv.org/html/2605.26713v1), Section 3, equation (8), Theorem 3.1: already constructs GP posterior moment solvers with kernel-specific attention scores. The readout targets binned/truncated densities, and its stated comparison uses TV. This is directly relevant prior work; the present assembly specifically counts an ordinary ReLU raw-input kernel encoder and controls full Gaussian forward KL uniformly on bounded contexts. That distinction is a scope comparison, not a novelty conclusion. Browser references: turn20view0, turn25view0.
+- Fu, Chen, Jia, Sharan, [arXiv:2310.17086v3](https://arxiv.org/abs/2310.17086), revised 2024: transformers can implement Newton iterations for in-context linear regression. Thus accelerated iterative computation is not new at the conceptual level. Browser reference: turn22view1.
+- Cotter, Keshet, Srebro, [arXiv:1109.4603](https://arxiv.org/abs/1109.4603), Sections 2–4: explicitly studies Gaussian-kernel Taylor features and finite-dimensional feature projection. The RBF expansion and truncation in A02 are classical and should be credited accordingly. Browser reference: turn45view0.
+- Mahfoozi, Yang, Li, Zhang, [arXiv:2610.08578](https://arxiv.org/abs/2610.08578): random Fourier-feature GP attention provides a recent low-rank mean/variance module. Its abstract confirms direct relevance; no detailed novelty verdict is based on the abstract alone. Browser reference: turn20view2.
+
+Search queries included transformer Gaussian-process posterior predictive uniform KL generalization, transformer Chebyshev in-context Newton ridge regression, Gaussian-kernel Taylor expansion, and uniform RKHS projection. A further Nyström/kernel-quadrature paper was located through OpenReview, but the PDF returned a browser verification page and was not used substantively.
+
+The source dossier's literature status from 2026-10-16 omitted Kang–Lee–Cheng despite its 2026-05-26 preprint. That makes a fresh literature comparison essential before any paper or full-solution claim. A05 is examining that paper separately; its findings are not asserted here without its report.

@@ -1,0 +1,138 @@
+\section*{A compensated sparse-defect tower (A077)}
+
+All logarithms and entropies below are in bits.  This construction is a
+counterexample to a tax-free \emph{biased local helper}; it is not a
+counterexample to the uniform Fourier Entropy--Influence conjecture.
+
+\paragraph{The biased core.}
+Let $X,Y$ be independent Bernoulli variables of common bias
+$\epsilon=2^{-k}$, $k\ge3$, and let
+\[
+ g_k(X,Y)=(-1)^{XY}.
+\]
+In the product-biased orthonormal Fourier basis the squared coefficients,
+indexed by $(S_X,S_Y)\in\{0,1\}^2$, are
+\[
+ m_0=(1-2\epsilon^2)^2,
+ \quad m_X=m_Y=4\epsilon^3(1-\epsilon),
+ \quad m_{XY}=4\epsilon^2(1-\epsilon)^2.
+\]
+Put
+\[
+ r=m_Y+m_{XY}=4\epsilon^2(1-\epsilon),\qquad
+ s=4\epsilon(1-\epsilon).
+\]
+For the physical restriction of the $X$ coordinate, the B09 quantities are
+\[
+ J_k=h_2(r)-\epsilon h_2(s),
+\]
+and
+\[
+ M_k=H(S_X\mid S_Y)
+ =(1-r)h_2\!\left(\frac{r\epsilon}{1-r}\right)+r h_2(\epsilon).
+\]
+The complete biased spectral influence of the two-coordinate gate is
+$I_k^{\rm core}=2r$.
+
+For $0<u<1$ we use
+\[
+ u\log_2(1/u)\le h_2(u)
+ \le u\log_2(1/u)+u\log_2 e.
+\]
+Because $r=\epsilon s$, these bounds give the cancellation
+\[
+ J_k\ge r(k-\log_2e).
+\]
+Writing $\alpha=r\epsilon/(1-r)$ and applying the upper bound to the two
+conditional fibers gives
+\[
+ M_k\le r\epsilon(4k+2\log_2e).
+\]
+Indeed
+$\log_2((1-r)/(r\epsilon))\le\log_2(1/(r\epsilon))\le3k$
+for $k\ge3$.  Consequently
+\[
+ \frac{J_k}{I_k^{\rm core}+M_k}
+ \ge
+ \frac{k-\log_2e}{2+2^{-k}(4k+2\log_2e)}\longrightarrow\infty.
+\]
+This is the exact local-surcharge obstruction.  It lives under a biased
+physical law and therefore is not an FEI counterfamily.
+
+\paragraph{Uniform Boolean realization and the missing cost.}
+Let $U=(U_1,\ldots,U_k)$ and $V=(V_1,\ldots,V_k)$ be independent fair
+bits, set $A_k(U)=\prod_i U_i$ in $\{0,1\}$ notation, and define
+\[
+ f_k(U,V)=(-1)^{A_k(U)A_k(V)}.
+\]
+Thus $f_k$ is an actual Boolean function on the uniform $2k$-cube and is
+$-1$ at exactly one input.  The normalized Fourier law of the centered AND
+bit is uniform on the $2^k-1$ nonempty subsets.  Its label entropy and mean
+degree are
+\[
+ L_k=\log_2(2^k-1),\qquad
+ D_k=\frac{k2^{k-1}}{2^k-1}.
+\]
+Expanding the two biased coordinates into their fair-bit encoders proves
+the exact ledger
+\[
+ J_k^{\rm code}=J_k,\qquad
+ M_k^{\rm code}=M_k+rL_k,\qquad
+ I(f_k)=2rD_k=k2^{2-2k}.
+\]
+The equality for $J$ holds because the conditional encoder-label entropy
+cancels: $r=\epsilon s$.  The new term $rL_k$ in $M$ and the physical
+influence $2rD_k$ are both of order $rk$.  In particular
+\[
+ \frac{J_k}{M_k^{\rm code}}\to1,
+ \qquad \frac{J_k}{rD_k}\to2,
+ \qquad \frac{J_k}{I(f_k)+M_k^{\rm code}}\to\frac12.
+\]
+(Here $I(f_k)=2rD_k$ is the total influence; using only the $U$ block gives
+the displayed limit $2$.)
+
+For completeness, if $\delta=2^{-2k}$ and
+$W_k=4\delta(1-\delta)$, the exact uniform FEI ledger is
+\[
+ H(f_k)=h_2(W_k)+W_k\log_2(2^{2k}-1),\qquad
+ I(f_k)=4k\delta.
+\]
+Hence $H(f_k)/I(f_k)\to4$, agreeing with the known Shannon point-defect
+control rather than contradicting FEI.
+
+\paragraph{A genuine multiscale tower.}
+For $K\ge3$, take $N_k=2^{2k}$ disjoint copies of $f_k$ at every scale
+$3\le k\le K$ and tensor them:
+\[
+ F_K=\prod_{k=3}^K\prod_{j=1}^{N_k}f_{k,j}.
+\]
+Every physical coordinate is distinct, so there is no overlap or hidden
+cross-scale interference; Fourier entropy and influence are exactly
+additive.  Since $N_kr=4(1-2^{-k})$, the collapsed biased-core ledger has
+\[
+ \sum N_kJ_k=\Theta(K^2),\quad
+ \sum N_kI_k^{\rm core}=\Theta(K),\quad
+ \sum N_kM_k=O(1),
+\]
+and therefore its tax-free local-payment ratio diverges linearly.
+
+The uniform realization restores the omitted costs.  At scale $k$ its
+total physical influence is exactly
+\[
+ N_k I(f_k)=4k,
+\]
+and its label charge is
+$N_krL_k=4(1-2^{-k})L_k=4k+O(k2^{-k})$.
+Moreover
+\[
+ N_kH(f_k)=16k+O(1).
+\]
+Thus, with $S_K=\sum_{k=3}^Kk$,
+\[
+ I(F_K)=4S_K,\qquad
+ H(F_K)=16S_K+O(K),\qquad
+ \frac{H(F_K)}{I(F_K)}\to4.
+\]
+The tower therefore certifies repeated use of an omitted label/influence
+budget by the biased helper while supplying a complete compensation ledger
+for the actual uniform Boolean family.

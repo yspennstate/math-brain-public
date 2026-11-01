@@ -1,0 +1,196 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w513",
+  "bundle_slug": "p0162-restriction-budget-small-influence-witness-001",
+  "entries": [
+    {
+      "key": "restriction-def",
+      "namespace": "probability.boolean-fourier",
+      "logical_name": "fourier-restriction-entropy-and-conditional-term",
+      "kind": "definition",
+      "title": "Fourier restriction entropy and its conditional term",
+      "statement": "For a Boolean f on a finite uniform sign cube, split on coordinate i. With a_S=hat(f+)(S), b_S=hat(f-)(S), P_S=a_S^2, Q_S=b_S^2 and R_S=(P_S+Q_S)/2, set q_S=(a_S-b_S)^2/[2(a_S^2+b_S^2)] when R_S>0. Zero-weight terms are zero. Entropies use base 2. Define Delta_i=H(f)-[H(f+)+H(f-)]/2, B_i=sum_S R_S h(q_S), where h is binary entropy, and JS(P,Q)=H(R)-[H(P)+H(Q)]/2. All three spectra P,Q,R are normalized probability laws; Inf_i(f)=sum_S R_S q_S.",
+      "proof_text": null,
+      "assumptions": [
+        "Uniform product measure",
+        "Boolean codomain {-1,1}",
+        "Squared Walsh coefficients",
+        "Base-2 entropy; continuous zero conventions"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-probability-campaign-w513-p0162-20261010",
+        "url": null,
+        "revision": "worker-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT: independent mathematical audit pending; not an independently checked theorem",
+      "author_status": "concept",
+      "novelty_claim": false
+    },
+    {
+      "key": "restriction-identity",
+      "namespace": "probability.boolean-fourier",
+      "logical_name": "fourier-restriction-jensen-shannon-identity",
+      "kind": "lemma",
+      "title": "Exact restriction identity and a bounded Jensen-Shannon term",
+      "statement": "For a Boolean f on a finite uniform sign cube, split on i. Let a_S=hat(f+)(S), b_S=hat(f-)(S), P=a^2, Q=b^2, R=(P+Q)/2, and q_S=(a_S-b_S)^2/[2(a_S^2+b_S^2)] at positive R_S. Zero-weight terms vanish. Let h be binary entropy in bits, B_i=sum R_S h(q_S), Delta_i=H(f)-[H(f+)+H(f-)]/2 and JS(P,Q)=H(R)-[H(P)+H(Q)]/2. Then Delta_i=B_i+JS(P,Q), with 0<=JS(P,Q)<=(2/ln 2)Inf_i(f), where Inf_i=sum(a-b)^2/4. Consequently B_i<=Delta_i<=h(Inf_i(f))+(2/ln 2)Inf_i(f). Delta_i is not identically B_i.",
+      "proof_text": "Parent coefficient pairs are (a+b)/2 and (a-b)/2; their squared marginal is R=(a^2+b^2)/2. Finite entropy chain rule gives H(f)=H(R)+sum R h(q), hence Delta=B+JS. The one-index JS contribution in nats for x,y>=0 is at most (sqrt(x)-sqrt(y))^2/2: putting u=|x-y|/(x+y), differentiate the equivalent inequality (1+u)ln(1+u)+(1-u)ln(1-u)<=2(1-sqrt(1-u^2)); it follows from atanh(u)<=u/sqrt(1-u^2), obtained by integrating (1-v^2)^-1<=(1-v^2)^-3/2. Endpoints follow by continuity. Summing, (|a|-|b|)^2<=(a-b)^2 gives JS<=(1/(2ln2))sum(a-b)^2=(2/ln2)Inf_i. JS>=0 by entropy concavity. Jensen concavity of h gives B<=h(sum Rq)=h(Inf_i).",
+      "assumptions": [
+        "All normalization and definitions of fourier-restriction-entropy-and-conditional-term"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-probability-campaign-w513-p0162-20261010",
+        "url": null,
+        "revision": "worker-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT: independent mathematical audit pending; not an independently checked theorem",
+      "author_status": "worker proof",
+      "novelty_claim": false
+    },
+    {
+      "key": "bad-route",
+      "namespace": "probability.boolean-fourier",
+      "logical_name": "refuted-arbitrary-coordinate-fei-restriction-route",
+      "kind": "concept",
+      "title": "Refuted route: charge restriction entropy at every coordinate",
+      "statement": "The proposed rule that there is a universal K with Delta_i(f)<=K Inf_i(f) for every coordinate of every uniform Boolean f is false. It remains false when all individual influences are bounded by an arbitrarily small fixed tau. This refutation concerns an arbitrary coordinate, not the existence of a good coordinate or the FEI conjecture itself. The family in small-influence-fei-four-bad-coordinate-witness gives Delta_i/Inf_i arbitrarily large while H(f)<=4I(f).",
+      "proof_text": null,
+      "assumptions": [
+        "Delta_i is the actual entropy increment, including its Jensen-Shannon term",
+        "The quantifier every coordinate is essential to the refuted route"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-probability-campaign-w513-p0162-20261010",
+        "url": null,
+        "revision": "worker-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT: independent mathematical audit pending; not an independently checked theorem",
+      "author_status": "concept",
+      "novelty_claim": false
+    },
+    {
+      "key": "small-family",
+      "namespace": "probability.boolean-fourier",
+      "logical_name": "small-influence-fei-four-bad-coordinate-witness",
+      "kind": "lemma",
+      "title": "Small influences and a bad restriction coordinate coexist with global FEI constant 4",
+      "statement": "Let m>=2 be even, N=2^m, and d>=1. On binary m-bit inputs put g(x)=(-1)^(sum_{j=1}^{m/2}x_(2j-1)x_(2j)), h=g-2 delta_0, and let F_m restrict on a new sign selector to g or h. Let G_d be iterated majority of three on 3^d disjoint uniform bits, starting from a dictator at d=0. Substitute disjoint balanced G_d copies for all m+1 inputs of F_m to obtain f_(m,d). Every individual influence is at most alpha=2^-d. A selector-block leaf v has influence alpha/N and Delta_v(f_(m,d))/Inf_v(f_(m,d))>=alpha*m. Nevertheless H(f_(m,d))<=[4-(2/3)^d]I(f_(m,d))<=4I(f_(m,d)). Thus for every tau>0 and M>0, some such Boolean f has all influences <=tau, one restriction ratio >=M, and a global FEI bound with constant 4.",
+      "proof_text": "The two-bit quadratic has four Walsh magnitudes 1/2; disjoint products give ghat(S)=sigma_S/sqrt(N). Decompose F_m=A+zB with Ahat=sigma/sqrt(N)-1/N, Bhat=1/N. Each old coordinate has influence 1/2+1/N: the point flip adds an edge at zero to h, giving child influence 1/2+2/N; the selector has influence 1/N. Hence I(F_m)=m/2+(m+1)/N, and H(F_m)<=m+1<=3I(F_m). Balanced disjoint block composition gives H(F(G,...,G))=H(F)+I(F)H(G) and I(F(G,...,G))=I(F)I(G): a physical spectral subset uniquely identifies its active outer blocks, with independent gadget spectra conditional on that set. For G_d, its base four coefficients have squared mass 1/4, yielding H(G_d)=4(beta-1), I(G_d)=beta=(3/2)^d and leaf influence alpha=2^-d. Thus H(f)<=I(F_m)(4beta-1)=[4-1/beta]I(f). To bound the bad leaf increment, E[G_d+]=alpha and E[G_d-]=-alpha by monotonicity and balance. In the empty remaining-selector Fourier sector the restriction coefficients are c_U(Ahat+alpha Bhat) and c_U(Ahat-alpha Bhat), where for each active-block set S, sum_U c_U^2=1 by balance and Parseval. Here q=alpha^2 Bhat^2/(Ahat^2+alpha^2 Bhat^2)<=4alpha^2/N<=1/N, since Ahat^2>=1/(4N). This sector contributes at least alpha^2 m/N to B_v. The exact restriction identity gives Delta_v>=B_v, while Inf_v=alpha/N, proving the ratio. Choose d with alpha<=tau and even m>=M/alpha. All independence uses are on explicitly disjoint product blocks.",
+      "assumptions": [
+        "m even and at least 2",
+        "d at least 1",
+        "Disjoint balanced gadget blocks",
+        "Uniform product measure and Boolean output",
+        "Binary and sign cube coordinates identified by x_sign=(-1)^x_binary"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-probability-campaign-w513-p0162-20261010",
+        "url": null,
+        "revision": "worker-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT: independent mathematical audit pending; not an independently checked theorem",
+      "author_status": "worker proof",
+      "novelty_claim": false
+    },
+    {
+      "key": "tree-budget",
+      "namespace": "probability.boolean-fourier",
+      "logical_name": "fourier-entropy-complete-restriction-tree-budget",
+      "kind": "lemma",
+      "title": "Exact remaining conditional-entropy budget on a complete restriction tree",
+      "statement": "For any finite adaptive uniform Boolean restriction tree whose leaves are constant and whose internal node v fixes one unfixed coordinate i(v), write w_v=2^-depth(v). At node v let a,b be the Walsh coefficients of its two restrictions, R=(a^2+b^2)/2, q=(a-b)^2/[2(a^2+b^2)] where R>0, and B_v=sum R h(q), with binary entropy h in bits and zero-weight terms omitted. H(f) is Shannon entropy of the squared Walsh spectrum and I(f)=sum_S |S|hat(f)(S)^2. Then sum_v w_v B_v<=H(f)<=sum_v w_v B_v+(2/ln2)I(f). A dimension-free bound on that aggregate budget would prove FEI; FEI implies the budget for every such complete tree. Constants differ by at most 2/ln2.",
+      "proof_text": "The exact node identities H(f_v)=average child H+Delta_v and I(f_v)=average child I+Inf_i(f_v) telescope with weights 2^-depth(v). Constant leaves have zero entropy and influence, so H(f)=sum w Delta_v and I(f)=sum w Inf_i. Apply Delta=B+JS and 0<=JS<=(2/ln2)Inf_i at each node. Uniform product measure supplies these weights; no dependent conditional estimates are multiplied.",
+      "assumptions": [
+        "Every leaf is a constant Boolean function",
+        "Each split fixes an unfixed coordinate",
+        "Uniform product measure",
+        "Restriction conditional term as defined above"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-probability-campaign-w513-p0162-20261010",
+        "url": null,
+        "revision": "worker-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT: independent mathematical audit pending; not an independently checked theorem",
+      "author_status": "worker proof",
+      "novelty_claim": false
+    },
+    {
+      "key": "remaining-gap",
+      "namespace": "probability.boolean-fourier",
+      "logical_name": "fei-aggregate-conditional-entropy-bridge-open",
+      "kind": "concept",
+      "title": "Missing bridge: a dimension-free aggregate conditional-entropy estimate",
+      "statement": "Unproved bridge for P0162: find an absolute K such that every uniform Boolean f has a complete restriction tree with sum_v 2^-depth(v) B_v<=K I(f). The exact tree-budget lemma makes this equivalent to FEI up to constants. A per-node good-coordinate bound is sufficient but has not been proved here. An arbitrary-coordinate bound is false, even for all-small-influence functions satisfying H<=4I. Current global openness is UNKNOWN after bounded checks; this draft makes no novelty claim.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite uniform Boolean cubes",
+        "Dimension-free K required",
+        "Do not replace exists a suitable coordinate by every coordinate"
+      ],
+      "domain": "analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-probability-campaign-w513-p0162-20261010",
+        "url": null,
+        "revision": "worker-proof-2026-10-10-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "DRAFT: independent mathematical audit pending; not an independently checked theorem",
+      "author_status": "concept",
+      "novelty_claim": false
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "restriction-identity",
+      "to_key": "restriction-def",
+      "kind": "depends_on",
+      "rationale": "The identity \"Delta_i=B_i+JS(P,Q)\" uses the definition \"B_i=sum_S R_S h(q_S)\" with normalized restriction spectra."
+    },
+    {
+      "from_key": "small-family",
+      "to_key": "restriction-identity",
+      "kind": "depends_on",
+      "rationale": "The family's \"Delta_v/Inf_v>=alpha*m\" uses the exact identity's \"B_i<=Delta_i\" after a lower bound on the empty-selector sector."
+    },
+    {
+      "from_key": "small-family",
+      "to_key": "bad-route",
+      "kind": "refutes",
+      "rationale": "The family has \"one restriction ratio >=M\" for every M while \"all influences <=tau\"; this refutes a fixed K at \"every coordinate\" in the proposed route."
+    },
+    {
+      "from_key": "tree-budget",
+      "to_key": "restriction-identity",
+      "kind": "depends_on",
+      "rationale": "The tree bounds \"sum_v w_v B_v<=H(f)<=sum_v w_v B_v+(2/ln2)I(f)\" telescope \"Delta_i=B_i+JS(P,Q)\" and its JS bound."
+    },
+    {
+      "from_key": "remaining-gap",
+      "to_key": "tree-budget",
+      "kind": "depends_on",
+      "rationale": "The missing estimate \"sum_v 2^-depth(v) B_v<=K I(f)\" would combine with the tree lemma to give the full dimension-free FEI inequality."
+    },
+    {
+      "from_key": "small-family",
+      "to_existing_logical": "math:probability.core:open-problem-p0162-fourier-entropy-versus-total-influence",
+      "kind": "specializes",
+      "rationale": "The existing target asks to \"Bound the Shannon entropy of the squared Fourier coefficients of every Boolean function by a universal constant times its total influence\"; this lemma proves \"H(f)<=4I(f)\" only for the explicitly defined f_(m,d) family."
+    }
+  ]
+}

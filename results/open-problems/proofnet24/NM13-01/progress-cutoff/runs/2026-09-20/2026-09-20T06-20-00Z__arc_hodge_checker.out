@@ -1,0 +1,31 @@
+EXECUTION: exact-rational/symbolic sanity checker
+STATUS: PASS
+
+K4: d=3, q=2, |E|=6, |arcs|=12
+  base spectrum: -1/3^3, 1^1
+  line spectrum: -1/2^2, 0^3, 1^1
+  arc spectrum:  -1/2^5, 0^3, 1^1, 1/2^3
+  exact projection/lumping: PASS
+  exact odd Hodge formula: PASS
+  exact cycle eigenvalue 1/q: PASS
+  cycle projection l1: 3
+K3,3: d=3, q=2, |E|=9, |arcs|=18
+  base spectrum: -1^1, 0^4, 1^1
+  line spectrum: -1/2^4, 1^1, 1/4^4
+  arc spectrum:  -1^1, -1/2^4, -1/4^4, 1^1, 1/2^4, 1/4^4
+  exact projection/lumping: PASS
+  exact odd Hodge formula: PASS
+  exact cycle eigenvalue 1/q: PASS
+  cycle projection l1: 32/9
+degree-6 explicit family:
+  output degree = 10
+  center coefficient = 5/2 for log_5 n
+  odd decay rate = 4/5
+  odd exponent at center = 2 * log_5 n
+  spectral-gap lower bound = 3/5 - sqrt(5)/5
+  LRE branching separation: 9 > 5
+Q3 stabilizer quotient:
+  orbit sizes = [1, 3, 3, 1]
+  neighbor counts = [[0, 3, 0, 0], [1, 0, 2, 0], [0, 2, 0, 1], [0, 0, 3, 0]]
+  integer transition alphabet/local-ratio identities: PASS
+ALL_EXACT_CHECKS_PASS

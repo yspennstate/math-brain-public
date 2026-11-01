@@ -1,0 +1,25 @@
+QFORM B13 auto13 deterministic arithmetic check
+
+C_sq = 8 / 3^(3/4) = 3.509530701206647
+C_L3 = 6.787
+64^(1/12) = sqrt(2) = 1.4142135623730951
+C_anchored = C_sq * C_L3^(3/4) * 64^(1/12)
+           = 20.869999116381603 < 20.8701
+C_local = C_sq * C_L3^(3/4)
+        = 14.757317898550687 < 14.758
+C3_partner = 9*sqrt(3e) = 25.7010210753...
+(C_anchored/C3_partner)^12 = 0.08219864057745... < 0.083
+
+Exponent check:
+Z >= Omega/(64 a^2).
+L3: ||h||_3 <= 6.787 Z^(-1/9).
+Square: ||p_Q||inf <= C_sq |a|^(-1/2)||h||_3^(3/4).
+Thus Omega exponent = -(1/9)*(3/4) = -1/12.
+The a exponent is -1/2 + (2/9)*(3/4) = -1/3.
+Scaling: a -> s a, Omega -> s^8 Omega, hence |a|^-1/3 Omega^-1/12 -> |s|^-1.
+
+Random-cut check: each ordered disjoint triple pair (U,V) has exactly six distinct coordinates; P[U red,V blue]=2^-6=1/64.
+
+Rank-one Schur cross-block check: S[I,J]=M-uv^T/a. Since rank(uv^T)<=1, s_{k+1}(M)<=s_k(S[I,J]) for k=1,2,3. Hence e3(S^TS)>=s1(S)^2 s2(S)^2 s3(S)^2 >= [s2(M)s3(M)s4(M)]^2.
+
+QFORM_B13_AUTO13_CHECK_PASS

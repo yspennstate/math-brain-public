@@ -1,0 +1,129 @@
+% Independent B19/A094 reconstruction of B05_ODD_SURGERY_PAYMENT_v1.
+\section*{Independent audit of the odd-surgery retained-credit theorem}
+
+Let $g:\{0,1\}^k\to\{-1,1\}$ be bent, let $h$ be obtained by
+flipping $m$ distinct values of $g$, and let a fresh $d$-bit address choose
+$h$ at one word and $g$ otherwise.  Write $p=2^{-d}$,
+$\delta=2^{-k}$, $a_T=\widehat g(T)$, $b_T=\widehat h(T)$,
+$e_T=b_T-a_T$, and $c_T=a_T+pe_T$.
+
+\subsection*{Selector spectrum and physical influence}
+
+For a control character $A\subseteq[d]$, direct Walsh summation gives
+\[
+ \widehat F(A,T)=
+ \begin{cases}
+ c_T,&A=\varnothing,\\
+ p\chi_A(z_\star)e_T,&A\ne\varnothing.
+ \end{cases}
+\tag{1}
+\]
+For $A=\varnothing$, the upper spectral mass is
+\[
+ c_T^2+(2^d-1)p^2D_T=(1-p)A_T+pB_T.                     \tag{2}
+\]
+For $A\ne\varnothing$, it is $2^{d-|A|}p^2D_T$.  Summing
+the resulting logarithms over $A$ yields
+\begin{align}
+ U(F)={}&\sum_Tc_T^2\log_2\frac{(1-p)A_T+pB_T}{c_T^2}
+ +p(1-p)\sum_Te_T^2\log_2\frac{D_T}{e_T^2}\\
+ &+\left(\frac{pd}{2}-p^2d\right)\sum_Te_T^2.            \tag{3}
+\end{align}
+Each control bit is pivotal only when the other $d-1$ bits equal the
+active word and the children disagree.  Hence
+\[
+ I_{\rm ctl}=d\,2^{-(d-1)}m\delta=2pdm\delta.            \tag{4}
+\]
+
+\subsection*{Exact retained-child decomposition}
+
+Bentness gives $a_T^2=\delta$ and $A_T=2^{-|T|}$.  Define
+\[
+ 1+u_T=B_T/A_T,\quad 1+v_T=b_T^2/\delta,
+ \quad 1+w_T=c_T^2/\delta.
+\]
+The coefficient of $k-|T|$ left after subtracting
+$(1-p)U(g)+pU(h)$ is
+\[
+ \delta(w_T-pv_T)=-p(1-p)e_T^2.                          \tag{5}
+\]
+Since $\sum_Te_T^2=4m\delta$, the last term of (3) is
+$(1-2p)I_{\rm ctl}$.  Therefore the claimed identity
+\[
+ J=\frac{\delta}{\ln2}\sum_T\Phi_p(u_T,v_T,w_T)
+ +p(1-p)K+(1-2p)I_{\rm ctl}                              \tag{6}
+\]
+follows exactly, with the same $\Phi_p$ and $K$ as in the source proof.
+
+\subsection*{Odd-parity refund}
+
+For an $m$-point surgery,
+\[
+ e_T=-2\delta\sum_{j=1}^m g(x_j)\chi_T(x_j).             \tag{7}
+\]
+When $m$ is odd, the integer sum is odd.  Thus
+$2\delta\le|e_T|\le2m\delta$.  Since the upper cone contains
+$2^{k-|T|}$ atoms,
+\[
+ \frac{D_T}{e_T^2}\le m^2 2^{k-|T|}.
+\]
+After taking logarithms, multiplying by $e_T^2$, and summing,
+\[
+ K\le 2\log_2m\sum_Te_T^2=8m\delta\log_2m.              \tag{8}
+\]
+
+\subsection*{Rational audit of the Taylor constants}
+
+On the sparse odd-$m$ box, $|u|,|v|\le5/32$ and
+$|w|\le5/64$.  Factoring out $p$ where appropriate gives
+\[
+ |\Phi_{uu}|/p\le
+ \frac12\frac{69/64}{(59/64)^2}
+ +\frac{37/32}{(27/32)^2}
+ =2.258443\ldots<2.3.                                   \tag{9}
+\]
+The other four bounds follow from
+$32/27<1.2$ and $64/59<1.1$.  Substitution in the full
+quadratic form, including both mixed terms, gives the exact upper
+coefficient
+\[
+ \frac12\left(57.5+60+27.5+30+13.75\right)=94.375.      \tag{10}
+\]
+Together with the linear coefficient $4$, this is strictly below $99$.
+
+For triples with $k\ge10$, $|u|,|v|\le7/16$ and
+$|w|\le13/64$.  Here
+\[
+ |\Phi_{uu}|/p\le
+ \frac12\frac{77/64}{(25/32)^2}
+ +\frac{23/16}{(9/16)^2}
+ =5.528809\ldots<6,                                    \tag{11}
+\]
+while $16/9<1.8$, $32/25<1.3$, and $64/51<1.3$ certify
+the remaining Hessian estimates.  The complete half-Hessian quadratic
+form is exactly
+\[
+ \frac{51617}{40}p\delta=1290.425p\delta.                \tag{12}
+\]
+Adding the linear $36p\delta$ term gives
+$1326.425p\delta<1327p\delta$.
+
+Finally, an exact rational atanh-series enclosure for $\ln2$ and $\ln3$
+certifies
+\[
+ 1+\frac{1327}{6\ln2}+4\frac{\ln3}{\ln2}
+ =326.415903212827\ldots<327.                            \tag{13}
+\]
+Equations (6), (8), and (9)--(13) prove both declared claims:
+\[
+ J<327I_{\rm ctl}\quad(m=3,\ k\ge10),                   \tag{14}
+\]
+and, when $m2^{-k/2}\le1/32$,
+\[
+ J\le\left(1+\frac{99m}{2\ln2}+4\log_2m\right)
+ I_{\rm ctl}.                                           \tag{15}
+\]
+
+The conclusion is a one-node retained-credit inequality.  It is not by
+itself an FEI theorem for the terminal child $h$, a restriction-closed
+class, or a hierarchy of changing coherent cores.

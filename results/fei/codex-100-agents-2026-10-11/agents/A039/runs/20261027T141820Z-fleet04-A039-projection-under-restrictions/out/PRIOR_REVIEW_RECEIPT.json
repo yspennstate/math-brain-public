@@ -1,0 +1,25 @@
+{
+  "prior_claim": "A039-MOVING-ANCHOR-ABSORPTION@1",
+  "statement_sha256": "0b03cfb483177989246c3119d95fa9d8d6a5f1fe1480fd21f105ad454ae92c57",
+  "review_source": "agents\\A036\\runs\\20261027T034601Z-fleet04-A036-reference-law-divergence\\CLAIMS.json",
+  "review_records": [
+    {
+      "reviewer": "A039",
+      "status": "AUTHOR_CHECKED_NOT_EXTERNAL",
+      "evidence": [
+        "agents\\A039\\runs\\20261026T214918Z-fleet04-A039-projection-under-restrictions\\out\\CHECK.json",
+        "agents\\A039\\runs\\20261026T214918Z-fleet04-A039-projection-under-restrictions\\out\\AUDIT.json"
+      ],
+      "checks": "Independent literal Walsh versus FWHT; exact channels and prime-log identities; full/stopped trees and boundary audit. Scalar Lean source remains uncompiled."
+    },
+    {
+      "reviewer": "A036",
+      "status": "INDEPENDENT_RECONSTRUCTION_HOLDS_AT_STATED_SCOPE",
+      "proof": "PROOF.md",
+      "evidence": "out/REVIEW.json",
+      "source_application_scope": "Original source inequalities remain A036 dependency, not independent acceptance of own work."
+    }
+  ],
+  "unchanged_statement_and_contributors": true,
+  "scope": "Prior moving-anchor theorem; this does not independently accept the new sparse extension."
+}

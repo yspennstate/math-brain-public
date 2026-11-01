@@ -1,0 +1,17 @@
+{
+  "helper_version": "A074-oriented-edge-histogram-v1",
+  "helper_sha256": "cd76d4ab44ea0436cc5a5356e2b308d9d8c0e22bf7661b54fb7e8b27562d1271",
+  "actual_Boolean_family": "F=h(g,y1,y2), h all256 three-input sign tables, g all256 three-bit tables and each of3 queries, queried gate input arbitrary",
+  "parameter_domain": "all35 ordered (++,+-,-+,--) edge histograms summing4; one explicit actual g representative each; outer masks0..255",
+  "case_count": 8960,
+  "positive_influence_case_count": 7200,
+  "symmetry": "physical query relabeling and outer argument relabeling; within-core histogram reduction proved by exact full-row cancellation, with ALL35 signed profiles retained",
+  "arithmetic": "integer truth masks, bitset character counts, Fraction prime-log forms; strict signs by LCM-cleared integer powers, equality symbolic",
+  "memory_estimate_mb": 120,
+  "max_runtime_seconds": {
+    "pilot": 55,
+    "main": 180
+  },
+  "pilot": "all35 profiles, outer masks0..15 (560 actual circuits)",
+  "automatic_dimension_escalation": false
+}

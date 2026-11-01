@@ -1,0 +1,165 @@
+{
+  "problem_id": "I0056",
+  "source_checks": [
+    {
+      "method": "Initial status from memory; no internet use",
+      "citation": "John Haslegrave and Christoforos Panagiotis (2021), Site percolation and isoperimetric inequalities for plane graphs, Random Structures & Algorithms 58(1), 150–163.",
+      "finding": "I initially knew the triangular and quadrangular answers, but no resolution of the entire two-clause question."
+    },
+    {
+      "method": "Local source PDF, including visual inspection",
+      "source_id": "lyons_peres_20260819",
+      "local_path": "~/brain_workers/w96/definition_sources/lyons_peres_20260819.pdf",
+      "sha256": "5c9a799b2333b58c7f8b29a608567bd1133713c934ec6cf654386dc1b01fbaf5",
+      "locators": [
+        "Question 6.20, printed page 202",
+        "Section 6.5, printed pages 198–200",
+        "Anchored definitions and Exercise 6.20, printed page 217"
+      ],
+      "finding": "Question 6.20 concerns ordinary expansion; anchored expansion is defined later. The section assumes proper embeddings and locally finite graph and dual. The negative square-root branch actually appears in the PDF. At d=7 it gives (1−sqrt(5))/2<0, which cannot be an expansion constant."
+    },
+    {
+      "method": "Existing local manuscript discovered during the work",
+      "citation": "Yitzchak Shmalo (2026), Outer vertex-isoperimetry of regular plane tessellations, dated 18 September 2026.",
+      "url": "https://github.com/yspennstate/outer-vertex-isoperimetry/blob/f8de2508440945472d9fd97e3fdbf21d392de085/paper/main.pdf",
+      "local_path": "~/outer-vertex-isoperimetry/paper/main.tex",
+      "revision": "f8de2508440945472d9fd97e3fdbf21d392de085",
+      "finding": "This manuscript supplies all finite face degrees at least five and explicitly leaves arbitrary transitive plane graphs undetermined. Together with Haslegrave–Panagiotis, it resolves the standard finite-faced regular/co-regular clause. Its transfer argument is verified below. This is prior work, not a new campaign solution."
+    },
+    {
+      "method": "Published mathematical input checked in the local book",
+      "citation": "Olle Häggström, Johan Jonasson and Russell Lyons (2002), Explicit isoperimetric constants and phase transitions in the random-cluster model, Annals of Probability 30(1), 443–473.",
+      "locator": "Lyons–Peres Theorem 6.18",
+      "finding": "For regular plane tessellations, Φ_E(H_{d,f})=(d−2)sqrt(1−4/((d−2)(f−2)))."
+    },
+    {
+      "method": "Scope of status checking",
+      "finding": "No web search, browsing, or child agents were used. The original Haslegrave–Panagiotis paper was not inspected; its vertex formulas are cited through the local manuscript. No current-openness or novelty certificate is asserted for the broader question."
+    }
+  ],
+  "exact_statement": "For infinite properly embedded locally finite plane graphs with locally finite dual, determine the unweighted outer vertex expansion Φ_V for regular/co-regular graphs, and determine Φ_E and Φ_V for more general vertex-transitive plane graphs. For a finite nonempty vertex set K, ∂_E K consists of edges with exactly one endpoint in K, and ∂_V K consists of vertices outside K adjacent to K. The ordinary constants are inf_K |∂_X K|/|K|. Anchored constants Φ_X* restrict to connected sets containing a fixed root and take the limiting infimum as their size tends to infinity. The recorded negative α_d is erroneous.",
+  "answer": "partial",
+  "result": "The regular/co-regular clause is covered by the identified existing manuscript and cited 2021 results. A complete proof here gives an exact triangle-inflation reduction for arbitrary infinite connected simple cubic graphs, including anchored constants, and an explicit family of transitive plane graphs with face degrees 3 and 2p. The entire arbitrary-transitive clause is not resolved.",
+  "proof_or_counterexample": {
+    "published_regular_answer": {
+      "assumptions": "H_{d,f} is the standard infinite regular plane tessellation, d,f≥3, with 1/d+1/f≤1/2.",
+      "edge_formula": "Φ_E(H_{d,f})=(d−2)sqrt(1−4/((d−2)(f−2))).",
+      "vertex_formula": [
+        "f=3, d≥6: Φ_V=(d−6+sqrt((d−2)(d−6)))/2.",
+        "f=4, d≥4: Φ_V=(d−4+sqrt(d(d−4)))/2.",
+        "f≥5: Φ_V=Φ_E."
+      ],
+      "attribution": "The first two vertex formulas are Haslegrave–Panagiotis (2021), including their Euclidean limits. The third and the following transfer principle occur in Shmalo (2026).",
+      "proof_for_f_at_least_5": [
+        "Let G have maximum degree Δ and h=Φ_E(G)≥Δ−3. Starting from any finite nonempty K, add an outside vertex v whenever it has r≥2 neighbors in K. Write s=deg(v). The edge boundary changes by s−2r. The outer vertex boundary changes by at most s−r−1: v leaves the boundary, and at most s−r new vertices enter.",
+        "The edge defect D_E(K)=|∂_E K|−h|K| is nonnegative for every finite K. Each addition decreases it by s−2r−h≤Δ−4−h≤−1. Consequently the process terminates after finitely many additions.",
+        "The vertex defect D_V(K)=|∂_V K|−h|K| changes by at most s−r−1−h≤Δ−3−h≤0.",
+        "At the terminal set C, every outside neighbor has exactly one neighbor in C, so |∂_V C|=|∂_E C|. Thus D_V(K)≥D_V(C)=D_E(C)≥0. Taking infima gives Φ_V≥h; the pointwise inequality |∂_V K|≤|∂_E K| gives the reverse inequality.",
+        "For a regular tessellation with d≥4 and f≥5, its published edge value h satisfies h²−(d−3)²=2d−5−4(d−2)/(f−2)≥(2d−7)/3>0. Hence h>d−3. For d=3, the threshold h≥d−3 is automatic. The transfer therefore proves the stated f≥5 vertex formula. The f=3 and f=4 formulas remain cited inputs."
+      ]
+    },
+    "proof": {
+      "triangle_inflation": [
+        "Let H be an infinite connected simple cubic graph. Define T(H) to have vertices (v,e), one for each incidence of a vertex v with an edge e of H. The three incidences at v form a triangle C_v. For every old edge e={v,w}, join (v,e) to (w,e). Each new vertex has two triangle neighbors and exactly one external neighbor.",
+        "Take a finite nonempty K. Suppose K meets C_v in s=1 or s=2 vertices, and fill the triangle by adding its r=3−s missing vertices. Exactly s(3−s) triangle edges cease to cross the edge boundary. Only the r external edges at the added vertices can otherwise change it. Therefore the edge-boundary change is at most (3−s)(1−s)≤0.",
+        "All r missing triangle vertices already belong to ∂_V K. Filling the triangle removes them from that boundary. The only possible new boundary vertices are their r external neighbors. Hence the outer vertex boundary also cannot increase.",
+        "Fill every triangle that originally met K. This is a finite operation. With S={v:K intersects C_v}, the resulting K⁺ is the union of C_v over v∈S. It satisfies |K⁺|=3|S|≥|K|, and each boundary size is at most its original size.",
+        "For K⁺, boundary edges correspond bijectively to edges of H crossing S. Boundary vertices also correspond bijectively to those crossing edges: their outside endpoints are distinct incidences (w,e), even if several crossing edges meet the same base vertex w. Thus |∂_E K⁺|=|∂_V K⁺|=|∂_E^H S|.",
+        "Put h=Φ_E(H). For X=E or V, |∂_X K|≥|∂_E^H S|≥h|S|≥h|K|/3. Conversely every finite S gives a full-triangle set with both boundary ratios equal to |∂_E^H S|/(3|S|). Taking infima proves Φ_E(T(H))=Φ_V(T(H))=Φ_E(H)/3. Disconnected sets are included.",
+        "For anchored constants, choose root o=(v₀,e₀). A connected K containing o contracts to a connected S containing v₀, with |S|≥|K|/3. Its boundary ratio is at least one third of the base edge ratio. Therefore, at size threshold N, the rooted infimum is at least one third of the base rooted edge infimum at threshold ceil(N/3). Taking limits proves both lower bounds Φ_E*(H)/3.",
+        "Conversely, full-triangle sets over connected base sets containing v₀ are connected, contain o, and have exactly one third of the base edge ratio. Applying this to a sequence approaching the anchored base infimum proves Φ_E*(T(H))=Φ_V*(T(H))=Φ_E*(H)/3."
+      ],
+      "ordinary_equals_anchored_edge_for_transitive_graphs": [
+        "Let H be infinite, connected, vertex-transitive and of finite degree. Put h=Φ_E(H). Ordinary edge infima may be restricted to connected sets, since a disconnected set's ratio is the size-weighted average of its components' ratios. Let h∞ be the limiting infimum over connected sets of size at least N.",
+        "Suppose h∞>h and choose a strictly between them. Connected sets with ratio below a have bounded cardinality. Their possible ratios form a finite set, because sizes and boundaries are integers and boundary size is bounded by degree times size. Thus h is attained. Choose a connected h-minimizer S of maximal cardinality; all such minimizers have bounded size.",
+        "Two distinct intersecting automorphic translates A,B of S would have a larger connected union. Edge-cut submodularity gives |∂_E(A∪B)|+|∂_E(A∩B)|≤|∂_E A|+|∂_E B|. Using the lower bound h for the intersection makes the union an h-minimizer, contradicting maximality. Submodularity follows edge by edge; its slack is twice the number of edges between A\\B and B\\A.",
+        "Hence translates of S are equal or disjoint. Transitivity makes them cover all vertices. Infinite connectedness then supplies two distinct blocks A,B joined by an edge. Their connected union has boundary |∂_E A|+|∂_E B|−2|E(A,B)|<h|A∪B|, contradicting the definition of h. Therefore h∞=h.",
+        "Every finite connected set can be moved by an automorphism to contain the chosen root without changing size or boundary. Rooted and unrooted infima at each size threshold coincide. Consequently Φ_E*(H)=Φ_E(H)."
+      ],
+      "transitive_plane_corollary": [
+        "Let H_{3,p} be the standard regular tessellation with degree 3 and face degree p≥6. The cited edge formula gives Φ_E(H_{3,p})=sqrt((p−6)/(p−2)). Applying triangle inflation gives Φ_E(T(H_{3,p}))=Φ_V(T(H_{3,p}))=(1/3)sqrt((p−6)/(p−2)).",
+        "The base is vertex-transitive. The preceding ordinary/anchored edge equality and the anchored inflation identity therefore give exactly the same value for both anchored constants.",
+        "The regular tessellation is transitive on incidences (v,e), equivalently directed edges. Its symmetries induce automorphisms of T(H_{3,p}), whose vertices are those incidences. Thus the inflated graph is cubic and vertex-transitive.",
+        "For a plane embedding, choose disjoint sufficiently small disks about base vertices, each meeting only its three incident edge segments. Replace the star in each disk by a triangle joining its attachment points, retaining the edges outside the disks. Properness of the original embedding ensures these replacements are locally finite.",
+        "There is one triangular face at each old vertex. Each old p-gonal face becomes a 2p-gon: its boundary alternates between retained old-edge segments and new triangle edges. Every face degree is finite, so the dual is locally finite. This family satisfies the source's embedding and dual assumptions.",
+        "An extremizing family consists of full-triangle sets over edge-minimizing base sets S_j. Their two ratios are exactly |∂_E^H S_j|/(3|S_j|). For anchored sequences choose connected root-containing base sets.",
+        "The exact values include p=6:0, p=7:1/(3sqrt(5)), p=8:1/(3sqrt(3)), and p=10:1/(3sqrt(2)). As p tends to infinity, the constant tends to 1/3."
+      ]
+    },
+    "numerical_evidence": {
+      "label": "Exact finite computation supporting the reduction; not a substitute for the proof.",
+      "model": "All nonempty subsets of one through five triangles over a path in the infinite cubic tree, retaining every immediate exterior neighbor.",
+      "total_sets_checked": 37443,
+      "minimum_edge_and_vertex_ratios": [
+        "1",
+        "2/3",
+        "5/9",
+        "1/2",
+        "7/15"
+      ],
+      "triangle_filling_violations": 0,
+      "boundary_counting_disagreements": 0,
+      "independent_count": "Edge boundaries were counted both by direct crossing-edge enumeration and by 3|K|−2|E(K)|.",
+      "limiting_family": "For n whole triangles over a tree path, size is 3n and both boundaries are n+2. Their ratio (n+2)/(3n) tends to 1/3.",
+      "scope": "These computations check the general inflation reduction. The finite-face tessellation formula follows from the proof and the cited edge theorem.",
+      "script_path": "~/brain_workers/I0056_local_20261010/verify_triangle.py",
+      "script_sha256": "4a61dba01745271b9b05390fe4729a202b9baa9defdc98cf530559e7b1675809"
+    },
+    "conjecture": null,
+    "sketch": null
+  },
+  "hardest_remaining_gap": "No exact formula is supplied for all other transitive plane graphs. Triangle inflation reduces its class to the base edge constant, which is not determined here for arbitrary bases. The known threshold Φ_E≥degree−3 also leaves graphs below that threshold untreated. Current openness requires the later literature audit.",
+  "evidence_status": "partial",
+  "draft_brain_nodes": [
+    {
+      "key": "I0056_triangle_inflation_expansion_v1",
+      "namespace": "probability.isoperimetry",
+      "logical_name": "triangle_inflation_expansion_constants",
+      "kind": "theorem",
+      "title": "Exact ordinary and anchored expansion under cubic triangle inflation",
+      "statement": "For every infinite connected simple cubic graph H, replace each vertex by the triangle of its three edge incidences, joining paired incidences across each old edge. The resulting T(H) satisfies Φ_E(T(H))=Φ_V(T(H))=Φ_E(H)/3 and Φ_E*(T(H))=Φ_V*(T(H))=Φ_E*(H)/3. Ordinary infima may be taken over unions of whole triangles.",
+      "proof_text": "If a finite set occupies s∈{1,2} vertices of a triangle, filling its 3−s missing vertices removes s(3−s) crossing triangle edges and adds at most 3−s crossing external edges. Thus its edge boundary cannot increase. Every missing triangle vertex is already an outer boundary vertex; filling removes all 3−s of them and creates at most 3−s external boundary vertices, so its vertex boundary cannot increase either. Fill all touched triangles. If S is their set of base vertices, the resulting set has size 3|S|≥|K|. Both its boundary sizes equal |∂_E^H S|: each crossing base edge produces one external crossing edge and one distinct outside incidence vertex. Writing h=Φ_E(H), both original boundaries are therefore at least h|S|≥h|K|/3. Full-triangle sets over base sets approaching h give the reverse inequality. This proves the ordinary identities for all finite sets, including disconnected ones. For anchored identities, connected root-containing K contracts to connected root-containing S with |S|≥|K|/3. Its ratio is at least one third of the base rooted edge infimum at threshold ceil(|K|/3). Taking thresholds to infinity gives both anchored lower bounds. Conversely full-triangle expansions of connected root-containing base sets are connected, contain the chosen incidence root, and have exactly one third of the base edge ratio. A base sequence approaching its anchored constant proves both reverse bounds.",
+      "assumptions": [
+        "H is infinite, connected, simple and cubic.",
+        "Edges and vertices have unit weight.",
+        "Vertex boundaries are outer boundaries.",
+        "Anchored sets are connected and contain a fixed root."
+      ],
+      "domain": "Graph theory; isoperimetry; probability.",
+      "source": {
+        "source_id": "probability300_20261010_I0056_own_proof",
+        "url": null,
+        "revision": "2026-10-10-v1",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0056_truncated_cubic_regular_tessellations_v1",
+      "namespace": "probability.isoperimetry",
+      "logical_name": "truncated_cubic_regular_tessellation_expansion",
+      "kind": "theorem",
+      "title": "Expansion constants of truncated regular cubic plane tessellations",
+      "statement": "For every integer p≥6, the triangle inflation of the regular degree-3, face-degree-p tessellation is a properly embedded cubic vertex-transitive plane graph with face degrees 3 and 2p and locally finite dual. Its ordinary and anchored edge and outer vertex constants all equal (1/3)sqrt((p−6)/(p−2)).",
+      "proof_text": "The published Häggström–Jonasson–Lyons edge formula gives Φ_E(H_{3,p})=sqrt((p−6)/(p−2)). The preceding triangle-inflation theorem divides this value by three for both ordinary constants. The base is vertex-transitive, so Φ_E*=Φ_E; a complete proof of that equality is supplied in proof_or_counterexample.proof.ordinary_equals_anchored_edge_for_transitive_graphs. Applying the anchored inflation identity gives the same value for both anchored constants. Regular-tessellation symmetries act transitively on incidences and induce automorphisms of the inflated graph, proving vertex transitivity. In a proper embedding, replace each vertex star inside a small disjoint disk by its attachment triangle. This preserves properness. Each old vertex produces a triangular face, and each old p-gonal face becomes a 2p-gon because each corner contributes one extra boundary edge. Thus the dual is locally finite. Full-triangle expansions of base edge-minimizing sets attain the constant in the limit; connected rooted base sets give the anchored version.",
+      "assumptions": [
+        "p is an integer at least 6.",
+        "The base is the standard regular Euclidean or hyperbolic tessellation.",
+        "Use the cited regular-tessellation edge theorem.",
+        "Use the triangle-inflation theorem proved in the preceding draft entry."
+      ],
+      "domain": "Plane graphs; transitive graphs; isoperimetry; probability.",
+      "source": {
+        "source_id": "probability300_20261010_I0056_own_corollary",
+        "url": null,
+        "revision": "2026-10-10-v1",
+        "license": "owner-own-work (campaign result)"
+      }
+    }
+  ],
+  "audit_status": "Drafts only. No novelty claim or brain-node admission. Independent mathematical and literature audit by a different model family is pending.",
+  "artifacts": {
+    "full_result": "~/brain_workers/I0056_local_20261010/result.json",
+    "experiment": "~/brain_workers/I0056_local_20261010/experiment.json"
+  },
+  "task_identification": "Open problem I0056, ledger I, queue rank 7; checklist T-20261010-061 closed."
+}

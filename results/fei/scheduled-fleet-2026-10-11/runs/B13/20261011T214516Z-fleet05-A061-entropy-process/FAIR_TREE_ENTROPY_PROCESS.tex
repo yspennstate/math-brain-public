@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A061: Fair adaptive restriction entropy process}\maketitle
+All entropies are in bits. Let $X$ be uniform on the input cube and $R$ an independent policy seed. The filtration $\mathcal F_t$ contains $R$ and only coordinates revealed before $t$. Query an $\mathcal F_t$-measurable unqueried coordinate $i_t$, until an $\mathcal F_t$ stopping time $\tau\le n$. Write $g_t$ for the actual restriction and freeze it after stopping.
+
+At a live node put $a_T=\widehat g(T)$, $b_T=\widehat g(T\cup\{i\})$, $q_T=a_T^2+b_T^2$, $\theta_T=b_T^2/q_T$. Omit zero packets. The child laws are $p_\sigma(T)=(a_T+\sigma b_T)^2$, their average is $q$, and
+\[
+ B=\sum_Tq_Th_2(\theta_T),\quad J=H(q)-\tfrac12(H(p_+)+H(p_-)),\quad D=B+J,\quad d=\sum_Tb_T^2.
+\]
+Here $J$ is mutual information in the node-local experiment with fair physical $\sigma$ and conditional spectral law $p_\sigma$; $q$ is not the physical branch law. With $E_t=H(g_t)$, $V_t=I(g_t)$ and $\eta_H=(H(g_+)-H(g_-))/2$, $\eta_I=(I(g_+)-I(g_-))/2$,
+\[
+ E_{t+1}-E_t=-D_t+X_{i_t}\eta_{H,t},\qquad V_{t+1}-V_t=-d_t+X_{i_t}\eta_{I,t}.
+\]
+Fairness and Parseval imply that $E_t+\sum_{s<t}D_s$ and $V_t+\sum_{s<t}d_s$ are martingales. Finite stopping gives
+\[
+ H(f)=\mathbb EH(g_\tau)+\mathbb E\sum_{t<\tau}D_t,\qquad I(f)=\mathbb EI(g_\tau)+\mathbb E\sum_{t<\tau}d_t.
+\]
+Define $\lambda_t=\sum_{T:b_T^2>0}b_T^2\log_2(q_T/b_T^2)$. The elementary binary entropy and scalar Jensen--Shannon bounds (proved in REPORT.md) yield
+\[
+ B_t\le\lambda_t+d_t/\ln2,\quad J_t\le2d_t/\ln2,\quad D_t\le\lambda_t+3d_t/\ln2.
+\]
+Consequently $(3/\ln2)V_t-E_t-\sum_{s<t}\lambda_s$ is a supermartingale, with the logarithmic charge explicitly unpaid. If every positive $\theta_T\ge\varepsilon>0$ at every live node, then $C_\varepsilon V_t-E_t$ is a supermartingale for $C_\varepsilon=\log_2(1/\varepsilon)+3/\ln2$. Its terminal defect is retained:
+\[
+ H(f)\le C_\varepsilon I(f)+\mathbb E[H(g_\tau)-C_\varepsilon I(g_\tau)].
+\]
+This gives FEI for the stated tree class with certified terminal functions. Universal existence of such a tree is not proved. More generally $CV_t+Q_t-E_t$ is a supermartingale precisely when $D_t\le Cd_t+Q_t-\mathbb E[Q_{t+1}\mid\mathcal F_t]$.
+\end{document}

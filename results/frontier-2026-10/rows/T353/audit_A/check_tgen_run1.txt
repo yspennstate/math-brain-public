@@ -1,0 +1,10 @@
+T353\audit_A\check_tgen.py:33: RuntimeWarning: invalid value encountered in sqrt
+  x1, x2 = (G - np.sqrt(disc)) / 2, (G + np.sqrt(disc)) / 2
+T=4 prefix (0.3, 1.6, -0.4): eA/G^2 0.5512  direct -7.2688704119e-04  via T=3 -7.2688704119e-04  rel 1.5e-16
+T=5 prefix (-0.5, 2.1, 0.0, 0.4): eA/G^2 0.5539  direct -9.4064755455e-05  via T=3 -9.4064755455e-05  rel 2.9e-16
+T=4 prefix (0.4, 2.5, 2.0): eA/G^2 0.4626  direct +7.5355045731e-06  via T=3 +nan  rel nan
+T=5 prefix (-0.2, 2.3, 1.9, 2.4): eA/G^2 0.3279  direct +2.3232108991e-07  via T=3 +nan  rel nan
+-- prefixes with eA/G^2 < 1/2 (no T = 3 twin): compare with a DIFFERENT prefix of the same length and the same (A, G)
+T=4 prefix (1.0, 0.2, 0.9) vs (np.float64(0.2591), np.float64(1.0612), np.float64(0.7946)): direct -1.1086997269e-03  twin -1.1086997269e-03  rel 2.0e-16
+T=5 prefix (2.0, -1.0, 0.5, 1.5) vs (np.float64(-0.3311), np.float64(2.0349), np.float64(0.3946), np.float64(1.3946)): direct -2.2172817551e-05  twin -2.2172817551e-05  rel 4.6e-16
+B ratio range eA/G^2 = [0.80561059 0.8712834 ]  (1/m <= 1/2 for every m >= 2)

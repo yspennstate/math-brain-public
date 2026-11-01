@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "query": "referee proof assumptions mistakes",
+      "result": "silent; no connection"
+    },
+    {
+      "query": "P0017x",
+      "result": "silent; no connection"
+    },
+    {
+      "query": "xP0017",
+      "result": "silent; no connection"
+    },
+    {
+      "query": "P001",
+      "result": "silent; no connection"
+    },
+    {
+      "query": "P00170",
+      "result": "silent; no connection"
+    },
+    {
+      "query": "P0017 and P0018",
+      "result": "ambiguous; no connection"
+    },
+    {
+      "query": "P0017; nonexistent path",
+      "result": "failed softly; no file created"
+    },
+    {
+      "query": "P0017 exact rescue",
+      "result": "2 complete historical cards; truth status preserved",
+      "seconds": 0.05078809999395162
+    }
+  ],
+  "passed": 8,
+  "connections": [
+    {
+      "uri": "file:///~/math-brain-build/local/population/brain.sqlite3?mode=ro",
+      "uri_flag": true
+    }
+  ],
+  "baseline_file": "recall_mistakes.txt",
+  "baseline_relevant_top3": 0,
+  "rescue_relevant_hits": 2,
+  "comparison_scope": "One observed query, explicit standalone rescue; no live ranking/global-recall change or general performance claim."
+}

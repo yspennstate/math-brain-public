@@ -1,0 +1,12 @@
+{
+  "helper_version": "A005 exact audit v1 code/check.py",
+  "family": "all Boolean truth tables n=1,2,3; point defects at every location n=4,5; parity and paired-quadratic controls n=4,5; 3-bit phases lifted to a 5-bit point defect",
+  "domain": "K=0,2,8/3,4,10 for reserves; degree3 K10 and degree2 K4 for phase review",
+  "case_count": "276 exhaustive roots plus 52 controls, each at five K: 1640 reserve cases; 384 phase comparisons; pilot 100 reserve cases",
+  "symmetry": "none",
+  "arithmetic": "integer character sums, rational physical edges, exact symbolic prime-log cancellation and Fraction atanh bounds with40 terms",
+  "memory_estimate_mb": 80,
+  "max_runtime_seconds_per_job": 55,
+  "automatic_escalation": false,
+  "pilot": "python -X utf8 -B code/check.py pilot; complete before the two sequential bounded jobs"
+}

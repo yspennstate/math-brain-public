@@ -1,0 +1,22 @@
+R17 PROB10-02 exact information-debt / one-sided-peek checker
+SECTION no_free_peek_deterministic_projection
+freshness_preserving_deterministic_masks= [0, 15]
+NO_FREE_PEEK_DETERMINISTIC_PASS
+SECTION run_prefix_dominance_counterexample
+n= 2 first_bad= None
+n= 3 first_bad= None
+n= 4 first_bad= None
+n= 5 first_bad= None
+n= 6 first_bad= ('010011', '110100', 1, 2, 3, 4)
+RUN_PREFIX_COUNTEREXAMPLE_PASS
+SECTION exact_collatz_subsolutions
+ell= 1 ordinary=[ 0.500000000000000 , 0.500000000000000 ] debt=[ 0.571428571428571 , 0.571428571428572 ] gamma_from_debt_lower= 0.727272727272727 beats_current_L= False
+ell= 2 ordinary=[ 0.571428571428571 , 0.571428571428572 ] debt=[ 0.597345132512862 , 0.597345132823744 ] gamma_from_debt_lower= 0.747922437492452 beats_current_L= False
+ell= 3 ordinary=[ 0.597345132310224 , 0.597345132894401 ] debt=[ 0.610112434232757 , 0.610112544403221 ] gamma_from_debt_lower= 0.757850720559754 beats_current_L= False
+ell= 4 ordinary=[ 0.611053880372108 , 0.611054069817020 ] debt=[ 0.618018575693627 , 0.618021192055141 ] gamma_from_debt_lower= 0.763920247860800 beats_current_L= False
+ell= 5 ordinary=[ 0.620015432793953 , 0.620020161025781 ] debt=[ 0.624355243887918 , 0.624378626800642 ] gamma_from_debt_lower= 0.768742239405113 beats_current_L= False
+ell= 6 ordinary=[ 0.626343180528034 , 0.626382009010169 ] debt=[ 0.629219567676884 , 0.629339517063670 ] gamma_from_debt_lower= 0.772418377682626 beats_current_L= False
+EXACT_SUBSOLUTION_AND_NONMOVEMENT_PASS
+current_L= 99083249 / 125000000 0.792665992000000
+ALL_EXACT_CHECKS_PASS
+RETURN_CODE=0

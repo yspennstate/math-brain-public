@@ -1,0 +1,18 @@
+PASS QFORM_HOUSEHOLDER_ONEHEAVY_GAUSSIANPAIR_GLOBAL
+
+Exact checks:
+- B=(1/7)[[6,-2,-3],[-2,3,-6],[-3,-6,-2]] satisfies B^2=I exactly over rational arithmetic.
+- Every physical entry of B is nonzero.
+- tr(B)=1; together with B^2=I and B!=I this gives spectrum {1,1,-1}.
+- Completed-square identity checked algebraically:
+  Q=(6/7)(H-sqrt(13)Z/6)^2 + W^2 - (7/6)Z^2.
+
+Current-run deterministic numerical evaluation of the exact elliptic integral expression:
+K(-7/6)=1.2827167711454015
+sqrt(14/3)*K(-7/6)=2.7709849277641085
+pi*sqrt(7/6)=3.39330789465642
+3*sqrt(2)*exp(-0.03)=4.117251705266084
+partner lower - exact source-valid family bound=1.3462667775019757
+partner lower - elementary K<=pi/2 bound=0.7239438106096641
+
+The numerical values are checks only. The theorem is analytic: the global output maximum of the comparison kernel is proved at x=0 by two monotonic integral representations, and the exact x=0 value is the complete elliptic integral. The partner separation can be certified without numerical quadrature using K(-7/6)<=pi/2, pi<22/7, and exp(-0.03)>0.97.

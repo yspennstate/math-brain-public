@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B16",
+  "run_id": "20260925T092846Z-fleet02-B16-fiveaudit-r11",
+  "source": {
+    "commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+    "tex_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+    "tex_sha256": "f4a4f4c6db7f0ad4feffbe04041af3cf1a759fb4cb51f4979b6fd884eba26037",
+    "tex_bytes": 58136,
+    "tex_physical_lines": 675,
+    "pdf_blob": "8be3aae36ecad7a9dc9b7c95978aad09499f32d0",
+    "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+    "pdf_bytes": 484310,
+    "pdf_pages": 14
+  },
+  "numerical_checks": {
+    "C3": {
+      "formula": "3*sqrt(2)*e*(9/2)^(1/6)",
+      "value": "14.81833766284299851801026258478170499132",
+      "claim": "<15",
+      "pass": true
+    },
+    "C2": {
+      "formula": "8*sqrt(e)*2^(-1/8)",
+      "value": "12.09507257079648611643426227345109475303",
+      "claim": "<12.2",
+      "pass": true
+    },
+    "gamma1": {
+      "formula": "(44-5*sqrt(2))/96",
+      "value": "0.3846763769597346328749120456140782250745",
+      "claim": ">0.38",
+      "pass": true
+    },
+    "gamma2": {
+      "formula": "(44-15*sqrt(2))/96",
+      "value": "0.2373624642125372319580694701755680085568",
+      "claim": ">0.237",
+      "pass": true
+    },
+    "gamma3": {
+      "formula": "(44-25*sqrt(2))/96",
+      "value": "0.09004855146533983104122689473705779203915",
+      "claim": ">0.09",
+      "pass": true
+    },
+    "gaussian_small_ball_coeff": {
+      "value": "18.25531919676703055692042631468598979236",
+      "claim": "<19",
+      "pass": true
+    },
+    "L0": {
+      "formula": "2+2*log(19)",
+      "value": "7.888877958332880920018054863775707074475",
+      "claim": "<8",
+      "pass": true
+    },
+    "C3_over_gamma3": {
+      "value": "164.5594229080592808842882355084642094678",
+      "claim": "<167",
+      "pass": true
+    },
+    "C2_over_sqrt_gamma2": {
+      "value": "24.82575456311178105159825409017572652903",
+      "claim": "<26",
+      "pass": true
+    },
+    "diagonal_halfmoment_total": {
+      "formula": "1+sqrt(12)*(pi+4*log(2)+2*L0)",
+      "value": "76.1430750103999857769529383211756073116",
+      "claim": "<77",
+      "pass": true
+    },
+    "diagonal_density": {
+      "formula": "sqrt(12)*77",
+      "value": "266.7358243656071032032267365919043445092",
+      "claim": "<267",
+      "pass": true
+    },
+    "definite_pair_density": {
+      "formula": "16*pi",
+      "value": "50.26548245743669181540229413247204614715",
+      "claim": "<51",
+      "pass": true
+    },
+    "indefinite_pair_density": {
+      "formula": "16*(8+4*log(2)+2*log(19))+1/e",
+      "value": "266.9513463303340368445872573638960744159",
+      "claim": "<269",
+      "pass": true
+    },
+    "sqrt2_rational_check": {
+      "formula": "14143^2 - 2*10000^2",
+      "value": "24449",
+      "claim": ">0 hence sqrt(2)<1.4143",
+      "pass": true
+    }
+  },
+  "section6_checks": [
+    {
+      "item": "no-pivot off-diagonal bound",
+      "status": "PASS",
+      "reason": "|a_ii|<1/12 and |det A_{ij}|<1/256 imply a_ij^2 < 1/144+1/256=25/2304=(5/48)^2."
+    },
+    {
+      "item": "A-DAD=2C",
+      "status": "PASS",
+      "reason": "Entrywise sign check: same-side entries cancel, cross-side entries double."
+    },
+    {
+      "item": "singular-value duplication",
+      "status": "PASS",
+      "reason": "SVD M=sum sigma_j u_j v_j^T gives eigenvectors (u_j,±v_j)/sqrt(2) of [[0,M],[M^T,0]] with eigenvalues ±sigma_j, with the orthogonal complement in the kernel."
+    },
+    {
+      "item": "Rademacher fourth moment",
+      "status": "PASS",
+      "reason": "For fixed ordered i!=j, E eps_i eps_j eps_p eps_q survives exactly for ordered pairs (p,q)=(i,j),(j,i), yielding the two terms in Lemma 6.3; no missing factor 2."
+    },
+    {
+      "item": "Frobenius averaging",
+      "status": "PASS",
+      "reason": "E||Q_eps||_F^2 <=2a^2 k^2, so some sign choice has ||Q_eps||_F <=sqrt(2)ak < sqrt(2)a0 k."
+    },
+    {
+      "item": "compressed identity",
+      "status": "PASS",
+      "reason": "2 Phi^T C Phi = Phi^T(A-DAD)Phi = Lambda-Phi^T Delta Phi-Q_eps."
+    },
+    {
+      "item": "Weyl/compression direction",
+      "status": "PASS",
+      "reason": "s_k(2Phi^TCPhi)>1-eta-sqrt(2)a0k=2gamma_m and s_k(Phi^TCPhi)<=s_k(C), hence s_k(C)>gamma_m."
+    },
+    {
+      "item": "E_m extraction",
+      "status": "PASS",
+      "reason": "e_m(MM^T) is a sum of nonnegative m-fold eigenvalue products and contains prod_{j<=m}s_j(M)^2>gamma_m^(2m)."
+    }
+  ],
+  "projection_product_check": {
+    "status": "PASS_AFTER_LOCAL_REPAIRS",
+    "copied_banks": "Only literal original-coordinate banks are copied.",
+    "difference_vector": "D=X_J-X'_J has independent physical coordinates, each density <=1.",
+    "hub_measure": "The phase-weighted complex measure is dominated by the ordinary joint law of M_H X_J before Plancherel.",
+    "step4": "One joint density bound is applied to (M_H D,(<c_i,D>)_{i in T'}); projected components are never assumed independent.",
+    "local_repairs": [
+      "L222 drop all beta_i=0 factors",
+      "L319-L321 insert outer Jensen/Cauchy-Schwarz"
+    ]
+  },
+  "external_checks": {
+    "line74": "PARTIAL_PASS",
+    "checked": [
+      "BGKS Theorem 2.1 contextual form",
+      "LPP product-marginal density statement",
+      "BCCT/CLL heat-flow context",
+      "Rudelson–Vershynin linear-image small-ball context",
+      "Costello–Tao–Vu quadratic/discrete context",
+      "de la Pena–Gine decoupling metadata"
+    ],
+    "still_unchecked": "Exact full attribution/bibliographic bundle line-by-line; not a proof dependency.",
+    "line62_open_status": "UNCHECKED"
+  },
+  "visual_pdf_comparison": "UNCHECKED: exact private blob/hash pinned, but screenshot-capable route could not access the private PDF in this run.",
+  "fresh_lean_compile": "UNCHECKED; not used as a premise."
+}

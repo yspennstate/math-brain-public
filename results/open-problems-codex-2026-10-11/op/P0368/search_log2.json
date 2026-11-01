@@ -1,0 +1,44 @@
+[
+  [
+    "arxiv_retry.xml",
+    "http://export.arxiv.org/api/query?search_query=ti:frozen+AND+all:percolation&max_results=30",
+    0,
+    "The read operation timed out"
+  ],
+  [
+    "openalex_source.json",
+    "https://api.openalex.org/works/https://doi.org/10.1214/21-AOP1507",
+    0,
+    "HTTP Error 429: Too Many Requests"
+  ],
+  [
+    "openalex_citing.json",
+    "https://api.openalex.org/works?filter=cites:doi:10.1214/21-AOP1507&per_page=100",
+    0,
+    "HTTP Error 429: Too Many Requests"
+  ],
+  [
+    "crossref_later.json",
+    "https://api.crossref.org/works?query=frozen%20percolation%20endogeny&filter=from-pub-date:2019-10-01&rows=50",
+    506574,
+    "OK"
+  ],
+  [
+    "semantic_retry.json",
+    "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1214/21-AOP1507/citations?fields=title,year,externalIds&limit=100",
+    1310,
+    "OK"
+  ],
+  [
+    "arxiv_html.html",
+    "https://arxiv.org/html/1910.09213",
+    1369720,
+    "OK"
+  ],
+  [
+    "author.html",
+    "https://staff.utia.cas.cz/swart/research.html",
+    0,
+    "HTTP Error 404: Not Found"
+  ]
+]

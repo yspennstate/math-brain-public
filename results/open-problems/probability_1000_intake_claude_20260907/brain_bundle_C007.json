@@ -1,0 +1,289 @@
+{
+ "spec": "mathbrain-draft-v1",
+ "author_agent": "claude-probability-1000-continue-0907",
+ "bundle_slug": "probability-intake-claude-corrections-after-codex-review-c007",
+ "entries": [
+  {
+   "key": "at-c0002",
+   "namespace": "probability.gaussian",
+   "logical_name": "attempt-c0002-fluctuations-and-large-deviations-of-intermediate-level-sets-of-the-2d",
+   "kind": "concept",
+   "title": "Attempt on Fluctuations and large deviations of intermediate level sets of the 2D DGFF (corrected)",
+   "statement": "ATTEMPT RECORD (SUPERSEDING REVISION 2026-09-07 12:4x after the Codex holder's review), author-checked only. CORRECTION of C0002-A001. With Var h_x = g log N + O(1) and threshold 2 sqrt(g) lambda log N, P(h_x >= threshold) = exp(-2 lambda^2 log N)/(sqrt(2 pi) 2 lambda sqrt(log N)) (1 + o(1)), so the mean size of the intermediate level set is of order N^{2 - 2 lambda^2}/sqrt(log N), not a constant times N^{2(1 - lambda^2)} as A001 wrote; the (log N)^{-1/2} is the leading normalisation, not a correction term. The rest of A001 (variance dominated by mesoscopic pairs, mixing-measure identification open) stands with this normalisation. Key identity: E|level set| = c N^{2-2 lambda^2} (log N)^{-1/2} (1+o(1)) with c = 1/(2 sqrt(2 pi) lambda) times the boundary-correction factor. Standing obstruction: see the earlier attempt; the correction above replaces the flawed step only.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-c0002-fluctuations-and-large-deviations-of-intermediate-level-sets-of-the-2d",
+    "Supersedes the 2026-09-07 morning attempt record"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:at-c0002",
+    "url": "urn:probability-research:20260907:claude-intake:at-c0002",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   },
+   "supersedes_existing": true
+  },
+  {
+   "key": "at-c0004",
+   "namespace": "probability.gaussian",
+   "logical_name": "attempt-c0004-explicit-density-of-the-position-of-the-dgff-maximum",
+   "kind": "concept",
+   "title": "Attempt on Explicit density of the position of the DGFF maximum (corrected)",
+   "statement": "ATTEMPT RECORD (SUPERSEDING REVISION 2026-09-07 12:4x after the Codex holder's review), author-checked only. CORRECTION of C0004-A001. The sentence 'the naive guess rho^D proportional to r_D(x)^2 fails unless Z^D(D) is a.s. constant' is too strong: if Z^D = xi mu with xi a random scalar and mu deterministic, then Z^D(dx)/Z^D(D) = mu(dx)/mu(D) is deterministic and E[Z^D(dx)/Z^D(D)] = E Z^D(dx)/E Z^D(D) although Z^D(D) is random. The correct statement: rho^D differs from the normalised intensity E Z^D(dx)/E Z^D(D) exactly when the total mass Z^D(D) is not independent of the normalised measure Z^D(dx)/Z^D(D); for the DGFF extremal measure this independence fails (the mass and the shape are coupled through the Gibbs-Markov structure), so rho^D is not r_D(x)^2 dx normalised, but the argument in A001 does not prove that and the question stands. Key identity: rho^D = E[Z(dx)/Z(D)] equals E Z(dx)/E Z(D) iff the total mass is independent of the normalised measure (sufficient direction), not iff the mass is constant. Standing obstruction: see the earlier attempt; the correction above replaces the flawed step only.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-c0004-explicit-density-of-the-position-of-the-dgff-maximum",
+    "Supersedes the 2026-09-07 morning attempt record"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:at-c0004",
+    "url": "urn:probability-research:20260907:claude-intake:at-c0004",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   },
+   "supersedes_existing": true
+  },
+  {
+   "key": "at-c0033",
+   "namespace": "probability.determinantal",
+   "logical_name": "attempt-c0033-concavity-of-the-entropy-of-determinantal-measures-in-the-kernel",
+   "kind": "concept",
+   "title": "Attempt on Concavity of the entropy of determinantal measures in the kernel (corrected)",
+   "statement": "ATTEMPT RECORD (SUPERSEDING REVISION 2026-09-07 12:4x after the Codex holder's review), author-checked only. CORRECTION of C0033-A001 and of the problem statement's 'equivalently': Lyons's Conjecture 2.6 (finite positive contractions) implies Conjecture 5.3 (stationary processes on Z, concavity of the entropy rate in the symbol) by taking limits of finite restrictions, but the converse is not claimed and is not known; the two are recorded as implication, not equivalence. The numerical evidence (1440 random pairs, no violation) is for Conjecture 2.6 only. Key identity: Conjecture 2.6 (finite) => Conjecture 5.3 (stationary), by finite-restriction limits; converse open. Standing obstruction: see the earlier attempt; the correction above replaces the flawed step only.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-c0033-concavity-of-the-entropy-of-determinantal-measures-in-the-kernel",
+    "Supersedes the 2026-09-07 morning attempt record"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:at-c0033",
+    "url": "urn:probability-research:20260907:claude-intake:at-c0033",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   },
+   "supersedes_existing": true
+  },
+  {
+   "key": "at-c0040",
+   "namespace": "probability.randomenvironment",
+   "logical_name": "attempt-c0040-absolutely-continuous-invariant-measure-for-the-environment-seen-from",
+   "kind": "concept",
+   "title": "Attempt on Absolutely continuous invariant measure for the environment seen from the particle versus ballisticity (corrected)",
+   "statement": "ATTEMPT RECORD (SUPERSEDING REVISION 2026-09-07 12:4x after the Codex holder's review), author-checked only. CORRECTION of C0040-A001. The direction 'invariant absolutely continuous probability measure for the environment process + transience in direction l implies ballisticity in direction l' is not open: it is Corollary 2.15 of the source (Drewitz-Ramirez, PDF pages 20-21), so A001's reduction of that direction to strict positivity of the velocity was solving a solved half. Only the converse (ballistic implies existence of an invariant a.c. measure under (ERG)+(E)) is the open content of Open question 2.19; A001's remarks on the converse (regenerations unavailable under (ERG)) stand. Key identity: Open content = converse only: ballistic under (ERG)+(E) implies an invariant absolutely continuous environment measure? Standing obstruction: see the earlier attempt; the correction above replaces the flawed step only.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-c0040-absolutely-continuous-invariant-measure-for-the-environment-seen-from",
+    "Supersedes the 2026-09-07 morning attempt record"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:at-c0040",
+    "url": "urn:probability-research:20260907:claude-intake:at-c0040",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   },
+   "supersedes_existing": true
+  },
+  {
+   "key": "at-c0044",
+   "namespace": "probability.randomenvironment",
+   "logical_name": "attempt-c0044-zero-one-law-for-directional-transience-in-dimensions-d-3",
+   "kind": "concept",
+   "title": "Attempt on Zero-one law for directional transience in dimensions d >= 3 (corrected)",
+   "statement": "ATTEMPT RECORD (SUPERSEDING REVISION 2026-09-07 12:4x after the Codex holder's review), author-checked only. CORRECTION of C0044-A001's first sentence. The events {X_n . l -> +infinity} and {X_n . l -> -infinity} are disjoint by definition, so 'Zerner-Merkl show P(A_l intersect A_{-l}) = 0' is empty; what Zerner-Merkl prove in d = 2 is P_0(A_l) in {0,1}, using planarity to show two walks in the same environment intersect, which is what A001 then describes. The reduction (planarity essential; no d >= 3 substitute; no finite-region measurability for the natural martingale) stands. Key identity: Zerner-Merkl (d=2): P_0(A_l) in {0,1}; Kalikow (all d): P_0(A_l union A_{-l}) in {0,1}; d >= 3 directional law open. Standing obstruction: see the earlier attempt; the correction above replaces the flawed step only.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-c0044-zero-one-law-for-directional-transience-in-dimensions-d-3",
+    "Supersedes the 2026-09-07 morning attempt record"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:at-c0044",
+    "url": "urn:probability-research:20260907:claude-intake:at-c0044",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   },
+   "supersedes_existing": true
+  },
+  {
+   "key": "at-c0045",
+   "namespace": "probability.randomenvironment",
+   "logical_name": "attempt-c0045-does-positive-velocity-imply-the-polynomial-ballisticity-condition-p-m",
+   "kind": "concept",
+   "title": "Attempt on Does positive velocity imply the polynomial ballisticity condition (P)_M? (corrected)",
+   "statement": "ATTEMPT RECORD (SUPERSEDING REVISION 2026-09-07 12:4x after the Codex holder's review), author-checked only. CORRECTION of C0045-A001. A001 asserted '(P)_M for large M <=> E[tau_1^{M'}] < infinity for some M' growing with M'. Only one direction is supported by the source's slab decomposition: (P)_M gives polynomial tails for exit probabilities, hence moment bounds on tau_1 of order growing with M. The converse (high moments of tau_1 imply (P)_M) is not established and A001 should not have written an equivalence. The question 'does positive velocity imply (P)_M' stands as a self-improvement question in one direction only. Key identity: (P)_M => moment bounds on tau_1 (source); moments => (P)_M unsupported. Standing obstruction: see the earlier attempt; the correction above replaces the flawed step only.",
+   "proof_text": null,
+   "assumptions": [
+    "Refers to the open problem node open-problem-c0045-does-positive-velocity-imply-the-polynomial-ballisticity-condition-p-m",
+    "Supersedes the 2026-09-07 morning attempt record"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:at-c0045",
+    "url": "urn:probability-research:20260907:claude-intake:at-c0045",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   },
+   "supersedes_existing": true
+  },
+  {
+   "key": "hm",
+   "namespace": "probability.determinantal",
+   "logical_name": "harmonic-mean-product-domination-equivariant-determinantal-finite-group",
+   "kind": "lemma",
+   "title": "Harmonic-mean product-measure domination for equivariant determinantal processes on a finite group",
+   "statement": "PRIVATE AUTHOR-CHECKED DRAFT (revision 2), no independent review. Let Gamma be a finite group and Q a Gamma-equivariant positive contraction on l^2(Gamma) with 0 < Q < I, and P_Q the determinantal measure with kernel Q. Let HM(Q) be the harmonic mean of the eigenvalues of Q. Then P_Q stochastically dominates the product Bernoulli measure of density HM(Q), and P_Q is dominated by the product measure of density 1 - HM(I - Q). Precise chain: the minimal conditional ODDS of presence is s_min = 1/(J^{-1})_ee = HM/(1 - HM) with J = Q(I-Q)^{-1}, and the minimal conditional PROBABILITY is s_min/(1 + s_min) = 1/(Q^{-1})_ee = HM(Q) (revision 2 states the odds and the probability separately, after a reviewer noted the two had been conflated in a side note). This is weaker than Lyons's Conjecture 5.7 (geometric mean / Fuglede-Kadison determinant), which numerical monotone-coupling linear programs on Z/nZ, n <= 6, satisfy exactly, with FK + 0.01 failing on a tested instance; those LP results are floating-point evidence, not certificates.",
+   "proof_text": "Write J = Q(I - Q)^{-1}, so that P_Q(X = A) = det(I - Q) det(J_A). For a site e and configuration B on Gamma minus e, P_Q(e in X | X minus e = B) = s_B/(1 + s_B) with s_B = det J_{B union e}/det J_B = 1/((J_{B union e})^{-1})_{ee}. For positive definite M and S subset S' containing e, ((M_{S'})^{-1})_{ee} >= ((M_S)^{-1})_{ee}, so s_B is nonincreasing in B and its minimum is s_min = 1/(J^{-1})_{ee} = 1/((Q^{-1})_{ee} - 1). Equivariance makes Q a convolution operator diagonalised by the characters, so (Q^{-1})_{ee} = (1/|Gamma|) trace(Q^{-1}) = 1/HM(Q); hence s_min = HM/(1 - HM) and the minimal conditional probability is s_min/(1 + s_min) = HM(Q). Holley's inequality with a product measure as the smaller measure reduces to this one-site condition, so P_Q dominates Bernoulli(HM(Q))^Gamma; the complement process has kernel I - Q, giving the upper domination.",
+   "assumptions": [
+    "Finite group Gamma",
+    "Q Gamma-equivariant with 0 < Q < I",
+    "Holley's inequality in its product-measure form"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:hm",
+    "url": "urn:probability-research:20260907:claude-intake:hm",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   },
+   "supersedes_existing": true
+  },
+  {
+   "key": "lp",
+   "namespace": "probability.determinantal",
+   "logical_name": "union-marginal-coupling-of-projection-determinantal-laws-lp-feasible-evidence",
+   "kind": "concept",
+   "title": "Lyons's union-marginal coupling question: transportation polytope feasible in every tested instance (floating-point evidence), naive conditional splitting fails",
+   "statement": "PRIVATE NUMERICAL EVIDENCE (revision 2), not a proof and not an exact certificate. Lyons (ICM 2014, Question 2.8) asks whether for H = H_1 (+) H_2 orthogonal in l^2(E) there is a coupling of P_{H_1} and P_{H_2} whose union has law P_H; the union must be disjoint by cardinality, so the question is the nonemptiness of a transportation polytope with three marginals. A floating-point LP (HiGHS, minimum total violation) reported violation 0.0 on 1360 random instances with |E| in {3,...,6}, on |E| = 7 and 8 generic instances, on Fourier-mode subspaces of cycles and on star-space splits of the K_4 edge space. Revision 2 records the reviewer's point that double-precision feasibility is evidence only; an exact rational LP on rational-kernel instances is the next step. The naive conditional splitting fails to reproduce the P_{H_2} marginal (direct computation on |E| = 4). Open: a general construction.",
+   "proof_text": null,
+   "assumptions": [
+    "Finite E, orthogonal subspaces",
+    "Floating-point evidence only"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:lp",
+    "url": "urn:probability-research:20260907:claude-intake:lp",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   },
+   "supersedes_existing": true
+  },
+  {
+   "key": "sub",
+   "namespace": "probability.determinantal",
+   "logical_name": "determinantal-symbol-in-k-theta-splits-into-independent-sublattice-copies",
+   "kind": "lemma",
+   "title": "A stationary determinantal process whose symbol is a function of k theta is an interleaving of independent copies on the k residue classes",
+   "statement": "PRIVATE AUTHOR-CHECKED DRAFT (revision 2), no independent review. Let f(theta) = g(k theta) for an integer k >= 2 and a symbol g into [0,1]; then the restrictions of the stationary determinantal process P_f to the residue classes kZ + j are independent and each is P_g after reindexing. Consequence for Lyons's Question 5.4: if P_g is an (m/k + 1)-block factor of an i.i.d. process then P_f is an (m + 1)-block factor. Revision 2 corrects the scope: this settles the question only when the reduced symbol g is a proved case, i.e. degree 1 (so f(theta) = a + b cos(m theta) for any m), and NOT all even degrees; for f of degree 4 the reduction produces degree 2, itself open.",
+   "proof_text": "The Fourier coefficients of g(k theta) vanish off multiples of k, so K(x,y) = f-hat(x - y) = 0 unless x = y mod k; a determinantal measure with block-diagonal kernel is the product of the block measures (all minors factorise and correlation functions determine the law); within a class the kernel is g-hat(x - y). The block-factor consequence: interleave k independent block-factor constructions with independent i.i.d. sequences on the classes; the value at x depends on the window {x, ..., x + m}.",
+   "assumptions": [
+    "f = g(k .) with g a symbol into [0,1]",
+    "Block-diagonal kernels give product measures",
+    "Settled cases: reduced degree 1 only"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:sub",
+    "url": "urn:probability-research:20260907:claude-intake:sub",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   },
+   "supersedes_existing": true
+  },
+  {
+   "key": "op-c0007",
+   "namespace": "probability.gaussian",
+   "logical_name": "open-problem-c0007-profile-of-near-extremal-level-sets-of-the-2d-dgff",
+   "kind": "concept",
+   "title": "Resolved: Profile of near-extremal level sets of the 2D DGFF",
+   "statement": "STATUS CHANGE 2026-09-07 12:4x: NO LONGER OPEN. The measure eta^D_N = (1/log N) sum_x e^{alpha(h_x - m_N)} delta_{x/N} x delta_{(m_N - h_x)/sqrt(log N)} converges in law to c Z^D(dx) x 1_{[0,infty)}(h) h e^{-h^2/2g} dh. Resolution: Biskup, Gufler and Louidor, arXiv 2010.13939v3, Theorem 2.3 (journal version 2024): the near-extremal profile of Conjecture 16.7 is proved. Identified by the Codex holder on 2026-09-07 11:15 his clock; source PDF read and archived on its side. Source posing it: Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes, Conjecture 16.7, p. 222. This node supersedes the morning 'open problem' revision; do not treat as a target.",
+   "proof_text": null,
+   "assumptions": [
+    "Posed in Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes",
+    "Resolved or refuted in the literature per the Codex holder's fetched source; verify before citing"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:op-c0007",
+    "url": "urn:probability-research:20260907:claude-intake:op-c0007",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   },
+   "supersedes_existing": true
+  },
+  {
+   "key": "op-c0042",
+   "namespace": "probability.randomenvironment",
+   "logical_name": "open-problem-c0042-ballisticity-under-the-ellipticity-moment-condition",
+   "kind": "concept",
+   "title": "Resolved: Ballisticity under the ellipticity moment condition",
+   "statement": "STATUS CHANGE 2026-09-07 12:4x: NO LONGER OPEN. For d >= 2, is every RWRE satisfying (E), (IID) and max_e E[1/(1 - omega(0,e) omega(0,-e))] < infinity which is transient in direction l ballistic in direction l? (Known for Dirichlet environments in d >= 3 by Sabot.) Resolution: Refuted as a criterion: Fribergh and Kious, arXiv 1404.2060v2, Proposition 4.4 (directionally transient, zero-speed RWRE in d >= 3 with uniformly positive edge escape); the source's displayed condition also carries a site-index typo. Identified by the Codex holder 12:02 his clock. Source posing it: Drewitz and Ramirez: Selected topics in random walks in random environment, Open question 2.22, p. 25. This node supersedes the morning 'open problem' revision; do not treat as a target.",
+   "proof_text": null,
+   "assumptions": [
+    "Posed in Drewitz and Ramirez: Selected topics in random walks in random environment",
+    "Resolved or refuted in the literature per the Codex holder's fetched source; verify before citing"
+   ],
+   "domain": "probability theory",
+   "source": {
+    "source_id": "owner-probability-intake-claude-20260907:op-c0042",
+    "url": "urn:probability-research:20260907:claude-intake:op-c0042",
+    "revision": "author-checked-private-20260907-v1",
+    "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+    "excerpt": null
+   },
+   "supersedes_existing": true
+  }
+ ],
+ "relations": [
+  {
+   "from_key": "at-c0002",
+   "to_existing_logical": "math:probability.gaussian:open-problem-c0002-fluctuations-and-large-deviations-of-intermediate-level-sets-of-the-2d",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem"
+  },
+  {
+   "from_key": "at-c0004",
+   "to_existing_logical": "math:probability.gaussian:open-problem-c0004-explicit-density-of-the-position-of-the-dgff-maximum",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem"
+  },
+  {
+   "from_key": "at-c0033",
+   "to_existing_logical": "math:probability.determinantal:open-problem-c0033-concavity-of-the-entropy-of-determinantal-measures-in-the-kernel",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem"
+  },
+  {
+   "from_key": "at-c0040",
+   "to_existing_logical": "math:probability.randomenvironment:open-problem-c0040-absolutely-continuous-invariant-measure-for-the-environment-seen-from",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem"
+  },
+  {
+   "from_key": "at-c0044",
+   "to_existing_logical": "math:probability.randomenvironment:open-problem-c0044-zero-one-law-for-directional-transience-in-dimensions-d-3",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem"
+  },
+  {
+   "from_key": "at-c0045",
+   "to_existing_logical": "math:probability.randomenvironment:open-problem-c0045-does-positive-velocity-imply-the-polynomial-ballisticity-condition-p-m",
+   "kind": "depends_on",
+   "rationale": "The attempt is about this problem"
+  }
+ ]
+}

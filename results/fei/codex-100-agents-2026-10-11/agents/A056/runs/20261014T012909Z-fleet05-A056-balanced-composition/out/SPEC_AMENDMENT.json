@@ -1,0 +1,11 @@
+{
+ "helper_version":"A056-biased-collision-v2-rational-interval",
+ "prior_attempt":"v1 full run manually stopped below 300 seconds after about 260 seconds without completion; no counterexample or successful full validation reported",
+ "reason":"Small pilot underestimated large integer sign-comparison cost on interior scalar grid",
+ "domain_case_count_symmetry":"Unchanged from SPEC.json: 4913 scalar triples,8192 Boolean roots,16384 references; no symmetry",
+ "arithmetic":"Same exact rational prime-log vectors; decisive sign via certified 64-bit rational ln bounds from 24-term atanh series and explicit remainder after power-two range reduction; ambiguous cases fall back to integer product comparison",
+ "memory_estimate_mb":120,
+ "max_runtime_seconds":300,
+ "pilot_max_runtime_seconds":60,
+ "max_truth_table_dimension":5
+}

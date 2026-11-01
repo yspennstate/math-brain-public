@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "pilot": false,
+  "root_tables": 278,
+  "roundings": 1082,
+  "rank_family_checks": 556,
+  "small_tail_entropy_checks": 300,
+  "activation_fixtures": [
+    {
+      "name": "bent",
+      "n": 4,
+      "t": 1,
+      "k": 2,
+      "I": "1/2",
+      "H": {
+        "2": "6",
+        "7": "-49/32"
+      },
+      "norm_error_squared": "1/4"
+    },
+    {
+      "name": "point3",
+      "n": 5,
+      "t": 1,
+      "k": 2,
+      "I": "5/16",
+      "H": {
+        "2": "8",
+        "3": "-225/128",
+        "5": "-225/128"
+      },
+      "norm_error_squared": "1/8"
+    },
+    {
+      "name": "bent",
+      "n": 6,
+      "t": 2,
+      "k": 2,
+      "I": "7/8",
+      "H": {
+        "2": "8",
+        "13": "-169/128",
+        "3": "-27/128"
+      },
+      "norm_error_squared": "3/8"
+    },
+    {
+      "name": "point3",
+      "n": 8,
+      "t": 2,
+      "k": 2,
+      "I": "19/32",
+      "H": {
+        "2": "12",
+        "3": "-3753/2048",
+        "19": "-3249/2048",
+        "7": "-147/2048"
+      },
+      "norm_error_squared": "7/32"
+    },
+    {
+      "name": "escape_bent_k2_t4",
+      "n": 10,
+      "t": 4,
+      "k": 2,
+      "I": "47/32",
+      "H": {
+        "2": "12",
+        "7": "-2401/1024",
+        "3": "-675/2048",
+        "5": "-675/2048"
+      },
+      "norm_error_squared": "15/32"
+    }
+  ],
+  "assertions": 14808,
+  "own_assertions": 13418,
+  "utility_assertions": 1390,
+  "runtime_seconds": 2.699164899997413,
+  "helper_sha256": "02d86e7f3830b343b4d7d49c47f7c8c3fe203264d0cd48e06f87a05ede98c376",
+  "utility_sha256": "ce976e9b0bd12307c2ba55b35c1263be419325ca5d6f2549027d1db2668920c5",
+  "arithmetic": "integer Walsh, physical errors, Fraction, prime-log identities and rational atanh intervals; no float sign decisions",
+  "limitations": "all-k escape and approximation bounds proved analytically; finite checks do not prove the universal pair selection"
+}

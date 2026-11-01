@@ -1,0 +1,107 @@
+{
+  "agent": "w348",
+  "target_id": "P0017",
+  "as_of": "2026-10-10",
+  "ranking_date": "2026-09-07",
+  "prior_label": "attempted_un",
+  "reported_resolution": true,
+  "current_openness": "UNKNOWN_PENDING_INDEPENDENT_AUDIT",
+  "novel_full_target_proof_claimed": false,
+  "primary_sources": [
+    {
+      "id": "arxiv:2610.05474v1",
+      "url": "https://arxiv.org/html/2610.05474v1",
+      "authors": [
+        "Pierre Bizeul",
+        "Boaz Klartag",
+        "Joseph Lehec"
+      ],
+      "submitted": "2026-10-04T19:30:34Z",
+      "checked_sections": [
+        "Theorem 1.1",
+        "Lemma 2.2",
+        "Theorem 3.1",
+        "Lemma 3.8"
+      ],
+      "status": "AUTHOR_CLAIM_PRESENT; FULL_PROOF_NOT_INDEPENDENTLY_AUDITED",
+      "quote": "There exists a universal constant"
+    },
+    {
+      "id": "arxiv:2610.01447v2",
+      "url": "https://arxiv.org/abs/2610.01447v2",
+      "authors": [
+        "Zhao Song",
+        "Xinzhi Zhang"
+      ],
+      "submitted": "2026-10-04T21:21:03Z",
+      "checked_sections": [
+        "abstract",
+        "submission history"
+      ],
+      "status": "AUTHOR_CLAIM_PRESENT; FULL_PROOF_NOT_INDEPENDENTLY_AUDITED",
+      "quote": "resolving the KLS conjecture"
+    }
+  ],
+  "exact_statement_file": "STATEMENT_FIRST.md",
+  "hardest_unproved_input": "Universal all-degree Hilbert--Schmidt bounds for the Taylor tensors of every L2 tilt-average, sufficient by BKL Theorem 3.1.",
+  "selected_lemma": "Sharp deterministic block-symmetry tensor recovery for 1 <= p <= q and a robust approximate-symmetry bound.",
+  "owner_prior_work_check": {
+    "result": "GAUSSIAN_ONLY_ATTEMPT_RECOVERED; NO FULL OWNER PROOF FOUND IN TARGETED NAMED RECORDS",
+    "prior_problem_node": "claim_d2e9e3d859a16e515c09803220b9b26608e8a6b5a6ce584d2e99cf6613f89694",
+    "prior_attempt_node": "claim_fbc7554cdcce8efc8484f98a5982f7add13464aa5d5d53dfb9ca2710fc43e19f",
+    "database_mode": "ro",
+    "record_file": "checks/prior_records.json",
+    "coverage": "Named intake records, H/I attempt directories, Lean annotated ranking, two owner solved registers, and targeted population-store P0017 cards. Not an exhaustive owner-work or novelty audit."
+  },
+  "store_mutation": false,
+  "formal_verification": {
+    "performed": false,
+    "theorem": null,
+    "trusted_axioms": null,
+    "admitted_placeholders": null
+  },
+  "brain_states": {
+    "prepared": true,
+    "submitted": true,
+    "reviewed": false,
+    "ingested": false,
+    "retrievable": false
+  },
+  "original_primary_source": {
+    "id": "arxiv:2603.29571v1",
+    "url": "https://arxiv.org/html/2603.29571v1",
+    "locator": "Entry 13, Conjecture 30",
+    "license": "CC-BY-4.0",
+    "statement_recovered": "h(mu)>=c/sqrt(||Cov(mu)||_op); in isotropic position h(mu)>=c",
+    "notation_note": "The printed halfspace display mixes H and S; the adjacent covariance-normalized formulation is explicit and is used here."
+  },
+  "compute_check": {
+    "receipt": "checks/compute_gate.json",
+    "results": "checks/exact_results.json"
+  },
+  "submission": {
+    "draft_file": "drafts/bundle_001.json",
+    "intended_path": "~/math-brain-inbox/w348/bundle_001.json",
+    "entry_kind": "concept",
+    "theorem_promotion_allowed": false
+  },
+  "independent_reviews": {
+    "observed_at_utc": "2026-10-10T04:59:49.707963+00:00",
+    "reviewer": "w349",
+    "source_file": "~/brain_workers/w349/PEER_AUDIT.md",
+    "independent_precommitment": "~/brain_workers/w349/PEER_L1_INDEPENDENT.md",
+    "verdicts": {
+      "w348-L1": "KEEP",
+      "w348-L2": "KEEP",
+      "w348-L3": "KEEP",
+      "w348-L4": "FIX: finite-fourth-moment derivative domain"
+    },
+    "repair_applied": "L4 defines U2 under finite fourth moments and identifies U2=T2 only if exponential moments exist near zero; current ATTEMPT, claims and submitted degree-two concept agree.",
+    "repair_confirmation": "PENDING",
+    "final_referee": "w350",
+    "final_referee_verdict": "PENDING",
+    "full_target_proof_verdict": "NOT_CLAIMED",
+    "account_provenance": "Different account provenance not verified by w348."
+  },
+  "brain_state_semantics": "False means no verified completion receipt in this packet, not proof that an external event did not occur. Adversarial component review is partial; final referee review is pending."
+}

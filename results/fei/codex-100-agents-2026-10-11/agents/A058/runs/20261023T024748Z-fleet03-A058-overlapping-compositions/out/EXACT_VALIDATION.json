@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "helper": "A058-mux-v7-exact-1",
+  "domain": "all 65536 ordered pairs on 3 physical data coordinates; 196608 one-query restrictions; no symmetry",
+  "arithmetic": "exact integer Walsh, prime-log forms /512, BigInt-certified 4096 log intervals with exact-power fallback",
+  "counts": {
+    "pairs": 65536,
+    "posterior_nonnegative": 65536,
+    "upper_bound": 65536,
+    "disagreement_source": 65536,
+    "data_identities": 196608,
+    "mass_influence": 65536,
+    "exact_fallback": 0
+  },
+  "distinct_sign_forms": 35,
+  "bent": [
+    {
+      "m": 1,
+      "n": 2,
+      "N": "4",
+      "positive": "3",
+      "negative": "1",
+      "J": "1/4",
+      "source_influence": "4/4",
+      "gain_over_J_lower": 1,
+      "R_over_J_lower": -3
+    },
+    {
+      "m": 2,
+      "n": 4,
+      "N": "16",
+      "positive": "10",
+      "negative": "6",
+      "J": "1/16",
+      "source_influence": "8/16",
+      "gain_over_J_lower": 3,
+      "R_over_J_lower": -1
+    },
+    {
+      "m": 3,
+      "n": 6,
+      "N": "64",
+      "positive": "36",
+      "negative": "28",
+      "J": "1/64",
+      "source_influence": "12/64",
+      "gain_over_J_lower": 5,
+      "R_over_J_lower": 1
+    },
+    {
+      "m": 4,
+      "n": 8,
+      "N": "256",
+      "positive": "136",
+      "negative": "120",
+      "J": "1/256",
+      "source_influence": "16/256",
+      "gain_over_J_lower": 7,
+      "R_over_J_lower": 3
+    },
+    {
+      "m": 5,
+      "n": 10,
+      "N": "1024",
+      "positive": "528",
+      "negative": "496",
+      "J": "1/1024",
+      "source_influence": "20/1024",
+      "gain_over_J_lower": 9,
+      "R_over_J_lower": 5
+    },
+    {
+      "m": 6,
+      "n": 12,
+      "N": "4096",
+      "positive": "2080",
+      "negative": "2016",
+      "J": "1/4096",
+      "source_influence": "24/4096",
+      "gain_over_J_lower": 11,
+      "R_over_J_lower": 7
+    }
+  ],
+  "elapsed_ms": 8042,
+  "memory": "estimated under100MB; unmeasured",
+  "scope": "finite validation; all-dimensional proof in PROOF.md; independent review pending; FEI OPEN"
+}

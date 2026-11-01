@@ -1,0 +1,15 @@
+{
+  "schema_version": 2,
+  "stream_id": "B03",
+  "primary_packet_id": "A014",
+  "claims": [{
+    "claim_id": "B03-A014-ANTICHAIN-ADDRESS-OVERLAP-v1",
+    "gap_id": "GU-COHERENT-UPPER-SET-OVERLAP",
+    "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+    "scope": "Every finite k-selector among parity branches whose 2^k data supports form an antichain, with arbitrary common character and unbounded physical-coordinate reuse.",
+    "statement": "G=k/2-2^{-k} sum_{i,z} log2 d_i(z), I=|C|+k/2+2^{-k}sum_z|A_z|, hence G<=I with no dimension, arity, overlap, or congestion loss.",
+    "universal_consequence": "All coherent overlap created by restricting antichain character branches is an exact nonpositive signed refund; this mechanism cannot obstruct universal GU.",
+    "not_claimed": ["universal GU", "full FEI", "comparable initial branch rows", "noncharacter-row mergers", "independent review acceptance"],
+    "review_targets": ["A086", "A094"]
+  }]
+}

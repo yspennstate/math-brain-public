@@ -1,0 +1,90 @@
+{
+  "helper_version": "df0ea68352541733093f215e40d386b8b413d347e6140364ed51cedc7a7f7fe3",
+  "family": "Disjoint product of L actual nine-bit GF4 selector-carrier modules, with the ORIGINAL product of actual Fourier marginal references; query each selector and retain its full inherited reference",
+  "domain": {
+    "cell_transport_L": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "compact_L": [
+      1,
+      2,
+      3,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "pilot_cell_L": [
+      1,
+      2
+    ],
+    "pilot_compact_L": [
+      1,
+      2,
+      4
+    ],
+    "all_prefix_lengths": true,
+    "all_physical_outcomes": true,
+    "compact_prefixes": {
+      "1": [
+        0,
+        1
+      ],
+      "2": [
+        0,
+        1,
+        2
+      ],
+      "3": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "4": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "8": [
+        0,
+        1,
+        4,
+        8
+      ],
+      "16": [
+        0,
+        1,
+        8,
+        16
+      ],
+      "32": [
+        0,
+        1,
+        16,
+        32
+      ],
+      "64": [
+        0,
+        1,
+        32,
+        64
+      ]
+    }
+  },
+  "case_count": "Four complete cell-history trees (L1..4), with 4^L cells; eight fixed compact widths and frozen prefixes (all t for L<=4, t in {0,1,L/2,L} otherwise), binomial k=0..t; one raw nine-bit Boolean module and both children.",
+  "symmetry": "Exchangeable module query order and H-small Fourier atoms are proved in PROOF; all outcome histories retained in cell replay; compact binomial grouping is exact",
+  "arithmetic": "Integer Boolean character sums/FWHT and physical edges; Fraction reference transport; prime-log identities at L<=4; separate rational log interval arithmetic for compact L<=64, no integer factorization at large widths",
+  "memory_estimate_mb": 80,
+  "pilot_max_seconds": 55,
+  "max_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "negative_control": "At L=2 the actual first-selector prediction is 53/256 rather than tensor prediction1/8; actual terminal KL differs from tensor child KL. Retain compensating outcome credit explicitly.",
+  "amendment_before_any_execution": "Compact prefixes explicitly limited as above; analytic proof covers all t and all L. No search has run before this amendment."
+}

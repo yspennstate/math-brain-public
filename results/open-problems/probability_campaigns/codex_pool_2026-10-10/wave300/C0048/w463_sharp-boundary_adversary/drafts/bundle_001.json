@@ -1,0 +1,115 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w463",
+  "bundle_slug": "c0048-three-state-minimax-route-boundary-draft-20261010",
+  "entries": [
+    {
+      "key": "minimax",
+      "namespace": "probability.statistical-mechanics",
+      "logical_name": "potts-three-state-mean-field-minimax-barrier-draft",
+      "kind": "concept",
+      "title": "Draft: exact three-state mean-field minimax barrier",
+      "statement": "AUTHOR PROOF; INDEPENDENT REVIEW PENDING. For S={x_i>=0,sum x_i=1}, F_J(x)=sum x_i log x_i-(J/2)sum x_i^2 (0 log 0=0), and J0=4 log 2, the global minimizers are u=(1/3,1/3,1/3) and permutations of v=(2/3,1/6,1/6). The infimum over continuous paths u to v of their maximum F_J0 excess above the global minimum is exactly Delta=log 3-(19/12)log 2>0, attained via (1/2,1/4,1/4). This is a mean-field auxiliary result; C0048 and novelty remain unverified.",
+      "proof_text": null,
+      "assumptions": [
+        "q=3 mean-field simplex",
+        "natural logarithms",
+        "continuous full-simplex paths"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w463:C0048-minimax-20261010",
+        "url": "file:///~/brain_workers/w463/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10; w464 review pending",
+        "license": "owner-own-work (campaign proof and route audit; primary sources attributed in SOURCE_STATUS.json)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "interpolation",
+      "namespace": "probability.statistical-mechanics",
+      "logical_name": "potts-approximate-minimizer-continuous-interpolation-draft",
+      "kind": "concept",
+      "title": "Draft: sharp obstruction to an approximation-only jump bridge",
+      "statement": "AUTHOR PROOF; INDEPENDENT REVIEW PENDING. Let S={x_i>=0,sum_{i=1}^3 x_i=1}, F_J(x)=sum x_i log x_i-(J/2)sum x_i^2 with 0 log 0=0, J0=4 log 2, u=(1/3,1/3,1/3), v=(2/3,1/6,1/6), and Delta=log 3-(19/12)log 2. The sublevel {F_J0<=min_S F_J0+epsilon} contains a continuous path u to v iff epsilon>=Delta. For every epsilon>Delta, choose 0<h<min(J0,3(epsilon-Delta)); x(m)=((1+2m)/3,(1-m)/3,(1-m)/3) with m(J) linear from 0 to 1/2 across [J0-h,J0+h] obeys F_J(x(m(J)))-min_S F_J<=Delta+|J-J0|/3<epsilon continuously. This inequality alone cannot force a jump. The selector is not asserted to be a lattice Gibbs magnetization.",
+      "proof_text": null,
+      "assumptions": [
+        "q=3 mean-field simplex",
+        "natural logarithms",
+        "epsilon>Delta for interval interpolation"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w463:C0048-interpolation-20261010",
+        "url": "file:///~/brain_workers/w463/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10; w464 review pending",
+        "license": "owner-own-work (campaign proof and route audit; primary sources attributed in SOURCE_STATUS.json)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "allowance",
+      "namespace": "probability.statistical-mechanics",
+      "logical_name": "potts-biskup-chayes-coarse-error-barrier-gate-draft",
+      "kind": "concept",
+      "title": "Draft: normalized error obstruction for the q=3 mean-field route",
+      "statement": "AUTHOR DERIVATION; INDEPENDENT REVIEW PENDING. In Biskup-Chayes Main Theorem (1.12), the q=3 rescaled Potts inner product gives n=2,kappa=2/3 and allowance E_d(J0)=(2J0/3)I_d, where J0=4 log 2, a(k)=d^(-1)sum cos(k_j), and I_d=integral a^2/(1-a) under normalized torus measure. For integer d>=3, symmetry gives I_d>=1/(2d). Hence E_3(J0)>=4 log 2/9, more than 272.8 times Delta=log 3-(19/12)log 2. E_d(J0)<Delta is impossible for d<=818; d=819 passing this necessary lower-bound test is not sufficient. This bounds a theorem allowance, not actual Gibbs error or the lattice dimension at which discontinuity begins.",
+      "proof_text": null,
+      "assumptions": [
+        "integer d>=3",
+        "q=3",
+        "unmodified Main Theorem allowance",
+        "probability-vector normalization F_J=sum x_i log x_i-(J/2)sum x_i^2"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w463:C0048-allowance-20261010",
+        "url": "file:///~/brain_workers/w463/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10; w464 review pending",
+        "license": "owner-own-work (campaign proof and route audit; primary sources attributed in SOURCE_STATUS.json)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "critical-scope",
+      "namespace": "probability.statistical-mechanics",
+      "logical_name": "potts-mean-field-jump-first-critical-point-premise-draft",
+      "kind": "concept",
+      "title": "Draft: a jump location needs identification with the first critical point",
+      "statement": "SOURCE-SCOPE DRAFT; INDEPENDENT REVIEW PENDING. C0048 asks for positive color-boundary spontaneous magnetization at the first critical point of the standard nearest-neighbor zero-field Potts model on Z^d for every integer q>=3,d>=3. The cited Biskup-Chayes Theorem 2.1 proves a jump at J_t near J_MF in sufficiently large d, while its following paragraph explicitly does not establish m_*(J)=0 for every J<J_t. Invoking that theorem alone requires an additional argument identifying J_t=J_c to obtain the first-critical-point claim. This does not assess other large-d results; current C0048 openness is UNKNOWN.",
+      "proof_text": null,
+      "assumptions": [
+        "exact conclusion of Biskup-Chayes Theorem 2.1",
+        "C0048 uses critical spontaneous magnetization, not arbitrary secondary jumps"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w463:C0048-critical-scope-20261010",
+        "url": "file:///~/brain_workers/w463/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10; w464 review pending",
+        "license": "owner-own-work (campaign proof and route audit; primary sources attributed in SOURCE_STATUS.json)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "interpolation",
+      "to_key": "minimax",
+      "kind": "depends_on",
+      "rationale": "The exact minimax barrier proves both the absence below Delta and the explicit connecting path at Delta."
+    },
+    {
+      "from_key": "allowance",
+      "to_key": "minimax",
+      "kind": "depends_on",
+      "rationale": "The normalized Biskup-Chayes allowance is compared with the exact Delta separating the three-state mean-field minima."
+    },
+    {
+      "from_key": "critical-scope",
+      "to_key": "allowance",
+      "kind": "semantic_association",
+      "rationale": "Both delimit what the same mean-field theorem can certify: error size and identification of the jump with first criticality are separate missing inputs."
+    }
+  ]
+}

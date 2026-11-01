@@ -1,0 +1,2678 @@
+1: \documentclass[11pt]{amsart}
+2: \usepackage[T1]{fontenc}
+3: \usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem}
+4: \usepackage[margin=1in]{geometry}
+5: \usepackage{booktabs}
+6: \usepackage[hidelinks]{hyperref}
+7: \newtheorem{mainthm}{Theorem}
+8: \renewcommand{\themainthm}{\Alph{mainthm}}
+9: \newtheorem{maincor}[mainthm]{Corollary}
+10: \newtheorem{theorem}{Theorem}[section]
+11: \newtheorem{proposition}[theorem]{Proposition}
+12: \newtheorem{lemma}[theorem]{Lemma}
+13: \newtheorem{corollary}[theorem]{Corollary}
+14: \theoremstyle{definition}
+15: \newtheorem{definition}[theorem]{Definition}
+16: \theoremstyle{remark}
+17: \newtheorem{remark}[theorem]{Remark}
+18: \newcommand{\bits}{\{-1,1\}}
+19: \newcommand{\E}{\mathbb E}
+20: \renewcommand{\P}{\mathbb P}
+21: \newcommand{\R}{\mathbb R}
+22: \newcommand{\N}{\mathbb N}
+23: \newcommand{\HH}{\mathsf H}
+24: \newcommand{\I}{\mathsf I}
+25: \newcommand{\D}{\mathsf D}
+26: \DeclareMathOperator{\Var}{Var}
+27: \DeclareMathOperator{\Inf}{Inf}
+28: \DeclareMathOperator{\supp}{supp}
+29: \newcommand{\wh}[1]{\widehat{#1}}
+30: \newcommand{\eps}{\varepsilon}
+31: \newcommand{\symdiff}{\mathbin{\triangle}}
+32: \newcommand{\Lp}{L_*}
+33: \newcommand{\Lmix}{L_{\mathrm{mix}}}
+34: \newcommand{\Clev}{C_{\mathrm{lev}}}
+35: \newcommand{\Creg}{C_{\mathrm{reg}}}
+36: \newcommand{\Cmulti}{C_m}
+37: \setlist{itemsep=3pt,topsep=5pt}
+38: \setlength{\emergencystretch}{1em}
+39: \raggedbottom
+40: \hypersetup{pdftitle={Fourier entropy of threshold functions and their compositions},pdfauthor={Yitzchak Shmalo}}
+41: \title[Fourier entropy of threshold functions]{Fourier entropy of threshold functions and their compositions}
+42: \author{Yitzchak Shmalo}
+43: \address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+44: \email{<email>}
+45: \date{11 October 2026}
+46: \subjclass[2020]{42C10, 60C05, 68Q17, 06E30}
+47: \keywords{Fourier entropy--influence conjecture, linear threshold function, regular Boolean function, antichain, product measure, Boolean formula}
+48: \begin{document}
+49: \begin{abstract}
+50: We prove the Fourier entropy--influence inequality for every linear threshold function, with a constant below $8.937$ and no restrictions on its weights or threshold. The argument applies to regular Boolean functions and gives logarithmic bounds for their Boolean combinations and for unions with bounded variable overlap. Character multiplication preserves the estimates and yields bounds by influence minus variance. Under arbitrary product measures, symmetric thresholds satisfy the strengthened inequality needed for read-once composition, uniformly in depth and fan-in. A joint description of each Fourier set refines the overlap estimate and recovers constant bounds for addressing. Exact selector identities extend the bound to orthogonal multiplexers with shared data. Rare activation preserves the optimal constant of unrestricted FEI. The proofs combine pivotal antichains, spectral reference measures, and product-measure composition.
+51: \end{abstract}
+52: \maketitle
+53: \enlargethispage{3pt}
+54: 
+55: \section{Introduction}
+56: 
+57: For a Boolean function $f:\bits^n\to\bits$, write
+58: \[
+59:  f(x)=\sum_{S\subseteq[n]}\wh f(S)\chi_S(x),
+60:  \qquad
+61:  \chi_S(x)=\prod_{i\in S}x_i,
+62: \]
+63: where the underlying measure is uniform unless another measure is specified.
+64: The squared Fourier coefficients form a probability distribution. Its entropy and mean set size are
+65: \begin{equation}\label{eq:HI}
+66:  \HH(f)=\sum_{S\subseteq[n]}\wh f(S)^2\log\frac1{\wh f(S)^2},
+67:  \qquad
+68:  \I(f)=\sum_{S\subseteq[n]}|S|\wh f(S)^2.
+69: \end{equation}
+70: All logarithms denoted by $\log$ are to base $2$; $\ln$ denotes the natural logarithm.
+71: The Fourier entropy--influence conjecture of Friedgut and Kalai \cite{FK96} asserts that
+72: $\HH(f)\le C\I(f)$ for an absolute constant $C$ and every Boolean function.
+73: 
+74: A linear threshold function is a function
+75: \begin{equation}\label{eq:ltf}
+76:  f(x)=\operatorname{sgn}\left(\sum_{i=1}^n w_i x_i-\theta\right).
+77: \end{equation}
+78: We fix $\operatorname{sgn}(0)=1$; either convention can be represented by moving the threshold slightly off the finite set of attained scores. The weights may vanish, have either sign, or differ by arbitrarily large factors.
+79: 
+80: Our bounds use the quantity
+81: \begin{equation}\label{eq:D}
+82:  \D(f)=\sum_{i=1}^n\min\{\Inf_i(f),1-\Inf_i(f)\}
+83:       =\min_{U\subseteq[n]}\I(\chi_U f),
+84: \end{equation}
+85: where $\Inf_i(f)=\P[f(X)\ne f(X^{\oplus i})]$.
+86: Multiplication by a coordinate character permutes the Fourier coefficients, so it preserves entropy. In particular, a bound by $\D(f)$ gives FEI for every character multiple of $f$ at once.
+87: 
+88: A Boolean function is \emph{unate} if it becomes monotone after reversing some input coordinates.
+89: For a monotone function, coordinate $j$ is at least as desirable as coordinate $i$ if
+90: \begin{equation}\label{eq:desire}
+91:  f(x_{j=1,i=-1})\ge f(x_{j=-1,i=1})
+92: \end{equation}
+93: for every assignment to the other coordinates.
+94: We call a unate function \emph{regular} if, in a monotone orientation, its coordinates admit an order in which every earlier coordinate is at least as desirable as every later coordinate.
+95: Thus every linear threshold function is regular: orient the weights to be nonnegative and order them by decreasing magnitude.
+96: Here regularity refers to a coordinate order, and imposes no smallness condition on the largest weight.
+97: 
+98: Put
+99: \begin{equation}\label{eq:constants}
+100:  \begin{gathered}
+101:  \Clev=\log(4+e),\qquad \Lp=1+\ln2,\qquad \Lmix=2+\gamma,\\
+102:  \Creg=\Clev+2\log(e\pi)<8.937.
+103:  \end{gathered}
+104: \end{equation}
+105: Here $\gamma$ is Euler's constant.
+106: 
+107: \begin{mainthm}\label{thm:A}
+108: Every regular Boolean function $f$ satisfies
+109: \begin{equation}\label{eq:mainreg}
+110:  \HH(f)\le\Creg\,\D(f).
+111: \end{equation}
+112: Consequently, for every $U\subseteq[n]$, the function $g=\chi_Uf$ satisfies
+113: \[
+114:  \HH(g)\le\Creg\,\I(g),
+115:  \qquad
+116:  \HH(g)\le4\Creg\bigl(\I(g)-\Var(g)\bigr).
+117: \]
+118: These conclusions apply, in particular, to every linear threshold function.
+119: \end{mainthm}
+120: 
+121: The same method allows several coordinate orders to coexist. The component functions may depend on all the same variables, and their orientations may differ.
+122: 
+123: \begin{mainthm}\label{thm:B}
+124: Let $m\ge1$, let $h_1,\ldots,h_m$ be regular Boolean functions, let $F:\bits^m\to\bits$ be arbitrary, and put $f=F(h_1,\ldots,h_m)$. Then
+125: \begin{align}
+126:  \HH(f)&\le \left(11.238+\frac{17}{5}\log m\right)\I(f),\label{eq:multiI}\\
+127:  \HH(f)&\le \left(11.460+\frac{22}{5}\log m\right)\D(f).\label{eq:multiD}
+128: \end{align}
+129: For every character multiple $g=\chi_U f$, the second estimate also gives
+130: \[
+131:  \HH(g)\le \left(11.460+\frac{22}{5}\log m\right)\I(g)
+132: \]
+133: and
+134: \[
+135:  \HH(g)\le4\left(11.460+\frac{22}{5}\log m\right)
+136:                   \bigl(\I(g)-\Var(g)\bigr).
+137: \]
+138: The decimal constants in these statements are rounded upward.
+139: \end{mainthm}
+140: 
+141: This includes intersections, unions, parity combinations, and arbitrary Boolean combinations of $m$ halfspaces.
+142: It also includes every Boolean labeling of a linear score with at most $m$ transitions.
+143: The number of input variables and the geometry of the weights do not enter the bounds.
+144: 
+145: The proof extends further to a unate function whose coordinates split into $w$ desirability chains: one adds $\log w$ to the constant in Theorem~\ref{thm:A}. For combinations of $m$ such functions, one adds $\log w$ to the constants in Theorem~\ref{thm:B}; see Theorem~\ref{thm:width}.
+146: A different spectral reference measure gives a bound depending on variable overlap rather than the number of component functions.
+147: 
+148: \begin{mainthm}\label{thm:readk-intro}
+149: Suppose $f$ is a union or intersection of functions $h_1,\ldots,h_N$, each an arbitrary Boolean combination of at most $M$ regular functions, and every input variable is relevant to at most $k$ of the $h_l$. Then
+150: \[
+151:  \HH(f)\le\left(41+7\log k+\frac{29}{5}\log M\right)\I(f).
+152: \]
+153: Writing $\HH^+(f)=\sum_{S\ne\varnothing}\wh f(S)^2\log(1/\wh f(S)^2)$, one also has
+154: \[
+155:  \HH^+(f)\le
+156:  \left(132+\frac{118}{5}\log k+\frac{106}{5}\log M\right)
+157:  \bigl(\I(f)-\Var(f)\bigr).
+158: \]
+159: The number $N$ and the arities of all gates are unrestricted.
+160: \end{mainthm}
+161: 
+162: The case $M=1$ gives a bound depending only logarithmically on the variable overlap for unions and intersections of any number of halfspaces.
+163: The proof uses a reference distribution generated by a queue of gates.
+164: For each Fourier set, a directed spanning forest supplies one finite run; the disjoint intersections of its root supports with that Fourier set control the cost of activating rare gates.
+165: Signed pivotal pieces provide the same rank estimate as for one regular function, while a fixed-noise hypercontractive bound forces a rare gate's spectral sample to include enough of its variables.
+166: 
+167: 
+168: 
+169: For a product measure with probabilities $q_i=\P(y_i=1)$ on $\{0,1\}^n$, write $\wh f_\mu$ for the coefficients in the normalized product basis and put
+170: \[
+171:  \HH_\mu^+(f)=\sum_{S\ne\varnothing}\wh f_\mu(S)^2
+172:     \log\frac{\prod_{i\in S}4q_i(1-q_i)}{\wh f_\mu(S)^2},
+173:  \qquad
+174:  \Delta_\mu(f)=\I_\mu(f)-\Var_\mu(f).
+175: \]
+176: The normalization and the treatment of deterministic inputs are given in Section~\ref{bias:normalization}. On the uniform cube, $\HH^+$ is the contribution of the nonempty Fourier coefficients to $\HH$.
+177: 
+178: \begin{mainthm}\label{thm:formulas-intro}
+179: Every symmetric threshold satisfies
+180: \[
+181:  \HH_\mu^+(f)\le C_T\Delta_\mu(f),
+182:  \qquad C_T=80+\frac{460}{\ln2}<744,
+183: \]
+184: under every product measure. The same inequality holds for every read-once formula over symmetric threshold and parity gates, with arbitrary depth, fan-in, and negations. For uniform original inputs these formulas satisfy
+185: \[
+186:  \HH(f)\le744\I(f),\qquad
+187:  \HH(f)\le747\bigl(\I(f)-\Var(f)\bigr).
+188: \]
+189: \end{mainthm}
+190: 
+191: Here a symmetric threshold is a gate $\mathbf1[\sum_i y_i\ge t]$, with its output identified with $\{-1,1\}$. Read-once means that each original variable occurs in at most one leaf. The gate estimate is uniform over arities and induced output biases. The proof and further formula consequences appear in Sections~\ref{bias:section} and~\ref{comp:section}.
+192: 
+193: 
+194: The joint witness estimate in Proposition~\ref{prop:joint-witness}
+195: retains the cost of the gates used by an entire Fourier set and gives a
+196: constant bound for addressing inside the same queue construction.
+197: Section~\ref{sec:selectors} derives exact selector identities and
+198: constant-preserving closure under suitable Fourier-support separation.
+199: It also shows that unrestricted two-cell selectors and arbitrarily
+200: rare activations preserve the optimal constant of full FEI. These
+201: reductions specify the scope of the structured hypotheses.
+202: 
+203: \subsection{Earlier work}
+204: 
+205: O'Donnell, Wright and Zhou \cite{OWZ11} proved FEI for symmetric and fixed-part symmetric functions and for read-once decision trees. Their method relates derivative noise stability to spectral entropy; the spectral-level argument below refines their bound. Chakraborty, Kulkarni, Lokam and Saurabh \cite{CKLS16} proved, among other results, an $O(\sqrt n)$ entropy bound for linear threshold functions. The corrected version of their manuscript removes an earlier all-threshold claim. Chakraborty, Karmalkar, Kundu, Lokam and Saurabh \cite{CKKLS18} proved FEI with high probability for specified random models of linear threshold functions.
+206: 
+207: Shalev \cite{Shalev18} studied the read-$k$ DNF question and proved a min-entropy result for a restricted class of such formulas. Arunachalam, Chakraborty, Kouck\'y, Saurabh and de Wolf \cite{ACKSW21} established the min-entropy conjecture for read-$k$ DNF with fixed $k$. Theorem~\ref{thm:readk-intro} bounds the full Shannon entropy and applies more generally to unions and intersections of regular functions. Fourier concentration for small-read DNF was studied by Lecomte and Tan \cite{LT21}; Section~\ref{sec:consequences} records a direct concentration consequence of the entropy bound.
+208: 
+209: O'Donnell and Tan \cite{ODT13} introduced the product-measure strengthening of FEI used in composition and proved its closure under disjoint substitution. They obtained FEI for read-once formulas over any fixed finite gate basis. Our formula results use their composition principle; the additional input is a bound uniform in the arity of symmetric threshold gates, together with the threshold and regular-gate bounds above.
+210: 
+211: Keller, Mossel and Schlank \cite{KMS12} obtained general entropy bounds involving the coordinate influences; Han \cite{Han25} gives another proof of a bound of this form. Recent results also include the restriction methods of Gonz\'alez, MacManus and Pereyra \cite{GMP26} and Potapov's sharp bound for plateaued functions \cite{Potapov26}. The argument below instead controls a global reference measure on Fourier sets through pivotal antichains.
+212: 
+213: A complementary geometric case is the author's work on planar percolation \cite{Shmalo26}. It establishes entropy--influence comparison for crossing functions using spatial refinement and arm estimates, and also controls the entropy of pivotal sets. The spectral crossing question was stated by Garban, Pete and Schramm \cite[Section~11]{GPS10}; Kalai \cite[Conjecture~8]{Kalai18} asked for both spectral and pivotal entropy bounds.
+214: 
+215: \subsection{The argument}
+216: 
+217: The pivotal assignments of a regular function form an antichain on the coordinates preceding the pivotal coordinate. Resampling part of that predecessor set therefore gives a noise estimate relative to the mass of the derivative. In Fourier space, this bounds the expected logarithmic discrepancy between a coordinate's rank and the number of predecessors present in a spectral set.
+218: 
+219: A reference distribution on sets of a fixed size converts that rank bound into entropy. Several regular functions are handled by partitioning each pivotal set among its component functions and using the least expensive of their coordinate orders. To obtain the bound by $\D$, we multiply by the character that minimizes influence. This changes signs, but preserves the antichain supports of all derivative pieces outside the selected character. The remaining coordinates receive zero rank cost.
+220: 
+221: \section{Fourier and entropy preliminaries}\label{sec:prelim}
+222: 
+223: We record the identities used throughout. Standard background is given in \cite{OD14}.
+224: For a function on the uniform cube, set
+225: \[
+226:  d_i f(y)=\frac{f(y,1)-f(y,-1)}2.
+227: \]
+228: For Boolean $f$, the derivative takes values in $\{0,\pm1\}$ and
+229: \begin{equation}\label{eq:derivative}
+230:  \|d_i f\|_2^2=\Inf_i(f),\qquad
+231:  \wh{d_i f}(T)=\wh f(T\cup\{i\}),\qquad
+232:  \Var(f)=\sum_{S\ne\varnothing}\wh f(S)^2.
+233: \end{equation}
+234: Whenever $\alpha_i=\Inf_i(f)>0$, the probability law
+235: \begin{equation}\label{eq:derivlaw}
+236:  \nu_i(T)=\frac{\wh{d_i f}(T)^2}{\alpha_i}
+237: \end{equation}
+238: is the law of the Fourier set with $i$ deleted, conditional on containing $i$.
+239: 
+240: For a set of coordinates $U$, let $Y$ be obtained from a uniform $X$ by resampling each coordinate of $U$ with probability $t$, independently. Parseval's identity gives
+241: \begin{equation}\label{eq:partialnoise}
+242:  \E[d(X)d(Y)]=\sum_T\wh d(T)^2(1-t)^{|T\cap U|}.
+243: \end{equation}
+244: The right side is nonnegative even when $d$ takes both signs.
+245: 
+246: We shall use Gibbs' inequality also for subprobability reference measures. If $P$ is a probability law and $Q$ is nonnegative, $\sum Q\le1$, and $Q>0$ on the support of $P$, then
+247: \begin{equation}\label{eq:gibbs}
+248:  H(P)\le \E_P\log\frac1{Q}.
+249: \end{equation}
+250: This follows by normalizing $Q$ and applying nonnegativity of relative entropy.
+251: 
+252: \begin{lemma}[Spectral-level entropy]\label{lem:levelentropy}
+253: If $\mathcal S$ has law $\P(\mathcal S=S)=\wh f(S)^2$, then
+254: \[
+255:  H(|\mathcal S|)\le\Clev\I(f),\qquad \Clev=\log(4+e).
+256: \]
+257: \end{lemma}
+258: \begin{proof}
+259: Put $K=|\mathcal S|$ and $v=\Var(f)=\P(K>0)$.
+260: If $v=0$, the conclusion is immediate.
+261: As in the spectral-level argument of \cite[Theorem~5]{OWZ11},
+262: the edge-isoperimetric inequality gives
+263: $\I(f)\ge2p\log(1/p)$, where $p=\min\{\P(f=1),\P(f=-1)\}$.
+264: It implies
+265: \[
+266:  \I(f)\ge v+\tfrac12v\log(1/v).
+267: \]
+268: For completeness, after writing $q=1-2p=\sqrt{1-v}$, the latter comparison is equivalent to
+269: \[
+270:  (q-1)\log(1-q)+(1+q)\log(1+q)-2q\ge0.
+271: \]
+272: The left side vanishes at $0$ and $1$ and has second derivative
+273: $-2q/((1-q^2)\ln2)\le0$.
+274: Since $-(1-v)\ln(1-v)\le v$,
+275: \[
+276:  h_2(v)\le v\log(1/v)+(\log e)v
+277:           \le2\I(f)+(\log e-2)v.
+278: \]
+279: For $\rho=4/(4+e)$, use the geometric reference
+280: $q_k=(1-\rho)\rho^{k-1}$ on the positive integers. Gibbs' inequality gives
+281: \[
+282:  vH(K\mid K>0)
+283:  \le(\I(f)-v)\log\frac1\rho+v\log\frac1{1-\rho}.
+284: \]
+285: The coefficient of $v$ in the sum of these bounds is
+286: $\log e-2+\log(\rho/(1-\rho))=0$.
+287: The entropy chain rule therefore yields
+288: \[
+289:  H(K)\le\left(2+\log\frac1\rho\right)\I(f)
+290:        =\log(4+e)\I(f).
+291: \]
+292: Endpoints follow by continuity.
+293: \end{proof}
+294: 
+295: \begin{lemma}\label{lem:centering}
+296: For every Boolean $f$,
+297: \[
+298:  \HH(\chi_U f)=\HH(f),\qquad
+299:  \D(f)=\min_U\I(\chi_U f),\qquad
+300:  \D(f)\le4\bigl(\I(f)-\Var(f)\bigr).
+301: \]
+302: Moreover, $\D(\chi_U f)=\D(f)$.
+303: \end{lemma}
+304: \begin{proof}
+305: The coefficient identity
+306: $\wh{\chi_Uf}(S)=\wh f(S\symdiff U)$ proves entropy invariance.
+307: For each $i$, character multiplication either leaves $\Inf_i(f)$ unchanged or replaces it by $1-\Inf_i(f)$.
+308: This proves the minimization and invariance statements.
+309: 
+310: Put $\alpha_i=\Inf_i(f)$ and $c_i=\wh f(\{i\})$.
+311: Since $|c_i|=|\E d_i f|\le\E|d_i f|=\alpha_i$,
+312: \[
+313:  \min\{\alpha_i,1-\alpha_i\}
+314:  \le2\alpha_i(1-\alpha_i)\le2(\alpha_i-c_i^2).
+315: \]
+316: Summing and using $k\le2(k-1)$ for $k\ge2$ gives
+317: \[
+318:  \D(f)\le2\sum_{|S|\ge2}|S|\wh f(S)^2
+319:  \le4\sum_{|S|\ge2}(|S|-1)\wh f(S)^2
+320:  =4\bigl(\I(f)-\Var(f)\bigr).
+321: \]
+322: \end{proof}
+323: 
+324: The factor $4$ in the last universal comparison is sharp: for the conjunction of two coordinates, $\D=\I=1$ and $\Var=3/4$.
+325: 
+326: \section{Antichains and spectral ranks}\label{sec:rank}
+327: 
+328: \begin{lemma}\label{lem:pivotal-antichain}
+329: Let $f$ be monotone, and let every coordinate in $U_i$ be at least as desirable as $i$.
+330: On each fiber obtained by fixing the coordinates outside $U_i\cup\{i\}$, the support of $d_i f$ is an antichain in the cube on $U_i$.
+331: \end{lemma}
+332: \begin{proof}
+333: Suppose that $y<y'$ are two pivotal assignments on $U_i$, and choose a coordinate $j$ that changes from $-1$ to $1$ between them.
+334: Pivotality gives $f(y,i=1)=1$.
+335: Desirability gives $f(y^{j=1},i=-1)\ge f(y,i=1)=1$.
+336: Monotonicity then gives $f(y',i=-1)=1$, contradicting pivotality at $y'$.
+337: \end{proof}
+338: 
+339: \begin{lemma}\label{lem:antichain-density}
+340: An antichain in $\bits^q$ has density at most
+341: \[
+342:  c_q=2^{-q}\binom q{\lfloor q/2\rfloor}\le(q+1)^{-1/2}.
+343: \]
+344: \end{lemma}
+345: \begin{proof}
+346: Sperner's theorem \cite{Sperner28} bounds its size by $\binom q{\lfloor q/2\rfloor}$.
+347: For $q=2r$, put $b_r=4^{-r}\binom{2r}r$.
+348: Since $b_0=1$ and $b_{r+1}/b_r=(2r+1)/(2r+2)$, induction gives
+349: $b_r\le(2r+1)^{-1/2}$; the induction step is
+350: $(2r+1)(2r+3)\le(2r+2)^2$.
+351: For $q=2r+1$, the density is $b_r(2r+1)/(2r+2)\le(2r+2)^{-1/2}$.
+352: \end{proof}
+353: 
+354: \begin{lemma}[Relative noise estimate]\label{lem:antichain-noise}
+355: Let $d:\bits^N\to\{0,\pm1\}$, let $\alpha=\E d^2>0$, and suppose that the support of $d$ is an antichain on every fiber of a set $U$ of $r-1$ coordinates, in a fixed orientation.
+356: Then, for $0<t\le1$,
+357: \begin{equation}\label{eq:relative-noise}
+358:  \sum_T\wh d(T)^2(1-t)^{|T\cap U|}
+359:  \le\alpha\,\E c_B\le\frac{\alpha}{\sqrt{rt}},
+360:  \qquad B\sim\operatorname{Bin}(r-1,t).
+361: \end{equation}
+362: \end{lemma}
+363: \begin{proof}
+364: Resample the coordinates of $U$ at rate $t$, and denote the resampling mask by $R$.
+365: Given $X$ and the resampling mask $R$, the assignments for which $d(Y)\ne0$ form an antichain in a cube of dimension $|R|$.
+366: Lemma~\ref{lem:antichain-density} bounds their conditional probability by
+367: $c_{|R|}\le(|R|+1)^{-1/2}$.
+368: Since $|d|=d^2$ and $R$ is independent of $X$,
+369: \[
+370:  \E[d(X)d(Y)]
+371:  \le\E[|d(X)|\,|d(Y)|]
+372:  \le\alpha\,\E c_{|R|}
+373:  \le\alpha\,\E(|R|+1)^{-1/2}.
+374: \]
+375: Here $|R|\sim\operatorname{Bin}(r-1,t)$, and
+376: \[
+377:  \E\frac1{|R|+1}
+378:  =\int_0^1(1-t+ts)^{r-1}\,ds
+379:  =\frac{1-(1-t)^r}{rt}\le\frac1{rt}.
+380: \]
+381: Cauchy--Schwarz and \eqref{eq:partialnoise} finish the proof.
+382: \end{proof}
+383: 
+384: The lemma applies to arbitrary signs on any subset of a pivotal antichain. This point will allow both Boolean combinations and character multiplication.
+385: 
+386: \begin{lemma}[Rank tail and mean]\label{lem:ranktail}
+387: Under the hypotheses of Lemma~\ref{lem:antichain-noise}, let
+388: \[
+389:  \nu(T)=\frac{\wh d(T)^2}{\alpha},
+390:  \qquad
+391:  F(T)=\ln\frac r{|T\cap U|+1}.
+392: \]
+393: Then $F\ge0$ and, for $u\ge0$,
+394: \begin{equation}\label{eq:ranktail}
+395:  \nu(F>u)\le\min\{1,\sqrt{2e}\,e^{-u/2}\},
+396:  \qquad
+397:  \E_\nu F\le\Lp=1+\ln2.
+398: \end{equation}
+399: \end{lemma}
+400: \begin{proof}
+401: Put $K=re^{-u}$ and $\kappa=|T\cap U|$.
+402: If $K\le1$, the event is empty.
+403: Otherwise $F>u$ implies $\kappa<K-1$.
+404: Apply \eqref{eq:relative-noise} with $t=1/(2K)$ to obtain
+405: \[
+406:  \nu(F>u)
+407:  \le(1-1/(2K))^{-(K-1)}\sqrt{\frac{2K}{r}}
+408:  \le\sqrt{2e}\,e^{-u/2}.
+409: \]
+410: Indeed,
+411: \[
+412:  -(K-1)\ln(1-1/(2K))
+413:  \le\frac{K-1}{2K-1}\le\frac12.
+414: \]
+415: For the mean, retain the exact densities in \eqref{eq:relative-noise}.
+416: Put $M=r-1$ and let $h_k=\sum_{j=1}^k1/j$, with $h_0=0$.
+417: The integral representation of the harmonic numbers gives
+418: \begin{align*}
+419:  \E_\nu h_\kappa
+420:  &=\int_0^1\frac{1-\E_\nu(1-t)^\kappa}{t}\,dt\\
+421:  &\ge\sum_{q=1}^M(1-c_q)\binom Mq
+422:                   \int_0^1t^{q-1}(1-t)^{M-q}\,dt
+423:  =\sum_{q=1}^M\frac{1-c_q}{q}.
+424: \end{align*}
+425: Integral comparison gives
+426: $\ln((M+1)/(k+1))\le h_M-h_k$ for $0\le k\le M$.
+427: Consequently,
+428: \begin{equation}\label{eq:harmonic-rank}
+429:  \E_\nu F\le\sum_{q=1}^M\frac{c_q}{q}\le1+\ln2.
+430: \end{equation}
+431: To evaluate the final bound, put $b_j=4^{-j}\binom{2j}j$.
+432: Then $c_{2j-1}=c_{2j}=b_j$, and the binomial series gives
+433: \[
+434:  \sum_{j\ge1}\frac{b_j}{2j-1}=1,
+435:  \qquad \sum_{j\ge1}\frac{b_j}{2j}=\ln2.
+436: \]
+437: The first identity follows by evaluating the series for $1-\sqrt{1-z}$
+438: at $z=1$; the second follows by integrating
+439: $((1-z)^{-1/2}-1)/z$ from $0$ to $1$.
+440: For $r=1$, the sum in \eqref{eq:harmonic-rank} is empty and $F=0$.
+441: \end{proof}
+442: 
+443: \section{Regular functions and Boolean combinations}\label{sec:regular}
+444: 
+445: Fix an oriented desirability order for each $h_\ell$, write $r_\ell(i)$ for the rank of $i$, and let $U_i^\ell$ be its predecessors.
+446: Irrelevant coordinates may be placed last.
+447: For $f=F(h_1,\ldots,h_m)$ and $\alpha_i=\Inf_i(f)>0$, partition the pivotal assignments of $i$ according to the first component function for which $i$ is pivotal.
+448: Thus
+449: \begin{equation}\label{eq:pieces}
+450:  d_i f=\sum_{\ell=1}^m d_{i,\ell},\qquad
+451:  \alpha_i=\sum_{\ell=1}^m\alpha_{i,\ell},
+452:  \qquad \alpha_{i,\ell}=\|d_{i,\ell}\|_2^2,
+453: \end{equation}
+454: and the pieces have disjoint supports.
+455: Each nonzero piece is supported on pivotal antichains for $h_\ell$.
+456: 
+457: \begin{lemma}\label{lem:multi-rank}
+458: For
+459: \[
+460:  G_i(T)=\min_{1\le\ell\le m}
+461:        \ln\frac{r_\ell(i)}{|T\cap U_i^\ell|+1},
+462: \]
+463: the derivative law of $f$ satisfies
+464: \begin{equation}\label{eq:multirank}
+465:  \E_{\nu_i}G_i\le\Lmix+2\ln m,
+466:  \qquad \Lmix=2+\gamma.
+467: \end{equation}
+468: The same conclusion holds if all the pieces in \eqref{eq:pieces} are multiplied by an arbitrary fixed coordinate character on the derivative cube.
+469: \end{lemma}
+470: \begin{proof}
+471: Omit zero pieces and put
+472: $\nu_{i,\ell}(T)=\wh{d_{i,\ell}}(T)^2/\alpha_{i,\ell}$.
+473: Weighted Cauchy--Schwarz gives the pointwise domination
+474: \[
+475:  \nu_i(T)
+476:  =\frac{|\sum_\ell\wh{d_{i,\ell}}(T)|^2}{\alpha_i}
+477:  \le\sum_\ell\frac{\wh{d_{i,\ell}}(T)^2}{\alpha_{i,\ell}}
+478:  =\sum_\ell\nu_{i,\ell}(T).
+479: \]
+480: Write $\kappa_\ell(T)=|T\cap U_i^\ell|$ and
+481: \[
+482:  Z(T)=e^{-G_i(T)}
+483:      =\max_\ell\frac{\kappa_\ell(T)+1}{r_\ell(i)}.
+484: \]
+485: For $t>0$, apply \eqref{eq:relative-noise} to the $\ell$th piece
+486: with resampling rate $1-e^{-t/r_\ell(i)}$. It gives
+487: \[
+488:  \E_{\nu_{i,\ell}}e^{-t(\kappa_\ell+1)/r_\ell(i)}
+489:  \le\frac{e^{-t/r_\ell(i)}}
+490:           {\sqrt{r_\ell(i)(1-e^{-t/r_\ell(i)})}}
+491:  \le t^{-1/2},
+492: \]
+493: where the last inequality uses $1-e^{-u}\ge ue^{-u}$.
+494: Since $Z\ge(\kappa_\ell+1)/r_\ell(i)$ and
+495: $\nu_i\le\sum_\ell\nu_{i,\ell}$,
+496: \[
+497:  \E_{\nu_i}e^{-tZ}\le\min\{1,mt^{-1/2}\}.
+498: \]
+499: Frullani's identity and $0<Z\le1$ now yield
+500: \begin{align*}
+501:  \E_{\nu_i}G_i
+502:  &=\int_0^\infty\frac{\E_{\nu_i}e^{-tZ}-e^{-t}}t\,dt\\
+503:  &\le\int_0^{m^2}\frac{1-e^{-t}}t\,dt
+504:       +\int_{m^2}^\infty\frac{mt^{-1/2}-e^{-t}}t\,dt
+505:  =2\ln m+\gamma+2.
+506: \end{align*}
+507: Here we used
+508: $\int_0^A(1-e^{-t})\,dt/t-\int_A^\infty e^{-t}\,dt/t=\ln A+\gamma$.
+509: This proves \eqref{eq:multirank}.
+510: Character multiplication preserves the disjoint supports, their squared norms, and their antichain property, so the same proof applies.
+511: \end{proof}
+512: 
+513: \subsection{A reference for one coordinate order}
+514: 
+515: Relabel a single coordinate order as $1,\ldots,n$.
+516: Euler's product for the hyperbolic sine \cite[Eq.~4.36.1]{DLMF} gives
+517: \[
+518:  \prod_{i\ge1}\left(1+\frac z{i^2}\right)
+519:  =\frac{\sinh(\pi\sqrt z)}{\pi\sqrt z}
+520:  =\sum_{k\ge0}\frac{\pi^{2k}}{(2k+1)!}z^k.
+521: \]
+522: Comparison of coefficients shows that
+523: \begin{equation}\label{eq:euler-reference}
+524:  Q_k(S)=\frac{(2k+1)!}{\pi^{2k}}\prod_{i\in S}i^{-2},
+525:  \qquad |S|=k,
+526: \end{equation}
+527: is a subprobability reference on the $k$-element subsets of $[n]$.
+528: For $S=\{i_1<\cdots<i_k\}$, put
+529: $F_{i_j}(S\setminus\{i_j\})=\ln(i_j/j)$.
+530: Then
+531: \begin{align}
+532:  -\ln Q_k(S)
+533:  &=2\sum_{j=1}^kF_{i_j}(S\setminus\{i_j\})
+534:      +\ln\frac{\pi^{2k}(k!)^2}{(2k+1)!}\notag\\
+535:  &\le2\sum_{j=1}^kF_{i_j}(S\setminus\{i_j\})
+536:      +k\ln\frac{\pi^2}{4}.
+537:  \label{eq:euler-cost}
+538: \end{align}
+539: The inequality $(2k+1)!\ge4^k(k!)^2$ follows by induction: the quotient
+540: at $k+1$ divided by the quotient at $k$ is $(2k+3)/(2k+2)>1$.
+541: The empty set has reference mass one.
+542: 
+543: \subsection{Reference measures on a Fourier level}
+544: 
+545: For $k\ge1$ and $a>1$, put
+546: \begin{equation}\label{eq:rankweights}
+547:  \vartheta_k(i)=\max_{1\le\ell\le m}
+548:                   \min\{1,(k/r_\ell(i))^a\}.
+549: \end{equation}
+550: Give each $k$-element set $S$ weight $\prod_{i\in S}\vartheta_k(i)$ and normalize by $Z_k$.
+551: Each rank order is a permutation, so integral comparison gives
+552: \[
+553:  \sum_i\min\{1,(k/r_\ell(i))^a\}\le\frac{ak}{a-1}.
+554: \]
+555: Consequently,
+556: \begin{equation}\label{eq:normalizer}
+557:  Z_k\le\frac{(\sum_i\vartheta_k(i))^k}{k!}
+558:        \le\left(\frac{ema}{a-1}\right)^k.
+559: \end{equation}
+560: If $i\in S$ and $T=S\setminus\{i\}$, then
+561: \[
+562:  \ln\frac1{\vartheta_{|S|}(i)}
+563:  =a\min_\ell\ln^+\frac{r_\ell(i)}{|S|}
+564:  \le aG_i(T).
+565: \]
+566: Averaging under the Fourier law and using \eqref{eq:derivlaw} gives
+567: \begin{equation}\label{eq:rankcost}
+568:  \E\sum_{i\in\mathcal S}\ln\frac1{\vartheta_{|\mathcal S|}(i)}
+569:  \le a(\Lmix+2\ln m)\I(f).
+570: \end{equation}
+571: Gibbs' inequality on each level, \eqref{eq:normalizer}, \eqref{eq:rankcost}, and Lemma~\ref{lem:levelentropy} prove
+572: \begin{equation}\label{eq:ordinaryexact}
+573:  \HH(f)\le
+574:  \left(\Clev+\frac{1+\ln\frac a{a-1}+a\Lmix+(1+2a)\ln m}{\ln2}\right)\I(f).
+575: \end{equation}
+576: For $a=6/5$, the constant independent of $m$ is
+577: $11.2375133696\ldots$, which proves \eqref{eq:multiI}.
+578: 
+579: \subsection{Centering the influence}
+580: 
+581: Let
+582: \[
+583:  U=\{i:\Inf_i(f)>1/2\},\qquad b=|U|,\qquad g=\chi_U f.
+584: \]
+585: Then $\I(g)=\D(f)$ and $\HH(g)=\HH(f)$.
+586: For $i\notin U$, the derivative of $g$ is $\chi_Ud_i f$.
+587: Lemma~\ref{lem:multi-rank} therefore applies directly to its signed pieces.
+588: 
+589: For the reference law, replace $\vartheta_k(i)$ by $1$ when $i\in U$, and leave it unchanged otherwise.
+590: No rank cost is charged to a coordinate in $U$.
+591: Its normalizing constant is at most
+592: \[
+593:  \left(e\left(b+\frac{ma}{a-1}\right)\right)^k,
+594: \]
+595: because $k\ge1$.
+596: Repeating the preceding entropy argument, now for $g$, yields
+597: \begin{equation}\label{eq:centerexact}
+598:  \HH(f)\le
+599:  \left(\Clev+\frac{1+\ln\!\left(b+\frac{ma}{a-1}\right)
+600:                     +a(\Lmix+2\ln m)}{\ln2}\right)\D(f).
+601: \end{equation}
+602: 
+603: To bound $b$, observe that for a unate function $h$,
+604: $|\wh h(\{i\})|=\Inf_i(h)$, whence
+605: $\sum_i\Inf_i(h)^2\le1$.
+606: An edge on which $f$ changes changes at least one component function. Thus
+607: \[
+608:  \sum_i\Inf_i(f)^2
+609:  \le m\sum_{\ell=1}^m\sum_i\Inf_i(h_\ell)^2
+610:  \le m^2,
+611: \]
+612: and hence $b<4m^2$.
+613: 
+614: For $m=1$, there is a sharper observation.
+615: If a coordinate has a predecessor in a desirability order, its pivotal support on that one-dimensional predecessor fiber is an antichain.
+616: Its conditional pivotal probability is at most $1/2$, so its influence is at most $1/2$.
+617: Every coordinate in $U$ therefore has rank $1$ and has rank cost zero.
+618: For $i\notin U$, the derivative of $g$ is a signed function with the same
+619: antichain supports as $d_i f$.
+620: Lemma~\ref{lem:ranktail} and the derivative law therefore give
+621: \[
+622:  \E\sum_{i\in\mathcal S}F_i(\mathcal S\setminus\{i\})
+623:  \le\Lp\I(g),
+624: \]
+625: where $\mathcal S$ has the spectral law of $g$.
+626: Use the reference \eqref{eq:euler-reference} for this law.
+627: Gibbs' inequality on each level, \eqref{eq:euler-cost}, and
+628: Lemma~\ref{lem:levelentropy} yield
+629: \begin{align*}
+630:  \HH(f)=\HH(g)
+631:  &\le\left(\Clev+\frac{2\Lp+\ln(\pi^2/4)}{\ln2}\right)\I(g)\\
+632:  &=\bigl(\Clev+2\log(e\pi)\bigr)\D(f)=\Creg\D(f).
+633: \end{align*}
+634: This proves Theorem~\ref{thm:A}, including its character and variance-deficit consequences by Lemma~\ref{lem:centering}.
+635: 
+636: For $m\ge2$, the integer bound $b\le4m^2-1$ gives
+637: \[
+638:  b+6m\le7m^2,
+639: \]
+640: since $3m^2-6m+1>0$.
+641: The same bound is harmless for $m=1$, for which $b\le1$.
+642: Taking $a=6/5$ in \eqref{eq:centerexact} proves \eqref{eq:multiD}, with the exact constant
+643: \begin{equation}\label{eq:cm}
+644:  \Cmulti=\Clev+\frac{1+\ln7+\frac65(2+\gamma)}{\ln2}
+645:                +\frac{22}{5}\log m
+646:        <11.460+\frac{22}{5}\log m.
+647: \end{equation}
+648: Lemma~\ref{lem:centering} proves the remaining assertions of Theorem~\ref{thm:B}.
+649: If $\D(f)=0$, the centered function is constant and all these inequalities hold with both sides zero.
+650: 
+651: \subsection{Several desirability chains}
+652: 
+653: A \emph{desirability chain partition} is a partition of the coordinates into ordered lists such that every earlier coordinate in a list is at least as desirable as every later one.
+654: The orientation is fixed for the whole function.
+655: Singleton lists always give such a partition.
+656: 
+657: \begin{theorem}\label{thm:width}
+658: Let $w\ge1$. If a unate Boolean function $f$ has a desirability chain partition with at most $w$ lists, then
+659: \begin{equation}\label{eq:widthsingle}
+660:  \HH(f)\le(\Creg+\log w)\D(f).
+661: \end{equation}
+662: If each of $h_1,\ldots,h_m$ has such a partition with at most $w$ lists, then $f=F(h_1,\ldots,h_m)$ satisfies
+663: \[
+664:  \HH(f)\le\left(11.238+\frac{17}{5}\log m+\log w\right)\I(f)
+665: \]
+666: and
+667: \[
+668:  \HH(f)\le\left(11.460+\frac{22}{5}\log m+\log w\right)\D(f).
+669: \]
+670: \end{theorem}
+671: \begin{proof}
+672: Use rank within a list and predecessors in that list.
+673: All the antichain and rank estimates remain unchanged.
+674: For a single component, condition on the total Fourier-set size $k$ and
+675: let $k_1,\ldots,k_w$ be its counts in the respective lists.
+676: Use the multinomial reference
+677: \[
+678:  q_k(k_1,\ldots,k_w)=\frac{k!}{\prod_{\ell=1}^wk_\ell!}\,w^{-k}
+679: \]
+680: for these counts, and the product of the references
+681: \eqref{eq:euler-reference} within the lists.
+682: This is a subprobability reference. The count-vector cost is at most
+683: $k\ln w$, and \eqref{eq:euler-cost} bounds its remaining cost by
+684: twice the sum of the within-list rank costs plus $k\ln(\pi^2/4)$.
+685: High-influence coordinates have rank $1$ in their respective lists and
+686: therefore have zero rank cost after centering.
+687: The argument for Theorem~\ref{thm:A} proves \eqref{eq:widthsingle}.
+688: 
+689: For several components, each order system satisfies
+690: \[
+691:  \sum_i\min\{1,(k/r_\ell(i))^a\}\le\frac{wak}{a-1}.
+692: \]
+693: This adds $\log w$ to \eqref{eq:ordinaryexact}.
+694: The centered normalizer is bounded using
+695: $b+6mw\le7m^2w$.
+696: For $m\ge2$ this follows from $b\le4m^2-1$ and $w\ge1$.
+697: For $m=1$ one can use the preceding sharper argument directly.
+698: The rest of the proof is unchanged.
+699: \end{proof}
+700: 
+701: \subsection{Halfspaces, score transitions, and restrictions}
+702: 
+703: \begin{corollary}\label{cor:scores}
+704: Let $z(x)=\sum_iw_ix_i$, and let $f(x)$ be a Boolean labeling of the attained values of $z$ with at most $m\ge1$ transitions in their increasing order.
+705: Then the centered and character bounds of Theorem~\ref{thm:B} hold.
+706: The ordinary bound improves to
+707: \[
+708:  \HH(f)\le\left(11.238+\frac{12}{5}\log m\right)\I(f).
+709: \]
+710: \end{corollary}
+711: \begin{proof}
+712: Place a threshold between each pair of consecutive attained scores whose labels differ.
+713: Then $f$ is a Boolean function of the resulting $m$ thresholds.
+714: All these gates have the same order by decreasing $|w_i|$.
+715: Thus the reference \eqref{eq:rankweights} needs only one order, removing the $\ln m$ term from its normalizer in \eqref{eq:ordinaryexact}.
+716: \end{proof}
+717: 
+718: A union of $r$ intervals or rays has at most $2r$ effective transitions on the attained scores.
+719: Thus the corollary includes finite unions of parallel slabs, with arbitrary endpoint conventions and no separation condition.
+720: Constant labelings have zero Fourier entropy.
+721: 
+722: The classes in Theorems~\ref{thm:A}, \ref{thm:B}, and~\ref{thm:width} are closed under coordinate restrictions.
+723: As another consequence, if fixing $k$ specified coordinates makes every restriction regular, the function is a Boolean combination of those $k$ coordinate functions and its $2^k$ regular restrictions.
+724: Theorem~\ref{thm:B} gives a constant of order $k+1$ for this class.
+725: 
+726: 
+727: 
+728: \section{Read-\texorpdfstring{$k$}{k} unions of structured gates}\label{sec:union}
+729: 
+730: A union can contain arbitrarily many component functions while each input is relevant to only a few of them.
+731: We show that this overlap parameter controls Fourier entropy.
+732: In this section a union is true, with value $1$, when at least one component has value $1$.
+733: Intersections follow by complementing the components and the output.
+734: 
+735: \begin{theorem}\label{union:theorem}
+736: Let $f=h_1\vee\cdots\vee h_N$ or $f=h_1\wedge\cdots\wedge h_N$.
+737: Suppose each $h_l$ is a Boolean function of at most $M$ regular functions, and every input coordinate is relevant to at most $k$ of the functions $h_l$, where $k,M\ge1$.
+738: Then
+739: \begin{equation}\label{union:ordinary}
+740:  \HH(f)\le\left(41+7\log k+\frac{29}{5}\log M\right)\I(f).
+741: \end{equation}
+742: Put
+743: \[
+744:  \HH^+(f)=\sum_{A\ne\varnothing}\wh f(A)^2\log\frac1{\wh f(A)^2},
+745:  \qquad
+746:  J(f)=\sum_{|A|\ge2}|A|\wh f(A)^2.
+747: \]
+748: The strengthened estimate
+749: \begin{equation}\label{union:strong}
+750:  \HH^+(f)\le\left(66+\frac{59}{5}\log k+\frac{53}{5}\log M\right)J(f)
+751: \end{equation}
+752: also holds. Since $J(f)\le2(\I(f)-\Var(f))$, this implies FEI+ with coefficient
+753: $132+\frac{118}{5}\log k+\frac{106}{5}\log M$.
+754: If each inner function instead has a desirability chain partition with at most $w$ chains, add $\log w$ to the coefficients in \eqref{union:ordinary} and \eqref{union:strong}.
+755: \end{theorem}
+756: 
+757: In particular, read-$k$ unions and intersections of any number of halfspaces satisfy
+758: $\HH(f)\le(41+7\log k)\I(f)$.
+759: The theorem also includes read-$k$ unions of polytopes with at most $M$ facets and read-$k$ DNF/CNF formulas.
+760: A Boolean function on $w$ variables is a Boolean combination of its $w$ coordinate functions, so arbitrary gates of width $w$ can be included by taking $M=w$.
+761: Here a variable is counted once per outer gate, regardless of how many inner gates use it.
+762: 
+763: We first prove \eqref{union:ordinary} for regular inner functions.
+764: Let $R_l$ be the relevant support of $h_l$.
+765: Its regular representation may be assumed to use only $R_l$: fix all irrelevant variables identically in its inner functions, which preserves regularity and the represented function.
+766: For a union, remove constant false gates; a constant true gate makes the assertion immediate.
+767: Thus write
+768: \[
+769:  p_0=\P[f=-1],\qquad p_l=\P[h_l=1]>0,\qquad
+770:  \pi_l=\min\{p_l,1/2\},\qquad b_l=\log(1/\pi_l).
+771: \]
+772: 
+773: \subsection{The path bound and rare pivotal supports}
+774: 
+775: \begin{lemma}\label{union:path}
+776: For arbitrary outer gates with the stated overlap bound,
+777: \[
+778:  p_0\sum_l p_l\le\frac{k}{4}\I(f).
+779: \]
+780: \end{lemma}
+781: \begin{proof}
+782: For fixed $l$, independently resample all coordinates in $R_l$, one at a time in a fixed order.
+783: The event that $f$ is initially false is independent of the event that $h_l$ is true after this resampling.
+784: With probability $p_0p_l$ the path therefore goes from a false to a true input, so some step is a false-to-true transition.
+785: Every intermediate input is uniform, and resampling coordinate $j$ makes that transition with probability $\Inf_j(f)/4$.
+786: A union bound, followed by summation over $l$, proves the claim.
+787: \end{proof}
+788: 
+789: The following fixed-noise estimate will pay for selecting rare gates.
+790: It applies to arbitrary Boolean gates and arbitrary signed pieces.
+791: 
+792: \begin{lemma}\label{union:rare}
+793: Let $h$ have support $R\ni j$, set $\beta=120/11$ and $b=\log(1/\min\{\P[h=1],1/2\})$, and let $d\in\{0,\pm1\}$ vanish outside the $j$-pivotal support of $h$.
+794: Suppose $\|d\|_2>0$ and write $\nu(T)=\wh d(T)^2/\|d\|_2^2$.
+795: Then
+796: \begin{equation}\label{union:raretail}
+797:  \nu\bigl(|T\cap R|+1<b/\beta\bigr)
+798:  \le 2^{3/5}\,2^{-5b/12}.
+799: \end{equation}
+800: \end{lemma}
+801: \begin{proof}
+802: The event is empty if $b\le\beta$.
+803: Otherwise $\P[h=1]=2^{-b}$ and $\Inf_j(h)\le2^{1-b}$.
+804: Fix only the coordinates outside $R$, obtaining a fiber $d_z$ on $R\setminus\{j\}$.
+805: Its support density $\alpha_z$ is at most $2^{1-b}$.
+806: The hypercontractive inequality \cite{Bonami70,Beckner75,OD14} at noise correlation $\rho=1/4$ gives
+807: \[
+808:  \|T_{\sqrt{\rho}}d_z\|_2^2
+809:  \le\|d_z\|_{1+\rho}^2=\alpha_z^{8/5}.
+810: \]
+811: Average over the outside fibers, apply Parseval there, and divide by $\E_z\alpha_z$.
+812: It follows that
+813: \[
+814:  \E_{T\sim\nu}\rho^{|T\cap R|}
+815:  \le 2^{(3/5)(1-b)}.
+816: \]
+817: On the event in \eqref{union:raretail}, $|T\cap R|<b/\beta-1\le b/\beta$.
+818: Thus its probability is at most
+819: $\rho^{-b/\beta}2^{(3/5)(1-b)}=2^{3/5}2^{-5b/12}$, since $3/5-2/\beta=5/12$.
+820: \end{proof}
+821: 
+822: \subsection{A reference measure generated by a queue}
+823: 
+824: Fix
+825: \[
+826:  a=\frac65,\qquad \beta=\frac{120}{11},\qquad \lambda=\frac1k,\qquad B_*=\sqrt{2e}.
+827: \]
+828: For each regular inner gate $h_{l,r}$, order its relevant coordinates by desirability.
+829: Write $r_{l,r}(j)$ for the rank and $U_j^{l,r}$ for the predecessors of $j$.
+830: For $s\ge1$ and $i\in R_l$, set
+831: \[
+832:  \theta_s^l(i)=\max_{r:\,i\in\supp(h_{l,r})}
+833:                   \min\{1,(s/r_{l,r}(i))^a\}.
+834: \]
+835: The relevant supports of the inner functions cover $R_l$, so this maximum is nonempty.
+836: Let $Z_s^l$ be the elementary symmetric polynomial of degree $s$ in these weights.
+837: As in the rank reference of Section~\ref{sec:rank},
+838: \begin{equation}\label{union:normalizer}
+839:  \sum_{i\in R_l}\theta_s^l(i)\le\frac{Msa}{a-1},
+840:  \qquad
+841:  Z_s^l\le\left(\frac{eMa}{a-1}\right)^s.
+842: \end{equation}
+843: 
+844: We define a subprobability law $Q_1$ on subsets of the input coordinates.
+845: Independently choose each gate $l$ as a root with probability
+846: $\lambda\pi_l/(1+\lambda\pi_l)$, and put the roots in a queue in a fixed order.
+847: For each occurrence of a gate $l$ removed from the queue, perform these choices:
+848: \begin{enumerate}[label=(\roman*)]
+849: \item Choose $s\ge1$ with probability $1/[s(s+1)]$.
+850: If $s>|R_l|$, the run fails; otherwise choose an $s$-subset $B\subseteq R_l$ with probability
+851: $\prod_{i\in B}\theta_s^l(i)/Z_s^l$.
+852: \item Choose $c\ge0$ with probability $1/[(c+1)(c+2)]$, and choose a multiset of $c$ elements of $B$ uniformly.
+853: For each occurrence of a selected variable $j$, choose uniformly one of the at most $k$ gates containing $j$ and append it to the queue.
+854: Process the multiset occurrences in a fixed coordinate order, with repeated occurrences ordered consecutively.
+855: \end{enumerate}
+856: If the queue becomes empty, output the union of all selected subsets.
+857: Let $Q_1(A)$ be the probability of a successful finite output equal to $A$.
+858: A run may fail or continue forever; its mass is then absent from $Q_1$.
+859: Consequently $\sum_AQ_1(A)\le1$, which is all that Gibbs' inequality requires.
+860: Repeated visits are treated as distinct occurrences in the random process.
+861: 
+862: \subsection{A witness run and its cost}
+863: 
+864: Fix $A\ne\varnothing$ with $\wh f(A)\ne0$, and put $\kappa_l=|A\cap R_l|$.
+865: Call $l$ dense if $\kappa_l\ge b_l/\beta$.
+866: For each $j\in A\cap R_l$, put
+867: \[
+868:  F_l^j(A)=\min_{r:\,j\in\supp(h_{l,r})}
+869:           \ln\frac{r_{l,r}(j)}{|A\cap U_j^{l,r}|+1},
+870:  \qquad
+871:  G_j(l)=\frac a{\ln2}F_l^j(A)+b_l\mathbf1[l\text{ is not dense}].
+872: \]
+873: Every $j\in A$ belongs to some $R_l$.
+874: Choose $\tau(j)$ minimizing $G_j(l)$, with a fixed tie rule, and set
+875: \[
+876:  A_l=\{j\in A:\tau(j)=l\},\qquad
+877:  \mathcal F=\{l:A_l\ne\varnothing\},\qquad
+878:  G_j=G_j(\tau(j)).
+879: \]
+880: The nonempty $A_l$ partition $A$.
+881: 
+882: Consider the directed graph on $\mathcal F$ having an edge $l\to l'$ when
+883: $l\ne l'$ and $A_l\cap R_{l'}\ne\varnothing$.
+884: Choose one representative from each source strongly connected component as a root.
+885: Every vertex is reachable from these roots, so choose a directed spanning forest, and attach each nonroot $l'$ to its parent $l$ through an element of $A_l\cap R_{l'}$.
+886: This gives a finite run producing $A$: prescribe these roots, choose $B_l=A_l$, and prescribe exactly the forest children.
+887: Every gate in $\mathcal F$ is visited once.
+888: If $c_l$ is its number of children, then
+889: \begin{equation}\label{union:forestcount}
+890:  |\mathrm{roots}|+\sum_{l\in\mathcal F}c_l=|\mathcal F|\le|A|.
+891: \end{equation}
+892: 
+893: The sets $A\cap R_r$ for distinct roots $r$ are pairwise disjoint.
+894: Indeed, if $j$ belonged to two such sets and $l=\tau(j)$, then $l$ has an edge to each root except when it equals that root.
+895: Since the root components receive no edges from other components, $l$ would lie in both root components, a contradiction.
+896: This includes the case where $l$ itself is one of the roots.
+897: 
+898: The root selection costs
+899: \[
+900:  \Lambda+\sum_{\mathrm{roots}\ r}(\log k+b_r),
+901:  \qquad
+902:  \Lambda=\sum_l\log(1+\lambda\pi_l)
+903:  \le\frac{\log e}{k}\sum_l\pi_l.
+904: \]
+905: By the disjointness just proved, dense-root rarity costs sum to at most $\beta|A|$.
+906: Each nondense root owns at least one variable, so its rarity cost can be paid from
+907: $\sum_{j\in A}b_{\tau(j)}\mathbf1[\tau(j)\text{ not dense}]$.
+908: 
+909: For $i\in A_l$, set $s_l=|A_l|$ and choose an inner order attaining $F_l^i(A)$.
+910: Because $|A\cap U_i^{l,r}|+1\le\kappa_l$,
+911: \[
+912:  \ln^+\frac{r_{l,r}(i)}{s_l}
+913:  \le F_l^i(A)+\ln\frac{\kappa_l}{s_l}.
+914: \]
+915: The log-sum inequality and the read bound give
+916: \begin{equation}\label{union:logsum}
+917:  \sum_{l\in\mathcal F}s_l\log\frac{\kappa_l}{s_l}
+918:  \le |A|\log\frac{\sum_{l\in\mathcal F}\kappa_l}{|A|}
+919:  \le |A|\log k.
+920: \end{equation}
+921: Thus \eqref{union:normalizer} bounds the subset-selection cost by
+922: \[
+923:  |A|\log\frac{eMa}{a-1}
+924:  +a|A|\log k+\frac a{\ln2}\sum_{j\in A}F_{\tau(j)}^j(A).
+925: \]
+926: 
+927: The remaining choices have elementary costs.
+928: The choices of $s_l$ cost at most $|A|\log3$, since $s(s+1)\le3^s$ for $s\ge1$.
+929: The choices of $c_l$ cost at most $|A|(1+\log3)$, since $(c+1)(c+2)\le2\,3^c$.
+930: There are $\binom{s+c-1}{c}\le2^{s+c}$ multisets, so their total cost is at most $2|A|$.
+931: Finally, root and child gate labels together cost at most $|A|\log k$, by \eqref{union:forestcount}.
+932: Putting
+933: \begin{equation}\label{union:K0}
+934:  K_0=\frac{120}{11}+3+2\log3+\log(6e),
+935: \end{equation}
+936: we conclude that
+937: \begin{equation}\label{union:runbound}
+938:  \log\frac1{Q_1(A)}
+939:  \le \Lambda+|A|\left(K_0+\frac{11}{5}\log k+\log M\right)
+940:                +\sum_{j\in A}G_j.
+941: \end{equation}
+942: 
+943: \subsection{Averaging the rank and rarity costs}
+944: 
+945: For a coordinate $j$ with $\alpha_j=\Inf_j(f)>0$, let
+946: $\nu_j(T)=\wh{d_jf}(T)^2/\alpha_j$.
+947: If $j$ is pivotal for the union, it is pivotal for some component containing $j$.
+948: Split $d_jf$ into disjoint signed pieces according to the least such component.
+949: There are at most $k$ nonzero pieces.
+950: Their normalized Fourier laws satisfy
+951: \[
+952:  \nu_j(T)\le\sum_l\nu_{j,l}(T)
+953: \]
+954: by weighted Cauchy--Schwarz, as in Lemma~\ref{lem:multi-rank}.
+955: 
+956: For a specified piece, a further split among the at most $M$ regular inner gates and Lemma~\ref{lem:ranktail} give
+957: \[
+958:  \nu_{j,l}(F_l^j>v)\le MB_*e^{-v/2}.
+959: \]
+960: Lemma~\ref{union:rare} gives
+961: \[
+962:  \nu_{j,l}(l\text{ is not dense})\le2^{3/5}2^{-5b_l/12}.
+963: \]
+964: Since $G_j\le G_j(l)$ and $1/(4a)=5/24$, splitting the rank and rarity costs at $u/2$ gives the same exponent for both terms. The union bound therefore yields
+965: \begin{equation}\label{union:Gtail}
+966:  \nu_j(G_j>u)
+967:  \le\min\{1,\ k(MB_*+2^{3/5})2^{-5u/24}\}
+968:  \le\min\{1,\ kM(B_*+2^{3/5})2^{-5u/24}\}.
+969: \end{equation}
+970: Here all the statistics are evaluated at $A=T\cup\{j\}$.
+971: Integrating the tail, and setting
+972: \begin{equation}\label{union:E0}
+973:  E_0=\frac{24}{5}\left[\log(\sqrt{2e}+2^{3/5})+\log e\right],
+974: \end{equation}
+975: gives
+976: \begin{equation}\label{union:Gmean}
+977:  \E_{\nu_j}G_j\le E_{k,M}:=E_0+\frac{24}{5}\log k+\frac{24}{5}\log M.
+978: \end{equation}
+979: 
+980: Put $v=\Var(f)$, and use the subprobability reference
+981: $Q(\varnothing)=1-v$, $Q(A)=vQ_1(A)$ for $A\ne\varnothing$.
+982: Gibbs' inequality gives
+983: \[
+984:  \HH(f)\le h_2(v)+
+985:  \sum_{A\ne\varnothing}\wh f(A)^2\log\frac1{Q_1(A)}.
+986: \]
+987: The proof of Lemma~\ref{lem:levelentropy} gives $h_2(v)\le2\I(f)$.
+988: Since $v\le4p_0$, Lemma~\ref{union:path} gives $v\Lambda\le(\log e)\I(f)$.
+989: Finally,
+990: $\wh f(A)^2=\alpha_j\nu_j(A\setminus\{j\})$ for $j\in A$.
+991: Averaging \eqref{union:runbound} and applying \eqref{union:Gmean}, we obtain
+992: \[
+993:  \HH(f)\le
+994:  \left[2+\log e+K_0+E_0+7\log k+\frac{29}{5}\log M\right]\I(f).
+995: \]
+996: The exact constant $2+\log e+K_0+E_0$ is $40.80487606\ldots<41$.
+997: We record rational certificates for this rounding and for the strengthened constant below:
+998: \begin{equation}\label{union:rounding}
+999:  \log e<\frac{1443}{1000},\qquad
+1000:  \log3<\frac{317}{200},\qquad
+1001:  \log(\sqrt{2e}+2^{3/5})<\frac{243}{125}.
+1002: \end{equation}
+1003: The exponential series gives
+1004: $e<\sum_{j=0}^6 1/j!+1/4410=31967/11760<87/32$.
+1005: The first two inequalities follow from $87^{1000}<2^{6443}$ and $3^{200}<2^{317}$.
+1006: For the last one, the rational comparisons
+1007: \[
+1008:  \frac{2\cdot31967}{11760}
+1009:    <\left(\frac{2331645}{10^6}\right)^2,\qquad
+1010:  8<\left(\frac{1515717}{10^6}\right)^5
+1011: \]
+1012: give $\sqrt{2e}+2^{3/5}<1539/400$, and
+1013: $1539^{125}<2^{243}400^{125}$ completes the certificate.
+1014: Expanding the exact ordinary constant and applying \eqref{union:rounding} gives
+1015: \[
+1016:  \frac{120}{11}+6+3\log3+\frac{34}{5}\log e
+1017:        +\frac{24}{5}\log(\sqrt{2e}+2^{3/5})
+1018:  <\frac{2244423}{55000}<41.
+1019: \]
+1020: This proves \eqref{union:ordinary}.
+1021: 
+1022: \subsection{The strengthened entropy estimate}
+1023: 
+1024: We give the reduction to nonsingleton Fourier sets explicitly.
+1025: For an arbitrary Boolean function, put
+1026: \[
+1027:  P(A)=\wh f(A)^2,\quad
+1028:  W=\sum_{|A|\ge2}P(A),\quad
+1029:  W_1=\sum_iP(\{i\}),\quad
+1030:  J=\sum_{|A|\ge2}|A|P(A).
+1031: \]
+1032: Then $\I=W_1+J$, $\Var=W_1+W$, $W\le J/2$, and
+1033: \begin{equation}\label{union:Jderiv}
+1034:  J=\sum_i\left(\Inf_i(f)-\wh f(\{i\})^2\right)
+1035:    =\sum_i\Var(d_if).
+1036: \end{equation}
+1037: 
+1038: \begin{lemma}\label{union:smallmass}
+1039: For every Boolean function,
+1040: \[
+1041:  \sum_iP(\{i\})\log\frac1{P(\{i\})}\le2(\log e)J,
+1042:  \qquad
+1043:  W\log\frac1W\le8J.
+1044: \]
+1045: \end{lemma}
+1046: \begin{proof}
+1047: For $b=|\wh f(\{i\})|$, we have
+1048: $b\le\Inf_i(f)$ and hence
+1049: $\Var(d_if)\ge b-b^2$.
+1050: Since $b^2\ln(1/b)\le b-b^2$, the first assertion follows.
+1051: 
+1052: For the second, let $p=\min\{\P(f=1),\P(f=-1)\}$.
+1053: The pivotal bound $\Inf_i(f)\le2p$ gives
+1054: \[
+1055:  W_1\le\sum_i\Inf_i(f)^2\le2p\,\I(f),
+1056:  \qquad J\ge(1-2p)\I(f).
+1057: \]
+1058: Also
+1059: \[
+1060:  J\ge\sum_i\Inf_i(f)(1-\Inf_i(f)),
+1061:  \quad W\le\Var(f)\le4p,
+1062:  \quad \I(f)\ge2p\log(1/p).
+1063: \]
+1064: If $p\le1/4$, then $J\ge p\log(1/p)$.
+1065: When $4p\le1/e$, monotonicity of $x\log(1/x)$ on $(0,1/e]$ gives
+1066: $W\log(1/W)\le4p\log(1/(4p))\le4J$.
+1067: When $4p>1/e$, we have $J\ge p>1/(4e)$, while
+1068: $x\log(1/x)\le(\log e)/e$; therefore $W\log(1/W)\le4(\log e)J<8J$.
+1069: 
+1070: It remains to consider $p>1/4$.
+1071: Set $\delta=1/48$.
+1072: If $J\ge\delta$ and $W\ge\delta/2$, then
+1073: $W\log(1/W)\le(J/2)\log96<4J$.
+1074: If $J\ge\delta$ and $W<\delta/2$, monotonicity instead gives
+1075: $W\log(1/W)\le(\delta/2)\log96<4\delta\le4J$.
+1076: 
+1077: Finally suppose $p>1/4$ and $J<\delta$.
+1078: Then $\I>3/4$ and $\I=W_1+J<1+\delta$.
+1079: Every influence $\alpha_i$ satisfies
+1080: $\alpha_i(1-\alpha_i)<\delta$, so $\alpha_i<2\delta$ or $\alpha_i>1-2\delta$.
+1081: The influences of the first kind sum to less than
+1082: $\delta/(1-2\delta)<3/4$.
+1083: Thus some coordinate $i_*$ has $\alpha_{i_*}>1-2\delta$.
+1084: Reverse this input if necessary so that
+1085: $b=\wh f(\{i_*\})>0$.
+1086: By \eqref{union:Jderiv}, $b^2>1-3\delta$, and hence $b>1-3\delta$.
+1087: 
+1088: Write $f=A+x_{i_*}B$, where $A=\E_{i_*}f$ and $B=d_{i_*}f$.
+1089: They take values in $\{0,\pm1\}$, and exactly one is zero at each input.
+1090: Put $D=1-B\in\{0,1,2\}$ and let $E=\{D\ne0\}$ have density $\eta$.
+1091: Then $\eta\le1-b<3\delta$ and
+1092: \[
+1093:  W\le\|A\|_2^2+\Var(B)
+1094:    \le\P[D=1]+\E D^2\le4\eta.
+1095: \]
+1096: If $\eta=0$, then $W=0$ and the assertion is immediate; assume henceforth that $\eta>0$.
+1097: Moreover,
+1098: \[
+1099:  J\ge\sum_{T\ne\varnothing}(|T|+1)\wh B(T)^2
+1100:    \ge\sum_T|T|\wh D(T)^2.
+1101: \]
+1102: Every edge leaving $E$ has squared derivative of $D$ at least $1/4$.
+1103: The edge-isoperimetric inequality therefore gives
+1104: $J\ge(\eta/2)\log(1/\eta)$.
+1105: Since $4\eta<12\delta=1/4<1/e$,
+1106: \[
+1107:  W\log(1/W)\le4\eta\log(1/(4\eta))
+1108:              \le4\eta\log(1/\eta)\le8J.
+1109: \]
+1110: \end{proof}
+1111: 
+1112: It follows that any subprobability reference $Q$ positive on all nonsingleton spectral sets satisfies
+1113: \begin{equation}\label{union:plusreduction}
+1114:  \HH^+(f)\le(8+2\log e)J+
+1115:        \sum_{|A|\ge2}P(A)\log\frac1{Q(A)}.
+1116: \end{equation}
+1117: Indeed, apply Gibbs' inequality to $P(A)/W$ on $|A|\ge2$, and use Lemma~\ref{union:smallmass} for its mass term and the singleton contribution.
+1118: 
+1119: Use $Q=Q_1$ from the queue construction.
+1120: The vacuum term admits the bound
+1121: \begin{equation}\label{union:strongvacuum}
+1122:  W\Lambda\le(\log e)J.
+1123: \end{equation}
+1124: To see this, use $W\le J/2$ to obtain
+1125: \[
+1126:  W\I=W(W_1+J)\le J(W_1/2+W)\le\Var(f)J.
+1127: \]
+1128: Then Lemma~\ref{union:path}, $\Lambda\le(\log e)\sum_l\pi_l/k$, and
+1129: $\Var(f)=4p_0(1-p_0)$ give
+1130: $W\Lambda\le(\log e)(1-p_0)J\le(\log e)J$.
+1131: The constant-output cases are immediate.
+1132: 
+1133: We next strengthen \eqref{union:Gmean} to
+1134: \begin{equation}\label{union:Gconditioned}
+1135:  \E_{\nu_j}[G_j\mathbf1[T\ne\varnothing]]
+1136:  \le2E_{k,M}\,\nu_j(T\ne\varnothing).
+1137: \end{equation}
+1138: If $\nu_j(T\ne\varnothing)\ge1/2$, this follows directly from \eqref{union:Gmean}.
+1139: Otherwise
+1140: \[
+1141:  \Inf_j(f)\ge
+1142:  \frac{\wh f(\{j\})^2}{\Inf_j(f)}
+1143:  =\nu_j(\varnothing)>\frac12.
+1144: \]
+1145: Since at most $k$ outer gates contain $j$, some $h_l$ has
+1146: $\Inf_j(h_l)>1/(2k)$.
+1147: Its true probability exceeds $1/(4k)$, and some regular inner gate has
+1148: $\Inf_j(h_{l,r})>1/(2kM)$.
+1149: For a regular function, influences do not increase along a desirability order, and their squares sum to at most $1$ by the unate Chow identity.
+1150: Thus $r_{l,r}(j)<4k^2M^2$, and pointwise
+1151: \[
+1152:  G_j\le G_j(l)
+1153:  <a\log(4k^2M^2)+\log(4k)
+1154:  =\frac{22}{5}+\frac{17}{5}\log k+\frac{12}{5}\log M
+1155:  \le2E_{k,M}.
+1156: \]
+1157: The last inequality follows from \eqref{union:E0}: $2E_0>10>22/5$, and the coefficients $48/5$ of both logarithms in $2E_{k,M}$ exceed $17/5$ and $12/5$.
+1158: This proves \eqref{union:Gconditioned}.
+1159: 
+1160: Average \eqref{union:runbound} only over $|A|\ge2$.
+1161: The set-size term is now $J$, and \eqref{union:Jderiv} and \eqref{union:Gconditioned} bound the rank and rarity term by $2E_{k,M}J$.
+1162: Together with \eqref{union:plusreduction} and \eqref{union:strongvacuum}, this gives
+1163: \[
+1164:  \HH^+(f)\le
+1165:  \left[8+3\log e+K_0+2E_0
+1166:        +\frac{59}{5}\log k+\frac{53}{5}\log M\right]J.
+1167: \]
+1168: The exact constant is $65.94577371\ldots<66$.
+1169: The same rational bounds \eqref{union:rounding} certify this:
+1170: \[
+1171:  \frac{120}{11}+12+3\log3+\frac{68}{5}\log e
+1172:        +\frac{48}{5}\log(\sqrt{2e}+2^{3/5})
+1173:  <\frac{3627321}{55000}<66.
+1174: \]
+1175: This proves \eqref{union:strong}.
+1176: 
+1177: Finally, for chain partitions of width at most $w$, use rank and predecessors within each chain.
+1178: Only \eqref{union:normalizer} changes: its upper bound acquires a factor $w$.
+1179: The rank tail remains unchanged, and the rank estimate in the last conditional argument still holds within the chosen chain.
+1180: Thus \eqref{union:runbound} gains $|A|\log w$.
+1181: After averaging, this adds $\log w$ to both theorem coefficients, as claimed.
+1182: 
+1183: 
+1184: \subsection{A bound retaining the joint witness cost}
+1185: 
+1186: The queue construction permits an estimate depending on the gates used
+1187: to describe the whole Fourier set. Let $d(j)$ be the number of outer
+1188: gates containing coordinate $j$, so $d(j)\le k$.
+1189: Allow the root odds to be $\lambda\pi_l$ for an arbitrary $\lambda>0$,
+1190: and put
+1191: \[
+1192:  \Lambda_\lambda=\sum_l\log(1+\lambda\pi_l).
+1193: \]
+1194: Denote the resulting subprobability law by $Q_{1,\lambda}$.
+1195: All other choices in the queue construction remain as defined above.
+1196: 
+1197: Fix a nonempty Fourier set $A$ with $\wh f(A)\ne0$. An assignment chooses, for every
+1198: $j\in A$, one gate $\tau(j)$ containing $j$. Put
+1199: \[
+1200:  A_l=\{j\in A:\tau(j)=l\},\quad s_l=|A_l|,\quad
+1201:  \mathcal F=\{l:s_l>0\},\quad \kappa_l=|A\cap R_l|.
+1202: \]
+1203: Take a directed spanning forest in the incidence graph on $\mathcal F$,
+1204: whose roots are exactly one representative from each source strongly connected component.
+1205: For each forest edge $e:l\to l'$, choose an attachment
+1206: $j_e\in A_l\cap R_{l'}$. Write $\mathcal R$ for the roots and $c_l$
+1207: for the number of children of $l$.
+1208: Define the finite witness cost
+1209: \begin{align*}
+1210:  \mathcal C_\lambda(A;\tau,\mathcal T)
+1211:   ={}&\sum_{r\in\mathcal R}\log\frac1{\lambda\pi_r}
+1212:        +\sum_{e\in E(\mathcal T)}\log d(j_e)\\
+1213:     &+\sum_{l\in\mathcal F}\left[
+1214:        \log\bigl(s_l(s_l+1)\bigr)+\log Z_{s_l}^l
+1215:        -\sum_{j\in A_l}\log\theta_{s_l}^l(j)\right]\\
+1216:     &+\sum_{l\in\mathcal F}\left[
+1217:        \log\bigl((c_l+1)(c_l+2)\bigr)
+1218:        +\log\binom{s_l+c_l-1}{c_l}\right].
+1219: \end{align*}
+1220: The notation $\mathcal T$ includes the attachment choices and an ordering
+1221: of children sharing an attachment coordinate.
+1222: 
+1223: \begin{proposition}[Variational witness bound]\label{prop:joint-witness}
+1224: For every such assignment and forest,
+1225: \[
+1226:  \log\frac1{Q_{1,\lambda}(A)}
+1227:  \le\Lambda_\lambda+\mathcal C_\lambda(A;\tau,\mathcal T).
+1228: \]
+1229: Consequently, for $v=\operatorname{Var}(f)$,
+1230: \[
+1231:  \HH(f)\le h_2(v)+v\Lambda_\lambda+
+1232:  \sum_{\substack{A\ne\varnothing\\\wh f(A)\ne0}}\wh f(A)^2
+1233:        \min_{\tau,\mathcal T}\mathcal C_\lambda(A;\tau,\mathcal T).
+1234: \]
+1235: \end{proposition}
+1236: \begin{proof}
+1237: Prescribe the root set, the subset $A_l$ at each visited gate, and exactly
+1238: the forest children with their attachments. This is a successful finite
+1239: run and visits every gate in $\mathcal F$ once.
+1240: The root-set probability is
+1241: $2^{-\Lambda_\lambda}\prod_{r\in\mathcal R}\lambda\pi_r$.
+1242: The remaining factors in the run probability are precisely the subset,
+1243: size, child-count, multiset and gate-label probabilities defining
+1244: $\mathcal C_\lambda$. Thus the probability of this run is
+1245: $2^{-\Lambda_\lambda-\mathcal C_\lambda}$, proving the first bound.
+1246: Apply Gibbs' inequality to
+1247: $Q(\varnothing)=1-v$ and
+1248: $Q(A)=vQ_{1,\lambda}(A)$ for $A\ne\varnothing$.
+1249: Minimization is valid because each finite witness separately gives a
+1250: lower bound for the same reference mass $Q_{1,\lambda}(A)$.
+1251: \end{proof}
+1252: 
+1253: The variational minimum must be taken over descriptions of $A$ as a
+1254: whole. Minimizing one coordinate at a time need not minimize it.
+1255: 
+1256: For comparison with the previous estimates, define
+1257: \[
+1258:  L(A,\tau)=\sum_{l\in\mathcal F}s_l\log\frac{\kappa_l}{s_l},
+1259:  \qquad
+1260:  B_{\rm sparse}(A,\mathcal T)
+1261:  =\sum_{\substack{r\in\mathcal R\\\kappa_r<b_r/\beta}}b_r.
+1262: \]
+1263: At $\lambda=1/k$, the same witness gives the explicit refinement
+1264: \begin{align*}
+1265:  \log\frac1{Q_{1,1/k}(A)}
+1266:  \le{}&\Lambda_{1/k}
+1267:  +\left(\beta+1+\log3+\log(6eM)\right)|A|\\
+1268:  &+\left(2+\log3+\log k\right)|\mathcal F|
+1269:    -(1+\log3)|\mathcal R|\\
+1270:  &+\frac65L(A,\tau)
+1271:    +\frac{6}{5\ln2}\sum_{l\in\mathcal F}\sum_{j\in A_l}F_l^j(A)
+1272:    +B_{\rm sparse}(A,\mathcal T).
+1273: \end{align*}
+1274: Indeed, the size choices cost at most $|A|\log3$.
+1275: The child-count choices cost at most
+1276: $|\mathcal F|+(|\mathcal F|-|\mathcal R|)\log3$,
+1277: and the multiset choices cost at most
+1278: $|A|+|\mathcal F|-|\mathcal R|$.
+1279: For the subset choices use
+1280: \[
+1281:  \log Z_{s_l}^l\le s_l\log(6eM),\qquad
+1282:  -\sum_{j\in A_l}\log\theta_{s_l}^l(j)
+1283:  \le\frac{6}{5\ln2}\sum_{j\in A_l}F_l^j(A)
+1284:        +\frac65s_l\log\frac{\kappa_l}{s_l}.
+1285: \]
+1286: The roots have pairwise disjoint sets $A\cap R_r$, by the source-component
+1287: argument above. Their dense rarity costs therefore sum to at most
+1288: $\beta|A|$, leaving only $B_{\rm sparse}$.
+1289: Finally, root and child gate labels cost at most
+1290: $|\mathcal F|\log k$.
+1291: 
+1292: Replacing $|\mathcal F|$ by $|A|$, replacing $L(A,\tau)$ by
+1293: $|A|\log k$, discarding the negative root term and charging each sparse
+1294: root to a coordinate it owns recovers the earlier bound. Retaining these
+1295: quantities can be substantially sharper.
+1296: 
+1297: \subsection{The addressing benchmark in the same queue construction}
+1298: 
+1299: Let $m\ge1$ be the number of address bits and $N=2^m$ the number of
+1300: data bits. Write the addressing function as the union of $N$ conjunctions
+1301: $h_u$, one for each address $u$, where $h_u$ is true precisely when the
+1302: address equals $u$ and the selected data bit is $1$.
+1303: Each gate has $d=m+1$ relevant coordinates, true probability $2^{-d}$,
+1304: and one regular inner gate. The overlap bound is $k=N$.
+1305: 
+1306: Every nonzero Fourier set has the form $A=T\cup\{y_u\}$, with $T$ a
+1307: subset of the address coordinates. It can be assigned entirely to
+1308: $h_u$. Thus $|\mathcal F|=|\mathcal R|=1$, there are no children,
+1309: and $L(A,\tau)=0$.
+1310: Put $s=|A|$. Since all ranks are at most $d$, the exact witness bound,
+1311: now using the permitted choice $\lambda=1$, yields
+1312: \[
+1313:  \log\frac1{Q_{1,1}(A)}
+1314:  \le\Lambda_1+d+\log(s(s+1))+s\log(6e)
+1315:        +\frac65s\log\frac ds+1.
+1316: \]
+1317: Here
+1318: $\Lambda_1=N\log(1+2^{-d})\le(\log e)/2$.
+1319: Under the addressing spectral law,
+1320: $s=1+\operatorname{Bin}(m,1/2)$, so
+1321: $\E s=\I(f)=1+m/2$ and $d+1=2\I(f)$.
+1322: Concavity of $s\log(d/s)$ gives
+1323: \[
+1324:  \mathbb E\left[s\log\frac ds\right]
+1325:  \le\I(f)\log\frac d{\I(f)}\le\I(f).
+1326: \]
+1327: Since $s(s+1)\le3^s$, Gibbs' inequality gives
+1328: \[
+1329:  \HH(f)\le\frac{\log e}{2}
+1330:        +\left(\frac{16}{5}+\log(18e)\right)\I(f)
+1331:        <10\,\I(f).
+1332: \]
+1333: This recovers a constant independent of the number of addresses within
+1334: the original queue method. The exact selector calculation gives the
+1335: stronger identities $\HH(f)=2m$ and $\I(f)=1+m/2$.
+1336: 
+1337: \subsection{Scope of the refinement}
+1338: 
+1339: The variational inequality supplies a reference measure and an exact
+1340: cost for each finite witness. To obtain full FEI from it, one would still
+1341: need a uniform influence bound for the expected joint witness cost,
+1342: including its rank, sparse-root and normalization terms.
+1343: The addressing estimate proves such a bound for that family.
+1344: It does not give one for arbitrary Boolean functions.
+1345: The two-cell selector reduction in Section~\ref{sec:selectors} shows that even unrestricted
+1346: selector gates already retain the full FEI problem.
+1347: 
+1348: \section{Threshold gates under arbitrary product measures}
+1349: \label{bias:section}
+1350: 
+1351: A symmetric threshold on bits \(y_1,\ldots,y_r\) is
+1352: \(T_{t,r}(y)=\mathbf1[\sum_{i=1}^r y_i\ge t]\), \(1\le t\le r\).
+1353: We prove product-measure FEI+ for these gates with a constant independent
+1354: of the arity and every coordinate bias. This supplies the gate estimate
+1355: needed for compositions whose intermediate outputs need not be balanced.
+1356: 
+1357: Throughout this section set
+1358: \[
+1359:  L_0=3+\ln8,\qquad
+1360:  A=23+\ln16,\qquad C_T=\frac{20A}{\ln2}<744.
+1361: \]
+1362: We use natural logarithms for \(\mathcal E_\mu\), and write
+1363: \(\HH_\mu^+=\mathcal E_\mu/\ln2\) for its value in bits.
+1364: 
+1365: \subsection{Normalization and basic identities}\label{bias:normalization}
+1366: 
+1367: Work on \(y_i\in\{0,1\}\), independently with \(0<q_i<1\), and put \[
+1368:  \sigma_i=2\sqrt{q_i(1-q_i)},\qquad
+1369:  \phi_i(y_i)=\frac{2y_i-1-(2q_i-1)}{\sigma_i}.
+1370: \] Then \(\mathbb E\phi_i=0\), \(\mathbb E\phi_i^2=1\), and \(\mathbb E|\phi_i|=\sigma_i\). The products \(\phi_S=\prod_{i\in S}\phi_i\) form an orthonormal basis. For Boolean \(f\), let \[
+1371:  P(S)=\widehat f_\mu(S)^2,\quad
+1372:  \I_\mu(f)=\sum_S|S|P(S),\quad
+1373:  V_\mu(f)=\sum_{S\ne\varnothing}P(S).
+1374: \] Define \[
+1375:  \mathcal E_\mu(f)=
+1376:  \sum_{\varnothing\ne S}P(S)\ln\frac{\sigma_S^2}{P(S)},
+1377:  \qquad \sigma_S^2=\prod_{i\in S}\sigma_i^2,\qquad
+1378:  \HH_\mu^+(f)=\frac{\mathcal E_\mu(f)}{\ln2}.
+1379: \] The quantity \(\Delta_\mu(f)=\I_\mu(f)-V_\mu(f)\) will be called the spectral deficit.
+1380: 
+1381: Parseval gives \(\sum_SP(S)=1\). In particular \[
+1382:  \Delta_\mu(f)=\sum_{|S|\ge2}(|S|-1)P(S)\ge0.
+1383: \] For every \(S\), \[
+1384:  |\widehat f_\mu(S)|
+1385:    =|\mathbb E f\phi_S|
+1386:    \le\mathbb E|\phi_S|=\sigma_S.
+1387: \] Consequently each summand in \(\mathcal E_\mu(f)\) is nonnegative.
+1388: 
+1389: For \(f=2T-1\), let \(d_i=T(y_i=1)-T(y_i=0)\). Integrating one coordinate gives \[
+1390:  \widehat f_\mu(B\cup\{i\})=\sigma_i\widehat d_i(B)
+1391:  \quad (i\notin B).
+1392: \] For an increasing threshold \(d_i\) is the indicator of a pivotal slice. With \(\rho_i=\mathbb E d_i\), \[
+1393:  \I_i=\sum_{S\ni i}P(S)=\sigma_i^2\rho_i,\qquad
+1394:  P(\{i\})=\sigma_i^2\rho_i^2.
+1395: \] It follows that \[
+1396:  J_i:=\sum_{\substack{S\ni i\\|S|\ge2}}P(S)
+1397:        =\sigma_i^2\rho_i(1-\rho_i),\qquad
+1398:  J=\sum_iJ_i.
+1399: \] Since \(k\le2(k-1)\) for \(k\ge2\), \[
+1400:  J\le2\Delta_\mu(f).
+1401: \]
+1402: 
+1403: Under a biased measure, the corresponding bound for uncorrected Shannon entropy fails even for a dictator. For the dictator \(f=2y_1-1\), it is \(h_2(\sigma_1^2)\), while \(\I_\mu=\sigma_1^2\); their ratio diverges as \(q_1\to0\). The corrected entropy \(\HH_\mu^+\) and the deficit \(\Delta_\mu\) are both zero for this dictator.
+1404: 
+1405: Deterministic coordinates can be deleted. All boundary cases with \(q_i\in\{0,1\}\) follow by restriction or continuity.
+1406: 
+1407: \subsection{Two probability estimates}\label{bias:probability}
+1408: 
+1409: \begin{lemma}[Concentration after resampling]\label{bias:concentration}
+1410: 
+1411: Let \(N=\sum_i y_i\), with independent Bernoulli probabilities \(q_i\), and \(L=\sum_i\min(q_i,1-q_i)>0\). Then \begin{equation}\label{bias:eq-3-1}
+1412: \sup_k\Pr(N=k)\le \frac1{\sqrt{2L}}.
+1413: \end{equation}
+1414: 
+1415: More generally, fix the original configuration, and refresh coordinate \(i\) independently with probability \(\eta\). A refreshed Bernoulli coordinate can be represented as a fair bit with probability \(2\min(q_i,1-q_i)\), and as its more likely deterministic value otherwise. Conditional on the refresh indicators, the fair-activation indicators, and the values of the nonfair coordinates, the sum is a fixed integer plus a \(\operatorname{Bin}(F,1/2)\) variable, where the independent activation count has mean \[
+1416:  m_F=2\eta\sum_i\min(q_i,1-q_i).
+1417: \] Uniformly in the original configuration, \begin{equation}\label{bias:eq-3-2}
+1418: \sup_k\Pr(N_{\rm refreshed}=k\mid y)
+1419:     \le \frac1{\sqrt{m_F}}.
+1420: \end{equation}
+1421: 
+1422: \end{lemma}
+1423: \begin{proof}
+1424: 
+1425: By Lemma~\ref{lem:antichain-density}, \[
+1426:  \max_k\Pr(\operatorname{Bin}(m,1/2)=k)\le(m+1)^{-1/2}
+1427:  \qquad(m\ge0).
+1428: \]
+1429: 
+1430: If \(F\) is a sum of independent Bernoulli variables with mean \(m_F\), then \[
+1431:  \mathbb E\frac1{F+1}
+1432:  =\int_0^1\prod_i(1-p_i+p_i s)\,ds
+1433:  \le\int_0^1e^{-m_F(1-s)}\,ds\le\frac1{m_F}.
+1434: \] Cauchy--Schwarz therefore bounds \(\mathbb E(F+1)^{-1/2}\le m_F^{-1/2}\). Averaging the conditional binomial bound gives \eqref{bias:eq-3-2}. Taking \(\eta=1\), so \(m_F=2L\), gives \eqref{bias:eq-3-1}.
+1435: 
+1436: \end{proof}
+1437: 
+1438: \begin{lemma}[A small upper tail lies above the mean]\label{bias:tail-above-mean}
+1439: 
+1440: Let \(N\) be a sum of independent Bernoulli variables. If \(\Pr(N\ge t)<1/20\), where \(t\) is an integer, then \(t>\mathbb EN\).
+1441: 
+1442: \end{lemma}
+1443: \begin{proof}
+1444: 
+1445: Put \(m=\mathbb EN\), \(v=\operatorname{Var}N\), \(X=N-m\). Independence gives \[
+1446:  \mathbb EX^4\le v+3v^2.
+1447: \] Hölder and Cauchy--Schwarz give, for \(v>0\), \[
+1448:  \mathbb E|X|\ge\frac{v}{\sqrt{1+3v}},\qquad
+1449:  \Pr(X>0)\ge
+1450:  \frac{(\mathbb EX_+)^2}{\mathbb EX_+^2}
+1451:  \ge\frac{v}{4(1+3v)}.
+1452: \] If \(t\le m\) and \(v\ge1/2\), this last expression is at least \(1/20\), and \(\{X>0\}\subseteq\{N\ge t\}\). If \(v<1/2\), then \(\{N<t\}\subseteq\{|X|\ge1\}\), so Chebyshev gives \(\Pr(N\ge t)\ge1-v>1/2\). The deterministic case is immediate.
+1453: 
+1454: \end{proof}
+1455: 
+1456: \subsection{A weak entropy inequality}\label{bias:weak-section}
+1457: 
+1458: Let \(f=2T_{t,r}-1\), \(1\le t\le r\), and write \[
+1459:  \Lambda=\sum_i\sigma_i^2,\quad
+1460:  N=\sum_i y_i,\quad
+1461:  \rho_i=\Pr(N-y_i=t-1),\quad \I_i=\sigma_i^2\rho_i,
+1462:  \quad \I=\sum_iI_i,\quad V=\operatorname{Var}_\mu f.
+1463: \]
+1464: 
+1465: \begin{lemma}[A logarithmic spectral-rank estimate]\label{bias:rank}
+1466: 
+1467: With \(P(S)=\widehat f_\mu(S)^2\), \begin{equation}\label{bias:eq-4-1}
+1468: \sum_{S\ni i}P(S)\ln^+\frac{\Lambda}{|S|}
+1469:        \le L_0 \I_i,\qquad
+1470:  L_0=3+\ln8.
+1471: \end{equation}
+1472: 
+1473: \end{lemma}
+1474: \begin{proof}
+1475: 
+1476: The derivative \(d_i=\mathbf1[N-y_i=t-1]\) has \(\mathbb Ed_i^2=\rho_i\). Its normalized squared coefficients define a probability law \[
+1477:  \nu_i(B)=\frac{\widehat d_i(B)^2}{\rho_i}.
+1478: \] The left side of \eqref{bias:eq-4-1}, divided by \(\I_i\), is \(\mathbb E_{\nu_i}\ln^+(\Lambda/(|B|+1))\).
+1479: 
+1480: If \(\Lambda\le2\) this is at most \(\ln2\). Suppose \(\Lambda>2\). Refresh the other coordinates independently with probability \(\eta\). The orthonormal noise identity gives \[
+1481:  \mathbb E[d_i(y)d_i(z)]
+1482:  =\rho_i\,\mathbb E_{\nu_i}(1-\eta)^{|B|}.
+1483: \] For the conditional sum of the refreshed other coordinates, the free-bit count in Lemma~\ref{bias:concentration} has mean at least \[
+1484:  2\eta\sum_{j\ne i}\min(q_j,1-q_j)
+1485:  \ge \frac\eta2(\Lambda-\sigma_i^2)
+1486:  \ge\frac{\eta\Lambda}{4}.
+1487: \] It follows that \[
+1488:  \mathbb E_{\nu_i}(1-\eta)^{|B|}
+1489:  \le\frac2{\sqrt{\eta\Lambda}}.
+1490: \] For real \(K>1\), take \(\eta=1/(2K)\). The event relevant to the logarithmic moment is \(\{|B|+1<K\}\), so \[
+1491:  \begin{aligned}
+1492:  \nu_i(|B|+1<K)
+1493:  &\le(1-\eta)^{-(K-1)}
+1494:           \mathbb E_{\nu_i}(1-\eta)^{|B|}\\
+1495:  &\le2\sqrt{2e}\sqrt{\frac K\Lambda}.
+1496:  \end{aligned}
+1497: \] Indeed \[
+1498:  -(K-1)\ln\left(1-\frac1{2K}\right)
+1499:  \le\frac{K-1}{2K-1}<\frac12,
+1500: \] using \(-\ln(1-z)\le z/(1-z)\). For \(K\le1\), the event is empty. Therefore \[
+1501:  \mathbb E_{\nu_i}\ln^+\frac{\Lambda}{|B|+1}
+1502:  \le\int_0^\infty
+1503:        \min\left(1,2\sqrt{2e}\,e^{-u/2}\right)du
+1504:  =2\ln(2\sqrt{2e})+2=3+\ln8.
+1505: \]
+1506: 
+1507: \end{proof}
+1508: 
+1509: \begin{lemma}[The normalization credit]\label{bias:credit}
+1510: 
+1511: \begin{equation}\label{bias:eq-4-2}
+1512: V\ln\frac1V
+1513:  \le\sum_i \I_i\ln^+\frac{4\rho_i}{V}
+1514:        +(1+\ln2+13)\I.
+1515: \end{equation}
+1516: 
+1517: \end{lemma}
+1518: \begin{proof}
+1519: 
+1520: Let \(\alpha=\min(\Pr(f=1),\Pr(f=-1))\). If \(\alpha\ge1/20\), then \(V=4\alpha(1-\alpha)\ge19/100\), and \[
+1521:  V\ln(1/V)\le\ln(100/19)V\le\ln(100/19)\I,
+1522: \] which is more than sufficient. Otherwise negate all inputs and the output if needed so that the minority event is \(A=\{N\ge t\}\), of probability \(\alpha<1/20\). This transformation preserves all the displayed quantities. By Lemma~\ref{bias:tail-above-mean}, \(t>\mathbb EN\).
+1523: 
+1524: Write \(\mu_A=\mu(\cdot\mid A)\). The relative-entropy decomposition against a product measure is \begin{equation}\label{bias:eq-4-3}
+1525: \ln\frac1\alpha
+1526:  =\mathrm{TC}(\mu_A)+
+1527:      \sum_i D_{\rm KL}(\mu_A^{(i)}\Vert\mu_i),
+1528: \end{equation} where \(\mathrm{TC}(\mu_A)\) is the relative entropy of \(\mu_A\) with respect to the product of its marginals. This identity follows directly by splitting the logarithm of the density.
+1529: 
+1530: Fix \(i\), let \(a=\Pr(A\mid y_i=1)\), \(b=\Pr(A\mid y_i=0)\), so \(a-b=\rho_i\) and \(\alpha=q_i a+(1-q_i)b\). Since \(b\le\alpha\), and with \(u=(1-q_i)\rho_i/\alpha\), \begin{equation}\label{bias:eq-4-4}
+1531: \begin{aligned}
+1532:  \alpha D_{\rm KL}(\mu_A^{(i)}\Vert\mu_i)
+1533:  &=q_i a\ln(a/\alpha)+(1-q_i)b\ln(b/\alpha)\\
+1534:  &\le q_i\alpha(1+u)\ln(1+u)\\
+1535:  &\le q_i(1-q_i)\rho_i[1+\ln(1+u)]\\
+1536:  &\le\frac{\I_i}{4}
+1537:        \left[1+\ln2+\ln^+\frac{4\rho_i}{V}\right].
+1538:  \end{aligned}
+1539: \end{equation} Here \((1+u)\ln(1+u)\le u[1+\ln(1+u)]\), \(\ln(1+u)\le\ln2+\ln^+u\), and \(\alpha\ge V/4\).
+1540: 
+1541: It remains to establish \begin{equation}\label{bias:eq-4-5}
+1542: \alpha\,\mathrm{TC}(\mu_A)\le\frac{13}{4}\I.
+1543: \end{equation} If \(t=r\), conditioning on \(A\) fixes every input and the total correlation is zero. Otherwise exponentially tilt the product measure: \[
+1544:  \frac{dR}{d\mu}=\frac{e^{\lambda N}}M,
+1545:  \qquad \lambda>0,\qquad \mathbb E_RN=t.
+1546: \] Such a finite \(\lambda\) exists because \(\mathbb EN<t<r\). Put \(b_*=\Pr_R(N=t)\). For every product measure \(R\), \(D_{\rm KL}(\mu_A\Vert R)\ge\mathrm{TC}(\mu_A)\), and here \begin{equation}\label{bias:eq-4-6}
+1547: D_{\rm KL}(\mu_A\Vert R)
+1548:    =\ln(M/\alpha)-\lambda\mathbb E_{\mu_A}N
+1549:    \le\ln(Me^{-\lambda t}/\alpha)
+1550:    \le\ln(1/b_*).
+1551: \end{equation} The last step uses \(\alpha=M\mathbb E_R[e^{-\lambda N}\mathbf1_A]  \ge Me^{-\lambda t}b_*\).
+1552: 
+1553: Let \(r_i=R(y_i=1)\), \(a_i=1-q_i+q_i e^\lambda\), so \(a_i\ge1\). The complementary upper bound \(\alpha\le Me^{-\lambda t}\), together with the slice change of measure, gives \[
+1554:  \frac{\I_i}{\alpha}
+1555:  \ge\frac{\sigma_i^2e^\lambda}{a_i}
+1556:        R(N-y_i=t-1)
+1557:  =4r_i(1-r_i)a_iR(N-y_i=t-1)
+1558:  \ge4r_i(1-r_i)R(N-y_i=t-1).
+1559: \] The identity \[
+1560:  \mathbb E_R[(y_i-r_i)h(N)]
+1561:    =r_i(1-r_i)\mathbb E_R[h(N-y_i+1)-h(N-y_i)]
+1562: \] holds by conditioning on the other coordinates. Sum it for \(h(N)=\mathbf1[N\ge t]\). As \(\mathbb E_RN=t\), this yields \[
+1563:  \frac \I\alpha\ge4\mathbb E_R(N-t)_+
+1564:                   =2\mathbb E_R|N-t|.
+1565: \] Writing \(v=\operatorname{Var}_RN\), the fourth-moment estimate and Hölder used in Lemma~\ref{bias:tail-above-mean} give \begin{equation}\label{bias:eq-4-7}
+1566: \frac \I\alpha\ge\frac{2v}{\sqrt{1+3v}}.
+1567: \end{equation}
+1568: 
+1569: We now use the following classical theorem, with its hypotheses stated explicitly:
+1570: 
+1571: \begin{quote}
+1572: We use Darroch's integer-mean mode theorem \cite{Darroch64}; see also \cite[eq.~(13)]{Pitman97}. For a finite sum of independent Bernoulli variables with mean equal to an integer \(t\), the mass at \(t\) is maximal among its point probabilities.
+1573: \end{quote}
+1574: 
+1575: If \(v\le1/2\), the integer support and Chebyshev give \(b_*\ge1-v\), hence \(\mathrm{TC}(\mu_A)\le-\ln(1-v)\le2v\ln2\). By \eqref{bias:eq-4-7}, \[
+1576:  \frac{\alpha\,\mathrm{TC}(\mu_A)}\I
+1577:  \le\ln2\sqrt{1+3v}<1.1.
+1578: \] If \(v>1/2\), let \(K=\lceil2\sqrt v\rceil\). Chebyshev and the mode theorem give \[
+1579:  b_*\ge\frac{3}{4(2K+1)}
+1580:        \ge\frac3{4(4\sqrt v+3)}.
+1581: \] Consequently \[
+1582:  \frac{\alpha\,\mathrm{TC}(\mu_A)}\I
+1583:  \le\psi(v):=
+1584:  \ln\frac{16\sqrt v+12}{3}\,
+1585:       \frac{\sqrt{1+3v}}{2v}.
+1586: \] This function decreases on \([1/2,\infty)\) and \(\psi(1/2)<3.25\). For completeness, put \(x=\sqrt v\). The logarithmic derivative of \(\sqrt{1+3x^2}/(2x^2)\) is strictly less than \(-1/x\). The logarithmic derivative of \(\ln((16x+12)/3)\) is strictly less than \(1/x\) for \(x\ge1/\sqrt2\), because its logarithm exceeds 1. This proves the decrease. For the endpoint bound, use \(\sqrt{5/2}<19/12\), \(\sqrt2<99/70\), and \[
+1587:  e^{39/19}>
+1588:  \left(\sum_{k=0}^8\frac{2^k}{k!}\right)\left(1+\frac1{19}\right)
+1589:  =\frac{2327}{315}\frac{20}{19}
+1590:  >\frac{272}{35}>
+1591:        \frac{8\sqrt2+12}{3}.
+1592: \] Thus \(\psi(1/2)<(19/12)(39/19)=13/4\). Thus \eqref{bias:eq-4-5} holds.
+1593: 
+1594: Finally \(V\ln(1/V)\le4\alpha\ln(1/\alpha)\). Combining \eqref{bias:eq-4-3}, \eqref{bias:eq-4-4}, and \eqref{bias:eq-4-5} proves \eqref{bias:eq-4-2}.
+1595: 
+1596: \end{proof}
+1597: 
+1598: \begin{proposition}[The weak bound]\label{bias:weak}
+1599: 
+1600: \begin{equation}\label{bias:eq-4-8}
+1601: \mathcal E_\mu(f)\le A \I,\qquad
+1602:  A=6+L_0+(1+\ln2+13)=23+\ln16<25.8.
+1603: \end{equation}
+1604: 
+1605: \end{proposition}
+1606: \begin{proof}
+1607: 
+1608: Let \(W_k=\sum_{|S|=k}P(S)\), \(m=\I/V\), and \(\pi_i=\I_i/V\). For \(k\ge1\), define positive reference weights \[
+1609:  \theta_k(i)=
+1610:  \max\left(\sigma_i^2\min(1,k/\Lambda),\,4\pi_i\right).
+1611: \] Let \(Z_k\) be their \(k\)-th elementary symmetric polynomial. Gibbs' inequality on the sets of size \(k\) gives \begin{equation}\label{bias:eq-4-9}
+1612: \sum_{|S|=k}P(S)\ln\frac{\sigma_S^2}{P(S)}
+1613:  \le W_k\ln\frac1{W_k}+W_k\ln Z_k
+1614:        +\sum_{|S|=k}P(S)\sum_{i\in S}
+1615:            \ln\frac{\sigma_i^2}{\theta_k(i)}.
+1616: \end{equation} Since \(\sum_i\theta_k(i)\le k+4m\), \[
+1617:  Z_k\le\left(\frac{e(k+4m)}k\right)^k,\qquad
+1618:  \ln Z_k\le k+4m.
+1619: \] Moreover \[
+1620:  \ln\frac{\sigma_i^2}{\theta_k(i)}
+1621:  \le\ln^+\frac\Lambda k-\ln^+\frac{4\rho_i}{V}.
+1622: \] The level distribution \(W_k/V\), supported on positive integers with mean \(m\), has entropy at most \(1+\ln m\), by Gibbs' inequality against the geometric distribution with that mean. Hence \[
+1623:  \sum_kW_k\ln\frac1{W_k}
+1624:  \le V\ln\frac1V+V(1+\ln m)
+1625:  \le V\ln\frac1V+\I.
+1626: \] Summing \eqref{bias:eq-4-9}, and then applying Lemmas~\ref{bias:rank} and~\ref{bias:credit}, gives \[
+1627:  \begin{aligned}
+1628:  \mathcal E_\mu(f)
+1629:  &\le V\ln\frac1V+6I
+1630:       +\sum_i\sum_{S\ni i}P(S)\ln^+\frac\Lambda{|S|}
+1631:       -\sum_iI_i\ln^+\frac{4\rho_i}{V}\\
+1632:  &\le[6+L_0+(1+\ln2+13)]\I.
+1633:  \end{aligned}
+1634: \]
+1635: 
+1636: \end{proof}
+1637: 
+1638: \subsection{The strengthened inequality}\label{bias:strong-section}
+1639: 
+1640: \begin{theorem}[Threshold gates under product measures]\label{bias:strong}
+1641: 
+1642: For every \(T_{t,r}\) and every product law, \begin{equation}\label{bias:eq-5-1}
+1643: \mathcal E_\mu(2T_{t,r}-1)\le10A J\le20A \Delta_\mu(2T_{t,r}-1).
+1644: \end{equation} In particular \(\HH_\mu^+\le C_T \Delta_\mu\), where \(C_T=20A/\ln2<744\). For the displayed constant, \(C_T=80+460/\ln2\), and the convergent series \[
+1645:  \ln2=2\sum_{k\ge0}\frac1{(2k+1)3^{2k+1}}
+1646:    >\frac{842}{1215}>\frac{115}{166}
+1647: \] gives \(C_T<744\).
+1648: 
+1649: \end{theorem}
+1650: \begin{proof}
+1651: 
+1652: The nonconstant singleton coefficients contribute \begin{equation}\label{bias:eq-5-2}
+1653: \sum_i2\sigma_i^2\rho_i^2\ln(1/\rho_i)
+1654:  \le2\sum_i\sigma_i^2\rho_i(1-\rho_i)=2J.
+1655: \end{equation} If every \(\rho_i\le9/10\), then \(J\ge \I/10\) and Proposition~\ref{bias:weak} proves \eqref{bias:eq-5-1}.
+1656: 
+1657: Suppose instead that a largest pivotal probability is \(\rho_0=1-\varepsilon>9/10\). The case \(\varepsilon=0\) is a dictator after deleting deterministic coordinates, so has zero entropy and deficit. Assume \(0<\varepsilon<1/10\). Negating all inputs and the output if needed, arrange \(q=q_0\le1/2\).
+1658: 
+1659: For the other coordinates let \(\bar y_i\) be the more likely input value and \(z_i=\mathbf1[y_i\ne\bar y_i]\). Let \(U\) consist of the coordinates whose more likely value is 0 and \(D\) those whose more likely value is 1. Put \[
+1660:  L_U=\sum_{i\in U}\mathbb Ez_i,\quad
+1661:  L_D=\sum_{i\in D}\mathbb Ez_i,\quad L=L_U+L_D,
+1662:  \quad
+1663:  \Lambda_U=\sum_{i\in U}\sigma_i^2,\quad
+1664:  \Lambda_D=\sum_{i\in D}\sigma_i^2,\quad
+1665:  \Lambda'=\Lambda_U+\Lambda_D.
+1666: \] We first establish \begin{equation}\label{bias:eq-5-3}
+1667: L<\frac18,\qquad L\le\frac87\varepsilon,\qquad
+1668:  \Lambda'<\frac12,\qquad
+1669:  \Lambda'\le\frac{32}{7}\varepsilon,\qquad
+1670:  2L_U\le\Lambda_U,\quad2L_D\le\Lambda_D.
+1671: \end{equation}
+1672: 
+1673: \textbf{Step 1: proof of \eqref{bias:eq-5-3}.} Lemma~\ref{bias:concentration} applied to \(N'=N-y_0\) gives \(L\le1/(2\rho_0^2)<4/5\). If the most likely configuration had \(|D|\ne t-1\), the no-error event would fail the pivotal slice, so \[
+1674:  \prod_{i\ne0}(1-\mathbb Ez_i)\le\varepsilon<1/10.
+1675: \] But \(\ln(1-u)\ge-3u/2\) on \(0\le u\le1/2\); hence this would imply \(L>(2/3)\ln10>4/3\), a contradiction. Thus \(|D|=t-1\), and \(N'-(t-1)=Z_U-Z_D\).
+1676: 
+1677: An outcome with exactly one error lies off the pivotal slice. By independence and the union bound on all other errors, \[
+1678:  \varepsilon\ge\Pr\!\left(\sum z_i=1\right)\ge L(1-L).
+1679: \] On \([1/8,4/5]\), the minimum of \(L(1-L)\) exceeds \(1/10\). Thus \(L<1/8\), and then \(\varepsilon\ge(7/8)L\). Finally \(2u\le4u(1-u)\le4u\) for \(u\in[0,1/2]\), proving the remaining bounds in \eqref{bias:eq-5-3}.
+1680: 
+1681: \textbf{Step 2: lower bounds for the available deficit.} Write \(J_U=\sum_{i\in U}J_i\), \(J_D=\sum_{i\in D}J_i\), and \(J_0=\sigma_0^2\varepsilon(1-\varepsilon)\). For \(i\in U\), the no-other-error configurations with \(y_0=0\) show \(\rho_i\ge(1-q)(1-L)>7/16\), while the choice of coordinate 0 gives \(\rho_i\le1-\varepsilon\). Concavity of \(x(1-x)\) therefore yields \begin{equation}\label{bias:eq-5-4}
+1682: J_U\ge\frac9{10}\varepsilon\Lambda_U.
+1683: \end{equation} For \(i\in D\), put \(a=1-L>7/8\). The no-other-error configurations with \(y_0=1\) or \(y_0=0\) give \[
+1684:  aq\le\rho_i\le1-a(1-q).
+1685: \] The smaller value of \(x(1-x)\) at these endpoints is \(aq(1-aq)\), because their difference is \(a(1-a)(1-2q)\ge0\). Consequently \begin{equation}\label{bias:eq-5-5}
+1686: \rho_i(1-\rho_i)\ge
+1687:        \frac78q\left(1-\frac78q\right)
+1688:        \ge\frac{63}{128}q,
+1689:  \qquad
+1690:  J_D\ge\frac{63}{128}q\Lambda_D.
+1691: \end{equation}
+1692: 
+1693: \textbf{Step~3: coefficients containing coordinate 0.} Let \(d=\mathbf1[N'=t-1]\), \(v_d=\operatorname{Var}d=\varepsilon(1-\varepsilon)\). The coefficients indexed by \(\{0\}\cup B\), \(B\ne\varnothing\), contribute \begin{equation}\label{bias:eq-5-6}
+1694: \sigma_0^2
+1695:     \sum_{B\ne\varnothing}\widehat d(B)^2
+1696:               \ln\frac{\sigma_B^2}{\widehat d(B)^2}.
+1697: \end{equation} Let \(U_k=\sum_{|B|=k}\widehat d(B)^2\), and let \(e_k\) be the \(k\)-th elementary symmetric polynomial of the \(\sigma_i^2\) for \(i\ne0\). By \eqref{bias:eq-5-3}, \[
+1698:  e_k\le(\Lambda')^k\le(6v_d)^k,
+1699:  \quad \sum_{k\ge1}U_k=v_d.
+1700: \] Levelwise Gibbs and \(x\ln(a/x)\le a/e\) give \[
+1701:  \begin{aligned}
+1702:  \sum_{B\ne\varnothing}\widehat d(B)^2
+1703:               \ln\frac{\sigma_B^2}{\widehat d(B)^2}
+1704:  &\le\sum_k U_k\ln\frac{e_k}{U_k}\\
+1705:  &\le\sum_k\frac{v_d^k}{e}
+1706:              +(\ln6)\sum_k kU_k\\
+1707:  &\le\frac{10}{9e}v_d+(\ln6)\I_\mu(d).
+1708:  \end{aligned}
+1709: \] Here \(\I_\mu(d)\) denotes the spectral Dirichlet energy of the \(0/1\)-valued function \(d\). Its difference in any coordinate has absolute value at most 1, so \[
+1710:  \I_\mu(d)\le\sum_{i\ne0}q_i(1-q_i)
+1711:        =\Lambda'/4\le\frac{80}{63}v_d.
+1712: \] The resulting coefficient is below 3: since \(e>8/3\) and \(\ln6<2\), it is less than \(5/12+160/63=745/252<3\). Thus \eqref{bias:eq-5-6} is at most \(3J_0\).
+1713: 
+1714: \textbf{Step~4: coefficients avoiding coordinate 0.} Put \[
+1715:  u=\mathbf1[Z_U-Z_D\ge1],\qquad
+1716:  v=\mathbf1[Z_D-Z_U\ge1].
+1717: \] Then \(T=u+y_0(1-u-v)\). For nonempty \(B\subseteq U\cup D\), the coefficient of the \(\pm1\)-valued function is \[
+1718:  2(1-q)\widehat u(B)-2q\widehat v(B).
+1719: \] Every \(0/1\)-valued function \(w\) satisfies \begin{equation}\label{bias:eq-5-7}
+1720: |\widehat w(B)|\le\sigma_B/2\quad(B\ne\varnothing).
+1721: \end{equation} Indeed integrate a coordinate \(i\in B\): \(\widehat w(B)=(\sigma_i/2)\mathbb E[\Delta_iw\,\phi_{B\setminus\{i\}}]\), and use \(|\Delta_iw|\le1\). Moreover \begin{equation}\label{bias:eq-5-8}
+1722: |\widehat u(B)|\le L_U\sigma_B\quad(B\subseteq D),\qquad
+1723:  |\widehat v(B)|\le L_D\sigma_B\quad(B\subseteq U),
+1724: \end{equation} because \(0\le\mathbb E[u\mid y_D]\le\Pr(Z_U\ge1)\le L_U\), and likewise for \(v\).
+1725: 
+1726: The following elementary inequality will handle the difference of coefficients. For \(s>0\), define \(\varphi_s(x)=x\ln(s/x)\). If \(a^2,b^2\le s\), then \begin{equation}\label{bias:eq-5-9}
+1727: \varphi_s((a-b)^2)
+1728:  \le2\varphi_s(a^2)+2\varphi_s(b^2)+2a^2+2b^2.
+1729: \end{equation} If \(2a^2+2b^2\le s/e\), use monotonicity of \(\varphi_s\) up to \(s/e\), followed by the subadditivity \(\varphi_s(x+y)\le\varphi_s(x)+\varphi_s(y)\). If \(2a^2+2b^2>s/e\), simply use \(\varphi_s((a-b)^2)\le s/e<2a^2+2b^2\). These are the two cases of \eqref{bias:eq-5-9}.
+1730: 
+1731: The function \(x[1+\ln(s/x)]\) increases on \([0,s]\). Therefore, on a family of coefficients satisfying \(a_B^2\le\lambda\sigma_B^2\), \(0\le\lambda\le1\), the corresponding terms on the right of \eqref{bias:eq-5-9} sum to at most \begin{equation}\label{bias:eq-5-10}
+1732: 2\lambda[1+\ln(1/\lambda)]
+1733:        \sum_B\sigma_B^2.
+1734: \end{equation} Zero parameters are interpreted by continuity.
+1735: 
+1736: We also have the product-sum estimates \begin{equation}\label{bias:eq-5-11}
+1737: \sum_{\substack{|B|\ge2\\B\cap U\ne\varnothing}}\sigma_B^2
+1738:  \le\Lambda_U(e^{\Lambda'}-1)
+1739:  \le\frac53\Lambda'\Lambda_U,
+1740: \end{equation} \begin{equation}\label{bias:eq-5-12}
+1741: \sum_{\substack{B\subseteq D\\|B|\ge2}}\sigma_B^2
+1742:  \le\frac12 e^{\Lambda_D}\Lambda_D^2
+1743:  \le\frac56\Lambda_D^2,
+1744: \end{equation} and the analogous bounds with \(U,D\) interchanged. Here \(e^{1/2}<5/3\) and \eqref{bias:eq-5-3} were used. The scalar bounds used below follow, for example, from \(8/3<e<11/4\) and \(\ln2<7/10\), obtained directly from the exponential series. The first estimate follows by choosing one member of \(B\cap U\), possibly overcounting; the second follows by the exponential series.
+1745: 
+1746: Let \(a_B=2(1-q)\widehat u(B)\) and \(b_B=2q\widehat v(B)\). Apply \eqref{bias:eq-5-10} to the following four families.
+1747: 
+1748: \begin{itemize}
+1749: \item
+1750:   \textbf{\(a_B\), sets meeting \(U\):} use \(\lambda=1\). By \eqref{bias:eq-5-11} and \eqref{bias:eq-5-3}, their contribution is at most \[
+1751:     \frac{10}{3}\Lambda'\Lambda_U
+1752:     \le\frac{320}{21}\varepsilon\Lambda_U
+1753:     <16\varepsilon\Lambda_U.
+1754:   \]
+1755: \item
+1756:   \textbf{\(a_B\), sets contained in \(D\):} put \(x=2L_U<1/4\) and use \(\lambda=x^2\). The elementary bound \(x(1+2\ln(1/x))\le(1+2\ln4)/4<1\) on this interval gives a contribution at most \[
+1757:    \frac53 x^2(1+2\ln(1/x))\Lambda_D^2
+1758:    \le\frac53\Lambda_U(\Lambda')^2
+1759:    \le\frac{80}{21}\varepsilon\Lambda_U
+1760:    <4\varepsilon\Lambda_U.
+1761:   \]
+1762: \item
+1763:   \textbf{\(b_B\), sets meeting \(D\):} use \(\lambda=q^2\) and \(q(1+2\ln(1/q))\le(1+2\ln2)/2<6/5\). Their contribution is at most \[
+1764:    \frac{10}{3}q^2(1+2\ln(1/q))\Lambda'\Lambda_D
+1765:    \le2q\Lambda_D.
+1766:   \]
+1767: \item
+1768:   \textbf{\(b_B\), sets contained in \(U\):} put \(y=2L_D<1/4\) and use \(\lambda=q^2y^2\). Since \[
+1769:     qy(1+2\ln(1/q))+2qy\ln(1/y)
+1770:        \le\frac3{10}+\frac{\ln4}{4}<\frac23,
+1771:   \] their contribution is at most \[
+1772:    \frac53 q^2y^2[1+2\ln(1/q)+2\ln(1/y)]\Lambda_U^2
+1773:    \le\frac{10}{9}qy\Lambda_U^2
+1774:    \le\frac5{18}q\Lambda_D
+1775:    <\frac13q\Lambda_D.
+1776:   \]
+1777: \end{itemize}
+1778: 
+1779: Thus all degree-at-least-two coefficients avoiding 0 contribute at most \begin{equation}\label{bias:eq-5-13}
+1780: 20\varepsilon\Lambda_U+\frac73q\Lambda_D
+1781:  \le23J_U+5J_D,
+1782: \end{equation} by \eqref{bias:eq-5-4}--\eqref{bias:eq-5-5}.
+1783: 
+1784: Adding \eqref{bias:eq-5-2}, Step~3, and \eqref{bias:eq-5-13} gives \[
+1785:  \mathcal E_\mu(f)\le2J+3J_0+23J_U+5J_D\le25J.
+1786: \] Since \(25<10A\), this proves the remaining case of \eqref{bias:eq-5-1}.
+1787: 
+1788: \end{proof}
+1789: 
+1790: \section{Composition and strong entropy}\label{comp:section}
+1791: 
+1792: We use the product-measure composition principle of O'Donnell and Tan \cite{ODT13}. The exact identities below record the entropy and deficit cancellation.
+1793: 
+1794: Let \(f_i\) be Boolean functions on mutually disjoint input blocks with product laws \(\mu_i\). Let \(\eta_i=\mathbb E_{\mu_i}f_i\) and \(v_i=1-\eta_i^2>0\). Let \(g\) be a Boolean function on the independent outputs, endowed with the product law \(\eta\) in \(\{-1,1\}\) notation. Set \(F=g(f_1,\ldots,f_m)\). Let \[
+1795:  a_i=\frac{\I_i^\eta(g)}{v_i}.
+1796: \]
+1797: 
+1798: \begin{proposition}[Exact composition identities]\label{comp:identities}
+1799: 
+1800: \begin{equation}\label{comp:eq-6-1}
+1801: \mathcal E_\mu(F)=\mathcal E_\eta(g)
+1802:                    +\sum_i a_i\mathcal E_{\mu_i}(f_i),
+1803: \end{equation} \begin{equation}\label{comp:eq-6-2}
+1804: \I_\mu(F)=\sum_i a_i \I_{\mu_i}(f_i),
+1805:  \qquad
+1806:  \operatorname{Var}_\mu(F)=\operatorname{Var}_\eta(g),
+1807: \end{equation} \begin{equation}\label{comp:eq-6-3}
+1808: \Delta_\mu(F)=\Delta_\eta(g)+\sum_i a_i\Delta_{\mu_i}(f_i).
+1809: \end{equation}
+1810: 
+1811: \end{proposition}
+1812: \begin{proof}
+1813: 
+1814: The centered normalized output of block \(i\) expands as \[
+1815:  \frac{f_i-\eta_i}{\sqrt{v_i}}
+1816:     =\sum_{T\ne\varnothing}
+1817:            \frac{\widehat f_i(T)}{\sqrt{v_i}}\phi_T.
+1818: \] For a nonempty union \(S=\bigcup_{i\in A}T_i\), where every \(T_i\) is nonempty and contained in block \(i\), substitution into the \(\eta\)-biased Fourier expansion of \(g\) gives \begin{equation}\label{comp:eq-6-4}
+1819: \widehat F_\mu(S)
+1820:     =\widehat g_\eta(A)
+1821:         \prod_{i\in A}\frac{\widehat f_i(T_i)}{\sqrt{v_i}}.
+1822: \end{equation} There is exactly one possible \(A\) and one collection \((T_i)\) for each \(S\), so there is no interference between different decompositions. Equivalently, sample \(A\) from the squared Fourier spectrum of \(g\), and for each \(i\in A\) independently sample a nonempty \(T_i\) from the law \(\widehat f_i(T_i)^2/v_i\). The union has the squared Fourier law of \(F\).
+1823: 
+1824: The logarithm in the corrected entropy splits: \[
+1825:  \ln\frac{\sigma_S^2}{\widehat F_\mu(S)^2}
+1826:  =
+1827:  \ln\frac{\prod_{i\in A}v_i}{\widehat g_\eta(A)^2}
+1828:   +\sum_{i\in A}
+1829:        \ln\frac{\sigma_{T_i}^2}{\widehat f_i(T_i)^2}.
+1830: \] Taking expectations gives \eqref{comp:eq-6-1}, because the probability that \(i\in A\) is \(\I_i^\eta(g)\). Taking expected cardinalities in \eqref{comp:eq-6-4} gives the influence identity. The variance identity follows from the output distribution, or from its constant coefficient. Finally \[
+1831:  \sum_i a_iv_i=\I_\eta(g),
+1832: \] which proves \eqref{comp:eq-6-3}.
+1833: 
+1834: \end{proof}
+1835: 
+1836: \begin{corollary}[Constant-preserving composition]\label{comp:closure}
+1837: 
+1838: If \(g\) satisfies biased FEI+ with bit constant \(C_0\) under its induced product law and every \(f_i\) satisfies biased FEI+ with bit constant \(C_i\), then \[
+1839:  \HH_\mu^+(F)\le\max(C_0,C_1,\ldots,C_m)\Delta_\mu(F).
+1840: \]
+1841: 
+1842: \end{corollary}
+1843: \begin{proof}
+1844: 
+1845: This is immediate from \eqref{comp:eq-6-1} and \eqref{comp:eq-6-3}, since every deficit and \(a_i\) is nonnegative. Constant child outputs are fixed and removed before applying the identity.
+1846: 
+1847: \end{proof}
+1848: 
+1849: \begin{corollary}[Read-once threshold and parity formulas]\label{comp:threshold-formulas}
+1850: 
+1851: Every read-once formula built from \(T_{t,r}\) gates and parity gates, with arbitrary fan-ins and negations, satisfies \[
+1852:  \HH_\mu^+(f)\le C_T\Delta_\mu(f),\qquad C_T<744,
+1853: \] under every product measure on its original inputs. Depth and intermediate biases do not appear in the constant.
+1854: 
+1855: \end{corollary}
+1856: \begin{proof}
+1857: 
+1858: Literals have zero corrected entropy and deficit. Threshold gates satisfy Theorem~\ref{bias:strong}; parity gates satisfy the smaller constant in Lemma~\ref{comp:elementary-gates}. Apply Corollary~\ref{comp:closure} from the leaves to the root.
+1859: 
+1860: \end{proof}
+1861: 
+1862: \begin{corollary}[Hybrid formulas with LTF blocks]\label{comp:hybrid}
+1863: 
+1864: By Theorem~\ref{thm:A}, every linear threshold function satisfies \(\HH(h)\le C_L\Delta(h)\), with \(C_L=4\Creg\). Take disjoint uniform-input LTF terminal blocks and combine them in a read-once tree in which:
+1865: 
+1866: \begin{itemize}
+1867: \item
+1868:   symmetric threshold and parity gates accept inputs of any means;
+1869: \item
+1870:   an arbitrary weighted LTF gate may accept balanced nonconstant child outputs;
+1871: \item
+1872:   fixed-arity arbitrary Boolean gates may be included with their established product-biased FEI+ constants.
+1873: \end{itemize}
+1874: 
+1875: Then the complete function has \[
+1876:  \HH^+(F)\le C \Delta(F),
+1877: \] where \(C\) is the maximum of the applicable constants, including \(C_L\) and \(C_T\). Thus \(\HH(F)\le C \I(F)\) provided \(C\ge\log_2e\), and \(\HH(F)\le(C+\kappa)\Delta(F)\).
+1878: 
+1879: \end{corollary}
+1880: \begin{proof}
+1881: 
+1882: Apply Corollary~\ref{comp:closure} at each gate. The incoming product law at every weighted LTF gate is uniform by the balance hypothesis. The full entropy conclusions follow from Corollary~\ref{comp:full-entropy}.
+1883: 
+1884: \end{proof}
+1885: 
+1886: \subsection{AND, OR, and parity}\label{comp:elementary-section}
+1887: 
+1888: The following elementary gate bounds will also be useful.
+1889: 
+1890: \begin{lemma}[Elementary gate constants]\label{comp:elementary-gates}
+1891: 
+1892: Under every product measure, \begin{equation}\label{comp:eq-7-1}
+1893: \HH_\mu^+(\mathrm{AND}_r),\,\HH_\mu^+(\mathrm{OR}_r)
+1894:        \le\left(2+\frac4{\ln2}\right)\Delta_\mu,
+1895:  \qquad
+1896:  \HH_\mu^+(\mathrm{XOR}_r)\le\frac2{\ln2}\Delta_\mu.
+1897: \end{equation} The AND/OR constant \(2+4/\ln2=7.770780\ldots\) is sharp over product laws and arities.
+1898: 
+1899: \end{lemma}
+1900: \begin{proof}
+1901: 
+1902: For \(a_i\in(0,1]\), put \[
+1903:  Z=\prod_i a_i,\quad
+1904:  R=\sum_i(1-a_i)-1+Z,\quad
+1905:  \Phi=\sum_i(a_i-Z)\ln(1/a_i).
+1906: \] The scalar inequality \begin{equation}\label{comp:eq-7-2}
+1907: \Phi\le2R
+1908: \end{equation} follows by induction. Appending \(b\in(0,1]\) changes these quantities by \[
+1909:  \Delta R=(1-b)(1-Z),
+1910: \] \[
+1911:  \Delta\Phi=(1-b)Z\ln(1/Z)+b\ln(1/b)(1-Z)
+1912:             \le2(1-b)(1-Z),
+1913: \] using \(s\ln(1/s)\le1-s\).
+1914: 
+1915: For an OR gate take \(a_i=1-q_i\), so the complementary \(0/1\) indicator is \(G=\prod_i(1-y_i)\). Its \(\pm1\) Fourier probabilities on nonempty sets are \[
+1916:  P(S)=4\prod_{i\in S}\frac{\sigma_i^2}{4}
+1917:               \prod_{i\notin S}a_i^2.
+1918: \] Direct multiplication gives \[
+1919:  \I=4Z\sum_i(1-a_i),\qquad V=4Z(1-Z),\qquad \Delta=4ZR,
+1920: \] and \[
+1921:  \mathcal E_\mu=(2\ln2)\Delta+8Z\Phi
+1922:         \le(2\ln2+4)\Delta.
+1923: \] Input and output negations handle AND. For OR on two bits with \(q_1=q_2=q\to0\), \(R=q^2\) and \(\Phi=2q(1-q)\ln(1/(1-q))\sim2q^2\). The bit ratio tends to \(2+4/\ln2\), proving sharpness.
+1924: 
+1925: For parity write \(\nu_i=2q_i-1\) and \(a_i=\nu_i^2\). Its spectrum is \[
+1926:  P(S)=\sigma_S^2\prod_{i\notin S}a_i.
+1927: \] The same scalar quantities satisfy \(\Delta=R\), \(\mathcal E_\mu=\Phi\), and \eqref{comp:eq-7-2} proves the parity estimate. Zero \(a_i\) follow by continuity.
+1928: 
+1929: \end{proof}
+1930: 
+1931: \subsection{From FEI+ to full strong entropy}\label{comp:conversion-section}
+1932: 
+1933: \begin{lemma}[The empty coefficient and the spectral deficit]\label{comp:empty-atom}
+1934: 
+1935: For every uniform-input Boolean \(f\), \begin{equation}\label{comp:eq-8-1}
+1936: h_0(f):=(\mathbb Ef)^2\log_2\frac1{(\mathbb Ef)^2}
+1937:        \le\kappa \Delta(f),
+1938:  \qquad \kappa=\sqrt{\frac2{1-\ln2}}<2.553.
+1939: \end{equation}
+1940: 
+1941: \end{lemma}
+1942: \begin{proof}
+1943: 
+1944: Let \(p=\min(\Pr(f=1),\Pr(f=-1))\), \(x=1-2p=|\mathbb Ef|\). The edge-isoperimetric bound is \begin{equation}\label{comp:eq-8-2}
+1945: \I(f)\ge2p\log_2(1/p).
+1946: \end{equation} One direct proof of \eqref{comp:eq-8-2} uses entropy tensorization for the minority indicator \(u\): \(\operatorname{Ent}(u)\le\sum_i\mathbb E\operatorname{Ent}_i(u)\). Its left side is \(p\ln(1/p)\); each pivotal fiber contributes \((\ln2)/2\), giving the right side \((\ln2)\I(f)/2\). Entropy tensorization itself follows by induction from the conditional entropy identity and convexity of the entropy functional; it is the standard finite product entropy inequality.
+1947: 
+1948: As \(V=1-x^2\), \eqref{comp:eq-8-2} gives \[
+1949:  \Delta(f)\ge
+1950:  \frac{1-x}{\ln2}
+1951:       [-\ln(1-x)-x\ln2].
+1952: \] For \(0<x<1\), put \(a=1-\ln2>0\). Then \[
+1953:  -\ln(1-x)-x\ln2\ge ax+x^2/2.
+1954: \] Also \[
+1955:  -x\ln x\le\sqrt x(1-x).
+1956: \] To check the latter, set \(x=e^{-2t}\): it becomes \(t\le\sinh t\). Therefore \[
+1957:  \frac{h_0(f)}{\Delta(f)}
+1958:  \le\frac{-2x\ln x}{(1-x)(a+x/2)}
+1959:  \le\frac{2\sqrt x}{a+x/2}
+1960:  \le\sqrt{\frac2a}=\kappa,
+1961: \] where the last step is the arithmetic-geometric mean inequality. The endpoints \(x=0,1\) have \(h_0=0\), and follow directly or by continuity.
+1962: 
+1963: \end{proof}
+1964: 
+1965: \begin{corollary}[Full strong entropy]\label{comp:full-entropy}
+1966: 
+1967: If \(\HH^+(f)\le C \Delta(f)\) on the uniform cube, then \[
+1968:  \HH(f)\le(C+\kappa)\Delta(f).
+1969: \] Also \[
+1970:  \HH(f)\le\max(C,\log_2e)\,\I(f),
+1971: \] since \(h_0(f)\le(\log_2e)V(f)\).
+1972: 
+1973: \end{corollary}
+1974: \begin{proof}
+1975: 
+1976: The first estimate follows from Lemma~\ref{comp:empty-atom}. The second follows from \(\HH=\HH^++h_0\), \(h_0\le(\log_2e)V\), and \(\Delta+V=\I\).
+1977: 
+1978: \end{proof}
+1979: 
+1980: Apply these facts with \(C=C_T<744\) to obtain the stated clean formula bounds \(\HH(f)\le744I(f)\) and \(\HH(f)\le747\Delta(f)\).
+1981: 
+1982: \subsection{Balanced regular formulas and mixed gate classes}
+1983: 
+1984: The uniform-input results also give a smaller constant when every nonconstant output below the root is balanced.
+1985: 
+1986: \begin{corollary}\label{comp:balanced-regular}
+1987: Let $f$ be a read-once formula whose gates are regular Boolean functions or character multiples of regular Boolean functions. Suppose every nonconstant gate output below the root is balanced under the uniform measure on the original inputs. Then
+1988: \[
+1989:  \HH(f)\le4\Creg\bigl(\I(f)-\Var(f)\bigr).
+1990: \]
+1991: In particular this applies to formulas of arbitrary depth and fan-in over balanced weighted threshold gates, with an arbitrary weighted threshold at the root.
+1992: \end{corollary}
+1993: \begin{proof}
+1994: Remove constant children by restriction; the gate classes are closed under this operation. If the nonconstant children $f_i$ are balanced, then $v_i=1$, and the spectral substitution in \eqref{comp:eq-6-4} gives the full entropy identity
+1995: \[
+1996:  \HH(g(f_1,\ldots,f_m))
+1997:    =\HH(g)+\sum_i\Inf_i(g)\HH(f_i).
+1998: \]
+1999: Combine it with \eqref{comp:eq-6-3} and Theorem~\ref{thm:A}, and proceed from the leaves to the root.
+2000: \end{proof}
+2001: 
+2002: The same argument allows the other uniform gate classes proved above. More generally, consider a read-once tree with uniform original inputs. At a gate whose nonconstant children are balanced, one may use any of the following classes with the indicated FEI+ constant:
+2003: \[
+2004: \begin{array}{ll}
+2005:  \text{character multiples of regular functions:}
+2006:     &4\Creg,\\[2pt]
+2007:  \text{character multiples of the combinations in Theorem~\ref{thm:B}:}
+2008:     &4\Cmulti,\\[2pt]
+2009:  \text{unions or intersections as in Theorem~\ref{thm:readk-intro}:}
+2010:     &132+\dfrac{118}{5}\log k+\dfrac{106}{5}\log M.
+2011: \end{array}
+2012: \]
+2013: For a chain width $w$, the first two constants increase by $4\log w$ and the last by $2\log w$. Symmetric threshold and parity gates may occur at the remaining vertices without a balance assumption. Corollary~\ref{comp:closure} gives FEI+ for the resulting function with the maximum of the applicable gate constants. Corollary~\ref{comp:full-entropy} then supplies the corresponding full entropy bounds.
+2014: 
+2015: \section{Joint selector entropy}\label{sec:selectors}
+2016: 
+2017: The communication interpretation of FEI and coding arguments for
+2018: composition were developed by Wan, Wright and Wu~\cite{WWW14}.
+2019: Bounds through average unambiguous parity certificate complexity
+2020: were proved by Arunachalam, Chakraborty, Kouck\'y, Saurabh and
+2021: de Wolf~\cite{ACKSW21}. The conditional calculations below give exact
+2022: entropy and influence identities for selectors, including affine cells
+2023: and overlapping leaf variable sets.
+2024: 
+2025: Let $A_1,\ldots,A_m$ partition a uniform control cube. Write
+2026: $a_j=\mathbf 1_{A_j}$ and $p_j=\mathbb E a_j>0$.
+2027: Let $g_j$ be balanced Boolean functions on a data cube disjoint from the
+2028: control coordinates. Assume that their nonempty Fourier supports are
+2029: pairwise disjoint. The data variable sets themselves need not be disjoint.
+2030: Set
+2031: \[
+2032:  F(z,y)=\sum_{j=1}^m a_j(z)g_j(y).
+2033: \]
+2034: This is Boolean because exactly one selector is active.
+2035: Define
+2036: \[
+2037:  q_j(T)=\frac{\widehat a_j(T)^2}{p_j},\qquad
+2038:  d_j=\sum_T |T|q_j(T),\qquad D=\sum_jp_jd_j.
+2039: \]
+2040: Each $q_j$ is a probability law, by Parseval.
+2041: 
+2042: \begin{proposition}[Exact selector identities]\label{prop:selector-identities}
+2043: Under these assumptions,
+2044: \begin{align*}
+2045:  \HH(F)&=\HH(p)+\sum_jp_j\bigl(\HH(q_j)+\HH(g_j)\bigr),\\
+2046:  \I(F)&=D+\sum_jp_j \I(g_j).
+2047: \end{align*}
+2048: \end{proposition}
+2049: \begin{proof}
+2050: For a nonempty data Fourier set $U$ in the support of $\widehat g_j$,
+2051: \[
+2052:  \widehat F(T\cup U)=\widehat a_j(T)\widehat g_j(U).
+2053: \]
+2054: The support assumption makes $j$ unique, and balancedness excludes the
+2055: empty data set. Consequently the spectral sample identifies its selector
+2056: label $J$, with probability $p_j$. Conditional on $J=j$, the control and
+2057: data parts are independent with laws $q_j$ and $\widehat g_j^2$.
+2058: The two identities follow from the entropy chain rule and additivity of
+2059: cardinality across the two coordinate blocks.
+2060: \end{proof}
+2061: 
+2062: \begin{corollary}[Affine-subspace selectors]\label{cor:affine-selectors}
+2063: Suppose every $A_j$ is an affine subspace of codimension $c_j$ over
+2064: $\mathbb F_2$. Let $r_j$ be the number of coordinates occurring in its
+2065: dual linear subspace. Then
+2066: \[
+2067:  \HH(F)=2\sum_jp_jc_j+\sum_jp_j\HH(g_j),\qquad
+2068:  \I(F)=\frac12\sum_jp_jr_j+\sum_jp_j\I(g_j).
+2069: \]
+2070: In particular, if
+2071: $\HH(g_j)\le C\bigl(\I(g_j)-1\bigr)$ for all $j$, then
+2072: \[
+2073:  \HH(F)\le\max\{4,C\}\bigl(\I(F)-1\bigr).
+2074: \]
+2075: For coordinate subcubes, $r_j=c_j$. For distinct nonconstant character
+2076: leaves $g_j=\pm\chi_{B_j}$, the entropy is exactly
+2077: $2\sum_jp_jc_j$ and the influence is
+2078: $\frac12\sum_jp_jr_j+\sum_jp_j|B_j|$.
+2079: \end{corollary}
+2080: \begin{proof}
+2081: The normalized indicator spectrum is uniform on the dual subspace, so
+2082: its entropy is $c_j$. Every coordinate present in that subspace is
+2083: occupied with probability $1/2$, giving mean degree $r_j/2$.
+2084: Also $p_j=2^{-c_j}$, whence $\HH(p)=\sum_jp_jc_j$.
+2085: The inequality follows from $c_j\le r_j$, $\sum_jp_j=1$, and the exact
+2086: selector identities.
+2087: \end{proof}
+2088: 
+2089: For ordinary addressing with $k$ controls and $2^k$ distinct data bits,
+2090: \[
+2091:  \HH(F)=2k,\qquad \I(F)=1+\frac k2,\qquad \HH(F)=4(\I(F)-1).
+2092: \]
+2093: Thus the constant $4$ in this class is sharp. Its Fourier-set description
+2094: uses the selected label once and then describes the whole control subset.
+2095: 
+2096: \subsection{A closure statement for arbitrary selector cells}
+2097: 
+2098: Put $h_j=2a_j-1$ and
+2099: $\HH^+(h_j)=\sum_{T\ne\varnothing}\widehat h_j(T)^2
+2100: \log(1/\widehat h_j(T)^2)$. Then
+2101: \[
+2102:  D=\frac14\sum_j \I(h_j),\qquad
+2103:  B:=\sum_jp_j(1-p_j)=\frac14\sum_j\operatorname{Var}(h_j).
+2104: \]
+2105: Direct substitution gives the exact selector cost
+2106: \[
+2107:  \HH(p)+\sum_jp_j\HH(q_j)
+2108:    =\frac14\sum_j \HH^+(h_j)+R(p),\qquad
+2109:  R(p)=2\sum_jp_j(1-p_j)+2\sum_jp_j^2\log\frac1{p_j}.
+2110: \]
+2111: 
+2112: Two elementary bounds suffice:
+2113: \[
+2114:  R(p)\le 2\HH(p)\le 4D.
+2115: \]
+2116: Indeed,
+2117: \[
+2118:  \sum_jp_j(1-p_j)\log\frac1{p_j}
+2119:  =\sum_{i<j}p_ip_j\log\frac1{p_ip_j}
+2120:  \ge 2\sum_{i<j}p_ip_j=\sum_jp_j(1-p_j),
+2121: \]
+2122: using $p_ip_j\le1/4$. This proves the first inequality. The second is
+2123: the edge-isoperimetric inequality \cite{OD14} applied to each cell:
+2124: $\I(h_j)\ge2p_j\log(1/p_j)$.
+2125: 
+2126: \begin{corollary}[Selector closure from full FEI bounds]\label{cor:selector-full}
+2127: If $\HH(h_j)\le C_s \I(h_j)$ and
+2128: $\HH(g_j)\le C_g(\I(g_j)-1)$ for all $j$, then
+2129: \[
+2130:  \HH(F)\le\max\{C_s+4,C_g\}(\I(F)-1).
+2131: \]
+2132: No bound on the number of selectors or the overlap of their control
+2133: variable sets is needed.
+2134: \end{corollary}
+2135: \begin{proof}
+2136: The selector entropy is at most $(C_s+4)D$.
+2137: The leaf entropy is at most $C_g\sum_jp_j(\I(g_j)-1)$.
+2138: Their sum has the stated bound by the exact influence identity.
+2139: \end{proof}
+2140: 
+2141: The corresponding strengthened inequalities compose without the
+2142: additional $4$ in the selector coefficient.
+2143: 
+2144: \begin{lemma}[Quadratic probability correction]
+2145: Every probability vector satisfies
+2146: \[
+2147:  \sum_jp_j^2\log\frac1{p_j}\le\sum_jp_j(1-p_j),
+2148:  \qquad R(p)\le4B.
+2149: \]
+2150: \end{lemma}
+2151: \begin{proof}
+2152: Set $u(t)=t^2(1+\log(1/t))$ with $u(0)=0$.
+2153: On $0<t\le1/2$, the ratio $u(t)/t$ is increasing and at most $1$.
+2154: If all probabilities are at most $1/2$, then $\sum_j u(p_j)\le1$.
+2155: The case of a probability equal to $1$ is immediate. Otherwise, if there is one probability $p>1/2$, put $q=1-p$.
+2156: Monotonicity of $u(t)/t$ gives
+2157: $\sum_{j:p_j\ne p}u(p_j)\le u(q)$.
+2158: It remains to show $u(p)+u(q)\le1$.
+2159: 
+2160: Let $r=q/p\in(0,1]$ and
+2161: \[
+2162:  A(r)=(1+r^2)\ln(1+r)-r^2\ln r.
+2163: \]
+2164: The binary inequality is equivalent to $A(r)\le2r\ln2$.
+2165: Direct differentiation gives
+2166: \[
+2167:  A''(r)=2\ln\frac{1+r}{r}-\frac2{1+r}-\frac2{(1+r)^2},
+2168:  \qquad
+2169:  A'''(r)=\frac{2(r-1)}{r(1+r)^3}\le0.
+2170: \]
+2171: Thus $A''$ decreases from $+\infty$ to $2\ln2-3/2<0$,
+2172: and changes sign exactly once. The function
+2173: $B_0(r)=rA'(r)-A(r)$ has derivative $rA''(r)$ and satisfies
+2174: $B_0(0)=B_0(1)=0$, where the value at zero is by continuity.
+2175: It follows that $B_0(r)\ge0$.
+2176: Hence $A(r)/r$ is increasing and at most $A(1)=2\ln2$.
+2177: This proves $\sum_j u(p_j)\le1$, which is the first inequality.
+2178: The bound for $R$ follows from its exact formula.
+2179: \end{proof}
+2180: 
+2181: \begin{corollary}[Constant-preserving strong selector closure]\label{cor:selector-strong}
+2182: If
+2183: \[
+2184:  \HH^+(h_j)\le C_s\bigl(\I(h_j)-\operatorname{Var}(h_j)\bigr),
+2185:  \qquad \HH(g_j)\le C_g\bigl(\I(g_j)-1\bigr)
+2186: \]
+2187: for every selector and leaf, then
+2188: \[
+2189:  \HH(F)\le\max\{C_s,C_g,4\}\bigl(\I(F)-1\bigr).
+2190: \]
+2191: \end{corollary}
+2192: \begin{proof}
+2193: The exact correction identity bounds the selector entropy by
+2194: $C_s(D-B)+4B$. Poincar\'e's inequality for the cells gives $0\le B\le D$,
+2195: so this is at most $\max\{C_s,4\}D$.
+2196: Add the leaf contribution and use the exact influence identity.
+2197: \end{proof}
+2198: 
+2199: For example, if each cell function $h_j$ is regular and the leaves are
+2200: distinct nonconstant characters, then
+2201: \[
+2202:  \HH(F)\le(\Creg+4)\bigl(\I(F)-1\bigr),
+2203:  \qquad \Creg+4<12.937.
+2204: \]
+2205: For regular cell functions and balanced regular leaves with pairwise
+2206: disjoint nonempty Fourier supports, Theorem~\ref{thm:A} and
+2207: Corollary~\ref{cor:selector-strong} give
+2208: \[
+2209:  \HH(F)\le4\Creg\bigl(\I(F)-1\bigr).
+2210: \]
+2211: 
+2212: \subsection{Multiplexers with shared data}\label{sec:shared-multiplexers}
+2213: 
+2214: Let $x\in\bits^a$ be a uniform selector, independent of a uniform data
+2215: vector $y\in\bits^n$, and let $(g_b)_{b\in\bits^a}$ be arbitrary Boolean
+2216: functions on that common data cube. Put
+2217: \[
+2218:  F(x,y)=g_x(y),\qquad N=2^a.
+2219: \]
+2220: The branches may share data variables and need not be balanced. Write
+2221: $\I_{\rm sel}(F)$ and $\I_{\rm data}(F)$ for the influence sums over
+2222: selector and data coordinates, respectively.
+2223: 
+2224: \begin{proposition}[Exact shared-data identities]\label{prop:shared-data-collision}
+2225: For each data Fourier set $T$, put
+2226: \[
+2227:  R_T=\frac1N\sum_b\wh g_b(T)^2.
+2228: \]
+2229: For $R_T>0$, define
+2230: \[
+2231:  r_T(b)=\frac{\wh g_b(T)^2}{NR_T},\qquad
+2232:  u_T(b)=\frac{\wh g_b(T)}{\sqrt{NR_T}},\qquad
+2233:  \nu_T(S)=\left(\frac1{\sqrt N}\sum_b\chi_S(b)u_T(b)\right)^2.
+2234: \]
+2235: Then $r_T$ and $\nu_T$ are probability vectors, and
+2236: \begin{equation}\label{eq:shared-data-collision}
+2237:  \HH(F)=a+\frac1N\sum_b\HH(g_b)
+2238:        +\sum_{T:R_T>0}R_T\bigl[\HH(\nu_T)-\HH(r_T)\bigr].
+2239: \end{equation}
+2240: Here $\HH$ on probability vectors denotes Shannon entropy. In particular,
+2241: \begin{equation}\label{eq:shared-data-upper}
+2242:  \HH(F)\le2a+\frac1N\sum_b\HH(g_b).
+2243: \end{equation}
+2244: If $b^{(j)}$ denotes $b$ with selector coordinate $j$ flipped, then
+2245: \begin{align}
+2246:  \I_{\rm data}(F)&=\frac1N\sum_b\I(g_b),\label{eq:shared-data-influence}\\
+2247:  \Inf_{x_j}(F)&=\frac1N\sum_b\P_y[g_b(y)\ne g_{b^{(j)}}(y)],
+2248:        \label{eq:shared-selector-influence}\\
+2249:  \I_{\rm sel}(F)&=\sum_{T:R_T>0}R_T\sum_S|S|\nu_T(S).
+2250:        \label{eq:shared-selector-spectrum}
+2251: \end{align}
+2252: \end{proposition}
+2253: \begin{proof}
+2254: The Fourier coefficients are
+2255: \[
+2256:  \wh F(S,T)=\frac1N\sum_b\chi_S(b)\wh g_b(T).
+2257: \]
+2258: Parseval in the selector coordinates gives
+2259: $\sum_S\wh F(S,T)^2=R_T$. Hence $R$ is the data-set marginal of the
+2260: squared Fourier law of $F$, and $\nu_T$ is its conditional selector-set
+2261: law. Consider also the probability law
+2262: \[
+2263:  \P(B=b,T)=\frac1N\wh g_b(T)^2.
+2264: \]
+2265: Its entropy is $a+N^{-1}\sum_b\HH(g_b)$, its data-set marginal is $R$,
+2266: and its conditional label law is $r_T$. The entropy chain rule gives
+2267: \[
+2268:  \HH(R)=a+\frac1N\sum_b\HH(g_b)-\sum_T R_T\HH(r_T),
+2269:  \qquad
+2270:  \HH(F)=\HH(R)+\sum_T R_T\HH(\nu_T),
+2271: \]
+2272: which proves \eqref{eq:shared-data-collision}, including the terms with
+2273: $T=\varnothing$. The inequalities $\HH(r_T)\ge0$ and
+2274: $\HH(\nu_T)\le a$ give \eqref{eq:shared-data-upper}.
+2275: Conditioning on the physical selector proves
+2276: \eqref{eq:shared-data-influence} and \eqref{eq:shared-selector-influence}.
+2277: Taking the mean selector-set size in the conditional spectral law gives
+2278: \eqref{eq:shared-selector-spectrum}.
+2279: \end{proof}
+2280: 
+2281: \begin{corollary}[Orthogonal neighboring branches]\label{cor:orthogonal-multiplexers}
+2282: Suppose that
+2283: \[
+2284:  \E[g_b g_{b^{(j)}}]=0\quad\text{for every }b,j,
+2285:  \qquad \HH(g_b)\le C\I(g_b)\quad\text{for every }b.
+2286: \]
+2287: Then $\I_{\rm sel}(F)=a/2$ and
+2288: \[
+2289:  \HH(F)\le\max\{4,C\}\I(F).
+2290: \]
+2291: More generally, the assumption $\I_{\rm sel}(F)\ge ca$, with $c>0$,
+2292: gives the constant $\max\{2/c,C\}$.
+2293: \end{corollary}
+2294: \begin{proof}
+2295: For Boolean branches, orthogonality is equivalent to disagreement
+2296: probability $1/2$. Equation~\eqref{eq:shared-selector-influence} therefore
+2297: gives $\I_{\rm sel}(F)=a/2$. In \eqref{eq:shared-data-upper}, the selector
+2298: term is $4\I_{\rm sel}(F)$ and the average branch entropy is at most
+2299: $C\I_{\rm data}(F)$. Adding proves the first assertion. The second uses
+2300: $2a\le(2/c)\I_{\rm sel}(F)$ instead.
+2301: \end{proof}
+2302: 
+2303: \begin{corollary}[Recursive regular multiplexers]\label{cor:recursive-multiplexers}
+2304: Start with regular Boolean functions as leaves. At each later node,
+2305: select between previously constructed branches using a fresh uniform
+2306: selector whose coordinates occur in none of those branches. Allow the
+2307: branches to share their data variables, and suppose neighboring branches
+2308: at each node are orthogonal under the common uniform data law. Every
+2309: function obtained by finitely many such steps satisfies
+2310: \[
+2311:  \HH(F)\le\Creg\I(F),\qquad \Creg<8.937.
+2312: \]
+2313: The constant is independent of the number of branches, the depth, and
+2314: the pattern of data reuse.
+2315: \end{corollary}
+2316: \begin{proof}
+2317: Theorem~\ref{thm:A} gives the constant $\Creg$ at every regular leaf.
+2318: Extending a branch by irrelevant data coordinates changes neither its
+2319: entropy nor its influence. Thus the branches at each node can be regarded
+2320: as functions on their common data cube. Corollary~\ref{cor:orthogonal-multiplexers}
+2321: preserves the constant because $\Creg>4$. Induction proves the claim.
+2322: \end{proof}
+2323: 
+2324: For a concrete pair with shared data, take
+2325: \[
+2326:  g_+(y)=\operatorname{Maj}_3(y_1,y_2,y_3),\qquad
+2327:  g_-(y)=\operatorname{Maj}_3(y_1,-y_2,y_4).
+2328: \]
+2329: Their common nonzero Fourier indices are $\{1\}$ and $\{2\}$, whose
+2330: inner-product contributions cancel. The two branches are therefore
+2331: orthogonal despite sharing two inputs. Their one-bit multiplexer has
+2332: two spectral atoms of mass $1/4$ and eight of mass $1/16$, and hence
+2333: $\HH(F)=3$ and $\I(F)=2$.
+2334: 
+2335: \subsection{Unrestricted selectors and the optimal FEI constant}
+2336: 
+2337: Given a balanced Boolean $g$, let
+2338: \[
+2339:  M_g(x,y_1,y_2)=\frac{1+g(x)}2y_1+\frac{1-g(x)}2y_2.
+2340: \]
+2341: The exact identities give
+2342: \[
+2343:  \HH(M_g)=2+\frac12\HH(g),\qquad \I(M_g)=1+\frac12\I(g).
+2344: \]
+2345: Consequently FEI on the class of these two-cell selectors is equivalent
+2346: to full FEI, with the same optimal universal full-FEI constant.
+2347: To prove the nontrivial implication without an additive loss, take an
+2348: arbitrary Boolean $f$, its tensor power on $t$ independent input blocks,
+2349: and balance it with a fresh sign:
+2350: \[
+2351:  g_t(x^{(1)},\ldots,x^{(t)},z)
+2352:    =z\prod_{r=1}^t f(x^{(r)}).
+2353: \]
+2354: Then
+2355: \[
+2356:  \HH(g_t)=tH(f),\quad \I(g_t)=tI(f)+1,
+2357: \quad \HH(M_{g_t})=2+\tfrac t2\HH(f),\quad
+2358:  \I(M_{g_t})=\tfrac32+\tfrac t2\I(f).
+2359: \]
+2360: If $\HH(M_g)\le C \I(M_g)$ for every balanced $g$, divide the corresponding
+2361: inequality by $t/2$ and let $t\to\infty$ to obtain $\HH(f)\le C \I(f)$.
+2362: The converse holds because every $M_g$ is Boolean.
+2363: 
+2364: The entropy of choosing a selector label is always bounded by $2D$.
+2365: For arbitrary cells, the unresolved term is the normalized Fourier
+2366: entropy inside the selected cell. A cheap label description alone does
+2367: not establish a uniform bound for that term.
+2368: 
+2369: \subsection{Rare activation and the optimal FEI constant}\label{sec:rare-equivalence}
+2370: 
+2371: Rare-activation reductions to small-influence functions appear in
+2372: Wan--Wright--Wu~\cite{WWW14} and Shalev~\cite{Shalev18}.
+2373: The following exact calculation records a version that preserves the
+2374: optimal universal constant.
+2375: 
+2376: Let $g$ be balanced and Boolean, let $A_r$ be the indicator of one point
+2377: on $r\ge1$ fresh control bits, and set
+2378: \[
+2379:  p=2^{-r},\qquad F=1+A_r(g-1).
+2380: \]
+2381: The function $F$ is Boolean and $\P(F=-1)=p/2$.
+2382: \begin{proposition}[Exact activation identities]\label{prop:activation}
+2383: With this notation,
+2384: \begin{align}
+2385:  \HH(F)&=p\HH(g)+2rp(2-p)
+2386:        +(1-p)^2\log\frac1{(1-p)^2},\label{eq:activation-entropy}\\
+2387:  \I(F)&=p\bigl(\I(g)+r\bigr).\label{eq:activation-influence}
+2388: \end{align}
+2389: \end{proposition}
+2390: \begin{proof}
+2391: Write $T$ for a data Fourier set and $U$ for a control Fourier set.
+2392: For $T\ne\varnothing$, the coefficient is
+2393: $p\varepsilon_U\wh g(T)$, where $\varepsilon_U\in\{-1,1\}$ depends
+2394: only on the selected control point. For $T=\varnothing$ and
+2395: $U\ne\varnothing$, it is $-p\varepsilon_U$; the constant coefficient is
+2396: $1-p$. Summing the nonempty-data terms over the $2^r$ control sets gives
+2397: $p\HH(g)+2rp$. The nonempty-control, empty-data terms contribute
+2398: $2rp(1-p)$, and the constant term gives the last term in
+2399: \eqref{eq:activation-entropy}.
+2400: 
+2401: Each data influence is multiplied by $p$. A control bit is pivotal
+2402: precisely when all other controls match the specified point and $g=-1$,
+2403: an event of probability $2^{-(r-1)}/2=p$. Summing proves
+2404: \eqref{eq:activation-influence}.
+2405: \end{proof}
+2406: 
+2407: Let $C_{\rm FEI}$ be the supremum of $\HH(f)/\I(f)$ over nonconstant
+2408: Boolean functions, allowing the value $+\infty$.
+2409: For $\varepsilon,\delta>0$, let $C_{\varepsilon,\delta}^{\rm act}$ be
+2410: the same supremum restricted to the above balanced-core activations
+2411: satisfying $0<\I(F)\le\varepsilon$ and $\P(F=-1)\le\delta$.
+2412: \begin{corollary}\label{cor:activation-equivalence}
+2413: For every $\varepsilon,\delta>0$,
+2414: \[
+2415:  C_{\varepsilon,\delta}^{\rm act}=C_{\rm FEI}.
+2416: \]
+2417: \end{corollary}
+2418: \begin{proof}
+2419: The upper bound follows from inclusion of classes. For the reverse
+2420: bound, fix any nonconstant Boolean $f$ and balance its tensor powers by
+2421: \[
+2422:  g_t=z\prod_{j=1}^t f(x^{(j)}),
+2423:  \qquad \HH(g_t)=t\HH(f),\qquad \I(g_t)=t\I(f)+1.
+2424: \]
+2425: The blocks and the sign $z$ are independent. Take
+2426: $r_t=\lceil2\log(t+1)\rceil$, $p_t=2^{-r_t}$, and activate $g_t$ on a
+2427: point of $r_t$ fresh controls. Then $\I(F_t)\to0$ and
+2428: $\P(F_t=-1)\to0$. Also
+2429: \[
+2430:  \frac{(1-p)^2\log(1/(1-p)^2)}p\longrightarrow2\log e
+2431:  \qquad(p\downarrow0).
+2432: \]
+2433: Dividing \eqref{eq:activation-entropy} and
+2434: \eqref{eq:activation-influence} by $p_t t$ therefore gives
+2435: \[
+2436:  \frac{\HH(F_t)}{\I(F_t)}\longrightarrow
+2437:  \frac{\HH(f)}{\I(f)},
+2438: \]
+2439: since $r_t/t\to0$. For all sufficiently large $t$, the prescribed
+2440: $\varepsilon,\delta$ bounds hold. Taking the supremum over $f$ proves
+2441: the assertion, including the possibility of an infinite supremum.
+2442: \end{proof}
+2443: 
+2444: Thus a uniform estimate for arbitrary sparsely activated cores would
+2445: resolve full FEI. Rarity and small total influence alone impose no
+2446: smaller optimal constant. This conclusion concerns arbitrary cores;
+2447: the structured gate hypotheses in the preceding theorems supply
+2448: additional information.
+2449: 
+2450: \section{Further consequences and questions}\label{sec:consequences}
+2451: 
+2452: \subsection{Spectral concentration for read-\texorpdfstring{$k$}{k} DNF}
+2453: 
+2454: Entropy bounds give sparse Fourier approximations directly. We record the consequence for DNF to make the dependence on the approximation error explicit. This is the concentration problem studied by Mansour \cite{Mansour95}; sharper sparsity bounds as a function of the read number are known from Lecomte and Tan \cite{LT21}.
+2455: 
+2456: \begin{corollary}\label{cor:dnf-concentration}
+2457: Let $f$ have a read-$k$ DNF representation with $s\ge1$ terms. For every $0<\eps<1$, there is a family $\mathcal A$ of Fourier sets such that
+2458: \[
+2459:  \sum_{S\in\mathcal A}\wh f(S)^2\ge1-\eps,
+2460:  \qquad
+2461:  |\mathcal A|\le(2s)^{\,2(41+7\log k)/\eps}.
+2462: \]
+2463: Thus deleting the coefficients outside $\mathcal A$ gives a polynomial with squared $L^2$ error at most $\eps$.
+2464: \end{corollary}
+2465: \begin{proof}
+2466: The result is immediate if $f$ is constant. Otherwise, after deleting contradictory terms and repeated literals, at most $s$ nonempty terms remain. On an input satisfying the DNF, let $L$ be the least width of a satisfied term, and put $L=0$ on other inputs. Every coordinate on which a positive input is sensitive belongs to each satisfied term, so its sensitivity is at most $L$. Every boundary edge has one positive endpoint. Therefore
+2467: \[
+2468:  \I(f)\le2\E L,
+2469:  \qquad
+2470:  \P(L\ge t)\le\min\{1,s2^{-t}\}\quad(t\ge1).
+2471: \]
+2472: For the latter bound, the event $L\ge t$ requires some term of width at least $t$ to be satisfied. A union bound suffices. Write $s=2^m r$, where $m=\lfloor\log s\rfloor$ and $1\le r<2$. Then
+2473: \[
+2474:  \E L\le\sum_{t\ge1}\min\{1,s2^{-t}\}
+2475:  =m+r\le m+\log r+1=\log s+1.
+2476: \]
+2477: The scalar inequality $r\le1+\log r$ on $[1,2]$ follows by concavity. Theorem~\ref{thm:readk-intro} with $M=1$ now gives
+2478: \[
+2479:  \HH(f)\le2(41+7\log k)\log(2s).
+2480: \]
+2481: If $\HH(f)=0$, one coefficient carries all the mass. Otherwise apply Markov's inequality to $\log(1/\wh f(\mathcal S)^2)$ under the squared Fourier law. The sets with $\wh f(S)^2\ge2^{-\HH(f)/\eps}$ carry mass at least $1-\eps$, and their number is at most $2^{\HH(f)/\eps}$. Parseval gives the approximation assertion.
+2482: \end{proof}
+2483: 
+2484: \subsection{The product-measure question for weighted thresholds}
+2485: 
+2486: The next composition question is whether an absolute constant $C$ satisfies
+2487: \[
+2488:  \HH_\mu^+(f)\le C\bigl(\I_\mu(f)-\Var_\mu(f)\bigr)
+2489: \]
+2490: for every weighted linear threshold function and every product measure. Theorem~\ref{bias:strong} proves this for symmetric thresholds. A positive answer for arbitrary weights would remove the balance assumption on weighted internal gates in Corollary~\ref{comp:hybrid}, by the same exact composition identities.
+2491: 
+2492: The antichain argument raises a second question. Can a spectral reference measure control the cost of many incomparable coordinate orders without a factor depending on their number? The width bound of Theorem~\ref{thm:width} and the overlap bound of Theorem~\ref{thm:readk-intro} provide two ways to limit that cost. The unrestricted FEI conjecture requires an argument without either restriction.
+2493: 
+2494: \section*{Acknowledgements and funding}
+2495: The research presented in this paper was supported by the European Research
+2496: Council (ERC) under the European Union's Horizon Europe research and
+2497: innovation programme (grant agreement No.~101041711), by the Simons
+2498: Foundation as part of the Collaboration on the Mathematical and Scientific
+2499: Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+2500: the Israel Science Foundation (grant number 2258/19), and by the Israel
+2501: Science Foundation (ISF Grant 4101/25). Computational resources were
+2502: provided in part by Google Cloud through its education credits program
+2503: (credit 530550103).
+2504: 
+2505: \section*{Declaration of competing interest}
+2506: The author holds equity in Heights Labs and in Convex Nexus Capital and
+2507: has a management role at Convex Nexus Capital. These entities are included
+2508: in the funding declaration above.
+2509: 
+2510: \begin{samepage}
+2511: \section*{Declaration of generative AI and AI-assisted technologies}
+2512: The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. Earlier versions of the rank, bounded-overlap, and biased-threshold arguments were developed in September 2026 with Claude (Anthropic). In October 2026, OpenAI's GPT-6 Astra Pro, working in ChatGPT with collaborating agents, was used to extend the results, improve the constants, reconstruct and check the proofs, search the literature, carry out finite computations, and prepare the manuscript. Separate agents reviewed the rank, bounded-overlap, biased-threshold, joint-witness, selector, and rare-activation arguments. These checks are not peer review. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+2513: \par
+2514: \end{samepage}
+2515: 
+2516: \section*{Data availability}
+2517: No external data were used. The accompanying source distribution contains
+2518: scripts and outputs for finite checks of signed derivatives, character
+2519: shifts, exact antichain estimates, biased Fourier normalization,
+2520: composition, selector identities, rare activation, and finite queue
+2521: witnesses. The proofs do not depend on these computations.
+2522: 
+2523: \begin{thebibliography}{99}
+2524: \bibitem{ACKSW21}
+2525: S.~Arunachalam, S.~Chakraborty, M.~Kouck\'y, N.~Saurabh and R.~de~Wolf,
+2526: \emph{Improved bounds on Fourier entropy and min-entropy},
+2527: ACM Trans. Comput. Theory \textbf{13} (2021), no.~4, Article~22, 40~pp.
+2528: \href{https://doi.org/10.1145/3470860}{doi:10.1145/3470860}.
+2529: \href{https://arxiv.org/abs/1809.09819}{arXiv:1809.09819}.
+2530: 
+2531: \bibitem{Beckner75}
+2532: W.~Beckner,
+2533: \emph{Inequalities in Fourier analysis},
+2534: Ann. of Math. (2) \textbf{102} (1975), no.~1, 159--182.
+2535: \href{https://doi.org/10.2307/1970980}{doi:10.2307/1970980}.
+2536: 
+2537: \bibitem{Bonami70}
+2538: A.~Bonami,
+2539: \emph{\'Etude des coefficients de Fourier des fonctions de $L^p(G)$},
+2540: Ann. Inst. Fourier (Grenoble) \textbf{20} (1970), no.~2, 335--402.
+2541: \href{https://doi.org/10.5802/aif.357}{doi:10.5802/aif.357}.
+2542: 
+2543: \bibitem{CKKLS18}
+2544: S.~Chakraborty, S.~Karmalkar, S.~Kundu, S.~V.~Lokam and N.~Saurabh,
+2545: \emph{Fourier entropy--influence conjecture for random linear threshold functions},
+2546: in: LATIN 2018, Lecture Notes in Comput. Sci. \textbf{10807}, Springer, Cham, 2018, 275--289.
+2547: \href{https://doi.org/10.1007/978-3-319-77404-6_21}{doi:10.1007/978-3-319-77404-6\_21}.
+2548: \href{https://arxiv.org/abs/1903.11635}{arXiv:1903.11635}.
+2549: 
+2550: \bibitem{CKLS16}
+2551: S.~Chakraborty, R.~Kulkarni, S.~V.~Lokam and N.~Saurabh,
+2552: \emph{Upper bounds on Fourier entropy},
+2553: Theoret. Comput. Sci. \textbf{654} (2016), 92--112.
+2554: \href{https://doi.org/10.1016/j.tcs.2016.05.006}{doi:10.1016/j.tcs.2016.05.006}.
+2555: \href{https://eccc.weizmann.ac.il/report/2013/052/}{ECCC TR13-052} (revision~2, 2018).
+2556: 
+2557: \bibitem{Darroch64}
+2558: J.~N.~Darroch,
+2559: \emph{On the distribution of the number of successes in independent trials},
+2560: Ann. Math. Statist. \textbf{35} (1964), no.~3, 1317--1321.
+2561: \href{https://doi.org/10.1214/aoms/1177703287}{doi:10.1214/aoms/1177703287}.
+2562: 
+2563: \bibitem{DLMF}
+2564: National Institute of Standards and Technology,
+2565: \emph{Digital Library of Mathematical Functions},
+2566: Section~4.36, Eq.~4.36.1.
+2567: \url{https://dlmf.nist.gov/4.36.E1}.
+2568: 
+2569: \bibitem{FK96}
+2570: E.~Friedgut and G.~Kalai,
+2571: \emph{Every monotone graph property has a sharp threshold},
+2572: Proc. Amer. Math. Soc. \textbf{124} (1996), no.~10, 2993--3002.
+2573: \href{https://doi.org/10.1090/S0002-9939-96-03732-X}{doi:10.1090/S0002-9939-96-03732-X}.
+2574: 
+2575: \bibitem{GPS10}
+2576: C.~Garban, G.~Pete and O.~Schramm,
+2577: \emph{The Fourier spectrum of critical percolation},
+2578: Acta Math. \textbf{205} (2010), 19--104.
+2579: \href{https://doi.org/10.1007/s11511-010-0051-x}{doi:10.1007/s11511-010-0051-x}.
+2580: \href{https://arxiv.org/abs/0803.3750}{arXiv:0803.3750}.
+2581: 
+2582: \bibitem{GMP26}
+2583: M.~J.~Gonz\'alez, P.~MacManus and M.~C.~Pereyra,
+2584: \emph{Further evidence towards the Fourier entropy--influence conjecture},
+2585: preprint, 2026.
+2586: \href{https://arxiv.org/abs/2606.00246v2}{arXiv:2606.00246v2}.
+2587: 
+2588: \bibitem{Han25}
+2589: X.~Han,
+2590: \emph{A new bound for the Fourier-entropy-influence conjecture},
+2591: Combinatorica \textbf{45} (2025), Paper No.~4.
+2592: \href{https://doi.org/10.1007/s00493-024-00133-z}{doi:10.1007/s00493-024-00133-z}.
+2593: \href{https://arxiv.org/abs/2312.08271v2}{arXiv:2312.08271v2}.
+2594: 
+2595: \bibitem{Kalai18}
+2596: G.~Kalai,
+2597: \emph{Three puzzles on mathematics, computation, and games},
+2598: in: Proceedings of the International Congress of Mathematicians---Rio de Janeiro 2018, Vol.~I, World Scientific, 2019, 551--606.
+2599: \href{https://doi.org/10.1142/9789813272880_0023}{doi:10.1142/9789813272880\_0023}.
+2600: \href{https://arxiv.org/abs/1801.02602}{arXiv:1801.02602}.
+2601: 
+2602: \bibitem{KMS12}
+2603: N.~Keller, E.~Mossel and T.~Schlank,
+2604: \emph{A note on the entropy/influence conjecture},
+2605: Discrete Math. \textbf{312} (2012), no.~22, 3364--3372.
+2606: \href{https://doi.org/10.1016/j.disc.2012.07.031}{doi:10.1016/j.disc.2012.07.031}.
+2607: \href{https://arxiv.org/abs/1105.2651}{arXiv:1105.2651}.
+2608: 
+2609: \bibitem{LT21}
+2610: V.~Lecomte and L.-Y.~Tan,
+2611: \emph{Sharper bounds on the Fourier concentration of DNFs},
+2612: in: 2021 IEEE 62nd Annual Symposium on Foundations of Computer Science (FOCS), IEEE, 2022, 930--941.
+2613: \href{https://doi.org/10.1109/FOCS52979.2021.00094}{doi:10.1109/FOCS52979.2021.00094}.
+2614: \href{https://arxiv.org/abs/2109.04525}{arXiv:2109.04525}.
+2615: 
+2616: \bibitem{Mansour95}
+2617: Y.~Mansour,
+2618: \emph{An $O(n^{\log\log n})$ learning algorithm for DNF under the uniform distribution},
+2619: J. Comput. System Sci. \textbf{50} (1995), no.~3, 543--550.
+2620: \href{https://doi.org/10.1006/jcss.1995.1043}{doi:10.1006/jcss.1995.1043}.
+2621: 
+2622: \bibitem{OD14}
+2623: R.~O'Donnell,
+2624: \emph{Analysis of Boolean Functions},
+2625: Cambridge University Press, Cambridge, 2014.
+2626: \href{https://www.cs.cmu.edu/~odonnell/papers/Analysis-of-Boolean-Functions-by-Ryan-ODonnell.pdf}{Author's edition}.
+2627: 
+2628: \bibitem{ODT13}
+2629: R.~O'Donnell and L.-Y.~Tan,
+2630: \emph{A composition theorem for the Fourier entropy--influence conjecture},
+2631: in: ICALP 2013, Lecture Notes in Comput. Sci. \textbf{7965}, Springer, Heidelberg, 2013, 780--791.
+2632: \href{https://doi.org/10.1007/978-3-642-39206-1_66}{doi:10.1007/978-3-642-39206-1\_66}.
+2633: \href{https://arxiv.org/abs/1304.1347}{arXiv:1304.1347}.
+2634: 
+2635: \bibitem{OWZ11}
+2636: R.~O'Donnell, J.~Wright and Y.~Zhou,
+2637: \emph{The Fourier entropy--influence conjecture for certain classes of Boolean functions},
+2638: in: ICALP 2011, Lecture Notes in Comput. Sci. \textbf{6755}, Springer, Heidelberg, 2011, 330--341.
+2639: \href{https://doi.org/10.1007/978-3-642-22006-7_28}{doi:10.1007/978-3-642-22006-7\_28}.
+2640: 
+2641: \bibitem{Pitman97}
+2642: J.~Pitman,
+2643: \emph{Probabilistic bounds on the coefficients of polynomials with only real zeros},
+2644: J. Combin. Theory Ser.~A \textbf{77} (1997), no.~2, 279--303.
+2645: \href{https://doi.org/10.1006/jcta.1997.2747}{doi:10.1006/jcta.1997.2747}.
+2646: 
+2647: \bibitem{Potapov26}
+2648: V.~N.~Potapov,
+2649: \emph{On the Fourier entropy--influence conjecture for Boolean plateaued functions},
+2650: preprint, 2026.
+2651: \href{https://arxiv.org/abs/2609.21563}{arXiv:2609.21563}.
+2652: 
+2653: \bibitem{Shalev18}
+2654: G.~Shalev,
+2655: \emph{On the Fourier entropy influence conjecture for extremal classes},
+2656: preprint, 2018, revised 2019.
+2657: \href{https://arxiv.org/abs/1806.03646}{arXiv:1806.03646}.
+2658: 
+2659: \bibitem{Shmalo26}
+2660: Y.~Shmalo,
+2661: \emph{Entropy and singularity of spectral and pivotal sets in planar percolation},
+2662: preprint, 2026.
+2663: \href{https://arxiv.org/abs/2609.15388}{arXiv:2609.15388};
+2664: \href{https://github.com/yspennstate/percolation-crossing-entropy}{revised manuscript, 11 October 2026}.
+2665: 
+2666: \bibitem{Sperner28}
+2667: E.~Sperner,
+2668: \emph{Ein Satz \"uber Untermengen einer endlichen Menge},
+2669: Math. Z. \textbf{27} (1928), 544--548.
+2670: \href{https://eudml.org/doc/167993}{Original article}.
+2671: \bibitem{WWW14}
+2672: A.~Wan, J.~Wright and C.~Wu,
+2673: \emph{Decision trees, protocols and the entropy-influence conjecture},
+2674: in: Proceedings of the 5th Conference on Innovations in Theoretical
+2675: Computer Science (ITCS 2014), ACM, 2014, 67--80.
+2676: \href{https://arxiv.org/abs/1312.3003}{arXiv:1312.3003}.
+2677: \end{thebibliography}
+2678: \end{document}

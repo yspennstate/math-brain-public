@@ -1,0 +1,34 @@
+[
+  {
+    "service": "openalex_citations_attempt",
+    "url": "https://api.openalex.org/works?filter=cites:https://doi.org/10.1214/154957806000000096&per-page=100&sort=publication_date:desc",
+    "date": "2026-10-11",
+    "error": "HTTPSConnectionPool(host='api.openalex.org', port=443): Max retries exceeded with url: /works?filter=cites:https://doi.org/10.1214/154957806000000096&per-page=100&sort=publication_date:desc (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  },
+  {
+    "service": "openalex_doi_retry",
+    "url": "https://api.openalex.org/works/doi:10.1214/154957806000000096",
+    "date": "2026-10-11",
+    "error": "HTTPSConnectionPool(host='api.openalex.org', port=443): Max retries exceeded with url: /works/doi:10.1214/154957806000000096 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  },
+  {
+    "service": "semantic_citations",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1214/154957806000000096/citations?fields=title,authors,year,url&limit=100",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 33900
+  },
+  {
+    "service": "arxiv_recent_retry",
+    "url": "https://export.arxiv.org/api/query?search_query=all:percolation+AND+all:uniqueness+AND+all:threshold&sortBy=submittedDate&sortOrder=descending&max_results=20",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 45447
+  },
+  {
+    "service": "crossref_schonmann",
+    "url": "https://api.crossref.org/works?query.title=Stability%20of%20infinite%20clusters%20in%20supercritical%20percolation&rows=3",
+    "date": "2026-10-11",
+    "error": "HTTPSConnectionPool(host='api.crossref.org', port=443): Max retries exceeded with url: /works?query.title=Stability%20of%20infinite%20clusters%20in%20supercritical%20percolation&rows=3 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  }
+]

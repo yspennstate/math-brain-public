@@ -1,0 +1,10 @@
+marked_trivial_transitions [(3, 5, 21), (21, 8, 58), (28, 5, 58)]
+top_factor 3 25*L**2*x**2 + 25*L**2 - 40*L*x**2 - 40*L + 14*x**2 + 16
+top_factor 21 25*L**2*x**2 + 25*L**2 - 40*L*x**2 - 5*L*x - 40*L + 15*x**2 + 4*x + 16
+top_factor 28 25*L**2*x**2 + 25*L**2 - 40*L*x**2 - 40*L + 14*x**2 + 16
+top_factor 58 25*L**2*x**4 + 50*L**2*x**2 + 25*L**2 - 40*L*x**4 - 80*L*x**2 - 40*L + 15*x**4 + 29*x**2 + 16
+edge_global 3 21 PASS interior_resultant_roots 0 signs [1]
+edge_global 21 58 PASS interior_resultant_roots 0 signs [1]
+edge_global 28 58 PASS interior_resultant_roots 0 signs [1]
+low_temp_gap_ratios 3->21 2/3 21->58 3/4 28->58 1/2
+ALL_EXACT_CHECKS_PASS

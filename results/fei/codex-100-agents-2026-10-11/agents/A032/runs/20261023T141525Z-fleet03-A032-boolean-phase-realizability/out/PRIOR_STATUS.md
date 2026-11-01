@@ -1,0 +1,2 @@
+STATE: Stage20 saved: A079 ghost theorem independently HOLDS; arbitrary-core exact nullspace conversion; all M-product targets cost>=beta*(r*tau-2log2M), exact representation needs2^r;13088 exact checks PASS; FEI OPEN.
+NEXT: A033/A079/A096/A097/A094 review posterior/rank obstruction; price an arbitrary-core reference family closed under inherited isospectral marginals, or identify actual unused ancestor budget for necessary conversion; no more fixed-M/local-refund cycles.

@@ -1,0 +1,490 @@
+# Probability review triggers (schema 2), front G02 of the 12 Oct 2026 brain-improvement run (claude-4a88bc43-g02).
+#
+# Each [[trigger]] is one recurring failure pattern written as features of a statement or a proof step; `reflex`
+# names the failure pattern (one ReflexRecord in the math store per pattern). Matching rules are in
+# src/math_brain/triggers.py: anchors are whole words or phrases on normalized text, `context` groups must each
+# be present, `unless` silences, and mode "missing" fires only when an anchor is present and a `requires` group
+# is absent. A fire is a question for the reader, not a verdict.
+#
+# Evidence behind the patterns (local, not shipped): Codex AUDIT flags on store cards (shards 000-010, 85 error and
+# 139 unclear rows), the OP15/OP16 blind-referee notes, the 27 scar mistakes already in the store, the 100 probability
+# hooks of 7 Oct (primary_directive/math_hooks/HOOK_IDEAS_v1.jsonl), and the planted-error misses of the plit audits
+# (memories proof_audit_brain_layer_2026_09_07, gpt_and_claude_differ_in_strictness_not_in_catching_planted_errors_2026_10_10).
+# The catalogue with its evidence rows: primary_directive/improve_1012/fronts/G02/catalogue.json.
+
+schema_version = 2
+
+# ------------------------------------------------------------------------------------------------ concentration
+
+[[trigger]]
+id = "conc-independence"
+reflex = "concentration-outside-hypotheses"
+title = "a concentration or variance inequality used without independent inputs"
+mode = "missing"
+keywords = ["Hoeffding", "McDiarmid", "Bernstein's inequality", "Bernstein inequality", "Bernstein bound", "Bennett's inequality",
+  "Bennett inequality", "Chernoff Hoeffding", "Efron Stein", "Hanson Wright", "Talagrand's inequality", "Talagrand's concentration",
+  "convex distance inequality", "bounded differences inequality", "bounded difference inequality", "method of bounded differences",
+  "Kolmogorov's maximal inequality", "Kolmogorov maximal inequality", "Levy's maximal inequality", "Khintchine", "Rosenthal's inequality"]
+requires = [["independent", "independence", "independently", "i.i.d.", "iid", "product measure", "product probability", "product space",
+  "product of", "martingale", "martingale difference", "negatively associated", "negative association", "Rademacher", "sampling without replacement",
+  "Bernoulli percolation", "Erdos Renyi", "G(n,p)", "Poisson point process", "Poisson process", "standard Gaussian", "Gaussian vector"]]
+requires_labels = ["independent inputs (or a martingale / product structure)"]
+unless = ["Azuma", "Freedman", "Hoeffding's lemma", "Hoeffding lemma", "Hoeffding decomposition", "Janson"]
+action = "This inequality controls sums or functions of INDEPENDENT inputs (Azuma and Freedman need martingale differences instead); check that the variables in this use really are independent - not only identically distributed, uncorrelated, or independent of something else."
+
+[[trigger]]
+id = "conc-boundedness"
+reflex = "concentration-outside-hypotheses"
+title = "Hoeffding, Azuma or McDiarmid without almost-sure bounds"
+mode = "missing"
+keywords = ["Hoeffding", "Azuma", "McDiarmid", "bounded differences inequality", "bounded difference inequality", "method of bounded differences"]
+requires = [["bounded", "boundedness", "a_i<=", "<=b_i", "[a,b]", "[a_i,b_i]", "[0,1]", "[-1,1]", "{-1,1}", "{0,1}", "+-1", "|X_i|<=",
+  "|X_k|<=", "|D_k|<=", "c_i", "c_k", "sub gaussian", "subgaussian", "psi_2", "Bernoulli", "Rademacher", "indicator", "indicators",
+  "values in", "taking values", "range", "differ by at most", "changes by at most", "change by at most", "changing one coordinate",
+  "changing a single", "Lipschitz", "increments", "differences", "coin", "signs", "sign"]]
+requires_labels = ["an almost-sure bound on the summands, increments or coordinate changes"]
+unless = ["Hoeffding decomposition", "Hoeffding's lemma"]
+action = "Hoeffding, Azuma and McDiarmid need summands, martingale increments or one-coordinate changes bounded ALMOST SURELY by stated constants; a bound in expectation or with high probability needs a truncated or typical-differences version. Find the constants c_i in this use, or switch to a sub-Gaussian or Bernstein form."
+
+[[trigger]]
+id = "tail-bound-direction"
+reflex = "inequality-direction"
+title = "a tail inequality stated as a lower bound"
+mode = "present"
+patterns = ['\bp ?\((?:[^()]|\([^()]*\)){1,120}\) ?>= ?(?!1 ?-)(?:2 ?)?(?:exp|e ?\^|e ?\[|e ?\(|e ?x|var|sigma|c ?exp|c ?e ?\^|1 ?/ ?[a-z0-9(])']
+context = [["Markov's inequality", "Markov inequality", "Chebyshev", "Hoeffding", "Chernoff", "Bernstein's inequality", "Bernstein inequality",
+  "Azuma", "McDiarmid", "Bennett", "Cantelli's inequality", "Gaussian concentration", "Borell TIS", "concentration inequality",
+  "union bound", "Boole's inequality", "tail bound", "Freedman"]]
+unless = ["Paley Zygmund", "second moment method", "anti concentration", "anticoncentration", "Littlewood Offord", "reverse", "lower tail bound",
+  "lower bound on the probability"]
+action = "The named inequality bounds a tail probability from ABOVE, but here a probability is bounded BELOW by the tail term. A lower bound needs Paley-Zygmund, the second-moment method or a construction; check the direction of every inequality in this step."
+
+# ------------------------------------------------------------------------------------------------ limit theorems
+
+[[trigger]]
+id = "clt-variance"
+reflex = "limit-theorem-moment-conditions"
+title = "a central limit theorem or invariance principle without a variance condition"
+mode = "missing"
+keywords = ["central limit theorem", "CLT", "Donsker", "invariance principle", "functional central limit", "Lindeberg Feller",
+  "Lindeberg Levy", "de Moivre Laplace"]
+requires = [["finite variance", "finite variances", "finite second moment", "finite second moments", "second moment", "second moments",
+  "variance sigma^2", "variance sigma", "Var(X", "Var X", "E[X^2]", "E X^2", "E|X|^2", "EX^2", "E(X^2)", "E[X_1^2]", "E X_1^2",
+  "square integrable", "L^2", "Lindeberg", "Lyapunov", "bounded", "third moment", "finite moments", "all moments",
+  "exponential moments", "sub gaussian", "Bernoulli", "binomial", "unit variance", "variance 1", "variance one", "sigma^2<", "sigma^2 <",
+  "0<sigma", "variance in (0", "positive finite variance", "finite positive variance", "mean zero and variance", "mean 0 and variance",
+  "covariance matrix", "variance"]]
+requires_labels = ["a finite-variance or Lindeberg condition"]
+unless = ["stable law", "stable limit", "alpha stable", "infinite variance", "heavy tailed", "heavy tail", "domain of attraction",
+  "martingale central limit", "martingale CLT", "open problem"]
+action = "A Gaussian limit needs finite variance (iid) or a Lindeberg-type condition (arrays) and centering by the mean; heavy tails give stable limits under another scaling. The text invokes the CLT or an invariance principle but states no second-moment or Lindeberg condition - check that this use has one."
+
+[[trigger]]
+id = "berry-esseen-moment"
+reflex = "limit-theorem-moment-conditions"
+title = "Berry-Esseen without a third moment"
+mode = "missing"
+keywords = ["Berry Esseen"]
+requires = [["third moment", "third absolute moment", "E|X|^3", "E|X_1|^3", "E|X_i|^3", "rho=E", "finite third", "bounded", "Lyapunov",
+  "moment of order 3", "2+delta", "3rd moment", "E|xi|^3", "third moments", "|X|^3"]]
+requires_labels = ["a finite third absolute moment"]
+action = "Berry-Esseen needs a finite third absolute moment and bounds the KOLMOGOROV distance by C rho/(sigma^3 sqrt n); check the moment, and do not quote the rate for another metric."
+
+[[trigger]]
+id = "lln-conditions"
+reflex = "limit-theorem-moment-conditions"
+title = "a law of large numbers without integrability or a dependence structure"
+mode = "missing"
+keywords = ["strong law of large numbers", "law of large numbers", "SLLN", "WLLN", "strong law", "weak law"]
+requires = [["E|X", "E[|X", "integrable", "finite mean", "finite means", "finite expectation", "finite first moment", "L^1", "mean mu",
+  "mean zero", "expectation mu", "finite variance", "finite variances", "bounded", "E X_1", "E[X_1]", "EX_1", "finite second moment",
+  "uniformly integrable", "sum Var", "Var(X_n)/n^2", "first moment", "moment condition", "E X=", "E[X]=", "mean m", "finite mean m"],
+  ["i.i.d.", "iid", "independent", "pairwise independent", "uncorrelated", "stationary", "ergodic", "martingale", "exchangeable", "Etemadi",
+  "identically distributed", "Markov chain", "mixing"]]
+requires_labels = ["an integrability (first-moment) condition", "a dependence structure (iid, pairwise independent, stationary ergodic, martingale)"]
+unless = ["open problem"]
+action = "A law of large numbers needs integrability (E|X| finite for iid; a variance or Kolmogorov condition otherwise) and a stated dependence structure (iid, pairwise independent, stationary ergodic, martingale); the text names the law but omits one of them - check which one this use supplies."
+
+# ------------------------------------------------------------------------------------------------ modes of convergence
+
+[[trigger]]
+id = "as-from-in-probability-tools"
+reflex = "mode-of-convergence-upgraded"
+title = "an almost-sure conclusion from in-probability tools"
+mode = "missing"
+keywords = ["almost surely", "a.s.", "with probability one", "with probability 1", "almost sure"]
+context = [["Chebyshev", "Markov's inequality", "Markov inequality", "second moment method", "variance bound", "variance tends",
+  "variance goes", "variance ->", "with high probability", "w.h.p.", "whp", "in probability"]]
+requires = [["Borel Cantelli", "summable", "summability", "sum_n P", "sum P(", "subsequence", "martingale", "strong law", "SLLN",
+  "ergodic theorem", "Birkhoff", "monotone", "Kolmogorov", "Etemadi", "maximal inequality", "fourth moment", "4th moment", "Doob",
+  "three series", "Kronecker", "complete convergence", "exponentially small", "exp(-", "e^-", "zero one law", "0 1 law", "tail event",
+  "iterated logarithm", "Kingman", "subadditive", "Skorokhod", "coupling", "Glivenko", "a.s. and in probability", "almost surely and in probability"]]
+requires_labels = ["a route to almost-sure convergence (Borel-Cantelli with summable tails, a subsequence with monotonicity, a martingale or ergodic theorem)"]
+action = "The text concludes 'almost surely' while its tools (Chebyshev or Markov, a variance bound, 'with high probability') give convergence IN PROBABILITY; an almost-sure statement needs summable tail bounds plus Borel-Cantelli, a subsequence and monotonicity argument, or a martingale or ergodic theorem. Check which one this step uses."
+
+[[trigger]]
+id = "weak-law-almost-sure"
+reflex = "mode-of-convergence-upgraded"
+title = "the weak law quoted for an almost-sure statement"
+mode = "present"
+keywords = ["weak law", "WLLN"]
+context = [["almost surely", "a.s.", "with probability one", "with probability 1", "almost sure convergence"]]
+unless = ["strong law", "SLLN", "Etemadi", "Kolmogorov"]
+action = "The weak law gives convergence in probability only; an almost-sure conclusion needs the strong law (Kolmogorov, Etemadi) or a Borel-Cantelli argument."
+
+[[trigger]]
+id = "slutsky-constant"
+reflex = "mode-of-convergence-upgraded"
+title = "Slutsky without a sequence converging in probability to a constant"
+mode = "missing"
+keywords = ["Slutsky"]
+requires = [["constant", "in probability", "deterministic", "-> c", "->c", "to c", "degenerate"]]
+requires_labels = ["one sequence converging in probability to a constant"]
+action = "Slutsky combines X_n -> X in distribution with Y_n -> c IN PROBABILITY to a CONSTANT; two sequences converging only in distribution do not combine, because their joint law is not determined."
+
+[[trigger]]
+id = "second-borel-cantelli"
+reflex = "mode-of-convergence-upgraded"
+title = "the second Borel-Cantelli lemma without independence"
+mode = "missing"
+keywords = ["Borel Cantelli"]
+context = [["infinitely often", "i.o.", "infinitely many"], ["diverge", "diverges", "divergent", "=infinity", "is infinite", "not summable", "sum P(A_n)=infinity"]]
+requires = [["independent", "independence", "pairwise independent", "Kochen Stone", "Erdos Renyi", "quasi independent", "conditional Borel Cantelli",
+  "Levy's extension", "Levy's conditional", "filtration", "martingale", "mixing", "Markov", "nonpositive correlation", "negatively correlated",
+  "pairwise nonpositive"]]
+requires_labels = ["independence (or a Kochen-Stone, pairwise or conditional version)"]
+action = "A divergent sum of P(A_n) gives 'infinitely often' only for independent (or pairwise independent: Erdos-Renyi, Kochen-Stone) events, or through Levy's conditional version with predictable probabilities; the first lemma needs no independence. Check which lemma this use is."
+
+# ------------------------------------------------------------------------------------------------ interchange of limits and expectations
+
+[[trigger]]
+id = "interchange-licence"
+reflex = "limit-interchange-without-licence"
+title = "a limit, sum or derivative moved through an expectation without a named theorem"
+mode = "missing"
+keywords = ["interchange", "interchanging", "exchange the limit", "exchanging the limit", "exchange of limits", "pass to the limit",
+  "passing to the limit", "take the limit inside", "taking the limit inside", "limit inside", "swap the limit", "swapping the limit",
+  "differentiate under", "differentiating under", "differentiation under", "term by term", "termwise", "exchange the order",
+  "exchanging the order", "swap the order", "swapping the order", "limit and expectation", "limit and integral", "limit and the expectation",
+  "limit and the integral", "commute the limit", "lim E", "E lim"]
+requires = [["dominated", "monotone convergence", "monotone", "uniformly integrable", "uniform integrability", "Fubini", "Tonelli", "Vitali",
+  "bounded convergence", "uniform convergence", "converges uniformly", "uniformly convergent", "Scheffe", "Fatou", "absolutely convergent",
+  "absolutely summable", "finite sum", "finitely many", "Weierstrass M", "Lebesgue", "integrable bound", "dominating"]]
+requires_labels = ["the licensing theorem (dominated or monotone convergence, uniform integrability, Fubini-Tonelli, uniform convergence)"]
+action = "A limit, a sum or a derivative is moved through an expectation or an integral: name the theorem that licenses it and check its hypothesis here (an integrable dominating function, monotonicity, uniform integrability, absolute summability)."
+
+[[trigger]]
+id = "expectation-from-weak-mode"
+reflex = "limit-interchange-without-licence"
+title = "convergence of expectations from convergence in probability, a.s. or in law"
+mode = "missing"
+keywords = ["convergence of expectations", "convergence of the expectations", "expectations converge", "the expectations converge",
+  "means converge", "convergence of means", "convergence of moments", "moments converge", "taking expectations", "converges in mean",
+  "converge in mean", "E X_n->E X", "E[X_n]->E[X]", "EX_n->EX", "E[X_n]->E X", "E X_n->EX"]
+context = [["in probability", "almost surely", "a.s.", "in distribution", "in law", "weakly", "converges weakly", "with high probability"]]
+requires = [["uniformly integrable", "uniform integrability", "UI", "dominated", "dominated convergence", "bounded", "Vitali", "L^p bounded",
+  "L^2 bounded", "bounded in L^p", "bounded in L^2", "sup_n E", "monotone", "Scheffe", "E sup", "uniformly bounded"]]
+requires_labels = ["uniform integrability (or domination)"]
+action = "Convergence in probability, almost surely or in distribution does not give convergence of expectations (or L^1 convergence) without uniform integrability or domination, and uniform integrability gives no second moment. Check which licence this step has."
+
+[[trigger]]
+id = "dominated-convergence-dominator"
+reflex = "limit-interchange-without-licence"
+title = "dominated convergence without a named integrable dominator"
+mode = "missing"
+keywords = ["dominated convergence", "DCT", "Lebesgue's dominated", "bounded convergence theorem"]
+requires = [["dominated by", "dominating", "|f_n|<=", "|X_n|<=", "|f_n(x)|<=", "<=g", "<= g", "integrable g", "integrable function",
+  "integrable majorant", "integrable bound", "integrable envelope", "uniformly bounded", "bounded by", "sup_n |", "E sup", "bounded",
+  "finite measure", "majorant", "dominator", "envelope", "|f_n|<=g", "|g_n|<="]]
+requires_labels = ["an integrable dominating function"]
+action = "Name the integrable g with |f_n| <= g for every n and the almost-everywhere convergence; boundedness alone works only on a finite measure space. Without a dominator use uniform integrability (Vitali)."
+
+[[trigger]]
+id = "fubini-integrability"
+reflex = "limit-interchange-without-licence"
+title = "Fubini without absolute integrability or nonnegativity"
+mode = "missing"
+keywords = ["Fubini"]
+requires = [["Tonelli", "nonnegative", "non negative", ">=0", "positive", "integrable", "absolutely", "absolute", "L^1", "E|", "sum |", "finite",
+  "bounded", "sigma finite"]]
+requires_labels = ["absolute integrability (or nonnegativity, for Tonelli)"]
+action = "Fubini needs absolute integrability of the joint function (Tonelli needs nonnegativity) and sigma-finite measures; check both before swapping an order of summation, integration or expectation."
+
+# ------------------------------------------------------------------------------------------------ martingale tools
+
+[[trigger]]
+id = "optional-stopping-condition"
+reflex = "martingale-tool-conditions"
+title = "optional stopping without a stopping condition"
+mode = "missing"
+keywords = ["optional stopping", "optional sampling"]
+requires = [["bounded stopping time", "bounded stopping times", "T<=", "tau<=", "bounded", "uniformly integrable", "uniform integrability", "UI",
+  "E[T]<", "E T<", "ET<", "E[tau]<", "E tau<", "Etau<", "E(T)<", "integrable stopping time", "finite expectation", "bounded increments",
+  "dominated", "L^2 bounded", "square integrable", "stopped martingale", "stopped process", "nonnegative supermartingale",
+  "non negative supermartingale", "T is bounded", "tau is bounded", "bounded by", "finite mean"]]
+requires_labels = ["a stopping condition (T bounded; a uniformly integrable stopped martingale; or E[T] finite with bounded increments)"]
+action = "E[M_T] = E[M_0] needs one of: T bounded; the stopped martingale uniformly integrable; or E[T] finite with bounded increments. It fails for simple random walk stopped at its first visit to 1. Check which condition this use has."
+
+[[trigger]]
+id = "martingale-convergence-bound"
+reflex = "martingale-tool-conditions"
+title = "martingale convergence without an L^1 bound"
+mode = "missing"
+keywords = ["martingale convergence theorem", "martingale convergence", "Doob's convergence", "Doob's martingale convergence", "Doob convergence theorem"]
+requires = [["L^1 bounded", "L1 bounded", "bounded in L^1", "bounded in L1", "sup_n E|", "supE|", "sup E|", "sup_n E[|", "uniformly integrable",
+  "uniform integrability", "nonnegative", "non negative", "positive", "bounded below", "bounded", "L^2 bounded", "L^p bounded",
+  "bounded in L^2", "bounded in L^p", "X_n^+", "sup_n E X_n^+", "closed by", "E[X|F_n]", "E(X|F_n)", "Levy's upward", "reverse martingale",
+  "backward martingale"]]
+requires_labels = ["an L^1 bound (or nonnegativity)"]
+action = "Doob's theorem gives almost-sure convergence for L^1-bounded (sub- or super-)martingales, nonnegative supermartingales included; L^1 convergence also needs uniform integrability, and a uniformly integrable martingale with mean zero cannot have a positive limit. Check which conclusion is drawn and which bound is shown."
+
+[[trigger]]
+id = "wald-integrable-time"
+reflex = "martingale-tool-conditions"
+title = "Wald's identity without an integrable stopping time"
+mode = "missing"
+keywords = ["Wald's identity", "Wald's equation", "Wald identity", "Wald equation", "Wald's first identity", "Wald's second identity"]
+requires = [["E[T]<", "E T<", "ET<", "E[tau]<", "E tau<", "Etau<", "E(T)<", "E(tau)<", "E[N]<", "E N<", "EN<", "integrable stopping time",
+  "finite mean", "finite expectation", "bounded stopping time", "integrable"]]
+requires_labels = ["an integrable stopping time (E[T] finite)"]
+action = "Wald's identity E[S_T] = E[T] E[X_1] needs iid integrable steps and a stopping time with E[T] finite (the second identity also a finite variance); it fails for simple random walk stopped at its first visit to 1, where E[T] is infinite."
+
+[[trigger]]
+id = "doob-maximal-conditions"
+reflex = "martingale-tool-conditions"
+title = "Doob's maximal inequality outside nonnegative submartingales or p > 1"
+mode = "missing"
+keywords = ["Doob's maximal", "Doob maximal", "Doob's inequality", "Doob's L^p", "Doob L^p", "Doob's submartingale inequality"]
+requires = [["submartingale", "martingale", "nonnegative", "non negative", "|M", "|X"], ["p>1", "p > 1", "1<p", "p in (1", "p=2", "L^2", "p/(p-1)",
+  "lambda P", "lambda P(", "P(max", "P(sup", "lambda p", "weak type", "L log L", "Llog L"]]
+requires_labels = ["a nonnegative submartingale (or |martingale|)", "the range p > 1 for the L^p form (or the weak-type form)"]
+action = "Doob's maximal inequality is for nonnegative submartingales (or the absolute value of a martingale); the L^p form needs p > 1 with constant (p/(p-1))^p, which is 4 at p = 2, and fails at p = 1, where an L log L bound replaces it."
+
+# ------------------------------------------------------------------------------------------------ uniformity
+
+[[trigger]]
+id = "uniform-from-pointwise"
+reflex = "uniformity-dropped"
+title = "a uniform conclusion from a pointwise or compact-set argument"
+mode = "present"
+keywords = ["uniformly in", "uniformly over", "uniform in", "uniformly for", "uniformly with respect", "uniform over", "simultaneously for all",
+  "converges uniformly", "uniform convergence", "uniformly on"]
+context = [["for each fixed", "for every fixed", "for fixed", "pointwise", "on compact", "on compacts", "compact sets", "compact subsets",
+  "locally uniformly", "each fixed", "fixed t", "fixed x", "fixed n", "fixed k", "fixed theta"]]
+unless = ["equicontinu*", "Arzela", "Ascoli", "Dini", "epsilon net", "net argument", "chaining", "Glivenko", "uniform law", "Dudley",
+  "covering number", "Polya", "finite set", "finitely many", "countable", "separab*", "uniformly on compact", "uniformly on compacts",
+  "uniform on compact", "locally uniform", "Lipschitz in"]
+action = "The conclusion is uniform (in a parameter, over a class, or as a supremum) while the argument is made for each fixed value or on compact sets. A pointwise bound does not give a uniform one - and convergence of maximizers needs uniform convergence of the criterion: add equicontinuity, a net or chaining argument with control between net points, monotonicity (Polya, Dini), or restrict the claim to compacts."
+
+[[trigger]]
+id = "sup-over-uncountable"
+reflex = "uniformity-dropped"
+title = "a supremum or union bound over an uncountable family"
+mode = "missing"
+keywords = ["supremum over", "sup over", "union bound over all", "for all t simultaneously", "over an uncountable", "simultaneously for all"]
+requires = [["countable", "separable", "separability", "measurable", "outer", "net", "chaining", "dense", "pointwise measurable", "finite class",
+  "finitely many", "VC", "Vapnik", "Glivenko", "bracketing", "covering", "continuous", "continuity", "monotone", "Lipschitz"]]
+requires_labels = ["a reduction to countably many points (separability, a net, chaining, continuity)"]
+action = "A supremum over an uncountable family may be non-measurable, and a union bound over uncountably many events is invalid: reduce to a countable dense set (separability, continuity), or a finite net with control between its points, or use outer expectations."
+
+# ------------------------------------------------------------------------------------------------ degenerate and boundary cases
+
+[[trigger]]
+id = "standardized-positive-variance"
+reflex = "degenerate-case-not-excluded"
+title = "a division by a standard deviation without sigma > 0"
+mode = "missing"
+patterns = ['\bk ?\*? ?sigma\b', '/ ?sigma\b', '/ ?\(? ?sigma ?\*? ?sqrt', '/ ?sqrt ?\(? ?var', 'standardi[sz]ed', 'divided by (?:its |the )?standard deviation',
+  '/ ?\(? ?sqrt ?\(? ?n ?\)? ?sigma']
+requires = [["sigma>0", "sigma^2>0", "positive variance", "nondegenerate", "non degenerate", "Var(X)>0", "Var X>0", "Var(X_1)>0", "variance is positive",
+  "variance positive", "not a.s. constant", "not almost surely constant", "nonconstant", "non constant", "0<sigma", "0<sigma^2", "sigma^2 in (0",
+  "sigma in (0", "positive and finite", "in (0,infinity)", "0<Var", "strictly positive variance", "sigma^2 is positive", "positive finite variance",
+  "finite positive variance", "variance 1", "unit variance", "variance one", "sigma=1", "sigma^2=1"]]
+requires_labels = ["sigma > 0 (a nondegenerate law)"]
+action = "The statement divides by a standard deviation; with sigma = 0 (a constant variable) the standardized event or limit degenerates - Chebyshev's P(|X - mu| >= k sigma) <= 1/k^2 fails for k > 1. State sigma > 0 or treat the degenerate case."
+
+[[trigger]]
+id = "extreme-value-nondegenerate"
+reflex = "degenerate-case-not-excluded"
+title = "the extremal types theorem without a nondegenerate limit"
+mode = "missing"
+keywords = ["Gumbel", "Frechet", "Weibull", "extreme value", "Fisher Tippett", "Gnedenko", "max stable", "extremal types"]
+context = [["converge", "converges", "convergence", "limit", "limiting", "normalized", "normalised", "a_n", "b_n", "domain of attraction"]]
+requires = [["nondegenerate", "non degenerate", "nontrivial limit", "non trivial limit", "not a point mass", "not degenerate", "non degenerate"]]
+requires_labels = ["a nondegenerate limit law"]
+action = "The extremal types theorem classifies NONDEGENERATE limits of (M_n - b_n)/a_n with a_n > 0; degenerate limits always exist (constant variables). State that the limit is nondegenerate."
+
+[[trigger]]
+id = "critical-point-included"
+reflex = "degenerate-case-not-excluded"
+title = "a supercritical conclusion stated for p >= p_c"
+mode = "present"
+patterns = ['(?:>=|at least) ?p_?c\b', '(?:>=|at least) ?p_\{?c\}?\b']
+context = [["percolat*", "infinite cluster", "infinite component", "giant", "infinite open"]]
+unless = ["at p_c", "at criticality", "critical case", "p=p_c", "p = p_c", "theta(p_c)"]
+action = "A supercritical conclusion stated for p >= p_c includes p = p_c, where the behaviour is often different (no infinite cluster for bond percolation on Z^2 or in high dimension): check whether the critical point itself is covered."
+
+# ------------------------------------------------------------------------------------------------ dependence structure
+
+[[trigger]]
+id = "uncorrelated-not-independent"
+reflex = "dependence-structure-misread"
+title = "zero correlation read as independence"
+mode = "present"
+keywords = ["uncorrelated", "zero covariance", "covariance zero", "covariance is zero", "vanishing covariance", "zero correlation",
+  "Cov(X,Y)=0", "orthogonal increments"]
+context = [["independent", "independence", "independently"]]
+unless = ["jointly Gaussian", "jointly normal", "Gaussian vector", "Gaussian process", "multivariate normal", "multivariate Gaussian",
+  "Gaussian family", "Gaussian field", "need not be independent", "not independent", "does not imply independence", "do not imply independence",
+  "but not independent", "weaker than independence", "pairwise", "Gaussian"]
+action = "Zero correlation gives independence only for jointly Gaussian vectors; marginally Gaussian or merely uncorrelated variables can be dependent (and equal first moments need zero covariance, not independence). Check which property this step needs and which one it has."
+
+[[trigger]]
+id = "slepian-equal-variances"
+reflex = "dependence-structure-misread"
+title = "Slepian's lemma without equal variances"
+mode = "missing"
+keywords = ["Slepian"]
+requires = [["equal variance", "equal variances", "same variance", "same variances", "variances agree", "variances are equal", "E X_t^2=E Y_t^2",
+  "EX_t^2=EY_t^2", "E X_s^2=E Y_s^2", "equal marginal variances", "identical variances", "E X_i^2=E Y_i^2", "E[X_i^2]=E[Y_i^2]",
+  "E X_i^2 = E Y_i^2", "variances coincide", "same marginal"]]
+requires_labels = ["equal variances"]
+unless = ["Sudakov Fernique", "Gordon's inequality", "Gordon inequality"]
+action = "Slepian's lemma (stochastic ordering of the maxima) needs EQUAL variances; Sudakov-Fernique compares expected suprema under increment domination without it. Check which statement this use needs."
+
+[[trigger]]
+id = "fkg-monotone-product"
+reflex = "dependence-structure-misread"
+title = "Harris-FKG without monotone events or a product (FKG-lattice) measure"
+mode = "missing"
+keywords = ["FKG", "Harris inequality", "Harris' inequality", "Harris's inequality", "Harris FKG", "positive association"]
+requires = [["increasing", "decreasing", "monotone", "nondecreasing", "non decreasing", "up set", "upset", "down set", "monotonic"],
+  ["product measure", "product", "independent", "i.i.d.", "iid", "Bernoulli", "lattice condition", "FKG lattice", "log supermodular",
+  "positively associated", "random cluster", "Ising", "ferromagnetic", "percolation", "Holley", "distributive lattice", "associated"]]
+requires_labels = ["monotone (increasing or decreasing) events or functions", "a product measure or the FKG lattice condition"]
+action = "Harris-FKG correlates two INCREASING events (or functions) under a product measure or a measure with the FKG lattice condition; one increasing and one decreasing event are negatively correlated. Check both the monotonicity and the measure."
+
+[[trigger]]
+id = "bk-disjoint-occurrence"
+reflex = "dependence-structure-misread"
+title = "the BK inequality without disjoint occurrence or a product measure"
+mode = "missing"
+keywords = ["BK inequality", "van den Berg Kesten", "BK Reimer", "Reimer's inequality", "disjoint occurrence"]
+requires = [["disjoint", "disjointly", "box product", "square operation"], ["product", "independent", "Bernoulli", "i.i.d.", "iid", "percolation"]]
+requires_labels = ["disjoint occurrence (not plain intersection)", "a product measure"]
+action = "BK bounds the probability that two events occur DISJOINTLY (on disjoint witness sets), under a product measure; it says nothing about a plain intersection, and Reimer's form removes only the monotonicity hypothesis."
+
+# ------------------------------------------------------------------------------------------------ exponential moments
+
+[[trigger]]
+id = "mgf-finiteness"
+reflex = "exponential-moments-assumed"
+title = "an exponential-moment argument without a finite moment generating function"
+mode = "missing"
+keywords = ["moment generating function", "MGF", "cumulant generating function", "log moment generating", "log MGF", "Laplace transform",
+  "Cramer's theorem", "Cramer theorem", "Cramer transform", "Legendre transform", "rate function", "exponential moment", "exponential moments",
+  "cumulants", "cumulant"]
+requires = [["finite", "<infinity", "exists", "in a neighbourhood", "in a neighborhood", "near 0", "near zero", "neighbourhood of 0",
+  "neighborhood of 0", "|t|<", "|lambda|<", "for t in", "for all t", "for all lambda", "for every t", "for every lambda", "sub exponential",
+  "sub gaussian", "subgaussian", "subexponential", "bounded", "domain", "effective domain", "Cramer's condition", "light tailed", "light tail",
+  "psi_1", "psi_2", "Bernoulli", "Gaussian", "Poisson", "exponential distribution", "binomial", "all real", "every real", "t in R", "lambda in R"]]
+requires_labels = ["finiteness of the exponential moment on the range of t used"]
+action = "An exponential-moment argument needs E e^{tX} finite for the t used (near 0 for an analytic cumulant expansion and for a good Cramer rate function); a lognormal variable has every moment and no finite MGF for t > 0. The Legendre transform runs over every tilt in the effective domain, not only t >= 0."
+
+# ------------------------------------------------------------------------------------------------ Markov chains, SDEs, compactness, measures
+
+[[trigger]]
+id = "chain-convergence-conditions"
+reflex = "markov-chain-convergence-conditions"
+title = "convergence to stationarity without irreducibility and aperiodicity"
+mode = "missing"
+keywords = ["converges to the stationary distribution", "converges to its stationary distribution", "convergence to stationarity",
+  "convergence to equilibrium", "converges to equilibrium", "converge to stationarity", "convergence theorem for Markov chains",
+  "Markov chain convergence theorem", "unique stationary distribution", "ergodic theorem for Markov chains", "converges in total variation to pi",
+  "converges to pi"]
+context = [["Markov chain", "chain", "random walk", "Glauber", "Metropolis", "Gibbs sampler", "Markov process", "kernel"]]
+requires = [["irreducible", "irreducibility", "connected", "ergodic", "primitive", "regular chain", "strongly connected", "communicat*"],
+  ["aperiodic", "aperiodicity", "lazy", "holding probability", "self loop", "self loops", "continuous time", "rate one", "rate 1", "period 1",
+  "laziness", "P(x,x)>0", "positive diagonal", "ergodic", "primitive", "regular chain"]]
+requires_labels = ["irreducibility", "aperiodicity (or a lazy or continuous-time chain)"]
+action = "Convergence of P^t(x, .) to the stationary law needs an irreducible and aperiodic chain (positive recurrent on an infinite space); a periodic chain has a stationary law without converging to it."
+
+[[trigger]]
+id = "sde-wellposedness"
+reflex = "sde-wellposedness-conditions"
+title = "a unique strong solution claimed without regularity and growth conditions"
+mode = "missing"
+keywords = ["strong solution", "unique strong solution", "pathwise uniqueness", "existence and uniqueness", "well posed", "well posedness", "Yamada Watanabe"]
+context = [["SDE", "stochastic differential equation", "dX_t", "Brownian motion", "Ito", "diffusion"]]
+requires = [["Lipschitz", "Holder", "Yamada Watanabe", "monotone", "monotonicity", "one sided Lipschitz", "locally Lipschitz", "Engelbert Schmidt",
+  "Zvonkin", "Veretennikov", "nondegenerate", "non degenerate", "bounded measurable"],
+  ["linear growth", "growth condition", "bounded coefficients", "at most linear", "sublinear", "coercive", "Lyapunov function", "non explosion",
+  "nonexplosion", "C(1+|x|)", "K(1+|x|)", "(1+|x|)", "(1 +|x|)", "bounded"]]
+requires_labels = ["a regularity condition (Lipschitz, Yamada-Watanabe, Zvonkin)", "a growth (non-explosion) condition with time-integrable constants"]
+action = "A unique strong solution on [0, T] needs Lipschitz (or Yamada-Watanabe or Zvonkin-type) regularity AND a growth condition with time-integrable constants; locally Lipschitz coefficients can explode, and b(t, x) = 1/t is Lipschitz in x with no solution from time 0."
+
+[[trigger]]
+id = "compactness-tightness"
+reflex = "measure-theoretic-preconditions"
+title = "weak compactness or a continuity theorem without tightness"
+mode = "missing"
+keywords = ["Prokhorov", "Prohorov", "relatively compact", "relative compactness", "precompact", "precompactness", "subsequential limit",
+  "subsequential limits", "Helly", "Helly's selection", "Levy's continuity", "Levy continuity", "continuity theorem"]
+requires = [["tight", "tightness", "uniformly tight", "Polish", "compact", "continuous at 0", "continuous at zero", "continuous at the origin",
+  "bounded in probability", "stochastically bounded", "uniform modulus", "Kolmogorov criterion", "Aldous", "moment bound", "sup_n P"]]
+requires_labels = ["tightness (or continuity of the limit at 0, for Levy's theorem)"]
+unless = ["Kolmogorov continuity", "Helly's theorem (convex", "convex sets"]
+action = "Weak compactness needs tightness (Prokhorov; the converse needs a Polish space); Helly's selection gives a vague limit that can lose mass unless the sequence is tight; Levy's continuity theorem needs the limit to be continuous at 0. Check which of these this use supplies."
+
+[[trigger]]
+id = "radon-nikodym-sigma-finite"
+reflex = "measure-theoretic-preconditions"
+title = "Radon-Nikodym without sigma-finiteness or absolute continuity"
+mode = "missing"
+keywords = ["Radon Nikodym"]
+requires = [["sigma finite", "finite measure", "finite measures", "probability measure", "probability measures", "probability space"],
+  ["absolutely continuous", "<<", "absolute continuity", "dominated by", "equivalent measures", "mutually absolutely continuous", "equivalent"]]
+requires_labels = ["sigma-finite (or finite) measures", "absolute continuity nu << mu"]
+action = "Radon-Nikodym needs nu << mu with mu sigma-finite (the standard statement also takes nu sigma-finite); the derivative is unique only almost everywhere. Check the measures here."
+
+[[trigger]]
+id = "wasserstein-moments"
+reflex = "measure-theoretic-preconditions"
+title = "a Wasserstein distance without moment conditions"
+mode = "missing"
+keywords = ["Wasserstein", "Kantorovich Rubinstein", "earth mover"]
+requires = [["finite first moment", "finite first moments", "finite p th moment", "finite p-th moment", "finite moment", "finite moments",
+  "finite second moment", "finite second moments", "P_p", "P_1", "P_2", "p-th moment", "pth moment", "moments", "moment", "bounded support",
+  "compact", "bounded metric", "diameter", "bounded"]]
+requires_labels = ["finite p-th moments (or bounded support), with p >= 1"]
+unless = ["Gromov"]
+action = "W_p (p >= 1) is a finite metric on laws with finite p-th moments, and the Kantorovich-Rubinstein duality for W_1 needs finite first moments; without them the coupling cost can be infinite and the dual integral undefined."
+
+# ------------------------------------------------------------------------------------------------ scope and evidence
+
+[[trigger]]
+id = "resolution-scope"
+reflex = "scope-wider-than-source"
+title = "a resolution label without the cited theorem's restrictions"
+mode = "present"
+keywords = ["resolved", "solved", "answered", "settled", "fully resolved", "completely resolved", "solved in the literature",
+  "resolved in the literature", "solved_in_literature", "closed in the literature"]
+context = [["theorem", "arXiv", "proved by", "et al", "literature", "paper", "preprint", "proves", "showed", "shows"]]
+unless = ["partially", "partial", "special case", "sufficiently large", "large enough", "only for", "restricted", "in the regime",
+  "under the assumption", "assuming", "conditional on", "conditionally", "remains open", "not resolved", "unresolved", "unverified", "unknown",
+  "candidate", "pending", "excluded", "for d>=", "for d >=", "provided"]
+action = "A resolution label: check that the cited theorem's restrictions (a regime, a degree or dimension large enough, a noise model, a special case) cover the WHOLE question as stated - referees grade scope generously, and a theorem for sufficiently large parameters does not resolve the question for all of them."
+
+[[trigger]]
+id = "finite-evidence-universal"
+reflex = "finite-evidence-promoted"
+title = "finite evidence promoted to a universal claim"
+mode = "present"
+keywords = ["numerically", "numerical evidence", "numerical check", "numerical experiments", "simulation", "simulations", "simulated", "Monte Carlo",
+  "computer search", "exhaustive search", "enumeration", "enumerated", "checked for", "verified for", "verified up to", "checked up to", "up to n=",
+  "for n<=", "checker", "certificate"]
+context = [["for all", "for every", "all n", "every n", "in general", "always", "holds for all", "theorem", "hence", "therefore", "the claim holds"]]
+unless = ["conjecture", "conjectural", "evidence", "suggests", "suggest", "heuristic", "consistent with", "not a proof", "no proof", "unproved",
+  "unproven", "candidate", "open", "supports", "indicates", "predicts", "we prove", "proof", "proved", "lemma", "by induction", "exact rational",
+  "exact arithmetic", "interval arithmetic", "rigorous", "rigorously"]
+action = "Finite evidence (a simulation, an enumeration up to some n, a checker's output, a certificate read rather than recomputed) supports but does not prove a universal claim, and a maximum over a bounded window is not a supremum. Check that the universal statement rests on a proof, or label it a conjecture."

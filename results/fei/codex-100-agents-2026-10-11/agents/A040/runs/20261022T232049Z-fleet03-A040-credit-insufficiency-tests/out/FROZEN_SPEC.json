@@ -1,0 +1,28 @@
+{
+  "helper_version": "A040-stage7-v1 (own stage6 rational/FWHT definitions pinned in arithmetic.py)",
+  "family": "F=1+[WUV OR S(U OR V)](g-1),four singleton fair controls, code7 g=(-1,-1,-1,1,1,1,1,1)",
+  "review_domain": "one actual 7-bit root, first core bit0 then S in both reached children, same single first-core child-product reset",
+  "continuation_domain": "four policies choose each reached child next core index from{0,1}, skip an irrelevant query, then query S and stop separator accounting; no subsequent reset",
+  "case_counts": {
+    "root": 1,
+    "first_children": 2,
+    "review_S_nodes": 2,
+    "second_query_policies": 4,
+    "policy_leaf_occurrences_max": 16
+  },
+  "symmetry": "none; record all labelled policies",
+  "arithmetic": "integer FWHT and physical edge checks; Fraction;36-term rational atanh intervals, proved tail, outward2^-120 rounding",
+  "memory_MB": 80,
+  "pilot_max_seconds": 55,
+  "max_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "prior_reserve": {
+    "Uroot": "23/32",
+    "prior_booked_release": "5/64",
+    "retired": "27/64",
+    "held_child0": "7/16",
+    "held_child1": "0",
+    "held_mean": "7/32"
+  },
+  "source_helper_sha256": "ebff8f583cf91717de60d353b186f150de0b575d2f0860547617b461ec7be3f4"
+}

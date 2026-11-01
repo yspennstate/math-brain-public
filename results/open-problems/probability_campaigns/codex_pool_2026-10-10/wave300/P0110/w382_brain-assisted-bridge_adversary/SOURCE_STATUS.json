@@ -1,0 +1,38 @@
+{
+  "target": "P0110",
+  "worker": "w382",
+  "current_openness": "UNKNOWN",
+  "historical_status": "attempted_un (ranking 2026-09-07)",
+  "exact_statement_recovered": true,
+  "intake_statement": "Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1.",
+  "primary_question": {
+    "url": "https://arxiv.org/pdf/1511.03262",
+    "location": "Section 4.3, Eq. (4.19), Question 22; printed pp. 87-88; intake says PDF p.89",
+    "quote": "Find a distribution of passage times where (4.19) holds.",
+    "equation": "chi=2xi-1",
+    "qualification": "The source itself says exponent existence and correct definition are part of the problem."
+  },
+  "primary_theorems_checked": [
+    {
+      "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v177-n2-p07-p.pdf",
+      "theorem": "1.1",
+      "requirements": "d>=2, iid nearly-gamma weights, MGF near zero, both global upper/lower exponent pairs match"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1109.0523",
+      "theorems": "2.1 and 2.2",
+      "requirements": "iid nearest-neighbor model with atom at infimum of support <p_c(d); conditional global exponents; matching chi pair (chi>0 for Theorem 2.1), matching both pairs for Theorem 2.2"
+    }
+  ],
+  "brain_sources_report": "BRAIN_SOURCE_REPORT.json",
+  "brain_database_mode": "read-only",
+  "independent_derivation_saved_before_paired_proof": true,
+  "paired_proof_read": true,
+  "paired_proof_scope": "w381 L1--L5",
+  "prior_work_status": "The math store prior-attempt card explicitly leaves exponent existence and T-to-norm error control unproved. The cited old Codex worktree is absent. Targeted named-intake/attempt searches yielded no additional P0110 closure.",
+  "recent_literature_search": "Bounded primary-literature searches through authorized web tool; no claim that a negative search certifies openness.",
+  "canonical_store_note": "Read the task-named math-brain-build source store and its export; no claim that a missing default canonical database path was the only canonical location.",
+  "formal_check": null,
+  "target_solved": false,
+  "printed_AD_lower_bound_caveat": "SMALL_DISPLACEMENT_OBSTRUCTION.md: all-nonzero Eq. (2.2) fails for Uniform[1,2] because D(0,e_1)=0; Chatterjee (A4) uses sufficiently large displacements."
+}

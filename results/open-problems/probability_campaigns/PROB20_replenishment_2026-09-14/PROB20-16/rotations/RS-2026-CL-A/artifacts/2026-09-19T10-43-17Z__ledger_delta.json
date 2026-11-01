@@ -1,0 +1,99 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "RS-2026-CL-A",
+  "report_kind": "research_run",
+  "source": {
+    "author": "Anastasia Kireeva",
+    "venue": "Randomstrasse 101",
+    "title": "Low-degree hardness of finding the largest clique in Erdős–Rényi graph (problems 36-38)",
+    "posted": "2026-06-05",
+    "locator": "first displayed Open Problem 35",
+    "target": "Give source-valid conditions on (P_n,Q_n) under which bounded low-degree advantage through D=(log n)^{1+Omega(1)} rigorously implies polynomial/noisy indistinguishability, respecting Mao arXiv:2607.20318."
+  },
+  "input_snapshot_sha": "c7ff15d19234851a655b737deb3b70be39424c20",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T09-43-00Z__report.md",
+    "creation_commit": "92308242964d13f5a383dbc210e7e26d5a55178d",
+    "readback_blob": "d5e0ae3a8c2afc2f92b98d50f1bde638a0e2a1a9"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T10-43-17Z__report.md",
+    "creation_commit": "f4382fbd8481976583985811afa46229de1ec548",
+    "readback_blob": "07a842e252fd3185f127f2f2894ed8a82709e368"
+  },
+  "model": {
+    "requested": "GPT-6",
+    "requested_reasoning": "maximum",
+    "actually_exposed": "GPT-5.6 Sol",
+    "actual_reasoning": "UNVERIFIED",
+    "scheduler_selector_status": "No authenticated model-family selector or reasoning-effort selector is exposed by the current task-control surface; GPT-6/maximum remains prompt-only."
+  },
+  "frozen_metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": "NO FROZEN-METRIC MOVEMENT; source-generalization obligation moved materially"
+  },
+  "status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / TILTED_ALIGNMENT_FULL_TAIL_AND_SAME_DEGREE_TRANSFER_PROGRESS",
+  "historical_initial_methods": ["B2", "B27", "B21"],
+  "methods": ["B12", "B20", "B27"],
+  "method_outcomes": {
+    "B12": "Identified a paired degree/noise alignment invariant. If A >= kappa N and the symmetrically tilted form C_s(A,N) is nonnegative for one fixed s>0, then ||e^{-tA} Pi_{>=K}|| <= exp[-s K (1-exp(-kappa t/s))]. The proof uses monotonicity of ||e^{-sN}e^{-tA}f||^2 plus Jensen and a scalar comparison ODE.",
+    "B20": "Ordinary coercivity alone is insufficient: the explicit 2x2 family N_K=diag(0,K), A_K=[[1,-sqrt(K)],[-sqrt(K),2K]] satisfies A_K>=N_K but has only polynomial high-degree damping through a slow eigenmode, while its tilted form loses positivity for large K. Conversely, the prior weak-Ising Kato/Toda certificate supplies both ordinary coercivity and tilted positivity, so it now yields full high-source-degree damping on the same verified small-coupling class.",
+    "B27": "Sharpened the implication quantifiers. Under uniform aligned full-tail damping, bounded source LDA through D_n and Pi_2=o(D_n) imply bounded noisy LDA through the same D_n, with no degree loss. Vanishing source LDA plus the same pressure/alignment hypotheses imply total-variation convergence after every fixed positive noise time. This is sufficient and remains PARTIAL source-wide."
+  },
+  "new_theorems": [
+    "Tilted alignment full-tail theorem: A >= kappa N and C_s(A,N)>=0 imply ||S_t Pi_{>=K}|| <= exp[-sK(1-exp(-kappa t/s))].",
+    "Same-degree transfer: Adv^{<=D}(PS_t,Q) <= Adv^{<=D}(P,Q) + exp(Pi_2/2-alpha_t(D+1)).",
+    "TV tier: TV(PS_t,Q) <= 0.5 Adv^{<=D}(P,Q) + 0.5 exp(Pi_2/2-alpha_t(D+1)).",
+    "2x2 obstruction: A>=N alone does not imply exponential high-source-degree damping."
+  ],
+  "source_status_check": {
+    "date": "2026-09-19",
+    "randomstrasse": "Live page still displays the conditions question as Open Problem 35.",
+    "mao": "arXiv:2607.20318 remains the mandatory post-source negative stress.",
+    "hsieh_et_al": "arXiv:2601.05850 remains the principal Boolean/vector/matrix positive comparator; current theorem does not subsume its Boolean symmetry result because current theorem assumes global collision pressure.",
+    "chen_li": "arXiv:2608.06279 remains the planted-subgraph/treewidth positive comparator; translation of its interface mechanism to the present pressure/alignment hypotheses is not proved.",
+    "later_general_characterization": "No later source-wide characterization was found in the bounded fresh search; negative search is not novelty proof."
+  },
+  "prior_art_state": "Weighted semigroup/exponential conjugation, Davies/Combes-Thomas/Agmon methods, log-Sobolev/hypercontractivity, Kato/Toda transport, Gibbs cluster expansion, and Renyi/collision entropy are classical. Inference synthesis novelty remains UNVERIFIED.",
+  "audit_state": {
+    "qualifying_independent_audits": "0/2",
+    "p26": "No P26-AUDIT-RS-2026-CL-A PASS found in fresh exact-token repository search.",
+    "distinct_other": "No distinct OTHER-track full theorem/source PASS found."
+  },
+  "recovery_state": {
+    "hard_recovery_cycles_consumed": 1,
+    "same_obligation_stagnation_count": 0,
+    "stuck_run": false,
+    "reason": "Alignment/full-tail and output-degree obligations moved materially."
+  },
+  "artifacts": [],
+  "checker_state": "No new checker: theorem-sized analytic claims have complete proofs on the report page; checker churn was intentionally avoided.",
+  "remaining_obligation": [
+    "Derive broad bounded-arity Gibbs/factor-table conditions implying A>=kappa N and C_s(A,N)>=0 or >=delta_s N with explicit rooted constants.",
+    "Replace global Pi_2=o(D_n), if possible, by a source-local high-degree-tail/Orlicz pressure condition while retaining same-degree transfer.",
+    "Characterize the necessity frontier for tilted accretivity and sharpen the 2x2 obstruction into a structural criterion.",
+    "Extend exchangeable collision LDPs to spatial soft kernels and nonexchangeable latent rate functions.",
+    "Reconcile exactly how Hsieh symmetry and Chen-Li interface reassembly avoid or imply the present global-pressure condition.",
+    "Combine pressure/alignment lower obstructions with Mao for a near-necessary source-valid structural regime.",
+    "Obtain actual P26 plus one distinct OTHER full theorem/source audit before closure."
+  ],
+  "next_methods": [
+    "B5 ADD A PARAMETER AND DIFFERENTIATE IN IT — optimize the admissible tilt s jointly with local tilted-coercivity margins and the full-tail exponent.",
+    "B11 DUALIZE — seek a tail-adapted variational/Orlicz pressure that controls only Pi_{>D}h rather than total chi-square.",
+    "B22 READ THE FAILURES, NOT THE SUCCESSES — extract the exact Hsieh/Chen-Li mechanisms that avoid global chi-square pressure and test portability to the nonproduct Gibbs alignment framework."
+  ],
+  "delivery": {
+    "github_only": true,
+    "shared_RESULTS_QUEUE_POSTED_edited": false,
+    "peer_immutable_files_edited": false,
+    "email_or_drive_used": false,
+    "public_posting": false,
+    "paid_compute": false,
+    "workflow_execution": false,
+    "permission_bypass": false,
+    "new_schedule_created": false
+  }
+}

@@ -1,0 +1,7 @@
+# B03 r23 diffuse near-bipartite router
+
+Let A=[[B,M],[M^T,C]] across a physical cut, sigma=s2(M)>0. Let U,V be the top-two singular frames of M. If every physical top-two leverage in U and V is <=1/32 and max(||B||,||C||)<=sigma/16, then some physical recut has s3(cross)>=sigma/16.
+
+Proof. If s3(M)>=sigma/8, use the original cut. Otherwise split rows of U and V independently by fair Bernoulli signs. Since E||U_P^TU_P-I/2||_F^2 <=1/64, Markov gives a split with both U_P and U_Pc Gram matrices between I/4 and 3I/4; simultaneously do this for V. Hence the two rank-two core subblocks M2[P,Qc] and M2[Pc,Q] have s2>=sigma/4. The tail M-M2 has norm s3(M)<sigma/8, so both actual subblocks have s2>sigma/8. Recut I=P union Q, J=Pc union Qc. Ignoring same-bank pieces, the cross block is anti-diagonal and has four singular values >sigma/8. The same-bank cross pieces form a block-diagonal perturbation of norm at most max(||B||,||C||)<=sigma/16. Weyl gives s4(A[I,J])>sigma/16, hence s3>=sigma/16.
+
+Corollary 4.3(a) of the current five-eigenvalue paper then gives ||p_Q||inf <=16 C3 K^2/sigma <238 K^2/sigma, retaining all curvature exactly. Under no pivot and s4(A)>=1, the current m=2 random-sign lemma supplies a cut with sigma>0.237. Therefore a surviving four-eigenvalue obstruction must exhibit either an order-three crossing, top-two frame leverage >1/32, or same-bank operator curvature >sigma/16. Full s4 remains open.

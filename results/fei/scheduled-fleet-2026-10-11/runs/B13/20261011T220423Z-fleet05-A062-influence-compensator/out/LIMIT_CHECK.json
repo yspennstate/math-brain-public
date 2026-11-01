@@ -1,0 +1,50 @@
+{
+  "helper_version": "A062-limit-check-v1",
+  "assertions": 36,
+  "failures": 0,
+  "runtime_seconds": 0.06434039992745966,
+  "cases": [
+    {
+      "k": 1,
+      "dimension": 4,
+      "p": "1/2",
+      "rootI": "3/2",
+      "expected_leafI": "1",
+      "expected_leafH": "1",
+      "expected_query_cost": "1/2",
+      "root_spectrum_nonzero_histogram": {
+        "1/4": 2,
+        "1/16": 8
+      }
+    },
+    {
+      "k": 2,
+      "dimension": 7,
+      "p": "1/4",
+      "rootI": "5/4",
+      "expected_leafI": "3/4",
+      "expected_leafH": "1",
+      "expected_query_cost": "1/2",
+      "root_spectrum_nonzero_histogram": {
+        "9/16": 1,
+        "1/16": 3,
+        "1/256": 64
+      }
+    },
+    {
+      "k": 3,
+      "dimension": 12,
+      "p": "1/8",
+      "rootI": "1",
+      "expected_leafI": "5/8",
+      "expected_leafH": "1",
+      "expected_query_cost": "3/8",
+      "root_spectrum_nonzero_histogram": {
+        "49/64": 1,
+        "1/64": 7,
+        "1/16384": 2048
+      }
+    }
+  ],
+  "arithmetic": "integer recursive Walsh + Fraction + direct edges"
+}

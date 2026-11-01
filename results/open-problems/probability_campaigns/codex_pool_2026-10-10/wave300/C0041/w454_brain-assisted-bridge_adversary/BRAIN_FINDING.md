@@ -1,0 +1,7 @@
+The live population store contains the exact C0041 target as a concept, with truth_status=unverified and conditions=[]; the target is dated September 7. Its logical ID is math:probability.randomenvironment:open-problem-c0041-transience-in-a-direction-implies-ballisticity-for-uniformly-elliptic. Its title/body has no literal C0041. A read-only exact title/body lookup found 0 matches; a bounded metadata alias lookup recovered the unique target (1 match) in the measured run. This is an exact-ID diagnostic, not a full recall benchmark.
+
+The regeneration reduction card is also a concept with unverified truth status, not a proved theorem supplying a radius tail. Its iid/UE assumptions and regeneration construction identify the missing conditioned first moment. Nearby (T)/(T') results need quantitative slab exits, which the single-direction premise does not assert. No retrieved theorem is used to fill that gap.
+
+The independent holding-process obstruction and w453 L3 show why a.s. finiteness, and even an unspecified exponential spatial tail in a general UE clock, cannot replace a numerical tail rate. The future-conditioning bound carries p^-1 rather than assuming the conditioned chain remains elliptic.
+
+The bounded proposed repair is candidate_alias_ro.py. It returns existing exact logical-ID matches only, rejects malformed IDs, exposes duplicate matches and preserves the dated body and all trust metadata. Deployment and wiring into recall remain proposals; no global recall control is changed.

@@ -1,0 +1,3 @@
+STATE: Stage7 consumes A007's completed same-reference K_m,m payment; no repeat of the positive-controller case. Current next target is a vanishing-mass leafless threshold-product core, with its original full prime table and all reference costs.
+NEXT: Reconstruct the original queue probabilities; test a two-original-root event paying complete nonempty-output cost for B=1_{|x|>=m-t}1_{|y|>=m-t}, t<=m/4, retaining arbitrary common controls and one normalized fixed prime vector.
+SCOPE: Full FEI remains OPEN. No kernel certification or independent acceptance is asserted. Available RAM about2GB: small exact jobs only, no Lean/Mathlib or heavy search. The wake owner-model/state notes are stale and have been disclosed.

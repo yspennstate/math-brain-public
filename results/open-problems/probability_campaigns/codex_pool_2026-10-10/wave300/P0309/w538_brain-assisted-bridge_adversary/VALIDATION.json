@@ -1,0 +1,30 @@
+{
+  "schema": "mathbrain-draft-v1",
+  "entries": 8,
+  "relations": 9,
+  "all_new_results_concept_draft": true,
+  "dependency_graph_acyclic": true,
+  "existing_targets": {
+    "math:harvest.arxiv.mathematics:arxiv-2405-06616-theorem-3-13-68d962": true,
+    "math:probability.core:open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri": true,
+    "math:probability.core:attempt-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri": true
+  },
+  "mathematical_review": false,
+  "patch_validation": {
+    "check_command": [
+      "git",
+      "apply",
+      "--no-index",
+      "--check",
+      "--directory=validation/patch_target_lf",
+      "~\\brain_workers\\w538\\patches\\01_riesz_scope_warning.diff"
+    ],
+    "check_returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "apply_returncode": 0,
+    "apply_stdout": "",
+    "apply_stderr": "",
+    "content_matches": true
+  }
+}

@@ -1,0 +1,1 @@
+Candidate: V_s=max(H(point_s),2^(r-s)*M(point_r)); V_r=M_r. Independent block queries have half constant/half point child. Add V over all factors. Exact source root cost max(H(g)+2,K_r), K_r=r*h2(2^(1-r))/2^(1-r). Need verify signs, all cuts, exact reference transport and sharp sqrt threshold. NEXT: implement independent finite audit and save full proof.

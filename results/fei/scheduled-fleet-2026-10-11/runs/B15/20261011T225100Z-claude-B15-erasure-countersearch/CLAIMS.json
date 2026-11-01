@@ -1,0 +1,70 @@
+{
+ "claims": [
+  {
+   "claim_id": "B15-LKSTAR-FAILS-N5-N6",
+   "version": 1,
+   "exact_statement": "L(K*) is false: with K* = 4 + (5/2)log2 5 - (9/2)log2 3, the Boolean functions f_5 = -1 exactly on {e_1, e_1+e_2, e_1+e_2+e_4} in {0,1}^5 and f_6 = -1 exactly on {0, e_0,...,e_5, e_1+e_2, e_0+e_4, e_3+e_5} in {0,1}^6 (uniform measure, +1 elsewhere) have every coordinate relevant and B_i = H(S_i|S_-i) > (539/200) Inf_i for every i of f_5 and B_i > (368/125) Inf_i for every i of f_6 (bits). Hence E*(5) > 539/200 > K* and E*(6) > 368/125.",
+   "hypotheses": "uniform product measure; Boolean +-1 functions; P(S)=fhat(S)^2; entropy in bits; Inf_i = P(i in S)",
+   "statement_sha256": "8992e6792392c26e89418dd03986df26c41239ecfc9d49d23b4df7ad6e4e3a9b",
+   "contributors": [
+    "claude-B15-lead"
+   ],
+   "proof_source": "runs/20261011T225100Z-claude-B15-erasure-countersearch/code/certify_witnesses.py (prime-exponent linear forms, 400-bit intervals) and code/recheck_bigint.py (direct big-integer powers); outputs out/witness_certificates.json, out/witness_bigint_recheck.json",
+   "proof_dependencies": [],
+   "review_records": [],
+   "status": "EXACT_FINITE_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+   "supersedes": [],
+   "refutes": [
+    "extension of A082-FINITE-TRUE-ERASURE@1 constant beyond n<=4 / affine-dim-4 (not A082's stated claim)"
+   ],
+   "first_unproved_line": null,
+   "next_consumers": [
+    "A075 (its stated next action: consume a certified seed strictly above K*; f_5, f_6 are such seeds)",
+    "A082",
+    "A026",
+    "A028",
+    "A027",
+    "A083",
+    "A092",
+    "A074"
+   ]
+  },
+  {
+   "claim_id": "B15-SELECTION-EQUIVALENCE-COMPOSITION-INVARIANCE",
+   "version": 1,
+   "exact_statement": "(i) If every nonconstant Boolean f has a relevant i with B_i <= K Inf_i, then H(f) <= (K + c) I(f) for all f, where c = 4 (proved: JS_i <= 4 min(Inf_i, 1-Inf_i)) or c = 2/ln 2 under house claim C005; (ii) if H <= C I for all f then every nonconstant f has a relevant i with B_i <= C Inf_i; so C_FEI - c <= sup_n E*(n) <= C_FEI. (iii) For balanced g with no level-one Fourier mass and any f, each coordinate c of a relevant block j of f o g has B_c(f o g) = Inf_j(f) B_c(g) and Inf_c(f o g) = Inf_j(f) Inf_c(g), so all per-coordinate erasure ratios of f o g equal those of g.",
+   "hypotheses": "uniform cube; Boolean f; for (iii) g balanced with W^1[g]=0 and independent copies",
+   "statement_sha256": "6483e42f6debbe17a1d64ead71ca594ace0c8fd6c796c8f256e06e958191f2e3",
+   "contributors": [
+    "claude-B15-lead"
+   ],
+   "proof_source": "StructuredOutput of this run (Lemma 1, Proposition 2, Lemma 3); chain rule, Delta_iH=B_i+JS_i, influence identity",
+   "proof_dependencies": [
+    "C005 (only for the sharper constant 2/ln2; constant 4 proved here)",
+    "overlap: part (iii) is the ghat({i})=0 case of A075-BALANCED-COMPOSITION-RESTRICTION-BRIDGE (A075 adds the singleton-collision correction, which can only raise B); part (i) in contrapositive is A075's restriction statement without its constructive selection; new here: the converse (ii), the window C_FEI-c<=E*<=C_FEI and the self-contained c=4"
+   ],
+   "review_records": [],
+   "status": "PROVED_LOCAL_PENDING_REVIEW",
+   "supersedes": [],
+   "refutes": [],
+   "first_unproved_line": null,
+   "next_consumers": [
+    "A090",
+    "A075",
+    "A026",
+    "A028",
+    "A061"
+   ]
+  }
+ ],
+ "review_records_issued": [
+  {
+   "review_of": "A082-FINITE-TRUE-ERASURE@1",
+   "reviewer": "claude-B15-lead",
+   "kind": "independent exact reproduction",
+   "method": "all 65,536 four-variable tables; float-selected coordinate decided exactly by N^2 3^(9L) vs D^2 2^(8L) 5^(5L); all coordinates tried before any failure",
+   "result": "65,534 nonconstant: 65,470 strict, 64 equal (exactly the three-variable point defects, every relevant coordinate at K*), 0 failures; value, sharpness and exhaustiveness reproduced",
+   "evidence": "runs/20261011T225100Z-claude-B15-erasure-countersearch/out/n4_census.json"
+  }
+ ]
+}

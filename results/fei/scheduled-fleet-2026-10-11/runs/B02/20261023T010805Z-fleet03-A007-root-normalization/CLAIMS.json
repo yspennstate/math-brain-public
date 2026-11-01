@@ -1,0 +1,94 @@
+[
+  {
+    "claim_id": "A007-NONUNIFORM-ROOT-THINNING-AND-PHYSICAL-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every finite nonempty positive vector x (dimension N>=1) and coordinatewise thinning 0<y<=x, put A_x=sum x_i, D_x=prod(1+x_i)-1, Q_x(R)=prod_{i in R}x_i/D_x for nonempty R, r_x(i)=x_i/A_x and L=sum(x_i-y_i). Then -L<=ln(D_y/D_x)-ln(A_y/A_x)<=0 and |KL_nats(Q_y||Q_x)-KL_nats(r_y||r_x)|<=L. For activities x_e=lambda_e 2^-w_e, y_e=lambda_prime_e 2^-w_e from any finite nonempty signed-conjunction implicant table of a nonconstant uniform sign Boolean f, positive packing-feasible lambda and 0<lambda_prime<=lambda, q=Pr(f=-1), v=4q(1-q), k=min w_e>=1, a_w=(1-2^-w)/w and d_i=sum_{e:i in R_e}(lambda_e-lambda_prime_e)a_w_e, vL<=2(1-q)sum_i Inf_i(f)d_i<=2a_k(1-q)I(f). Thus either root remainder above, in bits and weighted by v, is bounded by 2(1-q)sum_i Inf_i(f)d_i/ln2. These are alternative component bounds, not an added budget.",
+    "hypotheses": [
+      "Finite positive activities; no zero support changes",
+      "Only coordinatewise thinning is allowed",
+      "For physical corollary: genuine signed implicants, actual rarity, original feasible packing",
+      "KL compares the stated priors, not arbitrary witness posteriors"
+    ],
+    "statement_sha256": "f94e4958da3035622c25a3da9352ad588de673ca53e8ccbc612b8bc15e55ee33",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": [
+      "ROOT_THINNING.md",
+      "REVIEW_A008.md",
+      "out/checks.json"
+    ],
+    "proof_dependencies": [
+      "A008-ALL-BOOLEAN-IMPLICANT-ROOT-NORMALIZER-PAYMENT@1: local fiber/packing core independently reconstructed; private-leaf corollary not used"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A007",
+        "role": "author audit, not independent acceptance",
+        "verdict": "analytic derivation and independent representations checked; exact certificates PASS",
+        "evidence": [
+          "out/checks.json",
+          "out/retuning.json"
+        ]
+      }
+    ],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A008",
+      "A015",
+      "A086",
+      "A094",
+      "B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A007-OVERLAPPING-PRIME-RARE-RETUNING-KL-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For the fixed three-bit sign Boolean f=2[x2 AND (x1 OR x3)]-1, the complete positive prime table is R1={x1,x2}, R2={x2,x3}, pi1=pi2=1/4, v=15/16 and I=5/4. For every integer j>=1 and delta=2^-j, lambda=(delta/2,delta^2/2) and lambda_prime=(delta^3/2,delta^2/2) are positive, fixed before sampling, packing-feasible ordered references on this same table. Their nonempty conditioned root priors satisfy v KL_bits(Q_lambda_prime||Q_lambda)/I > 3j/4-1 and equal 3j/4+o(1). All root activities tend to zero. Hence no universal K pays this KL for EVERY feasible thinning pair. This does not refute optimized reference existence or FEI.",
+    "hypotheses": [
+      "The actual fixed three-bit function and references specified in the statement",
+      "j is an integer at least one; KL is in bits; gate table remains fixed"
+    ],
+    "statement_sha256": "2bc7d5d538157242300e53749752295d5192ae5e8cb10a59d730561ce824dd29",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": [
+      "RETUNING_OBSTRUCTION.md",
+      "ROOT_THINNING.md",
+      "out/retuning.json"
+    ],
+    "proof_dependencies": [
+      "A007-NONUNIFORM-ROOT-THINNING-AND-PHYSICAL-PAYMENT@1"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A007",
+        "role": "author audit, not independent acceptance",
+        "verdict": "analytic derivation and independent representations checked; exact certificates PASS",
+        "evidence": [
+          "out/checks.json",
+          "out/retuning.json"
+        ]
+      }
+    ],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered helper: for every feasible coordinatewise thinning, v KL_bits(Q_new||Q_old)<=K I with universal K"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A008",
+      "A015",
+      "A086",
+      "A094",
+      "B02",
+      "B20"
+    ]
+  }
+]

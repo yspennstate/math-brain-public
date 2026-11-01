@@ -1,0 +1,109 @@
+{
+  "seed": 43,
+  "exact_gaussian_moment_and_bound_cases": 1600,
+  "beta_integral_checks": [
+    {
+      "a": 0.5,
+      "absolute_error": 6.661338147750939e-16
+    },
+    {
+      "a": 1,
+      "absolute_error": 1.1102230246251565e-16
+    },
+    {
+      "a": 1.5,
+      "absolute_error": 2.220446049250313e-16
+    },
+    {
+      "a": 2,
+      "absolute_error": 1.6653345369377348e-16
+    },
+    {
+      "a": 4,
+      "absolute_error": 3.885780586188048e-16
+    },
+    {
+      "a": 8,
+      "absolute_error": 2.220446049250313e-16
+    },
+    {
+      "a": 16,
+      "absolute_error": 6.106226635438361e-16
+    },
+    {
+      "a": 32,
+      "absolute_error": 1.4710455076283324e-15
+    }
+  ],
+  "constant_table": [
+    {
+      "d": 2,
+      "complex_lower_exact": "2",
+      "complex_lower": 2.0,
+      "real_lower": 1.5707963267948963,
+      "complex_constructive_upper": 9.38083151964686,
+      "real_constructive_upper": 8.246211251235321
+    },
+    {
+      "d": 3,
+      "complex_lower_exact": "2",
+      "complex_lower": 2.0,
+      "real_lower": 1.5707963267948963,
+      "complex_constructive_upper": 11.489125293076057,
+      "real_constructive_upper": 10.099504938362077
+    },
+    {
+      "d": 4,
+      "complex_lower_exact": "8/3",
+      "complex_lower": 2.6666666666666665,
+      "real_lower": 2.0000000000000004,
+      "complex_constructive_upper": 13.2664991614216,
+      "real_constructive_upper": 11.661903789690601
+    },
+    {
+      "d": 5,
+      "complex_lower_exact": "8/3",
+      "complex_lower": 2.6666666666666665,
+      "real_lower": 2.0000000000000004,
+      "complex_constructive_upper": 14.832396974191326,
+      "real_constructive_upper": 13.038404810405298
+    },
+    {
+      "d": 8,
+      "complex_lower_exact": "128/35",
+      "complex_lower": 3.657142857142857,
+      "real_lower": 2.6666666666666643,
+      "complex_constructive_upper": 18.76166303929372,
+      "real_constructive_upper": 16.492422502470642
+    },
+    {
+      "d": 16,
+      "complex_lower_exact": "32768/6435",
+      "complex_lower": 5.092152292152292,
+      "real_lower": 3.6571428571428517,
+      "complex_constructive_upper": 26.5329983228432,
+      "real_constructive_upper": 23.323807579381203
+    },
+    {
+      "d": 32,
+      "complex_lower_exact": "2147483648/300540195",
+      "complex_lower": 7.145412439757018,
+      "real_lower": 5.092152292152283,
+      "complex_constructive_upper": 37.52332607858744,
+      "real_constructive_upper": 32.984845004941285
+    },
+    {
+      "d": 64,
+      "complex_lower_exact": "9223372036854775808/916312070471295267",
+      "complex_lower": 10.06575416180083,
+      "real_lower": 7.145412439756985,
+      "complex_constructive_upper": 53.0659966456864,
+      "real_constructive_upper": 46.647615158762406
+    }
+  ],
+  "limitations": [
+    "Moment formulas and inequalities are proved in agents/043.md; finite checks are supplementary.",
+    "No construction at the large explicit sufficient frame size was simulated.",
+    "Balanced-reflection bounds are not asserted to give the exact optimal lift coefficient."
+  ]
+}

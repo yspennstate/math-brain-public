@@ -1,0 +1,52 @@
+{
+  "exact_transfer": {
+    "helper_version": "A099-balanced-erasure-transfer-v1",
+    "cases": 80,
+    "exact_assertions": 4945,
+    "failures": 0,
+    "runtime_seconds": 0.07574620000002596,
+    "arithmetic": "Fraction probabilities and prime-log coefficient cancellation; no floating logarithms",
+    "lower_bound_proof": "B_data(F)=delta*m*B(seed)+sum(nonnegative phi packets); control erasures nonnegative"
+  },
+  "source_files_hashed": 39,
+  "claim_statement_hashes_verified": 14,
+  "dag_nodes": 18,
+  "dag_acyclic": true,
+  "open_leaves": 4,
+  "tex_refs_resolved": true,
+  "single_source_no_inputs": true,
+  "progress_exact_fields": true,
+  "claim_exact_fields": true,
+  "B05_source_certified_interval_endpoint_comparisons": "PASS",
+  "A098_review_bound_to_original_statement_hash": true,
+  "build": {
+    "compiler": "~\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE",
+    "timeout_seconds_per_pass": 60,
+    "passes": [
+      {
+        "command": [
+          "~\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE",
+          "--disable-installer",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "-output-directory=out",
+          "CANDIDATE_MANUSCRIPT.tex"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "~\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.EXE",
+          "--disable-installer",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "-output-directory=out",
+          "CANDIDATE_MANUSCRIPT.tex"
+        ],
+        "exit_code": 0
+      }
+    ],
+    "pdf_exists": true
+  },
+  "scope": "Exact identities and artifact checks; full FEI and independent audits remain open"
+}

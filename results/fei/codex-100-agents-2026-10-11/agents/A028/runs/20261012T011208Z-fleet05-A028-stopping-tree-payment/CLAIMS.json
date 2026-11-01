@@ -1,0 +1,60 @@
+[
+  {
+    "claim_id": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT",
+    "version": 2,
+    "exact_statement": "Version 2 retains version 1 point-control magnitude-KL payment: E sum J <= (3+log2(e)/e)Q and E sum(J+3log2(e)mu)<=kappa Q with kappa=3+log2(e)(3+1/e)<8. For every arbitrary uniform Boolean sign controller a=1-2c on a physical cube disjoint from a Boolean sign core u, p=Pr(a=-1), delta=Pr(u=-1), F=1+c(u-1), the actual control-first cost Pi_H=H(F)-pH(u) and queried influence Q=delta I(a) obey Pi_H<=delta Hplus(a)+C0 delta Var(a), C0=2+2log2(e)+log2(e)/sqrt(e)<6. Hence Hplus(a)<=T(I(a)-Var(a)) gives Pi_H<=max(T,C0)Q; ordinary controller FEI K gives Pi_H<=(K+C0)Q. With certified terminal allowance L I(u), complete expected path plus terminal cost is bounded by max(T,C0,L)I(F), respectively max(K+C0,L)I(F). All constants and mean orientations are included. Point-controller actual Pi_H<=6Q. The exact strong conjunction correction is bounded by (2+4log2(e)) times the unused variance deficit, yielding standard disjoint strong-certificate closure. Correction coefficient four is false already for dictator controller and two-bit point-defect core: Pi_H/Q=12-(9/2)log2(3)>4. A universal control-first rate for arbitrary controllers is FEI-equivalent in finiteness, with C_FEI<=K_ctrl<=C_FEI+C0.",
+    "hypotheses": [
+      "Uniform independent physical cubes; Boolean sign core and 0/1 controller on DISJOINT coordinates",
+      "Entropy in bits; Hplus is the raw nonempty contribution, not conditional entropy",
+      "Control-only actual stopping tree determines c; all terminal core entropy retained",
+      "Controller and terminal certificates explicitly assumed for the conditional constant results",
+      "Nested controller modules have fresh physical supports; no shared-control extension"
+    ],
+    "statement_sha256": "3c9788bb16b4f6a92fde03b396cd748b59f2c1310f2bee6129290a3ffd09c05a",
+    "contributors": [
+      "A028"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261012T011208Z-fleet05-A028-stopping-tree-payment\\REPORT.md",
+    "proof_dependencies": [
+      {
+        "claim": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT@1",
+        "scope": "Only unchanged point-control KL component; new arbitrary-controller part proved independently",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261011T221633Z-fleet05-A028-stopping-tree-payment\\REPORT.md",
+        "sha256": "ac8df8e7f725785accba988390e0d3e1f9fe993e0686bfd1b7fb7b06b24a9c71",
+        "status": "AUTHOR_PROVED_INDEPENDENT_REVIEW_PENDING"
+      },
+      "Exact actual physical-tree entropy/influence conservation, recovered C006/B06 R2",
+      "Elementary Parseval/Fourier tensor identities and explicit scalar convexity proof in current REPORT"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT",
+        "version": 1,
+        "reason": "Source-complete extension of same stopping-payment packet; no v1 theorem withdrawn"
+      }
+    ],
+    "refutes": [
+      {
+        "helper": "A028-ARBITRARY-CONTROLLER-CORRECTION-4",
+        "version": 1,
+        "statement": "Pi_H<=delta Hplus(a)+4delta Var(a) for every disjoint Boolean controller/core",
+        "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261012T011208Z-fleet05-A028-stopping-tree-payment\\out\\full_validation.json"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A024",
+      "A029",
+      "A057",
+      "A064",
+      "A065",
+      "A087",
+      "A094",
+      "A097",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "fleet03",
+  "slot": "B08",
+  "run_id": "20260923T131815Z-fleet03-B08-qform-diffuse-r38",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "global_continuity_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-TWOHUB-ARBITRARY-SELFBLOCK-L3-v1",
+      "status": "PROVED_BY_SOURCE_PINNED_APPLICATION_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For an exact rank-two original-coordinate cross block C with one active bank consisting of exactly two physical coordinates, arbitrary same-bank quadratic-affine terms and outside conditioning are retained and ||p_Q||_3 <= 3^(2/3)e^(1/3)[det(CC^T)]^(-1/6)."
+    },
+    {
+      "id": "QFORM-PHYSICAL-2MINOR-POSTSCHUR-LEAKAGE-v1",
+      "status": "PROVED_SUPPORTING_ROUTER_PENDING_INDEPENDENT_REVIEW",
+      "statement": "If a post-Schur physical cross block contains a 2x2 minor D with |det D|>=delta L^2 and the scalar coefficient satisfies |a|>=tau L, then arbitrary residual cross rank and same-bank curvature obey ||p_Q||_infinity <36.45 tau^(-1/2)delta^(-1/4)L^(-1); in exact cross rank two the grouped constant improves to 7.251 tau^(-1/2)delta^(-1/4)L^(-1)."
+    },
+    {
+      "id": "QFORM-ANISOTROPIC-CORE-SCHUR-CANCELLATION-ROUTER-v1",
+      "status": "PROVED_SUPPORTING_ROUTER_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For outer coefficient a=epsilon L and pre-Schur core L diag(R,R^-1), the exact post-Schur core determinant is L^2[1-epsilon(u1v1/(L^2R)+R u2v2/L^2)]. For any theta in (0,1), either its determinant has modulus >=theta L^2 and the E2/grouped receiver pays, or some physical arm i satisfies |u_i v_i|>[(1-theta)/2]L|h_i|. At theta=1/2 the paid constants are <43.34/L in arbitrary residual rank and <8.622/L in exact rank two."
+    },
+    {
+      "id": "QFORM-VOLUME-STABILITY-LEAKAGE-APPLICATION-v1",
+      "status": "SOURCE_THEOREM_APPLIED",
+      "statement": "For the exact post-Schur cross block M, if its top-three truncation has s3>=rho L, row range leverage<=1/2, and s4<=s3/16, the c2414 volume-stability theorem gives a continuous C0 density with ||p_Q||_infinity<23/(rho L)."
+    }
+  ],
+  "designated_partner_application": {
+    "source_commit": "abbec61f52e1f4b4d367fd67e73e4d2501ac9c74",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md",
+    "actual_inequality": "For Q_(R,L)=L X0^2+2LR U1V1+2L/R U2V2, ||p||_infinity<7.251/L; the grouped exact-rank-two theorem extends the same scale to arbitrary same-bank quadratic-affine curvature with constant 7.2500551089/L."
+  },
+  "next_debt": "QFORM-LOCALIZED-TRIANGLE-PLUS-SECOND-ARM-RECEIVER-v1"
+}

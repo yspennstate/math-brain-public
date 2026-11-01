@@ -1,0 +1,61 @@
+{
+  "schema": "fei-rarity-credit-ledger/1",
+  "claim_id": "B05-A023-QN-SIGNED-TERMINAL-REFUND",
+  "version": 1,
+  "family": {
+    "name": "q_n point defect",
+    "truth_table": "q_n(0)=+1 and q_n(x)=-1 for x!=0",
+    "boolean_realizability": "genuine Boolean for every n>=2",
+    "parameter_range": "all integers n>=2"
+  },
+  "packet": {
+    "name": "complete physical selector/data packet",
+    "components": ["conditional-label L", "phase Q"],
+    "definition": "D_n=D(-1+2^-n,2^-n)+(2^n-1)D(2^-n,2^-n)",
+    "renormalization": "C_n=2^n D_n"
+  },
+  "stopping_rule": {
+    "target_depth": "any fixed t with 2<=t<=n",
+    "rule": "reveal any predetermined n-t physical data coordinates and stop on the unique exceptional branch at q_t",
+    "physical": true,
+    "adaptive": false,
+    "finite": true,
+    "node_reach_probability": "Pr(reach q_m)=2^(m-n)"
+  },
+  "first_revelation": {
+    "local_credit": "Gamma_m^D=D_m-(1/2)D_(m-1)",
+    "sign": "strictly negative for every m>=3",
+    "weighted_debt": "2^(m-n)(-Gamma_m^D)",
+    "reuse_count": 1
+  },
+  "terminal_payment": {
+    "single_use_price": "2^(t-n)D_t=2^-n C_t",
+    "reuse_count": 1,
+    "exact_identity": "D_n+sum_(m=t+1)^n 2^(m-n)(-Gamma_m^D)=2^-n C_t",
+    "uniform_upper_bound": "C_2 2^-n",
+    "C_2_interval": [4.8676, 4.8677]
+  },
+  "debt_bound": {
+    "exact": "2^-n(C_t-C_n)",
+    "uniform": "0<=debt<=(C_2-4)2^-n",
+    "C_2_minus_4_interval": [0.8676, 0.8677],
+    "max_terminal_fraction_interval": [0.1782, 0.1783]
+  },
+  "rare_log_tracking": {
+    "local_asymptotic": "-Gamma_m^D=(2m-8+3/ln(2))4^-m+O(8^-m)",
+    "reached_asymptotic": "2^(m-n)(-Gamma_m^D)=2^-n(2m+O(1))2^-m+O(2^-n 4^-m)",
+    "disposition": "retained level by level and telescoped; not replaced by a pointwise O(I) charge"
+  },
+  "mandatory_controls": {
+    "sparse_one_point_defect": "the theorem's exact family",
+    "rare_activation": "independent activation multiplies root, debts, and terminal price by the same probability",
+    "bent_selector": "nonnegative-credit control remains compatible; it incurs no signed debt",
+    "near_tensor": "q_4 tensor q_5 has negative first credits, but this one-branch telescope does not yet prove its terminal refund",
+    "addressing": "outside the theorem; no terminal-versus-influence bound claimed",
+    "actual_prime_gate": "q_n is AND/OR up to signs and relabeling",
+    "shared_variable_interference": "outside the disjoint one-branch chain",
+    "parity_zero_erasure": "not used"
+  },
+  "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "full_fei_status": "OPEN"
+}

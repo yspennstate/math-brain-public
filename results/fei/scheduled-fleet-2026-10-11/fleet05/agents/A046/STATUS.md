@@ -1,0 +1,2 @@
+STATE: A046 stage7 saved: A040 full-reference v1 independently HOLDS; code7 prescribed core/S continuation pays full original source after27/64 inherited-U retirement, margin>1/800;1182 exact checks PASS; new review pending, FEI OPEN.
+NEXT: A040/A092 review complete source/terminal ledger; allow one further core query before S with SAME U,Q and prior debit, proving retirement eligibility or keeping its actual liability.

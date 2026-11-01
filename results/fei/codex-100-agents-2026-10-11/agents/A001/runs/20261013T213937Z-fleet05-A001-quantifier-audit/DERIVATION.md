@@ -1,0 +1,9 @@
+# All-degree reference audit: immediate result
+
+Let delta=2^-r and F_r=1+A_r(chi_{123}-1), where A_r is one point indicator on r fresh controls. Every one of its r+3 physical influences is delta. Its constant coefficient is 1-delta, and its other nonzero coefficients have absolute value delta: all nonempty control subsets and every control subset joined to all three data coordinates. Thus I=(r+3)delta, occupied nonconstant spectral mass W=2delta-delta^2, and H=eta((1-delta)^2)+2rW<4I for r>=4.
+
+The normalized all-degree product-influence reference on nonempty subsets is Q(S)=product_{i in S}Inf_i / Z, Z=product_i(1+Inf_i)-1. On this actual Boolean family its cross entropy X=sum_{S nonempty}p_S log2(1/Q(S)) is exactly rI+W log2 Z. Because Z>=delta, X/I>=r-2r/(r+3), which diverges. A normalized reference alone does not pay the bill. This refutes only this product-influence extension, not all references or FEI. The KL refund may cancel the excess but its payment is unproved.
+
+For a data coordinate, the physical derivative is A_r times the parity of the other two data bits. Its entire Fourier energy delta is at row degrees at least two. Therefore extending A096's degree-one row suppression to the complete higher-degree row as D_i>=2 <=2 Inf_i^2 ln(2/Inf_i) is false for every r>=4: the proposed right side is at most 2 delta^2(r+1), strictly smaller than delta.
+
+For even-dimensional quadratic bent signs, every spectral atom has mass 2^-n. Consequently B=n, I=n/2, and weighted atom entropy sum_S |S|p_S log2(1/p_S)=nI. Also the sum of normalized derivative-row entropies weighted by physical influence equals (n-1)I. Both proposed all-degree entropy majorants can grow linearly in dimension relative to I even though actual erasure costs only 2I. A proof must retain pair cancellation or a degree-sensitive refund instead of replacing every edge by its upper-atom entropy.

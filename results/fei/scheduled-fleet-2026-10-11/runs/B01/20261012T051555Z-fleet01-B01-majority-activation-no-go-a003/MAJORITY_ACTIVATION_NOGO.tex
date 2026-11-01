@@ -1,0 +1,133 @@
+% B01/A003: majority obstruction to a depth-free local activation transfer.
+\section*{A majority-core obstruction to selector-only retained-$U$ transfer}
+
+All logarithms are base two.  For a Boolean function $h$ put
+\[
+ p_h(S)=\widehat h(S)^2,\qquad
+ \pi_h(S)=\sum_{T\supseteq S}p_h(T),\qquad
+ U(h)=\sum_Sp_h(S)\log\frac{\pi_h(S)}{p_h(S)},
+\]
+and
+\[
+ G(h)=\sum_i\left(U(h)-\mathbb E_{x_i}U(h\mid x_i)\right).
+\]
+
+For odd $n$, let
+\[
+ g_n(x)=\operatorname{sgn}(x_1+\cdots+x_n)
+\]
+(either global sign convention is allowed), and introduce one fresh selector
+$z$.  Define
+\[
+ F_n(z,x)=\begin{cases}g_n(x),&z=-1,\\1,&z=1.\end{cases}
+ \tag{1}
+\]
+Let $I_{\rm ctl}$ denote the influence of $z$ in $F_n$.
+
+\paragraph{Theorem.}
+For every finite pair of real constants $A,B$, there is an odd $n$ for
+which
+\[
+ G(F_n)-\frac12G(g_n)
+ > A I_{\rm ctl}
+ +B\left(U(F_n)-\frac12U(g_n)\right).                 \tag{2}
+\]
+More precisely,
+\[
+ I_{\rm ctl}=\frac12,\qquad
+ U(F_n)-\frac12U(g_n)=1,                              \tag{3}
+\]
+and
+\[
+ G(F_n)-\frac12G(g_n)=\frac1\pi\log_2 n+O(1).        \tag{4}
+\]
+
+\paragraph{Proof.}
+We use the source-proved exact fresh-activation identity.  If a core $g$ has
+defect rate $r=\Pr[g=-1]$, $p=2^{-d}$, and
+\[
+ M(t)=(1-2t)^2\log\frac1{(1-2t)^2},
+\]
+then a one-word activation $F$ satisfies
+\[
+ U(F)=pU(g)+Q_{p,d}(r),                                \tag{5}
+\]
+where
+\[
+ Q_{p,d}(r)=M(pr)+2rpd-pM(r)
+ +4pr^2\log\frac1r-4p^2r^2\log\frac1{pr},            \tag{6}
+\]
+and
+\[
+ G(F)=pG(g)+d\delta_d(r)
+ +\sum_j\left(R_p(r)-\frac{R_p(r_{j,+})+R_p(r_{j,-})}{2}\right), \tag{7}
+\]
+with $R_p(r)=Q_{p,d}(r)-2rpd$ and
+\[
+ \delta_d(r)=M(pr)-\frac12M(2pr)+2pr
+ +4p^2r^2\left(\log\frac1{pr}-2\right).              \tag{8}
+\]
+
+For (1), $p=1/2$, $d=1$, and balance gives $r=1/2$.  Direct substitution in
+(6) and (8) gives
+\[
+ Q_{1/2,1}(1/2)=1,\qquad \delta_1(1/2)=1.             \tag{9}
+\]
+Also $I_{\rm ctl}=2rpd=1/2$, proving (3).
+
+The influence of every coordinate of odd majority is
+\[
+ a_n=\frac{\binom{n-1}{(n-1)/2}}{2^{n-1}},            \tag{10}
+\]
+and its two conditional defect rates, in either order, are
+\[
+ r_{j,\pm}=\frac{1\pm a_n}{2}.                        \tag{11}
+\]
+Write
+\[
+ S_p(t)=R_p(t)+pM(t).
+\]
+Since $M(1/2)=0$ and
+\[
+ M\left(\frac{1\pm a}{2}\right)
+ =a^2\log\frac1{a^2},                                 \tag{12}
+\]
+the $j$th data-coordinate summand in (7) is exactly
+\[
+ p a_n^2\log\frac1{a_n^2}
+ +S_p(1/2)-\frac12S_p((1+a_n)/2)-\frac12S_p((1-a_n)/2). \tag{13}
+\]
+
+For $p=1/2$, $S_p$ is $C^2$ on $[1/4,3/4]$: the potentially singular
+$M(t)$ term has been removed, $pt\in[1/8,3/8]$ stays away from $1/2$, and
+the remaining logarithms stay away from zero.  For $n\geq3$, $a_n\leq1/2$.
+Taylor's theorem therefore bounds the absolute value of the last three terms
+in (13) by $C_0a_n^2$ for one absolute $C_0$.  Summing (7),
+\[
+ G(F_n)-\frac12G(g_n)
+ =1+\frac12 n a_n^2\log\frac1{a_n^2}+O(na_n^2).       \tag{14}
+\]
+Stirling's formula gives
+\[
+ na_n^2=\frac2\pi+O(n^{-1}),\qquad
+ \log\frac1{a_n^2}=\log n+\log\frac\pi2+O(n^{-1}).  \tag{15}
+\]
+Combining (14) and (15) proves (4).  The right side of (2) is the fixed
+number $A/2+B$, whereas its left side diverges, proving the theorem.\qed
+
+\paragraph{Scope.}
+This refutes the local transfer template
+\[
+ G(F)-pG(g)\leq A I_{\rm ctl}
+ +B\bigl(U(F)-pU(g)\bigr)                              \tag{16}
+\]
+at universal fixed $A,B$, even for one fresh selector.  It does not refute
+the global GU$'$ inequality $G(h)\leq aI(h)+bU(h)$, because the latter keeps
+the child's $pI(g)$ and $pU(g)$ terms.  It therefore does not refute FEI.
+The unpaid term exposed by (13) is the first-level logarithmic charge
+\[
+ p\sum_j a_{n,j}^2\log(1/a_{n,j}^2),                  \tag{17}
+\]
+which is $(2p/\pi)\log n+O(1)$ for majority.  Any depth-independent
+activation induction must retain a single-use child structural credit able
+to pay (17), rather than charging only the selector and the new $U$ increment.

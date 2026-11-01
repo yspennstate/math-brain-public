@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-X",
+    "utf8",
+    "~\\.claude\\dreaming\\lean_check.py",
+    "--stmt",
+    "theorem a047_owner_obstruction (S A e CE I : \u211a) (ledger : S - (A + e) = 4 * I - CE) (excess : 4 * I < CE) : S < A + e := by linarith",
+    "--target",
+    "a047_owner_obstruction",
+    "--timeout",
+    "40",
+    "--json"
+  ],
+  "exit_code": 2,
+  "elapsed": 42.81357250001747,
+  "stdout": "{\n  \"result\": {\n    \"status\": \"RUNTIME_UNVERIFIED\",\n    \"formal_target_verified\": false,\n    \"target\": \"a047_owner_obstruction\",\n    \"source_sha256\": \"2e6835c12e5d141fab61e791fb4b26b6b482a946de1d2ec97f5aee12db86d8c0\",\n    \"source_review_assertion\": null,\n    \"target_kind\": \"UNVERIFIED\",\n    \"target_identity_verified\": false,\n    \"axioms\": null,\n    \"axiom_name_trees\": null,\n    \"allowed_axioms\": [\n      \"Classical.choice\",\n      \"Quot.sound\",\n      \"propext\"\n    ],\n    \"translation_fidelity\": \"UNVERIFIED\",\n    \"mathematical_falsity_established\": false,\n    \"threat_model\": \"Explicitly reviewed source and trusted compiler/dependencies; not a sandbox\"\n  },\n  \"compiler_exit_code\": null,\n  \"compiler_output\": \"\",\n  \"seconds\": 41.0,\n  \"compiler_sha256\": \"af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d\",\n  \"generated_sha256\": \"c18b9d10bd33a4926c36fe0124be0b3000e5967916c20c65c25e5d7703d9e230\",\n  \"environment\": {\n    \"manifest_sha256\": \"e53681b8d817947e44c51838f367219138162d03880ce23a449c8fec5139c784\",\n    \"declared_revisions\": {\n      \"mathlib\": \"0df444a360eaa60ab8c11dca51a86af692955474\",\n      \"plausible\": \"b7eb3304aeae834b12dda98993a37f6a41f6f0bb\",\n      \"LeanSearchClient\": \"5f4d51b81cbd3f6b32b156bfad9056621a040404\",\n      \"importGraph\": \"16f02aa7642864af59f1ff0e384a015994db9118\",\n      \"proofwidgets\": \"4be2e3d5087eeb272cf5a8853b8f9dd025ef5957\",\n      \"aesop\": \"3448c0bcc5ce01b2d1546e483ec3620e32df3d0e\",\n      \"Qq\": \"92c15be17b7caf78c2ad767ec40f89052d908d81\",\n      \"batteries\": \"4488d40d070b9700d4d5a6aa342f0d40c31b2a2d\",\n      \"Cli\": \"6130a47896ce867c6a4a55373441e59e565bad0f\"\n    },\n    \"dependency_bytes_independently_verified\": false\n  },\n  \"evidence_integrity\": true,\n  \"source_path\": null,\n  \"receipt_directory\": \"~\\\\AppData\\\\Local\\\\Temp\\\\lean_check\\\\d95d5d4c0c2d4088a4248d228fa3292f\"\n}\n",
+  "stderr": "",
+  "scope": "scalar rational ledger obstruction only; Fourier and asymptotic proof not formalized"
+}

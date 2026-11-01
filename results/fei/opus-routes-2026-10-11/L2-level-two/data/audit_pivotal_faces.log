@@ -1,0 +1,37 @@
+(1) negative controls (each should be clearly nonzero)
+  x0*bent m4   max|M_i - I(1_A)/4| = 4.0000   max|P(E) - 2 P(E,A_i,A_j)| = 0.5000
+  majority 9   max|M_i - I(1_A)/4| = 0.0000   max|P(E) - 2 P(E,A_i,A_j)| = 0.2734
+  tribes 3x3   max|M_i - I(1_A)/4| = 0.0000   max|P(E) - 2 P(E,A_i,A_j)| = 0.1914
+(2) selector bit t of F = g(y) (-1)^{t 1_A(y)}, closed form vs brute force
+   m  set        eps_t      B_t/eps   h2/eps    u_t     harper   E[s-1|A_t]  (1/2)log2(1/eps)  brute-force B_t diff
+  10  cube 10   9.766e-04   11.4392   11.4420  0.9998   1.0000     5.0000     5.0000  0.0e+00
+  12  cube  8   3.906e-03    9.4286    9.4399  0.9988   1.0000     6.0000     4.0000  0.0e+00
+  12  cube 12   2.441e-04   13.4418   13.4425  0.9999   1.0000     6.0000     6.0000  0.0e+00
+  14  cube  7   7.812e-03    7.3868    8.4370  0.8755   1.0000     6.5000     3.5000  0.0e+00
+  14  cube 14   6.104e-05   15.4425   15.4427  1.0000   1.0000     7.0000     7.0000  0.0e+00
+  10  rand  5   3.125e-02    5.1210    6.4199  0.7977   1.9875     4.9688     2.5000  0.0e+00
+  12  rand  6   1.562e-02    6.2637    7.4314  0.8429   1.9688     6.0000     3.0000  0.0e+00
+  12  rand  8   3.906e-03    8.3589    9.4399  0.8855   1.5000     6.0000     4.0000  0.0e+00
+  14  rand  7   7.812e-03    7.3228    8.4370  0.8679   1.9866     6.9844     3.5000  0.0e+00
+  16  rand  8   3.906e-03    8.3516    9.4399  0.8847   1.9912     7.9961     4.0000  
+  18  rand  9   1.953e-03    9.3703   10.4413  0.8974   1.9961     9.0059     4.5000  
+  20  rand 10   9.766e-04   10.3787   11.4420  0.9071   1.9990     9.9990     5.0000  
+  12  rand  4   6.250e-02    3.8101    5.3966  0.7060   2.8125     5.9844     2.0000  0.0e+00
+  16  rand  4   6.250e-02    3.8622    5.3966  0.7157   3.7546     8.0146     2.0000  
+  20  rand  4   6.250e-02    3.8620    5.3966  0.7156   4.6884     9.9994     2.0000  
+(3) AND_n: E[s - 1 | A_t] against (1/2) log2(1/eps_t)
+  n= 4 eps_t=1.250e-01  E[s-1|A_t]=1.5000  (1/2)log2(1/eps_t)=1.5000
+  n= 8 eps_t=7.812e-03  E[s-1|A_t]=3.5000  (1/2)log2(1/eps_t)=3.5000
+  n=12 eps_t=4.883e-04  E[s-1|A_t]=5.5000  (1/2)log2(1/eps_t)=5.5000
+  n=16 eps_t=3.052e-05  E[s-1|A_t]=7.5000  (1/2)log2(1/eps_t)=7.5000
+(4) P(A_i and A_j) against P(i, j in S); E[s_C (s - 1)] against E[|S cap C| (|S| - 1)]
+  x0*bent m4         n= 9 max_ij |P(A_i,A_j) - P(i,j in S)| = 0.0e+00   E[s_C(s-1)] = 13.000000  E[|S cap C|(|S|-1)] = 13.000000  diff 0.0e+00
+  majority 9         n= 9 max_ij |P(A_i,A_j) - P(i,j in S)| = 0.0e+00   E[s_C(s-1)] = 5.468750  E[|S cap C|(|S|-1)] = 5.468750  diff 0.0e+00
+  tribes 3x3         n= 9 max_ij |P(A_i,A_j) - P(i,j in S)| = 0.0e+00   E[s_C(s-1)] = 1.367188  E[|S cap C|(|S|-1)] = 1.367188  diff 0.0e+00
+  andor d3           n= 8 max_ij |P(A_i,A_j) - P(i,j in S)| = 0.0e+00   E[s_C(s-1)] = 1.109375  E[|S cap C|(|S|-1)] = 1.109375  diff 0.0e+00
+  address 3          n=11 max_ij |P(A_i,A_j) - P(i,j in S)| = 0.0e+00   E[s_C(s-1)] = 2.750000  E[|S cap C|(|S|-1)] = 2.750000  diff 0.0e+00
+  X009 m6            n= 7 max_ij |P(A_i,A_j) - P(i,j in S)| = 0.0e+00   E[s_C(s-1)] = 3.984375  E[|S cap C|(|S|-1)] = 3.984375  diff 0.0e+00
+  sel many m6 N8     n=14 max_ij |P(A_i,A_j) - P(i,j in S)| = 0.0e+00   E[s_C(s-1)] = 11.117188  E[|S cap C|(|S|-1)] = 11.117188  diff 0.0e+00
+  random table n10   n=10 max_ij |P(A_i,A_j) - P(i,j in S)| = 0.0e+00   E[s_C(s-1)] = 11.293945  E[|S cap C|(|S|-1)] = 11.293945  diff 0.0e+00
+done
+exit=0

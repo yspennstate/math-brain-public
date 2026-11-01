@@ -1,0 +1,49 @@
+{
+  "helper": "A041-overlap-v1",
+  "family": "actual two-weight threshold 2*1{w N_A+N_B>=t}-1",
+  "domain": {
+    "group_sizes": [
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "weights": [
+      "1/2",
+      "1",
+      "2",
+      "3"
+    ],
+    "thresholds": "all positive half-integers through max score",
+    "bias_profiles": [
+      "all 1/2",
+      "all 1/4",
+      "all 3/4",
+      "periodic 1/4,1/2,3/4"
+    ]
+  },
+  "case_count": 840,
+  "symmetry": "none; labeled product biases",
+  "arithmetic": "Fraction, exact rational",
+  "memory_estimate_MB": 100,
+  "maximum_runtime_seconds": 60,
+  "targets": [
+    "Z_star<=D",
+    "pointwise K_star>=P",
+    "sum min(K_A,K_B)>=M"
+  ],
+  "source": "own stage5 function definitions only; source hash pinned below",
+  "source_sha256": "42a2e215787e78cd430184bd27b37bca751711fd3e69a9a98f817786073a9406"
+}

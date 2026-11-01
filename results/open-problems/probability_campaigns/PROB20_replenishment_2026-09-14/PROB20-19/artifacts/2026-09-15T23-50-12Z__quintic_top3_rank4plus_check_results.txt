@@ -1,0 +1,45 @@
+PROB20-19 quintic top-three rank-4+ checker results
+UTC run date: 2026-09-15
+
+Scope: supporting self-review only; not independent verification and not a universal proof.
+
+Checks executed in the run environment after the mathematical report was committed:
+
+1. Symbolic fifth-moment identity
+   E[(lambda1 Z1^2 + lambda2 Z2^2)^5]
+   = 945 t^5 - 4200 delta t^3 + 3600 delta^2 t,
+   t=lambda1+lambda2, delta=lambda1 lambda2.
+   RESULT: PASS.
+
+2. Symbolic diagonal-gap identity
+   With Delta_k=r-S_k, the coordinate-minus-upper-bound numerator divided by 15 simplifies exactly to
+   30 Delta2 (r-Delta3) + 240 Delta2
+   + (30r-120) Delta3 + (35r+160) Delta4 - 282 Delta5.
+   RESULT: PASS.
+
+3. Randomized projection sanity bank
+   Seed: 20260915.
+   Ranks: 4 through 10.
+   For each rank, ambient dimensions p=r+1,...,r+5.
+   50 random Gaussian-QR projections per (r,p), 1750 projections total.
+
+   On every sample checked:
+   - ||P^2-P||_max < 1e-10;
+   - exact C3 formula agrees with the L,M rewrite to relative tolerance 1e-7;
+   - L <= S3-S4 + 1e-9;
+   - M <= S2-2S3+S4 + 1e-9;
+   - exact C3 <= derived diagonal upper bound + 1e-7;
+   - coordinate raw numerator gap >= -1e-6.
+
+   Minimum observed raw coordinate-minus-C3 gaps:
+   rank 4:  1743.907781631453
+   rank 5:   858.6978957669053
+   rank 6:  4069.4268288509775
+   rank 7:  6200.39135250682
+   rank 8:  6068.628423884569
+   rank 9:  9981.684667602793
+   rank 10: 9832.689948307001
+
+All executed checks passed.
+
+These computations are reproducible checks of the algebra and selected numerical instances. The analytic proof in the report, not these samples, is the basis for the rank-r>=4 theorem.

@@ -1,0 +1,32 @@
+{
+  "schema": "fei-a080-point-defect-potential/1",
+  "packet_id": "A080",
+  "claim_id": "B16-A080-POINT-DEFECT-TENSOR-CLASSIFICATION",
+  "version": 1,
+  "units": "bits",
+  "one_defect": {
+    "dimension": "integer d >= 1",
+    "delta": "2^(-d)",
+    "spectral_empty_mass": "(1-2 delta)^2",
+    "spectral_nonempty_mass": "4 delta^2 for every nonempty S",
+    "influence": "2 d delta",
+    "potential_U": "(1-2 delta)^2 log2(1/(1-2 delta)^2) + 2 d delta (1-2 delta)",
+    "bounds": ["H < 4 I", "U < 3 I"],
+    "limits": ["H/I -> 4", "U/I -> 1"]
+  },
+  "tensor_closure": {
+    "hypothesis": "arbitrary finite collection of point defects on pairwise disjoint physical cubes",
+    "identities": ["H(product)=sum H", "I(product)=sum I", "U(product)=sum U"],
+    "uniform_bounds": ["H(product)<4 I(product)", "U(product)<3 I(product)"]
+  },
+  "a077_sequence": {
+    "dimensions": "d_k=2k",
+    "multiplicities": "N_k=2^(2k), 3<=k<=K",
+    "I": "4 sum_{k=3}^K k",
+    "H": "16 sum_{k=3}^K k + O(K)",
+    "U": "4 sum_{k=3}^K k + 4(K-2)log2(e) + O(1)",
+    "limits": ["H/I -> 4", "U/I -> 1"]
+  },
+  "verdict": "NOT_AN_FEI_COUNTERFAMILY_AND_NOT_AN_UNBOUNDED_U_OVER_I_FAMILY",
+  "remaining_gap": "overlapping nonlinear Boolean surgery or a different gate outside point-defect tensor closure"
+}

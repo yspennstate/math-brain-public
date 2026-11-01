@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A051: admissible extremality}
+For actual Boolean signs on finite uniform cubes, with entropy in bits, set
+\[R(f)=H(f)/I(f)\quad(I(f)>0),\qquad D_C(f)=H(f)-CI(f),\quad C\geq0.\]
+A $C$-witness has $D_C>0$. A dimension-critical witness minimizes essential
+physical dimension over all $C$-witnesses. Constants have $D_C=0$.
+The complete proofs, source boundaries, and exact reduction ledgers are in
+\texttt{EXISTENCE\_AND\_LIMITS.md}, Sections 1--4.
+
+\paragraph{Finite approximation.}
+The finite-dimensional maxima $M_n$ exist, obey $M_n\leq n2^{n-1}$,
+and increase to $C_*\in[2,\infty]$. For each finite $C<C_*$ a
+dimension-critical $C$-witness exists by well ordering. If $C_*<\infty$,
+critical $(C_*-1/j)$-witnesses approximate $C_*$; if $C_*=\infty$,
+critical $j$-witnesses have unbounded ratio. Attainment is not assumed.
+
+\paragraph{Reduction ledger.}
+Disjoint tensor products add $H,I,D_C$; a violating product has a violating
+factor. Tensor powers preserve $R$. A balancing bit adds one to $I$ and
+leaves $H$ unchanged. After $k$ tensor copies it changes deficit to
+$kD_C-C$, so choosing $k>C/D_C$ preserves witness admission.
+For a balanced core $g$ and a singleton $r$-bit activation with $p=2^{-r}$,
+\[H(F)=pH(g)+2rp(2-p)+h((1-p)^2),\quad I(F)=p(I(g)+r),\]
+where $h(t)=t\log_2(1/t)$. With $g=yf^{\otimes m^2}$ and $r=m$,
+\[I(F_m)\to0,\quad\Pr(F_m=-1)\to0,\quad R(F_m)\to R(f).\]
+Witness admission is stable under suitable amplification, whereas
+dimension-criticality is generally destroyed by these enlargements.
+Arbitrary restriction does not preserve the ratio.
+
+\paragraph{Necessary critical structure.}
+For every nonempty physical block $A$ of a dimension-critical witness,
+all actual children have $D_C\leq0$, and
+\[L_A-CI_A\geq D_C(f)>0,\quad
+L_A=H(Z_A\mid Z_{A^c})+I(X_A;T).\]
+Here $T$ is sampled from the actual child spectrum, not spectral
+conditioning alone. For a finite adaptive tree,
+\[D_C(f)=\sum_v\pi_v(L_v-Cd_v)+\sum_l\pi_lD_C(f_l).\]
+Tensor-indecomposability and these inequalities are justified consequences;
+connectedness and an absolute influence payment remain unproved.
+\end{document}

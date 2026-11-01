@@ -1,0 +1,2 @@
+STATE: A031 stage 3 complete: signed carrier credit proved; carrier-only every-tree payment refuted; true-excess tree quantifiers FEI-equivalent; A096 T12<8I independently accepted; 65812 cases/986032 checks; full FEI OPEN.
+NEXT: Pay erasure edges starting at level >=2 using one sparse-derivative reference with signed within-carrier information retained; A088/A094 review the carrier/scope record.

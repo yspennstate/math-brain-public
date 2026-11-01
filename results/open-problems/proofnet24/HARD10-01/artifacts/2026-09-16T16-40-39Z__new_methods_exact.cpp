@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+using i128=__int128_t;
+struct E{int a,b;};
+static E ce(int a,int b){if(a>b)swap(a,b);return {a,b};}
+static bool eq(E x,E y){return x.a==y.a&&x.b==y.b;}
+static bool lt(E x,E y){return x.a<y.a||(x.a==y.a&&x.b<y.b);}
+struct DSU{int p[10],r[10]; DSU(int n=10){for(int i=0;i<n;i++)p[i]=i,r[i]=0;}int f(int x){return p[x]==x?x:p[x]=f(p[x]);}bool u(int a,int b){a=f(a);b=f(b);if(a==b)return false;if(r[a]<r[b])swap(a,b);p[b]=a;if(r[a]==r[b])r[a]++;return true;}};
+static bool forest(const vector<E>& A,int n){DSU d(n);for(auto z:A)if(!d.u(z.a,z.b))return false;return true;}
+static bool conn(const vector<E>& A,int n,int ban=-1){int s=-1;for(int i=0;i<n;i++)if(i!=ban){s=i;break;}if(s<0)return true;bool seen[10]{};seen[s]=1;queue<int>q;q.push(s);while(!q.empty()){int u=q.front();q.pop();for(auto z:A){if(z.a==ban||z.b==ban)continue;int v=-1;if(z.a==u)v=z.b;else if(z.b==u)v=z.a;if(v>=0&&!seen[v])seen[v]=1,q.push(v);}}for(int i=0;i<n;i++)if(i!=ban&&!seen[i])return false;return true;}
+static bool twoconn(const vector<E>& A,int n){if(n<3||!conn(A,n))return false;for(int v=0;v<n;v++)if(!conn(A,n,v))return false;return true;}
+static string frac(i128 a,i128 b){auto s128=[](i128 x){if(!x)return string("0");string s;while(x){s.push_back('0'+x%10);x/=10;}reverse(s.begin(),s.end());return s;};return s128(a)+"/"+s128(b);}
+struct Counts{long long Z=0,Ze=0,Zf=0,Zef=0; i128 D=0;};
+static Counts fullcounts(const vector<E>& G,E e,E f,int n){int m=G.size(),ie=-1,jf=-1;for(int i=0;i<m;i++){if(eq(G[i],e))ie=i;if(eq(G[i],f))jf=i;}Counts c;vector<E>A;A.reserve(m);for(uint64_t mask=0;mask<(1ULL<<m);mask++){DSU d(n);bool ok=1;for(int i=0;i<m;i++)if(mask>>i&1ULL){if(!d.u(G[i].a,G[i].b)){ok=0;break;}}if(!ok)continue;c.Z++;bool be=(mask>>ie)&1,bf=(mask>>jf)&1;c.Ze+=be;c.Zf+=bf;c.Zef+=be&&bf;}c.D=(i128)c.Ze*c.Zf-(i128)c.Z*c.Zef;return c;}
+struct Five{long long n0=0,ne=0,nf=0,b=0,r=0;};
+static Five five(const vector<E>& H,E e,E f,int n){int m=H.size();Five c;for(uint64_t mask=0;mask<(1ULL<<m);mask++){DSU d(n);bool ok=1;for(int i=0;i<m;i++)if(mask>>i&1ULL){if(!d.u(H[i].a,H[i].b)){ok=0;break;}}if(!ok)continue;int ae=d.f(e.a)!=d.f(e.b);int af=d.f(f.a)!=d.f(f.b);if(!ae&&!af){c.n0++;continue;}if(ae&&!af){c.ne++;continue;}if(!ae&&af){c.nf++;continue;}DSU d2=d;d2.u(e.a,e.b);bool both=d2.f(f.a)!=d2.f(f.b);if(both)c.b++;else c.r++;}return c;}
+static Counts fromfive(Five c){Counts x;x.Z=c.n0+2*c.ne+2*c.nf+4*c.b+3*c.r;x.Ze=c.ne+2*c.b+c.r;x.Zf=c.nf+2*c.b+c.r;x.Zef=c.b;x.D=(i128)x.Ze*x.Zf-(i128)x.Z*x.Zef;return x;}
+static vector<E> sortv(vector<E> a){for(auto &z:a)z=ce(z.a,z.b);sort(a.begin(),a.end(),lt);return a;}
+static string edgevec(const vector<E>&A){ostringstream o;for(size_t i=0;i<A.size();i++){if(i)o<<' ';o<<A[i].a<<'-'<<A[i].b;}return o.str();}
+int main(){
+{
+ int n=5;vector<E> G=sortv({ce(0,1),ce(0,3),ce(0,4),ce(1,2),ce(1,4),ce(2,3),ce(2,4),ce(3,4)});E e=ce(0,1),f=ce(3,4),g=ce(0,4);long long Z[2]{},Ze[2]{},Zf[2]{},Zef[2]{};int m=G.size();for(uint64_t mask=0;mask<(1ULL<<m);mask++){DSU d(n);bool ok=1;for(int i=0;i<m;i++)if(mask>>i&1ULL)if(!d.u(G[i].a,G[i].b)){ok=0;break;}if(!ok)continue;int kg=0,be=0,bf=0;for(int i=0;i<m;i++)if(mask>>i&1ULL){if(eq(G[i],g))kg=1;if(eq(G[i],e))be=1;if(eq(G[i],f))bf=1;}Z[kg]++;Ze[kg]+=be;Zf[kg]+=bf;Zef[kg]+=be&&bf;}long long p[3]{};for(int i=0;i<2;i++)for(int j=0;j<2;j++)p[i+j]+=Ze[i]*Zf[j]-Z[i]*Zef[j];if(!(p[0]==88&&p[1]==-8&&p[2]==4))return 2;cout<<"B1 PASS\nB1 cells Z="<<Z[0]<<"+"<<Z[1]<<"t Ze="<<Ze[0]<<"+"<<Ze[1]<<"t Zf="<<Zf[0]<<"+"<<Zf[1]<<"t Zef="<<Zef[0]<<"+"<<Zef[1]<<"t\n";cout<<"B1 Delta(t)=88-8t+4t^2; Delta(0)=88 Delta(1)=84 derivative_at_0=-8\n";
+}
+{
+ vector<E>E4=sortv({ce(0,1),ce(0,2),ce(0,3),ce(1,2),ce(1,3),ce(2,3)});E e=ce(0,1),f=ce(2,3);int all=(1<<6)-1;vector<int>L,R;for(int m=0;m<(1<<6);m++){int n=all^m;vector<E>A,B;for(int i=0;i<6;i++){if((m>>i)&1)A.push_back(E4[i]);else B.push_back(E4[i]);}if(!forest(A,4)||!forest(B,4))continue;bool Ae=find_if(A.begin(),A.end(),[&](E z){return eq(z,e);})!=A.end();bool Be=find_if(B.begin(),B.end(),[&](E z){return eq(z,e);})!=B.end();bool Bf=find_if(B.begin(),B.end(),[&](E z){return eq(z,f);})!=B.end();if(Ae&&Bf)L.push_back(m);if(Be&&Bf)R.push_back(m);}vector<int>Le={13,19},Re={14,22,26,28};if(L!=Le||R!=Re){cerr<<"B25 mismatch\n";return 3;}cout<<"B25 PASS\nB25 K4 edge order=";for(auto z:E4)cout<<z.a<<z.b<<' ';cout<<"\nB25 full-occupancy LHS_count=2 masks=13,19 RHS_count=4 masks=14,22,26,28\n";
+}
+{
+ int n=10;E e=ce(0,1),f=ce(2,3);vector<E>H=sortv({ce(0,5),ce(0,8),ce(1,5),ce(1,8),ce(2,5),ce(2,6),ce(2,7),ce(3,6),ce(4,5),ce(4,7),ce(4,9),ce(5,6),ce(5,7),ce(5,8),ce(5,9),ce(6,7),ce(8,9)});Five fc=five(H,e,f,n);if(!(fc.n0==4552&&fc.ne==6266&&fc.nf==9816&&fc.b==13538&&fc.r==4)){cerr<<"five mismatch\n";return 4;}Counts c=fromfive(fc);if(!(c.Z==90880&&c.Ze==33346&&c.Zf==36896&&c.Zef==13538&&c.D==576)){cerr<<"counts mismatch\n";return 5;}vector<E>G=H;G.push_back(e);G.push_back(f);G=sortv(G);if(!twoconn(G,n))return 6;i128 base_num=c.D,base_den=(i128)c.Z*c.Z;int cnt=0;bool allgreater=1;E bestg{-1,-1};string bestop;Counts bestc;i128 bestnum=0,bestden=1;bool bestset=0;for(int b=1;b<n;b++)for(int a=0;a<b;a++){E g=ce(a,b);if(eq(g,e)||eq(g,f))continue;vector<E>H2=H;auto it=find_if(H2.begin(),H2.end(),[&](E z){return eq(z,g);});string op;if(it!=H2.end()){H2.erase(it);op="delete";}else{H2.push_back(g);H2=sortv(H2);op="add";}vector<E>G2=H2;G2.push_back(e);G2.push_back(f);G2=sortv(G2);if(!twoconn(G2,n))continue;cnt++;Counts c2=fromfive(five(H2,e,f,n));i128 nn=c2.D,dd=(i128)c2.Z*c2.Z;if(nn*base_den<=base_num*dd)allgreater=0;if(!bestset||nn*bestden<bestnum*dd){bestset=1;bestnum=nn;bestden=dd;bestg=g;bestop=op;bestc=c2;}}if(cnt!=39||!allgreater||bestop!="delete"||bestg.a!=2||bestg.b!=5){cerr<<"local mismatch\n";return 7;}cout<<"B15 PASS\nB15 H="<<edgevec(H)<<"\n";cout<<"B15 five_class N0="<<fc.n0<<" Ne="<<fc.ne<<" Nf="<<fc.nf<<" B="<<fc.b<<" R="<<fc.r<<"\n";cout<<"B15 full Z="<<c.Z<<" Ze="<<c.Ze<<" Zf="<<c.Zf<<" Zef="<<c.Zef<<" Delta=576 normalized="<<frac(base_num,base_den)<<"\n";cout<<"B15 2connected=PASS one_toggle_2connected_neighbours=39 all_strictly_larger_normalized_slack=PASS\n";cout<<"B15 best_neighbor=delete 2-5 Z="<<bestc.Z<<" Delta="<<(long long)bestc.D<<" normalized="<<frac(bestnum,bestden)<<"\n";
+}
+cout<<"ALL EXACT SELF-CHECKS PASS\n";
+}

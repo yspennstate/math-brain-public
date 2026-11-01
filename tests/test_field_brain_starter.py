@@ -1,0 +1,271 @@
+"""The field brain starter: its dream agenda and one dream with a stand-in agent, run on a copy of the example."""
+from __future__ import annotations
+
+import re
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+import pytest
+
+from math_brain.requests import RequestLedger
+
+STARTER = Path(__file__).resolve().parents[1] / "examples" / "field_brain_starter"
+pytestmark = pytest.mark.skipif(not STARTER.is_dir(), reason="the starter example is not in this checkout")
+
+
+@pytest.fixture
+def starter(tmp_path):
+    copy = tmp_path / "starter"
+    shutil.copytree(STARTER, copy, ignore=shutil.ignore_patterns("backups", "logs", ".dream.lock", "requests.jsonl"))
+    return copy
+
+
+def _agenda(starter: Path, *args: str, env: dict | None = None) -> str:
+    out = starter / "dream" / "AGENDA_TEST.md"
+    subprocess.run([sys.executable, str(starter / "dream" / "make_agenda.py"), "--out", str(out), *args],
+                   check=True, capture_output=True, env=env)
+    return out.read_text(encoding="utf-8")
+
+
+def _env_without_ledger():
+    import os
+
+    return {k: v for k, v in os.environ.items() if k != "MATH_BRAIN_REQUESTS"}
+
+
+def test_the_shipped_agenda_is_what_the_script_builds(starter):
+    shipped = (starter / "dream" / "DREAM_AGENDA.md").read_text(encoding="utf-8")
+    day = re.search(r"Built (\d{4}-\d{2}-\d{2})", shipped).group(1)
+    fresh = _agenda(starter, "--today", day, env=_env_without_ledger())
+    assert fresh.strip() == shipped.strip()
+    for n in range(1, 7):
+        assert f"## {n}." in fresh
+    assert "## 7." not in fresh
+
+
+def test_open_requests_reach_the_agenda(starter):
+    led = RequestLedger(starter / "requests.jsonl")
+    a = led.ask("Which records show a render reused after an audio change?", at="2026-04-01T09:00:00+00:00")
+    led.ask("Which records show a render reused after an audio change?", at="2026-04-02T09:00:00+00:00")
+    b = led.ask("What should the first test shot of a long render check?", at="2026-04-01T10:00:00+00:00")
+    led.link(b.id, "method_one_test_shot_before_any_long_render_2026_03_19", "produced", at="2026-04-02T10:00:00+00:00")
+    c = led.ask("Is a mistake without a How to apply line still a rule?", at="2026-04-01T11:00:00+00:00")
+    led.link(c.id, "method_a_note_is_a_hint_not_an_order_2026_04_02", "answered_by", at="2026-04-02T11:00:00+00:00")
+    d = led.ask("Should unlinked records be removed?", at="2026-04-01T12:00:00+00:00")
+    led.set_status(d.id, "dropped")
+    page = _agenda(starter, env=_env_without_ledger())
+    part = page.split("## 7. Requests still waiting", 1)[1]
+    items = [ln for ln in part.splitlines() if ln.startswith("- `")]
+    assert [ln.split("`")[1] for ln in items] == [a.id, b.id]  # asked twice first; answered and dropped left out
+    assert "asked 2x" in items[0] and "nothing produced" in items[0] and "1 produced" in items[1]
+    assert {r.id for r in led.open_requests()} == {a.id, b.id}
+
+
+def test_one_dream_with_a_stand_in_agent(starter, tmp_path):
+    agent = tmp_path / "agent.py"
+    agent.write_text(
+        "import pathlib, sys\n"
+        "sys.stdin.read()\n"
+        "mem = pathlib.Path('memory')\n"
+        "rec = mem / 'method_a_note_is_a_hint_not_an_order_2026_04_02.md'\n"
+        "rec.write_text(rec.read_text(encoding='utf-8') + '\\n**How to apply:** check a note against the newest decision before acting on it.\\n',"
+        " encoding='utf-8')\n"
+        "(mem / 'method_one_test_shot_before_any_long_render_2026_03_19.md').unlink()\n"
+        "print('added one rule')\n", encoding="utf-8")
+    cmd = '"%s" "%s"' % (Path(sys.executable).as_posix(), agent.as_posix())
+    res = subprocess.run([sys.executable, str(starter / "dream" / "run_dream.py"), "--agent-cmd", cmd],
+                         capture_output=True, text=True, env=_env_without_ledger())
+    assert res.returncode == 0, res.stdout + res.stderr
+    assert (starter / "memory" / "method_one_test_shot_before_any_long_render_2026_03_19.md").exists()  # put back
+    logs = list((starter / "dream" / "logs").glob("dream_*.md"))
+    assert len(logs) == 1 and len(list((starter / "dream" / "backups").iterdir())) == 1
+    log = logs[0].read_text(encoding="utf-8")
+    assert "changed method_a_note_is_a_hint_not_an_order_2026_04_02.md" in log
+    assert "method_one_test_shot_before_any_long_render_2026_03_19.md" in log.split("put back from the backup", 1)[1]
+    before, after = map(int, re.search(r"no rule for next time: (\d+) before, (\d+) after", log).groups())
+    assert after == before - 1
+    assert not (starter / "dream" / ".dream.lock").exists()
+
+
+def _prompt(starter: Path, stage: str) -> str:
+    out = starter / "dream" / "prompt_test.md"
+    subprocess.run([sys.executable, str(starter / "dream" / "run_dream.py"), "--write-prompt", str(out), "--stage", stage],
+                   check=True, capture_output=True, env=_env_without_ledger())
+    return out.read_text(encoding="utf-8")
+
+
+def test_each_stage_gets_its_own_sections(starter):
+    heads = {s: re.findall(r"^## (\d+)\.", _prompt(starter, s), re.M) for s in ("all", "file", "connect")}
+    assert heads["all"] == ["1", "2", "3", "4", "5", "6"]
+    assert heads["file"] == ["1", "2", "3", "4"]
+    assert heads["connect"] == ["5", "6"]
+    assert "This is the connecting pass" in _prompt(starter, "connect")
+    assert "This is the filing pass" in _prompt(starter, "file")
+    assert "This is the" not in _prompt(starter, "all")
+
+
+def test_a_night_takes_the_stages_in_turn(starter, tmp_path):
+    seen = tmp_path / "seen.txt"
+    agent = tmp_path / "agent.py"
+    agent.write_text(
+        "import sys\n"
+        "p = sys.stdin.read()\n"
+        "stage = 'connect' if 'This is the connecting pass' in p else 'file' if 'This is the filing pass' in p else 'all'\n"
+        "open(%r, 'a', encoding='utf-8').write(stage + '\\n')\n" % str(seen), encoding="utf-8")
+    cmd = '"%s" "%s"' % (Path(sys.executable).as_posix(), agent.as_posix())
+    res = subprocess.run([sys.executable, str(starter / "dream" / "dream_night.py"), "--agent-cmd", cmd,
+                          "--stages", "file,connect", "--max-cycles", "3", "--rest", "0", "--min-cycle", "0",
+                          "--idle-stop", "0", "--hours", "1"], capture_output=True, text=True, env=_env_without_ledger())
+    assert res.returncode == 0, res.stdout + res.stderr
+    assert seen.read_text(encoding="utf-8").split() == ["file", "connect", "file"]
+    night = next((starter / "dream" / "logs").glob("night_*.md")).read_text(encoding="utf-8")
+    assert [r.split("|")[2].strip() for r in night.splitlines() if re.match(r"\| \d+ \|", r)] == ["file", "connect", "file"]
+    logs = sorted((starter / "dream" / "logs").glob("dream_*.md"))
+    assert len(logs) == 3 and "Stage: connect." in logs[1].read_text(encoding="utf-8")
+
+
+def test_a_night_refuses_an_unknown_stage(starter):
+    res = subprocess.run([sys.executable, str(starter / "dream" / "dream_night.py"), "--agent-cmd", "x",
+                          "--stages", "file,deep"], capture_output=True, text=True)
+    assert res.returncode == 2 and "--stages" in res.stderr
+
+
+def _recall(starter: Path, *args: str) -> str:
+    res = subprocess.run([sys.executable, str(starter / "recall.py"), *args], check=True, capture_output=True,
+                         text=True, encoding="utf-8", env=_env_without_ledger())
+    return res.stdout
+
+
+def test_recall_lists_the_requests_asked_before(starter):
+    q = "how long should the harbour film be"
+    assert "Asked before" not in _recall(starter, q)  # no ledger, no block
+    led = RequestLedger(starter / "requests.jsonl")
+    r = led.ask("How long should the harbour film be for the festival?", at="2026-03-09T09:00:00+00:00")
+    led.link(r.id, "project_harbour_film_cut_to_twelve_minutes_2026_03_10", "answered_by", at="2026-03-10T09:00:00+00:00")
+    led.ask("How long should the harbour film be for the festival?", at="2026-04-02T09:00:00+00:00")
+    led.ask("Which music library terms cover online release?", at="2026-03-15T09:00:00+00:00")
+    out = _recall(starter, q, "--or", "festival slot length")
+    block = out.split("Asked before (the request ledger):", 1)[1]
+    assert r.id in block and "asked 2x since 2026-03-09, last 2026-04-02, open" in block
+    assert "the answer may not have landed" in block
+    assert "answered by: project_harbour_film_cut_to_twelve_minutes_2026_03_10" in block
+    assert "music library" not in block  # an unrelated request stays out
+
+
+def _hook(starter: Path, ledger: Path, prompt: str) -> str:
+    import json
+    import os
+
+    res = subprocess.run([sys.executable, str(starter / "hooks" / "request_hook.py"), "--runtime", "claude",
+                          "--ledger", str(ledger)], input=json.dumps({"prompt": prompt}), capture_output=True,
+                         text=True, encoding="utf-8", env={**os.environ, "PYTHONIOENCODING": "utf-8"})
+    assert res.returncode == 0 and not res.stderr, res.stderr
+    return res.stdout
+
+
+def test_the_request_hook_writes_the_librarys_ask(starter, tmp_path):
+    ledger = tmp_path / "requests.jsonl"
+    q = "Which records show a render reused after an audio change? See /Users/someone/notes.txt"
+    assert _hook(starter, ledger, q) == ""  # a new request is recorded silently
+    assert _hook(starter, ledger, "ok do it") == "" and _hook(starter, ledger, "/dream now please") == ""
+    led = RequestLedger(ledger)
+    (r,) = led.requests.values()  # the follow-up and the slash command were left out
+    assert r.times_asked == 1 and "<home>" in r.text and "someone" not in r.text
+    led.link(r.id, "mistake_render_settings_reset_after_update_2026_03_18", "answered_by")
+    out = _hook(starter, ledger, "  " + q.replace("Which records", "which RECORDS") + "!")  # the same words typed differently are the same request
+    assert r.id in out and "asked 2x" in out and "did not land" in out
+    assert "answered by: mistake_render_settings_reset_after_update_2026_03_18" in out
+    assert RequestLedger(ledger).get(r.id).times_asked == 2
+
+
+def _ledger(starter: Path, *args: str) -> subprocess.CompletedProcess:
+    return subprocess.run([sys.executable, str(starter / "ledger.py"), *args], capture_output=True, text=True,
+                          encoding="utf-8", env=_env_without_ledger())
+
+
+def test_the_ledger_tool_closes_a_request_the_dream_answers(starter):
+    rid = _ledger(starter, "ask", "How long should the harbour film be for the festival?").stdout.strip()
+    assert rid == RequestLedger(starter / "requests.jsonl").requests[rid].id  # the library reads what it wrote
+    assert "## 7. Requests still waiting" in _agenda(starter, env=_env_without_ledger())
+    bad = _ledger(starter, "link", rid[:8], "no_such_record_2026_01_01", "answered_by")
+    assert bad.returncode != 0 and "no record" in bad.stderr
+    good = _ledger(starter, "link", rid[:8], "project_harbour_film_cut_to_twelve_minutes_2026_03_10", "answered_by")
+    assert good.returncode == 0, good.stderr
+    led = RequestLedger(starter / "requests.jsonl")
+    assert led.requests[rid].status == "answered" and not led.open_requests()
+    assert "0 of 1 requests" in _ledger(starter, "list").stdout and "answered" in _ledger(starter, "list", "--all").stdout
+    part = _agenda(starter, env=_env_without_ledger()).split("## 7. Requests still waiting", 1)[1]
+    assert rid not in part
+
+
+def _turn(starter: Path, ledger: Path, payload: dict, *flags: str) -> str:
+    import json
+    import os
+
+    env = {**os.environ, "PYTHONIOENCODING": "utf-8", "BRAIN_HOOK_STATE": str(ledger.parent / "state")}
+    res = subprocess.run([sys.executable, str(starter / "hooks" / "request_hook.py"), "--runtime", "claude",
+                          "--ledger", str(ledger), *flags], input=json.dumps(payload), capture_output=True,
+                         text=True, encoding="utf-8", env=env)
+    assert res.returncode == 0 and not res.stderr, res.stderr
+    return res.stdout
+
+
+def test_the_stop_hook_links_the_records_a_turn_wrote(starter, tmp_path):
+    ledger, mem = tmp_path / "requests.jsonl", starter / "memory"
+    q = "Which records show a render reused after an audio change?"
+    assert _turn(starter, ledger, {"prompt": q, "session_id": "s1"}) == ""
+    (mem / "method_rerender_after_any_audio_change_2026_04_02.md").write_text("---\nname: x\n---\nbody\n", encoding="utf-8")
+    (mem / "WRITE_BACK_QUEUE.md").write_text("queued\n", encoding="utf-8")  # an upper-case file is not a record
+    assert _turn(starter, ledger, {"session_id": "s1"}, "--stop") == ""  # a Stop hook stays silent
+    assert _turn(starter, ledger, {"session_id": "s2"}, "--stop") == ""  # a session with no request links nothing
+    r = RequestLedger(ledger).get(next(iter(RequestLedger(ledger).requests)))
+    assert r.linked("produced") == ["method_rerender_after_any_audio_change_2026_04_02"] and r.status == "open"
+    _turn(starter, ledger, {"prompt": "ok do it", "session_id": "s1"})  # a follow-up keeps the same request
+    (mem / "mistake_audio_swap_left_old_render_2026_04_03.md").write_text("---\nname: y\n---\nbody\n", encoding="utf-8")
+    _turn(starter, ledger, {"session_id": "s1"}, "--stop")
+    _turn(starter, ledger, {"session_id": "s1"}, "--stop")  # a second stop adds nothing twice
+    r = RequestLedger(ledger).get(r.id)
+    assert r.linked("produced") == ["method_rerender_after_any_audio_change_2026_04_02", "mistake_audio_swap_left_old_render_2026_04_03"]
+    part = _agenda(starter, "--requests", str(ledger), env=_env_without_ledger()).split("## 7. Requests still waiting", 1)[1]
+    assert ("  produced so far: `method_rerender_after_any_audio_change_2026_04_02`, "
+            "`mistake_audio_swap_left_old_render_2026_04_03`; read these first") in part
+
+
+def test_a_request_asked_again_after_its_answer_leads_the_agenda(starter):
+    led = RequestLedger(starter / "requests.jsonl")
+    a = led.ask("Which records show a render reused after an audio change?", at="2026-04-01T09:00:00+00:00")
+    led.ask("Which records show a render reused after an audio change?", at="2026-04-01T09:30:00+00:00")
+    b = led.ask("How long should the harbour film be for the festival?", at="2026-04-01T10:00:00+00:00")
+    led.link(b.id, "project_harbour_film_cut_to_twelve_minutes_2026_03_10", "answered_by", at="2026-04-02T10:00:00+00:00")
+    led.ask("How long should the harbour film be for the festival?", at="2026-04-03T10:00:00+00:00")
+    part = _agenda(starter, env=_env_without_ledger()).split("## 7. Requests still waiting", 1)[1]
+    lines = part.splitlines()
+    first = next(i for i, ln in enumerate(lines) if ln.startswith("- `"))
+    assert lines[first].split("`")[1] == b.id  # reopened first, though the other was asked as often
+    assert lines[first + 1] == ("  asked again after `project_harbour_film_cut_to_twelve_minutes_2026_03_10` answered"
+                                " it: that record did not land")
+    assert lines[first + 2].split("`")[1] == a.id and "improved" in part
+
+
+def _new_record(starter: Path, mem: Path, *args: str):
+    return subprocess.run([sys.executable, str(starter / "new_record.py"), *args, "--dir", str(mem)],
+                          capture_output=True, text=True, encoding="utf-8")
+
+
+def test_a_link_may_name_a_record_without_its_date(starter, tmp_path):
+    mem = tmp_path / "mem"
+    mem.mkdir()
+    first = _new_record(starter, mem, "feedback", "Refunds over 500 need a second approver", "--date", "2026-03-01")
+    assert first.returncode == 0 and "refunds_over_500_need_a_second_approver_2026_03_01" in first.stdout
+    linked = _new_record(starter, mem, "project", "The help desk moved to the ticket queue",
+                         "--link", "refunds_over_500_need_a_second_approver", "--date", "2026-03-02")
+    assert linked.returncode == 0, linked.stderr
+    text = (mem / "the_help_desk_moved_to_the_ticket_queue_2026_03_02.md").read_text(encoding="utf-8")
+    assert "[[refunds_over_500_need_a_second_approver_2026_03_01]]" in text
+    missing = _new_record(starter, mem, "project", "Another one", "--link", "no_such_record")
+    assert missing.returncode != 0 and "no record named no_such_record" in missing.stderr
+    _new_record(starter, mem, "feedback", "Refunds over 500 need a second approver", "--date", "2026-03-05")
+    two = _new_record(starter, mem, "project", "A third", "--link", "refunds_over_500_need_a_second_approver")
+    assert two.returncode != 0 and "several records" in two.stderr

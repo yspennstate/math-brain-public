@@ -1,0 +1,386 @@
+\section{Fractional potentials of rank-two forms}
+\label{sec:rank-two}
+
+An indefinite rank-two form can have an unbounded density,
+but its half-power potential admits a uniform determinant
+bound, including for affine terms outside the range of its
+quadratic matrix.  Such terms arise under conditioning on
+the original coordinates.
+
+\begin{lemma}[A rank-one affine small-ball estimate]
+\label{rt:rank-one}
+Let \(|u|=1\), \(\lambda\ne0\), and let
+\[
+ R=\lambda\langle u,X\rangle^2+b^{\mathsf T}X+d.
+\]
+For every \(w\in\mathbb R\) and \(\rho>0\),
+\[
+ \mathbb P\{|R-w|<\rho\}
+ \leq\min\{1,8\sqrt{\rho/|\lambda|}\}.
+\]
+\end{lemma}
+\begin{proof}
+If \(u_i^2\geq1/2\) for some original coordinate, conditioning
+on the others leaves a quadratic of leading coefficient
+\(\lambda u_i^2\).  Its inverse image of an interval of
+length \(2\rho\) has total length at most
+\(2\sqrt{2\rho/|\lambda u_i^2|}\leq4\sqrt{\rho/|\lambda|}\).
+
+Otherwise Theorem~\ref{four:diffuse}, with one spectral
+direction and the given affine phase, gives
+\[
+ |\phi_R(t)|\leq\sqrt{e\pi}\,|\lambda t|^{-1/2}.
+\]
+For \(v>0\), Gaussian Fourier inversion and
+\(\boldsymbol1_{\{|z|<\rho\}}\leq e^v e^{-vz^2/\rho^2}\)
+imply
+\[
+ \mathbb P\{|R-w|<\rho\}
+ \leq
+ \frac{e^v\rho}{2\sqrt{\pi v}}
+ \int_{\mathbb R}e^{-\rho^2t^2/(4v)}|\phi_R(t)|\,dt
+ \leq
+ \frac{e^v\sqrt e\,\Gamma(1/4)}
+ {\sqrt2\,v^{1/4}}\sqrt{\rho/|\lambda|}.
+\]
+Take \(v=1/4\).  The resulting constant
+\(e^{3/4}\Gamma(1/4)\) is less than \(8\).
+An elementary upper bound sufficient to verify this
+numerical inequality is
+\[
+ \Gamma(1/4)\leq
+ 4-\frac45+\frac29-\frac2{39}+\frac1{102}+e^{-1}.
+\]
+Indeed, on \([0,1]\) use the degree-four Taylor upper
+bound for \(e^{-x}\), and on \([1,\infty)\) use
+\(x^{-3/4}\leq1\).  Together with
+\(e^{-1}<3/8\) and \(e^{3/4}<17/8\), the displayed
+expression gives a product less than \(8\).
+\end{proof}
+
+Define an even function on \(\mathbb R\) by
+\[
+ \Psi(a)=
+ \begin{cases}
+ 1+\log(1/|a|),&0<|a|\leq1,\\
+ |a|^{-1/4},&|a|\geq1,\\
+ +\infty,&a=0.
+ \end{cases}
+\]
+
+\begin{lemma}[A translated quadratic kernel]
+\label{rt:kernel}
+For \(a\ne0\) and every probability density \(f\leq1\),
+\[
+ \int_{\mathbb R}f(x)|a-x^2|^{-1/2}\,dx\leq5\Psi(a).
+\]
+More generally, a probability density bounded by \(K\)
+satisfies
+\[
+ \int_{\mathbb R}f(x)|a-x^2|^{-1/2}\,dx
+ \leq5K\Psi(K^2a).
+\]
+\end{lemma}
+\begin{proof}
+Let \(m_a(s)\) be the measure of
+\(\{x:|a-x^2|^{-1/2}>s\}\).
+The integral is at most
+\(\int_0^\infty\min\{1,m_a(s)\}\,ds\).
+For \(a>0\), put \(\varepsilon=s^{-2}\).
+If \(\varepsilon\geq a\), then
+\(m_a(s)=2\sqrt{a+\varepsilon}\leq2\sqrt2/s\).
+If \(\varepsilon<a\), then
+\[
+ m_a(s)
+ =2\bigl(\sqrt{a+\varepsilon}-\sqrt{a-\varepsilon}\bigr)
+ \leq\frac4{\sqrt a\,s^2}.
+\]
+For \(0<a\leq1\), split the integral at \(1\) and
+\(a^{-1/2}\).  It is at most
+\(5+\sqrt2\log(1/a)\leq5\Psi(a)\).
+For \(a\geq1\), splitting at \(2a^{-1/4}\) gives
+at most \(4a^{-1/4}\).
+
+If \(a<0\), then \(m_a(s)\leq2/s\), and it vanishes
+when \(s\geq|a|^{-1/2}\).
+For \(-1\leq a<0\), split at \(1\) to obtain
+\(1+\log(1/|a|)\).  For \(a\leq-1\), the integrand
+kernel itself is at most \(|a|^{-1/2}\leq|a|^{-1/4}\).
+This proves the first assertion.  For the second,
+substitute \(y=Kx\); the rescaled density is bounded
+by one and the kernel gains the factor \(K\).
+\end{proof}
+
+\begin{lemma}[Averaging the kernel]
+\label{rt:kernel-average}
+If \(\mathbb P\{|W|<\rho\}\leq L\sqrt\rho\) for all
+\(\rho>0\), then
+\[
+ \mathbb E\Psi(W)\leq4\sqrt L.
+\]
+\end{lemma}
+\begin{proof}
+The hypothesis excludes an atom at zero.
+For \(0<s<1\), the event \(\Psi(W)>s\) implies
+\(|W|<s^{-4}\), so its probability is at most \(Ls^{-2}\).
+For \(s\geq1\), it is at most \(Le^{(1-s)/2}\).
+Since
+\(\sup_{s\geq1}s^2e^{(1-s)/2}=16e^{-3/2}<4\),
+both ranges are bounded by \(\min\{1,4L/s^2\}\).
+Its integral over \(s>0\) is \(4\sqrt L\).
+\end{proof}
+
+\begin{theorem}[Rank-two half-power potential]
+\label{rt:half}
+Let \(U^{\mathsf T}U=I_2\), let \(\Lambda\) be an
+invertible real symmetric \(2\)-by-\(2\) matrix, and
+put \(D=|\det\Lambda|\).
+For every original-coordinate affine term,
+\[
+ R=(U^{\mathsf T}X)^{\mathsf T}\Lambda(U^{\mathsf T}X)
+       +b^{\mathsf T}X+c_0,
+\]
+one has
+\begin{equation}
+ \sup_w\mathbb E|R-w|^{-1/2}
+ \leq40\,2^{3/4}D^{-1/4}<68D^{-1/4}.
+ \label{eq:rank-two-half}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Suppose first that every row leverage of \(U\) is at
+most \(1/2\).
+Theorem~\ref{four:diffuse} gives
+\[
+ |\phi_R(t)|\leq\min\{1,K/|t|\},
+ \qquad K=e\pi D^{-1/2}.
+\]
+The Gaussian representation
+\[
+ |z|^{-1/2}
+ =\frac1{\Gamma(1/4)}
+   \int_0^\infty v^{-3/4}e^{-vz^2}\,dv
+\]
+and Gaussian Fourier inversion give
+\[
+ \mathbb E|R-w|^{-1/2}
+ \leq(2\pi)^{-1/2}
+       \int_{\mathbb R}|t|^{-1/2}|\phi_R(t)|\,dt.
+\]
+To justify the order of integration, first write the
+Gaussian formula at each \(v>0\), take absolute values,
+and then apply Tonelli to the nonnegative integrand.
+The integral in \(v\) is
+\(\sqrt2\,\Gamma(1/4)|t|^{-1/2}\) before its fixed
+prefactor, giving the stated coefficient.
+Splitting the last integral at \(|t|=K\) gives
+\[
+ \mathbb E|R-w|^{-1/2}
+ \leq4\sqrt{2e}\,D^{-1/4}.
+\]
+
+Otherwise an original coordinate \(i\) has leverage
+\(h>1/2\).  Rotate only the two-dimensional spectral
+frame so that its row is \((\sqrt h,0)\), and write
+\[
+ Y_1=\sqrt h\,X_i+T,\qquad Y_2=Z,\qquad
+ \Lambda=\begin{pmatrix}\beta&\gamma\\\gamma&\delta\end{pmatrix}.
+\]
+The variables \(T,Z\) depend on \(X_{-i}\), and \(Z\)
+is a unit linear form in those original coordinates.
+Put \(k=h^{-1/2}\), \(d=b_i/\sqrt h\), and
+\(L_0=b_{-i}^{\mathsf T}X_{-i}-dT+c_0\).
+Then
+\[
+ R=\beta Y_1^2+2\gamma Y_1Z+\delta Z^2+dY_1+L_0.
+\]
+Conditional on \(X_{-i}\), the density of \(Y_1\) is
+bounded by \(k\); its translation is unrestricted.
+
+If \(\beta\ne0\), complete the square:
+\[
+ R=\beta\left(Y_1+\frac{\gamma Z}{\beta}
+                    +\frac d{2\beta}\right)^2+R_0,
+ \qquad
+ R_0=\frac{\det\Lambda}{\beta}Z^2
+       -\frac{\gamma d}{\beta}Z-\frac{d^2}{4\beta}+L_0 .
+\]
+This is a rank-one quadratic in the remaining original
+coordinates plus an arbitrary affine term.
+Lemma~\ref{rt:kernel}, conditionally, yields
+\[
+ \mathbb E[|R-w|^{-1/2}\mid X_{-i}]
+ \leq5k|\beta|^{-1/2}\Psi(W),
+ \qquad W=k^2(w-R_0)/\beta .
+\]
+The magnitude of the rank-one coefficient of \(W\) is
+\(\lambda_0=k^2D/\beta^2\).
+Lemmas~\ref{rt:rank-one} and \ref{rt:kernel-average}
+therefore give
+\[
+ \mathbb E|R-w|^{-1/2}
+ \leq20\sqrt8\,k|\beta|^{-1/2}\lambda_0^{-1/4}
+ =20\sqrt8\,\sqrt k\,D^{-1/4}
+ \leq40\,2^{3/4}D^{-1/4}.
+\]
+All powers of \(\beta\) cancel.
+
+If \(\beta=0\), then \(D=\gamma^2>0\), and the
+conditional polynomial is affine in \(X_i\), of slope
+\(\sqrt h(2\gamma Z+d)\).
+For any probability density bounded by \(H\),
+layer cake gives
+\[
+ \int f(x)|x-a|^{-1/2}\,dx\leq2\sqrt{2H}.
+\]
+Apply this first to \(X_i\), then to \(Z\), whose
+density is at most \(\sqrt2\) by
+Lemma~\ref{four:projection}.  The result is
+\[
+ \mathbb E|R-w|^{-1/2}
+ \leq4\,2^{3/4}h^{-1/4}D^{-1/4}
+ \leq8D^{-1/4}.
+\]
+The exceptional value \(2\gamma Z+d=0\) has probability
+zero.  These cases exhaust the possibilities.
+\end{proof}
+
+\begin{lemma}[A conditional two-coordinate potential]
+\label{rt:conditional}
+Suppose \(Z\) has density at most \(H\), and the
+conditional density of \(S\) given \(Z\) is at most
+\(K\).  For an invertible real symmetric matrix \(L\),
+and arbitrary deterministic affine terms,
+\[
+ \sup_w\mathbb E\left|
+ (S,Z)L(S,Z)^{\mathsf T}+\alpha S+\beta Z+\gamma-w
+ \right|^{-1/2}
+ \leq10\sqrt{15}\sqrt{KH}\,|\det L|^{-1/4}.
+\]
+\end{lemma}
+\begin{proof}
+An invertible deterministic quadratic matrix permits
+removing its affine term by translating \(S,Z\);
+both density caps are preserved.
+Write
+\(L=\bigl(\begin{smallmatrix}a&b\\b&d\end{smallmatrix}\bigr)\).
+For \(a\ne0\), complete the square in \(S\).
+Lemma~\ref{rt:kernel} reduces the conditional bound to
+\[
+ 5K|a|^{-1/2}\Psi(A+\epsilon\delta_0Z^2),
+ \qquad
+ \delta_0=K^2|\det L|/a^2,\quad \epsilon\in\{-1,1\}.
+\]
+The elementary sublevel estimate
+\(|\{z:|z^2+A|<\rho\}|\leq4\sqrt\rho\)
+shows that the function
+\(v(z)=\Psi(A+\epsilon\delta_0z^2)\) has weak \(L^2\)
+norm at most \(\sqrt{15}\delta_0^{-1/4}\).
+Indeed, for levels \(0<s<1\),
+\(s^2|\{v>s\}|\leq4\delta_0^{-1/2}\).
+For \(s\geq1\), the bound is
+\(4\delta_0^{-1/2}s^2e^{(1-s)/2}
+\leq64e^{-3/2}\delta_0^{-1/2}
+<15\delta_0^{-1/2}\).
+For any probability density \(g\leq H\), layer cake
+gives
+\[
+ \int gv\leq
+ \int_0^\infty\min\{1,H\|v\|_{2,\infty}^2/s^2\}\,ds
+ =2\sqrt H\,\|v\|_{2,\infty}.
+\]
+Substitution cancels \(a\) and proves the asserted
+constant.  For \(a=0\), condition first on \(Z\) and
+use the affine negative-half-moment estimate from the
+last proof; it gives the smaller constant
+\(4\sqrt2\sqrt{KH}\,|\det L|^{-1/4}\).
+\end{proof}
+
+\begin{corollary}[Affine terms in the range]
+\label{rt:range}
+In Theorem~\ref{rt:half}, if \(b\in\operatorname{range}(U)\),
+then
+\[
+ \sup_w\mathbb E|R-w|^{-1/2}
+ \leq10\sqrt{30}\,D^{-1/4}.
+\]
+\end{corollary}
+\begin{proof}
+A deterministic translation of the original coordinates
+removes the affine term.  In the diffuse case the
+bound \(4\sqrt{2e}D^{-1/4}\) obtained above suffices.
+In the heavy-coordinate notation of that proof,
+the conditional density of \(Y_1\) given \(Z\) is at
+most \(h^{-1/2}\): average the conditional bound given
+all \(X_{-i}\).  The marginal density of \(Z\) is at
+most \(\sqrt2\).
+Lemma~\ref{rt:conditional} gives
+\[
+ 10\sqrt{15}(2/h)^{1/4}D^{-1/4}
+ \leq10\sqrt{30}\,D^{-1/4}.
+\]
+\end{proof}
+
+\begin{theorem}[An exact-rank-three Schur estimate]
+\label{rt:rank-three-schur}
+Suppose an original-coordinate principal block has
+representation
+\[
+ A_{II}=VMV^{\mathsf T},\qquad
+ V^{\mathsf T}V=I_3,\qquad \det M\ne0.
+\]
+Choose \(i\in I\) with \(a=A_{ii}\ne0\), and write
+\(h=|V^{\mathsf T}e_i|^2\).
+Then the full ambient quadratic form, with arbitrary
+other blocks and affine terms, satisfies
+\[
+ \|p_Q\|_\infty
+ \leq68\bigl(h|a|\,|\det M|\bigr)^{-1/4}.
+\]
+For a full exact-rank-three matrix with all nonzero
+eigenvalues of modulus at least one, this implies
+\(\|p_Q\|_\infty\leq68/\sqrt{|a|}\).
+\end{theorem}
+\begin{proof}
+Condition first on the original coordinates outside
+\(I\).  They create only an arbitrary affine term in
+the independent coordinates of \(I\).
+Completing the square in \(X_i\) gives a remainder
+with Schur matrix
+\[
+ S=A_{I\setminus\{i\},I\setminus\{i\}}
+ -a^{-1}A_{I\setminus\{i\},i}A_{i,I\setminus\{i\}}.
+\]
+The square kernel gives
+\[
+ p_Q(t)\leq |a|^{-1/2}\mathbb E|t-R|^{-1/2}.
+\]
+Put \(v=V^{\mathsf T}e_i\), choose a \(3\)-by-\(2\)
+orthonormal frame \(T\) for \(v^\perp\), and let
+\(V_-\) be \(V\) with row \(i\) removed.
+Then \(W=V_-T\) satisfies
+\[
+ W^{\mathsf T}W=T^{\mathsf T}(I-vv^{\mathsf T})T=I_2.
+\]
+The symmetric matrix
+\(H=M-Mvv^{\mathsf T}M/a\) has kernel
+\(\operatorname{span}(v)\).  Writing
+\(N=T^{\mathsf T}HT\) gives \(S=WNW^{\mathsf T}\).
+In a spectral-space basis with \(v=\sqrt h\,e_1\),
+write
+\[
+ M=\begin{pmatrix}\alpha&q^{\mathsf T}\\q&G\end{pmatrix},
+ \qquad a=h\alpha.
+\]
+Then \(N=G-qq^{\mathsf T}/\alpha\), up to an
+orthogonal change of its two-dimensional basis, and
+\[
+ \det N=\det M/\alpha=h\det M/a.
+\]
+Theorem~\ref{rt:half}, with arbitrary induced affine
+terms allowed, proves the first bound.
+In the normalized full-rank-three case,
+\(|\det M|\geq\|M\|\) and \(|a|\leq h\|M\|\);
+hence \(h|a||\det M|\geq |a|^2\), proving the last
+assertion.
+\end{proof}

@@ -1,0 +1,67 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w479",
+  "bundle_slug": "c0052-source-scope-correction-001",
+  "entries": [
+    {
+      "key": "source-criterion",
+      "namespace": "probability.statmech",
+      "logical_name": "ising-3d-nearcritical-renormalized-coupling-criterion",
+      "kind": "concept",
+      "title": "C0052 source criterion uses near-critical renormalized coupling",
+      "statement": "For the zero-field nearest-neighbour ferromagnetic Ising model on Z^3 and beta<beta_c, let U4 be the connected four-point function, chi(beta)=sum_x <sigma_0 sigma_x>, and xi(beta)=[lim_{n to infinity} -(1/n)log<sigma_0 sigma_{n e1}>]^{-1}. Duminil-Copin's Conjecture 6 defines g(beta)=sum_{x2,x3,x4}U4(0,x2,x3,x4)/(chi(beta)^2 xi(beta)^3) and asks that g(beta) not tend to zero as beta increases to beta_c. Since U4<=0, a sufficient equivalent numerical criterion is limsup[-g(beta)]>0. The 4D half of the 2017 conjecture was subsequently proved; current 3D resolution status is not certified by this card.",
+      "proof_text": null,
+      "assumptions": ["zero external field", "nearest-neighbour ferromagnetic Ising on Z^3", "beta<beta_c", "free infinite-volume state", "finite susceptibility and exponential correlation length"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "duminil_copin_ising_potts_2017:conjecture-6-eq7.1",
+        "url": "https://arxiv.org/pdf/1707.00520",
+        "revision": "as-read-2026-10-10; printed page 94",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "If g(beta) tends to 0 as beta approaches beta_c, the field is said to be trivial."
+      }
+    },
+    {
+      "key": "source-current",
+      "namespace": "probability.statmech",
+      "logical_name": "ising-fourpoint-original-random-current-identity",
+      "kind": "concept",
+      "title": "Original two-current identity for Ising four-point Ursell function",
+      "statement": "For a zero-field ferromagnetic Ising model with free boundary conditions on a finite graph, U4(x,y,z,t)=-2 <sigma_x sigma_y><sigma_z sigma_t> P^{xy,zt}[x and z connect in n1+n2], where the two currents are independent with source sets {x} symmetric-difference {y} and {z} symmetric-difference {t}; coincident labels cancel modulo two. The same identity extends to the free infinite-volume state for beta<=beta_c under the source's current-limit conditions. Replacing the original union-current event by clusters enlarged with two independent sourceless currents supplies an upper comparison, not a lower one.",
+      "proof_text": null,
+      "assumptions": ["zero-field ferromagnetic Ising", "free boundary conditions", "finite graph for the direct identity", "valid current weak limit for the infinite-volume extension"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "aizenman_duminil_copin_1912.07973:eq3.11-3.13",
+        "url": "https://arxiv.org/pdf/1912.07973",
+        "revision": "as-read-2026-10-10; Section 3.2",
+        "license": "arxiv-nonexclusive",
+        "excerpt": ""
+      }
+    },
+    {
+      "key": "scope-repair",
+      "namespace": "probability.statmech",
+      "logical_name": "ising-c0052-current-reduction-scope-warning",
+      "kind": "concept",
+      "title": "DRAFT C0052 current reduction requires endpoint weights and a near-critical comparison",
+      "statement": "A statement that 3D Ising nontriviality is equivalent to a uniform intersection probability for two unspecified currents at scale L omits essential data. The exact finite-graph fourth-cumulant identity samples each ordered endpoint pair (x,y) with probability f(x)f(y)<sigma_x sigma_y>/E[(sum f sigma)^2] for nonnegative f, then samples the corresponding original sourced currents. It yields a weighted connection probability. The source's C0052 criterion instead normalizes an infinite-volume beta<beta_c sum by chi(beta)^2 xi(beta)^3. A finite critical block deficit alone does not establish that criterion. W477 L007 supplies a separate exact subcritical sum and a conditional sufficient overlap-ratio bound; that ratio has not been proved bounded. Treat the old unweighted equivalence as a heuristic until the endpoint law and limit comparison are specified.",
+      "proof_text": null,
+      "assumptions": ["finite-graph weighted identity for nonnegative smearing", "source's near-critical C0052 definition", "no unproved scale-uniform overlap estimate assumed"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w479:C0052:source-scope-review",
+        "url": "~/brain_workers/w479/REVIEW_PACKET.md",
+        "revision": "referee-checked-source-correction-2026-10-10; w482 own-lemma review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {"from_key": "scope-repair", "to_key": "source-criterion", "kind": "depends_on", "rationale": "The warning compares finite critical block statements with the source's explicit beta<beta_c coupling g(beta)."},
+    {"from_key": "scope-repair", "to_key": "source-current", "kind": "depends_on", "rationale": "The warning uses the original two-current U4 identity and its endpoint correlation weights, not the enlarged-event upper comparison."},
+    {"from_key": "source-criterion", "to_existing_logical": "math:probability.statmech:open-problem-c0052-non-triviality-of-the-scaling-limit-of-the-three-dimensional-ising-mod", "kind": "semantic_association", "rationale": "The existing C0052 concept abbreviates the source criterion; this concept gives the full beta<beta_c g(beta) definition."},
+    {"from_key": "scope-repair", "to_existing_logical": "math:probability.statmech:ising-3d-nontriviality-reduces-to-current-intersection-lower-bound", "kind": "semantic_association", "rationale": "The existing private reduction asserts an unweighted inf_L equivalence without specifying endpoint laws or passage to the source's g(beta); this concept records the missing qualifications."}
+  ]
+}

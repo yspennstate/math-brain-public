@@ -1,0 +1,58 @@
+[
+  {
+    "claim_id": "A017-FOUR-EDGE-COMPATIBILITY",
+    "version": 4,
+    "exact_statement": "Prior conclusions of A017-FOUR-EDGE-COMPATIBILITY@3 remain at their stated scopes. For arbitrary Boolean b,c on disjoint original physical supports, selected i in b, p=Inf_i(b),e=I(D_i b), Delta_i(bc)=Delta_i(b),B_i(bc)=B_i(b),Inf_i(bc)=p and I(D_i(bc))=e+p I(c). For the SAME fresh shared gate A_h=1 on p0=0 and (-1)^z h on p0=1, Delta_i(A_(bc))=Delta_i(b)/2, B_i(A_(bc))=B_i(b)/2,Inf_i(A_(bc))=p/2, 2I(D_i(A_(bc)))=e+p I(c)+3p/2. The saved six-bit b has p=1/8,e=5/16,H=21/4,I=9/4,B_i>4p, but delta=Delta_i(b)=-11/4+(25/32)log2(5)+(9/8)log2(3)<(4+2/ln(2))/8. For every t>=1 and every adaptive stopped prefix querying each prescribed selected factor bit at most once in A_(b^tensor(t)), actual entropy debit equals delta*E N/2 and queried original influence equals E N/16, so the SAME K pays all prefixes with both full terminals retained. Every complete adaptive permutation has bad-filtered raw boundary bill (35t^2+29t)/128, versus original influence 1+9t/8; the spectator-subtracted bill is t/2. The raw-bill ratio diverges, not H/I. Disjoint support is essential: b=(-1)^(i*x),c=(-1)^x gives Delta_i(bc)=2, I(D_i(bc))=1/4,p=1/2,I(c)=1, refuting unconditional subtraction under overlap.",
+    "hypotheses": [
+      "Uniform physical cube, Boolean signs, entropy in bits; real derivative influence is full Fourier energy.",
+      "Spectator cancellation requires actual disjoint physical supports, not inferred spectral independence.",
+      "Shared gate p0,z remains fresh/unqueried throughout core-only histories and its physical influence is kept once.",
+      "Adaptive permutation observes previously queried selected bits only; stopped-prefix theorem retains every full terminal.",
+      "No claim that all adaptive policies fail, that H/I diverges, or that arbitrary overlapping residual cores are paid."
+    ],
+    "statement_sha256": "aa0149a266788dd314686a4dc66bc30e96821c02c44490eb70f7d31ceef0b5b2",
+    "contributors": [
+      "A017"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/check.py",
+      "code/scalar_certificate.py",
+      "code/overlap.py",
+      "out/certificate.json",
+      "out/source_b.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A017-FOUR-EDGE-COMPATIBILITY",
+        "version": 3,
+        "status": "AUTHOR_CHECKED_PENDING_INDEPENDENT_REVIEW",
+        "used_for": "Prior conclusions and exact stage19 residual-core target; new formulas proved independently in this stage."
+      },
+      {
+        "claim_id": "A017-FOUR-EDGE-COMPATIBILITY",
+        "version": 1,
+        "status": "ACTUAL_BOOLEAN_FIXTURE_REVERIFIED_THIS_STAGE",
+        "used_for": "Source six-bit truth table only; all entropy, influence and derivative facts used here rechecked."
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_CHECKED_PROOF_AND_EXACT_CERTIFICATES_PENDING_REVIEW",
+    "supersedes": [
+      "A017-FOUR-EDGE-COMPATIBILITY@3"
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A018",
+      "A019",
+      "A020",
+      "A024",
+      "A030",
+      "A090",
+      "A091",
+      "B04",
+      "C019"
+    ]
+  }
+]

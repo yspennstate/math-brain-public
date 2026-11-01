@@ -1,0 +1,22 @@
+======================================================================
+E. Gumbel fluctuation scale and shape  (N=2m-1)
+   predictions: std -> pi/(d_F sqrt6)  [real 1.2825, complex 0.6413];  skewness -> -1.1395
+======================================================================
+  --- real (d_F=1); target std=1.2825 ---
+    m=5: std(log M_m)=1.3229  skew=-1.074  mean(1/m logM)=-1.2209
+    m=6: std(log M_m)=1.2968  skew=-1.068  mean(1/m logM)=-1.2479
+    m=7: std(log M_m)=1.2794  skew=-1.066  mean(1/m logM)=-1.2699
+    m=8: std(log M_m)=1.3276  skew=-1.138  mean(1/m logM)=-1.2902
+  --- complex (d_F=2); target std=0.6413 ---
+    m=5: std(log M_m)=0.6686  skew=-1.049  mean(1/m logM)=-0.6942
+    m=6: std(log M_m)=0.6722  skew=-1.071  mean(1/m logM)=-0.7050
+    m=7: std(log M_m)=0.6356  skew=-1.041  mean(1/m logM)=-0.7078
+    m=8: std(log M_m)=0.6541  skew=-0.918  mean(1/m logM)=-0.7095
+  (std should hover near the target and stay ~flat in m; skew negative toward -1.14.)
+======================================================================
+F. Spherical-frame base (cor:spherical-pr): rows uniform on sphere radius sqrt(m), real, N=2m-1
+   target (1/m)log M_m -> -log4 = -1.3863
+======================================================================
+    m=6: (1/m)log M_m mean=-1.2188  std(log M_m)=1.3550  (cf. Gaussian session-8 trend)
+    m=8: (1/m)log M_m mean=-1.2795  std(log M_m)=1.3250  (cf. Gaussian session-8 trend)
+DONE.

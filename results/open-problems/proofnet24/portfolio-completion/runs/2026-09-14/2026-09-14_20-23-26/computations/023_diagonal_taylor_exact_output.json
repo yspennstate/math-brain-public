@@ -1,0 +1,135 @@
+{
+  "method": "Exact Gaussian-rational mixed-column atom determinants and formal entropy series; standard library only.",
+  "scope": "Finite checks only; the all-n proof is in agents/023.md.",
+  "cases": [
+    {
+      "name": "complex_pair_opposite_marginals",
+      "n": 2,
+      "p": [
+        "1/3",
+        "2/3"
+      ],
+      "A": [
+        [
+          "0",
+          "1/10+(1/10)i"
+        ],
+        [
+          "1/10+(-1/10)i",
+          "0"
+        ]
+      ],
+      "exact_entropy_coefficients_2_through_7": {
+        "2": "0",
+        "3": "0",
+        "4": "-81/20000",
+        "5": "0",
+        "6": "243/4000000",
+        "7": "0"
+      },
+      "checked_orders": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "all_checks_passed": true
+    },
+    {
+      "name": "real_triangle_nonzero_seventh_coefficient",
+      "n": 3,
+      "p": [
+        "1/3",
+        "1/2",
+        "1/2"
+      ],
+      "A": [
+        [
+          "0",
+          "1/10",
+          "1/10"
+        ],
+        [
+          "1/10",
+          "0",
+          "1/10"
+        ],
+        [
+          "1/10",
+          "1/10",
+          "0"
+        ]
+      ],
+      "exact_entropy_coefficients_2_through_7": {
+        "2": "0",
+        "3": "0",
+        "4": "-13/5000",
+        "5": "0",
+        "6": "-27/125000",
+        "7": "27/1250000"
+      },
+      "checked_orders": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "all_checks_passed": true
+    },
+    {
+      "name": "general_complex_hermitian_four_sites",
+      "n": 4,
+      "p": [
+        "1/3",
+        "2/5",
+        "3/7",
+        "4/9"
+      ],
+      "A": [
+        [
+          "1/10",
+          "1/10+(1/10)i",
+          "1/10",
+          "0+(1/10)i"
+        ],
+        [
+          "1/10+(-1/10)i",
+          "-1/5",
+          "1/10+(-1/5)i",
+          "-1/10"
+        ],
+        [
+          "1/10",
+          "1/10+(1/5)i",
+          "3/10",
+          "1/5+(1/10)i"
+        ],
+        [
+          "0+(-1/10)i",
+          "-1/10",
+          "1/5+(-1/10)i",
+          "-1/10"
+        ]
+      ],
+      "exact_entropy_coefficients_2_through_7": {
+        "2": "-1859/6000",
+        "3": "9329/1350000",
+        "4": "-51558791/810000000",
+        "5": "32455571099/6480000000000",
+        "6": "-46789073485423/1458000000000000",
+        "7": "3125537052559523/699840000000000000"
+      },
+      "checked_orders": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "all_checks_passed": true
+    }
+  ]
+}

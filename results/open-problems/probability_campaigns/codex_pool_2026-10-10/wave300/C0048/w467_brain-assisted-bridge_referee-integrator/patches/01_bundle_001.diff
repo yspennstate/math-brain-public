@@ -1,0 +1,90 @@
+--- a/~/math-brain-inbox/w467/bundle_001.json
++++ b/~/math-brain-inbox/w467/bundle_001.json
+@@ -0,0 +1,87 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w467",
++  "bundle_slug": "c0048-critical-coupling-bridge-001",
++  "entries": [
++    {
++      "key": "bc03-paper",
++      "namespace": "probability.statmech",
++      "logical_name": "biskup-chayes-2003-mean-field-bounds-paper",
++      "kind": "concept",
++      "title": "Biskup-Chayes (2003): mean-field bounds for discontinuous transitions",
++      "statement": "Biskup and Chayes study reflection-positive nearest-neighbor spin systems and derive a mean-field free-energy excess bound. For the nearest-neighbor integer-q Potts model, their Theorem 2.1 establishes a magnetization and energy jump at a coupling J_t for each fixed q>=3 when d is sufficiently large. The paper explicitly does not prove zero magnetization at every J<J_t.",
++      "proof_text": null,
++      "assumptions": ["Published source summary, not a new mathematical assertion"],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "arxiv:math/0207242v2",
++        "url": "https://arxiv.org/pdf/math/0207242",
++        "revision": "v2-as-read-2026-10-10",
++        "license": "arxiv-nonexclusive",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "bc03-main-bound",
++      "namespace": "probability.statmech",
++      "logical_name": "biskup-chayes-mean-field-free-energy-excess-bound",
++      "kind": "theorem",
++      "title": "Biskup-Chayes mean-field free-energy excess bound",
++      "statement": "For d>=3, let spins S_x in a compact Omega subset of a finite-dimensional inner-product space E_Omega have an i.i.d. a priori law, with interaction -J/(2d) times the sum of nearest-neighbor inner products and field -sum_x(b,S_x), J>=0. Let S(m)=inf_h[log int_Omega exp((S,h)) mu(dS)-(m,h)] and Phi_{J,b}(m)=-J|m|^2/2-(m,b)-S(m). If F(J,b) is the thermodynamic free energy per site, let K*(J,b) be the supporting-hyperplane pairs (e,m) satisfying F(J+deltaJ,b+deltab)-F(J,b)<=e deltaJ+(m,deltab) for all increments; let M*(J,b) consist of magnetizations of extreme pairs of K*. For m* in M*(J,b), Phi_{J,b}(m*) <= inf_{m in Conv(Omega)} Phi_{J,b}(m) + J n kappa I_d/2. Here n=dim(E_Omega), kappa=max_{S in Omega}(S,S), D_d(k)=1-(1/d)sum_{j=1}^d cos(k_j), and I_d=int_{[-pi,pi]^d} (1-D_d(k))^2/D_d(k) dk/(2pi)^d. For the q-state Potts simplex representation this error is J(q-1)^2 I_d/(2q). This bound does not itself force a first-order transition at d=3,q=3.",
++      "proof_text": "The source proves its Main Theorem using reflection positivity and an infrared bound to control the difference between nearest-neighbor spin correlation and squared magnetization in extreme thermodynamic states; inserting that estimate into the general convexity bound (1.9) yields (1.12). The Potts coefficient follows by n=q-1 and kappa=(q-1)/q.",
++      "assumptions": ["d>=3", "compact Omega in a finite-dimensional inner-product space", "i.i.d. Borel a priori spin law supported on Omega", "nearest-neighbor interaction normalized by J/(2d)", "J>=0 and b in E_Omega", "m* belongs to M*(J,b) from extreme thermodynamic supporting-hyperplane points", "reflection positivity and infrared bound for the source's interaction"],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "arxiv:math/0207242v2:main-theorem",
++        "url": "https://arxiv.org/pdf/math/0207242",
++        "revision": "v2-as-read-2026-10-10",
++        "license": "arxiv-nonexclusive",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "bc03-potts-jump",
++      "namespace": "probability.statmech",
++      "logical_name": "biskup-chayes-fixed-q-large-d-potts-jump",
++      "kind": "theorem",
++      "title": "Biskup-Chayes Potts jump for fixed q and sufficiently large d",
++      "statement": "For each fixed integer q>=3, Biskup-Chayes Theorem 2.1 gives a coupling J_t(q,d) and errors epsilon_1(d,J), epsilon_2(d) tending to zero as d tends to infinity (epsilon_1 uniformly on bounded J intervals), such that m*(J)<=epsilon_1 for J<J_t, |m*(J)-m_MF(J)|<=epsilon_1 for J>J_t, and |J_t-J_MF|<=epsilon_2. For sufficiently large d, magnetization and energy density jump at J_t. Their theorem does not show m*(J)=0 throughout J<J_t and hence does not by itself identify J_t with the critical onset coupling required by C0048.",
++      "proof_text": "In the source's proof, the infrared error J(q-1)^2 I_d/(2q) tends to zero for fixed q as d grows. The mean-field Potts free energy has separated symmetric and asymmetric minima for q>=3. The small excess confines physical extreme magnetizations near these minima, and FK/FKG monotonicity yields a jump point J_t; free-energy comparison bounds its distance from J_MF. The paper explicitly leaves open whether small positive magnetization can occur before J_t.",
++      "assumptions": ["nearest-neighbor q-state ferromagnetic Potts model on Z^d", "integer q>=3 fixed", "d sufficiently large depending on q for the jump conclusion", "coupling J is normalized as J/(2d) per edge in Biskup-Chayes (2.1)", "use of extreme-state mean-field bound and FK/FKG monotonicity"],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "arxiv:math/0207242v2:theorem-2.1",
++        "url": "https://arxiv.org/pdf/math/0207242",
++        "revision": "v2-as-read-2026-10-10",
++        "license": "arxiv-nonexclusive",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "critical-onset-gap",
++      "namespace": "probability.statmech",
++      "logical_name": "c0048-biskup-chayes-critical-onset-gap-draft",
++      "kind": "concept",
++      "title": "C0048 draft gap: jump coupling versus critical onset",
++      "statement": "DRAFT GAP, not a theorem: C0048 asks for positive monochromatic-boundary magnetization at the true critical coupling J_c for every integer q>=3,d>=3. The Biskup-Chayes fixed-q/large-d jump theorem locates a jump J_t but explicitly does not exclude smaller positive magnetization for J<J_t. Its infrared error tends to zero with d and supplies no q=3,d=3 barrier. A valid bridge must identify or bypass the possible interval J_c<J_t and establish a bound effective at low d and small q; uniform pressure approximation alone cannot do this.",
++      "proof_text": null,
++      "assumptions": ["C0048 uses critical spontaneous magnetization", "Biskup-Chayes Theorem 2.1 and its explicit caveat", "No claim that the full conjecture is proved"],
++      "domain": "probability and statistical mechanics",
++      "source": {
++        "source_id": "owner-own-work:w467-c0048-bridge-gap-20261010",
++        "url": "urn:owner-own-work:w467:c0048:bridge-gap",
++        "revision": "local-review-2026-10-10",
++        "license": "owner-own-work (attributed, not reproduced)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {"from_key": "bc03-main-bound", "to_key": "bc03-paper", "kind": "cites", "rationale": "The bound is the Main Theorem (1.12) in this paper."},
++    {"from_key": "bc03-potts-jump", "to_key": "bc03-main-bound", "kind": "depends_on", "rationale": "The Potts jump proof uses the small infrared free-energy excess for extreme magnetizations."},
++    {"from_key": "bc03-potts-jump", "to_key": "bc03-paper", "kind": "cites", "rationale": "The statement is Theorem 2.1 and the immediately following limitation in this paper."},
++    {"from_key": "critical-onset-gap", "to_key": "bc03-potts-jump", "kind": "depends_on", "rationale": "The gap is the jump theorem's explicit inability to rule out ordered magnetization below J_t."},
++    {"from_key": "bc03-potts-jump", "to_existing_logical": "math:probability.statmech:open-problem-c0048-discontinuity-of-the-potts-phase-transition-on-z-d-for-q-3-d-3", "kind": "semantic_association", "rationale": "The published theorem concerns fixed-q, sufficiently-large-d Potts jumps; it does not alone establish C0048's critical-onset formulation."},
++    {"from_key": "critical-onset-gap", "to_existing_logical": "math:probability.statmech:open-problem-c0048-discontinuity-of-the-potts-phase-transition-on-z-d-for-q-3-d-3", "kind": "semantic_association", "rationale": "This draft concept records the missing identification of J_t with critical onset and the q=3,d=3 quantitative barrier."}
++  ]
++}

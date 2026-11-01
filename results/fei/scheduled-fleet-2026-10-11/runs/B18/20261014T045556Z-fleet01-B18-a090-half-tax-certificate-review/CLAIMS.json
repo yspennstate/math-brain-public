@@ -1,0 +1,26 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B18",
+  "primary_packet_id": "A090",
+  "claims": [
+    {
+      "claim_id": "B18-A090-HALF-TAX-CERTIFICATE-REPAIR-v1",
+      "status": "MATERIAL_REPAIR_PROVED_PENDING_FRESH_REVIEW",
+      "reviewed_claim": "B10-A047-HALF-TAX-COMBINED-v1",
+      "statement": "For the two-bit AND/point-defect gate, J_X <= M_X + delta(p)/2 for every p in [1/64,49/100] and q in [0,1].",
+      "scope": "Genuine two-bit Boolean gates under product bias, after symmetry reduction; no higher arity or hierarchy transfer.",
+      "source_defect": "Both original Decimal checkers compute ONE-x in the default 28-digit context inside h_point, contrary to their claimed 70-digit directed evaluation.",
+      "repair": "Use a 70-digit directed interval for ONE-x and propagate it through log2 and multiplication.",
+      "evidence": [
+        "A090_RECONSTRUCTION.tex",
+        "verify_a090_half_tax.py",
+        "CHECK.out"
+      ],
+      "first_unpaid_line": "Uniform higher-arity and nonreusing hierarchy payment of M+delta/2 with terminal terms.",
+      "fresh_review_required": true
+    }
+  ],
+  "full_gu_status": "OPEN",
+  "full_fei_status": "OPEN"
+}
+

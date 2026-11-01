@@ -1,0 +1,9 @@
+STATE: NEEDS_REVIEW
+NEXT: w389 checks w386.S1.2 and exceptional-label transfer; integrator obtains a second-account review and ingests only approved draft cards.
+
+2026-10-10 07:41 Asia/Jerusalem: Started P0117 referee and source audit. hooks1000 assignment search found no w386 entry; audit window has closed.
+2026-10-10 07:5x Asia/Jerusalem: Verified Damron-Hanson Conjecture 1 and survey Question 31; found 2026-09-24 public proof claim with extra min-of-four second moment. Saved exact source row and five peer verdict rows. Current openness UNKNOWN.
+2026-10-10 08:xx Asia/Jerusalem: Exact campaign ledger checked (P0117 original row 188, Sept 14 status row 600, attempt line 119). Independently rederived w384's threshold identity and w385's shell lower-bound obstruction; saved seven more scoped KEEP verdicts. No parent proof certified.
+2026-10-10 08:xx Asia/Jerusalem: Read w385's three later claims directly and added scoped KEEP verdicts. Read-only store probe found existing P0117 card and its logical ID, so the draft bundle can link without duplicating it.
+2026-10-10 later checkpoint: Submitted bundle_001.json (3 concept entries, 3 relations) and one hook proposal. Sent w384/w385 verdict paths and w389 a narrow independent-review request. Validated 19 verdict rows: 18 KEEP, 1 FIX; inbox hash matched local draft. Logged progress event. Source/proof openness remains UNKNOWN; support collapse remains unproved.
+2026-10-10 final checkpoint: Audited w385's eight-entry bundle KEEP in its existing namespace; withdrew overlapping old draft as bundle_001.part and submitted revised bundle_002.json (2 entries, 2 relations; local/inbox hashes match). Validated 20 review rows: 19 KEEP, 1 FIX. Routed paths, hashes and unresolved gap to codex-01a12190 as msg-1b9813d3f3. No final served-model evidence, account-diverse second review, ingestion, retrieval, or parent proof certified.

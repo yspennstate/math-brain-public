@@ -1,0 +1,20 @@
+NM13-04 T07 TRIANGLE DEPTH3-SPIDER FOREST EXACT CHECKER
+L3=158I+M; M^4=0; ranks=(8,2,1,0); old_tail_algebra_closure=PASS
+A_m= 51*m/79 + 4
+B_m= 3247*m**2/6241 + 21322*m/6241 + 1
+C_m= m*(620177*m**2 + 4118189*m + 1259235)/2958234
+rho_m= (9391633*m**3 + 119901505*m**2 + 400505352*m + 116850243)/(474*(51*m + 316)*(3247*m**2 + 21322*m + 6241))
+rho_strip=43/360 < rho_m <= 1/8: PASS
+same_component_orbits=58 regular=52 discriminant=6 failures=0
+DISC (('c', 0), ('s', 0, 3, 1), 1, 27*(4302797*m**2 + 49364112*m + 184371072)/243087455521)
+DISC (('s', 0, 1, 0), ('s', 1, 2, 1), 2, 132300*(26087389097*m**2 + 329188679764*m + 1083556876448)/9468276082626847201)
+DISC (('s', 0, 1, 0), ('s', 1, 3, 1), 2, 1764*(179137657407*m**2 + 2260190028976*m + 7231861833616)/9468276082626847201)
+DISC (('s', 0, 2, 0), ('s', 1, 2, 1), 2, 16875*(60245776709*m**2 + 752993829408*m + 2360758299424)/37873104330507388804)
+DISC (('s', 0, 2, 0), ('s', 1, 3, 1), 2, 225*(385207281327*m**2 + 4788823319320*m + 14898225335440)/37873104330507388804)
+DISC (('s', 0, 3, 0), ('s', 1, 3, 1), 2, 9*(798256270143*m**2 + 9898978136504*m + 30693015985584)/37873104330507388804)
+core_right_orbits=11 regular=11 failures=0
+core_core_coeffs= [2, 2*(3*h + 1), 1, 0, 0]
+seed_lift: L2_tri=L2; L1_tri=L1+2L2; C0_tri=C0+L1+L2+k(1-6h): PASS
+Consumed companion condition: independent depth3 cross schemes have k,L2,L1,C0 > 0 on strip.
+Since h<=1/8, 1-6h>=1/4, hence triangle cross-component coefficients are strict.
+ALL_EXACT_CHECKS_PASS

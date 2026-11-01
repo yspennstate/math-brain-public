@@ -1,0 +1,25 @@
+# Root independent checks and integration
+
+The root read all three agent derivations and the independent e01/e02/e03/e04 reviews. Actual root model metadata is UNKNOWN; four workers were explicitly selected as gpt-6-sol with max reasoning, without backend attestation.
+
+## Finite-width obstruction
+
+I checked e01 against the true simultaneous two-layer gradient equations. While row 1 has only its second gate active, r1=-1, r2=1-Wv/b, and r2'=-(beta/b)(W^2+v^2)r2. Thus the residual is evolving, and its strict positivity is proved, rather than assumed frozen. The open parameter rectangle and q(0) in a sufficiently small negative interval force the first hit by continuity and q'=rho v'>0. Other rows strictly inactive stay fixed. At the hit, q<=0 has positive drift and q>0 has negative drift on a common neighborhood. The absolutely continuous chain rule for q^2 forces any continuation to stay on q=0, contradicting the binary prescribed velocity. This verifies nonexistence for the pointwise field. The event has positive probability for each fixed m but no uniform-in-m lower bound. I incorporated the reviewer's explicit upper-bound clarification W<b/v(0), v<b/W(0).
+
+For the full-loss Clarke subdifferential, the single boundary has only two limiting gradients; their convex hull equals the local Filippov hull in original parameter coordinates. The output-weight derivative is independent of the fractional gate at that face. The normal tangent coefficient theta=rho r2 is strictly in (0,1), gives the displayed constrained dynamics, and minimizes the Euclidean gradient norm. None of this retroactively assigns a unique solution to the binary ODE.
+
+## Frozen-pair ray selection
+
+I checked the directed sector graph in e02. Its two positive half-axis crossings each have a fixed direction, so they cannot cycle. Negative half-axis hits are terminal. A slide toward the origin forces both frozen coefficients a,b to be negative; the concave-potential contraction in the G^{-1} metric then makes the origin continuation unique. An initial interior line can hit the origin only on the excluded sector ray. Hence the generic-mark eventual affine ray and uniform rescaling estimate are supported. The two marks (-1,1) and (1,-1) give different scaled limits although both collapsed initial points equal zero, so a mark-free zero-start inclusion loses relevant information.
+
+## Euler sliding, persistent secant correction, and topology
+
+I independently derived x_next=x+gamma c-gamma(c+d)s and y_next-rho x_next=y-rho x+gamma B(1-rho^2). The invariant strip and occupation discrepancy therefore follow exactly. The line-segment ReLU derivative is lambda, not the starting indicator s, giving z^2 diag(lambda,1)G diag(s,1). The two stated phase cycles give the exact secant averages in e03. Both yield output velocity (0,3/4), while the averaged pre-step tangent matrix yields (-1/4,3/4). The nonzero integrated absolute discrepancy of the pre-step (1,1) entry follows from the occupation fraction, so only time-integrated weak convergence is available in this toy, not L1 convergence to the average.
+
+The irrational-rotation formula for phi also checks directly by integrating the piecewise-linear lambda function on (-d,c]: its integral is c(c+d)/(2d) if c<=d, and (c+d)(1-d/(2c)) if c>=d. This is a deterministic supplementary calculation; the counterexample only needs the exact rational two-cycle. The conditional varying-residual extension keeps the same algebraic identity while z is frozen. Invariance of [-gamma sup d_n,gamma sup c_n] needs only the asserted positive bounds and the second gate staying active; no slow-variation hypothesis is concealed. Proving those hypotheses for the actual coupled network remains unpaid.
+
+I reran code/e03_chatter_check.py successfully. It uses exact rational arithmetic and validates deterministic identities and phase examples; it is not a stochastic finite-width experiment. The new execution record checks full stdout equality against the saved agent output. The root also executed code/check_vector_identity.py: exact rational arithmetic checked 400 one-step and 400 cross-time vector identities on arrays exhibiting both activations and deactivations. Those identities underlie the finite-grid theorem and the later MACRO_COMPACTNESS.md output decomposition; no stable-law simulation claim is made.
+
+## Closure boundaries
+
+BOUNDARY_GRID.md is root-authored and has three independent worker reviews; FACE_SCHUR.md is root-authored and has an independent e04 review. The later root-authored MACRO_COMPACTNESS.md has independent e03 and e04 reviews, paying tightness and a subsequential inclusion while explicitly leaving mark-dependent selection and uniqueness open. Their PROVED labels mean proved and reviewed internally under the written assumptions and cited prior initialization dependencies. Full T384, a uniquely selected macroscopic nonorthogonal limit, deep training, and external priority remain OPEN/unverified. Literature already discusses the general boundary nonexistence mechanism, so this package does not advertise that mechanism as a novel abstract discovery.

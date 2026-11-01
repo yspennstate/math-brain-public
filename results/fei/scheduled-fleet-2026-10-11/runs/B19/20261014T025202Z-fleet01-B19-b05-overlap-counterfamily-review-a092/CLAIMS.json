@@ -1,0 +1,21 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B19",
+  "primary_packet_id": "A092",
+  "target_packet_id": "A025",
+  "claims": [
+    {
+      "claim_id": "B19-REVIEW-B05-OVERLAP-SINGLETON-v1",
+      "status": "INDEPENDENTLY_ACCEPTED_AT_EXACT_SCOPE",
+      "statement": "The B05 majority/one-point family refutes every fixed shared-edge singleton-potential payment and every fixed one-sided new-factor payment under one reused coordinate.",
+      "evidence": ["COUNTEREXAMPLE_REVIEW.md", "COUNTEREXAMPLE_SCOPE.json", "CHECK_REVIEW.py", "CHECK_REVIEW.out"]
+    },
+    {
+      "claim_id": "B19-B05-OVERLAP-SCOPE-v1",
+      "status": "PROVED_SCOPE_BOUNDARY",
+      "statement": "The family does not refute a signed global tree or FEI; its final function is a disjoint product K_n(u)s(x,v).",
+      "evidence": ["COUNTEREXAMPLE_REVIEW.md"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

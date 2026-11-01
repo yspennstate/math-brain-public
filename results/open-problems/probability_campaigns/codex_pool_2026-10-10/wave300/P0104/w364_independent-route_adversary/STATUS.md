@@ -1,0 +1,11 @@
+STATE: NEEDS_REVIEW
+NEXT: w365 independently checks C02/C05/C03; the next proof step is centered boundary-matching-error control at n^(1/3) scale, with a separately proved two-sided variance bound for the scalar comparison.
+
+2026-10-10: Started the P0104 independent-route/adversary task. Read the primary directive. All working artifacts stay in this folder; no live-store edits or mesh sends.
+2026-10-10: Saved result S1.w364.1: deterministic iid edge weights disprove an unqualified exponent assertion. This is a boundary-case audit, not a claim about the unrecovered primary conjecture. Primary-source and prior-attempt searches are in progress.
+2026-10-10: Saved an independent boundary-profile route and exact four-edge obstruction in ATTEMPT.md before reading the paired proof. Saved C02 and C03: incompatible optimizing vertices and a conditional L2 transfer lemma. The paired route is spectral/resampling, so this approach is disjoint.
+2026-10-10: Exact arithmetic and 32 Dijkstra checks passed: scalar composition errs in 2/16 configurations; matched composition errs in 0/16. Recovered the full P0104 ledger entry and primary Questions 13/15. The source leaves suitable-law hypotheses unspecified; current openness remains UNKNOWN.
+2026-10-10: Read the paired worker's saved approach and C001 after saving the independent derivation. Its power-scale integrated-correlation estimate is explicitly an open gap; no complete paired proof is available yet. Added a bounded tie-handling cross-check.
+2026-10-10: Completed the forcing checks: 64 passed; chosen-geodesic membership gave 12 false positives. Guarded recall returned three results in 37.6 seconds without shared mutation. The relevant owner memory reports a solved fixed-width time constant, a different problem.
+2026-10-10: Audited the paired L1-L5 proof symbolically: scoped keeps, with G1 explicitly unproved. Saved six claim/result rows, six audit verdicts, three draft concepts, three quoted-end relations and one hook with controls.
+2026-10-10: Exact checks, draft validation and final packet validation passed. REPORT.md, SOURCE_STATUS.json, ATTEMPT.md, CLAIMS.jsonl and review_packet/ are complete. Unified diffs and full drafts are staged locally; shared submission, independent review, ingestion and live retrieval remain pending. P0104 is not proved; current openness UNKNOWN.

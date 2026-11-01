@@ -1,0 +1,60 @@
+{
+  "slot": "NM13-10",
+  "source": "Agresti-Veraar arXiv:2501.18561 / NoDEA 32 (2025), Problem 3",
+  "policy": "operations/PROGRESS20_2026-09-20.md current LIVE20",
+  "predecessor_report_commit": "e8c2506d102789de1f5d7c188ea54ac5875bab40",
+  "fixed_pair": {
+    "X0": "H^{-1}(Torus)",
+    "Xhalf": "L^2(Torus)",
+    "X1": "H^1(Torus)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "noise": "one real Brownian driver",
+    "transformed_equation": "dZ=-AZ dt+A^(1/2)(Z+Y)dW, Z(0)=0"
+  },
+  "fixed_before": {
+    "strong_endpoint": "r_*=3, p=3 excluded",
+    "exact_subcritical_norm": "C_p^g=1/(sqrt(2/(p-1))-1), 2<=p<3; (3-p)C_p^g -> 4",
+    "critical_rearrangement_bracket": "2/3 <= alpha_*(T) <= 1",
+    "conditional_alpha_2_3_lower_constant": "4/9"
+  },
+  "fixed_after": {
+    "strong_endpoint": "unchanged: r_*=3, p=3 excluded",
+    "exact_subcritical_norm": "unchanged",
+    "critical_rearrangement_bracket": "unchanged: 2/3 <= alpha_*(T) <= 1",
+    "conditional_alpha_2_3_lower_constant": "unchanged: 4/9"
+  },
+  "new_gain": {
+    "name": "exact disjoint Z_{3,2/3} gluing and countable stopping-time randomized-band restart",
+    "status": "CANDIDATE_FULL / SELF-CHECKED / PENDING INDEPENDENT REVIEW for the mechanism theorem; parent endpoint remains PARTIAL / OPEN",
+    "gluing": "If a measure space of total mass T is partitioned into E_j of masses T_j and f_j is supported in E_j with ||f_j||_{Z_{3,2/3}(E_j)} <= K A_j^(1/3), then ||sum_j f_j||_{Z_{3,2/3}(T)} <= K (sum_j A_j)^(1/3), with constant exactly 1 and countably many pieces allowed.",
+    "restart_zero_seed": "At any stopping time tau, an F_tau-measurable countable choice of spectral band with uniform condition ratio K, followed for a deterministic restart horizon H by progressive forcing confined to the chosen band and zero restarted state, satisfies the same critical endpoint constant 65 sqrt(K), independent of the number or separation of possible bands.",
+    "restart_nonzero_seed": "If the F_tau-measurable restart seed is also confined to the chosen band, then the restarted solution satisfies ||Z||_{Z_{3,2/3}} <= 2(1+log 2)^(2/3) [H E||x||^3 + (65 sqrt(K))^3 E int ||Y||^3]^(1/3).",
+    "passive_seed_identity": "For dU=-AU dt+A^(1/2)U dW, E_tau||U_t||^3 <= ||U_0||^3, by spectral Jensen and E exp(3 sqrt(lambda)B_t-9 lambda t/2)=1.",
+    "connection": "Removes all countable packet-choice entropy at a stopping-time restart. Therefore the remaining full-endpoint obstruction is not the number or spectral separation of candidate packets, but within-excursion/pathwise packet migration before a genuine restart; this matches and sharpens the predecessor active-migration slack target."
+  },
+  "proof_core": {
+    "tail_jensen": "For local tail masses s_j and L_j=1+log(T_j/s_j), local endpoint gives A_j >= R^3 s_j/(K^3 L_j^2). With w_j=s_j/s and e^(L-1)=sum w_j e^(L_j-1), Jensen gives sum w_j L_j<=L and sum w_j/L_j^2>=1/(sum w_j L_j)^2>=1/L^2, hence R^3 s<=K^3(sum A_j)L^2.",
+    "conditioning_scaling": "On branch probability pi, local H,u,A scale to pi H, pi u, pi A; the logarithm log(H/u) and the critical Z-ratio are invariant."
+  },
+  "checker": {
+    "code": "2026-09-20T18-49-01+0300__countable_branch_gluing_checker.py",
+    "output": "2026-09-20T18-49-01+0300__countable_branch_gluing_checker.out",
+    "result": "CHECK_PASS"
+  },
+  "residual_obstruction": "Control packet changes while the solution stays at high level, i.e. before a true restart. The current approximate packet migration slack supplies an active forcing charge, and passive Hellinger/decoherence supplies an off-input charge, but a stopping-time center-change Carleson estimate joining them is still missing.",
+  "failed_routes_preserved": [
+    "Generic simultaneous block square-function gluing loses N^(1/6) and does not close the full endpoint.",
+    "L^2 packet localization alone does not control instantaneous Rayleigh quotients because arbitrarily high-frequency leakage can have small L^2 mass; a time-integrated migration argument is required."
+  ],
+  "next_attack": "Use the exact restart/gluing theorem to define high-level excursion restart times. Prove that any change of the selected three-block packet before the next downcrossing incurs either the predecessor joint-slack active-migration charge or the passive Hellinger charge; sum those center changes without a packet-count entropy factor.",
+  "literature_check": {
+    "Agresti_Veraar": "Problem 3 still asks extrapolation for nonsmall B; source exact wording recovered from the 2025 survey.",
+    "Bechtel_Veraar_2025": "Published 11 July 2025; variational/self-adjoint extrapolation gives only some p>2 range and is not this critical frozen endpoint.",
+    "Evangelopoulos_Ntemiris_Veraar_2026": "Published 13 February 2026; discrete stochastic maximal regularity, not the nonsmall multiplicative endpoint.",
+    "Lorist_vanNeerven_Veraar_2026": "arXiv:2608.20266, 20 August 2026; necessary Banach-geometry conditions, not this endpoint.",
+    "Evangelopoulos_Ntemiris_2026_09_07": "fully discrete elliptic finite-element stochastic maximal regularity, not this endpoint."
+  },
+  "runtime": "GPT-5.6 Sol; effort metadata UNVERIFIED"
+}

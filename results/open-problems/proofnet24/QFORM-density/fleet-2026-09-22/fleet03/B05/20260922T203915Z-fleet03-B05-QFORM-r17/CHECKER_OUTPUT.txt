@@ -1,0 +1,31 @@
+Numerical regression only; not mathematical evidence.
+
+n=5
+  ||R^T R-I||_op = 1.84e-16
+  max diag(P) = 0.6000000000000001 ; 3/n = 0.6
+  max triple sigma_min = 0.27639320225002106 <= 0.6
+  max triple det = 0.14472135954999582 <= 27/n^3 = 0.216
+  nonzero spectrum numerically = 1,1,1
+
+n=8
+  ||R^T R-I||_op = 1.49e-16
+  max diag(P) = 0.37500000000000006 ; 3/n = 0.375
+  max triple sigma_min = 0.2500000000000001 <= 0.375
+  max triple det = 0.045534586912079636 <= 27/n^3 = 0.052734375
+  nonzero spectrum numerically = 1,1,1
+
+n=16
+  ||R^T R-I||_op = 2.51e-16
+  max diag(P) = 0.18750000000000006 ; 3/n = 0.1875
+  max triple sigma_min = 0.15010892619770075 <= 0.1875
+  max triple det = 0.006374354972779156 <= 27/n^3 = 0.006591796875
+  nonzero spectrum numerically = 1,1,1
+
+n=96
+  ||R^T R-I||_op = 1.45e-15
+  max diag(P) = 0.03125000000000001 ; 3/n = 0.03125
+  max triple sigma_min = 0.03125
+  max triple det = 3.0517578125000014e-05 ; 27/n^3 = 3.0517578125e-05
+  nonzero spectrum numerically = 1,1,1
+
+Analytic proof in REPORT.md uses roots-of-unity orthogonality, full spark of points on the circle, and trace/linear-algebra inequalities; it does not rely on this check.

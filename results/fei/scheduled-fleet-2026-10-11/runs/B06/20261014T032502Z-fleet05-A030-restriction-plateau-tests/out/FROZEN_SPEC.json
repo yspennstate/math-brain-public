@@ -1,0 +1,15 @@
+{
+ "helper_version":"A030-nonpoint-two-core-v1; imported A030-plateau-reserve-v1 definition prefix",
+ "family":"arbitrary h on one or two controls selecting independent two-bit cores from constants +/-1, dictator, negative-majority AND2 and parity2",
+ "domain":"all 20 controller truth tables; 25 ordered core pairs; prices (Cdata,Ccontroller)=(0,0),(4,1); controls-first and u0,h0,v0,h1-if-present,u1,v1 policies",
+ "case_count":"500 roots,900 control faces,2000 complete tree-price records; pilot first two h tables at each dimension and core pair domain {dictator,AND2}:16 roots,64 trees",
+ "symmetry":"none; five named cores are a test family, not a symmetry exhaustion of all cores",
+ "arithmetic":"integer Walsh; Fraction prime-log exact equality and rational 40-term atanh intervals with proved tail",
+ "memory_estimate_mb":240,
+ "pilot_max_runtime_seconds":55,
+ "main_max_runtime_seconds":595,
+ "maximum_physical_dimension":6,
+ "automatic_dimension_increase":false,
+ "gpu":false,
+ "job_policy":"pilot first; main only following PASS; sequential jobs"
+}

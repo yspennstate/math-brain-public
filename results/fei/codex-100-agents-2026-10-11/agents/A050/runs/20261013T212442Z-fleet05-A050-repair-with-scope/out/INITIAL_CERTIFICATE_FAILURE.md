@@ -1,0 +1,5 @@
+The first main execution completed the frozen Boolean/tree domain, then failed the strict underrefund sign assertion for the fixed k=128 witness. The rational interval routine scaled a near-one mass 1-epsilon to nearly 2 and subtracted a separately enclosed ln(2). Its absolute enclosure width did not resolve epsilon at this witness. No failed theorem sign was inferred from that insufficient interval and no PASS was saved.
+
+The unchanged domain is retried with reciprocal range reduction log(x)=-log(1/x) for x in [1/2,1). This keeps the atanh argument near zero for near-one entropy masses and preserves exact outward endpoints. No precision or dimension increase, new witness, or tolerance is introduced.
+
+The second execution certified the witness sign, then reached Python's default 4,300-digit conversion cap while serializing enormous exact interval fractions. The output representation is now rounded outward, by rational integer floor/ceiling only, to a fixed 2^-1024 grid. All mathematical signs are still tested on the unrounded exact intervals; endpoint containment is verified before serialization. The cap is not disabled and no huge artifact is created.

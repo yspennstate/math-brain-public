@@ -1,0 +1,41 @@
+--- a/~/math-brain-inbox/w439/bundle_002.json
++++ b/~/math-brain-inbox/w439/bundle_002.json
+@@ -0,0 +1,38 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w439",
++  "bundle_slug": "p0043-c0084-source-correction-draft-w439-002",
++  "entries": [
++    {
++      "key": "source-correction",
++      "namespace": "probability.percolation",
++      "logical_name": "exponential-growth-critical-connectivity-proof-uses-subcritical-susceptibility",
++      "kind": "concept",
++      "title": "DRAFT: Correct the susceptibility endpoint in the C0084 attempt",
++      "statement": "DRAFT source correction, pending independent review. In Hutchcroft's arXiv:1605.05301, the exponential-growth connectivity bound uses finite susceptibility only for p<p_c (Theorem 6). Supermultiplicativity of kappa_p(n)=inf{P_p(x connects to y):d(x,y)<=n}, followed by left continuity of sup_n kappa_p(n)^(1/n), transfers the rate bound to p_c. The proof does not require finite susceptibility at p_c or a branching-random-walk comparison. On the 3-regular tree the critical susceptibility is infinite, so an ordinary finite-critical-susceptibility interpretation of the old C0084 attempt is false. Its undefined qualifier 'spherically averaged' is not treated as a separate established theorem.",
++      "proof_text": null,
++      "assumptions": [
++        "iid Bernoulli bond percolation",
++        "connected locally finite quasi-transitive graphs of exponential growth for Hutchcroft's rate bound",
++        "the old C0084 attempt is unverified concept material",
++        "this corrects a source description, not the full P0043 problem"
++      ],
++      "domain": "probability theory, percolation, source auditing",
++      "source": {
++        "source_id": "owner-own-work:w439:p0043-c0084-source-audit-20261010",
++        "url": "https://arxiv.org/html/1605.05301",
++        "revision": "primary-v1-2016-05-17-audited-2026-10-10",
++        "license": "owner-own-work (campaign source audit; mathematical facts paraphrased from attributed primary source)",
++        "excerpt": "expected cluster size is finite for every p<p_c"
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "source-correction",
++      "to_existing_logical": "math:probability.percolation:attempt-c0084-no-infinite-cluster-at-criticality-on-quasi-transitive-graphs-with-p-c",
++      "kind": "cites",
++      "rationale": "This source-audit concept identifies a specific endpoint and method-description error in the existing unverified C0084 attempt, without rejecting every sentence or the original conjecture."
++    }
++  ]
++}

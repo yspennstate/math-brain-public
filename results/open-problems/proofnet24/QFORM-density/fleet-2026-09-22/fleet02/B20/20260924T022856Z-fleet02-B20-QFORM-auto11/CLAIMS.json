@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "fleet02",
+  "slot": "B20",
+  "run_id": "20260924T022856Z-fleet02-B20-QFORM-auto11",
+  "status": "ESSENTIAL_STEP_APPLIED_FULL_QFORM_OPEN",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_FULL_TARGET",
+  "claims": [
+    {
+      "id": "QFORM-FINITELOCALIZED-ACTIVE-DIRECTION-PEEL-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "At the fleet01/B02 r43 finite-localized endpoint A=D+R+E with ||D||op<1/8, rank R<=42, s3(R)>0.8749992111292801 and ||E||F<7.888707199262311e-7, either a completed physical-E3 Fourier exit gives density <479.633, or an exact retained-tail decomposition has rank 3..42, s3>0.7370029475929075, tail Frobenius <0.13799705240709254 and a carrier direction with >1/2 physical mass on <=28224 original coordinates and carrier action >=1/64.",
+      "proof_key": "Successive low-action carrier compressions have Frobenius-orthogonal coefficient increments, so after m peels the retained-tail loss is <sqrt(2m)/64 rather than m*sqrt(2)/64."
+    },
+    {
+      "id": "QFORM-FIXEDE2-NORMALIZED-ACTIVELOCALIZED-v1",
+      "status": "PROVED_SYNTHESIS_REDUCTION",
+      "statement": "Every literal physical block with e2>z0=6.135907148606825e-6 can be globally normalized by Lambda=16.405318852237478 into the fleet01/B02 E2>4/9 compiler. Apart from paid branches and the already-tracked giant near-rank-one branch, the original matrix has an exact active-localized certificate with s3(carrier)>0.04492463415256264, retained-tail Frobenius <0.008411726321812482, physical support <=28224 and carrier action >=0.0009524350084709843."
+    },
+    {
+      "id": "QFORM-R44-CURVATUREFLIP-E2-OR-COMMONHUB-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For the r44/B20 curvature flip, with M=A[P,Q] strong-top-four, s2(M)<1/64, ||M||F^2>961/4096 and H=A[P,R] with ||H||op>0.1120996781, either the augmented literal cut B=[M H] has e2(BB^T)>z0, or H is within Frobenius 0.005162583810831281 of the top left singular line of M and its aligned operator norm exceeds 0.1069370942891687.",
+      "proof_key": "e2([M H][M H]^T)>=s1(M)^2||(I-u1u1^T)H||F^2 and s1(M)^2>60351/262144."
+    }
+  ],
+  "designated_partner": {
+    "worker": "fleet03/B20",
+    "run": "20260924T014735Z-fleet03-B20-QFORM-r44",
+    "canonical_commit": "d579d083dcdd2d2a7757632dabbe94ec15adfa40",
+    "exact_expression_used": "eps_r44=sqrt(6)/32 and s3(S)>=1/4 feed the preceding B20 physical full-cut floor c0=((sqrt(766)-4sqrt(3))^2)/16384; this run advances the surviving E2/curvature-flip descendants."
+  },
+  "pinned_source_application": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "result": "unrestricted physical D5 theorem",
+    "application": "On the live literal full cut, e5(N^T N)>=1/1024 implies ||p_Q||infinity<=10sqrt(2e)<23.317 with arbitrary same-bank curvature and tails retained."
+  },
+  "first_unpaid_implication": "QFORM-ACTIVELOCALIZED-OR-COMMONHUB/GIANTR1-PAYMENT-v1",
+  "corrections_preserved": [
+    "NO_LAW_UNIFORM_POINTWISE_QUADRATIC_PHASE_DECAY",
+    "NO_WORST_FIBER_SUPREMUM_SHORTCUT",
+    "NO_POST_ROTATION_INDEPENDENCE",
+    "NO_NONZERO_TAIL_DELETION",
+    "NO_ONE_GOOD_MINOR_FROM_AGGREGATE"
+  ],
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

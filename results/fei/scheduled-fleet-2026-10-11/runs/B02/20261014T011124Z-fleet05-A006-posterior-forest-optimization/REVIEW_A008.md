@@ -1,0 +1,23 @@
+# A008 complete mass v1: formal claim HOLDS, auxiliary source sentence ERROR
+
+Reviewed claim: A008-COMPLETE-QUEUE-DEGREE-WEIGHTED-DETERMINANT-MASS@1, statement SHA256 f64b142a5309e20059893f5fba1082151a3b74f4beb6e13849c6f2b07d5f2f3f. I reconstruct the WHOLE formal statement at its unchanged scope. No repair to that formal statement is supplied. The separate auxiliary sentence in COMPLETE_MASS.md's sharp-separation section, 'In (1), each t_u=1/2 (uniform singleton choice)', is false. It must not be used to evaluate actual probabilities. This review does not mark every sentence of that source as correct.
+
+## Formal claim reconstruction
+
+The source generator's conditioned initial roots have mass product_root(lambda*pi)/D, D=product_all(1+lambda*pi)-1. Every remaining visited gate is drawn exactly once as a child, so the whole label factor is product_used lambda. Each visit then pays the complete original size/subset draw t_u, child-count law 1/[(c_u+1)(c_u+2)], and one of binom(s_u+c_u-1,c_u) uniform multisets. Fixed ordering of occurrences still allows exactly product_(u,j)h_(u,j)! distinct sequences of child IDs within repeated attachment groups. Root order and order between distinct attachment coordinates give no extra entropy.
+
+The incoming-Laplacian row expansion selects parents; cycle terms vanish by row dependence; parent-first acyclic terms have determinant one. Expanding edge sums selects attachments. Thus applying N_s to T gives exactly the above degree/multiset/chronological factors, and Q_tau=product_used(lambda*t)*N_s(T)/D. The actual queue event uniquely recovers owned subsets, parents, attachments and child-slot sequences; assignments are disjoint. Summing these terminating partition events gives an output subprobability <=Q_*. Failure and infinite paths are not assumed absent.
+
+The independent per-gate moments are E B^c=2/[(c+1)(c+2)], E Y^c=c!, and E product Z_j^h_j=(s-1)!product h_j!/(s+c-1)!. The beta and simplex formulas follow by integer beta integration by parts; the exponential formula follows by integer integration by parts. Multiplying and then multiplying by 1/2 yields exactly N_s's monomial coefficient. Independence holds between gates, not SCC factors sharing variables. No numerical Monte Carlo substitution is used.
+
+Coefficientwise, 2<= (c+1)(c+2)<=2*3^c and 1<=binom(s+c-1,c)<=2^(s+c). Multiplication gives 2^(-(a+g+e))*3^-e*M(T)<=N_s(T)<=2^-g*M(T). The finite star has parent s=1,c=e and e zero-child leaves, yielding N_s(T)=pi*e!/[(e+1)(e+2)2^e]. This operator identity does not use any assertion that t_u=1/2. The complete Q still multiplies the correct t_u. The formal claim's separation, probability representation, all-factor mass formula, posterior final-output identity and universal boundary all hold unchanged.
+
+## Auxiliary error, exact witness and scope
+
+For a width-two support, Pr(size=1)=1/2 and then a singleton is chosen with probability theta_j/(theta_1+theta_2). Both theta values are strictly positive. Consequently t({j})<1/2 for every order cover. If both endpoint orders are present, theta_1=theta_2=1 and t({j})=1/4 exactly, an immediate rational counterexample. With the one common-first order used in the original sunflower, a=2^-6/5, t({common})=1/[2(1+a)] and t({private})=a/[2(1+a)]. Neither is 1/2. The exact fifth-power enclosure 1/4<a<1/2 proves the same without floating point.
+
+This error is not in the formal claim and is not needed for its main proof, comparison bounds or stripped star coefficient. I therefore record formal-statement acceptance together with a source-bound auxiliary correction, not a broad rejection and not unqualified source acceptance. Replacing actual t by 1/2 WOULD break complete queue probabilities, and any downstream calculation doing so must be recomputed. A009's two-order matching source uses the correct t=1/4 and is not affected by this error. My maximal-matching completion likewise uses actual 1/4 and 1/6 probabilities independently.
+
+## Independent validation
+
+code/check.py imports no A008 or A009 checker. It verifies 209 monomial moment/comparison instances with s=1,...,4 and total degree c=0,...,5, including the singleton and empty-degree boundary. It compares newly constructed actual chronological queue probabilities against the completed star formula over every labelled n=3/n=4 graph and two fixed weight vectors. The operator check and exact auxiliary witness are saved immediately in out/A008_OPERATOR_REVIEW.json. The analytic reconstruction above covers all finite references; the finite instances are implementation checks, not extrapolation. Universal PI-J and FEI remain OPEN.

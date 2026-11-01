@@ -1,0 +1,33 @@
+S(singleton)=
+Matrix([[4, 1, 1, 1, 1], [0, 4, 0, 0, 2], [0, 0, 4, 0, 2], [0, 0, 0, 4, 2], [0, 0, 0, 0, 4]])
+P5 layer=
+Matrix([[4144, 5524, 5524, 5524, 23624], [0, 4144, 0, 0, 11048], [0, 0, 4144, 0, 11048], [0, 0, 0, 4144, 11048], [0, 0, 0, 0, 4144]])
+N^3=0: PASS
+P5 = 4144 I + 5524 N + (9050/3) N^2: PASS
+Z/(4144^p 4^r) = (5721483*p**2 + 2146074*p*r + 4689281*p + 201243*r**2 + 872053*r + 1073296)/1073296
+closed forest-count formula: PASS
+edge-pair orbit count = 61: PASS
+59/61 orbit polynomials lie in the nonnegative two-variable Newton cone: PASS
+minimum positive Newton coefficient among regular orbits = 27/32
+minimum positive regular-orbit constant = 36
+EXCEPTION 7 A0:v0-T0 A0:v3-T1
+  negative Newton coefficients = [((0, 3), -9045/4), ((1, 2), -2710776855/268324), ((2, 1), -3019345421055/69495916), ((3, 0), -3169544155395255/17999442244)]
+  denominator cleared by 143995537952
+  Q = 818384192982225*x**4 + 613936295387100*x**3*z - 9136364031753690*x**3 + 172711260505350*x**2*z**2 - 5142562002879630*x**2*z + 490005160552704505*x**2 + 21594118499100*x*z**3 - 964860104843670*x*z**2 + 183808103360018970*x*z + 1457511652994302080*x + 1012468626225*z**4 - 60343130123010*z**3 + 17237278361480625*z**2 + 274875962307331840*z + 1029199467779642880
+  shift (3,0): all 15 monomial coefficients positive; min=1012468626225
+  shift (0,15): all 15 monomial coefficients positive; min=404987450490
+  finite box 0<=x<3, 0<=z<15: 45 exact values; min=1029199467779642880 at (0,0)
+  two-corner lattice sign certificate: PASS
+EXCEPTION 9 A0:v0-T0 A0:v4-T1
+  negative Newton coefficients = [((0, 3), -1287/2), ((1, 2), -439355685/134162), ((2, 1), -577780704357/34747958), ((3, 0), -757908277873749/8999721122)]
+  denominator cleared by 71997768976
+  Q = 32735367719289*x**4 + 24557451815484*x**3*z - 1206956576814066*x**3 + 6908450420214*x**2*z**2 - 679161615580518*x**2*z + 268856412154291161*x**2 + 863764739964*x*z**3 - 127389419462046*x*z**2 + 100847050777720170*x*z + 771304113230371616*x + 40498745049*z**4 - 7964753192970*z**3 + 9456839457089185*z**2 + 145401366389025376*z + 538203482470913280
+  shift (10,0): all 15 monomial coefficients positive; min=40498745049
+  shift (0,50): all 15 monomial coefficients positive; min=40498745049
+  finite box 0<=x<10, 0<=z<50: 500 exact values; min=538203482470913280 at (0,0)
+  two-corner lattice sign certificate: PASS
+unique zero-constant orbit = [(59, 'O0:v0-T0', 'O0:v0-T1')] ; equality only for F_{0,1}=K_{3,1}: PASS
+BRUTE F_(1, 0): n=8 m=19 Z=44340 min_gap=340560 max_gap=49717320
+BRUTE F_(1, 1): n=9 m=22 Z=227080 min_gap=7363344 max_gap=1829342544
+BRUTE F_(0, 2): n=5 m=6 Z=54 min_gap=36 max_gap=90
+ALL_EXACT_CHECKS_PASS

@@ -1,0 +1,8 @@
+{
+  "timing": "before executing either pilot or main helper",
+  "reason": "single n<=3 cores do not force costs across the two-bit threshold; exact disjoint tensor costs provide that guard without enlarging truth-table dimension",
+  "added_domain": {"point3_disjoint_factor_counts": [1,4,16,64], "lottery_lengths": [0,1,2,3]},
+  "arithmetic": "exact tensor additivity; no expanded tensor truth table or dimension extrapolation",
+  "resource_change": "none; estimated below45MB",
+  "lean_admission": "memok exit1: physical free3.9GB below4.0GB; no Mathlib process will be launched"
+}

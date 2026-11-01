@@ -1,0 +1,42 @@
+ROUNDED_SOURCE_SADDLE_DIAGNOSTIC_NOT_A_CERTIFIED_ENDPOINT
+q = 0.9987915696623344
+b = 0.9975845996285498
+a = 3*gamma*b/2 = 6.718433003118395
+lambda_p = 8.150767890649959
+lambda_n = 5.26986059906173
+gamma_b = 4.473542829903896
+ell_ps = 5.856668036248987
+ell_ns1 = 0.5364470029682571
+ell_nu = 3.580001818526844
+Q_safe = 4.380711108236127
+B_can = 0.4578196810673468
+E1 = sum_i f_(i,1,1) = 0.001116323754941311
+old_E = f_(1,1,1) = 1.36156490501267e-05
+E1/old_E = 81.98828794951372
+safe_ratio = 0.7479869238144213
+blocker_ratio = 0.1278825275166306
+leaf_ratio = 0.00208095813522024
+d_ratio = 0.0002661181859882587
+J_old_narrow_NA = 2.528662237095906e-18
+J_new_heterogeneous_NA = 5.368350697300034e-10
+J_new/J_old = 212300030.3696324
+source_base_from_published_rounded_bound = 0.9999999964999897
+source_log_margin = 3.500010287723556e-09
+J_new/source_log_margin = 0.1533809976539145
+TOP_10_J_TERMS
+  i= 5 j= 2 t=0.006170762571904495 p=1.658132138772677e-08 Jterm=1.023193982603992e-10
+  i= 4 j= 2 t=0.004374255192089963 p=2.216792949155975e-08 Jterm=9.696818175113136e-11
+  i= 6 j= 2 t=0.007190189545946557 p=1.240261157758401e-08 Jterm=8.917712866059496e-11
+  i= 3 j= 2 t=0.0024552493412576793 p=2.963678747017736e-08 Jterm=7.276570399141766e-11
+  i= 7 j= 2 t=0.007127374409743213 p=9.276991281182195e-09 Jterm=6.612059056360895e-11
+  i= 8 j= 2 t=0.006143276258672917 p=6.939068170664678e-09 Jterm=4.262861289805865e-11
+  i= 9 j= 2 t=0.004682411299781401 p=5.190332255114036e-09 Jterm=2.430327046403687e-11
+  i= 2 j= 2 t=0.0005107998970357141 p=3.962206627763238e-08 Jterm=2.023894777591132e-11
+  i=10 j= 2 t=0.003198503533957694 p=3.882300657077516e-09 Jterm=1.241755239565305e-11
+  i=11 j= 2 t=0.001979461039314758 p=2.903910125810118e-09 Jterm=5.748176964058841e-12
+DIAGNOSTIC_COMPLETE = True
+NOTE: multipliers are the rounded decimal values printed by Diaz et al.;
+      this diagnostic quantifies the mechanism at that rounded saddle but is
+      NOT interval arithmetic, NOT a global reoptimization, and NOT a new alpha endpoint.
+
+Execution note: produced by executing the matching Python diagnostic during this run.  Values depending on the six source multipliers are only rounded-source diagnostics, not interval-certified theorem constants.

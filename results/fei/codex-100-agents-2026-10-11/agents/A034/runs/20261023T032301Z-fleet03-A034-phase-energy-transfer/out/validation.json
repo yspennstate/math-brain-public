@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "checks": 55769,
+  "runtime_seconds": 2.411518899956718,
+  "partition_summary": [
+    {
+      "nY": 0,
+      "partitions_up_to4": 1,
+      "phase_basis_generators": 1
+    },
+    {
+      "nY": 1,
+      "partitions_up_to4": 2,
+      "phase_basis_generators": 4
+    },
+    {
+      "nY": 2,
+      "partitions_up_to4": 11,
+      "phase_basis_generators": 44
+    },
+    {
+      "nY": 3,
+      "partitions_up_to4": 239,
+      "phase_basis_generators": 1911
+    }
+  ],
+  "label_projection_cases": 4681,
+  "fixtures": [
+    {
+      "nX": 2,
+      "nY": 5,
+      "J0": 0,
+      "A": 1,
+      "B": 2,
+      "states": 2187,
+      "rank_counts": {
+        "0": 972,
+        "1": 972,
+        "2": 243
+      }
+    },
+    {
+      "nX": 3,
+      "nY": 5,
+      "J0": 3,
+      "A": 5,
+      "B": 6,
+      "states": 6561,
+      "rank_counts": {
+        "0": 1944,
+        "1": 2916,
+        "2": 1701
+      }
+    }
+  ],
+  "counterexample": {
+    "lines": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "directions": [
+      1,
+      6,
+      4,
+      3
+    ],
+    "component_energy": "5/4",
+    "sum_energy": "0",
+    "scope": "refutes positive comparison to all component energies, not FEI"
+  },
+  "kappa4_interval": [
+    "2354053626393604955738256015463222596585026411668292912701276346082802312114175516/436207188445491959577931560541268156459092812787944085163095019527975021719198959",
+    "18832429011148839643186406339976642544465468272501225547923617621647888707632981003/3489657507563935675943542038397860694619056747092273242815676713509034792235593472"
+  ],
+  "formal_status": "not Lean-certified",
+  "scope": "exact finite domains plus all-dimensional analytic proof in PROOF.md"
+}

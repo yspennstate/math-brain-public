@@ -1,0 +1,28 @@
+{
+  "run_id": "20260923T010143Z-fleet03-B19-QFORM-r21",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "full_target": "OPEN",
+  "continuous_full_target": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-O3-ROBUST-2PLUS1-GROUPED-PAYMENT-v1",
+      "status": "PROVED_SUPPORTING_TARGET_LEVEL_BRANCH",
+      "statement": "In the exact-rank-three O3 survivor from fleet03/B19 r20, the forced product-preserving one-scalar plus rank-two grouped block with det(L)^2>1/6 has an essentially bounded output density. After cap-normalizing the scalar bank, the active 3x3 matrix has s_min>1/12 and determinant magnitude>1/12. Splitting at scalar pivot |a|=1/24 gives density <236 in the near-null branch via QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1 and <362 in the non-small branch via the rank-two affine half-Riesz theorem. Hence the whole grouped branch has ||p_Q||_infinity<362."
+    },
+    {
+      "id": "QFORM-SCALED-NEARNULL-CROSS-RESOURCE-v1",
+      "status": "PROVED_LEMMA",
+      "statement": "If a symmetric invertible 3x3 matrix B has s_min(B)>=s>0 and scalar pivot |a|<s, then, after rotating only the two-dimensional receiver plane so b=(beta,0) and C=[[c,d],[d,e]], P=beta^2|e| satisfies P >= (1-|a|/s)|det B|."
+    },
+    {
+      "id": "QFORM-PARTNER-NULL-COLOOP-RANGE-APPLICATION-r21",
+      "status": "APPLIED_COMPLETED_PARTNER_RESULT",
+      "statement": "Using fleet04/B19 QFORM-NULL-COLOOP-ADAPTIVE-HY-STABILITY-v1, its residual-diffuse exact null-coloop branch is bounded by <102 throughout residual determinant D in [exp(-8),1], while its source also pays D>=1 by <11.748 and D=0 by <5.844."
+    },
+    {
+      "id": "QFORM-FULL",
+      "status": "OPEN",
+      "statement": "The unrestricted arbitrary-dimension theorem is not proved or disproved by this run; higher O3 internal-rank chambers and arbitrary-extra-spectrum descent remain unpaid."
+    }
+  ]
+}

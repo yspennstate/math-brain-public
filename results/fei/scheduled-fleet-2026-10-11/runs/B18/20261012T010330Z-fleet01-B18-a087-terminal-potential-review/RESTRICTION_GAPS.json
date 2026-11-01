@@ -1,0 +1,30 @@
+{
+  "schema": "fei-restriction-gaps/1",
+  "primary_packet_id": "A087",
+  "reviewed_claim": "B20-A096-TERMINAL-COMPENSATION-v1",
+  "accepted_inputs": [
+    "B05-A023-ORDER-SWAP-CREDIT-BOUNDARY-L-NARROW-v1",
+    "B19-A094-FULL-ORDER-SWAP-CREDIT-BOUNDARY-v1"
+  ],
+  "first_gap": {
+    "gap_id": "G-TERMINAL-POTENTIAL-COHERENCE",
+    "status": "OPEN",
+    "source_location": "B20 NEXT_LEMMA_DERIVATION.tex, paragraph following the one-point-defect telescope",
+    "failed_line": "sum_{terminal l} 2^{-depth(l)} D(f_l) <= C I(f)",
+    "reason": "The B05-B19 D packet is attached to a chosen physical selector/data split. For a general terminal Boolean function there is no source-defined coordinate-free scalar D(f_l), and no next split is specified. The q_n notation suppresses this dependence only because all coordinates are symmetric and the exceptional child is canonical.",
+    "effect": "The q_n chain identity is valid, but it does not instantiate a universal stopping-tree theorem or even a well-posed universal terminal functional.",
+    "repair_target": "Choose one coherent node potential P before the tree, or label every terminal with an admissible terminal split, then prove both local-credit and terminal bounds against the exact influence ledger without repeating a coordinate on a path."
+  },
+  "checked_endpoints": {
+    "constant_child": "packet zero in the q_n chain",
+    "exceptional_child": "q_{n-1} with fair probability 1/2",
+    "terminal_q2": "retained with weight 2^{-(N-2)}",
+    "rare_branch": "path probability exactly 2^{-depth} under fresh fair physical restrictions",
+    "zero_mismatch": "the source chain has no mismatch branch; the constant branch contributes zero packet"
+  },
+  "not_refuted": [
+    "globally selected physical restriction trees",
+    "signed multistep telescoping",
+    "full FEI"
+  ]
+}

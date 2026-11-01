@@ -1,0 +1,81 @@
+{
+  "id": "P0110",
+  "checked_at": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "target_recovered": true,
+  "primary_source": {
+    "title": "50 years of first passage percolation",
+    "authors": [
+      "Antonio Auffinger",
+      "Michael Damron",
+      "Jack Hanson"
+    ],
+    "url": "https://arxiv.org/pdf/1511.03262v2",
+    "locator": "Question 22, printed page 88 (PDF page 89); equation (4.19); repeated in open-question catalogue, printed page 146",
+    "quote": "Find a distribution of passage times where (4.19) holds.",
+    "equation": "chi = 2 xi - 1",
+    "historical_status": "source_says_open"
+  },
+  "campaign_source": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json",
+    "key": "op-p0110",
+    "quote": "Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1.",
+    "prior_status": "attempted_unsolved; current status unverified"
+  },
+  "conditional_theorem": {
+    "url": "https://arxiv.org/pdf/1105.4566v3",
+    "locator": "Theorem 1.1, printed pages 3-4, (A1)-(A4)",
+    "assumptions": [
+      "d >= 2; undirected nearest-neighbor iid FPP",
+      "nearly gamma law with a moment generating function near zero",
+      "chi_a = chi_b and xi_a = xi_b for global endpoint definitions"
+    ],
+    "conclusion": "chi = 2 xi - 1",
+    "role": "existing conditional theorem; not an existence proof",
+    "cutoff": "Original lower definitions allow a sufficiently-large-|v| cutoff. The later paper states lower inequalities over all nonzero v, requiring separate attention to finitely many short endpoints."
+  },
+  "secondary_primary_proof": {
+    "url": "https://arxiv.org/pdf/1109.0523v2",
+    "locator": "Theorems 2.1 and 2.2",
+    "role": "removes nearly-gamma assumption in the positive-chi upper inequality, retaining exponent existence"
+  },
+  "recent_status_check": {
+    "url": "https://arxiv.org/abs/2604.01214",
+    "checked": "2026-10-10",
+    "model": "rotationally invariant planar Riemannian FPP",
+    "result": "variance upper bound O(n^(1-epsilon)); not an iid lattice exponent existence proof"
+  },
+  "prior_attempts": {
+    "H_I_exact_id_search": "no matching P0110 record located",
+    "lean_annotation": "attempted_un; no P0110 theorem receipt located",
+    "owner_solved_work": "width-3 directed-strip time constant is a different target; August campaign scars explicitly retain the exponent gap",
+    "retirement_check": "no retirement certificate located in targeted sources; not a comprehensive certification of openness"
+  },
+  "brain_scars_read": [
+    "fpp_beta_measured_and_it_does_not_move_the_wall_2026_08_15",
+    "openproblem_recon_fpp_chi_target_2026_08_09",
+    "fpp_i3_neighbor_conditioned_sum_is_dep_plus_local_variance_2026_08_22",
+    "perceptron_proof_open_gaps_fleet_2026_07_12"
+  ],
+  "independent_reviewer": "w374; seven scoped mathematical KEEP verdicts, parent gap unproved",
+  "parent_solved": false,
+  "formal_check_receipt": null,
+  "hash_or_source_check_is_mathematical_proof": false,
+  "canonical_population_read": {
+    "store": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+    "node_ids": [
+      "claim_081071dcf812e1c0843a53fe1da486f97876afe30678a091de36c26017e679f0",
+      "claim_a60b9dcbea1c3b4133831211a8107b42fbce24f2c59d8b4b21ede96b3cab07f1"
+    ],
+    "retrieved_count": 2,
+    "mode": "read-only",
+    "artifact": "BRAIN_SOURCE_REPORT.json"
+  },
+  "short_endpoint_hypothesis_check": "For Uniform[1,2], D(0,e_1)=0 for every environment. Original Chatterjee A4 permits a large-distance cutoff; the later all-endpoint wandering lower display cannot apply literally to this candidate.",
+  "cross_triad_boundary": {
+    "w378": "stronger forced-straight cutoff is their lane; our short-endpoint observation is retained only as a source-hypothesis check",
+    "w381": "their terminal-bias/sphere route is distinct from our nonnegative-L2 error transfer",
+    "w375": "their detour route is distinct from our disjoint-cylinder covariance checks"
+  },
+  "review_receipt": "~\\brain_workers\\w372\\PEER_AUDIT_RECEIPT.json"
+}

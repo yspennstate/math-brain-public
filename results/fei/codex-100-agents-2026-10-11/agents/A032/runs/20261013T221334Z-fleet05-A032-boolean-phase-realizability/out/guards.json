@@ -1,0 +1,55 @@
+{
+  "three_bit_defect": {
+    "truth": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "walsh_integers": [
+      6,
+      -2,
+      -2,
+      -2,
+      -2,
+      -2,
+      -2,
+      -2
+    ],
+    "masses": [
+      "5/8",
+      "1/8",
+      "1/8",
+      "1/8"
+    ],
+    "conditional_marginals": [
+      "1/10",
+      "1/2",
+      "1/2",
+      "1/2"
+    ],
+    "Q": "5/8",
+    "I_address": "1/2",
+    "H_address": "3-(5/8)log2(5)",
+    "guard": "retained; not excluded by product hypothesis"
+  },
+  "non_boolean_control": {
+    "function": "psi(x)=product_i (sqrt(15)+x_i)/4, independent of both address variables",
+    "norm_squared": "1",
+    "spectral_marginals": "1/16",
+    "masses": [
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    "Q": "m",
+    "H_address_plus_I_address": "0",
+    "phase_admission_failure": "psi at all-plus is ((sqrt(15)+1)/4)^m>1 for m>=1"
+  },
+  "tensor_scope": "Tensor with an actual Boolean function having product squared spectrum adds only fair or deterministic coordinates (Boolean product rigidity), leaving Q, address masses and address influence unchanged. An arbitrary Boolean tensor seed need not preserve the conditional-product hypothesis; this refinement does not resolve that universal embedding."
+}

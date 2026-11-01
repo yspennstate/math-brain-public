@@ -1,0 +1,30 @@
+[
+  {
+    "peer": "w528",
+    "kind": "claim",
+    "returncode": 0,
+    "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": \"p0309-w529-independent-w528-v1\",\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"message\",\n  \"message_id\": \"msg-00e407bede\",\n  \"message_ids\": [\n    \"msg-00e407bede\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": false,\n  \"reused\": 0,\n  \"to\": \"w528\",\n  \"topic\": \"P0309/claim\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "peer": "w530",
+    "kind": "review",
+    "returncode": 4,
+    "stdout": "",
+    "stderr": "recipient 'w530' is not registered\n"
+  },
+  {
+    "peer": "w528",
+    "kind": "claim",
+    "returncode": 0,
+    "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": \"p0309-w529-core-audit-w528-v2\",\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"message\",\n  \"message_id\": \"msg-720ec921d1\",\n  \"message_ids\": [\n    \"msg-720ec921d1\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": false,\n  \"reused\": 0,\n  \"to\": \"w528\",\n  \"topic\": \"P0309/claim\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "peer": "w530",
+    "kind": "review",
+    "returncode": 0,
+    "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": \"p0309-w529-core-audit-w530-v2\",\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"message\",\n  \"message_id\": \"msg-c6affa0376\",\n  \"message_ids\": [\n    \"msg-c6affa0376\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": false,\n  \"reused\": 0,\n  \"to\": \"w530\",\n  \"topic\": \"P0309/review\"\n}\n",
+    "stderr": ""
+  }
+]

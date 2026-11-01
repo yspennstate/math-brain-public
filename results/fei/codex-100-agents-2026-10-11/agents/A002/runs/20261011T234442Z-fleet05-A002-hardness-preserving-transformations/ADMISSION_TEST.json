@@ -1,0 +1,67 @@
+{
+  "target": "B/H -> 1 with arbitrary seed H/I retained",
+  "units": "bits",
+  "metrics": {
+    "B": "aggregate single-coordinate spectral erasure",
+    "D": "H-B, dual total correlation",
+    "TC": "sum h2(I_i)-H"
+  },
+  "transformations": [
+    {
+      "name": "disjoint tensor",
+      "B": "adds exactly",
+      "H": "adds exactly",
+      "I": "adds exactly",
+      "near_one_admission": "No inflation of B/H for identical seed copies"
+    },
+    {
+      "name": "fresh balancing and characters",
+      "B": "unchanged",
+      "H": "unchanged",
+      "I": "balancing adds 1; character recenters coordinate influences",
+      "near_one_admission": "Balancing does not change B/H; centering changes H/I rather than transporting the original ratio"
+    },
+    {
+      "name": "systematic coding",
+      "B": "sum B_i over zero columns only",
+      "H": "unchanged",
+      "I": "adds E|AS|",
+      "near_one_admission": "Nonzero columns kill their coordinate erasure; separated support has B=0"
+    },
+    {
+      "name": "economical balanced-core activation",
+      "B": "pmB(seed)+s[2p-2p^2+E((1-p)^2,p^2)]",
+      "H": "pmH(seed)+2sp(2-p)+phi((1-p)^2)",
+      "I": "p[mI(seed)+s]",
+      "near_one_admission": "B/H converges to seed fraction; control-dominated limit is 1/2"
+    },
+    {
+      "name": "balanced two-cell selector of z f^m",
+      "B": "mB(seed)/2+E(1,(Ef)^(2m))/2",
+      "H": "2+mH(seed)/2",
+      "I": "3/2+mI(seed)/2",
+      "near_one_admission": "Preserves seed erasure fraction asymptotically for H(seed)>0"
+    },
+    {
+      "name": "bent tensor inflation",
+      "B": "mB(seed)+2r",
+      "H": "mH(seed)+2r",
+      "I": "mI(seed)+r",
+      "near_one_admission": "If seed D>0 and B/H->1, H/I->2; cannot retain ratio>2"
+    },
+    {
+      "name": "bent tensor plus tuned deterministic parity",
+      "B": "mB(seed)+2r",
+      "H": "mH(seed)+2r",
+      "I": "mI(seed)+r+ell",
+      "near_one_admission": "Constructive for seed ratio R in [0,2]; unresolved for R>2"
+    }
+  ],
+  "structural_results": {
+    "exact_B_equals_H": "Product law; dyadic Boolean rigidity yields character times coordinate bent function and H<=2I. Existing source proof reconstructed.",
+    "near_B_equals_H": "Does not force TV closeness or bounded TC/H; actual correlated parity-block bent family disproves both.",
+    "near_class_universal_bridge": "If H<=C_epsilon I on B>=(1-epsilon)H for fixed epsilon in (0,1), then FEI(max(C_epsilon,2/(epsilon ln2)))."
+  },
+  "first_unsupported_line": "Quantitative near-erasure H/I bound at fixed epsilon>0, or a different Boolean embedding preserving a seed ratio>2 while inflating B/H.",
+  "next": "Use all-child deficit certification of minimal high-ratio witnesses, together with D<(2/ln2)I, in a signed Booleanity payment."
+}

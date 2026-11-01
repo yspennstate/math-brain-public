@@ -1,0 +1,24 @@
+I0130_B17_SELECTED_DEPTH_CRITICAL_PASS
+reused_exact_checker=artifacts/2026-09-19T11-50-00Z__b8_b16_b23_multistage_recourse_checker.cpp
+checker_creation_commit=19cd51210329c435eb77071cae9f8c6c40498542
+checker_blob=3f632061497d168eca551ccfe219f7d5c4cc8052
+
+Exact selected-depth invocations of the unchanged p/192 recourse family:
+D=9   P=1779 Q=648230  root depth9 gap8=0   epsilon9=1779/648230
+D=12  P=203  Q=70345   root depth12 gap8=0  epsilon12=203/70345
+D=16  P=684  Q=224135  root depth16 gap8=0  epsilon16=684/224135
+D=20  P=533  Q=169420  root depth20 gap8=0  epsilon20=533/169420
+
+The previously proved monotonicity in epsilon makes each exact zero the restricted critical sensitivity of the corresponding at-most-D operator. No denser action family and no longer old654 terminal horizon is introduced.
+
+d20 exact source-valid arithmetic:
+epsilon20=533/169420
+delta20=1/10+epsilon20=3495/33884
+U_MIV_after=9/10-epsilon20=30389/33884
+L_MIV=19/30
+W_MIV_after=30389/33884-19/30=133937/508260
+U_MIV_before=49748/55441
+exact_improvement=49748/55441-30389/33884=864683/1878562844>0
+max_total_goods=3+20+612=635
+
+Scope: exact for the restricted at-most-20 adaptive recourse operator with z_p=(p/192,1), p=0,...,192, followed by old654 optional-stop continuation. This does not prove the full continuous depth-20 optimum or the source optimum.

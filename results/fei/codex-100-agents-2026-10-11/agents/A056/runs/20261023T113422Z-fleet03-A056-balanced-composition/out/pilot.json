@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "helper": "A056-degree-entropy-boundary-v1.1",
+  "pilot": true,
+  "assertions": 89,
+  "runtime_seconds": 0.0061745000002702,
+  "direct_cases": [
+    {
+      "k": 1,
+      "m": 2,
+      "input_bits": 4,
+      "truth_entries": 16,
+      "truth_sha256": "1d1c58d29a51ddd9418844f8d5688346ad76218001772b52bfb594c89d0c2c14",
+      "I": "2",
+      "true_H": {
+        "2": "2"
+      },
+      "degree_reference_H": {
+        "2": "5/2",
+        "3": "-3/8"
+      },
+      "pointed_witness_H": {
+        "2": "3"
+      },
+      "per_set_witness_H": {
+        "2": "5/2",
+        "3": "1/4"
+      },
+      "per_set_witness_overhead": {
+        "2": "1/2",
+        "3": "1/4"
+      },
+      "coordinate_label_H": {
+        "2": "2"
+      },
+      "true_cross_entropy": {
+        "2": "5/2",
+        "3": "-1/4"
+      },
+      "root_reset_KL": {
+        "2": "1/2",
+        "3": "-1/4"
+      },
+      "old_guard_query_CE_debit": {
+        "2": "2"
+      },
+      "both_guard_children_nonconstant": true,
+      "full_terminal_CE": {},
+      "full_terminal_KL": {},
+      "expected_terminal_reference_H": {},
+      "active_fresh_reset_positive": false,
+      "z_children": [
+        {
+          "sign": 1,
+          "mean": "1/2",
+          "variance": "3/4",
+          "I": "3/2",
+          "fresh_reference_entropy": {
+            "2": "5/2",
+            "3": "-3/8"
+          },
+          "per_set_witness_H": {
+            "2": "9/4",
+            "3": "1/4"
+          },
+          "per_set_witness_overhead": {
+            "2": "1/4",
+            "3": "1/4"
+          }
+        },
+        {
+          "sign": -1,
+          "mean": "-1/2",
+          "variance": "3/4",
+          "I": "3/2",
+          "fresh_reference_entropy": {
+            "2": "5/2",
+            "3": "-3/8"
+          },
+          "per_set_witness_H": {
+            "2": "9/4",
+            "3": "1/4"
+          },
+          "per_set_witness_overhead": {
+            "2": "1/4",
+            "3": "1/4"
+          }
+        }
+      ]
+    }
+  ],
+  "compressed_cases": [
+    {
+      "k": 1,
+      "m": "2",
+      "input_bits": "4",
+      "I": "2",
+      "H_P_upper": "3",
+      "H_P_shrinking_upper": "4",
+      "H_S_lower": "1/2",
+      "H_S_over_I_lower": "1/4",
+      "root_reset_KL_upper": "2",
+      "cross_entropy_P_S_over_I_upper": "5/2",
+      "active_child_I": "2",
+      "both_guard_children_balanced_nonconstant": true,
+      "expected_terminal_H_S_lower": "0",
+      "z_child_absolute_mean": "1/2",
+      "z_child_V": "3/4",
+      "z_child_I": "3/2",
+      "z_child_H_S_upper": "3",
+      "certificate": "EXACT RATIONAL BINOMIAL MOMENTS PLUS ANALYTIC ENTROPY BOUNDS"
+    }
+  ],
+  "all_k_proof": "DERIVATION.md (1)-(15); finite certificates do not establish the all-k limit by extrapolation",
+  "full_FEI": "OPEN"
+}

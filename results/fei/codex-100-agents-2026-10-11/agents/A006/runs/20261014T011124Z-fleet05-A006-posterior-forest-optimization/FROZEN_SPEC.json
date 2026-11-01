@@ -1,0 +1,15 @@
+{
+  "helper_version": "A006-maximal-matching-star-v1",
+  "family": "actual monotone graph prime DNF OR of positive edge conjunctions; both fixed endpoint orders, pi=1/4",
+  "domain": "all 7 nonempty labelled simple graphs on n=3 (pilot), all 63 on n=4 (full); every nonempty covered coordinate set; every inclusion-maximal matching in the induced graph, all choices of neighbors for unmatched vertices, all chronological child-slot permutations",
+  "case_count": "7*7=49 labelled pilot sets and 63*15=945 full labelled sets before omitting uncovered sets; two explicitly frozen global weight vectors per graph, so 98 and 1890 maximum graph-set-weight cases; exact eligible counts recorded in output",
+  "weights": ["lambda_e=1/maximum_degree", "lambda_uv=1/(degree(u)+degree(v))"],
+  "symmetry": "none: all labelled graph tables, covered sets, matchings and actual chronological traces",
+  "arithmetic": "integer truth tables/FWHT and physical edges; exact Fraction queue probabilities, rational root conditioning, exact child-count/multiset factors and factorial multiplicities; no floating entropy sign",
+  "review": "A008 degree operator: s=1,...,4, c=0,...,5, every weak exponent composition; exact beta/exponential/simplex moments and comparison inequalities. Exact width-two singleton auxiliary counterexample, with one-order fifth-power bracket.",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": {"pilot":60,"full":60},
+  "resource_rules": "one foreground job at a time, no GPU, no automatic n escalation, no job above 300 MB planned; no window or background helper",
+  "commands": ["python -X utf8 runs/20261014T011124Z-fleet05-A006-posterior-forest-optimization/code/check.py --pilot", "python -X utf8 runs/20261014T011124Z-fleet05-A006-posterior-forest-optimization/code/check.py"],
+  "proof_boundary": "finite checks certify actual mass/bounds/coverage, not influence payment. Arbitrary finite graphs handled by analytic maximal-matching star proof. Exact initial 104 old zero-mass count is independently compared only on uniform vectors."
+}

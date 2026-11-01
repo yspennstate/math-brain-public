@@ -1,0 +1,11 @@
+EXACT_PASS
+pair_counts_f = [((-6, -2), 2), ((-2, -6), 2), ((-2, 2), 12), ((2, -2), 12), ((2, 6), 2), ((6, 2), 2)]
+pair_counts_0 = [((-8, -8), 1), ((-4, 4), 4), ((0, 0), 22), ((4, -4), 4), ((8, 8), 1)]
+dual_weight_distribution = [(0, 1), (4, 140), (6, 448), (8, 870), (10, 448), (12, 140), (16, 1)]
+C4 = 24 quartic_coefficient = 3/4096
+Rdiff(t) = 9(4t-1) / [2(t+1)(4t+1)(16t+1)]
+Rdiff(1/16) = -108/85
+Rdiff(1/4) = 0
+window_[1/16,1/8] = ln(2*sqrt(51)/15) < 0
+integral_[0,infinity] Rdiff(t) dt = 0 (from exact primitive endpoints)
+f: H=2, I=5/2, H/I=4/5 (not an FEI counterexample)

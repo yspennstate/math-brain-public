@@ -1,0 +1,25 @@
+[
+  {
+    "name": "arxiv_pivotal",
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22second+order%22+AND+all%3Apivotal&start=0&max_results=20",
+    "status": 200,
+    "bytes": 42557
+  },
+  {
+    "name": "arxiv_cerf",
+    "url": "https://export.arxiv.org/api/query?search_query=au%3ACerf+AND+%28all%3Apivotal+OR+all%3A%222608.23661%22%29&start=0&max_results=20",
+    "status": 200,
+    "bytes": 5199
+  },
+  {
+    "name": "openalex",
+    "url": "https://api.openalex.org/works?search=second+order+pivotal+Cerf&per-page=10",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "name": "crossref",
+    "url": "https://api.crossref.org/works?query=second+order+pivotal+Cerf&rows=10",
+    "status": 200,
+    "bytes": 52187
+  }
+]

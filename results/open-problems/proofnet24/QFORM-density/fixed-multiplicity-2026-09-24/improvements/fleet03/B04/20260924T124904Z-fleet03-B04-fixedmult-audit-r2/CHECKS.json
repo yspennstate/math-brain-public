@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "marker": "QFORM_B04_FIXEDMULT_R2_EIGHT_COLLAR_CHECK_PASS",
+  "eta": 0.01,
+  "kappa": 0.00015625,
+  "epsilon_star": 0.053033008588991064,
+  "c_star": 0.9469669914110089,
+  "diagonal_collar_lower": 0.9369669914110089,
+  "offdiagonal_collar_upper": 0.15353176480019997,
+  "delta_star": 0.8543351401911338,
+  "omega1_lower": 2.189322467827192e-8,
+  "xi2_lower": 8.909772116276907e-9,
+  "r1_diagonal_lower": 0.965,
+  "r1_offdiagonal_upper": 0.1254987562112089,
+  "checks": [
+    "eta+sqrt(kappa)<1",
+    "r=1 diagonal-dominance contradiction has positive slack",
+    "delta_star>0",
+    "Omega_1 lower bound positive",
+    "Xi_2 lower bound positive"
+  ],
+  "note": "These finite arithmetic checks support, but do not replace, the symbolic proof in REPORT.md."
+}

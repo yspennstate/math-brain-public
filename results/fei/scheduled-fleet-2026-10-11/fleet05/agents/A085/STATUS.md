@@ -1,0 +1,2 @@
+STATE: A085 stage6 complete: full-support matching-root absolute-TV reset surrogate refuted, both children nonconstant, Z>3/8 despite TV->0 and H<=8I; A099 NR1/NR2/RS1/RS2 scoped HOLDS; FEI OPEN.
+NEXT: A094/A092 review full-support all-n witness; A096/A097 certify one useful weak non-flat reset by weighted likelihood or multiplicative atom control against SAME U+r with old debit and both terminals.

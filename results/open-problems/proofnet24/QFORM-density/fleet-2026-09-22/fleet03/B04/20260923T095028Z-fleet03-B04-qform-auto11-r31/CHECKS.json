@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T095028Z-fleet03-B04-qform-auto11-r31",
+  "theorem": "QFORM-ENTROPY-DUAL-COMPOUND-HUB-v1",
+  "checks": {
+    "h": 0.6666666666666666,
+    "m": 6,
+    "kappa": 1.5,
+    "eta": 0.0625,
+    "fourier_prefactor_h_2_over_3": 25.70102107534928,
+    "fourier_exit_eta_1_over_16": 34.973692473606214,
+    "fleet01_B20_packet_if_E3_ge_2pow_minus18": 279.7895397888497,
+    "explicit_example_r": 0.9,
+    "explicit_example_E3": 1.0,
+    "explicit_example_natural_max_row_marginal": 0.9,
+    "explicit_example_KL_opt_h_half": 0.5108256237659907,
+    "explicit_example_G_half": 0.6,
+    "explicit_example_density_bound": 10.771428003025216,
+    "explicit_example_min_abs_cross_entry": 0.10540925533894596,
+    "explicit_example_singular_values_M": [1.0,1.0,1.0],
+    "explicit_example_spectrum_A": [-1.0,-1.0,-1.0,0.0,0.0,0.0,1.0,1.0,1.0]
+  },
+  "symbolic_identities_checked": [
+    "kappa=(1-3/m)/(1-h)=3/2 at h=2/3,m=6",
+    "C_F(2/3)=9*sqrt(3e)",
+    "eta^(-1/9)=16^(1/9)",
+    "R^T R=I for R=(1/3)[[1,-2,-2],[-2,1,-2],[-2,-2,1]]",
+    "U^T U=I and therefore singular values(UR)=(1,1,1)",
+    "KL(Ber(1/2)||Ber(9/10))=log(5/3), hence G=3/5"
+  ],
+  "status": "PASS",
+  "note": "Finite arithmetic and explicit-matrix checks only; mathematical proof is REPORT.md."
+}

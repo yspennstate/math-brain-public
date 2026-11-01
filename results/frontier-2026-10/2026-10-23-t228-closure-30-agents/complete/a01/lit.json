@@ -1,0 +1,44 @@
+{
+ "at": "2026-10-22T05:45:00+03:00",
+ "by": "claude-4af6ff1a",
+ "verdict": "open",
+ "queries": [
+  "arXiv API 22 Oct 05:2x-05:4x, newest first, ten wordings (listed in claude_4af6ff1a/T2_NOVELTY.md): rerun of 16 Oct plus leaky ReLU, power law stationary, single-index heavy-tailed, stochastic recurrence, Gaussian approximation"
+ ],
+ "newest": [
+  "Keslin-Wu arXiv:2610.14567: Gaussian approximation of constant-step SGD (bulk, not tail)",
+  "Armacki et al. arXiv:2610.10527 and earlier: nonlinear SGD under heavy-tailed noise, rates only",
+  "Rhee-Ryu-Seo arXiv:2503.05219: exit times of Kesten recurrences"
+ ],
+ "note": "Target 2 (scalar leaky ReLU, exact two-sided tail, C+=C->0): no prior statement found at title/abstract level; forward citations of 2006.04740 and 2006.06293 (199 papers) screened too. Closest: 2204.12554, empirical ReLU-gate index, related work.",
+ "history": [
+  {
+   "at": "2026-10-16T02:35:18+03:00",
+   "by": "claude-99aebc7f",
+   "verdict": "open",
+   "queries": [
+    "arXiv API 16 Oct 02:2x, newest first: heavy tail+SGD+stationary; tail index+stochastic gradient; Kesten+stochastic gradient; heavy-tailed+SGD+nonlinear+stationary; iterated random+stochastic gradient"
+   ],
+   "newest": [
+    "Hodgkinson-Mahoney arXiv:2006.06293 Thm 1: two-sided bounds only, limsup t^(alpha+eps)P>0",
+    "Jiao-Keller-Ressel arXiv:2402.01382: homogenized SGD index bounds",
+    "Raj et al. arXiv:2310.18455: offline SGD approximate tails, quadratic"
+   ],
+   "note": "No exact index for any nonlinear model found. GSZ Thm 1 restatement of Mirek asserts c0>0 without nondegeneracy: false as written (counterexample in dossier)."
+  },
+  {
+   "at": "2026-10-22T05:45:00+03:00",
+   "by": "claude-4af6ff1a",
+   "verdict": "open",
+   "queries": [
+    "arXiv API 22 Oct 05:2x-05:4x, newest first, ten wordings (listed in claude_4af6ff1a/T2_NOVELTY.md): rerun of 16 Oct plus leaky ReLU, power law stationary, single-index heavy-tailed, stochastic recurrence, Gaussian approximation"
+   ],
+   "newest": [
+    "Keslin-Wu arXiv:2610.14567: Gaussian approximation of constant-step SGD (bulk, not tail)",
+    "Armacki et al. arXiv:2610.10527 and earlier: nonlinear SGD under heavy-tailed noise, rates only",
+    "Rhee-Ryu-Seo arXiv:2503.05219: exit times of Kesten recurrences"
+   ],
+   "note": "Target 2 (scalar leaky ReLU, exact two-sided tail, C+=C->0): no prior statement found at title/abstract level; forward citations of 2006.04740 and 2006.06293 (199 papers) screened too. Closest: 2204.12554, empirical ReLU-gate index, related work."
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+\section*{A row-marginal-floor closure theorem for three address bits}
+
+All logarithms are base two.  Let
+\[
+ f:\{-1,1\}^{A}\times\{-1,1\}^{Y}\to\{-1,1\},\qquad |A|=3,
+\]
+and write
+\[
+ p(T,U)=\widehat f(T,U)^2,\qquad
+ w_T=\sum_U p(T,U),\qquad q_T(U)=p(T,U)/w_T
+\]
+when $w_T>0$.  Put
+\[
+ \theta_{T,j}=\Pr_{U\sim q_T}[j\in U].
+\]
+Thus
+\[
+ I_A(f)=\sum_T|T|w_T,
+ \qquad I_Y(f)=\sum_Tw_T\sum_j\theta_{T,j}.             \tag{1}
+\]
+
+We use the already proved complete three-address marginal ledger
+\[
+ H(w)\le 4I_A(f)+8I_Y(f).                               \tag{2}
+\]
+It follows from the exact three-bit Boolean-fiber trichotomy and a single
+truth-table label payment.  No row-product hypothesis enters (2).
+
+\paragraph{Theorem 1 (marginal-floor closure).}
+Assume that for some $0<\beta\le1$, every $T$ with $w_T>0$ and every
+$j\in Y$ satisfies
+\[
+ \theta_{T,j}=0\quad\hbox{or}\quad \theta_{T,j}\ge\beta. \tag{3}
+\]
+Then
+\[
+ \boxed{
+ H(f)\le4I_A(f)+\left(8+{h_2(\beta)\over\beta}\right)I_Y(f).} \tag{4}
+\]
+In particular this is dimension independent for every fixed $\beta$.
+Neither independence of the coordinates under $q_T$, nor a common row law,
+nor a sign/phase hypothesis is required.
+
+\paragraph{Proof.}
+The full squared-spectrum chain rule is
+\[
+ H(f)=H(w)+\mathcal R_Y(f),\qquad
+ \mathcal R_Y(f)=\sum_Tw_TH(q_T).                        \tag{5}
+\]
+Entropy subadditivity for the indicator vector of $U\sim q_T$ gives
+\[
+ H(q_T)\le\sum_j h_2(\theta_{T,j}).                      \tag{6}
+\]
+The function $h_2(x)/x$ is strictly decreasing on $(0,1)$, since
+\[
+ {d\over dx}{h_2(x)\over x}={\log_2(1-x)\over x^2}<0.  \tag{7}
+\]
+Consequently (3) implies
+\[
+ H(q_T)\le {h_2(\beta)\over\beta}\sum_j\theta_{T,j}.
+\]
+After multiplying by $w_T$, summing in $T$, and using (1),
+\[
+ \mathcal R_Y(f)\le {h_2(\beta)\over\beta}I_Y(f).       \tag{8}
+\]
+Equations (2), (5), and (8) prove (4). \qed
+
+\paragraph{Corollary 2 (fair/frozen row closure).}
+If every row marginal belongs to $\{0,1/2,1\}$, then
+\[
+ \boxed{H(f)\le4I_A(f)+10I_Y(f)\le10I(f).}             \tag{9}
+\]
+This covers correlated row laws: for example, a row law uniform on an
+arbitrary affine spectral subspace has only deterministic or fair coordinate
+marginals, whether or not that subspace is a coordinate cell.  Arbitrary
+Fourier phases are allowed.  Thus (9) is strictly a marginal theorem, not a
+hidden product or orthogonality assumption.
+
+The prior row-monomial theorem had $\mathcal R_Y=0$ and constant eight.
+Corollary 2 enlarges it to rows with exponentially many, mutually correlated
+Fourier atoms, at the honest combined constant ten.  The coefficient ten
+does not pretend that the $8I_Y$ truth-table-label charge and the $2I_Y$ row
+entropy charge are disjoint; both terms are retained in the final budget.
+
+\paragraph{A growing non-monomial family.}
+Let $h$ be any three-bit Boolean gate.  On mutually disjoint even-dimensional
+blocks $Y_i$, let $b_i$ be a bent Boolean function, and set
+\[
+ F(a,y)=h(a_1b_1(y_1),a_2b_2(y_2),a_3b_3(y_3)).         \tag{10}
+\]
+Expanding $h$ shows that row $T$ is
+$\widehat h(T)\prod_{i\in T}b_i$.  Its squared spectrum is fair on every
+coordinate in $\bigcup_{i\in T}Y_i$ and frozen elsewhere, so (9) applies in
+arbitrary data dimension.  In fact the exact formulas are
+\[
+ H(F)=H(h)+\sum_i |Y_i|\,\operatorname{Inf}_i(h),
+ \quad
+ I(F)=I(h)+\frac12\sum_i |Y_i|\,\operatorname{Inf}_i(h). \tag{11}
+\]
+The three-bit fiber inequality $H(h)\le4I(h)$ therefore gives the sharper
+$H(F)\le4I(F)$ for this explicit family.
+
+\paragraph{Why the parameter cannot simply be deleted.}
+The scalar cost in (8) satisfies
+\[
+ {h_2(\beta)\over\beta}=\log_2(1/\beta)+\log_2 e+o(1)
+ \qquad(\beta\downarrow0).                              \tag{12}
+\]
+This divergence is sharp for entropy subadditivity, already for a one-bit
+Bernoulli row law.  Actual Boolean compatibility can sometimes pay such a
+rare row through address energy or arithmetic granularity, but that payment
+is not contained in (6).  Indeed, on one data bit a genuine four-bit point
+defect produces a three-address row marginal $1/50$, so the fair/frozen
+hypothesis is not automatic even in the smallest extension.
+
+The next unpaid lemma is therefore a Boolean-coupled rare-marginal payment:
+replace the minimum $\beta$ in (4) by address/granularity reserves without
+reusing the $8I_Y$ complete-label payment.  A fixed-$K_3$ result would still
+leave the general-$k$ truth-table distance loss $2^k$ unresolved.
+
+\paragraph{Scope.}
+Theorem 1 and Corollary 2 are proper-class FEI theorems.  They do not prove
+the unrestricted conditional-product $K_3$ theorem, a bounded recurrence in
+$k$, or full FEI.

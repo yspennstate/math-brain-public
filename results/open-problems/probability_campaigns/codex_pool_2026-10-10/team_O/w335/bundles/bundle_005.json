@@ -1,0 +1,43 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w335",
+  "bundle_slug": "w335-p0255-20261010",
+  "entries": [
+    {
+      "key": "p0255-weighted-star-cv",
+      "namespace": "probability.random-graphs",
+      "logical_name": "weighted-star-nearest-unvisited-walk-coefficient-of-variation-bound",
+      "kind": "lemma",
+      "title": "An absolute variation bound for weighted-star NUV walks [draft; pending w347]",
+      "statement": "For a finite star with at least one leaf and positive edge lengths, and a nearest-unvisited walk that stops after all vertices are visited, every random start distribution satisfies sd(L)/E L<=1/(2*sqrt(6)). For at least two leaves, write S for the sum of all edge lengths and w_1>=w_2 for the largest two. All lengths lie in [2S-w_1-w_2,2S-w_1], whose endpoint ratio is at most 3/2. A one-leaf star has constant positive length and coefficient zero. The constant is sharp over arbitrary start distributions; the uniform-start case is included but no optimality claim for that subclass is made. This does not prove an absolute bound for arbitrary graphs.",
+      "proof_text": "Consider a star with m>=2 leaves, positive leaf-edge lengths w_i, total S, and largest two lengths w_1>=w_2. A nearest-unvisited walk stops when every vertex has been visited; it does not return to its start. Its length from the centre is B=2S-w_1. From leaf r it first visits the centre and then the remaining leaves in increasing edge-length order, giving L_r=2S-w_r-max_{j!=r} w_j. Ties between equal weights do not change the total length.\n\nHence every start length lies between A=2S-w_1-w_2 and B. Since S>=w_1+w_2 and w_1>=w_2, B>=3w_2 and B/A<=3/2. For any random start, not only the uniform law, if u=E L then averaging (L-A)(B-L)>=0 gives Var(L)<=(B-u)(u-A). Further,\n\n    (B-A)^2/(4AB) - (B-u)(u-A)/u^2\n      = ((A+B)*u-2AB)^2/(4AB*u^2) >= 0.\n\nThus sd(L)/E L <= (B-A)/(2 sqrt(AB)) <= 1/(2 sqrt(6)). A one-leaf star has constant length and ratio zero. This proves an absolute bound for the weighted-star class requested as a boundary case of P0255.\n\nThe constant is sharp if arbitrary start distributions are allowed: on the three-vertex star with both weights one, give the centre probability 2/5 and each leaf probability 3/10. Then L is three with probability 2/5 and two with probability 3/5, giving Var(L)/(E L)^2=1/24. Under the uniform law that same star has coefficient sqrt(2)/7; no claim of optimality within the uniform-start subclass is made.",
+      "assumptions": [
+        "Positive weighted star with at least one leaf",
+        "Walk stops on visiting the final new vertex",
+        "Arbitrary random starting vertex"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w335:p0255-weighted-star-cv",
+        "url": "file:///~/brain_workers/w335/P0255_proof.md",
+        "revision": "author-checked-20261010-pending-independent-w347",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0255-weighted-star-cv",
+      "to_existing_logical": "math:probability.core:open-problem-p0255-variation-of-nearest-unvisited-walk-length-under-a-random-start",
+      "kind": "specializes",
+      "rationale": "New card: \"This does not prove an absolute bound for arbitrary graphs\"; existing card: \"For every finite positive-length graph G and a uniform initial vertex V, is sd(L_NUV(G,V))/E L_NUV(G,V) bounded by an absolute constant? Source: Aldous: The Nearest Unvisited Vertex Walk on Random Graphs,internal date26August2021, Conjecture5 and stronger Open Problem4,PDF8. Stat\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    },
+    {
+      "from_key": "p0255-weighted-star-cv",
+      "to_existing_logical": "math:probability.core:attempt-p0255-variation-of-nearest-unvisited-walk-length-under-a-random-start",
+      "kind": "specializes",
+      "rationale": "New card: \"endpoint ratio is at most 3/2\"; existing card: \"a rigorous O(sqrt(log n)) coefficient-of-variation bound follows\"."
+    }
+  ]
+}

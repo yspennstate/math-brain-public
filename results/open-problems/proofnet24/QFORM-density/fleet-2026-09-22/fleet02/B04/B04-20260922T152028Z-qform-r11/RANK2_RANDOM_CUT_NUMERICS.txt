@@ -1,0 +1,14 @@
+Exact numerical evaluation used in RANK2_RANDOM_CUT_ADDENDUM.md
+
+Code:
+
+import mpmath as mp
+mp.mp.dps = 30
+C12 = mp.mpf('11.266628550156485788')
+print(C12 * 17**(mp.mpf(1)/8))
+
+Output:
+
+16.0546222488935199852795487844
+
+The displayed bound was rounded upward in printed precision as 16.0546222489.

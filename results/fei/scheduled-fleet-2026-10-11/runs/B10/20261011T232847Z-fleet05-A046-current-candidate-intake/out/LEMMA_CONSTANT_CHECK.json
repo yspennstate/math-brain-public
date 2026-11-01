@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "check_count": 14,
+  "checks": [
+    "20 < exp(3) < 1000/49, hence 49/1000 < exp(-3) < 1/20",
+    "h2(49/1000)>7/25",
+    "h2(321/500)>7/25",
+    "R(2/25)<131/500",
+    "sqrt(2/25)<71/250, so sin^2(theta)<321/500",
+    "sqrt(p)/2<exp(-3/2) for p<=2/25",
+    "1-1/(2ln2)>27/100",
+    "(1/4+2/69)/ln2<41/100",
+    "27/100-(41/100)(2/25)>0",
+    "(sin d/d)^2 >= (1-d^2/6)^2 >97/100",
+    "sin^2 d<=d^2<1/3<1/e",
+    "A(d)/d^2>1/2 for d<=301/1000",
+    "log2(511/489)<13/200",
+    "max negative linear loss < A(d) for d>=489/2000"
+  ],
+  "arithmetic": "Fraction; rational exponential tail and atanh logarithm enclosures",
+  "thresholds": {
+    "lemma_A_p_max": "2/25",
+    "lemma_B_p_min": "489/1000",
+    "lemma_B_abs_e_max": "301/1000"
+  },
+  "scope": "analytic lemma constants only; continuum box signs replayed separately"
+}

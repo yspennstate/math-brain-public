@@ -1,0 +1,196 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{The exact odd-face slack of Boolean surgery}\author{A022, B05}\maketitle
+All logarithms are base two unless denoted $\ln$.
+
+\paragraph{General flip set.}
+Let $g:\{0,1\}^m\to\{-1,1\}$ and
+$h=g(1-2\mathbf1_D)$ for a nonempty set $D$ of $s$ vertices.
+The fair physical selector between $g$ and $h$ has disagreement
+$d=s2^{-m}$. If $E(D)$ is the number of internal unordered edges of
+$D$, its odd-face payment at the selector is exactly
+\[
+c_D=\tfrac12 I(gh)=2^{-m}(ms-2E(D)).
+\]
+This depends on the geometry of the flip set, not on the original signs.
+For residual Fourier label $T$ write
+\[
+a_T=\widehat g(T),\quad t_T=2^{-m}\sum_{v\in D}g(v)\chi_T(v),
+\quad e_T=t_T^2,\quad u_T=(a_T-t_T)^2,\quad q_T=u_T+e_T.
+\]
+Then $\widehat h(T)=a_T-2t_T$, $\sum q_T=1$, $\sum e_T=d$,
+and the true selector erasure is $B=\sum q_Th_2(e_T/q_T)$.
+Let $Z$ be the selector spectral bit and $T$ the residual label.
+Its marginal is $\Pr(Z=1)=d$, so
+\[
+\mathcal M=h_2(d)-B=I(Z;T)\ge0.
+\]
+Consequently the exact gap in the lead's odd-face inequality is
+\[
+\boxed{c_D+(\log_2 e)d-B
+=2^{-m}(s\log_2s-2E(D))
++\frac{d+(1-d)\ln(1-d)}{\ln2}+\mathcal M.} \tag{1}
+\]
+At $d=1$ the logarithmic endpoint is interpreted by continuity.
+The first term is nonnegative by cube edge isoperimetry;
+this needs no imported theorem: split $D$ into coordinate halves
+of sizes $a,b$. There are at most $\min(a,b)$ cross edges.
+Induction gives $E(D)\le(a\log_2a+b\log_2b)/2+\min(a,b)$,
+which is at most $(a+b)\log_2(a+b)/2$ because
+$h_2(t)\ge2\min(t,1-t)$ by concavity and its endpoint values.
+the second has the absolutely convergent expansion, for $0\le d<1$,
+\[
+\frac1{\ln2}\sum_{j=2}^{\infty}\frac{d^j}{j(j-1)},
+\qquad \frac{d^2}{2\ln2}\le\text{second term}
+\le\frac{d^2}{2(1-d)\ln2}.
+\]
+Thus a one-point flip ($s=1,E=0$) and an adjacent pair
+($s=2,E=1$) have no isoperimetric excess.
+A separated two-point flip ($E=0$) has excess $d$ exactly.
+More generally a subcube of $2^j$ points has zero excess.
+The spectral mutual information is retained: zero geometric excess
+does not assert equality in the erasure bound.
+
+\paragraph{Adjacent interference.}
+For $D=\{v,v^{(j)}\}$ and $\epsilon=g(v^{(j)})g(v)$,
+\[
+e_T=2^{1-2m}(1+\epsilon(-1)^{\mathbf1_{j\in T}}).
+\]
+Only one half of the labels have mismatch mass. The exact formulas
+keep this cross term and the original coefficient $a_T$.
+The physical $d$ in (1) is not silently replaced by spectral
+minority mass, which can differ for adjacent or larger sets.
+
+\paragraph{Activated bent surgery, arbitrary pattern.}
+Let $k\ge4$ be even, $b$ the quadratic bent sign on $k$ bits,
+$\beta=\mathbb E b=2^{-k/2}$, $\delta=2^{-k}$, $p=2^{-r}$,
+and $A$ the indicator of the all-zero point on $r\ge0$ controls.
+For any $D\subseteq\{0,1\}^k$, set
+\[
+G=1+A(b-1),\quad H=1+A(b(1-2\mathbf1_D)-1).
+\]
+These are actual sign functions. They differ on $D\times\{0\}$,
+so $d=p\delta s$ and
+\[
+c_D=p\delta((k+r)s-2E(D)). \tag{2}
+\]
+For data index $T$ and control index $U$ the exact signed formulas are
+\[
+\widehat G(T,U)=\mathbf1_{T=U=\varnothing}
++p(\widehat b(T)-\mathbf1_{T=\varnothing}),
+\quad t_{T,U}=p\delta\sum_{v\in D}b(v)\chi_T(v),
+\quad \widehat H=\widehat G-2t.
+\]
+Let $F$ select $G,H$. Define
+\[
+S_D=\sum_{v\in D}b(v),\qquad
+A_D=\sum_{v\in D}\sum_{i:v^{(i)}\notin D} b(v)b(v^{(i)}).
+\]
+Only external edges change pivotal status. Therefore
+$I(b(1-2\mathbf1_D))=k/2+2\delta A_D$ and its mean is
+$\beta-2\delta S_D$. The exact influence of $F$ is
+\[
+\boxed{I(F)=p\left[k/2+r(1-\beta)
++\delta(A_D+rS_D+s)\right].} \tag{3}
+\]
+The common flipped edges are absent from $A_D$: no independent-flip
+approximation is made.
+
+\paragraph{Uniform root payment bound, all even k and all r.}
+Write $\alpha=s2^{-k}$ and assume $0<\alpha<1/2$.
+Since $|A_D|\le ks$, $|S_D|\le s$, and $\beta\le1/4$,
+\[
+I(F)\ge p[(k+r)(1/2-\alpha)+\alpha].
+\]
+Together with (2) this proves
+\[
+\boxed{\frac{c_D}{I(F)}
+\le\frac{\alpha(k+r)}{(k+r)(1/2-\alpha)+\alpha}
+\le\frac{2\alpha}{1-2\alpha}.} \tag{4}
+\]
+The selector-root credit at a bad root is either $c_D$ or zero,
+so the same bound holds for its localized contribution. For a fixed
+number of flipped points it tends to zero uniformly in the number
+of controls as $k\to\infty$.
+This proves only root payment. It does not sum descendant credits,
+reuse $I(F)$ in descendants, or assert any universal FEI bound.
+
+\paragraph{Four complete finite tree ledgers.}
+The exact census declares ascending order within each group:
+selector--controls--data, controls--selector--data,
+data--controls--selector, controls--data--selector.
+At each node bad means the strict inequality $B_v>4d_v$.
+Every truth table is constructed from (2), with $k=4$,
+$r\in\{0,2,4\}$, and every subset $1\le s\le4$.
+No symmetry quotient is used. The recorded maximizers concern
+these four specified trees, not all possible adaptive trees.
+The exact rational localized credit is
+$\sum_v2^{-\operatorname{depth}(v)}\tfrac12 I(g_vh_v)
+\mathbf1_{\{B_v>4d_v\}}$.
+
+\paragraph{Constant-child control queries are uniformly good.}
+At a fair split with one constant child, let $d$ be the disagreement
+probability (change the constant's global sign if needed).
+All nonempty residual Fourier packets have equal two-sector masses.
+The empty packet has masses $d^2,(1-d)^2$. Thus, writing
+$\Psi(a,b)=(a+b)\log_2(a+b)-a\log_2a-b\log_2b$,
+\[
+B=2d(1-d)+\Psi(d^2,(1-d)^2).
+\]
+Since $(1-d)^2+d^2\le1$ and the linear remainder bound applies,
+\[
+B/d\le2+d(\log_2e-2)+2d\log_2(1/d)
+\le2+\frac{\log_2 e}{\sqrt e}<3<4.
+\]
+The maximum of the last variable term is at $d=1/(2\sqrt e)$.
+Endpoints are interpreted by continuity. Consequently every
+control query on a one-point activation, regardless of its core,
+is good at threshold 4. Querying all controls first adds no
+localized credit, and exactly scales the active core ledger by $p$.
+This is a transfer identity with terminal cost retained, not an
+independent assumption that the core is easy.
+For the declared $k=4,1\le|D|\le4$ census, the data--selector
+core ledger is exactly zero at every node. Hence the
+control--data--selector order has zero localized credit for
+every integer $r\ge0$, not only $r=0,2,4$.
+
+\paragraph{A descendant obstruction to data-first order, all r.}
+Take $D_3=\{2,4,6\}$ or $D_4=\{2,4,6,11\}$ in binary vertex
+encoding (bit 0 first). After querying data bit $x_0$ and reaching
+$x_0=0$, the next query $x_1$ has disagreement at exactly one
+residual vertex: $y=1,x_2=x_3=0,z=0$. Thus
+\[
+d_v=2^{-(r+3)},\quad c_v=(r+3)d_v,\quad \pi_v=1/2.
+\]
+The underlying first child on $(x_2,x_3,y)$ has signed integer Walsh
+ratios at the flipped vertex
+$2,6,2,-2,-2,2,-2,2$, in the declared frequency order.
+Let $\Phi(a)=((a-1)^2+1)h_2(1/((a-1)^2+1))$ and $p=2^{-r}$.
+The exact normalized node entropy is
+\[
+\frac{B_v}{d_v}=
+\frac18\left[\sum_{T\ne\varnothing}\Phi(r_T)
++(1-p)\Phi(-6)+p\Phi(8/p-6)\right]. \tag{5}
+\]
+For $r\ge1$, $8/p-6\ge10$, so $\Phi(8/p-6)\ge\Phi(-6)$.
+The constant limiting expression in (5) is certified strictly
+above 4 by the saved rational prime-log interval. Therefore this
+descendant is bad for every $r\ge1$.
+Equation (3) specializes to
+\[
+I(F_{D_3,r})=2^{-r}(35+15r)/16,\qquad
+I(F_{D_4,r})=2^{-r}(34+14r)/16.
+\]
+It follows that the complete data-first ledger satisfies
+\[
+\frac{Q_{\rm bad,4}}{I(F_{D_3,r})}
+\ge\frac{r+3}{35+15r}\longrightarrow\frac1{15},\qquad
+\frac{Q_{\rm bad,4}}{I(F_{D_4,r})}
+\ge\frac{r+3}{34+14r}\longrightarrow\frac1{14}.
+\]
+These are lower bounds for the all-r tree; no claim that other
+descendants remain good is needed. The four finite checked orders
+are recorded exactly. These bounded lower bounds are order
+sensitivity, not a divergent-ratio obstruction to the bridge.
+\end{document}

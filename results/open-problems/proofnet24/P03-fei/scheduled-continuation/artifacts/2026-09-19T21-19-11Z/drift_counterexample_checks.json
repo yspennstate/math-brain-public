@@ -1,0 +1,27 @@
+{
+  "full_FEI_proved": false,
+  "universal_finite_drift_constant_proved": false,
+  "former_candidate_L_le_3_Delta_aff": "REFUTED",
+  "counterexample": {
+    "variables": 7,
+    "negative_set": [0, 7, 9, 12, 28, 51, 56, 61, 75, 84, 88, 91, 106, 116],
+    "M": "15/16",
+    "Delta_aff": "1073/2048",
+    "L": {"lower": "1.631649842784", "upper": "1.631649842785"},
+    "L_over_Delta": {"lower": "3.114276680356", "upper": "3.114276680357"},
+    "D_cross": {"lower": "2.537832724544", "upper": "2.537832724545"},
+    "D_cross_over_Delta": {"lower": "4.843878303697", "upper": "4.843878303698"},
+    "certified_lower_bounds": {"L_over_Delta": "> 3.11", "D_cross_over_Delta": "> 4.84"}
+  },
+  "tensor_consequence": "By the previously proved exact tensor additivity of L, D_cross, and Delta_aff, tensor powers give counterexamples in every dimension 7q with the same ratios.",
+  "control_drift_identity": {
+    "statement": "Delta_aff(Gamma_c f)=p^2 Delta_0(f)+2p(1-p)d+c p^2 d^2 for c>=3, p=2^-c, d=1-Ef, Delta_0=2M_0-E M_0(f_v).",
+    "exhaustive_inner_functions_through_bits": 3,
+    "gate_instances_checked": 278,
+    "status": "PASS"
+  },
+  "arithmetic": "Fraction identities plus outward atanh-series logarithm intervals",
+  "status": "PASS",
+  "elapsed_seconds": 16.322,
+  "script_sha256": "25eee980341412861357756c4925e042bc32596590bb389ce5dd55cf96c83b7c"
+}

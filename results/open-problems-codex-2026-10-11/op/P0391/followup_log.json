@@ -1,0 +1,35 @@
+[
+  {
+    "service": "openalex_doi",
+    "query": "https://api.openalex.org/works/https://doi.org/10.1007/s11134-022-09746-x",
+    "date": "2026-10-11",
+    "result": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "openalex_citing",
+    "query": "https://api.openalex.org/works?filter=cites:doi:10.1007/s11134-022-09746-x&per-page=100",
+    "date": "2026-10-11",
+    "result": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "semantic_retry",
+    "query": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1007/s11134-022-09746-x/citations?fields=title,year,externalIds&limit=100",
+    "date": "2026-10-11",
+    "result": "saved",
+    "bytes": 651
+  },
+  {
+    "service": "arxiv_broad",
+    "query": "https://export.arxiv.org/api/query?search_query=all:%22symmetric%20queue%22%20OR%20(all:%22service%20disciplines%22%20AND%20all:%22heavy%20traffic%22)&max_results=50",
+    "date": "2026-10-11",
+    "result": "saved",
+    "bytes": 28663
+  },
+  {
+    "service": "crossref_fralix",
+    "query": "https://api.crossref.org/works?query.title=Time-dependent%20properties%20of%20symmetric%20queues&rows=3",
+    "date": "2026-10-11",
+    "result": "saved",
+    "bytes": 16990
+  }
+]

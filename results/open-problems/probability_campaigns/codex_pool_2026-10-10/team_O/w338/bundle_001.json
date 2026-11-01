@@ -1,0 +1,383 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w338",
+  "bundle_slug": "open-problems-w338-exact-majority-and-scoped-lemmas-001",
+  "entries": [
+    {
+      "key": "w338-p0266-01",
+      "namespace": "probability.stochastic",
+      "logical_name": "allen-cahn-scalar-subcritical-maximal-second-moment-bound",
+      "kind": "lemma",
+      "title": "Author-checked: Scalar Allen-Cahn maximal moment: explicit subcritical bound and critical failure",
+      "statement": "AUTHOR-CHECKED; independent w346 audit PENDING. For dU_t=(U_t-U_t^3)dt+gamma*U_t^2 dW_t, U_0=a>0, and 0<gamma^2<2,\nE sup_{0<=t<=T} U_t^2 <= a^2 exp(2T)*(gamma^2+2)/(2-gamma^2) for every T>0.\nAt gamma^2=2 this expected supremum is infinite, while at every fixed t>0\nE U_t^2=a^2 exp(2t)*(1-exp[-1/(2*a^2*(exp(2t)-1))]) is finite.",
+      "proof_text": "Changing the sign of W permits gamma>0. Put delta=3+2/gamma^2,\nr=1/(gamma*a), s(t)=(exp(2t)-1)/2, and U_t=exp(t)/(gamma*R_{s(t)}),\nwhere dR=dB+(delta-1)/(2R)ds, R_0=r. Ito's formula gives diffusion\n-gamma U^2 and drift U-U^3; change the Brownian sign. For delta>=4 the\npositive, global Bessel construction is standard (comparison with dimension four\nalso rules out a zero hit). Set q=delta-2. The generator annihilates R^(-q).\nThe stopped process before hitting b<r is bounded by b^(-q), so optional\nstopping gives P(inf_{s<=S}R_s<=b)<=(b/r)^q. Consequently, with\nK=a^2 exp(2T) and alpha=q/2>1,\nP(sup U_t^2>x)<=min(1,(K/x)^alpha). Integrating gives K*alpha/(alpha-1),\nwhich is the displayed bound.\nFor delta=4, optional stopping instead yields the exact identity\nP(tau_b<=S)/b^2=r^(-2)-E[R_S^(-2);tau_b>S]. The Gaussian radial\nrepresentation gives E R_S^(-2)=(1-exp[-r^2/(2S)])/r^2: insert\ny^(-1)=integral_0^infinity exp(-lambda*y) d lambda into a four-dimensional\nGaussian integral and substitute v=1/(1+2S lambda). Dominated convergence\ntherefore gives P(tau_b<=S)/b^2 -> exp[-r^2/(2S)]/r^2>0.\nThe random variable sup_{s<=s(T)}(2R_s^2)^(-1), bounded above by sup U_t^2,\nhas a positive 1/x tail coefficient. Its expectation diverges. The same Gaussian\ninverse-moment formula gives the displayed fixed-time second moment.\nThis independently derives the scalar calculation already in the P0266 candidate;\nno renewed review of the old review receipt or novelty certification is claimed.",
+      "assumptions": [
+        "Ito convention; scalar Brownian driver",
+        "Deterministic a>0 and finite T>0",
+        "Scalar equation only; no claim about all additional SPDE hypotheses"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign:w338:allen-cahn-scalar-subcritical-maximal-second-moment-bound",
+        "url": "file:///~/brain_workers/w338/PROOFS.md",
+        "revision": "author-checked-2026-10-10-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "E sup_{0<=t<=T} U_t^2 <= a^2 exp(2T)*(gamma^2+2)/(2-gamma^2)"
+      }
+    },
+    {
+      "key": "w338-c0021-02",
+      "namespace": "probability.boolean",
+      "logical_name": "iterated-three-majority-depth-two-optimal-revealment-and-composition",
+      "kind": "lemma",
+      "title": "Author-checked: Depth-two 3-majority optimum and improved block-composition revealment",
+      "statement": "AUTHOR-CHECKED; independent w346 audit PENDING. For iterated 3-majority f_2 on nine iid fair bits, the minimum expected\nnumber of zero-error single-bit queries is 393/64 and the minimum revealment\nis 131/192. For general depth k, an explicit composed algorithm achieves\ndelta_k <= (131/192)^floor(k/2)*(5/6)^(k mod 2). Thus the achievable exponent\nfor even depths is -log(131/192)/(2 log 3)=0.17399134015245032.\nThis is an achievable bound; it does not determine the exact asymptotic exponent.",
+      "proof_text": "# C0021: exact depth-two decision tree and composition\n\nStatus: exact computational certificate plus a proved composition lemma; pending w346 KEEP. No novelty or full solution is claimed. Local status source is Garban and Steif, *Noise Sensitivity of Boolean Functions and Percolation* (2012), Exercise VIII.5 note, p. 97. The 7 September intake still labels the exponent unverified and unresolved.\n\nLet f_k be iterated majority of three on 3^k independent fair bits. Algorithms query bits and must always return the exact output. Revealment is the largest probability that an individual bit is queried, under the uniform input and internal randomization.\n\nFor k=2, the minimum expected number of queries is 393/64 = 6.140625. Its minimum revealment is 131/192 = 0.6822916667. The usual recursive algorithm has expected cost 25/4 and revealment 25/36. Thus the verified finite-block cost decreases by 1.75%.\n\nThe certificate in check_majority.py examines all 19,683 partial assignments. At a partial assignment with m free bits, let A(s) be the sum of the remaining query counts over its 2^m compatible complete inputs. A(s)=0 if the function is forced; otherwise A(s)=2^m+min_i[A(s with bit i=0)+A(s with bit i=1)]. Every zero-error decision tree must choose an unqueried bit at a nonterminal state, so induction on m proves this recurrence gives the optimum. Randomization cannot beat the minimum of its deterministic trees. All computations use integers; the only division is by 2^9 at the root.\n\nThe independent checks use the 512-entry truth table to verify the terminal condition in every partial assignment, verify every Bellman residual and chosen action, and execute the complete policy on every input. All three error counts are zero; all outputs are correct and the sum of the 512 query counts is 3144. The policy is in majority_policy.json.\n\nRandomize the policy by a uniform automorphism of the full ternary tree. This finite group preserves f_2 and acts transitively on its nine leaves. Each leaf then has revealment (393/64)/9 = 131/192. Conversely, any algorithm's maximum revealment is at least its expected query count divided by nine. This proves the finite-block optimum, subject to audit of the certificate.\n\nFor any k, evaluate each logical bit requested by this depth-two policy using a recursively composed policy on an independent descendant subtree. A logical subtree is selected before any of its own inputs are examined, so its selection event is independent of its bits and fresh internal randomness. At each block, the nine outputs are independent fair bits. A fixed leaf's query probability is consequently the product of the block probabilities. Hence\n\n    delta_k <= (131/192)^floor(k/2) * (5/6)^(k mod 2).\n\nFor even k=2m this is n^(-0.17399134015245032), improving the exponent 0.16595623285353023 of the usual recursive construction. It is an achievable bound, not the exact asymptotic exponent. The former influence lower bound delta_k >= (2/3)^k still applies.\n\nCommand: python -X utf8 ~/brain_workers/w338/check_majority.py. Recorded runtime: 0.570578 seconds. Full measurements are in majority_measurements.json. The correctness checks concern fair independent inputs, zero error, and single-bit query cost; changing those assumptions changes the problem.\n",
+      "assumptions": [
+        "Uniform independent bits",
+        "Zero error; query one previously unqueried bit at each step",
+        "Randomized algorithms may use tree automorphisms and independent subtree randomness"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign:w338:iterated-three-majority-depth-two-optimal-revealment-and-composition",
+        "url": "file:///~/brain_workers/w338/PROOFS.md",
+        "revision": "author-checked-2026-10-10-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "the minimum revealment is 131/192"
+      }
+    },
+    {
+      "key": "w338-c0133-03",
+      "namespace": "probability.randomenvironment",
+      "logical_name": "fair-cookie-walk-zero-speed-and-polynomial-spatial-excursion-tail",
+      "kind": "lemma",
+      "title": "Author-checked: Fair-cookie walk: zero speed, but a polynomial unrestricted excursion tail",
+      "statement": "AUTHOR-CHECKED; independent w346 audit PENDING. For simple symmetric random walk S on Z starting at zero, if tau is its\nfirst positive return to zero and L>=1 is an integer, then\nP(max_{0<=n<=tau}S_n>=L)=1/(2L). Nevertheless S_n/n->0 almost surely.\nThis fair-cookie example satisfies bounded stacks and uniform ellipticity,\nso those assumptions alone do not imply an exponential unrestricted spatial\nexcursion tail. This does not contradict an exponential estimate with a specified\nlinear time budget.",
+      "proof_text": "A positive excursion begins with probability 1/2. From one, the probability\nof hitting L before zero is 1/L: the affine harmonic function u(i)=i/L solves\nu(0)=0,u(L)=1,u(i)=(u(i-1)+u(i+1))/2. Finite-state absorption or optional\nstopping proves this probability. A negative first step cannot reach L before\nreturning to zero. Symmetric one-dimensional walk returns almost surely; this\nalso follows by letting L tend to infinity in the ruin probability. Thus the\ndisplayed unrestricted excursion probability is exact.\nFor zero speed, the independent increments are mean-zero and bounded by one;\nthe exponential-moment bound yields P(|S_n|>=epsilon*n)<=2 exp(-epsilon^2*n/2).\nSummation and Borel-Cantelli, followed by rational epsilon decreasing to zero,\ngive S_n/n->0 almost surely. This solves only the fair-cookie special case.\nThe prior C0133 attempt is conditional on an unproved uniform excursion estimate;\nthe example rules out its unrestricted spatial reading, not its timed reading.\nIf a recurrent path already has a limiting speed, the bounded return subsequence\nforces that limit to be zero, but recurrence does not establish existence of the limit.",
+      "assumptions": [
+        "One-dimensional walk; every cookie is fair",
+        "Unrestricted spatial height until first return",
+        "No conclusion for general excited cookie environments"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign:w338:fair-cookie-walk-zero-speed-and-polynomial-spatial-excursion-tail",
+        "url": "file:///~/brain_workers/w338/PROOFS.md",
+        "revision": "author-checked-2026-10-10-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "P(max_{0<=n<=tau}S_n>=L)=1/(2L)"
+      }
+    },
+    {
+      "key": "w338-p0090-04",
+      "namespace": "probability.branching",
+      "logical_name": "reachable-type-resolvent-certificate-for-pivot-branching-extinction",
+      "kind": "lemma",
+      "title": "Author-checked: Extinction certificate for the types reachable from a pivot population",
+      "statement": "AUTHOR-CHECKED; independent w346 audit PENDING. Let Z be a finite-type Galton-Watson process with finite mean matrix M\n(row i lists expected type-j children) and finite deterministic initial population z.\nLet R be the forward-reachable types from the support of z. If rho(M_R)<1,\nthen w=(I-M_R)^(-1)*1 is finite, positive, and M_R*w=w-1.\nThe expected total population is z_R*w<infinity, hence extinction occurs almost surely.\nUnreachable supercritical types do not affect this conclusion; positive regularity\nis unnecessary. This is a branching-process certificate, not a full interpretation criterion.",
+      "proof_text": "R is closed under positive-mean child edges; a child count of mean zero\nis zero almost surely, so no population leaves R. Since rho(M_R)<1, the\nnonnegative Neumann series sum_{n>=0} M_R^n converges to (I-M_R)^(-1).\nThus w=sum M_R^n*1 has every coordinate at least one and satisfies M_R*w=w-1.\nThe branching property gives E Z_n=z_R*M_R^n. Tonelli gives\nE sum_n |Z_n|=z_R*w<infinity; a nonnegative total population with finite\nexpectation is finite almost surely, which implies extinction.\nFor example, M=diag(1/2,2), z=(1,0), has full spectral radius two but\nreachable mean 1/2 and expected total population two. This can be realized\nwith type-one one-child probability 1/2 and deterministic two type-two children.\nThe result applies to an automaton's pivot process only after its type law and\ninitial support are correctly identified. It makes no critical interpretation claim.",
+      "assumptions": [
+        "Finite type set and finite offspring means",
+        "Correct initial support and mean matrix",
+        "Pivot interpretation requires separate identification of the process"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign:w338:reachable-type-resolvent-certificate-for-pivot-branching-extinction",
+        "url": "file:///~/brain_workers/w338/PROOFS.md",
+        "revision": "author-checked-2026-10-10-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "The expected total population is z_R*w<infinity"
+      }
+    },
+    {
+      "key": "w338-p0090-05",
+      "namespace": "probability.branching",
+      "logical_name": "critical-deterministic-type-cycle-does-not-become-extinct",
+      "kind": "lemma",
+      "title": "Author-checked: Critical multitype deterministic cycles need not become extinct",
+      "statement": "AUTHOR-CHECKED; independent w346 audit PENDING. A three-type Galton-Watson process in which every particle has exactly one\nchild of the next type cyclically has spectral radius one and exactly one particle\nin every generation when started from one particle. Thus criticality alone,\nwithout a nonsingularity hypothesis, does not imply multitype extinction.",
+      "proof_text": "The mean matrix is [[0,1,0],[0,0,1],[1,0,0]]. Its cube is the identity,\nso its eigenvalues have modulus one and its spectral radius is one. Each particle\ndeterministically replaces itself by exactly one particle of the next type;\ninduction gives population one at every generation. This is an abstract branching\nexample and is not asserted to realize all hypotheses of the tree-automaton problem.",
+      "assumptions": [
+        "Deterministic one-child cycle",
+        "No automatic realization as a problem-specific pivot tree"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign:w338:critical-deterministic-type-cycle-does-not-become-extinct",
+        "url": "file:///~/brain_workers/w338/PROOFS.md",
+        "revision": "author-checked-2026-10-10-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "criticality alone, without a nonsingularity hypothesis, does not imply multitype extinction"
+      }
+    },
+    {
+      "key": "w338-p0427-06",
+      "namespace": "probability.queueing",
+      "logical_name": "two-exponential-jobs-no-arrival-continuation-aware-allocation",
+      "kind": "lemma",
+      "title": "Author-checked: Exact no-arrival reduction for two exponentially sized parallel jobs",
+      "statement": "AUTHOR-CHECKED; independent w346 audit PENDING. Two independent jobs have unit-mean exponential inherent work and increasing,\ncontinuous speed curves r_1,r_2 on [0,S], with r_i(0)=0 and r_i(b)>0 for b>0.\nThere are no arrivals, service is divisible and preemptible, and all S servers are\nallocated. Let V_1=1/r_1(S) and V_2=1/r_2(S). The optimal expected sum of\ncompletion times, even over history-dependent allocations, equals\nmin_{0<=b<=S} [2+r_1(b)*V_2+r_2(S-b)*V_1]/[r_1(b)+r_2(S-b)].\nAn optimal policy keeps a minimizing allocation until the first completion,\nthen assigns all servers to the survivor. This does not characterize a queue with arrivals.",
+      "proof_text": "Exponential memorylessness makes the two-alive state independent of consumed\nwork. With a constant split b, the first completion has rate lambda=r_1(b)+r_2(S-b)\nand holding cost two. If job one completes, the survivor value is V_2; if job\ntwo completes, it is V_1. This gives the displayed ratio. Its denominator is\nbounded away from zero on the compact interval: some job always gets at least S/2.\nThe continuous ratio attains its minimum v.\nFor any predictable allocation b_t before the first completion time tau, the\npointwise inequality 2+r_1(b_t)*V_2+r_2(S-b_t)*V_1>=v*lambda_t holds.\nCompensating the first-jump counting process gives\nE integral_0^tau lambda_t dt=1, and the expected terminal survivor cost is\nE integral_0^tau [r_1(b_t)*V_2+r_2(S-b_t)*V_1]dt. Thus every such policy costs\nat least v; a constant minimizing split attains it. The finite-state verification\nalso covers internal randomization. A survivor optimally gets all servers because\nits rate is increasing.\nFor S=4, r_1(b)=min(b,sqrt(b)), r_2(b)=min(b,b^(3/4)), the earlier throughput\nsplit b=1 gives 1.0651926824. Numerical minimization gives b approximately\n1.18331975 and value 1.0642800265 (0.08567989% lower). These numerical digits\nare evidence, not an exact closed form or a Poisson-arrival policy theorem.",
+      "assumptions": [
+        "Independent Exp(1) inherent work",
+        "No arrivals",
+        "Continuous increasing positive speed curves",
+        "Divisible preemptible allocations summing to S"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign:w338:two-exponential-jobs-no-arrival-continuation-aware-allocation",
+        "url": "file:///~/brain_workers/w338/PROOFS.md",
+        "revision": "author-checked-2026-10-10-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "An optimal policy keeps a minimizing allocation until the first completion"
+      }
+    },
+    {
+      "key": "w338-c0032-07",
+      "namespace": "probability.random-matrices",
+      "logical_name": "negative-logarithmic-potential-requires-negative-laplacian-density-sign",
+      "kind": "lemma",
+      "title": "Author-checked: Correct density sign for a negative logarithmic potential",
+      "statement": "AUTHOR-CHECKED; independent w346 audit PENDING. For a finite positive measure mu on C with finite logarithmic moment, define\nU(z)=-integral log|z-w| mu(dw) as a locally integrable potential. In distributions,\nDelta U=-2*pi*mu. If mu has Lebesgue density g, then g=-(1/(2*pi))*Delta U.\nThe positive Laplacian sign used with this negative potential in C0032-A001 is incorrect.",
+      "proof_text": "For a compactly supported smooth test function, integrate log|z| times its\nLaplacian over the complement of a disk of radius epsilon and integrate by parts.\nThe inner boundary term converges to 2*pi times the test function at zero;\nthe term containing epsilon*log(epsilon) vanishes. Thus Delta log|z|=2*pi*delta_0.\nTranslation and Fubini (local integrability and the logarithmic-moment condition)\ngive Delta U=-2*pi*mu. Absolute continuity gives the density formula.\nAs a check, the negative logarithmic potential of uniform probability on the\nunit disk is (1-|z|^2)/2 inside the disk and -log|z| outside; its interior\nLaplacian is -2, so the corrected formula gives density 1/pi rather than -1/pi.\nThis sign correction neither closes the PWIT recursion nor identifies g_alpha.",
+      "assumptions": [
+        "Planar distributional Laplacian",
+        "Finite positive measure with finite logarithmic moment",
+        "Lebesgue density only for the last formula"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign:w338:negative-logarithmic-potential-requires-negative-laplacian-density-sign",
+        "url": "file:///~/brain_workers/w338/PROOFS.md",
+        "revision": "author-checked-2026-10-10-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "Delta U=-2*pi*mu"
+      }
+    },
+    {
+      "key": "w338-c0077-08",
+      "namespace": "probability.percolation",
+      "logical_name": "rare-event-conditioning-needs-joint-test-asymptotics",
+      "kind": "lemma",
+      "title": "Author-checked: Rare-event conditioning requires joint test asymptotics",
+      "statement": "AUTHOR-CHECKED; independent w346 audit PENDING. Unconditional convergence, even almost sure convergence, and an exact\nsurvival probability of order 1/n do not suffice for a conditioned scaling limit.\nFor U uniform on (0,1), let A_n={U<=1/n} and Z_n=a_n*1_{A_n}, with a_n=1\nfor even n and 2 for odd n. Then Z_n->0 almost surely and n*P(A_n)=1 exactly,\nbut Law(Z_n|A_n) alternates between point masses at one and two.\nA valid sufficient replacement on a Polish state space is: n*P(A_n)->c>0\nand n*E[f(Z_n)*1_{A_n}]->c*integral f dnu for every bounded continuous f;\nthen Law(Z_n|A_n) converges weakly to nu.",
+      "proof_text": "Almost every uniform U is positive; once n>1/U the indicator is zero.\nConditioned on A_n, Z_n equals a_n deterministically, so a bounded continuous\ntest separating one from two proves nonconvergence. The event probability is\nexactly 1/n. For the sufficient replacement, divide the assumed joint-test\nasymptotic by n*P(A_n); the resulting conditional expectations converge to nu(f),\nwhich is weak convergence by its bounded-continuous-test characterization.\nThis demonstrates a missing requirement in the shorthand C0077<=C0076+C0066\nwhen only an unconditioned limit and a one-arm constant are supplied. It does not\ndisprove the IIC conjecture or the prior attempt's explicitly added commutation\nassumption. No percolation joint-test asymptotic is proved here.",
+      "assumptions": [
+        "Rare events have positive probability",
+        "Polish state space for weak-convergence criterion",
+        "No assertion that the toy process is percolation"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign:w338:rare-event-conditioning-needs-joint-test-asymptotics",
+        "url": "file:///~/brain_workers/w338/PROOFS.md",
+        "revision": "author-checked-2026-10-10-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "survival probability of order 1/n do not suffice for a conditioned scaling limit"
+      }
+    },
+    {
+      "key": "w338-c0119-09",
+      "namespace": "probability.gaussian",
+      "logical_name": "gaussian-polymer-ou-overlap-bound-from-free-energy-variance",
+      "kind": "lemma",
+      "title": "Author-checked: Dimension-free Gaussian polymer overlap bound conditional on superconcentration",
+      "statement": "AUTHOR-CHECKED; independent w346 audit PENDING. For a finite family of n-step paths and iid standard Gaussian time-site\nenergies X, let F(X)=log sum_paths exp(beta*sum_path X), beta>0. Write\np_j(X) for the Gibbs probability of occupying time-site j, and\nX^t=exp(-t)*X+sqrt(1-exp(-2t))*X', with X' independent. Define\nQ(t)=E sum_j p_j(X)*p_j(X^t). Then\nVar(F)=beta^2*integral_0^infinity exp(-t)*Q(t)dt and\nQ(t)<=Var(F)/(beta^2*(1-exp(-t))) for t>0.\nConsequently Var(F_n)=o(n) and t_n->0 with Var(F_n)/(n*t_n)->0 imply\nQ_n(t_n)/n->0 in every spatial dimension. If additionally Q_n(0)>=c*n,\nthe perturbed overlap is o(Q_n(0)). The needed variance and initial-overlap\nestimates in the target low-temperature regime are not established here.",
+      "proof_text": "Differentiate the finite partition function to obtain partial_j F=beta*p_j.\nThese derivatives are bounded and square integrable. Expand the centered F in\northonormal Gaussian Hermite chaoses: if a_k is its squared L2 mass in degree k,\nthen Var(F)=sum_{k>=1}a_k and\nE <grad F(X),grad F(X^t)>=sum_{k>=1} k*a_k*exp(-(k-1)*t).\nThe latter is beta^2 Q(t), is nonnegative, and decreases with t. Integrating\nagainst exp(-t) gives sum a_k by Tonelli, proving the identity. Integrating\nonly from zero to t and using monotonicity yields\nVar(F)>=beta^2*(1-exp(-t))*Q(t). Division gives the bound. Since\n(1-exp(-t_n))/t_n->1, the asymptotic conclusions follow by the stated hypotheses.\nThis supplies the precise Gaussian OU part of the reduction, not a\ndimension-independent BKS variance theorem or an inference of strong disorder\nfrom endpoint overlap. The finite-difference experiment checks only the Gibbs\ngradient identity in 1D and 3D; the OU identity is proved by the displayed expansion.",
+      "assumptions": [
+        "Finite family of n-step time-indexed paths",
+        "Independent standard Gaussian energies; fixed beta>0",
+        "Unproved asymptotic variance and unperturbed-overlap hypotheses are explicit"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign:w338:gaussian-polymer-ou-overlap-bound-from-free-energy-variance",
+        "url": "file:///~/brain_workers/w338/PROOFS.md",
+        "revision": "author-checked-2026-10-10-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "Q(t)<=Var(F)/(beta^2*(1-exp(-t))) for t>0"
+      }
+    },
+    {
+      "key": "w338-p0010-10",
+      "namespace": "probability.percolation",
+      "logical_name": "biased-square-lattice-finite-outgoing-boundary-balance",
+      "kind": "lemma",
+      "title": "Author-checked: Exact closed-boundary weight in the biased square-lattice orientation model",
+      "statement": "AUTHOR-CHECKED; independent w346 audit PENDING. Independently orient each horizontal Z^2 edge right with probability p\nand each vertical edge up with probability p. For any finite vertex set S,\nif boundary(S) is its set of edges with exactly one endpoint in S, then\nP(no edge leaves S)=[p*(1-p)]^(|boundary(S)|/2).\nIn particular the origin is a sink with probability p^2*(1-p)^2, so the\nprobability theta(p) of an infinite directed path from the origin obeys\ntheta(p)<=1-p^2*(1-p)^2. The boundary condition is necessary but is not\nsufficient for S to be exactly the reachable cluster of the origin.",
+      "proof_text": "On each horizontal lattice line, the indicator of finite S has equally many\n0-to-1 and 1-to-0 transitions. Thus the number of left-side and right-side\nhorizontal boundary edges is equal, say h each. The analogous vertical counts\nare v each. Making every boundary edge point into S requires h+v edges to\nhave their positive-coordinate orientation and h+v to have their negative one.\nIndependence gives [p*(1-p)]^(h+v), and the boundary size is 2(h+v).\nFor a singleton h=v=1, yielding the sink probability. A sink cannot begin an\ninfinite path. Other closed sets can contain vertices not reachable from the\norigin, so this weight alone does not prove stochastic domination or survival\nfor every nonzero bias. Exhaustive boundary orientation checks cover three\nshapes of perimeters four, six, and eight at five rational biases.",
+      "assumptions": [
+        "Independent orientations",
+        "Common right/up probability p in [0,1]",
+        "Finite S; full boundary includes holes"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign:w338:biased-square-lattice-finite-outgoing-boundary-balance",
+        "url": "file:///~/brain_workers/w338/PROOFS.md",
+        "revision": "author-checked-2026-10-10-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "P(no edge leaves S)=[p*(1-p)]^(|boundary(S)|/2)"
+      }
+    },
+    {
+      "key": "w338-p0036-11",
+      "namespace": "probability.percolation",
+      "logical_name": "cayley-spanning-tree-percolation-growth-lower-bound-and-solved-cases",
+      "kind": "lemma",
+      "title": "Author-checked: Growth lower bound and equality cases for Cayley spanning-tree percolation",
+      "statement": "AUTHOR-CHECKED; independent w346 audit PENDING. Let G be an infinite locally finite Cayley graph with ball growth rate\nb=lim_n |B_G(e,n)|^(1/n), and let T be any spanning tree using edges of G.\nThen p_c(T)>=1/b. In particular subexponential growth (b=1) implies p_c(T)=1.\nIf G is the usual 2r-regular Cayley tree of a free group, T=G and\np_c(T)=1/(2r-1)=1/b. The arbitrary exponential-growth geodesic-tree equality\nasked in P0036 is not proved by these cases.",
+      "proof_text": "There is a unique T-path from any vertex v to a vertex at T-distance n.\nThe number of such vertices is at most |B_G(v,n)|=|B_G(e,n)|. A union bound\ngives P(v has an open T-path of length n)<=|B_G(e,n)|*p^n. For p<1/b this\ntends to zero by the definition of the growth rate. An infinite component\nin a locally finite tree gives paths of every length, so every vertex has\nzero probability of an infinite cluster. The countable union over vertices\nalso rules out an infinite cluster anywhere. Hence p_c(T)>=1/b; when b=1,\np_c(T)<=1 proves equality. Geodesicity was not required for this bound.\nIn a free-group Cayley graph that is already a tree, a connected spanning tree\nmust contain every edge, hence T=G. Off the root its bond clusters are\nGalton-Watson with Binomial(2r-1,p) children, giving threshold 1/(2r-1);\nr=1 is the infinite line and also has threshold one.\nThe old comb obstruction is consistent: attach a finite binary tree of height i\nby one edge at spine vertex i. The sphere size is exactly 2^ceil(n/2), but the\nonly infinite ray is the spine, so p_c=1. This comb is not asserted to be a\ngeodesic spanning tree of an exponential-growth Cayley graph.",
+      "assumptions": [
+        "Infinite locally finite Cayley graph and connected spanning tree",
+        "Independent Bernoulli bond percolation",
+        "Free-group equality is only for its usual tree generators"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-campaign:w338:cayley-spanning-tree-percolation-growth-lower-bound-and-solved-cases",
+        "url": "file:///~/brain_workers/w338/PROOFS.md",
+        "revision": "author-checked-2026-10-10-audit-pending",
+        "license": "owner-own-work",
+        "excerpt": "Then p_c(T)>=1/b"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "w338-p0266-01",
+      "to_existing_logical": "math:probability.core:open-problem-p0266-critical-variational-spde-maximal-second-moment-bound",
+      "kind": "generalizes",
+      "rationale": "FROM \"E sup_{0<=t<=T} U_t^2 <= a^2 exp(2T)*(gamma^2+2)/(2-gamma^2)\"; TO \"Does Theorem6.4 imply E sup_{t<=T}||u(t)||_H^2 <= C_T(1+E||u0||_H^2), including the source critical Allen-Cahn model gamma^2=2?\". Explicit scalar bound and critical check; no new full SPDE solution or present-openness certification."
+    },
+    {
+      "from_key": "w338-p0266-01",
+      "to_existing_logical": "math:probability.core:attempt-p0266-critical-variational-spde-maximal-second-moment-bound",
+      "kind": "semantic_association",
+      "rationale": "FROM \"E sup_{0<=t<=T} U_t^2 <= a^2 exp(2T)*(gamma^2+2)/(2-gamma^2)\"; TO \"For deterministic constant initial condition a>0, the critical model reduces to U_t=e^t/(sqrt(2)R_{(e^(2t)-1)/2}) with R a BES4 process.\". Explicit scalar bound and critical check; no new full SPDE solution or present-openness certification."
+    },
+    {
+      "from_key": "w338-c0021-02",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0021-revealment-exponent-of-the-iterated-3-majority-function",
+      "kind": "specializes",
+      "rationale": "FROM \"the minimum revealment\nis 131/192\"; TO \"The revealments of the iterated 3-majority function on 3^k bits decay like n^{-sigma}; determine sigma.\". Exact finite computation and proved composition; novelty and independent audit pending; asymptotic optimum unresolved."
+    },
+    {
+      "from_key": "w338-c0133-03",
+      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0133-zero-velocity-on-the-non-transient-event-for-excited-random-walks",
+      "kind": "specializes",
+      "rationale": "FROM \"P(max_{0<=n<=tau}S_n>=L)=1/(2L)\"; TO \"For excited random walks on Z^d with i.i.d. elliptic environments and a direction l, does X_n . l / n converge to 0 almost surely on the complement of the event {|X_n| -> infinity}?\". A solved special case and a scoped obstruction to the earlier tail route; general C0133 remains unverified."
+    },
+    {
+      "from_key": "w338-c0133-03",
+      "to_existing_logical": "math:probability.randomenvironment:attempt-c0133-zero-velocity-on-the-non-transient-event-for-excited-random-walks",
+      "kind": "semantic_association",
+      "rationale": "FROM \"P(max_{0<=n<=tau}S_n>=L)=1/(2L)\"; TO \"Theorem 4.8 gives lim X_n/n in {v, -cv} a.s.\". A solved special case and a scoped obstruction to the earlier tail route; general C0133 remains unverified."
+    },
+    {
+      "from_key": "w338-p0090-04",
+      "to_existing_logical": "math:probability.core:open-problem-p0090-multistate-pivot-tree-criterion-for-interpretation",
+      "kind": "specializes",
+      "rationale": "FROM \"The expected total population is z_R*w<infinity\"; TO \"Extend the two-state interpretation criterion of Theorem1.7 to finite color sets of size at least3, covering critical and supercritical pivot trees even without positive regularity.\". Generalizes the earlier global subcritical calculation to reachable classes; critical/supercritical interpretation is unresolved."
+    },
+    {
+      "from_key": "w338-p0090-04",
+      "to_existing_logical": "math:probability.core:attempt-p0090-multistate-pivot-tree-criterion-for-interpretation",
+      "kind": "generalizes",
+      "rationale": "FROM \"The expected total population is z_R*w<infinity\"; TO \"For a finite-type pivot branching process with mean matrix M and spectral radius less than1, E[population at level n] tends to0, hence P(level n nonempty)<=E[size] tends to0.\". Generalizes the earlier global subcritical calculation to reachable classes; critical/supercritical interpretation is unresolved."
+    },
+    {
+      "from_key": "w338-p0090-05",
+      "to_existing_logical": "math:probability.core:open-problem-p0090-multistate-pivot-tree-criterion-for-interpretation",
+      "kind": "analogous_to",
+      "rationale": "FROM \"criticality alone,\nwithout a nonsingularity hypothesis, does not imply multitype extinction\"; TO \"Extend the two-state interpretation criterion of Theorem1.7 to finite color sets of size at least3, covering critical and supercritical pivot trees even without positive regularity.\". Refutes only unconditional critical-means-extinct reasoning, not a qualified automaton theorem."
+    },
+    {
+      "from_key": "w338-p0090-05",
+      "to_existing_logical": "math:probability.core:attempt-p0090-multistate-pivot-tree-criterion-for-interpretation",
+      "kind": "semantic_association",
+      "rationale": "FROM \"criticality alone,\nwithout a nonsingularity hypothesis, does not imply multitype extinction\"; TO \"For a finite-type pivot branching process with mean matrix M and spectral radius less than1, E[population at level n] tends to0, hence P(level n nonempty)<=E[size] tends to0.\". Refutes only unconditional critical-means-extinct reasoning, not a qualified automaton theorem."
+    },
+    {
+      "from_key": "w338-p0427-06",
+      "to_existing_logical": "math:probability.core:open-problem-p0427-optimal-allocation-between-two-exponential-parallelism-classes",
+      "kind": "specializes",
+      "rationale": "FROM \"An optimal policy keeps a minimizing allocation until the first completion\"; TO \"Characterize optimal allocation when two classes have different ordered concave speedup curves and unknown exponential inherent sizes.\". Proves a no-arrival two-job reduction; the numeric minimizer is not claimed exactly or for stationary queues."
+    },
+    {
+      "from_key": "w338-p0427-06",
+      "to_existing_logical": "math:probability.core:attempt-p0427-optimal-allocation-between-two-exponential-parallelism-classes",
+      "kind": "generalizes",
+      "rationale": "FROM \"An optimal policy keeps a minimizing allocation until the first completion\"; TO \"Even with two jobs and no arrivals, continuation values change the allocation.\". Proves a no-arrival two-job reduction; the numeric minimizer is not claimed exactly or for stationary queues."
+    },
+    {
+      "from_key": "w338-c0032-07",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0032-explicit-form-of-the-heavy-tailed-circular-law-density",
+      "kind": "semantic_association",
+      "rationale": "FROM \"Delta U=-2*pi*mu\"; TO \"Identify explicitly the isotropic density g_alpha(|z|) of the limiting spectral law mu_alpha of n^{-1/alpha}X for alpha-stable-type entries; only g_alpha(0) and the tail (r^{2(alpha-1)} e^{-alpha r^alpha/2} up to constants) are known.\". Corrects a source-attempt sign; heavy-tailed circular-law density remains unresolved."
+    },
+    {
+      "from_key": "w338-c0032-07",
+      "to_existing_logical": "math:probability.random-matrices:attempt-c0032-explicit-form-of-the-heavy-tailed-circular-law-density",
+      "kind": "refutes",
+      "rationale": "FROM \"Delta U=-2*pi*mu\"; TO \"The density is g_alpha(r) = (1/2pi) Delta_z of the log-potential U(z) = -integral log|z-w| dmu_alpha(w)\". Corrects a source-attempt sign; heavy-tailed circular-law density remains unresolved."
+    },
+    {
+      "from_key": "w338-c0077-08",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0077-incipient-infinite-super-brownian-motion-limit-of-the-high-dimensional",
+      "kind": "analogous_to",
+      "rationale": "FROM \"survival probability of order 1/n do not suffice for a conditioned scaling limit\"; TO \"Show that for d > 6 the rescaled measure-valued process built from the incipient infinite cluster (vertices at intrinsic distance nt, rescaled) converges to incipient infinite super-Brownian motion (SBM with an immortal particle).\". A checked obstruction and precise conditional reduction; not an IIC scaling limit."
+    },
+    {
+      "from_key": "w338-c0077-08",
+      "to_existing_logical": "math:probability.percolation:attempt-c0077-incipient-infinite-super-brownian-motion-limit-of-the-high-dimensional",
+      "kind": "semantic_association",
+      "rationale": "FROM \"survival probability of order 1/n do not suffice for a conditioned scaling limit\"; TO \"The IIC is the limit of the critical cluster conditioned on reaching intrinsic distance n (or on |C| large), which at the level of the branching-process comparison is the Doob h-transform of the critical branching process with h = survival, giving the Kesten tree (a spine plus critical trees); at the continuum level the canonical measure of SBM conditioned on survival to time t and then t -> infinity gives SBM with an immortal particle.\". A checked obstruction and precise conditional reduction; not an IIC scaling limit."
+    },
+    {
+      "from_key": "w338-c0119-09",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0119-chaos-in-directed-polymers-in-dimensions-d-3",
+      "kind": "semantic_association",
+      "rationale": "FROM \"Q(t)<=Var(F)/(beta^2*(1-exp(-t))) for t>0\"; TO \"Prove chaos (sensitivity of the polymer measure to a small perturbation of the environment) for directed polymers in random environment in dimensions d >= 3, at low temperature.\". A conditional Gaussian reduction; no unconditional higher-dimensional chaos solution."
+    },
+    {
+      "from_key": "w338-c0119-09",
+      "to_existing_logical": "math:probability.gaussian:attempt-c0119-chaos-in-directed-polymers-in-dimensions-d-3",
+      "kind": "semantic_association",
+      "rationale": "FROM \"Q(t)<=Var(F)/(beta^2*(1-exp(-t))) for t>0\"; TO \"The source's d = 1+1 proof establishes superconcentration of the free energy (variance o(n)) via hypercontractivity and then chaos from superconcentration through the general equivalence theorem; the dimension-dependent step is the variance bound Var(log Z_n) = O(n/log n), obtained from the Benjamini-Kalai-Schramm influence inequality applied to the free energy with the influence of a single site bounded by the expected overlap of two polymers at that site, whose sum over sites is the expected overlap, of order n in the strong disorder regime.\". A conditional Gaussian reduction; no unconditional higher-dimensional chaos solution."
+    },
+    {
+      "from_key": "w338-p0010-10",
+      "to_existing_logical": "math:probability.core:open-problem-p0010-biased-random-square-lattice-orientations",
+      "kind": "specializes",
+      "rationale": "FROM \"P(no edge leaves S)=[p*(1-p)]^(|boundary(S)|/2)\"; TO \"Does every nonzero orientation bias give positive probability of an infinite directed path from the origin?\". An exact finite-set identity and necessary-event bound; the small-bias survival question is unresolved."
+    },
+    {
+      "from_key": "w338-p0010-10",
+      "to_existing_logical": "math:probability.core:attempt-p0010-biased-random-square-lattice-orientations",
+      "kind": "semantic_association",
+      "rationale": "FROM \"P(no edge leaves S)=[p*(1-p)]^(|boundary(S)|/2)\"; TO \"Reflecting both coordinate axes maps p to 1-p, so the infinite-path probability is symmetric about one-half.\". An exact finite-set identity and necessary-event bound; the small-bias survival question is unresolved."
+    },
+    {
+      "from_key": "w338-p0036-11",
+      "to_existing_logical": "math:probability.core:open-problem-p0036-percolation-threshold-on-arbitrary-geodesic-cayley-spanning-trees",
+      "kind": "specializes",
+      "rationale": "FROM \"Then p_c(T)>=1/b\"; TO \"If T is any geodesic spanning tree rooted at the identity of a Cayley graph of growth rate b, must br(T)=b, equivalently must its Bernoulli bond percolation threshold be 1/b?\". Proves subexponential and free-group tree cases; the arbitrary exponential geodesic case remains unresolved."
+    },
+    {
+      "from_key": "w338-p0036-11",
+      "to_existing_logical": "math:probability.core:attempt-p0036-percolation-threshold-on-arbitrary-geodesic-cayley-spanning-trees",
+      "kind": "semantic_association",
+      "rationale": "FROM \"Then p_c(T)>=1/b\"; TO \"A geodesic spanning tree has exactly the Cayley graph sphere sizes at each level.\". Proves subexponential and free-group tree cases; the arbitrary exponential geodesic case remains unresolved."
+    },
+    {
+      "from_key": "w338-c0021-02",
+      "to_existing_logical": "math:probability.boolean:iterated-three-majority-revealment-exponent-between-0166-and-0369",
+      "kind": "cites",
+      "rationale": "FROM \"the minimum revealment\nis 131/192\"; TO \"The greedy recursive algorithm (evaluate two random children, the third only if they disagree) has revealment (5/6)^k\". The finite-block construction improves the recorded greedy upper bound; the influence lower bound and asymptotic gap remain."
+    }
+  ]
+}

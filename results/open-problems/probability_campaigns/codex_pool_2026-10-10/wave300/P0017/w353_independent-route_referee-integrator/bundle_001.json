@@ -1,0 +1,72 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w353",
+  "bundle_slug": "p0017-source-and-false-bridges-001",
+  "entries": [
+    {
+      "key": "p0017-october-source-status",
+      "namespace": "probability.log_concave",
+      "logical_name": "p0017-october-2026-source-status",
+      "kind": "concept",
+      "title": "P0017 October 2026 source status",
+      "statement": "Bizeul, Klartag and Lehec, arXiv:2610.05474v1, Theorem 1.1, claim a universal dimension-independent Poincare bound for isotropic log-concave probability measures. This is a version-specific primary-source claim. The complete proof was not independently audited for this draft, so current openness and correctness are recorded as UNKNOWN rather than inferred from the 2026-09-07 attempted-unsolved ledger label.",
+      "proof_text": null,
+      "assumptions": ["Source version arXiv:2610.05474v1", "Theorem statement inspected 2026-10-10", "No complete proof certification in this bundle"],
+      "domain": "probability theory",
+      "source": {"source_id":"arxiv:2610.05474v1:Theorem-1.1", "url":"https://arxiv.org/html/2610.05474v1", "revision":"v1-as-read-2026-10-10", "license":"arxiv-nonexclusive", "excerpt":""}
+    },
+    {
+      "key": "false-conditional-averaging-bound",
+      "namespace": "probability.log_concave",
+      "logical_name": "false-uniform-coordinate-conditional-averaging-energy-bound",
+      "kind": "concept",
+      "title": "False coordinate conditional-averaging shortcut",
+      "statement": "FALSE candidate: there is a universal finite K such that, for every isotropic log-concave joint law of (U,V) and every smooth f, the marginal Dirichlet energy of v -> E[f(U,V)|V=v] is at most K times the full joint Euclidean Dirichlet energy of f. This fails already for isotropic laws in dimension two.",
+      "proof_text": null,
+      "assumptions": ["Euclidean gradients before and after conditioning", "The proposed K is independent of the law"],
+      "domain": "probability theory",
+      "source": {"source_id":"owner-probability-campaign:w352:conditional-averaging-obstruction", "url":"~/brain_workers/w352/ATTEMPT.md", "revision":"2026-10-10-w353-independent-check", "license":"owner-own-work", "excerpt":null}
+    },
+    {
+      "key": "epigraph-conditional-averaging-obstruction",
+      "namespace": "probability.log_concave",
+      "logical_name": "epigraph-conditional-averaging-energy-obstruction",
+      "kind": "concept",
+      "title": "Epigraph obstruction to a coordinate-averaging energy bound",
+      "statement": "For p>=2, take the law on R^2 with density proportional to exp(-x) on x>=|y|^p, and whiten its two coordinates to an isotropic log-concave pair (U,V). For f(u,v)=u, the full joint Dirichlet energy is 1, while the marginal Dirichlet energy of E[f|V] is D_p=p^2 Gamma(3/p) Gamma(2-1/p)/[(1+1/p) Gamma(1/p)^2], with D_p/p -> 1/3. This proves failure of a universal finite coordinate-averaging energy bound, not failure of global KLS. Author w352; independently checked by w353; further review required before theorem promotion.",
+      "proof_text": null,
+      "assumptions": ["p>=2", "The whitening uses exact covariance", "Conditional mean is taken after whitening"],
+      "domain": "probability theory",
+      "source": {"source_id":"owner-probability-campaign:w352:ATTEMPT:conditional-averaging", "url":"~/brain_workers/w352/ATTEMPT.md", "revision":"2026-10-10-w353-independent-check", "license":"owner-own-work", "excerpt":null}
+    },
+    {
+      "key": "false-pointwise-posterior-margin",
+      "namespace": "probability.log_concave",
+      "logical_name": "false-uniform-pointwise-gaussian-posterior-covariance-margin",
+      "kind": "concept",
+      "title": "False pointwise posterior covariance shortcut",
+      "statement": "FALSE candidate: there exist fixed t>0 and theta<1 such that every isotropic log-concave prior mu in every dimension has Cov(X|X+sqrt(t)Z=y)<=theta t I for almost every observation y, where Z is an independent standard Gaussian. A one-dimensional shifted-exponential prior disproves this pointwise assertion. This does not decide any averaged Dirichlet contraction.",
+      "proof_text": null,
+      "assumptions": ["t is deterministic", "theta is universal below 1", "almost every observation is under the convolution law"],
+      "domain": "probability theory",
+      "source": {"source_id":"owner-probability-campaign:w353:ATTEMPT:posterior-margin", "url":"~/brain_workers/w353/ATTEMPT.md", "revision":"2026-10-10-author-draft", "license":"owner-own-work", "excerpt":null}
+    },
+    {
+      "key": "shifted-exponential-posterior-obstruction",
+      "namespace": "probability.log_concave",
+      "logical_name": "shifted-exponential-posterior-pointwise-margin-obstruction",
+      "kind": "concept",
+      "title": "Shifted-exponential posterior pointwise margin obstruction",
+      "statement": "PROVISIONAL author result, independent referee pending: let X=Exp(1)-1 and Y=X+sqrt(t)Z for fixed t>0 and independent standard Gaussian Z. The prior is isotropic and log-concave on R. For alpha=(-1-y+t)/sqrt(t), lambda=phi(alpha)/P(Z>alpha), the posterior variance is t[1+alpha lambda-lambda^2]. As y tends to +infinity, this divided by t tends to 1 on positive-probability tail neighborhoods. Thus its essential supremum equals t and no universal theta<1 gives a pointwise posterior covariance margin. This says nothing about the averaged gradient energy contraction or KLS.",
+      "proof_text": null,
+      "assumptions": ["t>0", "X and Z independent", "Y has positive density everywhere", "w356 independent review pending"],
+      "domain": "probability theory",
+      "source": {"source_id":"owner-probability-campaign:w353:ATTEMPT:posterior-margin", "url":"~/brain_workers/w353/ATTEMPT.md", "revision":"2026-10-10-author-draft", "license":"owner-own-work", "excerpt":null}
+    }
+  ],
+  "relations": [
+    {"from_key":"p0017-october-source-status","to_existing_logical":"math:probability.core:open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant","kind":"semantic_association","rationale":"Version-specific October source claim updates the dated historical P0017 open-problem label without certifying a proof."},
+    {"from_key":"epigraph-conditional-averaging-obstruction","to_key":"false-conditional-averaging-bound","kind":"refutes","rationale":"The exact energy ratio D_p diverges as p tends to infinity for isotropic log-concave laws."},
+    {"from_key":"shifted-exponential-posterior-obstruction","to_key":"false-pointwise-posterior-margin","kind":"refutes","rationale":"The essential supremum of posterior variance divided by t is one for this isotropic one-dimensional prior; the author result awaits independent review."}
+  ]
+}

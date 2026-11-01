@@ -1,0 +1,17 @@
+{
+  "helper_version": "A087-shared-controller-residual-v1",
+  "helper_sha256": "6cfccd9b91ed582c3c80dbe130ffa31695ae22729172c7d5d051b1e4af5ef8d2",
+  "arithmetic_helper": "Own previous stage direct Fraction Walsh/prime-log implementation, copied unchanged; no imports from other agents",
+  "family": "Two-core priority with 1 shared + 1 private control per event; arbitrary 2-bit Boolean cores. Additional point activations and independent branch muxes",
+  "domain": "512 ordered root pairs/orientations, all 81 data faces per root, C=0,2 with 2 prescribed own-history-respecting interleavings; 44 point nodes (all n<=2 truth tables, r=1,2); 256 independent two-bit child muxes",
+  "case_count_roots": 812,
+  "case_count_faces": 41472,
+  "prefix_policy_checks": 2048,
+  "symmetry": "none; exact duplicate restricted functions cached, face multiplicity retained",
+  "arithmetic": "Fraction Walsh and symbolic rational prime-log entropy; 24-term rational atanh intervals with explicit tails",
+  "memory_estimate_MB": 160,
+  "pilot_max_seconds": 55,
+  "pilot_roots": 8,
+  "max_runtime_seconds": 240,
+  "automatic_dimension_escalation": false
+}

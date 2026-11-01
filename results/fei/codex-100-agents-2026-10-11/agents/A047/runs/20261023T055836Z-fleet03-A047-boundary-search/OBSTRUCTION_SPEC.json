@@ -1,0 +1,33 @@
+{
+  "family": "Analytically chosen 4-bit selector: core g at a0 is 3bit multiplexer v(b,c,d)=c if b0 else d; at a1 parity3. Include v with exactly one physical value flipped at each of8 inputs. This is a new explicit obstruction family, NOT automatic dimension escalation.",
+  "domain": {
+    "target_width": 4,
+    "seeds": [
+      "mux3",
+      "mux3_flip_0",
+      "mux3_flip_1",
+      "mux3_flip_2",
+      "mux3_flip_3",
+      "mux3_flip_4",
+      "mux3_flip_5",
+      "mux3_flip_6",
+      "mux3_flip_7"
+    ],
+    "query": "selector a only",
+    "alpha": "1/6",
+    "modes": [
+      "pure core",
+      "activation with epsilon +/-1 and spectator constant or character"
+    ]
+  },
+  "case_count": 45,
+  "pilot_case_count": 5,
+  "symmetry": "none; all eight single flips retained",
+  "arithmetic": "same exact Fraction/Walsh/normalized actual kernel and certified44-term logs; rational product witnesses independently reconstructed",
+  "helper_version": "stage9 search.py reference/activation/lift plus stage8 exact helper",
+  "memory_estimate_MB": 80,
+  "max_runtime_seconds": 55,
+  "analytic_prediction": "For balanced mux3 versus parity3 core, paired reset=log2(6/5)/2>0. Same-support perturbations are tests, not presumed positive.",
+  "scope": "refutes only arbitrary-Boolean extension of point-factor refresh, not A036 theorem or FEI",
+  "execution_status": "NOT EXECUTED: superseded before any search by stronger same-support3bit witness in completed original frozen domain; no dimension escalation performed"
+}

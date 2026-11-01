@@ -1,0 +1,50 @@
+{
+  "accumulated_allocation": {
+    "exhaustive_truth_tables": 276,
+    "max_T_over_bound_exhaustive": 0.5,
+    "named": [
+      {"A": 1.0, "T": 1.0, "T_over_log_rhs": 0.5, "log_rhs": 2.0, "n": 2, "name": "one_point_2", "pointwise_rhs": 1.0},
+      {"A": 0.9262507250261836, "T": 1.3481257250261836, "T_over_log_rhs": 0.4493752416753945, "log_rhs": 3.0, "n": 3, "name": "one_point_3", "pointwise_rhs": 1.125},
+      {"A": 0.530142376935006, "T": 1.1357016113734584, "T_over_log_rhs": 0.3785672037911528, "log_rhs": 3.0, "n": 4, "name": "one_point_4", "pointwise_rhs": 0.875},
+      {"A": 0.2677882512215668, "T": 0.7964531570730538, "T_over_log_rhs": 0.3185812628292215, "log_rhs": 2.5, "n": 5, "name": "one_point_5", "pointwise_rhs": 0.5859375},
+      {"A": 0.13150996362131262, "T": 0.5105675589037494, "T_over_log_rhs": 0.2723026980819997, "log_rhs": 1.875, "n": 6, "name": "one_point_6", "pointwise_rhs": 0.36328125},
+      {"A": 0.75, "T": 0.75, "T_over_log_rhs": 0.25, "log_rhs": 3.0, "n": 3, "name": "majority_3", "pointwise_rhs": 1.5},
+      {"A": 1.1118818683587923, "T": 1.6619672694953032, "T_over_log_rhs": 0.3132010791878527, "log_rhs": 5.306390622295663, "n": 5, "name": "majority_5", "pointwise_rhs": 2.34375},
+      {"A": 1.0, "T": 1.0, "T_over_log_rhs": 0.5, "log_rhs": 2.0, "n": 2, "name": "quadratic_2", "pointwise_rhs": 1.0},
+      {"A": 2.0, "T": 2.0, "T_over_log_rhs": 0.5, "log_rhs": 4.0, "n": 4, "name": "quadratic_4", "pointwise_rhs": 2.0},
+      {"A": 3.0, "T": 3.0, "T_over_log_rhs": 0.5, "log_rhs": 6.0, "n": 6, "name": "quadratic_6", "pointwise_rhs": 3.0},
+      {"A": 1.75, "T": 2.171875, "T_over_log_rhs": 0.3619791666666667, "log_rhs": 6.0, "n": 6, "name": "addressing_k2", "pointwise_rhs": 2.5},
+      {"A": 0.2677882512215668, "T": 0.7964531570730538, "T_over_log_rhs": 0.3185812628292215, "log_rhs": 2.5, "n": 5, "name": "fresh_control_c3_onepoint2", "pointwise_rhs": 0.5859375},
+      {"A": 1.8525014500523689, "T": 2.696251450052369, "T_over_log_rhs": 0.44937524167539483, "log_rhs": 6.0, "n": 6, "name": "tensor_w3_w3", "pointwise_rhs": 2.25}
+    ]
+  },
+  "exact_three_flat_density": [
+    {"flats": 3, "min_nonzero_ratio": null, "n": 1, "nonempty_xor": 0, "triples": 1, "witness_sizes": null},
+    {"flats": 11, "min_nonzero_ratio": "1/4", "n": 2, "nonempty_xor": 152, "triples": 165, "witness_sizes": [1,2,4,1]},
+    {"flats": 51, "min_nonzero_ratio": "1/4", "n": 3, "nonempty_xor": 20664, "triples": 20825, "witness_sizes": [2,4,1,1]},
+    {"flats": 307, "min_nonzero_ratio": "2/8", "n": 4, "nonempty_xor": 4773080, "triples": 4775385, "witness_sizes": [2,4,8,2]}
+  ],
+  "limitations": [
+    "Affine-flat density checks are exhaustive only through ambient dimension 4; the report contains the all-dimensional proof.",
+    "High-codimension three-flat/quadratic checks are deterministic-seed floating-point stress tests, not proofs.",
+    "Allocation checks use floating logarithms; the universal allocation inequality is proved analytically in the report.",
+    "No independent audit, Lean verification, or exhaustive all-dimensional Boolean search is performed."
+  ],
+  "random_high_codim_three_flat": {
+    "cases": 140,
+    "max_H_over_I_character_leaf": 3.7397640178980516,
+    "max_H_over_I_quadratic_twist": 2.012961419167985,
+    "min_active_quadratic_row_folded_influence": 0.40625
+  },
+  "seed": 20260920,
+  "sibling_cancellation": [
+    {"codims": [1,2,2], "n": 2, "xor_size": 0},
+    {"codims": [2,3,3], "n": 3, "xor_size": 0},
+    {"codims": [3,4,4], "n": 4, "xor_size": 0},
+    {"codims": [4,5,5], "n": 5, "xor_size": 0},
+    {"codims": [5,6,6], "n": 6, "xor_size": 0},
+    {"codims": [6,7,7], "n": 7, "xor_size": 0},
+    {"codims": [7,8,8], "n": 8, "xor_size": 0}
+  ],
+  "status": "PASS"
+}

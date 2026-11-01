@@ -1,0 +1,85 @@
+I0130_B8_B16_B23_MULTISTAGE_RECOURSE_SEQUENCE
+--- P=38 Q=16145 D=0 ---
+eps=38/16145 depth0_gap=0
+--- P=1501 Q=620690 D=1 ---
+eps=1501/620690 depth0_gap=-160328000
+depth1_gap=0
+--- P=227 Q=92430 D=2 ---
+eps=227/92430 depth0_gap=-42592000
+depth1_gap=-15822000
+depth2_gap=0
+--- P=419 Q=169035 D=3 ---
+eps=419/169035 depth0_gap=-88086600
+depth1_gap=-39623000
+depth2_gap=-5952600
+depth3_gap=0
+--- P=1061 Q=426590 D=4 ---
+eps=1061/426590 depth0_gap=-230463200
+depth1_gap=-108661600
+depth2_gap=-47616800
+depth3_gap=-27720400
+depth4_gap=0
+--- P=2689 Q=1058310 D=5 ---
+eps=2689/1058310 depth0_gap=-779130400
+depth1_gap=-521169600
+depth2_gap=-360516000
+depth3_gap=-227880800
+depth4_gap=-58551200
+depth5_gap=0
+--- P=394 Q=152485 D=6 ---
+eps=394/152485 depth0_gap=-152249200
+depth1_gap=-103902800
+depth2_gap=-92325800
+depth3_gap=-70986800
+depth4_gap=-44350800
+depth5_gap=-36545200
+depth6_gap=0
+--- P=907 Q=341180 D=7 ---
+eps=907/341180 depth0_gap=-437374000
+depth1_gap=-322834000
+depth2_gap=-310800400
+depth3_gap=-251492800
+depth4_gap=-199366400
+depth5_gap=-143598800
+depth6_gap=-74764000
+depth7_gap=0
+--- P=1489 Q=554410 D=8 ---
+eps=1489/554410 depth0_gap=-795211200
+depth1_gap=-578496800
+depth2_gap=-559390400
+depth3_gap=-463245600
+depth4_gap=-421446400
+depth5_gap=-268552800
+depth6_gap=-157525200
+depth7_gap=-76826800
+depth8_gap=0
+--- B23 fixed recursive triple at depth8 critical ---
+1 -719561600
+2 -578496800
+3 -9146160000
+4 -21438406400
+5 -28162935600
+6 -42014598400
+7 -50281668400
+8 -61637571200
+--- depth8 exact optimal top policy tree ---
+gap=0 rootp=118
+ d=8 J=3840 p=118 valueGap=795211200
+H d=7 J=7014 p=72 valueGap=566423200
+L d=7 J=814 p=174 valueGap=632906400
+HH d=6 J=9774 p=44 valueGap=566423200
+HL d=6 J=4494 p=107 valueGap=409673200
+LH d=6 J=4492 p=107 valueGap=418446400
+LL d=6 J=2828 p=135 valueGap=491438400
+HHH d=5 J=12282 p=26 valueGap=482667200
+HHL d=5 J=7562 p=66 valueGap=421446400
+HLH d=5 J=7569 p=66 valueGap=399151200
+HLL d=5 J=1589 p=157 valueGap=514398400
+LHH d=5 J=7567 p=66 valueGap=386699600
+LHL d=5 J=1587 p=158 valueGap=523171600
+LLH d=5 J=6155 p=84 valueGap=472696400
+LLL d=5 J=385 p=184 valueGap=458684000
+
+Monotonicity note: every old654 and structural immediate reward is nonincreasing in epsilon, max/min preserve nonincrease, and the physical transport threshold is strictly increasing in epsilon. Therefore an exact root gap of zero at epsilon_d proves epsilon_d is the exact restricted critical sensitivity for the at-most-d recourse operator.
+
+Depth-8 source arithmetic: epsilon=1489/554410, delta=5693/55441, U_MIV=49748/55441, W_MIV=439061/1663230, improvement over 8296/9243 = 117772/512441163, total goods at most 623.

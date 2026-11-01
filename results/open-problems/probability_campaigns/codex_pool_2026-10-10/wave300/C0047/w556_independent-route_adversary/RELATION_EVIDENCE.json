@@ -1,0 +1,29 @@
+[
+  {
+    "from_key": "nonuniqueness-criterion",
+    "to_key": "operator-bound",
+    "kind": "depends_on",
+    "rationale": "The criterion assumes bounded T_p; the target concept defines the required uniform finite-support operator estimate, rather than separate delta-column tests.",
+    "from_statement": "Draft independent rederivation awaiting referee check. On an infinite connected locally finite vertex-transitive graph with iid Bernoulli bond percolation, almost-sure uniqueness and theta(p)>0 force tau_p(x,y)>=theta(p)^2 by Harris association. Normalized indicators of n vertices then have connection-kernel Rayleigh quotient at least n theta(p)^2. Thus T_p is unbounded. A bounded T_p at some p>p_c implies p_c<p_u, but existence of that parameter on every fixed nonamenable Cayley graph is not proved here.",
+    "to_statement": "Draft audit concept. For a countable vertex set V and a nonnegative symmetric kernel K, l2 operator boundedness requires a finite constant M bounding ||Kf||_2 by M||f||_2 for every finitely supported f. Testing one delta-function at a time only bounds individual columns; uniformly square-summable columns alone do not establish this operator estimate.",
+    "proof_or_source": "ATTEMPT.md S1/S2 or PUBLIC_FORMAL_AUDIT.md; all drafts pending referee review"
+  },
+  {
+    "from_key": "row-counterexample",
+    "to_key": "operator-bound",
+    "kind": "semantic_association",
+    "rationale": "The example has uniformly square-summable rows but divergent finite-set Rayleigh quotients, distinguishing the column test from the uniform operator bound.",
+    "from_statement": "Draft audit example awaiting referee check. The kernel K(i,j)=(1+|i-j|)^(-3/4) on Z is symmetric, nonnegative, translation invariant, positive semidefinite, and has unit diagonal. Every row has squared l2 norm at most 5, yet normalized indicators of intervals of n vertices have Rayleigh quotient at least n(1+n)^(-3/4), tending to infinity. Positivity follows by averaging one-dimensional Bernoulli connection kernels over R=exp(-T), T Gamma(3/4,rate=1). This mixture is not fixed-parameter iid percolation and Z is amenable; the example refutes a generic operator inference, not the Benjamini-Schramm conjecture.",
+    "to_statement": "Draft audit concept. For a countable vertex set V and a nonnegative symmetric kernel K, l2 operator boundedness requires a finite constant M bounding ||Kf||_2 by M||f||_2 for every finitely supported f. Testing one delta-function at a time only bounds individual columns; uniformly square-summable columns alone do not establish this operator estimate.",
+    "proof_or_source": "ATTEMPT.md S1/S2 or PUBLIC_FORMAL_AUDIT.md; all drafts pending referee review"
+  },
+  {
+    "from_key": "formal-receipt",
+    "to_key": "nonuniqueness-criterion",
+    "kind": "semantic_association",
+    "rationale": "The criterion requires an actual supercritical operator estimate; the pinned admitted comparator declarations do not prove that estimate.",
+    "from_statement": "Draft source audit. At public openai/math commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb, comparator theorem bodies full_main, critical_laws, cayley_main and arbitrary_cayley are admitted with sorry. Those declarations cannot count as formal proof receipts for the percolation operator gap. This does not refute the accompanying mathematical preprint or exclude a separate implementation. A valid receipt must identify the actual implemented theorem, full assumptions and trusted axioms, excluding admitted placeholders.",
+    "to_statement": "Draft independent rederivation awaiting referee check. On an infinite connected locally finite vertex-transitive graph with iid Bernoulli bond percolation, almost-sure uniqueness and theta(p)>0 force tau_p(x,y)>=theta(p)^2 by Harris association. Normalized indicators of n vertices then have connection-kernel Rayleigh quotient at least n theta(p)^2. Thus T_p is unbounded. A bounded T_p at some p>p_c implies p_c<p_u, but existence of that parameter on every fixed nonamenable Cayley graph is not proved here.",
+    "proof_or_source": "ATTEMPT.md S1/S2 or PUBLIC_FORMAL_AUDIT.md; all drafts pending referee review"
+  }
+]

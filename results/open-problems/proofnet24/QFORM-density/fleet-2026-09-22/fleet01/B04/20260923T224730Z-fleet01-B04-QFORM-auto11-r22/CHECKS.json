@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T224730Z-fleet01-B04-QFORM-auto11-r22",
+  "theorem": "QFORM-CURVATURE-VERTEX-COVER-REARRANGEMENT-v1",
+  "symbolic_checks": {
+    "cleaning_by_conditioning": "If C[L,L]=0 and Y_R=r is fixed, then the Y_L dependence is linear: 2 X^T M_L Y_L + (b_L+2 C[L,R]r)^T Y_L.",
+    "crossing_identity": "M_L M_L^T = M M^T - M_R M_R^T.",
+    "weyl_lower_bound": "s2(M_L)^2 >= s2(M)^2 - ||M_R||_op^2.",
+    "stress_family_leaf_gram": "L_m L_m^T = 4 I_2.",
+    "stress_family_opposite_pair_minor": "|det[a,d]| = 8/m, with m^2/4 opposite-type pairs; total squared two-volume = 16.",
+    "stress_family_star_operator_norm": "||C_m||_op=(1+sqrt(5))/4.",
+    "stress_family_spectral_lower_bound": "2-(1+sqrt(5))/4=(7-sqrt(5))/4>1."
+  },
+  "numerical_constants": {
+    "sqrt_pi": 1.772453850905516,
+    "sqrt_pi_over_2": 1.2533141373155001,
+    "star_operator_norm": 0.8090169943749475,
+    "spectral_modulus_lower_bound": 1.1909830056250525
+  },
+  "sample_numeric_sanity_check_m4": {
+    "note": "Finite numerical check only; the report uses exact symbolic identities and Weyl for the proof.",
+    "eigenvalues_approx": [-2.096956, -1.946757, 0.0, 0.0, 0.0, 0.422893, 1.931001, 2.189819],
+    "count_abs_ge_1": 4
+  },
+  "scope": "Supporting theorem only; full unrestricted QFORM remains open."
+}

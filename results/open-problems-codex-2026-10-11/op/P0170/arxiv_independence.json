@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/+XuagRS/RG+ZcSzxp2+zO2a3zz0</id>
+  <title>arXiv Query: search_query=all:"polynomial threshold" AND all:"independence"&amp;id_list=&amp;start=0&amp;max_results=60</title>
+  <updated>2026-10-12T02:26:27Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22polynomial+threshold%22+AND+all:%22independence%22&amp;start=0&amp;max_results=60&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>60</opensearch:itemsPerPage>
+  <opensearch:totalResults>15</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2606.16004v2</id>
+    <title>Small moments of the sensitivity of polynomial threshold functions</title>
+    <updated>2026-06-21T17:31:54Z</updated>
+    <link href="https://arxiv.org/abs/2606.16004v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.16004v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the first version of Chang, Slote, Volberg, and Zhang's paper \cite{BSA_of_PTF}, the authors modify a nice recursive approach due to Kane in \cite{Correct_exponent_for_AS} where he bounded the average sensitivity of polynomial threshold functions. In \cite{BSA_of_PTF} Kane's argument was adopted to estimate the boolean surface area of polynomial threshold function. The bridge is a combinatorial averaging lemma considering all balanced partitions. The lemma serves as a substitute for an additive property of average sensitivity. With the lemma, one can apply a Kane-type algorithm to derive a recurrence. Solving the recurrence then gives an upper bound of $e^{C_d \sqrt{\log n}}$ for the boolean surface area.
+  In the second version of the same paper, the authors derive a polylog upper bound for BSA of PTFs. The difference is that they use a tail estimate for the sensitivity function. With the help of a polynomial restriction lemma in \cite{poly_restriction} they sharpen the upper bound. It is noteworthy that when applying the polynomial restriction, each coordinate is put into each part independently with equal probability. As a result, a partition does not necessarily have equal-size blocks. In other words, it may not be balanced.
+  In this note, we first investigate the effect of different partitioning. Second, we use the recursive method in the first version to derive a polylog upper bound for $\mathbb E[s(x)^η]$ where $η&lt; 1/2$. It is interesting to note the phase transition that happens at $η=1/2$ in both versions of the proof (but in a completely different form). Section 2.5 treats that.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-14T20:18:11Z</published>
+    <arxiv:comment>15 pages</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Chun-Kai Tseng</name>
+    </author>
+    <author>
+      <name>Alexander Volberg</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.08095v2</id>
+    <title>The Boolean surface area of polynomial threshold functions</title>
+    <updated>2026-04-27T06:28:32Z</updated>
+    <link href="https://arxiv.org/abs/2604.08095v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.08095v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Polynomial threshold functions (PTFs) are an important low-complexity class of Boolean functions, with strong connections to learning theory and approximation theory. Recent work on learning and testing PTFs has exploited structural and isoperimetric properties of the class, especially bounds on average sensitivity, one of the central themes in the study of PTFs since the Gotsman--Linial conjecture.
+  In this work we study PTFs through the lens of the Boolean surface area (or Talagrand boundary) \[ \mathbf{BSA}[f]=\mathbb{E}|\nabla f|=\mathbb{E}\sqrt{s_{f}(x)}, \] a natural measure of vertex-boundary complexity on the discrete cube. Our main result is that every degree-$d$ PTF has polylogarithmic Boolean surface area: \[ \mathbf{BSA}[f]\le C_d(\log(en))^{C_d}. \] The proof is based on the PTF Restriction Lemma of Kabanets, Kane, and Lu \cite{KKL2017} and proceeds through a tail bound for the pointwise sensitivity. In particular, it controls all subcritical fractional moments of the sensitivity. We also record a random block partition principle for Boolean surface area and an alternative recursive argument following Kane's work \cite{DK} on average sensitivity, which independently yields the weaker bound \[ \mathbf{BSA}[f]\le \exp(C_d\sqrt{\log n}). \]</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-09T11:11:06Z</published>
+    <arxiv:comment>18 pages, 1 figure</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Fan Chang</name>
+    </author>
+    <author>
+      <name>Joseph Slote</name>
+    </author>
+    <author>
+      <name>Alexander Volberg</name>
+    </author>
+    <author>
+      <name>Haonan Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.13449v1</id>
+    <title>An Algebraic Rigidity Framework for Order-Oblivious Deterministic Black-Box PIT of ROABPs</title>
+    <updated>2026-02-13T20:51:11Z</updated>
+    <link href="https://arxiv.org/abs/2602.13449v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.13449v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deterministic black-box polynomial identity testing (PIT) for read-once oblivious algebraic branching programs (ROABPs) is a central open problem in algebraic complexity, particularly in the absence of variable ordering. Prior deterministic algorithms either rely on order information or incur significant overhead through combinatorial isolation techniques.
+  In this paper, we introduce an algebraic rigidity framework for ROABPs based on the internal structure of their associated matrix word algebras. We show that nonzero width-$w$ ROABPs induce word algebras whose effective algebraic degrees of freedom collapse to dimension at most $w^2$, independent of the number of variables. This rigidity enables deterministic witness construction via intrinsic algebraic invariants, bypassing rank concentration, isolation lemmas, and probabilistic tools used in previous work.Thus, we obtain the first order-oblivious deterministic black-box PIT algorithm for ROABPs, running in quasi-polynomial time $n\cdot(wd)^{O(w^2)}$. This establishes that algebraic rigidity alone suffices to derandomize PIT in this model, without assuming ordering information.
+  The framework further isolates a single remaining obstacle to full polynomial-time complexity. We formulate a Modular Stability Conjecture, asserting that width-$w$ ROABPs are stable under hashing into cyclic quotient rings $\mathbb{K}[λ]/&lt; λ^r-1 &gt;$ once the modulus exceeds a polynomial threshold in $w$ and the individual degree. This conjecture arises naturally from the low-dimensional coefficient structure revealed by rigidity and is supported by extensive empirical evidence.
+  Assuming the conjecture, our methods yield a fully polynomial-time deterministic black-box PIT algorithm for ROABPs, matching the complexity of the best-known white-box algorithms and reducing the black-box problem to a concrete algebraic stability question.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-13T20:51:11Z</published>
+    <arxiv:comment>48 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Shalender Singh</name>
+    </author>
+    <author>
+      <name>Vishnupriya Singh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.19398v1</id>
+    <title>PTF Testing Lower Bounds for Non-Gaussian Component Analysis</title>
+    <updated>2025-11-24T18:35:29Z</updated>
+    <link href="https://arxiv.org/abs/2511.19398v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.19398v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work studies information-computation gaps for statistical problems. A common approach for providing evidence of such gaps is to show sample complexity lower bounds (that are stronger than the information-theoretic optimum) against natural models of computation. A popular such model in the literature is the family of low-degree polynomial tests. While these tests are defined in such a way that make them easy to analyze, the class of algorithms that they rule out is somewhat restricted. An important goal in this context has been to obtain lower bounds against the stronger and more natural class of low-degree Polynomial Threshold Function (PTF) tests, i.e., any test that can be expressed as comparing some low-degree polynomial of the data to a threshold. Proving lower bounds against PTF tests has turned out to be challenging. Indeed, we are not aware of any non-trivial PTF testing lower bounds in the literature.
+  In this paper, we establish the first non-trivial PTF testing lower bounds for a range of statistical tasks. Specifically, we prove a near-optimal PTF testing lower bound for Non-Gaussian Component Analysis (NGCA). Our NGCA lower bound implies similar lower bounds for a number of other statistical problems. Our proof leverages a connection to recent work on pseudorandom generators for PTFs and recent techniques developed in that context. At the technical level, we develop several tools of independent interest, including novel structural results for analyzing the behavior of low-degree polynomials restricted to random directions.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-24T18:35:29Z</published>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Ilias Diakonikolas</name>
+    </author>
+    <author>
+      <name>Daniel M. Kane</name>
+    </author>
+    <author>
+      <name>Sihan Liu</name>
+    </author>
+    <author>
+      <name>Thanasis Pittas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.10904v2</id>
+    <title>A Pseudorandom Generator for Functions of Low-Degree Polynomial Threshold Functions</title>
+    <updated>2025-04-21T08:39:07Z</updated>
+    <link href="https://arxiv.org/abs/2504.10904v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.10904v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Developing explicit pseudorandom generators (PRGs) for prominent categories of Boolean functions is a key focus in computational complexity theory. In this paper, we investigate the PRGs against the functions of degree-$d$ polynomial threshold functions (PTFs) over Gaussian space. Our main result is an explicit construction of PRG with seed length $\mathrm{poly}(k,d,1/ε)\cdot\log n$ that can fool any function of $k$ degree-$d$ PTFs with probability at least $1-\varepsilon$. More specifically, we show that the summation of $L$ independent $R$-moment-matching Gaussian vectors $ε$-fools functions of $k$ degree-$d$ PTFs, where $L=\mathrm{poly}( k, d, \frac{1}ε)$ and $R = O({\log \frac{kd}ε})$. The PRG is then obtained by applying an appropriate discretization to Gaussian vectors with bounded independence.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-15T06:28:56Z</published>
+    <arxiv:comment>update citations</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Penghui Yao</name>
+    </author>
+    <author>
+      <name>Mingnan Zhao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.00529v1</id>
+    <title>Super Non-singular Decompositions of Polynomials and their Application to Robustly Learning Low-degree PTFs</title>
+    <updated>2024-03-31T02:03:35Z</updated>
+    <link href="https://arxiv.org/abs/2404.00529v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.00529v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the efficient learnability of low-degree polynomial threshold functions (PTFs) in the presence of a constant fraction of adversarial corruptions. Our main algorithmic result is a polynomial-time PAC learning algorithm for this concept class in the strong contamination model under the Gaussian distribution with error guarantee $O_{d, c}(\text{opt}^{1-c})$, for any desired constant $c&gt;0$, where $\text{opt}$ is the fraction of corruptions. In the strong contamination model, an omniscient adversary can arbitrarily corrupt an $\text{opt}$-fraction of the data points and their labels. This model generalizes the malicious noise model and the adversarial label noise model. Prior to our work, known polynomial-time algorithms in this corruption model (or even in the weaker adversarial label noise model) achieved error $\tilde{O}_d(\text{opt}^{1/(d+1)})$, which deteriorates significantly as a function of the degree $d$.
+  Our algorithm employs an iterative approach inspired by localization techniques previously used in the context of learning linear threshold functions. Specifically, we use a robust perceptron algorithm to compute a good partial classifier and then iterate on the unclassified points. In order to achieve this, we need to take a set defined by a number of polynomial inequalities and partition it into several well-behaved subsets. To this end, we develop new polynomial decomposition techniques that may be of independent interest.</summary>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-31T02:03:35Z</published>
+    <arxiv:comment>To appear in STOC2024</arxiv:comment>
+    <arxiv:primary_category term="cs.DS"/>
+    <author>
+      <name>Ilias Diakonikolas</name>
+    </author>
+    <author>
+      <name>Daniel M. Kane</name>
+    </author>
+    <author>
+      <name>Vasilis Kontonis</name>
+    </author>
+    <author>
+      <name>Sihan Liu</name>
+    </author>
+    <author>
+      <name>Nikos Zarifis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2207.14030v2</id>
+    <title>Hardness of Agnostically Learning Halfspaces from Worst-Case Lattice Problems</title>
+    <updated>2023-02-20T17:11:59Z</updated>
+    <link href="https://arxiv.org/abs/2207.14030v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2207.14030v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show hardness of improperly learning halfspaces in the agnostic model, both in the distribution-independent as well as the distribution-specific setting, based on the assumption that worst-case lattice problems, such as GapSVP or SIVP, are hard. In particular, we show that under this assumption there is no efficient algorithm that outputs any binary hypothesis, not necessarily a halfspace, achieving misclassfication error better than $\frac 1 2 - γ$ even if the optimal misclassification error is as small is as small as $δ$. Here, $γ$ can be smaller than the inverse of any polynomial in the dimension and $δ$ as small as $exp(-Ω(\log^{1-c}(d)))$, where $0 &lt; c &lt; 1$ is an arbitrary constant and $d$ is the dimension. For the distribution-specific setting, we show that if the marginal distribution is standard Gaussian, for any $β&gt; 0$ learning halfspaces up to error $OPT_{LTF} + ε$ takes time at least $d^{\tildeΩ(1/ε^{2-β})}$ under the same hardness assumptions. Similarly, we show that learning degree-$\ell$ polynomial threshold functions up to error $OPT_{{PTF}_\ell} + ε$ takes time at least $d^{\tildeΩ(\ell^{2-β}/ε^{2-β})}$. $OPT_{LTF}$ and $OPT_{{PTF}_\ell}$ denote the best error achievable by any halfspace or polynomial threshold function, respectively.
+  Our lower bounds qualitively match algorithmic guarantees and (nearly) recover known lower bounds based on non-worst-case assumptions. Previously, such hardness results [Daniely16, DKPZ21] were based on average-case complexity assumptions or restricted to the statistical query model. Our work gives the first hardness results basing these fundamental learning problems on worst-case complexity assumptions. It is inspired by a sequence of recent works showing hardness of learning well-separated Gaussian mixtures based on worst-case lattice problems.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.ST" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-07-28T11:44:39Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Stefan Tiegel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2103.14134v2</id>
+    <title>Random restrictions and PRGs for PTFs in Gaussian Space</title>
+    <updated>2021-11-29T16:58:51Z</updated>
+    <link href="https://arxiv.org/abs/2103.14134v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2103.14134v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A polynomial threshold function (PTF) $f:\mathbb{R}^n \rightarrow \mathbb{R}$ is a function of the form $f(x) = \mathsf{sign}(p(x))$ where $p$ is a polynomial of degree at most $d$. PTFs are a classical and well-studied complexity class with applications across complexity theory, learning theory, approximation theory, quantum complexity and more. We address the question of designing pseudorandom generators (PRG) for polynomial threshold functions (PTFs) in the gaussian space: design a PRG that takes a seed of few bits of randomness and outputs a $n$-dimensional vector whose distribution is indistinguishable from a standard multivariate gaussian by a degree $d$ PTF.
+  Our main result is a PRG that takes a seed of $d^{O(1)}\log ( n / \varepsilon)\log(1/\varepsilon)/\varepsilon^2$ random bits with output that cannot be distinguished from $n$-dimensional gaussian distribution with advantage better than $\varepsilon$ by degree $d$ PTFs. The best previous generator due to O'Donnell, Servedio, and Tan (STOC'20) had a quasi-polynomial dependence (i.e., seedlength of $d^{O(\log d)}$) in the degree $d$. Along the way we prove a few nearly-tight structural properties of restrictions of PTFs that may be of independent interest.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-03-25T21:03:06Z</published>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Zander Kelley</name>
+    </author>
+    <author>
+      <name>Raghu Meka</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1811.03491v1</id>
+    <title>Degree-$d$ Chow Parameters Robustly Determine Degree-$d$ PTFs (and Algorithmic Applications)</title>
+    <updated>2018-11-07T17:59:16Z</updated>
+    <link href="https://arxiv.org/abs/1811.03491v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1811.03491v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The degree-$d$ Chow parameters of a Boolean function $f: \{-1,1\}^n \to \mathbb{R}$ are its degree at most $d$ Fourier coefficients. It is well-known that degree-$d$ Chow parameters uniquely characterize degree-$d$ polynomial threshold functions (PTFs) within the space of all bounded functions. In this paper, we prove a robust version of this theorem: For $f$ any Boolean degree-$d$ PTF and $g$ any bounded function, if the degree-$d$ Chow parameters of $f$ are close to the degree-$d$ Chow parameters of $g$ in $\ell_2$-norm, then $f$ is close to $g$ in $\ell_1$-distance. Notably, our bound relating the two distances is completely independent of the dimension $n$. That is, we show that Boolean degree-$d$ PTFs are {\em robustly identifiable} from their degree-$d$ Chow parameters. Results of this form had been shown for the $d=1$ case~\cite{OS11:chow, DeDFS14}, but no non-trivial bound was previously known for $d &gt;1$.
+  Our robust identifiability result gives the following algorithmic applications: First, we show that Boolean degree-$d$ PTFs can be efficiently approximately reconstructed from approximations to their degree-$d$ Chow parameters. This immediately implies that degree-$d$ PTFs are efficiently learnable in the uniform distribution $d$-RFA model~\cite{BenDavidDichterman:98}. As a byproduct of our approach, we also obtain the first low integer-weight approximations of degree-$d$ PTFs, for $d&gt;1$. As our second application, our robust identifiability result gives the first efficient algorithm, with dimension-independent error guarantees, for malicious learning of Boolean degree-$d$ PTFs under the uniform distribution.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-11-07T17:59:16Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ilias Diakonikolas</name>
+    </author>
+    <author>
+      <name>Daniel M. Kane</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1707.01242v1</id>
+    <title>Learning Geometric Concepts with Nasty Noise</title>
+    <updated>2017-07-05T07:41:40Z</updated>
+    <link href="https://arxiv.org/abs/1707.01242v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1707.01242v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the efficient learnability of geometric concept classes - specifically, low-degree polynomial threshold functions (PTFs) and intersections of halfspaces - when a fraction of the data is adversarially corrupted. We give the first polynomial-time PAC learning algorithms for these concept classes with dimension-independent error guarantees in the presence of nasty noise under the Gaussian distribution. In the nasty noise model, an omniscient adversary can arbitrarily corrupt a small fraction of both the unlabeled data points and their labels. This model generalizes well-studied noise models, including the malicious noise model and the agnostic (adversarial label noise) model. Prior to our work, the only concept class for which efficient malicious learning algorithms were known was the class of origin-centered halfspaces.
+  Specifically, our robust learning algorithm for low-degree PTFs succeeds under a number of tame distributions -- including the Gaussian distribution and, more generally, any log-concave distribution with (approximately) known low-degree moments. For LTFs under the Gaussian distribution, we give a polynomial-time algorithm that achieves error $O(ε)$, where $ε$ is the noise rate. At the core of our PAC learning results is an efficient algorithm to approximate the low-degree Chow-parameters of any bounded function in the presence of nasty noise. To achieve this, we employ an iterative spectral method for outlier detection and removal, inspired by recent work in robust unsupervised learning. Our aforementioned algorithm succeeds for a range of distributions satisfying mild concentration bounds and moment assumptions. The correctness of our robust learning algorithm for intersections of halfspaces makes essential use of a novel robust inverse independence lemma that may be of broader interest.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-07-05T07:41:40Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Ilias Diakonikolas</name>
+    </author>
+    <author>
+      <name>Daniel M. Kane</name>
+    </author>
+    <author>
+      <name>Alistair Stewart</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.5164v1</id>
+    <title>Distribution-Independent Reliable Learning</title>
+    <updated>2014-02-20T22:41:39Z</updated>
+    <link href="https://arxiv.org/abs/1402.5164v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1402.5164v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study several questions in the reliable agnostic learning framework of Kalai et al. (2009), which captures learning tasks in which one type of error is costlier than others. A positive reliable classifier is one that makes no false positive errors. The goal in the positive reliable agnostic framework is to output a hypothesis with the following properties: (i) its false positive error rate is at most $ε$, (ii) its false negative error rate is at most $ε$ more than that of the best positive reliable classifier from the class. A closely related notion is fully reliable agnostic learning, which considers partial classifiers that are allowed to predict "unknown" on some inputs. The best fully reliable partial classifier is one that makes no errors and minimizes the probability of predicting "unknown", and the goal in fully reliable learning is to output a hypothesis that is almost as good as the best fully reliable partial classifier from a class.
+  For distribution-independent learning, the best known algorithms for PAC learning typically utilize polynomial threshold representations, while the state of the art agnostic learning algorithms use point-wise polynomial approximations. We show that one-sided polynomial approximations, an intermediate notion between polynomial threshold representations and point-wise polynomial approximations, suffice for learning in the reliable agnostic settings. We then show that majorities can be fully reliably learned and disjunctions of majorities can be positive reliably learned, through constructions of appropriate one-sided polynomial approximations. Our fully reliable algorithm for majorities provides the first evidence that fully reliable learning may be strictly easier than agnostic learning. Our algorithms also satisfy strong attribute-efficiency properties, and provide smooth tradeoffs between sample complexity and running time.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-02-20T22:41:39Z</published>
+    <arxiv:comment>20 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Varun Kanade</name>
+    </author>
+    <author>
+      <name>Justin Thaler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1012.1614v3</id>
+    <title>$k$-Independent Gaussians Fool Polynomial Threshold Functions</title>
+    <updated>2011-11-11T01:44:23Z</updated>
+    <link href="https://arxiv.org/abs/1012.1614v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1012.1614v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that any $O_d(ε^{-4d 7^d})$-independent family of Gaussians $ε$-fools any degree-$d$ polynomial threshold function.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-12-07T21:31:04Z</published>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Daniel M. Kane</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0911.3473v3</id>
+    <title>Polynomial Threshold Functions: Structure, Approximation and Pseudorandomness</title>
+    <updated>2009-11-29T20:37:14Z</updated>
+    <link href="https://arxiv.org/abs/0911.3473v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0911.3473v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We study the computational power of polynomial threshold functions, that is, threshold functions of real polynomials over the boolean cube. We provide two new results bounding the computational power of this model.
+  Our first result shows that low-degree polynomial threshold functions cannot approximate any function with many influential variables. We provide a couple of examples where this technique yields tight approximation bounds.
+  Our second result relates to constructing pseudorandom generators fooling low-degree polynomial threshold functions. This problem has received attention recently, where Diakonikolas et al proved that $k$-wise independence suffices to fool linear threshold functions. We prove that any low-degree polynomial threshold function, which can be represented as a function of a small number of linear threshold functions, can also be fooled by $k$-wise independence. We view this as an important step towards fooling general polynomial threshold functions, and we discuss a plausible approach achieving this goal based on our techniques.
+  Our results combine tools from real approximation theory, hyper-contractive inequalities and probabilistic methods. In particular, we develop several new tools in approximation theory which may be of independent interest.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-11-18T07:28:08Z</published>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Ido Ben-Eliezer</name>
+    </author>
+    <author>
+      <name>Shachar Lovett</name>
+    </author>
+    <author>
+      <name>Ariel Yadin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0910.4122v5</id>
+    <title>Pseudorandom Generators for Polynomial Threshold Functions</title>
+    <updated>2011-11-15T14:41:26Z</updated>
+    <link href="https://arxiv.org/abs/0910.4122v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0910.4122v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the natural question of constructing pseudorandom generators (PRGs) for low-degree polynomial threshold functions (PTFs). We give a PRG with seed-length log n/eps^{O(d)} fooling degree d PTFs with error at most eps. Previously, no nontrivial constructions were known even for quadratic threshold functions and constant error eps. For the class of degree 1 threshold functions or halfspaces, we construct PRGs with much better dependence on the error parameter eps and obtain a PRG with seed-length O(log n + log^2(1/eps)). Previously, only PRGs with seed length O(log n log^2(1/eps)/eps^2) were known for halfspaces. We also obtain PRGs with similar seed lengths for fooling halfspaces over the n-dimensional unit sphere.
+  The main theme of our constructions and analysis is the use of invariance principles to construct pseudorandom generators. We also introduce the notion of monotone read-once branching programs, which is key to improving the dependence on the error rate eps for halfspaces. These techniques may be of independent interest.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-10-21T15:48:00Z</published>
+    <arxiv:comment>Revision 5: Updated to the journal version to appear in SICOMP. Revision 4: Improves seed-length for halfspaces to O(log n + log^2(1/eps)) (the change in analysis is minor: use INW PRG instead of Nisan's PRG). Revision 3: Fixed some more minor errors (mainly in proof of Theorem 4.3). Revision 2: Corrected the non-explicit bound to O(d log n + log(1/eps)) and some minor typos</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Raghu Meka</name>
+    </author>
+    <author>
+      <name>David Zuckerman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0909.5175v4</id>
+    <title>Bounding the Sensitivity of Polynomial Threshold Functions</title>
+    <updated>2009-11-09T23:23:19Z</updated>
+    <link href="https://arxiv.org/abs/0909.5175v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0909.5175v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We give the first non-trivial upper bounds on the average sensitivity and noise sensitivity of polynomial threshold functions. More specifically, for a Boolean function f on n variables equal to the sign of a real, multivariate polynomial of total degree d we prove
+  1) The average sensitivity of f is at most O(n^{1-1/(4d+6)}) (we also give a combinatorial proof of the bound O(n^{1-1/2^d}).
+  2) The noise sensitivity of f with noise rate δis at most O(δ^{1/(4d+6)}).
+  Previously, only bounds for the linear case were known. Along the way we show new structural theorems about random restrictions of polynomial threshold functions obtained via hypercontractivity. These structural results may be of independent interest as they provide a generic template for transforming problems related to polynomial threshold functions defined on the Boolean hypercube to polynomial threshold functions defined in Gaussian space.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-09-28T19:55:46Z</published>
+    <arxiv:comment>Fixed an important flaw. Some proofs are simplified from last version</arxiv:comment>
+    <arxiv:primary_category term="cs.CC"/>
+    <arxiv:journal_ref>Theory of Computing, 10(1):1-26, 2013</arxiv:journal_ref>
+    <author>
+      <name>Prahladh Harsha</name>
+    </author>
+    <author>
+      <name>Adam Klivans</name>
+    </author>
+    <author>
+      <name>Raghu Meka</name>
+    </author>
+    <arxiv:doi>10.4086/toc.2014.v010a001</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4086/toc.2014.v010a001" title="doi"/>
+  </entry>
+</feed>

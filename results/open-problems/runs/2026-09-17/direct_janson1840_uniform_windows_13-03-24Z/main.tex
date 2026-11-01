@@ -1,0 +1,714 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\E}{\mathbb E}
+\newcommand{\N}{\mathbb N}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\fall}[2]{(#1)_{\underline{#2}}}
+\title{Uniform condensation windows\protect\\for zero-radius allocations}
+\author{}
+\date{17 September 2026}
+\begin{document}
+\maketitle
+\vspace{-1.5em}
+\begin{center}\small Complete proof candidate; independent verification pending.\end{center}
+\begin{abstract}
+For any fixed nonnegative weight sequence with positive constant term and
+zero radius of convergence, we prove the existence of arbitrarily large
+intervals of total masses on which a single box carries almost all the mass,
+uniformly over the number of boxes at densities in a compact subset of
+$(0,\infty)$. Consequently every admissible full mass path of positive finite
+limiting density has a subsequence exhibiting complete condensation. This
+answers Janson's Problem 18.40 negatively in its full-path formulation.
+The argument preserves the small-box partition factor by an exact
+occupation-count insertion. A deterministic record-margin estimate then
+provides a uniform finite-size probability bound. We also show that
+multiplicative density of a sampled index set is necessary and sufficient
+for a universal subsequence-condensation statement.
+\end{abstract}
+
+\section{Model and results}
+Let $w=(w_j)_{j\ge0}$ be fixed, with $w_0>0$, $0\le w_j<\infty$, and
+\begin{equation}\label{eq:radius}
+ \rho=0,\qquad\text{equivalently}\qquad
+ \limsup_{j\to\infty}w_j^{1/j}=\infty.
+\end{equation}
+For nonnegative integers $m,n$ put
+\[
+ Z(m,n)=\sum_{y_1+\cdots+y_n=m}\prod_{v=1}^n w_{y_v}.
+\]
+The pair $(m,n)$ is \emph{admissible} if $Z(m,n)>0$. On such a pair,
+\[
+ \Pp_w(Y=y)=Z(m,n)^{-1}\prod_{v=1}^n w_{y_v},
+ \qquad Y_{(1)}\ge Y_{(2)}\ge\cdots
+\]
+denote the ordered occupancies. The weights are independent of $m,n$.
+
+\begin{theorem}[Uniform condensation windows]\label{thm:windows}
+Assume \eqref{eq:radius}. Fix $\varepsilon\in(0,1)$ and
+$0<\alpha<\beta<\infty$. There are $\delta>0$ and supported integers
+$k_r\uparrow\infty$ such that
+\begin{equation}\label{eq:uniform}
+ \sup_{\substack{(1+3\delta)k_r\le m\le(1+5\delta)k_r\\
+                  \alpha\le m/n\le\beta,\ Z(m,n)>0}}
+ \Pp_w\bigl(Y_{(1)}(m,n)\le(1-\varepsilon)m\bigr)
+ \longrightarrow0.
+\end{equation}
+The supremum is over integer pairs. The windows contain admissible pairs
+for all sufficiently large $r$; thus the conclusion is not vacuous.
+\end{theorem}
+
+\begin{corollary}[Arbitrary full paths and dense sampled paths]\label{cor:paths}
+Let $\mathcal N=\{N_1<N_2<\cdots\}$ satisfy $N_{j+1}/N_j\to1$; in particular
+one may take $\mathcal N=\N$. Suppose $(m_n,n)$ is eventually admissible on
+$\mathcal N$ and $m_n/n\to\lambda\in(0,\infty)$. Then there are
+$n_r\in\mathcal N$, increasing to infinity, such that
+\begin{equation}\label{eq:conclusion}
+ \frac{Y_{(1)}(m_{n_r},n_r)}{m_{n_r}}\xrightarrow{\Pp}1.
+\end{equation}
+Consequently
+\[
+ \limsup_{n\in\mathcal N}\E\frac{Y_{(1)}(m_n,n)}n=\lambda.
+\]
+Along the selected subsequence $Y_{(1)}/n\to\lambda$ and
+$(m_n-Y_{(1)})/n\to0$ both in probability and in $L^1$, and
+$Y_{(2)}/n\to0$ in probability. For a full path, every fixed accuracy admits
+whole intervals of consecutive sizes with uniformly vanishing failure
+probability, as specified in Section~\ref{sec:paths}.
+\end{corollary}
+
+Janson's Problem 18.40 asks whether $Y_{(1)}/n\to0$ in probability can hold
+along the full sequence in the regime $\lambda>\nu=0$
+\cite[Section 18.6, Problem 18.40]{Janson}. For nontrivial weights with
+$w_0>0$, this is the zero-radius regime. Corollary~\ref{cor:paths} rules it
+out without any restriction on the jumps or oscillations of $m_n$. This
+is a subsequence conclusion, not a claim of condensation at every size or
+of $\Pp(Y_{(1)}=m_n)\to1$. The source already supplies sparse-support
+examples with sublinear maxima on selected subsequences.
+
+The density condition on $\mathcal N$ in Corollary~\ref{cor:paths} is optimal
+for a statement valid for every weight sequence: Section~\ref{sec:sharp}
+gives an explicit counterexample whenever that condition fails.
+
+Normalize $w_0=1$ by dividing all weights by $w_0$, which leaves every
+allocation law unchanged. Let $d=\gcd\{j\ge1:w_j>0\}$. Dividing supported
+sizes and admissible totals by $d$ preserves $Y_{(1)}/m$ and zero radius,
+and replaces a density $\lambda$ by $\lambda/d$. Until the proof of
+Theorem~\ref{thm:windows} is completed, we work with span one.
+
+\section{Insertion without losing the small-box factor}
+For an integer $u\ge0$ write
+\[
+ Z_u(t,n)=\sum_{\substack{x_1+\cdots+x_n=t\\0\le x_v\le u}}
+             \prod_{v=1}^n w_{x_v}.
+\]
+The following exact finite inequality keeps the entire background partition
+factor. It is applied only to positive-weight background count vectors.
+
+\begin{lemma}[Occupation-count insertion]\label{lem:insertion}
+Let $u<k$, $w_k>0$, and $m=t+k+r$. Suppose $r$ has a fixed representation
+by $R$ supported positive sizes at least $K$, together with $C$ other
+supported positive sizes. All these sizes are less than $k$. Let $W_r$ be
+the product of their weights. Put $Q=1+R+C$, and let $r_j$ be the
+multiplicity of size $j$ in the representation. If $t+Q\le n$, then
+\begin{equation}\label{eq:sharpinsertion}
+ Z(m,n)\ge w_kW_r Z_u(t,n)
+ \frac{\fall{n-t}{Q}}
+ {\displaystyle\prod_{j:r_j>0}\fall{\min\{n,\lfloor m/j\rfloor\}}{r_j}}.
+\end{equation}
+In particular, if
+\begin{equation}\label{eq:insertionconditions}
+ nK\ge2m,\qquad t+1+R+C\le n/2,
+\end{equation}
+then
+\begin{equation}\label{eq:insertion}
+ Z(m,n)\ge\frac{n}{2^{C+1}}\,w_k W_r Z_u(t,n).
+\end{equation}
+Repeated sizes, including sizes occurring in both parts of the
+representation, are allowed.
+\end{lemma}
+
+\begin{proof}
+Describe a background configuration by its occupation counts $a_j$, where
+$\sum a_j=n$ and $\sum j a_j=t$, and $a_j=0$ for $j>u$. The total weight of
+that count vector, including all coordinate permutations, is
+\[
+ \mathcal W(a)=\frac{n!}{\prod_j a_j!}\prod_j w_j^{a_j}.
+\]
+Set $Q=1+R+C$. Use $Q$ empty coordinates to insert one size-$k$ box and the
+chosen representation of $r$. If $r_j$ is the multiplicity of size $j$ in
+that representation, the resulting count vector is
+\[
+ b_0=a_0-Q,\quad b_k=1,\quad b_j=a_j+r_j\quad(0<j<k).
+\]
+The map $a\mapsto b$ is injective. Since $a_0\ge n-t$, its weight ratio is
+\begin{equation}\label{eq:typeratio}
+ \frac{\mathcal W(b)}{\mathcal W(a)}
+ =w_kW_r\frac{\fall{a_0}{Q}}
+ {\displaystyle\prod_{0<j<k}\prod_{\ell=1}^{r_j}(a_j+\ell)}.
+\end{equation}
+Since the final count $b_j=a_j+r_j$ is at most
+$\min\{n,\lfloor m/j\rfloor\}$, bounding the numerator below by
+$\fall{n-t}{Q}$ proves \eqref{eq:sharpinsertion}. Its denominator is
+positive because $r_j\le\min\{n,\lfloor m/j\rfloor\}$, by the representation
+and $Q\le n$. For the simpler bound, the numerator is at
+least $(n/2)^Q$ by \eqref{eq:insertionconditions}.
+Each denominator factor assigned to one of the $R$ large pieces is at most
+$m/K$, since the final configuration has total $m$. Each of the other $C$
+factors is at most $n$. When the two classes share a size, assign their
+factors in either fixed order; both bounds still apply. Thus the ratio in
+\eqref{eq:typeratio} is at least
+\[
+ w_kW_r\frac{n}{2^{C+1}}
+       \left(\frac{nK}{2m}\right)^R
+ \ge w_kW_r\frac{n}{2^{C+1}}.
+\]
+Summing over the distinct background count vectors gives
+\eqref{eq:insertion}. Weights of sizes not used in the construction only
+increase the original denominator. No assumption $m<2k$ is required:
+every image count vector has exactly one size-$k$ box by construction.
+\end{proof}
+
+The sharp inequality can also be obtained directly with labelled boxes.
+For every background, choose $Q$ ordered distinct empty coordinates and
+insert the giant and a fixed ordered list of reservoir pieces. There are
+at least $\fall{n-t}{Q}$ choices. A target has one possible giant location
+and at most
+$\prod_j\fall{\min\{n,\lfloor m/j\rfloor\}}{r_j}$ preimages of this kind.
+The weight multiplier is always $w_kW_r$. Weighted double counting gives
+\eqref{eq:sharpinsertion} without passing through occupation classes.
+
+\section{Geometric records and two summation bounds}
+Fix a real base $a>1$ and a constant $b>2$. For every sufficiently large
+integer $i$ define
+\begin{equation}\label{eq:records}
+ B_i=\max_{\substack{1\le s\le\lfloor a^i\rfloor\\w_s>0}}
+       \frac{\log w_s+b\log s}{s},\qquad
+ s_i=\min\operatorname*{arg\,max}_{s}\frac{\log w_s+b\log s}{s},
+ \qquad p_i=\frac{b\log s_i}{s_i}.
+\end{equation}
+Then $B_i$ is nondecreasing and tends to infinity. Also $s_i\to\infty$.
+Set $d_i=B_i-B_{i-1}$ and call an index \emph{active} if $d_i>0$. At an
+active index $J$,
+\begin{equation}\label{eq:active}
+ a^{J-1}<s_J\le a^J,\qquad
+ \log w_{s_J}=s_JB_J-b\log s_J.
+\end{equation}
+At inactive indices the smallest maximizing index remains unchanged.
+Consequently $s_i$ and $p_i$ are constant on each plateau of $B_i$.
+
+\begin{lemma}[Summable plateau charges]\label{lem:plateau}
+Fix a sufficiently large starting index $i_0$ and an integer $D\ge1$.
+If $\mathcal A$ is the set of active indices after $i_0$, then
+\begin{equation}\label{eq:plateausum}
+ \sum_{J\in\mathcal A}\ \sum_{i=i_0}^{J-D} a^{i-J}p_i<\infty.
+\end{equation}
+More precisely, this sum is at most
+\[
+ \frac{a}{(a-1)^2}
+ \left(p_{i_0}+\sum_{\ell\in\mathcal A}p_\ell\right),
+\]
+and the parenthesized sum is finite.
+\end{lemma}
+
+\begin{proof}
+For an active $\ell$, \eqref{eq:active} gives
+\[
+ p_\ell\le ba\ell(\log a)a^{-\ell},
+\]
+which is summable. Consider a plateau starting at $\ell$ and ending just
+before the next active index $v$. A term from this plateau can contribute
+to \eqref{eq:plateausum} only at an active $J\ge v$: the starting active
+index $J=\ell$ has cutoff $J-D<\ell$. Its total contribution is at most
+\[
+ p_\ell
+ \left(\sum_{i=\ell}^{v-1}a^i\right)
+ \left(\sum_{J=v}^{\infty}a^{-J}\right)
+ \le \frac{a}{(a-1)^2}p_\ell.
+\]
+The same bound applies to the initial plateau at $i_0$. There are always
+later active indices because $B_i\to\infty$. Summing proves the lemma.
+\end{proof}
+
+\begin{lemma}[Contractive memory kernel]\label{lem:kernel}
+For $D\ge2$ put
+\begin{equation}\label{eq:theta}
+ C_a=2a^2,\qquad
+ \Theta(a,D)=2a^{3-D}
+ \left(\frac{D-1}{a-1}+\frac{1}{(a-1)^2}\right).
+\end{equation}
+For every nondecreasing sequence $B_i$ with the increments defined above,
+and every finite upper limit $N$,
+\begin{equation}\label{eq:kernelsum}
+ C_a\sum_{\substack{i_0<J\le N\\J\ {\rm active}}}
+       \sum_{i=i_0}^{J-D}a^{i-J}(B_{J-1}-B_i)
+ \le\Theta(a,D)\sum_{\ell=i_0+1}^{N}d_\ell.
+\end{equation}
+In particular $D$ can be chosen so that $\Theta(a,D)<1/4$.
+\end{lemma}
+
+\begin{proof}
+Expand $B_{J-1}-B_i=\sum_{\ell=i+1}^{J-1}d_\ell$. All terms are
+nonnegative, so extend the sum over $J$ to all larger integers and the
+lower limit on $i$ to $-\infty$ to bound each coefficient. For a fixed
+$\ell$ and lag $t=J-\ell\ge1$, that coefficient, before multiplication by
+$C_a$, is
+\[
+ \sum_{i\le\min(J-D,\ell-1)}a^{i-J}
+ =\begin{cases}
+  a^{1-D}/(a-1),&1\le t\le D-1,\\
+  a^{-t}/(a-1),&t\ge D.
+ \end{cases}
+\]
+Summing over $t$ gives
+$a^{1-D}((D-1)/(a-1)+1/(a-1)^2)$. Multiplying by $2a^2$ gives
+\eqref{eq:theta}. Exponential decay in $D$ proves the last assertion.
+\end{proof}
+
+\section{A supported representation of every small residual}
+The span-one reduction provides a finite set of positive supported sizes
+whose gcd is one. Its nonnegative additive semigroup contains every integer
+above some $h_*\ge1$. Here is a direct justification. Choose one member
+$s$ of the finite set. The nonnegative residues generated modulo $s$ form
+a subgroup of the finite cyclic group and hence all residues. Choose one
+representable integer in each residue class; adding copies of $s$ then
+represents every sufficiently large integer.
+
+Fix an integer $K\ge2$. Enlarge $i_0$ so that, for all $i\ge i_0$,
+\begin{equation}\label{eq:start}
+ s_i\ge K,\qquad B_i\ge0,\qquad a^{i_0}\ge h_*.
+\end{equation}
+Choose once and for all a supported representation for each integer in
+\[
+ h_*\le v<2a^{i_0}.
+\]
+Let $C_*$ be a common bound on their numbers of positive parts, let
+$M=\lceil2a^{i_0}\rceil$, and choose $C_0\ge0$ such that the logarithm of
+each of their product weights is at least $-C_0$. These are finite constants.
+
+\begin{lemma}[Greedy residual bound]\label{lem:greedy}
+Suppose $J\ge i_0+D$, $r\ge h_*$, and
+\[
+ I(r):=\left\lfloor\log_a(r/2)\right\rfloor\le J-D,
+ \qquad D\ge2.
+\]
+There is a representation of $r$ using supported parts at least $K$, and
+at most $C_*$ additional supported parts, with product weight $W_r$ satisfying
+\begin{equation}\label{eq:greedy}
+ B_{J-1}r-\log W_r
+ \le 2\sum_{i=i_0}^{J-D}a^{i+1}
+       (B_{J-1}-B_i+p_i)+MB_{J-1}+C_0.
+\end{equation}
+All parts are at most $r$. The construction uses at most one stage at each
+geometric index $i$.
+\end{lemma}
+
+\begin{proof}
+With current residual $x$, stop if $x<2a^{i_0}$ and use its fixed terminal
+representation. Otherwise set
+\[
+ i=\lfloor\log_a(x/2)\rfloor,\quad
+ q=\left\lfloor\frac{x-h_*}{s_i}\right\rfloor,\quad
+ x'=x-qs_i.
+\]
+Here $i\ge i_0$, $q\ge1$, and
+\[
+ h_*\le x'<h_*+s_i\le2a^i,\qquad qs_i\le x<2a^{i+1}.
+\]
+Thus the next geometric index is strictly smaller than $i$. Add $q$ copies
+of $s_i$ and repeat. The procedure terminates in the fixed terminal range.
+At stage $i$ the logarithmic weight per unit mass is $B_i-p_i$.
+Since $B_{J-1}\ge B_i$ for every index used, that stage's deficit against
+$B_{J-1}$ is at most
+$2a^{i+1}(B_{J-1}-B_i+p_i)$. The terminal deficit is at most
+$MB_{J-1}+C_0$. Unused summands are nonnegative, giving \eqref{eq:greedy}.
+\end{proof}
+
+\section{A deterministic margin and a finite probability certificate}
+Fix $a>1$, $b>2$, and $D\ge2$ with $\Theta(a,D)<1/4$. Choose the finite
+terminal data $i_0,M,C_0,C_*$ from the preceding section. For every active
+$J\ge i_0+D$ set $k=s_J$, $h=B_{J-1}$, and define
+\begin{align}
+ E_J={}&2\sum_{i=i_0}^{J-D}a^{i+1}(B_{J-1}-B_i+p_i)
+             +MB_{J-1}+C_0,\label{eq:energy}\\
+ G_J={}&k(B_J-B_{J-1})-b\log k-E_J.\label{eq:margin}
+\end{align}
+All these quantities use finitely many weights. In particular $G_J$ does
+not depend on a mass path or on a conditional allocation probability.
+
+\begin{lemma}[Unbounded favorable margins]\label{lem:margin}
+For the fixed data above,
+\begin{equation}\label{eq:marginlimsup}
+ \limsup_{\substack{J\to\infty\\J\ {\rm active}}}G_J=+\infty.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Suppose instead $G_J\le T$ for all sufficiently large active $J$.
+From \eqref{eq:margin}, $k>a^{J-1}$ and $\log k\le J\log a$, we obtain
+\begin{align}
+ d_J\le{}&C_a\sum_{i=i_0}^{J-D}a^{i-J}(B_{J-1}-B_i+p_i)\notag\\
+ &+Ma^{1-J}B_{J-1}
+    +a^{1-J}(bJ\log a+C_2),\label{eq:recurrence}
+\end{align}
+where $C_2=\max\{0,C_0+T\}$. Fix $J_0$ beyond this threshold with
+\begin{equation}\label{eq:kappa}
+ \kappa=\frac{Ma^{1-J_0}}{a-1}<\frac14.
+\end{equation}
+For $N\ge J_0$, put $S_N=B_N-B_{J_0-1}$ and sum
+\eqref{eq:recurrence} over active $J\in[J_0,N]$. The memory term is at
+most $\Theta(a,D)S_N$ plus a fixed finite-prefix contribution, by
+Lemma~\ref{lem:kernel}. All $p_i$ terms have a finite total, by
+Lemma~\ref{lem:plateau}; the last term is also summable.
+The terminal term satisfies
+\begin{align*}
+ M\sum_{J=J_0}^N a^{1-J}B_{J-1}
+ &\le\frac{MB_{J_0-1}a^{2-J_0}}{a-1}
+    +M\sum_{\ell=J_0}^{N-1}d_\ell
+                    \sum_{J=\ell+1}^{\infty}a^{1-J}\\
+ &\le C_3+\kappa S_N.
+\end{align*}
+Thus $S_N\le(\Theta(a,D)+\kappa)S_N+C_4$, with $C_4$ independent of $N$.
+The coefficient is below $1/2$, contradicting $B_N\to\infty$.
+\end{proof}
+
+The preceding proof yields a finite-prefix version, without assuming any
+bound on $G_J$. It will also make the cancellation of all errors explicit.
+For $L\ge0$ define
+\[
+ T_L=\sum_{j=L}^{\infty}a^{1-j}=\frac{a^{2-L}}{a-1},\qquad
+ U_L=\sum_{j=L}^{\infty}j a^{1-j}
+ =a^{2-L}\left(\frac{L}{a-1}+\frac1{(a-1)^2}\right).
+\]
+Set
+\[
+ \Pi=\frac{a}{(a-1)^2}
+   \left(p_{i_0}+ba\log a\sum_{\ell=i_0+1}^{\infty}\ell a^{-\ell}\right)
+\]
+and, for $J_0\ge i_0+D$ with \eqref{eq:kappa}, set
+\begin{align}
+ \mathcal C={}&\Theta(a,D)(B_{J_0-1}-B_{i_0})+C_a\Pi
+       +MB_{J_0-1}T_{J_0}\notag\\
+       &+b(\log a)U_{J_0}+C_0T_{J_0}.\label{eq:explicitC}
+\end{align}
+These are finite nonnegative constants. The two infinite sums have displayed
+geometric closed forms (the sum in $\Pi$ equals $U_{i_0+1}/a$).
+
+\begin{lemma}[Finite-prefix margin bound]\label{lem:prefix}
+For all $N\ge J_0$,
+\begin{equation}\label{eq:finiteprefix}
+ \sum_{\substack{J_0\le J\le N\\J\ {\rm active}}}\frac{G_J}{s_J}
+ \ge(1-\Theta(a,D)-\kappa)(B_N-B_{J_0-1})-\mathcal C.
+\end{equation}
+In particular, with $x_+=\max\{x,0\}$ and the maximum of an empty set
+interpreted as zero,
+\begin{equation}\label{eq:prefixmax}
+ \max_{\substack{J_0\le J\le N\\J\ {\rm active}}}(G_J)_+
+ \ge\frac{(1-\Theta(a,D)-\kappa)(B_N-B_{J_0-1})-\mathcal C}{T_{J_0}}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Use the identity
+$d_J=G_J/s_J+b\log(s_J)/s_J+E_J/s_J$ and sum over active indices.
+The memory term and the terminal term have the bounds from the preceding
+proof. Lemma~\ref{lem:plateau} and
+$p_\ell\le ba\ell(\log a)a^{-\ell}$ at active $\ell$ bound the penalty
+term by $C_a\Pi$. Finally,
+\[
+ \sum_{J\ge J_0}\frac{b\log s_J+C_0}{s_J}
+ \le b(\log a)U_{J_0}+C_0T_{J_0},
+\]
+where sums on the left are restricted to active indices. Rearrangement
+gives \eqref{eq:finiteprefix}. Since
+$\sum_{J\ge J_0,\,J\ {\rm active}}s_J^{-1}\le T_{J_0}$, bounding each
+$G_J$ by the maximum of their positive parts gives \eqref{eq:prefixmax}.
+\end{proof}
+
+\section{Uniform windows}
+Fix $\varepsilon\in(0,1)$ and $0<\alpha<\beta<\infty$. Choose $a>1$ close
+to one, fix $b=4$, and choose $D\ge2$ with $\Theta(a,D)<1/4$. Next choose
+$\delta>0$ such that
+\begin{equation}\label{eq:parameters}
+ \delta<\min\left\{\frac{a^{-D}}{100},\frac1{100(1+\beta)},\frac1{100}\right\},
+ \qquad \frac1{a(1+5\delta)}>1-\varepsilon.
+\end{equation}
+Choose an integer $K\ge4(1+\beta)$, and then the fixed terminal data from
+Section~4. Every parameter is now fixed, before letting $J\to\infty$.
+At an active $J$ write $k=s_J$, $u=\lfloor a^{J-1}\rfloor$, $h=B_{J-1}$,
+and define the finite auxiliary distribution
+\begin{equation}\label{eq:auxiliary}
+ q_j=w_je^{-hj},\quad A_J=\sum_{j=0}^{u}q_j,\quad
+ p_J(j)=q_j/A_J,\quad \mu_J=\sum_{j=0}^{u}j p_J(j).
+\end{equation}
+The record definition implies $q_0=1$ and $q_j\le j^{-b}$ for $1\le j\le u$.
+Since $h\to\infty$, dominated convergence gives $A_J\to1$ and $\mu_J\to0$,
+using $\sum j^{1-b}<\infty$ for the latter assertion.
+
+\begin{lemma}[Uniform finite-size certificate]\label{lem:certificate}
+For all sufficiently large active $J$, every integer pair with
+\begin{equation}\label{eq:slab}
+ (1+3\delta)k\le m\le(1+5\delta)k,\qquad
+ \alpha\le m/n\le\beta
+\end{equation}
+is admissible in the span-one model, and
+\begin{equation}\label{eq:certificate}
+ \Pp_w(Y_{(1)}(m,n)\le u)\le\min\{1,C e^{-G_J}\},\qquad
+ C=\max\left\{1,\frac{2^{C_*+3}\beta\delta}{1+3\delta}\right\}.
+\end{equation}
+Here $G_J$ is the deterministic quantity in \eqref{eq:margin}; the same
+bound holds for every pair in the window.
+\end{lemma}
+
+\begin{proof}
+The sufficiently large condition can be checked using only finite data:
+require $J\ge i_0+D$, $\delta k\ge1$, $2\delta k\ge h_*$,
+\begin{equation}\label{eq:finiteconditions}
+ \mu_J\le\frac{\alpha\delta}{2(1+5\delta)},\qquad
+ 5\delta k+1\le\frac{(1+3\delta)k}{2\beta},
+\end{equation}
+and $h\ge0$. These all hold eventually. For the sum $S_n$ of $n$
+independent copies of \eqref{eq:auxiliary}, Markov's inequality gives
+$\Pp(S_n\le\delta k)\ge1/2$, uniformly in \eqref{eq:slab}, because
+$n\le(1+5\delta)k/\alpha$. Hence some integer
+$t\in[0,\lfloor\delta k\rfloor]$ satisfies
+\begin{equation}\label{eq:atom}
+ \Pp(S_n=t)\ge\frac1{2(\lfloor\delta k\rfloor+1)}.
+\end{equation}
+Put $r=m-k-t$, so $2\delta k\le r\le5\delta k$. By
+\eqref{eq:parameters}, $I(r)\le J-D$. Lemma~\ref{lem:greedy} supplies a
+representation with product $W_r$ and deficit $hr-\log W_r\le E_J$.
+If it uses $R$ large pieces and $C'\le C_*$ terminal pieces, then
+\[
+ t+1+R+C'\le t+1+r=m-k+1\le5\delta k+1\le n/2.
+\]
+Also $nK\ge2m$, and every inserted part is smaller than $k$, since
+$r\le5\delta k<k$. Lemma~\ref{lem:insertion} gives
+\[
+ Z(m,n)\ge\frac{n}{2^{C_*+1}}w_kW_r Z_u(t,n)>0.
+\]
+Thus no admissibility assumption has been used in producing the bound.
+The exact identities and inequality
+\[
+ Z_u(t,n)=e^{ht}A_J^n\Pp(S_n=t),\qquad
+ Z_u(m,n)=e^{hm}A_J^n\Pp(S_n=m)\le e^{hm}A_J^n
+\]
+now yield
+\begin{align*}
+ \Pp_w(Y_{(1)}\le u)
+ &\le\frac{2^{C_*+2}(\lfloor\delta k\rfloor+1)}n
+       \exp\{hk-\log w_k+hr-\log W_r\}\\
+ &\le\frac{2^{C_*+3}\beta\delta}{1+3\delta}\,e^{-G_J}.
+\end{align*}
+The whole small-box factor $A_J^n$ cancels exactly. The last line uses
+$\delta k\ge1$, $n\ge(1+3\delta)k/\beta$, and
+$\log w_k=kB_J-b\log k$. This proves \eqref{eq:certificate}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:windows}]
+Lemma~\ref{lem:margin} supplies active $J_r\uparrow\infty$ with
+$G_{J_r}\to\infty$. Let $k_r=s_{J_r}$. For all pairs in the corresponding
+window,
+\[
+ \frac{u}{m}\ge\frac{a^{J_r-1}-1}{(1+5\delta)a^{J_r}}
+ \longrightarrow\frac1{a(1+5\delta)}>1-\varepsilon
+ \quad\text{as a lower bound}.
+\]
+Thus \eqref{eq:certificate} proves \eqref{eq:uniform}. The integer windows
+have positive linear length, and $\alpha<\beta$ guarantees that for every
+sufficiently large integer $m$ in such a window there is an integer $n$
+with $\alpha\le m/n\le\beta$. Admissibility follows from the certificate.
+For span $d$, apply the argument to $w_{dj}$, $m/d$ and the density interval
+$[\alpha/d,\beta/d]$, then replace the supported sizes by $d k_r$.
+The original windows contain multiples of $d$ for all large $r$, so they
+also contain admissible pairs. The ratio $Y_{(1)}/m$ is unchanged.
+\end{proof}
+
+\section{Consequences for full paths}\label{sec:paths}
+\begin{proof}[Proof of Corollary~\ref{cor:paths}]
+Fix $\varepsilon>0$ and apply Theorem~\ref{thm:windows} with the density
+interval $[\lambda/2,2\lambda]$. For each resulting $k_r$, let $n_r$ be the
+first element of $\mathcal N$ at least $(1+4\delta)k_r/\lambda$.
+The condition $N_{j+1}/N_j\to1$ implies
+\[
+ \frac{n_r}{k_r}\to\frac{1+4\delta}{\lambda},\qquad
+ \frac{m_{n_r}}{k_r}\to1+4\delta.
+\]
+Thus these pairs eventually lie in the windows, and their failure
+probabilities at accuracy $\varepsilon$ tend to zero. Apply this assertion
+separately with $\varepsilon=1/r$, selecting a size greater than the preceding
+one and a failure probability below $1/r$. This diagonal choice proves
+\eqref{eq:conclusion}. The bounds $0\le Y_{(1)}/m_n\le1$ and
+$m_n/n\to\lambda$ give the expectation and $L^1$ assertions. Finally
+$Y_{(2)}\le m_n-Y_{(1)}$.
+\end{proof}
+
+For a full path $\mathcal N=\N$, the conclusion for a fixed accuracy is
+stronger than the selection of one size per record. Define
+\begin{equation}\label{eq:sizeintervals}
+ I_r=\left[
+ \left\lceil\frac{(1+\tfrac72\delta)k_r}{\lambda}\right\rceil,
+ \left\lfloor\frac{(1+\tfrac92\delta)k_r}{\lambda}\right\rfloor
+ \right]\cap\N.
+\end{equation}
+Uniformly for $n\in I_r$, the relation $m_n-\lambda n=o(n)$ implies
+$|m_n-\lambda n|=o(k_r)$. Hence all such pairs eventually lie in
+\eqref{eq:slab}, and
+\begin{equation}\label{eq:blocks}
+ \sup_{n\in I_r}\Pp_w(Y_{(1)}(m_n,n)\le(1-\varepsilon)m_n)\to0,
+ \qquad |I_r|\sim\frac{\delta k_r}{\lambda}.
+\end{equation}
+In particular the intervals have a fixed positive relative width at every
+fixed accuracy. They need not occur at regularly spaced locations.
+No rate uniform in the weight sequence is asserted.
+
+For simply generated plane trees the allocation has $m=n-1$. The cyclic
+lemma groups every allocation sequence of total $n-1$ into an orbit of
+$n$ rotations containing exactly one valid tree sequence; product weights
+and the maximum are unchanged. Thus the maximum outdegree has the same
+law as $Y_{(1)}$. Admissible sufficiently large tree sizes form the lattice
+$n\equiv1\pmod d$: to verify eventual admissibility, choose a finite subset
+of supported degrees of gcd $d$, represent every sufficiently large
+multiple of $d$ as their nonnegative sum, and pad with zeros to $n$ entries.
+There are at most $n-1$ positive summands since every degree is at least one.
+The dense-index extension therefore applies.
+
+\begin{corollary}[Subsequence concentration at the root]\label{cor:root}
+For simply generated plane trees with zero-radius weights and $w_0>0$,
+there are admissible $n_r\uparrow\infty$ such that the root has
+$(1-o_{\Pp}(1))n_r$ children. With probability tending to one the root is
+the unique vertex of maximum outdegree. The number of vertices at depth
+at least two is $o_{\Pp}(n_r)$, also in expectation after division by $n_r$.
+\end{corollary}
+
+\begin{proof}
+Let $A_j$ be the number of vertices of outdegree $j$, and let
+$D=\max\{j:A_j>0\}$. Conditional on $(A_j)$, the known root-degree identity
+\cite[Lemma 14.7 and equation (19.1)]{Janson} reads
+\begin{equation}\label{eq:rootidentity}
+ \Pp(d^+(o)=j\mid(A_i))=\frac{jA_j}{n-1}.
+\end{equation}
+For a direct count, the number of plane trees with these degree counts is
+$(n-1)!/\prod_iA_i!$. Removing a root of degree $j$ leaves an ordered forest
+of $j$ trees. The cyclic lemma counts these forests as
+$j(n-2)!/((A_j-1)!\prod_{i\ne j}A_i!)$, yielding
+\eqref{eq:rootidentity}. All trees with given counts have the same product
+weight, so conditioning on the counts does not alter this calculation.
+
+Along the subsequence from Corollary~\ref{cor:paths}, $D/(n-1)\to1$ in
+probability. On $D>(n-1)/2$ the maximum is unique, and its probability of
+being the root, conditionally on the counts, is $D/(n-1)$. Taking
+expectations gives probability tending to one. This also proves
+$d^+(o)/(n-1)\to1$ in probability and in $L^1$. Finally the number of
+vertices at depth at least two is exactly $n-1-d^+(o)$.
+\end{proof}
+
+The root identity is not a new result. The corollary is its application
+to the unrestricted subsequence statement proved above; it is stronger
+than merely identifying an infinite-star local limit.
+
+\section{The sampling condition is sharp}\label{sec:sharp}
+\begin{theorem}[Sharp universal sampling criterion]\label{thm:sampling}
+For an infinite index set $\mathcal N=\{N_1<N_2<\cdots\}$, the following
+are equivalent:
+\begin{enumerate}[label=(\roman*)]
+\item $N_{j+1}/N_j\to1$.
+\item For every fixed zero-radius weight sequence with $w_0>0$ and every
+      eventually admissible mass path on $\mathcal N$ with positive finite
+      limiting density, some subsequence satisfies $Y_{(1)}/m\to1$ in
+      probability.
+\end{enumerate}
+If $\limsup_jN_{j+1}/N_j=\infty$, there are such weights, with $w_1>0$, for
+which $Y_{(1)}(n-1,n)/n\to0$ deterministically throughout $n\in\mathcal N$.
+\end{theorem}
+
+\begin{proof}
+The implication (i)$\Rightarrow$(ii) is Corollary~\ref{cor:paths}.
+If (i) fails, there exist $\theta>1$ and infinitely many increasing indices
+$r_j$ with $N_{r_j+1}\ge\theta N_{r_j}$. Discard finitely many so that
+$N_{r_j}\ge2$. Set
+\[
+ S=\{0,1\}\cup\{N_{r_j}:j\ge1\},\qquad
+ w_0=w_1=1,\quad w_k=e^{k^2}\ (k\in S\setminus\{0,1\}),
+\]
+and set every other weight to zero. These are fixed weights with zero
+radius. The tree path $m_n=n-1$ is admissible at every size by using ones
+and zeros. If a supported $k=N_{r_j}$ is available at a sampled size
+$n\in\mathcal N$, then $k\le n-1$, so
+$n\ge N_{r_j+1}\ge\theta k$. Consequently
+\[
+ Y_{(1)}(n-1,n)\le\max\{1,n/\theta\}
+ \quad(n\in\mathcal N)
+\]
+for every configuration. This implies
+$\limsup_{n\in\mathcal N}Y_{(1)}/(n-1)\le1/\theta<1$, disproving (ii).
+
+For the final assertion, select $r_j$ so that
+$N_{r_j+1}/N_{r_j}\ge j+1$ and use the same construction. Fix $L$.
+Any available supported $N_{r_j}$ with $j\ge L$ is at most $n/(L+1)$.
+The finitely many earlier supported values, divided by $n$, tend to zero.
+Thus $\limsup_{n\in\mathcal N}Y_{(1)}/n\le1/(L+1)$ deterministically.
+Let $L\to\infty$.
+\end{proof}
+
+This is an optimality statement about a universal theorem, not an assertion
+that every weight sequence fails on a nondense set. For example, the powers
+of two as sampled sizes and as nonzero large support already force a
+maximum at most $n/2$ on the tree path; factorial gaps can force a vanishing
+fraction, in the same spirit as the source's Example 18.38.
+
+\section{Verification scope and finite checks}
+The argument uses a deterministic margin to give a uniform window statement
+and a sharp sampling criterion. The finite checks below test its algebraic
+components; they are not a proof-assistant formalization or an independent
+audit of the limiting argument.
+
+The accompanying \texttt{check\_uniform\_windows.py} verifies finite
+occupation-count bounds and conditional probabilities on an entire explicit
+window, the exact finite-prefix inequality with rational geometric data,
+and the support obstructions at powers-of-two and factorial sample sizes.
+It also reruns the predecessor's exact checks. In the explicit window the
+weights are supported on $\{0,2,3,5,17\}$ below 120, with
+$w_j=2^{j^2}$ at the positive supported values; assigning the same weights
+at $j=\ell!$ for $\ell\ge5$ makes this one fixed infinite zero-radius law.
+Every pair $20\le m\le22$, $1/2\le m/n\le2$ is checked with exact arithmetic.
+There are 97 such pairs. The sharp insertion bound certifies
+\[
+ \sup_{\substack{20\le m\le22\\1/2\le m/n\le2}}
+ \Pp_w(Y_{(1)}\le3m/4)\le2^{-189}.
+\]
+The largest actual probability on this finite window is approximately
+$1.51\cdot10^{-58}$; the exact rational is in the checker output. The
+checker also verifies the root-degree identity by enumerating all plane
+trees of sizes two through ten.
+These finite computations do not replace the asymptotic argument.
+
+The positive-boundary-mean Problem 18.39 is not resolved here. No statement
+of publication priority is made. The source question and its neighboring
+examples were checked directly in Janson's survey. The factorial and
+successive-ratio results in \cite{JJS} are not claimed as new.
+
+\begin{thebibliography}{9}
+\bibitem{Janson}
+S. Janson,
+\emph{Simply generated trees, conditioned Galton--Watson trees, random
+allocations and condensation},
+Probability Surveys \textbf{9} (2012), 103--252.
+DOI: 10.1214/11-PS188. arXiv:1112.0510.
+\bibitem{JJS}
+S. Janson, T. Jonsson and S. \"O. Stef\'ansson,
+\emph{Random trees with superexponential branching weights},
+Journal of Physics A: Mathematical and Theoretical \textbf{44} (2011), 485002.
+arXiv:1104.2810.
+\end{thebibliography}
+\end{document}

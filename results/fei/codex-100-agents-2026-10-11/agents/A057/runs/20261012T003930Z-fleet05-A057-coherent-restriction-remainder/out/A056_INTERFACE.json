@@ -1,0 +1,14 @@
+{
+  "interface_id": "A056-BIASED-ERASURE-v2",
+  "scope": "Disjoint Boolean substitution at every fixed physical restriction cylinder",
+  "units": "bits; D_i is physical entropy decrement",
+  "definitions": {"h": "A+y_j B", "m": "E g_j", "v": "1-m^2", "beta": "g_jhat({i})", "t": "beta^2", "a_T,b_T": "A,B coefficients in normalized basis of other outputs under their current product law", "C_T": "a_T+m b_T", "q": "sum_T b_T^2, current outer pivotal probability", "e(s,t)": "(s+t)h2(t/(s+t))", "d(a,b)": "phi(a^2)+phi(b^2)-(phi((a+b)^2)+phi((a-b)^2))/2", "j(a,b)": "d(a,b)-e(a^2,b^2)", "phi(s)": "s log2(1/s)", "M(t)": "sum_T e(C_T^2,t b_T^2)", "N(t)": "sum_T j(C_T,beta b_T)"},
+  "positive_sector_split": {"B_i_star": "B_i(g_j)-e(m^2,t)", "D_i_star": "D_i(g_j)-d(m,beta)", "B_i_F": "q B_i_star + M(t)", "D_i_F": "q D_i_star + M(t)+N(t)", "physical_influence": "Inf_i(F)=q Inf_i(g_j)"},
+  "signed_split": {"L_m": "M(t)-q e(m^2,t)", "K_m": "N(t)-q j(m,beta)", "B_i_F": "q B_i(g_j)+L_m", "D_i_F": "q D_i(g_j)+L_m+K_m", "warning": "L_m and K_m may be negative; balanced positivity does not transfer unchanged"},
+  "bounds": {"M(v)": "B_j^mu(h), erasure in normalized biased outer spectral law", "M(t)": "<= min{M(v),(t/v)M(v)+q t log2(v/t)}", "N(t)": "0<=N(t)<=(2/ln2)q t", "paid_log": "q t log2(v/t)<=[2/(e ln2)]Inf_i(F)", "physical_tree_paid_components": "logarithm plus N cost <=[(2+2/e)/ln2]*(I(root)-E I(leaf))"},
+  "endpoints": {"v=0": "Child constant, beta=0; fix output; no division", "t=0": "M=N=0", "q=0": "All selected physical contributions vanish", "m=0": "Recovers balanced split"},
+  "negative_erasure_correction_witness": "AND2(OR2,OR2), selected child coordinate: L=1/4-(9/8)log2(3)+(5/8)log2(5)<0 by 12500<19683",
+  "unpaid": "Expected terminal entropy + nonempty child decrements + capped current biased outer erasures with physical budget not reused",
+  "consumers": ["A057", "A059", "A060", "A024", "A091", "A090", "B20"],
+  "review_status": "v1 adopted by lead/A091; v2 focused extension pending review"
+}

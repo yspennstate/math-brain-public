@@ -1,0 +1,171 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+
+\title{A Half-Entropy Family Refuting the Gaussian Integral Spectrum Conjecture for Nonsymmetric Sign Matrices}
+\author{R7-07 research note}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Vu conjectured that for an $n\times n$ matrix $M_n$ with independent Rademacher entries, the probability that every eigenvalue is a Gaussian integer is $2^{-(1+o(1))n^2}$.  We give an explicit family showing that the exponent $1$ cannot be correct.  For every even $n=2m$ we construct exactly
+\[
+4^{m(m-1)}6^m=2^{n^2/2+O(n)}
+\]
+distinct sign matrices whose spectra are in fact contained in $\{-2,0,2\}$.  Consequently
+\[
+\mathbb P\bigl(\operatorname{Spec}(M_n)\subset\mathbb Z[i]\bigr)
+\ge 2^{-n^2/2+(n/2)\log_2(3/2)}
+\]
+for every even $n$, contradicting the conjectured exponent.  We also show that the leading $n^2/2$ entropy of the construction is optimal among families triangularized in one fixed basis.
+\end{abstract}
+
+\section{Source statement}
+Let $M_n$ be an $n\times n$ matrix whose entries are independent random variables taking values $\pm1$ with probability $1/2$.  In Section~9 of \cite{Vu2021}, Conjecture~9.5 states
+\begin{equation}\label{eq:vu}
+\mathbb P\bigl(\operatorname{Spec}(M_n)\subset\mathbb Z[i]\bigr)
+=2^{-(1+o(1))n^2}.
+\end{equation}
+The distinction between $M_n$ and the symmetric model $M_n^{\rm sym}$ is explicit in the source.  Our construction concerns the nonsymmetric model only.
+
+The elementary rank-one family $uv^T$, $u,v\in\{\pm1\}^n$, already gives $2^{2n-1}$ distinct matrices with integer spectrum, but this remains only $2^{O(n)}$ examples and is compatible with \eqref{eq:vu}.  The point below is that a fixed invariant flag supports $2^{n^2/2+O(n)}$ sign matrices with integer spectrum.
+
+\section{The construction}
+\begin{theorem}\label{thm:main}
+For every $m\ge1$, there are exactly
+\[
+N_m=4^{m(m-1)}6^m
+\]
+matrices in an explicit family $\mathcal F_m\subset\{\pm1\}^{2m\times2m}$ such that every eigenvalue of every $M\in\mathcal F_m$ belongs to $\{-2,0,2\}$.
+\end{theorem}
+
+\begin{proof}
+Write a $2m\times2m$ sign matrix in $m\times m$ blocks as
+\[
+M=\begin{pmatrix}A&B\\ C&D\end{pmatrix}.
+\]
+Let
+\[
+S=\begin{pmatrix}I&0\\ I&I\end{pmatrix},\qquad
+S^{-1}=\begin{pmatrix}I&0\\ -I&I\end{pmatrix}.
+\]
+Direct multiplication gives
+\begin{equation}\label{eq:shear}
+S^{-1}MS=
+\begin{pmatrix}
+A+B&B\\
+C+D-A-B&D-B
+\end{pmatrix}.
+\end{equation}
+We define $\mathcal F_m$ by the following entrywise conditions:
+\begin{align}
+C+D&=A+B,\label{eq:eq}\
+A+B&\text{ is upper triangular},\label{eq:up}\
+D-B&\text{ is lower triangular}.\label{eq:low}
+\end{align}
+Then \eqref{eq:shear} becomes
+\[
+S^{-1}MS=
+\begin{pmatrix}
+A+B&B\\0&D-B
+\end{pmatrix}.
+\]
+This matrix is block upper triangular.  Its diagonal blocks are triangular integer matrices, and every diagonal entry of either block lies in $\{-2,0,2\}$.  Hence all eigenvalues of $M$ lie in $\{-2,0,2\}$.
+
+It remains to count the sign choices.  For one scalar position write $(a,b,c,d)\in\{\pm1\}^4$.
+If $i>j$, condition \eqref{eq:up} says $a+b=0$, and then \eqref{eq:eq} says $c+d=0$.  Thus there are $4$ choices.
+If $i<j$, condition \eqref{eq:low} says $d-b=0$; together with \eqref{eq:eq}, this gives $d=b$ and $c=a$, again $4$ choices.
+If $i=j$, only $c+d=a+b$ is required.  The common sum can be $-2,0,2$, producing respectively $1,4,1$ possibilities, for a total of $6$.
+
+The conditions at distinct positions are independent.  There are $m(m-1)$ off-diagonal positions and $m$ diagonal positions, whence
+\[
+|\mathcal F_m|=4^{m(m-1)}6^m.
+\]
+The block entries themselves determine $M$, so no quotienting or overcounting occurs.
+\end{proof}
+
+\begin{theorem}\label{thm:refute}
+Vu's Conjecture~9.5, in its literal nonsymmetric iid-Rademacher form, is false.
+\end{theorem}
+
+\begin{proof}
+Set $n=2m$.  Every $n\times n$ sign matrix has probability $2^{-n^2}=2^{-4m^2}$.  By Theorem~\ref{thm:main},
+\begin{align*}
+\mathbb P\bigl(\operatorname{Spec}(M_{2m})\subset\mathbb Z[i]\bigr)
+&\ge 4^{m(m-1)}6^m2^{-4m^2}\\
+&=2^{-2m^2+m(\log_2 6-2)}\\
+&=2^{-n^2/2+(n/2)\log_2(3/2)}.
+\end{align*}
+Therefore
+\[
+\liminf_{n\to\infty}
+\frac{-\log_2\mathbb P(\operatorname{Spec}(M_n)\subset\mathbb Z[i])}{n^2}
+\le \frac12,
+\]
+whereas \eqref{eq:vu} would force the displayed normalized quantity to converge to $1$.  The even subsequence alone gives a contradiction.
+\end{proof}
+
+\section{Why the half-entropy exponent is natural for a fixed flag}
+The preceding construction is a hypercube section of a conjugate triangular algebra.
+
+\begin{lemma}[Hypercube section]\label{lem:cube}
+If $L\subset\mathbb R^N$ is a linear subspace of dimension $d$, then
+\[
+|L\cap\{\pm1\}^N|\le2^d.
+\]
+\end{lemma}
+
+\begin{proof}
+The restrictions to $L$ of the $N$ coordinate functionals span $L^*$. Choose $d$ of them that form a basis of $L^*$. Projection onto those $d$ coordinates is injective on $L$, while a sign vector has only $2^d$ possible projected sign patterns.
+\end{proof}
+
+\begin{proposition}\label{prop:flag}
+Fix $P\in\mathrm{GL}_n(\mathbb R)$.  The number of sign matrices $M$ for which $P^{-1}MP$ is upper triangular is at most
+\[
+2^{n(n+1)/2}.
+\]
+For even $n$, the family in Theorem~\ref{thm:main} has size $2^{n^2/2+O(n)}$, so it saturates the leading $n^2/2$ exponent possible for any one fixed triangularizing basis.
+\end{proposition}
+
+\begin{proof}
+The conjugate of the upper-triangular algebra is a linear subspace of $\mathbb R^{n^2}$ of dimension $n(n+1)/2$.  Apply Lemma~\ref{lem:cube}.  For the second statement, reverse the coordinate order inside the lower $m$-dimensional block after the shear $S$ in \eqref{eq:shear}.  Then both diagonal triangular blocks become upper triangular in one fixed ordered basis, while the upper-right block remains unrestricted.  The exact count from Theorem~\ref{thm:main} is
+\[
+\log_2 N_m=2m(m-1)+m\log_2 6=\frac{n^2}{2}+O(n).
+\]
+\end{proof}
+
+\section{Interpretation and remaining question}
+A matrix with Gaussian-integral spectrum is triangularizable over $\mathbb Q(i)$, so the event in Conjecture~9.5 can be viewed as a union of rational invariant-flag strata.  Proposition~\ref{prop:flag} shows that one fixed flag can contribute at most $2^{n^2/2+O(n)}$ sign matrices, and Theorem~\ref{thm:main} shows that this leading exponent is attained.
+
+Thus the failure of the exponent $1$ is not caused merely by the previously noted $2^{O(n)}$ low-rank examples.  A half-dimensional hypercube section already has integer spectrum.  A natural post-refutation question is whether the true probability has exponent $1/2$, which would require controlling the effective number and overlap of invariant flags.  We do not claim such an upper bound here.
+
+\section{Prior-art boundary}
+The source itself cites work on integral spectra in the symmetric/graph setting, including Ahmadi--Alon--Blake--Shparlinski and Costello--Williams.  Later characteristic-polynomial work such as Eberhard \cite{Eberhard2022} proves strong qualitative irreducibility statements for random sign matrices under ERH, but does not provide the $2^{-\Theta(n^2)}$ rare-event estimate considered here.  A bounded search on 18--19 September 2026 did not surface a source-matching published refutation of Conjecture~9.5.  This negative search is not a novelty certificate.
+
+\begin{thebibliography}{9}
+\bibitem{Vu2021}
+V. H. Vu,
+\emph{Recent progress in combinatorial random matrix theory},
+Probability Surveys 18 (2021), 179--200.
+Preprint: \url{https://arxiv.org/abs/2005.02797}.
+
+\bibitem{Eberhard2022}
+S. Eberhard,
+\emph{The characteristic polynomial of a random matrix},
+Combinatorica 42 (2022), 491--527.
+
+\bibitem{AABS2009}
+O. Ahmadi, N. Alon, I. F. Blake and I. E. Shparlinski,
+\emph{Graphs with integral spectrum},
+Linear Algebra Appl. 430 (2009), 547--552.
+\end{thebibliography}
+
+\end{document}

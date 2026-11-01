@@ -1,0 +1,51 @@
+{
+  "as_of": "2026-09-07T21:20:49.535642+00:00",
+  "rows": [
+    {
+      "case": "true_weak_tactic",
+      "source_sha256": "5d7cbba7fdc9e0991fd0912417d778e71f2ce9da10c51ae85df75ce855644299",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "status": "rejected",
+      "exit_code": 1,
+      "seconds": 217.445,
+      "diagnostic": "<HOME>\\.codex-worktrees\\math-brain-20h-20260907\\lean_controls_long_20260907\\true_weak_tactic.lean:2:2: error: Tactic `assumption` failed\n\nn : Nat\n\u22a2 n + 0 = n\n",
+      "expected_diagnostic_confirmed": true
+    },
+    {
+      "case": "same_true_statement_proved",
+      "source_sha256": "cdad1d47c15bc1e89b59b9f685c5d178b610b6ab7ef40d64468b65827d6ee90a",
+      "expected_acceptance": true,
+      "actual_acceptance": true,
+      "status": "accepted",
+      "exit_code": 0,
+      "seconds": 50.46,
+      "diagnostic": "'ProbeTrue' does not depend on any axioms\n",
+      "expected_diagnostic_confirmed": true
+    },
+    {
+      "case": "false_statement_rejected",
+      "source_sha256": "119726828932e0b8def452480ecc43dacb896b37a412320b3a0c4408de3fb38c",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "status": "rejected",
+      "exit_code": 1,
+      "seconds": 17.686,
+      "diagnostic": "<HOME>\\.codex-worktrees\\math-brain-20h-20260907\\lean_controls_long_20260907\\false_statement_rejected.lean:2:2: error: Tactic `rfl` failed: The left-hand side\n  1\nis not definitionally equal to the right-hand side\n  2\n\n\u22a2 1 = 2\n",
+      "expected_diagnostic_confirmed": true
+    },
+    {
+      "case": "negation_proved",
+      "source_sha256": "05e5ba454bfb68594124d1e66ad6630f53aeb4e00be331810591b348987f462d",
+      "expected_acceptance": true,
+      "actual_acceptance": true,
+      "status": "accepted",
+      "exit_code": 0,
+      "seconds": 4.332,
+      "diagnostic": "'ProbeNegation' does not depend on any axioms\n",
+      "expected_diagnostic_confirmed": true
+    }
+  ],
+  "all_controls_pass": true,
+  "interpretation": "The same true statement is rejected with an inadequate tactic and accepted with rfl. Rejection alone cannot classify mathematical truth."
+}

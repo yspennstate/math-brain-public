@@ -1,0 +1,73 @@
+{
+  "seed": 2102120260915,
+  "replacement": {
+    "trials": 180,
+    "max_gradient_identity_error": 5.551115123125783e-17,
+    "max_hessian_identity_error": 1.734723475976807e-16,
+    "max_cross_dissipation_asymmetry": 8.326672684688674e-17,
+    "minimum_first_partial": 8.137521672960252e-06,
+    "minimum_diagonal_second_partial": 9.290540669509586e-06,
+    "minimum_mixed_second_partial": 3.011088400847426e-05
+  },
+  "affine_dpp": {
+    "trials": 120,
+    "max_atom_identity_error": 8.326672684688674e-17,
+    "max_affine_curvature_identity_error": 6.938893903907228e-17,
+    "maximum_sampled_entropy_curvature": -4.1023836846699254e-05
+  },
+  "six_site": {
+    "determinant_integer_B": "13",
+    "exact_direction_rank": 6,
+    "direction_inertia": [
+      3,
+      3,
+      0
+    ],
+    "maximal_offdiagonal_row_sum": "7/40",
+    "spectral_enclosure": [
+      "13/40",
+      "27/40"
+    ],
+    "sampled_values": [
+      {
+        "t": 0.0,
+        "entropy": 4.158805260918236,
+        "curvature": -0.00017101594852451788
+      },
+      {
+        "t": 0.25,
+        "entropy": 4.158785622308265,
+        "curvature": -0.0004208242405864766
+      },
+      {
+        "t": 0.5,
+        "entropy": 4.158739019776018,
+        "curvature": -0.0007978179716721754
+      },
+      {
+        "t": 0.75,
+        "entropy": 4.15864189071519,
+        "curvature": -0.0013020960611584878
+      },
+      {
+        "t": 1.0,
+        "entropy": 4.158462716557859,
+        "curvature": -0.001933890930605293
+      }
+    ],
+    "midpoint_entropy_gap": 0.00010503103796999369
+  },
+  "parity": {
+    "selected_pair_marginal": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "exact_entropy_curvature": "(epsilon/4) * atanh(epsilon/16)",
+    "epsilon_half_curvature": 0.003907522311333374,
+    "predicted_curvature": 0.003907522311333364,
+    "symbolic_expression": "e*(-log(1 - e/16) + log(e/16 + 1))/8",
+    "note": "A channel obstruction; this parity law cannot be a nonproduct DPP."
+  }
+}

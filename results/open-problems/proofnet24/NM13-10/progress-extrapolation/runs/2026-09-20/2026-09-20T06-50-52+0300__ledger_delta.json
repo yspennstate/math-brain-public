@@ -1,0 +1,42 @@
+{
+  "track": "NM13-10",
+  "root": "proofnet24/NM13-10/progress-extrapolation",
+  "source": "Agresti-Veraar arXiv:2501.18561 / NoDEA 32 (2025), Problem 3",
+  "frozen_pair": {
+    "X0": "H^-1(T)",
+    "Xhalf": "L^2(T)",
+    "X1": "H^1(T)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "brownian_dimension": 1
+  },
+  "fixed_strong_endpoint_before": "r_*=3; p=3 excluded",
+  "fixed_strong_endpoint_after": "r_*=3; p=3 excluded",
+  "exact_subcritical_norm_preserved": "C_p^g(T)=1/(sqrt(2/(p-1))-1), 2<=p<3",
+  "critical_rearrangement_bracket_before": "2/3 <= alpha_*(T) <= 1",
+  "critical_rearrangement_bracket_after": "2/3 <= alpha_*(T) <= 1",
+  "source_level_movement": "none",
+  "mechanism_gain": {
+    "name": "deterministic proportional-feedback occupation-control theorem",
+    "statement": "For the exact one-shell scaled equation, with the source-valid OU seed, feedback active only on the seed event a<=Z_1<=2a, deterministic 0<=gamma(t)<=1 on that event, and Y=-Z off that event, the high-tail endpoint has exact logarithmic exponent 2/3 in the amplitude-log scale. Uniformly, R^3 mu{|Z|>R} <= C ||Y||_3^3 (1+log(R/a))^2 for R>=2 e a; the constant-feedback witnesses from the preceding run show every exponent alpha<2/3 fails in this class.",
+    "scope": "restricted source-valid control class on the exact frozen pair; not the full Problem 3 theorem and not a proof that alpha_*(T)=2/3 for arbitrary progressive inputs"
+  },
+  "status": "PARTIAL / RESTRICTED-CLASS THEOREM SELF-CHECKED; full endpoint unresolved",
+  "predecessor_handoff": "Admission screen 52 remains historical; progress-extrapolation preserved exact r_*=3, exact subcritical norm R_p, Z_{3,1} upper endpoint, weak-L3 failure, and 2/3 lower obstruction.",
+  "failed_or_closed_route": "Optimizing deterministic nonnegative proportional feedback gamma(t) cannot improve the lower obstruction beyond exponent 2/3 through its high-tail occupation mechanism; a stronger lower obstruction must use adaptive/random feedback, non-proportional forcing, or genuinely multi-scale coupling.",
+  "next_attack": "Try to lift the occupation-control estimate from deterministic proportional feedback to progressive relative controls, or prove a Bellman/good-lambda analogue for arbitrary source input. If two recovery routes then fail, follow PROGRESS20 and pivot to a distinct T05 covariance/comparison application coordinated with NM13-09.",
+  "t05_fallback_due": false,
+  "literature_check_date": "2026-09-20",
+  "literature_scope": [
+    "Agresti-Veraar survey / NoDEA Problem 3",
+    "Bechtel-Veraar variational extrapolation, published 2025-07-11",
+    "Evangelopoulos-Ntemiris-Veraar discrete stochastic maximal regularity, published 2026-02-13",
+    "Evangelopoulos-Ntemiris fully discrete SMR arXiv:2609.07436, submitted 2026-09-07"
+  ],
+  "checker": "2026-09-20T06-50-52+0300__deterministic_feedback_tail_checker.py",
+  "checker_output": "2026-09-20T06-50-52+0300__deterministic_feedback_tail_checker.out",
+  "checker_result": "CHECK_PASS",
+  "runtime_model": "GPT-5.6 Sol",
+  "runtime_reasoning": "UNVERIFIED"
+}

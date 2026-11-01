@@ -1,0 +1,9 @@
+relaxed_kernel_support_profile:
+  support=1: sum=4, count=4, average=1
+  support=2: sum=56, count=84, average=2/3
+  support=3: sum=40, count=144, average=5/18
+  support=4: sum=8, count=24, average=1/3
+WOR=1/3; WR=27/64; WOR/WR=64/81
+support_monotonicity_failure: avg_support4 > avg_support3 = 1/3 > 5/18
+two_cluster_factorization: 6+2c+2c^2-10c^3 = 2(1-c)(5c^2+4c+3) >= 0 on [0,1]
+ALL ASSERTIONS PASSED

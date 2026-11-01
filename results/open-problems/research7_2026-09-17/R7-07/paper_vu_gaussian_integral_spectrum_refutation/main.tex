@@ -1,0 +1,336 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\diag}{\operatorname{diag}}
+
+\title{A Block-Shear Refutation of a Gaussian-Integral-Spectrum Conjecture for Random Sign Matrices}
+\author{Yitzchak Shmalo}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $M_n$ be the nonsymmetric $n\times n$ random sign matrix with independent Rademacher entries.  In Conjecture~9.5 of his survey on combinatorial random matrix theory, Vu conjectured that the probability that all eigenvalues of $M_n$ are Gaussian integers is $2^{-(1+o(1))n^2}$.  We give an explicit block-shear construction showing, for every $n\ge1$,
+\[
+ \Pp\!\left(\Spec(M_n)\subset \Z[i]\right)
+ \ge 3^{\lfloor n/2\rfloor}2^{-\lfloor n^2/2\rfloor}.
+\]
+Consequently the conjectured quadratic exponent $1$ cannot be correct; in fact the upper exponential-rate endpoint is at most $1/2$.  The construction and its cardinality are exact in every dimension.  We do not prove that $1/2$ is the sharp corrected exponent.
+\end{abstract}
+
+\section{Introduction}
+
+Let $M_n$ denote the $n\times n$ matrix whose $n^2$ entries are independent random variables taking the values $+1$ and $-1$ with equal probability.  Van Vu asked for the probability that all eigenvalues of $M_n$ lie in the Gaussian integers $\Z[i]$.  More precisely, Conjecture~9.5 in \cite{Vu2021} states
+\begin{equation}\label{eq:vu-conj}
+ \Pp(E_n)=2^{-(1+o(1))n^2},
+ \qquad
+ E_n:=\{\Spec(M_n)\subset \Z[i]\}.
+\end{equation}
+
+The naive lower bound coming from very low-rank sign matrices has the same quadratic exponent $1$ as \eqref{eq:vu-conj}.  The purpose of this note is to exhibit a much larger, explicitly countable family.  Its size is $2^{n^2/2+O(n)}$, which changes the quadratic exponent.
+
+\begin{theorem}\label{thm:main}
+For every integer $n\ge1$,
+\begin{equation}\label{eq:main-lower}
+ \Pp(E_n)
+ \ge
+ 3^{\lfloor n/2\rfloor}2^{-\lfloor n^2/2\rfloor}.
+\end{equation}
+Equivalently,
+\[
+ -\log_2 \Pp(E_n)
+ \le
+ \lfloor n^2/2\rfloor-\lfloor n/2\rfloor\log_2 3.
+\]
+In particular,
+\begin{equation}\label{eq:limsup}
+ \limsup_{n\to\infty}
+ \frac{-\log_2\Pp(E_n)}{n^2}
+ \le \frac12.
+\end{equation}
+Hence \eqref{eq:vu-conj} is false.
+\end{theorem}
+
+The proof is constructive.  In even dimension we conjugate by a lower block shear with a diagonal parameter.  Requiring the conjugated matrix to be block upper triangular and its diagonal blocks to be triangular imposes only local constraints on the sign entries.  Most coordinates contribute four choices, diagonal coordinates contribute six, and a terminal coordinate admits an exact twelve-element union when one allows the four Gaussian units $\{\pm1,\pm i\}$.  In odd dimension a rectangular real shear gives the analogous count.
+
+\section{A block-shear identity}
+
+We begin with a purely algebraic identity.
+
+\begin{lemma}[Block shear]\label{lem:shear}
+Let
+\[
+ M=\begin{pmatrix}A&B\\ C&D\end{pmatrix}
+\]
+be a block matrix with square diagonal blocks of the same size, and let $R$ be a compatible matrix.  Put
+\[
+ S_R=\begin{pmatrix}I&0\\ R&I\end{pmatrix},
+ \qquad
+ S_R^{-1}=\begin{pmatrix}I&0\\ -R&I\end{pmatrix}.
+\]
+Then
+\begin{equation}\label{eq:shear}
+ S_R^{-1}MS_R
+ =
+ \begin{pmatrix}
+ A+BR & B\\
+ C+DR-RA-RBR & D-RB
+ \end{pmatrix}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Multiply $MS_R$ first and then left-multiply by $S_R^{-1}$.  No invertibility assumption on $R$ is needed.
+\end{proof}
+
+The same formula remains valid for rectangular off-diagonal blocks as long as the displayed products have compatible dimensions.
+
+\section{Even dimension}
+
+Let $n=2m$.  Write a sign matrix in $m\times m$ blocks,
+\[
+ M=\begin{pmatrix}A&B\\ C&D\end{pmatrix}.
+\]
+Choose
+\[
+ R=\diag(\varepsilon_1,\ldots,\varepsilon_{m-1},\tau),
+\]
+where each $\varepsilon_j\in\{\pm1\}$ and initially $\tau\in\C$.  We impose three conditions:
+\begin{enumerate}
+\item $X:=A+BR$ is upper triangular;
+\item $Y:=C+DR-RA-RBR$ is zero;
+\item $Z:=D-RB$ is lower triangular.
+\end{enumerate}
+Then Lemma~\ref{lem:shear} makes $S_R^{-1}MS_R$ block upper triangular with triangular diagonal blocks.  Its eigenvalues are therefore precisely the diagonal entries of $X$ and $Z$.
+
+Write $r_j$ for the $j$th diagonal entry of $R$.  For a fixed matrix coordinate we abbreviate
+\[
+ a=a_{ij},\quad b=b_{ij},\quad c=c_{ij},\quad d=d_{ij}.
+\]
+All of these are signs.
+
+\subsection{Below the diagonal}
+
+Suppose $i>j$.  Necessarily $j<m$, hence $r_j=\varepsilon_j\in\{\pm1\}$.  Upper triangularity of $X$ gives
+\[
+ a+b\varepsilon_j=0.
+\]
+Substitution into $Y_{ij}=0$ cancels every term involving $r_i$ and leaves
+\[
+ c+d\varepsilon_j=0.
+\]
+Thus $b$ and $d$ are arbitrary signs while $a$ and $c$ are forced.  There are exactly four choices at each below-diagonal coordinate.
+
+\subsection{Above the diagonal}
+
+Suppose $i<j$.  Then $i<m$, so $r_i=\varepsilon_i$.  Lower triangularity of $Z$ gives
+\[
+ d-\varepsilon_i b=0.
+\]
+Substituting into $Y_{ij}=0$ yields
+\[
+ c-\varepsilon_i a=0.
+\]
+Hence $a$ and $b$ are arbitrary signs and $c,d$ are forced.  Again there are exactly four choices.
+
+\subsection{Nonterminal diagonal coordinates}
+
+For $i=j<m$, set $\varepsilon=\varepsilon_i$.  The zero condition on $Y_{ii}$ is
+\begin{equation}\label{eq:diag-real}
+ c+\varepsilon(d-a)-b=0.
+\end{equation}
+For each fixed $\varepsilon\in\{\pm1\}$, exactly six sign quadruples $(a,b,c,d)$ satisfy \eqref{eq:diag-real}.  This can be checked by the two possible values of $d-a\in\{-2,0,2\}$, or by direct enumeration of the sixteen sign quadruples.
+
+\subsection{The terminal diagonal coordinate}
+
+At $i=j=m$, the single constraint becomes
+\begin{equation}\label{eq:terminal}
+ c+\tau(d-a)-b\tau^2=0.
+\end{equation}
+The two terminal diagonal eigenvalues are
+\[
+ \lambda_1=a+b\tau,
+ \qquad
+ \lambda_2=d-b\tau.
+\]
+If both are Gaussian integers, then $\tau=b(\lambda_1-a)$ is itself a Gaussian integer, since $b=\pm1$.  Equation \eqref{eq:terminal}, after division by $-b$, makes $\tau$ a root of a monic quadratic over $\Z$ whose constant term is the unit $-c/b\in\{\pm1\}$.  The other root is also a Gaussian integer, and the product of the two roots is a unit.  Therefore $\tau$ must be a unit of $\Z[i]$:
+\[
+ \tau\in\{1,-1,i,-i\}.
+\]
+Thus these four parameters exhaust this local Gaussian-integral endpoint mechanism.
+
+For $\tau=1$, equation \eqref{eq:terminal} reads $c+d=a+b$ and has six sign solutions.  For $\tau=-1$, it reads $a+c=b+d$ and again has six.  Their intersection is exactly
+\[
+ a=d,\qquad c=b,
+\]
+which has four elements.  Hence the union for the two real units has cardinality $6+6-4=8$.
+
+For $\tau=i$ or $\tau=-i$, equation \eqref{eq:terminal} is equivalent to
+\[
+ d=a,\qquad c=-b.
+\]
+Both imaginary units produce the same four sign quadruples.  This four-element set is disjoint from the real-unit union.  Consequently the terminal union contains exactly
+\begin{equation}\label{eq:terminal-count}
+ 8+4=12
+\end{equation}
+sign quadruples.
+
+\subsection{Exact count}
+
+For every $j<m$, a matrix satisfying the construction determines $\varepsilon_j$ uniquely from any below-diagonal entry in column $j$; for instance,
+\[
+ \varepsilon_j=-a_{j+1,j}/b_{j+1,j}.
+\]
+Hence the $2^{m-1}$ choices of $(\varepsilon_1,\ldots,\varepsilon_{m-1})$ produce disjoint matrix families.  The terminal parameter has already been union-counted in \eqref{eq:terminal-count}.
+
+There are $m(m-1)$ off-diagonal coordinate pairs, each contributing four choices, and $m-1$ nonterminal diagonal coordinates, each contributing six.  Therefore the number of distinct sign matrices obtained is
+\begin{align}
+ N_{2m}
+ &=2^{m-1}4^{m(m-1)}6^{m-1}\cdot 12\\
+ &=2^{2m^2}3^m.                                          \label{eq:even-count}
+\end{align}
+Every one of these matrices has Gaussian-integral spectrum.  At nonterminal diagonal coordinates the triangular diagonal entries belong to $\{-2,0,2\}$, while at the terminal coordinate they are Gaussian integers by construction.
+
+Since the ambient sign cube has $2^{(2m)^2}=2^{4m^2}$ elements,
+\begin{equation}\label{eq:even-prob}
+ \Pp(E_{2m})\ge 3^m2^{-2m^2}.
+\end{equation}
+
+\section{Odd dimension}
+
+Let $n=2m+1$.  Split the coordinates into blocks of sizes $m$ and $m+1$:
+\[
+ M=\begin{pmatrix}A&B\\ C&D\end{pmatrix},
+\]
+where $A$ is $m\times m$, $B$ is $m\times(m+1)$, $C$ is $(m+1)\times m$, and $D$ is $(m+1)\times(m+1)$.
+
+Choose $\varepsilon=(\varepsilon_1,\ldots,\varepsilon_m)\in\{\pm1\}^m$ and let $R_\varepsilon$ be the $(m+1)\times m$ matrix whose top $m\times m$ block is $\diag(\varepsilon)$ and whose final row is zero.  Set
+\[
+ S=\begin{pmatrix}I_m&0\\R_\varepsilon&I_{m+1}\end{pmatrix}.
+\]
+The rectangular form of Lemma~\ref{lem:shear} gives
+\begin{equation}\label{eq:odd-shear}
+ S^{-1}MS
+ =\begin{pmatrix}
+ A+BR_\varepsilon&B\\
+ C+DR_\varepsilon-R_\varepsilon A-R_\varepsilon BR_\varepsilon&D-R_\varepsilon B
+ \end{pmatrix}.
+\end{equation}
+We again require the upper-left block to be upper triangular, the lower-left block to vanish, and the lower-right block to be lower triangular.
+
+On the paired $m\times m$ core, the same local calculation as above gives
+\[
+ 4^{m(m-1)}6^m
+\]
+choices for fixed $\varepsilon$.
+
+The unpaired last coordinate contributes three further groups of choices.
+
+First, for the extra column $j=m+1$ and $i\le m$, lower triangularity gives
+\[
+ d_{i,m+1}=\varepsilon_i b_{i,m+1},
+\]
+so these entries contribute $2^m$ choices.
+
+Second, for the extra bottom row $i=m+1$ and $j\le m$, vanishing of the lower-left block gives
+\[
+ c_{m+1,j}+d_{m+1,j}\varepsilon_j=0,
+\]
+so these entries contribute another $2^m$ choices.
+
+Third, the bottom-right entry $d_{m+1,m+1}$ is an arbitrary sign, contributing a factor $2$.
+
+Thus for fixed $\varepsilon$ there are
+\[
+ 4^{m(m-1)}6^m2^{2m+1}
+\]
+matrices.  Moreover the extra column recovers every parameter uniquely:
+\[
+ \varepsilon_i=d_{i,m+1}/b_{i,m+1}.
+\]
+Hence the $2^m$ parameter families are disjoint, and the total number of distinct matrices is
+\begin{align}
+ N_{2m+1}
+ &=2^m4^{m(m-1)}6^m2^{2m+1}\\
+ &=2^{2m^2+2m+1}3^m.                                  \label{eq:odd-count}
+\end{align}
+The triangular diagonal entries on the paired coordinates are ordinary integers in $\{-2,0,2\}$, and the final unpaired diagonal entry is $\pm1$.  Thus every matrix counted in \eqref{eq:odd-count} has Gaussian-integral spectrum.
+
+Since the ambient sign cube has size $2^{(2m+1)^2}$,
+\begin{equation}\label{eq:odd-prob}
+ \Pp(E_{2m+1})
+ \ge 3^m2^{-(2m^2+2m)}.
+\end{equation}
+
+\section{Proof of the main theorem}
+
+For even $n=2m$, equation \eqref{eq:even-prob} is
+\[
+ \Pp(E_n)\ge 3^{n/2}2^{-n^2/2}.
+\]
+For odd $n=2m+1$, equation \eqref{eq:odd-prob} and
+\[
+ \left\lfloor\frac{(2m+1)^2}{2}\right\rfloor=2m^2+2m
+\]
+give
+\[
+ \Pp(E_n)\ge3^{\lfloor n/2\rfloor}2^{-\lfloor n^2/2\rfloor}.
+\]
+This proves Theorem~\ref{thm:main}.
+
+\section{What remains open}
+
+The construction shows only that the exponent proposed in \cite{Vu2021} is too large.  If
+\[
+ u_{\mathrm{GI}}
+ :=\liminf_{n\to\infty}
+ \frac{-\log_2\Pp(E_n)}{n^2},
+\]
+then Theorem~\ref{thm:main} gives
+\[
+ 0\le u_{\mathrm{GI}}\le\frac12.
+\]
+It is natural to ask whether the corrected exponent is exactly $1/2$.  The present paper does not prove the matching upper probability bound
+\[
+ \Pp(E_n)\le2^{-(1/2-o(1))n^2}.
+\]
+In particular, no claim about the sharp corrected exponent should be inferred from the explicit lower family.
+
+A separate line of work on the characteristic polynomial of random sign matrices proves high-probability irreducibility and large Galois group under the extended Riemann hypothesis \cite{Eberhard2022}; those qualitative results operate at a different probability scale and do not supply the missing $2^{-\Theta(n^2)}$ upper bound.
+
+\section*{Audit and novelty note}
+
+This manuscript records the author-side proof of the narrow source-level refutation.  Exact finite checks of the construction have been archived separately in the research repository.  Those checks are not independent mathematical audits.  As of 19 September 2026, bounded source/title/citation searches did not surface a prior paper giving the same source-matching refutation, but a negative search is not proof of novelty.
+
+\begin{thebibliography}{9}
+
+\bibitem{Vu2021}
+V.~H. Vu,
+\newblock Recent progress in combinatorial random matrix theory,
+\newblock \emph{Probability Surveys} \textbf{18} (2021), 179--200.
+\newblock arXiv:2005.02797.
+
+\bibitem{Eberhard2022}
+S.~Eberhard,
+\newblock The characteristic polynomial of a random matrix,
+\newblock \emph{Combinatorica} \textbf{42} (2022), 491--527.
+\newblock arXiv:2008.01223.
+
+\end{thebibliography}
+
+\end{document}

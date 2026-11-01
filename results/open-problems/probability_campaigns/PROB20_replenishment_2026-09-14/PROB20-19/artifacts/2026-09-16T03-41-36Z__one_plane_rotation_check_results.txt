@@ -1,0 +1,14 @@
+conditional convolution checks: 3564
+worst numerical shifted-minus-aligned value: 7.105427357601002e-15
+worst case: (kappa=7.0, s=1.0, tau=0.8, theta=pi/2, aligned=43.47362174935494, shifted=43.47362174935495)
+paired Monte Carlo cases: 56
+largest z = mean/se among rotated-minus-KL differences: -0.7633022450911068
+smallest z: -106.58438717834753
+zero-variance pointwise scalar comparisons: 2550000
+zero-variance max violation: 0.0
+ALL CHECKS PASSED
+
+Notes:
+- The conditional convolution sweep is deterministic midpoint quadrature and checks only for sign/algebra regressions; the analytic circular rearrangement proof is the theorem.
+- The Monte Carlo bank uses common random numbers and is supporting self-review only, not independent verification.
+- The zero-variance comparisons are pointwise checks of the majorization edge case.

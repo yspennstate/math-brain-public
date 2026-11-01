@@ -1,0 +1,84 @@
+run:
+  root: proofnet24/NM13-08/progress-forest-structure
+  date: 2026-09-20
+  model: GPT-5.6 Sol
+  reasoning_effort: UNVERIFIED
+parent:
+  theorem: Grimmett-Winkler uniform-all-forests pairwise negative edge correlation
+  status_before: OPEN
+  status_after: OPEN
+  complete_all_simple_graph_order_before: 9
+  complete_all_simple_graph_order_after: 9
+  counterexample_order_lower_bound_before: 10
+  counterexample_order_lower_bound_after: 10
+p14_scope:
+  grimmett_winkler_published:
+    all_graphs_vertices_at_most: 8
+    nine_vertex_edges_at_most: 18
+  dense_nine_complement:
+    edge_range: "19..36"
+    unlabeled_graphs: 120314
+    present_edge_pairs: 25304635
+  all_unlabeled_simple_nine_vertex_graphs: 274668
+  structural_reduction: "vertex-minimal source counterexample may be taken 3-connected"
+claims:
+  - id: T07-LENGTH3-ARM-TAIL-CLOSURE-27
+    status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+    statement: "The length-three arm operator L3=158 I+M has M^4=0, rank profile (8,2,1,0), commutes with the length-one/two nilpotents J,K, and lies in their seven-dimensional algebra."
+    relation: "M=(82/7)K+(73/1029)K^2-(1376/893025)K^3-(254/7)J+(282/343)JK-(4185/343)J^2"
+  - id: T07-INDEPENDENT-DEPTH3-SPIDER-FOREST-PNC-27
+    status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+    novelty_priority: UNVERIFIED
+    statement: "For H=disjoint_union_j E_{m_j}, where E_m is one center with m length-three arms, every graph G=independent_K3 join H has Delta_G(e,f)>=0 for every distinct present edge pair; equality only for the single E_0 case K_{3,1}."
+mechanism_gain:
+  before: "independent-terminal arbitrary finite depth-two mixed-spider forests"
+  after: "new depth-three arm closure in the same seven-dimensional tail algebra and arbitrary finite depth-three-spider forests"
+depth3_atom:
+  normalized_transfer:
+    A: "(51*m+316)/79"
+    B: "(3247*m^2+21322*m+6241)/6241"
+    C: "m*(620177*m^2+4118189*m+1259235)/2958234"
+  rho_interval:
+    lower: "43/360"
+    upper: "1/8"
+    lower_strict: true
+    upper_equality_only_m0: true
+sign_certificate:
+  same_component_orbits: 58
+  same_regular_bernstein: 50
+  same_discriminant: 8
+  same_failures: 0
+  boundary_equalities: 1
+  cross_component_schemes: 38
+  cross_failures: 0
+  cross_min_positive_numerator_coefficients:
+    k: 242182
+    four_de_minus_3k: 751689
+    linear_at_lower_strip: 5742903960
+    constant: 3046929601
+finite_sanity:
+  graph: "independent_K3 join E_3"
+  vertices: 13
+  edges: 39
+  forests: 735464752
+  edge_pair_checks: 741
+  min_rayleigh_numerator: 22756321142304
+companion_nm13_04:
+  current_claim: T07-TRIANGLE-MIXED-SPIDER-FOREST-PNC-26
+  scope: "triangle seed joined to an arbitrary finite forest of depth-two mixed spiders D_{p,q}"
+  complementarity: "current run uses independent terminals and genuine length-three branching"
+literature_scope:
+  grimmett_winkler_math_0302185: "uniform all forests; verified <=8 vertices and 9 vertices with <=18 edges; UST case known separately"
+  erickson_1008_3660: "weighted SOS/Rayleigh for series-parallel spanning-forest polynomials"
+  huang_2311_00965: "general arboreal-gas negative correlation remains open; special graphs"
+  tang_zhang_2603_10738: "complete graph specified ensembles, including exactly k forest components for fixed k and large n; not arbitrary-graph all-forest law"
+  bado_wheels: "strict unit p-NC for wheel graphs; special 3-connected non-series-parallel family"
+artifacts:
+  report: 2026-09-20T16-07-06Z__depth3-spider-forest-report.md
+  ledger_delta: 2026-09-20T16-07-06Z__ledger_delta.yaml
+  checker: 2026-09-20T16-07-06Z__depth3-spider-forest-checker.py
+  checker_output: 2026-09-20T16-07-06Z__depth3-spider-forest-checker.out
+next_attack:
+  - "derive an arm-length recurrence/minimal polynomial for the 15-state length-d arm operator"
+  - "test whether all arm lengths remain in the seven-dimensional J,K algebra"
+  - "seek an abstract same-component sign cone stable under mixed arm lengths"

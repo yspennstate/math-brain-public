@@ -1,0 +1,39 @@
+# exact target, quantifiers, hypotheses and units
+
+A092, B19, stage 4. Independently audit A083-COHERENT-ROW-CORE-AND-RESET-OBSTRUCTION@1 and A050-ACTIVE-LABEL-SCHEDULE-REPAIR@1 from their actual Boolean definitions. Then specify and price the prescribed data-side witness bank on a three-output priority tree with a shared controller and shared data. Uniform physical inputs, finite fresh singleton trees, Shannon bits, ordinary physical influence. Full FEI remains OPEN.
+
+# sources actually read, revisions and theorem locators
+
+Read BOARD at stage start and consumed its A083/A050/A092 handoff; reread current relevant rows before finalization. Read B19 STREAM_NOTES v2 (2026-10-11 23:35 UTC), own STATUS and previous audit/helper. Lead's original endpoint reviews are already complete; dispatch therefore consumes new useful dependencies, with no disagreement. Reread the complete execution-v2 protocol. Baseline campaign and manuscript readings remain earlier-stage context, not newly repeated literature audits.
+
+New mathematical sources actually read: A083 run 20261013T234228Z REPORT, CLAIMS, CoherentTransport.lean and LEAN_CHECK; A050 run 20261014T004109Z REPORT, PROOF, CLAIMS and targeted.py; A039 run 20261013T235428Z CLAIMS for descendant-order context. Core locators: A083 one-block joint/tensor bridge and zero-row fallback; A050 PROOF sections 1-5, especially the deletion reference, terminal independence and exact retained ledger. Local source byte hashes are saved in out/SOURCE_RECEIPTS.json. No remote mirror or literature priority is asserted.
+
+# complete derivation or exact first unsupported line
+
+PROOF.md independently reconstructs both source claims and accepts them unchanged at scope. A083's terminal reset loses exactly r bits on r disjoint AND-sign blocks, with I=r and H=2r; it does not refute our retained-root conversion. A050's deletion entropy H(D|S)<=a h2(R/a), including its exact normalized-reference/KL identity and Boolean asymptotic sharpness, holds. Terminal independence of A yields W=S\A and zero injection even when final queried sets vary.
+
+The new audit certificate specifies F_m using an m-bit shared AND controller and two private arm bits choosing parity, two-bit AND sign, or +1 on the SAME data bits. The controller-first tree retains terminal Fourier entropy 2^(-m-1). For the actual fixed-projection data witness W and one normalized physical-transcript reference, H(Pi|W)=2-H(W), whereas removed influence R=2^-m(5m/8+3/4). Hence the separate conditional bank cannot be <=K R for any universal K, even with zero injection. The same failure holds versus total influence. Width six already rigorously violates K=16. The family itself satisfies H(F_m)<4I(F_m), so this is an accounting-route obstruction, not an FEI disproof.
+
+Exact root-to-W reset costs J-I(Pi;W) and is bounded by 2R/ln2; its half-price is at most R/ln2 once. The full signed ledger retains every leaf bill and cancels its order-one bank with an order-one signed residual. FIRST UNSUPPORTED universal line: fund that joint signed ledger using one normalized reference and one exclusive influence account on arbitrary unfinished shared-core trees. Standalone funding of the bank by influence is now explicitly refuted in the prescribed shared-control application.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+Frozen out/FROZEN_SPEC.json precedes both jobs. Pilot command `python -X utf8 code/check.py --pilot`: 3 cases, 219 primary plus 22 entropy-helper assertions PASS, 0.070454 seconds. Main `python -X utf8 code/check.py`: 11 cases, 15,793 primary plus 86 entropy-helper assertions PASS, 0.671124 seconds. Commands are relative to this run directory. Domains: AND products r=1,2,3; priority widths m=1,...,6; three-bit adaptive parity; indexed point-defect/parity r=2,k=3,n=10. No symmetry or dimension escalation. Memory estimate 100 MB; no job expected above 300 MB, so no memok-gated heavy job was launched.
+
+Fresh integer Walsh transforms and direct physical pivotal counts reconstruct original truth tables. Exact Fraction recursion constructs the retained-root/transcript/terminal-mask joint, with direct physical transcript marginals and every inherited leaf spectrum checked. Entropies use exact rational prime-log vectors and inherited independently developed 96-term atanh interval bounds; cancellations prove identities without needing log-prime independence. Width-six strict sign is saved with outward rational interval endpoints. Adaptive parity injects exactly one bit; indexed r2k3 reproduces positive injection and two bits terminal entropy; all priority examples have zero injection and positive terminal entropy. Each completed case is saved immediately. A083 Lean source/printed axioms were inspected but Lean was not rerun; independent acceptance covers its elementary algebra and analytic family, without enlarging formal scope.
+
+# proof dependencies and changed downstream conclusions
+
+CLAIMS exports unchanged A083@1 and A050@1 with independent A092 acceptance. Their proof chains were reconstructed without using a pending universal campaign theorem. Legacy/source statement hashes are retained alongside canonical export hashes; source files remain unchanged. The fresh shared-control result is a source-complete audit certificate in PROOF.md/out, not a third queued broad candidate; this stage prioritizes two independent reviews under the stream review cap.
+
+Downstream: A050's zero-injection clause applies to the intended shared-core stopping tree, but its remaining bank still cannot be funded separately by removed influence. The false target is explicitly scoped in PROOF.md; no named source claim asserts it, so no existing accepted claim is falsely marked refuted. A039/A050/A038/A091 must preserve signed residual cancellation or identified core slack. A083's root-versus-terminal caution remains valid; terminal independence pays the reset conversion but does not remove the physical history cost.
+
+# one next mathematical action and independent reviewer
+
+NEXT: replace the failed separate-bank payment by one signed Bayes/occupancy reference on this shared-control family after nonconstant data exposure; test its exact reset and terminal-core slack together with A038's owned reserve, allowing A039's demonstrated change of optimal descendant query. Primary independent reviewer for this audit certificate: A087; alternate A039. A048 can consume A050's accepted scoped substitution. Local source-bound handoffs only, no external messages.
+
+# actual persistence receipts or precise save blocker
+
+The assigned run contains REPORT, PROOF, CLAIMS, PROGRESS, identical PACKET_DELTA, code and out certificates. Finalizer validates exact protocol fields, canonical hashes, result counts, two-line STATUS, report ending, identical progress copies, and files below 20 MB. WORKLOG and LEARNED append this result. out/ARTIFACT_RECEIPTS.json records local SHA256 and sizes. Only A092 files were written. Supervisor copying, shared-index adoption and remote mirrors remain unverified.
+
+Universal bridge: This stage moves C024 history transfer and C019 stopping-tree accounting by independently accepting the sharp active-label repair and by naming a real fixed-projection data witness, normalized transcript reference, exact reset price and retained terminal bill on the shared-control tree. It closes the injection objection there, but proves its surviving bank has unbounded ratio to removed or total influence, so separate-bank payment is unavailable; the order-one signed cancellation must be preserved. No universal FEI constant is reduced. NEXT changes mechanism to one signed reference with owned terminal/core slack after data exposure, the shortest route because it attacks this exact surviving cancellation rather than adding another isolated class or repeating an already false bank bound.

@@ -1,0 +1,3 @@
+Stage started with repeated code-host access timeouts. Required BOARD.md, B05 STREAM_NOTES.md and STATUS.md reads have been launched; their output is pending. No new dependency or lead direction has been assumed. No search has started.
+
+Independent derivation in progress: F=1+A_s(A_r OR A_t)(g-1), on disjoint common/exclusive control blocks but one shared core g. Query common controls once, then first exclusive block until success/failure, querying second block only on failure. Terminal probability is 2^-s(p+q-pq), where p=2^-r and q=2^-t. Seek a full entropy remainder and minority/KL tree bill paid from distinct physical influences; never count the shared core twice.

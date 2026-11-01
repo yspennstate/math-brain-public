@@ -1,0 +1,11 @@
+SOURCE STATUS
+
+Current source pin: eeb752c8943536541b34b42b8bf48e924f4d3d2f / blob 19fb119877426b640b2c0dae19ec2f78a399fe11 / 955 lines. Baseline: 7c0d6e60946b19423e6400a12d34b473cf0591e2 / blob 183ccd294763214e6a707e8d4749ff9a8cf7006d / 790 lines. Both and all requested support/checker files were read in full.
+
+Current lines 598-600 have one local proof gap. The positive hyperbolic tail chooses a coordinate from u; the negative-tail sentence switches to w but reuses that coordinate. Equal norms do not imply the same coordinate is large. Baseline lines 472-474 have the same issue.
+
+Repair: choose i_plus from u and independently i_minus from w, then apply the same monotone-tail argument on the two tails. Each chosen coefficient is at least rho0/sqrt(2), so both cutoff bounds and the final density-envelope constant are unchanged.
+
+Exact witness to the literal step: for equal absolute eigenvalues with eigenvectors (1,1)/sqrt(2) and (1,-1)/sqrt(2), one branch has u proportional to (1,0) and w proportional to (0,1).
+
+Current ledger: 1-597 PASS; 598-600 GAP; 601-955 PASS after the repair. No second mathematical gap or false statement was found, and no mathematical line remains unchecked. The finite checkers remain diagnostics rather than proof certificates.

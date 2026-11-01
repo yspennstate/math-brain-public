@@ -1,0 +1,23 @@
+{
+  "schema": "fei-frozen-potential/1",
+  "packet_id": "A046",
+  "candidate_id": "B10-A046-HALF-BIAS-TAX",
+  "version": 1,
+  "status": "OPEN_CANDIDATE_NOT_PROVED",
+  "domain": "Every finite genuine Boolean f:{0,1}^n->{-1,1}, every interior product bias vector p, and every physical reveal block A",
+  "definitions": {
+    "M_A": "H(S_A | S_B) for S drawn from the squared product-biased Fourier spectrum",
+    "J_A": "I(Z;S_B), where Z is the physical assignment on A and S_B is sampled from the restricted child's squared spectrum",
+    "Delta_A": "sum_{i in A} [h_2(p_i)+log_2(max(p_i,1-p_i))]"
+  },
+  "formula": "J_A <= M_A + (1/2) Delta_A",
+  "known_upper_baseline": "B09-BIASED-BLOCK-UNCERTAINTY@1 proves the same statement with coefficient 1",
+  "known_lower_boundary": "B18-AND-BIASED-TAX-LOWER-BOUND@1 proves every universal coefficient kappa must satisfy kappa>=1/2",
+  "intended_implication": "If true and globally paid without reuse, this halves the local rare-bias uncertainty tax; it is not by itself an FEI theorem",
+  "source_pins": {
+    "B09_original_report_blob": "71b68e4decf9658a42fef6bb2668e19f25bd214a",
+    "B09_endpoint_report_blob": "144d7c0b8646bd01a119d932df2e14846ec24d91",
+    "B18_independent_review_blob": "ab9aa1c03c1e15dca57aa04d8f5aac7c5a8bfb43",
+    "B09_interval_repair_blob": "c3adb486c8ca9f7a35f384ee82942eef66bd64be"
+  }
+}

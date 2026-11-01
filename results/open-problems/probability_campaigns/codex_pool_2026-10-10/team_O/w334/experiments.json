@@ -1,0 +1,524 @@
+{
+  "command": "python -B -X utf8 check_results.py",
+  "seconds": 0.064,
+  "passed_check_groups": 10,
+  "problem_ids": [
+    "C0012",
+    "C0072",
+    "C0108",
+    "C0113",
+    "C0155",
+    "P0026",
+    "P0039",
+    "P0193",
+    "P0245",
+    "P0411"
+  ],
+  "checks": [
+    {
+      "problem_id": "P0193",
+      "check": "exact uniform witnesses and C=2 boundary",
+      "values": {
+        "parameter_cases": [
+          {
+            "C": "201/100",
+            "a": 1.322712250248758,
+            "h": "11543/69488",
+            "c0": "-2308557/2308600",
+            "T": 3092.5986936207814,
+            "crossings": 4
+          },
+          {
+            "C": "21/10",
+            "a": 1.37285914424258,
+            "h": "881/5456",
+            "c0": "-17589/17620",
+            "T": 321.93385582591947,
+            "crossings": 4
+          },
+          {
+            "C": "5/2",
+            "a": 1.5667992369724109,
+            "h": "7/48",
+            "c0": "-27/28",
+            "T": 74.3935954340127,
+            "crossings": 4
+          },
+          {
+            "C": "3",
+            "a": 1.762747174039086,
+            "h": "17/128",
+            "c0": "-15/17",
+            "T": 42.42616523737701,
+            "crossings": 4
+          },
+          {
+            "C": "101/20",
+            "a": 2.302585092994046,
+            "h": "16681/156816",
+            "c0": "-216999/667240",
+            "T": 18.90873725897226,
+            "crossings": 4
+          }
+        ],
+        "old_a": 2.302585092994046,
+        "new_sufficient_a": 1.3169578969248166,
+        "old_example_T": 15.707963267948966
+      }
+    },
+    {
+      "problem_id": "P0411",
+      "check": "independent series and radial polynomial calculations",
+      "values": {
+        "sixth_alpha": "61/240",
+        "sixth_beta_over_pi": "-4/5",
+        "negative_upper_bound": "-1/2640",
+        "polynomials": [
+          {
+            "m": 1,
+            "coefficients": [
+              "2/3",
+              "1/3"
+            ]
+          },
+          {
+            "m": 2,
+            "coefficients": [
+              "2/5",
+              "16/35",
+              "1/7"
+            ]
+          },
+          {
+            "m": 3,
+            "coefficients": [
+              "5/21",
+              "3/7",
+              "3/11",
+              "2/33"
+            ]
+          },
+          {
+            "m": 4,
+            "coefficients": [
+              "14/99",
+              "448/1287",
+              "48/143",
+              "64/429",
+              "1/39"
+            ]
+          },
+          {
+            "m": 5,
+            "coefficients": [
+              "12/143",
+              "75/286",
+              "75/221",
+              "50/221",
+              "25/323",
+              "7/646"
+            ]
+          },
+          {
+            "m": 6,
+            "coefficients": [
+              "11/221",
+              "792/4199",
+              "99/323",
+              "88/323",
+              "45/323",
+              "288/7429",
+              "2/437"
+            ]
+          },
+          {
+            "m": 7,
+            "coefficients": [
+              "143/4845",
+              "637/4845",
+              "1911/7429",
+              "6370/22287",
+              "1274/6555",
+              "882/10925",
+              "98/5175",
+              "2/1035"
+            ]
+          },
+          {
+            "m": 8,
+            "coefficients": [
+              "130/7429",
+              "3328/37145",
+              "448/2185",
+              "1792/6555",
+              "16/69",
+              "256/2001",
+              "448/10005",
+              "2816/310155",
+              "11/13485"
+            ]
+          },
+          {
+            "m": 9,
+            "coefficients": [
+              "68/6555",
+              "918/15295",
+              "3672/23345",
+              "816/3335",
+              "25704/103385",
+              "35343/206770",
+              "357/4495",
+              "108/4495",
+              "27/6293",
+              "13/37758"
+            ]
+          },
+          {
+            "m": 10,
+            "coefficients": [
+              "1292/210105",
+              "51680/1302651",
+              "4845/41354",
+              "12920/62031",
+              "665/2697",
+              "912/4495",
+              "950/8091",
+              "98800/2095569",
+              "2925/232841",
+              "200/99789",
+              "1/6882"
+            ]
+          },
+          {
+            "m": 11,
+            "coefficients": [
+              "2261/620310",
+              "16093/620310",
+              "2299/26970",
+              "2299/13485",
+              "22990/99789",
+              "22022/99789",
+              "5082/33263",
+              "2541/33263",
+              "2541/94054",
+              "605/94054",
+              "121/130462",
+              "4/65231"
+            ]
+          },
+          {
+            "m": 12,
+            "coefficients": [
+              "437/202275",
+              "13984/831575",
+              "2024/33263",
+              "40480/299367",
+              "6831/33263",
+              "1530144/6818915",
+              "42504/235135",
+              "218592/2022161",
+              "3105/65231",
+              "2944/195693",
+              "1056/326155",
+              "6528/15329285",
+              "238/9197571"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": "C0012",
+      "check": "killed-chain equations and wrong-tail counterexample",
+      "values": {
+        "networks": [
+          {
+            "M": "10",
+            "expected_exit": "11/7",
+            "ratio_to_resistance_times_volume": "3/13"
+          },
+          {
+            "M": "100",
+            "expected_exit": "101/67",
+            "ratio_to_resistance_times_volume": "3/103"
+          },
+          {
+            "M": "1000",
+            "expected_exit": "1001/667",
+            "ratio_to_resistance_times_volume": "3/1003"
+          },
+          {
+            "M": "1000000",
+            "expected_exit": "1000001/666667",
+            "ratio_to_resistance_times_volume": "3/1000003"
+          }
+        ],
+        "tail_examples": [
+          {
+            "L": 10,
+            "mean": "1009/10",
+            "probability_above_half_mean": "1/10"
+          },
+          {
+            "L": 100,
+            "mean": "1000099/100",
+            "probability_above_half_mean": "1/100"
+          },
+          {
+            "L": 1000,
+            "mean": "1000000999/1000",
+            "probability_above_half_mean": "1/1000"
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": "P0245",
+      "check": "fixed stationary law feasible transition grid",
+      "values": {
+        "laws": [
+          {
+            "p": "1/10",
+            "minimum": "41/5"
+          },
+          {
+            "p": "1/4",
+            "minimum": "5/2"
+          },
+          {
+            "p": "1/2",
+            "minimum": "1"
+          },
+          {
+            "p": "3/4",
+            "minimum": "5/2"
+          },
+          {
+            "p": "9/10",
+            "minimum": "41/5"
+          }
+        ],
+        "feasible_chains": 100
+      }
+    },
+    {
+      "problem_id": "C0108",
+      "check": "exhaustive sign vectors and nonsymmetric degeneracy",
+      "values": {
+        "cases": [
+          {
+            "n": 2,
+            "rank_one_max_atom": "1/2",
+            "rank_one_zero_atom": "1/2",
+            "skew_cancellation_atom": 1
+          },
+          {
+            "n": 4,
+            "rank_one_max_atom": "1/2",
+            "rank_one_zero_atom": "3/8",
+            "skew_cancellation_atom": 1
+          },
+          {
+            "n": 6,
+            "rank_one_max_atom": "15/32",
+            "rank_one_zero_atom": "5/16",
+            "skew_cancellation_atom": 1
+          },
+          {
+            "n": 8,
+            "rank_one_max_atom": "7/16",
+            "rank_one_zero_atom": "35/128",
+            "skew_cancellation_atom": 1
+          },
+          {
+            "n": 10,
+            "rank_one_max_atom": "105/256",
+            "rank_one_zero_atom": "63/256",
+            "skew_cancellation_atom": 1
+          }
+        ]
+      }
+    },
+    {
+      "problem_id": "P0026",
+      "check": "enumerated rebirth choices",
+      "values": {
+        "survivors": [
+          "3/4",
+          "1/100",
+          "1/100"
+        ],
+        "clone_deltas": [
+          "213/400",
+          "-151/10000",
+          "-151/10000"
+        ],
+        "mean_delta": "5023/30000"
+      }
+    },
+    {
+      "problem_id": "C0072",
+      "check": "p=0 exact boundary control",
+      "values": {
+        "cases": [
+          {
+            "d": 2,
+            "n": 8,
+            "p": 0,
+            "normalized_boundary": 3.5,
+            "predicted_limit": 4
+          },
+          {
+            "d": 2,
+            "n": 16,
+            "p": 0,
+            "normalized_boundary": 3.75,
+            "predicted_limit": 4
+          },
+          {
+            "d": 2,
+            "n": 32,
+            "p": 0,
+            "normalized_boundary": 3.875,
+            "predicted_limit": 4
+          },
+          {
+            "d": 2,
+            "n": 64,
+            "p": 0,
+            "normalized_boundary": 3.9375,
+            "predicted_limit": 4
+          },
+          {
+            "d": 3,
+            "n": 8,
+            "p": 0,
+            "normalized_boundary": 4.625,
+            "predicted_limit": 6
+          },
+          {
+            "d": 3,
+            "n": 16,
+            "p": 0,
+            "normalized_boundary": 5.28125,
+            "predicted_limit": 6
+          },
+          {
+            "d": 3,
+            "n": 32,
+            "p": 0,
+            "normalized_boundary": 5.6328125,
+            "predicted_limit": 6
+          },
+          {
+            "d": 3,
+            "n": 64,
+            "p": 0,
+            "normalized_boundary": 5.814453125,
+            "predicted_limit": 6
+          },
+          {
+            "d": 7,
+            "n": 8,
+            "p": 0,
+            "normalized_boundary": 6.93212890625,
+            "predicted_limit": 14
+          },
+          {
+            "d": 7,
+            "n": 16,
+            "p": 0,
+            "normalized_boundary": 9.716865539550781,
+            "predicted_limit": 14
+          },
+          {
+            "d": 7,
+            "n": 32,
+            "p": 0,
+            "normalized_boundary": 11.631975293159485,
+            "predicted_limit": 14
+          },
+          {
+            "d": 7,
+            "n": 64,
+            "p": 0,
+            "normalized_boundary": 12.75376278348267,
+            "predicted_limit": 14
+          }
+        ],
+        "scope": "Tests geometry and normalization only; the probabilistic proof requires a blind audit."
+      }
+    },
+    {
+      "problem_id": "C0155",
+      "check": "finite index-gap failure illustration",
+      "values": {
+        "seed": 334,
+        "gap_pairs": 20000,
+        "violations_A2_B2": 885,
+        "scope": "Numerical illustration; the all-shift almost-sure statement is proved by Borel-Cantelli."
+      }
+    },
+    {
+      "problem_id": "C0113",
+      "check": "finite ladder MSTs",
+      "values": {
+        "cases": [
+          {
+            "columns": 2,
+            "selected_rungs": [
+              2
+            ]
+          },
+          {
+            "columns": 3,
+            "selected_rungs": [
+              3
+            ]
+          },
+          {
+            "columns": 5,
+            "selected_rungs": [
+              5
+            ]
+          },
+          {
+            "columns": 10,
+            "selected_rungs": [
+              10
+            ]
+          },
+          {
+            "columns": 20,
+            "selected_rungs": [
+              20
+            ]
+          }
+        ],
+        "scope": "This is not a Poisson process counterexample."
+      }
+    },
+    {
+      "problem_id": "P0039",
+      "check": "quantitative exponents",
+      "values": {
+        "alpha_and_distance_exponent": [
+          {
+            "alpha": 0.25,
+            "exponent": 0.5714285714285714
+          },
+          {
+            "alpha": 0.5,
+            "exponent": 0.6666666666666666
+          },
+          {
+            "alpha": 0.75,
+            "exponent": 0.8
+          }
+        ],
+        "scope": "Algebraic consequence; no random-walk simulation proves the theorem."
+      }
+    }
+  ],
+  "all_mathematical_claims_independently_audited": false
+}

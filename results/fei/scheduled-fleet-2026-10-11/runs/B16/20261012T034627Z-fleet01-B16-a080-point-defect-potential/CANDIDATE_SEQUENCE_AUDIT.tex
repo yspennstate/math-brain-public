@@ -1,0 +1,140 @@
+\section*{Exact FEI and upper-set-potential audit of point-defect towers}
+
+All Fourier transforms use the uniform probability measure, all logarithms
+are base two, and zero-mass summands are zero.  For a spectral law
+$p_S=\widehat f(S)^2$, put
+\[
+ \pi_f(S)=\sum_{T\supseteq S}p_T,
+ \qquad
+ U(f)=\sum_S p_S\log_2\frac{\pi_f(S)}{p_S}.
+\]
+
+\paragraph{Theorem (point-defect classification).}
+Let $q_d:\{-1,1\}^d\to\{-1,1\}$ be negative at one cube point and
+positive elsewhere, and write $\delta=2^{-d}$.  Then
+\begin{align}
+ I(q_d)&=2d\delta,\label{eq:I}\\
+ U(q_d)&=(1-2\delta)^2
+   \log_2\frac1{(1-2\delta)^2}
+   +2d\delta(1-2\delta).\label{eq:U}
+\end{align}
+The first term in \eqref{eq:U} is interpreted as zero for $d=1$.  Moreover
+\[
+ H(q_d)<4I(q_d),\qquad U(q_d)<3I(q_d)                 \tag{3}
+\]
+for every $d\ge1$ (both inequalities are strict for every such $d$),
+and
+\[
+ \frac{H(q_d)}{I(q_d)}\longrightarrow4,qquad
+ \frac{U(q_d)}{I(q_d)}\longrightarrow1.              \tag{4}
+\]
+
+If $F=\prod_{j=1}^m q_{d_j}$ uses disjoint physical cubes, then
+\[
+ H(F)=\sum_jH(q_{d_j}),\quad I(F)=\sum_jI(q_{d_j}),
+ \quad U(F)=\sum_jU(q_{d_j}).                          \tag{5}
+\]
+Consequently every finite tensor tower of point defects, with arbitrary
+dimensions and multiplicities, satisfies
+\[
+ H(F)<4I(F),\qquad U(F)<3I(F).                         \tag{6}
+\]
+Thus no such tower is a counterfamily to FEI or to a bounded-$U/I$
+sufficient route.
+
+\paragraph{Proof of the exact one-defect formulas.}
+After an input sign flip we may place the exceptional point at the all-one
+vertex.  The squared Fourier coefficients are
+\[
+ p_\varnothing=(1-2\delta)^2,
+ \qquad p_S=4\delta^2\quad(S\ne\varnothing).
+\]
+This gives \eqref{eq:I}.  For $S\ne\varnothing$,
+\[
+ \pi(S)=4\delta^2 2^{d-|S|},
+ \qquad \log_2\frac{\pi(S)}{p_S}=d-|S|,
+\]
+while $\pi(\varnothing)=1$.  Since
+\[
+ \sum_{S\ne\varnothing}(d-|S|)=d2^{d-1}-d,
+\]
+the nonempty contribution to $U$ equals
+\[
+ 4\delta^2(d2^{d-1}-d)=2d\delta(1-2\delta),
+\]
+which proves \eqref{eq:U}.
+
+For $d\ge2$, set $r=2\delta$.  Direct expansion gives
+\[
+ H(q_d)=-(1-r)^2\log_2(1-r)^2+r(2-r)(2d-2),
+ \qquad I(q_d)=dr.
+\]
+Using $-\log(1-r)\le r/(1-r)$, the first entropy term is at most
+$2r(1-r)/\ln2<4r$.  On the other hand,
+\[
+ 4dr-r(2-r)(2d-2)=4r+r^2(2d-2)>4r.
+\]
+Hence $H(q_d)<4I(q_d)$.  At $d=1$, $q_1$ is a signed dictator and
+$H(q_1)=0$, $I(q_1)=1$.
+
+For the potential, the same logarithmic inequality gives
+\[
+ (1-2\delta)^2\log_2\frac1{(1-2\delta)^2}
+ \le \frac{4\delta(1-2\delta)}{\ln2}.
+\]
+Thus, for $d\ge2$,
+\[
+ \frac{U(q_d)}{I(q_d)}
+ \le(1-2\delta)\left(1+\frac{2}{d\ln2}\right)
+ <1+\frac1{\ln2}<3.
+\]
+The last inequality follows, for example, from $\ln2>1/2$.  The case
+$d=1$ again has $U(q_1)=0$.  Formula \eqref{eq:U} and
+$-\ln(1-2\delta)=2\delta+O(\delta^2)$ give the second limit in (4); the
+first is the standard exact point-defect asymptotic and also follows from
+the displayed formula for $H$.
+
+For disjoint spectra, $p_{F}(S,T)=p_f(S)p_g(T)$ and
+\[
+ \pi_F(S,T)=\pi_f(S)\pi_g(T).
+\]
+Taking the logarithm and averaging proves additivity of $U$; the entropy
+and influence identities are the usual product-spectrum laws.  This proves
+(5)--(6).\qed
+
+\paragraph{The A077 multiscale sequence.}
+For the exact sequence in A077, take $d_k=2k$ and $N_k=2^{2k}$ copies at
+each scale $3\le k\le K$.  With
+$S_K=\sum_{k=3}^Kk$ and $\delta_k=2^{-2k}$, formulas (1)--(5) give
+\[
+ I(F_K)=4S_K,
+\]
+and the exact potential ledger
+\[
+ U(F_K)=\sum_{k=3}^K\left[
+ \delta_k^{-1}(1-2\delta_k)^2
+ \log_2\frac1{(1-2\delta_k)^2}
+ +4k(1-2\delta_k)\right].                             \tag{7}
+\]
+Taylor's formula with a uniform geometric remainder yields
+\[
+ U(F_K)=4S_K+4(K-2)\log_2e+O(1),
+ \qquad \frac{U(F_K)}{I(F_K)}\longrightarrow1.         \tag{8}
+\]
+The already derived exact entropy formula gives
+\[
+ H(F_K)=16S_K+O(K),
+ \qquad \frac{H(F_K)}{I(F_K)}\longrightarrow4.         \tag{9}
+\]
+Finally the biased B09 gain satisfies $J_k/(r_kk)\to1$, while
+$N_kr_k\to4$; hence its uniform transported aggregate is of the same order
+as the physical influence, not larger by an unbounded factor.  The apparent
+divergence occurs only after deleting the encoder label and boundary costs.
+
+\paragraph{Scope.}
+This theorem closes the entire disjoint tensor closure of Boolean point
+defects, including arbitrary multiscale multiplicities.  It does not cover
+overlapping nonlinear surgeries, selectors with non-singleton negative
+cells, or a different gate whose Fourier upper-set law is not the one above.
+Unbounded biased-helper cost is not an FEI counterexample, and full FEI
+remains open.

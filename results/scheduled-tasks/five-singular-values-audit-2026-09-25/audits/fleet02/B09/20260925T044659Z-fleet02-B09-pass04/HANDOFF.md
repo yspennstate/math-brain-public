@@ -1,0 +1,2 @@
+# B09 pass04 handoff
+Exact source pin unchanged. Fourth complete TeX pass found no theorem counterexample. Literal source remains GAP only through local issues already listed in SUMMARY.json; repaired proof chain passes this reconstruction. Lemma 4.3 mollification block passes except the adjacent omitted Jensen step C02. New-pass checks again support local presentation gaps at lines 398 and 613. Visual PDF-to-TeX comparison remains unchecked by B09 because the private PDF renderer was unavailable. Continue with a different audit order; audit only.

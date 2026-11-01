@@ -1,0 +1,119 @@
+{
+ "label": "NONE_ONLY",
+ "run": "<local>/run_agents100_0907",
+ "graded_at": "2026-09-07 18:37:14",
+ "protocol": "PROTOCOL_PLIT.md",
+ "keys_file": "<quarantined keys file>",
+ "sample": {
+  "n": 100,
+  "seed": 20260907,
+  "pool_size": 11867,
+  "bank_items": 12193,
+  "excluded_defect_flagged": 326,
+  "bank_file": "<local>/plit.jsonl",
+  "drawn_by": "claude-mathbank-100q-0907"
+ },
+ "extra_arms": {},
+ "per_arm": {
+  "none": {
+   "served": 100,
+   "flawed_n": 67,
+   "full_credit": 37,
+   "full_credit_rate": 0.5522388059701493,
+   "detected_any_step": 40,
+   "detected_rate": 0.5970149253731343,
+   "full_credit_with_reason_receipt": 29,
+   "clean_guard": {
+    "clean_n": 33,
+    "false_positives": 6,
+    "fp_rate": 0.18181818181818182
+   }
+  }
+ },
+ "contrasts": [],
+ "guard_flags": {},
+ "pilot_rule": {
+  "none_full_credit_rate": 0.5522388059701493,
+  "ceiling": false
+ },
+ "by_operator": {
+  "const_change": {
+   "none": "3/4"
+  },
+  "hypothesis_drop": {
+   "none": "0/2"
+  },
+  "hypothesis_swap": {
+   "none": "0/7"
+  },
+  "index_shift": {
+   "none": "1/4"
+  },
+  "ineq_flip": {
+   "none": "14/17"
+  },
+  "ineq_to_eq": {
+   "none": "1/6"
+  },
+  "limit_target": {
+   "none": "0/1"
+  },
+  "limop_swap": {
+   "none": "4/4"
+  },
+  "setop_swap": {
+   "none": "2/4"
+  },
+  "sign_flip": {
+   "none": "4/5"
+  },
+  "theorem_swap": {
+   "none": "2/2"
+  },
+  "word_flip": {
+   "none": "6/11"
+  }
+ },
+ "by_tier": {
+  "A": {
+   "none": "27/41"
+  },
+  "B": {
+   "none": "10/26"
+  }
+ },
+ "by_external_refs": {
+  "0": {
+   "none": "14/26"
+  },
+  "1": {
+   "none": "13/24"
+  },
+  "2": {
+   "none": "10/17"
+  }
+ },
+ "by_kind": {
+  "corollary": {
+   "none": "3/3"
+  },
+  "lemma": {
+   "none": "22/42"
+  },
+  "proposition": {
+   "none": "9/19"
+  },
+  "theorem": {
+   "none": "3/3"
+  }
+ },
+ "by_year": {
+  "2025": {
+   "none": "13/23"
+  },
+  "2026": {
+   "none": "24/44"
+  }
+ },
+ "notes_coverage": {}
+}

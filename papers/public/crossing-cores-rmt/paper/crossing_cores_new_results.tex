@@ -1,0 +1,1169 @@
+% New material for the crossing-cores paper: a proved supermultiplicativity
+% lemma with its corollaries, three exclusion lemmas, and two conjectures
+% with exact evidence through order 22.  Drop-in sections; theorem
+% environments as in the main file.
+
+\section{Concatenation and supermultiplicativity}
+
+For double-occurrence words $w_1$, $w_2$ on disjoint alphabets, write
+$w_1w_2$ for the concatenation, read as a cyclic word.
+
+\begin{lemma}[Profile factorization]\label{lem:profile}
+For a pairing $\pi$ let
+\[
+f_\pi(x)\;=\;\operatorname{vol}_k\{t:\ 0\le x+S_\ell(t)\le 1,\ 0\le\ell<2k\}
+\]
+be the $x_0$-section volume of $\mathcal P_T(\pi)$, so that
+$p_T(\pi)=\int_0^1 f_\pi$.  Then
+\[
+f_{w_1w_2}(x)\;=\;f_{w_1}(x)\,f_{w_2}(x),\qquad 0\le x\le1 .
+\]
+Moreover each $f_\pi$ is symmetric about $x=\tfrac12$ and log-concave.
+\end{lemma}
+
+\begin{proof}
+Every pair contributes $+t_c$ and $-t_c$ to the walk, so after the last
+slot of $w_1$ the walk has returned to $x_0$, and the slot forms of the
+$w_2$-part of the concatenation involve only the $w_2$-variables.  The
+constraint system therefore splits into the $w_1$-system and the
+$w_2$-system, coupled only through the common $x_0$; Fubini in the two
+independent blocks of $t$-variables gives the product formula.
+
+Symmetry: the involution $(x_0,t)\mapsto(1-x_0,-t)$ maps every slot form
+$W_\ell$ to $1-W_\ell$ and hence preserves $\mathcal P_T(\pi)$; it sends
+the section at $x$ to the section at $1-x$.
+
+Log-concavity: sections of a convex body by parallel hyperplanes have
+$\frac1k$-concave, in particular log-concave, volumes, by
+Brunn--Minkowski.
+\end{proof}
+
+\begin{lemma}[Supermultiplicativity]\label{lem:super}
+For double-occurrence words on disjoint alphabets,
+\[
+p_T(w_1w_2)\;\ge\;p_T(w_1)\,p_T(w_2).
+\]
+The same holds for $p_H$ when $w_1$, $w_2$ and hence $w_1w_2$ are parity
+mixing.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:profile}, $p_T(w_1w_2)=\int_0^1 f_{w_1}f_{w_2}$.  Both
+factors are log-concave, hence unimodal, and symmetric about $\tfrac12$;
+each is therefore a nondecreasing function of $-|x-\tfrac12|$.  Two
+nondecreasing functions of the same variable are nonnegatively correlated
+(Chebyshev's correlation inequality), so
+$\int_0^1 f_{w_1}f_{w_2}\ge\int_0^1 f_{w_1}\int_0^1 f_{w_2}$.
+The Hankel statement follows from Theorem~4.1, since concatenation of
+parity-mixing words along even cut points is parity mixing.
+\end{proof}
+
+\begin{remark}
+Equality in Chebyshev's inequality forces one profile to be constant, and
+no nonempty word has constant profile (in every computed example
+$f_\pi(0)<f_\pi(\tfrac12)$; at $x_0=0$ the section satisfies the extra
+constraint $t_c\ge0$ for the first opened pair), so the inequality is
+strict for nonempty words in all examples; we do not need the sharp
+equality classification here.
+
+The lemma explains the shape of the extremal hierarchy: the unique
+four-pair Toeplitz maximizer $12123434$ is the concatenation of two copies
+of the two-pair maximizer, with
+$p_T=\tfrac9{20}\ge(\tfrac23)^2=\tfrac49$, and the six-pair parity-mixing
+maximum $\tfrac{23}{90}$ is attained by the concatenation of two
+three-pair cores of volume $\tfrac12$, with
+$\tfrac{23}{90}\ge\tfrac14$.  Iterating the lemma on cube-cycle cores
+gives persistent-volume families with an exact lower bound
+$\prod_i 2/(r_i+1)$.
+\end{remark}
+
+\begin{lemma}[Cube-cycle profile]\label{lem:cube}
+Let $w_r=12\cdots r\,12\cdots r$ be the fully crossing $r$-pair word.  Then
+its section profile is
+\[
+f_{w_r}(x)\;=\;\int_0^1\min(x+y,\,2-x-y,\,1)^{\,r-1}\,dy
+\;=\;\frac{1-x^r}{r}+\frac{1-(1-x)^r}{r},
+\]
+and consequently
+\[
+p_T(w_r)\;=\;\int_0^1 f_{w_r}\;=\;\frac{2}{r+1}.
+\]
+\end{lemma}
+
+\begin{proof}
+The slot forms of $w_r$ are the prefix sums $x_0+t_1+\dots+t_j$
+($1\le j\le r$) and the suffix sums $x_0+t_{j+1}+\dots+t_r$
+($1\le j\le r-1$).  Substitute $u_j=x+t_1+\dots+t_j$; the map
+$t\mapsto u$ is unimodular, the prefix constraints become $u_j\in[0,1]$,
+and the suffix constraints become $u_r+x-u_j\in[0,1]$ for $j<r$.  For
+fixed $u_r=y$, each of $u_1,\dots,u_{r-1}$ ranges independently over
+$[0,1]\cap[x+y-1,\,x+y]$, an interval of length
+$\min(x+y,\,2-x-y,\,1)$.  Integrating over $y\in[0,1]$ gives the first
+formula; splitting at $x+y=1$ gives the closed form.  For the volume,
+with $s=x+y$ the sum of two independent uniforms,
+\[
+p_T(w_r)=\int_0^2\min(s,2-s,1)^{r-1}\,\bigl(1-|s-1|\bigr)\,ds
+=2\int_0^1 s^{r-1}\cdot s\,ds=\frac{2}{r+1}. \qedhere
+\]
+\end{proof}
+
+Combining Lemmas~\ref{lem:super} and~\ref{lem:cube}: for any concatenation
+of cube cycles of sizes $r_1,\dots,r_m$,
+\[
+p_T\;\ge\;\prod_{i=1}^m\frac{2}{r_i+1},
+\]
+an explicit persistent-volume family with, by
+Lemma~\ref{lem:profile}, exactly computable volumes
+$\int_0^1\prod_i f_{w_{r_i}}$.
+
+\begin{lemma}[Profile calculus]\label{lem:calculus}
+Let $\pi$ be a pairing with section profile $f_\pi$ as in
+Lemma~\ref{lem:profile}.
+\begin{enumerate}
+\item[(i)] (Ear neutrality.)  Inserting an ear into any gap of $\pi$
+leaves the profile unchanged; hence $f_\pi=f_{\operatorname{core}(\pi)}$
+pointwise, not only after integration.
+\item[(ii)] (Flattening.)  If $w$ is a complete word and $a$ a new letter,
+then $f_{awa}(x)=p_T(w)$ for every $x\in[0,1]$: nesting under a single
+pair flattens the profile to the constant $p_T(w)$.
+\item[(iii)] (Gap marginals.)  For a word $C$ and a gap $g$, let
+$\rho_{C,g}$ be the pushforward to $[0,1]$ of Lebesgue measure on
+$\mathcal P_T(C)$ under the slot form $W_g$.  Then $\rho_{C,g}$ has total
+mass $p_T(C)$, is symmetric about $\tfrac12$ and log-concave, and for
+every complete word $w$ on a disjoint alphabet inserted contiguously at
+gap $g$,
+\[
+p_T\bigl(C[w@g]\bigr)\;=\;\int_0^1 f_w(u)\,\rho_{C,g}(du)\;\ge\;p_T(C)\,p_T(w).
+\]
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) An ear inserted at a gap where the walk sits at $W_g$ contributes one
+variable $t$ constrained only by $W_g+t\in[0,1]$, which is an interval of
+length one for every admissible $W_g$; integrating it out gives the
+factor $1$ at every fixed $x_0$.  This is the argument of Theorem~3.4
+read at fixed $x_0$.
+
+(ii) Opening $a$ moves the walk to $u=x+t_a$, which ranges over $[0,1]$
+with unit Jacobian; the inner word runs from $u$ and returns to $u$, and
+closing $a$ returns to $x\in[0,1]$.  Hence
+$f_{awa}(x)=\int_0^1 f_w(u)\,du=p_T(w)$.
+
+(iii) Conditioning on the variables of $C$, the inserted word starts and
+ends at the position $W_g$ and contributes $f_w(W_g)$; integrating over
+$\mathcal P_T(C)$ gives the formula.  The involution
+$(x_0,t)\mapsto(1-x_0,-t)$ preserves $\mathcal P_T(C)$ and maps $W_g$ to
+$1-W_g$, so $\rho_{C,g}$ is symmetric; it is log-concave as the marginal
+of the indicator of a convex body (Pr\'ekopa).  Both $f_w$ and the
+density of $\rho_{C,g}$ are then nondecreasing functions of
+$-|u-\tfrac12|$, and Chebyshev's correlation inequality on $[0,1]$ gives
+the bound.
+\end{proof}
+
+For cube cycles the gap marginals are not merely explicit; they are the
+profile itself.
+
+\begin{corollary}[Self-similarity of cycle gaps]\label{cor:selfsim}
+For every gap $g$ of the fully crossing word $w_r$,
+\[
+\rho_{w_r,g}\;=\;f_{w_r},
+\]
+so for any complete word $w$ on a disjoint alphabet,
+\[
+p_T\bigl(w_r[w@g]\bigr)\;=\;\int_0^1 f_{w_r}f_w ,
+\]
+independently of which gap is used.
+\end{corollary}
+
+\begin{proof}
+In the coordinates of Lemma~\ref{lem:cube} the slot form at an opener
+gap is $u_j$, which for fixed $u_r=y$ ranges over an interval of length
+$\min(x+y,2-x-y,1)$ together with the other $r-2$ free prefix
+coordinates.  Writing $s=x+y$, whose density is $1-|s-1|$ on $[0,2]$,
+the marginal is
+$\rho(v)=\int_v^{v+1}\min(s,2-s,1)^{\,r-2}(1-|s-1|)\,ds$.  On $[0,2]$
+one has $1-|s-1|=\min(s,2-s,1)$, so the integrand is
+$\min(s,2-s,1)^{\,r-1}$ and $\rho=f_{w_r}$ by
+Lemma~\ref{lem:cube}.  The rest is Lemma~\ref{lem:calculus}(iii).
+\end{proof}
+
+At $r=2$ this reads $f_{abab}(v)=\tfrac12+v(1-v)=\tfrac34-(v-\tfrac12)^2$,
+so the four-pair extremal volume is an $L^2$ norm,
+\[
+\frac{9}{20}\;=\;\int_0^1 f_{abab}(v)^2\,dv ,
+\]
+consistent with $f_{12123434}=f_{abab}^{\,2}$ and $p=\int f$.  Likewise
+$\int_0^1f_{w_3}f_{abab}=\tfrac{61}{180}$ and
+$\int_0^1f_{w_4}f_{abab}=\tfrac{19}{70}$, matching the measured
+insertion values at every gap of $abcabc$ and $abcdabcd$ respectively,
+and $\int_0^1f_{w_3}^2=\tfrac{23}{90}$ is the six-pair parity-mixing
+maximum.
+
+The affine equivalence of Theorem~4.1 fixes the initial coordinate
+$x_0$ and acts unimodularly on the fiber, so it identifies sections and
+not only volumes: for every parity-mixing pairing the Hankel and
+Toeplitz profiles are equal pointwise, $f^H_\pi(x)=f^T_\pi(x)$ for all
+$x\in[0,1]$.  Every profile statement in this section therefore
+transfers verbatim to the Hankel ensemble on the parity-mixing class.
+
+Part (iii) contains Lemma~\ref{lem:super} (the seam gap) and shows that
+the paper's inflation structure extends from ears to arbitrary
+contiguous insertions, with an exact formula.  For cycle cores the gap
+marginals coincide across gaps; for example every gap of $abab$ receives
+$cdcd$ with volume $\tfrac9{20}$ and every gap of $abcabc$ receives
+$dede$ with volume $\tfrac{61}{180}$, while the path-of-squares core
+$abacbdcd$ has two gap classes, receiving $efef$ with volumes
+$\tfrac14$ and $\tfrac{313}{1260}$.  Since ears are profile-neutral, the
+Catalan inflation of Theorem~6.1 holds at the level of profiles:
+$\sum_{\pi}f_\pi(x)=\mathrm{Cat}_k+\sum_{r}\binom{2k}{k-r}K_r(x)$ with
+$K_r(x)=\sum_{\rho\in\mathcal R_{T,r}}f_\rho(x)$, and the generating
+function identities of Theorem~6.4 hold for each fixed $x$.
+
+\begin{lemma}[Supermultiplicativity of the primitive masses]\label{lem:kappa}
+For all $r,s\ge2$,
+\[
+\kappa_{r+s}^{T}\;\ge\;\kappa_{r}^{T}\,\kappa_{s}^{T},
+\qquad
+\kappa_{r+s}^{H}\;\ge\;\kappa_{r}^{H}\,\kappa_{s}^{H}.
+\]
+In particular $\lim_r(\kappa_r^E)^{1/r}$ exists in $(0,\infty]$ for both
+ensembles.
+\end{lemma}
+
+\begin{proof}
+Fix cyclic positions $1,\dots,2(r+s)$.  For a reduced $r$-pair word $w_1$
+on the first $2r$ positions and a reduced $s$-pair word $w_2$ on the rest,
+on disjoint alphabets, the concatenation $w_1w_2$ is again reduced: linear
+adjacencies inside each block are a subset of that block's cyclic
+adjacencies, and the two seam adjacencies join letters of different
+alphabets.  The map $(w_1,w_2)\mapsto w_1w_2$ is injective, since the
+concatenation determines its restriction to the first $2r$ positions.
+Therefore, using Lemma~\ref{lem:super} termwise,
+\[
+\kappa_{r+s}\;\ge\sum_{(w_1,w_2)}p(w_1w_2)\;\ge\;
+\Bigl(\sum_{w_1}p(w_1)\Bigr)\Bigl(\sum_{w_2}p(w_2)\Bigr)
+=\kappa_r\,\kappa_s .
+\]
+For the Hankel case both blocks have even length, so parity mixing is
+preserved and Theorem~4.1 applies termwise.  Existence of the limit is
+Fekete's lemma applied to $\log\kappa_r$.
+\end{proof}
+
+\begin{remark}\label{rmk:kappaasym}
+The exact values are far above the bound
+($\kappa_8=\tfrac{687080}{9}$ against $\kappa_4^2=\tfrac{31684}{225}$),
+reflecting that only cut-separated concatenations are counted.  The data
+suggest the sharper asymptotic
+$\kappa_{r+1}/\bigl((r+1)\kappa_r\bigr)\to2\rho^2$ with $\rho$ the
+Sen--Vir\'ag constant: the exact ratios $1.4833$, $1.4213$, $1.4002$,
+$1.3899$, $1.3844$ have geometrically shrinking decrements and
+extrapolate to $1.3734$, within $10^{-3}$ of $2\rho^2=1.37414$.  Non-separated interleavings satisfy no such inequality: $12341234$
+interleaves $1212$ and $3434$ and has
+$p_T=\tfrac25<\tfrac49=p_T(1212)\,p_T(3434)$ - simultaneously open pairs
+couple the corridor constraints destructively.  So the binomial
+enhancement of the lemma is false, and the finer $r!\gamma^r$ scaling
+must come from the boundary-local structure of the Catalan transform
+rather than from correlation inequalities.
+\end{remark}
+
+\begin{proposition}[Cluster equation]\label{prop:cluster}
+Let $F(z;x)=\sum_k F_k(x)z^k$ with $F_k(x)=\sum_{\pi\in P_2(2k)}f_\pi(x)$
+the profile sum over all pairings, read as linear words, and let
+$J(z;x)$ be the same sum restricted to crossing-indecomposable words
+(words that are neither a nontrivial concatenation of complete blocks
+nor of the nested form $awa$).  Then, as formal power series,
+\[
+F(z;x)\;=\;\frac{1}{\,1-z\,M(z)-J(z;x)\,},
+\qquad
+M(z)\;=\;\int_0^1F(z;x)\,dx ,
+\]
+where $M$ is the even-moment generating function of $\gamma_T$.  With
+$J\equiv0$ this is the Catalan equation $C=1/(1-zC)$, so $J$ is
+precisely the crossing correction to the semicircle law.
+\end{proposition}
+
+\begin{proof}
+Every nonempty linear word factors uniquely as a concatenation of
+indecomposable complete words, and profiles multiply over concatenation
+(Lemma~\ref{lem:profile}), so $F=1/(1-I)$ with $I$ the indecomposable
+profile sum.  An indecomposable word is either of the form $awa$ with
+$w$ complete - by the flattening rule its profile is the constant
+$p_T(w)$, and summing over $w$ and the label of the enclosing pair gives
+the term $z\,M(z)$ - or crossing-indecomposable, giving $J$.  Averaging
+the first identity over $x\in[0,1]$ gives the second.
+\end{proof}
+
+The identity was verified exactly through order $z^4$ at $x=\tfrac12$:
+series inversion of the computed $F_k(\tfrac12)=1,1,\tfrac{11}4,
+\tfrac{47}4,\tfrac{12823}{192}$ yields
+$J_k(\tfrac12)=0,\tfrac34,\tfrac{55}{12},\tfrac{6139}{192}$, matching
+the direct enumeration of crossing-indecomposable words.  Iterating the
+same decomposition inside the gaps of crossing-indecomposable words
+expands $J$ over gap-irreducible atoms with gaps refilled by $F$
+evaluated at the gap positions; the gap-marginal formula of
+Lemma~\ref{lem:calculus}(iii) is the first moment of this expansion.
+Note that section profiles are not invariant under rotation of the
+cyclic word - rotating moves the basepoint - so all sums here are over
+linear words; only the integrated volumes are rotation invariant.
+
+\subsection*{The calculus closes on a class}
+
+Lemmas~\ref{lem:profile}, \ref{lem:calculus}(ii) and~\ref{lem:cube}
+together are an algorithm on the class of words generated from fully
+crossing cycles by concatenation and by nesting under a single pair:
+\[
+W\;::=\;w_r\ \bigm|\ WW\ \bigm|\ aWa .
+\]
+
+\begin{proposition}[Closed evaluation]\label{prop:closure}
+For every word in this class the section profile is a polynomial in $x$,
+computed from
+\[
+f_{w_r}(x)=\frac{1-x^r}{r}+\frac{1-(1-x)^r}{r},\qquad
+f_{UV}=f_Uf_V,\qquad
+f_{aUa}\equiv\int_0^1 f_U ,
+\]
+and $p_T$ is the integral of that polynomial.  Every such volume is
+therefore an explicit rational number, obtained without any polytope
+computation.
+\end{proposition}
+
+The class is larger than its grammar suggests.  By
+Corollary~\ref{cor:selfsim} the gap marginal of a cycle is its own
+profile, so inserting a word $w$ into any gap of $w_r$ has volume
+$\int_0^1f_{w_r}f_w$ -- which is exactly the concatenation formula.
+Insertion into a cycle is therefore volume-equivalent to concatenation,
+and every word obtained by hanging cycles off the gaps of other cycles
+already has its volume realised inside the grammar.  This is why the
+gap-independence observed for $abab$, $abcabc$ and $abcdabcd$ was not a
+coincidence.
+
+Reducedness needs one remark.  Read cyclically, $aWa$ places the two
+endpoints of $a$ at positions $0$ and $2|W|+1$, which are adjacent, so a
+word that is entirely a nesting is an ear and not a reduced core -- its
+volume equals $p_T(W)$, as ear deletion requires.  Nesting contributes
+reduced words only inside a concatenation, where the other factor
+separates the endpoints; that is exactly how $\omega_l$ and $\eta_l$ are
+built.
+
+Because evaluation is now a polynomial integral, the maximum over the
+whole class at a given number of pairs can be computed far past the
+range of any polytope enumeration.  Doing so gives
+\[
+r=2:\ \tfrac23,\qquad r=3:\ \tfrac12,\qquad r=4:\ \tfrac9{20},\qquad
+r=5,6,\dots,16:\ \tfrac49 ,
+\]
+the small cases reproducing the constants of Corollary~9.3 and
+Theorem~9.1 and the rest agreeing with
+Proposition~\ref{prop:family49} at every size up to sixteen pairs.  This
+is a maximum over the grammar class rather than over all reduced cores,
+and the class is thin: comparing against the complete reduced-core
+sweeps, it realises $3$ of the $6$ distinct volumes at $r=5$, $6$ of
+$19$ at $r=6$ and $8$ of $46$ at $r=7$, so its share of the spectrum
+falls as $r$ grows.  Two things make the comparison worth making
+anyway.  Every volume the class produces does occur in the true
+spectrum -- $3/3$, $6/6$, $8/8$ at those sizes, so the calculus
+introduces no spurious values -- and at each of $r=5,6,7$ the class
+maximum equals the global maximum.  The evidence for $r\ge8$ is
+therefore of the form: the extremum is known to lie in this class at
+every size where the comparison can be made, and inside the class it
+stays at $4/9$ through sixteen pairs.
+
+What lies outside is also identifiable, and it says what the calculus is
+missing.  The cores realising the volumes the class does not reach are
+words such as $abacbdeced$, $abacbdcede$ and $abcadbecde$ at five pairs,
+or $ababcdefefcd$ and $abacbdefcfed$ at six: in each the cycles of the
+prefix-state cactus are glued at an interior shared state rather than at
+the base point.  Concatenation joins blocks at the empty state and
+nesting places one inside a single pair; neither produces a gluing at an
+interior vertex, and for such a word the profile is not a product -- the
+path-of-squares core $abacbdcd$ is the smallest example, and it is
+exactly the case where the gap marginals differ from gap to gap
+(volumes $\tfrac14$ and $\tfrac{313}{1260}$ for the same inserted word).
+An evaluation rule for gluing two cycles at an interior state would
+reach many of these; $\tfrac{313}{1260}$ duly appears among the six-pair
+volumes outside the present class.  It would not reach all of them,
+because the block data of Lemma 7.1 is not a complete invariant for the
+volume.  The words
+\[
+abcdabcd,\qquad abacbdcd,\qquad abcadbcd
+\]
+all have eight distinct prefix states on four coordinates, so each has a
+single cycle block of length eight using four labels -- the same data in
+the classification -- yet their volumes are
+\[
+\tfrac25,\qquad \tfrac{11}{30},\qquad \tfrac{11}{30}.
+\]
+What separates them is how the cycle sits in the cube: the first walks
+monotonically up and then down, the others zigzag.  So a complete
+evaluation needs the embedded cycle, not merely its length and label
+set.
+
+The other obvious coarse invariant fails too.  Grouping all $105$
+order-eight pairings by their height sequence -- the number of open
+chords after each slot, that is the Dyck path -- gives $14$ classes, and
+$13$ of them contain more than one volume; the class of
+$(1,2,1,0,1,2,1,0)$ carries $1$, $\tfrac23$ and $\tfrac9{20}$ at once.
+Note that $abacbdcd$ and $abcadbcd$ have different height sequences and
+the same volume $\tfrac{11}{30}$, while words sharing a height sequence
+routinely differ, so the Dyck path neither determines the volume nor is
+determined by it.  The volume depends on which chord each down-step
+closes, not on the height profile -- which is one reason these numbers
+have resisted a formula, and why the profile calculus buys what it does
+only on a structured subclass.
+
+Among coarse statistics the crossing number does best.  At order eight
+it takes seven values and five of the seven classes are pure; the
+failures are exactly at two crossings, where $\tfrac12$ and $\tfrac9{20}$
+both occur, and at three, where $\tfrac12$, $\tfrac{11}{30}$ and
+$\tfrac25$ all occur.  The nesting number is nearly useless -- six of its
+seven classes carry several volumes, and the class of nesting number
+zero already carries all six values -- and refining to the pair
+(crossings, nestings) still leaves seven impure classes out of
+twenty-eight.  That the crossing number is so nearly a complete
+invariant, and fails only in the middle of its range, invites the obvious
+refinement: the chord-intersection graph $G_\times(\pi)$ of
+Proposition~4.3 itself, rather than its edge count.  This is the
+interlacement graph of the diagram, so the question is whether $p_T$
+factors through the circle graph.
+
+It very nearly does.  Grouping pairings by the isomorphism class of
+$G_\times(\pi)$ gives, at order six, four classes and all pure; at order
+eight, eleven classes and all pure, with $K_3\mapsto\tfrac12$ and
+$K_4\mapsto\tfrac25$ in agreement with $p_T(w_r)=2/(r+1)$ for
+$G_\times(w_r)=K_r$, and the empty graph $\mapsto1$.  At order ten there
+are thirty-four classes and exactly one is impure: the graph on five
+vertices with two disjoint edges and one isolated vertex carries both
+$\tfrac9{20}$ and $\tfrac49$.  The witnesses are
+\[
+aabcbcdede\ \mapsto\ \tfrac9{20},\qquad
+ababcdedec\ \mapsto\ \tfrac49 ,
+\]
+the second being $\omega_1$.  They have the same interlacement graph and
+differ only in what the fifth chord does: in $\omega_1$ it nests the
+second crossing pair, in the other it is an ear nesting nothing.  So the
+volume is not a function of the circle graph alone.
+
+The failure is not arbitrary, and separating the classes by connectivity
+says where it lives.  Through order ten there are twenty-nine
+isomorphism classes with $G_\times(\pi)$ connected --- two at order six,
+six at order eight, twenty-one at order ten --- and every one of them is
+pure.  Of the twenty disconnected classes in the same range, nineteen
+are pure and the twentieth is the one displayed above, which is the only
+impurity anywhere through order ten.  This is what the witnesses
+suggest: when $G_\times(\pi)$ is
+disconnected the diagram may realise its components either side by side
+or with one nested inside another, and the volume tells those apart,
+whereas a connected graph leaves no such freedom.  We record the
+resulting question.
+
+\begin{conjecture}
+If $G_\times(\pi)$ is connected, then $p_T(\pi)$ depends only on the
+isomorphism class of $G_\times(\pi)$.
+\end{conjecture}
+
+\begin{remark}
+Part of this is classical.  By Bouchet's theorem a circle graph that is
+prime for split decomposition has an essentially unique chord diagram,
+so for prime $G_\times(\pi)$ the conjecture is immediate --- the graph
+determines the diagram, never mind the volume.  Disconnection is the
+crudest way for primeness to fail, and it is the way our witness fails.
+What the order-ten data leaves open, and what would give the conjecture
+real content, is the connected but non-prime range: we have not checked
+which of the twenty-one connected classes are prime, and it is exactly
+the imprime ones that would make this more than a restatement.
+\end{remark}
+
+The ingredient such a rule needs is a two-point kernel: the section
+volume with both the base point and the shared state held fixed.  For
+the square it is elementary.  The walk visits $x$, $u_1$, $u_2$ and
+$u_2-u_1+x$, so fixing $x$ and $u=u_1$ and integrating out $u_2$ gives
+\[
+K_{abab}(x,u)\;=\;\bigl(1-|u-x|\bigr)_+ ,
+\]
+and $\int_0^1K(x,u)\,du=f_{abab}(x)$, $\iint K=\tfrac23$, both checked
+exactly.  Profiles are the one-point marginals of these kernels;
+concatenation and nesting only ever need the one-point data, which is
+why they close, while gluing at an interior state needs $K$ itself.
+
+The class also supplies a check of the calculus against the lattice
+geometry.  Corollaries~5.2 and~5.3 say that the normalised volume
+$(r+1)!\,p_T$ of an $r$-pair core is an integer and, by the parity
+refinement, an even one.  Those statements come from Gorenstein
+reciprocity and the mod-two $h^*$-identity; the grammar volumes come
+from integrating polynomials and never touch a polytope.  All $628$
+volumes the class produces for $2\le r\le12$ have even integral
+normalised volume, with no exception.
+
+The extremum is isolated, and by a fixed amount.  The three largest
+volumes in the class are $\tfrac49$, $\tfrac13$, $\tfrac3{10}$ for every
+$r\ge7$ (at $r=5,6$ the runners-up are $\tfrac{61}{180}$ and
+$\tfrac13$), so the gap below the maximum is $\tfrac49-\tfrac13=\tfrac19$
+independently of $r$.  This is a different phenomenon from the quantized
+improvement of Corollary~9.2, whose gap shrinks like $2/(r+1)!$: within
+this class the top of the volume spectrum does not accumulate at $4/9$
+but sits a fixed distance below it.
+
+The same computation runs on the Hankel side.  Since $w_r$ is parity
+mixing exactly for odd $r$, and both concatenation (an even shift) and
+nesting (which flips every parity) preserve parity mixing, the
+parity-mixing subclass is the same grammar with odd cycles only.  Its
+maxima are
+\[
+r=3:\ \tfrac12,\qquad r=5:\ \tfrac13,\qquad r=6:\ \tfrac{23}{90},\qquad
+r=7,8,\dots,18:\ \tfrac14 ,
+\]
+reproducing Corollary~9.3 at three pairs, Proposition~10.2 at five, the
+six-pair maximum, and then the $\eta_l$ value at every size up to
+eighteen.  One gap remains: the grammar contains no four-pair
+parity-mixing word, so it misses the extremal $12314324$ of volume
+$11/30$; the class is rich enough to carry the asymptotic extremals but
+not every small one.
+
+The class already contains the extremal families: $abab\,cdcd$ gives
+$\tfrac9{20}$, the two-square chains $\omega_l$ give $\tfrac49$, the
+$w_3$ chains $\eta_l$ give $\tfrac14$, and $w_3w_3$ gives
+$\tfrac{23}{90}$.  It also produces values that would be laborious
+otherwise, all confirmed against the exact engine: $abcabc\,dede$ gives
+$\tfrac{61}{180}$, $abab\,cdcd\,efgefg$ gives $\tfrac{13}{56}$,
+$abcabc\,dede\,fghfgh$ gives $\tfrac{166}{945}$, and
+$abcdbcda\,efghefgh$ gives $\tfrac15$.  In fourteen randomly generated
+words of the grammar the closed evaluation and the polytope volume agreed
+exactly in every case.
+
+\section{Exclusion lemmas for the limiting laws}
+
+\begin{lemma}\label{lem:notgauss}
+Neither $\gamma_T$ nor $\gamma_H$ is a variance mixture of centered
+Gaussian laws.
+\end{lemma}
+
+\begin{proof}
+If $X=\sqrt V Z$ with $Z$ standard Gaussian and $V\ge0$ independent, then
+$m_4=3\,\mathbb E[V^2]\ge3(\mathbb E V)^2=3m_2^2=3$.  But
+$m_4(\gamma_T)=\tfrac83<3$ and $m_4(\gamma_H)=2<3$.
+\end{proof}
+
+\begin{lemma}\label{lem:hankelnotsemi}
+$\gamma_H$ is not a scale mixture of semicircle laws.
+\end{lemma}
+
+\begin{proof}
+If $\gamma_H=\operatorname{law}(\sqrt V S)$ with $S$ standard semicircular,
+then $\mathbb E[V^k]=m_{2k}(\gamma_H)/\mathrm{Cat}_k$.  Here
+$\mathbb E[V]=1$ and $\mathbb E[V^2]=m_4/2=1$, so $V$ is degenerate at $1$
+and $\gamma_H$ would be the semicircle law, contradicting
+$m_6(\gamma_H)=\tfrac{11}2\ne5$.
+\end{proof}
+
+\begin{lemma}\label{lem:notq}
+Neither law is a $q$-Gaussian.  For $\gamma_T$, $m_4=2+q$ forces
+$q=\tfrac23$, and then $m_6=5+6q+3q^2+q^3=\tfrac{287}{27}\ne11$; for
+$\gamma_H$, $m_4=2$ forces $q=0$, and $m_6=\tfrac{11}2\ne5$.
+\end{lemma}
+
+Lemma~\ref{lem:notgauss} rules out any exact conditional-Gaussian or
+symbol-averaging representation of either law.
+Lemma~\ref{lem:hankelnotsemi} is consistent with the non-unimodality of
+$\gamma_H$: a scale mixture of semicircle laws is unimodal.
+
+\section{The global $4/9$ bound: extremals and exhaustive evidence}
+
+Beyond the four-pair layer, Theorem~9.1's constant $9/20$ is attained only
+at $k=4$, and the natural question is the sharp constant for $r\ge5$.  The
+profile calculus supplies the extremal family in closed form.
+
+\begin{proposition}[The $4/9$ family]\label{prop:family49}
+For $l\ge1$ let
+\[
+\omega_l\;=\;abab\,c_1c_2\cdots c_l\,dede\,c_l\cdots c_2c_1 ,
+\]
+a reduced core with $r=l+4$ pairs (two square blocks joined by a chain of
+$l$ nested pairs).  Then, for every $x\in[0,1]$,
+\[
+f_{\omega_l}(x)\;=\;\tfrac23\,f_{abab}(x),
+\qquad\text{hence}\qquad
+p_T(\omega_l)\;=\;\Bigl(\tfrac23\Bigr)^2=\frac49 .
+\]
+\end{proposition}
+
+\begin{proof}
+The block $c_1\cdots c_l\,dede\,c_l\cdots c_1$ is a complete word nested
+under $c_1$; applying the flattening rule of
+Lemma~\ref{lem:calculus}(ii) $l$ times reduces it to the constant profile
+$p_T(dede)=\tfrac23$ (the two-pair crossing volume).  The whole word is
+the concatenation of $abab$ with that block, so profiles multiply by
+Lemma~\ref{lem:profile}, giving
+$f_{\omega_l}=\tfrac23f_{abab}$ and
+$p_T(\omega_l)=\tfrac23\int_0^1f_{abab}=\tfrac23\cdot\tfrac23$.
+\end{proof}
+
+\begin{proposition}[Exhaustive verification for $r\le7$]\label{prop:49exh}
+Over all reduced Toeplitz cores with $r=5,6,7$ pairs -- that is $293$,
+$3326$ and $44189$ labelled words, $29$, $196$ and $1788$ dihedral orbits
+-- the maximum volume is exactly $4/9$, and it is attained on a single
+dihedral orbit at each $r$, namely the orbit of $\omega_{r-4}$.
+\end{proposition}
+
+Together these give the sharp form of the conjecture: for every $r\ge5$,
+\[
+p_T(\rho)\;\le\;\frac49 ,
+\]
+with equality exactly on the orbit of $\omega_{r-4}$ -- an equality class
+that is nonempty for every $r\ge5$, so the constant cannot be improved at
+any size.
+
+The general-$r$ statement reduces to a single finite slab lemma.  Recall
+the proof of Theorem~9.1: reducedness forces $e\ge2$; for $e=2$
+Corollary~7.2 gives $9/20$ (only at $k=4$) or $4/9$; and for $e\ge3$ the
+paper bounds by $9/20$ or $2/5$.  Hence the global bound for $r\ge5$
+follows at once from the following strengthening of Lemma~8.2, which
+removes its criticality hypothesis.
+
+\begin{conjecture}[Three-slab bound]\label{conj:threeslab}
+Let $L=X_1+X_2-X_3$ and let $M\ne N$ be slot forms, neither a coordinate
+nor $\pm L$.  Then
+\[
+\Pr\bigl\{|L|\le\tfrac12,\ |M|\le\tfrac12,\ |N|\le\tfrac12\bigr\}
+\;\le\;\frac25 .
+\]
+\end{conjecture}
+
+By Lemma~2.5 every slot form has coefficients in $\{0,\pm1\}$ with odd
+support of size at least three, so for each ambient dimension $d$ this is
+a finite exact computation of the same kind as Appendix~A and
+Theorem~10.4.  For forms of minimal support the finiteness is absolute
+and the conjecture is a theorem.
+
+\begin{proposition}[Three triangles]\label{prop:threetri}
+Let $M_1,M_2,M_3$ be pairwise distinct slot forms of support three, none
+the negative of another.  Then
+\[
+\Pr\bigl\{|M_i(X)|\le\tfrac12,\ i=1,2,3\bigr\}\;\le\;\frac25 ,
+\]
+with equality exactly for the star system of Lemma~\ref{lem:star}.
+\end{proposition}
+
+\begin{proof}
+A support-three form with coefficient sum one has two entries $+1$ and
+one entry $-1$, so the configuration is a $3\times d$ matrix over
+$\{0,\pm1\}$ whose rows each carry two $+1$ and one $-1$, with no zero
+column.  Permuting coordinates does not change the probability, so a
+configuration is determined by the multiset of its columns, each a
+nonzero vector in $\{-1,0,1\}^3$, and the row conditions say that for
+each row the multiplicities of the columns carrying $+1$ there sum to
+two and those carrying $-1$ sum to one.  That integer system has exactly
+$463$ solutions, of which $34$ are degenerate (two forms equal or
+opposite).  Computing the remaining $429$ probabilities exactly gives
+maximum $2/5$, attained by five configurations, all equivalent to
+\[
+M_1=U+X_1,\quad M_2=U+X_2,\quad M_3=U+X_3,\qquad U=X_5-X_4 ,
+\]
+the star of Lemma~\ref{lem:star} at $j=3$.  The next values attained are
+$3/8$, $11/30$, $17/48$, $61/180$ and $1/3$.
+\end{proof}
+
+Since the star is itself a triangle system,
+Proposition~\ref{prop:threetri} settles the conjecture on the set where
+the extremum lives, and what remains is to rule out larger supports.
+Exhaustive scans over forms of every admissible support give maximum
+$3/8$ over all $55$ pairs at $d=4$, $2/5$ over all $741$ at $d=5$, and
+$2/5$ over all $7021$ at $d=6$; the value $2/5$ is Lemma~8.2's
+critical-triple constant.  Since $\tfrac25<\tfrac49$, the conjecture
+yields
+\[
+p_T(\rho)\le\frac49\quad(r\ge5),\qquad
+\text{equality exactly on the orbit of }\omega_{r-4},
+\]
+a complete proof of the global bound modulo one finite certificate.
+
+\subsection*{The Hankel analogue: a sharp $1/4$}
+
+The parity restriction forbids square blocks (Corollary~7.3), so the
+smallest cycle available in the parity-mixing class is $w_3=abcabc$ with
+$p_H(w_3)=\tfrac12$.  Replacing squares by $w_3$ in
+Proposition~\ref{prop:family49} gives the Hankel analogue.
+
+\begin{proposition}[The $1/4$ family]\label{prop:family14}
+For $l\ge1$ let
+\[
+\eta_l\;=\;abcabc\,c_1\cdots c_l\,defdef\,c_l\cdots c_1 ,
+\]
+a reduced parity-mixing core with $r=l+6$ pairs.  Then
+$f_{\eta_l}=\tfrac12 f_{w_3}$ and
+\[
+p_H(\eta_l)\;=\;p_T(\eta_l)\;=\;\Bigl(\tfrac12\Bigr)^2=\frac14 .
+\]
+\end{proposition}
+
+\begin{proof}
+Flattening (Lemma~\ref{lem:calculus}(ii)) applied $l$ times reduces the
+nested block to the constant $p_T(w_3)=\tfrac12$; concatenation
+multiplies profiles; and the Hankel value equals the Toeplitz value by
+Theorem~4.1, the words being parity mixing.
+\end{proof}
+
+Computing the complete reduced parity-mixing layers gives the exact
+maxima
+\[
+r=5:\ \tfrac13,\qquad r=6:\ \tfrac{23}{90},\qquad r=7:\ \tfrac14,
+\qquad r=8:\ \tfrac14 ,
+\]
+the value at $r=8$ being new here (the whole eight-pair layer is $4738$
+words in $198$ orbits, $92$ distinct volumes).  The equality classes are
+also explicit: at $r=5$ the cube cycle $w_5$; at $r=6$ the single orbit
+of $w_3w_3$, whose volume $\int_0^1f_{w_3}^2=\tfrac{23}{90}$ is again a
+concatenation value; at $r=7$ exactly two orbits, the cube cycle $w_7$
+and $\eta_1$; and at $r=8$ the single orbit of $\eta_2$ (the cube cycle
+$w_8$ is not parity mixing -- $w_r$ is parity mixing precisely for odd
+$r$).  Since $\eta_l$ exists for every $r\ge7$, this suggests the sharp
+Hankel companion of Proposition~\ref{prop:family49}:
+\[
+p_H(\rho)\;\le\;\frac14\qquad(r\ge7),
+\]
+sharpening Corollary~10.5's $1/3$, which is attained only at $r=5$.  The
+two bounds have the same shape: $4/9=p_T(w_2)^2$ on the Toeplitz side and
+$1/4=p_H(w_3)^2$ on the Hankel side, each the square of the smallest
+admissible cycle's volume.
+
+\subsection*{One family behind every slab constant}
+
+The separate constants appearing across Sections~8--10 are all values of
+the cube-cycle family.  The fully crossing $r$-pair word $w_r$ has
+exactly $r-1$ exceptional prefix-state forms, so writing $j=r-1$ for the
+number of slabs, Lemma~\ref{lem:cube} gives
+\[
+p_T(w_{j+1})\;=\;\frac{2}{j+2}.
+\]
+Comparing with the constants in the paper:
+
+\begin{center}
+\begin{tabular}{c|c|l}
+$j$ & $2/(j+2)$ & where the constant appears \\\hline
+$1$ & $2/3$ & concentration of a three-uniform sum on a unit interval\\
+$2$ & $1/2$ & Lemma 8.1, critical companions (equality)\\
+$3$ & $2/5$ & Lemma 8.2, three critical slabs\\
+$4$ & $1/3$ & Theorem 10.4, the four-slab theorem\\
+$5$ & $2/7$ & the rank-five bound, open\\
+$6$ & $1/4$ & predicted
+\end{tabular}
+\end{center}
+
+Every constant matches, and by Lemma~\ref{lem:cube} the cube cycle
+attains it at each level.  This suggests the single statement behind the
+whole hierarchy.
+
+\begin{lemma}[The star system attains $2/(j+2)$]\label{lem:star}
+Let $U=X_a-X_b$ for two coordinates $a\ne b$, and let
+$M_i=U+X_{c_i}$, $i=1,\dots,j$, for distinct coordinates $c_i$ outside
+$\{a,b\}$ (signs immaterial).  Then
+\[
+\Pr\bigl\{|M_i|\le\tfrac12,\ 1\le i\le j\bigr\}
+=\int_{-1}^{1}(1-|u|)^{j+1}\,du=\frac{2}{j+2}.
+\]
+This is the exceptional system of the fully crossing word $w_{j+1}$,
+whose forms are $\Phi_0+\Phi_{j+1}-\Phi_i$, $1\le i\le j$.
+\end{lemma}
+
+\begin{proof}
+$U$ has density $(1-|u|)_+$.  Given $U=u$, the constraint $|u+X_{c_i}|\le
+\tfrac12$ puts $X_{c_i}$ in an interval of length $(1-|u|)_+$, and the
+$X_{c_i}$ are independent, so the conditional probability is
+$(1-|u|)^j$.  Integrating against the density of $U$ gives
+$\int_{-1}^1(1-|u|)^{j+1}du=2/(j+2)$.
+\end{proof}
+
+Lemma~\ref{lem:star} recovers every constant in the table by a single
+computation, and matches $p_T(w_{j+1})=2/(j+2)$ from
+Lemma~\ref{lem:cube}, as it must.  The exhaustive scan at $j=3$ finds
+exactly this configuration at the maximum: the nine attaining pairs at
+$d=5$ all have the form $L=X_0+X_1-X_2$, $M=-U+X_4$, $N=-U+X_3$ with
+$U=X_0-X_2$.
+
+\begin{conjecture}[Slab hierarchy]\label{conj:slabhier}
+For $j\ge1$ distinct exceptional slot forms $M_1,\dots,M_j$,
+\[
+\Pr\bigl\{|M_i(X)|\le\tfrac12,\ 1\le i\le j\bigr\}\;\le\;\frac{2}{j+2},
+\]
+with equality exactly for the exceptional system of the fully crossing
+word $w_{j+1}$.
+\end{conjecture}
+
+The cases $j=1,2,4$ are theorems in the paper; Conjecture~\ref{conj:threeslab}
+is the case $j=3$, and $j=5$ is the open rank-five bound.  Two reductions
+make each case finite.  First, the coefficients are automatically in
+$\{0,\pm1\}$ with odd support (Lemma~2.5).  Second:
+
+\begin{lemma}[Private pairs may be deleted]\label{lem:anderson}
+Let $M_1,\dots,M_j$ be slot forms and suppose two coordinates $c\ne d$
+occur only in $M_1$, with opposite signs there.  Let $M_1'$ be $M_1$ with
+those two entries deleted.  Then
+\[
+\Pr\bigl\{|M_i|\le\tfrac12\ \forall i\bigr\}\;\le\;
+\Pr\bigl\{|M_1'|\le\tfrac12,\ |M_i|\le\tfrac12\ (i\ge2)\bigr\},
+\]
+and $M_1'$ is again a slot form (its support drops by two, staying odd,
+and its coefficient sum is unchanged).
+\end{lemma}
+
+\begin{proof}
+Write $Z=(M_1',M_2,\dots,M_j)$ and $W=\pm(X_c-X_d)$, so that the vector
+of forms is $Z+(W,0,\dots,0)$ with $W$ independent of $Z$.  The event is
+$Z+(W,0,\dots,0)\in K$ for the symmetric convex set
+$K=[-\tfrac12,\tfrac12]^j$.  Now $Z$ is a linear image of a uniform
+distribution on a cube, hence has a symmetric log-concave law, so
+Anderson's inequality gives $\Pr\{Z+v\in K\}\le\Pr\{Z\in K\}$ for every
+fixed $v$; averaging over $v=(W,0,\dots,0)$ gives the claim.
+\end{proof}
+
+The hypothesis of opposite signs is needed: deleting two private
+coordinates of the same sign would change the coefficient sum, so the
+reduced row is no longer a slot form and the induction does not close.
+What Lemma~\ref{lem:anderson} does give is that an extremal
+configuration has no form carrying two private coordinates of opposite
+sign.  A form may still carry several private coordinates provided they
+all have the same sign -- a support-three form, for instance, can have
+its two $+1$ entries private -- and such configurations are not reduced
+by the lemma.  Combined with the exhaustive scans below,
+which settle every configuration living in dimension at most six, the
+cases left open are those in dimension at least seven in which each
+form's private coordinates all carry the same sign.  Exhaustive checks: at $j=3$ the maximum is $3/8$ over all $55$
+admissible pairs at $d=4$ and $2/5$ over all $741$ at $d=5$, and the
+deletion step never increased the probability in $55$ of $55$ tested
+systems.  At $j=5$ the star system was confirmed to give exactly $2/7$,
+and a search over five-subsets of admissible forms found nothing
+exceeding it: exhaustively at $d=5$ (maximum $29/120$) and by random
+sampling at $d=6$ and $d=7$ (maxima $37/160$ and $1891/10080$).
+
+A sharper test than sampling is to ask whether the star can be improved
+locally.  Starting from the star and replacing one of its forms by every
+other admissible slot form, computing each result exactly, gives at
+$j=3$ a best value of $2/5$ over $111$ replacements in $d=5$ and over
+$351$ in $d=6$, and at $j=4$ a best value of $1/3$ over $464$
+replacements in $d=6$ and $1384$ in $d=7$ -- $2310$ exact
+recomputations in all, and in none of them does anything beat the star,
+which is therefore an exact local maximum under single-form moves, also
+when a spare coordinate outside its support is available.  The $j=4$ run
+is also a check on the machinery rather than on the conjecture, since
+Theorem 10.4 proves the bound $1/3$ there; a replacement exceeding it
+would have contradicted a proved theorem, and none does.
+
+Those sampling figures should be read with care, and their own numbers
+say why.  Simulating random $j$-tuples for $j=4,5,6$ in dimensions up to
+$j+4$ gives best observed values $0.301$, $0.208$ and $0.117$ against
+bounds $1/3$, $2/7$ and $1/4$: the sampled maxima fall further below the
+bound as $j$ and $d$ grow, so a random tuple is almost never
+extremal-shaped and "no violation found" is weak evidence at large $j$.
+The weight is carried by the exhaustive scans in low dimension and by
+Proposition~\ref{prop:threetri}, which is a complete enumeration.  What
+the simulations do confirm sharply is the equality case: the star system
+reproduces $2/(j+2)$ to within Monte-Carlo error at every $j$ from $2$
+to $7$, including the values $1/4$ and $2/9$ beyond the range where the
+exact volumes were computed.
+
+A route to the open case $j=5$ already exists inside the paper's own
+apparatus.  Theorem~10.4 proves $j=4$ by writing $D=[-M\,|\,I_4]$,
+observing that its column matroid is regular of rank four, and invoking
+the rank-four classification ($M(K_5)$ restrictions plus
+$M^*(K_{3,3})$).  The identical argument at $j=5$ needs the rank-five
+regular matroid data, and the cosystole bounds of Douthitt, Israel and
+Kennard cited there cover regular matroids of rank at most six.  So the
+rank-five $2/7$ bound looks accessible by the paper's existing method
+rather than a new one.
+
+\section{Unimodality: a moment certificate}
+
+Khinchin's theorem states that a symmetric law $\nu$ is unimodal about
+the origin if and only if $\nu$ is the law of $UZ$ with $U$ uniform on
+$[-1,1]$ independent of $Z$; equivalently, if and only if
+\[
+u_k\;:=\;(2k+1)\,m_{2k}(\nu),\qquad k\ge0,
+\]
+is the moment sequence of a positive random variable ($Z^2$).  This turns
+unimodality into an exactly checkable Hankel positivity condition.
+
+\begin{proposition}[Four-moment certificate for the Hankel law]\label{prop:hnonuni}
+$\gamma_H$ is not unimodal.  Indeed, with
+$u_0,\dots,u_4=1,\,3,\,10,\,\tfrac{77}2,\,\tfrac{843}5$,
+\[
+\det\begin{pmatrix}u_0&u_1&u_2\\u_1&u_2&u_3\\u_2&u_3&u_4\end{pmatrix}
+=\frac{815}{4}-\frac{1812}{5}+155=-\frac{73}{20}\;<\;0 .
+\]
+\end{proposition}
+
+\begin{proof}
+If $\gamma_H$ were unimodal, Khinchin's theorem would give
+$\gamma_H=\operatorname{law}(UZ)$ and hence $u_k=\mathbb E[(Z^2)^k]$, so
+the Hankel matrix $(u_{i+j})_{i,j\le2}$ would be positive semidefinite.
+The displayed determinant, computed from $m_2=1$, $m_4=2$, $m_6=\tfrac{11}2$
+and $m_8=\tfrac{281}{15}$, is negative.
+\end{proof}
+
+Non-unimodality of $\gamma_H$ is known~\cite[Prop.~A.2]{BDJ}; the point
+here is that the exact moments make it a four-line rational computation,
+and that the same test is informative for the Toeplitz law, where
+unimodality is open.  Two controls show the criterion has teeth: for the
+semicircle law all computed minors are positive, and for the symmetric
+two-point law $\tfrac12(\delta_{-1}+\delta_1)$ the criterion fails
+already at $D_1=-4$.
+
+\begin{proposition}[Toeplitz unimodality is not obstructed through order 22]
+\label{prop:tuni}
+For $\gamma_T$ the sequence $u_k=(2k+1)m_{2k}(\gamma_T)$ begins
+$1,\,3,\,\tfrac{40}3,\,77,\,\tfrac{2724}5,\,4565,\dots$, and all six
+leading minors of $(u_{i+j})$ and all six of $(u_{i+j+1})$ are strictly
+positive.  Hence no obstruction to the unimodality of $\gamma_T$ is
+visible in the moments through order $22$.
+\end{proposition}
+
+This is consistent with, and weaker than,
+Conjecture~\ref{conj:mix}: a scale mixture of semicircle laws is
+unimodal, so the semicircular-mixture conjecture implies unimodality of
+$\gamma_T$, and the two mixture tests indeed pass together at every
+computed order.
+
+The status of the two laws is asymmetric here.  For $\gamma_H$,
+non-unimodality is part of the original theorem of Bryc, Dembo and
+Jiang~\cite{BDJ}, who use the convexity form of the definition -- a
+symmetric law $\nu$ is unimodal when $x\mapsto\nu((-\infty,x])$ is
+convex on $(-\infty,0)$ -- which is the form Khinchin's theorem
+characterises, so
+Proposition~\ref{prop:hnonuni} is a certificate for exactly that
+statement.  For $\gamma_T$, Sen and Vir\'ag~\cite{SenVirag} proved
+absolute continuity with density bounded by $8$, answering part of the
+question raised in~\cite{BDJ}; unimodality is not settled there and we
+are not aware of a later resolution.  Proposition~\ref{prop:tuni} says
+the moments through order twenty-two contain no obstruction to it.
+
+\section{Two conjectures}
+
+\begin{conjecture}[Semicircular mixture]\label{conj:mix}
+$\gamma_T$ is a scale mixture of semicircle laws: there is a probability
+law $\mu$ on $(0,\infty)$ with
+\[
+\gamma_T=\operatorname{law}\bigl(\sqrt V\,S\bigr),\qquad V\sim\mu,\quad
+\mathbb E[V^k]=\frac{m_{2k}(\gamma_T)}{\mathrm{Cat}_k}.
+\]
+\end{conjecture}
+
+The mixing moments through order $22$ are
+\begin{gather*}
+1,\quad \frac43,\quad \frac{11}5,\quad \frac{454}{105},\quad
+\frac{415}{42},\quad \frac{5960}{231},\quad \frac{108573}{1430},\\[2pt]
+\frac{56067533}{225225},\quad \frac{3065263961}{3403400},\quad
+\frac{17293570111}{4849845},\quad \frac{298983373961}{19492200},
+\end{gather*}
+and both Stieltjes--Hankel matrices built from them are positive definite:
+all six leading minors of $(s_{i+j})$ and all six of $(s_{i+j+1})$ are
+strictly positive.  A finitely supported mixing law would annihilate a
+minor, so the evidence is nondegenerate at every available order.  In
+generating-function form the claim reads $M_T(z)=\mathbb E[C(Vz)]$ with
+$C$ the Catalan generating function, so Theorem~6.4 expresses the
+primitive masses $\kappa_r^T$ as explicit functionals of $\mu$.  The
+conjecture implies $\gamma_T$ is unimodal.  The mixing law is close to,
+but is not, a Gamma law: $\Gamma(3,\tfrac13)$ matches $\mathbb E V$ and
+$\mathbb E V^2$ and gives $\mathbb E V^3=\tfrac{20}9\ne\tfrac{11}5$.
+
+\begin{conjecture}[Recurrence slope]\label{conj:slope}
+Let $b_k^2$ be the Jacobi coefficients of $\gamma_T$, so that its
+orthogonal polynomials satisfy $p_{k+1}=xp_k-b_k^2p_{k-1}$.  Then
+\[
+b_{k+1}^2-b_k^2\;\longrightarrow\;\rho^2\;=\;0.6870697\ldots,
+\]
+where $\rho=0.8288582\ldots$ is the Sen--Vir\'ag operator-norm constant.
+\end{conjecture}
+
+The exact values give $b_k^2=1,\ \tfrac53,\ \tfrac73$ (increments exactly
+$\tfrac23$), then increments
+$0.68952,\ 0.69342,\ 0.69200,\ 0.69103,\ 0.69046,\ 0.68979,\ 0.68939,\
+0.68905$ through order $22$: after the peak at $k=4$ the sequence
+decreases monotonically toward $\rho^2$.  The conjectured mechanism is
+that $b_k^2\sim ck$ characterizes a Gaussian-type tail
+$\exp(-x^2/2c)$ for the limiting law, and the extreme eigenvalues of the
+normalized matrix then grow like $\sqrt{2c\log n}$, which is the
+Sen--Vir\'ag asymptotic $\rho\sqrt{2\log n}$ precisely when $c=\rho^2$.
+The conjecture is thus equivalent to the statement that the Gaussian tail
+variance of $\gamma_T$ equals $\rho^2$.
+
+The two conjectures are welded together by the following elementary but
+rigorous implication.
+
+\begin{proposition}[Increments control the mean volume]\label{lem:dyck}
+Let $\nu$ be a symmetric law with finite moments and Jacobi coefficients
+$b_j^2>0$ satisfying $b_{j+1}^2-b_j^2\to c>0$.  Then
+\[
+\Bigl(\frac{m_{2k}(\nu)}{(2k-1)!!}\Bigr)^{1/k}\;\longrightarrow\;c ,
+\]
+so Conjecture~\ref{conj:slope} forces the mean pairing-polytope volume
+$\mathbb E_\pi[p_T(\pi)]$ to decay at the exact geometric rate $\rho^2$.
+\end{proposition}
+
+\begin{proof}
+The lattice-path expansion gives
+$m_{2k}=\sum_{P}\prod_i b_{h_i}^2$ over Dyck paths of semilength $k$,
+where $h_1,\dots,h_k$ are the heights from which the down-steps fall.
+For $b_j^2=j$ the sum is exactly $(2k-1)!!$: a down-step from height $h$
+chooses which of $h$ open chords to close, so weighted paths biject with
+matchings of $\{1,\dots,2k\}$.  Normalizing,
+\[
+\frac{m_{2k}}{(2k-1)!!}\;=\;\mathbb E\Bigl[\prod_{i=1}^{k}
+\frac{b^2_{h_i}}{h_i}\Bigr],
+\]
+the expectation over the open-chord process $(h_j)_{0\le j\le 2k}$ of a
+uniform random matching revealed left to right.  This process is an
+explicit inhomogeneous Markov chain: after $j$ reveals at height $h$,
+the next position closes an open chord with probability $h/(2k-j)$ (its
+partner is exchangeable among the $2k-j$ unrevealed positions) and opens
+a new chord otherwise.
+
+Fix $\varepsilon\in(0,c)$ and choose $H$ with
+$|b_h^2/h-c|\le\varepsilon$ for $h>H$; put
+$B=\max_{h\le H}\max(b_h^2/h,\,h/b_h^2)\ge1$ and let $L$ be the number
+of down-steps from heights $\le H$.  Then
+\[
+(c-\varepsilon)^{k}\,\mathbb E\bigl[\bigl(\tfrac{1}{B(c-\varepsilon)}\bigr)^{L}\bigr]
+\;\le\;\frac{m_{2k}}{(2k-1)!!}\;\le\;
+(c+\varepsilon)^{k}\,\mathbb E\bigl[\bigl(\tfrac{B}{c+\varepsilon}\vee1\bigr)^{L}\bigr].
+\]
+It remains to show $\mathbb E[x^{L}]=k^{O_x(1)}$ for every fixed
+$x\ge1$, and $\mathbb E[y^{L}]\ge k^{-O_y(1)}$ for $y\in(0,1]$; both
+follow from: $L\le \Lambda:=\#\{j:h_j\le H\}$, and $\Lambda$ is
+$O_{H}(\log k)$ with tails controlled at every exponential scale.  Fix
+$x\ge1$ and set $M=4xH$.  For $j\le 2k-M$ and $h\le H$ the chain steps
+down with probability $h/(2k-j)\le H/M=1/(4x)$, so during a visit to
+$[0,H]$ before time $2k-M$ each step moves up with probability at least
+$1-1/(4x)$; the visit length is dominated by $H$ plus a geometric
+variable whose $x$-th power has finite mean $g_x\le2$ (since
+$x\cdot\tfrac1{4x}\le\tfrac14$).  The number of distinct visits is one
+plus the number of down-crossings of level $H{+}1$, dominated by
+independent indicators with success probabilities $(H{+}1)/(2k-j)$ and
+total mean $\le(H{+}1)\log(2k)$; the final $M$ positions contribute at
+most $M=O_x(1)$ deterministically.  Hence
+$\mathbb E[x^{\Lambda}]\le x^{M+H}
+\exp\bigl((H{+}1)\log(2k)(x^{H}g_x-1)\bigr)=k^{O_{x,H}(1)}$, and for
+$y\in(0,1]$, $\mathbb E[y^{\Lambda}]\ge
+y^{C_H\log k}\,\mathbb P(\Lambda\le C_H\log k)\ge k^{-O_{y,H}(1)}$ by
+the same estimates.  Taking $k$-th roots and letting
+$\varepsilon\downarrow0$ completes the proof.
+\end{proof}
+
+\subsection*{The next free-divisibility target, and why it is delicate}
+
+Equation~(13.2) turns the order-sixteen conditional-positivity test into
+a threshold on $m_{16}$.  With the moments now known through order
+twenty-two, that test and its successors at orders eighteen, twenty and
+twenty-two are all decided in the affirmative: for the odd block indexed
+by $\{1,3,5,7,9,11\}$ the Schur slack at order twenty-two is
+$\tfrac{2053548476285965691920969192182281957}
+{3193518753771609314977865893800}\approx6.43\times10^{5}>0$.  The first
+undecided test is the one whose new diagonal entry is $r_{24}$.  Carrying
+out the same elimination on the even block indexed by
+$\{2,4,6,8,10,12\}$, and using
+$r_{24}=m_{24}-\tfrac{12916985465756056}{1091475}$, the condition
+$r_{24}\ge v^{\mathsf T}A^{-1}v$ becomes
+
+\begin{equation}\label{eq:m24}
+m_{24}(\gamma_T)\;\ge\;
+\frac{533385290252268206796914811370716813306691285889}
+{36005162406403257088495500297206628000}
+\;\approx\;1.4814133713\times10^{10}.
+\end{equation}
+
+What makes this the sharp form of the question is how close the target
+is.  The successive growth ratios $m_{2k+2}/m_{2k}$ are
+\[
+2.6667,\ 4.1250,\ 5.5030,\ 6.8557,\ 8.2065,\ 9.5639,\ 10.9292,\
+12.3010,\ 13.6771,\ 15.0556,
+\]
+with second differences $1.3574$, $1.3653$, $1.3718$, $1.3761$,
+$1.3785$, so linear extrapolation gives a next ratio near $16.44$ and
+\[
+m_{24}\;\approx\;1.4821\times10^{10},
+\]
+which exceeds the threshold in \eqref{eq:m24} by about $0.045$ percent,
+roughly one part in $2200$.  No extrapolation from eleven moments can
+resolve a margin that small, so the order-twenty-four test is genuinely
+undecided by anything short of the exact value; the sign of
+$m_{24}-\eqref{eq:m24}$ is a single rational comparison that settles
+whether $\gamma_T$ fails free infinite divisibility at this order.
+
+\subsection*{The moment is carried by its own top core class}
+
+Writing $r=k-j$ in the Catalan transform
+$m_{2k}=\mathrm{Cat}_k+\sum_{r\ge2}\binom{2k}{k-r}\kappa_r$ turns the
+binomial into $\binom{2k}{j}$, so the summand is
+$T_j=\binom{2k}{j}\kappa_{k-j}$ and
+\[
+\frac{T_{j+1}}{T_j}=\frac{2k-j}{j+1}\cdot\frac{\kappa_{k-j-1}}{\kappa_{k-j}} .
+\]
+Under the scaling $\kappa_r\sim r!\,\gamma^r$ of
+Remark~\ref{rmk:kappaasym} this is
+$\frac{2k-j}{(j+1)(k-j)\gamma}\to\frac{2}{\gamma(j+1)}$ for $j$ fixed:
+the transform is a Poisson-like sum concentrated at the boundary
+$r\approx k$.  Summing the geometric-factorial tail gives the following.
+
+\begin{proposition}[Boundary-layer form of the transform]\label{prop:boundary}
+If $\kappa_r\sim r!\,\gamma^r$ with $\gamma=2\rho^2$ as conjectured, then
+\[
+m_{2k}\;\sim\;e^{2/\gamma}\,\kappa_k\;=\;e^{1/\rho^2}\kappa_k ,
+\qquad
+\frac{m_{2k}}{\mathrm{Cat}_k}\;\sim\;e^{1/\rho^2}\,
+\frac{\kappa_k}{\mathrm{Cat}_k}.
+\]
+In particular the mixing moments of Conjecture~\ref{conj:mix} are the
+primitive masses up to the Catalan normalisation and one explicit
+constant, so identifying the mixing law is the same problem as
+determining the primitive-volume asymptotics.
+\end{proposition}
+
+The whole moment is thus carried by the single largest core class: the
+empty-core (semicircle) share of $m_{2k}$ falls from $0.231$ at $k=4$ to
+$0.004$ at $k=8$, while the share from cores of size $r>k/2$ rises
+$0.460$, $0.706$, $0.735$, $0.884$, $0.896$.  The exact ratios
+$m_{2k}/\kappa_k$ for $k=2,\dots,8$ are
+\[
+4.0000,\quad 5.5000,\quad 5.1011,\quad 4.9209,\quad 4.8068,\quad
+4.7252,\quad 4.6630,
+\]
+decreasing monotonically; first-order Richardson extrapolation gives
+$4.20$--$4.24$ against the predicted $e^{1/\rho^2}=4.2864$.  This is a
+consistency check rather than a measurement: the extrapolation assumes a
+$1/k$ correction and uses only $k\le8$.  What it shows is that a
+constant obtained independently -- from the Sen--Vir\'ag norm constant
+through Conjecture~\ref{conj:slope} -- lands inside the extrapolation's
+own spread.
+
+It also explains why finite-order expansions have not identified either
+law: every fixed-$r$ term of the transform carries a Beta
+representation, hence contributes moments of a law supported in $[0,1]$,
+whereas the true mixing law has unbounded support with an exponential
+tail.  The unbounded part lives entirely in the boundary layer, which no
+fixed-order truncation sees.
+
+\subsection*{A quantitative exclusion for D-finiteness}
+
+Guess-and-verify with held-out moments gives a size-explicit exclusion.
+For an ansatz with $u$ unknown coefficients, impose the first $u$
+coefficient equations, solve exactly for the nullspace, and test every
+solution against the remaining known moments; with $N$ known
+coefficients this is a genuine falsification test whenever $u\le N-1$.
+
+Using all twelve known Toeplitz coefficients (through order $22$) and all
+ten Hankel ones (through order $18$): every algebraic ansatz
+$P(z,M)=0$ of bidegree up to $(6,5)$ and every holonomic ansatz
+$\sum_{j\le4}p_j(z)M^{(j)}=0$ of degree up to $6$ that is small enough to
+be falsifiable IS falsified -- $13$ algebraic and $12$ holonomic sizes for
+$\gamma_T$, $11$ and $10$ for $\gamma_H$, with none consistent with the
+known moments.  For instance, at order $14$ the two uniquely determined
+ansatzes for $\gamma_H$ predict $10894.88$ and $10866.32$ against the
+exact $m_{16}=\tfrac{9179819}{840}=10928.356$.
+
+This is evidence against D-finiteness of either series, not a proof; but
+it is consistent with the independent finding that a compressed
+recurrence for the volume-weighted series fails a low-order Wick check.
+Both series are factorially divergent -- $m_{2k}\asymp(2k-1)!!\,\rho^{2k}$
+under Conjecture~\ref{conj:slope} -- so the natural analytic object is
+the Borel transform, and the unified conjecture reads: the Borel series
+$\sum_k m_{2k}\zeta^k/k!$ and $\sum_r\kappa_r\zeta^r/r!$ have radius of
+convergence $1/(2\rho^2)$.

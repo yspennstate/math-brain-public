@@ -1,0 +1,21 @@
+{
+  "helper_version": "A016 stage9 90-bit rigorous log helper, copied standalone before new checker; source SHA256 06eeb3e5cb671d39d4a6c6dba14aa3b4e779d763674076a384534c4342e71c07",
+  "actual_Boolean_family": "original A020 g3^m rare selector/mask source; same original Q,U; arbitrary seed restrictions followed by cleanup, then distinguished all-zero padding history",
+  "domain": {
+    "review_profiles": "k5; every n1,n2,n3 in0..2, both phases, m=n1+n2+n3+4; plus pure n1/n2/n3=16 or64, both phases",
+    "mixed_witness": "m4; k5,8,16,32,64,128,256; q then first bit of3 seeds=1, clean6 irrelevant bits, all padding bits=0; remaining full function has7 essential coordinates",
+    "literal": "original core k1,m2 dimension9; all3^6 partial tensor assignments, both q signs, exact constancy cleanup; also compare subsequent all-zero padding restriction; direct full7bit terminal both q signs"
+  },
+  "case_count": {
+    "review_profiles": 66,
+    "mixed_profiles": 7,
+    "literal_partial_assignments": 729,
+    "literal_signed_histories": 1458
+  },
+  "symmetry": "Only permutation of identical disjoint seeds; explicit hist multiplicities; partial assignments not treated as disjoint leaves; mixed witness reaches retained symbolically",
+  "arithmetic": "integer Walsh and exact Fraction; logs90-bit outward dyadic,40-term atanh with tail; exact integer mass/sign witnesses",
+  "memory_estimate_MB": 120,
+  "maximum_runtime_seconds": 60,
+  "pilot": "review counts0..1, mixed k64, literal reduced partial set with free orfirstbit outcomes; remaining terminal full Walsh",
+  "no_auto_escalation": true
+}

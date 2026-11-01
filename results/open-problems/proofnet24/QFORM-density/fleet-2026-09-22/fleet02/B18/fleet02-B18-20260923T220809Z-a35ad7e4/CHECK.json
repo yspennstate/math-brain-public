@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "account": "fleet02",
+  "slot": "B18",
+  "run_id": "fleet02-B18-20260923T220809Z-a35ad7e4",
+  "status": "PASS",
+  "checks": {
+    "aggregate_spectrum": {
+      "formula": "{-sqrt(1+eta^2),0,0,1,sqrt(1+eta^2)}",
+      "etas_checked": [1.0, 0.1, 0.01, 0.001],
+      "result": "matches to floating-point roundoff"
+    },
+    "private_density_formula": {
+      "formula": "rho^-2*(sqrt(1+4*rho^2/(sqrt(2)*abs(s)))-1)",
+      "derivation": "exact diamond fibre length after orthogonal image of the unit square",
+      "result": "closed form agrees with quadratic-root fibre endpoint"
+    },
+    "rho_one_eighth_constants": {
+      "b0": 0.9921567416492215,
+      "aligned_partner_cap": 76.10925536017415,
+      "transverse_partner_prefactor_times_abs_eta_minus_one_third": 10.71888185740502,
+      "certificate_crossing_abs_eta": 0.002793418685566862,
+      "conditional_asymptotic_prefactor_times_abs_eta_minus_one_half_at_G_one": 9.513656920021768,
+      "pinned_one_sheet_cap": 4.442882938158366
+    }
+  },
+  "scope_note": "Numerical checks support but do not replace the exact proofs in REPORT.md. This is not a full-QFORM counterexample."
+}

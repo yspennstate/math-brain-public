@@ -1,0 +1,399 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{cond}{Condition}
+\theoremstyle{remark}
+\newtheorem{rmk}{Remark}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\DeclareMathOperator{\sech}{sech}
+
+\title{Notes on the Ising perceptron at nonzero margin}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study the replica-symmetric system behind the Ising perceptron
+capacity at general margin $\kappa$.  Two elementary identities make
+the general-$\kappa$ system as well behaved as the zero-margin one:
+the free energy is stationary in $(q,\psi)$ exactly at the fixed point,
+so the threshold $\alpha_\star(\kappa)$ is the unique root of a
+strictly decreasing function; and $dR/dq$ has a one-term integral
+representation with positive integrand, so the fixed-point map is
+monotone at every $\kappa$.  We compute the capacity candidate curve
+and the numerical content of Huang's conditions on
+$\kappa\in[-2,1.5]$, and we certify, in ball arithmetic, the
+fixed-point condition together with the AMP and local-concavity
+conditions on the strip $\kappa\in[-0.65,0.19]$ (the last
+$0.09$ beyond the reach of the rectangle product bound, on Nakajima's
+certified premise), with
+$\alpha_\star(\kappa)$ located to $2\cdot10^{-6}$ at five margins
+and the local maximality of the first-moment functional at the
+distinguished point certified at six margins spanning the strip.  The global part of the
+two-variable condition remains open at $\kappa\neq 0$; its numerical
+landscape is essentially independent of $\kappa$ on the range
+scanned.
+\end{abstract}
+
+\section{The system}
+
+Let $\varphi$ and $\Psi$ be the standard Gaussian density and upper
+tail, $M=\varphi/\Psi$ the inverse Mills ratio, and $Z\sim N(0,1)$.
+Fix $\kappa\in\R$ and set
+\[
+u(z;q,\kappa)=\frac{\kappa-\sqrt{q}\,z}{\sqrt{1-q}},\qquad
+0<q<1 .
+\]
+Following Ding--Sun and Huang, define
+\begin{align}
+P(\psi)&=\E\bigl[\tanh^2(\sqrt{\psi}\,Z)\bigr],\qquad
+R(q,\alpha)=\frac{\alpha}{1-q}\,\E\bigl[M(u(Z))^2\bigr],
+\label{eq:PR}\\
+G(\alpha,q,\psi)&=-\frac{\psi(1-q)}{2}
++\E\log\bigl(2\cosh(\sqrt{\psi}\,Z)\bigr)
++\alpha\,\E\log\Psi\bigl(u(Z)\bigr).
+\label{eq:G}
+\end{align}
+The replica-symmetric prediction is that the storage threshold is
+$\alpha_\star(\kappa)$, the zero of
+$\alpha\mapsto G_\star(\alpha)=G(\alpha,q_\star(\alpha),\psi_\star(\alpha))$
+along the fixed-point branch $q=P(\psi)$, $\psi=R(q,\alpha)$.  At
+$\kappa=0$ this is the Krauth--M\'ezard value
+$\alpha_\star=0.833078599\ldots$, now verified without numerical
+hypotheses; Huang's general-$\kappa$ theorem upper-bounds the capacity
+by $\alpha_\star(\kappa)$ for every $\kappa$, conditional on four
+numerical conditions of which only the $\kappa=0$ instances had been
+checked.
+
+\section{Two identities}
+
+\begin{lemma}[Stationarity]\label{lem:stat}
+For all $\alpha>0$, $\kappa\in\R$, $\psi>0$ and $0<q<1$,
+\[
+\frac{\partial G}{\partial\psi}=\frac{q-P(\psi)}{2},
+\qquad
+\frac{\partial G}{\partial q}=\frac{\psi-R(q,\alpha)}{2}.
+\]
+\end{lemma}
+
+\begin{proof}
+The first identity is Gaussian integration by parts on the
+$\log\cosh$ term.  For the second, differentiating $u$ in $q$ gives
+\[
+u_q=\frac{1}{2\sqrt{1-q}}
+\Bigl(-\frac{z}{\sqrt q}+\frac{u}{\sqrt{1-q}}\Bigr),
+\qquad
+\frac{\partial}{\partial q}\,\E\log\Psi(u)=-\E\bigl[M(u)\,u_q\bigr].
+\]
+Stein's lemma applied to the $z$ part,
+$\E[zM(u)]=-\sqrt{q/(1-q)}\;\E[M'(u)]$, together with the Mills
+identity $M'(u)=M(u)^2-uM(u)$, collapses the two pieces:
+\[
+\E[M(u)\,u_q]
+=\frac{\E[M'(u)]+\E[u\,M(u)]}{2(1-q)}
+=\frac{\E[M(u)^2]}{2(1-q)}
+=\frac{R(q,\alpha)}{2\alpha}.
+\]
+Hence $\partial_q G=\psi/2-\alpha\cdot R/(2\alpha)=(\psi-R)/2$.
+\end{proof}
+
+Both derivatives vanish exactly on the fixed-point branch, so the
+envelope theorem gives
+$G_\star'(\alpha)=\E\log\Psi(u)<0$ strictly, for every $\kappa$: the
+root $\alpha_\star(\kappa)$ is unique on the branch.  This is the
+general-$\kappa$ form of the monotonicity clause in the fixed-point
+condition.
+
+\begin{lemma}[Derivative of $R$]\label{lem:dR}
+For all $\alpha>0$, $\kappa\in\R$ and $0<q<1$,
+\[
+\frac{\partial R}{\partial q}
+=\frac{\alpha}{(1-q)^2}\,
+\E\Bigl[M'(u)^2+2\,M(u)^2M'(u)\Bigr]\;>\;0 .
+\]
+\end{lemma}
+
+\begin{proof}
+Differentiating \eqref{eq:PR} in $q$ produces
+$R/(1-q)+\tfrac{\alpha}{1-q}\E[2MM'u_q]$.  Splitting $u_q$ as in
+Lemma~\ref{lem:stat} and applying Stein's lemma to
+$\E[z\,MM'(u)]$ (with $(MM')'=M'^2+MM''$ and
+$M''=M'(M-u)+MM'-M$) turns the cross term into
+\[
+\E[2MM'u_q]=\frac{\E[M'^2+2M^2M'-M^2]}{1-q},
+\]
+and the $-\E[M^2]/(1-q)^2$ piece cancels $R/(1-q)$ exactly.
+Positivity is immediate since $M'\in(0,1)$.
+\end{proof}
+
+Lemma~\ref{lem:dR} replaces Ding--Sun's Lemma~7.2 (monotonicity of
+$R$, stated at $\kappa=0$) at every margin, and its one-term form is
+what makes a tight interval enclosure of $dR/dq$ possible.  We checked
+both identities against high-precision finite differences (agreement
+to $10^{-15}$).
+
+\section{The capacity candidate curve}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.86\linewidth]{../results/alpha_curve.png}
+\caption{The replica-symmetric capacity candidate
+$\alpha_\star(\kappa)$ (continuation from the certified value at
+$\kappa=0$), the annealed bound $\log 2/(-\log\Psi(\kappa))$, the
+Gardner spherical capacity, and Nakajima's saddle-existence bound
+$\alpha_c(\kappa)=2/(\pi\,\E[(\kappa-Z)_+^2])$ for $\kappa\ge0$.}
+\label{fig:curve}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{../results/conditions.png}
+\caption{The numerical content of Huang's conditions along the
+branch: the contraction $(P\circ R_\alpha)'(q_\star)$, the AMP
+condition value, the local-concavity minimum $\lambda_0$, and the
+determinant of the fixed-tilt Hessian at the distinguished point,
+whose sign boundary near $\kappa\approx1.18$ is where the zero-margin
+center certificate stops transferring.}
+\label{fig:conditions}
+\end{figure}
+
+Warm-started continuation from $\kappa=0$ (cold solves above the fold
+escape to the frozen branch $q\to1$) gives the curve of
+Figure~\ref{fig:curve} on $\kappa\in[-2.0,1.5]$, with the fixed point,
+the envelope derivative, and the condition values recorded at every
+grid point.  Selected values:
+
+\begin{center}
+\begin{tabular}{r r r r r r}
+$\kappa$ & $\alpha_\star$ & $q_\star$ & $(P\circ R)'$ &
+amp & $\lambda_0$\\[2pt]
+$-2.0$ & $29.9921$ & $0.11863$ & $0.387$ & $0.440$ & $-0.147$\\
+$-1.0$ & $3.79463$ & $0.36519$ & $0.583$ & $0.607$ & $-0.099$\\
+$-0.5$ & $1.67884$ & $0.47377$ & $0.666$ & $0.589$ & $-0.132$\\
+$0$    & $0.83308$ & $0.56395$ & $0.744$ & $0.544$ & $-0.191$\\
+$0.5$  & $0.45566$ & $0.63841$ & $0.810$ & $0.489$ & $-0.271$\\
+$1.0$  & $0.27070$ & $0.69988$ & $0.863$ & $0.433$ & $-0.359$\\
+$1.5$  & $0.17245$ & $0.75049$ & $0.903$ & $0.381$ & $-0.442$\\
+\end{tabular}
+\end{center}
+
+All three conditions hold at every point computed
+(Figure~\ref{fig:conditions}).  The contraction is the only quantity
+trending toward failure, and only slowly; $\lambda_0$ approaches zero
+nearest $\kappa\approx-1.3$ (about $-0.094$) and then strengthens
+again.  On the positive branch $\alpha_\star(\kappa)$ stays below
+Nakajima's saddle-existence bound at every grid point (worst ratio
+$0.874$ at $\kappa=1.5$), so saddle uniqueness there is covered by his
+theorem independently of our certificates.  As $\kappa\to-2$ the
+candidate approaches the annealed bound from below, as expected where
+the constraints trivialize.
+
+\section{The two-variable function at general $\kappa$}
+
+Huang's global condition asks that
+$\mathcal S_\star(\lambda_1,\lambda_2)\le0$ everywhere, with equality
+at $(1,0)$.  Writing his functional at general $\kappa$ (the margin
+enters both as an additive shift in the $\log\Psi$ argument and inside
+the planted cavity law $N(z)=M(u(z))/\sqrt{1-q_0}$), the anchor
+$\mathcal S_\star(1,0)=0$ holds along the whole computed branch (to
+$2\cdot10^{-14}$ in double precision), with optimal tilt
+$s=\sqrt{1-q_0}$ to eight digits --- his zero-margin lemma appears to
+extend verbatim.  On the grid scanned
+($\kappa\in\{0,\pm.05,0.13,\pm.25,\pm.5,\pm.75,\pm1\}$, the interior
+point on the second lane) the landscape is
+essentially $\kappa$-independent: a single maximum at $(1,0)$,
+off-center values below $-3\cdot10^{-3}$, negative far rays, Hessian
+eigenvalues near $(-0.22,-0.0045)$, and moment-body clearance near
+$0.017$.  On roughly the half-plane $\lambda_1<0$ the $s$-infimum is
+$-\infty$: $\alpha\,\E[N^2]=\psi_0$ exactly at the fixed point, so the
+quadratic tilt coefficient cancels; these directions satisfy the
+condition trivially and correspond to the capped-tilt case in Huang's
+treatment.
+
+\section{Certificates on a strip}
+
+For $\kappa$ in sub-slabs of width $5\cdot10^{-4}$ covering
+$[-0.65,0.10]$, with per-slab parameter rectangles seeded by the
+continuation, we verify in ball arithmetic
+(\texttt{python-flint}, 80-bit working precision):
+
+Two implementation points carry the whole computation.  Adaptive
+complex quadrature cannot resolve enclosure width that comes from
+parameter balls --- subdividing the integration variable does not
+shrink it, and the integrator exhausts any budget --- so every
+wide-parameter integral is a real-cell Riemann sum.  And the ball
+evaluation of $\varphi/\Psi$ NaNs on wide arguments in the steep
+region (the enclosure of $\Psi$ crosses zero), while the ratio is
+monotone; all Mills-family factors are therefore enclosed by two thin
+endpoint evaluations, and the sign-critical sums use the mean-value
+form (midpoint value plus a derivative correction, $O(h^2)$ against
+the plain hull's $O(h)$).  A third point joined below
+$\kappa=-0.35$: expectations that nearly cancel must be evaluated as
+one correlated integrand, never as separate sums whose parameter
+widths add.  For the local-concavity check this is the identity
+(with $t=M'$, $A=1-q_0$, and $b=m(\hat z)-A$ for
+$m(\hat z)=\E[(\hat z+\cosh^2(\sqrt{\psi_0}Z))^{-1}]$)
+\[
+\lambda(\hat z)=\hat z+\alpha\,\E\!\left[\frac{b\,t^2}{A(A+bt)}\right],
+\]
+whose integrand is monotone in $t$ for fixed $(m,A)$, regular on all
+of $t\in[0,1]$, and bounded by $|b|/(Am)$; the separated form's
+enclosure crossed zero there while the true value stays near $-0.14$
+(the first $[-0.45,-0.35]$ batch, kept as evidence, failed on exactly
+this).  With those in place the checks are:
+
+\begin{itemize}
+\item[(i)] the contraction
+$\sup_q(P\circ R_\alpha)'(q)\le
+\sup_\psi P'\cdot\sup_q|dR/dq|<1$ on the slab rectangle, via
+Lemma~\ref{lem:dR};
+\item[(ii)] existence: the endpoints of the $q$ interval map strictly
+inward under $P\circ R_\alpha$ on each of eight $\alpha$
+sub-intervals;
+\item[(iii)] the crossing: at the two $\alpha$ endpoints the fixed
+point is located by certified Picard iteration and the sign of $G$
+resolves through a mean-value form that keeps the stationarity
+cancellations of Lemma~\ref{lem:stat} explicit
+($G(\alpha_{\mathrm{lb}})>0>G(\alpha_{\mathrm{ub}})$);
+\item[(iv)] Huang's AMP condition
+$\alpha\,\E[\sech^4(\sqrt{\psi_0}Z)]\,
+\E[M'(u(\sqrt{q_0}Z))^2]/(1-q_0)^2<1$; and
+\item[(v)] local concavity at the witness $\hat z=-0.6693$:
+$\lambda(\hat z)<0$.
+\end{itemize}
+
+Together with Lemma~\ref{lem:stat} (strict decrease of $G_\star$),
+(i)--(iii) discharge the fixed-point condition verbatim on each slab:
+$\alpha_\star(\kappa)$ exists, is unique, and lies in the slab's
+$\alpha$ interval (of width about $4\cdot10^{-3}$) for every $\kappa$
+in the slab.
+
+All fifteen hundred slabs covering $[-0.65,0.10]$ passed every check
+(forty independent worker runs, contiguous coverage; two first
+attempts failed and are kept as evidence --- one at doubled slab
+width, since the $q$ pad must also cover the within-slab drift
+$dq_\star/d\kappa$, which reaches $3.4$ per unit $\kappa$ near
+$-0.2$, and one on the separated-form $\lambda$ enclosure described
+above).  A second lane of one hundred eighty slabs extends the strip
+to $0.19$ (Section~\ref{sec:remains}), with uniqueness supplied by
+Nakajima's theorem under a certified premise instead of the
+rectangle contraction, for sixteen hundred eighty in all.  Certified
+point intervals at five margins tighten the slab pads by bisection on
+the certified sign of $G$:
+$\alpha_\star(0.05)\in[0.780449,0.781325]$,
+$\alpha_\star(-0.05)\in[0.889115,0.890013]$,
+$\alpha_\star(0.0995)\in[0.732844,0.733711]$,
+$\alpha_\star(-0.45)\in[1.557652,1.557655]$, and, past the product
+bound's reach on the second lane,
+$\alpha_\star(0.13)\in[0.705932,0.705934]$, each containing its
+continuation value (endpoints displayed rounded outward).
+The certified $\alpha_\star(\kappa)$ intervals have width about
+$3.5\cdot10^{-3}$; the slab at $\kappa\in[0,5\cdot10^{-4}]$ contains
+the Ding--Sun value $0.833078599\ldots$, and a mid-slab continuation
+solve lands inside its interval.  Thus conditions (i)--(v) --- the
+fixed-point condition verbatim, the AMP condition, and the
+local-concavity condition --- hold for every
+$\kappa\in[-0.65,0.19]$ (past $0.10$ through the second lane); of
+Huang's four conditions only the global two-variable bound remains
+open on the strip.  Across the slabs the certified contraction margins run monotonically
+from $0.069$ at $\kappa=-0.05$ through $0.029$ at $\kappa=0.05$ to
+$0.0083$ on the last slab before $\kappa=0.1$, placing the saturation
+of the product bound near $\kappa\approx0.12$ (a projection past the
+certified range, not a finding); on the negative side the margins
+grow, and uniqueness there is carried entirely by our own contraction
+certificates, since Nakajima's theorem is stated for $\kappa\ge0$.
+
+\section{The center of the two-variable landscape at general
+$\kappa$}
+
+The first ingredient of the global condition's certificate at
+$\kappa=0$ is local maximality of the fixed-tilt functional at the
+distinguished point, via the Hessian
+$M=\nabla^2\bar{\mathcal S}_\star(1,0)$.  The second-derivative
+expansion before the zero-margin specialization gives, at every
+$\kappa$, the same quadratic form
+$-\langle u,\mathrm{diag}\,I\,u\rangle+C_1a^2+C_2ab+C_3b^2$ in
+$a=I_1u_1+I_2u_2$, $b=I_2u_1+I_3u_2$, with the prior-side integrals
+$I_j$ unchanged and the constraint-side constants $C_j$ now given by
+integrals at the shifted law (their zero-margin closed forms use
+$\alpha_\star\E[N\hat H]=-q_0(1-q_0)\psi_0$, which does not survive;
+$\alpha_\star\E[N^2]=\psi_0$ does).  A float transcription of the
+general-$\kappa$ constants lands inside every certified interval of
+the zero-margin appendix ($I_j$ to their printed digits, $C_1$
+through $C_3$, $\det M$), and along the curve it gives a definite
+boundary: $M$ stays negative definite up to $\kappa=1.15$ and loses
+definiteness between $1.15$ and $1.20$, while the Hessian of the
+tilt-optimized functional remains negative out to at least
+$\kappa=1.5$.  The same formulas evaluated in ball arithmetic on the
+Ding--Sun rectangle certify $M_{1,1}<0$ and $\det M>0$ at $\kappa=0$
+--- an independent re-verification of the zero-margin claim through
+the general-$\kappa$ route, with the near-cancellations
+$1-4q_0+3p_4$ and $q_0-p_4$ evaluated as single integrands and the
+constraint-side integrals by mean-value Riemann sums.  At $\kappa=0.05$, deepening the
+bisection quadrature locates $\alpha_\star$ to
+$[0.781073068,0.781074776]$ (width $1.7\cdot10^{-6}$), and on the
+resulting boxes ($3.6\cdot10^{-6}$ in $q_0$, $5.2\cdot10^{-5}$ in
+$\psi_0$) the certificate resolves: $M_{1,1}<0$ and $\det M>0$ in
+ball arithmetic --- the local maximality at the distinguished point,
+the center ingredient of the two-variable condition, certified at a
+nonzero margin.  The same chain at $\kappa=-0.05$
+($\alpha_\star\in[0.889408032,0.889409783]$), at the strip's
+thin-margin edge $\kappa=0.0995$
+($\alpha_\star\in[0.733478514,0.733480204]$), and at the
+deep-negative edge $\kappa=-0.45$
+($\alpha_\star\in[1.557652103,1.557654133]$, where the
+constraint-side constants sit far from their zero-margin values,
+$C_1=-0.855$ against $-0.718$) also certifies, and so does
+$\kappa=0.13$ on the second lane
+($\alpha_\star\in[0.705932218,0.705933898]$), so the center
+certificate now holds at six margins spanning the two-lane strip,
+two of them on the relaxed side where uniqueness has no analytic
+backup and one past the product bound's reach.  The two are consistent by the Schur relation --- the
+fixed-tilt form dominates the optimized one --- so the condition
+itself survives where the fixed-tilt certificate does not: past
+$\kappa\approx1.18$ the local argument must re-optimize the tilt,
+as the zero-margin verification's ray certificates already do.
+
+\section{What remains}\label{sec:remains}
+
+The one open condition at $\kappa\neq0$ is the global two-variable
+bound, whose certified analogue at $\kappa=0$ is the Region I/II
+machinery of the capacity verification; its center ingredient (local
+maximality at the distinguished point) is now certified at four
+margins spanning the strip, and the scanned landscape suggests the
+global part transfers with essentially unchanged margins.  Past the
+strip's positive edge the rectangle product bound saturates near
+$\kappa\approx0.12$, but the pointwise contraction does not, and the
+wall is demonstrably a method artifact: at $\kappa=0.13$ the box
+product reads $1.32$ while a certified sign bisection of the
+displacement $P(R(q))-q$ (no contraction input) locates the fixed
+point at both $\alpha$ endpoints to width $2\cdot10^{-8}$, the
+contraction on the located intervals reads $0.79$, and the $G$
+crossing resolves with margins $2\cdot10^{-3}$
+(\texttt{past\_wall\_0p13.py}); Nakajima's hypothesis is certified
+alongside ($\alpha_{\mathrm{ub}}<\alpha_c(0.13)=1.0394\ldots$ in ball
+arithmetic), so with his theorem supplying uniqueness this is the
+fixed-point condition at that margin, and a strip past $0.12$ needs
+only the existence sweep, which is already contraction-free.  That
+strip is now certified: $180$ slabs on $[0.10,0.19]$, each carrying
+the premise $\alpha_{\mathrm{ub}}<\alpha_c(\kappa)$ in ball
+arithmetic, the inward sweep, per-sub-ball sign-bisection location
+with the contraction consumed only on located intervals (margins
+$\ge0.18$), and the $G$ crossing.  The lower bound is a
+separate matter entirely: Ding--Sun's conditioned second-moment
+reduction is proved at $\kappa=0$ only, so nothing here should be read
+as an exact threshold statement at nonzero margin --- the certified
+content feeds Huang's upper-bound theorem.  On the relaxed side
+($\kappa<0$) the same certificates apply but saddle uniqueness has no
+analytic backup, and the approach to replica-symmetry breaking
+territory at large negative margin deserves its own study.
+
+\end{document}

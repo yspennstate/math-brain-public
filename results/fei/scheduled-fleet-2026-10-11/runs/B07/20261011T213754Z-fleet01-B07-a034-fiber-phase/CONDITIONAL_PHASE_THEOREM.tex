@@ -1,0 +1,146 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newcommand{\bits}{\{-1,1\}}
+\newcommand{\HH}{\mathsf H}
+\newcommand{\II}{\mathsf I}
+\newcommand{\E}{\mathbb E}
+\newcommand{\wh}[1]{\widehat{#1}}
+\begin{document}
+
+\section*{A fiber-sparse conditional phase theorem}
+
+All physical variables below are independent uniform signs and all entropies are in bits.
+Let $X,Y$ be disjoint coordinate sets and let
+$f:\bits^X\times\bits^Y\to\bits$ be Boolean.  Write
+\[
+ a_{R,T}=\wh f(R,T),\qquad
+ p_X(R)=\sum_{T\subseteq Y}a_{R,T}^2,
+\]
+and let $(\mathcal S_X,\mathcal S_Y)$ have law
+$\Pr[(\mathcal S_X,\mathcal S_Y)=(R,T)]=a_{R,T}^2$.
+For $R$ with $p_X(R)>0$, define the physical Fourier fiber
+\[
+ \mathcal F_R=\{T\subseteq Y:a_{R,T}\ne0\}.
+\]
+
+\begin{theorem}[conditional phase transfer with sparse fibers]\label{thm:main}
+Assume that every nonzero $a_{R,T}$ has $|R|\le d$, where $d\ge1$ is an integer,
+and that $|\mathcal F_R|\le K$ for every $R$ with $p_X(R)>0$.
+For a physical slice $f_y(x)=f(x,y)$, write
+\[
+ c_R(y)=\E_x f(x,y)\chi_R(x)=2^{1-d}m_R(y),\qquad m_R(y)\in\mathbb Z,
+\]
+and define
+\[
+ \Gamma_d(f_y)=4^{1-d}\sum_R m_R(y)^2\log_2(m_R(y)^2),
+\]
+with zero summands omitted. Then
+\begin{equation}\label{eq:main}
+ \HH(f)\le {2\over\ln2}\II_Y(f)+2(d-1)+\log_2K
+          -\E_y\Gamma_d(f_y).
+\end{equation}
+In particular, if $\operatorname{Var}(f)\ge\nu>0$, then
+\begin{equation}\label{eq:fei}
+ \HH(f)\le
+ \left({2\over\ln2}+{2(d-1)+\log_2K\over\nu}\right)\II(f)
+ -\E_y\Gamma_d(f_y).
+\end{equation}
+Thus fixed $(d,K,\nu)$ gives a dimension-independent FEI theorem for this genuine
+Boolean class.  If $f$ is balanced, one may take $\nu=1$.
+\end{theorem}
+
+\begin{proof}
+The exact spectral chain rule is
+\begin{equation}\label{eq:chain}
+ \HH(f)=\HH(p_X)+\HH(\mathcal S_Y\mid\mathcal S_X).
+\end{equation}
+The second term is retained: conditionally on $\mathcal S_X=R$ its law is supported
+on $\mathcal F_R$, so
+\begin{equation}\label{eq:cond}
+ \HH(\mathcal S_Y\mid\mathcal S_X)
+ \le\sum_Rp_X(R)\log_2|\mathcal F_R|\le\log_2K.
+\end{equation}
+No part of the marginal influence payment is reused in \eqref{eq:cond}.
+
+For completeness, the refined marginal estimate is derived next.  The hybrid law
+\[
+ W(y,R)=2^{-|Y|}c_R(y)^2
+\]
+has $R$-marginal $p_X$, conditional law $c_R(y)^2$ given $y$, and hence
+\[
+ \HH(p_X)=\E_y\HH(c(y)^2)+I_W(R;y).
+\]
+Because every Boolean slice has Fourier degree at most $d$, Boolean Fourier
+granularity gives $c_R(y)=2^{1-d}m_R(y)$ with integral $m_R(y)$ and
+$\sum_Rm_R(y)^2=4^{d-1}$.  Direct substitution gives the exact identity
+\[
+ \HH(c(y)^2)=2(d-1)-\Gamma_d(f_y).
+\]
+Moreover
+\[
+ I_W(R;y)=\sum_R\operatorname{Ent}_y(c_R^2)
+ \le {2\over\ln2}\sum_R\E_y\sum_{j\in Y}(D_jc_R)^2
+ ={2\over\ln2}\II_Y(f),
+\]
+by the uniform-cube logarithmic Sobolev inequality and Parseval in $X$.
+Combining this marginal bound with \eqref{eq:chain}--\eqref{eq:cond} proves
+\eqref{eq:main}.
+
+Finally, the Boolean Poincar\'e inequality gives
+$\II(f)\ge\operatorname{Var}(f)\ge\nu$, while $\II_Y(f)\le\II(f)$.
+Therefore $2(d-1)+\log_2K\le[2(d-1)+\log_2K]\II(f)/\nu$,
+which proves \eqref{eq:fei}.
+\end{proof}
+
+\begin{lemma}[exact tensor-admission law]\label{lem:tensor}
+Let $g:\bits^Z\to\bits$ be Boolean on coordinates disjoint from $X\cup Y$, and put
+$F(x,y,z)=f(x,y)g(z)$.  Then the $X$-marginal of $F$ equals that of $f$, the
+$X$-degree bound is unchanged, and for every $R$ with $p_X(R)>0$,
+\[
+ \mathcal F_R(F)=\mathcal F_R(f)\times\operatorname{supp}(\wh g),\qquad
+ |\mathcal F_R(F)|=|\mathcal F_R(f)|\,|\operatorname{supp}(\wh g)|.
+\]
+Also
+\[
+ \HH_F(\mathcal S_{Y\cup Z}\mid\mathcal S_X)
+ =\HH_f(\mathcal S_Y\mid\mathcal S_X)+\HH(g).
+\]
+\end{lemma}
+
+\begin{proof}
+On disjoint blocks, $\wh F(R,T,U)=\wh f(R,T)\wh g(U)$.  The support identity and
+cardinality multiplication follow, because a product is nonzero exactly when both
+factors are nonzero.  Summing $\wh g(U)^2=1$ preserves $p_X$.  The conditional law
+given $R$ is the product of the old conditional law and $P_g(U)=\wh g(U)^2$, so
+conditional entropy is additive.
+\end{proof}
+
+Lemma~\ref{lem:tensor} is the required arbitrary-tensor guard.  Starting from any
+fixed cyclic-marginal seed and tensoring by $g^{\otimes t}$ preserves that marginal
+but multiplies each nonempty fiber size by
+$|\operatorname{supp}(\wh g)|^t$.  If $\HH(g)>0$, then this support size is at least
+$2^t$, so no fixed-$K$ class admits the hardness-preserving tensor sequence.  If the
+support size is one, $g$ is a Fourier character and $\HH(g)=0$, so it carries no
+spectral-entropy hardness.  This exclusion uses only exact Fourier support
+factorization, not FEI.
+
+The condition is stable under adjoining dummy variables, permuting coordinates
+within $X$ or $Y$, and multiplying by a $Y$-character (which merely translates each
+fiber).  Under a disjoint product the parameters obey the exact rules
+$d=d_1+d_2$ when both factors use $X$-coordinates and $K=K_1K_2$ for the corresponding
+$Y$-fibers.  No unproved restriction-closure assertion is made.
+
+\section*{Scope}
+This is a proper-class theorem and not full FEI.  The universal problem is precisely
+that no dimension-independent $d,K,\nu$ are known for arbitrary Boolean functions,
+nor is there a universal decomposition into such pieces with all costs paid.  The
+result allows arbitrary correlations among the coordinates of the conditional
+spectral law on $Y$; it assumes no product structure there.  It does not allow a
+correlated physical input law.
+
+\end{document}

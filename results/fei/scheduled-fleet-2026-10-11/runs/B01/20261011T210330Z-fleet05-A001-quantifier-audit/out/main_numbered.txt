@@ -1,0 +1,297 @@
+1: \documentclass[11pt]{amsart}
+2: \usepackage[T1]{fontenc}
+3: \usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,booktabs,enumitem}
+4: \usepackage[margin=1in]{geometry}
+5: \usepackage[hidelinks]{hyperref}
+6: \newtheorem{theorem}{Theorem}[section]
+7: \newtheorem{proposition}[theorem]{Proposition}
+8: \newtheorem{lemma}[theorem]{Lemma}
+9: \newtheorem{corollary}[theorem]{Corollary}
+10: \theoremstyle{definition}
+11: \newtheorem{definition}[theorem]{Definition}
+12: \theoremstyle{remark}
+13: \newtheorem{remark}[theorem]{Remark}
+14: \newcommand{\bits}{\{-1,1\}}
+15: \newcommand{\E}{\mathbb E}
+16: \renewcommand{\P}{\mathbb P}
+17: \newcommand{\HH}{\mathsf H}
+18: \newcommand{\I}{\mathsf I}
+19: \newcommand{\D}{\mathsf D}
+20: \newcommand{\wh}[1]{\widehat{#1}}
+21: \newcommand{\eps}{\varepsilon}
+22: \newcommand{\supp}{\operatorname{supp}}
+23: \newcommand{\Var}{\operatorname{Var}}
+24: \newcommand{\Maj}{\operatorname{Maj}}
+25: \newcommand{\TC}{\operatorname{TC}}
+26: \newcommand{\KL}{\operatorname{KL}}
+27: \DeclareMathOperator{\atanh}{atanh}
+28: \setlength{\emergencystretch}{2em}
+29: \setlist{itemsep=3pt,topsep=5pt}
+30: \raggedbottom
+31: \title[Restrictions and witness coding for FEI]{Restrictions and witness coding for the Fourier entropy--influence problem}
+32: \author{Yitzchak Shmalo}
+33: \address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+34: \email{<email>}
+35: \date{11 October 2026}
+36: \subjclass[2020]{42C10, 68Q17, 60C05, 94B05}
+37: \keywords{Fourier entropy, total influence, Boolean function, restriction, spectral coding, composition}
+38: \hypersetup{pdftitle={Restrictions and witness coding for the Fourier entropy-influence problem},pdfauthor={Yitzchak Shmalo}}
+39: \begin{document}
+40: \begin{abstract}
+41: We study reductions and extensions of the Fourier entropy--influence conjecture. Its optimal constant is preserved under simultaneous restrictions to nearly constant functions, arbitrarily small total and relative coordinate influences, and arbitrarily separated Fourier supports. These examples retain their spectral entropy under prescribed finite depths of coordinate restriction. We refine a witness-forest entropy bound by conditioning on nonempty roots and subtracting posterior witness entropy, and prove a composition bound for multiplexers with shared data variables. Exact restriction identities and biased monotone examples identify limitations of local entropy charges and threshold normalization estimates. The results leave a concrete universal witness-cost inequality open and do not establish the unrestricted conjecture.
+42: \end{abstract}
+43: \maketitle
+44: 
+45: \section{Introduction}
+46: 
+47: For a Boolean function $f:\bits^n\to\bits$, its squared Fourier coefficients form a probability law
+48: \[
+49:  P_f(S)=\wh f(S)^2,\qquad
+50:  f=\sum_{S\subseteq[n]}\wh f(S)\chi_S,
+51:  \qquad \chi_S(x)=\prod_{i\in S}x_i.
+52: \]
+53: Write
+54: \begin{equation}\label{eq:HI}
+55:  \HH(f)=\sum_S P_f(S)\log\frac1{P_f(S)},\qquad
+56:  \I(f)=\sum_S |S|P_f(S),\qquad
+57:  \I_i(f)=\sum_{S\ni i}P_f(S).
+58: \end{equation}
+59: All logarithms denoted by $\log$ are to base $2$; $\ln$ denotes the natural logarithm. The convention $0\log(1/0)=0$ is used throughout. The Fourier entropy--influence conjecture of Friedgut and Kalai~\cite{FK96} asserts the existence of a universal finite $C$ such that $\HH(f)\le C\I(f)$.
+60: 
+61: The companion threshold manuscript~\cite{Threshold} proves this estimate for functions with an ordered desirability relation, including all linear threshold functions, and gives extensions to combinations and unions of such functions. Its bounds for overlapping gates retain a logarithmic dependence on the overlap. Its product-measure composition result covers symmetric threshold gates. These assumptions are substantial: representing every Boolean function by a formula does not by itself control the entropy cost of shared variables.
+62: 
+63: The present results address three distinct issues. First, several superficially restrictive classes still retain the full optimal FEI constant, even when imposed simultaneously. Second, a forest reference can charge a gate name once for an entire Fourier set and recover the entropy of latent choices. This improves the coordinatewise overlap estimate on addressing functions. Third, exact composition and restriction calculations separate valid closure statements from helper inequalities that fail.
+64: 
+65: The coding and activation arguments build on earlier internal notes~\cite{BrainErasure,BrainCritical}. Small-influence reductions also have a public antecedent: Shalev~\cite{Shalev18} proves FEI when $\I(f)\le2^{-cn}$ for fixed $c>0$ and shows that an extension to $\I(f)\le2^{-s(n)}$ with $s(n)=o(n)$ would imply unrestricted FEI. The combined reduction below adds a variance-weighted bound for the redundancy cost and smooths only the auxiliary coordinates, so that small relative influences and support separation can be imposed at the same time. The composition framework is related to O'Donnell and Tan~\cite{ODT13}; the multiplexer statements below are proved directly. The restriction calculations are related to the stopping-tree approach of Gonz\'alez, MacManus and Pereyra~\cite{GMP26}. None of the results below bounds the unrestricted optimal constant.
+66: 
+67: The distinction between a class theorem and a universal reduction also applies to percolation. The entropy theorem in~\cite{Percolation} proves an FEI estimate for planar crossing functions using spatial structure and arm estimates. Those estimates furnish a geometric way to pay an encoding cost. They do not supply an encoding theorem for arbitrary Boolean spectra. The general entropy estimate of Kelman, Kindler, Lifshitz, Minzer and Safra~\cite{KKLMS20} instead has an additional logarithmic degree weight. Removing such a weight requires an additional argument.
+68: 
+69: \section{Simultaneous reductions preserving the optimal constant}\label{sec:hardening}
+70: 
+71: Put
+72: \[
+73:  C_{\rm FEI}=\sup_{f:\,\I(f)>0}\frac{\HH(f)}{\I(f)}\in[0,\infty].
+74: \]
+75: For a family of subsets $\mathcal S$, its distance is the minimum of $|S\mathbin\triangle T|$ over distinct $S,T\in\mathcal S$. A singleton family has infinite distance. A coordinate restriction fixes physical input coordinates to signs. It does not condition the spectral law.
+76: 
+77: \begin{theorem}[Simultaneous reduction]\label{thm:simultaneous}
+78: Fix $\eps>0$ and an integer $k\ge0$. Consider nonconstant Boolean functions $F$ satisfying
+79: \begin{equation}\label{eq:hardclass}
+80:  \I(F)\le\eps,\qquad
+81:  \E F\ge1-\eps,\qquad
+82:  \max_i\frac{\I_i(F)}{\Var(F)}\le\eps,
+83:  \qquad d(\supp\wh F)>k.
+84: \end{equation}
+85: The supremum of $\HH(F)/\I(F)$ over this class is exactly $C_{\rm FEI}$, including when this supremum is infinite.
+86: 
+87: More strongly, for every nonconstant seed $f$ and $\delta>0$, there exists such an $F$ with $d(\supp\wh F)>2k$ and
+88: \[
+89:  \frac{\HH(F)}{\I(F)}\ge\frac{\HH(f)}{\I(f)}-\delta,
+90: \]
+91: such that every restriction fixing at most $k$ coordinates preserves its entropy and mean. Every such restriction satisfies~\eqref{eq:hardclass} and has at least the same entropy-to-influence ratio as $F$.
+92: \end{theorem}
+93: 
+94: The theorem does not assert that these functions violate FEI. It says that proving FEI for the class in~\eqref{eq:hardclass} is already sufficient for the full conjecture, with no loss in the optimal constant. Several preliminary identities give the proof.
+95: 
+96: \subsection{Balanced composition and a diffuse seed}
+97: 
+98: \begin{lemma}[Balanced substitution]\label{lem:balanced}
+99: Let $u$ be Boolean on $N$ coordinates and let $g_1,\ldots,g_N$ be balanced Boolean functions on disjoint variable blocks. Then $U=u(g_1,\ldots,g_N)$ satisfies
+100: \begin{align}
+101:  \E U&=\E u,\label{eq:compmean}\\
+102:  \HH(U)&=\HH(u)+\sum_i\I_i(u)\HH(g_i),\label{eq:comph}\\
+103:  \I(U)&=\sum_i\I_i(u)\I(g_i).\label{eq:compi}
+104: \end{align}
+105: For a leaf $j$ in block $i$, $\I_j(U)=\I_i(u)\I_j(g_i)$.
+106: \end{lemma}
+107: \begin{proof}
+108: Expand $u$ in characters and each $g_i$ in its Fourier basis. Since $g_i$ is balanced, its spectral sets are nonempty. The set of occupied blocks therefore uniquely identifies the outer spectral set. Conditional on that set, the inner spectral sets are independent and have the laws $P_{g_i}$. The chain rule for entropy and the expected size of the resulting set give the formulas.
+109: \end{proof}
+110: 
+111: \begin{lemma}[Balanced diffuse seeds]\label{lem:diffuse}
+112: For every nonconstant Boolean $f$ and positive $\eta,\delta$, there is a balanced Boolean $b$ with
+113: \[
+114:  \max_i\I_i(b)\le\eta,
+115:  \qquad \frac{\HH(b)}{\I(b)}\ge\frac{\HH(f)}{\I(f)}-\delta.
+116: \]
+117: \end{lemma}
+118: \begin{proof}
+119: Multiplying $f$ by an appropriate character preserves its entropy and changes each influence to $\min(\I_i(f),1-\I_i(f))$. Call the resulting function $u$, and set $J=\I(u)\le\I(f)$. If $\HH(f)=0$, any sufficiently deep balanced majority composition has the required properties. Otherwise $J>0$.
+120: 
+121: On disjoint variables take $b_0=\Maj_3\prod_{j=1}^q u_j$, where the $u_j$ are copies of $u$. Then
+122: \[
+123:  \E b_0=0,\quad L:=\I(b_0)=qJ+\tfrac32,
+124:  \quad H_0:=\HH(b_0)=q\HH(f)+2,
+125:  \quad\max_i\I_i(b_0)\le\tfrac12.
+126: \]
+127: For the balanced depth-$d$ self-composition $b_d$, Lemma~\ref{lem:balanced} gives
+128: \[
+129:  \I(b_d)=L^d,\qquad
+130:  \HH(b_d)=H_0\frac{L^d-1}{L-1},\qquad
+131:  \max_i\I_i(b_d)\le2^{-d}.
+132: \]
+133: First choose $q$ large and then $d$ large. The ratio approaches $\HH(f)/J\ge\HH(f)/\I(f)$, while the maximum coordinate influence approaches zero.
+134: \end{proof}
+135: 
+136: \subsection{Sparse activation}
+137: 
+138: Let $h$ be Boolean with mean $a$, and let $A$ be the indicator of one vertex of an independent $s$-dimensional control cube. Thus $p:=\E A=2^{-s}$. Define
+139: \begin{equation}\label{eq:activate}
+140:  G=1+A(h-1),\qquad d=1-a.
+141: \end{equation}
+142: The function equals $h$ on the active control fiber and equals $1$ elsewhere.
+143: 
+144: \begin{lemma}[Activation identities]\label{lem:activation}
+145: The function in~\eqref{eq:activate} satisfies
+146: \begin{equation}\label{eq:activationI}
+147:  \E G=1-pd,\qquad \Var(G)=2pd-p^2d^2\le4p,
+148:  \qquad \I(G)=p\I(h)+sp d.
+149: \end{equation}
+150: Writing $\phi(t)=-t\log t$ and $\HH_{\ne\varnothing}(h)=\HH(h)-\phi(a^2)$, its entropy is exactly
+151: \begin{align}
+152:  \HH(G)={}&p\HH_{\ne\varnothing}(h)+2sp(1-a^2)\notag\\
+153:  &+(p-p^2)d^2\bigl(2s-2\log d\bigr)
+154:    +\phi\bigl((1-pd)^2\bigr),\label{eq:activationH}
+155: \end{align}
+156: where the term involving $d^2\log d$ is interpreted continuously at $d=0$.
+157: \end{lemma}
+158: \begin{proof}
+159: Choose the active vertex to be all $+1$, so that every Fourier coefficient of $A$ is $p$. For a nonempty data set $S$ and any control set $T$, the coefficient of $G$ is $p\wh h(S)$. For $S=\varnothing$ and $T\ne\varnothing$, it is $p(a-1)$. The empty coefficient is $1-pd$. These three disjoint groups give~\eqref{eq:activationH}. A data influence scales by $p$. Each control influence is $2p\P(h=-1)=pd$. This proves~\eqref{eq:activationI}.
+160: \end{proof}
+161: 
+162: In particular, if $b$ is balanced and $h=b^{\otimes m}$ is a product of $m$ independent copies, then
+163: \begin{equation}\label{eq:balancedactivation}
+164:  \I(G)=pm\I(b)+sp,\qquad
+165:  \HH(G)=pm\HH(b)+O(ps),\qquad
+166:  \Var(G)=2p-p^2.
+167: \end{equation}
+168: The entropy error has an absolute constant for $s\ge1$. Choosing $s=\lceil2\log m\rceil$ makes $\I(G)$ tend to zero while preserving the seed ratio asymptotically.
+169: 
+170: \subsection{Systematic spectral coding}
+171: 
+172: \begin{lemma}[Variance-weighted coding]\label{lem:coding}
+173: Let $G$ be Boolean on $N$ coordinates and let $A$ be an $r\times N$ binary matrix. For $z\in\bits^r$, put
+174: \[
+175:  F(x,z)=G\bigl(x_i\chi_{A_i}(z):1\le i\le N\bigr),
+176: \]
+177: where $A_i$ is the $i$th column. Then
+178: \begin{align}
+179:  \E F&=\E G,\qquad \HH(F)=\HH(G),\notag\\
+180:  \I(F)&=\I(G)+\sum_S |AS|P_G(S)
+181:  \le\I(G)+r\Var(G).\label{eq:codecost}
+182: \end{align}
+183: The original coordinate influences are unchanged, and each added coordinate has influence at most $\Var(G)$.
+184: \end{lemma}
+185: \begin{proof}
+186: The Fourier expansion is
+187: \[
+188:  F(x,z)=\sum_S\wh G(S)\chi_S(x)\chi_{AS}(z).
+189: \]
+190: The map $S\mapsto(S,AS)$ is injective, so it preserves all coefficient magnitudes and the empty coefficient. Its extra degree is $|AS|$. Since $A\varnothing=0$, only nonempty spectral mass contributes to this extra degree; that mass is $\Var(G)$. This proves the sharper last bound in~\eqref{eq:codecost}.
+191: \end{proof}
+192: 
+193: \begin{lemma}[A short redundancy bound]\label{lem:codeexist}
+194: For fixed integer $d_0\ge1$ and sufficiently large $N$, there is an $r\times N$ binary matrix with
+195: \[
+196:  r=3d_0\lceil\log(2N)\rceil
+197: \]
+198: such that the systematic code $\{(S,AS):S\subseteq[N]\}$ has distance greater than $d_0$.
+199: \end{lemma}
+200: \begin{proof}
+201: Choose the entries of $A$ independently and uniformly. For each nonzero set $S$, $AS$ is uniform on $\{0,1\}^r$. A union bound for nonzero codewords of weight at most $d_0$ gives
+202: \[
+203:  2^{-r}\sum_{j=1}^{d_0}\binom Nj
+204:        \sum_{\ell=0}^{d_0-j}\binom r\ell
+205:  \le2^{-r}d_0(N+r)^{d_0}.
+206: \]
+207: For sufficiently large $N$, $r\le N$, and the last expression is at most $d_0/(2N)^{2d_0}<1$. Hence a suitable matrix exists.
+208: \end{proof}
+209: 
+210: \subsection{Smoothing the auxiliary coordinates}
+211: 
+212: The coded function from Lemma~\ref{lem:coding} may have added influences comparable to its variance. This requires a further step when proving Theorem~\ref{thm:simultaneous}.
+213: 
+214: For odd $L$ and positive integer $t$, let
+215: \[
+216:  g=\Maj_L\bigl(\chi_{[t]}(z^{(1)}),\ldots,
+217:                   \chi_{[t]}(z^{(L)})\bigr),
+218: \]
+219: on disjoint parity blocks. This balanced gadget has
+220: \begin{equation}\label{eq:gadget}
+221:  \I(g)=t\I(\Maj_L),\quad \HH(g)=\HH(\Maj_L),\quad
+222:  \max_j\I_j(g)=\beta_L:=\binom{L-1}{(L-1)/2}2^{-(L-1)}\longrightarrow0.
+223: \end{equation}
+224: Its nonempty Fourier supports have size at least $t$. Distinct supports have distance at least $2t$: majority has only odd Fourier degrees, and two distinct odd subsets differ in at least two positions, each replaced by an entire $t$-block.
+225: 
+226: \begin{proof}[Proof of Theorem~\ref{thm:simultaneous}]
+227: Choose, by Lemma~\ref{lem:diffuse}, a balanced seed $b$ with $\max_i\I_i(b)\le\eps$ and ratio at least that of $f$ minus $\delta/2$. Its number $n$ of variables is fixed during the following limit. Choose an odd $L$ so that $\beta_L\le\eps$, and put $t=2k+1$ and $d_0=2k+1$. These choices are fixed as well.
+228: 
+229: Activate $h=b^{\otimes m}$ with $s=\lceil2\log m\rceil$ controls and $p=2^{-s}$. Code the resulting $N=mn+s$ coordinates with the systematic code of Lemma~\ref{lem:codeexist}, using $r=O_{k,n}(\log m)$ additional coordinates. Call the coded function $F_0$.
+230: 
+231: Now replace only the $s$ activation controls and the $r$ new parity coordinates of $F_0$ by disjoint copies of the gadget $g$. Leave every data coordinate unchanged. By balanced substitution, the mean and variance are unchanged. The total influence in the coordinates being replaced is at most
+232: \[
+233:  sp+r\Var(G)\le p(s+2r),
+234: \]
+235: because $b$ is balanced and $\Var(G)=2p-p^2\le2p$. Lemmas~\ref{lem:balanced} and~\ref{lem:coding} therefore give
+236: \begin{align*}
+237:  \I(F)&=pm\I(b)+O_{g}(p(s+r)),\\
+238:  \HH(F)&=pm\HH(b)+O_{g}(p(s+r)),\\
+239:  \E F&=1-p,\qquad \Var(F)=2p-p^2.
+240: \end{align*}
+241: It follows that $\I(F)\to0$, $\E F\to1$, and $\HH(F)/\I(F)\to\HH(b)/\I(b)$.
+242: 
+243: Each unchanged data influence is $p\I_i(b)$, so its ratio to $\Var(F)$ is at most $\I_i(b)/(2-p)\le\eps$. Each new gadget leaf influence is at most $\beta_L\Var(F)\le\eps\Var(F)$. This includes the gadgets replacing the activation controls.
+244: 
+245: To check spectral distance, partition the final inputs into unchanged singleton blocks and gadget blocks. Two spectral sets coming from different supports of $F_0$ differ on more than $d_0$ blocks, each contributing at least one coordinate to their symmetric difference. Two spectral sets coming from the same outer support must differ within at least one gadget block, where their distance is at least $2t$. Thus the final distance exceeds $2k$.
+246: 
+247: For $m$ sufficiently large, all the required numerical bounds and the desired ratio hold. The assertion about restrictions follows from Lemma~\ref{lem:plateau} below. Its influence formula can only increase the ratio, while leaving every remaining coordinate influence and the variance unchanged. Deleting at most $k$ coordinates decreases spectral distance by at most $k$, so distance remains greater than $k$. The equality of suprema follows by applying this construction to each seed and letting $\delta$ decrease to zero; the reverse inequality is containment in the full Boolean class.
+248: \end{proof}
+249: 
+250: \begin{lemma}[A plateau under physical restrictions]\label{lem:plateau}
+251: Suppose $d(\supp\wh F)>q$. For any set $B$ of at most $q$ input coordinates and any assignment $\rho$ to $B$, deleting $B$ is injective on the spectral support and
+252: \begin{equation}\label{eq:plateau}
+253:  \HH(F|\rho)=\HH(F),\qquad
+254:  \I(F|\rho)=\I(F)-\sum_{j\in B}\I_j(F).
+255: \end{equation}
+256: Every remaining coordinate influence is unchanged. If the empty set belongs to the spectral support, then the mean is unchanged as well.
+257: \end{lemma}
+258: \begin{proof}
+259: The coefficient at $T\subseteq B^c$ after restriction is
+260: \[
+261:  \sum_{S:\,S\setminus B=T}\wh F(S)\chi_{S\cap B}(\rho).
+262: \]
+263: Two nonzero summands would correspond to supports at distance at most $|B|\le q$, which is impossible. Thus restriction only changes coefficient signs and relabels their supports injectively. Entropy and the surviving coordinate inclusion probabilities are unchanged. Removing the fixed coordinates gives the influence identity. If the empty support is present, no other support can be contained in $B$, so the empty coefficient is preserved.
+264: \end{proof}
+265: 
+266: \begin{corollary}[Subexponentially small influence]\label{cor:subexponential}
+267: Let $s:\mathbb N\to[0,\infty)$ satisfy $s(N)=o(N)$. Theorem~\ref{thm:simultaneous} remains valid after adding the requirement
+268: \[
+269:  \I(F)\le2^{-s(N)},
+270: \]
+271: where $N$ is the final number of inputs. In particular, the joint restriction preserves the full optimal FEI constant at the subexponential influence scales of~\cite{Shalev18}.
+272: \end{corollary}
+273: \begin{proof}
+274: Keep the balanced seed on $n$ variables, the gadget with $d_g$ inputs, and the target code distance fixed as in the theorem. Put
+275: \[
+276:  a_m=\max_{1\le D\le2mn}s(D),\qquad
+277:  \ell_m=\lceil a_m+2\log m\rceil.
+278: \]
+279: The assumption on $s$ implies $a_m=o(m)$ and hence $\ell_m=o(m)$; no monotonicity of $s$ is needed. Use $\ell_m$ activation controls, $p_m=2^{-\ell_m}$, and $r_m=O(\log m)$ code coordinates. The final dimension is
+280: \[
+281:  N_m=mn+d_g(\ell_m+r_m)\le2mn
+282: \]
+283: for all sufficiently large $m$. The preceding entropy and influence estimates have errors $O_g(p_m(\ell_m+r_m))=o(p_m m)$, so the seed ratio is preserved. For large $m$, the total influence is at most $p_m m^2\le2^{-a_m}\le2^{-s(N_m)}$. All other bounds in the theorem are unchanged.
+284: \end{proof}
+285: 
+286: \begin{remark}
+287: For the spectral random set $S_F$, the same distance assumption gives
+288: $\HH(S_F\cap B\mid S_F\setminus B)=0$ for every $|B|\le q$.
+289: This vanishing conditional spectral entropy and the physical restriction plateau are compatible, but they are different statements. A valid induction must also handle later restrictions, after support collisions become possible.
+290: \end{remark}
+291: 
+292: \input{multiplexers}
+293: \input{forests}
+294: \input{restrictions}
+295: \input{biased}
+296: \input{conclusion}
+297: \end{document}

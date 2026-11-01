@@ -1,0 +1,9 @@
+﻿from pathlib import Path
+import json
+p=Path('CLAIMS.jsonl'); rows=[json.loads(x) for x in p.read_text(encoding='utf8').splitlines()]
+for x in rows:
+ if x['claim']=='The full set of potential most recent common ancestors in the standard Brownian net is almost surely locally finite.':
+  x['status']='proved'; x['proof_location']='PROOF.md Lemmas 1-6 and Conclusion; ATTEMPT.md Sections 9-12'; x['remaining_gap']='No mathematical gap identified in the completed handwritten deduction. Final finite-order Lean artifact is queued and is not yet called checked.'; x['checks']='Primary source assertions checked directly; separation structure, compact-image measurability and common spatial bound audited; finite reversal test passed 500 cases. New Lean result pending.'
+rows.append(dict(problem_id='F0036',claim='The stationary compact-image contact observable has expectation at most 2 integral_C Psi(U-t)Psi(t-s) dxdt, uniformly in the spatial witness radius m.',status='proved_special_case',proof_location='PROOF.md Quantitative check on the stationary observable',remaining_gap='No claim that this expectation bound transfers to the time-zero image under absolute continuity.',checks='Pointwise injection after rotation into relevant forks; Proposition 2.9 expected-density formula; nonnegative analytic count observable; explicit finite bound because U>b and a>s.'))
+p.write_text(''.join(json.dumps(x,ensure_ascii=False)+'\n' for x in rows),encoding='utf8')
+p=Path('LITERATURE.md'); t=p.read_text(encoding='utf8'); t+='\nAdditional read-only mistake-audit query (2026-10-12): brain.py recall "local absolute continuity time reversal Brownian net mistakes". Invoked while the Lean check was queued; outcome pending at this save. Brain output is a hint, never a verdict.\n'; p.write_text(t,encoding='utf8')

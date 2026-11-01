@@ -1,0 +1,98 @@
+\section*{Adaptive single-use payment for Boolean root KL rows}
+
+Let $f:\{-1,1\}^n\to\{-1,1\}$ and let $\mathcal T$ be any physical
+restriction tree.  At an internal node $v$, the event $E_v$ is the
+cylinder determined by the preceding answers, $p_v=\Pr(E_v)$, and the
+tree queries a coordinate $i_v$ not fixed on $E_v$.  Write $f_v$ for the
+restricted Boolean function and
+\[
+ d_v=\widehat {f_v}(\{i_v\})
+     =\mathbb E[f(x)x_{i_v}\mid E_v].
+\]
+No physical coordinate is queried twice on a path, but the next query may
+depend arbitrarily on all preceding answers.  The tree may stop early.
+
+\paragraph{Theorem (adaptive root nonreuse).}
+If $K_{i_v}^{(0)}(f_v)$ denotes the empty-upper-set row of the exact local
+identity
+\[
+ \Delta_{i_v}U(f_v)=B_{i_v}(f_v)-\Gamma_{i_v}(f_v)
+                     +K_{i_v}(f_v),
+\]
+then, with $c_0=2/\ln2$,
+\[
+ \boxed{\sum_{v\in\mathcal T^\circ}p_vK_{i_v}^{(0)}(f_v)
+ \le c_0\sum_{v\in\mathcal T^\circ}p_vd_v^2
+ \le c_0\operatorname {Var}(f)\le c_0 I(f).}       \tag{1}
+\]
+If the tree reveals every coordinate on every path, the middle inequality
+is equality.  Thus the sharp root-row payment is single-use even under
+fully adaptive physical restriction; it has no depth, arity, overlap,
+bias, or minimum-gap loss.
+
+\paragraph{Proof of the pointwise payment.}
+Boolean convolution for $f_v^2=1$ gives zero signed upper correlation in
+the empty row.  Put $a_v=\mathbb E[f\mid E_v]$ and
+$m_v=a_v^2+d_v^2$.  The sharp scalar inequality
+\[
+1-h_2\left({1+x\over2}\right)
+\le {1-\sqrt{1-x^2}\over\ln2},\qquad |x|\le1,
+\]
+therefore gives
+\[
+K_{i_v}^{(0)}(f_v)
+=m_v\left[1-h_2\left({1+2a_vd_v/m_v\over2}\right)\right]
+\le {2\min(a_v^2,d_v^2)\over\ln2}
+\le c_0d_v^2.                                      \tag{2}
+\]
+This uses genuine Booleanity at every physical child, not an arbitrary
+spectral law.
+
+\paragraph{Orthogonal single-use ledger.}
+For each internal node define
+\[
+ \psi_v(x)={\mathbf1_{E_v}(x)x_{i_v}\over\sqrt{p_v}}.
+\]
+These functions have norm one.  Two incomparable nodes have disjoint
+supports.  If $w$ is a strict descendant of $v$, then $x_{i_v}$ is fixed
+on $E_w$, whereas the still-unqueried $x_{i_w}$ is fair conditionally on
+$E_w$; hence $\langle\psi_v,\psi_w\rangle=0$.  Thus the $\psi_v$ are
+orthonormal and
+\[
+ \langle f,\psi_v\rangle=\sqrt{p_v}\,d_v.
+\]
+They are also orthogonal to the constant function.  Bessel's inequality
+gives
+\[
+ \sum_vp_vd_v^2\le\|f-\mathbb Ef\|_2^2=\operatorname {Var}(f).
+\]
+A complete tree supplies the usual complete Boolean Haar basis, giving
+equality.  Combining this with (2) proves (1).
+
+\paragraph{Exact implication for the GU programme.}
+At one function the already proved sharp bound is
+\[
+ \sum_iK_i^{(0)}\le c_0I.
+\]
+Consequently, for any $a\ge c_0$ and $0\le b<1$, the still-unpaid global
+inequality
+\[
+ \sum_iK_i^{(+)}
+ \le(a-c_0)I+bU+\sum_i(\Gamma_i-B_i)                \tag{3}
+\]
+on tensor-prime Boolean functions implies $G\le aI+bU$ universally and
+therefore
+\[
+ H\le\left(2+{2a\over1-b}\right)I.
+\]
+The new content of (1) is that recursive or stopping-tree attempts to
+prove (3) may transport the paid empty rows through adaptive physical
+children without allocating another $c_0I$ at every depth: the entire
+selected-coordinate root ledger costs at most $c_0\operatorname{Var}(f)$.
+
+Equivalently, a stopped-potential proof now needs to pay only the
+nonempty-row transport error and its terminal $U$ boundary.  It must not
+identify a parent nonempty row with a descendant root row without proving
+the required comparison; that comparison is the first remaining line.
+No universal pair $(a,b)$ is established here, and full FEI remains open.
+

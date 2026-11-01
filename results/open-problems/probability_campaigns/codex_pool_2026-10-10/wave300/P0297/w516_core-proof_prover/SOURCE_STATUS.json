@@ -1,0 +1,78 @@
+{
+  "target_id": "P0297",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "reason": "Primary 2026 ICM publication describes general d_gamma as unknown. Targeted prior records contain unsolved/unverified attempts. Exhaustive current owner-retirement and post-publication status verification was unavailable, so global current openness remains UNKNOWN.",
+  "exact_target": "For each gamma in (0,2), determine explicitly d_gamma = dim_H(C,D_h), the deterministic almost-sure Hausdorff dimension of the gamma-LQG metric of a unit-circle-normalized whole-plane GFF.",
+  "known_anchor": "d_sqrt(8/3)=4; xi_*=1/sqrt(6), Q(xi_*)=5/sqrt(6)",
+  "ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 554,
+    "quote": "5,P0297,Exact Hausdorff dimension of Liouville quantum gravity,unsolved,exact Hausdorff dimension of LQG"
+  },
+  "primary_sources": [
+    {
+      "url": "https://ems.press/content/book-chapter-files/33292",
+      "title": "Introduction to the Liouville quantum gravity metric",
+      "authors": "Jian Ding, Julien Dubedat, Ewain Gwynne",
+      "year": 2022,
+      "locations": "Sections 2.1-2.2, equations (2.2)-(2.5), Section 5.1",
+      "license": "cc-by-4.0",
+      "verification": "opened primary PDF; exponent/metric formulation recovered"
+    },
+    {
+      "url": "https://doi.org/10.1007/s00222-020-00991-6",
+      "title": "Existence and uniqueness of the Liouville quantum gravity metric for gamma in (0,2)",
+      "authors": "Ewain Gwynne, Jason Miller",
+      "locations": "Problem 7.1",
+      "verification": "primary-source search extract; local exact intake citation pending"
+    },
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/25M181012X",
+      "title": "Liouville Quantum Gravity: From Random Planar Maps to Conformal Field Theory",
+      "year": 2026,
+      "verification": "Primary 2026 ICM publication opened; paragraph 132 explicitly states the general dimension is not known."
+    },
+    {
+      "url": "https://arxiv.org/html/2509.21053v1",
+      "title": "Two Decades of Probabilistic Approach to Liouville Conformal Field Theory",
+      "authors": "Remi Rhodes; Vincent Vargas",
+      "date": "2025-09-25",
+      "locations": "Section 3, paragraph 97",
+      "verification": "Original P0297 source recovered from population node, then primary HTML opened; target and Brownian anchor independently confirmed."
+    }
+  ],
+  "owner_result_check": "Targeted local ledger and population node still mark unverified/unsolved; no kept P0297 artifact on the inspected Team O row. This is not an exhaustive owner retirement or solved-work certification.",
+  "prior_attempt_check": {
+    "exact_id_search": "No P0297 proof found in named H/I attempt and Lean directories; annotated ranking only. Scoped title/alias searches likewise found no target proof there.",
+    "aliases": "D0049 and D0052 share dedup_key lqg_hausdorff_dimension_d_gamma; original four rows saved to PRIOR_ALIAS_ROWS.json.",
+    "D0049_A001": "Unreviewed obstruction record; wrong d_gamma=2Q/xi string. Other triad w522 owns its correction; w516 does not duplicate it.",
+    "D0052_A001": "Unreviewed numeric exclusion of affine guesses, not a formula.",
+    "canonical_population_attempt": "Direct read-only SQL by exact node IDs confirms unverified constant-shift reduction xi*d=gamma with unresolved xi; no independent proof."
+  },
+  "proof_status": "No solution to P0297 asserted",
+  "submitted": true,
+  "reviewed": "partial",
+  "ingested": null,
+  "retrievable": null,
+  "submission_receipt": "BRAIN_STATES.json",
+  "integration_note": "Draft-only submission. No store ingestion or retrieval is verified or asserted.",
+  "peer_boundary": "w517 independently saved O1/O2 before reading w516; both warn against selected-path or marginal-Gaussian shortcuts. w516 L1 retains the full covariance and the optimizer-switching term.",
+  "full_packet_reviewed": false,
+  "review_status": {
+    "state": "partial_KEEP",
+    "reviewer": "w518",
+    "kept": [
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5"
+    ],
+    "pending": [
+      "L6"
+    ],
+    "receipt": "REFEREE_RECEIPT.json",
+    "scope": "Finite/conditional reductions only. H unproved. No theorem promotion or ingestion is claimed."
+  }
+}

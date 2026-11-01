@@ -1,0 +1,56 @@
+[
+  {
+    "claim_id": "A093-FORWARD-TRUE-KERNEL-HANDOFF-DEFICIT",
+    "version": 1,
+    "exact_statement": "For actual AND3 with the normalized original uniform spectral reference Q (CE=3=4I), every root coordinate has a projection-to-normalized-true-kernel handoff whose forward full-reference fee minus decrease of target KL, averaged over BOTH actual children, equals (3/32)log2(5)>0. The nonconstant child is already matched under projection but moves to (1/16,5/16,5/16,5/16). Thus true-kernel inheritance is not a free projection-profile or affine-calibration update in general; this does not refute the scoped A012/A011 history theorems or full FEI.",
+    "hypotheses": [
+      "Actual3-bit AND-sign truth table (one exceptional vertex), any input translation/output sign and root coordinate",
+      "Original full uniform8-atom reference; all child masses/normalizers retained",
+      "Projection Qprime=pi_i Q and A011 normalized true-kernel references defined from SAME parent",
+      "Fee convention D(new_reference||old_reference); BOTH physical children reach1/2"
+    ],
+    "statement_sha256": "291b4429e2ae930044be8521ea95b4699c21ec26f27b41924b91f7cc884de33b",
+    "contributors": [
+      "A093"
+    ],
+    "proof_source": {
+      "path": "DERIVATION.md",
+      "sha256": "6be9a462b9b1cfe1d54940f880b65de40b60a3b9fc26bc17dde948fc02fdf5ad",
+      "formal_verification": "NOT_LEAN_CHECKED_ADMISSION_HELD"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A093",
+        "kind": "AUTHOR_CHECK_DIRECT_WALSH_AND_PRIME_LOG_FORMS",
+        "verdict": "PASS_FIXED_FINITE_DOMAIN;ANALYTIC_IDENTITY_RECONSTRUCTED",
+        "independent_agent_review": "PENDING_A012_A011_A094"
+      }
+    ],
+    "status": "AUTHOR_CHECKED_INTERFACE_OBSTRUCTION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "exact_helper": "Every normalized true-kernel handoff is a paid projection-profile update with D(new||old)<=D(target||old)-D(target||new).",
+        "witness": "AND3 with full uniform root reference, both actual children",
+        "not_refuted": [
+          "A012-UNIVERSAL-PROJECTION-PROFILE-HISTORY@1",
+          "A011-PADDING-FRESH-RESET-SAME-SOURCE-BANK@6",
+          "full FEI"
+        ]
+      }
+    ],
+    "first_unproved_line": "Fund a REQUIRED arbitrary-core interface handoff or original O(I) complete source from actual unused original capacity after old bills and BOTH full terminals.",
+    "next_consumers": [
+      "A012",
+      "A011",
+      "A013",
+      "A097",
+      "A085",
+      "A094",
+      "A099",
+      "B19",
+      "B20"
+    ]
+  }
+]

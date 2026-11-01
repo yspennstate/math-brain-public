@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "status": "finite_stress_tests_only_not_full_FEI",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "constant_tested": 6.4547837,
+  "indicator_exhaustive": {
+    "n1_nonempty_sets": 3,
+    "n2_nonempty_sets": 15,
+    "n3_nonempty_sets": 255,
+    "n4_nonempty_sets": 65535,
+    "max_positive_violation_of_U_le_CE": 0.0,
+    "best_ratio_all_n2": 6.298802786555887,
+    "best_ratio_all_n3": 6.387842267701161,
+    "best_ratio_all_n4": 6.394774454871632,
+    "best_ratio_density_at_most_half_n3": 6.298802786555889,
+    "best_ratio_density_at_most_half_n4": 6.3878422677011635
+  },
+  "ternary_partial_exhaustive": {
+    "n1_nonzero_functions": 8,
+    "n2_nonzero_functions": 80,
+    "n3_nonzero_functions": 6560,
+    "max_positive_violation_of_U_le_CE": 0.0,
+    "best_ratio_n2": 6.298802786555887,
+    "best_ratio_n3": 6.387842267701161
+  },
+  "dyadic_initial_segments_near_density_one_third": [
+    {"n":3,"support_size":3,"ratio":6.298802786555889},
+    {"n":4,"support_size":5,"ratio":6.3878422677011635},
+    {"n":5,"support_size":11,"ratio":6.39477445487163},
+    {"n":6,"support_size":21,"ratio":6.416072855125596},
+    {"n":7,"support_size":43,"ratio":6.417613006209452},
+    {"n":8,"support_size":85,"ratio":6.422876374364895},
+    {"n":9,"support_size":171,"ratio":6.423249801564386},
+    {"n":10,"support_size":341,"ratio":6.424561796505787},
+    {"n":11,"support_size":683,"ratio":6.4246544343401495},
+    {"n":12,"support_size":1365,"ratio":6.424982192308281}
+  ],
+  "one_third_staircase_limit": {
+    "H": 2.918295834054489,
+    "J": 1.0,
+    "L": 1.584962500721156,
+    "U": 1.3333333333333333,
+    "E": 0.20751874963942196,
+    "ratio_exact_formula": "8/(3*(2-log2(3)))",
+    "ratio": 6.425122239075223
+  },
+  "compression_counterexample_decrease": {
+    "n": 4,
+    "support_before": [3,4,7,8],
+    "coordinate_zero_indexed": 3,
+    "ratio_before": 1.3333333333333333,
+    "support_after": [0,3,4,7],
+    "ratio_after": 0.0
+  },
+  "compression_counterexample_increase": {
+    "n": 4,
+    "support_before": [0,3,5,6,9,10],
+    "coordinate_zero_indexed": 0,
+    "ratio_before": 0.6131471927654586,
+    "support_after": [0,2,4,6,8,10],
+    "ratio_after": 6.298802786555889
+  },
+  "shapley_coordinate_charge_counterexample": {
+    "n": 7,
+    "H": 5.188394502765988,
+    "I": 3.015625,
+    "global_H_over_I": 1.720503876564887,
+    "coordinate_zero_indexed": 2,
+    "coordinate_influence": 0.015625,
+    "coordinate_shapley_entropy": 0.11113737447764174,
+    "coordinate_ratio": 7.1127919665690715,
+    "target_constant": 6.4547837,
+    "negative_vertices": [2,3,6,7,8,11,12,15,16,17,19,20,21,23,32,36,40,41,44,45,48,49,50,51,52,53,55,57,58,61,62,64,66,67,68,70,71,82,86,91,95,96,98,100,102,105,106,107,109,110,111,113,117,121,123,125,127]
+  },
+  "interpretation": "All finite checks are stress tests. They neither prove the universal support-deficit inequality nor full FEI. The algebraic reduction and tensorization claims are in REPORT.md."
+}

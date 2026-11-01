@@ -1,0 +1,474 @@
+
+ 
+ 
+ =
+          
+            θ
+            
+              
+                
+                
+                
+              
+              
+                (
+                
+                  
+                  p
+                  c
+                
+                ,
+                
+                  
+                  Z
+                  d
+                
+                )
+              
+            
+          
+          
+            ⁢
+            0
+            ? 
+ 
+ 
+ 
+   
+ 
+ 
+  // Restore the saved color scheme preference, or
+  // enact the browser preference if "automatic", 
+  // without expecting DOM load to have completed.
+  //
+  // Also restore any saved readingmode and ToC display preferences.
+  function initializeReadingPreferences() {
+    let saved_theme = localStorage.getItem("ar5iv_theme") || "automatic";
+    if (saved_theme === "automatic") {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        saved_theme = "dark";
+      }
+    }
+    if (saved_theme == "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+
+    const tocDisplay = localStorage.getItem('arxiv_html_paper_toc_display');
+    if (tocDisplay) {
+      document.documentElement.setAttribute("data-toc-display", tocDisplay);
+    }
+    const readingMode = localStorage.getItem('arxiv_html_paper_reading_mode');
+    if (readingMode) {
+      document.documentElement.setAttribute("data-reading-mode", readingMode);
+    }
+    // Pre-apply spinout-banner dismissal here, before the banner paints, so it
+    // never flashes in only to be hidden later by the deferred arxiv-header.js.
+    // Key matches arxiv-header.js: "arxiv-banner-dismissed:" + data-banner-name.
+    if (localStorage.getItem('arxiv-banner-dismissed:spinout-nonprofit')) {
+      document.documentElement.setAttribute("data-banner-dismissed", "");
+    }
+  }
+  // Run as soon as JS starts, to minimize repainting
+  initializeReadingPreferences();
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  /* Banner pre-dismissal (set above before paint -> no flash-then-hide) and
+     reading-mode chrome hiding. */
+  html[data-banner-dismissed] .ds-announcement { display: none; }
+  html[data-reading-mode="enabled"] .ds-announcement,
+  html[data-reading-mode="enabled"] .ds-site-footer { display: none; }
+  /* Keep the announcement text dark on the Open-Blue band in both colour themes
+     (otherwise it inherits the paper's warm-wash text in dark mode and washes out). */
+  .ds-announcement-text { color: var(--arxiv-ink, #1c1a17); }
+ 
+ 
+ 
+ 
+ 
+   
+     
+       Report GitHub Issue 
+       × 
+     
+
+     
+       Title: 
+       
+
+       Content selection saved. Describe the issue below: 
+
+       Description: 
+       
+     
+
+     
+       Submit without GitHub 
+       Submit in GitHub 
+     
+   
+ 
+     
+     arXiv is now an independent nonprofit! 
+     Learn more 
+     × 
+   
+
+ 
+   
+     
+       Back to arXiv 
+     
+   
+   
+   
+     Why HTML? 
+     
+       
+         
+       
+       Report Issue 
+     
+     
+       
+         
+         
+       
+       Back to Abstract 
+     
+     
+     
+       
+         
+       
+       Download PDF 
+     
+     
+       
+         
+         
+       
+     
+     
+     
+       
+         
+       
+     
+     
+     
+       
+         
+           
+           
+         
+       
+       
+         
+           
+           
+         
+       
+       
+         
+           
+           
+         
+       
+     
+   
+ 
+ 
+ 
+ Abstract 
+ 1  θ ⁡ ( p c , ℤ d ) = 0 ​ ? \theta(p_{c},{\mathbb{Z}}^{d})=0? 
+ References 
+ 
+ 
+ 
+ 
+   
+    License: CC BY 4.0
+   
+   
+arXiv:2608.23661v1 [math.PR] 24 Aug 2026 
+ 
+ 
+ θ ⁡ ( p c , ℤ d ) = 0 ​ ? \theta(p_{c},{\mathbb{Z}}^{d})=0? 
+ 
+ 
+ Raphaël Cerf
+ 
+ Note:  
+Université Paris-Saclay, CNRS, Laboratoire de mathématiques d’Orsay, 91405, Orsay.
+ 
+
+ Abstract 
+    
+ We discuss the famous conjecture
+ θ ⁡ ( p c , ℤ d ) = 0 \theta(p_{c},{\mathbb{Z}}^{d})=0 
+for the Bernoulli site percolation model on  ℤ d {\mathbb{Z}}^{d}  with  d ≥ 3 d\geq 3 .
+We prove that, for  d ≥ 3 d\geq 3 , in the Bernoulli percolation
+model on  ℤ d {\mathbb{Z}}^{d} , at the critical point  p c p_{c} , either
+there is no infinite cluster or the tail of the finite cluster
+distribution is not stretched exponential. 
+  
+ 
+ 
+ 1  θ ⁡ ( p c , ℤ d ) = 0 ​ ? \theta(p_{c},{\mathbb{Z}}^{d})=0? 
+
+ 
+ We consider the Bernoulli site percolation model on  ℤ d {\mathbb{Z}}^{d}  with  d ≥ 3 d\geq 3 .
+Each site is declared open with probability  p p 
+and closed with probability  1 − p 1-p , and the sites
+are independent.
+The percolation probability is
+ 
+ 
+
+ 
+ 
+ θ ⁡ ( p , ℤ d ) = P p ​ ( 0 ⟷ ∞ ) . \theta(p,{\mathbb{Z}}^{d})\,=\,P_{p}\big(0\longleftrightarrow\infty\big)\,. 
+ 
+ 
+ For a parameter  p p  such that
+ θ ⁡ ( p , ℤ d ) = 0 \theta(p,{\mathbb{Z}}^{d})=0 , with probability one,
+all the open clusters are finite. On the contrary,
+if  θ ⁡ ( p , ℤ d ) > 0 \theta(p,{\mathbb{Z}}^{d})>0 , then, with probability one,
+there exists an infinite open cluster.
+The critical point of the model is
+ 
+ 
+
+ 
+ 
+ p c = sup { p ∈ [ 0 , 1 ] : θ ⁡ ( p , ℤ d ) = 0 } . p_{c}\,=\,\sup\,\big\{\,p\in[0,1]:\theta(p,{\mathbb{Z}}^{d})=0\,\big\}\,. 
+ 
+ 
+ It follows from the classical Peierls argument that  p c p_{c} 
+is strictly between  0 0  and  1 1 .
+The definition of  p c p_{c}  readily implies that
+ θ ⁡ ( p , ℤ d ) = 0 \theta(p,{\mathbb{Z}}^{d})=0  for  p < p c p<p_{c}  and
+ θ ⁡ ( p , ℤ d ) > 0 \theta(p,{\mathbb{Z}}^{d})>0  for  p > p c p>p_{c} .
+Now, what is the value of
+ θ ⁡ ( p c , ℤ d ) \theta(p_{c},{\mathbb{Z}}^{d}) ? 
+ 
+ 
+ In dimension  2 2 ,
+the case of bond percolation
+has been settled in 1980 by Kesten
+ [ 10 ]  (using also a former result of Harris  [ 9 ]  from 1960) and the case of site percolation
+by Russo  [ 12 ]  in 1981.
+In 1990,
+Hara and Slade  [ 7 ,  8 ] 
+proved that
+ θ ⁡ ( p c , ℤ d ) = 0 \theta(p_{c},{\mathbb{Z}}^{d})=0 
+for  d ≥ 19 d\geq 19 .
+In 1991,
+Barsky, Grimmett and Newman  [ 1 ,  2 ] 
+proved the analogous result
+for bond percolation in a  d d -dimensional half-space.
+After these fundamental progresses, the situation has been stalled for 25 years.
+In 2015,
+Damron, Newman and Sidoravicius
+ [ 3 ] 
+handled the case of a two-dimensional sandwich of thickness two, that is
+ ℤ 2 × { 0 , 1 } \mathbb{Z}^{2}\times\{0,1\} .
+This result was extended one year later to finite slabs by
+Duminil-Copin, Sidoravicius and Tassion  [ 4 ] .
+In 2017,
+the mean-field behaviour was proved to hold for
+ d ≥ 11 d\geq 11 
+by Fitzner and van der Hofstad  [ 5 ,  6 ] .
+Very recently, Kozma and Nitzan  [ 11 ] 
+exhibited an inequality, which, if true, would settle the problem. 
+ 
+ 
+ The main open question in percolation theory is to prove that
+there is no percolation at the critical point in dimension  d = 3 d=3 ,
+i.e., that
+ θ ⁡ ( p c , ℤ 3 ) = 0 \theta(p_{c},{\mathbb{Z}}^{3})=0 . 
+ 
+ 
+ Let us state formally this conjecture. 
+ 
+ 
+ Conjecture 1.1 . 
+ 
+ For any  d ≥ 3 d\geq 3 , we have
+ θ ⁡ ( p c , ℤ d ) = 0 \theta(p_{c},{\mathbb{Z}}^{d})=0 . 
+ 
+ 
+ 
+ 
+ References 
+
+ 
+      
+ [1] 
+ 
+David J. Barsky, Geoffrey R. Grimmett, and Charles M. Newman,  Dynamic renormalization and continuity of the percolation transition in orthants , Spatial stochastic processes, Progr. Probab., vol. 19, Birkhäuser Boston, Boston, MA, 1991, pp. 37–55.  MR 1144091
+
+ 
+      
+ [2] 
+ 
+    ,  Percolation in half-spaces: equality of critical densities and continuity of the percolation probability , Probab. Theory Related Fields  90  (1991), no. 1, 111–148.  MR 1124831
+
+ 
+      
+ [3] 
+ 
+Michael Damron, Charles M. Newman, and Vladas Sidoravicius,  Absence of site percolation at criticality in  ℤ 2 × { 0 , 1 } {\mathbb{Z}}^{2}\times\{0,1\} , Random Structures Algorithms  47  (2015), no. 2, 328–340.  MR 3382676
+
+ 
+      
+ [4] 
+ 
+Hugo Duminil-Copin, Vladas Sidoravicius, and Vincent Tassion,  Absence of infinite cluster for critical Bernoulli percolation on slabs , Comm. Pure Appl. Math.  69  (2016), no. 7, 1397–1411.  MR 3503025
+
+ 
+      
+ [5] 
+ 
+Robert Fitzner and Remco van der Hofstad,  Generalized approach to the non-backtracking lace expansion , Probab. Theory Related Fields  169  (2017), no. 3-4, 1041–1119.  MR 3719063
+
+ 
+      
+ [6] 
+ 
+    ,  Mean-field behavior for nearest-neighbor percolation in  d > 10 d>10 , Electron. J. Probab.  22  (2017), Paper No. 43, 65.  MR 3646069
+
+ 
+      
+ [7] 
+ 
+Takashi Hara and Gordon Slade,  Mean-field critical behaviour for percolation in high dimensions , Comm. Math. Phys.  128  (1990), no. 2, 333–391.  MR 1043524
+
+ 
+      
+ [8] 
+ 
+    ,  Mean-field behaviour and the lace expansion , Probability and phase transition (Cambridge, 1993), NATO Adv. Sci. Inst. Ser. C Math. Phys. Sci., vol. 420, Kluwer Acad. Publ., Dordrecht, 1994, pp. 87–122.  MR 1283177
+
+ 
+      
+ [9] 
+ 
+T. E. Harris,  A lower bound for the critical probability in a certain percolation process , Proc. Cambridge Philos. Soc.  56  (1960), 13–20.  MR 0115221
+
+ 
+      
+ [10] 
+ 
+Harry Kesten,  The critical probability of bond percolation on the square lattice equals  1 2 \frac{1}{2} , Comm. Math. Phys.  74  (1980), no. 1, 41–59.  MR 575895
+
+ 
+      
+ [11] 
+ 
+Gady Kozma and Shahaf Nitzan,  A reduction of the  θ ⁡ ( p c ) = 0 \theta(p_{c})=0  problem to a conjectured inequality , 2024.
+
+ 
+      
+ [12] 
+ 
+Lucio Russo,  On the critical percolation probabilities , Z. Wahrsch. Verw. Gebiete  56  (1981), no. 2, 229–237.  MR 618273
+
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+   
+    Experimental support, please
+     view the build logs 
+    for errors. Generated by
+     
+       
+        L
+         A 
+        T
+         E 
+       
+       xml 
+       
+     .
+   
+   
+     Instructions for reporting errors 
+     We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: 
+     
+       Click the "Report Issue"  ( 
+             
+           )  button, located in the page header. 
+     
+     Tip:  You can select the relevant text first, to include it in your report. 
+     Our team has already identified  the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. 
+     Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a  list of packages that need conversion , and welcome  developer contributions . 
+   
+ 
+   
+     
+       
+        We gratefully acknowledge support from
+        our  major funders ,
+         member institutions ,  ,
+        and all contributors.
+       
+       
+         About 
+         · 
+         Help 
+         · 
+         Contact 
+         · 
+         Subscribe 
+         · 
+         Copyright 
+         · 
+         Privacy 
+         · 
+         Accessibility 
+         · 
+         Operational Status  (opens in new tab) 
+       
+     
+
+     
+       Major funding support from 
+       
+         
+           
+         
+         
+           
+         
+         
+           
+         
+       
+     
+   
+ 
+   
+     
+       
+     
+   
+ 
+ 

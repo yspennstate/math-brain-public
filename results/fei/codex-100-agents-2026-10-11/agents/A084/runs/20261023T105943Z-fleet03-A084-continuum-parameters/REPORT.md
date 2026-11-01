@@ -1,0 +1,45 @@
+# A084: a compact rate region with an actual admission obstruction
+
+## exact target, quantifiers, hypotheses and units
+
+Uniform Boolean functions; Fourier entropy in bits. Close the all-real rate domain, not a rate grid, for a precise failure of the CURRENT-local-hull allocator. For every K in the CLOSED REAL interval[4,33/8], actual G_d on d+31 physical bits has robust sequential-admission capital T_K(G_d)>1/256 while its global stopping hull satisfies0<R_K(G_d)<=4*2^-d*(26+2d)->0. At d=20 an explicit51-bit witness already has global reserve below1/256. The exact truth definition and whole seed are in PROOF.md. Full FEI remains OPEN: this family's ordinary H/I tends0, not infinity.
+
+The stronger generic result holds at EVERY real K>0: existence of a dimension-independent finite L with T_K<=L R_K for all Boolean functions is EQUIVALENT to full FEI with that SAME rate K. No arbitrary admission allocator is ruled out; the specified current-local-hull rule and actual old credit are essential hypotheses.
+
+## sources actually read, revisions and theorem locators
+
+Read current BOARD.md, unchanged B17 lead v2, own STATUS/LEARNED and stage7 proof/engine/certificate; A08020261023T043938Z REPORT/PROOF (all four cores closed), A07220261023T060838Z REPORT/PROOF/CLAIMS (rate1 local-admission damage), A075/A089 current STATUS and board entries, machine-wide AGENTS and execution protocol 2026-10-11-execution-v2. Source bytes are pinned in out/SOURCE_PINS.json. Earlier campaign/paper intake is background, not a new theorem premise. One paired read-only math recall returned weak nearby cards, none used. B17's original AND sign-map task was closed earlier; protocol dispatch instead consumes A072's useful new obstruction and A080's closure, avoiding duplicate third-core work.
+
+Brain wake completed for this session but self-care is degraded: owner-model97.4h, state notes82.0h and last dream32.7h stale at intake. Their personal-context reliability is affected; they are excluded from mathematical premises.
+
+## complete derivation or exact first unsupported line
+
+PROOF.md supplies the complete guard/parity truth-table construction and exact character inverse/Parseval identity, independent physical edges, full entropy formula, all-real auxiliary bias bounds with delta=0 treated separately, and the compact rate endpoint reduction. A parity block keeps EVERY selector-only restriction solvent, hence every original local-hull allocation increment is0. On the rare positive-reach selector path a later admission exposes the same negative seed deficit. Initial actual credit cannot be retroactively reallocated or drawn again from the donor. The global hull is at most Fourier entropy, which tends0 under rare activation. This proves the all-d obstruction. Applying it to any hypothetical seed with H>KI proves the generic fixed-K equivalence; if FEI holds at K then all local payoffs/hulls/capitals are0.
+
+All rates in[4,33/8] are covered by the affine seed deficit and a strict exact endpoint sign. The first conservative domain[4,4097/1024] used I<=24. It was widened only after independent reconstruction gave exact I=98637/524288, allowing the stronger endpoint; EXTENSION_SPEC and RATE_EXTENSION preserve the reason and check. No change of seed or accounting convention occurred. The auxiliary entropy profile is controlled for ALL real delta in[0,1/4], but only dyadic deltas are asserted to be uniform Boolean guards. At delta=0 the rare branch disappears and T=R=0: there is no false extension of the positive-reach lower bound to that face.
+
+First unsupported universal line: construct and initially pay a coherent full-universe envelope at a suitable absolute rate from actual unused influence resources, retaining old owners and full terminal functions. The reduction identifies a circular shortcut rather than proving FEI.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+FROZEN_SPEC and EXTENSION_SPEC preceded their respective computations. Commands from this run: python -B -X utf8 code/certify.py --pilot; certify.py; audit.py0, audit.py1, audit.py2 (with a space before the integer argument); extend.py; persist.py. The pilot passed239957 assertion calls in28.86896s. Main seed/family run passed240100 recorded calls in41.31691s:50,625 literal coefficient groups cover all16,777,216 actual Fourier atoms, exactly matching the different centered occupied-sector engine for complete H and I. It checks51 fixed width/rate controls and four bias faces. These finite controls do not establish the all-d or continuum theorem; the analytic proof does.
+
+The separate direct-character/physical-edge augmented-DAG audit covers d=0,1,2, rates1 and3/2, at most6 physical bits. It passed163,356,709 assertion calls in0.01032,0.30755,0.31059s. Every selector-only arrival has zero local hull, original credit stays unchanged, and the complete seed deficit survives both parity revelations. The widened endpoint passed3 exact checks in0.05998s. Total nonpilot RECORDED assertion calls: 241331; these are not distinct functions. Arithmetic uses Fraction/integer profiles, exact prime-log cancellation and outward192-bit80-term atanh log bounds with a proved tail. No floating sign decides any claim. Memory estimates<=120MB; all jobs finish below55s, no >300MB job, GPU, remote compute, detached worker, automatic dimension escalation or process shedding. No Lean check was attempted or claimed for this analytic proof.
+
+## proof dependencies and changed downstream conclusions
+
+A072-LOCAL-HULL-ADMISSION-DAMAGE-UNBOUNDED@1, hash 794f189e73fe133d5fc29f5b18d26f19a6e0a929999f900f76ccf9cf24875f3b, independently HOLDS at the GENERIC capital-recurrence substatement only (out/REVIEW_A072.json). Its source rate1 all-d family was read, not independently replayed. The complete seed H/I from A084-SAME-CREDIT-TWO-CORE-CONTINUATION@1, hash 55c7c1651b72ecb1d203f529f289ad9c72fe6fe3a29b6d166c3bc665129dc203, is independently recomputed and matched; no assumption of pending two-core financial acceptance is used. The new result supplies a rate4-and-above ACTUAL Boolean obstruction and all-positive-rate reduction. It does not reopen or refute A080/A071's separately certified four-core fixture, which checked the actual admission accounts rather than inferring them from root equality. Old labels, actual reaches, both complete terminals and already spent donor accounting remain explicit. This is a narrow source-bound reconstruction/obstruction, not a new proposed universal proof candidate.
+
+New claim A084-RATE-CONTINUUM-LOCAL-ADMISSION-OBSTRUCTION@1, statement hash ffd015e4788886d939283331407c30dac0d37a3ad641c7caba7c3c4b7fa06a6f: source-complete author proof and exact controls; independent external acceptance pending.
+
+## one next mathematical action and independent reviewer
+
+A072/A074/A092 independently reconstruct the all-K Boolean guard reduction and rate4 endpoint. A071/A075/A089 must replace root-hull top-ups by a coherent envelope whose INITIAL price is paid from the actual unused original influence account, retaining old owners and both complete terminals. The review should attack the selector-only uniform solvency bound, the seed endpoint sign, full entropy superharmonicity, actual parity revelation, and the distinction between a tiny expected reserve and every positive-reach arrival.
+
+## actual persistence receipts or precise save blocker
+
+All research outputs are local to this A084 run. The four protocol files have exact required fields and byte-identical progress/delta content; out/MANIFEST.json records SHA256/size checks. STATUS has two lines and WORKLOG/LEARNED append this stage. Required session wake/checklist receipts are handled by their supplied system helpers; no shared research index, peer folder, brain store or repository was edited. No git, mail or peer message was sent. Supervisor mirroring and independent acceptance remain unverified. out/FINAL_PERSISTENCE_CHECK.json records the final local audit and completion receipt; it and the manifest itself are excluded from circular manifest hashing. Every mathematical command completed and no worker was left running.
+
+## Universal bridge
+
+C019 stopping-tree payment and C024 history transfer advance by an explicit all-dimensional Boolean obstruction UNIFORM over the compact REAL rate interval[4,33/8], not a grid: global reserve tends0 while actual current-local-hull admission needs more than1/256 bit. The generic guard reduction further proves that bounded root-hull-to-local amplification at any fixed K>0 is already EQUIVALENT to FEI at that same K. No universal constant or influence-paid initial bank is obtained. The unpaid step is a coherently allocated full-universe envelope whose initial price comes from the original unused influence account. NEXT addresses that exact noncircular supplier with old owners and full terminals retained, rather than repeating the closed four-core fixture or another isolated function-class estimate.

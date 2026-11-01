@@ -1,0 +1,55 @@
+[
+  {
+    "claim_id": "A083-ALL-COORDINATE-HIGH-MOMENT-QUERY-LOSS",
+    "version": 1,
+    "exact_statement": "For every even n>=4, the actual Boolean product of n/2 disjoint two-bit signs negative only on pair(+,+), with A097 parity-face reference Q and epsilon=2^(-4n), has uniform squared spectrum P, H=n,I=n/2,Inf_i=1/2,CE(P,Q)<4I, exact vacuum calibration and every marginal through order n-2 matched. For all i<n, projection loss L_i=D=n-(1/4)log2(2-epsilon). For i=n, L_n=D-(1/2)log2(4/((3-epsilon)(1+epsilon))), and this is the strict minimum over all coordinates: n-1/2<min_i L_i<n and 2n-1<min_i L_i/Inf_i<2n. Both physical children have CE=n-1+d_i, d_i=0 except the positive displayed tail divergence. No dimension-independent existential first-coordinate L_i<=K Inf_i follows from these matching and source hypotheses; FEI is not refuted since H/I=2.",
+    "hypotheses": [
+      "Every even n>=4; finite uniform Boolean cube; bits",
+      "Explicit strictly positive normalized A097 face reference, tail coordinate n, epsilon=2^(-4n)",
+      "Loss is KL contraction under spectral deletion, not unspecified inheritance or a fresh child source",
+      "All physical outcomes, remaining terminal mismatch, old bills and original capacity retained"
+    ],
+    "statement_sha256": "4063b801de34a2d495d0c1723a0b1ad527e0dc7aef5537d991fd6a82b26f8e5c",
+    "contributors": [
+      "A083"
+    ],
+    "proof_source": {
+      "path": "agents\\A083\\runs\\20261027T123752Z-fleet04-A083-formal-core\\PROOF.md",
+      "sha256": "b6430a4a057adca2d3be4c4c81d49fef35d78952914b92daa76333921c3d3ac0",
+      "formal_status": "NOT_RUN_ADMISSION_HELD",
+      "formal_scope": "Finite n4 rational face/projection formulas and16/9<2 only; no all-n or entropy kernel claim"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "source_claim": "A097-HIGH-MOMENT-MATCHED-QUERY-LOSS",
+        "source_version": 1,
+        "source_statement_sha256": "f3b5c69ef59c7d95ba81cee06034cdf49115a0a5036e75101f19a6ba1bd7064d",
+        "reviewer": "A083",
+        "verdict": "HOLDS unchanged at original i<n scope",
+        "basis": "Independent direct character sums, all proper marginals and rational likelihood certificates; analytic rederivation, no peer helper imports",
+        "extension_scope": "Tail-coordinate strengthening is new here and pending separate independent review; no claim to novelty of the parity construction"
+      }
+    ],
+    "status": "ANALYTIC_PROOF_EXACT_FINITE_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "There exists an absolute K such that every normalized covering reference with CE<=4I, matched vacuum and all marginals through order n-2 has some coordinate i with L_i<=K Inf_i",
+        "witness": "Explicit f_n,Q_n for every even n>=4: all ratios>2n-1",
+        "scope": "Supplied-reference local-payment interface only; neither FEI nor the globally paid projection-history theorem is refuted"
+      }
+    ],
+    "first_unproved_line": "Construct a useful noncircular O(I) original source for arbitrary Boolean cores or pay required productive-interface full query losses from SAME unused original capacity after all old bills and both full terminals.",
+    "next_consumers": [
+      "A097",
+      "A012",
+      "A033",
+      "A096",
+      "A094",
+      "A011",
+      "A050",
+      "B20"
+    ]
+  }
+]

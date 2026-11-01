@@ -1,0 +1,406 @@
+{
+  "method": "Exact Gaussian-rational determinants and prime-log cancellation; no numerical sign tests.",
+  "limitations": "Finite consistency certificates only; all-dimensional proofs are in agents/050.md.",
+  "flat_cases": [
+    {
+      "name": "complex_nondiagonal_base_three_sites",
+      "dimension": 3,
+      "positive_base_atoms": 8,
+      "boundary_kernel": false,
+      "all_first_atom_derivatives_zero": true,
+      "cross_entropy_quadratic_coefficient_exactly_zero": true,
+      "quartic_entropy_coefficient": "-4/175",
+      "fourth_entropy_derivative": "-96/175",
+      "K": [
+        [
+          "1/2",
+          "1/8+(-1/8)i",
+          "0"
+        ],
+        [
+          "1/8+(1/8)i",
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/3"
+        ]
+      ],
+      "A": [
+        [
+          "0",
+          "0",
+          "1/10+(-1/5)i"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1/10+(1/5)i",
+          "0",
+          "0"
+        ]
+      ],
+      "atom_polynomials": [
+        [
+          "7/48",
+          "0",
+          "-1/40",
+          "0"
+        ],
+        [
+          "3/16",
+          "0",
+          "1/40",
+          "0"
+        ],
+        [
+          "3/16",
+          "0",
+          "-1/40",
+          "0"
+        ],
+        [
+          "7/48",
+          "0",
+          "1/40",
+          "0"
+        ],
+        [
+          "7/96",
+          "0",
+          "1/40",
+          "0"
+        ],
+        [
+          "3/32",
+          "0",
+          "-1/40",
+          "0"
+        ],
+        [
+          "3/32",
+          "0",
+          "1/40",
+          "0"
+        ],
+        [
+          "7/96",
+          "0",
+          "-1/40",
+          "0"
+        ]
+      ]
+    },
+    {
+      "name": "two_complex_nondiagonal_blocks_four_sites",
+      "dimension": 4,
+      "positive_base_atoms": 16,
+      "boundary_kernel": false,
+      "all_first_atom_derivatives_zero": true,
+      "cross_entropy_quadratic_coefficient_exactly_zero": true,
+      "quartic_entropy_coefficient": "-5764448768/207450671967",
+      "fourth_entropy_derivative": "-46115590144/69150223989",
+      "K": [
+        [
+          "1/2",
+          "1/8+(-1/8)i",
+          "0",
+          "0"
+        ],
+        [
+          "1/8+(1/8)i",
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/3",
+          "1/20+(1/20)i"
+        ],
+        [
+          "0",
+          "0",
+          "1/20+(-1/20)i",
+          "2/5"
+        ]
+      ],
+      "A": [
+        [
+          "0",
+          "0",
+          "1/10+(-1/5)i",
+          "2/15+(1/15)i"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1/10+(1/5)i",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "2/15+(-1/15)i",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "atom_polynomials": [
+        [
+          "553/6400",
+          "0",
+          "-13/540",
+          "0",
+          "0"
+        ],
+        [
+          "711/6400",
+          "0",
+          "13/540",
+          "0",
+          "0"
+        ],
+        [
+          "711/6400",
+          "0",
+          "-13/540",
+          "0",
+          "0"
+        ],
+        [
+          "553/6400",
+          "0",
+          "13/540",
+          "0",
+          "0"
+        ],
+        [
+          "287/6400",
+          "0",
+          "7/540",
+          "0",
+          "0"
+        ],
+        [
+          "369/6400",
+          "0",
+          "-7/540",
+          "0",
+          "0"
+        ],
+        [
+          "369/6400",
+          "0",
+          "7/540",
+          "0",
+          "0"
+        ],
+        [
+          "287/6400",
+          "0",
+          "-7/540",
+          "0",
+          "0"
+        ],
+        [
+          "1141/19200",
+          "0",
+          "-1/1080",
+          "0",
+          "0"
+        ],
+        [
+          "489/6400",
+          "0",
+          "1/1080",
+          "0",
+          "0"
+        ],
+        [
+          "489/6400",
+          "0",
+          "-1/1080",
+          "0",
+          "0"
+        ],
+        [
+          "1141/19200",
+          "0",
+          "1/1080",
+          "0",
+          "0"
+        ],
+        [
+          "539/19200",
+          "0",
+          "13/1080",
+          "0",
+          "0"
+        ],
+        [
+          "231/6400",
+          "0",
+          "-13/1080",
+          "0",
+          "0"
+        ],
+        [
+          "231/6400",
+          "0",
+          "13/1080",
+          "0",
+          "0"
+        ],
+        [
+          "539/19200",
+          "0",
+          "-13/1080",
+          "0",
+          "0"
+        ]
+      ]
+    },
+    {
+      "name": "entirely_boundary_path_with_deterministic_coordinate",
+      "dimension": 3,
+      "positive_base_atoms": 4,
+      "boundary_kernel": true,
+      "all_first_atom_derivatives_zero": true,
+      "cross_entropy_quadratic_coefficient_exactly_zero": true,
+      "quartic_entropy_coefficient": "-8",
+      "fourth_entropy_derivative": "-192",
+      "K": [
+        [
+          "1/2",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "A": [
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "atom_polynomials": [
+        [
+          "1/4",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "1/4",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1/4",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1/4",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    }
+  ],
+  "connected_zero_fisher_case": {
+    "name": "connected_real_chain_imaginary_star_tangent",
+    "all_first_atom_derivatives_zero": true,
+    "conditional_odds_in_bitmask_order": [
+      "7/8",
+      "9/8",
+      "8/9",
+      "8/7"
+    ],
+    "Q_g_diagonal": [
+      "log(9/7)",
+      "log(64/63)"
+    ],
+    "Q_g_off_diagonal": "0",
+    "exact_hessian": "-log(64/63)/50 < 0",
+    "verified_prime_log_coefficients": {
+      "7": "1/50",
+      "2": "-3/25",
+      "3": "1/25"
+    }
+  },
+  "noise_gradient_checks": {
+    "monotone_boolean_functions_checked": 20,
+    "active_count_histogram": {
+      "0": 2,
+      "3": 9,
+      "2": 6,
+      "1": 3
+    },
+    "epsilon": "1/8",
+    "all_gradient_lower_bounds_psd_exactly": true,
+    "all_active_principal_blocks_positive_definite_exactly": true,
+    "all_inactive_rows_columns_exactly_zero": true,
+    "noise_gradient_chain_identity_exact": true
+  },
+  "all_exact_checks_passed": true
+}

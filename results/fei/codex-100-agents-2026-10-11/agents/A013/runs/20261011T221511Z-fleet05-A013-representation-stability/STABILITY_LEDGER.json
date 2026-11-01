@@ -1,0 +1,257 @@
+{
+  "restriction": {
+    "gate_count": "N_a<=N",
+    "regular_inner_count": "M_l,a<=M_l",
+    "support": "R_l,a subset R_l minus A",
+    "rank": "inherited coordinate deletion decreases rank; ratio rank/(predecessor intersection+1) need not decrease",
+    "probability": "p_l,a=Pr(E_l|X_A=a)<=min(1,2^|A| p_l); may vanish",
+    "root_odds": "lambda_l min(p_l,a,1/2)",
+    "root_entropy": "sum_l h2(odds/(1+odds))",
+    "root_normalizer": "sum_l log2(1+odds)",
+    "root_set_cost_change": "Lambda_a-Lambda+sum_roots log2(pi_l/pi_l,a), at unchanged retained lambda",
+    "label_entropy": "uniform attachment log2 d_a(j)<=log2 d(j); pi-weighted label KL<=log2(2^|A| W/W_a), W_a>0"
+  },
+  "disjoint_tensor": {
+    "positive_gate_count": "(prod_i(N_i,+ + N_i,-)+prod_i(N_i,+ - N_i,-))/2",
+    "inner_count": "sum_i M_i",
+    "gate_probability": "prod_i p_i",
+    "gate_root_pi": "min(prod_i p_i,1/2)",
+    "attachment_degree": "d_i,+/-(j) prod_k!=i(N_k,+ + N_k,-) is an upper bound",
+    "artificial_label_entropy": "b H(L|B=1)+(1-b)H(L|B=0)=sum_i H(L_i)-h2(b)",
+    "complete_reference_cost": "sum_i c_i",
+    "influence": "sum_i I_i"
+  },
+  "fresh_multiplexer": {
+    "gate_count": "sum_b N_b",
+    "inner_count": "M_b,l+path_depth_b",
+    "gate_probability": "2^-depth_b p_b,l",
+    "root_pi": "2^-depth_b p_b,l for nonzero depth",
+    "feasible_weight_scale": "c=min(1,min_selector_j 1/sum_l:j in R_l,new lambda_l)",
+    "root_odds": "c lambda_l 2^-depth_l p_l",
+    "root_log_odds_increase": "between depth_l-1+log2(1/c) and depth_l+log2(1/c)",
+    "latent_label_entropy": "H(B)+sum_b Pr(B=b)H(L|B=b); H(B)=expected depth for dyadic leaves"
+  },
+  "reused_multiplexer": {
+    "necessary_update": "restrict g_b and every gate to selector assignment b first",
+    "gate_probability": "2^-a Pr(E_b,l|selector=b)",
+    "failure_witness": "g_+(x)=x,g_-(x)=-x, reused selector x gives constant +1"
+  },
+  "activation_repair": {
+    "p": "2^-r",
+    "nonempty_spectral_mass": "v=2p-p^2",
+    "control_reference": "Q(S,empty)=sum_j=max(1,max(S))^r 4^-j",
+    "core_reference": "Q(S,T)=p^2 R_g(T), T nonempty",
+    "vacuum_mass": "full reference assigns 1-v to empty",
+    "nonempty_reference": "v Q(S,T)/q_star, q_star=sum_nonempty Q<=1",
+    "exact_cost": "h2(v)+sum_nonempty P log2(1/Q)+v log2(q_star)",
+    "cost_bound": "h2(v)+2r v+p c_g <=p c_g+(6+2/ln2)pr",
+    "influence": "p(I(g)+r)",
+    "unpaid_term": "arbitrary balanced core reference cost c_g"
+  },
+  "iteration": {
+    "tensor_cost": "additive for disjoint references",
+    "balancing_cost": "unchanged by fresh-character spectrum translation; influence increases by 1",
+    "activation_cost": "c_new<=p c_old+C_star p r, C_star=6+2/ln2",
+    "activation_influence": "I_new=p I_old+p r",
+    "depth_independent_constant": "max(K_initial,C_star)",
+    "local_charge_weight": "product of all later activation probabilities",
+    "cover_gate_growth": "tensor multiplies sign-cover counts; mux sums counts; restriction adds none"
+  },
+  "scope": "Complete projected reference repair; no universal core-code claim and no queue-infimum comparison",
+  "validation_file": "out/EXACT_RESULTS.json",
+  "late_lead_direction": {
+    "helper": "A013-lead-ledger-v1",
+    "status": "PASS",
+    "exact_assertions": 147,
+    "elapsed_seconds": 0.0015044000465422869,
+    "core_spectrum": [
+      "-1/4",
+      "-3/4",
+      "-1/4",
+      "1/4",
+      "-1/4",
+      "1/4",
+      "-1/4",
+      "1/4"
+    ],
+    "restriction_obstruction": {
+      "r": 10,
+      "child_L": "17/16",
+      "parent_L_upper": "5/1024",
+      "child_S_lower": "1/16",
+      "parent_S_upper": "55/1024",
+      "child_rank_rarity_lower": "3/10",
+      "parent_rank_rarity_upper": "231/1024",
+      "parent_I": "55/4096",
+      "physical_restriction_probability": "1/1024"
+    },
+    "shared_selector_depths": [
+      {
+        "depth": 1,
+        "formal_positive_clauses": 2,
+        "formal_selector_read": 2,
+        "noncontradictory_clauses": 2,
+        "reduced_selector_read": 2,
+        "gate_probabilities": [
+          "1/4",
+          "1/4"
+        ],
+        "feasible_lambda": [
+          "1/2",
+          "1/2"
+        ],
+        "root_odds": [
+          "1/8",
+          "1/8"
+        ],
+        "root_probabilities": [
+          "1/9",
+          "1/9"
+        ],
+        "root_normalizer_exact": "2 log2(9/8)",
+        "root_vector_entropy_exact": "2 h2(1/9)",
+        "attachment_label_entropy_selector": 1,
+        "attachment_label_entropy_data": 0,
+        "spectrum_nonzero_masses": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "H_bits": 2,
+        "I": "3/2",
+        "influence_vector": [
+          "1/2",
+          "1/2",
+          "1/2"
+        ]
+      },
+      {
+        "depth": 2,
+        "formal_positive_clauses": 3,
+        "formal_selector_read": 3,
+        "noncontradictory_clauses": 2,
+        "reduced_selector_read": 2,
+        "gate_probabilities": [
+          "1/4",
+          "1/4"
+        ],
+        "feasible_lambda": [
+          "1/2",
+          "1/2"
+        ],
+        "root_odds": [
+          "1/8",
+          "1/8"
+        ],
+        "root_probabilities": [
+          "1/9",
+          "1/9"
+        ],
+        "root_normalizer_exact": "2 log2(9/8)",
+        "root_vector_entropy_exact": "2 h2(1/9)",
+        "attachment_label_entropy_selector": 1,
+        "attachment_label_entropy_data": 0,
+        "spectrum_nonzero_masses": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "H_bits": 2,
+        "I": "3/2",
+        "influence_vector": [
+          "1/2",
+          "1/2",
+          "0",
+          "1/2"
+        ]
+      },
+      {
+        "depth": 3,
+        "formal_positive_clauses": 4,
+        "formal_selector_read": 4,
+        "noncontradictory_clauses": 2,
+        "reduced_selector_read": 2,
+        "gate_probabilities": [
+          "1/4",
+          "1/4"
+        ],
+        "feasible_lambda": [
+          "1/2",
+          "1/2"
+        ],
+        "root_odds": [
+          "1/8",
+          "1/8"
+        ],
+        "root_probabilities": [
+          "1/9",
+          "1/9"
+        ],
+        "root_normalizer_exact": "2 log2(9/8)",
+        "root_vector_entropy_exact": "2 h2(1/9)",
+        "attachment_label_entropy_selector": 1,
+        "attachment_label_entropy_data": 0,
+        "spectrum_nonzero_masses": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "H_bits": 2,
+        "I": "3/2",
+        "influence_vector": [
+          "1/2",
+          "1/2",
+          "0",
+          "0",
+          "1/2"
+        ]
+      },
+      {
+        "depth": 4,
+        "formal_positive_clauses": 5,
+        "formal_selector_read": 5,
+        "noncontradictory_clauses": 2,
+        "reduced_selector_read": 2,
+        "gate_probabilities": [
+          "1/4",
+          "1/4"
+        ],
+        "feasible_lambda": [
+          "1/2",
+          "1/2"
+        ],
+        "root_odds": [
+          "1/8",
+          "1/8"
+        ],
+        "root_probabilities": [
+          "1/9",
+          "1/9"
+        ],
+        "root_normalizer_exact": "2 log2(9/8)",
+        "root_vector_entropy_exact": "2 h2(1/9)",
+        "attachment_label_entropy_selector": 1,
+        "attachment_label_entropy_data": 0,
+        "spectrum_nonzero_masses": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "H_bits": 2,
+        "I": "3/2",
+        "influence_vector": [
+          "1/2",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "1/2"
+        ]
+      }
+    ]
+  }
+}

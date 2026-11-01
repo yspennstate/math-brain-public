@@ -1,0 +1,78 @@
+{
+  "target": "C0052",
+  "title": "Non-triviality of the scaling limit of the three-dimensional Ising model",
+  "as_of": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "dated_ranking": {
+    "date": "2026-09-07",
+    "tier": 5,
+    "prior_status": "attempted_un",
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 542
+  },
+  "exact_statement_recovered": true,
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/1707.00520",
+      "author": "Hugo Duminil-Copin",
+      "locator": "printed p.94, Conjecture 6, equations (7.1)-(7.2); Exercise 61 on p.95",
+      "read_url": "https://www.ihes.fr/~duminil/publi/2017PIMS.pdf",
+      "intake_record": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\sources.jsonl:9",
+      "historical_hash_not_recomputed": "cc442344d0cc21c5d57163719b06dfaf1d243dee8731716bf89d21c593f98a5b"
+    },
+    {
+      "url": "https://arxiv.org/html/2112.04248v2",
+      "author": "Michael Aizenman",
+      "locator": "equations (5.9), (5.13), (8.1)-(8.3)",
+      "read_state": "relevant passages read"
+    },
+    {
+      "url": "https://annals.math.princeton.edu/2021/194-1/p03",
+      "authors": [
+        "Michael Aizenman",
+        "Hugo Duminil-Copin"
+      ],
+      "locator": "2021 194(1), pp.163-235",
+      "scope": "four-dimensional Gaussian scaling limits, does not solve the three-dimensional target"
+    }
+  ],
+  "recall": {
+    "query": "C0052 three-dimensional Ising proof gaps mistakes",
+    "outcome": "60-second timeout; use the named-memory fallback"
+  },
+  "paired_prover_proof_read": true,
+  "novelty_claim": false,
+  "exact_statement": "For the zero-field homogeneous nearest-neighbor ferromagnetic Ising model on Z^3, with g(beta)=sum U4(0,x2,x3,x4)/(chi(beta)^2 xi(beta)^3) and exponential xi as in (7.2), prove that g(beta) does not tend to zero as beta increases to beta_c. Equivalently, since g<=0, there are epsilon>0 and beta_n increasing to beta_c with -g(beta_n)>=epsilon.",
+  "source_locator": "Conjecture 6, p. 94",
+  "intake_statement": "Prove that the three-dimensional Ising model is non-trivial: its scaling limit is not a Gaussian field (the renormalised coupling constant does not vanish).",
+  "prior_work_checks": {
+    "intake_problem_line": 52,
+    "intake_attempt_line": 42,
+    "H_and_I_attempt_directories": "Exact C0052 grep returned no matching records",
+    "lean_annotated_ranking": "C0052 remains attempted_un in the dated record, line 592",
+    "team_O_board": "C0052 not listed; no ownership overwritten",
+    "population_export": "Existing C0052 problem and reduction cards are marked unverified",
+    "owner_solved_or_retired_status": "No verified disposition found in the inspected target records; canonical checks documented separately; absence is not a novelty certificate",
+    "live_population_store": "~/math-brain-build/local/population/brain.sqlite3; exact C0052 problem and old reduction IDs both still truth_status=unverified at read"
+  },
+  "literature_search_scope": "Bounded primary-source search on 2026-10-10 found no verified 3D solution; not an exhaustive current-status certificate",
+  "independence_receipt": "INDEPENDENT.md hash frozen in VERIFICATION.json before peer proof read",
+  "author_model_evidence": {
+    "requested": "gpt-6.1-sol, max reasoning, Fast tier, acc2/proofswarm",
+    "served_model": "UNAVAILABLE",
+    "response_side_attestation": false
+  },
+  "referee_model_evidence": "PENDING; requested settings are not evidence",
+  "canonical_store_check": {
+    "as_of": "2026-10-10",
+    "canonical_code_checkout": "~/math-research-brain",
+    "locator_status": "UNRESOLVED",
+    "read_scope": "Store implementation locator lines and database filenames only; no test material or benchmark database was opened.",
+    "discovery_command": "rg --files --no-ignore ~/math-research-brain -g *.sqlite3 -g *.sqlite -g *.db with test, evaluation, benchmark, bank and key directories excluded",
+    "discovery_result": "Only two local/audits/jmlr-two-paper-zip-audit-v1 database files were found; these are audit artifacts and were not treated as the active canonical store.",
+    "confirmed_live_population_store": "~/math-brain-build/local/population/brain.sqlite3",
+    "confirmed_live_population_query": "Read-only exact node-ID query; see LOCAL_STORE_CHECK.json. The C0052 problem and previous reduction cards both have truth_status=unverified.",
+    "canonical_solved_or_retired_status": "UNKNOWN",
+    "limitation": "The active separate canonical database location was not established. No exhaustive owner's-solved-work or current-openness certificate is claimed. The packet retains UNKNOWN openness and makes no novelty claim."
+  }
+}

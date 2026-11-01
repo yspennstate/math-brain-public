@@ -1,0 +1,51 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w440",
+  "bundle_slug": "p0043-original-site-and-bond-scope-001",
+  "entries": [
+    {
+      "key": "bs-site-conjecture",
+      "namespace": "probability.percolation",
+      "logical_name": "benjamini-schramm-criticality-site-conjecture",
+      "kind": "concept",
+      "title": "Benjamini–Schramm criticality conjecture, original site form",
+      "statement": "Conjecture (not a theorem): Let G be an infinite connected locally finite graph whose automorphism group has finitely many vertex orbits. In independent Bernoulli site percolation, if the critical parameter p_c(G) is below 1, then at p_c(G) there is almost surely no infinite open vertex cluster. This is the site-percolation form of Benjamini and Schramm's 1996 Conjecture 4; the p_c<1 assumption is essential.",
+      "proof_text": null,
+      "assumptions": ["G infinite, connected, locally finite", "finitely many vertex orbits under Aut(G)", "independent Bernoulli site percolation", "p_c(G)<1"],
+      "domain": "probability theory; percolation",
+      "source": {
+        "source_id": "doi:10.1214/ECP.v1-978:conjecture-4",
+        "url": "https://www.maths.tcd.ie/EMIS/journals/EJP-ECP/article/download/978/978-3321-1-PB.pdf",
+        "revision": "as-read-2026-10-10, pages 72 and 75",
+        "license": "cc-by-3.0",
+        "excerpt": "Critical percolation dies in every almost transitive graph (assuming pc < 1)."
+      }
+    },
+    {
+      "key": "bs-bond-conjecture",
+      "namespace": "probability.percolation",
+      "logical_name": "benjamini-schramm-criticality-bond-conjecture",
+      "kind": "concept",
+      "title": "Benjamini–Schramm criticality conjecture, bond analogue",
+      "statement": "Conjectured bond analogue (do not treat as an established theorem without reviewing a current proof): Let G be an infinite connected locally finite graph with finitely many vertex orbits under its automorphism group. In independent Bernoulli bond percolation with p_c(G)<1, the configuration at p_c(G) almost surely has no infinite open edge cluster. Benjamini and Schramm expressly said their nonplanar questions extend to bond percolation; Hutchcroft's 2016 theorem proves the exponential-growth subcase. A September/October 2026 release claims the full bond statement, but that claim is not certified by this draft.",
+      "proof_text": null,
+      "assumptions": ["G infinite, connected, locally finite", "finitely many vertex orbits under Aut(G)", "independent Bernoulli bond percolation", "p_c(G)<1"],
+      "domain": "probability theory; percolation",
+      "source": {
+        "source_id": "doi:10.1214/ECP.v1-978:section-2-bond-note",
+        "url": "https://www.maths.tcd.ie/EMIS/journals/EJP-ECP/article/download/978/978-3321-1-PB.pdf",
+        "revision": "as-read-2026-10-10, page 72",
+        "license": "cc-by-3.0",
+        "excerpt": "remain equally valid, with only minor modifications, for bond percolation"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "bs-bond-conjecture",
+      "to_key": "bs-site-conjecture",
+      "kind": "analogous_to",
+      "rationale": "The original paper frames Conjecture 4 in site percolation and explicitly extends its nonplanar questions to bond percolation. Both endpoint excerpts above are from that source; the relation does not assert that either conjecture is proved."
+    }
+  ]
+}

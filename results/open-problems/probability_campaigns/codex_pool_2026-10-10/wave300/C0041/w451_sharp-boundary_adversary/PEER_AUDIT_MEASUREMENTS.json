@@ -1,0 +1,39 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w451/audit_exact_bridge.py",
+  "result": "PASS",
+  "raw_mean_drift": "1/125",
+  "Green_weighted_numerator": "-1004048/59246275",
+  "mean_Green": "63724944/59246275",
+  "Kalikow_drift": "-62753/3982809",
+  "Kalikow_drift_decimal": -0.015755965199435874,
+  "environment_count": 4,
+  "matrix_rows": [
+    {
+      "types": "++",
+      "Green00": "400/391",
+      "probability": "2601/10000",
+      "directional_drift": "2/5"
+    },
+    {
+      "types": "+-",
+      "Green00": "400/399",
+      "probability": "2499/10000",
+      "directional_drift": "2/5"
+    },
+    {
+      "types": "-+",
+      "Green00": "400/319",
+      "probability": "2499/10000",
+      "directional_drift": "-2/5"
+    },
+    {
+      "types": "--",
+      "Green00": "400/391",
+      "probability": "2401/10000",
+      "directional_drift": "-2/5"
+    }
+  ],
+  "elapsed_seconds": 0.0011121999705210328,
+  "verdict": "KEEP w450 L4 as a counterexample to positive-mean-drift => positive finite-domain Kalikow drift; no parent-target counterexample",
+  "formal_check": false
+}

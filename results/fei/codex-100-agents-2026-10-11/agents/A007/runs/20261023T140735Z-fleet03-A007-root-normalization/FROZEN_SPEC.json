@@ -1,0 +1,13 @@
+{
+ "helper_version":"A007-private-core-embedding-v1",
+ "family":"For each labelled nonconstant Boolean core g on s bits, one group of L positive private variables per FALSE core point v; sign F=2 product_{v:g(v)=-1,l=1..L}(OR of core literals false only at v OR x_vl)-1",
+ "domain":"Full s=1,2,3 with L=1, plus s=1,2 with L=2; pilot s=1,2 with L=1; no dimension increase",
+ "case_count":"Full 270+16=286 actual Boolean functions; pilot 16. Additional scalar finite-amplification bounds s=1..64 with L=4s+4, not additional physical truth tables.",
+ "symmetry":"None; all labelled core truth tables",
+ "arithmetic":"Integer Walsh, Fraction exact influence, rational prime-exponent logarithm vectors for two fixed reference laws",
+ "references":"Uniform on all nonempty physical subsets; weights proportional to mask+1 on all nonempty physical subsets. Core-only extraction is by actual conditioning, with signed v log Z retained.",
+ "memory_estimate_MB":100,
+ "pilot_maximum_runtime_seconds":55,
+ "maximum_runtime_seconds":55,
+ "acceptance":"Literal CNF equals direct function construction at every input; exact core coefficient affine identity including empty; independent direct physical flips equal full Fourier influence and closed influence formula; core-only reference normalizer and logarithm refund identities; finite L guarantee; no FEI acceptance from finite cases"
+}

@@ -1,0 +1,102 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w490",
+  "bundle_slug": "c0056-joint-ui-adversary-001",
+  "entries": [
+    {
+      "key": "joint-ui",
+      "namespace": "probability.random-operators",
+      "logical_name": "draft-joint-poisson-uniform-integrability-spectral-criterion",
+      "kind": "concept",
+      "title": "DRAFT: joint Poisson uniform integrability and pathwise absolute continuity",
+      "statement": "DRAFT, independent review pending. Let omega -> mu_omega be a measurable kernel of probability measures on R on a standard probability space, let I be a bounded open interval, and put f_eta(omega,E)=integral eta/[pi((E-t)^2+eta^2)] dmu_omega(t). Almost-sure absolute continuity of mu_omega on I is equivalent to: for every closed positive-length interval J compactly contained in I, lim_{M->infinity} sup_{0<eta<1} E integral_J f_eta 1_{f_eta>M} dE=0. This is joint uniform integrability in (omega,E), not just boundedness of the averaged density. Full draft proof in the owner campaign source; no Anderson-model estimate is asserted.",
+      "proof_text": null,
+      "assumptions": [
+        "standard probability space",
+        "measurable probability-measure kernel",
+        "I bounded and open",
+        "normalized Poisson kernel"
+      ],
+      "domain": "spectral theory / random operators",
+      "source": {
+        "source_id": "owner-probability300:w490:C0056:joint-ui",
+        "url": "file:///~/brain_workers/w490/INDEPENDENT.md",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "ac-no-lp",
+      "namespace": "probability.random-operators",
+      "logical_name": "draft-absolutely-continuous-spectral-measure-without-higher-density-moments",
+      "kind": "concept",
+      "title": "DRAFT: absolute continuity without any higher Poisson moment bound",
+      "statement": "DRAFT, independent review pending. The density g(E)=1/[E(log(1/E))^2] on (0,exp(-1)), zero elsewhere, integrates to one and lies in no Lp for p>1. Multiplication by E on L2(g(E)dE) is a bounded self-adjoint operator whose unit-vector spectral measure is g(E)dE. Its normalized Poisson densities converge in L1 and are uniformly integrable, but their pth energy moments diverge as eta tends to zero for every p>1 on any interval containing the support in its interior. Thus a higher-moment sufficient condition is stronger than spectral absolute continuity; failure to prove it is not a refutation of the Anderson conjecture.",
+      "proof_text": null,
+      "assumptions": [
+        "scalar spectral construction",
+        "p>1",
+        "interval contains [0,exp(-1)] in its interior"
+      ],
+      "domain": "spectral theory / random operators",
+      "source": {
+        "source_id": "owner-probability300:w490:C0056:ac-no-lp",
+        "url": "file:///~/brain_workers/w490/UI_SEPARATION.md",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "c0056-gap",
+      "namespace": "probability.random-operators",
+      "logical_name": "draft-c0056-fixed-disorder-joint-uniform-integrability-bridge",
+      "kind": "concept",
+      "title": "DRAFT: C0056 spectral bridge and separate GOE gap",
+      "statement": "DRAFT, independent review pending. For the bounded nearest-neighbor Anderson Hamiltonian H=-A+lambda V on l2(Z^3), iid V_x uniform on [-1,1], and lambda>0 fixed, local joint uniform integrability of normalized Im G_00(E+i eta) down to eta=0 on an open interval implies spectral absolute continuity there by stationarity and the countable site basis. Nonzero spectral weight requires a separate premise. Uniform higher Poisson moments, or the independent prover's cavity inverse-moment bound, are sufficient stronger hypotheses; none is proved here for this model. An upper first averaged Poisson moment is insufficient. C0056's intake also requests GOE finite-volume statistics, which this bridge does not establish.",
+      "proof_text": null,
+      "assumptions": [
+        "lambda>0 fixed before eta tends to zero",
+        "iid uniform site law",
+        "Z^3 six-neighbor adjacency",
+        "hypothetical joint-UI estimate; unproved for target",
+        "nonzero mass and GOE not supplied"
+      ],
+      "domain": "spectral theory / random operators",
+      "source": {
+        "source_id": "owner-probability300:w490:C0056:c0056-gap",
+        "url": "file:///~/brain_workers/w490/INDEPENDENT.md",
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "joint-ui",
+      "to_existing_logical": "math:probability.random-matrices:stieltjes-inversion-formula-density-from-the-boundary-imaginary-part",
+      "kind": "cites",
+      "rationale": "The same normalized Poisson transform recovers each measure; the draft criterion supplies the missing joint uniform-integrability step before claiming pathwise ac."
+    },
+    {
+      "from_key": "ac-no-lp",
+      "to_key": "joint-ui",
+      "kind": "semantic_association",
+      "rationale": "This explicit ac density satisfies the draft UI property while failing every p>1 moment condition, separating the two hypotheses."
+    },
+    {
+      "from_key": "c0056-gap",
+      "to_key": "joint-ui",
+      "kind": "depends_on",
+      "rationale": "The stated conditional lattice route uses the draft criterion separately for every site measure, followed by stationarity and a countable-basis argument."
+    },
+    {
+      "from_key": "c0056-gap",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor",
+      "kind": "semantic_association",
+      "rationale": "The exact intake has both spectral ac and GOE conclusions; this concept addresses only the conditional ac bridge and preserves the separate GOE gap."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# Independent derivation before paired-prover access
+
+Recorded before reading any w348 proof artifact. Only w348 STATUS.md and primary-source introductions have been read.
+
+Exact target: a universal C such that every full-dimensional isotropic log-concave probability measure mu on R^n satisfies Var_mu(f) <= C integral |grad f|^2 dmu for all locally Lipschitz f in L^2(mu). Full-target novelty is not claimed: October 2026 primary preprints claim proofs.
+
+Obstruction A (raw moments are not cumulants). Let X be standard Gaussian in R^n, and put u=e_1. The tensor M_ijk=E[X_1 X_i X_j X_k] equals delta_1i delta_jk + delta_1j delta_ik + delta_1k delta_ij. Each summand has squared Hilbert-Schmidt norm n; each of the three pairwise inner products is 1. Thus |M|_HS^2=3n+6. It cannot satisfy a dimension-independent fourth-order tensor-slice bound. In contrast the fourth cumulant is zero. Any higher-order induction replacing cumulants by centered raw moments loses essential cancellation even for an isotropic Gaussian.
+
+Obstruction B (tilts do not preserve an isotropic covariance bound). Let X=E-1 with E exponential of rate 1. Its density exp(-(x+1)) 1_{x>=-1} is log-concave, mean zero, variance 1. Under a linear tilt exp(theta x), theta<1, E has rate 1-theta and Var(X)=(1-theta)^(-2). At theta=0,1/2,3/4,9/10, the variances are exactly 1,4,16,100. Therefore no universal covariance bound follows for arbitrary exponential tilts from isotropy at theta=0.
+
+Obstruction C (Gaussian regularization gives a time-dependent bound). Tilt the same measure with exp(x-t x^2/2), t>0. The remaining density is proportional to exp(-t x^2/2) 1_{x>=-1}. Set Y=sqrt(t) X: its density is proportional to exp(-y^2/2) 1_{y>=-sqrt(t)}. As t decreases to 0, dominated convergence of moments gives t Var(X) -> 1-2/pi >0. Thus arbitrarily small positive Gaussian regularization does not yield a uniform covariance cap across all tilts. This is a deterministic tilted-state example, not a claim about the probability that stochastic localization visits those states.
+
+Obstruction D (Loewner decay does not commute with a random maximizing direction). Let B be scalar Brownian motion, tau=inf{t: |B_t|=1/4}, Y_t=B_{t wedge tau}, and A_t=diag(1+Y_t,1-Y_t). This is a bounded positive-definite symmetric matrix martingale, so E[A_t]=I and E[A_t | F_s]=A_s. Yet ||A_t||_op=1+|Y_t|, and for t>0, E||A_t||_op>1. Hence a matrix martingale, even with zero drift, need not have a supermartingale operator norm. Subtracting a sufficiently small deterministic scalar drift gives strict matrix expectation decay over a short interval while norm expectation initially increases; the zero-drift example already refutes the claimed inference. A covariance-process argument needs control of the matrix martingale and eigenvector selection, not merely a negative-semidefinite drift.
+
+Review boundary: these refute four proposed shortcuts, not KLS or the recent authors' actual arguments. Pending w350 independent check. No computation is offered as proof of the full target.

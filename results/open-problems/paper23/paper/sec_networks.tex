@@ -1,0 +1,98 @@
+\section{Gated networks}\label{sec:networks}
+
+We now set up the class of networks and the reduction that turns a differentiable network into a
+product of gated Gaussian blocks. The reduction is exact for piecewise-linear activations and holds
+in a convex-hull sense for any activation with derivative in $[0,1]$; this is what lets a single set
+of estimates cover the rectified linear unit, its leaky and absolute-value variants, and smooth
+activations at once.
+
+\subsection{Feedforward networks with biases}
+A depth-$L$ fully connected network is a map $F:\R^{d}\to\R$,
+\begin{equation}\label{eq:fcnet}
+  h_0=x,\qquad h_\ell=\sigma_\ell\!\bigl(W_\ell h_{\ell-1}+b_\ell\bigr)\ (1\le\ell\le L),\qquad
+  F(x)=\langle w, h_L\rangle,
+\end{equation}
+with weight matrices $W_\ell\in\R^{n_\ell\times n_{\ell-1}}$ ($n_0=d$), bias vectors
+$b_\ell\in\R^{n_\ell}$, a readout $w\in\R^{n_L}$, and activations $\sigma_\ell$ applied
+coordinatewise. We take the weights independent Gaussian, $W_\ell$ with entry variance
+$\theta_\ell/n_{\ell-1}$ and $w$ with variance $1/n_L$, and treat the biases as arbitrary fixed vectors,
+subject only to a mild condition below that keeps the gates from saturating. The scale $\theta_\ell$ is
+the \emph{signal-preserving} choice ($\theta_\ell=2$ for ReLU, so that $\EE\|h_\ell\|^2=\|h_{\ell-1}\|^2$)
+where the gradient lower bound of \Cref{prop:gradlb} needs it, and $\theta_\ell=1$ elsewhere; all
+constants below are stated for the choice in force. Binary classification is by $\sgn F$; the
+multiclass case has a readout matrix and $F(x)=\arg\max_j\langle w_j,h_L\rangle$, treated in
+\Cref{sec:fragility}.
+
+\subsection{The derivative gate}
+Wherever $F$ is differentiable, the chain rule gives
+\begin{equation}\label{eq:jacobian}
+  \nabla F(x)^\top=w^\top D_L(x)W_L\,D_{L-1}(x)W_{L-1}\cdots D_1(x)W_1,\qquad
+  D_\ell(x)=\diag\bigl(\sigma_\ell'(z_\ell(x))\bigr),
+\end{equation}
+where $z_\ell(x)=W_\ell h_{\ell-1}(x)+b_\ell$ is the preactivation. The diagonal $D_\ell(x)$ is the
+\emph{gate} at layer $\ell$. Three cases organize the activations.
+
+\begin{definition}[Gate class]\label{def:gate}
+An activation $\sigma$ is \emph{$[0,1]$-slope} if it is Lipschitz with $\sigma'\in[0,1]$ almost
+everywhere. It is \emph{piecewise linear} if in addition $\sigma'$ takes finitely many values
+$s_1,\dots,s_r\in[0,1]$.
+\end{definition}
+
+For a piecewise-linear activation the gate $D_\ell(x)$ is, coordinatewise, one of the finitely many
+slopes, so $D_\ell(x)$ ranges over a finite set of diagonal matrices as $x$ varies; for the rectified
+linear unit the slopes are $\{0,1\}$ and $D_\ell(x)$ is a coordinate projection. For a general
+$[0,1]$-slope activation the gate is a diagonal matrix with entries in $[0,1]$, hence a convex
+combination of $0/1$ gates. Since the operator norm and least singular value of $DW$, as $D$ ranges
+over diagonal matrices with entries in $[0,1]$ and fixed support pattern, are attained at extreme
+points (the map $D\mapsto\|DWx\|$ is convex, and $D\mapsto\smin(DW)$ is concave on the order interval),
+every bound we prove for $0/1$ gates transfers to the convex hull. We therefore state the estimates
+for $0/1$ gates and use them verbatim for any $[0,1]$-slope activation; this is recorded as
+\Cref{lem:hull} in \Cref{app:netlemmas}.
+
+\subsection{Realized patterns and gate density}
+For an input $x$, the \emph{realized pattern} at layer $\ell$ is the support of $D_\ell(x)$ (the set of
+neurons with nonzero slope), of size $|{\supp D_\ell(x)}|=:\alpha_\ell(x)\,n_\ell$. Under a symmetric
+input law and an odd activation the preactivations are symmetric and each gate has density $1/2$ in
+the limit; with a nonzero bias $b_\ell$ the density is set by the bias level, and we assume it stays
+bounded away from $0$ and $1$.
+
+\begin{assumption}[Nondegenerate gates]\label{ass:nondeg}
+There are constants $0<c_0\le c_1<1$ such that, w.h.p.\ over the weights, every realized gate density
+satisfies $\alpha_\ell(x)\in[c_0,c_1]$ for all inputs $x$ on the sphere of interest and all
+$1\le\ell\le L$.
+\end{assumption}
+
+For ReLU with zero bias and a symmetric input law, $\alpha_\ell(x)\to1/2$ and the assumption holds
+with any $c_0<1/2<c_1$; for a bias $b_\ell=\beta_\ell\sqrt{n_\ell}\,\mathbf 1$ the density is
+$\Phi(-\beta_\ell/\varsigma_\ell)$ with $\varsigma_\ell$ the preactivation scale, again in $(0,1)$; the
+assumption fails only if a layer is driven fully on or fully off, which is a degenerate initialization.
+All constants below depend on $c_0,c_1$ through $\kappa(c_1)$ and $\kcheck(c_0)$.
+
+\subsection{Counting patterns: the arrangement bound}
+The estimates we need must hold not for one input but for all inputs at once, and the gates change
+with the input. The key combinatorial fact is that, although there are exponentially many gate
+patterns in the abstract, the number \emph{realized} by inputs from a $d$-dimensional domain is only
+polynomial in the widths for fixed depth.
+
+\begin{lemma}[Realized pattern count]\label{lem:arrangement}
+Fix the weights and biases. As $x$ ranges over $\R^d$, the map $x\mapsto(D_1(x),\dots,D_L(x))$ takes at
+most $(C\,\bar n)^{\,d L}$ distinct values, where $\bar n=\max_\ell n_\ell$ and $C$ is absolute. For a
+piecewise-linear activation with $r$ slopes the bound is $(C r\bar n)^{dL}$.
+\end{lemma}
+
+\begin{proof}
+Each neuron's slope changes only across the zero set of its preactivation, which for layer $1$ is a
+hyperplane in $\R^d$. The first-layer gates partition $\R^d$ into at most $\binom{\le n_1}{\le d}$-many
+$\le(Cn_1)^d$ cells (an arrangement of $n_1$ hyperplanes in $\R^d$ has $O(n_1^d)$ cells; for $r$
+slopes each neuron contributes $r-1$ parallel hyperplanes, giving $(Crn_1)^d$). On each first-layer
+cell $h_1$ is affine in $x$, so the second-layer preactivations are affine and their zero sets are
+again hyperplanes in $x$, refining each cell into $\le(Cn_2)^d$ subcells, and so on. After $L$ layers
+the total number of cells, on each of which the whole gate tuple is constant, is at most
+$\prod_{\ell=1}^L(Cn_\ell)^d\le(C\bar n)^{dL}$.
+\end{proof}
+
+The logarithm of this count is $O(dL\log\bar n)$, which is what we require to be $o(\min_\ell n_\ell)$
+for the uniform estimates of the next section; this is the meaning of the \emph{wide regime},
+$dL\log\bar n=o(\min_\ell n_\ell)$. It is satisfied whenever the widths exceed the input dimension by a
+factor growing faster than $\log$, at fixed depth --- the regime of \cite{bartlettBC21} and the one in
+which random networks are provably fragile.

@@ -1,0 +1,154 @@
+\section{Signed admission and hereditary references with unoccupied atoms}
+\label{sec:v11}
+All logarithms in this section have base two. For finite probability laws, write
+$\operatorname{CE}(P,Q)=-\sum_sP(s)\log Q(s)$ and
+$D(P\Vert Q)=\operatorname{CE}(P,Q)-H(P)$. Terms of true mass zero contribute zero.
+References are complete probability laws, including their mass outside the true support.
+
+\begin{lemma}[Sharp signed admission from the current reference]
+\label{lem:v11-floor}
+Let $p(0)=q_0(0)=r$, $t=1-r>0$, and let $A$ be a set of nonzero atoms.
+Suppose $0<a=p(A)<t$ and $0<b=q_0(A)<\ell<t$, with finite cross entropy.
+Admissible references keep the conditional laws of $q_0$ on $A$ and on its
+nonzero complement, keep mass $r$ at zero, and have mass $z\geq\ell$ on $A$.
+The unique minimizing mass is $z_* =\max(a,\ell)$, and the minimum signed change is
+\[
+ F(z_*)=a\log\frac b{z_*}+(t-a)\log\frac{t-b}{t-z_*}
+ =t\left[D(\operatorname{Ber}(a/t)\Vert\operatorname{Ber}(z_*/t))
+ -D(\operatorname{Ber}(a/t)\Vert\operatorname{Ber}(b/t))\right].
+\]
+\end{lemma}
+\begin{proof}
+Within each cell the likelihood ratio is constant, so direct expansion of cross entropy
+gives $F(z)$ as displayed. Both cells have positive true mass; $z=t$ has infinite cost.
+For $\ell\leq z<t$,
+\[
+ F'(z)=\frac{-a/z+(t-a)/(t-z)}{\ln2}
+       =\frac{t(z-a)}{z(t-z)\ln2},\qquad
+ F''(z)=\frac{a/z^2+(t-a)/(t-z)^2}{\ln2}>0.
+\]
+Every denominator is positive. The derivative changes sign at $a$, which proves the
+minimum and uniqueness. Expanding the two Bernoulli divergences gives the second formula.
+The formula is signed: moving a mismatched incoming reference toward the truth can release
+previously paid cost. True-zero reference atoms remain in their conditional profiles.
+\end{proof}
+
+If full terminal laws have an identical disjoint controller part and a seed part of mass
+$\beta_h$, the full change is $\beta_h F_h(z_{*,h})$. At actual physical reaches $\rho_h$,
+let $C$ be the sum of all current full terminal costs, $U$ all earlier outstanding bills,
+and $B_0$ the original supplied capacity. Exact affordability is
+\[
+ \sum_h\rho_h\beta_h F_h(z_{*,h})\leq B_0-C-U.
+\]
+This follows by subtracting the old cost from the new cost, retaining both outcomes.
+A negative change is released once; it is not an additional independent refund.
+The condition assumes this particular class is admissible. It does not prove that any
+useful algorithm requires the class or that $B_0=O(I)$ exists for arbitrary cores.
+
+\begin{lemma}[Ghost-complete inherited witness transport]
+\label{lem:v11-ghost}
+Let $P$ be the squared Fourier law of a Boolean function on a finite uniform cube and
+\[
+ Q=bP+\sum_{j=1}^k c_j\delta_{W_j},\qquad
+ b>0,\quad c_j\geq0,\quad b+\sum_jc_j=1.
+\]
+Witnesses may be repeated or have zero true mass. Query a physical coordinate $i$.
+Let $M$ delete its frequency label, $R=MP$, $\overline Q=MQ$, and let $P_0,P_1$
+be the actual child spectra. On rows with $R(u)>0$, set $K_t(u)=P_t(u)/(2R(u))$.
+On rows with $R(u)=0$, choose any stochastic pair $K_0(u)+K_1(u)=1$.
+Put $r_t=\sum_u\overline Q(u)K_t(u)$. Then $r_t\geq b/2>0$ and the full child reference is
+\[
+ Q_t=\frac{K_t\overline Q}{r_t}
+ =\frac b{2r_t}P_t+
+ \sum_j\frac{c_jK_t(MW_j)}{r_t}\delta_{MW_j}.
+\]
+Thus the original $k$ labelled witnesses suffice at every finite adaptive descendant.
+\end{lemma}
+\begin{proof}
+For exterior Fourier coefficients $u,v$ of the parent, the two restriction coefficients
+are $u+v$ and $u-v$. Hence $(P_0+P_1)/2=R$, including zero rows, and $RK_t=P_t/2$.
+Marginalizing the reference and multiplying by this same kernel gives the formula.
+Summing it gives $r_t=b/2+\sum_jc_jK_t(MW_j)$. Consequently the child weights are
+nonnegative and sum to one. The choice on zero rows carries reference-only mass; it
+does not affect the true joint law. Deleting labels preserves their provenance even
+when labels collide, acquire true mass, or lose their weight. Induction proves the
+finite-tree assertion, with the kernel chosen from the actual spectra at each node.
+\end{proof}
+
+\begin{lemma}[Complete accounting under the same stochastic kernel]
+\label{lem:v11-account}
+In Lemma~\ref{lem:v11-ghost}, write $A=D(P\Vert Q)$,
+$A_t=D(P_t\Vert Q_t)$, and
+\[
+ D_{\rm erase}=D(P\Vert Q)-D(R\Vert\overline Q),\quad
+ D_{\rm out}=D((1/2,1/2)\Vert(r_0,r_1)),\quad
+ J=H(R)-\tfrac12\sum_tH(P_t),\quad B_i=H(P)-H(R).
+\]
+All four quantities $D_{\rm erase},D_{\rm out},J,B_i$ are nonnegative, and
+\[
+ A=D_{\rm erase}+D_{\rm out}+\tfrac12\sum_t A_t,
+\]
+\[
+ B_i+\tfrac12\sum_t\operatorname{CE}(P_t,Q_t)-\operatorname{CE}(P,Q)
+ =-J-D_{\rm erase}-D_{\rm out}.
+\]
+Also $\tfrac12\sum_t\log(1/b_t)=\log(1/b)-D_{\rm out}$.
+Every finite adaptive tree telescopes these equalities at its actual reaches, retaining
+all full terminal costs and the original reference account.
+\end{lemma}
+\begin{proof}
+The conditional chain rule after deleting a frequency gives
+$D_{\rm erase}=\sum_uR(u)D(P(i\mid u)\Vert Q(i\mid u))\geq0$.
+Applying the same stochastic kernel to $R$ and $\overline Q$ gives joint laws
+$P_t(u)/2$ and $\overline Q(u)K_t(u)$. Their divergence is $D(R\Vert\overline Q)$:
+on positive true rows the kernel cancels; on zero true rows the summands vanish,
+but reference mass remains in $r_t$. The joint chain rule by outcome gives
+$D(R\Vert\overline Q)=D_{\rm out}+\sum_t A_t/2$.
+Entropy concavity gives $J\geq0$, and $B_i$ is conditional occupancy entropy.
+Since $H(P)-\sum_tH(P_t)/2=B_i+J$, subtracting the entropy difference from the
+divergence difference gives the full cross-entropy equality. Finally
+$b_t=b/(2r_t)$ gives the stated logarithmic identity by direct expansion.
+Multiplication by the reach of each internal node cancels every child account against
+its parent account. Physical outcomes have conditional reach $1/2$, irrespective of
+the reference normalizers $r_t$. This proves the stopped-tree identities.
+\end{proof}
+
+Any normalized finite-CE reference $Q$ admits the mixture in
+Lemma~\ref{lem:v11-ghost}: choose
+$0<b<\min(1,\min_{P(s)>0}Q(s)/P(s))$ and decompose the nonnegative law $Q-bP$
+into point masses. This can require $2^n$ labels and says nothing about the initial
+cross entropy. A supplied compact mixture remains compact; universal compact pricing
+does not follow.
+
+\paragraph{Distinct inherited-reference policies.}
+If both children instead use the common marginal $\overline Q$, the correct identity is
+\[
+ B_i+\tfrac12\sum_t\operatorname{CE}(P_t,\overline Q)
+ -\operatorname{CE}(P,Q)=-D_{\rm erase}.
+\]
+It follows by the conditional cross-entropy chain rule. This is a different policy
+from the outcome-adapted references $Q_t$ above; the latter release the additional
+$J+D_{\rm out}$. Neither policy creates a new initial budget. For the sign table
+$(-1,1,1,1)$ with $Q=P$, the common-marginal cost change is $-1$, while
+$D_{\rm erase}=0$ and $B_i=1$. Omitting $B_i$ from the equality is false.
+
+\paragraph{Signed Boolean control.}
+For $g=(1-y_1y_2-y_1y_3-y_2y_3)/2$, either child after querying $y_1$ has
+spectral law $p=(1/4,1/4,1/4,1/4)$ on the exterior labels.
+Let $A$ be the last label and $\ell=1/3$. The two incoming references
+$p$ and $(1/4,5/16,5/16,1/8)$ have the same optimal target
+$(1/4,5/24,5/24,1/3)$. Their signed costs are respectively
+$\frac14\log(27/25)>0$ and $\frac14\log(27/32)<0$.
+The sign difference is exactly a difference of prepaid mismatch.
+
+\paragraph{Sources and unresolved universal step.}
+Lemma~\ref{lem:v11-floor} reconstructs A097-SIGNED-ARBITRARY-REFERENCE-FLOOR-OWNER@1,
+with the derivative factor $t$ retained. Lemmas~\ref{lem:v11-ghost}--\ref{lem:v11-account}
+reconstruct A096-GHOST-COMPLETE-HEREDITARY-WITNESS-TRANSPORT@1.
+The original sources and exact statement hashes are pinned in the companion registry.
+These are scoped reference theorems; two independent audits of the integrated FEI
+chain are still pending. The first unsupported universal line remains a useful
+initial complete reference of cost $O(I(f))$ for every Boolean $f$, or an alternative
+noncircular payment of a necessary stopping or admission obligation from the actual
+unused original influence budget. In particular, choosing $Q=P$ makes the initial
+cross entropy $H(f)$; this choice does not prove FEI.

@@ -1,0 +1,13 @@
+{
+  "id": "P0321",
+  "checked_utc": "2026-10-10",
+  "ranking_status": "unsolved in 2026-09-07 ranking only",
+  "current_openness": "UNKNOWN",
+  "primary_source": "Mathieu Lewin, Coulomb and Riesz gases: The known and the unknown, arXiv:2202.09240v2 (2022), https://arxiv.org/pdf/2202.09240, Section VI.B pp.65-66",
+  "source_formulation": "Predicted two-step melting in d=2 with an intermediate hexatic phase: fast translational-correlation decay and slow sixfold orientational-correlation decay; the review gives numerical evidence, not a formal existence theorem. It discusses s>2 and Jellium s=0,1 separately.",
+  "formalization_needed": ["select a fixed exponent and ensemble", "define a bond-orientational observable for point configurations", "state decay rates and a nonempty parameter interval", "prove thermodynamic Gibbs state existence in the chosen regime"],
+  "theorem_47_scope": "Only d in {1,2}, s>d, positive temperature; translation invariance, not rotation or hexatic behavior.",
+  "owner_solved_retired_check": "Targeted rg -l for P0321|hexatic in named 2026-09-12 H and 2026-09-14 I attempt folders returned no files. The population export contains an older author-only P0321 attempt, not a solution. This is not a complete owner-wide solved/retired audit.",
+  "recent_primary_literature_check": "Targeted 2024-2026 arXiv search found no rigorous P0321 existence proof. arXiv:2601.01809 (2026) is numerical defect work for the log OCP on a cylinder and raises questions about KTHNY; arXiv:2601.18215 (2026) studies three repulsive systems' melting pathways by thermodynamic decomposition. Neither supplies the required infinite-volume Gibbs-state theorem. Search is bounded, so current openness remains UNKNOWN.",
+  "working_formalization": "Our strengthening, not a theorem quoted by Lewin: choose s>2, a classical two-dimensional repulsive |x|^-s Gibbs state, a nonempty beta interval, an explicit sixfold Delaunay bond observable, fast positional two-point decay and a positive algebraic lower bound on the orientational covariance. The ensemble, rate and observable must be fixed before claiming P0321."
+}

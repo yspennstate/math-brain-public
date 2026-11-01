@@ -1,0 +1,49 @@
+{
+  "time": "2026-10-10T10:14:10.832468",
+  "independent_phase_path": "~\\brain_workers\\w577\\INDEPENDENT_PHASE1.md",
+  "independent_phase_sha256": "8fb44a681ca30c5344ab57edf1f1b884d3756fb03e39ce8d64a43c893ccd39e7",
+  "commands": [
+    {
+      "to": "w576",
+      "kind": "claim",
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: agent_mesh.py send [-h] --agent AGENT --to TO --topic TOPIC\n                          [--kind {message,request,answer,warning}]\n                          --body BODY [--idempotency-key IDEMPOTENCY_KEY]\n                          [--require-ack | --fire-once]\nagent_mesh.py send: error: argument --kind: invalid choice: 'claim' (choose from message, request, answer, warning)\n"
+    },
+    {
+      "to": "w578",
+      "kind": "message",
+      "returncode": 0,
+      "stdout": "{\n  \"fanout\": 1,\n  \"idempotency_key\": null,\n  \"idempotent_replay\": false,\n  \"inserted\": 1,\n  \"kind\": \"message\",\n  \"message_id\": \"msg-cc9e8f91f8\",\n  \"message_ids\": [\n    \"msg-cc9e8f91f8\"\n  ],\n  \"recipient_active\": true,\n  \"requires_ack\": false,\n  \"reused\": 0,\n  \"to\": \"w578\",\n  \"topic\": \"probability300-C0044\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "action": "progress",
+      "returncode": 0,
+      "stdout": "logged\n",
+      "stderr": ""
+    }
+  ],
+  "exact_id_searches": [
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+      "returncode": 0,
+      "matching_excerpt": "44:{\"admitted\": true, \"current_status\": \"unverified\", \"dedup_key\": \"C0044\", \"historical_status\": \"source_says_open\", \"intake\": \"claude_20260907\", \"locator\": \"Open question 3.2, p. 42\", \"problem_id\": \"C0044\", \"recorded_at\": \"2026-09-07T06:38:45Z\", \"result_status\": \"attempted_unsolved\", \"schema\": \"probability-problem.v1\", \"source_id\": \"drewitz_ramirez_rwre_2014\", \"statement\": \"For a RWRE satisfying (E) and (IID) and any direction l, is P_0[A_l] in {0,1}, where A_l is the event of transience in direction l? Known for d = 1 and d = 2 (Zerner-Merkl).\", \"status_search\": \"\", \"title\": \"Zero-one law for directional transience in dimensions d >= 3\", \"verification\": \"unreviewed\"}\n"
+    },
+    {
+      "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+      "returncode": 0,
+      "matching_excerpt": "35:{\"attempt_id\": \"C0044-A001\", \"author\": \"claude-probability-1000-continue-0907\", \"correction_note\": \"Codex review 12:02: A_l and A_{-l} are disjoint by definition; the content of Zerner-Merkl is the 0-1 law for A_l.\", \"independent_check\": \"\", \"key_identity\": \"\", \"method\": \"Analyse where the Zerner-Merkl planar argument uses d = 2.\", \"obstruction\": \"Planarity is essential to the d = 2 proof; no substitute in d >= 3.\", \"problem_id\": \"C0044\", \"recorded_at\": \"2026-09-07T06:38:45Z\", \"result\": \"Zerner-Merkl show P_0[A_l intersection A_{-l}] = 0 using that in d = 2 two independent walks in the same environment started at distant points on a line perpendicular to l must, with positive probability, have paths that intersect (planarity), which lets one derive a contradiction from the walk going to +infinity and -infinity in direction l with positive probability each. In d >= 3 paths of two walks need not intersect, and the known partial result (Kalikow's 0-1 law: P_0[A_l union A_{-l}] in {0,1}) does not exclude the mixed event. A candidate counterexample structure in d >= 3 would be an i.i.d. environment where the walk is guided to +l or -l depending on a local feature it meets first; the i.i.d. assumption and the fact that the walk visits infinitely many independent regions make such a persistent memory implausible but not provably impossible: the walk in direction +l sees fresh environment forever, and the event that it turns around is a tail event of the walk but not of the environment. I checked that the natural martingale argument (P_omega(A_l) as a function of the environment at the current position) fails because P_omega(A_l) is not measurable with respect to a finite region. No result.\", \"schema\": \"probability-attempt.v1\", \"substantive\": true, \"superseded_by\": \"C0044-A002\"}\n107:{\"attempt_id\": \"C0131-A001\", \"author\": \"claude-probability-1000-continue-0907\", \"independent_check\": \"\", \"key_identity\": \"\", \"method\": \"Compare with the RWRE 0-1 law in d >= 3 (C0044) and locate the extra difficulty from self-interaction.\", \"obstruction\": \"Self-interaction breaks the coupling arguments behind Markovian 0-1 laws.\", \"problem_id\": \"C0131\", \"recorded_at\": \"2026-09-07T07:09:31Z\", \"result\": \"For Markovian RWRE the dichotomy question is the directional 0-1 law (C0044, open in d >= 3). For excited random walks the process is not Markov, and even the statement 'either recurrent or transient' (return to the origin infinitely often a.s. or finitely often a.s.) is not implied by any Markov-chain dichotomy; the source's Definition 3.1 asks for a 0-1 law for the number of returns. A route: the event {X returns to 0 infinitely often} is determined by the walk in the environment, and by the ergodicity of the environment its probability does not depend on the starting point in the sense P_x(return to x i.o.) is constant in x; but P_0(return to 0 i.o.) in (0,1) is not excluded by that. The Kalikow-type argument for RWRE (P_0(A_l union A_{-l}) in {0,1}) uses that the walk from 0 and from a far point in the same environment can be coupled after a hitting event; for excited walks the coupled walks see different cookie states (one walk has eaten cookies), which is the extra difficulty. Under (UEL) and boundedness of the stacks (M cookies per site), a walk that has visited a region changes the environment there in a bounded way, and once the walk leaves a region for good the modified cookies are irrelevant; so for transient behaviour the modification is harmless, while recurrence requires infinitely many returns through modified regions. I could not produce a proof; the sharpest statement I can defend: if the excited walk is transient in the sense |X_n| -> infinity with positive probability, then, under (IID) and (UEL), it is transient a.s., by the following argument: on the event of transience the walk eventually leaves every ball, and the environment outside any ball is untouched and i.i.d., so the probability of transience given the walk is at distance R from the origin at a time after which it never returns to the ball... this does not close either because the walk's future depends on the eaten cookies inside the ball only if it returns. Recorded as attempted without result.\", \"schema\": \"probability-attempt.v1\", \"substantive\": true}\n121:{\"attempt_id\": \"C0044-A002\", \"author\": \"claude-probability-1000-continue-0907\", \"independent_check\": \"Correction checked line by line against the source and the holder's message by the Fable agent; the holder's claim was taken as a lead, not as authority.\", \"key_identity\": \"Zerner-Merkl (d=2): P_0(A_l) in {0,1}; Kalikow (all d): P_0(A_l union A_{-l}) in {0,1}; d >= 3 directional law open.\", \"method\": \"Codex review 12:02: A_l and A_{-l} are disjoint by definition; the content of Zerner-Merkl is the 0-1 law for A_l.\", \"obstruction\": \"see A001 for the standing obstruction\", \"problem_id\": \"C0044\", \"recorded_at\": \"2026-09-07T09:27:17Z\", \"result\": \"CORRECTION of C0044-A001's first sentence. The events {X_n . l -> +infinity} and {X_n . l -> -infinity} are disjoint by definition, so 'Zerner-Merkl show P(A_l intersect A_{-l}) = 0' is empty; what Zerner-Merkl prove in d = 2 is P_0(A_l) in {0,1}, using planarity to show two walks in the same environment intersect, which is what A001 then describes. The reduction (planarity essential; no d >= 3 substitute; no finite-region measurability for the natural martingale) stands.\", \"schema\": \"probability-attempt.v1\", \"substantive\": true, \"supersedes\": \"C0044-A001\"}\n"
+    },
+    {
+      "path": "~\\<private-repo>\\06_math_research\\prob1000_lean_20260908\\RANKED_LIST_2026-09-07_annotated.md",
+      "returncode": 0,
+      "matching_excerpt": "472:| C0044 | Zero-one law for directional transience in dimensions d >= 3 | attempted_un | directional 0-1 law in d>=3 |\n"
+    }
+  ],
+  "paired_proof": {
+    "path": "~\\brain_workers\\w576\\ATTEMPT.md",
+    "sha256": "d41045e0aab5acbec1afd8c1524ea655c9313aeb56a310c8b5bf637395e76159",
+    "snapshot": "~\\brain_workers\\w577\\PAIRED_PROOF_SNAPSHOT.md"
+  }
+}

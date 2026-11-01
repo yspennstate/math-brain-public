@@ -1,0 +1,151 @@
+{
+  "worker": "w435",
+  "target": "P0043",
+  "checked_at": "2026-10-10T05:45:10.427723+00:00",
+  "exact_statement_file": "STATEMENT.md",
+  "model": "iid Bernoulli bond percolation on an infinite connected locally finite quasi-transitive graph with p_c<1",
+  "target_conclusion": "No infinite open cluster exists almost surely at p=p_c",
+  "current_openness": "UNKNOWN",
+  "full_target_proved_by_this_packet": false,
+  "novelty_claim": false,
+  "historical_primary_sources": [
+    {
+      "url": "https://www.maths.tcd.ie/EMIS/journals/EJP-ECP/article/download/978/978-3321-1-PB.pdf",
+      "title": "Benjamini and Schramm, Percolation Beyond Z^d (1996)",
+      "locator": "Conjecture 4, printed page 75, PDF page 5",
+      "quote": "Critical percolation dies in every almost transitive graph (assuming pc < 1).",
+      "status": "opened exact historical statement",
+      "model_note": "Original paper uses site percolation; precise bond version below."
+    },
+    {
+      "url": "https://arxiv.org/html/1605.05301v1",
+      "title": "Hutchcroft (2016), Critical Percolation on Any Quasi-Transitive Graph of Exponential Growth",
+      "locator": "Introduction, unnumbered Benjamini--Schramm conjecture; Theorem 1; Theorem 6",
+      "status": "opened exact bond model and hypotheses",
+      "exact_hypotheses": [
+        "connected",
+        "locally finite",
+        "quasi-transitive",
+        "p_c<1"
+      ],
+      "proved_scope": "quasi-transitive graphs of exponential growth",
+      "full_target_certificate": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/math/9701227",
+      "title": "Benjamini, Pemantle and Peres, Unpredictable Paths and Percolation",
+      "locator": "Section 2, equations (5)--(7), PDF pages 5--6",
+      "status": "opened common-edge second-moment method; L2 is a classical rederivation"
+    }
+  ],
+  "local_records": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "line": 549,
+      "id": "P0043",
+      "status": "dated title only"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+      "line": 84,
+      "id": "C0084",
+      "source": "heydenreich_hofstad_highd_2017, Open Problem 15.11",
+      "status": "matching exact statement, dated and unreviewed"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "line": 72,
+      "id": "C0084-A001",
+      "method": "growth-class split",
+      "status": "incomplete, critical-susceptibility inference corrected by L5"
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "line": 21,
+      "holder": "w344",
+      "target_alias": "C0084"
+    }
+  ],
+  "recent_primary_claim": {
+    "scope_url": "https://github.com/openai/math/blob/main/lean/docs/213.md",
+    "paper_url": "https://github.com/openai/math/blob/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf",
+    "status": "full-solution claim encountered; paper and actual formal solution not verified",
+    "comparator_url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/CriticalPercolation.lean",
+    "theorem": "OAI.CriticalPercolation.BondGraph.no_percolation_at_criticality",
+    "comparator_locator": "lines 47--53",
+    "observed_proof_body": "by sorry",
+    "scope_note": "A comparator specifies the target. Its placeholder is not evidence that the repository has no separate solution.",
+    "actual_solution_module": null,
+    "formal_check_receipt": null,
+    "trusted_axioms": null,
+    "novelty_or_current_openness_certified": false
+  },
+  "owner_work_check": {
+    "paths_searched": [
+      "~/Big Open problem in probability theory/notes",
+      "~/Big Open problem in probability theory/paper"
+    ],
+    "status": "targeted hits concern nonamenable p_c<p_u and L2-gap work; no complete P0043 solution certified",
+    "completeness": "bounded search only"
+  },
+  "proof_scar": "perceptron_proof_open_gaps_fleet_2026_07_12",
+  "independent_reviewer": "w437",
+  "independent_review_status": "designated referee w437 pending; adversary w436 kept L1-L4",
+  "original_p0043_store_records": {
+    "readonly_store": "~/math-brain-build/local/population/brain.sqlite3",
+    "statement_node": "claim_c84438aaebd3352ec231b6a011882233b933b517484f1aceb0e487376b263099",
+    "attempt_node": "claim_9850a15b06f23b6e38459dc61373db77c0b50e6ff9678c5a92e051af94f90dc4",
+    "original_source": "Lyons--Peres, Probability on Trees and Networks, paperback electronic version 19 August 2026, Conjecture 8.15, printed p.285",
+    "recorded_statement": "If G is quasi-transitive and p_c(G)<1, is there almost surely no infinite Bernoulli cluster at p_c(G)?",
+    "prior_method": "Critical branching-process extinction for a regular tree, with no justified loop-dependent transfer",
+    "book_locator_independently_rechecked": false,
+    "stuck": "STUCK: two targeted public-book PDF searches did not return Conjecture 8.15. Keep the stored locator and use the opened Hutchcroft primary bond formulation. Do not infer current openness."
+  },
+  "targeted_history_receipt": {
+    "file": "LOCAL_SOURCE_RECEIPTS.json",
+    "named_intake_ledgers_checked": 10,
+    "matching_cross_reference_rows": 1,
+    "cross_reference": "H0016, intake H problems.jsonl line 16, not_attempted, duplicate_of G0001/P0043",
+    "model_limit": "This is a site-percolation lattice problem, not a verified equivalence to the general quasi-transitive bond target"
+  },
+  "recent_site_partial_result": {
+    "url": "https://arxiv.org/abs/2608.23661",
+    "author": "Raphael Cerf",
+    "date": "2026-08-24",
+    "checked": "primary abstract only",
+    "model": "Bernoulli site percolation on Z^d, d>=3",
+    "result": "At criticality either no infinite cluster exists or the finite-cluster distribution has no stretched-exponential tail",
+    "full_target_certificate": false,
+    "bond_transfer_verified": false
+  },
+  "adversary_review": {
+    "reviewer": "w436",
+    "file": "~/brain_workers/w436/AUDIT_w435.md",
+    "verdicts": {
+      "L1": "KEEP",
+      "L2": "KEEP",
+      "L3": "KEEP",
+      "L4": "KEEP",
+      "G1": "FIX, accepted as missing completion premise"
+    },
+    "full_target": "UNPROVED BY THIS ROUTE",
+    "different_account_verified": false
+  },
+  "canonical_store_limit": {
+    "repository": "~/math-research-brain",
+    "population_default": "~/math-research-brain/local/population/brain.sqlite3",
+    "population_default_present": false,
+    "stuck": "STUCK: repository-relative population default is absent. A targeted local SQLite filename search found only two audit snapshots; these were not opened. Use the explicitly provided read-only active population store for historical cards, and do not certify current canonical status.",
+    "provided_population_read": "~/math-brain-build/local/population/brain.sqlite3",
+    "provided_population_rows_read": 4,
+    "receipt": "STORE_SOURCE_ROWS.json",
+    "current_canonical_resolution_verified": false
+  },
+  "assigned_referee_delivery": {
+    "to": "w437",
+    "message_id": "msg-c032cfbc54",
+    "inserted": 1,
+    "final_packet": "REVIEW_PACKET.md",
+    "mathematical_review_complete": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "claims": [
+    {
+      "claim_id": "A019-RARE-TRANSLATION-COLLISION",
+      "version": 1,
+      "exact_statement": "For every Boolean core g on a uniform data cube and all mutually disjoint fresh selector blocks W_j of positive sizes k_j, arbitrary translation vectors v_j and point indicators A_j, set F(w,y)=g(y+sum_j v_j A_j(w_j)). With rho_j=Pr[g(y)!=g(y+v_j)] and E_k=H(1-2*1_point) on k bits, H(F)=H(g)+sum_j rho_j E_kj, I_data(F)=I(g), I_W(F)=sum_j rho_j 2 k_j 2^(-k_j), M_W=0 and B_W=sum_j rho_j E_kj<=4 I_W(F). Constant 4 is optimal as I_W/|W| tends to zero. A certified core FEI constant C transfers to max(C,4), including arbitrary finite nesting with fresh selector modules. Complete-module block trees have the same payment and retain terminal core entropy. The constant 4 cannot be assigned to every singleton query, as the three-bit point module on a dictator shows.",
+      "hypotheses": [
+        "Uniform independent physical coordinates; entropy in bits",
+        "Selector module blocks pairwise disjoint and fresh from current data",
+        "g Boolean; vectors may coincide or be linearly dependent",
+        "Translation activation in each module is exactly one point",
+        "An FEI bound on the arbitrary terminal core is an additional hypothesis only for full-entropy closure"
+      ],
+      "statement_sha256": "3a74f0739282930b791f22487be8118034fa87f7299e0e2f2c84001feb286eb1",
+      "contributors": [
+        "A019"
+      ],
+      "proof_source": "REPORT.md sections 1-6; NEW_SHARED_DATA_CLASS.tex; code/check_translation.py; out/CHECK.json",
+      "proof_dependencies": [],
+      "review_records": [
+        {
+          "reviewer": "A019",
+          "verdict": "AUTHOR_ANALYTIC_PROOF_AND_EXACT_CHECKS",
+          "independent": false
+        }
+      ],
+      "status": "PROVED_AT_STATED_SCOPE_INDEPENDENT_REVIEW_PENDING",
+      "supersedes": null,
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A017",
+        "A020",
+        "A027",
+        "A028",
+        "A058",
+        "A060",
+        "A064",
+        "A090",
+        "A091"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "claim_id": "A002-EXACT-HARDENING-LEDGER",
+    "version": 1,
+    "exact_statement": "For every finite uniform Boolean sign, the tensor, balancing, arbitrary-mean point activation, systematic parity coding and balanced auxiliary smoothing formulas in TRANSFORMATION_LEDGER.tex sections 1-5 hold exactly. For every epsilon>0 and integer k>=0, the supremum H/I over nonconstant signs with I<=epsilon, EF>=1-epsilon, max_i I_i/Var<=epsilon and support distance>k equals C_FEI, with a construction of distance>2k whose every <=k-bit physical restriction preserves mean and H and stays in the epsilon class. The same equality holds after imposing I<=2^(-s(D)) for any fixed nonnegative s(D)=o(D).",
+    "hypotheses": [
+      "Finite Boolean signs on uniform independent physical cubes",
+      "Entropy in bits",
+      "All tensor and gadget blocks disjoint",
+      "Balanced substituted gadgets",
+      "Fixed epsilon,k,s before choosing the seed-dependent tensor limit"
+    ],
+    "statement_sha256": "159c57ba6ab2db64a3d89623a440e7668bafbba2135375a41183d76724d15e50",
+    "contributors": [
+      "fleet05/A002"
+    ],
+    "proof_source": "TRANSFORMATION_LEDGER.tex sections 1-6",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A005",
+      "A012",
+      "A021",
+      "A030",
+      "A043",
+      "A048",
+      "A051",
+      "A055",
+      "A060",
+      "A078",
+      "A001",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A002-FULL-SUPPORT-ADMISSION",
+    "version": 1,
+    "exact_statement": "For every epsilon,delta>0 the supremum H/I over nonconstant uniform Boolean signs with every Fourier coefficient nonzero, I<=epsilon and P(F=-1)<=delta equals C_FEI as an extended-real supremum. This also holds with max_i I_i/Var<=epsilon. The full-support construction has distance one and does not preserve the separated-support physical restriction plateau.",
+    "hypotheses": [
+      "Entropy in bits",
+      "Finite uniform Boolean signs",
+      "Arbitrarily large final dimension allowed",
+      "Strict numerical slack before two-dummy one-point surgery"
+    ],
+    "statement_sha256": "bec9b037ba4c3a3ca0fb2fae9489a3c9f2c64dd816802320a72917e4b75d2656",
+    "contributors": [
+      "fleet05/A002"
+    ],
+    "proof_source": "TRANSFORMATION_LEDGER.tex sections 7",
+    "proof_dependencies": [
+      "A002-EXACT-HARDENING-LEDGER@1"
+    ],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A005",
+      "A012",
+      "A021",
+      "A030",
+      "A043",
+      "A048",
+      "A051",
+      "A055",
+      "A060",
+      "A078",
+      "A001",
+      "B20"
+    ]
+  }
+]

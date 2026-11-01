@@ -1,0 +1,17 @@
+P14 n=8 unlabeled simple-graph exact coverage generation
+
+Method: start from every 7-vertex class in NetworkX graph_atlas_g(), add vertex 7 with all 2^7 neighborhoods, and deduplicate using exact nx.is_isomorphic inside invariant prefilter buckets. The independent benchmark count is Brendan McKay's nauty combinatorial-data count 12,346 for all simple unlabeled graphs on 8 vertices.
+
+Chunk log:
+{"chunk_end": 250, "chunk_start": 0, "elapsed_seconds_this_chunk": 10.223724603652954, "exact_isomorphism_tests": 26230, "n7_classes_consumed": 250, "representatives_so_far": 5770}
+{"chunk_end": 500, "chunk_start": 250, "elapsed_seconds_this_chunk": 11.569774627685547, "exact_isomorphism_tests": 54862, "n7_classes_consumed": 500, "representatives_so_far": 9138}
+{"chunk_end": 750, "chunk_start": 500, "elapsed_seconds_this_chunk": 12.650897741317749, "exact_isomorphism_tests": 84805, "n7_classes_consumed": 750, "representatives_so_far": 11195}
+{"chunk_end": 1000, "chunk_start": 750, "elapsed_seconds_this_chunk": 12.99701976776123, "exact_isomorphism_tests": 115725, "n7_classes_consumed": 1000, "representatives_so_far": 12275}
+{"chunk_end": 1044, "chunk_start": 1000, "elapsed_seconds_this_chunk": 2.768829345703125, "exact_isomorphism_tests": 121286, "n7_classes_consumed": 1044, "representatives_so_far": 12346}
+{"candidate_extensions": 133632, "edge_count_max": 28, "edge_count_min": 0, "exact_isomorphism_tests": 121286, "expected_n8_mckay_count": 12346, "generator": "7-vertex atlas + all 2^7 new-vertex neighbourhoods + exact isomorphism deduplication", "graph6_lines": 12346, "graph6_sha256": "22d0b5dc0a9da6ff5d1618fe0ec31fd396a8a42b19f4f98072c9959c7b3fab90", "graph6_unique_lines": 12346, "invariant_bucket_count": 12346, "maximum_nonisomorphic_representatives_in_one_prefilter_bucket": 1, "n7_unlabeled_classes": 1044, "n8_unlabeled_representatives": 12346, "networkx_version": "3.6.1", "python_version": "3.13.5", "result": "PASS"}
+
+Independent graph6 parser cross-check:
+graph6_parser_crosscheck=PASS lines=12346 sha256=22d0b5dc0a9da6ff5d1618fe0ec31fd396a8a42b19f4f98072c9959c7b3fab90
+
+Coverage conclusion:
+PASS: 133632 exhaustive vertex-extension candidates reduced by exact isomorphism to 12346 representatives, equal to the independent nauty count. The emitted graph6 catalog contains 12346 unique lines.

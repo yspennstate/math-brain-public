@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T222855Z-fleet01-B05-QFORM-auto19",
+  "claim": "QFORM-SHARED-REMAINDER-DISJOINT-SQUARE-v1",
+  "algebra": {
+    "square_completion": "gamma*Y^2+2*w*Y = gamma*(Y+w/gamma)^2-w^2/gamma",
+    "half_riesz_bathtub": "sup_{0<=f<=m,int f=1} int |x-c|^-1/2 f(x) dx = 2*sqrt(2*m)",
+    "negative_moment_general": "for alpha=1-1/p: E|A|^-alpha <= p*2^alpha*M_A^alpha",
+    "p3_constant": "6*(m_H*M_A)^(2/3)*m_Y^(2/3)*|gamma|^(-1/3)"
+  },
+  "target_family": {
+    "Q": "2*H*L+2*b*L*P+V^2",
+    "L": "(X1+X4)/sqrt(2)",
+    "P": "(X2+X5)/sqrt(2)",
+    "V": "(X3+X6)/sqrt(2)",
+    "active_matrix": "[[0,1,0,0],[1,0,b,0],[0,b,0,0],[0,0,0,1]]",
+    "characteristic_polynomial": "-lambda*(lambda-1)*(b^2-lambda^2+1)",
+    "spectrum": ["0", "1", "+sqrt(1+b^2)", "-sqrt(1+b^2)"],
+    "three_large_eigenvalues_for_all_real_b": true,
+    "M_L_bound": "sqrt(2)",
+    "square_carrier": "Y=X3",
+    "gamma": "1/2",
+    "uniform_half_riesz_bound_exact": "4*2^(5/4)",
+    "uniform_half_riesz_bound_decimal": 9.513656920021768,
+    "p3_c0_bound_exact": "6*2^(2/3)",
+    "p3_c0_bound_decimal": 9.524406311809196
+  },
+  "partner_application": {
+    "partner_claim": "QFORM-TWOBANK-HUB-PUNCTURED-COUPLING-v1",
+    "partner_commit": "3e2cfd317d73276f347d713292d5cba2ec0f3883",
+    "banks": ["(X1,X2,X3)", "(X4,X5,X6)"],
+    "K2": 2,
+    "K3": "2*sqrt(2)",
+    "K": "2+2*sqrt(2)",
+    "M_L": "sqrt(2)",
+    "actual_bound": "1/2+sqrt(2)*(2+sqrt(2)+log2^+(C_T^2*(2+2sqrt(2))^2/(32*|b|))) for b!=0"
+  },
+  "scope_checks": {
+    "post_rotation_independence_used": false,
+    "moments_used": false,
+    "support_bound_used": false,
+    "pointwise_vdc_used": false,
+    "conditional_projection_cap_used": false,
+    "arbitrary_joint_coarea_cap_used": false,
+    "monte_carlo_used": false,
+    "full_qform_claimed": false,
+    "continuity_full_target_claimed": false
+  }
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "claim_id": "A030-EXACT-PLATEAU-TERMINAL-RESERVE",
+    "version": 1,
+    "exact_statement": "For every uniform Boolean sign f whose occupied Fourier labels project injectively under deletion of A, every physical assignment on A preserves the complete squared-mass multiset and H(f), and leaves influence I(f)-sum_{i in A}Inf_i(f). Thus support minimum distance L gives an all-branch adaptive entropy plateau through depth L-1. For every Boolean seed g and L>=2, F_L(x)=g(product_{j=1}^L x_1j,...,product_{j=1}^L x_nj) has H(F_L)=H(g), I(F_L)=L I(g); its physical block-compression partition has Pi_H=0, Pi_I=(L-1)I(g), every terminal H=H(g), I=I(g), and ratio amplification L if H(g)>0. For nonconstant g and L>=d+2, every restriction of depth <=d is nonunate and therefore not C001-regular. For G_r,m=(1-2 indicator_{x=all+}) product_{j=1}^m z_j, r>=2,m>=1, all spectator prefixes preserve H, I=root core influence+m-k, and terminal/root ratio amplification equals 1+m 2^(r-1)/r, unbounded already for m=1. The core H/I tends to 4, so no FEI disproof follows. On any injective d-coordinate restriction with positive entropy and balanced residual, amplification is at most d+1.",
+    "hypotheses": [
+      "Uniform finite physical cubes; Boolean outputs +/-1",
+      "Entropy uses base-two logarithms and physical influence is the directed-edge flip probability",
+      "The general projection assertion requires injectivity on occupied Fourier support",
+      "Ratio assertions omit zero-entropy cases; all algebraic identities include constant seeds",
+      "Nonunateness requires nonconstant g and L>=d+2"
+    ],
+    "statement_sha256": "dfa78bf205342cbdc84dce01efc2588a9d252fc5abe37d499111a15916fe43ca",
+    "contributors": [
+      "A030"
+    ],
+    "proof_source": "RESTRICTION_PLATEAUX.tex; REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Finite universal multiplicative bound on one-step restriction H/I amplification",
+      "Bounded maximum-depth C001-terminal stopping for all parity-block expansions"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A026",
+      "A027",
+      "A028",
+      "A065",
+      "A064",
+      "A087",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  }
+]

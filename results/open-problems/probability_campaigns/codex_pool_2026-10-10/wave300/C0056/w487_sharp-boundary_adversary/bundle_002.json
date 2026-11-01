@@ -1,0 +1,204 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w487",
+  "bundle_slug": "c0056-spectral-moment-boundary-20261010-v2",
+  "entries": [
+    {
+      "key": "poisson",
+      "namespace": "analysis.spectral",
+      "logical_name": "spectral-poisson-transform-unnormalized",
+      "kind": "definition",
+      "title": "Unnormalized spectral Poisson transform",
+      "statement": "For a probability Borel measure mu on R and eta>0, define F_eta(E)=integral_R eta/((t-E)^2+eta^2) dmu(t). For a unit vector's spectral measure of a self-adjoint H, F_eta(E)=Im <u,(H-E-i eta)^(-1)u>. The kernel has total Lebesgue integral pi.",
+      "proof_text": null,
+      "assumptions": [
+        "mu is a probability Borel measure",
+        "eta>0",
+        "unit-vector spectral measure when H is used"
+      ],
+      "domain": "probability and spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w487:c0056-boundary-20261010",
+        "url": "file:///~/brain_workers/w487/ATTEMPT.md",
+        "revision": "campaign-author-2026-10-10-v2-nondegenerate-interval-fix",
+        "license": "owner-own-work (campaign derivation; independent/model gates separate)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "atomic",
+      "namespace": "analysis.spectral",
+      "logical_name": "annealed-first-poisson-moment-does-not-imply-quenched-ac",
+      "kind": "concept",
+      "title": "Annealed first moment can conceal atomic spectral measures",
+      "statement": "DRAFT concept backed by an author derivation, not a promoted theorem. For every lambda>0, the diagonal operator H delta_x=lambda V_x delta_x on ell^2(Z^3), with iid uniform[-1,1] V_x and no hopping, has atomic spectral measures for every realization. Yet sup_(E real,eta>0) E Im <delta_x,(H-E-i eta)^(-1)delta_x> <= pi/(2lambda). A bounded annealed first moment alone therefore does not imply quenched ac. This does not refute the Anderson operator with hopping.",
+      "proof_text": null,
+      "assumptions": [
+        "lambda>0",
+        "iid uniform[-1,1] site variables",
+        "diagonal operator with no hopping"
+      ],
+      "domain": "probability and spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w487:c0056-boundary-20261010",
+        "url": "file:///~/brain_workers/w487/ATTEMPT.md",
+        "revision": "campaign-author-2026-10-10-v2-nondegenerate-interval-fix",
+        "license": "owner-own-work (campaign derivation; independent/model gates separate)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "criterion",
+      "namespace": "analysis.spectral",
+      "logical_name": "annealed-integrated-poisson-p-moment-ac-criterion",
+      "kind": "concept",
+      "title": "Sharp power-moment boundary for a quenched ac criterion",
+      "statement": "DRAFT concept backed by an author derivation, not a promoted theorem. Let mu_omega be random probability Borel measures, I a bounded open interval, 1<p<infinity, and eta_n>0 a deterministic sequence tending to zero. Set F_n(omega,E)=integral eta_n/((t-E)^2+eta_n^2) dmu_omega(t), jointly measurable. If sup_n E integral_I F_n^p <= C<infinity, then almost surely mu_omega|I=rho_omega dE with rho_omega in Lp(I), and E integral_I rho_omega^p <= C/pi^p. For 0<p<=1, integral_I F_eta^p <= |I|^(1-p)pi^p holds for every probability measure, including atoms; those power bounds alone cannot imply ac. p>1 is sufficient, not necessary for ac, and the criterion may yield zero mass on I.",
+      "proof_text": null,
+      "assumptions": [
+        "random probability Borel measures",
+        "bounded open I",
+        "deterministic eta_n -> 0",
+        "joint measurability",
+        "1<p<infinity for the sufficient criterion"
+      ],
+      "domain": "probability and spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w487:c0056-boundary-20261010",
+        "url": "file:///~/brain_workers/w487/ATTEMPT.md",
+        "revision": "campaign-author-2026-10-10-v2-nondegenerate-interval-fix",
+        "license": "owner-own-work (campaign derivation; independent/model gates separate)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "second",
+      "namespace": "analysis.spectral",
+      "logical_name": "uniform-diagonal-imaginary-resolvent-second-moment-divergence",
+      "kind": "concept",
+      "title": "Atomic model has a divergent second imaginary-resolvent moment",
+      "statement": "DRAFT concept backed by an author derivation, not a promoted theorem. Let V be uniform[-1,1], lambda>0, eta>0 and F_eta=eta/((lambda V)^2+eta^2). Then E F_eta=arctan(lambda/eta)/lambda and E F_eta^2=1/(2(lambda^2+eta^2))+arctan(lambda/eta)/(2lambda eta). Consequently eta E F_eta^2 -> pi/(4lambda), while E F_eta -> pi/(2lambda), as eta -> 0 at fixed lambda.",
+      "proof_text": null,
+      "assumptions": [
+        "lambda>0 fixed",
+        "eta>0",
+        "V uniform[-1,1]"
+      ],
+      "domain": "probability and spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w487:c0056-boundary-20261010",
+        "url": "file:///~/brain_workers/w487/ATTEMPT.md",
+        "revision": "campaign-author-2026-10-10-v2-nondegenerate-interval-fix",
+        "license": "owner-own-work (campaign derivation; independent/model gates separate)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bath",
+      "namespace": "analysis.spectral",
+      "logical_name": "anderson-schur-bath-negative-imaginary-width-moment",
+      "kind": "concept",
+      "title": "Full deleted-site bath controls the stronger spectral moment",
+      "statement": "DRAFT concept backed by an author derivation, not a promoted theorem. For H=A+lambda V on ell^2(Z^3), A nearest-neighbor adjacency and V iid uniform[-1,1], fix x, z=E+i eta, lambda>0, eta>0. With H^(x) the deleted-site compression and b the neighbor-coupling vector, set Sigma=<b,(H^(x)-z)^(-1)b>, a=E+Re Sigma and B=eta+Im Sigma>0. Conditional on all sites except V_x, Im G_xx=B/((lambda V_x-a)^2+B^2). Its conditional first moment is <=pi/(2lambda). For 1<p<infinity and K_p=integral_R(1+u^2)^(-p)du, its conditional p moment is <=K_p B^(1-p)/(2lambda); on |a|<=lambda/2 and B<=lambda/2 it is >=2^(-p)B^(1-p)/lambda. An eta-uniform integrated p moment thus requires a uniform resonance-weighted negative moment of B. No such estimate is supplied here, and the six neighbors are not independent branches.",
+      "proof_text": null,
+      "assumptions": [
+        "lambda>0",
+        "eta>0",
+        "iid uniform[-1,1] site law",
+        "full deleted-site compression",
+        "nearest-neighbor adjacency with zero diagonal",
+        "1<p<infinity"
+      ],
+      "domain": "probability and spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w487:c0056-boundary-20261010",
+        "url": "file:///~/brain_workers/w487/ATTEMPT.md",
+        "revision": "campaign-author-2026-10-10-v2-nondegenerate-interval-fix",
+        "license": "owner-own-work (campaign derivation; independent/model gates separate)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "goe",
+      "namespace": "analysis.spectral",
+      "logical_name": "free-lattice-ac-does-not-imply-periodic-goe-statistics",
+      "kind": "concept",
+      "title": "Free ac spectrum does not supply periodic-box GOE statistics",
+      "statement": "DRAFT concept backed by an author derivation, not a promoted theorem. Free nearest-neighbor adjacency on Z^3 has absolutely continuous spectral measures. In periodic boxes of odd side L its eigenvalues are 2 sum_j cos(2pi k_j/L), k in (Z/LZ)^3. In any fixed open interval I=(a,b) with -6<a<b<6, k -> -k pairs all momenta and forces at least half of the sorted adjacent spacings to be zero as the bulk count diverges. Strictly monotone unfolding preserves those coincidences, obstructing GOE bulk spacing statistics. This uses lambda=0 and does not refute fixed positive-disorder C0056.",
+      "proof_text": null,
+      "assumptions": [
+        "lambda=0",
+        "periodic odd-L cubes",
+        "fixed open interval I=(a,b) with -6<a<b<6"
+      ],
+      "domain": "probability and spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w487:c0056-boundary-20261010",
+        "url": "file:///~/brain_workers/w487/ATTEMPT.md",
+        "revision": "campaign-author-2026-10-10-v2-nondegenerate-interval-fix",
+        "license": "owner-own-work (campaign derivation; independent/model gates separate)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "status",
+      "namespace": "analysis.spectral",
+      "logical_name": "c0056-ac-and-goe-scope-status-2026-10-10",
+      "kind": "concept",
+      "title": "C0056 has separate ac and GOE obligations; current status unknown",
+      "statement": "DRAFT source-status concept, not a theorem verdict. The recovered C0056 intake asks for both weak-disorder infinite-volume ac spectrum on Z^3 and GOE local statistics of finite-volume restrictions. Bourgade's 2018 survey uses centered iid variance-one sites and periodic boxes. A September 23, 2026 primary manuscript claims purely ac nonzero spectral restriction for iid uniform[-1,1] disorder at each fixed sufficiently small positive coupling, on a fixed interval above -6 in d=3. That claim's mathematical review gates are not established in this packet, and its stated theorem does not establish GOE statistics. Current openness is UNKNOWN; keep the two obligations and the law normalization explicit.",
+      "proof_text": null,
+      "assumptions": [
+        "status checked 2026-10-10",
+        "primary manuscript is a claim, not an accepted proof receipt",
+        "no universal law-class or GOE quantifiers supplied by the qualitative intake"
+      ],
+      "domain": "probability and spectral theory",
+      "source": {
+        "source_id": "owner-own-work:w487:c0056-boundary-20261010",
+        "url": "file:///~/brain_workers/w487/ATTEMPT.md",
+        "revision": "campaign-author-2026-10-10-v2-nondegenerate-interval-fix",
+        "license": "owner-own-work (campaign derivation; independent/model gates separate)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "atomic",
+      "to_key": "poisson",
+      "kind": "depends_on",
+      "rationale": "The atomic entry bounds 'E Im <delta_x,(H-E-i eta)^(-1)delta_x>'; the definition identifies 'F_eta(E)=Im <u,(H-E-i eta)^(-1)u>' and kernel integral pi."
+    },
+    {
+      "from_key": "criterion",
+      "to_key": "poisson",
+      "kind": "depends_on",
+      "rationale": "The criterion states 'C/pi^p'; the transform definition states 'The kernel has total Lebesgue integral pi', fixing the normalization in its approximate-identity proof."
+    },
+    {
+      "from_key": "second",
+      "to_key": "atomic",
+      "kind": "specializes",
+      "rationale": "The second-moment entry specifies 'F_eta=eta/((lambda V)^2+eta^2)' at E=0; the atomic entry uses the diagonal uniform model's scalar imaginary resolvent for every E."
+    },
+    {
+      "from_key": "bath",
+      "to_key": "atomic",
+      "kind": "analogous_to",
+      "rationale": "The bath entry states 'Its conditional first moment is <=pi/(2lambda)'; the diagonal entry has the same bound while its spectral measures are atomic. This relates the averaging obstruction without treating the no-hopping model as the positive-hopping target."
+    },
+    {
+      "from_key": "goe",
+      "to_key": "status",
+      "kind": "semantic_association",
+      "rationale": "The free entry states 'does not refute fixed positive-disorder C0056'; the status entry keeps 'both weak-disorder infinite-volume ac spectrum on Z^3 and GOE local statistics' as separate obligations."
+    },
+    {
+      "from_key": "status",
+      "to_existing_logical": "math:probability.random-matrices:open-problem-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor",
+      "kind": "semantic_association",
+      "rationale": "The existing C0056 card states 'and GOE local statistics for its finite-volume restriction' and 'Current status unverified as of 2026-09-07'; the new status concept retains the GOE obligation and records 'Current openness is UNKNOWN' after recovering the dated primary claim. No refutation or solution edge is proposed."
+    }
+  ]
+}

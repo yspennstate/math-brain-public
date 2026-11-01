@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}
+For each fixed integer $\ell\ge2$ and each finite-valued $s:\mathbb N\to[0,\infty)$ with $s(N)=o(N)$, let $K_{\ge\ell}(s)$ be the supremum of $R_{\ge\ell}(F)/I(F)$ over all finite $N$-bit Boolean signs with $0<I(F)\le2^{-s(N)}$. Then $K_{\ge\ell}(s)=K_E$ in the extended reals.
+\end{theorem}
+\begin{proof}
+For any nonconstant $n$-bit Boolean seed $f$, let $h=\chi_Z f^{\otimes m}$, where $|Z|=\ell$ fresh parity bits. Set $q=2^{-k}$ and $F=1+A_k(h-1)$. Every occupied Fourier set of $h$ contains $Z$, so its mean and singleton coefficients are zero. The Fourier coefficients of $F$ are $1-q$ at the empty set, $-q$ at nonempty pure-control sets, and $q\widehat h(S)$ at $(S,U)$ for nonempty core $S$. Homogeneity of the edge entropy gives $B_{\rm data}(F)=q mB(f)$, all of it at lower endpoints of size at least $\ell$. Each fresh parity coordinate has zero erasure and influence $q$. Pivotal counting gives $I(F)=q(mI(f)+\ell+k)$.
+Control edges with a nonempty core index contribute $kq$ to $R_{\ge\ell}$. The remaining pure-control edges give
+\[
+R_{\ge\ell}(F)=qmB(f)+kq+2kq^2\sum_{r=\ell}^{k-1}\binom{k-1}{r}.
+\]
+In particular $R_{\ge2}(F)=qmB(f)+2kq(1-kq)$.
+Let $\eta_m=\sup_{N\ge mn}s(N)/N\to0$ and $k_m=\lceil4(n+1)m\sqrt{\eta_m}+2\sqrt m\rceil=o(m)$. Eventually $N_m=mn+\ell+k_m\le(n+2)m$ and $k_m-s(N_m)\ge2\sqrt m$, which dominates $\log_2(mI(f)+\ell+k_m)$. Hence these functions lie in the cutoff class and their tail ratio has limit inferior at least $B(f)/I(f)$. Supremizing over seeds gives $K_{\ge\ell}(s)\ge K_E$; the reverse inequality follows from $R_{\ge\ell}\le B$. Arbitrarily large finite seed ratios also prove the equality when $K_E=\infty$.
+\end{proof}
+All derivations, cutoff boundary details, exact finite checks, and scope are recorded in REPORT.md. This is an author-proved extraction, pending independent review; no finiteness of $K_E$ is proved.
+\end{document}

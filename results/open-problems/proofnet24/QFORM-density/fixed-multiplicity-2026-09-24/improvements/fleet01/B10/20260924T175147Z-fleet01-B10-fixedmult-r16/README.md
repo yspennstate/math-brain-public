@@ -1,0 +1,1 @@
+B10 r16 fixed-multiplicity work. Seven-direction frontier remains open. Exact structural parameter used in this run: 989/20000.

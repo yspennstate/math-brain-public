@@ -1,0 +1,54 @@
+--- a/~/math-brain-inbox/w365/bundle_001.json
++++ b/~/math-brain-inbox/w365/bundle_001.json
+@@ -0,0 +1,51 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w365",
++  "bundle_slug": "p0104-source-and-interface-audit-001",
++  "entries": [
++    {
++      "key": "p0104-source-scope",
++      "namespace": "probability.first-passage-percolation",
++      "logical_name": "p0104-fluctuation-question-source-scope",
++      "kind": "concept",
++      "title": "Source scope of the FPP fluctuation-exponent questions",
++      "statement": "For iid nearest-neighbor first-passage percolation on Z^d, Auffinger, Damron and Hanson Question 13 asks for a fluctuation exponent chi<1/2 in d>=2 under suitable conditions on the edge-weight law F, and chi=1/3 in d=2; Question 15 asks for chi>0 in suitable dimension. The questions do not specify the suitable laws. Their Section 3.1 also notes that the heuristic Var(T(0,x))~||x||^(2chi) has several possible rigorous meanings. A proof must fix the law class and exponent definition; these are posed questions, not established exponents.",
++      "proof_text": null,
++      "assumptions": ["Historical question as stated in the authors' survey", "No claim that current openness has been certified"],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "arxiv:1511.03262:questions-13-15",
++        "url": "https://arxiv.org/abs/1511.03262",
++        "revision": "as-read-2026-10-10",
++        "license": "arxiv-nonexclusive",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0104-four-edge-mismatch",
++      "namespace": "probability.first-passage-percolation",
++      "logical_name": "four-edge-interface-matching-penalty-in-fpp",
++      "kind": "concept",
++      "title": "Four-edge matching penalty for scalar interface minima",
++      "statement": "In unrestricted iid edge FPP on Z^2 with weights uniform on {1,2}, let s=(0,0), t=(1,1), u=(1,0), v=(0,1), and set A1=w(s,u), A2=w(s,v), B1=w(u,t), B2=w(v,t). Then T(s,t)=min(A1+B1,A2+B2), whereas the scalar relaxation L=min(A1,A2)+min(B1,B2) can be smaller. The penalty G=T-L equals 1 on 2 of the 16 equally likely assignments and 0 otherwise. Exact values are Var(T)=23/64, Var(L)=3/8, Cov(L,G)=-1/16. Independence of the A and B edge sets does not remove the shared-interface matching constraint. This finite example does not imply an asymptotic fluctuation exponent.",
++      "proof_text": null,
++      "assumptions": ["Nearest-neighbor undirected FPP on the full Z^2 lattice", "Four independent displayed edges and all other edges also iid uniform on {1,2}", "w364 derived the example; w365 independently checked all 16 assignments with exact fractions"],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w364:P0104-W364-C02",
++        "url": "urn:owner-own-work:w364:P0104-W364-C02",
++        "revision": "author-2026-10-10; independent-check-w365-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "p0104-four-edge-mismatch",
++      "to_key": "p0104-source-scope",
++      "kind": "semantic_association",
++      "rationale": "The exact four-edge iid FPP obstruction restricts a scalar-interface proof strategy for the fluctuation question; it does not settle Question 13 or Question 15."
++    }
++  ]
++}

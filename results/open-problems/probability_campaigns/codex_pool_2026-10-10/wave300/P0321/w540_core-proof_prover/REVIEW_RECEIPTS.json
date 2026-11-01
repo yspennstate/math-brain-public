@@ -1,0 +1,88 @@
+{
+  "referee": "w542",
+  "source_path": "~\\brain_workers\\w542\\CLAIMS.jsonl",
+  "scoped_verdicts": [
+    {
+      "id": "w540-L1-verdict",
+      "kind": "audit_verdict",
+      "target": "w540.ATTEMPT.md:L1",
+      "verdict": "KEEP as conditional lemma",
+      "exact_statement": "An exponential moment at q, logarithmic variance κ2=a log r+O(1), and uniformly absolutely summable higher cumulants at q imply two-sided bounds |E exp(iqX)|=exp(O(1))r^-q²a/2.",
+      "assumptions": "E exp(q|X|)<∞; a,q>0; uniform D,B; cumulants are Taylor coefficients of log mgf near 0.",
+      "source": "~/brain_workers/w540/ATTEMPT.md, L1",
+      "proof_or_counterexample": "Reproduced: absolute cumulant convergence makes K(z) analytic in |z|<q and continuous at iq; M(z)=exp K(z) near 0 extends by identity theorem through the disk; dominated convergence takes z=itq to iq; Re K(iq)=-q²κ2/2+O(B). No scale independence is used.",
+      "independent_reviewer": "w542",
+      "remaining_gap": "No cumulant hypotheses verified for a microscopic Riesz Gibbs state or sixfold bond angle.",
+      "status": "independently checked proof"
+    },
+    {
+      "id": "w540-L2-verdict",
+      "kind": "audit_verdict",
+      "target": "w540.ATTEMPT.md:L2",
+      "verdict": "KEEP as conditional lemma",
+      "exact_statement": "Anchored absolute joint-cumulant bounds with summable scale weights imply the higher-cumulant bound in L1 without independent increments.",
+      "assumptions": "Finite joint exponential moment; for each n≥3 and anchor j, sum over remaining indices of |cum|≤n!b_n y_j; sum_j y_j≤Y; sum_n q^n b_n<∞.",
+      "source": "~/brain_workers/w540/ATTEMPT.md, L2",
+      "proof_or_counterexample": "By multilinearity κ_n(sum_j Z_j)=sum_{j1,...,jn} cum(Z_j1,...,Z_jn); anchoring j1 and summing absolute values yields |κ_n|≤n!b_nY, then sum with q^n/n!.",
+      "independent_reviewer": "w542",
+      "remaining_gap": "The anchored bound and separate variance estimate are unproved for jellium defects.",
+      "status": "independently checked proof"
+    },
+    {
+      "id": "w540-L3-verdict",
+      "kind": "audit_verdict",
+      "target": "w540.ATTEMPT.md:L3",
+      "verdict": "KEEP as conditional lemma",
+      "exact_statement": "If the physical bond correlation equals a nonzero bounded amplitude times the L1 vertex correlation plus O(r^-η-δ) uniformly in volume, its magnitude is two-sided Θ(r^-η) at large r.",
+      "assumptions": "Amplitude magnitude in [A_-,A_+], A_->0; δ>0 and uniform E0; L1; thermodynamic limit only if separately established.",
+      "source": "~/brain_workers/w540/ATTEMPT.md, L3",
+      "proof_or_counterexample": "Triangle and reverse-triangle inequalities give lower A_-e^-H r^-η-E0r^-η-δ and upper A_+e^H r^-η+E0r^-η-δ; at r^δ≥2E0e^H/A_- the lower is at least half its leading term.",
+      "independent_reviewer": "w542",
+      "remaining_gap": "The representation, nonzero amplitude and subleading error for the actual bond observable are precisely unproved; positional disorder is separate.",
+      "status": "independently checked proof"
+    },
+    {
+      "id": "w540-C1-verdict",
+      "kind": "audit_verdict",
+      "target": "w540.ATTEMPT.md:C1",
+      "verdict": "KEEP as a counterexample to variance-only inference",
+      "exact_statement": "At r=2^J the sum of J independent fair signs scaled by π/(2q) has variance proportional to log r while its q-characteristic function is zero for every J≥1.",
+      "assumptions": "q>0; independent fair signs only for the constructed example.",
+      "source": "~/brain_workers/w540/ATTEMPT.md, C1",
+      "proof_or_counterexample": "Variance=(π/(2q))²J; factorization gives E e^{iqX}=cos(π/2)^J=0. Therefore logarithmic variance does not imply an algebraic vertex lower bound.",
+      "independent_reviewer": "w542",
+      "remaining_gap": "This tests a proof inference only; it is not a Riesz Gibbs construction.",
+      "status": "independently checked proof"
+    },
+    {
+      "id": "w540-C2-verdict",
+      "kind": "audit_verdict",
+      "target": "w540.ATTEMPT.md:C2",
+      "verdict": "KEEP as a sharp-scale pair-law counterexample",
+      "exact_statement": "For a=r^-η≤1/4, the wrapped Gaussian first Fourier coefficient a can be erased by a positive circular density at total-variation distance 2a/π.",
+      "assumptions": "η>0; a≤1/4; pair laws need not form a consistent stationary process.",
+      "source": "~/brain_workers/w540/ATTEMPT.md, C2",
+      "proof_or_counterexample": "Subtract (a/π)cosφ from wrapped-Gaussian density. The remaining higher-harmonic density is positive because 2∑_{n≥2}a^{n²}≤2a⁴/(1-a²)<1. Its first Fourier coefficient is 0. With TV=sup_A|P(A)-Q(A)|, half the L¹ distance is (a/(2π))∫|cosφ|dφ=2a/π.",
+      "independent_reviewer": "w542",
+      "remaining_gap": "Shows transfer error must be below leading correlation scale; does not verify any Riesz approximation.",
+      "status": "independently checked proof"
+    },
+    {
+      "id": "w540-M-verdict",
+      "kind": "audit_verdict",
+      "target": "w540.CLAIMS.jsonl:w540-P0321-M",
+      "verdict": "KEEP only as explicit unproved bottleneck; no parent proof",
+      "exact_statement": "A density-one s=1 jellium has a nonempty inverse-temperature interval of Gibbs states with defect/angle estimates and genuine bond/position correlation separation characteristic of a hexatic.",
+      "assumptions": "A specific neutralized finite-volume ensemble, limiting Gibbs specification and microscopic observables must be fixed.",
+      "source": "~/brain_workers/w540/ATTEMPT.md, M and stopping point; Lewin 2022 §VI.2",
+      "proof_or_counterexample": "No proof supplied. L1-L3 condition on connected-cumulant, amplitude, error and positional estimates. w541's Gaussian surrogate has algebraic positional order, so it cannot fill the defect input.",
+      "independent_reviewer": "w542",
+      "remaining_gap": "Uniform microscopic defect-sector estimate and observables on one nonempty coupling interval.",
+      "status": "conjecture"
+    }
+  ],
+  "adversary_path": "~/brain_workers/w541/AUDIT.md",
+  "final_L3_alternative_review": "pending",
+  "full_target": "unproved",
+  "model_and_login_gates": "unverified"
+}

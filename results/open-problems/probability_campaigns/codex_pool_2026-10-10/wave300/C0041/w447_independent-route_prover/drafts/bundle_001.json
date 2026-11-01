@@ -1,0 +1,181 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w447",
+  "bundle_slug": "rwre-escape-clock-w447-001",
+  "entries": [
+    {
+      "key": "er",
+      "namespace": "probability.rwre",
+      "logical_name": "uniform-ellipticity-escape-radius-residence-bound",
+      "kind": "lemma",
+      "title": "ER: uniform ellipticity escape radius residence bound",
+      "statement": "DRAFT: author proof; independent review pending. For any nearest-neighbor kernel on Z^d bounded below by kappa>0 and a set S with escape radius at most integer r>=1, P_x(T_S>mr)<=(1-kappa^r)^m and E_x T_S<=r*kappa^(-r). This holds conditionally after finite stopping times for sets fixed from then on.",
+      "proof_text": "# Finite escape radius controls one residence episode\n\nClaim ER (proved by w447; awaiting w449).\n\nFix d >= 1 and 0 < kappa <= 1/(2d). Let omega be any nearest-neighbor transition kernel on Z^d with omega(x,e) >= kappa. There is no independence, stationarity, or transience assumption. For S a proper subset of Z^d define\n\nr(S) = sup_{x in S} min_{y outside S} |y-x|_1.\n\nSuppose r(S) <= r for an integer r >= 1. Let T_S = inf{n>=0: X_n outside S}. Then for every x in S and m>=0,\n\nP_{x,omega}(T_S > mr) <= (1-kappa^r)^m,\nE_{x,omega} T_S <= r kappa^(-r).\n\nProof. At any block time mr on {T_S>mr}, choose a shortest lattice path from X_mr to the complement of S; its length s is at most r. Every step has quenched conditional probability at least kappa, so the conditional probability to follow that path is at least kappa^s >= kappa^r. Exit occurs by (m+1)r on that event. The Markov property gives the conditional survival bound 1-kappa^r. Applying the tower property successively gives the displayed tail; we never assume independence between blocks. Sum the tail in blocks of r: E T_S = sum_{n>=0} P(T_S>n) <= r sum_{m>=0}(1-kappa^r)^m = r kappa^(-r).\n\nThe same proof works conditionally from a finite stopping time sigma for a set S chosen measurably at sigma, fixed thereafter, provided every realized S has r(S)<=r. Work quenched, with the full environment retained. Under an annealed law, condition first on omega and the history; the deterministic bound survives averaging. Conditioning on a future event such as never backtracking is not a stopping-time version of this argument.\n\n",
+      "assumptions": [
+        "d>=1",
+        "0<kappa<=1/(2d)",
+        "Every quenched nearest-neighbor transition is >=kappa",
+        "Every point of S has a lattice path of length <=r to its complement",
+        "Sets selected at a stopping time remain fixed"
+      ],
+      "domain": "probability / random walks in random environment",
+      "source": {
+        "source_id": "owner-campaign:w447:C0041:ER",
+        "url": "file:///~/brain_workers/w447/LEMMA_ESCAPE_RADIUS.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "fv",
+      "namespace": "probability.rwre",
+      "logical_name": "lattice-trap-volume-escape-radius-bound",
+      "kind": "lemma",
+      "title": "FV: lattice trap volume escape radius bound",
+      "statement": "DRAFT: author proof; independent review pending. For a finite nonempty S in Z^d with |S|=N, its escape radius satisfies r(S)^d<=d!*N. Thus under kappa-uniform ellipticity, sup_x E_x T_S<=R*kappa^(-R) for R=floor((d!*N)^(1/d)).",
+      "proof_text": "Claim FV (proved consequence; awaiting w449).\n\nIf S is finite, nonempty, |S|=N, then r(S)^d <= d! N and\n\nsup_{x in S} E_{x,omega} T_S <= R kappa^(-R),\nwhere R = floor((d! N)^(1/d)).\n\nProof. At a maximizer x of the integer distance r(S), S contains every point x+z with z_i>=0 and sum_i z_i <= r(S)-1. Stars and bars counts binom(r(S)-1+d,d) such points. This number is r(S)(r(S)+1)...(r(S)+d-1)/d! >= r(S)^d/d!. Hence r(S)<=R. Apply ER with R.\n\nFor t sufficiently large that q = log(t)/(2 log(1/kappa)) > 1 and q < sqrt(t), any set with sup_x E T_S >= t must have r(S)>q, and therefore N>q^d/d!. Indeed r<=q would imply r kappa^(-r)<=q sqrt(t)<t. This is a necessary size condition for slow finite traps, not a probability estimate for their occurrence.\n\n",
+      "assumptions": [
+        "d>=1",
+        "Finite nonempty lattice set S",
+        "Quenched nearest-neighbor kernel uniformly bounded below by kappa>0"
+      ],
+      "domain": "probability / random walks in random environment",
+      "source": {
+        "source_id": "owner-campaign:w447:C0041:FV",
+        "url": "file:///~/brain_workers/w447/LEMMA_ESCAPE_RADIUS.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "cc",
+      "namespace": "probability.rwre",
+      "logical_name": "nonstopping-rwre-clock-exit-count-moment-equivalence",
+      "kind": "lemma",
+      "title": "CC: nonstopping rwre clock exit count moment equivalence",
+      "statement": "DRAFT: author proof; independent review pending. For a kappa-uniformly elliptic nearest-neighbor chain, successive exits from sets selected at finite stopping times and fixed during each residence, with deterministic escape radius <=r, define sigma_m and K_tau=min{m>=1:sigma_m>=tau}. For any positive integer random horizon tau finite on B, P(B)=p>0, E[tau|B]<infinity iff E[K_tau|B]<infinity; E[K_tau|B]<=E[tau|B]<=ceil(8r*log(4/3)/kappa^r)*(E[K_tau|B]+3/p). tau and B may depend on the future.",
+      "proof_text": "# Clock-to-exit-count equivalence, without a stopping-time horizon\n\nClaim CC (proved by w447; independent review pending).\n\nFix a uniformly elliptic nearest-neighbor kernel on Z^d with lower bound kappa>0. Let sigma_0=0. At the finite stopping time sigma_i choose a set S_i containing X_sigma_i, measurably from the history and environment. Keep S_i fixed until its first exit, and assume its escape radius is at most the deterministic integer r>=1. Define sigma_{i+1} to be that exit time. The S_i may overlap, and the choice may depend on the whole past. Write D_i=sigma_{i+1}-sigma_i and a=kappa^r.\n\nFor any integer-valued random horizon tau>=1 finite almost surely, even if tau depends on the future and is not a stopping time, put K_tau=min{m>=1:sigma_m>=tau}. Then\n\nE tau < infinity  if and only if  E K_tau < infinity.\n\nMoreover let B be any event of probability p>0 on which tau is finite, under a law obtained by averaging the uniformly elliptic kernels and their paths. The same equivalence holds under conditional expectation given B. No conditional Markov or iid assertion is made under B.\n\nProof. ER gives conditionally at sigma_i\n\nP(D_i>mr | F_sigma_i, omega) <= (1-a)^m.\n\nThus ceil(D_i/r) is conditionally dominated by a geometric variable on {1,2,...} with success probability a. With lambda=a/(4r) we get\n\nE(exp(lambda D_i) | F_sigma_i,omega)\n <= a exp(a/4)/(1-(1-a) exp(a/4)) <= 4/3.\n\nFor the last inequality use exp(a/4)<=1/(1-a/4); the geometric denominator is positive, since (1-a)/(1-a/4)<1. The formula is increasing in exp(a/4), and at 1/(1-a/4) it is exactly 4/3. Tower iteration at the actual sigma_i now proves\n\nE exp(lambda sigma_m) <= (4/3)^m.\n\nAt each tower step exp(lambda sigma_i) is measurable with respect to F_sigma_i (which retains omega), so E[exp(lambda sigma_{i+1})] = E[exp(lambda sigma_i) E(exp(lambda D_i)|F_sigma_i)] <= (4/3) E[exp(lambda sigma_i)]. Induction proves the displayed bound. This is a conditional moment argument, not independence between episodes.\n\nLet C=2 log(4/3)/lambda. For every integer m>=1,\n\nP(tau>Cm | B)\n <= P(K_tau>m | B) + p^(-1) exp(-lambda C m)(4/3)^m\n = P(K_tau>m | B) + p^(-1)(3/4)^m.\n\nIndeed if K_tau<=m then tau<=sigma_m, regardless of whether tau is a stopping time. The second term follows by an unconditional Chernoff bound followed by division by p ONCE. In the unconditioned case take B to be the whole sample space.\n\nPut L=ceil(C). Tail summation in blocks of L, using the bound above, gives the explicit estimate\n\nE[tau | B] <= L ( E[K_tau | B] + 3/p ).\n\nFor the reverse implication, every D_i>=1, so sigma_m>=m and K_tau<=tau pathwise. Therefore E[K_tau | B]<=E[tau | B]. The argument also applies if tau is only finite on B, by defining it arbitrarily off B and defining K accordingly there.\n\nApplication to the C0041 route. Fixed-size balls centered at successive sigma_i satisfy the hypotheses uniformly. One may put tau equal to a directional regeneration horizon and B equal to a positive-probability no-backtracking event; neither is incorrectly treated as an ordinary stopping-time law. Proving finite conditional mean of the exit count K_tau is the single remaining moment problem for this route. Directional transience only gives its almost-sure finiteness. The equivalence does not yet establish that mean, or prove ballisticity. With S_i a singleton the criterion is tautological; balls with radius at least two separate residence from returns but do not make their exit skeleton iid.\n\nSource: owner campaign derivation, w447, 2026-10-10. No novelty claim; no formal checker receipt.\n",
+      "assumptions": [
+        "0<kappa<=1/(2d), d>=1",
+        "Fixed deterministic r>=1",
+        "Each set is selected at sigma_i and stays fixed until exit",
+        "The full environment is retained",
+        "tau>=1 integer valued and finite on event B",
+        "P(B)=p>0"
+      ],
+      "domain": "probability / random walks in random environment",
+      "source": {
+        "source_id": "owner-campaign:w447:C0041:CC",
+        "url": "file:///~/brain_workers/w447/LEMMA_CLOCK_TO_COUNT.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "go",
+      "namespace": "probability.rwre",
+      "logical_name": "directionally-ballistic-planar-green-functions-have-no-uniform-bound",
+      "kind": "lemma",
+      "title": "GO: directionally ballistic planar green functions have no uniform bound",
+      "statement": "DRAFT: author proof; independent review pending. For every fixed 0<kappa<1/4, homogeneous iid environments on Z^2 with row (1/4+delta,1/4-delta,1/4,1/4), 0<delta<=1/4-kappa, are kappa-uniformly elliptic and ballistic in e1, but their expected total occupation of {0} is unbounded across delta, while first singleton exit time is identically 1. For each individual delta>0 total occupation has finite expectation.",
+      "proof_text": "# First exit and total occupation remain different under the full target assumptions\n\nClaim GO (proved special-case obstruction by w447; awaiting review).\n\nFix 0<kappa<1/4. On Z^2 consider the homogeneous kernel\n\np(+e_1)=1/4+delta, p(-e_1)=1/4-delta,\np(+e_2)=p(-e_2)=1/4,\n\nwhere 0<delta<=1/4-kappa. Its environment law is a Dirac mass at that row at each site, hence is spatially iid and kappa-uniformly elliptic. Its increments are iid. The strong law gives X_n/n -> (2delta,0), so it is directionally transient and ballistic in e_1. Nevertheless\n\nsup_{0<delta<=1/4-kappa} E_0[sum_{n>=0} 1_{X_n=0}] = infinity,\n\nwhile first exit from the singleton {0} takes exactly one step for every delta. Thus no law-independent upper bound for total occupation can follow from kappa, dimension, directional transience and the singleton residence bound alone. Every individual law in this example has finite Green function: it is not a counterexample to C0041 or to finiteness under a fixed iid law.\n\nProof of the divergence with explicit constants. At delta=0 the transformed coordinates Y=X^(1)+X^(2), Z=X^(1)-X^(2) are independent simple symmetric walks. Consequently\n\nP_0(X_{2n}=0) = [binom(2n,n)/4^n]^2 >= 1/(4n), n>=1.\n\nThe elementary central-binomial lower bound binom(2n,n)>=4^n/(2sqrt(n)) follows by induction from n=1, since\n\nbinom(2n+2,n+1)/binom(2n,n)=4(1-1/(2n+2))\nand (1-1/(2n+2))^2 >= n/(n+1).\n\nEvery path of length 2n under p_delta has probability at least (1-4delta)^(2n) times its p_0 probability. If delta<=1/(16N) and n<=N, Bernoulli's inequality gives (1-4delta)^(2n)>=1-8delta n>=1/2. Therefore its Green function is at least\n\n1 + (1/8) sum_{n=1}^N 1/n.\n\nChoose delta_N=min((1/4-kappa)/2,1/(16N)); these are positive, preserve the same ellipticity lower bound, and give the divergent harmonic lower bound.\n\nProof of finiteness for fixed delta. For theta=(1/2)log((1/4+delta)/(1/4-delta))>0,\n\nP_delta(X_n=0) <= E_delta exp(-theta X_n^(1))\n = [1/2+2sqrt(1/16-delta^2)]^n.\n\nThe base is strictly below one, so the Green series is finite. The obstruction is to a uniform or purely local inference, not to each law separately.\n\nSource: owner campaign derivation, w447, 2026-10-10. Original self-contained proof, no novelty asserted.\n",
+      "assumptions": [
+        "Dimension two",
+        "Same fixed ellipticity lower bound kappa<1/4",
+        "Degenerate iid environment law at the displayed row",
+        "Nearest-neighbor walk from origin"
+      ],
+      "domain": "probability / random walks in random environment",
+      "source": {
+        "source_id": "owner-campaign:w447:C0041:GO",
+        "url": "file:///~/brain_workers/w447/LEMMA_RETURN_OBSTRUCTION.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "target",
+      "namespace": "probability.rwre",
+      "logical_name": "c0041-directional-transience-ballisticity-status-w447-20261010",
+      "kind": "concept",
+      "title": "C0041 precise target and unresolved verification status",
+      "statement": "For d>=2, iid kappa-uniformly elliptic nearest-neighbor rows sampled once, annealed almost-sure escape to +infinity in a fixed unit direction ell implies annealed almost-sure positive liminf directional speed. This is a target implication, not a theorem proved by this packet. A September 23, 2026 primary manuscript and Lean solution entrypoint claim this implication. Current openness is UNKNOWN here because the actual proof and trusted axioms were not independently checked. A comparator statement template containing sorry is distinct from its supplied solution module.",
+      "proof_text": null,
+      "assumptions": [
+        "d>=2",
+        "Nearest-neighbor model on Z^d",
+        "Spatial iid row law",
+        "Deterministic positive lower bound for every allowed transition",
+        "Fixed unit direction ell",
+        "P0(lim X_n dot ell=+infinity)=1"
+      ],
+      "domain": "probability / RWRE research status",
+      "source": {
+        "source_id": "owner-campaign:w447:C0041:source-status",
+        "url": "file:///~/brain_workers/w447/SOURCE_STATUS.json",
+        "revision": "2026-10-10",
+        "license": "owner-own-work (original sourced status observation)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.rwre",
+      "logical_name": "c0041-ball-exit-count-integrability-unproved-gap",
+      "kind": "concept",
+      "title": "Unproved ball-exit-count moment in the C0041 route",
+      "statement": "For a spatially iid uniformly elliptic nearest-neighbor RWRE on Z^d, d>=2, assume annealed almost-sure directional transience in ell. Center fixed-radius lattice balls at successive stopping-time exits sigma_i. For a directional regeneration horizon tau and positive-probability no-backtracking event B, put K_tau=min{m>=1:sigma_m>=tau}. The clock-to-count lemma reduces finite conditional mean tau to finite conditional mean K_tau. This packet has no proof that E[K_tau|B] is finite from these hypotheses. Almost-sure finiteness of K_tau, bounded single-residence time, and spatial iid do not justify that missing moment estimate or independence of the overlapping exit skeleton.",
+      "proof_text": null,
+      "assumptions": [
+        "Target RWRE assumptions",
+        "Directional regeneration horizon tau finite on B",
+        "B has positive probability",
+        "Fixed-radius balls chosen at stopping-time exits"
+      ],
+      "domain": "probability / RWRE proof gap",
+      "source": {
+        "source_id": "owner-campaign:w447:C0041:gap",
+        "url": "file:///~/brain_workers/w447/ATTEMPT.md",
+        "revision": "2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "fv",
+      "to_key": "er",
+      "kind": "depends_on",
+      "rationale": "FV bounds escape radius by cardinality, then uses ER for residence time. Supporting ends: [DRAFT: author proof; independent review pending. For a finite nonempty S in Z^d with |S|=N, its escape radius satisfies r(S)^d<=d!*N. Thus under kappa-uniform ellipticity, sup_x E_x T_S<=R*kappa^(-R) for R=floor((d!*N)^(1/d)).] [DRAFT: author proof; independent review pending. For any nearest-neighbor kernel on Z^d bounded below by kappa>0 and a set S with escape radius at most integer r>=1, P_x(T_S>mr)<=(1-kappa^r)^m and E_x T_S<=r*kappa^(-r). This holds conditionally after finite stopping times for sets fixed from then on.]."
+    },
+    {
+      "from_key": "cc",
+      "to_key": "er",
+      "kind": "depends_on",
+      "rationale": "CC obtains the uniform conditional exponential episode moment from ER's geometric tail. Supporting ends: [DRAFT: author proof; independent review pending. For a kappa-uniformly elliptic nearest-neighbor chain, successive exits from sets selected at finite stopping times and fixed during each residence, with deterministic escape radius <=r, define sigma_m and K_tau=min{m>=1:sigma_m>=tau}. For any positive integer random horizon tau finite on B, P(B)=p>0, E[tau|B]<infinity iff E[K_tau|B]<infinity; E[K_tau|B]<=E[tau|B]<=ceil(8r*log(4/3)/kappa^r)*(E[K_tau|B]+3/p). tau and B may depend on the future.] [DRAFT: author proof; independent review pending. For any nearest-neighbor kernel on Z^d bounded below by kappa>0 and a set S with escape radius at most integer r>=1, P_x(T_S>mr)<=(1-kappa^r)^m and E_x T_S<=r*kappa^(-r). This holds conditionally after finite stopping times for sets fixed from then on.]."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "cc",
+      "kind": "depends_on",
+      "rationale": "The missing exit-count moment is exactly the sufficient clock moment identified by CC; no target proof is claimed. Supporting ends: [For a spatially iid uniformly elliptic nearest-neighbor RWRE on Z^d, d>=2, assume annealed almost-sure directional transience in ell. Center fixed-radius lattice balls at successive stopping-time exits sigma_i. For a directional regeneration horizon tau and positive-probability no-backtracking event B, put K_tau=min{m>=1:sigma_m>=tau}. The clock-to-count lemma reduces finite conditional mean tau to finite conditional mean K_tau. This packet has no proof that E[K_tau|B] is finite from these hypotheses. Almost-sure finiteness of K_tau, bounded single-residence time, and spatial iid do not justify that missing moment estimate or independence of the overlapping exit skeleton.] [DRAFT: author proof; independent review pending. For a kappa-uniformly elliptic nearest-neighbor chain, successive exits from sets selected at finite stopping times and fixed during each residence, with deterministic escape radius <=r, define sigma_m and K_tau=min{m>=1:sigma_m>=tau}. For any positive integer random horizon tau finite on B, P(B)=p>0, E[tau|B]<infinity iff E[K_tau|B]<infinity; E[K_tau|B]<=E[tau|B]<=ceil(8r*log(4/3)/kappa^r)*(E[K_tau|B]+3/p). tau and B may depend on the future.]."
+    },
+    {
+      "from_key": "go",
+      "to_key": "gap",
+      "kind": "semantic_association",
+      "rationale": "GO prevents a uniform shortcut from single-residence estimates to total occupation; it does not disprove the missing fixed-law moment. Supporting ends: [DRAFT: author proof; independent review pending. For every fixed 0<kappa<1/4, homogeneous iid environments on Z^2 with row (1/4+delta,1/4-delta,1/4,1/4), 0<delta<=1/4-kappa, are kappa-uniformly elliptic and ballistic in e1, but their expected total occupation of {0} is unbounded across delta, while first singleton exit time is identically 1. For each individual delta>0 total occupation has finite expectation.] [For a spatially iid uniformly elliptic nearest-neighbor RWRE on Z^d, d>=2, assume annealed almost-sure directional transience in ell. Center fixed-radius lattice balls at successive stopping-time exits sigma_i. For a directional regeneration horizon tau and positive-probability no-backtracking event B, put K_tau=min{m>=1:sigma_m>=tau}. The clock-to-count lemma reduces finite conditional mean tau to finite conditional mean K_tau. This packet has no proof that E[K_tau|B] is finite from these hypotheses. Almost-sure finiteness of K_tau, bounded single-residence time, and spatial iid do not justify that missing moment estimate or independence of the overlapping exit skeleton.]."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "target",
+      "kind": "semantic_association",
+      "rationale": "Closing the displayed moment is the outstanding obligation of this particular route toward the target. Supporting ends: [For a spatially iid uniformly elliptic nearest-neighbor RWRE on Z^d, d>=2, assume annealed almost-sure directional transience in ell. Center fixed-radius lattice balls at successive stopping-time exits sigma_i. For a directional regeneration horizon tau and positive-probability no-backtracking event B, put K_tau=min{m>=1:sigma_m>=tau}. The clock-to-count lemma reduces finite conditional mean tau to finite conditional mean K_tau. This packet has no proof that E[K_tau|B] is finite from these hypotheses. Almost-sure finiteness of K_tau, bounded single-residence time, and spatial iid do not justify that missing moment estimate or independence of the overlapping exit skeleton.] [For d>=2, iid kappa-uniformly elliptic nearest-neighbor rows sampled once, annealed almost-sure escape to +infinity in a fixed unit direction ell implies annealed almost-sure positive liminf directional speed. This is a target implication, not a theorem proved by this packet. A September 23, 2026 primary manuscript and Lean solution entrypoint claim this implication. Current openness is UNKNOWN here because the actual proof and trusted axioms were not independently checked. A comparator statement template containing sorry is distinct from its supplied solution module.]."
+    }
+  ]
+}

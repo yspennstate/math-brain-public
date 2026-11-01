@@ -1,0 +1,58 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T224300Z-claude-B17-erasure-census-affine-bridge",
+ "stream": "B17",
+ "packet_id": "B17-LEAD",
+ "gap_id": "G-R-SELECT",
+ "attempt_id": "B17-LEAD-01-erasure-census-cutoff",
+ "method": "proof (JS scalar lemma, two-sided bridge, zero-erasure transport); exhaustive exact census on 4 bits; frozen float search on 5 and 6 bits with exact certification of the best tables; independent B09 enclosure",
+ "mathematical_delta": "JS clause of C005 proved (phi(z) <= 1-sqrt(1-z^2)); FEI iff K_B finite, with slack 2/ln2, proved; K_B(4)=4+(5/2)log2 5-(9/2)log2 3 certified independently (A082 confirmed); explicit 5-variable g with min_i B_i/I_i = 2.6958875 > 107/40 certified, so K_B(5) > K_B(4); K_D(4), C(4) and max B/I on 4 bits certified; B09 J-M enclosed to width 1e-30.",
+ "deliverable_status": "COMPLETE_LOCAL_SAVED_REVIEW_PENDING (REPORT.md refused by the harness; report text returned in StructuredOutput)",
+ "mathematical_status": "BRIDGE_REDUCTION_PROVED_FINITE_CERTIFICATES_CHECKED_FULL_FEI_OPEN",
+ "claim_versions_used": [
+  "A082-FINITE-TRUE-ERASURE v1",
+  "A082-AFFINE4-ERASURE-BRIDGE v1",
+  "A081-VERSIONED-DEPENDENCY-CERTIFICATE v1",
+  "B09-TAXFREE-AND-COUNTEREXAMPLE-REPAIRED",
+  "C005",
+  "C018"
+ ],
+ "claims_created_or_changed": [
+  "B17-JS-PACKET-SCALAR v1",
+  "B17-KB-TWO-SIDED v1",
+  "B17-ZERO-ERASURE-TRANSPORT v1",
+  "B17-KB4-CENSUS v1",
+  "B17-KB5-CUTOFF v1",
+  "B17-B09-INTERVAL v1",
+  "B17-SELECTION-GROWTH-EVIDENCE v1"
+ ],
+ "source_artifacts": [
+  "code/certlog.py",
+  "code/census_n4.py",
+  "code/search_n56.py",
+  "code/family_scan.py",
+  "code/b09_interval.py",
+  "code/write_records.py",
+  "out/census_n4.json",
+  "out/search_n56.json",
+  "out/family_scan.json",
+  "out/b09_interval.json"
+ ],
+ "next_consumers": [
+  "A081",
+  "A082",
+  "A083",
+  "A084",
+  "A085",
+  "B15",
+  "B09"
+ ],
+ "next_action": "Certify K_B(5) exactly: exhaustive census of the 2^31 output-normalized 5-bit tables (frozen spec, under 1 GB and 20 min) with a certified recheck of every table within 1e-9 of the maximum; reviewer A085.",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "REPORT.md write refused by the harness (subagent report-file rule); the full report is in the StructuredOutput"
+ ],
+ "packet_ids": [
+  "B17-LEAD"
+ ]
+}

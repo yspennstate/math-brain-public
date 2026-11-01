@@ -1,0 +1,16 @@
+P20 D0010 all-m-piece boundary family symbolic exact core: PASS
+assumption: integer k>=2, m=k+1, |t|<=1/10, c=(1+t)/3
+sum_j a_j = -k
+sum_j (2j-1)a_j = -4*k**2
+a_1 = (8*k - 1)/(k + 1)
+a_k = -(10*k + 1)/(k + 1)
+adjacent coefficient gap = 18*k/((k - 1)*(k + 1)) > 0
+8-a_1 = 9/(k + 1) > 0
+a_k+10 = 9/(k + 1) > 0
+pre-tail positivity margin for t>=0 = (10*k + 19)/(10*(k + 1)) > 0
+pre-tail positivity margin for t<=0 = 3*(4*k + 7)/(10*(k + 1)) > 0
+tail positivity margin = 9/20 > 0
+last-pre-tail minus tail margin at t=1/10 = 9*(k + 3)/(20*(k + 1)) > 0
+normalization = 1
+mean = 1/3
+ALL_SYMBOLIC_EXACT_CHECKS_PASS

@@ -1,0 +1,71 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w335",
+  "bundle_slug": "w335-p0050-20261010",
+  "entries": [
+    {
+      "key": "p0050-square-gap-singularity",
+      "namespace": "probability.random-graphs",
+      "logical_name": "negative-correlation-divergent-squared-marginal-gap-singularity",
+      "kind": "lemma",
+      "title": "Singularity from a divergent squared marginal gap [draft; pending w347]",
+      "statement": "Let mu and nu be laws of countably many zero-one indicators X_i, pairwise negatively correlated under each law. Suppose delta_i=E_mu X_i-E_nu X_i>=0 and sum_i delta_i^2=infinity. Then mu and nu are mutually singular. The criterion needs no common invariant group action. Its application to distinct free and wired spanning-forest laws requires checking the ordered-marginal, negative-correlation and divergent-squared-gap hypotheses; that divergence is not proved for arbitrary networks here.",
+      "proof_text": "For S_N=sum_{i<=N} delta_i X_i and D_N=sum_{i<=N} delta_i^2, the difference of expectations is D_N. Nonnegative weights and nonpositive off-diagonal covariances imply\n\n    Var_mu(S_N), Var_nu(S_N) <= sum_i delta_i^2 Var(X_i) <= D_N/4.\n\nLet t_N be the midpoint of the two means. Chebyshev gives mu(S_N<=t_N)<=1/D_N and nu(S_N>t_N)<=1/D_N. Choose increasing N_j with D_{N_j}>=2^j. Both error sums are finite. The first Borel-Cantelli lemma therefore makes the measurable event \"S_{N_j}>t_{N_j} for all sufficiently large j\" have mu-probability one and nu-probability zero. This is mutual singularity.",
+      "assumptions": [
+        "Countable indicator coordinates",
+        "Pairwise nonpositive covariances under both laws",
+        "Ordered marginal probabilities",
+        "Divergent sum of squared marginal differences"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w335:p0050-square-gap-singularity",
+        "url": "file:///~/brain_workers/w335/P0050_proof.md",
+        "revision": "author-checked-20261010-pending-independent-w347",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0050-finite-gap-boundary",
+      "namespace": "probability.random-graphs",
+      "logical_name": "finite-coordinate-bernoulli-change-equivalent-measures",
+      "kind": "lemma",
+      "title": "Finite marginal differences need not imply singularity [draft; pending w347]",
+      "statement": "The independent Bernoulli product laws with first-coordinate parameters 3/5 and 2/5 and all other parameters 1/2 are distinct but equivalent. Their squared marginal-gap sum is 1/25. This example shows the preceding sufficient criterion cannot discard its divergence hypothesis or replace it by distinctness alone.",
+      "proof_text": "Only the first-coordinate density changes. The Radon-Nikodym derivative is 3/2 on X_1=1 and 2/3 on X_1=0, strictly positive and finite everywhere.",
+      "assumptions": [
+        "Independent Bernoulli coordinates",
+        "Exactly one changed coordinate"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w335:p0050-finite-gap-boundary",
+        "url": "file:///~/brain_workers/w335/P0050_proof.md",
+        "revision": "author-checked-20261010-pending-independent-w347",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0050-square-gap-singularity",
+      "to_existing_logical": "math:probability.core:open-problem-p0050-singularity-of-distinct-free-and-wired-forest-measures",
+      "kind": "specializes",
+      "rationale": "New card: \"The criterion needs no common invariant group action\"; existing card: \"If the wired and free uniform spanning-forest measures differ on an infinite network, must they be mutually singular? Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 10.58, printed p.385.\nPosed in Probability on Trees and Networks,\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    },
+    {
+      "from_key": "p0050-square-gap-singularity",
+      "to_existing_logical": "math:probability.core:attempt-p0050-singularity-of-distinct-free-and-wired-forest-measures",
+      "kind": "analogous_to",
+      "rationale": "New card: \"sum_i delta_i^2=infinity\"; existing card: \"Arbitrary networks may lack it\"."
+    },
+    {
+      "from_key": "p0050-finite-gap-boundary",
+      "to_key": "p0050-square-gap-singularity",
+      "kind": "semantic_association",
+      "rationale": "Boundary card: \"squared marginal-gap sum is 1/25\"; criterion card: \"sum_i delta_i^2=infinity\". The boundary prevents dropping the divergence hypothesis."
+    }
+  ]
+}

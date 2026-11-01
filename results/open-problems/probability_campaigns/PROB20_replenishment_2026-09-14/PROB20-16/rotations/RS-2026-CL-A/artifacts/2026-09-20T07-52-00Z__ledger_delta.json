@@ -1,0 +1,38 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "claim_id": "RS-2026-CL-A",
+  "date_utc": "2026-09-20T07:52:00Z",
+  "model_actual": "GPT-5.6 Sol",
+  "reasoning_actual": "UNVERIFIED",
+  "status": "PROVED PARTIAL / READ-k-CYLINDER-DNF-NOISE-TRANSFER",
+  "E_framework_before": 1,
+  "E_framework_after": 1,
+  "captured_master_before_report": "058d7277fdfb5348ea2f8db95ee11fed786d53fa",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-20/2026-09-20T06-42-00Z__report.md",
+    "creation_commit": "a718a1879081b238f7e6f46e6cd0123d7424520d",
+    "readback_blob": "8e02ad105b3be0e6cba0fb6f2ec772b0a39b601e"
+  },
+  "new_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-20/2026-09-20T07-52-00Z__report.md",
+    "creation_commit": "0bd9ec38bcc65cfb57b5851df23e825552b4b5e4",
+    "readback_blob": "53ee402790226cc347df9d5cb3ec9d4f10a24a61"
+  },
+  "handoff": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-20T07-52-00Z__P08_P09_readk_handoff.md",
+    "creation_commit": "f68d02dcebc51a756a6d8c00c3ebe89b77faffa6",
+    "readback_blob": "d19ac9d72ae15d6dd4d71e0311ecd202705f165f"
+  },
+  "methods": ["B3", "B18", "B20"],
+  "old_claim": "Bounded source LDA plus fixed product noise rules out polynomial-size read-once cylinder DNFs under D/log m -> infinity.",
+  "new_claim": "The disjoint-block assumption is removed: bounded source LDA plus fixed product noise rules out polynomial-size constant-read cylinder DNFs under D/log m -> infinity; quantitatively growing read number is allowed when k[-log(1-q)] + A k sqrt[-log(1-q)] -> 0.",
+  "key_bound": "E_{T_rho P}f <= kL_q + Ak sqrt(L_q) + m[2^{-(W+1)} + A2^{-(W+1)/2} + ((1+rho)/2)^{W+1}] for W<=D.",
+  "mao_boundary": "If Mao's successful test has a read-k DNF with log m=o(D), then k[-log(1-q)] >= 1-o(1); in particular constant read is impossible as q->0.",
+  "source_check": "Randomstrasse page re-read 2026-09-20: title says problems 36-38; first broad conditions box displayed as Open Problem 35; source hypotheses preserved.",
+  "later_check": "Mao arXiv:2607.20318 rechecked 2026-09-20; exact zero LDA through Theta((log n)^(r-1)) plus polynomial-time rank distinguishing after fixed resampling remains the mandatory boundary.",
+  "prior_art": "Read-k concentration itself is known (Gavinsky-Lovett-Saks-Srinivasan); read-k DNFs have dedicated PRG literature (Servedio-Tan). Novelty of the bounded-LDA transfer is UNVERIFIED.",
+  "audits": "0/2 independent full-claim audits",
+  "recovery": "one HARD recovery cycle remains consumed; no unchanged-run stagnation trigger",
+  "next_attack": "Robustify bounded-independence-plus-noise product-test machinery from exact moment matching to bounded LDA for arbitrary bounded local block tests; alternatively connect test overlap to treewidth/interface decompositions.",
+  "delivery": "GitHub only; no email, Drive, public posting, force-push, permission bypass, scheduler mutation, or peer/historical overwrite."
+}

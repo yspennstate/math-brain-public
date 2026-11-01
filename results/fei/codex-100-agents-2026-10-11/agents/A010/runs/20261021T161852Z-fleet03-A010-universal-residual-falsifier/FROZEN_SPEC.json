@@ -1,0 +1,13 @@
+{
+  "helper_version": "A010-full-parent-map-v6",
+  "actual_Boolean_family": "Positive edge DNFs on all labelled n=3 pilot / n=4 full nonempty simple graph tables; four fixed leafless/shared n=5 graphs C5, K2,3, bowtie, and house (square 01,12,23,03 with roof edges14,24); actual stars for coefficient reconstruction m=2,3,4",
+  "parameter_domain": "pilot: 7 graphs, stars m2..4; full: 63 n4 graphs plus exactly four listed n5 graphs, cardinality stars m2..32; rational weights lambda=1/(2 maxdegree) on graphs, 1/m on stars",
+  "case_count": {"pilot_graphs": 7,"full_graphs": 67,"full_cardinality_stars":31},
+  "symmetry": "No graph symmetry reduction. Cardinality star reduction uses full leaf-permutation invariance of the uniform reference and root caps, not symmetry of a physical optimum.",
+  "arithmetic": "Python integer and Fraction; complete parent-map partition coefficients, chronological factorial multiplicities, independent FWHT/pivotal influences; exact packing primal-dual equality and cap LP primal-dual equality. No floating decision.",
+  "memory_estimate_MB": 110,
+  "maximum_runtime_seconds": {"pilot":55,"full":240},
+  "output": "Checkpoint after each graph, final exact h vectors and LP witnesses; independent compare against immutable A006 output for all n4 graphs. No author implementation imported.",
+  "dimension_escalation": false,
+  "search_claim": "No variational growth inferred from upper caps or optimization gaps; this tests strengthened certification, not exhaustive physical weight optimization."
+}

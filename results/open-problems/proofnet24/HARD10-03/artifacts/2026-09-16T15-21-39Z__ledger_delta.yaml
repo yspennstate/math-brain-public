@@ -1,0 +1,46 @@
+task: HARD10-03
+category: HARD OUTSIDE
+model_actual: "GPT-5.6 Sol"
+reasoning_level: "UNVERIFIED"
+model_request_satisfied: false
+scheduler_selector_note: "The scheduler exposes no model selector or reasoning-effort selector."
+source:
+  author: "Bálint Tóth"
+  year: 1993
+  problem: "unweighted nearest-neighbor random-interchange infinite/macroscopic-cycle conjecture on Z^3"
+  exact_accessible_formulation: "Ioffe–Tóth (2020), §1.6, Conjecture 1(ii)"
+  rate_convention: "rate one per unoriented nearest-neighbor edge, process started from identity"
+source_status: OPEN
+run_status: PARTIAL
+fixed_metric:
+  name: "best proved exponent epsilon in the frozen deterministic connected-block visitation/leakage estimate"
+  before: "203/500 = 0.406"
+  after_formula: "epsilon_MGF = [log((1+u_*)/2) - (u_*-1)/(2u_*)]/log(2), u_*(1+u_*)=4e"
+  after_numeric: "0.4723613755576205..."
+  certified_lower: "590451719447/1250000000000 = 0.4723613755576"
+  beta_regime: "beta >= 1; theorem itself is uniform in beta under the frozen cross-heat hypothesis"
+  event: "Bad_cut(beta,L) = exact finite root-cycle visitation of every deterministic block in the frozen family while remaining in their union"
+  scope_warning: "This is not a physical cube orbit-propagation exponent; that quantity remains UNMEASURED."
+new_claims:
+  - "NEW-L98: fair binary-cut exponential-moment bound P(V) <= [2/(1+u) * exp((u^2-1)Lambda/n)]^n for u>=1"
+  - "NEW-L99: under H_beta <= n/(4e), optimized exponent epsilon_MGF = 0.4723613755576205..."
+  - "Exact rational checker certifies epsilon > 590451719447/1250000000000 and exhaustively checks 1441 labelled trees for k<=6"
+  - "Conditional Peierls scale gate: if a future physical C=1 local 2-dependent domination inherits epsilon_cert, L=10^214 beats q0=5408^-27"
+report:
+  path: "proofnet24/HARD10-03/runs/2026-09-16/2026-09-16T15-21-39Z__report.md"
+  create_commit: "11c04fa9c12e68725a530dd854f8fdaed4872d41"
+  readback_blob: "0872666ffe27a9fd824cea5e5b572dd502fc8c25"
+artifacts:
+  checker_path: "proofnet24/HARD10-03/artifacts/2026-09-16T15-21-39Z__mgf_cut_check.py"
+  checker_create_commit: "e4016308bc1fa93133207dc6fd42c8336f75e55e"
+  checker_readback_blob: "abe9cb781750a07aef37cb40f9d98982e3fe9b7a"
+  output_path: "proofnet24/HARD10-03/artifacts/2026-09-16T15-21-39Z__mgf_cut_check.out"
+  output_create_commit: "348054f8edccf225950f46fe9571235e2594b10c"
+  output_readback_blob: "49f84acce69c780927b528b2839fc4fa2e0e4e0e"
+peer_route:
+  C27: "separate near-diffusive skeleton / finite-torus route; newest C27 report reached its own stuck threshold and refuted a label-specific total-order negative-association shortcut"
+closure_audits:
+  P26: MISSING
+  second_distinct_qualified_task: MISSING
+remaining_obligation: "Construct a genuinely local finite-dependence no-peeking physical block event that forces permutation-orbit progression and leaves fresh clocks for renewal; then connect positive-density macroscopic finite-box cycles to the retained infinite-volume passage."
+correction_note: "In the first display of the immutable report, the optimizer symbol was serialized once as nu_*; all subsequent equations and the proof use u_*. The intended symbol is u_* throughout."

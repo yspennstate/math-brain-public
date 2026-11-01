@@ -1,0 +1,2 @@
+STATE: Stage6 saved: A059 v2 all-order priority independently accepted; shared-Y reveal with ONE nonconstant fallback paid at8+2/ln2; new review pending; first private-before-Y packets exact but unpaid; FEI OPEN.
+NEXT: Pay NEXT_IDENTITY private-query packets after actual core-data exposure with merged G rarity release and unused original surplus; A059/A087/A090 review shared-Y proof and ownership.

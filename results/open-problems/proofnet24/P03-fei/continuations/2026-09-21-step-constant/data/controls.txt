@@ -1,0 +1,22 @@
+=== control.py: recursion vs brute-force Walsh ===
+random read-once trees tested: 360  (n = 2..10)
+max |H_recursion - H_brute|   = 8.438e-14
+max |I_recursion - I_brute|   = 0.000e+00
+max |rho0_recursion - brute|  = 4.168e-12
+
+=== negcontrol.py: fault injection (the real negative control) ===
+FAULT INJECTION (h2 correction removed from the composition):
+  trees tested            : 210
+  true recursion worst err: 3.020e-14   (must be ~0)
+  faulted recursion worst : 2.850e+00   (must be large)
+  control tripped on      : 210 of 210 trees
+  VERDICT: the check CAN fail -> the pass means something
+
+=== lemma.py: ceiling check + delta* ===
+delta* (max influence allowed if rho_0 can reach beta(1/2)) = 0.289387
+  ceiling(0.28) = 6.6266   ceiling(0.30) = 6.2710   ceiling(0.5) = 4.0000
+
+CEILING checked on 660 random read-once trees (n=2..12):
+  violations: 0      tightest slack ceiling-rho_0: 0.000000
+  same check on 240 brute-force evaluations: 0 violations
+  negative control (fake rho_0 = ceiling+1 at delta=0.4): flagged = True

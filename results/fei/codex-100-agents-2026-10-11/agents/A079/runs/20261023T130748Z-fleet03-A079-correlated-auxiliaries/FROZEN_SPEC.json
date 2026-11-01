@@ -1,0 +1,24 @@
+{
+  "helper_version": "A079-stage10-independent-v3",
+  "sha256": "23905dd02c417328d121fb5cbe2b2fd6b4c83519d3bd2bcdbd4ddbd9fe82620b",
+  "family": "all Boolean cores n=0,1,2 and eight named n=3 fixtures; true duplicated-core/tag/four-bit complementary wrappers; independent A032 point-defect and A096 geometric ghost cases",
+  "domain": {
+    "pilot": "first four small labelled cores and n2 mask1",
+    "main": "all22 cores n0..2 plus n3 masks1,3,7,23,105,126,150,254",
+    "posterior": "M=1,2,3,4 fixed rational products on each half; 3 bent2 sharp fixtures",
+    "rank": "r=1,2,3 exact Kronecker minors"
+  },
+  "case_count": {
+    "pilot_cores": 5,
+    "main_cores": 30,
+    "main_posteriors": 123,
+    "both_signs_and_children": true
+  },
+  "symmetry": "none; labelled truth tables, specified fixtures only",
+  "arithmetic": "integer FWHT; Fractions and exact rational prime-log identities; analytic log-sum for nonnegativity",
+  "memory_estimate_mb": 160,
+  "maximum_runtime_seconds": 55,
+  "pilot_before_main": true,
+  "automatic_dimension_escalation": false,
+  "preexecution_amendment": "v2 pilot passed; explicit reference-only ghost label now stored in normalized terminal vectors, outside occupied support and realized by an unused tag label; no dimension search or change of family."
+}

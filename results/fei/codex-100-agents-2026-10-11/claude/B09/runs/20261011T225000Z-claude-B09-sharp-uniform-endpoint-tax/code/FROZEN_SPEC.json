@@ -1,0 +1,21 @@
+{
+  "frozen_at_utc": "2026-10-11T22:50:00Z",
+  "helper": "check_tax.py v1 (written by the B09 Claude lead)",
+  "families": {
+    "A1": "all ordered pairs (g,h) of Boolean sign functions on n_data=1,2,3 data bits (4^2, 16^2, 256^2 pairs); f(X,y)=g(y) if X=0, h(y) if X=1; rare bit X ~ Ber(p)",
+    "A2": "the scalar fiber minimum m(p)=min_phi h2(sin^2 phi)+h2(sin^2(phi+theta)), sin^2 theta=p, on a p-grid in (0,1/2]",
+    "A3": "two-bit AND f=1-2XY, Y~Ber(1/4), p=2^-k, k=3..60",
+    "B": "A043 composition identity on 6 explicit disjoint compositions (maj3, xor-and gates) with unequal biases, n<=7 physical bits",
+    "C": "A041 refresh inequality on 40 seeded random real-weight thresholds, n<=8, random interior biases, r in {1,2,4}, eps in {1/4,1/2,1}"
+  },
+  "parameter_domain": {
+    "data_biases": [[0.5,0.5,0.5],[0.3333333333333333,0.4,0.14285714285714285],[0.1,0.9,0.25]],
+    "rare_p": [0.03125, 0.0078125, 0.0009765625, 6.103515625e-05, 9.5367431640625e-07]
+  },
+  "case_count": "A1: 3 bias vectors x 5 p x (16+256+65536) pairs = 991,440 pair evaluations",
+  "symmetry_reduction": "none",
+  "arithmetic": "IEEE double (numpy) for A1,A2,B,C; mpmath 60 digits for A3. Floating point is evidence only; the theorem is proved analytically in REPORT.md.",
+  "memory_estimate_MB": 60,
+  "max_runtime_s": 120,
+  "randomness": "B and C use numpy default_rng(20261011)"
+}

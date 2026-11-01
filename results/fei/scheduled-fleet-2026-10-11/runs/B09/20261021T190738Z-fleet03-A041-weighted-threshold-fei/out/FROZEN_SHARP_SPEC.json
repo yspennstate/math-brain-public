@@ -1,0 +1,14 @@
+{
+  "helper": "A041-sharp-two-jump-v1",
+  "family": "F=2*1{number of zero inputs<=1}-1; split a+b; genuine real-weight representation 1<w<2,t=aw+b-w",
+  "domains": {
+    "direct_tables": "a=b=2; all 81 labeled biases in {1/4,1/2,3/4}^4",
+    "compressed_counts": "a=b in {2,3,4,8,16,32,64}; plus (2,3),(3,2)",
+    "review": "AND_d d=3,4,5,8,16; analytic all-d variance argument"
+  },
+  "case_count": 95,
+  "symmetry": "only exact fair separate-count formulas for compressed checks; direct tables use no quotient",
+  "arithmetic": "Fraction and integer binomial coefficients",
+  "memory_estimate_MB": 100,
+  "maximum_runtime_seconds": 60
+}

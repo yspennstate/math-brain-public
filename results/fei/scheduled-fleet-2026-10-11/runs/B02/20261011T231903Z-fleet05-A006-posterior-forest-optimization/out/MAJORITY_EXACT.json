@@ -1,0 +1,225 @@
+{
+  "status": "PASS",
+  "exact": [
+    {
+      "n": 1,
+      "k": 1,
+      "gates": 1,
+      "lambda": "1",
+      "D": "1/2",
+      "I": "1",
+      "residual_interval": {
+        "lower": "-1/1000000000",
+        "upper": "1/1000000000"
+      },
+      "residual_over_I_interval": {
+        "lower": "-1/1000000000",
+        "upper": "1/1000000000"
+      },
+      "scope": "ALL_PARTITION_FORESTS_EXACT_ALGEBRAIC_SUM",
+      "cases": [
+        {
+          "mask": 1,
+          "s": 1,
+          "runs": 1,
+          "terms": [
+            {
+              "z": "1",
+              "coefficient": "1/2"
+            }
+          ],
+          "cost_interval": {
+            "lower": "999999999/1000000000",
+            "upper": "1000000001/1000000000"
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "k": 2,
+      "gates": 3,
+      "lambda": "1/2",
+      "D": "217/512",
+      "I": "3/2",
+      "residual_interval": {
+        "lower": "651167107/500000000",
+        "upper": "260466843/200000000"
+      },
+      "residual_over_I_interval": {
+        "lower": "868222809/1000000000",
+        "upper": "86822281/100000000"
+      },
+      "scope": "ALL_PARTITION_FORESTS_EXACT_ALGEBRAIC_SUM",
+      "cases": [
+        {
+          "mask": 1,
+          "s": 1,
+          "runs": 2,
+          "terms": [
+            {
+              "z": "1",
+              "coefficient": "1/4"
+            }
+          ],
+          "cost_interval": {
+            "lower": "1999999999/1000000000",
+            "upper": "2000000001/1000000000"
+          }
+        },
+        {
+          "mask": 2,
+          "s": 1,
+          "runs": 2,
+          "terms": [
+            {
+              "z": "1/2",
+              "coefficient": "1/8"
+            },
+            {
+              "z": "1",
+              "coefficient": "1/8"
+            }
+          ],
+          "cost_interval": {
+            "lower": "2478672531/1000000000",
+            "upper": "619668133/250000000"
+          }
+        },
+        {
+          "mask": 3,
+          "s": 2,
+          "runs": 4,
+          "terms": [
+            {
+              "z": "1/2",
+              "coefficient": "1/8"
+            },
+            {
+              "z": "1",
+              "coefficient": "9/64"
+            }
+          ],
+          "cost_interval": {
+            "lower": "2358199411/1000000000",
+            "upper": "589549853/250000000"
+          }
+        },
+        {
+          "mask": 4,
+          "s": 1,
+          "runs": 2,
+          "terms": [
+            {
+              "z": "1/2",
+              "coefficient": "1/4"
+            }
+          ],
+          "cost_interval": {
+            "lower": "3199999999/1000000000",
+            "upper": "3200000001/1000000000"
+          }
+        },
+        {
+          "mask": 5,
+          "s": 2,
+          "runs": 4,
+          "terms": [
+            {
+              "z": "1/4",
+              "coefficient": "1/16"
+            },
+            {
+              "z": "1/2",
+              "coefficient": "5/64"
+            },
+            {
+              "z": "1",
+              "coefficient": "1/8"
+            }
+          ],
+          "cost_interval": {
+            "lower": "1274609829/500000000",
+            "upper": "2549219659/1000000000"
+          }
+        },
+        {
+          "mask": 6,
+          "s": 2,
+          "runs": 4,
+          "terms": [
+            {
+              "z": "1/4",
+              "coefficient": "9/64"
+            },
+            {
+              "z": "1",
+              "coefficient": "1/8"
+            }
+          ],
+          "cost_interval": {
+            "lower": "136062243/50000000",
+            "upper": "2721244861/1000000000"
+          }
+        },
+        {
+          "mask": 7,
+          "s": 3,
+          "runs": 12,
+          "terms": [
+            {
+              "z": "1/8",
+              "coefficient": "3/16"
+            },
+            {
+              "z": "1/2",
+              "coefficient": "3/8"
+            }
+          ],
+          "cost_interval": {
+            "lower": "1242229697/500000000",
+            "upper": "496891879/200000000"
+          }
+        }
+      ]
+    }
+  ],
+  "constructive": [
+    {
+      "n": 5,
+      "k": 3,
+      "gates": 10,
+      "lambda": "1/6",
+      "D": "14867204189066977/64925062108545024",
+      "I": "15/8",
+      "residual_interval": {
+        "lower": "2888679153/1000000000",
+        "upper": "1444339577/500000000"
+      },
+      "residual_over_I_interval": {
+        "lower": "770314441/500000000",
+        "upper": "1540628883/1000000000"
+      },
+      "scope": "CONSTRUCTED_POSTERIOR_UPPER_BOUND",
+      "cases": []
+    },
+    {
+      "n": 7,
+      "k": 4,
+      "gates": 35,
+      "lambda": "1/20",
+      "D": "552610115300919342329634717788318106535203848664205846890282482552819008967755263499201/4789048565205902682369834459844716198808559756823756800000000000000000000000000000000000",
+      "I": "35/16",
+      "residual_interval": {
+        "lower": "4252815747/1000000000",
+        "upper": "1063203937/250000000"
+      },
+      "residual_over_I_interval": {
+        "lower": "1944144341/1000000000",
+        "upper": "972072171/500000000"
+      },
+      "scope": "CONSTRUCTED_POSTERIOR_UPPER_BOUND",
+      "cases": []
+    }
+  ]
+}

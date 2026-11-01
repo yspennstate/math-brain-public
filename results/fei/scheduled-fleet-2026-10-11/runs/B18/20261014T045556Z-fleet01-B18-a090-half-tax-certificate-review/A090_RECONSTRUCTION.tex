@@ -1,0 +1,89 @@
+\section*{Independent reconstruction and repair of the A047 half-tax certificate}
+
+The audited claim is the two-bit Boolean inequality
+\[
+ J_X\le M_X+\frac12\delta(p),\qquad
+ \delta(p)=p\log_2\frac{1-p}{p},                       \tag{1}
+\]
+for $0<p\le 1/2$.  The certified scope under review is
+\[
+ \frac1{64}\le p\le\frac{49}{100},\qquad 0\le q\le1. \tag{2}
+\]
+This is a local biased-restriction inequality.  It does not by itself imply
+the universal GU inequality: a separate hierarchy theorem must pay the
+resulting $M_X+\delta(p)/2$ costs without reuse and retain all terminal terms.
+
+\subsection*{Truth-table reconstruction}
+
+For $g(x,y)=(-1)^{xy}$ under independent biases
+$\Pr(x=1)=p$, $\Pr(y=1)=q$, direct expansion in the normalized biased basis
+gives squared Fourier masses
+\[
+ (1-2pq)^2,\quad 4q^2p(1-p),\quad
+ 4p^2q(1-q),\quad4p(1-p)q(1-q).                       \tag{3}
+\]
+Put $s=4q(1-q)$, $c=4q^2$, and $b=1-sp$.  The residual spectral bit has
+mass $sp$.  Given that bit is zero, the revealed spectral bit has mass
+$cp(1-p)/b$; given it is one, it has mass $1-p$.  Hence
+\[
+ M_X=b h_2\!\left(\frac{cp(1-p)}b\right)+sp h_2(p).   \tag{4}
+\]
+The $x=0$ child is constant and the $x=1$ child is the biased $y$ character,
+so
+\[
+ J_X=h_2(sp)-p h_2(s).                                \tag{5}
+\]
+Equations (3)--(5) independently recover the frozen scalar margin
+\[
+ D=b h_2\!\left(\frac{cp(1-p)}b\right)+sp h_2(p)
+   -h_2(sp)+p h_2(s)+\frac p2\log_2\frac{1-p}{p}.     \tag{6}
+\]
+Thus (1) is exactly $D\ge0$.  The accompanying checker reconstructs
+(4)--(5) from (3) at 450 rational bias pairs; the maximum 90-digit Decimal
+disagreement is $1.3\cdot10^{-89}$.
+
+\subsection*{First unsupported source line}
+
+Both source certificates declare 70-digit directed Decimal arithmetic, but
+their functions \texttt{h\_point} contain
+\[
+ \texttt{l1 = log2\_point(ONE - x)}.                  \tag{7}
+\]
+The subtraction in (7) is evaluated before \texttt{log2\_point} enters a
+local directed context.  It therefore uses Python's process-wide default
+Decimal context, whose precision is 28.  The rounded value is then treated
+as an exact point.  It need not enclose the true complement and so the
+published scripts do not prove their claimed interval enclosures as written.
+This occurs at line 70 of the compact-core checker and line 71 of the
+endpoint-collar checker.
+
+\subsection*{Minimal repair and result}
+
+The audit replaces (7) by the directed interval
+\[
+ [\operatorname{fl}_{\downarrow}(1-x),
+   \operatorname{fl}_{\uparrow}(1-x)]                 \tag{8}
+\]
+and propagates both endpoints through the logarithm and product.  No domain,
+bisection rule, candidate, or acceptance threshold is changed.
+
+The repaired compact certificate visits 7,571 boxes, accepts 3,786 leaves,
+reaches depth 20, and has minimum lower endpoint
+\[
+ 1.7580671042893135\cdot10^{-6}>0.                    \tag{9}
+\]
+The repaired lower-$q$ and upper-$q$ collars retain 45 and 39 leaves, with
+minimum lower endpoints respectively
+\[
+ 9.3029871479133499\cdot10^{-5},\qquad
+ 1.0426165977229429\cdot10^{-4}.                      \tag{10}
+\]
+There are no unresolved boxes.  Consequently (1) does hold on (2), but the
+original certificate is accepted only after this material implementation
+repair.  The reviewer is therefore a contributor to the repaired proof and
+a fresh independent review is required.
+
+The strips $49/100<p\le1/2$, the explicit join to the rare tail
+$p<1/64$, higher-arity gates, and the nonreusing GU hierarchy payment remain
+open.
+

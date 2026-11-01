@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-23",
+  "review_kind": "Internal independent mathematical reviews, not external peer review or formal verification.",
+  "main_theorem_sha256": "2afde40ad003392b17d90cbc90f94a87d96fcef2771695a03c35af62b271c3bd",
+  "exact_algebra_checks": 768,
+  "exact_algebra_cases": 128,
+  "exact_token_wiring_cases": 12,
+  "gaussian_numerical_configurations": 25,
+  "numerics_scope": "Sanity checks only. One supplementary pointwise interval miss is retained and disclosed.",
+  "script_hash_checks": [
+    {
+      "result": "check_exact_gp_normalization.json",
+      "script": "check_exact_gp_normalization.py",
+      "script_sha256_verified": "fe97bce47992876b0ac3dc74a23e433d10fb21df45066a2014b0026ca473b4de"
+    },
+    {
+      "result": "check_T357_gaussian_first_step.json",
+      "script": "check_T357_gaussian_first_step.py",
+      "script_sha256_verified": "8a9f4ce02198d3f12c61ed0c7d8a3407b3b768b3fdefab41bca354a844230816"
+    }
+  ],
+  "formal_machine_proof": false,
+  "novelty_certified": false,
+  "historical_versions_preserved": true,
+  "review_files": [
+    "ORIGINAL_PROBLEM_SCOPE_AUDIT.md",
+    "T357_independent_review.md",
+    "T357_gaussian_first_step_independent_review.md",
+    "T336_constructive_independent_review.md",
+    "T354_independent_review.md"
+  ],
+  "final_reviewed_pins": {
+    "T357_CATEGORICAL_COMPLETE_THEOREM.md": "2afde40ad003392b17d90cbc90f94a87d96fcef2771695a03c35af62b271c3bd",
+    "ORIGINAL_PROBLEM_SCOPE_AUDIT.md": "8f194fc68cbb1fa778d70f20bf4ba6eb1ea0447c4f531512f6d3269e35676390",
+    "T357_gaussian_first_step_attempt.md": "1469aad3c34b902a363fe66d32eff199c451adc28d2ae5ae4de6cbb716fd630b",
+    "T357_gaussian_first_step_independent_review.md": "7c9b8412cc8d38e184972b9256773d7854cf7878b2bb2e1df5a8eafda80fc73f",
+    "T357_gaussian_calibration_consequences.md": "124e5b2782f1fa000fc0103f04ce834eaaa70bb18b1483dfbd0d64fe0b4363fd"
+  }
+}

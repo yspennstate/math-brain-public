@@ -1,0 +1,13 @@
+{
+  "helper_version": "continuum v1; exact multiaffine ratio vertex enclosure; coefficients read from prime_polynomials.json and rounded upward to 80-bit dyadics",
+  "actual_Boolean_family": "Only truth 64680, complementary orientation of the leading n=4 two-block tribes witness",
+  "parameter_domain": "All 16 complete gate-order choices; closed packing polytope in four weights 0<=lambda_l<=1, sum at each coordinate<=1; positive interior and limiting zero faces included",
+  "case_count": "Pilot first order, at most 4000 boxes, 60 seconds; full all 16 orders bounded by 64000 boxes total and 1200 seconds; maximum depth 32; no dimension change",
+  "justified_symmetry_reduction": "None required: all orders checked",
+  "arithmetic": "Fraction monomial coefficients and weights; rigorous upper mass polynomials; each W_A/T is multiaffine-over-multiaffine, so extrema on an axis box occur at vertices. At origin include all positive one-coordinate leading ratios. Lower R/I from exact log intervals; target lower bound 1, exceeding (43+19log2 3)/80.",
+  "memory_estimate": "Under 150 MB: bounded 4096-entry vertex cache; log caches cleared per order; checkpoint leaves under 20 MB per file",
+  "maximum_runtime_seconds": 1200,
+  "candidate_constant": "R/I >=1 for ALL complementary prime tables, sufficient for exact combined-menu maximum; not claimed as its sharp minimum",
+  "boundary_scope": "Discard only boxes whose lower endpoints violate packing. Positive denominator away from origin; origin leading ratios proved explicitly. Missing spectral output at a partial-zero face means +infinite cost; lower enclosures still apply to positive approximations.",
+  "certificate": "Dyadic splitting tree leaves (discarded or certified lower bound) with rational bounds; separate verifier reconstructs full dyadic cover, packing exclusion and vertex enclosures. Floating values do not certify any box."
+}

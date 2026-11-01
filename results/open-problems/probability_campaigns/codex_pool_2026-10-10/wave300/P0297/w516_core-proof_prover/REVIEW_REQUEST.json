@@ -1,0 +1,53 @@
+{
+  "requested_at": "2026-10-10T05:54:24.875878+00:00",
+  "proof_packet": "~\\brain_workers\\w516\\review\\PROOF_PACKET.md",
+  "reviewer": "w518",
+  "adversary": "w517",
+  "handovers": [
+    {
+      "recipient": "w517",
+      "exit_code": 0,
+      "result": {
+        "fanout": 1,
+        "idempotency_key": null,
+        "idempotent_replay": false,
+        "inserted": 1,
+        "kind": "message",
+        "message_id": "msg-6a539ee4cd",
+        "message_ids": [
+          "msg-6a539ee4cd"
+        ],
+        "recipient_active": true,
+        "requires_ack": false,
+        "reused": 0,
+        "to": "w517",
+        "topic": "probability:P0297:proof-packet"
+      },
+      "receipt": "HANDOFF_W517.json"
+    },
+    {
+      "recipient": "w518",
+      "exit_code": 0,
+      "result": {
+        "fanout": 1,
+        "idempotency_key": null,
+        "idempotent_replay": false,
+        "inserted": 1,
+        "kind": "message",
+        "message_id": "msg-ec5a892a6e",
+        "message_ids": [
+          "msg-ec5a892a6e"
+        ],
+        "recipient_active": true,
+        "requires_ack": false,
+        "reused": 0,
+        "to": "w518",
+        "topic": "probability:P0297:referee"
+      },
+      "receipt": "HANDOFF_W518.json"
+    }
+  ],
+  "independent_verdict": "w518 KEEP L1-L5 finite/conditional; L6 pending; H unproved",
+  "any_new_referee_result_reviewer": "w521",
+  "receipt": "REFEREE_RECEIPT.json"
+}

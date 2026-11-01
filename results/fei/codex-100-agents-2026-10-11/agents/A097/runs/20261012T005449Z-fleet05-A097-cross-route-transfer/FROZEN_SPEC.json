@@ -1,0 +1,14 @@
+{
+  "helper_version": "A097-bent-reference-v2",
+  "actual_Boolean_family": "B05 quadratic bent seed b on even k bits, point flip b'=b-2*1_zero, physical selector h between b,b', activated on r=2k point controls",
+  "parameter_domain": "k=2,4,6,8; control-first tree stops at first inactive control; after all controls match reveal selector; stop at actual b or b'",
+  "case_count": 8,
+  "references": "Two fixed modes: actual Fourier law at each leaf, or uniform law on all 2^k data subsets at both bent leaves; constant leaves use delta_empty",
+  "symmetry_reduction": "Walsh signs have exact counts (2^k +/- 2^(k/2))/2; pure-control reference atoms grouped by deepest included queried control; proved in REPORT",
+  "arithmetic": "Fraction Fourier masses and reference recurrences; exact logarithmic expressions; outward rational atanh-series intervals with dyadic range reduction, 32 terms, and 2^-80 rounding",
+  "memory_estimate_MB": 80,
+  "maximum_runtime_seconds": 60,
+  "pilot": "Only k=2 first, before the frozen four-value domain",
+  "independent_validation": "Integer Walsh reconstruction at k=2,4, largest actual cube 13 bits; no 25-bit truth table",
+  "finite_to_infinite": "Analytic all-even-k posterior-credit cap and rate limit; finite results remain calibration, not a universal FEI result"
+}

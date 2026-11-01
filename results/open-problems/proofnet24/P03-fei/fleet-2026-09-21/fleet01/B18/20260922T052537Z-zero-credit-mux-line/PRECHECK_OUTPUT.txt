@@ -1,0 +1,20 @@
+B18 zero-selector-credit MUX line — source-bound precheck
+
+candidate_blob 1e2a1a5c293fa7b6ec9885b7a410910d6589be80
+source_wobble_printed_min 2.22922
+source_wobble_printed_max 8.62812
+conservative_wobble_lower 2.229
+conservative_wobble_upper 8.629
+quarter_Gamma_dagger 4.5050884105
+endpoint_slack 0.0167628035
+min_local_derivative_lower 2.8826172255166043
+min_local_segment_source_index 511
+L1_at_1_over_50 0.04795441841313419
+L1_derivative_floor 0.7444069179702940
+L2_at_1_over_10 0.26545291916447855
+L2_at_1_over_2 0.3159628035000006
+L2_second_derivative_upper_using_ln2_gt_0.69 -14.980131400966181
+
+PASS: the analytic sign margins are robust.
+
+Scope note: these numbers were prechecked in this invocation from the authenticated candidate source output plus the directly decoded local candidate slice needed for u in [1/4,0.26]. This file is not represented as an execution of the committed repo-local checker against the entire NPZ. check_zero_credit_line.py is the reproducible source-bound checker that loads and hashes the pinned NPZ without rerunning value iteration.

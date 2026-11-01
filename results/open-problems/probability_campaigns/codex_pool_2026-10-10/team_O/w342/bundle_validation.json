@@ -1,0 +1,47 @@
+{
+  "command": "python -X utf8 validate_bundles.py",
+  "parser_used": "~\\math-brain-build\\tools\\integrate_drafts.py::parse_draft",
+  "valid_bundles": 10,
+  "proposed_entries": 41,
+  "proposed_relations": 79,
+  "existing_parent_targets": 10,
+  "resolved_existing_links": 41,
+  "exact_endpoint_quote_checks": 158,
+  "rejected_negative_controls": 5,
+  "negative_controls": [
+    {
+      "control": "missing-proof",
+      "errors": [
+        "entries[1]: lemma requires proof_text"
+      ]
+    },
+    {
+      "control": "unaccepted-license",
+      "errors": [
+        "entries[0]: license 'author own work' not in allowlist"
+      ]
+    },
+    {
+      "control": "unsupported-relation",
+      "errors": [
+        "relations[0]: bad relation kind 'fails_under'"
+      ]
+    },
+    {
+      "control": "dependency-cycle",
+      "errors": [
+        "depends_on relations contain a cycle"
+      ]
+    },
+    {
+      "control": "missing-source-url",
+      "errors": [
+        "entries[0]: source.url required"
+      ]
+    }
+  ],
+  "before_matching_new_logical_ids_in_live_store": 0,
+  "after_matching_ids_in_prepared_drafts": 41,
+  "deployed_store_change": 0,
+  "seconds": 1.056
+}

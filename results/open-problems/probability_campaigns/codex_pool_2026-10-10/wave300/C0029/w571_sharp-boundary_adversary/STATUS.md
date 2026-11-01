@@ -1,0 +1,7 @@
+STATE: WORKING
+NEXT: Source-check and package the live-card finite-n/limit correction, complete the w570 boundary audit, and submit DRAFT concepts for review.
+
+2026-10-10: Read PRIMARY_DIRECTIVE and Team O board; no w571 hook-audit assignment found. Started bounded brain recall and targeted primary-source verification. Published 2025 paper proves a 1+o(1) coefficient; exact coefficient one must be tracked separately.
+2026-10-10: Saved B01 and B02 claims, and B03's full-rank perfectly flat conditional atom construction in ATTEMPT.md before paired-proof access. Recall timed out at 60 seconds; targeted index search had no match, so located the explicitly named perceptron scar. First progress row posted. Mesh claim needs an explicit team name because w571 is not registered in a team.
+2026-10-10: verify_boundaries.py PASS (0.04755 s): 16 matrices, 455 CDF checks, five even dimensions. Read paired prover only after independent work. Saved a minimal n>=2 correction to w570 P2 and a live exported-card correction: limiting Gaussian law had been stated as finite-n exact. Second mesh handoff failed with database locked; disk packet and progress page preserve the handoff.
+2026-10-10: STUCK: team_comm routing failed first for missing membership, then database lock, then nonexistent probability300-integration team. Switching to the explicitly authorized direct agent_mesh peer routing; no waiting on registration or review. Read the named perceptron scar; retained the hardest-gap and served-model provenance gates.

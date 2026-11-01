@@ -1,0 +1,110 @@
+{
+  "addressing": [
+    {
+      "H_over_I": 1.3333333333333333,
+      "I": 1.5,
+      "U_over_I": 1.9182958340544893,
+      "address_bits": 1,
+      "n": 3
+    },
+    {
+      "H_over_I": 2.0,
+      "I": 2.0,
+      "U_over_I": 2.6768796874098557,
+      "address_bits": 2,
+      "n": 6
+    },
+    {
+      "H_over_I": 2.4,
+      "I": 2.5,
+      "U_over_I": 3.0794468445267844,
+      "address_bits": 3,
+      "n": 11
+    },
+    {
+      "H_over_I": 2.6666666666666665,
+      "I": 3.0,
+      "U_over_I": 3.329414779738927,
+      "address_bits": 4,
+      "n": 20
+    }
+  ],
+  "beta_hod": 6.4547837,
+  "exhaustive_n_le_4": [
+    {
+      "functions_up_to_global_negation": 2,
+      "max_H_mask": 0,
+      "max_H_minus_U": -0.0,
+      "max_H_over_I": 0.0,
+      "max_U_mask": 0,
+      "max_U_over_I": 0.0,
+      "max_palm_cluster_lhs_minus_rhs": 0.0,
+      "n": 1,
+      "palm_witness": [1,[0,0.0,1.0,1.0]]
+    },
+    {
+      "functions_up_to_global_negation": 8,
+      "max_H_mask": 1,
+      "max_H_minus_U": -0.0,
+      "max_H_over_I": 2.0,
+      "max_U_mask": 1,
+      "max_U_over_I": 2.25,
+      "max_palm_cluster_lhs_minus_rhs": 0.0,
+      "n": 2,
+      "palm_witness": [1,[0,0.0,0.5,0.5]]
+    },
+    {
+      "functions_up_to_global_negation": 128,
+      "max_H_mask": 1,
+      "max_H_minus_U": -0.0,
+      "max_H_over_I": 2.955889582251599,
+      "max_U_mask": 1,
+      "max_U_over_I": 3.2829572908854145,
+      "max_palm_cluster_lhs_minus_rhs": 0.0,
+      "n": 3,
+      "palm_witness": [1,[0,0.0,0.25,0.25]]
+    },
+    {
+      "functions_up_to_global_negation": 32768,
+      "max_H_mask": 1,
+      "max_H_minus_U": -0.0,
+      "max_H_over_I": 3.402475551198587,
+      "max_U_mask": 1,
+      "max_U_over_I": 3.7638946915756897,
+      "max_palm_cluster_lhs_minus_rhs": 0.0,
+      "n": 4,
+      "palm_witness": [1,[0,0.0,0.125,0.125]]
+    }
+  ],
+  "majority": [
+    {"H_over_I":1.3333333333333333,"I":1.5,"U_over_I":1.6949875002403854,"n":3},
+    {"H_over_I":1.7735337493509595,"I":1.875,"U_over_I":2.214481131017545,"n":5},
+    {"H_over_I":2.137457900890093,"I":2.4609375,"U_over_I":2.6314833979658836,"n":9},
+    {"H_over_I":2.3023854343736705,"I":2.9326171875,"U_over_I":2.8165780827680256,"n":13},
+    {"H_over_I":2.433652336029031,"I":3.5239410400390625,"U_over_I":2.961958349855343,"n":19}
+  ],
+  "one_point": [
+    {"H_over_I":2.0,"I":1.0,"U_over_I":2.25,"n":2},
+    {"H_over_I":2.955889582251599,"I":0.75,"U_over_I":3.2829572908854145,"n":3},
+    {"H_over_I":3.402475551198587,"I":0.5,"U_over_I":3.7638946915756897,"n":4},
+    {"H_over_I":3.6237403997020836,"I":0.3125,"U_over_I":4.003928857676362,"n":5},
+    {"H_over_I":3.8427825918979237,"I":0.0625,"U_over_I":4.24840627803124,"n":8},
+    {"H_over_I":3.930271404540879,"I":0.00048828125,"U_over_I":4.3550469726379255,"n":16},
+    {"H_over_I":3.9651684391113533,"I":1.4901161193847656e-08,"U_over_I":4.399034262220215,"n":32}
+  ],
+  "one_point_U_limit": 4.442695040888964,
+  "ordered_code_claim": "For every random subset S: H(S) <= H(|S|)+I H(p/I)-E log2(|S|!).",
+  "palm_cluster_claim": "For Boolean spectral S: E[t^(|S|-1)|i in S] <= Inf_i^((1-t)/(1+t)), 0<=t<=1.",
+  "status": "OPEN_AUXILIARY_ROUTE_NOT_FEI_PROOF",
+  "width2_tribes": [
+    {"H_over_I":2.2169171866886987,"I":1.5,"U_over_I":2.571358248275525,"n":4,"s":2},
+    {"H_over_I":3.285324207950552,"I":1.6875,"U_over_I":3.674747681019728,"n":8,"s":4},
+    {"H_over_I":3.9722853254343184,"I":1.423828125,"U_over_I":4.36934809298077,"n":12,"s":6},
+    {"H_over_I":4.329597870800786,"I":1.06787109375,"U_over_I":4.729510269110467,"n":16,"s":8},
+    {"H_over_I":4.631515324044419,"I":0.5068216323852539,"U_over_I":5.033641944940471,"n":24,"s":12},
+    {"H_over_I":4.77507145028065,"I":0.08456565170490649,"U_over_I":5.178580707637068,"n":40,"s":20},
+    {"H_over_I":4.834228959830215,"I":3.7754777095129176e-05,"U_over_I":5.23875280897017,"n":100,"s":50},
+    {"H_over_I":4.8509527305874895,"I":4.2762695805086716e-11,"U_over_I":5.255774402487093,"n":200,"s":100}
+  ],
+  "width2_tribes_U_limit": 5.272770039446651
+}

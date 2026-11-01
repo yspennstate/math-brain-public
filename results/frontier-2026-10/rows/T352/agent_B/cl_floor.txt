@@ -1,0 +1,19 @@
+T352\agent_B\cl_floor.py:23: RuntimeWarning: overflow encountered in square
+  a = np.maximum(0, hi * w - c); cost = ((c + a) ** 2).sum()
+site-packages/numpy\_core\_methods.py:49: RuntimeWarning: overflow encountered in reduce
+  return umr_sum(a, axis, dtype, out, keepdims, initial, where)
+T352\agent_B\cl_floor.py:18: RuntimeWarning: overflow encountered in scalar divide
+  lo, hi = 0.0, (D + c * w.sum()) / (w * w).sum() * 4 + c / w.min()
+T352\agent_B\cl_floor.py:18: RuntimeWarning: divide by zero encountered in scalar divide
+  lo, hi = 0.0, (D + c * w.sum()) / (w * w).sum() * 4 + c / w.min()
+T352\agent_B\cl_floor.py:20: RuntimeWarning: invalid value encountered in multiply
+  mu = (lo + hi) / 2; a = np.maximum(0, mu * w - c)
+T352\agent_B\cl_floor.py:23: RuntimeWarning: invalid value encountered in multiply
+  a = np.maximum(0, hi * w - c); cost = ((c + a) ** 2).sum()
+n      10  lam=1: 2.81401e-02 (N    181)   lam=1/2: 3.48104e-02   convex scale 4cD: 8.000e-03
+n     100  lam=1: 2.09040e-02 (N    401)   lam=1/2: 2.75773e-02   convex scale 4cD: 8.000e-04
+n    1000  lam=1: 2.01804e-02 (N    616)   lam=1/2: 2.68545e-02   convex scale 4cD: 8.000e-05
+n   10000  lam=1: 2.01080e-02 (N    863)   lam=1/2: 2.67823e-02   convex scale 4cD: 8.000e-06
+n  100000  lam=1: 2.01008e-02 (N   1102)   lam=1/2: 2.67750e-02   convex scale 4cD: 8.000e-07
+n 1000000  lam=1: 2.01001e-02 (N   1324)   lam=1/2: 2.67743e-02   convex scale 4cD: 8.000e-08
+lam=1 floor D^2(2 eta L + eta^2 L^2) = 2.01000e-02 ; lam=1/2 continuum guess ~ eta L D^{3/2} * const

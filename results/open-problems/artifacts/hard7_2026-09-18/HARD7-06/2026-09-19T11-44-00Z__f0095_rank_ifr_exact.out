@@ -1,0 +1,32 @@
+n=4
+labeled_layer_counts = [1, 6, 15, 20, 15, 6, 0]
+unlabeled_3colorable = 10
+normalized_layer_log_concavity = PASS
+E_T = 5
+2E_T/n = 5/2
+
+n=5
+labeled_layer_counts = [1, 10, 45, 120, 210, 252, 205, 100, 15, 0, 0]
+unlabeled_3colorable = 29
+normalized_layer_log_concavity = PASS
+E_T = 50/7
+2E_T/n = 20/7
+
+n=6
+labeled_layer_counts = [1, 15, 105, 455, 1365, 3003, 4990, 6300, 5895, 3805, 1365, 240, 15, 0, 0, 0]
+unlabeled_3colorable = 119
+normalized_layer_log_concavity = PASS
+E_T = 9325/1001
+2E_T/n = 9325/3003
+
+n=7
+labeled_layer_counts = [1, 21, 210, 1330, 5985, 20349, 54229, 115755, 199815, 278215, 306831, 256746, 147665, 55125, 12915, 1750, 105, 0, 0, 0, 0, 0]
+unlabeled_3colorable = 667
+normalized_layer_log_concavity = PASS
+E_T = 1153169/100776
+2E_T/n = 1153169/352716
+
+ALL_EXACT_CHECKS_PASS = True
+SCOPE = finite n<=7 evidence only; no asymptotic inference
+
+Execution note: reproduced in the 2026-09-19 HARD7-06 run from the committed checker logic. All log-concavity tests are integer comparisons after clearing binomial denominators; the n<=6 labeled counts were independently cross-checked by exhaustive enumeration of all labeled graphs.

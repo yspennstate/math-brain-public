@@ -1,0 +1,75 @@
+{
+  "target": "P0017",
+  "checked_at_utc": "2026-10-10T04:53:52.811320+00:00",
+  "exact_statement_recovered": true,
+  "exact_cheeger_target": "There is a universal c>0 such that h(mu)>=c for every centered isotropic log-concave probability measure mu on R^n, for every n>=1.",
+  "cheeger_definition": "h(mu)=inf over Borel A with 0<mu(A)<1 of [liminf as epsilon decreases to 0 of (mu(A_epsilon)-mu(A))/epsilon] / min(mu(A),1-mu(A)), with Euclidean epsilon-neighborhoods. Use intrinsic neighborhoods on affine support when needed.",
+  "equivalent_poincare_target": "There is a universal C<infinity such that Var_mu(f)<=C integral |grad f|^2 dmu for every n>=1, every centered log-concave mu with covariance I_n, and every locally Lipschitz f in L2(mu) with finite gradient energy.",
+  "current_openness": "UNKNOWN",
+  "resolution_claims_found": true,
+  "full_target_independently_proved_by_this_worker": false,
+  "novelty_claim": false,
+  "historical_record": {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "lines": [
+      19,
+      119
+    ],
+    "source_id": "randomstrasse_2025_v1",
+    "locator": "Conjecture 30, Entry 13",
+    "status": "attempted_unsolved in the later September 6 row; dated source status only"
+  },
+  "historical_primary_source": {
+    "title": "Randomstrasse101: Open Problems of 2025",
+    "url": "https://arxiv.org/pdf/2603.29571",
+    "local_text": "~\\Downloads\\Probability_1000_20h_20260906\\sources\\randomstrasse_2025_v1\\text.txt",
+    "source_record": "~/Downloads/Probability_1000_20h_20260906/sources.jsonl:2",
+    "local_label_inspected": true,
+    "recorded_sha256": "cd4e929a83143f9157283d2d9de7e6a99bca40f57e16d62a9b1f3ba33070801c",
+    "hash_recomputed": false,
+    "caveat": "Use the outer-boundary liminf; the intake flags a halfspace notation mismatch."
+  },
+  "primary_statement_checks": [
+    {
+      "url": "https://arxiv.org/html/2303.14938",
+      "title": "Logarithmic bounds for isoperimetry and slices of convex sets",
+      "locator": "Introduction, (1.3)-(1.5), Theorem 1.2",
+      "checked": "Definitions and covariance normalization; historical logarithmic bound, not asserted as the current best bound."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.05474v1",
+      "title": "Presenting a proof of the Kannan-Lovasz-Simonovits conjecture",
+      "date": "2026-10-04",
+      "locator": "Definition (5), Theorem 1.1",
+      "checked": "Primary theorem statement matches the full target; entire proof NOT checked."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.07728v2",
+      "title": "A Dimension-Free Bound on the Poincare Constant of Isotropic Log-Concave Measures",
+      "date": "2026-10-08",
+      "locator": "Abstract and introduction",
+      "checked": "Claims C_P<=25; entire proof NOT checked."
+    }
+  ],
+  "prior_routes": {
+    "P0017-A001": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl:19; Gaussian special case by Hermite expansion; no universal log-concave proof.",
+    "H_and_I": "Targeted ID and KLS searches in the supplied attempt directories found no exact P0017 attempt.",
+    "lean_directory": "P0017 appears in the annotated ranking; no formal theorem receipt was identified.",
+    "owner_solved_registers": "No matching target in the two named Open problem project solved registers; this bounded search is not an exhaustive retirement check.",
+    "Team_O": "P0017 remains an unchecked board row; no proof was assumed from the board.",
+    "w351": "L2 conditional projection comparison plus simplex slice obstruction. w352 uses moving-boundary Sobolev differentiation and a distinct ball comparison."
+  },
+  "independence": {
+    "ATTEMPT_saved_before_w351_proof_read": true,
+    "paired_proof_read": true,
+    "paired_proof_path": "~/brain_workers/w351/ATTEMPT.md",
+    "audit": "PEER_AUDIT.md"
+  },
+  "formal_check": {
+    "performed": false,
+    "actual_theorem": null,
+    "trusted_axioms": null,
+    "admitted_placeholder_used": false
+  },
+  "note": "Metadata, hashes, author claims and source checks do not certify a mathematical proof."
+}

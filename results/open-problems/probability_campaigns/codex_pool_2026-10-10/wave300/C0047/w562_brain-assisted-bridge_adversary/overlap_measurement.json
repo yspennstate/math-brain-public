@@ -1,0 +1,61 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w562/check_overlap.py",
+  "elapsed_seconds": 0.0020414000609889627,
+  "overlap_cases": [
+    {
+      "p": "1/4",
+      "P_A": "1/16",
+      "P_B": "1/16",
+      "P_AB": "1/64",
+      "iid_P_AB": "1/256",
+      "P_union": "7/64",
+      "iid_P_union": "31/256",
+      "control_disjoint_P_AB": "1/256"
+    },
+    {
+      "p": "1/2",
+      "P_A": "1/4",
+      "P_B": "1/4",
+      "P_AB": "1/8",
+      "iid_P_AB": "1/16",
+      "P_union": "3/8",
+      "iid_P_union": "7/16",
+      "control_disjoint_P_AB": "1/16"
+    },
+    {
+      "p": "3/4",
+      "P_A": "9/16",
+      "P_B": "9/16",
+      "P_AB": "27/64",
+      "iid_P_AB": "81/256",
+      "P_union": "45/64",
+      "iid_P_union": "207/256",
+      "control_disjoint_P_AB": "81/256"
+    }
+  ],
+  "disjoint_controls": 3,
+  "slot_coupling_cases": [
+    {
+      "slot_probability": "1/4",
+      "shared_base_probability": "7/16",
+      "independent_route_probability": "1/16",
+      "joint_route_probability": "1/256"
+    },
+    {
+      "slot_probability": "1/2",
+      "shared_base_probability": "3/4",
+      "independent_route_probability": "1/4",
+      "joint_route_probability": "1/16"
+    },
+    {
+      "slot_probability": "3/4",
+      "shared_base_probability": "15/16",
+      "independent_route_probability": "9/16",
+      "joint_route_probability": "81/256"
+    }
+  ],
+  "deterministic_inclusion_assignments_checked": 48,
+  "exact_arithmetic": true,
+  "all_checks_passed": true,
+  "scope": "Finite control only; infinite coupling needs the separate written product-space proof and independent referee."
+}

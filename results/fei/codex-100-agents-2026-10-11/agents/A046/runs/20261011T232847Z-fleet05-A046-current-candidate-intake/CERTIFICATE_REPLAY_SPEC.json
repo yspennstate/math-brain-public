@@ -1,0 +1,14 @@
+{
+  "amendment_trigger": "B10 STREAM_NOTES.md v2 23:31Z additionally requests lemma A/B review and replay",
+  "helper_version": "B10L-ONEBIT-HALF-TAX@1 scalar continuum component",
+  "family": "qubit F(theta)=h2(sin^2 theta)+h2(sin^2(theta-beta)); sin^2 beta=p",
+  "parameter_domain": "beta in [0.28, certified upper enclosure of pi/4], d in [0, same upper enclosure], theta=beta/2+d; p<=0.08 and near-fair lemma B regions handled analytically",
+  "case_count": "4096 initial boxes; source reported 7 splits, 4100 positive boxes and 3 lemma-B boxes",
+  "symmetry": "period pi/2 and reflection theta->beta-theta",
+  "arithmetic": "replay original 80-bit mpmath interval code, not a new independent interval implementation; analytic lemmas independently reconstructed",
+  "memory_estimate_bytes": 30000000,
+  "maximum_runtime_seconds": 60,
+  "max_boxes": 3000000,
+  "no_dimension_escalation": true,
+  "acceptance": "record replay and inspect lemma coverage/rounding separately; same numerical PASS is not by itself independent proof acceptance"
+}

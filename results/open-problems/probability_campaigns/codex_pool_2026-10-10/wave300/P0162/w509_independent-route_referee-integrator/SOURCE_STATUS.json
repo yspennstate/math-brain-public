@@ -1,0 +1,22 @@
+{
+  "target": "P0162",
+  "source_evidence_rows": [
+    {
+      "statement": "The 2026-09-07 local ranking labels P0162 'Fourier entropy versus total influence' and records status 'attempted_un'.",
+      "source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:553",
+      "exact_quote": "5,P0162,Fourier entropy versus total influence,attempted_un,Fourier entropy versus influence conjecture",
+      "verdict": "KEEP as historical catalog metadata only; current openness and the exact conjecture remain unverified"
+    }
+  ],
+  "current_openness": "UNKNOWN; May and September 2026 primary papers still call the unrestricted statement a conjecture",
+  "exact_statement_verified": true,
+  "exact_statement": "There exists an absolute C such that for every n and every Boolean f:{-1,1}^n->{-1,1}, sum_{S subset [n]} hat_f(S)^2 log_2(1/hat_f(S)^2) <= C sum_{S subset [n]} |S| hat_f(S)^2, under the uniform product measure and Fourier-Walsh normalization hat_f(S)=E[f(x) product_{i in S}x_i]. Zero terms contribute zero.",
+  "source_for_exact_statement": "https://www.cs.cmu.edu/~odonnell/papers/fei.pdf, Introduction, p.2 (author's primary paper restating FK96)",
+  "source_quote": "Fourier Entropy–Influence (FEI) Conjecture. ∃C ∀f, H[ f̂²] ≤ C · I[f].",
+  "original_source": "Friedgut and Kalai, Every monotone graph property has a sharp threshold, Proc. AMS 124 (1996), DOI 10.1090/S0002-9939-96-03732-X; original PDF located but its exact conjecture text could not be extracted with the available web tool",
+  "recent_primary_sources": ["https://arxiv.org/abs/2606.00246", "https://arxiv.org/abs/2609.21563"],
+  "primary_source_verified": true,
+  "scope_caution": "The Boolean-valued hypothesis is essential; the same inequality is false for arbitrary real-valued f.",
+  "local_special_case": "The owner's F0090 files claim FEI for critical percolation crossing events; see prob1000_lean_20260908/f0090_paper/spectral_entropy_crossing.tex:29 and REPORT_F0090_Kalai_conjecture_8_entropy_influence_percolation_2026-09-10.md:74. This does not settle general P0162.",
+  "local_exact_id_search": "No P0162 record found in named attempts_H or attempts_I directories; historical ranking and annotated list retain attempted_un."
+}

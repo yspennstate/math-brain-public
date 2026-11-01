@@ -1,0 +1,14 @@
+{
+ "helper_version":"A018-independent-lead-review-v2",
+ "targets":["B04-SEL-LOG-SHARP@1","B04-BENT-SPLICE-SHARP@1","B04-NODE-BOUNDARY@1"],
+ "family":"All Boolean tables n<=4 for singleton boundary; all prefix blocks n<=3 for selector bounds; explicit bent one-point splices and disjoint tensor products",
+ "domain":"pilot n=0..3 all a=0..n; census n=4 all 65536 tables and four coordinates; bent even m=2..40; direct bent m=2,4,6,8; tensor fixtures (m,t)=(2,2),(2,3),(4,2)",
+ "case_count":{"pilot_blocks":1082,"pilot_singleton_nodes":804,"four_bit_tables":65536,"four_bit_nodes":262144,"bent_histograms":20,"direct_bent_tables":4,"tensor_fixtures":3},
+ "symmetry":"None: every truth table and coordinate retained. Prefix blocks on exhaustive tables cover any coordinate block by permutation.",
+ "arithmetic":"Integer Walsh and independent direct sums; integer prime-log vectors; 36-term Fraction atanh enclosures then outward rounding to rational grid 2^-80; exact rational Taylor coefficients",
+ "memory_estimate_mb":100,
+ "pilot_max_seconds":60,
+ "full_job_max_seconds":300,
+ "concurrency":"one calculation at a time; no dimension escalation, GPU, randomization, or child process",
+ "independence":"No lead checker is imported. This is A018's separately written reconstruction and census. Stage1 M_W proof retained with explicit provenance."
+}

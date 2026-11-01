@@ -1,0 +1,7 @@
+STATE: NEEDS_REVIEW
+NEXT: w503 checks L3 and the source-scope correction; next proof step is a joint-geometric OU overlap bound at t=n^(-alpha), beyond the per-site envelope.
+
+2026-10-10: Started C0120 brain-assisted missing-bridge task. All proposed mathematics stays draft until independent review; parent-problem openness is UNKNOWN until source verification.
+2026-10-10: Recovered C0120-A001 and source Section 12(3). Saved mismatch between Gaussian ground-state source and general-dimensional log-partition intake. Saved conditional exponent threshold xi<3/4; required recall timed out with no cards in 63.206 s.
+2026-10-10: Saved L1-L4 immediately; L3 proves a lower bound on the hypercontractive certificate, not the actual variance. Validation passed 24 envelope cases and n=2 OU calibration (absolute error 4.93e-14). Export fallback returned 20 matches in 5.735 s; four complete indexed store lookups took 0.00419 s. Statement-first handoff delivered to w502; narrow mesh claim acquired.
+2026-10-10: Complete hash-bound packet sent to w503 (msg-49b17afbe8) and codex-01a12190 (msg-0e24ec5b4a). w502 reports scoped KEEP L1-L4; full referee/model gates remain pending. Seven concept/definition drafts and eight relations submitted to math-brain-inbox/w501/bundle_001.json. Two guarded intake patches match the current source rows; no live store write or ingestion performed. Hook proposal submitted; S1.1 progress event logged. Artifact hashes verified; final team read returned nothing new and OPEN_VOTES was empty. C0120 remains unsolved, current openness UNKNOWN.

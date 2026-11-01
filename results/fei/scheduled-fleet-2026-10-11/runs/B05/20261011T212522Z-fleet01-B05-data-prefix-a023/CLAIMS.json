@@ -1,0 +1,25 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261011T212522Z-fleet01-B05-data-prefix-a023",
+  "claims": [
+    {
+      "claim_id": "B05-A023-BENT-DATA-PREFIX-TELESCOPE",
+      "version": 1,
+      "exact_statement": "For every even k=2h>=4, let delta=2^(-k), rho=sqrt(delta), p=delta^2, let b=(-1)^(sum_j u_j v_j), let b' flip only the all-zero input, let s be their fresh physical selector, and activate s on one point of 2k fresh controls. After the controls, query u_1,...,u_h until a 1 occurs; query the selector only if all u_j=0. If L_m is the conditional selector entropy packet after u_1=...=u_m=0, then L_m=A_L-2delta+2^m rho(B_L+2rho), Gamma_m=L_m-L_(m+1)/2=(A_L-2delta)/2>=0, and L_0=sum_{m=0}^{h-1}2^(-m)Gamma_m+2^(-h)L_h. Moreover 2^(-h)L_h<=2delta+delta rho(k+log2(e)), and the terminal phase packet is at most 2delta/ln(2). Thus after activation the terminal selector decrement is at most d[2+2/ln(2)+rho(k+log2(e))], while the original d k logarithm is exactly transported into nonnegative single-use data/selector order-swap credits.",
+      "hypotheses": ["uniform physical Boolean cube", "even k>=4", "quadratic bent tensor with declared pairing", "genuine all-zero one-point flip", "fresh physical selector", "2k fresh activation controls", "entropy in bits"],
+      "contributors": ["fleet01/B05"],
+      "proof_source": {"repository": "yspennstate/math-open-problems", "path": "reports/fei-2026-10-11/runs/B05/20261011T212522Z-fleet01-B05-data-prefix-a023/REPORT.md"},
+      "proof_dependencies": [
+        {"claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO", "version": 1, "role": "accepted family and activation notation", "commit": "80cc2e5027efa56d79c4ecdf7d4949759ef2068b"},
+        {"claim_id": "B05-A023-CONTROL-FIRST-ORDER-TRANSPORT-NOGO", "version": 1, "role": "prior unpaid logarithm and next-action provenance", "commit": "440ecfff652a0b02f072c98bc4524d59a2a8bf2a"}
+      ],
+      "review_records": [],
+      "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": ["On the archived sparse bent-defect family, every physical data-interleaving merely transports the d k selector debt to another selector packet."],
+      "first_unproved_line": null,
+      "scope_exclusions": ["Does not extend to arbitrary Boolean cores.", "Does not prove an addressing payment.", "Does not prove existential good-coordinate selection or FEI."],
+      "next_consumers": ["A021", "A024", "A027", "A028", "A036", "A064", "A087", "A094", "B20"]
+    }
+  ]
+}

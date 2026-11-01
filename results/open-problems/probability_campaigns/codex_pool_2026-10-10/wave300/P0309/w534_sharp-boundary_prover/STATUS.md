@@ -1,0 +1,9 @@
+STATE: NEEDS_REVIEW
+NEXT: Coordinator reviews DRAFT/admission and staged hook/progress row, then integrates the scoped C2-C4 boundary cards; mathematical KEEP evidence is in REVIEW_RECEIPT.json.
+
+2026-10-10: Started P0309 sharp-boundary prover task; read PRIMARY_DIRECTIVE.md. All research results will be saved locally and independent review will remain a separate state.
+2026-10-10: Recovered op-p0309 and at-p0309; prior harmonic calculation assumes a stable crystal and leaves defects uncontrolled. Saved SOURCE_STATUS.json and first candidate row C1. Read the named perceptron proof-gap scar; a numerical receipt will not count as proof.
+2026-10-10: Primary source Section VI checked. Saved ATTEMPT.md with the exact periodic sign/equality proof, compact-support negative second variation, and separately defined long-range heat difference. Hardest remaining gap: uniform nonlinear free-energy/order control for a stable BCC/FCC candidate. First team send required membership; created the narrow W0534_P0309_SHARP channel and retried the statement-only handoff.
+2026-10-10: Initial numeric run stopped before arithmetic because the local verifier omitted the current owner_present_polite mode. Checked canonical COMPUTE_DOCTRINE.md lines 128-130 and corrected the recognized labels; distress, freshness, UI and bounded CPU checks remain active. w536's own-file review is available to read.
+2026-10-10: Recorded w536 KEEP on C2 and C3 and KEEP_SCOPED on C4. Removed the common-counterterm remark from the long-range section; C4 is solely the displayed integral statement. Independent review evidence is preserved separately as rows R2-R4.
+2026-10-10T06:14:15.458408+00:00: Finished and measured: 12 scalar groups passed; C2/C3 KEEP and C4 KEEP_SCOPED by w536; five-entry/six-relation DRAFT submitted. Final local artifact checks passed. Live-store ingestion and retrieval remain unverified and separate.

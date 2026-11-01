@@ -1,0 +1,12 @@
+[
+  {
+    "scope": "Reviewer own scratch code only",
+    "failure": "Initial formal C_low comparison failed at assertion151: extra h(1/2) and missing H(root)=3 in KL conversion",
+    "repair": "Correct mean child TC=(n+2)h(1/4)-H_c and include +3. Final independent source reconstruction152 assertions passes. Source claim unchanged."
+  },
+  {
+    "scope": "Own follow-up validation only",
+    "failure": "Assertion that second parity data erasure has source-zero fibers for n=2 failed; remaining parity mask has just one bit and covers both data supports",
+    "repair": "Check zero such rows for n=2, positive rows for n>=3. Final counts0,8,24 per branch at n2,3,4;1367 assertions pass. No analytic identity changed."
+  }
+]

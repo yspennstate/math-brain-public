@@ -1,0 +1,14 @@
+{
+  "helper_version": "protected-interleaving-v1",
+  "actual_Boolean_family": "F(c,ell,y)=A(c)+B(c)ell h(y); at every control point (A,B) is one of (1,0),(-1,0),(0,1),(0,-1)",
+  "domain": ["all 16 one-control signed masks times all 16 two-seed-bit Boolean functions", "all 256 two-control signed masks times all 4 one-seed-bit Boolean functions"],
+  "case_count": 1280,
+  "rates": [2,4],
+  "symmetry": "none; duplicate representations retained",
+  "queries": "every adaptive stopping tree querying controls and seed coordinates; balancing ell is protected",
+  "arithmetic": "integer Walsh transforms, dyadic exact prime-log signatures at common scale 256; rational atanh log intervals with 40 terms and proved positive tail",
+  "memory_estimate_MB": 45,
+  "maximum_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "validation": "direct physical restriction and edge influence Bellman DP, independently compared with separated controller/seed DP"
+}

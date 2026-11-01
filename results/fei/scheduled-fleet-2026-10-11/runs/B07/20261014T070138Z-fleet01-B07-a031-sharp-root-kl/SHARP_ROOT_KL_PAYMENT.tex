@@ -1,0 +1,121 @@
+\section*{Sharp Boolean payment of the root signed-KL rows}
+
+All logarithms in the GU functionals are base two.  Fix a Boolean
+$f:\{-1,1\}^n\to\{-1,1\}$ and a physical coordinate $i$.  For
+$A\subseteq[n]\setminus\{i\}$ put
+\[
+ a_A=\widehat f(A),\quad b_A=\widehat f(A\cup\{i\}),\quad
+ m_A=a_A^2+b_A^2,
+\]
+\[
+ C_A=\sum_{T\supseteq A}a_Tb_T,\quad
+ M_A=\sum_{T\supseteq A}m_T,
+\quad \alpha_A={2a_Ab_A\over m_A},\quad
+\beta_A={2C_A\over M_A},
+\]
+with every zero-mass summand interpreted as zero.  The exact restriction
+identity is
+\[
+ \Delta_iU=B_i-\Gamma_i+K_i,
+ \qquad
+ K_i=\sum_A m_A D_2\left({1+\alpha_A\over2}\middle\|
+                           {1+\beta_A\over2}\right).       \tag{1}
+\]
+
+Write $K_i^{(0)}$ for the $A=\varnothing$ summand and $K_i^{(+)}$ for
+the sum over $A\ne\varnothing$.
+
+\paragraph{Theorem.}
+For every Boolean $f$,
+\[
+ \boxed{\sum_i K_i^{(0)}
+ \le {2\over\ln2}\sum_i\widehat f(\{i\})^2
+ \le {2\over\ln2}I(f).}                              \tag{2}
+\]
+The coefficient $2/\ln2$ is optimal for this component.  Consequently,
+write $c_0=2/\ln2$.  If some $a\ge c_0$ and $0\le b<1$ satisfy
+\[
+ \sum_iK_i^{(+)}
+ \le (a-c_0)I+bU+\sum_i(\Gamma_i-B_i)                 \tag{3}
+\]
+on every tensor-prime Boolean function, then the universal GU inequality
+$G\le aI+bU$ follows, and hence
+\[
+ H(f)\le\left(2+{2a\over1-b}\right)I(f)               \tag{4}
+\]
+for every Boolean $f$.
+
+\paragraph{Boolean root normalization.}
+The Fourier convolution identity for $f^2=1$ at the nonzero shift
+$\{i\}$ is
+\[
+ 0=\sum_{S\subseteq[n]}\widehat f(S)\widehat f(S\triangle\{i\})
+  =2\sum_{A\subseteq[n]\setminus\{i\}}a_Ab_A.
+\]
+Therefore $C_\varnothing=0$ and $\beta_\varnothing=0$.  If
+$a=\widehat f(\varnothing)$, $d=\widehat f(\{i\})$, and
+$m=a^2+d^2$, then
+\[
+ K_i^{(0)}=m\left[1-h_2\left({1+2ad/m\over2}\right)\right]. \tag{5}
+\]
+
+\paragraph{Sharp scalar inequality.}
+For $|x|\le1$, set
+\[
+ D(x)=1-h_2\left({1+x\over2}\right),\qquad
+ R(x)=1-\sqrt{1-x^2}.
+\]
+Using natural logarithms,
+\[
+ (\ln2)D(x)={1\over2}\big((1+x)\ln(1+x)+(1-x)\ln(1-x)\big).
+\]
+Both sides vanish at zero.  For $0\le x<1$ their derivatives obey
+\[
+ {d\over dx}[(\ln2)D(x)]=\operatorname{artanh}x
+ \le {x\over\sqrt{1-x^2}}=R'(x).                     \tag{6}
+\]
+Indeed the difference on the right minus the left vanishes at zero and
+has derivative
+\[
+ {1\over(1-x^2)^{3/2}}-{1\over1-x^2}
+ ={1-\sqrt{1-x^2}\over(1-x^2)^{3/2}}\ge0.
+\]
+Evenness and continuity at the endpoints prove
+\[
+ D(x)\le {1-\sqrt{1-x^2}\over\ln2}.                  \tag{7}
+\]
+Substitute $x=2ad/m$.  Since
+\[
+ \sqrt{1-x^2}={|a^2-d^2|\over a^2+d^2},
+\]
+(5)--(7) give the stronger pointwise estimate
+\[
+ K_i^{(0)}\le {2\min(a^2,d^2)\over\ln2}
+ \le {2d^2\over\ln2}.                                \tag{8}
+\]
+Summing (8) proves (2).
+
+For the $n$-bit point defect, $a=1-t$, $|d|=t$ with
+$t=2^{1-n}$.  Dividing (5) by $d^2$ and sending $t\downarrow0$ gives
+$2/\ln2$, so no smaller universal coefficient can replace $c_0$ in
+(2).
+
+\paragraph{GU implication.}
+Summing (1), using (2), and then (3) yields
+\[
+ G\le c_0I+\sum_i(B_i-\Gamma_i)+\sum_iK_i^{(+)}
+ \le aI+bU
+\]
+on tensor-prime functions.  The exact identities
+$U(gh)=U(g)+U(h)$, $I(gh)=I(g)+I(h)$, and
+$G(gh)=G(g)+G(h)$ for disjoint products extend the same pair to every
+Boolean function.  Constants have $G=I=U=0$.  Finally, the restriction
+induction implied by $G\le aI+bU$, together with the granularity theorem
+$H\le2I+2U$, gives (4).
+
+\paragraph{Scope.}
+Only the empty upper-set rows have been paid.  The nonempty-row aggregate
+in (3), including signed upper correlations, normalization, and possible
+reuse across restrictions, remains open.  This theorem does not prove a
+universal GU pair or full FEI.
+

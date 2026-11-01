@@ -1,0 +1,7 @@
+# A064 actual-boundary clause: independent reconstruction
+
+Source: A064 run 20261013T235917Z-fleet05-A064-global-debt-potential, DERIVATION.md, "Controller account and boundary obstruction". Reviewed scope is only the two-dictator actual-boundary identity, not the prefix potential, its constants or the whole bundled claim.
+
+For any controller h define F=(1+h)y0/2+(1-h)y1/2. Direct physical substitution of (y0,y1) yields the four functions +1,-h,h,-1, each with probability 1/4. Their entropy, total influence and consistently sign-translated prescribed-tree minimal reserves are respectively 0,H(h),H(h),0; 0,I(h),I(h),0; and 0,Q(h),Q(h),0. The averages are precisely half the respective core quantities. At each controller edge h changes, the selected dictators differ with probability 1/2, so root controller influence is also I(h)/2, counted over actual edges rather than separately assigned event accounts.
+
+Verdict HOLDS at this scope. The proof explicitly retains arbitrary h and Q(h); certification of the dictator data cores supplies no controller boundary payment. A separate direct-truth-table checker enumerates all 16 two-bit controllers and a three-bit point defect at prices 1,2,6, checking the four physical frontier values, root controller account and retained reserve/entropy/influence. No repair was supplied, and full-chain acceptance is withheld. The new padding transfer preserves this same inherited reserve obstruction even after arbitrarily many point-edit dummy admissions.

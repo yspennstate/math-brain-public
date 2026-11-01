@@ -1,0 +1,17 @@
+{
+  "helper_version": "controller-point-switch-v1",
+  "family": "actual paired quadratic bent b on k data bits, one arbitrary data vertex v flipped iff arbitrary indicator controller A(z)=1; all controller truth tables on declared dimension",
+  "pilot_domain": "k=4, every v=0..15, every controller truth table on t=0,1,2",
+  "pilot_case_count": 352,
+  "full_domain": "t=0,1,2,3 every controller truth table; k=4 all16 vertices, k=6 v=0,1,21,63; k=8 v=0,1,85,255",
+  "full_case_count": 6672,
+  "symmetry": "none; all truth tables labelled; selected larger-k vertices explicitly scoped",
+  "policy": "first coordinate in each quadratic pair; STOP with all partners and controllers retained",
+  "arithmetic": "integer signed Walsh, exact rational prime-log entropy expressions and 80-bit outward intervals using 50-term positive atanh series with proved remainder; direct edge influence checks",
+  "memory_estimate_MB": 180,
+  "pilot_max_seconds": 60,
+  "full_max_seconds": 1800,
+  "automatic_dimension_escalation": false,
+  "goals": "exact root and exceptional-leaf entropy identities, terminal-inclusive data/controller influence partition, K4-good access and H<=7I_data+2^-k H(controller sign)",
+  "notes": "This is not an arbitrary-controller FEI certificate. No controller entropy is dropped. Runs sequentially; no >300MB estimate."
+}

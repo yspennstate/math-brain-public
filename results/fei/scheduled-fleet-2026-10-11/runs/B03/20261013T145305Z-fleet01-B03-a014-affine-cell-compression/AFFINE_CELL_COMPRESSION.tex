@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{Affine-cell Walsh compression}
+Let $A=y_0+H\subseteq\mathbb F_2^c$ have codimension $d$,
+$\alpha=2^{-d}$, and $W=H^\perp$.  If
+$t=|\operatorname{supp}W|$ and $B\ne\varnothing$ has size $\ell$, define
+\[
+F(y,z,x)=1_A(y)\chi_B(z)h(x)+(1-1_A(y))g(x).
+\]
+Then
+\[
+H(F)=(1-\alpha)H(g)+\alpha H(h)
++L((1-\alpha)^2)+2d\alpha(2-\alpha),
+\]
+and
+\[
+I(F)=(1-\alpha)I(g)+\alpha I(h)+\alpha(t+\ell).
+\]
+Indeed, $\widehat{1_A}(T)=\alpha\chi_T(y_0)$ on $W$ and vanishes
+off $W$.  The two displayed summands of $F$ have disjoint $z$-frequency
+support.  This gives the entropy identity.  For influence, a selector
+coordinate is free precisely when $e_i\in H$; otherwise $A$ and
+$A+e_i$ are disjoint, and the fresh nontrivial character makes the
+branch disagreement probability $1/2$, giving influence $\alpha$.
+Finally $t\ge d$ and
+\[
+L((1-\alpha)^2)<3\alpha,qquad
+2d\alpha(2-\alpha)<4d\alpha,
+\]
+so the surcharge is less than $4\alpha(d+\ell)\le
+4\alpha(t+\ell)$.  Hence the class is closed under $H\le4I$.
+\end{document}

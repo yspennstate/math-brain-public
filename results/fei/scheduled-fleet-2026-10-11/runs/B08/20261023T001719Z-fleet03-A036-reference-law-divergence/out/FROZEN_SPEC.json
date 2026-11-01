@@ -1,0 +1,32 @@
+{
+  "helper_version": "A036 v1 fresh correlated reset; own prior exact primitives copied",
+  "family": "F_h, h product of m disjoint width-r point defects; supplied initial correlated lift of product q_r=7p_r/8+Var_r delta_full/8 on nonempty",
+  "pilot": [
+    [
+      1,
+      2
+    ]
+  ],
+  "main": [
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      2
+    ]
+  ],
+  "policies": "b-first; first data bit in b1; x or a in both active children; reset all new child pairs or data0 pair only; keep b0 and complement; 4 policies per fixture",
+  "case_count": "pilot4 main12",
+  "symmetry": "none labelled fixtures",
+  "arithmetic": "integer Walsh, physical edges, Fraction references, exact coherent kernels, rational atanh logarithm intervals",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds_per_job": 55,
+  "automatic_dimension_escalation": false,
+  "analytic_scope": "every m>=1,r>=2; arbitrary adaptive finite data-prefix and selected x/a pairs; one reset per selected complete child; old quarter retained"
+}

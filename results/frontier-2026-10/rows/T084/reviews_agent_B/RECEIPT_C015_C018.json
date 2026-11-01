@@ -1,0 +1,37 @@
+{
+ "reviewer": "agent B",
+ "at": "2026-10-17T20:08:33+03:00",
+ "verdict": "PASS",
+ "scope": "correctness of the exact versions; novelty not judged",
+ "claims": {
+  "T084-C015": {
+   "version": "v1",
+   "sha256": "893ad283dff3c90bf5478f42483a5fee58d1ef71c9f41c9535b6daa20712811a"
+  },
+  "T084-C016": {
+   "version": "v1",
+   "sha256": "1c432ac6cc3fc37df103087ae5592b824e5a31a4aac572385b9c9b6c57e1ad4c"
+  },
+  "T084-C017": {
+   "version": "v1",
+   "sha256": "86fb8aa30b0427cf4f7f8641bcac964dcb988dbe2b6fd2b50f69d23f5645638b"
+  },
+  "T084-C018": {
+   "version": "v1",
+   "sha256": "39234bbfb60d3f0878cdea06e858c71291dba2c3bfd56b9538ba9b55ff346ef0"
+  }
+ },
+ "review": {
+  "file": "REVIEW_C015_C018.md",
+  "sha256": "c88ba610e01e77a3e5ac97cb6801736eda3f4a6de9d937839d1becdd92d8ddc4"
+ },
+ "checks": {
+  "check_base.py": "12f688fdaec605b70a2b9492daa7ee87c4244ecdab7f4eecb7ad65d2e0c50768",
+  "check_c016.log": "ea68bd31256775cb8fe77deac6664b9cc030cebe4968bacb475ce9937dde06be",
+  "check_c016.py": "625ad3f67990335c640a4c85ee59a3db15a6c0c723affc6fb2bf0a340cb94690",
+  "check_c017.json": "bdefe0d3cf062ca72d710833b785bdd999092f8cf4e88659477a777ef073c7b8",
+  "check_c017.py": "74f9b07ba89823cf4a4b666dab6631888acfea7b8a08534931ebc10790a5eac0",
+  "check_c020.py": "904a6415f850a4df002449cdc82a85f3bc6e896fffbe06ed5cb65e3314f8d20d"
+ },
+ "c016_finite_range": "n=4..10 exact; brute force n=4..7"
+}

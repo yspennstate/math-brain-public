@@ -1,0 +1,316 @@
+{
+  "status": "PASS",
+  "python": "3.12.14",
+  "arithmetic": "fractions.Fraction; sparse polynomial identities; exact Gaussian elimination",
+  "check_count": 88,
+  "checks": [
+    "All 25 ordered coefficient rows: stochastic, symmetric, nonnegative, strictly non-Volterra; E positive on allowed entries",
+    "W_1 from tensor",
+    "W_2 from tensor",
+    "W_3 from tensor",
+    "W_4 from tensor",
+    "W_5 from tensor",
+    "E_1 formula",
+    "E difference 1,2",
+    "E difference 1,3",
+    "E difference 1,4",
+    "E difference 1,5",
+    "E_2 formula",
+    "E difference 2,3",
+    "E difference 2,4",
+    "E difference 2,5",
+    "E_3 formula",
+    "E difference 3,4",
+    "E difference 3,5",
+    "E_4 formula",
+    "E difference 4,5",
+    "E_5 formula",
+    "W first-group difference 1,2",
+    "W first-group difference 1,3",
+    "W first-group difference 2,3",
+    "W last-group difference",
+    "W homogeneous stochastic sum",
+    "E homogeneous stochastic sum",
+    "V homogeneous stochastic sum",
+    "symmetric W_1",
+    "symmetric E_1",
+    "symmetric W_2",
+    "symmetric E_2",
+    "symmetric W_3",
+    "symmetric E_3",
+    "symmetric W_4",
+    "symmetric E_4",
+    "symmetric W_5",
+    "symmetric E_5",
+    "scalar fixed-point polynomial",
+    "Q endpoint s=0",
+    "Q endpoint s=1/2",
+    "Q endpoint s=1/5",
+    "Q endpoint s=1/3",
+    "discriminant",
+    "positive completed-square discriminant",
+    "rationalized root after denominator clearing",
+    "physical Q_s equals negative square root",
+    "linear-case root 33/163",
+    "equiprobable endpoint roots",
+    "Both implicit scalar derivatives at eps=0",
+    "tangent eigenvector 1, coordinate 1",
+    "tangent eigenvector 1, coordinate 2",
+    "tangent eigenvector 1, coordinate 3",
+    "tangent eigenvector 1, coordinate 4",
+    "tangent eigenvector 1, coordinate 5",
+    "tangent eigenvector 2, coordinate 1",
+    "tangent eigenvector 2, coordinate 2",
+    "tangent eigenvector 2, coordinate 3",
+    "tangent eigenvector 2, coordinate 4",
+    "tangent eigenvector 2, coordinate 5",
+    "tangent eigenvector 3, coordinate 1",
+    "tangent eigenvector 3, coordinate 2",
+    "tangent eigenvector 3, coordinate 3",
+    "tangent eigenvector 3, coordinate 4",
+    "tangent eigenvector 3, coordinate 5",
+    "tangent eigenvector 4, coordinate 1",
+    "tangent eigenvector 4, coordinate 2",
+    "tangent eigenvector 4, coordinate 3",
+    "tangent eigenvector 4, coordinate 4",
+    "tangent eigenvector 4, coordinate 5",
+    "symmetric-line eigenvalue identity",
+    "instability lower bound",
+    "instability interval endpoint",
+    "archived fixed point p, coordinate 1",
+    "archived fixed point p, coordinate 2",
+    "archived fixed point p, coordinate 3",
+    "archived fixed point p, coordinate 4",
+    "archived fixed point p, coordinate 5",
+    "Full affine implicit derivative and nondegeneracy at p",
+    "archived fixed point q, coordinate 1",
+    "archived fixed point q, coordinate 2",
+    "archived fixed point q, coordinate 3",
+    "archived fixed point q, coordinate 4",
+    "archived fixed point q, coordinate 5",
+    "Full affine implicit derivative and nondegeneracy at q",
+    "Negative inverse of I minus boundary transverse Jacobian",
+    "All six input snapshot SHA256 hashes and byte counts",
+    "Local manuscript has exactly one extra terminal LF relative to recorded archival Git blob"
+  ],
+  "Q": [
+    {
+      "coefficient": "36",
+      "powers": {
+        "s": 1
+      }
+    },
+    {
+      "coefficient": "-108",
+      "powers": {
+        "s": 2
+      }
+    },
+    {
+      "coefficient": "11",
+      "powers": {
+        "eps": 1
+      }
+    },
+    {
+      "coefficient": "-92",
+      "powers": {
+        "eps": 1,
+        "s": 1
+      }
+    },
+    {
+      "coefficient": "113",
+      "powers": {
+        "eps": 1,
+        "s": 2
+      }
+    }
+  ],
+  "discriminant": [
+    {
+      "coefficient": "1296",
+      "powers": {}
+    },
+    {
+      "coefficient": "-1872",
+      "powers": {
+        "eps": 1
+      }
+    },
+    {
+      "coefficient": "3492",
+      "powers": {
+        "eps": 2
+      }
+    }
+  ],
+  "points": {
+    "p": {
+      "point": [
+        "1/3",
+        "1/3",
+        "1/3",
+        "0",
+        "0"
+      ],
+      "DW": [
+        [
+          "0",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "2"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "2",
+          "0"
+        ]
+      ],
+      "forcing_E_minus_W": [
+        "-11/54",
+        "-11/54",
+        "-11/54",
+        "11/36",
+        "11/36"
+      ],
+      "branch_derivative": [
+        "11/54",
+        "11/54",
+        "11/54",
+        "-11/36",
+        "-11/36"
+      ],
+      "det_I_minus_DW_tangent": "-12"
+    },
+    "q": {
+      "point": [
+        "1/9",
+        "1/9",
+        "1/9",
+        "1/3",
+        "1/3"
+      ],
+      "DW": [
+        [
+          "0",
+          "1/3",
+          "1/3",
+          "2/9",
+          "2/9"
+        ],
+        [
+          "1/3",
+          "0",
+          "1/3",
+          "2/9",
+          "2/9"
+        ],
+        [
+          "1/3",
+          "1/3",
+          "0",
+          "2/9",
+          "2/9"
+        ],
+        [
+          "2/3",
+          "2/3",
+          "2/3",
+          "0",
+          "4/3"
+        ],
+        [
+          "2/3",
+          "2/3",
+          "2/3",
+          "4/3",
+          "0"
+        ]
+      ],
+      "forcing_E_minus_W": [
+        "32/243",
+        "32/243",
+        "32/243",
+        "-16/81",
+        "-16/81"
+      ],
+      "branch_derivative": [
+        "32/243",
+        "32/243",
+        "32/243",
+        "-16/81",
+        "-16/81"
+      ],
+      "det_I_minus_DW_tangent": "112/27"
+    }
+  },
+  "local_source_git_blob_sha1": "424677e34bc27529aa21d8254a278b4e8b375ea9",
+  "canonical_source_after_removing_one_final_LF": {
+    "bytes": 33941,
+    "git_blob_sha1": "87ba2b2a6d0747c942dba830a98082b6705d2664",
+    "sha256": "1769d932d59fbe9dc18f05fdb48eaf9c00e420f5d1d7a43ffac6601d63aa04f3"
+  },
+  "source_snapshot": "computations/052_snapshot_20260914T223847.733197Z",
+  "source_manifest": {
+    "captured_at_utc": "20260914T223847.733197Z",
+    "repository_initial_commit_from_session": "8861ffde776a1dbf842e918590cc1003492ff296",
+    "files": [
+      {
+        "path": "SESSION.md",
+        "sha256": "6281283ec5344796e80c58027e60209d6fd78b83201c43156b705a5a93b1349c",
+        "bytes": 1317
+      },
+      {
+        "path": "repository-policy.md",
+        "sha256": "f485859d8a19bc831493a1bf495fc4706c7356eb59e9664bae1702658485be6a",
+        "bytes": 2999
+      },
+      {
+        "path": "QSO_FIVE_TYPE_PERTURBATION.md",
+        "sha256": "105587a980a95a70854d2ea1673bfc95ab5ceb3b06be0a7ecdf126c47024cd1e",
+        "bytes": 6136
+      },
+      {
+        "path": "FOUR_TYPE_UNIQUENESS.md",
+        "sha256": "1d9e00b127318c24f599f4790264699ba85311ff998bca79ab85dc01f80f8ca4",
+        "bytes": 18233
+      },
+      {
+        "path": "sources/qso_fixed_points.tex",
+        "sha256": "044d44d880c5d50170551823ca4193406e251bb2db0a820256cf3565cf013e01",
+        "bytes": 33942
+      },
+      {
+        "path": "computations/006_qso_archival.tex",
+        "sha256": "044d44d880c5d50170551823ca4193406e251bb2db0a820256cf3565cf013e01",
+        "bytes": 33942
+      }
+    ]
+  },
+  "scope": "Finite identities are checked here. Sign/interval arguments, the support lemma, and four-type uniqueness are proved in agents/052.md. No floating-point root count or formal proof-assistant verification is claimed."
+}

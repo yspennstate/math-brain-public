@@ -1,0 +1,262 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w432",
+  "bundle_slug": "critical-percolation-pivotal-concentration-w432-001",
+  "entries": [
+    {
+      "key": "w432-L02",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-percolation-pivotal-measure-atom-draft",
+      "kind": "concept",
+      "title": "Draft: critical survival as a pivotal-measure atom",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending. On any infinite connected locally finite graph with Bernoulli bond critical parameter 0<p_c<1, the finite positive measures mu_n(dp)=f_n'(p)dp on [0,p_c], where f_n(p)=P_p(o connects inside B(o,n) to its sphere), converge weakly to theta_o(p_c) delta_{p_c}. No argument excluding the limiting critical atom on the full quasi-transitive target.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Infinite connected locally finite graph",
+        "0<p_c<1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w432:P0043:w432-L02",
+        "url": "~\\brain_workers\\w432\\ATTEMPT.md",
+        "revision": "author-packet-2026-10-10-unreviewed",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "w432-L03",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-percolation-window-integrability-criterion-draft",
+      "kind": "concept",
+      "title": "Draft: exact critical-window integrability criterion",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending. Under L02's assumptions, theta_o(p_c)=0 iff lim_{delta down to 0} sup_n integral_{p_c-delta}^{p_c} f_n'(p)dp=0. A uniform L^r bound on f_n' in a fixed left neighbourhood of p_c, for any r>1, is sufficient. Establish critical-window uniform integrability using quasi-transitivity, especially on Z^3. The iff criterion is a reduction equivalent to the full target, not a proof of it.",
+      "proof_text": null,
+      "assumptions": [
+        "L02's assumptions",
+        "For the sufficient criterion only: eta in (0,p_c), r>1, and sup_n ||f_n'||_{L^r([p_c-eta,p_c])}<infinity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w432:P0043:w432-L03",
+        "url": "~\\brain_workers\\w432\\ATTEMPT.md",
+        "revision": "author-packet-2026-10-10-unreviewed",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "w432-L04",
+      "namespace": "probability.percolation",
+      "logical_name": "bounded-degree-critical-survival-tree-draft",
+      "kind": "concept",
+      "title": "Draft: degree-eight tree with positive critical survival",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending. The rooted spherically symmetric tree with k_n=floor(log_2((n+1)^2)) and b_n=2^(1+k_n-k_{n-1}) children at level n-1 is connected, locally finite, has maximum degree 8, is not quasi-transitive, and has Bernoulli bond p_c=1/2 with theta_root(p_c)>=6/pi^2. This is outside the quasi-transitive target and does not solve it; it identifies a necessary symmetry-dependent step.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation on the specified deterministic tree",
+        "k_0=0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w432:P0043:w432-L04",
+        "url": "~\\brain_workers\\w432\\ATTEMPT.md",
+        "revision": "author-packet-2026-10-10-unreviewed",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "w432-G01",
+      "namespace": "probability.percolation",
+      "logical_name": "quasitransitive-critical-window-integrability-input-unproved",
+      "kind": "concept",
+      "title": "Unproved route input: quasi-transitive critical-window bound",
+      "statement": "UNPROVED INPUT IN THIS PACKET; worldwide status UNKNOWN. Every infinite connected locally finite quasi-transitive graph with 0<p_c<1 satisfies critical-window uniform integrability (UI_c) for its finite-radius Russo pivotal sums. Unproved: derive UI_c from symmetry in the residual subexponential-growth class. Local pivotal limits and bounded total L^1 mass do not suffice.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Infinite connected locally finite quasi-transitive graph",
+        "0<p_c<1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w432:P0043:w432-G01",
+        "url": "~\\brain_workers\\w432\\ATTEMPT.md",
+        "revision": "author-packet-2026-10-10-unreviewed",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "w432-L05",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-percolation-pointwise-influence-limit-obstruction-draft",
+      "kind": "concept",
+      "title": "Draft: pointwise derivative limits can lose a critical atom",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending. For the tree in L04 and the root-to-level-n event, f_n'(p)<=n(2p)^n(n+1)^2/p ->0 for every p in (0,1/2), whereas integral_0^{1/2} f_n'(p)dp>=6/pi^2 for every n. The construction is not quasi-transitive; the symmetry-dependent critical-window estimate remains unproved.",
+      "proof_text": null,
+      "assumptions": [
+        "The deterministic tree of L04",
+        "Independent Bernoulli bond percolation",
+        "n>=1",
+        "0<p<1/2 for the derivative bound"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w432:P0043:w432-L05",
+        "url": "~\\brain_workers\\w432\\ATTEMPT.md",
+        "revision": "author-packet-2026-10-10-unreviewed",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "w432-L06",
+      "namespace": "probability.percolation",
+      "logical_name": "regular-tree-uniform-critical-pivotal-bound-draft",
+      "kind": "concept",
+      "title": "Draft: uniform finite-radius pivotal bound on regular trees",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending. For independent Bernoulli bond percolation on the D-regular tree, D>=3, put b=D-1 and c_b=(b-1)/(2b)(1-1/b)^(b-2). Then p_c=1/b and every finite-radius root-to-sphere probability satisfies sup_{p in [1/(2b),1/b]} f_n'(p)<=D(1+2/c_b). For D=3 the uniform upper bound is 27. The same bound is not established for the residual subexponential quasi-transitive target; G01 remains unproved.",
+      "proof_text": null,
+      "assumptions": [
+        "D>=3",
+        "The infinite D-regular tree",
+        "Independent Bernoulli bond percolation",
+        "n>=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w432:P0043:w432-L06",
+        "url": "~\\brain_workers\\w432\\ATTEMPT.md",
+        "revision": "author-packet-2026-10-10-unreviewed",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "w432-L07",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-percolation-pivotal-mass-transport-tail-draft",
+      "kind": "concept",
+      "title": "Draft: mass transport leaves the distant-centre tail",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending. On a locally finite transitive graph satisfying the mass-transport principle, the finite-radius Russo influence I_n(p) for the root-to-sphere event equals (1/2) sum_u sum_{e incident to o} P_p(e pivotal for the radius-n event centred at u). Mass transport does not bound the sum over all distant centres uniformly in n or in a critical window; G01 remains unproved. No formula is claimed on a nonunimodular graph without weights.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Infinite locally finite transitive graph",
+        "Mass-transport principle for nonnegative diagonally invariant transports",
+        "n>=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w432:P0043:w432-L07",
+        "url": "~\\brain_workers\\w432\\ATTEMPT.md",
+        "revision": "author-packet-2026-10-10-unreviewed",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "w432-L08",
+      "namespace": "probability.percolation",
+      "logical_name": "regular-tree-complete-subcritical-uniform-pivotal-bound-draft",
+      "kind": "concept",
+      "title": "Draft: strengthened regular-tree derivative bound 12",
+      "statement": "AUTHOR-PROVED DRAFT; independent mathematical review pending. For independent Bernoulli bond percolation on the D-regular tree, D>=3, let b=D-1 and c_b=(b-1)/(2b)(1-1/b)^(b-2). For every n>=1, sup_{p in [0,1/b]} f_n'(p)<=D/c_b. For D=3 the bound is 12, strengthening L06's bound 27 on a smaller interval. Regular-tree special case only; G01 on the full quasi-transitive class remains unproved. Discovery credited to w433; w432 independently rederived the bound. Referee w434 pending.",
+      "proof_text": null,
+      "assumptions": [
+        "D>=3",
+        "The infinite D-regular tree",
+        "Independent Bernoulli bond percolation",
+        "n>=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:P0043:w433-tightening-w432-rederivation",
+        "url": "~\\brain_workers\\w432\\ATTEMPT.md",
+        "revision": "author-packet-2026-10-10-unreviewed",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "w432-R01",
+      "namespace": "probability.percolation",
+      "logical_name": "quasitransitive-critical-extinction-lattice-specialization-scope-correction-draft",
+      "kind": "concept",
+      "title": "Draft scope correction: the lattice is a special case of the graph target",
+      "statement": "DRAFT SOURCE CORRECTION, independent review pending. The assertion of critical Bernoulli bond extinction on every infinite connected locally finite quasi-transitive graph G with p_c(G)<1 includes the nearest-neighbour Z^d case under the same critical-parameter restriction. A proof only on Z^d does not by itself cover all polynomial-growth quasi-transitive graphs. The cited prior attempt supplies no converse reduction; retain the valid one-way specialization rather than an equivalence.",
+      "proof_text": null,
+      "assumptions": [
+        "The general graph target is read with its full stated hypotheses",
+        "No transfer theorem is assumed"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w432:P0043:scope-correction",
+        "url": "~\\brain_workers\\w432\\SOURCE_CORRECTIONS.jsonl",
+        "revision": "author-source-audit-2026-10-10-unreviewed",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "w432-L03",
+      "to_key": "w432-L02",
+      "kind": "depends_on",
+      "rationale": "The limiting critical-window mass is the critical survival atom; the exact iff proof is in L03."
+    },
+    {
+      "from_key": "w432-L05",
+      "to_key": "w432-L04",
+      "kind": "depends_on",
+      "rationale": "The pointwise derivative obstruction uses the specified degree-eight tree and its positive critical survival."
+    },
+    {
+      "from_key": "w432-L05",
+      "to_key": "w432-L02",
+      "kind": "semantic_association",
+      "rationale": "The tree exhibits a nonzero critical atom despite pointwise subcritical derivative decay."
+    },
+    {
+      "from_key": "w432-L04",
+      "to_key": "w432-L03",
+      "kind": "semantic_association",
+      "rationale": "The counterexample fails quasi-transitivity and shows why independent bonds and bounded degree alone cannot prove the proposed critical-window estimate."
+    },
+    {
+      "from_key": "w432-L06",
+      "to_key": "w432-L03",
+      "kind": "specializes",
+      "rationale": "The proved regular-tree L-infinity influence bound verifies the sufficient integrability criterion for this subclass."
+    },
+    {
+      "from_key": "w432-L07",
+      "to_key": "w432-L03",
+      "kind": "semantic_association",
+      "rationale": "Under the explicitly assumed mass-transport principle, the critical-window mass equals the integrated incoming pivotal mass over all centres."
+    },
+    {
+      "from_key": "w432-L08",
+      "to_key": "w432-L06",
+      "kind": "proves",
+      "rationale": "The stronger D/c_b bound on the whole interval [0,1/b] implies the old D(1+2/c_b) bound on [1/(2b),1/b]. For D=3 the constants are 12 and 27 respectively."
+    },
+    {
+      "from_key": "w432-G01",
+      "to_key": "w432-L03",
+      "kind": "depends_on",
+      "rationale": "G01 is the unproved critical-window input identified by the exact target-equivalence criterion; the parent target is not proved."
+    },
+    {
+      "from_key": "w432-R01",
+      "to_key": "w432-G01",
+      "kind": "semantic_association",
+      "rationale": "Both concern the scope of the full quasi-transitive target; neither is a proof of that target."
+    }
+  ]
+}

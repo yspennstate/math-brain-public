@@ -1,0 +1,15 @@
+import sympy as s
+x,r,L,T=s.symbols('x r L T',positive=True)
+a=x/(1+x);c=x*r/(1+x*r)
+v=2*a*(1-a)+c*(1-c);p=(1-a)**2*(1-c);mu=2*a+c
+C=s.Matrix([[v,-p*mu],[-p*mu,p*(1-p)]])
+J=s.Matrix([[2,1],[-2*p/(1-a),-p/(1-c)]])
+F=s.simplify(J.T*C.inv()*J)
+m=(L+x*r*T)/(1+x*r);t=(L+x*T)/(1+x)
+print('F entries',[[s.factor(y) for y in row] for row in F.tolist()])
+G=F-s.Matrix([[2*m,2*t],[2*t,0]])
+num,den=s.fraction(s.factor(G.det()))
+print('den',s.factor(den))
+P=s.Poly(num,x)
+print('degree',P.degree())
+for (k,),coeff in reversed(P.terms()):print('coefficient',k,s.factor(coeff))

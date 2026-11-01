@@ -1,0 +1,106 @@
+\section*{A growing Boolean family strictly above the GU boundary pair $(1,0)$}
+
+All logarithms are base two.  For an integer $r\ge2$, split the cube into
+$k=2^r$ disjoint $r$-bit blocks.  Let $D_j$ be the event that block $j$
+equals one fixed point and put
+\[
+ f_r=1-2\mathbf 1_{D_1\vee\cdots\vee D_k}.
+\]
+This is a genuine Boolean function on $r2^r$ physical coordinates.  Set
+$\epsilon=2^{-r}$ and $P=(1-\epsilon)^{1/\epsilon}$.
+
+\paragraph{Frozen claim.}
+The candidate $G(f)\le I(f)$ is false.  More precisely,
+\[
+ G(f_r)-I(f_r)=4e^{-1}r^2 2^{-r}+O(r2^{-r}),             \tag{1}
+\]
+so $G(f_r)>I(f_r)$ for every sufficiently large $r$, even though
+$G(f_r)/I(f_r)\to1$.
+
+\paragraph{Exact formulas retained.}
+For the OR-of-defects family the previously derived complete formulas give
+\[
+ I(f_r)={2Pkr\epsilon\over1-\epsilon},                  \tag{2}
+\]
+and, writing $c(x)=x\log_2(1/x)$,
+\[
+ U(f_r)=c((2P-1)^2)+4Pk\epsilon d_r
+ +4PkL\bigl((1-\epsilon)-P\bigr),                       \tag{3}
+\]
+where
+\[
+ d_r=r-{r\over2(1-\epsilon)},\qquad
+ L=-\log_2(1-\epsilon).
+\]
+Restricting one bit gives unequal children: in one child the selected block
+has size $r-1$ (defect probability $2\epsilon$), while in the other it is
+deleted.  Thus the exact physical definition is
+\[
+ G(f_r)=kr\left(U_{k,r}-{U_{(r-1,r,\ldots,r)}+U_{k-1,r}\over2}\right). \tag{4}
+\]
+
+\paragraph{The signed leading correction.}
+Separate the middle term of (3), $M=4Pk\epsilon d_r$.  The two child
+products are
+\[
+ P_-={P\over1-\epsilon},\qquad
+ P_+={P(1-2\epsilon)\over1-\epsilon},\qquad
+ {P_-+P_+\over2}=P.                                     \tag{5}
+\]
+Put
+\[
+ A={1-2\epsilon\over1-\epsilon},\qquad
+ B={1-4\epsilon\over1-2\epsilon}.
+\]
+Then $d_r=rA/2$ and the shortened-block value is
+$d_{r-1}^{(2\epsilon)}=(r-1)B/2$.  Substitution in the two heterogeneous
+children, with no asymptotic replacement, gives the exact cancellation
+\[
+ M-{M_++M_-\over2}
+ ={2P\epsilon\over1-\epsilon}\bigl(1+2\epsilon(r-2)\bigr). \tag{6}
+\]
+Multiplying by the $kr$ symmetric coordinates and comparing with (2),
+\[
+ G_M=I(f_r)\bigl(1+2\epsilon(r-2)\bigr),                \tag{7}
+\]
+and hence
+\[
+ G_M-I(f_r)={4Pkr\epsilon^2(r-2)\over1-\epsilon}.       \tag{8}
+\]
+
+It remains to retain, rather than discard, the constant-frequency and
+$L$-normalization terms of (3).  Here
+\[
+ P=e^{-1}(1-\epsilon/2+O(\epsilon^2)),\quad
+ P_\pm=P\pm P\epsilon+O(\epsilon^2).
+\]
+Because $e^{-1}\ne1/2$, the map $P\mapsto c((2P-1)^2)$ is $C^3$ on a
+fixed neighbourhood containing all three products for small $\epsilon$.
+Taylor's theorem and the exact midpoint identity in (5) make its one-bit
+decrement $O(\epsilon^2)$.  Directly expanding
+$L=\epsilon/\ln2+O(\epsilon^2)$ in the last term of (3), including the
+shortened block, gives the same $O(\epsilon^2)$ decrement; its linear term
+cancels by (5).  The constants in both remainders are absolute once
+$\epsilon\le1/4$.  After multiplication by $kr=r/\epsilon$, the retained
+normalization contribution is therefore $O(r\epsilon)$.  Since
+$P=e^{-1}+O(\epsilon)$, (8) proves (1).
+
+The earlier exact spectral calculation also remains valid and yields
+\[
+ I=2e^{-1}r+O(r2^{-r}),\quad
+ H=8e^{-1}r+O(1),\quad U=2e^{-1}r+O(1).                 \tag{9}
+\]
+Consequently
+\[
+ {G\over I}=1+2r2^{-r}+O(2^{-r}),\qquad
+ {U\over I}\to1,\qquad {H\over I}\to4.               \tag{10}
+\]
+
+\paragraph{GU consequence and exact scope.}
+Equation (1) rigorously refutes the frozen universal pair $(a,b)=(1,0)$.
+It does not refute GU: any fixed $b>0$ on the boundary $a+b=1$ receives a
+positive contribution $b(U-I)$ which is much larger than the exponentially
+small excess in (1).  Nor does this family have unbounded $G/I$, $U/I$, or
+$H/I$.  The next uniformity question is therefore a boundary pair with
+$b>0$, not another attempt at $G\le I$.
+

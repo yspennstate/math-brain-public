@@ -1,0 +1,57 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target": "RS-2026-CL-A",
+  "category": "HARD OUTSIDE",
+  "metric": "E_framework",
+  "before": 1,
+  "after": 1,
+  "frozen_metric_movement": false,
+  "status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / PRESSURE_BARYCENTER_AND_HYPERMATCHING_ORBIT_PROGRESS",
+  "qualifying_audits": "0/2",
+  "novelty": "UNVERIFIED",
+  "source_status": "OPEN in bounded 2026-09-18 live check",
+  "remaining_obligation_stagnation_count": 0,
+  "hard_recovery_cycles_consumed": 1,
+  "model_actual": "GPT-5.6 Sol",
+  "reasoning_actual": "UNVERIFIED",
+  "methods": [
+    "B5 ADD A PARAMETER AND DIFFERENTIATE IN IT (deliberate nonconsecutive reuse)",
+    "B14 FIND THE GROUP ACTING (deliberate nonconsecutive reuse)",
+    "B21 ASK WHO ELSE HAS THIS SHAPE (deliberate nonconsecutive reuse)"
+  ],
+  "movement": [
+    "Proved a factorization-free pressure-barycenter theorem: if the noise-tilted spectral mean mu(q)=qF'(q)/F(q) is at most theta(D+1) with theta<1, then 1+chi2(T_sqrt(q)P||Q) <= (1+q Adv^{<=D}(P,Q)^2)/(1-theta).",
+    "Derived exact pressure identities -Psi'(t)=mu(e^{-t}) and Psi''(t)=Var(J), with the integrated curvature budget as an equivalent barycenter condition.",
+    "Showed Mao-type zero-LDA fixed-noise strong distinguishability forces liminf mu_n(q)/(D_n+1)>=1, structurally crossing the pressure cutoff.",
+    "Derived exact orbit-overlap energy b_j=lambda^j E binom(|A intersect A'|,j) for forced-support group-orbit models.",
+    "Instantiated the framework on planted k-partite perfect hypermatchings: F_n(z)=sum_{j=0}^n (lambda_n z)^j/[j!(n)_j^{k-2}], and if lambda_n/n^{k-2}->c then F_n(q)->exp(qc)."
+  ],
+  "prior_art_cautions": [
+    "Spectral-sample/noise-pressure derivative identities are classical in Fourier/noise-stability and statistical-mechanics language.",
+    "Positive factorization/atoms are Klich/Briggs prior art.",
+    "Compound-Poisson, mod-Poisson, quasi-power and decomposable-structure mechanisms are classical.",
+    "Planted matching/hypermatching models already have an inference literature; the hypermatching calculation is a breadth test, not a novelty claim."
+  ],
+  "history_gap": "No canonical probability_1000_intake_* row was recovered for this Randomstrasse item; the target entered through the later queue/claim path. This is not a reset.",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-18/2026-09-18T00-39-36Z__report.md",
+    "creation_commit": "f5347ce5b98c42add1e958ce0b4e44ac59ade81f",
+    "blob": "38adc4120f5347c6fe871540859f9ceee2fdd471"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-18/2026-09-18T01-41-39Z__report.md",
+    "creation_commit": "ce22f38e60097555a9db9921cfe53c6a69f4192c",
+    "blob": "9d77129d0820459da143f12910c8b66aaee09e1a"
+  },
+  "next_methods": [
+    "B12 FIND WHAT IS CONSERVED (deliberate nonconsecutive reuse): generalize the hypermatching calculation to group-orbit stabilizer profiles and isolate a stabilizer quantity forcing mu(q)=o(D).",
+    "B3 PROVE SOMETHING STRONGER (deliberate nonconsecutive reuse): derive pressure-barycenter control over an interval of noise levels from a model-checkable log-concavity, negative-dependence, influence, or related condition.",
+    "B22 READ THE FAILURES, NOT THE SUCCESSES (deliberate nonconsecutive reuse): analyze Mao/code-like examples directly in pressure language and compare spectral-sample/influence literature."
+  ],
+  "remaining_obligations": [
+    "Derive the pressure-barycenter condition from a recognizable model property rather than assuming a spectral full-tail statistic.",
+    "Broaden the orbit calculation into a group/stabilizer theorem beyond one hypermatching family.",
+    "Complete deeper prior-art reconciliation for the likelihood-ratio pressure criterion.",
+    "Obtain actual P26 plus one distinct OTHER full theorem/source audit before closure."
+  ]
+}

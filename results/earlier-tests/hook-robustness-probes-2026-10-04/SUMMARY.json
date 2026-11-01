@@ -1,0 +1,536 @@
+{
+ "metamorphic_bank": {
+  "questions": 1427,
+  "base_questions": 218,
+  "base": {
+   "answerable_n": 178,
+   "hit": 158,
+   "rank1": 139,
+   "silent": 9,
+   "absent_n": 40,
+   "absent_fire": 27
+  },
+  "variants": {
+   "real misspellings from a reviewed list": {
+    "answerable_pairs": 100,
+    "hit": 91,
+    "rank1": 79,
+    "silent": 3,
+    "breaks": 0,
+    "gains": 0,
+    "same_top": 98,
+    "base_hit_on_pairs": 91,
+    "absent_pairs": 15,
+    "absent_fire": 11,
+    "base_absent_fire_on_pairs": 11
+   },
+   "lower case, no punctuation": {
+    "answerable_pairs": 178,
+    "hit": 156,
+    "rank1": 134,
+    "silent": 11,
+    "breaks": 2,
+    "gains": 0,
+    "same_top": 166,
+    "base_hit_on_pairs": 158,
+    "absent_pairs": 40,
+    "absent_fire": 26,
+    "base_absent_fire_on_pairs": 27
+   },
+   "a polite wrapper (\"can you tell me ...\")": {
+    "answerable_pairs": 178,
+    "hit": 155,
+    "rank1": 136,
+    "silent": 14,
+    "breaks": 3,
+    "gains": 0,
+    "same_top": 163,
+    "base_hit_on_pairs": 158,
+    "absent_pairs": 40,
+    "absent_fire": 20,
+    "base_absent_fire_on_pairs": 27
+   },
+   "clauses swapped": {
+    "answerable_pairs": 4,
+    "hit": 3,
+    "rank1": 3,
+    "silent": 0,
+    "breaks": 0,
+    "gains": 0,
+    "same_top": 4,
+    "base_hit_on_pairs": 3,
+    "absent_pairs": 0,
+    "absent_fire": 0,
+    "base_absent_fire_on_pairs": 0
+   },
+   "synthetic character typos on content words": {
+    "answerable_pairs": 178,
+    "hit": 96,
+    "rank1": 80,
+    "silent": 68,
+    "breaks": 66,
+    "gains": 4,
+    "same_top": 78,
+    "base_hit_on_pairs": 158,
+    "absent_pairs": 40,
+    "absent_fire": 20,
+    "base_absent_fire_on_pairs": 27
+   },
+   "instruction text before the question": {
+    "answerable_pairs": 178,
+    "hit": 129,
+    "rank1": 112,
+    "silent": 41,
+    "breaks": 30,
+    "gains": 1,
+    "same_top": 135,
+    "base_hit_on_pairs": 158,
+    "absent_pairs": 40,
+    "absent_fire": 11,
+    "base_absent_fire_on_pairs": 27
+   },
+   "instruction text after the question": {
+    "answerable_pairs": 178,
+    "hit": 137,
+    "rank1": 121,
+    "silent": 35,
+    "breaks": 23,
+    "gains": 2,
+    "same_top": 141,
+    "base_hit_on_pairs": 158,
+    "absent_pairs": 40,
+    "absent_fire": 14,
+    "base_absent_fire_on_pairs": 27
+   }
+  }
+ },
+ "refuted_targets": {
+  "calls": 68,
+  "targets": 34,
+  "frames": 2,
+  "served": 42,
+  "target_served": 34,
+  "target_first": 6,
+  "refuter_served_with_target": 34,
+  "refutation_word_in_block": 22,
+  "edges_read_by_hand": {
+   "total": 47,
+   "refute_the_claim_or_answer_no": 23,
+   "leave_the_target_standing": 19,
+   "point_the_wrong_way": 3,
+   "note": "approximate split, read from each edge's rationale"
+  }
+ },
+ "semantic_entry": {
+  "refused_reworded_questions": 32,
+  "absent_target_questions_refused": 4,
+  "real_refused_prompts": 13351,
+  "cells": [
+   {
+    "z1_min": 4.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 13,
+    "with_right_winner": 5,
+    "absent_target_fires": 2,
+    "real_refused_prompts_admitted": 307
+   },
+   {
+    "z1_min": 4.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 16,
+    "with_right_winner": 5,
+    "absent_target_fires": 2,
+    "real_refused_prompts_admitted": 680
+   },
+   {
+    "z1_min": 4.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 17,
+    "with_right_winner": 5,
+    "absent_target_fires": 2,
+    "real_refused_prompts_admitted": 1307
+   },
+   {
+    "z1_min": 4.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 7,
+    "with_right_winner": 3,
+    "absent_target_fires": 1,
+    "real_refused_prompts_admitted": 114
+   },
+   {
+    "z1_min": 4.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 8,
+    "with_right_winner": 3,
+    "absent_target_fires": 1,
+    "real_refused_prompts_admitted": 239
+   },
+   {
+    "z1_min": 4.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 8,
+    "with_right_winner": 3,
+    "absent_target_fires": 1,
+    "real_refused_prompts_admitted": 419
+   },
+   {
+    "z1_min": 4.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 5,
+    "with_right_winner": 2,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 36
+   },
+   {
+    "z1_min": 4.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 5,
+    "with_right_winner": 2,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 71
+   },
+   {
+    "z1_min": 4.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 5,
+    "with_right_winner": 2,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 100
+   },
+   {
+    "z1_min": 5.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 9,
+    "with_right_winner": 3,
+    "absent_target_fires": 1,
+    "real_refused_prompts_admitted": 64
+   },
+   {
+    "z1_min": 5.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 11,
+    "with_right_winner": 3,
+    "absent_target_fires": 1,
+    "real_refused_prompts_admitted": 141
+   },
+   {
+    "z1_min": 5.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 11,
+    "with_right_winner": 3,
+    "absent_target_fires": 1,
+    "real_refused_prompts_admitted": 235
+   },
+   {
+    "z1_min": 5.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 5,
+    "with_right_winner": 2,
+    "absent_target_fires": 1,
+    "real_refused_prompts_admitted": 50
+   },
+   {
+    "z1_min": 5.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 6,
+    "with_right_winner": 2,
+    "absent_target_fires": 1,
+    "real_refused_prompts_admitted": 92
+   },
+   {
+    "z1_min": 5.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 6,
+    "with_right_winner": 2,
+    "absent_target_fires": 1,
+    "real_refused_prompts_admitted": 144
+   },
+   {
+    "z1_min": 5.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 4,
+    "with_right_winner": 2,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 27
+   },
+   {
+    "z1_min": 5.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 4,
+    "with_right_winner": 2,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 50
+   },
+   {
+    "z1_min": 5.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 4,
+    "with_right_winner": 2,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 65
+   },
+   {
+    "z1_min": 6.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 2,
+    "with_right_winner": 1,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 14
+   },
+   {
+    "z1_min": 6.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 2,
+    "with_right_winner": 1,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 26
+   },
+   {
+    "z1_min": 6.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 2,
+    "with_right_winner": 1,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 33
+   },
+   {
+    "z1_min": 6.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 2,
+    "with_right_winner": 1,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 13
+   },
+   {
+    "z1_min": 6.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 2,
+    "with_right_winner": 1,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 22
+   },
+   {
+    "z1_min": 6.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 2,
+    "with_right_winner": 1,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 28
+   },
+   {
+    "z1_min": 6.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 2,
+    "with_right_winner": 1,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 9
+   },
+   {
+    "z1_min": 6.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 2,
+    "with_right_winner": 1,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 14
+   },
+   {
+    "z1_min": 6.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 2,
+    "with_right_winner": 1,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 18
+   },
+   {
+    "z1_min": 7.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 3
+   },
+   {
+    "z1_min": 7.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 6
+   },
+   {
+    "z1_min": 7.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 7
+   },
+   {
+    "z1_min": 7.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 3
+   },
+   {
+    "z1_min": 7.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 6
+   },
+   {
+    "z1_min": 7.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 7
+   },
+   {
+    "z1_min": 7.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 3
+   },
+   {
+    "z1_min": 7.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 6
+   },
+   {
+    "z1_min": 7.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 7
+   },
+   {
+    "z1_min": 8.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 1
+   },
+   {
+    "z1_min": 8.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 1
+   },
+   {
+    "z1_min": 8.0,
+    "margin_min": 0.0,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 1
+   },
+   {
+    "z1_min": 8.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 1
+   },
+   {
+    "z1_min": 8.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 1
+   },
+   {
+    "z1_min": 8.0,
+    "margin_min": 0.5,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 1
+   },
+   {
+    "z1_min": 8.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 10,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 1
+   },
+   {
+    "z1_min": 8.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 50,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 1
+   },
+   {
+    "z1_min": 8.0,
+    "margin_min": 1.0,
+    "bm25_rank_max": 300,
+    "refused_questions_admitted": 0,
+    "with_right_winner": 0,
+    "absent_target_fires": 0,
+    "real_refused_prompts_admitted": 1
+   }
+  ]
+ }
+}

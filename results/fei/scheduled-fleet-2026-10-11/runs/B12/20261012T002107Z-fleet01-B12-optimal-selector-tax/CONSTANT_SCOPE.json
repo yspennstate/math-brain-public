@@ -1,0 +1,86 @@
+{
+  "schema": "fei-composition-constant-scope/2",
+  "packet_id": "A060",
+  "claim_id": "B12-A060-OPTIMAL-CONSTANT-BRANCH-TAX",
+  "version": 2,
+  "class": {
+    "child": "arbitrary genuine Boolean D on a uniform finite cube",
+    "gate": "K(+1,z)=1; K(-1,z)=D(z)",
+    "selector": "one fresh unbiased physical coordinate",
+    "overlapping_inputs": false,
+    "branch_inner_product": "E[D]=1-2p",
+    "neighboring_orthogonality_required": false
+  },
+  "exact_identities": {
+    "bias": "p=Pr[D=-1]=(1-E[D])/2",
+    "selector_influence": "I_x(K)=p",
+    "total_influence": "I(K)=I(D)/2+p",
+    "entropy": "H(K)=H(D)/2+p*c(p)",
+    "c_p": "[2(1-p)^2 log2(1/(1-p))+2p^2 log2(1/p)+4p(1-p)-(1-2p)^2 log2(1/|1-2p|)]/p"
+  },
+  "sharp_constant": {
+    "definition": "C_*=max_{0<=p<=1} c(p)",
+    "unique_maximizer": true,
+    "maximizer_certified_interval": [
+      "0.22944127",
+      "0.22944128"
+    ],
+    "constant_certified_interval": [
+      "4.872321",
+      "4.872322"
+    ],
+    "numerical_value": "4.8723210717843492888...",
+    "numerical_value_status": "NUMERICAL; the displayed six-decimal enclosure is rigorously certified",
+    "sharp_over_boolean_cubes": "yes, as a supremum, because attainable dyadic biases are dense"
+  },
+  "near_extremal_witness": {
+    "data_dimension": 10,
+    "selector_dimension": 1,
+    "definition": "D=-1 on lexicographic indices 0,...,234 of the 10-cube and +1 elsewhere",
+    "p": "235/1024",
+    "mean_D": "277/512",
+    "I_D": "277/256",
+    "I_selector_K": "235/1024",
+    "I_K": "789/1024",
+    "mean_K": "789/1024",
+    "selector_tax_ratio": "4.8723210430423538411...",
+    "fei_ratio_K": "3.2266979050419697025..."
+  },
+  "closure": {
+    "premise": "H(D)<=C I(D)",
+    "conclusion": "H(K)<=max(C,C_*) I(K)",
+    "scope": "constant-branch fresh-selector closure only"
+  },
+  "refuted_or_superseded": [
+    {
+      "claim": "coefficient 4 suffices for the standalone selector tax",
+      "status": "REFUTED"
+    },
+    {
+      "claim": "the two-bit point-defect value 12-(9/4)log2(9) is the sharp constant",
+      "status": "SUPERSEDED AS A LOWER BOUND",
+      "reason": "the 235/1024 witness has a strictly larger tax ratio"
+    }
+  ],
+  "tensor_scope": {
+    "statement": "For each fixed Boolean K, disjoint tensor powers preserve H(K)/I(K).",
+    "near_extremal_witness_fei_ratio": "3.2266979050419697025...",
+    "warning": "C_* is a local additive selector-tax coefficient, not the H/I ratio of the witness and not a universal FEI lower bound."
+  },
+  "controls": {
+    "rare_defects": "included exactly through the arbitrary child D; the retained H(D)/2 term is not erased",
+    "addressing": "included exactly as a possible child, but its child entropy still requires its child influence budget",
+    "near_tensors": "disjoint tensor behavior stated separately",
+    "shared_variables": "no claim",
+    "reused_selectors": "no claim",
+    "weighted_non_boolean_examples": "not used"
+  },
+  "verification": {
+    "script": "check_optimal_selector_tax.py",
+    "output": "check_optimal_selector_tax.out",
+    "arithmetic": "integer Walsh transforms plus rational logarithm intervals",
+    "finite_audit": "65,808 genuine Boolean functions through four data bits, excluding the zero-tax D=1 endpoint",
+    "randomness": "NONE"
+  },
+  "full_fei_status": "OPEN"
+}

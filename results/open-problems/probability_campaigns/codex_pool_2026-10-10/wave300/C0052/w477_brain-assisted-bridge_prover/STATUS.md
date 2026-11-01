@@ -1,0 +1,6 @@
+STATE: WORKING
+NEXT: Freeze L001-L007 and the source correction for w479; measure a bounded exact-ID retrieval repair and submit DRAFT entries.
+
+2026-10-10: Read PRIMARY_DIRECTIVE.md and BUNDLE_SPEC.md. Saved L001, a conditional fourth-cumulant obstruction to Gaussian subsequential limits. Source and prior-attempt reads are pending. No claim to solve C0052; no independent review yet.
+2026-10-10: Saved ATTEMPT.md and GAP.md with the variance-weighted identity, independent SINGLE-current overlap criterion, rare-burst counterexample, switching-based moment bound, and H^{-2}_loc tightness reduction. Recall timed out at 60 seconds; read the cited perceptron proof-gap scar instead. team_comm direct delivery failed because w477 has no team; preparing the authorized mesh fallback. No independent audit or live-store mutation.
+2026-10-10: Verified PIMS primary p.94 and corrected the source target to subcritical g(beta), with its negative sign convention. Saved L007, the exact susceptibility-endpoint and random-root overlap reduction -g>=2/Q. Statement-first mesh message was inserted for active w478. A case-sensitive C0052 export lookup returned one C0051 mention; exact logical-ID canonical lookup is next.

@@ -1,0 +1,383 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B02",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A006",
+      "stream": "B02",
+      "topic": "Posterior forest optimization",
+      "target_statement": "Optimize distributions on distinct actual partition-forest runs, retaining the subtraction of posterior witness entropy. Derive computable lower or upper bounds for the resulting variational cost without identifying duplicate descriptions as distinct runs.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A006-D1",
+          "description": "POSTERIOR_FOREST_VARIATIONAL.tex: generator, distinct-run posterior, and cost bound",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A006-D2",
+          "description": "FOREST_WITNESS_EXAMPLES.json: explicit successful runs and their probabilities",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Count only distinct actual finite runs of one fixed random generator; identical descriptions of the same run cannot inflate posterior entropy.",
+        "Prove the variational identity or bound with the −H(posterior) term, including zero-probability and unsuccessful-run treatment.",
+        "Obtain a quantified estimate for an explicit family beyond the already calibrated one-root addressing case, or give a certified obstruction to that estimate.",
+        "Reuse the already derived normalized prior over complete reference laws. A new result must pay the expectation of the whole selected cost plus log₂(1/w_j); deriving the mixture inequality alone is baseline work."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A008",
+          "interface": "decodable whole-set code"
+        },
+        {
+          "agent_id": "A007",
+          "interface": "conditioned-root normalization"
+        },
+        {
+          "agent_id": "A016",
+          "interface": "exact addressing reference"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A003",
+          "interface_use": "exact forest residual interface"
+        },
+        {
+          "agent_id": "A007",
+          "interface_use": "posterior residual definition"
+        },
+        {
+          "agent_id": "A009",
+          "interface_use": "expected residual functional"
+        },
+        {
+          "agent_id": "A010",
+          "interface_use": "frozen residual formula"
+        },
+        {
+          "agent_id": "A086",
+          "interface_use": "complete posterior forest proof"
+        }
+      ],
+      "independent_reviewers": [
+        "A086",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A new computable bound on the true posterior residual, or an actual counterexample to the proposed bound, justifies a renewed pilot.",
+      "source_ids": [
+        "reductions_forests",
+        "threshold_source",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F10",
+        "F18"
+      ]
+    },
+    {
+      "agent_id": "A007",
+      "stream": "B02",
+      "topic": "Root normalization",
+      "target_statement": "Analyze conditioning on a nonempty initial root set and the term v log Z. Prove cancellation with rare-root costs on new overlapping families; never drop a negative normalization term before testing its mathematical role.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A007-D1",
+          "description": "ROOT_NORMALIZATION.tex: exact v(Λ+log₂Z) and root-rarity ledger",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A007-D2",
+          "description": "ROOT_FAMILY.md: quantified overlap/rarity parameter family",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Retain Z=1−2^(−Λ) after conditioning on nonempty roots and include the normalization term before any inequality.",
+        "Show cancellation or noncancellation with root surprisal uniformly as root probabilities tend to zero.",
+        "Use one admissible representation/weight system independent of the sampled Fourier set, and say whether a bad example refutes that system or the variational infimum.",
+        "When selecting a prior scale, keep its Λ_j and witness cost together and pay log₂(1/w_j) under one fixed prior. The recovered dyadic-prior normalization is a baseline, not a free adaptive choice."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A006",
+          "interface": "posterior residual definition"
+        },
+        {
+          "agent_id": "A021",
+          "interface": "rare activation expansions"
+        },
+        {
+          "agent_id": "A009",
+          "interface": "feasible global weights"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A006",
+          "interface_use": "conditioned-root normalization"
+        },
+        {
+          "agent_id": "A014",
+          "interface_use": "root normalization"
+        }
+      ],
+      "independent_reviewers": [
+        "A086",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "An explicit cancellation theorem or sharp noncancellation family with its full influence comparison is ready for A006/A014.",
+      "source_ids": [
+        "reductions_forests",
+        "threshold_source",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F10",
+        "F18"
+      ]
+    },
+    {
+      "agent_id": "A008",
+      "stream": "B02",
+      "topic": "Gate-label compression",
+      "target_statement": "Construct codes that communicate each shared gate label once per complete spectral set. Prove decodability and account for gate names, attachments, subset choices, root choices, and the final output ambiguity.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A008-D1",
+          "description": "WHOLE_SET_CODEC.tex: encoder, decoder, shared codebook, and Kraft/subprobability proof",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A008-D2",
+          "description": "CODE_COST_LEDGER.json: gate labels, subsets, roots, attachments, ambiguity",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Describe every shared gate name at most once when the proposed code claims to reuse it, and provide a decoder for the complete Fourier set.",
+        "Account for the information required to choose or transmit the codebook; knowledge of the unknown spectral law is not free side information.",
+        "Prove finite successful decoding and compare total code length to the exact addressing H=2a benchmark before any new family claim."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A016",
+          "interface": "address-code calibration"
+        },
+        {
+          "agent_id": "A011",
+          "interface": "proposed structured gate covers"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A006",
+          "interface_use": "decodable whole-set code"
+        },
+        {
+          "agent_id": "A011",
+          "interface_use": "whole-set encoding interface"
+        },
+        {
+          "agent_id": "A069",
+          "interface_use": "explicit decodable code requirements"
+        },
+        {
+          "agent_id": "A086",
+          "interface_use": "code and decoder"
+        }
+      ],
+      "independent_reviewers": [
+        "A086",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A valid code with a quantified improvement for a named family, rather than a relabelled coordinatewise code, earns continuation.",
+      "source_ids": [
+        "reductions_forests",
+        "threshold_source",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F10",
+        "F18"
+      ]
+    },
+    {
+      "agent_id": "A009",
+      "stream": "B02",
+      "topic": "Fractional incidence optimization",
+      "target_statement": "Choose global fractional gate weights subject to all coordinate incidence constraints. Derive an optimization dual or a verifiable certificate that bounds the expected residual for a meaningful family beyond bounded-read formulas.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A009-D1",
+          "description": "INCIDENCE_OPTIMIZATION.tex: primal constraints, objective, and proved dual bound",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A009-D2",
+          "description": "WEIGHT_CERTIFICATE.json: exact feasible weights or verified dual witness",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Verify Σ_{l:j∈R_l} λ_l≤1 for every coordinate with one global λ, including all zero/duplicate support conventions.",
+        "State whether the optimization objective is convex and prove any duality assertion used; numerical solver output alone is not a bound.",
+        "Exhibit a family with growing maximum read and a bounded certified cost-to-influence ratio, or isolate the exact term preventing that conclusion.",
+        "When using the recovered effective-piece lemma, verify disjoint physical supports and signed fiber-antichain hypotheses, with K_eff=(Σ_l√a_l)². Its derivative-weighted/global expected cost remains to be bounded."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A006",
+          "interface": "expected residual functional"
+        },
+        {
+          "agent_id": "A011",
+          "interface": "representations and support incidences"
+        },
+        {
+          "agent_id": "A014",
+          "interface": "spectral congestion candidate"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A007",
+          "interface_use": "feasible global weights"
+        },
+        {
+          "agent_id": "A010",
+          "interface_use": "admissible representation and weight domain"
+        },
+        {
+          "agent_id": "A014",
+          "interface_use": "global fractional incidence certificate"
+        },
+        {
+          "agent_id": "A086",
+          "interface_use": "incidence certificate"
+        }
+      ],
+      "independent_reviewers": [
+        "A086",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A feasible primal/dual certificate controls a term of J on a class outside bounded-read hypotheses.",
+      "source_ids": [
+        "reductions_forests",
+        "threshold_source",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F10",
+        "F18"
+      ]
+    },
+    {
+      "agent_id": "A010",
+      "stream": "B02",
+      "topic": "Universal residual falsifier",
+      "target_statement": "Search for actual Boolean functions and all admissible representations in a bounded class for which the proposed residual-to-influence bound grows. Distinguish failure of one representation from failure of the variational infimum.",
+      "work_type": "targeted_countersearch",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A010-D1",
+          "description": "RESIDUAL_SEARCH_SPEC.json: complete bounded representation class and parameter domain",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A010-D2",
+          "description": "RESIDUAL_FALSIFIER.md: Boolean witness and exact scope of failure",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Fix the candidate constant and all optimization freedoms before searching; certify the Boolean function independently of its representation.",
+        "If claiming failure of an infimum, enumerate or bound every admissible representation in the declared finite class, not merely the first DNF.",
+        "Use certified entropy comparisons for a surviving violation and distinguish a finite-domain certificate from an asymptotic family."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A006",
+          "interface": "frozen residual formula"
+        },
+        {
+          "agent_id": "A009",
+          "interface": "admissible representation and weight domain"
+        },
+        {
+          "agent_id": "A071",
+          "interface": "bounded search design"
+        },
+        {
+          "agent_id": "A072",
+          "interface": "exact Boolean spectra"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A071",
+          "interface_use": "residual representation domain"
+        }
+      ],
+      "independent_reviewers": [
+        "A086",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "A certified representation-level or bounded-infimum failure with a precise distinction between them is the pilot outcome.",
+      "source_ids": [
+        "reductions_forests",
+        "threshold_source",
+        "seed_lemmas"
+      ],
+      "advisory_F_tags": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F10",
+        "F18"
+      ]
+    }
+  ]
+}

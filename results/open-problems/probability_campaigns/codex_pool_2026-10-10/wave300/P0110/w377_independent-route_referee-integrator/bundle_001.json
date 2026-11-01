@@ -1,0 +1,61 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w377",
+  "bundle_slug": "p0110-directed-detour-obstructions-w377-001",
+  "entries": [
+    {
+      "key": "fpp-axial-finite-detour",
+      "namespace": "probability.first-passage",
+      "logical_name": "iid-fpp-axial-finite-detour-obstructs-exact-directed-reduction",
+      "kind": "lemma",
+      "title": "A finite iid FPP detour defeats an exact directed reduction",
+      "statement": "Let d>=2 and give the nearest-neighbor undirected edges of Z^d iid nonnegative weights. Suppose two disjoint support intervals have probabilities p_low,p_high>0, every low weight is at most a, and every high weight is at least b>a. Choose k>=1 with k*b>(k+2)*a. Then with probability at least p_high^k*p_low^(k+2), the unrestricted passage time from 0 to k*e1 is strictly smaller than the coordinate-monotone passage time. This is a finite obstruction only; no fluctuation or wandering exponent follows.",
+      "proof_text": "The only coordinate-monotone path from 0 to k*e1 is the k-edge axial path A. A path B rises one step in e2, travels k steps in e1, then descends one step; it has k+2 edges disjoint from A. The event that every A edge is high and every B edge is low has probability p_high^k*p_low^(k+2), since the named edges are distinct iid variables. On it, t(A)>=k*b>(k+2)*a>=t(B)>=T(0,k*e1).",
+      "assumptions": ["d>=2", "iid nonnegative undirected nearest-neighbor edge weights", "two separated positive-mass support intervals", "k*b>(k+2)*a"],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w375:P0110:L1:2026-10-10", "url": "urn:owner-own-work:w375:P0110:L1", "revision": "w375 proof reviewed by w376 and w377 on 2026-10-10", "license": "owner-own-work", "excerpt": "Its k+2 edges are distinct from all edges of A."}
+    },
+    {
+      "key": "fpp-axial-linear-detour",
+      "namespace": "probability.first-passage",
+      "logical_name": "iid-bounded-fpp-axial-linear-gap-from-coordinate-monotone-model",
+      "kind": "lemma",
+      "title": "Bounded iid FPP has a linear raw gap from axial directed passage times",
+      "statement": "Let d>=2 and let the iid undirected nearest-neighbor weights on Z^d have a nondegenerate law supported in [r,R] with 0<r<=R<infinity. Put mu=E t_e. Choose separated positive-mass support intervals with low upper bound a, high lower bound b>a, and k>=1 with k*b>(k+2)*a. Let S be the sum of k axial weights, H the sum of the k+2 edges of its disjoint height-one detour, and delta=E[(S-H)_+]>0. Then E T(0,n*e1)<=n*mu-floor(n/(k+1))*delta and almost surely limsup_n T(0,n*e1)/n<=mu-delta/(k+1). The coordinate-monotone axial sum divided by n tends to mu, so its raw same-environment difference from unrestricted FPP has asymptotic liminf at least delta/(k+1)>0. This does not compare centered fluctuations or exponents.",
+      "proof_text": "The preceding finite-detour event gives delta>0. Partition the axis into blocks of k+1 columns. In each block use the cheaper of the k-edge axis and the disjoint height-one detour, followed by the next axial edge as connector. Distinct blocks have disjoint edge sets, including their detours, because the connector leaves a one-column gap; the block costs Y_j are iid bounded and E Y_j=(k+1)*mu-delta. Concatenation is a valid path. For n=m(k+1)+q with 0<=q<=k, append q axial edges, costing at most kR. Take expectations for the stated finite-n bound and apply the strong law to the block costs for the limsup. Apply the strong law separately to the n axial edge weights for the directed limit mu.",
+      "assumptions": ["d>=2", "nondegenerate iid undirected nearest-neighbor weights supported in [r,R]", "0<r<=R<infinity", "disjoint k+1-column detour blocks"],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w375:P0110:L2:2026-10-10", "url": "urn:owner-own-work:w375:P0110:L2", "revision": "w375 proof independently reviewed by w376 and w377 on 2026-10-10", "license": "owner-own-work", "excerpt": "Every block uses distinct edges: a one-edge connector separates successive detour endpoint columns."}
+    },
+    {
+      "key": "fpp-diagonal-finite-detour",
+      "namespace": "probability.first-passage",
+      "logical_name": "iid-fpp-diagonal-finite-detour-defeats-all-directed-paths",
+      "kind": "lemma",
+      "title": "A finite iid FPP detour defeats every directed diagonal path",
+      "statement": "In undirected nearest-neighbor FPP on Z^d, d>=2, with iid nonnegative edge weights, suppose disjoint positive-mass low and high sets satisfy low weights in [ell,a] and high weights at least b>a. If an integer k>=1 satisfies k(b+ell-2a)>2a, then with probability p_high^(2k^2+k)*p_low^(2k+2)>0 the unrestricted time from (0,0) to (k,k) is strictly below the minimum over all coordinate-monotone paths. This is a finite event and gives no exponent bound.",
+      "proof_text": "Make all k(k+1) horizontal edges of [0,k]^2 and all k^2 vertical edges in its columns x<k high. Make the k vertical edges of its right column x=k low, plus the k horizontal edges along y=-1 and the two vertical edges connecting that row to (0,0) and (k,0) low. These 2k^2+k high and 2k+2 low edge sets are disjoint, giving the claimed iid event probability. Every coordinate-monotone path has k high horizontal edges and k vertical edges of cost at least ell, so its cost is at least k(b+ell). The exterior route along y=-1 and up x=k uses all 2k+2 low edges, costing at most (2k+2)a; the assumed inequality is precisely k(b+ell)>(2k+2)a.",
+      "assumptions": ["d>=2", "iid nonnegative undirected nearest-neighbor weights", "disjoint positive-mass low/high sets", "k(b+ell-2a)>2a"],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w375:P0110:L3:2026-10-10", "url": "urn:owner-own-work:w375:P0110:L3", "revision": "w375 proof independently reviewed by w376 and w377 on 2026-10-10", "license": "owner-own-work", "excerpt": "This is a finite event, not an asymptotic diagonal time-constant separation."}
+    },
+    {
+      "key": "fpp-axial-finite-threshold",
+      "namespace": "probability.first-passage",
+      "logical_name": "bounded-iid-fpp-sharp-finite-axial-detour-threshold",
+      "kind": "lemma",
+      "title": "Sharp finite axial detour threshold for bounded iid FPP",
+      "statement": "Let nearest-neighbor undirected edges of Z^d, d>=2, carry iid weights with essential infimum 0<r and essential supremum R<infinity, r<R. For each integer n>=1, let T_dir be the cost of the unique coordinate-monotone path from 0 to n*e1. Then P(T(0,n*e1)<T_dir)=0 if n(R-r)<=2r, and P(T(0,n*e1)<T_dir)>0 if n(R-r)>2r. At equality a tie may occur; the statement concerns strict improvement only.",
+      "proof_text": "Any nonaxial path from 0 to n*e1 has at least n+2 edges by parity and uniqueness of the length-n axial route. Its cost is at least (n+2)r, while the axial path costs at most nR. This proves the zero-probability side. If M=n(R-r)-2r>0, choose eta=M/(4n+4); then [r,r+eta] and [R-eta,R] have positive mass by essential infimum/supremum and are separated. Their bounds a=r+eta and b=R-eta satisfy n*b-(n+2)*a=M/2>0. The finite axial detour lemma supplies positive probability of a strict improvement.",
+      "assumptions": ["d>=2", "iid undirected nearest-neighbor weights", "essential support bounds 0<r<R<infinity", "integer n>=1"],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w375:P0110:L4:2026-10-10", "url": "urn:owner-own-work:w375:P0110:L4", "revision": "w375 proof independently reviewed by w376 and w377 on 2026-10-10", "license": "owner-own-work", "excerpt": "Thus the zero-probability versus positive-probability boundary is exact."}
+    }
+  ],
+  "relations": [
+    {"from_key": "fpp-axial-linear-detour", "to_key": "fpp-axial-finite-detour", "kind": "depends_on", "rationale": "The linear-gap lemma uses the finite-detour lemma's positive-probability event to prove delta>0."},
+    {"from_key": "fpp-axial-finite-threshold", "to_key": "fpp-axial-finite-detour", "kind": "depends_on", "rationale": "The positive-probability half of the threshold lemma invokes the finite-detour lemma with support intervals chosen near r and R."},
+    {"from_key": "fpp-axial-finite-detour", "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation", "kind": "semantic_association", "rationale": "The finite axial detour closes an exact directed-reduction shortcut to P0110; it does not refute or solve the open problem."},
+    {"from_key": "fpp-diagonal-finite-detour", "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation", "kind": "semantic_association", "rationale": "The finite diagonal detour controls all coordinate-monotone competitors at one fixed scale and remains only an obstruction to a shortcut for P0110."}
+  ]
+}

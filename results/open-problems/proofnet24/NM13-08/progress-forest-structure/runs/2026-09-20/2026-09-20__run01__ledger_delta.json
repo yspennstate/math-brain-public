@@ -1,0 +1,60 @@
+{
+  "worker": "NM13-08",
+  "track": "T07",
+  "run": "2026-09-20__run01",
+  "status": "PARTIAL",
+  "runtime": {
+    "model": "GPT-5.6 Sol",
+    "reasoning": "UNVERIFIED",
+    "requested_model_effort": "GPT-6 maximum",
+    "authenticated_gpt6_maximum": false
+  },
+  "parent_source": {
+    "problem": "pairwise negative edge correlation for the uniform measure on all acyclic spanning edge subsets of an arbitrary finite graph",
+    "before": "OPEN; repository complete unit-weight coverage through 9 vertices; weighted series-parallel class known",
+    "after": "OPEN; same universal vertex cutoff, plus infinite octahedral-port substitution closure C_9^O",
+    "universal_vertex_counterexample_lower_bound_before": 10,
+    "universal_vertex_counterexample_lower_bound_after": 10
+  },
+  "demonstrated_scope_metric": {
+    "name": "maximum proved octahedral-port substitution depth from explicit dense core H_*",
+    "before": "0",
+    "after": "unbounded (all k >= 0)"
+  },
+  "mechanism_gain": {
+    "claim_ids": [
+      "T07-PORT-SUBSTITUTION-01",
+      "T07-UNIT-TRANSPARENT-PORT-02",
+      "T07-OCTAHEDRAL-EXPANSION-03"
+    ],
+    "summary": "exact two-terminal partition identities; core-core and gadget-gadget scaling; cross-edge Rayleigh difference factorization into two port signs; activity-one port removes the non-unit virtual-weight obstruction for a unit-only core",
+    "application": "arbitrary repeated replacement of any edge in any <=9-vertex certified core by O_6 minus its port edge"
+  },
+  "explicit_family": {
+    "core": "3x3 rook graph plus edge 04",
+    "graph6": "H{fQXgj",
+    "core_vertices": 9,
+    "core_edges": 19,
+    "core_forest_count": 81112,
+    "core_pair_count": 171,
+    "core_negative_pairs": 0,
+    "core_min_rayleigh_difference": 3607636,
+    "gadget": "octahedron O_6 minus port edge 01",
+    "gadget_D": 361,
+    "gadget_C": 361,
+    "gadget_activity": "1",
+    "family_vertices": "9+4k",
+    "family_edges": "19+10k",
+    "parameter_range": "all integers k>=0 and every adaptive replacement sequence",
+    "not_series_parallel": true,
+    "not_complete_graph_fixed_component_scope": true
+  },
+  "essential_artifacts": [
+    "2026-09-20__run01__exact_check.cpp",
+    "2026-09-20__run01__exact_check.out"
+  ],
+  "exact_check_terminal": "ALL_EXACT_CHECKS_PASS",
+  "novelty_priority": "UNVERIFIED",
+  "independent_review": "NOT YET PERFORMED",
+  "next_step": "broaden activity-one two-terminal gadgets or prove an interval/multi-port sign theorem without requiring weighted I-Rayleigh of the core"
+}

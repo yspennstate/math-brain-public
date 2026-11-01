@@ -1,0 +1,12 @@
+{
+  "whole_theorem_Lean_certified": false,
+  "supporting_algebra_status": "RUNTIME_UNVERIFIED",
+  "observed_seconds": 124.1,
+  "checker_reported_source_sha256": "7453a80a749a75e04136aae6dcbda5722466b7f66b058ea8e6a7a95147e3a050",
+  "statement": "example (A q t J d fee : ℝ) : A*t*J-fee-q*A*t*(J-d)=t*(A*(1-q)*J+q*A*d)-fee := by ring",
+  "translation_in_words": "Expanding the pending resource after one query gives t times initial net continuation rate times current influence plus q A t times queried influence, minus the actual fee.",
+  "scope": "This equality is only the ledger algebra; the actual theorem additionally needs Boolean influence conservation, independent coins, and the explicit full-terminal formulas.",
+  "rung": "written analytic proof and exact finite controls, NOT Lean-checked",
+  "raw_output": "out/lean.log",
+  "raw_encoding": "UTF-16LE with BOM from PowerShell redirection"
+}

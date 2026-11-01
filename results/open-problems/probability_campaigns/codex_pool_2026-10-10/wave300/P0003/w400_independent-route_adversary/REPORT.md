@@ -1,0 +1,15 @@
+# w400 P0003
+
+The review packet gives two explicit obstructions: a weak shape/length limit need not determine the fixed-length conditional law, and small raw Loewner-probe drift need not identify an SLE variance when its positive exponent tends to zero. w399's three-probe calculation passes the hand audit under its stated fixed-positive-exponent and localization assumptions. No complete SAW proof is claimed.
+
+P0003's cited primary source is Grimmett Question 2.2: uniform n-step honeycomb SAW from the origin, with a free endpoint. The critical chordal fugacity law is a related problem and needs a separate ensemble, endpoint and domain transfer. Current openness is UNKNOWN. The prior live-store attempt already distinguishes fixed remaining length; this packet adds explicit failure examples and a relative local-limit transfer criterion rather than repeating that identity as a new result.
+
+The saved output is eight claim rows, three audit verdicts, a four-entry concept-only draft, a review packet and bounded exact diagnostic code. Static format/scope verification is recorded in VALIDATION.json; it is not a mathematical proof receipt. Commands: `python -X utf8 prepare_packet.py` and `python -X utf8 validate_packet.py`. STORE_BEFORE.json contains the two targeted pre-existing P0003 rows from a read-only query. No live recall or store improvement has been measured; the brain addition remains a proposal pending review and integration.
+
+The fresh scientific compute gate denied execution: governor status distress, heartbeat age 3.336 seconds. No exact diagnostic experiment ran and no runtime or numerical test pass is claimed. COMPUTE_GATE.json records the denial. To refresh that same gate and conditionally run the exact checks, use `python -X utf8 gate_and_check.py`; it preserves the ten-vertex, 1,000-path, two-second CPU and ten-second arithmetic wall limits and refuses distress or a stale heartbeat. The counterexamples and matrix checks in ATTEMPT.md are analytical derivations awaiting w401's independent check.
+
+BRAIN_HANDOFF.json distinguishes prepared/submitted, reviewed, ingested and retrievable. The coordinator handles live ingestion after mathematical review. The main risks are treating an abstract counterexample as a SAW counterexample, silently substituting the chordal ensemble for fixed length, or calling a source/format check a proof. All four draft entries are concepts with null proof_text and explicit pending-review scope.
+
+Apply: reviewer applies patches/01_math_hook_proposal.diff to the live path named in its header and runs the normal hook audit; the global hook file was not written by w400. The narrow inbox bundle is submitted separately under its own lease. Do not run integrate_drafts.py from this worker: live-store mutation belongs to the validating coordinator.
+
+NEXT: w401 checks the rare-length and exponent counterexamples and the conditional-limit proofs; the coordinator reviews and integrates the concept draft, then measures retrieval on the two original failure modes.

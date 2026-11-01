@@ -1,0 +1,113 @@
+[
+  {
+    "claim_id": "A045-PRIME-RARE-BOUNDARY-RESERVE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer n>=3, m=n-2, and 0<epsilon<=1/(8m), the actual Boolean prime gate T_2^n under independent biases (1/2,1/2,epsilon,...,epsilon) has J_hi>=9 ln(4)/64 and 0<Bstar+ln(4)R<=5 ln(4)m epsilon. Thus J_hi/(Bstar+ln(4)R)>=9/(320m epsilon), and no finite universal K pays J_hi from Bstar or Bstar+ln(4)R even after excluding every prime up to any fixed arity cutoff. Bstar is the SAME sharp joint singleton reserve; R is the degree refund; natural units and upper dyadic rounding. These are diminished-account obstructions, not FEI counterexamples. Separately paying all symmetric thresholds is not refuted.",
+    "hypotheses": [
+      "Actual sign T_2^n on n distinct physical inputs, n>=3; genuine independent interior product law",
+      "p1=p2=1/2 and remaining biases epsilon in(0,1/[8(n-2)])",
+      "P(S)=v_S c_S^2 normalized centered-product spectrum, Delta=I-Var, R=sum_(|S|>=3)(|S|-2)P(S)",
+      "J_hi=ln4 sum_high P(S)j_S;1/2<2^j_S|c_S|<=1; Bstar=ln4(2Delta-R)-J1-ln2 L1",
+      "Deterministic endpoint contracts physically; no repeated variable or spectral-conditioning substitution",
+      "Prior imports/mantissas/low and high carries/S_tree/both full KL terminals retained; no owner renewed"
+    ],
+    "statement_sha256": "9d6a1705eeee9f23e3ba41ec07db7e7878ac49ca87594362371c881b79bf6c56",
+    "contributors": [
+      "A045/fleet04"
+    ],
+    "proof_source": {
+      "path": "agents\\A045\\runs\\20261027T005611Z-fleet04-A045-biased-realizability-referee\\PROOF.md",
+      "sha256": "f8d7501f6ab31569160bae0cd28af6bf006619e6cd72794559246a1bf91156e7",
+      "exact_checks": [
+        "out/CHECKS.json",
+        "out/INDEPENDENT.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A041-SHARP-JOINT-SINGLETON-SOURCE",
+        "version": 1,
+        "statement_sha256": "858bf303c4d23127fd913d7bc8c6e670e56b44a2ac6db09f682328ce51ed371f",
+        "used_scope": "Bstar>=0 reconstructed directly in PROOF section1"
+      },
+      "Direct physical threshold pivotal probabilities, union bounds, centered-product Fourier derivatives, explicit three-row primeness witness"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A041/fleet04",
+        "outcome": "HOLDS_NEW_OBSTRUCTION_AT_STATED_SCOPE",
+        "source_statement_sha256": "9d6a1705eeee9f23e3ba41ec07db7e7878ac49ca87594362371c881b79bf6c56",
+        "source_proof_sha256": "f8d7501f6ab31569160bae0cd28af6bf006619e6cd72794559246a1bf91156e7",
+        "repair_supplied": false,
+        "scope": "New prime rare-boundary theorem only; not independent reacceptance of A041-authored upstream singleton premise",
+        "proof": "REVIEW.md",
+        "checks": "out/A045_CHECKS.json",
+        "source_checker_run": false
+      }
+    ],
+    "status": "SCOPED_INDEPENDENT_OBSTRUCTION_RECONSTRUCTION_HOLDS",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered finite-exception prime-only supplier J_hi<=K Bstar",
+      "Unregistered finite-exception prime-only supplier J_hi<=K(Bstar+ln4 R)"
+    ],
+    "first_unproved_line": "Restricted obstruction has a full analytic proof. A necessary original arbitrary-core high-sector supplier, including rare-core transfer and all previous debits/both full terminals, remains unpaid.",
+    "next_consumers": [
+      "A041",
+      "A042",
+      "A043",
+      "A044",
+      "A090",
+      "A091",
+      "B09 lead"
+    ]
+  },
+  {
+    "claim_id": "A041-NONSYMMETRIC-TWO-WEIGHT-PRIME-BOUNDARY",
+    "version": 1,
+    "exact_statement": "For every m>=3 and 0<epsilon<=1/(8m), the actual Boolean sign F=+1 iff 3b1+3b2+2 sum_(i=3)^(m+2) b_i>=5 at independent biases(1/2,1/2,epsilon,...,epsilon) is essential, nonsymmetric and prime under proper disjoint Boolean single-wire substitutions. With the actual centered product spectrum and upper dyadic scales, natural units, Jhi>=9 ln4/64 and0<Bstar+ln4 R<=5 ln4 m epsilon, hence Jhi/(Bstar+ln4R)>=9/(320m epsilon). The same truth table has core weight w, rare weight1 and threshold w+1 for every real1<w<2. Therefore no finite K pays Jhi from Bstar or Bstar+ln4R after excluding ALL symmetric gates and every fixed finite arity cutoff. This refutes only those diminished-source suppliers, not corrected FEI+, spectral erasure or full FEI; all old imports/carries and both complete terminal laws retain their owners.",
+    "hypotheses": [
+      "m>=3, actual finite Boolean sign, independent interior physical biases and 0<epsilon<=1/(8m)",
+      "Disjoint one-wire Boolean primeness; no affine or overlapping-variable primeness asserted",
+      "P(S)=v_S c_S^2, Delta=I-Var, R=sum_high (|S|-2)P(S); upper dyadic convention1/2<2^j|c|<=1",
+      "Bstar=ln4(2Delta-R)-J1-ln2 L1, with natural logarithms and all old charges retained",
+      "Finite-cutoff and symmetric exceptions only; separately paying this family or nondegenerate-bias restrictions not refuted"
+    ],
+    "statement_sha256": "849f104922cfcc4fa2dfdcabbd2926331f3e8da65071340f78d75671837f6625",
+    "contributors": [
+      "A041/fleet04"
+    ],
+    "proof_source": {
+      "path": "agents\\A041\\runs\\20261027T041724Z-fleet04-A041-weighted-threshold-fei\\PROOF.md",
+      "sha256": "5438788814dc9a50e944ba7478f1f1713909038356656378bbce207cf985e77c",
+      "exact_checks": [
+        "out/CHECKS.json",
+        "out/PILOT.json",
+        "out/ADVERSARIAL.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A041-SHARP-JOINT-SINGLETON-SOURCE",
+        "version": 1,
+        "statement_sha256": "858bf303c4d23127fd913d7bc8c6e670e56b44a2ac6db09f682328ce51ed371f",
+        "used_scope": "Bstar>=0; scalar proof restated"
+      },
+      "Exact cofactor-row obstruction, Boolean derivative identities and finite union bounds; A045 boundary construction motivates the extension but supplies no unverified new premise"
+    ],
+    "review_records": [],
+    "status": "ANALYTIC_PROOF_EXACT_CHECKS_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered Jhi<=K Bstar or K(Bstar+ln4R) supplier restricted to nonsymmetric primes beyond a finite arity cutoff"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A045",
+      "A044",
+      "A043",
+      "A091",
+      "B09 lead"
+    ]
+  }
+]

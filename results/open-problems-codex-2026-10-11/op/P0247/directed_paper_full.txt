@@ -1,0 +1,146 @@
+Discrete Mathematics Letters
+www.dmlett.com
+Discrete Math. Lett. 11 (2023) 96–98
+DOI: 10.47443/dml.2022.158
+Research Article
+On the last new vertex visited by a random walk in a directed graph
+Calum Buchanan1,∗, Paul Horn2, Puck Rombach1
+1Department of Mathematics and Statistics, University of Vermont, Burlington, VT, USA
+2Department of Mathematics, University of Denver, Denver, CO, USA
+(Received: 16 September 2022. Accepted: 19 December 2022. Published online: 2 March 2023.)
+© 2023 the authors. This is an open access article under the CC BY (International 4.0) license (www.creativecommons.org/licenses/by/4.0/).
+Abstract
+Consider a simple graph in which a random walk begins at a given vertex. It moves at each step with equal probability to
+any neighbor of its current vertex, and ends when it has visited every vertex. We call such a random walk a random cover
+tour. It is well known that cycles and complete graphs have the property that a random cover tour starting at any vertex
+is equally likely to end at any other vertex. Ronald Graham asked whether there are any other graphs with this property.
+L´aszlo Lov´asz and Peter Winkler showed that cycles and complete graphs are the only undirected graphs with this property.
+We strengthen this result by showing that cycles and complete graphs (with all edges considered bidirected) are the only
+directed graphs with this property.
+Keywords: random walks; directed graphs; cover tours.
+2020 Mathematics Subject Classiﬁcation: 05C81, 05C20.
+Let G be a connected digraph. A cover tour of G from a vertex u is a directed walk which begins at u and ends when it
+has visited every vertex of G. Lov´asz and Winkler showed that cycles and complete graphs are the only undirected graphs
+with the property that a random cover tour beginning at any given vertex is equally likely to end at any other vertex [1].
+We address a question posed by Winkler of whether there are any further directed graphs with this property.
+We will borrow the notation used in [1]; let L(u, v) be the event that v is the last vertex visited by a random cover tour
+beginning at u. In the case of a bidirected cycle, one might be tempted to believe that a neighbor of the starting vertex
+should be less likely to be the last visited than one further from the start. While this intuition does not hold for cycles,
+it does hold for many other connected graphs. It is also shown in [1] that, for any two nonadjacent vertices u and v of a
+bidirected graph G, there is a neighbor x of u such that P(L(x, v)) ≤P(L(u, v)), and this inequality is strict if the induced
+subgraph G −{u, v} is connected. From the proof, it follows that non-neighbors of a given vertex u are at least as likely as
+neighbors to be last visited by a random cover tour from u. We generalize this notion in the following lemma (the proof is
+nearly identical to that of Theorem 2 in [1]).
+Lemma 1. Let G be a connected digraph, and let u be a vertex in G. If u does not have an edge to a vertex v, then there is an
+out-neighbor x of u such that P(L(x, v)) ≤P(L(u, v)). Furthermore, this inequality is strict if there is a directed walk from u
+to v which visits all vertices in G, but does not revisit u.
+Proof. Let u and v be vertices of a connected digraph G such that uv ̸∈E(G). Let x1, . . . , xd denote the out-neighbors of u,
+and let L(xi; v, u) denote the event that u is the last new vertex, and v the next-to-last new vertex, visited by a random cover
+tour of G beginning at xi. The event L(u, v) is the disjoint union of the events L(xi, v) and L(xi; v, u); either the random
+cover tour from u to v visits u more than once, or it does not. Thus,
+P(L(u, v)) =
+d
+X
+i=1
+1
+d (P(L(xi, v)) + P(L(xi; v, u))) .
+(1)
+It follows that P(L(u, v)) is at least the mean of the P(L(xi, v)) over all out-neighbors xi of u.
+The second statement also follows from equation (1). If it is possible for a cover tour to start at u and end at v without
+revisiting u, then P(L(xi; v, u)) > 0 for some i ∈{1, . . . , d}. In this case, P(L(u, v)) is strictly larger than the mean of the
+P(L(xi, v)).
+In particular, if T is a cover tour from u to v in a digraph G with the property that a random cover tour from any given
+vertex is equally likely to end at any other vertex, then either uv ∈E(G) or u appears at least twice in T.
+∗Corresponding author (calum.buchanan@uvm.edu).
+
+C. Buchanan, P. Horn, and P. Rombach / Discrete Math. Lett. 11 (2023) 96–98
+97
+v
+v1
+v2
+vk
+u
+Figure 1: A minimum cover tour T from u to v is depicted by a dashed line, moving in clockwise direction. The edge vu is
+included to depict the closed walk T ′ = T + vu. The grey arrows indicate the closed walk W, which visits all vertices in U,
+in counterclockwise direction.
+Theorem 1. In any directed graph with the property that P(L(u, v)) = P(L(u, w)) for any three distinct vertices u, v, and w,
+every edge is bidirected.
+Proof. Suppose, for the sake of contradiction, that there exists a pair of vertices u and v in a digraph G = (V, E), as
+described, such that vu ∈E and uv ̸∈E. By Lemma 1, any cover tour from u to v in G revisits u. Let T denote a shortest
+such cover tour, and let T ′ denote the closed walk T + vu.
+We begin by considering the cover tour which starts at v, ﬁrst takes the edge vu, and continues along T until the last
+seen vertex, v1. The vertex v appears only once in this cover tour, since v appears only once in T. By Lemma 1, we have
+vv1 ∈E. Notice also that v1 appears only once in T. Otherwise, the walk that starts at u, follows T to the ﬁrst copy of v1
+(visiting every vertex but v), and then follows T from the last copy of v1 back to v is a cover tour that is shorter than T,
+which contradicts its minimality.
+Now consider the cover tour contained in T ′ which starts at v1 and ends at the last seen vertex, v2. As before, we have
+v1v2 ∈E, and v2 appears only once in T. We can continue in this way until we have chosen all of the vertices in G which
+appear only once in T, for T ′ is a closed walk containing all of the vertices of G, and each vertex which appears only once
+will be the last seen vertex on a walk from some vi. Let U = {v, v1, . . . , vk} denote this set of chosen vertices, and let W
+denote the closed walk that visits them in order. Note that W visits the vertices in U in opposite order to T. (See Figure 1.)
+We note that any vertex x in V \ U has a copy in T, and the minimality of T ensures that no two copies of x appear in
+the same interval (v1, v), (v, vk), or (vi+1, vi) for i ∈{1, . . . , k −1}. We will now show that v1v ∈E and vi+1vi ∈E for each
+i ∈{1, . . . , k −1}. However, the minimality of T then implies that there are no vertices between v1 and v in T; that is, v1v
+is an edge in T. Similarly, each edge vi+1vi is in T. From this we derive our ﬁnal contradiction, for u appears at least twice
+in T by assumption, and the two copies cannot both appear in the interval (vk, v).
+We will ﬁnd a cover tour in G from v1 to v, which does not revisit v1. By Lemma 1, this implies that v1v ∈E. First, in
+T ′ we label the (v2, v1) interval A, the (v1, v) interval B, and the (v, vk) interval C. Since vertices in V \ U appear multiple
+times on T, but only once in each interval, we use subscripts to diﬀerentiate copies. For example, uC indicates the vertex u
+in the position on T ′ in the interval C, as drawn in Figure 1. (We will only need labels for these three intervals.) Further,
+for any x, y ∈V , with interval subscripts if necessary, we use the notation x
+T ′
+→y to indicate the walk from x to y along T ′,
+and for vi, vj in U we use vi
+W
+→vj to indicate the walk from vi to vj along W.
+We now present a walk in two parts; the desired cover tour from v1 to v which does not revisit v1 is a concatenation of
+these parts. As a general template, we take Part (I) to be
+(v1
+W
+→vk) ∪(vk
+T ′
+→v2),
+and Part (II) to be
+(v2
+W
+→v).
+If there are no vertices in V \ U that appear only in the intervals A, B or C then the concatenation of Parts (I) and (II)
+yields the desired cover tour. Otherwise, we modify Parts (I) and (II) depending on the intervals in which such vertices
+appear.
+We label vertices in V \ U which appear on T ′ only in A, B, or C as type AB, BC, or AC, depending on which two
+intervals they appear in. If a vertex appears in all three intervals, we may ignore one copy and label it arbitrarily. Part
+(I) of our walk starts at v1 and ends at v2, and it covers all vertices of type BC. If there are no BC vertices, then Part (I)
+
+C. Buchanan, P. Horn, and P. Rombach / Discrete Math. Lett. 11 (2023) 96–98
+98
+is as previously described. Otherwise, let x be the last BC vertex in the interval B. In this case, Part (I) is
+(v1
+T ′
+→xB) ∪(xC
+T ′
+→v2).
+Since x was the last BC vertex in B, Part (I) of the walk has now covered all BC vertices.
+Part (II) of our walk covers all AB and AC vertices. If there are none, then Part (II) is as previously described. Other-
+wise, let y be the last AB/AC vertex in A. If y is AB, then Part (II) is
+(v2
+T ′
+→yA) ∪(yB
+T ′
+→v).
+If y is AC, then Part (II) is
+(v2
+T ′
+→yA) ∪(yC
+T ′
+→vk) ∪(vk
+W
+→v).
+Since y was the last unseen vertex in A, Part (II) of the walk has now covered all AB and AC vertices. Concatenating
+Part (I) and Part (II) yields a cover tour from v1 to v which does not revisit v1, and therefore v1v ∈E (and T). A similar
+argument shows that vi+1vi ∈E (and T) for all i ∈{1, . . . , k −1}, which completes the proof.
+Acknowledgements
+This work is the result of a collaboration at the 2021 Virtual Masamu Advanced Study Institute (MASI) which is supported
+by the NSF award NSF-DMS 2015425. Paul Horn was partially supported by Simons Collaboration grant 525039. The
+authors also thank Daniel Velleman for helpful comments.
+Reference
+[1] L. Lov´asz, P. Winkler, A note on the last new vertex visited by a random walk, J. Graph Theory 17 (1993) 593–596.

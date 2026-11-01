@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "marker": "QFORM_B04_R12_2510_CHECK_PASS",
+  "arithmetic": {
+    "gamma_coefficient_bound": "C_q < 7993/2000 = 3.9965",
+    "exp_896_over_57_lower_partial_degree": 33,
+    "S33_approx": 6710977.895890062,
+    "required_exp_threshold_approx": 6710628.336846249,
+    "log2_upper": "1733/2500 = 0.6932",
+    "log_cq_upper": "2771/2000 = 1.3855",
+    "outer_scalar_branch_upper": "439244/175 = 2509.965714285714...",
+    "margin_to_2510": "6/175 = 0.034285714285714..."
+  },
+  "notes": [
+    "All inequalities behind the marker were evaluated with Python fractions.Fraction in the automation runtime.",
+    "The Gamma inequality itself is NIST DLMF 5.6.1 for x>0; the finite comparisons after substitution are exact rational arithmetic.",
+    "This arithmetic sharpening does not alter the structural nine-direction proof or settle multiplicity eight."
+  ]
+}

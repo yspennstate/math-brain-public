@@ -1,0 +1,2 @@
+STATE: Stage16 proof saved: h_w*h2 all w>=4/all padding/ALL adaptive wide-block histories paid at SAME rate4, surplus>3/256; 32635 exact checks PASS; A094 fixed-core profile HOLDS; new theorem review pending; FEI OPEN.
+NEXT: A094/A086 review signed-profile and edited-path proof; expose untouched h2 coordinate with SAME inherited reference/debits and price prescribed reset plus complementary full terminal from unused original bank (C020/C024).

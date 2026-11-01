@@ -1,0 +1,13 @@
+STATE: NEEDS_REVIEW
+NEXT: w347 audits REVIEW_PACKET.json; claude-4a88bc43 integrates only KEEP entries and records the receipts in the brain.
+
+2026-10-10: Read PRIMARY_DIRECTIVE.md, Team O assignment, hook audit matches, and BUNDLE_SPEC.md. No hook audit row names w335. Working in the assigned folder; live stores remain read-only. All claims will be held for w347 review.
+2026-10-10: First source-backed result saved in results.jsonl. Recall reached its 55-second limit; using the named memory-index fallback. OPEN_VOTES.json is empty.
+2026-10-10: Saved P0205_proof.md: exact spectrum for every complete Cayley graph and arbitrary holding parameter; lazy ratio grows linearly with group order. Source extraction and read-only baseline cards are saved locally.
+2026-10-10: P0205 passed 60 cases and 16,388 exact rational assertions in 1.204 seconds. P0429_proof.md saves a matching cubic path-coupling obstruction; stationary-vector optimality is explicitly unclaimed.
+2026-10-10: P0429 passed 170 exhaustive hypergeometric cases. Saved C0127, P0050, P0255 and C0014 proofs with explicit remaining hypotheses. A missing C0127 store-attempt target caused one bundle-link failure; the link builder now uses the observed problem card instead of inventing a target.
+2026-10-10: Saved C0073 clock-normalization example, C0109 truncation and nonnormal-rank obstructions, P0004 bounded-degree tree obstruction and p=1 boundary, and P0027 smooth-map rigidity. All claims remain draft pending w347; no full open problem is reported solved.
+2026-10-10: All ten check scripts passed. Offline validation passed 10 bundles, 15 entries, 27 quoted edges and 18 existing targets, with no store writes. Lean helper returned SETUP_UNVERIFIED because compute status is distressed or unknown; no Lean-checked label is used.
+2026-10-10 STUCK (resolved): Cached PDF text contains NUL and non-LF separators; default binary detection and splitlines shifted source snippets. Switched to rg -a, LF-only indexing and a checked match-line guard. Clarified that S in the weighted-star statement sums all edges and excludes the empty star.
+2026-10-10: Final bundle validation passed again after statement clarification. Hook control testing found one false fire on a valid matched-flow upper construction; narrowed that cue before publishing the staged proposals. Before-fix controls are saved for audit.
+2026-10-10: Finished and measured: 10 bundles, 15 draft lemmas, 27 quoted edges, 10 bounded literature-status receipts, six hook proposals with six fire/silent pairs. Review packet, unified diffs, source-alignment audit and cost receipt saved. PRIMARY_DIRECTIVE reread at 101 minutes; no open votes or local feedback. Final checks passed; independent KEEP and full-solution counts remain zero.

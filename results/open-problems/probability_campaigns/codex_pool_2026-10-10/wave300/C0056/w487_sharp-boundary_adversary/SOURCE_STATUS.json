@@ -1,0 +1,84 @@
+{
+  "candidate_id": "C0056",
+  "worker": "w487",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "reason": "The historical source predates a public September 23, 2026 uniform-disorder ac proof claim. Its mathematical validity and different-model review gates have not been established here. The GOE clause is separate and not covered by that claim.",
+  "exact_intake_statement": "Prove existence of absolutely continuous spectrum (delocalised states) for the random Schrodinger operator -Delta + lambda V on Z^3 at small disorder lambda, and GOE local statistics for its finite-volume restriction.",
+  "intake_source": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 56,
+    "record_sha256": "2da1a36c0b72afca2f49428ce734878f5cac2c527c57377c6a79cdcd4aa06a54",
+    "status": "unverified / attempted_unsolved / unreviewed",
+    "hash_scope": "SHA256 of decoded UTF-8 record line, with universal-newline normalization; not a whole-source or proof receipt"
+  },
+  "primary_source": {
+    "author": "Paul Bourgade",
+    "title": "Random band matrices",
+    "url": "https://arxiv.org/pdf/1807.03031",
+    "locator": "Section 2.1, printed page 7, PDF page index 6; equation 2.1 and the following two paragraphs",
+    "law": "iid centered variables of variance one; the survey does not specify a universal fully quantified theorem over this entire law class",
+    "operator": "Delta+lambda V with free band [-2d,2d]",
+    "disorder": "lambda>0, weak disorder in the qualitative delocalization expectation",
+    "finite_volume": "periodic boxes; microscopic volume scaling; bulk energy/DOS and convergence-mode quantifiers still need a precise operational formulation",
+    "scope_quote": "how extended states imply GOE spectral statistics",
+    "separate_obligations": [
+      "nonzero infinite-volume absolutely continuous spectral weight at fixed positive disorder",
+      "finite-volume GOE bulk statistics at fixed positive disorder"
+    ],
+    "normalization_note": "Our adjacency convention is unitarily equivalent to negative hopping on the bipartite lattice. Uniform[-1,1] has variance 1/3; variance-one normalization uses sqrt(3) times that variable, with corresponding coupling rescaling."
+  },
+  "recent_primary_claim": {
+    "date": "2026-09-23",
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/Absolutely-Continuous-Spectrum-for-Weak-Disorder-Anderson-Models-in-Dimensions-at-Least-Three-September-23-2026/build/01-introduction.tex",
+    "locator": "Theorem labelled thm:main in 01-introduction.tex",
+    "model": "negative nearest-neighbor adjacency plus lambda times iid uniform[-1,1] site potentials",
+    "claimed_quantifiers": "A fixed sufficiently small e2 in (0,1/100) exists. For each fixed d>=3 there exists lambda_d>0. For every fixed 0<lambda<lambda_d, almost surely the spectral restriction to I_d is purely ac and nonzero. The probability-one event may depend on the fixed coupling.",
+    "d3_interval": "(-6+e2/2,-6+e2), independent of lambda",
+    "d4plus_interval": "-2d+(1/200,1/100)",
+    "review_state": "primary source claim recovered; proof not audited here",
+    "goe_clause": "not established by this stated theorem",
+    "root_source_sha256": "ccfc37f19571cebe5b1121d3ec7a45d1fecc5f64bff89d46d8d2089d5bc1651c",
+    "introduction_file_sha256": "119e8703471d57d2ecdf8fcc699016efaa6d9ebca8185afad8c8fef00cc29192"
+  },
+  "adjacent_recent_source": {
+    "url": "https://arxiv.org/abs/2609.20798",
+    "date": "2026-09-17",
+    "graph": "Z^d Cartesian-product the hyperbolic square lattice G_(4,5), not Z^3",
+    "disposition": "different geometry; its abstract is not a solution certificate for C0056"
+  },
+  "prior_attempt": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 45,
+    "record_sha256": "df2698acf44165186038deadc48e81aad162023b0d530f4c1cca963198fe3d86",
+    "gap": "Tree recursion is not closed on Z^3; deleting lattice edges changes the operator. No result was claimed. The old finite-time exponent is not relied on as a verified fact here.",
+    "named_H_I_Lean_search": "No additional exact C0056 proof artifact found in the targeted named-directory searches",
+    "team_O_board": "No C0056 row in the board read this session"
+  },
+  "brain_scar": {
+    "recall": "60-second timeout; named MEMORY index fallback returned no matching row",
+    "slug": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "read": "specifically required memory file read directly",
+    "lesson": "A validated substep or green receipt does not close the hardest remaining mathematical gap."
+  },
+  "served_model": {
+    "native_worker": "w487",
+    "response_side_identity": "UNKNOWN",
+    "requested_settings_are_not_receipts": true
+  },
+  "parent_solution_claim": false,
+  "formal_check": "none; quadrature and file checks are not proofs",
+  "existing_parent_readonly": {
+    "id": "claim_09038093d9a000c99aeace01330a48caf661984fe5badf3cd03f77be5582e4db",
+    "logical_id": "math:probability.random-matrices:open-problem-c0056-extended-states-for-the-three-dimensional-anderson-model-at-weak-disor",
+    "digest": "sha256:9e8bec7ecce04f0c9c1ab0d9e5c379bd635fda0004936db5faeb17042e66de67",
+    "matches_file": "STORE_MATCHES.jsonl",
+    "query_scope": "Target found before the 4-second progress cap interrupted further matching; no exhaustive store claim"
+  },
+  "native_referee_keeps": [
+    "S1.487.1",
+    "S1.487.2",
+    "S1.487.3",
+    "S1.487.4"
+  ]
+}

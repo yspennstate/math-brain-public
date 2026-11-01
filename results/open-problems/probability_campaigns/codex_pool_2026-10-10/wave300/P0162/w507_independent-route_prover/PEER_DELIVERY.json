@@ -1,0 +1,12 @@
+{
+  "initial_failure": "Team read: database locked. Direct say: sender had no team.",
+  "resolution": "Create a scoped coordination channel for w507 using the installed tool; no agent or runner is spawned.",
+  "steps": [
+    {
+      "step": "create-own-coordination-channel",
+      "exit_code": 4,
+      "stdout": "",
+      "stderr": "mesh error: database is locked\n"
+    }
+  ]
+}

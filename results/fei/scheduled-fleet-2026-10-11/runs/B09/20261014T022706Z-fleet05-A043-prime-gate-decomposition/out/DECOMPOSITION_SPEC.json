@@ -1,0 +1,13 @@
+{
+ "helper_version":"A043-two-term-disjoint-factor-v1",
+ "family":"every ordered pair of consistent conjunction patterns in n=1..4; separately all nine prime skeletons T_{r,g}, r=2..4, g=0..2",
+ "domain":"each coordinate in a conjunction is absent, fixed0 or fixed1; 3^n terms including constant true; all assignments of each table; all proper blocks of the declared skeletons",
+ "case_count":7389,
+ "symmetry":"none; ordered pairs retained, all truth assignments tested exactly",
+ "arithmetic":"integer and Boolean truth-table identities, explicit disjoint group partition, exact cofactor rows",
+ "memory_estimate_mb":30,
+ "max_runtime_seconds":60,
+ "pilot":"the same fixed7380 term pairs and9 root skeletons; no automatic domain growth",
+ "command":"python -X utf8 code/decompose.py",
+ "purpose":"certify exact factorization for the class and true primality of its remaining antipodal root forms; general proof supplied in DECOMPOSITION.md"
+}

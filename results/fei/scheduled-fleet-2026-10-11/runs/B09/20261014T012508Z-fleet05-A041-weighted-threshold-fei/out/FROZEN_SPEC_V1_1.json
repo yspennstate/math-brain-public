@@ -1,0 +1,53 @@
+{
+  "helper_version": "A041-stage4-v1.1",
+  "family": "actual two-heavy weighted-majority threshold family; biased two-weight physical coefficient processes; A045 actual admission/KL fixtures",
+  "domain": {
+    "r_main": "1..12; n_B=4r+1, handled by exact binomial counts",
+    "r_pilot": "1..3",
+    "full_truth_table_reconstruction_r": [
+      1,
+      2
+    ],
+    "profile_group_sizes": [
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "weights": [
+      "1/2",
+      "2",
+      "4"
+    ],
+    "thresholds": "j/2, 1<=j<=2(wh+b)",
+    "bias_profiles_B": "all fair; alternating 1/4,3/4",
+    "admission_catalog": "all 4 one-bit tables at bias1/4, all16 two-bit tables at fair bias",
+    "fixtures": [
+      "biased OR2",
+      "fair AND4",
+      "coupled phase4",
+      "unequal KL5"
+    ]
+  },
+  "case_counts": {
+    "family_main": 12,
+    "family_pilot": 3,
+    "full_truth_tables": 2,
+    "thresholds_main": 190,
+    "thresholds_pilot": 76,
+    "catalog": 20,
+    "fixtures": 4
+  },
+  "symmetry": "only proved permutation symmetry of odd majority for binomial count compression; no threshold/profile orbit reduction",
+  "arithmetic": "exact Fraction coefficients and binomial counts; 24-term rational atanh logs with proved tail and outward 2^-80 export",
+  "memory_estimate_MB": 90,
+  "maximum_runtime_seconds": 60,
+  "dimension_escalation": "none; fixed frozen formula domain up to n_B49, full truth tables only total n7,11",
+  "pilot_command": "python -X utf8 code/check_stage.py --pilot",
+  "main_command": "python -X utf8 code/check_stage.py",
+  "amendment": "Two additional exact coupled-phase assertions: pointwise product law and nonseparable signed matrix determinant. No domain change."
+}

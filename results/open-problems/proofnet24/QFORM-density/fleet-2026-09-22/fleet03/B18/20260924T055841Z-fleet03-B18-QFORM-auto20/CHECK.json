@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T055841Z-fleet03-B18-QFORM-auto20",
+  "theorem": "QFORM-CROSS-MOVING-DIFFUSE-SQUARE-v1",
+  "status": "PASS",
+  "checks": {
+    "source_provenance": {
+      "original_coordinate_banks_pairwise_disjoint": true,
+      "independence_used_only_before_rotation": true,
+      "input_density_cap": 1,
+      "forbidden_extra_assumptions_added": false
+    },
+    "conditional_cross_cap": {
+      "formula": "K_X(y)=sqrt(2)/||My+alpha||_2",
+      "source": "one-dimensional product-marginal theorem",
+      "null_exception_removed_by": "u^T(My+alpha)=sigma v^T y+u^T alpha has an absolutely continuous law"
+    },
+    "moving_square": {
+      "formula": "g_y^*(t)<=K_beta/sqrt(|a| t)",
+      "uniform_in_H_y": true,
+      "uses_disjoint_Z_bank": true
+    },
+    "bathtub_integrals": {
+      "capped_probability_half_lorentz": "integral_0^infinity t^(-1/2) h^*(t) dt <= 2 sqrt(K)",
+      "scalar_negative_half_moment": "density cap L implies E|S|^(-1/2)<=2 sqrt(2) sqrt(L)",
+      "L": "sqrt(2)/sigma",
+      "result": "E sqrt(K_X(Y)) <= 4/sqrt(sigma)"
+    },
+    "main_bound": {
+      "general_K_beta": "8 K_beta/sqrt(|a| sigma)",
+      "product_bank_beta": "8 sqrt(2)/(||beta||_2 sqrt(|a| sigma))",
+      "single_original_coordinate": "8/sqrt(|a| sigma)"
+    },
+    "physical_corollary": {
+      "packet": "2 X^T C Y + Y^T B Y + 2 W h^T Y + a W^2 + affine terms, with no X-W coupling",
+      "sigma": "2 ||C||_op",
+      "bound": "4 sqrt(2)/sqrt(|a| ||C||_op)",
+      "continuity": true
+    },
+    "partner_application": {
+      "epsilon": 0.5,
+      "lambda": 64,
+      "spectrum": [64, 1, -1, 0.5, -0.5],
+      "large_eigenvalue_count_abs_ge_1": 3,
+      "partner_bound_formula": "2 sqrt(2 pi)/sqrt(epsilon)",
+      "partner_bound_numeric": 7.0898154036220635,
+      "new_bound_formula": "4 sqrt(2)/sqrt(lambda)",
+      "new_bound_numeric": 0.7071067811865476,
+      "crossover": "lambda > 4 epsilon/pi",
+      "crossover_at_epsilon_half": 0.6366197723675814
+    },
+    "scope": {
+      "full_qform_proved": false,
+      "full_continuity_proved": false,
+      "continuity_in_stated_branch": true,
+      "remaining_structural_debt": "derive or replace the zero X-W anchor split from the bare three-large-eigenvalue condition; retain near-rank-two tails exactly"
+    }
+  }
+}

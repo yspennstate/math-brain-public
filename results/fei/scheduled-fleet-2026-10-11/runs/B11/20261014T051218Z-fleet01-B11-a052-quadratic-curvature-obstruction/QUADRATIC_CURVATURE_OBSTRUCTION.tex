@@ -1,0 +1,96 @@
+\section*{A tensor-prime quadratic obstruction to every fixed good-coordinate GU descent}
+
+Let $n\ge2$ be even and define the symmetric Boolean phase
+\[
+ q_n(x)=(-1)^{\sum_{1\le r<s\le n}x_rx_s}
+       =(-1)^{\binom{|x|}{2}}.                         \tag{1}
+\]
+This family is genuine Boolean and uses every physical coordinate.
+
+\subsection*{Exact spectrum and GU values}
+
+The polar matrix of the quadratic form in (1) is the matrix with zero
+diagonal and ones off the diagonal.  Over $\mathbb F_2$ it has full rank
+when $n$ is even.  Hence $q_n$ is bent and
+\[
+ \widehat q_n(S)^2=2^{-n}\quad(S\subseteq[n]).          \tag{2}
+\]
+For a fixed $S$, (2) gives $\pi(S)=2^{-|S|}$.  Therefore
+\[
+ U(q_n)=\mathbb E_{S\sim\mathrm{Unif}(2^{[n]})}(n-|S|)
+       ={n\over2},\qquad I(q_n)={n\over2}.             \tag{3}
+\]
+
+To compute physical children, put $m=n-1$, which is odd.  The two
+restrictions are $q_m$ and $q_m\chi_{[m]}$.  The polar form in odd dimension
+has kernel spanned by the all-ones vector.  Consequently their squared
+spectra are uniform, with mass $2^{-(m-1)}$, on the two opposite parity
+hyperplanes of subsets.
+
+For such a parity-hyperplane law and a supported set $S$ of size $k<m$,
+exactly $2^{m-k-1}$ supported supersets contain $S$, so $\pi(S)=2^{-k}$.
+For the hyperplane containing $[m]$, the top set instead has
+$\pi([m])=2^{-(m-1)}$.  It follows that the two child $U$ values are
+\[
+ {m-2\over2},\qquad {m-2\over2}+2^{-(m-1)}.            \tag{4}
+\]
+Their own one-coordinate children are even-dimensional bent phases, all
+with $U=(m-1)/2$.  Thus their $G$ values are
+\[
+ -{m\over2},\qquad -{m\over2}+m2^{-(m-1)}.             \tag{5}
+\]
+Equations (3)--(5) give
+\[
+ G(q_n)={3n\over2}-n2^{1-n},                           \tag{6}
+\]
+and, for every coordinate $i$,
+\[
+ \operatorname{Inf}_i(q_n)={1\over2},\qquad
+ \Delta_iU={3\over2}-2^{1-n},                         \tag{7}
+\]
+\[
+ \Delta_iG={4n-1\over2}-(2n-1)2^{1-n}.                \tag{8}
+\]
+
+In particular
+\[
+ {\Delta_iG\over\operatorname{Inf}_i}
+ =4n-1-(2n-1)2^{2-n}\longrightarrow\infty.            \tag{9}
+\]
+At $n=4$, (9) is $53/4$, recovering the earlier finite gate.  At $n=6$ it
+is $357/16=22.3125$, already refuting the proposed constant $14$.
+
+More generally, the left side of the good-coordinate criterion for a fixed
+pair $(a,b)$, divided by influence, is
+\[
+ {\Delta_iG-b\Delta_iU\over\operatorname{Inf}_i}
+ =4n-1-(2n-1)2^{2-n}-b(3-2^{2-n}).                    \tag{10}
+\]
+For every fixed finite $a$ and $0\le b<1$, (10) exceeds $a$ for all
+sufficiently large even $n$.  Thus no universal GU pair can be proved by
+requiring the one-coordinate residual reversal at every tensor-prime
+function.
+
+\subsection*{Tensor primeness and scope}
+
+The family is tensor-prime.  If a nontrivial disjoint factorization separated
+coordinates $i$ and $j$, the multiplicative rectangle product at the zero
+input would be $+1$.  For (1) it is
+\[
+ q_n(0)q_n(e_i)q_n(e_j)q_n(e_i+e_j)=-1,               \tag{11}
+\]
+because the mixed quadratic derivative is one.  This holds for every pair.
+
+The family does not refute GU.  Indeed (3) and (6) give the exact restricted
+class theorem
+\[
+ {G(q_n)\over I(q_n)}=3-2^{2-n}<3,qquad
+ {U(q_n)\over I(q_n)}=1.                              \tag{12}
+\]
+Hence it satisfies GU with $(a,b)=(3,0)$ uniformly.  What fails is the
+minimal-counterexample induction helper: restriction creates large negative
+child $G$, so $\Delta_iG$ counts the same global reserve in every coordinate.
+The next mechanism must control $G$ directly or telescope a nonreused signed
+KL reserve; it cannot demand a bounded local residual derivative on all
+tensor-prime Boolean functions.
+

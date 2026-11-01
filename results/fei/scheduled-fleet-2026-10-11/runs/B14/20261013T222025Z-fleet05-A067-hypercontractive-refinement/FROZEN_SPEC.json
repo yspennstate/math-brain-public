@@ -1,0 +1,22 @@
+{
+  "helper_version": "A067-bounded-fiber-1.0",
+  "family": "Actual Boolean seed g(x), dummy controls z, final physical edit mask E with <=k assignments per core fiber; includes actual sequential-XOR and union-once two-event masks",
+  "pilot": {"case_count": 12, "domain": "m=0,1,2; r=3; fixed constant/dictator/AND2 seeds and four explicit colliding fiber masks"},
+  "full_domains": [
+    {"domain": "all 2 seeds m0, all 5 empty/singleton fibers r2, k1", "cases": 10},
+    {"domain": "all 4 seeds m1, all 5^2 empty/singleton fiber configurations r2, k1", "cases": 100},
+    {"domain": "all 4 seeds m1, all 37^2 fiber configurations r3 with 0/1/2 assignments", "cases": 5476},
+    {"domain": "all 16 seeds m2, every final edit set of cardinality 0/1/2 in the 32-point cube r3", "cases": 8464},
+    {"domain": "constant,dictator,Maj3,pointdefect m3; quadratic bent m4; addressing m6; each r3,4 and four fixed two-event overlapping-domain/map configurations", "cases": 48}
+  ],
+  "full_case_count": 14098,
+  "symmetry": "No symmetry quotient; unreduced exhaustive listed domains. Larger named families are explicit fixtures, not an exhaustive class claim.",
+  "arithmetic": "Integer FWHT, direct edge counts, Fraction probabilities and prime-log entropy maps; logarithms by 20-term range-reduced atanh with proved tail and outward dyadic 2^-80 rounding; exact channel/erasure equality, terminal influence, and mask ownership",
+  "maximum_dimension": 10,
+  "memory_estimate_MB": 100,
+  "pilot_max_runtime_seconds": 60,
+  "full_max_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "execution": "one mathematical job at a time; no GPU/windows/background work",
+  "additional_fixed_certificates": ["n128 A066 old block-scope rational certificate", "m1 r1 exact counterexample to dropping sparse-fiber ownership cap", "A070 two-bit signed cross positive despite zero physical overlap"]
+}

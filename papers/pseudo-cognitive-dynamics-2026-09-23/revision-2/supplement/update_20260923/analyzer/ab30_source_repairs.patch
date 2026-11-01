@@ -1,0 +1,62 @@
+--- a/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_ab30_tokens/tools/analyze.py
++++ b/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_ab30_tokens/tools/analyze.py
+@@ -205,7 +205,7 @@
+             continue
+         res["items"].append({"id": q, "family": keys[q]["family"], "on": on["grade"], "off": off["grade"],
+                              "on_pts": pts[on["grade"]], "off_pts": pts[off["grade"]]})
+-    for fam in sorted({r["family"] for r in res["items"]}) | {"all"}:
++    for fam in sorted({r["family"] for r in res["items"]} | {"all"}):
+         rs = [r for r in res["items"] if fam == "all" or r["family"] == fam]
+         better = sum(1 for r in rs if r["on_pts"] > r["off_pts"])
+         worse = sum(1 for r in rs if r["on_pts"] < r["off_pts"])
+--- a/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_ab30_tokens/tools/ab30_run.py
++++ b/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_ab30_tokens/tools/ab30_run.py
+@@ -70,10 +70,10 @@
+         if ku.startswith("CLAUDE") or ku in ("AGENT_MESH_ID", "BRAIN_HEADLESS_DIET"):
+             continue
+         env[k] = v
+-    if arm == "ondiet":
+-        # round 2: the brain-on session with the dispatcher's headless diet (hook_dispatch._headless_session), which
+-        # skips the operational hooks a test session has no use for; every other session on the machine is untouched
+-        env["BRAIN_HEADLESS_DIET"] = "1"
++    if arm in ("on", "ondiet"):
++        # Explicit experimental modes survive either global marker state. Other sessions retain marker behavior.
++        # The inherited value was removed above so a parent process cannot collapse the comparison.
++        env["BRAIN_HEADLESS_DIET"] = "1" if arm == "ondiet" else "0"
+     return env
+ 
+ 
+--- a/12_cognitive_architecture/dreaming/hook_dispatch.py
++++ b/12_cognitive_architecture/dreaming/hook_dispatch.py
+@@ -518,11 +518,12 @@
+ # whose first prompt starts with [headless-worker], or a picture worker - is a machine session: nobody reads its
+ # reports, it does not push, it manages no box and it answers no scheduled task. Measured on the first ab30 brain-on
+ # run: of 45,227 characters of hook text, the math card that carried the answer was 1,818; slow-sense wrote 14,010,
+-# owner-board 2,079, push-reminder 1,889 (telling a test-taker to push to GitHub) and waste-sense 1,674. While the
+-# switch file HEADLESS_DIET_ON exists beside this file, the hooks below are skipped for such a session; everything
++# owner-board 2,079, push-reminder 1,889 (telling a test-taker to push to GitHub) and waste-sense 1,674.
++# BRAIN_HEADLESS_DIET=1 enables the diet for such a session; 0 disables it. Otherwise the switch file
++# HEADLESS_DIET_ON beside this file enables it. When enabled, the hooks below are skipped; everything
+ # that bears on the work itself (the math and proof hooks, the reflexes, danger and compute sense, the report guards,
+ # the archive) still runs. Skipping a hook cannot change what any other hook does in process. Delete the switch
+-# file to turn it off.
++# file to turn it off when no explicit experiment override is set.
+ HEADLESS_DIET_SWITCH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "HEADLESS_DIET_ON")
+ HEADLESS_SKIP = frozenset({"slow_sense.py", "waste_sense.py", "owner_board_hook.py", "push_reminder.py",
+                            "movie_alert_hook.py", "work_timer.py", "summary_hook.py", "canonical_route.py",
+@@ -531,9 +532,12 @@
+ 
+ 
+ def _headless_session(event, payload, session):
+-    """True when the switch is on and this session is a headless worker. Never raises."""
+-    try:
+-        if not os.path.exists(HEADLESS_DIET_SWITCH):
++    """True for a headless worker when enabled by an explicit experiment mode or the legacy marker. Never raises."""
++    try:
++        override = os.environ.get("BRAIN_HEADLESS_DIET")
++        if override == "0":
++            return False
++        if override != "1" and not os.path.exists(HEADLESS_DIET_SWITCH):
+             return False
+         import re as _re
+         if event == "UserPromptSubmit":

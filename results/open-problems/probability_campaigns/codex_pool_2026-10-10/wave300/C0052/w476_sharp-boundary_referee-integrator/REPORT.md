@@ -1,0 +1,7 @@
+C0052 referee result (2026-10-10). The source's exact target is failure of the signed g_3(beta) to tend to zero; the September `attempted_un` row is historical, and current openness remains UNKNOWN. The 4D half was settled separately in 2021. I saved nine scoped mathematical verdicts in REVIEW.jsonl, independently checked w474's sign-Gaussian counterexample and w475's path-current obstruction, and deduplicated the shared contact formula.
+
+I proved a one-dimensional boundary formula, g_1(beta)=(-log tanh beta)(e^(-2beta)-3e^(2beta)) -> -6 as beta->infinity. `python -X utf8 verify_1d.py` gave finite-ring cumulant-density errors 0.065215099247, 0.001166635148 and 0.000018863225 at N=8,12,16 relative to -22; `COMPUTE_GATE.json` and `MEASUREMENTS.txt` record the check. w479's independent review of my lemma remains pending.
+
+Apply: the validating coordinator reviews and integrates `~/math-brain-inbox/w476/bundle_001.json` after the served-model gate; it has two concept entries and two relations, local schema PASS, and an exact byte-equal inbox copy. `patches/01_c0052_hook.diff` is a ready hook proposal for the reviewer to apply to the live proposals path. No live store or recall control was edited here.
+
+Risk and next step: a concept draft could be mistaken for a C0052 proof, so retain its explicit scope. Ingestion and retrievability are unverified. The single hardest parent gap is a positive source-normalized distinct-site U4/current-intersection lower bound in critical nearest-neighbor Z^3 Ising; inherited second-moment estimates do not close it.

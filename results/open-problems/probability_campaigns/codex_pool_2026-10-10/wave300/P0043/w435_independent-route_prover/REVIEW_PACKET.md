@@ -1,0 +1,19 @@
+P0043 independent-route packet for w437
+
+The full target is NOT proved. Current openness is UNKNOWN; no novelty claim. STATEMENT.md gives the precise iid bond statement and excludes p_c=1. SOURCE_STATUS.json distinguishes primary statements, dated local attempts, and the unverified public solution claim. APPROACH_BEFORE_PEER_PROOFS.md preserves the route written before any current peer proof.
+
+Audit ATTEMPT.md L1--L5 against CLAIMS.jsonl. L1 is a quenched thinning statement, not critical extinction. L2 uses shared EDGES and an exact two-prefix union probability. L3 averages SIGNED ray traversals and gives an explicit square-lattice obstruction. L4's tree is not quasi-transitive; distinguish the host graph's good ray measure from its critically surviving components. L5 corrects an inference about critical susceptibility in C0084-A001.
+
+Highest-value checks: L1's simultaneous rational thinnings and all components; L2's passage from finite paths to infinity under local finiteness; L3's finite-boundary flux and zero extension from a lattice subgraph; L4's exact 7/2 energy, global threshold rather than only root threshold, and unique degree-four root. The single remaining target gap is constructing a finite-energy ray measure inside a hypothetical critical component in an applicable graph class. Recurrence prevents a universal version of this construction.
+
+Validation: check_auxiliary.py passed 48 checks over 9,312 exact configurations in 0.1535 seconds after Python start. COMPUTE_GATE.json and MEASUREMENTS.json record the actual gate, command and outputs. Finite recursion is a sanity check, not an infinite-limit proof. VALIDATION.json records local bundle validation only; no live integrator or formal theorem checker has run.
+
+Brain DRAFT: draft_bundle_001.json has eight definition/concept entries and seven supported relations. All five auxiliary results are explicitly pending independent review. No unproved target or unreviewed auxiliary was published as a theorem. SUBMISSION.json records prepared, submitted, reviewed, ingested and retrievable separately.
+
+Reviewer application: after mathematical audit, the coordinator may promote kept concepts to lemmas with the full author proofs, run the normal integrator, and verify recall. The creation diff is patches/01_p0043_draft_bundle.diff; headers resolve relative to ~. It is a review representation of the DRAFT, not an instruction to modify any live recall control. A narrow hook proposal is staged locally in hooks/S15-w435.jsonl for the coordinator to file.
+
+NEXT: Audit L1--L5, then test whether quasi-transitivity can supply critical-cluster robustness beyond the recurrent-graph obstruction; retain the target as unproved until that gap closes.
+
+Adversary audit receipt: w436 kept L1--L4 and marked G1 FIX; the missing completion premise remains unproved. The designated referee w437 received packet message msg-38f8f7abba; its audit is pending. The original P0043 regular-tree attempt and book citation are saved in STORE_SOURCE_ROWS.json. Local output changed from zero claim rows/draft entries at session start to eight claim rows, eight definition/concept entries, and seven relations; live brain gain is not yet measured. Reproduce local packaging with build_packet.py followed by finalize_packet.py.
+
+Publication receipt: ~\math-brain-inbox\w435\bundle_001.json, submitted 2026-10-10T05:49:21.754491+00:00. Published bytes match the validated local DRAFT. Final referee update msg-c032cfbc54 delivered to w437. Review, ingestion and retrieval are recorded separately and remain unconfirmed. Canonical-source limit: the repository's population default is absent; only audit snapshots were located and not opened. Four directly relevant cards were read from the explicitly provided population store. Current openness stays UNKNOWN.

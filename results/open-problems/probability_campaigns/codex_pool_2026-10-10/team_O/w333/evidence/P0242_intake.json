@@ -1,0 +1,68 @@
+[
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 325,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "optimal_stationary_stopping_under_markov-chain_lumping",
+      "historical_status": "source_says_open",
+      "locator": "Open Problem4.45,PDF149; definition4.39,p148",
+      "problem_id": "P0242",
+      "recorded_at": "2026-09-06T23:31:49Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "aldous_fill_2014",
+      "source_statement_date": "1994-10-11",
+      "statement": "Determine the sharp universal comparison between the worst optimal expected stationary stopping time of a finite reversible chain and that of its stationary-flow lumping.",
+      "statement_caveat": "This is stationary-flow lumping by a map, not the chain watched on a subset. The source asks both a universal K and K=1; later lifting literature supplies comparison results whose exact constant and stopping convention still need checking.",
+      "status_search": "Focused primary-source searches on2026-09-06; no current-open or novelty certification. See source_question_registry_markov_002.json.",
+      "title": "Optimal stationary stopping under Markov-chain lumping"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 592,
+    "record": {
+      "admitted": true,
+      "current_status": "partially_answered_2026_09_14",
+      "dedup_key": "optimal_stationary_stopping_under_markov-chain_lumping",
+      "historical_status": "unverified",
+      "locator": "Open Problem4.45,PDF149; definition4.39,p148",
+      "problem_id": "P0242",
+      "recorded_at": "2026-09-13T22:59:55Z",
+      "result_status": "K = 1 refuted by an exact rational 4-state example (lumping raises tau_1^(2) from 2.3694 to 3.0187); the absolute-K question open",
+      "schema": "probability-problem.v1",
+      "source_id": "aldous_fill_2014",
+      "source_statement_date": "1994-10-11",
+      "statement": "Determine the sharp universal comparison between the worst optimal expected stationary stopping time of a finite reversible chain and that of its stationary-flow lumping.",
+      "statement_caveat": "This is stationary-flow lumping by a map, not the chain watched on a subset. The source asks both a universal K and K=1; later lifting literature supplies comparison results whose exact constant and stopping convention still need checking.",
+      "status_search": "Focused primary-source searches on2026-09-06; no current-open or novelty certification. See source_question_registry_markov_002.json.",
+      "title": "Optimal stationary stopping under Markov-chain lumping",
+      "verification": "author_checked_exact_rational_no_independent_read",
+      "memo": "Downloads/Probability_P0242_Aldous_Fill_open_problem_4_45_lumping_2026-09-14.md",
+      "author": "claude-prob1000-0913-20h"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 238,
+    "record": {
+      "attempt_id": "P0242-A001",
+      "candidate_full_solution": false,
+      "depth": "first_pass_with_explicit_argument",
+      "full_problem_solved": false,
+      "independent_check": "Equivalently disintegrate the stopped fine path given each successively observed coarse path; the conditional continuation probabilities give an adapted randomized coarse stopping rule. The conclusion requires strong lumpability, because otherwise the projected fine path is not the Markov chain defined by stationary-flow matching.",
+      "independent_review": "none",
+      "method": "Optimal stationary stopping under Markov-chain lumping structural calculation",
+      "novelty": "not_claimed",
+      "obstruction": "For arbitrary partitions, equality of one-step stationary flows does not identify multi-step path laws. The stopping-time projection argument therefore fails at its first premise. A full comparison needs a different potential-theoretic argument and the later lifting result must be reconciled.",
+      "problem_id": "P0242",
+      "recorded_at": "2026-09-06T23:31:49Z",
+      "result": "For a genuinely lumpable partition, the K=1 inequality follows directly. Start the fine chain in any state of a chosen coarse block and use a fine-chain stopping time attaining stationarity. Its projection has the coarse-chain path law. Any extra fine information can be represented by auxiliary conditional randomness in the coarse filtration, so this yields a randomized coarse stopping rule with stationary terminal law and the same expected duration. Taking maxima proves the claim in this special case.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_limited_argument"
+    }
+  }
+]

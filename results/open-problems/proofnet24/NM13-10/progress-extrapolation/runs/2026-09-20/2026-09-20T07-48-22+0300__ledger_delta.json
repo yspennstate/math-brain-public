@@ -1,0 +1,42 @@
+{
+  "track": "NM13-10",
+  "root": "proofnet24/NM13-10/progress-extrapolation",
+  "source": "Agresti-Veraar arXiv:2501.18561 / NoDEA 32 (2025), Problem 3",
+  "frozen_pair": {
+    "X0": "H^-1(T)",
+    "Xhalf": "L^2(T)",
+    "X1": "H^1(T)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "brownian_dimension": 1
+  },
+  "fixed_strong_endpoint_before": "r_*=3; p=3 excluded",
+  "fixed_strong_endpoint_after": "r_*=3; p=3 excluded",
+  "exact_subcritical_norm_preserved": "C_p^g(T)=1/(sqrt(2/(p-1))-1), 2<=p<3",
+  "critical_rearrangement_bracket_before": "2/3 <= alpha_*(T) <= 1",
+  "critical_rearrangement_bracket_after": "2/3 <= alpha_*(T) <= 1",
+  "source_level_movement": "none",
+  "mechanism_gain": {
+    "name": "critical Doob-Hardy adapted additive saturator",
+    "statement": "On one exact Fourier shell, choose the progressive additive input Y_s=M_s=exp(W_s-3s/2). Then the exact solution is Z_s=M_s(W_s-s), E M_s^3=1, and for scaled horizons L_n=lambda_n T there are thresholds R_n with liminf R_n^3 m_n^sc/r_n^3 >= 8/9. Consequently every alpha<2/3 again fails by an explicit additive source-valid witness, while at alpha=2/3 any finite endpoint norm constant must be at least 2^(5/3)/9 under the report normalization.",
+    "scope": "explicit progressive additive one-shell inputs on the exact frozen torus pair; this is not a proof of the positive full L^3 -> Z_{3,2/3} endpoint"
+  },
+  "status": "PARTIAL / EXPLICIT SOURCE-VALID WITNESS THEOREM SELF-CHECKED; full endpoint unresolved",
+  "predecessor_handoff": "The old admission worker remains historical. Preserve P24 r_*=3 with endpoint excluded, NM13-10 exact subcritical input norm R_p, the Z_{3,1} positive endpoint, weak-L3 failure, the full lower obstruction alpha>=2/3, and the preceding deterministic proportional-feedback log-2/3 restricted theorem.",
+  "route_consequence": "State feedback is not needed to realize the critical 2/3 obstruction. The cubic exponential martingale converts the source input to a Hardy-type drift under the p=3 tilted measure; any positive endpoint proof must control arbitrary progressive factors in this transformed problem, while any stronger negative result must beat the deterministic F=1 Hardy saturator through adaptive/non-proportional or multiscale effects.",
+  "next_attack": "Use the critical transform Y=M F, Z=M H and the p=3 tilted measure to seek a full scalar arbitrary-progressive weighted Hardy-martingale L^3 -> Z_{3,2/3} estimate, then test whether the estimate tensorizes/lifts over the self-adjoint spectrum. If two recovery routes fail, follow PROGRESS20 and pivot to a distinct T05 covariance/comparison application coordinated with NM13-09.",
+  "t05_fallback_due": false,
+  "literature_check_date": "2026-09-20",
+  "literature_scope": [
+    "Agresti-Veraar arXiv:2501.18561 / NoDEA Problem 3",
+    "Bechtel-Veraar variational extrapolation, published 2025-07-11",
+    "Evangelopoulos-Ntemiris-Veraar discrete stochastic maximal regularity, published 2026-02-13",
+    "Evangelopoulos-Ntemiris fully discrete stochastic maximal regularity arXiv:2609.07436, submitted 2026-09-07"
+  ],
+  "checker": "2026-09-20T07-48-22+0300__critical_doob_saturator_check.py",
+  "checker_output": "2026-09-20T07-48-22+0300__critical_doob_saturator_check.out",
+  "checker_result": "CHECK_PASS",
+  "runtime_model": "GPT-5.6 Sol",
+  "runtime_reasoning": "UNVERIFIED"
+}

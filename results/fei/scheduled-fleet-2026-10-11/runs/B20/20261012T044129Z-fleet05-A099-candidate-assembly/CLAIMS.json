@@ -1,0 +1,78 @@
+[
+  {
+    "claim_id": "B20-ERASURE-LOW-INFLUENCE-COMPLETE",
+    "version": 2,
+    "exact_statement": "For every finite-valued s:N->[0,infinity) with s(N)=o(N), let K_E(s) be the supremum B(F)/I(F) over all finite N-bit Boolean signs satisfying 0<I(F)<=2^(-s(N)), with B=sum_i H(S_i|S_-i) in bits and ordinary influence. Then K_E(s)=K_E in the extended reals. For any nonconstant seed f, h_m=z*f^(tensor m) is balanced, B(h_m)=mB(f), I(h_m)=mI(f)+1; its point activation obeys B(F_m)>=2^(-k_m)*mB(f) and I(F_m)=2^(-k_m)*(mI(f)+1+k_m), with k_m=o(m) chosen for the s-class. Consequently C_FEI<=K_E(s)+2/ln2 by C018. This is aggregate-erasure transport and does not preserve a selected coordinate witness. Finiteness of K_E(s) remains open.",
+    "hypotheses": [
+      "Uniform finite Boolean signs; all dimensions; entropy in bits",
+      "Finite-valued s:N->[0,infinity) with s(N)=o(N)",
+      "Aggregate B, not selectable-coordinate min ratio",
+      "Suprema and equality interpreted in extended reals"
+    ],
+    "statement_sha256": "522cb5ec2ed00fe5dfb5b485ea9e77d5eceb0eb3db2dd343f8627442e65b708a",
+    "contributors": [
+      "claude-B20 (version-1 activation/tensor proof)",
+      "A099 (fresh-balancing refinement)"
+    ],
+    "proof_source": {
+      "run_id": "20261012T044129Z-fleet05-A099-candidate-assembly",
+      "files": [
+        "REFINEMENT_PROOF.md",
+        "CANDIDATE_MANUSCRIPT.tex",
+        "code/check_balanced_transfer.py",
+        "out/EXACT_TRANSFER.json"
+      ],
+      "locator": "Theorem thm:low; no unproved universal payment premise"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "B20-ERASURE-TENSOR-ADDITIVE",
+        "version": 1,
+        "statement_sha256": "3df667565b3d8a1811408e02376f733e9ff43176b5a3d785ff61c58ebae35fe9",
+        "usage": "source identity reproduced with fresh balancing; no independent acceptance inferred"
+      },
+      {
+        "claim_id": "B20-ACTIVATION-ERASURE-FORMULA",
+        "version": 1,
+        "statement_sha256": "474250ee4cc99312d8b12f207a9bd79517c2012e48a2dec41f1602e29666384b",
+        "usage": "source identity reproduced with fresh balancing; no independent acceptance inferred"
+      },
+      {
+        "claim_id": "C018",
+        "version": "supplement-2026-10-11",
+        "source": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_REDUCTION.md",
+        "source_sha256": "eab8a37cae78930ad4c252be2297e024fc585a063969b6829433fe496a6008b1",
+        "usage": "proved constant comparison only for the C_FEI corollary; equality of erasure suprema does not need this reduction"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A090",
+        "verdict": "PENDING"
+      },
+      {
+        "reviewer": "A094",
+        "verdict": "PENDING"
+      }
+    ],
+    "status": "AUTHOR_PROVED_SCOPED_REFINEMENT_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "B20-ERASURE-LOW-INFLUENCE-COMPLETE",
+        "version": 1,
+        "scope": "strengthens valid additive estimate; preserves original source unchanged"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B20",
+      "A096",
+      "A097",
+      "A100",
+      "A090",
+      "A094",
+      "A005"
+    ]
+  }
+]

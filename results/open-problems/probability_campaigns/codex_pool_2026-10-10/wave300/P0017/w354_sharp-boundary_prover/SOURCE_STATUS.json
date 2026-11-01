@@ -1,0 +1,76 @@
+{
+  "worker": "w354",
+  "target": "P0017",
+  "checked_at": "2026-10-10",
+  "exact_intake_statement": "Is there a universal positive lower bound for the Euclidean Cheeger constant of every isotropic log-concave probability measure, in every dimension?",
+  "intake_evidence": "SOURCE_RECOVERY.json: brain_bundle_C006p01.json entry op-p0017; ranking CSV line 548",
+  "exact_primary_cheeger_form": "For every dimension and every full-dimensional log-concave probability mu with finite covariance Sigma, h(mu)>=c/sqrt(||Sigma||_op), for a single universal c>0. With E X=0 and Sigma=I this becomes h(mu)>=c.",
+  "exact_primary_poincare_form": "There exists one universal C<infinity such that every integer d>=1, every isotropic log-concave probability mu on R^d, and every locally Lipschitz f in L^2(mu) with finite gradient energy satisfy Var_mu(f)<=C integral |grad f|^2 dmu. In full-dimensional nonisotropic coordinates, C_P(mu)<=C ||Cov(mu)||_op.",
+  "primary_sources": [
+    {
+      "title": "Randomstrasse101: Open Problems of 2025",
+      "authors": "Bandeira, Dmitriev, Lucca, Nizic-Nikolac and Rodder",
+      "url": "https://arxiv.org/html/2603.29571v1",
+      "locator": "Entry 13, Definition 13.1 and Conjecture 30, covariance formulation",
+      "published": "2026-03-31",
+      "quote": "where A denotes the covariance matrix of the measure",
+      "check": "Exact Cheeger normalization and covariance formulation recovered. No claim based on the dated assertion of openness."
+    },
+    {
+      "title": "Isoperimetric Problems for Convex Bodies and a Localization Lemma",
+      "authors": "Kannan, Lovasz and Simonovits",
+      "url": "https://www.renyi.hu/~miki/KannanLovSimIso.pdf",
+      "locator": "pp. 542 and 557: equations (1.1)-(1.2), conjecture preceding Theorem 5.4",
+      "published": "1995",
+      "quote": "there is hyperplane cut which is within a constant of the best cut",
+      "check": "Original geometric formulation; product-mass and min-mass denominators differ by at most a factor of two. The scanned formula's OCR was not used as the exact target."
+    },
+    {
+      "title": "Presenting a proof of the Kannan-Lovasz-Simonovits conjecture",
+      "authors": "Pierre Bizeul, Boaz Klartag and Joseph Lehec",
+      "url": "https://arxiv.org/html/2610.05474v1",
+      "locator": "Theorem 1.1; equations (5)-(6); abstract",
+      "published": "2026-10-04",
+      "quote": "We present here a proof of this conjecture.",
+      "check": "Primary paper claims the complete dimension-free target. The statement was checked; its proof was not audited in this lane."
+    },
+    {
+      "title": "A Dimension-Free Bound on the Poincare Constant of Isotropic Log-Concave Measures",
+      "authors": "Krishnakumar Balasubramanian and Shiva Kasiviswanathan",
+      "url": "https://arxiv.org/abs/2610.07728v2",
+      "locator": "v2 abstract and submission history",
+      "published": "2026-10-06; revised 2026-10-08",
+      "quote": "with an explicit bound on the Poincare constant",
+      "check": "The v2 abstract claims C_P<=25 for all isotropic log-concave probability measures. This is a source-status receipt, not an independently checked proof."
+    }
+  ],
+  "prior_attempt": {
+    "artifact": "brain_bundle_C006a04.json entry at-p0017; SOURCE_RECOVERY.json",
+    "method": "Standard Gaussian Hermite expansion proves C_P=1; linear functions attain equality.",
+    "gap": "The diagonal Gaussian Hermite generator is unavailable for general isotropic log-concave measures.",
+    "independent_review_in_prior_record": false,
+    "relation_to_this_lane": "Disjoint: exact dependent simplex fibers, rather than Gaussian/product spectral structure. No prior attempt was alleged to contain the averaging bridge."
+  },
+  "bounded_history_checks": {
+    "attempts_H_20260912": "No P0017 record found by exact-ID search.",
+    "attempts_I_20260914": "No P0017 record found by exact-ID search; generic Poincare mentions in unrelated records were not read.",
+    "lean_campaign": "Only the ranking annotation for P0017 was found; no P0017 theorem or formal-check receipt recovered.",
+    "team_O": "P0017 remains an unchecked tier-5 row on TEAM_BOARD.md line 553, with no named holder there.",
+    "local_owner_retirement_evidence": "Targeted read-only live-store query returned the September open-problem and Gaussian-attempt cards, both marked unverified; no retirement certification was found in these named sources.",
+    "live_store": "LIVE_TARGET_RECEIPT.json; opened with mode=ro; no store mutation."
+  },
+  "current_openness": "UNKNOWN",
+  "current_literature_status": "Recent primary papers claim the complete target; the September ranking cannot certify current openness.",
+  "novelty_claim": false,
+  "own_result_source_tag": "owner-own-work",
+  "review_status": "w356 KEEP claims 001-004; w355 independently keeps the complete special-case packet. Mathematical validity of the recent full KLS preprints remains unaudited here.",
+  "recall": {
+    "artifact": "RECALL_RESULT.txt",
+    "timeout_seconds": 60,
+    "observed_seconds": 66.252,
+    "returned_memories": 0,
+    "fallback_slug": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "lesson_applied": "Numerical checks and successful infrastructure receipts do not close the hardest mathematical gap."
+  },
+  "mathematical_review_receipt": "REFEREE_VERDICTS.json"
+}

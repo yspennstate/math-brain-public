@@ -1,0 +1,251 @@
+{
+  "P0288": [
+    {
+      "node_id": "claim_2d01473e494a4371b14f45df02f13580",
+      "title": "Pollett Section 2 Conjecture (ii) answered NO",
+      "body": "Pollett Section 2 Conjecture (ii) answered NO: a two-ended killed walk on Z has t^{3/2}e^{kappa t}p_t(i,j) converging to a rank-TWO kernel, verified numerically to 3e-4 at t=6400; but the ledger's own Foley-McDonald prior-art flag looks right, so treat as confirmed mathematics and probably known",
+      "logical_id": null,
+      "source_id": "memory:pollett_rank_one_conjecture_refuted_by_a_two_ended_killed_walk_2026_09_08",
+      "source_revision": null,
+      "truth_status": null,
+      "proof_text": null
+    },
+    {
+      "node_id": "claim_e7eeccecd0f8bea88becac1ce1bab1f2c282eb12ad6ca9c19e907b3f5204364d",
+      "title": "Pollett Section 2 conjecture (ii) (our id P0288): CANDIDATE REFUTATION - a two-ended killed walk has a rank-two limit kernel",
+      "body": "[campaign status: candidate_full_solution - author-checked, unrefereed] Pollett's Section 2 conjecture (ii) asks whether, for a lambda-transient irreducible countable transient class with almost sure absorption, every finite strictly positive limit of t^a e^{lambda t} p_t(i,j) must factor as A x_i m_j. Our result (id P0288, 2026-09-08): NO. Take the nearest-neighbour continuous-time walk on Z (rate 1 each side), killed at rate kappa everywhere plus an extra rate v at the origin. The class is lambda-transient with lambda = kappa, and t^{3/2} e^{kappa t} p_t(i,j) tends to [(|i| + 2/v)(|j| + 2/v) + i j] / (4 sqrt pi). The i j term makes the limit a rank-two form - its 2x2 minor on rows and columns {0,1} equals (2/v)^2/(16 pi) > 0 for every v - so no rank-one A x_i m_j factorisation exists; the reason is structural, a chain with two ends carries one degree of freedom per end. Verification as the source words it: the Feynman-Kac semigroup was solved directly at t = 100, 400, 1600, 6400, and against the claimed limits 0.141047, 0.282095, 0.705237, 0.423142 for (i,j) = (0,0), (0,1), (1,1), (1,-1) at v = 2 the computed values converge monotonically to 0.141010, 0.282004, 0.705018, 0.422932, with the minor formed from the measured entries 0.019879 against the predicted 0.019894. PRIOR ART WARNING carried in the ledger row itself: Foley and McDonald published a discrete two-end construction from which the same continuous-time obstruction follows, so treat this as confirmed mathematics and probably known. continuous-time nearest-neighbour walk on Z at rate 1 each side killing rate kappa everywhere plus extra rate v at the origin lambda = kappa",
+      "logical_id": "math:probability.open-problems:p0288-pollett-rank-two-limit-kernel-refuted",
+      "source_id": "owner-campaign:P0288 (thirteen-settled memo 2026-09-08)",
+      "source_revision": "status-fidelity-2026-09-13; title and first sentence now carry the campaign's own result_status (candidate_full_solution), which the served block was clipping away",
+      "truth_status": "unverified",
+      "proof_text": "Solve the killed walk's Feynman-Kac semigroup in closed form. The limit kernel splits into a product part, carrying the killing strength through 2/v, plus an odd term i j contributed by the two ends of Z. A rank-one kernel has all 2x2 minors zero; the minor on {0,1} is (2/v)^2/(16 pi) > 0, so the limit cannot factor."
+    },
+    {
+      "node_id": "claim_f79d71e760cf075bc4e18baaa05fffea3c0cb7fb5e81cb05a97d33d3c8eca69c",
+      "title": "Pollett Section 2 conjecture (ii) (our id P0288): REFUTED - a two-ended killed walk has a rank-two limit kernel",
+      "body": "Pollett's Section 2 conjecture (ii) asks whether, for a lambda-transient irreducible countable transient class with almost sure absorption, every finite strictly positive limit of t^a e^{lambda t} p_t(i,j) must factor as A x_i m_j. Our result (id P0288, 2026-09-08): NO. Take the nearest-neighbour continuous-time walk on Z (rate 1 each side), killed at rate kappa everywhere plus an extra rate v at the origin. The class is lambda-transient with lambda = kappa, and t^{3/2} e^{kappa t} p_t(i,j) tends to [(|i| + 2/v)(|j| + 2/v) + i j] / (4 sqrt pi). The i j term makes the limit a rank-two form - its 2x2 minor on rows and columns {0,1} equals (2/v)^2/(16 pi) > 0 for every v - so no rank-one A x_i m_j factorisation exists; the reason is structural, a chain with two ends carries one degree of freedom per end. Verification as the source words it: the Feynman-Kac semigroup was solved directly at t = 100, 400, 1600, 6400, and against the claimed limits 0.141047, 0.282095, 0.705237, 0.423142 for (i,j) = (0,0), (0,1), (1,1), (1,-1) at v = 2 the computed values converge monotonically to 0.141010, 0.282004, 0.705018, 0.422932, with the minor formed from the measured entries 0.019879 against the predicted 0.019894. PRIOR ART WARNING carried in the ledger row itself: Foley and McDonald published a discrete two-end construction from which the same continuous-time obstruction follows, so treat this as confirmed mathematics and probably known.\ncontinuous-time nearest-neighbour walk on Z at rate 1 each side\nkilling rate kappa everywhere plus extra rate v at the origin\nlambda = kappa",
+      "logical_id": "math:probability.open-problems:p0288-pollett-rank-two-limit-kernel-refuted",
+      "source_id": "owner-campaign:P0288 (thirteen-settled memo 2026-09-08)",
+      "source_revision": "as-read-2026-09-12",
+      "truth_status": "unverified",
+      "proof_text": "Solve the killed walk's Feynman-Kac semigroup in closed form. The limit kernel splits into a product part, carrying the killing strength through 2/v, plus an odd term i j contributed by the two ends of Z. A rank-one kernel has all 2x2 minors zero; the minor on {0,1} is (2/v)^2/(16 pi) > 0, so the limit cannot factor."
+    }
+  ],
+  "C0034": [
+    {
+      "node_id": "claim_a83245002da389e63491942abbcc07f32c0500c75f61e827a2a1d0d0fe837532",
+      "title": "Lyons's union-marginal coupling question: transportation polytope feasible in every tested instance (floating-point evidence), naive conditional splitting fails",
+      "body": "PRIVATE NUMERICAL EVIDENCE (revision 2), not a proof and not an exact certificate. Lyons (ICM 2014, Question 2.8) asks whether for H = H_1 (+) H_2 orthogonal in l^2(E) there is a coupling of P_{H_1} and P_{H_2} whose union has law P_H; the union must be disjoint by cardinality, so the question is the nonemptiness of a transportation polytope with three marginals. A floating-point LP (HiGHS, minimum total violation) reported violation 0.0 on 1360 random instances with |E| in {3,...,6}, on |E| = 7 and 8 generic instances, on Fourier-mode subspaces of cycles and on star-space splits of the K_4 edge space. Revision 2 records the reviewer's point that double-precision feasibility is evidence only; an exact rational LP on rational-kernel instances is the next step. The naive conditional splitting fails to reproduce the P_{H_2} marginal (direct computation on |E| = 4). Open: a general construction.\nFinite E, orthogonal subspaces\nFloating-point evidence only",
+      "logical_id": "math:probability.determinantal:union-marginal-coupling-of-projection-determinantal-laws-lp-feasible-evidence",
+      "source_id": "owner-probability-intake-claude-20260907:lp",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    },
+    {
+      "node_id": "claim_1731d906baae45e26ed149990072c5368f6e10014e77c2ac6bd75575059a967a",
+      "title": "Open problem: Coupling of determinantal projection measures with union marginal",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status partial_result). Given H = H_1 (+) H_2 orthogonal in l^2(E), is there a coupling of P_{H_1} and P_{H_2} whose union has law P_H? Source: Lyons: Determinantal probability, basic properties and conjectures, ICM 2014, Question 2.8, p. 6.\nPosed in Lyons: Determinantal probability, basic properties and conjectures, ICM 2014\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.determinantal:open-problem-c0034-coupling-of-determinantal-projection-measures-with-union-marginal",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0034",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    },
+    {
+      "node_id": "claim_92f80e4dcf39be1b9857d932b15ffa66cb7d95ccb79f0a2e9b16609e2935e314",
+      "title": "Lyons's union-marginal coupling question: transportation polytope feasible in every tested instance, naive conditional splitting fails",
+      "body": "PRIVATE NUMERICAL EVIDENCE, not a proof. Lyons (ICM 2014, Question 2.8) asks whether for H = H_1 (+) H_2 orthogonal in l^2(E) there is a coupling of the determinantal projection measures P_{H_1}, P_{H_2} whose union has law P_H. Since the cardinalities are dim H_1, dim H_2 and dim H almost surely, the union must be disjoint, and the question is the nonemptiness of the transportation polytope with the three marginals. Exact LP (HiGHS, minimum total violation) on 1360 random pairs of orthogonal subspaces with |E| in {3,...,6} over all dimension splits, on generic instances with |E| = 7 and 8, on Fourier-mode subspaces of cycles of length 5..8, and on star-space splits in the edge space of K_4 found a feasible coupling with zero violation every time (intake raw/C_lyons_q28_lp_check.json and _structured.json). A structural observation: the naive rule 'sample X_1 from P_{H_1} conditioned on X_1 subset C, set X_2 = C minus X_1' does NOT reproduce the P_{H_2} marginal in general (checked on |E| = 4), so the coupling, when it exists, is not the conditional splitting. Open: a general construction.\nFinite E, orthogonal subspaces H_1, H_2\nEvidence is computational on |E| <= 8 only",
+      "logical_id": "math:probability.determinantal:union-marginal-coupling-of-projection-determinantal-laws-lp-feasible-evidence",
+      "source_id": "owner-probability-intake-claude-20260907:lp",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    }
+  ],
+  "C0151": [],
+  "P0127": [
+    {
+      "node_id": "claim_7d4c882778ad603cb7307b9610fc97f86548be11fa9b37fc192e566a95128705",
+      "title": "Attempt on Efficient approximately uniform sampling of lattice trees",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Efficient approximately uniform sampling of lattice trees structural reduction or obstruction Result: All eligible trees lie in the radius n-1 lattice ball. Enumerating all subsets of its edges, retaining exactly the connected acyclic n-vertex subsets containing0, and choosing a uniformly random retained index gives an exact finite sampler. On Z^2 the ambient edge count is O(n^2), so the naive running time is at most exponential in n^2. Check: Every tree vertex is reached by at most n-1 unit steps from0, proving the finite containment. Acyclicity plus connectedness and n vertices characterizes the required objects, with each edge set counted once. Obstruction: This supplies existence and exactness but fails efficiency. The later Fredes-Marckert survey constructs uniform-stationary chains; their existence alone does not provide a polynomial mixing bound.\nRefers to the open problem node open-problem-p0127-efficient-approximately-uniform-sampling-of-lattice-trees\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0127-efficient-approximately-uniform-sampling-of-lattice-trees",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0127",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    },
+    {
+      "node_id": "claim_d0fc9825e900154db74eaa53e25bc58bbbc6614b9c140aceb6081a5a9db8b1c2",
+      "title": "Open problem: Efficient approximately uniform sampling of lattice trees",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Give a provably efficient algorithm to sample approximately uniformly from the n-vertex lattice trees containing the origin, or prove an appropriate computational obstruction. Source: Schramm: Conformally invariant scaling limits, overview and collection of problems, 2006v2, Problem2.9, PDF p.18.\nPosed in Schramm: Conformally invariant scaling limits, overview and collection of problems, 2006v2\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "logical_id": "math:probability.core:open-problem-p0127-efficient-approximately-uniform-sampling-of-lattice-trees",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0127",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    }
+  ],
+  "P0456": [
+    {
+      "node_id": "claim_88531fd1ef82adf36ea269fd177f2f081a7793bcbca1af61bde7a31b7f8a8418",
+      "title": "Attempt on Simultaneous concentration of bilateral preference degrees",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics Result: Put delta=sqrt(6*k*log(n)) and assume k>2*delta. Threshold edge weights at t=(k-delta)/(n-1). Each threshold degree B_v is binomial with mean k-delta. Chernoff and a union bound give k-2*delta<=B_v<=k for all vertices with probability at least 1-2/n^2. On that event every threshold edge is preferred at both endpoints, so k-2*delta<=D_v<=k simultaneously. Thus k/log(n)->infinity suffices for relative concentration. The argument uses independence of the underlying edge weights, and never independence of vertex degrees. Check: Upper and lower Chernoff exponents are at least delta^2/(2*k)=3*log(n), followed by a union over n vertices. The deterministic threshold inclusion follows directly from having at most k incident edges below t at each endpoint. Obstruction: A sufficient-condition partial only. Sharp tails and the logarithmic boundary are not determined; below connectivity isolated vertices rule out concentration of every degree near k.\nRefers to the open problem node open-problem-p0459-simultaneous-concentration-of-bilateral-preference-degrees\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0459-simultaneous-concentration-of-bilateral-preference-degrees",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0459",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    },
+    {
+      "node_id": "claim_f59dfec9f3487470d976671364ce7123ec9985a9a2c360c7ab5288afc57ebedf",
+      "title": "Attempt on The standardized degree law in growing bilateral preference graphs",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics Result: The packet uses the exact root (k+1)st order statistic X~Beta(k+1,n-k-1). Ignoring internal edges among the root preferred neighbors gives D0|X~Bin(k,1-q(X)), where q(X)=E[(X-T)+]/X and T~Beta(k,n-2k). The actual error satisfies E[(D0-D)^2/k]=O(k^2/n+k^5/n^2). Beta central limits and explicit moment controls then give (k-D)/sqrt(k)->g(Z), g(z)=phi(z)+z*Phi(z), with convergence of its first two moments. The variance constant is v=1/3+(sqrt(3)-2)/(2*pi), and the standardized degree limit is (1/sqrt(pi)-g(Z))/sqrt(v), which is non-Gaussian. Check: All 720 rank permutations on four vertices for k=1,2 satisfy D<=D0<=D+2J; degree means 3/5 and 8/5 agree with independent two-endpoint rank probabilities. The separate fixed-k EWT root mixture followed by a gamma limit yields the same g(Z). Exact conditioning, L2 comparison, uniform integrability and a polar calculation of v are detailed in the packet. Obstruction: Author-only partial candidate for the broader source question. No independent review, current-openness or novelty certificate, and no assertion for every k regime.\nRefers to the open problem node open-problem-p0458-the-standardized-degree-law-in-growing-bilateral-preference-graphs\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0458-the-standardized-degree-law-in-growing-bilateral-preference-graphs",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0458",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    },
+    {
+      "node_id": "claim_94332ed804a6b11d3882283c44a5ce3dda702c4ee90c95b84884007e75dea087",
+      "title": "Attempt on The fine connectivity window for bilateral preference graphs",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Exact conditioning, spectral integral estimate, deterministic graph comparison or order-statistic asymptotics Result: At k=log(n)+a*sqrt(log(n)), the known mean-degree expansion gives E[D]=log(n)+(a-1/sqrt(pi))*sqrt(log(n))+lower-order terms. Matching this mean to log(n) therefore suggests an apparent positive shift, but it does not derive a connectivity threshold: isolated-vertex probabilities depend on the far lower tail of D, not its mean. Even the candidate central fluctuation law in the separate packet probes deficits of order sqrt(k); isolation requires deficit k, a moving far-tail event outside that limit. An actual sharp-window proof must analyze the relevant order-statistic large deviation and then exclude nontrivial small components. Check: Substitute the proposed k into sqrt(k/pi) and divide the remainder by sqrt(log(n)). Separately, weak convergence at fixed scaled thresholds gives no estimate at a threshold diverging like sqrt(k). Obstruction: No connectivity shift, window width or limiting probability is established; the mean-matching calculation is explicitly a failed inference to test.\nRefers to the open problem node open-problem-p0456-the-fine-connectivity-window-for-bilateral-preference-graphs\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0456-the-fine-connectivity-window-for-bilateral-preference-graphs",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0456",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    }
+  ],
+  "C0058": [
+    {
+      "node_id": "claim_6ee908b5f808cca14f04a9496a7df36b77c5fdd7c0ca2b7a7d3ee18a1cb155de",
+      "title": "Attempt on A peeling algorithm exploring site percolation on Boltzmann maps",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Design the algorithm and check whether the exploration frontier remains Markov. Result: For bond percolation the peeling frontier is a two-colour boundary (free/blocked edges) and the algorithm peels the edge at the colour change, keeping the unexplored region a Boltzmann map with a boundary of the same type. For site percolation the colour lives on vertices and after peeling a face the newly exposed boundary vertices are uncoloured; the natural algorithm peels the edge whose left endpoint is black and right endpoint is uncoloured, colouring the new vertices as they appear. The unexplored region is then a Boltzmann map with a boundary condition that is a word in {black, white, uncoloured}, and the difficulty is that the length of the black segment is no longer a Markov chain by itself: the future depends on the positions of uncoloured vertices along the boundary. The frontier becomes Markov if one records the boundary word, which is an infinite-dimensional state. On triangulations the problem was solved (Angel-Curien) because degree-3 faces expose at most one new vertex per step, keeping the state finite; for general Boltzmann maps with large faces a peeled face exposes many uncoloured vertices at once. So a Markov site-percolation peeling exists exactly when faces expose boundedly many vertices, i.e. for bounded face degrees, and the general Boltzmann case requires a state space of boundary words; whether the threshold can still be computed from a word-valued Markov chain is the open part. Obstruction: Unbounded face degrees expose many uncoloured boundary vertices at once; the frontier state is a word, not an integer.\nRefers to the open problem node open-problem-c0058-a-peeling-algorithm-exploring-site-percolation-on-boltzmann-maps\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.planarmaps:attempt-c0058-a-peeling-algorithm-exploring-site-percolation-on-boltzmann-maps",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0058",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    },
+    {
+      "node_id": "claim_019cc18aeaf3504ca9b455d1d3526243c45b232bf78fdb66ec7e9525e0f3ce99",
+      "title": "Open problem: A peeling algorithm exploring site percolation on Boltzmann maps",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Can one find a peeling algorithm exploring site percolation on Boltzmann planar maps in the same spirit as the algorithm for bond percolation, so as to compute the site percolation threshold? Source: Curien: Peeling random planar maps, Saint-Flour XLIX 2019 lecture notes, author preliminary version, Open question, p. 79.\nPosed in Curien: Peeling random planar maps, Saint-Flour XLIX 2019 lecture notes, author preliminary version\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.planarmaps:open-problem-c0058-a-peeling-algorithm-exploring-site-percolation-on-boltzmann-maps",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0058",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    }
+  ],
+  "C0082": [
+    {
+      "node_id": "claim_df127cd92d4f0a6377ef899b08d31441efa3f90b37f5b0c3d7e81be6e1922774",
+      "title": "Attempt on Optimal quadratic Littlewood-Offord bound",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Decoupling plus the linear Littlewood-Offord bound, to see where the logarithm enters. Result: Decoupling Q by splitting the index set into two halves I, J gives P(Q = z) <= P(|sum_{i in I, j in J} c_ij xi_i xi'_j - ...| small)^{1/2}-type bounds where, conditionally on the J-variables, the bilinear form is a linear form in the I-variables with coefficients a_i = sum_j c_ij xi_j; the linear Littlewood-Offord (Erdos) bound gives P <= C/sqrt(number of nonzero a_i), and the a_i are nonzero with high probability except on an event where many coefficient sums vanish, whose probability is itself controlled by a Littlewood-Offord bound on the rows; the loss comes from the union over rows and the conditioning, which is where the n^{o(1)} or logarithmic factors enter in the known proofs. The extremal example (xi_1 + ... + xi_n)^2 shows n^{-1/2} is the right order because the square of a sum concentrates on O(sqrt n) values. To remove the logarithm one needs a rank-type inverse theorem: if P(Q = z) >= n^{-1/2} C then the coefficient matrix is close to rank one with arithmetic structure, and the inverse theorems available (Nguyen-Vu) give such structure only at the cost of a logarithmic loss in the threshold. No improvement obtained; the reduction to a lossless inverse theorem is recorded. Obstruction: The known inverse Littlewood-Offord theorems carry logarithmic losses.\nRefers to the open problem node open-problem-c0108-optimal-quadratic-littlewood-offord-bound\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.random-matrices:attempt-c0108-optimal-quadratic-littlewood-offord-bound",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0108",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    },
+    {
+      "node_id": "claim_732401e9c473f58f40e00c1f8acd91bcb1230ce9ba47ac18ccef98b93540794d",
+      "title": "Attempt on Divergence of the 1/d expansion of the connective constant",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Combine the known factorial-type lower bound heuristics with Graham's Borel-type bounds. Result: The source cites Graham's Borel-type bounds on the remainder; if the coefficients a_i satisfy |a_i| >= c K^i i! for infinitely many i then the radius is zero, and the computed a_i (Clisby-Liang-Slade) grow consistently with factorial growth. A rigorous proof of divergence would follow from a lower bound on the number of lace diagrams contributing with the same sign at order i, i.e. a non-cancellation statement; the lace expansion for SAW has alternating-sign contributions (pi^{(N)} with sign (-1)^N) so cancellation cannot be excluded without an explicit asymptotic analysis of the diagram sums. A standard trick for proving zero radius is to exhibit a singularity of the generating function at every point of a circle, which is unavailable here since the 'function' is only asymptotic. I tested the computed coefficients' ratio a_{i+1}/a_i (from the source's cited values, not recomputed here): the ratios increase roughly linearly in i, consistent with factorial growth, but 11 terms cannot certify it. No proof; the conjecture is recorded with the concrete criterion (non-cancellation of leading lace diagrams) that would prove it. Obstruction: Alternating-sign lace contributions may cancel; no asymptotic diagram count with sign control.\nRefers to the open problem node open-problem-c0097-divergence-of-the-1-d-expansion-of-the-connective-constant\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.percolation:attempt-c0097-divergence-of-the-1-d-expansion-of-the-connective-constant",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0097",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    },
+    {
+      "node_id": "claim_aa8e9c903ef0b2ae93cf71fc58b647b2657d399ae56df5aa2d660ef5d873f0d0",
+      "title": "Attempt on First coefficient where the 1/d expansions of p_c on Z^d and on the hypercube differ",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Compare the short cycle structure of Z^d and the hypercube to predict the first differing coefficient. Result: The coefficients a_i are determined by the counts of closed non-backtracking walks of length up to 2i in the graph (the lace-expansion diagrams at order i involve random-walk loops of length up to 2i, up to the normalisation by (2d)^i). Z^d and the hypercube both have degree 2d (resp. d, with the appropriate rescaling) and both have girth 4; the number of 4-cycles through a vertex is d(d-1)/2 ... for Z^d: choose two distinct directions, 4 sign patterns give (2d)(2d-2)/2 cycles; for the hypercube choose two coordinates: d(d-1)/2 cycles; after the normalisation by degree these agree to leading order, which is why a_2 agrees. 6-cycles: in Z^d a 6-cycle uses three directions (counts (2d)(2d-2)(2d-4)/...), or two directions with a back-and-forth (which is backtracking-free? a 6-cycle in two directions like ++-+-- exists in Z^2: no, in Z^2 6-cycles do not exist since the square lattice is bipartite with girth 4 and 6-cycles would need ... Z^2 has cycles of length 6? A closed walk of length 6 that is a simple cycle in Z^2 encloses 2 squares: yes, the 2x1 rectangle has perimeter 6. In the hypercube a simple 6-cycle uses exactly three coordinates (a 6-cycle in Q_3 exists); in Z^d a 6-cycle can use two directions (the 2x1 rectangle) or three. The hypercube has no 2x1 rectangle analogue (in Q_d, two coordinates span a 4-cycle only). So the 6-cycle counts differ at relative order 1/d^2: Z^d has extra 6-cycles using only two directions, of number of order d^2 versus the three-direction ones of order d^3; the 1/d^2-relative difference in the 6-cycle count enters the coefficient at order (2d)^{-3} x (1/d^2)... The source says a_3 agrees, consistent with the two-direction 6-cycles being of lower order; they enter at order 1/d beyond a_3's leading diagrams, i.e. at a_4 or a_5. Prediction: the first differing coefficient is a_4 (from the 2x1-rectangle 6-cycles, absent in the hypercube), unless their contribution cancels, in which case a_5. This is a heuristic prediction, not a proof; the source's hint that the proofs in [173, 174] suggest a difference at some i >= 4 is consistent. Key identity: The 2x1-rectangle 6-cycles exist in Z^d but not in the hypercube; their normalised count is one order in 1/d below the three-direction 6-cycles, predicting the first discrepancy at a_4. Obstruction: Not proved; requires the fourth-order lace diagrams on both graphs.\nRefers to the open problem node open-problem-c0082-first-coefficient-where-the-1-d-expansions-of-p-c-on-z-d-and-on-the-hy\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.percolation:attempt-c0082-first-coefficient-where-the-1-d-expansions-of-p-c-on-z-d-and-on-the-hy",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0082",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    }
+  ],
+  "C0126": [
+    {
+      "node_id": "claim_cb07d1072501831c094aaa8d74db5cbb23513f9a452c91562d6fe5fec13b3d04",
+      "title": "Attempt on Random walk on the incipient infinite cluster of oriented percolation in dimensions 5 and 6",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Identify which estimate needs d > 6 and whether it is an artefact. Result: The source's proof of the Alexander-Orbach behaviour for the oriented IIC uses a zigzag-path count converging like sum_m m^{(4-d)/2}, which needs d > 6, while the oriented IIC's mean-field structure (Hofstad-den Hollander-Slade) holds for d > 4. The zigzag count controls the resistance between the origin and level n via the number of paths that go up, come back down and go up again; in d = 5, 6 these counts diverge, meaning the crude flow bound fails, but the true resistance may still be of order n (mean-field, tree-like) because the divergent terms are overcounting: paths in the oriented IIC cannot return to earlier times, so a zigzag in the bound corresponds to two disjoint upward paths connected through the IIC's backbone, whose number is controlled by the two-point function squared, giving a convergent sum for d > 4 if the backbone is used correctly. So I expect the Alexander-Orbach value d_s = 4/3 to hold for the oriented IIC in d = 5, 6 as well, and the obstruction to be technical (the resistance lower bound of Kumagai-Misumi type needs a better flow construction using the backbone). This is a prediction with a proposed route (flow along the oriented backbone with branching at the pivotal levels), not a proof. Key identity: Oriented paths cannot return to earlier times, so the zigzag overcount should be replaceable by a backbone-branching flow with convergence for d > 4. Obstruction: The improved flow construction is not carried out.\nRefers to the open problem node open-problem-c0126-random-walk-on-the-incipient-infinite-cluster-of-oriented-percolation\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.percolation:attempt-c0126-random-walk-on-the-incipient-infinite-cluster-of-oriented-percolation",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0126",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    },
+    {
+      "node_id": "claim_af49ba706cb02a58203aa7beddb46d862b0e6447760a55b3570d351ab8c2249f",
+      "title": "Open problem: Random walk on the incipient infinite cluster of oriented percolation in dimensions 5 and 6",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). The critical dimension of oriented percolation is 4; describe the behaviour of simple random walk on the IIC of oriented percolation (Z^d x Z_+) for d = 5 and 6, where the mean-field heat-kernel proof (which needs d > 6) does not apply. Source: Kumagai: Random walks on disordered media and their scaling limits, Saint-Flour XL 2010, author version, Section 6.3 open problem, p. 58.\nPosed in Kumagai: Random walks on disordered media and their scaling limits, Saint-Flour XL 2010, author version\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.percolation:open-problem-c0126-random-walk-on-the-incipient-infinite-cluster-of-oriented-percolation",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0126",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    },
+    {
+      "node_id": "claim_a994680a88fd0019a81f212145341256ef75f985f9082a978376da0aa01f2b3b",
+      "title": "Open problem: Scaling limit of random walk on the high-dimensional incipient infinite cluster",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove that random walk on the incipient infinite cluster of high-dimensional (d > 6) percolation has a non-degenerate scaling limit. Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 14.2, p. 212. Status notes: Ben Arous, Cabezas and Fribergh ('Scaling limit for the ant in high-dimensional labyrinths', CPAM 2019) proved a scaling limit for random walk on high-dimensional critical clusters in the oriented and branching-random-walk settings; whether the unoriented IIC case d > 6 is covered was not confirmed in this session.\nPosed in Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.percolation:open-problem-c0074-scaling-limit-of-random-walk-on-the-high-dimensional-incipient-infinit",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0074",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    }
+  ],
+  "P0014": [
+    {
+      "node_id": "claim_46d8c9a921e86146816a17fe085f20a00d5de35328c3a3618d4e6635e024a9b0",
+      "title": "Attempt on Expected Lovasz theta of a random circulant graph",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Vertex-transitive complement identity Result: A circulant graph is vertex transitive, so theta(G) theta(complement G)=n. Its random model is complement invariant. For Z=log(theta(G)/sqrt(n)), Z has the law of -Z and E theta/sqrt(n)=E cosh Z. The conjecture is therefore equivalent to E(cosh Z-1) tending to zero. Check: The exact identity is stronger than the general product inequality. The symmetric rare-tail example in P0013 has Z tending to zero in probability yet E cosh Z tending to 3/2, so concentration alone is insufficient. Obstruction: Must estimate the exponential tails of the logarithmic theta fluctuation for the dependent circulant adjacency structure.\nRefers to the open problem node open-problem-p0014-expected-lovasz-theta-of-a-random-circulant-graph\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0014-expected-lovasz-theta-of-a-random-circulant-graph",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0014",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    },
+    {
+      "node_id": "claim_9880c0b9aece9e4e62ba92d332d0dfd1aa9045c74523b7a6ec7b077d151efa2f",
+      "title": "Open problem: Expected Lovasz theta of a random circulant graph",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For the graph on Z/nZ formed by independently including each unordered nonzero generator pair {k,-k} with probability 1/2, is E theta(G)=(1+o(1)) sqrt(n)? Source: Randomstrasse101: Open Problems of 2025, Conjecture 18, Entry 9.\nPosed in Randomstrasse101: Open Problems of 2025\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "logical_id": "math:probability.core:open-problem-p0014-expected-lovasz-theta-of-a-random-circulant-graph",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0014",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    }
+  ],
+  "P0042": [
+    {
+      "node_id": "claim_0e8b0661325edb0788ce53ebae447cb1a3d767a80938189f39bbdd2230a61141",
+      "title": "Attempt on Bootstrap thresholds as a characterization of amenable groups",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Bootstrap thresholds on the line and the three-regular tree Result: On Z the one-neighbor bootstrap threshold is zero, whereas the two-neighbor threshold is one because any initially vacant adjacent pair stays vacant. On the three-regular tree with threshold two, the final vacant set is the two-core of the initial vacant percolation. If its density q<=1/2, all vacant clusters are finite almost surely and leaf pruning empties them. If q>1/2, with positive probability a vertex has two surviving vacant branches, giving a bi-infinite vacant path that remains vacant. Hence the complete-occupation threshold is p=1/2. Check: An infinite bi-infinite path supplies a stable set since each vertex has two vacant neighbors. Finite trees have an exposed leaf and are exhausted by the pruning process. Critical Binomial(2,1/2) clusters die out. Obstruction: This illustrates both the amenable endpoint behavior and a nonamenable interior threshold. It does not classify every generating set or every group.\nRefers to the open problem node open-problem-p0042-bootstrap-thresholds-as-a-characterization-of-amenable-groups\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0042-bootstrap-thresholds-as-a-characterization-of-amenable-groups",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0042",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    },
+    {
+      "node_id": "claim_1b42bed2af01c6875f00062814db98c5bc5ee6fe27b4f99f076052caf401ee5a",
+      "title": "Open problem: Bootstrap thresholds as a characterization of amenable groups",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Is a finitely generated group amenable exactly when every Cayley graph from every finite generating set has bootstrap complete-occupation critical probability p(G,k) in {0,1} for every threshold k? Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 7.42, printed p.266.\nPosed in Probability on Trees and Networks, paperback electronic version 19 August 2026\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "logical_id": "math:probability.core:open-problem-p0042-bootstrap-thresholds-as-a-characterization-of-amenable-groups",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0042",
+      "source_revision": "author-checked-private-20260907-v1",
+      "truth_status": "unverified",
+      "proof_text": ""
+    }
+  ]
+}

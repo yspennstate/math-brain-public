@@ -1,0 +1,16 @@
+{
+  "helper_version": "claude-B13-sandwich-v1 (frozen 2026-10-11T22:35Z before any run)",
+  "families": [
+    "ALL Boolean sign truth tables on n=1,2,3,4 uniform cubes (4, 16, 256, 65536 functions)",
+    "B05 sparse bent point-defect family F_k(y,x,z): G if y=0, H if y=1; G=1+A(z)(b(x)-1), H=1+A(z)(b'(x)-1), b quadratic bent on k bits, b' = b flipped at x=0, A=1{z=0}, r=2k control bits; k=4 full trees (13 vars), k=6 root only (19 vars)"
+  ],
+  "quantities": "H, I, per coordinate d_i, D_i, B_i, J_i, lambda_i (both formulas), KL form; tree DP for rules minInf, maxInf, greedyD, greedyL, lex (all n<=4) and selector_first, control_first, control_selector, greedyD, minInf, maxInf (B05 k=4); E sum lambda, E sum D, E sum d; minimal nonnegative potential Qstar=max(0,D-Cd+avg Qstar_child) for C in {4, 6.5218, 8} and C=C_4",
+  "parameter_domain": "n<=4 exhaustive; B05 k in {4} (tree) and {4,6} (root)",
+  "case_count": "65536+256+16+4 functions x n coordinates; B05: <=8191 tree nodes per rule",
+  "symmetry_reduction": "none (exhaustive)",
+  "arithmetic": "integer Walsh sums; all spectral probabilities exact dyadic rationals (exact in float64); logarithms from a table of log2(integer) values computed with mpmath at 40 digits and rounded to float64 (error <= 2^-53 relative); float64 sums of <= 64 terms; stated error bound 1e-11 absolute on every ratio; maximizers re-evaluated as exact rational combinations of log2 of primes and evaluated with mpmath interval arithmetic",
+  "memory_estimate": "under 400 MB (65536 x 16 int64 arrays, B05 k=6 root 2^19 arrays)",
+  "maximum_runtime_seconds": 600,
+  "stop_rule": "no automatic increase of n or k",
+  "purpose": "verify the proved sandwich and KL identities exhaustively at n<=4; certify n<=4 values of C_n=max H/I, K_n=max min_i D_i/d_i, KL_n=max min_i lambda_i/d_i; compare rules on B05 k=4 including terminal and potential requirements. Finite results are evidence for the universal questions, certificates only for the finite statements."
+}

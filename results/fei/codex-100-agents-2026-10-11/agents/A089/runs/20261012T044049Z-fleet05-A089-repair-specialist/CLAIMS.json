@@ -1,0 +1,49 @@
+[
+  {
+    "claim_id": "A089-LEX-LIMIT-AND-RAW-COMPOSITION-REPAIR",
+    "version": 1,
+    "exact_statement": "For n>=5, the canonical lex sign f_n=-1 on index<floor(2^n/10) has E(f_n)=psi(2 floor(2^n/10)/2^n), attained exactly at its top three coordinates, and E(f_n)->(17 log2(17)-56)/5, where E=min over relevant i of B_i/Inf_i and psi(d)=2-2d+Phi((1-d)^2,d^2)/d. For m>=5,L=m^2,n=m+L,t=2^L floor(2^m/10)+1, the lex sign has its minimum at all L+v2(floor(2^m/10)) newly relevant terminal coordinates; with d0=2^(1-L) its minimum lies between 2-2d0 and 2+d0(6L+8), hence tends to 2 although t/2^n->1/10. For raw recursion F_0=x, F_d=f_5(F_(d-1),...,F_(d-1)) on disjoint copies of f_5=-1 on indices 0,1,2 with +1 child encoded as bit 0, the explicit T,B,T,B,... coordinate path has B_i/Inf_i<3 for every d>=1. Thus E(F_d)<3 for all depths; the proof does not assert monotonicity of E with depth.",
+    "hypotheses": [
+      "Actual Boolean signs under independent uniform physical inputs; entropy in bits",
+      "Phi(a,b)=(a+b)h2(b/(a+b)), with continuous zero conventions",
+      "Lexicographic index=sum_i 2^i x_i, most significant bit n-1",
+      "Raw recursive copies are physically disjoint; child output +1 is outer bit 0, -1 is outer bit 1",
+      "E is minimized only over relevant physical coordinates; no restriction-closure premise",
+      "The two lex sequences are specified exactly; t/2^n alone does not determine an E limit"
+    ],
+    "statement_sha256": "a91726d967ff6c647193be8bdcba981c476d73467e445ac6edca6dadec08c683",
+    "contributors": [
+      "A089"
+    ],
+    "proof_source": {
+      "run_id": "20261012T044049Z-fleet05-A089-repair-specialist",
+      "path": "REPORT.md",
+      "sections": "2-7",
+      "certificates": [
+        "out/SCALAR_CERTIFICATES.json",
+        "out/VALIDATION.json",
+        "out/RARE_SEQUENCE_CHECK.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unqualified assertion that t_n/2^n ->1/10 forces the canonical erasure-minimum limit",
+      "Raw canonical f5 recursive composition as a source of unbounded E or of E>3.39"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A090",
+      "A094",
+      "A075",
+      "A002",
+      "A005",
+      "A053",
+      "B15",
+      "B18",
+      "B20"
+    ]
+  }
+]

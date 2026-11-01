@@ -1,0 +1,53 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "focus_revision": "2026-10-14.1/GU-LASER-20261014",
+  "run_id": "20261014T075040Z-fleet01-B19-changing-overlap-review-a092",
+  "stream": "B19",
+  "primary_packet_id": "A092",
+  "packet_id": "A092",
+  "packet_ids": ["A092"],
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "gap_ids": ["GU-ASYMMETRY-MISMATCH", "B05_RARE_REFUNDS"],
+  "attempt_id": "B19-A092-CHANGING-OVERLAP-REVIEW-v1",
+  "method": "Independent rational Walsh reconstruction of the B05 majority multiplexer, followed by adversarial expansion of the charged coordinate set.",
+  "bounded_objective": "Audit the exact changing-overlap counterfamily and determine whether adding the shared selector influence repairs the local fee.",
+  "prior_status": "B05 author-proved a symmetric-difference influence no-go pending independent review.",
+  "mathematical_delta": "Accepted the B05 claim without mathematical repair. Proved the stronger union-block no-go: Inf_x=Inf_y=Inf_z=1/2, so even all local block influence cannot pay the logarithmically divergent potential jump.",
+  "deliverable_status": "COMPLETE_REVIEW_AND_STRENGTHENING_PACKAGE_PENDING_FRESH_REVIEW_OF_STRENGTHENING",
+  "mathematical_status": "B05_CLAIM_INDEPENDENTLY_ACCEPTED; UNION_BLOCK_STRENGTHENING_PROVED_PENDING_REVIEW; UNIVERSAL_GU_OPEN; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "B05-A023-CHANGING-OVERLAP-SWAP-NOGO-v1",
+    "B19-FIXED-BLOCK-LOGARITHMIC-STRENGTHENING-v1",
+    "B01-A003-SIGNED-MISMATCH-REFUND-v1"
+  ],
+  "claims_created_or_changed": [
+    "B19-A092-CHANGING-OVERLAP-REVIEW-v1",
+    "B19-A092-UNION-BLOCK-SWAP-NOGO-v1"
+  ],
+  "verification": {
+    "command": "python3 REVIEW_CHECK.py",
+    "status": "PASS",
+    "independent_direct_cases": 5,
+    "exact_rational_identities": 45,
+    "largest_closed_formula_rank": 10001,
+    "scope": "Independent exact Fraction orbit/influence identities; analytic central-binomial asymptotic."
+  },
+  "remaining_obstacle": "The family has total influence Theta(sqrt m), so global influence or signed whole-slice credit may still pay. No GU pair is proved or refuted.",
+  "next_consumers": ["B05", "B20", "A085", "A087", "A090"],
+  "reviewer_targets": ["A085", "A090"],
+  "next_action": "Audit a two-swap whole-slice ownership rule and test whether private-core influence is charged once or at each overlap transition.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [],
+  "delivery_status": {
+    "state": "DELIVERED_AND_EXACT_READBACK_VERIFIED",
+    "canonical_bundle_head_observed": "52c6dd97a9426aed87f48190d13eebb6f1c2b157",
+    "brain_bundle_head_observed": "6430fb816431298f983ca236d472176233c269b5",
+    "exact_files_verified_before_status_update": 12,
+    "canonical_native_ingestion": "NOT_CLAIMED",
+    "brain_native_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN",
+  "model": "Codex",
+  "reasoning_effort": "UNKNOWN"
+}

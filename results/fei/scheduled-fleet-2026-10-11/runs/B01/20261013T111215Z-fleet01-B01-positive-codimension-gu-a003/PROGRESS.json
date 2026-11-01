@@ -1,0 +1,66 @@
+{
+  "schema": "fei-progress/2",
+  "run_id": "20261013T111215Z-fleet01-B01-positive-codimension-gu-a003",
+  "stream": "B01",
+  "account": "fleet01",
+  "primary_packet_id": "A003",
+  "packet_ids": ["A003"],
+  "attempt_id": "A003-POSITIVE-CODIMENSION-GU-1",
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "claim_versions": [
+    "B01-A003-POSITIVE-CODIMENSION-GU-v1",
+    "B01-A003-POSITIVE-CODIMENSION-FEI-v1",
+    "GU-ASYMMETRY-MISMATCH-v1.3"
+  ],
+  "bounded_objective": "Prove a dimension-free aggregate GU inequality on the complete physical-restriction closure of one canonical matched bilinear block sharing one point-defect cylinder, uniformly in bilinear rank and defect codimension.",
+  "prior_status": "The canonical codimension-zero root had G<=(5/2)I, and the independently reviewed rank-zero partial-star/point-defect boundary had G<=14I; their mixed positive-codimension restriction family was uncontrolled.",
+  "new_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW; FULL_FEI_OPEN",
+  "mathematical_delta": "Proved G<=64I throughout the restriction-closed canonical bilinear point-defect family for arbitrary rank t and codimension k. This gives U<=64I and H<=130I by restriction induction, while an independent exact calculation gives the sharp class endpoint H<=4I.",
+  "previous_bound": "Separate k=0 and t=0 endpoints only.",
+  "new_bound": "All t,k and physical restrictions: G<=64I; U<=64I; H<=130I; direct H<=4I sharp.",
+  "class_parameters": {
+    "dimension": "unbounded",
+    "bilinear_rank": "t>=0 arbitrary",
+    "positive_codimension": "k>=0 arbitrary",
+    "affine_phase": "arbitrary a,b,c",
+    "restriction_depth": "unbounded",
+    "disjoint_block_count": "finite arbitrary",
+    "overlap": "one canonical matched bilinear block shares one point-defect cylinder",
+    "activation_probability": "2^{-(t+k)}; arbitrary dyadic rarity",
+    "constants": {"G_over_I": 64, "U_over_I": 64, "bridge_H_over_I": 130, "direct_H_over_I": 4}
+  },
+  "source_pins": {
+    "control_revision": "2026-10-12.1",
+    "control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "assignment_path": "reports/fei-2026-10-11/assignments/B01.json",
+    "predecessor_run": "20261013T092317Z-fleet01-B01-partial-star-defect-gu-a003",
+    "independent_boundary_review_run": "20261013T094538Z-fleet01-B19-partial-star-review-a094",
+    "independent_boundary_review_canonical_commit": "d5d05e74af20f7730bf1c52ee5b4be8db5015751",
+    "independent_boundary_review_brain_commit": "0e74dbe1553a8f333eb9f37764b16afd999c77c1"
+  },
+  "evidence": {
+    "proof": "PROOF.md",
+    "checker": "CHECK_POSITIVE_CODIM.py",
+    "checker_output": "CHECK_POSITIVE_CODIM.out",
+    "scan": "SCALAR_SCAN.py",
+    "scan_output": "SCALAR_SCAN.out",
+    "verification_result": "PASS: 1401380 checks; 608 exact truth cases; 697124 scalar cases; coefficient envelope through k=2048"
+  },
+  "attempt_counter": 1,
+  "acceptance_status": "PENDING_A086_A094_OR_B19",
+  "packet_complete": false,
+  "full_fei_status": "OPEN",
+  "remaining_obstacle": "The proof uses one point exceptional fiber with a fixed scalar law. An arbitrary Boolean core on a positive-dimensional rank-deficient fiber can create coherent signed sums and interacting upper filters not controlled by this deviation envelope.",
+  "next_action": "Freeze the codimension-one positive-dimensional fiber functional for an arbitrary Boolean core D and prove that its complete signed restriction charge is paid by core influence plus retained terminal U uniformly in the fiber dimension, or produce a genuine Boolean growing-ratio falsifier.",
+  "consumer_targets": ["B01", "B05", "B18", "B20"],
+  "reviewer_targets": ["A086", "A094", "B19"],
+  "delivery": {
+    "canonical_path": "reports/fei-2026-10-11/runs/B01/20261013T111215Z-fleet01-B01-positive-codimension-gu-a003/",
+    "brain_path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B01/20261013T111215Z-fleet01-B01-positive-codimension-gu-a003/",
+    "canonical_commit": "7c67ec4eb8efee7edd9a425379692c12a4b6fecf",
+    "brain_commit": "1befd8f2a722c255b7723303deeb17e5cac74041",
+    "verified_readback": true,
+    "readback_detail": "All 12 package files resolved at both immutable commits and matched their created Git blob SHAs (24/24).",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  }
+}

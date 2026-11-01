@@ -1,0 +1,115 @@
+[
+  {
+    "source": {
+      "claim_id": "A008-COMMON-ANCHOR-OVERLAP-OBSTRUCTION-AND-CORE-DICTIONARY-PAYMENT",
+      "version": 1,
+      "exact_statement": "For every r>=1 and widths w_j>=1, let U=product_j OR(X_j), with disjoint private blocks X_j of widths w_j, T=z OR U on one shared coordinate z, and f=2T-1. Put epsilon_j=2^(-w_j), a=product_j(1-epsilon_j), J=a sum_j w_j epsilon_j/(1-epsilon_j). Then physical I(f)=1-a+J. Let Q be the normalized A006 anchored clause-mask union law on supports {z} union X_j, with t_j=epsilon_j/2, empty mass 1-t_j and each nonempty mask mass t_j^2/(1-t_j). The fixed normalized reference R=(delta_{ {z}}+Q)/2 satisfies sum_{A nonempty} hat(f)(A)^2 log2(1/R(A)) <=(29/2) I(f); the standard empty/nonempty wrapper costs at most (33/2) I(f). For all w_j=2 and r>=4, the unaugmented Q instead has nonempty cross-entropy divided by I(f)>3(r-1)/224, although H(f)<6 I(f).",
+      "hypotheses": [
+        "Uniform physical cube; all private X_j are mutually disjoint and disjoint from the one shared coordinate z.",
+        "Representation, z and widths are public before the spectral set is sampled; R is fixed for the whole spectral set.",
+        "Entropy and logarithmic code costs use base 2. Claims concern logarithmic cost with standard asymptotic arithmetic coding, not an uncharged integral prefix length."
+      ],
+      "statement_sha256": "f6e2559e906465e54cfeeaeda85415530d987e63c28b73ea05a9774b802081a0",
+      "contributors": [
+        "A008"
+      ],
+      "proof_source": [
+        "COMMON_ANCHOR.md",
+        "LOG_CERTIFICATE.md",
+        "code/check.py",
+        "out/full.json"
+      ],
+      "proof_dependencies": [
+        {
+          "claim_id": "A006-NORMALIZED-SHARED-TAG-PUSHFORWARD-AND-PAID-CLAUSE-CODE",
+          "version": 1,
+          "scope": "Normalized physical-union reference only; independently accepted here.",
+          "statement_sha256": "1895831db59ae421ddc431d33d703060798097b6193a4f1591d004e8f283cf08"
+        },
+        "Standard binary entropy wrapper h2(Var(f))<=2 I(f); complete new physical moments derived directly."
+      ],
+      "review_records": [],
+      "status": "PROVED_LOCALLY_INDEPENDENT_REVIEW_PENDING",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": "None in the stated common-anchor theorem. Universal extension: a fixed dictionary of arbitrary intersecting cores has a paid selector and true physical occupation cost bounded by one absolute multiple of physical influence.",
+      "next_consumers": [
+        "A006",
+        "A015",
+        "A086",
+        "A094",
+        "B02"
+      ]
+    },
+    "review": {
+      "reviewer": "A006",
+      "kind": "INDEPENDENT_NEW_EXTENSION_FULL_SCOPE_RECONSTRUCTION",
+      "verdict": "HOLDS_FULL_STATED_SCOPE_NO_REPAIR",
+      "source_version": 1,
+      "statement_sha256": "f6e2559e906465e54cfeeaeda85415530d987e63c28b73ea05a9774b802081a0",
+      "evidence": [
+        "REVIEW_SOURCES.md",
+        "code/check.py",
+        "out/CHECK.json",
+        "out/PILOT.json"
+      ],
+      "independence_limit": "A006 authored A008 normalization premise; that premise has prior A008/A009 independent acceptance. No source executable imported; new extension and all-activation barrier reconstructed independently."
+    }
+  },
+  {
+    "source": {
+      "claim_id": "A009-ALL-ACTIVATION-UNIFORM-MASK-CORE-OBSTRUCTION",
+      "version": 1,
+      "exact_statement": "For every integer w>=8, set r=w*2^w and f=2[z OR product_(j=1)^r OR_w(X_j)]-1 on one common physical bit and disjoint private blocks. Every whole-set reference that chooses any nonempty active-support set among E_j={z} union X_j and then independently samples uniform nonempty local subsets, and every mixture of such references, has C_Q(f)/I(f)>w/4, while H(f)/I(f)<35/8. This includes every globally incidence-feasible independent activation vector and every retuning or mixture of forced-anchor activation samplers on these same uniform dictionaries.",
+      "hypotheses": [
+        "Uniform physical cube; entropy and complete nonempty code cost in bits; physical flip influence.",
+        "Active supports are chosen before their independent uniform nonempty subset draws; dictionaries remain the specified supports. Adding a core atom or changing local subset laws is outside the refuted class.",
+        "Zero reference probability at a positive spectral atom is interpreted as infinite cost."
+      ],
+      "statement_sha256": "270cb5c13039d7be9638588190c3e5f056a6537218b3b887b9a026863e41920e",
+      "contributors": [
+        "A009"
+      ],
+      "proof_source": [
+        "RETUNING_OBSTRUCTION.md",
+        "code/check.py",
+        "out/CHECK.json"
+      ],
+      "proof_dependencies": [],
+      "review_records": [
+        {
+          "reviewer": "A009",
+          "kind": "AUTHOR_ANALYTIC_PROOF_AND_EXACT_CERTIFICATES",
+          "acceptance": "INDEPENDENT_AGENT_REVIEW_PENDING",
+          "formal_status": "NOT_FORMALLY_CHECKED"
+        }
+      ],
+      "status": "AUTHOR_PROOF_EXACT_CERTIFICATES; INDEPENDENT_AGENT_REVIEW_PENDING",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A006",
+        "A008",
+        "A010",
+        "A015",
+        "Claude/B02",
+        "B20"
+      ]
+    },
+    "review": {
+      "reviewer": "A006",
+      "kind": "INDEPENDENT_NEW_EXTENSION_FULL_SCOPE_RECONSTRUCTION",
+      "verdict": "HOLDS_FULL_STATED_SCOPE_NO_REPAIR",
+      "source_version": 1,
+      "statement_sha256": "270cb5c13039d7be9638588190c3e5f056a6537218b3b887b9a026863e41920e",
+      "evidence": [
+        "REVIEW_SOURCES.md",
+        "code/check.py",
+        "out/CHECK.json",
+        "out/PILOT.json"
+      ],
+      "independence_limit": "A006 authored A008 normalization premise; that premise has prior A008/A009 independent acceptance. No source executable imported; new extension and all-activation barrier reconstructed independently."
+    }
+  }
+]

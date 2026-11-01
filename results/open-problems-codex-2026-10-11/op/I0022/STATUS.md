@@ -1,0 +1,13 @@
+STATE: DONE
+NEXT: The universal scalar metric version is refuted; for further research, construct a positive-radius incomplete-condensation example or prove a finite-hub skeleton reduction for 0<ν<1.
+VERDICT: PARTIAL
+
+2026-10-11: Started source verification, read-only brain recall, and literature search.
+2026-10-11: Confirmed exact question on source p. 136. Kortchemski (2015) explicitly gives only a partial answer, with regularly varying offspring probabilities. All five requested search services attempted; OpenAlex and Semantic Scholar rate limited. Found Janson (2021), Tree limits and limits of random trees, for closer inspection.
+2026-10-11: Verified Janson (2021) Theorems 10.1 and 11.1: positive long-dendron sampling limits under complete condensation; Remarks 10.8 and 11.3 leave incomplete/multiple condensation open. Found and read Kortchemski–Vetter (2025), extending complete condensation to locally regular Cauchy tails.
+2026-10-11: Wrote full special-case proof that all deterministic compact GH scalings in (Hθ), θ>1, either collapse to the singleton or fail tightness. Proved that the geometric-arm distance law cannot be represented by a separable metric-measure probability space. General ν<1 problem remains unresolved here; no SOLVED_IN_LITERATURE verdict warranted.
+2026-10-11: Two finite algebraic lemmas passed Lean kernel checking (exit_code=0, 45.64s); 59,049 finite inequalities and 156 convolution identities checked exactly. Remaining gap recorded in ATTEMPT.md. Bounded research pass finished.
+2026-10-11: Reopened at user request for a serious second attempt. Reading the prior gap and recalling incomplete-condensation/skeleton results from the read-only brain.
+2026-10-11: Recorded two new approaches in SECOND_ATTEMPT.md: explicit sparse weights with incompatible skeletons, and a finite-hub sampling reduction. Pursued the first and proved stars/double stars along two size subsequences for fixed ν=0 weights, retaining full ordered-tree entropy.
+2026-10-11: Proved that every finite-valued full-sequence metric sampling limit for this example is trivial, even under random tree-dependent scalar rescaling. Also proved the compact GH obstruction and identified both subsequential long-dendron objects. This is a complete counterexample to the universal scalar metric formulation, not a claim excluding every topology-unspecified object.
+2026-10-11: Four new algebraic lemmas passed Lean kernel checking (exit_code=0, 49.80s). Exact partition, exhaustive degree-pattern, independent ordered-tree enumeration and graph/triple checks all passed. Conservatively retain VERDICT: PARTIAL for the original “some kind” question; remaining 0<ν<1 and representation-dependent gaps recorded precisely. Second research pass finished.

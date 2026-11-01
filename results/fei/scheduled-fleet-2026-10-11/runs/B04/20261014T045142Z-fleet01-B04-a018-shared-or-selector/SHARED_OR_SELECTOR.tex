@@ -1,0 +1,110 @@
+\section*{Complete GU increment for a vanishing-gap shared-data selector}
+
+For any Boolean selector
+\[
+ F(s,x)=\begin{cases}g(x),&s=1,\\h(x),&s=-1,\end{cases}
+\]
+let $P_j$ denote averaging over the two restrictions of physical coordinate
+$j$, and put $\Delta_j=1-P_j$.  Since restriction operators commute, the
+complete GU increment at the selector is the exact identity
+\[
+ \boxed{G(F)-{G(g)+G(h)\over2}
+ =\Delta_sU(F)+\sum_{i\in x}\Delta_s\Delta_iU(F).}     \tag{1}
+\]
+The second term is the shared-data curvature.  It is absent from a
+selector-only entropy calculation and may have either sign.
+
+More generally, for
+\[
+ \mathcal R_{a,b}(f)=G(f)-aI(f)-bU(f),
+\]
+the influence and $U$ recursions give
+\[
+ \boxed{\mathcal R_{a,b}(F)-{\mathcal R_{a,b}(g)+
+ \mathcal R_{a,b}(h)\over2}
+ =(1-b)\Delta_sU+\sum_i\Delta_s\Delta_iU-a\operatorname{Inf}_s(F).}
+                                                               \tag{2}
+\]
+Thus (2), rather than $\Delta_sU$ alone, is the exact local quantity that a
+stopping or posterior reserve must pay.
+
+\paragraph{A vanishing-gap family with shared data.}
+Take the OR-of-point-defects family $f_{k,r}$: split the cube into $k$
+disjoint $r$-bit blocks and set the sign to $-1$ iff at least one block is
+at its distinguished point.  Expose one physical bit $s$ in one block.
+The two children are
+\[
+ g=f_{k-1,r},\qquad h=f_{(r-1,r,\ldots,r)},             \tag{3}
+\]
+so they share every other physical data coordinate.  Their disagreement
+gap and the selector influence are exactly
+\[
+ \delta_{k,r}=\Pr[g\ne h]=2^{1-r}(1-2^{-r})^{k-1}.     \tag{4}
+\]
+
+For a heterogeneous vector of block sizes $\mathbf r$, put
+\[
+ \epsilon_j=2^{-r_j},\quad P=\prod_j(1-\epsilon_j),
+ \quad p_0=(2P-1)^2,
+\]
+\[
+ L_j=-\log_2(1-\epsilon_j),\qquad
+ \mu_j={r_j\over2(1-\epsilon_j)}.
+\]
+Direct Fourier and upper-set summation gives
+\[
+ U(\mathbf r)=p_0\log_2{1\over p_0}
+ +4P\sum_j\epsilon_j(r_j-\mu_j)
+ +4P\sum_jL_j((1-\epsilon_j)-P).                       \tag{5}
+\]
+Consequently
+\[
+ G(\mathbf r)=\sum_j r_j\left[U(\mathbf r)-
+ {U(\mathbf r^{j\to r_j-1})+U(\mathbf r\setminus j)\over2}\right].
+                                                               \tag{6}
+\]
+Equations (3), (5), and (6) are a closed exact formula for every term in
+(1), including all physical data influences and both nonuniform children.
+
+\paragraph{Uniform vanishing-gap asymptotic.}
+Fix $0<\lambda<\infty$ and take $k_r2^{-r}\to\lambda$.  Then
+$\delta_{k_r,r}\sim2e^{-\lambda}2^{-r}\to0$.  Expanding the exact formulas
+(5)--(6), with the possible $P=1/2$ cusp retained through the bound
+$x^2\log(1/x)$, gives
+\[
+ {\Delta_sU(f_{k_r,r})\over\delta_{k_r,r}}=1+O_\lambda(r2^{-r}),
+                                                               \tag{7}
+\]
+\[
+ {G(f_{k_r,r})-\tfrac12G(g)-\tfrac12G(h)\over\delta_{k_r,r}}
+ =1+O_\lambda(r^3 2^{-r}),                              \tag{8}
+\]
+and therefore
+\[
+ {\sum_i\Delta_s\Delta_iU\over\delta_{k_r,r}}
+ =O_\lambda(r^3 2^{-r})\longrightarrow0.               \tag{9}
+\]
+These estimates are uniform when $\lambda$ ranges over a fixed compact
+subset of $(0,\infty)$.  In the computed regimes the curvature is negative,
+but no global sign is asserted; only (9) is used.
+
+\paragraph{Sharp implication for GU.}
+Divide (2) by the physical selector influence (4) and use (7)--(9).  The
+complete local residual tends to
+\[
+ 1-a-b.                                                  \tag{10}
+\]
+Hence every universal local stopping rule based on the exact GU residual,
+and in particular every universal GU pair, must satisfy
+\[
+ \boxed{a+b\ge1.}                                       \tag{11}
+\]
+The physical selector influence is therefore an asymptotically sharp
+single-use reserve for this vanishing-gap shared-data family.  A coefficient
+$1/2$ payment cannot be repaired by omitting the data curvature: (1) shows
+the omitted term explicitly, while (8) still has coefficient one.
+
+This does not prove $G\le I$ universally or refute GU.  It isolates the
+correct boundary and shows exactly why a selector-only or half-tax stopping
+ledger cannot close the conjecture.
+

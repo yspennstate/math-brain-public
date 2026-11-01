@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "run_id": "fleet02-B18-20260924T031145Z-auto11",
+  "result": "QFORM-CONDITIONAL-CROSS-PRIVATEBANK-WEAKL2-v1",
+  "checks": {
+    "conditional_rearrangement": {
+      "square_rearrangement": "g_y^*(t) <= L/(sqrt(|a| t))",
+      "bathtub_density": "int t^(-1/2) f^*(t) dt <= 2 sqrt(K) for ||f||inf<=K, int f=1",
+      "conditional_cap": "2 L |a|^(-1/2) K_y^(1/2)"
+    },
+    "negative_half_moment": {
+      "Z0_density_cap": "sqrt(2)/sigma",
+      "bathtub": "E|Z0|^(-1/2) <= 2 sqrt(2) sqrt(H)",
+      "derived": "E K_Y^(1/2) <= 4/sqrt(sigma)",
+      "final": "||p_T||inf <= 8 L/sqrt(|a| sigma) <= 8 sqrt(2)/(||gamma|| sqrt(|a| sigma))"
+    },
+    "physical_currency": "for X^T M Y=2 X^T B Y, tau=||B||op, lambda=|a|||gamma||^2, bound = 8/sqrt(tau lambda)",
+    "explicit_family": {
+      "definitions": "S=(X1+X2)/sqrt2; C=(X3+X4+X5+X6)/2; D0=(X3-X4+X5-X6)/2; U=(X7+X8)/sqrt2; D_rho=sqrt(1-rho^2)D0+rho U",
+      "spectrum": "nonzero spectrum of 2bSC+aD_rho^2 is {-b,a,b}",
+      "leverage_max": "<=1/2 for every 0<=rho<=1",
+      "new_bound": "8/(rho sqrt(ab)) for rho>0",
+      "dependent_pair_bound": "3*2^(5/3)*(a b^2)^(-1/3)",
+      "pinned_F_bound": "12*(a b^2)^(-1/3)",
+      "crossover": "a/b >= 0.3511659807956101*rho^(-6)"
+    },
+    "numeric_samples": [
+      {"a":1,"b":1,"rho":0,"eigenvalues":"[-1,0,0,0,0,0,1,1]","max_leverage":0.5},
+      {"a":1,"b":1,"rho":0.5,"eigenvalues":"[-1,0,0,0,0,0,1,1]","max_leverage":0.5},
+      {"a":2,"b":3,"rho":0.9,"eigenvalues":"[-3,0,0,0,0,0,2,3]","max_leverage":0.5},
+      {"a":7,"b":1,"rho":0.3,"eigenvalues":"[-1,0,0,0,0,0,1,7]","max_leverage":0.5}
+    ],
+    "constants": {
+      "3*2^(5/3)": 9.524406311809198,
+      "8/(3*2^(5/3))": 0.839947366596582,
+      "(8/(3*2^(5/3)))^6": 0.3511659807956101
+    }
+  },
+  "corrections_respected": [
+    "no post-rotation independence",
+    "no arbitrary-joint rank-three coarea",
+    "no conditional-cap-as-independence",
+    "no small-coefficient deletion",
+    "no hidden moments/support/log-concavity/iid",
+    "continuity kept separate"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "run_id": "20260923T092851Z-fleet03-B18-QFORM-r26",
+  "status": "PASS",
+  "checks": {
+    "crossblock_rank2_characteristic_constant": {
+      "K_formula": "2*pi*(sigma1*sigma2)^(-1/2)",
+      "reason": "LPP 2D marginal caps are 2; each amplitude L2 norm <=sqrt(2); Plancherel scaling for phase exp(2it u^T Sigma v) yields pi/(|t|sqrt(det Sigma)) before the product L2 factor."
+    },
+    "half_riesz_general_constant": {
+      "formula": "4*r/(r-1)",
+      "r2": 8.0,
+      "r3": 6.0
+    },
+    "partner_density_wrapper_constant": {
+      "formula": "2*sqrt(2*r/(r-2))",
+      "r3": 4.898979485566356,
+      "r4": 4.0
+    },
+    "obstruction_family": {
+      "spectrum_nonzero": [1, 1, -1],
+      "balanced_cross_product_lower_bound_m_ge_2": 0.2222222222222222,
+      "worst_m": 3,
+      "density_bound": 11.651802520975762,
+      "formula": "8*(9/2)^(1/4)"
+    },
+    "logic": [
+      "No post-rotation independence is used: only the original-coordinate I/J blocks are independent.",
+      "Arbitrary same-side curvature is retained inside modulus-one conditional amplitudes.",
+      "Rank two is not claimed to have a bounded residual density; only the half-Riesz potential is bounded.",
+      "The scalar-shell step yields absolute continuity and an L-infinity representative but does not prove continuity.",
+      "The fleet04/B18 r1 theorem is used only for r>=3 where the residual density cap is already proved.",
+      "Full QFORM is not claimed."
+    ]
+  }
+}

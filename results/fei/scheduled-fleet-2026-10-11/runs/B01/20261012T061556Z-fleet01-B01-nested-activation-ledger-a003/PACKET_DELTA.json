@@ -1,0 +1,33 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2 plus owner control 2026-10-12.1",
+  "run_id": "20261012T061556Z-fleet01-B01-nested-activation-ledger-a003",
+  "stream": "B01",
+  "packet_id": "A003",
+  "packet_ids": ["A003"],
+  "gap_id": "G-UPPER-SET-ASYMMETRY",
+  "related_gap_ids": ["O-ACTIVATION-EQUIV", "B05_RARE_REFUNDS"],
+  "attempt_id": "A003-GUP-NESTED-ACTIVATION-LEDGER-3",
+  "prior_status": "The exact pL_1(g) majority mismatch was identified, but no nonreused hierarchy credit was proved.",
+  "new_status": "DEPTH_FREE_FIXED_CORE_NESTED_ACTIVATION_LEDGER_AUTHOR_PROVED_PENDING_REVIEW; FULL_FEI_OPEN",
+  "mathematical_delta": "Proved a repaired one-layer 320p(W_1+L_1) transfer and an exact hierarchy ledger. The total repeated credit is at most 2qL_1+6qW_1+(28+8/(e ln2))I_ctl, giving C_chain<10324 independent of depth and rarity and H<20650I for arbitrary-depth nested activations of signed parities.",
+  "claims_created_or_changed": [
+    "B01-A003-RETAINED-SINGLETON-TRANSFER-v1",
+    "B01-A003-NESTED-ACTIVATION-LEDGER-v1",
+    "B01-A003-NESTED-PARITY-FEI-v1"
+  ],
+  "acceptance_evidence": [
+    "NESTED_ACTIVATION_LEDGER.tex: analytic proof",
+    "CHECK.py and CHECK.out: 4098 direct-Walsh local/hierarchy cases"
+  ],
+  "remaining_obstacle": "Changing coherent cores in arbitrary hierarchies need a global nonreused singleton-log credit; fixed-core scaling does not supply it.",
+  "next_consumers": ["A005", "A023", "A063", "A086", "A094", "B20"],
+  "independent_reviewers": ["A086", "A094"],
+  "next_action": "Extend or refute the ledger on branching fresh-selector trees with multiple coherent leaf cores, isolating the singleton-overlap payment.",
+  "delivery_status": {
+    "canonical_core_commit": "dfd680b0c4efac2c754c4d0c6aafe10541ff37b8",
+    "brain_core_commit": "e28123aff27060c8aecbad16e97f6c330deb009e",
+    "readback": "7/7 nonempty substantive-core files byte-identical in both repositories",
+    "independent_review": "PENDING_A086_A094"
+  }
+}

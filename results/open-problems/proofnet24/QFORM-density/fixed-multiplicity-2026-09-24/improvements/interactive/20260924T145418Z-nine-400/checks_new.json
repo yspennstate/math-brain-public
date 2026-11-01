@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "seed": 20260924145418,
+  "exact_interpolation_seeds": 96,
+  "exact_aggregate_overlap_cases": 8,
+  "exact_constants": {
+    "r1_margin": "1131/2200",
+    "r2_margin": "51/2200",
+    "gamma_coefficient_upper": "40528/8151",
+    "C3_sixth_power_slack": "40788279/1024",
+    "scalar_scalar_bound": "1148/3",
+    "indefinite_bound": "785/2"
+  },
+  "numerical_spectral_tail_diagnostics": [
+    {"n":5,"r":1,"symmetric":true,"trial":0,"left_minus_right_float":24951.384582241568},
+    {"n":5,"r":1,"symmetric":true,"trial":1,"left_minus_right_float":20651.306146257855},
+    {"n":7,"r":2,"symmetric":true,"trial":0,"left_minus_right_float":9605795.497155141},
+    {"n":7,"r":2,"symmetric":true,"trial":1,"left_minus_right_float":4736050.276670543},
+    {"n":5,"r":1,"symmetric":false,"trial":0,"left_minus_right_float":1609.8419788877857},
+    {"n":5,"r":1,"symmetric":false,"trial":1,"left_minus_right_float":4635.386055287291},
+    {"n":7,"r":2,"symmetric":false,"trial":0,"left_minus_right_float":508412.75590988476},
+    {"n":7,"r":2,"symmetric":false,"trial":1,"left_minus_right_float":1007806.3694854804}
+  ],
+  "floating_constants": {
+    "C3":14.818337662843,
+    "C2":12.095072570796486,
+    "no_pivot_density":370.45844157107496,
+    "scalar_scalar_density":360.84727938739945,
+    "indefinite_pair_density":384.57468688069514,
+    "pair_half_potential_unit_scale":15.465735902799727
+  },
+  "limitations":"Finite exact checks verify their instances; floating spectral tests are diagnostics. Neither replaces the written general proofs or independent review."
+}

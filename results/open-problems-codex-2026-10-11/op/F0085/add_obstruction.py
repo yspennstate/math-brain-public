@@ -1,0 +1,17 @@
+﻿from pathlib import Path
+import json
+p=Path('ATTEMPT.md');s=p.read_text(encoding='utf8')
+addition=r'''## Proposition F: density, monotonicity and an empty endpoint are insufficient
+This is a counterexample to a general inference, NOT to the stable-marriage question. In any d≥2 there exists a translation-stationary, translation-ergodic family of nested open sets W_ε, 0<ε<1, with volume fraction ε, all percolating, and with intersection over ε>0 empty.
+Proof. Let V be uniform on [0,1), and let
+W_ε={x∈R^d : the fractional part of x_d−V lies in (0,ε)}.
+This is the disjoint union over n∈Z of open slabs R^{d−1}×(V+n,V+n+ε). Each slab is connected and unbounded, since d−1≥1. Thus every W_ε percolates. If ε₁≤ε₂ then W_{ε₁}⊆W_{ε₂}. For a fixed fractional part t∈[0,1), membership for every ε>0 is impossible: t=0 is excluded, and if t>0 choose ε<t. The intersection is therefore empty.
+Uniform V gives P(x∈W_ε)=ε for every fixed x. In expanding axis-parallel boxes the volume fraction tends to ε, since the last-coordinate occupied intervals are periodic of period one and total occupied length per period ε, with an O(1) endpoint discrepancy. Translations along the last coordinate rotate V modulo one, preserving its uniform law, while other translations leave the set unchanged; the law is stationary under the full translation group. Any event invariant under all spatial translations lifts to an event for V invariant under all circle rotations. Such an event has probability zero or one: averaging its indicator over the rotations gives its constant Lebesgue mean, whereas invariance makes that average equal the original indicator a.e. Thus the family is ergodic under the full group. ∎
+
+This proves precisely why the source's decreasing vacant volume and the α=1 endpoint cannot alone close the near-one gap. Dependence or geometry special to stable allocation must enter. The slab process is not a Poisson stable allocation and is not reported as a counterexample to F0085.
+
+'''
+s=s.replace('## Referee audit and exact checks',addition+'## Referee audit and exact checks');p.write_text(s,encoding='utf8')
+with open('CLAIMS.jsonl','a',encoding='utf8') as f:f.write(json.dumps(dict(problem_id='F0085',claim='Stationarity, full translation ergodicity, nested open vacant sets, vanishing volume fraction and an empty endpoint do not imply a strict nonpercolating interval in d>=2.',status='counterexample',proof_location='ATTEMPT.md Proposition F',remaining_gap='The constructed periodic-slab family is not a stable allocation and does not answer F0085.',checks='Explicit open slabs; uniform random phase; circle-rotation ergodicity; empty-intersection and density computations.'),ensure_ascii=False)+'\n')
+l=Path('LITERATURE.md');t=l.read_text(encoding='utf8');t=t.replace('Generalizes small-appetite nonpercolation under moment assumptions; different random-appetite model, no verified missing-regime solution.','The fetched latest version is arXiv v6, 12 November 2021. Its Theorem 3.1, PDF page 5, gives small-appetite nonpercolation with diameter moments in (i) and small-appetite vacant percolation in (ii), under random-appetite moment assumptions. This generalizes the small-appetite results; it supplies no verified missing near-one regime solution. The revised arXiv statement is not silently identified with the 2013 printed version.');l.write_text(t,encoding='utf8')
+print('Added a full counterexample to the density/endpoint inference; corrected random-appetite lead scope.')

@@ -1,0 +1,39 @@
+{
+  "task": "T08 / Salez Problem 2.3",
+  "runtime_model": "GPT-5.6 Sol",
+  "reasoning_level": "UNVERIFIED",
+  "date": "2026-09-20",
+  "status": "CANDIDATE_FULL_RESTRICTED / PARENT_OPEN",
+  "publication_novelty": "UNVERIFIED",
+  "source_level": {
+    "before": "OPEN: prove cutoff for every bounded-degree vertex-transitive spectral-expander sequence in Salez's rate-one continuous-time convention.",
+    "after": "OPEN: parent conjecture unchanged. New proved restricted class: left-halved Cayley graphs of the Evra-Feigon-Maurischat-Parzanchevski Eisenstein adj-Ramanujan/Sarnak-Xue bigraphs, with an explicit Gaussian TV profile and O(sqrt(log n)) window."
+  },
+  "new_restricted_theorem": {
+    "class": "For fixed prime p congruent 2 mod 3, take the Eisenstein Cayley bigraph X_E^{p,q}, a (p^3+1,p+1)-biregular left-transitive adj-Ramanujan non-Ramanujan bigraph, and form its left halved graph H_{p,q}. Then H_{p,q}=Cay(G_q,S) is a bounded-degree vertex-transitive spectral expander, is not fixed-constant long-range expanding, and source-continuous-time SRW has a Gaussian cutoff profile.",
+    "degree": "D=p^4+p",
+    "gap_lower": "1-(2p^2+p-1)/(p^4+p)",
+    "center": "T=(p^4+p)/(p^4-1) * log_{p^4} n = (p^4+p)/(4(p^4-1))*log_p n",
+    "window": "Theta(sqrt(log n)); quantitative profile error O_Z(log log n / sqrt(log n))",
+    "profile_on_sqrt_log_p": "Phi(-2 z v^(3/2)/sqrt(a)), v=(p^4-1)/(p^4+p), a=(p^4+1)/(p^4+p)",
+    "p_equals_2": "degree 18, gap >=1/2, T=(3/10)log_2 n, profile Phi(-z sqrt(125/51)) on the sqrt(log_2 n) scale, and t_mix(eps)=(3/10)log_2 n-sqrt(51/125)Phi^{-1}(eps)sqrt(log_2 n)+O_eps(log log n)."
+  },
+  "mechanism_progress": {
+    "name": "bi-Cayley halving / NBRW-shell transfer",
+    "statement": "The halved biregular-tree cover has a scalar birth-hold-death radial chain with increments +1,0,-1 of probabilities Kk/D,(k-1)/D,1/D. Conditional shell laws are projections of even-time NBRW on the ancestor bigraph. Quantitative NBRW mixing therefore gives shell mixing directly, while an exponentially tight boundary correction yields a compound-Poisson Gaussian radial front.",
+    "obstruction_removed": "Full Ramanujan control of the ancestor is not needed for ordinary SRW cutoff after halving. EFMP explicitly note that their SRW proof on the bigraph requires full Ramanujan, whereas their Eisenstein family is only adj-Ramanujan; its Sarnak-Xue NBRW cutoff suffices after the transitivity-preserving halving operation. This also bypasses the previous NM13 need for a small Hecke algebra or separated refresh on this class.",
+    "remaining_obstruction": "For a general transitive spectral expander there need not be a bounded local block cover or a sharp NBRW/geodesic factor. The next algebraic target is to extract an analogous finite local block/geodesic skeleton from stabilizer suborbits, or else control the exact Hecke likelihood without such a skeleton."
+  },
+  "non_lre": {
+    "reason": "halved-cover balls grow at most polynomially times Q^r with Q=p^4, while the degree-D long-range benchmark is (D-1)^r and D-1=p^4+p-1>p^4",
+    "p_equals_2_exponent": "beta=0.5*(1-log(16)/log(17))=0.010698915763548"
+  },
+  "partner_handoff": "Latest P26 report read: 2026-09-20_16-56-12__hermitian-nbrw-berry-green-transfer.md. P26 owns Green/shell transfer and Hermitianized edge geometries; this run uses exact bi-Cayley block covers and NBRW projection instead of Green estimates.",
+  "posted_exclusion": "Root POSTED.md exclusion for Salez Problem 2.4 / Cayley product-condition work respected; not reopened.",
+  "sanity_check": {
+    "code": "2026-09-20T15-20-00Z__check_eisenstein_halved.py",
+    "output": "2026-09-20T15-20-00Z__check_eisenstein_halved.out",
+    "result": "ALL_EXACT_CHECKS_PASS",
+    "scope": "Exact constants/radial law/sphere growth plus an independent Fano-plane spectral identity check; no finite experiment is used as asymptotic proof evidence."
+  }
+}

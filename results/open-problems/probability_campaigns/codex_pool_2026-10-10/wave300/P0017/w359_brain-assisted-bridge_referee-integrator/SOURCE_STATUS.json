@@ -1,0 +1,68 @@
+{
+  "target": "P0017",
+  "checked_date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "current_primary_status": "FULL_KLS_PROOFS_CLAIMED_IN_RECENT_PRIMARY_PREPRINTS; NOT INDEPENDENTLY CERTIFIED HERE",
+  "exact_poincare_statement": "There exists C>0 independent of n and mu such that C_P(mu)<=C for every n>=1 and every isotropic log-concave probability measure mu on R^n. C_P is the best coefficient in Var_mu(f)<=C_P integral |grad f|^2 dmu for locally Lipschitz f in L2(mu) with finite gradient energy.",
+  "assumptions": [
+    "log-concave density exp(-V) with convex extended-real V",
+    "mean zero and covariance identity",
+    "Euclidean gradient",
+    "n>=1",
+    "constants independent of dimension and law"
+  ],
+  "covariance_form": "||Cov(mu)||_op <= C_P(mu) <= C ||Cov(mu)||_op",
+  "cheeger_form": "h(mu)>=c/sqrt(||Cov(mu)||_op), so h(mu)>=c in isotropic position",
+  "original_primary": {
+    "url": "https://arxiv.org/html/2603.29571v1",
+    "location": "Entry 13, Conjecture 30",
+    "checked": "covariance formulation read",
+    "rendering_note": "Half-space display uses S under an H infimum; intended covariance formulation is unambiguous."
+  },
+  "recent_primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2610.05474v1",
+      "authors": "Bizeul-Klartag-Lehec",
+      "announced": "2026-10-04",
+      "checked": "Theorem 1.1, equations (5)-(6), proof outline, regular approximation paragraph",
+      "full_proof_independently_checked": false
+    },
+    {
+      "url": "https://arxiv.org/html/2610.01447v2",
+      "authors": "Song-Zhang",
+      "checked": "v2 Theorem 1.1 states full bound; v1 log-star metadata is stale",
+      "full_proof_independently_checked": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.07728",
+      "authors": "Balasubramanian-Kasiviswanathan",
+      "announced": "2026-10-06",
+      "checked": "abstract claiming full result",
+      "full_proof_independently_checked": false
+    }
+  ],
+  "prior_owner_records": [
+    {
+      "node_id": "claim_d2e9e3d859a16e515c09803220b9b26608e8a6b5a6ce584d2e99cf6613f89694",
+      "statement": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Is there a universal positive lower bound for the Euclidean Cheeger constant of every isotropic log-concave probability measure, in every dimension? Source: Randomstrasse101: Open Problems of 2025, Conjecture 30, Entry 13.\nPosed in Randomstrasse101: Open Problems of 2025\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0017",
+      "source_revision": "author-checked-private-20260907-v1"
+    },
+    {
+      "node_id": "claim_fbc7554cdcce8efc8484f98a5982f7add13464aa5d5d53dfb9ca2710fc43e19f",
+      "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Gaussian special case by orthogonal expansion Result: For standard Gaussian measure, expand a polynomial f in orthonormal multivariate Hermite polynomials with coefficients a_alpha. Then Var(f)=sum_(|alpha|>=1) a_alpha^2 <= sum |alpha| a_alpha^2 = E||gradient f||^2. Closure in Gaussian Sobolev norm extends the inequality to its natural domain. Check: The constant is attained by any nonconstant linear function, checking both normalization and dimension independence. Obstruction: A general isotropic log-concave measure lacks this diagonal Hermite generator. This special case does not prove its uniform Poincare or Cheeger bound.\nRefers to the open problem node open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant\nNo independent review",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0017",
+      "source_revision": "author-checked-private-20260907-v1"
+    }
+  ],
+  "owner_solved_retired_check": "Exact prior owner card is Gaussian-only and explicitly not a general proof. Task-named H/I target searches gave no P0017 match; lean/ranking records preserve attempted_un. No owner-wide registry absence or retirement is certified.",
+  "ranking_record": {
+    "date": "2026-09-07",
+    "tier": 5,
+    "status": "attempted_un",
+    "line": 548
+  },
+  "remaining_general_proof_gap": "Uniform strict Gaussian-posterior Dirichlet contraction for all nonlinear tests, equivalently the general KLS bound in the reviewed reduction; the new published all-degree proofs were not audited.",
+  "novelty_claim": false,
+  "formal_check_receipt": null
+}

@@ -1,0 +1,11 @@
+{
+  "helper_version": "A003-stage2-v3",
+  "inherits": "FROZEN_SPEC.json and FROZEN_SPEC_V2.json",
+  "change": "V2 replay exceeded the frozen 60-second wall-clock cap during the substitution loop. Reuse the complete V1 SUBSTITUTION.json checkpoint (276 cases, PASS) without replay; execute only the unfinished family certificates via --families-only. Cache repeated phi intervals. No arithmetic precision, mathematical case domain or maximum explicit dimension changes.",
+  "completed_checkpoint": "out/SUBSTITUTION.json",
+  "new_case_count": {"X009": 4, "B05": 7},
+  "arithmetic": "Identical Fraction/log-prime/rational interval arithmetic; serialization outward rounded exactly",
+  "max_runtime_seconds": 60,
+  "memory_estimate_MB": 120,
+  "command": "python -X utf8 runs/20261012T005637Z-fleet05-A003-minimal-target-formulation/code/check.py --families-only"
+}

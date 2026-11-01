@@ -1,0 +1,53 @@
+{
+  "command": "python -B -X utf8 check_finite_saw.py",
+  "elapsed_seconds": 0.074988,
+  "graphs_enumerated": 64,
+  "four_vertex_graphs_with_endpoint_path": 48,
+  "weights": [
+    "1/2",
+    "1",
+    "2"
+  ],
+  "exact_arithmetic": "fractions.Fraction",
+  "counts": {
+    "avoidance_quotients": 609,
+    "conditional_prefix_quotients": 2439,
+    "terminal_indicators": 1026,
+    "martingale_tower_checks": 1413,
+    "optional_stopping_checks": 609,
+    "graph_weight_obstacle_cases": 609,
+    "honeycomb_counterexample_checks": 9
+  },
+  "max_identity_residual": "0 (exact rational arithmetic)",
+  "honeycomb_unsafe_independence_baseline": {
+    "claimed_joint": "1/4",
+    "actual_joint_opposite": "0",
+    "actual_joint_same": "1/2",
+    "absolute_error_each": "1/4"
+  },
+  "honeycomb_correct_conditioning_after": {
+    "opposite_second_conditional": "0",
+    "same_second_conditional": "1",
+    "joint_residual_each": "0"
+  },
+  "topology_counterexample": [
+    {
+      "epsilon": "1/10",
+      "hausdorff_upper_bound": "1/5",
+      "frechet_lower_bound": "1/4"
+    },
+    {
+      "epsilon": "1/100",
+      "hausdorff_upper_bound": "1/50",
+      "frechet_lower_bound": "1/4"
+    },
+    {
+      "epsilon": "1/1000",
+      "hausdorff_upper_bound": "1/500",
+      "frechet_lower_bound": "1/4"
+    }
+  ],
+  "limits": "Finite synthetic checks support the written general proof. They do not prove any scaling limit, conformal exponent, curve tightness, or novelty.",
+  "formal_checker": null,
+  "passed": true
+}

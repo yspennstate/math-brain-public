@@ -1,0 +1,172 @@
+[
+  {
+    "claim_id": "A008-CENTRAL-PRIME-COMPATIBLE-ROOT-AGGREGATION",
+    "version": 1,
+    "exact_statement": "For every k>=1, F=2[|X|>=k][|Y|>=k]-1 on two disjoint 2k-bit blocks, use its complete positive prime table, lambda=1/binom(2k,k)^2, actual rarity 2^-2k and any fixed full physical order per prime in the original conditioned queue. Summing all compatible one-root zero-child runs when both block degrees are at most k, and using two fixed complementary disjoint primes otherwise, defines an actual partition-forest output subprobability Q_sel<=Q_*. For every separately block-exchangeable subset law P, its complete nonempty cross entropy satisfies C_sel(P)<=6H(P)/5+37 E_P|A|. For the actual Fourier law, threshold Theorem A yields C_*(F)<=C_sel(F)<=251 I(F)/5<51I(F). All gate names, root normalizers and rarities, subset and child-count choices, empty attachments and output ambiguity are included. An optional full empty/nonempty code costs at most 261I(F)/5. Full FEI remains open.",
+    "hypotheses": [
+      "Uniform cube; bits for entropy and cost",
+      "k integer >=1; no extra activation controls",
+      "One fixed original all-prime reference before observing A",
+      "The final numerical influence payment uses established threshold H(g)<9I(g), not a universal entropy absorption"
+    ],
+    "statement_sha256": "e65558de09e5ed30b847048af90eae15a5e4da12d8651ac3f3684213c8060271",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": [
+      "agents\\A008\\runs\\20261023T024024Z-fleet03-A008-gate-label-compression\\CENTRAL_PAYMENT.md",
+      "agents\\A008\\runs\\20261023T024024Z-fleet03-A008-gate-label-compression\\out\\full.json",
+      "REVIEW_A008.md"
+    ],
+    "proof_dependencies": [
+      "forests.tex original queue and lem:forestnormalizer",
+      "threshold_paper_38pp.txt Theorem A (Creg<8.937)"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A008",
+        "role": "author analytic audit and exact independent representations; not independent-agent acceptance",
+        "verdict": "PASS",
+        "evidence": [
+          "out/full.json"
+        ]
+      },
+      {
+        "reviewer": "A007",
+        "role": "independent analytic reconstruction, no repair",
+        "verdict": "HOLDS_FULL_STATED_SCOPE_WITH_EXPLICIT_THRESHOLD_BASELINE",
+        "claim_version": "A008-CENTRAL-PRIME-COMPATIBLE-ROOT-AGGREGATION@1",
+        "statement_sha256": "e65558de09e5ed30b847048af90eae15a5e4da12d8651ac3f3684213c8060271",
+        "evidence": "agents\\A007\\runs\\20261023T053843Z-fleet03-A007-root-normalization\\REVIEW_A008.md",
+        "scope": "Full original central queue statement, including optional wrapper; published threshold premise accepted, not newly audited as a whole paper"
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_A007_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A007",
+      "A015",
+      "A086",
+      "B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A007-ACTUAL-QUEUE-ROOT-COMPONENT-BARRIER",
+    "version": 1,
+    "exact_statement": "For every finite nonempty gate table with the original conditioned queue, positive packing-feasible weights, root activities x_e=lambda_e*pi_e and D=prod_e(1+x_e)-1, let A be a nonempty covered target. Join coordinates of A when a gate contains both, partitioning A into components C_c. Let G_c be the gate names meeting C_c and D_c=prod_{e in G_c}(1+x_e)-1. Then the FULL output subprobability Q_*(A)<=prod_c D_c/D, including repeated and overlapping runs. If S_c=sum_{e in G_c}x_e<=pi<=1/2 for all k components, then Q_*(A)<=pi^(k-1)/(k(1-pi)^k). At pi=2^-r, -log2 Q_*(A)>=(k-1)r+log2 k+k log2(1-pi)>=(k-1)r-3k pi. An uncovered coordinate instead implies Q_*(A)=0. Children must attach through selected coordinates, and every successful visit selects a nonempty subset. Additionally, for EVERY nonconstant sign Boolean f and nonempty A with fhat(A)!=0, construct coordinate-intersection graphs using the COMPLETE positive and negative signed prime tables. If the positive graph is disconnected, the negative graph contains every cross-pair of its different components and is connected. At least one table therefore supplies an actual ONE-root partition forest with at most |A| gates. The fixed output mixture Q_mix=(Q_+ + Q_-)/2, chosen before A, contains that forest; its binary polarity label costs Var(f)<=I(f) in total nonempty cross entropy. This is structural existence and label payment only, not complete name/rank/rarity payment.",
+    "hypotheses": [
+      "Finite original gate table; nonempty targets",
+      "Actual root law with nonempty conditioning retained",
+      "Nonempty successful subsets and child labels containing selected attachments",
+      "Component activity upper bound needed only for its stated quantitative corollary",
+      "For complementarity: actual Boolean Fourier support and BOTH complete signed prime tables",
+      "The one-root construction uses allowed attachment multisets; all run probabilities remain part of full cost"
+    ],
+    "statement_sha256": "62584a8f18899e5b6aba13ae54a7f6c6f1670d7464bc30054781bc5df5895414",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": [
+      "ROOT_COMPONENTS.md",
+      "out/checks.json",
+      "out/graph_audit.json",
+      "POLARITY_CONNECTIVITY.md",
+      "out/connectivity.json"
+    ],
+    "proof_dependencies": [
+      "forests.tex eq:forestrootconstants, queue(i)-(iv), eq:forestconditioning; direct proof supplied",
+      "Exact prime DNF on an outside fiber and physical pivotal certificates; complete proof in POLARITY_CONNECTIVITY.md"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A007",
+        "role": "author proof audit, not independent-agent acceptance",
+        "verdict": "ANALYTIC_PROOF_AND_TWO_EXACT_REPRESENTATIONS_PASS",
+        "evidence": [
+          "out/checks.json",
+          "out/graph_audit.json",
+          "out/product.json",
+          "out/connectivity.json"
+        ]
+      }
+    ],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A008",
+      "A009",
+      "A010",
+      "A015",
+      "A086",
+      "A094",
+      "B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A007-ALL-POSITIVE-PRIME-PIJ-QUEUE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer w>=4, put r=2^w and choose any clause widths w_j in {w,w+1}. On disjoint blocks define f=2 product_{j=1}^r OR_{w_j}(X_j)-1. Its complete positive prime table consists of the width-r conjunctions choosing one positive variable per clause. For EVERY positive packing-feasible fixed reference on this table, and EVERY fixed choice of ordered covers, the original conditioned queue has full nonempty cross entropy C_*(f)/I(f)>r/7=2^w/7. This remains true after optimizing all actual partition-forest posteriors: their fully conditioned residual v log2 D+E_A[E_eta B_lambda-H(eta)] is at least C_*(f)-K_ref I(f). Meanwhile 1/4<Pr(f=1)<2/3, Var(f)>3/4, and H(f)<6I(f). Thus the universal fixed-positive-prime PI-J influence payment is false for the actual queue itself; full FEI and output-polarity-optimized or nonprime representations are not refuted. Furthermore let U be the zero/one base CNF indicator, V(Y)=1-U(-Y) on an independent identical-width-pattern copy and F=2U(X)V(Y)-1. Then I(F)=I(2U-1), H(F)<8I(F), Var(F)>39/64. EVERY positive-prime conditioned queue for F has C_+(F)/I(F)>r/63, and EVERY positive-prime conditioned queue for -F has C_-(-F)/I(F)>r/112, independently of their feasible weights and ordered covers. Thus choosing either ONE GLOBAL output polarity still fails. A fixed normalized mixture of both queue output laws is explicitly outside this refutation.",
+    "hypotheses": [
+      "Uniform cube; w>=4 and r=2^w; any pattern of widths w or w+1",
+      "Complete POSITIVE prime table of the stated f, fixed before spectral sampling",
+      "All feasible positive lambda and all fixed ordered covers; costs in bits",
+      "Polarity selection and nonprime gate representations are outside the refuted claim",
+      "Product family uses disjoint clone blocks; polarity is chosen once globally in the refuted extension",
+      "Output-mass mixtures of polarity queues and nonprime representations are not refuted"
+    ],
+    "statement_sha256": "a11983143a5b6b56c8aab1752ab6359b5b3c0587f07a8948a6deeb0f68614703",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": [
+      "PRIME_QUEUE_OBSTRUCTION.md",
+      "ROOT_COMPONENTS.md",
+      "out/checks.json",
+      "out/graph_audit.json",
+      "BOTH_POLARITIES.md",
+      "out/product.json"
+    ],
+    "proof_dependencies": [
+      "A007-ACTUAL-QUEUE-ROOT-COMPONENT-BARRIER@1",
+      "forests.tex thm:posteriorforest run probability upper cost; Gibbs identity reconstructed",
+      "Self-contained product Fourier and physical influence calculations, no assumed FEI bound",
+      "Disjoint AND-product prime classification, product Fourier sectors and physical influence calculation, independently checked on full8/10-bit tables"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A007",
+        "role": "author proof audit, not independent-agent acceptance",
+        "verdict": "ANALYTIC_PROOF_AND_TWO_EXACT_REPRESENTATIONS_PASS",
+        "evidence": [
+          "out/checks.json",
+          "out/graph_audit.json",
+          "out/product.json",
+          "out/connectivity.json"
+        ]
+      }
+    ],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "B02 STREAM_NOTES.md v2 PI-J target: universal influence payment for the conditioned positive-prime posterior residual",
+      "Unregistered extension of PI-J: universal influence payment after choosing one global output polarity"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A008",
+      "A009",
+      "A010",
+      "A015",
+      "A086",
+      "A094",
+      "B02",
+      "B20"
+    ]
+  }
+]

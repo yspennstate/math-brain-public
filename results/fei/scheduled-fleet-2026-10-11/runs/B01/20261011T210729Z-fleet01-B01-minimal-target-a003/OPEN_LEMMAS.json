@@ -1,0 +1,48 @@
+{
+  "schema": "fei-a003-open-lemmas/1",
+  "run_id": "20261011T210729Z-fleet01-B01-minimal-target-a003",
+  "packet_id": "A003",
+  "log_base": 2,
+  "endpoints": [
+    {
+      "gap_id": "G-J-COST",
+      "name": "WF(K): complete conditioned posterior residual",
+      "quantifiers": "There exists finite K such that for every n and every Boolean f on the uniform n-cube there exist an admissible ordered gate representation, fractional incidence weights, and for every nonempty spectral A a law on distinct actual finite partition-forest runs producing A, for which J_f <= K I(f).",
+      "residual": "J_f = v(Lambda+log2 Z) + sum_{A nonempty} P_f(A)[E B_lambda(A;r)-H(P_A)].",
+      "proved_consequence": "FEI with constant 2+K_ref+K, K_ref=3+2 log2 3+log2(6e).",
+      "unpaid_terms": ["root and child labels", "root rarity", "subset ranks", "allocation/congestion", "root conditioning v log2 Z", "posterior witness entropy -H(P_A)"],
+      "converse_status": "OPEN_NOT_CLAIMED",
+      "tensor_admission": "Universal quantifier includes every tensor power; no factorized optimal forest may be assumed.",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "G-R-SELECT",
+      "name": "STEP(K): relevant-coordinate physical restriction",
+      "quantifiers": "There exists finite K such that for every n and every nonconstant Boolean f there exists a coordinate i with I_i(f)>0 and Delta_i H(f)<=K I_i(f).",
+      "proved_consequence": "FEI(K) by strong induction.",
+      "proved_reverse_loss": "FEI(C) implies STEP(C+2/ln 2).",
+      "exact_identity": "Delta_i H = H(1_{i in S}|S without i)+JS(r_+,r_-).",
+      "unpaid_term": "Dimension-free existential selection; all-coordinate, maximum-influence, and fixed-price rare-refund variants are refuted.",
+      "tensor_admission": "For a coordinate of a disjoint tensor factor, Delta_i H and I_i are unchanged; arbitrary seed ratios persist.",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "G-BOOLEANITY",
+      "name": "DOWN(K): signed downward entropy",
+      "quantifiers": "There exists finite K such that for every n and every real signed array a with sum a_A^2=1 and sum_A a_A a_{A triangle U}=0 for all nonempty U, L(a)<=K sum_A |A|a_A^2.",
+      "functional": "L=sum_A p_A sum_{i in A} log2(1+p_{A without i}/p_A), p_A=a_A^2.",
+      "proved_consequence": "FEI(K+3/ln 2).",
+      "proved_reverse": "FEI(C) implies DOWN(C).",
+      "unpaid_term": "Use the complete signed autocorrelation system to bound L; fixed-prefix or unsigned constraints are insufficient.",
+      "tensor_admission": "L and I are additive for disjoint Boolean products, so arbitrary seed tensor powers persist.",
+      "status": "OPEN"
+    }
+  ],
+  "calibrations": {
+    "two_bit_AND_sign": {"H_over_I": 2, "B_over_I": 2, "L_over_I": 1, "best_step_ratio": 4},
+    "addressing": "Coordinatewise witness pressure can be quadratic; whole-forest posterior/root accounting is O(I).",
+    "B05_sparse_defect": "Control-first and selector-first carry a k+log2(e)+o(1) normalized rare logarithm; no every-coordinate fixed-price inference is permitted.",
+    "B19_biased_AND": "Any scalar correction to J<=M requires Omega(p log2(1/p)) along the proved-pending-review fixed-q family."
+  },
+  "full_fei_status": "OPEN"
+}

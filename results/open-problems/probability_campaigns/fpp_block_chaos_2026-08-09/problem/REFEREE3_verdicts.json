@@ -1,0 +1,133 @@
+{
+ "referee": 3,
+ "queue_position": "third, strongest model",
+ "object": "problem/localization_tail_draft_iter106.md",
+ "seam": "problem/I8_from_curvature_v2_iter82.md [V5-1]/[V5-2]",
+ "date": "2026-08-10",
+ "method": "independent re-derivation from the definitions; every load-bearing constant recomputed, then attacked by parameter-space search for a counterexample to each printed step. Scripts: REFEREE3_check.py, REFEREE3_check2.py, REFEREE3_check3.py.",
+ "verdicts": {
+  "G-a": {
+   "verdict": "CONFIRMED",
+   "exactness_claim": "correct - unit-step transversal coordinate + discrete IVT gives a vertex at level exactly ceil(D); subpath optimality gives the through-vertex inequality with no seam and no O(b)",
+   "count_claim": "correct but loose",
+   "corrections": [
+    "site count N <= 2(rho r + 1) <= 4 rho r, not 6 rho r (B5)",
+    "union's far-longitudinal sites are not priced by the hypothesis as literally stated (B1)"
+   ]
+  },
+  "G-b(i)": {
+   "verdict": "CONFIRMED",
+   "note": "D <= r(b-a_w)/(2 a_w) re-derived exactly; U[1,2] cap r/2 matches bandcap_check.py; the machine check is a valid bug-catcher for the deterministic cap and nothing more",
+   "corrections": [
+    "state a_w > 0 as a hypothesis: the lemma is uniformly elliptic, not merely bounded-weight (B10 i)",
+    "the cap generalises to arbitrary pairs; G-f needs that form and does not state it (A1b)"
+   ]
+  },
+  "G-b(ii)": {
+   "verdict": "CONDITIONAL",
+   "conditional_on": "how (H-curv-LOWER) is read for displaced points off the segment",
+   "detail": "(P-conc) direction-uniformity is CORRECT as published - steep legs are free. The second half ('the displaced point v is arbitrary at its distance in the condition as stated') is a reading, not an argument, and it is load-bearing: it is exactly what the far-longitudinal sites of the G-a union need. FREE for axis-aligned spans (implied by the midpoint case, proved in B1 fallback (a), 0 numerical violations). NOT free for tilted spans, which v2 consumes.",
+   "repair_preferred": "add the longitudinal-overshoot clause (B1): excess >= g(e_2) * overshoot by convexity alone, so far sites cost exp(-c1 g(e_2) delta sqrt(r)/(6 sqrt(2+rho))) and the union restricts to j in [-delta r/2, r + delta r/2], inside the window as written. No constant loss.",
+   "repair_fallback": "keep the offset reading and pay c_- -> c_-/(2+b/a_w) at the far sites"
+  },
+  "G-c": {
+   "verdict": "CONFIRMED with corrections",
+   "confirmed": [
+    "three-way split with Delta = c_- Dbar^2/r - C3 sqrt(r) log r",
+    "normalisation uniformity: all pair lengths in [Dbar, (2 + b/a_w) r]",
+    "c'' = c1/(6 sqrt(2 + b/a_w))  -- CORRECT",
+    "U[1,2] instantiation c'' = c1/12, Form B c1/24 -- CORRECT",
+    "the r-cancellation (chi'=1/2 against xi'=3/4)",
+    "the wlog delta <= min(1, 3C2/c_-) does imply BOTH (P-conc) range checks, span and short leg; the iter-114 correction of the first print is right",
+    "the mid-band containment in through-level-ceil(delta r)",
+    "Form B threshold arithmetic"
+   ],
+   "corrections": {
+    "Form_A_prefactor": "12 C1 (b/a_w) r  (was 18 C1 (b/a_w) r); one-sided G-e: 6 C1 (b/a_w) r",
+    "Form_B_threshold": "sigma^2 >= (2/(c'' c_-)) log(12 C1 (b/a_w) r)",
+    "C_triple_prime": "delta^2/4  (was delta^2) - ceiling-safe for r >= 2/delta; equivalently read the window as ceil(D) <= delta r",
+    "new_wlog": "c1 <= 3 sqrt(2 + b/a_w)/C3, i.e. c'' <= 1/(2 C3) - closes an unproved middle band of sigma (45 of 324 gridded points had one) and makes the consumer's A >= C3 c'' branch vacuous",
+    "nonempty_range": "the statement must carry r >= r_0 with delta^2 sqrt(r) >= max((2C3/c_-) log r, (2/(c'' c_-)) log(12 C1 (b/a_w) r)); measured r_0 ranges 1e5.5 to 1e14 over plausible constants, and 1488 of 2187 gridded points had an EMPTY range at r <= 1e10"
+   }
+  },
+  "G-d": {
+   "verdict": "CONFIRMED dissolved",
+   "note": "no consumption site needing a confined-geodesic wandering tail was found in this round; revival clause not triggered; the iter-116 correction to the H-version parenthesis is right"
+  },
+  "G-e": {
+   "verdict": "CONFIRMED",
+   "note": "nothing else silently used the two-sided form - the band cap only counts sites, the normalisations use |Dbar|, the split is sign-agnostic",
+   "correction": "one-sided prefactor 6 C1 (b/a_w) r under the sharper count"
+  },
+  "G-f(i)": {
+   "verdict": "CONFIRMED in total, DEFECT in justification + one omission",
+   "confirmed": "the containment over boundary pairs is right and needs no conditioning and no independence (subpath optimality + union bound); the o(1) arithmetic given the count is right",
+   "defect_1": "the per-boundary site count names the wrong scale. The band cap at slab scale bounds a piece's excursion relative to its own endpoints, not the location of those endpoints; the only deterministic confinement is the TOP-scale cap, C M n per boundary. The printed total C' M n^3 nevertheless stands, because M is a fixed constant and C' swallows M^3 - which should be said, and 'at slab scale n' should be struck.",
+   "defect_2": "the union omits same-boundary excursion pieces (a geodesic may enter and leave a slab through one boundary). Their chords are horizontal - outside any arc around e_2 - so the lemma cannot price them at any threshold.",
+   "repair_1": "state (i) on the complement of (ii)'s event {global deviation >= theta n/2}: then every crossing point has |h| < theta n/2, sites per boundary <= theta n + 1, total ~ C M theta^2 n^3, and the printed shape and the log-quantile cost stand",
+   "repair_2": "same-boundary pieces are controlled deterministically by the generalised band cap: excursion <= (b-a_w)|u-v|_1/(2 a_w). No probabilistic input needed.",
+   "cost_claim_survives": true,
+   "severity": "presentational for the total; the omission in defect_2 is substantive"
+  },
+  "G-f(ii)": {
+   "verdict": "CONFIRMED in shape, DEFECT(arithmetic) in two side-claims",
+   "confirmed": [
+    "the inclusion |h2-h1| <= |h1|+|h2| => max >= theta n/2 => contained in a top-scale deviation event with axis-aligned endpoints",
+    "the range identity: sigma^2 <= delta^2 sqrt(R) is EXACTLY D <= delta R for D = sigma R^{3/4} (checked to 12 digits)",
+    "the quantile sigma^2 = (theta^2/4) sqrt(n) M^{-3/2}",
+    "the draft's worked point (M=5, theta=0.05, n=1e4 -> exponent 0.0056) reproduces exactly, and the small-n regime IS honestly excluded"
+   ],
+   "defect_a": "'true for every theta below the band cap at any M >= 5' is an over-claim: the condition is theta <= 2 delta M, which fails when delta < theta/(2M) (e.g. delta=0.01, theta=0.2, M=5). The gridded check is delta-blind (delta = 1 implicitly). In the regime that matters - theta = the o(1) arc half-width - it holds.",
+   "defect_b": "the threshold n >~ M^3/theta^4 omits the union's logarithm and 1/(c'' c_-)^2. Corrected: n_0 = (16/(c'' c_-)^2) (M^3/theta^4) log^2(C M n). Measured: M=8, theta=0.05, c''c_- = 1 gives n_0 ~ 1e12.5 against the draft's 8.2e7; at c''c_- = 0.01, n_0 ~ 1e16.5.",
+   "unstated_c": "G-f(i)'s own 'far inside the range' has a threshold too: (log M + 3 log n)/(c'' c_-) <= delta^2 sqrt(n); at c''c_- = 0.01, delta = 0.1 that is n >= 1e12"
+  },
+  "seam_V5-1": {
+   "verdict": "CONFIRMED",
+   "note": "A >= C3 c'' is exactly the condition that sigma^2 = 2A log l/(c'' c_-) dominate (2C3/c_-) log r' at r' <= l; the A >= 2 branch covers the second threshold. B3's wlog makes the C3 c'' branch vacuous, so A = 2 suffices."
+  },
+  "seam_V5-2": {
+   "verdict": "DEFECT",
+   "detail": "'sigma^2 = Theta(log l) inside delta^2 sqrt(r') for l large, ANY fixed delta - no window condition survives' is asymptotically true with an unstated and unfree threshold. Written out: l^{cb/2}/log l >= 2 A sqrt(K)/(delta^2 c'' c_-), cb <= 0.12 the base-scale exponent.",
+   "measured_thresholds_log10_l": {
+    "c''c_-=1,delta=1": 54,
+    "c''c_-=1,delta=0.1": 91,
+    "c''c_-=0.1,delta=0.1": 109,
+    "c''c_-=0.01,delta=0.1": 127,
+    "c''c_-=0.01,delta=0.01": 162
+   },
+   "consequence": "the package's operative threshold is max(l_0, l_1) with l_0 ~ 1e80; for plausible U[1,2] constants (c''c_- = c1 c_-/12 ~ 0.01) l_1 is the binding one, at 1e127"
+  },
+  "notation": {
+   "verdict": "DEFECT(minor)",
+   "detail": "v2 section 2 uses c for two different constants in adjacent lines: (H-wand)'s tail constant in sigma := (A log l/c)^{1/theta}, and the base-scale exponent in r' >= l^c/K"
+  }
+ },
+ "corrected_constants_deliverable": {
+  "c''": "c1/(6 sqrt(2 + b/a_w))  -- UNCHANGED, confirmed; U[1,2]: c1/12",
+  "Form_A": "P(dev >= sigma W_r) <= 12 C1 (b/a_w) r [ exp(-c'' c_- sigma^2) + exp(-c1 g(e_2) delta sqrt(r)/(6 sqrt(2+b/a_w))) ]",
+  "Form_A_one_sided": "6 C1 (b/a_w) r x the same bracket",
+  "Form_B": "P <= exp(-(c''/2) c_- sigma^2) once sigma^2 >= (2/(c'' c_-)) log(12 C1 (b/a_w) r)",
+  "C'''": "delta^2/4",
+  "wlog_delta": "delta <= min(1, 3 C2/c_-)  -- unchanged, confirmed",
+  "wlog_c1_NEW": "c1 <= 3 sqrt(2 + b/a_w)/C3",
+  "r_0_NEW": "delta^2 sqrt(r) >= max((2 C3/c_-) log r, (2/(c'' c_-)) log(12 C1 (b/a_w) r))",
+  "seam_wiring": "theta = 2, C = 1, c = (c''/2) c_- = c1 c_-/(12 sqrt(2 + b/a_w)) -- unchanged IF the overshoot clause is adopted; c1 c_-/(12 (2+b/a_w)^{3/2}) (U[1,2]: c1 c_-/96) if the offset reading is paid for instead",
+  "seam_l_1_NEW": "l^{cb/2}/log l >= 2 A sqrt(K)/(delta^2 c'' c_-)",
+  "Gf_n_0_NEW": "n_0 = (16/(c'' c_-)^2)(M^3/theta^4) log^2(C M n)"
+ },
+ "overall": "The mathematics holds. Every load-bearing step I re-derived independently came out as printed, including the whole of G-c. What does not hold is the range bookkeeping: 'polylog, well inside the range' is treated as free in four places (G-c's own range, G-f(i), G-f(ii), and the seam) and in each the threshold is a real, computable, large number - one of which (l_1 >= 1e127 for plausible constants) sits above the 1e80 the v2 document already apologises for. Recommend: MAJOR REVISION of the range ledger, MINOR REVISION of the constants (all listed above), and one new free clause (longitudinal overshoot) that closes the only genuine hole in the union.",
+ "files": {
+  "report": "referee3_localization_report.md",
+  "checks": [
+   "REFEREE3_check.py",
+   "REFEREE3_check2.py",
+   "REFEREE3_check3.py"
+  ],
+  "outputs": [
+   "REFEREE3_check_output.json",
+   "REFEREE3_check2_output.txt",
+   "REFEREE3_check3_output.txt"
+  ]
+ },
+ "repair_interaction_B11": "B3's wlog c1 <= 3 sqrt(2+b/a_w)/C3 forces c'' c_- <= c_-/(2 C3), and B8's seam threshold scales as 1/(delta^2 c'' c_-), so closing the middle band RAISES l_1: at C3 = 2, c_- = 0.2, delta = 1 it gives l_1 ~ 1e78, and at delta = 0.1, l_1 > 1e109. Price the two repairs together."
+}

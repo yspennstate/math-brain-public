@@ -1,0 +1,2 @@
+STATE: A093 GMP Proposition5.1 independently reconstructed; true wrong-selector Delta/I grows linearly, but node Delta/I_root<7^(1-k); k9 exact ratio>4;765 exact checks PASS; audit external review pending; full FEI OPEN.
+NEXT: A090/A085 reconstruct true-decrement bounds; inspect WWW14 primary whole-tree payment and terminal assumptions for funding locally bad nodes; earlier GMP corrections remain pending review.

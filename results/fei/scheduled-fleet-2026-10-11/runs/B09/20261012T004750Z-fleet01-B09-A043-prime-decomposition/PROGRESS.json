@@ -1,0 +1,55 @@
+{
+  "schema": "fei-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261012T004750Z-fleet01-B09-A043-prime-decomposition",
+  "stream": "B09",
+  "packet_id": "A043",
+  "packet_ids": ["A043"],
+  "gap_id": "G-PRIME-GATE-POTENTIAL",
+  "attempt_id": "A043-attempt-01-honest-prime-tree",
+  "claim_version": "B09-A043-PRIME-DECOMPOSITION-v1",
+  "method": "Honest essential-block factorization, arity-decreasing recursion, exact product-biased spectrum composition, and dyadic potential induction.",
+  "previous_status": "A043 UNPROVED_TARGET; no adopted prime definition, termination proof, inherited-bias theorem, or exact-constant implication.",
+  "mathematical_delta": "Defined genuine disjoint primes with constants/literals/parity conventions; proved finite decomposition and the non-canalizing restriction; derived the exact C-deficit ledger; proved that one arity-uniform dyadic potential on primes is equivalent to FEI with the same constant and no depth loss.",
+  "deliverable_status": {
+    "A043-D1_PRIME_GATE_DEFINITION": "AUTHOR_COMPLETE_PENDING_INDEPENDENT_REVIEW",
+    "A043-D2_PRIME_ENDPOINT_IMPLICATION": "AUTHOR_COMPLETE_PENDING_INDEPENDENT_REVIEW",
+    "required_run_artifacts": "LOCAL_COMPLETE_PENDING_REMOTE_DELIVERY"
+  },
+  "mathematical_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "source_versions": {
+    "B09_contract_sha256": "b57505c28dbfd694a4975bd76773bbc3b2a0f3e6d78c664d57094580bebb4201",
+    "execution_protocol_sha256": "826d2ff918e3677c425381d3552849f8b9f0fe9eaebe9d1ecf92c2f4d9bdb301",
+    "obstruction_registry_sha256": "bd47485f3d32bd0878303d7374f584ab9f71806c313d325703da2a31456385e8",
+    "biased_source_commit": "10bd8f25e7f93509b1ccb4daf9d8999fcb776f98",
+    "biased_source_blob": "b620357b573b2906e8cb2df5966576c27ce3ffcd",
+    "A045_report_sha256": "bd6984e3866dc718c6f8a17deae116d83f872b71e82a4b592d075cdb74b08162"
+  },
+  "acceptance_evidence": [
+    "Irreducibility defined with essential children, essential outer ports, constants, literals, negations, and parity conventions.",
+    "Termination proved by strict arity decrease along every branch.",
+    "Independence and dyadic child-output biases inherited from disjoint uniform leaf blocks.",
+    "Exact raw entropy, influence, and C-deficit composition formulas proved.",
+    "Prime potential implication preserves the same constant without depth/fan-in accumulation.",
+    "A nontrivial structural restriction proved: primes of arity at least three are non-canalizing.",
+    "20,016 bounded verifier assertions passed with zero failures."
+  ],
+  "remaining_obstacle": "The reduction does not prove the prime potential inequality. The surviving obligation is one potential valid uniformly over unbounded prime arity and every inherited dyadic bias; all-real use separately requires continuity.",
+  "stagnant_substantive_attempts": 0,
+  "next_consumers": ["A044", "A059", "A091"],
+  "review_targets": ["A091", "A090"],
+  "actual_review_evidence": [],
+  "next_action": "Use A044 to test a genuinely non-canalizing, non-parity prime family for an arity-uniform corrected FEI+ inequality under every inherited product bias.",
+  "delivery": {
+    "local_saved": true,
+    "open_problems_commit": "6e85c15e406d77a582944960eda3ab42bd1d698f",
+    "brain_commit": "a623af3937de8e7c73d6a7c67b7250b20d910aaf",
+    "remote_readback": "8_OF_8_CORE_FILES_BYTE_IDENTICAL_IN_BOTH_REPOSITORIES",
+    "native_brain_ingestion": false
+  },
+  "runtime": {
+    "exposed_model": "Codex based on GPT-5",
+    "reasoning_selector_exposed": false
+  },
+  "full_FEI": "OPEN"
+}

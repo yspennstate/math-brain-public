@@ -1,0 +1,12 @@
+== 1. restriction-drop law (F4 Thm 4.1) vs brute force, balanced blocks
+  1757 leaf checks, max |formula - brute| = 1.243e-14 ; violations of Delta_w(F) >= Inf_j(G) Delta_w(g_j): 0
+== 2. br(G,j,c) >= 0 on every NPN class of 2-, 3- and 4-input functions (br is NPN invariant), c-grid 2001 points
+  k=2: min br = 0.000e+00 at (code=1, j=0, c=0.0000); control (no h2 term) min = -1.0000
+  k=3: min br = -4.441e-16 at (code=6, j=0, c=-0.9940); control (no h2 term) min = -1.0000
+  k=4: min br = -8.882e-16 at (code=6, j=0, c=-0.7580); control (no h2 term) min = -1.0000
+  Numaro g: H=6.776605309006
+  Numaro g, input 0: min br over c in [0,1] = -8.882e-16 ; control min = -1.7804e-06
+  Numaro g, input 9: min br over c in [0,1] = 0.000e+00 ; control min = 0.0000e+00
+== 4. scope: blocks with nonzero mean.  Is Delta_w(F)/Inf_w(F) >= Delta_w(g_j)/Inf_w(g_j)?
+  12310 leaf checks; min of [Delta_w(F)/Inf_w(F) - Delta_w(g_j)/Inf_w(g_j)] = -1.354730
+  counterexample: G=00110101 blocks=['0010', '1000', '01111111'] j=1 w=0 : ratio in F 2.645270 < ratio in block 4.000000

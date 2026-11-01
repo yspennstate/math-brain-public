@@ -1,0 +1,63 @@
+{
+  "store": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "read_only": true,
+  "elapsed_s": 0.20740239997394383,
+  "lookup_column": "title",
+  "results": [
+    {
+      "term": "%Positive-temperature crystalline%",
+      "rows": [
+        {
+          "title": "Open problem: Positive-temperature crystalline Gibbs phases for three-dimensional Riesz gases",
+          "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status unsolved). Prove existence of a crystalline Gibbs phase at sufficiently low positive temperature for the three-dimensional Coulomb or Riesz gas in the regimes predicted in the review. Source: Lewin: Coulomb and Riesz gases, the known and the unknown,2022, SectionVI,PDF59-61,66-67.\nPosed in Lewin: Coulomb and Riesz gases, the known and the unknown,2022\nStatus as recorded in the campaign ledger on 2026-09-07",
+          "metadata_json": "{\"artifact_digest\":\"sha256:79542c18cdeba685c5e849569a590035bc20706085cb532bcc8058ad42203b8c\",\"artifact_path\":\"objects/sha256/79/79542c18cdeba685c5e849569a590035bc20706085cb532bcc8058ad42203b8c.md\",\"bundle_digest\":\"sha256:ddd293f4ed06be48fe9cbeb6bd86eef5f0277c23c9d035ac24c184c235a410cc\",\"bundle_entry_key\":\"op-p0309\",\"bundle_id\":\"population.probability-codex-ledger-problems-c006-02\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_010.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:8e767f585adadfafded15d7807a186bb88344da7557453dc19b6b57f2f862f8f\",\"revision_digest\":\"sha256:894df26aac73717c54f790f08423c9c5e20c7eeea63ca049b11cab1e5c280c09\",\"source_id\":\"owner-probability-campaign-codex-20260906:op-p0309\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}",
+          "kind": "claim",
+          "id": "claim_894df26aac73717c54f790f08423c9c5e20c7eeea63ca049b11cab1e5c280c09"
+        },
+        {
+          "title": "Attempt on Positive-temperature crystalline Gibbs phases for three-dimensional Riesz gases",
+          "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Source-specific calculation, conditional implication or exact obstruction Result: The harmonic phonon calculation around an assumed crystal has infrared displacement variance proportional to integral over |k|<1 of |k|^-2 dk. In dimension d this is a constant times integral from0 to1 of r^(d-3)dr, finite in d=3 and logarithmically divergent in d=2. Therefore the elementary infrared objection to positional order is absent in three dimensions. Check: The radial Jacobian r^(d-1) produces the exponent d-3. This only checks the Gaussian approximation conditional on a lattice; it neither selects a lattice nor constructs an infinite-volume Gibbs measure. Obstruction: One must control defects, anharmonic fluctuations and alternative configurations uniformly in volume and show nontrivial positional order. Finite variance within an assumed crystal cannot prove that the full Gibbs law is crystalline. Numerical BCC/FCC phase diagrams are not a proof.\nRefers to the open problem node open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri\nNo independent review",
+          "metadata_json": "{\"artifact_digest\":\"sha256:d798c495893040b436089f3b36d16f37f400fb6768a2b227482668202e2e5bbb\",\"artifact_path\":\"objects/sha256/d7/d798c495893040b436089f3b36d16f37f400fb6768a2b227482668202e2e5bbb.md\",\"bundle_digest\":\"sha256:eb454590da264abd9c57c60c3191f916b323e3458b64d5d132e727dbbc7d6100\",\"bundle_entry_key\":\"at-p0309\",\"bundle_id\":\"population.probability-codex-ledger-attempts-c006-05\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"probability theory\",\"draft\":\"claude-probability-1000-continue-0907/bundle_013.json\",\"evidence_ids\":[],\"logical_id\":\"math:probability.core:attempt-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:d8b4e74f8a108ad4690efcbb85218be43273e7604dff1773dd51d7866037d260\",\"revision_digest\":\"sha256:3dc8a2f901e7e1eb69d826505875b897f366f17ec9ab8145910caf2c1429e3f6\",\"source_id\":\"owner-probability-campaign-codex-20260906:at-p0309\",\"source_revision\":\"author-checked-private-20260907-v1\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}",
+          "kind": "claim",
+          "id": "claim_3dc8a2f901e7e1eb69d826505875b897f366f17ec9ab8145910caf2c1429e3f6"
+        }
+      ]
+    },
+    {
+      "term": "%Convex Function and Its Subdifferential%",
+      "rows": [
+        {
+          "title": "Convex Function and Its Subdifferential",
+          "body": "Let C be a convex subset of a real vector space X and f: C -> R. f is convex if f(lambda x + (1-lambda) y) <= lambda f(x) + (1-lambda) f(y) for all x, y in C and lambda in [0,1]. If X is a normed space with dual X*, the subdifferential of f at a point x_0 in C is the set partial f(x_0) = {v in X* : f(x) >= f(x_0) + v(x - x_0) for all x in C}, whose elements are called subgradients of f at x_0; partial f(x_0) may be empty, a single point, or contain more than one point. [standard, e.g. Rockafellar, Convex Analysis]",
+          "metadata_json": "{\"claim_kind\":\"definition\",\"domain\":\"convex analysis\",\"provenance\":\"growth-b1 verified 2026-08-09\"}",
+          "kind": "claim",
+          "id": "claim_f341ac534d8c49648d6d32b71dd73265"
+        }
+      ]
+    },
+    {
+      "term": "%First-Order Characterization of Convexity%",
+      "rows": [
+        {
+          "title": "First-Order Characterization of Convexity",
+          "body": "A differentiable function f on an open convex set C is convex if and only if f(y) >= f(x) + <grad f(x), y - x> for all x, y in C: the graph lies above every tangent plane.\nf differentiable on an open convex set",
+          "metadata_json": "{\"artifact_digest\":\"sha256:8a293c571b2a38bc1de1ff3fde76f7db893988ebaed5eb6ba4cbcd27983b02fd\",\"artifact_path\":\"objects/sha256/8a/8a293c571b2a38bc1de1ff3fde76f7db893988ebaed5eb6ba4cbcd27983b02fd.md\",\"bundle_digest\":\"sha256:763f0a6ebd5b51bb5c2adc77acce6c7d7e41f25fc77e678d0698c60689565f1d\",\"bundle_entry_key\":\"lem-first-order\",\"bundle_id\":\"population.optimization-convexity-001\",\"claim_kind\":\"lemma\",\"conditions\":[],\"domain\":\"convex analysis\",\"draft\":\"claude-mathbrain-build-0802/bundle_004.json\",\"evidence_ids\":[],\"logical_id\":\"math:optimization.convexity:first-order-convexity-characterization\",\"overlay_schema_version\":1,\"proof_text\":\"If f is convex, then for t in (0,1], (f(x + t(y-x)) - f(x))/t <= f(y) - f(x) by the definition applied at t; letting t go to 0 the left side converges to the directional derivative <grad f(x), y - x>, giving the inequality. Conversely, applying the tangent inequality at the point z = t x + (1-t) y toward both x and y and taking the t-weighted combination of the two inequalities recovers the convexity inequality.\",\"release_manifest_digest\":\"sha256:68a1737b07ef8feba5749302c1e609d02e038881f8d22351f15a7c33dcd4bddc\",\"revision_digest\":\"sha256:d6ae9a7031b9d8d79bdc4a21a9e9d273d784d18281a95b6655070194a562fe1a\",\"source_id\":\"wikipedia:Convex_function\",\"source_revision\":\"as-read-2026-08-02\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}",
+          "kind": "claim",
+          "id": "claim_d6ae9a7031b9d8d79bdc4a21a9e9d273d784d18281a95b6655070194a562fe1a"
+        }
+      ]
+    },
+    {
+      "term": "%brascamp%",
+      "rows": [
+        {
+          "title": "Theorem 3.13 (Brascamp–Lieb inequality) of arXiv:2405.06616: Fast Mixing in Sparse Random Ising Models",
+          "body": "[Theorem 3.13 (Brascamp–Lieb inequality) of arXiv:2405.06616, 'Fast Mixing in Sparse Random Ising Models'] For any distribution with density ν ∝exp(−V) for some V : Rn →R, if there is a matrix Γ ≻0 such that ∇2V(z) ⪰Γ uniformly, then Cov(ν) ⪯Γ−1. Using the Hubbard-Stratonovich transform with the Brascamp-Lieb inequality allows us to bound covariances using the following lemma.",
+          "metadata_json": "{\"artifact_digest\":\"sha256:dff21d222eb9f47307b7bf2c3ec888ec69c52e575f32e2b257e80fcac202fcbd\",\"artifact_path\":\"objects/sha256/df/dff21d222eb9f47307b7bf2c3ec888ec69c52e575f32e2b257e80fcac202fcbd.md\",\"bundle_digest\":\"sha256:0ebef6940a4110463a9a29c1442f3422b97ef81a9c5fe6020c1efee1a52ffd62\",\"bundle_entry_key\":\"lit-2405-06616-theorem-3-13-68d962\",\"bundle_id\":\"population.lit3-arxiv-001\",\"claim_kind\":\"concept\",\"conditions\":[],\"domain\":\"harvested statement (arXiv 2405.06616, 2024): mathematics\",\"draft\":\"claude-brain-20h-20260901/bundle_lit3_001.json\",\"evidence_ids\":[],\"logical_id\":\"math:harvest.arxiv.mathematics:arxiv-2405-06616-theorem-3-13-68d962\",\"overlay_schema_version\":1,\"proof_text\":\"\",\"release_manifest_digest\":\"sha256:820cf1b09b91033c61bd5093a1d0ffb8b92648f54205e2628bb29974c84b67f6\",\"revision_digest\":\"sha256:25c5933eb4eeace1fc2a65fb1aba685df634054eba10e9f383b0eeb7c1ba32f7\",\"source_id\":\"arxiv:2405.06616\",\"source_revision\":\"as-read-2026-09-02\",\"statement_fidelity_reviewed\":false,\"supersedes\":[],\"trust_class\":\"curated_secondary\",\"truth_status\":\"unverified\"}",
+          "kind": "claim",
+          "id": "claim_25c5933eb4eeace1fc2a65fb1aba685df634054eba10e9f383b0eeb7c1ba32f7"
+        }
+      ]
+    }
+  ]
+}

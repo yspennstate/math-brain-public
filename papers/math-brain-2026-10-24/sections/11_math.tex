@@ -1,0 +1,121 @@
+\section{The mathematics}\label{sec:math}
+
+The store was built to be used for research, and the agents that built it were doing research while they built it. This section reports what came of that work. We separate four kinds of statement: \emph{proved} (a complete proof is given here or in a cited paper of this project), \emph{verified by computer} (a certificate checked by rigorous arithmetic or a proof assistant), \emph{evidence} (finite computation in floating point or a search that found no counterexample), and \emph{open}. None of the results below has yet been refereed by a journal, and several have been checked only by agents; we say which.
+
+We do not claim that the brain produced these results. Some were obtained before the store held more than a few hundred cards, and none comes from a controlled comparison with agents working without it. What the store did, and what can be checked in its records, is hold the definitions, the failed routes and the partial results of each campaign so that later agents started from them.
+
+\subsection{The problem list}
+On 10 October the work was focused on a list of open problems in probability theory, chosen to be important, publishable and plausibly within reach, and later extended by a second list in the theory of deep learning. On 22 October the list had $422$ rows: $222$ in probability (T001--T222) and $200$ in deep learning (T223--T422). Before an agent starts a row it searches the literature and public code for an existing solution; $22$ rows have been retired because others had solved them, $16$ of them in 2026 and $3$ of those with credit to AI systems. A row counts as solved only when its central obstruction is removed. A new constant, a special case or a numerical improvement is recorded as progress and leaves the row open. A claimed answer is a candidate until two independent audits pass.
+
+By that rule one row has been solved, T069, the capacity of the Ising perceptron (Section~\ref{subsec:perceptron}). Table~\ref{tab:rows} lists the other rows that moved in the last days before this paper was written.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lp{9.2cm}l}
+\toprule
+Row & Result & Status\\
+\midrule
+T228 & exact power-law tail of scalar leaky-ReLU stochastic gradient descent with fresh Gaussian samples (one target of the row) & proved, reviewed\\
+T336 & normalized ReLU attention with at most $5$ heads, width $7p+4$ and depth of order $\sqrt\kappa\,\log(2/\delta)/2$ computes the Gaussian-process noisy predictive mean and variance in context, by a Chebyshev iteration (one target of the row) & proved, reviewed\\
+T353 & a counterexample to Conjecture 3.2 of Chua et al.\ on DP-SGD with shuffled batches; the row stays open & posted\\
+T354 & a rate theorem for nonconvex Adam with random reshuffling (frozen drift plus remainder) & provisional\\
+T357 & a closed first-order form for the regularization gap of random-features ridge regression & provisional\\
+T366 & on one family of clusters, the quantity of Condition (B) is bounded near $(3+\sqrt{21})/6\approx1.2638$ & partial\\
+T248, T421 & an edge case placed on three representations; the critical Adam tail is invisible in floating point and appears in multiple precision & provisional\\
+\bottomrule
+\end{tabular}
+\caption{Rows of the problem list that moved between 20 and 22 October 2026. Only T069 is solved.}
+\label{tab:rows}
+\end{table}
+
+Outside the list, the agents posted an answer to Question 16.7 of Lyons and Peres: the two natural measures $\nu_2$ and $\nu_3$ on the Cantor set are mutually singular. The proof has not yet been checked independently.
+
+\subsection{The Ising perceptron at zero margin}\label{subsec:perceptron}
+Let $g_1,g_2,\dots$ be independent standard Gaussian vectors in $\R^N$ and let $M_N$ be the largest $M$ for which some $\sigma\in\{-1,1\}^N$ satisfies $\langle g_a,\sigma\rangle\ge0$ for all $a\le M$. Krauth and M\'ezard \cite{KrauthMezard1989} predicted that $M_N/N$ converges to an explicit constant $\alpha_*\approx0.833$. Ding and Sun \cite{DingSun2019} proved the lower bound subject to a numerical condition on a two-parameter function, and Huang \cite{Huang2024} proved the upper bound subject to a second numerical condition on a moment functional. Both conditions had been checked numerically in floating point and not proved.
+
+The agents verified both conditions in ball arithmetic (Arb, through \texttt{python-flint}). The Ding--Sun condition was certified on a grid of $247$ cells with positive and negative derivative ranges, strict curvature at the left end and an analytic one-sided derivative condition at the right end. The Huang condition was certified after compactifying the moment body, by two bulk sweeps, a constructive neighbourhood of the fixed point and a cover of the remaining region by rays on which the functional is concave. Every accepted inequality is recomputed in ball arithmetic from the stored certificate; a helper that proposes rational duals, tilts and boxes in floating point is never trusted. Together with the two conditional theorems this gives
+\[
+\frac{M_N}{N}\to\alpha_*\quad\text{in probability},\qquad \alpha_*\in[0.833078599,\ 0.833078600].
+\]
+The certificates pass their verifiers and a separate audit by a second AI system; the proof has not yet been reproduced independently or peer reviewed (arXiv:2607.11010; repository \texttt{ising-perceptron-capacity}). Most of this work was done in July 2026, before the store held its present content, and we do not count it as evidence for the brain. A companion paper treats nonzero margin.
+
+\subsection{The Fourier entropy-influence conjecture}\label{subsec:fei}
+For $f:\{-1,1\}^n\to\{-1,1\}$ write $\hat f(S)$ for its Fourier coefficients, $p(S)=\hat f(S)^2$ (a probability law on subsets of $[n]$, by Parseval), $H(f)=\sum_S p(S)\log_2(1/p(S))$ for the Fourier entropy, $\Inf_i(f)=\sum_{S\ni i}p(S)$ for the influences, $I(f)=\sum_i\Inf_i(f)$ for the total influence, and $\Var f=1-p(\emptyset)$. Friedgut and Kalai \cite{FriedgutKalai1996} conjectured that $H(f)\le C\,I(f)$ for an absolute constant $C$. The conjecture is open; the best lower bound on $C$ is $6.4548$, from a construction of Hod \cite{Hod2017}, and it has been proved on many classes, among them symmetric functions and read-once decision trees \cite{OWZ2011} and read-once formulas \cite{OT2013}.
+
+From 21 September to 22 October the conjecture was the target of the largest campaign the store recorded: scheduled agents running every hour, one hundred Codex agents in twenty streams on 11 and 12 October, and a group of routes each worked by one strong agent with an independent referee. Its record in the store is a set of cards for the definitions, the equivalent forms, the classes on which the inequality is known, about thirty routes that failed with the example that kills each, and the results below.
+
+\subsubsection*{The reduction}
+For a set $S$ put $\pi(S)=\sum_{T\supseteq S}p(T)$, the mass above $S$, and define
+\[
+U(f)=\sum_{S:\,p(S)>0}p(S)\log_2\frac{\pi(S)}{p(S)}.
+\]
+Since $p(S)\le\pi(S)\le1$, we have $0\le U(f)\le H(f)$. $U$ is additive over functions of disjoint sets of variables, vanishes when the spectrum is an antichain (for instance when $f$ is homogeneous of some degree), and compares each Fourier weight with the weight sitting above it in the subset order. The quantity $\pi(S)$ is the generalized influence of \cite{KKLMS2020}: if $d_Sf(z)$ is the top coefficient of the restriction of $f$ to the variables in $S$ with the others fixed to $z$, then $\pi(S)=\EE_z[(d_Sf)^2]$ and $\hat f(S)=\EE_z[d_Sf]$.
+
+\begin{lemma}\label{lem:Gkey}
+For every Boolean $f$ and every nonempty $S$, $|\hat f(S)|\le 2^{|S|-1}\pi(S)$. Equivalently $p(S)\le4^{|S|-1}\pi(S)^2$. \proofbutton{lem:Gkey}
+\end{lemma}
+
+For $|S|=1$ this is the familiar inequality $|\hat f(\{i\})|\le\Inf_i(f)$. The lemma holds with equality for every set in the spectrum of a point defect, and an exact integer check over all $984{,}884$ pairs $(f,S)$ with $n\le4$ found $266{,}492$ equalities and no violation. It is the only place where the proof uses that $f$ takes values $\pm1$, through the parity of a sum of $2^{|S|}$ signs.
+
+Theorem~\ref{thm:intro-G} follows from the lemma and the identity $H(f)=\sum_Sp(S)\log_2(1/\pi(S))+U(f)$; the proof is in Appendix~\ref{app:proofs}. It reduces the conjecture to the single statement
+\begin{equation}\label{eq:MU}
+U(f)\le K\,I(f)\quad\text{for every Boolean }f,
+\end{equation}
+with $C\le2+2K$; conversely the conjecture with constant $C$ gives \eqref{eq:MU} with $K=C$, and Hod's bound forces $K\ge2.227$. On every function with $n\le4$ the bound of Theorem~\ref{thm:intro-G} holds with minimum slack $0$. More is true: the first inequality of Theorem~\ref{thm:intro-G} is an equality for point defects, for the addressing functions, for the bent function on two variables, and for every read-once formula built from two-input gates of AND type (Proposition~\ref{prop:readonce-eq} in Appendix~\ref{app:fei}). The read-once AND/OR formulas include the lexicographic functions and the near-extremal formulas found by a beam search, whose ratios $H/I$ rise from $3.40$ to $5.91$; on all of them the conjecture is exactly the statement $\sup U/I<\infty$. The statement \eqref{eq:MU} is not contradicted by Slote's counterexample to the quantum analogue of the conjecture \cite{Slote2026}: Slote's operators are homogeneous, and when the order on Pauli strings is taken letter by letter $U$ vanishes on them. Unlike the conjecture itself, \eqref{eq:MU} is therefore not ruled out by this example for proofs that use only hypercontractivity and operator identities.
+
+\subsubsection*{Restriction}
+For a coordinate $i$ let $f_{i,\pm}$ be the restrictions $x_i=\pm1$, $\Delta_iU(f)=U(f)-\frac12(U(f_{i,+})+U(f_{i,-}))$, and $G(f)=\sum_i\Delta_iU(f)$. Proposition~\ref{prop:Uloc} in Appendix~\ref{app:fei} proves the exact identity
+\[
+\Delta_iU=B_i-\Gamma_i+K_i,
+\]
+where $B_i=H(S_i\mid S\setminus\{i\})$ is the conditional entropy of the indicator of $i$ under $S\sim p$, $\Gamma_i=\sum_{S\ni i}p(S)\log_2\bigl(\pi(S\setminus\{i\})/\pi(S)\bigr)\ge0$, and $K_i\ge0$ is a sum of binary Kullback--Leibler divergences between the asymmetries of a coefficient and of the mass above it under the two restrictions. It is Proposition~\ref{prop:Uloc}, proved in Appendix~\ref{app:fei}, where it is also checked against direct restriction to $50$ digits; no other result of the paper depends on it. Its meaning is the point. The local logarithm that defeats every coordinatewise charge for $H$, visible in selector functions for which $\Delta_iH/\Inf_i$ grows like the number of address bits, cancels between $B_i$ and $\Gamma_i$: on the same functions, at every size computed, $\Delta_iU/\Inf_i$ stays below $4.31$.
+
+Theorem~\ref{thm:intro-GU} turns a bound on $G$ into the conjecture. Its hypothesis with $b=0$ is the statement we call GU:
+\begin{conjecture}[GU]\label{conj:GU}
+There is $K<\infty$ such that $G(f)\le K\,I(f)$ for every Boolean $f$.
+\end{conjecture}
+By Theorem~\ref{thm:intro-GU} with $a=K$, $b=0$, GU implies the conjecture with $C\le2+2K$. It is stronger than the conjecture and is not known to follow from it.
+
+\subsubsection*{Evidence}
+Table~\ref{tab:GU} collects the largest values of $G/I$ found. The first searches stopped at $3.090$, attained by the majority of three composed with a five-variable function $g_5$ whose Fourier coefficients lie in $\{\pm4,\pm12\}/32$. The referee of the route, using an independent composition engine, went higher: the majority of five composed with $g_5$ gives $3.2157$, and a six-variable inner function found by annealing under the majority of five gives $3.2265$. No family tried grows: iterating the majority of three over $g_5$ settles near $3.11$, and majorities of larger arity fall ($\mathrm{maj}_7$ gives $3.00$, $\mathrm{maj}_9$ gives $2.70$). If $G\le3.2265\,I$ held in general the conjecture would follow with $C\le8.45$, against Hod's lower bound $6.4548$. On the near-extremal read-once family $G/I$ levels off near $2.29$, and $2+2(2.29)=6.58$.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lc}
+\toprule
+Functions searched & largest $G/I$\\
+\midrule
+all functions with $n\le4$ & 2.75\\
+simulated annealing, $n=5,\dots,8$ & 2.8203\\
+$\mathrm{maj}_3\circ g_5$ & 3.090\\
+$\mathrm{maj}_3\circ\mathrm{maj}_3\circ g_5$, $\mathrm{maj}_5\circ g_5$ & 3.1581, 3.2157\\
+$\mathrm{maj}_5\circ h_6$, $h_6$ found by annealing & 3.2265\\
+$\mathrm{AND}_2\circ g_5$, $\mathrm{OR}_3\circ g_5$, $\mathrm{AND}_3\circ g_5$, $\mathrm{AND}_4\circ g_5$ & 2.965, 2.959, 2.806, 2.727\\
+near-extremal read-once formulas with $H/I$ from $4.40$ to $5.91$ & 1.94 rising to 2.285\\
+tribes & $\le2.19$\\
+lexicographic functions & $\le2.19$\\
+threshold functions & $\le2.21$\\
+random functions, $n=12$ & about 1.0\\
+majority, addressing, recursive majority & negative\\
+\bottomrule
+\end{tabular}
+\caption{The largest ratio $G/I$ found in each search. All values are computed in floating point.}
+\label{tab:GU}
+\end{table}
+
+The coordinatewise strengthening, $\Delta_iU\le K\,\Inf_i$ for \emph{every} $i$, is not supported: annealing over selector pairs $f=(y\,?\,g:h)$ reaches $4.78$, $5.11$, $5.48$ and $6.15$ at $n=6,7,8,9$, driven by the Kullback--Leibler term. This growth over four sizes is evidence, not a proof, that no constant bounds each coordinate; a proof of GU should therefore expect to sum over the coordinates or to choose a good one. The weaker hypothesis of Theorem~\ref{thm:intro-GU} with $b>0$ has only partial support. Every function with $n\le4$ satisfies $G\le2.25\,I+0.5\,U$, but the inequality fails for $\mathrm{maj}_3\circ g_5$ ($3.0905>3.008$) and for $\mathrm{maj}_5\circ g_5$; the fit $G\le1.75\,I+U$ survives every case computed, but $b=1$ lies outside the theorem. For comparison, the analogue for $H$ sits exactly at the threshold, $\sum_i\Delta_iH\le H+(2/\ln2)I$, which is why restriction induction on $H$ itself cannot close.
+
+\subsubsection*{Routes that failed}
+The store keeps each failed route with the example that kills it, and these cards were read more than any other part of the campaign's record. Among them: random restrictions with entropy accounting, which give only $C=O(\log n)$; the pivotal-set entropy $H(\mathrm{Piv})\le C\,I$, false on point defects; normalized R\'enyi entropies of order below one, false on tensor powers of point defects; level-only bounds obtained by symmetrizing $U$, which are not stable under tensor products; and transport-entropy lower bounds on total correlation, which are quadratic where a logarithm is needed. A further obstruction is logical rather than computational: any argument whose every step remains true for quantum Boolean functions and their Pauli spectra proves a statement that Slote's operators violate, so a proof of the conjecture must use a property special to classical functions, such as the integrality of Walsh coefficients that Lemma~\ref{lem:Gkey} uses.
+
+\subsubsection*{Classes}
+The routes produced inequalities with explicit constants on several classes. None proves the conjecture, and some have not yet been compared carefully with the literature.
+\begin{enumerate}[label=(\roman*)]
+\item On the class in which every conditional row law is a product, $H\le4I$, and the optimal constant is $16/3-\frac32\log_23\approx2.95589$, attained by the conjunction of three variables. The proof has a computer step certified twice by different rigorous algorithms; an agent of the Codex fleet reached the same constant independently.
+\item For every weighted threshold function and every product measure $\mu$, $E_\mu\le\Var\cdot\ln(1/\Var)+A_0\,I_\mu$ with $A_0<9.21$ nats, where $E_\mu$ and $I_\mu$ are the spectral entropy and total influence under $\mu$. A level-wise reference conjecture is refuted by a new family, anti-diagonal tribes thresholds. A related paper treats threshold functions and their compositions.
+\item For multiplexers there is an exact cost identity, $\mathrm{cost}(F)=H(S\mid T)+I(X;Y)$, with closure constant $4$. A sharp bound for orthogonal leaves is refuted in $60$-digit interval arithmetic; a defect conjecture with constant $\kappa_0=0.756151564$ is open, and searches in double precision or at $30$ digits produce values above $\kappa_0$ that disappear at $60$ digits.
+\item $H\le10.38\,I$ on selector trees, $H\le16.99\,I$ on selector trees with regular leaves on fresh blocks, and $H\le26.71\,I$ on term decision lists with a common output mean.
+\end{enumerate}
+
+\subsection{Other problems and the papers}
+Thirty-one papers came out of the work recorded in the store, each with its own public repository; Appendix~\ref{app:papers} lists them. They range over random allocations and condensation, Galton--Watson trees, mixing and relaxation of Markov chains, free probability, random-cluster measures, percolation, the Ising perceptron, Boolean functions and deep networks, and one is a library of probability proof components in Lean. They differ in how far they have been checked: some have been read line by line by the author, some only by agents, and none has yet been refereed by a journal.

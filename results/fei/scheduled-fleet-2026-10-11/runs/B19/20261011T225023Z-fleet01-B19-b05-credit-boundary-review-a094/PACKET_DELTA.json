@@ -1,0 +1,102 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T225023Z-fleet01-B19-b05-credit-boundary-review-a094",
+  "stream": "B19",
+  "packet_id": "A094",
+  "packet_ids": ["A094"],
+  "target_packet_id": "A023",
+  "gap_id": "B05_RARE_REFUNDS",
+  "obstruction_id": "O-B05",
+  "attempt_id": "A094-B05-CREDIT-BOUNDARY-REVIEW-1",
+  "bounded_objective": "Independently determine whether B05's certified negative conditional-label L credit survives after restoring the phase packet Q required by a complete physical selector/data order swap.",
+  "method": "Source-level reconstruction of the B05 q_n formula; exact derivation of Gamma_n^Q; coefficientwise binary-entropy bounds proving Q<0 for all n>=3; exact rational/outward-interval Walsh certification for q_n through n=40 and both q_4 tensor q_5 coordinate classes.",
+  "prior_status": "B05 conditional-label L credit author-proved pending review; complete physical L+Q sign unresolved for the AND point defect.",
+  "mathematical_delta": "Accepted the B05 L-only theorem at explicit narrow scope, located the precise omitted Q obligation, and proved Gamma_n^Q<0 for every n>=3. Therefore the full physical L+Q credit is negative for every q_n and for both q_4 tensor q_5 coordinate classes. This kills a universal nodewise nonnegative first-credit mechanism but not signed or nonlocal restriction accounting.",
+  "deliverable_status": {
+    "A094-D1": "COMPLETE_FOR_B05_A023_CLAIM_VERSION_1",
+    "A094-D2": "COMPLETE_WITH_SCOPE_REPAIR_AND_STRENGTHENED_CLAIM",
+    "packet_target": "ONE COMPLETE PROOF CHAIN CHALLENGED; broader A094 backlog and full FEI remain open"
+  },
+  "mathematical_status": "B05_L_ONLY_CLAIM_INDEPENDENTLY_ACCEPTED; FULL_LQ_STRENGTHENING_PROVED_PENDING_FRESH_REVIEW; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "B05-A023-ORDER-SWAP-CREDIT-BOUNDARY-v1",
+    "B19-A094-BENT-FULL-PREFIX-TELESCOPE-v1"
+  ],
+  "claims_created_or_changed": [
+    "B05-A023-ORDER-SWAP-CREDIT-BOUNDARY-L-NARROW-v1 review acceptance",
+    "B19-A094-FULL-ORDER-SWAP-CREDIT-BOUNDARY-v1"
+  ],
+  "source_plan": {
+    "assignment_path": "reports/fei-2026-10-11/assignments/B19.json",
+    "assignment_blob": "ee688080aba90acd2daed1b26e809e38285dcb85",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "current_status_blob": "8c9c63579ecdd4afa385bb94caf79ee6296addcf"
+  },
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f8af483622a55611c7933f7d8252fe3c94e4c06e",
+      "path": "reports/fei-2026-10-11/runs/B05/20261011T222410Z-fleet01-B05-credit-boundary-a023/",
+      "report_blob": "0f097b74548e4be301b39a918774c4465638b2df",
+      "claims_blob": "beb1af6098f1cc56558f840eca3794ac9e8f84f7",
+      "checker_blob": "9be31981e5d5a5764ce07dada585ad5a57f221b7"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "030226fba465fb9ead1f3cfaf5dd474a99db194c",
+      "path": "reports/fei-2026-10-11/runs/B19/20261011T214601Z-fleet01-B19-b05-data-prefix-review-a094/",
+      "report_blob": "99d9dc4d701564d005c19d673ac8050be3e514c5"
+    }
+  ],
+  "next_consumers": ["A023", "A024", "A087", "A090", "B05", "B18", "B20"],
+  "independent_reviewers": ["A087", "A090"],
+  "next_action": "A fresh reviewer should reconstruct Gamma_n^Q=P(delta)-P(2delta)/2+2delta^2, verify the two scalar j(t) bounds and one q_4 tensor q_5 phase sign, then propagate the accepted physical L+Q scope to B05 and the obstruction registry.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "The strengthened full L+Q claim needs a reviewer independent of B19's material repair.",
+    "The theorem kills nodewise nonnegative first-credit accounting, not signed multistep or globally chosen trees.",
+    "No full-FEI proof or unbounded-ratio Boolean counterfamily results."
+  ],
+  "validation": {
+    "command": "python3 full_credit_review_checker.py",
+    "observed_runtime_seconds": 15.3,
+    "random_seed": null,
+    "arithmetic": "exact Fraction Walsh arithmetic and rational outward logarithm intervals using a 100-term atanh series with explicit tail",
+    "q_n_interval_range": [3, 40],
+    "rigorous_sign_assertions": 120,
+    "exact_tensor_walsh_coefficients": 1024,
+    "total_assertions": 1144,
+    "script_sha256": "a5b34cb9169c03c0fdb7d52387c891e5bd443b4b83b70580da5d9462ca15c3cf",
+    "output_sha256": "abaa0c3ff2cc7c20ad6ef35002c1d1d5fd9b5cde305ccb8d71ce9213f0c04e83",
+    "status": "PASS"
+  },
+  "delivery_status": {
+    "canonical": {
+      "status": "SIX_FILE_SUBSTANTIVE_CORE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-open-problems",
+      "core_complete_commit": "cbd237f4322e4610627ea3e84f0ad049ea8ccebc",
+      "path": "reports/fei-2026-10-11/runs/B19/20261011T225023Z-fleet01-B19-b05-credit-boundary-review-a094/",
+      "verified_files": 6,
+      "report_sha256": "3c012738823170b1daeae3dd023ac2ef6da10d2589bb6e449f883c5d6b07e52e"
+    },
+    "brain_mirror": {
+      "status": "SIX_FILE_SUBSTANTIVE_CORE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-research-brain",
+      "core_complete_commit": "311a24f1fdc9626fb9f5f4dffc7f8079a29d11ac",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B19/20261011T225023Z-fleet01-B19-b05-credit-boundary-review-a094/",
+      "verified_files": 6,
+      "report_sha256": "3c012738823170b1daeae3dd023ac2ef6da10d2589bb6e449f883c5d6b07e52e"
+    },
+    "independent_review": "B05 L-only claim accepted here; B19 full-credit repair pending a fresh reviewer",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {
+    "model": "Codex GPT-5 family as exposed by this run",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  }
+}
+

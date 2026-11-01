@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "checks": 93821,
+  "tables": 278,
+  "calibration_queries": 804,
+  "child_calibrations": 1608,
+  "retained_ghost_rows_before_calibration": 896,
+  "full_support_3bit_tables": 128,
+  "strict_calibrated_erasure_queries": 384,
+  "seconds": 9.695294399978593,
+  "witness": {
+    "truth_table": [
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "variable_order": [
+      "x0",
+      "x1",
+      "x2"
+    ],
+    "P": {
+      "0": "9/16",
+      "1": "1/16",
+      "2": "1/16",
+      "3": "1/16",
+      "4": "1/16",
+      "5": "1/16",
+      "6": "1/16",
+      "7": "1/16"
+    },
+    "Q": {
+      "0": "9/16",
+      "1": "5/64",
+      "2": "5/64",
+      "3": "1/32",
+      "4": "5/64",
+      "5": "1/32",
+      "6": "1/32",
+      "7": "7/64"
+    },
+    "I": "3/4",
+    "H_bits": "4-(9/8)log2(3)",
+    "K_bits": "log2(2048/875)/16",
+    "every_coordinate_L_bits_lower_bound": "7/100",
+    "every_coordinate_L_over_K_lower_bound": "15/16",
+    "every_coordinate_O_bits": "log2(1600/1599)/2",
+    "root_full_CE_less_than": "4I=3",
+    "rows": [
+      {
+        "coordinate": 0,
+        "L_prime_log_bits": {
+          "2": "-37/16",
+          "5": "-13/16",
+          "7": "3/16",
+          "41": "5/8",
+          "3": "1/4"
+        },
+        "outcomes": [
+          "39/80",
+          "41/80"
+        ]
+      },
+      {
+        "coordinate": 1,
+        "L_prime_log_bits": {
+          "2": "-37/16",
+          "5": "-13/16",
+          "7": "3/16",
+          "41": "5/8",
+          "3": "1/4"
+        },
+        "outcomes": [
+          "39/80",
+          "41/80"
+        ]
+      },
+      {
+        "coordinate": 2,
+        "L_prime_log_bits": {
+          "2": "-37/16",
+          "5": "-13/16",
+          "7": "3/16",
+          "41": "5/8",
+          "3": "1/4"
+        },
+        "outcomes": [
+          "39/80",
+          "41/80"
+        ]
+      }
+    ]
+  },
+  "limits": "Universal equality theorem analytically proved separately; no FEI counterexample; no unpaid query KL removed."
+}

@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{Posterior-erased control-first activation: exact full cost}
+\author{A012, B03}\date{12 October 2026}\maketitle
+All entropy is in bits; all original cubes are uniform. Full FEI is open.
+Detailed proofs and independent source review are in \texttt{DERIVATION.md}
+and \texttt{A013\_ACTIVATION\_REVIEW.md}.
+
+\begin{theorem}[Sharp complete-reference transfer]
+Let $g$ be balanced Boolean, $r\ge1$, $p=2^{-r}$,
+$F=1+A_r(g-1)$ for a fresh point indicator $A_r$.
+Let $R_g$ be a nonempty spectral subprobability reference of full cost
+$c_g=\sum_{T\ne\varnothing}\widehat g(T)^2\log_2(1/R_g(T))$.
+Define
+\[
+Q_F(\varnothing,\varnothing)=(1-p)^2,\qquad
+Q_F(U,\varnothing)=p^2\quad(U\ne\varnothing),\qquad
+Q_F(U,T)=p^2R_g(T)\quad(T\ne\varnothing).
+\]
+This is a complete subprobability reference of mass
+$1-p+p\sum_T R_g(T)\le1$ and exact cost
+\[
+\operatorname{CE}(P_F,Q_F)=pc_g+A_r,\quad
+A_r=2rp(2-p)+(1-p)^2\log_2\frac1{(1-p)^2}.
+\]
+The sharp constant in $A_r\le C_{\rm act}rp$ for integer $r\ge1$ is
+\[
+C_{\rm act}=\frac{15}{4}+\frac{49}{12}\log_2\frac87,
+\qquad 4.536<C_{\rm act}<4.537,
+\]
+attained at $r=3$. Thus $c_g\le K I(g)$ implies
+$\operatorname{CE}(P_F,Q_F)\le\max(K,C_{\rm act})I(F)$.
+\end{theorem}
+\begin{proof}
+The actual spectrum consists of $(1-p)^2$ at the vacuum,
+$p^2$ at every nonempty control-only set, and
+$p^2\widehat g(T)^2$ at each $(U,T)$ with $T\ne\varnothing$.
+Summing the displayed reference and its logarithmic cost proves the
+identity. No reference deficit in $R_g$ is discarded.
+Set $c_r=A_r/(rp)$. Since $-(1-p)\ln(1-p)\le p$,
+$c_r\le4+2/(r\ln2)<4+3/r$. For $r\ge6$ this is at most $4.5$.
+Outward rational atanh-series certificates for $r=1,\ldots,5$ prove
+$c_3>4.5$ and $c_j<c_3$ for $j\ne3$.
+The exact formula at $r=3$ is as stated. For an exact core reference,
+Gibbs' inequality and the exact activation entropy imply that no smaller
+coefficient can satisfy the same universal reference-transfer bound.
+\end{proof}
+
+\begin{theorem}[Exact physical-label posterior]
+Let $W$ be the control-first true spectral witness that retains its
+physical stopping/core leaf $J$, actual leaf spectral set and queried
+spectral membership bits. For $k=1,\ldots,r$ put
+\[
+s_k=2^{-(k-1)},\quad m_k=1-s_k,\quad q_k=\frac{1+m_k^2}{2},\quad
+\epsilon_k=\frac{s_k^2}{2(1+m_k^2)},\quad
+B_k=q_k h_2(\epsilon_k)+\frac{1-m_k^2}{2}.
+\]
+Then, with $D=2(1-p)$,
+\[
+H(W\mid S)=D+\sum_{k=1}^r2^{-(r-k)}B_k-A_r.
+\]
+The formula is independent of the balanced core, and
+$H(W\mid S)\to2$ as $r\to\infty$.
+\end{theorem}
+\begin{proof}
+The physical leaf probabilities are $2^{-j}$ for mismatch $j=1,\ldots,r$
+and $p$ for the core, giving $H(J)=D$. Nonempty residual Fourier packets
+have queried membership probability $1/2$; the empty residual packet
+has mass $q_k$ and membership probability $\epsilon_k$.
+Entropy chain rule yields
+$H(W)=D+pH(g)+\sum_k2^{-(r-k)}B_k$.
+Subtract $H(F)=pH(g)+A_r$. Moreover $W$ is exactly $(J,S)$, so
+$0\le H(W\mid S)\le H(J)=D$, and
+$H(W\mid S)\ge D-A_r$. Since $D\to2$ and $A_r\to0$, the limit follows.
+\end{proof}
+This ideal output reference does not transmit a physical leaf label.
+One-symbol integer prefix rounding is separate. Arbitrary tensor cores
+retain the full $ptc_f$ cost and $ptH(f)$ entropy. No universal bound for
+$c_f$ or the original incidence queue is established here.
+\end{document}

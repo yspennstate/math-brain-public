@@ -1,0 +1,215 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w501",
+  "bundle_slug": "c0120-gaussian-overlap-certificate-drafts-001",
+  "entries": [
+    {
+      "key": "model",
+      "namespace": "probability.gaussian",
+      "logical_name": "gaussian-up-right-free-endpoint-polymer-model",
+      "kind": "definition",
+      "title": "Gaussian up/right free-endpoint polymer model",
+      "statement": "n>=2; Lambda_n={(i,j):i,j>=0,i+j<n}; independent standard Gaussian vertex weights; n-vertex up/right paths from (0,0), endpoint free; M_n=max path sum and P_n its a.s. unique maximizer.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w501:C0120:model",
+        "url": null,
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign derivation, source audit, or refuted route; no novelty claim)",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, pending independent w503 review",
+      "proof_artifact": "~/brain_workers/w501/LEMMAS.md"
+    },
+    {
+      "key": "scope",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-gaussian-ground-state-source-scope-draft",
+      "kind": "concept",
+      "title": "C0120 original-source scope correction (draft)",
+      "statement": "DRAFT source correction: For independent standard Gaussian weights g_v on Z_+^2, let M_n=max_p sum_{v in p}g_v over all n-vertex up/right paths starting at (0,0), with endpoint free. Improve Chatterjee's Var(M_n)<=C n/log n to Var(M_n)<=C_epsilon n^(1-epsilon) for some epsilon>0 independent of n>=2. This is the concrete power-improvement formulation of Section 12(3) in the Section 8 model. The general-dimensional fixed-temperature log Z_n problem is a separate related formulation, supported for nearly gamma disorder by Alexander-Zygouras arXiv:1204.1819; it is not the observable in the cited Chatterjee theorem. Current openness is UNKNOWN.",
+      "proof_text": null,
+      "assumptions": [
+        "Chatterjee arXiv:0810.4221v2 Section 8 and Section 12(3)"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w501:C0120:scope",
+        "url": null,
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign derivation, source audit, or refuted route; no novelty claim)",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, pending independent w503 review",
+      "proof_artifact": "~/brain_workers/w501/LEMMAS.md"
+    },
+    {
+      "key": "bridge",
+      "namespace": "probability.gaussian",
+      "logical_name": "gaussian-polymer-polynomial-ou-overlap-variance-bridge-draft",
+      "kind": "concept",
+      "title": "Polynomial OU overlap implies a variance power improvement (draft)",
+      "statement": "DRAFT conditional deduction awaiting review. In the model: n>=2; Lambda_n={(i,j):i,j>=0,i+j<n}; independent standard Gaussian vertex weights; n-vertex up/right paths from (0,0), endpoint free; M_n=max path sum and P_n its a.s. unique maximizer. Let g^t=e^(-t)g+sqrt(1-e^(-2t))g', g' independent, h_n(t)=E|P_n(g) intersect P_n(g^t)|. Var(M_n)=integral_0^infinity e^(-t)h_n(t)dt, h_n is nonincreasing, and h_n(n^(-alpha))<=C n^(1-delta), with fixed C,alpha,delta>0, implies Var(M_n)<=(1+C)n^(1-min(alpha,delta)). The overlap hypothesis is not proved.",
+      "proof_text": null,
+      "assumptions": [
+        "n>=2; Lambda_n={(i,j):i,j>=0,i+j<n}; independent standard Gaussian vertex weights; n-vertex up/right paths from (0,0), endpoint free; M_n=max path sum and P_n its a.s. unique maximizer.",
+        "Fixed C,alpha,delta independent of n; stated overlap hypothesis"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w501:C0120:bridge",
+        "url": null,
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign derivation, source audit, or refuted route; no novelty claim)",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, pending independent w503 review",
+      "proof_artifact": "~/brain_workers/w501/LEMMAS.md"
+    },
+    {
+      "key": "envelope",
+      "namespace": "probability.gaussian",
+      "logical_name": "gaussian-polymer-per-site-hypercontractive-envelope-draft",
+      "kind": "concept",
+      "title": "Per-site Gaussian hypercontractivity envelope (draft)",
+      "statement": "DRAFT source specialization. In the model: n>=2; Lambda_n={(i,j):i,j>=0,i+j<n}; independent standard Gaussian vertex weights; n-vertex up/right paths from (0,0), endpoint free; M_n=max path sum and P_n its a.s. unique maximizer. Let q_v=P(v in P_n), a(t)=tanh(t/2), and g^t=e^(-t)g+sqrt(1-e^(-2t))g' with independent g'. Chatterjee Lemma 4.1 gives E|P_n(g) intersect P_n(g^t)|<=B_n(t):=sum_v q_v^(1+a(t)). Site indicators need not be independent.",
+      "proof_text": null,
+      "assumptions": [
+        "n>=2; Lambda_n={(i,j):i,j>=0,i+j<n}; independent standard Gaussian vertex weights; n-vertex up/right paths from (0,0), endpoint free; M_n=max path sum and P_n its a.s. unique maximizer.",
+        "Stationary standard Gaussian OU normalization"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w501:C0120:envelope",
+        "url": null,
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign derivation, source audit, or refuted route; no novelty claim)",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, pending independent w503 review",
+      "proof_artifact": "~/brain_workers/w501/LEMMAS.md"
+    },
+    {
+      "key": "barrier",
+      "namespace": "probability.gaussian",
+      "logical_name": "gaussian-polymer-per-site-hypercontractive-certificate-barrier-draft",
+      "kind": "concept",
+      "title": "A lower bound on the hypercontractive certificate, not the variance (draft)",
+      "statement": "DRAFT deduction awaiting review. For n>=2 and any q_v>=0 on Lambda_n={(i,j):i,j>=0,i+j<n} with sum_{i+j=k}q_v=1 on every layer, set B_n(t)=sum_v q_v^(1+tanh(t/2)). Jensen gives B_n(t)>=sum_{k=1}^n k^(-tanh(t/2))>=n^(1-tanh(t/2)), integral_0^infinity e^(-t)B_n(t)dt>=(n-1)/log n, and B_n(n^(-alpha))/n->1 for fixed alpha>0. This prevents this certificate from certifying a variance power improvement. It gives no lower bound on actual overlap or variance.",
+      "proof_text": null,
+      "assumptions": [
+        "Nonnegative layer probabilities of mass one",
+        "Layer k has k+1 sites",
+        "Only the direct unweighted per-site certificate is assessed"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w501:C0120:barrier",
+        "url": null,
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign derivation, source audit, or refuted route; no novelty claim)",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, pending independent w503 review",
+      "proof_artifact": "~/brain_workers/w501/LEMMAS.md"
+    },
+    {
+      "key": "route",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-refuted-one-site-marginal-power-improvement-route-draft",
+      "kind": "concept",
+      "title": "Rejected direct per-site hypercontractivity route (draft)",
+      "statement": "REJECTED inference, pending independent audit: even exact one-site path marginals q_v do not make the direct Gaussian hypercontractive certificate sum_v q_v^(1+tanh(t/2)) small enough at t=n^(-alpha) to certify a variance power improvement on the n-vertex up/right triangle. The certificate has an integrated floor (n-1)/log n. Stronger joint geometry or a different bound remains possible.",
+      "proof_text": null,
+      "assumptions": [
+        "n>=2; Lambda_n={(i,j):i,j>=0,i+j<n}; independent standard Gaussian vertex weights; n-vertex up/right paths from (0,0), endpoint free; M_n=max path sum and P_n its a.s. unique maximizer."
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w501:C0120:route",
+        "url": null,
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign derivation, source audit, or refuted route; no novelty claim)",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, pending independent w503 review",
+      "proof_artifact": "~/brain_workers/w501/LEMMAS.md"
+    },
+    {
+      "key": "threshold",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-conditional-kpz-three-quarter-threshold-draft",
+      "kind": "concept",
+      "title": "Conditional KPZ threshold correction: xi<3/4 (draft)",
+      "statement": "DRAFT algebraic correction. Assume Var(F_n)=n^(2chi+o(1)) and chi=2xi-1 for the same model. Var(F_n)<=C n^(1-epsilon), epsilon>0 fixed, requires xi<=3/4-epsilon/4. xi<1 alone is insufficient: xi=4/5 yields variance exponent 6/5. These statements do not establish the KPZ relation for polymers.",
+      "proof_text": null,
+      "assumptions": [
+        "Existence of stated variance exponent",
+        "KPZ relation chi=2xi-1 assumed for this model"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w501:C0120:threshold",
+        "url": null,
+        "revision": "draft-2026-10-10",
+        "license": "owner-own-work (campaign derivation, source audit, or refuted route; no novelty claim)",
+        "excerpt": null
+      },
+      "review_status": "DRAFT, pending independent w503 review",
+      "proof_artifact": "~/brain_workers/w501/LEMMAS.md"
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "scope",
+      "to_key": "model",
+      "kind": "depends_on",
+      "rationale": "The source correction's M_n is defined by the Gaussian up/right free-endpoint model."
+    },
+    {
+      "from_key": "bridge",
+      "to_key": "model",
+      "kind": "depends_on",
+      "rationale": "The overlap identity needs the finite independent Gaussian path model and a.s. unique maximizer."
+    },
+    {
+      "from_key": "envelope",
+      "to_key": "model",
+      "kind": "depends_on",
+      "rationale": "Gaussian OU hypercontractivity is applied to the path-incidence indicators in this model."
+    },
+    {
+      "from_key": "barrier",
+      "to_key": "envelope",
+      "kind": "depends_on",
+      "rationale": "L3 evaluates precisely B_n(t)=sum_v q_v^(1+tanh(t/2)) from the envelope card."
+    },
+    {
+      "from_key": "barrier",
+      "to_key": "route",
+      "kind": "refutes",
+      "rationale": "The barrier's certificate floor (n-1)/log n refutes using this direct certificate to certify a fixed power improvement; it does not refute the target variance bound."
+    },
+    {
+      "from_key": "threshold",
+      "to_key": "bridge",
+      "kind": "semantic_association",
+      "rationale": "Both distinguish a needed positive power gap from a weaker asymptotic or exponent statement; the KPZ relation is a separate conditional route."
+    },
+    {
+      "from_key": "scope",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro",
+      "kind": "cites",
+      "rationale": "The existing card attributes 'Var(log Z_n)' in 'general dimension' to Section 12(3); this draft records the source-model discrepancy."
+    },
+    {
+      "from_key": "bridge",
+      "to_existing_logical": "math:probability.gaussian:ornstein-uhlenbeck-semigroup-and-mehler-formula",
+      "kind": "depends_on",
+      "rationale": "Uses standard Gaussian OU coupling e^(-t)g+sqrt(1-e^(-2t))g' and L2 self-adjoint contraction in the existing Mehler card."
+    }
+  ],
+  "review_gate": "Concept/definition drafts only; no theorem promotion or live store writes before independent proof/model provenance gates pass."
+}

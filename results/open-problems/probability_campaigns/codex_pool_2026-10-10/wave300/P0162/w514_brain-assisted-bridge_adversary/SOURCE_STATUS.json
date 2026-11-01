@@ -1,0 +1,87 @@
+{
+  "target": "P0162",
+  "title": "Fourier entropy versus total influence",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "status_explanation": "Dated intake records an unsolved attempt. Primary literature through a September 2026 partial-result paper continues to formulate FEI as a conjecture. This does not certify absence of a subsequent solution or owner retirement.",
+  "exact_statement": "There exists a finite universal C>0 such that for every integer d>=1 and every f:{-1,1}^d->{-1,1} under uniform measure, sum_{S subset [d]} hat(f)(S)^2 log_2(1/hat(f)(S)^2) <= C sum_{S subset [d]} |S| hat(f)(S)^2, with 0 log_2(1/0)=0.",
+  "definitions": {
+    "hat(f)(S)": "2^{-d} sum_x f(x) product_{i in S} x_i",
+    "I_i(f)": "P_uniform[f(x)!=f(x with coordinate i flipped)] = sum_{S containing i}hat(f)(S)^2"
+  },
+  "log_base": 2,
+  "sources": [
+    {
+      "id": "ranking-20260907",
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "locator": "line 553",
+      "scope": "Title/tier/status only; not a proof or current-status certificate"
+    },
+    {
+      "id": "ODonnell12v1",
+      "url": "https://arxiv.org/pdf/1204.6447",
+      "revision": "2012-04-29 v1",
+      "locator": "printed page 5, FEI Conjecture; PDF page index 4",
+      "scope": "The exact primary source cited by the intake was recovered; statement agrees with this packet"
+    },
+    {
+      "id": "OWZ11",
+      "url": "https://www.cs.cmu.edu/~jswright/papers/fei.pdf",
+      "authors": "Ryan O'Donnell, John Wright, Yuan Zhou",
+      "title": "The Fourier Entropy-Influence Conjecture for certain classes of Boolean functions",
+      "scope": "Primary research statement and restricted-class results"
+    },
+    {
+      "id": "GMP26v2",
+      "url": "https://arxiv.org/html/2606.00246v2",
+      "revision": "2026-06-09",
+      "locators": "Section 1; Section 4.2; Section 5.1",
+      "scope": "Existential coordinate restriction induction; stronger L1 bound has bad-coordinate obstruction"
+    },
+    {
+      "id": "Han25v2",
+      "url": "https://arxiv.org/html/2312.08271v2",
+      "scope": "General upper bound retaining an individual-influence logarithmic term; exact hypotheses still to compare"
+    },
+    {
+      "id": "Potapov26v1",
+      "url": "https://arxiv.org/html/2609.21563v1",
+      "revision": "2026-09-18",
+      "scope": "Theorem 2 claims H<=4I for plateaued functions, Theorem 1 H<=2I for partially bent functions; not general FEI"
+    }
+  ],
+  "owner_solved_retired_check": {
+    "scope": "Targeted intake/attempt/lean scans and the recall-cited FEI owner memories only",
+    "conclusion": "No full-FEI solution or retirement found in these bounded reads. Owner LTF and plateaued special cases are separately scoped; current openness remains UNKNOWN.",
+    "memory_slugs": [
+      "fei_plateaued_constant_four_is_potapovs_theorem_not_ours_2026_09_30",
+      "fei_holds_for_linear_threshold_functions_rank_argument_2026_09_23",
+      "fei_opus_wave1_reduction_small_influences_gates_and_ltf_2026_09_23"
+    ]
+  },
+  "independent_before_paired_proof": {
+    "artifacts": [
+      "INDEPENDENT.md",
+      "BENT_SELECTOR.md"
+    ],
+    "paired_proof_read_when_saved": false
+  },
+  "formal_check": null,
+  "paired_access": {
+    "independent_first": [
+      "INDEPENDENT.md",
+      "BENT_SELECTOR.md"
+    ],
+    "proof_available_at_initial_read": false,
+    "proof_available_at_later_read": true,
+    "proofs_read": [
+      "BRIDGE_CHECKPOINT.md",
+      "ENTROPY_BOUND.md",
+      "SMALL_INFLUENCE_OBSTRUCTION.md",
+      "FAMILY_FEI4.md"
+    ],
+    "audit_verdicts": "AUDIT_W513.jsonl",
+    "audited_claims": 6,
+    "verdict": "KEEP under stated assumptions; independent final referee pending"
+  }
+}

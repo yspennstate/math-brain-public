@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "assertions": 1322,
+  "runtime_seconds": 0.4103282999985822,
+  "predicate_clarification": "Primary all_coordinate_null counts pair-isospectral spectra only. Zero-singleton phase-null census is separately shown here. This label clarification changes no primary eligibility or assertion.",
+  "census": {
+    "0": {
+      "tables": 2,
+      "pair_isospectral": 2,
+      "pair_isospectral_nonflat": 0,
+      "zero_singleton_AND_pair_isospectral": 2,
+      "zero_singleton_AND_pair_isospectral_nonflat": 0
+    },
+    "1": {
+      "tables": 4,
+      "pair_isospectral": 4,
+      "pair_isospectral_nonflat": 0,
+      "zero_singleton_AND_pair_isospectral": 2,
+      "zero_singleton_AND_pair_isospectral_nonflat": 0
+    },
+    "2": {
+      "tables": 16,
+      "pair_isospectral": 8,
+      "pair_isospectral_nonflat": 0,
+      "zero_singleton_AND_pair_isospectral": 4,
+      "zero_singleton_AND_pair_isospectral_nonflat": 0
+    },
+    "3": {
+      "tables": 256,
+      "pair_isospectral": 32,
+      "pair_isospectral_nonflat": 16,
+      "zero_singleton_AND_pair_isospectral": 18,
+      "zero_singleton_AND_pair_isospectral_nonflat": 8
+    }
+  },
+  "full_signed_wrapper_reset_transactions": 12,
+  "exact_full_child_reset_cost": "(3/32)*log2(131072/130977)",
+  "rational_power_certificate": "product_s (P_child(s)/Q_changed(s))^(1024 P_child(s))=(131072/130977)^96 >1",
+  "source_scope": "A085 complete minimal-seed reset, minimality and phase-null clauses independently verified; no source-price or target-necessity inference"
+}

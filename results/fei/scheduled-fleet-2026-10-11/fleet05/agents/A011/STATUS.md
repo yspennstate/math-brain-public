@@ -1,0 +1,2 @@
+STATE: A011 stage17 saved: ANY nonconstant padded core, ALL active-padding prefixes with fresh floors paid at SAME K=4C0+15; margin>=(3C0/2+1)Ig; 230,455 exact checks PASS; independent review pending; FEI OPEN.
+NEXT: Expose one SOURCE-dependent bit after padding, retain original source references, both full terminals and booked debits, fund prescribed fresh reset from SAME remaining ancestor bank; A086/A094 review.

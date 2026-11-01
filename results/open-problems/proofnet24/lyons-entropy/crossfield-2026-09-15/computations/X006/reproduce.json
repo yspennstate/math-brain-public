@@ -1,0 +1,131 @@
+{
+  "exact_checks": {
+    "generic_complex_conditional_determinant": "PASS",
+    "generic_adjugate_matrix_identity": "PASS",
+    "N_schur_complement": "PASS",
+    "conditional_weighted_sums": "PASS",
+    "tauzero_family_principal_determinants": "PASS",
+    "exp_9_over_7_rational_lower_bound": "68771/19208",
+    "exp_bound_margin": "1543/19208"
+  },
+  "bounded_diagnostics": [
+    {
+      "label": "general_tau_general_direction",
+      "tau": 0.0017138160720109319,
+      "A_eigenvalues": [
+        -0.29480051109491173,
+        0.3143859741719702,
+        1.030414536922942
+      ],
+      "FI": 3.4926330588613395,
+      "Hessian": -3.4738792256583833,
+      "Lorentz_formula_residual": 1.2351231148954867e-15,
+      "conditional_identity_residuals": [
+        -2.42861286636753e-17,
+        3.469446951953614e-18,
+        -4.163336342344337e-17
+      ],
+      "conditional_Fisher_margin": 2.0101093069765357,
+      "bound_4_1": -1.4637699186818482,
+      "bound_4_2": -1.1287517008524255,
+      "N_eigenvalues": [
+        [
+          4.3368086899420163e-19,
+          0.00841781737197958,
+          0.12893937831352567
+        ],
+        [
+          -8.784695441531818e-18,
+          0.006470479140571652,
+          0.0954748949619812
+        ],
+        [
+          7.175956151279369e-20,
+          0.009345316680969898,
+          0.18292286759798246
+        ]
+      ]
+    },
+    {
+      "label": "tauzero_positive_definite",
+      "tau": -1.7632828530622646e-10,
+      "A_eigenvalues": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "FI": 1864156.829974503,
+      "Hessian": -1864123.5589098325,
+      "Lorentz_formula_residual": 3.995772601683711e-09,
+      "conditional_identity_residuals": [
+        0.0,
+        3.552713678800501e-15,
+        0.0
+      ],
+      "conditional_Fisher_margin": 1597798.9078229389,
+      "bound_4_1": -266324.6510868976,
+      "bound_4_2": -24.833116407798162,
+      "N_eigenvalues": [
+        [
+          -9.763167290280522e-34,
+          0.7891204403753161,
+          1.3862943610709104
+        ],
+        [
+          -8.881785131469113e-16,
+          4.620986161447638,
+          13.862943611082251
+        ],
+        [
+          -1.5309691296074246e-19,
+          0.7891204403753163,
+          1.3862943610709115
+        ]
+      ]
+    },
+    {
+      "label": "tauzero_full_rank_indefinite",
+      "tau": -1.7632828530622646e-10,
+      "A_eigenvalues": [
+        -0.04660784432667814,
+        0.9999999999999998,
+        1.0
+      ],
+      "FI": 4061.389161493139,
+      "Hessian": -4060.0380333870876,
+      "Lorentz_formula_residual": -1.3984147173573547e-11,
+      "conditional_identity_residuals": [
+        1.1102230246251565e-16,
+        2.886579864025407e-15,
+        3.3306690738754696e-16
+      ],
+      "conditional_Fisher_margin": 3477.3683986636056,
+      "bound_4_1": -582.6696347234678,
+      "bound_4_2": -3.108234946200155,
+      "N_eigenvalues": [
+        [
+          -9.763167290280522e-34,
+          0.7891204403753161,
+          1.3862943610709104
+        ],
+        [
+          -8.881785131469113e-16,
+          4.620986161447638,
+          13.862943611082251
+        ],
+        [
+          -1.5309691296074246e-19,
+          0.7891204403753163,
+          1.3862943610709115
+        ]
+      ]
+    }
+  ],
+  "difficult_family": {
+    "epsilon": 9.5367431640625e-07,
+    "occupation_only_scalar": 1.784565758206138,
+    "trace_variance_ratio": 3.2483841769717157,
+    "exact_full_scalar": 0.755860888093426,
+    "indefinite_direction_epsilon": 0.04660784432667825
+  }
+}

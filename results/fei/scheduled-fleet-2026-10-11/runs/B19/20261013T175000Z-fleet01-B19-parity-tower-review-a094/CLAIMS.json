@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "stream_id": "B19",
+  "primary_packet_id": "A094",
+  "reviewed_claims": [
+    {
+      "claim_id": "B05_A023_PARITY_BALANCED_TOWER_RETAINED_U",
+      "version": "v1",
+      "status": "INDEPENDENTLY_ACCEPTED_AT_FORMAL_SCOPE",
+      "exact_statement": "For every Boolean P with U(P)<=2I(P), every d>=1 parity-balanced fair half-activation tower T_d(P), every adaptive/pruned tree on tower variables, and every common disjoint Boolean h, the exact tower identities hold and retained U-loss is at most 2I(T_d(P)).",
+      "hypotheses": [
+        "fair half-activation",
+        "fresh parity balancer at every level",
+        "tree queries tower variables only",
+        "terminal h is common and disjoint"
+      ],
+      "proof_source": "b1afa5899bf3729e5c44d029fee9cf4a6ea656b8:PROOF.md",
+      "review_source": "REPORT.md",
+      "review_records": ["A094 independent algebraic reconstruction and independent finite implementation"],
+      "scope_correction": "The positive-depth family is not restriction-closed, and the proof is an endpoint telescope rather than a pivotal-credit ownership theorem.",
+      "first_unproved_line": "Control the accumulated error after weakening exact fresh parity balancing.",
+      "next_consumers": ["A023", "A027", "A028", "A064", "B01", "B18", "B20"],
+      "full_fei_status": "OPEN"
+    }
+  ]
+}
+

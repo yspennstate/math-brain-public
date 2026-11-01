@@ -1,0 +1,32 @@
+{
+  "schema": "fei-second-review-verdict/1",
+  "review_packet": "A094",
+  "reviewed_packet": "A023",
+  "reviewed_claim": "B05-FIXED-SHARED-BLOCK-TRANSPORT-v1",
+  "source_commit": "ceda40553dcf6876fdcae33cec59d44001f368e4",
+  "verdict": "ACCEPTED_AT_DECLARED_MATHEMATICAL_SCOPE",
+  "wording_correction": "Replace exact price k by valid nonsharp price k.",
+  "accepted_scope": {
+    "shared_set": "one fixed finite X",
+    "private_variables": "disjoint U and V",
+    "cores": "arbitrary Boolean",
+    "bias": "arbitrary conditional means induced by the Boolean cores",
+    "revelation": "every order within the fixed X",
+    "controlled_quantity": "singleton potential Phi"
+  },
+  "reviewer_strengthening": {
+    "claim_id": "B19-FIXED-BLOCK-LOG-POTENTIAL-v1",
+    "status": "PROVED_BY_REVIEWER_PENDING_FRESH_A085_A090_REVIEW",
+    "delta": "Replace k q(E_empty) by q(E_empty)+E_empty log2(k), retaining product and reveal-order contraction.",
+    "lower_bound": "Odd majority gives Phi=(2/pi)log2(k)+O(1) at empty-orbit energy one, so constant empty-energy-only payment is impossible."
+  },
+  "unpaid": [
+    "logarithmic address-count dependence",
+    "changing overlapping shared blocks",
+    "exact mismatch/KL restriction charge",
+    "physical first-owner stopping rule"
+  ],
+  "packet_completion": "A023_IN_PROGRESS",
+  "full_fei_status": "OPEN"
+}
+

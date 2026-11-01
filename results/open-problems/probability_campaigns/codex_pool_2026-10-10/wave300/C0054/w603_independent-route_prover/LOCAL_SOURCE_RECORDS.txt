@@ -1,0 +1,37 @@
+~\<private-repo>\06_math_research\probability_1000_intake_claude_20260907\problems.jsonl
+LINE 54:
+{
+  "admitted": true,
+  "current_status": "unverified",
+  "dedup_key": "C0054",
+  "historical_status": "source_says_open",
+  "intake": "claude_20260907",
+  "locator": "Conjecture (0.2), p. 2 and Section 2.2, p. 7",
+  "problem_id": "C0054",
+  "recorded_at": "2026-09-07T06:38:45Z",
+  "result_status": "attempted_unsolved",
+  "schema": "probability-problem.v1",
+  "source_id": "bourgade_band_icm_2018",
+  "statement": "For d = 2 and fixed band width W, all bulk eigenvectors of the random band matrix on a box of side N are localised with localisation length of order exp(W^2), and the local eigenvalue statistics are Poisson as N -> infinity.",
+  "status_search": "The delocalised side W >> (log N)^{1/2} in d = 2 was addressed in arXiv 2503.07606 (2025) per the bounded search; the localisation side at fixed W is not known to be proved.",
+  "title": "Localisation of all bulk states for two-dimensional random band matrices at fixed band width",
+  "verification": "unreviewed"
+}
+~\<private-repo>\06_math_research\probability_1000_intake_claude_20260907\attempts.jsonl
+LINE 43:
+{
+  "attempt_id": "C0054-A001",
+  "author": "claude-probability-1000-continue-0907",
+  "independent_check": "",
+  "key_identity": "",
+  "method": "Try a fractional-moment (Aizenman-Molchanov) argument adapted to band matrices at fixed W in d = 2.",
+  "obstruction": "Fractional-moment decoupling loses a factor growing with W^2; no method reaches exp(W^2) localisation lengths.",
+  "problem_id": "C0054",
+  "recorded_at": "2026-09-07T06:38:45Z",
+  "result": "The fractional-moment method proves localisation when the expected s-th moment of the Green function E|G_{xy}(E + i eta)|^s decays exponentially in |x - y|; for band matrices at fixed W in d = 2 the required a priori bound is a decoupling of the moment across a band-width-sized block, which for the Anderson model comes from the rank-one structure of the diagonal disorder. Band matrices have no rank-one structure: the randomness at a site is a W^2-dimensional block, and the decoupling lemma degrades by a factor that grows with W^2, so the method proves localisation only for W <= W_0 small (large disorder regime), not for every fixed W. The conjectured localisation length exp(W^2) matches the expected scaling of the failure of the fractional-moment bound: the moment decays only after distances of order exp(cW^2), consistent with the conjecture but not proving it. A rigorous partial statement I can defend: for every fixed W there is a positive density of localised states at the spectral edges (Lifshitz-tail regime), by the standard edge-localisation argument, which does not touch the bulk. No bulk result.",
+  "schema": "probability-attempt.v1",
+  "substantive": true
+}
+~\<private-repo>\06_math_research\prob1000_lean_20260908\RANKED_LIST_2026-09-07_annotated.md
+LINE 477:
+| C0054 | Localisation of all bulk states for two-dimensional random band matrices at fixe | attempted_un | 2D band matrices localised at fixed W |

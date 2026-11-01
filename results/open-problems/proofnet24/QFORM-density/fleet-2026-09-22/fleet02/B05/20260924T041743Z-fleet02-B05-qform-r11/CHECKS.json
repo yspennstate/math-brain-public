@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T041743Z-fleet02-B05-qform-r11",
+  "status": "PASS",
+  "checks": {
+    "partner_constant": {
+      "C_star": 491.735145127033,
+      "threshold_q": 0.0625,
+      "T_lower": 0.03125,
+      "density_bound": 1561.1617733287746,
+      "statement": "C_star*(1/32)^(-1/3)"
+    },
+    "longitudinal_spike_count": {
+      "xi2_lower_per_spike": 0.4375,
+      "max_count": 2,
+      "reason": "3*(7/16)>1=sum xi_j^2"
+    },
+    "transverse_complement": {
+      "lambda_min_lower": 0.875,
+      "det_lower": 0.765625,
+      "pair_density_cap_upper": 2.2857142857142856,
+      "statement": "T_K>(7/8)I, det T_K>49/64, cap<16/7"
+    },
+    "planar_endpoint": {
+      "C0": 7.761982175235,
+      "target_curvature_lower": 0.5,
+      "density_bound": 16.969300277863415,
+      "statement": "C0*(16/7)^(2/3)*2^(1/3)"
+    },
+    "regression_determinant": {
+      "statement": "under u=rv+sw+p with p orthogonal span(v,w), the coefficient Gram is congruent by a determinant-one shear to diag(||p||^2,T_K), hence det G_K=||p||^2 det T_K"
+    },
+    "counterexample": {
+      "joint_density_cap": 1.0,
+      "VW_density_cap": "1/R",
+      "V_density_cap": 1.0,
+      "W_density_cap": "1/R",
+      "P_density_cap_upper_for_R_ge_2": 0.6666666666666666,
+      "output_density_lower": "p_Q(1/R)>=(1/2)log(2R-1)",
+      "status": "algebraically verified"
+    }
+  },
+  "scope": "supporting exact-rank-three heavy-null reductions only; full QFORM remains open; continuity not claimed"
+}

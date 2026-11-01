@@ -1,0 +1,357 @@
+% ===== Part I, section 4: Target 1 =====
+\section{Target 1: the correlated Gaussian equivalence}\label{sec:proofT1}
+
+\subsection{Model, surrogate and statement}
+
+Let $F=[f_1,\dots,f_m]\in\R^{d\times m}$ have independent $N(0,1/d)$ entries. For each original sample
+$i\le n$ let $a_i,z_{i1},z_{i2}$ be independent $N(0,I_d)$ vectors, independent of $F$, and let
+$t_i=\xi^\top a_i$ with $\|\xi\|=1$ fixed. The two augmented feature rows of sample $i$ are
+\[
+x^A_{ij}=\sigma\big(F^\top(a_i+\Delta z_{ij})\big)\in\R^m,\qquad j=1,2,
+\]
+with $\Delta>0$ fixed and $\sigma:\R\to\R$ odd, bounded, three times differentiable with bounded
+derivatives (for instance $\tanh$). With $N=2n$, $y\in\R^N$ the vector of the labels $t_i$ each repeated
+twice and $X_A\in\R^{N\times m}$ the matrix of the rows $x^A_{ij}$, the objective is
+\begin{equation}
+\begin{aligned}
+L_A(w)&=\frac1{2N}\|y-X_Aw\|^2+\frac\lambda2\|w\|^2\\
+&=\frac1{4n}\sum_{i=1}^n\sum_{j=1}^2\big(t_i-(x^A_{ij})^\top w\big)^2+\frac\lambda2\|w\|^2 ,
+\end{aligned}
+\label{eq:objective}
+\end{equation}
+$\lambda>0$ fixed, with minimiser $w_A^\star$ and minimum $L_A^\star$; $n/d\to\alpha>0$ and $m/d\to\beta>0$.
+A clean test point is $x^{0,A}=\sigma(F^\top a^0)$ with $t^0=\xi^\top a^0$, $a^0\sim N(0,I_d)$ independent of
+everything, and the population clean risk of a vector $w$ is
+$R_A(w\mid F)=\E[(t^0-(x^{0,A})^\top w)^2\mid F,w]$.
+
+The surrogate replaces $\sigma$ by its first Hermite coefficients and the rest by independent Gaussian
+residuals. Let $s=\sqrt{1+\Delta^2}$, $\rho=s^{-2}$, let $h_k$ be the orthonormal probabilists' Hermite
+polynomials, $G\sim N(0,1)$, and for $q>0$
+\begin{equation}
+\begin{gathered}
+a_k(q)=\E\big[\sigma(s\sqrt q\,G)h_k(G)\big],\qquad \kappa(q)=\E\big[\sigma'(s\sqrt q\,G)\big],\\
+\eta(q)=\sum_{k\ge3\ \mathrm{odd}}a_k(q)^2,\qquad \gamma(q)=\sum_{k\ge3\ \mathrm{odd}}a_k(q)^2\rho^k .
+\end{gathered}
+\label{eq:hermitecoef}
+\end{equation}
+Since $\sigma$ is odd, $a_k(q)=0$ for even $k$, and Gaussian integration by parts gives
+$a_1(q)=s\sqrt q\,\kappa(q)$. Put $\mu_e=\kappa(1)$, $\mu_b=\Delta\kappa(1)$, $\mu_2=\sqrt{\gamma(1)}$,
+$\mu_3=\sqrt{\eta(1)-\gamma(1)}$ (both radicands are non-negative, see Lemma~\ref{lem:residualcov}), and
+define the surrogate rows and clean row
+\begin{equation}
+x^G_{ij}=\mu_eF^\top a_i+\mu_bF^\top z_{ij}+\mu_2b_i+\mu_3p_{ij},\qquad
+x^{0,G}=\nu_1F^\top a^0+\nu_2g^0,
+\label{eq:surrogate}
+\end{equation}
+with $b_i,p_{i1},p_{i2},g^0\sim N(0,I_m)$ independent of everything else, $\nu_1=\E\sigma'(G)$ and
+$\nu_2^2=\E\sigma(G)^2-\nu_1^2$. The same $a_i$ and the same $b_i$ enter both views of sample $i$: the
+surrogate keeps the shared latent structure of the augmentation. The four training coefficients are those
+of Dhifallah and Lu \cite{DhifallahLu}. $L_G$, $w_G^\star$, $L_G^\star$ and $R_G(w\mid F)$ are defined from
+\eqref{eq:objective} with $X_G$ in place of $X_A$ and $x^{0,G}$ in place of $x^{0,A}$.
+
+\begin{theorem}[Target 1]\label{thm:T1}
+There are constants $C,c>0$ depending only on $\sigma,\Delta,\lambda,\alpha,\beta$ such that for every
+$\varphi\in C^2_b(\R)$ and all large $d$,
+\begin{align}
+\big|\E\varphi(L_A^\star)-\E\varphi(L_G^\star)\big|
+&\le C\Big(\|\varphi'\|_\infty\sqrt{\tfrac{\log d}{d}}+\|\varphi''\|_\infty\,\tfrac1d\Big)+C\|\varphi\|_\infty e^{-cd},
+\label{eq:T1a}\\
+\big|\E\varphi\big(R_A(w_A^\star\mid F)\big)-\E\varphi\big(R_G(w_G^\star\mid F)\big)\big|
+&\le C\Big(\|\varphi'\|_\infty\sqrt{\tfrac{\log d}{d}}+\|\varphi''\|_\infty\,\tfrac1d\Big)+C\|\varphi\|_\infty e^{-cd}.
+\label{eq:T1b}
+\end{align}
+In particular the optimised objective and the clean prediction risk of the augmented ridge problem have
+the same limits in law as those of the surrogate.
+\end{theorem}
+
+The proof replaces the $n$ blocks $(t_i,x_{i1},x_{i2})$ one at a time, in the manner of Lindeberg. Two exact
+facts make each step cheap: the change of the optimum under the insertion of one block is an explicit
+$2\times2$ quadratic form (Lemma~\ref{lem:ranktwo}), and conditional on $F$ there is a Gaussian block whose
+second moments match those of the actual block exactly (Proposition~\ref{prop:gaussianization}), so that
+the only mismatch between the actual block and the Gaussian one is the fluctuation of a $2\times2$ leverage
+matrix, and the only mismatch between that Gaussian block and the surrogate is the replacement of the
+random column norms $q_r=\|f_r\|^2$ by one.
+
+\subsection{Exact identities}
+
+\begin{lemma}[insertion of one block]\label{lem:ranktwo}
+Let $X_-\in\R^{(N-2)\times m}$ and $y_-$ be the data with the two rows of sample $i$ removed, let
+$L_-(w)=\frac1{2N}\|y_--X_-w\|^2+\frac\lambda2\|w\|^2$ with minimiser $w_-$ and minimum $L_-^\star$, and put
+\[
+H_-=\lambda I+\tfrac1NX_-^\top X_-,\qquad B=H_-^{-1},\qquad
+X_i=\begin{pmatrix}x_{i1}^\top\\x_{i2}^\top\end{pmatrix},\qquad e_i=t_i\mathbf 1_2-X_iw_-,\qquad
+Q_i=\tfrac1NX_iBX_i^\top .
+\]
+Then the minimum $L^\star$ of the full objective satisfies
+\begin{equation}
+L^\star-L_-^\star=\frac1{2N}\,e_i^\top(I_2+Q_i)^{-1}e_i,\qquad
+w^\star-w_-=\frac1N\,BX_i^\top(I_2+Q_i)^{-1}e_i,
+\label{eq:ranktwo}
+\end{equation}
+with $Q_i\succeq0$, $\|(I_2+Q_i)^{-1}\|\le1$ and $\|B\|\le\lambda^{-1}$.
+\end{lemma}
+
+\begin{proof}
+$L_-$ is a quadratic with Hessian $H_-$, so $L_-(w)=L_-^\star+\frac12(w-w_-)^\top H_-(w-w_-)$, and the full
+objective is $L(w)=L_-(w)+\frac1{2N}\|e_i-X_i(w-w_-)\|^2$. Minimising over $u=w-w_-$ gives
+$u^\star=(H_-+\frac1NX_i^\top X_i)^{-1}\frac1NX_i^\top e_i$ and
+$L^\star-L_-^\star=\frac1{2N}e_i^\top\big(I-\frac1NX_i(H_-+\frac1NX_i^\top X_i)^{-1}X_i^\top\big)e_i$. The
+push-through identity $\frac1NX_i(H_-+\frac1NX_i^\top X_i)^{-1}X_i^\top=Q_i(I+Q_i)^{-1}$ gives the first
+formula in \eqref{eq:ranktwo}, and $(H_-+\frac1NX_i^\top X_i)^{-1}X_i^\top=BX_i^\top(I+Q_i)^{-1}$ the second.
+The remaining claims follow from $H_-\succeq\lambda I$.
+\end{proof}
+
+\begin{lemma}[residual covariances]\label{lem:residualcov}
+For $q>0$ let $V(q)=\E\sigma(s\sqrt q\,G)^2=\sum_{k\ \mathrm{odd}}a_k(q)^2$ and, for a standard bivariate
+Gaussian $(H_1,H_2)$ with correlation $\rho$, $C(q)=\E[\sigma(s\sqrt q H_1)\sigma(s\sqrt qH_2)]=\sum_{k\ \mathrm{odd}}a_k(q)^2\rho^k$.
+Then $\eta(q)=V(q)-s^2q\kappa(q)^2$, $\gamma(q)=C(q)-q\kappa(q)^2$, $0\le\gamma(q)\le\eta(q)\le\|\sigma\|_\infty^2$,
+and $V,\kappa,C,\eta,\gamma$ are Lipschitz on $[\tfrac12,\tfrac32]$ with constants depending only on
+$\sigma$ and $\Delta$.
+\end{lemma}
+
+\begin{proof}
+The expansions of $V$ and $C$ are Parseval's identity and Mehler's formula \cite[Chapter~1]{Janson} for
+the Hermite expansion of $\sigma(s\sqrt q\,\cdot)$; the $k=1$ terms are $a_1(q)^2=s^2q\kappa(q)^2$ and
+$a_1(q)^2\rho=q\kappa(q)^2$, which gives the two identities and, since $0<\rho<1$, the inequalities. For the
+Lipschitz bounds, differentiation under the Gaussian expectation is justified by the bounded derivatives
+of $\sigma$: with $b(q)=s\sqrt q$, $V'(q)=\frac{s}{\sqrt q}\E[G\sigma(b(q)G)\sigma'(b(q)G)]$,
+$\kappa'(q)=\frac{s}{2\sqrt q}\E[G\sigma''(b(q)G)]$ and
+$C'(q)=\frac{s}{2\sqrt q}\E[H_1\sigma'(b(q)H_1)\sigma(b(q)H_2)+H_2\sigma(b(q)H_1)\sigma'(b(q)H_2)]$, all bounded
+on $[\frac12,\frac32]$.
+\end{proof}
+
+\begin{proposition}[exact Gaussianisation conditional on $F$]\label{prop:gaussianization}
+Let $Q_F=\mathrm{diag}(q_1,\dots,q_m)$, $q_r=\|f_r\|^2$, $G_F=F^\top F$, $\mathscr R=Q_F^{-1/2}G_FQ_F^{-1/2}$ (a
+correlation matrix), $D_F=\mathrm{diag}(\kappa(q_r))$, $A_k=\mathrm{diag}(a_k(q_r))$, and
+\[
+\Sigma_{\rm com}=\sum_{k\ge3\ \mathrm{odd}}\rho^kA_k\mathscr R^{\circ k}A_k,\qquad
+\Sigma_{\rm priv}=\sum_{k\ge3\ \mathrm{odd}}(1-\rho^k)A_k\mathscr R^{\circ k}A_k,
+\]
+where $\circ k$ is the $k$-fold Hadamard power. Both are positive semidefinite. Conditional on $F$ let
+$b_i^\#\sim N(0,\Sigma_{\rm com})$ and $p_{i1}^\#,p_{i2}^\#\sim N(0,\Sigma_{\rm priv})$ be independent of each other
+and of $(a_i,z_{i1},z_{i2})$, and put
+\begin{equation}
+x^\#_{ij}=D_FF^\top a_i+\Delta D_FF^\top z_{ij}+b_i^\#+p^\#_{ij}.
+\label{eq:sharp}
+\end{equation}
+Then, conditional on $F$, for $M\in\{A,\#\}$ the vectors $(t_i,x^M_{i1},x^M_{i2})$ have the same means, the same
+covariances and the same cross-covariances:
+\begin{equation}
+\begin{gathered}
+\E[t_ix^M_{ij}\mid F]=D_FF^\top\xi,\qquad
+\mathrm{Cov}(x^M_{ij}\mid F)=s^2D_FG_FD_F+\Sigma_{\rm com}+\Sigma_{\rm priv},\\
+\mathrm{Cov}(x^M_{i1},x^M_{i2}\mid F)=D_FG_FD_F+\Sigma_{\rm com}.
+\end{gathered}
+\label{eq:matching}
+\end{equation}
+Likewise, with $\kappa_0(q)=\E\sigma'(\sqrt q\,G)$, $a_{0,k}(q)=\E[\sigma(\sqrt q\,G)h_k(G)]$,
+$D_{0,F}=\mathrm{diag}(\kappa_0(q_r))$, $A_{0,k}=\mathrm{diag}(a_{0,k}(q_r))$ and
+$\Sigma_{0}=\sum_{k\ge3\ \mathrm{odd}}A_{0,k}\mathscr R^{\circ k}A_{0,k}\succeq0$, the clean row
+$x^{0,\#}=D_{0,F}F^\top a^0+r^0$, $r^0\sim N(0,\Sigma_0)$ independent of $a^0$, satisfies
+\[
+\E[t^0x^{0,\#}\mid F]=\E[t^0x^{0,A}\mid F]=D_{0,F}F^\top\xi,\qquad
+\mathrm{Cov}(x^{0,\#}\mid F)=\mathrm{Cov}(x^{0,A}\mid F)=D_{0,F}G_FD_{0,F}+\Sigma_0\,;
+\]
+consequently $R_A(w\mid F)=R_\#(w\mid F)$ for every $w$ that is independent of $a^0$.
+\end{proposition}
+
+\begin{proof}
+Fix $F$. For view $j$ and coordinate $r$ the standardised pre-activation
+$H_{jr}=f_r^\top(a_i+\Delta z_{ij})/(s\sqrt{q_r})$ is standard Gaussian, with
+$\mathrm{Cov}(H_{jr},H_{js})=\mathscr R_{rs}$ within a view and $\mathrm{Cov}(H_{1r},H_{2s})=\rho\mathscr R_{rs}$
+across views. Mehler's formula gives, for the actual rows,
+\[
+\mathrm{Cov}(x^A_{ij}\mid F)=\sum_{k\ \mathrm{odd}}A_k\mathscr R^{\circ k}A_k,\qquad
+\mathrm{Cov}(x^A_{i1},x^A_{i2}\mid F)=\sum_{k\ \mathrm{odd}}\rho^kA_k\mathscr R^{\circ k}A_k ,
+\]
+and the $k=1$ terms are $A_1\mathscr RA_1=s^2D_FG_FD_F$ and $\rho A_1\mathscr RA_1=D_FG_FD_F$ by
+$a_1(q)=s\sqrt q\,\kappa(q)$ and $\mathscr R_{rs}\sqrt{q_rq_s}=(G_F)_{rs}$. Since
+$(t_i,f_r^\top(a_i+\Delta z_{ij}))$ is centred jointly Gaussian with covariance $\xi^\top f_r$, Stein's identity gives
+$\E[t_i\sigma(f_r^\top(a_i+\Delta z_{ij}))\mid F]=\xi^\top f_r\,\E[\sigma'(f_r^\top(a_i+\Delta z_{ij}))\mid F]=\kappa(q_r)\xi^\top f_r$,
+which is $D_FF^\top\xi$. Positive semidefiniteness of $\Sigma_{\rm com}$ and $\Sigma_{\rm priv}$ follows from the
+Schur product theorem ($\mathscr R^{\circ k}\succeq0$) and congruence by the diagonal matrices $A_k$. The
+moments of $x^\#$ are read off \eqref{eq:sharp}: the Gaussian block is centred, its teacher cross-covariance
+is $D_FF^\top\E[t_ia_i]=D_FF^\top\xi$, its within-view covariance is
+$D_FF^\top F D_F+\Delta^2D_FF^\top FD_F+\Sigma_{\rm com}+\Sigma_{\rm priv}$ and its cross-view covariance drops the
+private terms; $1+\Delta^2=s^2$ gives \eqref{eq:matching}. The clean statements are the same computation
+with $\Delta=0$, and the risk identity holds because $R_M(w\mid F)=1-2w^\top\E[t^0x^{0,M}\mid F]+w^\top\mathrm{Cov}(x^{0,M}\mid F)w$
+depends only on the matched moments.
+\end{proof}
+
+\subsection{Estimates}
+
+Let $\Omega_F$ be the event that $\|F\|_{\mathrm{op}}\le3(1+\sqrt\beta)$ and $\max_r|q_r-1|\le\frac12$. Since $F$
+has independent Gaussian entries of variance $1/d$ and $q_r\sim\chi^2_d/d$, $\Pr(\Omega_F^c)\le Ce^{-cd}$
+\cite[Theorem~4.4.5 and Section~2.8]{Vershynin}. Constants $C$ below depend only on
+$\sigma,\Delta,\lambda,\alpha,\beta$, and all statements are for large $d$.
+
+\begin{lemma}[a priori bounds]\label{lem:apriori}
+For every hybrid sample in which each block is either actual, of type $\#$, or of type $G$, and every
+minimiser $w$ of the corresponding objective (full or with one block removed),
+$\lambda\|w\|^2\le\frac1n\sum_it_i^2$; hence $\sup_d\E\|w\|^{2p}<\infty$ for every $p$. On $\Omega_F$, the
+within-view and cross-view covariances of every block type have operator norm at most $C$, and for every
+$F$-measurable $w$ independent of the block, $\E[|x_{ij}^\top w|^{p}\mid F,w]\le C_p\|w\|^p$ and
+$\E[\|e_i\|^p\mid F,w]\le C_p(1+\|w\|^p)$ for every $p$.
+\end{lemma}
+
+\begin{proof}
+$\frac\lambda2\|w\|^2\le L(w)\le L(0)=\frac1{2N}\|y\|^2=\frac1{2n}\sum_it_i^2$, and the moments of the empirical
+mean of $t_i^2\sim\chi^2_1$ are bounded. On $\Omega_F$, $\|G_F\|\le9(1+\sqrt\beta)^2$, $\|D_F\|\le\|\sigma'\|_\infty$,
+$\|A_k\|\le\|\sigma\|_\infty$, and $\|\mathscr R\|\le\|Q_F^{-1}\|\,\|G_F\|\le2\|G_F\|$. The Hadamard sums are
+bounded because $\sum_k\|A_k\|^2\le\|\sigma\|_\infty^2$ and, for positive semidefinite $A,B$,
+$\|A\circ B\|\le\max_rA_{rr}\,\|B\|$, so that $\|\mathscr R^{\circ k}\|\le\|\mathscr R\|$ for every $k$ (a correlation
+matrix has unit diagonal). For the actual block, $x_{ij}^\top w$ is a function of the Gaussian vector
+$(a_i,z_{ij})$ with Lipschitz constant $\|\sigma'\|_\infty\|Fw\|\le C\|w\|$ and mean zero (oddness), so its
+moments are bounded by Gaussian concentration \cite[Theorem~5.6]{BLM}; for the Gaussian block types the
+same bound is the Gaussian moment bound with the covariance estimate. $e_i=t_i\mathbf 1_2-X_iw$ is handled
+coordinatewise.
+\end{proof}
+
+\begin{lemma}[leverage fluctuations]\label{lem:leverage2}
+Conditional on the leave-block data (which fix $F$, $B$ and $w_-$), on $\Omega_F$, for the actual block and
+for the $\#$ block,
+\[
+\E\big[\|Q_i-\bar Q_i\|_F^2\,\big|\,\mathcal F_{-i}\big]\le\frac Cd,\qquad \bar Q_i=\E[Q_i\mid\mathcal F_{-i}],
+\]
+and $\bar Q_i^A=\bar Q_i^\#$. The same holds for $R_i=\frac1NX_iBS_0BX_i^\top$ with any fixed symmetric
+$S_0$ with $\|S_0\|\le C$, and $\|(I+Q)^{-1}-(I+\bar Q)^{-1}\|\le\|Q-\bar Q\|$ for positive semidefinite $Q,\bar Q$.
+\end{lemma}
+
+\begin{proof}
+$(Q_i)_{ab}=\frac1Nx_{ia}^\top Bx_{ib}$. For the actual block it is a function of the Gaussian vector
+$(a_i,z_{i1},z_{i2})\in\R^{3d}$ whose gradient with respect to $a_i$ is
+$\frac1N\big(F\,\mathrm{diag}(\sigma'_a)Bx_{ib}+F\,\mathrm{diag}(\sigma'_b)Bx_{ia}\big)$ (and similarly for $z_{i1},z_{i2}$),
+of norm at most $\frac CN\|F\|\lambda^{-1}\sqrt m\,\|\sigma\|_\infty\le C/\sqrt d$; the Gaussian Poincar\'e
+inequality \cite[Theorem~3.20]{BLM} gives the variance bound. For the $\#$ block, $(Q_i)_{ab}$ is a quadratic
+form in a Gaussian vector; its gradient has norm at most $\frac CN\|F\|\lambda^{-1}(\|x_{ia}^\#\|+\|x_{ib}^\#\|)$,
+whose second moment is $O(m/N^2)=O(1/d)$ by Lemma~\ref{lem:apriori}, and the Poincar\'e inequality
+applies again. $\bar Q_i^A=\bar Q_i^\#$ because $\E[x_{ia}^\top Bx_{ib}\mid\mathcal F_{-i}]=\Tr(B\,\mathrm{Cov}(x_{ia},x_{ib}\mid F))$
+and the covariances match by Proposition~\ref{prop:gaussianization}. The argument for $R_i$ is identical
+with $BS_0B$ in place of $B$. The Lipschitz bound for the inverse is the resolvent identity
+$(I+Q)^{-1}-(I+\bar Q)^{-1}=(I+Q)^{-1}(\bar Q-Q)(I+\bar Q)^{-1}$ with both resolvents of norm at most one.
+\end{proof}
+
+\begin{lemma}[from the exact Gaussian block to the surrogate]\label{lem:bridge}
+Let $C^\#_{ab}$, $C^G_{ab}$ ($a,b\in\{1,2\}$) be the within- and cross-view covariances of the $\#$ and $G$
+blocks conditional on $F$, and $c^\#=D_FF^\top\xi$, $c^G=\mu_eF^\top\xi$ their teacher cross-covariances. Then
+\[
+\E\Big[\mathbf 1_{\Omega_F}\max_{a,b}\|C^\#_{ab}-C^G_{ab}\|_{\mathrm{op}}\Big]+\E\Big[\mathbf 1_{\Omega_F}\|c^\#-c^G\|\Big]
+\le C\sqrt{\frac{\log d}{d}} ,
+\]
+and the same bound holds for the clean covariances and cross-covariances of $x^{0,\#}$ and $x^{0,G}$.
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:matching} and \eqref{eq:surrogate}, $C^\#_{11}-C^G_{11}=s^2(D_FG_FD_F-\kappa(1)^2G_F)+
+(\Sigma_{\rm com}+\Sigma_{\rm priv}-\eta(1)I)$ and $C^\#_{12}-C^G_{12}=(D_FG_FD_F-\kappa(1)^2G_F)+(\Sigma_{\rm com}-\gamma(1)I)$.
+Write $\Sigma_{\rm com}+\Sigma_{\rm priv}=\sum_{k\ge3\ \mathrm{odd}}A_k\mathscr R^{\circ k}A_k=\mathrm{diag}(\eta(q_r))+\Theta$
+and $\Sigma_{\rm com}=\mathrm{diag}(\gamma(q_r))+\Theta_\rho$, where $\Theta,\Theta_\rho$ are the off-diagonal parts:
+the diagonal of $\mathscr R^{\circ k}$ is one, so the diagonal entries are $\sum_{k\ge3}a_k(q_r)^2=\eta(q_r)$ and
+$\sum_{k\ge3}a_k(q_r)^2\rho^k=\gamma(q_r)$. Three estimates:
+(i) $\|D_F-\kappa(1)I\|=\max_r|\kappa(q_r)-\kappa(1)|\le C\max_r|q_r-1|$ on $\Omega_F$ by Lemma~\ref{lem:residualcov},
+and likewise $\|\mathrm{diag}(\eta(q_r))-\eta(1)I\|$ and $\|\mathrm{diag}(\gamma(q_r))-\gamma(1)I\|$; since
+$q_r\sim\chi^2_d/d$ are $m$ sub-exponential variables, $\E\max_r|q_r-1|\le C\sqrt{\log m/d}$
+\cite[Section~2.8]{Vershynin}. (ii) $D_FG_FD_F-\kappa(1)^2G_F=(D_F-\kappa(1)I)G_FD_F+\kappa(1)G_F(D_F-\kappa(1)I)$ has
+operator norm at most $C\max_r|q_r-1|$ on $\Omega_F$. (iii) For $r\ne s$,
+$|\Theta_{rs}|\le\sum_{k\ge3}|a_k(q_r)a_k(q_s)||\mathscr R_{rs}|^k\le|\mathscr R_{rs}|^3\sqrt{V(q_r)V(q_s)}\le\|\sigma\|_\infty^2|\mathscr R_{rs}|^3$,
+and $\mathscr R_{rs}=\langle f_r,f_s\rangle/(\|f_r\|\|f_s\|)$ is the cosine of the angle between two independent
+Gaussian vectors in $\R^d$, so $\E\mathscr R_{rs}^6\le C/d^3$. Hence
+$\E\|\Theta\|_{\mathrm{op}}\le\E\|\Theta\|_F\le\big(\sum_{r\ne s}\E\Theta_{rs}^2\big)^{1/2}\le Cm\,d^{-3/2}\le C d^{-1/2}$,
+and the same for $\Theta_\rho$. The teacher term is $(D_F-\kappa(1)I)F^\top\xi$ with $\|F^\top\xi\|\le\|F\|$. The
+clean case is identical with $\Delta=0$.
+\end{proof}
+
+\subsection{Proof of Theorem~\ref{thm:T1}}
+
+\begin{proof}[Proof of \eqref{eq:T1a}]
+For $0\le i\le n$ let $L^{(i)}$ be the objective in which blocks $1,\dots,i$ are of type $G$ and blocks
+$i+1,\dots,n$ are actual, so $L^{(0)}=L_A$ and $L^{(n)}=L_G$, and let $L^{(i,\#)}$ be the objective in which
+block $i$ is of type $\#$, blocks $<i$ of type $G$ and blocks $>i$ actual. Then
+\[
+\E\varphi(L_A^\star)-\E\varphi(L_G^\star)=\sum_{i=1}^n\Big(\E\varphi(L^{(i-1)\star})-\E\varphi(L^{(i,\#)\star})\Big)
++\sum_{i=1}^n\Big(\E\varphi(L^{(i,\#)\star})-\E\varphi(L^{(i)\star})\Big).
+\]
+Fix $i$ and let $\mathcal F_{-i}$ be the $\sigma$-field of $F$ and of all blocks other than $i$; the three
+objectives compared share the leave-block minimum $L_-^\star$, the matrix $B$ and the vector $w_-$. By
+Lemma~\ref{lem:ranktwo}, $L^\star=L_-^\star+\delta$ with $\delta=\frac1{2N}e_i^\top(I+Q_i)^{-1}e_i$ computed
+from the block of the relevant type, and a Taylor expansion gives
+\[
+\big|\E[\varphi(L_-^\star+\delta)-\varphi(L_-^\star+\delta')\mid\mathcal F_{-i}]\big|
+\le\|\varphi'\|_\infty\big|\E[\delta-\delta'\mid\mathcal F_{-i}]\big|+\|\varphi''\|_\infty\,\E[\delta^2+\delta'^2\mid\mathcal F_{-i}].
+\]
+By Lemma~\ref{lem:apriori}, $\E[\delta^2\mid\mathcal F_{-i}]\le\frac1{4N^2}\E[\|e_i\|^4\mid\mathcal F_{-i}]\le\frac{C(1+\|w_-\|^4)}{N^2}$
+on $\Omega_F$, so the second-order terms sum to $C\|\varphi''\|_\infty/d$ after taking expectations. For the
+first-order terms, write $Z=(t_i,u_1,u_2)$ with $u_a=x_{ia}^\top w_-$, so $e_i=t_i\mathbf 1_2-(u_1,u_2)^\top$, and freeze the
+leverage: $\delta=\frac1{2N}\psi_{\bar Q}(Z)+\frac1{2N}e_i^\top\big((I+Q_i)^{-1}-(I+\bar Q_i)^{-1}\big)e_i$ with
+$\psi_{\bar Q}(Z)=e_i^\top(I+\bar Q_i)^{-1}e_i$ a quadratic form in $Z$.
+
+\emph{Actual to $\#$.} The conditional second moments of $Z$ under the actual and the $\#$ block coincide
+(Proposition~\ref{prop:gaussianization}, with $w_-$ being $\mathcal F_{-i}$-measurable), and $\bar Q_i^A=\bar Q_i^\#$
+(Lemma~\ref{lem:leverage2}); hence $\E[\psi_{\bar Q}(Z^A)\mid\mathcal F_{-i}]=\E[\psi_{\bar Q}(Z^\#)\mid\mathcal F_{-i}]$
+exactly. The correction term is bounded by $\frac1{2N}\|e_i\|^2\|Q_i-\bar Q_i\|$, whose conditional expectation
+is at most $\frac1{2N}\big(\E\|e_i\|^4\big)^{1/2}\big(\E\|Q_i-\bar Q_i\|_F^2\big)^{1/2}\le\frac{C(1+\|w_-\|^2)}{N\sqrt d}$
+on $\Omega_F$, by Lemmas~\ref{lem:apriori} and~\ref{lem:leverage2}, for either block type. Summed over the $n$
+steps this is $C\|\varphi'\|_\infty d^{-1/2}$.
+
+\emph{$\#$ to $G$.} Both blocks are Gaussian conditional on $\mathcal F_{-i}$, and
+$\E[\psi_{\bar Q}(Z)\mid\mathcal F_{-i}]$ is a fixed linear combination (with coefficients bounded by one) of
+$\E t_i^2=1$, $\E[t_iu_a]=w_-^\top c_a$ and $\E[u_au_b]=w_-^\top C_{ab}w_-$, while $(\bar Q_i)_{ab}=\frac1N\Tr(BC_{ab})$.
+By Lemma~\ref{lem:bridge}, on $\Omega_F$ the moments differ by at most
+$C(1+\|w_-\|^2)\max_{ab}\|C^\#_{ab}-C^G_{ab}\|+C\|w_-\|\|c^\#-c^G\|$, and the frozen leverages by at most
+$\frac1N\|B\|_{\mathrm{tr}}\max_{ab}\|C^\#_{ab}-C^G_{ab}\|\le\frac{m}{N\lambda}\max_{ab}\|C^\#_{ab}-C^G_{ab}\|$, which enters
+$\psi$ through the Lipschitz bound of Lemma~\ref{lem:leverage2} multiplied by $\|e_i\|^2$. Taking expectations
+and using Lemma~\ref{lem:apriori} for the moments of $w_-$ and $e_i$, each of the $n$ steps contributes at most
+$\frac{C}{N}\sqrt{\log d/d}\,\|\varphi'\|_\infty$ to the first-order sum.
+
+Off $\Omega_F$ the two expectations differ by at most $2\|\varphi\|_\infty\Pr(\Omega_F^c)\le C\|\varphi\|_\infty e^{-cd}$.
+Adding the three contributions gives \eqref{eq:T1a}.
+\end{proof}
+
+\begin{proof}[Proof of \eqref{eq:T1b}]
+Let $M=\lceil d\rceil$ and let $(t^0_l,a^0_l)_{l\le M}$ be an independent clean block, with actual features
+$x^{0,A}_l=\sigma(F^\top a^0_l)$; put $c_0=\frac1M\sum_l(t^0_l)^2$, $r_0=\frac1M\sum_lt^0_lx^{0,A}_l$,
+$S_0=\frac1M\sum_lx^{0,A}_l(x^{0,A}_l)^\top$ and $\widehat R(w)=c_0-2r_0^\top w+w^\top S_0w$, the empirical clean risk of
+$w$ on the block with actual features. Four comparisons, each in $L^1$ after multiplication by
+$\|\varphi'\|_\infty$ (with the second-order and off-$\Omega_F$ terms as before):
+
+(1) $R_A(w_A^\star\mid F)$ against $\widehat R(w_A^\star)$: conditional on $F$ and $w_A^\star$ the block is
+independent of $w_A^\star$, and $\widehat R(w)-R_A(w\mid F)$ is an average of $M$ independent centred variables
+with variance at most $C(1+\|w\|^4)$ by Lemma~\ref{lem:apriori}; so the $L^1$ difference is at most
+$C M^{-1/2}\le Cd^{-1/2}$.
+
+(2) $\widehat R(w_A^\star)$ against $\widehat R(w_G^\star)$: the Lindeberg scheme of the previous proof with the
+statistic $\widehat R(w^\star)$. Conditional on $\mathcal F_{-i}$ and the clean block, with $v_-=B(S_0w_--r_0)$ and
+$R_i=\frac1NX_iBS_0BX_i^\top$, the second formula in \eqref{eq:ranktwo} gives the exact increment
+\[
+\widehat R(w^\star)-\widehat R(w_-)=\frac1N\Big[2e_i^\top(I+Q_i)^{-1}X_iv_-+e_i^\top(I+Q_i)^{-1}R_i(I+Q_i)^{-1}e_i\Big],
+\]
+a quadratic form in $Z'=(t_i,u_1,u_2,v_1,v_2)$ with $v_a=x_{ia}^\top v_-$, once $Q_i$ and $R_i$ are frozen at their
+conditional means. On the event $\{\|S_0\|\le C\}$ (of probability $1-Ce^{-cd}$ by \cite[Theorem~4.6.1]{Vershynin}
+and Lemma~\ref{lem:apriori}), $\|v_-\|\le C(1+\|w_-\|)$, the second moments of $Z'$ match exactly between the
+actual and the $\#$ block (Proposition~\ref{prop:gaussianization}, applied to the $\mathcal F_{-i}$-measurable
+vectors $w_-$ and $v_-$), the frozen means of $Q_i$ and $R_i$ match exactly, the fluctuations of $Q_i$ and $R_i$
+are $O(1/d)$ in mean square (Lemma~\ref{lem:leverage2}), and the $\#$-to-$G$ step is controlled by
+Lemma~\ref{lem:bridge} exactly as before, with $\frac1N\|BS_0B\|_{\mathrm{tr}}\le\frac{m\|S_0\|}{N\lambda^2}$. Summing
+over $n$ blocks gives $C\|\varphi'\|_\infty\sqrt{\log d/d}+C\|\varphi''\|_\infty/d$.
+
+(3) $\widehat R(w_G^\star)$ against $R_\#(w_G^\star\mid F)=\E[(t^0-(x^{0,A})^\top w_G^\star)^2\mid F,w_G^\star]$: the
+empirical-to-population step (1) again, $O(d^{-1/2})$.
+
+(4) $R_\#(w_G^\star\mid F)$ against $R_G(w_G^\star\mid F)$: by Proposition~\ref{prop:gaussianization} the first
+equals the population risk under the exact clean Gaussian row, and the two Gaussian clean risks differ by
+$|2(w_G^\star)^\top(c_0^\#-c_0^G)|+|(w_G^\star)^\top(C_0^\#-C_0^G)w_G^\star|$, which is $O(\sqrt{\log d/d})$ in $L^1$ by
+Lemma~\ref{lem:bridge} and Lemma~\ref{lem:apriori}.
+
+Adding the four bounds gives \eqref{eq:T1b}.
+\end{proof}
+
+\begin{remark}\label{rem:T1}
+The factor $\sqrt{\log d}$ in \eqref{eq:T1a}--\eqref{eq:T1b} comes from a single place, the maximum of the
+$m$ column norms $|q_r-1|$ in Lemma~\ref{lem:bridge}(i). Replacing that maximum by an average over the
+coordinates of $w_-$ requires a delocalisation bound $\E|w_{-,r}|^4\le Cd^{-2}$ on the coordinates of the
+leave-block minimiser, under which the rate becomes $d^{-1/2}$ \cite{PN24}; the equivalence itself does not
+depend on it. Two of the objects in the proof are measured in Section~\ref{sec:t1}: the leverage matrix
+$Q_i$ of Lemma~\ref{lem:ranktwo}, whose fluctuation Lemma~\ref{lem:leverage2} bounds by $C/d$, and the
+Hermite coefficients \eqref{eq:hermitecoef}, which determine the surrogate and whose residual variances
+$\eta(1)-\gamma(1)$ and $\gamma(1)$ are the quantities behind Proposition~\ref{prop:hermite} there.
+\end{remark}

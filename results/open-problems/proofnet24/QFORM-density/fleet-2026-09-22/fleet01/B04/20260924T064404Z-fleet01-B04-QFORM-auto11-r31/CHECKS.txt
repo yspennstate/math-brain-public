@@ -1,0 +1,22 @@
+QFORM_B04_R31_EXACT_CHECK_PASS
+V^T V = I_3
+all rotated crossing entries nonzero = True
+E3 = 8001/250
+tight_mass = 32
+Wa = 16
+Wb = 16
+Wab = 1/250
+marginals = {0: 1/2, 1: 1/2, 2: 1/2, 3: 1/2, 4: 1/2, 5: 1/2}
+new_bound = 5.551881163803895
+partner_bound = 13.416407864998739 = 6*sqrt(5)
+partner/new ratio = 2.4165517000739314
+
+Rotated crossing M at delta=1/100:
+[[6/7, -2/7, -3/7],
+ [-2/7, 3/7, -6/7],
+ [2/7, 6/35, -33/35],
+ [-6/7, 17/35, -6/35],
+ [-6/7, -12/7, -4/7],
+ [-299/350, -299/175, -83/140]]
+
+Spectral target check: before same-bank perturbation, M^T M is orthogonally similar to diag(2,2,4)+b^T b, hence M^T M >= 2 I and every nonzero eigenvalue of [[0,M],[M^T,0]] has absolute value >= sqrt(2). Adding epsilon(J_6 direct-sum J_3), epsilon=1/100, changes every eigenvalue by at most 6/100. Therefore at least six eigenvalues retain absolute value >= sqrt(2)-3/50 > 1.

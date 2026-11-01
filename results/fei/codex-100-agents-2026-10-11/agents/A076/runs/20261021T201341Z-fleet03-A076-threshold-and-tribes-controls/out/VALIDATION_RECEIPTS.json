@@ -1,0 +1,57 @@
+{
+  "point": {
+    "status": "PASS",
+    "mode": "FULL",
+    "roots": 3336,
+    "private_queries": 5808,
+    "exact_assertions": 59128,
+    "independent_direct_assertions": 144,
+    "elapsed_seconds": 440.25744780001696,
+    "helper_sha256": "af2c8fdd2ff2063cc60d12fd5256f6bcaec59c1a27213c39eff444a07c0be865",
+    "memory": "180 MB estimate; actual peak not measured"
+  },
+  "event": {
+    "status": "PASS",
+    "mode": "FULL",
+    "roots": 6072,
+    "private_queries": 9936,
+    "exact_assertions": 161062,
+    "direct_spectrum_reproductions": 120,
+    "elapsed_seconds": 33.63776010001311,
+    "memory": "180 MB frozen estimate; actual peak not measured"
+  },
+  "pilots": [
+    {
+      "status": "PASS",
+      "mode": "PILOT",
+      "roots": 72,
+      "private_queries": 48,
+      "exact_assertions": 760,
+      "independent_direct_assertions": 144,
+      "elapsed_seconds": 0.8725588999805041,
+      "helper_sha256": "af2c8fdd2ff2063cc60d12fd5256f6bcaec59c1a27213c39eff444a07c0be865",
+      "memory": "180 MB estimate; actual peak not measured"
+    },
+    {
+      "status": "PASS",
+      "mode": "PILOT",
+      "roots": 120,
+      "private_queries": 80,
+      "exact_assertions": 1214,
+      "direct_spectrum_reproductions": 120,
+      "elapsed_seconds": 0.039772899996023625,
+      "memory": "180 MB frozen estimate; actual peak not measured"
+    }
+  ],
+  "exact_assertions_excluding_pilots": 220190,
+  "independent_reproduction_scope": "Direct character sums and physical-edge influence within same agent; not independent referee acceptance",
+  "formal_scope": "Only integer quadratic reserve identity submitted to core Lean; no analytic theorem formalized",
+  "lean_receipt": "out/LEAN_RECEIPT.txt",
+  "runtime_deviation": {
+    "job": "check_carriers.py FULL",
+    "frozen_seconds": 180,
+    "actual_seconds": 440.25744780001696,
+    "verdict": "Finite checks PASS; frozen runtime exceeded; original checker lacked runtime guard. No larger domain or rerun. Subsequent event job cap900 frozen before launch, within campaign30min.",
+    "memory": "180 MB estimate, peak not measured"
+  }
+}

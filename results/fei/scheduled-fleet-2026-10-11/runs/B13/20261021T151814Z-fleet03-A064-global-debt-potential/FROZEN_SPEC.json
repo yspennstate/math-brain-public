@@ -1,0 +1,15 @@
+{
+  "helper_version": "adaptive-owner-v1",
+  "actual_Boolean_family": "F=-1 on x=0,a=1; v(y) on x=1,b=1; +1 otherwise; all 256 labelled three-bit v",
+  "domain": "query a first, then arbitrary branch-dependent choices of remaining physical coordinates, arbitrary stopping cuts, at most five more queries",
+  "case_count": "256 roots; all policies represented by exact backward maximization on every reached physical restriction; pilot masks 0,255,25,235",
+  "symmetry": "none; identical actual truth tables may share computations with exact table keys",
+  "arithmetic": "integer FWHT, Fraction exact kernels, rational outward log2 intervals at 96 bits; root first debit imported unchanged from A061 exhaustive certificate and consistency checked across all 12 records per core",
+  "memory_estimate_mb": 180,
+  "maximum_runtime_seconds": 55,
+  "maximum_dimension": 6,
+  "target": "worst accumulated positive reset booking after root plus original root booking < original mean S4; also test stricter 1/20 threshold without changing main target",
+  "pilot": "four named cores, all adaptive continuations",
+  "full_job": "only after pilot; same fixed dimension, all 256 cores, maximum runtime 55 seconds; no automatic continuation beyond cap",
+  "resource_notes": "No GPU, no worker processes, no compiler under this spec. Imported initial reference is an explicit source dependency, not independently reconstructed here."
+}

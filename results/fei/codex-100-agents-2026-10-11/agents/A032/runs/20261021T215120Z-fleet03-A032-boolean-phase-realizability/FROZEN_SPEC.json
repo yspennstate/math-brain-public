@@ -1,0 +1,15 @@
+{
+  "helper_version": "A032-controller-independent-v1",
+  "actual_Boolean_family": "F_h(z,u,x)=a(u)+z*(1-a(u)^2)*h(x), A079 fixed displayed 16-entry a; all Boolean seeds on 0..2 bits; also balanced tensor controls",
+  "parameter_domain": "81 partial assignments of four u bits, 108 available controller edges; all 22 seeds on 0..2 bits for full-table replay; fixed first query u bit weight 8",
+  "case_count": {"controller_states": 81, "controller_edges": 108, "seed_tables": 22, "state_seed_pairs": 1782},
+  "symmetry": "None. Each physical partial assignment and every seed table is retained.",
+  "arithmetic": "Python integer direct character sums and Fraction. Entropy is a rational linear combination of prime logarithms. Signs use rigorous atanh-series rational log intervals, never floats.",
+  "memory_estimate_MB": 80,
+  "pilot_max_seconds": 60,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "targets": ["Independently reproduce A079 exact all-seed spectral identities", "Certify first controller query retaining BOTH full child ledgers", "Check every controller restriction and compute a worst stopping cut by backward induction without assuming a universal seed bound"],
+  "failures_to_seek": ["biased/constant seed changes controller energy", "seed entropy coefficient does not telescope", "zero/constant branches mishandled", "terminal z or seed energy dropped", "product sibling or nonproduct complement misclassified", "local rate2 or rate4 silently extended to all queries"],
+  "lean_scope": "Core Lean exact rational-log comparison certificate 3^5<2^8 and pointwise disjoint support completion. No whole entropy theorem claimed formalized. Compiler timeout<=45 seconds; source and receipts local only."
+}

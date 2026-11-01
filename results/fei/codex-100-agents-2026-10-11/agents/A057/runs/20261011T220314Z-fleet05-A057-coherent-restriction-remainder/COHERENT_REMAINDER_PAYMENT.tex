@@ -1,0 +1,166 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\Er}{\mathcal E}
+\begin{document}
+\title{A physical influence payment for the coherent logarithm}
+\author{A057, stream B12}\date{12 October 2026}\maketitle
+All entropies in this note use natural logarithms. Divide each entropy
+quantity and entropy constant by $\ln 2$ for bits. Influence is unchanged.
+For a finite coefficient vector $v$, put
+$\Er(v)=\sum_T v_T^2\ln(1/v_T^2)$, with zero terms interpreted continuously.
+
+\begin{theorem}[Exact erasure split and upper bound]
+Let $F=g(h_1,\ldots,h_m)$ be a Boolean sign function on mutually
+disjoint uniform input blocks. Assume every $h_l$ is balanced. For a
+physical coordinate $i$ in block $j$, write $g=a+y_jb$,
+$q=\operatorname{Inf}_j(g)$, $\alpha=\widehat h_j(\{i\})$, $x=\alpha^2$,
+and $t=qx$. Use $a_T,b_T$ for the Fourier coefficients on the remaining
+outer variables, and set $s_T=a_T^2+xb_T^2$. Define
+\begin{align*}
+ L_j(x)&=\sum_Ts_T h_{\rm nat}\left(\frac{xb_T^2}{s_T}\right),\\
+ J_j(x)&=\sum_Ts_T\ln(1/s_T)
+       -\frac{\Er(a+\alpha b)+\Er(a-\alpha b)}2.
+\end{align*}
+Zero packets are omitted. With $B_i(u)=H(S_i\mid S_{-i})$ for the
+squared Fourier law and $D_i(u)=H(u)-[H(u_+)+H(u_-)]/2$, the exact
+source remainder is
+\[
+ R(\alpha)=q\alpha^2\ln(1/\alpha^2)+\Er(a)+\alpha^2\Er(b)
+ -\frac{\Er(a+\alpha b)+\Er(a-\alpha b)}2=L_j(x)+J_j(x).
+\]
+Moreover
+\begin{align*}
+ B_i(F)&=qB_i(h_j)+L_j(x),\\
+ D_i(F)&=qD_i(h_j)+L_j(x)+J_j(x),\\
+ 0\le L_j(x)&\le xB_j(g)+qx\ln(1/x),\\
+ 0\le J_j(x)&\le 2qx,\\
+ 0\le R(\alpha)&\le xB_j(g)+qx\ln(1/x)+2qx.
+\end{align*}
+These conclusions include $q=0$, $x=0$, $x=1$, and $1-q+qx=0$.
+\end{theorem}
+
+\begin{proof}
+Booleanity gives $ab=0$, $a^2+b^2=1$ pointwise, hence
+$\sum a_T^2=1-q$, $\sum b_T^2=q$, and $\sum a_Tb_T=0$.
+Balancedness makes the outer frequency sectors disjoint after substitution:
+each selected inner block contributes a nonempty physical Fourier set.
+Fix the residual block-$j$ frequency $U$. For $U\ne\varnothing$, the two
+coefficients in the queried physical Fourier fiber are $b_T$ times the
+two corresponding coefficients of $h_j$, times the other-block tensor
+coefficients. Summing their conditional entropy yields $qB_i(h_j)$.
+The omitted $U=\varnothing$ packet for $h_j$ has masses $0$ and $x$,
+so its erasure entropy is zero. For $F$, that same residual sector has
+fiber masses $a_T^2$ and $xb_T^2$ times the other-block tensor masses.
+Their conditional entropy sums to $L_j(x)$. This proves the first identity
+without identifying the two physical-child spectra.
+
+For the exact decrement, the $i$-children of $h_j$ have means
+$\pm\alpha$ and nonconstant squared mass $1-x$. Their corresponding
+empty block-$j$ sectors have vectors $a\pm\alpha b$. The remaining
+other-block entropy weights in the two children are
+$a_T^2+b_T^2\pm2\alpha a_Tb_T$; only their fair average cancels the
+interference. The raw tensor entropy identity then gives the displayed
+formula for $R$, as in the pinned source, and algebra gives $R=L_j+J_j$.
+
+Write $E(A)=\sum_T A_T\ln(1/A_T)$ for squared masses
+$A_T=a_T^2$, $B_T=b_T^2$. Then
+\[
+ L_j(x)=E(A)+xE(B)+qx\ln(1/x)-E(A+xB).
+\]
+The function $u\mapsto-u\ln u$ is concave on $[0,\infty)$. Since
+$A+xB=(1-x)A+x(A+B)$ and $0\le x\le1$,
+$E(A+xB)\ge(1-x)E(A)+xE(A+B)$. Substitution proves
+$L_j(x)\le x[E(A)+E(B)-E(A+B)]+qx\ln(1/x)$.
+The bracket is exactly the outer erasure $B_j(g)$.
+
+Put $M=1-q+qx$. If $M>0$, the two laws
+$P_T^\pm=(a_T\pm\alpha b_T)^2/M$ are normalized, with average
+$s_T/M$, and $J_j(x)=M\operatorname{JS}_{\rm nat}(P^+,P^-)$.
+The elementary JS--Hellinger inequality in natural units gives
+\[
+ J_j(x)\le\frac12\sum_T
+ (|a_T+\alpha b_T|-|a_T-\alpha b_T|)^2
+ =2\sum_T\min(a_T^2,xb_T^2)\le2qx.
+\]
+For completeness, the scalar JS--Hellinger inequality follows by writing
+$p=s(1+u),q'=s(1-u)$. The difference
+$1-\sqrt{1-u^2}-[(1+u)\ln(1+u)+(1-u)\ln(1-u)]/2$
+is zero at $u=0$, and its derivative is
+$u/\sqrt{1-u^2}-\operatorname{artanh}u\ge0$, since the derivative of
+this last difference is nonnegative. Endpoint continuity applies.
+If $M=0$, $q=1,x=0,a=0$, and all relevant vectors and costs vanish.
+Nonnegativity of $L_j$ is binary entropy; that of $J_j$ is concavity.
+\end{proof}
+
+\begin{theorem}[Nonreusing logarithmic payment on actual physical trees]
+Let $\mathcal T$ be any finite adaptive physical-coordinate restriction
+tree of a Boolean root $f$. Its node probability is $w_v$. At any selected
+nodes, assume an actual balanced disjoint composition representation as
+above for the restricted function $f_v$, and define $q_v,\alpha_v$
+using its queried physical coordinate. Then
+\begin{align*}
+ \sum_v w_v q_v\alpha_v^2\ln(1/\alpha_v^2)
+ &\le\frac2e\sum_v w_v\operatorname{Inf}_{i_v}(f_v)
+ \le\frac2e I(f),\\
+ \sum_v w_v R_v
+ &\le\sum_vw_v\alpha_v^2B_{j_v}(g_v)
+ +(2+2/e)\sum_vw_v\operatorname{Inf}_{i_v}(f_v).
+\end{align*}
+The sums can be taken over any subset of represented nodes. For full
+coverage by such representations, the exact residual obligation is
+\[
+ H(f)=\mathbb E H(f_{\rm leaf})+
+ \sum_v w_vq_vD_{i_v}(h_{v,j_v})+\sum_vw_vR_v.
+\]
+No automatic existence of representations at biased descendants is asserted.
+\end{theorem}
+\begin{proof}
+The physical half-difference of $h_j$ takes values in $\{-1,0,1\}$.
+Its expectation is $\alpha$, and its expected absolute value is
+$\operatorname{Inf}_i(h_j)$. Thus $|\alpha|\le\operatorname{Inf}_i(h_j)$.
+For $0\le r\le1$, elementary differentiation gives
+$r\ln(1/r^2)\le2/e$, with its maximum at $r=e^{-1}$.
+Therefore
+$q\alpha^2\ln(1/\alpha^2)\le(2/e)q|\alpha|
+\le(2/e)\operatorname{Inf}_i(F)$.
+Also $q\alpha^2\le\operatorname{Inf}_i(F)$.
+Apply the preceding theorem nodewise. The exact influence conservation
+law for actual physical restrictions telescopes to
+\[
+ I(f)=\sum_{v\text{ internal}}w_v\operatorname{Inf}_{i_v}(f_v)
+       +\sum_{\ell\text{ leaf}}w_\ell I(f_\ell).
+\]
+This pays each queried coordinate only once. The entropy decrement
+identity telescopes similarly. No syntactic formula-depth sum or
+incompatible posterior credit is used.
+\end{proof}
+
+\begin{corollary}[Root aggregate erasure ledger]
+Under the first theorem, let
+$W_1(h_j)=\sum_{i\text{ in block }j}\widehat h_j(\{i\})^2$.
+Then
+\[
+ B(F)\le\sum_jq_jB(h_j)+\sum_jW_1(h_j)B_j(g)+\frac2e I(F).
+\]
+The identity before the last two upper bounds is
+$B(F)=\sum_jq_jB(h_j)+\sum_{j,i}L_j(\widehat h_j(\{i\})^2)$.
+In bits replace $2/e$ by $2/(e\ln2)$. This is a root composition
+ledger, not an iterated depth-independent FEI proof.
+\end{corollary}
+\begin{proof}
+Sum the exact erasure identities and the allocation bound over the
+physical root coordinates. Influence factorization gives
+$I(F)=\sum_jq_jI(h_j)$, so the singleton payment sums to the claimed term.
+\end{proof}
+
+\paragraph{Unpaid universal bridge.}
+The explicit logarithmic bank is now influence-paid. The outer-erasure
+transport $\sum_vw_v\alpha_v^2B_{j_v}(g_v)$, the inner-decrement sum,
+terminal entropy, and biased-descendant representation remain unpaid in
+general. In particular $\alpha=1$ gives $R=D_j(g)$; a universal local
+$R\le C\operatorname{Inf}_i(F)$ would wrongly assert the already refuted
+all-coordinate restriction inequality. The result moves C019 and exposes
+a C018-compatible outer-erasure interface, but leaves full FEI open.
+\end{document}

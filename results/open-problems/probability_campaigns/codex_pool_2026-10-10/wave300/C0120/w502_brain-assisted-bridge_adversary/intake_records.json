@@ -1,0 +1,60 @@
+{
+  "problems.jsonl": [
+    {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0120",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Section 12, problem (3), p. 59",
+      "problem_id": "C0120",
+      "recorded_at": "2026-09-07T07:01:07Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "chatterjee_chaos_2008",
+      "statement": "Improve the bound Var(log Z_n) = O(n/log n) for directed polymers in random environment in general dimension to a power improvement n^{1-eps}.",
+      "status_search": "In d = 1+1 with exactly solvable weights (log-gamma, exponential last-passage) the exponent 2/3 (variance n^{2/3}) is a theorem; for general weights in any dimension the BKS-type n/log n remains the best general bound to this session's knowledge; cf. the FPP variance problem in the Codex campaign (P-a/ chi = 1/3 target).",
+      "title": "Fluctuation exponent of directed polymers beyond the logarithmic improvement",
+      "verification": "unreviewed"
+    }
+  ],
+  "attempts.jsonl": [
+    {
+      "attempt_id": "C0120-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Same block as the first-passage percolation sublinear variance problem; record the exact reduction.",
+      "obstruction": "Quantitative chaos rate or transversal fluctuation bound unavailable outside integrable models.",
+      "problem_id": "C0120",
+      "recorded_at": "2026-09-07T07:01:07Z",
+      "result": "The n/log n bound is the BKS entropy method; a power improvement n^{1-eps} would follow from a chaos exponent: if the polymer measure decorrelates under a noise of size n^{-eps'} on the environment (superconcentration with a rate), Talagrand's/Chatterjee's equivalence gives Var(log Z_n) <= n^{1-eps}. Conversely, the variance exponent is tied to the transversal fluctuation exponent by the KPZ scaling relation chi = 2 xi - 1 (Chatterjee 2013 proved the relation rigorously for FPP under existence of the exponents), so a power improvement needs a quantitative transversal-fluctuation bound xi < 1 with an explicit gap, which is known only in the exactly solvable models. The obstruction is the same wall the campaign records for FPP; no new input.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  ],
+  "sources.jsonl": [
+    {
+      "access_evidence": "arXiv",
+      "acquired_at": "2026-09-07T06:55:56Z",
+      "acquisition_status": "validated_and_extracted",
+      "bytes": 586944,
+      "extracted_characters": 130589,
+      "extracted_sha256": "e58058138c0f797174c513fc8579af201360f9d093f241af8c24fe3503017956",
+      "final_url": "https://arxiv.org/pdf/0810.4221",
+      "http_status": 200,
+      "intake": "claude_20260907",
+      "kind": "pdf",
+      "page_count": 63,
+      "raw_relative_to_downloads": "sources/chatterjee_chaos_2008/source.pdf",
+      "reading_status": "unread",
+      "schema": "probability-source.v1",
+      "sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+      "source_id": "chatterjee_chaos_2008",
+      "statement_validation": "not_started",
+      "text_relative_to_downloads": "sources/chatterjee_chaos_2008/text.txt",
+      "title": "Chatterjee: Chaos, concentration and multiple valleys, 2008, with open questions",
+      "url": "https://arxiv.org/pdf/0810.4221"
+    }
+  ]
+}

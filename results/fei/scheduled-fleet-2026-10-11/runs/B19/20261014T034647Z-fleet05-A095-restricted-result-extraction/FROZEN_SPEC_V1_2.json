@@ -1,0 +1,14 @@
+{
+ "helper_version":"A095-support-completion-and-vertex-audit-v1.2",
+ "same_mathematical_domain":"Identical to FROZEN_SPEC_V1_1.json; no dimension/family increase.",
+ "case_count":"6360 core-edit pairs,12720 reference cases;112 actual audit vertices,1053 compressed audit weights.",
+ "actual_family":"All labelled k1..3 cores, every core edit vertex, m0/2/4 and uniform/increasing full-core references; padded quadratic point selectors for independent A094 audit.",
+ "symmetry":"Only dummy point translation and the separately proved quadratic weight-histogram symmetry, as in v1.1.",
+ "arithmetic":"Fraction Walsh/edges/normalization/debt, grouped exact prime-log CE and 24-term rational atanh. Group equal reference arguments before certificate summation; log2 powers of two exact.",
+ "memory_estimate_MB":100,
+ "pilot_max_seconds":55,
+ "per_job_max_seconds":55,
+ "jobs":"pilot; small k1/2 (216 cases); n3-0..n3-7 each32 masks (768 cases each); audit (112 direct,1053 compressed). One job at a time. In-helper time guard every128 assertions.",
+ "maximum_actual_parent_bits":8,
+ "reason":"Initial full attempt failed to complete promptly and was interrupted. It lacked an in-loop deadline guard. Preserve original checker/pilot; shard fixed cases and remove repeated identical logarithm arithmetic. No incomplete assertions count as passed."
+}

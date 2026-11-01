@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\title{A055 stage 2: rare-activation block limits}\maketitle
+On a uniform cube let $g$ be a nonconstant sign, $h=(1-g)/2$,
+$c=1-\mathbb Eg>0$, $p=2^{-r}$, and $F_r=1+\mathbf1_{y=0}(g-1)$.
+All entropies are in bits. Write $T(g)=\mathcal F(g-1)$ for raw Fourier
+entropy. For $a(d)=-(1-d)^2\log_2(1-d)^2+d^2\log_2d^2$,
+\[
+ H(F_r)=pT(g)+4rpc+a(pc),\qquad I(F_r)=p[I(g)+rc].
+\]
+Every physical block consists of a data subset $B$ and $k$ controls, and
+\[
+ L_{B,k}=H(F_r)-2^{-k}\mathbb E_bH(F_{r-k}(g_b)),\quad
+ I_{B,k}=p[I_B(g)+kc].
+\]
+The full block is excluded. Let $\Lambda_B(h)$ be the raw-indicator
+entropy decrement and $\mathcal E_B(h)=I_B(g)/4$. Then
+\[
+ \lim_{r\to\infty}\phi(F_r)=
+ \min\left(4,\min_{B:\,I_B(g)>0}
+ \frac{\Lambda_B(h)}{\mathcal E_B(h)}\right).
+\]
+The inner $B$ may be all data coordinates. A uniform error is
+$2\delta_{\lfloor r/2\rfloor}/d_0+(30+2\delta_r)/(rc)$,
+where $\delta_t=(8t+19)2^{-t}$ and
+$d_0=\min(c,\min_{i:\operatorname{Inf}_i(g)>0}\operatorname{Inf}_i(g))$.
+
+For any control singleton, $d=pc$ and
+\[
+ B_i=2d-2d^2+\Phi((1-d)^2,d^2),\quad
+ \beta_i=\min(d,1-d),\quad
+ L_i=4d+a(d)-\tfrac12a(2d).
+\]
+Thus actual singleton price tends to $4$, while the R2 upper price tends
+to $2+2/\ln2$.
+
+For the C013 family $g_m=z f^{\otimes m}$,
+$r_m=\lceil2\log_2(m+1)\rceil$, let $v_m=(\mathbb Ef)^{2m}$.
+The balancing singleton has $\beta_z=p_mv_m$ and
+\[
+ B_z=(p_m-p_m^2)\Phi(1,v_m)+\Phi((1-p_m)^2,p_m^2v_m).
+\]
+It follows that $\phi(F_m)\to0$ although
+$H(F_m)/I(F_m)\to H(f)/I(f)$. If $H(f)>CI(f)$ for fixed $C>0$,
+the R2 necessary criticality inequality eventually fails at $z$.
+This is a scoped obstruction to criticality-preserving embeddings,
+not a universal paid selection theorem. Complete proofs and conventions
+are in DERIVATION.md.
+\end{document}

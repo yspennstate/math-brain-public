@@ -1,0 +1,97 @@
+NO BIGEODESICS IN PLANAR FIRST-PASSAGE PERCOLATION
+OPENAI
+Abstract. We prove that planar first-passage percolation with independent identically distributed
+nonnegative nonatomic edge weights has almost surely no doubly infinite geodesic, provided the
+minimum of four independent weights has finite second moment. This resolves the planar no-
+bigeodesics conjecture under that moment assumption. The conclusion rules out all bigeodesics
+simultaneously, without any regularity assumption on the limit shape.
+1.Introduction
+First-passage percolation, introduced by Hammersley and Welsh [HW65], equips a lattice with a
+random metric by assigning independent passage times to its edges. A basic question asks whether
+this metric can contain a doubly infinite minimizing path. Such a path, called abigeodesic, is a
+random analogue of a complete minimizing geodesic in a noncompact metric space. The question was
+attributed to Furstenberg by Kesten [Kes86, Remark 9.22]. The planar no-bigeodesics conjecture
+asserts that bigeodesics are absent for iid continuous edge-weight laws; see [DH17, Conjecture 1 and
+the discussion preceding it]. We prove the conjecture under the minimum-of-four second-moment
+assumption.
+LetE denote the unoriented nearest-neighbor edges ofZ2. Give these edges independent weights
+te with common Borel probability lawG on[0 ,∞). For verticesx,y, letT(x,y )be the infimum of
+the costs of finite nearest-neighbor walks fromxtoy, with each edge traversal charged its weight.
+Theorem 1.1.Suppose that G has no atoms and that, for independentX1,X 2,X 3,X 4 with lawG,
+(1)E
+[
+min{X1,X 2,X 3,X 4}2
+]
+<∞.
+Then, with probability one, there is no sequence(vi)i∈Zof pairwise distinct vertices with consecutive
+vertices adjacent and
+j−1∑
+k=i
+t{vk,vk+1}=T(v i,vj)for everyi<j.
+The conclusion excludes all bigeodesics in one probability-one event. In particular, an end
+direction may depend on the environment. The lawG may be singular continuous or have bounded
+support, and Ete may be infinite. We assume no differentiability, strict convexity, or curvature of
+the limit shape. Theorem 1.1 resolves the planar no-bigeodesics conjecture positively in the class
+(1); it does not assert the moment-free formulation.
+Background.The study of infinite geodesics and Busemann functions developed through work
+of Newman [New95], Hoffman [Hof05, Hof08], and the stationary constructions of Damron and
+Hanson [DH14]. Directional results connect geodesics to the geometry of the limit shape. Licea
+and Newman proved coalescence for each direction in a deterministic set of full Lebesgue measure
+and excluded bigeodesics whose two end-directions are prescribed in that set [LN96]; see also
+[DH17, Theorem 3.1 and Remark 2 after Theorem 1]. This coalescence result requires no curvature
+assumption. The complementary assertion that every ray has a direction and that rays exist in
+every direction was established by Newman under an exponential moment and uniform curvature
+Date: September 24, 2026.
+1
+2 OPENAI
+[New95, Theorem 2.1]. Damron and Hanson subsequently obtained one-end exclusions in fixed
+tangent-contact sectors under local differentiability assumptions [DH17, Theorem 1]. Their full iid
+hypothesis A1′already allows(1); the distinction here is the absence of shape assumptions and the
+simultaneous treatment of every possible path.
+Wehr and Woo excluded bigeodesics in the half-plane restricted metric under a finite individual-
+edge mean [WW98]. Auffinger, Damron, and Hanson removed that moment assumption for
+continuous iid weights [ADH15, Appendix C] and proved coalescence and finite backward clusters
+for the associated boundary-limit geodesic forest [ADH15, Theorem 1.5]. Brito, Damron, and
+Hanson proved the absence of doubly infinite directed paths in geodesic graphs obtained as limits of
+point-to-hyperplane constructions in a fixed direction [BDH23]. Their iid hypothesis also gives(1) in
+two dimensions, but their selected graphs need not contain every geodesic of the metric. Alexander
+proved simultaneous absence of bigeodesics under additional exponential-moment, uniform-curvature,
+and quantitative fluctuation assumptions [Ale23].
+Ahlberg and Hoffman developed a structural theory of random coalescing geodesics that assigns
+an asymptotically linear Busemann function to every ray, without imposing shape regularity [AH19].
+Their results also give uniqueness, coalescence, and backward finiteness for each fixed functional in
+a deterministic closed set. These conclusions, stated in Theorem 2.3, are the structural inputs to
+our proof. We use them with the boundary comparison in Appendix A, which replaces a boundary-
+expectation step without requiring integrability of restricted passage times. Related developments
+include sublinear growth of planar geodesic trees [AHH22] and quantitative coalescence and midpoint
+estimates under stronger distributional and geometric hypotheses [DEP24].
+There is a quantifier issue that those inputs alone do not settle: almost-sure uniqueness for each
+fixed functional does not imply simultaneous uniqueness at every environment-dependent functional.
+A bigeodesic, if one existed, could select such an exceptional functional. Our argument treats these
+random functionals directly and then uses an increasing passage-time cost to exclude all remaining
+candidates.
+The argument.A rayphas a Busemann function
+Bp(x,y) = lim
+j→∞
+(
+T(x,p j)−T(y,pj)
+)
+with a linear asymptoteρp, which we call its label. The labels of the two ends of a bigeodesic are
+opposite. After a countable reduction, it suffices to exclude bigeodesics whose upper labels lie in one
+compact sector of the dual unit circle. The horizontal coordinater(ρ) =ρ(e1)orders this sector;
+writeWfor its width in that coordinate.
+The contradiction is a finite budget for passage-time increases. On a horizontal grid of spacingl,
+we mark sites by selecting bigeodesics in finitely increased environments. A marked path acquires an
+extra cost of at leastM on an initial portion. Partition the label sector into bins with deterministic
+endpoints. The selected arms and the base rays used for comparison are required to satisfy common
+deterministic cone bounds. When the marks in each bin are sufficiently separated, comparison with
+rays at those endpoints charges the increase to the bin’s width. Busemann increments telescope
+along the line, and the resulting bound is
+Mq≤lW,
+where q is the common probability that a site is marked (Theorem 5.2). We construct such marks
+with q bounded away from zero andl fixed whileM becomes arbitrarily large. Two issues require
+the rest of the proof: obtaining large increases without losing the marks, and separating their labels
+without increasing the grid spacing.
+For the first issue, we raise finitely many edge weights in a widening region around each site.
+Our low-to-high replacement is an instance of the bounded-density Bernoulli perturbations of Bates
+and Chatterjee [BC20, Lemmas 2.3–2.4]. Quadratic change-of-law bounds for spatially varying

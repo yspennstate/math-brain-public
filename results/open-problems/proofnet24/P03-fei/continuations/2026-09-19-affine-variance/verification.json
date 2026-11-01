@@ -1,0 +1,286 @@
+{
+  "full_FEI_proved": false,
+  "independent_audit": false,
+  "lean_used": false,
+  "acceptance_arithmetic": "Integers, Fraction, or outward rational logarithm enclosures",
+  "script_sha256": "bd8663f3c6e89464bba9c69280cd9209e5276eb724ea5540cc603ed1cbe02100",
+  "prior_entropy_dependency_sha256": "9600d6b961d26f9131277b830894c0e9497fefdaee2a9291507885cdf40326ab",
+  "variance": {
+    "status": "PASS",
+    "raw_all_truth_tables_through_dimension_3": 278,
+    "distinct_functions_checked": 255,
+    "memoized_chain_states": 4803,
+    "largest_observed_V_over_I": {
+      "lower": "1.239583333333",
+      "upper": "1.239583333334"
+    },
+    "one_point_direct_chain_dimensions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "supersolution_rational_points": 100,
+    "sharpness_values": [
+      {
+        "one_point_dimension": 4,
+        "V_over_I": {
+          "lower": "1.340332031250",
+          "upper": "1.340332031250"
+        }
+      },
+      {
+        "one_point_dimension": 8,
+        "V_over_I": {
+          "lower": "1.606545042104",
+          "upper": "1.606545042105"
+        }
+      },
+      {
+        "one_point_dimension": 16,
+        "V_over_I": {
+          "lower": "1.799194374020",
+          "upper": "1.799194374021"
+        }
+      },
+      {
+        "one_point_dimension": 32,
+        "V_over_I": {
+          "lower": "1.899581553445",
+          "upper": "1.899581553446"
+        }
+      },
+      {
+        "one_point_dimension": 64,
+        "V_over_I": {
+          "lower": "1.949790776487",
+          "upper": "1.949790776488"
+        }
+      },
+      {
+        "one_point_dimension": 128,
+        "V_over_I": {
+          "lower": "1.974895388243",
+          "upper": "1.974895388244"
+        }
+      }
+    ],
+    "scope": "Universal statements rely on the proof; finite rational checks are self-checks."
+  },
+  "monotone": {
+    "status": "PASS",
+    "all_monotone_functions_dimensions_1_to_4": 197,
+    "subset_inclusion_checks": 5643,
+    "omitted_coordinate_checks": 5643,
+    "random_monotone_samples": {
+      "5": 100,
+      "6": 100,
+      "7": 100,
+      "8": 100
+    },
+    "independently_enumerated_basis_instances": 581,
+    "scope": "Exact all-small checks plus fixed-seed monotone DNF and threshold samples."
+  },
+  "tensor": {
+    "status": "PASS",
+    "tensor_pairs": 316,
+    "threshold_rank_equalities": 448
+  },
+  "class": {
+    "status": "PASS",
+    "seed_classes": [
+      {
+        "name": "point2",
+        "variables": 2,
+        "H": {
+          "lower": "2.000000000000",
+          "upper": "2.000000000000"
+        },
+        "minimum_affine_influence": "1",
+        "ordinary_influence": "1"
+      },
+      {
+        "name": "point3",
+        "variables": 3,
+        "H": {
+          "lower": "2.216917186688",
+          "upper": "2.216917186689"
+        },
+        "minimum_affine_influence": "3/4",
+        "ordinary_influence": "3/4"
+      },
+      {
+        "name": "point4",
+        "variables": 4,
+        "H": {
+          "lower": "1.701237775599",
+          "upper": "1.701237775600"
+        },
+        "minimum_affine_influence": "1/2",
+        "ordinary_influence": "1/2"
+      },
+      {
+        "name": "majority3",
+        "variables": 3,
+        "H": {
+          "lower": "2.000000000000",
+          "upper": "2.000000000000"
+        },
+        "minimum_affine_influence": "1",
+        "ordinary_influence": "3/2"
+      },
+      {
+        "name": "unequal_majority5",
+        "variables": 5,
+        "H": {
+          "lower": "3.000000000000",
+          "upper": "3.000000000000"
+        },
+        "minimum_affine_influence": "5/4",
+        "ordinary_influence": "7/4"
+      },
+      {
+        "name": "unequal_majority7",
+        "variables": 7,
+        "H": {
+          "lower": "4.000000000000",
+          "upper": "4.000000000000"
+        },
+        "minimum_affine_influence": "3/2",
+        "ordinary_influence": "2"
+      },
+      {
+        "name": "regular_majority9",
+        "variables": 9,
+        "H": {
+          "lower": "5.000000000000",
+          "upper": "5.000000000000"
+        },
+        "minimum_affine_influence": "2",
+        "ordinary_influence": "9/4"
+      },
+      {
+        "name": "quadratic2",
+        "variables": 2,
+        "H": {
+          "lower": "2.000000000000",
+          "upper": "2.000000000000"
+        },
+        "minimum_affine_influence": "1",
+        "ordinary_influence": "1"
+      },
+      {
+        "name": "point2_times_majority3",
+        "variables": 5,
+        "H": {
+          "lower": "4.000000000000",
+          "upper": "4.000000000000"
+        },
+        "minimum_affine_influence": "2",
+        "ordinary_influence": "5/2"
+      },
+      {
+        "name": "point2_times_quadratic2",
+        "variables": 4,
+        "H": {
+          "lower": "4.000000000000",
+          "upper": "4.000000000000"
+        },
+        "minimum_affine_influence": "2",
+        "ordinary_influence": "2"
+      }
+    ],
+    "surjective_affine_mixed_examples": 50,
+    "full_allocation_chain_checks": 32,
+    "quadratic_three_variable_phases": 8,
+    "bounded_variance_unbounded_entropy_family": [
+      {
+        "variables": 2,
+        "entropy": 2,
+        "Vstar": "9/8",
+        "M": "1"
+      },
+      {
+        "variables": 4,
+        "entropy": 4,
+        "Vstar": "45/32",
+        "M": "2"
+      },
+      {
+        "variables": 6,
+        "entropy": 6,
+        "Vstar": "189/128",
+        "M": "3"
+      },
+      {
+        "variables": 8,
+        "entropy": 8,
+        "Vstar": "765/512",
+        "M": "4"
+      }
+    ],
+    "constant_four_sharpness": [
+      {
+        "clause_dimension": 4,
+        "H_over_M_lower": "3.402475551198",
+        "H_over_M_upper": "3.402475551199"
+      },
+      {
+        "clause_dimension": 8,
+        "H_over_M_lower": "3.842782591897",
+        "H_over_M_upper": "3.842782591898"
+      },
+      {
+        "clause_dimension": 16,
+        "H_over_M_lower": "3.930271404540",
+        "H_over_M_upper": "3.930271404541"
+      },
+      {
+        "clause_dimension": 32,
+        "H_over_M_lower": "3.965168439090",
+        "H_over_M_upper": "3.965168439091"
+      },
+      {
+        "clause_dimension": 64,
+        "H_over_M_lower": "3.982584220027",
+        "H_over_M_upper": "3.982584220028"
+      },
+      {
+        "clause_dimension": 128,
+        "H_over_M_lower": "3.991292110013",
+        "H_over_M_upper": "3.991292110014"
+      }
+    ],
+    "scope": "Physical-input linear mixtures are tested; joint row rank is required in the theorem."
+  },
+  "shared_shift": {
+    "status": "PASS",
+    "truth_tables": 278,
+    "pair_law_identities": 16658,
+    "arbitrary_law_concavity_counterexample": {
+      "p": [
+        "16/25",
+        "0",
+        "0",
+        "9/25"
+      ],
+      "q": [
+        "14/25",
+        "7/50",
+        "7/50",
+        "4/25"
+      ],
+      "mixture_weight": "4/5",
+      "concavity_gap": {
+        "lower": "-0.001161696500",
+        "upper": "-0.001161696499"
+      },
+      "scope": "Arbitrary probability laws, NOT asserted to be squared Boolean spectra."
+    },
+    "functions_with_nonzero_shared_shift_covariance": 248,
+    "scope": "Exact amplitude-derived pair law; the shared shift is not replaced by independence."
+  },
+  "status": "ALL_REQUESTED_CHECKS_PASS",
+  "elapsed_seconds": 3.455
+}

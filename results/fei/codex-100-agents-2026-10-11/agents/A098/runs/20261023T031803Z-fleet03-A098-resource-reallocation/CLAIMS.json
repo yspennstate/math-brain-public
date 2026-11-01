@@ -1,0 +1,199 @@
+[
+  {
+    "claim_id": "A096-SELECTIVE-FRONTIER-LIKELIHOOD-TRANSFER",
+    "version": 1,
+    "exact_statement": "Let g be any Boolean function on a finite uniform cube, m=ghat(empty)^2. Let D be a nonnegative subprobability with D(empty)=m and finite c=CE(P_g,D). Supply normalized S,Q with S>=D, Q(empty)>=m, and Q(T)>=gamma D(T) for every nonempty T, 0<gamma<=1. For every finite adaptive tree querying fresh physical coordinates per path, at any chosen subset of stopping leaves reset to the direct marginal of S with ONE final vacuum calibration to the actual child mean-square, using the explicit empty point law for constant children; all other leaves retain the full inherited direct marginal of Q. Expected spectral erasure debits plus all complete terminal cross entropies are at most c+(1-m^2)log2(1/gamma). More sharply the excess is at most log2(1/gamma) times the sum over retained leaves of physical reach times [(1-m)+m Var(g_leaf)]. An arbitrary continuation below a fresh frontier leaf, with further calibrations of the CURRENT inherited reference, is paid by the complete-reference chain and nonpositive calibration costs; retained old frontier leaves admit no-reset continuation. This supplies no influence-priced reference, no likelihood floor for arbitrary incoming profiles, and no repeated return to the ORIGINAL source marginal after intervening calibrations. Entropy units bits.",
+    "hypotheses": [
+      "Uniform finite Boolean physical cube; fresh physical coordinates per path; arbitrary finite adaptive stopping",
+      "D is only an auxiliary subprobability, never an actual supplied reference",
+      "Normalized S,Q, supplied occupied-support likelihood floor and finite source comparison cost",
+      "All final references include their full vacuum, ghosts and normalizers; each first reset uses one final calibration from the original S marginal; later calibrations use the CURRENT reference"
+    ],
+    "statement_sha256": "8b8a71cb40c53d689cc4939c1b157a41d6c345a377c865d963a587da89bfc7da",
+    "contributors": [
+      "A096; occupied-support likelihood floor credited to A085 and upstream A097/A073; original live bank credited to A096/A097/A073"
+    ],
+    "proof_source": {
+      "run_id": "20261023T010221Z-fleet03-A096-live-gap-ledger",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check.py",
+        "out/FROZEN_SPEC.json",
+        "out/VALIDATION.json",
+        "out/POSITIVE_RESET_WITNESS.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A097",
+        "run_id": "20261023T021120Z-fleet03-A097-cross-route-transfer",
+        "verdict": "HOLDS_AT_EXACT_FIRST_FRONTIER_SCOPE",
+        "method": "Independent reconstruction of subprobability CE chain, vacuum AM-GM likelihood bound and finite physical variance identity; independent direct-character implementation",
+        "executed_validation": {
+          "Boolean_tables": 256,
+          "source_floor_instances": 3072,
+          "reset_policies": 9216,
+          "exact_assertions": 593115
+        },
+        "scope": "General first-frontier theorem only; not blanket independent acceptance of its upstream integrated negative-cell dependencies. No repair to this version."
+      },
+      {
+        "reviewer": "A098",
+        "run_id": "20261023T031803Z-fleet03-A098-resource-reallocation",
+        "verdict": "HOLDS_AT_EXACT_SUPPLIED_REFERENCE_SCOPE",
+        "scope": "Full stated first-frontier theorem and original-source repeated-calibrated-return theorem independently reconstructed, including dependency and endpoints; integrated negative-cell18/7e claim is NOT independently accepted. No repair supplied.",
+        "method": "Independent analytic reconstruction; different rational-law grid; butterfly Walsh and separately counted physical edges; fixed outward rational log intervals",
+        "proof": "REVIEW.md sections1-4",
+        "validation": {
+          "status": "PASS",
+          "pilot": false,
+          "assertions": 242679,
+          "runtime_seconds": 6.029573199979495,
+          "stats": {
+            "algebra": {
+              "laws": 330,
+              "pre_admissibility_tuples": 11880,
+              "admissible_tuples": 9801,
+              "negative_affine_beta": 1413
+            },
+            "structural": {
+              "Boolean_tables": 256,
+              "source_roots": 768,
+              "physical_transitions": 23040
+            },
+            "global": {
+              "Boolean_fixtures": 32,
+              "policies": 384,
+              "positive_first_resets": 15,
+              "later_nonidentity_calibrations": 204,
+              "old_nonconstant_terminals": 63
+            },
+            "changed_profile_guard": {
+              "actual": "parity3 queried once gives nonconstant parity2 in BOTH children",
+              "old_occupied_atom": "1/2",
+              "returned_occupied_atom": "1/3",
+              "reset_bill": "log2(3)-1 > 1/2 bit",
+              "bound_scope": "not an FEI counterexample; free-return theorem excludes this nonempty-profile modification"
+            }
+          },
+          "helper_sha256": "92ddd20cf4cbf0bedcffc2950fae3b96c16084ce7ea4282f4fff6fa690a42fd5",
+          "Lean": "separate admission and compiler receipt required",
+          "full_FEI": "OPEN"
+        }
+      }
+    ],
+    "status": "INDEPENDENT_ANALYTIC_RECONSTRUCTION_HOLDS_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A085",
+      "A094",
+      "A097",
+      "A073",
+      "A050",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A097-ORIGINAL-SOURCE-CANONICAL-RETURN-COMMUTATION",
+    "version": 1,
+    "exact_statement": "Let g be any Boolean function on a finite uniform cube, m=ghat(empty)^2. Supply a nonnegative subprobability D with D(empty)=m, total mass<=1 and finite c=CE(P_g,D), and normalized S,Q with S>=D, Q(empty)>=m, Q(T)>=gamma D(T) for every nonempty T, 0<gamma<=1. In ANY finite adaptive physical query tree, choose ANY nodes, including internal nodes, to reset to Cal(M_A S,P_node(empty)), where M_A deletes exactly the queried frequency coordinates on that path and Cal sets the vacuum mass while preserving the conditional nonempty distribution; at constant nodes use the explicit vacuum point law. At all other nodes inherit the CURRENT complete reference by the actual spectral marginal, beginning with Q at the root. Every complementary branch and old debit remains. Then the expected sum of all spectral erasures and all complete final terminal cross entropies is <=c+(1-m^2)log2(1/gamma). After the FIRST reset on each path, every further return to the SAME ORIGINAL S marginal followed by vacuum calibration is EXACTLY calibration of the current inherited reference, so its signed CE cost is -D_Ber(P_node(empty)||Q_inherited(empty))<=0. Specifically Cal(M Cal(P,z),w)=Cal(M P,w) on the finite-CE actual Boolean-path domain. This adds ZERO cost, reset-count factor or depth factor to the original A096 first-frontier theorem. Reference-only atoms and normalizers are retained. It excludes an uncalibrated raw return, a changed conditional nonempty distribution, a different source S, or an influence-priced universal supplier. Entropy units bits; full FEI remains OPEN.",
+    "hypotheses": [
+      "Uniform finite Boolean physical cube; fresh physical coordinates per path; arbitrary finite adaptive stopping/reset decisions",
+      "Normalized fixed source S and incoming Q; subprobability D is a comparison only; finite supplied root CE and strictly positive gamma<=1",
+      "Every original-source return INCLUDES final vacuum calibration; source nonempty conditional profile is never reoptimized",
+      "Actual endpoint conventions: constant children use the vacuum point law, and nonconstant children have positive source nonempty normalizer by support propagation",
+      "All complete ghost mass, vacuum masses, terminal normalizers and physical reach weights retained; old siblings may remain nonconstant"
+    ],
+    "statement_sha256": "852163b441b806ea7c76fde654e1fd52d4566db61962c3fc8df2fd4da1102659",
+    "contributors": [
+      "A097; A096 selective-frontier likelihood bound and current-reference continuation credited"
+    ],
+    "proof_source": {
+      "run_id": "20261023T021120Z-fleet03-A097-cross-route-transfer",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check.py",
+        "out/FROZEN_SPEC.json",
+        "out/VALIDATION.json",
+        "out/POSITIVE_FIRST_RESET_WITNESS.json",
+        "KEY_STEP.lean",
+        "out/LEAN_RESULT.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A096-SELECTIVE-FRONTIER-LIKELIHOOD-TRANSFER",
+        "version": 1,
+        "statement_sha256": "8b8a71cb40c53d689cc4939c1b157a41d6c345a377c865d963a587da89bfc7da",
+        "source": "agents\\A096\\runs\\20261023T010221Z-fleet03-A096-live-gap-ledger\\CLAIMS.json",
+        "review": "A097 independent reconstruction HOLDS for first-frontier theorem; exact commutation extension proved here"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A098",
+        "run_id": "20261023T031803Z-fleet03-A098-resource-reallocation",
+        "verdict": "HOLDS_AT_EXACT_SUPPLIED_REFERENCE_SCOPE",
+        "scope": "Full stated first-frontier theorem and original-source repeated-calibrated-return theorem independently reconstructed, including dependency and endpoints; integrated negative-cell18/7e claim is NOT independently accepted. No repair supplied.",
+        "method": "Independent analytic reconstruction; different rational-law grid; butterfly Walsh and separately counted physical edges; fixed outward rational log intervals",
+        "proof": "REVIEW.md sections1-4",
+        "validation": {
+          "status": "PASS",
+          "pilot": false,
+          "assertions": 242679,
+          "runtime_seconds": 6.029573199979495,
+          "stats": {
+            "algebra": {
+              "laws": 330,
+              "pre_admissibility_tuples": 11880,
+              "admissible_tuples": 9801,
+              "negative_affine_beta": 1413
+            },
+            "structural": {
+              "Boolean_tables": 256,
+              "source_roots": 768,
+              "physical_transitions": 23040
+            },
+            "global": {
+              "Boolean_fixtures": 32,
+              "policies": 384,
+              "positive_first_resets": 15,
+              "later_nonidentity_calibrations": 204,
+              "old_nonconstant_terminals": 63
+            },
+            "changed_profile_guard": {
+              "actual": "parity3 queried once gives nonconstant parity2 in BOTH children",
+              "old_occupied_atom": "1/2",
+              "returned_occupied_atom": "1/3",
+              "reset_bill": "log2(3)-1 > 1/2 bit",
+              "bound_scope": "not an FEI counterexample; free-return theorem excludes this nonempty-profile modification"
+            }
+          },
+          "helper_sha256": "92ddd20cf4cbf0bedcffc2950fae3b96c16084ce7ea4282f4fff6fa690a42fd5",
+          "Lean": "separate admission and compiler receipt required",
+          "full_FEI": "OPEN"
+        }
+      }
+    ],
+    "status": "INDEPENDENT_ANALYTIC_RECONSTRUCTION_HOLDS_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A085",
+      "A094",
+      "A098",
+      "A099",
+      "A073",
+      "A050",
+      "B20"
+    ]
+  }
+]

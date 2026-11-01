@@ -1,0 +1,15 @@
+{
+  "helper_version": "A076-stage11-positive-threshold-event-v1",
+  "arithmetic_helper_sha256": "af2c8fdd2ff2063cc60d12fd5256f6bcaec59c1a27213c39eff444a07c0be865",
+  "family": "central majority h on odd d, A={weight<=k},0<=k<=(d-3)/2, one arbitrary Boolean private profile on A",
+  "domain": "root spectra: d5 profiles n0..2; d7 n0..1; d9 n0; all k. Mixed partial states: d5,k1,n1 all4 profiles. Two fixed d5,k1,guarded-bent4 policies with inherited frozen K=3/16 and supplied old ledger L58. Direct majority coefficient formula n3,5,7,9,11; event restriction d5,7,9,11,13. Analytic rational growth parameters m2..32.",
+  "case_count": {"root_profiles":70,"root_queries":502,"partial_states":2916,"partial_queries":5832,"mixed_internal_nodes":510,"mixed_leaves":512,"majority_formula_dimensions":5,"event_restriction_dimensions":5,"growth_parameters":31},
+  "pilot": "one constant negative profile d5,k1:243 partial states405 queries; first mixed policy255 internal256 leaves; direct majority n3 and one growth parameter",
+  "symmetry": "none; all labeled restrictions and queries included in fixed domains",
+  "arithmetic": "integer Walsh and exact Fraction identities; prime-log equalities and outward rational atanh log enclosures, no floating signs",
+  "memory_estimate_mb":200,
+  "pilot_max_seconds":55,
+  "main_max_seconds":600,
+  "automatic_dimension_escalation":false,
+  "ledger_scope": "L58 is an explicit supplied prior debit, not an assertion that a point-mask prefix is valid for this new family. K3/16 is already frozen; active two-mask collision remains open."
+}

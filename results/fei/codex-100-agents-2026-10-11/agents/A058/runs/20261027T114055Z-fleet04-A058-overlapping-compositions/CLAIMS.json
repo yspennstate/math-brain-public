@@ -1,0 +1,63 @@
+[
+  {
+    "claim_id": "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER",
+    "version": 11,
+    "exact_statement": "Retaining prior v10 scopes, at any actual selected uniform physical core query with Boolean children ga, Ha=H(ga), ia=I(ga), D=H(g)-(H0+H1)/2, a supplied rate A>0 and ACTUAL eligible remaining original cash R>=D, set ma=A ia/2, wa=Ha/2, M=sum ma, L=max(0,M-R+D). Continuing independently in outcome a with probability qa is feasible iff D+sum qa ma<=R. Among all such outcome-dependent actions, the least FULL entropy irrevocably frozen is T*=r0 min(L,m0)+r1 max(0,L-m0), where ra=Ha/(A ia) and outcomes with positive ia are sorted r0<=r1; zero ia implies Ha=0 and that outcome is omitted; with one positive mass T*=rL, and with none T*=0. Its common-q improvement is min(Lm1,(M-L)m0)(r1-r0)/M. The same LP/dual applies to an eligible pooled finite frontier; no cross-owner or protected-cash transfer is assumed. Dyadic lower continuation probabilities remain feasible and incur at most epsilon sum wa extra frozen entropy when rounding errors are<=epsilon. Both live and frozen FULL entropy remain in the exact ledger; no complete terminal entropy is credited away. At A=9/2 the actual4bit shared AND3/AND2 core has I1,p1/8,D>9/16; q=(1,235/256) freezes21/256 bits and improves on the ideal common-q action by>1/80. This is a local entropy-sensitive optimization, not a universal initial source or terminal-decay theorem. Full FEI remains open.",
+    "hypotheses": [
+      "finite uniform physical cubes; Boolean full children, entropy bits; arbitrary output bias and shared physical data",
+      "supplied rate A>0 and ACTUAL eligible received cash R>=actual query fee D after all earlier debits/protected reserves",
+      "expected-resource branch transfers allowed; frontier extension only within one eligible pooled original owner",
+      "physical implementation uses certified lower dyadic outcome probabilities and keeps rounding cost",
+      "new theorem does not assert initial supplier, global greedy optimality or complete terminal entropy decay"
+    ],
+    "statement_sha256": "19f6c00d0152588ca580820a6e938fa1b16feecab0af11e5418ae4fce3af9a0f",
+    "contributors": [
+      "A058"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/check.py",
+      "out/CHECKS.json",
+      "out/REVIEW.json",
+      "code/dual_core.lean",
+      "out/LEAN.json"
+    ],
+    "proof_dependencies": [
+      "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER@10 retained unchanged scopes and pinned100bit rational log helper",
+      "A091 run20261027T054729Z PROOF Section4 actual-fee formula, independently reconstructed and scoped HOLDS in out/REVIEW.json",
+      "finite Boolean Parseval/physical influence identity; exact entropy restriction identity; elementary fractional-knapsack exchange/dual proof"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A091",
+        "status": "PENDING; new extension; no message sent"
+      },
+      {
+        "reviewer": "A087",
+        "status": "PENDING; alternate; no message sent"
+      },
+      {
+        "reviewer": "A094",
+        "status": "PENDING; disinterested challenge; no message sent"
+      }
+    ],
+    "status": "AUTHOR_PROOF_WITH_EXACT_CERTIFICATES; INDEPENDENT_REVIEW_PENDING; FULL_FEI_OPEN",
+    "supersedes": [
+      "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER@10 (extends, retains earlier scopes)"
+    ],
+    "refutes": [
+      "Exploratory assertion that the best answer-independent continuation minimizes newly frozen full child entropy: the actual shared AND3/AND2 core has physical improvement>1/80. A091 explicitly did NOT make this assertion."
+    ],
+    "first_unproved_line": "Fund a necessary arbitrary-core physical query/frontier policy whose TOTAL frozen-plus-live full terminal entropy vanishes from a sufficiently large SAME original influence owner. Local minimization of frozen entropy does not imply this; initial source and full FEI remain open.",
+    "next_consumers": [
+      "A091",
+      "A087",
+      "A094",
+      "A057",
+      "A059",
+      "A060",
+      "B12",
+      "B20"
+    ]
+  }
+]

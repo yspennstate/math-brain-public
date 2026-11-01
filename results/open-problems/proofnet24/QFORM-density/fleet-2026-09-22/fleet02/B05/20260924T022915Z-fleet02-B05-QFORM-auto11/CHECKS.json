@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "canonical_determinant",
+      "identity": "det([[alpha,delta,s/sqrt(c)],[delta,gamma,0],[s/sqrt(c),0,0]])=-gamma*s^2/c",
+      "status": "PASS"
+    },
+    {
+      "name": "normalized_puncture",
+      "identity": "beta=s*sqrt((1-c)/c) implies beta^2*|gamma|=(1-c)*|det Lambda|",
+      "status": "PASS"
+    },
+    {
+      "name": "heavy_star",
+      "identity": "sum_{j<k}|det A_{i,j,k}|=c*|det Lambda| from sum Delta_jk^2=1",
+      "status": "PASS"
+    },
+    {
+      "name": "maxcut_expectation",
+      "identity": "E[sum_{j in J,k in K} Delta_jk^2]=(1/2)sum_{j<k}Delta_jk^2=1/2",
+      "status": "PASS"
+    },
+    {
+      "name": "endpoint_constant",
+      "value": 12.321378670326451,
+      "formula": "7.761982175235*2^(2/3)",
+      "status": "PASS"
+    },
+    {
+      "name": "residual_diffuse_rho_1_over_64_constant",
+      "value": 48.0,
+      "formula": "12*64^(1/3)",
+      "status": "PASS"
+    }
+  ]
+}

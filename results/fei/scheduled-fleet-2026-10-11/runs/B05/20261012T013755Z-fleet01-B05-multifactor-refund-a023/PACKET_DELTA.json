@@ -1,0 +1,65 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261012T013755Z-fleet01-B05-multifactor-refund-a023",
+  "stream": "B05",
+  "packet_id": "A023",
+  "packet_ids": ["A023"],
+  "gap_id": "B05_RARE_REFUNDS",
+  "related_gap_ids": ["G-R-SELECT", "G-R-MISMATCH"],
+  "attempt_id": "A023-MULTIFACTOR-REFUND-7",
+  "bounded_objective": "Extend the independently accepted two-factor refund to three and finitely many disjoint point-defect factors: either prove a unique first-revelation ownership rule for all higher interactions or exhibit the exact unowned term.",
+  "method": "Scalar disagreement packet; Boolean-lattice Möbius inversion; earliest-factor ownership in a fixed order; exact physical factor-chain telescopes; fixed-order rare asymptotics via finite differences of x^2 log x; exact Walsh and rigorous rational-log validation.",
+  "prior_status": "B19 accepted the two-factor disjoint point-defect factor-first refund at exact scope and explicitly left three-factor ownership open. The previous first unsupported line was assignment of every higher-order interaction without double spending.",
+  "mathematical_delta": "Proved an ordered multifactor ownership theorem for every finite disjoint product of point defects. Every Möbius interaction is assigned exactly once to its earliest factor and the physical tree realizes that assignment, giving R+sum N=sum P. Proved that every fixed r>=3 equal-factor interaction is nonzero of order delta^2, not delta^r, with alternating sign (-1)^r. Thus pair-only accounting is false but higher interactions do not force reuse. The remaining gap is a uniform influence bound on total positive credits.",
+  "deliverable_status": {
+    "A023-D1": "EXTENDED_COMPLETE_PENDING_INDEPENDENT_REVIEW: MULTIFACTOR_MOBIUS.tex",
+    "A023-D2": "EXTENDED_COMPLETE_PENDING_INDEPENDENT_REVIEW: HIERARCHICAL_CREDIT_LEDGER.json",
+    "packet_target": "MULTIFACTOR DISJOINT POINT-DEFECT OWNERSHIP COMPLETE; POSITIVE-CREDIT INFLUENCE BOUND AND UNIVERSAL TARGET OPEN"
+  },
+  "mathematical_status": "MULTIFACTOR_MOBIUS_OWNERSHIP_PROVED_PENDING_REVIEW; FULL_FEI_OPEN",
+  "claim_versions_used": ["B05-A023-TWO-FACTOR-SIGNED-REFUND-v1", "B19-A094-TWO-FACTOR-REFUND-REVIEW-v1"],
+  "claims_created_or_changed": ["B05-A023-MULTIFACTOR-MOBIUS-OWNERSHIP-v1"],
+  "source_plan": {
+    "assignment_path": "reports/fei-2026-10-11/assignments/B05.json",
+    "assignment_blob": "05447e6d999437bb82a266b427bd76a4b37266b6",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "current_status_blob": "b367bbecba7527025320bded136fdb22eee5f362"
+  },
+  "source_artifacts": [
+    {"repository": "yspennstate/math-open-problems", "commit": "bdd93bb44cd0335a24e42e06dee81a73b5417768", "path": "reports/fei-2026-10-11/runs/B05/20261012T003201Z-fleet01-B05-tensor-refund-a023/", "report_blob": "47383ab5e161b0e41584eda7eecf04e2c5d4aead"},
+    {"repository": "yspennstate/math-open-problems", "commit": "4a3a44691f97a208cd6b805c93cdff5508a24cc6", "path": "reports/fei-2026-10-11/runs/B19/20261012T004636Z-fleet01-B19-two-factor-refund-review-a094/", "report_blob": "b9475660bd527124801ad48e9069985fc20ec300", "verdict_blob": "216b2023ce2f5377f5865d23f552fe7ff0fb4eff"}
+  ],
+  "next_consumers": ["A027", "A028", "A064", "A087", "A090", "A094", "B20"],
+  "independent_reviewers": ["A087", "A090", "A094"],
+  "next_action": "Independently reconstruct the Möbius owner identity, physical-tree realization, and c_r sign. Then optimize factor order and test whether total positive credits admit a uniform nonreused-influence bound; use addressing/shared-variable branches as the next falsifiers.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": ["The new multifactor theorem requires independent A087/A090/A094 review.", "No dimension-independent bound on total positive credits by nonreused influence is proved.", "Addressing, unrelated branching leaves, and shared variables remain outside scope.", "Full FEI remains open."],
+  "validation": {
+    "command": "python3 verify_multifactor_refund.py",
+    "observed_runtime_seconds": 46.1,
+    "aborted_pilot": "An initial overbroad rigorous interval grid exceeded the 60-second pilot cap and was terminated without result; the certified grid was reduced before the successful run.",
+    "random_seed": null,
+    "arithmetic": "exact Fraction Walsh arithmetic and rigorous rational atanh-series log intervals",
+    "assertions": 566,
+    "walsh_scope": "three- and four-factor genuine Boolean products through 8 total variables",
+    "ownership_scope": "3-5 factors; all orders through 4 factors and forward/reverse 5-factor orders",
+    "interaction_sign_scope": "3<=r<=8 and 12<=n<=30",
+    "asymptotic_check_scope": "3<=r<=8 at n=20,30",
+    "script_sha256": "38dcb6cb6961387b8ed68a3d9a5bc0e6ad347f43a03af80a4e0aa52f00ba9c7f",
+    "output_sha256": "ec12842d55d2b7768c66794dcaae489526d70a6f0d5e980adab0d50b9b48be46",
+    "status": "PASS"
+  },
+  "literature": {
+    "primary_sources_checked": ["Inherited and source-pinned B19 check of arXiv:1304.1347", "Inherited and source-pinned B19 check of arXiv:1312.3003", "Inherited and source-pinned B19 check of arXiv:2606.00246"],
+    "novelty_claim": "NONE; this is a private source-bound campaign derivation."
+  },
+  "delivery_status": {
+    "canonical": {"status": "EIGHT_FILE_SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK", "repository": "yspennstate/math-open-problems", "core_complete_commit": "ce1d7ce43cf858bbf41bba0fbf12182a0578ca2f", "path": "reports/fei-2026-10-11/runs/B05/20261012T013755Z-fleet01-B05-multifactor-refund-a023/", "verified_files": 8, "report_sha256": "a15d22819366b02bcad64e87cdd4e4f60750df23d5e1ce320bbbd2ed0041309a"},
+    "brain_mirror": {"status": "EIGHT_FILE_SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK", "repository": "yspennstate/math-research-brain", "core_complete_commit": "9a364e7e671412d31d948ed20b488ac926a9d441", "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B05/20261012T013755Z-fleet01-B05-multifactor-refund-a023/", "verified_files": 8, "report_sha256": "a15d22819366b02bcad64e87cdd4e4f60750df23d5e1ce320bbbd2ed0041309a"},
+    "independent_review": "NOT YET; A087/A090/A094 requested",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {"model": "Codex as exposed by this run", "reasoning_effort": "not exposed", "subagents": 0, "scheduler_or_graph_mutation": false}
+}

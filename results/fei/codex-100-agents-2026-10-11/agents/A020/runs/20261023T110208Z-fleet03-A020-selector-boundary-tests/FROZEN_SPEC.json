@@ -1,0 +1,20 @@
+{
+  "helper_version": "A020 stage7 outward100bit Fraction logs, imported read-only with bytecode disabled",
+  "family": "SAME G_m=g3^m, A=point_k*(1-G)/2, gate F and original Q/U. Arbitrary tensor restrictions followed by erasure of exactly irrelevant seed coordinates. Classify surviving seeds by remaining3,2,1bits and constant phase. Padding/u/gate/mask unqueried.",
+  "domain": {
+    "k": [
+      5,
+      8
+    ],
+    "counts": "all n3,n2,n1 in0..2, both phases; plus(3,0,0),(8,0,0),(0,8,0),(0,0,8),(8,8,8), both phases; original m=sum counts+4",
+    "literal": "k1,m1 and m2; every3^(3m) partial assignment, both q signs, clean all truly constant seeds"
+  },
+  "case_count": "128 compressed profiles (64 per k); literal54+1458 histories; pilot counts(0,0,0),(1,0,0),(0,0,1) at k5 both phases plus54 literal histories",
+  "symmetry": "permutation of identical independent seeds for scalar profiles; exact exhaustive partial assignments in literal validation, no adaptive-outcome symmetry assumed",
+  "arithmetic": "integer Walsh/physical edges; exact Fraction reference normalization and vacuum inequalities; rigorous log intervals. Full CE aggregated analytically by nonempty-seed vs seed-empty rows; independently compare literal full Fourier table.",
+  "memory_estimate_MB": 115,
+  "max_runtime_seconds": 60,
+  "pilot_max_seconds": 60,
+  "no_auto_dimension_escalation": true,
+  "target": "All cleanup-complete adaptive tensor histories retain SAME original4I-CE-U>5/8 for k>=5,m>=4. General vacuum envelope lemma for nu<=1/2 with R(empty)>=nu^2 and original mu<=81/256. Scope excludes mixed padding and interacting-seed queries."
+}

@@ -1,0 +1,72 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w407",
+  "bundle_slug": "p0003-ensemble-and-observable-gaps-001",
+  "entries": [
+    {
+      "key": "fixed-n-origin-saw-question",
+      "namespace": "probability.saw",
+      "logical_name": "grimmett-p0003-fixed-n-origin-scaling-question",
+      "kind": "concept",
+      "title": "Open question: fixed-length honeycomb SAW from the origin to SLE(8/3)",
+      "statement": "OPEN QUESTION (not a theorem): Choose uniformly among all n-step self-avoiding walks on the hexagonal lattice starting at the origin. Grimmett's Question 2.2 asks whether, after suitable spatial rescaling as n tends to infinity, the random path converges weakly to an SLE(8/3) curve. The source does not specify the scale exponent, curve topology, or SLE domain/variant; a proposed proof must make these choices explicit.",
+      "proof_text": null,
+      "assumptions": ["hexagonal lattice", "walk starts at the origin", "length n is fixed", "uniform distribution over all such walks"],
+      "domain": "probability; self-avoiding walk; scaling limits",
+      "source": {"source_id":"arxiv:2205.07318:Question2.2", "url":"https://arxiv.org/html/2205.07318", "revision":"v1 as read 2026-10-10", "license":"arxiv-nonexclusive", "excerpt":"uniformly distributed n-step SAW from the origin"}
+    },
+    {
+      "key": "critical-chordal-saw-conjecture",
+      "namespace": "probability.saw",
+      "logical_name": "critical-honeycomb-chordal-boltzmann-saw-conjecture",
+      "kind": "concept",
+      "title": "Conjecture: critical chordal honeycomb SAW to SLE(8/3)",
+      "statement": "CONJECTURE (not proved): In a simply connected proper planar domain with distinct boundary marks a,b, approximate the domain by mesh-delta honeycomb domains. Assign each self-avoiding path between lattice marks near a,b probability proportional to x_c raised to its number of visited vertices, where x_c=1/sqrt(2+sqrt(2)). As delta tends to zero, the path law is conjectured to converge to chordal SLE(8/3) from a to b. The path length varies and both endpoints are prescribed; this is a different ensemble from the uniform fixed-n origin question.",
+      "proof_text": null,
+      "assumptions": ["simply connected proper planar domain", "distinct boundary marks a,b", "critical length fugacity x_c", "domain and boundary lattice approximations"],
+      "domain": "probability; self-avoiding walk; scaling limits",
+      "source": {"source_id":"arxiv:1007.0575:Conjecture1", "url":"https://arxiv.org/html/1007.0575", "revision":"v2 as read 2026-10-10", "license":"arxiv-nonexclusive", "excerpt":"For x=x_c, the law of gamma_delta ... converges"}
+    },
+    {
+      "key": "ensemble-transfer-gap",
+      "namespace": "probability.saw",
+      "logical_name": "fixed-length-versus-chordal-saw-ensemble-transfer-gap",
+      "kind": "concept",
+      "title": "Missing transfer from chordal Boltzmann SAW to fixed-length origin SAW",
+      "statement": "A scaling limit for critical length-weighted honeycomb self-avoiding paths between prescribed domain boundary points does not by itself establish a scaling limit for uniformly sampled n-step honeycomb self-avoiding walks from the origin. The former randomizes length and fixes both endpoints; the latter fixes length and leaves the endpoint random. An application to the fixed-length question needs an additional theorem controlling the length disintegration, endpoint law, spatial rescaling, and curve topology. No such theorem is supplied by the cited conjectures or this draft.",
+      "proof_text": null,
+      "assumptions": ["the two sampling rules are as stated in the cited primary questions"],
+      "domain": "probability; self-avoiding walk; proof auditing",
+      "source": {"source_id":"owner:campaign:P0003:w407:source-scope-review", "url":"~/brain_workers/w407/REVIEW_PACKET.md", "revision":"2026-10-10 draft, w410 audit pending", "license":"owner-own-work (attributed source comparison)", "excerpt":"That is a related ensemble, with no transfer theorem supplied here."}
+    },
+    {
+      "key": "hexagonal-vertex-relation-cycle-kernel",
+      "namespace": "probability.saw",
+      "logical_name": "hexagonal-vertex-relation-cycle-kernel",
+      "kind": "lemma",
+      "title": "Cycle kernel of the honeycomb parafermionic vertex relation",
+      "statement": "Let G be a finite connected subgraph of the honeycomb lattice with vertex set V and internal edge set E, and set all boundary half-edge values to zero. For each internal edge e=uv with midpoint m_e, consider complex midpoint values F satisfying at every v the relation sum_{e incident to v}(m_e-v)F(m_e)=0. The complex solution space has dimension |E|-|V|+1. An interior regular hexagonal face of side delta supports a solution with sup norm one, zero boundary values, and neighboring face-midpoint values differing by one over Euclidean distance sqrt(3)delta/2. Consequently this local equation with bounded values and fixed boundary data alone implies neither uniqueness nor mesh-uniform equicontinuity. These kernel solutions are not asserted to be SAW path-sum observables.",
+      "proof_text": "Orient each internal edge e from u to v, let d_e=v-u, and set X_e=(d_e/2)F(m_e). The two endpoint contributions are +X_e and -X_e, so the vertex equations are B X=0 for the oriented incidence matrix. Connectedness gives rank(B)=|V|-1 by a spanning tree, hence the dimension formula. On an interior face orient the six edges cyclically and set X_e=delta/2 there and zero elsewhere. Then F(m_e)=delta/d_e on that face, of modulus one. Successive d_e rotate by pi/3, so adjacent F values differ by one; the midpoint spacing is sqrt(3)delta/2.",
+      "assumptions": ["finite connected honeycomb internal graph", "boundary half-edge values are zero", "regular interior hexagonal face for the explicit mode"],
+      "domain": "probability; discrete complex analysis; graph linear algebra",
+      "source": {"source_id":"owner:campaign:P0003:w406:cycle-kernel", "url":"~/brain_workers/w406/INDEPENDENT_OBSTRUCTION.md", "revision":"2026-10-10; independently checked by w407", "license":"owner-own-work (peer derivation, w407 reviewed)", "excerpt":"dim_C ker L = |E_int|-|V|+1"}
+    },
+    {
+      "key": "vertex-relation-alone-insufficient",
+      "namespace": "probability.saw",
+      "logical_name": "local-parafermionic-relation-alone-insufficient-for-scaling-limit",
+      "kind": "concept",
+      "title": "Local parafermionic vertex relation alone does not give observable compactness",
+      "statement": "The critical honeycomb self-avoiding-walk parafermionic observable satisfies a local complex vertex relation, but that relation with boundedness and fixed boundary data alone has bounded cycle modes with arbitrarily sharp mesh-scale variation. Therefore any proof of observable convergence must add a condition that controls the actual path-sum observable beyond the local relation. This obstruction does not refute the SAW-to-SLE(8/3) conjecture.",
+      "proof_text": null,
+      "assumptions": ["critical parafermionic local relation", "no extra path-sum estimate is assumed"],
+      "domain": "probability; self-avoiding walk; proof auditing",
+      "source": {"source_id":"owner:campaign:P0003:w406:cycle-kernel-reviewed", "url":"~/brain_workers/w407/REVIEW_PACKET.md", "revision":"2026-10-10; w407 checked peer derivation", "license":"owner-own-work (attributed peer result)", "excerpt":"This verifies a bounded non-equicontinuous kernel mode."}
+    }
+  ],
+  "relations": [
+    {"from_key":"ensemble-transfer-gap","to_key":"fixed-n-origin-saw-question","kind":"depends_on","rationale":"The gap concerns the fixed-length uniform origin ensemble exactly described in Grimmett Question 2.2."},
+    {"from_key":"ensemble-transfer-gap","to_key":"critical-chordal-saw-conjecture","kind":"depends_on","rationale":"The compared chordal ensemble has prescribed endpoints and critical length fugacity, as stated in Duminil-Copin--Smirnov Conjecture 1."},
+    {"from_key":"hexagonal-vertex-relation-cycle-kernel","to_key":"vertex-relation-alone-insufficient","kind":"proves","rationale":"The explicit bounded face circulation is a counterexample to uniqueness and mesh-uniform equicontinuity from the vertex relation and boundary values alone."}
+  ]
+}

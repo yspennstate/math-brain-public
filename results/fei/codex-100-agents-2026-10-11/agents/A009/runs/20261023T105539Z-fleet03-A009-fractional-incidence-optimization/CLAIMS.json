@@ -1,0 +1,60 @@
+[
+  {
+    "claim_id": "A009-BIDIRECTIONAL-CONNECTOR-FULL-QUEUE-COST74",
+    "version": 1,
+    "exact_statement": "For every integer m>=2 and arbitrary labelled H12 subset L1 cross R2 and H21 subset L2 cross R1, the positive edge DNF containing both diagonal K_mm blocks and exactly these additional edges has complete FULL original-queue nonempty cost C<(147/2)I<74I at the single fixed lambda=1/(2m). All interactions in both connector blocks are paid jointly using their disjoint physical changed regions, zero Dirichlet cross inner product, one old reference embedding and one root increment. This is a feasible full-output cost upper certificate, not optimality, a canonical source-SCC forest residual bound, or full FEI.",
+    "hypotheses": [
+      "Uniform physical independent bits; base-two costs and normalized real Walsh spectrum.",
+      "Full original queue Q_* conditioned on a nonempty root set, including all finite successful actual runs; not restricted to the paper source-SCC partition forests.",
+      "Precisely the resulting graph original positive width-two edge primes, both endpoint orders, pi=1/4 and one fixed packing-feasible lambda_e=1/(2m).",
+      "Complete nonempty cost C=sum_(A nonempty) fhat(A)^2 log2(1/Q_*(A)); posterior over actual runs retained."
+    ],
+    "statement_sha256": "f8581303bbefffd1601d54106d4a468d2f1d0b209d4a766ae007e2edfe07a79b",
+    "contributors": [
+      "A009"
+    ],
+    "proof_source": [
+      "BIDIRECTIONAL.md",
+      "code/check.py",
+      "out/full.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A009-JOINT-CONNECTOR-FULL-QUEUE-COST49",
+        "version": 1,
+        "use": "whole-set collision-free root-mass certificate only",
+        "source_run": "agents\\A009\\runs\\20261023T070326Z-fleet03-A009-fractional-incidence-optimization"
+      },
+      {
+        "claim_id": "A010-CROSSED-COMPONENT-PAYMENT-AND-REFERENCE-SEPARATION",
+        "version": 1,
+        "use": "old SAME-reference crossed complete cost; reviewed in preceding stage"
+      },
+      {
+        "claim_id": "A006-SAME-REFERENCE-INSERTION-AND-CONNECTED-COMPATIBILITY",
+        "version": 1,
+        "use": "general FULL-output insertion inequality only"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A009",
+        "verdict": "AUTHOR_ANALYTIC_PROOF_AND_EXACT_AUDIT; INDEPENDENT_AGENT_REVIEW_PENDING",
+        "formal_status": "NOT_FORMALLY_CHECKED",
+        "timestamp_utc": "2026-10-23T11:03:34.158515+00:00"
+      }
+    ],
+    "status": "AUTHOR_CHECKED_SCOPED_PROOF; INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A010",
+      "A086",
+      "Claude/B02",
+      "B20"
+    ]
+  }
+]

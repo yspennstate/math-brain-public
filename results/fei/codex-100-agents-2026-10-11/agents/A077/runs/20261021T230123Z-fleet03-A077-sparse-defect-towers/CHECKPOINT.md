@@ -1,0 +1,1 @@
+Two-profile target: F(s,x,y)=xy at s=0, y at s=e1, +1 elsewhere, d>=1. At x query both controller means and both R_j=d*2^-d*(1-mu_j^2) stay unchanged, yet Delta H=4*2^-d, B_x=2*2^-d, JS=2*2^-d, Inf_x=2^-d. Full derivation and finite verification pending. FEI OPEN.

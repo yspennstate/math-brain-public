@@ -1,0 +1,26 @@
+{
+  "run_id": "20260922T155206Z-b05-qform-779c4c9b",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-2D-PARSEVAL-PROJECTION-CAP-v1",
+      "status": "PROVED_IN_REPORT",
+      "statement": "If independent scalar inputs have density cap one and the physical coefficient rows a_j in R^2 satisfy sum a_j a_j^T=I_2, then the two-dimensional linear image has joint density essential supremum at most e."
+    },
+    {
+      "id": "QFORM-HEAVY-ISOTROPIC-NOLEAK-AGGREGATE-v1",
+      "status": "PROVED_USING_PARTNER",
+      "statement": "In the fleet03/B05 heavy-isotropic rank-three normal form, if the leakage projection T vanishes, the full aggregate pair closes with density <6 e^(2/3), without selecting a physical pair minor.",
+      "partner_source": "yspennstate/math-open-problems@332f29e335274f2b3f81ccf92d62443b928c66cd"
+    },
+    {
+      "id": "QFORM-HIDDEN-SHIFT-PAIR-CAP-INSUFFICIENT-v1",
+      "status": "MECHANISM_COUNTEREXAMPLE_REINSTANTIATING_LIVE_CORRECTION",
+      "statement": "A scalar density cap and an aggregate pair joint-density cap alone do not control 2(U+T(V,Z))V+Z^2 when hidden T is arbitrary; iid uniforms with T=-Z^2/(2V) reduce to 2UV and give a logarithmic singularity.",
+      "not_a_target_counterexample": true,
+      "related_live_correction": "QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1"
+    }
+  ],
+  "first_unpaid_implication": "QFORM-PAIR-PLUCKER-HIDDEN-LEAKAGE-AGGREGATION-v1"
+}

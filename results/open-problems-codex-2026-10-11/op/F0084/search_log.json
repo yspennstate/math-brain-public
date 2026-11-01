@@ -1,0 +1,154 @@
+[
+  {
+    "service": "source_pdf",
+    "url": "https://arxiv.org/pdf/math/0505668",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 1184928,
+    "file": "source_pdf.pdf"
+  },
+  {
+    "service": "arxiv",
+    "url": "https://export.arxiv.org/api/query?search_query=all:%22stable%20marriage%22%20AND%20all:Poisson&max_results=50",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 19365,
+    "file": "arxiv.xml"
+  },
+  {
+    "service": "openalex",
+    "url": "https://api.openalex.org/works?search=stable%20marriage%20Poisson%20Lebesgue&per-page=50",
+    "date": "2026-10-11",
+    "status": 429,
+    "bytes": 610,
+    "file": "openalex.json"
+  },
+  {
+    "service": "crossref",
+    "url": "https://api.crossref.org/works?query=stable%20marriage%20Poisson%20Lebesgue&rows=30",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 240716,
+    "file": "crossref.json"
+  },
+  {
+    "service": "semantic",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:math/0505668?fields=title,year,citationCount,citations.title,citations.year,citations.externalIds",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 21657,
+    "file": "semantic.json"
+  },
+  {
+    "service": "github",
+    "url": "https://api.github.com/search/repositories?q=stable+marriage+Poisson+Lebesgue",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 6456,
+    "file": "github.json"
+  },
+  {
+    "service": "tails_pdf",
+    "url": "https://arxiv.org/pdf/math/0507324",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 434851,
+    "file": "tails_pdf.pdf"
+  },
+  {
+    "service": "transport_pdf",
+    "url": "https://arxiv.org/pdf/1504.02965",
+    "error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+  },
+  {
+    "service": "random_pdf",
+    "url": "https://arxiv.org/pdf/0911.1429",
+    "error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+  },
+  {
+    "service": "arxiv_critical",
+    "url": "https://export.arxiv.org/api/query?search_query=all:%22stable%20allocation%22%20AND%20all:critical&max_results=40",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 10305,
+    "file": "arxiv_critical.xml"
+  },
+  {
+    "service": "openalex_source",
+    "url": "https://api.openalex.org/works/https://doi.org/10.1214/009117906000000098",
+    "date": "2026-10-11",
+    "status": 429,
+    "bytes": 610,
+    "file": "openalex_source.xml"
+  },
+  {
+    "service": "semantic_tails",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:math/0507324?fields=title,year,citations.title,citations.year,citations.externalIds",
+    "error": "HTTPSConnectionPool(host='api.semanticscholar.org', port=443): Max retries exceeded with url: /graph/v1/paper/ARXIV:math/0507324?fields=title,year,citations.title,citations.year,citations.externalIds (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  },
+  {
+    "service": "openalex_citing_doi",
+    "url": "https://api.openalex.org/works?filter=cites:https://doi.org/10.1214/009117906000000098&per-page=100",
+    "error": "HTTPSConnectionPool(host='api.openalex.org', port=443): Max retries exceeded with url: /works?filter=cites:https://doi.org/10.1214/009117906000000098&per-page=100 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  },
+  {
+    "service": "transport_retry_pdf",
+    "url": "https://arxiv.org/pdf/1504.02965",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 2960107,
+    "file": "transport_retry_pdf.pdf"
+  },
+  {
+    "service": "random_retry_pdf",
+    "url": "https://arxiv.org/pdf/0911.1429",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 190934,
+    "file": "random_retry_pdf.pdf"
+  },
+  {
+    "service": "semantic_tails_retry",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:math/0507324?fields=title,year,citations.title,citations.year,citations.externalIds",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 4867,
+    "file": "semantic_tails_retry.xml"
+  },
+  {
+    "service": "arxiv_tail",
+    "url": "https://export.arxiv.org/api/query?search_query=all:stable%20AND%20all:Poisson%20AND%20all:critical%20AND%20all:tail&max_results=50",
+    "date": "2026-10-11",
+    "status": 200,
+    "bytes": 12295,
+    "file": "arxiv_tail.xml"
+  },
+  {
+    "service": "openalex_citing_retry",
+    "url": "https://api.openalex.org/works?filter=cites:https://doi.org/10.1214/009117906000000098&per-page=100",
+    "date": "2026-10-11",
+    "status": 429,
+    "bytes": 610,
+    "file": "openalex_citing_retry.xml"
+  },
+  {
+    "service": "hyperuniform_pdf",
+    "url": "https://arxiv.org/pdf/1810.00265",
+    "error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+  },
+  {
+    "service": "lead_metadata",
+    "url": "https://export.arxiv.org/api/query?id_list=1810.00265,1103.5259,2106.04524&max_results=3",
+    "error": "('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))"
+  },
+  {
+    "service": "hyperuniform_pdf",
+    "url": "https://arxiv.org/pdf/1810.00265",
+    "error": "HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /pdf/1810.00265 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  },
+  {
+    "service": "lead_metadata",
+    "url": "https://export.arxiv.org/api/query?id_list=1810.00265,1103.5259,2106.04524&max_results=3",
+    "error": "HTTPSConnectionPool(host='export.arxiv.org', port=443): Max retries exceeded with url: /api/query?id_list=1810.00265,1103.5259,2106.04524&max_results=3 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  }
+]

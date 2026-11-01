@@ -1,0 +1,30 @@
+{
+  "singleton_constant": {
+    "units": "nats",
+    "necessary_lower_bound": "3 ln2",
+    "certified_upper_bound": "3 ln2 on all balanced arity<=4 and odd arity5",
+    "general_dimension": "original 4+6/e accepted locally; proposed 3 ln2 OPEN",
+    "n4_equality_orbits": {
+      "Maj3_juntas": 32,
+      "four_input_selector": 192
+    },
+    "tensorization": "not additive; product of balanced factors has zero singleton Lambda"
+  },
+  "monotone_cap": {
+    "coefficient": 1,
+    "sharpness": "supremum 1 for every fixed 0<c<1 with |alpha|<=1-c; also alpha->0 sequence",
+    "family": "g_m=D+z(b-D), m even",
+    "loss_bound_bits": "0<B-L<=2^-m log2(1/x)",
+    "explicit_ratio_bound": "for even m>=4, L/B>=1-log2(1/x)/m; m=100,x=1/4 gives >=49/50",
+    "outer_selector_influence": "1-2^-m; NOT the small original X009 selector influence",
+    "physical_inner_query_influence": "1 for s*v; 1/2 for Maj3",
+    "data_influence": "m(1/2+2^-m)",
+    "tensorization": "each selected B and L preserved by a disjoint Boolean spectator; sum over copies additive; fixed additive overhead erased",
+    "hypothesis_needed_for_strict_relative_gain": "control packet A_T/V_T or source-sensitive reserve; singleton gap alone insufficient"
+  },
+  "physical_tree": {
+    "known": "local gate constants telescope only for certified balanced disjoint gate representations",
+    "unpaid": "biased physical descendants, current packet debt, nonempty inner decrement, terminal core entropy and common influence ownership"
+  },
+  "full_FEI": "OPEN"
+}

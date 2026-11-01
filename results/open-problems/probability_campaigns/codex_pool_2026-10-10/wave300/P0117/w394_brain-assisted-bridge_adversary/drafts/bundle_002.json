@@ -1,0 +1,174 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w394",
+  "bundle_slug": "p0117-adaptive-endpoint-audit-20261010-v2",
+  "entries": [
+    {
+      "key": "p0117-anchored-boundary-exhaustion",
+      "namespace": "probability.fpp.audit",
+      "logical_name": "p0117-anchored-boundary-exhaustion",
+      "kind": "concept",
+      "title": "DRAFT P0117 bigeodesic anchored boundary exhaustion",
+      "statement": "DRAFT; independent check by w395 pending. On undirected nearest-neighbor Z^2 with finite strictly positive edge weights, define T(x,y) as the infimum of sums of edge weights over finite paths from x to y. A finite geodesic attains this infimum. A bigeodesic is an injective nearest-neighbor sequence indexed by Z whose every finite segment is a geodesic. For every positive integer R let S_R={x: ||x||_infinity=R}. Let E_R mean some globally minimizing finite simple path between distinct vertices of S_R passes through 0. First-exit truncation makes E_R decreasing. An infinite branch of the finite sets of oriented simple witnesses truncated inside [-R,R]^2 shows that intersection_R E_R is exactly existence of a bigeodesic through 0. For a stationary random law, absence everywhere follows if P(E_R) tends to zero. Equation (4.25) of Auffinger-Damron-Hanson, arXiv:1511.03262, already uses this boundary-pair reduction; no novelty is asserted. This global event need not be measurable from inside edges alone at fixed R.",
+      "proof_text": null,
+      "assumptions": [
+        "Nearest-neighbor undirected Z^2",
+        "Finite strictly positive weights",
+        "Global path minimization; simple paths",
+        "Stationarity only for the final everywhere-absence consequence"
+      ],
+      "domain": "planar first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:P0117:w394:p0117-anchored-boundary-exhaustion",
+        "url": "urn:owner-own-work:P0117:w394:p0117-anchored-boundary-exhaustion",
+        "revision": "draft-v2-pending-w395-2026-10-10",
+        "license": "owner-own-work (campaign derivation and hypothesis audit)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0117-refuted-fixed-endpoint-promotion",
+      "namespace": "probability.fpp.audit",
+      "logical_name": "p0117-refuted-fixed-endpoint-promotion",
+      "kind": "concept",
+      "title": "DRAFT P0117 refuted fixed-endpoint to adaptive boundary union route",
+      "statement": "DRAFT, refuted inference: even uniform vanishing of fixed endpoint origin-hit probabilities does not imply vanishing of the adaptive union over all boundary endpoint pairs. For a probability law on finite strictly positive edge-weight environments on undirected nearest-neighbor Z^2, define T(x,y) as the infimum of finite-path weight sums and a finite geodesic as a path attaining T. For positive integer R put S_R={x: ||x||_infinity=R}, let E_R mean some finite geodesic between distinct S_R vertices contains 0, and let q_R be the maximum, over those unordered endpoint pairs, of the probability that some such geodesic contains 0. Then the bare union bound gives P(E_R)<=min(1,(32R^2-4R)q_R). It proves decay only with a stronger premise such as a subsequence on which (32R^2-4R)q_R tends to zero. This is a sufficient bound for that particular argument, not a necessary condition for absence. No independence or conditional multiplication is used. An environment-selected endpoint pair cannot be substituted into a deterministic-pair theorem without a selector or union argument.",
+      "proof_text": null,
+      "assumptions": [
+        "A probability law on finite strictly positive nearest-neighbor Z^2 weights",
+        "Geodesics minimize the sum of edge weights among all finite paths",
+        "R is a positive integer and S_R has 8R vertices",
+        "The cited endpoint bound concerns deterministic pairs; no adaptive selector control is supplied"
+      ],
+      "domain": "planar first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:P0117:w394:p0117-refuted-fixed-endpoint-promotion",
+        "url": "urn:owner-own-work:P0117:w394:p0117-refuted-fixed-endpoint-promotion",
+        "revision": "draft-v2-pending-w395-2026-10-10",
+        "license": "owner-own-work (campaign derivation and hypothesis audit)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0117-growing-pair-family-counterexample",
+      "namespace": "probability.fpp.audit",
+      "logical_name": "p0117-growing-pair-family-counterexample",
+      "kind": "concept",
+      "title": "DRAFT P0117 adaptive endpoint union counterexample",
+      "statement": "DRAFT; independent check by w395 pending. Let U be uniform on [0,1) and M_R=32R^2-4R. For j=0,...,M_R-1 let A_(R,j)={j/M_R<=U<(j+1)/M_R}. These endpoint-event analogues each have probability 1/M_R, uniformly tending to zero, but their adaptive union has probability one for every R. Their union events are constant and hence nested. This refutes promotion of individual fixed endpoint bounds to adaptive union decay. It is a probability counterexample to an inference, not a non-atomic iid FPP counterexample.",
+      "proof_text": null,
+      "assumptions": [
+        "R is a positive integer",
+        "Uniform U on [0,1)",
+        "Finite half-open partition at each radius"
+      ],
+      "domain": "planar first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:P0117:w394:p0117-growing-pair-family-counterexample",
+        "url": "urn:owner-own-work:P0117:w394:p0117-growing-pair-family-counterexample",
+        "revision": "draft-v2-pending-w395-2026-10-10",
+        "license": "owner-own-work (campaign derivation and hypothesis audit)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0117-global-box-filtration-scope",
+      "namespace": "probability.fpp.audit",
+      "logical_name": "p0117-global-box-filtration-scope",
+      "kind": "concept",
+      "title": "DRAFT P0117 global versus box minimizer conditioning scope",
+      "statement": "DRAFT; independent check by w395 pending. A fixed-radius box-minimizer event is determined by inside edges; the analogous global-minimizer event need not be. Write B_r={x in Z^2: ||x||_infinity<=r} and S_r={x in Z^2: ||x||_infinity=r}. A global minimizer minimizes the sum of edge weights among all finite paths with its endpoints; a B_1 minimizer restricts competitors to B_1. Set every edge induced by B_1 to weight 1. In one completion all other edges also have weight 1, and the horizontal S_1 chord through 0 is globally minimizing. In a second completion give every edge of the S_2 perimeter and every nearest-neighbor edge from S_1 to S_2 weight 1/20; all remaining edges have weight 1. Each S_1 pair has an outside bypass of at most ten cheap edges, costing at most 1/2, while any simple through-origin path costs at least 2. The completions agree inside B_1, but only the first has a globally minimizing S_1 chord through 0. The local box event is true in both. This scope distinction matters before conditioning on an inside-edge filtration. It is a deterministic positive-weight example, not an iid FPP counterexample.",
+      "proof_text": null,
+      "assumptions": [
+        "Undirected nearest-neighbor Z^2",
+        "Specified deterministic completions",
+        "B_1=[-1,1]^2 and S_2={||x||_infinity=2}"
+      ],
+      "domain": "planar first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:P0117:w394:p0117-global-box-filtration-scope",
+        "url": "urn:owner-own-work:P0117:w394:p0117-global-box-filtration-scope",
+        "revision": "draft-v2-pending-w395-2026-10-10",
+        "license": "owner-own-work (campaign derivation and hypothesis audit)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0117-conditional-killing-divergence-gap",
+      "namespace": "probability.fpp.audit",
+      "logical_name": "p0117-conditional-killing-divergence-gap",
+      "kind": "concept",
+      "title": "DRAFT P0117 conditional annular killing divergence gap",
+      "statement": "DRAFT hypothesis audit of w393 L1-L3, directly read by w394; further referee check pending. On undirected nearest-neighbor Z^2 with random finite strictly positive edge weights, define B_n={x: ||x||_infinity<=n}, S_n={x: ||x||_infinity=n}, and T_n as minimum path weight in the induced B_n graph. For integers n>=1 let E_n mean a simple T_n-minimizing path between distinct S_n vertices contains 0, and let F_n be the sigma-algebra generated by induced B_n edges. These E_n are decreasing and F_n-measurable. If F_n-measurable q_n in [0,1] satisfy P(E_(n+1)|F_n)<=1_(E_n)(1-q_n), and sum q_n diverges almost surely on E_infinity=intersection_n E_n, the compensated indicator 1_(E_n) exp(sum_(j<n)q_j) is a nonnegative supermartingale and rules out survival. Positive q_n alone is insufficient: independent q_n=1/(n+1)^2 leave limiting survival probability 1/2. For iid edge weights with an atomless common probability law G on [0,infinity) satisfying G([0,a))>0 for every a>0, the cheap-ring construction gives q_n=G([0,m/(8(n+1))))^(8(n+1)), m the minimum of the origin incident weights. These specific lower bounds are summable and therefore do not provide the needed divergence. No bound on the true killing hazards is inferred.",
+      "proof_text": null,
+      "assumptions": [
+        "Decreasing F_n-measurable events",
+        "Specified conditional inequality",
+        "Divergence along survival is an additional premise",
+        "Support near zero is needed only for the displayed ring construction"
+      ],
+      "domain": "planar first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:P0117:w394:p0117-conditional-killing-divergence-gap",
+        "url": "urn:owner-own-work:P0117:w394:p0117-conditional-killing-divergence-gap",
+        "revision": "draft-v2-pending-w395-2026-10-10",
+        "license": "owner-own-work (campaign derivation and hypothesis audit)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0117-midpoint-hypothesis-rate-audit",
+      "namespace": "probability.fpp.audit",
+      "logical_name": "p0117-midpoint-hypothesis-rate-audit",
+      "kind": "concept",
+      "title": "DRAFT P0117 midpoint theorem adaptive endpoint rate audit",
+      "statement": "DRAFT source-to-need comparison. Ahlberg-Hoffman arXiv:1609.02447, A1 and Theorem 2.1, apply to atomless iid weights with finite E[min(X1,X2,X3,X4)^2]; all deterministic diverging endpoint sequences have origin-hit probabilities tending to zero. For positive integer R define S_R={x in Z^2: ||x||_infinity=R} and q_R as the maximum probability that the unique geodesic between a deterministic unordered pair of distinct S_R vertices contains 0. Maximizing over this finite pair set therefore yields q_R->0, but supplies no adaptive union decay rate. Dembin-Elboim-Peled arXiv:2204.02332v5 Theorem 1.2 instead needs absolute continuity, a finite exponential moment, and more than 40 limit-shape extreme points; its bound C log^2(D+2)/D^(1/16) is insufficient for summing 32R^2-4R pairs. Theorem 1.3 bounds the union over common-height pairs ((-n,s),(n,s)), s in Z, by C log^2(n)/n^(1/24), already handling that restricted selector family. An arbitrary bigeodesic through 0 is not proved to have witnesses in that family. Source checks and these failed substitutions do not prove P0117. A separate September 24, 2026 OpenAI preprint claims the full moment-class result; its mathematical validity is still under audit.",
+      "proof_text": null,
+      "assumptions": [
+        "Each cited theorem retains its own distribution and geometry hypotheses",
+        "D is the smaller endpoint-to-vertex distance",
+        "No arbitrary endpoint replacement stability is assumed"
+      ],
+      "domain": "planar first-passage percolation",
+      "source": {
+        "source_id": "owner-own-work:P0117:w394:p0117-midpoint-hypothesis-rate-audit",
+        "url": "urn:owner-own-work:P0117:w394:p0117-midpoint-hypothesis-rate-audit",
+        "revision": "draft-v2-pending-w395-2026-10-10",
+        "license": "owner-own-work (campaign derivation and hypothesis audit)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0117-growing-pair-family-counterexample",
+      "to_key": "p0117-refuted-fixed-endpoint-promotion",
+      "kind": "refutes",
+      "rationale": "The M_R partition events satisfy uniform vanishing but have union probability one, contradicting precisely the documented fixed-endpoint promotion."
+    },
+    {
+      "from_key": "p0117-refuted-fixed-endpoint-promotion",
+      "to_key": "p0117-anchored-boundary-exhaustion",
+      "kind": "semantic_association",
+      "rationale": "The refuted route is an attempted way to bound the exact boundary event in the anchored reduction."
+    },
+    {
+      "from_key": "p0117-global-box-filtration-scope",
+      "to_key": "p0117-conditional-killing-divergence-gap",
+      "kind": "semantic_association",
+      "rationale": "The conditional killing lemma requires F_n-measurability; the deterministic example distinguishes box events from global events at fixed n."
+    },
+    {
+      "from_key": "p0117-midpoint-hypothesis-rate-audit",
+      "to_key": "p0117-refuted-fixed-endpoint-promotion",
+      "kind": "semantic_association",
+      "rationale": "The source audit checks the hypotheses and quantitative strength of the endpoint bounds used by this refuted route."
+    },
+    {
+      "from_key": "p0117-anchored-boundary-exhaustion",
+      "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+      "kind": "semantic_association",
+      "rationale": "The boundary reduction concerns exactly the full bi-infinite-geodesic absence target of the existing P0117 concept; no open-status promotion is made."
+    }
+  ]
+}

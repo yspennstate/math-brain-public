@@ -1,0 +1,510 @@
+\section{Gaussian limits and rank-three examples}
+\label{sec:gaussian-benchmarks}
+
+This section gives a sharp Gaussian density bound and explicit examples
+for specified input classes or output levels.  For related Gaussian
+quadratic-form estimates, see \citet{GNSU2019,BNU2020,CK2026}.
+
+\subsection{The sharp Gaussian ceiling, including affine terms}
+
+\begin{lemma}[Extracting a central square]\label{bench:central-square}
+For every \(\lambda\geq1\) and \(m\in\mathbb R\), the law of
+\(\lambda(Z+m)^2\), where \(Z\) is standard normal, is a convolution of
+the law of a central \(\chi_1^2\) variable and a probability measure
+on \([0,\infty)\).
+\end{lemma}
+\begin{proof}
+The elementary Gaussian integral gives, for \(t\geq0\),
+\[
+ \mathbb E e^{-t\lambda(Z+m)^2}
+ =(1+2\lambda t)^{-1/2}
+       \exp\left(-\frac{\lambda m^2t}{1+2\lambda t}\right).
+\]
+First consider the centered factor.  For \(\lambda>1\), the finite
+nonnegative measure
+\[
+ \nu_\lambda(dx)=\frac{e^{-x/(2\lambda)}-e^{-x/2}}{2x}
+                 \mathbf1_{\{x>0\}}\,dx
+\]
+has mass \(\tfrac12\log\lambda\).  A compound Poisson sum with this
+intensity measure has Laplace transform
+\[
+ \exp\left(-\int_0^\infty(1-e^{-tx})\nu_\lambda(dx)\right)
+ =\left(\frac{1+2t}{1+2\lambda t}\right)^{1/2}.
+\]
+The identity follows by integrating
+\(\int_0^\infty(e^{-ax}-e^{-bx})\,dx/x=\log(b/a)\);
+it may also be checked by differentiation in \(t\) and evaluation at
+zero.  At \(\lambda=1\), use the constant zero variable.  Multiplication
+by \((1+2t)^{-1/2}\) extracts the central square.
+
+The remaining noncentral factor is the Laplace transform of an
+independent compound Poisson sum: take Poisson intensity \(m^2/2\)
+and jumps distributed as \(\lambda\chi_2^2\).  Indeed its transform is
+\[
+ \exp\left[\frac{m^2}{2}\left((1+2\lambda t)^{-1}-1\right)\right]
+ =\exp\left(-\frac{\lambda m^2t}{1+2\lambda t}\right).
+\]
+Uniqueness of Laplace transforms proves the stated convolution identity.
+All variables in this distributional construction can be chosen
+independently.
+\end{proof}
+
+\begin{theorem}[Sharp Gaussian density ceiling]\label{bench:gaussian}
+Let \(G\sim N(\mu,\Sigma)\), where \(\Sigma\succeq\sigma^2I\) and
+\(\sigma>0\).  If \(A\) is real symmetric and \(s_3(A)\geq a>0\),
+then, for arbitrary \(b,c\), the quadratic polynomial
+\(G^{\mathsf T}AG+b^{\mathsf T}G+c\) has a continuous density vanishing
+at infinity and
+\begin{equation}\label{bench:gaussian-bound}
+ \|p_{G^{\mathsf T}AG+b^{\mathsf T}G+c}\|_\infty
+ \leq\frac{1}{2\sqrt2\,\sigma^2a}.
+\end{equation}
+The constant is sharp.  In particular, \(\Sigma\succeq I/12\) and
+\(s_3(A)\geq1\) give the bound \(3\sqrt2\).
+\end{theorem}
+\begin{proof}
+Write \(G=\mu+\Sigma^{1/2}Z\).  The standard Gaussian vector \(Z\)
+may be orthogonally rotated to diagonalize
+\(B=\Sigma^{1/2}A\Sigma^{1/2}\).  Its coordinates remain independent.
+The singular-value product inequality gives
+\[
+ s_3(B)\geq s_{min}(\Sigma^{1/2})^2s_3(A)
+          \geq\sigma^2a.
+\]
+For completeness, this inequality follows by writing
+\(A=\Sigma^{-1/2}B\Sigma^{-1/2}\) and applying
+\(s_j(UDV)\leq\|U\|\|V\|s_j(D)\), which itself follows from the
+best rank-\((j-1)\) approximation characterization of \(s_j\).
+
+Put \(d=\sigma^2a\), and divide the output by \(d\).
+Select three eigenvalues of \(B/d\) with absolute values at least
+one.  Completing the square in each corresponding coordinate and
+using Lemma~\ref{bench:central-square} shows that the entire output
+is distributed as
+\[
+ \epsilon_1Z_1^2+\epsilon_2Z_2^2+\epsilon_3Z_3^2+W,
+ \qquad \epsilon_j\in\{-1,1\},
+\]
+where the three displayed standard normals are independent of \(W\).
+The constant terms, the extracted Poisson terms with their signs, all
+other eigenvalue coordinates, and linear Gaussian terms from the kernel
+are absorbed into \(W\).  This argument uses independence after a
+Gaussian rotation only.
+
+Convolution cannot increase a density supremum.  If all three signs
+coincide, the density is a reflection of the \(\chi_3^2\) density,
+whose maximum is
+\[
+ \max_{x>0}\frac{x^{1/2}e^{-x/2}}{\sqrt{2\pi}}
+ =\frac1{\sqrt{2\pi e}}<\frac1{2\sqrt2}.
+\]
+For the mixed signature, reflection reduces to
+\(D=Z_1^2+Z_2^2-Z_3^2\).  The first two squares sum to an exponential
+variable of rate \(1/2\).  Therefore, for \(t\geq0\),
+\[
+ p_D(t)=\frac{e^{-t/2}}{2\sqrt{2\pi}}
+                \int_0^\infty v^{-1/2}e^{-v}\,dv
+        =\frac{e^{-t/2}}{2\sqrt2}.
+\]
+For \(u>0\), the same convolution gives
+\[
+ p_D(-u)=\frac{e^{-u/2}}{2\sqrt{2\pi}}
+       \int_0^\infty(u+v)^{-1/2}e^{-v}\,dv
+       \leq\frac{e^{-u/2}}{2\sqrt2}.
+\]
+These formulas give a continuous density, with maximum
+\(p_D(0)=1/(2\sqrt2)\), vanishing at infinity.  Convolution with a
+probability measure preserves these properties.  Rescaling by \(d\)
+proves \eqref{bench:gaussian-bound}.  Equality holds for a centered
+isotropic three-dimensional Gaussian and
+\(A=a\,\diag(1,1,-1)\).
+\end{proof}
+
+\subsection{A global ceiling for diffuse Lindeberg arrays}
+
+\begin{theorem}[Uniform convergence of diffuse quadratic densities]
+\label{bench:lindeberg}
+For each \(m\), let \(R_m\) be an \(n_m\)-by-\(3\) matrix with
+orthonormal columns and rows \(r_{mi}^{\mathsf T}\), such that
+\[
+ \tau_m:=\max_i\|r_{mi}\|^2\longrightarrow0.
+\]
+Fix \(\Lambda=\diag(\lambda_1,\lambda_2,\lambda_3)\) with
+\(|\lambda_j|\geq1\).  Let the physical coordinates \(X_{mi}\) be
+independent, with densities bounded by one, finite means \(\mu_{mi}\),
+and finite variances \(v_{mi}\).  Suppose
+\begin{equation}\label{bench:lindeberg-limits}
+ h_m:=\sum_i r_{mi}\mu_{mi}\longrightarrow h,\qquad
+ \Sigma_m:=\sum_i v_{mi}r_{mi}r_{mi}^{\mathsf T}
+                        \longrightarrow\Sigma,
+\end{equation}
+and, for every \(\varepsilon>0\),
+\begin{equation}\label{bench:lindeberg-condition}
+ \sum_i\mathbb E\left[
+   \|r_{mi}(X_{mi}-\mu_{mi})\|^2
+   \mathbf1_{\{\|r_{mi}(X_{mi}-\mu_{mi})\|>\varepsilon\}}
+                  \right]\longrightarrow0.
+\end{equation}
+Then the forms
+\[
+ Q_m=X_m^{\mathsf T}R_m\Lambda R_m^{\mathsf T}X_m
+\]
+have continuous bounded densities for all sufficiently large \(m\).
+If \(G\sim N(h,\Sigma)\) and \(Q_\infty=G^{\mathsf T}\Lambda G\),
+then
+\begin{equation}\label{bench:uniform-limit}
+ \|p_{Q_m}-p_{Q_\infty}\|_\infty\longrightarrow0,
+ \qquad
+ \limsup_m\|p_{Q_m}\|_\infty\leq3\sqrt2.
+\end{equation}
+The last constant is sharp within this class.
+\end{theorem}
+\begin{proof}
+Every cap-one density with finite variance satisfies
+\(\operatorname{Var}(X)\geq1/12\).  One direct proof, writing
+\(\mu=\mathbb EX\), is
+\[
+ \mathbb P(|X-\mu|>t)\geq1-2t\quad(0\leq t\leq1/2),
+ \qquad
+ \mathbb E(X-\mu)^2
+ \geq\int_0^{1/2}2t(1-2t)\,dt=\frac1{12}.
+\]
+Consequently \(\Sigma_m\succeq I_3/12\) and
+\(\Sigma\succeq I_3/12\).
+
+Here are details of the required vector central limit argument.
+Fix \(u\in\mathbb R^3\), and put
+\(\xi_{mi}=u^{\mathsf T}r_{mi}(X_{mi}-\mu_{mi})\).
+The scalar Lindeberg condition follows from
+\eqref{bench:lindeberg-condition}, and
+\(\sum_i\mathbb E\xi_{mi}^2\to u^{\mathsf T}\Sigma u\).
+The expansion of \(e^{ix}\) to order two, splitting its remainder
+at \(|x|=\delta\), gives
+\[
+ \sum_i\left|
+  \mathbb Ee^{i\xi_{mi}}-1+\tfrac12\mathbb E\xi_{mi}^2
+            \right|\longrightarrow0.
+\]
+Indeed, the small part is at most a constant times
+\(\delta\sum_i\mathbb E\xi_{mi}^2\), and the large part tends to
+zero by Lindeberg; then let \(\delta\downarrow0\).
+The same splitting shows
+\(\max_i\mathbb E\xi_{mi}^2\to0\).
+Taking logarithms of the product of the scalar characteristic
+functions therefore proves
+\[
+ R_m^{\mathsf T}X_m\ \Longrightarrow\ N(h,\Sigma).
+\]
+The continuity theorem for characteristic functions and the continuous
+mapping theorem now give pointwise convergence
+\(\varphi_{Q_m}(t)\to\varphi_{Q_\infty}(t)\).
+
+For large \(m\), all row leverages are at most \(1/2\), so
+Theorem~\ref{four:diffuse} applies to the actual finite product laws.
+Since \(|\det\Lambda|\geq1\), it gives the common integrable bound
+\[
+ |\varphi_{Q_m}(t)|\leq
+ g(t):=\min\{1,(\pi e)^{3/2}|t|^{-3/2}\}.
+\]
+The pointwise limit satisfies the same bound.  Dominated convergence
+and Fourier inversion give
+\[
+ \|p_{Q_m}-p_{Q_\infty}\|_\infty
+ \leq\frac1{2\pi}\int_{\mathbb R}
+       |\varphi_{Q_m}(t)-\varphi_{Q_\infty}(t)|\,dt
+ \longrightarrow0.
+\]
+Theorem~\ref{bench:gaussian}, with the covariance floor already proved,
+gives the final ceiling.
+
+For sharpness, take \(n_m=3m\), with \(m\) rows equal to
+\(e_j/\sqrt m\) for each \(j=1,2,3\), and use independent centered
+unit uniforms.  The hypotheses hold with \(h=0\),
+\(\Sigma=I_3/12\), and \(\Lambda=\diag(1,1,-1)\).
+The limiting density has maximum \(3\sqrt2\), so uniform convergence
+gives \(\|p_{Q_m}\|_\infty\to3\sqrt2\).
+\end{proof}
+
+\begin{remark}[Hypotheses of the limiting assertion]
+The nonzero spectrum of every finite matrix
+\(R_m\Lambda R_m^{\mathsf T}\) is exactly the spectrum of \(\Lambda\).
+The three projected coordinates need not be independent before the
+Gaussian limit.  The proof also allows
+\(Q_m=Y_m^{\mathsf T}\Lambda Y_m+\beta_m^{\mathsf T}Y_m+c_m\),
+where \(Y_m=R_m^{\mathsf T}X_m\), \(\beta_m\to\beta\), and
+\(c_m\to c\), because the physical linear terms are separable phases
+in Theorem~\ref{four:diffuse}.  Finite variance, convergence of the
+covariances and means, and the Lindeberg condition are hypotheses of
+this limiting assertion.
+Weak convergence alone would not supply
+\eqref{bench:uniform-limit}; the integrable product-law Fourier bound
+is the step that excludes narrow surviving density peaks.
+\end{remark}
+
+\subsection{One heavy coordinate and two Gaussianized banks}
+
+\begin{theorem}[A uniform gap at the cone tip]\label{bench:one-heavy}
+Let \(0<a\leq1\), \(d=\sqrt{1-a^2}\), and
+\[
+ Q_a=-aX^2+2dXB+aB^2+C^2,
+\]
+where \(B,C\) are independent \(N(0,1/12)\), independent of \(X\).
+Over all probability densities \(0\leq f_X\leq1\), the unique
+maximizer of \(p_{Q_a}(0)\), up to null sets, is the centered unit
+interval density.  Write the maximum as \(C(a)\).  Then
+\begin{equation}\label{bench:one-heavy-bound}
+ C(a)\leq
+ \frac{\sqrt{6\pi}\,\operatorname{erf}(\sqrt{3/2})+3\sqrt2}{2}
+ <4.111374<3\sqrt2.
+\end{equation}
+This is a bound at output zero.
+\end{theorem}
+\begin{proof}
+Conditional on \(X=x\), complete the square:
+\[
+ Q_a=a(B+dx/a)^2+C^2-x^2/a.
+\]
+The density of \((\sqrt a(B+dx/a),C)\) is
+\[
+ \frac6{\pi\sqrt a}
+       \exp\{-6[(u/\sqrt a-dx/a)^2+v^2]\}.
+\]
+Polar coordinates in \((u,v)\) therefore give the conditional
+zero-density kernel, for almost every \(x\),
+\begin{equation}\label{bench:heavy-kernel}
+ K_a(x)=\frac3{\pi\sqrt a}\int_0^{2\pi}
+                      e^{-6F_a(\theta)x^2}\,d\theta,
+ \qquad
+ F_a(\theta)=\frac{(\cos\theta-d)^2}{a^2}
+                         +\frac{\sin^2\theta}{a}.
+\end{equation}
+The conditional density at any level is at most \(6/\sqrt a\).
+For each \(x\ne0\) it is continuous in the level near zero, so
+dominated convergence against \(f_X\) proves continuity of the
+unconditional density there and identifies its value with
+\(\int f_X(x)K_a(x)\,dx\).
+
+The function \(F_a\) is strictly positive.  Thus \(K_a\) is even
+and strictly decreasing in \(|x|\).  Filling the interval closest to
+zero is consequently the unique cap-one maximizer: explicitly, with
+\(I=[-1/2,1/2]\),
+\[
+ \int (\mathbf1_I-f_X)(K_a-K_a(1/2))\,dx\geq0,
+\]
+and equality forces \(f_X=\mathbf1_I\) almost everywhere.  Put
+\[
+ L(s)=\int_{-1/2}^{1/2}e^{-6sx^2}\,dx,
+ \qquad R(s)=\sqrt{1+s}\,L(s).
+\]
+Then \(C(a)=\frac3{\pi\sqrt a}\int L(F_a(\theta))\,d\theta\).
+We claim that \(R(0)=1\) and \(R\) is strictly decreasing on
+\((0,\infty)\).  If
+\(M(s)=\int_{-1/2}^{1/2}x^2e^{-6sx^2}\,dx\), integration by parts
+gives \(L(s)-12sM(s)=e^{-3s/2}\), while \(e^y>1+y\) gives
+\[
+ L(s)=e^{-3s/2}\int_{-1/2}^{1/2}e^{6s(1/4-x^2)}\,dx
+       >(1+s)e^{-3s/2}\qquad(s>0).
+\]
+Since \(L'=-6M\), these identities imply
+\[
+ \frac{d}{ds}\log R(s)
+ =\frac1{2(1+s)}-
+        \frac{L(s)-e^{-3s/2}}{2sL(s)}<0.
+\]
+
+Write \(\alpha=\sqrt{1+a}\), \(\beta=\sqrt{1-a}\).
+Direct expansion gives the perfect-square identity
+\[
+ a^2(1+F_a(\theta))=(\alpha-\beta\cos\theta)^2.
+\]
+The tangent-half-angle substitution, or an elementary rational
+integral, gives
+\[
+ \int_0^{2\pi}\frac{d\theta}{\alpha-\beta\cos\theta}
+       =\frac{2\pi}{\sqrt{\alpha^2-\beta^2}}.
+\]
+Consequently
+\[
+ d\nu_a(\theta)=
+ \frac{(1+F_a(\theta))^{-1/2}}{\pi\sqrt{2a}}\,d\theta
+\]
+is a probability measure and
+\begin{equation}\label{bench:heavy-average}
+ \frac{C(a)}{3\sqrt2}=\int R(F_a)\,d\nu_a.
+\end{equation}
+
+We next show \(\nu_a\{F_a\geq1\}\geq1/2\).
+At \(a=1\), \(F_a\equiv1\).  For \(0<a<1\), put
+\[
+ c_a=\frac{\alpha-a\sqrt2}{\beta},\qquad
+ \theta_0=\arccos c_a,\qquad
+ \kappa=\sqrt{\frac{\alpha+\beta}{\alpha-\beta}}.
+\]
+Here \(0<c_a<1\): the upper inequality follows from
+\(\alpha+\beta>\sqrt2\), and the lower one also follows from
+the comparison below.  The event \(F_a<1\) is exactly
+\(\cos\theta>c_a\).  The same substitution gives
+\[
+ \nu_a\{F_a<1\}
+ =\frac2\pi\arctan\left(\kappa\tan\frac{\theta_0}{2}\right).
+\]
+But
+\[
+ c_a-\frac\beta\alpha
+ =\frac{a(2-\sqrt2\,\alpha)}{\alpha\beta}\geq0.
+\]
+Equivalently,
+\(\kappa\tan(\theta_0/2)\leq1\), so the displayed probability
+is at most \(1/2\).  As \(R\leq1\) everywhere and
+\(R(s)\leq R(1)\) for \(s\geq1\),
+\eqref{bench:heavy-average} yields
+\[
+ C(a)\leq\frac{3\sqrt2}{2}(1+R(1)),\qquad
+ R(1)=\sqrt{\frac\pi3}\,
+              \operatorname{erf}(\sqrt{3/2})<1.
+\]
+This proves the exact bound and its strict gap below \(3\sqrt2\).
+
+The decimal upper bound can also be certified without numerical
+quadrature.  Expanding the exponential and integrating gives the
+alternating series
+\[
+ L(1)=\sum_{j=0}^{\infty}
+       \frac{(-3/2)^j}{j!(2j+1)}.
+\]
+Its term magnitudes decrease, so the even partial sum through
+\(j=12\) is an upper bound.  Since
+\(\sqrt2<14142135623731/10^{13}\), exact rational arithmetic gives
+\[
+ \frac{3\sqrt2}{2}+3L(1)
+ <\frac{3}{2}\frac{14142135623731}{10^{13}}
+       +3\sum_{j=0}^{12}\frac{(-3/2)^j}{j!(2j+1)}
+ <4.111374.
+\]
+The expression on the left equals the exact ceiling in
+\eqref{bench:one-heavy-bound}.
+\end{proof}
+
+\begin{remark}[Exact finite product realization]
+The matrix on the three displayed statistics is
+\[
+ M_a=\begin{pmatrix}-a&d&0\\d&a&0\\0&0&1\end{pmatrix},
+ \qquad M_a^2=I_3,\qquad \operatorname{spec}(M_a)=\{1,1,-1\}.
+\]
+Replace \(B,C\) by two independent normalized sums of \(m\)
+centered unit uniforms, retaining the independent heavy coordinate
+\(X\).  The corresponding matrix in the \(1+2m\) original
+coordinates is \(T_mM_aT_m^{\mathsf T}\), where \(T_m\) has one
+row \(e_1^{\mathsf T}\), \(m\) rows \(e_2^{\mathsf T}/\sqrt m\),
+and \(m\) rows \(e_3^{\mathsf T}/\sqrt m\).  Its columns are
+orthonormal, so its nonzero spectrum is exactly \(\{1,1,-1\}\).
+For each fixed \(a>0\) and fixed heavy density, its cone-tip density
+converges to that of \(Q_a\).
+
+The bank characteristic function is
+\(\psi_m(t)=[\sin(t/(2\sqrt m))/(t/(2\sqrt m))]^m\).
+For \(|t|\leq\sqrt m\), the elementary bound
+\(|\sin u/u|\leq e^{-c u^2}\) on \(|u|\leq1/2\), for some
+\(c>0\), gives a common Gaussian majorant.  For
+\(\sqrt m\leq|t|\leq4\sqrt m\), compactness gives the bound
+\(\rho^m\), with a fixed \(\rho<1\).  For
+\(|t|\geq4\sqrt m\), the bound
+\((2\sqrt m/|t|)^m\) has integral tending to zero.  The central
+limit expansion on compact intervals and these three bounds prove
+\(L^1\) convergence of \(\psi_m\) to the Gaussian characteristic
+function.  Thus the bank densities converge uniformly, and are
+uniformly bounded, by Fourier inversion.  In the conditional polar
+formula used for \eqref{bench:heavy-kernel}, replace the product of
+Gaussian bank densities by the product of these two bank densities.
+Uniform convergence of the products, the finite angular range, and
+\(\int f_X=1\) prove the asserted cone-tip limit.
+Neither this argument nor \eqref{bench:one-heavy-bound} gives a
+global bound over all output levels, or a convergence rate uniform
+as \(a\downarrow0\).
+\end{remark}
+
+\subsection{An exact dense Householder example}
+
+\begin{proposition}[The Householder cube cone tip]\label{bench:householder}
+Let \(X_1,X_2,X_3\) be independent centered unit uniforms, and put
+\[
+ e=\frac1{\sqrt3}(1,1,1)^{\mathsf T},\qquad
+ A=I-2ee^{\mathsf T}
+ =\frac13\begin{pmatrix}1&-2&-2\\-2&1&-2\\-2&-2&1\end{pmatrix}.
+\]
+Then \(\operatorname{spec}(A)=\{1,1,-1\}\), and the density of
+\(Q=X^{\mathsf T}AX\) is continuous at zero, with
+\begin{equation}\label{bench:householder-tip}
+ p_Q(0)=6\sqrt3\,\operatorname{artanh}
+              \left(\frac{\sqrt2-1}{\sqrt3}\right)
+       =2.5343552034\ldots.
+\end{equation}
+In particular, this is also the limit of
+\(\mathbb P(|Q|\leq\varepsilon)/(2\varepsilon)\).
+\end{proposition}
+\begin{proof}
+The matrix acts by \(-1\) on \(e\) and by \(+1\) on
+\(e^\perp\), proving the spectral statement.  Choose an orthonormal
+basis \(u,v\) of \(e^\perp\), and let
+\(u_\theta=u\cos\theta+v\sin\theta\).
+For \(\mathcal C=[-1/2,1/2]^3\), polar coordinates in the positive
+two-plane give the following density version:
+\[
+ p_Q(s)=\frac12\int_{\mathbb R}\int_0^{2\pi}
+  \mathbf1_{\{s+z^2>0\}}
+  \mathbf1_{\mathcal C}\bigl(\sqrt{s+z^2}\,u_\theta+ze\bigr)
+                                                   \,d\theta\,dz.
+\]
+Indeed the radial measure is \(r\,dr\), and changing from
+\(r\) to \(s=r^2-z^2\) contributes the factor \(1/2\).
+Whenever the cube indicator is nonzero, \(|z|\leq\sqrt3/2\).
+As \(s\to0\), its integrand converges except at \(z=0\) or
+where the limiting ray meets the cube boundary.  For each \(\theta\)
+there are only finitely many such nonzero radii.  Dominated convergence
+therefore proves continuity at zero.
+
+Put \(d_\pm(\theta)=u_\theta\pm e\) and
+\(M_\pm(\theta)=\max_i|d_{\pm,i}(\theta)|\).
+At zero, each ray remains in the cube up to
+\(r=1/(2M_\pm(\theta))\), so
+\[
+ p_Q(0)=\frac14\int_0^{2\pi}
+        \left(\frac1{M_+(\theta)}+\frac1{M_-(\theta)}\right)d\theta
+       =\frac12\int_0^{2\pi}\frac{d\theta}{M_+(\theta)}.
+\]
+The last equality uses
+\(M_-(\theta)=M_+(\theta+\pi)\).
+With a suitable origin of the angular coordinate, the three
+coordinates of \(d_+\) are phase shifts by \(2\pi/3\) of
+\[
+ a_0+b_0\cos\theta,\qquad
+ a_0=1/\sqrt3,\quad b_0=\sqrt{2/3}.
+\]
+Every negative coordinate has absolute value at most
+\(b_0-a_0<a_0\), whereas the largest positive coordinate is at
+least \(a_0\), because their sum is \(\sqrt3\).
+Thus the largest absolute coordinate is the largest positive one.
+Each coordinate is maximal on a sector of width \(2\pi/3\), giving
+\[
+ p_Q(0)=\frac32\int_{-\pi/3}^{\pi/3}
+                    \frac{d\theta}{a_0+b_0\cos\theta}.
+\]
+Finally \(t=\tan(\theta/2)\) yields
+\[
+ \int_{-\pi/3}^{\pi/3}\frac{d\theta}{a_0+b_0\cos\theta}
+ =\frac4{\sqrt{b_0^2-a_0^2}}
+   \operatorname{artanh}\left(
+      \frac1{\sqrt3}\sqrt{\frac{b_0-a_0}{b_0+a_0}}\right).
+\]
+Since \(\sqrt{b_0^2-a_0^2}=1/\sqrt3\) and
+\(\sqrt{(b_0-a_0)/(b_0+a_0)}=\sqrt2-1\), this proves
+\eqref{bench:householder-tip}.  Continuity proves the stated
+small-ball limit.
+\end{proof}
+
+The Householder calculation concerns the cone tip and does not locate
+the global maximum of that example.  The one-heavy calculation has the
+same output-level restriction.  The diffuse Lindeberg theorem is global
+in the output level, under its stated array hypotheses.  These distinctions
+leave the unrestricted indefinite product-law endpoint open.

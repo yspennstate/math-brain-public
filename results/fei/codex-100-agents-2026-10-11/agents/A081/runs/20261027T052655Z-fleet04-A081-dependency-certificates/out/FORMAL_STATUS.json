@@ -1,0 +1,25 @@
+{
+  "status": "FORMAL_RUNTIME_OR_TARGET_UNVERIFIED",
+  "memok_exit": 0,
+  "scope": "integer rearrangement of the finite ledger only; never an entropy theorem",
+  "command": [
+    "python",
+    "-B",
+    "-X",
+    "utf8",
+    "lean_check.py",
+    "--core",
+    "--file",
+    "agents\\A081\\runs\\20261027T052655Z-fleet04-A081-dependency-certificates\\out\\lean\\Ledger.lean",
+    "--target",
+    "ledgerCancellation",
+    "--reviewed-sha256",
+    "092bb0f061c1a586ba0cd408e8ca1943d6316da3020e5e26844e8947cad68cc8",
+    "--timeout",
+    "25",
+    "--json"
+  ],
+  "source_sha256": "092bb0f061c1a586ba0cd408e8ca1943d6316da3020e5e26844e8947cad68cc8",
+  "review": "Exact Int ledger rearrangement, import Std; source contains no custom macros or execution; fidelity limited to finite accounting algebra",
+  "exit_code": 2
+}

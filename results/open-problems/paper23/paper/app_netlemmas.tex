@@ -1,0 +1,91 @@
+\section{Network lemmas}\label{app:netlemmas}
+
+This appendix completes the proofs of the uniform gain, gradient lower bound, and stability estimates of
+\Cref{sec:gains}. The random-matrix inputs are \Cref{lem:order,lem:hull} and \Cref{prop:A2} of
+\Cref{app:brackets}; the network structure is that of \Cref{sec:networks}.
+
+\subsection{Uniform two-sided gain}
+\begin{proof}[Proof of \Cref{thm:uniform-gain}]
+Fix a unit $x\in V$. The vector $Wx$ has i.i.d.\ $N(0,1/q)$ coordinates, so $q\|Wx\|^2$ is a
+chi-square with $p$ degrees of freedom and, by \Cref{lem:order} applied to $Z_i^2=(q^{1/2}(Wx)_i)^2$,
+the top and bottom $\alpha p$ squared coordinates satisfy
+\[
+  \frac1q\sum_{i\in T_{\mathrm{top}}}(Wx)_i^2\to\tfrac pq\kappa(\alpha),\qquad
+  \frac1q\sum_{i\in T_{\mathrm{bot}}}(Wx)_i^2\to\tfrac pq\kcheck(\alpha),
+\]
+with deviation probability $e^{-cp}$ at any fixed threshold. For an arbitrary $T$ of size $\alpha p$,
+$\sum_{i\in T}(Wx)_i^2$ lies between the bottom and top sums, giving the two-sided bracket for that $x$
+and that $T$, with the extremes attained by $T=T_{\mathrm{top}},T_{\mathrm{bot}}$. To make this uniform
+over $x\in V$, take an $\eps$-net $\mathcal N$ of the unit sphere of $V$, $|\mathcal N|\le(3/\eps)^d$;
+apply the bound at each net point with threshold slack $\eps$, and union bound: the failure probability
+is $(3/\eps)^d e^{-cp}\to0$ since $d\log(1/\eps)=o(p)$. For a general $x$, pick $x'\in\mathcal N$ with
+$\|x-x'\|\le\eps$; then $\|P_TWx\|$ and $\|P_TWx'\|$ differ by at most $\|W\|_\op\eps\le C\sqrt{p/q}\,\eps$,
+and the top/bottom-$\alpha$ selections for $x$ and $x'$ differ on at most $O(\eps p)$ coordinates, whose
+contribution is $O(\sqrt\eps)$; choosing $\eps=1/p$ makes both corrections $o(1)$. This gives the
+uniform two-sided bracket and the sharpness.
+\end{proof}
+
+\subsection{Gradient lower bound}
+\begin{proof}[Proof of \Cref{prop:gradlb}, details]
+For a fixed input $x$, the symmetric-weight decoupling of \cite[Lemma 2.1]{bubeckCGT21} gives that
+$\nabla F(x)^\top=w^\top D_L(x)W_L\cdots D_1(x)W_1$ has the same law as $w^\top\Sigma_LW_L\cdots\Sigma_1W_1$,
+where $\Sigma_\ell=\diag(\xi_{\ell,1},\dots,\xi_{\ell,n_\ell})$ has entries $\xi_{\ell,i}$ i.i.d.\ with the
+law of $\sigma_\ell'(Z)$ ($Z$ the preactivation), independent of the $W$'s. Set
+$v_0=w$ and $v_\ell^\top=v_{\ell-1}^\top\Sigma_\ell W_\ell$; then
+$\EE[\|v_\ell\|^2\mid v_{\ell-1}]=\EE[\Sigma_\ell]^2$-weighted $\|v_{\ell-1}\|^2$ times the layer variance,
+and the pointwise nondegeneracy $\sigma_\ell'(r)^2+\sigma_\ell'(-r)^2\ge2c^2$ combined with the
+signal-preserving variance gives $\EE[\|v_\ell\|^2\mid v_{\ell-1}]\ge c_0^2\|v_{\ell-1}\|^2$ for an
+absolute $c_0>0$ (for ReLU, $\EE\xi_{\ell,i}^2=1/2$ and the variance-$2$ normalization make the per-layer
+factor $\ge1-o(1)$). Iterating, $\EE\|\nabla F(x)\|^2\ge c_g^2\|w\|^2$ with $c_g=c_0^L$; concentration of
+the quadratic form over the $\Theta(\prod_\ell n_\ell)$ Gaussian entries (Hanson--Wright) gives
+$\|\nabla F(x)\|\ge\tfrac12c_g\|w\|$ with failure probability $e^{-c'\min_\ell n_\ell}$. Uniformity over
+$x$ is by the $\eps$-net argument as in \Cref{thm:uniform-gain}, extended to all $x$ by
+\Cref{thm:stability}. The nondegeneracy holds for any $[0,1]$-slope $\sigma$ with $\EE\sigma'(Z)^2>0$ by
+\Cref{lem:hull} (the derivative gate lies in the hull of $0/1$ gates and the extremal least-singular
+bound transfers); biases shift the gate density, keeping it in $[c_0,c_1]$ by \Cref{ass:nondeg}, which
+only changes $c_0$.
+\end{proof}
+
+\subsection{Stability}
+\begin{lemma}[Few gates flip]\label{lem:fewflip}
+Under the hypotheses of \Cref{prop:gradlb}, w.h.p.\ for all inputs $x$ on the sphere and $x'$ with
+$\|x'-x\|\le r$, the number of neurons at layer $\ell$ whose gate differs between $x$ and $x'$ is at most
+$\delta_\ell n_\ell$ with $\delta_\ell=C r\sqrt{\bar n}/\|x\|$.
+\end{lemma}
+\begin{proof}
+A neuron at layer $\ell$ flips only if its preactivation crosses a breakpoint of $\sigma_\ell'$, i.e.\ if
+$z_{\ell,i}(x)$ lies within $\|z_\ell(x')-z_\ell(x)\|_\infty$ of a breakpoint. The layer maps are
+$O(1)$-Lipschitz (upper bracket of \Cref{thm:uniform-gain}), so $\|z_\ell(x')-z_\ell(x)\|_\infty\le\|z_\ell(x')-z_\ell(x)\|_2\le Cr$
+after the forward Lipschitz product. The preactivations $z_{\ell,i}$ are Gaussian of scale
+$\varsigma_\ell\asymp\|h_{\ell-1}\|/\sqrt{n_{\ell-1}}\asymp\|x\|/\sqrt{n_{\ell-1}}$, so by anticoncentration
+$\PP(|z_{\ell,i}-\text{breakpoint}|\le\tau)\le C\tau/\varsigma_\ell$ with $\tau=Cr$; the expected number of
+flipped neurons is $n_\ell\cdot Cr\sqrt{n_{\ell-1}}/\|x\|\le C r\sqrt{\bar n}/\|x\|\cdot n_\ell$, and a
+Bernstein bound gives the same w.h.p.\ uniformly over $x,x'$ by a net (the flip count is a Lipschitz
+function of $x,x'$ after smoothing the indicator).
+\end{proof}
+
+\begin{proof}[Proof of \Cref{thm:stability}, details]
+By the telescoping identity in the sketch, $\nabla F(x')^\top-\nabla F(x)^\top$ is a sum of $L$ terms, the
+$\ell$-th being $w^\top D_L(x')W_L\cdots(D_\ell(x')-D_\ell(x))W_\ell\cdots D_1(x)W_1$. The gate difference
+$D_\ell(x')-D_\ell(x)$ has entries in $[-1,1]$ supported on the flipped neurons, of number
+$\le\delta_\ell n_\ell$ with $\delta_\ell=Cr\sqrt{\bar n}/\|x\|$ by \Cref{lem:fewflip}, so
+$(D_\ell(x')-D_\ell(x))W_\ell$ restricted to that support has operator norm at most
+$2\sqrt{\kappa(\delta_\ell)}+o(1)$ by \Cref{prop:A2} (a Gaussian block on a density-$\delta_\ell$ row
+pattern), and $\kappa(\delta)\le C\delta\log(1/\delta)$ as $\delta\to0$ (the top-$\delta$ Gaussian
+square-mass). The remaining factors are $O(1)$ in operator norm by \Cref{thm:uniform-gain}, and the
+leading $w^\top D_L(\cdots)$ contributes $\|w\|$. Hence the $\ell$-th term is at most
+$C\|w\|\sqrt{\delta_\ell\log(1/\delta_\ell)}$, and summing over $\ell$ (all $\delta_\ell\le\delta:=Cr\sqrt{\bar n}/\|x\|$)
+gives $\|\nabla F(x')-\nabla F(x)\|\le C(L)\|w\|\sqrt{\delta\log(1/\delta)}$, which is the stated bound.
+Uniformity over $x,x'$ is again by a net and the $O(1)$-Lipschitz dependence of every factor on the
+inputs.
+\end{proof}
+
+\subsection{Combining into (A3)}
+For the master theorem we need $\|\nabla F(x')-\nabla F(x)\|\le C_g/3$ on the attack ball of radius
+$2a/C_g$. With $a=C\|x\|\sqrt{(d\log\bar n)/n_L}$ and $C_g=c_g\|w\|$, the radius is
+$r=2a/C_g\asymp\|x\|\sqrt{(d\log\bar n)/n_L}/c_g$, so $\delta=Cr\sqrt{\bar n}/\|x\|\asymp\sqrt{(d\log\bar n)\bar n/n_L}/c_g$,
+and $\|\nabla F(x')-\nabla F(x)\|\le C(L)\|w\|\sqrt{\delta\log(1/\delta)}=o(\|w\|)=o(C_g)$ whenever
+$\bar n\,d\log\bar n=o(n_L\,c_g^2)$; when the widths are comparable the directional (attack-line) form of
+\Cref{thm:stability} and the constant-$2$ Taylor engine of \cite[Thm 4.6]{advExt} require only
+$\|\nabla F(x')-\nabla F(x)\|=o(\|\nabla F\|)$ along the segment, which holds under $d\log n=o(n)$
+(\Cref{rem:widthcond}).

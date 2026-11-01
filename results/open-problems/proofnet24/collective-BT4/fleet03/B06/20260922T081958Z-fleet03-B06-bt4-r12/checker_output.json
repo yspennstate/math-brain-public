@@ -1,0 +1,27 @@
+{
+  "candidate": "BT4-F3-R3-MIXED-APEX-NEUTRAL-FORK-v1",
+  "fork_neutral_exchange_checks": 156,
+  "fork_neutral_exchange_orders_checked": [3,80],
+  "payload_sha256": "4c36ba5c947b1298cf6aa5f1adb9ddaef15aae25d11533de5e1aa9fc915cef10",
+  "quadrilateral_apex_patterns": 102,
+  "quadrilateral_exceptional_fork_patterns": 12,
+  "quadrilateral_fresh_packed_cross_patterns": 90,
+  "quadrilateral_path_templates": 6,
+  "result": "PASS",
+  "stronger_candidate_refuted_locally": {
+    "claim": "quadrilateral mixed return always forces a fresh packed-to-packed cross",
+    "scope": "symbolic local obstruction only; not asserted to be a full BT4 counterexample",
+    "symbolic_exception": {
+      "K": "e->a->c->b->e",
+      "apex": "z=c^- on L",
+      "apex_hits": ["c","a","b"],
+      "apex_misses": ["e"],
+      "repair": "two exact size-neutral cycles C_a,C_b and two 3-vertex exchanged-remainder acyclicity obligations"
+    }
+  },
+  "triangle_apex_cases": 16,
+  "triangle_fresh_packed_cross_cases": 12,
+  "triangle_path_templates": 4,
+  "triangle_residual_triple_hit_cases": 4,
+  "violations": []
+}

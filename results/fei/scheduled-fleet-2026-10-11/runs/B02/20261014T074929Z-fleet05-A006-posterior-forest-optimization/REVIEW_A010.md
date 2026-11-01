@@ -1,0 +1,16 @@
+# Independent whole-claim reconstruction, no repair
+
+Target A010-ROOT-LAW-GAP-OBSTRUCTION-AND-PACKING-CAPS@1, statement SHA256 8fe13a285543eed587ae80558a5a84279ee27e45240ee127db4b14005140ef84, source stage 20261014T062324Z. Verdict HOLDS at the ENTIRE stated scope. No changed hypothesis or supplied repair; the all-m/full-family extension in this run is separate A006 work and is not attributed to A010's finite theorem.
+
+For any covering actual partition event family on a star, the full spectral set has unique eligible leaf owners and consequently uses all m gates. Thus its numerator is c product lambda with c>0. Its contribution to h_all is exactly D/product lambda, irrespective of its posterior or the value of c. Since D>=s/4, product lambda<=(s/m)^m, s<=1 and v=1-4^-m, Gamma>=m^m/4-1+4^-m at every physical weight. I=1+(m-1)2^-m<=5/4 (the maximum occurs m=2,3). Therefore the asserted divergence is of a certificate gap, not the actual optimized cost. For m=10 the quoted matching-star K entry is 9!/(3*2^10*10*11)>1, consistent with a non-stochastic algebraic kernel.
+
+Independently reconstruct the bounded-choice cost, rather than assuming the earlier accepted A008 review. At lambda_i=1/m the matching-star numerators are lambda_B/32^k for leaf-only outputs, 1/32 for the hub singleton, and a_k/m^k for hub-plus-B with a_k as in FULL_PARTITION_CAPS.md. This follows from the original count, multiset and chronological queue factors; the generic independent ownership enumerator contains this family coefficientwise. D<1/3. The hub-only cost is <4 bits. Dropping the negative log D term elsewhere, leaf-only cost per set is k(5+log2 m); hub-plus-B cost is <=2+k(5+log2 m), since (k-1)!>=1, log2 3<2 and k(k+1)<=4^k. Their common physical set weight is 4^-m. Summing gives
+
+    C_MS<4 + (5+log2 m)m/2^m + 2^(1-m)
+        <=4 + m(m+4)/2^m + 1/2 <=15/2 <11 I.
+
+Here log2 m<=m-1 for integer m>=2, and m(m+4)/2^m decreases from 3 at m=2 because (m+1)(m+5)<=2m(m+4). This verifies the entire bounded-cost side of the A010 statement without using author numerical code. The sharper elementary constant is used only as a reconstruction, not proposed as another FEI class result.
+
+The subset root cap follows from D>=s_T/4 and AM-GM, giving 4^(1-k)/k^k. The supporting inequality -ln x>=1-x gives the capped LP bound, and sorting/filling yields a primal equal to theta+sum u_T(h_T-theta)_+. These are all-weight and changing-posterior bounds within the fixed family. code/incidence_caps.py independently generates the matching-star gradient from the exact numerator, verifies physical-root averaging and every cap, and certifies rational primal-dual equality and Gamma_cap<I/6 for every m=2,...,8 in out/A010_REVIEW_CERTIFICATES.json. No A010 code is imported or executed. This checks the finite conclusion with a different coefficient representation (closed cardinality formula rather than neighbor-choice convolution).
+
+The retained first unsupported extension is influence-payment on full partition coefficients in all shared/leafless dimensions. A010 does not assert it, and no selected-family lower bound is transferred to a larger family. A006's full-family recomputation and general incidence-price caps are downstream mathematical use of this accepted scoped result.

@@ -1,0 +1,33 @@
+{
+  "target": "P0117",
+  "checked_at": "2026-10-10",
+  "dated_ledger": {
+    "ranking": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:552",
+    "bundle": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json:2448",
+    "recorded_statement": "For nondegenerate continuous iid planar passage-time laws in the usual positive-speed regime, determine whether a bi-infinite geodesic exists.",
+    "status": "attempted_unsolved as recorded 2026-09-07; not evidence of current openness"
+  },
+  "original_problem_source": {
+    "citation": "Auffinger, Damron, Hanson, 50 years of first-passage percolation, Question 31",
+    "url": "https://www.math.northwestern.edu/~auffing/FPPSurvey.pdf",
+    "verified_quote": "Question 31. Do geodesic lines exist?",
+    "locator": "PDF page 86 (zero-based page 85), section 4.5; the local bundle's 'PDF p.98' locator does not match this PDF edition",
+    "scope_note": "The survey asks the broader geodesic-line question; P0117 is its planar iid specialization. The question text itself supplies no moment hypothesis."
+  },
+  "older_partial_theorem": {
+    "citation": "Damron and Hanson, Bigeodesics in first-passage percolation, arXiv:1512.00804v2 (2016)",
+    "url": "https://arxiv.org/abs/1512.00804",
+    "content": "No bigeodesic with an end in a fixed deterministic direction under differentiability of the shape boundary; the fixed-direction quantifier does not cover an environment-selected random direction."
+  },
+  "new_primary_preprint": {
+    "citation": "OpenAI, No bigeodesics in planar first-passage percolation, dated 2026-09-24, Theorem 1.1",
+    "url": "https://github.com/openai/math/blob/main/preprints/No-bigeodesics-in-planar-first-passage-percolation-September-24-2026/main.pdf",
+    "local_read_copy": "source_openai_no_bigeodesics_2026-09-24.pdf",
+    "claimed_statement": "For iid nonnegative nonatomic nearest-neighbor edge weights on Z^2 with E[min(X1,X2,X3,X4)^2] < infinity, almost surely no doubly infinite path has every finite segment geodesic. The assertion is simultaneous over all paths and assumes no limit-shape regularity.",
+    "evidence": "PDF Theorem 1.1 and introduction, extracted text lines 26-43",
+    "assessment": "A direct primary-source claim of a solution for the moment class, not an independently validated proof. It does not claim the moment-free case. Section 7.4's fixed-M/fixed-neighborhood limit and Proposition 7.6's final Busemann-detour deduction were checked only conditional on upstream lemmas."
+  },
+  "current_openness": "CLAIMED_RESOLVED_FOR_MOMENT_CLASS; MATHEMATICAL_VALIDITY_UNVERIFIED; MOMENT_FREE_SCOPE_UNKNOWN",
+  "owner_prior_work": "Dated September 7 ledger records only an attempted unsolved route; no local P0117 solved record found in the named intake or attempts H/I. A broader owner solved/retired inventory check remains pending.",
+  "next": "Audit the 2026 preprint's load-bearing theorem chain and peer artifacts; compare any peer lemma to the moment scope before claiming novelty."
+}

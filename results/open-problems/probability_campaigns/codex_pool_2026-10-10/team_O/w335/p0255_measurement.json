@@ -1,0 +1,94 @@
+{
+  "command": "python -X utf8 check_p0255.py",
+  "exhaustive_star_vectors": 1360,
+  "sharp_arbitrary_start_cv_squared": "1/24",
+  "star_absolute_cv_bound": 0.20412414523193154,
+  "seeded_general_graph_cases": 200,
+  "general_graph_maximum_found": {
+    "case": 18,
+    "n": 5,
+    "cv": 0.23253955216807742,
+    "edges": [
+      [
+        1,
+        0,
+        20
+      ],
+      [
+        2,
+        0,
+        67
+      ],
+      [
+        3,
+        0,
+        72
+      ],
+      [
+        4,
+        3,
+        47
+      ],
+      [
+        0,
+        4,
+        14
+      ],
+      [
+        1,
+        2,
+        43
+      ],
+      [
+        1,
+        4,
+        33
+      ]
+    ],
+    "lengths": [
+      213,
+      204,
+      124,
+      124,
+      200
+    ]
+  },
+  "elapsed_seconds": 0.278653,
+  "result": "PASS; general graph search is numerical evidence only",
+  "one_leaf_boundary_cases": [
+    {
+      "weight": 1,
+      "lengths": [
+        1,
+        1
+      ],
+      "cv": 0
+    },
+    {
+      "weight": 2,
+      "lengths": [
+        2,
+        2
+      ],
+      "cv": 0
+    },
+    {
+      "weight": 17,
+      "lengths": [
+        17,
+        17
+      ],
+      "cv": 0
+    },
+    {
+      "weight": 1000000,
+      "lengths": [
+        1000000,
+        1000000
+      ],
+      "cv": 0
+    }
+  ],
+  "boundary_check_seconds": 0.00064,
+  "boundary_command": "python -X utf8 finalize_corrections.py"
+}

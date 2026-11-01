@@ -1,0 +1,16 @@
+Executable symbolic check performed on the CHECK_v2.py logic in this run.
+
+PASS QFORM_B17_NULL_LEAF_TARGET_RIGIDITY
+C0=3.386294361119891
+3sqrt2=4.242640687119286
+gap=0.856346325999395
+centered_exact=2.693147180559945
+delta_0p1_partner_bound=3.078449419199901
+
+Verified identities:
+- For A_delta=[[delta,1+delta,delta],[1+delta,0,0],[delta,0,1+delta]], the leading principal minors of A_delta^2-I are delta(3delta+2), delta^2(2delta^2+6delta+3), delta^3(delta+2)(delta^2+4delta+2), all positive for delta>0.
+- det A_delta=-(1+delta)^3.
+- For A=[[r,a,c],[a,0,0],[c,0,b]], the relevant principal-minor identities of A^2-I are exactly a^2-1, (a^2-1)(b^2-1)-c^2, and (a^2-1)(a^2+c^2-1)-r^2.
+- d/dz {z[2-log(2 beta z^2)]}=-log(2 beta z^2).
+
+Integrity note: the first immutable CHECK.py used Python structural equality against SymPy's factored representation `(a-1)(a+1)` and therefore can raise a syntactic AssertionError despite polynomial equality. It is superseded by immutable CHECK_v2.py, which uses `simplify(lhs-rhs)==0` and is the checker actually validated. REPORT.md mathematics is unaffected.

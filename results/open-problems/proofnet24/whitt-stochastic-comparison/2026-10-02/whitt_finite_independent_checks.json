@@ -1,0 +1,48 @@
+{
+  "models": [
+    {
+      "model": "base",
+      "maximum_count": 80,
+      "arithmetic": "Fraction exact rational",
+      "method": "killed finite CTMC occupation / mass outside bound",
+      "stationary_outside_mass_upper_display": "0.0000338819650833609985499114781245524662539399519",
+      "entry_phase_delay_ratios_display": [
+        "0.392872619378512682111233685707139020345817183",
+        "0.392872619378512551147270442595899501760923521",
+        "0.392872619378512420636667195074272856376960069"
+      ],
+      "delay_lower_display": "0.392859308082140429303224806140675930858523696",
+      "delay_upper_display": "0.392906501343596043109783597185263572812071123",
+      "checks": [
+        "generator rows",
+        "exact backward equations",
+        "positive occupations",
+        "slow M/M/2 count domination",
+        "stationary flux occupation identity"
+      ]
+    },
+    {
+      "model": "spread",
+      "maximum_count": 80,
+      "arithmetic": "Fraction exact rational",
+      "method": "killed finite CTMC occupation / mass outside bound",
+      "stationary_outside_mass_upper_display": "1.23682821885680565999958254019220393481626085E-13",
+      "entry_phase_delay_ratios_display": [
+        "0.391709814110955601643878322731950170861374369",
+        "0.391709814110955601546088898829254184173260181",
+        "0.391709814110955601447775378189094785764441106"
+      ],
+      "delay_lower_display": "0.391709814110907153672605819823432443629911571",
+      "delay_upper_display": "0.391709814111079284465764003297950129115393589",
+      "checks": [
+        "generator rows",
+        "exact backward equations",
+        "positive occupations",
+        "slow M/M/2 count domination",
+        "stationary flux occupation identity"
+      ]
+    }
+  ],
+  "gap_lower_display": "0.00114949397106114483746080284272580174313010714",
+  "exact_claim": "P_delay(base)-P_delay(spread)>11/10000"
+}

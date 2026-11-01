@@ -1,0 +1,53 @@
+[
+  {
+    "claim_id": "A060-COMPOSITION-SHARPNESS-LEDGER",
+    "version": 1,
+    "exact_statement": "For every r,d>=1, the fresh balanced rare-switch chain F_0=x_0, F_t=(1-A_r)F_(t-1)+A_r y_t, p=2^-r, q=1-p has H=[q^2 log2(1/q^2)+2rp(2-p)](1-q^d)/p, I=1+r(1-q^d), B=r[phi(q^2,p^2)+2p-2p^2](1-q^d)/p, phi(u,v)=(u+v)h2(v/(u+v)). The repeated concavity-root log D=sum_(t=1)^(d-1)q^(d-t)Lambda(F_t) is at least p d(d-1)q^(2d); the exact continuation L is zero. For every a>=1 and even m>=2, F=b(y)-2A_a(z)1_(y=0), quadratic bent b, p=2^-a, delta=2^-m has I_W=2ap delta, I_data=m(1/2+2p delta), and L-32p delta/(a ln2)<=B_W/I_W<=L with L=2(1-p)(m+2a-2+1/ln2)/a. On a class closed under disjoint tensor powers, H<=CI+D0 with a fixed finite D0 implies H<=CI with the same multiplicative C.",
+    "hypotheses": [
+      "uniform physical inputs; Boolean sign output",
+      "fresh disjoint input blocks for the chain",
+      "origin selector and data cells; even-dimensional paired quadratic bent function for the splice",
+      "H and B in bits; Lambda and D in nats",
+      "zero entropy terms by continuity; tensor conclusion requires tensor-closed class and fixed D0"
+    ],
+    "statement_sha256": "8916083da1d7c5800abc5541456024c4ddb50fb9ed85354a88f43e4b7f45801e",
+    "contributors": [
+      "A060; A059 rare-switch family and divergence credited; B12 lead target"
+    ],
+    "proof_source": {
+      "path": "PROOF.md",
+      "sha256": "2dfea6d2f7f86fdfd2d9c0c57e0aeb339013a0b854bec0c5e927ba29ec008428"
+    },
+    "proof_dependencies": [
+      {
+        "source": "threshold_paper_38pp.txt",
+        "locator": "Proposition 7.1",
+        "scope": "composition interface, specialized spectra independently derived"
+      },
+      {
+        "source": "A057 REPORT.md",
+        "locator": "derivation steps 2,3,6",
+        "scope": "root relaxation being tested; imported formula independently specialized"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "selector-only B_W<=K I_W for fixed K on arbitrary branches",
+      "depth-uniform bound on the specific repeatedly charged concavity log bank"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A019",
+      "A056",
+      "A057",
+      "A058",
+      "A059",
+      "A091",
+      "A090",
+      "A097",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+--- a/~/math-brain-inbox/w512/bundle_001.json
++++ b/~/math-brain-inbox/w512/bundle_001.json
+@@ -0,0 +1,37 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w512",
++  "bundle_slug": "p0162-referee-scope-001",
++  "entries": [
++    {
++      "key": "two-operations",
++      "namespace": "analysis.boolean_functions",
++      "logical_name": "fei-spectral-conditioning-versus-input-restriction",
++      "kind": "concept",
++      "title": "Draft: distinguish spectral conditioning from input restriction in FEI",
++      "statement": "DRAFT, reviewed mathematical scope note. For Boolean f let Z have law P(Z=S)=fhat(S)^2 and v=P(Z is nonempty). Spectral conditioning gives H(f)=h_2(v)+v H(Z | Z nonempty), so the factor v is essential. Input restriction at coordinate i gives the different quantity Delta_i=H(f)-[H(f_i^+)+H(f_i^-)]/2. A chain entropy H(Z_i | previously exposed spectral coordinates) is a third quantity. Counterexamples to a uniform charge for every spectral chain increment or every prescribed input split do not settle the existential-coordinate FEI induction or the universal FEI conjecture.",
++      "proof_text": null,
++      "assumptions": ["Uniform Boolean cube", "Base-2 spectral entropy including the empty coefficient", "v>0 when conditional law is used", "Counterexample quantifiers concern every prescribed coordinate"],
++      "domain": "Fourier analysis of Boolean functions",
++      "source": {"source_id": "owner-own-work:P0162-w512-reviewed-scope", "url": "urn:owner-campaign:P0162-w512-review-packet", "revision": "2026-10-10-reviewed-draft", "license": "owner-own-work", "excerpt": null}
++    },
++    {
++      "key": "frontier",
++      "namespace": "analysis.boolean_functions",
++      "logical_name": "fei-affine-and-prescribed-split-frontier-scope",
++      "kind": "concept",
++      "title": "Draft: FEI affine and restriction boundaries",
++      "statement": "DRAFT, reviewed mathematical scope note. The sharp entropy-to-influence supremum for Boolean sign-reversed affine-subspace indicators is 4 (w510 C001-C002). A separate Boolean bent-plus-one-point-flip selector makes Delta_i/I_i unbounded for one prescribed coordinate (w511 C001), even though its global H/I tends to 2 and another coordinate has bounded split ratio. Both are boundary results. Neither proves or refutes the universal Fourier entropy-influence conjecture; the general mass-weighted spectral entropy budget or a suitable-coordinate selection theorem is still missing.",
++      "proof_text": null,
++      "assumptions": ["Uniform Boolean cube", "Base-2 spectral entropy", "The affine result applies only to affine-subspace indicators", "The split obstruction concerns a prescribed coordinate"],
++      "domain": "Fourier analysis of Boolean functions",
++      "source": {"source_id": "owner-own-work:P0162-w512-reviewed-scope", "url": "urn:owner-campaign:P0162-w512-review-packet", "revision": "2026-10-10-reviewed-draft", "license": "owner-own-work", "excerpt": null}
++    }
++  ],
++  "relations": [
++    {"from_key": "frontier", "to_key": "two-operations", "kind": "depends_on", "rationale": "The frontier distinguishes the affine mass-weighted spectrum from the prescribed input-restriction increment defined in the first card."},
++    {"from_key": "frontier", "to_existing_logical": "math:probability.boolean_fourier:affine-indicator-fei-sharp-constant-four", "kind": "cites", "rationale": "w510 C002 proves the affine-class constant-four supporting end; w512 independently checked the formula and limit."},
++    {"from_key": "frontier", "to_existing_logical": "math:analysis.boolean_functions:quadratic-bent-point-flip-selector-obstruction", "kind": "cites", "rationale": "w511 C001 proves the prescribed-selector obstruction; w512 independently checked its entropy and influence formulas."},
++    {"from_key": "two-operations", "to_existing_logical": "math:probability.boolean_fourier:nonempty-spectral-conditioning-mass-counterexample", "kind": "cites", "rationale": "w510 C003 supplies H=h_2(v)+v H(Q), with the conditional mass v retained; w512 checked the identity."}
++  ]
++}

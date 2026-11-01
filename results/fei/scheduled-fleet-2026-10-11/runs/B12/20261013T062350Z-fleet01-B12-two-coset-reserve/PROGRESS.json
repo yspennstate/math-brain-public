@@ -1,0 +1,72 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2 plus owner control 2026-10-12.1",
+  "run_id": "20261013T062350Z-fleet01-B12-two-coset-reserve",
+  "stream": "B12",
+  "packet_id": "A057",
+  "packet_ids": ["A057"],
+  "gap_id": "B12-A057-COHERENT-HIERARCHY-v12",
+  "attempt_id": "B12-A057-ATTEMPT-12",
+  "bounded_objective": "Extend the sharp one-affine-coset source payment to two affine pieces with overlapping translated spectra, or isolate the exact new collision currency.",
+  "prior_status": "Omega<=8 ln(2) I(b) was proved for one affine-coset character flip; nonflat sources formed from multiple spectral pieces were open.",
+  "new_status": "SEPARATED_TWO_COSET_SOURCES_PAID_BY_16_LN2_ONE_SOURCE_BUDGET; ADJACENT_COLLISION_OPEN; FULL_FEI_OPEN",
+  "mathematical_delta": "Two disjoint affine-coset pieces at Hamming distance at least two, with arbitrary spectral overlap, satisfy Omega<=16 ln(2) I(d). The theorem sums through adaptive nonreusing hierarchies with one source budget. The only new excluded mechanism is the negative derivative cross term on edges joining adjacent pieces.",
+  "case_extension": {
+    "starting_class": "One spectrally flat affine-coset defect with sharp constant 8 ln(2).",
+    "new_class": "Two separated affine-coset defects of arbitrary codimensions and directions, allowing overlapping annihilator spectra, and adaptive nonreusing hierarchies of such pieces.",
+    "quantifiers": "Every slice dimension, every two nonempty disjoint affine cosets at Hamming distance at least two, every allowed hierarchy depth and actual reach-weight profile.",
+    "previous_bound": "No source payment for a nonflat union was proved.",
+    "new_bound": "sum_v w_v Omega_v<=16 ln(2) I(b).",
+    "parameter_dependence": "No dimension, codimension, direction, spectral-overlap, depth, or activation factor; constant 16 ln(2) is not claimed sharp.",
+    "proof_status": "AUTHOR_PROVED_PENDING_A090_A091_REVIEW"
+  },
+  "claim_versions_used": [
+    "B12-A057-AFFINE-DEFECT-RESERVE-v1 at canonical commit 6460c555953652601ea0011efca2760c06979ac4",
+    "B12-A057-CHANNEL-INFLUENCE-CREDIT-v1 at canonical commit 73b3106713a3b50acf9cb1e8315e00e4f0c96659",
+    "B01-A003-KL-JS-FOURBIT-FALSIFIER-v1 at canonical commit 59d698866d319542ba55d8215846586b14279ad1"
+  ],
+  "claims_created_or_changed": [
+    "B12-A057-TWO-COSET-RESERVE-v1",
+    "B12-A057-SUPERPOSITION-ENTROPY-v1",
+    "B12-A057-TWO-COSET-HIERARCHY-v1",
+    "B12-A057-ADJACENT-COLLISION-GAP-v1"
+  ],
+  "acceptance_evidence": [
+    "TWO_COSET_RESERVE.tex: all-dimension scalar, affine, associator, influence, and hierarchy proof",
+    "check_two_coset.py/check_two_coset.out: exact Walsh reconstruction of 3516 separated pair decompositions through four slice variables"
+  ],
+  "remaining_obstacle": "Adjacent source pieces have a negative derivative cross term, so the sum of individual affine source payments overcharges the true source influence. A matching signed entropy collision refund or one-use boundary reserve is unproved.",
+  "next_action": "Freeze the adjacent two-coset inequality retaining the exact derivative cross term; prove a matching associator refund or produce a scalable Boolean falsifier parametrized by the adjacency boundary.",
+  "next_consumers": ["A058", "A059", "A090", "A091", "B20"],
+  "independent_reviewers": ["A090", "A091"],
+  "stagnant_substantive_attempts": 0,
+  "source_plan": {
+    "source_head_at_research": "d829fca20536446e9855c0ce13be882b9beaf11a",
+    "brain_head_at_research": "9bcf5431d4e8255d15450a3347e3cc7e06a11403",
+    "owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "owner_order_blob": "7c5e21945adef435e6b587909603dd96794a1ebe",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "assignment_blob": "40935ac651643a17815d0addf664ec4c1c0313cc",
+    "current_status_blob": "c416d4b4a83fc67965cb95d06a0cc80c5c29a520"
+  },
+  "validation": {
+    "command": "python3 check_two_coset.py",
+    "arithmetic": "Exact Fraction Walsh transforms and influence identities; floating natural-log entropy only for finite reconstruction, with analytic inequalities proving the theorem.",
+    "scope": "Every separated affine-coset pair decomposition through four slice variables: 3516 decompositions, including 3128 non-affine cases.",
+    "status": "PASS"
+  },
+  "delivery_status": {
+    "canonical": "PENDING_REPOSITORY_DELIVERY",
+    "brain_mirror": "PENDING_REPOSITORY_DELIVERY",
+    "independent_review": "NOT_YET",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {
+    "model": "Codex as exposed by the runtime instructions",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  },
+  "full_fei_status": "OPEN"
+}
+

@@ -1,0 +1,27 @@
+--- a/.claude/dreaming/brain.py
++++ b/.claude/dreaming/brain.py
+@@ -2127,9 +2127,9 @@
+     _floor_break = os.environ.get("BRAIN_RECALL_FLOOR_BREAK", "0") != "0"
+     displayed = []
+     for sc, ls, gs, ss, slug, status in _display_rows(scored, n, floor_break=_floor_break):
+-        # an index line without a tag says nothing about status; the memory's own frontmatter does, and a
+-        # retraction is the one status a reader must not miss (F50) - bounded to the displayed rows
+-        if status == "legacy" and _frontmatter_retracted(slug):
++        # A tagged index line can also be stale. Author retractions override every index status;
++        # check only displayed rows, using the existing bounded frontmatter reader.
++        if _frontmatter_retracted(slug):
+             status = "retracted"
+         displayed.append((sc, ls, gs, ss, slug, status))
+     _print_strong_node_advisory(row[4] for row in displayed)
+@@ -2140,7 +2140,10 @@
+         # the memory's own description, not its MEMORY.md line (2026-09-23): the index line repeats the slug twice
+         # inside a 200-character cap, so the snippet ran a median 73 characters against the description's 237 and
+         # a question-first description lost its answer; read for the displayed rows only
+-        d = _full_description(slug) or sr._desc(slug, idx) or "(no description)"
++        if status == "retracted":
++            d = "Withdrawn by the author; open this memory for the correction before using it."
++        else:
++            d = _full_description(slug) or sr._desc(slug, idx) or "(no description)"
+         # a FIRE WHEN memory's description is its trigger, so the snippet echoes the question back (Test A:
+         # eight `node` opens just to read the rule); show the lesson line beside it, for displayed rows only
+         if re.match(r"\s*(?:\[[A-Z][A-Z ,+-]*\]\s*)*FIRE\b", d):

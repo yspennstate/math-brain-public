@@ -1,0 +1,11 @@
+T357 (agent A, 20 Oct 2026): independent check of lam_risk at finite n by direct simulation of the Gaussian-equivalent
+design, to decide between risk_gap_coefficient.py and the rf_cgmt.py fixed point (they disagree by 1.5-2x at large alpha).
+u = mu1 F x + mus xi (x ~ N(0, I_d), xi ~ N(0, I_N)), y ~ Bernoulli(sig(beta x_1)), w_hat = ridge logistic fit (no intercept).
+Exact at every n: dR(w_hat_lam)/dlam = -grad R(w_hat) . (Hh + lam)^{-1} w_hat, with the population gradient in closed form
+grad R(w) = Vh(|w|_Sig) Sig w - kappa m (Stein; Vh(q) = E sig'(q g)). The zero of its mean over reps is lam_risk.
+argv: beta alpha psi d reps [seed]   (F as rf_ridge_inf.py with its seed argument, 100 = rf_cgmt.py's F)
+beta 2.0 alpha 100.0 N 200 d 200 n 20000 reps 40 seed 100; lam grid [0.0002 0.0004 0.0006 0.0008 0.001 ]
+  reps 10: mean dR/dlam -5.5578e-01(8.0e-02) -3.3313e-01(7.1e-02) -1.4223e-01(6.3e-02) +2.2378e-02(5.6e-02) +1.6505e-01(5.1e-02)  -> linear zero lam_risk 7.8779e-04  alpha*lam_risk 0.0788
+  reps 20: mean dR/dlam -5.7454e-01(4.8e-02) -3.4677e-01(4.3e-02) -1.5180e-01(3.8e-02) +1.6076e-02(3.5e-02) +1.6137e-01(3.1e-02)  -> linear zero lam_risk 7.9527e-04  alpha*lam_risk 0.0795
+  reps 30: mean dR/dlam -5.7141e-01(3.9e-02) -3.4481e-01(3.5e-02) -1.5066e-01(3.1e-02) +1.6668e-02(2.8e-02) +1.6161e-01(2.6e-02)  -> linear zero lam_risk 7.9449e-04  alpha*lam_risk 0.0794
+  reps 40: mean dR/dlam -5.4126e-01(3.5e-02) -3.1770e-01(3.2e-02) -1.2610e-01(2.8e-02) +3.9056e-02(2.6e-02) +1.8214e-01(2.3e-02)  -> linear zero lam_risk 7.6941e-04  alpha*lam_risk 0.0769

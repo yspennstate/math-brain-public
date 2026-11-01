@@ -1,0 +1,238 @@
+{
+  "alpha": [
+    "2/5",
+    "2/25",
+    "3/10",
+    "2/25"
+  ],
+  "A": "43/50",
+  "delta": "1/10",
+  "kappa": "51/50",
+  "three_terms": [
+    {
+      "n": 0,
+      "loop_probability": "1",
+      "signed_drift_term": "5/43",
+      "partial_sum": "5/43"
+    },
+    {
+      "n": 1,
+      "loop_probability": "300/1849",
+      "signed_drift_term": "-4500/57319",
+      "partial_sum": "2165/57319"
+    },
+    {
+      "n": 2,
+      "loop_probability": "455000/5330667",
+      "signed_drift_term": "-3325000/58637337",
+      "partial_sum": "-1110205/58637337"
+    }
+  ],
+  "negative_partial_sum": "-1110205/58637337",
+  "negative_partial_sum_float": -0.01893341438749171,
+  "proof": "All subsequent signed numerator terms are strictly negative; denominator is finite positive because kappa>1.",
+  "reversal_checks": [
+    {
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "likelihood_ratio": "4/3",
+      "formula_ratio": "4/3"
+    },
+    {
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "likelihood_ratio": "172/429",
+      "formula_ratio": "172/429"
+    },
+    {
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "likelihood_ratio": "14/13",
+      "formula_ratio": "14/13"
+    },
+    {
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "likelihood_ratio": "43/124",
+      "formula_ratio": "43/124"
+    }
+  ],
+  "compressed_pair": {
+    "alpha": [
+      "41/100",
+      "3/40",
+      "39/100",
+      "3/40"
+    ],
+    "A": "19/20",
+    "delta": "1/50",
+    "kappa": "11/10",
+    "B": "-13/25",
+    "terms": [
+      {
+        "n": 0,
+        "M_n": "1",
+        "origin_drift_term": "2/95",
+        "neighbor_drift_term": "78/9025",
+        "grouped_exit_term": "268/9025",
+        "origin_partial_sum": "2/95",
+        "exit_partial_sum": "268/9025"
+      },
+      {
+        "n": 1,
+        "M_n": "1599/9025",
+        "origin_drift_term": "-4018/45125",
+        "neighbor_drift_term": "193766/2933125",
+        "grouped_exit_term": "-67404/2933125",
+        "origin_partial_sum": "-3068/45125",
+        "exit_partial_sum": "19696/2933125"
+      },
+      {
+        "n": 2,
+        "M_n": "267853/2933125",
+        "origin_drift_term": "-53034894/865271875",
+        "neighbor_drift_term": "12931407134/255255203125",
+        "grouped_exit_term": "-2713886596/255255203125",
+        "origin_partial_sum": "-111863794/865271875",
+        "exit_partial_sum": "-999842196/255255203125"
+      }
+    ],
+    "origin_numerator_upper_bound": "-111863794/865271875",
+    "exit_displacement_upper_bound": "-999842196/255255203125",
+    "exit_displacement_upper_bound_float": -0.003917029638413958,
+    "all_later_grouped_terms_negative": "B<0 and delta*(A+q)+B<0 imply the numerator is negative for every integer n>=1."
+  },
+  "saturated_reversal_paths": [
+    {
+      "L": 1,
+      "loops_per_edge": 1,
+      "length": 3,
+      "ratio": "14/13",
+      "log_ratio_per_distance": 0.07410797215372183,
+      "log_path_probability": -2.1027220078348208
+    },
+    {
+      "L": 2,
+      "loops_per_edge": 2,
+      "length": 10,
+      "ratio": "576/529",
+      "log_ratio_per_distance": 0.04255961441879591,
+      "log_path_probability": -7.7345262605392175
+    },
+    {
+      "L": 4,
+      "loops_per_edge": 4,
+      "length": 36,
+      "ratio": "3748096/3418801",
+      "log_ratio_per_distance": 0.02298951822469872,
+      "log_path_probability": -28.146923967513672
+    },
+    {
+      "L": 8,
+      "loops_per_edge": 8,
+      "length": 136,
+      "ratio": "2478758911082496/2252292232139041",
+      "log_ratio_per_distance": 0.01197619104671568,
+      "log_path_probability": -103.93746123405899
+    }
+  ],
+  "stronger_example": {
+    "p": "49/100",
+    "q": "12/25",
+    "transverse_total": "3/50",
+    "transverse_each_direction_d2": "3/100",
+    "A": "103/100",
+    "delta": "1/100",
+    "kappa": "109/100",
+    "M_1": "2352/10609",
+    "B": "-53/100",
+    "C": "151/10000",
+    "origin_numerator_two_term_bound": "-30277/307661",
+    "exit_displacement_two_term_bound": "-120161/8922169",
+    "exit_displacement_two_term_bound_float": -0.013467689302903811
+  }
+}

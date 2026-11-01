@@ -1,0 +1,43 @@
+\title{Quadratic forms with five large singular values have bounded densities}
+\date{25 September 2026}
+
+\begin{document}
+
+\begin{abstract}
+Let $X_1,\dots,X_n$ be independent real random variables with densities bounded by $K$, and let $Q=X^{T}AX+b^{T}X+c$ with $A$ real symmetric. We prove that if the fifth singular value of $A$ is at least $s>0$, then $Q$ has a density bounded by $270\,K^2/s$, uniformly in $n$, $b$, $c$, the rest of the spectrum of $A$ and the laws of the $X_i$. The proof combines a decay estimate for the characteristic function of $Q$ in terms of the crossing volumes of an off-diagonal block of $A$, a random sign argument that turns $2m-1$ large eigenvalues into $m$ large singular values of such a block, and conditioning on one or two coordinates when $A$ has a large diagonal entry or a large principal $2\times2$ minor.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $X=(X_1,\dots,X_n)$ be a random vector with independent coordinates, where $X_i$ has a density $f_i$ with $f_i\le K$ almost everywhere. For a real symmetric matrix $A$, a vector $b\in\R^n$ and $c\in\R$ we consider
+\[
+Q=X^{T}AX+b^{T}X+c .
+\]
+For a real matrix $T$ we write $s_1(T)\ge s_2(T)\ge\cdots\ge0$ for its singular values, padded with zeros. For symmetric $A$ these are the moduli of the eigenvalues, so $s_5(A)\ge s$ says that $A$ has at least five eigenvalues $\lambda$, counted with multiplicity, with $\abs\lambda\ge s$.
+
+\begin{theorem}\label{thm:main}
+Let $X_1,\dots,X_n$ be independent real random variables with densities bounded by $K$. Let $A\in\R^{n\times n}$ be symmetric, $b\in\R^n$ and $c\in\R$. If $s_5(A)\ge s>0$, then $Q=X^TAX+b^TX+c$ has a density $p_Q$ with
+\[
+\norm{p_Q}_\infty\le \frac{270\,K^2}{s}.
+\]
+Equivalently, $\PP(Q\in J)\le 270\,K^2\abs J/s$ for every interval $J\subset\R$.
+\end{theorem}
+
+The bound does not depend on $n$, on the other eigenvalues or the signature of $A$, or on $b$ and $c$, and the laws of the $X_i$ need not be identical, smooth, compactly supported or have moments. The factor $K^2/s$ is forced by scaling. One or two large eigenvalues are not enough: for $X_1,X_2$ uniform on $[0,1]$, $X_1^2$ has density $(2\sqrt y)^{-1}$ on $(0,1)$ and $X_1^2-X_2^2=(X_1-X_2)(X_1+X_2)$ has a density with a logarithmic singularity at $0$, whatever constant multiplies $A$. Whether three eigenvalues of modulus at least $s$ always give a bound $CK^2/s$ with an absolute constant $C$ is open.
+
+\subsection*{Outline}
+After scaling, $K=s=1$. With $\eta=1/12$ and $\zeta=1/256$, a pivot of $A$ is a diagonal entry of modulus at least $\eta$ or a principal $2\times2$ minor of modulus at least $\zeta$. If $A$ has a pivot, we condition on the coordinates outside it. The remaining polynomial in one or two variables has a square-root or logarithmic singularity at a random point, which is a quadratic polynomial in the other coordinates whose matrix is the Schur complement of the pivot, with at least four eigenvalues of modulus at least one after a diagonal pivot and at least three after a pair. The singularity is then controlled by a negative half moment under three large eigenvalues (Proposition~\ref{prop:halfpotential}) and a logarithmic moment (Lemma~\ref{lem:concentration}).
+
+If $A$ has no pivot, all entries of $A$ are small. For a partition $[n]=I\sqcup J$ and $M=A_{I,J}$ let
+\[
+E_\ell(M)=\sum_{\substack{S\subset I,\ T\subset J\\ \abs S=\abs T=\ell}}\det(M_{S,T})^2=e_\ell(MM^T).
+\]
+Theorem~\ref{thm:decay} shows $\abs{\E e^{itQ}}^2\le(\sqrt2\,\pi e)^\ell(\ell^\ell/\ell!)^{1/2}E_\ell(M)^{-1/2}\abs t^{-\ell}$ for every $\ell\ge1$ with $E_\ell(M)>0$ and every $t\ne0$, uniformly in the rest of $A$, in $b$, $c$ and in the laws of the $X_i$; for $\ell=3$ Fourier inversion bounds the density. Proposition~\ref{prop:signs} supplies the crossing volume. For a diagonal matrix $D$ of random signs, $A-DAD$ is twice the off-diagonal block part of $A$ for the partition defined by the signs, and that part has the singular values of $A_{I,J}$, each twice. Compressed to $2m-1$ eigenvectors of $A$, the identity leaves the diagonal matrix of their eigenvalues, perturbed by an error whose mean square over the signs is small; so $2m-1$ eigenvalues give $m$ singular values of one block, and five give three.
+
+\subsection*{Related work}
+Banks, Garza Vargas, Kulkarni and Srivastava \cite[Theorem~2.1]{BGKS} bound densities of bilinear forms $\mathbf X^T Z\mathbf Y+\mathbf X^TU+V^T\mathbf Y+W$ in independent random matrices with bounded entry densities; for symmetric $A$ the blocks $A_{I,I}$ and $A_{J,J}$ add quadratic terms, which Section~\ref{sec:decay} tolerates. For linear forms, $a\cdot X$ with $\abs a=1$ has density at most $\sqrt2\,K$ by Rogozin's inequality \cite{Rogozin} and Ball's bound for cube sections \cite{Ball}; projections of higher rank are treated in \cite{RV,LPP}. The geometric Brascamp--Lieb inequality is due to Ball \cite{Ball} and Barthe \cite{Barthe}, and the heat-flow proof of Section~\ref{sec:proj} follows \cite{CLL,BCCT}. Small-ball bounds for polynomials go back to Carbery and Wright \cite{CW}, Costello, Tao and Vu \cite{CTV} treat quadratic forms in discrete variables, and the random sign step is the basic move of decoupling \cite{DG}.
+
+Section~\ref{sec:prelim} collects preliminaries, Section~\ref{sec:proj} proves the projection bounds, Section~\ref{sec:decay} proves Theorem~\ref{thm:decay}, Section~\ref{sec:pivots} treats one and two coordinates, Section~\ref{sec:signs} contains the random sign argument, and Section~\ref{sec:proof} proves Theorem~\ref{thm:main}.
+

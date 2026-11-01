@@ -1,0 +1,668 @@
+{
+  "schema_version": 1,
+  "problem_id": "T228",
+  "audit_id": "A18",
+  "audit_date": "2026-10-23",
+  "verdict": {
+    "code": "PASS_CONCRETE_EXAMPLE_AS_AUDITED",
+    "literal_concrete_example_obligations_closed": true,
+    "rationale": "The operative existential request and its own explicit bounded-perturbation route are satisfied, including actual average contraction and positive exact power tails.",
+    "mandatory_globally_bounded_activation_interpretation_closed": false,
+    "general_neural_network_problem_closed": false,
+    "mathematical_repair_required_for_reviewed_scalar_theorems": false,
+    "provenance_qualifications_required": true
+  },
+  "registry_title": "Heavy-tailed stationary behaviour of SGD on neural-network losses",
+  "registry_statement": "Simsekli et al. observed that SGD gradient noise in deep networks is heavy-tailed, and Gurbuzbalaban, Simsekli and Zhu proved for linear regression that the SGD iterates converge to a stationary law with power-law tails whose index alpha decreases as eta/b (step over batch) grows. The same paper states a criterion for nonlinear recursions (its Theorem 1, Mirek-type asymptotically linear random maps). Verify it for a concrete nonlinear model: e.g. constant-step SGD with batch b on a generalized linear model or a two-layer network with a smooth bounded activation, Gaussian inputs and persistent label noise. Prove that the iterates have a stationary law, that the recursion contracts on average and is asymptotically linear with a non-arithmetic multiplier and a nonzero tail constant, so that the stationary tail is a power law with index given by the Lyapunov equation, with alpha < 2 in a nonempty range of (eta, b).",
+  "registry_audit_route": "DAYS: a scalar smooth bounded perturbation of linear regression may satisfy the already-stated Mirek criterion; verify all recurrence and tail-nondegeneracy hypotheses explicitly.",
+  "registry_audit_replacement": "Choose a concrete nonlinear regression law and prove average contraction, asymptotic linearity, a nonarithmetic multiplier and a nondegenerate tail constant before asking for the tail index.",
+  "model": {
+    "architecture": "scalar smooth nonlinear single neuron",
+    "activation": "sigma(z)=z+(1/1000)tanh(z)",
+    "activation_bounded": false,
+    "identity_perturbation_bounded": true,
+    "sample_law": "A,E independent N(0,1); iid fresh pairs across steps",
+    "label": "Y=sigma(A theta)+E",
+    "conditional_label_noise_variance": 1,
+    "loss": "(sigma(Ax)-Y)^2/2",
+    "algorithm": "ordinary unclipped constant-step SGD",
+    "batch_size": 1,
+    "eta_interval": [
+      0.99,
+      1.01
+    ],
+    "theta_interval": [
+      -1,
+      1
+    ],
+    "explicit_nonzero_teacher": 1,
+    "multiplier": "M=1-eta A^2",
+    "tail_equation": "E|1-eta A^2|^alpha=1",
+    "tail_index_interval": "1<alpha<2",
+    "tail_limit": "lim t^alpha P_pi(|X|>t)=C in (0,infinity)",
+    "estimation_error_tail_limit_same": true
+  },
+  "obligations": [
+    {
+      "id": "concrete_nonlinear_model",
+      "registry_requirement": "Verify it for a concrete nonlinear model",
+      "status": "PASS",
+      "assessment": "The explicit smooth scalar single-neuron regression and squared loss are specified. The sample update is nonaffine almost surely.",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+          "section": "Model and theorem; Section 1",
+          "result": "sigma(z)=z+0.001 tanh(z), f(x;A,E)=(sigma(Ax)-E)^2/2"
+        },
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Sections 1-2",
+          "result": "Psi derivative at zero is 1-eta A^2(1+delta)^2, while its limit at infinity is 1-eta A^2; they differ almost surely."
+        }
+      ],
+      "scope_note": "The activation itself is unbounded. Boundedness applies only to its nonlinear perturbation. The row audit explicitly proposes this route."
+    },
+    {
+      "id": "ordinary_constant_step_batch",
+      "registry_requirement": "constant-step SGD with batch b",
+      "status": "PASS",
+      "assessment": "The displayed update is the exact gradient step for the stated sample loss. Batch one is a legitimate positive integer batch size.",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+          "section": "Model and theorem",
+          "result": "b=1 and fixed eta in [99/100,101/100]"
+        },
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Section 1",
+          "result": "Psi_theta(x)=x-eta A sigma_prime(Ax)(sigma(Ax)-Y)"
+        }
+      ],
+      "scope_note": "Fresh iid online samples are used. There is no theorem here for data reuse from a fixed finite empirical dataset."
+    },
+    {
+      "id": "gaussian_input_and_persistent_noise",
+      "registry_requirement": "Gaussian inputs and persistent label noise",
+      "status": "PASS",
+      "assessment": "A and E are fresh independent N(0,1) variables; Y=sigma(A theta)+E has conditional noise variance one at every step.",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+          "section": "Model and theorem",
+          "result": "theta=0 gives Y=E"
+        },
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Sections 1 and 5, equation (6)",
+          "result": "Conditional update noise is eta a sigma_prime(ax) E, with positive variance for a not equal to zero."
+        }
+      ],
+      "scope_note": "For nonzero theta, Y is input-dependent and its marginal distribution is not asserted to be Gaussian. The independent additive label noise is Gaussian."
+    },
+    {
+      "id": "stationary_law_and_convergence",
+      "registry_requirement": "the iterates have a stationary law",
+      "status": "PASS",
+      "assessment": "Wasserstein-one contraction supplies a stationary law and geometric convergence; synchronous coupling identifies every invariant law without imposing an initial moment assumption.",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+          "section": "Section 3",
+          "result": "Unique invariant probability; W1 convergence from every deterministic point"
+        },
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Section 4",
+          "result": "W1 contraction at rate q and uniqueness among all invariant probability laws"
+        }
+      ]
+    },
+    {
+      "id": "actual_average_contraction",
+      "registry_requirement": "the recursion contracts on average",
+      "status": "PASS",
+      "assessment": "The expected global Lipschitz constant of the actual nonlinear map is strictly less than one; this implies negative expected log Lipschitz coefficient.",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+          "section": "Sections 1-2",
+          "result": "E Lip(Psi) < 98606303/100000000"
+        },
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Sections 2-3, equations (2)-(5)",
+          "result": "E Lip(Psi_theta) < 99010707/100000000 uniformly for |theta|<=1"
+        }
+      ],
+      "scope_note": "This is stronger than recurrence or negative mean log of the asymptotic multiplier. Existing T1 explicitly disclaims this global contraction property."
+    },
+    {
+      "id": "uniform_asymptotic_linearity",
+      "registry_requirement": "is asymptotically linear",
+      "status": "PASS",
+      "assessment": "The same random remainder bound holds for all real states.",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+          "section": "Section 1",
+          "result": "Psi(x)=Mx+R(x), M=1-eta A^2, sup_x |R(x)|<=B"
+        },
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Section 2, equation (4)",
+          "result": "B_theta=eta|A|[delta+(1+delta)(delta+|Y|)] has all positive moments"
+        }
+      ],
+      "scope_note": "Dependence of B_theta and M within one step is allowed and retained."
+    },
+    {
+      "id": "nonarithmetic_multiplier",
+      "registry_requirement": "with a non-arithmetic multiplier",
+      "status": "PASS",
+      "assessment": "log|1-eta A^2| is absolutely continuous and hence nonarithmetic; the zero multiplier has probability zero.",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+          "section": "Section 2",
+          "result": "Local logarithmic integrability near A=+/-eta^(-1/2), Gaussian control at infinity"
+        },
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Section 3",
+          "result": "E|log xi| and E[xi^p|log xi|] are finite for p>0"
+        }
+      ]
+    },
+    {
+      "id": "lyapunov_equation",
+      "registry_requirement": "index given by the Lyapunov equation",
+      "status": "PASS",
+      "assessment": "The unique positive exponent solves h_eta(alpha)=E|1-eta A^2|^alpha=1. For iid scalar multipliers the generalized moment Lyapunov exponent is log h_eta(p).",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+          "section": "Section 2",
+          "result": "Strict log convexity, h(1)<1, unbounded multiplier support, m_alpha>0"
+        },
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Section 3",
+          "result": "The exponent is independent of theta; 0<m_alpha=E[xi^alpha log xi]<infinity"
+        }
+      ]
+    },
+    {
+      "id": "alpha_below_two_nonempty_domain",
+      "registry_requirement": "with alpha < 2 in a nonempty range of (eta, b)",
+      "status": "PASS",
+      "assessment": "For every eta in [0.99,1.01] at b=1, h_eta(1)<0.98 and h_eta(2)>=1.9603, hence 1<alpha<2.",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+          "section": "Section 2",
+          "result": "h_eta(2)=1-2eta+3eta^2"
+        },
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Section 3",
+          "result": "The same h_eta applies uniformly for theta in [-1,1]"
+        }
+      ],
+      "scope_note": "The nonempty parameter set is [0.99,1.01] x {1}; no universal-batch requirement appears in the row."
+    },
+    {
+      "id": "exact_power_tail_limit",
+      "registry_requirement": "the stationary tail is a power law",
+      "status": "PASS",
+      "assessment": "The weighted tail discrepancy is integrable, so Jelenkovic-Olvera-Cravioto Theorem 3.1 gives a finite nonnegative absolute-tail limit.",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+          "section": "Section 4",
+          "result": "N=1 implicit renewal theorem for R=|X| independent of xi"
+        },
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Section 6, equation (8)",
+          "result": "The coupled alpha-power difference is absolutely integrable using the moment of order alpha-1"
+        }
+      ],
+      "scope_note": "The theorem is a discrepancy theorem, not limited to affine fixed-point equations; positivity is separately verified."
+    },
+    {
+      "id": "positive_tail_constant",
+      "registry_requirement": "and a nonzero tail constant",
+      "status": "PASS",
+      "assessment": "The complete-step tilt and excursion argument give a strictly positive t^(-alpha) lower bound, which makes the existing exact limit strictly positive.",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+          "section": "Section 5",
+          "result": "Forward radial bound, tight overshoots, finite discounted remainder, compact minorization, and stationary last-exit transfer"
+        },
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Section 7, equations (9)-(16)",
+          "result": "The changed teacher-dependent joint coefficient law is used throughout"
+        }
+      ],
+      "scope_note": "Full support or a moment root alone is not used as a substitute for this positivity proof."
+    },
+    {
+      "id": "tail_observable",
+      "registry_requirement": "stationary tail; audit requests a specified tail observable",
+      "status": "PASS",
+      "assessment": "The tail observable is |X|; the nonzero-teacher theorem also proves the same limit for |X-theta|.",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+          "section": "Model and theorem; Sections 4 and 6",
+          "result": "Positive exact absolute tail; equal one-sided tails follow from symmetry only at theta=0"
+        },
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Sections 1, 8-9",
+          "result": "Positive absolute-error tail, exact moment cutoff, and no fixed-nonzero-teacher symmetry claim"
+        }
+      ]
+    },
+    {
+      "id": "nonzero_signal_noise_check",
+      "registry_requirement": "persistent label noise; additional nonzero-teacher robustness check",
+      "status": "PASS",
+      "assessment": "The explicit theta=1 example has input-dependent signal, independent unit Gaussian additive noise, and population risk uniquely minimized at theta.",
+      "proofs": [
+        {
+          "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+          "section": "Section 8",
+          "result": "E[AY]=1+delta E[A tanh(A)]>1; F_theta(x)>=1/2+(x-theta)^2/2"
+        }
+      ],
+      "scope_note": "A nonzero teacher is stronger than the row requires. Earlier T1/T3 already allow nonzero teachers; the session addition is the uniform actual-contraction certificate."
+    }
+  ],
+  "scope_limits": [
+    {
+      "item": "globally_bounded_activation",
+      "status": "NOT_PROVED",
+      "reason": "sigma(z)=z+0.001 tanh(z) is unbounded. A stronger mandatory bounded-activation reading would remain unclosed by these proofs."
+    },
+    {
+      "item": "arbitrary_network_architectures",
+      "status": "NOT_CLAIMED",
+      "reason": "The theorem is for one scalar neuron; the broad row title does not universally quantify over networks."
+    },
+    {
+      "item": "all_step_sizes_or_all_batches",
+      "status": "NOT_CLAIMED",
+      "reason": "The explicit certificate fixes b=1 and restricts eta; the literal row asks only for a nonempty regime."
+    },
+    {
+      "item": "global_monotonicity_in_eta_over_b",
+      "status": "BACKGROUND_NOT_REQUIRED",
+      "reason": "The opening linear-regression statement is contextual. Any nonlinear monotonicity extension must be proved separately."
+    },
+    {
+      "item": "all_original_Mirek_hypotheses",
+      "status": "NOT_CERTIFIED",
+      "reason": "Displayed GSZ inputs and the desired conclusion are checked using precise JOC renewal plus a separate positivity proof, rather than claiming full original-Mirek applicability."
+    },
+    {
+      "item": "nonzero_teacher_one_sided_constants",
+      "status": "NOT_ASSERTED_BY_THE_REVIEWED_EXTENSION",
+      "reason": "The nonzero-teacher proof establishes absolute tails and explicitly avoids inferring symmetry or equal one-sided constants."
+    },
+    {
+      "item": "external_peer_review",
+      "status": "NOT_CLAIMED",
+      "reason": "This is an internal independent audit."
+    },
+    {
+      "item": "literature_priority",
+      "status": "NOT_CLAIMED",
+      "reason": "No novelty search can certify priority, and prior Math Brain contributions are retained."
+    }
+  ],
+  "theorem_route": {
+    "precise_renewal_source": "Jelenkovic-Olvera-Cravioto, Implicit Renewal Theory and Power Tails on Trees, arXiv:1006.3295v5",
+    "pdf_locator": "Theorem 3.1, printed page 5",
+    "html_locator": "Theorem 2, Section 3",
+    "pdf_url": "https://arxiv.org/pdf/1006.3295v5",
+    "html_url": "https://arxiv.org/html/1006.3295v5",
+    "primary_statement_independently_checked": true,
+    "pdf_page_visually_checked": true,
+    "specialization": "N=1, R=|X|, C_1=|1-eta A^2|",
+    "affine_fixed_point_identity_required": false,
+    "renewal_theorem_alone_proves_positive_constant": false,
+    "positive_constant_source": {
+      "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+      "section": "Section 7",
+      "result": "Complete-step tilt and stationary last-exit argument, credited to preexisting T3_STEP3."
+    },
+    "gsz_source_checked": "https://arxiv.org/html/2006.04740v5",
+    "gsz_locator": "Section 3, global Lipschitz mean contraction and displayed Theorem 1"
+  },
+  "preexisting_mathbrain_work": [
+    {
+      "id": "T1",
+      "authors": [
+        "codex-w688"
+      ],
+      "proof": "a01/w688_target1/proofs/T228_A_v1.md",
+      "contribution": "Scalar class-A exact stationary tails for arbitrary fixed teacher and positive Gaussian noise under negative mean-log multiplier; alpha<2 interval for every batch.",
+      "receipt": "a01/w688_target1/AUDITS_FROM_REVIEWER.tsv",
+      "receipt_recovered": true,
+      "scope": "Does not claim global Lipschitz contraction."
+    },
+    {
+      "id": "T2",
+      "authors": [
+        "claude-4af6ff1a"
+      ],
+      "proof": "a01/claude_4af6ff1a/T228_B_v2.md",
+      "contribution": "Scalar leaky-ReLU tail theorem with stated stability and derivative-at-zero exceptions.",
+      "receipt": "a01/claude_4af6ff1a/REVIEW.tsv",
+      "receipt_recovered": true,
+      "scope": "Not needed for the smooth scalar closure; this audit does not newly certify the measurable ABB extension."
+    },
+    {
+      "id": "T3",
+      "authors": [
+        "claude-b1e26540"
+      ],
+      "proof": "a01/claude_b1e26540/T3_CLAIM.md",
+      "contribution": "Multidimensional radial renewal reduction and forward tilted-walk/last-exit positivity proof.",
+      "positivity_source": "a01/claude_b1e26540/T3_STEP3.md",
+      "first_receipt": "a01/claude_b1e26540/REVIEW.tsv",
+      "first_receipt_recovered": true,
+      "reported_second_reviewer": "claude-fc67971c",
+      "reported_second_commit": "06966f6ae36",
+      "second_receipt_recovered": false,
+      "second_historical_review_independently_verified": false,
+      "second_review_status": "SOURCE_REPORTED_ONLY"
+    }
+  ],
+  "session_additions": [
+    {
+      "proof": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+      "addition": "Explicit actual global average-contraction regime for a small smooth nonlinear perturbation, with consolidated renewal and positivity verification."
+    },
+    {
+      "proof": "campaign/proofs/T228_NONZERO_TEACHER.md",
+      "addition": "Uniform actual-contraction certificate for |theta|<=1, correct input-label mixed moments and conditional mean, and explicit theta=1 signal example.",
+      "not_a_first_nonzero_teacher_stationary_tail_result": true
+    }
+  ],
+  "provenance": {
+    "manifest_path": "a01/SOURCE_MANIFEST.json",
+    "source_file_count": 19,
+    "git_blob_matches": 19,
+    "all_a01_manifest_pins_match": true,
+    "git_blob_method": "SHA1(b\"blob \"+ASCII(byte_count)+b\"\\0\"+exact_file_bytes)",
+    "source_pins": [
+      {
+        "path": "a01/DOSSIER.md",
+        "byte_count": 13755,
+        "sha256": "8b9e0d922aa09f71ff7f722748af91d4d8967aea344721080285d97737e3912c",
+        "git_blob_sha1": "5d95a5f8a9d830ca673e75321d66f66d9dccad45",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/DOSSIER.md",
+        "expected_git_blob_sha1": "5d95a5f8a9d830ca673e75321d66f66d9dccad45",
+        "match": true
+      },
+      {
+        "path": "a01/moves.jsonl",
+        "byte_count": 1206,
+        "sha256": "bf2e8baa632014eabb5b3e5c7b7945cd6283762aa22e57fc94ae7159249b29ca",
+        "git_blob_sha1": "005367810642d99b9cde2e327a8e8ded7c60bf38",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/moves.jsonl",
+        "expected_git_blob_sha1": "005367810642d99b9cde2e327a8e8ded7c60bf38",
+        "match": true
+      },
+      {
+        "path": "a01/lit.json",
+        "byte_count": 2558,
+        "sha256": "9b6efeed890c41ebfdedf13e99451dcb477bc665c22f3f4dfd3cbdef85f75a78",
+        "git_blob_sha1": "15104bf3c1e4c346599335ee1caa83731b1dadcb",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/lit.json",
+        "expected_git_blob_sha1": "15104bf3c1e4c346599335ee1caa83731b1dadcb",
+        "match": true
+      },
+      {
+        "path": "a01/WORKER_RULES.md",
+        "byte_count": 2413,
+        "sha256": "68c23f109501b78d94e5f29c61b7bcde979320431a49a8a24ce6496a2c4cc2b9",
+        "git_blob_sha1": "f43b62c49305c89054f15a959b212a86e6115ad4",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/WORKER_RULES.md",
+        "expected_git_blob_sha1": "f43b62c49305c89054f15a959b212a86e6115ad4",
+        "match": true
+      },
+      {
+        "path": "a01/claude_4af6ff1a/T228_B_v2.md",
+        "byte_count": 10942,
+        "sha256": "ad1eba565e053137543476431bf1a5c76302fab385e0bc2ef67c1ef6646a2205",
+        "git_blob_sha1": "b7b358985ff34a9ea3fa7b35339047f0fe793822",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/claude_4af6ff1a/T228_B_v2.md",
+        "expected_git_blob_sha1": "b7b358985ff34a9ea3fa7b35339047f0fe793822",
+        "match": true
+      },
+      {
+        "path": "a01/claude_4af6ff1a/REVIEW_POINT1_CHECK.md",
+        "byte_count": 1401,
+        "sha256": "8319b43ad82756ef6a3575d163483c01f2560241c193b801ca979149c3fc92aa",
+        "git_blob_sha1": "2a3abd7151775dfeeb73eb721191d2b2d329dc92",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/claude_4af6ff1a/REVIEW_POINT1_CHECK.md",
+        "expected_git_blob_sha1": "2a3abd7151775dfeeb73eb721191d2b2d329dc92",
+        "match": true
+      },
+      {
+        "path": "a01/claude_4af6ff1a/REVIEW.tsv",
+        "byte_count": 1520,
+        "sha256": "80e9000aabcc3a934c432c636f99335260672d22c760538115296e68882fc797",
+        "git_blob_sha1": "644b741f22ebdaabbc7cd89db470c8ad55efbc4c",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/claude_4af6ff1a/REVIEW.tsv",
+        "expected_git_blob_sha1": "644b741f22ebdaabbc7cd89db470c8ad55efbc4c",
+        "match": true
+      },
+      {
+        "path": "a01/claude_b1e26540/T3_CLAIM.md",
+        "byte_count": 4984,
+        "sha256": "27e378909732f5fdc7b451e850c04a2f997ad038ffb18bdb62fa6227e8b85fe6",
+        "git_blob_sha1": "b665c36d72d2f087c0ee11cb65628aa376dc3387",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/claude_b1e26540/T3_CLAIM.md",
+        "expected_git_blob_sha1": "b665c36d72d2f087c0ee11cb65628aa376dc3387",
+        "match": true
+      },
+      {
+        "path": "a01/claude_b1e26540/T3_STEP3.md",
+        "byte_count": 7231,
+        "sha256": "9f33285b4d31c4c776158f18ec650dfdcd2aba8a42a064216c175c1a564dab90",
+        "git_blob_sha1": "a3adfc7537b6a8f51b796539c5063b07a23fca39",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/claude_b1e26540/T3_STEP3.md",
+        "expected_git_blob_sha1": "a3adfc7537b6a8f51b796539c5063b07a23fca39",
+        "match": true
+      },
+      {
+        "path": "a01/claude_b1e26540/REVIEW.tsv",
+        "byte_count": 4656,
+        "sha256": "63074ec5dd715b268dc9448c449e98bb5430c03d9b21c514b5b364c30a412ec8",
+        "git_blob_sha1": "0e580d2fa5b5cdfb9533d10fc42ccbc9db802782",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/claude_b1e26540/REVIEW.tsv",
+        "expected_git_blob_sha1": "0e580d2fa5b5cdfb9533d10fc42ccbc9db802782",
+        "match": true
+      },
+      {
+        "path": "a01/claude_b1e26540/T3_SETUP.md",
+        "byte_count": 4820,
+        "sha256": "c2f455ae36180961543d35d54309f9d1a0baa188efcc8c50ae3111ba69d4e996",
+        "git_blob_sha1": "de30be030e66bf30700ba818a5155c9d6c4e3562",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/claude_b1e26540/T3_SETUP.md",
+        "expected_git_blob_sha1": "de30be030e66bf30700ba818a5155c9d6c4e3562",
+        "match": true
+      },
+      {
+        "path": "a01/claude_b1e26540/T3_STEP1.md",
+        "byte_count": 7371,
+        "sha256": "422e99e73410d839411e483a15c690ec53a14d1a60e9087eefdd3d14d30e2255",
+        "git_blob_sha1": "c169b975cd3a5d8ed1f554214d010da1c587e96d",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/claude_b1e26540/T3_STEP1.md",
+        "expected_git_blob_sha1": "c169b975cd3a5d8ed1f554214d010da1c587e96d",
+        "match": true
+      },
+      {
+        "path": "a01/claude_b1e26540/T3_STEP2.md",
+        "byte_count": 5095,
+        "sha256": "d001130ea2111d78d46adf15d9c2c54ecf84be5aea6817f5e9fdb6bf2dec379e",
+        "git_blob_sha1": "04d08036877af25a6d083247fdbfbf834ae0206e",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/claude_b1e26540/T3_STEP2.md",
+        "expected_git_blob_sha1": "04d08036877af25a6d083247fdbfbf834ae0206e",
+        "match": true
+      },
+      {
+        "path": "a01/w688_target1/proofs/T228_A_v1.md",
+        "byte_count": 9986,
+        "sha256": "e2a75786a298beac72d216c20dd8c7d63b5b1de335756b1bb8ce0d5c43c4a07a",
+        "git_blob_sha1": "6056b253ff1d4b9eb2411d6dec7d25c5ce8d7523",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/w688_target1/proofs/T228_A_v1.md",
+        "expected_git_blob_sha1": "6056b253ff1d4b9eb2411d6dec7d25c5ce8d7523",
+        "match": true
+      },
+      {
+        "path": "a01/w688_target1/proofs/SELF_AUDIT_v1.md",
+        "byte_count": 1382,
+        "sha256": "983f441ac3d2417ddb00d1879d4ba7a7cc8661ff6b33bb4b1a9c2ac8a8dff6d8",
+        "git_blob_sha1": "2c5dc1cda3926955468fb001ca16630695e2b9a4",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/w688_target1/proofs/SELF_AUDIT_v1.md",
+        "expected_git_blob_sha1": "2c5dc1cda3926955468fb001ca16630695e2b9a4",
+        "match": true
+      },
+      {
+        "path": "a01/w688_target1/README.md",
+        "byte_count": 665,
+        "sha256": "1991c34f953d96a45934672a981b77da00908856daef1c1b88da64592b31f001",
+        "git_blob_sha1": "1fb809c14128c5a9030793040b19615a453bb992",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/w688_target1/README.md",
+        "expected_git_blob_sha1": "1fb809c14128c5a9030793040b19615a453bb992",
+        "match": true
+      },
+      {
+        "path": "a01/w688_target1/STATUS.md",
+        "byte_count": 908,
+        "sha256": "cd6acc5f474a947f94dbbfeb383d93a330377cec7c001f1aee4a3cd374009476",
+        "git_blob_sha1": "a4645652db6bf5b3d0f01bf46a4b7027cbd174b7",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/w688_target1/STATUS.md",
+        "expected_git_blob_sha1": "a4645652db6bf5b3d0f01bf46a4b7027cbd174b7",
+        "match": true
+      },
+      {
+        "path": "a01/w688_target1/CLAIMS.jsonl",
+        "byte_count": 1891,
+        "sha256": "f85ab7f9e8c1cb88a1a6030984583fb1491dbc213c9bc1d32eb024897e546154",
+        "git_blob_sha1": "f0d934f8c5b4accdf05fee0bb02db50ce332074a",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/w688_target1/CLAIMS.jsonl",
+        "expected_git_blob_sha1": "f0d934f8c5b4accdf05fee0bb02db50ce332074a",
+        "match": true
+      },
+      {
+        "path": "a01/w688_target1/AUDITS_FROM_REVIEWER.tsv",
+        "byte_count": 1560,
+        "sha256": "2ae0e7922d8dd599e117961470939e046ea0453c12b88febf9ea6e45a36d3296",
+        "git_blob_sha1": "0e98941b66685633143b2dd20f33f60e0ca70608",
+        "repository": "<private-repo>",
+        "repository_path": "06_math_research/frontier/rows/T228/w688_target1/AUDITS_FROM_REVIEWER.tsv",
+        "expected_git_blob_sha1": "0e98941b66685633143b2dd20f33f60e0ca70608",
+        "match": true
+      }
+    ],
+    "registry": {
+      "path": "campaign/sources/T228_REGISTRY.json",
+      "byte_count": 3528,
+      "sha256": "23d28d28be3efdb748ca5e9b6fdccfec5f0677d3ff871516ef97c587e3186d6e",
+      "git_blob_sha1": "e7a2fb286d56ea815523709e9f0fcbb97352c071",
+      "matches_unique_t228_object_in_local_registry": true,
+      "source_registry_path": "a03/registry422.jsonl",
+      "source_registry_sha256": "c1a7636d5ef95888a26e92b36a017e2a2aae72d7140de9f6d39c695c67d2d3b0",
+      "source_registry_sha256_matches_manifest": true,
+      "source_registry_raw_git_blob_sha1": "71c0b85da9d60ecf52b33d6aeb29897048ff0f6e",
+      "recorded_remote_git_blob_sha1": "b8d4607e60eafcce5b3e8286cf882e8931737bd6",
+      "raw_local_bytes_match_recorded_git_blob": false,
+      "normalization_to_match": "Remove exactly one terminal LF byte; no other transformation.",
+      "normalized_git_blob_sha1": "b8d4607e60eafcce5b3e8286cf882e8931737bd6",
+      "normalized_git_blob_matches_recorded": true,
+      "source_bytes_modified": false,
+      "remote_branch_or_commit_history_independently_checked": false
+    },
+    "reviewed_proofs": [
+      {
+        "path": "campaign/proofs/T228_EXPLICIT_CLOSURE.md",
+        "byte_count": 12922,
+        "sha256": "a1dbdbb1e99a85749143f44dd8b7d7e264fb550d285c5667f69f1a35ff87c38f",
+        "git_blob_sha1": "9f12cee9b5b8abc471c70e330ec8704c199b8e6e"
+      },
+      {
+        "path": "campaign/proofs/T228_NONZERO_TEACHER.md",
+        "byte_count": 22375,
+        "sha256": "f95fa6fade82ba0dca4dab8e311fc61bb57b3267f3953b465c94228cb1315933",
+        "git_blob_sha1": "ad4b4a86284f2568afe71ab31fc08c7994ca51a5"
+      }
+    ],
+    "a01_report": {
+      "path": "a01/A01_REPORT.md",
+      "byte_count": 18404,
+      "sha256": "9bdee0aaa04ac56e17f67e1a101009aad28a5e44f99def19aa4519d796742871",
+      "git_blob_sha1": "8cc6b8cf5f41abd06d1a54a9858353c246a952d1"
+    },
+    "missing_second_t3_receipt": "Source-reported in dossier and claim header; exact historical receipt and script not recovered in supplied source set.",
+    "current_commit_history_claims": "A01 reports current dossier commit metadata; this audit checks local blob identity, not remote reachability or freshness.",
+    "nonzero_teacher_parent_version": "N cites E Version 1; A18 independently reviewed current E Version 2 and self-contained N Version 1.",
+    "remote_writes_performed": false
+  },
+  "exact_arithmetic_checks": {
+    "zero_teacher_q": {
+      "rational": "98606303/100000000",
+      "decimal": 0.98606303
+    },
+    "nonzero_teacher_q": {
+      "rational": "99010707/100000000",
+      "decimal": 0.99010707
+    },
+    "minimum_h2": {
+      "rational": "19603/10000",
+      "decimal": 1.9603
+    },
+    "normal_bound_squared_margin": {
+      "rational": "7532467/125000000",
+      "decimal": 0.060259736
+    }
+  },
+  "recommended_status": "T228 concrete-model request: completed and internally audited; general neural-network question remains outside scope.",
+  "recommended_final_wording": "T228's audited concrete-model request is complete. For the scalar nonlinear neuron sigma(z)=z+0.001 tanh(z), fresh Gaussian inputs and independent unit-variance Gaussian label noise, batch-one constant-step SGD is contractive on average for eta in [0.99,1.01], including the nonzero teacher theta=1. Its unique stationary law has an exact positive power tail with 1<alpha<2 determined by E|1-eta A^2|^alpha=1. The certificate builds on existing Math Brain T228 proofs and supplies an explicit contraction regime. The activation is unbounded with a bounded nonlinear perturbation; this is not a general neural-network or bounded-activation theorem.",
+  "forbidden_overclaims": [
+    "General neural-network losses solved",
+    "Globally bounded activation case proved",
+    "Every step and batch size covered",
+    "All historical T3 review receipts recovered and verified",
+    "Externally peer reviewed",
+    "First-in-literature priority established",
+    "Nonzero-teacher stationary symmetry proved"
+  ],
+  "review_report": "campaign/reviews/A18.md"
+}

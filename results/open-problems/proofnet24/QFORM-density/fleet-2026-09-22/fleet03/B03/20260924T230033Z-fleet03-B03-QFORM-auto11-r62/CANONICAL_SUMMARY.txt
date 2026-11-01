@@ -1,0 +1,27 @@
+r62 canonical summary
+
+Corrected five-eigenvalue source 5ba2a4d6b689721601cce7ec7e22ffea9fa98f90, blob bbebd6f6c5a27e9f639186a305008ab43a481e70: B03 audit PASS.
+
+No-pivot s3:
+gamma2=(44-15 sqrt(2))/96.
+a_star=2^(3/4) pi e/gamma2=60.50688695779367.
+|phi(t)| <= min(1,a_star/|t|).
+For -1<sigma<1:
+int |t|^sigma |phi(t)|^2 dt <= 4 a_star^(1+sigma)/(1-sigma^2).
+At sigma=-1/2 the bound is 41.48595888463038.
+
+Every finite p>=2:
+||p_Q||_p <= (19.25994030087079 p)^(1-1/p).
+
+Full target endpoint:
+for independent densities <=K, symmetric A with s3(A)>=s>0, arbitrary affine terms, the law is absolutely continuous and for every interval J, delta=K^2 |J|/s,
+
+P(Q in J) <= min(1, 269 delta (1+log_+(1/delta))).
+
+This is full-quantifier progress but NOT the L-infinity theorem. One logarithm remains.
+
+Partner fleet04/B03 commit da1d4e5510082c67ee7b34bbe70fde2060451518:
+its k=2 positive-half resource combined with the no-pivot negative-half resource gives an independent-sum density bound
+||p_(Q+P)||_infinity <= 3.95018530081809 alpha^(1/4).
+
+See DERIVATION_TIME_LP.md, DERIVATION_FULL3.md, PARTNER.md and CHECKS.md for the proofs and computations.

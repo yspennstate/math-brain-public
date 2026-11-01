@@ -1,0 +1,223 @@
+[
+ {
+  "claim_id": "B05-ODDFACE-ISO-PAYMENT",
+  "version": 1,
+  "exact_statement": "For every Boolean f and coordinate i: B_i(f) <= h2(d) <= (1/2) I(g h) + log2(e) d, and d log2(1/d) <= (1/2) I(g h) <= (1/2)(I(g)+I(h)).",
+  "hypotheses": [
+   "f:{0,1}^n->{-1,1}, n>=1",
+   "entropies in bits, Fourier weights p_S = hat f(S)^2",
+   "g=f|x_i=0, h=f|x_i=1, d=Inf_i(f)=Pr[g!=h]",
+   "B_i(f)=sum_T q_T h2(e_T/q_T), q_T=(a_T^2+b_T^2)/2, e_T=(a_T-b_T)^2/4, a=hat g, b=hat h"
+  ],
+  "statement_sha256": "65bf506e60d8c40132c7a8aea47a3bd0c1a99a9cebc238af549da463f1188311",
+  "contributors": [
+   "claude-B05-lead"
+  ],
+  "proof_source": "REPORT.md section 2 Lemma 1; exhaustive n<=4 check out/iso_check.log Part A",
+  "proof_dependencies": [
+   "concavity of h2 (Jensen with weights q_T)",
+   "cube edge-isoperimetric inequality e(S) <= (|S|/2) log2 |S| (Harper 1964, Bernstein 1967, Hart 1976)"
+  ],
+  "review_records": [],
+  "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "B19",
+   "A087",
+   "A094",
+   "A023",
+   "A025"
+  ]
+ },
+ {
+  "claim_id": "B05-ODDFACE-TELESCOPE",
+  "version": 1,
+  "exact_statement": "Let N_odd(f) be the number of 2-faces of {0,1}^n on which f has corner product -1 and Q(f)=2^(1-n) N_odd(f). For every i, Q(f) = (1/2) I(g h) + (Q(g)+Q(h))/2; hence in every restriction tree sum_v w_v (1/2) I(g_v h_v) = Q(f) - sum_leaves w Q(leaf) <= Q(f), each odd face charged at exactly one node; and Q(f) = (1/4) sum_i I(f|x_i=0 f|x_i=1).",
+  "hypotheses": [
+   "f:{0,1}^n->{-1,1}, n>=1",
+   "entropies in bits, Fourier weights p_S = hat f(S)^2",
+   "g=f|x_i=0, h=f|x_i=1, d=Inf_i(f)=Pr[g!=h]",
+   "B_i(f)=sum_T q_T h2(e_T/q_T), q_T=(a_T^2+b_T^2)/2, e_T=(a_T-b_T)^2/4, a=hat g, b=hat h"
+  ],
+  "statement_sha256": "46aa321a6de1924630b86427b76b91a485929598ea9f99de141d837ce8a63484",
+  "contributors": [
+   "claude-B05-lead"
+  ],
+  "proof_source": "REPORT.md section 2 Lemma 2; telescope checks out/iso_check.log Parts A and C",
+  "proof_dependencies": [],
+  "review_records": [],
+  "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "B19",
+   "A087",
+   "A094",
+   "A023",
+   "A025"
+  ]
+ },
+ {
+  "claim_id": "B05-ODDFACE-UNCONDITIONAL",
+  "version": 1,
+  "exact_statement": "For every Boolean f, H(f) <= (log2 e + c_JS) I(f) + Q(f), with c_JS = 2/ln 2 under C005 and c_JS = 4 unconditionally (Topsoe).",
+  "hypotheses": [
+   "f:{0,1}^n->{-1,1}, n>=1",
+   "entropies in bits, Fourier weights p_S = hat f(S)^2",
+   "g=f|x_i=0, h=f|x_i=1, d=Inf_i(f)=Pr[g!=h]",
+   "B_i(f)=sum_T q_T h2(e_T/q_T), q_T=(a_T^2+b_T^2)/2, e_T=(a_T-b_T)^2/4, a=hat g, b=hat h"
+  ],
+  "statement_sha256": "69f22c8de5758ee813f62716027e0161c28214ee581e9f2c05e2ae9fefc85f12",
+  "contributors": [
+   "claude-B05-lead"
+  ],
+  "proof_source": "REPORT.md section 2 Theorem 3",
+  "proof_dependencies": [
+   "B05-ODDFACE-ISO-PAYMENT v1",
+   "B05-ODDFACE-TELESCOPE v1",
+   "C005 (JS constant) or Topsoe 2000: JS_nats <= (ln2/2) Delta"
+  ],
+  "review_records": [],
+  "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "B19",
+   "A087",
+   "A094",
+   "A023",
+   "A025"
+  ]
+ },
+ {
+  "claim_id": "B05-ODDFACE-LOCALIZED-REDUCTION",
+  "version": 1,
+  "exact_statement": "For every Boolean f, every restriction tree T with constant leaves and every K >= log2 e: H(f) <= (K + c_JS) I(f) + sum over v in T with B_v > K d_v of w_v (1/2) I(g_v h_v). Hence FEI holds with C = K + c_JS + Kp on any family admitting such trees with bad-node odd-face credit <= Kp I(f).",
+  "hypotheses": [
+   "f:{0,1}^n->{-1,1}, n>=1",
+   "entropies in bits, Fourier weights p_S = hat f(S)^2",
+   "g=f|x_i=0, h=f|x_i=1, d=Inf_i(f)=Pr[g!=h]",
+   "B_i(f)=sum_T q_T h2(e_T/q_T), q_T=(a_T^2+b_T^2)/2, e_T=(a_T-b_T)^2/4, a=hat g, b=hat h"
+  ],
+  "statement_sha256": "c2b47af6a1bcc576ed93de39759decc0277c9a4ed7d958a551a0745bfd300389",
+  "contributors": [
+   "claude-B05-lead"
+  ],
+  "proof_source": "REPORT.md section 2 Theorem 4",
+  "proof_dependencies": [
+   "B05-ODDFACE-ISO-PAYMENT v1",
+   "B05-ODDFACE-TELESCOPE v1",
+   "C005"
+  ],
+  "review_records": [],
+  "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "B19",
+   "A087",
+   "A094",
+   "A023",
+   "A025"
+  ]
+ },
+ {
+  "claim_id": "B05-ODDFACE-LOCALIZED-BRIDGE",
+  "version": 1,
+  "exact_statement": "There are absolute K, Kp such that every Boolean f admits a restriction tree with constant leaves whose bad nodes (B_v > K d_v) carry odd-face credit sum w_v (1/2) I(g_v h_v) <= Kp I(f).",
+  "hypotheses": [
+   "f:{0,1}^n->{-1,1}, n>=1",
+   "entropies in bits, Fourier weights p_S = hat f(S)^2",
+   "g=f|x_i=0, h=f|x_i=1, d=Inf_i(f)=Pr[g!=h]",
+   "B_i(f)=sum_T q_T h2(e_T/q_T), q_T=(a_T^2+b_T^2)/2, e_T=(a_T-b_T)^2/4, a=hat g, b=hat h"
+  ],
+  "statement_sha256": "81faa7bb4121d688602e7efc791dfc2670bf3cda414b60c7ae48236d0e6a000e",
+  "contributors": [
+   "claude-B05-lead"
+  ],
+  "proof_source": "REPORT.md section 2 Theorem 4 (first unproved line); evidence out/iso_check.log Part C and out/b05_ledger_k6.log",
+  "proof_dependencies": [
+   "B05-ODDFACE-LOCALIZED-REDUCTION v1"
+  ],
+  "review_records": [],
+  "status": "OPEN",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": "the existence, for every Boolean f, of a tree whose bad-node odd-face credit is <= Kp I(f); no argument yet; candidate obstruction: nested rare-flip towers",
+  "next_consumers": [
+   "B19",
+   "A087",
+   "A094",
+   "A023",
+   "A025"
+  ]
+ },
+ {
+  "claim_id": "B05-ODDFACE-B05-FAMILY-PAID",
+  "version": 1,
+  "exact_statement": "On the archived B05 sparse-activation family (bent k bits, one-point flip, r controls active on one point, selector y): I(F) = 2^(-k-r) + 2^(-r)(k/2 + k 2^(-k)) + r 2^(-r)(1 - 2^(-k/2) + 2^(-k)); in the selector-first tree the root credit (k+r)2^(-k-r) is <= 2^(1-k) I(F) for k >= 2; exact bad-node credit / I at K=4 is 0.0851, 0.0284, 0, 0 (k=4, r=8) and 0.0249, 0.0113, 0.0193, 0.0057 (k=6, r=12) in the orders selector-first, control-first, data-first, control-data-selector.",
+  "hypotheses": [
+   "f:{0,1}^n->{-1,1}, n>=1",
+   "entropies in bits, Fourier weights p_S = hat f(S)^2",
+   "g=f|x_i=0, h=f|x_i=1, d=Inf_i(f)=Pr[g!=h]",
+   "B_i(f)=sum_T q_T h2(e_T/q_T), q_T=(a_T^2+b_T^2)/2, e_T=(a_T-b_T)^2/4, a=hat g, b=hat h",
+   "k>=4 even, r>=1 (ledgers only at (4,8) and (6,12))"
+  ],
+  "statement_sha256": "9f074cb3c2cd47c6cd9a1df1bc17d3b43934e25d08a180a8701c928e891f51cc",
+  "contributors": [
+   "claude-B05-lead"
+  ],
+  "proof_source": "REPORT.md section 2 Proposition 5; out/b05_ledger_k6.log",
+  "proof_dependencies": [
+   "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO v1 (family definition)"
+  ],
+  "review_records": [],
+  "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW (formula and root bound); CERTIFIED_EXACT_FINITE (ledgers)",
+  "supersedes": [],
+  "refutes": [],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "B19",
+   "A087",
+   "A094",
+   "A023",
+   "A025"
+  ]
+ },
+ {
+  "claim_id": "B05-A021-REMAINDER-SIGN-CORRECTION",
+  "version": 1,
+  "exact_statement": "In A021 v1 section 2, R(q) := -2(1-q)^2 log2(1-q) - (2cq - 3cq^2) with c = log2 e equals +4c sum_{j>=3} q^j/[j(j-1)(j-2)] and satisfies 0 <= R(q) <= 2cq^3/[3(1-q)]; consequently G_s = R(u) - R(2u)/2 <= 0. A021 states the opposite signs (R <= 0, G_s >= 0).",
+  "hypotheses": [
+   "0 < q <= 1/2",
+   "0 < u <= 1/4"
+  ],
+  "statement_sha256": "a43cd20f935cf91a38710cbdce50e0ab4ec8401b25aa0b43e341c9c4de961cea",
+  "contributors": [
+   "claude-B05-lead"
+  ],
+  "proof_source": "REPORT.md section 3; out/a021_remainder_sign.txt (50-digit values)",
+  "proof_dependencies": [
+   "power series of ln(1-q)"
+  ],
+  "review_records": [],
+  "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+  "supersedes": [],
+  "refutes": [
+   "A021-UNIFORM-RARE-CORE-EXPANSION v1 (remainder sign clause only)",
+   "A021-CONTROL-FIRST-KL-LEDGER v1 (G_s sign clause only)"
+  ],
+  "first_unproved_line": null,
+  "next_consumers": [
+   "A021",
+   "A023",
+   "A087",
+   "A094"
+  ]
+ }
+]

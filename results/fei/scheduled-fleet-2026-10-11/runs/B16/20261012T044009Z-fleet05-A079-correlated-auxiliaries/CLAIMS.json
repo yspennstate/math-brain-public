@@ -1,0 +1,85 @@
+[
+  {
+    "claim_id": "A079-CORRELATED-BENT-HARDNESS-TRANSPORT",
+    "version": 1,
+    "exact_statement": "For every Boolean seed f on n>=1 uniform bits with I(f)>0, the explicit basis-character tagged family F_t(x,a,b)=(-1)^(a dot b+c_b dot x)g_t(x), g_t=z product of t disjoint copies of f, k_t=tn+1, m_t=ceil(log2(k_t+1)), N_t=2^m_t, c_b=e_b for b<k_t and zero otherwise, has pairwise distinct bent data branches, dependent spectral marginals with mutual information >=h2(1/N_t), H(F_t)=tH(f)+2m_t and I(F_t)=tI(f)+J_t with m_t<J_t<m_t+2; hence its full H/I tends to H(f)/I(f). The optimal FEI constant on distinct correlated bent-branch address selectors equals the universal constant, possibly infinity. For every bent-branch selector with d data bits, H=d+E H(sigma_t), I=d/2+E I(sigma_t) with Boolean phase rows sigma_t, so a violation at C>=2 descends to a smaller phase row. For F=(-1)^(a dot b)h_b(x), a physical b-first paired stopping tree removes exactly 2m entropy and m influence while retaining E H(h_b), and aggregate erasure B(F)=m+E B(h_b)+sum_j H(S_j|V,S_-j).",
+    "hypotheses": [
+      "Independent uniform physical cubes X,A,B",
+      "Actual Boolean phase cores and sign-valued seeds",
+      "Normalized Walsh transform and entropy in bits",
+      "The basis code has a zero tag and one distinct unit tag per selector bit",
+      "Bent-branch data dimension d is positive and even; aggregate B denotes true conditional erasure sum"
+    ],
+    "statement_sha256": "62052ac186c90e3b4a843aad47e7405e6697da14defe73b3e13ee294a95612f4",
+    "contributors": [
+      "A079"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A079\\runs\\20261012T044009Z-fleet05-A079-correlated-auxiliaries\\DERIVATION.md",
+      "sha256": "306a7b4d0ed043937fe00f8a8390c88b8bb6cf65146971a7acb0572d3536b0bf"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Branch distinctness and spectral dependence as a weaker-than-FEI restriction for a universal total H/I bound",
+      "Obtaining a new ratio amplifier from flat bent data magnitudes with bounded-ratio Boolean phase cores"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A034",
+      "A080",
+      "A092",
+      "A088",
+      "B16",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A034-QUADRATIC-AFFINE-ROW-CONDITIONAL",
+    "version": 1,
+    "exact_statement": "For every integer d>=1, a Boolean sign on disjoint uniform physical X,Y cubes whose distinct X Fourier labels S_j have size <=d and whose partial rows are unit quadratic signs on affine Y partition cells A_j of codimension k_j has H(S_Y|S_X)=sum_j 2^(-k_j)(k_j+r_j)<=2 I_Y, H(S_X)=sum_j 2^(-k_j)k_j, and H(f)=sum_j 2^(-k_j)(2k_j+r_j)<=4 I_Y, where r_j is the quadratic polar rank restricted to the direction space of A_j. Admission is stable under every coordinate Y restriction and X restrictions preserving injective projected labels. Every admitted Boolean tensor factor on fresh Y bits is a quadratic phase. Full physical restriction closure of unbounded ordinary addressing contains every Boolean sign, so a conditional bound on that closure is FEI-strength.",
+    "hypotheses": [
+      "Independent uniform physical cubes X,Y",
+      "Actual Boolean sign",
+      "Pairwise distinct X labels, each of size <= integer d>=1",
+      "Each partial row is a unit quadratic sign supported on one affine Y partition cell",
+      "Entropy in bits; influence is squared Fourier mean degree"
+    ],
+    "statement_sha256": "38a3d96ae4012ea4fd3634e8d947b36c19b4bf40326ac881ed5b5b78b69cb7d0",
+    "contributors": [
+      "fleet05/A034"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A034\\runs\\20261011T223816Z-fleet05-A034-phase-energy-transfer\\CONDITIONAL_PHASE_THEOREM.tex",
+      "sha256": "6368edaba63c3044e26cc3c38a0d8e88a0b367bba77390f7ce82072f3b9a4541"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A079",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "source": {
+          "path": "~\\brain_workers\\FEI100_20261011\\agents\\A079\\runs\\20261012T044009Z-fleet05-A079-correlated-auxiliaries\\REVIEW_A034.md",
+          "sha256": "9ade4d48ef9f5a628467a42c86702cfcb1eb6e47cd7554b5c3b4b41b97180fd9"
+        },
+        "method": "Independent signed-translation/frequency-orbit flat-row proof, tensor and restriction guards; 1920 separate Boolean rank fixtures, 31232 exact assertions. No repair contributed."
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      "Full physical restriction stability as a weaker-than-FEI completion for unbounded addressing"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A003",
+      "A079",
+      "A088",
+      "A094",
+      "B07",
+      "B20"
+    ]
+  }
+]

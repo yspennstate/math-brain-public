@@ -1,0 +1,6 @@
+diff --git a/primary_directive/hooks1000/proposals/math-w452.jsonl b/primary_directive/hooks1000/proposals/math-w452.jsonl
+new file mode 100644
+--- /dev/null
++++ b/primary_directive/hooks1000/proposals/math-w452.jsonl
+@@ -0,0 +1,1 @@
++{"id":"formal-receipt-w452-01","area":"math","event":"stage-start","cue":"Lean (comparator|formalization|proof receipt).*(sorry|placeholder)|ComparatorChallenges.*sorry","fire_when":"C0041 proof audit finds ComparatorChallenges/DirectionalBallisticity.lean ending in sorry while its JSON names OAI.Probability.Ballisticity.Main as solution_module.","silent_when":"A proof audit has no comparator challenge or already has a compiled theorem receipt with named permitted axioms.","text":"A comparator challenge may contain sorry by design. Follow its JSON solution_module, check the actual theorem, permitted axioms and hardest imported lemma; neither the challenge placeholder nor a source hash is a proof receipt.","evidence":"perceptron_proof_open_gaps_fleet_2026_07_12; C0041 2026-10-10 source audit: ComparatorChallenges/DirectionalBallisticity.json:2-11, DirectionalBallisticity.lean:97-99, OAI/Probability/Ballisticity/Main.lean:23-25","proposer":"w452"}

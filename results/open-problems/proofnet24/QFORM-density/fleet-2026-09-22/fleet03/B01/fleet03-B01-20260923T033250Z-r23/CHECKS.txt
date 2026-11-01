@@ -1,0 +1,23 @@
+fleet03/B01 r23 deterministic checks
+
+1. Orthonormal-row control:
+   Delta_M=det(I_2)=1, s_N=1.
+   Theorem constant = 2*sqrt(pi) = 3.5449077018110318...
+
+2. Scaling check:
+   M -> alpha M gives Delta_M -> alpha^4 Delta_M, so Delta_M^(-1/4) -> |alpha|^(-1) Delta_M^(-1/4).
+   N -> beta N gives s_N -> |beta| s_N.
+   Hence the theorem bound scales by |alpha beta|^(-1), exactly as Q=2(MX)^T(NY) scales.
+
+3. Cross-family spectral check:
+   If MM^T=NN^T=I_2, put C=M^T N. Then
+   [[0,C],[C^T,0]]^2 = diag(M^T N N^T M, N^T M M^T N).
+   On range(M^T) and range(N^T) these blocks are the identity; outside they vanish.
+   Therefore the nonzero eigenvalues are +1,+1,-1,-1.
+
+4. Layer-cake split:
+   For density cap K in R^2,
+   integral_0^infinity min(1,pi*K/s^2) ds
+   with s0=sqrt(pi*K) equals s0 + pi*K/s0 = 2*sqrt(pi*K).
+
+STATUS=PASS

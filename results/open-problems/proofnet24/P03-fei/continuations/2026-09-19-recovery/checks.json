@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "scope": "Finite checks only; not a proof of full FEI.",
+  "small_boolean_checks": {
+    "functions_checked": 404,
+    "exhaustive_through_n": 3,
+    "seeded_n4_checks": 128,
+    "atom_checks": 3205,
+    "entropy_comparison": "certified rational logarithm bounds",
+    "pass": true
+  },
+  "systematic_lifts": [
+    {
+      "N": 4,
+      "r": 4,
+      "columns": [3, 5, 6, 9],
+      "minimum_distance": 3,
+      "zero_conditional_entropy_blocks_checked": 37,
+      "maximum_erased_block": 2,
+      "H_exact": "4",
+      "I_base": "2",
+      "I_lift": "4",
+      "pass": true
+    },
+    {
+      "N": 8,
+      "r": 5,
+      "columns": [7, 11, 13, 14, 19, 21, 22, 25],
+      "minimum_distance": 4,
+      "zero_conditional_entropy_blocks_checked": 378,
+      "maximum_erased_block": 3,
+      "H_exact": "8",
+      "I_base": "4",
+      "I_lift": "13/2",
+      "pass": true
+    }
+  ],
+  "random_code_union_bounds": [
+    {"N": 128, "k": 2, "r": 31, "exact_volume_less_than_2_power_r": true},
+    {"N": 1024, "k": 16, "r": 243, "exact_volume_less_than_2_power_r": true},
+    {"N": 10000, "k": 100, "r": 1646, "exact_volume_less_than_2_power_r": true}
+  ],
+  "nonflat_repeated_label_example": {
+    "patterns": ["0**", "10*", "110", "111"],
+    "signs": [1, 1, 1, -1],
+    "labels": [1, 2, 4, 1],
+    "H": {
+      "lower": 3.240222972541423,
+      "upper": 3.240222972541423,
+      "certified_width_upper": 2.3122381106618003e-41
+    },
+    "HJ_exact": "7/4",
+    "I_selector_exact": "1",
+    "repeated_group_nonflat": true,
+    "Lambda_exact": "25/17",
+    "pass": true
+  },
+  "unbounded_collision_family_samples": [
+    {"address_bits": 2, "parity_bits": 0, "H_exact": 4, "I_selector_exact": "1", "Lambda_from_formula": 1, "pass": true},
+    {"address_bits": 2, "parity_bits": 1, "H_exact": 4, "I_selector_exact": "2", "Lambda_from_formula": 2, "pass": true},
+    {"address_bits": 2, "parity_bits": 2, "H_exact": 4, "I_selector_exact": "3", "Lambda_from_formula": 4, "pass": true},
+    {"address_bits": 2, "parity_bits": 3, "H_exact": 4, "I_selector_exact": "4", "Lambda_from_formula": 8, "pass": true},
+    {"address_bits": 2, "parity_bits": 4, "H_exact": 4, "I_selector_exact": "5", "Lambda_from_formula": 16, "pass": true}
+  ]
+}

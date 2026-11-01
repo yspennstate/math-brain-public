@@ -1,0 +1,11 @@
+T354 general case (agent A, 21 Oct 2026): audit of Proposition 1's covariance step. Under reshuffling, phase
+averaged, Cov(m, v) = C [sum_s a_s w_s - (1/(n - 1)) sum over ordered pairs (s, s'), s != s', in one epoch, of a_s w_s'],
+a_s = (1 - b1) b1^s, w_s = (1 - b2) b2^s. kappa = Cov/((1 - b2) C) is computed exactly from the weights and checked
+against [K - 1, K], K = (1 - b1)/(1 - b1 b2), and against a direct Monte Carlo of the filters on a reshuffled stream.
+b1 0 b2 0.99 n 16: kappa exact 0.52737  Monte Carlo 0.52679  K 1.00000  in [K-1, K]: True  |kappa| <= 1: True
+b1 0 b2 0.99 n 2000: kappa exact 0.95295  Monte Carlo 0.95359  K 1.00000  in [K-1, K]: True  |kappa| <= 1: True
+b1 0.9 b2 0.99 n 16: kappa exact 0.21365  Monte Carlo 0.21390  K 0.91743  in [K-1, K]: True  |kappa| <= 1: True
+b1 0.9 b2 0.999 n 16: kappa exact 0.20648  Monte Carlo 0.20671  K 0.99108  in [K-1, K]: True  |kappa| <= 1: True
+b1 0.9 b2 0.99 n 200: kappa exact 0.61923  Monte Carlo 0.62260  K 0.91743  in [K-1, K]: True  |kappa| <= 1: True
+b1 0.5 b2 0.5 n 4: kappa exact 0.43056  Monte Carlo 0.43272  K 0.66667  in [K-1, K]: True  |kappa| <= 1: True
+b1 0.99 b2 0.999 n 50: kappa exact 0.07651  Monte Carlo 0.07606  K 0.90992  in [K-1, K]: True  |kappa| <= 1: True

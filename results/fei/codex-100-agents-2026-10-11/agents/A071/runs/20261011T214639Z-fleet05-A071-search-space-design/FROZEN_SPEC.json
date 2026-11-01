@@ -1,0 +1,17 @@
+{
+  "helper_version": "B09-BIASED-BLOCK-UNCERTAINTY@1",
+  "target": "For actual Boolean f under interior product biases, J_A <= M_A + sum_i_in_A(h2(p_i)+log2(max(p_i,1-p_i)))",
+  "family": "All sign truth tables on three named bits, f(000)=+1; code bit x-1 determines f(x) for assignments x=1..7; each nonempty proper physical block",
+  "domain": {"n": 3, "codes": [0,127], "bias_numerators_over_8": [1,2,4], "block_masks": [1,2,3,4,5,6]},
+  "case_count": 20736,
+  "pilot": {"bias_numerators_over_8": [4,4,4], "case_count": 768, "max_runtime_seconds": 55},
+  "symmetry": "Output complement preserves all squared spectra; fix f(000)=+1. Input flips paired with p_i -> 1-p_i preserve spectra and relabel physical assignments. Thus lower-half biases cover {1/8,1/4,1/2,3/4,7/8}^3. No coordinate permutation quotient and no parity multiplication quotient.",
+  "completeness": "All 256 truth tables at all 125 full-grid bias vectors and all six proper blocks covered up to the above invariances. Dummy coordinates include all n<=2 proper-block cases. Empty/full blocks satisfy J=0 analytically. No off-grid or n>=4 claim.",
+  "arithmetic": "Integer weighted transforms and Fraction squared spectra and mixture checks; base-two entropy enclosed by rational atanh series with N=32, natural-log fixed scale 2^80, output scale 2^60; all quotient corners checked; powers of two evaluated exactly.",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds": 55,
+  "runtime_enforcement": "Check deadline after each bias vector; stop with error, no dimension escalation; a bias-vector iteration is an indivisible bounded batch.",
+  "reason": "Physical one/two-bit reveals of every three-bit function stress Boolean phase and coupled posterior fibers, including nonmonotone gates, cancellations, bias endpoints and uniform equality. Tests the surviving reviewed-source helper, not its retired tax-free version.",
+  "script": "code/search.py",
+  "frozen_before_execution": true
+}

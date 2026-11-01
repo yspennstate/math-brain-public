@@ -1,0 +1,24 @@
+{
+  "small_V3": {
+    "good_seed_error": "epsilon<=sqrt(18*kappa)=sqrt(9/89)<319/1000",
+    "collar_identity": "delta=(1-epsilon-eta)^2-(sqrt(u)+epsilon)^2",
+    "delta_lower": "4180787/24937500 > 1/6",
+    "robust_anchor": "some physical two-set H has g=det(C C^T)>delta^2/2>1/72"
+  },
+  "leverage": {
+    "weights": "w_ij=det(C_{i,j})^2/g; sum w_ij=1; q_i=sum_{j!=i}w_ij",
+    "two_high": "q_i,q_j>2/3 implies w_ij>1/3, hence det^2>g/3>1/216",
+    "physical_minor_upper": "det^2<4u^2",
+    "exact_exclusion_margin": "1/216-4u^2=20726611/202759667208>0",
+    "conclusion": "at most one high-leverage coordinate"
+  },
+  "one_high": {
+    "leave_one_identity": "||E||_F^2 <= 3 W_dis/g",
+    "contradiction_assumption": "W_dis<=g/75 gives ||E||<=1/5",
+    "rank": "global carrier rank<=5 and low-low restricted rank<=2",
+    "spectral_effect": "s8>=1 forces three low diagonal coefficients >=4/5",
+    "dominance_condition": "sqrt(u)<(2/5-eta)/2",
+    "exact_square_margin": "563/5306700>0",
+    "conclusion": "W_dis>g/75>1/5400; product-safe incident receiver gives density<60"
+  }
+}

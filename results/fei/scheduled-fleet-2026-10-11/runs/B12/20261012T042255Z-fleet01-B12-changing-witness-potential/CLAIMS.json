@@ -1,0 +1,60 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T042255Z-fleet01-B12-changing-witness-potential",
+  "stream": "B12",
+  "primary_packet_id": "A057",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "B12-A057-CHANGING-WITNESS-POTENTIAL",
+      "version": "v1",
+      "status": "PROVED",
+      "scope": "For every genuine Boolean disjoint splice F=a+hb and every finite adaptive nonreusing physical restriction tree interleaving source-block and child-block queries, the sum of exact coherent remainders at child queries plus the leaf potential is at most the root potential P=(4+2ln2+2/e)q I(h)+Var(h) E_raw(b), in natural-log units.",
+      "hypotheses": [
+        "the root source block W and child block X are disjoint",
+        "a+b and a-b are genuine Boolean signs and h is a genuine Boolean sign",
+        "node witnesses are actual coherent restrictions of the one root pair, not arbitrary unrelated arrays",
+        "each physical coordinate is queried at most once on a root-leaf path",
+        "exact uniform reach weights"
+      ],
+      "constant_nats": 6.122053243462775,
+      "proof_dependencies": [
+        {
+          "claim": "B12-A057-UNIFORM-COHERENT-KERNEL-ENVELOPE-v1",
+          "status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_SCOPE",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "e412fb2e8f85a78d807ff6d6c9c805254377ed88",
+          "path": "reports/fei-2026-10-11/runs/B19/20261012T034859Z-fleet01-B19-b12-envelope-review-a094/REPORT.md",
+          "blob": "fc09be40dc170838a26a342206595b6337365097"
+        },
+        {
+          "claim": "source restriction laws: average q is preserved and average E_raw(b) cannot increase",
+          "evidence": "Parseval plus scalar-kernel nonnegativity; proved in CHANGING_WITNESS_TELESCOPE.tex"
+        },
+        {
+          "claim": "child restriction laws: I drop is Inf_i and variance drop is alpha_i^2",
+          "evidence": "coefficient-pair calculation in CHANGING_WITNESS_TELESCOPE.tex"
+        }
+      ],
+      "exact_single_use_identity": "sum_X w alpha^2 Z + sum_W w V [Z-E_child Z] + sum_leaf w VZ = Var(h_root) E_raw(b_root)",
+      "does_not_prove": [
+        "a universal influence bound for E_raw(b)",
+        "a simultaneous shared-coordinate query theorem",
+        "arbitrary unrelated node witnesses",
+        "full FEI"
+      ],
+      "review_status": "CONTRIBUTOR_CHECK_ONLY",
+      "independent_reviewers_requested": ["A091", "A090"]
+    },
+    {
+      "claim_id": "B12-A057-COHERENT-HIERARCHY",
+      "version": "v4",
+      "status": "OPEN_SHARPENED",
+      "scope": "Universal payment of complete biased coherent remainders across arbitrary Boolean hierarchies.",
+      "prior_obstruction": "node-dependent reverse-collision reserves could be recharged at every node",
+      "new_obstruction": "coherent source restrictions are now paid once; the remaining universal terms are the root terminal derivative entropy Var(h)E_raw(b) and, for overlapping inputs, the simultaneous-change covariance terms",
+      "stable_gap_alias": "WEIGHTED_LOCAL_TC"
+    }
+  ]
+}
+

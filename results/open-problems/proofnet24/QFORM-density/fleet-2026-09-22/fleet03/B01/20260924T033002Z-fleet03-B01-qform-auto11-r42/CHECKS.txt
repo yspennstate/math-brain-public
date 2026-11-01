@@ -1,0 +1,31 @@
+Deterministic checks for 20260924T033002Z-fleet03-B01-qform-auto11-r42
+
+identity eta=(r-1)/(2r-1)
+2.0 0.33333333333333331 0.33333333333333331 err=0
+1.5 0.25 0.25 err=0
+1.3333333333333333 0.19999999999999996 0.19999999999999998 err=2.78e-17
+1.2 0.14285714285714285 0.14285714285714282 err=2.78e-17
+1.05 0.045454545454545491 0.045454545454545491 err=0
+r=2 exact determinant constant: 3.571652366928449 computed=3.571652366928448 err=4.44e-16
+q=2 r=2 kexp=0 Cdet=3.571652366928
+q=3 r=1.5 kexp=0 Cdet=4.291005123677
+q=4 r=1.33333333333 kexp=-1.11e-16 Cdet=5.259164744279
+q=5 r=1.25 kexp=0 Cdet=6.333736406724
+q=10 r=1.11111111111 kexp=3.33e-16 Cdet=12.338721131021
+scaling r=2 total exponent=1
+scaling r=1.5 total exponent=1
+scaling r=1.33333333333 total exponent=1
+scaling r=1.2 total exponent=1
+spectrum: [-1.532088886238 -1.             -0.347296355334  1.
+  1.              1.879385241572]
+count |lambda|>=1: 5
+charpoly expected: [1, -1, -4, 3, 4, -2, -1]
+charpoly numeric: [1.0, -0.9999999999999993, -4.000000000000002, 2.9999999999999982, 4.000000000000003, -1.9999999999999991, -1.0000000000000004]
+charpoly maxerr=2.66e-15
+pole eta=0.333333333333 centered=1.88988157484 formula=1.88988157484 scaled=1.5
+pole eta=0.25 centered=1.58560948667 formula=1.58560948667 scaled=1.33333333333
+pole eta=0.2 centered=1.43587294375 formula=1.43587294375 scaled=1.25
+pole eta=0.9 centered=18.6606598307 formula=18.6606598307 scaled=10
+STATUS=PASS
+
+Checks cover: exponent identity; integrability of the conditioning pole; exact r=2 constant; scale cancellation for q=2,3,4,5,10; full quadratic homogeneity; target-valid stress-matrix spectrum; characteristic-polynomial factorization; and the cap-one fractional-pole rearrangement constant.

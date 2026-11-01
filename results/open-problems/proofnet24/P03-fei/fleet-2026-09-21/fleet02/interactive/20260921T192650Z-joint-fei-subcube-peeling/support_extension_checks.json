@@ -1,0 +1,72 @@
+{
+  "approximate_support_examples": [
+    {
+      "I_control": "15/32",
+      "allowed_error": "1/32",
+      "certified_margin_12I_minus_Delta_lower": "501525249161/137438953472",
+      "dimension": 6,
+      "m": 4,
+      "pivot_influence": "17/32",
+      "r": 1,
+      "support_error": "1/32",
+      "truth_table_size": 64
+    },
+    {
+      "I_control": "127/256",
+      "allowed_error": "1/128",
+      "certified_margin_12I_minus_Delta_lower": "1027201876963/274877906944",
+      "dimension": 10,
+      "m": 7,
+      "pivot_influence": "131/512",
+      "r": 2,
+      "support_error": "3/512",
+      "truth_table_size": 1024
+    },
+    {
+      "I_control": "1533/4096",
+      "allowed_error": "1/384",
+      "certified_margin_12I_minus_Delta_lower": "3067671888027/1099511627776",
+      "dimension": 13,
+      "m": 9,
+      "pivot_influence": "519/4096",
+      "r": 3,
+      "support_error": "7/4096",
+      "truth_table_size": 8192
+    },
+    {
+      "I_control": "1023/4096",
+      "allowed_error": "1/1024",
+      "certified_margin_12I_minus_Delta_lower": "1025111332281/549755813888",
+      "dimension": 15,
+      "m": 10,
+      "pivot_influence": "1039/16384",
+      "r": 4,
+      "support_error": "15/16384",
+      "truth_table_size": 32768
+    },
+    {
+      "I_control": "20475/131072",
+      "allowed_error": "1/2560",
+      "certified_margin_12I_minus_Delta_lower": "1290098295855/1099511627776",
+      "dimension": 18,
+      "m": 12,
+      "pivot_influence": "4127/131072",
+      "r": 5,
+      "support_error": "31/131072",
+      "truth_table_size": 262144
+    }
+  ],
+  "coverage": "all 256 three-bit truth tables plus 4096 seeded four-bit samples, repeats possible; not exhaustive four-bit",
+  "exact_support_rows": 1967,
+  "full_FEI": "OPEN_NOT_PROVED",
+  "maximum_rows": 398,
+  "rational_arbitrary_sign_peeling_certificates": 1967,
+  "seed": 20260921200609,
+  "status": "PASS",
+  "unsigned_payload_omission_counterexample": {
+    "H_exact": 5,
+    "correct_payload_entropy_term": "3",
+    "dimension": 8,
+    "invalid_rhs": 4
+  }
+}

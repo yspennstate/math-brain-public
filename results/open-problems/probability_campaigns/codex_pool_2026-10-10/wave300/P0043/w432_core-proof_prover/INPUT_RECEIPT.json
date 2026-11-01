@@ -1,0 +1,177 @@
+{
+  "records": [
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 46,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "quasitransitive_no_infinite_cluster_at_pc",
+        "historical_status": "source_says_open",
+        "locator": "Conjecture 8.15, printed p.285",
+        "problem_id": "P0043",
+        "recorded_at": "2026-09-06T16:41:32Z",
+        "result_status": "not_started",
+        "schema": "probability-problem.v1",
+        "source_id": "lyons_peres_20260819",
+        "statement": "If G is quasi-transitive and p_c(G)<1, is there almost surely no infinite Bernoulli cluster at p_c(G)?",
+        "statement_caveat": "Do not count each lattice dimension as a separate problem. Known nonamenable and high-dimensional cases do not settle the entire assertion.",
+        "title": "Absence of infinite clusters at critical percolation",
+        "verification": "unreviewed"
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+      "line": 143,
+      "record": {
+        "admitted": true,
+        "current_status": "unverified",
+        "dedup_key": "quasitransitive_no_infinite_cluster_at_pc",
+        "historical_status": "source_says_open",
+        "locator": "Conjecture 8.15, printed p.285",
+        "problem_id": "P0043",
+        "recorded_at": "2026-09-06T19:17:12Z",
+        "result_status": "attempted_unsolved",
+        "schema": "probability-problem.v1",
+        "source_id": "lyons_peres_20260819",
+        "statement": "If G is quasi-transitive and p_c(G)<1, is there almost surely no infinite Bernoulli cluster at p_c(G)?",
+        "statement_caveat": "Do not count each lattice dimension as a separate problem. Known nonamenable and high-dimensional cases do not settle the entire assertion.",
+        "title": "Absence of infinite clusters at critical percolation",
+        "verification": "author_checked_limited_argument"
+      }
+    },
+    {
+      "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+      "line": 43,
+      "record": {
+        "attempt_id": "P0043-A001",
+        "depth": "first_pass",
+        "full_problem_solved": false,
+        "independent_check": "The strict inequality can also be obtained from the binomial generating function lying strictly above its tangent at one. This excludes the deterministic b=1 exception, whose p_c is one.",
+        "independent_review": "none",
+        "method": "Critical branching-process extinction",
+        "novelty": "not_claimed",
+        "obstruction": "Critical clusters in a general quasi-transitive graph are not independent branching trees. Their loop dependence is not captured by this fixed-point proof.",
+        "problem_id": "P0043",
+        "recorded_at": "2026-09-06T17:47:59Z",
+        "result": "For the regular tree at p=1/b, an infinite descendant cluster would have survival probability x satisfying x=1-(1-px)^b. For b>=2 strict concavity gives 1-(1-x/b)^b<x for every x>0, so only x=0 is possible.",
+        "schema": "probability-attempt.v1",
+        "substantive": true,
+        "verification": "author_checked_limited_argument"
+      }
+    }
+  ],
+  "stores": [
+    {
+      "path": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+      "schema": {
+        "nodes": [
+          "id",
+          "kind",
+          "title",
+          "body",
+          "metadata_json",
+          "digest",
+          "created_at"
+        ],
+        "edges": [
+          "id",
+          "source_id",
+          "target_id",
+          "kind",
+          "rationale",
+          "weight",
+          "metadata_json",
+          "digest",
+          "created_at"
+        ]
+      },
+      "cards": [
+        {
+          "id": "claim_185035ae5eeece9055619359a405033fda86bdf4d5fb573477a7612a4ca8b65a",
+          "kind": "claim",
+          "title": "theta(p) sigma^2(p) is nondecreasing in p for random walk on the supercritical percolation cluster",
+          "body": "PRIVATE AUTHOR-CHECKED DRAFT, no independent review. For supercritical Bernoulli bond percolation on Z^d let theta(p) be the density of the infinite cluster and sigma^2(p) the diffusion constant of simple random walk on it (quenched invariance principle). Then p -> theta(p) sigma^2(p) is nondecreasing on (p_c, 1]. Monotonicity of sigma^2(p) itself, asked as Open Problem 14.1 in Heydenreich-van der Hofstad's lecture notes, is NOT implied: the lemma only controls the product.\nSupercritical Bernoulli bond percolation on Z^d, d >= 2\nQuenched invariance principle on the infinite cluster (so sigma^2 is defined)\nHomogenised conductivity identity for the conductance model on the cluster"
+        },
+        {
+          "id": "claim_2279334a78f40f9f470203698541f2090e13571639d4fc686f5a52efb3646d33",
+          "kind": "claim",
+          "title": "Critical percolation clusters on the torus wrap around it exactly when d > 6, which is the mechanism behind mean-field (Erdos-Renyi-like) depletion",
+          "body": "PRIVATE MECHANISM NOTE, author-recorded. On the torus T_{n,d} with volume V, a critical cluster of size V^{2/3} has intrinsic geometry of a critical tree embedded four-dimensionally, so its Euclidean diameter is of order (V^{2/3})^{1/4} = V^{1/6}, while the torus side is V^{1/d}. Since V^{1/6} > V^{1/d} iff d > 6, above six dimensions the window clusters wrap around the torus many times and see the torus uniformly; this is why the exploration process should have the same global (mass-proportional) depletion as in G(n,p), which is what the multiplicative-coalescent scaling limit (Heydenreich-van der Hofstad Open Problems 13.3 and 13.5) needs. The torus plateau theorem (Hutchcroft-Michta-Slade) is the two-point version of this uniformity; the open step is the exploration-level (higher-point) version. Same reason makes eps >> V^{-1/3} lie above the correlation-length crossover eps >> V^{-2/d} for d > 6 (Open Problem 13.2).\nBernoulli percolation on the discrete torus, d > 6\nMean-field cluster geometry (intrinsic diameter m^{1/2}, Euclidean diameter m^{1/4})"
+        },
+        {
+          "id": "claim_a10fc08e90095fa10de649424c41b364bcb5e0dda8324fb4246596918a5d1f21",
+          "kind": "claim",
+          "title": "Open problem: Scaling limit of critical percolation cluster sizes on the hypercube",
+          "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For percolation on the hypercube {0,1}^d at p = p_c(1 + theta 2^{-d/3}), prove that V^{-2/3} (|C_(i)|)_{i>=1} converges in distribution to a limit (gamma_i(theta))_{i>=1}, expected to be related to the Erdos-Renyi multiplicative coalescent limit. Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 13.3, p. 189.\nPosed in Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems\nCurrent status unverified as of 2026-09-07"
+        },
+        {
+          "id": "claim_95132f825b0552482adabaff77c061c3e550bb329d676fdcf6942eaefd760143",
+          "kind": "claim",
+          "title": "Open problem: Multiplicative-coalescent scaling limit of critical percolation on high-dimensional tori",
+          "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For T_{n,d}, d > 6, at p = p_c(Z^d)(1 + theta V^{-1/3}), prove that V^{-2/3}(|C_(i)|)_{i>=1} converges to (a time-shifted, rescaled) multiplicative coalescent, the Erdos-Renyi scaling limit. Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 13.5, p. 196.\nPosed in Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems\nCurrent status unverified as of 2026-09-07"
+        },
+        {
+          "id": "claim_2611409be9c6b31c4292688bece1272a4291f4cd75c282bfa7791e13c52397bb",
+          "kind": "claim",
+          "title": "Open problem: Critical exponent of the diffusion constant of random walk on the supercritical percolation cluster",
+          "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For random walk on the infinite percolation cluster in sufficiently high dimension, show that the diffusion constant satisfies sigma(p)^2 ~ (p - p_c)^2 as p decreases to p_c; even monotonicity of p -> sigma^2(p) is not known. Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 14.1, p. 206.\nPosed in Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems\nCurrent status unverified as of 2026-09-07"
+        },
+        {
+          "id": "claim_e88b59be60710c3a6c59495a9f9d1df0854fd1e2f56cf25b08a1db3323de738d",
+          "kind": "claim",
+          "title": "Open problem: Super-Brownian motion limit of critical percolation clusters in high dimensions",
+          "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Show that for d > 6 there are gamma, v such that the measure-valued process X^{(n)}_{nt} = n^{-gamma} sum over vertices at intrinsic distance nt of delta at x/sqrt(vn), under n^gamma P_{p_c}, converges to the canonical measure of super-Brownian motion. Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 15.2, p. 219.\nPosed in Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems\nCurrent status unverified as of 2026-09-07"
+        },
+        {
+          "id": "claim_30119004c0a0723b7dc89795b1550bfc945a85fefb68a5e3601d15b9e191359d",
+          "kind": "claim",
+          "title": "Open problem: No infinite cluster at criticality on quasi-transitive graphs with p_c < 1",
+          "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For any quasi-transitive graph G with p_c(G) < 1, prove theta(p_c) = 0 (Benjamini-Schramm Conjecture 4). Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 15.11, p. 235. Status notes: Known for quasi-transitive graphs of exponential growth (Hutchcroft 2016) and for nonamenable graphs (Benjamini-Lyons-Peres-Schramm); the polynomial-growth case reduces essentially to the Z^d question (C0023).\nPosed in Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems\nCurrent status unverified as of 2026-09-07"
+        },
+        {
+          "id": "claim_4789b0b6f8562930974600882bc15c23e41fc6caf615f2b16bf6aac0a2871840",
+          "kind": "claim",
+          "title": "Resolved: Exceptional times for dynamical critical percolation on Z^2",
+          "body": "RESOLVED IN THE LITERATURE (status recorded by a bounded search or recall on 2026-09-07, verify before citing). Do exceptional times at which the origin percolates exist for dynamical critical bond percolation on Z^2? Resolution: GPS10, cited in the acquired source. Notes: Garban, Pete and Schramm, 'The Fourier spectrum of critical percolation' (Acta Math. 2010) proved the existence of exceptional times on Z^2; the notes themselves cite this as [GPS10]. Recorded as an exclusion for completeness of the source sweep. Source posing it: Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems, Chapter XI Section 3, p. 137.\nPosed as open in Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems\nResolution citation from bounded recall, not re-fetched"
+        },
+        {
+          "id": "claim_6f555d016e11c2bb779e0a37abc781df9f1db80da23e025050acb9548679bd48",
+          "kind": "claim",
+          "title": "Resolved: Bounded ratios in arm probabilities of critical percolation on the triangular lattice",
+          "body": "RESOLVED IN THE LITERATURE (status recorded by a bounded search or recall on 2026-09-07, verify before citing). Show that pi_j(j,n) n^{a_j} is bounded above and below as n -> infinity for the j-arm events of critical site percolation on the triangular lattice (SLE gives only the exponents). Resolution: sharp_arms_2022. Notes: Same content as C0019: resolved by Du, Gao, Li and Zhuang (arXiv 2205.15901) with sharp asymptotics; the campaign holds that source as sharp_arms_2022. Source posing it: Werner: Lectures on two-dimensional critical percolation, PCMI 2007, Section 5 remark, p. 63.\nPosed as open in Werner: Lectures on two-dimensional critical percolation, PCMI 2007\nResolution citation from bounded recall, not re-fetched"
+        },
+        {
+          "id": "claim_e79112836e7be9ac2cb3fff34a4bbaf047ce7bf4d7f7033676f9bfe30b1fdf7b",
+          "kind": "claim",
+          "title": "Attempt on Scaling limit of critical percolation cluster sizes on the hypercube",
+          "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Compare the exploration process of the hypercube with the Aldous exploration of the Erdos-Renyi graph. Result: Aldous's proof for G(n,p) uses that the exploration process is a random walk with drift theta - t and unit variance, up to depletion; on the hypercube the exploration of a cluster is a random walk whose step distribution depends on the local geometry (the number of unexplored neighbours of the current vertex is d minus the number of explored ones, and explored vertices are geometrically correlated). In the window the explored set has size V^{2/3} = 2^{2d/3}, which is a vanishing fraction of V, but the DEPLETION seen by a single vertex is not uniform: the explored vertices cluster geometrically, so the walk's drift correction is a functional of the geometry, not of the total explored mass as in G(n,p). This is exactly why the hypercube is harder than the Hamming graph (where the geometry is 'mean-field enough' and the scaling limit was obtained by Federico-van der Hofstad-den Hollander-Hulshof for the Hamming cube). A reduction: the scaling limit follows if the exploration's drift satisfies E[step | past] = theta 2^{-d/3} - (explored mass)/V + o(2^{-d/3}) uniformly over the window, i.e. if the local depletion is asymptotically equal to the global depletion; this is a 'non-backtracking randomness' statement about the geometry of critical hypercube clusters (that they are spread out like independent samples), which is the mean-field cluster geometry conjecture and is open. Obstruction: Local versus global depletion in the exploration walk; needs spread-out geometry of critical hypercube clusters.\nRefers to the open problem node open-problem-c0069-scaling-limit-of-critical-percolation-cluster-sizes-on-the-hypercube\nNo independent review; result status attempted_unsolved"
+        },
+        {
+          "id": "claim_fd72b6e6ee7a9d32bf165b4333616f3361f578ed2e791026e0edef7a428f9da8",
+          "kind": "claim",
+          "title": "Attempt on Super-Brownian motion limit of critical percolation clusters in high dimensions",
+          "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Identify gamma and v from known exponents and locate the missing joint convergence. Result: gamma = 1: the intrinsic one-arm probability is of order 1/n (Kozma-Nachmias), so n P_{p_c}(intrinsic radius >= n) is bounded, matching the canonical measure normalisation; v is the variance per intrinsic step of the spatial displacement, given by the lace expansion two-point function through the intrinsic-distance two-point function (C0079). The finite-dimensional distributions of the process in t are the intrinsic r-point functions with fixed intrinsic distances, which are the objects of C0079 (Open Problem 15.5) at the level of r = 2; the source's Theorem 15.4 handles the number-of-pivotals two-point function, and the intrinsic distance version is the missing step. Given the intrinsic r-point functions, convergence of finite-dimensional distributions to SBM follows as in the oriented case (Hofstad-Slade), and tightness follows from the one-arm bound and a modulus-of-continuity estimate for the intrinsic exploration. So the problem reduces to Open Problem 15.5 extended to r-point functions. Obstruction: Intrinsic-distance r-point functions not lace-expanded for unoriented percolation.\nRefers to the open problem node open-problem-c0076-super-brownian-motion-limit-of-critical-percolation-clusters-in-high-d\nNo independent review; result status attempted_unsolved"
+        },
+        {
+          "id": "claim_074b08d2f079277d5ce5423b113d46801b9ed62cd7be7598eb47b46fb59b1aeb",
+          "kind": "claim",
+          "title": "Attempt on No infinite cluster at criticality on quasi-transitive graphs with p_c < 1",
+          "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Split by growth type and identify the remaining cases precisely. Result: By Trofimov's theorem a quasi-transitive graph of polynomial growth is quasi-isometric to a Cayley graph of a virtually nilpotent group, and the critical behaviour of percolation is not a quasi-isometry invariant in general, so this does not reduce directly to Z^d; however the known proof for Z^2 (Harris-Kesten) and the high-dimensional proof (lace expansion, d >= 11) do not transfer either. Exponential growth is Hutchcroft's theorem. The remaining cases are (a) polynomial growth of degree 3 to 10 (and all virtually nilpotent non-abelian cases, e.g. the Heisenberg group of growth degree 4), where the problem is at least as hard as C0023, and (b) intermediate growth (Grigorchuk-type groups), where Hutchcroft's argument fails because it uses that the number of vertices at distance n grows exponentially to compare the cluster with a branching structure. For case (b) I checked the two known routes: the nonamenable route (Burton-Keane fails, so uniqueness monotonicity gives theta(p_c)=0 through the Benjamini-Lyons-Peres-Schramm argument) does not apply since intermediate-growth groups are amenable; the exponential-growth route uses a subadditivity argument on the expected number of vertices at distance n reached by the cluster, which requires growth rate > 1 in the exponential sense. Intermediate growth groups have growth exp(n^alpha), alpha < 1, which is superpolynomial, and Hutchcroft's argument actually needs only that the growth is faster than any polynomial? His proof uses the growth to show that the susceptibility is finite at p_c in a spherically-averaged sense via a comparison with a branching random walk with killing at rate given by the growth; I believe the argument requires exponential growth for the comparison to be uniform, so intermediate growth is a genuine gap. Recorded: the open cases are polynomial growth (degree 3 to 10 and non-abelian nilpotent) and intermediate growth. Obstruction: Polynomial growth is the Z^d problem; intermediate growth defeats the exponential-growth comparison.\nRefers to the open problem node open-problem-c0084-no-infinite-cluster-at-criticality-on-quasi-transitive-graphs-with-p-c\nNo independent review; result status attempted_unsolved"
+        }
+      ]
+    }
+  ],
+  "teams": [],
+  "mesh_error": "database is locked",
+  "canonical_path_checks": [
+    {
+      "path": "~\\math-research-brain",
+      "exists": true
+    },
+    {
+      "path": "~\\math_research_brain",
+      "exists": false
+    }
+  ]
+}

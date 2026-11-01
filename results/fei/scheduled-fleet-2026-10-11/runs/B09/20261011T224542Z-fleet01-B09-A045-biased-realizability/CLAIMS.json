@@ -1,0 +1,49 @@
+{
+  "schema": "fei-run-claims/2",
+  "claims": [
+    {
+      "claim_id": "B09-A045-BIASED-REALIZABILITY-DOMAIN",
+      "version": 1,
+      "exact_statement": "For every n and every interior product bias p in (0,1)^n, a real coefficient vector a is the normalized product-Fourier transform of a Boolean sign on the positive-mass cube if and only if all Fourier coefficients of (sum_S a_S phi_S)^2-1 vanish; equivalently it satisfies equation (2.1). Finite uniform Boolean encoders realize exactly dyadic output probabilities, deterministic coordinates must be contracted, and repeated nondeterministic physical children do not induce the disjoint product law.",
+      "hypotheses": [
+        "finite Boolean cube",
+        "interior independent product bias for the normalized-basis equivalence",
+        "real signed coefficients, not only squared masses",
+        "entropy convention 0 log(1/0)=0",
+        "disjoint physical child blocks for product composition"
+      ],
+      "statement_sha256": "1039c10e5045c87f6666ff49df217468bf738e72f53ba833e36dfc7379cd8dd1",
+      "contributors": [
+        "fleet01/B09 A045 run"
+      ],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "ae4d456b516823240951be440e9603277e68f7bb",
+        "path": "reports/fei-2026-10-11/runs/B09/20261011T224542Z-fleet01-B09-A045-biased-realizability/REPORT.md",
+        "section": "2-4"
+      },
+      "proof_dependencies": [
+        "finite-dimensional orthonormal product Fourier inversion",
+        "source product-bias conventions at biased.tex blob b620357b573b2906e8cb2df5966576c27ce3ffcd"
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "Parseval and nonnegative squared masses suffice for biased Boolean realizability",
+        "repeated nondeterministic physical children may be treated as independent product inputs",
+        "the dyadic encoder infimum automatically defines an all-real-bias gate potential"
+      ],
+      "first_unproved_line": "No arity-uniform potential satisfying the universal gate inequality has been constructed.",
+      "next_consumers": [
+        "A041",
+        "A043",
+        "A044",
+        "A091",
+        "A090",
+        "B20"
+      ]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

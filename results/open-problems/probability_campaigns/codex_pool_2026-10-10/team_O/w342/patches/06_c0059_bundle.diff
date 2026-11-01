@@ -1,0 +1,134 @@
+--- a/~/math-brain-inbox/w342/bundle_006.json
++++ b/~/math-brain-inbox/w342/bundle_006.json
+@@ -0,0 +1,131 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w342",
++  "bundle_slug": "w342-c0059-partial-results",
++  "entries": [
++    {
++      "key": "c0059-w342-result-scope",
++      "namespace": "probability.research.attempts",
++      "logical_name": "c0059-w342-result-scope",
++      "kind": "concept",
++      "title": "Result scope and audit status for C0059",
++      "statement": "The cached Curien problem asks whether the dual infinite Boltzmann map is transient for type a in [2,5/2). The constructed recurrent and transient quartic-growth trees refute a volume-growth inference; neither is claimed to have the Boltzmann-map law. The original question is unresolved here. Proofs await w346 KEEP.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0059:c0059-w342-result-scope",
++        "url": "file:///~/brain_workers/w342/proofs/C0059.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "binary-stretched-tree-quartic-growth-finite-energy",
++      "namespace": "probability.random-walks",
++      "logical_name": "binary-stretched-tree-quartic-growth-finite-energy",
++      "kind": "lemma",
++      "title": "Finite-energy unit flow in a quartic-growth tree",
++      "statement": "Replace each generation-n edge in a binary tree by a path of length 2^{floor(n/3)}, with unit resistances. The resulting degree-three planar tree has quartic volume growth. Equal splitting at each branch gives a unit flow to infinity with energy sum_{n>=0}2^{floor(n/3)}/2^{n+1}=7/6, hence the tree is transient.",
++      "proof_text": "# C0059: quartic volume growth does not decide transience\n\nStatus: proof of a refuted route, awaiting w346. Neither graph below is claimed to have the Boltzmann-map law. The cached Curien question for a in [2,5/2) remains unresolved here. Recurrence at the excluded endpoint 5/2 does not imply recurrence for nearby parameters.\n\nThere are locally finite planar trees of maximum degree three, both with |B(o,R)|=Theta(R^4), with opposite recurrence behavior.\n\n**Recurrent example.** Start with the ray 0,1,2,..., with all edge resistances one. At each spine vertex n>=2 attach by one edge a finite full binary tree of depth floor(3 log_2 n). That finite tree has between n^3-1 and 2n^3-1 vertices. Its depth is O(log n), so for all sufficiently large R the entire trees attached at n<=R/2 lie in B(0,R). Summing their sizes gives an Omega(R^4) lower bound. The sum of all trees at n<=R gives the O(R^4) upper bound. Degrees are at most three.\n\nEvery excursion into an attached finite tree returns to the spine almost surely. After such excursions are omitted, the walk on the spine is the symmetric reflected nearest-neighbor walk on a ray, which is recurrent. Equivalently, any unit flow to infinity must carry zero current through finite attached subtrees and current one along every spine edge, so its energy is infinite. An exhaustion including each entire attached tree has effective resistance to spine vertex R equal to R.\n\n**Transient example.** In an infinite binary tree, replace each edge from generation n to generation n+1 by a path of length ell_n=2^{floor(n/3)}. Maximum degree is three. At the end of generation 3k, distance from the root is 3(2^k-1), and the number of vertices through that generation is\n\n    1 + 14(16^k-1)/15.\n\nSuccessive displayed radii have bounded ratio, which proves quartic ball growth for all large radii. Send unit flow equally among the two children at every branch. An edge between generations n and n+1 carries 2^{-(n+1)}, and there are 2^{n+1} such edges, each with ell_n unit resistances. The total energy is\n\n    sum_{n>=0} ell_n/2^{n+1}\n      = sum_{k>=0} (7/8)4^{-k} = 7/6 < infinity.\n\nThe finite-energy unit flow proves transience.\n\nConsequently polynomial volume growth, even with the same exponent and a bounded degree assumption, cannot prove the dual Boltzmann-map transience question. A proof must produce finite-energy current (or an equivalent escape criterion) using the actual law of the map. A finite Nash-Williams LOWER bound alone cannot establish transience.\n\nSource: C0059-A001's degree/volume heuristic and the cached Curien Corollary 38 and open question. The two graphs and their resistance computations are campaign work.\n",
++      "assumptions": [
++        "Unit edge resistances"
++      ],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0059:binary-stretched-tree-quartic-growth-finite-energy",
++        "url": "file:///~/brain_workers/w342/proofs/C0059.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "quartic-volume-degree-three-trees-recurrence-undetermined",
++      "namespace": "probability.random-walks",
++      "logical_name": "quartic-volume-degree-three-trees-recurrence-undetermined",
++      "kind": "theorem",
++      "title": "Quartic volume and bounded degree permit either recurrence behavior",
++      "statement": "There exist two locally finite planar trees with maximum degree three and |B(o,R)|=Theta(R^4), one recurrent and one transient. The recurrent tree is a ray with finite binary trees of depth floor(3log_2 n) attached at spine vertex n>=2. The transient tree has each generation-n binary-tree edge stretched by 2^{floor(n/3)}. These examples refute volume-growth-only recurrence inferences; neither is asserted to be a Boltzmann map.",
++      "proof_text": "# C0059: quartic volume growth does not decide transience\n\nStatus: proof of a refuted route, awaiting w346. Neither graph below is claimed to have the Boltzmann-map law. The cached Curien question for a in [2,5/2) remains unresolved here. Recurrence at the excluded endpoint 5/2 does not imply recurrence for nearby parameters.\n\nThere are locally finite planar trees of maximum degree three, both with |B(o,R)|=Theta(R^4), with opposite recurrence behavior.\n\n**Recurrent example.** Start with the ray 0,1,2,..., with all edge resistances one. At each spine vertex n>=2 attach by one edge a finite full binary tree of depth floor(3 log_2 n). That finite tree has between n^3-1 and 2n^3-1 vertices. Its depth is O(log n), so for all sufficiently large R the entire trees attached at n<=R/2 lie in B(0,R). Summing their sizes gives an Omega(R^4) lower bound. The sum of all trees at n<=R gives the O(R^4) upper bound. Degrees are at most three.\n\nEvery excursion into an attached finite tree returns to the spine almost surely. After such excursions are omitted, the walk on the spine is the symmetric reflected nearest-neighbor walk on a ray, which is recurrent. Equivalently, any unit flow to infinity must carry zero current through finite attached subtrees and current one along every spine edge, so its energy is infinite. An exhaustion including each entire attached tree has effective resistance to spine vertex R equal to R.\n\n**Transient example.** In an infinite binary tree, replace each edge from generation n to generation n+1 by a path of length ell_n=2^{floor(n/3)}. Maximum degree is three. At the end of generation 3k, distance from the root is 3(2^k-1), and the number of vertices through that generation is\n\n    1 + 14(16^k-1)/15.\n\nSuccessive displayed radii have bounded ratio, which proves quartic ball growth for all large radii. Send unit flow equally among the two children at every branch. An edge between generations n and n+1 carries 2^{-(n+1)}, and there are 2^{n+1} such edges, each with ell_n unit resistances. The total energy is\n\n    sum_{n>=0} ell_n/2^{n+1}\n      = sum_{k>=0} (7/8)4^{-k} = 7/6 < infinity.\n\nThe finite-energy unit flow proves transience.\n\nConsequently polynomial volume growth, even with the same exponent and a bounded degree assumption, cannot prove the dual Boltzmann-map transience question. A proof must produce finite-energy current (or an equivalent escape criterion) using the actual law of the map. A finite Nash-Williams LOWER bound alone cannot establish transience.\n\nSource: C0059-A001's degree/volume heuristic and the cached Curien Corollary 38 and open question. The two graphs and their resistance computations are campaign work.\n",
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0059:quartic-volume-degree-three-trees-recurrence-undetermined",
++        "url": "file:///~/brain_workers/w342/proofs/C0059.md",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0059-w342-validation-evidence",
++      "namespace": "probability.research.attempts",
++      "logical_name": "c0059-w342-validation-evidence",
++      "kind": "concept",
++      "title": "Finite validation evidence for C0059",
++      "statement": "Measured validation evidence for C0059: {\"command\": \"python -X utf8 verify_remaining.py\", \"finite_energy_limit\": \"7/6\", \"generation_checks\": 12, \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"last_generation\": {\"flow_energy\": \"39146835/33554432\", \"generation\": 36, \"radius\": 12285, \"vertices\": 262709978263279}, \"scope\": \"explicit transient tree construction; Boltzmann law not modeled\", \"seconds\": 0.001, \"violations\": 0}. These finite checks support the written proof and do not replace its independent audit or establish the full open problem.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory and related mathematics",
++      "source": {
++        "source_id": "owner:w342:C0059:c0059-w342-validation-evidence",
++        "url": "file:///~/brain_workers/w342/c0059_measurements.json",
++        "revision": "author-proof-pending-w346-2026-10-10",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "quartic-volume-degree-three-trees-recurrence-undetermined",
++      "kind": "depends_on",
++      "rationale": "FROM \"There exist two locally finite planar trees with maximum degree three and |B(o,R)|=Theta(R^4), one recurrent and one transient. The recurrent tree is a ray with finite binary trees of depth floor(3log_2 n) attached at spine vertex n>=2. The transient tree has\"; TO \"Replace each generation-n edge in a binary tree by a path of length 2^{floor(n/3)}, with unit resistances. The resulting degree-three planar tree has quartic volume growth. Equal splitting at each branch gives a unit flow to infinity with energy\"; The explicit finite-energy half of the two-graph construction gives transience.",
++      "to_key": "binary-stretched-tree-quartic-growth-finite-energy"
++    },
++    {
++      "from_key": "c0059-w342-result-scope",
++      "kind": "cites",
++      "rationale": "FROM \"The cached Curien problem asks whether the dual infinite Boltzmann map is transient for type a in [2,5/2). The constructed recurrent and transient quartic-growth trees refute a volume-growth inference; neither is claimed to have the Boltzmann-map law. The\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Let q be a critical weight sequence of type a in [2, 5/2); is the dual map m-dagger of the infinite Boltzmann map of the plane transient for simple random walk under\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.planarmaps:open-problem-c0059-transience-of-the-dual-infinite-boltzmann-map-for-a-in-2-5-2"
++    },
++    {
++      "from_key": "binary-stretched-tree-quartic-growth-finite-energy",
++      "kind": "cites",
++      "rationale": "FROM \"Replace each generation-n edge in a binary tree by a path of length 2^{floor(n/3)}, with unit resistances. The resulting degree-three planar tree has quartic volume growth. Equal splitting at each branch gives a unit flow to infinity with energy\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Let q be a critical weight sequence of type a in [2, 5/2); is the dual map m-dagger of the infinite Boltzmann map of the plane transient for simple random walk under\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.planarmaps:open-problem-c0059-transience-of-the-dual-infinite-boltzmann-map-for-a-in-2-5-2"
++    },
++    {
++      "from_key": "binary-stretched-tree-quartic-growth-finite-energy",
++      "kind": "cites",
++      "rationale": "FROM \"Replace each generation-n edge in a binary tree by a path of length 2^{floor(n/3)}, with unit resistances. The resulting degree-three planar tree has quartic volume growth. Equal splitting at each branch gives a unit flow to infinity with energy\"; TO \"The cached Curien problem asks whether the dual infinite Boltzmann map is transient for type a in [2,5/2). The constructed recurrent and transient quartic-growth trees refute a volume-growth inference; neither is claimed to have the Boltzmann-map law. The\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "c0059-w342-result-scope"
++    },
++    {
++      "from_key": "quartic-volume-degree-three-trees-recurrence-undetermined",
++      "kind": "cites",
++      "rationale": "FROM \"There exist two locally finite planar trees with maximum degree three and |B(o,R)|=Theta(R^4), one recurrent and one transient. The recurrent tree is a ray with finite binary trees of depth floor(3log_2 n) attached at spine vertex n>=2. The transient tree has\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Let q be a critical weight sequence of type a in [2, 5/2); is the dual map m-dagger of the infinite Boltzmann map of the plane transient for simple random walk under\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.planarmaps:open-problem-c0059-transience-of-the-dual-infinite-boltzmann-map-for-a-in-2-5-2"
++    },
++    {
++      "from_key": "quartic-volume-degree-three-trees-recurrence-undetermined",
++      "kind": "cites",
++      "rationale": "FROM \"There exist two locally finite planar trees with maximum degree three and |B(o,R)|=Theta(R^4), one recurrent and one transient. The recurrent tree is a ray with finite binary trees of depth floor(3log_2 n) attached at spine vertex n>=2. The transient tree has\"; TO \"The cached Curien problem asks whether the dual infinite Boltzmann map is transient for type a in [2,5/2). The constructed recurrent and transient quartic-growth trees refute a volume-growth inference; neither is claimed to have the Boltzmann-map law. The\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "c0059-w342-result-scope"
++    },
++    {
++      "from_key": "c0059-w342-validation-evidence",
++      "kind": "cites",
++      "rationale": "FROM \"Measured validation evidence for C0059: {\"command\": \"python -X utf8 verify_remaining.py\", \"finite_energy_limit\": \"7/6\", \"generation_checks\": 12, \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"last_generation\":\"; TO \"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Let q be a critical weight sequence of type a in [2, 5/2); is the dual map m-dagger of the infinite Boltzmann map of the plane transient for simple random walk under\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
++      "to_existing_logical": "math:probability.planarmaps:open-problem-c0059-transience-of-the-dual-infinite-boltzmann-map-for-a-in-2-5-2"
++    },
++    {
++      "from_key": "c0059-w342-validation-evidence",
++      "kind": "cites",
++      "rationale": "FROM \"Measured validation evidence for C0059: {\"command\": \"python -X utf8 verify_remaining.py\", \"finite_energy_limit\": \"7/6\", \"generation_checks\": 12, \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"last_generation\":\"; TO \"The cached Curien problem asks whether the dual infinite Boltzmann map is transient for type a in [2,5/2). The constructed recurrent and transient quartic-growth trees refute a volume-growth inference; neither is claimed to have the Boltzmann-map law. The\"; The scope card states the unresolved part and the pending independent audit.",
++      "to_key": "c0059-w342-result-scope"
++    }
++  ]
++}

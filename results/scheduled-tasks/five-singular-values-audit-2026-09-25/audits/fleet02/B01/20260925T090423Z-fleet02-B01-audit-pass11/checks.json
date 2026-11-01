@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+    "tex_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+    "tex_lines": 675,
+    "pdf_blob": "8be3aae36ecad7a9dc9b7c95978aad09499f32d0",
+    "pdf_bytes": 484310,
+    "pdf_sha256_recomputed": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+    "pdf_header": "%PDF-1.5",
+    "rendered_visual_equivalence": "UNCHECKED_private_pdf_not_accessible_to_screenshot_route"
+  },
+  "numerical_diagnostics": {
+    "C3": 14.818337662843,
+    "C2": 12.095072570796486,
+    "gamma1": 0.3846763769597346,
+    "gamma2": 0.23736246421253723,
+    "gamma3": 0.09004855146533981,
+    "C3_over_gamma3": 164.55942290805933,
+    "C2_over_sqrt_gamma2": 24.82575456311178,
+    "gaussian_small_ball_coefficient": 18.25531919676703,
+    "L0": 7.8888779583328805,
+    "diagonal_truncated_halfmoment": 75.14307501039998,
+    "diagonal_density_branch": 266.7358243656071,
+    "definite_pair_branch": 50.26548245743669,
+    "indefinite_pair_branch": 266.95134633033405
+  },
+  "rigorous_spot_checks": [
+    "gamma_m=(44-5*sqrt(2)*(2m-1))/96 and sqrt(2)<1.4143 give gamma1>0.38, gamma2>0.237, gamma3>0.09.",
+    "Gamma(1/4)=int_0^infty t^(-3/4)e^(-t)dt. On [0,1], e^(-t)<=1-t+t^2/2-t^3/6+t^4/24 gives <=4-4/5+2/9-2/39+1/102<3.381; the tail is <e^(-1)<0.368; hence Gamma(1/4)<3.749 and the line-465 coefficient is <19.",
+    "pi<3.1416, log(2)<0.6932, log(19)<3, sqrt(12)<3.465 give the printed diagonal-pivot <76 truncated bound.",
+    "The same log/e enclosures give the indefinite-pair branch <269.",
+    "Y=KX has density cap 1 and Q=(s/K^2)Qtilde, so density scales by K^2/s exactly."
+  ],
+  "pdf_page_line_map": [
+    [
+      1,
+      1,
+      72
+    ],
+    [
+      2,
+      73,
+      127
+    ],
+    [
+      3,
+      128,
+      162
+    ],
+    [
+      4,
+      163,
+      207
+    ],
+    [
+      5,
+      208,
+      250
+    ],
+    [
+      6,
+      251,
+      306
+    ],
+    [
+      7,
+      307,
+      360
+    ],
+    [
+      8,
+      361,
+      395
+    ],
+    [
+      9,
+      396,
+      442
+    ],
+    [
+      10,
+      443,
+      492
+    ],
+    [
+      11,
+      493,
+      540
+    ],
+    [
+      12,
+      541,
+      581
+    ],
+    [
+      13,
+      582,
+      640
+    ],
+    [
+      14,
+      641,
+      675
+    ]
+  ],
+  "status": "PASS_DIAGNOSTICS_WITH_LITERAL_SOURCE_GAPS_RECORDED_IN_COVERAGE"
+}

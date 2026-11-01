@@ -1,0 +1,10 @@
+{
+  "reviewer": "w551",
+  "source": "~\\brain_workers\\w551\\REVIEW_PACKET.md",
+  "verdict": "KEEP",
+  "scope": "G1-G6 conditional geometric and covariance bridge only",
+  "phase_existence_kept": false,
+  "all_bundle_entries_reviewed": false,
+  "two_account_admission_verified": false,
+  "review_quote": "Delaunay localization\n\nVerdict: **KEEP as a conditional geometric bridge; no P0321 solution.** Independently rederived the hardest step, G1: for `|z-x|=t>=r`, a witness within `r/32` of one of six sites `(r/2)u_j` has `z·(q-p_x) >= 7tr/32`. With `|q-x|<17r/32`, the squared-distance difference is at least `(7/16)tr-(289/1024)r² >=159r²/1024>0`. Thus the cell is inside `B(x,r)`. For `z` inside that ball, an outside-`B(x,3r)` nucleus is at distance at least `2r`, whereas `p_x` is within `9r/8`; no outside nucleus can cut the cell. Any edge neighbor lies within `17r/8<3r`. This reproduces the local mark under the stated geometric event.\n\nG2 uses seven empty-disk events and only a union bound; `E|F-F_r|<=7V(r/32)`. G3's real covariance layer-cake bound is `4 alpha`; expanding two complex parts yields `16 alpha`. The joint expectation and product of means each cost one error for each of two variables, hence `4*7V=28V`. G4, G5 and G6 follow by the stated substitutions. In G5 the growing window is `O((log D)^(1/nu))`, leaving `D-6r>=D/2`; the conclusion is only an obstruction under a *uniform growing-window alpha-mixing hypothesis*. Pair-density decay does not imply that hypothesis. G6's rearrangement gives `alpha>=cD^(-eta)/32` when the void term is at most half the putative signal.\n\nResidual gap: no verified void or growing-window mixing bounds for the selected Riesz Gibbs state, and above all no algebraic lower bound for its actual Delaunay bond correlation. General-position and bounded-cell assumptions are hypotheses, not established properties of the selected state. The spatial nearest-cell mark is not interchangeable with a two-particle Palm mark."
+}

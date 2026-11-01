@@ -1,0 +1,33 @@
+Exact rational/Sturm verification for R7-05 / E0018
+
+Matrices before scalar shift:
+B0 = Matrix([[1/4, -1/2], [1/2, -1/4]])
+B1 = Matrix([[2/3, 1/3], [7/12, -2/3]])
+h = 1/3
+
+CASE left_lower: r=1/20, K=12, sense=lower
+  mode=0: degree=26, real_roots=0, V(-inf)=13, V(+inf)=13, P(0)=187987/60000000, LC=44351/12000000
+  mode=1: degree=26, real_roots=0, V(-inf)=13, V(+inf)=13, P(0)=2392253/60000000, LC=321057833/12000000
+  VERIFIED: a_i + L_r phi_i > 1/3 for both modes on RP^1
+
+CASE middle_upper: r=1, K=4, sense=upper
+  mode=0: degree=10, real_roots=0, V(-inf)=5, V(+inf)=5, P(0)=25471/3000000, LC=12649/3000000
+  mode=1: degree=10, real_roots=0, V(-inf)=5, V(+inf)=5, P(0)=919/15000, LC=2350847/3000000
+  VERIFIED: a_i + L_r phi_i < 1/3 for both modes on RP^1
+
+CASE right_lower: r=10, K=4, sense=lower
+  mode=0: degree=10, real_roots=0, V(-inf)=5, V(+inf)=5, P(0)=34511/75000, LC=2629/37500
+  mode=1: degree=10, real_roots=0, V(-inf)=5, V(+inf)=5, P(0)=32191/75000, LC=24161/75000
+  VERIFIED: a_i + L_r phi_i > 1/3 for both modes on RP^1
+
+Shifted source matrices:
+A0 = B0-(1/3)I = Matrix([[-1/12, -1/2], [1/2, -7/12]])
+A1 = B1-(1/3)I = Matrix([[1/3, 1/3], [7/12, -1]])
+
+Conclusion certified by the pointwise-corrector/Dynkin argument:
+  top radial exponent for (A0,A1) is positive at r=1/20,
+  negative at r=1,
+  positive at r=10.
+The inequalities are strict. Because the same finite trigonometric correctors vary continuously with r, their strict signs persist on open neighborhoods of all three rates. Hence the literal instability set has at least two connected components.
+
+Important scope note: this certifies the literal wording of Malrieu Open question 3, which asks to choose two real 2x2 matrices. The displayed A1 and the average (A0+A1)/2 are not Hurwitz, so this does not resolve the stronger contextual variant in which both individual matrices and their average are required to be Hurwitz.

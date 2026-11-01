@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "run_id": "20260925T094431Z-fleet02-B09-repaired-r01",
+  "source_lines": 683,
+  "source_lines_read": 683,
+  "mathematical_pass_complete": true,
+  "durable_line_ledgers": {
+    "401-500": "written/readback",
+    "601-683": "written/readback",
+    "1-100": "write blocked by platform safety",
+    "101-200": "write blocked by platform safety",
+    "201-300": "write blocked by platform safety",
+    "301-400": "write blocked by platform safety",
+    "501-600": "write blocked by platform safety"
+  },
+  "in_memory_reviewed_ranges": [
+    "1-100",
+    "101-200",
+    "201-300",
+    "301-400",
+    "401-500",
+    "501-600",
+    "601-683"
+  ],
+  "exception_lines": [
+    511,
+    74
+  ],
+  "bibliography_metadata": "UNCHECKED",
+  "rendered_pdf_pages": "UNCHECKED",
+  "note": "Blocked detailed ledger writes were not retried through alternate paths. FINDINGS.json records the substantive verdict and new gap."
+}

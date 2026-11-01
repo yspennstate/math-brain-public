@@ -1,0 +1,50 @@
+[
+  {
+    "claim_id": "A038-POINTDEFECT-TREE-RELEASE",
+    "version": 1,
+    "exact_statement": "For f_n=1-2*1_{x=0}, n>=2, every adaptive physical singleton tree querying nonconstant nodes to constant leaves has one active k-bit node of probability 2^(k-n), d_k=2^(1-k). Let Delta_n=TC(f_n), L=log2(e), d=d_n, I_n=nd, and G_n,C_n,J_n be accumulated Gamma, occupancy mutual information and child-mixture JS. Then Delta_n+J_n=G_n+C_n and G_n=n h2(d)-sum_{k=1}^n 2^(k-n)h2(d_k). With A_n=n(n-1)/2, A_n d<=G_n<=(A_n+2L)d and [2(n-1)-1]d<=J_n<=[2(n-1)+4L-1]d. Thus G_n/Delta_n->1/2, C_n/Delta_n->1/2, J_n/Delta_n->0. Under the actual common coherent reveal kernel applied to both source and product reference, accumulated Bayes-outcome KL O_n satisfies 0<=O_n<=8Ld and accumulated signed reset R_n=O_n+J_n-G_n has R_n/Delta_n->-1/2. In particular G_n/I_n>=(n-1)/2 for every full singleton coordinate order; no universal O(I) aggregate Gamma payment exists on these trees.",
+    "hypotheses": [
+      "finite uniform physical cube; genuine Boolean one-point defects; translations/global sign allowed",
+      "full fair adaptive singleton-coordinate restriction tree querying each nonconstant state to constants; no reused physical coordinate",
+      "all information in bits; Delta=K_full-vK_occ=TC on this family; K_occ uses the source-exact nonempty I-projection",
+      "common actual signed-coherent kernel and Bayes-predicted references; actual child support and deterministic endpoints retained",
+      "asymptotic ratios involving Delta only for n>=3; Delta_2=0 and JS injection is retained"
+    ],
+    "statement_sha256": "175e1211fe50d4db03755c8750049944b609655723d49751a46cbf517192fce4",
+    "contributors": [
+      "A038"
+    ],
+    "proof_source": {
+      "path": "~/brain_workers/FEI100_20261011/agents/A038/runs/20261012T012321Z-fleet05-A038-occupancy-term-audit/DERIVATION.md",
+      "sections": "Full-tree release; Explicit bounds; Bayes-compatible signed reset"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A038-OCCUPANCY-CROSSLAW-AUDIT",
+        "version": 1,
+        "scope": "source definition and point-defect normalization only; independently accepted at this partial scope by A039; derivation repeated directly for the current application",
+        "source": "../20261011T221733Z-fleet05-A038-occupancy-term-audit/REPORT.md"
+      },
+      {
+        "source": "A039 20261011T223903Z DERIVATION.md equation (3)",
+        "scope": "Bayes kernel/reset definitions; specialized identity independently reconstructed, no universal payment assumed"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPED_LEAD_TARGET_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "finite universal A with sum_h w_h Gamma_h<=A I(f_n) for some choice of full adaptive singleton coordinate tree on every point defect"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A037",
+      "A039",
+      "A040",
+      "A064",
+      "A088",
+      "A094",
+      "B20"
+    ]
+  }
+]

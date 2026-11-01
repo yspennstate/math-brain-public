@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "run_id": "20260925T030745Z-fleet02-B20-five-short-audit-r3",
+  "literal_source_status": "GAP_FALSE_LOCALLY_REPAIRABLE",
+  "repaired_chain_status": "NO_FURTHER_THEOREM_OBSTRUCTION_FOUND_THIS_PASS",
+  "issues": [
+    {
+      "id": "C04",
+      "lines": "41",
+      "page": 1,
+      "status": "FALSE",
+      "impact": "abstract only",
+      "repair": "qualify random-sign conversion by no-pivot/small-entry hypothesis"
+    },
+    {
+      "id": "C07",
+      "lines": "62",
+      "page": 1,
+      "status": "UNCHECKED",
+      "impact": "no proof dependency"
+    },
+    {
+      "id": "C05",
+      "lines": "65",
+      "page": 1,
+      "status": "FALSE",
+      "impact": "outline only",
+      "repair": "say upper envelope rather than singularity"
+    },
+    {
+      "id": "C06",
+      "lines": "148",
+      "page": 3,
+      "status": "PASS_EDITORIAL",
+      "impact": "none",
+      "repair": "Both -> All three"
+    },
+    {
+      "id": "B19-N01",
+      "lines": "222",
+      "page": 5,
+      "status": "REJECTED_PEER_ISSUE",
+      "impact": "none",
+      "reason": "'factors ... are at most one' means each factor value is <=1; it does not assert cardinality of zero-beta indices"
+    },
+    {
+      "id": "C02",
+      "lines": "319-321",
+      "page": 7,
+      "status": "GAP",
+      "impact": "hub/decay descendants",
+      "repair": "insert |E F|^2 <= E|F|^2"
+    },
+    {
+      "id": "C01",
+      "lines": "412",
+      "page": 9,
+      "status": "FALSE",
+      "impact": "definite-pair profile",
+      "repair": "open angular chart / omit one null ray"
+    },
+    {
+      "id": "C03",
+      "lines": "416,441",
+      "pages": "9-10",
+      "status": "GAP",
+      "impact": "indefinite-pair absolute continuity",
+      "repair": "critical level is union of two affine lines, hence null"
+    },
+    {
+      "id": "LIT",
+      "lines": "74,651-671",
+      "pages": "2,14",
+      "status": "UNCHECKED_METADATA",
+      "impact": "none"
+    }
+  ],
+  "direct_pdf_visual_status": "BLOCKED_DISABLED_ERROR"
+}

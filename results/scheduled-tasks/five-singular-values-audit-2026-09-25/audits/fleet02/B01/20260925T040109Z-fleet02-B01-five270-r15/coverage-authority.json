@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B01",
+  "run_id": "20260925T040109Z-fleet02-B01-five270-r15",
+  "authoritative_coverage": "coverage-v2.jsonl",
+  "superseded_coverage": "coverage.jsonl",
+  "reason": "Readback caught a ledger-generation classification bug in v1: the structural-line heuristic treated source lines beginning with \\item as NOT_MATHEMATICAL even when the same physical line contained a substantive theorem clause. v2 narrows that heuristic to item-only marker lines and records substantive item lines as mathematical.",
+  "affected_source_lines": [85,86,87,166,167,211,212,383,384,385,532,533,589,590],
+  "corrected_status_for_affected_lines": "PASS",
+  "mathematical_audit_change": "none; the underlying clauses had been source-read and checked in the pass. This correction fixes only the persisted line-ledger classification.",
+  "coverage_records_v2": 691,
+  "tex_lines_covered": "1-675",
+  "rendered_pdf_page_mapping_note": "PDF-page cross references use the source-pinned page map; screenshot-level glyph/source equivalence remains UNCHECKED because a screenshot-capable route to the private PDF was unavailable."
+}

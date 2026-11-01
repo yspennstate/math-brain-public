@@ -1,0 +1,28 @@
+fleet01/B07 r44 deterministic/numerical regression notes
+
+These checks are not proof evidence; the proof is in REPORT.md.
+
+Live constants:
+W0 = 0.029938528464044364
+theta = 1/96
+HUB star lower bound W0/768 = 3.8982458937557764e-5
+THREE-DISJOINT packet fraction c_theta = 1/5668704
+THREE-DISJOINT per-packet lower bound W0/5668704 = 5.28137092076855e-9
+HUB slope/transverse one-of-three lower bound W0/2304 = 1.2994152979185922e-5
+
+Hub identity regression:
+For 1000 random finite arrays a,b,(c_s),(d_s), direct expansion of
+sum_{s,c,d}(a_c d_{s,d}-b_d c_{s,c})^2
+was compared with
+||a||^2||b||^2 sum_s(alpha_s-beta_s)^2
++||a||^2 sum_s||t_s||^2
++||b||^2 sum_s||r_s||^2.
+Maximum absolute floating-point discrepancy: 1.0231815394945443e-12.
+
+Partner numerical application:
+r=24
+eta=D0=5.438340267613160e-4
+d=2D0
+2*sqrt(12*pi*(r+3))/(d-eta) = 117330.53742994918.
+
+STATUS=PASS

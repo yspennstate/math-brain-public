@@ -1,0 +1,2 @@
+STATE: A016 stage6 complete: SAME-reference second private query paid once with conversion and four rate4 terminals, all k>=3; later constant terminal CE>4I for k>=6; 13,025 exact assertions PASS; partial A020 review; FEI OPEN.
+NEXT: Pay exact inherited constant-terminal excess from SAME remaining private bank; derive branch-weighted signed terminal-deficit invariant for arbitrary nonflat children; A020/A019/A018/A090/A091/A094 review.

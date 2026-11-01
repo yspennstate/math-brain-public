@@ -1,0 +1,3 @@
+The frozen v1 pilot stopped at certificate serialization of the first selector root: Python 3.14's Fraction.__str__ exceeded its 4300-digit integer conversion limit. No numerical sign assertion failed before that point. The original helper is preserved as code/check_reserve_v1.py. No claim of a completed v1 validation or observed v1 runtime is made.
+
+Repair: round each already rigorously enclosed logarithm outward to a denominator 2^120 by exact rational floor/ceiling. This preserves interval containment and makes all exported fractions compact. It does not use floating-point arithmetic for any sign. The v2 domain is unchanged; the new proof lowers C from 7 to 6, so rerunning the certificates is mathematically necessary.

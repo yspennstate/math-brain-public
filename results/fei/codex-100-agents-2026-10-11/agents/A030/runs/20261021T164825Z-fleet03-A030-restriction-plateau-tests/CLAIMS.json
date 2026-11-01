@@ -1,0 +1,54 @@
+[
+  {
+    "claim_id": "A030-THREE-STATE-BOOLEAN-CUT-RESERVE",
+    "version": 2,
+    "exact_statement": "For any finite uniform physical controller partition (C_0,C_1,C_2) and independent Boolean cores u_j on disjoint private blocks having a common mean m, put q_j=E C_j, V=1-m^2, h_j=1-2C_j, F=u_kappa and phi(s)=-s log2(s), phi(0)=0. With L(q)=phi(q^2)-phi((1-2q)^2)/4+2q(1-q), H(F)=sum_j q_j H(u_j)+(V/4)sum_j H(h_j)+V sum_j L(q_j). For every actual controller coordinate i, R=V sum_j phi(q_j), E_i=D_i(F)-(V/4)sum_j D_i(h_j)-(R-E R_child) obeys E_i<=14 Inf_i(F), uniformly in all controller/core dimensions and m in [-1,1]. If r_j are supplied C-priced own-history controller potentials under ONE common controller policy, the original P=(V/4)sum_j r_j plus R is a (C+14)-priced controller potential retaining both actual child continuations. More exactly D_i(F)-C Inf_i(F)-(P+R)+E(P_child+R_child)=E_i-s_i, with s_i the actual nonnegative unused cut-transaction slack. At the surjective table (0,0,0,0,1,1,1,2), three independent two-bit point-defect cores of mean 1/2, query 2 and subsequent order 0,1 at C=1, s_i=3/16 while E_i-s_i=(27/64)log2(3)-9/16 lies strictly between 1/10 and 7/64. A separate exact ten-bit mixed-tree certificate with both actual initial data children verifies original P+R+sum q_j Q_1(u_j) at price15 on all1023 internal nodes and zero terminal reserves. No arbitrary unequal-mean continuation, shared-core extension, initial cut-reserve admission, universal FEI bound or Lean certificate is asserted. This adds an equal-mean correction and exact non-flat transaction to the existing A030 three-state cut-reserve candidate; the previous version remains preserved at its original scope.",
+    "hypotheses": [
+      "Finite uniform cubes; actual Boolean sign cores; all entropies bits",
+      "Three exclusive labels; zero-probability and constant endpoints allowed",
+      "Independent disjoint private data blocks; common current core mean for the analytic controller theorem",
+      "ONE prescribed own-history controller policy and inherited C-priced cut potentials; C>=0",
+      "The finite mixed-tree certificate retains its unequal-mean sibling but does not extend the analytic hypothesis",
+      "Existing v1 scope preserved; this version adds the specified diagonal correction only"
+    ],
+    "statement_sha256": "9ec54a7662b95fc8c5f2593c01bfe4093b06fa72d10d6fccfa9dfcdbf01198cf",
+    "contributors": [
+      "A030; harmonic cut reserve and rarity accounts credited to A064/A038 and original A030 v1"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/check.py",
+      "out/VALIDATION.json",
+      "code/verify_continuation.py",
+      "out/CONTINUATION.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A030-THREE-STATE-BOOLEAN-CUT-RESERVE",
+        "version": 1,
+        "scope": "Original harmonic cut interface; its three-label weights and physical coupling are explicitly reconstructed here. No imported DATA payment is needed for the new analytic controller theorem or finite certificate."
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTIC_PROOF_AND_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW; LEAN_RUNTIME_UNVERIFIED",
+    "supersedes": [
+      {
+        "claim_id": "A030-THREE-STATE-BOOLEAN-CUT-RESERVE",
+        "version": 1,
+        "scope": "Additional equal-mean correction and finite transaction; old report and old scope preserved"
+      }
+    ],
+    "refutes": [
+      "On the declared non-flat surjective witness, E_i<=s_i (no additional controller price from the original P+R transaction)"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A029",
+      "A064",
+      "A087",
+      "A091",
+      "A094",
+      "B06"
+    ]
+  }
+]

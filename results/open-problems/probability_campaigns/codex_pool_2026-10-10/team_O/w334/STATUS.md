@@ -1,0 +1,8 @@
+STATE: WORKING
+NEXT: Save the typed bundles and quoted edges, validate them offline, and hand the proof manifest to w346.
+
+2026-10-10: Started team O assignment. Read PRIMARY_DIRECTIVE.md. No w334 entry was found in the hook audit assignments. All working artifacts will be saved inside this folder; no live store or test material will be edited.
+2026-10-10: Saved the first status correction to results.jsonl. Queried the math store read-only for the ten assigned IDs and saved only matching cards in store_cards.json. P0193 has both an older unconditional title and a later candidate-status replacement; do not duplicate the unconditional claim.
+2026-10-10: Saved P0193_PROOF.md, P0411_PROOF.md, C0072_PROOF.md, and C0012_PROOF.md. The wired boundary limit now has a proof from summable arm tails; the old claim that sharp arm constants are needed is too strong for the specified model. Saved assigned intake/source records in source_records.json. No current-literature status is certified from historical intake records alone.
+2026-10-10: Saved SMALL_CASES_PROOFS.md for the remaining assignments. check_results.py passed 10 check groups across all 10 assigned IDs in 0.064 seconds. ArithmeticChecks.lean was submitted, but lean_check.py returned SETUP_UNVERIFIED: Compute status is distressed or unknown. No Lean pass is claimed. P0039's source compares two walks, not two metrics on the cluster walk; clarified the proof's scope.
+STUCK: Literal rg locators in the cached P0193/P0411 primary texts returned no match twice. Switched to a bounded Python excerpt reader with explicit decoding and flexible whitespace matching; independent proof and bundle work continued.

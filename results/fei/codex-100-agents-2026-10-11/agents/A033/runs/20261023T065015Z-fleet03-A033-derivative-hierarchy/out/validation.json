@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "helper": "A033-majority-local-rate-v1",
+  "exact_assertions": 598,
+  "runtime_seconds": 0.6778414000291377,
+  "majority_truth_tables": 4,
+  "central_binomial_parameters": 259,
+  "rate_certificates": [
+    {
+      "K": 2,
+      "m": 8192,
+      "core_bits": 16385,
+      "exact_sufficient_guard": "16384 < 24577",
+      "strength": "1/64",
+      "strict_reset_lower_bound": "beta/64",
+      "strict_K_influence_upper_bound": "beta/64"
+    },
+    {
+      "K": 4,
+      "m": 32768,
+      "core_bits": 65537,
+      "exact_sufficient_guard": "65536 < 98305",
+      "strength": "1/64",
+      "strict_reset_lower_bound": "beta/64",
+      "strict_K_influence_upper_bound": "beta/64"
+    },
+    {
+      "K": 17,
+      "m": 524288,
+      "core_bits": 1048577,
+      "exact_sufficient_guard": "1183744 < 1572865",
+      "strength": "1/64",
+      "strict_reset_lower_bound": "beta/64",
+      "strict_K_influence_upper_bound": "beta/64"
+    },
+    {
+      "K": 100,
+      "m": 16777216,
+      "core_bits": 33554433,
+      "exact_sufficient_guard": "40960000 < 50331649",
+      "strength": "1/64",
+      "strict_reset_lower_bound": "beta/64",
+      "strict_K_influence_upper_bound": "beta/64"
+    }
+  ],
+  "full_terminal_count": 4,
+  "terminals": [
+    {
+      "tag_sign": 1,
+      "physical_outcome": 0,
+      "tail_mass": "3/8",
+      "reset_log_ratio": "64/63",
+      "current_refund": "0",
+      "actual_influence": "3/16",
+      "full_new_reference_sha256": "7666b55b0ab74bd5ada4cacede0f538bd3a3d896bf840fd3d82f246675e0df94"
+    },
+    {
+      "tag_sign": 1,
+      "physical_outcome": 1,
+      "tail_mass": "3/8",
+      "reset_log_ratio": "64/63",
+      "current_refund": "0",
+      "actual_influence": "3/16",
+      "full_new_reference_sha256": "7666b55b0ab74bd5ada4cacede0f538bd3a3d896bf840fd3d82f246675e0df94"
+    },
+    {
+      "tag_sign": -1,
+      "physical_outcome": 0,
+      "tail_mass": "3/8",
+      "reset_log_ratio": "64/63",
+      "current_refund": "0",
+      "actual_influence": "3/16",
+      "full_new_reference_sha256": "7666b55b0ab74bd5ada4cacede0f538bd3a3d896bf840fd3d82f246675e0df94"
+    },
+    {
+      "tag_sign": -1,
+      "physical_outcome": 1,
+      "tail_mass": "3/8",
+      "reset_log_ratio": "64/63",
+      "current_refund": "0",
+      "actual_influence": "3/16",
+      "full_new_reference_sha256": "7666b55b0ab74bd5ada4cacede0f538bd3a3d896bf840fd3d82f246675e0df94"
+    }
+  ],
+  "completion_boundary": {
+    "H_parent": "2",
+    "H_marginal": "1",
+    "mean_H_children": "0",
+    "conditional_erasure": "1",
+    "JS": "1"
+  },
+  "A096_Gram": {
+    "C": "3/512",
+    "D": "3/256",
+    "E": "21/512",
+    "Gamma": "9/3584"
+  },
+  "helper_sha256": "50c312a9a5ecdf5ae251ac1a7e7e444139441b40a760dca48cb84dde2dc3b75e"
+}

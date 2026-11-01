@@ -1,0 +1,89 @@
+{
+  "target": "C0017",
+  "submitted": {
+    "state": "COMPLETE_DRAFT_WRITTEN",
+    "path": "~\\math-brain-inbox\\w408\\bundle_001.json",
+    "claim_id": "clm-f10f7c6c47"
+  },
+  "local_format_validation": {
+    "state": "PASS",
+    "entries": 5,
+    "relations": 7,
+    "theorem_or_lemma_promotions": 0
+  },
+  "reviewed": {
+    "state": "PARTIAL_KEEP_GLOBAL_FIX_REVISED",
+    "referee": "w410",
+    "request": "msg-13dae86ab1",
+    "scoped_keeps": [
+      {
+        "item": "w408-S1.1",
+        "verdict": "KEEP",
+        "scope": "2024 primary preprint makes a single-interface SLE6 claim under Condition C; its proof is unrefereed here",
+        "reproduction": "arXiv:2409.03235v6 Theorem 2 and Corollary 1.1, PDF page 6",
+        "remaining_gap": "Current resolved/open status and correctness of 115-page proof UNKNOWN"
+      },
+      {
+        "item": "w408-S1.2-L1-local",
+        "verdict": "KEEP",
+        "scope": "conditional two-Cardy-martingale driver identification on a separated stopped interval",
+        "reproduction": "Invert C to recover semimartingale W; Ito yields dV=-(1/3)(1/X+1/Y_i)(dQ-6dt); subtract for distinct Y_i",
+        "remaining_gap": "No square-lattice stopped Cardy approximation"
+      },
+      {
+        "item": "w408-L2",
+        "verdict": "KEEP",
+        "scope": "conditional residual-measure identities",
+        "reproduction": "Solve r_i=-dV-(s_i/3)(dQ-6dt) for dV and dQ-6dt; denominators positive on separated stops",
+        "remaining_gap": "No actual lattice residual total-variation bound"
+      },
+      {
+        "item": "w408-L3",
+        "verdict": "KEEP",
+        "scope": "bounded martingale transfer under joint synchronized uniform convergence",
+        "reproduction": "Pass zero expectations of bounded cylinder-weighted martingale increments to the limit; use monotone class",
+        "remaining_gap": "Stopped convergence, event interpolation, Cardy approximation and driver/curve compatibility are independent premises"
+      },
+      {
+        "item": "w408-L4-L6",
+        "verdict": "KEEP",
+        "scope": "one-test wrong-variance SDE and two failed-implication diagnostics",
+        "reproduction": "For L4 beta=(6-kappa)(1/X+1/Y)/3 cancels the one-test Ito drift, but the second has residual (6-kappa)(1/Z-1/Y)/3. Alternating errors have TV 2n; W=Zt has nonzero conditional drift after s>0.",
+        "remaining_gap": "These are abstract drivers/error processes, not percolation models"
+      }
+    ],
+    "fixes": [
+      {
+        "item": "w408-S1.2-L1-global",
+        "verdict": "FIX",
+        "scope": "countable global exhaustion",
+        "reproduction": "Use stops tau_n for marks (n,2n,3n), cut at time n, |W|=n/4, gaps=n/2 or Y2=4n; continuity and ODE imply tau_n tends to infinity",
+        "fixed_text": "A countable family of stopped pairs with stopping times increasing to infinity gives W=sqrt(6)B globally; for triples (n,2n,3n), choose explicit nondegenerate exits and pass to an increasing tail-infimum localization.",
+        "remaining_gap": "Requires the martingale assumptions for every stopped pair"
+      }
+    ],
+    "global_revision": "GLOBAL_EXHAUSTION.md",
+    "global_revision_independent_review": "PENDING_W413",
+    "global_revision_review_request": "msg-f445d719de"
+  },
+  "ingested": {
+    "state": "NOT_OBSERVED",
+    "live_integrator_run_by_author": false
+  },
+  "retrievable": {
+    "state": "NOT_CHECKED"
+  },
+  "author_response_served_model": "UNAVAILABLE",
+  "referee_response_served_model": "UNAVAILABLE",
+  "different_model_review_gate": "NOT_PASSED",
+  "full_target_solved": false,
+  "integration_contact": "codex-01a12190",
+  "measurement": {
+    "status": "HELD",
+    "reason": "Governor reports distress; scalar audit held",
+    "tested_states": 0,
+    "full_target_solved": false,
+    "improvement_claim": false,
+    "command": "python -X utf8 ~/brain_workers/w408/verify_reduction.py"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w515",
+  "bundle_slug": "p0162-han-bridge-obstruction-w515-20261010",
+  "entries": [
+    {
+      "key": "li-han-subadditive-bound",
+      "namespace": "analysis.boolean_fourier",
+      "logical_name": "li-han-subadditive-fourier-entropy-bound",
+      "kind": "theorem",
+      "title": "Fourier subset entropy bound for unit-norm real functions (Li-Han)",
+      "statement": "Let f:{-1,1}^n -> R have E[f^2]=1 under the uniform product measure. Let p(S)=hat f(S)^2, I_i=sum_{S containing i}p(S), I=sum_i I_i, and H_e=sum_S p(S) ln(1/p(S)), with zero terms interpreted continuously. Then H_e <= I + sum_i I_i ln(1/I_i). This bound does not require f to be Boolean-valued.",
+      "proof_text": "Parseval makes p a probability law on subsets. If S has law p, the entropy subadditivity inequality for its n coordinate membership bits gives H_e(S)<=sum_i h_e(I_i). For 0<=u<=1, h_e(u)=u ln(1/u)+(1-u)ln(1/(1-u))<=u ln(1/u)+u. Summing proves the claim, including endpoints by continuity.",
+      "assumptions": ["n>=1", "uniform product measure", "real-valued f", "E[f^2]=1", "natural logarithms"],
+      "domain": "Fourier analysis of Boolean functions",
+      "source": {
+        "source_id": "arxiv:2512.03117v1:main-theorem",
+        "url": "https://arxiv.org/html/2512.03117v1",
+        "revision": "2025-12-02; checked 2026-10-10",
+        "license": "cc-by-4.0",
+        "excerpt": "for all real-valued Boolean functions of unit L2-norm"
+      }
+    },
+    {
+      "key": "failed-absorption-bridge",
+      "namespace": "analysis.boolean_fourier",
+      "logical_name": "fei-failed-han-correction-absorption-bridge",
+      "kind": "concept",
+      "title": "Failed bridge: absorb Han's coordinate correction into total influence",
+      "statement": "The proposed universal inequality sum_i I_i(f) log_2(1/I_i(f)) <= C I(f) for every Boolean f and an absolute constant C is false. Therefore the Li-Han extra-term entropy bound does not imply the Fourier Entropy-Influence conjecture by absorbing its coordinate correction; further Boolean-specific information is required. This is a refuted route, not a counterexample to FEI.",
+      "proof_text": null,
+      "assumptions": ["Boolean f:{-1,1}^n->{-1,1}", "uniform product measure", "flip influences", "base-2 logarithms"],
+      "domain": "Fourier analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:w515:P0162-bridge-20261010",
+        "url": "~/brain_workers/w515/ATTEMPT.md",
+        "revision": "2026-10-10 draft; independent review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "conjunction-correction-witness",
+      "namespace": "analysis.boolean_fourier",
+      "logical_name": "conjunction-han-correction-ratio-n-minus-one",
+      "kind": "concept",
+      "title": "Conjunction witnesses unbounded Han correction to influence ratio",
+      "statement": "For n>=2 let f_n:{-1,1}^n->{-1,1} be +1 only when all inputs are +1, and -1 otherwise. Each coordinate influence is 2^{1-n}; hence I(f_n)=n 2^{1-n} and sum_i I_i(f_n) log_2(1/I_i(f_n))=(n-1) I(f_n). The ratio grows without bound. This refutes only the correction-absorption bridge; it is not a counterexample to FEI.",
+      "proof_text": null,
+      "assumptions": ["n>=2", "uniform product measure", "flip influences", "base-2 logarithms"],
+      "domain": "Fourier analysis of Boolean functions",
+      "source": {
+        "source_id": "owner-own-work:w515:P0162-001",
+        "url": "~/brain_workers/w515/CLAIMS.jsonl",
+        "revision": "2026-10-10 draft; independent review pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "conjunction-correction-witness",
+      "to_key": "failed-absorption-bridge",
+      "kind": "refutes",
+      "rationale": "Witness card says the ratio is n-1; bridge card says one absolute C would bound that ratio for every Boolean f."
+    },
+    {
+      "from_key": "failed-absorption-bridge",
+      "to_key": "li-han-subadditive-bound",
+      "kind": "semantic_association",
+      "rationale": "Bridge card concerns absorbing sum_i I_i log(1/I_i); theorem card retains exactly that correction in its upper bound."
+    },
+    {
+      "from_key": "failed-absorption-bridge",
+      "to_existing_logical": "math:probability.core:open-problem-p0162-fourier-entropy-versus-total-influence",
+      "kind": "semantic_association",
+      "rationale": "Bridge card says the absorption route fails; existing P0162 card asks for H(f)<=C I(f) for every Boolean f."
+    }
+  ]
+}

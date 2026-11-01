@@ -1,0 +1,34 @@
+{
+  "schema": "fei-run-claims/2",
+  "claims": [
+    {
+      "claim_id": "B16-SPARSE-SHARED-ADDRESSING-MARGINAL-OVERCOUNT",
+      "version": 1,
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "exact_statement": "For every integer t>=2 there is a genuine Boolean sign f_t on t+t2^t+t variables, equal to +1 off an event of probability 2^(-t-1), such that H(f_t)/I(f_t)<=3 while sum_i h2(Inf_i(f_t))/I(f_t)>=4t/5. Moreover H(f_t)/I(f_t)->12/5.",
+      "hypotheses": [
+        "uniform physical cube",
+        "fresh disjoint trigger, address, and data coordinates",
+        "entropy in bits",
+        "t is an integer at least 2"
+      ],
+      "proof_dependencies": [
+        "exact Walsh expansion of the displayed Boolean circuit",
+        "h2(x)>=x log2(1/x)",
+        "-ln(1-x)<=x/(1-x)"
+      ],
+      "refutes": [
+        "any dimension-independent coordinatewise marginal-entropy payment sum_i h2(Inf_i(f))<=C I(f), even after exponentially rare fresh activation"
+      ],
+      "scope_exclusions": [
+        "Does not refute FEI.",
+        "Does not show unbounded H/I.",
+        "Does not refute packetized or joint-label payments.",
+        "Does not claim composition primality."
+      ],
+      "review_required": ["A092", "A088"]
+    }
+  ],
+  "full_FEI": "OPEN"
+}
+

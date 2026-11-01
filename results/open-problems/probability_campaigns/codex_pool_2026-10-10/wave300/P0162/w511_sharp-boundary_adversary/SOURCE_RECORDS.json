@@ -1,0 +1,55 @@
+{
+  "target": "P0162",
+  "records": [
+    {
+      "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\brain_bundle_C006p01.json",
+      "record": {
+        "key": "op-p0162",
+        "namespace": "probability.core",
+        "logical_name": "open-problem-p0162-fourier-entropy-versus-total-influence",
+        "kind": "concept",
+        "title": "Open problem: Fourier entropy versus total influence",
+        "statement": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Bound the Shannon entropy of the squared Fourier coefficients of every Boolean function by a universal constant times its total influence. Source: O Donnell: Open problems in analysis of Boolean functions, PDF p.5, Fourier Entropy-Influence Conjecture.",
+        "proof_text": null,
+        "assumptions": [
+          "Posed in O Donnell: Open problems in analysis of Boolean functions",
+          "Status as recorded in the campaign ledger on 2026-09-07"
+        ],
+        "domain": "probability theory",
+        "source": {
+          "source_id": "owner-probability-campaign-codex-20260906:op-p0162",
+          "url": "urn:probability-research:20260906:codex-campaign:op-p0162",
+          "revision": "author-checked-private-20260907-v1",
+          "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+          "excerpt": null
+        }
+      }
+    },
+    {
+      "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\brain_bundle_C006a04.json",
+      "record": {
+        "key": "at-p0162",
+        "namespace": "probability.core",
+        "logical_name": "attempt-p0162-fourier-entropy-versus-total-influence",
+        "kind": "concept",
+        "title": "Attempt on Fourier entropy versus total influence",
+        "statement": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Fourier entropy versus total influence exact calculation or structural obstruction Result: Discarding the Boolean constraint destroys the claim: the probability measure uniform on the n singleton subsets has entropy log2(n) but mean subset size1. It cannot be the squared spectrum of a Boolean function when n>=2. Check: If all Fourier mass were on singletons, f=sum_i a_i*x_i with a_i=plus/minus1/sqrt(n). In f^2 the coefficient of x_i*x_j is2*a_i*a_j, nonzero for distinct i,j, whereas Boolean f requires f^2=1. This independently exhibits the violated Fourier convolution identity. Obstruction: Entropy versus mean cardinality alone is insufficient. Any proof must use the nonlinear identities imposed by f^2=1; no dimension-free inequality exploiting all of them is obtained.",
+        "proof_text": null,
+        "assumptions": [
+          "Refers to the open problem node open-problem-p0162-fourier-entropy-versus-total-influence",
+          "No independent review"
+        ],
+        "domain": "probability theory",
+        "source": {
+          "source_id": "owner-probability-campaign-codex-20260906:at-p0162",
+          "url": "urn:probability-research:20260906:codex-campaign:at-p0162",
+          "revision": "author-checked-private-20260907-v1",
+          "license": "owner-own-work; private campaign ledger row (Codex worker, 2026-09-06/07), no public promotion",
+          "excerpt": null
+        }
+      }
+    }
+  ],
+  "cited_sources": [],
+  "attempts_H_I": "Targeted P0162 text search yielded no matching record; not a proof that all owner work was checked."
+}

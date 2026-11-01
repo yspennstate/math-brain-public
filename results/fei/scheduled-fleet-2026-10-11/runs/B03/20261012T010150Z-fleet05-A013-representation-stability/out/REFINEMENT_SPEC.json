@@ -1,0 +1,15 @@
+{
+ "helper_version":"A013-stage2-v2-split",
+ "reason":"Original combined checker stopped at its internal 50-second cutoff in the binomial ledger. Split independent transport and review validation and reduce the finite binomial grid; proofs keep their original all-parameter scope.",
+ "family":"Same actual Boolean bent-prefix and balanced-core activation families as original frozen spec",
+ "transport_domain":{"full_truth_bent_cases":[[4,0],[4,1],[4,2],[4,3],[4,4],[8,0],[8,1],[8,2]],"binomial_m":[4,8,16],"prefix_depths":[1,2,4],"analytic_certificate_m":[256,512,1024,2048]},
+ "review_domain":{"all_balanced_n":[1,2,3],"r":[1,2,3],"core_reference_count":3,"literal_posterior_r":[1,2,3,4],"sharp_coefficient_finite_r":[1,2,3,4,5]},
+ "case_count":{"transport_full_tables":8,"binomial_ledger_pairs":9,"analytic_rational_signs":4,"review_reference_cases":702,"review_joint_cases":4},
+ "symmetry":"none",
+ "arithmetic":"integer FWHT, exact rational prime-log vectors, outward 20-term atanh intervals with proved tail; large-m sign certificates use rational powers only",
+ "memory_estimate_MB":70,
+ "max_runtime_seconds_per_helper":60,
+ "internal_cutoff_seconds_per_helper":50,
+ "automatic_dimension_escalation":false,
+ "one_job_at_a_time":true
+}

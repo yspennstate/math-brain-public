@@ -1,0 +1,81 @@
+{
+  "candidate_id": "C0044",
+  "checked_date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "target_statement": "For static site-iid strictly elliptic nearest-neighbor RWRE on Z^d, d>=3, and every fixed deterministic nonzero real direction l, P_0(X_n dot l -> +infinity) belongs to {0,1}.",
+  "ranking": {
+    "date": "2026-09-07",
+    "tier": 4,
+    "prior_status": "attempted_un",
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 430
+  },
+  "served_model_evidence": "Unavailable from response-side metadata in this session; requested settings do not establish served identity.",
+  "novelty_claim": false,
+  "primary_sources": [
+    {
+      "title": "Selected Topics in Random Walks in Random Environment",
+      "authors": [
+        "Alexander Drewitz",
+        "Alejandro F. Ramirez"
+      ],
+      "url": "https://arxiv.org/pdf/1309.2589",
+      "version": "1309.2589v1",
+      "question_locator": "Open question 3.2, PDF page 42, printed page 40, equation (3.2)",
+      "assumption_locator": "Definition 2.3, PDF page 7, equation (2.6): strict ellipticity",
+      "statement_quote": "P_0[A_l] in {0,1}?",
+      "verification": "Question and E/UE distinction read directly from primary source"
+    },
+    {
+      "title": "The zero-one law for planar random walks in iid random environments revisited",
+      "author": "Martin P. W. Zerner",
+      "url": "https://arxiv.org/pdf/0706.0745",
+      "version": "0706.0745v1",
+      "scope": "Planar d=2 result only; not a higher-dimensional deduction"
+    },
+    {
+      "title": "A directional zero-one law under strict ellipticity",
+      "author": "OpenAI",
+      "date": "2026-09-23",
+      "url": "https://raw.githubusercontent.com/openai/math/main/preprints/A-directional-zero-one-law-under-strict-ellipticity-September-23-2026/paper.pdf",
+      "locator": "Theorem 1.1, PDF page 2",
+      "local_file": "~\\brain_workers\\w585\\sources\\directional_zero_one_20260923.pdf",
+      "sha256": "245e917113b3545b311c4c9eab739227d530f527081c1b0be4a92ea904559683",
+      "verification": "Theorem statement and full hypotheses checked; proof audit pending"
+    },
+    {
+      "title": "DirectionalWalk comparator target",
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalWalk.lean",
+      "local_file": "~\\brain_workers\\w585\\sources\\DirectionalWalk.lean",
+      "sha256": "8ad4588537c02fac9d123a9ba7fd780e9eda1575b48f674320733fad3938da11",
+      "locator": "Lines 78-81 one-based; theorem closes by sorry",
+      "verification": "Not a formal proof receipt"
+    }
+  ],
+  "assumptions": [
+    "site-iid transition vectors",
+    "static retained environment",
+    "strict positivity of all nearest-neighbor transitions",
+    "d>=3",
+    "fixed deterministic nonzero direction"
+  ],
+  "uniform_ellipticity_required_by_original_question": false,
+  "primary_statement_recovered": true,
+  "external_resolution": "Primary preprint claims full resolution; statement checked, proof not independently checked here.",
+  "formal_check": {
+    "status": "NOT_PERFORMED",
+    "theorem": "OAI.DirectionalZeroOne.directional_zero_one",
+    "comparator_contains_admitted_placeholder": true,
+    "trusted_axiom_receipt": null,
+    "caveat": "Comparator is a target skeleton; no assertion about a separate implementation is inferred from its sorry."
+  },
+  "prior_attempts": [
+    "C0044-A001 superseded by C0044-A002; latter corrects disjointness versus zero-one confusion"
+  ],
+  "exact_id_checks_without_C0044_record": [
+    "probability_1000_intake_F_20260908/problems.jsonl and attempts.jsonl",
+    "probability_1000_attempts_H_20260912/problems.jsonl and attempts.jsonl when present",
+    "probability_1000_attempts_I_20260914/problems.jsonl and attempts.jsonl when present"
+  ],
+  "updated_at": "2026-10-10T07:28:25.955652+00:00"
+}

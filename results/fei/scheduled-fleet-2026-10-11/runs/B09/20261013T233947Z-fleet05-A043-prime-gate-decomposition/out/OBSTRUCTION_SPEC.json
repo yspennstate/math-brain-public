@@ -1,0 +1,13 @@
+{
+ "helper_version":"A043-prime-reserve-obstruction-v1",
+ "family":"one explicitly specified four-input sign truth table, mask 33152 with positive assignments 7,8,15; slice Y4=0 is three-input AND",
+ "domain":"n=4 fixed; probabilities (1/2,1/2,1/2,1/1024); one Boolean table, one product law",
+ "case_count":1,
+ "symmetry":"none; test all ten proper blocks of sizes two and three for the genuine prime criterion",
+ "arithmetic":"exact Fraction cofactor spectra and masses; 32-term rational atanh logarithm intervals",
+ "memory_estimate_mb":20,
+ "max_runtime_seconds":60,
+ "pilot":"the same single explicit table; no search or automatic dimension increase",
+ "command":"python -X utf8 code/check_obstruction.py",
+ "purpose":"settle whether the proposed higher-degree reserve companion is false even on primes, after an analytic AND3 slice obstruction"
+}

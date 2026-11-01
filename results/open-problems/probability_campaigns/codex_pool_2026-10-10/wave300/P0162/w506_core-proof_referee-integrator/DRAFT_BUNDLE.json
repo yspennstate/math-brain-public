@@ -1,0 +1,51 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w506",
+  "bundle_slug": "p0162-reviewed-restriction-identity-and-good-base-coordinate-w506-001",
+  "entries": [
+    {
+      "key": "exact-defect-identity",
+      "namespace": "combinatorics.boolean_analysis",
+      "logical_name": "boolean-fourier-entropy-exact-restriction-defect-identity",
+      "kind": "lemma",
+      "title": "Exact Fourier entropy defect under one Boolean restriction",
+      "statement": "Let f:{-1,1}^n->{-1,1} use the uniform cube and binary Fourier spectral entropy H(f)=sum_S fhat(S)^2 log_2(1/fhat(S)^2). Fix coordinate i, let u_T and v_T be the normalized Walsh coefficients of f_i^+ and f_i^- on the other coordinates, and put w_T=(u_T^2+v_T^2)/2. For w_T>0 let p_T=u_T^2/(u_T^2+v_T^2) and q_T=(u_T-v_T)^2/[2(u_T^2+v_T^2)]. Then Delta_i(f):=H(f)-(H(f_i^+)+H(f_i^-))/2 equals sum_{T:w_T>0} w_T[1+h_2(q_T)-h_2(p_T)], and Inf_i(f)=sum_T w_T q_T. Zero-weight terms vanish; no independence of the spectral index and branch is assumed.",
+      "proof_text": "The Fourier coefficients of f on the pair T,T union {i} are (u_T+v_T)/2 and (u_T-v_T)/2. Their squared masses are w_T(1-q_T) and w_T q_T, and sum_T w_T=1 by Parseval. The entropy chain rule gives H(f)=H(w)+sum_T w_T h_2(q_T). Now form a joint probability law P(B=+,T)=u_T^2/2 and P(B=-,T)=v_T^2/2. Parseval for each Boolean restriction makes B uniform. Its entropy is both 1+(H(f_i^+)+H(f_i^-))/2 and H(w)+sum_T w_T h_2(p_T). Subtraction gives the defect formula. Finally, Inf_i=sum_T fhat(T union {i})^2=sum_T w_T q_T.",
+      "assumptions": ["f is Boolean valued in {-1,1}", "uniform product measure", "normalized real Walsh coefficients", "base-2 entropy with zero summands set to zero"],
+      "domain": "Boolean Fourier analysis",
+      "source": {
+        "source_id": "owner-own-work:w504:P0162:C001:checked-w506",
+        "url": "file:///~/brain_workers/w504/PROOF.md",
+        "revision": "2026-10-10 independent referee KEEP in w506/REVIEW_PACKET.md",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "good-base-coordinate",
+      "namespace": "combinatorics.boolean_analysis",
+      "logical_name": "quadratic-bent-selector-good-base-coordinate-defect-bound",
+      "kind": "lemma",
+      "title": "Good base coordinates in a quadratic bent-point selector family",
+      "statement": "For even m>=2, let b in {0,1}^m and z in {0,1} be uniform, G_m(b)=(-1)^{sum_{r=1}^{m/2} b_{2r-1}b_{2r}}, and F_m(b,z)=G_m(b)-2*1_{b=0,z=1}. Let t=2^{-m}, H be base-2 Fourier spectral entropy, and Delta_j(F_m)=H(F_m)-[H(F_m|b_j=0)+H(F_m|b_j=1)]/2. Every base coordinate j<=m has Inf_j(F_m)=1/2+t and Delta_j(F_m)<=2-(m/2)t<4 Inf_j(F_m). This covers the displayed family only and gives no universal coordinate-selection theorem.",
+      "proof_text": "Set a=2^{-m/2}, t=a^2. A two-bit Walsh calculation and the product rule give Ghat_m(s)=a epsilon_s with epsilon_s in {+1,-1}, with sign frequencies (1+epsilon a)/2. The point indicator has coefficient t, hence Fhat_m(s,0)=a epsilon_s-t and Fhat_m(s,1)=t. A base coordinate of G_m has influence 1/2; the point flip in the z=1 restriction creates one additional disagreeing edge of mass 2t, so averaging gives Inf_j(F_m)=1/2+t. Define L(c,d)=sum_{epsilon=+/-1} (1+epsilon d)(1-c epsilon a)^2 log_2((1-c epsilon a)^2)/2. Directly summing the spectral masses gives H(F_m)=m(1+t)-L(1,a). For b_j=1 the remaining restriction is a quadratic bent core with entropy m-2. For b_j=0 its Fourier coefficients are 2a epsilon-2t in the zero-control block and -2t in the three other control blocks; their entropy is m-2+3mt-L(1,2a). Thus Delta_j=2-(m/2)t+[L(1,2a)-2L(1,a)]/2. The bracket is -[R(1-a)+R(1+a)] with R(u)=u^2 log_2 u. Since a<=1/2, R''(u)=(2 ln u+3)/ln 2>0 on [1-a,1+a], so Jensen gives R(1-a)+R(1+a)>=2R(1)=0. The stated bound follows.",
+      "assumptions": ["m is even and at least 2", "the exact Boolean F_m in the statement", "uniform independent bits", "normalized Walsh transform and base-2 entropy"],
+      "domain": "Boolean Fourier analysis",
+      "source": {
+        "source_id": "owner-own-work:w504:P0162:C003:checked-w506",
+        "url": "file:///~/brain_workers/w504/PROOF.md",
+        "revision": "2026-10-10 independent referee KEEP in w506/REVIEW_PACKET.md",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "good-base-coordinate",
+      "to_key": "exact-defect-identity",
+      "kind": "semantic_association",
+      "rationale": "The good-coordinate statement bounds the same one-coordinate defect Delta_j defined and decomposed by the general exact identity, for the explicitly named F_m family. The general identity alone does not imply the bound."
+    }
+  ]
+}

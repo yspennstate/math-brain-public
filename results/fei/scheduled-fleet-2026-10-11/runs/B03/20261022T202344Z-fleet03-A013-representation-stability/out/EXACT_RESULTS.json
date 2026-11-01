@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "total_exact_assertions": 42000,
+  "results": {
+    "CONTINUUM_REPLAY.json": {
+      "status": "PASS",
+      "checks": 15113,
+      "leaves": 1326,
+      "analytic_boxes": 384,
+      "minimum_gap": "3255714008627042915/4722366482869645213696",
+      "seconds": 4.328765899990685,
+      "arithmetic": "160-bit outward interval binary squaring;64-bit logarithm upper bounds; no atanh series"
+    },
+    "BOOLEAN_REPLAY.json": {
+      "status": "PASS",
+      "checks": 26880,
+      "cases": 2048,
+      "full_reference_cases": 128,
+      "seconds": 13.699798100045882,
+      "arithmetic": "integer fast Walsh;Fraction probabilities;exact rational prime-log signatures"
+    },
+    "FOUR_BIT_BOUNDARY.json": {
+      "status": "PASS",
+      "checks": 7,
+      "d": "1/16",
+      "delta_log_signature": {
+        "3": "9/64",
+        "2": "3",
+        "5": "-75/64"
+      },
+      "B_gt_4d": true,
+      "Delta_gt_7d": true,
+      "I_parent": "37/16",
+      "seconds": 0.0011443999828770757,
+      "scope": "Actual four-bit shared bent phase with one deterministic row edit; refutes extension of three-bit local surcharge only; full FEI unaffected"
+    }
+  },
+  "lean": "NOT_RUN_MEMORY_ADMISSION_REFUSED",
+  "full_FEI": "OPEN"
+}

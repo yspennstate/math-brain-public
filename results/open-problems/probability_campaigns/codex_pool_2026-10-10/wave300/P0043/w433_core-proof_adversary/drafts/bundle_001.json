@@ -1,0 +1,176 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w433",
+  "bundle_slug": "p0043-criticality-audit-w433-001",
+  "entries": [
+    {
+      "key": "target",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-quasitransitive-percolation-scope-audit-w433",
+      "kind": "concept",
+      "title": "DRAFT: Critical quasi-transitive percolation: scope and unverified present status",
+      "statement": "Independent mathematical audit draft; referee review pending, with no novelty claim. The target concerns independent Bernoulli bond percolation on an infinite connected locally finite quasi-transitive graph G with p_c(G)<1: no infinite cluster should exist at p_c(G). The p_c<1 assumption is necessary, since the two-sided line has p_c=1 and its p=1 cluster is the whole line. The historical primary statement is Hutchcroft (2016), Conjecture 1.1. A 2026-09-24 public manuscript and accompanying Lean solution claim the full target, but this worker has not reproduced their verification; present openness is UNKNOWN, not certified open or solved.",
+      "proof_text": null,
+      "assumptions": [
+        "independent Bernoulli bond percolation",
+        "G infinite, connected, locally finite and quasi-transitive",
+        "p_c(G)<1 for the target"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w433:P0043:target",
+        "url": "file:///~/brain_workers/w433/ATTEMPT.md#section-1",
+        "revision": "campaign-2026-10-10-v1",
+        "license": "owner-own-work (campaign audit and independently derived special cases)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "thinning",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-component-quenched-thinning-fragility-audit-w433",
+      "kind": "concept",
+      "title": "DRAFT: Critical infinite components must be maximally fragile under independent thinning",
+      "statement": "Independent mathematical audit draft; referee review pending, with no novelty claim. For a countable connected locally finite graph G with p_c(G)>0, almost surely each infinite component H of G[p_c(G)], if any exists, has its own bond threshold p_c(H)=1. Independent q thinning gives the iid law at p_c(G)q<p_c(G). Its zero survival probability makes the nonnegative conditional survival probability zero almost surely; intersect over vertices and rational q<1. This is a reduction only: it does not prove that infinite critical components are absent.",
+      "proof_text": null,
+      "assumptions": [
+        "countable connected locally finite G",
+        "p_c(G)>0",
+        "iid critical bonds",
+        "thinning variables independent of the entire critical configuration"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w433:P0043:thinning",
+        "url": "file:///~/brain_workers/w433/ATTEMPT.md#section-2",
+        "revision": "campaign-2026-10-10-v1",
+        "license": "owner-own-work (campaign audit and independently derived special cases)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "comb",
+      "namespace": "probability.percolation",
+      "logical_name": "density-one-comb-thinning-obstruction-audit-w433",
+      "kind": "concept",
+      "title": "DRAFT: Density one does not guarantee survival of thinning",
+      "statement": "Independent mathematical audit draft; referee review pending, with no novelty claim. Every infinite connected nearest-neighbor tree T embedded in Z^d has p_c(T)=1: at most (2n+1)^d simple root paths have length n, so their q-open union has probability at most (2n+1)^d q^n. In Z^2 the connected acyclic graph retaining all vertical edges and only the horizontal row y=0 spans every vertex and has density one, yet has p_c=1. This comb is not quasi-transitive and is not an iid lattice cluster; it refutes density-only robustness and does not refute the critical quasi-transitive target.",
+      "proof_text": null,
+      "assumptions": [
+        "integer d>=1",
+        "T infinite, connected and acyclic",
+        "nearest-neighbor lattice edges",
+        "independent q bond thinning"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w433:P0043:comb",
+        "url": "file:///~/brain_workers/w433/ATTEMPT.md#section-3",
+        "revision": "campaign-2026-10-10-v1",
+        "license": "owner-own-work (campaign audit and independently derived special cases)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "dependence",
+      "namespace": "probability.percolation",
+      "logical_name": "high-marginals-growing-dependence-obstruction-audit-w433",
+      "kind": "concept",
+      "title": "DRAFT: Arbitrarily high open marginals with bounded components and finite dependence",
+      "statement": "Independent mathematical audit draft; referee review pending, with no novelty claim. Give Z^d iid continuous site labels. For integer R>=1 let c(x) be the minimum-label site in the radius-R sup-norm box about x, and open x exactly when c(x) equals c(y) for all nearest neighbors y. This translation-invariant field is independent on sets separated by sup-norm distance greater than 2R+2. Every open component has one common winner z and lies in the radius-R box about z, so it has at most (2R+1)^d sites. Its exact open marginal is (2R-1)^d/((2R+1)^d+2d(2R+1)^(d-1)), which tends to one. For d=2,R=399 this is 635209/641597>0.99, while no component is infinite. Thus a block proof needs quantitative control of both its error and its dependence range. This construction does not assert iid Bernoulli, FKG or insertion tolerance.",
+      "proof_text": null,
+      "assumptions": [
+        "integer d>=1",
+        "integer R>=1",
+        "iid continuous site labels",
+        "open rule defined by agreement of local minima"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w433:P0043:dependence",
+        "url": "file:///~/brain_workers/w433/ATTEMPT.md#section-5",
+        "revision": "campaign-2026-10-10-v1",
+        "license": "owner-own-work (campaign audit and independently derived special cases)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "pivotal",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-window-pivotal-mass-gap-audit-w433",
+      "kind": "concept",
+      "title": "DRAFT: Critical-window uniform pivotal control is an unproved input",
+      "statement": "Independent mathematical audit draft; referee review pending, with no novelty claim. For a fixed root o in a countable connected locally finite graph with 0<p_c<1, let f_n(p) be the finite-ball probability of an open root connection to its distance-n sphere, and I_n=f_n'. The identity theta_o(p_c)=0 is equivalent to lim_{delta down to 0} sup_{n>=1} integral_{p_c-delta}^{p_c} I_n(p) dp=0. A uniform L^r bound on a fixed interval below p_c for some r>1 suffices. Uniform L^1 mass or pointwise derivative limits do not suffice. The paired proof's general quasi-transitive uniform bound remains unproved; the equivalence is not a proof of the full target.",
+      "proof_text": null,
+      "assumptions": [
+        "countable connected locally finite G",
+        "independent Bernoulli bond law",
+        "0<p_c<1",
+        "finite-ball root-to-sphere events with n>=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w433:P0043:pivotal",
+        "url": "file:///~/brain_workers/w433/ATTEMPT.md#section-8",
+        "revision": "campaign-2026-10-10-v1",
+        "license": "owner-own-work (campaign audit and independently derived special cases)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "tree-bound",
+      "namespace": "probability.percolation",
+      "logical_name": "regular-tree-critical-window-derivative-bound-audit-w433",
+      "kind": "concept",
+      "title": "DRAFT: A tightened derivative control on regular trees",
+      "statement": "Independent mathematical audit draft; referee review pending, with no novelty claim. On the D-regular tree, D>=3, write b=D-1 and c_b=(b-1)/(2b)*(1-1/b)^(b-2). For every n>=1 and 0<=p<=1/b, the derivative f_n'(p) of the root-to-radius-n connection probability satisfies f_n'(p)<=D/c_b. Forward-tree survival satisfies s_m(p)<=1/(1+c_b*m), while open pivotals give p*s_m'(p)<=m*s_m(p); the root derivative is at most D*(m+1)/(1+c_b*m)<=D/c_b. At p=0 use polynomial continuity. For D=3 this gives 12 on [0,1/2], improving the paired proof's valid bound 27 on [1/4,1/2]. This supplies a regular-tree special case of pivotal uniform control only; cyclic subexponential graphs remain outside this argument.",
+      "proof_text": null,
+      "assumptions": [
+        "integer D>=3",
+        "iid Bernoulli bonds on the D-regular tree",
+        "n>=1",
+        "0<=p<=1/(D-1)"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w433:P0043:tree-bound",
+        "url": "file:///~/brain_workers/w433/ATTEMPT.md#section-8",
+        "revision": "campaign-2026-10-10-v1",
+        "license": "owner-own-work (campaign audit and independently derived special cases)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "thinning",
+      "to_key": "target",
+      "kind": "semantic_association",
+      "rationale": "The thinning argument describes a necessary property of any hypothetical critical infinite component; it does not prove the target."
+    },
+    {
+      "from_key": "comb",
+      "to_key": "thinning",
+      "kind": "analogous_to",
+      "rationale": "The comb is an explicit maximally fragile infinite connected graph, illustrating why density cannot rule out the property forced by critical thinning. The laws and quasi-transitivity assumptions differ."
+    },
+    {
+      "from_key": "dependence",
+      "to_key": "target",
+      "kind": "semantic_association",
+      "rationale": "The local-minimum field refutes a generic high-marginal block-proof shortcut; it is not a counterexample to iid critical percolation."
+    },
+    {
+      "from_key": "pivotal",
+      "to_key": "target",
+      "kind": "semantic_association",
+      "rationale": "Critical-window uniform pivotal control at every root is an equivalent reformulation of the zero-critical-percolation conclusion, not an established input."
+    },
+    {
+      "from_key": "tree-bound",
+      "to_key": "pivotal",
+      "kind": "specializes",
+      "rationale": "The regular-tree uniform derivative estimate implies the critical-window condition on this special graph class, leaving the general input unproved."
+    }
+  ]
+}

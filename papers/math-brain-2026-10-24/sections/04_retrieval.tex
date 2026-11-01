@@ -1,0 +1,80 @@
+\section{Retrieval}\label{sec:retrieval}
+
+An agent asks the store a question in words and receives cards. Three choices matter: how cards are scored, how several wordings of one question are combined, and how the result is printed. We give the first two exactly and measure the third in Section~\ref{sec:tests}.
+
+\subsection{Signals}
+Each revision $d$ is indexed through three deterministic channels:
+\begin{enumerate}[label=(\alph*)]
+\item \emph{words}: Unicode-normalized lexical tokens of the title, statement and conditions, with stop words removed;
+\item \emph{mathematical tokens}: abstract tokens such as \texttt{op:forall}, \texttt{op:pow}, \texttt{const:real}, extracted from formulas;
+\item \emph{formula fingerprints}: SHA-256 digests of formulas after notation normalization and alpha-renaming of bound variables.
+\end{enumerate}
+Thus $\forall y\in\mathbb{R},\ y^2\ge 0$ written in Unicode and \verb|\forall x \in \mathbb{R}, x^2 \geq 0| written in \LaTeX{} share every mathematical signal. Normalization is a retrieval heuristic; it is not a test of symbolic equivalence. A fourth channel, the \emph{meaning} channel, compares sentence embeddings (the bge-small model, 384 dimensions) of the question and of each card.
+
+\subsection{The lexical score}
+Let $N$ be the number of indexed revisions, $\mathrm{df}(t)$ the number containing the term $t$, $f(t,d)$ the frequency of $t$ in $d$, $|d|$ the length of $d$ in terms and $\overline{|d|}$ the mean length. With title words counted $1+\theta$ times (in $f$ and in $|d|$), the lexical score of $d$ for a query $q$ is
+\begin{equation}\label{eq:bm25}
+\BM(q,d)=\sum_{t\in q}\idf(t)\,\frac{f(t,d)\,(k_1+1)}{f(t,d)+k_1\bigl(1-b+b\,|d|/\overline{|d|}\bigr)},\qquad \idf(t)=\log\Bigl(1+\frac{N-\mathrm{df}(t)+0.5}{\mathrm{df}(t)+0.5}\Bigr).
+\end{equation}
+The base profile, used by the hook, has $k_1=1.2$, $b=0.3$, $\theta=0$. The \emph{recall profile}, used by the deliberate recall tool, has $k_1=1.2$, $b=0.4$, $\theta=1$, so a title word counts twice.
+
+The mathematical-token and formula channels add further terms of the same shape with their own weights (the exact-formula channel carries weight $2$). The meaning channel is a standardized score: if $c(d)$ is the cosine between the embeddings of $q$ and $d$, and $\bar c$, $s_c$ are the mean and standard deviation of $c$ over the corpus, the channel gives each of the $50$ cards with the largest $z(d)=(c(d)-\bar c)/s_c$ the score $w_{\mathrm{sem}}\,z(d)$, with $w_{\mathrm{sem}}=2$ in the recall profile, and gives every other card zero. A question that contains two or more separate numbers gets no meaning score, because a dense embedding cannot tell apart the members of a family indexed by parameters; on $40$ such questions the channel had moved the right answer off first place $8$ times.
+
+The base score of a card is the sum of its channels, and the tool returns the eight cards with the highest base score after the optional spreading step below.
+
+\subsection{Abstention}
+Retrieval returns a decision as well as a list. It abstains, with a stated reason, when the question has no indexable signal, when no card matches, when the best support falls below a threshold, or when the two best cards are closer than a minimum margin. The deliberate tool never hides its results; instead it prints a line \texttt{WEAK MATCH} when the best score is low, and names the words of the question that no card contains, so that the next call can replace them. The hook uses abstention as a gate (Section~\ref{sec:hook}).
+
+\subsection{Several wordings}
+An agent that is unsure how a card would phrase the answer may give two or three wordings in one call. Each wording $q_j$ is scored separately; the tool merges the lists by best rank,
+\[
+\mathrm{rank}(d)=\min_j \mathrm{rank}_{q_j}(d),
+\]
+breaking ties by the larger score, and prints the eight cards with the smallest merged rank. Because this tie rule reads the scores, part~(b) of the proposition below guarantees the merged ranks of the deployed tool but not the order among cards tied in merged rank; a tie rule that ignores the scores, such as the card identifier, would make the whole list invariant. Merging by rank rather than by summed score avoids the bias toward long wordings, whose scores are larger. It also gives a guarantee that summed scores do not.
+
+\begin{proposition}\label{prop:merge}
+Let $q_1,\dots,q_k$ be wordings of one question and let the merged list be ordered by best rank, ties broken in any fixed way.
+\begin{enumerate}[label=(\alph*)]
+\item For every $r\ge1$, at most $kr$ cards have merged rank at most $r$. Consequently a card that is at rank $r$ for some wording stands at position at most $kr$ of the merged list; in particular a card that is first for some wording is among the first $k$ printed.
+\item The merged ranks are unchanged if the scores of each wording are replaced by their images under any strictly increasing function, which may differ from wording to wording; so is the merged list, when ties in merged rank are broken by a rule that does not read the scores.
+\item Neither statement holds for the list ordered by summed scores: for every $k\ge2$ and $M$ there are score tables in which a card that is first for one wording stands below position $M$ of the summed list.
+\end{enumerate}
+\proofbutton{prop:merge}
+\end{proposition}
+
+With $k=3$ and eight cards printed, a card in the top two of any wording is always printed. This is the property the agent relies on when it adds a wording phrased as a card would phrase the answer: a second or third wording cannot push out a card that the first one ranked in its top two. Part (b) is why the lexical and meaning scores, which live on different scales, never need to be calibrated against each other across wordings. On $100$ held-out questions, two or three wordings in one call answered $86$, against $76$ for one wording a call; it was also the cheapest of the strong ways to search, because one call costs one turn.
+
+\subsection{Spreading}
+With the option \texttt{--depth 2}, the eight best cards pass score along their links. If $s_0(d)$ is the base score and $\omega(k)$ the multiplier of link kind $k$ (Table~\ref{tab:omega}), the spread score after one step is
+\[
+s_1(v)=s_0(v)+\max_{(u,v,k)\in\cE\setminus\cR,\ u\in\mathrm{top}_8}\ 0.55\,\omega(k)\,(1+\str(u,v))\,s_0(u),
+\]
+and the second step repeats this from the cards reached. Positive and negative links propagate in separate channels; a card reached through \texttt{refutes} or \texttt{fails\_under} is shown with a caution mark and its trace has negative sign, so that it is visible without counting as support. The factor $1+\str(u,v)$ uses the learned strengths of Section~\ref{sec:strength}.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lc@{\qquad}lc@{\qquad}lc}
+\toprule
+Kind & $\omega$ & Kind & $\omega$ & Kind & $\omega$\\
+\midrule
+\texttt{depends\_on} & 1.00 & \texttt{generalizes} & 0.80 & \texttt{refutes} & 1.25\\
+\texttt{proves} & 1.00 & \texttt{cites} & 0.65 & \texttt{fails\_under} & 1.25\\
+\texttt{defines} & 0.90 & \texttt{analogous\_to} & 0.60 & \texttt{supersedes} & 0.45\\
+\texttt{specializes} & 0.90 & \texttt{semantic\_association} & 0.55 & \texttt{bridges\_to} & 0.45\\
+\bottomrule
+\end{tabular}
+\caption{Multipliers of link kinds in spreading.}
+\label{tab:omega}
+\end{table}
+
+Spreading is off by default, because it does not help questions: it re-ranks cards the words have already found and finds no new ones (Section~\ref{sec:tests}). Two modes restrict it further. In \emph{discovery mode} it may follow any positive link, including analogies and associations. In \emph{proof mode} it follows only directed exact links (\texttt{depends\_on}, \texttt{defines}, \texttt{proves}, \texttt{specializes}, \texttt{generalizes}), so that no embedding similarity or association can be read as a premise.
+
+\subsection{Printing}
+The deliberate tool prints, for each of the eight cards, the full identifier (shortened to a unique prefix, which the tool accepts back), the title, the kind and status, the whole statement, the conditions, and one line per link with the kind as seen from the card (\emph{uses}, \emph{used by}, \emph{special case of}, \emph{refuted by}, \dots), the title of the other end and its identifier. A search prints about $11{,}000$ characters; opening one card prints about $1{,}300$, a hub $3{,}000$ or more.
+
+This format was a design decision and it decided much of the score. The same retrieval, printing titles and $700$-character snippets without identifiers, scored $34$ of $100$ on the store questions; printing whole cards with identifiers and linked identifiers scored $83$. The reason is visible in the transcripts: with identifiers the agent can open the card it needs in the next call, and with links it can see at once whether the answer is one step away.
+
+\subsection{Walking}
+A second tool moves along links. From a card it groups the links by kind, orders each group by strength, and ranks every card within two links toward a phrase the agent supplies (``toward a counterexample''). From a question it prints one line for each of the eight best word matches, then the cards within two links of them that are closest in meaning to the question, then the closest in meaning anywhere. On $99$ development questions whose answer the word search had missed, one such call of about $3{,}500$ characters showed the answer $45$ times; the same number of characters spent on more whole cards of the word search showed it $4$ times. When the answer was within two links of a hit, a walk from that hit put it in the first three lines $21$ times and in the first eight $35$ times.
+
+Whether to walk or to reword depends on the hits. On $206$ development questions the first eight missed the answer $99$ times; the answer was one link from a hit $21$ times, two links from a hit $21$ times, and further or nowhere $57$ times. When the hits are on the right topic, walking finds the relation the agent needs (a proof, a special case, a counterexample). When they are off topic, a second wording does better: over the misses it found the answer $32$ times, more often than any walk from the wrong place.

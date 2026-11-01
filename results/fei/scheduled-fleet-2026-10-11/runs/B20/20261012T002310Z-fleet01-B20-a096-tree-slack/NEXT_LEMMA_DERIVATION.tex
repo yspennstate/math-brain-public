@@ -1,0 +1,122 @@
+\section*{Fixed-root deficit telescope on a physical restriction tree}
+
+Let $f:\{-1,1\}^n\to\{-1,1\}$ be nonconstant and freeze
+\[
+ R={\mathsf H(f)\over\mathsf I(f)}.
+\]
+For every physical descendant $g$ define the fixed-root deficit
+\[
+ D_R(g)=R\mathsf I(g)-\mathsf H(g).
+\]
+For a relevant coordinate $i$ of $g$, let $g_i^+$ and $g_i^-$ be the
+physical children, put
+\[
+ \Delta_i\mathsf H(g)=\mathsf H(g)
+ -{\mathsf H(g_i^+)+\mathsf H(g_i^-)\over2},
+\]
+and define the signed local slack
+\[
+ s_R(g,i)=\Delta_i\mathsf H(g)-R\mathsf I_i(g).
+\]
+
+\begin{lemma}[edge identity]
+For every physical split,
+\[
+ \boxed{
+ {D_R(g_i^+)+D_R(g_i^-)\over2}=D_R(g)+s_R(g,i).}       \tag{1}
+\]
+\end{lemma}
+
+\begin{proof}
+Physical edge counting gives
+\[
+ {\mathsf I(g_i^+)+\mathsf I(g_i^-)\over2}
+ =\mathsf I(g)-\mathsf I_i(g).
+\]
+Substitution into the left side of (1), together with the definition of
+$\Delta_i\mathsf H(g)$, gives
+\[
+ R(\mathsf I(g)-\mathsf I_i(g))
+ -(\mathsf H(g)-\Delta_i\mathsf H(g))
+ =D_R(g)+s_R(g,i).
+\]
+\end{proof}
+
+Let $T$ be any finite physical restriction tree rooted at $f$.  An internal
+node $v$ carries a descendant $f_v$ and is split on a physical coordinate
+$i(v)$.  Give every node its reach weight $w_v=2^{-\operatorname{depth}(v)}$.
+Leaves may occur at different depths and need not be constant.
+
+\begin{theorem}[tree-slack telescope]
+For every such tree,
+\[
+ \boxed{
+ \sum_{\ell\in\operatorname{Leaf}(T)}w_\ell D_R(f_\ell)
+ =D_R(f)+
+ \sum_{v\in\operatorname{Int}(T)}w_v s_R(f_v,i(v)).}    \tag{2}
+\]
+Since $D_R(f)=0$, this also yields the exact nonreusing decomposition
+\[
+ \boxed{
+ \mathsf H(f)=
+ \sum_\ell w_\ell\mathsf H(f_\ell)
+ +R\sum_v w_v\mathsf I_{i(v)}(f_v)
+ +\sum_v w_v s_R(f_v,i(v)).}                            \tag{3}
+\]
+Every revealed physical edge and every terminal entropy occurs once.
+\end{theorem}
+
+\begin{proof}
+Multiply (1) at node $v$ by $w_v$.  The two child deficits then have weights
+$w_v/2$, exactly their reach weights.  Summing over the internal nodes cancels
+each nonroot, nonleaf deficit once with opposite signs, leaving (2).
+Similarly, iterating the physical influence identity gives
+\[
+ \sum_\ell w_\ell\mathsf I(f_\ell)
+ =\mathsf I(f)-\sum_vw_v\mathsf I_{i(v)}(f_v).
+\]
+Insert this into (2), use $R\mathsf I(f)=\mathsf H(f)$, and rearrange to get
+(3).
+\end{proof}
+
+\paragraph{Descendant-critical corollary.}
+Suppose $f$ has ratio at least that of every nonconstant physical descendant.
+Then $D_R(g)\ge0$ for every descendant $g$ (and $D_R(g)=0$ for constants).
+Consequently every stopped tree satisfies
+\[
+ \sum_vw_vs_R(f_v,i(v))
+ =\sum_\ell w_\ell D_R(f_\ell)\ge0.                    \tag{4}
+\]
+At any plateau node $g$ with $D_R(g)=0$, (1) shows
+$s_R(g,i)\ge0$ for every relevant coordinate.  Equality holds exactly when
+every nonconstant child has ratio $R$.  This recovers the B11 critical-slack
+identity at every node lying on the fixed-root ratio plateau.
+
+The individual slacks in (4) need not be nonnegative away from the plateau:
+they are increments of the nonnegative potential $D_R$ under conditional
+expectation.  If $T$ is continued to constants, (2) gives
+\[
+ \boxed{\sum_vw_vs_R(f_v,i(v))=0.}                      \tag{5}
+\]
+Thus any positive root slack must be cancelled by negative slack deeper in
+the tree unless every encountered slack vanishes.  This is the exact reason
+that a nodewise nonnegative-refund proof is too strong, while a signed global
+tree remains viable.
+
+\paragraph{Cross-route substitution and scope.}
+Equation (2) substitutes the B11 influence-weighted child deficit into the
+same signed-telescope position occupied by the independently reviewed
+algebraic core of the B05--B19 one-point-defect terminal refund.  The
+quantities are not identified: $s_R$ is a fixed-root entropy--influence
+potential increment, whereas the B05--B19 credit is the complete physical
+$L+Q$ packet.  What transfers exactly is the accounting mechanism: signed
+internal increments plus an explicit terminal potential, with reach weights
+and no repeated edge.
+
+This does not prove FEI.  The coefficient $R$ in (3) is the unknown root
+ratio, and a complete tree makes (5) a zero-sum identity.  The next unpaid
+lemma is to construct, for every descendant-critical tensor-prime source, a
+stopping tree and an additional nonnegative Boolean compensator that bounds
+the terminal entropy/deficit without inserting $R$ as an assumed universal
+constant.  It must survive the one-point-defect negative-credit chain,
+addressing, near tensors, parity erasure, and shared-variable interference.

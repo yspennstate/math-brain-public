@@ -1,0 +1,106 @@
+[
+  {
+    "claim_id": "A031-LOSSLESS-THREE-STATE-COLLISION-REFUND",
+    "version": 1,
+    "exact_statement": "For every disjoint equal-width tribes sign f=2 product_(b=1..t)(1-A_w)-1, w,t>=1, q=2^-w,s=1-q,c=2s^t-1 and e=2q s^(t-1), the normalized derivative/reference pair mu_i(T)=p_(T+i)/e and r_i(T)=p_T+p_(T+i) has a lossless three-state sufficient statistic C_i: empty T, nonempty T avoiding the queried block, or T meeting its retained coordinates. Its laws are mu_C=(e,2q-e,1-2q) and r_C=(c^2+e^2,e(2q-e)(s^2+q^2)/q^2,2e(1-2q)), and D(mu_i||r_i)=D(mu_C||r_C). Therefore M_i/e=e log2((c^2+e^2)/e^2)+(2q-e)log2((s^2+q^2)/q^2)+1-2q. For w>=4,t=2^w, M/I<=1+6w2^-w<=5/2, whereas the normalized non-Boolean product law Bernoulli(1/64)^tensor64 has M/I=6. Boolean spectators preserve the old sufficient statistic and old row cost, retaining their own terminal entropy. For an arbitrary Boolean seed g with at least two fresh parity bits, tensor copies and k point-activation controls, the nonempty-residual-core flag refunds exactly k in each old data divergence; the conditional seed divergence is unchanged. A sufficient seed statistic composed with this flag remains lossless, but no universal payment for arbitrary seed divergence is asserted.",
+    "hypotheses": [
+      "Finite uniform physical cubes, genuine Boolean factor expansion; all blocks disjoint",
+      "w,t positive integers; bound 5/2 requires w>=4 and t=2^w",
+      "Normalized Fourier coefficients; entropy and KL in bits; zero states omitted by continuity",
+      "Spectators and activation variables are actual disjoint Boolean variables; arbitrary terminal core costs retained"
+    ],
+    "statement_sha256": "4b61c928556eaeac2ee1dc25855388a329b88e3581e259222f8dc7a52b974220",
+    "contributors": [
+      "fleet05/A031"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261014T011913Z-fleet05-A031-convolution-identity\\DERIVATION.md",
+      "sha256": "2dc2adbbf77364e16dc64c0c75f44745d84bf82a7af723353a087fbe15b6b933"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_NARROW_REFERENCE_REPAIR_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A090",
+      "A096",
+      "A001",
+      "A073",
+      "A033",
+      "A035",
+      "A088",
+      "A094",
+      "A099",
+      "B07",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A090-DEGREE-COARSENED-REFUND-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer w>=4, set m=2^w,p=1/m,beta=1-p,n=mw and let f_w=1-2 product_(b=1..m)(1-A_w(x_b)) be the actual Boolean OR sign of disjoint width-w point conjunctions. For each coordinate i define epsilon_i=Inf_i, mu_i(T)=fhat(T+i)^2/epsilon_i, r_i(T)=fhat(T)^2+fhat(T+i)^2, and let bar_mu_i,bar_r_i be their pushforwards under T->|T|. Every epsilon_i=epsilon=2p beta^(m-1), I=2w beta^(m-1), and 0<=D2(bar_mu_i||bar_r_i)<=3+log2(w+1/2). Defining M=sum_i epsilon_i[log2(1/epsilon_i)-D2(mu_i||r_i)] and M_degree=sum_i epsilon_i[log2(1/epsilon_i)-D2(bar_mu_i||bar_r_i)], one has M_degree/I>=w-4-log2(w+1/2), hence M_degree/I>=w/2 for w>=32, while 0<=M<=B<=H<=6I for all w>=4. The exact discarded conditional refund is M_degree-M=sum_i epsilon_i sum_t bar_mu_i(t) D2(mu_i(.|t)||r_i(.|t)), and divided by I it is at least w/2-6 for w>=32. Thus no absolute K makes M_degree<=K I for all actual Boolean signs; no FEI disproof or obstruction to full function-specific row references is asserted.",
+    "hypotheses": [
+      "Finite uniform physical cube, actual Boolean OR sign of independent point conjunctions",
+      "w>=4 integer; m=2^w; disjoint width-w blocks; all coordinates relevant",
+      "Normalized Fourier probabilities; entropy and KL in bits; ordinary physical influence",
+      "Coarsening is residual Fourier degree, not physical restriction or full-subset exchangeability",
+      "Complete normalized derivative and reference row laws; zero terms by continuity"
+    ],
+    "statement_sha256": "77477f4e2ad5394997a282fdb2b72d2db7769435417f5cd37ad072d7108c1ba0",
+    "contributors": [
+      "A090"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A090\\runs\\20261014T010003Z-fleet05-A090-independent-reconstruction\\REPORT.md",
+      "locators": [
+        "equations (1)-(19)",
+        "DEGREE_REFUND_PROOF.tex"
+      ],
+      "checker": "code/check_degree.py",
+      "certificates": [
+        "out/PILOT.json",
+        "out/CHECK.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A094",
+        "verdict": "PENDING"
+      },
+      {
+        "reviewer": "A085",
+        "verdict": "PENDING_ALTERNATE"
+      },
+      {
+        "reviewer": "fleet05/A031",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261014T011913Z-fleet05-A031-convolution-identity\\A090_INDEPENDENT_REVIEW.md",
+        "sha256": "2f39b7dd9ee391fc41d2ae16b73c1402499a1dfd6dbdee925854f313d914e8ef",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261014T011913Z-fleet05-A031-convolution-identity\\out\\DEGREE_REVIEW.json",
+        "method": "Independent block-count likelihood reconstruction and Fraction PGF implementation; no repair",
+        "contributor_conflict": false,
+        "shared_registry_adoption": "PENDING_B20"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_ACCEPT_AT_STATED_SCOPE_PENDING_INDEX_ADOPTION",
+    "supersedes": [],
+    "refutes": [
+      "There exists one finite absolute K such that the actual normalized derivative/reference refund coarsened to residual Fourier degree satisfies M_degree(f)<=K I(f) for every finite uniform-cube Boolean sign. This is a tested downstream shortcut, not an assertion attributed to A096 or A099."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A001",
+      "A073",
+      "A099",
+      "A064",
+      "A094",
+      "A085",
+      "B18",
+      "B20"
+    ]
+  }
+]

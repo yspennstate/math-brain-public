@@ -1,0 +1,36 @@
+HARD7-02 exact cyclic-ascent self-check
+identity: # {sigma in S_k : cycasc(sigma)=j} = k*A(k-1,j-1)
+k=3: counts={1: 3, 2: 3}; pass=True
+k=4: counts={1: 4, 2: 16, 3: 4}; pass=True
+k=5: counts={1: 5, 2: 55, 3: 55, 4: 5}; pass=True
+k=6: counts={1: 6, 2: 156, 3: 396, 4: 156, 5: 6}; pass=True
+k=7: counts={1: 7, 2: 399, 3: 2114, 4: 2114, 5: 399, 6: 7}; pass=True
+k=8: counts={1: 8, 2: 960, 3: 9528, 4: 19328, 5: 9528, 6: 960, 7: 8}; pass=True
+p=1/2:
+  k=3: I_k=1/8; pass=True
+  k=4: I_k=1/16; pass=True
+  k=5: I_k=1/32; pass=True
+  k=6: I_k=1/64; pass=True
+  k=7: I_k=1/128; pass=True
+  k=8: I_k=1/256; pass=True
+p=2/3:
+  k=3: I_k=1/9; pass=True
+  k=4: I_k=13/243; pass=True
+  k=5: I_k=25/972; pass=True
+  k=6: I_k=541/43740; pass=True
+  k=7: I_k=1561/262440; pass=True
+  k=8: I_k=47293/16533720; pass=True
+p=3/4:
+  k=3: I_k=3/32; pass=True
+  k=4: I_k=11/256; pass=True
+  k=5: I_k=5/256; pass=True
+  k=6: I_k=91/10240; pass=True
+  k=7: I_k=497/122880; pass=True
+  k=8: I_k=12667/6881280; pass=True
+k=3: polynomial-coefficient identity pass=True
+k=4: polynomial-coefficient identity pass=True
+k=5: polynomial-coefficient identity pass=True
+k=6: polynomial-coefficient identity pass=True
+k=7: polynomial-coefficient identity pass=True
+k=8: polynomial-coefficient identity pass=True
+ALL_EXACT_CHECKS_PASS = True

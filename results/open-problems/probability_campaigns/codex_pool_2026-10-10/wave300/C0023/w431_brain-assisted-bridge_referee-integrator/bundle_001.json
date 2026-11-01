@@ -1,0 +1,36 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w431",
+  "bundle_slug": "c0023-referee-source-scope-001",
+  "entries": [
+    {
+      "key": "sharpness-endpoint",
+      "namespace": "probability.percolation",
+      "logical_name": "sharpness-exponential-rate-depends-on-subcritical-parameter",
+      "kind": "concept",
+      "title": "Sharpness gives a separate exponential rate for each subcritical parameter",
+      "statement": "For nearest-neighbour independent Bernoulli bond percolation on Z^d, integer d>=2, Duminil-Copin and Tassion's Theorem 1.1 states that for each fixed p<p_c there exists c(p)>0 such that P_p(0 connects to the boundary of [-n,n]^d)<=exp(-c(p)n) for all n>=1. The quantifiers do not supply a rate bounded away from zero uniformly as p increases to p_c and do not give an upper one-arm bound at p=p_c. A proof requiring critical decay needs another argument.",
+      "proof_text": null,
+      "assumptions": ["Independent nearest-neighbour Bernoulli bond percolation on Z^d", "Integer d>=2", "Each p is fixed strictly below its critical parameter"],
+      "domain": "probability theory, percolation",
+      "source": {"source_id": "arxiv:1502.03051:Theorem-1.1", "url": "https://arxiv.org/html/1502.03051v1", "revision": "v1-as-read-2026-10-10", "license": "arxiv-nonexclusive", "excerpt": "For p<p_c, there exists c=c(p)>0"}
+    },
+    {
+      "key": "site-bond-boundary",
+      "namespace": "probability.percolation",
+      "logical_name": "c0023-bond-target-distinct-from-cerf-site-conjecture",
+      "kind": "concept",
+      "title": "C0023 bond scope and Cerf's site-percolation scope differ",
+      "statement": "C0023 here asks whether theta_d(p_c)=0 for independent nearest-neighbour BOND percolation on Z^d, integers 3<=d<=10, with Bernoulli variables on edges. Cerf's arXiv:2608.23661 explicitly formulates theta(p_c,Z^d)=0 for independent SITE percolation, with Bernoulli variables on vertices. The product spaces and their critical parameters differ. The 2026-09-10 intake assertion that Cerf's tail conjecture is a reformulation of C0023 is not supported by the cited source alone; a model-transfer theorem would be needed to identify the tasks.",
+      "proof_text": null,
+      "assumptions": ["The C0023 research lane is scoped to nearest-neighbour bond percolation", "Cerf's source uses Bernoulli site percolation"],
+      "domain": "probability theory, percolation",
+      "source": {"source_id": "owner-own-work:w431:C0023-site-bond-source-check", "url": "~/brain_workers/w431/SOURCE_STATUS.json", "revision": "2026-10-10", "license": "owner-own-work", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "sharpness-endpoint", "to_existing_logical": "math:probability.percolation:sharpness-of-the-percolation-phase-transition", "kind": "cites", "rationale": "The existing sharpness card's phrase 'right up to p_c' needs the source's exact c(p) quantifier; both describe the same subcritical theorem."},
+    {"from_key": "sharpness-endpoint", "to_existing_logical": "math:probability.percolation:open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10", "kind": "semantic_association", "rationale": "The source theorem covers fixed p<p_c while C0023 asks for theta(p_c)=0, so it does not close the endpoint."},
+    {"from_key": "site-bond-boundary", "to_existing_logical": "math:probability.percolation:open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10", "kind": "semantic_association", "rationale": "The target card concerns lattice criticality, while this scope check prevents merging a site-percolation tail conjecture into the bond target without a transfer proof."}
+  ]
+}

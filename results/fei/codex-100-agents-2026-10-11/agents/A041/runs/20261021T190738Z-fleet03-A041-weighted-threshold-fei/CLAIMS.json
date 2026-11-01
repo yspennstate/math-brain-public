@@ -1,0 +1,55 @@
+[
+  {
+    "claim_id": "A041-SHARP-QUADRATIC-COHERENCE-CHARGE",
+    "version": 1,
+    "exact_statement": "For actual two-weight thresholds with independent interior product biases, let K_star be the complete max of the canonical squared-tail references, and r(U,T) the smaller nonzero jump count of the two directional physical coefficient profiles on an occupied mixed label. Then P(U,T)<=r(U,T)K_star(U,T), and C_star<=E_mixed+sum_mixed P ln r. The positive complete normalization tax is <=D_mixed ln2. For the gate with at most one zero among a+b inputs, a,b>=2, both profiles have at most two jumps at every bias, P<=2K_star, and for a=b=m the complete top-label ratio is 2-1/(m^2+(m-1)^2), proving factor2 sharp. It has a real two-weight representation for every1<w<2 and C_star<=(460+81ln2)Delta by the established symmetric-threshold baseline. Free pointwise P<=K_star and overlap sum min(K_A,K_B)>=M are false, already on a fair four-bit threshold. No unrestricted jump-count or universal signed-payment bound is asserted.",
+    "hypotheses": [
+      "actual physical two-weight threshold on distinct independent Bernoulli inputs",
+      "interior product biases; deterministic coordinates contract",
+      "complete canonical squared-tail references, including off-support mass",
+      "r and logarithms used only on positive actual support; M=0 trivial",
+      "baseline-paid family additionally uses the accepted all-bias symmetric-threshold theorem"
+    ],
+    "statement_sha256": "c958945c4cc6ab13b72c1d24659df0a678cd4ec0ae40067aaa88ef81b62df150",
+    "contributors": [
+      "A041/fleet03"
+    ],
+    "proof_source": {
+      "path": "PROOF.md",
+      "sha256": "4d62dd1027d42cb8a0e343b4835c02224f713ea1d24bda5c8de60367c0a1c0eb",
+      "checks": [
+        "out/OVERLAP_CHECKS.json",
+        "out/SHARP_CHECKS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A041-TWO-DIRECTION-COMPLETE-QUADRATIC-REFERENCE",
+        "version": 1,
+        "statement_sha256": "243bd77a120d61ca7252b00072ab29e9b0016a543bda125237d72edac720d10c"
+      },
+      {
+        "claim_id": "A045-QUADRATIC-TAIL-ENERGY-NORMALIZED-REFERENCE",
+        "version": 1,
+        "statement_sha256": "b8364330c7795e63389748f38d6389fca6f69b6074c304f08194b342f9bb36d3"
+      },
+      "supplied threshold_paper_38pp Theorem D; exact bytes in out/SOURCE_RECEIPTS.json; used only for family entropy payment"
+    ],
+    "review_records": [],
+    "status": "ANALYTIC_PROOF_EXACT_CHECKS_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "unregistered free pointwise quadratic domination P<=K_star",
+      "unregistered overlap lower bound sum min(K_A,K_B)>=M"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A044",
+      "A045",
+      "A043",
+      "A090",
+      "A091",
+      "B20"
+    ]
+  }
+]

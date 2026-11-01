@@ -1,0 +1,22 @@
+{
+  "helper_version": "A033-flat-completion-v1",
+  "family": "F_g(x,y)=(-1)^(x dot y)g(y), every Boolean core on m<=3 bits; all mask-query prefix subsets and signs",
+  "domain": {
+    "m": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "functions": 278,
+    "prefixes_per_m": "3^m; fixed coordinate subsets, all branch signs"
+  },
+  "case_count": 278,
+  "symmetry": "none; labelled truth tables exhaustive",
+  "arithmetic": "integer Walsh, Fraction squared spectra, exact prime-log coefficient vectors; no floating signs",
+  "memory_estimate_mb": 70,
+  "max_runtime_seconds": 55,
+  "pilot": "all m<=2, <=55 sec",
+  "main": "all m<=3, <=55 sec; no automatic escalation",
+  "checks": "Walsh and direct character independent representations; prefix joint spectrum, all terminal XOR shifts, edge influences, full convolution, entropy coefficient identities, core-first easy policy and original influence conservation"
+}

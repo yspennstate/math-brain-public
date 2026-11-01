@@ -1,0 +1,13 @@
+{
+  "helper_version": "A094-history-independent-v1",
+  "family": "All labelled Boolean cores on k=1,2; every edit vertex; m=0,1; exact-spectrum and size-weighted prescribed references. Separate h3*h2 at all-zero edit, m=0,1,2,3,6,7.",
+  "domain": "Pilot k=1,m=0. Main k=1,2,m=0,1. Critical k=5,m=0,1,2,3,6,7; no automatic escalation.",
+  "case_count": "Main 144 actual roots, 288 reference cases, 800 histories (one first query for k=1; first/full/zero-branch second query for k=2). Critical 6 roots and 12 histories. Pilot is a subset and not counted twice.",
+  "symmetry": "None; every labelled small core and edit vertex is used. Critical core fixed explicitly, no extrapolation from finite data.",
+  "arithmetic": "Integer Walsh and physical edge counts; Fraction reference transport and likelihood identities. Information signs from range-reduced 24-term atanh rational logarithm enclosures with proved tail and dyadic outward rounding.",
+  "memory_estimate_mb": 120,
+  "max_runtime_seconds": 55,
+  "heavy_jobs": "One sequential job at a time. No expected job above 300 MB; no GPU or detached processes.",
+  "validation_scope": "All histories: exact edge/path and posterior likelihood identities; small roots: full reference support and mass. Information inequalities: pilot and all critical histories, and admitted small histories. No unexecuted domain credited.",
+  "lean": "Core-only algebra check if available within resource cap; no Mathlib compilation (documented 4GB cost would exceed 1.5GB user cap). Wrapper must use a temporary directory inside this run."
+}

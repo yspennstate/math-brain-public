@@ -1,0 +1,37 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w344",
+  "bundle_slug": "w344-open-problem-p0023-checked-partials-20261010",
+  "entries": [
+    {
+      "key": "symmetric-triangle-mirror-start-efficient-coupling",
+      "namespace": "probability.reflected_brownian",
+      "logical_name": "symmetric-triangle-mirror-start-efficient-coupling",
+      "kind": "lemma",
+      "title": "Efficient reflected Brownian coupling for mirror starting pairs in a symmetric triangle",
+      "statement": "Let D be a bounded triangle invariant under reflection R across an axis, and let lambda_1 be the first positive Neumann eigenvalue of -Delta/2 on D. For starting points x and Rx with x off the axis, there is a coalescent coupling of reflected Brownian motions with generator Delta/2 whose meeting time T satisfies P(T>t)<=C_(x,gamma) exp(-gamma t) for every 0<gamma<lambda_1. The coupling reflects one path across the axis until it hits that axis, then uses the same path. The killed half-domain principal eigenvalue is at least lambda_1 by odd extension and the Neumann Rayleigh principle. In particular, the result covers mirror starting pairs in reflection-symmetric acute triangles, not arbitrary pairs or scalene triangles.",
+      "proof_text": "Burdzy's cached official open-problems page, Problem 4, asks about arbitrary distinct starting points in any acute triangle. The prior attempt gives only a spectral lower bound, with the correct generator convention. For a bounded reflection-symmetric triangle D, let R be reflection through a symmetry axis and start at x and Rx, with x off the axis. Run Neumann reflected Brownian motion X with generator Delta/2, set Y=RX until the first hitting time T of the axis, and set Y=X thereafter. Reflection invariance of the domain and the strong Markov property make both marginals reflected Brownian motion. At T, X=RX, so the construction is coalescent.\n\nBefore T, X lives in one half-triangle with Neumann condition on its exterior sides and absorbing condition on the axis. Its survival exponent is the first mixed-boundary eigenvalue lambda_mix of -Delta/2. Odd extension across the axis sends every admissible half-domain test function to a mean-zero H^1 function on D, preserving its Rayleigh quotient. Thus lambda_mix>=lambda_1, where lambda_1 is the first positive full-domain Neumann generator eigenvalue. The bounded-domain killed heat semigroup therefore gives, for each gamma<lambda_1, P_x(T>t)<=C_(x,gamma) exp(-gamma t). This is an affirmative special case for mirror-image starting points in reflection-symmetric acute triangles. It does not construct a coupling for arbitrary pairs or scalene triangles.\n\nChecks: require a global domain symmetry, not just a reflected noise formula; identify absorbing/reflecting boundary pieces; require coalescence after meeting; use -Delta/2 rather than -Delta. A one-dimensional reflection control on [0,1], starting at 1/4 and 3/4, has generator exponent pi^2/2. Its exact mixed-boundary survival expansion has scaled limit (4/pi)cos(pi/4); three values are saved in special_case_measurements.jsonl. That control checks the convention and stopping mechanism, not the full triangular spectral theory.",
+      "assumptions": [
+        "A global reflection symmetry of the triangle",
+        "Starting points are mirror images",
+        "Generator Delta/2"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:symmetric-triangle-mirror-start-efficient-coupling",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "Let D be a bounded triangle invariant under reflection R across an axis, and let lambda_1 be the"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "symmetric-triangle-mirror-start-efficient-coupling",
+      "to_existing_logical": "math:probability.core:open-problem-p0023-efficient-reflected-brownian-coupling-in-acute-triangles",
+      "kind": "specializes",
+      "rationale": "New end: \"Let D be a bounded triangle invariant under reflection R across an axis, and let lambda_1 be the\"; existing end: \"In any acute triangle, can reflected Brownian motions from distinct starting points be coupled so their meeting-time tail\". This result addresses or audits P0023; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    }
+  ]
+}

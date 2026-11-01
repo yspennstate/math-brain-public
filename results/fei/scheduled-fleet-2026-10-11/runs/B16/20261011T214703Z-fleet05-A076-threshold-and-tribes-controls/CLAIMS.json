@@ -1,0 +1,74 @@
+[
+  {
+    "claim_id": "A076-STRUCTURED-SPECTRA",
+    "version": 1,
+    "exact_statement": "On independent uniform physical bits, threshold f_(n,r)=2*1_{|b|>=r}-1 has coefficient a_k=2^-n sum_(j=0..k,l=0..n-k)(2*1_{j+l>=r}-1)(-1)^j binom(k,j)binom(n-k,l), with multiplicity binom(n,k), and I=n*2^-(n-1)*binom(n-1,r-1) for 1<=r<=n (zero for constant endpoints). For disjoint t tribes of width w, q=2^-w,b=1-q,a=b^t, f=1-2 prod(1-A_j), the empty coefficient is 1-2a and a nonempty set meeting k tribes has coefficient -2*(-q)^k*b^(t-k), with multiplicity binom(t,k)*(2^w-1)^k. I=2twq*b^(t-1) and H=phi((1-2a)^2)+8wtqa-8t(ba-a^2)log2(b)-8(a-a^2). Balanced disjoint substitution has H(F)=H(g)+sum_i Inf_i(g)H(f_i), I(F)=sum_i Inf_i(g)I(f_i). Recursive majority3 depth ell has I=(3/2)^ell, H=4*((3/2)^ell-1), and degree PGF R_ell=(3/4)R_(ell-1)+(1/4)R_(ell-1)^3, R_0=z.",
+    "hypotheses": [
+      "n>=1,0<=r<=n+1 integers; w,t>=1 integers; ell>=0 integer",
+      "entropy in bits; phi(u)=u log2(1/u), phi(0)=0",
+      "original inputs uniform; all composing physical blocks disjoint; child outputs balanced for balanced substitution"
+    ],
+    "statement_sha256": "c6046c0e1613beb9980cc8449a44fc18d1bb4ee49cd35173dda578eee01b4293",
+    "contributors": [
+      "A076"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261011T214703Z-fleet05-A076-threshold-and-tribes-controls\\STRUCTURED_CONTROLS.tex",
+      "locator": "STRUCTURED_CONTROLS.tex equations (1)-(23)",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261011T214703Z-fleet05-A076-threshold-and-tribes-controls\\out\\VALIDATION.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A015",
+      "A046",
+      "A092",
+      "A088",
+      "B16",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A076-TRIBES-PAYMENT-DISCRIMINATION",
+    "version": 1,
+    "exact_statement": "Fix lambda>0, q=2^-w,t=floor(lambda/q),a=(1-q)^t and use the preceding uniform tribes. H=8lambda*exp(-lambda)*w+O_lambda(1), I=2lambda*exp(-lambda)*w+O_lambda(wq), hence H/I->4. For A one entire tribe, c=1-4a+4a^2/(1-q),u=4qa^2/((1-q)c), M_A=c*h2(u)+(1-c)*h2(q)+4qa*log2(2^w-1), I_A=2wq*(1-q)^(t-1), L_A=H_(w,t)-(1-q)H_(w,t-1), J_A=L_A-M_A and Delta_A=0. If lambda!=ln2, M_A/I_A->4,J_A/I_A->0,L_A/I_A->4. If lambda=ln2, M_A/I_A->3,J_A/I_A->1,L_A/I_A->4. Thus universal M_A<=K I_A or L_A<=K I_A requires K>=4. Additionally the marginal code M=sum_i h2(Inf_i) obeys M/I=w-1+(lambda+1)log2(e)+O_lambda(q), whereas H(|S|)=O_lambda(log w) and H(S||S|)/I->4. Recursive majority3 gives M/I=ell+log2(e)+O(2^-ell), H(|S|)=O(ell), H/I->4 and H/(I-Var)=4 for ell>=1. These refute only a dimension-free payment of the independent-marginal code and any universal H<=C[H(|S|)+Var], not FEI or the B09 helper.",
+    "hypotheses": [
+      "lambda fixed positive, w->infinity integers; t=floor(lambda*2^w)>=1",
+      "original inputs uniform and all tribes disjoint",
+      "M_A denotes conditional spectral block entropy, J_A actual physical-restriction mutual information; H(S||S|) means H(S conditional on |S|)",
+      "all influence includes every physical input"
+    ],
+    "statement_sha256": "9d436c714dcf18d766ff693e942961f809c6df91c2df45998bd51530e8228eba",
+    "contributors": [
+      "A076"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261011T214703Z-fleet05-A076-threshold-and-tribes-controls\\STRUCTURED_CONTROLS.tex",
+      "locator": "STRUCTURED_CONTROLS.tex equations (11)-(17),(20)-(22),(24)-(29)",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A076\\runs\\20261011T214703Z-fleet05-A076-threshold-and-tribes-controls\\out\\VALIDATION.json"
+    },
+    "proof_dependencies": [
+      "A076-STRUCTURED-SPECTRA@1"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "M(f)<=K I(f) for a universal finite K, with M=sum_i h2(Inf_i(f))",
+      "H(f)<=C[H(|S|)+Var(f)] for a universal finite C"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A015",
+      "A046",
+      "A092",
+      "A088",
+      "B16",
+      "B20"
+    ]
+  }
+]

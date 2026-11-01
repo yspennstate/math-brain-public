@@ -1,0 +1,38 @@
+[
+  {
+    "claim_id": "A069-STABLE-HIERARCHY-EDIT-PAYMENT",
+    "version": 1,
+    "exact_statement": "For each rooted singleton-leaf partition tree T of [N] with 2 or 3 children per internal vertex, L_T(S)=1+sum_v b_v*1{S intersects C_v} is the length of an all-subset prefix code, max L_T<=3N-2, and H(f)<=Gamma_T(f)=sum_S fhat(S)^2 L_T(S). If Boolean f,g differ on input fraction rho, sqrt(Gamma_T(f))<=sqrt(Gamma_T(g))+2 sqrt(rho max L_T), and |I(f)-I(g)|<=2N rho. For complete depth-d ternary recursive majority g_d, d>=1, padded to N>=3^d bits, the explicit main/padding tree satisfies Gamma_T(g_d)<=6I(g_d)-3. Every truth-table edit f of this g_d satisfies Gamma_T(f)<=12I(f)-6+48N rho-16rho; in particular H(f)<=Gamma_T(f)<=12I(f) if N rho<=1/8. Every one-point edit satisfies H(f)<=Gamma_T(f)<=25I(f), and <=12I(f) for N>=6. For fixed d the code-cost difference under padding and one-point editing tends to zero.",
+    "hypotheses": [
+      "Uniform finite sign cube; actual Boolean f,g.",
+      "Entropy and code lengths in bits; I=sum_S |S| fhat(S)^2.",
+      "Tree and ordered child cells fixed for the source, not chosen after observing S.",
+      "Singleton leaves, no unary vertices, internal arity 2 or 3.",
+      "Family conclusions require d>=1, N>=3^d, complete ternary recursive majority base and Boolean flips on D.",
+      "No arbitrary unpaid Boolean terminal is included in the family."
+    ],
+    "statement_sha256": "cd5f76a5bb9b392b3cd098f53516f83f2ae8e02fa78de7950f280d64c7245d4a",
+    "contributors": [
+      "fleet05/A069"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A069\\runs\\20261011T224507Z-fleet05-A069-geometric-transfer\\REPORT.md",
+      "locators": "equations (1)-(12)",
+      "sha256": "8c9857f2e4ca408f873eb84f8d6b66272e8b403abf9d789d0622bffc4d85fb17"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A008",
+      "A011",
+      "B20"
+    ]
+  }
+]

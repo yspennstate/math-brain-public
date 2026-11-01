@@ -1,0 +1,55 @@
+[
+  {
+    "claim_id": "A029-CHILD-DEFICIT-BENCHMARKS",
+    "version": 1,
+    "exact_statement": "Scoped child-deficit benchmarks: for every nonconstant uniform-cube Boolean sign on n=1..4, the best relevant one-coordinate entropy-drop/influence ratio minus the best nonempty physical adaptive depth-at-most-two tree ratio lies in [0,2], with equality exactly for signed AND2 (including irrelevant-variable extensions) and four-variable bent functions. For the original B05 family at every even k>=4, r=2k, delta=2^-k, p=2^-r, both actual selector children have D_4>=p(k-3), and their selector parent has D_4>=p[k-3-delta(3k+1/2)]>0.",
+    "hypotheses": [
+      "Actual Boolean signs; independent fair physical inputs; entropy in bits; ordinary total influence",
+      "Finite ratio claim only n<=4; relevant root and optional branch-dependent relevant second query",
+      "B05 claim only its stated quadratic bent core and one-point sign flip, all-zero activation r=2k, even k>=4",
+      "No arbitrary terminal deficit is assumed nonnegative"
+    ],
+    "statement_sha256": "e232ed7d80abbbf6c871b40241d9e6c4fe92994fb755aa1c60180f8f91222fc4",
+    "contributors": [
+      "fleet05/A029"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "B05_TRANSPORT.md",
+      "CHILD_DEFICIT_TRANSPORT.tex",
+      "code/census.py",
+      "code/verify.py",
+      "code/structure.py"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "C005",
+        "version": "source ERASURE_REDUCTION.md sections 1,2",
+        "status": "PROVED_BASELINE"
+      },
+      {
+        "claim_id": "B06-R2",
+        "version": "STREAM_NOTES.md v1 2026-10-11 22:38Z",
+        "status": "BASELINE_REUSED_NOT_RECLAIMED"
+      },
+      {
+        "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+        "version": 1,
+        "status": "INDEPENDENTLY_REVIEWED_CONSTRUCTION_ONLY"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A052",
+      "A064",
+      "A087",
+      "A094",
+      "B06 lead"
+    ]
+  }
+]

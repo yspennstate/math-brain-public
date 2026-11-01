@@ -1,0 +1,178 @@
+{
+ "routes": [
+  {
+   "row": "T048",
+   "route": "Generalise the critical weighted-response proof to a leafless family using moment bounds on the conductance and signed offspring cancellation",
+   "status": "live",
+   "why": "Build on audited C009 and C010; the new quantifier is an infinite offspring family, not another one-law certificate.",
+   "evidence": "recall/frontier_check_moment_family.txt",
+   "at": "2026-10-15T00:11:53.612780+03:00",
+   "by": "worker AI"
+  },
+  {
+   "row": "T048",
+   "route": "Replace the C009 finite sibling cap by a universal moment-only weighted response kernel bound",
+   "status": "live",
+   "why": "Remove the support cap from the sibling bound; preserve dependence of own conductance and response.",
+   "evidence": "recall/frontier_check_universal_kernel.txt",
+   "at": "2026-10-15T00:11:53.612780+03:00",
+   "by": "worker AI"
+  },
+  {
+   "row": "T048",
+   "route": "Use signed covariance cancellation in Aidekon speed formula to obtain a near-critical theorem for an infinite low-variance offspring family",
+   "status": "live",
+   "why": "Expose the variance loss explicitly and seek a moment criterion uniform over an infinite family.",
+   "evidence": "recall/frontier_check_covariance_family.txt",
+   "at": "2026-10-15T00:11:53.612780+03:00",
+   "by": "worker AI"
+  },
+  {
+   "row": "T048",
+   "route": "Couple weighted response and mixed beta-delta moments, retaining the negative root covariance term, to prove speed monotonicity near criticality for every leafless exponential-moment law",
+   "status": "live",
+   "why": "Frontier check returned no close route; mixed response removes the leading root loss and leaves the formal critical margin m/a2.",
+   "evidence": "proofs/GENERAL_CRITICAL_DRAFT.md; recall/frontier_check_mixed_response.txt",
+   "at": "2026-10-15T00:17:13.175752+03:00",
+   "by": "worker AI"
+  },
+  {
+   "row": "T048",
+   "route": "Couple weighted response and mixed beta-delta moments, retaining the negative root covariance term, to prove speed monotonicity near criticality for every leafless exponential-moment law",
+   "status": "done",
+   "why": "Complete unaudited proof and explicit moment-only interval rule saved; independent review remains.",
+   "evidence": "worker AI-T048-014 v1; proofs/GENERAL_CRITICAL_MOMENT_THEOREM_v1.md",
+   "at": "2026-10-15T00:28:31.661912+03:00",
+   "by": "worker AI"
+  },
+  {
+   "row": "T048",
+   "route": "Certify the whole family p3=t on {2,3} using conductance envelopes monotone in t and a moment-only uniform critical strip",
+   "status": "live",
+   "why": "Frontier check found own C009/C014 architecture; build on those claims and introduce a uniform offspring parameter, not another single law.",
+   "evidence": "recall/frontier_check_two_three_family.txt; proofs/TWO_THREE_FAMILY_PLAN.md",
+   "at": "2026-10-15T00:31:59.800552+03:00",
+   "by": "worker AI"
+  }
+ ],
+ "claims": [
+  {
+   "id": "worker AI-T048-001",
+   "version": "1",
+   "folder": "worker AI",
+   "statement": "For discrete-time parent-lambda-biased random walk on a Galton-Watson tree with p2=p3=1/2, the speed is strictly decreasing on [0,883/500]=[0,1.766]. The exact independently implemented computation covers [117/100,883/500]; Song-Wang-Xiang Theorem 1.2 supplies the overlapping interval from zero. This extends Mandarapu-Kunkunuru's stated endpoint 1.755 by finer cells with their existing analytic criterion.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "special"
+  },
+  {
+   "id": "worker AI-T048-002",
+   "version": "2",
+   "folder": "worker AI",
+   "statement": "For every tree with 2 or 3 children at every vertex, finite-depth conductances with boundary 1-lambda/3 satisfy delta<=beta/(2-lambda)(A_n-B_n beta), with delta=-partial_lambda beta, A0=1,B0=0,A_{n+1}=A_n+(2-lambda)/lambda,B_{n+1}=A_{n+1}+(lambda/3)B_n, for every n>=0 and 0<lambda<2. Integrating finite derivatives and taking endpoint limits yields the affine endpoint conductance quotient bound in AFFINE_DERIVATIVE_ENVELOPES.md, without assuming infinite-tree differentiability.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "bound"
+  },
+  {
+   "id": "worker AI-T048-003",
+   "version": "1",
+   "folder": "worker AI",
+   "statement": "For iid Galton-Watson offspring uniform on {2,3}, the discrete-time parent-lambda-biased random walk has strictly decreasing speed on [0,1849/1000]=[0,1.849]. The segment [1.766,1.849] is verified with sharpened four-level affine conductance derivative bounds and 36 exact rational cell certificates.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "special"
+  },
+  {
+   "id": "worker AI-T048-004",
+   "version": "1",
+   "folder": "worker AI",
+   "statement": "For iid offspring uniform on {2,3}, F(lambda)=E[beta_T(lambda)] obeys 0<=F(lambda1)-F(lambda2)<=C(lambda2-lambda1)<4(lambda2-lambda1) for every 1.99<=lambda1<lambda2<=2.01, with exact C=92233720368547758080000/25012759490362088225613. A nonzero finite stochastic subsolution and an exact response kernel contraction certify the bound across lambda=2.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "bound"
+  },
+  {
+   "id": "worker AI-T048-005",
+   "version": "1",
+   "folder": "worker AI",
+   "statement": "No universal deterministic bound -beta_T'(2)<=g(beta_T(2)) over all trees with offspring in {2,3} can have g bounded on [1/5,1/4]; an explicit ternary/binary/ternary layered construction has conductance in that interval and derivatives diverging.",
+   "status": "sketch",
+   "audit": "",
+   "kind": "route-failure"
+  },
+  {
+   "id": "worker AI-T048-006",
+   "version": "2",
+   "folder": "worker AI",
+   "statement": "For iid Galton-Watson offspring uniform on {2,3}, the discrete-time parent-lambda-biased random walk has strictly decreasing speed on [0,431/200]=[0,2.155]. The new connected segment [1.849,2.155] is verified by 34 exact weighted-response speed certificates, including lambda=2.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "special"
+  },
+  {
+   "id": "worker AI-T048-007",
+   "version": "1",
+   "folder": "worker AI",
+   "statement": "For iid finite-depth conductance/derivative pairs from uniform {2,3} offspring with boundary 1-s/3, the two-degree contributions to E[(nu-R)f_prime] can be combined before bounding. On a cell with a-1>B(a), 2<Rlo<=R<=Rhi<=5/2, valid stochastic laws L<=st beta_n(s)<=st U, and D_n=E[delta/(beta+u)], they are at most [(Rhi-2)muU P0+(13-5Rlo)P3] D_n/2 + [(Rhi-2)J2hi-(3-Rhi)J3lo]/2, with the exact projection definitions in ADJACENT_OFFSPRING_CANCELLATION.md. Conditional on own conductance/derivative, the other children are independent and the nu=3 law is coupled to nu=2 by appending one iid child. This gives an exact conditional cell-speed criterion after the uniform weighted-response endpoint limit.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "bound"
+  },
+  {
+   "id": "worker AI-T048-009",
+   "version": "1",
+   "folder": "worker AI",
+   "statement": "For iid Galton-Watson offspring uniform on {2,3}, the discrete-time parent-lambda-biased speed is strictly decreasing on [23/10,5/2)=[2.3,2.5). Nonasymptotic conductance mean/second-moment bounds and adjacent-offspring cancellation reduce the sign to exact rational continuous-parameter inequalities; all 2000 closed parameter boxes on [2.3,2.5] pass after cancelling the positive factor 2.5-lambda. The transient walk theorem excludes lambda=2.5 itself.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "special"
+  },
+  {
+   "id": "worker AI-T048-008",
+   "version": "1",
+   "folder": "worker AI",
+   "statement": "For iid Galton-Watson offspring P(nu=2)=P(nu=3)=1/2, the deterministic speed of the discrete-time walk with parent weight lambda and each child weight 1 is strictly decreasing on the whole transient bias range [0,5/2). The independently checked prefix [0,2.155], sixteen exact cancellation cells to 2.31, and an analytic moment/response certificate on [2.3,2.5) cover the range with overlap. This is a special offspring-law theorem, not the general conjecture.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "special"
+  },
+  {
+   "id": "worker AI-T048-010",
+   "version": "1",
+   "folder": "worker AI",
+   "statement": "For iid Galton-Watson offspring p1=p2=1/2, the speed of the discrete-time parent-lambda-biased walk is strictly decreasing on [149/100,3/2)=[1.49,1.5). Elementary conductance moments and a changed adjacent-offspring response/cancellation criterion are checked on 1000 exact rational parameter boxes.",
+   "status": "independently checked proof",
+   "audit": "PASS",
+   "kind": "special"
+  },
+  {
+   "id": "worker AI-T048-011",
+   "version": "1",
+   "folder": "worker AI",
+   "statement": "For iid Galton-Watson offspring p1=p2=1/2, the deterministic speed of the discrete-time parent-lambda-biased walk is strictly decreasing on [1/2,4/5]=[0.5,0.8]. Thirty connected exact rational cells use a deterministic finite conductance derivative bound and two-sided quantile enclosures for nonmonotone speed kernels. The standalone theorem does not rely on a retrieved copy of the known lambda<=1/2 note.",
+   "status": "proof (unaudited)",
+   "audit": "",
+   "kind": "narrowed"
+  },
+  {
+   "id": "worker AI-T048-012",
+   "version": "1",
+   "folder": "worker AI",
+   "statement": "For every iid leafless Galton-Watson offspring law with finite mean m>1 and p1>0, and every finite M, there is positive probability that beta_T(1) is in[1/4,1/2] and the lower right response liminf_(h down0)[beta_T(1)-beta_T(1+h)]/h exceeds M. Thus no deterministic function bounded on that conductance interval bounds the right response almost surely. For uniform{1,2}, an explicit event with N=2^H>=16 has beta in[1/4,1/3], response at least(N-1)/32, and probability at least2^(-(N^2+N-1))*5^(-N). This obstructs a pointwise conductance-only derivative method; it does not refute speed monotonicity.",
+   "status": "proof (unaudited)",
+   "audit": "",
+   "kind": "route-failure"
+  },
+  {
+   "id": "worker AI-T048-014",
+   "version": "1",
+   "folder": "worker AI",
+   "statement": "For every iid leafless Galton-Watson offspring law with m>1 and an exponential moment, the parent-lambda-biased discrete-time speed is strictly decreasing on [m-epsilon(m,a2,a3),m), where a2 and a3 are the second and third factorial moments and epsilon is an explicit terminating dyadic exact interval rule using only these moments. The proof retains a signed root covariance cancellation through a mixed beta-delta response bound; its limiting scaled margin is m/a2>0.",
+   "status": "proof (unaudited)",
+   "audit": "PASS",
+   "kind": "narrowed"
+  }
+ ],
+ "at": "2026-10-15T00:34:31+03:00"
+}

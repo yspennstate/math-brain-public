@@ -1,0 +1,29 @@
+Deterministic arithmetic checks for fleet01/B01 run 20260923T220810Z
+
+beta = 1/4
+C_beta = (2*pi)^beta/[Gamma(beta)*cos(pi*beta/2)*beta*(1-2*beta)]
+       = 3.7812773487354465
+
+Partner lower bound:
+s1_floor = sqrt(31751)/256
+         = 0.6960472767876026
+
+Applied fractional-potential constant:
+C_beta * s1_floor^(-1/4)
+= 4.1397951218142355
+
+Applied square-root small-ball constant:
+8*sqrt(2*pi/s1_floor)
+= 24.03590904027218
+
+Fejer check used in proof:
+K_T(x)=(1-cos(Tx))/(pi*T*x^2), and for |Tx|<=1,
+1-cos(Tx)>=(Tx)^2/4, hence K_T(x)>=T/(4*pi).
+
+Critical endpoint exact counterexample:
+Y,Z iid Uniform[-1/2,1/2], R=-Y^2-Z^2+2YZ=-(Y-Z)^2.
+D=Y-Z has density 1-|d| on [-1,1].
+Therefore E|R|^(-1/2)=integral_{-1}^1 (1-|d|)/|d| dd = infinity.
+
+STATUS=PASS
+These are arithmetic/algebra diagnostics; the analytic proof is REPORT.md.

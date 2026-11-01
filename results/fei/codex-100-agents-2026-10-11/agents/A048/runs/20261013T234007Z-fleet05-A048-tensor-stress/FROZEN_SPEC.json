@@ -1,0 +1,12 @@
+{
+  "helper_version": "A048 descendant-schedule v1; exact entropy helpers from own stage1 check.py",
+  "family": "product of r disjoint k-bit point-defect signs and parity on 2^r fresh labels; first query one bit per defect, then parity label selected by observed r-bit history; fixed-label control",
+  "domain": {"direct_truth_tables": [[1,2],[1,3],[1,4],[2,2],[2,3],[3,2]], "policies": ["adaptive","fixed"], "formula_grid": "r=1..16,k=2r+2", "tensor_checks": "t=1,2,3 using direct r=1,k=3 adaptive law", "finite_violation": [4,10]},
+  "case_count": 32,
+  "symmetry": "none; indexed full truth tables, spectra, transcript branches and joint masses",
+  "arithmetic": "Fraction rational Walsh transforms and joint probabilities; entropy exact rational linear combinations of prime log2; finite violation uses ln2>2/3 from positive atanh series",
+  "memory_estimate_mb": 80,
+  "maximum_runtime_seconds": 60,
+  "pilot": "first direct case before full frozen domain; no automatic escalation",
+  "scope": "verify and sharpen existing A047 root-Markov boundary, not a new broad potential or FEI disproof"
+}

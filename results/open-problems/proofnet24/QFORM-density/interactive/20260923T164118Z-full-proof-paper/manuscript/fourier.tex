@@ -1,0 +1,1616 @@
+\section{Fourier estimates, product projections, and cross blocks}
+\label{sec:fourier}
+
+Throughout this section the coordinates of \(X=(X_1,\ldots,X_n)\) are
+independent, and their probability densities satisfy \(0\leq f_i\leq1\).
+We use the Fourier transform
+\[
+ \widehat h(\xi)=\int_{\mathbb R^d}e^{i\langle \xi,x\rangle}h(x)\,dx,
+ \qquad
+ h(x)=(2\pi)^{-d}\int_{\mathbb R^d}
+                 e^{-i\langle \xi,x\rangle}\widehat h(\xi)\,d\xi.
+\]
+Statements about essential suprema do not depend on the choice of a
+density representative.  When the characteristic function is integrable,
+Fourier inversion supplies a continuous density vanishing at infinity.
+
+\subsection{Classical analytic inputs and an inversion formula}
+
+We use the geometric rank-one Brascamp--Lieb inequality
+\citep{BL1976,LPP2016}: if \(v_j\) are unit vectors in \(\mathbb R^d\),
+\(c_j>0\), and \(\sum_jc_jv_jv_j^{\mathsf T}=I_d\), then
+\begin{equation}\label{four:geometric-bl}
+ \int_{\mathbb R^d}\prod_jH_j(\langle v_j,z\rangle)^{c_j}\,dz
+ \leq\prod_j\left(\int_{\mathbb R}H_j\right)^{c_j}.
+\end{equation}
+The functions \(H_j\) are arbitrary nonnegative measurable functions.
+We also use Lieb's Gaussian exhaustion theorem \citep{Lieb1990}.
+For nonzero row vectors \(b_j\), positive exponents \(c_j\) with
+\(\sum_jc_j=d\), the best constant in the corresponding rank-one
+Brascamp--Lieb inequality is
+\begin{equation}\label{four:gaussian-bl}
+ \sup_{\lambda_j>0}
+ \left[
+ \frac{\prod_j\lambda_j^{c_j}}
+      {\det\left(\sum_jc_j\lambda_jb_jb_j^{\mathsf T}\right)}
+ \right]^{1/2}.
+\end{equation}
+The supremum may be infinite in general.  The determinant estimates
+below show finiteness for the data considered here.
+
+The sharp Hausdorff--Young and convolution inequalities
+\citep{Beckner1975} are used with the following normalization:
+\begin{align}
+ \|\widehat h\|_{p'}&\leq
+ (2\pi)^{1/p'}C_p\|h\|_p,
+ &C_p&=p^{1/(2p)}(p')^{-1/(2p')},\quad 1\leq p\leq2,
+ \label{four:hy}\\
+ \|h_1*h_2\|_r&\leq\frac{C_pC_q}{C_r}
+                     \|h_1\|_p\|h_2\|_q,
+ &&\frac1p+\frac1q=1+\frac1r .
+ \label{four:young}
+\end{align}
+In the convolution inequality \(1\leq p,q,r\leq\infty\), and
+each \(C_t\) is given by the same conjugate-exponent formula.
+Endpoint constants have their limiting values.  In particular
+\eqref{four:hy} applies to complex functions.
+
+\begin{lemma}[Integrable power envelopes]\label{four:inversion}
+Let \(Y\) be real and suppose, for \(a>0\) and \(b>1\), that
+\[
+ |\varphi_Y(t)|\leq\min\{1,(a/|t|)^b\}.
+\]
+Then \(Y\) has a continuous density vanishing at infinity and
+\begin{equation}\label{four:inversion-bound}
+ \|p_Y\|_\infty\leq\frac{ab}{\pi(b-1)}.
+\end{equation}
+More generally, a bound \(K|t|^{-b}\) can be used with \(a=K^{1/b}\).
+\end{lemma}
+\begin{proof}
+Splitting the integral at \(a\) gives
+\[
+ \int_{\mathbb R}|\varphi_Y(t)|\,dt
+ \leq2a+2a^b\int_a^\infty t^{-b}\,dt
+ =\frac{2ab}{b-1}.
+\]
+The inverse Fourier transform of \(\varphi_Y\) is continuous and vanishes
+at infinity, and is the density of its probability law.  Its supremum
+is at most \((2\pi)^{-1}\|\varphi_Y\|_1\).
+\end{proof}
+
+\subsection{Densities of projections and modulated scalar transforms}
+
+\begin{lemma}[Product projection densities]\label{four:projection}
+Let \(U\) be an \(n\times k\) real matrix with
+\(U^{\mathsf T}U=I_k\), and put
+\(c_i=\|U^{\mathsf T}e_i\|^2\).  Then \(U^{\mathsf T}X\) has a
+density satisfying the explicit estimate
+\begin{equation}\label{four:projection-elementary}
+ \|p_{U^{\mathsf T}X}\|_\infty
+ \leq\prod_{i:c_i<1}(1-c_i)^{-(1-c_i)/2}
+ \leq e^{k/2}.
+\end{equation}
+The sharper classical product-marginal theorem \citep{LPP2016} gives
+\begin{equation}\label{four:projection-sharp}
+ \|p_{U^{\mathsf T}X}\|_\infty\leq2^{k/2}.
+\end{equation}
+For any rank-\(k\) map \(T:\mathbb R^n\to\mathbb R^k\), consequently,
+\begin{equation}\label{four:linear-density}
+ \|p_{TX}\|_\infty
+ \leq\frac{2^{k/2}}{\sqrt{\det(TT^{\mathsf T})}}
+ \leq\frac{e^{k/2}}{\sqrt{\det(TT^{\mathsf T})}}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+To prove \eqref{four:projection-elementary}, complete \(U\)
+to an orthogonal matrix \((U,W)\), with \(W\) having \(n-k\) columns.
+Writing \(w_i^{\mathsf T}\) for its rows and \(b_i=\|w_i\|^2=1-c_i\),
+Fubini's theorem gives a marginal density
+\[
+ p(y)=\int_{\mathbb R^{n-k}}
+             \prod_i f_i((Uy)_i+\langle w_i,z\rangle)\,dz.
+\]
+Terms with \(b_i=0\) are at most one and can be omitted.  The other
+vectors \(v_i=w_i/\sqrt{b_i}\) satisfy
+\(\sum_i b_iv_iv_i^{\mathsf T}=I_{n-k}\).  Apply
+\eqref{four:geometric-bl} to
+\[
+ H_i(s)=f_i((Uy)_i+\sqrt{b_i}s)^{1/b_i}.
+\]
+Because \(b_i\leq1\), \(f_i^{1/b_i}\leq f_i\), so
+\[
+ \left(\int H_i\right)^{b_i}
+ \leq b_i^{-b_i/2}.
+\]
+This proves the product bound uniformly in \(y\).  The entropy
+inequality
+\begin{equation}\label{four:entropy}
+ -(1-x)\log(1-x)\leq x,\qquad 0\leq x\leq1,
+\end{equation}
+with the endpoint interpreted continuously, shows that this product
+is at most \(e^{\sum_i c_i/2}=e^{k/2}\).
+If \(k=n\), the density is simply the orthogonal image of the product
+density and is at most one.
+
+The product-marginal theorem of \citet[Theorem 1.1]{LPP2016}
+gives, for \(k<n\), the bound
+\[
+ \min\left\{
+       \left(\frac{n}{n-k}\right)^{(n-k)/2},\,2^{k/2}
+      \right\}.
+\]
+Its hypotheses hold for the independent product densities with cap
+one considered here; see also \citet{RV2015} for a dimension-free
+projection theorem.
+Finally, write \(T=(TT^{\mathsf T})^{1/2}U^{\mathsf T}\) and apply
+the change-of-variables formula to the invertible first factor.
+\end{proof}
+
+\begin{lemma}[Modulated scalar Fourier estimate]\label{four:lp}
+Let \(f\) be a probability density with \(0\leq f\leq1\), and let
+\(\omega\) be measurable with \(|\omega|\leq1\).
+For \(h=f\omega\) and every real \(p\geq2\),
+\begin{equation}\label{four:lp-sharp}
+ \int_{\mathbb R}|\widehat h(\xi)|^p\,d\xi
+ \leq \frac{2\pi}{\sqrt p}
+       \left(\frac{p}{p-1}\right)^{(p-1)/2}
+ \leq\frac{2\pi\sqrt e}{\sqrt p}
+ \leq\frac{4\pi}{\sqrt p}.
+\end{equation}
+In particular the estimate is uniform in every measurable phase
+\(\omega(x)=e^{iV(x)}\), and in translations of the Fourier variable.
+\end{lemma}
+\begin{proof}
+Set \(p'=p/(p-1)\).  Since \(|h|\leq f\leq1\) and
+\(\int f=1\), we have \(\|h\|_{p'}\leq1\).  Apply
+\eqref{four:hy} with input exponent \(p'\), then raise to the
+power \(p\):
+\[
+ \|\widehat h\|_p^p
+ \leq2\pi(p')^{p/(2p')}p^{-1/2}
+ =2\pi p^{-1/2}
+       \left(1+\frac1{p-1}\right)^{(p-1)/2}.
+\]
+The inequality \(\log(1+x)\leq x\) proves the second bound, and
+\(\sqrt e<2\) proves the last one.  Translation invariance of Lebesgue
+measure proves the assertion about Fourier shifts.
+\end{proof}
+
+\begin{lemma}[Difference densities and Fourier powers]\label{four:scalar-norms}
+Let \(f\) be as in Lemma~\ref{four:lp}, put
+\(\widetilde f(x)=f(-x)\) and \(g=f*\widetilde f\).  Then
+\(g\) is a probability density bounded by one, and, for \(0<c\leq1\),
+\begin{equation}\label{four:difference-norm}
+ \|g\|_{1/c}\leq
+ 2^c c^{c/2}(1+c)^{-(1+c)/2}.
+\end{equation}
+If \(q\geq1\) and \(0<d\leq q/2\), then
+\begin{equation}\label{four:fourier-power-norm}
+ \big\||\widehat f|^q\big\|_{1/d}
+ \leq (2\pi)^d q^{q/2-d}(q-d)^{-(q-d)/2}d^{d/2}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The identity defining \(g\) gives \(\int g=1\) and
+\(g(x)\leq\|f\|_\infty\int\widetilde f\leq1\).
+Use \eqref{four:young} with both input exponents \(2/(1+c)\)
+and output \(1/c\).  Their norms are at most one.  Substitution in
+\(C_{2/(1+c)}^2/C_{1/c}\) gives
+\(2^cc^{c/2}(1+c)^{-(1+c)/2}\), proving
+\eqref{four:difference-norm}.  This remains valid at \(c=1\) by
+continuity.
+For the second estimate, the Fourier exponent \(q/d\) is at least
+two and its conjugate input exponent is \(q/(q-d)\).  Apply
+\eqref{four:hy} and raise to the power \(q\).  Since the input
+norm is at most one, the resulting constant is
+\[
+ (2\pi)^d
+ \left(\frac q{q-d}\right)^{(q-d)/2}
+ \left(\frac qd\right)^{-d/2},
+\]
+which is \eqref{four:fourier-power-norm}.
+\end{proof}
+
+\subsection{Fresnel linearization with separable phases}
+
+\begin{lemma}[Regularized Fresnel formula]\label{four:fresnel}
+Let \(\Lambda\) be an invertible symmetric \(r\times r\) real matrix,
+\(t\ne0\), and \(\varepsilon>0\).  Then
+\begin{align}
+ K_{\varepsilon,t}(\xi)
+ &:=\int_{\mathbb R^r}
+  e^{-\varepsilon|y|^2+it y^{\mathsf T}\Lambda y-i\langle\xi,y\rangle}\,dy
+ \nonumber\\
+ &=\pi^{r/2}\det(\varepsilon I-it\Lambda)^{-1/2}
+       \exp\left[-\frac14
+             \xi^{\mathsf T}(\varepsilon I-it\Lambda)^{-1}\xi\right],
+ \label{four:fresnel-formula}
+\end{align}
+where the square root is the product of the branches having positive
+real part in the scalar Gaussian factors.  Moreover,
+\begin{equation}\label{four:fresnel-kernel}
+ |K_{\varepsilon,t}(\xi)|
+ \leq\pi^{r/2}|t|^{-r/2}|\det\Lambda|^{-1/2}.
+\end{equation}
+If \(g,\widehat g\in L^1(\mathbb R^r)\), it follows that
+\begin{equation}\label{four:fresnel-integral}
+ \left|\int_{\mathbb R^r}e^{it y^{\mathsf T}\Lambda y}g(y)\,dy\right|
+ \leq(2\pi)^{-r}\|\widehat g\|_1
+       \pi^{r/2}|t|^{-r/2}|\det\Lambda|^{-1/2}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Diagonalize \(\Lambda\) orthogonally.  Each one-dimensional integral
+is
+\[
+ \int_{\mathbb R}e^{-(\varepsilon-it\lambda)y^2-i\eta y}\,dy
+ =\sqrt\pi(\varepsilon-it\lambda)^{-1/2}
+          e^{-\eta^2/[4(\varepsilon-it\lambda)]}.
+\]
+The Gaussian identity for a positive real coefficient extends to the
+right half-plane by analytic continuation, with domination on compact
+subsets; this proves the displayed identity for every \(\varepsilon>0\).
+Multiplying the scalar factors proves \eqref{four:fresnel-formula}.
+The real part of \((\varepsilon-it\lambda)^{-1}\) is
+\(\varepsilon/(\varepsilon^2+t^2\lambda^2)>0\), so the exponential
+factors have modulus at most one.  Also
+\(|\varepsilon-it\lambda|^{-1/2}\leq|t\lambda|^{-1/2}\).
+These observations prove \eqref{four:fresnel-kernel}.
+
+Insert the inverse Fourier transform of \(g\) in the integral with
+the Gaussian cutoff.  Fubini is justified by
+\(\widehat g\in L^1\) and the integrable Gaussian.  Bound its inner
+integral by \eqref{four:fresnel-kernel}.  Finally let
+\(\varepsilon\downarrow0\); the left side converges by domination
+with \(|g|\).  This proves \eqref{four:fresnel-integral}.
+\end{proof}
+
+\begin{theorem}[Diffuse quadratic components and separable phases]
+\label{four:diffuse}
+Let \(U^{\mathsf T}U=I_r\), let
+\(c_i=\|U^{\mathsf T}e_i\|^2\leq1/2\), and let
+\(\Lambda\) be invertible and symmetric.  For arbitrary real
+measurable functions \(V_i\), finite almost surely, define
+\[
+ Y=(U^{\mathsf T}X)^{\mathsf T}\Lambda(U^{\mathsf T}X)
+          +\sum_iV_i(X_i),\qquad
+ B(U)=\prod_{i:c_i>0}(1-c_i)^{-(1-c_i)/2}.
+\]
+Writing \(\Delta=|\det\Lambda|\), for every \(r\geq1\),
+\begin{equation}\label{four:diffuse-decay}
+ |\varphi_Y(t)|
+ \leq\min\{1,B(U)\pi^{r/2}\Delta^{-1/2}|t|^{-r/2}\},
+ \qquad B(U)\leq e^{r/2}.
+\end{equation}
+If \(r>2\), then \(Y\) has a continuous density vanishing at infinity,
+and
+\begin{equation}\label{four:diffuse-density}
+ \|p_Y\|_\infty
+ \leq\frac r{r-2}B(U)^{2/r}\Delta^{-1/r}
+ \leq\frac{er}{r-2}\Delta^{-1/r}.
+\end{equation}
+The same conclusion holds if the indicated representation is available
+only for a principal block in the original coordinates of a quadratic
+form; all other blocks and couplings, as well as affine terms, may be
+arbitrary.
+\end{theorem}
+\begin{proof}
+For fixed \(t\), let \(h_{i,t}(x)=f_i(x)e^{itV_i(x)}\).  Push the
+complex product measure \(\prod_i h_{i,t}(x_i)\,dx_i\) forward by
+\(x\mapsto U^{\mathsf T}x\).  Integrating over the orthogonal
+complement, as in Lemma~\ref{four:projection}, gives an \(L^1\)
+density \(g_t\) with \(\|g_t\|_1\leq1\).  Fubini gives
+\[
+ \widehat g_t(\xi)
+ =\prod_i\widehat h_{i,t}(\langle U^{\mathsf T}e_i,\xi\rangle).
+\]
+Rows with \(c_i=0\) contribute factors of modulus at most one.
+For the other rows set \(v_i=U^{\mathsf T}e_i/\sqrt{c_i}\).
+Then \(\sum_i c_iv_iv_i^{\mathsf T}=I_r\).
+The geometric Brascamp--Lieb inequality applied to
+\(H_i(s)=|\widehat h_{i,t}(\sqrt{c_i}s)|^{1/c_i}\) yields
+\[
+ \|\widehat g_t\|_1
+ \leq\prod_{i:c_i>0}
+          c_i^{-c_i/2}\|\widehat h_{i,t}\|_{1/c_i}.
+\]
+The output exponent \(1/c_i\) is at least two.  Sharp
+Hausdorff--Young with conjugate exponent \(1/(1-c_i)\) gives
+\[
+ \|\widehat h_{i,t}\|_{1/c_i}
+ \leq(2\pi)^{c_i}
+       (1-c_i)^{-(1-c_i)/2}c_i^{c_i/2}.
+\]
+The \(c_i\) factors cancel, and \(\sum_i c_i=r\), so
+\begin{equation}\label{four:complex-projection}
+ \|\widehat g_t\|_1\leq(2\pi)^rB(U).
+\end{equation}
+The entropy inequality \eqref{four:entropy} gives \(B(U)\leq e^{r/2}\).
+
+The characteristic function is exactly
+\(\int e^{it y^{\mathsf T}\Lambda y}g_t(y)\,dy\).
+Lemma~\ref{four:fresnel} and \eqref{four:complex-projection} prove
+\eqref{four:diffuse-decay}; the bound one follows from the probability
+law of \(Y\).  Lemma~\ref{four:inversion}, with
+\(b=r/2\) and \(a=\pi B(U)^{2/r}\Delta^{-1/r}\), proves
+\eqref{four:diffuse-density}.
+
+For the principal-block statement, condition on the complementary
+original coordinates.  The remaining coordinates keep their original
+independent distributions.  The outside couplings induce only linear
+terms in them, and these are absorbed in the functions \(V_i\).
+The bound \eqref{four:diffuse-decay} is uniform in all conditioning
+values, so averaging preserves it and its integrability.
+\end{proof}
+
+\subsection{Decoupling and volume-sampling Brascamp--Lieb inequalities}
+
+\begin{lemma}[A cross-block decoupling inequality]\label{four:decoupling}
+Let \(I,J\) be disjoint original coordinate sets, let \(M\) be a real
+\(|I|\times|J|\) matrix, and let
+\[
+ Y=F(X_I)+2X_I^{\mathsf T}MX_J+G(X_J),
+\]
+where \(F,G\) are arbitrary real measurable functions finite almost
+surely.  If \(X'_J\) is an independent copy and \(D=X_J-X'_J\), then
+\begin{equation}\label{four:decoupling-bound}
+ |\varphi_Y(t)|^2
+ \leq\mathbb E\prod_{i\in I}
+      |\widehat f_i(2t(MD)_i)|.
+\end{equation}
+For every \(q\geq1\), consequently,
+\begin{equation}\label{four:decoupling-q}
+ |\varphi_Y(t)|^{2q}
+ \leq\mathbb E\prod_{i\in I}
+      |\widehat f_i(2t(MD)_i)|^q .
+\end{equation}
+Each coordinate of \(D\) has its own difference density and these
+coordinates are independent.
+\end{lemma}
+\begin{proof}
+Write the characteristic function by first integrating \(X_J\).
+Cauchy--Schwarz in the probability law of \(X_I\), after taking
+absolute values of the factor \(e^{itF(X_I)}\), gives
+\[
+ |\varphi_Y(t)|^2
+ \leq\mathbb E_{X_I}
+ \left|\mathbb E_{X_J}
+   e^{itG(X_J)+2itX_I^{\mathsf T}MX_J}\right|^2.
+\]
+Expand the square using \(X_J'\).  Integration in \(X_I\) gives the
+product of the scalar transforms in \eqref{four:decoupling-bound},
+multiplied by \(e^{it(G(X_J)-G(X'_J))}\).
+The triangle inequality proves \eqref{four:decoupling-bound}.
+Jensen's inequality for the probability law of \(D\) proves
+\eqref{four:decoupling-q}.  Independence and the difference-density
+description follow directly from the independent coordinate pairs.
+\end{proof}
+
+For a real \(m\times d\) matrix \(M\) of rank at least \(k\), write
+\begin{equation}\label{four:volume-definition}
+ Z_k=e_k(M^{\mathsf T}M)
+ =\sum_{\substack{S\subseteq[m],\,T\subseteq[d]\\|S|=|T|=k}}
+           \det(M_{S,T})^2>0.
+\end{equation}
+Here \(e_k\) is the elementary symmetric polynomial of the squared
+singular values.  The equality follows from Cauchy--Binet.
+The squared-minor probability law and its marginals are
+\begin{equation}\label{four:volume-marginals}
+ w_{S,T}=\frac{\det(M_{S,T})^2}{Z_k},\qquad
+ \alpha_i=\sum_{S\ni i,T}w_{S,T},\qquad
+ \beta_j=\sum_{S,T\ni j}w_{S,T}.
+\end{equation}
+Thus \(0\leq\alpha_i,\beta_j\leq1\) and
+\(\sum_i\alpha_i=\sum_j\beta_j=k\).
+
+\begin{lemma}[Volume-sampling Fourier estimate]\label{four:volume}
+In the setting of Lemma~\ref{four:decoupling}, suppose \(Z_k>0\).
+Let \(q\geq1\) and assume
+\begin{equation}\label{four:volume-gate}
+ \alpha_i\leq q/2\quad\hbox{for every row }i.
+\end{equation}
+Then, for \(t\ne0\),
+\begin{align}
+ |\varphi_Y(t)|^{2q}
+ &\leq e^k q^{-k/2}
+          \left(\frac{\pi}{|t|}\right)^kZ_k^{-1/2},
+ \label{four:volume-sharp-decay}\\
+ |\varphi_Y(t)|^{2q}
+ &\leq e^{k/2}q^{-k/2}
+          \left(\frac{2\pi}{|t|}\right)^kZ_k^{-1/2}.
+ \label{four:volume-classical-decay}
+\end{align}
+The first bound is stronger.  Neither bound requires a condition on
+the column marginals.
+\end{lemma}
+\begin{proof}
+Put \(h_i(u)=|\widehat f_i(2tu)|^q\), and let \(g_j\) be the
+difference density of \(D_j\).  By \eqref{four:decoupling-q} it
+suffices to bound
+\[
+ \int_{\mathbb R^d}
+        \prod_i h_i((Mx)_i)\prod_jg_j(x_j)\,dx.
+\]
+Use row maps \(x\mapsto(Mx)_i\) with exponents \(\alpha_i\),
+and coordinate maps \(x\mapsto x_j\) with exponents
+\(1-\beta_j\).  Their sum is \(d\).  Rows with \(\alpha_i=0\)
+can be dropped because \(h_i\leq1\).  Coordinates with
+\(\beta_j=1\) can be dropped because \(g_j\leq1\).
+Every retained row map is nonzero: a zero row occurs in no
+nonzero minor.
+
+We first bound the Brascamp--Lieb constant of this datum.  Let
+\(a_i>0\) be Gaussian row parameters after absorbing the
+\(\alpha_i\) factors, and let \(b_j>0\) be the similarly absorbed
+parameters of the active coordinate maps.  Set \(a_i=0\) for
+omitted rows and \(b_j=0\) when \(\beta_j=1\).
+Expansion of a diagonal-plus-positive-semidefinite determinant,
+followed by Cauchy--Binet, gives
+\begin{align}
+ \det(D_b+M^{\mathsf T}D_aM)
+ &=\sum_{T\subseteq[d]}
+       \left(\prod_{j\notin T}b_j\right)
+       \det\big((M^{\mathsf T}D_aM)_{T,T}\big)
+ \nonumber\\
+ &=\sum_{\substack{S\subseteq[m],\,T\subseteq[d]\\|S|=|T|}}
+       \det(M_{S,T})^2
+       \prod_{i\in S}a_i\prod_{j\notin T}b_j .
+ \label{four:determinant-expansion}
+\end{align}
+This is a polynomial identity and is valid when some diagonal
+parameters vanish.  Retain the terms with \(|S|=|T|=k\).
+Weighted arithmetic--geometric mean with probabilities
+\(w_{S,T}\) gives
+\begin{equation}\label{four:determinant-amgm}
+ \det(D_b+M^{\mathsf T}D_aM)
+ \geq Z_k\prod_i a_i^{\alpha_i}
+                    \prod_j b_j^{1-\beta_j}.
+\end{equation}
+Every column with \(\beta_j=1\) belongs to every \(T\) of positive
+weight, so its zero parameter never occurs in the product of an
+active summand.  The same observation applies to omitted rows.
+Thus all active products in the arithmetic--geometric mean step
+are positive, and no inverse of a zero parameter is used.
+
+Substitute \eqref{four:determinant-amgm} in
+\eqref{four:gaussian-bl}, restoring the absorbed exponents.
+The Brascamp--Lieb constant is at most
+\begin{equation}\label{four:volume-bl-constant}
+ Z_k^{-1/2}\prod_i\alpha_i^{-\alpha_i/2}
+                 \prod_j(1-\beta_j)^{-(1-\beta_j)/2}.
+\end{equation}
+Zero exponents in this formula have value one by continuity.
+Consequently the integral under consideration is at most this
+constant times
+\(\prod_i\|h_i\|_{1/\alpha_i}
+  \prod_j\|g_j\|_{1/(1-\beta_j)}\).
+The latter column norms are at most one.
+
+The scalar estimate \eqref{four:fourier-power-norm}, including the
+change of variable \(2tu\), gives
+\begin{equation}\label{four:volume-hy}
+ \|h_i\|_{1/\alpha_i}
+ \leq\left(\frac{\pi}{|t|}\right)^{\alpha_i}
+       \left(\frac{\alpha_i}{q}\right)^{\alpha_i/2}
+       \left(1-\frac{\alpha_i}{q}\right)^{-(q-\alpha_i)/2}.
+\end{equation}
+Its use is legitimate precisely because \(q/\alpha_i\geq2\).
+After cancellation of the powers of \(\alpha_i\), the row
+entropy factor is at most \(e^{k/2}\), by
+\eqref{four:entropy} applied to \(x=\alpha_i/q\).
+The column entropy factor in \eqref{four:volume-bl-constant}
+is also at most \(e^{k/2}\).  Since \(\sum_i\alpha_i=k\),
+this proves \eqref{four:volume-sharp-decay}.
+
+Alternatively, use only the last bound in
+\eqref{four:lp-sharp} to obtain
+\[
+ \|h_i\|_{1/\alpha_i}
+ \leq\left(\frac{2\pi}{|t|}\right)^{\alpha_i}
+       \left(\frac{\alpha_i}{q}\right)^{\alpha_i/2}.
+\]
+The same cancellation, followed by just the column entropy
+bound, proves \eqref{four:volume-classical-decay}.
+The stronger estimate follows also numerically from
+\(e<2\sqrt e\).
+\end{proof}
+
+\begin{theorem}[General volume density criterion]\label{four:volume-density}
+Under the hypotheses of Lemma~\ref{four:volume}, suppose in addition
+that \(k>2q\).  Then \(Y\) has a continuous density vanishing at
+infinity and
+\begin{equation}\label{four:volume-density-bound}
+ \|p_Y\|_\infty
+ \leq\frac{ke}{(k-2q)\sqrt q}\,Z_k^{-1/(2k)}.
+\end{equation}
+Using the second estimate of that lemma gives the also valid bound
+\begin{equation}\label{four:volume-density-classical}
+ \|p_Y\|_\infty
+ \leq\frac{2k\sqrt e}{(k-2q)\sqrt q}\,Z_k^{-1/(2k)}.
+\end{equation}
+Both conclusions apply to a cross block \(M=A_{I,J}\) in a larger
+quadratic form with arbitrary self blocks, outside couplings, and
+affine terms.
+\end{theorem}
+\begin{proof}
+The first Fourier envelope has exponent \(b=k/(2q)>1\).
+Its crossover scale is
+\(a=e\pi q^{-1/2}Z_k^{-1/(2k)}\).
+Lemma~\ref{four:inversion} proves
+\eqref{four:volume-density-bound}.  The second crossover scale is
+\(2\pi\sqrt e\,q^{-1/2}Z_k^{-1/(2k)}\), giving
+\eqref{four:volume-density-classical}.
+For a larger form, condition on the coordinates outside \(I\cup J\).
+They change only the functions \(F,G\) and an additive constant.
+The Fourier envelopes remain uniform and can therefore be averaged.
+\end{proof}
+
+\begin{corollary}[Three-volume and five-volume cases]\label{four:d-cases}
+The following explicit cases of Theorem~\ref{four:volume-density}
+hold:
+\begin{enumerate}
+\item If \(Z_3>0\) and \(\max_i\alpha_i^{(3)}\leq1/2\), then
+\[
+ \|p_Y\|_\infty\leq3e\,Z_3^{-1/6}
+                         \leq6\sqrt e\,Z_3^{-1/6}.
+\]
+\item If \(Z_3>0\) and
+\(\max_i\alpha_i^{(3)}\leq h\) with \(1/2\leq h<3/4\), then
+\[
+ \|p_Y\|_\infty
+ \leq\frac{3e}{(3-4h)\sqrt{2h}}\,Z_3^{-1/6}
+ \leq\frac{6\sqrt e}{(3-4h)\sqrt{2h}}\,Z_3^{-1/6}.
+\]
+\item If \(Z_5>0\), with no marginal hypothesis, then
+\[
+ \|p_Y\|_\infty\leq\frac{5e}{\sqrt2}\,Z_5^{-1/10}
+                         \leq5\sqrt{2e}\,Z_5^{-1/10}.
+\]
+\end{enumerate}
+These are respectively the three-volume, fractional three-volume,
+and unconditional five-volume criteria.
+\end{corollary}
+\begin{proof}
+Take \((k,q)=(3,1),(3,2h),(5,2)\), respectively.  In the last
+case every inclusion probability is at most one, so the gate
+\(\alpha_i^{(5)}\leq q/2\) is automatic.  The strict inequality
+\(k>2q\) holds in all three cases.
+\end{proof}
+
+\begin{remark}[Choice of a minor law]\label{four:weighted-volume}
+The canonical squared-minor probabilities can be replaced by any
+probability law \(v_{S,T}\) supported on nonzero \(k\times k\)
+minors.  If its row marginals satisfy the same gate, the bound
+\eqref{four:volume-density-bound} acquires the factor
+\[
+ \exp\!\left(\frac{D(v\Vert w)}{2k}\right),\qquad
+ D(v\Vert w)=\sum_{S,T}v_{S,T}\log\frac{v_{S,T}}{w_{S,T}}.
+\]
+Indeed, apply weighted arithmetic--geometric mean to
+\(\sum v_{S,T}
+ [\det(M_{S,T})^2/v_{S,T}]
+ \prod_{i\in S}a_i\prod_{j\notin T}b_j\).
+The determinant lower bound has \(Z_k e^{-D(v\Vert w)}\) in
+place of \(Z_k\).  All subsequent steps are identical.  This
+form allows the marginal constraint to be traded against an
+explicit entropy cost.
+\end{remark}
+
+\subsection{Exact marginal factors and entropy optimization}
+
+\begin{theorem}[Exact weighted-volume factors]\label{four:exact-marginal}
+Let \(w_{S,T}\) be any probability law on the nonzero
+\(k\times k\) minors of a physical cross block \(M\), and let
+\(\alpha_i,\beta_j\) be its row and column inclusion probabilities.
+Set
+\[
+ G(w)=\exp\left(\sum_{S,T}w_{S,T}
+                 \log\frac{\det(M_{S,T})^2}{w_{S,T}}\right).
+\]
+For \(q\geq1\) with \(\alpha_i\leq q/2\), define
+\[
+ R_q(w)=
+ \prod_i\left(1-\frac{\alpha_i}{q}\right)^{-(q-\alpha_i)/2}
+ \prod_j(1-\beta_j)^{-(1-\beta_j)/2}.
+\]
+All zero-exponent factors have their continuous value one.
+Then, in the setting of Lemma~\ref{four:decoupling},
+\begin{equation}\label{four:exact-marginal-decay}
+ |\varphi_Y(t)|^{2q}
+ \leq R_q(w)q^{-k/2}\pi^kG(w)^{-1/2}|t|^{-k}.
+\end{equation}
+If \(k>2q\), it follows that
+\begin{equation}\label{four:exact-marginal-density}
+ \|p_Y\|_\infty
+ \leq\frac{k}{(k-2q)\sqrt q}\,
+                  R_q(w)^{1/k}G(w)^{-1/(2k)}.
+\end{equation}
+The density is continuous and vanishes at infinity.
+In particular, for \(k=3,q=1\), writing \(R=R_1\),
+\begin{equation}\label{four:q1-exact}
+ \|p_Y\|_\infty\leq3R(w)^{1/3}G(w)^{-1/6},\qquad
+ \|\varphi_Y\|_1\leq6\pi R(w)^{1/3}G(w)^{-1/6}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+In the determinant expansion
+\eqref{four:determinant-expansion}, apply arithmetic--geometric
+mean with the law \(w\) to obtain
+\[
+ \det(D_b+M^{\mathsf T}D_aM)
+ \geq G(w)\prod_i a_i^{\alpha_i}
+                   \prod_jb_j^{1-\beta_j}.
+\]
+The argument for saturated marginals in the proof of
+Lemma~\ref{four:volume} applies without change.
+Thus its Brascamp--Lieb constant is
+\eqref{four:volume-bl-constant} with \(G(w)\) in place of \(Z_k\).
+Use the exact scalar estimate \eqref{four:volume-hy} and leave
+the row and column factors unrelaxed.
+The powers of \(\alpha_i\) cancel, and
+\(\sum_i\alpha_i=k\); the result is
+\eqref{four:exact-marginal-decay}.
+Its exponent is \(k/(2q)\) and its crossover scale is
+\(\pi q^{-1/2}R_q(w)^{1/k}G(w)^{-1/(2k)}\).
+Lemma~\ref{four:inversion} proves
+\eqref{four:exact-marginal-density} and the last assertion.
+\end{proof}
+
+The entropy inequality gives \(R_q(w)\leq e^k\), recovering
+the coefficient in Lemma~\ref{four:volume}.  For the canonical squared-minor law
+\(p_{S,T}=\det(M_{S,T})^2/Z_k\), the identity
+\[
+ G(w)=Z_k e^{-D(w\Vert p)}
+\]
+shows that \(p\) maximizes \(G\) without marginal constraints.
+It does not assert that \(p\) minimizes the whole expression
+in \eqref{four:exact-marginal-density}; the marginal factor
+depends on the law as well.
+
+\begin{proposition}[Balanced six-row and six-column blocks]
+\label{four:balanced-six}
+If a law on \(3\times3\) minors of a six-row, six-column
+physical cross block has every row and column marginal \(1/2\),
+then
+\[
+ \|p_Y\|_\infty\leq6G(w)^{-1/6}.
+\]
+For example, let \(u=6^{-1/2}(1,\ldots,1)^{\mathsf T}\) and
+\[
+ M=sI_6+(L-s)uu^{\mathsf T},\qquad L>s>0.
+\]
+With arbitrary self functions on the two banks,
+\begin{equation}\label{four:balanced-six-bound}
+ \|p_Y\|_\infty
+ \leq6[10s^4(L^2+s^2)]^{-1/6}.
+\end{equation}
+This example need not satisfy the sufficient projection condition
+of Corollary~\ref{four:tail}.
+\end{proposition}
+\begin{proof}
+Each of the twelve marginal factors equals \(2^{1/4}\),
+so \(R(w)=8\).  Formula \eqref{four:q1-exact} proves the
+first assertion.
+The displayed matrix has singular values \(L,s,s,s,s,s\).
+Simultaneous coordinate-permutation symmetry makes its canonical
+row and column marginal vectors constant; since each sums to
+three, all entries are \(1/2\).  Moreover
+\[
+ Z_3=\binom52 L^2s^4+\binom53s^6
+     =10s^4(L^2+s^2).
+\]
+The canonical law has \(G=Z_3\), proving the bound.
+For the final assertion, any projection with all diagonal entries
+at most \(1/2\) has rank at most three and is therefore proper.
+For a unit \(v\) in its orthogonal complement,
+\(\|M^{\mathsf T}v\|\geq s\); hence
+\(\|(I-P)M\|_{\rm op}\geq s\).
+Here \(T_3=4s^2\), so the sufficient requirement
+\(\|(I-P)M\|\leq\sqrt{T_3}/15=2s/15\) fails.
+\end{proof}
+
+We next optimize the determinant entropy subject to a row
+marginal constraint.  All optimization sets are finite
+dimensional, and all their coordinates refer to original rows.
+For a row \(k\)-set \(S\), define
+\[
+ a_S=\det(M_SM_S^{\mathsf T})
+     =\sum_{|T|=k}\det(M_{S,T})^2,\qquad
+ \mathcal B=\{S:a_S>0\},\qquad Z_k=\sum_{S\in\mathcal B}a_S.
+\]
+For a probability law \(\mu\) on \(\mathcal B\), let
+\[
+ \alpha_i(\mu)=\sum_{S\ni i}\mu_S,\qquad
+ G(\mu)=\exp\left(\sum_S\mu_S\log(a_S/\mu_S)\right).
+\]
+Terms with \(\mu_S=0\) are interpreted by continuity.
+
+\begin{lemma}[Reduction to row entropy]\label{four:row-entropy}
+For fixed row law \(\mu\), the lift
+\begin{equation}\label{four:canonical-lift}
+ w_{S,T}=\mu_S\frac{\det(M_{S,T})^2}{a_S}
+\end{equation}
+has the same row marginals and maximizes \(G(w)\) among all
+minor laws with row law \(\mu\).  Its value is \(G(\mu)\).
+If \(p_S=a_S/Z_k\), then
+\begin{equation}\label{four:row-kl}
+ G(\mu)=Z_k e^{-D(\mu\Vert p)}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For a general lift let \(\nu_S\) be the conditional column
+law given \(S\), and let
+\(\pi_S(T)=\det(M_{S,T})^2/a_S\).
+Expanding logarithms gives
+\[
+ \log G(w)
+ =\sum_S\mu_S\log(a_S/\mu_S)
+                  -\sum_S\mu_SD(\nu_S\Vert\pi_S).
+\]
+Relative entropy is nonnegative, as follows from
+\(\log x\leq x-1\), with equality for identical laws.
+Thus the maximum is attained by \(\nu_S=\pi_S\), which is
+\eqref{four:canonical-lift}.  Expanding
+\(D(\mu\Vert p)\) proves \eqref{four:row-kl}.
+\end{proof}
+
+\begin{theorem}[Gibbs dual and concentration on a bounded row set]
+\label{four:gibbs}
+Assume \(Z_k>0\).  For \(0<h<1\), let
+\[
+ \mathcal F_h=\{\mu:\alpha_i(\mu)\leq h\text{ for every }i\},
+ \qquad G_h(M)=\max_{\mu\in\mathcal F_h}G(\mu),
+\]
+with \(G_h(M)=0\) if \(\mathcal F_h\) is empty.  Then
+\begin{equation}\label{four:gibbs-dual}
+ G_h(M)=\inf_{\lambda_i\geq0}
+  \exp\left(h\sum_i\lambda_i\right)
+       \sum_{S\in\mathcal B}a_S
+                    \exp\left(-\sum_{i\in S}\lambda_i\right).
+\end{equation}
+If a finite vector \(\lambda\) attains the infimum, the
+corresponding maximizing law is
+\begin{equation}\label{four:gibbs-law}
+ \mu_\lambda(S)=
+ \frac{a_S e^{-\sum_{i\in S}\lambda_i}}
+      {\sum_Ra_R e^{-\sum_{i\in R}\lambda_i}},
+\end{equation}
+and \(\lambda_i>0\) implies \(\alpha_i(\mu_\lambda)=h\).
+Regardless of dual attainment, there exists a set \(H\) of rows
+such that
+\begin{equation}\label{four:gibbs-delete}
+ |H|<k/h,\qquad
+ e_k(M_{[m]\setminus H}^{\mathsf T}M_{[m]\setminus H})
+                         \leq G_h(M).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Let \(\Delta\) be the probability simplex on \(\mathcal B\),
+and define its continuous concave entropy function
+\[
+ F(\mu)=\sum_S\mu_S\log(a_S/\mu_S).
+\]
+For \(\lambda_i\geq0\), put
+\[
+ \mathcal L(\mu,\lambda)
+ =F(\mu)+\sum_i\lambda_i(h-\alpha_i(\mu)).
+\]
+The Gibbs variational identity states
+\begin{equation}\label{four:gibbs-variational}
+ \max_{\mu\in\Delta}\mathcal L(\mu,\lambda)
+ =h\sum_i\lambda_i+
+         \log\sum_S a_S e^{-\sum_{i\in S}\lambda_i}.
+\end{equation}
+Indeed, subtracting the right side from
+\(\mathcal L(\mu,\lambda)\) gives
+\(-D(\mu\Vert\mu_\lambda)\).
+
+We justify the dual equality also when constraints are attained
+only on the boundary or are infeasible.
+Restrict first to \(0\leq\lambda_i\leq N\).
+The compact convex minimax theorem \citep{Sion1958}, applied to
+the continuous concave-affine function \(\mathcal L\), gives
+\[
+ \min_{\lambda\in[0,N]^m}\max_{\mu\in\Delta}\mathcal L(\mu,\lambda)
+ =\max_{\mu\in\Delta}
+   \left[F(\mu)-N\sum_i(\alpha_i(\mu)-h)_+\right].
+\]
+If \(\mathcal F_h\ne\varnothing\), the right side decreases,
+as \(N\) increases, to \(\max_{\mathcal F_h}F\).
+To see this explicitly, take maximizing laws along a sequence
+\(N\to\infty\) and a convergent subsequence in the compact
+simplex.  Since \(F\) is bounded and a feasible law gives a
+fixed finite lower bound, their constraint violations tend
+to zero.  The limiting law is feasible.  Dropping the
+nonpositive penalty and using continuity of \(F\) proves that
+the limiting value is at most the constrained maximum; the
+reverse inequality holds for every \(N\).
+If \(\mathcal F_h\) is empty, the continuous sum of positive
+constraint violations has a strictly positive minimum on
+\(\Delta\), so these maxima tend to \(-\infty\).
+Taking \(N\to\infty\) and using
+\eqref{four:gibbs-variational} proves the logarithm of
+\eqref{four:gibbs-dual}, including the value \(-\infty\)
+in the infeasible case.
+
+If the dual minimizer is finite, differentiation of its
+logarithmic objective gives \(h-\alpha_i(\mu_\lambda)\).
+Optimality on the nonnegative orthant therefore implies
+\(\alpha_i(\mu_\lambda)\leq h\), and equality if
+\(\lambda_i>0\).  Substitution in \(\mathcal L\) shows that
+this Gibbs law attains the primal maximum.
+
+It remains to prove \eqref{four:gibbs-delete}.
+If \(G_h=Z_k\), take \(H=\varnothing\).
+Otherwise choose, for arbitrarily small \(\varepsilon>0\),
+a nonnegative vector \(\lambda\) whose dual objective is
+at most \(G_h+\varepsilon<Z_k\).
+Then \(\Lambda=\sum_i\lambda_i>0\).
+Put \(\omega_i=\lambda_i/\Lambda\) and
+\[
+ H=\{i:\omega_i>h/k\}.
+\]
+Since \(\sum_i\omega_i=1\), necessarily \(|H|<k/h\).
+For every \(k\)-set \(S\) avoiding \(H\),
+\(\sum_{i\in S}\lambda_i\leq h\Lambda\).
+The corresponding term in the dual objective is therefore
+at least \(a_S\).  Thus
+\[
+ \sum_{S:S\cap H=\varnothing}a_S\leq G_h+\varepsilon.
+\]
+The left side is the residual \(k\)-volume in
+\eqref{four:gibbs-delete}.  There are only finitely many
+possible sets \(H\); along a sequence
+\(\varepsilon\downarrow0\), one repeats infinitely often.
+Passing to that subsequence proves the desired bound,
+including when \(G_h=0\).
+\end{proof}
+
+\begin{corollary}[A three-volume or bounded-row alternative]
+\label{four:gibbs-alternative}
+Let \(1/2\leq h<3/4\) and \(g>0\).
+For a physical cross block \(M\) with \(Z_3>0\), either
+\[
+ \|p_Y\|_\infty
+ \leq\frac{3e}{(3-4h)\sqrt{2h}}\,g^{-1/6},
+\]
+with a continuous density vanishing at infinity, or there is
+a row set \(H\) with \(|H|<3/h\) for which the residual
+third volume is less than \(g\).
+In particular \(h=3/5\) requires at most four rows in the
+second alternative.
+\end{corollary}
+\begin{proof}
+If \(G_h\geq g\), compactness gives an optimizing feasible law.
+Lift it by Lemma~\ref{four:row-entropy} and apply
+Theorem~\ref{four:exact-marginal} with \(q=2h\) and
+\(R_q\leq e^3\).  If \(G_h<g\), use
+\eqref{four:gibbs-delete}.  At \(h=3/5\), the strict bound
+\(|H|<5\) is equivalent to \(|H|\leq4\).
+\end{proof}
+
+\begin{proposition}[A single active row constraint]
+\label{four:one-hub-entropy}
+Fix a distinguished row \(i_0\), and write
+\[
+ Z_1=\sum_{S\ni i_0}a_S,\qquad
+ Z_0=\sum_{S\not\ni i_0}a_S.
+\]
+Suppose \(Z_0,Z_1>0\), \(p=Z_1/(Z_0+Z_1)>h\), and the law
+\[
+ \mu(S)=
+ \begin{cases}
+  h\,a_S/Z_1,&i_0\in S,\\
+  (1-h)a_S/Z_0,&i_0\notin S
+ \end{cases}
+\]
+satisfies all other row constraints.  Then
+\begin{equation}\label{four:one-hub-formula}
+ G_h(M)=\left(\frac{Z_1}{h}\right)^h
+         \left(\frac{Z_0}{1-h}\right)^{1-h}
+       =(Z_0+Z_1)e^{-D_{\rm Ber}(h\Vert p)}.
+\end{equation}
+A dual optimizer has all multipliers zero except
+\[
+ e^{-\lambda_{i_0}}=\frac{hZ_0}{(1-h)Z_1}.
+\]
+\end{proposition}
+\begin{proof}
+If a row law gives total mass \(x\) to sets containing \(i_0\),
+the entropy chain rule bounds its logarithmic value by
+\[
+ x\log(Z_1/x)+(1-x)\log(Z_0/(1-x)),
+\]
+with equality exactly when the conditional laws in the two
+classes are canonical.  The derivative of this expression is
+\(\log[Z_1(1-x)/(Z_0x)]\), which is positive for \(x<p\).
+Under \(x\leq h<p\), its maximum is therefore attained at \(h\).
+The displayed law attains this value and, by assumption, is
+feasible for every other constraint.  This proves
+\eqref{four:one-hub-formula}.  Substitution in
+\eqref{four:gibbs-law} verifies the stated multiplier and
+complementary slackness.
+\end{proof}
+
+\subsection{Regularized determinants and ridge leverage}
+
+\begin{lemma}[A graph inequality with a free regularizer]
+\label{four:graph}
+Let \(R\) be a real \(m\times k\) matrix with columns \(r_j\).
+Let \(D_1,\ldots,D_m\) be independent differences of independent
+copies of variables with densities bounded by one, and let
+\(f_1,\ldots,f_k\) be further probability densities bounded by one.
+Fix \(\alpha>0\), \(a\in\mathbb R\), and \(1\leq q\leq2\).  Put
+\[
+ H=\alpha I_m+a^2RR^{\mathsf T},\qquad
+ c_i=\alpha e_i^{\mathsf T}H^{-1}e_i,\qquad
+ d_j=a^2r_j^{\mathsf T}H^{-1}r_j,\qquad
+ \theta=\sum_jd_j=\sum_i(1-c_i).
+\]
+If \(d_j\leq q/2\) for every \(j\), then, with
+\(L_q=\pi e\sqrt{2/q}\),
+\begin{equation}\label{four:graph-bound}
+ \mathbb E\prod_j|\widehat f_j(a\langle r_j,D\rangle)|^q
+ \leq
+ \det(I_m+a^2RR^{\mathsf T}/\alpha)^{-1/2}
+          (L_q/\sqrt\alpha)^\theta .
+\end{equation}
+\end{lemma}
+\begin{proof}
+For \(a=0\), both the expectation and the determinant are one,
+and \(\theta=0\).  Assume \(a\ne0\).
+The vectors
+\[
+ u_i=\sqrt\alpha H^{-1/2}e_i,\qquad
+ v_j=aH^{-1/2}r_j
+\]
+satisfy
+\(\sum_i u_iu_i^{\mathsf T}+\sum_jv_jv_j^{\mathsf T}=I_m\).
+Their squared lengths are \(c_i,d_j\), respectively; thus
+\(0<c_i\leq1\), \(0\leq d_j\leq1\).
+The trace identity gives the displayed expression for \(\theta\).
+Zero \(v_j\) may be omitted.
+
+Let \(g_i\) be the density of \(D_i\), and put
+\(h_j=|\widehat f_j|^q\).  Change variables \(x=H^{-1/2}z\)
+in the expectation integral and normalize the nonzero vectors
+\(u_i,v_j\) to unit vectors.  The geometric Brascamp--Lieb
+inequality gives
+\begin{equation}\label{four:graph-bl}
+ \det(H)^{-1/2}
+ \prod_i\left[\alpha^{c_i/2}c_i^{-c_i/2}\|g_i\|_{1/c_i}\right]
+ \prod_j\left[d_j^{-d_j/2}\|h_j\|_{1/d_j}\right].
+\end{equation}
+For example, the argument of \(g_i\) is
+\(\sqrt{c_i/\alpha}\) times the relevant unit linear form, which
+accounts for its factor \(\alpha^{c_i/2}c_i^{-c_i/2}\).
+
+Define
+\[
+ G(c)=2^c(1+c)^{-(1+c)/2},\qquad
+ H_q(d)=q^{q/2-d}(q-d)^{-(q-d)/2}.
+\]
+Lemma~\ref{four:scalar-norms} cancels the powers of \(c_i,d_j\)
+in \eqref{four:graph-bl}, leaving
+\begin{equation}\label{four:graph-after-scalar}
+ \det(H)^{-1/2}\alpha^{(m-\theta)/2}(2\pi)^\theta
+                     \prod_iG(c_i)\prod_jH_q(d_j).
+\end{equation}
+The logarithms of these scalar functions are concave:
+\[
+ (\log G)''(c)=-\frac1{2(1+c)},\qquad
+ (\log H_q)''(d)=-\frac1{2(q-d)}.
+\]
+The tangent to \(\log G\) at \(c=1\), and the tangent to
+\(\log H_q\) at \(d=0\), therefore give
+\[
+ \log G(c)\leq\frac{1-\log2}{2}(1-c),\qquad
+ \log H_q(d)\leq\frac{1-\log q}{2}d.
+\]
+Their endpoint values are \(G(1)=H_q(0)=1\).
+The product in \eqref{four:graph-after-scalar} is consequently
+at most \(\exp\{[1-\tfrac12\log(2q)]\theta\}\).
+Factor \(\alpha^m\) from \(\det H\).  The remaining scalar
+multiplier is
+\[
+ \left(\frac{2\pi e}{\sqrt{2q\alpha}}\right)^\theta
+ =(L_q/\sqrt\alpha)^\theta,
+\]
+which proves \eqref{four:graph-bound}.
+\end{proof}
+
+\begin{theorem}[Regularized cross-block determinant]
+\label{four:regularized}
+Let \(Y\) have the form in Lemma~\ref{four:decoupling}, with cross
+block \(B\).  Let \(1\leq q\leq2\).  Suppose that either \(q=2\)
+or the projection \(P_{\operatorname{range}(B)}\), acting on the
+row-index space, satisfies
+\[
+ \max_i(P_{\operatorname{range}(B)})_{ii}\leq q/2.
+\]
+Then
+\begin{equation}\label{four:regularized-bound}
+ |\varphi_Y(t)|
+ \leq\det\left(I+\frac{2qt^2}{\pi^2e^2}BB^{\mathsf T}\right)^{-1/(4q)}.
+\end{equation}
+In particular, without any leverage hypothesis,
+\begin{equation}\label{four:unrestricted-determinant}
+ |\varphi_Y(t)|
+ \leq\det\left(I+\frac{4t^2}{\pi^2e^2}BB^{\mathsf T}\right)^{-1/8}.
+\end{equation}
+If \(B\) has at least \(r>2q\) singular values at least \(\sigma>0\),
+the indicated hypothesis implies a continuous density with
+\begin{align}
+ \|p_Y\|_\infty
+ &\leq
+ \frac{e\sqrt\pi}{2\sqrt{2q}\,\sigma}
+ \frac{\Gamma(r/(4q)-1/2)}{\Gamma(r/(4q))}
+ \label{four:regularized-gamma}\\
+ &\leq\frac{e}{\sqrt{2q}\,\sigma}\frac r{r-2q}.
+ \label{four:regularized-simple}
+\end{align}
+All these statements allow arbitrary functions in the two self blocks,
+and conditioning on additional original coordinates.
+\end{theorem}
+\begin{proof}
+Apply \eqref{four:decoupling-q} and then Lemma~\ref{four:graph}
+with \(R=B^{\mathsf T}\), \(a=2t\), and
+\(\alpha=L_q^2\).  The graph weights on the Fourier factors are
+the diagonal entries of
+\[
+ (2t)^2B(L_q^2I+(2t)^2B^{\mathsf T}B)^{-1}B^{\mathsf T}.
+\]
+This matrix is bounded between zero and
+\(P_{\operatorname{range}(B)}\), as is seen by singular-value
+decomposition.  Its diagonal entries are always at most one,
+so \(q=2\) needs no assumption.  The multiplier in
+\eqref{four:graph-bound} is one for this choice of \(\alpha\).
+Taking the \(2q\)-th root and using equality of the nonzero spectra
+of \(BB^{\mathsf T}\) and \(B^{\mathsf T}B\) proves
+\eqref{four:regularized-bound}.
+
+Discarding determinant factors other than the \(r\) indicated ones
+gives
+\[
+ |\varphi_Y(t)|
+ \leq\left(1+\frac{2q\sigma^2t^2}{\pi^2e^2}\right)^{-r/(4q)}.
+\]
+The integral
+\[
+ \int_{\mathbb R}(1+x^2)^{-a}\,dx
+ =\sqrt\pi\,\frac{\Gamma(a-1/2)}{\Gamma(a)},\qquad a>1/2,
+\]
+follows from \(u=x^2\) and the beta integral.  Fourier inversion
+now proves \eqref{four:regularized-gamma}.
+Bounding the same envelope by
+\(\min\{1,(\pi e/(\sqrt{2q}\sigma|t|))^{r/(2q)}\}\)
+and applying Lemma~\ref{four:inversion} proves the simpler bound.
+The uniformity in self functions and outside coordinates is
+inherited from Lemma~\ref{four:decoupling}.
+\end{proof}
+
+\begin{theorem}[Ridge-leverage criterion]\label{four:ridge}
+For a real cross block \(B\) and \(\gamma>0\), define
+\[
+ K_\gamma=BB^{\mathsf T}(\gamma^2I+BB^{\mathsf T})^{-1},\quad
+ \theta_\gamma=\operatorname{tr}K_\gamma,\quad
+ D_\gamma=\det(I+BB^{\mathsf T}/\gamma^2).
+\]
+Suppose, for some \(1\leq q\leq2\), that
+\begin{equation}\label{four:ridge-gate}
+ \max_i(K_\gamma)_{ii}\leq q/2,\qquad
+ \theta_\gamma>2q.
+\end{equation}
+Then \(Y\) in Lemma~\ref{four:decoupling} has a continuous density
+vanishing at infinity and
+\begin{align}
+ \|p_Y\|_\infty
+ &\leq\frac{e}{\sqrt{2q}\,\gamma}
+       \frac{\theta_\gamma}{\theta_\gamma-2q}
+       D_\gamma^{-1/(2\theta_\gamma)}
+ \label{four:ridge-density}\\
+ &\leq\frac{\sqrt e}{\sqrt{2q}\,\gamma}
+       \frac{\theta_\gamma}{\theta_\gamma-2q}.
+ \label{four:ridge-density-simple}
+\end{align}
+The two coordinate sets may be interchanged to use the ridge
+diagonal on the other side.
+\end{theorem}
+\begin{proof}
+For \(t\ne0\), use the same graph argument as in
+Theorem~\ref{four:regularized}, but choose
+\(\alpha=4\gamma^2t^2\).  The graph weights \(d_i\) are now
+exactly \((K_\gamma)_{ii}\), independent of \(t\); their sum
+is \(\theta_\gamma\).  The first condition in
+\eqref{four:ridge-gate} makes the scalar Fourier exponents
+admissible.  Keeping the multiplier in
+\eqref{four:graph-bound}, and taking the \(2q\)-th root, gives
+\[
+ |\varphi_Y(t)|\leq D_\gamma^{-1/(4q)}
+           \left(\frac{L_q}{2\gamma|t|}\right)^{\theta_\gamma/(2q)}.
+\]
+The power is greater than one.  Its crossover scale is
+\[
+ a=\frac{L_q}{2\gamma}D_\gamma^{-1/(2\theta_\gamma)}.
+\]
+Lemma~\ref{four:inversion} and
+\(L_q/(2\pi)=e/\sqrt{2q}\) prove
+\eqref{four:ridge-density}.
+If \(x_j=s_j(B)^2/\gamma^2\), then
+\[
+ \log D_\gamma=\sum_j\log(1+x_j)
+ \geq\sum_j\frac{x_j}{1+x_j}=\theta_\gamma,
+\]
+because the difference between the summands has derivative
+\(x/(1+x)^2\) and vanishes at zero.  Therefore
+\(D_\gamma^{-1/(2\theta_\gamma)}\leq e^{-1/2}\), which gives
+\eqref{four:ridge-density-simple}.
+\end{proof}
+
+\begin{corollary}[Three cross singular values]\label{four:ridge-three}
+Suppose \(s_3(B)\geq\sigma>0\), set
+\(\gamma=\sigma/\sqrt6\), and assume
+\(\max_i(K_\gamma)_{ii}\leq1/2\).  Then
+\begin{equation}\label{four:ridge-three-bound}
+ \|p_Y\|_\infty\leq\frac{9\sqrt{3e}}{2\sigma}.
+\end{equation}
+\end{corollary}
+\begin{proof}
+The first three singular values give
+\(\theta_\gamma\geq3/(1+1/6)=18/7\).
+Apply \eqref{four:ridge-density-simple} with \(q=1\).
+The function \(\theta/(\theta-2)\) decreases for \(\theta>2\),
+and its value at \(18/7\) is \(9/2\).
+\end{proof}
+
+\begin{lemma}[Stability of ridge leverage]\label{four:ridge-stability}
+Let \(B=B_0+E\), \(\|E\|_{\rm op}\leq\eta\), and let \(P\)
+be the orthogonal projection onto \(\operatorname{range}(B_0)\).
+For every \(\gamma>0\), writing \(\ell_i=P_{ii}\),
+\begin{equation}\label{four:ridge-stability-bound}
+ (K_\gamma)_{ii}
+ \leq\left(\sqrt{\ell_i}
+          +\frac{\eta}{\gamma}\sqrt{1-\ell_i}\right)^2.
+\end{equation}
+In particular, if \(\ell_i\leq\ell\) for all \(i\), the weaker
+bound \((\sqrt\ell+\eta/\gamma)^2\) holds.
+\end{lemma}
+\begin{proof}
+The identity
+\[
+ K_\gamma
+ =B(\gamma^2I+B^{\mathsf T}B)^{-1}B^{\mathsf T}
+\]
+shows \(0\leq K_\gamma\leq I\).
+For \(v\perp\operatorname{range}(B_0)\), \(B_0^{\mathsf T}v=0\);
+hence
+\[
+ v^{\mathsf T}K_\gamma v
+ \leq\gamma^{-2}\|B^{\mathsf T}v\|^2
+ \leq(\eta/\gamma)^2\|v\|^2.
+\]
+Decompose \(e_i=Pe_i+(I-P)e_i\) and use the triangle inequality
+after applying \(K_\gamma^{1/2}\).  Its norm on the first
+component is at most \(\sqrt{\ell_i}\), and the preceding
+bound on the second is at most
+\((\eta/\gamma)\sqrt{1-\ell_i}\).
+\end{proof}
+
+\subsection{A spectral-window consequence}
+
+We use the two-part frame partition consequence of
+\citet[Corollary 1.5]{MSS2015}: if
+\(\sum_i u_iu_i^{\mathsf T}=I_r\) and
+\(\|u_i\|^2\leq\varepsilon\), the indices admit a partition
+\(I,J\) such that both partial frame operators have norm at most
+\((1/\sqrt2+\sqrt\varepsilon)^2\).
+The following corollary applies this partition to the range of a
+quadratic matrix.
+
+\begin{corollary}[Diffuse full range]\label{four:full-range}
+Let \(A\) be symmetric, \(s_3(A)\geq s>0\), and let \(P_A\)
+be the projection onto its full range.  If
+\(\max_i(P_A)_{ii}\leq1/32\), then, for arbitrary affine terms
+and arbitrary additional separable measurable phases,
+\begin{equation}\label{four:full-range-bound}
+ \|p_{X^{\mathsf T}AX+\sum_iV_i(X_i)}\|_\infty
+ \leq\frac{96e}{7\sqrt2\,s}.
+\end{equation}
+The density is continuous and vanishes at infinity.
+\end{corollary}
+\begin{proof}
+Write \(A=U\Lambda U^{\mathsf T}\), where \(U\) has orthonormal
+columns spanning its full range.  The rows of \(U\) form a
+tight frame with squared lengths at most \(1/32\).
+The cited partition theorem gives
+\[
+ \frac7{32}I\leq M_I:=U_I^{\mathsf T}U_I,\,
+                         M_J:=U_J^{\mathsf T}U_J
+                 \leq\frac{25}{32}I.
+\]
+Indeed \((1/\sqrt2+\sqrt{1/32})^2=25/32\), and the
+two operators sum to \(I\).
+The nonzero singular values of
+\(B=A_{I,J}=U_I\Lambda U_J^{\mathsf T}\) are those of
+\(M_I^{1/2}\Lambda M_J^{1/2}\), since
+\(U_IM_I^{-1/2}\) and \(U_JM_J^{-1/2}\) have orthonormal
+columns.  Multiplication by the two square roots gives
+\(s_3(B)\geq(7/32)s\).
+Both restricted frames have full column rank, and \(\Lambda\)
+is invertible, so \(\operatorname{range}(B)=\operatorname{range}(U_I)\).
+Its projection has diagonal
+\[
+ u_i^{\mathsf T}M_I^{-1}u_i
+ \leq\frac{1/32}{7/32}=\frac17<\frac12.
+\]
+Apply \eqref{four:regularized-simple} with \(q=1\), \(r=3\),
+and \(\sigma=7s/32\).
+\end{proof}
+
+\begin{theorem}[A diffuse spectral window]\label{four:window}
+Let \(A\) be symmetric with \(s_3(A)\geq s>0\), and let \(P\)
+be its spectral projection onto the eigenspaces with
+\(|\lambda|\geq s/64\).  If
+\begin{equation}\label{four:window-hypothesis}
+ \max_iP_{ii}\leq1/32,
+\end{equation}
+then \(X^{\mathsf T}AX+\sum_iV_i(X_i)\), for arbitrary real
+measurable \(V_i\) finite almost surely, has a continuous density
+vanishing at infinity and
+\begin{equation}\label{four:window-bound}
+ \|p\|_\infty\leq\frac{288\sqrt{3e}}{13s}<\frac{64}{s}.
+\end{equation}
+The number, signs, eigenvectors, and nonzero sizes of the smaller
+spectral directions are unrestricted.
+\end{theorem}
+\begin{proof}
+Write \(A=A_H+E\), where
+\(A_H=U\Lambda_HU^{\mathsf T}\) is the indicated spectral
+truncation.  Then \(\|E\|_{\rm op}\leq\eta=s/64\).
+Apply the same frame partition as in
+Corollary~\ref{four:full-range}.  For
+\(B_0=(A_H)_{I,J}\), its proof gives
+\[
+ s_3(B_0)\geq\frac{7s}{32},\qquad
+ \max_i(P_{\operatorname{range}(B_0)})_{ii}\leq\frac17.
+\]
+The actual cross block is \(B=B_0+E_{I,J}\), and
+\(\|E_{I,J}\|_{\rm op}\leq\eta\).  The singular-value
+perturbation inequality gives
+\[
+ s_3(B)\geq\frac{7s}{32}-\frac{s}{64}
+          =\sigma:=\frac{13s}{64}.
+\]
+For completeness, that inequality follows by restricting to the
+top-three right-singular subspace of \(B_0\), where
+\(\|Bx\|\geq(\frac{7s}{32}-\eta)\|x\|\), and applying the
+singular-value min--max principle.
+
+Set \(\gamma=\sigma/\sqrt6\).
+Lemma~\ref{four:ridge-stability} yields
+\[
+ \max_i(K_\gamma)_{ii}
+ \leq\left(\frac1{\sqrt7}+\frac{\sqrt6}{13}\right)^2<\frac12.
+\]
+For example \(1/\sqrt7<2/5\) and \(\sqrt6/13<1/5\), so
+the square is less than \(9/25\).
+Corollary~\ref{four:ridge-three} proves
+\[
+ \|p\|_\infty\leq\frac{9\sqrt{3e}}{2\sigma}
+              =\frac{288\sqrt{3e}}{13s}.
+\]
+All small spectral directions have remained in the actual cross
+block \(B\); none was removed from the random quadratic expression.
+All self terms are permitted by decoupling.  This proves the
+claim including arbitrary separable perturbations.
+\end{proof}
+
+\subsection{Stability of volume marginals and distributed tails}
+
+\begin{proposition}[Spectral formula for volume marginals]
+\label{four:volume-operator}
+Let \(M\) have rank at least \(k\), with singular-value
+decomposition \(M=U\operatorname{diag}(s_j)V^{\mathsf T}\).
+Put \(\lambda_j=s_j^2\), \(Z_k=e_k(\lambda)\), and
+\[
+ p_j=\frac{\lambda_je_{k-1}(\lambda_{\ne j})}{Z_k},
+ \qquad W_k=U\operatorname{diag}(p_j)U^{\mathsf T}.
+\]
+Then the row marginals in \eqref{four:volume-marginals} satisfy
+\((W_k)_{ii}=\alpha_i\), and
+\begin{equation}\label{four:volume-operator-bound}
+ 0\leq W_k\leq I,\qquad
+ W_k\leq\frac{e_{k-1}(\lambda)}{Z_k}MM^{\mathsf T}.
+\end{equation}
+Writing \(T_k=\sum_{j\geq k}\lambda_j>0\), we also have
+\begin{equation}\label{four:volume-tail-operator}
+ W_k\leq\frac{k}{T_k}MM^{\mathsf T}
+       \leq\frac{k}{s_k(M)^2}MM^{\mathsf T}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Multiply row \(i\) of \(M\) by \(\sqrt{1+t}\).
+Each squared \(k\)-minor containing that row is multiplied by
+\(1+t\), while the other minors are unchanged.  Thus the
+coefficient of \(t\) in the new \(Z_k\) is \(Z_k\alpha_i\).
+Let \(C=MM^{\mathsf T}\).  Using Sylvester's determinant
+identity and the rank-one determinant formula, the generating
+polynomial of this row scaling is
+\[
+ \det(I+zC)
+ \left[1+tz\,e_i^{\mathsf T}(I+zC)^{-1}Ce_i\right].
+\]
+Its coefficient of \(tz^k\), after diagonalizing \(C\), is
+\(\sum_jU_{ij}^2\lambda_je_{k-1}(\lambda_{\ne j})\).
+Comparison proves \((W_k)_{ii}=\alpha_i\).  This polynomial
+argument also covers repeated singular values and zero modes.
+
+The decomposition
+\[
+ Z_k=\lambda_je_{k-1}(\lambda_{\ne j})
+                         +e_k(\lambda_{\ne j})
+\]
+gives \(0\leq p_j\leq1\), while
+\(e_{k-1}(\lambda_{\ne j})\leq e_{k-1}(\lambda)\).
+These observations prove \eqref{four:volume-operator-bound}.
+Finally,
+\[
+ kZ_k=\sum_{|S|=k-1}\left(\prod_{i\in S}\lambda_i\right)
+                           \sum_{j\notin S}\lambda_j.
+\]
+Removing any \(k-1\) indices removes at most the sum of the
+largest \(k-1\) squared singular values.  Hence every inner
+sum is at least \(T_k\), and
+\(kZ_k\geq T_ke_{k-1}(\lambda)\).
+This proves \eqref{four:volume-tail-operator}.
+\end{proof}
+
+\begin{lemma}[Projection control of volume marginals]
+\label{four:volume-stability}
+Let \(P\) be any orthogonal projection on the row-index space,
+\(\ell_i=P_{ii}\), and
+\(\varepsilon=\|(I-P)M\|_{\rm op}\).  With the notation of
+Proposition~\ref{four:volume-operator},
+\begin{equation}\label{four:volume-stability-tail}
+ \sqrt{\alpha_i}
+ \leq\sqrt{\ell_i}
+      +\sqrt{\frac{k}{T_k}}\,\varepsilon\sqrt{1-\ell_i}.
+\end{equation}
+In particular for \(k=3\), \(\kappa=s_3(M)>0\),
+\begin{equation}\label{four:volume-stability-three}
+ \sqrt{\alpha_i}
+ \leq\sqrt{\ell_i}
+      +\frac{\sqrt3\,\varepsilon}{\kappa}\sqrt{1-\ell_i}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Use the triangle inequality after applying \(W_k^{1/2}\) to
+\(e_i=Pe_i+(I-P)e_i\).  The bound \(W_k\leq I\) controls
+the first component by \(\sqrt{\ell_i}\).
+The first inequality in \eqref{four:volume-tail-operator}
+controls the second by
+\[
+ \sqrt{k/T_k}\,\|M^{\mathsf T}(I-P)e_i\|
+ \leq\sqrt{k/T_k}\,\varepsilon\sqrt{1-\ell_i}.
+\]
+Since \(\|W_k^{1/2}e_i\|=\sqrt{\alpha_i}\), this proves the
+first assertion.  The bound \(T_3\geq\kappa^2\) proves the second.
+\end{proof}
+
+\begin{theorem}[A cross block near a diffuse range]
+\label{four:near-diffuse}
+Suppose a physical cross block of a quadratic form satisfies
+\[
+ M=M_0+E,\qquad s_3(M_0)\geq a>0,\qquad
+ \max_i(P_{\operatorname{range}(M_0)})_{ii}\leq\tfrac12,
+ \qquad \|E\|_{\rm op}\leq a/16.
+\]
+Then, with arbitrary self blocks, outside couplings, and affine
+terms, the quadratic form has a continuous density vanishing
+at infinity and
+\begin{equation}\label{four:near-diffuse-bound}
+ \|p\|_\infty\leq\frac{24\sqrt3\,e}{5a}<\frac{23}{a}.
+\end{equation}
+No rank bound on either \(M_0\) or \(E\) is required.
+\end{theorem}
+\begin{proof}
+Let \(P=P_{\operatorname{range}(M_0)}\).
+Then \(\varepsilon=\|(I-P)M\|\leq a/16\), and singular-value
+perturbation gives \(\kappa=s_3(M)\geq15a/16\).
+Lemma~\ref{four:volume-stability} gives
+\[
+ \sqrt{\alpha_i}\leq\sqrt{\ell_i}
+                    +\frac{\sqrt3}{15}\sqrt{1-\ell_i}.
+\]
+For \(0\leq\ell\leq1/2\) and \(0\leq d\leq1\), the function
+\(\sqrt\ell+d\sqrt{1-\ell}\) is increasing in \(\ell\).
+Consequently
+\[
+ \alpha_i\leq\frac{(1+\sqrt3/15)^2}{2}<\frac23.
+\]
+For a rational check, replacing \(\sqrt3\) by \(2\) gives
+the still smaller-than-\(2/3\) bound \(289/450\).
+Theorem~\ref{four:volume-density} with \(k=3\), \(q=4/3\)
+therefore gives
+\[
+ \|p\|_\infty\leq\frac{9\sqrt3\,e}{2}\,Z_3^{-1/6}.
+\]
+Since \(Z_3\geq s_1(M)^2s_2(M)^2s_3(M)^2\geq\kappa^6\),
+the claimed constant follows from \(\kappa\geq15a/16\).
+\end{proof}
+
+\begin{corollary}[Distributed spectral tails]\label{four:tail}
+Let \(M\) be a physical cross block of rank at least three and put
+\[
+ T_3=\sum_{j\geq3}s_j(M)^2.
+\]
+Suppose a projection \(P\) on its row-index space satisfies
+\[
+ \max_iP_{ii}\leq\tfrac12,\qquad
+ \|(I-P)M\|_{\rm op}\leq\sqrt{T_3}/15.
+\]
+Then
+\begin{align}
+ \|p\|_\infty
+ &\leq\frac{9\sqrt3\,e}{2}\,e_3(M^{\mathsf T}M)^{-1/6}
+ \label{four:tail-bound}\\
+ &\leq\frac{9\sqrt3\,e}{2}
+           [s_1(M)^2s_2(M)^2T_3]^{-1/6}.
+ \nonumber
+\end{align}
+If \(s_2(M)\geq a>0\) and \(T_3\geq b^2>0\), the latter
+bound is \((9\sqrt3\,e/2)a^{-2/3}b^{-1/3}\).
+In particular, when \(P\) projects onto the top two left singular
+directions and its diagonal is at most \(1/2\), the condition
+\(T_3/s_3(M)^2\geq225\) suffices.
+\end{corollary}
+\begin{proof}
+Use \eqref{four:volume-stability-tail} with \(k=3\).
+The same marginal estimate as in
+Theorem~\ref{four:near-diffuse} gives \(\alpha_i<2/3\).
+The fractional three-volume theorem proves the first bound.
+The terms of \(e_3\) containing the first two indices sum to
+\(s_1^2s_2^2T_3\), proving the second.  For the indicated
+projection, \(\|(I-P)M\|_{\rm op}=s_3(M)\).
+\end{proof}
+
+\subsection{Small balls for an arbitrary nonzero quadratic form}
+
+\begin{lemma}[Quarter-power concentration]\label{four:quarter}
+Let \(S\ne0\) be any real symmetric matrix and let
+\[
+ R=X^{\mathsf T}SX+b^{\mathsf T}X+c.
+\]
+For every \(\rho>0\),
+\begin{equation}\label{four:quarter-bound}
+ \sup_w\mathbb P(|R-w|<\rho)
+ \leq\min\left\{1,5\left(\frac{\rho}{\|S\|_{\rm op}}\right)^{1/4}\right\}.
+\end{equation}
+In particular \(R\) has no atoms.  The same concentration estimate
+holds with a closed interval.
+\end{lemma}
+\begin{proof}
+Put \(L=\|S\|_{\rm op}>0\) and \(m=\max_i|S_{ii}|\).
+First suppose \(m\geq L/2\), and condition on all coordinates
+except one attaining \(m\).
+A real quadratic \(ax^2+dx+e\) with \(a\ne0\) has a preimage
+of any interval of length \(2\rho\) of total length at most
+\(2\sqrt{2\rho/|a|}\).  Indeed, complete the square and note
+that for an interval \([u,u+\delta]\) the set where
+\((x-x_0)^2\) belongs to that interval has length at most
+\(2\sqrt\delta\): on the nonnegative half-line this is
+\(2(\sqrt{u+\delta}-\sqrt u)\), with the evident truncation
+when \(u<0\).
+The density cap therefore bounds the conditional probability by
+\(4\sqrt{\rho/L}\).
+For \(\rho\leq L\), this is at most
+\(4(\rho/L)^{1/4}\); for \(\rho>L\), the bound one suffices.
+
+Now suppose \(m<L/2\).  Let \(S_0=S-\operatorname{diag}(S)\),
+so \(\|S_0\|_{\rm op}\geq L/2\).
+For independent uniform signs on the diagonal of a matrix \(E\),
+define \(C_E=(S_0-ES_0E)/2\).
+The zero diagonal of \(S_0\) implies
+\(\mathbb EC_E=S_0/2\).  Convexity of the operator norm shows
+that some sign choice satisfies
+\(\|C_E\|_{\rm op}\geq\|S_0\|_{\rm op}/2\geq L/4\).
+For the cut into positive and negative signs,
+\[
+ C_E=\begin{pmatrix}0&B\\B^{\mathsf T}&0\end{pmatrix},
+ \qquad \|B\|_{\rm op}=\|C_E\|_{\rm op}\geq L/4 .
+\]
+This is a cut in the original coordinates.
+The unrestricted determinant bound
+\eqref{four:unrestricted-determinant}, retaining only the
+largest singular value of \(B\), gives
+\begin{equation}\label{four:quarter-decay}
+ |\varphi_R(t)|
+ \leq\left(1+\frac{4\|B\|_{\rm op}^2t^2}{\pi^2e^2}\right)^{-1/8}
+ \leq\left(\frac{2\pi e}{L|t|}\right)^{1/4}.
+\end{equation}
+The affine terms are allowed throughout the decoupling argument.
+
+For the concentration constant, let \(v>0\).  Then
+\(\mathbf1_{\{|x|<\rho\}}\leq e^v e^{-vx^2/\rho^2}\).
+Gaussian Fourier inversion and Fubini give
+\[
+ \mathbb P(|R-w|<\rho)
+ \leq\frac{e^v\rho}{2\sqrt{\pi v}}
+      \int_{\mathbb R}e^{-\rho^2t^2/(4v)}
+                         |\varphi_R(t)|\,dt.
+\]
+For \(0<\alpha<1\),
+\[
+ \int_{\mathbb R}e^{-at^2}|t|^{-\alpha}\,dt
+ =a^{(\alpha-1)/2}\Gamma((1-\alpha)/2),
+\]
+by the substitution \(u=at^2\).
+Use \eqref{four:quarter-decay}, \(\alpha=1/4\), and \(v=1/8\).
+The coefficient of \((\rho/L)^{1/4}\) is
+\[
+ 2^{3/8}\pi^{-1/4}e^{3/8}\Gamma(3/8)<5.
+\]
+For an elementary verification,
+\(\Gamma(3/8)\leq8/3+e^{-1}<73/24\), obtained by splitting
+its defining integral at one.  Also
+\(2^{3/8}<4/3\), \(\pi^{-1/4}<4/5\), and \(e^{3/8}<3/2\).
+The product of these four upper bounds is \(73/15<5\).
+This proves \eqref{four:quarter-bound}.
+Letting \(\rho\downarrow0\) proves absence of atoms.
+The closed-interval version follows by applying the result with
+\(\rho+\varepsilon\) and then letting \(\varepsilon\downarrow0\).
+\end{proof}
+
+\begin{corollary}[Logarithmic and fractional potentials]
+\label{four:log-potential}
+In the setting of Lemma~\ref{four:quarter}, let
+\(L=\|S\|_{\rm op}\).  For every \(a>0\), put
+\(M=5(a/L)^{1/4}\).  Uniformly in \(w\),
+\begin{align}
+ \mathbb E\log_+\frac a{|R-w|}
+ &\leq
+ \begin{cases}
+  4M,&M\leq1,\\
+  4+4\log M,&M\geq1,
+ \end{cases}
+ \label{four:log-potential-bound}\\
+ &\leq20(a/L)^{1/4}.
+ \nonumber
+\end{align}
+For every \(0<\beta<1/4\), moreover,
+\begin{equation}\label{four:negative-moment}
+ \sup_w\mathbb E|R-w|^{-\beta}
+ \leq\frac{5^{4\beta}}{1-4\beta}\,L^{-\beta}.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Tonelli's theorem and the quarter-power bound give
+\[
+ \mathbb E\log_+\frac a{|R-w|}
+ =\int_0^\infty
+      \mathbb P(|R-w|<ae^{-u})\,du
+ \leq\int_0^\infty\min\{1,Me^{-u/4}\}\,du.
+\]
+If \(M\leq1\), this integral is \(4M\).
+If \(M>1\), split at \(u=4\log M\) to obtain \(4+4\log M\).
+Both cases are at most \(4M\).
+For the negative moment use
+\[
+ \mathbb E|R-w|^{-\beta}
+ =\beta\int_0^\infty r^{-\beta-1}
+                       \mathbb P(|R-w|<r)\,dr.
+\]
+Split at \(r_0=L/5^4\).  The probability is at most
+\((r/r_0)^{1/4}\) for \(r<r_0\) and at most one otherwise.
+The two integrals sum to
+\(r_0^{-\beta}/(1-4\beta)\), giving
+\eqref{four:negative-moment}.
+\end{proof}
+
+The spectral-window, volume, and ridge criteria above are
+quantitative sufficient hypotheses.  A lower bound for the third
+singular value of the full quadratic matrix alone does not verify
+their coordinate cut or marginal conditions.  Their usefulness is
+that the estimates retain arbitrary self interactions and, where
+specified, all additional spectral directions without any assumption
+that a remainder is independent of the principal part.

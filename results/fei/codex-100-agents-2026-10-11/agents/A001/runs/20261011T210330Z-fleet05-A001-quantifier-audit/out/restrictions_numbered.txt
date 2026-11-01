@@ -1,0 +1,518 @@
+1: \section{Restriction increments and coordinate selection}\label{sec:restrictions}
+2: 
+3: For a coordinate $i$, let $f_i^+$ and $f_i^-$ denote the two restrictions
+4: of $f$, and put
+5: \[
+6:  \Delta_i\HH(f)=\HH(f)-\frac{\HH(f_i^+)+\HH(f_i^-)}2.
+7: \]
+8: The restriction framework of Gonz\'alez, MacManus and
+9: Pereyra~\cite{GMP26} asks for a coordinate at which this entropy
+10: increment can be charged to the influence lost in the split.
+11: We first give an exact scalar description of the increment, then
+12: identify several limitations of possible coordinate rules.
+13: 
+14: \subsection{The exact increment and its scalar profile}
+15: 
+16: Write $h_2(u)=-u\log u-(1-u)\log(1-u)$, with its continuous endpoint
+17: values, and define
+18: \begin{equation}\label{eq:kappadef}
+19:  \kappa(u)=1+h_2(u)
+20:  -h_2\!\left(\frac12+\sqrt{u(1-u)}\right),
+21:  \qquad 0\le u\le1.
+22: \end{equation}
+23: For $S\subseteq[n]\setminus\{i\}$ set
+24: \[
+25:  c_S=\wh f(S),\qquad d_S=\wh f(S\cup\{i\}),\qquad
+26:  m_S=c_S^2+d_S^2,\qquad u_S=\frac{d_S^2}{m_S},
+27: \]
+28: omitting terms with $m_S=0$.
+29: 
+30: \begin{proposition}[Exact restriction increment]\label{prop:splitexact}
+31: For every Boolean $f$ and every coordinate $i$,
+32: \begin{equation}\label{eq:splitexact}
+33:  \Delta_i\HH(f)=\sum_{S\not\ni i}m_S\kappa(u_S).
+34: \end{equation}
+35: In particular, $0\le\Delta_i\HH(f)\le2$.
+36: 
+37: If $\mathcal S$ has law $P_f$, define
+38: \[
+39:  B_i(f)=H\bigl(\mathbf1_{\{i\in\mathcal S\}}\mid
+40:                          \mathcal S\setminus\{i\}\bigr).
+41: \]
+42: Then $\Delta_i\HH(f)=B_i(f)+M_i(f)$, where
+43: \begin{equation}\label{eq:mixingbound}
+44:  0\le M_i(f)\le
+45:  \frac2{\ln2}\sum_{S\not\ni i}\min(c_S^2,d_S^2)
+46:  \le\frac2{\ln2}\I_i(f).
+47: \end{equation}
+48: \end{proposition}
+49: 
+50: \begin{proof}
+51: The two restricted coefficients indexed by $S$ are $c_S+d_S$ and
+52: $c_S-d_S$. Suppressing subscripts and putting
+53: $v=(c+d)^2/(2m)=1/2+cd/m$, the parent pair contributes
+54: $-m\log m+mh_2(u)$ to entropy, whereas the average contribution
+55: of the two branches is $-m\log(2m)+mh_2(v)$.
+56: Their difference is $m[1+h_2(u)-h_2(v)]$.
+57: Changing the sign of $cd$ does not affect $h_2(v)$, proving
+58: \eqref{eq:splitexact}. Both $h_2(u)$ and $1-h_2(v)$ lie in $[0,1]$,
+59: and $\sum_Sm_S=1$.
+60: 
+61: The term $\sum_Sm_Sh_2(u_S)$ is exactly $B_i(f)$, leaving
+62: \[
+63:  M_i(f)=\sum_Sm_S
+64:  \left[1-h_2\!\left(\frac12+\frac{c_Sd_S}{m_S}\right)\right].
+65: \]
+66: To bound it, let
+67: \[
+68:  g(t)=\frac{(1+t)\ln(1+t)+(1-t)\ln(1-t)}2,
+69:  \qquad 0\le t\le1.
+70: \]
+71: For $0\le t<1$, the inequality
+72: $\atanh t\le t/\sqrt{1-t^2}$ follows by comparing derivatives
+73: from zero. Since $g'(t)=\atanh t$, integration gives
+74: $g(t)\le1-\sqrt{1-t^2}$. Apply this with
+75: $t=2\sqrt{u(1-u)}$, for which
+76: $1-\sqrt{1-t^2}=2\min(u,1-u)$, and divide by $\ln2$.
+77: Continuity handles the endpoints. Multiplication by $m_S$ and
+78: summation yield \eqref{eq:mixingbound}.
+79: \end{proof}
+80: 
+81: \begin{lemma}[Concavity of the scalar profile]\label{lem:kappaconcavity}
+82: The function $\kappa$ is continuous on $[0,1]$, symmetric about
+83: $1/2$, and strictly concave on $(0,1)$. It satisfies
+84: $\kappa(0)=\kappa(1)=0$ and $\kappa(1/2)=2$.
+85: Consequently,
+86: \begin{equation}\label{eq:kappabound}
+87:  0\le\Delta_i\HH(f)\le\kappa(\I_i(f)).
+88: \end{equation}
+89: As $u\downarrow0$,
+90: \begin{equation}\label{eq:kappasmall}
+91:  \kappa(u)=u\log(1/u)+\frac{3u}{\ln2}+O(u^2).
+92: \end{equation}
+93: \end{lemma}
+94: 
+95: \begin{proof}
+96: Put $t=2\sqrt{u(1-u)}$ and
+97: $G(t)=1-h_2((1+t)/2)$. Away from the midpoint,
+98: \[
+99:  h_2''(u)=-\frac4{(\ln2)t^2},\qquad
+100:  G'(t)=\frac{\atanh t}{\ln2},\qquad
+101:  G''(t)=\frac1{(\ln2)(1-t^2)},
+102: \]
+103: \[
+104:  t'=\frac{2(1-2u)}t,\qquad t''=-\frac4{t^3}.
+105: \]
+106: The contributions $h_2''(u)$ and $G''(t)(t')^2$ cancel, leaving
+107: \begin{equation}\label{eq:kappasecond}
+108:  \kappa''(u)=-
+109:  \frac{4\atanh(2\sqrt{u(1-u)})}
+110:  {(\ln2)(2\sqrt{u(1-u)})^3}<0.
+111: \end{equation}
+112: At the midpoint, with $u=1/2+x$, the expansion is
+113: \[
+114:  \kappa(1/2+x)
+115:  =2-x^2\log(1/x^2)-\frac{3x^2}{\ln2}
+116:        +O\bigl(x^4\log(1/|x|)\bigr).
+117: \]
+118: Thus the first derivative tends to zero on both sides; the
+119: concavity on the two half-intervals joins across $1/2$.
+120: Continuity and the endpoint values follow from
+121: \eqref{eq:kappadef}. Jensen's inequality, together with
+122: $\sum_Sm_S=1$ and $\sum_Sm_Su_S=\I_i(f)$, proves
+123: \eqref{eq:kappabound}. Finally,
+124: $h_2(u)=u\log(1/u)+u/\ln2+O(u^2)$ and
+125: $G(2\sqrt{u(1-u)})=2u/\ln2+O(u^2)$ give
+126: \eqref{eq:kappasmall}.
+127: \end{proof}
+128: 
+129: Since a concave function vanishing at zero has a nonincreasing
+130: ratio to its argument, any coordinate with $\I_i(f)\ge\tau>0$
+131: satisfies
+132: \begin{equation}\label{eq:kappacutoff}
+133:  \Delta_i\HH(f)\le\frac{\kappa(\tau)}{\tau}\I_i(f).
+134: \end{equation}
+135: For example, $\kappa(1/16)/(1/16)=8.21872678758653\ldots$.
+136: The logarithm in \eqref{eq:kappasmall} cannot be replaced by a
+137: uniform constant for every coordinate, as
+138: Proposition~\ref{prop:bentsplice} below shows.
+139: 
+140: \subsection{Valid induction and block exposure}
+141: 
+142: The exact influence identity is
+143: \begin{equation}\label{eq:restrictionI}
+144:  \I(f)=\I_i(f)+\frac{\I(f_i^+)+\I(f_i^-)}2.
+145: \end{equation}
+146: Indeed, restriction averages preserve the influence of every
+147: other coordinate, while coordinate $i$ disappears.
+148: 
+149: \begin{proposition}[A suitable-coordinate induction]\label{prop:restrictioninduction}
+150: Suppose a class of Boolean functions is closed under restrictions
+151: and each nonconstant member has a relevant coordinate $i$ with
+152: $\Delta_i\HH(f)\le C\I_i(f)$. Then every member satisfies
+153: $\HH(f)\le C\I(f)$.
+154: 
+155: Existence of a finite global FEI constant is also equivalent to
+156: existence of a finite $K$ such that every nonconstant Boolean
+157: function has a relevant coordinate satisfying $B_i(f)\le K\I_i(f)$.
+158: A global FEI constant $C$ permits $K=C$; the latter erasure
+159: inequality implies FEI with constant $K+2/\ln2$.
+160: \end{proposition}
+161: 
+162: \begin{proof}
+163: The first assertion follows by induction on the number of
+164: coordinates, using \eqref{eq:restrictionI}.
+165: For the second, the entropy chain rule gives
+166: \begin{equation}\label{eq:hanerasure}
+167:  \sum_i B_i(f)\le\HH(f),
+168: \end{equation}
+169: because conditioning on all other coordinates can only decrease
+170: each summand of a fixed chain rule. Under $\HH(f)\le C\I(f)$,
+171: some positive-influence coordinate must have $B_i(f)\le C\I_i(f)$.
+172: Conversely, \eqref{eq:mixingbound} turns the proposed erasure
+173: charge into a suitable-coordinate entropy charge, to which the
+174: first assertion applies.
+175: \end{proof}
+176: 
+177: The quantifier is existential at every restricted function.
+178: Neither an arbitrary coordinate nor a preferred coordinate rule
+179: is justified by Proposition~\ref{prop:restrictioninduction}.
+180: The implication is hereditary: it is not the pointwise
+181: inequality
+182: \[
+183:  \HH(f)\le\sum_iB_i(f)+\frac2{\ln2}\I(f),
+184: \]
+185: which is false for the coded examples in~\cite{BrainErasure}.
+186: Theorem~\ref{thm:simultaneous} and Lemma~\ref{lem:plateau}
+187: also show how finite depths of restrictions can preserve entropy
+188: while revealing no local entropy cost.
+189: 
+190: More generally, consider a finite adaptive restriction tree, and
+191: choose its branches by the uniform input. If $f_v$ is the function
+192: at a visited internal node and $i(v)$ its split coordinate, then
+193: \begin{align}
+194:  \HH(f)&=\E\sum_{v\ {\rm internal\ on\ the\ path}}
+195:                \Delta_{i(v)}\HH(f_v)
+196:               +\E\HH(f_{\rm leaf}),\label{eq:treetelescopeH}\\
+197:  \I(f)&=\E\sum_{v\ {\rm internal\ on\ the\ path}}
+198:                \I_{i(v)}(f_v)
+199:               +\E\I(f_{\rm leaf}).\label{eq:treetelescopeI}
+200: \end{align}
+201: These identities permit amortized charges and stopping at classes
+202: with established FEI bounds, as in~\cite{GMP26}. They require the
+203: cost along the whole path to be controlled.
+204: 
+205: \begin{proposition}[Exact block increment]\label{prop:blockincrement}
+206: Fix a block $W\subseteq[n]$. For $T\subseteq W^c$ put
+207: \[
+208:  q_T=\sum_{U\subseteq W}\wh f(T\cup U)^2,\qquad
+209:  \phi_T(y)=q_T^{-1/2}
+210:        \sum_{U\subseteq W}\wh f(T\cup U)\chi_U(y),
+211: \]
+212: omitting $q_T=0$. Then
+213: \begin{equation}\label{eq:blockincrement}
+214:  \HH(f)-\E_y\HH(f|_{W=y})
+215:  =H(\mathcal S\cap W\mid\mathcal S\cap W^c)
+216:    +\sum_Tq_T\operatorname{Ent}_2(\phi_T^2),
+217: \end{equation}
+218: where
+219: $\operatorname{Ent}_2 Z=\E[Z\log(Z/\E Z)]$. Moreover,
+220: \begin{equation}\label{eq:blockmixing}
+221:  0\le\sum_Tq_T\operatorname{Ent}_2(\phi_T^2)
+222:  \le\frac2{\ln2}\sum_{i\in W}\I_i(f).
+223: \end{equation}
+224: \end{proposition}
+225: 
+226: \begin{proof}
+227: Let $p_T(U)=\wh f(T\cup U)^2/q_T$. Then
+228: $\E\phi_T^2=1$, and the original entropy is
+229: $H(q)+\sum_Tq_TH(p_T)$. The restricted coefficient indexed by
+230: $T$ is $\sqrt{q_T}\phi_T(y)$, so its entropy averaged over $y$
+231: is
+232: \[
+233:  H(q)-\sum_Tq_T\operatorname{Ent}_2(\phi_T^2).
+234: \]
+235: Subtracting proves \eqref{eq:blockincrement}. The uniform-cube
+236: logarithmic Sobolev inequality~\cite{OD14}, in the normalization
+237: $D_jg=(g|_{x_j=1}-g|_{x_j=-1})/2$, states
+238: \[
+239:  \operatorname{Ent}_2(g^2)
+240:  \le\frac2{\ln2}\sum_j\E(D_jg)^2.
+241: \]
+242: Applying it to each $\phi_T$ and using Parseval gives
+243: \[
+244:  \sum_Tq_T\sum_{i\in W}\E(D_i\phi_T)^2
+245:  =\sum_{T,U}|U|\wh f(T\cup U)^2
+246:  =\sum_{i\in W}\I_i(f),
+247: \]
+248: which proves \eqref{eq:blockmixing}.
+249: \end{proof}
+250: 
+251: Block exposure therefore retains a conditional erasure charge.
+252: Taking $W=[n]$ makes that charge $\HH(f)$ itself. Small erasure
+253: for bounded blocks at the initial function does not replace the
+254: hereditary requirement, because the separated supports in
+255: Lemma~\ref{lem:plateau} have zero entropy increment under all
+256: sufficiently shallow restrictions.
+257: 
+258: \subsection{Character-centered budgets}
+259: 
+260: Define
+261: \[
+262:  \D(f)=\sum_j t(\I_j(f)),\qquad t(u)=\min(u,1-u).
+263: \]
+264: Character multiplication preserves entropy and complements the
+265: influences on its selected coordinates. Hence
+266: $\D(f)=\min_U\I(\chi_Uf)$ and $\D$ is character invariant.
+267: For a split define
+268: \[
+269:  d_i^{\D}(f)=\D(f)
+270:             -\frac{\D(f_i^+)+\D(f_i^-)}2.
+271: \]
+272: 
+273: \begin{proposition}[Centered budget and its collapse]\label{prop:centerbudget}
+274: For every $f,i$,
+275: \begin{align}
+276:  d_i^{\D}(f)
+277:  ={}&t(\I_i(f))\notag\\
+278:  &+\sum_{j\ne i}
+279:  \left[t(\I_j(f))
+280:        -\frac{t(\I_j(f_i^+))+t(\I_j(f_i^-))}2\right]
+281:  \ge t(\I_i(f)).\label{eq:centerbudget}
+282: \end{align}
+283: Both $d_i^{\D}$ and $\Delta_i\HH$ are character invariant.
+284: If $\max_j\I_j(f)\le1/4$, then
+285: \begin{equation}\label{eq:centerbudgetcollapse}
+286:  d_i^{\D}(f)=\I_i(f)\qquad\text{for every }i.
+287: \end{equation}
+288: \end{proposition}
+289: 
+290: \begin{proof}
+291: For $j\ne i$, the two child influences average to $\I_j(f)$.
+292: Concavity of $t$ proves \eqref{eq:centerbudget}.
+293: Restriction commutes with character multiplication up to a
+294: character and an output sign, proving the invariances.
+295: Each child influence is at most twice its parent's influence.
+296: Under the stated upper bound, all parent and child influences
+297: are at most $1/2$, so $\D=\I$ at these three nodes.
+298: Equation~\eqref{eq:restrictionI} now gives
+299: \eqref{eq:centerbudgetcollapse}.
+300: \end{proof}
+301: 
+302: A suitable-coordinate inequality
+303: $\Delta_i\HH\le C d_i^{\D}$ would telescope to
+304: $\HH\le C\D$, stopping at characters, whose entropy is zero.
+305: The centered budget is sometimes larger than the original
+306: budget: for a two-input conjunction it reduces the local ratio
+307: from four to two. It supplies no improvement in
+308: \eqref{eq:centerbudgetcollapse}. More generally, if
+309: $\max_j\I_j(f)\le2^{-(r+1)}$, every restriction fixing at most
+310: $r$ coordinates has influences at most $1/2$, so the first
+311: $r$ levels have no centering gain. This follows by iterating
+312: the factor-two bound. The low-influence reductions
+313: in~\cite{BrainCritical} and Theorem~\ref{thm:simultaneous}
+314: therefore remain applicable.
+315: 
+316: \subsection{Bad coordinates with arbitrarily small influences}
+317: 
+318: The following bent-splice mechanism also underlies the local
+319: allocation obstruction in~\cite{BrainAllocation}.
+320: 
+321: \begin{proposition}[Bent splice]\label{prop:bentsplice}
+322: For each even $m\ge4$, there is a Boolean function $F$ on $m+1$
+323: coordinates, with distinguished coordinate $z$, such that
+324: \[
+325:  \I_z(F)=2^{-m},\qquad
+326:  \I_j(F)=\frac12+2^{-m}\quad(1\le j\le m),
+327: \]
+328: and
+329: \begin{equation}\label{eq:bentspliceratio}
+330:  \frac{\Delta_z\HH(F)}{\I_z(F)}
+331:  \ge\log\!\left(2^m-2\cdot2^{m/2}+2\right)\ge m-1.
+332: \end{equation}
+333: \end{proposition}
+334: 
+335: \begin{proof}
+336: Use binary coordinates for the $m$ base variables, with characters
+337: $(-1)^{S\cdot x}$, and put
+338: \[
+339:  g(x)=(-1)^{x_1x_2+x_3x_4+\cdots+x_{m-1}x_m},\qquad
+340:  h(x)=g(x)-2\mathbf1_{\{x=0\}}.
+341: \]
+342: Both are Boolean. Define $F(x,1)=g(x)$ and $F(x,-1)=h(x)$.
+343: Set $N=2^m$, $\alpha=N^{-1}$ and $R=\sqrt N$.
+344: The two-bit quadratic factor has four Fourier coefficients of
+345: magnitude $1/2$; tensorization gives
+346: $\wh g(S)\in\{-1/R,1/R\}$ for every $S$.
+347: Each base influence of $g$ is $1/2$.
+348: Since $g(0)=g(e_j)=1$, flipping the value at zero changes the
+349: edge $\{0,e_j\}$ from agreeing to disagreeing, increasing
+350: $\I_j(h)$ by $2/N$. Averaging the branches proves the displayed
+351: influence identities.
+352: 
+353: For the $z$-split, the coefficient pairs are
+354: $c_S=\wh g(S)-\alpha$ and $d_S=\alpha$. Thus
+355: \[
+356:  \frac{m_S}{d_S^2}=(\pm R-1)^2+1
+357:                    \ge N-2\sqrt N+2.
+358: \]
+359: The $d_S^2\log(m_S/d_S^2)$ term alone gives
+360: \[
+361:  \Delta_z\HH(F)\ge B_z(F)
+362:  \ge N\alpha^2\log(N-2\sqrt N+2).
+363: \]
+364: Since $\I_z(F)=\alpha$, the first inequality in
+365: \eqref{eq:bentspliceratio} follows. The second follows from
+366: $N-2\sqrt N+2-N/2=(\sqrt N-2)^2/2\ge0$.
+367: \end{proof}
+368: 
+369: \begin{corollary}[Failure of two maximum-budget rules]\label{cor:badmaximum}
+370: There are Boolean functions $\widetilde F_m$ with
+371: $\max_i\I_i(\widetilde F_m)\le2^{-m}$ for which the unique
+372: maximum-influence coordinate has local ratio at least $m-1$.
+373: It is also the unique coordinate maximizing $d_i^{\D}$, with
+374: the same ratio $\Delta_i\HH/d_i^{\D}$.
+375: \end{corollary}
+376: 
+377: \begin{proof}
+378: In Proposition~\ref{prop:bentsplice}, replace each base coordinate
+379: by a majority on a disjoint block of
+380: $K=2N^2+1$ bits, keeping $z$ unchanged. Its leaf influence is
+381: \[
+382:  \beta_K=\binom{K-1}{(K-1)/2}2^{-(K-1)}
+383:  \le\frac1{\sqrt{(K+1)/2}}<\alpha.
+384: \]
+385: For completeness, the bound
+386: $\binom{2t}{t}/4^t\le1/\sqrt{t+1}$ follows by induction:
+387: the consecutive ratio is $(2t+1)/(2t+2)$, and the squared
+388: comparison reduces to $3t+2\ge0$.
+389: 
+390: Lemma~\ref{lem:balanced} gives each new leaf influence
+391: $(1/2+\alpha)\beta_K<\alpha$ and preserves $\I_z=\alpha$.
+392: It also preserves $\Delta_z\HH$: the additional entropy
+393: in the parent is $\sum_j\I_j(F)\HH(\Maj_K)$, and the
+394: additional branch entropies average to the same quantity
+395: by \eqref{eq:restrictionI} applied to the other coordinates.
+396: Thus $z$ is the unique maximum-influence coordinate, and
+397: \eqref{eq:bentspliceratio} persists.
+398: All influences are at most $\alpha\le1/16$, so
+399: Proposition~\ref{prop:centerbudget} gives
+400: $d_i^{\D}=\I_i$ at every coordinate, proving the second assertion.
+401: \end{proof}
+402: 
+403: These examples reject the two specified rules, not the
+404: existential hypothesis of Proposition~\ref{prop:restrictioninduction}.
+405: The cost may still be paid by choosing a different coordinate
+406: or by an amortized argument.
+407: 
+408: \subsection{Separable influence potentials}
+409: 
+410: \begin{proposition}[An obstruction to charging every split]\label{prop:separablepotential}
+411: Let $\phi:[0,1]\to\mathbb R$ satisfy $\phi(0)=0$,
+412: $\phi(t)=O(t)$ as $t\downarrow0$, and have a finite left derivative
+413: at $1/2$. Put $P_\phi(f)=\sum_j\phi(\I_j(f))$.
+414: There is no finite $C>0$ such that
+415: \begin{equation}\label{eq:falsepotentialcharge}
+416:  \Delta_i\HH(f)\le C\left[
+417:  P_\phi(f)-\frac{P_\phi(f_i^+)+P_\phi(f_i^-)}2\right]
+418: \end{equation}
+419: for every Boolean $f$ and every coordinate $i$.
+420: The assertion remains false after adding to $P_\phi(f)$ any
+421: real-valued function of $\E f$.
+422: \end{proposition}
+423: 
+424: \begin{proof}
+425: Before flipping zero in Proposition~\ref{prop:bentsplice},
+426: multiply $g$ by the character on all its base coordinates.
+427: Its spectrum remains flat, and its base influences remain
+428: $1/2$. Now the edges from zero to $e_j$ disagree, so flipping
+429: zero makes the other branch's influences $1/2-2\alpha$ and
+430: the parent influences $1/2-\alpha$.
+431: The selector still has influence $\alpha$, and the lower bound
+432: $\Delta_z\HH\ge(m-1)\alpha$ is unchanged.
+433: The potential drop is exactly
+434: \[
+435:  \phi(\alpha)+m\left[
+436:  \phi(1/2-\alpha)
+437:  -\frac{\phi(1/2)+\phi(1/2-2\alpha)}2\right].
+438: \]
+439: The bracket is $o(\alpha)$ by the one-sided derivative
+440: assumption. Dividing the displayed expression by $m\alpha$
+441: therefore gives a quantity tending to zero, whereas
+442: $\Delta_z\HH/(m\alpha)\ge1-1/m$.
+443: This contradicts \eqref{eq:falsepotentialcharge}.
+444: 
+445: Finally multiply the entire splice by a fresh independent sign.
+446: Parent and both selector branches then have mean zero, so any
+447: mean-only correction cancels. The new coordinate has influence
+448: one at all three nodes, and its contribution to the potential
+449: drop also cancels. Entropy and the selector increment are
+450: unchanged.
+451: \end{proof}
+452: 
+453: The assumptions include $\phi(t)=t$ and
+454: $\phi(t)=\min(t,1-t)$. The proposition concerns a charge at
+455: every coordinate; it does not rule out a suitable-coordinate
+456: inequality, a nonseparable potential, or a global tree budget.
+457: 
+458: \subsection{Finite checks and exact witnesses}\label{subsec:restrictionchecks}
+459: 
+460: Enumeration of all $2^{16}=65,536$ Boolean truth tables on four
+461: labelled coordinates, including functions with unused inputs,
+462: gives the values in Table~\ref{tab:restrictionchecks}.
+463: Walsh numerators, influences and centered budgets are calculated
+464: with exact integer or dyadic arithmetic. The ordering of
+465: entropy ratios in the enumeration uses floating-point
+466: logarithms; the exact witness formulas below were also evaluated
+467: with 80-digit arithmetic. Thus the table reports numerical
+468: finite maxima, not interval-certified comparisons or
+469: dimension-independent bounds.
+470: 
+471: \begin{table}[ht]
+472: \centering
+473: \caption{Observed maxima among four-variable Boolean functions.
+474: Ratios with zero denominator are omitted.}\label{tab:restrictionchecks}
+475: \begin{tabular}{lc}
+476: \toprule
+477: Quantity & Observed maximum\\
+478: \midrule
+479: $\HH(f)/\I(f)$ & $3.402475551198587$\\
+480: $\min_{i:\I_i>0}\Delta_i\HH(f)/\I_i(f)$ & $4.867668746754797$\\
+481: $\min_{i:d_i^{\D}>0}\Delta_i\HH(f)/d_i^{\D}(f)$
+482:  & $4.867668746754797$\\
+483: $\max_{i:\I_i>0}\Delta_i\HH(f)/\I_i(f)$
+484:  & $5.921783780331384$\\
+485: $\max_{i:d_i^{\D}>0}\Delta_i\HH(f)/d_i^{\D}(f)$
+486:  & $5.921783780331384$\\
+487: \bottomrule
+488: \end{tabular}
+489: \end{table}
+490: 
+491: The entropy-to-influence witness is a four-input conjunction,
+492: up to output sign, with exact ratio
+493: \[
+494:  12-\frac{49}{16}\log 7.
+495: \]
+496: The suitable-coordinate witness is a three-input conjunction
+497: and one unused variable. Its squared coefficients are $9/16$
+498: at the empty set and $1/16$ at each of seven nonempty sets;
+499: each relevant influence and centered budget is $1/4$.
+500: Its local ratio is exactly
+501: \[
+502:  12-\frac92\log 3
+503:  =4.86766874675479718345817475223482571058\ldots .
+504: \]
+505: For an arbitrary-coordinate witness, take the function on
+506: $\{0,1\}^4$ equal to $-1$ precisely at
+507: $0000,0001,0010$. Its squared coefficients are $25/64$ once,
+508: $9/64$ three times, and $1/64$ twelve times. At either of its
+509: coordinates of influence $1/8$, the local ratio is
+510: \[
+511:  24-\frac{25}{4}\log 5-\frac94\log 3
+512:  =5.92178378033138391753959094180872425614\ldots .
+513: \]
+514: The exact formulas establish these witness values independently
+515: of the numerical ordering. Larger self-composition examples
+516: in~\cite{BrainCritical} require larger suitable-coordinate
+517: constants, so the finite table cannot be used as a uniform
+518: restriction bound.

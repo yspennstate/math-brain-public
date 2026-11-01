@@ -1,0 +1,54 @@
+{
+  "helper_version": "A067-positive-quadratic-common-bank-v2",
+  "helper_sha256": "ba4b995d75d9828dd68294e6d89d5f7273d936072011ed096890a28bdecc9416",
+  "family": "Positive polar rank: certified half actual common-reference bank. Rank0 cases are guards, B<=3e, no rate4 common-reference bank admission",
+  "domain": {
+    "pilot_core_n": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "pilot_quadratic_cases": 150,
+    "full_core_n": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "full_quadratic_cases": 67734,
+    "full_A088_m": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "pilot_A088_m": [
+      2
+    ],
+    "affine_guard_core_n_full": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "affine_guard_core_n_pilot": [
+      1,
+      2,
+      3
+    ]
+  },
+  "symmetry": "All marked vertices reduce to zero by physical cube translation, which bijects the exhaustive quadratic coefficient domain, preserves polar rank and H/I. No reduction of polynomial tuples.",
+  "arithmetic": "Integer FWHT and GF2 polar rank; exact physical edge counts; complete common-reference marginals; rational prime-log entropy with proved 20-term atanh tail and outward80-bit endpoints. Zero margins recognized symbolically.",
+  "memory_estimate_MB": 100,
+  "pilot_max_seconds": 60,
+  "full_max_seconds": 600,
+  "no_dimension_escalation": true,
+  "revision_reason": "Preserved affine endpoint pilot error; positive-rank theorem unchanged, rank0 guards explicit"
+}

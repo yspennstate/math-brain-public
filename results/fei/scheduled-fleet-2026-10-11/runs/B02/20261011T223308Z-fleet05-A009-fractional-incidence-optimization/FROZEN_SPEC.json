@@ -1,0 +1,12 @@
+{
+  "helper_version": "A009-exact-v1",
+  "actual_Boolean_family": "f(r,m)=2 AND_r(core) OR_m(private singletons)-1; gates AND(core,private_l)",
+  "parameter_domain": {"r": [1,2,3,4,5], "m": [1,2,3,4,5], "n_max": 10},
+  "case_count": 25,
+  "symmetry": "No omitted parameter cases; symmetry only proves equal global weights optimal for a fixed symmetric posterior",
+  "arithmetic": "integer Walsh; Fraction; rational logarithm intervals using atanh series; exact polynomial derivatives",
+  "memory_estimate_MB": 30,
+  "max_runtime_seconds": 60,
+  "search": "No floating solver; fixed rational incidence certificates and analytic all-parameter proof",
+  "extra_certificate_domain": "3 heterogeneous abstract 2-gate KKT instances; actual (r,m)=(1,2) KKT certificate; duplicate dictator Hessian sign; 3 empty/zero conventions. Extension frozen before second execution; parameter domain unchanged."
+}

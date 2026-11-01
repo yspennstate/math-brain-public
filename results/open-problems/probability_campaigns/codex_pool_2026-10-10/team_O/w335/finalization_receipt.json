@@ -1,0 +1,44 @@
+{
+  "changes": [
+    {
+      "key": "p0255-weighted-star-cv",
+      "change": "Exclude the empty star and explicitly handle a one-leaf star."
+    }
+  ],
+  "boundary_cases": [
+    {
+      "weight": 1,
+      "lengths": [
+        1,
+        1
+      ],
+      "cv": 0
+    },
+    {
+      "weight": 2,
+      "lengths": [
+        2,
+        2
+      ],
+      "cv": 0
+    },
+    {
+      "weight": 17,
+      "lengths": [
+        17,
+        17
+      ],
+      "cv": 0
+    },
+    {
+      "weight": 1000000,
+      "lengths": [
+        1000000,
+        1000000
+      ],
+      "cv": 0
+    }
+  ],
+  "result": "PASS",
+  "command": "python -X utf8 finalize_corrections.py"
+}

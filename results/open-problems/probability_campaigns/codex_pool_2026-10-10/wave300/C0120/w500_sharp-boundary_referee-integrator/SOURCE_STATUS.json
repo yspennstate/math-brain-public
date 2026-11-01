@@ -1,0 +1,15 @@
+{
+  "problem_id": "C0120",
+  "checked_at": "2026-10-10",
+  "intake_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:120",
+  "intake_statement": "Improve the bound Var(log Z_n) = O(n/log n) for directed polymers in random environment in general dimension to a power improvement n^{1-eps}.",
+  "primary_source": "Sourav Chatterjee, Chaos, concentration, and multiple valleys, arXiv:0810.4221, Section 8 and Section 12(3), https://arxiv.org/pdf/0810.4221",
+  "source_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/sources.jsonl:29",
+  "source_record_sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+  "verified_source_scope": "Theorem 8.1 bounds Var(M_n) <= C n/log n, with M_n the maximum path weight in a (1+1)-dimensional nearest-neighbor up/right polymer with iid standard Gaussian vertex weights. Section 12(3) asks to improve that fluctuation exponent.",
+  "source_quotes": ["Our object of interest is the polymer with the minimum energy (i.e. maximum weight), usually called the ground state of the system.", "Theorem 8.1. For some universal constant C, we have Var(M) <= Cn/log n.", "Improve the fluctuation exponent in directed polymers. The current proof via hypercontractivity gives only a log n correction."],
+  "scope_verdict": "FIX: intake changes the random variable from the ground-state maximum M_n to finite-temperature log Z_n and extends dimension without support from this cited theorem. The proposed n^{1-eps} goal is a reasonable formalization of 'improve exponent' only after explicitly fixing the 1+1 Gaussian ground-state model.",
+  "current_openness": "UNKNOWN; the 2008 source establishes historical openness, not status in October 2026.",
+  "prior_solved_retired_check": "pending",
+  "hash_note": "The SHA-256 is from the existing source record, not a fresh byte check of the local PDF. Text was checked against the live arXiv PDF."
+}

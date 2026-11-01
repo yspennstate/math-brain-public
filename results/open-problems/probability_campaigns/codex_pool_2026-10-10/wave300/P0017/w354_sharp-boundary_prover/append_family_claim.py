@@ -1,0 +1,11 @@
+import json
+from pathlib import Path
+
+base = Path(__file__).resolve().parent
+path = base / "CLAIMS.jsonl"
+rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line]
+claim = {"id": "w354-P0017-005", "statement": "In the isotropic simplex construction of claim 002, for every integer k>=1 let t=1-S, f(Y)=T t^k and M_p=(p+1)!d!/(d+p)!. Then E[f|Z]=0, E Var(f|Z)=(K/6)M_(2k+2), E|partial_v f|^2=M_(2k), and E|grad f|^2=[1+k^2(d-1)/(3(d+1))]M_(2k). The directional quotient is (K/6)(2k+2)(2k+3)/[(d+2k+1)(d+2k+2)], and the full quotient divides this by the displayed transverse-energy factor.", "assumptions": ["Integer d>=2 and k>=1", "K=(d+1)(d+2)", "Whitening, scalar fiber variables and unit direction exactly as in claim 002", "Full Euclidean gradient includes all transverse derivatives"], "source": {"kind": "owner-own-work", "artifact": "SIMPLEX_PROOF.md#5-explicit-polynomial-witness"}, "proof": "t has Beta(2,d-1) law, giving M_p by the integer beta integral. Conditional mean of T is zero and conditional variance is K t^2/6. For b=grad_Y S, b is orthogonal to v and |b|^2=2(d-1)/((d+1)K), by the covariance quadratic form. Thus grad f=v t^k-k T t^(k-1)b has vanishing cross term. Integrating its two squared terms gives the full multiplier 1+k^2(d-1)/(3(d+1)). All f are polynomials on a compact simplex, with finite energy.", "independent_reviewer": "w355; complete independent audit of SIMPLEX_PROOF.md Section 5 in W354_AUDIT.md", "independent_review": {"verdict": "KEEP of the full Section 5 formulas", "receipt": "~/brain_workers/w355/W354_AUDIT.md", "assigned_referee": "w356; explicit general-family row requested", "specialization_receipt": "REFEREE_VERDICTS.json claim 004 (w356 independently checked d=2,k=2)", "account_distinctness_verified": False}, "remaining_gap": "No mathematical gap identified in this special-case formula. The assigned referee's separate general-family row and coordinator admission remain pending; no full-gradient dimension-free KLS bound is claimed.", "status": "independently checked proof"}
+if not any(row["id"] == claim["id"] for row in rows):
+    with path.open("a", encoding="utf-8") as stream:
+        stream.write(json.dumps(claim, ensure_ascii=False) + "\n")
+print("Saved general-family claim 005 with exact assumptions and scoped independent-review provenance.")

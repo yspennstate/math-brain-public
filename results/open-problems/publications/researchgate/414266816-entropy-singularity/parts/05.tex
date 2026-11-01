@@ -1,0 +1,141 @@
+When $d\asymp R$, the two disjoint microscopic-to-macroscopic annuli give $C\alpha_4(R)^2$, the same bound by fixed-factor regularity. For bounded $d$, the one-point bound suffices. This proves \eqref{eq:bulktwo}.
+
+There are at least $cR^2$ coordinates in a fixed interior rectangle. Summing \eqref{eq:bulkone} gives $I(f)\ge cm(R)$. Conversely, at terminal scale each occupied cell contains at most $M$ pivotal coordinates, so Proposition~\ref{prop:occupancy} gives $I(f)\le M\E N_{s_L}(\cP_f)\le Cm(R)$. Finally, $4p_0(1-p_0)I(f)\le J(f)\le I(f)$ by \eqref{eq:biasedinfluence}.
+\end{proof}
+
+\section{Entropy at each spatial resolution}\label{sec:mesoscopic}
+
+\begin{lemma}[Two-coordinate identity]\label{lem:biasedpair}
+For any Boolean function under independent coordinate parameters, define $\rho_i(1)=p_i$ and $\rho_i(0)=1-p_i$. Then, for $i\ne j$,
+\begin{equation}\label{eq:pairidentity}
+ \Prob(i,j\in\cS_f)=4\E\bigl[\rho_i(1-X_i)\rho_j(1-X_j)
+                         \one_{\{i,j\in\cP_f\}}\bigr].
+\end{equation}
+In particular, if $p_i\in[p_0,1-p_0]$,
+\begin{equation}\label{eq:paircompare}
+ 4p_0^2\Prob(i,j\in\cP_f)
+ \le\Prob(i,j\in\cS_f)
+ \le4(1-p_0)^2\Prob(i,j\in\cP_f).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Fix all coordinates except $i,j$, and write $a_{uv}=f(X_i=u,X_j=v)$. The squared coefficient of the normalized two-coordinate character on this fiber is
+\[
+ p_i(1-p_i)p_j(1-p_j)
+ (a_{11}-a_{10}-a_{01}+a_{00})^2.
+\]
+Let $n$ be the number of corners $(u,v)$ at which both coordinates are pivotal. For every Boolean two-coordinate table,
+\[
+ (a_{11}-a_{10}-a_{01}+a_{00})^2=4n.
+\]
+Indeed, the sixteen tables consist of constants and one-coordinate tables ($n=0$), tables with one exceptional corner ($n=1$), and the two parity tables ($n=4$); their squared differences are respectively zero, four, and sixteen. Each corner's probability multiplied by $\rho_i(1-u)\rho_j(1-v)$ is $p_i(1-p_i)p_j(1-p_j)$. Averaging this fiber identity over the outside coordinates gives \eqref{eq:pairidentity}, since Parseval identifies the averaged squared two-coordinate coefficient with $\sum_{S\supseteq\{i,j\}}\widehat f(S)^2$. The bounds on each $\rho$ give \eqref{eq:paircompare}.
+\end{proof}
+
+When $p_i=p_j=1/2$, \eqref{eq:pairidentity} gives equality of the two-point inclusion probabilities; see \cite[equation~(2.13)]{GPS} for the uniform product measure.
+
+\begin{lemma}[Guards for several blocks]\label{lem:blockguards}
+Let $f$ be Boolean under a product measure, and let $B_1,\ldots,B_k$ be disjoint coordinate sets. Suppose each event $E_i$ is measurable outside every $B_j$, makes $f$ independent of all coordinates in $B_i$, and has probability at least $q>0$. Suppose also that the events $E_i$ depend on disjoint sets of coordinates. Then, for $A=\cS_f$ or $\cP_f$,
+\begin{equation}\label{eq:allhit}
+ \Prob(A\cap B_i\ne\varnothing\text{ for every }i)\le(1-q)^k.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $\E_{B_i}$ average over $B_i$, and set $D_i=\mathrm{Id}-\E_{B_i}$. These are commuting orthogonal projections. Write $D=\prod_iD_i$ and $M=\prod_i(1-\one_{E_i})$. Expanding $M$ shows $Df=D(fM)$: any nonempty expansion term contains an event $E_i$ on which the entire term is independent of $B_i$, so $D_i$ annihilates it. On the Fourier side $D$ retains exactly the supports meeting every $B_i$. Hence
+\[
+ \Prob(\cS_f\cap B_i\ne\varnothing\ \forall i)
+ =\|Df\|_2^2=\|D(fM)\|_2^2
+ \le\|fM\|_2^2
+ =\Prob\Bigl(\bigcap_iE_i^c\Bigr)\le(1-q)^k.
+\]
+For pivotals, the all-hit event is contained in $\bigcap_iE_i^c$, giving the same bound directly.
+\end{proof}
+
+\begin{theorem}[Matching occupied-pattern entropy]\label{thm:mesoscopic}
+In both regimes of Section~\ref{sec:inputs}, for every retained nonroot dyadic scale,
+\[
+ H(Z_s(A))\asymp\E N_s(A)\asymp m(R)/m(s),
+ \qquad A=\cS_f\text{ or }\cP_f.
+\]
+The entropy comparison holds at the root for the pivotal set. For the spectral set its root entropy is \eqref{eq:rootexact}.
+\end{theorem}
+\begin{proof}
+The entropy and occupancy upper bounds were proved in Section~\ref{sec:upper}. We first prove the lower bounds when $s\le R/(32\kappa)$. Translate geometric coordinates so that $Q=[0,a]\times[0,b]$; the resulting lattice phase is covered by the uniform estimates above. Retain only cells in the central rectangle
+\[
+ Q^{\mathrm{mid}}=[a/4,3a/4]\times[b/4,3b/4].
+\]
+At these dyadic levels their number is $(R/(2s))^2$. They contain no projected exterior centers.
+
+For each such cell $C$ with center $z_C$, require a closed lattice circuit in the square annulus with radii $s$ and $2s$ about $z_C$. At sufficiently large fixed $s_*$ this guard lies outside $J_C$, uses only coordinates in $z_C+[-3s,3s]^2$, and encloses every tile of $J_C$. Uniform RSW and positive association give probability at least $q>0$, by joining long-direction closed crossings of the four overlapping strips forming the annulus. These are center-line closed-site circuits on the triangular lattice and closed dual-bond circuits on the square lattice. They are disjoint from open tile paths and make the crossing independent of $J_C$.
+
+The enlarged boxes lie inside $Q$ by the fine-scale cutoff. Color the cell indices modulo an integer $b_\kappa>6\kappa$ in each direction. Centers of distinct cells of one color have $\ell^\infty$ separation greater than $6s$, so their enlarged boxes are disjoint. Each box contains both its block $J_C$ and its guard support, and the guard avoids its own block. Within one color, therefore, every guard is measurable outside every selected block, and the guard supports are disjoint. Lemma~\ref{lem:blockguards} applies.
+
+Let $W_s(A)$ record the occupied central cells. For each fixed pattern $w$, one of the $b_\kappa^2$ colors contains at least $|w|/b_\kappa^2$ of its occupied cells. Apply \eqref{eq:allhit} to those cells. This gives the atom bound
+\[
+ \Prob(W_s=w)\le(1-q)^{|w|/b_\kappa^2}.
+\]
+The color may be chosen separately for each deterministic atom. Taking logarithmic reciprocals and averaging yields
+\begin{equation}\label{eq:entropybulk}
+ H(Z_s(A))\ge H(W_s(A))\ge c\E|W_s(A)|.
+\end{equation}
+
+Each central cell contains $\asymp_\kappa s^2$ coordinates, after increasing the fixed cutoff $s_*$ if necessary. Put $X_C=|A\cap J_C|$. Lemma~\ref{lem:bulkmoments}, the one-coordinate identity \eqref{eq:biasedinfluence}, and Lemma~\ref{lem:biasedpair} imply
+\[
+ \E X_C\ge cs^2\alpha_4(R),\qquad
+ \E X_C^2\le Cs^2\alpha_4(R)
+             \left(1+\sum_{t\le Cs\ \mathrm{dyadic}}t^2\alpha_4(t)\right).
+\]
+The second estimate counts neighbors of each coordinate in dyadic distance shells; the diagonal and bounded microscopic distances contribute the initial one. The growth bound \eqref{eq:massgrowth} and fixed-factor regularity give $1+\sum_{t\le Cs}t^2\alpha_4(t)\le Cm(s)$ for this dyadic sum. Cauchy--Schwarz therefore gives
+\[
+ \Prob(X_C>0)\ge\frac{(\E X_C)^2}{\E X_C^2}
+ \ge c\frac{s^2\alpha_4(R)}{m(s)}.
+\]
+Summing over the central cells proves $\E|W_s(A)|\ge cm(R)/m(s)$. Equation~\eqref{eq:entropybulk} proves both fine-scale lower bounds.
+
+There are only a bounded number, depending on $\kappa$, of remaining nonroot scales. Let $C_0$ be the upper-left cell at depth one and let $Y=\one_{\{A\cap J_{C_0}\ne\varnothing\}}$. Applying the preceding first- and second-moment argument to a fixed proportional square strictly inside $C_0$ gives $\Prob(Y=1)\ge a_0>0$. An open left--right crossing confined to a bottom strip of height $b/4$ has probability at least $b_0>0$ by uniform RSW. For sufficiently large $R_0$, its coordinate support, including the fixed tile padding, is disjoint from $J_{C_0}$. This event forces $f=1$ irrespective of that block, so it implies $Y=0$ for pivotals. For the spectral sample, \eqref{eq:blockvariance} gives $\Prob(Y=1)\le1-b_0$, because the conditional variance vanishes on the strip event. Thus $H(Y)\ge c>0$. Every nonroot dyadic pattern determines $Y$, while $m(R)/m(s)\asymp1$ at the remaining scales. This proves their entropy lower bounds; their occupancy lower bounds follow from $\Prob(Y=1)\ge a_0$.
+
+At the pivotal root, nonemptiness has probability at least $a_0$. Two open left--right crossings in top and bottom strips force the pivotal set to be empty, since one path survives any single-coordinate flip. Their coordinate supports are disjoint for sufficiently large $R_0$, so uniform RSW and independence give positive probability for this event. Root pivotal occupancy consequently has entropy bounded below by a positive constant. For the spectral sample the empty atom has probability $\widehat f(\varnothing)^2=(\E f)^2$, proving \eqref{eq:rootexact}.
+\end{proof}
+
+\begin{proof}[Proof of Theorems~\ref{thm:main} and~\ref{thm:scales}]
+Lemmas~\ref{lem:reflection} and \ref{lem:bulkmoments}, together with Theorem~\ref{thm:armcriterion}, prove the influence comparisons and the upper bounds. The microscopic guards of Corollary~\ref{cor:guardcross} give $H(\cS_f)\ge cJ(f)$. Theorem~\ref{thm:pivlower} gives $H(\cP_f)\ge h_2(p_0)I(f)-1$ in the triangular regime, and $I(f)-1$ in the critical bond regime. The lower growth of $m(R)$ and \eqref{eq:meancomparison} allow the one to be absorbed by increasing $R_0$. Finally, Theorem~\ref{thm:mesoscopic} supplies all the resolution statements.
+\end{proof}
+
+\begin{corollary}[Information between separated resolutions]\label{cor:resolution_information}
+There is a fixed dyadic $K>1$ such that, for either random set in Theorem~\ref{thm:scales} and retained dyadic scales $s,t$ with $t\ge Ks$,
+\[
+ H(Z_s(A)\mid Z_t(A))\asymp\frac{m(R)}{m(s)}.
+\]
+Moreover, uniformly along admissible rectangles and retained scales $s=s(R)\to\infty$,
+\[
+ \frac{H(A\mid Z_s(A))}{H(A)}=1-O\bigl(m(s)^{-1}\bigr)\longrightarrow1.
+\]
+\end{corollary}
+\begin{proof}
+Nesting makes $Z_t$ a function of $Z_s$, so the first conditional entropy equals $H(Z_s)-H(Z_t)$. Let $c_1,C_1$ be the entropy comparison constants and $c_2,\eta>0$ the constants in \eqref{eq:massgrowth}. Choosing $K$ so that $C_1/(c_2K^\eta)\le c_1/2$ gives
+\[
+ H(Z_s)-H(Z_t)\ge\frac{c_1m(R)}{m(s)}-\frac{C_1m(R)}{m(t)}\ge\frac{c_1m(R)}{2m(s)}.
+\]
+The upper bound follows from $H(Z_s\mid Z_t)\le H(Z_s)$; the entropy upper estimate also applies when $t=R$. Finally, $Z_s$ is a function of $A$, whence $H(A\mid Z_s)=H(A)-H(Z_s)$. Divide by $H(A)\asymp m(R)$ and use Theorem~\ref{thm:scales} and the lower power growth of $m$.
+\end{proof}
+
+\section{Local geometry and spectral coercivity}\label{sec:localgeometry}
+
+From this section onwards, lattice statements concern triangular-lattice site percolation unless stated otherwise.
+
+\subsection{Pivotal sets contain no interior triangle}\label{sec:pivotal}
+
+\begin{lemma}\label{lem:forest}
+The subgraph induced by the full interior pivotal tiles is a linear forest: a disjoint union of paths, allowing isolated vertices. In particular, it contains no triangle.
+\end{lemma}
+\begin{proof}
+Suppose first that the open left--right crossing occurs. Every pivotal is open and lies on every open crossing. Choose a simple crossing path. If three mutually adjacent interior sites on this path were pivotal, order their visits along the path. The edge joining the first to the third would replace the segment between them and avoid the middle site. All three tiles and the joining edge are inside the domain. The resulting open walk contains a crossing path avoiding that pivotal, a contradiction.
+
+More generally, list all pivotal vertices in the order in which the chosen simple path visits them. An edge joining two nonconsecutive vertices in that list would give the same shortcut and avoid an intervening pivotal. Every edge between full interior pivotals therefore joins consecutive vertices in this order. Their induced graph is a subgraph of a path and hence a linear forest.
+
+If the open left--right crossing fails, Hex duality gives a closed top--bottom crossing. This is the complementary event, so its pivotal set is the same. Apply the preceding argument to a simple closed crossing path. The same conclusion holds in either case.
+\end{proof}
+
+The spectral separator below uses only the triangle prohibition. No assertion about cut boundary tiles is required.
+
+\subsection{A six-cycle coercivity inequality}\label{sec:coercivity}
+

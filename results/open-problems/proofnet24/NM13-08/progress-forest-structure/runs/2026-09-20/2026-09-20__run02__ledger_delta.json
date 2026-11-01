@@ -1,0 +1,49 @@
+{
+  "track": "NM13-08",
+  "parent": "T07 uniform-forest pairwise edge negative correlation",
+  "status": "PARTIAL",
+  "runtime": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_level": "UNVERIFIED"
+  },
+  "parent_scope_before": "OPEN; exact complete finite-order repository certificate through 9 vertices",
+  "parent_scope_after": "OPEN; exact complete finite-order repository certificate still through 9 vertices",
+  "source_metric_before": 9,
+  "source_metric_after": 9,
+  "mechanism_gain": {
+    "claims": [
+      "T07-SP-TERMINAL-CALCULUS-04",
+      "T07-THETA-TRANSPARENT-SUBSTITUTION-05",
+      "T07-WHEEL-THETA-CLOSURE-06"
+    ],
+    "transparent_gadget_shapes_before": 1,
+    "transparent_gadget_shapes_after": "infinite, indexed by ell>=2",
+    "new_application": "closure of every wheel W_m, m>=3, under arbitrary finite heterogeneous theta-transparent edge substitutions"
+  },
+  "essential_execution": {
+    "checker": "2026-09-20__run02__theta_checker.py",
+    "output": "2026-09-20__run02__theta_checker.out",
+    "terminal": "ALL_EXACT_CHECKS_PASS",
+    "sample": {
+      "A2_D": 27,
+      "A2_C": 27,
+      "W4_Z": 134,
+      "expanded_W4_Z": 3618,
+      "expanded_pair_count": 78,
+      "expanded_negative_pairs": 0,
+      "expanded_min_delta": 13608,
+      "core_core_scale": 729
+    }
+  },
+  "literature_scope": {
+    "Grimmett_Winkler": "all graphs <=8 vertices; 9 vertices with <=18 edges",
+    "P14": "complementary dense 9-vertex sector; all simple graphs <=9 unit-certified",
+    "Erickson": "all series-parallel graphs I-Rayleigh by SOS theorem",
+    "Bado": "all wheels W_m strict unit p-NC for uniform all-forests measure",
+    "Huang": "specific arboreal-gas graph/parameter regimes; general problem open",
+    "Tang_Zhang": "specified uniform spanning-subgraph families of K_n, including fixed-component forests for fixed k and sufficiently large n"
+  },
+  "novelty_priority": "UNVERIFIED",
+  "residual_obstruction": "no decomposition of an arbitrary 3-connected graph into certified core plus unit-transparent ports; nontransparent t_A != 1 still forces a weighted core evaluation",
+  "next_attack": "multiport/series-parallel activity-balancing lemma converting nonunit terminal activity to 1 while preserving port-interface signs"
+}

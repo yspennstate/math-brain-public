@@ -1,0 +1,12 @@
+{
+ "helper_version":"A032-mixed-product-v2",
+ "actual_Boolean_family":"Same full six-variable two-address class and exact five-valued slices as MIXED_SPEC.json",
+ "parameter_domain":"Unchanged four-bit data template domain; necessary max|W_h|<=32 filter included",
+ "case_count":"Same complete gauge-phase domain as v1; all r<=4 gauge signs processed in batches of at most2048x16",
+ "symmetry":"Unchanged translation/global-sign gauge with all translations restored",
+ "arithmetic":"Numpy int64 fast transforms; each pre-transform entry<=32 and intermediate sum<=512, well within exact range; Python ints for masks/norms",
+ "memory_estimate":"Under200 MB, fixed batch arrays under1 MB and record cap100000",
+ "maximum_runtime":"180 seconds generator;180 seconds combinations, each sequential",
+ "change_reason":"Scalar v1 hit180-second frozen runtime; vectorization changes implementation only. No result from the timed-out mixed search is claimed",
+ "persistence":"Save catalogue checkpoint every100 templates; completed output or explicit partial status"
+}

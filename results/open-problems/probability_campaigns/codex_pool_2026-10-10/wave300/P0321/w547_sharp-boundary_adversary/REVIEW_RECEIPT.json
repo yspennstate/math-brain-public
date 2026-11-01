@@ -1,0 +1,39 @@
+{
+  "source_path": "~\\brain_workers\\w548\\VERDICTS.jsonl",
+  "reviewer": "w548",
+  "reviews": [
+    {
+      "id": "S1.P0321.w548.audit-w547-C001",
+      "subject": "w547/ATTEMPT.md#independent-obstruction-1",
+      "verdict": "KEEP",
+      "scope": "auxiliary common-angle field only",
+      "independent_reproduction": "E exp(6iTheta)=0 for uniform Theta, while exp(6iTheta)exp(-6iTheta)=1 pointwise for every pair.",
+      "source_quote": "psi6(x)=exp(6*i*Theta) for all x",
+      "gap": "The field is not a particle Gibbs state; it only refutes a one-point-to-two-point inference.",
+      "reviewer": "w548"
+    },
+    {
+      "id": "S1.P0321.w548.audit-w547-C002",
+      "subject": "w547/GAUSSIAN_BOUNDARY.md#C002",
+      "verdict": "KEEP",
+      "scope": "specified ultraviolet-cutoff Gaussian proxy",
+      "independent_reproduction": "Angular averages of both sin^2 and cos^2 are pi; the radial 1/k term gives coefficient |G|^2/(4pi) log r. For p<2 the longitudinal spectral integral is L1 and tends to |G|^2 Lambda^(2-p)/(4pi(2-p)). Curl kills P_L and has density T/(4mu); disk integration gives Var(theta)=T Lambda^2/(16pi mu), hence the sixfold pair limit exp[-36 Var(theta)]=exp[-9T Lambda^2/(4pi mu)].",
+      "source_quote": "lim_{|x|->infinity} C_6(x) = exp(-9 T Lambda^2/(4*pi*mu)) > 0",
+      "gap": "No justified microscopic p(s) map; no free dislocations or actual bond-orientational observable.",
+      "reviewer": "w548"
+    },
+    {
+      "id": "S1.P0321.w548.audit-w547-C003",
+      "subject": "w547/GAUSSIAN_BOUNDARY.md#C003",
+      "verdict": "KEEP",
+      "scope": "fixed-p Gaussian asymptotic and endpoint continuity",
+      "independent_reproduction": "For p<2 the longitudinal term has a finite r->infinity limit, so its log-r coefficient is zero. At p=2 its coefficient is T|G|^2/(4pi a). For fixed r, 1-cos(k.re)=O(k^2) provides a p-independent integrable majorant near k=0, so p->2- can precede r->infinity. The iterated limits differ by T|G|^2/(4pi a)>0.",
+      "source_quote": "lim_{p->2-} lim_{r->infinity} L(p,r) = eta_T",
+      "gap": "This is a Gaussian endpoint warning, not a result about P0321's Riesz exponent s.",
+      "reviewer": "w548"
+    }
+  ],
+  "received_at_utc": "2026-10-10T05:58:18Z",
+  "account_login": "Not established; no claim of two independent account keeps.",
+  "receipt_role": "Recorded independent verdicts on original author proofs; no audit of a review and no formal-check receipt."
+}

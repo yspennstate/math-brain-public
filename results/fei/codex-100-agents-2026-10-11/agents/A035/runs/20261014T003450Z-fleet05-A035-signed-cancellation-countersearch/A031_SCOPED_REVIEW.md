@@ -1,0 +1,11 @@
+# Independent reconstruction of the carrier interface
+
+Reviewed source: A031/runs/20261013T215020Z-fleet05-A031-convolution-identity/DERIVATION.md, sections 1-2. Verdict: ACCEPT these local equations at their stated scope. This review does not accept the remainder of the stage3 claim, the carrier-only tree obstruction, or the true-excess quantifier theorem by proxy. No repair supplied.
+
+Reconstruction: For Boolean children g,h, define A=(g+h)/2,V=(g-h)/2. Since g^2=h^2=1, AV=0 pointwise. Parseval gives sum u v=0. If E is the support of v, removing its complement changes neither that sum nor the v norm. Expanding (u+v)^2 and (u-v)^2 on E proves both child masses equal rho=sum_E(u^2+v^2). The spectral sector is deterministically zero off E. On E its probability of one is d/rho. Therefore the conditional-entropy chain rule gives B=rho[h2(d/rho)-I_E(row;sector)]. Splitting I(row;sector) first by carrier membership gives h2(d)-B=h2(d)-rho h2(d/rho)+rho I_E(row;sector). This reconstructs the statement from physical children rather than treating Fourier carrier mass as a generic child probability.
+
+The child-measurable part excludes the normalized real control u=12/13,v=-5/13: the two formal child masses are 49/169 and 289/169, while rho=1. Thus signed child conservation fails, although the generic q-based chain rule remains true. This is a necessary Boolean consequence, not a complete Boolean admission condition. For a genuine Boolean tensor factor all carrier masses and the queried conditional entropy multiply by its spectral norm one; constants give vacuous embedding. No address/product-law assumption is introduced.
+
+The stage3 perturbation test realizes E equal to the whole spectrum for an infinite Boolean family. Independent direct character sums verify sum u v=0 and both child masses rho=1 for two seven-bit roots. Their within-carrier information is positive and differs substantially. The old carrier-membership bracket is exactly zero. This confirms the retained residual rather than paying it. Sources, exact coefficients and certificates: DERIVATION.md sections3-4 and out/reproduction.json in this run.
+
+Acceptance is local and source-bound; supervisor adoption, mirror verification and independent acceptance of A035's new diagnostic theorem remain pending.

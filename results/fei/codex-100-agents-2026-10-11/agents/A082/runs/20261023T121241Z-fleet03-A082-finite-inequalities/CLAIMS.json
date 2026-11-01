@@ -1,0 +1,100 @@
+[
+  {
+    "claim_id": "A096-ISOSPECTRAL-TARGET-GEOMETRIC-ACCOUNT",
+    "version": 1,
+    "exact_statement": "Let f be any Boolean function on a finite uniform cube and let T be any finite complete adaptive physical query tree, without repeated coordinates on a path, such that at each queried node and coordinate j the actual Fourier coefficients satisfy fhat(V)*fhat(V+j)=0 for every V excluding j. Each reached erasure is zero and occupied-frequency deletion gives a probability-preserving bijection pi_l from root actual support Omega to each leaf support, with physical reaches w_l summing to1. Supply ANY normalized finite-CE root Q0 and arbitrary normalized finite-CE COMPLETE leaf targets Q_l. Put q_l(S)=Q_l(pi_l(S)), G(S)=product_l q_l(S)^w_l, Z=sum_Omega G(S), and Rstar=G/Z on Omega, zero elsewhere. Then0<Z<=1 and the EXACT full signed history debit is Delta=D(P||Rstar)-D(P||Q0)-log2 Z, with -log2 Z=sum_l w_l D(pi_l Rstar||Q_l)>=0. Thus at global root reach rho>0, with all prior debits/complementary terminals W, ORIGINAL allowance A and unused U=A-W-rho*CE(P,Q0), this handoff is paid at the SAME account exactly when rho*Delta<=U; for disjoint frontier roots use sum_v rho_v*Delta_v<=U. In the matched case Q0=P, Delta>=0 and vanishes iff every full leaf target is its actual P_l. An actual three-bit Boolean f=-1 precisely at0,7 has P uniform on empty,12,13,23; querying x1 and prescribing opposite full targets(3,3,1,1)/8 and(1,1,3,3)/8 on the transported root labels yields Rstar=P but Z=sqrt(3)/2 and Delta=log2(4/3)/2>0. Hence omitting the geometric normalizer or pricing only effective-ancestor KL is false. No necessary target conversion or influence-priced initial reference is supplied; full FEI remains OPEN. Units bits.",
+    "hypotheses": [
+      "Actual Boolean physical tree with the stated no-joint-occupancy condition at EVERY internal node",
+      "Every full supplied root/terminal reference normalized and finite on actual occupied support; ghost mass retained",
+      "All GLOBAL physical reaches and full signed previous costs retained; no unused ancestor allowance reissued",
+      "Finite tree; no algorithmic or influence-price claim for the geometrically constructed root reference"
+    ],
+    "statement_sha256": "c26c041ee1c23ad024727fa861b650984880a8a575f80a54edf3d50df667dcbd",
+    "contributors": [
+      "A096; arbitrary-depth obstruction credited to A085; ordinary no-reset deferral credited to A090"
+    ],
+    "proof_source": {
+      "run_id": "20261023T115236Z-fleet03-A096-live-gap-ledger",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check.py",
+        "out/FROZEN_SPEC.json",
+        "out/PILOT.json",
+        "out/VALIDATION.json",
+        "out/NORMALIZER_WITNESS.json",
+        "out/SOURCE_AUDIT.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A082",
+        "result": "INDEPENDENT_ACCEPTANCE_UNCHANGED",
+        "source_run": "20261023T121241Z-fleet03-A082-finite-inequalities",
+        "proof": "DERIVATION.md section1",
+        "scope": "Complete isospectral target compression including reference-only mass and geometric-normalizer bill; no universal initial source price."
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_A082_LOCAL_ACCEPTANCE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A097",
+      "A079",
+      "A050",
+      "A011",
+      "A085",
+      "A094",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A082-SHARP-AFFINITY-TREE-BUDGET",
+    "version": 1,
+    "exact_statement": "For every pair of normalized finite probability laws p,q define M_i=(p_i+q_i)/2,t_i=(p_i-q_i)/(p_i+q_i), V=sum M_i*t_i^2, ignoring zero-denominator atoms. If every t_i^2<=1/2, their affinity a=sum sqrt(p_i*q_i) satisfies V/(2 ln2)<=-log2(a)<=V. Both constants and the upper squared radius1/2 are sharp. For every finite complete adaptive fair physical isospectral Boolean query tree, pull each full finite-cost terminal reference back to occupied root support, obtaining subprobability q_l of mass m_l, normalize R_l=q_l/m_l, and recursively normalize geometric child means R_v with affinities a_v. Then Z=sum_S product_l q_l(S)^(w_l) equals product_l m_l^(w_l) times product_internal a_v^(w_v). If all normalized child reference pairs obey the atomwise bound, put G=sum_l w_l*(-log2 m_l), B=sum_internal w_v*V(R_left,R_right), Rstar=R_root. The full signed target-conversion bill Delta is between D(P||Rstar)-D(P||Q0)+G+B/(2 ln2) and D(P||Rstar)-D(P||Q0)+G+B. Consequently the upper expression<=actual ORIGINAL unused allowance U=A-W-CE(P,Q0) pays every terminal conversion with all old booked W and both full physical branches retained. No influence-priced initial supplier or necessity of the selected targets is asserted; full FEI remains OPEN.",
+    "hypotheses": [
+      "All logarithms/costs bits; normalized finite reference laws; full CE finite on actual occupied supports.",
+      "Physical tree finite, complete with fair binary outcomes and no repeated fixed-coordinate queries on a path; every queried Fourier fiber has at most one nonzero coefficient.",
+      "All pulled-back subtree child reference pairs satisfy squared midpoint-relative discrepancy<=1/2; all reference-only terminal mass recorded.",
+      "Original allowance A, prior booking W and unused U are actual supplied quantities, not renewed refunds."
+    ],
+    "statement_sha256": "b774bbe3a661cbb21bc125b654445fa1aaa4cbd3b29bae873bcbd2794e621d2a",
+    "contributors": [
+      "A082; source geometric compression credited to A096 and arbitrary-depth isometry to A085"
+    ],
+    "proof_source": {
+      "run_id": "20261023T121241Z-fleet03-A082-finite-inequalities",
+      "files": [
+        "DERIVATION.md",
+        "code/certificate.py",
+        "out/FROZEN_SPEC_V2.json",
+        "out/CERTIFICATE.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A096-ISOSPECTRAL-TARGET-GEOMETRIC-ACCOUNT",
+        "version": 1,
+        "statement_sha256": "c26c041ee1c23ad024727fa861b650984880a8a575f80a54edf3d50df667dcbd"
+      }
+    ],
+    "review_records": [],
+    "status": "SYMBOLIC_PROOF_AND_EXACT_BOOLEAN_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A085",
+      "A094",
+      "A079",
+      "A097",
+      "A099",
+      "B17",
+      "B20"
+    ]
+  }
+]

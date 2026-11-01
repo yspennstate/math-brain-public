@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T135635Z-fleet01-B20-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_qform_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-N3-LEVERAGEFREE-CROSSCUT-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "For every A in N3(1/64) with s3(A)>=1 and every physical h, there is an original-coordinate partition h^c=J disjoint_union K with ||A[J,K]||_F^2>3969/16384."
+    },
+    {
+      "id": "QFORM-N3-D5-ACTUAL-APPLICATION-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "If the top four squared singular values of that physical cross block carry at most 63/64 of its Frobenius energy E, then e5>=E^5/(120*64^4), and the completed fleet02/B20 theorem gives ||p_Q||_infinity<201.787."
+    },
+    {
+      "id": "QFORM-N3-LEVERAGEFREE-CROSSCUT-TAIL-COMPILER-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "Every N3(1/64) state is either paid by D5, collective-tail, or D' at the explicit constants in REPORT.md, or lies in a near-rank-one tube, near-rank-two tube, double top-two physical leverage anchor, or nested double-three-volume anchor packet."
+    },
+    {
+      "id": "QFORM-N3-NESTED-DOUBLEANCHOR-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "In the concentrated third-volume survivor there are fixed physical row/column anchors and four disjoint physical banks with nested squared 3-minor mass > c_*^3/707788800; at least one of six matching-energy products is >c_*^3/25480396800."
+    },
+    {
+      "id": "QFORM-N3-LOWRANK-OR-DOUBLEANCHOR-PAYMENT-v1",
+      "status": "OPEN_NEXT",
+      "statement": "Pay the exact near-rank-one/rank-two and double-anchor survivors without deleting tails or using rotated independence."
+    }
+  ],
+  "partner": {
+    "account": "fleet02",
+    "slot": "B20",
+    "run_id": "20260923T112426Z-fleet02-B20-QFORM-auto11",
+    "scientific_commit": "19327f690f815425717fcbd07854302df2090970",
+    "applied_inequality": "||p_Q||_infinity <=5 sqrt(2e) e5(N^T N)^(-1/10) applied to e5>=E^5/(120*64^4)"
+  },
+  "corrections_preserved": [
+    "no uniform pointwise quadratic oscillatory decay",
+    "no post-rotation independence",
+    "no unrestricted joint coarea bound",
+    "no worst-fiber conditional supremum shortcut",
+    "no deletion of small random quadratic tails",
+    "no one-good-minor inference from aggregate mass"
+  ]
+}

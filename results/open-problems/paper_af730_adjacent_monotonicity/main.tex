@@ -1,0 +1,146 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{Adjacent Normalized Heat Diffusion on Arc-Transitive Graphs}
+\author{}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Aldous and Fill ask whether random walk on an arc-transitive graph has a monotonicity property stronger than their general return-probability comparison (Open Problem 7.30). We prove a distance-one analogue of the normalized heat-kernel monotonicity from their Proposition 7.29: on every finite connected arc-transitive graph, for every adjacent pair $x\sim y$, the ratio $H_t(x,y)/H_t(x,x)$ is strictly increasing in $t$. In fact the proof only needs $1$-walk-regularity. The derivative is exactly a variance under an exponentially tilted local spectral measure. The result is deliberately local to edges; the stronger all-pairs monotonic normalized heat diffusion property is known to fail on some Cayley graphs.
+\end{abstract}
+
+\section{Statement and source relation}
+Let $G=(V,E)$ be a finite simple connected $d$-regular graph, put $P=A/d$, $L=I-P$, and
+\[
+H_t=e^{-tL}=e^{t(P-I)}.
+\]
+A graph is \emph{$1$-walk-regular} if for every $k\ge0$, the diagonal entries of $A^k$ are constant and the entries $(A^k)_{xy}$ are constant on edges $x\sim y$. Every arc-transitive graph is $1$-walk-regular.
+
+\begin{theorem}\label{thm:main}
+Let $G$ be a finite connected $1$-walk-regular graph with at least two vertices. For every edge $x\sim y$,
+\[
+r_{xy}(t):=\frac{H_t(x,y)}{H_t(x,x)}
+\]
+is strictly increasing for every finite $t\ge0$. Moreover $r_{xy}(0)=0$ and $r_{xy}(t)\to1$ as $t\to\infty$.
+\end{theorem}
+
+\begin{corollary}\label{cor:arc}
+The conclusion of Theorem~\ref{thm:main} holds for every finite simple connected arc-transitive graph.
+\end{corollary}
+
+Aldous--Fill Proposition 7.29(ii) gives monotonicity of $q(t,j)/q(t,0)$ at every fixed distance $j$ on distance-regular graphs. Their Open Problem 7.30 asks whether arc-transitive graphs have some monotonicity stronger than Corollary 7.3. Corollary~\ref{cor:arc} gives exactly such a distance-one monotonicity on the stated broader class. Because the source wording is open-ended rather than a single formally quantified conjecture, we regard this as a source-responsive positive answer; we do not infer any stronger all-pairs assertion from it.
+
+\section{Proof}
+By $1$-walk-regularity and the absolutely convergent power series for the exponential, there are scalar functions
+\[
+a(t)=H_t(x,x),\qquad b(t)=H_t(x,y)\quad(x\sim y)
+\]
+independent of the choice of vertex and edge. From the heat equation,
+\[
+\begin{aligned}
+a'(t)
+&=(H_t(P-I))_{xx}\\
+&=\frac1d\sum_{z\sim x}H_t(x,z)-H_t(x,x)\\
+&=b(t)-a(t).
+\end{aligned}
+\]
+Therefore
+\begin{equation}\label{eq:ratio-log}
+r(t)=\frac{b(t)}{a(t)}=1+\frac{a'(t)}{a(t)}.
+\end{equation}
+
+Let $\mu_x$ denote the local spectral probability measure of the positive semidefinite matrix $L$ at $\delta_x$. Then
+\[
+a(t)=\int e^{-t\lambda}\,d\mu_x(\lambda).
+\]
+Define the exponentially tilted probability measure
+\[
+d\nu_t(\lambda)=\frac{e^{-t\lambda}}{a(t)}\,d\mu_x(\lambda).
+\]
+Equation~\eqref{eq:ratio-log} becomes
+\[
+r(t)=1-\mathbb E_{\nu_t}[\lambda].
+\]
+Differentiating the tilted expectation gives
+\begin{equation}\label{eq:variance}
+\boxed{\quad r'(t)=\operatorname{Var}_{\nu_t}(\lambda).\quad}
+\end{equation}
+Because $G$ is connected, the eigenvalue $0$ of $L$ is simple and has local mass $1/|V|>0$. Since $|V|>1$, the remaining local spectral mass is positive and lies on positive eigenvalues. Exponential tilting at finite time preserves both pieces of mass. Hence $\nu_t$ is not a point mass and the variance in \eqref{eq:variance} is strictly positive for every finite $t$.
+
+At $t=0$, $H_0=I$, so $r(0)=0$ on an edge. Irreducibility on a finite regular graph gives $H_t(x,x),H_t(x,y)\to1/|V|$, hence $r(t)\to1$. This proves Theorem~\ref{thm:main} and Corollary~\ref{cor:arc}.
+
+\section{Why edge homogeneity is the exact proof joint}
+For a general regular graph the heat equation gives only
+\[
+\frac{d}{dt}H_t(x,x)=\frac1d\sum_{z\sim x}H_t(x,z)-H_t(x,x),
+\]
+which controls the \emph{average} neighboring heat value. The $1$-walk-regular/arc-transitive hypothesis is what collapses this neighbor average to the value at the chosen edge. Thus the argument does not prove all-pairs monotonicity, nor pointwise edge monotonicity on an arbitrary regular graph.
+
+\section{Finite exact source-class certificate through 22 vertices}
+The theorem above is analytic and does not depend on finite enumeration. As an independent source-class check, we used Marston Conder's complete census of connected symmetric (arc-transitive) graphs. At order $22$ the census has exactly eight isomorphism classes, with valencies
+\[
+2,5,10,11,6,20,4,21.
+\]
+The supplied integer-arithmetic script checks simplicity, connectivity and regularity of the eight frozen representatives, constant diagonal and edge entries of $A^m$, and
+\[
+(A^{m+1})_{xx}=d(A^m)_{xy}
+\]
+through $m=50$. It also computes exact distance-regularity profiles. Exactly one of the eight order-$22$ classes (the $4$-regular class) is not distance-regular; at distance two it exhibits two distinct intersection profiles, $(2,0,2)$ and $(4,0,0)$. Thus the order-$22$ certificate contains a genuine arc-transitive case outside the distance-regular hypothesis of Proposition 7.29.
+
+Run
+\begin{verbatim}
+python3 check_order22.py > check_order22.out.txt
+\end{verbatim}
+from this directory. The expected final lines include
+\begin{verbatim}
+metric_largest_fully_certified_vertex_count 22
+RESULT PASS
+\end{verbatim}
+
+\section{Prior art and scope}
+The later literature usually studies the stronger \emph{all-pairs} monotonic normalized heat diffusion (MNHD) property. Regev--Shinkar gave a Cayley-graph counterexample to the all-pairs property. Price proved the all-pairs inequality for finite weighted Abelian Cayley graphs; Nica proved it for graphs with three distinct Laplacian eigenvalues; Kubo--Namba proved it for regular bipartite graphs with four eigenvalues; and Liu--Zhang proved a diameter-three distance-regular class with classical parameters.
+
+A bounded current search (17 September 2026) did not locate a paper explicitly stating Theorem~\ref{thm:main} for all $1$-walk-regular graphs, or Corollary~\ref{cor:arc} as an answer to Aldous--Fill Open Problem 7.30. This negative search is \emph{not} a novelty certificate. The ingredients in the proof are elementary---edge walk-regularity, the heat equation, and log-convexity/variance of a Laplace transform---so publication priority and novelty remain unverified.
+
+\begin{thebibliography}{9}
+\bibitem{AF}
+D. Aldous and J. Fill,
+\emph{Reversible Markov Chains and Random Walks on Graphs},
+Chapter 7, Section 7.3.3, Open Problem 7.30.
+
+\bibitem{RS}
+O. Regev and I. Shinkar,
+\emph{A Counterexample to Monotonicity of Relative Mass in Random Walks},
+2015; arXiv:1506.08631.
+
+\bibitem{Price}
+T. McMurray Price,
+An inequality for the heat kernel on an Abelian Cayley graph,
+\emph{Electronic Communications in Probability} 22 (2017), DOI 10.1214/17-ECP84.
+
+\bibitem{Nica}
+B. Nica,
+A note on normalised heat diffusion for graphs,
+\emph{Bulletin of the Australian Mathematical Society} 102 (2020), 1--6.
+
+\bibitem{KN}
+T. Kubo and R. Namba,
+Monotonic normalized heat diffusion for regular bipartite graphs with four eigenvalues,
+2022; arXiv:2103.08149.
+
+\bibitem{LZ}
+S. Liu and H. Zhang,
+Monotonic normalized heat diffusion for distance-regular graphs with classical parameters of diameter $3$,
+\emph{Graphs and Combinatorics} 41 (2025), 106; DOI 10.1007/s00373-025-02969-8.
+\end{thebibliography}
+
+\end{document}

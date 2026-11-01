@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "helper_version": "A019-biased-empty-row-v1",
+  "source_helper_sha256": "1d90df4e3e58ea7261b8afdf6510c809a18ca4f524655fcb45dfc11b16f08295",
+  "structured_cases": 1,
+  "all_two_bit_ordered_child_pairs": 0,
+  "checks": 341,
+  "seconds": 0.008525799959897995,
+  "boundary": {
+    "k": 1,
+    "reason": "epsilon<=1/4 used only for k>=2; outside theorem scope"
+  },
+  "rows": [
+    {
+      "k": 2,
+      "d": "1/4",
+      "Lambda": {
+        "17": "-1/128",
+        "29": "65/128",
+        "2": "-1/2",
+        "13": "-65/128"
+      },
+      "core_bank": {
+        "17": "1/16",
+        "3": "9/8"
+      },
+      "remaining_after_old_1_over_8": {
+        "17": "5/128",
+        "3": "9/16",
+        "2": "3/8",
+        "29": "-65/128",
+        "13": "65/128"
+      }
+    }
+  ],
+  "full_fei": "OPEN",
+  "proof_rung": "exact finite checks plus analytic all-k proof; independent review pending"
+}

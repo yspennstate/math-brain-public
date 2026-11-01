@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "~\<private-repo>\06_math_research\probability_1000_intake_claude_20260907\brain_bulk_C006_codex_ledger.py", line 112, in <module>
+    main(int(sys.argv[1]))
+    ~~~~^^^^^^^^^^^^^^^^^^
+  File "~\<private-repo>\06_math_research\probability_1000_intake_claude_20260907\brain_bulk_C006_codex_ledger.py", line 93, in main
+    run(dict(spec="mathbrain-draft-v1", author_agent=AGENT, bundle_slug=f"probability-codex-ledger-problems-c006-{k:02d}", entries=chunk, relations=[]), f"C006p{k:02d}", n); n += 1
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~\<private-repo>\06_math_research\probability_1000_intake_claude_20260907\brain_bulk_C006_codex_ledger.py", line 79, in run
+    cyc.guard(*targets)
+    ~~~~~~~~~^^^^^^^^^^
+  File "~\<private-repo>\06_math_research\probability_1000_intake_claude_20260907\brain_cycle_C001.py", line 145, in guard
+    raise RuntimeError("Mesh assertion refused; reacquire lease and reread before writing: " + r.stdout[-400:] + r.stderr[-400:])
+RuntimeError: Mesh assertion refused; reacquire lease and reread before writing: rs\\owner\\math-brain-build\\local\\population\\integration_ledger.jsonl", "reason": "no_live_covering_write_claim"}, {"resource": "~\\math-brain-build\\local\\population\\objects", "reason": "no_live_covering_write_claim"}, {"resource": "~\\math-brain-inbox\\claude-probability-1000-continue-0907\\bundle_011.rejected-note", "reason": "no_live_covering_write_claim"}]}
+

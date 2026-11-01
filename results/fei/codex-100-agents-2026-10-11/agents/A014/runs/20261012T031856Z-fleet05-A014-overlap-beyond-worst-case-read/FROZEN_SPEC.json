@@ -1,0 +1,12 @@
+{
+  "helper_version": "A014-bounded-intersection-v1.2",
+  "actual_boolean_family": "All nonconstant monotone DNFs from antichains on n=4; all nonempty uniform hypergraph DNFs on n=5",
+  "parameter_domain": "Pilot n=4; fixed full stage n=4 antichains and n=5 widths 1,2,3,4,5. Pairwise intersection t=max(1,max pair intersection). No automatic increase.",
+  "case_count": "166 n=4 antichains; 2109 n=5 nonempty uniform families; total 2275",
+  "symmetry": "No symmetry reduction; all labelled covers retained",
+  "arithmetic": "Integer truth tables and Walsh transforms; Fraction norms, activation masses, exact owner objectives; rational logarithm intervals for finite H<=4I certificates; scalar rational final-constant certificate",
+  "memory_estimate": "under 100 MB; no job over 300 MB",
+  "maximum_runtime_seconds": {"pilot": 60, "fixed_full_job": 1200},
+  "tests": "physical residual, influence lower bound, spectral cross identity, bad-set derivative payment, sum-owner weighted objective, finite H/I certificate, analytic endpoint constants. Pilot v1 exposed a FWHT coordinate-sign convention mismatch, fixed explicitly in v1.1; 166 cases passed in 37.315 seconds. Before the fixed full job, v1.2 increases only the full-job runtime cap to 1200 seconds and rounds stored intervals outward to a rational 1e-6 grid to keep files small; mathematical domain and exact internal comparisons unchanged.",
+  "large_dimension_family": "Affine-net all-prime existence checked analytically; exact incidence certificates at the explicitly fixed primes q=19,23 (361 and 529 edges); no large truth tables"
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261012T041121Z-fleet01-B01-activation-transfer-a003",
+  "claims": [
+    {
+      "claim_id": "B01-A003-FRESH-ACTIVATION-GUP-TRANSFER",
+      "version": "v1",
+      "exact_statement": "For every genuine Boolean core g, every integer d>=1, p=2^-d, and the function F equal to g at one fresh d-bit control word and 1 elsewhere, let I_ctl=2p d Pr[g=-1]. Then G(F)<=pG(g)+K_act pI(g)+C_star I_ctl, where K_act=2+7(1+2/e)/ln2<19.530 and C_star=1+2(1+1/e)/ln2<4.947. If G(g)<=aI(g)+bU(g) with 0<=b<1, then G(F)<=a'I(F)+bU(F), where a'=max(a+K_act,C_star+b(K_act-1)).",
+      "hypotheses": [
+        "finite uniform Boolean cube",
+        "genuine Boolean sign core",
+        "d fresh physical control variables",
+        "one active control word",
+        "entropy measured in bits",
+        "0<=b<1 for the GU' transfer clause"
+      ],
+      "contributors": ["B01"],
+      "proof_source": "ACTIVATION_TRANSFER.tex equations (2)-(15)",
+      "proof_dependencies": [
+        "direct Walsh expansion reproduced in this bundle",
+        "elementary derivative and physical-influence bounds reproduced in this bundle"
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_REVIEW",
+      "scope": "ONE FRESH ACTIVATION LAYER; ARBITRARY BOOLEAN TERMINAL CORE",
+      "does_not_prove": [
+        "a depth-independent constant under arbitrary repeated coherent core changes",
+        "a universal GU' inequality",
+        "full FEI"
+      ],
+      "first_unproved_line": "Prevent the additive K_act cost from being charged once per coherent core change in an arbitrary nested hierarchy.",
+      "next_consumers": ["A005", "A023", "A086", "A094", "B20"]
+    },
+    {
+      "claim_id": "B01-A003-PARITY-ACTIVATION-FEI",
+      "version": "v1",
+      "exact_statement": "Let A be the restriction-closed class consisting of constants, signed parities, and fresh one-point activations of signed parities with arbitrary data dimension and arbitrary control depth d. Every F in A satisfies G(F)<=K_act I(F), U(F)<=K_act I(F), and H(F)<=(2+2K_act)I(F)<41.059I(F).",
+      "hypotheses": [
+        "membership in the explicitly defined restriction-closed parity-activation class A",
+        "finite uniform Boolean cube"
+      ],
+      "contributors": ["B01"],
+      "proof_source": "ACTIVATION_TRANSFER.tex equations (16)-(17)",
+      "proof_dependencies": [
+        "B01-A003-FRESH-ACTIVATION-GUP-TRANSFER-v1",
+        "source-pinned H<=2I+2U inequality",
+        "restriction induction proved in the report/proof"
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_REVIEW",
+      "scope": "RESTRICTED_CLASS_ONLY",
+      "does_not_prove": ["full FEI", "closure under nested changing cores"],
+      "first_unproved_line": "Extend the single-use core Jensen-gap payment to arbitrary coherent hierarchies without a depth factor.",
+      "next_consumers": ["A003", "A005", "A023", "A086", "A094", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

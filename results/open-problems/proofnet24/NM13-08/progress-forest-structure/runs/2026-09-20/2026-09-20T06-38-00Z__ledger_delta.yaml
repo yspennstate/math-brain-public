@@ -1,0 +1,36 @@
+ledger_delta:
+  track: NM13-08
+  parent: T07
+  source: "Grimmett-Winkler uniform-all-forests pairwise edge negative correlation"
+  runtime_model: "GPT-5.6 Sol"
+  runtime_reasoning: "UNVERIFIED"
+  parent_status_before: OPEN
+  parent_status_after: OPEN
+  source_complete_order_before: 9
+  source_complete_order_after: 9
+  source_counterexample_order_lower_bound_before: 10
+  source_counterexample_order_lower_bound_after: 10
+  mechanism_before: "independent three-terminal right P4 layers controlled by 39 positive-Newton orbit polynomials plus one shifted-quadrant certificate"
+  mechanism_after: "independent three-terminal right P5 layers controlled by 59 positive-Newton orbit polynomials plus two exact two-corner lattice certificates"
+  restricted_claim: T07-RIGHT-P5-FOREST-PNC-12
+  restricted_status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+  new_class: "F_{p,r}=K_{3,5p+r} + (p P5 disjoint_union r K1), all p,r>=0"
+  new_sign_lemma: T07-TWO-CORNER-LATTICE-SIGN-12
+  p5_transfer: "4144 I + 5524 N + (9050/3) N^2, N^3=0"
+  orbit_count: 61
+  positive_newton_orbits: 59
+  exceptional_orbits: 2
+  exceptional_certificates:
+    distance_3_spokes: "shifts (3,0),(0,15) plus 45-point exact box"
+    distance_4_spokes: "shifts (10,0),(0,50) plus 500-point exact box"
+  exact_checker_result: ALL_EXACT_CHECKS_PASS
+  brute_examples:
+    F_1_0: "n=8,m=19,Z=44340,minDelta=340560"
+    F_1_1: "n=9,m=22,Z=227080,minDelta=7363344"
+  p14_scope_recovered: "GW <=8 and n=9,m<=18; repository complementary dense n=9 sector; minimal counterexample may be taken 3-connected"
+  erickson_scope_recovered: "stronger all-positive-weight Rayleigh/SOS theorem for series-parallel graphs only"
+  later_scope_note: "Huang restricted arboreal-gas results; Bado wheels; Tang-Zhang complete-graph fixed-component families do not settle arbitrary-graph all-forest conjecture"
+  novelty_priority: UNVERIFIED
+  residual_obstruction: "no uniform path-length sign theorem; P6 may create additional exceptional marked-spoke orbit polynomials or an actual negative lattice point"
+  next_attack: "derive a path-length recurrence for hardest marked spoke-pair Rayleigh polynomials and run P6 refutation-first before seeking a uniform corner threshold"
+  parent_closed: false

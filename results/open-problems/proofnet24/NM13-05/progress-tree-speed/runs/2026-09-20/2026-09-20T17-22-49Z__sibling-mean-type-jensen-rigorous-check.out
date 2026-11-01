@@ -1,0 +1,20 @@
+SIBLING_MEAN_TYPE_JENSEN_DIRECTED_INTERVAL_CHECK
+MODE=cross_7_12 intended_p0=7/12 intended_L=3001/1000 intended_q=999/1000 outer_p0=0.58333333333333326 outer_L=3.0010000000000003 safe_q=0.99899999999999989
+PASS visited=34637 accepted=17319 worst_prod=0.99899641696310248 worst_rho=0.97687797263658538 min_theta=0.53906771011082277 min_delta=0.00090292487976827162 min_L3=0.0063564111124640261 min_L4=0.0091464011756225913 max_b3=0.97490414685528315 max_b4=1.2047082091296959 maxdepth=31
+MODE=three_fifths_3023_1000 intended_p0=3/5 intended_L=3023/1000 intended_q=997/1000 outer_p0=0.59999999999999987 outer_L=3.0230000000000006 safe_q=0.99699999999999989
+PASS visited=31873 accepted=15937 worst_prod=0.99699392358328331 worst_rho=0.9769253785978087 min_theta=0.55623629062647351 min_delta=0.00090728715618693199 min_L3=0.0061227536361650571 min_L4=0.0088331245742195863 max_b3=0.9737523769361196 max_b4=1.206860895584984 maxdepth=29
+MODE=two_thirds_25_8 intended_p0=2/3 intended_L=25/8 intended_q=999/1000 outer_p0=0.66666666666666652 outer_L=3.1250000000000004 safe_q=0.99899999999999989
+PASS visited=29007 accepted=14504 worst_prod=0.99899989885533402 worst_rho=0.97920563027117147 min_theta=0.62465777556921553 min_delta=0.0009790123725450196 min_L3=0.0050026477780370704 min_L4=0.0073108238377826117 max_b3=0.96263650531139033 max_b4=1.1927910018578516 maxdepth=32
+MODE=four_fifths_3377_1000 intended_p0=4/5 intended_L=3377/1000 intended_q=995/1000 outer_p0=0.79999999999999993 outer_L=3.3770000000000002 safe_q=0.99499999999999988
+PASS visited=19589 accepted=9795 worst_prod=0.99499766786019972 worst_rho=0.98272574777424193 min_theta=0.75628318485630974 min_delta=0.00071730609930328708 min_L3=0.0026044662661073603 min_L4=0.0039325601395961193 max_b3=0.94345289660114762 max_b4=1.1618215974122925 maxdepth=32
+ALL_RIGOROUS_INTERVAL_CHECKS_PASS
+ELAPSED=5.03
+
+Build/run command:
+g++ -O2 -std=c++17 -frounding-math -ffp-contract=off 2026-09-20T17-22-49Z__sibling-mean-type-jensen-rigorous-check.cpp -o sibling_mean_check_rig && ./sibling_mean_check_rig
+
+Local SHA256 before upload:
+82565e27683b20e10e9d059aa3a96b1de619768ed9ce92b42844f0b9fb3e01b7  corrected checker source
+9b93f61b2c420b5c7e783f903987a146f633d6fccdf8208ca2bdceda0f6f5c49  corrected stdout
+
+Soundness correction relative to the first archived exploratory checker at the same timestamp: the inherited branch-addition factor 4/5 is represented here as the outward interval divi(point(4),point(5)), not as the binary point literal .8. Only this corrected checker/output is relied upon by the substantive report.

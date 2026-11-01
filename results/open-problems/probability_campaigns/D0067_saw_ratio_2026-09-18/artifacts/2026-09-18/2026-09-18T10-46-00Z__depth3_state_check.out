@@ -1,0 +1,53 @@
+D0067 depth-3 endpoint-state exact enumeration
+Convention: first step fixed east; multiply TOTAL, HH, HO by 4 for unrestricted oriented starts.
+HH = start depth-3 hook AND terminal depth-3 hook.
+HO = start depth-3 hook AND terminal open corner (unique legal hook-closing child).
+
+n TOTAL HH HO HH/TOTAL
+ 3       9      2      0 2/9
+ 4      25      0      2 0
+ 5      71      2      4 2/71
+ 6     195      4     16 4/195
+ 7     543     16     40 16/543
+ 8    1479     40    120 40/1479
+ 9    4067    120    312 120/4067
+10   11025    312    880 104/3675
+11   30073    880   2352 880/30073
+12   81233   2352   6448 2352/81233
+13  220375   6448  17368 6448/220375
+14  593611  17368  47072 17368/593611
+15 1604149  47072 126840 47072/1604149
+16 4311333 126840 342040 42280/1437111
+
+Bijection checks HO[n] == HH[n+1]:
+n= 3: 0 == 0 : PASS
+n= 4: 2 == 2 : PASS
+n= 5: 4 == 4 : PASS
+n= 6: 16 == 16 : PASS
+n= 7: 40 == 40 : PASS
+n= 8: 120 == 120 : PASS
+n= 9: 312 == 312 : PASS
+n=10: 880 == 880 : PASS
+n=11: 2352 == 2352 : PASS
+n=12: 6448 == 6448 : PASS
+n=13: 17368 == 17368 : PASS
+n=14: 47072 == 47072 : PASS
+n=15: 126840 == 126840 : PASS
+
+Start-hook terminal-category counts (among first-step-east SAWs):
+n straight open hook remote_blocked
+ 3        0        0        2              0
+ 4        2        2        0              0
+ 5        4        4        2              2
+ 6       12       16        4              0
+ 7       32       40       16              4
+ 8       88      120       40              0
+ 9      244      312      120             16
+10      656      880      312             20
+11     1804     2352      880             96
+12     4852     6448     2352            196
+13    13232    17368     6448            648
+14    35552    47072    17368           1572
+15    96380   126840    47072           4660
+
+ALL_EXACT_CHECKS_PASS

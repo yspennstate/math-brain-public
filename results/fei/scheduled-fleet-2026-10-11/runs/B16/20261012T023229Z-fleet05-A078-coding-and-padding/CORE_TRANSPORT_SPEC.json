@@ -1,0 +1,12 @@
+{
+  "helper_version": "core-quarter-transport-v1",
+  "actual_Boolean_family": "Every labelled core on one or two bits; eight fixed three-bit cores; activation F=1+1{all controls=0}(g-1); mixed majority sign(sum ordinary+g)",
+  "parameter_domain": {"core_dimensions": [1,2,3], "three_bit_masks": [0,1,7,15,23,105,150,255], "activation_controls": [1,2], "ordinary_even_dimensions": [2,4]},
+  "case_count": "60 core-coordinate pairs; 120 activation pairs and 120 mixed-majority pairs; pilot uses the 36 pairs at k<=2",
+  "symmetry": "No reduction; all labelled one/two-bit truth tables and the listed three-bit seeds",
+  "arithmetic": "Integer direct Walsh transform and exact Fraction; fourth roots canonicalized by prime exponents modulo four; symbolic identities compared by coefficient dictionaries; no floating sign claims",
+  "memory_estimate_MB": 70,
+  "max_runtime_seconds": 60,
+  "hard_guard_seconds": 55,
+  "commands": ["python -X utf8 code/check_core_transport.py --pilot", "python -X utf8 code/check_core_transport.py"]
+}

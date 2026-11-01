@@ -1,0 +1,20 @@
+{
+  "worker": "w556",
+  "target": "C0047",
+  "checked_date": "2026-10-10",
+  "candidate_metadata": {"date": "2026-09-07", "tier": 4, "prior_status": "attempted_un", "scope": "every Cayley graph"},
+  "exact_statement": "For every infinite finitely generated group Gamma and every fixed finite symmetric generating set S, Bernoulli bond percolation on Cay(Gamma,S) satisfies p_c<p_u if and only if Gamma is nonamenable.",
+  "thresholds": {"p_c": "infimum of parameters with an infinite cluster almost surely", "p_u": "infimum of parameters with exactly one infinite cluster almost surely"},
+  "current_openness": "UNKNOWN",
+  "current_status_detail": "A September-24-2026 public preprint at openai/math claims a full resolution; claim and formal comparator require proof/axiom audit before solved/retired status is accepted.",
+  "primary_sources": [
+    {"id": "HUT2020", "url": "https://arxiv.org/html/1904.05804v2", "checked": true, "locators": "Conjectures 1.1 and 1.3; introduction immediately after Conjecture 1.3", "scope": "connected locally finite quasi-transitive graphs; Bernoulli bond percolation", "derived_statement": "The L2 connection-operator condition implies a nonuniqueness phase; the critical operator estimate is a separate conjecture in this 2020 source."},
+    {"id": "CLAIM2026", "url": "https://github.com/openai/math/blob/main/lean/docs/214.md", "checked": true, "locators": "Scope; comparator links", "scope": "claims all nonamenable quasi-transitive graphs and every finite symmetric Cayley generating set", "accepted_as_proof": false}
+  ],
+  "recall": {"result": "RECALL_TIMEOUT_60S", "fallback": "targeted MEMORY.md and MISTAKES.md search in progress; exact requested scar files not found by filename yet"},
+  "prior_attempts": "targeted recovery in progress",
+  "owner_solved_retired_check": "in progress",
+  "model_provenance": {"requested_model": "gpt-6.1-sol", "requested_reasoning": "max", "requested_service_tier": "Fast", "response_side_served_model": "unavailable in this native thread", "served_identity_verified": false},
+  "parent_problem_solved_claim": false,
+  "independent_reviewer": "w557; pending"
+}

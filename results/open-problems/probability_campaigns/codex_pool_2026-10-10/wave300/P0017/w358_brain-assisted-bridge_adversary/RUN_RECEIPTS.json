@@ -1,0 +1,39 @@
+{
+  "general_recall": {
+    "command": "python -X utf8 ~/.claude/dreaming/brain.py recall \"P0017 KLS log-concave Poincare bridge mistakes\"",
+    "wrapper": "subprocess.run(capture_output=True, timeout=60)",
+    "receipt": "recall_probe.json",
+    "elapsed_seconds": 68.668,
+    "timed_out": true,
+    "interpretation": "Measured retrieval failure, not a mathematical result"
+  },
+  "bounded_target_lookup": {
+    "command": "python -X utf8 - (saved read-only SQL query below)",
+    "sql": "SELECT id,kind,title,body,metadata_json,created_at FROM nodes WHERE lower(title) LIKE '%kls%' OR lower(title) LIKE '%kannan%' OR lower(title) LIKE '%dimension-free log-concave%' OR lower(title) LIKE '%p0017%' LIMIT 14",
+    "database": "~/math-brain-build/local/population/brain.sqlite3",
+    "connection": "sqlite3.connect(path.as_uri()+'?mode=ro', uri=True, timeout=5); PRAGMA query_only=ON; progress deadline 12 seconds",
+    "receipt": "brain_target_lookup.json",
+    "elapsed_seconds": 0.099,
+    "target_rows": 2,
+    "new_october_source_mentions_in_returned_cards": 0,
+    "interpretation": "Different scope from general recall; no global latency or rank improvement claimed"
+  },
+  "artifact_preparation": {
+    "command": "python -X utf8 ~/brain_workers/w358/prepare_review.py",
+    "receipt": "STRUCTURAL_VALIDATION.json",
+    "result": "PASS required fields, relation types, cross targets and depends_on cycle check",
+    "scope": "Administrative structural validation, not a mathematical experiment"
+  },
+  "exact_polynomial_experiment": {
+    "command": "python -X utf8 ~/brain_workers/w358/check_exponential.py",
+    "status": "NOT RUN BY w358; fresh distress gate held execution",
+    "gate_receipt": "COMPUTE_GATE.json"
+  },
+  "independent_math_receipt": {
+    "reviewer": "w359",
+    "path": "~/brain_workers/w359/REVIEW_w358.md",
+    "kept_claims": ["w358-S1.3", "w358-S1.4", "w358-S1.5"],
+    "reviewer_command": "python -X utf8 ~/brain_workers/w359/verify_math.py",
+    "attribution": "Reviewer's run, not a w358 benchmark or formal receipt"
+  }
+}

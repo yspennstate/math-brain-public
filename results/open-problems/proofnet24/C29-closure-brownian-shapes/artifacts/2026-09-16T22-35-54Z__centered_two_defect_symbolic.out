@@ -1,0 +1,16 @@
+C29 centered two-defect symbolic checker
+checker_code_commit=b7b03d69a4989faeae50fea7e66f096c1febcf03
+assumptions: alpha>1, q>0; c=q+1=4*delta; r0=(alpha+1)/2
+six_chord_identity_checks=PASS
+interior_coordinate_second_derivatives=PASS
+slanted_regime_jump_factorizations=PASS
+third_direction_slope_gap_identities=PASS
+coordinate_boundary_jump_identities=PASS
+sign_domains:
+  NW1->NW2: t>=1/2 gives both coordinate jumps <=0
+  NW2->NW3: t<=1 gives both coordinate jumps <=0
+  SE1->SE2: t>=0 gives both coordinate jumps <=0
+  SE2->SE3: t<=1/2 gives both coordinate jumps <=0
+  linewise gaps use r>=1/2, r>=1, r>=alpha/2, r>=r0, r<=alpha, r<=alpha+1/2
+  coordinate cell-boundary gaps use s>=1/(2alpha) and s<=1-1/(2alpha) in middle regimes
+ALL_EXACT_SYMBOLIC_CHECKS_PASS

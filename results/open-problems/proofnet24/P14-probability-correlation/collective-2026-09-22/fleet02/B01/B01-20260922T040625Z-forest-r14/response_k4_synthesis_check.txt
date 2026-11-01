@@ -1,0 +1,15 @@
+K4_RESPONSE_FORMULAS_PASS
+d = p + q + r + 1
+a = p*q + p*u + q*u + r*u + u
+b = p*r + p*v + q*v + r*v + v
+c = p*w + q*r + q*w + r*w + w
+tau = p*q*r
+K4_SYNTHESIS_ALGEBRA_PASS
+lambda_equation = lam^3*x*y*z - rho*lam^2*(x*y+x*z+y*z) - rho^2 = 0
+EXHAUSTIVE_RESPONSE_SCAN_BEGIN
+n=3 graphs=8 min_tau=0 min_abc_minus_tau_t=0 neg_tau=0 neg_slack=0
+n=4 graphs=64 min_tau=0 min_abc_minus_tau_t=0 neg_tau=0 neg_slack=0
+n=5 graphs=1024 min_tau=0 min_abc_minus_tau_t=0 neg_tau=0 neg_slack=0
+EXHAUSTIVE_RESPONSE_SCAN_PASS
+THREE_SPOKE_STAR response= (4, 1, 1, 1, 1) tau= 1 abc_minus_tau_t= 0
+K4_UNIT response= (4, 5, 5, 5, 19) tau= 1 abc_minus_tau_t= 106

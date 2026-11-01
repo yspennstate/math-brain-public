@@ -1,0 +1,14 @@
+{
+  "objective": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "latest_source_commit": "eeb752c8943536541b34b42b8bf48e924f4d3d2f",
+  "latest_blob": "19fb119877426b640b2c0dae19ec2f78a399fe11",
+  "baseline_source_commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+  "verdict": "PASS_AFTER_LOCAL_REPAIR",
+  "gap_latest_lines": "598-600",
+  "gap_baseline_lines": "472-474",
+  "gap": "Hyperbolic negative tail must choose its own large original coordinate from w rather than reuse the coordinate chosen from u.",
+  "repair": "Choose i_plus from u and i_minus from w; |u|=|w| gives the same lower bound and constants.",
+  "unchecked_math_ranges": [],
+  "checker_gap": "verify_new.py does not bind PASS to paper.tex hash",
+  "full_three_status": "OPEN"
+}

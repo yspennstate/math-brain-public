@@ -1,0 +1,66 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w332/check_extended.py",
+  "checks": [
+    {
+      "name": "C0089 zero-intensity increment covariance",
+      "cases": 4,
+      "passed": true,
+      "detail": "All 2d nearest-neighbor increments; exact I_d/d covariance."
+    },
+    {
+      "name": "P0030 independent bridge and two-sided covariance",
+      "cases": 113,
+      "passed": true,
+      "detail": "64 path covariances and 49 disjoint increment covariances, with L=2."
+    },
+    {
+      "name": "P0030 future-selected splice has biased mean",
+      "cases": 1,
+      "passed": true,
+      "detail": "Trapezoid integral 0.398942073; exact mean 0.398942280; error 2.08e-07."
+    },
+    {
+      "name": "P0234 net-distance implication and inverse-moment boundary",
+      "cases": 645,
+      "passed": true,
+      "detail": "Rational grids plus exact gamma=2,p=1 comparison distribution moment 2."
+    },
+    {
+      "name": "C0010 exact conductance scaling and covariance comparison",
+      "cases": 675,
+      "passed": true,
+      "detail": "27 two-vertex networks times 25 linear functionals, exact rational inverses."
+    },
+    {
+      "name": "C0010 vanishing scale errors can accumulate without bound",
+      "cases": 8,
+      "passed": true,
+      "detail": "Harmonic sums at N=2^k obey H_N>=1+k/2; e_j=1/j -> 0."
+    },
+    {
+      "name": "C0101 integer quadratic witnesses in dimensions 3-5",
+      "cases": 1755,
+      "passed": true,
+      "detail": "15 symmetric integer matrices, full {-1,0,1}^d grids; exact trace Laplacians."
+    },
+    {
+      "name": "C0101 stored ceil-curvature bound is false",
+      "cases": 1,
+      "passed": true,
+      "detail": "a=1/2,x=0 gives 2 > a+1=3/2."
+    },
+    {
+      "name": "C0148 finite-quotient balls and smallest-size boundary",
+      "cases": 12,
+      "passed": true,
+      "detail": "9 exact labelled torus/lattice balls and 3 cycle boundary counterchecks."
+    },
+    {
+      "name": "P0022 base-four subarc inclusion and Koch scaling",
+      "cases": 56,
+      "passed": true,
+      "detail": "55 rational parameter intervals; q=1.261859507143; does not model Brownian paths."
+    }
+  ],
+  "elapsed_seconds": 0.15919139992911369
+}

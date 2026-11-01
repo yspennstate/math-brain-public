@@ -1,0 +1,117 @@
+{
+  "target_id": "P0162",
+  "worker": "w507",
+  "checked_utc": "2026-10-10T05:49:19.015153+00:00",
+  "exact_target": "For every n>=0 and Boolean f:{-1,1}^n->{-1,1} under the uniform product measure, H_2(f)=sum_S hat(f)(S)^2 log_2(1/hat(f)(S)^2) <= C sum_S |S|hat(f)(S)^2 for one finite C independent of n and f; zero terms are zero.",
+  "primary_statement_verified": true,
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "served_model_settings_verified": false,
+  "reason_for_unknown": "Dated local ledgers and recent checked primary papers concern the conjecture or special cases. The bounded check does not certify that no later general solution or owner retirement exists.",
+  "primary_sources": [
+    {
+      "authors": "Ryan O'Donnell, John Wright, Yuan Zhou",
+      "title": "The Fourier Entropy-Influence Conjecture for certain classes of Boolean functions",
+      "year": 2011,
+      "url": "https://www.ias.edu/sites/default/files/math/csdm/10-11/rodonnell_the_fourier_entropy_influence_conjecture.pdf",
+      "locator": "Abstract / introduction",
+      "supports": "Exact uniform-cube Boolean FEI target, attributed to Friedgut-Kalai (1996)."
+    },
+    {
+      "authors": "Xiao Han",
+      "url": "https://arxiv.org/abs/2312.08271v2",
+      "revision_date": "2025-12-10",
+      "locator": "Abstract",
+      "supports": "General bound O(I(f)+sum_k I_k(f)log(1/I_k(f))); not a dimension-independent FEI proof."
+    },
+    {
+      "authors": "Maria Jose Gonzalez, Paul MacManus, Maria Cristina Pereyra",
+      "url": "https://arxiv.org/html/2606.00246v2",
+      "revision_date": "2026-06-09",
+      "locator": "Section 4, equation (21); Appendix B, equation (32)",
+      "supports": "Established restriction-entropy framework and good-coordinate sufficient criterion. The ledger here is independently rederived; no novelty claim for it.",
+      "used_hypotheses": "Boolean functions on uniform cube; base-2 entropy."
+    },
+    {
+      "authors": "Vladimir N. Potapov",
+      "url": "https://arxiv.org/abs/2609.21563v1",
+      "revision_date": "2026-09-18",
+      "locator": "Abstract",
+      "supports": "Reported special-class results for plateaued and partially bent functions, not a reported proof for all Boolean functions.",
+      "reuse": "No theorem from this paper is needed in L1-L4."
+    }
+  ],
+  "local_evidence": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "line": 553,
+      "value": "tier 5, P0162, attempted_un",
+      "status_limit": "Dated ranking, not a current openness certificate."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006a04.json",
+      "logical_name": "attempt-p0162-fourier-entropy-versus-total-influence",
+      "locator": "at-p0162, lines 3345-3367",
+      "digest": "Abstract singleton law has H=log_2 n and mean size 1 but cannot be a Boolean squared spectrum: the x_i x_j coefficient of f^2 would be nonzero. Uses Fourier convolution / dropping Booleanity. New route instead retains Booleanity, splices restrictions and quantifies a bad coordinate."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json",
+      "logical_name": "open-problem-p0162-fourier-entropy-versus-total-influence",
+      "digest": "Dated unresolved target, cites O'Donnell Open problems in analysis of Boolean functions, PDF p.5."
+    },
+    {
+      "paths": [
+        "probability_1000_attempts_H_20260912",
+        "probability_1000_attempts_I_20260914",
+        "prob1000_lean_20260908"
+      ],
+      "result": "Targeted P0162 / exact-title search returned no direct P0162 record in these directories. Related F0090 material exists in the Lean campaign. No formal proof receipt for P0162 was recovered."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_F_20260908/problems.jsonl",
+      "locator": "F0090 closure row, line 141",
+      "digest": "Owner's planar-percolation spectral/pivotal entropy special case is recorded closed as author-published 2026-09-13, explicitly unrefereed. It is not a general Boolean FEI solution and is not re-proved here."
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "result": "No P0162 row in the checked board."
+    },
+    {
+      "path": "~/math-brain-build/export/population",
+      "result": "Targeted grep locates P0162/FEI in nodes/claims/edges and bundle metadata. No whole export was read; the precise read-only store query receipt is READ_ONLY_LOOKUP.json."
+    },
+    {
+      "path": "NARROW_SOURCE_READS.json",
+      "locator": "cited_store_cards[2]",
+      "claim_id": "claim_d15d0160e58b4c9183707be9f49462d2",
+      "status": "unverified",
+      "digest": "Existing owner F4 card already states small-influence reduction, a 7.05 restriction-induction floor, and a different monotone per-coordinate obstruction. It is prior context only; no unverified theorem from it is a premise of L4-L6."
+    }
+  ],
+  "recall": {
+    "receipt": "RECALL_RECEIPT.json",
+    "result": "No output before the required 60-second timeout; loaded-machine wall time was 67.695 seconds.",
+    "fallback_scars": [
+      "perceptron_proof_open_gaps_fleet_2026_07_12",
+      "proof_steps_need_derived_joint_structure_2026_09_09"
+    ],
+    "application": "A successful arithmetic run is not proof of global FEI. The exact entropy ledger uses no products of unsupported conditional bounds."
+  },
+  "lane_boundary": "Precommit and initial independent derivation preceded peer-proof reads. Later comparison shows L1-L3 overlap w505's canonical witness, so they are reproductions only. Reserved distinct extension: L4-L6 arbitrary bent base/vertex, sign-count invariance, exact local-sensitivity influence range and class extremizer, plus exact refutation of C=2 on the parity-twisted class. No further canonical truth-table runs after overlap discovery.",
+  "formal_verification": {
+    "performed": false,
+    "theorem": null,
+    "trusted_axioms": null,
+    "reason": "Integer and numerical checks are diagnostics, not a formal theorem. Separate analytical KEEP verdicts are recorded in REVIEW_RECEIPT.json."
+  },
+  "mathematical_review": {
+    "state": "KEEP",
+    "scope": "ATTEMPT.md L1-L7 only",
+    "reviewer": "w509",
+    "evidence": "~\\brain_workers\\w507\\REVIEW_RECEIPT.json",
+    "checked_utc": "2026-10-10T07:18:40.705877+00:00",
+    "author_served_model": "UNKNOWN",
+    "referee_served_model": "UNKNOWN",
+    "different_model_gate": "UNVERIFIED"
+  }
+}

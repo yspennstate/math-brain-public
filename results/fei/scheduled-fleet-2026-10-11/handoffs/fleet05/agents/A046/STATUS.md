@@ -1,0 +1,2 @@
+STATE: A046 stage 6 complete: carried arbitrary-bias mixed-history separator bank <=3I; 2,887 exact assertions and direct six-bit residual PASS; A040 v1 independently HOLDS, own v3 review pending, FEI OPEN.
+NEXT: Review unchanged v3 and pay the actual six-bit core-query positive signed residual from unused inherited child slack, retaining both restricted spectra, terminal laws and reference/reset costs.

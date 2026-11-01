@@ -1,0 +1,27 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B01",
+  "primary_packet_id": "A003",
+  "claims": [
+    {
+      "claim_id": "B01-ONE-SHARED-BLOCK-POTENTIAL-v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For Boolean factors sharing exactly x and otherwise disjoint, Phi(fg)<=Lambda_x(f)+Lambda_x(g).",
+      "constant": 1,
+      "evidence": ["PROOF.md", "CHECK.py", "CHECK.out"]
+    },
+    {
+      "claim_id": "B01-PHYSICAL-BLOCK-REVELATION-v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every Boolean f(x,u), E_x Phi(f|x)<=Lambda_x(f).",
+      "constant": 1,
+      "evidence": ["PROOF.md", "CHECK.py", "CHECK.out"]
+    },
+    {
+      "claim_id": "B01-NESTED-BLOCK-FIRST-REVELATION-v1",
+      "status": "OPEN",
+      "statement": "A single-use signed block account controls arbitrary reused-coordinate hierarchies by A I+bU with b<1."
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

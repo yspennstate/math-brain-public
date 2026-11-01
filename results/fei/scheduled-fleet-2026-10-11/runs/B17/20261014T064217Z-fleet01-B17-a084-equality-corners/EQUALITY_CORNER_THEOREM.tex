@@ -1,0 +1,147 @@
+\section*{Completion of the two-bit half-tax continuum}
+
+All logarithms in this proof are natural.  For $0<p\le1/2$ and
+$0\le q\le1$, put
+\[
+ s=4q(1-q),\quad c=4q^2,\quad b=1-sp,\quad
+ a={cp(1-p)\over b},
+\]
+and
+\[
+ d(p,q)=b h(a)+sp h(p)-h(sp)+p h(s)
+          +{p\over2}\log{1-p\over p},                 \tag{1}
+\]
+where $h(x)=-x\log x-(1-x)\log(1-x)$.  Thus
+$d=(\ln2)(M_A+\Delta_A/2-J_A)$ for the frozen two-bit Boolean AND
+kernel.
+
+\paragraph{Theorem.}
+For every $0<p\le1/2$ and every $0\le q\le1$,
+\[
+ \boxed{d(p,q)\ge0.}                                  \tag{2}
+\]
+Equality on the two endpoint collars occurs only at
+$(p,q)=(1/2,0)$ and $(1/2,1)$.  Together with the previously certified
+interior and rare-bias regions, this proves the half-tax inequality on
+the complete two-parameter domain.
+
+\paragraph{Balanced lower edge.}
+At $p=1/2$, direct entropy algebra gives
+\[
+ \begin{aligned}
+ d(1/2,q)={}&-2q^2\log q-2(1-q)^2\log(1-q)\\
+ &+2\{q^2+(1-q)^2\}\log\{q^2+(1-q)^2\}
+ -(1-2q)^2\log|1-2q|.                         \tag{3}
+ \end{aligned}
+\]
+For $0\le q\le1/100$, define
+\[
+ g(x)=-(1-x)^2\log(1-x),\qquad
+ y=2q(1-q).
+\]
+The convergent power series give
+\[
+ g(x)=x-\frac32x^2+
+ \sum_{n\ge3}{2x^n\over n(n-1)(n-2)}
+ \ge x-\frac32x^2,                                   \tag{4}
+\]
+and
+\[
+ (1-y)\log(1-y)=-y+
+ \sum_{n\ge2}{y^n\over n(n-1)}\ge-y+\frac12y^2.     \tag{5}
+\]
+Rewriting (3) as
+\[
+ d(1/2,q)=-2q^2\log q+2g(q)+g(2q)
+                 +2(1-y)\log(1-y)
+\]
+and applying (4)--(5) yields
+\[
+ d(1/2,q)\ge q^2\left(2\log{1\over q}-1-8q+4q^2\right)>0       \tag{6}
+\]
+for $0<q\le1/100$, while $d(1/2,0)=0$.
+
+\paragraph{Monotonicity away from the balanced edge.}
+Differentiating (1) is legitimate in the open collar.  The potentially
+singular products are evaluated in the continuous forms
+\[
+ b h'(a)a'={cR\over b}
+  \{\log m-\log c-\log p-\log(1-p)\},                 \tag{7}
+\]
+where
+\[
+ R=(1-2p)b+sp(1-p),\qquad m=b-cp(1-p),
+\]
+and
+\[
+ -s h'(sp)=-s\log(1-sp)+s\log s+s\log p.              \tag{8}
+\]
+The conventions $x\log x=0$ at $x=0$ make (7)--(8) continuous on the
+closed rectangle.
+
+The accompanying directed-rounding certificate encloses this derivative
+on
+\[
+ {49\over100}\le p\le{1\over2},\qquad
+ 0\le q\le{1\over100}.
+\]
+It proves the uniform bound
+\[
+ \boxed{\partial_p d(p,q)\le-0.9.}                    \tag{9}
+\]
+The largest certified upper endpoint is
+\[
+ -0.9002260317012236411683888873233463387246104808513.
+\]
+The proof uses 90-decimal directed arithmetic, visits 45 rectangles,
+accepts 23 leaves, reaches depth 6, and leaves no unresolved rectangle.
+No floating-point sign decision is made.  Integrating (9) and using (6)
+gives
+\[
+ d(p,q)\ge d(1/2,q)+0.9(1/2-p)\ge0                  \tag{10}
+\]
+on the complete lower endpoint collar.
+
+\paragraph{Upper endpoint collar without a second certificate.}
+Fix $0\le q\le1/100$ and compare $q$ with $1-q$.  The values of $s$ and
+$b$ are unchanged; only the first entropy term in (1) changes.  Its two
+arguments are
+\[
+ a_-={4q^2p(1-p)\over b},\qquad
+ a_+={4(1-q)^2p(1-p)\over b}.
+\]
+They satisfy $a_-\le a_+$ and
+\[
+ 1-a_--a_+
+ ={(1-2p)(1-2p+sp)\over b}\ge0.                      \tag{11}
+\]
+Thus $a_-\le a_+\le1-a_-$.  Since binary entropy is symmetric and
+increases on $[0,1/2]$, $h(a_+)\ge h(a_-)$.  All other terms agree, so
+\[
+ d(p,1-q)\ge d(p,q).                                  \tag{12}
+\]
+Equation (10) therefore proves the entire upper collar
+$99/100\le q\le1$ as well.
+
+\paragraph{Complete coverage and exact GU implication.}
+The source-bound pieces are now:
+\[
+\begin{array}{c|c}
+0<p\le1/64 & \text{normalized rare-tail theorem},\\
+1/64\le p\le49/100 & \text{repaired directed certificate, all }q,\\
+49/100\le p\le1/2,\ 1/100\le q\le99/100
+ & \text{balanced-transition and central-collar certificates},\\
+49/100\le p\le1/2,\ q\in[0,1/100]\cup[99/100,1]
+ & \text{(6)--(12).}
+\end{array}
+\]
+Hence (2) has no omitted bias or endpoint parameter.
+
+This is still a two-bit local lemma, not universal GU.  If its mismatch
+terms $M_A$ vanished globally and every $\Delta_A/2$ were charged once,
+one would obtain $G\le I/2$.  The growing-rank OR-defect family has
+$G/I\to1$ (indeed $G>I$ eventually), so those global premises cannot both
+hold.  The completion therefore localizes the remaining debt: a universal
+proof must retain a nonzero higher-arity, hierarchy, or terminal
+$M$-reserve.  No claim that the half-tax lemma alone proves GU or FEI is
+made.

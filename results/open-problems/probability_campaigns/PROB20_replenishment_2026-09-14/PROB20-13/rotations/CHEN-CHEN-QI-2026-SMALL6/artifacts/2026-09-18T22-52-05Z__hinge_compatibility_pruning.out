@@ -1,0 +1,30 @@
+HINGE_SINGLE_PAIR_CLASSIFICATION total=190 forbidden=56 allowed=134 kernel_dims={0:134,1:56}
+HINGE_CENTER_SIZE_DISTRIBUTION size2=8 size4=8 double_count=56 unique_center=True
+HINGE_ARMS center=(1, 1) size=2 arms=[(3, 2), (6, 2)]
+HINGE_ARMS center=(1, 2) size=2 arms=[(4, 1), (5, 1)]
+HINGE_ARMS center=(2, 3) size=2 arms=[(3, 4), (5, 4)]
+HINGE_ARMS center=(2, 4) size=2 arms=[(4, 3), (6, 3)]
+HINGE_ARMS center=(3, 1) size=4 arms=[(1, 3), (1, 5), (6, 3), (6, 5)]
+HINGE_ARMS center=(3, 3) size=4 arms=[(2, 1), (2, 5), (5, 1), (5, 5)]
+HINGE_ARMS center=(3, 5) size=2 arms=[(4, 1), (4, 3)]
+HINGE_ARMS center=(4, 2) size=4 arms=[(1, 4), (1, 5), (5, 4), (5, 5)]
+HINGE_ARMS center=(4, 4) size=4 arms=[(2, 2), (2, 5), (6, 2), (6, 5)]
+HINGE_ARMS center=(4, 5) size=2 arms=[(3, 2), (3, 4)]
+HINGE_ARMS center=(5, 2) size=4 arms=[(1, 3), (1, 6), (4, 3), (4, 6)]
+HINGE_ARMS center=(5, 3) size=4 arms=[(2, 2), (2, 6), (3, 2), (3, 6)]
+HINGE_ARMS center=(5, 6) size=2 arms=[(6, 2), (6, 3)]
+HINGE_ARMS center=(6, 1) size=4 arms=[(1, 4), (1, 6), (3, 4), (3, 6)]
+HINGE_ARMS center=(6, 4) size=4 arms=[(2, 1), (2, 6), (4, 1), (4, 6)]
+HINGE_ARMS center=(6, 6) size=2 arms=[(5, 1), (5, 4)]
+PAIRWISE_COMPATIBILITY_GRAPH vertices=134 disjoint_tests=7247 compatible_edges=7125 forbidden=122 kernel_dims={0:7125,1:98,2:24}
+HINGE_ONLY_RESIDUAL_N24_MATCHINGS_8_EDGES_4_HOLES=643815003
+SOURCE_WITNESS_FILTER_CHECK all_8_vertices_allowed=True all_28_pairwise_compatible=True
+FORBIDDEN_EXAMPLE a=((1, 3), (1, 4)) b=((2, 1), (2, 2)) kernel_dim=1
+FORBIDDEN_EXAMPLE a=((1, 3), (1, 4)) b=((3, 2), (6, 3)) kernel_dim=1
+FORBIDDEN_EXAMPLE a=((1, 3), (1, 4)) b=((3, 4), (6, 2)) kernel_dim=1
+FORBIDDEN_EXAMPLE a=((1, 3), (1, 4)) b=((3, 4), (6, 3)) kernel_dim=1
+FORBIDDEN_EXAMPLE a=((1, 3), (1, 4)) b=((4, 1), (5, 4)) kernel_dim=1
+FORBIDDEN_EXAMPLE a=((1, 3), (1, 4)) b=((4, 3), (5, 1)) kernel_dim=1
+FORBIDDEN_EXAMPLE a=((1, 3), (1, 4)) b=((4, 3), (5, 4)) kernel_dim=1
+FORBIDDEN_EXAMPLE a=((1, 3), (2, 1)) b=((1, 5), (2, 5)) kernel_dim=1
+ALL_EXACT_CHECKS_PASS

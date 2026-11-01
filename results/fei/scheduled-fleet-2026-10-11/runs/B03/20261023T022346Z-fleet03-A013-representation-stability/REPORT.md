@@ -1,0 +1,39 @@
+# A013 stage18: exact physical transport of the rank-three quotient
+
+## exact target, quantifiers, hypotheses and units
+
+Consume the NEW A012 v6 full eight-row and affine-rank3 pure-child increment, then specify how its useful representation changes under ACTUAL physical restrictions. New transport target: every uniform finite cube X, every q:X->[0,1], every independent rank-r binary parity map Y=LX, and every physical block A fixed to a. Bound exactly the surviving labels, profile, fiber count/density and declared root-reference parameters, retaining the original event. Entropy units are bits. No universal FEI conclusion or free historical reference replacement is claimed.
+
+## sources actually read, revisions and theorem locators
+
+Current BOARD2026-10-23 02:23UTC and B03 lead v2; own STATUS and stage17 proof/report; execution protocol revision2026-10-11-execution-v2 read in full. A012 stage18 DERIVATION Sections1-7, REPORT and continuum/verify/fixtures code read directly, plus source CLAIMS/PROGRESS and exact outputs for version pins. Campaign/paper intake from earlier stages is inherited, not presented as a fresh complete reading. One read-only math recall returned neighboring unrelated/FEI controls, used as no proof premise. SOURCE_RECEIPTS pins all primary inputs actually used. The current owner deadline23Oct14:49UTC supersedes older campaign snapshots. Brain wake warns of stale owner-model88.8h and state-of-mind73.4h; neither is a mathematical premise. Checklist working T-20261023-151 failed on a lock.
+
+## complete derivation or exact first unsupported line
+
+DERIVATION Sections1-2 independently reconstruct the NEW v6 cancellation, analytic sparse-support case, full eight-row continuum, affine quotient and complete terminal reference D_F=D_Hcal/2. The resulting pure-child payment B_z<4min(d,1-d), Delta<=K min(d,1-d), K=4+2/ln2<7, holds at that scope. All5 covers are replayed using a DIFFERENT arithmetic implementation from both source checks: exact Fraction32-term atanh/tail, outward64-bit weights and direct corners. This is scoped reconstruction of the v6 increment, not acceptance of the entire older A013-credited grammar/nonmember chain.
+
+The NEW exact block transport theorem in Sections3-4 gives t=dim(span(L) intersect coordinate-span(A)); surviving quotient labels are uniform on an affine coset of size2^(r-t). For every compatible y, qbar_a(y)=2^(-t)sum_(K subset A)chi_K(a)E[q chi_K|Y=y]. All denominators and zero-probability cases are explicit. For a singleton query outside span(L), rank is unchanged but qbar_a=qbar+(-1)^a theta_i. A four-physical-bit point-phase example has parent B=1 and BOTH actual child B=0 despite rank3 surviving; it refutes carrying only the old marginal row profile. Including the carrier in the full parity label gives cell count N'<=N, density pi'=2^t_Z pi, label entropy k-t_Z, and explicit root-reference updates pi'/(N'+pi') under declared uniform weights. These metadata are not a free CE/KL reset and parity fibers are not asserted to be regular AND gates.
+
+FIRST UNIVERSAL unsupported line: pay one BOTH-private rank3 collision from genuinely UNUSED inherited child/shared surplus, carrying both complete terminal references and old debit. The new formula specifies the physical profile change but does not pay that bill. The previous four-shared-bit bent example already has Delta>7d; unchanged selector-only payment cannot handle growing rank.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+FROZEN_SPEC and FROZEN_TRANSPORT precede jobs. Commands: `python -X utf8 code/replay18.py cover 0` pilot; `cover 1 2 3 4`; `classify`; `fixtures`; `transport`. Total 148,724 exact assertions PASS:6,041 cover/tree assertions over675 nodes/332 positive+8 analytic leaves,775 complete phase/seed classification assertions,111,736 exact Boolean/reference/singleton assertions on384 parity-lift parents,30,172 exact assertions on1,944 physical block restrictions at ranks1..4 and6 event policies. These are THIS stage's domains, not the preceding stage's42,000 checks. Arithmetic: exact Fraction32-term logarithm series with rational remainder; integer Walsh; rational prime-log identities; GF2 ranks and exact conditional probabilities. All observed times and minimum rational margins are saved in EXACT_RESULTS. Fixtures check BOTH rank-preserving and rank-dropping cases, endpoint events, correlated/unequal events and normalized references with off-support mass. The full mathematical derivations/cube coverage supply general quantifiers; the finite fixtures alone do not.
+
+All mathematical jobs below50s, estimated<=120MB; no heavy job, GPU, automatic dimension escalation, window or detached worker. memok exited1 before a possible compiler launch: physical2.8GB below4.0GB, with commit20.2GB above8.0GB. CofactorScale.lean is auxiliary SOURCE ONLY; no Lean-checked theorem or compiler pass is claimed. Existing work was untouched.
+
+## proof dependencies and changed downstream conclusions
+
+A012-DISJOINT-PRIVATE-MUX-ADMISSION@6 NEW cancellation/eight-row/quotient/reference increment scoped HOLDS after independent reconstruction. C005 supplies only the scalar JS conversion. Earlier v1-v5 full grammar/nonmember proof is not newly accepted. The block-profile transport lemma is a self-contained uniform-linear-fiber/Bayes identity, not an assumption of FEI. It applies to physical private queries too if q retains the actual event on the full physical data cube; an already averaged marginal can lose the needed moments. A012/A086/A094 can use this exact law to carry the quotient through histories. No fresh source bank, free terminal cost, universal ordered-cover existence or L/S/R contraction follows. Label/root metadata explicitly expose rather than erase the outstanding historical-reference price.
+
+## one next mathematical action and independent reviewer
+
+Use the conditional moments in the exact block law to expose ONE both-private rank3 collision, and pay its residual from the SAME unused inherited child/shared bank with both full terminal references and old debit. A012 consumes the corrected physical profile; A086/A094 review the new law and scoped v6 reconstruction. This targets the currently unpaid universal witness/history interface instead of repeating the now-closed pure-child probability cube.
+
+## actual persistence receipts or precise save blocker
+
+Saved the required four protocol files, DERIVATION, independent replay code, frozen specs, all exact outputs, source receipts and auxiliary Lean source inside this run. finalize18.py checks exact protocol fields, claim hashes, identical PACKET_DELTA and two-line current STATUS; PERSISTENCE_RECEIPTS records local hashes/sizes. WORKLOG and LEARNED append the result. All files below20MB. No git, email, brain writes or other-agent writes. Supervisor copying, independent downstream acceptance and remote mirroring are unobserved. Checklist lock is an operational receipt issue, not a mathematical conclusion; brain self-care remains degraded/unverified.
+
+## Universal bridge
+
+This advances C020 by independently validating the NEW full eight-row/affine-rank3 pure-child complete-reference transfer at unchanged K<7, and C024 by supplying exact ALL-block physical quotient/profile/label/root transport with the original disagreement event retained. The stale-profile counterexample shows why rank stability alone cannot justify a history payment. What remains is one BOTH-private collision paid from demonstrably unused inherited shared/child capacity with both full terminal references and old debit; no such payment is proved here. NEXT combines that precise profile change with the remaining bank, the shortest missing step toward universal FEI rather than another isolated pure-child class.

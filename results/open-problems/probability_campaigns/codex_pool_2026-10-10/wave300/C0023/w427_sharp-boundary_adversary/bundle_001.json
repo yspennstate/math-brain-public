@@ -1,0 +1,122 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w427",
+  "bundle_slug": "percolation-uniform-exhaustion-20261010",
+  "entries": [
+    {
+      "key": "uniform-exhaustion",
+      "namespace": "probability.percolation",
+      "logical_name": "uniform-one-arm-criterion-for-graph-exhaustions",
+      "kind": "concept",
+      "title": "Uniform one-arm criterion for graph exhaustions (draft)",
+      "statement": "Draft analysis awaiting independent review: Let G be an infinite connected locally finite graph, o a vertex, and G_n increasing subgraphs containing o that exhaust its vertices and edges. At a fixed common Bernoulli bond parameter p define a_n(R)=P_p(o connects in G_n to ambient graph distance at least R). Finite path witnesses and continuity of probability give theta_G(p)=inf_R sup_n a_n(R), whereas theta_G_n(p)=inf_R a_n(R). Hence absence of an infinite origin cluster in G requires, and is equivalent to, a radius R for each epsilon>0 that bounds a_n(R) by epsilon simultaneously for every n. Separate radius limits for each n do not supply this quantifier order.",
+      "proof_text": null,
+      "assumptions": [
+        "Infinite connected locally finite ambient graph",
+        "Increasing vertex-and-edge exhaustion with common origin",
+        "Fixed common Bernoulli bond parameter",
+        "Integer radii R>=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:uniform-one-arm-criterion-for-graph-exhaustions",
+        "url": "urn:math:probability.percolation:uniform-one-arm-criterion-for-graph-exhaustions",
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "strip-cut",
+      "namespace": "probability.percolation",
+      "logical_name": "independent-cut-bound-for-finite-width-lattice-strips",
+      "kind": "concept",
+      "title": "Independent cut bound for finite-width lattice strips (draft)",
+      "statement": "Draft calculation awaiting independent review: In independent nearest-neighbor bond percolation on S_k=Z x {-k,...,k}, with finite integer k>=0, p<1 and integer R>=1, the origin's probability of connecting to a vertex with |x|>=R is at most 2[1-(1-p)^(2k+1)]^R. Each interface between adjacent columns has 2k+1 edges; its all-closed event has probability (1-p)^(2k+1), and interfaces use disjoint bonds. Thus each fixed strip has p_c=1. The rate deteriorates with k, so this estimate does not establish absence of percolation in the increasing union.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent nearest-neighbor bonds",
+        "Finite strip width",
+        "0<=p<1",
+        "R>=1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:independent-cut-bound-for-finite-width-lattice-strips",
+        "url": "urn:math:probability.percolation:independent-cut-bound-for-finite-width-lattice-strips",
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "strip-union-obstruction",
+      "namespace": "probability.percolation",
+      "logical_name": "nonpercolating-strips-with-percolating-increasing-union",
+      "kind": "concept",
+      "title": "Nonpercolating strips with a percolating increasing union (draft)",
+      "statement": "Draft counterexample awaiting independent review: For the same parameter p=99/100 every finite-width strip S_k=Z x {-k,...,k} has no infinite Bernoulli bond cluster, while their increasing union Z^2 percolates. An enclosing closed dual circuit count gives theta_Z2(p)>=1-10557/2352250000>0.99999. Consequently unrestricted transfer of nonpercolation from every approximating graph to its union is false, even when every graph is infinite, connected, locally finite and quasi-transitive. This example is supercritical in the plane and the strip critical probabilities do not converge to the planar critical probability; it does not refute critical nonpercolation on higher-dimensional lattices or a bridge with additional threshold hypotheses.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent nearest-neighbor bonds on Z^2",
+        "Fixed p=99/100",
+        "Finite widths before each radius limit"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:nonpercolating-strips-with-percolating-increasing-union",
+        "url": "urn:math:probability.percolation:nonpercolating-strips-with-percolating-increasing-union",
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "critical-status-caution",
+      "namespace": "probability.percolation",
+      "logical_name": "dated-critical-percolation-status-and-proof-receipts",
+      "kind": "concept",
+      "title": "Dated critical-percolation status and proof receipts",
+      "statement": "The intermediate-dimension critical bond-percolation target asks theta_d(p_c(d))=0 on nearest-neighbor Z^d for every integer 3<=d<=10. A September 2026 public preprint claims the broader quasi-transitive bond theorem. The current status is UNKNOWN in this analysis because the full recent proof has not been independently verified. A comparator theorem whose body is by sorry is an admitted statement, not a proof receipt; this alone does not refute a separate paper. A dated assertion of openness must retain its date until a current source and proof are checked.",
+      "proof_text": null,
+      "assumptions": [
+        "Bond and site models distinguished",
+        "Current status verification requires the actual proof and assumptions"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:dated-critical-percolation-status-and-proof-receipts",
+        "url": "urn:math:probability.percolation:dated-critical-percolation-status-and-proof-receipts",
+        "revision": "2026-10-10-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "strip-union-obstruction",
+      "to_key": "strip-cut",
+      "kind": "depends_on",
+      "rationale": "The counterexample uses the independent-cut estimate to establish nonpercolation in every fixed approximating strip."
+    },
+    {
+      "from_key": "strip-union-obstruction",
+      "to_key": "uniform-exhaustion",
+      "kind": "cites",
+      "rationale": "The exact exhaustion identities explain the two distinct orders of radius and width limits in this counterexample."
+    },
+    {
+      "from_key": "uniform-exhaustion",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10",
+      "kind": "semantic_association",
+      "rationale": "A proposed exhaustion route to the exact critical target must justify its width/radius quantifier exchange. This criterion supplies no critical uniform bound and does not solve the target."
+    },
+    {
+      "from_key": "critical-status-caution",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10",
+      "kind": "semantic_association",
+      "rationale": "The existing problem card records a September 7 historical search; the source caution prevents reading that date-qualified result as verified current openness."
+    }
+  ]
+}

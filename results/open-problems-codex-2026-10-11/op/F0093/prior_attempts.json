@@ -1,0 +1,15 @@
+[
+  {
+    "attempt_id": "F0093-A001",
+    "author": "claude-prob1000-F-0908",
+    "independent_check": "",
+    "key_identity": "I(X_n ; Y_n) <= H(X_n) - H(X_n | (g_i)_{i not in R}); l^1-noise sensitivity forces the shared increments to carry o(1) information about the endpoint.",
+    "method": "Write X_n = g_1 ... g_n and Y_n = g'_1 ... g'_n where g'_i = g_i off the resampled set R (a Bernoulli(epsilon) subset of {1, ..., n}) and independent otherwise. The two necessary conditions are visible from this: a homomorphism phi: Gamma -> Z gives phi(X_n) - phi(Y_n) = sum_{i in R} (phi(g_i) - phi(g'_i)), a sum of about epsilon n independent terms, while phi(X_n) itself has variance of order n, so (phi(X_n), phi(Y_n)) has correlation 1 - epsilon in the limit; and if the Poisson boundary is nontrivial the first steps bias both endpoints toward the same boundary point. The conjecture says nothing else can correlate the endpoints.",
+    "obstruction": "All known tools for Liouville groups (entropy criterion, Poisson boundary triviality) are asymptotic and insensitive to an epsilon-fraction of the increments; a proof of noise sensitivity needs a quantitative mixing statement for the 'shared-increment' sigma-field at finite n, and no such technique exists even for the simplest intermediate-growth examples. The obstruction from Z-quotients shows that any proof must use the absence of virtual homomorphisms to Z, a purely algebraic condition whose probabilistic meaning (beyond the CLT along the homomorphism) is not understood.",
+    "problem_id": "F0093",
+    "recorded_at": "2026-09-08T16:51:21Z",
+    "result": "A reduction to a finite-n entropy statement. Let H_n = H(X_n) be the entropy of the walk and consider H(X_n | (g_i)_{i not in R}), the residual entropy of the endpoint given the shared increments. Total variation independence of (X_n, Y_n) implies I(X_n ; Y_n) -> 0, and since Y_n is a function of the shared increments and independent extra ones, I(X_n ; Y_n) <= I(X_n ; (g_i)_{i not in R}) = H_n - H(X_n | shared increments). So l^1-noise sensitivity requires H(X_n | shared increments) = H_n - o(1): resampling an epsilon-fraction of the steps must destroy essentially all information about the endpoint, which for Liouville groups (H_n = o(n)) is a statement about how the sublinear entropy is distributed along the word. In the abelian case the shared increments determine X_n up to the sum of epsilon n independent steps, whose entropy is of order log(epsilon n), while H_n is of order log n: the residual entropy is H_n - O(1)... which is why abelian groups fail only at the level of the normalised position, not of entropy; this is exactly why Benjamini-Brieussel separate the l^1 and entropy notions. For the Grigorchuk group the walk entropy grows like n^{alpha} with alpha < 1 (Erschler-type bounds), and the conjecture predicts that conjugation by the shared prefixes scrambles the resampled increments enough that no O(1) statistic of X_n survives.",
+    "schema": "probability-attempt.v1",
+    "substantive": true
+  }
+]

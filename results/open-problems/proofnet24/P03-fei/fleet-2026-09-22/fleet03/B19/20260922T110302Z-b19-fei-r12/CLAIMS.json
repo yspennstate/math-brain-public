@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T110302Z-b19-fei-r12",
+  "programme": "FEI-ALL-TEAM-20260922T095941Z",
+  "assignment": "Terminal-to-KL conversion",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "claims": [
+    {
+      "id": "ROBUST-TRIGGER-EDGE-MI-RATE",
+      "status": "PROVED_IN_THIS_REPORT",
+      "scope": "Median-gauged genuine ratio-rho>4 all-block critical core; relative-eta robust derivative row with 0<=eta<=1/16; actual trigger coordinate k in F_i.",
+      "statement": "I(X_i;X_k) >= q_i * kappa_eta, where kappa_eta=d2((1-2eta)/2 || 1/6)>0.",
+      "dependencies": [
+        "fleet04/B12 robust trigger boundary p_ik>=2(1-2eta)q_i",
+        "fleet02/B13 exact co-pair identity s_ik=p_ik/4+o_ik",
+        "fleet04/B18 critical-core consequence q_k<1/6"
+      ]
+    },
+    {
+      "id": "ROBUST-TRIGGER-FOREST-TOTAL-CORRELATION",
+      "status": "PROVED_IN_THIS_REPORT",
+      "scope": "Same critical-core domain; any collection R_eta of relative-eta robust derivative rows.",
+      "statement": "K_susp=sum_i h2(q_i)-H(X) >= (kappa_eta/2) * J_R, J_R=sum_{i in R_eta}q_i.",
+      "nonreuse": "Choose one actual trigger edge per row, delete one minimum-tail-weight edge from each directed cycle, retain at least half total row influence, then use the forest entropy-chain inequality sum_edges I <= total correlation. No all-pairs summation is claimed."
+    },
+    {
+      "id": "ROBUST-TRIGGER-OCCURRENCE-KL-AFTER-BASELINE",
+      "status": "PROVED_IN_THIS_REPORT",
+      "scope": "Same critical-core domain, full squared-Fourier law. Let v=P(X!=empty), c0=1-prod_i(1-q_i), P+ be conditioned nonempty law, Q+ its canonical nonempty I-projection, R_q+ conditioned independent-Bernoulli(q) reference, and K_occ=D(P+||Q+).",
+      "statement": "v K_occ >= [ (kappa_eta/2) J_R - d2(v||c0) - v D(Q+||R_q+) ]_+.",
+      "eta_1_16_constant_bits": 0.14508926952925866,
+      "dependencies": [
+        "ROBUST-TRIGGER-FOREST-TOTAL-CORRELATION",
+        "fleet04/B17 exact balanced-suspension split K_susp=d2(v||c0)+vK_occ+vD(Q+||R_q+)"
+      ],
+      "interpretation": "A genuine terminal-to-information inequality with exact nonnegative tensor/conditioning baselines subtracted before irreducible occurrence dependence is credited."
+    },
+    {
+      "id": "BASELINE-DOMINATED-ROBUST-EXCLUSION",
+      "status": "OPEN_TARGET_NOT_ESTABLISHED",
+      "statement": "On a genuine rho>4 critical core, exclude or pay the branch in which d2(v||c0)+vD(Q+||R_q+) >= (kappa_eta/2)J_R by an affordable physical block, ratio descent, or another paid Path-C alternative."
+    },
+    {
+      "id": "FULL-FEI",
+      "status": "OPEN_NOT_PROVED",
+      "statement": "There exists a finite dimension-independent C such that H(f)<=C I(f) for every finite uniform-cube Boolean function."
+    }
+  ],
+  "retired_routes_not_used": [
+    "raw U4=O(J) from all-block terminality plus tensor primitivity",
+    "unweighted convolution-L2 universal payment",
+    "fixed-depth/low-level KL projection as universal payment",
+    "summation of all pair mutual informations as if globally nonreused"
+  ],
+  "partner_status": {
+    "designated_partner": "fleet04/B19",
+    "completed_current_programme_artifact_observed_before_publication": false,
+    "compatible_other_account_result_applied": "fleet04/B17 exact balanced-suspension information split",
+    "additional_assignment_source_results_applied": ["fleet04/B12", "fleet04/B18"]
+  }
+}

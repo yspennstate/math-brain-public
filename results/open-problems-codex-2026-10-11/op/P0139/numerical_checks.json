@@ -1,0 +1,113 @@
+{
+  "seed": 139,
+  "polygon_loops": 12,
+  "polygon_steps_per_loop": 32,
+  "random_increment_checks": 5000,
+  "global_coordinate_max_error": 6.661338147750939e-16,
+  "increment_formula_max_error": 7.771561172376096e-16,
+  "partitions_per_cutoff": 1000,
+  "p": 2.5,
+  "truncation_checks": [
+    {
+      "cutoff": 0,
+      "sampled_first_difference": 1.409256630525009,
+      "sampled_area_difference": 0.937899225661748,
+      "eps_upper_bound": 6.791611040198754,
+      "absolute_area_tail": 1.0404816554018075,
+      "bound_expression": 119.38192193656572
+    },
+    {
+      "cutoff": 1,
+      "sampled_first_difference": 0.7022292335713362,
+      "sampled_area_difference": 0.3428672084255158,
+      "eps_upper_bound": 3.395805514208288,
+      "absolute_area_tail": 0.2601203673372945,
+      "bound_expression": 47.89934527493169
+    },
+    {
+      "cutoff": 3,
+      "sampled_first_difference": 0.1774561798184788,
+      "sampled_area_difference": 0.0807133692523656,
+      "eps_upper_bound": 0.8489513230921,
+      "absolute_area_tail": 0.016257464817134193,
+      "bound_expression": 9.763907678405703
+    },
+    {
+      "cutoff": 6,
+      "sampled_first_difference": 0.02200580424210509,
+      "sampled_area_difference": 0.005512355869578887,
+      "eps_upper_bound": 0.10611762713377429,
+      "absolute_area_tail": 0.00025396183924867157,
+      "bound_expression": 1.139867697663243
+    },
+    {
+      "cutoff": 9,
+      "sampled_first_difference": 0.0027689340484899506,
+      "sampled_area_difference": 0.0004907197237596537,
+      "eps_upper_bound": 0.01323550510862311,
+      "absolute_area_tail": 3.9071052192103325e-06,
+      "bound_expression": 0.1409127173700152
+    },
+    {
+      "cutoff": 11,
+      "sampled_first_difference": 0.0006546324336451779,
+      "sampled_area_difference": 0.00012823730401886194,
+      "eps_upper_bound": 0.0030679615757712815,
+      "absolute_area_tail": 1.860526294862063e-07,
+      "bound_expression": 0.03263135113082014
+    },
+    {
+      "cutoff": 12,
+      "sampled_first_difference": 0.0,
+      "sampled_area_difference": 0.0,
+      "eps_upper_bound": 0.0,
+      "absolute_area_tail": 0,
+      "bound_expression": 0.0
+    }
+  ],
+  "circle_obstruction": [
+    {
+      "m": 1,
+      "sup_norm": 2.0,
+      "area_exact": "pi",
+      "area_float": 3.141592653589793,
+      "pvar_upper_bound": 7.028334766906197
+    },
+    {
+      "m": 4,
+      "sup_norm": 1.0,
+      "area_exact": "pi",
+      "area_float": 3.141592653589793,
+      "pvar_upper_bound": 6.118520790363923
+    },
+    {
+      "m": 16,
+      "sup_norm": 0.5,
+      "area_exact": "pi",
+      "area_float": 3.141592653589793,
+      "pvar_upper_bound": 5.326481720590361
+    },
+    {
+      "m": 64,
+      "sup_norm": 0.25,
+      "area_exact": "pi",
+      "area_float": 3.141592653589793,
+      "pvar_upper_bound": 4.636971662246447
+    },
+    {
+      "m": 256,
+      "sup_norm": 0.125,
+      "area_exact": "pi",
+      "area_float": 3.141592653589793,
+      "pvar_upper_bound": 4.0367182925568095
+    },
+    {
+      "m": 1024,
+      "sup_norm": 0.0625,
+      "area_exact": "pi",
+      "area_float": 3.141592653589793,
+      "pvar_upper_bound": 3.5141673834530995
+    }
+  ],
+  "qualification": "Sampled partition checks supplement the analytic proof; they do not optimize p-variation."
+}

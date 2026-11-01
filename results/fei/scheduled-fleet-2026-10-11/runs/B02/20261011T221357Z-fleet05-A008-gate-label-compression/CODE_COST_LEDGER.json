@@ -1,0 +1,15 @@
+{
+  "codebook": "Fixed structural rational table (supports, eta, kappa, q); sampled-set-dependent selection requires fixed normalized prior w_j and log(1/w_j).",
+  "gate_names": "-log kappa_k + log E_k(eta) - sum_F log eta_l; for uniform eta, -log kappa_k + log binom(m,k). Each selected gate has one dictionary entry.",
+  "attachments": "0 conditional bits: least eligible coordinate on deterministic BFS parent edge after all local subsets decoded; no sampled attachment choice in this generator.",
+  "subset_choices": "sum_F[-log q_l(B_l)]; q_l is normalized on nonempty support subsets and includes every size/weight normalizer.",
+  "root_choices": "0 conditional bits: smallest gate per source SCC, computed from decoded ownership. Dictionary selection is paid; original queue root odds/conditioning have NOT been reused or dropped.",
+  "child_order": "Fixed increasing dictionary order and deterministic BFS; no occurrence-label fields.",
+  "reference_normalizer": "All size, dictionary and subset laws normalized explicitly. No discarded failure/conditioning normalizer.",
+  "final_output_ambiguity": "Record decoder returns exact r and union A, with zero output ambiguity. Quotient decoder returns A and a canonical representative; Q(A)=sum fiber a(r). Latent record identity is not recovered.",
+  "posterior_credit": "-H(nu) legitimate for quotient/reference infimum only, not subtracted from physical raw witness length.",
+  "empty_output": "Use mass 1-v at empty and v*Q(A) for nonempty; entropy ledger h2(v)+sum_nonempty P(A)(-log Q(A)).",
+  "binary_rounding": "ceil(-log reference mass), canonical finite prefix code; <1 bit once for the entire chosen record or output message.",
+  "sunflower_bounds": "Nonempty output-reference expectation <25I/4; full output-prefix expected length <33I/4; raw record cost >=(1-2^-m)^2 log m.",
+  "addressing": "Dedicated model exactly 2a bits: a-bit gate address once, a-bit control subset, mandatory private coordinate. If chosen in a half-weight mixture, add 1 bit."
+}

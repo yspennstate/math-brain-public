@@ -1,0 +1,11 @@
+{
+ "helper_version":"A080-point-receipt-actual-AND-orientation-v1.1",
+ "correction":"The first check.py receipts used canonical point defects at mask0. Actual AND_minus(G_n,y), bit1=sign-1, is negative at mask2^n. These are physically isometric and have identical H,I and full hulls, as proved in PROOF.md. Final receipts now check actual signed Walsh coefficients at mask2^n directly, avoiding an implicit sign convention.",
+ "family":"Same Boolean family, dimensions and parameter domain as FROZEN_SPEC; no search or dimension increase.",
+ "case_count":"Pilot4 direct fixtures and4 formulas; full12 direct fixtures through13 bits and128 formulas. This repeats validation solely for the explicit orientation correction.",
+ "symmetry":"Coordinate sign-flip isometry proved, but final direct fixture uses actual AND orientation.",
+ "arithmetic":"Signed integer Walsh, direct physical influence, unchanged pinned384-bit interval helper.",
+ "memory_estimate_MB":100,
+ "pilot_max_seconds":55,
+ "maximum_runtime_seconds":55
+}

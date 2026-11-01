@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "helper_version": "A100-independent-reset-review-v1",
+  "pilot": true,
+  "cases": [
+    {
+      "n": 2,
+      "dimension": 3,
+      "vertices": 8,
+      "I": "5/4",
+      "query_influence": "1/4",
+      "TV_upper": "1/8",
+      "M": 4,
+      "weighted_reset_interval": [
+        "115067210057837765293975/302231454903657293676544",
+        "460268840231351061175901/1208925819614629174706176"
+      ],
+      "H_upper": "670022106733848418786045/302231454903657293676544",
+      "8I": "10",
+      "zero_refund": "exact matching conditional distributions",
+      "both_children_nonconstant": true
+    },
+    {
+      "n": 3,
+      "dimension": 4,
+      "vertices": 16,
+      "I": "1",
+      "query_influence": "1/8",
+      "TV_upper": "1/32",
+      "M": 16,
+      "weighted_reset_interval": [
+        "142027791152352057171335/302231454903657293676544",
+        "568111164609408228685341/1208925819614629174706176"
+      ],
+      "H_upper": "1721922348429771473114663/604462909807314587353088",
+      "8I": "8",
+      "zero_refund": "exact matching conditional distributions",
+      "both_children_nonconstant": true
+    }
+  ],
+  "minimality_truth_tables": 16,
+  "qualifying_query_cases": 8,
+  "exact_assertions": 151,
+  "elapsed_seconds": 0.004517,
+  "arithmetic": "independent direct signed character sums; butterfly crosscheck; physical edges; Fraction atanh intervals",
+  "rung": "analytic all-n reconstruction plus independent exact finite certificates; Lean receipt separate",
+  "limits": "finite checks do not prove all-n extension; no FEI counterfamily or integrated assembly acceptance"
+}

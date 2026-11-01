@@ -1,0 +1,14 @@
+{
+  "helper_version": "local_ratios.py v1",
+  "family": "X009 quadratic bent splice on m+1 physical bits; B05 the same splice activated on r=2k controls",
+  "parameter_domain": {"m_or_k": [4,6,8,10], "B05_r": "2*k"},
+  "case_count": 8,
+  "symmetry": "Coordinate types proved from quadratic-pair permutations and control permutations: data, selector, and B05 control",
+  "arithmetic": "Integer FWHT for bent cores and small full tables; Fraction coefficients and influence; compressed coefficient-pair multiplicities checked exactly; rational atanh-series logarithm intervals for ordering",
+  "memory_estimate": "Below 100 MB; B05 full truth table only at k=4, r=8; larger parameters use compressed pairs and core FWHT up to k=10",
+  "max_runtime_seconds": 60,
+  "pilot": "Closed-form compressed ratios on the 8 fixed cases; no large table and no floating claim acceptance",
+  "max_full_table_dimension": 13,
+  "purpose": "Exact formulas, rigorous finite ordering certificates, analytic all-parameter selection proof; no automatic dimension escalation",
+  "memok": "No job over 300 MB is planned; therefore the pre-heavy-job check is not triggered"
+}

@@ -1,0 +1,84 @@
+  <head> 
+    <title> The low-density limit of coalescing branching random walk  </title> 
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head> 
+
+
+<h2 align=center>The low-density limit of coalescing branching random walk</h2>
+
+
+This is one of the "something like this must be true" situations. 
+The issue is to find a reasonably "clean" proof technique that can be adapted to both models below, 
+and hopefully to other variants too.
+<p>
+For concreteness take the lattice $Z^3$ -- what's important is  random walk is transient.
+<p>
+<b> Model 1.</b>
+Consider a model CBRW of branching coalescing random walk.  
+To be definite (though the point is that the details shouldn't matter) take particles behaving as:
+<br>
+(i) continuous-time simple RW
+<br>
+(ii) splitting at rate \( \beta\), a daughter particle placed at an adjacent site
+<br>
+(iii) two particles coalesce into one if they meet.
+<br>
+Such a process has a (translation-invariant) stationary distribution for which the mean number of particles per site (<i>intensity</i>) 
+equals some \( p(\beta) \).  
+See <a href="http://www.isid.ac.in/~statmath/eprints/2003/isid200322.pdf">this Athreya-Swart paper</a> for discussion.
+There seems no simple exact formula for the complete stationary distribution, 
+but one can calculate \( p(\beta) \sim c \beta\)  as \( \beta \to 0 \).
+<p>
+
+<b> Model 2.</b>  
+This is the constrained Ising model from
+page 16-17 of <a href="../../Talks/persi-ising.pdf">The constrained 
+Ising model as an algorithm for storage in dynamic graphs</a> 
+but now with $Z^3$ instead of a finite graph.  
+The model has a parameter \( p \) and in the stationary distribution, 
+site are occupied as an i.i.d. Bernoulli (\( p \)) process.  
+As commented in the linked material, 
+this process evolves in a way that emulates some variant of CBRW.
+<p>
+<b>Problem A.</b>
+The issue is to show that, for Models 1 and 2 and related models where there is a stationary distribution, 
+as the intensity (which depends on model parameters) tends to 0, the suitable time-rescaled process 
+in which we track the ``lineages" (splits and merges) but not the spatial positions, of the particles, converges in distribution to 
+the following simple limit process.
+
+<p>
+
+<b>A limit process.</b>
+The limit process is constructed  w.r.t. a reference particle at time  0. 
+This has a lineage from the infinite past to the infinite future; ``splits" and ``merges" with some other lineage both occur
+at times of  Poisson(1) point processes.  A split [merge] creates a new lineage running froward [backward], and recursively  such a lineage 
+has its own splits and merges, each creating a new lineage.
+
+<p>
+In the conjectured  convergence result we need to overlook "jitter", the times where a daughter particle soon coalesces with its parent, which we do by 
+asking only for convergence of finite dimensional distributions (in time).
+
+<p><br>
+<b>Problem B.</b>
+As suggested in
+<a href="../../Talks/persi-ising.pdf">The constrained 
+Ising model as an algorithm for storage in dynamic graphs</a>,
+study this model on a graph which is changing in time.
+
+
+<p><br>
+<b>History</b>.
+This page posted 2012, though the linked "constrained Ising model" material was in the 2006 version.
+<p><br>
+<b>Update (March 2018).</b>
+<a href="pillai-smith.pdf">Pillai-Smith (2017)</a> give a detailed treatment of  Model 2 on the \(d \ge 3\) dimensional torus in order to study its mixing time.
+<a href="https://arxiv.org/abs/1608.08743"> Aghajani et al.</a> study different models of storage
+in unreliable networks.
+
+
+
+<p><br>
+Back to <b><a href="https://www.stat.berkeley.edu/~aldous/Research/OP/index.html">Open Problem list</a></b>
+

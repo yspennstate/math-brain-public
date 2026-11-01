@@ -1,0 +1,71 @@
+{
+  "gate": {
+    "foreground_processes": 1,
+    "gpu": false,
+    "max_wall_seconds": 60,
+    "max_vertices": 5,
+    "max_bond_state_visits": 61000,
+    "max_boolean_comparisons": 17000,
+    "available_memory_bytes": 3837964288,
+    "minimum_memory_bytes": 134217728,
+    "observed_at_unix": 1791612731.726769,
+    "allowed": true
+  },
+  "L1_exact_checks": 16656,
+  "L1_violations": 0,
+  "L2_graphs_considered": 1096,
+  "L2_graphs_connecting_terminals": 858,
+  "L2_bond_state_visits": 57220,
+  "L2_violations": 0,
+  "L2_by_n": [
+    {
+      "vertices": 3,
+      "graphs": 8,
+      "graphs_connecting_all_three": 4,
+      "bond_state_visits": 20
+    },
+    {
+      "vertices": 4,
+      "graphs": 64,
+      "graphs_connecting_all_three": 42,
+      "bond_state_visits": 644
+    },
+    {
+      "vertices": 5,
+      "graphs": 1024,
+      "graphs_connecting_all_three": 812,
+      "bond_state_visits": 56556
+    }
+  ],
+  "L3": {
+    "pair_probability": 0.4999999999999999,
+    "one_to_two_probability": 0.646446609406726,
+    "reference_probability": 0.5,
+    "bias": 0.14644660940672605,
+    "fair_star_partial_probability": 0.375,
+    "fair_star_tv_from_fair_site": 0.375
+  },
+  "sharp_comparison": {
+    "event": "AND of three cells",
+    "mu_success_each": 0.25,
+    "nu_success_each": 0.5,
+    "unweighted_bound": 0.75,
+    "weighted_bound": 0.109375,
+    "actual_difference": 0.109375,
+    "bound_reduction_factor": 6.857142857142857
+  },
+  "independence_counterexample": {
+    "marginal_tv_sum": 0,
+    "event_probability_difference": 0.5
+  },
+  "spin_check": {
+    "convention": "sin(pi*sigma/2)=sqrt(q)/2; 0<sigma<1",
+    "q": 1,
+    "prior_sigma": 0.6666666666666666,
+    "correct_sigma": 0.3333333333333333,
+    "prior_sigma_implied_q": 2.9999999999999996,
+    "correct_sigma_implied_q": 0.9999999999999998
+  },
+  "seconds": 52.992892600013874,
+  "limitation": "Finite checks and numerical evaluations support the written proofs; they are not a proof of C0017 or of the unbounded graph lemma."
+}

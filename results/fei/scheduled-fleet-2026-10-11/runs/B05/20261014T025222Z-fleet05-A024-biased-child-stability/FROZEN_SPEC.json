@@ -1,0 +1,13 @@
+{
+  "helper_version": "check_stage2.py bounded-cache v2; resumes unfinished 20261012 derivation, not a dimension expansion",
+  "family": "Fixed five-bit bent/point-flip selector module c; every two-input gate g(c,h) with h on two bits; parity-activated tensor family F_LN",
+  "domain": {"pilot_gate_masks": [0], "full_gate_masks": "0..15", "second_child_masks": "0..15", "pilot_tree_pairs": [[1,1]], "full_tree_pairs": [[1,1],[1,2],[1,4],[2,1],[2,2],[2,4]], "symbolic_pairs": "L=1..32,N=L^2 (rational formulas only)"},
+  "case_count": {"pilot_roots":16,"full_roots":256,"full_root_splits":1792,"pilot_complete_trees":2,"full_complete_trees":12},
+  "symmetry": "None for gate grid; identical subproblems memoized exactly in complete trees",
+  "arithmetic": "Integer Walsh spectra, Fraction arithmetic, prime-log forms, rational atanh remainder bounds (24 terms, 48 if necessary), integer product certificates",
+  "memory_estimate_MB": 150,
+  "max_runtime_seconds": {"pilot":60,"full":300},
+  "max_truth_table_bits":14,
+  "automatic_dimension_escalation":false,
+  "prior_failure": "Uncached previous full run reached its 180-second watchdog without an assertion failure. No completed validation was inferred."
+}

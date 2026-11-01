@@ -1,0 +1,87 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w401",
+  "bundle_slug": "p0003-fixed-length-source-scope-001",
+  "entries": [
+    {
+      "key": "p0003-original-question",
+      "namespace": "probability.saw",
+      "logical_name": "p0003-original-fixed-length-question-scope",
+      "kind": "concept",
+      "title": "P0003 asks about a uniform fixed-length honeycomb walk",
+      "statement": "Grimmett's Question 2.2 asks whether a uniformly chosen n-step vertex-self-avoiding walk from the origin of the hexagonal lattice, after suitable rescaling, converges weakly to an SLE(8/3) random curve. This is a conjectural question. The source does not specify the spatial scaling sequence, curve topology, or SLE variant and stopping convention.",
+      "proof_text": null,
+      "assumptions": ["Grimmett, Selected problems in probability theory, Question 2.2, arXiv:2205.07318v1"],
+      "domain": "probability theory; planar self-avoiding walk",
+      "source": {
+        "source_id": "arxiv:2205.07318v1:Question-2.2",
+        "url": "https://arxiv.org/abs/2205.07318",
+        "revision": "v1-2022-05-15; checked-2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "Does a uniformly distributed n-step SAW from the origin of H converge weakly"
+      }
+    },
+    {
+      "key": "related-chordal-conjecture",
+      "namespace": "probability.saw",
+      "logical_name": "honeycomb-chordal-critical-fugacity-saw-conjecture",
+      "kind": "concept",
+      "title": "Related chordal critical-fugacity honeycomb SAW conjecture",
+      "statement": "In a bounded simply connected Jordan domain with distinct accessible boundary marks a,b, approximate the domain by mesh-delta honeycomb graphs and assign each self-avoiding a-to-b path probability proportional to x_c to the power of its length, where x_c=1/sqrt(2+sqrt(2)). The conjectured mesh-zero limit is chordal SLE(8/3) from a to b. This restricted-domain formulation is related to, but is not a proved equivalent restatement of, the uniform n-step free-endpoint question P0003.",
+      "proof_text": null,
+      "assumptions": ["Bounded Jordan working specialization of Duminil-Copin and Smirnov, Conjecture 1", "Consistent accessible boundary approximations"],
+      "domain": "probability theory; planar self-avoiding walk",
+      "source": {
+        "source_id": "arxiv:1007.0575v2:Conjecture-1",
+        "url": "https://arxiv.org/abs/1007.0575",
+        "revision": "v2-2011-06-27; checked-2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "For x = xc, the law of gamma_delta ... converges ... to ... SLE with parameter kappa = 8/3"
+      }
+    },
+    {
+      "key": "ensemble-transfer-gap",
+      "namespace": "probability.saw",
+      "logical_name": "fixed-length-versus-chordal-fugacity-ensemble-transfer-gap",
+      "kind": "concept",
+      "title": "A fixed-length SAW limit needs its own ensemble transfer",
+      "statement": "For a finite collection of self-avoiding paths with weights x to the power of path length, x>0, conditioning on length n makes the law uniform among the n-step paths in that same collection, because all surviving weights equal x^n. A prescribed terminal vertex and bounded domain remain part of that collection. Weak convergence of the unconditioned variable-length laws alone does not identify a conditional law at a length whose probability tends to zero; a relative local-limit estimate or another explicit transfer theorem is required before a chordal critical-fugacity result can address Grimmett's uniform n-step free-endpoint question.",
+      "proof_text": null,
+      "assumptions": ["Finite nonempty path collection", "Positive fugacity", "Selected n-step subcollection nonempty"],
+      "domain": "probability theory; ensemble comparison",
+      "source": {
+        "source_id": "owner-own-work:w400-w401-P0003-ensemble-audit-20261010",
+        "url": "~/brain_workers/w401/REVIEW_PACKET.md",
+        "revision": "2026-10-10; w400 derivation independently checked by w401",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0003-original-question",
+      "to_existing_logical": "math:probability.core:open-problem-p0003-hexagonal-self-avoiding-walk-scaling-limit",
+      "kind": "semantic_association",
+      "rationale": "New card: 'uniformly chosen n-step ... from the origin'; existing P0003 card: 'rescaled uniform n-step hexagonal-lattice self-avoiding walk'. The primary source sharpens the existing node's ensemble scope."
+    },
+    {
+      "from_key": "ensemble-transfer-gap",
+      "to_key": "p0003-original-question",
+      "kind": "semantic_association",
+      "rationale": "Transfer card: 'conditioning on length n makes the law uniform among the n-step paths in that same collection'; P0003 card: 'uniformly chosen n-step ... from the origin'. The same-collection qualification is essential."
+    },
+    {
+      "from_key": "ensemble-transfer-gap",
+      "to_key": "related-chordal-conjecture",
+      "kind": "semantic_association",
+      "rationale": "Transfer card: 'prescribed terminal vertex and bounded domain remain part of that collection'; chordal card: 'self-avoiding a-to-b path' in a bounded domain. This is the exact restriction requiring a separate transfer."
+    },
+    {
+      "from_key": "p0003-original-question",
+      "to_key": "related-chordal-conjecture",
+      "kind": "semantic_association",
+      "rationale": "P0003 card specifies a 'uniformly chosen n-step' walk from the origin; chordal card specifies 'probability proportional to x_c to the power of its length' with marked a,b. They share the SAW/SLE(8/3) prediction but define different laws."
+    }
+  ]
+}

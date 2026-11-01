@@ -1,0 +1,1 @@
+The initial pilot stopped after its first graph when saving its checkpoint: the new out directory had not been created. No mathematical assertion failed. Added mkdir(exist_ok=True) before any output. The frozen family, arithmetic and runtime limits are unchanged. Successful counters exclude that incomplete run.

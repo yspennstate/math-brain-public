@@ -1,0 +1,54 @@
+--- a/~/.claude/dreaming/research_target_lookup.py
++++ b/~/.claude/dreaming/research_target_lookup.py
+@@ -0,0 +1,51 @@
++"""Optional read-only P0309 fallback; no live recall controls are changed."""
++import argparse
++import json
++from pathlib import Path
++import re
++import sqlite3
++import time
++
++STORE=Path("~/math-brain-build/local/population/brain.sqlite3")
++TITLES={"p0309": ("Open problem: Positive-temperature crystalline Gibbs phases for three-dimensional Riesz gases", "Attempt on Positive-temperature crystalline Gibbs phases for three-dimensional Riesz gases")}
++
++def target_id(query):
++    targets={value.lower() for value in re.findall(r"(?<![A-Za-z0-9])P[0-9]{4}(?![A-Za-z0-9])",query,re.I)}
++    return targets.pop() if len(targets)==1 else None
++
++def lookup(query,store=STORE):
++    target=target_id(query)
++    if target not in TITLES:
++        return []
++    start=time.monotonic()
++    con=sqlite3.connect(Path(store).resolve().as_uri()+"?mode=ro",uri=True,timeout=2)
++    try:
++        con.execute("PRAGMA query_only=ON")
++        con.row_factory=sqlite3.Row
++        con.set_progress_handler(lambda:int(time.monotonic()-start>3),1000)
++        rows=[dict(row) for row in con.execute("SELECT id,title,body,metadata_json FROM nodes WHERE kind='claim' AND title IN (?,?) LIMIT 4",TITLES[target])]
++        allowed={"op-"+target,"at-"+target}
++        found=[]
++        for row in rows:
++            metadata=json.loads(row.pop("metadata_json"))
++            if metadata.get("bundle_entry_key") in allowed:
++                row["metadata"]=metadata
++                found.append(row)
++        return found
++    finally:
++        con.close()
++
++def main():
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("query")
++    args=parser.parse_args()
++    start=time.monotonic()
++    try:
++        cards=lookup(args.query)
++        result={"query":args.query,"read_only":True,"elapsed_s":time.monotonic()-start,"cards":cards,"warning":"Historical author-checked cards are not current-status or theorem-applicability certificates."}
++    except (sqlite3.Error,OSError,ValueError) as error:
++        result={"query":args.query,"read_only":True,"elapsed_s":time.monotonic()-start,"cards":[],"error":str(error)}
++    print(json.dumps(result,ensure_ascii=False,indent=2))
++
++if __name__=="__main__":
++    main()

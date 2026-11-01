@@ -1,0 +1,65 @@
+[
+  {
+    "claim_id": "A039-TERMINAL-OPTIMAL-RESTRICTION-TREE",
+    "version": 1,
+    "exact_statement": "For every m>=1, every complete adaptive physical coordinate tree on f_m=1-2*1_zero has the same terminal-inclusive erasure optimum V_m=B_m+V_(m-1)/2, V_1=0, with a_m=2^(1-m), B_m=phi((1-a_m)^2,a_m^2)+(2^(m-1)-1)*2*a_m^2 and phi(x,y)=(x+y)h2(y/(x+y)). With I_m=m*a_m, 2-4/m<=V_m/I_m<=2+log2(e)/m, hence V_m/I_m tends to 2. For the explicitly defined activated quadratic point-flip selector B05 roots k=2,r=4 and k=4,r=8, the terminal-inclusive Bellman minima have V/I in [1.836014211380,1.836014211381] and [1.956704604624,1.956704604625], respectively; the root control orbit is uniquely optimal and the complete control-first policy attains the exact minimum. For each r=4,...,8, the actual descendant D(1,1,2,r), whose active core is (-1)^(u*v)-2*1_{u=v=w=0,y=1}, uniquely favors querying u or v; a control query followed by optimal children has the strictly positive exact gap recorded in INDEPENDENT_K4.json. Consequently control-first optimality at these roots does not extend to every descendant. The tree objective retains E_leaf H(f_leaf), and its minimum is over all actual adaptive trees, including stopping trees.",
+    "hypotheses": [
+      "Finite uniform physical Boolean cubes; signs +/-1; binary coordinates x correspond to signs (-1)^x; information in bits",
+      "Physical adaptive coordinate choices depend only on the previous physical history; retain actual terminal spectral entropy; remove only irrelevant coordinates",
+      "B_i=H(S_i|S_-i)=h2(Inf_i)-I_P(S_i;S_-i); all-m point defect is 1 except -1 at zero",
+      "B05 uses b=(-1)^(sum disjoint pair products), b_prime=b-2*1_zero, a fresh selector y, and all-zero activation on r fresh controls; finite root and descendant domains exactly as stated",
+      "Control-first policy queries remaining activation controls, then follows an optimal core tree; no hereditary or all-even-k optimum claim"
+    ],
+    "statement_sha256": "0edee63a522fe936ede5a15b9f40ce509603deb3a028a8300590066daa99a486",
+    "contributors": [
+      "A039"
+    ],
+    "proof_source": {
+      "run_id": "20261013T235428Z-fleet05-A039-projection-under-restrictions",
+      "files": [
+        "TREE_TARGET.md",
+        "OPTIMUM_PROOF.md",
+        "REPORT.md",
+        "code/optimal_tree.py",
+        "code/verify_tree.py",
+        "code/check_and.py",
+        "out/OPTIMALITY_CERTIFICATE_K2.json",
+        "out/OPTIMALITY_CERTIFICATE_K4.json",
+        "out/INDEPENDENT_K2.json",
+        "out/INDEPENDENT_K4.json",
+        "out/AND_CERTIFICATE.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A039-COHERENT-PROJECTION-TRANSFER",
+        "version": 1,
+        "use": "existing physical entropy decrement interface; needed decrement re-derived in TREE_TARGET",
+        "status": "AUTHOR_PROVED_EXACTLY_VALIDATED_PENDING_INDEPENDENT_REVIEW"
+      },
+      {
+        "claim_id": "A037-PHYSICAL-SPECTRAL-COMMON-LIFT",
+        "version": 1,
+        "use": "optional root-spectral posterior interpretation only",
+        "status": "INDEPENDENTLY_REVIEWED_LOCALLY_BY_A039_IN_FIRST_STAGE"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_VALIDATED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Hereditary control-first Bellman optimality at every physical descendant of the two certified B05 roots"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A037",
+      "A038",
+      "A040",
+      "A064",
+      "A088",
+      "A091",
+      "A094",
+      "B20"
+    ]
+  }
+]

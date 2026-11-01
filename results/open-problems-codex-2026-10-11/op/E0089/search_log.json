@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-12",
+  "results": [
+    [
+      "arxiv",
+      "https://export.arxiv.org/api/query?search_query=all%3A%22bootstrap%20percolation%22%20AND%20all%3A%22noise%22&max_results=50",
+      "OK",
+      "<?xml version='1.0' encoding='UTF-8'?>\n<feed xmlns:opensearch=\"http://a9.com/-/spec/opensearch/1.1/\" xmlns:arxiv=\"http://arxiv.org/schemas/atom\" xmlns=\"http://www.w3.org/2005/Atom\""
+    ],
+    [
+      "openalex",
+      "https://api.openalex.org/works?search=Noise%20sensitivity%20in%20bootstrap%20percolation&per-page=30",
+      "HTTP Error 429: Too Many Requests",
+      ""
+    ],
+    [
+      "crossref",
+      "https://api.crossref.org/works?query.title=Noise%20sensitivity%20in%20bootstrap%20percolation&rows=15",
+      "OK",
+      ""
+    ],
+    [
+      "semantic",
+      "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1509.08454?fields=title,authors,year,externalIds,citations.title,citations.year,citations.externalIds",
+      "HTTP Error 429: ",
+      ""
+    ],
+    [
+      "github",
+      "https://api.github.com/search/repositories?q=bootstrap%20percolation%20noise%20sensitivity",
+      "OK",
+      ""
+    ],
+    [
+      "openalex_regular",
+      "https://api.openalex.org/works?search=bootstrap%20percolation%20random%20regular%20noise%20sensitivity&per-page=30",
+      "HTTP Error 429: Too Many Requests",
+      ""
+    ]
+  ]
+}

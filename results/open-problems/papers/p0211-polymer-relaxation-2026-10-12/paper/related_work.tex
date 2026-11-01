@@ -1,0 +1,102 @@
+\subsection{Relation to earlier work}
+
+Reversible clustering processes and their product-form equilibrium
+laws are classical; see Kelly~\cite[Chapter~8]{Kelly1979} and
+Whittle~\cite{Whittle1986}. Durrett, Granovsky, and
+Gueron~\cite{DurrettGranovskyGueron1999} characterize reversibility
+for a broad class of coagulation--fragmentation processes and study
+the resulting equilibrium distributions. Berestycki and
+Pitman~\cite{BerestyckiPitman2007} relate Gibbs laws on partitions
+to recursive fragmentation and its coalescent time reversal.
+The stationary law used here belongs to this established setting.
+
+The solvable family of Granovsky and
+Erlihson~\cite{GranovskyErlihson2009} contains the present model.
+In their notation, set
+\[
+ N=n,\qquad a=0,\qquad b=2/n,\qquad\phi(1,1)=\beta.
+\]
+Their Proposition~1 gives the autonomous count process, and their
+fragmentation formulas give the same unequal- and equal-fragment
+rates as~\eqref{eq:fragmentation-rates}. Their Section~2.3 announces
+equality of the full-process and count gaps and gives the bounds
+\[
+ \beta+2/n\le\gamma_Q\le\beta+2-2/n.
+\]
+The displayed transition formula used there concerns initial laws
+with Gibbs conditional distributions at fixed count. Our proof of
+the gap equality instead controls every orthogonal sector of every
+polymer observable. We use this independent comparison to obtain
+the uniform error estimate, the critical limit, and the graph
+extensions. The gap equality itself is attributed to that earlier
+work.
+
+Hoze and Holcman~\cite{HozeHolcman2018} analyze the same constant-kernel
+model after a time change: take their fragmentation parameter to be
+$\beta n/2$ and multiply their generator by $2/n$. They obtain
+equilibrium cluster statistics and quantities for tagged clusters.
+D'Orsogna, Lei, and Chou~\cite{DOrsognaLeiChou2015} study first
+assembly and equilibration in finite stochastic clustering systems,
+including restrictions on the largest allowed cluster. The
+all-observable spectral estimate and the mixing statements here
+concern the unrestricted partition-valued chain with the stated
+normalization.
+
+Our one-dimensional arguments use positive-vector estimates for
+birth--death chains, developed in work including
+Zeifman~\cite{Zeifman1991} and Granovsky and
+Zeifman~\cite{GranovskyZeifman2000,GranovskyZeifman2005}.
+The derivative identity is a finite unweighted instance of the
+intertwining relations of Chafa\"i and Joulin~\cite{ChafaiJoulin2013}.
+Filmus~\cite{Filmus2016} gives the orthogonal harmonic structure on
+Boolean slices. We prove the finite identities used in the argument
+so that the cut-to-polymer comparison and its boundary conventions
+are explicit.
+
+The cutoff step uses the birth--death hitting-time theorems of Chen
+and Saloff-Coste~\cite{CSC2015}. The calculation here supplies the
+endpoint means and variances for the moving equilibrium scale
+$K\asymp\sqrt n$. More general concentration and cutoff results for
+density-dependent chains appear in Barbour, Brightwell, and
+Luczak~\cite{BBL2022,BBL2026}. A direct application of a
+fixed-density theorem would require checking both the
+$n$-dependent rescaled rates and the all-monomer starting state,
+whose rescaled density diverges. The passage-time proof handles
+these features directly.
+
+Spatial coagulation--fragmentation has a separate literature.
+Bernardin and Toninelli~\cite{BernardinToninelli2012} study a
+one-dimensional interval process with a dynamical phase transition
+and mixing estimates. Ioffe and T\'oth~\cite{IoffeToth2020} study
+split-and-merge limits for stationary random stirring on a lattice
+torus. Our graph model retains exchangeable
+reaction rates and adds exclusion motion. It is related to graph
+gap reductions for exclusion with reservoirs, including
+Salez~\cite{Salez2023,Salez2024}, and to the one- and two-particle
+identities of Kim and Sau~\cite{KimSau2026}. The reservoir models
+have fixed sitewise creation and annihilation rates, whereas our
+deletion rate is $(|S|-1)/n$ and the reversible law is not a product
+law. Here the higher reaction sectors already dominate the count
+gap, leaving only the one-particle graph calculation in the exact
+formula. The proof therefore does not require the general
+interchange-process gap theorem of Caputo, Liggett, and
+Richthammer~\cite{CaputoLiggettRichthammer2010}.
+
+There are also established growing-kernel and nonreversible
+comparisons. Jiang~\cite{Jiang2015} diagonalizes the Metropolis
+transposition chain with Ewens equilibrium. We record its spectral
+gap in the present time units as a known baseline for a different
+multiplicative coagulation rule. Antisymmetric perturbations that
+preserve equilibrium can accelerate convergence; Hwang, Hwang-Ma,
+and Sheu~\cite{HwangHwangMaSheu2005} give a spectral treatment for
+diffusions. Our four-state circulation verifies strict acceleration
+on the actual reaction graph of the linear-polymer chain.
+
+Deterministic coagulation--fragmentation equations require different
+arguments. Aizenman and Bak~\cite{AizenmanBak1979} prove convergence
+through decay of free energy. Recent work of Bhattacharya and
+Throm~\cite{BhattacharyaThrom2026} obtains convergence without
+detailed balance for perturbations of constant continuous kernels.
+The finite graph and kernel results below concern their explicitly
+defined Markov generators. They do not supply a convergence theorem
+for general spatial coagulation--fragmentation equations.

@@ -1,0 +1,13 @@
+# Measured brain bridge and bounded repair
+
+The exact read-only store lookup recovered P0003's full concept card, including its fixed-n statement and its unverified status. A separate exact lookup recovered the complete Portmanteau card claim_fde5f7c46c3b42858fe57a153974903d. Both payloads are saved in NARROW_MATH_BRAIN_RECEIPT.json and PORTMANTEAU_RECEIPT.json.
+
+The Portmanteau card assumes probability measures on a metric space with its Borel sigma-algebra. Its open-set liminf and closed-set limsup inequalities apply to the laws of d_n=dist(K_n,A), because the distance map is continuous. Its equality for a Borel event has the extra condition "mu(boundary of A) = 0". The raw SAW avoidance proof need does not establish that condition. L2 uses the inequalities at positive buffer distances and then a separate limit, which closes this precise logical bridge without assuming an atom-free contact event.
+
+Measured reasoning failure: the simple-curve raw-event inference has error 1; a fixture with contact mass 3/5 has raw error 0.6. Positive-buffer reasoning gives error 0 in both fixtures. Twenty-two deterministic checks passed. The length-mixture substitution also fails by 0.22654091966098644 at the honeycomb critical fugacity in the explicit finite cycle example. These are fixture results, not a global brain score.
+
+Measured recall failure: the guarded general-brain query requested three rows, set a 55-second deadline, and returned no result rows before TimeoutError, with 59.151 seconds recorded. It attempted 41 opens of the shared attachment write lock, all blocked by the folder-only guard, and emitted attachment exclusions. These exclusions are induced by this guard; they do not establish corrupted memory bundles. The run used process-local refresh suppression and an audit guard, so it is not a benchmark of unrestricted live recall. The receipt is MEMORY_RECALL_RECEIPT.json. After it, the named perceptron_proof_open_gaps_fleet_2026_07_12 scar supplied the proof-safety fallback.
+
+Bounded proposed repair: preserve typed length policy, root/endpoint policy, geometry, status and source locator in the SAW obligation ledger; require a reviewed ensemble bridge before transferring a chordal mixed-length result to fixed-n walks. Store L2 and the two refuted routes as draft material linked to that ledger. An optional separate engineering repair is a genuinely read-only attachment-snapshot path that preserves integrity verification while avoiding shared write locks; no live control was changed here.
+
+NEXT: Review the drafted bridge and ensemble ledger; then prove an actual fixed-length buffered counting estimate.

@@ -1,0 +1,41 @@
+{
+  "evidence_class": "independent synthetic source review, no solver trial",
+  "pinned_source_git_blobs": {
+    "ab30_run.py": "c8e29fa23c843d2f29efff9edd57362505d796c7",
+    "hook_dispatch.py": "565001f17c802fb49e4c0bd2a848252b65363ca2",
+    "analyze.py": "5e49709186b23a8253f390233df0a0c44120ffc1"
+  },
+  "diet_condition_cases": [
+    {
+      "global_switch_exists": false,
+      "arm": "on",
+      "runner_env_flag": null,
+      "dispatcher_diet": false
+    },
+    {
+      "global_switch_exists": false,
+      "arm": "ondiet",
+      "runner_env_flag": "1",
+      "dispatcher_diet": false
+    },
+    {
+      "global_switch_exists": true,
+      "arm": "on",
+      "runner_env_flag": null,
+      "dispatcher_diet": true
+    },
+    {
+      "global_switch_exists": true,
+      "arm": "ondiet",
+      "runner_env_flag": "1",
+      "dispatcher_diet": true
+    }
+  ],
+  "arm_separation_in_either_global_switch_state": false,
+  "grouping": {
+    "exception": "TypeError",
+    "message": "unsupported operand type(s) for |: 'list' and 'set'"
+  },
+  "score_consumes_AUDIT_literal": false,
+  "mutations": "No live files, switches, networks or remote repositories touched; only AST-extracted functions executed with synthetic environment."
+}

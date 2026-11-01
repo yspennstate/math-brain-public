@@ -1,0 +1,120 @@
+{
+  "command": "python -X utf8 ~/brain_workers/w498/verify_math.py --gate-receipt ~/brain_workers/w498/COMPUTE_GATE.json",
+  "observed_at": "2026-10-10T07:10:30.311321+00:00",
+  "gate_receipt": "~\\brain_workers\\w498\\COMPUTE_GATE.json",
+  "scope": "deterministic indexing/geometry checks and evaluations of proved formulas; not a formal proof or independent review",
+  "checks_passed": 12,
+  "checks": [
+    {
+      "check": "strip_geometry_and_maximum",
+      "r": 1,
+      "allowed_paths": 2,
+      "max_absolute_error": 0.0
+    },
+    {
+      "check": "strip_geometry_and_maximum",
+      "r": 2,
+      "allowed_paths": 4,
+      "max_absolute_error": 5.551115123125783e-17
+    },
+    {
+      "check": "strip_geometry_and_maximum",
+      "r": 3,
+      "allowed_paths": 8,
+      "max_absolute_error": 0.0
+    },
+    {
+      "check": "strip_geometry_and_maximum",
+      "r": 4,
+      "allowed_paths": 16,
+      "max_absolute_error": 0.0
+    },
+    {
+      "check": "strip_geometry_and_maximum",
+      "r": 5,
+      "allowed_paths": 32,
+      "max_absolute_error": 0.0
+    },
+    {
+      "check": "strip_geometry_and_maximum",
+      "r": 6,
+      "allowed_paths": 64,
+      "max_absolute_error": 0.0
+    },
+    {
+      "check": "half_normal_variance_vs_overlap_integral",
+      "absolute_error": 4.700684286262913e-13,
+      "value": 0.6816901138162093
+    },
+    {
+      "check": "angular_sign_disagreement",
+      "ou_time": 0.0,
+      "absolute_error": 0.0,
+      "angular_points": 4096
+    },
+    {
+      "check": "angular_sign_disagreement",
+      "ou_time": 0.01,
+      "absolute_error": 1.8952095252190715e-05,
+      "angular_points": 4096
+    },
+    {
+      "check": "angular_sign_disagreement",
+      "ou_time": 0.1,
+      "absolute_error": 0.00014446818452593102,
+      "angular_points": 4096
+    },
+    {
+      "check": "angular_sign_disagreement",
+      "ou_time": 1.0,
+      "absolute_error": 0.00020109728757189416,
+      "angular_points": 4096
+    },
+    {
+      "check": "angular_sign_disagreement",
+      "ou_time": 10.0,
+      "absolute_error": 1.4451246480418067e-05,
+      "angular_points": 4096
+    }
+  ],
+  "maximum_geometry_error": 5.551115123125783e-17,
+  "overlap_integral_variance_error": 4.700684286262913e-13,
+  "formula_rows": [
+    {
+      "diamonds": 100,
+      "vertices": 201,
+      "ou_time": 0.01,
+      "mismatch_probability": 0.04494082709525219,
+      "identical_path_probability": 0.010069966223666115,
+      "log_identical_path_probability": -4.5981979264116,
+      "expected_normalized_overlap": 0.977641379554601,
+      "exact_variance": 169.16901138162092,
+      "variance_per_vertex": 0.8416368725453777
+    },
+    {
+      "diamonds": 10000,
+      "vertices": 20001,
+      "ou_time": 0.0001,
+      "mismatch_probability": 0.004501506554800996,
+      "identical_path_probability": 2.5472476419204984e-20,
+      "log_identical_path_probability": -45.116688439744486,
+      "expected_normalized_overlap": 0.9977493592546368,
+      "exact_variance": 16817.90113816209,
+      "variance_per_vertex": 0.8408530142573917
+    },
+    {
+      "diamonds": 1000000,
+      "vertices": 2000001,
+      "ou_time": 1e-06,
+      "mismatch_probability": 0.00045015808305219715,
+      "identical_path_probability": 2.849785155700912e-196,
+      "log_identical_path_probability": -450.2594346193585,
+      "expected_normalized_overlap": 0.9997749210710134,
+      "exact_variance": 1681691.1138162091,
+      "variance_per_vertex": 0.8408451364855363
+    }
+  ],
+  "asymptotic_variance_per_vertex": 0.8408450569081046,
+  "elapsed_seconds": 0.013281199964694679,
+  "gpu_or_model_loads": 0
+}

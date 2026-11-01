@@ -1,0 +1,85 @@
+{
+  "problem_id": "C0048",
+  "checked_at": "2026-10-10",
+  "exact_statement_artifact": "STATEMENT_ONLY.md",
+  "historical_status": "source_says_open",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 541,
+    "tier": 5,
+    "status": "attempted_un"
+  },
+  "intake": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+    "line": 48,
+    "source_id": "duminil_copin_ising_potts_2017",
+    "verification": "unreviewed"
+  },
+  "prior_attempt": {
+    "id": "C0048-A001",
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 38,
+    "method": "reflection positivity and contour entropy",
+    "result": "No result; entropy constants do not reach q=3,d=3",
+    "independent_check": "none recorded",
+    "caution": "Prior prose about exact contour entropy and numerical sharpness is not a certified theorem."
+  },
+  "primary_sources": [
+    {
+      "source_id": "duminil_copin_ising_potts_2017",
+      "url": "https://www.ihes.fr/~duminil/publi/2017PIMS.pdf",
+      "locator": "Conjecture 2, printed p.93, PDF index 92; definition through wired critical percolation on printed p.37",
+      "verified": true,
+      "short_quote": "is discontinuous for any q >= 3"
+    },
+    {
+      "source_id": "duminil_copin_cdm2015",
+      "url": "https://www.ihes.fr/~duminil/publi/2015%20Currents%20developments%20in%20mathematics.pdf",
+      "locator": "Conjecture 1 and preceding definition on printed p.32",
+      "verified": true,
+      "scope": "nearest-neighbor ferromagnetic; discontinuity means positive critical spontaneous magnetization"
+    },
+    {
+      "source_id": "biskup_chayes_2003",
+      "url": "https://web.ma.utexas.edu/mp_arc/c/02/02-325.pdf",
+      "locator": "Theorem 1.1, Main Theorem (1.12), Theorem 2.1, equations (2.7)-(2.9)",
+      "verified": true,
+      "scope": "sufficiently large dimension depending on fixed integer q; not all d>=3"
+    },
+    {
+      "source_id": "biskup_chayes_crawford_2004",
+      "url": "https://www.math.ucla.edu/~biskup/PDFs/papers/long-range-MFT-final.pdf",
+      "verified": true,
+      "scope": "reflection positive and sufficiently spread-out interactions; not the nearest-neighbor q=d=3 target"
+    },
+    {
+      "source_id": "gobron_merola_2007",
+      "url": "https://arxiv.org/abs/math-ph/0609051",
+      "verified": true,
+      "scope": "Kac interactions of sufficiently large finite range; not nearest-neighbor"
+    }
+  ],
+  "checks": {
+    "attempts_H_I_exact_id": "targeted rg found no C0048 records",
+    "lean": "C0048 occurs in the annotated ranking; no formal proof receipt located",
+    "team_O": "targeted C0048 check found no row in TEAM_BOARD.md",
+    "owner_solved_retired": "Targeted rg found no C0048/Potts match in Open problem project/solved_register.md or the available relevant project README indexes. This bounded negative check is not exhaustive; current openness remains UNKNOWN.",
+    "recent_primary_search": "bounded public searches found no verified full-target proof; this does not establish openness"
+  },
+  "source_hash_check_is_proof": false,
+  "formal_check_receipt": null,
+  "served_model_evidence": {
+    "author": "unavailable from response-side evidence",
+    "requested_settings_are_evidence": false
+  },
+  "brain_store_snapshot": {
+    "database": "~/math-brain-build/local/population/brain.sqlite3",
+    "read_mode": "ro",
+    "target_rank": 1,
+    "prior_attempt_rank": 2,
+    "returned_cards_receipt": "evidence/returned_cards.json",
+    "primary_source_fields_checked": true
+  }
+}

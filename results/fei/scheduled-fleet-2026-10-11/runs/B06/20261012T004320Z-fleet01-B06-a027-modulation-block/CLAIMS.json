@@ -1,0 +1,29 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B06-A027-MODULATION-BLOCK-HIERARCHY",
+      "version": 1,
+      "packet_id": "A027",
+      "attempt_id": "A027-PROPER-BLOCK-MODULATION-1",
+      "gap_id": "G-ADAPTIVE-BLOCK-PAYMENT",
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every finite-depth Boolean modulation hierarchy formed by adjoining fresh disjoint blocks Z_l and replacing every older sign u_i by u_i h_{l,i}(Z_l), querying the newest whole block is proper, has collision mixing term M=0, and has entropy decrement sum_S fhat_{l-1}(S)^2 H(h_{l,S}) with queried influence sum_S fhat_{l-1}(S)^2 I(h_{l,S}). If the base and all occupied auxiliary products obey FEI with constants uniformly bounded by C, then the hierarchy obeys H<=C I with the base entropy retained as terminal debt. Taking all modulators equal to a point defect gives a nonlinear arbitrary-depth subclass with auxiliary constant at most 9/2.",
+      "quantifiers": "All finite depths L; all nonempty finite base cubes; all fresh finite pairwise-disjoint physical blocks; all genuine Boolean bases and modulators satisfying the displayed auxiliary-product premise.",
+      "units": "bits",
+      "scope_exclusions": [
+        "Not a proof of full FEI.",
+        "Not an existential proper-block theorem for arbitrary Boolean functions.",
+        "Does not cover bent-splice branches with unequal squared spectra.",
+        "Does not infer an infinite-dimensional theorem from the finite checker.",
+        "Does not assume that the unknown fixed-root ratio is universal."
+      ],
+      "depends_on": [
+        "B04-A018 exact collision interface at canonical commit 2ae17a5d45294822ac6743aeff1f8ca65e267ff6",
+        "Direct Walsh factorization proved in ADAPTIVE_BLOCK_SELECTION.tex"
+      ],
+      "next_consumers": ["A028", "A029", "A065", "A087", "A097"],
+      "independent_reviewers": ["A087", "A094"]
+    }
+  ]
+}

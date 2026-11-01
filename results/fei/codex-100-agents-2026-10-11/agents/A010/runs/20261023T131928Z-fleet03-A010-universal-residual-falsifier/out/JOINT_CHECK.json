@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "helper": "A010-joint-core-repair-v1",
+  "pilot": false,
+  "checks": 1031,
+  "seconds": 0.7250651999966067,
+  "complete_allocation_tuples": 65792,
+  "actual_anchor_events": 246240,
+  "rows": [
+    {
+      "r": 1,
+      "n": 7,
+      "truth_inputs": 128,
+      "allocation_tuples": 256,
+      "actual_anchor_events": 480,
+      "nonempty_outputs": 127,
+      "I": "57/64",
+      "M_private": "159/512",
+      "joint_cost_interval": [
+        "5294679971999647/2251799813685248",
+        "10589359944000401/4503599627370496"
+      ],
+      "Q_outer_pair": "1/3600",
+      "R_joint_outer_pair": "3607/50400"
+    },
+    {
+      "r": 2,
+      "n": 11,
+      "truth_inputs": 2048,
+      "allocation_tuples": 65536,
+      "actual_anchor_events": 245760,
+      "nonempty_outputs": 2047,
+      "I": "1349/1024",
+      "M_private": "46431/131072",
+      "joint_cost_interval": [
+        "292545124289394709/72057594037927936",
+        "4680721988630959129/1152921504606846976"
+      ],
+      "Q_outer_pair": "50963/103680000",
+      "R_joint_outer_pair": "104036741/1451520000"
+    }
+  ],
+  "bound": "C_joint/I<3725/160<24 for every r>=4",
+  "new_class": "Fixed original Q plus uniform nonempty dictionary on ALL three public core coordinates"
+}

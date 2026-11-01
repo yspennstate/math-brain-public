@@ -1,0 +1,131 @@
+{
+  "command": "python -X utf8 check_congestion.py",
+  "compute_gate": "COMPUTE_GATE.json",
+  "finite_cases": [
+    {
+      "n": 1,
+      "seed": null,
+      "vertices": 25,
+      "inner_vertices": 9,
+      "D_n_size": 9,
+      "H_n_size_in_inner_box": 9,
+      "inclusion": "PASS",
+      "scope": "finite graph; random integer weights are diagnostic only"
+    },
+    {
+      "n": 1,
+      "seed": 0,
+      "vertices": 25,
+      "inner_vertices": 9,
+      "D_n_size": 9,
+      "H_n_size_in_inner_box": 9,
+      "inclusion": "PASS",
+      "scope": "finite graph; random integer weights are diagnostic only"
+    },
+    {
+      "n": 1,
+      "seed": 1,
+      "vertices": 25,
+      "inner_vertices": 9,
+      "D_n_size": 9,
+      "H_n_size_in_inner_box": 9,
+      "inclusion": "PASS",
+      "scope": "finite graph; random integer weights are diagnostic only"
+    },
+    {
+      "n": 2,
+      "seed": null,
+      "vertices": 81,
+      "inner_vertices": 25,
+      "D_n_size": 25,
+      "H_n_size_in_inner_box": 25,
+      "inclusion": "PASS",
+      "scope": "finite graph; random integer weights are diagnostic only"
+    },
+    {
+      "n": 2,
+      "seed": 0,
+      "vertices": 81,
+      "inner_vertices": 25,
+      "D_n_size": 21,
+      "H_n_size_in_inner_box": 24,
+      "inclusion": "PASS",
+      "scope": "finite graph; random integer weights are diagnostic only"
+    },
+    {
+      "n": 2,
+      "seed": 1,
+      "vertices": 81,
+      "inner_vertices": 25,
+      "D_n_size": 22,
+      "H_n_size_in_inner_box": 24,
+      "inclusion": "PASS",
+      "scope": "finite graph; random integer weights are diagnostic only"
+    }
+  ],
+  "inclusion_cases_passed": 6,
+  "inner_vertex_cases_checked": 102,
+  "constant_weight_density_counterexample": [
+    {
+      "n": 8,
+      "crossing_horizontal_lines": 17,
+      "inner_vertices": 289,
+      "line_count_over_area": 0.058823529411764705,
+      "occupied_density": 1,
+      "source": "exact constant-weight formula"
+    },
+    {
+      "n": 32,
+      "crossing_horizontal_lines": 65,
+      "inner_vertices": 4225,
+      "line_count_over_area": 0.015384615384615385,
+      "occupied_density": 1,
+      "source": "exact constant-weight formula"
+    },
+    {
+      "n": 128,
+      "crossing_horizontal_lines": 257,
+      "inner_vertices": 66049,
+      "line_count_over_area": 0.0038910505836575876,
+      "occupied_density": 1,
+      "source": "exact constant-weight formula"
+    },
+    {
+      "n": 512,
+      "crossing_horizontal_lines": 1025,
+      "inner_vertices": 1050625,
+      "line_count_over_area": 0.000975609756097561,
+      "occupied_density": 1,
+      "source": "exact constant-weight formula"
+    }
+  ],
+  "endpoint_partition_counterexample": [
+    {
+      "n": 2,
+      "endpoint_pairs": 4,
+      "fixed_witness_probability": 0.25,
+      "union_probability": 1
+    },
+    {
+      "n": 4,
+      "endpoint_pairs": 16,
+      "fixed_witness_probability": 0.0625,
+      "union_probability": 1
+    },
+    {
+      "n": 16,
+      "endpoint_pairs": 256,
+      "fixed_witness_probability": 0.00390625,
+      "union_probability": 1
+    },
+    {
+      "n": 64,
+      "endpoint_pairs": 4096,
+      "fixed_witness_probability": 0.000244140625,
+      "union_probability": 1
+    }
+  ],
+  "elapsed_seconds": 0.05092369997873902,
+  "parent_problem_solved": false,
+  "limitations": "No iid continuous-law decay estimate and no infinite-model simulation."
+}

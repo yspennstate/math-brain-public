@@ -1,0 +1,1280 @@
+\section{Spectral reductions and finite coordinate cores}
+\label{sec:structure}
+
+Throughout this section \(X=(X_1,\ldots,X_n)\) has independent
+coordinates with probability densities bounded by one.  Write
+\[
+ Q_A(X)=X^{\mathsf T}AX+b^{\mathsf T}X+c_0,
+ \qquad
+ N_A(t)=\#\{j:|\lambda_j(A)|\geq t\}.
+\]
+All assertions are uniform in the affine terms.  For \(0<c\leq1\),
+a \emph{\(c\)-pivot} is either a diagonal entry of modulus at least
+\(c\), or a principal \(2\)-by-\(2\) submatrix whose determinant has
+modulus at least \(c\).  If there is no \(c\)-pivot, then
+\begin{equation}
+ |a_{ii}|<c,\qquad |a_{ij}|^2<c+c^2\leq2c .
+ \label{eq:no-pivot-entries}
+\end{equation}
+
+\subsection{Schur complements and logarithmic potentials}
+
+\begin{lemma}[Spectral count under a coordinate pivot]
+\label{lem:schur-count}
+Let \(B\) be an invertible principal submatrix of a real symmetric
+matrix \(A\), of order \(k\), and let \(S=A/B\) be its Schur
+complement.  For every \(t>0\),
+\[
+ N_S(t)\geq N_A(t)-k.
+\]
+\end{lemma}
+\begin{proof}
+First suppose \(A\) is invertible.  Then \(S\) is invertible and
+\(S^{-1}\) is the complementary principal submatrix of \(A^{-1}\).
+Interlacing bounds the number of eigenvalues of \(S^{-1}\) in
+\((t^{-1},\infty)\) by the corresponding number for \(A^{-1}\).
+It gives the analogous bound in \((-\infty,-t^{-1})\).
+Consequently, at most \(n-N_A(t)\) of the \(n-k\) eigenvalues of
+\(S^{-1}\) have modulus greater than \(t^{-1}\).  This is the
+asserted inequality.  For singular \(A\), apply the argument to
+\(A+\varepsilon I\) along values for which this matrix is invertible,
+at threshold \(t-|\varepsilon|\).  The pivot remains invertible
+for sufficiently small \(\varepsilon\); its Schur complement
+converges to \(S\).  Continuity of the ordered eigenvalues gives
+the result.
+\end{proof}
+
+
+Define
+\[
+ {\cal L}(Y)=\sup_s\mathbb E\log_+\frac1{|Y-s|},
+ \qquad
+ {\cal H}(Y)=\sup_s\mathbb E\left[
+ |Y-s|^{-1/2}\boldsymbol 1_{\{|Y-s|\leq1\}}\right].
+\]
+
+\begin{lemma}[A global logarithmic bound]
+\label{lem:global-log}
+If \(A\ne0\), then
+\[
+ {\cal L}(Q_A)\leq
+ 4+\log_+\frac{5^4}{\|A\|}.
+\]
+In particular, \(N_A(1)\geq1\) implies
+\({\cal L}(Q_A)\leq L_0:=4+4\log5\).
+\end{lemma}
+\begin{proof}
+The quarter-power estimate of Lemma~\ref{four:quarter} and the
+layer-cake formula give
+\[
+ \mathbb E\log_+\frac1{|Q_A-s|}
+ \leq\int_0^\infty
+ \min\{1,5\|A\|^{-1/4}e^{-u/4}\}\,du.
+\]
+The integral is \(4+4\log K\) when \(K=5\|A\|^{-1/4}\geq1\),
+and \(4K\leq4\) otherwise.
+\end{proof}
+
+\begin{lemma}[Half-power integrability at a pivot]
+\label{lem:pivot-half}
+If \(N_A(1)\geq2\) and \(A\) has a \(c\)-pivot, then
+\[
+ {\cal H}(Q_A)\leq44c^{-1/2}.
+\]
+\end{lemma}
+\begin{proof}
+Suppose first that \(a=a_{hh}\) satisfies \(|a|\geq c\).
+Completing the square in the original coordinate \(X_h\) writes
+\(Q_A=a(X_h-m)^2+K\), where \(m\) is affine in the remaining
+coordinates and the quadratic matrix of \(K\) is \(A/a\).
+Lemma~\ref{lem:schur-count} gives \(N_{A/a}(1)\geq1\).
+The conditional density estimate of Lemma~\ref{geom:square}
+therefore yields
+\[
+ {\cal H}(Q_A)
+ \leq |a|^{-1/2}\sup_s\mathbb E J(s-K),
+ \qquad
+ J(d)=\int_{-1}^1 |x|^{-1/2}|x-d|^{-1/2}\,dx .
+\]
+For \(d\ne0\),
+\begin{equation}
+ J(d)\leq8+3\log_+\frac1{|d|}.
+ \label{eq:root-convolution}
+\end{equation}
+Indeed, on \(|x|\leq2|d|\) substitute \(x=|d|u\).
+The resulting integral is at most
+\[
+ \int_{-2}^2 |u|^{-1/2}|u-1|^{-1/2}\,du
+ =2\operatorname{arsinh}\sqrt2+\pi
+   +2\operatorname{arcosh}\sqrt2<8.
+\]
+On \(2|d|<|x|\leq1\), the integrand is at most
+\(\sqrt2/|x|\), giving the remaining term in
+\eqref{eq:root-convolution}.  Lemma~\ref{lem:global-log}
+bounds this case by \(c^{-1/2}(8+3L_0)<40c^{-1/2}\).
+
+Next suppose that a principal two-coordinate block \(B\) is
+definite with determinant \(D\geq c\).  Its conditional density
+is at most \(\pi D^{-1/2}\); integrating
+\(|x-s|^{-1/2}\boldsymbol1_{\{|x-s|\leq1\}}\) gives
+\({\cal H}(Q_A)\leq4\pi c^{-1/2}\).
+
+Finally suppose \(\det B=-D\), \(D\geq c\).
+Lemma~\ref{geom:pair} bounds the conditional density by
+\[
+ D^{-1/2}\left(5.2+
+       \log_+\frac{16\sqrt D}{|y-K|}\right).
+\]
+For every real \(a\),
+\[
+ \int_{-1}^1 |x|^{-1/2}\log_+\frac1{|x-a|}\,dx\leq8.
+\]
+To see this without a regularity assumption, apply layer cake
+to both factors.  Their superlevel sets are intervals, and the
+overlap of two intervals of prescribed lengths is maximal when
+their centres coincide.  The integral is therefore at most its
+value at \(a=0\), namely
+\(2\int_0^1x^{-1/2}\log(1/x)\,dx=8\).
+It follows that
+\[
+ {\cal H}(Q_A)\leq
+ D^{-1/2}\left(28.8+4\log_+(16\sqrt D)\right)
+ \leq c^{-1/2}(28.8+4\log16)+4/e
+ <44c^{-1/2}.
+\]
+All conditionings are on original independent coordinates.
+\end{proof}
+
+\subsection{Gaussian padding and reduction to small pivots}
+
+\begin{theorem}[Reduction to the three-eigenvalue no-pivot case]
+\label{thm:no-pivot-equivalence}
+Fix \(0<c\leq1\).  Suppose that
+\begin{equation}
+ \|p_{Q_A}\|_\infty\leq C_3
+ \quad\text{whenever }N_A(1)\geq3
+ \text{ and \(A\) has no \(c\)-pivot}.
+ \label{eq:no-pivot-hypothesis}
+\end{equation}
+Then the bounded-density conjecture holds for all real symmetric
+matrices with \(N_A(1)\geq3\).  One admissible bound is
+\[
+ \max\left\{C_3,\ c^{-1/2}(1+G_2),\ 20c^{-1/2}\right\},
+ \qquad
+ G_2=\max\{2\sqrt{2\pi e}\,C_3,\ 44c^{-1/2}\}.
+\]
+The converse implication is immediate.
+\end{theorem}
+\begin{proof}
+First consider a matrix \(M\) with \(N_M(1)\geq2\) and no
+\(c\)-pivot.  Choose \(N>1/c\), put
+\(u=N^{-1/2}(1,\ldots,1)\), and let \(G_1,\ldots,G_N\) be
+independent standard Gaussian variables, independent of \(X\).
+The variable \(Z=\langle u,G\rangle\) is standard Gaussian.
+The matrices \(M\oplus uu^{\mathsf T}\) and
+\(M\oplus(-uu^{\mathsf T})\) have at least three eigenvalues
+of modulus at least one and no \(c\)-pivot: all new diagonal
+entries have modulus \(1/N<c\), all two-coordinate minors
+inside the new block vanish, and a mixed minor is the product
+of two diagonal entries of modulus less than \(c\).
+The original Gaussian coordinate densities are bounded by one.
+Thus \eqref{eq:no-pivot-hypothesis} applies to \(Q_M\pm Z^2\).
+
+The density of \(Z^2\) is
+\[
+ k(t)=\frac{e^{-t/2}}{\sqrt{2\pi t}}\boldsymbol1_{\{t>0\}}.
+\]
+For \(0<|t|\leq1\),
+\[
+ k(t)+k(-t)\geq(2\pi e)^{-1/2}|t|^{-1/2}.
+\]
+Adding the two convolution bounds gives
+\({\cal H}(Q_M)\leq2\sqrt{2\pi e}\,C_3\).
+The estimate holds for every centre \(s\), rather than only
+almost every centre: the symmetrized kernel
+\((2\pi|t|)^{-1/2}e^{-|t|/2}\), with value \(+\infty\) at zero,
+is lower semicontinuous.  Its convolution has the same property,
+so an almost-everywhere upper bound extends everywhere.
+Lemma~\ref{four:quarter} also ensures that \(Q_M\) has no atoms.
+Together with Lemma~\ref{lem:pivot-half}, this proves
+\begin{equation}
+ N_M(1)\geq2\quad\Longrightarrow\quad {\cal H}(Q_M)\leq G_2
+ \label{eq:global-half-conditional}
+\end{equation}
+for every matrix \(M\).
+
+Now let \(N_A(1)\geq3\).  The case with no pivot is the
+hypothesis.  At a one-coordinate pivot \(a\), the square
+kernel and Lemma~\ref{lem:schur-count} give
+\[
+ p_{Q_A}(s)\leq |a|^{-1/2}\mathbb E|s-K|^{-1/2}
+ \leq c^{-1/2}(1+G_2),
+\]
+using \eqref{eq:global-half-conditional} for the Schur
+complement.  A definite two-coordinate pivot gives
+\(\pi c^{-1/2}\).  At an indefinite pivot of determinant
+\(-D\), the centre has at least one large eigenvalue, so
+Lemmas~\ref{geom:pair} and \ref{lem:global-log} give
+\[
+ p_{Q_A}(s)\leq
+ D^{-1/2}\bigl(5.2+\log_+(16\sqrt D)+L_0\bigr)
+ \leq20c^{-1/2}.
+\]
+This exhausts the cases.
+\end{proof}
+
+\begin{remark}
+The reduction assumes \eqref{eq:no-pivot-hypothesis} and requires
+neither regularity of the original coordinate densities nor moment
+bounds.
+\end{remark}
+
+\subsection{Finite-dimensional bounds and projected gradients}
+
+\begin{theorem}[Slicing by a projected gradient]
+\label{thm:projected-gradient-slicing}
+Let \(E\) be a three-dimensional invariant subspace of \(A\)
+on which every eigenvalue has modulus at least \(\sigma>0\).
+Put
+\[
+ \ell_i=|P_Ee_i|^2,\qquad {\cal R}(E)=\sum_i\sqrt{\ell_i}.
+\]
+Then
+\begin{equation}
+ \|p_{Q_A}\|_\infty
+ \leq\frac{2\sqrt{2\pi}}{\sigma}{\cal R}(E)
+ \leq\frac{2\sqrt{6\pi n}}{\sigma}.
+ \label{eq:projected-slicing}
+\end{equation}
+For \(n=3\), the bound improves to \(6\sqrt\pi/\sigma\).
+All eigenvalues outside \(E\) are unrestricted.
+\end{theorem}
+\begin{proof}
+Write \(v(x)=\nabla Q_A(x)\) and \(g(x)=P_Ev(x)\).
+There is a unique \(z_0\in E\) with
+\(2(A|_E)z_0+P_Eb=0\), and hence
+\[
+ g(x)=2(A|_E)(P_Ex-z_0),\qquad
+ |g(x)|\geq2\sigma|P_Ex-z_0|.
+\]
+The set \(g=0\) has codimension three and has probability zero.
+The identities \(v^{\mathsf T}g=|g|^2\) and \(g\in E\) imply
+\begin{equation}
+ 1\leq\sum_i\frac{|\partial_iQ_A|\,|g_i|}{|g|^2},
+ \qquad |g_i|\leq\sqrt{\ell_i}|g|.
+ \label{eq:projected-field-partition}
+\end{equation}
+The absolute values in this inequality are necessary; individual
+terms of \(v^{\mathsf T}g\) need not be nonnegative.
+
+Let \(\psi\) be a nonnegative bounded compactly supported
+Borel function.  Multiply \eqref{eq:projected-field-partition}
+by \(\psi(Q_A(x))\prod_jf_j(x_j)\), integrate, and apply
+Tonelli.  For the \(i\)-th summand, fix all coordinates except
+\(x_i=t\).  On the monotonicity intervals of the resulting
+nonconstant quadratic or linear polynomial, one-dimensional
+change of variables gives
+\[
+ \int \psi(Q_A)f_i(t)
+       \frac{|\partial_iQ_A|\,|g_i|}{|g|^2}\,dt
+ =
+ \int\psi(s)
+ \sum_{\substack{t:Q_A(t,x_{-i})=s\\ \partial_iQ_A\ne0}}
+ f_i(t)\frac{|g_i(t,x_{-i})|}{|g(t,x_{-i})|^2}\,ds .
+\]
+Critical values form a null set.  If the fibre polynomial is
+constant, the left side is zero and the fibre contributes zero.
+
+Choose a two-dimensional subspace \(E_i\subset E\cap e_i^\perp\).
+It exists because \(\dim E=3\).  The projection
+\(P_{E_i}x\) is independent of the coordinate \(t=x_i\), and
+\[
+ |g(x)|\geq2\sigma|P_{E_i}x-P_{E_i}z_0|.
+\]
+There are at most two noncritical roots, and \(f_i\leq1\).
+The root sum is consequently at most
+\[
+ \frac{\sqrt{\ell_i}}
+ {\sigma|P_{E_i}x_{-i}-P_{E_i}z_0|}.
+\]
+The vector \(P_{E_i}X\) is an orthonormal two-dimensional
+projection of the remaining original product coordinates.
+Its density is at most \(2\), by
+\citet[Theorem~1.1]{LPP2016}.
+For a two-dimensional probability density bounded by \(M\),
+layer cake gives
+\[
+ \mathbb E|Y-z|^{-1}
+ \leq\int_0^\infty\min\{1,\pi M/u^2\}\,du
+ =2\sqrt{\pi M}.
+\]
+The \(i\)-th summand is therefore bounded by
+\((2\sqrt{2\pi}/\sigma)\sqrt{\ell_i}\int\psi\).
+Summing proves domination of the output law by the first
+constant in \eqref{eq:projected-slicing} times Lebesgue
+measure.  This establishes absolute continuity as well as
+the essential density bound, without a pointwise density
+assumption on a level set.
+
+Finally \(\sum_i\ell_i=3\), so
+\({\cal R}(E)\leq\sqrt{3n}\).
+When \(n=3\), \(E_i\) is the full original coordinate
+complement, whose density is at most one; also
+\({\cal R}(E)=3\).  This gives \(6\sqrt\pi/\sigma\).
+\end{proof}
+
+\begin{corollary}[The finite-dimensional spectral problem]
+\label{thm:finite-dimension}
+If \(A\) is \(n\)-by-\(n\) and \(N_A(\lambda)\geq3\), then
+\[
+ \|p_{Q_A}\|_\infty\leq2\sqrt{6\pi n}/\lambda.
+\]
+\end{corollary}
+\begin{proof}
+Choose \(E\) to be spanned by three corresponding eigenvectors
+and apply Theorem~\ref{thm:projected-gradient-slicing}.
+\end{proof}
+
+\begin{corollary}[A finite coordinate core]
+\label{cor:finite-core}
+Suppose a principal submatrix \(A_{KK}\), with \(|K|\leq N\),
+has three eigenvalues of modulus at least \(\lambda>0\).
+Then
+\[
+ \|p_{Q_A}\|_\infty\leq2\sqrt{6\pi N}/\lambda,
+\]
+irrespective of the ambient dimension and all other blocks of \(A\).
+\end{corollary}
+\begin{proof}
+Condition on \(X_{K^c}\).  The remaining variables retain their
+independent densities, the quadratic matrix is \(A_{KK}\),
+and the conditioned values affect only its affine terms.
+Apply Corollary~\ref{thm:finite-dimension} and average.
+\end{proof}
+
+\begin{theorem}[A localized spectral core with a dense perturbation]
+\label{thm:physical-core-stability}
+Let \(H\) contain \(m\geq3\) original coordinates, and suppose
+\[
+ A_{HH}=U_H\Lambda U_H^{\mathsf T}+T_H,\qquad
+ U^{\mathsf T}U=I_3,\qquad
+ U_H^{\mathsf T}U_H\geq aI_3,
+\]
+where \(\Lambda\) is symmetric,
+\(s_{\min}(\Lambda)\geq s>0\), and
+\(\|T_H\|\leq\varepsilon<as\).
+Then every choice of the other blocks of \(A\) satisfies
+\[
+ \|p_{Q_A}\|_\infty\leq
+ \frac{2\sqrt{6\pi m}}{as-\varepsilon}.
+\]
+\end{theorem}
+\begin{proof}
+Put \(G=U_H^{\mathsf T}U_H\) and
+\(V=U_HG^{-1/2}\).  The columns of \(V\) are orthonormal.
+On their span, the rank-three matrix
+\(U_H\Lambda U_H^{\mathsf T}\) is represented by
+\(K=G^{1/2}\Lambda G^{1/2}\), for which
+\[
+ |Kz|\geq\sqrt a\,|\Lambda G^{1/2}z|
+ \geq as|z|.
+\]
+For \(x\in\operatorname{range}(V)\), the triangle inequality
+gives \(|A_{HH}x|\geq(as-\varepsilon)|x|\).
+The variational characterization of singular values yields
+\(s_3(A_{HH})\geq as-\varepsilon\).
+Now apply Corollary~\ref{cor:finite-core}.
+\end{proof}
+
+The perturbation in Theorem~\ref{thm:physical-core-stability}
+is retained in the actual physical matrix.  Its small operator
+norm certifies the spectrum on the core; the proof makes no
+assertion that \(\varepsilon|X|^2\) is small.
+
+\begin{proposition}[Small balls of a projected gradient]
+\label{prop:projected-gradient}
+Let \(u_1,\ldots,u_r\) be orthonormal eigenvectors of \(A\),
+with nonzero eigenvalues \(\lambda_1,\ldots,\lambda_r\),
+and put \(U=(u_1,\ldots,u_r)\).
+The vector \(Y=U^{\mathsf T}\nabla Q_A(X)\) has density at most
+\[
+ K=\frac{2^{-r/2}}{\prod_{j=1}^r|\lambda_j|}.
+\]
+Writing \(v_r\) for the volume of the unit ball in
+\(\mathbb R^r\), for every \(z\in\mathbb R^r\), \(a>0\),
+and \(0<p<r\),
+\[
+ \mathbb P\{|Y-z|\leq a\}\leq\min\{1,Kv_ra^r\},
+ \qquad
+ \mathbb E|Y-z|^{-p}
+ \leq\frac r{r-p}(Kv_r)^{p/r}.
+\]
+\end{proposition}
+\begin{proof}
+Since
+\[
+ U^{\mathsf T}\nabla Q_A
+ =2\operatorname{diag}(\lambda_1,\ldots,\lambda_r)U^{\mathsf T}X
+   +U^{\mathsf T}b,
+\]
+the projection-density bound of Lemma~\ref{four:projection}
+and change of variables give \(K\).
+Integrating this density over a ball gives the first estimate.
+The second follows by integrating the first estimate in the
+layer-cake identity
+\(\mathbb E|Y-z|^{-p}
+=\int_0^\infty\mathbb P\{|Y-z|<t^{-1/p}\}\,dt\).
+\end{proof}
+
+The projected-gradient estimate controls neighbourhoods of
+critical points.  It does not, by itself, bound the density of
+\(Q_A\): the level-set integral also contains the product
+density, which is allowed to be rough.
+
+\subsection{An affine estimate for exact rank two}
+
+\begin{lemma}[A square with an arbitrary linear term]
+\label{lem:rank-one-affine}
+For \(|u|=1\), \(\mu\ne0\), and arbitrary \(b,c_0\),
+\[
+ \sup_s\mathbb P\{|\mu\langle u,X\rangle^2+
+ b^{\mathsf T}X+c_0-s|\leq a\}
+ \leq8\sqrt{a/|\mu|}.
+\]
+\end{lemma}
+\begin{proof}
+This is Lemma~\ref{rt:rank-one}; its Gaussian smoothing
+argument includes arbitrary original-coordinate affine terms.
+The closed-interval version follows by decreasing the radius
+to \(a\) from above.
+\end{proof}
+
+\begin{theorem}[Exact rank two]
+\label{thm:rank-two-affine}
+Suppose \(A=RMR^{\mathsf T}\), where \(R^{\mathsf T}R=I_2\),
+\(M\) is real symmetric, and \(|\det M|\geq1\).
+Then, for \(0<a\leq1\),
+\[
+ \sup_s\mathbb P\{|Q_A-s|\leq a\}
+ \leq32\sqrt2\,a(1+\log(1/a))\leq46a(1+\log(1/a)).
+\]
+Moreover, Theorem~\ref{rt:half} gives the stronger fractional-potential bound
+\(\sup_s\mathbb E|Q_A-s|^{-1/2}<68\).
+\end{theorem}
+\begin{proof}
+Let \(\rho_i=R^{\mathsf T}e_i\).
+If every \(|\rho_i|^2\leq1/2\), Fresnel linearization in the
+two spectral directions and the geometric
+Brascamp--Lieb estimate give
+\(|\phi_{Q_A}(t)|\leq4\pi/(|t|\sqrt{|\det M|})\).
+The Fej\'er kernel
+\((\sin(x/2)/(x/2))^2\) is greater than \(9/10\) on \([-1,1]\).
+Its triangular Fourier representation yields
+\[
+ \mathbb P\{|Y-s|\leq a\}
+ \leq\frac{10}{9}a\int_{|t|\leq a^{-1}}|\phi_Y(t)|\,dt.
+\]
+Using \(|\phi|\leq1\) on \(|t|\leq1\) gives the asserted
+bound with constant less than \(28\).
+
+Otherwise choose \(h\) with \(l=|\rho_h|^2>1/2\).
+Rotate the two-dimensional frame so that
+\(\rho_h=\sqrt l\,e_2\), and write
+\[
+ M=\begin{pmatrix}s&q\\q&a_0\end{pmatrix}.
+\]
+The first column \(r_1\) of \(R\), restricted to \(h^c\), is
+a unit vector; the second restricted column \(r_2\) is
+orthogonal to it.  As a quadratic in \(x=X_h\), write
+\(Q_A=ax^2+2Lx+T\), and define
+\(\Delta=L^2+a(s_0-T)\), for a target level \(s_0\).
+Its quadratic matrix is
+\[
+ cc^{\mathsf T}-aA_{h^c,h^c}
+ =-l\det(M)\,r_1r_1^{\mathsf T},
+ \qquad
+ c=A_{h^c,h}=\sqrt l(qr_1+a_0r_2),\quad a=la_0.
+\]
+This identity follows by expanding both sides; the coefficients
+of \(r_2r_2^{\mathsf T}\) and
+\(r_1r_2^{\mathsf T}+r_2r_1^{\mathsf T}\) cancel.
+The other terms of \(\Delta\) are affine.
+Lemma~\ref{lem:rank-one-affine} thus gives
+\(\mathbb P\{|\Delta-t|\leq u\}\leq8\sqrt2\sqrt u\).
+
+The one-variable quadratic sublevel estimate, including the
+linear case \(a=0\), bounds the conditional probability by
+\(\min\{1,4a_{\!s}/\sqrt{|\Delta|}\}\), where \(a_{\!s}\)
+is the small-ball radius.  Hence
+\[
+ \mathbb P\{|Q_A-s_0|\leq a_{\!s}\}
+ \leq\int_0^1\min\{1,32\sqrt2\,a_{\!s}/\theta\}\,d\theta
+ \leq32\sqrt2\,a_{\!s}(1+\log(1/a_{\!s})).
+\]
+The potential estimate is Theorem~\ref{rt:half}, since
+\(|\det M|\geq1\).
+\end{proof}
+
+\section{Off-diagonal rank and quantitative skeletons}
+\label{sec:skeletons}
+
+For a real symmetric matrix \(A\), let
+\[
+ \rho(A)=\max_{S\cap T=\varnothing}\operatorname{rank}A_{ST},
+ \qquad
+ \operatorname{mr}(A)=\min_{D\ {\rm diagonal}}\operatorname{rank}(A-D).
+\]
+The sets \(S,T\) in this definition need not have the same size.
+
+\begin{theorem}[Exact completion by a diagonal]
+\label{thm:diagonal-completion}
+For every real symmetric \(A\),
+\[
+ \operatorname{mr}(A)\leq3\rho(A).
+\]
+For every positive integer \(r\), examples satisfy
+\(\rho(A)=r\) and \(\operatorname{mr}(A)=2r\).
+If \(\rho(A)\leq1\), then \(\operatorname{mr}(A)\leq2\).
+\end{theorem}
+\begin{proof}
+Put \(r=\rho(A)\).  The case \(r=0\) means that \(A\) is
+diagonal.  Otherwise choose disjoint \(r\)-sets \(S,T\)
+with \(A_{ST}\) invertible, and put \(C=A_{ST}^{-1}\),
+\(K=S\cup T\), \(L=K^c\).
+For \(l\in L\), write \(x_l=A_{lT}\), \(y_l=A_{lS}\),
+and collect these rows in matrices \(X,Y\).
+Every off-diagonal \((r+1)\)-minor vanishes; adjoining
+distinct \(l,m\in L\) to the selected minor gives
+\[
+ a_{lm}=x_lCy_m^{\mathsf T}.
+\]
+Symmetry therefore implies that the span of the vectors
+\((y_l,x_l)\in\mathbb R^{2r}\) is isotropic for the
+nondegenerate alternating form
+\[
+ \omega((y,x),(y',x'))=xC(y')^{\mathsf T}-x'Cy^{\mathsf T}.
+\]
+An isotropic subspace has dimension at most \(r\):
+it is contained in its orthogonal complement for this
+nondegenerate form, and the two dimensions sum to \(2r\).
+The matrix \(P=XCY^{\mathsf T}\) is symmetric because its
+off-diagonal entries agree with those of \(A_{LL}\).
+Choose \(D_K=0\) and
+\(D_L=\operatorname{diag}(A_{LL}-P)\).
+Each \(L\)-row of \(A-D\) is a fixed linear image of
+\((y_l,x_l)\), so these rows span at most \(r\) dimensions.
+The \(2r\) rows in \(K\) add at most \(2r\), proving
+\(\operatorname{mr}(A)\leq3r\).
+
+A star with centre \(h\), zero leaf--leaf entries and at
+least two nonzero edges has \(\rho=1\) and
+\(\operatorname{mr}=2\).  Its off-diagonal matrix already
+has rank two.  A symmetric rank-one completion would have
+the form \(\pm vv^{\mathsf T}\); two nonzero centre--leaf
+entries would then force a nonzero entry between those
+leaves.  Direct sums of \(r\) such stars have the stated
+parameters, since both quantities add over direct sums.
+
+It remains to prove the improved upper bound for \(\rho\leq1\).
+Consider the support graph of the off-diagonal entries.
+For four distinct indices the hypothesis reads
+\(a_{ik}a_{jl}=a_{il}a_{jk}\).
+Two disjoint edges consequently force all six edges on their
+four endpoints.  A vertex adjacent to a clique of order at
+least three is adjacent to every vertex of that clique:
+pair its incident edge with edges between the other clique
+vertices and use the same identity.
+Thus, if disjoint edges occur, all nonzero edges lie in a
+single complete graph with at least four vertices.
+On this graph the numbers
+\[
+ c_i=\frac{a_{ij}a_{ik}}{a_{jk}}
+\]
+are independent of the distinct choices \(j,k\ne i\).
+The four-index identities give \(c_ic_j=a_{ij}^2>0\);
+all \(c_i\) have a common sign.  The edge signs obey the
+same identities, so choices of signs for
+\(v_i=\pm\sqrt{|c_i|}\) give \(a_{ij}=\pm v_iv_j\)
+with a common overall sign.  This supplies a rank-one
+diagonal completion.  If there are no disjoint edges,
+the graph is a star, a triangle, or a subgraph of one.
+A star has the rank-two completion already described.
+For a triangle, subtracting any eigenvalue from the three
+diagonal entries makes the corresponding block singular,
+giving rank at most two.
+\end{proof}
+
+For \(r\geq1\), define
+\[
+ V_r(A)=
+ \sum_{\substack{|S|=|T|=r\\S\cap T=\varnothing}}
+ \det(A_{ST})^2,\qquad V_0(A)=1.
+\]
+The sum is over ordered pairs of subsets; each subset is
+listed in its natural order.
+
+\begin{lemma}[Volume-sampled skeleton inequality]
+\label{lem:skeleton}
+Suppose \(V_r(A)>0\).  Sample disjoint \(r\)-sets \(S,T\)
+with probability \(\det(A_{ST})^2/V_r(A)\), omitting zero
+weights, and put
+\[
+ P^{ST}=A_{\cdot T}A_{ST}^{-1}A_{S\cdot}.
+\]
+Then
+\begin{equation}
+ \mathbb E_{S,T}
+ \sum_{\substack{l,m\notin S\cup T\\l\ne m}}
+ (A-P^{ST})_{lm}^2
+ \leq(r+1)^2\frac{V_{r+1}(A)}{V_r(A)}.
+ \label{eq:skeleton-inequality}
+\end{equation}
+\end{lemma}
+\begin{proof}
+For every sampled nonsingular seed and every allowed \(l,m\),
+the bordered determinant formula gives
+\[
+ \det(A_{S+l,T+m})^2
+ =\det(A_{ST})^2(A-P^{ST})_{lm}^2.
+\]
+Sum over the seeds and \(l,m\).  A disjoint pair of
+\((r+1)\)-sets is counted at most \((r+1)^2\) times,
+according to which row and column are distinguished.
+Some of these deletions may leave a singular seed and are
+then absent from the sum.  Division by \(V_r(A)\) proves
+\eqref{eq:skeleton-inequality}.
+\end{proof}
+
+\begin{remark}[Why equality is not automatic]
+\label{rem:skeleton-zero-seeds}
+Take
+\[
+ A=\begin{pmatrix}
+ 0&0&1&0\\0&0&0&1\\1&0&0&0\\0&1&0&0
+ \end{pmatrix},\qquad r=1.
+\]
+Then \(V_1=V_2=4\).  Every nonzero seed has squared
+off-diagonal residual sum \(2\), so the left side of
+\eqref{eq:skeleton-inequality} is \(2\), whereas the
+right side is \(4\).  Singular seeds may have nonsingular
+extensions.  Thus the valid general statement is an
+inequality, which suffices for the following consequence.
+\end{remark}
+
+\begin{theorem}[A robust low-rank completion]
+\label{thm:robust-skeleton}
+Suppose \(V_r(A)>0\) and
+\(V_{r+1}(A)\leq\kappa V_r(A)\).
+There is a decomposition
+\[
+ A=D+R+E,\qquad
+ \operatorname{rank}R\leq4r,\qquad
+ \|E\|_{\mathrm F}\leq3(r+1)\sqrt\kappa,
+\]
+where \(D\) is diagonal and \(E\) is symmetric, has zero
+diagonal, and vanishes on \(2r\) selected rows and columns.
+\end{theorem}
+\begin{proof}
+Choose a seed from Lemma~\ref{lem:skeleton} for which the
+off-diagonal residual on \(L=(S\cup T)^c\) has squared
+Frobenius norm at most \((r+1)^2\kappa\).
+Write
+\[
+ P=A_{LT}A_{ST}^{-1}A_{SL},\qquad
+ F=\operatorname{offdiag}(A_{LL}-P).
+\]
+Since \(A_{LL}\) is symmetric,
+\(\|P-P^{\mathsf T}\|_{\mathrm F}\leq2\|F\|_{\mathrm F}\).
+Thus \(P_{\rm sym}=(P+P^{\mathsf T})/2\) satisfies
+\(\|P_{\rm sym}-P\|_{\mathrm F}\leq\|F\|_{\mathrm F}\).
+Let \(P_r\) retain the \(r\) largest eigenvalues in modulus
+of \(P_{\rm sym}\).  The best rank-\(r\) approximation
+property and \(\operatorname{rank}P\leq r\) imply
+\[
+ \|P_{\rm sym}-P_r\|_{\mathrm F}\leq\|F\|_{\mathrm F}.
+\]
+All columns of \(P_r\) lie in
+\(\operatorname{col}[A_{LS},A_{LT}]\), a space of
+dimension at most \(2r\), because this contains the range
+of \(P_{\rm sym}\).
+
+With \(K=S\cup T\), set
+\[
+ R=\begin{pmatrix}A_{KK}&A_{KL}\\A_{LK}&P_r\end{pmatrix},
+ \quad
+ E_{LL}=\operatorname{offdiag}(A_{LL}-P_r),
+ \quad E_{K,\cdot}=E_{\cdot,K}=0,
+\]
+and let \(D=A-R-E\).  The \(L\)-row block of \(R\) has
+rank at most \(2r\), and its \(K\)-row block adds at most
+\(2r\), so \(\operatorname{rank}R\leq4r\).
+The matrix \(D\) is diagonal and
+\[
+ \|E\|_{\mathrm F}
+ \leq\|F\|_{\mathrm F}+\|P-P_r\|_{\mathrm F}
+ \leq3\|F\|_{\mathrm F}
+ \leq3(r+1)\sqrt\kappa.
+\]
+\end{proof}
+
+\begin{corollary}
+\label{cor:tail-skeleton}
+If every coordinate partition \(I,J\) satisfies
+\(\sum_{j\geq r+1}s_j(A_{IJ})^2\leq\delta^2\), and
+\(V_r(A)>0\), then Theorem~\ref{thm:robust-skeleton}
+applies with \(\kappa=4\delta^2\).  In particular
+\(\|E\|_{\mathrm F}\leq6(r+1)\delta\).
+\end{corollary}
+\begin{proof}
+For nonincreasing nonnegative numbers \(x_j\),
+\[
+ e_{r+1}(x)\leq
+ \left(\sum_{j\geq r+1}x_j\right)e_r(x).
+\]
+Assign each \((r+1)\)-set to its largest index to verify
+this inequality term by term.
+For a random fair coordinate partition, Cauchy--Binet gives
+\(\mathbb Ee_r(A_{IJ}A_{IJ}^{\mathsf T})=4^{-r}V_r(A)\).
+Average the preceding inequality with \(x_j=s_j(A_{IJ})^2\).
+\end{proof}
+
+The conclusion of Corollary~\ref{cor:tail-skeleton} uses a
+bound on the entire squared singular-value tail.  A bound
+only on \(s_{r+1}\) yields a dimension factor through that
+tail and is not the same hypothesis.
+
+\section{Grouped projections and projected crossing blocks}
+\label{sec:grouped-crossing}
+
+The following arguments retain arbitrary phases inside each
+coordinate group.  The projected coordinates need not be
+independent.  This distinction is useful when many original
+coordinates share a small number of coupling directions.
+
+\begin{lemma}[A phase-weighted projection]
+\label{lem:phase-projection}
+Let a random vector \(W\) have density \(\rho\leq M\), and
+let \(Z\) be any random variable on the same probability
+space with \(|Z|\leq1\).  The complex measure
+\(\mathbb E[Z;W\in dw]\) has a density \(a(w)\) satisfying
+\[
+ |a(w)|\leq\rho(w),\qquad
+ \|a\|_1\leq1,\qquad \|a\|_2^2\leq M.
+\]
+\end{lemma}
+\begin{proof}
+Disintegration gives
+\(a(w)=\rho(w)\mathbb E[Z\mid W=w]\) almost everywhere.
+Its modulus is at most \(\rho\), and
+\(\int|a|^2\leq\int\rho^2\leq M\int\rho=M\).
+\end{proof}
+
+\begin{theorem}[An exact-rank crossing block]
+\label{thm:exact-crossblock}
+Let \(X\) and \(Y\) be independent random vectors and
+\(B=U\Sigma V^{\mathsf T}\) have exact rank \(r\), where
+\(U,V\) have orthonormal columns and
+\(\Sigma=\operatorname{diag}(s_1,\ldots,s_r)>0\).
+Suppose \(U^{\mathsf T}X\) and \(V^{\mathsf T}Y\) have
+densities bounded by \(M_X,M_Y\).
+For arbitrary measurable real functions \(F,G\), put
+\[
+ Q=F(X)+2X^{\mathsf T}BY+G(Y).
+\]
+Then, for \(t\ne0\),
+\[
+ |\phi_Q(t)|\leq
+ \min\left\{1,
+ \left(\frac{\pi}{|t|}\right)^{r/2}
+ \frac{\sqrt{M_XM_Y}}{\sqrt{s_1\cdots s_r}}\right\}.
+\]
+If \(r>2\), its density satisfies
+\[
+ \|p_Q\|_\infty\leq
+ \frac r{r-2}
+ \left(\frac{M_XM_Y}{s_1\cdots s_r}\right)^{1/r}.
+\]
+For product inputs with coordinate densities bounded by one,
+one may take \(M_X,M_Y\leq2^{r/2}\).
+\end{theorem}
+\begin{proof}
+Push \(e^{itF(X)}d\mathbb P_X\) onto \(U^{\mathsf T}X\),
+obtaining a complex density \(a_t\), and similarly obtain
+\(b_t\) from \(e^{itG(Y)}d\mathbb P_Y\).
+Lemma~\ref{lem:phase-projection} gives
+\(\|a_t\|_2^2\leq M_X\) and
+\(\|b_t\|_2^2\leq M_Y\).
+Independence and Fubini give
+\[
+ \phi_Q(t)=\int_{\mathbb R^r}
+       \widehat a_t(2t\Sigma z)b_t(z)\,dz .
+\]
+By Plancherel,
+\[
+ \int|\widehat a_t(2t\Sigma z)|^2\,dz
+ =\left(\frac{\pi}{|t|}\right)^r
+   (s_1\cdots s_r)^{-1}\|a_t\|_2^2 .
+\]
+Cauchy--Schwarz proves the characteristic-function bound.
+For \(\alpha>1\),
+\[
+ \frac1{2\pi}\int_{\mathbb R}\min\{1,K|t|^{-\alpha}\}\,dt
+ =\frac{\alpha}{\pi(\alpha-1)}K^{1/\alpha}.
+\]
+Take \(\alpha=r/2\).  The last assertion is the projection
+bound of \citet{LPP2016}.
+\end{proof}
+
+We next allow the light crossing matrix to have arbitrary
+rank.  For a matrix \(C\) with rows \(c_i\), let
+\[
+ Z_\ell(C)=e_\ell(CC^{\mathsf T})
+ =\sum_{|S|=\ell}\det(C_SC_S^{\mathsf T}).
+\]
+When \(Z_\ell(C)>0\), its \(\ell\)-volume row marginals are
+\[
+ \alpha_i=\sum_{S\ni i}
+ \frac{\det(C_SC_S^{\mathsf T})}{Z_\ell(C)}.
+\]
+They satisfy \(\sum_i\alpha_i=\ell\).
+
+\begin{lemma}[A weighted-subset Fourier estimate]
+\label{lem:weighted-subset}
+Let \(D\in\mathbb R^m\) have independent coordinate
+densities bounded by one.  Let \(M\) be a \(k\)-by-\(m\)
+matrix of row rank \(k\), with product of singular values
+\(S_M\).  Write \(\Pi\) for projection onto its row space.
+For a matrix \(A_0\) with rows \(a_i\), put
+\(C=A_0(I-\Pi)\).
+Suppose \(Z_\ell(C)>0\) and every \(\ell\)-volume row
+marginal is at most \(1/2\).
+Let \(\psi_i\) be characteristic functions of scalar
+probability densities bounded by one, and let \(\kappa\)
+be any nonnegative probability density on \(\mathbb R^k\).
+Then
+\begin{equation}
+ \mathbb E\left[\kappa(MD)
+     \prod_i|\psi_i(2t\langle a_i,D\rangle)|\right]
+ \leq
+ \frac{2^{(k+\ell)/2}(2\pi)^\ell e^{\ell/2}}
+ {S_M\sqrt{Z_\ell(C)}\,|t|^\ell}.
+ \label{eq:weighted-subset}
+\end{equation}
+When \(\ell=1\), the factor \(e^{\ell/2}\) may be omitted.
+\end{lemma}
+\begin{proof}
+Set
+\[
+ w_S=\frac{\det(C_SC_S^{\mathsf T})}{Z_\ell(C)}.
+\]
+Discard factors with \(\alpha_i=0\), which only increases
+the left side.  Weighted H\"older for the finite measure
+\(\kappa(Md)d\mathbb P_D(d)\) bounds the left side by
+\(\prod_{S:w_S>0}I_S^{w_S}\), where
+\[
+ I_S=\mathbb E\left[\kappa(MD)
+       \prod_{i\in S}
+       |\psi_i(2t\langle a_i,D\rangle)|^{1/\alpha_i}\right].
+\]
+Indeed, the exponent of each factor after taking this
+weighted product is
+\(\sum_{S\ni i}w_S/\alpha_i=1\).
+
+For \(i\in S\), write \(a_i=c_i+\lambda_iM\).
+The linear image
+\((MD,(\langle c_i,D\rangle)_{i\in S})\) has density
+bounded by
+\[
+ \frac{2^{(k+\ell)/2}}
+ {S_M\sqrt{\det(C_SC_S^{\mathsf T})}}.
+\]
+To verify the determinant, the rows of \(C\) are
+perpendicular to the rows of \(M\), so the Gram determinant
+of the combined map is
+\(S_M^2\det(C_SC_S^{\mathsf T})\).
+Factor this map through an orthonormal projection and
+apply Lemma~\ref{four:projection}.
+For each fixed \(x=MD\), shift the remaining coordinates
+by \(\lambda_i x\), integrate \(\kappa\), and use
+Lemma~\ref{four:lp} at exponent \(1/\alpha_i\geq2\).
+The result is
+\[
+ I_S\leq
+ \frac{2^{(k+\ell)/2}(2\pi)^\ell}
+ {S_M|t|^\ell}
+ \frac{\prod_{i\in S}\sqrt{\alpha_i}}
+ {\sqrt{\det(C_SC_S^{\mathsf T})}}.
+\]
+The weighted product of the last factors is
+\[
+ Z_\ell(C)^{-1/2}
+ \exp\left\{\frac12\left(
+       H(w)+\sum_i\alpha_i\log\alpha_i\right)\right\},
+\]
+where \(H(w)=-\sum_Sw_S\log w_S\).
+Entropy subadditivity for the indicator coordinates of
+the random subset \(S\) gives
+\[
+ H(w)\leq\sum_i\left[-\alpha_i\log\alpha_i
+ -(1-\alpha_i)\log(1-\alpha_i)\right].
+\]
+This also follows directly from nonnegativity of relative
+entropy against the independent Bernoulli distribution
+with parameters \(\alpha_i\).
+Since \(-(1-a)\log(1-a)\leq a\) and
+\(\sum_i\alpha_i=\ell\), the exponential is at most
+\(e^{\ell/2}\).  For \(\ell=1\), \(w_{\{i\}}=\alpha_i\),
+so the entropy expression cancels exactly.
+\end{proof}
+
+\begin{theorem}[Grouped hubs with an arbitrary-rank crossing remainder]
+\label{thm:grouped-crossing}
+Let \(X_H\) and \(X'\) be independent, with \(X'\) having
+independent coordinate densities bounded by one.
+Let \(U\) have \(k\) orthonormal columns, and suppose
+\(W=U^{\mathsf T}X_H\) has density at most \(M_H\).
+Consider
+\[
+ Q=F(X_H)+2\langle W,MX'+\beta\rangle+R(X'),
+\]
+where \(F\) is arbitrary measurable, \(M\) has row rank
+\(k\), and \(R\) is an arbitrary quadratic polynomial
+with matrix \(A_R\).
+Split the light coordinates into \(I,J\), assume
+\(M_J\) has row rank \(k\), and write \(S\) for the
+product of its singular values.  Define
+\[
+ C=(A_R)_{IJ}(I-\Pi_{\operatorname{row}(M_J)}).
+\]
+Suppose \(Z_\ell(C)>0\) and its \(\ell\)-volume row
+marginals are at most \(1/2\).  Put \(d=k+\ell\).
+For \(t\ne0\),
+\[
+ |\phi_Q(t)|\leq\min\{1,K|t|^{-d/2}\},
+ \quad
+ K=\frac{M_H^{1/2}2^{(k+3\ell)/4}\pi^{d/2}e^{\ell/4}}
+ {S^{1/2}Z_\ell(C)^{1/4}}.
+\]
+If \(d>2\), then
+\begin{equation}
+ \|p_Q\|_\infty\leq
+ \frac d{d-2}
+ 2^{(k+3\ell)/(2d)}e^{\ell/(2d)}
+ \frac{M_H^{1/d}}{S^{1/d}Z_\ell(C)^{1/(2d)}}.
+ \label{eq:grouped-crossing-density}
+\end{equation}
+For \(\ell=1\), omit the exponential factors.
+\end{theorem}
+\begin{proof}
+Push \(e^{itF(X_H)}d\mathbb P_H\) onto \(W\), obtaining
+a complex density \(a_t\) with
+\(\|a_t\|_2^2\leq M_H\), and put
+\(h_t(l)=\widehat a_t(2t(l+\beta))\).
+Plancherel gives
+\[
+ \int|h_t(l)|^2\,dl\leq
+ M_H(\pi/|t|)^k.
+\]
+Let \(\mu_t(l)\) be the density of the complex measure
+\(\mathbb E[e^{itR(X')};MX'\in dl]\).
+The ordinary projection density of \(MX'\) is bounded,
+so Lemma~\ref{lem:phase-projection} implies \(\mu_t\in L^2\).
+Independence yields
+\[
+ \phi_Q(t)=\int h_t(l)\mu_t(l)\,dl,\qquad
+ |\phi_Q(t)|^2\leq M_H(\pi/|t|)^k\|\mu_t\|_2^2.
+ \label{eq:grouped-pairing}
+\]
+
+To bound the last norm, take a nonnegative even compactly
+supported approximate identity \(k_\varepsilon\) on
+\(\mathbb R^k\) and write
+\[
+ m_\varepsilon(l)=
+ \mathbb E[e^{itR(X')}k_\varepsilon(l-MX')].
+\]
+Conditional Cauchy--Schwarz in \(X_I\), followed by
+integration in \(l\) and an independent copy \(X_J^*\),
+gives
+\[
+ \|m_\varepsilon\|_2^2
+ \leq
+ \mathbb E\left[
+ e^{it(R(X_I,X_J)-R(X_I,X_J^*))}
+ \kappa_\varepsilon(M_JD_J)\right],
+\]
+where \(D_J=X_J-X_J^*\) and
+\(\kappa_\varepsilon=k_\varepsilon*k_\varepsilon\)
+is a nonnegative probability density.
+Every term purely in \(I\) cancels.  Terms purely in
+\(J\) give a phase of modulus one, while the cross terms
+give \(2\langle X_I,(A_R)_{IJ}D_J\rangle\).
+Averaging over \(X_I\) and taking absolute values bounds
+the last expression by
+\[
+ \mathbb E\left[
+ \kappa_\varepsilon(M_JD_J)
+ \prod_{i\in I}
+ |\widehat f_i(2t\langle(A_R)_{iJ},D_J\rangle)|
+ \right].
+\]
+The coordinates of \(D_J\) are independent with densities
+\(f_j*\widetilde f_j\leq1\).
+Apply Lemma~\ref{lem:weighted-subset}, uniformly in
+\(\varepsilon\), and pass to the limit by \(L^2\)
+approximate-identity convergence.  This yields
+\[
+ \|\mu_t\|_2^2\leq
+ \frac{2^{(k+\ell)/2}(2\pi)^\ell e^{\ell/2}}
+ {S\sqrt{Z_\ell(C)}\,|t|^\ell}.
+\]
+Combining with the hub Plancherel estimate proves the
+characteristic-function bound.  The integration formula
+in Theorem~\ref{thm:exact-crossblock} gives
+\eqref{eq:grouped-crossing-density}.
+\end{proof}
+
+\begin{corollary}[One hub and a spread second crossing volume]
+\label{cor:one-hub-arbitrary-crossing}
+For one original hub, let
+\[
+ Q=F(X_h)+2X_h(\langle w,X'\rangle+\beta)+R(X').
+\]
+For a split \(I,J\), suppose \(w_J\ne0\), and let
+\(C=(A_R)_{IJ}(I-\Pi_{w_J})\).
+If \(Z_2(C)>0\) and every second-volume row marginal is
+at most \(1/2\), then
+\[
+ \|p_Q\|_\infty
+ \leq3\,2^{7/6}e^{1/3}
+       (|w_J|^2Z_2(C))^{-1/6}
+ <9.4(|w_J|^2Z_2(C))^{-1/6}.
+\]
+There is no restriction on \(\operatorname{rank}C\).
+\end{corollary}
+\begin{proof}
+Use Theorem~\ref{thm:grouped-crossing} with
+\(k=1,\ell=2\), and \(M_H=1\).
+\end{proof}
+
+\begin{corollary}[Many coordinates with two exact hub directions]
+\label{cor:many-two-hubs}
+Suppose a hub--light cross block has exact rank two and
+write it as \(UM\), with \(U^{\mathsf T}U=I_2\).
+Every internal hub quadratic, and even every measurable
+internal hub function, is allowed.
+If a light split has \(\operatorname{rank}M_J=2\),
+singular-value product \(S\), and projected crossing
+matrix \(C\) with
+\[
+ F_0=\|C\|_{\mathrm F}>0,\qquad
+ \|c_i\|^2\leq F_0^2/2,
+\]
+then product hub and light laws satisfy
+\[
+ \|p_Q\|_\infty
+ \leq3\,2^{7/6}(SF_0)^{-1/3}<6.74(SF_0)^{-1/3}.
+\]
+\end{corollary}
+\begin{proof}
+The projection \(U^{\mathsf T}X_H\) has density at most
+two.  Apply Theorem~\ref{thm:grouped-crossing} with
+\(k=2,\ell=1\), \(M_H=2\), and \(Z_1(C)=F_0^2\).
+\end{proof}
+
+\section{Concentrated directions and uniform bounds}
+\label{sec:structural-boundaries}
+
+\begin{lemma}[Few concentrated directions in exact finite rank]
+\label{lem:heavy-isotropic}
+Let \(A=RMR^{\mathsf T}\), with \(R^{\mathsf T}R=I_r\)
+and every eigenvalue of \(M\) of modulus at least one.
+Assume \(A\) has no \(c\)-pivot.  Let \(H\) be any set of
+original coordinates and
+\[
+ G_H=R_H^{\mathsf T}R_H,\qquad
+ \tau=|H|\sqrt{2c}.
+\]
+If the eigenvalues of \(G_H\) are \(g_1\geq\cdots\geq g_r\),
+then \(g_k\leq\tau\) whenever \(k>r/2\).
+If \(M\) is definite, every row leverage
+\(|R^{\mathsf T}e_i|^2\) is less than \(c\).
+\end{lemma}
+\begin{proof}
+By \eqref{eq:no-pivot-entries},
+\(\|A_{HH}\|\leq\|A_{HH}\|_{\mathrm F}\leq\tau\).
+Rotate the frame so that \(G_H\) is diagonal.
+If \(g_k>\tau\), the compression of \(M\) to its first
+\(k\) frame coordinates has norm at most \(\tau/g_k<1\).
+Indeed, writing \(R_H=VG_H^{1/2}\) on its support
+expresses \(A_{HH}\) as an isometric copy of
+\(G_H^{1/2}MG_H^{1/2}\), and division by the first
+\(k\) eigenvalues of \(G_H^{1/2}\) gives this norm bound.
+Interlacing then forces \(M\) to have at least \(k\)
+eigenvalues greater than \(-1\), hence at least \(1\),
+and at least \(k\) eigenvalues less than \(1\), hence at
+most \(-1\).  These are disjoint sets, so \(2k\leq r\).
+For definite \(M\), its eigenvalue hypothesis gives
+\(|a_{ii}|\geq|R^{\mathsf T}e_i|^2\); use the
+no-pivot diagonal bound.
+\end{proof}
+
+For example, if \(H=\{i:|R^{\mathsf T}e_i|^2\geq\delta\}\),
+then \(|H|\leq r/\delta\).  In exact rank three,
+Lemma~\ref{lem:heavy-isotropic} permits only one strongly
+concentrated frame direction when \(c\) is small relative
+to \(\delta\).  It makes no assertion about a decomposition
+with an arbitrary additional diagonal: that diagonal may
+cancel the diagonal entries of the low-rank component.
+
+\begin{proposition}[A normalized exact-rank-three transition]
+\label{prop:rank-three-epsilon}
+Let \(w,v,p\) be orthonormal vectors on the light
+coordinates, write
+\(L=\langle w,X'\rangle\), \(V=\langle v,X'\rangle\),
+\(P=\langle p,X'\rangle\), and put
+\[
+ Q_\varepsilon=2X_hL+V^2+2\varepsilon LP.
+\]
+For every real \(\varepsilon\), its quadratic matrix has
+exact rank three and nonzero eigenvalues
+\[
+ \sqrt{1+\varepsilon^2},\qquad
+ -\sqrt{1+\varepsilon^2},\qquad 1.
+\]
+For every fixed \(c>0\) and \(0\leq\varepsilon\leq1\),
+there are arbitrarily large spread frames for which this
+matrix has no \(c\)-pivot.
+If the light frame entries all have modulus \(m^{-1/2}\),
+then every principal submatrix of order at most \(N\)
+has third singular value at most \(N/m\).
+\end{proposition}
+\begin{proof}
+In the orthonormal basis \((e_h,w,v,p)\), the matrix is
+\[
+ \begin{pmatrix}
+ 0&1&0&0\\
+ 1&0&0&\varepsilon\\
+ 0&0&1&0\\
+ 0&\varepsilon&0&0
+ \end{pmatrix}.
+\]
+On the plane spanned by \(w\) and
+\((e_h+\varepsilon p)/\sqrt{1+\varepsilon^2}\), it is
+\(\bigl(\begin{smallmatrix}0&\sqrt{1+\varepsilon^2}\\
+\sqrt{1+\varepsilon^2}&0\end{smallmatrix}\bigr)\).
+The \(v\)-direction has eigenvalue one and the remaining
+orthogonal direction has eigenvalue zero.
+
+Take three orthogonal Walsh columns on \(m\) coordinates,
+normalized to entries of modulus \(m^{-1/2}\), with
+\(m>6/c\).  The hub diagonal is zero, every hub--leaf
+minor has modulus \(1/m<c\), and light-block entries
+have modulus at most \(3/m\).
+Their diagonals are less than \(c\) and their principal
+two-coordinate determinants have modulus at most
+\(18/m^2<c\), after enlarging \(m\) if necessary.
+This proves the no-pivot assertion.
+
+For any coordinate set \(K\), the principal matrix is
+the sum of a matrix of rank at most two,
+\[
+ \bigl((e_h+\varepsilon p)w^{\mathsf T}
+       +w(e_h+\varepsilon p)^{\mathsf T}\bigr)_{KK},
+\]
+and \(v_Kv_K^{\mathsf T}\), of norm
+\(|v_K|^2\leq |K|/m\).
+The singular-value approximation inequality gives
+\(s_3(A_{KK})\leq |K|/m\).
+\end{proof}
+
+The family in Proposition~\ref{prop:rank-three-epsilon}
+has a third singular value of one for every \(\varepsilon\).
+The endpoint \(\varepsilon=0\) and every fixed nonzero
+\(\varepsilon\) are covered by results in
+Section~\ref{sec:hubs}, but the available bounds for
+arbitrary rough laws need not stay bounded as
+\(\varepsilon\) tends to zero.
+Corollary~\ref{cor:hub-loglog-density} gives a much smaller
+loss than the direct leakage estimate.
+Theorem~\ref{thm:grouped-crossing} also retains a dependence
+on this parameter: in the one-hub split its projected
+crossing matrix is
+\[
+ C=v_I(v_J^\perp)^{\mathsf T}
+       +\varepsilon w_I(p_J^\perp)^{\mathsf T},
+\]
+so \(Z_2(C)\leq4\varepsilon^2\) for
+\(0\leq\varepsilon\leq1\).
+The finite-core theorem is likewise insufficient uniformly,
+by the last assertion of Proposition~\ref{prop:rank-three-epsilon}.
+These are limitations of the respective estimates, not
+counterexamples to a bounded density.
+
+\begin{proposition}[Two hubs do not suffice with an arbitrary remainder]
+\label{prop:two-hub-counterexample}
+For every \(0<c\leq1\), there is a real symmetric matrix
+with no \(c\)-pivot, exactly two eigenvalues of modulus
+at least one, and a two-row hub--light block whose
+singular values are both one, such that the corresponding
+quadratic form under independent standard Gaussian
+coordinates has unbounded density.
+\end{proposition}
+\begin{proof}
+Choose \(0<b<c/2\), put
+\(B=\operatorname{diag}(b,-b)\), and let \(M\) have
+two orthonormal, sufficiently spread rows.
+Set
+\[
+ A=\begin{pmatrix}
+ B&M\\ M^{\mathsf T}&M^{\mathsf T}B^{-1}M
+ \end{pmatrix}.
+\]
+Writing \(L=MX'\),
+\[
+ Q_A=(X_H+B^{-1}L)^{\mathsf T}
+       B(X_H+B^{-1}L).
+\]
+The matrix has rank two.  On the two mutually orthogonal
+hub--partner planes its nonzero eigenvalues are
+\(b+b^{-1}\) and \(-b-b^{-1}\).
+By taking the two rows of \(M\) with entries of modulus
+at most \(\eta\), where
+\(\eta<c/2\) and \(2\eta^2/b<c/2\), every entry of
+\(A\) has modulus less than \(c/2\).  Thus every
+diagonal entry is smaller than \(c\) and every principal
+two-coordinate determinant has modulus less than
+\(c^2/2<c\).
+
+For Gaussian inputs, \(Y=X_H+B^{-1}L\) is a nondegenerate
+Gaussian vector whose density is bounded below by some
+\(\gamma>0\) on a neighbourhood of the origin.
+Use the change of variables
+\(u=\sqrt b(Y_1-Y_2)\),
+\(v=\sqrt b(Y_1+Y_2)\).
+Then \(Q_A=uv\) and the Jacobian is \(2b\).
+Choose \(r>0\) so that the square \(|u|,|v|\leq r\)
+maps into that neighbourhood.  For \(0<a\leq r^2\),
+\[
+ \mathbb P\{|Q_A|\leq a\}
+ \geq\frac{\gamma}{2b}
+ \left|\{(u,v):|u|,|v|\leq r,\ |uv|\leq a\}\right|
+ =\frac{2\gamma}{b}a(1+\log(r^2/a)).
+\]
+The ratio to \(2a\) is unbounded as \(a\downarrow0\).
+\end{proof}
+
+Proposition~\ref{prop:two-hub-counterexample} has only two
+large eigenvalues.  It shows why a two-hub bound must use
+additional information about the remainder, such as that
+in Theorem~\ref{thm:grouped-crossing}; it does not refute
+the three-eigenvalue conjecture.
+
+The structural statements above do not imply that every
+no-pivot matrix admits a split for which the quantities in
+\eqref{eq:grouped-crossing-density} are uniformly nondegenerate.
+In particular, the grouped hub block must have exact rank;
+discarding the smaller singular directions does not cover a
+nearly rank-two block.  A dimension-independent bound requires
+uniform control of these limiting configurations and of the
+one-hub transition above.

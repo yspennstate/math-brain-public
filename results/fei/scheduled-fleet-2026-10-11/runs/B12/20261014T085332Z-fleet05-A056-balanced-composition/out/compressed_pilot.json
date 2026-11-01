@@ -1,0 +1,49 @@
+{
+  "helper_version": "A056-point-bent-fixed-book-v1",
+  "pilot": true,
+  "cases": [
+    {
+      "shared_dimension": 4,
+      "local_private_A_query_after_B_success": {
+        "influence": "1/64",
+        "entropy_drift_prime_logs": {
+          "2": "4",
+          "3": "-3393/2048",
+          "5": "775/1024",
+          "7": "-735/2048",
+          "11": "121/1024",
+          "13": "-1521/2048",
+          "19": "361/1024",
+          "23": "-529/2048"
+        },
+        "drift_minus_7_influence": {
+          "2": "249/64",
+          "3": "-3393/2048",
+          "5": "775/1024",
+          "7": "-735/2048",
+          "11": "121/1024",
+          "13": "-1521/2048",
+          "19": "361/1024",
+          "23": "-529/2048"
+        },
+        "positive_excess_exact": true,
+        "child_book_refund_exact": {
+          "2": "249/64",
+          "3": "-3393/2048",
+          "5": "775/1024",
+          "7": "-735/2048",
+          "11": "121/1024",
+          "13": "-1521/2048",
+          "19": "361/1024",
+          "23": "-529/2048"
+        }
+      },
+      "stopped_history_influence": "25/128",
+      "terminal_influence": "57/128",
+      "root_influence": "41/64",
+      "fixed_original_source_book": "signed stopped equality and all terminal prices PASS"
+    }
+  ],
+  "assertions": "ALL PASS",
+  "seconds": 0.007563999999547377
+}

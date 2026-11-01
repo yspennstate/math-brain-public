@@ -1,0 +1,21 @@
+# Next ten precise research questions
+
+1. **POST-EXIT-QUERY (C019/C024)** — After an actual query inside an A099 retained exit,can one specified fresh reset be paid from SAME original account while preserving prior live-branch releases,the exit query debit,and the untouched sibling terminal? Owners: A097/A085; independent review: A094/A092. Unqueried exit-root conversion/source-tree continuation is already author-proved;A085 is auditing it. Do not assume that theorem covers a post-query fresh reset.
+
+2. **AUDIT-TWO-RESETS (C019)** — Does A095-TWO-NARROW-RESETS-SAME-RATE4-BANK@1 hold at its entire stated scope,including original451/256 reserve,positive first/second signed excesses and the zero-reference t0,m0 boundary? Owners: A094/A086; independent review: A092. Consume the saved author theorem;independently reconstruct it rather than launching another two-reset discovery search.
+
+3. **AFTER-TWO-BOOKINGS (C019)** — With both A095 reset positive parts already booked,can a further useful prescribed query/reset satisfy its complete weighted likelihood admission from the diminished original quota without restoring451/256? Owners: A095/A094; independent review: A086/A092. Retain both reset debits,all off-path costs and the zero-true-fiber normalizers. Arbitrary new floors are unpaid.
+
+4. **SOURCE-DEPENDENT-BIT (C019/C020)** — Can A011 arbitrary-core active-padding fresh-floor histories be continued through one source-dependent bit with its original source reference and both child terminal debts paid at SAME4C0+15? Owners: A011/A096; independent review: A086/A094. Padding-only history and a supplied source c<=C0I do not supply an arbitrary-core source price or its post-query reset.
+
+5. **SATURATED-ELIGIBILITY (C019)** — For the saturated A072 continuation,can the next other-core physical query be certified eligible without an unused reserve inside the saturated subtree,or paid by genuinely unused outside capacity with every old booking retained? Owners: A072/A089; independent review: A074/A092. A strictly positive unused internal donor invariant is impossible by A074;do not renew W or confuse rate4 with the earlier9/2 account.
+
+6. **ARBITRARY-PROFILE (C019/C020)** — Can an arbitrary inherited signed Boolean source/reference profile provide the root reserve and occupied-atom likelihood control needed for useful resets at one absolute influence rate? Owners: A095/A011/A096; independent review: A086/A094. The h_w*h2 and negative-cell profiles are structured and supplied;Q=Pf with an assumed CE price is circular.
+
+7. **ERASURE-RESIDUAL (C018)** — Can the remaining higher-level nonempty spectral-pair erasure sum be bounded by K I using the full signed Boolean convolution constraints,beyond the already reviewed root/low-level taxes? Owners: A031/A096; independent review: A082/A090. Use exact accepted low-level versions;B20 original nonempty-pair target is not solved by canonical reset class results or non-Boolean controls.
+
+8. **JOINT-WITNESS (C020)** — Can one complete whole-set witness code bound roots,labels,attachments,rank,normalization and reference-choice costs by O(I) universally,or isolate a rigorous universal obstruction? Owners: A006/A009/A010; independent review: A086/A094. Address labels are paid once per set;retain t=1/4 singleton correction and full normalizer. Extra code/label bills are outside the current CE-only reset theorems.
+
+9. **HISTORY-TRANSFER (C024)** — Under the exact source reveal policy,can weighted correlation lifetime be bounded uniformly and transferred to entropy with its negative forced-information refund retained? Owners: A061/A064/A066; independent review: A088/A094. Keep natural-log versus bit units,complete terminal debt and singleton/block scope distinct. Finite integrability and a finite prescribed reset class are not the universal transfer.
+
+10. **INTEGRATED-V7 (C018/C019/C020/C024)** — Can two independent complete reconstructions of A099 v7 verify every used exact claim version and leave all unpaid universal existence/payment statements explicit? Owners: A085/A094; independent review: B18/B19. Scoped active/control/dummy/narrow reviews and historical publication receipts do not accept the assembled full-FEI chain.

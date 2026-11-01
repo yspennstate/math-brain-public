@@ -1,0 +1,74 @@
+{
+  "command": "python -X utf8 finalize_packet.py; exact arithmetic from python -X utf8 check_math.py",
+  "source": "BKL 2610.05474v1 Lemma 2.2; its proof already yields the binomial bound. No novelty claim.",
+  "tensor_constants": [
+    {
+      "d": 1,
+      "published_loose_bound": 4,
+      "sharp_bound": 2,
+      "ratio": 2.0
+    },
+    {
+      "d": 2,
+      "published_loose_bound": 16,
+      "sharp_bound": 6,
+      "ratio": 2.6666666666666665
+    },
+    {
+      "d": 3,
+      "published_loose_bound": 64,
+      "sharp_bound": 20,
+      "ratio": 3.2
+    },
+    {
+      "d": 4,
+      "published_loose_bound": 256,
+      "sharp_bound": 70,
+      "ratio": 3.657142857142857
+    },
+    {
+      "d": 5,
+      "published_loose_bound": 1024,
+      "sharp_bound": 252,
+      "ratio": 4.063492063492063
+    }
+  ],
+  "store_before": "Two historical P0017 cards found in read-only store",
+  "after": "Six concept/definition entries queued; four reviewed lemma entries prepared and held. No ingestion or recall gain measured.",
+  "peer_KEEP_count": 13,
+  "initial_exact_check": {
+    "status": "PASS",
+    "command": "python -X utf8 check_math.py",
+    "counts": {
+      "sharpness_pairs": 35,
+      "sharpness_components": 925,
+      "random_block_symmetric_tensors": 140,
+      "brute_binary_tensors": 9,
+      "gaussian_channel_calibrations": 100,
+      "wick_raw_moment_dimensions": 16,
+      "missing_second_symmetry_counterexamples": 1
+    },
+    "elapsed_seconds": 0.116479,
+    "gate": "COMPUTE_GATE.json",
+    "trust": "Exact Python rational arithmetic; no formal proof assistant, no full-target proof."
+  },
+  "optional_Gram_check": {
+    "status": "SKIPPED_RESOURCE_GATE",
+    "gate": {
+      "measured_unix_time": 1791607391.2342474,
+      "cpu_percent_200ms": 86.72566371681415,
+      "available_memory_mb": 3661.203125,
+      "max_cpu_percent": 85,
+      "minimum_available_memory_mb": 512,
+      "arithmetic_deadline_seconds": 15,
+      "maximum_degree": 8,
+      "maximum_support_size": 4,
+      "training": false,
+      "gpu": false,
+      "processes": 1
+    },
+    "command": "python -X utf8 check_exponential_frame.py"
+  },
+  "peer_FIX_count": 1,
+  "domain_correction": "Finite fourth moments define U_2. Local exponential moments are needed to identify it with the derivative T_2."
+}

@@ -1,0 +1,80 @@
+{
+  "problem_id": "P0162",
+  "title": "Fourier entropy versus total influence",
+  "agent": "w510",
+  "checked_date": "2026-10-10",
+  "dated_ranking": {
+    "date": "2026-09-07",
+    "tier": 5,
+    "status": "attempted_un",
+    "line": 553
+  },
+  "current_openness": "UNKNOWN",
+  "primary_statement": {
+    "source": "https://www.cs.cmu.edu/~odonnell/papers/fei.pdf",
+    "authors": [
+      "Ryan O'Donnell",
+      "John Wright",
+      "Yuan Zhou"
+    ],
+    "locations": [
+      "introduction",
+      "Section 2.1",
+      "Section 1.2 for known coordinate AND/OR limit 4"
+    ],
+    "target": "There exists finite absolute C such that sum_s fhat(s)^2 log2(1/fhat(s)^2) <= C sum_s |s| fhat(s)^2 for every n and uniform Boolean-valued f; empty coefficient and arbitrary bias included",
+    "recovered": true,
+    "original_1996_reference": "Friedgut-Kalai, Every monotone graph property has a sharp threshold, DOI 10.1090/S0002-9939-96-03732-X",
+    "original_1996_pdf_access": "403 from AMS; exact uniform-cube statement recovered from the later primary research paper"
+  },
+  "prior_attempt": {
+    "target_record": "probability_1000_intake_claude_20260907/brain_bundle_C006p01.json#op-p0162",
+    "attempt_record": "probability_1000_intake_claude_20260907/brain_bundle_C006a04.json#at-p0162",
+    "source_quote": "Discarding the Boolean constraint destroys the claim",
+    "digest": "Uniform singleton laws have entropy log2(n) and mean size 1 but cannot be squared Boolean spectra for n>=2 because f^2 has nonzero cross terms. General entropy/mean-cardinality bounds must use Boolean convolution identities.",
+    "review_state": "previous record says author-checked only",
+    "H_I_search": "targeted ID and Fourier entropy/influence searches found no matching attempt in the two named H/I directories",
+    "F0090_scope": "Read the named 2026-09-10 percolation report: it claims the square crossing case and expressly does not settle general FEI; not audited here"
+  },
+  "checked_primary_literature": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00493-024-00133-z",
+      "scope": "General bound retains an extra sum_i I_i log(1/I_i) term"
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.00246v2",
+      "date": "2026-06-09",
+      "scope": "Restriction induction bridge and selected separated Boolean classes; not a full FEI solution"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.21563v1",
+      "date": "2026-09-18",
+      "scope": "Plateaued and partially bent special classes; not evidence that arbitrary Boolean FEI is resolved"
+    }
+  ],
+  "owner_store_check": {
+    "receipt": "~/brain_workers/w510/STORE_LOOKUP.json",
+    "mode": "read-only SQLite URI",
+    "scope": "Eight target-related titles were returned, including the open problem and prior attempt; no full solved/retired certification inferred from a title lookup",
+    "status_limit": "Current openness UNKNOWN; no novelty claim"
+  },
+  "brain_recall": {
+    "query": "P0162 Fourier entropy influence sharp boundary proof mistakes",
+    "timeout_seconds": 60,
+    "result": "timed out under a live-write guard; no models/helpers or network allowed",
+    "receipt": "~/brain_workers/w510/RECALL_RECEIPT.json",
+    "index_grep": "No Fourier/entropy/perceptron named-scar hit returned in the targeted MEMORY.md grep",
+    "fallback_read": "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "lesson": "Do not equate a green experimental pipeline or solved local lemma with closure of the hardest mathematical gap"
+  },
+  "novelty": "not claimed",
+  "integration_state": "DRAFT submitted; one independent KEEP from w511; w512 pending; ingestion and retrieval unverified",
+  "integration_receipt": "~/brain_workers/w510/BUNDLE_STATES.json",
+  "verification_state": "Initial finite checks passed with an incomplete resource gate; corrected gate denied repeat; see FINAL_VERIFICATION_STATE.json",
+  "independent_audit": {
+    "agent": "w511",
+    "verdict": "KEEP C001-C004",
+    "evidence": "~/brain_workers/w511/AUDIT_W510.md",
+    "scope": "mathematical review of affine and entropy-boundary proofs; not a full FEI result"
+  }
+}

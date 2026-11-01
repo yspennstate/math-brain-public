@@ -1,0 +1,135 @@
+\section{Proofs}\label{app:proofs}
+
+\subsection{The store}
+
+\begin{proof}[Proof of Proposition~\ref{prop:order}]\label{proof:prop:order}
+\stmtbutton{prop:order}
+The digest $\delta(B)$ is computed from two lists: the revision identifiers $\rho(r)$, $r\in R$, and the link digests $h(\mathrm{canon}(e))$, $e\in L$, each sorted lexicographically. A sorted list of distinct strings is determined by the set of its entries, so the input to $\mathrm{canon}$, and hence $\delta(B)$, depends only on the sets $R$ and $L$ and not on the order in which the author listed them. (Distinctness holds because a bundle carries at most one revision per logical identifier and a link is a set element.)
+
+For the second statement, suppose $B=(R,L)$ and $B'=(R',L')$ have $\delta(B)=\delta(B')$. Either the two inputs to the outer $h$ are equal, or the outer $h$ has a collision. If the inputs are equal, then since $\mathrm{canon}$ is injective on pairs of lists the two sorted lists of revision identifiers are equal, and likewise the two sorted lists of link digests. Equal revision identifiers $\rho(r)=\rho(r')$ mean either $\mathrm{canon}(r)=\mathrm{canon}(r')$, so $r=r'$ by injectivity of the canonical serialization on records, or a collision of $h$; the same holds for links, whose canonical form contains both endpoints, the kind, the weight, the rationale and the metadata. Hence $R=R'$ and $L=L'$ unless SHA-256 has a collision.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:wellformed}]\label{proof:prop:wellformed}
+\stmtbutton{prop:wellformed}
+Let $\Store'$ be the store after $B=(R,L)$ lands. The landing writes only new rows: the revisions of $R$, the links of $L$ and their artifacts. No existing row is changed or removed, because revisions are immutable and the store refuses the retraction of a \texttt{supersedes} link.
+
+Condition (i). A \texttt{supersedes} link of $\Store'$ is either a link of $\Store$, which joins two revisions of one logical object by hypothesis, or a link of $L$. For a link of $L$ the landing check requires that the target be a claim revision already in the store with the same logical identifier as the source. A link of $L$ whose target lies in $R$ is refused, since a bundle cannot supersede another revision of the same append. Hence (i) holds in $\Store'$.
+
+Condition (ii). The landing check refuses $B$ if adding $L$ creates a cycle in the \texttt{supersedes} graph. Its restriction to each $\cV_\lambda$ is therefore acyclic in $\Store'$.
+
+Heads. Let $\lambda$ be a logical identifier and $u$ a head of $\lambda$ in $\Store'$ that is not a revision of $B$. Then $u\in\Store$. If $u$ were superseded in $\Store$ by some $w$, the link $w\succ u$ would still be present in $\Store'$, and $u$ would not be a head there. So $u$ is a head of $\lambda$ in $\Store$. If $B$ contains no revision of $\lambda$, every link of $L$ of kind \texttt{supersedes} has its source in $R$ and so, by (i), joins revisions of other logical objects; no head of $\lambda$ loses that status, and the heads of $\lambda$ are the same before and after. The current revision, defined from the heads alone, is unchanged.
+\end{proof}
+
+We note what the proposition does not say. A bundle may add a revision of $\lambda$ that supersedes no head of $\lambda$, or two independent bundles may each supersede the same head. Then $\lambda$ has two heads and is contested. The store accepts this on purpose, and the readers refuse to call either head current until a review lands a revision that supersedes both.
+
+\begin{proof}[Proof of Proposition~\ref{prop:closure}]\label{proof:prop:closure}
+\stmtbutton{prop:closure}
+The closure procedure receives the current revisions and the links among them, and builds an adjacency list from the links of kind \texttt{depends\_on} alone, from source to target. It then runs a depth-first search from $c$, colouring a node grey on entry and black on exit. It refuses if it reaches a node that is not in the node set, or if it meets a grey node; in the last case the grey nodes on the stack from that node to the current one form a cycle, which it names. Otherwise it returns the set of black nodes.
+
+If the reachable \texttt{depends\_on} subgraph is acyclic and every node in it exists, no grey node is met (a grey node met along a link closes a directed cycle), and the procedure visits every node reachable from $c$, since depth-first search visits every node reachable from its root. The black set is then exactly $D(c)$. Conversely, if the reachable subgraph has a cycle, depth-first search meets a grey node on the first link that closes it, and if it contains a missing node, the search reaches that node; in either case the procedure refuses. The procedure reads the link table filtered on the kind \texttt{depends\_on} and reads neither strengths nor any other link kind, so no other link and no strength can enter $D(c)$.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:assoc}]\label{proof:prop:assoc}
+\stmtbutton{prop:assoc}
+The statement concerns the code, and the proof is an inspection of it. A revision row carries the status it entered with, and the reader refuses a row whose initial status is anything but \textsf{unverified}. The current status of a claim is not stored: it is recomputed, every time it is read, by replaying the claim's verification events in order. Each event names a source status, a target status and a list of evidence identifiers. The replay accepts an event only if the source status equals the status reached so far, the transition is one of the allowed transitions, every evidence item it names carries a receipt (an HMAC tag, under a role key held outside the store, over the digests of the evidence, the claim revision, the artifact, the verifier and the requested status) that the verifier authenticates, and the promotion rule, applied afresh to that evidence, returns the same decision and the same rationale as the event records; a promotion to \textsf{verified} on several items further requires that they come from distinct authorities. The inputs of this computation are the claim, its evidence rows, their receipts and the event log. It reads no link of the four kinds named, no link strength, no retrieval score and no consolidation proposal. The consolidation pass writes proposals to a queue, and its proposals carry a flag that forbids them to promote a status; the strength updater writes only the strength table. Hence no operation that uses only the listed inputs changes the result of the replay.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:strength-search}]\label{proof:prop:strength-search}
+\stmtbutton{prop:strength-search}
+Without spreading, the score of a card is the sum of its channel scores (Section~\ref{sec:retrieval}): the lexical score, which reads the card's terms, the document frequencies and the mean length; the mathematical-token and formula channels, which read the card's tokens and formulas; and the meaning channel, which reads the embeddings of the question and the card. None of these reads the strength table. With several wordings the lists are merged by rank, with ties broken by score, and the abstention rules read only scores and margins. The eight cards printed, and their order, are therefore functions of the question and the indexed text and embeddings alone. Strengths enter only through the spreading formula of Section~\ref{sec:retrieval}, which is not applied.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:merge}]\label{proof:prop:merge}
+\stmtbutton{prop:merge}
+(a) For each wording $q_j$ at most $r$ cards have rank at most $r$ under $q_j$. A card has merged rank at most $r$ exactly when some wording ranks it at most $r$, so the set of such cards is a union of $k$ sets of at most $r$ elements each and has at most $kr$ elements. If a card $d$ has rank $r$ under some wording, its merged rank is at most $r$; every card placed before $d$ in the merged list has merged rank at most that of $d$, hence at most $r$, so $d$ and all cards before it lie in a set of at most $kr$ cards, and the position of $d$ is at most $kr$.
+
+(b) A strictly increasing function preserves the order of the scores of one wording, ties included, so it preserves every rank $\mathrm{rank}_{q_j}(d)$ and therefore every merged rank $\min_j\mathrm{rank}_{q_j}(d)$. If ties in merged rank are broken without reading scores, the merged list is a function of the merged ranks alone.
+
+(c) Let $k\ge2$ and $M\ge1$. Give the first wording the scores $1$ to a card $a$ and $1-\eps$ to $M$ further cards $b_1,\dots,b_M$; give the second wording the score $0$ to $a$ and $1$ to each $b_i$; give every other wording the score $0$ to every card. Then $a$ is first for the first wording, while its summed score $1$ is below the summed score $2-\eps$ of each $b_i$, so $a$ stands below position $M$ of the summed list. Replacing the second wording's scores by their images under $s\mapsto\lambda s$ with $\lambda$ large shows that summed lists also depend on the scale of each wording, contrary to (b).
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:strength-bounds}]\label{proof:prop:strength-bounds}
+\stmtbutton{prop:strength-bounds}
+Write $a=|T_{xy}|$, $b=|T_x|$, $c=|T_y|$, $\sigma=\simil(x,y)$ and $\phi(m)=m/(m+1)$, an increasing function with $0\le\phi<1$. Since $T_{xy}\subseteq T_x\cap T_y$, $1\le a\le\min(b,c)$. Every age is nonnegative, so each term of $m_{xy}$ lies in $(0,1]$ and $0<m_{xy}\le\sigma a$.
+
+(a) The first factor of \eqref{eq:strength} is $a/\sqrt{bc}\in(0,1]$ and the second is $\phi(m_{xy})\in(0,\phi(\sigma a)]$; multiply.
+
+(b) $a/\sqrt{bc}\le\min(b,c)/\sqrt{bc}=\sqrt{\min(b,c)/\max(b,c)}$, and $\phi<1$.
+
+(c) Compare the strengths read at the same moment before and after the new session-day. If $x$ and $y$ are used together on it, $a,b,c$ each increase by one, and
+\[
+(a+1)^2bc-a^2(b+1)(c+1)=a(bc-ab)+a(bc-ac)+(bc-a^2)\ge0,
+\]
+so the first factor does not decrease; the decayed mass gains a term $\sigma>0$, so $\phi(m_{xy})$ strictly increases. If only $x$ is used, $b$ increases by one and nothing else changes, so the first factor strictly decreases.
+
+(d) If every joint session-day is at least $\Delta$ days old, $m_{xy}\le\sigma a(1+\Delta)^{-1/2}\le a(1+\Delta)^{-1/2}$, and $\str\le\phi(m_{xy})\le m_{xy}$. A learned link needs $\str\ge1/4$, which fails once $a(1+\Delta)^{-1/2}<1/4$, that is once $1+\Delta>16a^2$; this holds when $\Delta\ge16a^2$.
+
+(e) With $\sigma=1$ and $a=j$, $m_{xy}\le j$, so $\str\le\phi(j)=j/(j+1)$.
+\end{proof}
+
+\subsection{Fourier entropy}
+
+Throughout, $f:\{-1,1\}^n\to\{-1,1\}$, $p(S)=\hat f(S)^2$, so that $\sum_Sp(S)=1$ by Parseval, $\Var f=1-p(\emptyset)$, $\Inf_i(f)=\sum_{S\ni i}p(S)$, $I(f)=\sum_i\Inf_i(f)=\sum_S|S|\,p(S)$, and $\pi(S)=\sum_{T\supseteq S}p(T)$. Terms with $p(S)=0$ are omitted from every sum, so that $H(f)=\sum_Sp(S)\log_2(1/p(S))$ and $U(f)=\sum_Sp(S)\log_2(\pi(S)/p(S))$ are finite. Since $p(S)\le\pi(S)\le1$, both $U(f)\ge0$ and $\log_2(1/\pi(S))\ge0$.
+
+\begin{proof}[Proof of Lemma~\ref{lem:Gkey}]\label{proof:lem:Gkey}
+\stmtbutton{lem:Gkey}
+For nonempty $S$ define the derivative
+\[
+D_Sf(x)=2^{-|S|}\sum_{y\in\{-1,1\}^S}\Bigl(\prod_{i\in S}y_i\Bigr)f(y,x_{\bar S}),
+\]
+where $(y,x_{\bar S})$ agrees with $y$ on $S$ and with $x$ off $S$. Expanding $f$ in the Fourier basis, the inner sum kills every character $\chi_T$ with $T\not\supseteq S$ and turns $\chi_T$ with $T\supseteq S$ into $\chi_{T\setminus S}$, so $D_Sf=\sum_{T\supseteq S}\hat f(T)\chi_{T\setminus S}$. Hence $\EE[D_Sf]=\hat f(S)$ and, by Parseval, $\EE[(D_Sf)^2]=\pi(S)$.
+
+The sum defining $D_Sf(x)$ has $2^{|S|}$ terms, each equal to $\pm1$. A sum of an even number of terms $\pm1$ is an even integer, and $2^{|S|}$ is even because $S\ne\emptyset$. So $D_Sf(x)\in2^{1-|S|}\mathbb Z$ for every $x$, and whenever $D_Sf(x)\ne0$ we have $|D_Sf(x)|\ge2^{1-|S|}$, that is, $|D_Sf(x)|\le2^{|S|-1}D_Sf(x)^2$. The last inequality also holds when $D_Sf(x)=0$. Taking expectations,
+\[
+|\hat f(S)|=|\EE D_Sf|\le\EE|D_Sf|\le2^{|S|-1}\EE[(D_Sf)^2]=2^{|S|-1}\pi(S).
+\]
+Squaring gives $p(S)\le4^{|S|-1}\pi(S)^2$.
+\end{proof}
+
+The proof shows when equality holds: the first inequality is an equality when $D_Sf$ does not change sign, and the second when $|D_Sf|$ takes only the values $0$ and $2^{1-|S|}$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:intro-G}]\label{proof:thm:intro-G}
+\stmtbutton{thm:intro-G}
+Write $\log$ for $\log_2$. Splitting $\log(1/p)=\log(1/\pi)+\log(\pi/p)$ gives
+\begin{equation}\label{eq:HU}
+H(f)=\sum_Sp(S)\log\frac1{\pi(S)}+U(f).
+\end{equation}
+The term $S=\emptyset$ of the first sum vanishes because $\pi(\emptyset)=1$. For $S\ne\emptyset$ with $p(S)>0$, Lemma~\ref{lem:Gkey} gives $\pi(S)\ge2^{1-|S|}p(S)^{1/2}$, so
+\[
+\log\frac1{\pi(S)}\le(|S|-1)+\frac12\log\frac1{p(S)}.
+\]
+Multiplying by $p(S)$ and summing over nonempty $S$,
+\[
+\sum_Sp(S)\log\frac1{\pi(S)}\le\sum_{S\ne\emptyset}(|S|-1)p(S)+\frac12H'(f)=I(f)-\Var f+\frac12H'(f),
+\]
+where $H'(f)=\sum_{S\ne\emptyset}p(S)\log(1/p(S))=H(f)-H_0$ and $H_0=(1-\Var f)\log\frac1{1-\Var f}$ is the contribution of $S=\emptyset$; we used $\sum_{S\ne\emptyset}p(S)=\Var f$. Substituting into \eqref{eq:HU},
+\[
+H(f)\le I(f)-\Var f+\tfrac12\bigl(H(f)-H_0\bigr)+U(f),
+\]
+and solving for $H(f)$ gives the first inequality of the theorem. The second follows from $\Var f\ge0$ and $H_0\ge0$.
+
+For the last statement, if $U\le KI$ for all $f$ then $H\le(2+2K)I$. Conversely, by \eqref{eq:HU} and $\log(1/\pi)\ge0$ we have $U(f)\le H(f)$, so $H\le CI$ implies $U\le CI$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:intro-GU}]\label{proof:thm:intro-GU}
+\stmtbutton{thm:intro-GU}
+Let $K=a/(1-b)$. Adding or removing a coordinate on which $f$ does not depend changes neither $p$ as a function on sets, nor $U$, nor $I$, so we may argue by induction on the number $m$ of coordinates on which $f$ depends. If $m=0$, $f$ is constant, $p(\emptyset)=1=\pi(\emptyset)$, and $U(f)=0=I(f)$.
+
+Let $m\ge1$, and suppose $U(g)\le K\,I(g)$ for every Boolean $g$ depending on fewer than $m$ coordinates. Then $I(f)>0$. Three facts about a coordinate $i$ are needed.
+\begin{enumerate}[label=(\alph*)]
+\item If $f$ does not depend on $x_i$ then $f_{i,\pm}=f$ and $\Delta_iU(f)=0=\Inf_i(f)$.
+\item The restrictions $f_{i,\pm}$ depend on no coordinate outside those of $f$, and not on $x_i$.
+\item $I(f)=\Inf_i(f)+\frac12\bigl(I(f_{i,+})+I(f_{i,-})\bigr)$. Indeed, for $j\ne i$, $\Inf_j(f)$ is the probability that $f$ changes when $x_j$ is flipped, and flipping $x_j$ leaves $x_i$ fixed, so $\Inf_j(f)=\frac12(\Inf_j(f_{i,+})+\Inf_j(f_{i,-}))$; and $\Inf_i(f_{i,\pm})=0$.
+\end{enumerate}
+Put $c=a+b\,U(f)/I(f)$. The hypothesis reads $\sum_i\Delta_iU(f)\le a\,I(f)+b\,U(f)=c\sum_i\Inf_i(f)$. By (a) the coordinates with $\Inf_i(f)=0$ contribute zero to both sides, so some coordinate $i$ with $\Inf_i(f)>0$ satisfies $\Delta_iU(f)\le c\,\Inf_i(f)$. Fix it. By (b) and the induction hypothesis, $U(f_{i,\pm})\le K\,I(f_{i,\pm})$, and by (c),
+\[
+U(f)=\Delta_iU(f)+\tfrac12\bigl(U(f_{i,+})+U(f_{i,-})\bigr)\le c\,\Inf_i(f)+K\bigl(I(f)-\Inf_i(f)\bigr).
+\]
+Write $t=\Inf_i(f)/I(f)\in(0,1]$. Substituting $c$ and $a=K(1-b)$,
+\[
+U(f)\le K(1-b)\,t\,I(f)+b\,t\,U(f)+K(1-t)\,I(f),\qquad\text{so}\qquad U(f)(1-bt)\le K\,I(f)(1-bt).
+\]
+Since $b<1$ and $t\le1$, $1-bt>0$, and $U(f)\le K\,I(f)$. This completes the induction. The bound on $H$ follows from Theorem~\ref{thm:intro-G}: $H\le2I+2U\le(2+2K)I$.
+\end{proof}
+
+The proof uses the hypothesis only through the existence, at each step, of one good coordinate. It therefore proves more: it suffices that every non-constant $f$ has a coordinate $i$ with $\Inf_i(f)>0$ and $\Delta_iU(f)\le(a+b\,U(f)/I(f))\Inf_i(f)$.

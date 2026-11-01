@@ -1,0 +1,7 @@
+# Retained first independent-audit failure
+
+The first direct truth/Fourier/root-law checker used 40 atanh terms and stopped at its root-KL error enclosure assertion. No passing retuning certificate was saved by that attempt. At j=128, the target lost-activity error is on the order of 2^-131, below the absolute log enclosure width after division and multiplication by j. The exact mathematical inequality was not inferred from this failed check.
+
+The frozen domain remains j in {1,2,8,32,128}, one actual three-bit truth table, all signed prime faces, and three nonempty root sets per pair. Before rerunning, precision alone was increased to 96 atanh terms, with exact rational tail 2 z^193/[193(1-z^2)]. The revised checker also identifies j explicitly if that check fails. This is a precision amendment, not a domain expansion or a replacement of exact certificates by floating point. Retuning certificates are accepted only after the revised checker passes.
+
+The second attempt passed the inequality checks up to its serialization step but stopped on Python's 4300-digit integer-string limit. It saved no passing certificate. The output representation was then changed to exact outward rounding onto the 2^-256 dyadic grid, with each rounding enclosure checked against the original exact Fraction interval. This keeps all output compact without changing the arithmetic, mathematical target or domain. Neither failure counts as a substantive failure of the mathematical mechanism.

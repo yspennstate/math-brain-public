@@ -1,0 +1,47 @@
+# A044 stage5: integer cofactor payment and exact congestion
+
+## exact target, quantifiers, hypotheses and units
+
+Continue B09's actual prime/profile cost after stage4's shared-guard obstruction. For every finite Boolean sign under any independent interior Bernoulli law, P(S)=fhat(S)^2, v_i=4p_i(1-p_i), E_S=P(S)ln(v_S/P(S)), E=sum_nonempty E_S=(ln2)Hplus, and Delta=I-Var. All formulas retain physical input coordinates and signed mixed differences. Endpoints contract before normalization.
+
+Result: a universal LOCAL corrected-entropy payment E_S<=(|S|-1)ln4 P(S)+2sum_{T strictly containing S}P(T), with exact actual-packet ownership. This independently proves A043's nonsharp global prime56067 upper theorem, and yields its constant2+6/ln2 for every degree-at-most-three gate with genuine disjoint composition independent of depth/fan-in. It does not give a universal summed constant: quadratic pair and exponential all-submask congestion are explicit and fail on actual parity. This is a continuation/review of the active cofactor mechanism, not another broad class search. Full FEI remains OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Read own STATUS, current BOARD snapshot2026-10-14 05:52UTC (full board read in chunks), B09 STREAM_NOTES v2 still dated2026-10-11 23:33UTC, and execution-v2 required fields/dispatch/compute rules with prior full protocol read retained. The stale common-mean-removal task is already closed; the next actual all-bias prime gap was also closed by A043 since our last stage, so this stage reviews/consumes it instead of repeating the proof search.
+
+Read A043 stage5 PROOF.md, REPORT.md, CLAIMS.json, run20261014T052009Z-fleet05-A043-prime-gate-decomposition, source hashb33cb2430c8086e0a2859e151f07ea312c6cbade61b30ce26ad2b8e322a9e684. Its local affine/difference pair ledger motivates the new universal physical mixed-profile representation. Read A042 stage5 CLAIMS.json,out/REVIEW_A044.json and PROOF.md section4, run20261014T044053Z-fleet05-A042-bias-endpoint-certificates. Consume its full scoped independent acceptance of our stage4 claim at original hash7d78ab7cf325ab80263b94a66f6ac63f38d885de9a60e8fce6bebee46403a120; no prior file is rewritten. Read A045 stage4 REPORT.md, run20261014T033253Z-fleet05-A045-biased-realizability-referee: quadratic energy ownership and normalized mixed reference leave a complete cross-entropy/KL cost open. This is context, not a premise or a review acceptance of that theorem. Exact source receipts pin bytes. No web fact or publication novelty assertion is a premise.
+
+## complete derivation or exact first unsupported line
+
+PROOF.md supplies the full derivation. For nonempty physical S, let Z_S be one half the alternating sum of the2^|S| Boolean cofactor values. It is integer-valued. Its mean is2^(|S|-1)c_S and its variance is4^(|S|-1)/v_S times the actual strict-superset mass. Pointwise integer Z satisfies Z^2>=|Z|. Combining with the elementary logarithm bound proves h(E Z)<=2Var Z, including means outside[-1,1] where h is negative. Scaling gives the universal local payment, with no affine-profile or amplitude-cap hypothesis.
+
+Degree3 lets us add singleton, pair and triple charges exactly: E_single<=4B+6T; E_pair<=ln4 B+6T; E_triple<=ln16 T. Both6T terms are included. Hence E<=(6+ln4)Delta and Hplus<=(2+6/ln2)Delta. Since prime56067 is the source's actual cubic polynomial, this independently proves its global upper theorem. REVIEW_A043.md accepts that theorem, exact pair/triple ledger, contraction and composition at scope, excluding the bundled lower path and polynomial witness. No source repair or reliance on our own mux dependency is involved. Genuine read-once compositions of admitted gates retain this constant at all induced biases, independent of depth and fan-in.
+
+The universal local assignment is proved, but bounded congestion is not. Summing pairs charges each degree-d packet2binom(d,2) times; summing all submasks charges it2(2^d-2) times. An actual fair parity character has exactly one degree-d packet, entropy0 and Delta=d-1. The pair budget/Delta=d diverges, even though every pair mean and residual entropy is zero. This refutes adopting the unmodified variance ledger as a universal cost, not FEI or the local inequality.
+
+First unsupported line: choose or refund these actual profile charges within one signed conditional whole-set reference, reducing multiplicity to an absolute multiple of deficit while retaining all terminal entropy. Returning zero-mean parity charges is necessary; a cofactor-compatible local map alone is insufficient. The sharp prime56067 inequality G<=S+2T is also still open and is not resolved by this nonsharp reconstruction.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen out/FROZEN_SPEC.json precedes the only pilot. Run `python -X utf8 runs/20261014T055346Z-fleet05-A044-non-symmetric-gate-classes/code/check_stage.py` from A044. Fixed633 case evaluations: all256 n3 truth masks at two product laws (512), prime56067 at{1/4,1/2,3/4}^4 (81), and10 prescribed n4 masks at four laws (40). No symmetry reduction or dimension escalation. Every nonempty physical subset and all complementary assignments are tested; source checker code is neither copied nor run.
+
+PASS:633 cases,613 with degree at most3,5399 mixed profiles,75553 exact assertions,2.693602 seconds. Independent alternating signed cofactor sums check integer values, means and variance against the centered-moment spectrum. Formal prime-log dictionaries check entropy identities, local/scaled payments, exact summed multiplicities and the A043 pair/triple ledger. Rational32-term atanh enclosures certify all signs; after range reduction z<=1/3 and the omitted tail is at most2z^65/[65(1-z^2)]. Zero dictionaries certify equality exactly. No pilot failure occurred; no additional rerun was needed.
+
+The parity obstruction is an analytic all-d one-packet formula, not a growing truth-table search. Estimated memory100MB, peak unmeasured; no>300MB job/memok requirement triggered, no heavy/background/GPU work started. Finite checks supplement the written universal local proof and degree3 continuum corollary; they establish no full FEI conclusion.
+
+## proof dependencies and changed downstream conclusions
+
+The new local mechanism depends only on Boolean mixed-difference quantization, independent product Fourier integration, Parseval and elementary logarithm inequalities. Degree3 closure is its downstream consequence. Source prime56067 polynomial identifies the application; sharp endpoint/A042 lower-path claims are not premises of this upper review. Exact disjoint composition is retained at its already reconstructed scope. A045's squared-tail reference is context for the consumer handoff, not a premise of the new claim.
+
+Consume A042's independent stage4 acceptance with original hash and preserve prior artifacts. Add a scoped A043 upper-theorem review at the original statement hash, with lower-path/witness exclusions. The B09 cap is honored by reviewing and extending the existing mechanism, not initiating another broad gate-family candidate. For A043/A041/A045 the pair profile can now depend on arbitrarily many remaining coordinates without losing a physical assignment; the remaining failure is congestion, not coefficient admission. No universal entropy constant improves.
+
+## one next mathematical action and independent reviewer
+
+NEXT: use exact h(E Z_S) rather than its2Var majorant to build a signed conditional pair reference with a zero-mean refund, preserving one complete terminal bill. Test bounded congestion on a single degree-rich actual prime/threshold coefficient process using A045's owned mixed-energy orientation; count every packet owner once. A043/A042 should consume the general pair mechanism; A090/A091/A045 should independently reconstruct the integer-profile Parseval scaling and parity obstruction before using it. This directly addresses C020's unpaid whole-set logarithm, rather than another bounded-degree census or endpoint search.
+
+## actual persistence receipts or precise save blocker
+
+All four required protocol files, proof, scoped review, frozen spec, checker, exact output and source/local hash receipts are saved in this run only. STATUS has two lines; WORKLOG and LEARNED are appended. Saver validates exact schema fields, unchanged original source hashes, byte-identical progress copies, report headings/final bridge, outputs and file limits. No local save blocker exists. Independent review of the new local lemma, supervisor adoption/copy, brain ingestion and remote mirror verification remain pending. Original sources, board, prior runs, shared indices and other agent folders are unmodified.
+
+**Universal bridge:** This stage moves B09's prime localization target toward C020 whole-set witness cost by proving an all-arity, all-product-bias cofactor-compatible LOCAL payment into actual strict-superset packets, independently accepting the global prime56067 upper bound and consuming the prior obstruction's independent review. It removes the affine/two-remaining-coordinate limitation but gains no universal summed constant: parity proves that unmodified pair congestion grows linearly and the all-submask budget exponentially relative to deficit. NEXT retains exact signed profile means and refunds zero-cost packets inside one complete conditional reference, the shortest surviving step from an actual assignment to bounded whole-set payment rather than another isolated gate bound.

@@ -1,0 +1,78 @@
+{
+  "claim_id": "A044-SHARED-GUARD-CANCELLATION-OBSTRUCTION",
+  "version": 1,
+  "exact_statement": "For the actual four-input Boolean prime F positive on {a=b=z=1}, {a=0,c=z=1}, or {b=c=0}, with independent product laws and v_a=4p_a(1-p_a), its constituent conjunction deficits obey Delta(F)-sum Delta(fi)=-L, L=2v_a p_b p_c p_z(1-p_z). On the interior slice p_a=p_z=1/2,p_b=p_c=1-e,0<e<=1/2,r=1-e, Delta(F)=2re(1+2re), L=r^2/2 and L/Delta=r/[4e(1+2re)]~1/(4e), at least1/(8e) for e<=1/4. Hence L and the sum of constituent deficits cannot be paid by any universal multiple of root Delta; L also cannot be paid by any universal multiple of the unused nonnegative singleton reserve S=4Delta-2R-E_single<=4Delta. Nevertheless the exact combined normalized coefficients give corrected Hplus<=(4+1/ln2)Delta throughout this slice, with sharp supremum4+1/ln2 as e tends to0, and higher-degree natural entropy<=3ln2 Delta. The contracted limit is a literal with zero entropy and deficit; it is not a FEI disproof. The all-four-bias entropy bound and universal signed quadratic-reference payment remain open.",
+  "hypotheses": [
+    "Actual Boolean sign F=1-2b-2c+2bc+2zc+2zab-2zac; least-significant-coordinate truth-mask56067",
+    "Independent Bernoulli physical inputs and normalized product Fourier basis; endpoints contracted",
+    "Corrected entropy Hplus in bits, E=(ln2)Hplus; Delta=I-Var, R=sum_{|S|>=3}(|S|-2)P(S)",
+    "Constituent fi=2*1_event-1 for the three exclusive events; loss identity assumes all biases interior",
+    "Slice entropy theorem fixes p_a=p_z=1/2 and p_b=p_c=1-e with0<e<=1/2",
+    "Supremum is an endpoint limit; no quotient is assigned at zero deficit; no all-bias prime or universal FEI conclusion"
+  ],
+  "statement_sha256": "7d78ab7cf325ab80263b94a66f6ac63f38d885de9a60e8fce6bebee46403a120",
+  "contributors": [
+    "A044/fleet05"
+  ],
+  "proof_source": {
+    "run_id": "20261014T025427Z-fleet05-A044-non-symmetric-gate-classes",
+    "paths": [
+      "PROOF.md",
+      "REPORT.md",
+      "code/check_stage.py",
+      "out/CHECK.json"
+    ]
+  },
+  "proof_dependencies": [
+    "Actual Boolean polynomial and independent physical derivative covariance",
+    "Product Fourier centered-moment integration and Parseval",
+    "Elementary logarithm inequality and monotonicity of t^2ln(1/t^2) on[0,1/4]",
+    "Signed Boolean singleton reserve identity reconstructed in REVIEW_A043.md; no arbitrary gate theorem needed"
+  ],
+  "review_records": [
+    {
+      "reviewer": "A042/fleet05",
+      "at_utc": "2026-10-14T04:47:05.494559+00:00",
+      "verdict": "HOLDS_FULL_STATED_NARROW_CLAIM",
+      "source_claim_id": "A044-SHARED-GUARD-CANCELLATION-OBSTRUCTION",
+      "version": 1,
+      "statement_sha256": "7d78ab7cf325ab80263b94a66f6ac63f38d885de9a60e8fce6bebee46403a120",
+      "accepted_scope": [
+        "all-bias three-event deficit-loss identity",
+        "fixed actual prime and positive-loss/root-slack obstruction",
+        "sharp coherent slice constant 4+1/ln2 and higher-degree bound",
+        "endpoint contraction and exclusions"
+      ],
+      "excluded_scope": [
+        "A044 review of A043 two-term decomposition/census",
+        "any all-bias entropy upper bound for prime56067 or universal FEI"
+      ],
+      "repair_supplied": false,
+      "contributor_to_source_version": false,
+      "method": "new direct centered-moment checker, direct physical influence, ten block-row tests; analytic physical cross-term and slice reconstruction in PROOF.md section4",
+      "evidence": [
+        "PROOF.md",
+        "code/check.py",
+        "out/CHECK.json"
+      ]
+    }
+  ],
+  "status": "INDEPENDENTLY_RECONSTRUCTED_FULL_NARROW_SCOPE_LOCALLY; ORIGINAL_UNCHANGED",
+  "supersedes": [],
+  "refutes": [
+    "Unregistered proposed raw shared-guard debit L<=KDelta with absolute K",
+    "Unregistered proposed raw shared-guard debit L<=K unused-singleton-slack with absolute K",
+    "Unregistered proposed sum of these three constituent deficits<=KDelta with absolute K"
+  ],
+  "first_unproved_line": null,
+  "next_consumers": [
+    "A043",
+    "A042",
+    "A041",
+    "A045",
+    "A090",
+    "A091",
+    "B09",
+    "B20"
+  ]
+}

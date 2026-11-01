@@ -1,0 +1,28 @@
+{
+  "track": "NM13-10",
+  "root": "proofnet24/NM13-10/progress-extrapolation",
+  "source": "Agresti-Veraar arXiv:2501.18561 Problem 3",
+  "frozen_pair": {
+    "X0": "H^-1(T)",
+    "Xhalf": "L^2(T)",
+    "X1": "H^1(T)",
+    "A": "Lambda=I-partial_x^2",
+    "B": "Lambda^(1/2)",
+    "beta": 1,
+    "brownian_dimension": 1
+  },
+  "fixed_source_endpoint_before": "r_*=3; p=3 excluded",
+  "fixed_source_endpoint_after": "r_*=3; p=3 excluded",
+  "subcritical_exact_constant_before": "C_p^g(T)=1/(sqrt(2/(p-1))-1), 2<=p<3",
+  "subcritical_exact_constant_after": "unchanged",
+  "critical_log_exponent_before": "0<alpha_*(T)<=1",
+  "critical_log_exponent_after": "2/3<=alpha_*(T)<=1",
+  "new_claim": "No L^3 -> Z_{3,alpha}(T) bound exists for any alpha<2/3, for every fixed T>0",
+  "mechanism": "source-valid one-shell OU seed + near-critical progressive feedback + finite-horizon drifted-Brownian occupation saddle",
+  "status": "CANDIDATE_FULL_SELF_CHECKED_PENDING_INDEPENDENT_REVIEW",
+  "t05_fallback_triggered": false,
+  "checker": "critical_log_lower_checker.py",
+  "checker_output": "critical_log_lower_checker.out",
+  "checker_status": "CHECK_PASS",
+  "next_attack": "prove or disprove the matching alpha=2/3 upper endpoint using amplitude-layer extrapolation with ell^3 summability"
+}

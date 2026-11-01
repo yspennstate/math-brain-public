@@ -1,0 +1,17 @@
+{
+  "helper_version": "A068-fixed-control-frontier-v1",
+  "family": "F(X,Z)=g_beta(X), all ordered two-data-bit Boolean terminal pairs and all two-control-bit quadratic phases; every predetermined nonempty exposed control subset",
+  "domain": "256 ordered terminal pairs times 16 quadratic phases times 3 cuts = 12288 cuts; auxiliary all quadratic phases m=0,1,2,3,4 and every coordinate projection (2198 phases, 33866 projections)",
+  "pilot": "first 128 parent cases, all three cuts; under 60 seconds",
+  "case_count": {"parents":4096,"cuts":12288,"quadratic_projection_phases":2198},
+  "symmetry": "none in main domain; all affine/constant phase coefficients retained",
+  "arithmetic": "integer truth tables and FWHT; Fraction; exact prime-log coefficient identities and 48-term rational atanh remainder intervals imported from pinned prior helper",
+  "references": "original Q=pQ_plus+(1-p)Q_minus and C=(1-d)delta_empty+dP_beta; each child uses Q times original C projected to unqueried coordinates; exact-spectrum and softened inherited terminal references",
+  "guards": "beta=(-1)^(z1 z2), g_plus=1, g_minus=-1: individual constant-child capacity -1; full positive booking exceeds original rate-K bank by 1/2 for every K>=2",
+  "memory_estimate_mb": 80,
+  "max_runtime_seconds": 55,
+  "max_dimension": 4,
+  "automatic_dimension_increase": false,
+  "heavy_job": false,
+  "prior_helper_sha256": "af436c9eaac4e0f2617d170517f163636ef03d669d83b7e93ca41ee3f0fde5d0"
+}

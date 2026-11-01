@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "candidate": "QFORM-FIXED-MULTIPLICITY-17-20260924",
+  "baseline_source_commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+  "source": {
+    "path": "manuscript.tex",
+    "git_blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "sha256": "9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69",
+    "bytes": 47883,
+    "lines": 790
+  },
+  "compiled_pdf": {
+    "filename": "Fixed_Multiplicity_Density_Theorem_Self_Contained.pdf",
+    "sha256": "6a0a4e11512ea93457a15abededae8a42a233f055e162143fd42b1ed68ce4c67",
+    "bytes": 390304,
+    "pages": 16,
+    "build": "pdflatex -interaction=nonstopmode -halt-on-error -no-shell-escape manuscript.tex (three passes)",
+    "render_verification": "All 16 pages rendered and visually inspected; no clipping or broken glyphs identified.",
+    "delivery": "Conversation download; compiled binary PDF is NOT stored in this GitHub root."
+  },
+  "support_files": {
+    "verify.py": {
+      "bytes": 5927,
+      "sha256": "9ff74b6d56e90a00abf3b05eb5f3ab4b37d053db35eb677b693de419fea75592"
+    },
+    "checks.json": {
+      "bytes": 731,
+      "sha256": "8c0cad692ac35f4ca35d334a315a613024426017c102f1fa3de65fd3e0eef4c9"
+    },
+    "proof_map.csv": {
+      "bytes": 1673,
+      "sha256": "51c8872166f1666322dbb5c7470ce69dbb683682daf8c7f9690c0ad73cc691b7"
+    }
+  },
+  "review_status": "Independent worker audits are arriving; release gate remains under review. A PASS report is not formal verification.",
+  "historical_audit_note": "AUDIT.md is retained as the initial authoring-agent self-report. The newly added verify.py/checks.json form a different, actually executed suite; original test counts have not been reproduced.",
+  "source_unchanged": true,
+  "computation_environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "sympy": "1.14.0"
+  }
+}

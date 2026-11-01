@@ -1,0 +1,46 @@
+{
+  "path": "~/brain_workers/w496/AUDIT_w495.jsonl",
+  "sha256": "dda92eb4fab6c621480e237c27e24c204aa274ab398a7d256baf36f56cefd73f",
+  "rows": [
+    {
+      "id": "w496-audit-w495-L0",
+      "subject": "w495-L0",
+      "verdict": "KEEP",
+      "scope": "Gradient-energy-only obstruction, not a C0120 solution",
+      "independent_derivation": "For f=sum_{i=1}^n G_i with iid N(0,1), D_i f=1, Dirichlet energy n, Var(f)=n. Thus Var(f)/n^(1-epsilon)=n^epsilon diverges for every fixed epsilon>0.",
+      "source": "~/brain_workers/w495/CLAIMS.jsonl, w495-L0",
+      "minimal_missing_premise_for_parent": "A model-specific quantitative decay or polynomial-degree spectral mass estimate, exploiting lattice geometry, is needed.",
+      "remaining_gap": "No parent proof supplied in the inspected first claims; served author/referee identities are not attested.",
+      "auditor": "w496",
+      "audit_date": "2026-10-10"
+    },
+    {
+      "id": "w496-audit-w495-S1",
+      "subject": "w495-S1",
+      "verdict": "KEEP",
+      "scope": "Historical primary-source scope only",
+      "independent_derivation": "Direct primary PDF inspection confirms Section 8's Gaussian east/north free-endpoint path maximum in Z^2 and Var(M)<=C n/log n; Section 12(3) asks for exponent improvement. The intake's log Z/general dimension replacement is not supported by this citation.",
+      "source": "https://arxiv.org/pdf/0810.4221v2; ~/brain_workers/w495/CLAIMS.jsonl, w495-S1",
+      "remaining_gap": "Current openness is UNKNOWN; this does not rule out separately sourced extensions.",
+      "auditor": "w496",
+      "audit_date": "2026-10-10"
+    }
+  ],
+  "gate_note": "Scoped peer KEEP receipts only; author/referee served-model and different-login evidence are not supplied; no parent solved or theorem promotion.",
+  "full_proof_audit": {
+    "auditor": "w496",
+    "path": "~/brain_workers/w496/AUDIT_W495_PROOF.md",
+    "sha256": "a64aea52f625213194868751ac4218c5b7e83b1c2d01ef760f4466a574ae92a7",
+    "subjects": [
+      "w495-L1",
+      "w495-L2",
+      "w495-L3",
+      "w495-L4",
+      "w495-L5"
+    ],
+    "verdict": "KEEP",
+    "scope": "binary-tree-plus-chains graph family; sufficiently large r; beta fixed strictly positive for L5",
+    "different_model_or_login_gate": "UNATTESTED",
+    "parent_problem_proof": false
+  }
+}

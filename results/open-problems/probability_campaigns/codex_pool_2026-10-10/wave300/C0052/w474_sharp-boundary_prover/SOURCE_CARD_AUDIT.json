@@ -1,0 +1,24 @@
+{
+  "row_id": "w474.S1.3",
+  "verdict": "FIX",
+  "status": "proposal; referee pending",
+  "card_id": "claim_db355f188daf0592950298d6e3b23e5f2b7e6eb0f3a21694083ad47fdadd0048",
+  "logical_id": "math:probability.statmech:ising-3d-nontriviality-reduces-to-current-intersection-lower-bound",
+  "current": {
+    "title": "Non-triviality of the 3D Ising scaling limit reduces to a uniform lower bound on the intersection probability of two random currents",
+    "body": "PRIVATE REDUCTION, author-recorded. By Aizenman's random-current identity the four-point Ursell function is expressed through the probability that the currents from x_1 to x_2 and from x_3 to x_4 share a cluster; non-triviality (nonvanishing renormalised coupling) is equivalent to inf over scales L of P(two independent random-current clusters at scale L intersect) > 0. The 4D case is now trivial (Aizenman-Duminil-Copin 2021); in 3D the heuristic is favourable because the current-cluster dimension (5 - eta)/2 = 2.48 exceeds 3/2, so independent fractals of that dimension would intersect with positive probability. A second-moment argument on the number of intersection points reduces the uniform lower bound to (a) a two-point function lower bound with exponent 2 - eps in d = 3 (Duminil-Copin's Conjecture 5, PIMS lectures) and (b) a variance bound on the intersection count, which involves six-point correlations beyond the Lebowitz inequality. Both inputs are open; (b) is the genuinely new obligation.\nNearest-neighbour Ising model on Z^3 at beta_c\nRandom-current representation and switching lemma"
+  },
+  "corrected": {
+    "title": "3D Ising nontriviality: weighted current identity and unclosed lower-bound obligation",
+    "body": "AUTHOR ATTEMPT; no unconditional reduction certified. In the zero-field nearest-neighbor ferromagnetic Ising model, for four distinct sites the switching identity is U4(x1,x2,x3,x4)=-2 G(x1,x2) G(x3,x4) times the probability that the four source vertices are connected in the union of two independent currents with source pairs {x1,x2} and {x3,x4}. The source coupling is the full sum of U4(0,x2,x3,x4) divided by chi(beta)^2 xi(beta)^3 as beta increases to beta_c from below. Its nontriviality means this signed quantity does not tend to zero; since it is nonpositive, a positive subsequential lower bound on its negative is sufficient and equivalent to that non-limit-zero statement. A uniform unweighted intersection bound at every scale is stronger and is not established by the stated identity alone. A second-moment route still needs a justified second moment of the correctly sourced, weighted connectivity observable; a two-point conjecture or a heuristic cluster dimension is not an unconditional reduction. Current openness and novelty are not certified by this attempt."
+  },
+  "why": "The current concept asserts an unspecified uniform-in-scale equivalence. The source defines a beta-limit of a normalized summed coupling. Preserve the conditional variance obligation and remove the uncertified equivalence.",
+  "source": {
+    "url": "https://arxiv.org/pdf/1707.00520",
+    "locator": "Section 7, equations 7.1-7.2, Conjecture 6; Exercise 61.1",
+    "target_quote": "Prove that the three-dimensional Ising model is non-trivial"
+  },
+  "independent_reviewer": "w476 requested; pending for this card correction",
+  "application": "Coordinator must create a validated corrected revision and preserve provenance; do not edit a content-addressed object, export digest, or SQLite row directly.",
+  "remaining_gap": "A model-specific weighted lower bound or fully sourced equivalence is still required; this source-fidelity proposal is not a C0052 proof."
+}

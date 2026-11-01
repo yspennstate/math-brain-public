@@ -1,0 +1,79 @@
+{
+  "worker": "w376",
+  "target": "P0110",
+  "as_of": "2026-10-10",
+  "exact_intake_statement": "Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1.",
+  "intake_locator": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json, op-p0110",
+  "primary_source": {
+    "title": "50 years of first passage percolation",
+    "authors": [
+      "Antonio Auffinger",
+      "Michael Damron",
+      "Jack Hanson"
+    ],
+    "url": "https://arxiv.org/pdf/1511.03262",
+    "locator": "Section 4.3, equation (4.19), PDF pages 88-89 (zero-based 87-88); Question 22 also repeated in the end list",
+    "quote": "Find a distribution of passage times where (4.19) holds.",
+    "equation": "chi=2xi-1",
+    "verified": true,
+    "interpretation": "The choice and existence of appropriate exponents are part of the problem. The strong Chatterjee definition is one conditional-theorem route, not an additional requirement imposed on every conceivable solution."
+  },
+  "conditional_theorem": {
+    "title": "The universal relation between scaling exponents in first-passage percolation",
+    "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v177-n2-p07-p.pdf",
+    "locator": "Chatterjee, Theorem 1.1, printed pp.665-666",
+    "hypotheses": [
+      "Nearest-neighbor undirected iid nonnegative FPP on Z^d, d>=2",
+      "Nearly-gamma edge law",
+      "Finite moment generating function near zero",
+      "chi_a=chi_b and xi_a=xi_b, where A1-A4 define uniform upper exponential moments and tail-uniform lower variance/mean-deviation bounds"
+    ],
+    "conclusion": "The two common exponents satisfy chi=2xi-1.",
+    "lower_bound_cutoff": "For each lower exponent pair, the theorem allows C>0 and takes inf over |v|>C.",
+    "exhibited_law_with_verified_coincidences": null
+  },
+  "alternative_primary_theorem": {
+    "url": "https://arxiv.org/pdf/1109.0523",
+    "locator": "Auffinger-Damron, Theorems 2.1 and 2.2; equations (2.1)-(2.2), PDF pp.4-5",
+    "note": "Nearly-gamma is removed; global exponent coincidences remain premises. D is defined using the set of all geodesics. Equation (2.2) literally takes lower infima over all nonzero v, unlike Chatterjee's tail cutoff; do not silently interchange these quantifiers."
+  },
+  "prior_attempt": {
+    "locator": "brain_bundle_C006a04.json, at-p0110 in the named intake",
+    "method": "Conditional curvature balance n^(2xi-1), with exponent existence and random-to-norm replacement errors explicitly unproved.",
+    "verdict": "No complete proof; route not repeated.",
+    "H_I_lean_check": "Targeted P0110/KPZ searches in the named H and I attempt folders and Lean folder returned only the dated ranking annotation; E0110.lean is a different identifier and is not a P0110 receipt."
+  },
+  "recent_primary_checks": [
+    {
+      "url": "https://arxiv.org/abs/2604.01214",
+      "result": "Polynomial variance improvement for rotationally invariant Riemannian planar FPP; not an iid lattice law proving the exponent relation."
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.23718",
+      "result": "Brochette FPP; model applicability must not be inferred from the title alone."
+    }
+  ],
+  "local_solved_retired_check": "The named Team O board contains adjacent FPP questions but no completed P0110 row. Targeted P0110/KPZ searches of relevant status/index/solved files in the named local probability-attempt folder returned no matches. The read-only population store contains the original P0110 target and curvature attempt with truth_status unverified; exact rows are saved in STORE_SOURCE_RECEIPT.json. The canonical math-research-brain repository README was read, but no separate current canonical store was identified by the bounded permitted path lookup; historical audit databases were not treated as canonical. This is incomplete current-status coverage, not a solved/retired certificate.",
+  "population_store_check": {
+    "mode": "ro",
+    "receipt": "STORE_SOURCE_RECEIPT.json",
+    "target_node": "claim_081071dcf812e1c0843a53fe1da486f97876afe30678a091de36c26017e679f0",
+    "attempt_node": "claim_a60b9dcbea1c3b4133831211a8107b42fbce24f2c59d8b4b21ede96b3cab07f1",
+    "both_truth_statuses": "unverified"
+  },
+  "current_openness": "UNKNOWN",
+  "reason": "The survey and dated ledger say open; bounded local and recent-primary checks found no verified resolution but are not an exhaustive current-status certificate. No novelty claim.",
+  "rejected_source_candidates": [
+    "1512.01250: title mismatch; excluded",
+    "1501.03511: title mismatch; excluded"
+  ],
+  "source_failure_log": "STUCK: two remembered arXiv identifiers mismatched. Switched to a title search and verified 1511.03262 against the intake and its Question 22.",
+  "resume_review": {
+    "reviewer": "w377",
+    "receipt": "REFEREE_RECONCILIATION_RECEIPT.json",
+    "served_model": "UNKNOWN",
+    "different_model_keep_gate": "PENDING",
+    "current_openness": "UNKNOWN",
+    "parent_target": "GAP"
+  }
+}

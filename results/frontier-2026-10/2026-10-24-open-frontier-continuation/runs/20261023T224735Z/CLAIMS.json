@@ -1,0 +1,95 @@
+{
+  "run": "20261023T224735Z",
+  "catalog_row": "T384",
+  "full_row_status": "OPEN",
+  "external_priority": "UNVERIFIED",
+  "native_claim_ids": null,
+  "claims": [
+    {
+      "id": "R2247-K-INIT",
+      "status": "PROVED",
+      "statement": "Joint finite-ray initialization for every fixed k<=d orthonormal input set: stable F, positive-stable C, marked output-weight endpoint PPP with independent primitives; C positive definite and F has full-dimensional density.",
+      "proof": "agents/d01_k_input_extension.md",
+      "review": "reviews/d02_k_input_review.md"
+    },
+    {
+      "id": "R2247-SENSITIVITY",
+      "status": "PROVED",
+      "statement": "Sensitivity D_b J is invertible after every regular irreversible positive diagonal deletion, by a strictly decreasing quadratic energy; Sard then excludes all-phase grazing and simultaneous returns for almost every b.",
+      "proof": "SENSITIVITY_LEMMA.md",
+      "review": "reviews/d04_sensitivity_review.md"
+    },
+    {
+      "id": "R2247-K-HYBRID",
+      "status": "PROVED",
+      "statement": "For fixed finite k<=d orthonormal inputs, iid standard symmetric alpha-stable coordinates (0<alpha<2), arbitrary fixed labels, no biases, both-layer continuous training at established ReLU scales and explicit absorbing gates: joint output C([0,T]) and scaled-kernel L1([0,T]) convergence to the specified random hybrid with at most k distinct transverse population deletions.",
+      "proof": "agents/d01_k_input_extension.md",
+      "reviews": [
+        "reviews/d02_k_input_review.md",
+        "reviews/d04_sensitivity_review.md"
+      ],
+      "supersedes_open_gap": "R2221-HYBRID within fixed orthonormal-input scope only",
+      "does_not_cover": [
+        "nonorthogonal inputs",
+        "deep networks",
+        "dimension/sample count growing with width",
+        "multi-input discrete GD",
+        "kernel J1 through aggregate jumps",
+        "exchange of infinite width and infinite training time"
+      ]
+    },
+    {
+      "id": "R2247-TWO-INPUT",
+      "status": "PROVED",
+      "statement": "Every fixed orthonormal pair has at most one later removal; explicit threshold and two-phase law.",
+      "proofs": [
+        "TWO_INPUT_LIMIT.md",
+        "agents/d01_hybrid.md",
+        "agents/d03_geometry.md"
+      ],
+      "reviews": [
+        "reviews/d04_compactness.md",
+        "reviews/d02_general_pair_review.md"
+      ]
+    },
+    {
+      "id": "R2247-SCALAR-GD",
+      "status": "PROVED",
+      "statement": "Scalar simultaneous GD with h_m=gamma/(log m)^(1/alpha), gamma>0 fixed, has the exact held finite-grid marked-Poisson boundary limit and the same macroscopic exponential output/positive-time kernel limit as scalar absorbing gradient flow.",
+      "proof": "agents/d02_discrete.md",
+      "review": "reviews/d03_discrete_review.md",
+      "limitations": [
+        "one scalar input",
+        "fixed gamma",
+        "genuine negative overshoots retained"
+      ]
+    },
+    {
+      "id": "R2247-FIRST-STAGE",
+      "status": "PROVED",
+      "statement": "For each fixed SPD Q and density initial residual, first-stage cumulative returns have no grazing or simultaneous zeros almost surely.",
+      "proof": "agents/d04_transversality.md",
+      "review": "Root checked spectral-rank and countable dimension argument; all-phase result now stronger."
+    },
+    {
+      "id": "R2247-ONE-SWITCH-ALL-K",
+      "status": "DISPROVED",
+      "statement": "The two-dimensional at-most-one-later-deletion conclusion extends to all deterministic finite-k hybrid systems.",
+      "counterexample": "agents/d04_transversality.md",
+      "execution": "outputs/d04_three_input_demo.txt",
+      "scope": "Deterministic SPD matrix example; no claim its chosen C is in a particular orthonormal stable-Gram support."
+    },
+    {
+      "id": "R2247-NONORTHOGONAL",
+      "status": "OPEN",
+      "statement": "Correct coupled heavy-tail training limit for nonorthogonal inputs, including activation/reactivation and singular endpoint initialization.",
+      "gap": "Projected gate derivatives are coupled; absorbing each projected coordinate and monotone initial-square alive clocks are not inherited from the parameter gradient."
+    },
+    {
+      "id": "R2247-DEEP",
+      "status": "OPEN",
+      "statement": "General deep heavy-tailed training dynamics and test-input feature-learning law, as broadly asked by catalog T384.",
+      "gap": "Current proofs concern the shallow model with explicit logarithmic ReLU scaling and orthonormal training inputs."
+    }
+  ]
+}

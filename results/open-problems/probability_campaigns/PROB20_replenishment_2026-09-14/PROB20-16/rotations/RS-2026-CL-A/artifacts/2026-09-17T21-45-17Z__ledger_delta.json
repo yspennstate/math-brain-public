@@ -1,0 +1,52 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "RS-2026-CL-A",
+  "report_kind": "NUOD_EXACT_BOUNDARY_AND_NONEXCHANGEABLE_BREADTH",
+  "input_snapshot_sha": "9f1bd9f8f83ce26ebbef0253e482e48bf8b55581",
+  "previous_report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T20-40-18Z__report.md",
+  "previous_report_creation_commit": "77472a859f19286041627ebfcbe1c2b8ec90bef9",
+  "previous_report_blob": "5c1743fdf5343ecc42b02e7764b1c4b058a710d9",
+  "source": "Anastasia Kireeva, Randomstrasse 101, 2026-06-05, first displayed Open Problem 35 in Low-degree hardness of finding the largest clique in Erdos-Renyi graph (problems 36-38)",
+  "metric": {
+    "name": "E_framework",
+    "before": 1,
+    "after": 1
+  },
+  "unchanged_count": {
+    "before": 0,
+    "after": 0,
+    "reason": "The remaining obligation changed materially: full negative association was weakened to the exact standard NUOD/upper-cylinder condition for universal matched-independent chi-square domination in the forced-support channel; the necessity direction was proved; the Mao/Che-Xu order/channel boundary was isolated; and a genuinely nonexchangeable strongly-Rayleigh weighted spanning-tree instantiation was derived exactly."
+  },
+  "stuck_recovery_cycle_consumed": 1,
+  "methods": {
+    "B4": "Identified Bernoulli negative upper orthant dependence (NUOD), equivalently Pr(S subset A)<=prod_{e in S}q_e for every cylinder, as the exact weakest standard condition for universal matched-independent chi-square/Renyi-2 domination in the forced-support channel. Proved necessity by a leading-coefficient argument after restricting the noise/null weights to a violating subset. Also recorded the direct Fourier submultiplicativity sufficient condition for arbitrary product-Bernoulli pairs.",
+    "B22": "Used Che-Xu's current Renyi failure regime to delimit the order scope: the proof is protected at order two by a positive polynomial expansion and must not be extrapolated to KL or arbitrary divergences. Used Mao's exact degree-one matching to prove that his nontrivial counterexample cannot be represented by any monotone forced-support perturbation of G(n,1/2), independent of the support dependence assumption.",
+    "B15": "Constructed a nonexchangeable strongly-Rayleigh weighted spanning-tree support on K_n with vertex weights w_i and proved Z=(prod_i w_i)W^(n-2), q_ij=(w_i+w_j)/W, and sum q_ij^2=1+(n-2)sum w_i^2/W^2. For half the vertices weight 1 and half weight 2 this is 19/9-20/(9n), yielding bounded full chi-square at fixed product-null density."
+  },
+  "new_mathematical_results": [
+    "Exact forced-support boundary theorem: NUOD iff sum_S t_S Pr(S subset A)^2 <= prod_e(1+t_e q_e^2) for every nonnegative t, iff every heterogeneous product-Bernoulli/null-resampling instance is Renyi-2 dominated by the marginal-matched independent support law.",
+    "Source-style NUOD corollary: D2(TP||Q) <= rho_*^2 Adv_{<=D}(P,Q)^2 for every D>=1, so bounded source-scale LDA gives a uniform total-variation gap even with no noise and vanishing LDA gives TV->0.",
+    "Representation-free sufficient condition: on a product-Bernoulli null, squared likelihood-ratio Fourier coefficients satisfying |Lhat(S)|^2 <= prod_{e in S}|Lhat({e})|^2 give the same Renyi-2 bound.",
+    "Channel exclusion for Mao: in every monotone forced-support model, Adv_{<=1}=0 forces all support marginals to zero and hence P=Q, so Mao's nontrivial exact-moment-matching graph law necessarily lies outside this protected positive channel.",
+    "Nonexchangeable weighted-tree formulas: for Pr(T) proportional to prod_{ij in T}w_iw_j, q_ij=(w_i+w_j)/W and S2=1+(n-2)sum_i w_i^2/W^2; the 1/2 weight split gives S2=19/9-20/(9n)."
+  ],
+  "failed_routes": [
+    "Full negative association is not minimal; NUOD alone is sufficient and exact for the universal matched-independent comparison.",
+    "The NUOD/product-moment mechanism itself is classical negative-dependence machinery and is not claimed novel.",
+    "Che-Xu shows that matched-independent domination under negative dependence cannot be naively extended from integer Renyi orders to lower fractional orders or KL in general channels.",
+    "NUOD is not claimed necessary for Kireeva's unrestricted source problem; its necessity theorem is channel-specific.",
+    "The weighted spanning-tree example is breadth evidence only because strongly-Rayleigh spanning-tree theory and planted spanning-tree detection both have substantial prior art."
+  ],
+  "mathematical_status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING",
+  "source_status": "Live Randomstrasse page rechecked 2026-09-17 and still displays the general framework question as Open Problem 35; bounded later-literature search found no post-Mao source-complete characterization.",
+  "audit_status": "0/2 qualifying independent full theorem/source audits recovered",
+  "audit_refs": [],
+  "prior_art_status": "NUOD/negative orthant inequalities and NA implications are classical (Joag-Dev-Proschan 1983); Bernoulli upper-cylinder-to-independent-MGF bounds are classical Chernoff machinery; Borcea-Branden-Liggett 2009 gives strongly-Rayleigh/determinantal spanning-tree negative dependence; Che-Xu arXiv:2609.01944 gives close matched-independent Renyi domination under NA in differential privacy with explicit lower-order failure regimes; Addario-Berry et al. arXiv:2602.07669 study planted spanning-tree detection. The exact forced-support low-degree/NUOD equivalence was not located in the bounded search, but novelty remains UNVERIFIED.",
+  "next_methods": ["B8", "B16", "B17"],
+  "artifact_refs": {
+    "report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-17/2026-09-17T21-45-17Z__report.md",
+    "report_creation_commit": "175b3f8cd0346611be65d21b3a8248854f83a773",
+    "report_blob": "a4cb1d54b390580db20ac1d727bdc838c9b5f21a",
+    "ledger_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-17T21-45-17Z__ledger_delta.json"
+  }
+}

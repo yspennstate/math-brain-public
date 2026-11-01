@@ -1,0 +1,38 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B03-A014-RANK-ONE-SIGNED-OVERLAP",
+      "version": 1,
+      "packet_id": "A014",
+      "attempt_id": "A014-RANK-ONE-OVERLAP-1",
+      "gap_id": "FEI-GAP-SHARED-SELECTOR-CIRCULARITY",
+      "status": "PROVED_RESTRICTED_THEOREM_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For uniform equal-mean balanced Boolean selector branches, rank one of the branch-by-data-frequency Fourier matrix forces every branch to be a signed copy of one Boolean core. The selector factors as F(a,x)=sigma(a)g(x), so H(F)=H(sigma)+H(g) and I(F)=I(sigma)+I(g). Independently certified component FEI constants therefore combine by their maximum.",
+      "quantifiers": "All finite uniform address and data cubes; all genuine balanced Boolean branches; exact spectral rank one.",
+      "units": "bits",
+      "scope_exclusions": [
+        "Not full FEI",
+        "No claim for spectral rank greater than one",
+        "No universal estimate for an arbitrary sign controller",
+        "No use of disjoint-support K_eff under complete branch collision"
+      ],
+      "next_consumers": ["A009", "A068", "A086", "A097", "B20"],
+      "independent_reviewers": ["A086", "A094"]
+    },
+    {
+      "claim_id": "B03-A014-ONE-DEFECT-MAJ3-SEPARATION",
+      "version": 1,
+      "packet_id": "A014",
+      "attempt_id": "A014-RANK-ONE-OVERLAP-1",
+      "gap_id": "FEI-GAP-SHARED-SELECTOR-CIRCULARITY",
+      "status": "PROVED_EXPLICIT_FAMILY_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For F_t(a,x)=h_t(a)Maj_3(x), where h_t is -1 at exactly one address, the literal branch cover has worst read k=2^t, fractional congestion one, spectral rank one, expected controller-root cost 2-2^{1-t}<2, and H(F_t)<4I(F_t) for every t>=1.",
+      "quantifiers": "Every integer t>=1 on the uniform (t+3)-dimensional Boolean cube.",
+      "units": "bits",
+      "scope_exclusions": ["The family is not a full-FEI counterexample", "Rank-one coherence is essential"],
+      "next_consumers": ["A009", "A068", "A086", "A097", "B20"],
+      "independent_reviewers": ["A086", "A094"]
+    }
+  ]
+}

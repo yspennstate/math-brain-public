@@ -1,0 +1,31 @@
+{
+  "helper_version": "A028 v6 exact_helper.py copied byte-for-byte; prime-log vectors plus 24-term atanh rational enclosures",
+  "family": "actual binary mux of arbitrary Boolean independent controller and two fully shared Boolean data sources",
+  "pilot": {
+    "controller_max_dim": 1,
+    "data_max_dim": 1,
+    "roots": 120,
+    "reference_pairs": 4,
+    "cases": 480,
+    "max_seconds": 60
+  },
+  "full": {
+    "controller_max_dim": 1,
+    "data_max_dim": 2,
+    "roots": 1656,
+    "reference_pairs": 4,
+    "cases": 6624,
+    "max_seconds": 600
+  },
+  "references": [
+    "uniform on full source spectral cube",
+    "half true source spectrum plus half uniform"
+  ],
+  "queries": "every single physical coordinate at every root; both children; finite-tree consequence proved analytically",
+  "extra_fixture": "one 7-variable mux: 3-bit controller with negative truth entries 0,1,2; data G=(3-bit point defect at 0)*dictator and H=(3-bit majority)*dictator; uniform and half-mixture source refs",
+  "symmetry": "none; all truth tables counted including constants and dimension padding",
+  "arithmetic": "Fraction spectra, normalized references and kernels; exact rational coefficients of prime logarithms; outward rational sign bounds",
+  "memory_estimate_MB": 160,
+  "automatic_escalation": false,
+  "independent_check": "direct character sums on fixed 3-data-bit fixture and two mixed complete query orders with all outcomes; at most 128 leaves per order, 120 seconds"
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "claim_id": "A020-SELECTOR-FINITE-CAP",
+    "version": 1,
+    "exact_statement": "For every uniform Boolean multiplexer F(x,y)=g_x(y) with a=1 and m in {0,1,2,3}, or a=2 and m in {0,1,2}, entropy in bits and s=I_sel(F), Delta=H(F)-2^-a sum_x H(g_x) satisfies Delta <= (171/200)*[(2/ln(2))*s+a*h2(s/a)], strictly if s>0; if s=0 then Delta=0. This is a finite statement covering 131620 labeled truth tables.",
+    "hypotheses": [
+      "Uniform independent physical selector/data blocks",
+      "Actual Boolean +/-1 truth tables",
+      "Only the seven specified finite domains",
+      "Entropy units bits; h2(0)=h2(1)=0"
+    ],
+    "statement_sha256": "5fe6a0439b21d7049a267c76a1bc6b2aede62fa3900b4f24fef9d56d03f894fd",
+    "contributors": [
+      "A020"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "code/verify.py",
+      "CERTIFICATION_SPEC.json",
+      "out/census.json",
+      "out/certified_census.log"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A090",
+      "A091",
+      "A018",
+      "A019",
+      "A027"
+    ]
+  }
+]

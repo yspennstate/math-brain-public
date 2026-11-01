@@ -1,0 +1,48 @@
+{
+  "task": "T08",
+  "worker": "NM13-01",
+  "date": "2026-09-20",
+  "source_problem": "Salez arXiv:2508.21055 Problem 2.3: prove cutoff for all bounded-degree vertex-transitive expander sequences",
+  "source_continuous_time_convention": "H_t = exp(t(P-I)), equivalently rate-one Poissonization / mean-one exponential holding times",
+  "parent_before": "OPEN",
+  "parent_after": "OPEN",
+  "restricted_result_status": "CANDIDATE_FULL pending independent review",
+  "publication_novelty": "UNVERIFIED",
+  "new_theorem_scope": {
+    "class": "15-regular persistently noncommuting switched-fiber semidirect Cayley graphs built from degree-six PSL2 Ramanujan inputs and an S3 switching factor",
+    "vertex_transitive": true,
+    "spectral_gap_lower_bound": "1/15",
+    "cutoff_center": "(15/4) log_5 n = (75/22) log_5 N + O(1)",
+    "window": "O(sqrt(log N))",
+    "long_range_expansion": "fails every fixed positive LRE constant",
+    "noncommutation_certificate": "||[P0,P1]||_{2->2} = sqrt(3)/64 uniformly in size"
+  },
+  "transfer_theorem": {
+    "degree_parameters": "D=d+r+1, a=d/D, b=r/D, c=1/D",
+    "tv_sandwich": "d_G(at) <= d_H(t) <= d_G(at) + (1/2)e^{-2ct} + (1/2)sqrt(|K|-1)e^{-b eta t}",
+    "gap_transfer": "gap(H) >= min{b eta, a gap(G), 2c}",
+    "cutoff_sufficient_condition": "(b eta_n/a) T_n - (1/2) log |K_n| -> +infinity"
+  },
+  "mechanism_advance": {
+    "previous_obstruction": "the prior rotating-lamp theorem handled nonnormalizing switching only when the conjugate hidden semigroups commute; genuinely noncommuting path ordering remained unresolved",
+    "removed_scope": "arbitrary time ordering and persistent pairwise commutators are harmless for L2 dissipation when all switched hidden kernels are reversible for one common stationary law and share a uniform one-sided spectral gap",
+    "proof_mechanism": "differentiate the pathwise L2 energy for the time-inhomogeneous hidden evolution; Gronwall gives common-gap contraction without commuting kernels"
+  },
+  "remaining_obstruction": "supercritical genuinely noncommuting hidden information where the sqrt(|K|) point-mass L2 cost is too large, and arbitrary transitive expanders with no exposed finite switching/factor representation",
+  "partner_complement": "P26 remains on entropy/Green/spherical-shell transfer and has advanced all fixed exact-distance EFMP classes",
+  "primary_boundary": {
+    "salez": "arXiv:2508.21055v1",
+    "altschuler": "arXiv:2609.14945, submitted 2026-09-14; fixed-degree long-range expanders, not arbitrary spectral expanders",
+    "pedrotti_salez": "arXiv:2607.05345, submitted 2026-07-06; local-product/non-equilibrium-Poincare criterion",
+    "time_inhomogeneous_prior_art": "Gorokhovsky arXiv:2405.11435 and dynamic-graph literature; no novelty claim for the elementary common-gap contraction lemma"
+  },
+  "sanity_check": {
+    "code": "2026-09-20T12-50-00Z__noncommuting_switch_cutoff_check.py",
+    "output": "2026-09-20T12-50-00Z__noncommuting_switch_cutoff_check.out",
+    "status": "ALL_CHECKS_PASS",
+    "finite_experiment_role": "sanity check only; not asymptotic proof evidence"
+  },
+  "next_attack": "root-stabilizer representation decomposition: seek dimension-free contraction of likelihood-ratio components orthogonal to the orbit quotient without the sqrt(|K|) initialization cost; if false, construct a high-isotypic-multiplicity transitive expander stress family",
+  "runtime_model": "GPT-5.6 Sol",
+  "runtime_effort": "UNVERIFIED"
+}

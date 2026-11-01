@@ -1,0 +1,799 @@
+{
+  "status": "PASS; exact finite audit, analytic root proof is separate",
+  "arithmetic": "fractions.Fraction and exact Sturm sequences",
+  "implementation": "literal all-vertex connectivity partitions; no imports from the forest-backbone theorem implementation",
+  "apex_cases": [
+    {
+      "n": 2,
+      "p": "0",
+      "lambda": "0",
+      "Z_H": "1",
+      "normalized_coefficients_ascending": [
+        "1",
+        "2",
+        "1"
+      ],
+      "negative_distinct_roots": 1,
+      "square_free": false
+    },
+    {
+      "n": 2,
+      "p": "1/5",
+      "lambda": "1/4",
+      "Z_H": "3/2",
+      "normalized_coefficients_ascending": [
+        "1",
+        "2",
+        "2/3"
+      ],
+      "negative_distinct_roots": 2,
+      "square_free": true
+    },
+    {
+      "n": 2,
+      "p": "1/2",
+      "lambda": "1",
+      "Z_H": "3",
+      "normalized_coefficients_ascending": [
+        "1",
+        "2",
+        "1/3"
+      ],
+      "negative_distinct_roots": 2,
+      "square_free": true
+    },
+    {
+      "n": 2,
+      "p": "4/5",
+      "lambda": "4",
+      "Z_H": "9",
+      "normalized_coefficients_ascending": [
+        "1",
+        "2",
+        "1/9"
+      ],
+      "negative_distinct_roots": 2,
+      "square_free": true
+    },
+    {
+      "n": 3,
+      "p": "0",
+      "lambda": "0",
+      "Z_H": "1",
+      "normalized_coefficients_ascending": [
+        "1",
+        "3",
+        "3",
+        "1"
+      ],
+      "negative_distinct_roots": 1,
+      "square_free": false
+    },
+    {
+      "n": 3,
+      "p": "1/5",
+      "lambda": "1/4",
+      "Z_H": "31/16",
+      "normalized_coefficients_ascending": [
+        "1",
+        "3",
+        "72/31",
+        "16/31"
+      ],
+      "negative_distinct_roots": 3,
+      "square_free": true
+    },
+    {
+      "n": 3,
+      "p": "1/2",
+      "lambda": "1",
+      "Z_H": "7",
+      "normalized_coefficients_ascending": [
+        "1",
+        "3",
+        "9/7",
+        "1/7"
+      ],
+      "negative_distinct_roots": 3,
+      "square_free": true
+    },
+    {
+      "n": 3,
+      "p": "4/5",
+      "lambda": "4",
+      "Z_H": "61",
+      "normalized_coefficients_ascending": [
+        "1",
+        "3",
+        "27/61",
+        "1/61"
+      ],
+      "negative_distinct_roots": 3,
+      "square_free": true
+    },
+    {
+      "n": 4,
+      "p": "0",
+      "lambda": "0",
+      "Z_H": "1",
+      "normalized_coefficients_ascending": [
+        "1",
+        "4",
+        "6",
+        "4",
+        "1"
+      ],
+      "negative_distinct_roots": 1,
+      "square_free": false
+    },
+    {
+      "n": 4,
+      "p": "1/5",
+      "lambda": "1/4",
+      "Z_H": "39/16",
+      "normalized_coefficients_ascending": [
+        "1",
+        "4",
+        "196/39",
+        "32/13",
+        "16/39"
+      ],
+      "negative_distinct_roots": 4,
+      "square_free": true
+    },
+    {
+      "n": 4,
+      "p": "1/2",
+      "lambda": "1",
+      "Z_H": "15",
+      "normalized_coefficients_ascending": [
+        "1",
+        "4",
+        "46/15",
+        "4/5",
+        "1/15"
+      ],
+      "negative_distinct_roots": 4,
+      "square_free": true
+    },
+    {
+      "n": 4,
+      "p": "4/5",
+      "lambda": "4",
+      "Z_H": "369",
+      "normalized_coefficients_ascending": [
+        "1",
+        "4",
+        "406/369",
+        "4/41",
+        "1/369"
+      ],
+      "negative_distinct_roots": 4,
+      "square_free": true
+    },
+    {
+      "n": 5,
+      "p": "0",
+      "lambda": "0",
+      "Z_H": "1",
+      "normalized_coefficients_ascending": [
+        "1",
+        "5",
+        "10",
+        "10",
+        "5",
+        "1"
+      ],
+      "negative_distinct_roots": 1,
+      "square_free": false
+    },
+    {
+      "n": 5,
+      "p": "1/5",
+      "lambda": "1/4",
+      "Z_H": "781/256",
+      "normalized_coefficients_ascending": [
+        "1",
+        "5",
+        "6840/781",
+        "5360/781",
+        "1920/781",
+        "256/781"
+      ],
+      "negative_distinct_roots": 5,
+      "square_free": true
+    },
+    {
+      "n": 5,
+      "p": "1/2",
+      "lambda": "1",
+      "Z_H": "31",
+      "normalized_coefficients_ascending": [
+        "1",
+        "5",
+        "180/31",
+        "80/31",
+        "15/31",
+        "1/31"
+      ],
+      "negative_distinct_roots": 5,
+      "square_free": true
+    },
+    {
+      "n": 5,
+      "p": "4/5",
+      "lambda": "4",
+      "Z_H": "2101",
+      "normalized_coefficients_ascending": [
+        "1",
+        "5",
+        "4590/2101",
+        "710/2101",
+        "45/2101",
+        "1/2101"
+      ],
+      "negative_distinct_roots": 5,
+      "square_free": true
+    },
+    {
+      "n": 6,
+      "p": "0",
+      "lambda": "0",
+      "Z_H": "1",
+      "normalized_coefficients_ascending": [
+        "1",
+        "6",
+        "15",
+        "20",
+        "15",
+        "6",
+        "1"
+      ],
+      "negative_distinct_roots": 1,
+      "square_free": false
+    },
+    {
+      "n": 6,
+      "p": "1/5",
+      "lambda": "1/4",
+      "Z_H": "1953/512",
+      "normalized_coefficients_ascending": [
+        "1",
+        "6",
+        "2930/217",
+        "3200/217",
+        "5440/651",
+        "512/217",
+        "512/1953"
+      ],
+      "negative_distinct_roots": 6,
+      "square_free": true
+    },
+    {
+      "n": 6,
+      "p": "1/2",
+      "lambda": "1",
+      "Z_H": "63",
+      "normalized_coefficients_ascending": [
+        "1",
+        "6",
+        "67/7",
+        "44/7",
+        "41/21",
+        "2/7",
+        "1/63"
+      ],
+      "negative_distinct_roots": 6,
+      "square_free": true
+    },
+    {
+      "n": 6,
+      "p": "4/5",
+      "lambda": "4",
+      "Z_H": "11529",
+      "normalized_coefficients_ascending": [
+        "1",
+        "6",
+        "4855/1281",
+        "380/427",
+        "365/3843",
+        "2/427",
+        "1/11529"
+      ],
+      "negative_distinct_roots": 6,
+      "square_free": true
+    },
+    {
+      "n": 7,
+      "p": "0",
+      "lambda": "0",
+      "Z_H": "1",
+      "normalized_coefficients_ascending": [
+        "1",
+        "7",
+        "21",
+        "35",
+        "35",
+        "21",
+        "7",
+        "1"
+      ],
+      "negative_distinct_roots": 1,
+      "square_free": false
+    },
+    {
+      "n": 7,
+      "p": "1/5",
+      "lambda": "1/4",
+      "Z_H": "19531/4096",
+      "normalized_coefficients_ascending": [
+        "1",
+        "7",
+        "375984/19531",
+        "529760/19531",
+        "416640/19531",
+        "184576/19531",
+        "43008/19531",
+        "4096/19531"
+      ],
+      "negative_distinct_roots": 7,
+      "square_free": true
+    },
+    {
+      "n": 7,
+      "p": "1/2",
+      "lambda": "1",
+      "Z_H": "127",
+      "normalized_coefficients_ascending": [
+        "1",
+        "7",
+        "1827/127",
+        "1631/127",
+        "735/127",
+        "175/127",
+        "21/127",
+        "1/127"
+      ],
+      "negative_distinct_roots": 7,
+      "square_free": true
+    },
+    {
+      "n": 7,
+      "p": "4/5",
+      "lambda": "4",
+      "Z_H": "61741",
+      "normalized_coefficients_ascending": [
+        "1",
+        "7",
+        "370629/61741",
+        "121835/61741",
+        "19215/61741",
+        "1561/61741",
+        "63/61741",
+        "1/61741"
+      ],
+      "negative_distinct_roots": 7,
+      "square_free": true
+    },
+    {
+      "n": 8,
+      "p": "0",
+      "lambda": "0",
+      "Z_H": "1",
+      "normalized_coefficients_ascending": [
+        "1",
+        "8",
+        "28",
+        "56",
+        "70",
+        "56",
+        "28",
+        "8",
+        "1"
+      ],
+      "negative_distinct_roots": 1,
+      "square_free": false
+    },
+    {
+      "n": 8,
+      "p": "1/5",
+      "lambda": "1/4",
+      "Z_H": "12207/2048",
+      "normalized_coefficients_ascending": [
+        "1",
+        "8",
+        "317384/12207",
+        "183104/4069",
+        "556960/12207",
+        "113664/4069",
+        "123904/12207",
+        "8192/4069",
+        "2048/12207"
+      ],
+      "negative_distinct_roots": 8,
+      "square_free": true
+    },
+    {
+      "n": 8,
+      "p": "1/2",
+      "lambda": "1",
+      "Z_H": "255",
+      "normalized_coefficients_ascending": [
+        "1",
+        "8",
+        "5164/255",
+        "1976/85",
+        "718/51",
+        "24/5",
+        "236/255",
+        "8/85",
+        "1/255"
+      ],
+      "negative_distinct_roots": 8,
+      "square_free": true
+    },
+    {
+      "n": 8,
+      "p": "4/5",
+      "lambda": "4",
+      "Z_H": "325089",
+      "normalized_coefficients_ascending": [
+        "1",
+        "8",
+        "2893948/325089",
+        "140216/36121",
+        "272870/325089",
+        "3576/36121",
+        "2108/325089",
+        "8/36121",
+        "1/325089"
+      ],
+      "negative_distinct_roots": 8,
+      "square_free": true
+    },
+    {
+      "n": 9,
+      "p": "0",
+      "lambda": "0",
+      "Z_H": "1",
+      "normalized_coefficients_ascending": [
+        "1",
+        "9",
+        "36",
+        "84",
+        "126",
+        "126",
+        "84",
+        "36",
+        "9",
+        "1"
+      ],
+      "negative_distinct_roots": 1,
+      "square_free": false
+    },
+    {
+      "n": 9,
+      "p": "1/5",
+      "lambda": "1/4",
+      "Z_H": "488281/65536",
+      "normalized_coefficients_ascending": [
+        "1",
+        "9",
+        "16479504/488281",
+        "33874464/488281",
+        "42228864/488281",
+        "33267456/488281",
+        "16644096/488281",
+        "5124096/488281",
+        "884736/488281",
+        "65536/488281"
+      ],
+      "negative_distinct_roots": 9,
+      "square_free": true
+    },
+    {
+      "n": 9,
+      "p": "1/2",
+      "lambda": "1",
+      "Z_H": "511",
+      "normalized_coefficients_ascending": [
+        "1",
+        "9",
+        "13878/511",
+        "19686/511",
+        "15228/511",
+        "6912/511",
+        "270/73",
+        "306/511",
+        "27/511",
+        "1/511"
+      ],
+      "negative_distinct_roots": 9,
+      "square_free": true
+    },
+    {
+      "n": 9,
+      "p": "4/5",
+      "lambda": "4",
+      "Z_H": "1690981",
+      "normalized_coefficients_ascending": [
+        "1",
+        "9",
+        "21233664/1690981",
+        "11814744/1690981",
+        "175446/88999",
+        "531306/1690981",
+        "49896/1690981",
+        "144/88999",
+        "81/1690981",
+        "1/1690981"
+      ],
+      "negative_distinct_roots": 9,
+      "square_free": true
+    }
+  ],
+  "marked_cases": [
+    {
+      "n": 2,
+      "p": "0",
+      "lambda": "0",
+      "columns": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "direct_A_E_F_C": [
+        "4911",
+        "2359",
+        "1215",
+        "583"
+      ],
+      "Rayleigh": "3072",
+      "strict": true,
+      "D_U_Gamma_Omega_T_first_second": [
+        "121",
+        "2/11",
+        "2/121",
+        "2/1331",
+        "2/121",
+        "2/1331",
+        "4/14641"
+      ]
+    },
+    {
+      "n": 2,
+      "p": "1/3",
+      "lambda": "1/2",
+      "columns": [
+        "1/2",
+        "2/3",
+        "3/4",
+        "4/5"
+      ],
+      "direct_A_E_F_C": [
+        "3043/36",
+        "1123/18",
+        "49963/900",
+        "3683/90"
+      ],
+      "Rayleigh": "221/50",
+      "strict": true,
+      "D_U_Gamma_Omega_T_first_second": [
+        "72889/3600",
+        "41160/72889",
+        "872992800/5312806321",
+        "18846435024000/387245139931369",
+        "628480800/5312806321",
+        "96336000/5312806321",
+        "51840000/5312806321"
+      ]
+    },
+    {
+      "n": 3,
+      "p": "0",
+      "lambda": "0",
+      "columns": [
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "direct_A_E_F_C": [
+        "2499840",
+        "589572",
+        "272160",
+        "64152"
+      ],
+      "Rayleigh": "88179840",
+      "strict": true,
+      "D_U_Gamma_Omega_T_first_second": [
+        "5832",
+        "1/6",
+        "1/108",
+        "1/1944",
+        "1/108",
+        "1/972",
+        "1/5832"
+      ]
+    },
+    {
+      "n": 3,
+      "p": "2/5",
+      "lambda": "2/3",
+      "columns": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "direct_A_E_F_C": [
+        "568054/3",
+        "210694/3",
+        "100702/3",
+        "37318/3"
+      ],
+      "Rayleigh": "2074224",
+      "strict": true,
+      "D_U_Gamma_Omega_T_first_second": [
+        "5503/3",
+        "1515/5503",
+        "771183/30283009",
+        "395172783/166647398527",
+        "625215/30283009",
+        "100314/30283009",
+        "27486/30283009"
+      ]
+    },
+    {
+      "n": 4,
+      "p": "1/5",
+      "lambda": "1/4",
+      "columns": [
+        "1/3",
+        "2/5",
+        "3/7",
+        "4/9"
+      ],
+      "direct_A_E_F_C": [
+        "660708117121/1928934000",
+        "23410317204161/94517766000",
+        "317877928499/1377810000",
+        "78475473899173/472588830000"
+      ],
+      "Rayleigh": "259322882846393362/976929722015625",
+      "strict": true,
+      "D_U_Gamma_Omega_T_first_second": [
+        "12797196329551/157529610000",
+        "20870121895560/12797196329551",
+        "114203428369274724653048400/163768233897073586595861601",
+        "647282113194380924558753380328775876000/2095774241724679763104711233123582471151",
+        "83628460795799499533717400/163768233897073586595861601",
+        "85804267534476544899468000/163768233897073586595861601",
+        "137084512319086855330080000/163768233897073586595861601"
+      ]
+    },
+    {
+      "n": 5,
+      "p": "1/2",
+      "lambda": "1",
+      "columns": [
+        "1",
+        "1",
+        "2",
+        "3"
+      ],
+      "direct_A_E_F_C": [
+        "12934588",
+        "4205318",
+        "2054908",
+        "667298"
+      ],
+      "Rayleigh": "10316897520",
+      "strict": true,
+      "D_U_Gamma_Omega_T_first_second": [
+        "90198",
+        "28855/45099",
+        "169438835/2033919801",
+        "1007677006240/91727749105299",
+        "115259800/2033919801",
+        "51401240/2033919801",
+        "10902275/677973267"
+      ]
+    },
+    {
+      "n": 6,
+      "p": "3/4",
+      "lambda": "3",
+      "columns": [
+        "2/3",
+        "3/5",
+        "5/7",
+        "7/11"
+      ],
+      "direct_A_E_F_C": [
+        "3894721205460900135145502/474812234640253125",
+        "7796228751675488312354302/2374061173201265625",
+        "1492797680435418910995182/474812234640253125",
+        "2984612164663038726417982/2374061173201265625"
+      ],
+      "Rayleigh": "33220645017525113388081536143454367136/2682497242223106163955859375",
+      "strict": true,
+      "D_U_Gamma_Omega_T_first_second": [
+        "689119801311604396948894/2374061173201265625",
+        "670873906799318484447570/344559900655802198474447",
+        "79274792934943817464755676313779747070087274150/118721525139936280282347745274517975094111955809",
+        "9557335993577111556107441569739331694444970213609469562786628030819250/40906676907921767933467252504188446369121748241840566307097203279712623",
+        "23669061361303980310781797804047041179968512400/118721525139936280282347745274517975094111955809",
+        "18346939560064075724366208375063915529445171250/118721525139936280282347745274517975094111955809",
+        "34650288902385075388130539905017140998300337500/118721525139936280282347745274517975094111955809"
+      ]
+    },
+    {
+      "n": 3,
+      "p": "1/2",
+      "lambda": "1",
+      "columns": [
+        "0",
+        "2",
+        "3",
+        "5"
+      ],
+      "direct_A_E_F_C": [
+        "70382",
+        "70382",
+        "11477",
+        "11477"
+      ],
+      "Rayleigh": "0",
+      "strict": false,
+      "D_U_Gamma_Omega_T_first_second": [
+        "2117",
+        "585/2117",
+        "115257/4481689",
+        "22889469/9487735613",
+        "85875/4481689",
+        "12918/4481689",
+        "3546/4481689"
+      ]
+    },
+    {
+      "n": 4,
+      "p": "2/3",
+      "lambda": "2",
+      "columns": [
+        "2",
+        "0",
+        "5",
+        "7"
+      ],
+      "direct_A_E_F_C": [
+        "10921981",
+        "10921981",
+        "910721",
+        "910721"
+      ],
+      "Rayleigh": "0",
+      "strict": false,
+      "D_U_Gamma_Omega_T_first_second": [
+        "121697",
+        "32876/121697",
+        "272766996/14810159809",
+        "2278600350076/1802352018275873",
+        "182172628/14810159809",
+        "30489716/14810159809",
+        "8202288/14810159809"
+      ]
+    }
+  ],
+  "summary": {
+    "apex_cases": 32,
+    "apex_max_n": 9,
+    "all_positive_p_cases_have_n_distinct_negative_roots": true,
+    "p_zero_cases_equal_(1+s)^n": true,
+    "marked_cases": 9,
+    "marked_strict_cases": 7,
+    "marked_equality_cases": 2,
+    "counterexamples": 0
+  }
+}

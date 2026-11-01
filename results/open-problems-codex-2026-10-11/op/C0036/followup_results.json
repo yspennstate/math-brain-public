@@ -1,0 +1,47 @@
+[
+  {
+    "service": "OpenAlex",
+    "query": "source DOI lookup",
+    "url": "https://api.openalex.org/works/https://doi.org/10.4310/ICM.2014.v3.21",
+    "date": "2026-10-11T21:59:39.648953+00:00",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "OpenAlex",
+    "query": "citing arxiv source via DOI",
+    "url": "https://api.openalex.org/works?filter=cites:W2102466745&per-page=200",
+    "date": "2026-10-11T21:59:39.650370+00:00",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "SemanticScholar",
+    "query": "source arXiv and citation metadata",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/ARXIV:1406.2707?fields=title,year,citations.title,citations.year,citations.externalIds",
+    "date": "2026-10-11T21:59:39.651193+00:00",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "service": "Crossref",
+    "query": "determinantal stochastic domination",
+    "url": "https://api.crossref.org/works?query=determinantal%20stochastic%20domination&rows=30",
+    "date": "2026-10-11T21:59:39.651933+00:00",
+    "status": 200,
+    "raw_file": "followup_3.raw"
+  },
+  {
+    "service": "arxiv",
+    "query": "determinantal product measures",
+    "url": "https://export.arxiv.org/api/query?search_query=all:%22determinantal%22+AND+all:%22product+measure%22&max_results=70",
+    "date": "2026-10-11T21:59:40.610441+00:00",
+    "status": 200,
+    "raw_file": "followup_4.raw"
+  },
+  {
+    "service": "arxiv",
+    "query": "Lyons conjecture 5.7",
+    "url": "https://export.arxiv.org/api/query?search_query=all:%22Lyons%22+AND+all:%22conjecture%22+AND+all:%22determinantal%22&max_results=70",
+    "date": "2026-10-11T21:59:40.616104+00:00",
+    "status": 200,
+    "raw_file": "followup_5.raw"
+  }
+]

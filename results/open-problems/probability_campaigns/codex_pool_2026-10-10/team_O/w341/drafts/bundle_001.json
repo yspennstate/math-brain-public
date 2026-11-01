@@ -1,0 +1,98 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w341",
+  "bundle_slug": "w341-p0288-checked-results-20261010",
+  "entries": [
+    {
+      "key": "killed-walk-definition",
+      "namespace": "probability.markov",
+      "logical_name": "p0288-killed-walk-definition",
+      "kind": "definition",
+      "title": "Two-ended killed continuous-time walk [audit pending w347]",
+      "statement": "On the transient class Z, the chain jumps from i to i+1 and i-1 at rate one each and jumps to a separate absorbing cemetery at rate kappa+v*1_{i=0}, with kappa>0 and v>0. Its transient generator is Delta-kappa I-v|0><0|, where Delta f(i)=f(i+1)+f(i-1)-2f(i).",
+      "proof_text": null,
+      "assumptions": [
+        "kappa>0",
+        "v>0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:p0288-killed-walk-definition",
+        "url": "file:///~/brain_workers/w341/proofs/P0288_recheck.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "positive-rank-two-asymptotic-kernel",
+      "namespace": "probability.markov",
+      "logical_name": "p0288-positive-rank-two-asymptotic-kernel",
+      "kind": "lemma",
+      "title": "Existing killed-walk candidate: explicit rank-two minor [audit pending w347]",
+      "statement": "For the two-ended killed walk just defined, lambda=kappa, the class is lambda-transient, and for fixed integers i,j the limit of t^(3/2)*exp(kappa*t)*p_t(i,j) is [max(ij,0)+(|i|+|j|)/v+2/v^2]/(2*sqrt(pi)). This strictly positive kernel has rank two and its {0,1} minor is 1/(4*pi*v^2). It cannot factor as a rank-one product. This rechecks an existing campaign candidate and does not certify novelty.",
+      "proof_text": "# P0288: recheck of the existing killed-walk candidate\n\nStatus: a proof and independent recheck of an existing campaign candidate, pending w347. This is not a novelty or literature-status certificate. The cached primary source is Phil Pollett, *Quasi-stationary distributions for queueing and other models*, arXiv:2202.05428 (2022), Section 2. Its conjecture (ii) is the rank-one assertion. Foley and McDonald, *Yaglom limits can depend on the starting state*, arXiv:1709.07578v1, 22 September 2017, is the existing prior-art lead; its cached abstract concerns a discrete R-transient example, not this continuous-time formula.\n\nOn the transient labels Z, jump to each nearest neighbor at rate one, kill at rate kappa>0 everywhere and at extra rate v>0 at lattice zero, into a separate cemetery state. The full generator is conservative, bounded-rate, nonexplosive and has an irreducible transient class. Uniform killing ensures almost sure absorption. Put K=-Delta+v|0><0|, where Delta f(i)=f(i+1)+f(i-1)-2f(i); then p_t(i,j)=exp(-kappa t)<delta_i,exp(-tK)delta_j>.\n\nFor s>0, set D=sqrt(s(s+4)) and r=(s+2-D)/2. The free resolvent is r^|i-j|/D: substitution in its second-order recurrence and decay at both ends determine it. The rank-one perturbation identity gives\n\nR_s(i,j)=[r^|i-j|-v r^(|i|+|j|)/(D+v)]/D.\n\nWrite a=|i-j|, b=|i|+|j| and q=sqrt(s). Expanding D=2q+q^3/4+O(q^5), log r=-q+q^3/24+O(q^5), and v/(D+v)=1-2q/v+4q^2/v^2+O(q^3), gives\n\nR_s(i,j)=(b-a)/2+1/v-L_ij sqrt(s)+O(s), where L_ij=(b^2-a^2)/4+b/v+2/v^2=max(ij,0)+(|i|+|j|)/v+2/v^2.\n\nFor rigor in passing to time, use the explicit spectral boundary values rather than an off-diagonal Tauberian claim. At s=-E+i0 for 0<E<4, D=i sqrt(E(4-E)), r=1-E/2-i sqrt(E(4-E))/2. Near zero the boundary value is analytic in sqrt(E), so Stieltjes inversion gives spectral density (L_ij/pi) sqrt(E)+O(E^(3/2)). There is no atom at zero because sR_s(i,j) tends to zero. The remainder of the finite spectral measure, supported above any fixed positive epsilon, contributes exponentially little. Laplace integration of the density therefore gives\n\nlim_{t->infinity} t^(3/2) exp(kappa t) p_t(i,j)=C_ij=L_ij/(2 sqrt(pi)).\n\nIn particular, C_ij is strictly positive, the decay parameter is lambda=kappa, and the integrated exp(lambda t) kernel is (b-a)/2+1/v, which is finite. Thus the chain satisfies the source's lambda-transience and absorption hypotheses. Define h_+(i)=max(i,0)+1/v and h_-(i)=max(-i,0)+1/v. These are distinct positive K-harmonic functions and L_ij=h_+(i)h_+(j)+h_-(i)h_-(j). The leading kernel has rank exactly two; its minor on labels {0,1} is 1/(4*pi*v^2)>0. No rank-one factorization can have that minor.\n\nIndependent checks: checks.py evaluated 784 resolvent recurrences in exact fractions, 72 harmonic recurrences and four exact rank/minor checks. Independent integration of the spectral density at t=20,80,320 gave maximum absolute errors 0.06132234, 0.01689538, 0.00433960 against the scaled limits. These numerical results support, rather than replace, the spectral proof. A proof audit must check the branch convention, absence of a zero atom, signed off-diagonal inversion, positivity, and all source hypotheses. Novelty remains unestablished.\n\nLocal primary passages: Downloads/Probability_1000_20h_20260906/sources/queues_qsd_pollett_2022/text.txt:15-32,122-127; prior-art abstract: sources/foley_mcdonald_yaglom_2017/text.txt:3-16. Existing brain target: math:probability.open-problems:p0288-pollett-rank-two-limit-kernel-refuted, whose current title says CANDIDATE REFUTATION.\n",
+      "assumptions": [
+        "rate-one nearest-neighbor jumps on Z",
+        "uniform killing kappa>0",
+        "extra killing v>0 at lattice zero",
+        "separate absorbing cemetery"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:p0288-positive-rank-two-asymptotic-kernel",
+        "url": "file:///~/brain_workers/w341/proofs/P0288_recheck.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "source-limited-status-20261010",
+      "namespace": "probability.markov",
+      "logical_name": "p0288-source-limited-status-20261010",
+      "kind": "concept",
+      "title": "Source-limited status and scope for P0288 [audit pending w347]",
+      "statement": "The supplied campaign already contains a candidate refutation of the rank-one polynomial-limit assertion for a lambda-transient killed chain. Its source and formula were rechecked here; independent audit and novelty remain unverified. Foley-McDonald arXiv:1709.07578v1 is a prior-art lead, not an established identification with this continuous-time example.",
+      "proof_text": null,
+      "assumptions": [
+        "only the supplied local caches and prior records were consulted",
+        "independent review pending"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w341:p0288-source-limited-status-20261010",
+        "url": "file:///~/brain_workers/w341/proofs/P0288_recheck.md",
+        "revision": "author-checked-2026-10-10; independent audit pending w347",
+        "license": "owner-own-work (campaign mathematics; literature attributed)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "positive-rank-two-asymptotic-kernel",
+      "to_key": "killed-walk-definition",
+      "kind": "depends_on",
+      "rationale": "From: \"For the two-ended killed walk just defined, lambda=kappa, the class is lambda-transient, and for fixed integers i,j the limit of t^(3/2)*exp(kappa*t)*p_t(i,j) is [max(ij,0)+(|i|+|j|)/v+2/v^2]/(2*sqrt(pi)). This strictly positive kernel has rank two and its {0,1} minor is 1/(4*pi*v^2). It cannot factor as a rank-one product. This rechecks an existing campaign candidate and does not certify novelty.\" To: \"On the transient class Z, the chain jumps from i to i+1 and i-1 at rate one each and jumps to a separate absorbing cemetery at rate kappa+v*1_{i=0}, with kappa>0 and v>0. Its transient generator is Delta-kappa I-v|0><0|, where Delta f(i)=f(i+1)+f(i-1)-2f(i).\"."
+    },
+    {
+      "from_key": "killed-walk-definition",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"On the transient class Z, the chain jumps from i to i+1 and i-1 at rate one each and jumps to a separate absorbing cemetery at rate kappa+v*1_{i=0}, with kappa>0 and v>0. Its transient generator is Delta-kappa I-v|0><0|, where Delta f(i)=f(i+1)+f(i-1)-2f(i).\" To: \"The supplied campaign already contains a candidate refutation of the rank-one polynomial-limit assertion for a lambda-transient killed chain. Its source and formula were rechecked here; independent audit and novelty remain unverified. Foley-McDonald arXiv:1709.07578v1 is a prior-art lead, not an established identification with this continuous-time example.\"."
+    },
+    {
+      "from_key": "positive-rank-two-asymptotic-kernel",
+      "to_key": "source-limited-status-20261010",
+      "kind": "cites",
+      "rationale": "From: \"For the two-ended killed walk just defined, lambda=kappa, the class is lambda-transient, and for fixed integers i,j the limit of t^(3/2)*exp(kappa*t)*p_t(i,j) is [max(ij,0)+(|i|+|j|)/v+2/v^2]/(2*sqrt(pi)). This strictly positive kernel has rank two and its {0,1} minor is 1/(4*pi*v^2). It cannot factor as a rank-one product. This rechecks an existing campaign candidate and does not certify novelty.\" To: \"The supplied campaign already contains a candidate refutation of the rank-one polynomial-limit assertion for a lambda-transient killed chain. Its source and formula were rechecked here; independent audit and novelty remain unverified. Foley-McDonald arXiv:1709.07578v1 is a prior-art lead, not an established identification with this continuous-time example.\"."
+    },
+    {
+      "from_key": "source-limited-status-20261010",
+      "to_existing_logical": "math:probability.open-problems:p0288-pollett-rank-two-limit-kernel-refuted",
+      "kind": "cites",
+      "rationale": "From: \"The supplied campaign already contains a candidate refutation of the rank-one polynomial-limit assertion for a lambda-transient killed chain. Its source and formula were rechecked here; independent audit and novelty remain unverified. Foley-McDonald arXiv:1709.07578v1 is a prior-art lead, not an established identification with this continuous-time example.\" To: \"[campaign status: candidate_full_solution - author-checked, unrefereed] Pollett's Section 2 conjecture (ii) asks whether, for a lambda-transient irreducible countable transient class with almost sure absorption, every finite strictly positive limit of t^a e^{lambda t} p_t(i,j) must factor as A x_i m_j. Our result (id P0288, 2026-09-08): NO. Take the nearest-neighbour continuous-time walk on Z (rate 1 each side), killed at rate kappa everywhere plus an extra rate v at the origin. The class is lambda-transient with lambda = kappa, and t^{3/2} e^{kappa t} p_t(i,j) tends to [(|i| + 2/v)(|j| + 2/v) + i j] / (4 sqrt pi). The i j term makes the limit a rank-two form - its 2x2 minor on rows and columns {0,1} equals (2/v)^2/(16 pi) > 0 for every v - so no rank-one A x_i m_j factorisation exists; the reason is structural, a chain with two ends carries one degree of freedom per end. Verification as the source words it: the Feynman-Kac semigroup was solved directly at t = 100, 400, 1600, 6400, and against the claimed limits 0.141047, 0.282095, 0.705237, 0.423142 for (i,j) = (0,0), (0,1), (1,1), (1,-1) at v = 2 the computed values converge monotonically to 0.141010, 0.282004, 0.705018, 0.422932, with the minor formed from the measured entries 0.019879 against the predicted 0.019894. PRIOR ART WARNING carried in the ledger row itself: Foley and McDonald published a discrete two-end construction from which the same continuous-time obstruction follows, so treat this as confirmed mathematics and probably known. continuous-time nearest-neighbour walk on Z at rate 1 each side killing rate kappa everywhere plus extra rate v at the origin lambda = kappa\". "
+    }
+  ]
+}

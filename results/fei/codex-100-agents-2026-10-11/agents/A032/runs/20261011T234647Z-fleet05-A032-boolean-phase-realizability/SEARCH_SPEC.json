@@ -1,0 +1,11 @@
+{
+ "helper_version":"A032-pure-product-v1",
+ "actual_Boolean_family":"F(y,x)=sum_{J subset {1,2}} chi_J(y) g_J(x), with four disjointly supported ternary slices g_J in {0,+1,-1} partitioning every data assignment and each nonzero squared Walsh spectrum product",
+ "parameter_domain":"Pilot data dimension m=1,2,3; full target m=4 (total physical dimension6), fixed without escalation",
+ "case_count":"Magnitude templates finite: all coordinate faces, primitive coprime positive magnitude ratios, integer gcd c dividing2^m, c^2 product(A_i^2+B_i^2)<=4^m and divisible2^m. Phase representatives2^(2^r-r-1) per rank-r face; all active physical translations restored. Pure covers have at most4 blocks and fixed16-point data domain",
+ "symmetry":"Each slice global sign and physical translation fix phases at face origin and r basis labels; restore every active translation. All spectral faces retained. Address permutations optimize by assigning descending slice masses to address weights0,1,1,2. Slice entropy is unchanged by sign/translation; data influence is recomputed exactly",
+ "arithmetic":"Integer FWHT, exact norm/product checks, exact data influence, spectral integer squared-mass histograms. Decimal entropy for discovery only; rational logarithm intervals for any decisive result",
+ "memory_estimate":"Less than100 MB, small slice dictionaries and streaming phase templates; no dense matrices",
+ "maximum_runtime":"Pilot60 seconds, full slice generation180 seconds, cover optimization180 seconds. One job at a time. Hard timeout in helper; no background process",
+ "acceptance":"Any improvement needs full64-sign truth table, direct integer transform verifying all four conditional laws, exact physical influence, and rational interval H/I greater than the point-defect benchmark. Exhaustiveness claims require completed finite domain and exact comparison bounds"
+}

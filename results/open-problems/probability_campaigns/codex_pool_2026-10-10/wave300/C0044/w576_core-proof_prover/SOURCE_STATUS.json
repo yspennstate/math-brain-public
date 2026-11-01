@@ -1,0 +1,63 @@
+{
+  "target_id": "C0044",
+  "checked_at": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "exact_statement": "Let E={+/-e_i:1<=i<=d}. The environment omega has probability rows omega(x,e), e in E, on Z^d, is sampled once, and the quenched walk has X_0=0 and transition P_omega(X_{n+1}=x+e|X_n=x)=omega(x,e). For fixed nonzero l in R^d put A_l={lim_n X_n dot l=+infinity}, q_l(omega)=P_omega^0(A_l), theta_x omega(y,e)=omega(x+y,e), and Kg(omega)=sum_e omega(0,e)g(theta_e omega). For iid strictly elliptic rows, d>=3, the target is P_0(A_l) in {0,1}.",
+  "primary_statement_source": {
+    "url": "https://arxiv.org/pdf/1309.2589",
+    "locator": "Drewitz-Ramirez, Open question 3.2, PDF page 42 (index 41)",
+    "assumptions": [
+      "(E)",
+      "(IID)"
+    ],
+    "verified": true
+  },
+  "recent_primary_claim": {
+    "title": "A directional zero-one law under strict ellipticity",
+    "date": "2026-09-23",
+    "url": "https://raw.githubusercontent.com/openai/math/main/preprints/A-directional-zero-one-law-under-strict-ellipticity-September-23-2026/paper.pdf",
+    "local_copy": "~\\brain_workers\\w576\\sources\\strict_zero_one_2026.pdf",
+    "locator": "Theorem 1.1; statement and strategy only read",
+    "adjudicated": false,
+    "formal_receipt": "NONE. The linked comparator DirectionalWalk.lean has by sorry at its target theorem; this is not a refutation of a separate implementation or manuscript."
+  },
+  "counterexample_source": {
+    "url": "https://arxiv.org/pdf/1007.2565v3",
+    "locator": "Sabot Theorem 1(ii), PDF page index 3",
+    "packet_trap_exponent": "7/25",
+    "refutes": "Blanket stationary-probability / Cesaro-UI proof input",
+    "does_not_refute": "C0044"
+  },
+  "prior_attempts": {
+    "original": "C0044-A001",
+    "superseding": "C0044-A002",
+    "scoped_other_intakes": "Exact problem_id/attempt_id rg search across all named intake directories returned only the original intake records",
+    "H_I_attempt_directories": "No C0044-specific match in targeted searches",
+    "lean_prior_directory": "Annotated ranking only; no target proof located"
+  },
+  "owner_solved_retired_check": {
+    "status": "PARTIAL, not a global certification",
+    "named_population_store": "Read-only exact-title query returned three historical or unverified target cards",
+    "canonical_store": "Scoped canonical-repository README/sqlite filename search did not expose a target store; verification unavailable; no retired/solved claim"
+  },
+  "served_model_evidence": {
+    "requested_model": "gpt-6.1-sol",
+    "requested_reasoning": "max",
+    "requested_tier": "Fast",
+    "response_side_receipt_available": false,
+    "served_identity": "UNKNOWN",
+    "note": "Requested settings and self-report are not served-model evidence."
+  },
+  "submission_state": "not submitted",
+  "review_state": "pending w578",
+  "different_model_review_gate": "pending; served identities unverified",
+  "ingestion_state": "not ingested",
+  "retrieval_state": "not checked",
+  "full_target_proved_in_this_packet": false,
+  "single_hardest_gap": "G1: Cov_P(sum_e omega(-e,e),q_l^2)=0. Row independence does not give independence from the global escape function.",
+  "handoff_receipts": {
+    "statement_first_to_w577": "msg-eb0797a19f",
+    "scope_to_w578": "msg-5fdec58f53",
+    "lane_claim": "clm-be7daca008"
+  }
+}

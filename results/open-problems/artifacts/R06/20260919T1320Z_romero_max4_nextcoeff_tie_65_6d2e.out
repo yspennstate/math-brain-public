@@ -1,0 +1,12 @@
+all-minors n=8: Ft=16576, Fs=9408, gap=7168
+all-minors n=9: Ft=291600, Fs=186624, gap=104976
+all-minors n=10: Ft=5850000, Fs=4050000, gap=1800000
+all-minors n=11: Ft=132061820, Fs=96630600, gap=35431220
+all-minors n=12: Ft=3317428224, Fs=2529128448, gap=788299776
+bruteforce n=8 k=6: star=34496, tie=34496, gap=0
+bruteforce n=8 k=7: star=112413, tie=105245, gap=7168
+det(S_t) = -(n - 1)*(n**2 - 4*n + 5)/5
+det(S_s) = -(n - 5)*(n - 1)**2/5
+symbolic gap = 2*n**(n - 5)*(n - 1)
+PASS: unique leading-coefficient tie is broken at N_(n-1):
+      N_(n-1)(star)-N_(n-1)(tie)=2(n-1)n^(n-5)>0 for all n>=8.

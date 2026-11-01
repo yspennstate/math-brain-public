@@ -1,0 +1,1 @@
+Stage22: fresh intake complete. Reviewing A029@5 calibrated floor theorem and arbitrary-core AND2 carrier. Target: exact erasure/entropy and physical-policy transport, retaining arbitrary DATA terminal entropy. FEI OPEN. NEXT: reconstruct algebra and certify finite Boolean witnesses.

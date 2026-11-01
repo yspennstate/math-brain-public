@@ -1,0 +1,3 @@
+2026-10-10: STUCK: team_comm.py say failed twice: w582 has no default campaign; named probability300-integration is absent in this mesh. Switch to a worker-owned narrow C0044 campaign, then send the saved statement and packet to the named peers. No child agents or services will be started.
+
+2026-10-10: Read only w583/w584 STATUS.md. w583 independently constructed an outward-drift harmonic obstruction before receiving our proof details. Treat that overlap as an independent baseline, do not duplicate its source row in the new brain bundle. w582's primary added scope is the fixed-environment harmonic trichotomy and zero-projected-drift oscillation. w584 reports a scoped KEEP on w582 L1; receipt details have not yet been read.

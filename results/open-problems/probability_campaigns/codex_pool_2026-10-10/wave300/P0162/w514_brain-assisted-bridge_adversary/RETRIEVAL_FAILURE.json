@@ -1,0 +1,43 @@
+{
+  "id": "w514-R001",
+  "query": "Fourier entropy influence hypercontractivity restriction induction",
+  "before_command": "python -B -X utf8 readonly_recall.py math 'Fourier entropy influence hypercontractivity restriction induction'",
+  "before_seconds": 12.346009899978526,
+  "before_hit_count": 8,
+  "selected_cited_nodes": 3,
+  "before_selected_status_visible": 0,
+  "before_selected_assumptions_visible": 0,
+  "after_command": "python -B -X utf8 read_exact_nodes.py",
+  "after_selected_status_visible": 3,
+  "after_selected_assumptions_visible": 3,
+  "after_statuses": [
+    {
+      "id": "claim_0e83fe2812957c403bb6117944285bc0",
+      "status": "unverified",
+      "kind": "definition"
+    },
+    {
+      "id": "claim_d15d0160e58b4c9183707be9f49462d2",
+      "status": "unverified",
+      "kind": "lemma"
+    },
+    {
+      "id": "claim_dc05672a84f74b44a1f15207c0cf86e0",
+      "status": "unverified",
+      "kind": "lemma"
+    }
+  ],
+  "failure": "Title-only recall omitted the assumptions and unverified status of all three cited cards, including two lemma cards whose prose mixes analytic claims with finite computed examples.",
+  "bounded_proposed_repair": "Keep ranking unchanged. Add an opt-in, by-ID full-claim receipt for at most three chosen hits, displaying statement, assumptions, claim status and provenance. Require explicit hypothesis comparison before using an unverified lemma as a theorem. read_exact_nodes.py is this task's bounded local adapter, not a deployed engine patch.",
+  "scope_limit": "One query, three citation-selected cards; display coverage only. No ranking-accuracy or general brain-effectiveness improvement is claimed.",
+  "math_failure": "A universal K bound at every coordinate fails on the Boolean C002 witnesses; choosing one good coordinate remains a separate unproved premise.",
+  "additional_concrete_failure": {
+    "card": "claim_dc05672a84f74b44a1f15207c0cf86e0",
+    "field": "assumptions.delta",
+    "source_parameter": "maximal influence",
+    "transported_description": "restricted coordinate's bias",
+    "counterexample": "AND_3 has rho0=4.867668746754797 >4 from interpreting delta as input bias 1/2",
+    "bounded_repair": "Replace this single assumption with the explicit source definition; retain provisional verification status",
+    "artifact": "NODE_CORRECTION.json"
+  }
+}

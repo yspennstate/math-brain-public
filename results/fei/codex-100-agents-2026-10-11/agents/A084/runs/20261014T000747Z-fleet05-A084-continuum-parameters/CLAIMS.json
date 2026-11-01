@@ -1,0 +1,50 @@
+[
+  {
+    "claim_id": "A084-F6-CONTINUUM-ADMISSION",
+    "version": 1,
+    "exact_statement": "Let h:{-1,1}^6->{-1,1} be negative exactly at binary input indices {0,1,2,4,8,16,32,6,17,40}, with bit0 denoting +1. For every nonconstant uniform-cube Boolean core g of every finite dimension n with minority output probability p_min in [1/16,1/2], orient g0 to P(g0=-1)=p_min, and set g1=g0 when p_min<=7/32 and g1=-g0 otherwise. Compose six disjoint identical copies F=h(g1,...,g1). For every relevant physical core coordinate i and every block j, B_(j,i)(F)/Inf_(j,i)(F)>=B_i(g)/Inf_i(g), where B_i=H(S_i|S_-i) for the squared uniform Fourier spectrum, in bits. The increase is strict when the singleton Fourier coefficient beta_i is nonzero. For the induced mean m and q=2p(1-p)^3(2-p), the exact signed reserve R_m(t)=sum_T phi(U_T,tD_T)-q phi(m^2,t) is nonnegative for all real t>=0 in the stated oriented bias bands, with equality at t=0. The full terminal identity is H(F)=6q H(g)+C_p with C_p=H_p(h)-6q h2(1-m^2), and I(F)=6q I(g). No arbitrary-dimensional rare-sector exclusion, iteration closure, or universal FEI bound is asserted.",
+    "hypotheses": [
+      "Actual Boolean core on the uniform cube, finite arbitrary dimension and nonconstant",
+      "Minority probability in [1/16,1/2]; balanced tie may be oriented either way",
+      "Six identical core copies on disjoint physical variable blocks; specified six-bit gate",
+      "True conditional spectral erasure entropy and true physical influence; entropies in bits",
+      "Normalized orthonormal biased outer expansion used only as an exact composition identity"
+    ],
+    "statement_sha256": "8d2b6527e00bd11aaf450db42698c225c13e55f4cad5106c53bfc1ccda5afa27",
+    "contributors": [
+      "A084"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A084\\runs\\20261014T000747Z-fleet05-A084-continuum-parameters\\PROOF.md",
+      "report": "~\\brain_workers\\FEI100_20261011\\agents\\A084\\runs\\20261014T000747Z-fleet05-A084-continuum-parameters\\REPORT.md",
+      "certificates": [
+        "out/MINORITY_ORIENTATION.json",
+        "out/COMPLEMENT_ORIENTATION.json"
+      ],
+      "validation": [
+        "out/GROUPING_CHECKS.json",
+        "out/PHYSICAL_RESULT.json",
+        "out/CONTINUUM_RESULT.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_RESTRICTED_CONTINUUM_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A075",
+      "A071",
+      "A072",
+      "A089",
+      "A074",
+      "A092",
+      "A090",
+      "A094",
+      "B15",
+      "B17",
+      "B20"
+    ]
+  }
+]

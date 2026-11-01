@@ -1,0 +1,93 @@
+{
+  "target": "P0162",
+  "worker": "w513",
+  "checked_at": "2026-10-10T05:49:21.223510+00:00",
+  "current_openness": "UNKNOWN",
+  "statement_verified": true,
+  "novelty_claim": false,
+  "owner_solved_retired_checked": "bounded targeted check only; not exhaustive",
+  "primary_sources": [
+    {
+      "id": "arxiv:2606.00246v1",
+      "url": "https://arxiv.org/html/2606.00246v1",
+      "sections": [
+        "Introduction definitions and FEI conjecture",
+        "Ansatz 1.1",
+        "Appendix B Eq.32"
+      ],
+      "finding": "Full target verified. Chosen-coordinate reduction, exact extra term, equivalence up to constants; no full solution claimed."
+    },
+    {
+      "id": "odonnell-wright-zhou-2011",
+      "url": "https://www.cs.cmu.edu/~odonnell/papers/fei.pdf",
+      "finding": "Author-hosted primary paper gives the full FEI formula and Boolean codomain."
+    },
+    {
+      "id": "arxiv:2312.08271",
+      "url": "https://arxiv.org/abs/2312.08271",
+      "finding": "Primary abstract gives an influence-entropy bound retaining coordinate logarithms; not a full FEI solution."
+    },
+    {
+      "id": "arxiv:2609.21563",
+      "url": "https://arxiv.org/abs/2609.21563",
+      "finding": "September 2026 primary abstract claims plateaued/partially-bent special cases, not full FEI."
+    }
+  ],
+  "historical_source": {
+    "id": "Friedgut-Kalai-1996",
+    "doi": "10.1090/S0002-9939-96-03732-X",
+    "original_pdf_access": "web open failed; the statement is verified in later primary papers"
+  },
+  "prior_owner_work": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "row": 553,
+      "status": "attempted_un"
+    },
+    {
+      "card_id": "claim_06b0c09db7e28efc6febd3962e234332a00c2ba45a17792cc4d83fdbc6752fba",
+      "finding": "Prior singleton-spectrum obstruction; the uniform singleton law violates Boolean convolution identities. Not recomputed."
+    },
+    {
+      "card_id": "claim_d15d0160e58b4c9183707be9f49462d2",
+      "memory_slug": "fei_opus_wave1_reduction_small_influences_gates_and_ltf_2026_09_23",
+      "finding": "Small-influence reduction and arbitrary-coordinate obstructions already recorded. No novelty claimed for these principles."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/prob1000_lean_20260908/ultracode_20260909/F0090/memo.md",
+      "finding": "Prior claimed FEI for a percolation-crossing subclass, using geometric arm inputs. Not a full FEI proof and not audited here."
+    }
+  ],
+  "prior_searches": [
+    {
+      "paths": [
+        "probability_1000_attempts_H_20260912",
+        "probability_1000_attempts_I_20260914"
+      ],
+      "terms": [
+        "P0162",
+        "Fourier entropy",
+        "FEI",
+        "Friedgut.*Kalai"
+      ],
+      "finding": "No matching records in targeted readable mathematical files."
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "finding": "No P0162 row; no board edited."
+    }
+  ],
+  "status_search": {
+    "date": "2026-10-10",
+    "scope": "bounded public primary literature search and named local records",
+    "finding": "No full resolution found within these checks. Current openness remains UNKNOWN; absence of a hit is not certification."
+  },
+  "blind_evaluation_material_opened": false,
+  "formal_check": {
+    "performed": false,
+    "theorem": null,
+    "assumptions": null,
+    "trusted_axioms": null,
+    "admitted_placeholders": false
+  }
+}

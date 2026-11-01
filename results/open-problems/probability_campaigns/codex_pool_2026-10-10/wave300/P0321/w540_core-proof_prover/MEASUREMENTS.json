@@ -1,0 +1,277 @@
+{
+  "command": "python -X utf8 verify_transfer.py",
+  "date": "2026-10-10",
+  "agent": "w540",
+  "passed": true,
+  "classification": "deterministic controls; not a Riesz phase proof or independent audit",
+  "claim_rows": 6,
+  "counterexample_cases": 11,
+  "positive_toy_cases": 27,
+  "elapsed_seconds": 0.08515289996284992,
+  "checks": [
+    {
+      "check": "C1",
+      "cases": 8,
+      "max_actual_vertex_abs": 9.71445146547012e-17,
+      "details": [
+        {
+          "shells": 1,
+          "variance": 0.06853891945200942,
+          "actual_vertex_abs": 6.123233995736766e-17,
+          "variance_only_prediction": 0.291212933214021
+        },
+        {
+          "shells": 2,
+          "variance": 0.13707783890401884,
+          "actual_vertex_abs": 0.0,
+          "variance_only_prediction": 0.08480497247111383
+        },
+        {
+          "shells": 3,
+          "variance": 0.20561675835602827,
+          "actual_vertex_abs": 3.0814879110195774e-33,
+          "variance_only_prediction": 0.02469630478444735
+        },
+        {
+          "shells": 4,
+          "variance": 0.2741556778080377,
+          "actual_vertex_abs": 0.0,
+          "variance_only_prediction": 0.007191883355826374
+        },
+        {
+          "shells": 5,
+          "variance": 0.34269459726004714,
+          "actual_vertex_abs": 5.551115123125783e-17,
+          "variance_only_prediction": 0.0020943694473832936
+        },
+        {
+          "shells": 6,
+          "variance": 0.41123351671205655,
+          "actual_vertex_abs": 0.0,
+          "variance_only_prediction": 0.0006099074700063171
+        },
+        {
+          "shells": 7,
+          "variance": 0.47977243616406595,
+          "actual_vertex_abs": 9.71445146547012e-17,
+          "variance_only_prediction": 0.000177612943329682
+        },
+        {
+          "shells": 8,
+          "variance": 0.5483113556160754,
+          "actual_vertex_abs": 0.0,
+          "variance_only_prediction": 5.172318620381243e-05
+        }
+      ]
+    },
+    {
+      "check": "C2",
+      "cases": 3,
+      "grid_size": 4096,
+      "details": [
+        {
+          "first_mode_before": 0.24999999999999997,
+          "first_mode_after_abs": 3.719835723055298e-17,
+          "density_min_after": 0.15791154384205439,
+          "analytic_density_lower_bound": 0.15782865189946288,
+          "measured_tv": 0.15915495869635593,
+          "exact_tv": 0.15915494309189535,
+          "tv_relative_error": 9.804571754479241e-08,
+          "discarded_fourier_tail_bound": 1.7859177988785547e-102
+        },
+        {
+          "first_mode_before": 0.12499999999999996,
+          "first_mode_after_abs": 3.897609069275294e-17,
+          "density_min_after": 0.15907723080331526,
+          "analytic_density_lower_bound": 0.1590759971875839,
+          "measured_tv": 0.07957747934817797,
+          "exact_tv": 0.07957747154594767,
+          "tv_relative_error": 9.804571754479241e-08,
+          "discarded_fourier_tail_bound": 2.3866690339840662e-153
+        },
+        {
+          "first_mode_before": 0.031249999999999962,
+          "first_mode_after_abs": 3.8127777510408775e-17,
+          "density_min_after": 0.15915463952828937,
+          "analytic_density_lower_bound": 0.15915463923119327,
+          "measured_tv": 0.01989436983704449,
+          "exact_tv": 0.019894367886486918,
+          "tv_relative_error": 9.804571754479241e-08,
+          "discarded_fourier_tail_bound": 4.26239470782443e-255
+        }
+      ]
+    },
+    {
+      "check": "L1/L3-toy",
+      "cases": 27,
+      "lower_scaled_vertex_bound": 0.9463970876189021,
+      "upper_scaled_vertex_bound": 1.0566389236424647,
+      "min_measured_scaled_vertex": 0.9826350002017479,
+      "max_measured_scaled_vertex": 0.9826517612649533,
+      "details": [
+        {
+          "shells": 10,
+          "radius": 1024.0,
+          "scaled_vertex": 0.9826517612649533,
+          "microscopic_correlation": 0.17165155822136682
+        },
+        {
+          "shells": 11,
+          "radius": 2048.0,
+          "scaled_vertex": 0.9826433806855764,
+          "microscopic_correlation": 0.14948116013151053
+        },
+        {
+          "shells": 12,
+          "radius": 4096.0,
+          "scaled_vertex": 0.9826391904316251,
+          "microscopic_correlation": 0.13016646873596324
+        },
+        {
+          "shells": 13,
+          "radius": 8192.0,
+          "scaled_vertex": 0.9826370953135835,
+          "microscopic_correlation": 0.11334178887539213
+        },
+        {
+          "shells": 14,
+          "radius": 16384.0,
+          "scaled_vertex": 0.9826360477567962,
+          "microscopic_correlation": 0.09868771101666422
+        },
+        {
+          "shells": 15,
+          "radius": 32768.0,
+          "scaled_vertex": 0.982635523978961,
+          "microscopic_correlation": 0.08592536563087887
+        },
+        {
+          "shells": 16,
+          "radius": 65536.0,
+          "scaled_vertex": 0.982635262090183,
+          "microscopic_correlation": 0.07481138458113377
+        },
+        {
+          "shells": 17,
+          "radius": 131072.0,
+          "scaled_vertex": 0.9826351311458289,
+          "microscopic_correlation": 0.0651334688275471
+        },
+        {
+          "shells": 18,
+          "radius": 262144.0,
+          "scaled_vertex": 0.9826350656736605,
+          "microscopic_correlation": 0.05670648873696662
+        },
+        {
+          "shells": 19,
+          "radius": 524288.0,
+          "scaled_vertex": 0.9826350329375786,
+          "microscopic_correlation": 0.049369056328711046
+        },
+        {
+          "shells": 20,
+          "radius": 1048576.0,
+          "scaled_vertex": 0.9826350165695382,
+          "microscopic_correlation": 0.04298051634991729
+        },
+        {
+          "shells": 21,
+          "radius": 2097152.0,
+          "scaled_vertex": 0.9826350083855181,
+          "microscopic_correlation": 0.03741830853816203
+        },
+        {
+          "shells": 22,
+          "radius": 4194304.0,
+          "scaled_vertex": 0.9826350042935081,
+          "microscopic_correlation": 0.03257565807464001
+        },
+        {
+          "shells": 23,
+          "radius": 8388608.0,
+          "scaled_vertex": 0.9826350022475032,
+          "microscopic_correlation": 0.028359555492905756
+        },
+        {
+          "shells": 24,
+          "radius": 16777216.0,
+          "scaled_vertex": 0.9826350012245006,
+          "microscopic_correlation": 0.024688991300886413
+        },
+        {
+          "shells": 25,
+          "radius": 33554432.0,
+          "scaled_vertex": 0.9826350007129994,
+          "microscopic_correlation": 0.02149341430568185
+        },
+        {
+          "shells": 26,
+          "radius": 67108864.0,
+          "scaled_vertex": 0.9826350004572487,
+          "microscopic_correlation": 0.01871138608480567
+        },
+        {
+          "shells": 27,
+          "radius": 134217728.0,
+          "scaled_vertex": 0.9826350003293735,
+          "microscopic_correlation": 0.016289407210394482
+        },
+        {
+          "shells": 28,
+          "radius": 268435456.0,
+          "scaled_vertex": 0.9826350002654358,
+          "microscopic_correlation": 0.014180893701199956
+        },
+        {
+          "shells": 29,
+          "radius": 536870912.0,
+          "scaled_vertex": 0.982635000233467,
+          "microscopic_correlation": 0.012345284757388216
+        },
+        {
+          "shells": 30,
+          "radius": 1073741824.0,
+          "scaled_vertex": 0.9826350002174825,
+          "microscopic_correlation": 0.010747265139097462
+        },
+        {
+          "shells": 31,
+          "radius": 2147483648.0,
+          "scaled_vertex": 0.9826350002094904,
+          "microscopic_correlation": 0.00935608759974189
+        },
+        {
+          "shells": 32,
+          "radius": 4294967296.0,
+          "scaled_vertex": 0.9826350002054942,
+          "microscopic_correlation": 0.008144982600008522
+        },
+        {
+          "shells": 33,
+          "radius": 8589934592.0,
+          "scaled_vertex": 0.9826350002034961,
+          "microscopic_correlation": 0.007090644130002079
+        },
+        {
+          "shells": 34,
+          "radius": 17179869184.0,
+          "scaled_vertex": 0.982635000202497,
+          "microscopic_correlation": 0.00617278187641862
+        },
+        {
+          "shells": 35,
+          "radius": 34359738368.0,
+          "scaled_vertex": 0.9826350002019976,
+          "microscopic_correlation": 0.005373731209388578
+        },
+        {
+          "shells": 36,
+          "radius": 68719476736.0,
+          "scaled_vertex": 0.9826350002017479,
+          "microscopic_correlation": 0.004678113548793616
+        }
+      ]
+    }
+  ]
+}

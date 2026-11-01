@@ -1,0 +1,71 @@
+{
+  "candidate": "C0029",
+  "worker": "w571",
+  "date": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "exact_target": {
+    "entry_law": "iid uniform {-1,+1}, real, unnormalised variance one",
+    "statement": "There exist c,C>0 independent of n and epsilon such that for every integer n>=1 and every epsilon>=0, P(s_min(B_n)<=epsilon/sqrt(n))<=epsilon+C*exp(-c*n).",
+    "remainder_convention": "Modern exponential-remainder formulation. Original Spielman-Teng ICM 2002 Conjecture 2, printed p.605, concerns iid sign matrices and inverse norm: P(||A^-1||>T)<=sqrt(n)/T+alpha^n. Original printed dimension/exponent notation mixes d and n; use consistent n via the modern statement. Closed singular-value endpoints follow by threshold limits.",
+    "source": "https://arxiv.org/html/2405.20308v2#S1",
+    "locator": "Introduction equation (2)"
+  },
+  "verified_published_scope": {
+    "source": "https://arxiv.org/html/2405.20308v2",
+    "authors": [
+      "Ashwin Sah",
+      "Julian Sahasrabudhe",
+      "Mehtaab Sawhney"
+    ],
+    "version": "v2, 2025-01-08",
+    "publication": "Geometric and Functional Analysis 35, 633-671 (2025); DOI 10.1007/s00039-025-00707-z",
+    "theorem": "Theorem 1.1: all epsilon>=0, real iid mean-zero variance-one subgaussian entries xi; upper bound (1+O_xi((log n)^(-1/16)))*epsilon+exp(-Omega_xi(n)).",
+    "limitation": "The multiplicative error is not an exact coefficient-one theorem. Authors distinguish Rademacher-specific exact bound from universal approximate bound."
+  },
+  "checks_pending": [
+    "Named independent mathematical review",
+    "Response-side served-model provenance gate",
+    "Coordinator integration and retrieval receipt",
+    "Complete current owner solved/retired-status certification"
+  ],
+  "recall": "Required brain recall was stopped by its 60-second subprocess timeout; use explicit perceptron_proof_open_gaps_fleet_2026_07_12 scar and targeted index fallback.",
+  "served_model_evidence": "No response-side served-model receipt available; requested model, reasoning and service settings are not proof of served identity.",
+  "promotion": "DRAFT ONLY",
+  "canonical_intake_target": {
+    "statement": "There exist rho in (0,1), n0>=1 and t0>0 such that for all n>=n0 and all 0<=t<=t0, P(sqrt(n)*s_min(B_n)<=t)<=t+rho^n.",
+    "locator": "C0029 problems.jsonl:29; Bordenave-Chafai Section 7, printed p.53 (PDF index52)",
+    "url": "https://arxiv.org/pdf/1109.3343",
+    "scope_note": "This is the large-n/small-t candidate in the intake. Finite-n obstructions in this packet test auxiliary statements, not this target."
+  },
+  "original_source": {
+    "url": "https://arxiv.org/pdf/math/0212413",
+    "locator": "Conjecture 2, p.605, PDF index8",
+    "verified": true
+  },
+  "prior_records": {
+    "C0029": "problems.jsonl:29",
+    "attempt": "attempts.jsonl:23, C0029-A001",
+    "ranking": "RANKING_2026-09-07.csv:428, tier4 attempted_un",
+    "H_I_lean": "Targeted C0029 searches found the ranking annotation, no separate C0029 proof in named H/I attempt directories.",
+    "Team_O": "Targeted C0029/Spielman/Teng search found no matching Team O row.",
+    "owner_solved_retired_status": "Not certified by this bounded search; current openness remains UNKNOWN."
+  },
+  "gaussian_distinction_source": {
+    "url": "https://websites.umich.edu/~rudelson/papers/rv-ICM2010.pdf",
+    "locator": "Theorem 3.1 and equation (3.2), printed p.9, PDF page index 8",
+    "source_quote": "This approach leads to the following asymptotic result:",
+    "formula_evidence": "Theorem 3.1 explicitly uses convergence to H(epsilon) as n tends to infinity; (3.2) is the separate all-n upper bound.",
+    "finite_n_source": "https://arxiv.org/html/2405.20308v2#S9",
+    "finite_n_locator": "Theorem 9.4"
+  },
+  "population_readonly_check": {
+    "store": "~/math-brain-build/local/population/brain.sqlite3",
+    "matched_exact_claim_ids": [
+      "claim_b4ad54a50ec30fc1306f15a3ad759d5718338ef0a26d38b1af3642d5cd9c8dd4",
+      "claim_cbd6e1bc44ea67c88a3ad2112abab63bbfcf63f991be2eeccb063fdba514f1fa"
+    ],
+    "snapshot": "POPULATION_C0029_SNAPSHOT.json",
+    "wrote_to_store": false
+  }
+}

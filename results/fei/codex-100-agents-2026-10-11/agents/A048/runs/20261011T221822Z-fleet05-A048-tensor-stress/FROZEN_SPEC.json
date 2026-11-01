@@ -1,0 +1,16 @@
+{
+  "helper_version": "A048-tensor-scope-v1",
+  "helper": "code/check.py",
+  "family": "Actual Boolean truth tables: all n=0,1,2,3 signs; point-control activation; biased selector activation; disjoint factors; actual AND tensors. Collision normalization uses rational arrays only and is labeled an algebra check, not a Boolean witness.",
+  "parameter_domain": "Every sign truth table n<=3, k in {1,2,3}; selector p in {1/8,1/2,7/8}; moving fair two-bit AND tensors t in {1,2,3}; aligned biased AND p=1/8,q=1/4 t in {1,2,3}; collision algebra t in {1,2,3,4}.",
+  "case_count": 1962,
+  "case_count_breakdown": {"uniform_control": 834, "biased_selector": 834, "common_factor": 278, "moving_tensor": 9, "aligned_biased_tensor": 3, "collision_algebra": 4},
+  "symmetry": "None; no truth-table complements or input symmetries removed.",
+  "arithmetic": "Integer FWHT and direct physical edges; Fraction centered-basis sums; entropy identities as exact rational prime-log vectors; sign enclosures from 24-term rational range-reduced atanh with proved remainder.",
+  "memory_estimate_MB": 80,
+  "pilot_max_seconds": 60,
+  "maximum_runtime_seconds": 60,
+  "maximum_explicit_dimension": 7,
+  "automatic_dimension_increase": false,
+  "heavy_job": false
+}

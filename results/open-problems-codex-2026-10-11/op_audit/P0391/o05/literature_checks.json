@@ -1,0 +1,216 @@
+{
+  "source": {
+    "url": "https://arxiv.org/pdf/2202.02366",
+    "status": 200,
+    "bytes": 59904,
+    "text": "arXiv:2202.02366v1  [math.PR]  4 Feb 2022\nQueueing Systems V ol. 100\nSpecial Issue: 100 views on queues\nConjectures on Symmetric Queues in Heavy Trafﬁc\nBert Zwart\nFebruary 8, 2022\n1 Introduction\nWe consider the queue-length process in the M/G/1 queue with symmetric service\ndiscipline, which is deﬁned as follows: with n customers in the system, the server works\non the customer in position i at rate\nγ(n, i) ≥ 0. We assume ∑i γ(n, i) = 1 for all n ≥ 1,\nto make the service discipline work conserving. The custome r arrival process is Poisson\nwith rate λ . A customer arriving to a queue of size n chooses position i with probability\nγ(n + 1, i), moving each customer in position k ≥ i to position k + 1. Conversely, when\na customer at position i departs, each customer in position k > i moves to position k − 1.\nWe refer to this system as a symmetric queue governed by γ. Important special cases of\nsymmetric service disciplines are Last-Come-First-Serve d (LCFS), where γ(n, 1) = 1\nfor all n ≥ 1, and Processor Sharing (PS), which is modeled by taking γ(n, i) = 1/n for\nall 1 ≤ i ≤ n and all n ≥ 1. We refer to [4] for more background.\nSymmetric service disciplines have the appealing property that the stationary dis-\ntribution of the queue-length process (Qγ (t),t ≥ 0), if it exists, is insensitive to the\nservice-time distribution, apart from its mean m. In particular if the load ρ = λ m < 1,\nthen, as t → ∞, Qγ (t) converges weakly to a random variable Qγ (∞) which satisﬁes\nP(Qγ (∞) ≥ k) = ρ k, k ≥ 0. (1)\nThis note states two open problems related to the queue-leng th process in heavy trafﬁc.\n2 Problem Statement\nAssume ﬁrst that the second moment of the service-time distr ibution is ﬁnite. Let r\nbe a scaling parameter and let\nλr be a sequence of arrival rates such that λr → 1/m\nand r(1 − ρr) = r(1 − λrm) converges to a real-valued constant. Let Qγ\nr (t),t ≥ 0 be\nthe corresponding queue-length process in the symmetric qu eue governed by γ with\nCWI Amsterdam and Eindhoven University of Technology E-mai l: bert.zwart@cwi.nl\n2 Bert Zwart\nPoisson arrival rate λr. For each r, deﬁne the re-scaled queue-length process ˆQγ\nr (t) =\nQγ\nr (r2t)/r,t ≥ 0.\nProblem 1: show that ˆQγ\nr (·) converges in distribution to a reﬂected Brownian motion\n(RBM) as r → ∞.\nOur second problem relates to the case where the variance of t he service-time distri-\nbution is inﬁnite. To this end, let L be a slowly varying function (i.e. L(ax)/L(x) → 1\nas x → ∞ for every a > 0) and suppose that the tail ¯F of the service-time distribution\nsatisﬁes ¯F(x) = L(x)x−α for α ∈ (1, 2). Let cr be the solution of cr ¯F(cr) = 1/r. Now,\nfor each r, deﬁne ˆQγ\nr (t) = Qγ\nr (crt)/r,t ≥ 0.\nProblem 2: identify a candidate limit process Qγ\n∗(·) and show that ˆQγ\nr (·) → Qγ\n∗(·) in\ndistribution as r → ∞.\n3 Discussion\nProblem 1 has been solved for PS in [3], [10] for general (with ﬁnite second moment)\ninter-arrival time distribution and a ﬁnite fourth moment a ssumption on the service-\ntime distribution. The fourth moment assumption was droppe d in [7] using a different\nmethod, which required Poisson arrivals. For LCFS, Problem 1 has been solved in [9]\nfor Poisson arrivals and extended to renewal arrivals in [8] .\nThe drift and the variance of the RBM for PS and LCFS are identi cal, which is\nno coincidence, because it is shown in [2] that the distribut ion of Q\nγ\nr (t) (for ﬁxed t) is\nindependent of γ, if Qγ\nr (0) = 0. Given this, it is natural to conjecture that the scaling limit\nin Problem 1 should be independent of γ. It is remarkable though that this independence\nof γ may break down if the Poisson arrival assumption is relaxed. For the LCFS case,\nthis is illustrated in [8].\nTo solve Problem 1, one can think of several strategies. The a pproach in [3], [10]\nis to use a detailed measure-valued description of the queue ing dynamics, and hinges\non the physical intuition that, in heavy trafﬁc, the queue le ngth becomes a determinis-\ntic function of the workload. This property, known as state- space collapse, should still\nhold for general γ. The approaches in [7] and [9] are based on connections with b ranch-\ning processes and excursion theory. To make such an approach work, one would ﬁrst\nhave to identify an appropriate relation between a Crump-Mo de-Jagers (CMJ) branch-\ning process (see [7] and references therein for background o n CMJ processes) and the\nservice discipline γ. A more pragmatic way is to ﬁrst prove Problem 1 for the specia l\ncase of phase-type service-time distributions.\nProblem 2 has been haunting me for the past 20 years. I view Pro blem 2 to be much\nharder than Problem 1. One reason is that the limiting queue- length process can no\nlonger be a deterministic function of the heavy trafﬁc limit of the workload process (for\nthe latter, see [12]). Note that the distinction between ﬁni te and inﬁnite variance is not\nConjectures on Symmetric Queues in Heavy Trafﬁc 3\nneeded for the invariant distribution in the case: when ρr < 1 for all r, (1 − ρr)Qγ\nr (∞)\nconverges in distribution to an exponential random variabl e with unit mean as r → ∞.\nIt is possible to determine weak convergence of ˆQγ\nr (t) for ﬁxed t as r → ∞, assum-\ning Qγ\nr (0) = 0, using the result in [2]. This suggests that marginal distr ibutions of a\ncandidate limit process Qγ\n∗(·) should be independent of γ. This will not be the case for\nthe entire process, which has been determined in [1] for LCFS and in [7] for PS. In both\ncases, the limiting queue-length process is expressed in te rms of a functional of a se-\nquence of continuous-state branching processes, namely the height process in the LCFS\ncase, and a Lamperti transform in the PS case; see [1] and [7] f or detailed descriptions.\nFor PS, convergence is still an open problem, as tightness of { ˆQPS\nr (·)}r has not been\nestablished. In the case where\nγ is completely general, I have no conjecture on what the\ncandidate limit process Qγ\n∗(·) might be.\nAn idea which may lead to partial results of independent inte rest is to try and estab-\nlish a relationship between the symmetric queue governed by γ, and some functional\nof a CMJ process, which should be dependent on γ. As mentioned in the discussion of\nProblem 1, such a connection would be interesting in its own r ight. Once such a con-\nnection has been established, it may be possible to use the te chnique in [5], leveraging\nthe fact that ˆQγ\nr (·) is a regenerative process for each r.\nA sufﬁcient condition for tightness of { ˆQPS\nr (·)}r has been described in [6] which is\nappealing, as it is stated in terms of a tail bound for the dist ribution of the maximum\nqueue length during a busy cycle. Deriving such a tail bound f or arbitrary symmetric\nservice disciplines could be an interesting problem in its own right. To develop intuition,\none may ﬁrst approach this by assuming phase-type service ti mes. A related tail bound\nfor bandwidth sharing networks has been derived in [11].\nReferences\n1. T. Duquesne and J.-F. Le Gall. Random trees, L´ evy process es and spatial branching processes.\nAst´ erisque, (281):vi+147, 2002.\n2. B. Fralix and B. Zwart. Time-dependent properties of symm etric queues. Queueing Syst., 67(1):33–45,\n2011.\n3. H. C. Gromoll. Diffusion approximation for a processor sh aring queue in heavy trafﬁc. Ann. Appl.\nProbab., 14(2):555–611, 2004.\n4. F. P . Kelly. Reversibility and stochastic networks . Wiley Series in Probability and Mathematical Statis-\ntics. John Wiley & Sons, Ltd., Chichester, 1979.\n5. A. Lambert and F. Simatos. The weak convergence of regener ative processes using some excursion path\ndecompositions. Ann. Inst. Henri Poincar´ e Probab. Stat., 50(2):492–511, 2014.\n6. A. Lambert and F. Simatos. Asymptotic behavior of local ti mes of compound Poisson processes with\ndrift in the inﬁnite variance case. J. Theoret. Probab., 28(1):41–91, 2015.\n7. A. Lambert, F. Simatos, and B. Zwart. Scaling limits via ex cursion theory: interplay between Crump-\nMode-Jagers branching processes and processor-sharing qu eues. Ann. Appl. Probab., 23(6):2357–2381,\n2013.\n8. V . Limic. On the behavior of LIFO preemptive resume queues in heavy trafﬁc. Electron. Comm. Probab.,\n5:13–27, 2000.\n9. V . Limic. A LIFO queue in heavy trafﬁc. Ann. Appl. Probab., 11(2):301–331, 2001.\n10. A. L. Puha and R. J. Williams. Invariant states and rates o f convergence for a critical ﬂuid model of a\nprocessor sharing queue. Ann. Appl. Probab., 14(2):517–554, 2004.\n11. D. Shah, J. N. Tsitsiklis, and Y . Zhong. Qualitative prop erties of\nα-fair policies in bandwidth-sharing\nnetworks. Ann. Appl. Probab., 24(1):76–113, 2014.\n12. W. Whitt. Stochastic-process limits. Springer Series in Operations Research. Springer-V erlag, New Y ork,\n2002. An introduction to stochastic-process limits and the ir application to queues."
+  },
+  "arxiv": {
+    "url": "https://export.arxiv.org/api/query?search_query=all%3A%22symmetric+queues%22+OR+%28all%3A%22symmetric+queue%22+AND+all%3A%22diffusion%22%29&start=0&max_results=40",
+    "status": 200,
+    "bytes": 3381,
+    "entries": [
+      {
+        "title": "Conjectures on Symmetric Queues in Heavy Traffic",
+        "id": "http://arxiv.org/abs/2202.02366v1",
+        "summary": "This note describes several open questions concerning scaling limits of queue-length processes of symmetric queues in heavy traffic, distinguishing between service-time distributions with finite and infinite variance."
+      },
+      {
+        "title": "Stationary analysis of the \"Shortest Queue First\" service policy: the asymmetric case",
+        "id": "http://arxiv.org/abs/1305.3496v1",
+        "summary": "As a follow-up to a recent paper considering two symmetric queues, the \\textit{Shortest Queue First} service discipline is presently analysed for two general asymmetric queues. Using the results previously established and assuming exponentially distributed service times, the bivariate Laplace transform of workloads in each queue is shown to depend on the solution $\\mathbf{M}$ to a two-dimensional functional equation $$ \\mathbf{M} = Q_1 \\cdot \\mathbf{M}\\circ h_1 + Q_2 \\cdot \\mathbf{M}\\circ h_2 + \\mathbf{L} $$ with given matrices $Q_1$, $Q_2$ and vector $\\mathbf{L}$ and where functions $h_1$ and $h_2$ are defined each on some rational curve; solution $\\mathbf{M}$ can then represented by a series expansion involving the semi-group $< h_1, h_2 >$ generated by these two functions. The empty queue probabilities along with the tail behaviour of the workload distribution at each queue are characterised."
+      }
+    ]
+  },
+  "openalex": {
+    "url": "https://api.openalex.org/works?search=symmetric+queues+heavy+traffic+diffusion&per-page=30",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  "crossref": {
+    "url": "https://api.crossref.org/works?query=symmetric+queues+heavy+traffic+diffusion&rows=30",
+    "status": 200,
+    "bytes": 192820,
+    "entries": [
+      {
+        "title": [
+          "Conjectures on symmetric queues in heavy traffic"
+        ],
+        "doi": "10.1007/s11134-022-09746-x"
+      },
+      {
+        "title": [
+          "Tandem Queues with Identical Service Times in Heavy Traffic"
+        ],
+        "doi": "10.18130/v3nw1j"
+      },
+      {
+        "title": [
+          "Diffusion approximations for double-ended queues with reneging in heavy traffic"
+        ],
+        "doi": "10.1007/s11134-018-9589-7"
+      },
+      {
+        "title": [
+          "The diffusion approximation for tandem queues in heavy traffic"
+        ],
+        "doi": "10.2307/1426665"
+      },
+      {
+        "title": [
+          "Optimal control problems for heavy traffic queues"
+        ],
+        "doi": "10.1109/secon.1996.510030"
+      },
+      {
+        "title": [
+          "Heavy traffic analysis for single-server SRPT and LRPT queues via EDF diffusion limits"
+        ],
+        "doi": "10.1007/s10479-021-03929-0"
+      },
+      {
+        "title": [
+          "Optimal Capacity Allocation for Heavy-Traffic Fixed-Cycle Traffic-Light Queues and Intersections"
+        ],
+        "doi": "10.2139/ssrn.3985479"
+      },
+      {
+        "title": [
+          "Fluid limits and diffusion approximations for networks of multi-server queues in heavy traffic"
+        ],
+        "doi": "10.1007/bf01438710"
+      },
+      {
+        "title": [
+          "Introduction"
+        ],
+        "doi": "10.1090/mmono/137/01"
+      },
+      {
+        "title": [
+          "Heavy Traffic"
+        ],
+        "doi": "10.1007/978-3-319-20693-6_5"
+      },
+      {
+        "title": [
+          "Multiphase systems"
+        ],
+        "doi": "10.1090/mmono/137/03"
+      },
+      {
+        "title": [
+          "Heavy-Traffic Limits for Fluid Queues"
+        ],
+        "doi": "10.1007/0-387-21748-7_5"
+      },
+      {
+        "title": [
+          "Parallel Scheduling of Multiclass M/M/M Queues: Approximate and Heavy-Traffic Optimization of Achievable Performance"
+        ],
+        "doi": "10.2139/ssrn.224549"
+      },
+      {
+        "title": [
+          "Processes with reflection"
+        ],
+        "doi": "10.1090/mmono/137/02"
+      },
+      {
+        "title": [
+          "Heavy-traffic revenue maximization in parallel multiclass queues"
+        ],
+        "doi": "10.1016/j.peva.2013.08.008"
+      },
+      {
+        "title": [
+          "Quantitative Delay Analysis of Gi/G/1 Queues with Heavy-Tailed Traffic by Means of Alpha Theory"
+        ],
+        "doi": "10.2139/ssrn.5025251"
+      },
+      {
+        "title": [
+          "Multi-component matching queues in heavy traffic"
+        ],
+        "doi": "10.1007/s11134-024-09907-0"
+      },
+      {
+        "title": [
+          "On the Behavior of LIFO Preemptive Resume Queues in Heavy Traffic"
+        ],
+        "doi": "10.1214/ecp.v5-1014"
+      },
+      {
+        "title": [
+          "α-stable limits for multiple channel queues in heavy traffic"
+        ],
+        "doi": "10.4064/am30-1-4"
+      },
+      {
+        "title": [
+          "On the analysis of G-queues under heavy traffic"
+        ],
+        "doi": "10.1109/cdc.2008.4738754"
+      },
+      {
+        "title": [
+          "Interacting queues in heavy traffic"
+        ],
+        "doi": "10.1007/s11134-010-9174-1"
+      },
+      {
+        "title": [
+          "Controlled queues in heavy traffic"
+        ],
+        "doi": "10.2307/1426134"
+      },
+      {
+        "title": [
+          "Multi-channel queues in heavy traffic"
+        ],
+        "doi": "10.2307/3212380"
+      },
+      {
+        "title": [
+          "Heavy Traffic Limits for Multiphase Queues"
+        ],
+        "doi": "10.1090/mmono/137"
+      },
+      {
+        "title": [
+          "Asymptotic Stationarity of Queues in Series and the Heavy Traffic Approximation"
+        ],
+        "doi": "10.1214/aop/1176990744"
+      },
+      {
+        "title": [
+          "Periodic queues in heavy traffic"
+        ],
+        "doi": "10.2307/1427175"
+      },
+      {
+        "title": [
+          "Heavy-traffic extreme-value limits for queues"
+        ],
+        "doi": "10.1016/0167-6377(95)00048-8"
+      },
+      {
+        "title": [
+          "On Priority Queues in Heavy Traffic"
+        ],
+        "doi": "10.1111/j.2517-6161.1970.tb00820.x"
+      },
+      {
+        "title": [
+          "Heavy-Traffic Limits for Loss Proportions in Single-Server Queues"
+        ],
+        "doi": "10.1023/b:ques.0000027997.79716.b4"
+      },
+      {
+        "title": [
+          "Two-parameter heavy-traffic limits for infinite-server queues"
+        ],
+        "doi": "10.1007/s11134-010-9184-z"
+      }
+    ]
+  }
+}

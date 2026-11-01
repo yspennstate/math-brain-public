@@ -1,0 +1,31 @@
+# A059 stage18: a density logarithm spends mean variance
+
+## exact target, quantifiers, hypotheses and units
+
+New universal Boolean wrapper TRANSFER: D_iH(K0+Cg)<=c B_i(g)+c beta_i(g)^2 log2(1/c)+A c Inf_i(g), A<7. Here g is ANY Boolean sign on a disjoint internal cube, K0 is a sign outside the indicator C and zero inside, and0<c<=1. Entropy is bits. The tax sums to at most c log2(1/c)Var(g) on every finite adaptive stopped tree. Private-priority controller baseline<14 gives rate21 plus this tax at the SAME fine reserve. The nonflat bent-source rate6 then funds ALL descendant density costs without a controller-influence cap. Arbitrary core entropy is retained; full FEI OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Read BOARD2026-10-23 03:34UTC, B12 notes v2 and own STATUS; protocol v2 and previous stage proof/code; A057 stage18 PROOF including its source-only surrogate obstruction and separate internal-ticket solution; A060 stage6 all-c proof; A091 stage18 scoped local acceptance of A059. Their paths/byte hashes are in out/SOURCE_RECEIPTS.json. No brain note is a mathematical premise. Brain self-care remains degraded (stale personal-context notes, runtime attachment integrity failure); those sources are not relied on. Source trees are read-only.
+
+## complete derivation or exact first unsupported line
+
+Complete proof is PROOF.md(1)-(7). Only the empty remaining internal Fourier pair meets K0, giving an exact general transfer identity. Jensen bounds its packet using ||K0+mu C||^2=1-c+c mu^2. The only rare-density logarithm multiplies the SINGLETON square. Boolean |beta_i|<=Inf_i pays the remaining entropy terms. Child means mu+beta and mu-beta give exact variance release beta^2, so one initial variance reserve pays all depths and both actual terminals. The bent source has d_X>=3/8, D_X<=2 and root-weighted new reserve<=m2^-m/2<=1/8. Thus D_X+reserve<=17/8<6d_X with spare>=d_X/3. Original Q ticket is harmonic at source; source and fine reserves are never renewed. First unpaid line: exterior bent-data exposure changes c and the inherited variance-ticket scale; no same-bank conversion proof follows. Generic inherited/terminal entropy also unpaid.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen specs precede pilots. All scripts run with python -X utf8 from this run code directory, once with --pilot then without. code/check.py: 4290 cases/38615 exact assertions PASS in59.142s; all65 nonzero two-bit exterior completions,3 fixed width patterns,11 biased/constant/literal core pairs; checks FULL general empty-pair identity and new singleton tax. code/variance.py: 512 actual sources,768 arbitrary-Boolean wrapper queries,1536 complete coordinate-order trees,6144 stopping frontiers/21526 assertions PASS in22.036s. This exhausts ALL256 three-bit Boolean fallbacks, sources m4/6. code/history.py: 6 actual mixed source/internal trees,570 nodes,39 fronts/372 assertions PASS in1.803s, including biased cores, real old internal debits and both full U/R/Q/S terminals. Total60513 main assertions. Integer/Fraction Walsh and exact prime-log identities, rational32-term atanh intervals with geometric remainders; no floating sign certificates. Estimated memory<=180MB, fixed dimensions<=10, no automatic dimension growth/GPU/windows/detached job. memok exited1, so no formal compiler was launched. The variance algebra is specified in FORMAL_ADMISSION.json but is NOT Lean-checked. Finite checks supplement the analytic arbitrary-dimension proof.
+
+## proof dependencies and changed downstream conclusions
+
+REVIEW.md reconstructs source scopes. A060 leading-coefficient-one literal witness has beta^2=Inf=1, so it is compatible with this sharper tax. A057 tribes obstruction remains correct for its LARGER influence-tax surrogate; no false refutation is recorded. New singleton pricing provides a different sufficient bill and avoids the surrogate cap or extra logarithmic descendant rate. A091 local acceptance of the preceding wrapper is consumed; its stopped assembly remains conditional on named inputs. New general transfer/variance proof is direct; full fine-profile assembly retains old DATA/private-list dependencies. Independent acceptance of the new claim is pending.
+
+## one next mathematical action and independent reviewer
+
+A091/A087 independently reconstruct general empty-pair/singleton variance payment; then expose ONE exterior bent-data bit after an actual internal debit using SAME remaining variance/source ticket and both full terminals. This targets the next actual change of exterior profile, rather than another width census. Reviewers A091, alternate A087/A090; consumers A057/A060 can replace the influence-weighted density surrogate with the singleton tax while retaining all base query and terminal costs.
+
+## actual persistence receipts or precise save blocker
+
+Four protocol files, proof, scope review, scripts, frozen specs and exact outputs are saved here at2026-10-23T03:59:12.961418+00:00; root STATUS/WORKLOG/LEARNED updated. Schema and receipt checks verify exact protocol keys, statement SHA256, byte-identical progress delta, two STATUS lines and all files<20MB. Only A059 research files are written; no git or outbound messages. Supervisor copies, repository mirror and independent review are unobserved. A stale contract cache is not treated as irreversible authorization; all actions here are local and reversible.
+
+Universal bridge: This stage advances C019 stopping-tree payment and C024 actual-history transfer by changing the density charge from c log(1/c) times spent influence to c log(1/c) times spent SINGLETON square. The latter telescopes exactly to a once-only variance reserve<=1, so the SAME rate6 nonflat source account pays all descendant density surcharges even on growing-depth families with unbounded controller influence; base21, inherited U/R/Q and both complete terminal profiles remain. What remains is payment of an exterior-data exposure that changes that SAME residual density/variance scale after old internal debits, and generic initial/terminal entropy. NEXT attacks the actual unpaid scale conversion in this conserved account, the shortest available continuation toward full FEI rather than another isolated class bound.

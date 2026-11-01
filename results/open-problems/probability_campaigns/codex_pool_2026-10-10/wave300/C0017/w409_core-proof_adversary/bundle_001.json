@@ -1,0 +1,80 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w409",
+  "bundle_slug": "c0017-adversary-summed-defect-001",
+  "entries": [
+    {
+      "key": "cell-obstruction",
+      "namespace": "probability.percolation",
+      "logical_name": "square-grid-cell-defects-need-summation-control",
+      "kind": "concept",
+      "title": "Vanishing cell defects can leave a nonzero contour",
+      "statement": "UNREVIEWED DRAFT; independent referee pending. For f(z)=conjugate(z) on the mesh delta=1/n square grid in [0,1]^2, define I([u,v])=(f(u)+f(v))(v-u)/2. Every counterclockwise cell has contour defect 2i delta^2, tending uniformly to zero, but summing all n^2 cells gives the outer contour integral 2i. Thus boundedness, equicontinuity, convergence and per-cell O(delta^2) or o(1) errors do not imply a holomorphic limit. This is a deterministic counterexample to that inference, not a percolation counterexample.",
+      "proof_text": null,
+      "assumptions": [
+        "Square grid and trapezoidal edge integrals",
+        "No percolation-specific observable identity assumed"
+      ],
+      "domain": "probability theory and complex analysis",
+      "source": {
+        "source_id": "owner-own-work:w409-c0017-adversary-20261010",
+        "url": "urn:probability-research:20261010:w409:c0017-adversary",
+        "revision": "w409-independent-draft-v1",
+        "license": "owner-own-work; unreviewed campaign mathematics, not promoted to theorem",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "summed-reduction",
+      "namespace": "probability.percolation",
+      "logical_name": "compact-nodal-convergence-and-summed-defects-imply-holomorphicity",
+      "kind": "concept",
+      "title": "Conditional contour reduction for a grid observable",
+      "statement": "UNREVIEWED DRAFT; independent referee pending. Let Omega be open, delta_n tend to zero, and complex nodal functions f_n on Omega intersect delta_n Z^2 converge uniformly at grid nodes on every compact set to continuous f. Let D_n(c) be the counterclockwise trapezoidal edge-integral sum around cell c. If, for every axis-aligned rectangle R compactly contained in Omega and grid rectangle approximants R_n tending to R, the signed sum of D_n(c) over cells of R_n tends to zero, then f is holomorphic. Exact interior-edge cancellation and bounded-perimeter quadrature give zero limiting rectangle integrals; a local rectangular primitive proves holomorphicity. Deriving this summed estimate for an actual square-bond event observable remains unproved here.",
+      "proof_text": null,
+      "assumptions": [
+        "Continuous limit and compact-uniform nodal convergence",
+        "Signed summed-defect limit for every fixed compact interior rectangle",
+        "No assertion that square-bond percolation satisfies these hypotheses"
+      ],
+      "domain": "probability theory and complex analysis",
+      "source": {
+        "source_id": "owner-own-work:w409-c0017-adversary-20261010",
+        "url": "urn:probability-research:20261010:w409:c0017-adversary",
+        "revision": "w409-independent-draft-v1",
+        "license": "owner-own-work; unreviewed campaign mathematics, not promoted to theorem",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "slit-obligation",
+      "namespace": "probability.percolation",
+      "logical_name": "square-bond-stopped-cardy-approximation-is-an-unproved-input",
+      "kind": "concept",
+      "title": "Square-bond input required by two Cardy martingales",
+      "statement": "UNREVIEWED DRAFT; independent referee pending. The conditional two-Cardy-martingale identification route does not prove square-bond conformal invariance by itself. Its model-specific input is a construction of correctly oriented square-bond Doob crossing or exit martingales P_delta,i and, on each nondegenerate stopped exploration interval, an approximation E[sup |P_delta,i-C(X_delta/Y_delta,i)|] tending to zero, together with joint driver/marked-point convergence, compatible limiting filtration and stopping/boundary control. Here C(u) is the normalized integral of [v(1-v)]^(-2/3) from 0 to u. This input is UNPROVED in the reviewed route. Fixed-domain pointwise limits alone cannot justify evaluation at varying random slit domains.",
+      "proof_text": null,
+      "assumptions": [
+        "Actual discrete event and primal/dual boundary convention must be specified",
+        "Both martingales use one exploration filtration",
+        "Curve-to-driver compatibility and joint convergence are additional obligations"
+      ],
+      "domain": "probability theory and complex analysis",
+      "source": {
+        "source_id": "owner-own-work:w409-c0017-adversary-20261010",
+        "url": "urn:probability-research:20261010:w409:c0017-adversary",
+        "revision": "w409-independent-draft-v1",
+        "license": "owner-own-work; unreviewed campaign mathematics, not promoted to theorem",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "cell-obstruction",
+      "to_key": "summed-reduction",
+      "kind": "semantic_association",
+      "rationale": "The first entry states \"per-cell O(delta^2) or o(1) errors do not imply a holomorphic limit\"; the second requires that \"the signed sum of D_n(c) over cells of R_n tends to zero\". The example isolates the missing summed premise without refuting the conditional reduction."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "helper": "check_transfer.py v1/direct character sums",
+  "family": "1-2A_a+2A_(a+b+r)",
+  "domain": {
+    "a": [
+      1,
+      2
+    ],
+    "b": [
+      0
+    ],
+    "r": [
+      2
+    ],
+    "references": [
+      "matching",
+      "uniform",
+      "increasing",
+      "singleton-spiked"
+    ]
+  },
+  "cases": 16,
+  "histories": "every prefix length 0..a-1 then one control then each suffix length 0..a-prefix; fixed labelled active order, no symmetry claim",
+  "arithmetic": "Fraction spectra, rational log intervals (22 terms plus exact tail)",
+  "memory_estimate_mb": 80,
+  "max_runtime_seconds": 55,
+  "search_type": "bounded exact validation, not exhaustive over references",
+  "case_count_metadata_correction": {
+    "original_declared_cases": 16,
+    "actual_frozen_domain_roots": 8,
+    "reason": "2 a values times 1 b times 1 r times 4 references; unchanged parameter domain, no additional observations"
+  }
+}

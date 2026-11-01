@@ -1,0 +1,714 @@
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\CAMPAIGN.md
+# Full FEI: mathematical supplement to the installed campaign
+
+**Status: SUPPLEMENT. Full FEI remains OPEN.** This directory adds mathematical routes, source notes, counterexamples, and proof interfaces to the installed plan in [reports/fei-2026-10-11/](https://github.com/yspennstate/math-open-problems/tree/master/reports/fei-2026-10-11/). The installation reference is [commit bc85302284612e979faae67ea51663242d322221](https://github.com/yspennstate/math-open-problems/commit/bc85302284612e979faae67ea51663242d322221). The installed report and subsequent authorized updates remain the primary ca
+- [SOURCES_README.md](SOURCES_README.md) and [SOURCES.json](SOURCES.json): twelve curated mathematical source notes, original repository paths, observed immutable hashes, and the limits of the available provenance.
+- [baseline/current-threshold-paper.tex](baseline/current-threshold-paper.tex): the current 38-page source, including the independently checked shared-data multiplexer closure.
+- [baseline/threshold-paper.tex](baseline/threshold-paper.tex), [baseline/RESEARCH_STATUS.md](baseline/RESEARCH_STATUS.md), and [baseline/computations/](baseline/computations/): the separately pinned supporting manuscript snapshot and finite checks.
+
+2. Pay actual restriction entropy drops with one conserved physical influence budget, retaining the mismatch/KL rebate and the terminal entropy.
+3. Use full signed Boolean convolution identities to obtain a new valid entropy or spectral-edge inequality.
+4. Resolve the precise weighted correlation-lifetime target under the source's reveal policy, while keeping entropy transfer as a separate obligation.
+5. Improve a proper structural endpoint, such as read-k covariance, two spectral addresses, controlled selector interference, or biased weighted thresholds, and then determine what it contributes to a universal proof.
+
+- Parity lifts can make aggregate erasure entropy zero while preserving arbitrary Fourier entropy and increasing influence by at most a factor two.
+- A single physical selector can create dimension-sized erasure synergy.
+- Sparse bent perturbations require a logarithmic local payment even when both child influences vanish.
+- Arbitrary signed leaves, unrestricted two-cell selectors, and arbitrarily rare activated cores can retain full-FEI difficulty.
+- Coherent shared-variable products and overlapping leaf Fourier supports cannot be replaced by an incoherent mixture without a proof.
+- Addressing requires paying its label once for a whole Fourier set; its exact values are H=2a and I=1+a/2.
+- A normalized real spectral vector is not automatically the Fourier transform of a Boolean function.
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\CLAIMS.md
+# FEI campaign seed claim ledger
+
+**Full FEI: OPEN.** Updated 11 October 2026. Team IDs below are the F01–F20 identities in `TEAMS.json`, copied from the root campaign roster. This ledger does not assign a replacement roster or claim that workers have run.
+
+## Status and source conventions
+
+- **PROVED_BASELINE:** a theorem/identity established in a cited primary paper or a complete proof in the recovered source. This label does not imply external peer review or proof-assistant certification of the new manuscript.
+- **CONDITIONAL:** a proved implication whose hypothesis remains unpaid fo
+- **P:** [baseline/threshold-paper.tex](baseline/threshold-paper.tex).
+- **ER:** [sources/ERASURE_REDUCTION.md](sources/ERASURE_REDUCTION.md).
+- **ES:** [sources/ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md](sources/ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md).
+- **LA:** [sources/LOG_ALLOCATION_CURATED.md](sources/LOG_ALLOCATION_CURATED.md), mathematical sections 2–6 with original numbering.
+- **RIG:** [sources/ERASURE_RIGIDITY.md](sources/ERASURE_RIGIDITY.md).
+- **BR:** [sources/BLOCK_RESTRICTION_IDENTITY_2026-09-18.md](sources/BLOCK_RESTRICTION_IDENTITY_2026-09-18.md).
+- **RM:** [sources/ROUTE_MAP_CURATED.md](sources/ROUTE_MAP_CURATED.md), selected mathematical sections with original numbering. Its source links identify unbundled proofs and their precise draft/verification status.
+- **OP:** [sources/OVERLAPPING_PRODUCT_NOTE.md](sources/OVERLAPPING_PRODUCT_NOTE.md).
+- **ONE:** [sources/ONE_BIT_ENDPOINT.md](sources/ONE_BIT_ENDPOINT.md).
+- **GAMMA:** [sources/GAMMA_ENDPOINT_LEDGER.md](sources/GAMMA_ENDPOINT_LEDGER.md).
+| C006 | PROVED_BASELINE | For a physical block A and uniform assignment X, H(f)−E H(f_X)=H(S_A|S_Ac)+I(X;Y), where Y is sampled from the restriction's spectrum. The channel term is ≤(2/ln2)I_A. | F06,F19 | BR |
+| C007 | PROVED_BASELINE | Full signed Booleanity is equivalent to sum_S a_S²=1 and sum_S a_S a_(S△U)=0 for every nonempty U. Arbitrary nonnegative spectral laws or truncated identities do not suffice. | F09,F16,F19 | ER §6; RM §3 |
+| C008 | PROVED_BASELINE | The final queue law is a subprobability reference. Every valid complete forest/assignment witness gives a Gibbs entropy bound, retaining normalization, roots, attachments, subset/rank costs, and used-gate counts jointly. | F01–F03,F18 | P, “A bound retaining the joint witness cost” |
+| C009 | PROVED_BASELINE | Ordinary addressing with a address bits and 2^a distinct data bits has H=2a, I=1+a/2, hence H=4(I−1). The complete queue proof also yields H<10I for this family. | F01–F03,F11,F17 | P, addressing benchmark and `cor:affine-selectors` |
+| C013 | PROVED_BASELINE | Balanced-core activation F=1+A_r(g−1), p=2^−r, has H=pH(g)+2rp(2−p)+(1−p)²log₂(1/(1−p)²), I=p(I(g)+r). For every ε,δ>0, the supremum H/I over such activations with 0<I≤ε and P(F=−1)≤δ equals C_FEI. | F03,F15,F17,F20 | P, `prop:activation`, `cor:activation-equivalence` |
+| C014 | PROVED_BASELINE | Arbitrary signed constant leaves on singleton address cells represent every Boolean g exactly. Even requiring balanced leaves does not remove full scope if overlapping supports are allowed: leaves g_u(y)=g(u)y give F(z,y)=g(z)y, H(F)=H(g), I(F)=I(g)+1. Tensor amplification removes the additive one. | F11,F14,F15,F20 | Direct identity from C010's selector setup without its disjoint-support hypothesis; see X005 |
+| C015 | PROVED_BASELINE | The parity lift f(x,z)=g(x₁z,…,x_nz) has H(f)=H(g), B(f)=0, and I(f)=I(g)+P(|S_g| odd)≤2I(g). Its physical z=+1 restriction is g. | F05–F07,F15,F17 | ES §3 |
+| C016 | PROVED_BASELINE | Exact product Boolean spectra satisfy H≤2I. One spectral address with product conditional spectrum is also proved with constant two; two addresses already admit H/I=40/17>2. | F09,F12,F17 | RIG §1; RM §§9.1,9.4; ONE §§1–3 |
+|---|---|---|---|---|
+| C027 | REFUTED | Small or zero local erasure makes the whole function an easy FEI terminal. | F05–F07 | X001–X002; C015 |
+| C028 | REFUTED | B_i≤j_i times a multiplier bounded near zero child influences. | F03,F05,F15 | X003 |
+| C029 | REFUTED | Selector entropy/influence identities C010 remain valid with arbitrary overlapping leaf Fourier supports. | F11,F14 | X004 |
+| C030 | REFUTED | H(fg)≤H(f)+H(g) for all shared-variable Boolean factors, or a fixed correction proportional to common pivotal overlap repairs it universally. | F14,F17 | X007 |
+| C031 | REFUTED | All two-address conditional-product spectra satisfy H≤2I. | F12,F16 | X008 |
+| C032 | REFUTED | Approximate independence alone pays local rare erasure or gives dimension-free source entropy restoration. | F07–F09,F12 | X009–X010, with each stated scope |
+| C033 | REFUTED | Arbitrary real normalized coherent mixtures may replace genuine Boolean sources in universal FEI estimates. | F09,F11,F14 | X006 |
+| C034 | REFUTED | Entropy of a normalized coherent sum is always at most label entropy plus average component entropy, even for orthogonal unit real component vectors. | F11,F14,F19 | X013; does not refute a separately proved Boolean special case |
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\COUNTEREXAMPLES.md
+# FEI campaign counterexamples and mandatory scope tests
+
+**Full FEI remains OPEN.** These examples refute specified intermediate assertions, or show that a proposed restriction retains full FEI. None is a counterexample to full FEI. Use the F01–F20 roster in `TEAMS.json`. Source aliases and log conventions are defined in `CLAIMS.md`; explicit natural-log exceptions are noted below.
+
+Every proposing team must record which tests apply, why an excluded test fails its hypotheses, and whether its new conclusion is an identity, a proper-class result, a conditional reduction, or a universal clai
+
+## X001 — Parity lift hides all entropy from local erasure
+
+**Owners:** F05–F07,F15,F17. **Related:** C015,C027. **Source:** ES §3.
+
+**Defeats:** treating B=0, absence of spectral edges, or even spectral support as a certified easy leaf. The class is not closed under physical restriction. A universal bound for its entropy is full-FEI strength up to a factor two. A bound for aggregate erasure on *all restrictions* is not refuted.
+
+## X002 — One physical selector creates unbounded erasure synergy
+
+**Owners:** F05–F07,F17. **Related:** C027. **Source:** ES §§1–2.
+
+## X004 — Overlapping leaf supports invalidate the mixture identities
+
+**Owners:** F11,F14,F16,F19. **Related:** C029. **Source:** direct two-bit substitution in P, `prop:selector-identities`.
+
+## X005 — Arbitrary signed leaves encode full FEI
+
+**Owners:** F11,F14,F15,F20. **Related:** C014. **Kind:** exact scope reduction, not a numerical counterexample.
+
+**Defeats:** declaring “affine/singleton cells and arbitrary signed leaves” an easier general FEI class, or extending the distinct-character/orthogonal-leaf theorem without paying its lost hypothesis. Source: elementary coefficient identity in the setup of P, `sec:selectors`; preserve the explicit distinction between this reduction and C010.
+
+## X006 — Real coherent amplitudes are not Boolean restrictions
+
+The real unit-norm function ψ_n(x)=n^−1/2 sum_i x_i has n Fourier atoms of mass 1/n, H=log₂n and I=1. For growing n it is not Boolean. It cannot be admitted merely because it is a normalized signed superposition of Boolean characters.
+
+**Defeats:** universal entropy/influence bounds that use only normalization and allow arbitrary coherent mixtures. For a true Boolean physical splice the coefficients are (ghat±hhat)/2 on two selector-frequency sectors; neither sector may be independently substituted for a Boolean function. Full signed XOR identities must be checked, not assumed after normalization.
+
+## X007 — Shared-variable product entropy is not subadditive
+
+**Defeats:** extending the solved one-address constant two unchanged. It does not refute a larger finite C₂ or a collective address-entropy payment. Hypothesis checks require the actual signed witness, not just a distribution with this histogram.
+
+## X009 — Tiny dependence does not pay rare local erasure
+
+**Owners:** F07,F09,F12,F17. **Related:** C032. **Source:** RIG §§2–3.
+
+**Defeats:** a universal coordinatewise erasure/influence estimate justified only by closeness to a product law. Does not refute aggregate FEI or a source-sensitive integrated bound. Exact product rigidity is not a uniform approximate-product theorem.
+
+## X010 — Paid noise correlation is not paid source restoration
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\SEED_LEMMAS.md
+# Seed lemmas for the full-FEI campaign
+
+**Status:** direct derivations, reviewed internally; separate from the completed threshold manuscript. These are not claims of novelty, external peer review, or a proof of full FEI. The hypotheses below are part of each statement. The effective-piece argument and prior mixture are useful interfaces; a dimension-independent bound on their complete expected cost remains an additional obligation.
+
+**Prepared:** 11 October 2026. **Research roles concerned:** F01–F04 for reference distributions and piece costs; F15 and F17 for reductions and asymptotic d
+
+The first step also holds for arbitrary signs on the support: bound the signed noise inner product by the probability that both evaluations lie in the support. For the second step, Cauchy–Schwarz and
+
+\[
+
+give the displayed bound. This is precisely the signed relative-noise lemma from the baseline manuscript.
+
+Set \(u=1-e^{-t/r_l}\). Since \(1-e^{-s}\ge se^{-s}\) for \(s\ge0\),
+
+The multiplier argument only needs orthogonality of the pieces and the displayed piecewise Laplace estimate. Disjoint physical supports and signed fiber antichains are concrete sufficient conditions supplied by the baseline derivative partition. Orthogonality by itself does not supply the piecewise estimate.
+
+Equal masses give \(K_{\mathrm{eff}}=m\). The lemma can improve a mass-concentrated derivative decomposition; it does not prove that every Boolean function admits such a decomposition, pay the remaining reference normalizer, or establish \(\sum_i I_i\ln K_{\mathrm{eff},i}=O(I)\). Any claimed FEI consequence must account for those terms separately in the complete description bound.
+
+**Source pointers.** The baseline manuscript `main.tex`, SHA256 `3a395e98153f826fa9160c348e45779f204d3ea77376f40cd71ee57440ba8193`, has the signed relative-noise lemma at LaTeX label `lem:antichain-noise`, the derivative partition at `eq:pieces`, and the original multi-order proof at `lem:multi-rank`. Its archived copy is retained under `baseline/`. The direct effective-piece derivation was recorded in `supporting/joint_strategy.md`, Workstream B. The working source before campaign assembly was `final/fourier-entropy-threshold-functions/paper/main.tex`.
+
+## 2. A normalized prior over complete reference laws
+
+The displayed statements were checked algebraically against the baseline's signed antichain and queue interfaces. Finite computations are not used as a substitute for the proofs. The report audit also independently verified the point-defect asymptotics and the need to retain each normalization term.
+
+An application is a separate claim. It must state which representation is chosen, which ranks and pieces satisfy Section 1, which complete laws and fixed priors satisfy Section 2, and how the entire resulting expectation is paid. The existence of a valid reference and a bound on one of its components does not settle the full entropy-influence inequality.
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\NATIVE_MAPPING.md
+# Mapping supplemental F roles to installed B streams
+
+**This is a many-to-many research crosswalk, not a native reassignment.** The installed plan is [reports/fei-2026-10-11/](https://github.com/yspennstate/math-open-problems/tree/master/reports/fei-2026-10-11/), with installation reference [bc85302284612e979faae67ea51663242d322221](https://github.com/yspennstate/math-open-problems/commit/bc85302284612e979faae67ea51663242d322221). Its twenty native B streams and fixed endpoint **2026-10-21T19:15:57Z** remain authoritative.
+
+F01–F20 are the topical role groups in [TEAMS.json](TEAMS.json) a
+| F06 — Block stopping rules | B06, B13, B09, B17 | Proper-block selection, certified terminal classes, termination, and non-reuse of payments. |
+| F07 — Erasure and synergy | B06, B07, B08, B14 | Signed spectral-edge inequalities that survive parity dependence and retain the downward logarithmic residual. |
+| F08 — Reveal correlation budget | B13, B08, B14, B18 | The exact decaying-threshold dynamics, weighted TC lifetime, forced-information refund, and boundary audit. |
+| F09 — Boolean convolution | B07, B14, B08, B01 | Full signed XOR identities, failures of non-Boolean relaxations, and universal entropy interfaces. |
+| F10 — Decision-tree covariance | B13, B02, B03, B12 | Improved read-count dependence through signed covariance, path codes, and controlled repeated variables. |
+| F11 — Selector interference | B04, B03, B12, B10 | Cross terms for overlapping leaf Fourier supports; coherent reinforcement/cancellation and exact falsifiers. |
+| F12 — Two spectral addresses | B04, B07, B09, B15 | Actual Boolean conditional-product spectra, coupled-row constraints, and the two-address constant beyond the refuted value two. |
+| F13 — Biased weighted thresholds | B09, B12, B14, B10 | Corrected FEI+ for weighted gate subclasses and composition consequences, including extreme-bias tests. |
+| F14 — Shared-variable composition | B12, B03, B07, B10 | Valid Fourier convolution bounds and compositional invariants tested against false entropy subadditivity. |
+| F15 — Sparse extremal structure | B05, B11, B16, B01 | Activation-preserving reductions, non-equivalent structural hypotheses, and potential high-ratio families. |
+| F16 — Exact finite search | B15, B10, B17 | Integer Walsh experiments aimed at named claims, exact hypothesis checks, and minimal certificates. |
+
+**Full FEI remains OPEN.** This crosswalk records research relevance. It is not evidence that a role was assigned, an agent executed, a result was saved, or a theorem was accepted.
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_26_CRITICAL_RARE_MOMENT.md
+# Route-map addendum 11.26: critical rare-degree overpayment
+
+30 September 2026. Full FEI remains OPEN. This standalone addition leaves the canonical REPORT.md and the completed 12:48 UTC checkpoint unchanged.
+
+The reviewed mathematical source is `proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/scalar-information-remainder/integrated-trajectory/critical-rare-moment/REPORT.md` at immutable commit `2af98e3a18cb84a93ec9c2a54b05f966add735b2`, on open, unmerged draft PR12. Its neighboring MANIFEST.json records the original and reviewed report hashes. Both files were read back exact
+
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md
+# 11.44 Connected-component raw entropy subadditivity fails
+
+1 October 2026, 04:59 UTC. Unrestricted FEI remains unproved and unrefuted. This is a precise auxiliary-route obstruction, not a novelty claim or a solution.
+
+## Exact source and result
+
+The independently checked [nine-bit witness](https://github.com/yspennstate/math-open-problems/blob/1517573ec0b37bd7aeb6a285562a6763059c5a20/proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/separated-entropy-counterexamples/report-connected.md) is on private open draft PR12 at commit `1517573ec0b37bd7aeb6a285562a6763059c5a20`, repor
+
+Do not revive disjoint physical support as disjoint Fourier support, or use an incoherent mixture for the squared sum of amplitudes. Actual single-coordinate separation has an elementary packet-entropy proof, but arbitrary complementary subsets do not inherit it. A weaker ratio-max or controlled-excess argument still needs a complete proof and nonreusing global accounting. Existing signed/source-sensitive and Boolean-middle lifetime gaps remain open.
+
+[Exact checker](https://github.com/yspennstate/math-open-problems/blob/1517573ec0b37bd7aeb6a285562a6763059c5a20/proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/separated-entropy-counterexamples/check_connected.py) has blob `762313d59d3b5ebbc9b5d01bce4b487e9624e748`, SHA256 `af13bc0e45c2f927aae5ca7348ac5a20c6257f87592e4b6f1b38120aaed3e527`. All nine publication readbacks, including the historical diagnostic correction, matched complete expected bytes. Code remains on the unmerged draft branch; this index neither deploys it nor grants source admission, scheduler control or external permissions.
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\BLOCK_RESTRICTION_IDENTITY_2026-09-18.md
+# Block restriction identity and its exact surviving term
+
+Status: proved below, self-checked, novelty UNVERIFIED. This generalizes the one-coordinate erasure/JS identity already recorded. It is a framework, not a proof of FEI. The parity construction in `ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md` proves that the block conditional term cannot be replaced by average restriction erasure.
+
+All logarithms in entropy quantities are base two. Natural logarithms are written ln.
+
+## 1. Partial Fourier channel
+
+Partition the n physical input coordinates into nonempty A and its complement C. For
+
+Status: proved below, self-checked, novelty UNVERIFIED. This generalizes the one-coordinate erasure/JS identity already recorded. It is a framework, not a proof of FEI. The parity construction in `ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md` proves that the block conditional term cannot be replaced by average restriction erasure.
+
+All logarithms in entropy quantities are base two. Natural logarithms are written ln.
+
+For |A|=1, the first term is B_i and the second is the Jensen--Shannon term from `ERASURE_REDUCTION.md`.
+
+## 2. Dimension-free bound for the channel information
+
+## 4. Why average fiber erasure cannot replace the conditional term
+
+One might hope to strengthen (8) by replacing H(Z_A|Z_C), or by bounding the C-side erasure of q, using the average erasure of the restriction laws q_x plus O(I_A). The semi-bent parity construction proves this impossible.
+
+With one selector input and m data coordinates, its two q_x laws are uniform on even and odd parity respectively. Each has aggregate erasure zero. Their mixture q is uniform on all m bits and has aggregate erasure m, while I_A=1/2 and I(X;D)=1. Hence
+
+    B(q)-E_x B(q_x)=m
+
+Equation (4) remains valid because it uses full entropy of the restrictions. In this example H(q)-E H(q_x)=1, exactly the channel information. It is the attempted replacement of full restriction entropy by erasure entropy that loses m-1 bits of parity constraint.
+
+## 5. Remaining route
+
+A useful block choice in (9) would need to detect and include enough coordinates from every high-order spectral constraint, while paying each physical influence only once through (10). The existing one-coordinate bent-marker obstruction says arbitrary singleton blocks do not work; the parity synergy obstruction says averaging fiber erasure does not repair larger-block induction.
+
+No selection theorem of this kind is proved here. The precise live possibilities are:
+2. build a nonlinear potential that retains parity-type constraints and has an exact non-reuse identity analogous to (10);
+3. abandon restriction induction and control the logarithmic edge functional K directly from signed Boolean convolution.
+
+The first option is stated as an obligation, not a conjecture asserted to be true.
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_REDUCTION.md
+# An erasure-entropy reformulation of FEI
+
+Status: the identities and implications below have complete self-contained proofs. Their novelty is **unverified**. The dimension-free estimate in Section 4 is **OPEN**. This document does not prove FEI.
+
+All logarithms denoted log_2 are in bits. Write ln for natural logarithms. Let f:{-1,1}^n -> {-1,1}, a_S=E[f chi_S], p_S=a_S^2, H(f)=-sum p_S log_2 p_S and I(f)=sum |S|p_S. Set 0 log 0=0. Let X be the random subset with probability p_S.
+
+## 1. Exact identity
+
+For i in [n], put
+
+    B_i(f)=H(X_i | X_{-i}),   B(f)=sum_i B_i(f),
+    Delta_i(f
+# An erasure-entropy reformulation of FEI
+
+Status: the identities and implications below have complete self-contained proofs. Their novelty is **unverified**. The dimension-free estimate in Section 4 is **OPEN**. This document does not prove FEI.
+
+These follow by Fourier transforming f^2=1. Conversely, for a real vector a, (9) implies that its inverse Walsh transform takes values in {-1,1}. Thus an equivalent algebraic problem is to control (6) under these exact signed convolution constraints. A nonnegative arbitrary distribution p does not suffice.
+
+For example independent Bernoulli(theta) spectral bits have B=n psi(theta), I=n theta, so B/I=psi(theta)/theta tends to infinity. These distributions generally cannot be squared Boolean spectra. In fact for n=1 the only Boolean spectra are point masses or their identical complements, immediately excluding a nontrivial Bernoulli law. Do not relax away (9) and expect a dimension-free result.
+
+Coordinate restriction induction and the local binary-entropy expression are present in González–MacManus–Pereyra, arXiv:2606.00246v2, section 4 and Appendix B. Equations (1)-(5) are written here in conditional-entropy/Jensen–Shannon language, with all constants checked directly. The prior-art search has not established that the aggregate erasure formulation or the sharpened scalar constant is new. Ordinary chain rules, Jensen–Shannon divergence and tensorization are standard.
+
+The proven reduction is a route to the original universal problem. It does not establish a new class satisfying FEI, improve a known universal bound, or constitute a solution.
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_RIGIDITY.md
+# Exact spectral independence and the remaining aggregate erasure gap
+
+20 September 2026. Further mathematical work on the unrestricted FEI target. **Full FEI is not proved here.** The statements below have direct proofs. Their publication priority has not been checked. The companion checker is `check_erasure_rigidity.py`; its actual output is `erasure_rigidity_checks.json`.
+
+Write N=2^n, a_S=fhat(S), p_S=a_S^2, alpha_i=Pr_p(i in S), and B_i=H(S_i|S_-i). All entropies are in bits. Walsh coefficients W_S=N a_S are integers for Boolean sign functions.
+
+## 1. One exactly independent spectra
+# Exact spectral independence and the remaining aggregate erasure gap
+
+20 September 2026. Further mathematical work on the unrestricted FEI target. **Full FEI is not proved here.** The statements below have direct proofs. Their publication priority has not been checked. The companion checker is `check_erasure_rigidity.py`; its actual output is `erasure_rigidity_checks.json`.
+
+Write N=2^n, a_S=fhat(S), p_S=a_S^2, alpha_i=Pr_p(i in S), and B_i=H(S_i|S_-i). All entropies are in bits. Walsh coefficients W_S=N a_S are integers for Boolean sign functions.
+
+## 2. Almost independent spectral bits can still have an unbounded local erasure ratio
+
+The rigidity theorem cannot be converted into a uniform local bound B_i<=C alpha_i merely by continuity. There is an explicit family in which the spectral mutual information tends to zero quadratically in alpha_i, while B_i/alpha_i diverges.
+
+Let Z(f)=sum_i JS(q_i^+,q_i^-), with the restriction spectral laws as in the existing erasure reduction. The retained valid theorem is Z<=2J/ln 2. The stronger proposal Z<=2J is false.
+
+For the three-variable one-point defect f=(-1,1,1,1,1,1,1,1), the exact checker encloses
+
+It computes the entropy and the binary erasure expression with rational logarithm intervals, so this is not just the floating-point observation from the initial search. It is not a claim that the supremum of Z/J has been determined, and the old 2/ln2 payment remains valid.
+
+## 4. Actual checks and scope
+
+    python3 check_erasure_rigidity.py --output erasure_rigidity_checks.json
+
+The first theorem is a qualitative Boolean arithmetic constraint. The second theorem proves why that qualitative fact is insufficient to finish the local entropy argument. These results are preserved as usable mathematics and explicit limitations; they are not another claim that the remaining universal FEI estimate has been proved, a replacement for the aggregate problem, or a first-priority assertion.
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md
+# Erasure synergy and the dual-correlation barrier
+
+Status: proved below and self-checked; novelty UNVERIFIED. These are structural obstructions and equivalences, not a proof of FEI.
+
+For a probability law p on subsets of [n], write
+
+    H(p)=-sum_S p_S log_2 p_S,
+    B(p)=sum_i H(X_i | X_{-i}),
+    D(p)=H(p)-B(p).
+
+The quantity D is the dual total correlation (also called binding information in parts of the information-theory literature). Only the displayed formula is used here. For a Boolean f, p_S=fhat(S)^2 and we write H(f),B(f),D(f).
+
+## 1. One mixing bit can create m erasure 
+# Erasure synergy and the dual-correlation barrier
+
+Status: proved below and self-checked; novelty UNVERIFIED. These are structural obstructions and equivalences, not a proof of FEI.
+
+## 1. One mixing bit can create m erasure bits
+
+**Theorem.** For every odd m>=3 there are Boolean functions g_0,g_1 on m bits and a Boolean selector F on m+1 bits, whose restrictions at the selector are g_0,g_1, such that
+
+Uniform even or odd parity on m>=3 bits has entropy m-1. Every coordinate is determined by the other m-1 coordinates, so its aggregate erasure entropy is zero. Every coordinate marginal is fair, so its mean Hamming weight, hence Fourier influence, is m/2.
+
+Add a selector z and set F(0,y)=g_0(y), F(1,y)=g_1(y). Its Fourier coefficients are
+
+The two restriction supports are disjoint and partition all subsets S. Equation (2) consequently has squared magnitude 2^(-(m+1)) for every (b,S). Thus F has the uniform spectral law on m+1 bits. Its entropy and erasure entropy are m+1, and its influence is (m+1)/2. Finally g_0 and g_1 differ precisely when y_m=1, proving selector influence 1/2. The parity of S identifies which restriction law generated S, giving one bit of selector/spectrum mutual information. QED.
+
+This refutes every proposed dimension-free inequality of the form
+
+The general log-Sobolev control of the one-bit mutual information does not repair (3): aggregate erasure can amplify one latent parity bit into m conditional bits.
+
+## 2. No fixed linear mixture of B and D below H is restriction-stable
+
+Together with the earlier erasure reduction, both summands in H=B+D can independently carry the full difficulty under Boolean-preserving transformations. For B the equivalence was obtained through restriction induction; for D equation (5) is a direct explicit reduction.
+
+There is a sharper class-level consequence. Let Z be the class of Boolean functions whose positive Fourier support contains no adjacent pair. This is exactly the class B=0 (equivalently K=0): a binary conditional entropy is positive precisely when both members of some spectral edge have positive mass. Every parity lift (5) lies in the still smaller class whose Fourier support has even cardinality. Therefore FEI restricted only to that even-support class is already equivalent to full FEI up to factor two. Indeed, a constant C on this class gives
+
+`check_erasure_synergy.py` performs exact integer Walsh transforms for m=3,5,7, verifies every claimed signed coefficient and the full spectral laws, checks the pair lift on every Boolean truth table through three original variables, and checks the sharper parity lift on every Boolean truth table through four original variables. It also records the exploratory small-dimension maxima of D/I from complete enumeration through four variables; those floating entropy values are not used in a theorem.
+
+The universal statements above are proved algebraically, not by these finite checks. The checks are not an independent audit. Prior-art novelty has not been established.
+
+The logarithmic edge target K<=C I remains open. A recursive proof cannot replace the restriction entropy by erasure entropy alone: parity-supported restriction spectra have zero B, yet their mixture has maximal B. Nor can the missing D be bounded separately without confronting an FEI-equivalent problem.
+
+A viable potential must retain enough information about global spectral constraints to prevent the parity-to-independent conversion in Section 1, while still admitting a non-reusing influence charge. Merely naming D, adding a fixed fraction of it, or controlling the selector/spectrum mutual information does not do this.
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\GAMMA_ENDPOINT_LEDGER.md
+# Exact zero-outcome remainder for the stronger inverse-time TC question
+
+30 September 2026. Natural logarithms. This is an exact reduction of the pending endpoint, not its proof. Use precisely the decaying-threshold policy in DECAYING_THRESHOLD.md, on a fixed finite n-bit initial law, with q_i<epsilon exp(-2t) off its finitely many event times.
+
+At deterministic forced times use the right-continuous state after the complete finite cascade; all forced losses retain their pre-reveal conditional laws. Let D_t=DTC(P_t), T_t=TC(P_t), and let
+
+    r_i=P_t(S_i=1 | S_without_i),
+    Gamma(P_t)
+
+Initial cascades are included. This retains the signed forced-information refund, rather than dropping it in the earlier integrating-factor bound.
+
+For fixed n, the terminal term in (1) really tends to zero. Off event times,
+
+The desired dimension-free endpoint would follow from an upper bound on the SIGNED remainder in (2) by C[DTC(P0)+J0]. No such estimate is proved here. Bounding Gamma by J alone gives an unwanted dimension/marginal-scale cost, and discarding the forced-information term loses the proposed mechanism.
+
+## Existing controls do not refute the endpoint
+
+The earlier e^t/sqrt(1+t) estimate is insufficient on its own to bound (2), because multiplying a finite integral by the unbounded sqrt(1+t) is not justified. Source-realizability or a sharper information accounting must enter a proof of the remaining signed estimate. Full FEI remains open.
+
+## A positive weighted-dissipation refinement for Gamma
+
+The unresolved precise question remains whether the SIGNED difference
+
+    integral e^t E Gamma(P_t)dt
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ISOSPECTRAL_SPLICING_CURATED.md
+# Isospectral splicing: complete mathematical sections 2–9
+
+**Full FEI remains OPEN.** Curated mathematical excerpt. Original section numbers and mathematical prose are retained; unrelated historical operating instructions and unneeded sections are omitted. This is not a complete archive or a new proof.
+
+Original repository source: [proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+03
+
+The hereditary erasure cost is therefore exactly
+
+\[
+
+Equation (2.8) is consistent with P03's previously proved one-step erasure/recombination identity; the new point is the common Hellinger defect `M_i` below.
+
+## 3. New local theorem: Hellinger defect pays both allocation and recombination
+
+## 5. Signed-translation quotient theorem
+
+The isospectral splice theorem has a useful physical symmetry source.
+
+Call `V` a signed-translation symmetry space. Put `r=dim V`.
+
+### Theorem 5.1 — zero-cost quotient peeling
+
+Now query the pivot coordinates in row-echelon order. After fixing any earlier pivots, the residual signed symmetry generated by a row whose earlier pivots are zero still relates the two children of the next pivot by an input translation on the unqueried residual coordinates and a global sign. Translation and global sign preserve coefficient magnitudes, so the two child squared Fourier laws agree coordinatewise after the natural common residual labeling. Theorem 4.1 gives `B_i=Delta_iH=0` at that node. Repeating through all pivots proves item 1, while (5.2) proves item 2.
+
+Grafting any leaf certificate gives item 4; (5.4)-(5.5) give item 3. QED.
+
+Fix any candidate constant `C`. If a Boolean function `f` violates `H(f)<=C I(f)` and has a nontrivial signed-translation symmetry space, then some Boolean function on strictly fewer variables also violates the same inequality.
+
+Indeed Theorem 5.1 gives `g` with
+
+Therefore any **minimal-dimensional** counterexample to a candidate universal FEI constant can be assumed to have trivial signed-translation symmetry.
+
+This is a source-level structural reduction rather than a restricted constant improvement.
+
+So the Fourier support lies in an affine subspace of codimension `r`. Conversely, the physical quotient representation (5.2) shows that this codimension can be peeled at zero hereditary allocation whenever it comes from signed physical translations.
+
+## 6. Decisive obstruction to the previous surcharge selectors
+
+Translation by `mathbf1` preserves the defect set `{0,mathbf1}`, so `u_n(x+mathbf1)=u_n(x)`. Thus the signed-translation symmetry space contains `span{mathbf1}`. Equivalently, direct Fourier computation gives
+
+\[
+
+### 7.1 Signed-symmetry quotient / antipodal checker
+
+File:
+
+`proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__signed-symmetry-quotient-check.py`
+
+Creation commit `eb9283a139b83e815b490d27cc5bf1b1858b7fdd`; read-back blob `a4391b04508e6ddf6cd71a7e0458c120365cd57c`.
+
+`proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__signed-symmetry-quotient-check.out`
+
+Creation commit `192883f5bb9cf8d1ea85745870de13b32365a395`; read-back blob `036089bccc6845d4d32da7adce3113bc98c02f7f`.
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\LOG_ALLOCATION_CURATED.md
+# Logarithmic allocation: complete mathematical sections 2–6
+
+**Full FEI remains OPEN.** Curated mathematical excerpt. Original section numbers and mathematical prose are retained; unrelated historical operating instructions and unneeded sections are omitted. This is not a complete archive or a new proof.
+
+Original repository source: [research_pushes/2026-09-30-fei-log-allocation/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/research_pushes/2026-09-30-fei-log-allocation/REPORT.md). Immutable Git blob: `822c380de0c4be109415f22f040
+
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ONE_BIT_ENDPOINT.md
+# Exact conditional-product endpoint: one address bit, and a two-bit boundary
+
+Date: 2026-09-30. Full FEI remains OPEN. This is an exact arithmetic endpoint for the collective wringing route, not an approximate stability theorem. Publication priority is unverified.
+
+## 1. A norm-arithmetic lemma
+
+Let a be a nonzero finite vector of dyadic rational amplitudes indexed by a Boolean cube. Suppose its normalized squared law is a product law. Then its squared norm w is dyadic and its reduced odd numerator is congruent to 1 modulo 4.
+
+**Proof.** Remove all coordinates deterministic under the 
+
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\OVERLAPPING_PRODUCT_NOTE.md
+# FEI overlapping-product route: source-corrected intake
+
+Full FEI remains OPEN. Immutable [complete report](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/REPORT.md), [attribution correction](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/CORRECTION.md), [claim ledger](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/202
+# FEI overlapping-product route: source-corrected intake
+
+Full FEI remains OPEN. Immutable [complete report](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/REPORT.md), [attribution correction](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/CORRECTION.md), [claim ledger](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/CLAIMS.json), and [executed verification](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/verification.json).
+
+## Correct attribution first
+
+The all-overlapping Boolean inequality H(fg)<=H(f)+H(g) was already disproved by the September 20 directional-compression report, Section 7. Its eleven-variable shared-control decrement witness is exactly a product-entropy counterexample, by that source's own equation (7.6). The September 30 pass independently rediscovered the same rare-clause example and initially omitted that direct attribution. The correction is now explicit at the top of the report and in its ledger. Do not count the broad no-go or that eleven-variable example as newly discovered.
+
+## Additional checked results and retained tools
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ROUTE_MAP_CURATED.md
+# FEI route map: selected mathematical sections and source pins
+
+**Full FEI remains OPEN.** Curated mathematical excerpt. Original section numbers and mathematical prose are retained; unrelated historical operating instructions and unneeded sections are omitted. This is not a complete archive or a new proof.
+
+Original repository source: [research_pushes/2026-09-30-fei-current-route-map/REPORT.md](https://github.com/yspennstate/math-research-brain/blob/main/research_pushes/2026-09-30-fei-current-route-map/REPORT.md). Immutable Git blob: `216cb662e7b21cfe6d7c2034a6690f3c10b886fa`. See `../SO
+
+Read the [complete erasure reduction](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/solo-2026-09-17/ERASURE_REDUCTION.md) before reconstructing it. Its downward-edge residual L_down satisfies L_down<=B<=L_down+I/ln 2. The blind Jensen bound L_down<=I log(n/I) discards precisely the structure needed for closure. L_down is **not** the all-shift collision L in Section 4.
+
+## 2. Strongest retained local restriction information
+
+When M=0, B_i=JS=Delta_i H=0 exactly. If the child squared spectra agree coordinatewise, the parent inherits their FEI constant with zero extra cost. An r-dimensional signed physical translation symmetry can be removed by r actual coordinate queries at zero allocation/decrement, preserving H and weakly decreasing I. A minimum-dimensional counterexample to a proposed constant may therefore be assumed to have no nontrivial signed-translation symmetry.
+
+[Full proof, Theorems 3.1–5.1](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md). Preserve the KL rebate and recognize exact isospectral splits before replacing M by j or charging a scalar child statistic. This is stronger structural information than a blind kappa surcharge, although the different numerical upper bounds need not be pointwise ordered.
+
+The latter constant is 6.078162672495945.... [Variance proof](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/research_pushes/2026-09-30-fei-log-allocation/VARIANCE_LOCAL.md). Summing loses sum_i d_i log(v/d_i); it does not pay the universal aggregate erasure bound.
+
+**PROVEN restricted applications.**
+
+**PROVEN obstruction, recovered September 20.** Exact Booleanity is normalization plus **all** signed convolution identities sum_S a_S a_(S xor U)=0 for U nonempty. Normalization and singleton cancellation alone were already subsumed by a much stronger no-go.
+
+For K=4^k, disjoint control blocks of size w, and the explicit real-valued G_(K,w) in [BOOLEANITY_ORDER, Theorem 2.1](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/continuations/2026-09-20-booleanity-order/REPORT.md#theorem-21),
+
+[Complete tensor, support-loss, and surgery proofs](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/research_pushes/2026-09-30-fei-normalized-convolution-0236z/REPORT.md). “+ at every zero” is not a globally tensor-compatible rule; tensor identities for completed references require product completions.
+
+**CONDITIONAL full-FEI admission, not a proved premise.** Even only for full-support Boolean f with I(f)<=1/16, a universal
+- Fixed positive occurrence reserve D_Gamma>=lambda v K_occ for every source fails for every lambda>0 at finite potential center. Lambda=0, nonlinear/state-dependent credit and FEI are not refuted
+- Full unweighted convolution L2 payment and fixed/low-depth labelled KL extraction underpay rare logarithms
+- Raw U4=O(J) from all-block terminality plus tensor primitivity is false; the counterexample does not remove full ratio-criticality hypotheses
+- The global-safe-cone-to-local-selector step is **NEEDS REVALIDATION**, not a disproved conclusion: it discards child slack that need not vanish
+
+Hence K=4 aggregate or existential erasure targets are stale, and potential-free one-coordinate restriction induction cannot have constant below 7.05. Conservative floors are 4.5388, 4.5048, and 7.0518 respectively. The source's outward numerical certificate assumes numpy log2/log1p accuracy within 8 ulp; this map did not replay it. Limits 4.58825, 4.55771, 7.11162 are numerical observations, not certified universal limits. None raises the lower bound on the actual FEI constant merely by measuring this proof mechanism.
+
+## 6. Genuine universal obligations still open
+
+1. **Restriction/erasure:** prove B<=K I for one finite universal K, or construct a physical stopping argument paying actual packet mismatch/KL charges with a nonreused influence budget and uniformly paid leaves
+2. **Gate potential:** establish the exact gate inequality for every genuine Boolean gate, all required product biases and boundary contractions using one symmetric nonnegative finite-cap potential. A safety direction or repaired witness leaves this open
+3. **KL:** pay K_occ>=[-B_inf^Gamma]_+ with actual source signs, bias, normalizations and reference changes retained. On the balanced slice this is already full-FEI-strength. Nonlinear/multiscale payment remains possible; fixed positive reserves and low-level truncations do not supply it
+
+### 8.2 Overlapping-product entropy subadditivity was already refuted
+
+**REFUTED; recovered September 20 source, not a new September 30 broad theorem.** The proposed inequality H(fg)<=H(f)+H(g) for arbitrary Boolean factors sharing variables fails. The eleven-variable shared-rare-clause example in the September 30 archive is exactly the earlier [directional-compression Section 7 construction](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/continuations/2026-09-20-directional-compression/REPORT.md#7-an-explicit-obstruction-to-shared-control-subadditivity), up to complementing the common control. Its equation (7.6) already identifies the positive restriction-decrement defect with H(fg)-H(f)-H(g). The prior proof and the new attribution correction were both read; the exact finite checker was not replayed here.
+
+Read the [explicit attribution correction](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/CORRECTION.md) before claiming novelty. The [amended report](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/REPORT.md) also supplies a distinct seven-variable single-point-multiplier witness, with source-certified excess greater than 0.1630852002095. It is a proof-route counterexample, not a classical FEI counterexample; publication priority is unverified.
+
+**Stop before retrying:** do not use the broad entropy triangle inequality, even for a chosen one-point flip, or repair it by an absolute additive constant (tensor amplification defeats that). The amended report also rules out a fixed multiple of the actual pivotal-overlap influence loss. These failures do not refute disjoint additivity, translation-averaged subadditivity, or the valid +2k bound when at most k physical variables are shared. A useful averaged argument still needs to reconstruct the original function and pay one consistent influence ledger; choosing unrelated favorable entropy and energy translates is invalid.
+
+The [convolution/product audit](https://github.com/yspennstate/math-open-problems/blob/933891c27be3104c3a6f6e310f2db388d193a123/research_pushes/2026-09-30-fei-convolution-product-audit-0321z/AUDIT.md) independently checked the analytic tensor, support-loss, completion, surgery, product-counterexample and averaged-ledger arguments in Sections 4 and 8.2, and replayed the exact acceptance arithmetic. It does **not** prove the proposed universal normalized KL payment. Its initial treatment of floating serialization was subsequently corrected; read the [mandatory serialization addendum](https://github.com/yspennstate/math-open-problems/blob/55b0ce947fb829dbd1726655e0b407e98c3511fd/research_pushes/2026-09-30-fei-convolution-product-audit-0321z/SERIALIZATION_CORRECTION.md) alongside the original PASS.
+
+**CORRECTION:** the old nearest-rounded JSON `*_interval` pairs in the convolution, overlapping-product, and Hadamard packages can exclude the true value. Reproducing their bytes does not certify their endpoints. The intermediate `ada352231ccb4f37bf8faa54112a07e2213bd399` repair checked binary containment only and still did not certify exact decimal tokens. Preserved audit inputs, including the old `product/witness.json` display metadata, retain their historical defect.
+
+The final [dual-semantics repair](https://github.com/yspennstate/math-open-problems/blob/67c4459ae0e8ae85a228c7a5c2629f003910139b/research_pushes/2026-09-30-fei-output-enclosures-0335z/CORRECTION.md) at commit `67c4459ae0e8ae85a228c7a5c2629f003910139b` verifies **both** exact binary64 values and serialized JSON decimal text against the rational enclosure, stepping outward as needed. Independent replay checked all 15 convolution exports, 31 product exports, and four product witness interval fields under both interpretations, with exact regenerated-output equality. The separately audited Hadamard replay checked all 20 emitted pairs. The corrected seven-variable excess interval is `[0.16308520020956166, 0.16308520020956171]`; its exact conservative lower bound `>0.1630852002095` is unchanged.
+
+SOURCE ~\mop_fei100\reports\fei-2026-10-11\FEI_100_agent_research_plan.tex
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{booktabs,longtable,array,enumitem,xcolor,fancyhdr}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\definecolor{ink}{RGB}{24,47,62}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Full FEI: ten-day research campaign}
+\fancyhead[R]{\small 11 October 2026}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{4pt}\setlength{\parindent}{0pt}
+\setlist[itemize]{leftm
+\newtheorem{proposition}{Proposition}
+\hypersetup{pdftitle={A 100-agent research plan for the full Fourier entropy-influence conjecture},pdfauthor={Prepared for Yitzchak Shmalo}}
+\begin{document}
+\begin{center}
+\vspace{6pt}
+\textbf{Purpose.} Concentrate a hypothetical capacity of 100 Codex research agents on the missing mathematical estimates needed for unrestricted FEI, using the recovered threshold paper, the separate reductions manuscript, and the existing Brain obstruction archive. The same twenty research streams are assigned to the twenty existing scheduled tasks in this environment. This report is a private research plan; it is not part of the public paper.
+
+\textbf{Current mathematical status.} The recovered preprint proves structured FEI results, led by an all-threshold theorem with constant below $8.937$. The joint witness construction and exact selector identities are valid tools. A universal bound for their remaining entropy cost is unproved. Neither this report nor the computations establish full FEI. A hundred agents can substantially expand the search and review capacity; the number of agents does not supply the missing inequality or guarantee a solution within ten days.
+
+\textbf{Recommendation.} Spend the largest share of proof effort on the \emph{posterior cost of an entire Fourier-set witness} and on \emph{nonlocal restriction accounting}. Keep a substantial independent effort on signed Booleanity and product-biased gate inequalities. Use targeted falsification continuously, particularly on addressing, rare activation, near-tensor surgery, and actual Boolean realizations of proposed spectral laws. Treat every surviving universal reformulation as an unpaid obligation until its quantitative bound is proved.
+
+\tableofcontents
+
+The interrupted work supplied a 36-page version of \emph{Fourier entropy of threshold functions and their compositions}. The audited recovery and shared-data extension produce the 38-page public paper, released at repository commit \texttt{cd27aa96a5bb670a5b3ae5451095b7020db8e9d4} \cite{Threshold}. Its principal constant is
+\[
+ \Creg=\log_2(4+e)+2\log_2(e\pi)
+
+The public recovery revision includes the exact shared-data multiplexer identity from the separate reductions manuscript, with the improved regular-leaf constant. If adjacent branches are orthogonal and selectors are fresh at each node, recursive multiplexers preserve $\Creg$ even when the branch data variables overlap. This is a concrete further class theorem, with explicit hypotheses.
+
+The second recovered manuscript, \emph{Restrictions and witness coding for the Fourier entropy--influence problem} \cite{Reductions}, contains conditioned posterior forests, exact physical-restriction identities, and simultaneous hardness-preserving transformations. It supplies research targets and counterexamples for this plan. It is not silently substituted for the threshold paper or published as part of the report.
+\end{equation}
+The cost $B_\lambda$ retains gate names, gate-order multiplicity, subset congestion, rank discrepancies, and root rarity. For reference, with $A_l$ the coordinates assigned to gate $l$, $s_l=|A_l|$, $\kappa_l=|A\cap R_l|$, roots $\mathcal R$, and $\gamma=6/5$, it has the form
+\begin{align*}
+ B_\lambda(A;r)={}&\sum_{l\text{ used}}\left[
+ &=H(\mathcal S\cap W\mid\mathcal S\cap W^c)+M_W(f),
+ \label{eq:block-erasure}\\
+ 0&\le M_W(f)\le\frac2{\ln2}\sum_{i\in W}\I_i(f),\notag\\
+ \I(f)-\E_y\I(f|_{W=y})&=\sum_{i\in W}\I_i(f).\label{eq:block-influence}
+must be measurable from the already revealed physical history.
+Taking $W$ to be every input makes the conditional erasure term
+$\HH(f)$ itself; it is not a reduction in difficulty.
+
+$2k$ control bits. The selector disagreement is $d=2^{-3k}$.
+For the selected physical split, its erasure cost $L=B_y$ and
+the report's two quadratic refunds satisfy
+\[
+
+For an actual Boolean sign, $f^2=1$ yields the signed convolution identities
+\[
+ \sum_S\wh f(S)\wh f(S\mathbin\triangle U)=1_{\{U=\varnothing\}}.
+\]
+An arbitrary probability law on subsets need not admit signs satisfying these identities. The Brain's cyclic-label construction disproves a proposed dimension-free signed-lifetime bound for an auxiliary subset law, but that divergent law is provably non-Boolean \cite{Brain51}. It is a powerful warning against overbroad relaxations, not an FEI counterexample.
+
+Let $X,Y$ be disjoint groups of independent uniform physical input
+Fixed prefixes are already known to be insufficient in two
+distinct relaxations. The archived signed-convolution-order
+family is normalized and dyadic and passes every prescribed
+fixed cancellation order while its erasure/influence ratio
+
+SOURCE ~\brain_workers\FEI100_20261011\context\percolation_spectral_pivotal_entropy_30pp.txt
+     ENTROPY AND SINGULARITY OF SPECTRAL AND PIVOTAL SETS IN
+                                             PLANAR PERCOLATION
+
+                                                               YITZCHAK SHMALO
+
+            Abstract. The spectral sample and pivotal set of a percolation crossing have the same one- and
+            two-coordinate inclusion probabilities under the uniform product measure. We prove that both
+            Shannon entropies are comparable to total influence for critical square-lattice bond and triangular-
+            lattice site crossings, with matching estimates a
+outer top and right sides included. At depth k, write s = R2-k; cell side lengths lie in [s/, s]. Let
+JC  V be the coordinates assigned to cell C, and put
+
+                                Zs(A) = {C : A  JC = }, Ns(A) = |Zs(A)|.
+
+random edge tiles and deterministic face squares for the closed crossing; their loop erasures give
+
+simple primal and dual paths. These coordinate paths remain within a fixed tile distance of their
+
+Proof. Group cells by their assigned side and by dyadic classes d  u, D  v, where s  u  v  R.
+For a fixed side, their centers lie in a strip of perpendicular thickness O(u). Its available tangential
+length is O(v): either an endpoint of the side is within O(v), or the opposite-side distance is O(v),
+   To pass from lattice-coordinate RSW to the Euclidean rectangles used here, cover each fixed-
+aspect-ratio corridor by a bounded number of overlapping lattice-coordinate parallelograms of side
+at most cR, where c > 0 is fixed and sufficiently small. Crossing and joining these parallelograms
+gives the required corridor crossings by RSW and positive association. Thus each near-critical RSW
+in zC + [-3s, 3s]2, and encloses every tile of JC. Uniform RSW and positive association give
+probability at least q > 0, by joining long-direction closed crossings of the four overlapping strips
+
+forming the annulus. These are center-line closed-site circuits on the triangular lattice and closed
+
+ [8] X. Han. A new bound for the Fourier-entropy-influence conjecture. Combinatorica 45 (2025), article 4.
+      doi:10.1007/s00493-024-00133-z. arXiv:2312.08271v2.
+
+
+[20] A. Wan, J. Wright and C. Wu. Decision trees, protocols and the entropy-influence conjecture. In Proceed-
+      ings of the 5th Conference on Innovations in Theoretical Computer Science (ITCS 2014), ACM, 2014, 67­80.
+      doi:10.1145/2554797.2554806. arXiv:1312.3003v1.
+
+SOURCE ~\brain_workers\FEI100_20261011\context\percolation_spectral_pivotal_entropy_31pp_other_version.txt
+     ENTROPY AND SINGULARITY OF SPECTRAL AND PIVOTAL SETS IN
+                                             PLANAR PERCOLATION
+
+                                                               YITZCHAK SHMALO
+
+            Abstract. The spectral sample and pivotal set of a percolation crossing have the same one- and
+            two-coordinate inclusion probabilities under the uniform product measure. We prove that both
+            Shannon entropies are comparable to total influence for critical square-lattice bond and triangular-
+            lattice site crossings, with matching estimates a
+outer top and right sides included. At depth k, write s = R2-k; cell side lengths lie in [s/, s]. Let
+JC  V be the coordinates assigned to cell C, and put
+
+                                Zs(A) = {C : A  JC = }, Ns(A) = |Zs(A)|.
+walks through random edge tiles and deterministic vertex squares for the open crossing, and through
+random edge tiles and deterministic face squares for the closed crossing; their loop erasures give
+simple primal and dual paths. These coordinate paths remain within a fixed tile distance of their
+geometric realizations. The retained realizations still join opposite sides, so they still intersect in
+
+Proof. Group cells by their assigned side and by dyadic classes d  u, D  v, where s  u  v  R.
+For a fixed side, their centers lie in a strip of perpendicular thickness O(u). Its available tangential
+
+   To pass from lattice-coordinate RSW to the Euclidean rectangles used here, cover each fixed-
+aspect-ratio corridor by a bounded number of overlapping lattice-coordinate parallelograms of side
+at most cR, where c > 0 is fixed and sufficiently small. Crossing and joining these parallelograms
+gives the required corridor crossings by RSW and positive association. Thus each near-critical RSW
+in zC + [-3s, 3s]2, and encloses every tile of JC. Uniform RSW and positive association give
+probability at least q > 0, by joining long-direction closed crossings of the four overlapping strips
+forming the annulus. These are center-line closed-site circuits on the triangular lattice and closed
+dual-bond circuits on the square lattice. They are disjoint from open tile paths and make the
+
+ [8] X. Han, A new bound for the Fourier-entropy-influence conjecture, Combinatorica 45 (2025), article 4.
+      doi:10.1007/s00493-024-00133-z. arXiv:2312.08271v2.
+
+
+[20] A. Wan, J. Wright and C. Wu, Decision trees, protocols and the entropy-influence conjecture, in Proceed-
+      ings of the 5th Conference on Innovations in Theoretical Computer Science (ITCS 2014), ACM, 2014, 67­80.
+      doi:10.1145/2554797.2554806. arXiv:1312.3003v1.
+
+SOURCE ~\brain_workers\FEI100_20261011\context\threshold_paper_29pp_earlier_version.txt
+     FOURIER ENTROPY OF THRESHOLD FUNCTIONS AND THEIR
+                                              COMPOSITIONS
+
+                                                        YITZCHAK SHMALO
+
+     Abstract. We prove the Fourier entropy­influence inequality for every linear threshold function,
+     without restrictions on its weights or threshold. The argument applies to regular Boolean functions
+     and gives an O(log(m + 1)) bound for arbitrary Boolean combinations of m such functions. These
+     estimates hold after multiplication by any coordinate character and imply bounds by influence
+intersections of its root supports with that Fourier set control the cost of activating rare gates.
+Signed pivotal pieces provide the same rank estimate as for one regular function, while a fixed-noise
+hypercontractive bound forces a rare gate's spectral sample to include enough of its variables.
+
+Then I(g) = D(f ) and H(g) = H(f ). For i / U , the derivative of g is U dif . Lemma 4.1 therefore
+applies directly to its signed pieces.
+
+   For the reference law, replace k(i) by 1 when i  U , and leave it unchanged otherwise. No rank
+   The following fixed-noise estimate will pay for selecting rare gates. It applies to arbitrary Boolean
+gates and arbitrary signed pieces.
+
+Lemma 5.3. Let h have support R  j, set  = 120/11 and b = log(1/ min{P[h = 1], 1/2}), and let
+j(T ) = djf (T )2/j. If j is pivotal for the union, it is pivotal for some component containing j.
+Split djf into disjoint signed pieces according to the least such component. There are at most k
+nonzero pieces. Their normalized Fourier laws satisfy
+
+
+Proposition 7.1 (Exact composition identities).
+
+(64)      Eµ(F ) = E(g) + aiEµi(fi),
+
+   No data were used. Scripts for finite checks of the signed derivative decompositions, character
+shifts, biased Fourier normalization, and composition identities, together with their outputs, are
+available at https://github.com/yspennstate/fourier-entropy-threshold-functions. The
+      conjecture, preprint, 2026. arXiv:2606.00246v2.
+[10] X. Han, A new bound for the Fourier-entropy-influence conjecture, Combinatorica 45 (2025), Paper No. 4.
+      doi:10.1007/s00493-024-00133-z. arXiv:2312.08271v2.
+[11] G. Kalai, Three puzzles on mathematics, computation, and games, in: Proceedings of the International Congress of
+
+SOURCE ~\brain_workers\FEI100_20261011\context\threshold_paper_38pp.txt
+     FOURIER ENTROPY OF THRESHOLD FUNCTIONS AND THEIR
+                                              COMPOSITIONS
+
+                                                        YITZCHAK SHMALO
+
+     Abstract. We prove the Fourier entropy­influence inequality for every linear threshold function,
+     with a constant below 8.937 and no restrictions on its weights or threshold. The argument applies
+     to regular Boolean functions and gives logarithmic bounds for their Boolean combinations and for
+     unions with bounded variable overlap. Character multiplication preserves the estimates and yi
+intersections of its root supports with that Fourier set control the cost of activating rare gates.
+Signed pivotal pieces provide the same rank estimate as for one regular function, while a fixed-noise
+hypercontractive bound forces a rare gate's spectral sample to include enough of its variables.
+
+Then I(g) = D(f ) and H(g) = H(f ). For i / U , the derivative of g is U dif . Lemma 4.1 therefore
+applies directly to its signed pieces.
+
+   For the reference law, replace k(i) by 1 when i  U , and leave it unchanged otherwise. No rank
+
+has rank 1 and has rank cost zero. For i / U , the derivative of g is a signed function with the same
+
+antichain supports as dif . Lemma 3.4 and the derivative law therefore give
+   The following fixed-noise estimate will pay for selecting rare gates. It applies to arbitrary Boolean
+gates and arbitrary signed pieces.
+
+Lemma 5.3. Let h have support R  j, set  = 120/11 and b = log(1/ min{P[h = 1], 1/2}), and let
+j(T ) = djf (T )2/j. If j is pivotal for the union, it is pivotal for some component containing j.
+Split djf into disjoint signed pieces according to the least such component. There are at most k
+nonzero pieces. Their normalized Fourier laws satisfy
+
+
+It can be assigned entirely to hu. Thus |F| = |R| = 1, there are no children, and L(A,  ) = 0. Put
+
+s = |A|. Since all ranks are at most d, the exact witness bound, now using the permitted choice
+
+Proposition 7.1 (Exact composition identities).
+
+(67)                           Eµ(F ) = E(g) + aiEµi(fi),
+
+overlapping leaf variable sets.
+
+   Let A1, . . . , Am partition a uniform control cube. Write aj = 1Aj and pj = Eaj > 0. Let gj be
+
+Proposition 8.6 (Exact shared-data identities). For each data Fourier set T , put
+
+                                                            1         gb(T )2.
+      conjecture, preprint, 2026. arXiv:2606.00246v2.
+[11] X. Han, A new bound for the Fourier-entropy-influence conjecture, Combinatorica 45 (2025), Paper No. 4.
+      doi:10.1007/s00493-024-00133-z. arXiv:2312.08271v2.
+[12] G. Kalai, Three puzzles on mathematics, computation, and games, in: Proceedings of the International Congress of
+[23] E. Sperner, Ein Satz über Untermengen einer endlichen Menge, Math. Z. 27 (1928), 544­548. Original article.
+[24] A. Wan, J. Wright and C. Wu, Decision trees, protocols and the entropy-influence conjecture, in: Proceedings of the
+
+      5th Conference on Innovations in Theoretical Computer Science (ITCS 2014), ACM, 2014, 67­80. arXiv:1312.3003.

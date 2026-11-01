@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "mode": "pilot",
+  "cores": 6,
+  "source_rate_cases": 12,
+  "supplied_cases": 10,
+  "supplier_rejected": 2,
+  "exact_assertions": 640,
+  "seconds": 0.1553751999999804,
+  "max_physical_dimension": 6,
+  "rows": [
+    {
+      "K": 4,
+      "old_bank_after_prefix": {
+        "terms": {
+          "2": "39/4",
+          "4093/4096": "1/4",
+          "1/4096": "3/4"
+        },
+        "power_ratio": "4093/512",
+        "power_denominator": 4,
+        "sign": 1
+      },
+      "raw_bank_after_next_query": {
+        "terms": {
+          "2": "23/4",
+          "4093/4096": "1/4",
+          "1/4096": "3/4"
+        },
+        "power_ratio": "4093/33554432",
+        "power_denominator": 4,
+        "sign": -1
+      },
+      "final_bank_same_original_owner": {
+        "terms": {
+          "2": "23/4",
+          "1/4": "1"
+        },
+        "power_ratio": "32768",
+        "power_denominator": 4,
+        "sign": 1
+      },
+      "conversion_refund": {
+        "terms": {
+          "4093/4096": "-1/4",
+          "1/4096": "-3/4",
+          "1/4": "1"
+        },
+        "power_ratio": "1099511627776/4093",
+        "power_denominator": 4,
+        "sign": 1
+      },
+      "old_debit": {
+        "terms": {
+          "2": "1/4"
+        },
+        "power_ratio": "2",
+        "power_denominator": 4,
+        "sign": 1
+      }
+    }
+  ],
+  "scope": "All admitted supplied-core cases: genuine paid prefix, mandatory next nonempty repair, actual C4 orbit refund, SAME original source/old debit/both complete terminals. No arbitrary core supplier asserted."
+}

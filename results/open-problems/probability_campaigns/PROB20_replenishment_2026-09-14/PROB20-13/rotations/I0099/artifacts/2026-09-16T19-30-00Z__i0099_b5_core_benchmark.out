@@ -1,0 +1,33 @@
+B5 CORE-PEELING BENCHMARK
+Instance: p=3209, omega=15, S3 anchor range 24..30.
+Both runs use the same exact Paley graph, S3/V4 orbit obligations, deterministic coloring branch-and-bound; the CORE variant additionally repeatedly deletes candidate vertices of current degree < need-1 at each recursive state.
+
+BASELINE:
+I0099_V4_CERT p=3209 omega=15 Hn=801 s3reps=134 witness=0,1,3177,3036,3082,2416,2913,728,1554,2507,2256,1529,2871,851,746 witness_nodes=527
+si=24 u=79 K=398 v4reps=101 no_nodes=665274
+si=25 u=80 K=408 v4reps=102 no_nodes=871712
+si=26 u=81 K=398 v4reps=101 no_nodes=769344
+si=27 u=85 K=402 v4reps=101 no_nodes=796743
+si=28 u=90 K=398 v4reps=100 no_nodes=784931
+si=29 u=91 K=390 v4reps=99 no_nodes=690735
+CERTIFIED_V4_RANGE p=3209 omega=15 s3=24..30 all_no_one_larger=1 obligations=604 total_nodes=4578739 seconds=3.255118
+
+CORE-PEELING VARIANT:
+I0099_V4_CORE_CERT p=3209 omega=15 Hn=801 s3reps=134
+si=24 u=79 K=398 v4reps=101 no_nodes=659647 core_removed=4464866
+si=25 u=80 K=408 v4reps=102 no_nodes=863346 core_removed=5772750
+si=26 u=81 K=398 v4reps=101 no_nodes=761845 core_removed=5119382
+si=27 u=85 K=402 v4reps=101 no_nodes=788523 core_removed=5265016
+si=28 u=90 K=398 v4reps=100 no_nodes=777494 core_removed=5153763
+si=29 u=91 K=390 v4reps=99 no_nodes=683729 core_removed=4572185
+CERTIFIED_V4_CORE_RANGE p=3209 omega=15 s3=24..30 all_no_one_larger=1 obligations=604 total_nodes=4534584 seconds=5.097476
+
+COMPARISON:
+baseline_nodes=4578739
+core_nodes=4534584
+node_reduction=44155
+node_reduction_percent=0.9643484810992722
+baseline_seconds=3.255118
+core_seconds=5.097476
+wall_time_ratio_core_over_baseline=1.5659880839957263
+OUTCOME: exact preprocessing is sound but computationally negative on this representative range; fewer than 1% nodes removed while wall time increased.

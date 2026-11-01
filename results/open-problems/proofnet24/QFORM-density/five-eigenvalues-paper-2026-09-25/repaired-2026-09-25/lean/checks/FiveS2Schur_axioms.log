@@ -1,0 +1,79 @@
+~/qform_five_lean_2026_09_25/lean/FiveS2Schur_run.lean:56:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.rank_add_le'`:
+  [Fintype μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS2Schur_run.lean:63:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.exists_ker`:
+  [Fintype μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS2Schur_run.lean:101:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.real_star_eq_transpose`:
+  [Fintype n]
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype n] [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+~/qform_five_lean_2026_09_25/lean/FiveS2Schur_run.lean:161:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+~/qform_five_lean_2026_09_25/lean/FiveS2Schur_run.lean:206:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+~/qform_five_lean_2026_09_25/lean/FiveS2Schur_run.lean:216:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+~/qform_five_lean_2026_09_25/lean/FiveS2Schur_run.lean:225:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+~/qform_five_lean_2026_09_25/lean/FiveS2Schur_run.lean:187:14: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  simp [M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+~/qform_five_lean_2026_09_25/lean/FiveS2Schur_run.lean:328:0: warning: automatically included section variable(s) unused in theorem `QformFiveB.schur_isHermitian`:
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'QformFiveB.nsq_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.nsq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.nsq_elim' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.nsq_mulVec_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.rank_add_le'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.exists_ker' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.incl_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.real_star_eq_transpose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.eigU_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.eigU_orth'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.eigU_eigen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.eigenframe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.card_abs_eig_of_sqapprox' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.schur_sqapprox' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.schur_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.schur_isHermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QformFiveB.schur_count'' depends on axioms: [propext, Classical.choice, Quot.sound]
+rc=0 secs=84

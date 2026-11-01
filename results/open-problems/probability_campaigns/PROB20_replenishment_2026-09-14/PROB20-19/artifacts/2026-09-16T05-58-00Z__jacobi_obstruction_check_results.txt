@@ -1,0 +1,25 @@
+PROB20-19 Jacobi-obstruction checker results
+Run date: 2026-09-16
+
+exact symbolic checks: PASS
+I_A=3/10
+I_B_pos=1/10
+I_B_neg=-1/20
+angular integral=1/2
+D0=2/pi
+det(C_epsilon)=4*epsilon**2
+
+positive-definite perturbation check: PASS
+epsilon=1e-3
+exact probability perturbation bound=0.310040281444
+closed-form perturbation bound=0.310040308533
+rigorous numerical lower bound using atan expression=0.326579490923
+rigorous closed-form lower bound=0.326579463834
+
+Monte Carlo sanity check (not proof): PASS
+seed=12345
+samples=1000000
+derivative estimate=0.636749898961
+standard error=0.003026047191
+
+Interpretation: the exact analytic proof is independent of Monte Carlo. The random check only confirms the sign and scale of the explicit positive-definite example.

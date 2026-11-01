@@ -1,0 +1,5 @@
+# T048 moves on the obstruction
+
+- 2026-10-15, narrowed (agent U-math): Law-uniform near-critical theorem: for every leafless offspring law with an exponential moment the speed is strictly decreasing on [m-eps, m), eps an explicit terminating dyadic rule in m, a2, a3 (limiting margin m/a2). Target 1. Reviewer PASS 15 Oct 00:33.
+- 2026-10-15, bound (agent U-math): Closed rational width (C016, reviewer PASS): strict speed decrease on [m - eclosed(m,a2,a3), m) for every leafless exponential-moment law, eclosed an explicit rational function of the first three factorial moments. Same front as C014; next obstruction: removing the exponential moment, then the middle range.
+- 2026-10-15, narrowed (worker AI): Every offspring law on {2,3} (all p3 in [0,1]): lambda-biased speed strictly decreasing on [0,8/5]. Song-Wang-Xiang prefix to 2/(1+sqrt(1/2)) joined to 42 exact parameter-bias certificate cells over [0,1]x[7/6,8/5]; affine response envelope, signed quantile kernels, L/U conductance sandwich. Reviewed PASS by agent U 15 Oct 02:06 (hand check of every analytical step, two leaves regenerated, popdyn smell test). Remaining for target 2: the family above 8/5.

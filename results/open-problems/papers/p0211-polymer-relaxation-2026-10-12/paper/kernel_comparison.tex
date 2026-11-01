@@ -1,0 +1,146 @@
+\section{Reversible changes of the coagulation kernel}
+\label{sec:kernel-comparison}
+
+The stationary law can be preserved while allowing the reaction rates
+to depend on cluster sizes.  Fix positive symmetric multipliers
+$c_n(i,j)=c_n(j,i)$ for $i+j\le n$.
+An unordered pair of cluster instances of sizes $i,j$ merges at
+rate $2c_n(i,j)/n$.  Each internal link whose removal produces lengths
+$i,j$ fragments at rate $\beta c_n(i,j)$.
+Thus, for $i<j$, the coarse forward and reverse rates are
+\[
+ \frac{2c_n(i,j)}n m_im_j,
+ \qquad 2\beta c_n(i,j)m_{i+j},
+\]
+whereas for $i=j$ they are
+\[
+ \frac{c_n(i,i)}n m_i(m_i-1),
+ \qquad \beta c_n(i,i)m_{2i}.
+\]
+
+\begin{theorem}\label{thm:kernel-comparison}
+The modified chain is reversible for the original law $\pi_M$ in
+\eqref{proof:eq:piM}.  If
+\[
+ 0<c_-\le c_n(i,j)\le c_+<\infty
+ \qquad(i+j\le n),
+\]
+then its gap $\gamma_c$ satisfies
+\begin{equation}\label{eq:kernel-gap-comparison}
+ c_-\gamma_M(n,\beta)\le\gamma_c(n,\beta)
+      \le c_+\gamma_M(n,\beta).
+\end{equation}
+In particular, with $s=\beta+\sqrt\beta+n^{-1}$,
+\[
+ \frac{c_-}{6}s\le\gamma_c\le4c_+s.
+\]
+The comparison constants are uniform in $n,\beta$ whenever
+$c_-,c_+$ are.
+\end{theorem}
+
+\begin{proof}
+Each reaction and its reverse have been multiplied by the same
+positive number.  Every original detailed-balance identity therefore
+remains valid.  Writing the Dirichlet form as a sum over undirected
+reaction edges gives
+\[
+ c_-\mathcal E_M(f,f)\le\mathcal E_c(f,f)
+       \le c_+\mathcal E_M(f,f).
+\]
+The variance uses the same stationary law for all three forms.
+Taking infima of the Rayleigh quotients proves
+\eqref{eq:kernel-gap-comparison}.
+\end{proof}
+
+This is a robustness consequence of Dirichlet-form comparison.
+Its proof also applies to symmetric multipliers attached to full
+undirected state-space edges.
+It does not establish the sharp scale of an unbounded kernel from
+its typical value under equilibrium.
+
+The stationary cut representation survives without a boundedness
+assumption on $c_n$.  At a boundary between segments of lengths $i,j$,
+replace the deletion rate by $(k-1)c_n(i,j)/n$.
+At an internal link producing $i,j$, use the birth rate
+$\beta c_n(i,j)$.  The law $\pi_B$ is unchanged, and averaging over
+the uniform cyclic order conditional on the segment multiset gives
+the modified polymer generator.  Consequently the exact variance
+and Dirichlet identities in \eqref{proof:eq:dirichletcomparison}
+continue to hold.
+
+The full harmonic reduction generally does not survive.
+For example, take $n=4$ and $c(i,j)=i+j$.
+Cut configurations with segment lengths $(1,3)$ and $(2,2)$ both have
+$k=2$, but their generator applied to $k$ is, respectively,
+$6\beta-2$ and $4\beta-2$.
+Even the subspace of functions of cardinality is therefore not
+invariant for this modified cut generator.
+
+\subsection{A classical multiplicative-kernel comparison class}
+
+A different Gibbs equilibrium gives a useful growing-kernel baseline.
+Consider pair-merger rates $2ij/n$ and per-link fragmentation rate
+$\beta(i+j)$ when the two resulting lengths are $i,j$.
+Writing $\theta=\beta n$, the reversible law is
+\begin{equation}\label{eq:ewens-polymer-law}
+ \pi_{\mathrm E}(m)=Z_{\mathrm E}^{-1}
+    \frac{\theta^{K(m)}}{\prod_{j=1}^n j^{m_j}m_j!}.
+\end{equation}
+This is the Ewens cycle-count law.
+The chain is the classical Metropolis transposition process on
+cycle types, with a deterministic change of time.
+
+\begin{proposition}[Classical spectral formula in the present units]
+\label{prop:ewens-classical}
+For this multiplicative-kernel chain,
+\begin{equation}\label{eq:ewens-gap}
+ \gamma_{\mathrm E}(n,\beta)=2\beta+\frac{2(n-1)}n.
+\end{equation}
+Multiplying both directions of each size-pair reaction by
+$c_n(i,j)\in[c_-,c_+]$ preserves \eqref{eq:ewens-polymer-law} and gives
+\[
+ c_-\left(2\beta+\frac{2(n-1)}n\right)
+ \le\gamma_{\mathrm E,c}\le
+ c_+\left(2\beta+\frac{2(n-1)}n\right).
+\]
+\end{proposition}
+
+\begin{proof}
+Detailed balance in \eqref{eq:ewens-polymer-law} follows directly from
+the weight ratio $w_iw_j/w_{i+j}=(i+j)/(ij)$ for $w_j=1/j$.
+For unequal fragments the coarse split rate is
+$2\beta(i+j)m_{i+j}$, and for equal fragments it is
+$\beta(2i)m_{2i}$.
+
+We record the normalization of the known spectrum explicitly.
+In Jiang~\cite[Eq.~(7) and Theorem~4.2]{Jiang2015}, the parameter
+of the Metropolis transition matrix is $t=\theta^{-1}$.
+Our continuous-time generator is
+$(n-1)\max\{1,\theta\}(P_t-I)$.
+Indeed, multiplying the uniform transposition proposal rate
+$\binom n2^{-1}$ by this factor gives merger rate $2/n$ per pair
+of labels in distinct cycles and split rate $2\theta/n$ per pair
+of labels in one cycle.
+Jiang's spectral formula consequently gives, for each partition
+$\lambda\vdash n$,
+\[
+ \Lambda_\lambda
+ =\frac2n\left[
+      \binom n2-\sum_i\binom{\lambda_i}{2}
+       +\theta\sum_i(i-1)\lambda_i\right].
+\]
+The zero eigenvalue corresponds to $\lambda=(n)$.
+For every other partition,
+$\binom n2-\sum_i\binom{\lambda_i}{2}\ge n-1$ and
+$\sum_i(i-1)\lambda_i\ge1$.
+Both are equalities for $\lambda=(n-1,1)$.
+This proves \eqref{eq:ewens-gap}; the comparison statement follows
+by the preceding Dirichlet-form argument.
+\end{proof}
+
+The spectral formula in Proposition~\ref{prop:ewens-classical}
+is an application of an established diagonalization, not a new
+solution of the multiplicative-kernel model.
+Its perturbation class illustrates that rates growing like $ij$
+can have a uniform gap of order $1+\beta$ once the fragmentation
+rule and equilibrium law are specified together.

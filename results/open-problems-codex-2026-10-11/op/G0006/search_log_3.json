@@ -1,0 +1,19 @@
+[
+  {
+    "service": "openalex_citing",
+    "url": "https://api.openalex.org/works?filter=cites:arxiv:2609.09972&per-page=25",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "service": "crossref_since",
+    "url": "https://api.crossref.org/works?query.bibliographic=contact%20process%20percolation&filter=from-pub-date:2026-09-09&rows=30",
+    "status": 200,
+    "bytes": 284515
+  },
+  {
+    "service": "arxiv_sharpness",
+    "url": "https://export.arxiv.org/api/query?search_query=ti:%22Sharpness%20of%20the%20percolation%20transition%22&max_results=10",
+    "status": 200,
+    "bytes": 7844
+  }
+]

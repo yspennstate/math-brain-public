@@ -1,0 +1,12 @@
+{
+  "helper_version": "a060-point-residual-v1",
+  "family": "Single-core activation F=1+A_r(u-1); fine gate F=1+A_1(P-1) with P a five-bit sign controller negative on indices 0,...,6",
+  "domain": {"pilot_r": [1,2,3], "main_r": [1,2,3,4,5], "core_truth_tables": "all 16 Boolean two-bit cores", "fine_witness": "q=1/2, negative measure of P=7/32, z=7/32", "direct_reproduction_r": [1,2,3], "fine_maximum_interval": ["1/8", "1/4"], "bisection_steps": 40, "log_terms": 80},
+  "case_count": "48 pilot and 80 main actual coarse functions; all live gate-coordinate queries; 1 actual six-bit fine witness; direct character reproduction 48 coarse functions plus fine witness; 40 certified derivative bisections",
+  "symmetry": "No quotient. Point-control permutation equality proved but all live gate coordinates are checked.",
+  "arithmetic": "integer Walsh/direct character transforms, Fraction edge counts, exact prime-log entropy vectors and denominator-cleared integer-power signs; rational natural logarithm enclosures via 80 positive atanh terms and geometric tail",
+  "memory_estimate_mb": 100,
+  "pilot_max_runtime_seconds": 55,
+  "main_max_runtime_seconds": 55,
+  "no_dimension_escalation": true
+}

@@ -1,0 +1,20 @@
+{
+  "checked_at_utc": "2026-10-10T04:39:37.934792+00:00",
+  "state_file": "~\\.claude\\compute\\compute_state.json",
+  "state_age_seconds": 18.797935247421265,
+  "governor_status": "distress",
+  "governor_mode": "throttle",
+  "reasons": [
+    "process_critical"
+  ],
+  "cpu_pct": 87,
+  "mem_avail_mb": 3429,
+  "proc_count": 1467,
+  "live_gpu_gate_file": "~\\.claude\\dreaming\\compute_sense.py",
+  "live_gpu_gate_denial": null,
+  "command": "python -B -X utf8 ~/brain_workers/w348/tests/check_exact.py",
+  "decision": "ALLOW_BOUNDED_EXACT_CPU_CHECK",
+  "scope": "One finite standard-library exact-arithmetic check; no random search, GPU, model, child workers, or ongoing process.",
+  "policy": "Current compute_sense instruction: carry on with short local work; do not launch anything large during distress.",
+  "shared_policy_changed": false
+}

@@ -1,0 +1,51 @@
+{
+  "problem_id": "C0120",
+  "checked_at_utc": "2026-10-10T07:17:35.086818+00:00",
+  "primary_source": {
+    "url": "https://arxiv.org/pdf/0810.4221v2",
+    "version": "0810.4221v2, 2008-12-16",
+    "status": "PUBLIC_PRIMARY_PDF_SAVED",
+    "pdf_sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+    "intake_reported_sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+    "local_path": "~\\brain_workers\\w499\\sources\\chatterjee_0810_4221v2.pdf",
+    "bytes": 586944,
+    "matches_intake_digest": true
+  },
+  "locators": [
+    "Section 1, printed p. 2: model and overlap",
+    "Section 8, printed pp. 37-38: maximum and Theorem 8.1",
+    "Section 12(3), printed p. 59: open question"
+  ],
+  "source_quote": "Improve the fluctuation exponent in directed polymers.",
+  "exact_statement": "iid N(0,1) vertex weights; all n-vertex up/right paths from the origin in Z_+^2; free endpoint; M_n=max_p sum_{v in p}g_v. The working power goal is Var(M_n)<=C n^(1-epsilon) for some 0<epsilon<1 and all n>=2.",
+  "source_vs_operational_quantifier": "Section 12(3) asks to improve the fluctuation exponent; the epsilon inequality is the task operationalization, not a verbatim formal quantifier.",
+  "scope_correction": "The cited source does not state the intake finite-temperature log Z or general-disorder/general-dimension formulation.",
+  "historical_status": "SOURCE_ASKS_OPEN_2008",
+  "current_openness": "UNKNOWN",
+  "novelty": "UNVERIFIED",
+  "parent_problem_solved": false,
+  "prior_work": {
+    "intake": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl:98, C0120-A001, quantitative overlap/conditional exponent route without a new proof",
+    "named_H_I_Lean": "No direct C0120 match in bounded targeted searches; not evidence of absence",
+    "Team_O": "No C0120 row in its named board",
+    "other_intakes": "Only a dedup index hit in intake F; no additional theorem recovered",
+    "exports": "~\\brain_workers\\w499\\STORE_MATCHES.json",
+    "canonical_read_only": "~\\brain_workers\\w499\\CANONICAL_STORE_CHECK.json",
+    "recent_primary_search": "Bounded 2025/2026 arXiv search returned related higher-dimensional/correlated/intermediate-disorder models and Graham 0909.1352; none verifies present openness of the exact planar Gaussian target"
+  },
+  "recall": {
+    "status": "TIMEOUT_60S",
+    "index_fallback": "No relevant hit in targeted MEMORY.md grep",
+    "scar_read": "perceptron_proof_open_gaps_fleet_2026_07_12"
+  },
+  "author_served_model_evidence": {
+    "requested": "gpt-6.1-sol / max / Fast",
+    "response_side_model": null,
+    "account_login": null,
+    "state": "UNVERIFIED; requested settings and prompt metadata do not prove served identity"
+  },
+  "independent_reviewer": "w500",
+  "review_state": "AUTHOR_PROOF_PENDING_REFEREE_AND_PROVENANCE",
+  "paired_input_hashes": "~\\brain_workers\\w499\\PEER_INPUT_HASHES.json",
+  "patch": "~\\brain_workers\\w499\\patches\\01_C0120_source_scope.diff"
+}

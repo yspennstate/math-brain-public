@@ -1,0 +1,249 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w538",
+  "bundle_slug": "p0309-hessian-covariance-fourier-bridge-draft-001",
+  "entries": [
+    {
+      "key": "dirichlet-setup",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "dirichlet-lattice-displacement-bridge-setup",
+      "kind": "definition",
+      "title": "Dirichlet lattice displacement bridge setup",
+      "statement": "For a finite nonempty D subset Z^3, L_D has diagonal 6 and off-diagonal -1 for nearest neighbors within D; outside coordinates are fixed to zero. A displacement is u in R^{3|D|}. At reciprocal G in 2pi Z^3, B_{D,G}=|D|^{-1} sum_{x in D} exp(i G dot (x+u_x)). The 3D infinite lattice Green integral is C_3=(2pi)^(-3) integral_{[-pi,pi]^3} [2 sum_j(1-cos q_j)]^(-1) dq.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite nonempty D",
+        "Dirichlet boundary",
+        "Reference sites Z^3"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-probability-campaign-w538-20261010:dirichlet-setup",
+        "url": "urn:owner-own-work:w538:p0309:dirichlet-setup",
+        "revision": "draft-2026-10-10-pending-w539",
+        "license": "owner-own-work (campaign derivation; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "termwise-route",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "rejected-riesz-radial-to-vector-convexity-route",
+      "kind": "concept",
+      "title": "Rejected route: radial convexity implies vector convexity",
+      "statement": "REJECTED proposed implication: for s>0, scalar convexity of r -> r^(-s) would imply that each vector pair potential |x|^(-s) has a positive semidefinite displacement Hessian. The transverse-Hessian counterexample refutes this implication. This is a record of a false proof route, not an asserted theorem.",
+      "proof_text": null,
+      "assumptions": [
+        "s>0",
+        "Vector displacements in dimension three"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-probability-campaign-w538-20261010:termwise-route",
+        "url": "urn:owner-own-work:w538:p0309:termwise-route",
+        "revision": "draft-2026-10-10-pending-w539",
+        "license": "owner-own-work (campaign derivation; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "hessian-obstruction",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "riesz-pair-negative-transverse-curvature-draft",
+      "kind": "concept",
+      "title": "DRAFT: Riesz pair negative transverse curvature",
+      "statement": "Author-derived counterexample, pending independent w539 review: for s>0 and x!=0 in R^3, Hessian |x|^(-s)=s|x|^(-s-2)[(s+2)ee^T-I], e=x/|x|. Its two transverse eigenvalues are -s|x|^(-s-2). The path x(t)=(1,t,0) has second derivative -s at zero. This defeats termwise vector convexity, but does not establish instability of a collective lattice or background Hessian.",
+      "proof_text": null,
+      "assumptions": [
+        "s>0",
+        "x!=0",
+        "No inference about collective Hessian"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-probability-campaign-w538-20261010:hessian-obstruction",
+        "url": "urn:owner-own-work:w538:p0309:hessian-obstruction",
+        "revision": "draft-2026-10-10-pending-w539",
+        "license": "owner-own-work (campaign derivation; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "conditional-bridge",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "p0309-uniform-dirichlet-covariance-fourier-bridge-draft",
+      "kind": "concept",
+      "title": "DRAFT: uniform covariance to reciprocal Fourier order",
+      "statement": "Conditional proof sketch pending w539: assume H_D is C^2 on all R^{3|D|}, even, and Hessian H_D(u)>=kappa L_D tensor I_3 for every u, with kappa>0 independent of D. Under exp(-beta H_D)/Z, beta>0, Re E B_{D,G}>=1-|G|^2 C_3/(2 beta kappa). If this lower bound a is positive, E|B_{D,G}|^2>=a^2 uniformly in D. C_3<=sqrt(3)pi/8. Proof is in w538/ATTEMPT.md. This is a surrogate conditional claim; no actual Riesz Gibbs Hessian, defect-control, labeling, or DLR-limit premise has been established.",
+      "proof_text": null,
+      "assumptions": [
+        "Globally C^2 and integrable potential",
+        "Evenness ensures zero mean displacements",
+        "Uniform all-displacement Hessian comparison",
+        "Dirichlet boundary",
+        "G in 2pi Z^3",
+        "beta>0"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-probability-campaign-w538-20261010:conditional-bridge",
+        "url": "urn:owner-own-work:w538:p0309:conditional-bridge",
+        "revision": "draft-2026-10-10-pending-w539",
+        "license": "owner-own-work (campaign derivation; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "centering-obstruction",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "covariance-alone-no-fixed-reciprocal-order-draft",
+      "kind": "concept",
+      "title": "DRAFT: covariance alone does not fix reciprocal phase",
+      "statement": "Author-derived counterexample pending w539: on N even nonadjacent sites D of Z^3, L_D=6I. Put H_D(u)=3 kappa sum_x |u_x-m_x|^2, with m_x=0 on half the sites and e_1/2 on half. At G=2pi e_1, its product Gaussian Gibbs law has covariance I/(6 beta kappa) at each site, but E B_{D,G}=0 and E|B_{D,G}|^2=[1-exp(-|G|^2/(6 beta kappa))]/N ->0. Thus a covariance bound without coherent mean phase cannot imply this fixed-mode order bound. This does not exclude all Bragg modes and is not a Riesz Gibbs counterexample.",
+      "proof_text": null,
+      "assumptions": [
+        "N even",
+        "Sites are nonadjacent in Z^3",
+        "beta,kappa>0",
+        "Explicit factorization gives independence",
+        "Specified mode G=2pi e_1"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-probability-campaign-w538-20261010:centering-obstruction",
+        "url": "urn:owner-own-work:w538:p0309:centering-obstruction",
+        "revision": "draft-2026-10-10-pending-w539",
+        "license": "owner-own-work (campaign derivation; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "global-curvature-obstruction",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "finite-riesz-near-collision-no-global-convexity-draft",
+      "kind": "concept",
+      "title": "DRAFT: finite Riesz near-collision curvature blocks global convexity",
+      "statement": "Author-derived obstruction pending w539: for finite N>=2 and s>0, a Riesz pair energy plus a C^2 external/background term near an interior point has a transverse second derivative -s epsilon^(-s-2)+O(1) when one pair approaches distance epsilon and other particles stay a positive distance away. It is negative for small epsilon, so no positive pointwise global Hessian lower bound holds on the full finite-particle configuration space. This does not analyze a renormalized infinite-volume Hessian or the Hessian restricted near a fixed crystal. A controlled-region/complement argument or a nonconvex inequality is required instead.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite N>=2",
+        "s>0",
+        "Interior near-collision pair",
+        "Other particles a fixed positive distance away",
+        "External/background potential C^2 with bounded Hessian nearby"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-probability-campaign-w538-20261010:global-curvature-obstruction",
+        "url": "urn:owner-own-work:w538:p0309:global-curvature-obstruction",
+        "revision": "draft-2026-10-10-pending-w539",
+        "license": "owner-own-work (campaign deduction; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "full-law-pressure-input",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "p0309-full-law-bragg-pressure-input-draft",
+      "kind": "concept",
+      "title": "DRAFT: full-law Bragg input for pressure response",
+      "statement": "Paired w537 C5, independently rederived by w538 but final w539 review pending: fix beta>0 and complex S_N with |S_N|<=N, circularly invariant full zero-field law and M_N=Re S_N. If p_N(h)=log E exp(beta h M_N)/(beta N) converges pointwise near zero and liminf E|S_N/N|^2>=b^2 for 0<b<=1, then p right slope at zero is at least b. This uses the unrestricted full law, not a conditional chart. A fixed positive real tail gives p(h)>=ha for every a<b. Local UI/tightness, vanishing-field Gibbs closure and lattice classification are separate inputs. Proof and exact peer provenance: w538/PAIRED_AUDIT.md.",
+      "proof_text": null,
+      "assumptions": [
+        "Fixed finite beta>0",
+        "Pointwise pressure limit on an open interval near zero",
+        "Full circular zero-field law",
+        "Bound |S_N|<=N",
+        "Positive full-law liminf second moment",
+        "Not a theorem proving those Riesz inputs"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-probability-campaign-w538-20261010:full-law-pressure-input",
+        "url": "urn:owner-own-work:w538:p0309:full-law-pressure-input",
+        "revision": "draft-2026-10-10-pending-w539",
+        "license": "owner-own-work (campaign deduction; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "chart-weight-obstruction",
+      "namespace": "probability.statistical_mechanics",
+      "logical_name": "conditional-circular-bragg-no-full-pressure-cusp-draft",
+      "kind": "concept",
+      "title": "DRAFT: a conditional circular Bragg moment need not yield a cusp",
+      "statement": "A circular full law with S_N=0 of weight 1-exp(-cN) and S_N=aN exp(iTheta) of weight exp(-cN) has conditional ordered-branch normalized second moment a^2 but full pressure p(h)=max(a|h|-c/beta,0) and p right slope zero at the origin. This author-derived finite-law counterexample is pending w539. It retains circular symmetry and refutes conditional-chart substitution only; it does not refute C5 or Riesz crystallization.",
+      "proof_text": null,
+      "assumptions": [
+        "beta,c>0 fixed",
+        "0<a<=1",
+        "Uniform angular phase on the ordered branch",
+        "Finite probability law, not a claimed Riesz example"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-probability-campaign-w538-20261010:chart-weight-obstruction",
+        "url": "urn:owner-own-work:w538:p0309:chart-weight-obstruction",
+        "revision": "draft-2026-10-10-pending-w539",
+        "license": "owner-own-work (campaign deduction; independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "hessian-obstruction",
+      "to_key": "termwise-route",
+      "kind": "refutes",
+      "rationale": "Draft supporting end: \"two transverse eigenvalues are -s|x|^(-s-2)\"; rejected-route end: \"each vector pair potential ... has a positive semidefinite ... Hessian\". Exact contradiction; referee pending."
+    },
+    {
+      "from_key": "conditional-bridge",
+      "to_key": "dirichlet-setup",
+      "kind": "depends_on",
+      "rationale": "The bridge explicitly uses L_D, B_{D,G}, C_3 and reciprocal G as defined in this setup."
+    },
+    {
+      "from_key": "conditional-bridge",
+      "to_existing_logical": "math:harvest.arxiv.mathematics:arxiv-2405-06616-theorem-3-13-68d962",
+      "kind": "cites",
+      "rationale": "Returned end: \"Hessian V(z) >= Gamma uniformly ... Cov(nu) <= Gamma^{-1}\". Bridge end assumes Hessian H_D >= kappa L_D tensor I_3; instantiate Gamma=beta kappa L_D tensor I_3. No missing Riesz premise is supplied by citation."
+    },
+    {
+      "from_key": "hessian-obstruction",
+      "to_existing_logical": "math:probability.core:open-problem-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "semantic_association",
+      "rationale": "Target end asks for a \"crystalline Gibbs phase\"; this obstruction blocks one proposed convexity transfer to that target. It neither refutes nor proves P0309."
+    },
+    {
+      "from_key": "conditional-bridge",
+      "to_existing_logical": "math:probability.core:attempt-p0309-positive-temperature-crystalline-gibbs-phases-for-three-dimensional-ri",
+      "kind": "semantic_association",
+      "rationale": "Earlier-attempt end: \"must control defects, anharmonic fluctuations ... uniformly in volume\". This bridge states an explicit uniform Hessian premise and preserves the remaining Gibbs gap."
+    },
+    {
+      "from_key": "centering-obstruction",
+      "to_key": "conditional-bridge",
+      "kind": "semantic_association",
+      "rationale": "The bridge end requires evenness/zero mean. This counterexample has the same Hessian lower bound but incompatible mean phases, showing why that premise cannot simply be dropped."
+    },
+    {
+      "from_key": "global-curvature-obstruction",
+      "to_key": "conditional-bridge",
+      "kind": "semantic_association",
+      "rationale": "O3 end: \"no positive pointwise global Hessian lower bound\" for full finite Riesz space. B1 end: \"Hessian H_D(u)>=kappa L_D tensor I_3 for every u\". B1 remains valid for its convex surrogate, but its direct full-Riesz instantiation is blocked."
+    },
+    {
+      "from_key": "conditional-bridge",
+      "to_key": "full-law-pressure-input",
+      "kind": "semantic_association",
+      "rationale": "B1 gives a bound under \"exp(-beta H_D)/Z\" in a Dirichlet convex model. C5 requires the \"unrestricted full law\". Identical Fourier notation does not establish identity of probability measures."
+    },
+    {
+      "from_key": "chart-weight-obstruction",
+      "to_key": "full-law-pressure-input",
+      "kind": "semantic_association",
+      "rationale": "O4 end has conditional second moment a^2 but full-law moment a^2 exp(-cN). C5 end explicitly requires positive full-law liminf. This tests the necessity of the full-law premise; it does not refute C5."
+    }
+  ]
+}

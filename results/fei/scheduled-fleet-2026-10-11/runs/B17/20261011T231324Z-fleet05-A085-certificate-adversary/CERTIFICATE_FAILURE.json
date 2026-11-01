@@ -1,0 +1,108 @@
+{
+  "packet_id": "A085",
+  "review_scope": "B17 lead v1 named sources A071, A042 and A047",
+  "completed_scope_verdict": true,
+  "verdicts": [
+    {
+      "claim_id": "A071-B09-THREEBIT-GRID-CERTIFICATE",
+      "version": 1,
+      "verdict": "HOLDS_AT_STATED_SCOPE"
+    },
+    {
+      "claim_id": "A042-BIAS-ENDPOINT-INTERFACE",
+      "version": 1,
+      "verdict": "HOLDS_AT_STATED_SCOPE"
+    },
+    {
+      "claim_id": "A047-SHARP-FIXED-CHILD-RARE-SELECTOR",
+      "version": 1,
+      "verdict": "HOLDS_AT_STATED_SCOPE"
+    }
+  ],
+  "actual_registered_claim_refutations": [],
+  "first_unsupported_implications": {
+    "A071": "20736 finite representatives imply arbitrary real bias or dimension >=4",
+    "A042": "Fixed-slice K/L or continuity of E,D implies dimension-uniform Hplus/D across simultaneous degenerate biases",
+    "A047": "Fixed-child leading coefficient <=1/2 implies finite-p half-tax or uniform moving-basis remainder"
+  },
+  "support_transition_witness": {
+    "total_variables": 2,
+    "typical_child": "g(Y)=2Y-1",
+    "rare_child": "h(Y)=1",
+    "data_bias": "q=P(Y=1)",
+    "coefficient_when_q_not_half": "4q-4",
+    "debt_at_q_half": "0 for all selector p",
+    "iterated_limit_data_after_selector": -2,
+    "iterated_limit_selector_after_data": 0,
+    "refuted_extension": "Uniform O(p) remainder for the fixed-pair p log2(1/p) expansion over q near 1/2",
+    "proof": "REPORT.md: continuity at fixed p and exact support coefficient"
+  },
+  "floating_pipeline_failure": {
+    "family": "point defect, compressed exact Boolean spectrum",
+    "smallest_n_rounded_amplitude_one": 55,
+    "smallest_n_rounded_empty_mass_one": 56,
+    "smallest_n_zero_nonempty_mass": 539,
+    "underflow_witness": {
+      "n": 539,
+      "I_exact": "539/899782758908639276562107701537196371773939423660383326620151114522367516134297574063808137220778171429984182126704179024641653211098859937801703036173032771026944",
+      "exact_nonempty_entropy_bits": "484083124292847930790413943427011648014379409929286229721641299613033723680252094846328777824778656229331489984166848315257209427571186646537316233461091630812495603/202402253307310618352495346718917307049556649764142118356901358027430339567995346891960383701437124495187077864316811911389808737385793476867013399940738509921517424276566361364466907742093216341239767678472745068562007483424692698618103355649159556340810056512358769552333414615230502532186327508646006263307707741093494784",
+      "missing_entropy_over_I_lower_bound": "484083124292847930790413943427011648014379409929286229721641299613033723680252094846328777824778656229331489984166848315257209427571186646537316233461091630812495603/121245726762939142516744012782137211096538337338236653262065362681889022799096598105098146490499858600190368541573388123570462770195571376618779484124316165895880704",
+      "binary64_compressed_spectrum": "empty=1, every nonempty=0; naive H=I=0"
+    },
+    "selected_rows": [
+      {
+        "n": 54,
+        "amplitude_binary64_hex": "0x1.fffffffffffffp-1",
+        "empty_binary64_hex": "0x1.ffffffffffffep-1",
+        "nonempty_binary64_hex": "0x1.0000000000000p-106",
+        "nonempty_exact": "1/81129638414606681695789005144064"
+      },
+      {
+        "n": 55,
+        "amplitude_binary64_hex": "0x1.0000000000000p+0",
+        "empty_binary64_hex": "0x1.fffffffffffffp-1",
+        "nonempty_binary64_hex": "0x1.0000000000000p-108",
+        "nonempty_exact": "1/324518553658426726783156020576256"
+      },
+      {
+        "n": 56,
+        "amplitude_binary64_hex": "0x1.0000000000000p+0",
+        "empty_binary64_hex": "0x1.0000000000000p+0",
+        "nonempty_binary64_hex": "0x1.0000000000000p-110",
+        "nonempty_exact": "1/1298074214633706907132624082305024"
+      },
+      {
+        "n": 537,
+        "amplitude_binary64_hex": "0x1.0000000000000p+0",
+        "empty_binary64_hex": "0x1.0000000000000p+0",
+        "nonempty_binary64_hex": "0x0.0000000000004p-1022",
+        "nonempty_exact": "1/50600563326827654588123836679729326762389162441035529589225339506857584891998836722990095925359281123796769466079202977847452184346448369216753349985184627480379356069141590341116726935523304085309941919618186267140501870856173174654525838912289889085202514128089692388083353653807625633046581877161501565826926935273373696"
+      },
+      {
+        "n": 538,
+        "amplitude_binary64_hex": "0x1.0000000000000p+0",
+        "empty_binary64_hex": "0x1.0000000000000p+0",
+        "nonempty_binary64_hex": "0x0.0000000000001p-1022",
+        "nonempty_exact": "1/202402253307310618352495346718917307049556649764142118356901358027430339567995346891960383701437124495187077864316811911389808737385793476867013399940738509921517424276566361364466907742093216341239767678472745068562007483424692698618103355649159556340810056512358769552333414615230502532186327508646006263307707741093494784"
+      },
+      {
+        "n": 539,
+        "amplitude_binary64_hex": "0x1.0000000000000p+0",
+        "empty_binary64_hex": "0x1.0000000000000p+0",
+        "nonempty_binary64_hex": "0x0.0p+0",
+        "nonempty_exact": "1/809609013229242473409981386875669228198226599056568473427605432109721358271981387567841534805748497980748311457267247645559234949543173907468053599762954039686069697106265445457867630968372865364959070713890980274248029933698770794472413422596638225363240226049435078209333658460922010128745310034584025053230830964373979136"
+      },
+      {
+        "n": 540,
+        "amplitude_binary64_hex": "0x1.0000000000000p+0",
+        "empty_binary64_hex": "0x1.0000000000000p+0",
+        "nonempty_binary64_hex": "0x0.0p+0",
+        "nonempty_exact": "1/3238436052916969893639925547502676912792906396226273893710421728438885433087925550271366139222993991922993245829068990582236939798172695629872214399051816158744278788425061781831470523873491461459836282855563921096992119734795083177889653690386552901452960904197740312837334633843688040514981240138336100212923323857495916544"
+      }
+    ],
+    "scope": "Floating implementation diagnostic only; no flaw in the audited rational certificates",
+    "seconds": 0.017700200085528195
+  },
+  "full_fei": "OPEN",
+  "review_of_this_review": "A090 primary; A094 alternate; pending"
+}

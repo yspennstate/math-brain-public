@@ -1,0 +1,234 @@
+\section{Introduction}
+
+Consider a collection of linear polymers with total mass $n$. Each pair
+of polymers merges at a constant rate, and each internal link breaks
+independently. The resulting Markov chain has an explicit reversible
+law, but that law alone does not determine how fast the chain reaches
+equilibrium. Aldous~\cite{AldousNotes,AldousProblemPage} asked for its
+relaxation scale when the fragmentation rate is comparable to $1/n$.
+We determine that scale with its leading constant, obtain a cutoff
+theorem, and study extensions with spatial motion and nonreversible
+rates.
+
+The argument begins with the cycle representation in Aldous's notes.
+Its labelled cut process has more slow modes than the polymer chain.
+Rotation invariance removes the extra degree-one modes, and an explicit
+comparison puts every remaining harmonic sector above the first
+nonconstant count mode. This gives a direct proof of the equality
+between the polymer and count gaps announced by Granovsky and
+Erlihson~\cite{GranovskyErlihson2009}. A choice of reciprocal test
+function then gives a spectral estimate with an absolute error of
+order $1/n$.
+
+\subsection{The chain and the main theorem}
+
+Fix $n\ge2$ and $\beta>0$. The state space is
+\[
+ \mathcal S_n=\left\{m=(m_1,\ldots,m_n)\in\mathbb Z_{\ge0}^n:
+                     \sum_{j=1}^n j m_j=n\right\}.
+\]
+Here $m_j$ is the number of clusters containing $j$ units of mass. Each cluster is viewed as a linear polymer with $j-1$ internal links. Every unordered pair of distinct cluster instances merges at rate $2/n$; the two instances may have the same size. Every internal link breaks at rate $\beta$.
+
+Let $e_j$ be the $j$th coordinate vector. The nonzero off-diagonal transition rates of the generator $L_M$ are
+\begin{align}
+ q_M(m,m-e_j+e_i+e_{j-i})
+  &=\begin{cases}
+        2\beta m_j,&1\le i<j/2,\\
+        \beta m_j,&i=j/2,
+     \end{cases}\label{eq:fragmentation-rates}\\
+ q_M(m,m+e_{i+j}-e_i-e_j)
+  &=\begin{cases}
+        2m_i m_j/n,&i<j,\quad i+j\le n,\\
+        m_i(m_i-1)/n,&i=j,\quad 2i\le n.
+     \end{cases}\label{eq:coagulation-rates}
+\end{align}
+Rates with an inadmissible target are zero. The diagonal entries are the negatives of the row sums. The factors of two in~\eqref{eq:fragmentation-rates} count the two distinct links giving the same unordered split when the two fragments have different sizes.
+
+Write
+\[
+ K(m)=\sum_{j=1}^n m_j
+\]
+for the number of clusters. The chain is irreducible and reversible with respect to
+\begin{equation}\label{eq:polymer-stationary-intro}
+ \pi_M(m)=\frac1{Z_M}\,
+                 \frac{(\beta n)^{K(m)}}{\prod_{j=1}^n m_j!}.
+\end{equation}
+The normalizing constant $Z_M$ is the sum of the displayed weights over $\mathcal S_n$. We rederive reversibility below, together with the comparison used in the proof.
+
+For real functions on $\mathcal S_n$, let
+\begin{equation}\label{eq:dirichlet-intro}
+ \mathcal E_M(f,f)
+ =-\langle f,L_Mf\rangle_{\pi_M}
+ =\frac12\sum_{m,m'\in\mathcal S_n}
+       \pi_M(m)q_M(m,m')\bigl(f(m')-f(m)\bigr)^2.
+\end{equation}
+The spectral gap and relaxation time are
+\begin{equation}\label{eq:gap-intro}
+ \gamma_M(n,\beta)=
+  \inf_{\operatorname{Var}_{\pi_M}f>0}
+       \frac{\mathcal E_M(f,f)}{\operatorname{Var}_{\pi_M}f},
+ \qquad
+ \tau_{\mathrm{rel}}(n,\beta)=\gamma_M(n,\beta)^{-1}.
+\end{equation}
+We usually abbreviate $\gamma_M(n,\beta)$ to $\gamma_M$. All constants implicit in $\asymp$ below are independent of $n$ and $\beta$.
+
+\begin{theorem}\label{thm:main}
+For every $n\ge2$ and $\beta>0$, set
+\[
+ s(n,\beta)=\beta+\sqrt\beta+\frac1n.
+\]
+Then
+\begin{equation}\label{eq:main-gap}
+ \frac{s(n,\beta)}6\le\gamma_M(n,\beta)\le4s(n,\beta).
+\end{equation}
+Consequently,
+\begin{equation}\label{eq:main-relaxation}
+ \frac1{4s(n,\beta)}\le\tau_{\mathrm{rel}}(n,\beta)
+                         \le\frac6{s(n,\beta)}.
+\end{equation}
+The proof also gives the estimates
+\begin{equation}\label{eq:sharper-elementary}
+ \beta+\frac2n\le\gamma_M(n,\beta)
+       \le\beta+4\max\!\left\{\sqrt\beta,\frac1n\right\}.
+\end{equation}
+\end{theorem}
+
+Theorem~\ref{thm:main} remains useful at the transition
+$\beta\asymp n^{-2}$, where the additive error in the sharper estimate
+below is comparable to the gap. The one-state case $n=1$ has no
+positive eigenvalue and is excluded throughout.
+
+\begin{samepage}
+\begin{corollary}\label{cor:regimes}
+Let $\beta_n>0$ and let $n\to\infty$.
+\begin{enumerate}
+ \item If $\beta_n\le Cn^{-2}$ for a fixed $C<\infty$, then
+       $\tau_{\mathrm{rel}}(n,\beta_n)\asymp n$.
+ \item If $n^{-2}\ll\beta_n\ll1$, then
+       $\tau_{\mathrm{rel}}(n,\beta_n)\asymp\beta_n^{-1/2}$.
+ \item If $\beta_n\ge c>0$, then
+       $\tau_{\mathrm{rel}}(n,\beta_n)\asymp\beta_n^{-1}$.
+\end{enumerate}
+The comparison constants in the first and third assertions may depend on $C$ and $c$, respectively. In particular, $\beta_n\asymp n^{-1}$ implies
+$\tau_{\mathrm{rel}}(n,\beta_n)\asymp\sqrt n$.
+\end{corollary}
+\end{samepage}
+
+\begin{proof}
+In each range, compare the three terms in $s(n,\beta_n)$ and apply~\eqref{eq:main-relaxation}. If $\beta_n\le Cn^{-2}$, the square-root term is at most $\sqrt C/n$. In the second range it dominates both other terms. If $\beta_n\ge c$, then $\sqrt{\beta_n}\le c^{-1/2}\beta_n$ and $n^{-1}\le(2c)^{-1}\beta_n$.
+\end{proof}
+
+For fixed $\beta$, Aldous's estimate is
+\begin{equation}\label{eq:aldous-bound}
+ (1-o(1))(\beta^2+4\beta)^{-1/2}
+ \le\tau_{\mathrm{rel}}(n,\beta)\le\beta^{-1}
+ \qquad(n\to\infty).
+\end{equation}
+His notes also discuss $\beta_n\sim b/n$, where the corresponding bounds
+have different powers of $n$~\cite{AldousNotes}. The uniform theorem
+closes that order gap. The sharper results identify the constant in
+both regimes.
+
+\subsection{Sharp conclusions and extensions}
+
+Let $\gamma_Q$ be the gap of the cluster-count chain. We prove
+\[
+ \gamma_M=\gamma_Q,\qquad
+ \sqrt{\beta^2+4\beta}-\frac5n
+ \le\gamma_M\le
+ \sqrt{\beta^2+4\beta}+\frac4n
+\]
+in Theorems~\ref{thm:exact-gap} and~\ref{thm:sharp-gap}.
+It follows that
+\[
+ \tau_{\mathrm{rel}}(n,b/n)\sim\frac{\sqrt n}{2\sqrt b},
+ \qquad
+ \tau_{\mathrm{rel}}(n,\beta)\longrightarrow
+       (\beta^2+4\beta)^{-1/2}
+ \quad\text{for fixed }\beta>0.
+\]
+At the remaining transition scale we construct a positive, continuous
+function $\rho$ such that
+\[
+ \left|n\gamma_M(n,b/n^2)-\rho(b)\right|\le b/n.
+\]
+The function is the lowest eigenvalue of an explicit infinite
+birth--death operator. Finite tridiagonal matrices approximate it with
+a proved truncation error; see Section~\ref{sec:critical-scaling}.
+
+For $\beta=b/n$ with $b>0$ fixed, the count process has worst-case
+total-variation cutoff at
+\[
+ t_n=\frac{\sqrt n\log n}{8\sqrt b},
+\]
+with a window of order at most $\sqrt n$
+(Theorem~\ref{thm:count-cutoff}). The same statement holds for the
+polymer process from either extreme initial configuration: one polymer
+of size $n$, or $n$ monomers. This transfer is exact at every time,
+because the density from either state remains a function of the
+cluster count. Separation cutoff from these states occurs at $2t_n$.
+For arbitrary initial partitions,
+Theorem~\ref{thm:full-polymer-tv-upper-new} gives
+\[
+ t^{\mathrm{polymer}}_{\mathrm{mix},n}(\varepsilon)
+ \le C_b\sqrt n\bigl[(\log n)^2+\log(1/\varepsilon)\bigr].
+\]
+Thus the worst-case polymer mixing time is determined within one
+logarithmic factor. This upper bound uses positivity of the actual
+polymer density and the degree-dependent sector energies.
+
+The cycle representation also leads to a spatial process on cut sets.
+Add symmetric exclusion along a connected weighted graph $G$ with
+diffusion coefficient $D$. Theorem~\ref{thm:spatial-exact-gap} gives
+\[
+ \gamma_{\mathrm{sp}}
+   =\min\{\gamma_Q,\eta_1+D\lambda_G\},
+\]
+where $\lambda_G$ is the one-particle graph gap and $\eta_1$ is the
+lowest eigenvalue of the degree-one radial reaction operator.
+Writing $d=\sqrt{\beta^2+4\beta}$ and $c_1=(\beta+d)/2$, we obtain
+\[
+ \min\{d,c_1+D\lambda_G\}-\frac5n
+ \le\gamma_{\mathrm{sp}}\le
+ \min\{d,c_1+D\lambda_G\}+\frac4n.
+\]
+An additional critical scaling function describes $\eta_1$ when
+$\beta\asymp n^{-2}$. On a cycle the dynamics moves interval
+boundaries and merges or splits neighboring intervals. On a general
+graph it is an exclusion process with creation and deletion rates
+depending on the total occupancy.
+
+Finally, bounded reversible changes of the reaction conductances
+give uniform estimates for inhomogeneous rates. Conservative cut
+motion generated by directed permutations has an exact formula for
+its asymptotic spectral rate and a separate formula for its
+$L^2$ contraction rate. A stationary current on four existing
+polymer configurations strictly increases the asymptotic spectral
+rate of the original partition-valued chain. These extensions are
+proved in Sections~\ref{sec:spatial-diffusion}--\ref{sec:kernel-comparison}.
+
+\input{related_work}
+
+\subsection{Structure of the proof}
+
+There are two comparisons. First, the cluster count is a birth--death chain $Q$ on $\{1,\ldots,n\}$ with rates
+\begin{equation}\label{eq:count-rates-intro}
+ \lambda_k=\beta(n-k),\qquad \mu_k=\frac{k(k-1)}n.
+\end{equation}
+Every count observable is a polymer observable, so the variational principle gives $\gamma_M\le\gamma_Q$. Discrete differentiation turns the positive spectrum of $-Q$ into the spectrum of a killed birth--death operator. A positive function of the form $[(k+a)(k+a+1)]^{-1}$, with $a=\max\{1,n\sqrt\beta\}$, gives the upper bound in~\eqref{eq:sharper-elementary} directly.
+
+For the lower bound, place $n$ bonds in cyclic order and retain a nonempty set of cuts. Add each absent cut at rate $\beta$ and remove each present cut at rate $(k-1)/n$ when there are $k$ cuts. The unordered cyclic segment lengths define a polymer configuration. At stationarity this map preserves the variance and Dirichlet form of every lifted polymer observable. This is the precise comparison needed; the projected paths need not form a Markov chain from every deterministic cut configuration.
+
+The cut-set generator commutes with all permutations of the bonds.
+Its harmonic decomposition reduces it to killed birth--death
+operators indexed by a degree $\ell$. Degree zero is the count chain.
+Every polymer observable is invariant under cyclic rotation, which
+annihilates its degree-one component. The remaining sectors first
+give the uniform estimate and then, through a comparison with the
+positive count-derivative eigenfunction, the exact gap reduction.
+Reciprocal functions chosen by algebraic cancellation yield the
+sharp constants. Hitting-time means and variances give the cutoff
+theorem. For graph diffusion the harmonic sectors are tensor sums;
+all degrees above one already lie above the count gap before
+diffusion is added. A separate coupling proof of the square-root
+estimate is given in the appendix.

@@ -1,0 +1,46 @@
+[
+  {
+    "relation": {
+      "from_key": "two-cardy-driver",
+      "to_key": "cardy-function",
+      "kind": "depends_on",
+      "rationale": "The conditional driving-process derivation uses precisely this C(u)."
+    },
+    "from_statement": "DRAFT conditional derivation, kept mathematically by independent referee w413 in REVIEW_PACKET.md on 2026-10-10; integration's served-model/different-model gate remains unestablished. This is not a square-bond percolation proof. Let W be a continuous adapted real driver with deterministic W(0) for chordal Loewner dg_t(z)=2/(g_t(z)-W_t)dt in a usual filtration. Choose W(0)<x1<x2<x3, with 0<X1<X2<X3 before swallowing, Xi=g_t(xi)-W_t. If BOTH C(X1/X2) and C(X1/X3) are continuous local martingales in the SAME filtration throughout a locally stopped lifetime, then W-W(0) is a continuous local martingale with quadratic variation 6t over that lifetime. Invert the first observable to make W a semimartingale; Ito gives dA=(1/Xi+1/Xj)(2dt-dV/3), where A is the driver drift measure and V its local-martingale quadratic variation. Subtract the two identities to force dV=6dt and dA=0. Square-lattice conditional Cardy limits and trace convergence remain unproved here; retain concept/draft status until the remaining promotion gate passes.",
+    "to_statement": "For 0<=u<=1, define C(u)=B(1/3,1/3)^(-1) times the integral from 0 to u of [s(1-s)]^(-2/3) ds, where B(1/3,1/3) is the same integral over [0,1]. This defines a function; invoking it as a square-lattice crossing limit requires a separate convergence theorem.",
+    "target_evidence": "same draft"
+  },
+  {
+    "relation": {
+      "from_key": "one-cardy-counterexample",
+      "to_key": "cardy-function",
+      "kind": "depends_on",
+      "rationale": "The counterexample uses C(1/2)=1/2 by symmetry of this defining integral."
+    },
+    "from_statement": "DRAFT explicit obstruction kept mathematically by independent referee w413 on 2026-10-10; integration's served-model/different-model gate remains unestablished. This is a counterexample to a general inference, not to the percolation conjecture. For 0<=t<1/2, set Y=sqrt(4-8t), W=3-3Y/2, g_t(1)=3-Y and g_t(2)=3-Y/2. The real Loewner equations hold: g_t(1)'=2/(Y/2) and g_t(2)'=2/Y. Their distances from W have ratio 1/2, so the single Cardy observable C((g_t(1)-W)/(g_t(2)-W)) is the constant martingale 1/2. W is nonconstant deterministic finite variation with zero quadratic variation, so one such observable cannot identify a Brownian driver without further premises. For a third mark starting at 3, the initial ratio derivative is -2/27, and its Cardy observable is not a martingale.",
+    "to_statement": "For 0<=u<=1, define C(u)=B(1/3,1/3)^(-1) times the integral from 0 to u of [s(1-s)]^(-2/3) ds, where B(1/3,1/3) is the same integral over [0,1]. This defines a function; invoking it as a square-lattice crossing limit requires a separate convergence theorem.",
+    "target_evidence": "same draft"
+  },
+  {
+    "relation": {
+      "from_key": "conditional-gap",
+      "to_key": "two-cardy-driver",
+      "kind": "semantic_association",
+      "rationale": "Names the missing lattice input for the explicitly conditional draft reduction; does not claim to prove it."
+    },
+    "from_statement": "The unproved input in the w412 Cardy-martingale route is identification of TWO actual discrete crossing or boundary-order Doob martingales, including their induced primal/dual boundary conditions after exploration, with joint limits C(X1/X2) and C(X1/X3) in the SAME limiting exploration filtration on random slit domains. Exact discrete martingale identities alone do not identify their limiting functions. Fixed-domain crossing estimates, RSW tightness and large-scale rotational invariance do not alone supply this stated input. Joint convergence must retain the past-versus-future martingale identities; an enlarged filtration and discontinuous boundary stopping times require their own checks. No square-lattice conformal-invariance result is asserted by this draft.",
+    "to_statement": "DRAFT conditional derivation, kept mathematically by independent referee w413 in REVIEW_PACKET.md on 2026-10-10; integration's served-model/different-model gate remains unestablished. This is not a square-bond percolation proof. Let W be a continuous adapted real driver with deterministic W(0) for chordal Loewner dg_t(z)=2/(g_t(z)-W_t)dt in a usual filtration. Choose W(0)<x1<x2<x3, with 0<X1<X2<X3 before swallowing, Xi=g_t(xi)-W_t. If BOTH C(X1/X2) and C(X1/X3) are continuous local martingales in the SAME filtration throughout a locally stopped lifetime, then W-W(0) is a continuous local martingale with quadratic variation 6t over that lifetime. Invert the first observable to make W a semimartingale; Ito gives dA=(1/Xi+1/Xj)(2dt-dV/3), where A is the driver drift measure and V its local-martingale quadratic variation. Subtract the two identities to force dV=6dt and dA=0. Square-lattice conditional Cardy limits and trace convergence remain unproved here; retain concept/draft status until the remaining promotion gate passes.",
+    "target_evidence": "same draft"
+  },
+  {
+    "relation": {
+      "from_key": "source-status-guard",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+      "kind": "cites",
+      "rationale": "The exact C0017 intake target is present in exported card claim_91f295e6d2a67634c0b90a5ee4130c1feed72dc0fe16086a679021c90c8917cb. Current live-store resolution remains for the integrator."
+    },
+    "from_statement": "C0017 asks for Cardy crossing limits and SLE(6) exploration limits for critical independent bond percolation on the square lattice at p=1/2. Garban-Steif arXiv:1102.5761v3, Chapter II section 4, printed p.24 / PDF page 26, calls its conformal invariance an open problem in 2012; the adjacent established Theorem II.2 concerns triangular-lattice site percolation. A bounded 2026-10-10 primary search also found square-bond proof claims arXiv:1112.2017v5 and arXiv:2409.03235v6, without independently checking their mathematics. Thus the task records current openness as UNKNOWN and makes no novelty claim. Historical source wording, an arXiv abstract, a source hash, or an ingestion receipt is not an independent mathematical proof certificate.",
+    "to_statement": "OPEN PROBLEM (source_says_open; current status no_resolution_found_in_documented_search; result status attempted_unsolved). Prove that critical bond percolation on Z^2 at p = 1/2 is conformally invariant in the scaling limit (Cardy's formula and convergence of interfaces to SLE(6)), as is known on the triangular lattice by Smirnov.",
+    "target_evidence": "export nodes.jsonl:5279; LIVE_TARGET_RECEIPT.json confirms exact node ID claim_91f295e6d2a67634c0b90a5ee4130c1feed72dc0fe16086a679021c90c8917cb and its logical ID by a read-only population query; proposed edge is not ingested"
+  }
+]

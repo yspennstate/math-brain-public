@@ -1,0 +1,12 @@
+# Compression requirements passed to A011/A012
+
+The formal fixed-scale queue label cost is `sum_A P(A)|F(A)| log2 k` at lambda=1/k. It is neither a lower bound for Fourier entropy nor a lower bound for every complete reference. Majority forces this component to grow faster than influence even when each whole set uses at most two gates. The source-complete calculation is in REPORT.md.
+
+1. State the representation convention. Full satisfying-assignment cells give tribes a false dimension bill; prime disjoint supports give label and allocation charges zero. Adding dummy coordinates changes the full-cell bill without changing H or I.
+2. Communicate labels jointly for an entire set, but also compress the collection of interchangeable minterms. Majority needs grouping into one threshold/regular gate, or an equivalent fully accounted posterior refund. A bound on used-gate count alone cannot pay log k.
+3. Retain the probability of the nonempty spectrum. Under F=1+A_r(g-1), q=P(g=-1), p=2^-r, it is `4pq(1-pq)`. Nonempty-data mass is `p Var(g)`; control-only mass is `4p q^2(1-p)`. Do not accidentally use p^2 for the first sector.
+4. Evaluate the output law, not just a selected witness. Equal full-cell supports with equal rank choices give N distinct single-root witnesses for the same output. Summing them refunds log N. A posterior-erasure argument must prove the matching probability/entropy refund and output decoding.
+5. Keep root rarity and normalization with the refund. For N equal cells of density pi=2^-d, the summed one-root mass at lambda=1/N is `2^-Lambda pi` times the common subset/termination probability: the label disappears, but root rarity d remains. `Lambda=log2 Z=sum_l log2(1+lambda*pi_l)` and its bill is **v Lambda**. A scale prior adds its own selection cost.
+6. Do not conflate the three charges. Majority's minimum allocation pressure is zero except the full spectral set, with mean O(1/n); labels still cost Theta(n). The generic rank/rarity estimate retains a separate `(24/5)I log2 k` term. Improving only mass-based K_eff does not pay the other components.
+
+The next exact test is A012's complete posterior-erased activation witness, first for a literal and then for grouped activated majority, preserving v log Z, rarity and terminal/core entropy. The first unsupported universal line is the existence of a representation plus complete normalized reference with total expected cost <=K I for every Boolean core. No universal representation lemma is proposed here.

@@ -1,0 +1,54 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T223800Z-claude-B06-block-tree-reductions",
+ "stream": "B06",
+ "packet_id": "A027",
+ "gap_id": "G-R-SELECT",
+ "attempt_id": "20261011T223800Z-claude-B06-block-tree-reductions-1",
+ "method": "proof (chain rule, telescoping) plus exhaustive exact census with interval certification",
+ "mathematical_delta": "R1 block->singleton at the same node (rate K -> K+2/ln2); R2 every restriction-tree payment is a function of the leaf partition, Pi_I = expected queried pivotal count, complete trees have cumulative erasure >= H-(2/ln2)I; R3 good-coordinate selection on restriction-closed classes = FEI on the class, A026 class already has H<=256I; R4 kappa_3=kappa_4=(5/2)h2(1/10)+3/2=2.6725 exactly (point defect on 3 bits, dummy for n=4), proxy maxima 0,2,3,7/2.",
+ "deliverable_status": "LOCAL_JSON_SAVED_REPORT_MD_BLOCKED",
+ "mathematical_status": "REDUCTIONS_PROVED_LOCALLY; SMALL_N_CERTIFIED; UNIVERSAL_G-R-SELECT_OPEN; FULL_FEI_OPEN",
+ "claim_versions_used": [
+  "C005 v-current",
+  "C006 v-current",
+  "A026-AFFINE4-GOOD-COORDINATE v1",
+  "A026-AMPLITUDE-K4-THRESHOLD-NOGO v1",
+  "A027-CORE-BLOCK-HARDNESS v1",
+  "A027-DATA-FIRST-PROPER-BLOCK v1"
+ ],
+ "claims_created_or_changed": [
+  "B06-LEAD-R1-BLOCK-TO-SINGLETON v1",
+  "B06-LEAD-R2-LEAF-PARTITION-INVARIANCE v1",
+  "B06-LEAD-R3-RESTRICTION-CLOSED-EQUIVALENCE v1",
+  "B06-LEAD-SMALLN-TRUE-ERASURE-CONSTANTS v1"
+ ],
+ "source_artifacts": [
+  "code/b06_checks.py",
+  "code/kappa4_exact.py",
+  "code/kappa4_strict.py",
+  "code/make_claims.py",
+  "out/b06_checks.json",
+  "out/b06_checks.stdout.txt",
+  "out/kappa4_exact.json",
+  "out/kappa4_strict.json"
+ ],
+ "next_consumers": [
+  "A027",
+  "A028",
+  "A029",
+  "A030",
+  "A064",
+  "A087",
+  "A094",
+  "B20"
+ ],
+ "next_action": "Prove Pi_H <= K Pi_I (R2 root inequality) for low-density activated cores when a proper subset of the core is revealed before the controls, with point-defect and C001-regular terminals, or give the parameterized family where every such partition fails; reviewer A087.",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "REPORT.md not saved: the subagent harness refused report-file writes (\"Subagents should return findings as text\"); the full report is in this run's StructuredOutput to coordinator claude-2d8060eb. .final is withheld until REPORT.md exists."
+ ],
+ "packet_ids": [
+  "A027"
+ ]
+}

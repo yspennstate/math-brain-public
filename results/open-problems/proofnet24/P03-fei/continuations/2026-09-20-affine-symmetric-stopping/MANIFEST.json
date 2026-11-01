@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-20",
+  "full_FEI_proved": false,
+  "independent_audit": false,
+  "formal_proof_assistant_used": false,
+  "publication_priority_cleared": false,
+  "files": {
+    "REPORT.md": {
+      "bytes": 17252,
+      "sha256": "73a5d7f2a2ec091db760f569e4163babee56669097599eab2eaabfb08344df84",
+      "verified_remote_git_blob": "d3fe8478ef1a12a621bbb33f077d61c15e31620f"
+    },
+    "ENDPOINT_QUANTIFIERS.md": {
+      "bytes": 9770,
+      "sha256": "fc5ad9563b337b7a3d5ccffbabc02dd09d23469df95ca60cc86d1cb0b18b3237",
+      "verified_remote_git_blob": "3082da23762420c16f2427c426e01aa310999048"
+    },
+    "WORKLOG.md": {
+      "bytes": 5051,
+      "sha256": "63d7fc44cbd3c9d78879f330352997085a6896ee076574bad463042ecfa7724a",
+      "verified_remote_git_blob": "3e98b23319d234477d890e6ffdead574bfc251d2"
+    },
+    "centroid_probe.cpp": {
+      "bytes": 800,
+      "sha256": "44aae82948a099dcbe94d3099b9aea5a73a040eaf187ce329f4890aa17a27669",
+      "verified_remote_git_blob": "dca328200f3580a5780f259964d73418b986f74d"
+    },
+    "centroid_probe_output.txt": {
+      "bytes": 131,
+      "sha256": "01c3944cbbdeb8734bffb38e84d9981aa19806319b1eeb908345c3d9ffd5dec8",
+      "verified_remote_git_blob": "5b8183f2b9ad953606496e11b3783fca9fa4b9f9"
+    },
+    "verification.json": {
+      "bytes": 1117,
+      "sha256": "d744bbbe2c8aeff392de5ccae4fb9754baa9d9f0f6d957330c55f29dedf7a2c9",
+      "verified_remote_git_blob": "bf5f7192837428e8686d2b2c94cb9d02c8e7aed7"
+    },
+    "endpoint_verification.json": {
+      "bytes": 3528,
+      "sha256": "037f4dd3f7a2c928480d701a97b01a53185ed1a5e82c98ae26072459046b5e6e",
+      "verified_remote_git_blob": "1aa591255fd7be3b85d963504535eb63f7cffd69"
+    },
+    "verify_affine_symmetry.py": {
+      "bytes": 9420,
+      "sha256": "139eaaea2b97ee84a4cbf577252335d31f3f59da7446112501356350e6739ce7",
+      "verified_remote_git_blob": "97e8bc6a8db21e29f6c893790acf39c53ea3069f"
+    },
+    "verify_endpoint_quantifiers.py": {
+      "bytes": 5888,
+      "sha256": "4dc0807168bf70c221a52f4aea3740b00ba85c56af38e74a632958e96c752ba8",
+      "verified_remote_git_blob": "07f2ac02e1d495571e7cd6b613ee15ca663f0e2e"
+    }
+  },
+  "replay": {
+    "verify_affine_symmetry.py": "PASS; byte-identical verification.json in separate directory",
+    "verify_endpoint_quantifiers.py": "PASS; byte-identical endpoint_verification.json in separate directory"
+  },
+  "scope_warning": "The centroid candidate in WORKLOG.md is unproved; its finite search is not used in either main theorem. The endpoint counterexample refutes every-coordinate payment, not an existential selector."
+}

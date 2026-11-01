@@ -1,0 +1,13 @@
+{
+  "helper_version": "A016-shared-spine-v1",
+  "actual_boolean_family": "Product of a bent-point-splice modules with one common bit z and m-1 private data bits plus private selector x_j per module; even m>=4",
+  "parameter_domain": [[1,4],[2,4],[3,4],[1,6],[2,6],[1,10]],
+  "case_count": "6 full tables, dimension n=1+a*m<=13; all selector-first nodes and all prior selector assignments; shared-bit-first two children; exact root code and factorization certificates",
+  "symmetry": "None in Boolean or tree enumeration. Independent private blocks used only in proved all-parameter formulas.",
+  "arithmetic": "Integer FWHT, GF(2) algebraic normal form, Fraction influence/derivative energies, rational atanh logarithm enclosures with outward dyadic rounding",
+  "memory_estimate_mb": 50,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "randomness": "none",
+  "code_definition": "Fixed normalized reference: choose z-branch uniformly, choose its complete data reference (uniform mask for z=0; exact flat core reference for z=1), choose Fourier z-bit uniformly; include branch/selector normalization and full terminal costs."
+}

@@ -1,0 +1,66 @@
+{
+  "problem_id": "P0012",
+  "command": "python -X utf8 check_remaining.py",
+  "label": "finite checks; independent audit pending",
+  "elapsed_seconds": 1.9887450999813154,
+  "optimizer_checks": 720,
+  "max_optimizer_identity_error": 2.220446049250313e-15,
+  "gaussian_checks": [
+    {
+      "r": 3,
+      "p": 2.0,
+      "samples": 20000,
+      "empirical_expected_norm": 7.446195505228801,
+      "standard_error": 0.017043822802008616,
+      "proved_upper_bound": 20.85189061999609,
+      "mean_over_bound": 0.3570992981369378
+    },
+    {
+      "r": 3,
+      "p": 4.0,
+      "samples": 20000,
+      "empirical_expected_norm": 8.700720917250996,
+      "standard_error": 0.01656099894461696,
+      "proved_upper_bound": 11.759133879318822,
+      "mean_over_bound": 0.7399117151436843
+    },
+    {
+      "r": 3,
+      "p": 6.0,
+      "samples": 20000,
+      "empirical_expected_norm": 14.991612750671825,
+      "standard_error": 0.025487052674923502,
+      "proved_upper_bound": 15.3565611449312,
+      "mean_over_bound": 0.9762350183211536
+    },
+    {
+      "r": 3,
+      "p": 12.0,
+      "samples": 20000,
+      "empirical_expected_norm": 26.888078982826705,
+      "standard_error": 0.04780761918523634,
+      "proved_upper_bound": 58.87338116654502,
+      "mean_over_bound": 0.4567102899485912
+    },
+    {
+      "r": 3,
+      "p": "infinity",
+      "samples": 20000,
+      "empirical_expected_norm": 53.15161933180662,
+      "standard_error": 0.10111612617426476,
+      "proved_upper_bound": 247.29981725820937,
+      "mean_over_bound": 0.21492785526933986
+    }
+  ],
+  "mixed_sign_even_polynomial_warning": {
+    "r": 2,
+    "p": "infinity",
+    "a": [
+      1,
+      -1
+    ],
+    "multilinear_norm": 2,
+    "homogeneous_same_vector_norm": 1
+  },
+  "scope": "Diagonal multilinear tensors; source convention must be checked."
+}

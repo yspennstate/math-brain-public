@@ -1,0 +1,63 @@
+{
+  "path": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "mode": "ro",
+  "target": "C0048",
+  "rows": [
+    {
+      "id": "claim_38c945c83e6d9f9dc77b20f936b660e811e528c284f76bd513990e6ed06ecc6a",
+      "payload": {
+        "assumptions": [
+          "Posed in Duminil-Copin: Lectures on the Ising and Potts models on the hypercubic lattice, PIMS 2017",
+          "Current status unverified as of 2026-09-07"
+        ],
+        "created_at": "2026-09-07T08:18:47.936892+00:00",
+        "domain": "probability theory",
+        "id": "claim_38c945c83e6d9f9dc77b20f936b660e811e528c284f76bd513990e6ed06ecc6a",
+        "kind": "concept",
+        "schema_version": 1,
+        "statement": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove that the phase transition of the nearest-neighbour q-state Potts model on Z^d with d >= 3 is discontinuous for every q >= 3 (equivalently q_c(d) = 2 for all d >= 3). Source: Duminil-Copin: Lectures on the Ising and Potts models on the hypercubic lattice, PIMS 2017, Conjecture 2, p. 93; also duminil_copin_icm_2018 p. 18 (q_c(d) = 2).",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "claim_9830d2b5c32b82afa88de780611e6b0fe5e81b7d425ff5fabff71dad19cc6930",
+      "payload": {
+        "assumptions": [
+          "Refers to the open problem node open-problem-c0048-discontinuity-of-the-potts-phase-transition-on-z-d-for-q-3-d-3",
+          "No independent review; result status attempted_unsolved"
+        ],
+        "created_at": "2026-09-07T08:26:45.041016+00:00",
+        "domain": "probability theory",
+        "id": "claim_9830d2b5c32b82afa88de780611e6b0fe5e81b7d425ff5fabff71dad19cc6930",
+        "kind": "concept",
+        "schema_version": 1,
+        "statement": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Examine whether the reflection-positivity chessboard argument can be pushed down from q >= q_c(d) large to q = 3 in d = 3 using improved contour entropy bounds. Result: The Kotecky-Shlosman argument proves a first-order transition when the entropy of contours (bounded by e^{c |contour|}) is beaten by the energy gain, which requires q large enough that log q exceeds a lattice-dependent constant; in d = 3 the best constants give q >= some number in the tens. Improving to q = 3 needs the exact contour entropy, which is not available; numerically the d = 3, q = 3 transition is weakly first order with a tiny latent heat, so any argument must be sharp to within a few percent, beyond what chessboard estimates give. Alternative route through the random-cluster representation: discontinuity is equivalent to non-uniqueness of the infinite-volume random-cluster measure at p_c, i.e. to the wired measure having an infinite cluster at p_c while the free one does not; for q > 4 in d = 2 this was done via the six-vertex transfer matrix, a planar tool. No d = 3 substitute. No result. Obstruction: Contour-entropy constants are far from sharp and the two-dimensional transfer-matrix route has no three-dimensional analogue.",
+        "status": "unverified"
+      }
+    }
+  ],
+  "tables": [
+    "schema_meta",
+    "bundle_manifests",
+    "nodes",
+    "claims",
+    "evidence",
+    "evidence_attestations",
+    "evidence_receipts",
+    "mistakes",
+    "reflexes",
+    "reflex_sources",
+    "verification_events",
+    "verification_event_evidence",
+    "edges",
+    "bundle_members",
+    "claim_provenance",
+    "edge_retractions"
+  ],
+  "claim_columns": [
+    "id",
+    "payload_json",
+    "digest",
+    "created_at"
+  ]
+}

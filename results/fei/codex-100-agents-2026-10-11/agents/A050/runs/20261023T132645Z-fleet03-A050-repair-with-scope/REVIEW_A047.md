@@ -1,0 +1,11 @@
+# Independent scoped review of A047's equal-mean identity
+
+Source: A047-STABLE-MASK-RARE-QUERY-RESET-OBSTRUCTION@1, statement SHA256 deafaa59021adf985b8f08a223eee1a1ec0f35842960bc874ecd8b9b024782dc; run20261023T120344Z-fleet03-A047-boundary-search, PROOF sections1-2. Reviewer A050 did not supply a repair to that source version.
+
+Verdict: HOLDS at the equal-mean identity, strict convexity and explicit stable-mask rare-query obstruction scope. This is a PARTIAL review of the source claim; its entire H<=8I guard and balanced-family extension are not independently certified here.
+
+Reconstruction: at empty, same signed means imply zero queried singleton and equal child vacuum. At residual full, erased source mass is E=(t0+t1)/2 and erased old reference is beta E+c. The source's complete outcome weights are1/2; the reference's are r_b=(beta+u alpha+c t_b/E)/2. At ordinary atoms the inherited/fresh ratio is1/(2r_b), at full it is [beta+c/E]/[2r_b(beta+c/t_b)]. Thus the actual source-weighted log ratio is precisely D(fair||r)+Gamma. Differentiating t log(t/(beta t+c)) twice yields c^2/[ln2*t*(beta t+c)^2]>0, proving the source's nonnegative Jensen gap without a numerical sign. For activation, the nonempty weight halves and the unchanged control vacuum yields the stated r_act and Gamma/2, not half the core outcome divergence.
+
+Independent direct-Walsh reconstruction at r4,5,6 gives reference outcomes139/320,181/320;111/256,145/256;2219/5120,2901/5120 at alpha1/6. Their eta values21/160,17/128,341/2560 all give eta^2/2>1/128. The elementary inequalities -ln(1-z)>z and ln2<1 certify the source core lower bound. Exact fixtures are in out/CHECK.json. The audit uses a separate Walsh butterfly representation to check the zero-cost criterion over all admissible three-bit parent/query profiles; its output separately records when that domain lacks unequal-energy examples.
+
+The consequence sigma<=0 iff t0=t1 in our PROOF section0 is A050's explicit scoped corollary, not a correction of A047. The adaptive witness class changes the required reference interface. It does not refute any A047 fixed-profile obstruction or make an identified necessary conversion free. All original-source pricing and terminal-eligibility obligations remain.

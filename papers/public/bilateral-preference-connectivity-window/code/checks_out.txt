@@ -1,0 +1,33 @@
+== 1. constants (exact rational arithmetic)
+  PASS  a - 1 - log a > 1.0125, a = 5/32   [log(32/5) > 2.0125 - 5/32]
+  PASS  b - 1 - log b > 1, b = 32/5        [log(32/5) < 32/5 - 2]
+  PASS  B - 1 - log B >= B/2 at B = 6      [log 6 < 2; B/2 - 1 - log B increases for B > 2]
+  PASS  log 3 > 1
+  PASS  phi(2) = 2 log 2 - 1 > 0            [log 2 > 1/2]
+  PASS  gamma = log(2/3) + 1/2 > 0          [log(3/2) < 1/2]
+  PASS  7a = 35/32 > 1
+  PASS  13a/2 = 65/64 > 1
+  (floating point: a-1-log a = 1.012548, b-1-log b = 3.543702, phi(2) = 0.386294, gamma = 0.094535)
+
+== 2. Lemma 2.1 against Monte Carlo (g = q, q(x) = P(Bin(N,x) >= k))
+  m=40 k=3 N=40  A=all      MC = 0.057827 +- 0.000217   formula (2.1) = 0.057771
+  m=40 k=3 N=40  A=[1, 3]     MC = 0.087685 +- 0.000259   bound (2.2) = 0.303331   ok
+  m=40 k=3 N=40  A=[3]        MC = 0.499984 +- 0.000457   bound (2.2) = 0.500000   ok
+  m=40 k=3 N=40  A=[2, 3]     MC = 0.215405 +- 0.000398   bound (2.2) = 0.303331   ok
+  m=60 k=4 N=55  A=all      MC = 0.014064 +- 0.000099   formula (2.1) = 0.014100
+  m=60 k=4 N=55  A=[1, 4]     MC = 0.035322 +- 0.000153   bound (2.2) = 0.339971   ok
+  m=60 k=4 N=55  A=[4]        MC = 0.450628 +- 0.000447   bound (2.2) = 0.451242   ok
+  m=60 k=4 N=55  A=[2, 3, 4]  MC = 0.068614 +- 0.000232   bound (2.2) = 0.111002   ok
+
+== 3. M e^k for Lemma 2.2 (m = N = n, k = round(log n)); also (1-mu)^m e^k
+  n=    1000 k= 6   M e^k = 1.076249   (1-mu)^m e^k = 0.988030
+  n=    1000 k= 7   M e^k = 1.048497   (1-mu)^m e^k = 0.982581
+  n=   10000 k= 9   M e^k = 1.035558   (1-mu)^m e^k = 0.996853
+  n=   10000 k=10   M e^k = 1.025616   (1-mu)^m e^k = 0.996006
+  n=  100000 k=11   M e^k = 1.022364   (1-mu)^m e^k = 0.999505
+  n=  100000 k=12   M e^k = 1.017039   (1-mu)^m e^k = 0.999400
+  n= 1000000 k=13   M e^k = 1.013589   (1-mu)^m e^k = 0.999929
+  n= 1000000 k=14   M e^k = 1.010517   (1-mu)^m e^k = 0.999916
+  n=10000000 k=16   M e^k = 1.006413   (1-mu)^m e^k = 0.999989
+  n=10000000 k=17   M e^k = 1.005000   (1-mu)^m e^k = 0.999987
+done

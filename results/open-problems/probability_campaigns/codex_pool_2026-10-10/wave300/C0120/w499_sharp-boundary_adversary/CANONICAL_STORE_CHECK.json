@@ -1,0 +1,43 @@
+{
+  "path": "~/math-brain-build/local/population/brain.sqlite3",
+  "mode": "read-only",
+  "purpose": "Target-scoped owner solved/retired-status check; no absence inference",
+  "matches": [
+    {
+      "table": "nodes",
+      "record": {
+        "id": "claim_c333c01203c54b29957e1bfa0f706f82",
+        "title": "There are exactly 1845 self-avoiding walks of length 10 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-4,1),"
+      }
+    },
+    {
+      "table": "nodes",
+      "record": {
+        "id": "claim_132362f2dca79cea8a29889848ae88c012047a46644ee6ee0dcc9df5603a5098",
+        "title": "Open problem: Existence of the Liouville Langevin motion as a joint scaling limit"
+      }
+    },
+    {
+      "table": "claims",
+      "record": {
+        "id": "claim_c333c01203c54b29957e1bfa0f706f82",
+        "payload_json": "{\"assumptions\":[\"square lattice Z^2, nearest-neighbour steps\"],\"created_at\":\"2026-08-30T01:12:34.182189+00:00\",\"domain\":\"research.enumeration\",\"id\":\"claim_c333c01203c54b29957e1bfa0f706f82\",\"kind\":\"computation\",\"schema_version\":1,\"statement\":\"There are exactly 1845 self-avoiding walks of length 10 that start at (0,0), stay in the strip 0 <= y < 3, and avoid the sites (-4,1), (7,0). Computed 2026-08-30 by exhaustive enumeration on Z^2; the enumerator reproduces the published unconstrained counts 780, 5916, 44100 and 324932 at lengths 6, 8, 10 and 12.\",\"status\":\"unverified\"}"
+      }
+    },
+    {
+      "table": "claims",
+      "record": {
+        "id": "claim_132362f2dca79cea8a29889848ae88c012047a46644ee6ee0dcc9df5603a5098",
+        "payload_json": "{\"assumptions\":[\"Posed in Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes\",\"Current status unverified as of 2026-09-07\"],\"created_at\":\"2026-09-07T08:18:47.317243+00:00\",\"domain\":\"probability theory\",\"id\":\"claim_132362f2dca79cea8a29889848ae88c012047a46644ee6ee0dcc9df5603a5098\",\"kind\":\"concept\",\"schema_version\":1,\"statement\":\"OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Under a suitable time change, prove that the pair (h_eps, X_eps) of the regularised field and the associated Langevin-type walk converges jointly in law as eps -> 0 to (h, X) with h a CGFF and X a process with continuous non-constant paths correlated with h. Source: Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes, Problem 16.13, p. 226.\",\"status\":\"unverified\"}"
+      }
+    },
+    {
+      "table": "claims",
+      "record": {
+        "id": "claim_7891e285a213a1ead9b1e54b02b29177a06d86c6f3df76b6447ca94dbe6add7f",
+        "payload_json": "{\"assumptions\":[\"Refers to the open problem node open-problem-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro\",\"No independent review; result status attempted_unsolved\"],\"created_at\":\"2026-09-07T08:26:45.047569+00:00\",\"domain\":\"probability theory\",\"id\":\"claim_7891e285a213a1ead9b1e54b02b29177a06d86c6f3df76b6447ca94dbe6add7f\",\"kind\":\"concept\",\"schema_version\":1,\"statement\":\"ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Same block as the first-passage percolation sublinear variance problem; record the exact reduction. Result: The n/log n bound is the BKS entropy method; a power improvement n^{1-eps} would follow from a chaos exponent: if the polymer measure decorrelates under a noise of size n^{-eps'} on the environment (superconcentration with a rate), Talagrand's/Chatterjee's equivalence gives Var(log Z_n) <= n^{1-eps}. Conversely, the variance exponent is tied to the transversal fluctuation exponent by the KPZ scaling relation chi = 2 xi - 1 (Chatterjee 2013 proved the relation rigorously for FPP under existence of the exponents), so a power improvement needs a quantitative transversal-fluctuation bound xi < 1 with an explicit gap, which is known only in the exactly solvable models. The obstruction is the same wall the campaign records for FPP; no new input. Obstruction: Quantitative chaos rate or transversal fluctuation bound unavailable outside integrable models.\",\"status\":\"unverified\"}"
+      }
+    }
+  ],
+  "status": "SCOPED_READ_COMPLETED"
+}

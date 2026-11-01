@@ -1,0 +1,17 @@
+# Independent reconstruction: no funding from a preserved partition
+
+Source: A052 runs/20261023T055856Z-fleet03-A052-critical-source-structure/PRECONDITIONING_PROOF.md, read whole. Review acceptance is confined to sections1--3 and their displayed exact identities; sections4--5 are scope guards, reproduced or checked as stated below. No repair is supplied and no source authorship is claimed.
+
+For the lower triangular invertible input map x_A=P y_A+b, x_C=Q y_A+R y_C+c, the actual child at u is chi_dC times g_(Pu+b) composed with the invertible map y_C -> R y_C+Qu+c, times a global branch sign. Thus the multiset of complete child affine-character orbits and all uniform original reaches is unchanged. Root and child entropies, and each child orbit minimum a, are unchanged up to branch permutation.
+
+Independently, define T=E a(child). Then Q+rho=I(root)-T. The transformed T is identical, so Q'+rho'-(I(root')-I(root))=Q+rho. Substitution into the exact physical restriction telescope gives D+S*=L-K(Q+rho). This proves the full compensated bank identity and shows precisely where an omitted root charge would enter. Conjugating a prescribed reset produces the same chosen terminal, so the argument also applies without an optimizer. It does not permit a new truncated family of allowed resets.
+
+For threshold ranks, take g'(y)=sign*chi_d(y)g(Ry+c). Its directional disagreement probability at v is either w_g(Rv) or its complement, according to d dot v. Taking min(w,1-w) removes the character sign. Cheap subspaces are therefore related by R^(-1); transport an already-booked U by the same map. Binary dimensions of V+U and of U are unchanged, proving quotient-rank covariance for every threshold, including ties. This statement requires no independence between proposed exchanges.
+
+If the root is a least-essential-dimension positive fixed-K witness, every complete child affine image is a strictly smaller Boolean function, so each optimized child has H-Ka<=0. Averaging gives S*>=0. Merely licensing physical children does not imply this stronger sign, because a may be smaller than their physical influence. The source correctly keeps these eligibility hypotheses distinct.
+
+The all-k quadratic guard is consistent: translating control1 by queried a leaves all physical child influences unchanged, but changes the a derivative from the balanced in-slab derivative p/2 to two disjoint activation slabs of probability p and negative density3/8 each. Thus Delta=p/4 and Q'+rho'=3p/2 while Q+rho=5p/4. Compensation removes exactly p/4. The independent checker reproduces k2,3 using direct characters, physical edges, and greedy finite directional minima.
+
+The changed-partition guard is also valid: the two-bit point defect has H2 and influence1, unchanged by its coordinate swap. An initially irrelevant query has L0 and optimized debit0; after swapping the irrelevant coordinate with a relevant one it has L2 and optimized debit1. Such a swap changes the physical partition, so it is outside the theorem.
+
+Verdict: HOLDS at the stated sections1--3 scope, without repair. This review is a mathematical reconstruction and finite adversarial replay, not a formal-kernel certificate, shared-registry adoption, or a new universal selection theorem. A053 uses the result only to rule out free query-preserving preconditioning. The new multi-surgery exclusion is self-contained and does not depend on it.

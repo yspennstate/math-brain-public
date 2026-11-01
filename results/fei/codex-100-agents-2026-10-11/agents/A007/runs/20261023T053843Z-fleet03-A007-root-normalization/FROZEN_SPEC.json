@@ -1,0 +1,13 @@
+{
+  "helper_version": "A007-separated-root-components-v1",
+  "actual_Boolean_family": "f=2 product_{j=1}^r OR_{w_j}(X_j)-1 on disjoint blocks; all actual positive prime conjunctions choose one positive variable per block",
+  "domain": "Small direct tables (r,w)=(2,2),(3,2),(2,3); every output subset; three deterministic feasible reference vectors. Analytic family w=4..8, r=2^w, t=0..r blocks of width w+1 and the rest width w.",
+  "case_count": "3 complete small Boolean tables; 9 fixed references; all nonempty root subsets for at most9 primes and every nonempty output; 501 heterogeneous parameter orbits. Pilot uses (r,w)=(2,2), all3 references and w=4,t in {0,8,16}.",
+  "symmetry": "No reduction for small truth/root tables. Permuting disjoint clauses identifies width patterns with the same t; the analytic theorem permits arbitrary feasible nonuniform lambda and arbitrary orders.",
+  "arithmetic": "Integer Walsh and physical flips; exact Fraction root priors and component factorization; rational probability upper bounds and analytic logarithm inequalities. No floating-point sign acceptance.",
+  "memory_estimate_mb": 100,
+  "maximum_runtime_seconds": 55,
+  "pilot_max_seconds": 55,
+  "no_dimension_escalation": true,
+  "targets": "Full actual queue root-component upper bound, retained D; all-prime cost/I>r/7; independent spectral entropy upper<=6I. Universal proofs are analytic, not inferred from finite cases."
+}

@@ -1,0 +1,15 @@
+Executed symbolic regression check for REPORT.md.
+
+det(H)= -e*tau**2
+H^{-1}=
+Matrix([
+[(-c*e + d**2)/(e*tau**2), 1/tau, -d/(e*tau)],
+[                         1/tau,     0,          0],
+[                    -d/(e*tau),     0,        1/e]
+])
+
+example charpoly= (lambda - 2)*(lambda - 1)*(lambda + 1)
+example eigenvalues= {2: 1, 1: 1, -1: 1}
+
+Numerical partner-bound instance for tau=sqrt(3/2), e=4/3:
+4*sqrt(2)/sqrt(e*tau) = 4.426727678801287

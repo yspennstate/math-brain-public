@@ -1,0 +1,6 @@
+from pathlib import Path
+import json,hashlib,datetime
+R=Path(__file__).resolve().parents[1]
+s={'frozen_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'helper_version':'A074-unequal-bias-binary-Moebius-boundary-v1','actual_Boolean_family':'J on six identical disjoint copies of six-bit core negative on{0,1,2}; actual physical query in outerblock0 at innercoordinate0 or2','domain':'exactly2 positive source fixtures,36-bit parents and35-bit children; all6 unequal pivotal probabilities retained','case_count':2,'symmetry':'none; two explicitly tagged queries; all6 outer directions checked','arithmetic':'exact Fraction binary Moebius centering at unequal biases including0, own geometric log intervals, separate physical fiber/outer edge enumeration','memory_estimate_MB':100,'maximum_runtime_seconds':120,'pilot':'coordinate2 constant-child endpoint,60seconds cap','code_sha256':hashlib.sha256((R/'code/boundary.py').read_bytes()).hexdigest(),'goal':'reconstruct positive Delta C and true Delta H>4Inf; no assertion that a reserve is available'}
+(R/'BOUNDARY_SPEC.json').write_text(json.dumps(s,indent=2)+'\n',encoding='utf-8',newline='\n')
+print('Two-case boundary specification frozen.')

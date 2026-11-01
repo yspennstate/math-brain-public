@@ -1,0 +1,19 @@
+ENVELOPE_AND_BAND_PASS w=1 Nmax=4 checked_state_words=5440
+ENVELOPE_AND_BAND_PASS w=2 Nmax=3 checked_state_words=21504
+ENVELOPE_AND_BAND_PASS w=3 Nmax=2 checked_state_words=81920
+EXPECT w=1 N=1 lower=1/2 upper=1 gap=1/2 lower_over_N=1/2 upper_over_N=1
+EXPECT w=1 N=2 lower=9/8 upper=29/16 gap=11/16 lower_over_N=9/16 upper_over_N=29/32
+EXPECT w=1 N=3 lower=29/16 upper=81/32 gap=23/32 lower_over_N=29/48 upper_over_N=27/32
+EXPECT w=1 N=4 lower=161/64 upper=413/128 gap=91/128 lower_over_N=161/256 upper_over_N=413/512
+EXPECT w=2 N=1 lower=1/2 upper=1 gap=1/2 lower_over_N=1/2 upper_over_N=1
+EXPECT w=2 N=2 lower=9/8 upper=2 gap=7/8 lower_over_N=9/16 upper_over_N=1
+EXPECT w=2 N=3 lower=29/16 upper=373/128 gap=141/128 lower_over_N=29/48 upper_over_N=373/384
+EXPECT w=2 N=4 lower=323/128 upper=1911/512 gap=619/512 lower_over_N=323/512 upper_over_N=1911/2048
+EXPECT w=6 N=1 lower=1/2 upper=1 gap=1/2 lower_over_N=1/2 upper_over_N=1
+EXPECT w=6 N=2 lower=9/8 upper=2 gap=7/8 lower_over_N=9/16 upper_over_N=1
+EXPECT w=6 N=3 lower=29/16 upper=3 gap=19/16 lower_over_N=29/48 upper_over_N=1
+GAMMA1_BRACKET_PASS N=1 lower=1/2 target=7/10 upper=1
+GAMMA1_BRACKET_PASS N=2 lower=9/8 target=7/5 upper=29/16
+GAMMA1_BRACKET_PASS N=3 lower=29/16 target=21/10 upper=81/32
+GAMMA1_BRACKET_PASS N=4 lower=161/64 target=14/5 upper=413/128
+ALL_EXACT_CHECKS_PASS

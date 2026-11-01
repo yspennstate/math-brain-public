@@ -1,0 +1,27 @@
+{
+  "run_id": "20260923T172848Z-fleet01-B05-QFORM-auto14",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "projected_crossing_currency_identity",
+      "statement": "||m_J||^2 e_2(CC^T) = c det(B)^2 det(G_J) det(H_I)",
+      "method": "50 random full-rank numerical instances constructed from whitened 3D frames; direct matrix evaluation",
+      "max_relative_error": 4.54e-17
+    },
+    {
+      "name": "volume_row_marginal_identity",
+      "statement": "alpha_i = t_i^T H_I^{-1} t_i",
+      "method": "10 random full-rank instances; compare diagonal of the orthogonal projector onto col(C) with transverse leverage",
+      "max_absolute_error": 1.34e-15
+    },
+    {
+      "name": "MSS_constant",
+      "epsilon": 0.015625,
+      "beta": 0.6924016952966368,
+      "a": 0.30759830470336325,
+      "alpha_gate_upper": 0.05079508703149716,
+      "density_prefactor_upper": 35.507729558879454
+    }
+  ],
+  "scope_note": "Finite numerical checks support the algebra and constants only; the proof is the symbolic derivation in REPORT.md."
+}

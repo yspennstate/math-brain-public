@@ -1,0 +1,12 @@
+{
+  "helper_version": "A094-stage3-independent-signed-mux-v2",
+  "family": "All ordered labelled two-bit children sharing bit 0, plus 8 frozen three-bit child tables paired with every two-bit child sharing bit 0",
+  "domain": {"two_bit_pairs": "16*16", "three_bit_truth_table_labels": [0,1,3,15,23,85,105,255], "two_bit_second_child_labels": "0..15", "reference_variants": 3},
+  "case_count": {"Boolean_pairs": 384, "reference_cases": 1152},
+  "symmetry": "None. The eight additional tables are an explicit adversarial menu, not representatives of all three-bit functions.",
+  "arithmetic": "Unchanged exact Fraction, integer transform, physical edges, prime-log identities and 36-term outward rational logarithm bounds",
+  "memory_estimate_MB": 95,
+  "maximum_runtime_seconds": 55,
+  "reason_for_reduction": "Original 4352-pair job was interrupted with Ctrl-C after no completion output; it is not counted as passing. The initial disjoint feasibility pilot completed in 5.636 seconds. Reduce the fixed domain instead of extending the computation budget.",
+  "command": "python -X utf8 code/check.py shared"
+}

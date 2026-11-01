@@ -1,0 +1,16 @@
+{
+ "status":"RUNTIME_UNVERIFIED",
+ "target":"A054_odd_residues",
+ "statement":"theorem A054_odd_residues : ∀ a b : Fin 8, a.val % 2 = 1 → b.val % 2 = 1 → (a.val*a.val+b.val*b.val)%8=2 := by decide",
+ "command":"python -X utf8 lean_check.py --core --stmt <statement> --target A054_odd_residues --timeout45 --json (actual flag is --timeout 45)",
+ "formal_target_verified":false,
+ "axioms":null,
+ "compiler_exit_code":null,
+ "compiler_output":"",
+ "seconds":59.733,
+ "source_sha256":"fd60a383a7b26c24c89c67922d39874b9081c1df964b2e30815e97317c12cf10",
+ "compiler_sha256":"af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+ "generated_sha256":"6310d854394cb95690e295a499c2e88add6a3a084e8d4878103c4851bd6f3fb2",
+ "receipt_directory":"~\\AppData\\Local\\Temp\\lean_check\\b1c01a2ba2f74d51b706d6494079b993",
+ "scope":"Finite odd residue lemma only, even if successful; no full-prose Lean certification. No retry."
+}

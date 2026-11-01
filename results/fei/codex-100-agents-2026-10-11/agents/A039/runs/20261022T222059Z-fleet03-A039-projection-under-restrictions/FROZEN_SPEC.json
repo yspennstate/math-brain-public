@@ -1,0 +1,28 @@
+{
+  "helper_version": "A039-rare-history-v2 (after failed runtime-only v1 pilot; outward interval rounding at 2^-140)",
+  "family": "actual F_n priority gate with point-defect core",
+  "parameter_domain": {
+    "main_n": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "boundary_n": [
+      1,
+      2
+    ],
+    "depths": "all k0,k1 in [0,n]"
+  },
+  "case_count": "126 admitted depth pairs plus 13 boundary depth pairs; one full inherited-reference history at n=3,4; next-controller guard n=3..6; five scalar competitor fixtures and three scalar boundary certificates",
+  "scalar_certificate_domain": [16, 17, 24, 32, 64],
+  "spec_amendment": "Before main: explicit scalar domain added. The passing revised pilot already executed this fixed domain from frozen code, but its numeric list had been omitted from the original prose spec.",
+  "symmetry": "proof: only unique all-zero path matters in each a branch; all labeled coordinate orders equivalent under data permutation for actual H/I. No claim that inherited references may be dropped on other paths.",
+  "arithmetic": "integer Walsh; Fraction probabilities/influences and prime-log identities; rational atanh logarithm enclosures with proved tail; 50 rational bisections for canonical c",
+  "memory_estimate_mb": 100,
+  "pilot_max_seconds": 60,
+  "main_max_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "heavy_jobs": 0,
+  "outputs": "out/CHECK.json and out/PILOT.json, exact rational endpoints; decimals diagnostic only"
+}

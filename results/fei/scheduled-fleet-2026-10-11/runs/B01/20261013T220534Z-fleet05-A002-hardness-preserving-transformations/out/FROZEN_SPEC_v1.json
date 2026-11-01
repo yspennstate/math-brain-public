@@ -1,0 +1,24 @@
+{
+  "helper_version": "A002-correlated-tag-v1",
+  "helper_sha256": "0b57224063e08f78fc0d2dcc277639368ce3fae7160a1661dc96d9330b079577",
+  "family": "actual Boolean character-tagged bent lift; all seed signs n=1,2,3 basis map; all two-tag maps n=1,2; balanced and canonical two-bit seed tensors",
+  "domain": {
+    "basis": "n=1,2,3 all truth tables, m=ceil(log2(n+1))",
+    "all_small_maps": "n=1,2 all truth tables and all (2^n)^2 maps for m=1",
+    "tensors": "all16 two-bit seeds, t=1,2,3, balanced parity and canonical seed versions"
+  },
+  "case_count": {
+    "pilot": 292,
+    "full": 644,
+    "basis": 276,
+    "all_small_maps": 272,
+    "tensors": 96
+  },
+  "symmetry": "none; fixture executions may overlap",
+  "arithmetic": "Integer FWHT, Fraction, formal rational prime-log expressions; exact physical edges",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds": 60,
+  "max_dimension": 13,
+  "no_auto_escalation": true,
+  "revision_note": "Removed unreachable formatting expression after pilot; mathematical helper and fixed domain unchanged. Final helper pinned before full run."
+}

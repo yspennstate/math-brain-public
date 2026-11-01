@@ -1,0 +1,109 @@
+{
+  "units": "bits",
+  "verdicts": [
+    {
+      "class": "A051 dimension-minimal threshold witnesses",
+      "embedding": "g*h",
+      "preserved": [
+        "Actual Booleanity",
+        "Exact tensor spectrum and entropy/influence additivity"
+      ],
+      "violated": [
+        {
+          "condition": "Every proper physical descendant has D_C<=0",
+          "block": "spectator Y",
+          "exact_left_side": "L_Y-C I_Y-D_C(F)=-D_C(g)<0 for a violating core"
+        }
+      ],
+      "unresolved": [
+        "Any other arbitrary-core encoding preserving all individual criticality tests"
+      ]
+    },
+    {
+      "class": "A051 dimension-minimal threshold witnesses",
+      "embedding": "1+A_r(g-1)",
+      "preserved": [
+        "Booleanity",
+        "Rare support and small influence after standard amplification",
+        "Exact arbitrary-bias activation spectrum"
+      ],
+      "violated": [
+        {
+          "condition": "All proper child deficits nonpositive",
+          "block": "all r controls",
+          "exact_left_side": "-2^-r D_C(g)"
+        },
+        {
+          "condition": "Optional singleton control test",
+          "block": "one control",
+          "exact_left_side": "-D_C(F_(r-1))/2; fails iff residual activation deficit is positive"
+        }
+      ],
+      "unresolved": [
+        "Universally affordable proper-block selection"
+      ]
+    },
+    {
+      "class": "A052 translation/syndrome necessary tests and A053 qualitative admissions",
+      "embedding": "one-point surgery on (-1)^z G(x)",
+      "preserved": [
+        "Tensor primitivity",
+        "Full Fourier support",
+        "Every coordinate essential",
+        "Connected multiplicative-curvature graph",
+        "Balanced-tensor limiting ratio"
+      ],
+      "violated": [
+        {
+          "condition": "Fresh-sign rank-one/singleton criticality",
+          "domain": "N>=5,C>=1,D_C(J)>0",
+          "exact_left_side": "E_z D_C(J_z)>D_C(J)+13/32"
+        }
+      ],
+      "unresolved": [
+        "Quantitative separation for all genuine critical signs"
+      ]
+    },
+    {
+      "class": "A054 thin-selector-cylinder plus density critical class",
+      "embedding": "two-tag connected wrapper T",
+      "preserved": [
+        "One actual connected negative component",
+        "Proper selector block A={y}",
+        "Selector point fixes d_y=1>=|A|/2",
+        "Connected data support",
+        "Density p=(3-Eg)/8 in [1/4,1/2]",
+        "Limiting optimal FEI constant after tensor amplification"
+      ],
+      "violated": [
+        {
+          "condition": "Every proper physical restriction has nonpositive D_C",
+          "block": "two tags {w,y}",
+          "exact_left_side": "-D_C(g)/4"
+        }
+      ],
+      "unresolved": [
+        "Universal admission of affordable separators with nonpositive-deficit terminal children"
+      ],
+      "scope": "A054 critical-class payment remains intact; geometry/density alone are FEI-hard"
+    },
+    {
+      "class": "Full ratio criticality",
+      "embedding": "g*h",
+      "preserved": [
+        "Possible when nonconstant factors have equal ratios and no descendant improves them"
+      ],
+      "violated": [
+        {
+          "condition": "No higher-ratio child",
+          "when": "H(g)/I(g)>R(g*h)",
+          "exact_left_side": "L_Y-R(F) I_Y=-[H(g)-R(F)I(g)]<0"
+        }
+      ],
+      "unresolved": [
+        "No universal equivalence or exclusion is inferred from averaged block tests alone"
+      ]
+    }
+  ],
+  "universal_status": "OPEN"
+}

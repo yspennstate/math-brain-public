@@ -1,0 +1,78 @@
+--- a/.claude/dreaming/math_source_fallback.py
++++ b/.claude/dreaming/math_source_fallback.py
+@@ -0,0 +1,75 @@
++"""Bounded read-only title lookup for source recovery after a math recall timeout.
++
++This is a diagnostic source reader, not ranked recall or an applicability verdict.
++It never traverses edges, loads a model, writes the store, or deploys anything.
++"""
++from __future__ import annotations
++
++import argparse
++import json
++import sqlite3
++import time
++from pathlib import Path
++
++
++def lookup(database: Path, title_terms: list[str], limit: int = 5, budget: float = 2.0, node_id: str | None = None) -> dict:
++    if not database.is_file():
++        raise FileNotFoundError(database)
++    if not 1 <= limit <= 20 or not 0 < budget <= 5:
++        raise ValueError('limit must be 1..20 and SQL budget must be in (0,5] seconds')
++    terms = [term.strip().lower() for term in title_terms]
++    if node_id is None and (not terms or any(len(term) < 3 or len(term) > 120 for term in terms)):
++        raise ValueError('provide one or more title fragments of 3..120 characters')
++    if node_id is not None and (not node_id or len(node_id)>200):
++        raise ValueError('node_id must contain 1..200 characters')
++    started = time.perf_counter()
++    # as_uri escapes spaces, question marks and other filename delimiters.
++    connection = sqlite3.connect(database.resolve().as_uri()+'?mode=ro', uri=True, timeout=0.2)
++    try:
++        connection.execute('PRAGMA query_only=ON')
++        deadline = time.perf_counter()+budget
++        connection.set_progress_handler(lambda: int(time.perf_counter()>deadline), 1000)
++        if node_id is not None:
++            sql = 'SELECT id,kind,title,body,metadata_json FROM nodes WHERE id = ?'
++            parameters = [node_id]
++        else:
++            clauses = ['instr(lower(title), ?) > 0' for _ in terms]
++            sql = ('SELECT id,kind,title,body,metadata_json FROM nodes WHERE '
++                   + ' AND '.join(clauses) + ' LIMIT ?')
++            parameters = [*terms, limit]
++        rows = connection.execute(sql, parameters).fetchall()
++    finally:
++        connection.close()
++    hits = []
++    for row in rows:
++        metadata = json.loads(row[4])
++        hits.append({'id':row[0], 'kind':row[1], 'title':row[2], 'body':row[3],
++                     'metadata':metadata, 'source_checked':False,
++                     'applicability_checked':False, 'current_revision_checked':False})
++    return {'diagnostic':'bounded-title-source-lookup', 'ranked_recall':False,
++            'database':str(database), 'title_terms':terms, 'node_id':node_id, 'limit':limit,
++            'sql_budget_seconds':budget, 'seconds':time.perf_counter()-started,
++            'hit_count':len(hits), 'hits':hits,
++            'warning':'Unranked candidate rows; inspect source, current revision and full assumptions before use.'}
++
++
++def main() -> int:
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('database', type=Path)
++    parser.add_argument('title_terms', nargs='*')
++    parser.add_argument('--node-id', help='read exactly one supplied node id using its primary-key index')
++    parser.add_argument('--limit', type=int, default=5)
++    parser.add_argument('--budget', type=float, default=2.0)
++    args = parser.parse_args()
++    try:
++        result = lookup(args.database, args.title_terms, args.limit, args.budget, args.node_id)
++    except (OSError, ValueError, sqlite3.Error) as exc:
++        print(json.dumps({'diagnostic':'bounded-title-source-lookup', 'error':str(exc),
++                          'hit_count':0, 'abstained':True}))
++        return 2
++    print(json.dumps(result, ensure_ascii=False))
++    return 0
++
++
++if __name__ == '__main__':
++    raise SystemExit(main())

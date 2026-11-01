@@ -1,0 +1,99 @@
+python 3.14.3, numpy 2.4.3, sympy 1.14.0, mpmath 1.3.0
+Part A: exact stabilizations
+PASS  A H=-2 n=1024 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (2401 fired sites, 0.0 s)
+PASS  A H=-2 n=1024 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 5630 >= 4704 internal edges; least relative slack 0.1536)
+PASS  A H=-2 n=1024 the fired set is a square (Fey-den Boer and Redig)  (half side 24)
+     radii/sqrt(n): inner 0.7812 outer 1.0607; support at 0,15,30,45 deg: 0.7500, 0.9186, 1.0245, 1.0607; mean of eta+H on the fired set 0.3449
+PASS  A H=-2 n=4096 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (9801 fired sites, 0.2 s)
+PASS  A H=-2 n=4096 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 23302 >= 19404 internal edges; least relative slack 0.1517)
+PASS  A H=-2 n=4096 the fired set is a square (Fey-den Boer and Redig)  (half side 49)
+     radii/sqrt(n): inner 0.7812 outer 1.0828; support at 0,15,30,45 deg: 0.7656, 0.9377, 1.0459, 1.0828; mean of eta+H on the fired set 0.3775
+PASS  A H=-2 n=16384 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (39601 fired sites, 1.9 s)
+PASS  A H=-2 n=16384 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 94790 >= 78804 internal edges; least relative slack 0.1375)
+PASS  A H=-2 n=16384 the fired set is a square (Fey-den Boer and Redig)  (half side 99)
+     radii/sqrt(n): inner 0.7812 outer 1.0938; support at 0,15,30,45 deg: 0.7734, 0.9473, 1.0565, 1.0938; mean of eta+H on the fired set 0.3936
+PASS  A H=-2 n=65536 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (156025 fired sites, 61.9 s)
+PASS  A H=-2 n=65536 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 376006 >= 311260 internal edges; least relative slack 0.1396)
+PASS  A H=-2 n=65536 the fired set is a square (Fey-den Boer and Redig)  (half side 197)
+     radii/sqrt(n): inner 0.7734 outer 1.0883; support at 0,15,30,45 deg: 0.7695, 0.9425, 1.0512, 1.0883; mean of eta+H on the fired set 0.4099
+PASS  A H=-1 n=1024 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (697 fired sites, 0.0 s)
+PASS  A H=-1 n=1024 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 1561 >= 1336 internal edges; least relative slack 0.1684)
+     radii/sqrt(n): inner 0.4646 outer 0.4760; support at 0,15,30,45 deg: 0.4375, 0.4711, 0.4726, 0.4419; mean of eta+H on the fired set 1.2396; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.3989, (H+2)^(-1/2)/sqrt(pi) = 0.5642
+PASS  A H=-1 n=4096 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (3029 fired sites, 0.1 s)
+PASS  A H=-1 n=4096 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 6881 >= 5936 internal edges; least relative slack 0.1536)
+     radii/sqrt(n): inner 0.4752 outer 0.4993; support at 0,15,30,45 deg: 0.4688, 0.4973, 0.4940, 0.4640; mean of eta+H on the fired set 1.2717; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.3989, (H+2)^(-1/2)/sqrt(pi) = 0.5642
+PASS  A H=-1 n=16384 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (12073 fired sites, 4.5 s)
+PASS  A H=-1 n=16384 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 27973 >= 23904 internal edges; least relative slack 0.1356)
+     radii/sqrt(n): inner 0.4751 outer 0.4993; support at 0,15,30,45 deg: 0.4688, 0.4973, 0.4950, 0.4696; mean of eta+H on the fired set 1.3170; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.3989, (H+2)^(-1/2)/sqrt(pi) = 0.5642
+PASS  A H=-1 n=65536 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (47973 fired sites, 14.0 s)
+PASS  A H=-1 n=65536 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 112545 >= 95464 internal edges; least relative slack 0.1297)
+     radii/sqrt(n): inner 0.4723 outer 0.4993; support at 0,15,30,45 deg: 0.4688, 0.4973, 0.4950, 0.4696; mean of eta+H on the fired set 1.3460; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.3989, (H+2)^(-1/2)/sqrt(pi) = 0.5642
+PASS  A H=0 n=1024 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (445 fired sites, 0.0 s)
+PASS  A H=0 n=1024 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 888 >= 844 internal edges; least relative slack 0.0521)
+     radii/sqrt(n): inner 0.3750 outer 0.3763; support at 0,15,30,45 deg: 0.3438, 0.3644, 0.3686, 0.3757; mean of eta+H on the fired set 1.9955; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.3257, (H+2)^(-1/2)/sqrt(pi) = 0.3989
+PASS  A H=0 n=4096 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (1793 fired sites, 0.1 s)
+PASS  A H=0 n=4096 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 3832 >= 3492 internal edges; least relative slack 0.0974)
+     radii/sqrt(n): inner 0.3727 outer 0.3757; support at 0,15,30,45 deg: 0.3594, 0.3754, 0.3701, 0.3757; mean of eta+H on the fired set 2.1372; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.3257, (H+2)^(-1/2)/sqrt(pi) = 0.3989
+PASS  A H=0 n=16384 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (7161 fired sites, 0.5 s)
+PASS  A H=0 n=16384 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 15772 >= 14136 internal edges; least relative slack 0.1044)
+     radii/sqrt(n): inner 0.3672 outer 0.3763; support at 0,15,30,45 deg: 0.3594, 0.3754, 0.3730, 0.3757; mean of eta+H on the fired set 2.2025; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.3257, (H+2)^(-1/2)/sqrt(pi) = 0.3989
+PASS  A H=0 n=65536 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (28653 fired sites, 6.1 s)
+PASS  A H=0 n=65536 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 64300 >= 56932 internal edges; least relative slack 0.1092)
+     radii/sqrt(n): inner 0.3672 outer 0.3762; support at 0,15,30,45 deg: 0.3633, 0.3762, 0.3730, 0.3757; mean of eta+H on the fired set 2.2441; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.3257, (H+2)^(-1/2)/sqrt(pi) = 0.3989
+PASS  A H=1 n=1024 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (293 fired sites, 0.0 s)
+PASS  A H=1 n=1024 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 627 >= 548 internal edges; least relative slack 0.1442)
+     radii/sqrt(n): inner 0.3078 outer 0.2965; support at 0,15,30,45 deg: 0.2812, 0.2959, 0.2946, 0.2873; mean of eta+H on the fired set 3.1399; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.2821, (H+2)^(-1/2)/sqrt(pi) = 0.3257
+PASS  A H=1 n=4096 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (1225 fired sites, 0.0 s)
+PASS  A H=1 n=4096 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 2623 >= 2372 internal edges; least relative slack 0.1058)
+     radii/sqrt(n): inner 0.3094 outer 0.3082; support at 0,15,30,45 deg: 0.2969, 0.3070, 0.3082, 0.2983; mean of eta+H on the fired set 3.1412; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.2821, (H+2)^(-1/2)/sqrt(pi) = 0.3257
+PASS  A H=1 n=16384 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (4945 fired sites, 0.2 s)
+PASS  A H=1 n=16384 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 10955 >= 9732 internal edges; least relative slack 0.1257)
+     radii/sqrt(n): inner 0.3094 outer 0.3110; support at 0,15,30,45 deg: 0.3047, 0.3105, 0.3092, 0.3038; mean of eta+H on the fired set 3.2154; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.2821, (H+2)^(-1/2)/sqrt(pi) = 0.3257
+PASS  A H=1 n=65536 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (19885 fired sites, 2.3 s)
+PASS  A H=1 n=65536 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 44515 >= 39456 internal edges; least relative slack 0.1196)
+     radii/sqrt(n): inner 0.3086 outer 0.3122; support at 0,15,30,45 deg: 0.3047, 0.3118, 0.3121, 0.3066; mean of eta+H on the fired set 3.2386; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.2821, (H+2)^(-1/2)/sqrt(pi) = 0.3257
+PASS  A H=2 n=1024 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (225 fired sites, 0.0 s)
+PASS  A H=2 n=1024 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 438 >= 416 internal edges; least relative slack 0.0529)
+     radii/sqrt(n): inner 0.2670 outer 0.2652; support at 0,15,30,45 deg: 0.2500, 0.2577, 0.2561, 0.2652; mean of eta+H on the fired set 3.9467; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.2523, (H+2)^(-1/2)/sqrt(pi) = 0.2821
+PASS  A H=2 n=4096 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (941 fired sites, 0.0 s)
+PASS  A H=2 n=4096 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 1986 >= 1812 internal edges; least relative slack 0.0960)
+     radii/sqrt(n): inner 0.2697 outer 0.2688; support at 0,15,30,45 deg: 0.2656, 0.2657, 0.2676, 0.2652; mean of eta+H on the fired set 4.1105; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.2523, (H+2)^(-1/2)/sqrt(pi) = 0.2821
+PASS  A H=2 n=16384 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (3801 fired sites, 0.1 s)
+PASS  A H=2 n=16384 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 8258 >= 7464 internal edges; least relative slack 0.1064)
+     radii/sqrt(n): inner 0.2721 outer 0.2718; support at 0,15,30,45 deg: 0.2656, 0.2713, 0.2704, 0.2707; mean of eta+H on the fired set 4.1726; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.2523, (H+2)^(-1/2)/sqrt(pi) = 0.2821
+PASS  A H=2 n=65536 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (15337 fired sites, 1.8 s)
+PASS  A H=2 n=65536 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 33862 >= 30396 internal edges; least relative slack 0.0936)
+     radii/sqrt(n): inner 0.2725 outer 0.2736; support at 0,15,30,45 deg: 0.2695, 0.2730, 0.2724, 0.2735; mean of eta+H on the fired set 4.2079; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.2523, (H+2)^(-1/2)/sqrt(pi) = 0.2821
+PASS  A H=-1 n=262144 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (189225 fired sites, 195.6 s)
+PASS  A H=-1 n=262144 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 448801 >= 377492 internal edges; least relative slack 0.1272)
+     radii/sqrt(n): inner 0.4682 outer 0.4956; support at 0,15,30,45 deg: 0.4668, 0.4939, 0.4916, 0.4668; mean of eta+H on the fired set 1.3718; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.3989, (H+2)^(-1/2)/sqrt(pi) = 0.5642
+PASS  A H=0 n=262144 stabilization, conservation, heights, symmetry, monotonicity, order ideal  (113777 fired sites, 107.4 s)
+PASS  A H=0 n=262144 weighted last-firing inequality on 28 weights  (sum of heights on the fired set 259684 >= 226808 internal edges; least relative slack 0.1050)
+     radii/sqrt(n): inner 0.3652 outer 0.3757; support at 0,15,30,45 deg: 0.3633, 0.3746, 0.3716, 0.3757; mean of eta+H on the fired set 2.2824; Levine-Peres constants (H+3)^(-1/2)/sqrt(pi) = 0.3257, (H+2)^(-1/2)/sqrt(pi) = 0.3989
+Part B: identities (SymPy)
+PASS  B integral of cos(2 theta) over (-pi/4, pi/4) is 1
+PASS  B integral of cos(2 theta) over (pi/4, alpha/2) is (sin(alpha) - 1)/2
+PASS  B integral of cos(2 theta) over (-alpha/2, alpha/2) is sin(alpha)
+PASS  B F = r^2 f gives F'' + F'/r - 4F/r^2 = r^2 f'' + 5 r f'
+PASS  B (r^5 f')' = r^3 (F'' + F'/r - 4F/r^2)
+PASS  B Laplacian of psi(r) cos(2 theta) is (psi'' + psi'/r - 4 psi/r^2) cos(2 theta) (three test functions psi)
+PASS  B integral over (0, r) of b t/2 is b r^2/4
+PASS  B r^5 f' = C + kappa r^4/4 gives f' = C/r^5 + kappa/(4r)
+PASS  B integral of kappa/(4t) over (r, r0) is (kappa/4) log(r0/r)
+PASS  B the lower bound a*1 + 2b*(sin(alpha) - 1)/2 equals a - b(1 - sin(alpha))
+PASS  B for u = r^2 cos(pi theta/alpha)^2, Delta u = 2 + (2 - 2 pi^2/alpha^2) cos(2 pi theta/alpha)
+PASS  B that u is C^1 across the edges: c and c' vanish at theta = alpha/2
+PASS  B its Fourier projection G = integral of Delta u * cos(2 theta) vanishes (alpha = 108, 135, 150, 170 deg)  (max 3.3e-34)
+Part C: polygon inequalities (mpmath, 50 digits)
+PASS  C k sin(pi/(2k)) - 1 > 0 for k = 2..1000 (a regular 4k-gon violates a <= b(1 - sin alpha) with a = k-1, b = k)  (least margin 0.41421356 at k = 2)
+PASS  C for H = -1..20, 2 pi/arcsin(1/(H+3)) > 4H + 12 and the least admissible multiple of 4 is >= 4H + 16
+     H = -1: angles >= 150.0 deg, 2 pi/arcsin(1/(H+3)) = 12.0, at least 12 vertices (4H+12 = 8)
+     H =  0: angles >= 160.52878 deg, 2 pi/arcsin(1/(H+3)) = 18.488825, at least 20 vertices (4H+12 = 12)
+     H =  1: angles >= 165.52249 deg, 2 pi/arcsin(1/(H+3)) = 24.866151, at least 28 vertices (4H+12 = 16)
+     H =  2: angles >= 168.46304 deg, 2 pi/arcsin(1/(H+3)) = 31.204063, at least 32 vertices (4H+12 = 20)
+     H =  3: angles >= 170.40593 deg, 2 pi/arcsin(1/(H+3)) = 37.523185, at least 40 vertices (4H+12 = 24)
+     H =  4: angles >= 171.78679 deg, 2 pi/arcsin(1/(H+3)) = 43.831823, at least 44 vertices (4H+12 = 28)
+PASS  C H = -1: 2 pi/arcsin(1/2) = 12 exactly
+PASS  C H = 0: sin(pi/9) > 1/3, so arcsin(1/3) < pi/9 and 2 pi/arcsin(1/3) > 18  (sin(pi/9) = 0.3420201433)
+PASS  C the explicit corner solutions satisfy a <= b(1 - sin alpha) for 399 angles in (pi/sqrt(2), pi)  (least gap 0.00125681, tending to 0 as alpha -> pi)
+0 failures; total 435 s

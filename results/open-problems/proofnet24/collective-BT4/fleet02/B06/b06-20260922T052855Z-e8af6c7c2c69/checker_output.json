@@ -1,0 +1,223 @@
+{
+  "candidate_refuted": "potential equality alone forbids an aligned heavy-triangle neutral slide",
+  "digon_asymmetric_boundary": {
+    "chosen_digon": [
+      "a",
+      "b"
+    ],
+    "minimum_after": 5,
+    "minimum_before": 7,
+    "outdegree_after_deleting_digon": {
+      "d0": 5,
+      "d1": 7,
+      "d2": 7,
+      "d3": 7,
+      "d4": 7,
+      "d5": 7,
+      "d6": 7,
+      "d7": 7
+    },
+    "outdegree_before": {
+      "a": 9,
+      "b": 9,
+      "d0": 7,
+      "d1": 9,
+      "d2": 9,
+      "d3": 9,
+      "d4": 9,
+      "d5": 9,
+      "d6": 9,
+      "d7": 9
+    },
+    "vertices": 10
+  },
+  "local_adversary": {
+    "arcs": 112,
+    "chosen_chordless_cycles": [
+      [
+        "h0",
+        "h1",
+        "h2"
+      ],
+      [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ],
+      [
+        "u0",
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ]
+    ],
+    "every_arc_dominated": true,
+    "explicit_four_pack": [
+      [
+        "h0",
+        "h1",
+        "h2"
+      ],
+      [
+        "r0",
+        "r1",
+        "u0"
+      ],
+      [
+        "r2",
+        "s0",
+        "u2"
+      ],
+      [
+        "s1",
+        "x",
+        "u3"
+      ]
+    ],
+    "new_remainder": [
+      "h0",
+      "r0",
+      "h1",
+      "r1"
+    ],
+    "new_remainder_arc_count": 6,
+    "no_S_inport_to_r2": true,
+    "nonedges": [
+      [
+        "h1",
+        "r2"
+      ],
+      [
+        "s0",
+        "s2"
+      ],
+      [
+        "s1",
+        "s3"
+      ],
+      [
+        "u0",
+        "u2"
+      ],
+      [
+        "u0",
+        "u3"
+      ],
+      [
+        "u1",
+        "u3"
+      ],
+      [
+        "u1",
+        "u4"
+      ],
+      [
+        "u2",
+        "u4"
+      ]
+    ],
+    "old_remainder": [
+      "r0",
+      "r1",
+      "r2",
+      "x"
+    ],
+    "old_remainder_arc_count": 6,
+    "oriented": true,
+    "outdegree_vector": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "pivot_triangle": [
+      "h2",
+      "r2",
+      "x"
+    ],
+    "r2_light_fans": {
+      "S": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "U": [
+        "u3"
+      ]
+    },
+    "strong_after_any_at_most_two_vertex_deletions": true,
+    "vertices": 16
+  },
+  "status": "PASS",
+  "symbolic_arcmax_cases": [
+    {
+      "arcmax_ok": true,
+      "exchanged_remainder_cyclic": false,
+      "h0_r1_state": "nonedge",
+      "new_phi": 5,
+      "old_phi": 5,
+      "r0_to_r2": false,
+      "survives_local_filters": true
+    },
+    {
+      "arcmax_ok": false,
+      "exchanged_remainder_cyclic": false,
+      "h0_r1_state": "h0_to_r1",
+      "new_phi": 6,
+      "old_phi": 5,
+      "r0_to_r2": false,
+      "survives_local_filters": false
+    },
+    {
+      "arcmax_ok": false,
+      "exchanged_remainder_cyclic": true,
+      "h0_r1_state": "r1_to_h0",
+      "new_phi": 6,
+      "old_phi": 5,
+      "r0_to_r2": false,
+      "survives_local_filters": false
+    },
+    {
+      "arcmax_ok": true,
+      "exchanged_remainder_cyclic": false,
+      "h0_r1_state": "nonedge",
+      "new_phi": 5,
+      "old_phi": 6,
+      "r0_to_r2": true,
+      "survives_local_filters": true
+    },
+    {
+      "arcmax_ok": true,
+      "exchanged_remainder_cyclic": false,
+      "h0_r1_state": "h0_to_r1",
+      "new_phi": 6,
+      "old_phi": 6,
+      "r0_to_r2": true,
+      "survives_local_filters": true
+    },
+    {
+      "arcmax_ok": true,
+      "exchanged_remainder_cyclic": true,
+      "h0_r1_state": "r1_to_h0",
+      "new_phi": 6,
+      "old_phi": 6,
+      "r0_to_r2": true,
+      "survives_local_filters": false
+    }
+  ]
+}

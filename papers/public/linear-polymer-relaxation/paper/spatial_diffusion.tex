@@ -1,0 +1,364 @@
+\section{Cut reactions with graph diffusion}
+\label{sec:spatial-diffusion}
+
+Let $G=(V,E,c)$ be a connected weighted graph on $n\geq2$ vertices,
+with symmetric nonnegative edge weights $c_{xy}$.  Its random-walk
+Laplacian is
+\[
+ (\Delta_G a)(x)=\sum_yc_{xy}[a(x)-a(y)],
+\]
+and $\lambda_G>0$ denotes its smallest eigenvalue on the mean-zero
+subspace.  On the nonempty subsets of $V$, define
+\begin{equation}\label{eq:spatial-generator}
+ \begin{split}
+ (\mathcal L_{\beta,D,G}f)(S)
+ ={}&\beta\sum_{x\notin S}[f(S\cup\{x\})-f(S)]\\
+ &+\frac{|S|-1}{n}\sum_{x\in S}[f(S\setminus\{x\})-f(S)]\\
+ &+D\sum_{\{x,y\}\in E}c_{xy}[f(S^{xy})-f(S)],
+ \qquad \beta>0,\quad D\geq0,
+ \end{split}
+\end{equation}
+where $S^{xy}$ exchanges the occupancy of $x$ and $y$.  The deletion
+sum is zero at $|S|=1$.  The first two terms are the cut-reaction
+generator, and the last term is conservative exclusion along $G$.
+The reversible probability measure remains
+\begin{equation}\label{eq:spatial-reversible-law}
+ \pi_\beta(S)=Z^{-1}\frac{(\beta n)^{|S|}}{(|S|-1)!}.
+\end{equation}
+Indeed, its adjacent-cardinality weights satisfy detailed balance for
+the reaction rates, and it is invariant under every coordinate
+permutation.
+
+The cardinality is the birth--death chain with rates
+$\beta(n-k)$ and $k(k-1)/n$; write $\gamma_Q(n,\beta)$ for its gap.
+The degree-one radial reaction operator acts on $k=1,\ldots,n-1$ as
+\begin{equation}\label{eq:spatial-degree-one}
+ \begin{split}
+ (A_1h)(k)
+ ={}&\beta(n-k-1)[h(k+1)-h(k)]\\
+ &+\frac{(k-1)^2}{n}[h(k-1)-h(k)]
+   -\left(\beta+\frac{k-1}{n}\right)h(k).
+ \end{split}
+\end{equation}
+Let $\eta_1(n,\beta)$ be the smallest eigenvalue of $-A_1$.
+
+\begin{theorem}[Exact gap with graph diffusion]
+\label{thm:spatial-exact-gap}\label{thm:spatial-gap}
+For every $n,\beta,D,G$ as above, the spectral gap of
+\eqref{eq:spatial-generator} is
+\begin{equation}\label{eq:spatial-exact-gap}
+ \gamma_{\mathrm{sp}}(n,\beta,D,G)
+ =\min\{\gamma_Q(n,\beta),\ \eta_1(n,\beta)+D\lambda_G\}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Use the Boolean harmonic decomposition of the cut chain.  In degree
+$\ell$, functions are sums of products $h(|S|)H(S)$, where $H$ belongs
+to the degree-$\ell$ harmonic space and $h$ is supported on the
+allowable cardinalities.  The reaction generator acts on this sector
+as $A_\ell\otimes I$, where $A_\ell=\mathcal L_\ell$.  Every coordinate permutation preserves harmonic
+degree and commutes with the canonical lifts between slices.  Hence
+the graph-swap generator acts as $I\otimes\mathcal S_{G,\ell}$, with
+the same harmonic action at every cardinality.  The slice inner
+products on the harmonic factor differ only by a scalar, so these
+are tensor decompositions of the reversible Hilbert spaces as well.
+Consequently the generator on the degree-$\ell$ sector is
+\begin{equation}\label{eq:spatial-tensor-sum}
+ A_\ell\otimes I+I\otimes D\mathcal S_{G,\ell}.
+\end{equation}
+The negative of the graph-swap operator is nonnegative, since it is
+the restriction of a reversible Markov generator with its sign
+changed.
+
+In degree zero, swaps act trivially and the first positive eigenvalue
+is $\gamma_Q$.  In every degree $\ell\geq2$,
+Proposition~\ref{prop:higher-exact} gives
+$\inf\operatorname{Spec}(-A_\ell)\geq\gamma_Q$; adding the graph form
+cannot lower this bound.
+
+For degree one write
+\[
+ H_a(S)=\sum_{x\in S}a(x),\qquad \sum_{x\in V}a(x)=0.
+\]
+A direct calculation gives
+$\mathcal S_G H_a=-H_{\Delta_Ga}$.  Thus the degree-one eigenvalues
+are sums of eigenvalues of $-A_1$ and of $D\Delta_G$ on mean-zero
+vectors.  Their smallest value is $\eta_1+D\lambda_G$.  Taking the
+minimum over all degrees proves~\eqref{eq:spatial-exact-gap}.
+\end{proof}
+
+Only the one-particle graph action is required in this proof.  Higher
+harmonic sectors already lie above the count gap before diffusion is
+added.
+
+\begin{proposition}[An additive-error formula for the degree-one gap]
+\label{prop:spatial-degree-one-sharp}
+Set
+\[
+ d=\sqrt{\beta^2+4\beta},\qquad
+ c_1=\frac{\beta+d}{2},\qquad a=nc_1.
+\]
+Then
+\begin{equation}\label{eq:spatial-degree-one-endpoint-bracket}
+ c_1-\frac{2a}{n(a+2)}
+ \leq\eta_1(n,\beta)
+ \leq c_1-\frac{2a^2}{n(n+a-2)(n+a)}.
+\end{equation}
+In particular,
+\begin{equation}\label{eq:spatial-degree-one-additive-error}
+ c_1-\frac2n\leq\eta_1(n,\beta)\leq c_1.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The number $a$ is positive and satisfies $a^2=\beta n(n+a)$.
+For $h(k)=1/(k+a)$ the quotient in
+\eqref{eq:spatial-reciprocal-quotient} simplifies to
+\begin{equation}\label{eq:spatial-sharp-reciprocal-quotient}
+ -\frac{A_1h(k)}{h(k)}
+ =\frac an-\frac{2a^2}{n(k+a-1)(k+a+1)}.
+\end{equation}
+Every denominator is positive, even when $a<1$, since $k\geq1$.
+The quotient increases with $k$.  Its values at $k=1$ and $k=n-1$
+give~\eqref{eq:spatial-degree-one-endpoint-bracket} by positive-vector
+comparison.  The simpler bracket follows from $a/(a+2)\leq1$.
+\end{proof}
+
+\begin{corollary}[Leading constants with graph diffusion]
+\label{cor:spatial-leading-constants}
+With $d$ and $c_1$ as above, put
+\[
+ m=\min\{d,c_1+D\lambda_G\}.
+\]
+The count-chain bracket $d-5/n\leq\gamma_Q\leq d+4/n$ from
+Theorem~\ref{thm:sharp-gap} and
+Theorem~\ref{thm:spatial-exact-gap} imply
+\begin{equation}\label{eq:spatial-leading-constants}
+ m-\frac5n\leq\gamma_{\mathrm{sp}}(n,\beta,D,G)
+ \leq m+\frac4n.
+\end{equation}
+In particular, if $n^2\beta\longrightarrow\infty$, the ratio of
+$\gamma_{\mathrm{sp}}$ to $m$ tends to one, uniformly in the graph
+and in $D\geq0$.
+\end{corollary}
+
+\begin{proof}
+Combine Theorem~\ref{thm:sharp-gap} and the degree-one additive-error
+bracket inside the minimum in
+\eqref{eq:spatial-exact-gap}.  For the final assertion, observe that
+$d\geq2\sqrt\beta$ and $c_1\geq\sqrt\beta$, so
+$nm\geq n\sqrt\beta\longrightarrow\infty$.
+\end{proof}
+
+\begin{proposition}[The degree-one scale]
+\label{prop:spatial-degree-one-scale}
+For every $n\geq2$ and $\beta>0$, set
+\[
+ u=\beta+\min\{n\beta,\sqrt\beta\}.
+\]
+Then
+\begin{equation}\label{eq:spatial-degree-one-scale}
+ \frac u8\leq\eta_1(n,\beta)\leq u.
+\end{equation}
+More precisely, with $c_0=1-2^{-1/2}$,
+\begin{equation}\label{eq:spatial-degree-one-auxiliary}
+ \max\left\{\beta,\min\left(c_0n\beta,\frac1{2n}\right)\right\}
+ \leq\eta_1
+ \leq\min\left\{\frac{n\beta}{2},\beta+\sqrt\beta\right\}.
+\end{equation}
+Also,
+\begin{equation}\label{eq:spatial-degree-one-below-count}
+ \eta_1\leq\gamma_Q-\frac2n.
+\end{equation}
+In particular, the gap of the cut-reaction chain without graph
+diffusion is exactly $\eta_1$.
+\end{proposition}
+
+\begin{proof}
+The positive test function $h(k)=1/k$ gives the exact quotient
+\[
+ -\frac{A_1h(k)}{h(k)}=\frac{\beta n}{k+1}\leq\frac{n\beta}{2},
+\]
+which proves the first upper bound.  For the second, put $j=k-1$ and
+consider the conservative part of $A_1$.  Its birth rate is
+$\beta(n-2-j)$, its death rate is $j^2/n$, and its killing is
+$\beta+j/n$.  If $\nu$ is the invariant law of this finite
+conservative chain, stationarity applied to $j$ yields
+\[
+ \mathbb E_\nu j^2
+ =\beta n(n-2-\mathbb E_\nu j)\leq\beta n^2.
+\]
+The constant-function Rayleigh quotient, followed by Cauchy--Schwarz,
+therefore gives $\eta_1\leq\beta+\sqrt\beta$.  When $n=2$ the
+conservative chain has the single state $j=0$, so the same argument
+applies.
+
+The killing term gives $\eta_1\geq\beta$.  For another lower bound
+use $h(k)=k^{-1/2}$.  At $k=1$ its quotient is
+\[
+ \beta+\beta(n-2)(1-2^{-1/2})\geq c_0n\beta.
+\]
+For $k\geq2$, discard the nonnegative birth term and the term $\beta$
+to obtain
+\[
+ -\frac{A_1h(k)}{h(k)}
+ \geq\frac{k-1}{n}
+ \left[1-(k-1)\left(\sqrt{\frac{k}{k-1}}-1\right)\right]
+ \geq\frac1{2n}.
+\]
+Here
+$(k-1)(\sqrt{k/(k-1)}-1)=1/(\sqrt{k/(k-1)}+1)\leq1/2$.
+Positive-vector comparison proves
+\eqref{eq:spatial-degree-one-auxiliary}.
+
+It remains to obtain a square-root lower bound in the intermediate
+range.  If $n\geq8$ and $4/n^2\leq\beta\leq1/16$, put
+$a=n\sqrt\beta$, so that $2\leq a\leq n/4$, and use
+$h(k)=1/(k+a)$.  Direct cancellation gives
+\begin{equation}\label{eq:spatial-reciprocal-quotient}
+ -\frac{A_1h(k)}{h(k)}
+ =\beta+\frac{\beta(n-k-1)}{k+a+1}
+       +\frac{a(k-1)}{n(k+a-1)}.
+\end{equation}
+If $k\leq a$, then $n-k-1\geq n/2$ and $k+a+1\leq5a/2$,
+so the second term is at least $\sqrt\beta/5$.  If $k\geq a$,
+then $k-1\geq k/2$ and $k+a-1\leq2k$, so the final term is at
+least $\sqrt\beta/4$.  Thus $\eta_1\geq\sqrt\beta/5$ in this
+range.
+
+The estimates patch with a universal constant.  For
+$\beta\leq n^{-2}$, the lower bound $c_0n\beta$ is at least
+$(n+1)\beta/8=u/8$.  For $n\leq7$ and $\beta\geq n^{-2}$,
+$u\leq8\beta$.  If $n\geq8$ and
+$n^{-2}\leq\beta\leq4n^{-2}$, the auxiliary bound is at least
+$c_0/n\geq\sqrt\beta/7$; combine this with $\eta_1\geq\beta$.
+In the intermediate range just treated the two lower bounds give
+$u\leq6\eta_1$.  Finally, for $\beta\geq1/16$, $u\leq5\beta$.
+These cases prove the lower bound in~\eqref{eq:spatial-degree-one-scale}.
+The two upper bounds in~\eqref{eq:spatial-degree-one-auxiliary}
+immediately give $\eta_1\leq u$.
+
+Finally, let $h$ be the positive ground state of the count-derivative
+operator $A_{n,\beta}$.  Its forward ratios are at least $1/2$ by
+Lemma~\ref{lem:critical-ground-ratios} (or by the weaker ratio bound
+used in Proposition~\ref{prop:higher-exact}).  Direct subtraction gives
+\[
+ \frac{(A_{n,\beta}-A_1)h(k)}{h(k)}
+ =\frac{(k-1)h(k-1)/h(k)-2k}{n}\leq-\frac2n.
+\]
+At $k=1$ the backward term is zero.  Testing $-A_1$ with $h$ proves
+\eqref{eq:spatial-degree-one-below-count}, and
+Theorem~\ref{thm:spatial-exact-gap} gives the last assertion.
+\end{proof}
+
+\begin{corollary}[A uniform spatial phase diagram]
+\label{cor:spatial-uniform-gap}
+Put $s=\beta+\sqrt\beta+n^{-1}$ and
+$u=\beta+\min\{n\beta,\sqrt\beta\}$.  Then
+\begin{equation}\label{eq:spatial-uniform-gap}
+ \frac18\min\{s,u+D\lambda_G\}
+ \leq\gamma_{\mathrm{sp}}(n,\beta,D,G)
+ \leq4\min\{s,u+D\lambda_G\}.
+\end{equation}
+In particular, for $0<\beta\leq n^{-2}$,
+\begin{equation}\label{eq:spatial-rare-gap}
+ \gamma_{\mathrm{sp}}(n,\beta,D,G)
+ \asymp\min\{n^{-1},n\beta+D\lambda_G\},
+\end{equation}
+with absolute comparison constants.
+\end{corollary}
+
+\begin{proof}
+Combine Theorem~\ref{thm:spatial-exact-gap} and
+Proposition~\ref{prop:spatial-degree-one-scale} with the count-chain
+bounds $s/6\leq\gamma_Q\leq4s$.  In the stated rare-fragmentation
+range, $s\asymp n^{-1}$ and $u\asymp n\beta$.
+\end{proof}
+
+For a unit-rate cycle on $n\geq3$ vertices,
+$\lambda_G=4\sin^2(\pi/n)$.  For the discrete torus of side
+$L\geq3$ in dimension $d$, with unit rates along its edges,
+$n=L^d$ and $\lambda_G=4\sin^2(\pi/L)$.  Thus
+\eqref{eq:spatial-rare-gap} becomes
+\[
+ \gamma_{\mathrm{sp}}
+ \asymp\min\{n^{-1},n\beta+D/L^2\}
+\]
+on a torus.  This identifies the competition between count relaxation,
+reactions that renew a dilute cut configuration, and graph diffusion.
+
+On a cycle, adding or deleting a cut splits or merges neighboring
+intervals, and exchanging adjacent occupied and unoccupied vertices
+moves an interval boundary.  On a general graph,
+\eqref{eq:spatial-generator} is an exclusion process with
+cardinality-dependent creation and deletion.  Its reaction rates
+retain the global count dependence and its equilibrium law remains
+exchangeable.  These features permit the tensor decomposition and
+specify the scope of the spatial result.
+
+\subsection{Inhomogeneous reversible reactions}
+
+The exact formula also controls reaction rates that depend on the
+positions and surrounding configuration, through a comparison of
+reversible conductances.  For each undirected reaction edge
+$e=\{S,S\cup\{x\}\}$ with $S\neq\varnothing$ and $x\notin S$,
+choose a factor $a_e$ satisfying
+\[
+ 0<a_-\leq a_e\leq a_+<\infty.
+\]
+Multiply both the addition rate from $S$ to $S\cup\{x\}$ and the
+reverse deletion rate by this same factor.  Keep the graph-swap
+generator and its diffusion coefficient $D$ unchanged.  Write
+$\gamma_{\mathrm{inhom}}$ for the resulting gap.
+
+\begin{corollary}[Bounded inhomogeneous reaction rates]
+\label{cor:spatial-inhomogeneous}
+The modified chain is reversible for~\eqref{eq:spatial-reversible-law}
+and satisfies
+\begin{equation}\label{eq:spatial-inhomogeneous-gap}
+ \begin{split}
+ \min\{a_-\gamma_Q,\ a_-\eta_1+D\lambda_G\}
+ &\leq\gamma_{\mathrm{inhom}}\\
+ &\leq\min\{a_+\gamma_Q,\ a_+\eta_1+D\lambda_G\}.
+ \end{split}
+\end{equation}
+The factors may depend arbitrarily on the edge and its configuration;
+the modified reaction generator need not commute with permutations.
+\end{corollary}
+
+\begin{proof}
+Multiplication by the same factor in both directions preserves
+detailed balance at each reaction edge.  Let $\mathcal E_B$ be the
+reaction form and $\mathcal E_G$ the unit-diffusion graph-swap form,
+both with respect to $\pi_\beta$.  The modified form satisfies
+\[
+ a_-\mathcal E_B(f,f)+D\mathcal E_G(f,f)
+ \leq\mathcal E_{\mathrm{inhom}}(f,f)
+ \leq a_+\mathcal E_B(f,f)+D\mathcal E_G(f,f).
+\]
+For any constant $a>0$, Theorem~\ref{thm:spatial-exact-gap}, with
+diffusion coefficient $D/a$ and then a change of time by $a$, gives
+the gap of $aB+D\mathcal S_G$ as
+$\min\{a\gamma_Q,a\eta_1+D\lambda_G\}$.  All three forms have the
+same variance denominator.  Taking their infima proves
+\eqref{eq:spatial-inhomogeneous-gap}.
+\end{proof}
+
+For example, place the vertices in a cyclic order and let adding a
+cut at $x$ divide an interval into two positive lengths $i$ and $j$.
+For $|\varepsilon|<1/2$, set
+\begin{equation}\label{eq:spatial-circle-inhomogeneity}
+ a_{\{S,S\cup\{x\}\}}
+ =1+\varepsilon\cos\left(\frac{2\pi x}{n}\right)
+   +\varepsilon\frac{(i-j)^2}{(i+j)^2}.
+\end{equation}
+This combines a spatially varying environment with a dependence on
+the neighboring interval lengths.  The factor is unchanged when
+$i$ and $j$ are interchanged, and the same split determines it for
+the reverse merger.  It satisfies
+$1-2|\varepsilon|\leq a_e\leq1+2|\varepsilon|$, so
+Corollary~\ref{cor:spatial-inhomogeneous} applies with these constants.
+The corollary covers bounded reversible modifications of the stated
+reaction edges; its proof does not extend the exact formula to
+arbitrary coagulation or fragmentation kernels.

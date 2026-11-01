@@ -1,0 +1,1459 @@
+PAGE 1
+Deterministic and Stochastic Becker-D¨oring equations:
+Past and Recent Mathematical Developments
+E. Hingant
+R. Yvinec
+September 5, 2016
+Contents
+1
+Introduction
+1
+2
+Deterministic mean-ﬁeld theory
+2
+2.1
+Well-posedness . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+2.2
+Long-time behavior . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3
+2.3
+Coarsening and relation to transport equation . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+2.4
+Time-dependent properties, Metastability and Classical nucleation theory . . . . . . . . . . . . .
+10
+3
+Stochastic Becker-D¨oring model
+11
+3.1
+Deﬁnition and State-space . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11
+3.2
+Long-time behavior . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+12
+3.3
+Large Number and relation to deterministic Becker-D¨oring
+. . . . . . . . . . . . . . . . . . . . .
+13
+3.4
+Time-dependent properties, Metastability and stochastic nucleation theory . . . . . . . . . . . . .
+14
+Acknowledgment
+16
+References
+16
+1
+Introduction
+The Becker-D¨oring (BD) equations goes back to the seminal work “Kinetic treatment of nucleation in supersat-
+urated vapors” by Becker and D¨oring (1935), which gave rise to the name of the model. Later on, Burton (1977)
+popularized the use of such equations to study condensations phenomena at diﬀerent pressures. Since then,
+applications of this model range from physics, chemistry to biology. Recently, the book edited by Schmelzer
+(2005) make an inventory of several applications of nucleation and phase transition theory. Let us also point
+out recent applications of Becker-D¨oring or related coagulation-fragmentation models in biology, speciﬁcally to
+protein aggregation in neurodegenerative diseases e.g. the works by Linse and Linse (2011), Prigent et al. (2012),
+Alvarez-Martinez et al. (2011), Budrikis et al. (2014), Eden et al. (2015), Davis and Sindi (2016), Eugene et al.
+(2016) and Doumic et al. (2016), also Hu and Othmer (2011) worked on polymerization of actin ﬁlaments, Hoze
+and Holcman (2015, 2014) on assembly of virus capsids, Bressloﬀ(2016) on vesicular transport, and Hoze and
+Holcman (2012) for telomere clustering.
+In its survey, Slemrod (2000) said the BD equations “provide perhaps the simplest kinetic model to describe a
+number of issues in the dynamics of phase transitions”. This is maybe one of the reason these equations received
+lot of attentions from many mathematicians. But being simple these equations do not prevent its richness and
+diﬃculties. Our intention here, is: on one hand, to complete the review by Slemrod with new results; and on
+the other hand, to give a parallel with the stochastic version of these equations, which reveals a lot of new
+interesting problems. We also mention the review by Wattis (2006) which contains many qualitative and exact
+properties of the solutions in the deterministic context, and the pedagogical notes by Penrose (2001). But, few
+stochastic review of the BD model is available, we can only mention the seminal work by Aldous (1999) which
+treats the so-called Smolukowsky coagulation equations.
+The model consists in describing the repartition of clusters by their size i ≥1, i.e. the number of particles
+that composed them. Clusters belong to a “solvent” in much smaller proportion and are assumed to be spatially
+homogeneously distributed. Along their motion, clusters give rise to two types of reactions, namely the Becker-
+D¨oring rules:
+1
+arXiv:1609.00697v1  [math-ph]  2 Sep 2016
+
+PAGE 2
+1. A cluster of size 1, commonly called monomer or elementary particle, may encounter a cluster of size i ≥1
+to coalesce and give rise to a cluster of size i + 1.
+2. A cluster of size i ≥2 may release spontaneously a monomer resulting in a cluster of size i −1.
+These can be summarized by the set of kinetic reactions, for each i ≥1,
+C1 + Ci
+ai
+−−−⇀
+↽−−−
+bi+1
+Ci+1 ,
+(1)
+where Ci denotes clusters consisting of i particles. Coeﬃcients ai and bi+1 stand, respectively, for the rate of
+aggregation and fragmentation. These may depend on the size of clusters involved in the reactions and typical
+coeﬃcients are derived by Penrose (1997) and Niethammer (2003):
+ai = iα ,
+bi+1 = ai+1
+
+zs +
+q
+(i + 1)γ
+
+,
+i ≥1 .
+(2)
+for 0 ≤α < 1, zs > 0, q > 0 and 0 < γ < 1. This choice is in agreement with original derivation where ai ≈i2/3,
+bi ≈ai exp(Gi−1/3). In particular, the diﬀusion-limited case of monomers clustering into sphere corresponds
+to α = 1/3, γ = 1/3 in 3D and to α = 0, γ = 1/2 in 2D, while the interface-reaction-limited case corresponds
+to α = 2/3, γ = 1/3 in 3D and α = 1/2, γ = 1/2 in 2D. We refer also to Penrose and Buhagiar (1983) for a
+method on deriving coeﬃcients. Note that all along the survey we assume the natural hypothesis ai and bi+1
+are non-negative for all i ≥1, without referring to this again.
+In its mean-ﬁeld version, or deterministic, the BD model is an inﬁnite set of ordinary diﬀerential equations
+for the time evolution of each concentrations (numbers per unit of volume) of clusters made of i particles. In
+its stochastic version, the BD model is a continuous time Markov chain, on a ﬁnite state space. We divide the
+remainder of this survey in two parts for the respective versions.
+2
+Deterministic mean-ﬁeld theory
+The general formulation of the deterministic Becker-D¨oring equations, as studied today, seems to go back
+to Burton (1977) and was popularized among mathematicians by Penrose and Lebowitz (1979) (indeed, the
+equations studied in the original work by Becker and D¨oring (1935) slightly diﬀer, see comment later on). It
+assumes the system behaves homogeneously in space with a high number of clusters, and considers concentrations
+ci(t) (unit per volume) of clusters with size i ≥1 at time t ≥0. It deals with classical law of chemistry (Law of
+Mass Action), the coagulation is considered as a second order reaction while the fragmentation is a ﬁrst-order
+(linear) reaction. The ﬂux associated to the kinetic scheme (1) is thus given, for each i ≥1, by
+Ji = aic1ci −bi+1ci+1 .
+(3)
+Considering all the ﬂuxes involved in the variations of the concentration of each ci entails the inﬁnite system of
+diﬀerential equations, namely the Becker-D¨oring equations:
+d
+dtc1 = −J1 −
+X
+i≥1
+Ji ,
+(4)
+d
+dtci = Ji−1 −Ji ,
+(5)
+for every i ≥2. The system considered here has no source nor sink. Consequently, for the total amount of
+monomers, we should have, for all t ≥0,
+X
+i≥1
+ici(t) = ρ ,
+(6)
+where ρ is a constant, called through the survey: mass of the system. Formal computations on the solution of
+the system (4-5), interverting inﬁnite sum, lead to this statement. Remark, the constant ρ is entirely determined
+by the initial condition given at time t = 0. In this section we try to expound the main theory around these
+equations. In particular, we exclude many variants such as the original constant monomer formulation, which is
+then an inﬁnite linear system (e.g. Penrose, 1989, Kreer, 1993 or King and Wattis, 2002), the ﬁnite-dimensional
+truncated system (e.g. Duncan and Soheili, 2001 or Duncan and Dunwell, 2002), generalization such as micelles
+formation (e.g. Coveney and Wattis, 1996) or including space with cluster diﬀusion (e.g. Lauren¸cot and Wrzosek,
+1998) or lattice models (e.g. Penrose and Buhagiar, 1983).
+We separated this section between well-posedness, long-time behavior, scaling limit, and some time-dependent
+properties.
+2
+
+PAGE 3
+2.1
+Well-posedness
+The ﬁrst general result on existence and uniqueness on Becker-D¨oring equations is due to Ball et al. (1986)
+which really start the mathematical analysis of BD equations. The authors state many of the fundamental
+properties of the solutions belonging to the Banach space
+X+ :=
+
+
+x ⊂RN
++ :
+X
+i≥1
+ixi < +∞
+
+
+,
+which arises naturally in view of the balance of mass Eq. (6). We recall ﬁrst the notion of solutions to BD
+equations.
+Deﬁnition 1. Let T ∈(0, +∞] and cin ∈X+. A solution to the Becker-D¨oring equations (4-5) on [0, T) with
+initial data cin, is a function c : [0, T) →X+ which writes c := (ci)i≥1 and such that: supt∈[0,T ) ∥c(t)∥X < +∞;
+for all t ∈[0, T), we have P
+i≥1 aici ∈L1(0, t) and P
+i≥2 bici ∈L1(0, t); Eqs. (4-5) hold almost every t ∈[0, T)
+and c(0) = cin.
+One of the fundamental fact, proved by Ball et al. (1986), is that any solution to the BD equations satisﬁes
+the balance of mass Eq. (6) at all ﬁnite time (Corolary 2.6). In particular, any solution to the BD equations
+avoids the so-called gelation phenomenon (in ﬁnite time) which can occur in general coagulation-fragmentation
+equations (e.g. Escobedo et al. 2003). Ball et al. (1986) also proved propagation of moments (Theorem 2.2) and
+regularity properties of the solutions (Theorem 3.2). Finally, they state a general existence result for sublinear
+coagulation rate and uniqueness with an extra-moment on the initial condition (see below Theorem 1). In short,
+the work by Ball et al. (1986) covered the essential properties of BD equations, build the foundations for the
+analysis of BD equations, and should be a companion for whom want to work with.
+We go back to well-posedness, for which Lauren¸cot and Mischler (2002) complement the result, by Ball et al.
+(1986), proving the uniqueness without extra condition on the initial data but assuming a growth condition on
+the fragmentation rate, viz. there exists a constant K > 0 such that, for every i ≥2,
+ai −ai−1 ≤K ,
+bi −bi+1 ≤K .
+(7)
+We summarize these results in the following theorem.
+Theorem 1 (Well-posedness, Ball et al. (1986), Lauren¸cot and Mischler (2002)). Let cin ∈X+.
+Assume
+alternatively either a) ai = O(i) and P
+i≥1 i2cin
+i
+< +∞, or b) the growth condition (7). The Becker-D¨oring
+equations (4-5) have a unique solution c on [0, +∞) associated with the initial data cin. Moreover, for all t ≥0,
+X
+i≥1
+ici(t) =
+X
+i≥1
+icin
+i .
+In fact the uniqueness by Ball et al. (1986) is slightly more subtle, see their Theorem 3.6. Also, they proved
+that ai = O(i) is almost optimal. Indeed, their Theorem 2.7 states: if limi→∞ai/i = +∞and limi→∞bi+1/ai <
++∞, then for some initial condition (with relatively fat tail) still belonging to X+ the BD system has no-solution.
+This suggests that, for super-linear coagulation rate, we cannot hope existence for a large class of initial data
+without a suﬃcient control on the fragmentation rate. Since mass is preserved, fragmentation should balance
+the formation of “big” clusters. It seems very few results exist for such class of coeﬃcients, except Wattis et al.
+(2004) who considered exponential coeﬃcients.
+Finally, we mention that a proof of existence to the BD equations is self-contained in the nice proof by
+Lauren¸cot (2002) for a more general model (discrete coagulation with multiple fragmentation). It relies, as for
+the proof given by Ball et al. (1986), on a truncated system up to a size N and compactness arguments to obtain
+the limit N →+∞. But here Lauren¸cot (2002) took advantage of the propagation of super-linear moments and
+a De La Vall´e Poussin lemma to prove compactness.
+2.2
+Long-time behavior
+The long-time behavior of the BD system brings some of its most interesting properties, and we will see this is
+still under active research. Through this section we will always assume that both ai and bi+1 are positive for each
+i ≥1. This avoids many pathological cases, in some sense, if one of them cancel it “breaks the communication”
+between clusters in one side or another. Nonetheless, we mention the interesting cases (not detailed here) where
+either ai = 0 or bi+1 = 0, for every i ≥1, which have been treated again by Ball et al. (1986)! We start with
+a subsection which deals with convergence to equilibrium. Then, we will see the most recent results on the
+exponential stability of the equilibrium.
+3
+
+PAGE 4
+2.2.1
+Convergence to equilibrium
+The equilibrium candidates, at plural, of the BD equations are obtained by canceling the ﬂuxes Ji, for each i ≥1,
+as deﬁned in Eq. (3). After straightforward manipulation of the ﬂuxes, the candidates form a one-parameter
+family, indexed by a variable z ≥0, and are given by the expressions
+¯ci(z) = Qizi ,
+where
+Qi = a1a2 · · · ai−1
+b2b3 · · · bi
+,
+(8)
+for every i ≥1, with the convention Q1 = 1. For example, the case related to Eq. (2) gives (e.g. Niethammer,
+2003), for large i,
+Qi ≈
+C
+iαz(i−1)
+s
+exp
+
+−
+q
+(1 −γ)zs
+i1−γ(1 + O(i−γ))
+
+.
+To ﬁnd the right equilibrium, which reduces to ﬁnd the value of ¯c1 = z, one should use the balance of mass
+Eq. (6) which we know to be satisﬁed at any ﬁnite time. Hence, this leads us to consider the power series, given
+by the mass of the equilibrium candidates,
+X
+i≥1
+iQizi ,
+which radius of convergence is denoted by zs. Such radius is obtained from the rates functions since the Cauchy-
+Hadamard theorem says 1/zs := lim supi→∞Q1/i
+i
+. This becomes the heart of the existence of a critical mass in
+BD equations since the values taken by the series may not deﬁne a bijection from [0, zs) into [0, +∞). Indeed,
+set ρs be the upper value taken by the series on {z < zs}. It can occur that ρs is ﬁnite, in which case we
+already know that there is no equilibrium candidate with mass ρ > ρs. Hence, this leads to a dichotomy in
+the long-time behavior of the BD equations whether or not the mass of the solution considered is less than ρs,
+named the critical mass. We may refer to sub-critical solution when the mass ρ < ρs, critical solution when
+ρ = ρs and super-critical solution when ρ > ρs.
+The Becker-D¨oring equations are part of the kinetic equations. These later have a long story, led by the
+celebrated Boltzmann equations, which are of course completely out of the scope of this paper, maybe the reader
+could refer to Cercignani (1990). The key concept in these equations is the entropy (sometimes called energy)
+which, in mathematical words, is a Lyapounov functional and governs the trend to equilibrium. Namely, the
+entropy arising in BD equations is given by the expression
+H(c) =
+X
+i≥1
+ci
+
+ln
+ ci
+Qi
+
+−1
+
+.
+This is because, formally, the H decreases along the solutions c (and is bounded from below), as
+d
+dtH(c(t)) = −D(c(t)) ,
+(9)
+where the dissipation is
+D(c) := −
+X
+i≥1
+(aic1ci −bi+1ci+1) (ln(aic1ci) −ln(bi+1ci+1)) .
+Remark, since ln is increasing, the dissipation D is non negative. Depending on the properties you are looking
+for, this is possible to deﬁne the relative entropy functional, with same dissipation term, and given by the
+expression
+H(c|cρ) =
+X
+i≥1
+ci
+
+ln
+ ci
+cρ
+i
+
+−1
+
++
+X
+i≥1
+cρ
+i ,
+where cρ is the equilibrium candidate, with mass ρ, i.e. the components are given by Eq. (8) for which z is
+chosen such that P
+i≥1 iQizi = ρ. The second term in the right-hand side, ensuring non-negativity, is some
+times omitted. Hence, in the case initially H(cin|cρ) < +∞, we should have D(c(t)) →0 as t →∞as we can
+see in
+0 ≤H(c(t)|cρ) +
+Z t
+0
+D(c(s)) ds ≤H(cin|cρ) .
+(10)
+And remarking that D = 0 corresponds, see its deﬁnition, to Ji = 0 for all i ≥1, we have a good reason to
+go ahead with the functional H. The hard work is to prove rigorous properties on the entropy and relative
+entropy, along the solutions. Again Ball et al. (1986) set the basic. The authors give many results, among
+others, continuity properties of the entropy functional (Proposition 4.5) and minimizing sequence properties
+(Theorem 4.4). Also, they proved the key ingredient that Eq. (10) holds for a large class of rate (Theorem 4.8).
+Finally, in their Theorem 4.7, they proved the so-called H-theorem (by analogy with the celebrating Boltzmann
+H-theorem), which is a rigorous justiﬁcation of (9).
+4
+
+PAGE 5
+Theorem 2 (H-theorem, Ball et al. (1986)). Assume zs > 0, lim infi→∞Q1/i
+i
+> 0, ai = O(i/ ln i) and bi =
+O(i/ ln i). If c is a solution to the Becker-D¨oring equations (4-5) on [0, T), for some T ∈(0, +∞], with initial
+condition cin ̸= 0 belonging to X+, then dissipation of entropy Eq. (9) holds almost every t ∈[0, T).
+Note that linear growth ai, bi ∼i is not allowed. Fewer assumptions on the rate of fragmentation is possible,
+adapting the results obtained for general coagulation-fragmentation equation by Carr and da Costa (1994) and
+later by Ca˜nizo (2007). Now we state the main asymptotic results. A very general result in the case zs = +∞
+is available from Theorem 5.4 by Ball et al. (1986). But the more interesting case is 0 < zs < +∞for which
+a dichotomy occurs. This is treated for particular initial conditions and rates by Ball et al. (1986), and then
+extended to general initial conditions in Ball and Carr (1988). Finally, it was reﬁned by Slemrod (1989) for a
+class of rates allowing linear growth, see its Theorem 5.11, which we state below.
+Theorem 3 (Convergence to equilibrium, Slemrod (1989)). Let cin ∈X+ with mass ρ and such that H(cin) <
++∞. Assume ai = O(i), bi = O(i) and limi→+∞Q1/i
+i
+= 1/zs exists (zs > 0). Assume moreover there exists
+z ∈[0, zs] such that aiz ≤bi for suﬃciently large i. Finally, let c be the unique solution to the Becker-D¨oring
+equations (4-5) on [0, +∞) with initial data cin. We have:
+(a) If 0 ≤ρ ≤ρs, then
+lim
+t→+∞
+X
+i≥1
+i|ci(t) −cρ
+i | = 0 .
+(b) If ρ > ρs, then, for every i ≥1,
+lim
+t→+∞ci(t) = cρs
+i .
+In both case we recall that cρ is the equilibrium given by Eq. (8) with mass ρ.
+Surprisingly, in point (b), while the solution has mass ρ for all times, as the time goes to inﬁnity, it converges
+in a weak sense (component by component) to a solution having a strictly inferior mass. In this theory, the
+diﬀerence ρ−ρs is interpreted as the formation of particles with inﬁnite size and of diﬀerent nature, phenomenon
+called phase transition. In Section 2.3.1 we will describe in more details this phenomenon.
+The proof consists ﬁrst in proving that the w(cin) −limit set consist of equilibrium candidate cρ′ with mass
+ρ′ less than min(ρ, ρs). This is achieved by compactness of the orbit, analyzing the time-translation, and by
+regularity of the c1 which requires in particular bi = O(i) (see Theorem 3.2 in Ball et al. (1986)), contrary to
+the known existence result stated above in Theorem 1 . Then, the limit is selected thanks to the dissipation
+(10). A key ingredient is the continuity property of c 7→H(c|cρ) which holds if and only if limi→+∞Q1/i
+i
+exists
+and ρ = ρs, see Proposition 4.5 by Ball et al. (1986). Note, the condition aiz ≤bi comes from the Theorem 2
+by Ball and Carr (1988), and re-used by Slemrod (1989), which ensures the tail of the ci’s decays suﬃciently
+fast (fragmentation dominates). We point out that these two last conditions are needed to select the right
+equilibrium, while convergence to some equilibrium is “always” satisﬁed, see Theorem 5.10 by Slemrod (1989).
+We ﬁnish by a comment on the case where zs = 0, corresponding to a strong coagulation rate, relatively to
+the fragmentation. Carr and Dunwell (1999) proved under reasonable assumptions that for all i ≥1, ci(t) →0
+as t →+∞.
+2.2.2
+Rate of convergence
+The natural question that arises after the convergence to equilibrium is the rate of convergence. When the
+H-Theorem 2 holds, with the relative-entropy for instance, we could hope that convergence holds in this sense.
+The best situation would be the dissipation bounded from below by the entropy itself, i.e. along the solutions:
+D(c(t)) ≥CH(c(t)|cρ) for some constant C > 0. This leads immediately to an exponential decay of the entropy.
+Unfortunately this does not hold in all cases. A recent proof for ai ∼i is given by Ca˜nizo et al. (2015). Another
+way is to bound from below the dissipation by a non-negative function ψ depending on H, leading to
+d
+dtH(c(t)|cρ) ≤−ψ(H(c(t)|cρ)) .
+And the problem resumes to ﬁnd sub-solutions to this ordinary diﬀerential equation. This method is named
+entropy entropy-dissipation, because dissipation is created by entropy itself. But this method does not in general
+lead to exponential decay of the entropy. The ﬁrst result in this direction is due to Jabin and Niethammer (2003).
+Let us show their result.
+Theorem 4 (Rate of convergence, Jabin and Niethammer (2003)). Assume 1 ≤ai = O(i), 1 ≤bi = O(i),
+limi→+∞Q1/i
+i
+= 1/zs exists (zs > 0) and that aizs ≤min(bi, bi+1) for every i ≥1. Suppose moreover that
+cin ∈X+ with mass ρ < ρs (sub-critical case), with H(cin|cρ) < +∞and there exists ν > 0 such that
+P
+i≥1 exp(νi)cin
+i < +∞. The solution c to the Becker-D¨oring equations (4-5) on [0, +∞) with initial data cin
+satisﬁes, for some constant k depending on cin and for all t ≥0
+H(c(t)|cρ) ≤H(cin|cρ) exp(−kt1/3) .
+5
+
+PAGE 6
+This theorem is obtain thanks to ψ(H) = H/ ln(H)2. And the authors were able to go back from this
+estimate to the convergence in exp(−kt1/3) in the strong norm of X+. Similar results are obtained by Ca˜nizo
+et al. (2015) in various cases allowing fewer hypotheses. But these results still not provide satisfactory rate of
+decay, with pure exponential decay. A well know theory is the stability of linear operator. If the linearized system
+is locally exponentially stable, we could hope that so is the full non-linear system, in a small neighborhood of the
+equilibrium. And we could imagine that this small neighborhood is an absorbing set, since we have Theorem 4.
+In fact these steps were followed by Ca˜nizo and Lods (2013) to obtain their nice proof of the full exponential
+convergence stated below.
+Theorem 5 (Exponential stability, Ca˜nizo and Lods (2013)). Under the hypothesis of Theorem 4 and in addition
+limi→+∞ai+1/ai = zs · limi→∞Qi+1/Qi = 1. The solution c to the Becker-D¨oring equations (4-5) on [0, +∞)
+with initial data cin satisﬁes, for all t ≥0
+∥c(t) −cρ∥≤exp(−λt) .
+The constant λ is completely calculable from the constant of the problem, important fact for applicability.
+We refer to their article (Ca˜nizo and Lods, 2013) for a very well-detailed introduction and presentation to the
+result. We mention that the linear Becker-D¨oring system (with constant monomer c1) also exhibits exponential
+decay Kreer (1993), and a quantitative comparison of the convergent rates will be of interest.
+We ﬁnish this section pointing out that the critical case is still completely open. The super-critical too. But
+in this case it might not happen for the reason we will detail in the Section 2.4.
+2.3
+Coarsening and relation to transport equation
+From the Becker-D¨oring equations (4-5), the reader familiar with numerical analysis may recognize that equa-
+tions on ci, for every i ≥2, has the ﬂavor of a discretization of a transport equation. To make the link more
+apparent, it is useful to write down the weak form of Eq. (4-5), which is also a very useful tool for the study of
+the BD system it-self. Take (ϕi)i≥2 a suﬃciently regular sequence, we then obtain
+d
+dt
+X
+i≥2
+ci(t)ϕi = ϕ2J1 +
+X
+i≥2
+(ϕi+1 −ϕi) Ji .
+(11)
+where we recall the ﬂuxes Ji are deﬁned by Eq. (3). Clearly, (ϕi+1 −ϕi) can be seen as a discrete “spatial”
+derivative. Moreover, assuming some “spatial continuity”, it is tempting to rewrite Ji as Ji ≈(aic1 −bi) ci.
+With such ansatz, the last equation (11) then motivates the introduction of the following continuous transport
+equation (in a weak form)
+d
+dt
+Z ∞
+0
+ϕ(x)f(t, x)dx = ϕ(0)N(t) +
+Z ∞
+0
+ϕ′(x)j(t, x)f(t, x)dx ,
+(12)
+where the ﬂux now reads
+j(t, x) = a(x)u(t) −b(x) ,
+for some appropriate functions a and b, and a function u that plays the role of c1. We will see later what
+should be N and what becomes the mass conservation stating u in the subsequent sections. Both are the main
+diﬃculties of the problem in linking the discrete Eq. (11) to the continuous Eq. (12).
+As a matter of fact, they depend crucially on the scaling hypothesis (a small parameter which allows passing
+from discrete size i to continuous size x) and on the kinetic coeﬃcients a and b. We note that Eq. (12) is the
+weak form of a nonlinear transport equation known as the Lifshitz-Slyozov (LS) equation, after the work by
+Lifshitz and Slyozov (1961),
+∂
+∂tf + ∂
+∂x
+ j(t, x)f(t, x)
+
+= 0 ,
+(13)
+together with (if appropriate) the boundary condition at x = 0,
+lim
+x→0+ j(t, x)f(t, x) = N(t) ,
+(14)
+and an equation for u. Rigorous results making connection from the Becker-D¨oring Eq. (4-5) to the Lifshitz-
+Slyozov Eq. (13) are of two kinds. First, in the works initiated by Lauren¸cot and Mischler (2002), Collet et al.
+(2002), and pursued in Deschamps et al. (2016), the authors proved that a suitable rescaling of the solution
+to BD equations (with the essential assumption of large excess of monomers c1) converges to a solution of LS,
+on any ﬁnite time period and either in density or measure functional spaces. Second, in the works initiated by
+Penrose et al. (1978) and pursued by Penrose (1997), Niethammer (2003) and Niethammer (2004), the authors
+show that long-time behavior of super-critical solutions to BD equations are closed to the solution of LS.
+6
+
+PAGE 7
+2.3.1
+Evolution of large clusters in the super-critical case
+We saw in Theorem 3, in the case ρ > ρs, that the solution behaves particularly, as inﬁnitly large clusters are
+created as time goes to inﬁnity. The idea by Penrose (1997) is to perform a time/space scaling to approach
+the cluster distribution, both in a very long time and for very large sizes, in order to explain the loss of mass
+ρ −ρs > 0 in the super-critical case. The formal arguments for coeﬃcients given by Eq. (2) with γ = α = 1/3,
+are derived by Penrose (1997), we refer also to the review by Slemrod (2000). We present here the rigorous
+result obtained by Niethammer (2003), for any coeﬃcients given by Eq. (2) where the author proved that large
+clusters obey a variant of LS, named the Lifshitz-Slyozov-Wagner (LSW) equations, see below. For a review
+on LSW and Ostwald Ripening (out of the scope of this paper), see Niethammer et al. (2006) and Niethammer
+(2008).
+We sketch the formal arguments following Penrose (1997) and Niethammer (2003). To consider the behavior
+of large clusters at large time, we introduce an ad hoc small parameter 0 < ε ≪1 such that 1/ε will be a measure
+of a typical large cluster. Within the particular choice of coeﬃcients given by Eq. (2), it turns that a new time
+scale given by τ = ε1−α+γt, where α and γ are the exponents arising in the coeﬃcients, is an appropriate time
+scaling to obtain a non trivial dynamics. Indeed, we obtain by the BD equations (4-5) the reformulation
+d
+dτ ci =
+1
+ε1−α+γ (Ji−1 −Ji) ,
+and the ﬂuxes Ji in Eq. (3) become
+Ji = ai
+
+c1 −zs −q
+iγ
+
+ci −(bi+1ci+1 −bici) ,
+for every i ≥1. Since large clusters are formed as time goes to inﬁnity, it is possible to consider the system
+after a (possibly long) time tε for which the relative entropy H(c|cρs) is small enough, namely of order εγ. This
+suggests that the small clusters, up to some cut-oﬀiε are close to their equilibrium value, for t ≥tε and i ≤iε,
+given by
+ci(t) = Qizi
+s(1 + o(1)) .
+On the other hand large cluster may be described by a continuous variable x = εi for i ≥iε. Thus, we deﬁne
+a density f (stepwise) according to the variable x ≥εiε by
+f ε(τ, εi) = 1
+ε2 ci(τ) .
+Respectively we let uε(τ) = (c1(t) −zs)/εγ. This yields, after some manipulations, to
+∂f ε(τ, x)
+∂τ
++ jε(τ, x −ε)f ε(τ, x −ε) −jε(t, x)f ε(t, x)
+ε
+= o(1) ,
+with jε(τ, x) = xα  uε(τ) −
+q
+xγ
+
+. Formal arguments lead, as ε →0, to a solution f of Eq. (13). In turns, the
+mass conservation (6) becomes
+ρ =
+∞
+X
+i=1
+ici(τ) =
+iε
+X
+i=1
+ici(τ) +
+∞
+X
+i=iε
+ici = ρs +
+Z ∞
+0
+xf(τ, x) dx + o(1) ,
+At the limit, we obtain
+R ∞
+0
+xf(τ, x) dx = ρ −ρs which measures large clusters formation.
+Such condition,
+complemented with the LS equation (13), allows to determined u by the following expression
+u(τ) = q
+R ∞
+0
+xα−γf(τ, x) , dx
+R ∞
+0
+xαf(τ, x) dx
+.
+We now state the result obtained by Niethammer (2003).
+Theorem 6 (Lifschitz-Slyozov-Wagner limit, Niethammer (2003)). Assume kinetic coeﬃcient are given by
+Eq. (2), that the initial condition cε(0) satisﬁes H(cε(0)|cρs) = εγ and that P
+i≥M/ε icε
+i(0) →0 as M goes to
+inﬁnity uniformly in ε > 0.
+There is a subsequence {εn} converging to 0, a measure-valued function t 7→νt solution of LS equation (13)
+in D′(R+ × (0, +∞)) such that
+Z ∞
+0
+ϕ(x)f ε(τ, x) dx →
+Z ∞
+0
+ϕ(x)νt(dx) ,
+locally uniformly in t ∈R+, for all ϕ ∈C0
+0((0, ∞)) and for all t ≥0, and
+Z ∞
+0
+xνt(dx) = ρ −ρs .
+7
+
+PAGE 8
+We also mention the case of vanishing small excess of density, ρ −ρs →0 as ε →0, by Niethammer (2004),
+where the authors recovered the LS equation, in a similar framework.
+2.3.2
+Rescaled solution of BD for large monomer density
+Another point of view is to consider fast reaction rates aic1ci ∼bi+1ci+1 of order 1/ε, where 0 < ε ≪1,
+together with a large excess of monomers. Namely, the characteristic number of free particles c1 is two orders
+of magnitude greater than the characteristic number of clusters with size i ≥2. Following Collet et al. (2002),
+alternatively Deschamps et al. (2016), this leads to a rescaled version of the BD equations (4-5) given, for ε > 0,
+by
+d
+dtuε = −εJε
+1 −ε
+X
+i≥1
+Jε
+i ,
+(15)
+d
+dtcε
+i = 1
+ε
+h
+Jε
+i−1 −Jε
+i
+i
+,
+(16)
+for every i ≥1, where uε is the dimensionless version of c1 (not to be confused with the previous section) and
+the scaled ﬂuxes are
+Jε
+1 = αε(uε)2 −bε
+2cε
+2 ,
+Jε
+i = aε
+iuεcε
+i −bε
+i+1cε
+i+1 ,
+for every i ≥1. Theorem 1 provides existence and uniqueness of solution at ﬁxed ε > 0. Collet et al. (2002)
+constructed a sequence of “density” approximations in the Lebesgue space L1(R+) by, for all t ≥0 and x ≥0
+f ε(t, x) =
+X
+i≥2
+cε
+i(t)1Λε
+i (x) ,
+where Λε
+i = [(i −1/2)ε, (i + 1/2)ε) for each i ≥2. Note the ﬁrst cluster is excluded from the density, it is like
+assuming a solute with density f ε belonging to the solvent uε (in large excess). Then, macroscopic aggregation
+and fragmentation rates are constructed as functions on R+ (similarly to f ε), for each ε > 0 and x ≥0,
+aε(x) =
+X
+i≥2
+aε
+i1Λε
+i (x) ,
+bε(x) =
+X
+i≥2
+bε
+i1Λε
+i (x) .
+This scaling supposes the ﬁrst coagulation rate αε is faster (order 1/ε2) than the other rates aε
+i for i ≥2, which
+justiﬁes the use of another notation αε and a special treatment outside the function aε. Theoretical justiﬁcations
+can be found in Collet et al. (2002). Finally, the balance of mass reads in this case, for all t ≥0
+uε(t) +
+Z ∞
+0
+xf ε(t, x) dx = ρε ,
+(17)
+for some ρε > 0. The value of ρε is entirely determined by the initial condition at time t = 0.
+Again we deal with the limit ε →0, and we hope the limit of f ε satisﬁes in some sense the LS equation
+(13). Let us introduce few hypotheses for the limit theorem, namely we assume, there exists a constant K > 0,
+independent on ε > 0, such that, for all x ≥0,
+aε(x) + bε(x) ≤K(1 + x) .
+(18)
+Also, we assume there exists a measure µin on R+ such that
+lim
+ε→0
+Z ∞
+0
+ϕ(x)f ε(0, x) dx =
+Z ∞
+0
+ϕ(x)µin(dx) ,
+(19)
+for all ϕ ∈C0((0, +∞)) and
+lim
+R→+∞sup
+ε>0
+Z ∞
+R
+xf ε(0, x) dx = 0 .
+(20)
+This estimate on the tail of the initial distribution is a classical argument which increase the compactness and
+will allow then to pass to the limit in the balance of mass (17).
+Finally, we resume in the following the results obtained by Collet et al. (2002) in their Theorem 2.3, by
+Lauren¸cot and Mischler (2002) in Theorem 2.2 for a diﬀerent framework, and also modiﬁed by Deschamps et al.
+(2016), in Lemma 5.
+Theorem 7 (Lifschitz-Slyozov limit, Collet et al. (2002), Lauren¸cot and Mischler (2002)). Assume that αε
+is uniformly bounded, and that aε and bε satisfy Eq. (18). Suppose moreover that there exists ρ ≥0 and two
+8
+
+PAGE 9
+non-negative real functions a and b deﬁned on R∗
++ such that, when ε converges to 0, ρε converges to ρ, aε and
+bε converge locally uniformly on R∗
++ toward, respectively, a and b.
+If the family {f ε(0, ·)} satisﬁes Eqs. (19) and (20), then from all sequences {εn} converging to 0 we can
+extract a subsequence still denoted {εn} such that
+lim
+n→∞
+Z ∞
+0
+ϕ(x)f εn(t, x) dx =
+Z ∞
+0
+ϕ(x)µ(t, dx) ,
+(21)
+locally uniformly in t ∈R+, and for all ϕ ∈C0((0, +∞)), where µ := (µ(t, ·))t≥0 is a measure-valued function
+satisfying the LS equation (13) in D′(R+ × (0, +∞)) where u ∈C(R+) is non-negative and satisﬁes, for all
+t ≥0,
+u(t) +
+Z ∞
+0
+xµ(t, dx) = ρ .
+(22)
+The proof relies, mainly, on moment estimates and equicontinuity arguments. This theorem does not con-
+clude on the full convergence of the family as ε →0. To that it requires a uniqueness argument of the limit prob-
+lem Eq. (13) in measure with the balance of mass (22). Looking Eq. (13) against functions in D(R+ × (0, +∞))
+allows uniqueness with the necessary condition that the ﬂux j(t, x) points outward the domain at x = 0 (for
+instance if a(0)ρ−b(0) < 0). We refer to the works by Niethammer and Pego (2000), Collet and Goudon (2000)
+and by Lauren¸cot (2001) for the well-posedness theory on the Lifshitz-Slyozov equation. Also, we mention that
+the convergence in Eq. (21) has also been shown to hold in a functional density space, in L1(xdx), by Lauren¸cot
+(2002).
+We are now concerned with the case the ﬂux j(t, x) points inward the domain at x = 0, for instance if
+a(0)u(0) −b(0) > 0, or more generally if the characteristics, backward solution of
+d
+dtx = j(t, x)
+goes back to x = 0 in ﬁnite time. In this case, it is hopeless to obtain a well-deﬁned limit to the LS equation
+(13) without a boundary condition, of type (14). A rigorous identiﬁcation of the boundary condition has been
+performed by Deschamps et al. (2016). It was obtained through the limit of the rescaled BD equations (15-16)
+in the spirit of Theorem 7. More precisely, we assumed, a(x) ∼0 ¯axra and b(x) ∼0 ¯bxrb with ra ≤rb and
+ra < 1. These assumptions allow a ﬁne control of the pointwise value of the solution at x = 0 to obtain the
+boundary value. The limit obtained is a measure-valued solution to LS on [0, T], identiﬁable if supt∈[0,T ] u(t) >
+limx→0 b(x)/a(x) which correspond to time interval on which characteristic goes back to x = 0. Let us present
+an informal version of a result we obtained.
+Theorem 8 (Boundary value, Deschamps et al. (2016)). A “good” boundary condition at x = 0 for the Lifschitz-
+Slyozov equation, when a(x) = ¯axra and b(x) = ¯bxrb with ra < 1 and ra ≤rb, is
+lim
+x→0+ j(t, x)f(t, x) =
+(
+αu(t)2 ,
+if ra < rb , u(t) > 0 ;
+α
+a u
+ au −b
+
+,
+if ra = rb , u(t) > ¯b/¯a ,
+where α is the limit of αε as ε goes to 0. In both cases, this also reads
+lim
+x→0+ xraf(t, x) = α
+a u(t) .
+Note the conditions on ra, rb and u are well related to incoming characteristic.
+Theorems 1 and 2 by
+Deschamps et al. (2016) also assumed a technical growth condition (in ε) on the “relatively small” sizes, through
+the condition
+sup
+ε>0
+X
+i≥2
+εracin, ε
+i
+e−iz < +∞,
+for all z ∈(0, 1). This is the key estimates which is proved to propagate in time (see Proposition 2). This
+allows a quasi steady-state limit of the small cluster concentrations, that behave as fast variables in Eq. (16).
+Note in the case of exact power law, Deschamps et al. (2016) also proved with extra reasonable assumptions on
+initial conditions, that the limit measure solution has a density with respect to xradx. Finally, other scalings
+of the ﬁrst fragmentation rate are investigated by Deschamps et al. (2016). Also, these results do not provide
+a complete answer. Indeed, uniqueness for the inward case is not achieved and we are not aware if u can cross
+the threshold limx→0 b(x)/a(x).
+Remark 1. Second-order approximations (Fokker-Planck like) of BD equations are still under intense active
+research, and a full satisfactory answer is still an open problem, see proposed equations by Vel´azquez (1998,
+2000), Hariz and Collet (1999); Collet et al. (2002); Collet (2004), Conlon et al. (2016). Arbitrary higher order
+terms are formally derived by Niethammer (2003).
+9
+
+PAGE 10
+2.4
+Time-dependent properties, Metastability and Classical nucleation theory
+The following properties are of the most important ones in application of the BD equations to phase transition.
+Yet, as for the convergence rate to equilibrium, coarsening and evolution of large sized clusters, available results
+are still incomplete. The main result we are aware of on metastability for BD equations (4-5) is given by Penrose
+(1989). The ideas of classical nucleation theory goes back to Becker and D¨oring (1935), and is built on the
+remark that there exist steady-state solutions of the Eqs. (5) (with c1 constant) with non-zero steady-state
+ﬂux, which can be arbitrary small in some sense. This very small steady-state ﬂux is interpreted as the rate
+of formation of larger and larger cluster, leading to a phase transition phenomena in long time. The term
+metastability in such theory refers to the fact that the rate is arbitrary small. Penrose (1989) goes much beyond
+by extending this notion of metastability to a time-dependent phenomenon (instead of a steady-state one).
+Indeed, he could exhibit a solution of the full system (4-5) that enters a state that lived for exponentially long
+time, yet can be distinguished from the equilibrium state. This solution is a super-critical solution, with ρ > ρs,
+and is required to have a well prepared initial condition. This solution is also related in some sense to an
+extremely small common ﬂux value. It remains an important open question to know whether the metastable
+state can be reached from a larger class of initial data.
+Penrose (1989) considered technical conditions on coeﬃcients which are essentially satisﬁed by the ones given
+by Eq. (2). The crucial initial condition is then constructed as follows. For any z > zs, let fi(z) be the unique
+solution of
+ai−1zfi−1(z) −(bi + aiz)fi(z) + bi+1fi+1(z) = 0 ,
+i ≥2 ,
+with end conditions f1(z) = z and supi fi(z) < ∞. Actually, fi can be solved explicitly by (for z > zs the reader
+can check that the inﬁnite series are convergent)
+fi(z) = J(z)Qizi
+∞
+X
+r=i
+1
+aiQizi+1 ,
+J(z) :=
+" ∞
+X
+r=1
+1
+aiQizi+1
+#−1
+.
+Let i∗be the critical cluster size deﬁned as the (unique) size that minimizes the quantity aiQizi. The metastable
+state exhibited by Penrose (1989) has to be understood in the limit of small excess of density, z ↘zs. The
+following terminology is used
+• g(z) is exponentially small if for each m > 0, g(z) = O ((z −zs)m).
+• g(z) is at most algebraically large if for some m > 0, g(z) = O ((z −zs)−m).
+The main theorem by Penrose (1989) reads
+Theorem 9 (Metastability, Penrose (1989)). Let c be the solution of the BD Eqs. (4)-(5) with initial condition
+ci(0) =
+(
+fi(z) ,
+if
+i ≤i∗,
+Qizi
+s ,
+if
+i > i∗.
+Then c has an exponentially long lifetime as z ↘zs, in the sense that for each ﬁxed i (note that i∗→∞):
+• if t is at most algebraically large, then ci(t) −ci(0) is exponentially small
+• limt→∞[ci(t) −ci(0)] is not exponentially small
+Thus, cluster with size i ≪i∗remain exponentially close to their initial values, until an exponentially long time
+has elapsed. But eventually they do change. Note that the initial values for the small clusters, fi(z), correspond
+to the steady-state values of the classical nucleation theory, for which Ji−1(0) = Ji(0) for all 2 ≤i < i∗, and
+the common ﬂux value is J(z), which is also exponentially small as z ↘zs. We refer the reader to (Penrose,
+1989, Theorems 1 and 2) for orders of magnitude of i∗, J(z) and quantiﬁcation of the (small) growth rate of
+large clusters of size greater than i∗.
+Remark 2. The numerical illlustration of the metastability is a problem per se, we refer the reader to the two
+nice papers by Carr et al. (1995) and by Duncan and Soheili (2001), where numerical schemes are derived
+and are shown to consistently represent the metastable states. The reader may also look at the section 3.4
+where numerical simulations of the stochastic Becker-D¨oring are shown. Finally, let us mention that analogous
+metastability properties have been investigated in the classical linear version of BD by Penrose (1989) and Kreer
+(1993), in a ﬁnite-dimensional truncated version by Dunwell (1997) and Duncan and Dunwell (2002), and in a
+thermodynamically consistent version of the BD system by Ssemaganda and Warnecke (2013).
+10
+
+PAGE 11
+3
+Stochastic Becker-D¨oring model
+Due to space considerations, we will not detail historical facts on the study of stochastic coagulation-fragmentation
+models. Let us just mention that the ﬁrst study of a stochastic coagulation models is widely attributed to Mar-
+cus (1968) and Lushnikov (1978) which give the name to the Marcus-Lushnikov process, stochastic analog of
+the pure coagulation Smoluchowski’s equations. Up to our knowledge, Whittle (1965) and Kelly (1979) are pio-
+neering in the study of more general stochastic coagulation-fragmentation models (including the Becker-D¨oring
+model). See Aldous (1999) and the discussion in Freiman and Granovsky (2005) for more details.
+3.1
+Deﬁnition and State-space
+A stochastic version of the Becker-D¨oring model may be deﬁned as a continuous time Markov chain analog of
+the set of ordinary diﬀerential equations (4-5), for which transition are given by the same set of kinetic reactions
+(1), but modeling discrete numbers of clusters instead of continuous concentrations. Precisely, given a positive
+integer M, we deﬁne the state space
+XM :=
+(
+C = (Ci)i≥1 ∈NN :
+M
+X
+i=1
+iCi = M
+)
+.
+On XM, we introduced the following operators deﬁned by, for any conﬁguration C on XM,
+R+
+1 C
+=
+(C1 −2 , C2 + 1 , · · · , Ci , · · · )
+R−
+2 C
+=
+(C1 + 2 , C2 −1 , · · · , Ci, , · · · )
+and, for any i ≥2,
+R+
+i C
+=
+(C1 −1 , C2 , · · · , Ci −1 , Ci+1 + 1 , · · · )
+R−
+i+1C
+=
+(C1 + 1 , C2 , · · · , Ci + 1 , Ci+1 −1 , · · · )
+Given non-negative kinetic rates (ai)i≥1, (bi)i≥2, the stochastic Becker-D¨oring model (SBD) is deﬁned as the
+continous time Markov chain on XM with transition rates
+
+
+
+q(C, R+
+1 C)
+=
+a1C1(C1 −1) ,
+q(C, R+
+i C)
+=
+aiC1Ci ,
+i ≥2 ,
+q(C, R−
+i C)
+=
+biCi ,
+i ≥2 .
+Given an initial conﬁguration Cin ∈XM (deterministic or random), the conﬁguration C(t) deﬁned by the SBD
+may alternatively be represented as the solution of the following system of stochastic equations
+
+
+
+C1(t)
+=
+Cin
+1 −2J1(t) −
+X
+i≥2
+Ji(t) ,
+Ci(t)
+=
+Cin
+i + Ji−1(t) −Ji(t) ,
+i ≥2 ,
+(23)
+with
+Ji(t) = Y +
+i
+ Z t
+0
+aiC1(s)(Ci(s) −δ1,i)ds
+
+−Y −
+i+1
+ Z t
+0
+bi+1Ci+1(s)ds
+
+,
+i ≥1 ,
+where δ1,i = 1 if i = 1 and δ1,i = 0 if i > 1 and Y +
+i , Y −
+i+1 for i ≥1 are independent standard Poisson processes.
+Analogy between Eq. (23) and Eq. (4-5) is clear. The number of clusters of size i ≥2 evolves according to the
+diﬀerences between two (stochastic) cumulative counts Ji−1 and Ji. Finally, we may also identiﬁed the SBD
+with the help of its inﬁnitesimal generator LM, deﬁned by, for any bounded functions f on XM,
+LMf(C) =
+M−1
+X
+i=1
+
+f(R+
+i C) −f(C)
+
+aiC1(Ci −δ1,i) +
+
+f(R−
+i+1C) −f(C)
+
+bi+1Ci+1 .
+Thanks to the Markov processes theory, we deduce in particular that, for any bounded functions f on XM,
+f(C(t)) −f(Cin) −
+Z t
+0
+LMf(C(s))ds
+is a centered martingale, and, taking fC(C′) = 1{C′=C}, we deduce the following Backward kolmogorov equation
+on the probability P(t, ·) on XM (Master equation)
+d
+dtP(t; C) =
+M−1
+X
+i=1
+ai(C1 + 1)(Ci + 1 + δ1,i)P(t; R−
+i+1C) −aiC1(Ci −δ1,i)P(t; C)
++
+M
+X
+i=2
+bi(Ci + 1)P(t; R+
+i−1C) −biCiP(t; C) .
+(24)
+11
+
+PAGE 12
+Although the well-posedness of the SBD model is of course standard (as a pure-jump Markov process on a
+ﬁnite state-space), a ﬁrst non trivial question arises with respect to the precise description of the state space, and
+in particular to its cardinality. In fact, the state space XM is given by all possible partitions of the integer M,
+a well-known problem in combinatorics. In particular, one can show the recurrence formula and the asymptotic
+as M →∞, (Flajolet and Sedgewick, 2009, chap I.3)1
+M | XM |=
+M
+X
+i=1
+σ(i) | XM−i | ,
+| XM |∝
+1
+4M
+√
+3 exp
+ 
+π
+r
+2M
+3
+!
+,
+where σ(i) is the sum of the divisors of i (e.g. σ(6) = 1 + 2 + 3 + 6 = 12).
+Remark 3. We mention that some terminology in the literature may be confusing. Indeed, some authors Bhakta
+and Ruckenstein (1995) have named the deterministic Becker-D¨oring system (4-5) a stochastic version of the
+Lifshitz-Slyozov(-Wagner) equations.
+Such terminology seems to be motivated by the fact that the size of
+clusters are modeled as discrete variable in Eq. (4-5), and that such system has the ”ﬂavor” of a master equation
+for a random walk in N+.
+Remark 4. As for the BD system (4-5), some variants have been considered for the SBD. Let us mention for
+instance the constant monomer system studied in Yvinec et al. (2016) (which leads to a Poissonian equilibrium
+distribution), the exchange-driven growth model in Ben-Naim and Krapivsky (2003) (where clusters exchange
+monomer in one single step), some reduced version for speciﬁc kinetic rates (a(i) = i, b(i) = 0) see Doumic et al.
+(2016) and Eugene et al. (2016) or for ﬁxed number of clusters (only one or two clusters can be present) Penrose
+(2008), Rotstein (2015) and Yvinec et al. (2016). Of course, the SBD can be seen as a particular case of more
+general coagulation-fragmentation processes Bertoin (2006). However, due to its speciﬁcity, it seems that some
+of the results available on general coagulation-fragmentation processes are not straightforwardly applicable (or
+do not bring interesting conclusions). Finally, although out of the scope of this survey, let us mention the
+interesting links between the (stochastic) BD system with some lattice models Chau et al. (2015), Dehghanpour
+and Schonmann (1997), den Hollander et al. (2000), Bovier et al. (2010), Ercolani et al. (2014), in particular
+for nucleation and phase transition.
+3.2
+Long-time behavior
+Although the equation (24) is linear with respect to P(t, ·), the size of the state space being exponentially large
+as M →∞, it is illusory to obtain a full exact solution of Eq. (24). Yet, perhaps surprisingly, the stationary
+solution of Eq. (24) has a relatively simple form, namely a product-form Anderson et al. (2010). Indeed, the
+(unique) stationary probability Π on XM of Eq. (24) is given by (Kelly, 1979, Theorem 8.1)
+Π(C) = BM
+M
+Y
+i=1
+(Qi)Ci
+Ci!
+,
+(25)
+where BM is a normalizing constant and Qi is deﬁned by Eq. (8). One may verify simply that the following
+detailed balance condition holds (Kelly, 1979, Theorem 1.2)
+Π(C)q(C, R+
+i C) = Π(R+
+i C)q(R+
+i C, C)
+Note also that, for all z > 0, with Bz := BM/zM, the expression (25) may be rewritten Π(C) = Bz
+QM
+i=1
+(Qizi)Ci
+Ci!
+,
+which has a clearer analogy with the deterministic equilibrium of the BD equation. Finally, the distribution Π
+has the following probabilistic meaning: let Zi, i = 1, · · · , M, be independent Poisson random variables with
+respective means Qi, then it is easily seen that, for all C ∈XM,
+Π(C) = P
+(
+Z1 = C1, · · · , ZM = CM |
+M
+X
+i=1
+iZi = M
+)
+.
+For the stationary distribution Π, the expected number of clusters of size i is
+EΠCi = QiBM/BM−i ,
+and the probability that a randomly chosen particle lies in a cluster of size i is iQiBM/MBM−i, from which we
+deduce that the normalizing constant BM satisﬁes the recursive formula (with B0 = 1)
+MB−1
+M =
+M
+X
+i=1
+iQiB−1
+M−i .
+(26)
+1R.Y thanks Bence Melykuti for pointing out this fact
+12
+
+PAGE 13
+Moreover, B−1
+M is the coeﬃcient of zM in the power series expansion of
+G(z) = exp(
+X
+i
+Qizi)
+Remark 5. In some examples, the recursive formula (26) may be solved exactly. For instance, if ai = ai, bi = bi,
+then the equilibrium probability is given by the closed-form formula
+Π(C) =
+ b/a + M −1
+M
+−1 M
+Y
+i=1
+1
+Ci!
+ b
+ai
+Ci
+,
+Besides the analytical form of the equilibrium distribution Π, it is a natural question to ask what is its
+limiting behavior as M →∞. Under the assumption that
+lim
+i→∞
+ai
+bi+1
+= zs > 0 ,
+(27)
+(which is slightly stronger than the hypothesis on Q1/i
+i
+used in Theorem 2 and 3), one can show Freiman and
+Granovsky (2002); Bell and Burris (2003) that G has also for radius of convergence zs, and in such case, the
+expected number of clusters of size i has a limit as M →∞, given by
+lim
+M→∞EΠCi = Qizi
+s ,
+(28)
+Other functionals of the stationary distribution Π have been derived by Durrett et al. (1999). In particular, let
+us mention that the variance of Ci, under Π and with hypothesis (27), satisﬁes the same asymptotic relation
+(28), and that Ci, Cj, i ̸= j, becomes asymptotically uncorrelated as M →∞. It is also interesting to note the
+link of the limit (28) with the supersaturation case in the deterministic BD theory, see Theorem 3. Study of the
+limit shape of the stationary distribution Π (and quantities like the size of the largest or lowest component) is
+a well-known problem in statistical physics or in combinatorics (study of random integer partitions and Young
+diagrams) and goes back to Khinchin’s probabilistic method Khinchin (1960). Detailed description of such ﬁeld
+is out of the scope of this survey, and we refer the reader to Freiman and Granovsky (2005), Erlihson and
+Granovsky (2008), Han et al. (2008), Granovsky (2013), Ercolani et al. (2014) for recent results.
+In contrast to the deterministic theory, we are not aware of any work quantifying the speed of convergence
+toward the equilibrium distribution (25) (which has to be exponential). In particular, it would be interesting
+to study how this rate behave as M →∞.
+Remark 6. Strong binding limit for constant coeﬃcients has been considered in D’Orsogna et al. (2012) (linked
+to the almost pure-coagulation deterministic dynamics in King and Wattis (2002)) and illustrates how mass
+incommensurability arises for ﬁnite mass M, when a ﬁxed maximal cluster size N < M is further imposed.
+3.3
+Large Number and relation to deterministic Becker-D¨oring
+A ﬁrst natural question when comparing the SBD and the BD system, is that can we recover the determin-
+istic equations in the limit M →+∞? The main tool to answer such question is the tightness of stochas-
+tic processes, which provides an appropriate compactness property for a sequence of rescaled solutions of
+the SBD. As a particular case, Jeon (1998) has considered the sequence of stochastic processes {Cn(t)} in
+X+
+n :=
+n
+1
+nC : C ∈NN , P
+i≥1 iCi = n
+o
+⊂X+ ⊂l2, deﬁned by the generator
+Lnf(C) = n
+n
+X
+i=1
+
+f(R+
+i,nC) −f(C)
+
+aiC1(Ci −δ1,i) +
+
+f(R−
+i+1,nC) −f(C)
+
+bi+1Ci+1 ,
+(29)
+where, for all i ≥1,
+R+
+i,nC
+=
+(C1 −1/n , C2 , · · · , Ci −1/n , Ci+1 + 1/n , · · · )
+R−
+i+1,nC
+=
+(C1 + 1/n , C2 , · · · , Ci + 1/n , Ci+1 −1/n , · · · )
+Under such classical scaling (which satisﬁes the system size expansion), one can prove
+Theorem 10 (Law of Large Numbers, Jeon (1998)). If a(i), b(i) are such that
+sup
+C∈X+:P iCi≤1
+X
+i≥1
+a(i)Ci < ∞,
+sup
+C∈X+:P iCi≤1
+X
+i≥1
+b(i)Ci < ∞,
+(30)
+then the laws of the stochastic process {Cn(t)} deﬁned by Eq.(29) form a tight sequence as a c`adl`ag process in
+l2.
+13
+
+PAGE 14
+Note that hypothesis (30) is trivially satisﬁed for sublinear function of i. Also, it is clear that any weak
+limit of {Cn(t)} is a solution of the BD system (4-5), which is an alternative proof of existence of solution of
+the BD system. Finally, convergence of the whole sequence may be obtained with the uniqueness result stated
+in Theorem 1.
+We are not aware of any rigorous derivation of a second-order approximation of such limit, which should
+reasonably be a langevin stochastic diﬀerential equation version of the BD system (4-5).
+3.4
+Time-dependent properties, Metastability and stochastic nucleation theory
+Up to our knowledge, the early work Schweitzler et al. (1988) paves the way to study ﬂuctuations of the time-
+dependent cluster distributions and ﬁrst passage time in stochastic ﬁnite system nucleation models.
+Using
+physical arguments, they investigated reaction rates of the form ai ≈i2/3 and bi ≈i2/3y0eqi−1/3, which are
+asymptotically similar to Eq. (2) (which α = 2/3, γ = 1/3).
+One can notice that for such coeﬃcients, a
+(time-dependent) critical cluster size ic(t) exists, deﬁned by
+aiC1(t) −bi < 0 , ∀i < ic ,
+aiC1(t) −bi ≥0 , ∀i ≥ic .
+This observation has led Schweitzler et al. (1988) to analyze the SBD with the Ostwald ripening theory in
+mind. Speciﬁcally, with the help of numerical simulations, and heuristically derived moment closure approxi-
+mation of the master equation (24) governing the clusters’ distribution evolution (which resemble second-order
+approximation of the deterministic BD system, see Remark 1), the authors put in evidence the existence of
+a (stochastic) metastable state which is reached before the equilibrium distribution. Indeed, starting from an
+initial pure-monomer condition, on can observe a rapid transient that lead to a relatively small cluster distri-
+bution (with support contained among the size below the critical size), which has a long-lived state. Only after
+a ﬁrst critical cluster is formed, the cluster size distribution is bimodal, given by a mixture of undercritical and
+overcritical clusters, until a single large cluster emerges from a competition between overcritical clusters, and its
+further growth is at the expense of the other clusters which now shrink. We have reproduced similar numerical
+simulations, with kinetic coeﬃcients given by Eq. (2), in Fig 1 and 2.
+A key event in exiting the metastable state is thus the formation of an overcritical cluster. Such event may be
+analyzed with the help of the ﬁrst passage time theory. It is important to note that, in agreement with classical
+metastability theory, the authors of this previous work noticed that the ﬁrst time needed to form an overcritical
+cluster was subjected to large ﬂuctuations. We are not aware of any theoretical work on the metastability for the
+SBD system, but we may mention that several groups have recently investigated numerically the behavior of ﬁrst
+passage time (or related quantities) in the SBD system (or related models) Bhatt and Ford (2003), Yvinec et al.
+(2012), Yvinec et al. (2016), Penrose (2008), Johansson (2016). In particular, it is tempting to use ﬁrst passage
+time theory to deﬁne a stochastic analog of the so-called nucleation rate in the classical nucleation theory (see
+section 2.4). However, we notice that the analytical form of such nucleation rate is unclear. In particular, what
+should be the quasi-stationary distribution, stochastic analogous to the metastable state derived in Section 2.4?
+Finally, let us mention the link with the study of the stochastic gelation time in Smoluchowsky’s coagulation
+model, which has recently been the subject of active research. Let us deﬁned, for α ≤1,
+τ α
+n = inf{t > 0 : Cn
+k (t) > 0 , for some k > αn} ,
+(31)
+where {Cn(t)} is the rescaled stochastic process deﬁned its generator in Eq. (29). It is known that for the
+stochastic smoluchowsky’s coagulation model (see Jeon (1998),Eibeck and Wagner (2001), Fournier and Giet
+(2004), Fournier and Lauren¸cot (2009), Rezakhanlou (2013), Wagner (2005)), and for speciﬁc coagulation kernel,
+the sequence of ﬁrst passage time (31) has a ﬁnite (zero or positive) limit as n →∞, and that the limit is linked
+to the gelation (loss of mass) in the deterministic Smoluchowsky’s coagulation model. According to the longtime
+behavior theory for the deterministic Becker-D¨oring model, it is to be expected that for the SBD, such ﬁrst
+passage time (31) can only have inﬁnite limit. However, rate of divergence and summary statistics (mean,
+variance) as n →∞are important open questions.
+14
+
+PAGE 15
+Figure 1: Time trajectories of the SBD system (23) with kinetic coeﬃcient given by (2), with M = 500,
+α = 2/3, γ = 1/3, zs = 500/11, q = 10/11.
+On the left, we plot a stochastic realization of the number
+of Monomers, Dimers, Tri-mers and 4-mers, together with the sampled average over 100 realizations for the
+number of Monomers. On the middle, we plot the total mass in clusters and their numbers, and on the right,
+the maximal cluster size
+Figure 2: Cluster size distribution at distinct times t, corresponding to Fig 1. The sizes are rescaled by M,
+that is x = 2/M, · · · , 1. In blue we plot the distribution of a stochastic realization, in black we represent the
+sampled averaged distribution over 1000 realizations, and in red we plot the (rescaled) critical size xc = Ic/M.
+15
+
+PAGE 16
+Acknowledgment
+E.H. thanks the ﬁnancial support of CAPES/IMPA Brazil during the post-doc at the Universidade Federal de
+Campina Grande (Paraiba). R.Y thanks the Isaac Newton Institute for Mathematical Sciences, Cambridge, for
+support and hospitality during the programme Stochastic Dynamical Systems in Biology: Numerical Methods
+and Applications, where part of this work was undertaken.
+References
+D. J. Aldous. Deterministic and Stochastic Models for Coalescence (Aggregation and Coagulation): A Review of the Mean-Field
+Theory for Probabilists. Bernoulli, 5(1):3–48, 1999.
+M.-T. Alvarez-Martinez, P. Fontes, V. Zomosa-Signoret, J.-D. Arnaud, E. Hingant, L. Pujo-Menjouet, and J.-P. Liautard. Dynamics
+of polymerization shed light on the mechanisms that lead to multiple amyloid structures of the prion protein. BBA-Proteins
+Proteom., 1814(10):1305–1317, October 2011.
+D. F. Anderson, G. Craciun, and T. G. Kurtz. Product-form stationary distributions for deﬁciency zero chemical reaction networks.
+Bull. Math. Biol., 72(8):1947–1970, 2010.
+J. M. Ball and J. Carr. Asymptotic behaviour of solutions to the Becker-D¨oring equations for arbitrary initial data. Proc. Roy.
+Soc. Edinburgh Sect. A, 108(1-2):109–116, 1988.
+J. M. Ball, J. Carr, and O. Penrose. The Becker-D¨oring cluster equations: basic properties and asymptotic behaviour of solutions.
+Comm. Math. Phys., 104(4):657–692, 1986.
+R. Becker and W. D¨oring. Kinetische Behandlung der Keimbildung in ¨Ubers¨attigten D¨ampfen. Ann. Phys., 416(8):719–752, 1935.
+J. P. Bell and S. N. Burris. Asymptotics for logical limit laws: when the growth of the components is in an RT class. Trans. Amer.
+Math. Soc., 355(9):3777–3794, 2003.
+E. Ben-Naim and P. L. Krapivsky. Exchange-driven growth. Phys. Rev. E, 68(3), 2003.
+J. Bertoin. Random fragmentation and coagulation processes, volume 102 of Cambridge Studies in Advanced Mathematics. Cam-
+bridge University Press, Cambridge, 2006.
+A. Bhakta and E. Ruckenstein. Ostwald ripening: A stochastic approach. J. Chem. Phys., 103(16):7120, 1995.
+J. S. Bhatt and I. J. Ford. Kinetics of heterogeneous nucleation for low mean cluster populations. J. Chem. Phys., 118(3166):
+3166–3166, 2003.
+A. Bovier, F. den Hollander, and C. Spitoni. Homogeneous nucleation for Glauber and Kawasaki dynamics in large volumes at low
+temperatures. Ann. Probab., 38(2):661–713, 2010.
+P. C. Bressloﬀ. Aggregation-fragmentation model of vesicular transport in neurons. J. Phys. A, 49(14):145601–16, 2016.
+Z. Budrikis, G. Costantini, C. A. La Porta, and S. Zapperi. Protein accumulation in the endoplasmic reticulum as a non-equilibrium
+phase transition. Nature Communications, 5, 2014.
+J. J. Burton. Nucleation Theory. In B. J. Berne, editor, Statistical Mechanics: Part A: Equilibrium Techniques, volume 5 of
+Modern Theoretical Chemistry, pages 195–234. Springer US, Boston, MA, 1977.
+J. A. Ca˜nizo. Convergence to equilibrium for the discrete coagulation-fragmentation equations with detailed balance.
+J. Stat.
+Phys., 129(1):1–26, 2007.
+J. A. Ca˜nizo and B. Lods. Exponential convergence to equilibrium for subcritical solutions of the Becker-D¨oring equations. J.
+Diﬀerential Equations, 255(5):905–950, 2013.
+J. A. Ca˜nizo, A. Einav, and B. Lods.
+Trend to Equilibrium for the Becker-D¨oring Equations: An Analogue of Cercignani’s
+Conjecture. arXiv, (1509.07631):1–41, 2015.
+J. Carr and F. P. da Costa. Asymptotic behavior of solutions to the coagulation-fragmentation equations. II. Weak fragmentation.
+J. Statist. Phys., 77(1-2):89–123, 1994.
+J. Carr and R. M. Dunwell. Asymptotic behaviour of solutions to the Becker-D¨oring equations. Proc. Edinburgh Math. Soc. (2),
+42(2):415–424, 1999.
+J. Carr, D. B. Duncan, and C. H. Walshaw. Numerical approximation of a metastable system. IMA J. Numer. Anal., 15(4):
+505–521, 1995.
+C. Cercignani. Mathematical methods in kinetic theory. Plenum Press, New York, second edition, 1990.
+Y.-X. Chau, C. Connaughton, and S. Grosskinsky. Explosive condensation in symmetric mass transport models. J. Stat. Mech.-
+Theory E., 2015(11):P11031, 2015.
+J. F. Collet. Some modelling issues in the theory of fragmentation-coagulation systems. Commun. Math. Sci., 2(suppl. 1):35–54,
+2004.
+J. F. Collet and T. Goudon. On solutions of the Lifshitz-Slyozov model. Nonlinearity, 13(4):1239–1262, 2000.
+16
+
+PAGE 17
+J. F. Collet, T. Goudon, F. Poupaud, and A. Vasseur. The Beker-D¨oring system and its Lifshitz-Slyozov limit. SIAM J. Appl.
+Math., 62(5):1488–1500, 2002.
+J. G. Conlon, M. Dabkowski, and J. Wu. On large time behavior and selection principle for a diﬀusive Carr-Penrose model. J.
+Nonlinear Sci., 26(2):453–518, 2016.
+P. V. Coveney and J. A. D. Wattis. Analysis of a generalized becker-doring model of self-reproducing micelles. Proc. R. Soc. Lond.
+Ser. A Math. Phys. Eng. Sci., 452(1952):2079–2102, 1996.
+J. K. Davis and S. S. Sindi. Initial condition of stochastic self-assembly. Phys. Rev. E, 93(2), 2016.
+P. Dehghanpour and R. H. Schonmann. Metropolis dynamics relaxation via nucleation and growth. Comm. Math. Phys., 188(1):
+89–119, 1997.
+F. den Hollander, E. Olivieri, and E. Scoppola. Metastability and nucleation for conservative dynamics. J. Math. Phys., 41(3):
+1424–1498, 2000.
+J. Deschamps, E. Hingant, and E. Yvinec. Quasi steady state approximation of the small clusters in Becker-D¨oring equations leads
+to boundary conditions in the Lifshitz-Slyozov limit. arXiv, (1605.08984):1–29, 2016.
+M. Doumic, S. Eugene, and P. Robert. Asymptotics of stochastic protein assembly models. arXiv, (1603.06335):1–19, 2016.
+D. B. Duncan and R. M. Dunwell. Metastability in the classical truncated Becker-D¨oring equations. Proc. Edinb. Math. Soc. (2),
+45(3):701–716, 2002.
+D. B. Duncan and A. R. Soheili. Approximating the Becker-D¨oring cluster equations. Appl. Numer. Math., 37(1-2):1–29, 2001.
+R. M. Dunwell. The Becker-Doring cluster equations. PhD thesis, Heriot-Watt University, Edinburgh, 1997.
+R. Durrett, B. L. Granovsky, and S. Gueron.
+The equilibrium behavior of reversible coagulation-fragmentation processes.
+J.
+Theoret. Probab., 12(2):447–474, 1999.
+M. R. D’Orsogna, G. Lakatos, and T. Chou. Stochastic self-assembly of incommensurate clusters. J. Chem. Phys., 136(8):084110,
+2012.
+K. Eden, R. Morris, J. Gillam, C. E. MacPhee, and R. J. Allen. Competition between primary nucleation and autocatalysis in
+amyloid ﬁbril self-assembly. Biophys. J., 108(3):632–643, 2015.
+A. Eibeck and W. Wagner. Stochastic particle approximations for smoluchowski’s coagulation equation. Ann. Appl. Proba., 11(4):
+1137–1165, 2001.
+N. M. Ercolani, S. Jansen, and D. Ueltschi. Random partitions in statistical mechanics. Electron. J. Probab., 19, 2014.
+M. M. Erlihson and B. L. Granovsky. Limit shapes of gibbs distributions on the set of integer partitions: The expansive case. Ann.
+Inst. Henri Poincar´e Probab. Stat., 44(5):915–945, 2008.
+M. Escobedo, P. Lauren¸cot, S. Mischler, and B. Perthame. Gelation and mass conservation in coagulation-fragmentation models.
+J. Diﬀerential Equations, 195(1):143–174, 2003.
+S. Eugene, W.-F. Xue, P. Robert, and M. Doumic-Jauﬀret. Insights into the variability of nucleated amyloid polymerization by a
+minimalistic model of stochastic protein assembly. J. Chem. Phys., 144(17):175101, 2016.
+P. Flajolet and R. Sedgewick. Analytic Combinatorics. Cambridge University Press, Cambridge, 2009.
+N. Fournier and J.-S. Giet. Convergence of the Marcus–Lushnikov process. Methodol. Comput. Appl. Probab., 6(2):219–231, 2004.
+Nicolas Fournier and Philippe Lauren¸cot. Marcus–Lushnikov processes, Smoluchowski’s and Flory’s models. Stochastic Process.
+Appl., 119(1):167–189, 2009.
+G. A. Freiman and B. L. Granovsky. Asymptotic formula for a partition function of reversible coagulation-fragmentation processes.
+Israel J. Math., 130(1):259–279, 2002.
+G. A. Freiman and B. L. Granovsky.
+Clustering in coagulation-fragmentation processes, random combinatorial structures and
+additive number systems: Asymptotic formulae and limiting laws. Trans. Amer. Math. Soc., 357(6):2483–2507, 2005.
+B. L. Granovsky.
+Asymptotics of counts of small components in random structures and models of coagulation-fragmentation.
+ESAIM Probab. Stat., 17:531–549, 2013.
+D. Han, X. S. Zhang, and W. A. Zheng. Subcritical, critical and supercritical size distributions in random coagulation-fragmentation
+processes. Acta Math. Sin. (Engl. Ser.), 24(1):121–138, 2008.
+S. Hariz and J. F. Collet. A modiﬁed version of the Lifshitz-Slyozov model. Appl. Math. Lett., 12(1):81–85, 1999.
+N. Hoze and D. Holcman. Coagulation-fragmentation for a ﬁnite number of particles and application to telomere clustering in the
+yeast nucleus. Phys. Lett. A, 376(6):845–849, 2012.
+N. Hoze and D. Holcman. Modeling capsid kinetics assembly from the steady state distribution of multi-sizes aggregates. Phys.
+Lett. A, 378(5):531–534, 2014.
+N. Hoze and D. Holcman. Kinetics of aggregation with a ﬁnite number of particles and application to viral capsid assembly. J.
+Math. Biol., 70:1685–1705, 2015.
+17
+
+PAGE 18
+J. Hu and H. G. Othmer. A theoretical analysis of ﬁlament length ﬂuctuations in actin and other polymers. J. Math. Biol., 63:
+1001–1049, 2011.
+P. E. Jabin and B. Niethammer. On the rate of convergence to equilibrium in the Becker-D¨oring equations. J. Diﬀerential Equations,
+191(2):518–543, 2003.
+I. Jeon. Existence of gelling solutions for coagulation- fragmentation equations. Commun. Math. Phys., 567:541–567, 1998.
+J. Johansson. Stochastic analysis of nucleation rates. Phys. Rev. E, 93(2):022801, 2016.
+F. P. Kelly. Reversibility and Stochastic Networks. Cambridge University Press, Cambridge, 1979.
+A. Y. Khinchin. Mathematical Foundations of Quantum Statistics. Translation from the ﬁrst (1951) Russian ed., edited by I.
+Shapiro. Graylock Press, Albany, N. Y., 1960.
+J. R. King and J. A. D. Wattis. Asymptotic solutions of the Becker-D¨oring equations with size-dependent rate constants. J. Phys.
+A, 35(6):1357–1380, 2002.
+M. Kreer. Classical Becker-D¨oring cluster equations: rigorous results on metastability and long-time behaviour. Ann. Physik (8),
+2(4):398–417, 1993.
+P. Lauren¸cot. Weak solutions to the Lifshitz-Slyozov-Wagner equation. Indiana Univ. Math. J., 50(3):1319–1346, 2001.
+P. Lauren¸cot. The discrete coagulation equations with multiple fragmentation. Proc. Edinb. Math. Soc. (2), 45(1):67–82, 2002.
+P. Lauren¸cot and S. Mischler.
+From the Becker-D¨oring to the Lifshitz-Slyozov-Wagner equations.
+J. Statist. Phys., 106(5-6):
+957–991, 2002.
+P. Lauren¸cot and D. Wrzosek. The Becker-D¨oring model with diﬀusion. I. Basic properties of solutions. Colloq. Math., 75(2):
+245–269, 1998.
+I. M. Lifshitz and V. V. Slyozov. The kinetics of precipitation from supersaturated solid solutions. J. Phys. Chem. Solids, 19(1-2):
+35–50, 1961.
+B. Linse and S. Linse. Monte carlo simulations of protein amyloid formation reveal origin of sigmoidal aggregation kinetics. Mol.
+Biosyst., 7:2296–2303, 2011.
+A. A. Lushnikov. Coagulation in ﬁnite systems. J. Colloid Interf. Sci., 65(2), 1978.
+A. H. Marcus. Stochastic coalescence. Technometrics, 10(1):133–143, 1968.
+B. Niethammer. On the Evolution of Large Clusters in the Becker-D¨oring Model. J. Nonlinear Sci., 13(1):115–155, 2003.
+B. Niethammer. A scaling limit of the Becker-D¨oring equations in the regime of small excess density. J. Nonlinear Sci., 14(5):
+453–468, 2004.
+B. Niethammer. Eﬀective theories for Ostwald ripening. In P. M¨orters, R. Moser, M. Penrose, H. Schwetlick, and J. Zimmer,
+editors, Analysis and stochastics of growth processes and interface models, pages 223–243. Oxford Univ. Press, Oxford, 2008.
+B. Niethammer and R. L. Pego. On the initial-value problem in the Lifshitz-Slyozov-Wagner theory of Ostwald ripening. SIAM J.
+Math. Anal., 31(3):467–485, 2000.
+B. Niethammer, F. Otto, and J. J. L. Vel´azquez. On the eﬀect of correlations, ﬂuctuations and collisions in Ostwald ripening. In
+A. Mielke, editor, Analysis, modeling and simulation of multiscale problems, pages 501–530. Springer, Berlin, Heidelberg, 2006.
+O. Penrose. Metastable states for the Becker-D¨oring cluster equations. Comm. Math. Phys., 124(4):515–541, 1989.
+O. Penrose. The Becker-D¨oring equations at large times and their connection with the LSW theory of coarsening. J. Statist. Phys.,
+89(1-2):305–320, 1997. Dedicated to Bernard Jancovici.
+O Penrose. The becker-d¨oring equations for the kinetics of phase transitions, 2001.
+O. Penrose.
+Analysis and Stochastics of Growth Processes and Interface Models, chapter Nucleation and droplet growth as a
+stochastic process, pages 1–12. Oxford University Press, 2008.
+O. Penrose and A. Buhagiar. Kinetics of nucleation in a lattice gas model: Microscopic theory and simulation compared. J. Statist.
+Phys., 30(1):219–241, 1983.
+O. Penrose and J. L. Lebowitz. Towards a Rigorous Molecular Theory of Metastability. In E.W. Montroll and J. L. Lebowitz,
+editors, Fluctuation Phenomena, volume 7 of Studies in Statistical Mechanics, pages 293 – 340. Elsevier, 1979.
+O. Penrose, J. L. Lebowitz, J. Marro, M. H. Kalos, and A. Sur. Growth of clusters in a ﬁrst-order phase transition. J. Statist.
+Phys., 19(3):243–267, 1978.
+S. Prigent, A. Ballesta, F. Charles, N. Lenuzza, P. Gabriel, L. M. Tine, H. Rezaei, and M. Doumic. An eﬃcient kinetic model for
+assemblies of amyloid ﬁbrils and its application to polyglutamine aggregation. PloS one, 7(11):e43273–e43273, January 2012.
+F. Rezakhanlou. Gelation for Marcus–Lushnikov process. Ann. Probab., 41(3):1806–1830, 2013.
+H. G. Rotstein.
+Cluster-size dynamics: A phenomenological model for the interaction between coagulation and fragmentation
+processes. J. Chem. Phys., 142(22):224101, 2015.
+18
+
+PAGE 19
+J. W. P. Schmelzer, editor. Nucleation Theory and Applications. Wiley-VCH Verlag GmbH & Co. KGaA, Weinheim, 2005.
+F. Schweitzler, L. Schimansky-Geier, W. Ebeling, and H. Ulbricht. A stochastic approach to nucleation in ﬁnite systems: theory
+and computer simulations. Physica A, 150:261–279, 1988.
+M. Slemrod. Trend to equilibrium in the Becker-D¨oring cluster equations. Nonlinearity, 2(3):429–443, 1989.
+M. Slemrod. The Becker-D¨oring Equations. In N. Bellomo and M. Pulvirenti, editors, Modeling in Applied Sciences: A Kinetic
+Theory Approach, Modeling and Simulation in Science, Engineering and Technology, pages 149–171. Birkh¨auser Boston, Boston,
+MA, 2000.
+V. Ssemaganda and G. Warnecke. Existence of metastable solutions for a thermodynamically consistent Becker-D¨oring model. J.
+Appl. Anal., 19(1):91–124, 2013.
+J. J. L. Vel´azquez. The Becker-D¨oring equations and the Lifshitz-Slyozov theory of coarsening. J. Statist. Phys., 92(1-2):195–236,
+1998.
+J. J. L. Vel´azquez. On the eﬀect of stochastic ﬂuctuations in the dynamics of the Lifshitz-Slyozov-Wagner model. J. Statist. Phys.,
+99(1-2):57–113, 2000.
+W. Wagner. Explosion phenomena in stochastic coagulation–fragmentation models. Ann. Appl. Proba., 15(3):2081–2112, 2005.
+J. A. D. Wattis. An introduction to mathematical models of coagulation-fragmentation processes: a discrete deterministic mean-ﬁeld
+approach. Phys. D, 222(1-2):1–20, 2006.
+J. A. D. Wattis, C. D. Bolton, and P. V. Coveney. The Becker-D¨oring equations with exponentially size-dependent rate coeﬃcients.
+J. Phys. A, 37(8):2895–2912, 2004.
+P. Whittle. Statistical processes of aggregation and polymerization. Math. Proc. Cambridge Philos. Soc., 61(2):475–495, 1965.
+R. Yvinec, M. R. D’Orsogna, and T. Chou. First passage times in homogeneous nucleation and self-assembly. J. Chem. Phys., 137
+(24):244107, 2012.
+R. Yvinec, S. Bernard, E. Hingant, and L. Pujo-Menjouet. First passage times in homogeneous nucleation: Dependence on the
+total number of particles. J. Chem. Phys., 144(34106), 2016.
+E. Hingant, Departmento de Matem´atica, Universidad del B´ıo-B´ıo, Concepci´on, Chile
+E-mail address: ehingant@ubiobio.cl
+R. Yvinec, Physiologie de la Reproduction et des Comportements, Institut National de la Recherche Agronomique (INRA)
+UMR85, CNRS-Universit´e Fran¸cois-Rabelais UMR7247, IFCE, Nouzilly, 37380 France
+E-mail address romain.yvinec@tours.inra.fr
+19

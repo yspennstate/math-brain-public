@@ -1,0 +1,180 @@
+% Additive sharpening note for the D0033 source-scope package.
+% R7-01, 2026-09-17. This file does not replace main.tex.
+
+\section{A Dobrushin--SDPI sharpening of the quantitative bound}
+\label{sec:sdpi-sharpening}
+
+This section records a quantitative strengthening of the source-level argument.
+The source question only asks whether $\phi(n)\to0$ forces $\rho^*(n)\to0$ for a
+Markov chain.  The earlier proof gave the sufficient estimate
+$\rho^*(n)\le 4\sqrt{2\phi(n)}$.  The local step can be sharpened by changing
+language from a direct $\phi$--to--$\rho$ inequality to a channel contraction
+inequality.
+
+For a Markov transition kernel $K$ define its Dobrushin row diameter by
+\[
+  \delta(K):=\operatorname*{ess\,sup}_{x,x'}
+  \|K(x,\cdot)-K(x',\cdot)\|_{\rm TV},
+\]
+where the essential support is taken with respect to the relevant input law.
+For the time-inhomogeneous Markov chain $X=(X_k)$ write
+\[
+  \Delta(n):=\sup_{s<t:\,t-s\ge n}\delta(K_{s,t}).
+\]
+The convention for total variation is
+$\|\mu-\nu\|_{\rm TV}=\sup_B|\mu(B)-\nu(B)|$.
+
+\begin{lemma}[Dobrushin diameter controls maximal correlation]
+\label{lem:dobrushin-rho}
+Let $(U,V)$ be random variables on standard Borel spaces and let $K(u,\cdot)$
+be a regular conditional law of $V$ given $U=u$.  If the essential row
+diameter of $K$ is at most $\delta$, then
+\[
+  \rho(U,V)^2\le \delta.
+\]
+The same conclusion holds after replacing the law of $U$ by any probability
+measure supported on the same row-good set.
+\end{lemma}
+
+\begin{proof}
+We first treat finite-valued $U,V$.  For a finite stochastic matrix $K$, the
+classical contraction theorem of Cohen--Iwasa--Rautu--Ruskai--Seneta--Zbaganu
+for relative $g$-entropies states that every $f$-divergence contraction
+coefficient is at most the Dobrushin coefficient.  Taking
+$f(t)=(t-1)^2$ gives
+\[
+  \eta_{\chi^2}(K)\le\delta(K).
+\]
+For completeness, the link with maximal correlation is immediate.  Let
+$\lambda$ be the law of $U$, let $h\in L^2_0(\lambda)$ be bounded, and for
+$|\varepsilon|$ small enough put
+\[
+  d\lambda_\varepsilon=(1+\varepsilon h)\,d\lambda.
+\]
+If $\nu=\lambda K$, then
+\[
+ \frac{d(\lambda_\varepsilon K)}{d\nu}(v)
+   =1+\varepsilon\,\mathbb E[h(U)\mid V=v].
+\]
+Consequently
+\[
+ \frac{\chi^2(\lambda_\varepsilon K\|\nu)}
+      {\chi^2(\lambda_\varepsilon\|\lambda)}
+ =\frac{\|\mathbb E[h(U)\mid V]\|_2^2}{\|h\|_2^2}.
+\]
+Taking the supremum over bounded centered $h$, which are dense in
+$L^2_0(\lambda)$, gives
+\[
+  \rho(U,V)^2\le \eta_{\chi^2}(K)\le\delta(K).
+\]
+
+For standard Borel $U,V$, approximate arbitrary centered square-integrable
+functions of $U$ and $V$ in $L^2$ by bounded simple functions.  The induced
+finite channel has rows that are push-forwards of convex mixtures of rows of
+$K$.  If all original rows have pairwise total-variation distance at most
+$\delta$, then any two convex mixtures of those rows also have distance at
+most $\delta$, because
+\[
+ \Bigl\|\int K(u,\cdot)\,d\alpha(u)-
+        \int K(u',\cdot)\,d\beta(u')\Bigr\|_{\rm TV}
+ \le \iint\|K(u,\cdot)-K(u',\cdot)\|_{\rm TV}
+          \,d\alpha(u)d\beta(u')
+ \le\delta.
+\]
+Push-forward under a finite partition can only decrease total variation.
+The finite result therefore bounds the correlation of every pair of simple
+approximants by $\sqrt\delta$, and passage to the $L^2$ limit proves the
+claim.  The proof depends only on the row family, so changing the input law
+while remaining on the row-good set does not change the estimate.
+\end{proof}
+
+\begin{theorem}[Intrinsic row-diameter bound]
+\label{thm:row-diameter-rhostar}
+For a real-state Markov chain in Bradley's Section~3 setting,
+\[
+  \rho^*(n)\le \min\{1,\,2\sqrt{\Delta(n)}\}.
+\]
+In particular, Bradley's $\phi$ coefficient satisfies
+\[
+  \Delta(n)\le \min\{1,2\phi(n)\},
+\]
+and hence
+\[
+  \boxed{\rho^*(n)\le \min\{1,\,2\sqrt{2\phi(n)}\}.}
+\]
+Thus $\phi$-mixing implies $\rho^*$-mixing.
+\end{theorem}
+
+\begin{proof}
+The earlier row-diameter lemma in the source-scope proof shows that for each
+$s<t$, outside one common null set,
+\[
+  \|K_{s,t}(x,\cdot)-K_{s,t}(x',\cdot)\|_{\rm TV}
+  \le 2\phi(t-s).
+\]
+This proves $\Delta(n)\le\min\{1,2\phi(n)\}$.
+
+Now take finite disjoint index sets $S,T$ with $\operatorname{dist}(S,T)\ge n$.
+Order $S\cup T$ chronologically and merge consecutive selected indices of the
+same colour into maximal monochromatic blocks.  The block colours alternate.
+Enumerate the $S$-blocks as $S_1,\dots,S_I$ and the $T$-blocks as
+$T_1,\dots,T_J$, and let $U_i=(X_k)_{k\in S_i}$ and
+$V_j=(X_k)_{k\in T_j}$.
+
+Use Peyre's minimal-hypothesis form of the $N$-against-$M$ tensorization
+theorem: for the pair $(U_i,V_j)$ one conditions only on the earlier
+$S$-blocks and earlier $T$-blocks.  If $U_i$ and $V_j$ are nonadjacent in the
+full chronological block path, that conditioning field contains an
+intervening block and hence an intervening Markov state.  The Markov property
+then gives subjective maximal correlation exactly zero.
+
+If they are adjacent, write $s$ for the last time of the earlier block and
+$t$ for the first time of the later block.  Then $t-s\ge n$.  Conditioning on
+the prescribed earlier blocks changes the input law of $X_s$ but not the
+transition kernel $K_{s,t}$; the conditional input law remains supported on
+the row-good set.  Lemma~\ref{lem:dobrushin-rho} and maximal-correlation data
+processing give
+\[
+  \rho(U_i,V_j\mid\hbox{earlier blocks})
+  \le \sqrt{\delta(K_{s,t})}
+  \le \sqrt{\Delta(n)}.
+\]
+Thus Peyre's subjective-correlation matrix is the bipartite adjacency matrix
+of a path with every nonzero entry at most $\sqrt{\Delta(n)}$.  Its
+$\ell^2\to\ell^2$ norm is at most
+\[
+  \sqrt{\|E\|_1\|E\|_\infty}\le 2\sqrt{\Delta(n)},
+\]
+because every row and every column has at most two nonzero entries.  Peyre's
+tensorization theorem yields the same bound for the maximal correlation of
+the two finite coordinate vectors.  Arbitrary index sets follow by the usual
+finite-coordinate $L^2$ approximation of their generated sigma-fields.
+\end{proof}
+
+\paragraph{Sharpness of the local square root.}
+The exponent in Lemma~\ref{lem:dobrushin-rho} cannot be improved from
+$\sqrt\delta$ using Dobrushin diameter alone.  For the binary erasure channel
+which reveals the input with probability $\delta$ and otherwise outputs an
+erasure symbol, the two channel rows have total-variation distance $\delta$.
+With a symmetric Bernoulli input, conditional expectation preserves exactly
+a $\delta$ fraction of every centered input variance, so
+\[
+  \rho(U,V)^2=\delta.
+\]
+Therefore any further improvement to the global constant must use additional
+Markov/stationarity structure or improve the path tensorization step; it
+cannot come from a stronger universal conversion of row diameter to local
+maximal correlation.
+
+\paragraph{Prior-art note.}
+The finite-channel inequality used above is classical: J.~E. Cohen,
+Y.~Iwasa, Gh.~Rautu, M.~B. Ruskai, E.~Seneta, and Gh.~Zbaganu,
+``Relative entropy under mappings by stochastic matrices,'' Linear Algebra
+Appl. 179 (1993), 211--235.  Modern strong-data-processing treatments include
+Y.~Polyanskiy and Y.~Wu, arXiv:1508.06025, and O.~Ordentlich and
+Y.~Polyanskiy, IEEE Trans. Inf. Theory 68 (2022), 1480--1481.  The global
+block step uses R.~Peyre, ``Tensorizing maximal correlations,''
+arXiv:1004.1602v2 (2010), Theorem~3.3.1 and Section~3.4(a).  These ingredients
+are prior art.  The assertion that their combination resolves Bradley's
+Question~5 remains publication-novelty UNVERIFIED pending a broader literature
+review and the required independent audits.

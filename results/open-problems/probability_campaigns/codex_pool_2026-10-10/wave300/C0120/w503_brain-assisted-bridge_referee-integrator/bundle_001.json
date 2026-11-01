@@ -1,0 +1,61 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w503",
+  "bundle_slug": "c0120-referee-source-and-envelope-001",
+  "entries": [
+    {
+      "key": "c0120-source-scope",
+      "namespace": "probability.gaussian",
+      "logical_name": "c0120-gaussian-free-endpoint-ground-state-source-scope",
+      "kind": "concept",
+      "title": "C0120 source scope: Gaussian directed ground-state maximum",
+      "statement": "Chatterjee's arXiv:0810.4221v2, Section 12(3), asks to improve the fluctuation exponent beyond its Section 8 theorem Var(M_n)<=C n/log n. Here M_n is the maximum sum of independent standard Gaussian vertex weights over n-vertex up/right paths in Z_+^2 starting at the origin, with a free endpoint. The source does not state this question for the finite-temperature log partition function in general dimension. Var(M_n)=O(n^(1-epsilon)) for fixed epsilon>0 is a concrete proposed power target, not a verbatim source formulation. Current openness remains unverified.",
+      "proof_text": null,
+      "assumptions": ["Chatterjee arXiv:0810.4221v2 Sections 8 and 12(3)", "Source scope and proposed power target are distinguished"],
+      "domain": "probability theory",
+      "source": {"source_id": "arxiv:0810.4221v2:section8-section12-problem3", "url": "https://arxiv.org/pdf/0810.4221v2", "revision": "sha256:17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658; checked-2026-10-10", "license": "arxiv-nonexclusive", "excerpt": null}
+    },
+    {
+      "key": "c0120-one-site-envelope",
+      "namespace": "probability.gaussian",
+      "logical_name": "gaussian-directed-path-one-site-hypercontractive-overlap-envelope",
+      "kind": "lemma",
+      "title": "One-site hypercontractive upper envelope for Gaussian path overlap",
+      "statement": "For the n-vertex Gaussian directed-path model of C0120, let P_n(g) be its almost surely unique maximum path, g^t=e^(-t)g+sqrt(1-e^(-2t))g' with independent standard Gaussian g', Q_n(t)=E|P_n(g) intersect P_n(g^t)|, and q_v=P(v belongs to P_n(g)). Then for t>=0, Q_n(t)<=sum_v q_v^(1+tanh(t/2)). This is an upper bound on overlap, not an equality or a bound on variance by itself.",
+      "proof_text": "Set f_v(g)=1{v belongs to P_n(g)}. Stationary OU self-adjointness gives E[f_v(g)f_v(g^t)]=||P_(t/2)f_v||_2^2. Gaussian hypercontractivity gives ||P_(t/2)f_v||_2<=||f_v||_(1+e^(-t)). As f_v is an indicator, its squared Lp norm is q_v^(2/p), with 2/p=1+tanh(t/2). Sum over vertices; no independence of the f_v events is needed.",
+      "assumptions": ["finite n-vertex up/right path triangle", "independent standard Gaussian vertex weights", "OU time t with the stated normalization", "bounded path-indicator functions"],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w501-c0120-L2-reviewed-w503", "url": "~/brain_workers/w501/LEMMAS.md", "revision": "sha256:29e531611d35eaef4015da7c523212e0d5eab956641e479a73887ff903c2ae9a; w503-review-2026-10-10", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "c0120-one-site-envelope-floor",
+      "namespace": "probability.gaussian",
+      "logical_name": "gaussian-directed-path-one-site-envelope-logarithmic-floor",
+      "kind": "lemma",
+      "title": "Logarithmic floor of the one-site overlap certificate",
+      "statement": "For n>=2 and any nonnegative q_v summing to one on each of the n antidiagonals of the n-vertex up/right path triangle, define B_n(t)=sum_v q_v^(1+tanh(t/2)) and J_n=int_0^infinity e^(-t)B_n(t)dt. Then J_n>=(n-1)/log n, and B_n(n^(-alpha))/n tends to one for each fixed alpha>0. Consequently this direct unweighted one-site hypercontractive upper certificate cannot establish an O(n^(1-epsilon)) variance bound for fixed epsilon>0. The result is no lower bound on actual path overlap or variance.",
+      "proof_text": "Write a=tanh(t/2). Layer k-1 has k sites and q-mass one, so Jensen gives sum_layer q_v^(1+a)>=k^(-a). Summing gives B_n(t)>=n^(1-a). With u=e^(-t), a=(1-u)/(1+u)<=1-u; hence J_n>=int_0^1 n^u du=(n-1)/log n. At t=n^(-alpha), a<=t/2 and a log n tends to zero, so B_n(t)/n>=e^(-a log n)->1; also B_n(t)<=sum_v q_v=n. Since (n-1)/log n is not O(n^(1-epsilon)), the stated certificate cannot yield such a power upper bound.",
+      "assumptions": ["n>=2", "q_v>=0 and each antidiagonal's q-masses sum to one", "claim only about the stated unweighted one-site certificate"],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w501-c0120-L3-reviewed-w503", "url": "~/brain_workers/w501/LEMMAS.md", "revision": "sha256:29e531611d35eaef4015da7c523212e0d5eab956641e479a73887ff903c2ae9a; w503-review-2026-10-10", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "rare-indicator-talagrand-clause",
+      "namespace": "probability.concentration",
+      "logical_name": "rare-indicator-derivative-has-talagrand-l1-l2-gain",
+      "kind": "lemma",
+      "title": "Rare indicator derivatives can gain in Talagrand's L1-L2 denominator",
+      "statement": "On the uniform cube {-1,1}^3 with Delta_i f(x)=(f(x)-f(x with coordinate i flipped))/2, set f(x)=x_1 1{x_2=x_3=1}. Then Delta_1 f=x_1 1{x_2=x_3=1}, ||Delta_1 f||_1=1/4 and ||Delta_1 f||_2=1/2, so 1+log(||Delta_1 f||_2/||Delta_1 f||_1)=1+log 2>1. This refutes the blanket explanatory claim that an indicator-like derivative gains nothing; it does not refute Talagrand's inequality.",
+      "proof_text": "Flipping x_1 changes f from x_1 1_A to -x_1 1_A, so Delta_1 f=x_1 1_A. Under uniform measure P(A)=1/4. Its absolute value is 1 on A and 0 otherwise, yielding L1=1/4 and L2=sqrt(1/4)=1/2. The ratio is two.",
+      "assumptions": ["uniform product measure on {-1,1}^3", "discrete derivative normalization as stated"],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w502-c0120-L04-reviewed-w503", "url": "~/brain_workers/w502/ATTEMPT.md", "revision": "sha256:6568afc36273568f6356b2e1dcf04e8e0ef8d74cb4151e3a67e1ec855afd5581; w503-review-2026-10-10", "license": "owner-own-work", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "c0120-one-site-envelope-floor", "to_key": "c0120-one-site-envelope", "kind": "depends_on", "rationale": "The floor lemma's B_n(t)=sum_v q_v^(1+tanh(t/2)) is exactly the upper certificate in the envelope lemma; its lower bound limits that certificate, not actual Q_n."},
+    {"from_key": "c0120-one-site-envelope", "to_key": "c0120-source-scope", "kind": "semantic_association", "rationale": "Both nodes use the same n-vertex, free-endpoint Gaussian maximum-path model M_n; the overlap node studies a possible bridge to the source's variance question."},
+    {"from_key": "c0120-source-scope", "to_existing_logical": "math:probability.gaussian:open-problem-c0120-fluctuation-exponent-of-directed-polymers-beyond-the-logarithmic-impro", "kind": "semantic_association", "rationale": "Reviewed source-scope card says 'Gaussian free-endpoint maximum M_n'; the existing unverified card says 'Var(log Z_n) ... in general dimension'. Revise or quarantine the old attribution before relying on it."},
+    {"from_key": "rare-indicator-talagrand-clause", "to_existing_logical": "math:probability.concentration:talagrand-l1-l2-variance-inequality", "kind": "semantic_association", "rationale": "The new 3-cube card computes a denominator 1+log 2 for a rare indicator-like derivative; the existing card's prose says such a derivative 'gains nothing'. Only that prose is corrected; its theorem inequality remains untouched."}
+  ]
+}

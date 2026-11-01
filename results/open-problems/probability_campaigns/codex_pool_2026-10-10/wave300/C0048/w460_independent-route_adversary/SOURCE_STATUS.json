@@ -1,0 +1,133 @@
+{
+  "target": "C0048",
+  "worker": "w460",
+  "checked_at_utc": "2026-10-10T04:49:22.127890+00:00",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "primary_statement_verified": true,
+  "exact_statement": "For every integer q>=3 and integer d>=3, the nearest-neighbor ferromagnetic q-state Potts model on Z^d has positive spontaneous magnetization in a monochromatic infinite-volume state at its critical inverse temperature.",
+  "indicator_convention": {
+    "Hamiltonian": "H=-sum over unordered nearest-neighbor edges of 1_{equal spins}",
+    "edge_parameter": "p=1-exp(-beta)",
+    "critical_parameter": "p_c=inf{p:phi_wired_p(0 connects to infinity)>0}",
+    "normalized_magnetization": "m_plus=(q*mu_plus(sigma_0=1)-1)/(q-1)=phi_wired_p(0 connects to infinity)"
+  },
+  "source_convention": {
+    "Hamiltonian": "H_s=-sum sigma_x dot sigma_y on unit simplex spins",
+    "conversion": "beta_indicator=q*beta_simplex/(q-1); p=1-exp(-q*beta_simplex/(q-1))",
+    "slope_jump_conversion": "Indicator pressure slope jump is multiplied by q/(q-1) in the simplex beta variable; affine pressure shifts do not change jumps."
+  },
+  "primary_source": {
+    "source_id": "arxiv:1707.00520v1",
+    "url": "https://arxiv.org/pdf/1707.00520v1",
+    "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+    "author": "Hugo Duminil-Copin",
+    "locator": "Conjecture 2, printed p.93; definition of discontinuity p.5; Corollary 1.9 p.14; Propositions 1.2-1.3 p.9; Proposition 1.8 pp.13-14",
+    "quote": "Prove that the phase transition of the nearest-neighbor Potts model on Z^d (with d >= 3) is discontinuous for any q >= 3."
+  },
+  "other_primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/math/0207242",
+      "authors": [
+        "Marek Biskup",
+        "Lincoln Chayes"
+      ],
+      "use": "Verified reflection-positive/high-d scope from primary abstract; no claim that its hypothesis covers every d>=3."
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.06489",
+      "use": "Renormalization-group analysis is numerical/approximate evidence; not used as a rigorous proof or current-openness certificate."
+    }
+  ],
+  "local_records": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl",
+      "line": 48,
+      "historical_status": "source_says_open",
+      "current_status": "unverified",
+      "result_status": "attempted_unsolved",
+      "recorded_at": "2026-09-07T06:38:45Z"
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+      "line": 38,
+      "attempt_id": "C0048-A001",
+      "method": "reflection positivity/chessboard and contour entropy",
+      "independent_check": ""
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md",
+      "line": 591,
+      "status": "attempted_un"
+    }
+  ],
+  "canonical_population_check": {
+    "path": "~/math-brain-build/local/population/brain.sqlite3",
+    "connection": "mode=ro, uri=True",
+    "exact_ids": [
+      "claim_38c945c83e6d9f9dc77b20f936b660e811e528c284f76bd513990e6ed06ecc6a",
+      "claim_9830d2b5c32b82afa88de780611e6b0fe5e81b7d425ff5fabff71dad19cc6930"
+    ],
+    "rows_found": 2,
+    "source_fidelity_reviewed": false
+  },
+  "owner_solved_retired_check": {
+    "scope": "Exact C0048 matches in named intake directories, attempts H and I, Lean annotation, Team O board; Potts/C0048 filenames in the named open-problem folder.",
+    "result": "No checked record supplies a solved/retired certificate; this targeted check is not exhaustive.",
+    "final_named_folder_query": "Targeted Potts/C0048 text grep in Big Open problem in probability theory produced no matches; this does not certify absence of a solved result."
+  },
+  "scope_note": "Integer q>=3 is the verified Potts scope. The parenthetical q_c(d)=2 is not used without specifying the real/integer q domain of that threshold.",
+  "paired_proof": {
+    "prover": "w459",
+    "artifact_present_at_inspection": false,
+    "mathematical_review_performed": true,
+    "independent_route_saved_before_inspection": true,
+    "initial_inspection": {
+      "artifact_present": false,
+      "mathematical_review_performed": false
+    },
+    "artifact_present_at_latest_inspection": true,
+    "audit": "~\\brain_workers\\w460\\AUDIT_W459.json"
+  },
+  "recall": {
+    "receipt": "recall_receipt.json",
+    "timed_out": true,
+    "gate_seconds": 60,
+    "fallback": "Targeted MEMORY.md terms yielded no matching Potts index row; the explicitly cited perceptron_proof_open_gaps_fleet_2026_07_12 scar was read directly."
+  },
+  "formal_check": {
+    "performed": false,
+    "theorem": null,
+    "assumptions": null,
+    "trusted_axioms": null,
+    "receipt": null
+  },
+  "source_hash_check": "No source hash or integrator digest is used as mathematical evidence.",
+  "canonical_research_store_check": {
+    "root": "~/math-research-brain",
+    "result": "No brain/store SQLite filename found by the targeted local-tree query; a complete canonical-research status check remains unavailable. The two named population IDs were independently read in mode=ro.",
+    "openness_certificate": false
+  },
+  "local_source_manifest_observations": [
+    {
+      "source_id": "duminil_copin_ising_potts_2017",
+      "arxiv": "1707.00520",
+      "reading_status_recorded": "unread",
+      "statement_validation_recorded": "not_started",
+      "source_manifest_line": 9
+    },
+    {
+      "source_id": "duminil_copin_icm_2018",
+      "arxiv": "1712.04651",
+      "reading_status_recorded": "unread",
+      "statement_validation_recorded": "not_started",
+      "source_manifest_line": 8
+    }
+  ],
+  "independent_referee_review": {
+    "reviewer": "w461",
+    "verdict": "SCOPED_KEEP",
+    "receipt": "~\\brain_workers\\w460\\REFEREE_RECEIPT.json",
+    "different_model_gate": "NOT_VERIFIED"
+  }
+}

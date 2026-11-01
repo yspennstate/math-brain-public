@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T104732Z-fleet01-B12-r12",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "claims": [
+    {
+      "id": "B12-GEOMETRIC-PAIR-TRIGGER-MACRO",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "uniform-cube Boolean functions; a current centered node with one derivative row E_i relatively eta-close to a physical coordinate subcube Q_i, 0<=eta<1/2",
+      "statement": "Partition the physical trigger set into pairs and at most one singleton, continue only on the unique assignment matching the trigger pattern, and stop the macro on first mismatch. The macro satisfies Delta F < 8/3 and Delta J >= q_i-epsilon_i >= (1-eta)q_i. Hence if q_i>8/[3K(1-eta)] the macro is strictly K-affordable.",
+      "dependencies": [
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "85ffa60db26997421d980b1f86c03d82259504ca",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md",
+          "mode": "uses_premise",
+          "detail": "physical block inequality Delta_A F<=U_A<=|A| and exact telescoping J drift"
+        },
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md",
+          "mode": "uses_premise",
+          "detail": "robust near-subcube derivative-row hypothesis and trigger support-boundary lower bound"
+        },
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "85ffa60db26997421d980b1f86c03d82259504ca",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md",
+          "mode": "uses_premise",
+          "detail": "r_ik=p_ik/4+o_ik, used to certify that selected triggers carry genuine co-pair spectral mass; raw-U4 payment is not assumed"
+        },
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4ccd51ad517f425a529daa52c3352905b86ea69d",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md",
+          "mode": "uses_premise",
+          "detail": "Sections 2-4 selector debit; h2(d)/d divergence is applied to reject local linear payment and motivate aggregate macro affordability. Obsolete Section 5 candidate is excluded."
+        }
+      ]
+    },
+    {
+      "id": "B12-ROBUST-ROW-TERMINAL-EXCLUSION",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "terminal leaves of repeated application of the B12 geometric pair-trigger macro at fixed K, eta",
+      "statement": "Every terminal leaf has no relative-eta near-subcube derivative row with q_i>8/[3K(1-eta)]. The global macro tree satisfies F(root)-E F(terminal)<K[J(root)-E J(terminal)]<=KJ(root).",
+      "dependencies": ["B12-GEOMETRIC-PAIR-TRIGGER-MACRO"]
+    },
+    {
+      "id": "B12-SINGLETON-TRIGGER-REFINEMENT",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "same robust-row hypothesis, when singleton physical blocks are allowed in the macro",
+      "statement": "Using singleton triggers only gives geometric address cost <2 and affordability whenever q_i>2/[K(1-eta)].",
+      "dependencies": ["B12-GEOMETRIC-PAIR-TRIGGER-MACRO"]
+    }
+  ],
+  "unresolved": [
+    "robust rows below the explicit threshold",
+    "nonrobust derivative rows",
+    "full terminal-class inequality F<=KJ for one finite K",
+    "full uniform-cube FEI"
+  ]
+}

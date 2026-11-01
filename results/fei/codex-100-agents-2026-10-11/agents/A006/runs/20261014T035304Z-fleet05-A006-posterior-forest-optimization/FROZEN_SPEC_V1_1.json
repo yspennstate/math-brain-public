@@ -1,0 +1,11 @@
+{
+  "helper_version":"A006-joint-edge-root-marginal-v1.1",
+  "inherits":"FROZEN_SPEC.json",
+  "family_domain_case_count_symmetry_arithmetic_memory":"UNCHANGED: all 7/63 n=3/n=4 graph tables, 12/192 slices, actual queue coefficients, rational arithmetic, 100 MB estimate",
+  "change":"combine identical affine mass rows (q0,z) by summing exact spectral weights before rational derivative evaluation; preserve total P exactly. Full job runtime cap revised before rerun from 60 to 300 seconds; pilot remains 60 seconds. No dimension or case increase.",
+  "reason":"first full job hit 55-second wall-time guard after 36 tables and 90 slices on shared host; no mathematical assertion failed. Partial last-table certificate preserved separately.",
+  "max_runtime_seconds":{"pilot":60,"full":300},
+  "max_bisections":80,
+  "gap_precision":"stop as soon as rational conditional bit gap <=I/10^9",
+  "resources":"one foreground job, under 300MB, no GPU/window/background, no automatic dimension escalation"
+}

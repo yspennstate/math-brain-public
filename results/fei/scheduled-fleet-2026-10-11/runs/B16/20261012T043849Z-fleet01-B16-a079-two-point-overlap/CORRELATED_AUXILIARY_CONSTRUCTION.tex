@@ -1,0 +1,110 @@
+\section*{Two-point overlap surgery: exact spectrum, entropy, influence, and upper-set potential}
+
+All logarithms are base two.  Let $d\ge2$, let $z\in\mathbb F_2^d$ have
+Hamming weight $h\in\{1,\ldots,d\}$, and define the genuine Boolean
+function
+\[
+ f_{d,h}(x)=\begin{cases}-1,&x=0\text{ or }x=z,\\+1,&\text{otherwise}.
+ \end{cases}                                                   \tag{1}
+\]
+Equivalently, $f_{d,h}$ is the product of two one-point defects on the
+same physical $d$-cube.  Thus (1) is shared-input overlap, not a disjoint
+tensor product.  Put $\delta=2^{-d}$ and
+\[
+ L_z=\{S\subseteq[d]:|S\cap\operatorname{supp}z|\equiv0\pmod2\}.
+\]
+
+\paragraph{Theorem.}
+The squared Fourier spectrum of $f_{d,h}$ is
+\[
+ p_\varnothing=(1-4\delta)^2,\qquad
+ p_S=16\delta^2\quad(S\in L_z\setminus\{\varnothing\}),       \tag{2}
+\]
+and is zero otherwise.  Consequently, with
+$m=8\delta(1-2\delta)$ and $M=2^{d-1}-1$,
+\[
+ H(f_{d,h})=h_2(m)+m\log_2M.                                  \tag{3}
+\]
+The total influence is
+\[
+ I(f_{d,h})=\begin{cases}4(d-1)\delta,&h=1,\\4d\delta,&h\ge2.
+ \end{cases}                                                   \tag{4}
+\]
+
+For a squared spectral law $p$, define the upper-set mass
+$\pi(S)=\sum_{T\supseteq S}p_T$ and
+\[
+ U(p)=\sum_{S:p_S>0}p_S\log_2\frac{\pi(S)}{p_S}.
+\]
+Then
+\[
+ U(f_{d,1})=(1-4\delta)^2\log_2\frac1{(1-4\delta)^2}
+ +4(d-1)\delta(1-4\delta),                                    \tag{5}
+\]
+while for $h\ge2$,
+\[
+ \begin{split}
+ U(f_{d,h})={}&(1-4\delta)^2\log_2\frac1{(1-4\delta)^2}\\
+ &+4(d-2)\delta-16(d-1)\delta^2
+ +\mathbf1_{\{h\ {m even}\}},2^{4-h}\delta.              \tag{6}
+ \end{split}
+\]
+For every admissible $d,h$,
+\[
+ H(f_{d,h})<4I(f_{d,h}),\qquad U(f_{d,h})<3I(f_{d,h}).          \tag{7}
+\]
+If $h=h_d$ is arbitrary with $2\le h_d\le d$, then
+\[
+ \frac{H(f_{d,h_d})}{I(f_{d,h_d})}\longrightarrow4,
+ \qquad
+ \frac{U(f_{d,h_d})}{I(f_{d,h_d})}\longrightarrow1.          \tag{8}
+\]
+
+\paragraph{Proof.}
+For $S\ne\varnothing$, Fourier expansion of the two flipped atoms gives
+\[
+ \widehat f(S)=-2\delta(1+\chi_S(z)).
+\]
+Together with $\widehat f(\varnothing)=1-4\delta$, this proves (2), and
+(3) follows because the nonempty spectral mass is uniform on $M$ atoms.
+
+The negative set has two vertices.  If $h=1$, they share one internal edge,
+so their edge boundary has $2(d-1)$ undirected edges.  If $h\ge2$, it has
+$2d$ edges.  Dividing by $2^{d-1}$ proves (4).
+
+For nonempty $S\in L_z$, the number of $T\in L_z$ containing $S$ is
+\[
+ \#\{T\supseteq S:T\in L_z\}=
+ \begin{cases}
+ 2^{d-|S|},&\operatorname{supp}z\subseteq S\text{ and }h\text{ is even},\\
+ 2^{d-|S|-1},&\operatorname{supp}z\not\subseteq S.
+ \end{cases}                                                   \tag{9}
+\]
+When $h$ is odd the first case is impossible for $S\in L_z$.  Summing the
+logarithm of (9) over the uniform nonempty spectrum gives (5)--(6).  For
+$h=1$ this also reflects the exact identity of $f_{d,1}$ with a point defect
+on $d-1$ effective coordinates.
+
+The known point-defect inequalities give (7) when $h=1$.  For $h\ge2$,
+$h_2(m)\le m\log_2(e/m)$ and $M<2^{d-1}$ yield
+\[
+ H\le8\delta(1-2\delta)
+ \left[2d-4+\log_2e-\log_2(1-2\delta)\right]<16d\delta=4I,
+\]
+because $\delta\le1/4$ and
+$\log_2e-\log_2(1-2\delta)<4$.  Also
+\[
+ (1-4\delta)^2\log_2\frac1{(1-4\delta)^2}
+ \le\frac{8\delta(1-4\delta)}{\ln2},
+\]
+and the nonempty part of (6) is at most $4(d-1)\delta$.  Hence
+$U<12d\delta=3I$ for $d\ge2$.  Finally, (3) and (6), uniformly in $h\ge2$,
+give (8).\qed
+
+\paragraph{Interpretation.}
+The shared-input product destroys tensor factorization and, at $h=1$,
+physically cancels one full coordinate's boundary contribution.  Nevertheless
+both actual universal ratios remain bounded, with the same limits $4$ and
+$1$ as a single rare defect.  Thus two-site overlap does not rescue the
+divergent biased helper.  Any viable counterfamily must use a growing
+nonlinear cluster geometry rather than finitely many overlapping atoms.

@@ -1,0 +1,184 @@
+{
+  "status": "PASS",
+  "cases": 21,
+  "assertions": 143,
+  "records": [
+    {
+      "m": 2,
+      "r": 1,
+      "control_bank": "1/4",
+      "accumulated_future_debit": "1/4",
+      "ratio": 1,
+      "terminal_control_bank": "1/4"
+    },
+    {
+      "m": 2,
+      "r": 2,
+      "control_bank": "1/4",
+      "accumulated_future_debit": "1/4",
+      "ratio": 1,
+      "terminal_control_bank": "1/4"
+    },
+    {
+      "m": 2,
+      "r": 3,
+      "control_bank": "3/16",
+      "accumulated_future_debit": "3/16",
+      "ratio": 1,
+      "terminal_control_bank": "3/16"
+    },
+    {
+      "m": 3,
+      "r": 1,
+      "control_bank": "1/8",
+      "accumulated_future_debit": "1/4",
+      "ratio": 2,
+      "terminal_control_bank": "1/8"
+    },
+    {
+      "m": 3,
+      "r": 2,
+      "control_bank": "1/8",
+      "accumulated_future_debit": "1/4",
+      "ratio": 2,
+      "terminal_control_bank": "1/8"
+    },
+    {
+      "m": 3,
+      "r": 3,
+      "control_bank": "3/32",
+      "accumulated_future_debit": "3/16",
+      "ratio": 2,
+      "terminal_control_bank": "3/32"
+    },
+    {
+      "m": 4,
+      "r": 1,
+      "control_bank": "1/16",
+      "accumulated_future_debit": "3/16",
+      "ratio": 3,
+      "terminal_control_bank": "1/16"
+    },
+    {
+      "m": 4,
+      "r": 2,
+      "control_bank": "1/16",
+      "accumulated_future_debit": "3/16",
+      "ratio": 3,
+      "terminal_control_bank": "1/16"
+    },
+    {
+      "m": 4,
+      "r": 3,
+      "control_bank": "3/64",
+      "accumulated_future_debit": "9/64",
+      "ratio": 3,
+      "terminal_control_bank": "3/64"
+    },
+    {
+      "m": 5,
+      "r": 1,
+      "control_bank": "1/32",
+      "accumulated_future_debit": "1/8",
+      "ratio": 4,
+      "terminal_control_bank": "1/32"
+    },
+    {
+      "m": 5,
+      "r": 2,
+      "control_bank": "1/32",
+      "accumulated_future_debit": "1/8",
+      "ratio": 4,
+      "terminal_control_bank": "1/32"
+    },
+    {
+      "m": 5,
+      "r": 3,
+      "control_bank": "3/128",
+      "accumulated_future_debit": "3/32",
+      "ratio": 4,
+      "terminal_control_bank": "3/128"
+    },
+    {
+      "m": 6,
+      "r": 1,
+      "control_bank": "1/64",
+      "accumulated_future_debit": "5/64",
+      "ratio": 5,
+      "terminal_control_bank": "1/64"
+    },
+    {
+      "m": 6,
+      "r": 2,
+      "control_bank": "1/64",
+      "accumulated_future_debit": "5/64",
+      "ratio": 5,
+      "terminal_control_bank": "1/64"
+    },
+    {
+      "m": 6,
+      "r": 3,
+      "control_bank": "3/256",
+      "accumulated_future_debit": "15/256",
+      "ratio": 5,
+      "terminal_control_bank": "3/256"
+    },
+    {
+      "m": 7,
+      "r": 1,
+      "control_bank": "1/128",
+      "accumulated_future_debit": "3/64",
+      "ratio": 6,
+      "terminal_control_bank": "1/128"
+    },
+    {
+      "m": 7,
+      "r": 2,
+      "control_bank": "1/128",
+      "accumulated_future_debit": "3/64",
+      "ratio": 6,
+      "terminal_control_bank": "1/128"
+    },
+    {
+      "m": 7,
+      "r": 3,
+      "control_bank": "3/512",
+      "accumulated_future_debit": "9/256",
+      "ratio": 6,
+      "terminal_control_bank": "3/512"
+    },
+    {
+      "m": 8,
+      "r": 1,
+      "control_bank": "1/256",
+      "accumulated_future_debit": "7/256",
+      "ratio": 7,
+      "terminal_control_bank": "1/256"
+    },
+    {
+      "m": 8,
+      "r": 2,
+      "control_bank": "1/256",
+      "accumulated_future_debit": "7/256",
+      "ratio": 7,
+      "terminal_control_bank": "1/256"
+    },
+    {
+      "m": 8,
+      "r": 3,
+      "control_bank": "3/1024",
+      "accumulated_future_debit": "21/1024",
+      "ratio": 7,
+      "terminal_control_bank": "3/1024"
+    }
+  ],
+  "elapsed_seconds": 0.007108900000048379,
+  "arithmetic": "exact rational compressed boundary formulas; independent explicit integer Walsh/physical-edge checks at m2..5 r1,2",
+  "refuted_helper": "sum w B_future<=original unqueried control bank for every proper core-only tree",
+  "minimal_record": {
+    "m": 3,
+    "r": 1,
+    "ratio": 2
+  },
+  "scope": "unsigned sufficient-reserve renewal fails; actual entropy tree is paid at6; not an FEI disproof"
+}

@@ -1,0 +1,24 @@
+{
+  "helper_version": "A065 bent-tag targeted v1",
+  "family": "u=bent_k, v=bent_k flipped only at zero; seed a=parity2, AND2 sign negative only at zero, or majority3",
+  "k": [
+    4,
+    6,
+    8,
+    10,
+    12
+  ],
+  "case_count": 15,
+  "symmetry": "none, exact table memoization only",
+  "policies": "profile data0..k-1 then tag; early tag then seed0..s-1 then data0..k-1; seed increasing",
+  "arithmetic": "same exact rational entropy kernel",
+  "memory_estimate_MB": 200,
+  "max_runtime_seconds": 55,
+  "pilot_domain": "k4 all three seeds",
+  "prices": [
+    "4",
+    "32609/5000",
+    "8"
+  ],
+  "purpose": "challenge finite small-domain success at rare shared-data disagreement; fixed domain, no escalation"
+}

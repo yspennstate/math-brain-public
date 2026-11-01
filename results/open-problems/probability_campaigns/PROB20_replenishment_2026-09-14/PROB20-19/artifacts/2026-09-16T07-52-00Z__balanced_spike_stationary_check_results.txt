@@ -1,0 +1,29 @@
+PARAMETERS
+seed=20260916 p=6 d=3 a=1.0 c_pos=0.8 c_neg=-0.5 n=600000
+
+EXACT MAJORIZATION CHAIN
+y^(1) >=_maj ... >=_maj y^(p): True
+
+POSITIVE SPIKE: objective and sampled K
+m=1 mean=6.057524603258 max_abs_K=0.00270083 fro_K=0.00539145
+m=2 mean=6.037681456767 max_abs_K=0.00279503 fro_K=0.00745439
+m=3 mean=6.028396188447 max_abs_K=0.00322266 fro_K=0.00792255
+m=4 mean=6.022953677937 max_abs_K=0.00249722 fro_K=0.00693212
+m=5 mean=6.016991483324 max_abs_K=0.00253860 fro_K=0.00732625
+m=6 mean=6.014177538070 max_abs_K=0.00281551 fro_K=0.00771110
+sampled strict descending support-size values: True
+
+INTERMEDIATE SADDLE CHECK, m=3
+concentrating: mean_diff=0.000892713627381 se=0.00025861322869 z=3.451926
+spreading: mean_diff=-0.00284941981029 se=0.000583933394005 z=-4.879700
+
+NEGATIVE SPIKE: sampled K remains near zero at balanced supports
+m=1 mean=4.902900279833 max_abs_K=0.00268052 fro_K=0.00691888
+m=2 mean=4.880831607088 max_abs_K=0.00316829 fro_K=0.00680287
+m=3 mean=4.876016125204 max_abs_K=0.00241757 fro_K=0.00680598
+m=4 mean=4.874096627732 max_abs_K=0.00296416 fro_K=0.00787096
+m=5 mean=4.874483517955 max_abs_K=0.00245612 fro_K=0.00628915
+m=6 mean=4.873679684037 max_abs_K=0.00255040 fro_K=0.00677864
+
+NOTE: Monte Carlo checks are self-review only; stationarity and the positive-spike
+landscape classification are proved analytically in the companion report.

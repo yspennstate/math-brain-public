@@ -1,0 +1,367 @@
+Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is **not GPT-6 at maximum**; no authenticated runtime reasoning-effort telemetry or binding model/effort selector is exposed.
+
+# P0336 — exact ray degeneracy and the first fiber cell problem
+
+Worker: `R7-05`  
+Canonical target: `P0336`  
+Source: del Barrio–González-Sanz–Loubes–Rodríguez-Vítores, *Distributional Limit Theory for Optimal Transport*, arXiv:2505.19104v2, Problem 4.  
+Status after this artifact: **OPEN / PARTIAL**.  
+Frozen metric: `SEL_ID = 0` before and after.
+
+## 1. Setup
+
+Write a source point and target point as
+
+\[
+X=(A,S)\in [0,1]^2,\qquad Y=(B,T)\in [2,3]\times[0,1].
+\]
+
+For any matched pair define
+
+\[
+D:=B-A\in[1,3],\qquad H:=T-S.
+\]
+
+Because `B>A` always,
+
+\[
+|X-Y|=\sqrt{D^2+H^2}
+       =D+e(D,H),
+\]
+
+where
+
+\[
+e(D,H):=\sqrt{D^2+H^2}-D
+        =D\left(\sqrt{1+(H/D)^2}-1\right).
+\]
+
+For every perfect matching of fixed empirical source and target samples,
+
+\[
+\sum_i D_i=\sum_j B_j-\sum_i A_i
+\]
+
+is independent of the permutation. Thus the empirical OT problem is **exactly** the problem of minimizing `sum e(D_i,H_i)`.
+
+The earlier campaign observation gives constants `c,C>0` with
+
+\[
+cH^2\le e(D,H)\le CH^2
+\]
+
+uniformly for `D in [1,3]`, and hence every weak subsequential limit of optimal empirical plans is supported on `S=T`. That does not identify the horizontal coupling on each vertical fiber.
+
+This run asks what the next-order small-`H` energy can select.
+
+---
+
+## 2. B2 — obstruction first: there is no universal local horizontal ordering rule
+
+A tempting guess is that, once vertical coordinates are almost equal, Euclidean optimality should locally pair the horizontal coordinates monotonically, forcing the translation coupling `B=A+2`. Even the two-by-two problem rules out such a local principle.
+
+Take source points
+
+\[
+X_1=(0,0),\qquad X_2=(1,0).
+\]
+
+### Example A: the horizontally crossed pairing is strictly better
+
+Let
+
+\[
+Y_1=(2,0),\qquad Y_2=(3,\varepsilon),\qquad \varepsilon>0.
+\]
+
+The horizontally monotone pairing has total cost
+
+\[
+C_{\rm mono}=2+\sqrt{4+\varepsilon^2}.
+\]
+
+The crossed pairing has total cost
+
+\[
+C_{\rm cross}=1+\sqrt{9+\varepsilon^2}.
+\]
+
+Define
+
+\[
+f(x)=\sqrt{9+x}-\sqrt{4+x}.
+\]
+
+Then `f(0)=1` and
+
+\[
+f'(x)=\frac1{2\sqrt{9+x}}-\frac1{2\sqrt{4+x}}<0
+\]
+
+for `x>0`. Therefore `f(\varepsilon^2)<1`, i.e.
+
+\[
+\boxed{C_{\rm cross}<C_{\rm mono}}.
+\]
+
+### Example B: the horizontally monotone pairing is strictly better
+
+Instead let
+
+\[
+Y_1=(2,\varepsilon),\qquad Y_2=(3,0).
+\]
+
+Now
+
+\[
+C_{\rm mono}=\sqrt{4+\varepsilon^2}+2,
+\qquad
+C_{\rm cross}=3+\sqrt{1+\varepsilon^2}.
+\]
+
+Define
+
+\[
+g(x)=1+\sqrt{1+x}-\sqrt{4+x}.
+\]
+
+We have `g(0)=0` and
+
+\[
+g'(x)=\frac1{2\sqrt{1+x}}-\frac1{2\sqrt{4+x}}>0
+\]
+
+for `x>0`. Hence
+
+\[
+\boxed{C_{\rm mono}<C_{\rm cross}}.
+\]
+
+Both strict inequalities persist under sufficiently small perturbations of the four coordinates, so this is not an artifact of the two source points having the same vertical coordinate.
+
+**Consequence.** No proof of P0336 can rely on a pairwise statement of the form “small vertical mismatch forces horizontal monotonicity.” Arbitrarily small vertical perturbations can reverse the preferred horizontal matching.
+
+---
+
+## 3. B11 — dualize/localize: the quadratic fiber cell problem is exactly degenerate
+
+Suppose a two-scale analysis is performed near a vertical fiber. The natural scaled vertical displacement is
+
+\[
+Z:=\sqrt n\,H.
+\]
+
+At quadratic order,
+
+\[
+e(D,H)=\frac{H^2}{2D}+O(H^4),
+\]
+
+so the fiber energy corresponding to a probability law `eta` of `(A,B,Z)` is
+
+\[
+\mathcal Q(\eta):=\mathbb E_\eta\left[\frac{Z^2}{2(B-A)}\right].
+\]
+
+On a limiting vertical fiber, the source horizontal marginal must be uniform on `[0,1]` and the target horizontal marginal uniform on `[2,3]`. In particular,
+
+\[
+\mathbb E D=\mathbb E(B-A)=\frac52-\frac12=2,
+\]
+
+for **every** horizontal coupling.
+
+Let
+
+\[
+m:=\mathbb E Z.
+\]
+
+Then Cauchy–Schwarz gives
+
+\[
+(\mathbb E Z)^2
+=\left(\mathbb E\left[\frac{Z}{\sqrt D}\sqrt D\right]\right)^2
+\le
+\mathbb E\left[\frac{Z^2}{D}\right]\mathbb E D
+=2\mathbb E\left[\frac{Z^2}{D}\right].
+\]
+
+Therefore
+
+\[
+\boxed{
+\mathcal Q(\eta)\ge \frac{m^2}{4}.
+}
+\]
+
+Equality in Cauchy–Schwarz holds if and only if
+
+\[
+\frac{Z}{\sqrt D}=c\sqrt D
+\]
+
+almost surely, equivalently
+
+\[
+\boxed{Z=\frac m2 D.}
+\]
+
+Now fix **any** coupling `kappa` of `A~U[0,1]` and `B~U[2,3]`. If under `kappa` we set
+
+\[
+Z=\frac m2(B-A),
+\]
+
+then `E Z=m` because `E(B-A)=2`, and equality is attained:
+
+\[
+\mathcal Q=\frac{m^2}{4}.
+\]
+
+Hence:
+
+> **Fiber-cell degeneracy lemma.** Among all laws with the correct horizontal marginals and prescribed mean scaled vertical displacement `m`, the quadratic cell energy has value `m^2/4`, but its minimizers contain **every possible horizontal coupling**. The only requirement is that the scaled vertical displacement satisfy `Z=(m/2)(B-A)`.
+
+This is stronger than merely saying the quadratic expansion is non-strict. It identifies the full equality manifold.
+
+### Relation to the empirical vertical fluctuation
+
+If a sequence of optimal plans has a two-scale limit with `Z=sqrt(n)(T-S)` uniformly square-integrable, then for smooth `psi`, Taylor expansion gives
+
+\[
+\sqrt n\left(\int\psi\,d\nu_n^{(v)}-\int\psi\,d\mu_n^{(v)}\right)
+=
+\int \psi'(S) Z\,d\pi_n+o(1).
+\]
+
+Thus the limiting empirical-process fluctuation determines the **conditional mean field** `m(t)=E[Z|S=t]` in weak form, but the cell lemma shows that this mean field alone does not determine the horizontal coupling.
+
+This statement is conditional on the required two-scale tightness/uniform-integrability step; it is not asserted as a completed Gamma-convergence theorem.
+
+---
+
+## 4. B5 — add a parameter and differentiate: the degeneracy survives every local Taylor order
+
+Introduce vertical anisotropy
+
+\[
+c_\lambda(D,H):=\sqrt{D^2+\lambda H^2},\qquad \lambda>0,
+\]
+
+and excess
+
+\[
+e_\lambda(D,H):=c_\lambda(D,H)-D.
+\]
+
+On the equality manifold of the fiber cell problem, write
+
+\[
+H=rD.
+\]
+
+Then **exactly**, not merely asymptotically,
+
+\[
+e_\lambda(D,rD)
+=D\left(\sqrt{1+\lambda r^2}-1\right).
+\]
+
+For any horizontal coupling of the correct fiber marginals, `E D=2`, hence
+
+\[
+\boxed{
+\mathbb E e_\lambda(D,rD)
+=2\left(\sqrt{1+\lambda r^2}-1\right),
+}
+\]
+
+which is independent of the horizontal coupling for every `lambda>0`.
+
+In particular,
+
+\[
+\frac{d}{d\lambda}\mathbb E e_\lambda(D,rD)
+=
+\frac{r^2}{\sqrt{1+\lambda r^2}},
+\]
+
+and every higher `lambda` derivative is likewise coupling-independent.
+
+For the scaling predicted by the quadratic cell problem,
+
+\[
+r=\frac{m}{2\sqrt n},
+\]
+
+so the exact local excess becomes
+
+\[
+2\left(\sqrt{1+\frac{m^2}{4n}}-1\right)
+=
+\frac{m^2}{4n}-\frac{m^4}{64n^2}+O(n^{-3}),
+\]
+
+again independent of the horizontal coupling **to all orders** along the common-slope ray.
+
+> **Exact ray-degeneracy lemma.** Whenever matched edges in a local cell share a common slope `H/D=r`, the Euclidean cost of that cell depends only on the sum of horizontal displacements. Since that sum is fixed by the two horizontal marginals, the cost is exactly blind to the horizontal coupling.
+
+This is the geometric reason the second-order cell problem is degenerate; it is not an accident of truncating the square-root expansion.
+
+---
+
+## 5. What this rules out
+
+The following routes cannot by themselves identify the P0336 limit:
+
+1. **Pairwise horizontal uncrossing / monotone sorting.** Section 2 gives robust two-by-two configurations for which either horizontal pairing can be uniquely optimal.
+2. **Quadratic expansion around the vertical diagonal.** Section 3 shows its entire minimizing set contains every horizontal coupling.
+3. **Any finite Taylor expansion obtained by anisotropically varying the vertical cost.** Section 4 shows exact common-slope cost blindness, so every Taylor coefficient is blind on the equality manifold.
+4. **The prior vertical-support argument alone.** It proves `S=T` in the weak limit but contains no mechanism selecting the horizontal conditional law.
+
+---
+
+## 6. The new sharply isolated missing ingredient
+
+The selection, if deterministic, has to come from **compatibility across neighboring vertical fibers and the full two-dimensional empirical fluctuations**, not from the local Euclidean cell energy alone.
+
+At scale `n^{-1/2}`, the formal cell minimizer wants
+
+\[
+T-S\approx \frac{m(S)}{2\sqrt n}(B-A).
+\]
+
+But the target empirical measure is not specified merely by its vertical marginal: its joint `(B,T)` fluctuation must match an independent two-dimensional empirical process. Enforcing that joint constraint across all vertical levels may restrict the otherwise arbitrary horizontal coupling. Conversely, if microscopic random compatibility leaves many asymptotically tied choices, the limit could be product-like or even require a random-selection description.
+
+This is now the source-level bottleneck.
+
+A useful next formulation is therefore a **first-order continuity/compatibility equation** for the two-dimensional empirical fluctuation under the ray ansatz. One should derive the constraint on the conditional coupling kernel `kappa_t(da,db)` imposed by the target Brownian-bridge field, rather than seeking another scalar energy expansion.
+
+---
+
+## 7. Status and next methods
+
+Source metric: `SEL_ID: 0 -> 0` (**NO MOVEMENT**).
+
+Ordinary unchanged count for fresh P0336: `0 -> 1`.
+
+What is proved here:
+
+- exact robust two-by-two reversal of horizontal matching preference;
+- complete solution of the quadratic fiber cell problem;
+- exact common-slope/ray degeneracy for the full anisotropic Euclidean cost, hence degeneracy to every local Taylor order.
+
+What is not proved:
+
+- existence of a two-scale limit for `sqrt(n)(T-S)`;
+- the cross-fiber compatibility equation;
+- deterministic or random identification of the limiting horizontal coupling;
+- source-level closure of Problem 4.
+
+Next nonrepeating Section-B triple proposed: **B6 / B18 / B27**.
+
+- **B6 deformation:** derive the first-order compatibility equation by deforming the vertical empirical coordinate and keeping the full `(horizontal,vertical)` target fluctuation.
+- **B18 translate:** translate the matching into a flux/continuity equation across vertical cuts with horizontal marks retained.
+- **B27 average over nuisance variables:** average over local empirical horizontal marks only after deriving the marked constraint, to test whether product-fiber coupling emerges by self-averaging or whether a random kernel survives.

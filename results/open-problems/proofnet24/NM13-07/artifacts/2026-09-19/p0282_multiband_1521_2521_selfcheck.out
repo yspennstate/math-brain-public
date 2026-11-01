@@ -1,0 +1,26 @@
+P0282 exact multiband Plancherel 1521/2521 finite-core checker
+candidate: 1000*n >= 2521*j (equiv k/n >= 1521/2521), finite seam s=j-1=66..180
+primes=40 CRT_bits=1196 factorial180_bits=1094 modulus_gt_2factorial180=true
+s=66 best_M=59 exact_lower_gt_1=true lower~1.00000967704053333
+s=80 best_M=59 exact_lower_gt_1=true lower~1.0001355529152453
+s=100 best_M=59 exact_lower_gt_1=true lower~1.00023374644229104
+s=120 best_M=59 exact_lower_gt_1=true lower~1.00027094233802207
+s=140 best_M=59 exact_lower_gt_1=true lower~1.000287468804548
+s=160 best_M=59 exact_lower_gt_1=true lower~1.0002884961673265
+s=180 best_M=59 exact_lower_gt_1=true lower~1.00028344397530794
+finite_multiband_exact_s66_180=PASS weakest_lower~1.00000967704053333 at_s=66 best_M=59
+diagnostic_s66_c151_best~0.999772324765407562 best_M=59 below_one=true
+diagnostic_s66_c152_best~0.999988337220426947 best_M=59 below_one=true
+asym_good_factor_shift_j182_all_coefficients_positive=PASS
+tail_base_s=181 r=39 margin=14379373703164531798658488037661210022002000000
+tail_base_s=182 r=39 margin=12695874856162318774887356932139059718562000000
+tail_base_s=183 r=39 margin=10556428404763673057178211152204660374607000000
+tail_base_s=184 r=39 margin=7841544631954357111947295128012043276071000000
+tail_base_s=185 r=39 margin=4401452180106936222442367289137836678611000000
+tail_base_s=186 r=39 margin=48682138993873056130009615460269147131000000
+six_step_tail_contraction_R181_lt_1_and_log_derivative_negative=PASS margin=13169713741084433201
+rho0_gt_one_third_for_j>=182=PASS
+asym_good_factor_gt_1_plus_1_over_200j=PASS
+asym_tilted_bad_mass_lt_9/(5000j)=PASS
+asym_final_product_gt_1_for_j>=182=PASS
+ALL_EXACT_CHECKS_PASS

@@ -1,0 +1,13 @@
+{
+ "helper_version":"A014-shared-blocker-v1.2",
+ "actual_boolean_family":"f=1-2 h_x(y) k_x(z), two nested Boolean blocker pairs on disjoint two-bit private cubes and one common bit",
+ "domain":"All 81 pointwise nested pairs h1<=h0 on a four-point private cube, and all 81 analogous k pairs; 6561 labelled pairs on n=5 including constants",
+ "case_count":{"pilot":81,"full":6561},
+ "pilot_domain":"Diagonal h_pair=k_pair; previous lexicographic first 81 contained only zero blockers and is preserved in pilot_degenerate.json",
+ "reference_checks":"Two normalized references on each nonzero blocker: exact terminal spectra with uniform shared-bit label; uniform terminal references with uniform shared-bit label. Check full nonempty conditioning, exact CE and KL identities.",
+ "symmetry":"None; every labelled nested pair retained",
+ "arithmetic":"Integer Walsh transforms; exact rational probabilities and influence; entropy represented as rational coefficients of log2 prime integers",
+ "memory_estimate":"Below 100 MB; aggregate outputs and periodic checkpoints",
+ "maximum_runtime_seconds":{"pilot":60,"full":300},
+ "dimension_escalation":"None"
+}

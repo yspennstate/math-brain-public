@@ -1,0 +1,95 @@
+[
+  {
+    "claim_id": "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER",
+    "version": 3,
+    "exact_statement": "The A058 v1 anchored transfer remains valid at its private-bit/disjoint-shared-block hypotheses. When the first two private bits are identified, coefficient pairs v_T(S),v_{T xor {1,2}}(S) merge coherently. With ell=v^2, Q=v^2+v_partner^2, P=(v+v_partner)^2, delta=P-Q, the exact bit ledger is H(P)=H(old)-H_ell(T|Y)-D(P||Q)-sum_Y delta(Y)log2 Q(Y), both laws normalized, 0<=D<=1 and 0<=H_ell(T|Y)<=1. Influence change is sum_Y delta(Y)(|phi(T)|+|S|)-2Pr_ell({1,2} subset T). No finite C bounds the signed cross-surprisal, or positive coherent entropy increment, by shared-anchor influence in all such Boolean compositions: quadratic bent cores give R=k, Delta H=k-2, I_anchor=1 and Delta I_data=k/2 for every k>=1. Nor is latent posterior<=C I_anchor: an off-diagonal exceptional outer with identical literal children gives posterior=1 and I_anchor=0. The exact deficit transport retains both credits and the influence change; its universal sign/payment remains open. Restricted physical-tree replacement: for a fresh fair-selector mux of G(S,X)=epsilon(X)chi_{A(X)}(S) and H(S,Y)=eta(Y)chi_{B(Y)}(S), arbitrary finite shared S and disjoint private X,Y, the exact coherent collision potential R satisfies H(F)=(H(G)+H(H))/2+R, 0<=R<=(4+2/ln2)I_data(F). At each actual data query the signed erasure correction D_i relative to half the two core erasures obeys |D_i|<=4 Inf_i(F), with factor 2 at private queries. Every adaptive data prefix has |R_root-E R_leaf|<=(4+2/ln2)(I(F_root)-E I(F_leaf)). An optional selector suffix spends the remaining data reserve; both inherited terminal core entropies remain explicit. The indexed-parity hypothesis is equivalent to hereditary l1<=1 conditional-private-mean profiles.",
+    "hypotheses": [
+      "Uniform physical cube and Boolean sign outer/shared gates; entropy in bits including empty atoms.",
+      "Original shared gates occupy pairwise disjoint blocks; Boolean repeated gates cancel modulo two before expansion.",
+      "Exactly the first two private anchors are identified, all other private anchors remain; constant signs can be absorbed into the outer gate.",
+      "The identification is a shared-variable contraction, not a physical single-coordinate query; no stopping-tree telescope for this contraction is assumed.",
+      "Additional restricted physical-tree replacement has its separate indexed-parity/fresh-fair-selector hypotheses, not the earlier anchor-identification hypotheses; entropy bits, actual adaptive physical data restrictions, uniform original cube."
+    ],
+    "statement_sha256": "326246cb99a3df4f8f8c5e56b95b6e443e71b18aaac87bd9d7ba7539dd829b22",
+    "contributors": [
+      "fleet05/A058"
+    ],
+    "proof_source": {
+      "current": "~\\brain_workers\\FEI100_20261011\\agents\\A058\\runs\\20261013T234047Z-fleet05-A058-overlapping-compositions\\PROFILE_REPAIR.md",
+      "preserved_v2": "~\\brain_workers\\FEI100_20261011\\agents\\A058\\runs\\20261012T020138Z-fleet05-A058-overlapping-compositions\\COHERENT_FIBER_REPAIR.md",
+      "preserved_v1": "~\\brain_workers\\FEI100_20261011\\agents\\A058\\runs\\20261011T222138Z-fleet05-A058-overlapping-compositions\\OVERLAP_ENTROPY_LEDGER.md"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SCOPED_REPAIR_PROVED_LOCAL_REVIEW_PENDING",
+    "supersedes": [
+      {
+        "claim_id": "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER",
+        "version": 2,
+        "scope": "Preserves prior transfer and obstruction; supplies a scoped physical-query replacement price rather than a universal anchor-only price."
+      }
+    ],
+    "refutes": [
+      "For one shared physical anchor there is finite C with R<=C I_anchor for every admitted Boolean composition.",
+      "For one shared physical anchor there is finite C with H(merged)-H(anchored)<=C I_anchor for every admitted Boolean composition.",
+      "For one shared physical anchor there is finite C with latent posterior<=C I_anchor for every admitted Boolean composition."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B12",
+      "A077",
+      "A097",
+      "A056",
+      "A057",
+      "A091",
+      "A090",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A077-ONE-SHARED-BIT-SIGNED-TRANSPORT",
+    "version": 1,
+    "exact_statement": "For every uniform Boolean pair G(s,X),H(s,Y) sharing at most one physical data bit s, with disjoint private blocks X,Y and fresh selector z, F=(G+H)/2+z(G-H)/2 satisfies at each data query B_i(F)=(B_i(G)+B_i(H))/2+D_i with |D_i|<=2 Inf_i(F). The factor two is sharp at G=-1,H=s. Every finite adaptive data-only prefix T, z unqueried and arbitrary stopping leaves, has B_T(F)=(B_T(G)+B_T(H))/2+D_T and sum_v w_v |D_v|<=2 Pi, Pi=I(F)-E I(F_leaf). Its exact terminal entropy is E[H(G_leaf)+H(H_leaf)]/2+E R_leaf with R defined by the common-frequency formula in PROOF.md (8). For K=2+2/ln2<5, |R_root-E R_leaf|<=K Pi and 0<=R<=K I_data(F), I_data(F)=(I(G)+I(H))/2. A partial prefix plus optional selector suffix splits one K I_data reserve; inherited core erasure and terminal entropies remain explicit. For private queries, the exact paired-row upper comparison is D_i<=sum_C Phi(h_C^2,d_C^2)/2, and the corresponding negative comparison is retained.",
+    "hypotheses": [
+      "all original physical inputs independent and uniform; Boolean sign cores; bits",
+      "fresh selector z remains unqueried during the data prefix",
+      "at most one common physical data coordinate s; private X,Y disjoint; irrelevant coordinates allowed",
+      "finite adaptive prefixes with arbitrary actual stopping leaves",
+      "Phi(p,q)=phi(p)+phi(q)-phi(p+q), phi(p)=p log2(1/p), continuous boundaries",
+      "R is the exact common-frequency entropy potential; inherited core costs are not assumed paid"
+    ],
+    "statement_sha256": "8f5ca1299f32745eef2370dc661407da8cc1f79467d5f165b50b51a37cb4e759",
+    "contributors": [
+      "A077/fleet05"
+    ],
+    "proof_source": {
+      "author": "~\\brain_workers\\FEI100_20261011\\agents\\A077\\runs\\20261013T222235Z-fleet05-A077-sparse-defect-towers\\PROOF.md",
+      "review": "~\\brain_workers\\FEI100_20261011\\agents\\A058\\runs\\20261013T234047Z-fleet05-A058-overlapping-compositions\\REVIEW_A077.md"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A058",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A058\\runs\\20261013T234047Z-fleet05-A058-overlapping-compositions\\REVIEW_A077.md",
+        "method": "Independent paired-row integral, coherent Fourier counting, physical JS/influence transport reconstruction; separate exact truth-table implementation; no repair"
+      }
+    ],
+    "status": "ACCEPTED_LOCAL_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A076",
+      "A078",
+      "A086",
+      "A091",
+      "A064",
+      "A097",
+      "A092",
+      "A088",
+      "claude/B16",
+      "B20"
+    ]
+  }
+]

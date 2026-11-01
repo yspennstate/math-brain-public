@@ -1,0 +1,49 @@
+# A028 stage 3: rare point selectors and one-bit priority stopping payment
+
+## exact target, quantifiers, hypotheses and units
+
+For every point selector on r fresh uniform bits and every pair of Boolean branches on disjoint private uniform cubes, prove the complete physical control-first entropy payment with both terminal entropies retained. Entropy is bits; influence uses physical uniform coordinate flips. The bound is Pi <= (71/8)Q < 9Q for positive Q, with Q=2r 2^-r Pr(g!=h). The full influence is Q+2^-r I(g)+(1-2^-r)I(h). The actual stopping-tree bill is the expected sum of signed entropy increments, not a clipped-positive or mismatch-KL upper bill.
+
+Apply this interface to two same-orientation priority events sharing one physical control bit. Count that bit once, use actual exclusive private-control influences, and retain terminal weights p/2 and (1-p)q/2. Given terminal allowances Lg I(g),Lh I(h), the entire path plus terminal allowance is bounded by max(71/8,Lg,Lh)I(root). Thus any explicitly certified regular, bounded-overlap or threshold-formula terminal class may be used with its actual proved allowance; no opaque terminal is admitted for free. Full FEI remains OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Read current BOARD.md (supervisor 2026-10-13 22:25 UTC), B06 STREAM_NOTES v2 and own STATUS at stage start; reread complete EXECUTION_PROTOCOL.json revision 2026-10-11-execution-v2. Earlier required campaign, registries, plans and paper reads retain their recorded prior-stage scope; no new paper result is a premise. Current board and LEARNED files from A012,A023,A027,A057,A091,A095 identify already closed neighboring mechanisms. Read A012 stage3 REPORT, complete DERIVATION, and claim source; read A091 stage3 REPORT through overlap interface and validations. Source receipts identify the exact bytes consumed.
+
+A012 already pays opposite shared literals with disjoint private cores; A023 handles shared-core event unions; A057 pays exclusive-controller data-only cap prefixes; A091 already derived the priority influence correction. None is rediscovered here as new. The new object is a whole rare POINT selector between two nonconstant disjoint branches and its use to pay the same-orientation priority tree. A point selector of width >1 is outside A012's literal-selector grammar: its failed-test leaves reuse the same physical h cube, so recursive literal muxes cannot be declared disjoint-private by duplicating h. A027 owns arbitrary-controller partial-core exposure; this run does not duplicate it.
+
+## complete derivation or exact first unsupported line
+
+DERIVATION.md gives the complete coherent Fourier formula, including the empty data row, and all scalar inequalities. With mu=Eg,nu=Eh,t=mu-nu,d=(1-mu nu)/2 and b=log2(e), the exact overhead depends only on the two means. Semiconvexity of eta(x^2), |t|<=2d, and Vg+Vh+t^2=4d give Pi <= [4+(6b+2b/e)/r]Q. For r>=2, explicit rational lower bounds on ln2 and e give coefficient <71/8. The r=1 endpoint is independently reconstructed from A012's entropy subclaim: Pi<=(6+b)Q<67Q/9. All constant and zero-cost endpoints are included.
+
+An optional single normalized spectral reference is also constructed for this selector block. After empty calibration, nonempty branch sectors receive the appropriate squared point-indicator coefficients, while the empty data row receives its true coherent masses. Its debt is exactly pD_g+(1-p)D_h, and its CE is pCE_g_cal+(1-p)CE_h_cal+Pi. This is an analytic extension; no arbitrary-reference finite enumeration is claimed.
+
+For the shared-bit priority tree, factor F as an outer one-bit activation of T=A g+(1-A)H_B, where H_B=1+B(h-1). Query z, then A, then B only after A fails. These operations are disjoint at the necessary interfaces. Outer and final activation costs have rate6 from A028 v2, and the middle selector has rate71/8. The full terminal-retaining entropy identity therefore gives rate71/8 against the actual control budget. That budget equals nominal independent event accounts PLUS the signed correction pq(1-nu)(r mu-s-1)/2; the nominal accounts are not substituted for physical influence. This consumes A091's ownership identity and pays the actual entropy bill it had left unbounded, without paying its separate positive cap/reset bill.
+
+First unsupported extension: private branches sharing an additional physical data coordinate can have colliding nonempty rows. Then disagreement is not (1-mu nu)/2, and this proof does not establish Pi<=K*2rp*Pr(g!=h). Arbitrary selector substitution also remains FEI-strength (opposite constant children recover the selector). Universal terminal admission and full FEI remain unproved.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen out/FROZEN_SPEC.json precedes computation. Pilot: all labeled branch tables on dimensions 0..1, point widths1..2, plus priority pairs r=s=1: 108 cases,612 exact assertions PASS. Full: all labeled branch tables on dimensions0..2, point widths1..3 (1452 cases), plus one-bit-or-constant branches and private widths r,s=1..2 in the priority gate (144 cases): 1596 cases,9432 exact assertions PASS. Maximum dimension7, no symmetry quotient or automatic escalation.
+
+Commands from A028: python -X utf8 runs/20261013T223410Z-fleet05-A028-stopping-tree-payment/code/setup.py; then the same directory's code/check.py pilot and code/check.py full. The first run checked the provisional rate14; after the analytic sharpening the same frozen family was rerun at rate71/8. Final pilot took 0.02345 seconds and full 0.68622 seconds. A diagnostic assertion counter initially printed zero due to an imported immutable value; it was corrected to the exact helper module's live counter and both jobs rerun. Actual assertions had executed throughout.
+
+Integer Walsh/Fraction spectra and independent physical edge counts verify the exact entropy formula, terminal weights, ownership correction and full influence decomposition. Physical point-query trees independently verify selector entropy/influence telescopes. Prime-log dictionaries give exact symbolic entropy equalities. Rational 24-term atanh intervals, with explicit tail and outward 2^48 rounding inherited transparently in code/exact.py, prove all tested 71/8 inequalities. These finite checks corroborate the analytic all-width proof; they are not an extrapolation proof. Estimate128MB, observed subsecond jobs, pilot cap60sec/full cap600sec. No >300MB job, GPU, background process or external mutation was started.
+
+## proof dependencies and changed downstream conclusions
+
+Version3 extends the same stopping-payment candidate; v1 and v2 results remain unchanged at their pinned scope, and no broad new universal route is added. A012's one-bit entropy-only mux subclaim was independently reconstructed and accepted locally at exactly that scope, with original statement hash preserved in out/REVIEW_A012_SCOPED.json. No blanket acceptance of its reference/admission claim is issued. A091's ownership correction is independently reproduced by physical edges; its cap, reset, history and side-information payment conclusions remain open. A028 v2 point activation rate6 supplies the outer and final stages.
+
+B06/A057/A091 can now use a full actual control-first entropy payment on the priority gate, with terminal weights and one physical control account. This does not close their larger positive-cap or source-history bill. Known terminal certificates imply the full root FEI bound on this structural case. More fresh activation or opposite-literal tests would repeat closed mechanisms; the missing data-overlap interface is now precise.
+
+## one next mathematical action and independent reviewer
+
+Take a point-selector pair g(w,a),h(w,b) sharing exactly one data coordinate w. Split the coherent spectrum by w, retain both terminal entropies, and derive or refute a single-source payment for the additional nonempty-row interference using actual selector and w influences. Start from A012's saved shared-private-coordinate NEXT and A016's separator ownership results before any new finite search. Independent reviewer A094, alternate A091; A027 should check that the signed-path bill remains distinct from its partial-core transport. These are saved handoffs, not sent messages or observed review completions.
+
+## actual persistence receipts or precise save blocker
+
+REPORT.md, CLAIMS.json, PROGRESS.json and byte-identical PACKET_DELTA.json, DERIVATION.md, frozen spec, checkers, exact pilot/full outputs, scoped review and source receipts are saved in this run. code/finalize.py checks protocol key sets, claim hash, all report headings, file size limits and two-line STATUS, then writes out/PERSISTENCE_RECEIPTS.json with artifact and rolling-file hashes. Writes are confined to A028. Local persistence is complete after this validator passes; independent review, shared index adoption, supervisor copies and mirror receipts are unobserved.
+
+## Universal bridge
+
+This stage moves C019 stopping-tree payment by closing an all-width rare point-selector between disjoint nonconstant cores at rate71/8 and then paying the full same-orientation one-shared-bit priority tree against its actual exclusive control influence, with both terminal costs preserved. A normalized selector-block reference additionally retains weighted terminal KL debt, but no universal history/cap charge is claimed. What remains is one additional shared data coordinate, arbitrary selector admission and universally certified terminals. NEXT isolates the first nonempty-row collision missing from this paid interface and consumes existing separator work; it is the shortest route toward universal stopping payment, whereas another disjoint activation class would not reduce the remaining ownership gap.

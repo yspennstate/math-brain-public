@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "helper": "A010-two-intersecting-core-falsifier-v1",
+  "pilot": false,
+  "assertions": 15429,
+  "seconds": 17.781037799999467,
+  "source_cover_families": 127,
+  "actual_anchor_runs_source": 108723,
+  "source_paired_cases": 12,
+  "source_common_anchor_cases": 39,
+  "new_physical_cases": [
+    {
+      "r": 1,
+      "n": 7,
+      "inputs": 128,
+      "I": "57/64",
+      "P_outer_pair": "1/4096",
+      "full_Q_outer_pair": "1/3600",
+      "actual_target_anchor_events": 2
+    },
+    {
+      "r": 2,
+      "n": 11,
+      "inputs": 2048,
+      "I": "1349/1024",
+      "P_outer_pair": "2401/1048576",
+      "full_Q_outer_pair": "50963/103680000",
+      "actual_target_anchor_events": 24
+    },
+    {
+      "r": 3,
+      "n": 15,
+      "inputs": 32768,
+      "I": "24665/16384",
+      "P_outer_pair": "1874161/268435456",
+      "full_Q_outer_pair": "1947923719/2985984000000",
+      "actual_target_anchor_events": 168
+    },
+    {
+      "r": 4,
+      "n": 19,
+      "inputs": 524288,
+      "I": "412109/262144",
+      "P_outer_pair": "937890625/68719476736",
+      "full_Q_outer_pair": "66181574576447/85996339200000000",
+      "actual_target_anchor_events": 960
+    }
+  ],
+  "all_size_scalar_checks": 253,
+  "source_review": "A006 full new law/disjoint payment and A008 full common-anchor obstruction/repair reconstructed; no source author helper imports",
+  "new_bound": "Every fixed mixture of Q and arbitrary laws individually supported within K1 or K2: C/I>(2r-1)/2592 for r>=4, although H/I<11",
+  "universal_FEI": "OPEN"
+}

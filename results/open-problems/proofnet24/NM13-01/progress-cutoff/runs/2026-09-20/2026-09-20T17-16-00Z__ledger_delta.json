@@ -1,0 +1,24 @@
+{
+  "target": "T08",
+  "worker": "NM13-01",
+  "date": "2026-09-20",
+  "source": "Justin Salez, arXiv:2508.21055, Problem 2.3",
+  "source_status_before": "OPEN",
+  "source_status_after": "OPEN",
+  "source_convention": "rate-one continuous time P_t=exp(t(T-I))",
+  "restricted_theorem_status": "CANDIDATE_FULL pending independent review",
+  "publication_novelty": "UNVERIFIED",
+  "lineage_correction": "The immediately preceding 16:04 synchronous tensor/common-clock class is not counted as new progress: the latest P26 handoff recovered the historical R16 synchronous tensor theorem runs/R16/2026-09-16T19-48-00Z_i0112-synchronous-tensor-cutoff.md.",
+  "new_scope": "For every fixed d>=3, edge-transitive fixed-constant LRE base sequence G_n, the two-sided endpoint-clique reversal graph on oriented edges, joining same-tail arcs, same-head arcs, and reversal, is a (2d-1)-regular vertex-transitive spectral expander, fails every fixed LRE constant, and has source-continuous-time TV cutoff at ((2d-1)/(d-2))*log_{d-1}|V(G_n)| with O(sqrt(log n)) window.",
+  "explicit_q5_scope": "Using Kaufman-Lubotzky q=5 edge-transitive Ramanujan bases gives degree-11 outputs with center (11/4) log_5 n, O(sqrt(log n)) window, and gap at least 2(3-sqrt(5))/11.",
+  "mechanism_gain": "Exact reversal-even lumping to a lazy line graph plus a new reversal-odd Hodge/resolvent decomposition. The odd sector may contain genuinely slow modes from base eigenvalues near -1 (exact eigenvalue 9/11 for d=6 bipartite bases), so crude global point-source L2 has a diverging sqrt(n) prefactor at the cutoff front. The localized point-start defect instead has O(log n) L1 Hodge mass and decays as exp(-2t/(2d-1)), making it negligible. This removes the lower-spectral-edge/global-dimension obstruction for this transitive lift.",
+  "remaining_obstruction": "For a general vertex-transitive spectral expander, construct an analogous localized L1/resolvent estimate in nontrivial root-stabilizer/Hecke sectors without an exact two-orientation incidence calculus.",
+  "partner_complementarity": "P26 currently uses conditional Green/spherical-shell and dependent radial-front transfer. This run uses exact edge-incidence/reversal Hodge algebra and no entropy or Green shell estimate.",
+  "finite_checks_role": "Sanity checks only; no finite computation is used as an asymptotic proof.",
+  "artifacts": [
+    "2026-09-20T17-16-00Z__endpoint-clique-reversal-hodge-cutoff.md",
+    "2026-09-20T17-16-00Z__endpoint_clique_checker.py",
+    "2026-09-20T17-16-00Z__endpoint_clique_checker.out",
+    "2026-09-20T17-16-00Z__ledger_delta.json"
+  ]
+}

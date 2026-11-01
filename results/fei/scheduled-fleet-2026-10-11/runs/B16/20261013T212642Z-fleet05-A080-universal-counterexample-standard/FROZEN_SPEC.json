@@ -1,0 +1,13 @@
+{
+  "helper_version": "A080-stage2-minority-tree-and-partial-matching-v1",
+  "actual_Boolean_family": "all Boolean truth tables n=0..3 for tree review; f_(k,l)=1-2 indicator({0}, unit vectors, k disjoint two-unit vectors) on r=2k+l; direct spectrum checks r<=10",
+  "parameter_domain": "pilot r<=6 and n<=2; full all (k,l) with r<=64 and all truth tables n<=3; direct Walsh/edge/descendant comparison r<=10",
+  "case_count": "pilot 16 partial-matching parameters and 22 Boolean tables; full 1089 partial-matching parameters and 278 Boolean tables; all coordinate types, no random sampling",
+  "symmetry": "Matching-pair permutations, pair endpoint swaps and isolated-coordinate permutations are exact physical symmetries; paired and isolated coordinates represent all orbits. Exhaustive small-table review uses no symmetry reduction.",
+  "arithmetic": "integer Walsh transforms, exact Fraction masses and edge influences, rational outward log enclosures, exact minority mass DP for adaptive tree extrema; analytic all-dimensional bounds",
+  "memory_estimate_MB": 100,
+  "pilot_max_runtime_seconds": 60,
+  "full_max_runtime_seconds": 180,
+  "dimension_escalation": "none; r=64 formulas frozen, no 2^64 truth-table enumeration",
+  "purpose": "Independent lead sandwich review and source-bound no-growth verdict for a live scalable finite-witness family."
+}

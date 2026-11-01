@@ -1,0 +1,33 @@
+{
+  "auditor": "w346",
+  "verdict_file": "~\\brain_workers\\w346\\audits\\w342.jsonl",
+  "verdicts": [
+    {
+      "row_id": "S1.w342.001",
+      "problem_id": "P0289",
+      "verdict": "KEEP",
+      "why": "The derivative identity is correct: A(c)=int_0^c(c-v)R(v)dv has A'(c)=int_0^cR(v)dv; differentiating A(c)/c^2 yields c^-3 int_0^c(2v-c)R(v)dv. Continuity of R justifies the differentiation, and the sign criterion follows from the mean value theorem. The row limits its consequence to the second-order coefficient, with no full-workload ordering claim. Independent quadrature versus central differences agreed within 3e-11 at c=0.25,1.2,7.5,20.",
+      "commands": [
+        "rg -n -F 'sign-derivative criterion' ~/<private-repo>/06_math_research/probability_1000_attempts_H_20260912/lane_Q1/p0289_check.py",
+        "python -X utf8 ~/brain_workers/w346/audit_p0289_derivative.py"
+      ],
+      "source_line": "p0289_check.py:32"
+    },
+    {
+      "row_id": "S1.w342.002",
+      "problem_id": "P0289",
+      "verdict": "KEEP",
+      "why": "The named memory explicitly says the autocorrelation and numerical excursion were re-derived while the workload expansion and uniform remainder were accepted from the campaign proof packet; it also says the separate necessary-and-sufficient condition remains untouched. The correction faithfully limits the prior status and does not certify the full counterexample.",
+      "commands": [
+        "Get-Content ~/.claude/projects/<project>/memory/ross_second_conjecture_quantitative_half_closed_2026_09_08.md -TotalCount 45",
+        "rg -n -F 'Anyone promoting this should re-derive the expansion' ~/.claude/projects/<project>/memory/ross_second_conjecture_quantitative_half_closed_2026_09_08.md"
+      ],
+      "source_line": "ross_second_conjecture_quantitative_half_closed_2026_09_08.md:39"
+    }
+  ],
+  "kept_row_ids": [
+    "S1.w342.001",
+    "S1.w342.002"
+  ],
+  "full_bundle_approvals": 0
+}

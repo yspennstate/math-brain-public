@@ -1,0 +1,68 @@
+{
+  "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "mode": "ro; PRAGMA query_only=ON",
+  "query": "SELECT id,title,body,metadata_json FROM nodes WHERE id IN (?,?)",
+  "requested_ids": [
+    "claim_91f295e6d2a67634c0b90a5ee4130c1feed72dc0fe16086a679021c90c8917cb",
+    "claim_07a861a72ebeb008dc23e9db32147327c062427adee7a530bab01f0de67bd002"
+  ],
+  "rows": [
+    {
+      "id": "claim_07a861a72ebeb008dc23e9db32147327c062427adee7a530bab01f0de67bd002",
+      "title": "Attempt on Conformal invariance of critical bond percolation on the square lattice",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Look for a discrete holomorphic observable on the square lattice analogous to Smirnov's on the triangular lattice. Result: Smirnov's argument needs the three-arm colour-switching symmetry, which on the triangular lattice comes from site self-duality; on Z^2 bond percolation the dual is the shifted square lattice and the exploration interface lives on the medial lattice, where the parafermionic observable F(z) = E[e^{i sigma W(z)} 1_{z on interface}] with spin sigma = ... satisfies only half of the discrete Cauchy-Riemann relations (the contour-integral relations, as for FK models with q not 2). A concrete check: for the q=1 FK model the parafermionic observable has spin sigma = 2/3 and the relation sum over edges around a face vanishes, which gives crossing exponent bounds but not holomorphicity; the missing half is what conformal invariance needs. No new observable found. Obstruction: Only the weak (contour) half of discrete holomorphicity holds for the q=1 parafermion on the square lattice.\nRefers to the open problem node open-problem-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic\nNo independent review; result status attempted_unsolved",
+      "metadata": {
+        "artifact_digest": "sha256:dd584fa5978a45a9d0e114be8fd838e8513c0ca5130e127fa7ec289767ab33d1",
+        "artifact_path": "objects/sha256/dd/dd584fa5978a45a9d0e114be8fd838e8513c0ca5130e127fa7ec289767ab33d1.md",
+        "bundle_digest": "sha256:3afc0553fbedbe5e4a4f8548c9d6f5c8d0ecfb86f127315c266229ee060578ce",
+        "bundle_entry_key": "at-c0017",
+        "bundle_id": "population.probability-intake-claude-bulk-attempts-c004b",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_007.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.percolation:attempt-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:d60ad0b3f8346e7b04626eeea85bdd0598b8424cfd19b6d40584ecb68567692f",
+        "revision_digest": "sha256:07a861a72ebeb008dc23e9db32147327c062427adee7a530bab01f0de67bd002",
+        "source_id": "owner-probability-intake-claude-20260907:at-c0017",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    },
+    {
+      "id": "claim_91f295e6d2a67634c0b90a5ee4130c1feed72dc0fe16086a679021c90c8917cb",
+      "title": "Open problem: Conformal invariance of critical bond percolation on the square lattice",
+      "body": "OPEN PROBLEM (source_says_open; current status no_resolution_found_in_documented_search; result status attempted_unsolved). Prove that critical bond percolation on Z^2 at p = 1/2 is conformally invariant in the scaling limit (Cardy's formula and convergence of interfaces to SLE(6)), as is known on the triangular lattice by Smirnov. Source: Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems, Chapter II Section 4, p. 26. Status notes: Bounded search 2026-09-07: no proof of conformal invariance on Z^2 found; the problem is listed as open in Duminil-Copin's ICM 2018 survey as well (dedup with that source).\nPosed in Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems\nCurrent status no_resolution_found_in_documented_search as of 2026-09-07",
+      "metadata": {
+        "artifact_digest": "sha256:1f35964d9c509453fea665d0feed55e8e53d16cd9095154301946cfdbdf3ee8b",
+        "artifact_path": "objects/sha256/1f/1f35964d9c509453fea665d0feed55e8e53d16cd9095154301946cfdbdf3ee8b.md",
+        "bundle_digest": "sha256:bee140cfde7d5bf56318732d7b8273e9824005d4b35903e078e74d929a549266",
+        "bundle_entry_key": "op-c0017",
+        "bundle_id": "population.probability-intake-claude-bulk-problems-and-exclusions-c004a",
+        "claim_kind": "concept",
+        "conditions": [],
+        "domain": "probability theory",
+        "draft": "claude-probability-1000-continue-0907/bundle_006.json",
+        "evidence_ids": [],
+        "logical_id": "math:probability.percolation:open-problem-c0017-conformal-invariance-of-critical-bond-percolation-on-the-square-lattic",
+        "overlay_schema_version": 1,
+        "proof_text": "",
+        "release_manifest_digest": "sha256:27ce636e4c81aa81a5dbf74798c83425e9bd5ce208c7c2ac89a1b27196ba3791",
+        "revision_digest": "sha256:91f295e6d2a67634c0b90a5ee4130c1feed72dc0fe16086a679021c90c8917cb",
+        "source_id": "owner-probability-intake-claude-20260907:op-c0017",
+        "source_revision": "author-checked-private-20260907-v1",
+        "statement_fidelity_reviewed": false,
+        "supersedes": [],
+        "trust_class": "curated_secondary",
+        "truth_status": "unverified"
+      }
+    }
+  ],
+  "error": null
+}

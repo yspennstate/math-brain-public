@@ -1,0 +1,27 @@
+{
+  "target_id": "C0029",
+  "checked_at": "2026-10-10",
+  "exact_target": "For an n-by-n iid uniform {−1,+1} matrix B, show that there exists an absolute q in (0,1) such that P(s_min(B) <= epsilon/sqrt(n)) <= epsilon + q^n for every epsilon >= 0 and all sufficiently large n.",
+  "original_primary_source": {
+    "title": "Smoothed analysis of algorithms",
+    "authors": "Daniel A. Spielman and Shang-Hua Teng",
+    "url": "https://arxiv.org/pdf/math/0212413",
+    "location": "page 8, Conjecture 2, lines 610-632 in web extraction",
+    "form": "P(||A^{-1}|| > t) <= sqrt(d)/t + alpha^n for a d-by-d iid sign matrix and an absolute alpha<1; original printed n in the exponential despite using d for dimension.",
+    "normalization_note": "With t=sqrt(d)/epsilon and ||A^{-1}||=1/s_min(A), this is the least-singular-value formulation; its strict threshold implies the non-strict version by continuity from above when the bound holds for every t. Interpret inverse norm as infinity on singular matrices."
+  },
+  "later_primary_source": {
+    "title": "On the Spielman-Teng Conjecture",
+    "authors": "Ashwin Sah, Julian Sahasrabudhe, Mehtaab Sawhney",
+    "url": "https://www.mit.edu/~asah/papers/2405.20308.pdf",
+    "location": "page 1, equation (2) and Theorems 1.1-1.2",
+    "result": "For iid mean-zero, variance-one subgaussian entries, P(s_min(M) <= epsilon/sqrt(n)) <= (1+o(1))epsilon + exp(-Omega(n)), with stated o(1)=O((log n)^(-1/16)); the exact coefficient one is not proved by that theorem."
+  },
+  "archive_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:29",
+  "prior_attempt_record": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl:23",
+  "prior_attempt_correction": "C0029-A001 describes 1-exp(-t^2/2-t) as an exact finite-n Gaussian CDF; it is a limiting law. Already at n=1 and t=1, the exact CDF is erf(1/sqrt(2))=0.6826894921, while the asserted expression is 0.7768698399.",
+  "local_previous_work": "Scoped rg found no C0029 or Spielman-Teng hits in the H and I attempt markdown/jsonl files or the Team O board. This is a bounded negative search, not a proof of absence.",
+  "current_openness": "UNKNOWN",
+  "current_openness_reason": "The 2025 primary paper stops at 1+o(1); bounded web and local searches did not verify whether a later exact-coefficient result exists. No novelty claim is made.",
+  "parent_proof_status": "UNPROVED"
+}

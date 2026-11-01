@@ -1,0 +1,48 @@
+[
+  {
+    "claim_id": "A032-EXACT-PHASE-ADMISSION",
+    "version": 1,
+    "exact_statement": "For every uniform Boolean cube, a spectral probability law supported on at most four labels is realizable iff it is a singleton of mass1 or the uniform law on an affine plane. A uniform affine-subspace law of dimension r is realizable iff r is even, and then H=r<=2D<=2I. For arbitrary supported laws, phase realizability is equivalent to phase realizability on the support affine-span quotient. The labelled four-variable law with Walsh magnitudes (8,8,4,4,4,4,4,4,4,4,0,0,0,0,0,0) and denominator256 passes all15 separate XOR pair partitions but has no realizing phase (all512 phases certified). Complete exact enumeration on n=4 yields2261 distinct Boolean spectral laws among975621 magnitude laws satisfying square norm and necessary even/common-mod4 arithmetic.",
+    "hypotheses": [
+      "Finite uniform cube; real Boolean outputs +/-1",
+      "Labelled full spectral law, not an unlabelled mass histogram",
+      "D=sum_i min(Inf_i,1-Inf_i); H in bits",
+      "Finite enumeration fixes n<=4; all-dimensional claims proved analytically"
+    ],
+    "statement_sha256": "de3e9399aa5e54bb287cc8ee93cf44cb8dd9039a611c0dda64ea62ffe7ffdb3e",
+    "contributors": [
+      "A032"
+    ],
+    "proof_source": [
+      "REALIZABILITY_METHOD.md",
+      "out/coupled_phase_certificate.json",
+      "code/enumerate_exact.py",
+      "out/summary_n4.json",
+      "code/verify_direct.py"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A032 author",
+        "method": "separate direct character-sum reconstruction of all2299 law witnesses and direct signed-convolution rejection of all512 candidate phases",
+        "verdict": "PASS; NOT INDEPENDENT REVIEW"
+      }
+    ],
+    "status": "PROVED_WITH_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Separate exact XOR pair partitions are sufficient for one common Boolean phase"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A031",
+      "A033",
+      "A034",
+      "A045",
+      "A078",
+      "A079",
+      "A088",
+      "A094"
+    ]
+  }
+]

@@ -1,0 +1,124 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w531",
+  "bundle_slug": "riesz-three-mode-pressure-route-w531-001",
+  "entries": [
+    {
+      "key": "pressure-definition",
+      "namespace": "probability.statisticalmechanics",
+      "logical_name": "riesz-three-mode-periodic-source-pressure",
+      "kind": "definition",
+      "title": "Three-mode periodic source pressure for the short-range Riesz gas",
+      "statement": "For finite s>3, beta>0, mu,h real, an invertible A and integer N>=1, let Lambda=A Z^3, v=|det A|, K_j=2pi A^(-T)e_j, W_N(r)=sum_{m in Z^3}|r+NAm|^(-s), E_N=sum_{i<j}W_N(x_i-x_j), Psi(x)=sum_{j=1}^3 cos(K_j.x), and Q=sum_i Psi(x_i). Define Z_N(h)=sum_{n>=0}(1/n!) integral_(R^3/NLambda)^n exp[beta mu n-beta E_N+beta h Q] dx and p_N(h)=log Z_N(h)/(beta N^3 v). This is a bounded external source in the full unlabelled gas, distinct from a quadratic displacement pinning on fixed labels.",
+      "proof_text": null,
+      "assumptions": [
+        "s>3",
+        "beta>0",
+        "A invertible",
+        "N positive integer"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w531:P0309:2026-10-10",
+        "url": "urn:math-research:w531:p0309:pressure-route:2026-10-10",
+        "revision": "draft-author-proof-pending-independent-review-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "pressure-cusp-reduction",
+      "namespace": "probability.statisticalmechanics",
+      "logical_name": "draft-riesz-three-mode-pressure-cusp-period-group-reduction",
+      "kind": "concept",
+      "title": "Draft: pressure cusp and exact lattice period group",
+      "statement": "Author-proved conditional reduction; independent audit pending, not a proof of Riesz crystallization. In the defined three-mode pressure, assume A^T A has diagonal a and off-diagonal b with a-b>0 and a+2b>0; p_N converges to finite p near zero; and m=p right-prime(0)>0. Choose h_l down to zero and N_l up to infinity with |p_N_l(h_l)-p(h_l)|+|p_N_l(0)-p(0)|<=h_l/l (a volume-first diagonal). Any selected local limit has real equal intensity Fourier coefficients c_j=(1/v) integral_F exp(-iK_j.x) E eta(dx)>=m/3. Its intensity translation-period group is exactly Lambda. If this limit is a zero-field Riesz DLR law, it is a lattice-periodic Gibbs law breaking continuous translations. The positive slope and zero-field DLR membership have not been established for P0309; no Coulomb, optimal-lattice or all-extreme-phases conclusion follows.",
+      "proof_text": null,
+      "assumptions": [
+        "s>3, beta>0 and finite mu.",
+        "A^T A has diagonal a, off-diagonal b, a-b>0 and a+2b>0.",
+        "p_N(h) converges to finite p(h) near zero.",
+        "m=p right-prime(0)>0.",
+        "Gibbs conclusion explicitly assumes zero-field DLR membership of the selected limit."
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w531:P0309:2026-10-10",
+        "url": "urn:math-research:w531:p0309:pressure-route:2026-10-10",
+        "revision": "draft-author-proof-pending-independent-review-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "pinned-response-obstruction",
+      "namespace": "probability.statisticalmechanics",
+      "logical_name": "draft-positive-pinned-response-does-not-imply-zero-field-order",
+      "kind": "concept",
+      "title": "Draft: positive pinned response is insufficient for spontaneous order",
+      "statement": "Author-proved exact counterexample, independent audit pending. V independent fair signs have Z_V(h)=(2cosh(beta h))^V and limiting pressure beta^(-1)log(2cosh(beta h)); the response tanh(beta h) is positive at each h>0 but the zero-source right slope is zero. A collective two-state model instead has Z_V(h)=2cosh(beta Vh), pressure tending to |h|, and finite-volume zero-field derivative zero. For that model h_V=1/(beta V^2) gives response tending to zero while h_V=1/sqrt(V) gives response tending to one. These exact toy models show that neither fixed positive pinning nor an arbitrary diagonal proves spontaneous order; they are not Riesz phase results.",
+      "proof_text": null,
+      "assumptions": [
+        "beta>0",
+        "V positive integer",
+        "Exact toy systems only"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w531:P0309:2026-10-10",
+        "url": "urn:math-research:w531:p0309:pressure-route:2026-10-10",
+        "revision": "draft-author-proof-pending-independent-review-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "entropy-witness",
+      "namespace": "probability.statisticalmechanics",
+      "logical_name": "draft-riesz-periodic-source-relative-entropy-cusp-witness",
+      "kind": "concept",
+      "title": "Draft: relative-entropy witness for a Riesz pressure cusp",
+      "statement": "Author-proved conditional criterion, independent audit pending. For the defined pressure with V_N=N^3 v and zero-source law G_N,0, any trial T absolutely continuous with finite relative entropy and finite E_T|Q| satisfies p_N(h)-p_N(0)>=h E_TQ/V_N-D(T||G_N,0)/(beta V_N). With finite pressure convergence, trials satisfying liminf_N E_T_N,h Q/V_N>=q>0 and limsup_N D/(beta V_N h)<=epsilon(h) tending to zero give p right-prime(0)>=q. A sector Q>=qV_N of probability exp[-o(V_N)] supplies a sufficient trial by conditioning. Deterministic lattice positions are singular; a fixed positive entropy cost per volume does not control field removal. No such trial estimate has been obtained for P0309. A phase conclusion still requires the geometry and zero-field Gibbs-limit condition of the cusp reduction.",
+      "proof_text": null,
+      "assumptions": [
+        "Same full unlabelled configuration space as G_N,0",
+        "Finite relative entropy and E_T|Q|",
+        "Order and vanishing entropy-cost estimates remain explicit application hypotheses"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w531:P0309:2026-10-10",
+        "url": "urn:math-research:w531:p0309:pressure-route:2026-10-10",
+        "revision": "draft-author-proof-pending-independent-review-20261010",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "pressure-cusp-reduction",
+      "to_key": "pressure-definition",
+      "kind": "depends_on",
+      "rationale": "The conditional criterion uses precisely the defined p_N(h), bounded three-mode source, and full unlabelled short-range torus law."
+    },
+    {
+      "from_key": "pinned-response-obstruction",
+      "to_key": "pressure-cusp-reduction",
+      "kind": "semantic_association",
+      "rationale": "The counterexample states positive response at each h>0 but zero right slope; the criterion explicitly requires m=p right-prime(0)>0 and a volume-first diagonal."
+    },
+    {
+      "from_key": "entropy-witness",
+      "to_key": "pressure-definition",
+      "kind": "depends_on",
+      "rationale": "The entropy inequality compares the exact zero-source and source laws for the defined pressure and Q."
+    },
+    {
+      "from_key": "entropy-witness",
+      "to_key": "pressure-cusp-reduction",
+      "kind": "semantic_association",
+      "rationale": "The entropy witness concludes p right-prime(0)>=q>0; the periodicity reduction assumes m=p right-prime(0)>0. Geometry and the Gibbs-limit condition remain explicit."
+    }
+  ]
+}

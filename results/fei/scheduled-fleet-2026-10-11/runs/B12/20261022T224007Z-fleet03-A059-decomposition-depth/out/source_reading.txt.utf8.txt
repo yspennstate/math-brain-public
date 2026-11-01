@@ -1,0 +1,135 @@
+PACKET_STATUS.json {"packet_id": "A056", "stream": "B12", "topic": "Balanced composition", "execution_status": "OPEN", "deliverable_status": "NOT_YET_ADOPTED_IN_THIS_INDEX", "mathematical_status": "RECOVERED_BASELINE", "gap_id": null, "attempt_history": [], "latest_verified_artifact": null, "next_action": "Select the packet at dispatch; freeze its exact gap, source versions and bounded first cycle from AGENT_ASSIGNMENTS.json.", "unreviewed_complete_claims": 0, "work_type": "baseline_reproduction", "design_target_id": "FEI-B12-A056-INITIAL"}
+PACKET_STATUS.json {"packet_id": "A057", "stream": "B12", "topic": "Coherent restriction remainder", "execution_status": "OPEN", "deliverable_status": "NOT_YET_ADOPTED_IN_THIS_INDEX", "mathematical_status": "UNPROVED_TARGET", "gap_id": null, "attempt_history": [], "latest_verified_artifact": null, "next_action": "Select the packet at dispatch; freeze its exact gap, source versions and bounded first cycle from AGENT_ASSIGNMENTS.json.", "unreviewed_complete_claims": 0, "work_type": "new_math", "design_target_id": "FEI-B12-A057-INITIAL"}
+PACKET_STATUS.json {"packet_id": "A058", "stream": "B12", "topic": "Overlapping compositions", "execution_status": "OPEN", "deliverable_status": "NOT_YET_ADOPTED_IN_THIS_INDEX", "mathematical_status": "UNPROVED_TARGET", "gap_id": null, "attempt_history": [], "latest_verified_artifact": null, "next_action": "Select the packet at dispatch; freeze its exact gap, source versions and bounded first cycle from AGENT_ASSIGNMENTS.json.", "unreviewed_complete_claims": 0, "work_type": "new_math", "design_target_id": "FEI-B12-A058-INITIAL"}
+PACKET_STATUS.json {"packet_id": "A059", "stream": "B12", "topic": "Decomposition depth", "execution_status": "OPEN", "deliverable_status": "NOT_YET_ADOPTED_IN_THIS_INDEX", "mathematical_status": "UNPROVED_TARGET", "gap_id": null, "attempt_history": [], "latest_verified_artifact": null, "next_action": "Select the packet at dispatch; freeze its exact gap, source versions and bounded first cycle from AGENT_ASSIGNMENTS.json.", "unreviewed_complete_claims": 0, "work_type": "new_math", "design_target_id": "FEI-B12-A059-INITIAL"}
+PACKET_STATUS.json {"packet_id": "A060", "stream": "B12", "topic": "Composition sharpness", "execution_status": "OPEN", "deliverable_status": "NOT_YET_ADOPTED_IN_THIS_INDEX", "mathematical_status": "UNPROVED_TARGET", "gap_id": null, "attempt_history": [], "latest_verified_artifact": null, "next_action": "Select the packet at dispatch; freeze its exact gap, source versions and bounded first cycle from AGENT_ASSIGNMENTS.json.", "unreviewed_complete_claims": 0, "work_type": "counterexample_family", "design_target_id": "FEI-B12-A060-INITIAL"}
+FEI_100_agent_research_plan.tex lines 1406 locators [34, 59, 68, 70, 78, 134, 155, 169, 244, 256, 257, 313, 371, 373, 393, 395, 397, 402, 413, 428, 430, 438, 450, 519, 583, 587, 589, 609, 615, 619]
+\bibitem{Threshold} Y. Shmalo,
+\emph{Fourier entropy of threshold functions and their compositions},
+38-page public recovery revision, 11 October 2026.
+Repository commit \texttt{cd27aa96a5bb670a5b3ae5451095b7020db8e9d4}.
+\bibitem{WWW} A. Wan, J. Wright and C. Wu, \emph{Decision trees, protocols, and the Fourier entropy--influence conjecture}, ITCS 2014. \url{https://arxiv.org/abs/1312.3003}.
+\bibitem{ODT} R. O'Donnell and L.-Y. Tan, \emph{A composition theorem for the Fourier entropy--influence conjecture}, ICALP 2013. \url{https://arxiv.org/abs/1304.1347}.
+\bibitem{Shalev} G. Shalev, \emph{On the Fourier entropy influence conjecture for extremal classes}, 2018, revised 2019. \url{https://arxiv.org/abs/1806.03646}.
+\bibitem{GMP} M. J. Gonz\'alez, P. MacManus and M. C. Pereyra, \emph{Further evidence towards the Fourier entropy--influence conjecture}, version 2, 9 June 2026. \url{https://arxiv.org/abs/2606.00246v2}.
+\bibitem{Brain51} Math Brain, Addendum 11.51, \emph{Cyclic-label signed obstruction}, observed in the source-pinned route archive. \url{https://github.com/yspennstate/math-research-brain/blob/main/research_pushes/2026-09-30-fei-current-route-map/ADDENDUM_11_51_CYCLIC_LABEL_SIGNED_OBSTRUCTION.md}.
+\bibitem{Brain54} Math Brain, Addendum 11.54, \emph{Reviewed Boolean phase-energy payment and coherent-composition control}, 1 October 2026, including the conditional-completion scope guard. \url{https://github.com/yspennstate/math-research-brain/blob/main/research_pushes/2026-09-30-fei-current-route-map/ADDENDUM_11_54_BOOLEAN_PHASE_ENERGY_AND_COMPOSITION.md}.
+
+\bibitem{BrainMismatch} Math Brain / math-open-problems,
+CLAIMS.md # FEI campaign seed claim ledger
+
+
+
+**Full FEI: OPEN.** Updated 11 October 2026. Team IDs below are the F01–F20 identities in `TEAMS.json`, copied from the root campaign roster. This ledger does not assign a replacement roster or claim that workers have run.
+
+
+
+## Status and source conventions
+
+
+
+- **PROVED_BASELINE:** a theorem/identity established in a cited primary paper or a complete proof in the recovered source. This label does not imply external peer review or proof-assistant certification of the new manuscript.
+
+- **CONDITIONAL:** a proved implication whose hypothesis remains unpaid for the intended general class.
+
+- **OPEN_TARGET:** an unproved mathematical goal; finite tests do not change this status.
+
+- **REFUTED:** the stated assertion fails on the identified witness. The scope of the failure is part of the claim.
+
+
+
+Uniform Boolean outputs are ±1, `p(S)=fhat(S)^2`, `H` is in bits, and `I=E|S|`, unless stated otherwise. Write `B=sum_i H(S_i | S_-i)` and `DTC=H-B`. Use `D_char=sum_i min(Inf_i,1-Inf_i)` for character-centered influence; it is **not** DTC. Physical restrictions fix input coordinates. Spectral conditioning and evolving real amplitudes are different operations.
+
+
+
+Source aliases below are relative to this campaign directory and work in the repository or downloaded bundle. [SOURCES.json](SOURCES.json) records exact original repository paths, observed immutable blob hashes, commit pins where recovered, and packaged-file hashes. [SOURCES_README.md](SOURCES_README.md) describes the limited curation.
+
+
+
+- **P:** [baseline/threshold-paper.tex](baseline/threshold-paper.tex).
+
+- **ER:** [sources/ERASURE_REDUCTION.md](sources/ERASURE_REDUCTION.md).
+
+- **ES:** [sources/ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md](sources/ERASURE_SYNERGY_AND_DUALITY_2026-09-1
+COUNTEREXAMPLES.md # FEI campaign counterexamples and mandatory scope tests
+
+
+
+**Full FEI remains OPEN.** These examples refute specified intermediate assertions, or show that a proposed restriction retains full FEI. None is a counterexample to full FEI. Use the F01–F20 roster in `TEAMS.json`. Source aliases and log conventions are defined in `CLAIMS.md`; explicit natural-log exceptions are noted below.
+
+
+
+Every proposing team must record which tests apply, why an excluded test fails its hypotheses, and whether its new conclusion is an identity, a proper-class result, a conditional reduction, or a universal claim. Historical finite checks are source-reported unless the new run actually replays them.
+
+
+
+## X001 — Parity lift hides all entropy from local erasure
+
+
+
+**Owners:** F05–F07,F15,F17. **Related:** C015,C027. **Source:** ES §3.
+
+
+
+For any Boolean g on n sign coordinates, let f(x,z)=g(x₁z,…,x_nz). A Fourier set S becomes S if |S| is even and S∪{z} otherwise. Therefore H(f)=H(g), every occupied set has even size, B(f)=0, and I(f)=I(g)+P(|S_g| odd)≤2I(g). Restricting the physical input z=+1 recovers arbitrary g.
+
+
+
+**Defeats:** treating B=0, absence of spectral edges, or even spectral support as a certified easy leaf. The class is not closed under physical restriction. A universal bound for its entropy is full-FEI strength up to a factor two. A bound for aggregate erasure on *all restrictions* is not refuted.
+
+
+
+## X002 — One physical selector creates unbounded erasure synergy
+
+
+
+**Owners:** F05–F07,F17. **Related:** C027. **Source:** ES §§1–2.
+
+
+
+For odd m≥3 put b(t)=(-1)^(t₁t₂+…+t_(m−2)t_(m−1)) on m−1 binary bits. Set g₀(y)=b(y₁+y_m,…,y_(m−1)+y_m), g₁(y)=(-1)^y_m g₀(y), with addition mod 2. Their squared spectra are uniform on even and odd subsets respectively: H(g_j)=m−1, B(g_j)=0, 
+percolation_spectral_pivotal_entropy_30pp.txt lines 2276 locators [307, 2247]
+
+Grouping vertices by depth gives (10), and stopping at depth k gives (11).
+
+Vertices with pv = 0 contribute zero, as do unary refinement steps.                            
+
+[13] R. O'Donnell and L.-Y. Tan. A composition theorem for the Fourier entropy­influence conjecture. In Automata,
+      Languages, and Programming (ICALP 2013), Lecture Notes in Computer Science 7965, Springer, 2013, 780­791.
+      doi:10.1007/978-3-642-39206-1_66. arXiv:1304.1347v1.
+percolation_spectral_pivotal_entropy_31pp_other_version.txt lines 2219 locators [327, 2189]
+
+Grouping vertices by depth gives (11), and stopping at depth k gives (12).
+
+Vertices with pv = 0 contribute zero, as do unary refinement steps.                            
+
+[13] R. O'Donnell and L.-Y. Tan, A composition theorem for the Fourier entropy­influence conjecture, in Automata,
+      Languages, and Programming (ICALP 2013), Lecture Notes in Comput. Sci. 7965, Springer, 2013, 780­791.
+      doi:10.1007/978-3-642-39206-1_66. arXiv:1304.1347v1.
+threshold_paper_29pp_earlier_version.txt lines 2097 locators [1, 11, 14, 182, 198, 212, 213, 214, 1063, 1283, 1664, 1666, 1678, 1706, 1728, 1740, 1756, 1901, 1921, 1983, 1990, 2027, 2028, 2072]
+
+   No data were used. Scripts for finite checks of the signed derivative decompositions, character
+shifts, biased Fourier normalization, and composition identities, together with their outputs, are
+available at https://github.com/yspennstate/fourier-entropy-threshold-functions. The
+   No data were used. Scripts for finite checks of the signed derivative decompositions, character
+shifts, biased Fourier normalization, and composition identities, together with their outputs, are
+available at https://github.com/yspennstate/fourier-entropy-threshold-functions. The
+proofs do not depend on these computations.
+
+[16] R. O'Donnell and L.-Y. Tan, A composition theorem for the Fourier entropy­influence conjecture, in: ICALP 2013,
+      Lecture Notes in Comput. Sci. 7965, Springer, Heidelberg, 2013, 780­791. doi:10.1007/978-3-642-39206-1_66.
+      arXiv:1304.1347.
+threshold_paper_38pp.txt lines 2817 locators [1, 10, 12, 14, 179, 194, 195, 199, 215, 216, 217, 1332, 1338, 1348, 1571, 1948, 1950, 1961, 1991, 2013, 2023, 2039, 2187, 2209, 2228, 2230, 2236, 2251, 2259, 2274]
+symmetric thresholds. A positive answer for arbitrary weights would remove the balance assumption
+on weighted internal gates in Corollary 7.4, by the same exact composition identities.
+
+   The antichain argument raises a second question. Can a spectral reference measure control the
+and prepare the manuscript. Separate agents reviewed the rank, bounded-overlap, biased-threshold,
+joint-witness, selector, and rare-activation arguments. These checks are not peer review. The author
+directed the work and is responsible for the content of the paper and for decisions concerning its
+dissemination.
+
+[17] R. O'Donnell and L.-Y. Tan, A composition theorem for the Fourier entropy­influence conjecture, in: ICALP 2013,
+      Lecture Notes in Comput. Sci. 7965, Springer, Heidelberg, 2013, 780­791. doi:10.1007/978-3-642-39206-1_66.
+      arXiv:1304.1347.
+READ_FILES 29

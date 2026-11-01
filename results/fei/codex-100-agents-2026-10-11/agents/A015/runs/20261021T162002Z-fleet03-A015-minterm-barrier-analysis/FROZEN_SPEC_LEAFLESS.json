@@ -1,0 +1,37 @@
+{
+  "helper_version": "A015-leafless-scale-v1",
+  "family": "g=2[(OR m left bits) AND (OR m right bits)]-1; exact K_m,m positive primes",
+  "domain": {
+    "m": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "n": [
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "lambda": "1/m per edge",
+    "beta": "1/m"
+  },
+  "case_count": {
+    "physical_functions": 5,
+    "all_truth_table_entries": 5456,
+    "spectral_sets": "every set, no truncation",
+    "ownership": "all within-side sets and their m^s maps for m<=4; all-m analytic proof"
+  },
+  "symmetry": "none; two sides explicitly enumerated",
+  "arithmetic": "integer Walsh; Fraction; no numerical log signs",
+  "memory_estimate_MB": 80,
+  "max_runtime_seconds": 55,
+  "pilot_domain": [
+    2,
+    3
+  ],
+  "automatic_escalation": false
+}

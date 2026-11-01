@@ -1,0 +1,44 @@
+[
+  {
+    "claim_id": "A072-ONEFLIP-RARE-ESCAPE-PRICE",
+    "version": 1,
+    "exact_statement": "For every nonconstant uniform Boolean g with 0<p=P(g=-1)<=1/16, iteration of J=-h(x xor1) on six disjoint copies, stopped at the first minority probability above1/16, terminates at G with 1/16<P(G=-1)<1/4, E(G)>=E(g)-(3/16)log2(192e)>E(g)-111/64 and H(G)/I(G)<=H(g)/I(g)+45/22. E=min over relevant physical coordinates of H(S_i|S_-i)/Inf_i. Every step retains H(F)=Q H(g)+C, I(F)=Q I(g), C=H_p(J)-Q h2(4p(1-p)).",
+    "hypotheses": [
+      "h is negative exactly on {0,1,2,4,8,16,32,6,17,40} in little-endian six-bit indexing.",
+      "All six copies at each step have disjoint physical inputs; entropy units are bits."
+    ],
+    "statement_sha256": "f6539baf29e435f3a61b32a470d2ad37880e47851b70d151c5e15269ce66e356",
+    "contributors": [
+      "A072"
+    ],
+    "proof_source": [
+      "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261014T020611Z-fleet05-A072-exact-walsh-engine\\PROOF.md",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261014T060751Z-fleet05-A074-independent-reproducer\\INDEPENDENT_PROOF.md"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A074",
+        "kind": "Independent direct bitset-character spectra versus binary Moebius occupied-pattern expansion; separate combinatorial edge-isoperimetry proof; analytic Phi and signed entropy telescope reconstruction",
+        "result": "ACCEPT unchanged statement/hypotheses/version/hash;17742 exact checks,16384 physical coefficient matches,all6 unequal block roles,arbitrary-dimensional analytic loss<111/64 and retained H/I upper bill<=45/22",
+        "reviewed_at": "2026-10-14T06:22:24.416232+00:00",
+        "artifacts": [
+          "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261014T060751Z-fleet05-A074-independent-reproducer\\INDEPENDENT_PROOF.md",
+          "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261014T060751Z-fleet05-A074-independent-reproducer\\out\\VALIDATION.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A071",
+      "A075",
+      "A089",
+      "A074",
+      "A092",
+      "B15"
+    ]
+  }
+]

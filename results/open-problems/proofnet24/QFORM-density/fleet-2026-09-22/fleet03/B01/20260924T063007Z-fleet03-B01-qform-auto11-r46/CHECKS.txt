@@ -1,0 +1,16 @@
+Deterministic checker for fleet03/B01 r46
+source: checks.py in the same immutable run folder
+
+C_alpha_1_3=2.841337885233845
+H_alpha_1_3=3.579861411469905
+C_pair_1_3=14.180832620501937
+large_edge_bound=284.124924775841460
+hyperbolic_c_1_over_32=226.893321928031040
+schur_trials=1000
+indefinite_pair_trials=723
+max_decomposition_error=7.954e-14
+max_interlacing_violation=-5.125e-03
+stress_eigenvalues=[-1.0, 1.0, 1.0]
+STATUS=PASS
+
+Interpretation: the seeded matrix trials check only the exact Schur rank-two decomposition and the inequality s_3(A)<=||S||_op. They are not probabilistic evidence for the density theorem. The displayed constants are direct evaluations of the proved symbolic formulas.

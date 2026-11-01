@@ -1,0 +1,53 @@
+{
+  "command": "python -B -X utf8 retrieve_bridge_subset.py",
+  "scope": "Live ranking function on four preselected target cards; no whole-store load, no edges. Not a full-store ranking benchmark.",
+  "elapsed_seconds": 0.036102,
+  "abstained": false,
+  "reason": "None",
+  "hits": [
+    {
+      "id": "claim_a1a35dbe722dee15ca61262831753a6ffe716808b63c67a20518646b5dd77063",
+      "title": "Transience implies ballisticity for uniformly elliptic i.i.d. RWRE (open, d >= 2) is a statement about the first moment of the regeneration time, and the polynomial condition (P)_M is a moment self-improvement",
+      "body": "PRIVATE REDUCTION, author-recorded. Under (IID)+(UE) transience in direction l gives the Sznitman-Zerner regeneration structure with tau_1 < infinity a.s.; ballisticity is E[tau_1 | D = infinity] < infinity (Drewitz-Ramirez Open Question 2.20). Under (UE) a trap of diameter r holds the walk at most exponentially long in r, so sub-ballistic behaviour needs polynomially rare traps of logarithmic size along the path, which i.i.d. environments do allow; the question is whether the tail P(tau_1 > n) can be as heavy as n^{-1+eps}. Open Question 3.20 (does positive velocity imply (P)_M for M > 15d + 5) is then the question whether a finite first moment of tau_1 self-improves to moments of order about M/d, because (P)_M is equivalent through the slab decomposition to high moments of tau_1. The Guerra-Ramirez theorem (T) <=> (T') (2018) settles Open Question 3.28 but neither of these. Recorded as the moment-self-improvement reformulation.\nRandom walk in i.i.d. uniformly elliptic environment on Z^d, d >= 2\nRegeneration structure of Sznitman-Zerner",
+      "conditions": [],
+      "logical_id": "math:probability.randomenvironment:rwre-transience-implies-ballistic-reduces-to-regeneration-time-integrability-and-moment-self-improvement",
+      "source_id": "owner-probability-intake-claude-20260907:rwre",
+      "proof_text": "",
+      "truth_status": "unverified",
+      "score": 2.484806611459594
+    },
+    {
+      "id": "claim_2856e289d84a5f155d0db05855eb1a0e61d023ff4313b35697fe02c9705cc9c2",
+      "title": "Open problem: Transience in a direction implies ballisticity for uniformly elliptic i.i.d. RWRE in d >= 2",
+      "body": "OPEN PROBLEM (source_says_open; current status no_resolution_found_in_documented_search; result status attempted_unsolved). Let d >= 2 and the RWRE satisfy (UE) and (IID) and be transient in direction l. Is the walk necessarily ballistic in direction l? Source: Drewitz and Ramirez: Selected topics in random walks in random environment, Open question 2.20, p. 24. Status notes: Bounded search 2026-09-07: Guerra and Ramirez (arXiv 1809.02011, 'A proof of Sznitman's conjecture about ballistic RWRE') proved the equivalence of conditions (T) and (T'), which is Open question 3.28 of the source, NOT this question; no proof that transience implies ballisticity in d >= 2 was found.\nPosed in Drewitz and Ramirez: Selected topics in random walks in random environment\nCurrent status no_resolution_found_in_documented_search as of 2026-09-07",
+      "conditions": [],
+      "logical_id": "math:probability.randomenvironment:open-problem-c0041-transience-in-a-direction-implies-ballisticity-for-uniformly-elliptic",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0041",
+      "proof_text": "",
+      "truth_status": "unverified",
+      "score": 1.3783986840887543
+    },
+    {
+      "id": "claim_f9f2aaae6b2438ff5a64f4f66dc265aa11c167d9a714a9526edfe927fb576ab3",
+      "title": "Technique: Sznitman-Zerner Regeneration Structure for RWRE",
+      "body": "TECHNIQUE CARD (drafted from a spec by a helper model, every card read and seven corrected by the Fable agent on 2026-09-07; canonical statements only, no original claim). For random walk in a random environment on Z^d satisfying a directional transience condition, such as Sznitman's condition (T) or the stronger (T') in a direction l, or a simpler ballisticity/non-nestling condition, one constructs regeneration times tau_1 < tau_2 < ... at which the walk achieves a new running maximum in direction l and never backtracks below that level afterward. Under condition (T'), or the weaker (T), the increments (X_{tau_{k+1}} - X_{tau_k}, tau_{k+1} - tau_k), for k >= 1, form an i.i.d. sequence, reducing the walk, which is not itself Markovian once the environment is averaged out, to a genuine i.i.d.-increment structure from which a law of large numbers (a deterministic limiting velocity) follows directly, and, with additional finite-moment control on the regeneration increments, a central limit theorem follows via classical tools for sums of i.i.d. variables. This does not establish the directional transience condition itself, verifying (T) or (T') for a given environment law is typically the hard remaining step; it does not directly give a central limit theorem without separately checking finite second moments of the regeneration increments, which can genuinely fail in slow or near-critical regimes; and it is specific to the static, fixed-in-time environment model. Typical failure: Assuming the regeneration increments automatically have finite variance, and hence a central limit theorem follows, once ballisticity or condition (T') has been established; ballisticity under (T') only guarantees a finite mean regeneration time, and a genuine central limit theorem requires an additional, often delicate, verification of finite second moments, a point on which the Kesten-Kozlov-Spitzer branching-with-migration machinery exists precisely because these moments can fail. Canonical reference: Sznitman and Zerner, 1999, Annals of Probability; Sznitman, 2002, Ecole d'Ete de Probabilites de Saint-Flour, Springer Lecture Notes in Mathematics.\nan i.i.d., or ergodic and suitably mixing, random environment\na directional transience condition, typically Sznitman's (T) or (T'), or an equivalent ballisticity condition, in some direction l\nuniform ellipticity of the transition probabilities, standard though sometimes relaxed in specific results\nexistence of well-defined regeneration times with positive probability of never backtracking, verified from the environment's independence or mixing structure",
+      "conditions": [],
+      "logical_id": "math:probability.randomenvironment:sznitman-zerner-regeneration-technique",
+      "source_id": "owner-probability-intake-claude-20260907:technique:sznitman-zerner-regeneration",
+      "proof_text": "",
+      "truth_status": "unverified",
+      "score": 0.8788542347222175
+    },
+    {
+      "id": "claim_e36418baef36718fcaea9133c8f06be65d179cc3f35130129bc3a3dedaf60cd2",
+      "title": "Resolved: Equivalence of the ballisticity conditions (T) and (T')",
+      "body": "RESOLVED IN THE LITERATURE (status recorded by a bounded search or recall on 2026-09-07, verify before citing). Is Sznitman's condition (T') equivalent to condition (T) for RWRE in uniformly elliptic i.i.d. environments? Resolution: Guerra-Ramirez 2018/2020. Notes: Guerra and Ramirez, 'A proof of Sznitman's conjecture about ballistic RWRE' (arXiv 1809.02011; Comm. Pure Appl. Math.), proved (T) <=> (T') <=> (T)_gamma for all gamma in (0,1); found in the bounded search of 2026-09-07. Source posing it: Drewitz and Ramirez: Selected topics in random walks in random environment, Open question 3.28, p. 55.\nPosed as open in Drewitz and Ramirez: Selected topics in random walks in random environment\nResolution citation from bounded recall, not re-fetched",
+      "conditions": [],
+      "logical_id": "math:probability.randomenvironment:resolved-c0046-equivalence-of-the-ballisticity-conditions-t-and-t",
+      "source_id": "owner-probability-intake-claude-20260907:res-c0046",
+      "proof_text": "",
+      "truth_status": "unverified",
+      "score": 0.46118640052648996
+    }
+  ]
+}

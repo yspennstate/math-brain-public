@@ -1,0 +1,111 @@
+[
+  {
+    "claim_id": "A084-F6-CONTINUUM-ADMISSION",
+    "version": 1,
+    "exact_statement": "Let h:{-1,1}^6->{-1,1} be negative exactly at binary input indices {0,1,2,4,8,16,32,6,17,40}, with bit0 denoting +1. For every nonconstant uniform-cube Boolean core g of every finite dimension n with minority output probability p_min in [1/16,1/2], orient g0 to P(g0=-1)=p_min, and set g1=g0 when p_min<=7/32 and g1=-g0 otherwise. Compose six disjoint identical copies F=h(g1,...,g1). For every relevant physical core coordinate i and every block j, B_(j,i)(F)/Inf_(j,i)(F)>=B_i(g)/Inf_i(g), where B_i=H(S_i|S_-i) for the squared uniform Fourier spectrum, in bits. The increase is strict when the singleton Fourier coefficient beta_i is nonzero. For the induced mean m and q=2p(1-p)^3(2-p), the exact signed reserve R_m(t)=sum_T phi(U_T,tD_T)-q phi(m^2,t) is nonnegative for all real t>=0 in the stated oriented bias bands, with equality at t=0. The full terminal identity is H(F)=6q H(g)+C_p with C_p=H_p(h)-6q h2(1-m^2), and I(F)=6q I(g). No arbitrary-dimensional rare-sector exclusion, iteration closure, or universal FEI bound is asserted.",
+    "hypotheses": [
+      "Actual Boolean core on the uniform cube, finite arbitrary dimension and nonconstant",
+      "Minority probability in [1/16,1/2]; balanced tie may be oriented either way",
+      "Six identical core copies on disjoint physical variable blocks; specified six-bit gate",
+      "True conditional spectral erasure entropy and true physical influence; entropies in bits",
+      "Normalized orthonormal biased outer expansion used only as an exact composition identity"
+    ],
+    "statement_sha256": "8d2b6527e00bd11aaf450db42698c225c13e55f4cad5106c53bfc1ccda5afa27",
+    "contributors": [
+      "A084"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A084\\runs\\20261014T000747Z-fleet05-A084-continuum-parameters\\PROOF.md",
+      "report": "~\\brain_workers\\FEI100_20261011\\agents\\A084\\runs\\20261014T000747Z-fleet05-A084-continuum-parameters\\REPORT.md",
+      "certificates": [
+        "out/MINORITY_ORIENTATION.json",
+        "out/COMPLEMENT_ORIENTATION.json"
+      ],
+      "validation": [
+        "out/GROUPING_CHECKS.json",
+        "out/PHYSICAL_RESULT.json",
+        "out/CONTINUUM_RESULT.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A075",
+        "decision": "ACCEPT_AT_STATED_SCOPE",
+        "independence": "Independent exact uniform-Walsh polynomial reconstruction and 192-bit interval implementation; convexity in logarithmic packet ratio proves the all-t step; analytic complement endpoint independently checked; no substantive repair",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A075\\runs\\20261014T005346Z-fleet05-A075-search-to-theorem-bridge\\PROOF.md",
+        "certificates": [
+          "out/INDEPENDENT_PACKET_ALGEBRA.json",
+          "out/INDEPENDENT_CONTINUUM_CERTIFICATE.json"
+        ],
+        "source_statement_hash_preserved": true
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_A075_LOCAL_RECORD",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A075",
+      "A071",
+      "A072",
+      "A089",
+      "A074",
+      "A092",
+      "A090",
+      "A094",
+      "B15",
+      "B17",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A075-RARE-CORE-LOCALIZATION",
+    "version": 1,
+    "exact_statement": "For every nonconstant Boolean g on any finite uniform cube and every delta,eta>0, a finite oriented composition F of six disjoint identical copies at each level with the six-bit gate negative on {0,1,2,4,8,16,32,6,17,40} has minority probability<=delta, I(F)<=eta, and E(F)>=E(g)-kappa, E=min_(Inf_i>0) H(S_i|S_-i)/Inf_i, where kappa=117078712195266643371590272004575712606955469106314752590356335477611504579603744142309022599254602185213180740570572182378422729378480573820952187414459807275310347536976219713458435963952572044685532605409966813062735729496083974307852360067322146935415596659603524693003125832848345259141445722795366507677648163356869730840887382209248896858067386252559117810581636683774610759094926855427824933027315537122467551464799155571970436449318430571776185368559763838768490356960143832729675793314743451653381228125865645986278548710489847174155909209469434528837459140811292590441954377457938599882499763360595835734364771395411630890802026054995113561840871224188993276472820704215103886910849820822155804164355170482183861840049396206934015158644582990726894462258190772687112178709057634300195240793043901639444925932043892688044598386423516043828498660214574503096080086950299747654732931503033311709499796648474330791716287013329184047771638791130705671049082830656852611622189480882388993974273398104877731493945184882268838688890265970376842816573100981581907115326473915191415692150983216389432525963376184887233168564421318930518277762422164126078628874264214071174053172781525560490191705503162759140718698338637819710503989553990109658701530541006634392861483937079363298497652361567651213832724117034103885202567526104012228363961268680500017864504789627189000191344414378545170082019616476117702847579329687713671030238706639076587543161960979203856250855817793609954708595021958323115972591047265295932870303456113813628759079289/128104337876500270287293968927024414642846503941679456004257034819850059732427189951658516863941441289467411467752740273136549212780020726190331578490391135918803503038209873097174506864575419627837695238331454621196518273419780950315349583210662818527859801097647746559973260615194187736573324552671278850512597388462684736326794665310603130943272940048339957593567375900367561395082542790464726735997878565312205834167870720765617620330277404198966093964306955853968227733507500406750662362999978104458442842715198910737927161733899176893004123224829510614666245878740991003618351782693841386470959239538056284662068728990362506742531021445730449619001278331648164556879412035105850997435722114937437792569031055678366657549743401525942567705715644139416893762100412738760063338116368160751216105112541379351271625346975813988601473306826306199422157932986321682319047716238097351893243040553603931824889788626087485119522069838996911092648246208945397121397295710959027017526938280685790547159570428216438593554014690093083149150605609405019262495351693219660553716021328129850359122728958528822115672434901131461617327904956404097595490386732970838785286353037957805203170506545575786100975769549439128995025669461248713096359879850107490595299060375043753440809893500617606331667999305402126975004448857847085902669689009114317596521828161517179463790292112122046845411580997883252435061335874150039902240539986508276911577869068630683553780153634717301097386395802631815050995659518162607111328042132987237447043050842342229073987633152<457/500. The single orientation policy is minority-negative up to minority 7/32 and complemented above it, followed by output orientation to its minority. Every actual dyadic bias enters minority<1/16 in finite time; all relevant coordinates remain relevant and no new coordinate type is admitted. At every finite rare-tail depth d, H(g0)/I(g0)-24/5<=H(g_d)/I(g_d)<=H(g0)/I(g0)+16, retaining the exact full starting entropy via H(g_(s+1))=6q_s H(g_s)+C_(p_s). Thus for every fixed delta,eta>0, the supremum M of E over actual cores with minority<=delta and I<=eta satisfies sup_g E(g)-kappa<=M<=sup_g E(g), in the extended-real sense. A finite M implies full FEI with constant M+kappa+2/ln(2); no finite M or universal FEI bound is asserted.",
+    "hypotheses": [
+      "Finite arbitrary-dimensional uniform physical cube; actual nonconstant Boolean signs",
+      "Six independent identical copies on disjoint supports at every finite level; specified matching gate",
+      "Entropy in bits; true conditional spectral erasure and true physical influence",
+      "A084-F6-CONTINUUM-ADMISSION@1 independently accepted at unchanged stated scope in this run",
+      "delta,eta are arbitrary positive real numbers; no uniform dimension/depth bound claimed"
+    ],
+    "statement_sha256": "4a2c5d8837c0f46e95515ea964fee828e46ac32633ab16ed7ab3810f590a45fc",
+    "contributors": [
+      "A075"
+    ],
+    "proof_source": {
+      "proof": "~\\brain_workers\\FEI100_20261011\\agents\\A075\\runs\\20261014T005346Z-fleet05-A075-search-to-theorem-bridge\\PROOF.md",
+      "report": "~\\brain_workers\\FEI100_20261011\\agents\\A075\\runs\\20261014T005346Z-fleet05-A075-search-to-theorem-bridge\\REPORT.md",
+      "certificates": [
+        "out/INFINITE_LOSS_CERTIFICATE.json",
+        "out/BIAS_DYNAMICS_CERTIFICATE.json",
+        "out/INDEPENDENT_PACKET_ALGEBRA.json",
+        "out/INDEPENDENT_CONTINUUM_CERTIFICATE.json"
+      ],
+      "validation": [
+        "out/VALIDATION.json",
+        "out/DIRECT_PHYSICAL_FIXTURES.json",
+        "out/POINT_DEFECT_FIXTURES.json"
+      ]
+    },
+    "proof_dependencies": [
+      "A084-F6-CONTINUUM-ADMISSION@1; accepted independently by A075 in this run"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_UNIVERSAL_REDUCTION_REVIEW_PENDING_FULL_FEI_OPEN",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A071",
+      "A072",
+      "A074",
+      "A084",
+      "A089",
+      "A092",
+      "B15",
+      "B20"
+    ]
+  }
+]

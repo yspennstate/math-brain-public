@@ -1,0 +1,36 @@
+PROB20-19 quintic top-five all-ranks checker results
+Executed 2026-09-16 UTC in the task run environment.
+This is reproducible self-review evidence, not independent verification.
+
+symbolic checks: PASS
+projection cases: 2000
+
+minimum exact K5>=4 numerator gap by rank:
+  r=4: 278.2917330666414
+  r=5: 1682.6876790574988
+  r=6: 3249.8843269415393
+  r=7: 6324.412687412128
+  r=8: 4455.249060899492
+
+minimum analytic scalar certificate by rank:
+  r=4: 37.719827989850145
+  r=5: 135.59105603579113
+  r=6: 326.6534615209643
+  r=7: 613.6674273758772
+  r=8: 942.0261912886783
+
+random bank: PASS
+
+Checks performed:
+- exact symbolic reduction from the prior G_r formula to the new convex-edge bound;
+- rank-four pointwise square identity;
+- rank-four constrained quartic P(t) and derivative;
+- exact polynomial remainder used to certify the unique rank-four minimum;
+- finite-rank scalar reductions for r=5,6,7,8;
+- deterministic Gaussian-QR projection bank with p=r+1,...,r+8;
+- L >= 2 A^(3/2)/sqrt(Q), M >= 2 B^(3/2)/sqrt(Q);
+- W >= 2 mu - 1 and W <= r(1-mu);
+- exact numerator gap >= the analytic scalar lower certificate on every sampled case.
+
+Interpretation:
+The deterministic bank supports the analytic derivation and catches algebra/sign errors, but does not itself prove the theorem. The universal proof is the analytic argument archived in the corresponding report.

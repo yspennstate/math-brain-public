@@ -1,0 +1,133 @@
+[
+  {
+    "claim_id": "A059-FREQUENT-EXTERIOR-FALLBACK-PAYMENT",
+    "version": 1,
+    "exact_statement": "On every finite uniform cube, let F=K0(Z)+C(Z)g(W), with disjoint exterior Z and internal W, C an indicator of mean c>=1/2, K0=0 on C and K0 in {-1,1} off C, and g any finite private priority list of disjoint point tests selecting pairwise disjoint Boolean core blocks. At any internal unfinished point-test query i, with the original physically merged fine reserve R=sum eta(pi_h)Var(h), D_i H(F)-drop_i R<=K_* Inf_i(F), where K_*=6+(5+2/exp(1)+ln57)/ln2<21. No bound on test count, width or depth is assumed. For F=(1-Y)g+Y[A u+(1-A)(B v+(1-B)g)], with fresh fair Y, private point A,B and disjoint fine data cores, every finite adaptive stopping tree leaving Y unqueried, arbitrarily interleaving A/B/internal point-test queries and fine-core data queries, obeys H_root<=U_root+R_root+(3/ln2)Pi_data+21Pi_ctrl+E(H_leaf-U_leaf-R_leaf), at the SAME original fine U/R, U=sum pi_h[H(h)-eta((Eh)^2)]. Both child profiles and old debits remain. An explicit growing-depth d^2+d+5-variable literal-core family is covered; exposing every variable except Y yields H<=23I for that family. No universal payment of inherited U or generic terminal entropy is asserted.",
+    "hypotheses": [
+      "All cubes finite and uniform, true Boolean signs, entropy in bits.",
+      "Exterior variables disjoint from all internal control and core variables; private internal point-test blocks and internal core blocks pairwise disjoint.",
+      "The fallback density c>=1/2 holds at the actual paid node; degenerate irrelevant nodes treated directly.",
+      "Stopped shared-Y corollary requires disjoint outer core data, private point A/B, and Y fair/unqueried throughout the tree.",
+      "Use the same original merged fine probabilities, reserve and both literal terminal profiles; no renewed source bank."
+    ],
+    "statement_sha256": "c3cae3f63caa425b7fb7d244a072d72f73f198d9d1be431671ff5f185578ea28",
+    "contributors": [
+      "A059"
+    ],
+    "proof_source": {
+      "run_id": "20261022T224007Z-fleet03-A059-decomposition-depth",
+      "path": "PROOF.md",
+      "locators": "(1)-(5), coherent exterior Fourier row and logarithmic moment"
+    },
+    "proof_dependencies": [
+      {
+        "claim_version": "A059-INTERRUPTED-PRIORITY-STOPPING-PAYMENT@2",
+        "scope": "last-frequency prefix lemma, signed DATA telescope, or independently reconstructed outer private erasure interface as specified in PROOF.md"
+      },
+      {
+        "claim_version": "A059-INTERLEAVED-BIASED-STOPPING-RESERVE@1",
+        "scope": "last-frequency prefix lemma, signed DATA telescope, or independently reconstructed outer private erasure interface as specified in PROOF.md"
+      },
+      {
+        "claim_version": "A091-FIRST-PRIVATE-BEFORE-Y-REPEATED-FALLBACK@1",
+        "scope": "last-frequency prefix lemma, signed DATA telescope, or independently reconstructed outer private erasure interface as specified in PROOF.md"
+      },
+      {
+        "claim_version": "A057-LATER-PRIVATE-SHARED-Y-PAYMENT@1",
+        "scope": "last-frequency prefix lemma, signed DATA telescope, or independently reconstructed outer private erasure interface as specified in PROOF.md"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A059",
+        "kind": "author adversarial checks, not independent acceptance",
+        "result": "Exact full grouped Fourier identity, reserve scaling, boundary/biased-core cases and mixed stopping fronts PASS. Lean admission held; no compiler launched."
+      },
+      {
+        "reviewer": "A060",
+        "run_id": "20261022T233802Z-fleet03-A060-composition-sharpness",
+        "verdict": "ACCEPT_LOCAL_PAYMENT_AND_ORIGINAL_RESERVE_INTERFACE_NO_REPAIR",
+        "scope": "Full local frequent-exterior theorem K_*<21, exact reserve scaling and coherent sectors. Stopped corollary conditional on listed prior imports; separate H<=23I literal-family corollary not independently reviewed.",
+        "source_statement_sha256": "c3cae3f63caa425b7fb7d244a072d72f73f198d9d1be431671ff5f185578ea28",
+        "source_proof_sha256": "944963a85bda7f356db925bb7a839492ced11e2157570c51c044332f6deb49ec",
+        "proof": "REVIEW_A059.md",
+        "exact_validation": "4374 declared wrapper roots; original fine R and full actual child entropies; direct-character subset and bent controls."
+      }
+    ],
+    "status": "LOCAL_PAYMENT_INDEPENDENTLY_ACCEPTED_OTHER_SUBCLAIMS_CONDITIONAL_OR_NOT_REVIEWED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "A source-dependent exterior query may lower c below1/2; no dimension-independent price for the resulting exterior logarithm from the SAME unused ancestor account is proved. Arbitrary initial/terminal core entropy remains unpaid.",
+    "next_consumers": [
+      "A057",
+      "A091",
+      "A087",
+      "A090",
+      "A060",
+      "B12",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A060-SHARP-EXTERIOR-DENSITY-TAX-AND-ONE-EXPOSURE-BANK",
+    "version": 1,
+    "exact_statement": "For every finite uniform Boolean wrapper F=K0+Cg with disjoint exterior and internal blocks, C an indicator of mean 0<c<=1, K0=0 on C and a sign off C, and g a private priority point-test list with independent selected-core blocks, every unfinished internal point-query has actual entropy decrement D and ORIGINAL merged fine-reserve drop kappa satisfying D-kappa<=[log2(1/c)+20] Inf_query. More precisely the coefficient is K(c)=6+[5+2/exp(1)+ln19+ln(2/c-1)]/ln2. Its density logarithm has optimal leading coefficient1: for every even m>=4, paired quadratic bent b, C=1_(x=0), c=2^-m, F=b-C+CZ with fresh fair Z represented as a point test selecting constants, original fine U=R=0 at root and both actual children b,b-2C, Inf_Z=c and D_Z/Inf_Z>=m-1; the upper theorem gives D_Z/(Inf_Z*m)->1. In W=Z if exterior X=0 and W=b-C+CZ if X=1, the root exterior density is(1+c)/2>=1/2 and one actual X exposure produces the rare child. With d_X=(1-c)/2, the ONE root bank6d_X, after booking actual D_X and then the original-reach weighted descendant density tax(c/2)log2(1/c), retains more than7d_X/30. Both complete child and final terminal entropies are retained, and H(W)-[H(b)+H(b-2C)]/4<=6d_X+10c. Fixed absolute additive repairs fail for a density-log coefficient below1 only under explicitly tensor-closed additive factor-ledger hypotheses. No arbitrary inherited U/terminal payment or full FEI theorem is asserted.",
+    "hypotheses": [
+      "Finite uniform physical cube, actual Boolean signs, entropy in bits; all queried coordinates unrevealed.",
+      "Exterior cube disjoint from every internal private point-test and selected-core cube; selected-core data blocks pairwise disjoint.",
+      "K0 and C may be arbitrarily correlated on their same exterior cube, but K0 vanishes on C and is a sign on its complement.",
+      "Use ORIGINAL fine-label probabilities, actual physical reach weights, and both full terminal entropies. At c=0 the query is irrelevant and the density bill is defined as0.",
+      "Sharpness and same-bank history use even m>=4 quadratic bent sign with b(0)=1, point C and fresh fair Z. The fair-Z mismatch identity is essential to the bank payment.",
+      "Fixed absolute tensor allowance conclusion requires tensor-closed rules with additive per-factor ledgers; it does not assert a canonical single-wrapper product representation."
+    ],
+    "statement_sha256": "1f97ad3c0087ecb5db98b1c5aabc58f78fa62c15f5bff70dea0407ef3cd939a7",
+    "contributors": [
+      "A060"
+    ],
+    "proof_source": {
+      "run_id": "20261022T233802Z-fleet03-A060-composition-sharpness",
+      "path": "PROOF.md",
+      "locators": "sections1--5 and scalar channel check",
+      "certificates": [
+        "out/CHECK_main.json",
+        "out/CHECK_bent.json",
+        "out/CHECK_reproduce.json",
+        "out/CHECK_bridge.json",
+        "out/SCALAR_CERTIFICATE.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A059-FREQUENT-EXTERIOR-FALLBACK-PAYMENT",
+        "version": 1,
+        "role": "Exact wrapper Fourier identity, original fine reserve convention and logarithmic last-frequency interface independently reconstructed in REVIEW_A059.md; density parameter retained instead of bounded.",
+        "review_status": "LOCAL_PAYMENT_ACCEPTED_AT_SCOPE_NO_REPAIR"
+      },
+      {
+        "source": "A057 20261021T223314Z PROOF section1; A059 private last-frequency lemma v2",
+        "role": "Scalar Phi(a^2,b^2)<=2|ab| and independent private-prefix logarithmic moment. Current PROOF separately derives full physical-channel bound."
+      },
+      {
+        "source": "A060 20261014T004659Z PROOF",
+        "role": "Previously established bent DATA remainder used only as optional finer asymptotic; new leading-coefficient proof uses direct lower erasure and new upper bound."
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTIC_PROOF_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW_NOT_LEAN_CERTIFIED",
+    "supersedes": [],
+    "refutes": [
+      "Unversioned extension of frequent-exterior wrapper theorem to all c at a fixed density-free local coefficient and unchanged fine reserve.",
+      "Unversioned reduction of the density logarithm leading coefficient below1 with fixed additive rate."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A059",
+      "A057",
+      "A091",
+      "A087",
+      "A090",
+      "B12",
+      "B20"
+    ]
+  }
+]

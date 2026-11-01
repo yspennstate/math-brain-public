@@ -1,0 +1,41 @@
+# A042 stage11: complete seed reference at rare bias endpoints
+
+## exact target, quantifiers, hypotheses and units
+
+For EVERY finite Boolean seed and every actual interior product law, determine the complete ordinary-KL endpoint after an independent dyadic activation when final singleton masses are frozen. Prove a quantitative uniform rate, including constants, zero high mass and unit atoms; reflect the selector for probability-one coordinates. Natural logarithms throughout. The original target remains one dimension-independent full FEI theorem; full FEI is OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Current BOARD B09, stream lead v2 and own stage10 STATUS; execution-v2 schema and established prior protocol/literature context. Read latest A04120261023T135351Z PROOF Sections1-4 and CLAIMS, A04520261023T132409Z full PROOF, A04320261023T123418Z and latest A044 proof on split singleton/high owners (bounded intake may truncate their nonessential trailing context; these are not new full-scope reviews). A041's exact source statement and raw proof hashes were independently reproduced in out/SOURCE_RECEIPTS.json. The old binary base-case assignment is closed. Current board asks for actual prime J_hi payment with original owner and complete terminals. No fresh literature audit, novelty claim or source checker counts adopted.
+
+## complete derivation or exact first unsupported line
+
+PROOF.md partitions the actual root high sector into imported seed singletons and seed high labels. It proves the exact full ordinary KL chain K_F=eKh+e(1-e)K1+H_F*d_Bern(r||s), retaining actual empty/singleton masses and all occupied high labels. The complete composed reference has Ktree=eKh, so this specialized reference conversion is nonnegative, although general conversions remain signed. The identity agrees exactly with the previous n_F-e n_h-e(1-e)L1 formula; its normalizer and ordinary KL must change together.
+
+The transport function G(lambda) has G(0)=Kh, G(1)=Ka and K_F/e=G(1-e). Explicit derivatives prove monotonicity and concavity, including zero-sector limits. Consequently e(1-e)Ka+e^2Kh<=K_F<=eKa and 0<=Ka-K_F/e<=e(Ka-Kh)<=e V ln4. This is uniform in seed, dimension and product law, even when the seed varies with e. It shows that rare activation of the NEW paid-sector root reference reinstates the OLD complete all-rounded seed KL at leading order. Matching corrected cross entropy and entropy have the SAME seed law; this is no new source reserve. Constant/literal and unit-atom cases are explicit physical laws.
+
+REVIEW_A041.md independently reconstructs its optimal all-alpha source J1+alpha L1<=max(ln4,2alpha)(2Delta-R), the actual Boolean sharpness controls and the exact all-depth joint owner with genuine C1 retained. At the critical alpha=ln2, the finite sign test simplifies to L1<=2[(2Delta-R)-J1/ln4], avoiding unverified products of logarithms. The arbitrary-depth identity follows from two separately checked low-scale/mantissa partitions and weighted finite telescoping, retaining both full terminal laws. No source repair is supplied. First unsupported universal line: Pay the arbitrary prime/inherited J_hi from genuinely unused ORIGINAL capacity after actual singleton/import/carry debits, retaining all refunds, the complete inherited seed reference, ordinary KL and both full terminal laws.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen SPEC.json and REVIEW_SPEC.json precede the jobs. Commands: python -B -X utf8 code/check_endpoint.py --pilot; code/review_joint.py --pilot; code/check_endpoint.py; code/review_joint.py. The reused physical helper is copied byte-for-byte from our OWN prior-stage code; its hash is pinned and source unchanged. No other agent's code was copied or run.
+
+Main PASS:1152 actual dyadic activation roots/78382 exact assertions in 19.786s. All16 two-bit seeds at two laws and all256 three-bit seeds at fair law, e=1/2,1/4,1/16,1/1024. Checks include complete physical spectrum, sector KL chain, low-atom retention, concavity chord, monotone upper bound, explicit V ln4 error bank and sharp critical singleton source. Arithmetic is Fraction, canonical prime-log equalities and outward24-term atanh enclosures with proved geometric tail; no floating sign test. Exact zero expressions cancel before enclosure. The continuum/all-arity assertions follow from the written derivative proof, not finite extrapolation.
+
+Independent review PASS:448 genuine compositions/30744 exact assertions in 4.757s; all16 binary outer gates,14 nonconstant two-bit children plus one literal, at two physical laws. 40 fixtures have nonzero singleton carry. Exact low/high scale and mantissa partitions, original deficit, critical source, complete composed references and FULL ordinary-KL chain are retained. Pilots are saved separately. All jobs estimated90MB and below55s; no over300MB job/admission, GPU, detached work, compiler or automatic dimension increase. No formal proof is claimed.
+
+## proof dependencies and changed downstream conclusions
+
+The new reference endpoint is self-contained physical expansion plus finite-law KL and elementary differentiation, pending independent review. A041-SHARP-JOINT-SINGLETON-SOURCE@1 is independently HOLDS at its exact scalar/all-alpha all-depth conditional scope with original author/hypotheses preserved; it is not a premise of the new endpoint theorem. Generic source prerequisites are reconstructed through the unique physical partition, not assumed for repeated wires. Earlier full-carry and high-sector import obstructions remain valid. Downstream cannot replace inherited all-rounded seed KL by only its paid-sector KL at a rare endpoint without the explicit conversion in equation(1); that change would omit a first-order sector bill. No universal prime scale bound or FEI counterfamily is supplied.
+
+## one next mathematical action and independent reviewer
+
+A043/A044/A045 independently reconstruct the concave complete-reference transport, then pay arbitrary prime J_hi from the SAME unused original degree/refund capacity after actual singleton/import/carry debit. Keep restored complete seed reference, the sharp source's committed mantissa, ordinary KL and BOTH terminals. A041/A091 should challenge attempted reuse of that commitment. The exact endpoint is an adversarial universal-supplier interface, not another isolated class census.
+
+## actual persistence receipts or precise save blocker
+
+Four protocol files, proof/review, frozen specs, exact scripts/outputs and source hashes are saved inside the designated A042 run. Finalizer verifies exact schema key sets, source statement/proof hashes, required report fields, identical compatibility-copy bytes, two-line STATUS and20MB limits, then saves local sha256 receipts. WORKLOG and LEARNED append once. Supervisor copying, remote mirror and downstream adoption remain unobserved; no Git or messages were sent. Brain self-care is degraded/unverified: owner-model100.8h, state-of-mind85.4h, dream36.1h stale, affecting personal-context guidance; current research instructions govern. Compute heartbeat13:57:59 stayed unchanged across more than30s, so its resource numbers were not treated as live; no shared service or workload was stopped. Initial checklist working attempt returned shared-lock timeout; final closure outcome is recorded separately. No research job remains running.
+
+## Universal bridge
+
+This stage advances C024 history transfer and C020 whole-set witness cost by proving the exact complete-KL rare-endpoint supplier interface with dimension-free error<=e^2 V ln4, and independently accepting the sharp joint singleton source without renewing its mantissa commitment. The gain is a checked first-order inheritance of the entire all-rounded seed reference even when final singletons are frozen; it supplies no universal FEI constant. Arbitrary prime J_hi still needs payment from genuinely unused ORIGINAL capacity after existing debits, with the restored seed law and both full terminals. That is the shortest NEXT because reference truncation, endpoint approximation and singleton source are now explicit, leaving the actual whole-set scale supplier rather than another paid-sector reformulation as the unresolved step.

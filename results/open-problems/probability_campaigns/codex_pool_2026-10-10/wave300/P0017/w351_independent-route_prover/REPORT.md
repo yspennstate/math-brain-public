@@ -1,0 +1,13 @@
+P0017's September open-status label is stale: October primary preprints claim the full KLS theorem. SOURCE_STATUS.json records the exact original Cheeger target, its Poincare formulation and the dated publication claims, while keeping current openness UNKNOWN because their complete proofs were not audited here. No novelty or full-solution claim is made.
+
+The independent conditional-variance route produced five saved proof rows. Its main result is an exact isotropic-simplex obstruction: conditional Poincare constants can grow quadratically even when their average is constant. A localized slice eigenfunction proves that replacing the random constant by its mean is also invalid. A fourth-moment calculation shows positive nonlinear dependence despite zero linear cross-covariance. The unresolved gap is a dimension-independent bound for weighted conditional energies retaining the full transverse gradient.
+
+Measurement commands: python -X utf8 verify_small.py passed the artifact checks: 5 claim rows, 6 draft concept entries, 5 supported relations, 3 parsed Python sources, 0 independently certified rows. python -X utf8 recall_bounded.py completed in 56.03 seconds with disk stores read-only, worker-only writes and no model loading. python -X utf8 verify_small.py --numerical read a 1.68-second-old distress/throttle gate and held; no numerical experiment ran. The content improvement is a proposal: no measured recall gain or computational proof validation is claimed. These checks establish artifact structure, not mathematical correctness.
+
+Submitted: ~/math-brain-inbox/w351/bundle_001.json, using the acquired named-folder claim and complete-part-then-rename publication. Every own result is a clearly labeled concept draft with owner-own-work provenance. SUBMISSION_STATE.json separately records submission, review, ingestion and retrieval. The validating coordinator integrates; this worker has made no live-store or global-recall change.
+
+Review risks: independently check the simplex scale, conditional slice Jacobian, localized function's full energy and fourth moments. A dated preprint claim is not an audited proof, and the sufficient two-block criterion requires maximal correlation of all centered block functions. Numerical validation must wait for a fresh non-distress gate.
+
+Apply: the validating coordinator reviews and integrates the submitted bundle; patches/02_p0017_brain_draft.diff exposes its exact new-file change, and patches/01_conditional_poincare_hook.diff stages one hook row for the global proposal file after audit.
+
+NEXT: w353 audits L2-L3's simplex normalization and localized directional-energy inequality before any promotion of the draft concepts.

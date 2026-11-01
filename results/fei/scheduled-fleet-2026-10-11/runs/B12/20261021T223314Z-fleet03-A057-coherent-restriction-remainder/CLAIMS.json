@@ -1,0 +1,37 @@
+[
+  {
+    "claim_id": "A057-LATER-PRIVATE-SHARED-Y-PAYMENT",
+    "version": 1,
+    "exact_statement": "For arbitrary independent indicator A of probability a, independent indicator P, fair independent selector Y, fresh sign bit x, and Boolean cores u,v,G on pairwise disjoint independent cubes, set B=P(1+x)/2 and F=(1-Y)G+Y[A u+(1-A)(B v+(1-B)G)]. The actual physical-query spectral erasure in bits satisfies B_x(F)<=(8+8a)Inf_x(F). In particular it is <=12Inf_x(F) for a<=1/2, and is zero for a=1. This holds after every compatible actual restriction leaving Y and x fresh. The same physical fallback G and both actual child entropy terminals are retained.",
+    "hypotheses": [
+      "uniform independent residual input blocks",
+      "Y remains fair and unexposed",
+      "u,v,G Boolean on mutually disjoint cubes",
+      "A is an indicator independent of P,x,Y,u,v,G",
+      "P is an indicator independent of x,Y,u,v,G",
+      "the two appearances of G mean the SAME physical function; no independent copies"
+    ],
+    "statement_sha256": "8ca618ec7267510ef30f1740ba259d912a06222b3ad24590c0ee6b2916217c9b",
+    "contributors": [
+      "A057"
+    ],
+    "proof_source": "PROOF.md Sections1-4; exact checks code/check_later.py, code/check_overlap.py, code/check_guard.py",
+    "proof_dependencies": [
+      "finite uniform Walsh/Parseval",
+      "scalar Phi(c^2,d^2)<=2|cd|, proved in PROOF Section1",
+      "Boolean half-difference influence identity"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCAL_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "None in the stated local theorem. Universal inherited-core entropy and queries inside an unresolved fallback/controller remain unpaid.",
+    "next_consumers": [
+      "A059",
+      "A091",
+      "A087",
+      "A090",
+      "A097"
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "schema": "fei-a042-control-limits/1",
+  "packet_id": "A042",
+  "scope": "partial_endpoint_certificate",
+  "family": {
+    "gate": "g(x,y)=(-1)^(xy)",
+    "revealed_block": ["X"],
+    "biases": {"X": "p -> 0+", "Y": "q=1/4 fixed"},
+    "actual_boolean": true,
+    "deterministic_endpoint": "at p=0 contract X; g is constant +1"
+  },
+  "exact_formulas": {
+    "s": "3/4",
+    "c": "1/4",
+    "u": "p(1-p)/(4-3p)",
+    "M": "(1-3p/4) h2(p(1-p)/(4-3p)) + (3p/4) h2(p)",
+    "J": "h2(3p/4) - p h2(3/4)"
+  },
+  "proved_limit": {
+    "expression": "(J-M)/(p log2(1/p))",
+    "value": "1/2",
+    "uniformity": "fixed q only",
+    "status": "AUTHOR_PROVED_PENDING_REVIEW"
+  },
+  "composition_scope": {
+    "proved": "exact aligned disjoint tensor products",
+    "not_proved": "arbitrary Boolean composition"
+  },
+  "acceptance_items_remaining": [
+    "q=m^-2 weighted-family event-TC and pivotal residual limits",
+    "eta=1/2 then q->0 then m->infinity conditional-input-TC order of limits",
+    "uniformity audit in arity m and weights"
+  ]
+}

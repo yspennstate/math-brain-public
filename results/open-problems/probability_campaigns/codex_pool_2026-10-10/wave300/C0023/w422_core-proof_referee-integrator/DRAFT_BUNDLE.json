@@ -1,0 +1,76 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w422",
+  "bundle_slug": "c0023-status-and-refereed-block-reduction-20261010",
+  "entries": [
+    {
+      "key": "c0023-status",
+      "namespace": "probability.percolation",
+      "logical_name": "open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10",
+      "kind": "concept",
+      "title": "C0023 status audit: critical bond percolation on Z^d, 3<=d<=10",
+      "statement": "Historical C0023 asks whether theta_d(p_c(d))=0 for independent nearest-neighbor Bernoulli bond percolation on Z^d, 3<=d<=10, with theta_d(p)=P_p(|C(0)|=infinity) and p_c(d)=inf{p:theta_d(p)>0}. Garban–Steif (2012, Chapter XI) calls intermediate-dimensional critical nonpercolation open in its historical context. Two OpenAI preprints dated 2026-09-24 now report a proof for bond/site percolation on Z^3 and a general theorem for bond percolation on infinite connected locally finite quasi-transitive graphs with p_c<1, which includes every assigned Z^d. As of 2026-10-10, record this as REPORTED SOLVED, INDEPENDENT FULL-PROOF AUDIT PENDING; the 2026-09-07 'currently open' tag is stale, and this audit does not certify the new proofs. The public ComparatorChallenges files contain deliberate `sorry` theorem bodies and alone are not proof receipts.",
+      "proof_text": null,
+      "assumptions": ["C0023 refers to independent nearest-neighbor bond percolation on Z^d", "Status date is 2026-10-10", "New manuscripts have not received a complete independent mathematical review in this packet"],
+      "domain": "probability theory",
+      "supersedes_existing": true,
+      "source": {
+        "source_id": "owner-w422-c0023-source-status-audit-20261010",
+        "url": "worker-folder:w422/SOURCE_STATUS.json",
+        "revision": "2026-10-10; primary PDFs Garban–Steif 1102.5761 and OpenAI 2026-09-24, theorem statements directly checked",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "block-criterion",
+      "namespace": "probability.percolation",
+      "logical_name": "c0023-compatible-anchor-finite-dependence-criterion",
+      "kind": "lemma",
+      "title": "Finite-range compatible-anchor criterion for a lower percolating parameter",
+      "statement": "Let d>=2 and M>=L>=1 be fixed integers in nearest-neighbor Bernoulli bond percolation on Z^d. Embed coarse z=(z1,z2) in Z^d with center c_z=L(z1,z2,0,...,0). Put S_z=c_z+[-L,L]^d and D_z(r)=c_z+[-r,r]^d, intersected with Z^d. Fix one translation-covariant total order on offsets of every S_z. Let h_z be the first vertex in S_z with an open path inside D_z(M) to its vertex boundary, or undefined if there is none. Let G_z require h_z and its four coarse nearest-neighbor anchors h_w to exist and require open paths inside D_z(M+L) from h_z to each h_w. Set R=floor(2(M+L)/L). If p0>0 and P_p0(G_0^c)<800^{-(R+1)^2}, then theta_d(p1)>0 for some p1<p0. Therefore at p0=p_c(d) the strict displayed inequality is impossible.",
+      "proof_text": "Each G_z reads only the finitely many edges inside D_z(M+L). Supports of coarse index sets at infinity-norm distance greater than R are disjoint, giving strong R-dependence. Coloring sites modulo R+1 in each coordinate bounds the probability of m specified bad sites by q^{ceil(m/(R+1)^2)}. The outer boundary of any finite good component containing 0 yields a bad star-cycle; summing at most (2m+1)^2 8^m length-m cycles gives P(0 in an infinite good component)>=1-q-9t(1+t)/(1-t)^3, t=8q^{1/(R+1)^2}. The threshold q<800^{-(R+1)^2} makes this positive. Consistent anchors along an infinite good component connect into an infinite original open cluster. A uniform-variable coupling across the finite support yields |P_p(G_0)-P_p'(G_0)|<=N|p-p'|, so the strict margin persists at some p1<p0. Translation invariance converts positive probability of some infinite cluster into theta_d(p1)>0.",
+      "assumptions": ["Independent nearest-neighbor Bernoulli bonds", "Finite fixed L,M with M>=L>=1", "The globally identical anchor rule and internal connection event of w420/ATTEMPT.md", "Strict failure-probability threshold at p0"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w420-c0023-L1-L3-reviewed-w422-20261010",
+        "url": "worker-folder:w420/ATTEMPT.md",
+        "revision": "2026-10-10; w422 REVIEW_VERDICTS.jsonl L1-L3 KEEP",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "block-gap",
+      "namespace": "probability.percolation",
+      "logical_name": "c0023-critical-block-error-gap-dependence-matched",
+      "kind": "concept",
+      "title": "Unproved dependence-matched block estimate in an independent C0023 route",
+      "statement": "In an independent block route for nearest-neighbor Bernoulli bond percolation on Z^d, d=3,...,10, let G_0(L,M) be the finite event that the lex-first vertices in five seed boxes of radius L (at coarse center 0 and its four coarse neighbors at spacing L) reach their own box boundaries of radius M and that the central chosen vertex connects inside the radius-(M+L) box to all four neighboring chosen vertices. The still-unproved input is: theta_d(p_c)>0 would force some finite M>=L>=1 with P_pc(G_0(L,M)^c)<800^{-(floor(2(M+L)/L)+1)^2}. The unique-infinite-cluster assumption yields only lim_{L->infinity}lim_{M->infinity}P_pc(G_0(L,M)^c)=0. This iterated limit is insufficient because the dependence range grows with M/L; an explicit numerical family q_fake(L,M) has the same iterated limit and misses every threshold. This is a gap label for that independent route, not a statement that the 2026-09-24 reported proofs fail.",
+      "proof_text": null,
+      "assumptions": ["Exact compatible-anchor events of w420/ATTEMPT.md", "The asserted critical bound itself is unproved"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w420-c0023-gap-reviewed-w422-20261010",
+        "url": "worker-folder:w420/GAP.md",
+        "revision": "2026-10-10; w422 REVIEW_VERDICTS.jsonl L4/L5/G KEEP for scope",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "block-gap",
+      "to_key": "block-criterion",
+      "kind": "semantic_association",
+      "rationale": "The block-gap statement names the exact strict estimate that is the antecedent of the block criterion; it does not assert that the estimate holds."
+    },
+    {
+      "from_key": "block-gap",
+      "to_key": "c0023-status",
+      "kind": "semantic_association",
+      "rationale": "Both entries explicitly concern C0023, but the unproved input is only for w420's independent route and does not determine the status of the newer manuscripts."
+    }
+  ]
+}

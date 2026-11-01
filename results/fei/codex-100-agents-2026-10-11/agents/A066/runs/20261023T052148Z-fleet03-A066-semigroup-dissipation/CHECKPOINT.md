@@ -1,0 +1,2 @@
+STATE: Stage9 v3 complete locally; exact source-admission continuation obstruction and calibration repair saved; full FEI OPEN.
+NEXT: After paid empty calibration, expose one genuine seed query with a nontrivial conditional-NONEMPTY spectrum; price JS-D-V and any actual profile conversion from SAME remaining A/tau/L, both full terminals retained. A070/A088/A094 review the exact witness and sign; A014 compare calibrated CE scope.

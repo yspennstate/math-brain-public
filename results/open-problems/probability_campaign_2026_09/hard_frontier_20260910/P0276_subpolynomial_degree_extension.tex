@@ -1,0 +1,65 @@
+\section{Subpolynomial degree}
+The explicit construction above has degree $|G_d|^{1/2+o(1)}$. This relation between degree and volume is not intrinsic to the obstruction: a rapidly mixing factor can enlarge the volume without changing the profile. The use of random generators and character concentration is classical, as in the Alon--Roichman method \cite{AR}; we give all estimates needed here.
+
+\begin{corollary}\label{cor:padding}
+There is a sequence of finite simple connected undirected Abelian Cayley graphs $\widehat G_d$, of degree $2D_d$ and order
+\[
+ n_d=|G_d|\,2^{d^2},
+\]
+whose rate-one walks have the profile \eqref{eq:profile} on the time scale $2T_d$, satisfy the product condition and do not exhibit cutoff. Moreover,
+\[
+ \frac{\log(2D_d)}{\log n_d}\sim\frac1d\longrightarrow0,
+ \qquad 1\ll\log(2D_d)\ll\log n_d.
+\]
+In particular the degrees are $n_d^{o(1)}$. The auxiliary generating sets in this statement are obtained by an existence argument, not by a closed-form formula.
+\end{corollary}
+\begin{proof}
+Set $r=d^2$, $k=D_d$ and $\delta=2^{-d/4}$. Draw independent uniform vectors $Z_1,\ldots,Z_k$ from $B_d=(\Z/2\Z)^r$. For each nontrivial character $\chi$ of $B_d$, the variables $\chi(Z_j)$ are independent signs with equal probabilities. Since $\cosh u\le e^{u^2/2}$, the exponential Markov inequality, optimized at $u=\delta$, gives
+\[
+ \Pp\left(\left|k^{-1}\sum_{j=1}^k\chi(Z_j)\right|>\delta\right)
+ \le 2e^{-k\delta^2/2}.
+\]
+For completeness, the moment bound follows from
+$\E e^{u\sum_j\chi(Z_j)}=(\cosh u)^k\le e^{ku^2/2}$; the inequality for $\cosh$ follows by comparing its power series with that of $e^{u^2/2}$, using $(2j)!\ge2^j j!$.
+
+There are $2^r-1$ nontrivial characters. The probability of any zero vector or repeated vector is at most $k(k+1)/2^{r+1}$, by a union bound over the $k$ zero events and the $\binom{k}{2}$ collision events. Thus the probability that any of the required properties fails is at most
+\begin{equation}\label{eq:paddingbad}
+ 2(2^{d^2}-1)\exp\left(-D_d2^{-d/2}/2\right)
+ +\frac{D_d(D_d+1)}{2^{d^2+1}}.
+\end{equation}
+Both terms tend to zero: $D_d\sim d2^d\log d/4$, so the negative exponent in the first term dominates $d^2\log2$, and the logarithm of the second term is $-d^2\log2+O(d)$. Consequently, for all sufficiently large $d$, there is a set $A_d$ of exactly $D_d$ distinct nonzero vectors such that
+\[
+ \left|D_d^{-1}\sum_{a\in A_d}\chi(a)\right|\le\delta
+ \quad\hbox{for every nontrivial character }\chi.
+\]
+The set generates $B_d$: otherwise a nontrivial character annihilating its linear span would have average one. Every element is its own inverse. Hence $\operatorname{Cay}(B_d,A_d)$ is a simple connected undirected graph of degree $D_d$, with all nonconstant transition eigenvalues bounded in absolute value by $\delta$.
+
+Let $a_d(t)$ be its continuous-time total-variation distance. Fourier orthogonality and Cauchy--Schwarz show that after $\ell$ discrete jumps the distance is at most
+\[
+ \tfrac12\sqrt{2^{d^2}-1}\,\delta^\ell.
+\]
+At $\ell=4d$ this is at most $\tfrac12 2^{-d^2/2}$, and the same bound holds at later jump counts by contraction. At continuous time $8d$, the number of jumps $M$ is Poisson with mean $8d$. Chebyshev gives $\Pp(M<4d)\le1/(2d)$, and therefore
+\[
+ a_d(8d)\le\frac1{2d}+\frac12 2^{-d^2/2}\longrightarrow0.
+\]
+As $T_d/d\to\infty$, monotonicity implies $a_d(sT_d)\to0$ for every fixed $s>0$. Its spectral gap $\gamma_{A,d}$ is at least $1-\delta$.
+
+Now take the product group $\widehat G_d=G_d\times B_d$ with generating set
+\[
+ \widehat S_d=(S_d\times\{0\})\cup(\{0\}\times A_d).
+\]
+The two sets are disjoint and each has size $D_d$. The rate-one generator is the sum of the two factor generators, each run at half speed. Thus the two coordinates are independent factor walks, and at time $2t$ projection and the product total-variation inequality give
+\[
+ v_d(t)\le\widehat v_d(2t)\le v_d(t)+a_d(t).
+\]
+It follows that $\widehat v_d(2sT_d)$ has the limit in \eqref{eq:profile}. The tensor-product character basis gives the exact gap
+\[
+ \widehat\gamma_d=\tfrac12\min\{\gamma_d,\gamma_{A,d}\}
+ =\tfrac12\gamma_d
+\]
+for all sufficiently large $d$. The same monotone mixing-time brackets used in Section~6 now prove the product condition and absence of cutoff. Finally,
+$\log n_d=d^2\log2+O(d)$ and $\log(2D_d)=d\log2+O(\log d)$, proving the degree claims.
+\end{proof}
+
+This corollary also lies in the degree-growth regime $1\ll\log|\widehat S_d|\ll\log|\widehat G_d|$ appearing in the introduction of \cite{HOT}. It still concerns specially chosen generating sets and makes no assertion against the theorems about uniformly random generators in that paper. The auxiliary choice may be made deterministic by finite lexicographic selection from sets satisfying the character bound; no efficient selection algorithm is claimed. The formal companion does not encode this corollary.
+

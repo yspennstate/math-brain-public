@@ -1,0 +1,32 @@
+Command:
+python 20261012T022322Z-fleet01-B12-biased-coherent-hierarchy/check_biased_hierarchy.py
+
+Output:
+seed=none; enumeration and controls are deterministic
+biased_identity_cases=205824
+max_split_identity_abs_error=4.9960036108132044e-16
+max_kernel_rewrite_abs_error=3.0531133177191805e-16
+biased_identity_result=PASS
+adaptive_tree_scope=all Boolean truth tables n<=4; maximum over all full nonreusing adaptive query trees
+n=1 functions=4 max_tree_log_over_I=0.0000000000000000 table_bits=0 I=0 tree_log_nats=0.0000000000000000
+n=2 functions=16 max_tree_log_over_I=0.3465735902799726 table_bits=1 I=1 tree_log_nats=0.3465735902799726
+n=3 functions=256 max_tree_log_over_I=0.4620981203732968 table_bits=1 I=3/4 tree_log_nats=0.3465735902799726
+n=4 functions=65536 max_tree_log_over_I=0.5545177444479562 table_bits=23 I=5/4 tree_log_nats=0.6931471805599453
+analytic_bound_2_over_e=0.7357588823428847
+adaptive_tree_result=PASS
+biased_collision_energy=1/4
+collision_control_n=4 mu=1/2 alpha=-1/4 R=-0.055110021850154928 R_over_alpha_log=-0.3180278209060037
+collision_control_n=5 mu=1/2 alpha=-1/8 R=-0.01935463534494461 R_over_alpha_log=-0.2978435885905690
+collision_control_n=6 mu=1/2 alpha=-1/16 R=-0.0062020749355684024 R_over_alpha_log=-0.2863264880885207
+collision_control_n=7 mu=1/2 alpha=-1/32 R=-0.0018895631250312149 R_over_alpha_log=-0.2791488870327486
+collision_control_n=8 mu=1/2 alpha=-1/64 R=-0.00055704046549848868 R_over_alpha_log=-0.2743089551869097
+collision_control_n=9 mu=1/2 alpha=-1/128 R=-0.00016041559985792778 R_over_alpha_log=-0.2708401478465954
+collision_control_n=10 mu=1/2 alpha=-1/256 R=-4.5392337637190777e-05 R_over_alpha_log=-0.2682359824528694
+collision_control_n=11 mu=1/2 alpha=-1/512 R=-1.2670166758887297e-05 R_over_alpha_log=-0.2662099517481200
+collision_control_n=12 mu=1/2 alpha=-1/1024 R=-3.4980605853329738e-06 R_over_alpha_log=-0.2645889992196896
+collision_control_n=13 mu=1/2 alpha=-1/2048 R=-9.5714476463018561e-07 R_over_alpha_log=-0.2632627362858967
+collision_control_n=14 mu=1/2 alpha=-1/4096 R=-2.5994358912595494e-07 R_over_alpha_log=-0.2621575105123143
+collision_control_predicted_limit=-1/4
+collision_controls_result=PASS
+
+Scope limitation: the enumerations are finite controls. The all-dimension identities, adaptive-tree payment, and collision asymptotics are proved analytically in the accompanying TeX files.

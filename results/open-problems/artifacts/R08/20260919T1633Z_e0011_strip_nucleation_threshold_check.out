@@ -1,0 +1,16 @@
+R08 E0011 sharp thin-strip closed-nucleation threshold checker
+scale=1000000000 branch_scale=144
+bad_threshold_1_over_64_scaled=15625000 good_threshold_63_over_64_scaled=984375000
+W=1 poison_by_19_lower=800000000/1000000000 float=0.8
+W=2 poison_by_19_lower=789985922/1000000000 float=0.789985922
+W=3 poison_by_19_lower=381708863/1000000000 float=0.381708863
+W=4 poison_by_19_lower=203955182/1000000000 float=0.203955182
+W=5 poison_by_19_lower=115457177/1000000000 float=0.115457177
+W=6 poison_by_19_lower=65557698/1000000000 float=0.065557698
+W=7 poison_by_19_lower=34290948/1000000000 float=0.034290948
+W=8 poison_by_19_lower=19651084/1000000000 float=0.019651084
+W=9 mixed_by_35_lower=984454108/1000000000 float=0.984454108
+W=8 mixed_by_35_lower_diagnostic=974533587/1000000000 float=0.974533587
+W=10 mixed_by_19_lower=985092878/1000000000 float=0.985092878
+PASS: every 2xw closed strip with w<=8 has >1/64 probability of monochromatic poison by 19 effective adsorptions; 2x9 has >63/64 probability of hitting a stable mixed state by 35 effective adsorptions before poison.
+All updates are downward-rounded to grid 1/1e9, so printed target probabilities are rigorous lower bounds.

@@ -1,0 +1,392 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\E}{\mathbf E}
+\newcommand{\Pp}{\mathbf P}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\cF}{\mathsf F}
+\newcommand{\cT}{\mathsf T}
+\title{A Rooted-Grove Portmanteau Formula for Finite Markov-Chain Occupation Times}
+\author{ProofNet24 P02 closure package for Aldous--Fill Open Problem 2.34}
+\date{17 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Aldous and Fill ask in Open Problem 2.34 whether the occupation-time identities of their Section 2.2.2 admit a single theorem and a Feynman-diagram-like combinatorial rule in the marked stationary/fundamental-matrix variables.  We give such a portmanteau formula for every finite irreducible discrete-time Markov chain, without reversibility.  The intrinsic combinatorial objects are directed spanning forests converging to a prescribed boundary.  A killed Green entry is a rooted-grove partition-function ratio.  Independently, the same ratio equals a bordered determinant in the Aldous--Fill data $(\pi,Z)$ with the denominator
+\[
+\Delta_A=\det\begin{pmatrix}Z_A^T&-\pi_A\\ \one^T&0\end{pmatrix}
+\]
+retained throughout.  An arbitrary stopping-time/boundary-data version contains all eleven identities in Section 2.2.2 as specializations.  The constituent occupation-measure and forest/Green mechanisms have substantial classical prior art; no publication-level novelty claim is made for those ingredients, and the exact-overlap question for the complete package remains a literature-classification issue.
+\end{abstract}
+
+\section{Source scope and notation}
+Let $P=(p_{uv})_{u,v\in V}$ be the transition matrix of a finite irreducible discrete-time Markov chain.  Reversibility is not assumed.  Let $\pi$ be its stationary law, let
+\[
+L=I-P,\qquad \Pi=\one\pi^T,
+\]
+and let $Z$ be the Aldous--Fill fundamental matrix
+\[
+Z=\sum_{t\ge0}(P^t-\Pi),
+\]
+with the Ces\`aro (equivalently continuized) interpretation in the periodic case.  Equivalently,
+\[
+Z=(L+\Pi)^{-1}-\Pi,
+\qquad LZ=ZL=I-\Pi,
+\qquad Z\one=0,
+\qquad \pi^TZ=0.
+\]
+For a stopping time $S$, ``visits before $S$'' includes time $0$ and excludes time $S$, matching the source convention.
+
+For nonempty $A\subset V$, set $U=V\setminus A$ and $T_A=\inf\{t\ge0:X_t\in A\}$.  Write $Z_A$ for the principal submatrix indexed by $A$, and $\pi_A$ for the column vector $(\pi_a)_{a\in A}$.  The denominator frozen in the P02 program is
+\begin{equation}
+M_A=\begin{pmatrix}Z_A^T&-\pi_A\\ \one^T&0\end{pmatrix},
+\qquad
+\Delta_A=\det M_A.
+\tag{1.1}
+\end{equation}
+
+\section{Rooted forests}
+An $A$-rooted converging spanning forest is a spanning directed forest in which every $a\in A$ has outdegree $0$, every $u\notin A$ has outdegree $1$, and following arrows from every nonroot eventually reaches $A$.  Its weight is the product of the transition probabilities on its directed edges.  Let
+\[
+\cF_A=\sum_{F:\,A\text{-rooted}}\prod_{(u\to v)\in F}p_{uv}.
+\]
+Let
+\[
+\cT=\sum_{r\in V}\cF_{\{r\}}
+\]
+be the total weight of all one-root converging spanning trees.  For $i,j\notin A$, let
+\[
+\cF_{A\cup\{j\}}(i\to j)
+\]
+denote the total weight of forests rooted at $A\cup\{j\}$ in which $i$ belongs to the component rooted at $j$.
+
+The directed all-minors matrix-tree theorem gives
+\begin{equation}
+\det L_{UU}=\cF_A,
+\qquad
+C_{ji}(L_{UU})=\cF_{A\cup\{j\}}(i\to j),
+\tag{2.1}
+\end{equation}
+where $C_{ji}$ is the cofactor occurring in the $(i,j)$ entry of $L_{UU}^{-1}$.
+
+\section{The portmanteau theorem}
+For a probability law $\sigma$ on $V$, write
+\[
+z_{\sigma j}=\sum_{v\in V}\sigma_v Z_{vj},
+\qquad
+z_{\sigma,A}=(z_{\sigma a})_{a\in A}.
+\]
+
+\begin{theorem}[rooted-grove occupation portmanteau]
+\label{thm:port}
+Let $P$ be a finite irreducible discrete-time chain and $A\ne\varnothing$.
+
+\emph{(a) First-hit occupation.} For $i,j\in U$,
+\begin{equation}
+\E_i\sum_{t<T_A}\mathbf 1_{\{X_t=j\}}
+=
+\frac{\cF_{A\cup\{j\}}(i\to j)}{\cF_A}.
+\tag{3.1}
+\end{equation}
+Moreover
+\begin{equation}
+\boxed{\Delta_A=\frac{\cF_A}{\cT}>0.}
+\tag{3.2}
+\end{equation}
+Define the frozen bordered numerator
+\begin{equation}
+\mathcal N_{A;i,j}
+=
+\det\begin{pmatrix}
+Z_A^T&-\pi_A&Z_{iA}^T\\
+\one^T&0&1\\
+Z_{Aj}^T&-\pi_j&Z_{ij}
+\end{pmatrix}.
+\tag{3.3}
+\end{equation}
+Then
+\begin{equation}
+\boxed{\mathcal N_{A;i,j}=\frac{\cF_{A\cup\{j\}}(i\to j)}{\cT}},
+\qquad
+\boxed{\E_i\sum_{t<T_A}\mathbf 1_{\{X_t=j\}}=\frac{\mathcal N_{A;i,j}}{\Delta_A}}.
+\tag{3.4}
+\end{equation}
+
+\emph{(b) Arbitrary stopping/boundary data.} Let $T$ be an integrable stopping time, let the initial law be $\sigma$, assume the terminal law $\tau$ is supported on $A$, and define the occupation row vector
+\[
+x_j=\E_\sigma\sum_{t<T}\mathbf 1_{\{X_t=j\}},
+\qquad c=x_A.
+\]
+For $q\in U$ put
+\begin{equation}
+\mu_q=\sigma_q+\sum_{a\in A}c_a p_{aq}.
+\tag{3.5}
+\end{equation}
+Then, for every $j\in U$,
+\begin{equation}
+\boxed{
+x_j=\frac1{\cF_A}\sum_{q\in U}\mu_q\cF_{A\cup\{j\}}(q\to j).
+}
+\tag{3.6}
+\end{equation}
+Equivalently, if
+\begin{equation}
+\mathcal N_{\sigma,c;A,j}
+=
+\det\begin{pmatrix}
+Z_A^T&-\pi_A&z_{\sigma,A}^T-c^T\\
+\one^T&0&1\\
+Z_{Aj}^T&-\pi_j&z_{\sigma j}
+\end{pmatrix},
+\tag{3.7}
+\end{equation}
+then
+\begin{equation}
+\boxed{x_j=\frac{\mathcal N_{\sigma,c;A,j}}{\Delta_A}},
+\qquad
+\boxed{\mathcal N_{\sigma,c;A,j}
+=\frac1{\cT}\sum_{q\in U}\mu_q\cF_{A\cup\{j\}}(q\to j)}.
+\tag{3.8}
+\end{equation}
+The boundary coordinates are, by definition, $x_a=c_a$.
+\end{theorem}
+
+\begin{proof}
+Because the chain is finite and irreducible and $A$ is nonempty, the killed matrix $P_{UU}$ has spectral radius less than one.  Hence its Green matrix is
+\[
+G_A=(I-P_{UU})^{-1}=L_{UU}^{-1},
+\]
+and $(G_A)_{ij}$ is the expected number of visits to $j$ before $T_A$ when started from $i$.  Cramer's rule and (2.1) give
+\[
+(G_A)_{ij}
+=\frac{C_{ji}(L_{UU})}{\det L_{UU}}
+=\frac{\cF_{A\cup\{j\}}(i\to j)}{\cF_A},
+\]
+which proves (3.1).
+
+We next identify the frozen denominator.  For $t\ne0$ put
+\[
+L_t=L+t\Pi.
+\]
+The identities for $Z$ imply
+\begin{equation}
+L_t^{-1}=Z+t^{-1}\Pi.
+\tag{3.9}
+\end{equation}
+The Markov-chain tree theorem gives $\pi_r=\cF_{\{r\}}/\cT$, and consequently $\operatorname{adj}(L)=\cT\,\one\pi^T$.  The rank-one determinant formula therefore yields
+\begin{equation}
+\det L_t=t\cT.
+\tag{3.10}
+\end{equation}
+Jacobi's complementary-minor identity applied to the invertible matrix $L_t$ gives
+\begin{equation}
+\det\bigl((L_t^{-1})_{AA}\bigr)
+=
+\frac{\det((L_t)_{UU})}{\det L_t}.
+\tag{3.11}
+\end{equation}
+By (3.9), the left side equals
+\[
+\det\bigl(Z_A+t^{-1}\one_A\pi_A^T\bigr).
+\]
+The rank-one determinant identity and the transpose of (1.1) show that this is
+\begin{equation}
+\det Z_A+t^{-1}\Delta_A.
+\tag{3.12}
+\end{equation}
+On the right of (3.11), (3.10) gives
+\begin{equation}
+\frac{\det(L_{UU}+t\one_U\pi_U^T)}{t\cT}.
+\tag{3.13}
+\end{equation}
+Multiplying (3.11) by $t$ and letting $t\to0$ yields
+\[
+\Delta_A=\frac{\det L_{UU}}{\cT}=\frac{\cF_A}{\cT}>0,
+\]
+proving (3.2).
+
+To obtain the marked numerator without defining the combinatorics from a determinant, use the occupation conservation identity.  For the first-hit problem, the terminal law is supported on $A$ and the boundary occupation is zero.  More generally, for part (b), pathwise flow conservation gives
+\begin{equation}
+x(I-P)=\sigma-\tau.
+\tag{3.14}
+\end{equation}
+Restricting the columns of (3.14) to $U$ and using $\tau_U=0$ gives
+\begin{equation}
+x_U(I-P_{UU})=\sigma_U+cP_{AU}=\mu,
+\tag{3.15}
+\end{equation}
+so
+\[
+x_j=\sum_{q\in U}\mu_q(G_A)_{qj}.
+\]
+Substitution of (3.1) proves the rooted-grove formula (3.6).
+
+For the marked $(\pi,Z)$ form, let $s=\sum_v x_v=\E_\sigma T$.  Multiplying (3.14) by $Z$ and using $(I-P)Z=I-\Pi$ gives
+\begin{equation}
+x=\sigma Z-\tau Z+s\pi^T.
+\tag{3.16}
+\end{equation}
+Restricting (3.16) to $A$ and using $\one^T\tau_A=1$ yields the bordered linear system
+\begin{equation}
+M_A\binom{\tau_A}{s}
+=
+\binom{z_{\sigma,A}^T-c^T}{1}.
+\tag{3.17}
+\end{equation}
+Since (3.2) gives $\det M_A>0$, this system has a unique solution.  For $j\in U$, (3.16) says
+\[
+x_j=z_{\sigma j}-Z_{Aj}^T\tau_A+\pi_js.
+\]
+Taking the Schur complement of $M_A$ in the determinant (3.7) gives exactly
+\[
+\mathcal N_{\sigma,c;A,j}=\Delta_A x_j.
+\]
+This proves the first equality in (3.8).  Combining it with (3.2) and (3.6) gives the second.  Taking $\sigma=\delta_i$ and $c=0$ gives (3.3)--(3.4).  Thus the forest object is defined independently in the transition graph, and the bordered determinant is a second evaluation of the same partition-function ratio.
+\end{proof}
+
+\section{The source prototype}
+For four distinct marked states $i,j,k,l$, take $A=\{k,l\}$.  The theorem gives the completely intrinsic rule
+\begin{equation}
+\boxed{
+\E_i\bigl(\#\text{ visits to }j\text{ before }\min(T_k,T_l)\bigr)
+=
+\frac{\cF_{\{k,l,j\}}(i\to j)}{\cF_{\{k,l\}}}.
+}
+\tag{4.1}
+\end{equation}
+The combinatorial structure is: $k,l,j$ are roots, $i$ is constrained to the component rooted at $j$, and every unmarked state is summed over as an internal forest vertex.  By (3.2)--(3.4), (4.1) is also the ratio of the frozen marked $(\pi,Z)$ numerator and denominator.  This is the requested ``count the same quantity twice'' mechanism rather than a definition obtained by expanding a determinant after the fact.
+
+\section{All eleven Section 2.2.2 identities}
+We now account for the source list explicitly.  The basic singleton hitting specialization of (3.16) is worth recording.  If $i\ne l$, start from $i$, stop at $T_l$, and put $A=\{l\}$, $c_l=0$.  Then for every $j\ne l$,
+\begin{equation}
+\E_i\sum_{t<T_l}\mathbf1_{\{X_t=j\}}
+=Z_{ij}-Z_{lj}+\pi_j\E_iT_l.
+\tag{5.1}
+\end{equation}
+Also the boundary equation at $l$ is
+\begin{equation}
+0=Z_{il}-Z_{ll}+\pi_l\E_iT_l.
+\tag{5.2}
+\end{equation}
+
+\begin{enumerate}
+\item \textbf{Lemma 2.5.}  Start at $i$ and stop at the strict return $T_i^+$.  Here $A=\{i\}$, $\tau_i=1$, and the boundary occupation is $c_i=1$ because time zero is counted.  Equation (3.16) becomes $x=\pi^Ts$, since the two $Z$ terms cancel.  As $x_i=1$, $s=\E_iT_i^+=1/\pi_i$.
+
+\item \textbf{Lemma 2.6.}  In the same strict-return specialization, $x_j=\pi_j s=\pi_j/\pi_i$.
+
+\item \textbf{Lemma 2.7.}  For $j\ne i$, use (5.1) with start $j$, boundary $i$, and target coordinate $j$:
+\[
+\E_j\sum_{t<T_i}\mathbf1_{\{X_t=j\}}
+=Z_{jj}-Z_{ij}+\pi_j\E_jT_i.
+\]
+By (5.2) with start $i$ and boundary $j$, $Z_{jj}-Z_{ij}=\pi_j\E_iT_j$.  Hence the displayed expectation is $\pi_j(\E_jT_i+\E_iT_j)$.
+
+\item \textbf{Corollary 2.8.}  Starting from $i$, the number of visits to $i$ before $T_j$ is geometric with success probability $\Pp_i(T_j<T_i^+)$.  Its mean, by the preceding item with $i,j$ interchanged, is $\pi_i(\E_iT_j+\E_jT_i)$.  Taking the reciprocal gives the source formula.
+
+\item \textbf{Lemma 2.9.}  Formula (5.1) and (5.2) give
+\[
+Z_{ij}=Z_{jj}-\pi_j\E_iT_j,
+\qquad
+Z_{lj}=Z_{jj}-\pi_j\E_lT_j.
+\]
+Substitution into (5.1) yields
+\[
+\E_i\sum_{t<T_l}\mathbf1_{\{X_t=j\}}
+=\pi_j(\E_iT_l+\E_lT_j-\E_iT_j),
+\]
+including the source's endpoint conventions.
+
+\item \textbf{Corollary 2.10.}  For $i\ne l$ and $j\ne l$, the strong Markov property gives
+\[
+\E_i\sum_{t<T_l}\mathbf1_{\{X_t=j\}}
+=\Pp_i(T_j<T_l)\,
+\E_j\sum_{t<T_l}\mathbf1_{\{X_t=j\}}.
+\]
+Apply Lemma 2.9 to the two expectations and divide to obtain exactly
+\[
+\Pp_i(T_j<T_l)
+=\frac{\E_iT_l+\E_lT_j-\E_iT_j}{\E_jT_l+\E_lT_j}.
+\]
+
+\item \textbf{Lemma 2.11.}  Start with $\sigma=\pi$ and stop at $T_i$.  The boundary occupation is $c_i=0$.  Since $\pi^TZ=0$, the $i$-coordinate of (3.16) gives
+\[
+0=-Z_{ii}+\pi_i\E_\pi T_i,
+\]
+so $\pi_i\E_\pi T_i=Z_{ii}$.
+
+\item \textbf{Lemma 2.12.}  Equation (5.2), with boundary $j$, is precisely
+\[
+\pi_j\E_iT_j=Z_{jj}-Z_{ij}.
+\]
+
+\item \textbf{Corollary 2.13.}  Sum Lemma 2.12 over $j$ and use $\sum_j Z_{ij}=0$:
+\[
+\sum_j\pi_j\E_iT_j=\sum_j Z_{jj}.
+\]
+
+\item \textbf{Corollary 2.14 (random target lemma).}  The right side in Corollary 2.13 is independent of $i$.
+
+\item \textbf{Lemma 2.15.}  Again start from $\pi$ and stop at $T_i$.  For $j\ne i$, (3.16) and $\pi^TZ=0$ give
+\[
+\E_\pi\sum_{t<T_i}\mathbf1_{\{X_t=j\}}
+=-Z_{ij}+\pi_j\E_\pi T_i
+=\frac{\pi_j}{\pi_i}Z_{ii}-Z_{ij},
+\]
+where Lemma 2.11 was used in the last step.  The $j=i$ case is $0=0$ under the source convention.
+\end{enumerate}
+Thus one boundary-data theorem with the one frozen denominator $\Delta_A$ contains all eleven source identities.
+
+\section{Prior art and classification}
+The mathematical mechanisms used above are not presented as new in isolation.  Pitman's 1977 work on occupation measures gives a basic identity unifying many Markov-chain moment formulas.  Elementary finite-state matrix treatments predate the Aldous--Fill open problem.  The directed matrix-tree and all-minors machinery is classical.  Chebotarev and Agaev (2002) develop forest representations of Laplacian generalized inverses and eigenprojections.  Pitman and Tang (2018) give tree/forest formulas for finite-chain Green functions, hitting probabilities, mean first-passage times and Kemeny's constant.  Chung and Zeng (2023) give forest formulas for discrete Green functions on directed and weighted graphs.
+
+Accordingly, the claims here are deliberately narrow.  The source-level answer is the single boundary-data compiler together with the exact bridge
+\[
+\text{rooted-grove partition function}
+\longleftrightarrow
+\text{frozen marked }(\pi,Z)\text{ bordered determinant},
+\]
+and the explicit accounting of the eleven Section 2.2.2 identities.  A bounded search through the sources above and direct searches for Open Problem 2.34 did not locate this exact complete package.  Failure to locate it is not a novelty certificate.  Publication-level novelty therefore remains unverified.
+
+\section{Audit and certificate record}
+The canonical theorem claim is `P02-OCC-C5-ROOTED-GROVE-PORTMANTEAU`, in the P02 report created at commit
+\[
+\texttt{8d40b5b3f5370e8209f63015a19b8a957be10e57}.
+\]
+Two independent end-to-end audits by other tracks are recorded as
+\begin{itemize}
+\item `P26-AUDIT-P02-I0023-C5-ROOTED-GROVE-04`, creation commit `12bb57d37208bfc01baf494e46f6a87a4f1c90e4`;
+\item `P01-AUDIT-P02-I0023-C5-ROOTED-GROVE-74`, creation commit `77d2229b99e1eee42e0349facfbab14205514fac`.
+\end{itemize}
+P26 reconciles them under `P26-RECONCILE-P02-I0023-C5-TWO-AUDITS-07` as two distinct mathematical/source audits.  The accompanying `check.py` and `check.out` provide the archived exact-rational finite certificate for the forest/determinant bridge; the certificate includes reversible, periodic nonreversible and nonreversible chains.
+
+\begin{thebibliography}{9}
+\bibitem{AF}
+D. Aldous and J. A. Fill,
+\emph{Reversible Markov Chains and Random Walks on Graphs}, unfinished manuscript (2002), 2014 recompilation, Chapter 2, Open Problem 2.34.
+
+\bibitem{Pitman1977}
+J. W. Pitman,
+Occupation measures for Markov chains,
+\emph{Advances in Applied Probability} 9 (1977), 69--86.
+
+\bibitem{CA2002}
+P. Chebotarev and R. Agaev,
+Forest matrices around the Laplacian matrix,
+\emph{Linear Algebra and its Applications} 356 (2002), 253--274.
+
+\bibitem{PT2018}
+J. Pitman and W. Tang,
+Tree formulas, mean first passage times and Kemeny's constant of a Markov chain,
+\emph{Bernoulli} 24 (2018), 1942--1972.
+
+\bibitem{CZ2023}
+F. Chung and J. Zeng,
+Forest formulas of discrete Green's functions,
+\emph{Journal of Graph Theory} 102 (2023), 556--577.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,77 @@
+--- a/.claude/dreaming/p0110_math_route.py
++++ b/.claude/dreaming/p0110_math_route.py
+@@ -0,0 +1,74 @@
++"""Opt-in P0110 route to three exact math cards; never changes recall defaults."""
++from __future__ import annotations
++
++import argparse
++import json
++import re
++import sqlite3
++import time
++from pathlib import Path
++
++TARGET = 'claim_081071dcf812e1c0843a53fe1da486f97876afe30678a091de36c26017e679f0'
++PRIOR = 'claim_a60b9dcbea1c3b4133831211a8107b42fbce24f2c59d8b4b21ede96b3cab07f1'
++CONDITIONAL = 'claim_e090760039c41cb781c56fbb85679625a58a678ff42cfb3ec11a01d8887de6c5'
++ROLES = [(TARGET, 'target concept'), (PRIOR, 'prior attempt, independently unchecked'),
++         (CONDITIONAL, 'conditional result, full hypotheses required')]
++DEFAULT_DATABASE = Path(r'~\math-brain-build\local\population\brain.sqlite3')
++
++def recognizes(query: str) -> bool:
++    return bool(re.search(r'\bP0110\b', query, re.IGNORECASE))
++
++def route(query: str, database: Path = DEFAULT_DATABASE) -> dict:
++    if not recognizes(query):
++        return {'supported': False, 'reason': 'This pilot only recognizes the verified target identifier P0110.', 'cards': []}
++    path=database.resolve(strict=True)
++    with sqlite3.connect(path.as_uri()+'?mode=ro', uri=True, timeout=5) as conn:
++        conn.execute('PRAGMA query_only=ON')
++        conn.execute('PRAGMA busy_timeout=5000')
++        cards=[]
++        for ident,role in ROLES:
++            row=conn.execute('SELECT n.id,n.kind,n.title,n.body,n.metadata_json,c.payload_json FROM nodes n JOIN claims c ON c.id=n.id WHERE n.id=?',(ident,)).fetchone()
++            if row is None:
++                raise ValueError('A pinned P0110 card is absent; refresh the pilot after reviewing the current revision.')
++            node_id,kind,title,body,metadata,payload=row
++            meta=json.loads(metadata)
++            claim=json.loads(payload)
++            # A content-addressed old revision must not silently appear as current.
++            logical=meta.get('logical_id')
++            if logical:
++                superseding=conn.execute("SELECT id FROM nodes WHERE json_extract(metadata_json,'$.logical_id')=? AND id<>? AND EXISTS(SELECT 1 FROM json_each(nodes.metadata_json,'$.supersedes') WHERE value=?) LIMIT 1",(logical,node_id,node_id)).fetchone()
++                if superseding:
++                    raise ValueError('A pinned P0110 card is superseded; refresh after inspecting the new revision.')
++            if claim.get('status')=='retracted' or meta.get('truth_status')=='retracted':
++                raise ValueError('A pinned P0110 card is retracted.')
++            cards.append({'role':role,'id':node_id,'node_kind':kind,'title':title,'body':body,'metadata':meta,'claim':claim})
++    return {'supported':True,'query':query,'read_only':True,'current_openness':'UNKNOWN',
++            'proof_status':'P0110 unresolved by this route; a target or prior attempt is not a proved result.',
++            'scope_note':'Read all assumptions. The conditional theorem requires exponent matching. The curvature flag in the existing card is separately pending primary-source clarification.',
++            'cards':cards}
++
++def main() -> int:
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('query')
++    parser.add_argument('--database',type=Path,default=DEFAULT_DATABASE)
++    parser.add_argument('--output',type=Path)
++    args=parser.parse_args()
++    started=time.perf_counter()
++    try:
++        result=route(args.query,args.database)
++    except (OSError,ValueError,sqlite3.Error) as exc:
++        print(json.dumps({'supported':False,'error':str(exc),'cards':[]}))
++        return 2
++    result['elapsed_seconds']=time.perf_counter()-started
++    if args.output:
++        # Local output is optional; the adapter otherwise only reads.
++        args.output.write_text(json.dumps(result,indent=2,ensure_ascii=False),encoding='utf-8')
++        print(json.dumps({k:v for k,v in result.items() if k!='cards'},ensure_ascii=False))
++        print(json.dumps([{'id':c['id'],'role':c['role'],'kind':c['claim']['kind'],'status':c['claim']['status']} for c in result['cards']],ensure_ascii=False))
++    else:
++        # The default CLI response must carry the full hypotheses, not just IDs.
++        print(json.dumps(result,ensure_ascii=False,indent=2))
++    return 0
++
++if __name__=='__main__':
++    raise SystemExit(main())

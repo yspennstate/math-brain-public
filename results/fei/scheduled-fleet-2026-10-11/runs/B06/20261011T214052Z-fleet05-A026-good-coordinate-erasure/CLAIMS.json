@@ -1,0 +1,60 @@
+[
+  {
+    "claim_id": "A026-AFFINE4-GOOD-COORDINATE",
+    "version": 1,
+    "exact_statement": "Every nonconstant uniform-cube Boolean sign function with nonzero Fourier support of affine F2 dimension at most four, and every disjoint product of such factors, has a relevant physical coordinate i with B_i <= (7/2) I_i. This class is closed under physical restrictions and satisfies H <= (7/2+2/ln 2) I.",
+    "hypotheses": [
+      "Uniform finite cube; Boolean sign outputs; bit entropy; factors use disjoint physical variable sets; each factor support has affine F2 dimension <=4."
+    ],
+    "statement_sha256": "441e9a88fb64a474673b512cb01b9bf06a6b5535fcc47be8bc610f471889e6f7",
+    "contributors": [
+      "A026"
+    ],
+    "proof_source": "GOOD_COORDINATE_TARGET.tex; code/edge_pilot.py; code/independent_check.py; out/edge_pilot.json; out/independent_check.json",
+    "proof_dependencies": [
+      "Recovered exact physical decrement and influence identities: ERASURE_REDUCTION.md sections 1-4; reconstructed in GOOD_COORDINATE_TARGET.tex."
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A003",
+      "A087",
+      "A094",
+      "A027",
+      "A061",
+      "A096"
+    ]
+  },
+  {
+    "claim_id": "A026-AMPLITUDE-K4-THRESHOLD-NOGO",
+    "version": 1,
+    "exact_statement": "For f=+1 exactly at Hamming weights >=24 on 32 uniform sign bits, every coordinate has edge amplitude proxy A_i=2 sum_T |fhat(T) fhat(T+i)| with A_i/I_i=2220940451/536870912>4. Thus existential proxy selection with K=4 is false. No true-erasure violation or unbounded-ratio family is claimed.",
+    "hypotheses": [
+      "Uniform 32-bit cube; coordinate signs identified with 0/1 bits; threshold is Hamming weight >=24; proxy A_i is not child Hellinger affinity."
+    ],
+    "statement_sha256": "99a547e3430467b97c2092643f49eb7365f5dc560518386b87b9f3d2e38f5d7d",
+    "contributors": [
+      "A026"
+    ],
+    "proof_source": "code/symmetric_pilot.py; code/independent_check.py; out/symmetric_pilot.json; out/independent_check.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Existential edge-amplitude proxy A_i<=4 I_i for every Boolean function."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A003",
+      "A087",
+      "A094",
+      "A046",
+      "A075",
+      "A096"
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "claim_id": "A077-RARE-EVENT-SHARED-CONTINUITY",
+    "version": 1,
+    "exact_statement": "Unconditional rare-event transfer: for any Boolean carrier h on d shared uniform inputs, any event A of mass0<p<=1, and arbitrary Boolean profile V on independent private uniform inputs, the Boolean function F=V on A and h outside obeys H(F)<=pH(V)+H(h)+1+3d sqrt(p)+p[d+log2(1/p)]. The complete nonempty-private Fourier sector factors, and the empty-private sector is normalized by adding missing mass1-M before entropy continuity. For the positive nonsubcube A={c=b+3 address zeros, free Maj_b positive}, b>=3 odd, in carrier Maj_(2b+3), the indicator Fourier l1 grows at least2^((b-3)/2)/b, but H(F)<=pH(V)+H(h)+33/8 and actual shared influence is at least I(h), with private influence exactly pI(V). Conditional on supplied threshold Theorem A, H(F)<=pH(V)+11I_shared(F). Thus all finite fresh-shared towers over constants/characters satisfy H<=11I uniformly in rarity, depth and unbounded indicator Fourier norm; certified base constant C0 transfers at max(C0,11). Full FEI and general influence payment for the explicit continuity term remain open.",
+    "hypotheses": [
+      "Uniform independent physical shared/private cubes; bits; arbitrary biased private profile",
+      "Unconditional transfer allows any Boolean carrier and any event; p0 handled as F=h",
+      "Tower corollary b>=3 odd,c=b+3,d=2b+3, positive majority-cut event, each wrapper fresh shared block; finite acyclic construction",
+      "Numeric11 tower bound assumes supplied threshold_paper_38pp.txt Theorem A equation6; its proof not independently rechecked"
+    ],
+    "statement_sha256": "7d16c8adb3a5b199502c5d7f240c4a77e367b5d7bb94ede8ab2c7974cd3dc467",
+    "contributors": [
+      "A077"
+    ],
+    "proof_source": {
+      "proof": "PROOF.md",
+      "locators": "sections1-4 equations1-7 and6a",
+      "certificates": [
+        "out/VALIDATION.json",
+        "out/PILOT.json",
+        "out/FROZEN_SPEC.json"
+      ]
+    },
+    "proof_dependencies": [
+      "Parseval, entropy maximal-coupling inequality, exact private-frequency product sector, binomial majority coefficients and direct physical edge counting",
+      "Conditional tower corollary only: supplied threshold Theorem A equation6 H(h)<9I(h)",
+      "Prior A077 positive-face family motivates gap; no old Q/K or prefix theorem is imported or reset"
+    ],
+    "review_records": [
+      {
+        "status": "PENDING_INDEPENDENT_REVIEW",
+        "reviewers": [
+          "A076",
+          "A078",
+          "A092",
+          "A094"
+        ],
+        "note": "Exact code and analytic reconstruction are same-author, not peer review."
+      }
+    ],
+    "status": "AUTHOR_PROVED_UNCONDITIONAL_TRANSFER_CONDITIONAL_TOWER_COROLLARY_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "The proposed global12||indicator_hat||_1 allowance is not universally bounded by actual shared influence; this does not refute actual entropy payment or FEI."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A076",
+      "A078",
+      "A028",
+      "A092",
+      "A094",
+      "B16",
+      "B20"
+    ]
+  }
+]

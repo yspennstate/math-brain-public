@@ -1,0 +1,14 @@
+{
+ "helper_version":"A051-labelled-block-replay-v1",
+ "family":"Hod Section 1.2 six/eight-variable g3,g3-prime,g4,g4-prime; NAND(g3, literal), NAND(g3,PD2), NAND(g3,PD3); independently replay the maximum-phi and maximum-H/I NAND census cases in each dimension6..9",
+ "domain":"Seven explicitly defined truth tables of dimension6..9 plus at most eight census extrema of those same dimensions",
+ "case_count":{"seeded":7,"replay_at_most":8},
+ "labelled_seed_block_count":1522,
+ "symmetry":"None in this checker; all labelled proper blocks independently projected from truth tables",
+ "arithmetic":"Independent direct Walsh root verification versus FWHT; Fraction influence and prime-log entropy vectors; exact certificate match to orbit representatives; same analytic rational-log enclosure shared with census",
+ "memory_estimate_bytes":80000000,
+ "maximum_runtime_seconds":300,
+ "pilot_result":"Two six-bit named seeds, 124 labelled blocks, 320 assertions in0.034 seconds",
+ "automatic_dimension_escalation":false,
+ "limitations":"Does not enumerate dimension36 recursive compositions; does not treat formula trees as arbitrary Boolean functions; replay is independent transform/physical-child representation, not an independent log implementation"
+}

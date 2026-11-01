@@ -1,0 +1,6 @@
+eps=1e-02: Bd/J   4.17  LHS/J  3.15  T1   1.29 T2   2.89 T3  -0.01
+eps=1e-04: Bd/J   5.09  LHS/J  3.11  T1   1.27 T2   4.78 T3  -0.96
+eps=1e-06: Bd/J   6.04  LHS/J  3.11  T1   1.27 T2   6.68 T3  -1.91
+eps=1e-09: Bd/J   7.46  LHS/J  3.11  T1   1.27 T2   9.53 T3  -3.33
+eps=1e-12: Bd/J   8.89  LHS/J  3.11  T1   1.27 T2  12.37 T3  -4.75
+    print(f"eps={eps:.0e}: Bd/J {r['ratio']:6.2f}  LHS/J {r['lhs']:5.2f}  T1 {r['T1']:6.2f} T2 {r['T2']:6.2f} T3 {r['T3']:6.2f}")

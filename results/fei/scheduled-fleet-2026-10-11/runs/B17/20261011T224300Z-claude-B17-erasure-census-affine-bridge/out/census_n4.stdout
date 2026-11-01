@@ -1,0 +1,267 @@
+{
+ "domain": "all 65536 truth tables on 4 uniform bits (no symmetry reduction); the 2 constants excluded",
+ "nonconstant": 65534,
+ "float_sanity_checks": {
+  "min_JS_over_all (>= 0 expected)": 0.0,
+  "max_JS_minus_2ln2_min(I,1-I) (<= 0 expected)": 0.0,
+  "max_sumB_minus_H (<= 0 expected)": 0.0,
+  "max |B_i| on irrelevant i (0 expected)": 0.0
+ },
+ "results": {
+  "K_B": {
+   "float_value": 2.672488983973202,
+   "argmax": {
+    "truth_table_int": 3,
+    "points_x_with_f_minus1": [
+     0,
+     1
+    ],
+    "relevant_coords": [
+     1,
+     2,
+     3
+    ],
+    "walsh_W_S_for_S_0_to_15": [
+     12,
+     0,
+     -4,
+     0,
+     -4,
+     0,
+     -4,
+     0,
+     -4,
+     0,
+     -4,
+     0,
+     -4,
+     0,
+     -4,
+     0
+    ]
+   },
+   "coord": 1,
+   "value_as_sum_coeff_times_log2_p": {
+    "2": "4",
+    "3": "-9/2",
+    "5": "5/2"
+   },
+   "certificate_upper_bound_all_functions": {
+    "rows_checked": 65534,
+    "violations": 0,
+    "equality_cases": 64,
+    "rows_needing_exact_fallback": 64,
+    "equality_truth_tables_first12": [
+     3,
+     5,
+     10,
+     12,
+     17,
+     34,
+     48,
+     68,
+     80,
+     136,
+     160,
+     192
+    ]
+   },
+   "attained_exactly(all relevant coords of argmax >= value)": true,
+   "functions_within_1e-12_of_max": 64,
+   "equals_4+(5/2)log2(5)-(9/2)log2(3)_exactly": true,
+   "strictly_below_107/40": true
+  },
+  "K_D": {
+   "float_value": 4.867668746754798,
+   "argmax": {
+    "truth_table_int": 3,
+    "points_x_with_f_minus1": [
+     0,
+     1
+    ],
+    "relevant_coords": [
+     1,
+     2,
+     3
+    ],
+    "walsh_W_S_for_S_0_to_15": [
+     12,
+     0,
+     -4,
+     0,
+     -4,
+     0,
+     -4,
+     0,
+     -4,
+     0,
+     -4,
+     0,
+     -4,
+     0,
+     -4,
+     0
+    ]
+   },
+   "coord": 1,
+   "value_as_sum_coeff_times_log2_p": {
+    "2": "12",
+    "3": "-9/2"
+   },
+   "certificate_upper_bound_all_functions": {
+    "rows_checked": 65534,
+    "violations": 0,
+    "equality_cases": 64,
+    "rows_needing_exact_fallback": 64,
+    "equality_truth_tables_first12": [
+     3,
+     5,
+     10,
+     12,
+     17,
+     34,
+     48,
+     68,
+     80,
+     136,
+     160,
+     192
+    ]
+   },
+   "attained_exactly(all relevant coords of argmax >= value)": true,
+   "functions_within_1e-12_of_max": 64
+  },
+  "C_FEI4=max_H/I": {
+   "float_value": 3.402475551198588,
+   "argmax": {
+    "truth_table_int": 1,
+    "points_x_with_f_minus1": [
+     0
+    ],
+    "relevant_coords": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "walsh_W_S_for_S_0_to_15": [
+     14,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2,
+     -2
+    ]
+   },
+   "value_as_sum_coeff_times_log2_p": {
+    "2": "12",
+    "7": "-49/16"
+   },
+   "certificate_upper_bound_all_functions": {
+    "rows_checked": 65534,
+    "violations": 0,
+    "equality_cases": 32,
+    "rows_needing_exact_fallback": 32,
+    "equality_truth_tables_first12": [
+     1,
+     2,
+     4,
+     8,
+     16,
+     32,
+     64,
+     128,
+     256,
+     512,
+     1024,
+     2048
+    ]
+   },
+   "functions_within_1e-12_of_max": 32
+  },
+  "max_B/I": {
+   "float_value": 2.7041532056294164,
+   "argmax": {
+    "truth_table_int": 7,
+    "points_x_with_f_minus1": [
+     0,
+     1,
+     2
+    ],
+    "relevant_coords": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "walsh_W_S_for_S_0_to_15": [
+     10,
+     -2,
+     -2,
+     2,
+     -6,
+     -2,
+     -2,
+     2,
+     -6,
+     -2,
+     -2,
+     2,
+     -6,
+     -2,
+     -2,
+     2
+    ]
+   },
+   "value_as_sum_coeff_times_log2_p": {
+    "2": "4",
+    "3": "-9/4",
+    "5": "-35/16",
+    "13": "13/16",
+    "17": "17/16"
+   },
+   "certificate_upper_bound_all_functions": {
+    "rows_checked": 65534,
+    "violations": 0,
+    "equality_cases": 192,
+    "rows_needing_exact_fallback": 192,
+    "equality_truth_tables_first12": [
+     7,
+     11,
+     13,
+     14,
+     19,
+     21,
+     35,
+     42,
+     49,
+     50,
+     69,
+     76
+    ]
+   },
+   "functions_within_1e-12_of_max": 192
+  },
+  "distribution_min_B_ratio_float": {
+   "0.5": 60624,
+   "1.0": 18480,
+   "1.5": 2640,
+   "2.0": 1232,
+   "2.5": 96,
+   "2.6": 96
+  },
+  "functions_with_some_relevant_B_i_equal_0": 4430
+ },
+ "exact_fallback_calls": 359,
+ "seconds": 9.06
+}

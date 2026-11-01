@@ -1,0 +1,14 @@
+{
+  "helper_version": "A066-restriction-heat-v1; check_restrictions.py v1",
+  "family": "All Boolean signs in n=1,2,3 with every nonempty physical block; odd majority; addressing padded and flipped at the all-plus point",
+  "parameter_domain": "Exhaustive n=1..3. Majority n=3,5,7,9 and canonical block sizes 1..n. Address truth tables a=1,2, padding r=1..4, padding block size b=1..r. Address histogram-only a=1,2,3, r=1,2,4,8,16,32, b in {1,r} deduplicated.",
+  "case_count": "1844 exhaustive function/block cases; 24 majority block cases; 20 direct addressing block cases; 33 addressing histogram-only cases",
+  "symmetry_reduction": "No reduction in the exhaustive domain. Majority is permutation symmetric, so the first b coordinates represent each block size. Address padding coordinates are permutation symmetric, so the first b padding coordinates represent each padding block size. Histogram-only cases use the proved coefficient multiplicities, never enumerate larger cubes.",
+  "arithmetic": "Integer Walsh transforms and Fraction spectra; exact formal logarithm expressions indexed by rational arguments; rational atanh-series log intervals with 24 terms and an explicit tail, including power-of-two range reduction. No floating signs used as certificates.",
+  "memory_estimate": "Less than 80 MB; largest direct table 1024 entries; histogram cases use O(1) coefficient classes regardless of dimension",
+  "pilot_maximum_runtime_seconds": 60,
+  "full_maximum_runtime_seconds": 60,
+  "pilot_domain": "All function/block cases n=1,2; majority n=3 and all block sizes; direct addressing a=1,r=1,b=1; same log helper",
+  "automatic_dimension_escalation": false,
+  "proof_role": "Finite exact checks verify the restriction identity, zero-context cancellation, paid channel/level terms and family formulas. Universal constants and all-parameter limits are supplied by analytic proofs; R_nat<=A I remains open."
+}

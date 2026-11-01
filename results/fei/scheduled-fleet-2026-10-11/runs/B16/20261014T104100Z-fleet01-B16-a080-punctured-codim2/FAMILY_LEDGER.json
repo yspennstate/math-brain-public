@@ -1,0 +1,40 @@
+{
+  "schema": "fei-parametric-family-ledger/1",
+  "claim": "B16-A080-PUNCTURED-CODIM2-v1",
+  "family": "f_n=-1 iff x1=x2=+1 and x is not the all-plus vertex",
+  "domain": "integers n>=3 on the finite uniform Boolean cube",
+  "parameters": {
+    "epsilon": "2^(1-n)",
+    "q_plus": "(1/2+epsilon)^2",
+    "q_minus": "(1/2-epsilon)^2",
+    "r": "epsilon^2"
+  },
+  "exact": {
+    "I": "1+(n-4)epsilon",
+    "H": "L(q_plus)+3L(q_minus)+(2^n-4)L(r)",
+    "U": "L(q_plus)+L(q_minus)+q_minus log2(1/(1-2epsilon))+n epsilon-(4n-4)epsilon^2",
+    "Q_ge3": "1/4+(n-1)epsilon-(n+binom(n,2))epsilon^2",
+    "G": "n U_n-V_(n-1)-(n-2)(1+U_(n-1))/2 for n>=4"
+  },
+  "limits": {
+    "H_over_I": 2,
+    "U_over_I": 1,
+    "G_over_I": 2,
+    "Q_ge3_over_I": "1/4",
+    "G_minus_4I_minus_3U_over_4": "-11/4"
+  },
+  "structural": {
+    "boolean": true,
+    "fourier_degree": "n",
+    "tensor_prime": true,
+    "dimension_unbounded": true,
+    "finite_core_extrapolation": "a degree>=3 reserve constant greater than 1/4 cannot be uniform"
+  },
+  "scope": {
+    "frozen_pair_falsified": false,
+    "GU_falsified": false,
+    "FEI_falsified": false,
+    "signed_leaf_proved": false,
+    "possible_Q_ge3_ge_I_over_4_disproved": false
+  }
+}

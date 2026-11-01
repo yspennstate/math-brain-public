@@ -1,0 +1,52 @@
+--- Lemma 1: profile factorization + symmetry ---
+OK   factorization ababcdcd at all five x
+OK   factorization ababcdecde at all five x
+OK   factorization abcabcdede at all five x
+OK   symmetry of f_abab: True
+OK   symmetry of f_abcabc: True
+OK   symmetry of f_abacbdcd: True
+
+--- Lemma 2: supermultiplicativity (and its sharpness) ---
+OK   p(ababcdcd) >= p(abab)p(cdcd): True
+OK   p(abcabcdede) >= p(abcabc)p(dede): True
+OK   p(abacbdcdefef) >= p(abacbdcd)p(efef): True
+OK   interleaving counterexample p(abcdabcd) < p(abab)p(cdcd): True
+
+--- Lemma 3: cube-cycle profile and 2/(r+1) ---
+OK   p(w_2) = 2/(r+1): 2/3
+OK   p(w_3) = 2/(r+1): 1/2
+OK   p(w_4) = 2/(r+1): 2/5
+OK   p(w_5) = 2/(r+1): 1/3
+
+--- Lemma 4: profile calculus ---
+OK   ear neutrality at every gap of abcabc
+OK   flattening f_zababz == p(abab) = 2/3: True
+OK   flattening f_zabcabcz == p(abcabc) = 1/2: True
+OK   cube cycle r=4: insertion is gap independent: 1
+OK   cube cycle r=4: value 19/70: 19/70
+OK   path of squares: insertion is gap DEPENDENT: True
+
+--- Lemma 5: kappa supermultiplicativity ---
+OK   kappa_4 >= kappa_2 kappa_2: True
+OK   kappa_5 >= kappa_2 kappa_3: True
+OK   kappa_6 >= kappa_2 kappa_4: True
+OK   kappa_5 >= kappa_3 kappa_2: True
+OK   kappa_6 >= kappa_3 kappa_3: True
+OK   kappa_7 >= kappa_3 kappa_4: True
+OK   kappa_6 >= kappa_4 kappa_2: True
+OK   kappa_7 >= kappa_4 kappa_3: True
+OK   kappa_8 >= kappa_4 kappa_4: True
+
+--- Proposition (cluster equation) at x=1/2, order 4 ---
+OK   cluster J_k at x=1/2: [Fraction(0, 1), Fraction(3, 4), Fraction(55, 12), Fraction(6139, 192)]
+
+--- Proposition (Hankel non-unimodality certificate) ---
+OK   u vector: [Fraction(1, 1), Fraction(3, 1), Fraction(10, 1), Fraction(77, 2), Fraction(843, 5)]
+OK   D_2 = -73/20: -73/20
+OK   D_2 < 0 (proves non-unimodality): True
+OK   semicircle control D_2 > 0: True
+
+--- Proposition (profile-level Hankel = Toeplitz) ---
+OK   H=T profile for abcdbadc
+
+ALL NEW-RESULT CLAIMS INDEPENDENTLY VERIFIED

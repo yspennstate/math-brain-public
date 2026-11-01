@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T113556Z-fleet01-B20-QFORM-auto11-r58",
+  "target": "fixed-multiplicity density theorem audit and threshold reduction",
+  "full_three_eigenvalue_target_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-FIXED-MULTIPLICITY-25EIG-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "For independent real coordinates with densities bounded by one, arbitrary affine terms, and real symmetric A satisfying |lambda|_(25)(A)>=s>0, the quadratic form has an essentially bounded density with ||p||_infty <= C/s; the manuscript constant C=45*10^15 remains admissible.",
+      "proof_location": "REPORT.md Sections 2-4"
+    },
+    {
+      "id": "QFORM-NOPIVOT-V5-25EIG-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "With c*=10^-15 and kappa=960^-2, if A has no c*-pivot and N_A(1)>=25, then V5(A)>=kappa^5.",
+      "proof_location": "REPORT.md Section 3"
+    },
+    {
+      "id": "QFORM-SKELETON-SECOND-V5-RANK-qPLUS8-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "In the hypothetical no-pivot, V5<kappa^5 robust-completion branch, after thresholding D at 1/2 and Schur-complementing the diagonally dominant cancellation core H, B=A-E is within operator distance <0.517713 of a matrix of rank at most q+8, where q=rank R<=16.",
+      "proof_location": "REPORT.md equations (5)-(16)"
+    },
+    {
+      "id": "QFORM-FIXED-MULTIPLICITY-PIVOT-WORDING-AUDIT-v1",
+      "status": "AUDIT_REPAIR",
+      "statement": "The fixed-multiplicity manuscript should explicitly cite the ambient indefinite-pair theorem's dependence on s3(A); an isolated indefinite two-variable determinant bound is not a bounded-density theorem. The normalized 25-eigenvalue hypothesis supplies s3(A)>=1, so this is a wording/citation repair, not a failure of the theorem.",
+      "proof_location": "REPORT.md Sections 4-5"
+    }
+  ],
+  "constants": {
+    "c_star": 1e-15,
+    "kappa": 1.0850694444444444e-6,
+    "epsilon": 0.015625,
+    "d": 0.5,
+    "b": 0.01562504472135955,
+    "g_min": 0.26562432917960577,
+    "cross_tail_t": 0.016666666666666666,
+    "rank_approx_error": 0.5177124209416448,
+    "spectral_lower_after_E": 0.984375,
+    "new_threshold": 25,
+    "old_threshold": 33
+  },
+  "continuity": {
+    "height_proof_uses_continuity": false,
+    "no_pivot_five_volume_branch": "C0",
+    "global_tracking": "separate"
+  },
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "model_self_report": "GPT-5.6 Sol",
+  "configured_reasoning_effort": "UNKNOWN",
+  "provider_reasoning_usage": null
+}

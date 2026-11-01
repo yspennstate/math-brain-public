@@ -1,0 +1,77 @@
+[
+  {
+    "clause": "DECAY-DEFS-THEOREM",
+    "lines": "243-258",
+    "status": "PASS",
+    "detail": "Crossing-volume definitions and Theorem 4.1 are dimensionally consistent; arbitrary same-side blocks and affine terms retained."
+  },
+  {
+    "clause": "ENTROPY",
+    "lines": "260-269",
+    "status": "PASS",
+    "detail": "Positive support handles logs; Jensen plus multinomial expansion gives omega(m)."
+  },
+  {
+    "clause": "HUB-GEOMETRY",
+    "lines": "271-300",
+    "status": "PASS",
+    "detail": "Theta_l(H)>0 gives independent hub rows; residual geometry correct; D=X_J-X'_J has independent capped original-coordinate differences."
+  },
+  {
+    "clause": "HUB-STEP1",
+    "lines": "301-310",
+    "status": "PASS",
+    "detail": "Cauchy-Schwarz removes same-side X_I phase; Fubini and original-coordinate independence yield characteristic-function product."
+  },
+  {
+    "clause": "HUB-TV-L2-MEAS",
+    "lines": "311-322",
+    "status": "PASS",
+    "detail": "Finite-partition total-variation domination is explicit; nu_x has |nu_x|<=p_Y and x->||nu_x||_2^2 is measurable via fixed mollifiers before expectation/terminal branch.",
+    "repair": "historical total-variation and B14 measurability findings repaired"
+  },
+  {
+    "clause": "HUB-JENSEN",
+    "lines": "323-327",
+    "status": "PASS",
+    "detail": "F_t measurability is explicit and |E F_t|^2<=E|F_t|^2 is written before the Plancherel step.",
+    "repair": "historical C02 repaired"
+  },
+  {
+    "clause": "HUB-TERMINAL-MOLLIFIER",
+    "lines": "328-341",
+    "status": "PASS",
+    "detail": "ell'=0 branch uses already-measurable L2 norm; later mollification uses same density and DCT/Fubini legitimately."
+  },
+  {
+    "clause": "HUB-HOLDER",
+    "lines": "343-350",
+    "status": "PASS",
+    "detail": "Weighted Holder exponents sum correctly; zero marginals omitted harmlessly."
+  },
+  {
+    "clause": "HUB-ONESET",
+    "lines": "352-361",
+    "status": "PASS",
+    "detail": "Orthogonal row groups give determinant factorization; projection and Fourier-power scaling constants correct."
+  },
+  {
+    "clause": "HUB-ENTROPY-CLOSE",
+    "lines": "363-378",
+    "status": "PASS",
+    "detail": "theta=Z_H w and marginal entropy close the hub estimate exactly."
+  },
+  {
+    "clause": "DECAY-PROMOTION",
+    "lines": "380-386",
+    "status": "PASS",
+    "detail": "Heavy-row promotion retains >1/2 volume and coefficient ratio decreases to the stated Theorem 4.1 constant."
+  },
+  {
+    "clause": "DECAY-COROLLARY",
+    "lines": "388-399",
+    "status": "PASS",
+    "detail": "C3/C2/order-one receivers correct; exact power comparisons now certify C3<15 and C2<12.2.",
+    "repair": "historical numerical-certificate repair"
+  }
+]

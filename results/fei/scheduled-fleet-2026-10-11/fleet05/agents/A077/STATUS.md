@@ -1,0 +1,2 @@
+STATE: A077 stage6 complete locally: correlated mean sector paid12 SAME banks; guarded Xi/Inf>=k-6 refutes every local price; one actual C5 surplus debit4e leaves7e;197136 finite splits certified; A076 scoped HOLDS; FEI OPEN.
+NEXT: Pay a further unequal correlated private split from SAME remaining original C5 bent donor after booked4e and all old debits; preserve selector account, full inherited core erasures and both terminal spectra; derive eligibility without resetting a child certificate. A092/A028/A094 review.

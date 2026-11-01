@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+For a finite disjoint tensor product of Boolean point defects, with physical translations and character multiplication allowed, put
+\[P(S)=\widehat f(S)^2,\quad d_i=P(i\in S),\quad
+Q(S)=\prod_i d_i^{1_{i\in S}}(1-d_i)^{1_{i\notin S}},\quad
+B=\sum_i h_2(d_i),\quad K=D_2(P\Vert Q).\]
+The reference is fixed across sampled sets. Its support equals the actual spectral support. Put
+\[b_S=\operatorname{sgn}(\widehat f(S))\sqrt{Q(S)},\quad
+C_b(U)=\sum_S b_Sb_{S\triangle U},\quad
+v_U=C_b(U)^2,\quad Z=\sum_Uv_U,\quad
+T=\frac{\sum_Uv_U\log_2(1/v_U)}{Z}=H(v/Z)-\log_2Z.\]
+Then
+\[K\ge[B-4I]_+,\qquad K\ge T/4-8I,\qquad B\le T/4+8I.\]
+The last inequality is proved separately from payment; together the latter two imply $H=B-K\le16I$. Directly, $H\le4I$ on this class. For a factor of dimension $m\ge2$, $d=2^{1-m}$ and $a=4d(1-d)$ give
+\[v_0=1,\qquad v_k=a^k\bigl[1-2^{2-k}(1-d)^{m-k}\bigr]^2,\qquad Z=\sum_{k=0}^m\binom mkv_k.\]
+For tensors, $T$ is additive, whereas $L_{12}=L_1Z_2+Z_1L_2$.
+The full proof, scale bounds and exact verification are in REPORT.md. None of these inequalities is asserted universally.
+\end{document}

@@ -1,0 +1,1 @@
+Stage10 COMPLETE_LOCAL: rare-root global cubic/affine orbit guard proved;39210 exact assertions PASS. Full FEI OPEN; new guard pending independent review. NEXT: exact nonnegative smaller-child reserve selection.

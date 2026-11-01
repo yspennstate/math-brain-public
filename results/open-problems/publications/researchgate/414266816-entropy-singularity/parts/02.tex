@@ -1,0 +1,157 @@
+The entropy upper bound encodes occupied cells through successive spatial refinements. An occupied cell has one of fifteen nonempty four-child masks, so its contribution is bounded by a constant times its occupancy probability. Four-arm estimates in the interior and half-plane arm estimates near the boundary control the sum over cells. Positive relative growth of $m$ then sums the cost over scales. Pete proposed self-similarity and tree descriptions as a route to the percolation entropy bounds in 2011 \cite[slides~21--22]{Pete}; the spectral local-mass estimate in \cite[Lemma~3.2 and equation~(3.7)]{GPS} is a related antecedent.
+
+For the entropy lower bound, a local configuration that makes a coordinate irrelevant contributes zero to any Fourier coefficient containing that coordinate. Bounded overlap permits simultaneous tests across a prescribed support and yields an exponential bound on each spectral atom. Closed circuits give a block version of the argument, and hence the lower bound at each retained nonroot spatial resolution. Monotonicity supplies a direct lower bound for the entropy of the pivotal set.
+
+The singularity proof uses a stronger consequence of the same local independence of the crossing function. At a triangular-lattice site, the derivative vanishes whenever the open neighbors form one cyclic interval. Evaluation on these ring configurations is injective on the span of independent supports of the six-cycle. The resulting coercivity inequality bounds the Fourier mass of supports containing an incident triangle. Its zero identity survives every linear operator outside the complete wheel, including exact exterior Fourier conditioning. Disjoint wheels, sequential conditional bounds, and a seven-color partition amplify the local estimate. The pivotal prohibition follows from a path shortcut across a triangle. For geometric Fourier projections and conditional amplification in percolation, see \cite[Lemma~4.3 and Propositions~5.1 and~6.1]{GPS}.
+
+The local entropy estimate controls the masses of individual atoms; the wheel estimate controls mass on a geometric class of supports. These are different conclusions from a common finite-product method. The critical arm estimates then place both conclusions on the percolation scale. No implication from entropy comparison to singularity is used.
+
+Fourier methods for noise sensitivity and their percolation applications originate in \cite{BKS}; quantitative developments include \cite{SS,GPS,TV}, with background in \cite{GS}. General entropy estimates and structured Boolean classes are treated in \cite{KMS,KKLMS,Han,OWZ,OT,CKLS,WWW,GMP}. The spatial argument here removes the logarithmic loss that coordinate subadditivity can retain.
+
+\subsection{Stability of the separation}
+
+The local statistic gives more than a separating event. Theorem~\ref{thm:distance} shows that, under every coupling of the two laws, a fixed positive fraction of the spectral sites must be changed to obtain a pivotal realization, with probability tending to one. The minimum expected number of changed sites is $\asymp m(R)$. If each spectral site is independently retained with probability $\rho_R$, Proposition~\ref{prop:thinning} proves that the face event still separates the thinned law from every face-free law when $\rho_R^3m(R)\to\infty$. When $\rho_R^3m(R)\to0$, that event has probability tending to zero. Thus the face detector has retention threshold scale $m(R)^{-1/3}=R^{-1/4+o(1)}$ in these two regimes. Corollary~\ref{cor:testing} records the nonempty testing error and the corresponding lower bound on relative entropy.
+
+Sections~\ref{sec:forest}--\ref{sec:mesoscopic} prove the entropy and spatial-resolution estimates. Sections~\ref{sec:localgeometry} and~\ref{sec:faces} establish the local separator and its finite-volume bounds. Section~\ref{sec:criticalrates} proves the critical square rates, including the sharp cost of low face density. Section~\ref{sec:localscope} gives the abstract criterion and the product-measure and quad extensions. Section~\ref{sec:perturbations} proves the perturbation and information consequences. Section~\ref{sec:scope} records the scope of the results and the remaining questions.
+
+\section{Entropy under spatial refinement}\label{sec:forest}
+
+Let a finite rooted forest partition a finite coordinate set $V$ into
+nonempty cells: the root cells partition $V$, and the children of each
+internal vertex partition its cell. For a random subset $A\subseteq V$,
+write $O_v=\one_{\{A\cap C_v\ne\varnothing\}}$ and $p_v=\Prob(O_v=1)$.
+An occupied vertex with $d_v$ children has at most $2^{d_v}-1$ nonempty
+child masks. The chain rule therefore bounds entropy by expected
+occupancy counts, without any independence assumption.
+
+\begin{lemma}[Refinement cost]\label{cor:forestcost}
+Let $O_{\rm rt}$ be the root occupancy vector. For arbitrary leaf depths,
+\[
+ H(A)\le H(O_{\rm rt})
+ +\sum_{v\ \mathrm{internal}}p_v\log_2(2^{d_v}-1)
+ +\sum_{v\ \mathrm{leaf}}p_v\log_2(2^{|C_v|}-1).
+\]
+In particular, suppose terminal cells have at most $M\ge1$ elements and
+every internal cell has at most $b\ge1$ children. For a single tree with
+all terminal cells at depth $L$, let $Z_j$ be its occupied-cell pattern
+at depth $j$ and $N_j=|Z_j|$. Then, for $0\le k\le L$,
+\begin{align}
+ H(A)&\le h_2(\Prob(A\ne\varnothing))
+ +\log_2(2^b-1)\sum_{j=0}^{L-1}\E N_j
+ +\log_2(2^M-1)\E N_L,\label{eq:treefull}\\
+ H(Z_k)&\le h_2(\Prob(A\ne\varnothing))
+ +\log_2(2^b-1)\sum_{j=0}^{k-1}\E N_j.\label{eq:treecoarse}
+\end{align}
+\end{lemma}
+\begin{proof}
+List the root occupancy vector and then the child masks, with each
+parent preceding its descendants. The occupancy of a vertex is known
+when its mask is exposed. Its mask is empty when it is unoccupied and
+has at most $2^{d_v}-1$ possible values when it is occupied. The chain
+rule bounds this contribution by $p_v\log_2(2^{d_v}-1)$. At each leaf,
+record the contents of its cell; the analogous contribution is at most
+$p_v\log_2(2^{|C_v|}-1)$. These variables determine $A$, proving the
+general bound. Grouping vertices by depth gives \eqref{eq:treefull},
+and stopping at depth $k$ gives \eqref{eq:treecoarse}.
+
+Vertices with $p_v=0$ contribute zero, as do unary refinement steps.
+\end{proof}
+
+Let $m$ be positive on the available spatial scales. A lower power bound
+with fixed $c,\epsilon>0$,
+\begin{equation}\label{eq:massgrowth}
+ m(t)\ge c(t/s)^\epsilon m(s)\qquad(t\ge s),
+\end{equation}
+implies
+\begin{equation}\label{eq:dyadicsum}
+ \sum_{j\ge0}\frac1{m(2^js)}\le\frac{C}{m(s)}
+\end{equation}
+with the sum truncated when only finitely many scales are available.
+Indeed, each summand is at most $c^{-1}2^{-j\epsilon}/m(s)$, so one may
+take $C=c^{-1}(1-2^{-\epsilon})^{-1}$.
+The bound \eqref{eq:dyadicsum} is the scale summability used below.
+
+\section{Lower bounds from local configurations}\label{sec:lower}
+
+We first prove two finite-product entropy bounds, using pivotal fibers and local configurations that make a coordinate irrelevant.
+
+\begin{theorem}[Pivotal entropy under product measures]\label{thm:pivlower}
+Let $f:\{0,1\}^V\to\{-1,1\}$ be increasing, and let the coordinates be independent with parameters $p_i\in(0,1)$. Write $\cP_f$ for its pivotal set and $\iota_i=\Prob(i\in\cP_f)$. Then
+\begin{equation}\label{eq:pivlower}
+ H(\cP_f)+H(f\mid\cP_f)\ge\sum_{i\in V}h_2(p_i)\iota_i,
+\end{equation}
+where $h_2$ is binary entropy. In particular,
+\[
+ H(\cP_f)\ge\sum_i h_2(p_i)\iota_i-H(f).
+\]
+For unbiased coordinates this gives $H(\cP_f)\ge I(f)-1$.
+\end{theorem}
+\begin{proof}
+Monotonicity implies $X_i=(f+1)/2$ whenever $i$ is pivotal. Consequently, for every $S\subseteq V$,
+\[
+ \Prob(\cP_f=S,f=1)\le\prod_{i\in S}p_i,
+ \qquad
+ \Prob(\cP_f=S,f=-1)\le\prod_{i\in S}(1-p_i).
+\]
+Taking logarithmic reciprocals of the positive joint atoms and averaging gives
+\begin{align*}
+ H(\cP_f,f)
+ &\ge\sum_i\Bigl[\Prob(i\in\cP_f,f=1)\log_2(1/p_i)\\
+ &\hspace{38mm}+\Prob(i\in\cP_f,f=-1)\log_2(1/(1-p_i))\Bigr].
+\end{align*}
+The event that $i$ is pivotal depends only on the other coordinates. On this event $f=2X_i-1$. Independence therefore gives probabilities $p_i\iota_i$ and $(1-p_i)\iota_i$ in the last display. Its right-hand side is $\sum_i h_2(p_i)\iota_i$. The chain rule proves \eqref{eq:pivlower}; conditioning reduces entropy and $H(f)\le1$.
+\end{proof}
+
+For the spectral bound, a \emph{guard} for coordinate $i$ is an event determined by other coordinates on which changing coordinate $i$ cannot change the function. The following statement also applies to nonmonotone functions.
+
+\begin{theorem}[Local guards and Fourier coefficients]\label{thm:guards}
+Let $f:\{0,1\}^U\to\{-1,1\}$ depend only on $V\subseteq U$, under a product measure with $p_i\in[p_0,1-p_0]$, where $0<p_0\le1/2$. For each $i\in V$, suppose that a specified pattern $E_i$ on a set $G_i\subseteq U\setminus\{i\}$ makes $f$ independent of coordinate $i$. For positive integers $D,K$, assume $|G_i|\le D$, and that every set $F_i=G_i\cup\{i\}$ intersects at most $K$ of the sets $F_j$, counting itself. Alternatively, assume that the intersection graph of the sets $F_i$ admits a proper coloring with at most $K$ colors. With normalized product Fourier characters,
+\begin{equation}\label{eq:guardcoeff}
+ \widehat f(S)^2\le
+ \left(\prod_{j\in S}4p_j(1-p_j)\right)(1-p_0^D)^{2|S|/K}
+ \quad(S\subseteq V).
+\end{equation}
+It follows that
+\begin{equation}\label{eq:guardentropy}
+ H(\cS_f)\ge\sum_{j\in V}
+ \left(c_g+\log_2\frac1{4p_j(1-p_j)}\right)
+ \Prob(j\in\cS_f),\qquad
+ c_g=\frac{2}{K}\log_2\frac1{1-p_0^D}>0.
+\end{equation}
+The parameters $D$ and $K$ may be replaced by any positive upper bounds.
+\end{theorem}
+\begin{proof}
+Fix $S$. Under the intersection-count hypothesis, choose $T\subseteq S$ greedily with pairwise disjoint $F_i$; at most $K$ candidates are removed at each choice. Under the coloring hypothesis, choose the largest color class in $S$ instead. In either case, $|T|\ge|S|/K$ and the chosen sets are pairwise disjoint. Put
+\[
+ \chi_S=\prod_{j\in S}\frac{X_j-p_j}{\sqrt{p_j(1-p_j)}},
+ \qquad M=\prod_{i\in T}(1-\one_{E_i}).
+\]
+Expanding the product defining $M$ gives
+\begin{equation}\label{eq:guardcancel}
+ \widehat f(S)=\E[f\chi_S M].
+\end{equation}
+Indeed, a nonempty expansion term contains $\one_{E_i}$ for some $i\in T$. On $E_i$, $f$ is independent of $X_i$; every guard indicator in that term is also independent of $X_i$, by disjointness of the $F_j$. Averaging the mean-zero factor $\chi_i$ annihilates the term.
+
+Put $a_S=\E|\chi_S|=\prod_{j\in S}2\sqrt{p_j(1-p_j)}$, and define
+\[
+ d\nu_S=\frac{|\chi_S|}{a_S}\,d\Prob.
+\]
+This is a product probability measure with parameter $1/2$ on $S$ and the original parameters elsewhere: for $j\in S$, the two masses $p_j|\chi_j(1)|$ and $(1-p_j)|\chi_j(0)|$ both equal $\sqrt{p_j(1-p_j)}$. Thus every specified guard pattern has $\nu_S$-probability at least $p_0^D$, and the guards indexed by $T$ are independent under $\nu_S$. Equation~\eqref{eq:guardcancel} gives
+\[
+ |\widehat f(S)|\le\E[|\chi_S|M]
+ =a_S\nu_S(M=1)\le a_S(1-p_0^D)^{|T|}.
+\]
+Square this estimate and use $|T|\ge|S|/K$ to obtain \eqref{eq:guardcoeff}. Taking logarithmic reciprocals of the positive spectral atoms and summing proves \eqref{eq:guardentropy}.
+\end{proof}
+
+\begin{corollary}[Connectivity on bounded-degree graphs]\label{cor:guardcross}
+Consider site or bond connectivity between two fixed vertex sets under independent parameters in $[p_0,1-p_0]$. Suppose the underlying graph has bounded degree, and that a single isolated site, respectively a single isolated edge, cannot join the two distinguished sets. Then
+\[
+ H(\cS_f)\ge c\sum_i4p_i(1-p_i)\iota_i,
+\]
+with $c>0$ depending only on $p_0$ and the degree bound.
+\end{corollary}
+\begin{proof}
+For a site $i$, close all its neighboring sites. If $i$ is open, its occupied component is then a singleton. For an edge $i=uv$, close all other edges incident to either $u$ or $v$; its open component then consists of at most that edge and its endpoints. In either case the stated separation assumption makes the guarded coordinate irrelevant. The sizes and overlap multiplicities of these local neighborhoods are bounded in terms of the degree. Add finitely many irrelevant neighboring coordinates to $U$ if necessary. Theorem~\ref{thm:guards} applies. Finally, conditional variance in coordinate $i$ is $4p_i(1-p_i)$ on the pivotal event and zero otherwise. Parseval gives
+\begin{equation}\label{eq:biasedinfluence}
+ \Prob(i\in\cS_f)=4p_i(1-p_i)\iota_i.

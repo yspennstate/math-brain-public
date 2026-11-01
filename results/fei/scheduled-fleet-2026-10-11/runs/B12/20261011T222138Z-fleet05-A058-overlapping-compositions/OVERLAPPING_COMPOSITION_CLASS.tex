@@ -1,0 +1,56 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\HH}{\mathsf H}
+\begin{document}
+\title{An exact posterior ledger for anchored overlapping compositions}
+\author{A058, stream B12}
+\date{12 October 2026}
+\maketitle
+All cubes are uniform, all functions take values in $\{-1,1\}$, and entropy uses base-two logarithms, including the empty Fourier coefficient.
+\begin{theorem}
+Let $F$ be a Boolean function on $m$ inputs, let $b_j$ be Boolean functions on pairwise disjoint blocks $z_j$, and let $A\in\mathbb F_2^{r\times m}$. For private uniform bits $x_i$ disjoint from these blocks define
+\[
+g_i=x_i\prod_{j:A_{ji}=1}b_j(z_j),\qquad f=F(g_1,\ldots,g_m).
+\]
+Sample $T$ with probability $p_T=\widehat F(T)^2$, put $U=A\mathbf1_T$, and let $d_j=\Pr(U_j=1)$. Then
+\[
+\HH(f)=\HH(F)+\sum_j d_j\HH(b_j),\qquad
+I(f)=I(F)+\sum_j d_jI(b_j).
+\]
+Writing $q_u=\Pr(U=u)$ and $B=\sum_u q_u\HH(T\mid U=u)$ gives the full collision ledger
+\[
+\HH(f)=\HH(q)+B+\sum_j d_j\HH(b_j).
+\]
+If $\HH(F)\le C_0I(F)$ and $\HH(b_j)\le C_jI(b_j)$ then $\HH(f)\le \max\{C_0,C_1,\ldots,C_r\}I(f)$, with no restriction on $A$ or on the gate biases.
+\end{theorem}
+\begin{proof}
+Expand the outer Fourier series and cancel repeated shared gates using $b_j^2=1$:
+\[
+f=\sum_T\widehat F(T)\chi_T(x)\prod_{j:U_j(T)=1}b_j(z_j).
+\]
+If $c_{j,1}(S)=\widehat b_j(S)$ and $c_{j,0}(S)=\mathbf1_{S=\varnothing}$, the physical coefficient is exactly
+\[
+\widehat f(T,S_1,\ldots,S_r)=\widehat F(T)\prod_jc_{j,U_j(T)}(S_j).
+\]
+Distinct labels $T$ have distinct private supports, so this formula contains no coherent sum. Conditional on $T$, the shared spectra are independent, with an inactive block fixed at the empty support. Every conditional law is normalized by Parseval. The private part of the support reveals $T$. The entropy chain rule now proves the first identity; weighting the coefficient squares by coordinate membership proves the influence identity. The probability chain rule $\HH(T)=\HH(U)+\HH(T\mid U)$ proves the posterior identity. Substitute the assumed bounds into the exact ledger to obtain constant preservation.
+\end{proof}
+For the sign mask $v_j$ that flips row $j$ of $A$, the coefficient identity also yields
+\[
+d_j=\tfrac12\bigl(1-\mathbb E[F(y)F(yv_j)]\bigr)=\Pr(F(y)\ne F(yv_j)).
+\]
+This reconstructs physical influence independently: a pivotal flip inside $b_j$ applies that mask to the uniform outer vector. In general $d_j$ is not the sum of influences along that row.
+\begin{corollary}
+If the outer gate and every shared gate are products on disjoint blocks of Boolean gates of arity at most two, the above composition satisfies $\HH(f)\le2I(f)$ in every dimension and for every incidence matrix.
+\end{corollary}
+\begin{proof}
+The sixteen two-bit gates consist of constants, signed characters, and eight gates with one exceptional truth-table value. The first groups have zero entropy; exceptional gates have spectrum $(1/4,1/4,1/4,1/4)$, entropy two and influence one. Thus each gate satisfies the stated constant, and disjoint products add both quantities. Apply the theorem.
+\end{proof}
+Let $P$ be $-1$ only at $(-1,-1)$, let $F_k=\prod_{\ell=1}^kP(y_{2\ell-1},y_{2\ell})$, and let $g_i=x_iP(z_1,z_2)$ for all $2k$ inputs. All children share one nonlinear gate. Outer spectral labels are uniform, $U=|T|\bmod2$, and
+\[
+\HH(q)=1,\quad B=2k-1,\quad d=\tfrac12,\quad
+\HH(f_k)=2k+1=2I(f_k).
+\]
+In contrast, an even outer parity cancels this shared gate entirely. Private supports are the structural hypothesis preventing coherent interference; removing them is not justified by the theorem. With arbitrary $F$ and $r=0$ the class includes arbitrary Boolean sources, so the conditional transfer theorem does not prove full FEI.
+\end{document}

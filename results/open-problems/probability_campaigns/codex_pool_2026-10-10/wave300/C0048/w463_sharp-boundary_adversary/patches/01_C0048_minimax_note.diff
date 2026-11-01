@@ -1,0 +1,80 @@
+--- a/06_math_research/C0048_sharp_mean_field_barrier_w463_20261010.md
++++ b/06_math_research/C0048_sharp_mean_field_barrier_w463_20261010.md
+@@ -0,0 +1,77 @@
++# C0048: independent sharp boundary calculation
++
++Author: w463. Date: 2026-10-10. This derivation was saved before reading w462's proof. Independent referee: w464, pending. It is an elementary auxiliary result, not a proof or refutation of C0048. Novelty is unverified.
++
++The recovered intake asks for discontinuity of the nearest-neighbor ferromagnetic q-state Potts model on Z^d for every integer q >= 3 and d >= 3. Its primary locator is Duminil-Copin, PIMS lectures (2017), Conjecture 2, printed p. 93. Current openness remains UNKNOWN after the scoped owner and primary-literature checks recorded in SOURCE_STATUS.json. The historically known large-q and large-d regimes do not include all these quantifiers.
++
++## Exact q=3 minimax barrier
++
++Let S = {x in [0,1]^3 : x1+x2+x3=1}, use 0 log 0 = 0, and set
++
++F_J(x) = sum_i x_i log x_i - (J/2) sum_i x_i^2,
++J0 = 4 log 2,
++u = (1/3,1/3,1/3), v = (2/3,1/6,1/6), s = (1/2,1/4,1/4).
++
++Claim A: the global minimizers at J0 are u and the three permutations of v. Their common value is -log 3 -(2/3)log 2. Among all continuous paths gamma in S from u to v,
++
++inf_gamma max_t [F_J0(gamma(t))-min_S F_J0] = Delta,
++Delta = log 3 -(19/12)log 2 > 0.
++
++Proof of the minimizers. A boundary point cannot minimize: transferring a small positive mass t into a zero coordinate changes F by t log t + O(t), which is negative. At an interior stationary point, log x_i - J0 x_i is constant. This strictly concave function of a positive coordinate takes a fixed value at at most two coordinates. Thus, apart from u, every stationary point has two equal coordinates, and after permutation it has the form
++
++x(m) = ((1+2m)/3,(1-m)/3,(1-m)/3), -1/2 < m < 1.
++
++Writing f(m)=F_J0(x(m)), we have f'(m)=(2/3)g(m), where
++
++g(m)=log((1+2m)/(1-m))-4(log 2)m,
++g''(m)=1/(1-m)^2 -4/(1+2m)^2.
++
++The sign of g'' is negative for m<1/4 and positive for m>1/4. Also g(0)=g(1/4)=g(1/2)=0. Strict concavity gives g>0 on (0,1/4), and strict convexity gives g<0 on (1/4,1/2). Since g'(0)=g'(1/2)=3-4 log 2>0, g is negative on (-1/2,0) and positive on (1/2,1). Here log 2<3/4 follows, for example, from the strict trapezoidal upper bound for integral_1^2 1/t dt. The only stationary candidates are u, s and v (up to permutation). The point s is a strict maximum along this curve, so is not a global minimum; u and v have equal values. Existence of a global minimum now proves the asserted complete list.
++
++Proof of the minimax value. The path x(m), 0<=m<=1/2, has its unique maximum at m=1/4, by the preceding derivative signs. Its maximum excess is
++
++F_J0(s)-F_J0(u) = (-9/4 log 2)-(-log 3 -2/3 log 2) = Delta.
++
++Conversely, every continuous path from u to v crosses x1=1/2. On this section write x=(1/2,t,1/2-t). The second derivative of F on the section is
++
++1/t +1/(1/2-t) -2J0 >= 8-8 log 2 > 0.
++
++Symmetry and strict convexity show that the section minimum is attained at t=1/4. Every path therefore has maximum at least F_J0(s), proving equality. Finally, 12 Delta = log(3^12/2^19)>0 because 531441>524288. This positivity is exact, not numerical evidence.
++
++## Sharp obstruction to an approximation-only bridge
++
++Claim B: the sublevel {F_J0 <= min F_J0 + epsilon} contains a path from u to v if and only if epsilon >= Delta. The proof is exactly the minimax argument. Thus an approximate-minimizer allowance at least Delta does not exclude a continuous interpolation between these two phases.
++
++For any epsilon>Delta, let 0<h<=3(epsilon-Delta), and choose m(J) increasing linearly from 0 to 1/2 on [J0-h,J0+h]. The continuous vector x(m(J)) satisfies
++
++F_J(x(m(J)))-min_S F_J <= Delta + |J-J0|/3 <= epsilon.
++
++Indeed, compare F_J(x)-F_J(y) with F_J0(x)-F_J0(y); squared norms on S lie in [1/3,1], so the coupling change costs at most |J-J0|/3. This is a continuous admissible approximate minimizer across an interval about coexistence. It need not be a lattice Gibbs magnetization. Its purpose is to invalidate a conclusion based solely on this inequality.
++
++The missing premise for a mean-field-barrier route is a certified allowance below the relevant separating barrier throughout an interval, plus the Gibbs-state selection/monotonicity and endpoint arguments needed to deduce a jump. Critical ordering itself, phi^wired_pc[0<->infinity]>0, is still the hardest unproved piece for q=3,d=3. No products of dependent conditional bounds are used.
++
++## Comparison with the primary Biskup-Chayes bound
++
++Use the 2002 preprint https://arxiv.org/abs/math/0207242 (Main Theorem (1.12), (1.13), Potts normalization (2.2)-(2.7)). The allowance is E_d(J)=J*n*kappa*I_d/2 for extreme thermodynamic magnetizations. For q=3, n=2 and kappa=2/3 in the paper's rescaled inner product. Its probability-vector functional is precisely F_J up to an additive constant. The auxiliary parameter m used above is not the paper's scalar magnetization; on x(m), that scalar is x1-1/3=2m/3.
++
++Write a(k)=d^(-1) sum_j cos(k_j), and let the integral be normalized Haar measure on [-pi,pi]^d. Then I_d=integral a^2/(1-a). Translating every coordinate by pi changes a to -a and preserves measure, so
++
++I_d = integral a^2/(1-a^2) >= integral a^2 = 1/(2d).
++
++For d>=3 the displayed integral is finite; the inequality uses pointwise nonnegative integrands and Fourier orthogonality, not an independence assumption about FK edges. At J0 this gives
++
++E_d(J0) = (2J0/3) I_d >= J0/(3d) = 4 log 2/(3d).
++
++At d=3 the supplied allowance is therefore at least 4 log 2/9, whereas Delta is approximately 0.001129252781529618. This is an obstruction to certifying a separating barrier using that coarse allowance. It is NOT a lower bound on the actual approximation error of a Gibbs magnetization.
++
++For the allowance to be strictly below Delta at coexistence, it is necessary that
++
++d > (4 log 2)/(3 Delta).
++
++Checking the adjacent integer cases is exact: this strict inequality is equivalent to 3^(12d)>2^(19d+16), fails at d=818, and holds at d=819. Consequently this particular unmodified bound and barrier criterion cannot certify dimensions d<=818 at J0. This does not say that the lattice transition starts in dimension 819, nor that the method succeeds there: I_d is larger than its lower bound, and further thermodynamic arguments remain necessary.
++
++There is an additional source-scope issue. The preprint's Theorem 2.1 concludes a jump at a point J_t near J_MF in large dimension. Immediately after it, the authors say they cannot conclude m_*(J)=0 for J<J_t. A proposed proof using that theorem alone must therefore establish J_t=J_c before identifying its jump with positive magnetization at the first critical point. This observation concerns the cited theorem's precise conclusion; it is not a claim that all other large-d results have the same limitation.
++
++The subsequent scoped audit of w462 L1/L2/L3 is saved in PEER_AUDIT.md; it keeps the correctly conditioned proof and records exact failure controls for weakened premises.
++
++NEXT: w464 independently verify the full-simplex separating-section proof and the normalized error allowance; preserve the actual Z^3 critical-ordering gap.

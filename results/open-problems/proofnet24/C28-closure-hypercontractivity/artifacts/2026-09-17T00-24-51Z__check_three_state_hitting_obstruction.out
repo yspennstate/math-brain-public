@@ -1,0 +1,13 @@
+C28_I0032_THREE_STATE_HITTING_OBSTRUCTION_EXACT
+row_sums=1
+detailed_balance=PASS
+lambda_fast= 2*(16*p**2 - 7*p + 1)/(32*p**2 - 15*p + 2)
+lambda_slow= -2*(4*p - 1)**2/((p - 1)*(32*p**2 - 15*p + 2))
+rare_L2_coeff_slow= -(p - 1)/p
+rare_L2_coeff_fast= 1/p
+common_L2_coeff_slow= -p/(p - 1)
+threshold_gap=nu/p
+rare_exit_rate_source_normalized=1
+g(1/8)=(1+sqrt(21))/8
+fixed_T_limit_d2rare_sq= 3 + 4*exp(-4*T)
+ALL_EXACT_SYMBOLIC_CHECKS_PASS

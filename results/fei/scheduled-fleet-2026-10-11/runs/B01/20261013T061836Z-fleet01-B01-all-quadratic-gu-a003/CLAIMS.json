@@ -1,0 +1,46 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261013T061836Z-fleet01-B01-all-quadratic-gu-a003",
+  "stream": "B01",
+  "packet_id": "A003",
+  "gap_id": "G-UPPER-SET-ASYMMETRY",
+  "claims": [
+    {
+      "claim_id": "B01-A003-ALL-QUADRATIC-GU-v1",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "exact_statement": "For every n and every genuine Boolean quadratic phase f(x)=(-1)^{q(x)} on F_2^n, every physical coordinate satisfies Delta_i U(f)<=3 Inf_i(f). Consequently G(f)<=3I(f). The class is restriction closed and 3 is its sharp supremum.",
+      "quantifiers": "Every n>=0, every quadratic polynomial including every alternating polar-matrix rank and every affine/constant term, every physical coordinate; base-two U.",
+      "hypotheses": [
+        "uniform Boolean cube",
+        "genuine sign-valued quadratic phase",
+        "physical coordinate restrictions"
+      ],
+      "proof_source": "REPORT.md sections 2--4 and COSET_MERGE_THEOREM.md",
+      "proof_dependencies": [
+        "standard flat-on-an-affine-coset Walsh law for quadratic phases",
+        "elementary equal-fiber property of a linear projection",
+        "prior clique-quadratic sharpness family at canonical commit 4b5c51804df04c0f4d5fecc679f49367297112db"
+      ],
+      "review_records": [],
+      "supersedes": "B01-A003-CLIQUE-QUADRATIC-GU-v1 in class scope, but preserves its sharper explicit formula",
+      "first_unproved_line": "For degree at least three, child spectra need not be uniform translates of one affine space; no dimension-free bound on the average cross/within upper-fiber logarithm is proved.",
+      "next_consumers": ["A005", "A063", "A068", "A086", "A094", "B20"]
+    },
+    {
+      "claim_id": "B01-A003-ALL-QUADRATIC-U-FEI-v1",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "exact_statement": "Every quadratic Boolean phase satisfies U(f)<=I(f) and H(f)<=2I(f).",
+      "quantifiers": "Every dimension, polar rank, affine shift, and constant sign.",
+      "hypotheses": ["uniform Boolean cube", "quadratic Boolean phase"],
+      "proof_source": "REPORT.md section 5",
+      "proof_dependencies": ["uniform affine squared spectral support"],
+      "review_records": [],
+      "supersedes": null,
+      "first_unproved_line": "This direct class endpoint does not extend to arbitrary Boolean spectra.",
+      "next_consumers": ["A005", "A068", "A086", "A094", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

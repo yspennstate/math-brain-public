@@ -1,0 +1,108 @@
+\section*{A sharp correlated-encoder barrier for the B09 rare gate (A079)}
+
+All physical cubes are uniform and all logarithms are base two.  Write
+$h_2$ for binary entropy.  This note treats the live question left by the
+A077 compensated tower: can shared or correlated fair-bit auxiliaries realize
+the same rare biased gate while avoiding its $r k$ physical cost?
+
+\paragraph{A genuinely shared-variable realization.}
+Let $a,b\in\mathbb F_2^k$ be independent uniform vectors, put
+\[
+ U=\mathbf 1_{\{a=0\}},\qquad V=\mathbf 1_{\{a+b=0\}},\qquad
+ f_k(a,b)=(-1)^{UV}.
+\]
+Both encoders depend on the physical block $a$, so this is not independent
+block padding.  Nevertheless $(a,a+b)$ is uniform, whence $U,V$ are
+independent Bernoulli variables of bias $\epsilon=2^{-k}$.  Their joint
+activation is the singleton $\{a=b=0\}$, and therefore $f_k$ is the ordinary
+point defect on $2k$ variables.
+
+The normalized centered Fourier label of $U$ is uniform on the $2^k-1$
+nonempty subsets $S$ of the $a$ coordinates.  For $V$ it is uniform on the
+diagonal labels $(T,T)$, $T\ne\varnothing$.  In the product term the physical
+Fourier label is
+\[
+ (R,T)=(S\triangle T,T).
+\]
+Thus the two physical label blocks are correlated: $T\ne\varnothing$ and
+$R\ne T$ deterministically.  The map $(S,T)\mapsto(S\triangle T,T)$ is
+injective, so
+\[
+ H(R\mid T)=\log_2(2^k-1).
+\]
+Writing $q=2^{k-1}/(2^k-1)$, the exact mean physical degree of this product
+label is
+\[
+ \mathbb E(|R|+|T|)=2kq(1-q)+kq.
+\]
+The shared variables therefore create spectral dependence but no hidden
+label compression.
+
+\paragraph{A universal energy lower bound.}
+The preceding failure is not peculiar to the linear realization.  Let
+$U,V:\{0,1\}^n\to\{0,1\}$ be arbitrary deterministic encoders on one uniform
+physical cube.  Suppose their output law is the same independent biased law
+as the B09 gate:
+\[
+ \Pr(U=1)=\Pr(V=1)=\epsilon=2^{-k},\qquad
+ \Pr(U=V=1)=\epsilon^2.
+\]
+No disjointness, linearity, or product structure is assumed of the encoders.
+Set $f=(-1)^{UV}$ and $A=\{U=V=1\}$.  The edge-isoperimetric inequality on
+the cube gives, for $\delta=|A|/2^n\le1/2$,
+\[
+ I(f)=\frac{2|\partial A|}{2^n}
+ \ge 2\delta\log_2(1/\delta).
+\]
+Since $\delta=\epsilon^2=2^{-2k}$,
+\begin{equation}\label{eq:energy}
+ \boxed{I(f)\ge4k\epsilon^2.}
+\end{equation}
+This includes all shared-variable and spectrally correlated realizations of
+the same gate law.  Equality holds when $A$ is a codimension-$2k$ subcube,
+so the bound is sharp.
+
+To compare with the exact A077/B09 restriction gain, put
+\[
+ r=4\epsilon^2(1-\epsilon),\qquad
+ s=4\epsilon(1-\epsilon),\qquad
+ J_k=h_2(r)-\epsilon h_2(s).
+\]
+Using, for $0<u<1$,
+\[
+ u\log_2(1/u)\le h_2(u)
+ \le u\log_2(1/u)+u\log_2 e
+\]
+and $r=\epsilon s$ yields
+\[
+ J_k\le r\bigl(k+\log_2e\bigr)
+ \le4\epsilon^2\bigl(k+\log_2e\bigr).
+\]
+Combining this with \eqref{eq:energy},
+\[
+ \boxed{\frac{J_k}{I(f)}\le1+\frac{\log_2e}{k}.}
+\]
+Adding any nonnegative conditional-entropy charge only decreases this ratio.
+Consequently the divergent tax-free biased helper from A077 cannot be turned
+into a uniform FEI counterfamily by a correlated realization that preserves
+the B09 independent output law.  The missing cost may move between spectral
+labels, but the boundary of the rare joint cell already pays it physically.
+
+\paragraph{Exact FEI ledger for the shared-variable example.}
+Let $\delta=2^{-2k}$ and $W=4\delta(1-\delta)$.  Since the negative set is a
+singleton,
+\[
+ H(f_k)=h_2(W)+W\log_2(2^{2k}-1),\qquad
+ I(f_k)=4k\delta,
+\]
+and hence $H(f_k)/I(f_k)\to4$.  This is a control, not a disproof of FEI.
+
+\paragraph{Scope.}
+The cube edge-isoperimetric inequality is a known theorem; the application
+above is the new source-bound obstruction.  It excludes correlated encoders
+of the same two-bit independent biased gate and, more generally, every
+realization for which the final negative set has prescribed density
+$\delta$: its influence is at least $2\delta\log_2(1/\delta)$.  It does not
+exclude a different gate whose negative set is not rare, a construction
+whose claimed gain is not tied to the joint activation cell, or a genuinely
+nonlocal mechanism that pays its entropy elsewhere.  Full FEI remains open.

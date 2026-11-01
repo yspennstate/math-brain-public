@@ -1,0 +1,136 @@
+{
+  "overall_row_status": "T336 scoped approximation/statistics extensions; unrestricted row remains open",
+  "claims": [
+    {
+      "id": "C-T336-001",
+      "title": "Conservative joint GP covariance by one-sided Chebyshev attention",
+      "status": "proved_in_package_independently_ai_audited",
+      "proofs": [
+        "agents/a21.md",
+        "agents/a22.md"
+      ],
+      "audit": "agents/a29.md",
+      "checks": "research/code/a27_gp_checks.py",
+      "scope": "Finite features; joint fixed m queries; masked unnormalized signed ReLU attention; exact real constants.",
+      "priority": "Classical Chebyshev and scalar finite-rank acceleration are prior work. Extension combines joint readout and data-space Loewner conservativeness; external novelty unverified."
+    },
+    {
+      "id": "C-T336-002",
+      "title": "Explicit raw-input RBF approximation with uniform forward predictive KL",
+      "status": "proved_in_package_independently_ai_audited",
+      "proofs": [
+        "agents/a23.md",
+        "agents/a28.md"
+      ],
+      "audit": "agents/a29.md",
+      "scope": "Compact exogenous inputs, positive noisy-query variance, bounded context labels for the uniform theorem. Explicit feature degree and encoder/attention size.",
+      "priority": "Not generic raw-feature universality or scalar acceleration; quantitative RBF composition relative to inspected Brain records."
+    },
+    {
+      "id": "C-T336-003",
+      "title": "Finite encoder grid with one fixed exact attention solver and valid covariance for every candidate",
+      "status": "proved_in_package_independently_ai_audited",
+      "proofs": [
+        "research/T336_ENCODER_GRID.md"
+      ],
+      "audit": "agents/a29.md",
+      "scope": "Only encoder parameters learned/quantized; exact fixed signed attention core; clipped feature coordinates and clipped context labels."
+    },
+    {
+      "id": "C-T336-004",
+      "title": "Unconditional GP-prior Gaussian-NLL ERM bound and explicit consistency sequence",
+      "status": "proved_in_package_independently_ai_audited",
+      "proofs": [
+        "research/T336_UNCONDITIONAL_ERM.md",
+        "research/T336_ENCODER_GRID.md"
+      ],
+      "audit": "agents/a29.md",
+      "scope": "Independent whole GP tasks, exogenous bounded input design, unbounded Gaussian labels, finite candidate class, exact or approximate ERM. Expected forward KL over original prior.",
+      "limits": [
+        "No uniform-context learned-predictor guarantee",
+        "No efficient ERM or SGD optimization guarantee",
+        "Mean cap and sample size grow in consistency sequence"
+      ],
+      "priority": "New derivation relative to inspected Brain records; external novelty not certified."
+    },
+    {
+      "id": "C-T336-005",
+      "title": "Finite-feature hierarchical GP evidence circuit and mixture KL",
+      "status": "proved_in_package_independently_ai_audited",
+      "proofs": [
+        "agents/a26.md",
+        "agents/a30.md"
+      ],
+      "audit": "agents/a29.md",
+      "scope": "Finite supplied feature maps and mixture components, bounded labels, positive noises/prior masses, fixed masks and positional IDs, unnormalized signed ReLU attention. Finite simplex-preserving readout may be enormous.",
+      "limits": [
+        "Mixture pretraining analysis still open",
+        "Raw infinite-rank mixture extension not proved",
+        "No tight efficient ReLU readout parameter bound"
+      ]
+    },
+    {
+      "id": "C-T336-006",
+      "title": "Exact failure example for an uncorrected data-space covariance",
+      "status": "exact_rational_certificate",
+      "proofs": [
+        "agents/a27.md"
+      ],
+      "checks": "research/code/a27_gp_checks.py",
+      "statement": "PSD all-ones joint Gram, s=1/10: ordinary degree-one Chebyshev gives -17/30; one-sided gives 21/110.",
+      "limits": [
+        "Does not invalidate the prior feature-space positive-covariance construction"
+      ]
+    },
+    {
+      "id": "R-T228-001",
+      "title": "Smooth nonlinear SGD exact Pareto law",
+      "status": "replication_of_prior_brain_result",
+      "proofs": [
+        "agents/a10.md",
+        "agents/a12.md",
+        "agents/a15.md",
+        "agents/a16.md",
+        "agents/a19.md"
+      ],
+      "priority_evidence": "agents/a17.md",
+      "limits": [
+        "Do not count as new solved row"
+      ]
+    },
+    {
+      "id": "C-T228-002",
+      "title": "Explicit rational average-contraction and alpha-in-(1,2) certificate",
+      "status": "exact_rational_certificate_independently_checked",
+      "proofs": [
+        "agents/a14.md",
+        "agents/a20.md"
+      ],
+      "checks": [
+        "research/code/a14_checks.py",
+        "research/code/a20_certificate_audit.py"
+      ],
+      "statement": "d=2, eta=13/25, epsilon=1/1000; h1<=7941802637/8025437500<1, h2=651/625>1; expected-distance factor<=2004230183/2006359375<1.",
+      "priority": "Additional verification, not a new nonlinear-tail theorem."
+    },
+    {
+      "id": "D-T364-001",
+      "title": "Tensor component-height comparison and perturbative criterion",
+      "status": "side_direction_not_random_landscape_solution",
+      "proofs": [
+        "agents/a05.md"
+      ]
+    },
+    {
+      "id": "D-T228-003",
+      "title": "Low-index batch monotonicity boundary",
+      "status": "analytic_formulas_plus_uncertified_numerical_counterexample",
+      "proofs": [
+        "agents/a09.md"
+      ],
+      "limits": [
+        "Numerical counterexample not interval certified"
+      ]
+    }
+  ]
+}

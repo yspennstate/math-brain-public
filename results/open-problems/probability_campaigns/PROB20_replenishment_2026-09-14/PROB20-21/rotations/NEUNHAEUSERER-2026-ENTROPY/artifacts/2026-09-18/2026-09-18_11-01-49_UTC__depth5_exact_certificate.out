@@ -1,0 +1,99 @@
+NEUNHAEUSERER-2026-ENTROPY depth-5 exact certificate
+Date: 2026-09-18 UTC
+Script: 2026-09-18_11-01-49_UTC__depth5_exact_certificate.py
+
+All mathematical PASS decisions below were made with exact Python Fraction arithmetic. Printed decimals are diagnostics only.
+The script was executed in eight shards to keep each exact interval run bounded.
+
+COMMON EXACT CLASSIFICATION (recomputed by each shard)
+PASS
+relation_normals = 90
+spans_rank_0_3 = [1, 90, 2780, 29955]
+positive_rank2_spans = 1985
+positive_rank3_spans = 10765
+positive_rank4_rays = 8376
+entropy_signatures = 216
+signatures_sha256 = 67d49101d56b827f4c557ab31775b90b97abddad2d8386e75f38ab13aec9339b
+certified_interval = [1/2560000,1/2]
+
+SHARD 0
+invocation: --start 0 --stop 27
+PASS
+certified_signature_range = [0,27)
+terminal_rational_intervals = 486
+max_bisection_depth = 6
+minimum_exact_lower_bound_positive = True
+minimum_lower_bound_float_diagnostic = 2.472837410411615
+
+SHARD 1
+invocation: --start 27 --stop 54
+PASS
+certified_signature_range = [27,54)
+terminal_rational_intervals = 486
+max_bisection_depth = 6
+minimum_exact_lower_bound_positive = True
+minimum_lower_bound_float_diagnostic = 1.5163509326482003
+
+SHARD 2
+invocation: --start 54 --stop 81
+PASS
+certified_signature_range = [54,81)
+terminal_rational_intervals = 485
+max_bisection_depth = 6
+minimum_exact_lower_bound_positive = True
+minimum_lower_bound_float_diagnostic = 0.5642851088491001
+
+SHARD 3
+invocation: --start 81 --stop 108
+PASS
+certified_signature_range = [81,108)
+terminal_rational_intervals = 486
+max_bisection_depth = 6
+minimum_exact_lower_bound_positive = True
+minimum_lower_bound_float_diagnostic = 0.05613577612235711
+
+SHARD 4
+invocation: --start 108 --stop 135
+PASS
+certified_signature_range = [108,135)
+terminal_rational_intervals = 480
+max_bisection_depth = 6
+minimum_exact_lower_bound_positive = True
+minimum_lower_bound_float_diagnostic = 0.09010130426362851
+
+SHARD 5
+invocation: --start 135 --stop 162
+PASS
+certified_signature_range = [135,162)
+terminal_rational_intervals = 484
+max_bisection_depth = 6
+minimum_exact_lower_bound_positive = True
+minimum_lower_bound_float_diagnostic = 0.3286195681279464
+
+SHARD 6
+invocation: --start 162 --stop 189
+PASS
+certified_signature_range = [162,189)
+terminal_rational_intervals = 502
+max_bisection_depth = 6
+minimum_exact_lower_bound_positive = True
+minimum_lower_bound_float_diagnostic = 0.012851284032590725
+
+SHARD 7
+invocation: --start 189 --stop 216
+PASS
+certified_signature_range = [189,216)
+terminal_rational_intervals = 551
+max_bisection_depth = 6
+minimum_exact_lower_bound_positive = True
+minimum_lower_bound_float_diagnostic = 0.02476353489692116
+
+AGGREGATE
+PASS
+all_216_signatures_certified = True
+total_terminal_rational_intervals = 3960
+max_bisection_depth = 6
+global_minimum_exact_lower_bound_positive = True
+global_minimum_lower_bound_float_diagnostic = 0.012851284032590725
+
+Interpretation: for every one of the 216 exact realizable five-weight collision signatures and every p in [1/2560000,1/2], S(p)>0 exactly, where H''(p)=-S(p). Therefore H''(p)<0 on that interval. The run report combines this with the previously proved all-depth endpoint theorem and complement symmetry; this output alone does not certify the endpoint neighborhoods.

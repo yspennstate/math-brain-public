@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/OtQ+aakdMRhQvDWwFl1AQhv9WBE</id>
+  <title>arXiv Query: search_query=all:"iterated majority"&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <updated>2026-10-11T22:31:16Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22iterated+majority%22&amp;start=0&amp;max_results=50&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>9</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2302.02473v4</id>
+    <title>Level-p-complexity of Boolean Functions using Thinning, Memoization, and Polynomials</title>
+    <updated>2023-11-02T08:31:11Z</updated>
+    <link href="https://arxiv.org/abs/2302.02473v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.02473v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper describes a purely functional library for computing level-$p$-complexity of Boolean functions, and applies it to two-level iterated majority. Boolean functions are simply functions from $n$ bits to one bit, and they can describe digital circuits, voting systems, etc. An example of a Boolean function is majority, which returns the value that has majority among the $n$ input bits for odd $n$. The complexity of a Boolean function $f$ measures the cost of evaluating it: how many bits of the input are needed to be certain about the result of $f$. There are many competing complexity measures but we focus on level-$p$-complexity -- a function of the probability $p$ that a bit is 1. The level-$p$-complexity $D_p(f)$ is the minimum expected cost when the input bits are independent and identically distributed with Bernoulli($p$) distribution. We specify the problem as choosing the minimum expected cost of all possible decision trees -- which directly translates to a clearly correct, but very inefficient implementation. The library uses thinning and memoization for efficiency and type classes for separation of concerns. The complexity is represented using (sets of) polynomials, and the order relation used for thinning is implemented using polynomial factorisation and root-counting. Finally we compute the complexity for two-level iterated majority and improve on an earlier result by J.~Jansson.</summary>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-05T20:05:19Z</published>
+    <arxiv:comment>22 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.PL"/>
+    <author>
+      <name>Julia Jansson</name>
+    </author>
+    <author>
+      <name>Patrik Jansson</name>
+    </author>
+    <arxiv:doi>10.1017/S0956796823000102</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1017/S0956796823000102" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1405.7144v3</id>
+    <title>Scaling limits for the threshold window: When does a monotone Boolean function flip its outcome?</title>
+    <updated>2016-04-29T13:02:00Z</updated>
+    <link href="https://arxiv.org/abs/1405.7144v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1405.7144v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Consider a monotone Boolean function $f:\{0,1\}^n\to\{0,1\}$ and the canonical monotone coupling $\{η_p:p\in[0,1]\}$ of an element in $\{0,1\}^n$ chosen according to product measure with intensity $p\in[0,1]$. The random point $p\in[0,1]$ where $f(η_p)$ flips from $0$ to $1$ is often concentrated near a particular point, thus exhibiting a threshold phenomenon. For a sequence of such Boolean functions, we peer closely into this threshold window and consider, for large $n$, the limiting distribution (properly normalized to be nondegenerate) of this random point where the Boolean function switches from being 0 to 1. We determine this distribution for a number of the Boolean functions which are typically studied and pay particular attention to the functions corresponding to iterated majority and percolation crossings. It turns out that these limiting distributions have quite varying behavior. In fact, we show that any nondegenerate probability measure on $\mathbb{R}$ arises in this way for some sequence of Boolean functions.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-05-28T07:22:48Z</published>
+    <arxiv:comment>33 pages, 3 figure. A paper by Daniel Ahlberg and Jeffery E. Steif, with an appendix by Gábor Pete. Added to the second version is the appendix (earlier published as arXiv:1507.05522) and a significant strengthening of Theorem 3, obtained jointly with Anders Martinsson. The third version updates the conjecture of the appendix</arxiv:comment>
+    <arxiv:primary_category term="math.PR"/>
+    <arxiv:journal_ref>Annales de l'Institut Henri Poincaré Probabilités et Statistiques, 53(4): 2135-2161, 2017</arxiv:journal_ref>
+    <author>
+      <name>Daniel Ahlberg</name>
+    </author>
+    <author>
+      <name>Jeffrey E. Steif</name>
+    </author>
+    <author>
+      <name>Gábor Pete</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1701.06967v1</id>
+    <title>SparseStep: Approximating the Counting Norm for Sparse Regularization</title>
+    <updated>2017-01-24T16:31:29Z</updated>
+    <link href="https://arxiv.org/abs/1701.06967v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1701.06967v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The SparseStep algorithm is presented for the estimation of a sparse parameter vector in the linear regression problem. The algorithm works by adding an approximation of the exact counting norm as a constraint on the model parameters and iteratively strengthening this approximation to arrive at a sparse solution. Theoretical analysis of the penalty function shows that the estimator yields unbiased estimates of the parameter vector. An iterative majorization algorithm is derived which has a straightforward implementation reminiscent of ridge regression. In addition, the SparseStep algorithm is compared with similar methods through a rigorous simulation study which shows it often outperforms existing methods in both model fit and prediction accuracy.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-01-24T16:31:29Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Gerrit J. J. van den Burg</name>
+    </author>
+    <author>
+      <name>Patrick J. F. Groenen</name>
+    </author>
+    <author>
+      <name>Andreas Alfons</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1502.03391v3</id>
+    <title>Fast Embedding for JOFC Using the Raw Stress Criterion</title>
+    <updated>2016-10-31T18:28:11Z</updated>
+    <link href="https://arxiv.org/abs/1502.03391v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1502.03391v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Joint Optimization of Fidelity and Commensurability (JOFC) manifold matching methodology embeds an omnibus dissimilarity matrix consisting of multiple dissimilarities on the same set of objects. One approach to this embedding optimizes the preservation of fidelity to each individual dissimilarity matrix together with commensurability of each given observation across modalities via iterative majorization of a raw stress error criterion by successive Guttman transforms. In this paper, we exploit the special structure inherent to JOFC to exactly and efficiently compute the successive Guttman transforms, and as a result we are able to greatly speed up the JOFC procedure for both in-sample and out-of-sample embedding. We demonstrate the scalability of our implementation on both real and simulated data examples.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-02-11T17:49:00Z</published>
+    <arxiv:comment>43 pages, 10 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Vince Lyzinski</name>
+    </author>
+    <author>
+      <name>Youngser Park</name>
+    </author>
+    <author>
+      <name>Carey E. Priebe</name>
+    </author>
+    <author>
+      <name>Michael W. Trosset</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1902.06125v2</id>
+    <title>Screening Rules for Lasso with Non-Convex Sparse Regularizers</title>
+    <updated>2019-02-19T13:01:17Z</updated>
+    <link href="https://arxiv.org/abs/1902.06125v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1902.06125v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Leveraging on the convexity of the Lasso problem , screening rules help in accelerating solvers by discarding irrelevant variables, during the optimization process. However, because they provide better theoretical guarantees in identifying relevant variables, several non-convex regularizers for the Lasso have been proposed in the literature. This work is the first that introduces a screening rule strategy into a non-convex Lasso solver. The approach we propose is based on a iterative majorization-minimization (MM) strategy that includes a screening rule in the inner solver and a condition for propagating screened variables between iterations of MM. In addition to improve efficiency of solvers, we also provide guarantees that the inner solver is able to identify the zeros components of its critical point in finite time. Our experimental analysis illustrates the significant computational gain brought by the new screening rule compared to classical coordinate-descent or proximal gradient descent methods.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-02-16T17:08:56Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Alain Rakotomamonjy</name>
+      <arxiv:affiliation>LITIS</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Gilles Gasso</name>
+      <arxiv:affiliation>LITIS</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Joseph Salmon</name>
+      <arxiv:affiliation>IMAG, Univ. Montpellier</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1508.02958v2</id>
+    <title>Algorithmic Design of Majorizers for Large-Scale Inverse Problems</title>
+    <updated>2015-10-22T01:47:16Z</updated>
+    <link href="https://arxiv.org/abs/1508.02958v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1508.02958v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Iterative majorize-minimize (MM) (also called optimization transfer) algorithms solve challenging numerical optimization problems by solving a series of "easier" optimization problems that are constructed to guarantee monotonic descent of the cost function. Many MM algorithms replace a computationally expensive Hessian matrix with another more computationally convenient majorizing matrix. These majorizing matrices are often generated using various matrix inequalities, and consequently the set of available majorizers is limited to structures for which these matrix inequalities can be efficiently applied. In this paper, we present a technique to algorithmically design matrix majorizers with wide varieties of structures. We use a novel duality-based approach to avoid the high computational and memory costs of standard semidefinite programming techniques. We present some preliminary results for 2D X-ray CT reconstruction that indicate these more exotic regularizers may significantly accelerate MM algorithms.</summary>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-08-12T15:35:02Z</published>
+    <arxiv:comment>10 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.CO"/>
+    <author>
+      <name>Madison G. McGaffin</name>
+    </author>
+    <author>
+      <name>Jeffrey A. Fessler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2209.09179v1</id>
+    <title>SD-Based Low-Complexity Precoder Design for Gaussian MIMO Wiretap Channels</title>
+    <updated>2022-09-19T16:57:25Z</updated>
+    <link href="https://arxiv.org/abs/2209.09179v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2209.09179v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper considers a Gaussian multi-input multi-output (MIMO) multiple access wiretap (MAC-WT) channel, where an eavesdropper (Eve) wants to extract the confidential information of all users. Assuming that both the legitimate receiver and Eve jointly decode their interested messages, we aim to maximize the sum secrecy rate of the system by precoder design. Although this problem could be solved by first using the iterative majorization minimization (MM) based algorithm to get a sequence of convex log-determinant optimization subproblems and then using some general tools, e.g., the interior point method, to deal with each subproblem, this strategy involves quite high computational complexity. Therefore, we propose a simultaneous diagonalization based low-complexity (SDLC) method to maximize the secrecy rate of a simple one-user wiretap channel, and then use this method to iteratively optimize the covariance matrix of each user. Simulation results show that in contrast to the existing approaches, the SDLC scheme achieves similar secrecy performance but requires much lower complexity.</summary>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-09-19T16:57:25Z</published>
+    <arxiv:comment>7 pages, 5 figures, has been accepted by Globecom 2022 workshop. arXiv admin note: substantial text overlap with arXiv:2209.05403</arxiv:comment>
+    <arxiv:primary_category term="cs.IT"/>
+    <author>
+      <name>Hao Xu</name>
+    </author>
+    <author>
+      <name>Kai-Kit Wong</name>
+    </author>
+    <author>
+      <name>Giuseppe Caire</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1408.6686v2</id>
+    <title>Sparse Generalized Eigenvalue Problem via Smooth Optimization</title>
+    <updated>2014-11-18T07:07:13Z</updated>
+    <link href="https://arxiv.org/abs/1408.6686v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1408.6686v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we consider an $\ell_{0}$-norm penalized formulation of the generalized eigenvalue problem (GEP), aimed at extracting the leading sparse generalized eigenvector of a matrix pair. The formulation involves maximization of a discontinuous nonconcave objective function over a nonconvex constraint set, and is therefore computationally intractable. To tackle the problem, we first approximate the $\ell_{0}$-norm by a continuous surrogate function. Then an algorithm is developed via iteratively majorizing the surrogate function by a quadratic separable function, which at each iteration reduces to a regular generalized eigenvalue problem. A preconditioned steepest ascent algorithm for finding the leading generalized eigenvector is provided. A systematic way based on smoothing is proposed to deal with the "singularity issue" that arises when a quadratic function is used to majorize the nondifferentiable surrogate function. For sparse GEPs with special structure, algorithms that admit a closed-form solution at every iteration are derived. Numerical experiments show that the proposed algorithms match or outperform existing algorithms in terms of computational complexity and support recovery.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-08-28T11:22:08Z</published>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Junxiao Song</name>
+    </author>
+    <author>
+      <name>Prabhu Babu</name>
+    </author>
+    <author>
+      <name>Daniel P. Palomar</name>
+    </author>
+    <arxiv:doi>10.1109/TSP.2015.2394443</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TSP.2015.2394443" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2102.08232v2</id>
+    <title>The MELODIC family for simultaneous binary logistic regression in a reduced space</title>
+    <updated>2022-06-24T12:37:50Z</updated>
+    <link href="https://arxiv.org/abs/2102.08232v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2102.08232v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Logistic regression is a commonly used method for binary classification. Researchers often have more than a single binary response variable and simultaneous analysis is beneficial because it provides insight into the dependencies among response variables as well as between the predictor variables and the responses. Moreover, in such a simultaneous analysis the equations can lend each other strength, which might increase predictive accuracy. In this paper, we propose the MELODIC family for simultaneous binary logistic regression modeling. In this family, the regression models are defined in a Euclidean space of reduced dimension, based on a distance rule. The model may be interpreted in terms of logistic regression coefficients or in terms of a biplot. We discuss a fast iterative majorization (or MM) algorithm for parameter estimation. Two applications are shown in detail: one relating personality characteristics to drug consumption profiles and one relating personality characteristics to depressive and anxiety disorders. We present a thorough comparison of our MELODIC family with alternative approaches for multivariate binary data.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-02-16T15:47:20Z</published>
+    <arxiv:comment>Comment [v2]: added a paragraph on page 7 about the equivalence to a logistic reduced rank model Comment [v2]: the description of the relationship towards logistic reduced rank models is updated on page 37</arxiv:comment>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Mark de Rooij</name>
+    </author>
+    <author>
+      <name>Patrick J. F. Groenen</name>
+    </author>
+    <arxiv:doi>10.1007/978-981-99-2240-6_4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-981-99-2240-6_4" title="doi"/>
+  </entry>
+</feed>

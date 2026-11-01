@@ -1,0 +1,46 @@
+{
+ "protocol_revision": "2026-10-11-execution-v2",
+ "run_id": "20261011T230400Z-claude-B10-onebit-half-tax",
+ "stream": "B10",
+ "packet_id": "A047",
+ "gap_id": "B10-ONEBIT-FINITE-P-TAX (A047 first unsupported line: uniform finite-p half tax)",
+ "attempt_id": "claude-B10-lead-1",
+ "method": "exact reduction to a two-basis qubit entropic uncertainty problem; analytic lemmas at p<=0.08 and near p=1/2; interval branch-and-bound elsewhere",
+ "mathematical_delta": "One-bit B09 tax improved from Delta(p) to tau*(p) <= Delta(p)/2 uniformly in dimension, biases and children; constant 1/2 sharp at p->0; block version conditional on a cited additivity theorem.",
+ "deliverable_status": "COMPLETE",
+ "mathematical_status": "CERTIFIED_LOCALLY_REVIEW_PENDING (one bit); CONDITIONAL (blocks)",
+ "claim_versions_used": [
+  "B09-BIASED-BLOCK-UNCERTAINTY v1 (ledger definitions only)",
+  "A046-AND-endpoint v1 (sharpness)",
+  "A047-SHARP-FIXED-CHILD-RARE-SELECTOR v1 (sharpness)"
+ ],
+ "claims_created_or_changed": [
+  "B10L-ONEBIT-HALF-TAX v1",
+  "B10L-BLOCK-HALF-TAX-PRODUCT v1"
+ ],
+ "source_artifacts": [
+  "REPORT.md",
+  "FROZEN_SPEC.json",
+  "code/certify_half_tax.py",
+  "code/checks.py",
+  "out/certificate.json",
+  "out/checks.json"
+ ],
+ "next_consumers": [
+  "A092",
+  "A087",
+  "A046",
+  "A047",
+  "A048",
+  "A049",
+  "A050"
+ ],
+ "next_action": "Bound sum over a C019 stopping tree of tau*(p_i) on essential revealed bits by K*I plus the C024 path-entropy slack, or find a tree where it fails.",
+ "stagnant_substantive_attempts": 0,
+ "blockers": [
+  "Schwonnek additivity not re-read (block claim conditional)"
+ ],
+ "packet_ids": [
+  "A047"
+ ]
+}

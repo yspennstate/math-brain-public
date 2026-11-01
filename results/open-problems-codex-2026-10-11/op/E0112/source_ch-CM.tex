@@ -1,0 +1,230 @@
+\newcommand{\vpat}{\varphi_{a,t}}
+
+ \chapter{Cameron-Martin transform and applications} \label{ch:CM}
+ 
+ In this section we extensively use the property that the a-priori measure for the polymer path is Wiener measure. A tilt on the polymer path reflects into a shift on the environment. 
+ 
+ \section{Tilting the polymer}
+ 
+ We extend the shear transformation (\ref{eq:tauxif} -- \ref{eq:tau}) to non-linear shifts $\varphi: \R_+ \to \rd$ by defining 
+ \begin{equation} \label{eq:htau}
+\hat \tau_\varphi f : s \mapsto f(s)+\varphi(s) \;, \quad \hat \tau_\varphi \circ \big(\sum_i \delta_{(t_i, x_i)}\big) = \sum_i \delta_{(t_i, x_i+\varphi( t_i))} \;,
+\end{equation}
+so that $\hat \tau_\varphi=\tau_\xi$ when $\varphi(t)=t \xi$ and 
+that $\hat \tau_\varphi \circ \om$ has same law as $\om$.
+\medskip
+
+Let $\varphi \in H_{0, {\rm loc}}^1:=\left\{ \varphi \in {\cal C}(\R_+,\rd); \varphi(0)=0, \dot \varphi \in L^2_{\rm loc} \right\}$  where the dot denotes time derivative.  
+Introduce the probability measure on the path space $P^{\varphi}$ which restriction to ${\cal F}_t$ has density relative to $P$ given by
+$$
+\big(\frac{d P^{\varphi}}{d P}\big)_{| {\cal F}_t}= \exp \left\{ \int_0^t \dot \varphi (s) dB(s) - \frac{1}{2} \int_0^t |\dot \varphi(s)|^2 ds\right\}
+$$
+for all $t >0$,
+with $B$ the canonical process. Then, by Cameron-Martin theorem, under the measure $P^{\varphi}$
+the process $W(t)=B(t)-\varphi(t)$ is a standard Brownian motion, and as in \eqref{eq:CMh} we write
+ \begin{eqnarray}
+ P\left[ \exp \{ \b \om(V_t(B))\} e^{ \int_0^t \dot \varphi (s) dB(s) - \frac{1}{2} \int_0^t |\dot \varphi(s)|^2 ds}
+  \right] 
+\nn &=& P^\varphi \left[ \exp \{ \b \om(V_t(\hat \tau_{\varphi}(W))\}\right] \\
+\nn &=& P\left[ \exp \{ \b \om(V_t(\hat \tau_{\varphi}(B)))\}\right] \\
+\nn &=& P\left[ \exp \{ \b \om(\hat \tau_{\varphi} (V_t (B)))\}\right] \\
+\nn &=& P\left[ \exp \{ \b (\hat \tau_{-\varphi} \circ \om)(V_t(B))\}\right] \\
+&=&   Z_t(\hat \tau_{-\varphi} \circ \om,\b) \nn \;,
+\end{eqnarray}
+yielding
+\begin{equation} \label{eq:CMphi}
+\gibbs \left[ \exp \{  \int_0^t \dot \varphi (s) dB(s) \}
+  \right] = \exp\{ \frac{1}{2} \int_0^t |\dot \varphi(s)|^2 ds\} \times \frac{ W_t(\hat \tau_{-\varphi} \circ \om,\b)}{ W_t( \om,\b)} \;.
+\end{equation}
+%%%%%
+\section{Consequences for weak disorder regime}
+In this section we assume that $\b \in (\bar \b_c^-, \bar \b_c^+)$, more precisely that $ W_\8( \om,\b)=\lim_{t } W_t( \om,\b)  >0$ a.s. 
+In particular, for a fixed $\varphi \in H_0^1$ (i.e., $\dot \varphi \in L^2$), we derive from \eqref{eq:CMphi} that 
+\begin{equation} \label{eq:phiH1}
+\gibbs \left[ \exp \{  \int_0^t \dot \varphi (s) dB(s) \}
+  \right]  \longrightarrow 
+\exp\{ \frac{1}{2} \|\dot \varphi\|_2^2 \} \times \frac{ W_\8(\hat \tau_{-\varphi} \circ \om,\b)}{ W_\8( \om,\b)} 
+\end{equation}
+a.s. as $t \to \8$.
+
+In view of \eqref{eq:CMphi}, a natural question is continuity 
+of $W_\8$ in the $\om$ variable: how does the limit depend on the environment ?
+%%%
+\begin{lemma} \label{lem:cW8}
+Assume that $W_\8(\om, \b)>0$. Let $\varphi_T \in {\cal C}(\R_+, \rd)$ be a family indexed 
+by $ T>0$ with $\varphi_T(0)=0$ which vanishes locally uniformly, i.e.,
+$$ \forall t>0, \quad  \|\varphi_T\|_{\8,t} := \sup\{ |\varphi_T(s)|; s \in [0,t]\}  \to 0 \quad {\rm as \ } T \to \8. $$
+Then we have, as $T \to \8$, 
+\begin{eqnarray} \label{eq:l721-1}
+{ W_\8(\hat \tau_{\varphi_T} \circ \om,\b)} &\longrightarrow& { W_\8( \om,\b)} \quad {\rm in\ } L^1{\rm -norm,}\\
+ \label{eq:l721-2}
+{ W_T(\hat \tau_{\varphi_T} \circ \om,\b)} &\longrightarrow& { W_\8( \om,\b)} \quad {\rm in\ } L^1{\rm -norm.}
+\end{eqnarray}
+\end{lemma}
+%%%
+The result can be compared to lemma \ref{lm:distanceWtxWt0}, where 
+we have already considered the effect of a shift on the environment. In the notation of \eqref{eq:htau}, that lemma deals with constant shifts 
+$\varphi=\varphi^{(x)}$ such that
+$\varphi^{(x)}(t) \equiv x$ for all $t$, and implies that 
+$$
+x \mapsto W_\8 ( \hat \tau_{\varphi^{(x)}} \circ \omega) \quad {\rm is\  Lipschitz\ continuous\ from\ } \rd {\rm \ to\ } L^1.
+$$
+In the above lemma \ref{lem:cW8}, the shift is not anymore constant.
+
+
+%%
+\begin{proof} Fix $t>0$ and decompose the difference $ W_\8(\hat \tau_{\varphi_T}\! \circ \om,\b) \!-\! { W_\8( \om,\b)}$ as
+$$ 
+ \{ W_\8(\hat \tau_{\varphi_T} \!\circ  \om,\b) \!-\! W_t(\hat \tau_{\varphi_T}\! \circ  \om,\b)\} \!+\! \{W_t(\hat \tau_{\varphi_T}\! \circ \om,\b) \!-\!  W_t( \om,\b)\} \!+\! \{ W_t( \om,\b)\! - \! W_\8( \om,\b)\}.
+$$
+Now, using triangular inequality and invariance in law of $\om$ under the shear transformation, we get
+\begin{eqnarray}
+\| { W_\8(\hat \tau_{\varphi_T}\! \circ \om,\b)} \!-\! { W_\8( \om,\b)}\|_1\! &\!\leq  \!&\! 2 
+\| W_\8( \om,\b) \!- \! W_t( \om,\b)\|_1 \!+\! 
+\| W_t(\hat \tau_{\varphi_T} \!\circ \om,\b) \!-\!  W_t( \om,\b)\|_1  \nn \\
+\label{eq:contW8}
+&=: & 2 \eps(t)+ \eps_t ( \varphi_T)
+\end{eqnarray}
+with $\eps(t)= \|W_\8-W_t\|_\8$ and 
+$\eps_t(\cdot)$ defined by the above formula.
+By assumption on $\b$ and proposition \ref{prop:UI},
+we have $\lim_{t \to \8} \eps(t)=0$. On the other hand,  for fixed $t$, $W_t(\hat \tau_{\varphi_T} \circ \om,\b) \to  W_t( \om,\b)$ a.s. as $T \to \8$, 
+and the variables $(W_t(\hat \tau_{\varphi_T} \circ \om,\b); T >0)$, $W_t( \om,\b)$ are uniformly integrable. Thus, the above convergence holds in $L^1$, which, combined with \eqref{eq:contW8}, completes the proof
+of \eqref{eq:l721-1}. 
+
+The proof of \eqref{eq:l721-2} is quite similar, writing this time the difference
+$$
+W_T(\hat \tau_{\varphi_T} \circ \om,\b)-  { W_\8( \om,\b)} = \{ W_T(\hat \tau_{\varphi_T} \circ \om,\b)- W_\8( \hat \tau_{\varphi_T} \circ \om,\b)\} +
+\{ W_\8( \hat \tau_{\varphi_T} \circ \om,\b)- W_\8( \om,\b)\},
+$$
+observing that the first term in the right-hand side has $L^1$-norm equal to $\|W_T-W_\8\|_1$, that the second one vanishes a.s. and is uniformly integrable. This completes the proof.
+\end{proof} 
+ %%%%%%%%
+
+For $a \in \rd, t>0$ define the function
+\begin{equation} \nn
+\vpat(s)=\frac{s \wedge t}{\sqrt t} a \;.
+\end{equation}
+From \eqref{eq:CMphi} with $\varphi=\vpat$, we have
+\begin{eqnarray}\label{eq:valdor}
+\gibbs \left[ e^{a \cdot \frac{B(t)}{\sqrt t}} \right] &=& e^{|a|^2/2} 
+\times \frac{ W_t(\hat \tau_{-\vpat} \circ \om,\b)}{ W_t( \om,\b)} 
+\;.
+%\\
+%& \stackrel{\P}{\longrightarrow} & e^{|a|^2/2} \;,
+%\label{eq:cvlaplace}
+\end{eqnarray}
+\begin{theorem} \label{prop:diff}
+Assume weak disorder, i.e., that $W_\8>0$. Then, as $t \to \8$,
+$$
+\gibbs \left[ e^{a \cdot \frac{B(t)}{\sqrt t}} \right] \stackrel{\P}{\longrightarrow}  e^{|a|^2/2}.
+$$
+\end{theorem}
+%%%
+%Though this result is rather weak, it
+%is a first step to prove  diffusivity of the polymer in the {\em full} weak disorder region. 
+%%%%%%%
+\begin{proof}
+ Note that the family $(-\vpat, t >0)$ satisfies the assumptions of lemma \ref{lem:cW8}. Writing  formula \eqref{eq:valdor} as 
+ $$
+ \gibbs \left[ e^{a \cdot \frac{B(t)}{\sqrt t}} \right] - e^{|a|^2/2} =  e^{|a|^2/2} 
+\times \frac{ W_t(\hat \tau_{-\vpat} \circ \om,\b) -  W_t( \om,\b)}{ W_t( \om,\b)} \;,
+ $$
+we see from Slutsky's lemma that this quantity vanishes as $t \to \8$.
+%t suffices to observe that the family $(-\vpat, t >0)$ satisfies the assumptions of lemma \ref{lem:cW8}, and to apply the lemma to the numerator of the RHS of  formula \eqref{eq:valdor}
+\end{proof}
+%%
+\begin{remark}
+In a suitable sense, this result shows that the polymer is diffusive if $W_\8>0$. Its interest is that it covers  the {\em full} weak disorder region, in contrast to \cite[Th. 2.1.1]{CYkokyuroku} which only applies to the $L^2$ region. It can be viewed as a step to prove  diffusivity at weak disorder region. 
+\end{remark}
+%%%%%
+\section{Moderate and large deviations at all temperature}
+ 
+ In this section, $\b \in \R$ is arbitrary.
+ 
+ \begin{theorem} \label{th:LD}
+ For $\P$-a.e. realization of the environment $\om$, the following holds.
+ \medskip
+ 
+ (i) For all Borel $A \subset \rd$, 
+ \begin{eqnarray}\nn
+ - \inf \{  \frac{|\xi|^2}{2}; \xi \in \mathring A\} & \leq \liminf_{t \to \8} \frac{1}{t} \ln \gibbs \left[ \frac{B(t)}{t} \in A \right] & \\ \nn
+ & \leq \limsup_{t \to \8} \frac{1}{t} \ln \gibbs \left[ \frac{B(t)}{t} \in A \right]  & \leq - \inf \{  \frac{|\xi|^2}{2}; \xi \in \overline A\} . 
+\end{eqnarray}
+ \medskip
+ 
+ 
+ (ii)  Let $t_n$ be a positive sequence increasing to $\8$, let $\chi >0$ such that
+ \begin{equation} \label{eq:hypMD}
+\sum_{n \geq 1} \P( | \ln Z_{t_n}(\om, \b) - \P[\ln Z_{t_n}(\om, \b)] | > t_n^\chi) < \8, 
+\end{equation}
+and let $\xi > (1+\chi)/2$. Then, for all Borel $A \subset \rd$, 
+ \begin{eqnarray}\nn
+ - \inf \{  \frac{|a|^2}{2}; a \in \mathring A\} & \leq \liminf_{t \to \8} t_n^{-(2\xi-1)} \ln P_{t_n}^{\b,\om} \left[ \frac{B({t_n})}{t_n^\xi} \in A \right] & \\ \nn
+ & \leq \limsup_{t \to \8}  t_n^{-(2\xi-1)} \ln P_{t_n}^{\b,\om} \left[ \frac{B({t_n})}{t_n^\xi} \in A \right]  & \leq - \inf \{  \frac{|a|^2}{2}; a \in \overline A\} . 
+\end{eqnarray}
+ \end{theorem}
+ Part (i) is the almost sure large deviation principle for the polymer endpoint. The rate function $a \mapsto |a|^2/2$ is called the shape function in the polymer framework.
+ In view of (\ref{eq:ph=}--\ref{eq:p0=}) it is no surprise. 
+ 
+ Part (ii) is an almost sure moderate deviation principle. The rate function is the same as before. Since \eqref{eq:hypMD} is expected to hold for all $\chi > \xi^\parallel$, we derive that the polymer endpoint lies 
+ at time $t_n$ within a distance $t_n^{ \xi^\parallel + \eps}$  with overwhelming probability for all positive $\eps$. Hence we get a relation between characteristic exponents
+ \begin{equation} \label{eq:exprelation}
+ \xi^\perp  \leq \frac{1+  \xi^\parallel}{2} \;.
+\end{equation}
+Since $ \xi^\parallel \leq 1/2$ from theorem \ref{th:var} and corollary \ref{cor:var1}, we derive a bound for all values of $d$:
+ \begin{equation} \label{eq:exprelation3/4}
+ \xi^\perp  \leq 3/4  \;.
+\end{equation}
+ %%%
+ \begin{proof} We start with (i). 
+ Using \eqref{eq:CMphi} with $\varphi=\varphi_t$ given by $\varphi_t(s)= (s \wedge t )a$, we get
+\begin{eqnarray}
+\ln \gibbs[ e^{a \cdot B(t)}] &=& \frac{t |a|^2}{2} + \ln W_t(\tau_a \circ \om, \b) -  \ln W_t( \om, \b) \nn \\
+ &=& \frac{t |a|^2}{2} + \big(\ln W_t(\tau_a \!\circ \om, \b) - \P[\ln W_t(\tau_a\! \circ \om, \b)]\big)+ \big( \ln W_t( \om, \b) - \P[\ln W_t(\om, \b)]\big),\nn 
+ \end{eqnarray}
+and by theorem \ref{th:freeenergy} the set $\Omega_a$ of environments such that 
+\begin{equation}\label{eq:huawei}
+\lim_{t\to \8}  \frac{1}{t}\ln \gibbs[ e^{a \cdot B(t)}] = \frac{ |a|^2}{2} 
+\end{equation}
+has full $\P$-measure. We now claim that on the event $\overline \Omega= \bigcap_{a \in \Q^d} \Omega_a$ the above limit holds for all $a \in \rd$.  
+Indeed, the maps $a \mapsto \frac{1}{t}\ln \gibbs [ e^{a \cdot B(t)}] $ are convex, and the convergence is locally uniform on the closure $\rd$ of $\Q^d$, see Th. 10.8 in \cite{Roc70}.
+Then, the large deviation principle  (i) follows from the G\"artner-Ellis-Baldi theorem (\cite{DeZe98}, p.44, Th.2.3.6), with the rate function 
+$$|\xi|^2/2 = \sup \{ |a|^2/2; a \in \rd\}.$$
+
+For the proof of (ii) we proceed as above. By \eqref{eq:CMphi} with $\varphi_t(s)= (s \wedge t )t^{\xi-1}a$, we first write
+\begin{eqnarray}\nn
+t^{-(2\xi-1)}\ln \gibbs[ e^{t^{\xi-1}a \cdot B(t)}] &=& \frac{|a|^2}{2} + t^{-(2\xi-1)} \big(\ln W_t(\hat \tau_{-\varphi_t} \!\circ \om, \b) - \P[\ln W_t(\om, \b)]\big)\\
+&& \qquad \qquad +  t^{-(2\xi-1)} \big( \ln W_t( \om, \b) - \P[\ln W_t(\om, \b)]\big).\nn 
+ \end{eqnarray}
+ Now, in order to take the limit we restrict to the sequence $t=t_n$: using Borel-Cantelli lemma, we indeed get the a.s. limit \eqref{eq:huawei} along the sequence $t_n$. 
+ From then on, the other arguments go through without any change.
+ \end{proof}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

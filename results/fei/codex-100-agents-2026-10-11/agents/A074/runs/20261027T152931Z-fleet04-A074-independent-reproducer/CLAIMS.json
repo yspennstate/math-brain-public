@@ -1,0 +1,60 @@
+[
+  {
+    "claim_id": "A072-EXACT-THREE-BIT-FULL-DRIFT-MAXIMUM",
+    "version": 1,
+    "exact_statement": "For every Boolean outer gate h on three uniform output inputs, every Boolean core g on three uniform physical bits, and two fresh uniform dictator cores, let F=h(g,y1,y2) with g substituted in any selected gate input. For each relevant coordinate i of g with Inf_i(F)>0, let C=H(F)-q H(g), where q is the pivotal probability of the selected gate input under the other two uniform outputs. The maximum over this entire finite domain of (average_b C(F|x_i=b)-C(F))/Inf_i(F) is exactly 3 log2(3)-4. All entropies use full squared Fourier spectra in bits. In particular a universal full-drift coefficient 1/2 is false.",
+    "hypotheses": [
+      "Actual sign-valued Boolean truth tables; uniform independent physical bits",
+      "One queried three-bit core; two other cores are fresh one-bit dictators",
+      "Query has positive physical influence; constant/dummy cases have zero drift and are included separately"
+    ],
+    "statement_sha256": "a1fba9c85283811e6060686b836193a0ad8858377c968443aed720b50b1c07d4",
+    "contributors": [
+      "A072"
+    ],
+    "proof_source": [
+      "agents\\A072\\runs\\20261027T083832Z-fleet04-A072-exact-walsh-engine\\CLAIMS.json",
+      "agents\\A072\\runs\\20261027T083832Z-fleet04-A072-exact-walsh-engine\\REVIEW.md",
+      "agents\\A072\\runs\\20261027T083832Z-fleet04-A072-exact-walsh-engine\\out\\FULL_CERTIFICATE.json",
+      "PROOF.md",
+      "code/census.py",
+      "code/audit.py",
+      "out/MAIN.json",
+      "out/AUDIT.json"
+    ],
+    "proof_dependencies": [
+      "A084-SHARP-BOOLEAN-ROW-CONTINUUM@1 (independently reconstructed complete-row identity only)"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A074",
+        "independent_reviewer": true,
+        "verdict": "HOLDS_UNCHANGED_SCOPE",
+        "method": "Different complete enumeration:35 oriented edge-count profiles, all256 gates, actual full parent/child entropy via bitset characters. Coverage of all768 core/query pairs. Exact prime-power signs plus separate rational-log sign audit and literal direct-character witness. No source code imported or run.",
+        "evidence": [
+          "PROOF.md",
+          "out/FROZEN_SPEC.json",
+          "out/MAIN.json",
+          "out/main_COVERAGE.json",
+          "out/AUDIT.json"
+        ],
+        "scope": "Entire finite maximum3log2(3)-4, arbitrary selected gate input/query coordinate by relabeling, positive and zero influence boundaries, and literal Boolean1/2-rate refutation; no arbitrary-dimensional upper bound.",
+        "source_claim_file_sha256": "497d32b7b737e7366ccf4b3b588739644c90f6ec52ab574b0b3bbc81ca608ac5",
+        "source_statement_only_sha256": "a559d3434d1645bb43c8b019a0bb315067bab9414791cc1b74889695a2446833",
+        "metadata_normalization": "Only statement_sha256 normalized to compact statement+ordered-hypotheses JSON convention; mathematical statement/hypotheses/version unchanged."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_UNCHANGED_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      "LOCAL-UNREGISTERED-GUESS-FULL-DRIFT-RATE-1/2"
+    ],
+    "first_unproved_line": "No all-dimensional full-drift bound below the accepted scalar bound is inferred; initial arbitrary-core O(I) source payment remains unproved.",
+    "next_consumers": [
+      "A075",
+      "A074",
+      "A084",
+      "A092"
+    ]
+  }
+]

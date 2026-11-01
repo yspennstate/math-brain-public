@@ -1,0 +1,76 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target": "RS-2026-CL-A",
+  "category": "HARD OUTSIDE",
+  "source": "Anastasia Kireeva, Randomstrasse 101, Low-degree hardness of finding the largest clique in Erdos-Renyi graph (problems 36-38), posted 2026-06-05, first displayed Open Problem 35",
+  "captured_master_sha": "ce1a10066959f2f13a5933a1c27dc5c0870d8df7",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T04-38-30Z__report.md",
+    "creation_commit": "5e6eee365f764c90cfa8a7cf8b723486d5554388",
+    "blob": "f233569c1869c4528697561a7639f7592cfc19be"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T05-42-00Z__report.md",
+    "creation_commit": "106f1ec34f16d87c969fc745b522cdcb32cd2750",
+    "blob": "3b69c53262e301ab1157e5bb6b3d9b53426e4839"
+  },
+  "metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": "NO FROZEN-METRIC MOVEMENT; source-generalization obligation moved materially"
+  },
+  "status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / REPLICA_LINEAR_CLUSTER_AND_PRIOR_STABILITY_PROGRESS",
+  "historical_initial_methods": ["B2", "B27", "B21"],
+  "methods": ["B25", "B15", "B22"],
+  "method_outcomes": {
+    "B25": "Exact count-twice identity equates aggregate posterior/free-energy pressure and latent two-copy Gram pressure. Under a convergent common cluster expansion, bulk replica linearity Phi_2=2 Phi_1 outside an interface gives Pi_2 <= (C_2+2 C_1)|I|; approximate rooted bulk mismatch rho gives Pi_2 <= (C_2+2 C_1)|I|+N rho.",
+    "B15": "Normalizer-balanced priors are quantitatively stable: pointwise density-ratio distortion exp(+-epsilon) costs at most 2 epsilon in Renyi pressure; a Gram-operator bound gives L2 prior stability. Exact biased-sign stress yields Pi_2=n log(1+m_n^2 tanh(lambda)^2), so n m_n^2=o(D_n) is the source-scale prior-bias threshold.",
+    "B22": "High temperature, approximate tensorization, and quasi-local spectral flow do not by themselves imply source-scale pressure. A checkable sufficient local hypothesis is two-replica factor-table decoupling outside a small interface plus KP/rooted convergence; approximate local decoupling must have rooted mismatch rho_n=o(D_n/N_n)."
+  },
+  "new_mechanisms": [
+    "Replica-connected pressure Pi_2=log Z_2-2 log Z_1, so replica-linear bulk cluster contributions cancel exactly.",
+    "Deterministic interface bound Pi_2 <= (C_2+2 C_1)|I| and approximate bound Pi_2 <= (C_2+2 C_1)|I|+N rho.",
+    "Prior/quadrature robustness via pointwise density ratio and latent Gram operator.",
+    "Factor-table replica-decoupling criterion explaining why bulk volume free energy cancels."
+  ],
+  "source_status": "PARTIAL; no source-wide necessary-and-sufficient characterization claimed",
+  "source_check_date": "2026-09-19",
+  "later_comparators": [
+    "Songtao Mao, arXiv:2607.20318 (mandatory negative stress)",
+    "Hsieh-Kane-Kothari-Li-Mohanty-Tiegel, arXiv:2601.05850 / STOC 2026",
+    "Xuan Chen and Shuangping Li, arXiv:2608.06279"
+  ],
+  "prior_art": [
+    "Kotecky-Preiss/polymer and cluster expansions",
+    "Daniel Ueltschi, math-ph/0304003",
+    "Caputo-Menz-Tetali, arXiv:1405.0608",
+    "De Roeck-Schutz, arXiv:1512.07612",
+    "Renyi/collision entropy and Gibbs variational formulas",
+    "Kato/Toda/QR and Davies-Combes-Thomas transport machinery"
+  ],
+  "novelty": "UNVERIFIED",
+  "qualifying_independent_audits": "0/2",
+  "p26_audit": "ABSENT in fresh exact-token search",
+  "other_track_audit": "ABSENT",
+  "hard_recovery_cycles_consumed": 1,
+  "same_obligation_stagnation": 0,
+  "new_checker": "none; no new finite enumerative claim",
+  "remaining_obligation": [
+    "Extend deterministic replica-linear interface pressure to posterior-random interfaces with exponential-moment/tail control.",
+    "Derive explicit KP/rooted constants and replica mismatch from bounded-arity factor tables rather than assuming a cluster expansion.",
+    "Compare replica-mismatch sufficiency with the diagonal collision-entropy lower obstruction for near-necessity.",
+    "Push prior stability through the interacting weak-Ising torus/sign-bulk class.",
+    "Determine pressure-to-degree optimality under scalar L2 pressure versus positive Gram structure.",
+    "Complete prior-art reconciliation and obtain P26 plus one distinct OTHER full theorem/source audit."
+  ],
+  "next_methods": ["B3", "B30", "B21"],
+  "next_attack": "Prove a posterior-random-interface replica-linear cluster theorem; explicitly construct one/two-replica polymer activities from bounded factor tables and verify first interface scales; search replica/cavity, contour free-energy, Renyi and local-perturbation cluster literature for an existing O(interface) free-energy-difference theorem.",
+  "model_actual": "GPT-5.6 Sol",
+  "reasoning_actual": "UNVERIFIED",
+  "requested_model": "GPT-6",
+  "requested_reasoning": "maximum",
+  "model_control": "prompt-only; exposed automation schema has no authenticated model-family or reasoning-effort selector",
+  "delivery": "GitHub only"
+}

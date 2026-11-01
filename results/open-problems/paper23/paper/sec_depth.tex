@@ -1,0 +1,73 @@
+\section{Depth: phase transitions and the dynamical limit}\label{sec:depth}
+
+The gate density controls a phase transition in depth. Above a density threshold the optimized product
+norm can grow and fragility persists to any depth; below it, the norm contracts and the network becomes
+globally robust and eventually near-constant. The threshold is the contraction constant of the
+optimized submatrix product, and the transition is sharp in the density. We also record the
+weight-tied limit, where one Gaussian matrix is reused across depth and the long-time behaviour is set
+by the eigenvalue radius of cyclic submatrix products rather than the operator norm.
+
+\subsection{Density thresholds}
+\begin{theorem}[Depth phase transition]\label{thm:phase}
+Consider a depth-$L$ gated Gaussian network with all gate densities equal to $\alpha$, in the
+signal-preserving normalization. Let $\alpha^*=0.042672$ be the root of $\kappa(\alpha)=1/4$ and, for
+fixed support, $\alpha^*_k=(k^k/(k+1)^{k+1})^{1/k}$.
+\begin{enumerate}
+\item If $\alpha<\alpha^*$, then w.h.p.\ the optimized Jacobian operator norm $\prod$-bracket
+contracts, $\max_{S_\bullet}\|J\|_\op\le(2\sqrt{\kappa(\alpha)})^L\to0$, and by \Cref{thm:sparse-robust}
+the network is globally robust: every input has certified radius growing with depth, and no
+single-step attack succeeds for large $L$.
+\item If $\alpha^*<\alpha<1$, the operator-norm bracket does not force contraction: the optimized
+product norm can exceed one, so fragility of the type in \Cref{thm:master} is possible at every depth,
+and the realized-pattern Jacobian is $\Theta(1)$ so the fragility radius stays $\Theta(\|x\|/\sqrt n)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Part (1) is \Cref{prop:contract} and \Cref{thm:sparse-robust}. For part (2), at $\alpha>\alpha^*$ the
+upper bracket $(2\sqrt{\kappa(\alpha)})^L$ exceeds one and grows, so it does not certify contraction;
+the realized-pattern Jacobian has the signal-preserving $\Theta(1)$ norm of \Cref{prop:gradlb}, so the
+gradient lower bound and hence \Cref{thm:master} apply at every fixed depth.
+\end{proof}
+
+The gap between $\alpha^*=0.043$ (optimized) and $\alpha^*_k$ (fixed support, e.g.\ $0.535$ at $k=4$)
+is the entropy the adversary buys by choosing patterns: a fixed half-support product of length $4$
+already contracts, while the optimized-support threshold stays near $\alpha^*$, because the optimizer
+can find the rare non-contracting pattern. This is the operator-norm face of the certification gap.
+
+\subsection{The weight-tied dynamical limit}
+When one Gaussian matrix $W$ is reused at every layer, $x_{t+1}=\sigma(Wx_t)$, the per-step map is a
+gated copy of $W$ and the long-time behaviour is a question about cyclic products of its submatrix
+blocks. The relevant facts, from the companion analysis \cite{relumap}, are that the state norm
+contracts at the fresh-Gaussian rate, that the activation density is $1/2$, and that no expanding
+direction survives:
+
+\begin{proposition}[Weight-tied contraction; {\cite{relumap}}]\label{prop:tied}
+Let $W$ be $N\times N$ with i.i.d.\ $N(0,1/N)$ entries and $x_{t+1}=\sigma(Wx_t)$ for ReLU $\sigma$.
+For every fixed horizon $T$ and deterministic input, w.h.p.\ $\|x_t\|^2\to 2^{-t}$ for $t\le T$ and the
+gate density is $1/2$. For every fixed $r>2^{-1/2}$, w.h.p.\ there is no ReLU ray of multiplier
+$\ge r$, so every trajectory whose normalized direction converges decays at every rate exceeding
+$2^{-1/2}$. The sustained gain of a period-$p$ cycle is the eigenvalue radius of the cyclic submatrix
+product, $2^{-p/2}$ for asymptotically free blocks by Haagerup--Larsen, below one for all $p\ge2$.
+\end{proposition}
+
+The relevance to fragility is that the output at depth $t$ is $|F|\asymp\|x_t\|\asymp2^{-t/2}\|x_0\|$
+(random readout) while the Jacobian also contracts, so the ratio --- the fragility radius --- is set by
+the competition between the two, and the eigenvalue-radius contraction of \Cref{prop:tied} shows the
+Jacobian never expands along a cycle even though its submatrix operator norm exceeds one. The
+weight-tied network is thus in the robust phase for the sustained (deep, cyclic) part of its dynamics,
+and the fragility is a finite-horizon phenomenon governed by the transient submatrix products. This is
+the dynamical-systems reading of the density threshold: the reused-weight map has effective density
+$1/2>\alpha^*$, so it is fragile at finite depth, but its cyclic eigenvalue radius is contractive, so it
+does not sustain an expanding adversarial direction.
+
+\begin{remark}[Why the singular value and the eigenvalue disagree]\label{rem:sv-vs-ev}
+The half-by-half submatrix operator norm is $\sqrt2>1$, and its optimized-support maximum is larger
+still, up to $2\sqrt{\kappa(1/2)}=1.927$; yet the cyclic eigenvalue radius is $2^{-p/2}<1$. The gap is
+the non-normality of the gated product, and it is why bounds on submatrix \emph{singular} values alone
+cannot decide the infinite-time dynamics --- the ReLU sign constraint, which selects a specific
+nonnegative-cone-feasible pattern, is what collapses the operator-norm bracket to the eigenvalue radius.
+The same distinction underlies the certification gap: an adversary works with singular values (worst
+pattern, operator norm), while the sustained dynamics works with eigenvalues (realized cycle, spectral
+radius).
+\end{remark}

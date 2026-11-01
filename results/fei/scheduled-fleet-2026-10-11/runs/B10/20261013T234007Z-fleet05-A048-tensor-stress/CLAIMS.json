@@ -1,0 +1,42 @@
+[
+  {
+    "claim_id": "A048-ACTUAL-DESCENDANT-SCHEDULE-INJECTION",
+    "version": 1,
+    "exact_statement": "For every r>=1,k>=2 on the uniform cube, F=(product of r disjoint k-bit point-defect signs)*(parity on 2^r fresh indexed coordinates) admits an all-essential partial singleton tree querying the first bit of each defect and then the parity coordinate indexed by those r outcomes. With transcript Pi, output Y, coherent root Fourier set S0, actual ambient terminal Fourier set W=S0\\Q(Pi), d=2^(1-k) and j_k=h2(v/2)-h2(v)/2 for v=4*2^(-(k-1))*(1-2^(-(k-1))), its removed influence is R=1+rd, I(Y;Pi)=0, I(S0;Pi)=r*j_k, I(W;Pi)=r, Gamma_W=H(Pi|Y)-H(Pi|W)=r, and I(W;Pi|S0)=H(Q|S0)=r*(1-j_k). Terminal I is 2^r-1+r*(k-1)*d, terminal expected Fourier entropy is r*H(h_(k-1))/2, and root entropy is r*H(h_k). For k=2r+2 the conversion Gamma_W/2 divided by R diverges; r=4,k=10 certifies Gamma_W/2=2>R/ln2 with R=129/128. All quantities add on independent tensor products. For any coherent tree with W=S0\\Q(Pi), I(W;Pi)<=I(S0;Pi)+H(Q|S0), and a fixed final query set restores root-Markov compatibility. This refutes only the exploratory application of an unchanged removed-influence root-compatible conversion bound to actual descendant witnesses; it does not refute A047 v1 or FEI.",
+    "hypotheses": [
+      "Uniform finite cube; original ambient coordinate labels retained",
+      "Actual Boolean sign and fresh-coordinate physical partial stopping tree",
+      "Function-specific coherent reveal kernel; terminal entropy and influence retained",
+      "Entropy in bits; no descendant relabeling without decoder schedule"
+    ],
+    "statement_sha256": "b49542fb49369183db53fa116c3ff594b91ba05b2c53fbde8fd59dc329239106",
+    "contributors": [
+      "A048"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/check.py",
+      "out/CHECK.json",
+      "out/FORMULA_AND_VIOLATION.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "EXISTING_SCOPE_OBJECTION_PROVED_AND_EXACTLY_CHECKED_LOCALLY_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Exploratory extension: actual normalized descendant Fourier marginal alone suffices for root-compatible conversion <=K times removed influence with dimension-independent K"
+    ],
+    "first_unproved_line": "The same normalized witness reference pays adaptive schedule entropy H(Q|S0)/2, signed erasure and full terminal Fourier entropy through nonduplicated physical influence.",
+    "next_consumers": [
+      "A047",
+      "A050",
+      "A057",
+      "A064",
+      "A091",
+      "A092",
+      "A087",
+      "B10",
+      "B20"
+    ]
+  }
+]

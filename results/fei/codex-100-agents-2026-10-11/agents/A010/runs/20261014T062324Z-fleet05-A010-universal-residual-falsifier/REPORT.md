@@ -1,0 +1,29 @@
+# exact target, quantifiers, hypotheses and units
+
+A010/B02 stage5, universal residual falsifier. Test all-weight versus chosen-weight statements using the new root-law relaxation. Actual f_m=x_0 AND OR_m, its full positive prime table, pi=1/4, globally fixed positive feasible weights and fixed actual partition event family. Natural-unit gaps convert to bits with ln2>1/2. Complete cost and surrogate residual are distinct; neither a certificate gap nor one chosen weight falsifies the variational infimum.
+
+# sources actually read, revisions and theorem locators
+
+Execution protocol v2 read in full; current BOARD and B02 lead notes v2; own prior STATUS and stage4 claims/progress/helpers. Source receipts bind A006 ROOT_LAW_RELAXATION.md (entire theorem), JOINT_EDGE_SLICE.md (context), A008 REVIEW_A010.md (whole acceptance) and CONNECTED_SCALES.md (connected example now closed), A009 PRIVATE_LEAF_PAYMENT.md (arbitrary cores with private leaves). Their new results replace our previous connected-graph NEXT; we do not repeat those tests. Earlier protocol/papers baseline remains the prior-stage source chain. No new external literature claim is used. A006 source run lacks a registered CLAIMS.json at inspection, so acceptance is of its exact document, not an invented version.
+
+# complete derivation or exact first unsupported line
+
+PROOF.md reconstructs the A006 relaxation as a whole with no repair. New analytic all-weight obstruction: every event at the full star spectral set uses every edge, so its contribution to h_all is exactly D/product lambda. Since D>=sum lambda/4 and packing gives product lambda<=(sum lambda/m)^m, Gamma>=m^m/4-1+4^-m at EVERY feasible positive weight. Actual I<=5/4, while the known complete star choice C_MS<=11I remains available. This is failure of the full-simplex tangent certificate, not cost growth or disproof of its valid lower-bound theorem. Packing caps p(T)<=4^(1-k)/k^k yield a smaller relaxation and exact LP global gap. The first unsupported line is influence-payment of the capped certificate in all dimensions for the FULL event family on shared/leafless incidence; selected-family lower bounds cannot transfer to more events.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+Frozen FROZEN_SPEC.json preceded search; capped continuation separately frozen in FROZEN_SPEC_V1_1.json. Commands: python -X utf8 code/rootlaw.py pilot; python -X utf8 code/rootlaw.py; python -X utf8 code/caps.py, each from this run or with its full relative path. Pilot 7 n3 graphs/14 references plus m2,3 stars; full 63 labelled n4 graphs/126 rational references plus seven actual stars m2..8. Integer FWHT and pivotal counting agree. Independent coefficients retain matching-root/count and chronological probabilities and satisfy Q=Kp=W/D and sum p*h=v exactly. No author A006 code was imported. Capped primal equals threshold dual with rational arithmetic, Gamma_cap<I/6 in all seven cases; therefore reference bit cost is within I/3 of its ALL-weight/ALL-posterior matching-star infimum. Runtime and all exact values are in out/pilot.json, rootlaw.json and caps.json. Estimated memory 50MB; no job expected above 300MB, so memok was not required. No dimension escalation or floating signs. These certificates apply to fixed event families, not alternative gate tables or all forests.
+
+# proof dependencies and changed downstream conclusions
+
+A006 whole-document review HOLDS, registration absent; A008 whole acceptance of our previous theorem consumed without statement change. The new lower certificate requires only complete monomial probabilities and actual physical P. The star cost upper sublemma is inherited from our previously reconstructed complete numerator payment independently accepted by A008. The uncapped tangent gap cannot serve as an influence-paid uniform global optimality certificate even on stars; use incidence constraints before trying global variational falsification. No theorem that the actual simplex optimum has a poor lower bound is claimed. New A010 result awaits independent review. Universal PI-J and FEI remain OPEN.
+
+# one next mathematical action and independent reviewer
+
+Derive the cardinality formula for the capped star gradient LP with the FULL partition numerator, then transfer only exact packing constraints to shared/leafless graph incidence. A006/A008/A086 review independently; A009 consumes the cap/weight interface. This first resolves the event-family quantifier before any claim of universal variational growth.
+
+# actual persistence receipts or precise save blocker
+
+Four protocol files, proofs/review, two frozen specs, independent code and exact outputs are saved locally. out/SOURCES.json records exact source hashes; out/RECEIPTS.json records final artifact sizes and SHA256, with generation command python -X utf8 code/finalize.py. CLAIMS statements are rehashed and schema keys checked against the protocol; PROGRESS and PACKET_DELTA are byte-identical. Rolling STATUS.md, WORKLOG.md and LEARNED.md updated. No file exceeds 20MB. Supervisor mirrors and public release are unverified; no writes outside A010.
+
+**Universal bridge:** This stage moves C020/PI-J whole-set witness cost by replacing a provably unbounded all-weight certificate gap (at least m^m/4-1+4^-m) with an incidence-aware exact global joint certificate whose bit gap is below I/3 in all seven frozen stars. It does not add another FEI class result: these stars were already paid, and they expose a failure in the proposed universal falsifier machinery. What remains is the all-dimensional capped payment for the full partition posterior on shared/leafless incidence. The NEXT resolves that missing quantifier and preserves physical root constraints, the shortest route to deciding genuine variational growth rather than repeating fixed-reference counterexamples.

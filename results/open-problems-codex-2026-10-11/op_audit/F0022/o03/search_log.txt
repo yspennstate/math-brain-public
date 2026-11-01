@@ -1,0 +1,5 @@
+Audit date: 2026-10-12
+Direct urllib downloads: https://arxiv.org/pdf/1107.0158 ; https://arxiv.org/pdf/math/0301160 ; https://arxiv.org/pdf/1602.00644 (all HTTP 200).
+ArXiv broad query: all:percolation AND (all:"free energy" OR all:"cluster numbers"), max_results=30, sortBy=submittedDate descending, HTTP 200.
+ArXiv targeted query: ti:percolation AND (all:"singularity" OR all:"cluster numbers" OR all:"mean number of clusters"), max_results=40, HTTP 200.
+OpenAlex: https://api.openalex.org/works?search=percolation%20cluster%20number%20singularity&per_page=15 ; HTTP 429. No negative inference from rate limit.

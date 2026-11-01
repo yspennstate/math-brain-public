@@ -1,0 +1,65 @@
+{
+  "helper_version": "A046-correlated-post-controller-reset-v1",
+  "Boolean_family": "F_h(x,a,b,z)=(-1)^a on x0; h(z) on x=b=1; +1 otherwise. h is product of m width-r point signs.",
+  "domain": {
+    "pilot": {
+      "m": 1,
+      "r": 2,
+      "data_prefix": "first",
+      "controller": "x"
+    },
+    "main": {
+      "m_r": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "data_prefix": [
+        "first",
+        "adaptive"
+      ],
+      "controller": [
+        "x",
+        "a",
+        "mixed"
+      ]
+    }
+  },
+  "case_count": {
+    "pilot": 1,
+    "main": 18
+  },
+  "physical_dimension_max": 9,
+  "symmetry": "none; labelled fair histories with original reaches",
+  "reference": "Original A050 correlated tensor lift; after b and data prefix, expose x/a. Reset x1 core child to conditional tensor q_g; leave x0 and b0 inherited. For a reset both mux children to copied-zero-data two-sector q_g lifts. No incoming root renewal.",
+  "old_booking": "1/4 carried once",
+  "arithmetic": "Integer Walsh and independent direct character checks; Fraction; 32-term rational atanh bounds with proved tail and outward2^-110 rounding",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": 55,
+  "pilot_max_seconds": 55,
+  "primary_exact_predicates": [
+    "factor conditional-variance expectation <= m v_r",
+    "actual full new-reference KL <= (1/4) log2(8/7) m v_r < m2^-r/4",
+    "actual signed reset sigma <= fresh KL cap",
+    "root source/reset/terminal chain complete",
+    "same-owner signed payment after oldquarter >7/10 finite; analytic theorem >=3/4"
+  ],
+  "all_dimension_target": "Every m>=1,r>=2 and finite adaptive data frontier; then any selected x/a mixed exposure with prescribed full correlated reset; same original signed source owner retains >=3/4 after oldquarter.",
+  "rejected_repairs": [
+    "full product admission at fixed universal rate",
+    "renewed Q or original source",
+    "A+[edge]+ replaces [A+edge]+",
+    "erasure-good implies full-CE-good",
+    "old U release double booking",
+    "entropy-only deletion of either terminal"
+  ]
+}

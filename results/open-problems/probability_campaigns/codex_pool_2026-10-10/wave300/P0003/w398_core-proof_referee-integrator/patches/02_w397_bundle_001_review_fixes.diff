@@ -1,0 +1,74 @@
+--- a/~/math-brain-inbox/w397/bundle_001.json
++++ b/~/math-brain-inbox/w397/bundle_001.json
+@@ -5,7 +5,7 @@
+   "entries": [
+     {
+       "key": "vertex-equation",
+-      "namespace": "probability.saw",
++      "namespace": "probability.core",
+       "logical_name": "honeycomb-homogeneous-vertex-equation",
+       "kind": "definition",
+       "title": "Honeycomb homogeneous vertex equation",
+@@ -25,7 +25,7 @@
+     },
+     {
+       "key": "face-obstruction",
+-      "namespace": "probability.saw",
++      "namespace": "probability.core",
+       "logical_name": "honeycomb-face-circulation-compactness-obstruction",
+       "kind": "lemma",
+       "title": "Interior face circulation obstructs identity-alone compactness",
+@@ -46,7 +46,7 @@
+     },
+     {
+       "key": "invalid-inference",
+-      "namespace": "probability.saw",
++      "namespace": "probability.core",
+       "logical_name": "honeycomb-local-identity-alone-compactness-inference-refuted",
+       "kind": "concept",
+       "title": "Refuted inference: vertex identity alone supplies compactness",
+@@ -66,7 +66,7 @@
+     },
+     {
+       "key": "collar-reduction",
+-      "namespace": "probability.saw",
++      "namespace": "probability.core",
+       "logical_name": "finite-saw-collar-martingale-reduction-draft",
+       "kind": "concept",
+       "title": "Draft finite collar control isolates the static SAW gap",
+@@ -90,7 +90,7 @@
+     },
+     {
+       "key": "target-scope",
+-      "namespace": "probability.saw",
++      "namespace": "probability.core",
+       "logical_name": "hexagonal-saw-fixed-length-chordal-ensemble-scope",
+       "kind": "concept",
+       "title": "P0003 fixed-length and chordal ensemble scope",
+@@ -111,7 +111,7 @@
+     },
+     {
+       "key": "avoidance-stability",
+-      "namespace": "probability.saw",
++      "namespace": "probability.core",
+       "logical_name": "curve-avoidance-event-stability-required-draft",
+       "kind": "concept",
+       "title": "Draft warning: weak curve limits need avoidance-event stability",
+@@ -141,14 +141,14 @@
+     {
+       "from_key": "face-obstruction",
+       "to_key": "invalid-inference",
+-      "kind": "refutes",
+-      "rationale": "The source entry constructs zero-boundary fields of norm1 and adjacent jumps1 at shrinking distances, contradicting the target entry's identity-alone uniqueness/compactness implication."
++      "kind": "proves",
++      "rationale": "The source entry constructs zero-boundary fields of norm1 and adjacent jumps1 at shrinking distances, proving the target entry's statement that identity-alone uniqueness/compactness is a false inference."
+     },
+     {
+       "from_key": "collar-reduction",
+       "to_key": "target-scope",
+       "kind": "semantic_association",
+-      "rationale": "The finite collar reduction belongs to the positive chordal route, whose ensemble distinction and unproved bridge are recorded in the target scope entry."
++      "rationale": "The finite collar reduction applies to both ensembles; the target scope entry records that it does not transfer convergence between them."
+     },
+     {
+       "from_key": "avoidance-stability",

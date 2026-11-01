@@ -1,0 +1,180 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "claude-probability-1000-continue-0907",
+  "bundle_slug": "probability-intake-claude-reductions-and-two-lemmas-c002",
+  "entries": [
+    {
+      "key": "cond",
+      "namespace": "probability.percolation",
+      "logical_name": "effective-conductivity-theta-times-sigma-squared-is-nondecreasing-in-p",
+      "kind": "lemma",
+      "title": "theta(p) sigma^2(p) is nondecreasing in p for random walk on the supercritical percolation cluster",
+      "statement": "PRIVATE AUTHOR-CHECKED DRAFT, no independent review. For supercritical Bernoulli bond percolation on Z^d let theta(p) be the density of the infinite cluster and sigma^2(p) the diffusion constant of simple random walk on it (quenched invariance principle). Then p -> theta(p) sigma^2(p) is nondecreasing on (p_c, 1]. Monotonicity of sigma^2(p) itself, asked as Open Problem 14.1 in Heydenreich-van der Hofstad's lecture notes, is NOT implied: the lemma only controls the product.",
+      "proof_text": "Couple all p at once by i.i.d. uniform edge labels U_e and declare e open at level p iff U_e <= p; increasing p only adds edges. The homogenised conductivity of the random conductance model with conductance 1 on open edges and 0 on closed edges equals a fixed normalising constant times theta(p) sigma^2(p): the effective conductivity per unit volume is the density of the conducting phase times the diffusion constant of the walk on it, closed-edge sites contributing nothing. The homogenised conductivity is the infimum over correctors of the expected Dirichlet energy per unit volume, and adding conductors increases every Dirichlet energy (Rayleigh's monotonicity principle), hence increases the infimum. The normalising constant does not depend on p. Therefore theta(p) sigma^2(p) is nondecreasing. The same argument gives nothing for sigma^2 alone because theta(p) is itself increasing; near p_c the product bound only yields sigma^2(p) >= theta(p') sigma^2(p')/theta(p) for p > p'.",
+      "assumptions": [
+        "Supercritical Bernoulli bond percolation on Z^d, d >= 2",
+        "Quenched invariance principle on the infinite cluster (so sigma^2 is defined)",
+        "Homogenised conductivity identity for the conductance model on the cluster"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:cond",
+        "url": "urn:probability-research:20260907:claude-intake:cond",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "maj",
+      "namespace": "probability.boolean",
+      "logical_name": "iterated-three-majority-revealment-exponent-between-0166-and-0369",
+      "kind": "lemma",
+      "title": "The optimal revealment of iterated 3-majority on 3^k bits decays like n^{-sigma} with sigma in [log(6/5)/log 3, 1 - log 2/log 3]",
+      "statement": "PRIVATE AUTHOR-CHECKED DRAFT, no independent review. Let f_k be the iterated majority-of-three function on n = 3^k bits. The greedy recursive algorithm (evaluate two random children, the third only if they disagree) has revealment (5/6)^k = n^{-log(6/5)/log 3} = n^{-0.1660}, so the optimal revealment delta(f_k) is at most that. Every leaf has influence 2^{-k} = n^{-log 2/log 3}, and the inequality delta(f) >= Var(f)/(n max_i I_i) (Garban-Steif notes, Theorem VIII.7) gives delta(f_k) >= (2/3)^k = n^{-(1 - log 2/log 3)} = n^{-0.3691}. So the exponent sigma asked for in Exercise VIII.5 of the Garban-Steif notes lies in [0.1660, 0.3691]; the exact value is open.",
+      "proof_text": "Greedy revealment: at each level a given child is one of the two evaluated first with probability 2/3, or is the third child with probability 1/3 and is then evaluated only if the first two disagree, which for independent uniform bits happens with probability 1/2; so the probability that a fixed leaf is read is (2/3 + 1/6)^k = (5/6)^k. Influence: flipping a leaf flips the output iff at every level above it the two sibling subtrees disagree, each with probability 1/2 independently across levels, giving 2^{-k}. Theorem VIII.7 of the source for the {-1,1}-valued balanced function (Var f = 1) with n max_i I_i = 3^k 2^{-k} gives delta >= (2/3)^k. Exponents follow from n = 3^k.",
+      "assumptions": [
+        "Independent uniform bits",
+        "Revealment is the maximum over leaves of the probability the algorithm reads that leaf",
+        "Garban-Steif Theorem VIII.7"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:maj",
+        "url": "urn:probability-research:20260907:claude-intake:maj",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "deep",
+      "namespace": "probability.gaussian",
+      "logical_name": "deep-extremal-level-set-conjecture-equivalent-to-cluster-size-limit-given-uniform-integrability",
+      "kind": "concept",
+      "title": "Biskup's Conjecture 16.5 (size of deep extremal level sets of the 2D DGFF) is equivalent to his Conjecture 16.6 given uniform integrability of deep cluster sizes",
+      "statement": "PRIVATE REDUCTION, author-recorded. By the cluster-process structure of the DGFF extremal process (Biskup-Louidor), the number of points of the level set at depth t inside A is a Poisson sum over extremal local maxima in A of i.i.d. cluster sizes at the corresponding depths, so its conditional expectation given the extremal measure Z^D equals Z^D(A) times the integral over depth of e^{alpha s} E[cluster size at depth s] ds. Conjecture 16.5 (the count normalised by (1/t) e^{-alpha t} converges to c Z^D(A)) therefore reduces to the existence of lim e^{-alpha h} E_nu(f_h) (Conjecture 16.6) plus (i) uniform integrability of cluster sizes at depth t uniformly in N, to exchange the N and t limits, and (ii) a variance bound making the Poisson sum concentrate, which follows from the same uniform integrability. Conversely 16.5 implies the limit in 16.6 by taking expectations. The open content is thus 16.6 together with the uniform-in-N control of deep clusters, which the concentric decomposition delivers only at bounded depth.",
+      "proof_text": null,
+      "assumptions": [
+        "2D DGFF in admissible domains; extremal process with Poisson-cluster structure (Biskup-Louidor)",
+        "Exchange of limits requires uniform integrability not currently available"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:deep",
+        "url": "urn:probability-research:20260907:claude-intake:deep",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "peel",
+      "namespace": "probability.planarmaps",
+      "logical_name": "filled-in-peeling-exhausts-the-map-iff-swallowing-series-diverges",
+      "kind": "concept",
+      "title": "Curien's question (peeling notes, after Corollary 27) is equivalent to a divergence criterion for the perimeter walk of a general critical weight sequence",
+      "statement": "PRIVATE REDUCTION, author-recorded. For a filled-in peeling exploration of the infinite Boltzmann map with critical weight sequence q, every boundary vertex is eventually swallowed almost surely iff sum_n q_{S_n} = infinity a.s., where S_n is the half-perimeter process (an h-transform of the step walk with law nu) and q_l is the probability that a peeling step at perimeter l swallows at least half of the boundary on a given side. For type a in [3/2, 5/2] the source proves divergence from q_l asymp l^{1-a} and the scaling limit S_n asymp n^{1/(a-1)}. Without a type, the criterion is a recurrence-type statement for the positive test function q along the h-transformed walk; it holds whenever liminf n q_{S_n} is bounded below in probability, so the question reduces to the growth of the h-transformed perimeter walk for non-regularly-varying critical nu. The reduction is rigorous (conditional Borel-Cantelli); the growth control is the open part.",
+      "proof_text": null,
+      "assumptions": [
+        "Critical weight sequence q (any type or none)",
+        "Filled-in peeling with any fixed algorithm"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:peel",
+        "url": "urn:probability-research:20260907:claude-intake:peel",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "ise",
+      "namespace": "probability.branching",
+      "logical_name": "moment-determinate-limit-turns-r-point-convergence-into-measure-convergence",
+      "kind": "concept",
+      "title": "For a moment-determinate limit such as ISE, convergence of all r-point functions of a random probability measure gives convergence in distribution of the measure",
+      "statement": "PRIVATE OBSERVATION, author-recorded, used to reduce Heydenreich-van der Hofstad Open Problem 15.1. If random probability measures mu_n on R^d have r-point (moment) measures converging weakly to those of a random probability measure mu whose moment measures satisfy a Carleman-type determinacy condition (total masses of order r! K^r), then mu_n converges in distribution to mu: the law of a random probability measure is determined by its moment measures under such a condition, and tightness is automatic on the compact scaling window. Integrated super-Brownian excursion satisfies the condition. Consequently, for spread-out critical percolation in d > 6, Hara-Slade's convergence of the r-point functions conditioned on cluster size n (with the n^{-1/4} spatial scaling at fixed Fourier variable) implies the conditional-measure convergence to ISE asked in Open Problem 15.1, provided the r-point convergence gives weak convergence of the r-point measures (characteristic-function convergence at every bounded Fourier variable suffices). The nearest-neighbour case is not covered (no r-point expansion in d >= 11).",
+      "proof_text": null,
+      "assumptions": [
+        "Random probability measures on R^d",
+        "Carleman-type moment determinacy of the limit (holds for ISE)",
+        "Hara-Slade r-point convergence, not re-verified here"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:ise",
+        "url": "urn:probability-research:20260907:claude-intake:ise",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "qip",
+      "namespace": "probability.percolation",
+      "logical_name": "vacant-set-quenched-invariance-principle-all-u-from-prs-plus-sharpness",
+      "kind": "concept",
+      "title": "Quenched invariance principle on the vacant set of random interlacements for every u < u* as a corollary of Procaccia-Rosenthal-Sapozhnikov plus the 2023 sharpness theorem (conditional)",
+      "statement": "PRIVATE CONDITIONAL RESOLUTION, author-recorded, sources not re-fetched. Procaccia, Rosenthal and Sapozhnikov (PTRF 2016) prove a quenched invariance principle for random walk on the infinite cluster of correlated percolation models satisfying a polynomial decoupling condition, local uniqueness and a density condition; for the vacant set these were known for u < u** at the time. Duminil-Copin, Goswami, Rodriguez, Severo and Teixeira (2023) prove u* = u** = bar u, so the inputs hold for every u < u*, and the conclusion of PRS should extend to the whole supercritical phase, answering Open Problem 16.7 of Heydenreich-van der Hofstad for the vacant set (the interlacement set itself was already covered for all u > 0). Verification owed: that the decoupling inequalities of the sharpness paper have exactly the PRS form and that constants may depend on u.",
+      "proof_text": null,
+      "assumptions": [
+        "Random interlacements on Z^d, d >= 3",
+        "PRS 2016 hypotheses; DGRST 2023 equality of thresholds"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-probability-intake-claude-20260907:qip",
+        "url": "urn:probability-research:20260907:claude-intake:qip",
+        "revision": "author-checked-private-20260907-v1",
+        "license": "owner-own-work; private mathematical draft from the 1000-open-problems intake, no public promotion",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "cond",
+      "to_existing_logical": "math:harvest.wikipedia:wiki-percolation-theory",
+      "kind": "depends_on",
+      "rationale": "Supercritical cluster and its density"
+    },
+    {
+      "from_key": "maj",
+      "to_existing_logical": "math:combinatorics.correlation:fkg-inequality",
+      "kind": "semantic_association",
+      "rationale": "Boolean-function influence and revealment live in the same discrete-Fourier toolbox as correlation inequalities; no logical dependence"
+    },
+    {
+      "from_key": "deep",
+      "to_existing_logical": "math:probability.concentration:borell-tis-inequality",
+      "kind": "analogous_to",
+      "rationale": "Extremes of Gaussian fields; the DGFF cluster structure refines the maximum"
+    },
+    {
+      "from_key": "ise",
+      "to_existing_logical": "math:probability.concentration:second-moment-method-and-what-it-does-not-give",
+      "kind": "analogous_to",
+      "rationale": "Moment measures as the identifying data of a random object"
+    },
+    {
+      "from_key": "qip",
+      "to_existing_logical": "math:harvest.wikipedia:wiki-percolation-theory",
+      "kind": "depends_on",
+      "rationale": "Supercritical vacant set is a correlated percolation cluster"
+    },
+    {
+      "from_key": "peel",
+      "to_existing_logical": "math:probability.core:borel-cantelli-lemmas",
+      "kind": "depends_on",
+      "rationale": "The divergence criterion is a conditional Borel-Cantelli statement"
+    },
+    {
+      "from_key": "cond",
+      "to_key": "qip",
+      "kind": "analogous_to",
+      "rationale": "Both concern random walk on percolation clusters and the quenched invariance principle"
+    }
+  ]
+}

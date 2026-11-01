@@ -1,0 +1,32 @@
+{
+  "problem_id": "P0297",
+  "title": "Exact Hausdorff dimension of Liouville quantum gravity",
+  "ranking_source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:554",
+  "ranking_quote": "5,P0297,Exact Hausdorff dimension of Liouville quantum gravity,unsolved,exact Hausdorff dimension of LQG",
+  "current_openness": "UNKNOWN (primary literature states open in 2025; no complete 2026 literature audit)",
+  "exact_statement": "For each gamma in (0,2), determine d_gamma = the almost-sure Hausdorff dimension of (C,D_h), where D_h is the gamma-LQG metric of a whole-plane Gaussian free field h. The case gamma=sqrt(8/3) has d_gamma=4; the requested unsolved range is gamma in (0,2) excluding sqrt(8/3).",
+  "source_check": {
+    "primary_problem": "Gwynne and Miller, Existence and uniqueness of the Liouville quantum gravity metric for gamma in (0,2), arXiv:1905.00383v3, Problem 7.1 and equation (1.5), https://arxiv.org/html/1905.00383v3",
+    "dimension_identification": "The same paper lines 128-130 states d_gamma is the metric Hausdorff dimension, citing Gwynne-Pfeffer; xi=gamma/d_gamma.",
+    "later_status": "Borga and Gwynne, Directed distances in bipolar-oriented triangulations, arXiv:2510.26123v1, introduction lines 118-119, states d_gamma unknown away from sqrt(8/3), https://arxiv.org/html/2510.26123v1",
+    "qualification": "2018 Ding-Gwynne predates the metric construction and only expected equality of its exponent with metric dimension; do not treat its old conjectural phrasing as a remaining bridge after Gwynne-Pfeffer."
+  },
+  "primary_quote": "Compute the exponent d_gamma appearing in (1.5), which is the Hausdorff dimension of C with respect to the gamma-LQG metric.",
+  "prior_solved_retired_check": "No P0297 match in named H/I attempt directories, Lean annotated list beyond a ranking mention, Team O board, or the three targeted solved/retired candidate files. The targeted negative search does not certify absence from all owner work; current solved/retired status remains UNKNOWN.",
+  "prior_attempt_correction": "The D0049-A001 intake equation d_gamma=2Q/xi is false: gamma=sqrt(8/3), Q=5/sqrt(6), xi=1/sqrt(6) would yield 10 rather than the known 4. Correct xi=gamma/d_gamma is in Gwynne-Miller equation (1.5).",
+  "math_brain_recall_failure": {
+    "command": "python -X utf8 -m math_brain.cli recall ~/math-brain-build/local/population/brain.sqlite3 'Liouville quantum gravity metric KPZ independence theorem Hausdorff dimension d_gamma' --limit 5",
+    "observation": "CLI imported ~/math-research-brain/src/math_brain and raised ValueError: external_reference is not a valid NodeKind; read-only count found 177 external_reference nodes in the newer store.",
+    "bounded_repair": "Set the invocation's module path to ~/math-brain-build/src (which defines EXTERNAL_REFERENCE) before evaluating recall; keep the store read-only. Do not change or delete store nodes."
+  },
+  "matched_math_brain_recall": {
+    "command": "python -X utf8 -c \"import sys,runpy; sys.path.insert(0,'~/math-brain-build/src'); sys.argv=['math_brain.cli','recall','~/math-brain-build/local/population/brain.sqlite3','Liouville quantum gravity metric KPZ independence theorem Hausdorff dimension d_gamma','--limit','5']; runpy.run_module('math_brain.cli',run_name='__main__')\"",
+    "observation": "Matching CLI succeeded: ranks 1 and 3 were P0297 problem and attempt cards, but zero of the top five was the Gwynne-Pfeffer metric KPZ theorem with its independent-set hypothesis.",
+    "repair": "Review and ingest the peer's draft KPZ hypothesis card, then rerun this same top-five query; compare the full theorem hypothesis, not only the title."
+  },
+  "measured_brain_recall_failure": {
+    "command": "python -X utf8 -c \"import subprocess; p=subprocess.run(['python','~/.claude/dreaming/brain.py','recall','P0297 Liouville quantum gravity proof mistakes'],capture_output=True,text=True,timeout=60); print(p.stdout[:6000]); print(p.stderr[:1000])\"",
+    "observation": "top 8 results were unrelated to LQG; tool explicitly reported [absent] no memory contains p0297",
+    "repair": "Add a precise P0297 problem concept with gamma-LQG metric, d_gamma, and exact-source aliases to the reviewed math-brain draft; measure targeted recall again after integration."
+  }
+}

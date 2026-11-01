@@ -1,0 +1,4 @@
+SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), slot B20, 2026-09-22T19:05:40Z.
+attacking: externalize fleet03/B20's coherent compact triangle by exact physical pair/triple payments and rank-one spectral extraction.
+
+Result: `QFORM-COHERENT-TRIANGLE-EXTERNALIZATION-v1`. With `m=3501/8000`, `theta=1/20`, an unpaid coherent compact-cell triple is first forced to `|d|,|f|<theta` by physical pair bounds and then, using fleet03/B20's exact `128|a det M|^{-1/4}` theorem, to `|e|<sqrt(2)theta`, hence Schur residual norm `<1/8`. Subtracting the coherent rank-one triple packet preserves `s_2>=1` and forces either `s_2(A[O,O])>=1/2` or `||A[T,O]||_op>1/2`. Full QFORM remains open; first unpaid step is dependence-safe payment of this external packet. Canonical mathematics: `yspennstate/math-open-problems@23f3d87a9e93f573c201efee403e45ce6c54098a`.

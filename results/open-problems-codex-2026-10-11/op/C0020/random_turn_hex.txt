@@ -1,0 +1,929 @@
+=== PAGE 1 ===
+arXiv:math/0508580v2  [math.PR]  26 Apr 2006
+Random-Turn Hex and Other Selection Games
+Yuval Peres, Oded Schramm, Scott Sheﬃeld, and David B. Wilson
+1
+INTRODUCTION.
+Overview.
+The game of Hex, invented independently by Piet Hein in 1942 and John Nash
+in 1948 [9], has two players who take turns placing stones of their respective colors on the
+hexagons of a rhombus-shaped hexagonal grid (see Figure 1). A player wins by completing
+a path connecting the two opposite sides of his or her color. Although it is easy to show
+that player I has a winning strategy, it is far from obvious what that strategy is. Hex is
+usually played on an 11 × 11 board (e.g., the commercial version by Parker Brothers
+® and
+the Computer Olympiad Hex Tournament both use 11 × 11 boards), for which the optimal
+strategy is not yet known. (For a book on practical Hex strategy see [3], and for further
+information on Hex see [23], [7], [1], or [6].)
+1
+2 3
+4 5
+6
+7
+8
+9
+10
+11
+12
+13
+1415
+1617
+18
+19
+20
+21
+22
+23
+24
+25
+26
+2728
+2930
+31
+32
+33
+34
+3536
+3738
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+545556
+57
+58
+59
+6061
+62
+63
+64
+65
+6667
+68
+69
+Figure 1: A game of Hex played at the 5th Computer Olympiad in London, August 24, 2000
+[1]. Queenbee [18] (black) played against Hexy [2] (white). (There is a special rule regarding
+the ﬁrst move whose purpose is to oﬀset the advantage of the ﬁrst player, see [1].)
+Random-Turn Hex is the same as ordinary Hex, except that instead of alternating turns,
+players toss a coin before each turn to decide who gets to place the next stone. Although or-
+dinary Hex is famously diﬃcult to analyze, the optimal strategy for Random-Turn Hex turns
+out to be very simple. We introduce random-turn games in part because they are in many
+cases more tractable than their deterministic analogs; they also exhibit surprising structure
+and symmetry. In one general class of games called selection games, which includes Hex, the
+probability that player I wins when both players play optimally is precisely the probability
+that player I wins when both players play randomly. Combining this with Smirnov’s recent
+result about percolation on the hexagonal lattice [21], we will see that in a certain “ﬁne
+lattice limit” winning probabilities of Random-Turn Hex are a “conformal invariant” of the
+1
+
+=== PAGE 2 ===
+board shape. In this and other games, the set of moves played during an entire game (when
+both players play optimally) has an intriguing fractal structure.
+On a philosophical note, random-turn games are natural models for real-world conﬂicts,
+where opposing agents (political parties, lobbyists, businesses, militaries, etc.) do not alter-
+nate turns. Instead, they continually seek to improve their positions incrementally. The
+extent to which they succeed is (at least partially) unpredictable and may be modeled using
+randomness. Random-turn games are also closely related to “Richman games” [11]. In a
+Richman game, each player oﬀers money to the other player for the right to make the next
+move, and the player who oﬀers more gets to move. (At the end of the Richman game, the
+money has no value.) Another class of random-turn games, where the moves of one player
+may be reversed by the other player, is studied in [11] and [16].
+For simplicity, we limit the discussion in this article to two-player, zero-sum, random-turn
+games with perfect information.
+Random-turn selection games.
+Now we describe a general class of games that includes
+the famous game of Hex. Let S be an n-element set, which will sometimes be called the
+board, and let f be a function from the 2n subsets of S to R. A selection game is played as
+follows: the ﬁrst player selects an element of S, the second player selects one of the remaining
+n −1 elements, the ﬁrst player selects one of the remaining n −2, and so forth, until all
+elements have been chosen. Let S1 and S2 signify the sets chosen by the ﬁrst and second
+players, respectively. Then player I receives a payoﬀof f(S1) and player II a payoﬀof −f(S1)
+(selection games are zero-sum). The following are examples of selection games:
+Hex.
+Here S is the set of hexagons on a rhombus-shaped L × L hexagonal grid, and f(S1)
+is 1 if S1 contains a left-right crossing, −1 otherwise (see Figures 1 and 2). In this case,
+once S1 contains a left-right crossing or S2 contains an up-down crossing (which precludes
+the possibility of S1 having a left-right crossing), the outcome is determined and there is no
+need to continue the game.
+We also consider Hex played on other types of boards.
+In the general setting, some
+hexagons are given to the ﬁrst or second players before the game has begun. One of the
+reasons for considering such games is that after a number of moves are played in ordinary
+Hex, the remaining game has this form.
+Surround.
+The famous game of Go is not a selection game (for one, a player can remove
+an opponent’s pieces), but the game of Surround, in which, as in Go, surrounding area is
+important, is a selection game. In this game S is the set of n hexagons in a hexagonal grid
+(of any shape). At the end of the game, each hexagon is recolored to be the color of the
+outermost cluster surrounding it (if there is such a cluster). The payoﬀf(S1) is the number
+of hexagons recolored black minus the number of hexagons recolored white. (Another natural
+payoﬀfunction is f ∗(S1) = sign(f(S1)).)
+Full-Board Tic-Tac-Toe.
+Here S is the set of spaces in a 3 × 3 grid, and f(S1) is the
+number of horizontal, vertical, or diagonal rows in S1 minus the number of horizontal, ver-
+2
+
+=== PAGE 3 ===
+tical, or diagonal rows in S\S1. This is diﬀerent from ordinary tic-tac-toe in that the game
+does not end after the ﬁrst row is completed.
+Team Captains.
+Two team captains are choosing baseball teams from a ﬁnite set S of n
+players for the purpose of playing a single game against each other. The payoﬀf(S1) for the
+ﬁrst captain is the probability that the players in S1 (together with the ﬁrst captain) would
+beat the players in S2 (together with the second captain). The payoﬀfunction may be very
+complicated (depending on which players are skilled at which positions, which players have
+played together before, which players get along well with which captain, etc.). Because we
+have not speciﬁed the payoﬀfunction, this game is as general as the class of selection games.
+Every selection game has a random-turn variant in which at each turn a fair coin is tossed
+to decide who moves next.
+Consider the following questions:
+1. What can one say about the probability distribution of S1 after a typical game of
+optimally played Random-Turn Surround?
+2. More generally, in a generic random-turn selection game, how does the probability
+distribution of the ﬁnal state depend on the payoﬀfunction f?
+3. Less precise: Are the teams chosen in Random-Turn Team Captains “good teams” in
+any objective sense?
+The answers are surprisingly simple.
+2
+OPTIMAL STRATEGY.
+A (pure) strategy for a given player in a random-turn selection game is a map M from pairs
+of disjoint subsets (T1, T2) of S to elements of S. Here M(T1, T2) indicates the element that
+the player will pick if given a turn at a time in the game at which player I has thus far picked
+the elements of T1 and player II has picked the elements of T2.
+Denote by E(T1, T2) the expected payoﬀfor player I at this stage in the game, assuming
+that both players play optimally with the goal of maximizing expected payoﬀ. As is true for
+all ﬁnite perfect-information, two-player games, E is well deﬁned, and one can compute E
+and the set of possible optimal strategies inductively as follows. First, if T1 ∪T2 = S, then
+E(T1, T2) = f(T1). Next, suppose that we have computed E(T1, T2) whenever |S\(T1∪T2)| ≤
+k. Then if |S\(T1 ∪T2)| = k + 1, and player I has the chance to move, player I will play
+optimally if and only if she chooses an s from S\(T1∪T2) for which E(T1∪{s}, T2) is maximal.
+(If she chose any other s, this would reduce her expected payoﬀ.) Similarly, player II plays
+optimally if and only if she minimizes E(T1, T2 ∪{s}) at each stage.
+The foregoing analysis also demonstrates a well-known fundamental fact about ﬁnite,
+turn-based, perfect-information games: both players have optimal pure strategies (i.e., strate-
+gies that do not require ﬂipping coins), and knowing the other player’s strategy does not give
+a player any advantage when both players play optimally. (This contrasts with the situation
+in which the players play “simultaneously,” as they do in Rock-Paper-Scissors.)
+3
+
+=== PAGE 4 ===
+Theorem 2.1. The value of a random-turn selection game is the expectation of f(T) when
+a set T is selected randomly and uniformly among all subsets of S. Moreover, any optimal
+strategy for one of the players is also an optimal strategy for the other player.
+Proof. If player II plays any optimal strategy, player I can achieve the expected payoﬀE[f(T)]
+by playing exactly the same strategy (since, when both players play the same strategy, each
+element will belong to S1 with probability 1/2, independently). Thus, the value of the game
+is at least E[f(T)]. However, a symmetric argument applied with the roles of the players
+interchanged implies that the value is no more than E[f(T)].
+Suppose that M is an optimal strategy for the ﬁrst player. We have seen that when both
+players use M, the expected payoﬀis E[f(T)] = E(∅, ∅). Since M is optimal for player I, it
+follows that when both players use M player II always plays optimally (otherwise, player I
+would gain an advantage, since she is playing optimally). This means that M(∅, ∅) is an
+optimal ﬁrst move for player II, and therefore every optimal ﬁrst move for player I is an
+optimal ﬁrst move for player II. Now note that the game started at any position is equivalent
+to a selection game. We conclude that every optimal move for one of the players is an optimal
+move for the other, which completes the proof.
+If f is identically zero, then all strategies are optimal. However, if f is generic (meaning
+that all of the values f(S1) for diﬀerent subsets S1 of S are linearly independent over Q),
+then the preceding argument shows that the optimal choice of s is always unique and that
+it is the same for both players. We thus have the following result:
+Proposition 2.2. If f is generic, then there is a unique optimal strategy and it is the same
+strategy for both players. Moreover, when both players play optimally, the ﬁnal S1 is equally
+likely to be any one of the 2n subsets of S.
+Theorem 2.1 and Proposition 2.2 are in some ways quite surprising.
+In the baseball
+team selection, for example, one has to think very hard in order to play the game optimally,
+knowing that at each stage there is exactly one correct choice and that the adversary can
+capitalize on any miscalculation. Yet, despite all of that mental eﬀort by the team captains,
+the ﬁnal teams look no diﬀerent than they would look if at each step both captains chose
+players uniformly at random.
+Also, for purposes of illustration, suppose that there are only two players who know how
+to pitch and that a team without a pitcher always loses. In the alternating turn game, a
+captain can always wait to select a pitcher until just after the other captain selects a pitcher.
+In the random-turn game, the captains must try to select the pitchers in the opening moves,
+and there is an even chance the pitchers will end up on the same team.
+Theorem 2.1 and Proposition 2.2 generalize to random-turn selection games in which the
+player to get the next turn is chosen using a biased coin. If player I gets each turn with
+probability p, independently, then the value of the game is E[f(T)], where T is a random
+subset of S for which each element of S is in T with probability p, independently.
+For
+the corresponding statement of the proposition to hold, the notion of “generic” needs to be
+modiﬁed. For example, it suﬃces to assume that the values of f are linearly independent
+over Q[p]. The proofs are essentially the same. We leave it as an exercise to the reader to
+generalize the proofs further so as to include the following two games:
+4
+
+=== PAGE 5 ===
+Restaurant Selection.
+Two parties (with opposite food preferences) want to select a
+dinner location.
+They begin with a map containing 2n distinct points in R2, indicating
+restaurant locations. At each step, the player who wins a coin toss may draw a straight line
+that divides the set of remaining restaurants exactly in half and eliminate all the restaurants
+on one side of that line. Play continues until one restaurant z remains, at which time player I
+receives payoﬀf(z) and player II receives −f(z).
+Balanced Team Captains.
+Suppose that the captains wish to have the ﬁnal teams equal
+in size (i.e., there are 2n players and we want a guarantee that each team will have exactly
+n players in the end). Then instead of tossing coins, the captains may shuﬄe a deck of 2n
+cards (say, with n red cards and n black cards). At each step, a card is turned over and the
+captain whose color is shown on the card gets to choose the next player.
+3
+WIN-OR-LOSE SELECTION GAMES.
+We say that a game is a win-or-lose game if f(T) takes on precisely two values, which we
+may as well assume to be −1 and 1. If S1 ⊂S and s ∈S, we say that s is pivotal for
+S1 if f(S1 ∪{s}) ̸= f(S1 \ {s}). A selection game is monotone if f is monotone; that is,
+f(S1) ≥f(S2) whenever S1 ⊃S2. Hex is an example of a monotone, win-or-lose game. For
+such games, the optimal moves have the following simple description:
+Lemma 3.1. In a monotone, win-or-lose, random-turn selection game, a ﬁrst move s is
+optimal if and only if s is an element of S that is most likely to be pivotal for a random-
+uniform subset T of S. When the position is (S1, S2), the move s in S \ (S1 ∪S2) is optimal
+if and only if s is an element of S \ (S1 ∪S2) that is most likely to be pivotal for S1 ∪T,
+where T is a random-uniform subset of S \ (S1 ∪S2).
+The proof of the lemma is straightforward at this point and is left to the reader.
+For win-or-lose games, such as Hex, the players may stop making moves after the winner
+has been determined, and it is interesting to calculate how long a random-turn, win-or-
+lose, selection game will last when both players play optimally. Suppose that the game is
+a monotone game and that, when there is more than one optimal move, the players break
+ties in the same way. Then we may take the point of view that the playing of the game is
+a (possibly randomized) decision procedure for evaluating the payoﬀfunction f when the
+items are randomly allocated. Let ⃗x denote the allocation of the items, where xi = ±1
+according to whether the ith item goes to the ﬁrst or second player. We may think of the xi
+as input bits, and the playing of the game is one way to compute f(⃗x). The number of turns
+played is the number of bits of ⃗x examined before f(⃗x) is computed. We can use certain
+inequalities from the theory of Boolean functions to bound the average length of play.
+Let Ii(f) denote the inﬂuence of the ith bit on f (i.e., the probability that ﬂipping xi
+5
+
+=== PAGE 6 ===
+will change the value of f(⃗x)). The following inequality is from O’Donnell and Servedio [15]:
+X
+i
+Ii(f) = E
+"X
+i
+f(⃗x)xi
+#
+= E
+"
+f(⃗x)
+X
+i
+xi1xi examined
+#
+≤(by Cauchy-Schwarz)
+v
+u
+u
+u
+tE[f(⃗x)2] E
+
+
+ 
+X
+i: xi examined
+xi
+!2
+=
+v
+u
+u
+u
+tE
+
+
+ 
+X
+i: xi examined
+xi
+!2
+=
+p
+E[# bits examined] .
+(1)
+The last equality is justiﬁed by noting that E[xi xj 1xi and xj both examined] = 0 when i ̸= j,
+which holds since conditioned on xi being examined before xj, conditioned on the value of
+xi, and conditioned on xj being examined, the expected value of xj is zero. By (1) we have
+E[# turns] ≥
+"X
+i
+Ii(f)
+#2
+.
+We shall shortly apply this bound to the game of Random-Turn Hex.
+We mention one other inequality from the theory of Boolean functions, this one due to
+O’Donnell, Saks, Schramm, and Servedio [14, Theorem 3.1]:
+Var[f] ≤
+X
+i
+Pr[xi examined]Ii(f).
+(2)
+For the random-turn game this implies that
+E[# turns] ≥
+Var[f]
+maxi Ii(f).
+4
+RANDOM-TURN HEX.
+Odds of winning on large boards and under biased play.
+In the game of Hex, the
+propositions discussed earlier imply that the probability that player I wins is given by the
+probability that there is a left-right crossing in independent Bernoulli percolation on the sites
+(i.e., when the sites are independently and randomly colored black or white). One perhaps
+surprising consequence of the connection to Bernoulli percolation is that, if player I has a
+slight edge in the coin toss and wins the coin toss with probability 1/2 + ε, then for any
+ε > 0, any δ > 0, and any r > 0 there is a strategy for player I that wins with probability at
+least 1 −δ on the L × rL board, provided that L is suﬃciently large.
+Random-Turn Hex on ordinary-size boards.
+Reisch proved in 1981 that determining
+which player has a winning strategy on an arbitrarily shaped Hex board (with some of the
+sites already colored in) is PSPACE-complete [17]. The online community has, however,
+made a good deal of progress (much of it unpublished) on solving the problem for smaller
+boards. Jing Yang [24] has announced the solution of Hex (and provided associated computer
+programs) on boards of size up to 9 × 9. Hex is usually played on an 11 × 11 board, for
+which the optimal strategy is not yet known.
+6
+
+=== PAGE 7 ===
+What is the situation with Random-Turn Hex? We do not know if the correct move in
+Random-Turn Hex can be found in polynomial time. On the other hand, for any ﬁxed ε
+a computer can sample O(L4ε−2 log(L4/ε)) percolation conﬁgurations (ﬁlling in the empty
+hexagons at random) to estimate which empty site is most likely to be pivotal given the
+current board conﬁguration. Except with probability O(ε/L2), the computer will pick a site
+that is within O(ε/L2) of being optimal. This simple randomized strategy provably beats
+an optimal opponent 50 −ε percent of the time.
+1 2
+3 4
+5 6
+7
+8
+9 10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+2324
+25
+26
+27
+2829
+3031
+3233
+34
+353637
+38
+39
+40
+41
+4243
+Figure 2: Random-Turn Hex on boards of size 11 × 11 and 63 × 63 under (near) optimal
+play.
+Typical games under optimal play.
+What can we say about how long an average game
+of Random-Turn Hex will last, assuming that both players play optimally? (Here we assume
+that the game is stopped once a winner is determined.) If the side length of the board is L,
+we wish to know how the expected length of a game grows with L (see Figure 2 for games on
+a large board). Computer simulations on a variety of board sizes suggest that the exponent
+is in the range 1.5–1.6. As far as rigorous bounds go, a trivial upper bound is O(L2). Since
+the game does not end until a player has found a crossing, the length of the shortest crossing
+in percolation is a lower bound, and empirically this distance grows as L1.1306±0.0003 [8], where
+the exponent is known to be strictly larger than 1. We give a stronger lower bound:
+Theorem 4.1. Random-Turn Hex under optimal play on an order L board, when the two
+players break ties in the same manner, takes at least L3/2+o(1) time on average.
+Proof. To use the O’Donnell-Servedio bound (1), we need to know the inﬂuence that the sites
+have on whether or not there is a percolation crossing (a path of black hexagons connecting
+the two opposite black sides).
+The inﬂuence Ii(f) is the probability that ﬂipping site i
+changes whether there is a black crossing or a white crossing. The “4-arm exponent” for
+percolation is 5/4 [22] (as predicted earlier in [5]), so Ii(f) = L−5/4+o(1) for sites i “away
+from the boundary,” say in the middle ninth of the region. Thus P
+i Ii(f) ≥L3/4+o(1), so
+E[# turns] ≥L3/2+o(1).
+Remark. The function P
+i xi1xi examined is the number of extra times that player I wins
+the coin toss at the time that the game terminates. Naturally this is correlated with the
+winner f(⃗x) of the game, and for large board sizes this correlation is noticeable. Since the
+7
+
+=== PAGE 8 ===
+only inequality used in (1) was the Cauchy-Schwarz inequality, if we know P
+i Ii(f) and
+the expected length of the game, we can determine how correlated the winner is with who
+won most of the coin tosses.
+Using more detailed knowledge of how Ii(f) behaves near
+the boundary, one can show that for the standard lozenge-shaped Hex board, P
+i Ii(f) =
+L3/4+o(1). If the game lasts for L>1.5 steps on average, this would imply that the correlation
+between the winner of the game and the winner of the majority of the coin tosses before the
+game is won tends to 0 as L →∞.
+Remark.
+The question of determining how many bits need to be examined before one
+can decide whether or not there is a percolation crossing arose in the context of dynamical
+percolation, where the sites ﬂip according to independent Poisson clocks [19].
+Roughly
+speaking, if few bits need to be examined, then it is easier for there to be exceptional times
+at which there is an inﬁnite percolating cluster in the plane [19]. One possible algorithm
+for determining whether or not there is a crossing in an order L region would be to follow
+the black-white interfaces starting at the corners to see how they connect, which exposes
+L7/4+o(1) hexagons in expectation [22]. While this algorithm has the best currently provable
+bound on the number of exposed hexagons, the “play Random-Turn Hex” algorithm appears
+to do better (taking about L1.5–1.6 time).
+An optimally played game of Random-Turn Hex on a small board may occasionally have
+a move that is disconnected from the other played hexagons, as the game in Figure 3 shows.
+But this is very much the exception rather than the rule. For moderate- to large-sized boards
+it appears that in almost every optimally played game, the set of played hexagons remains
+a connected set throughout the game (which is in sharp contrast to the usual game of Hex).
+We do not have an explanation for this phenomenon, nor is it clear to us if it persists as the
+board size increases beyond the reach of simulations.
+1 2
+3
+4 5
+6 7
+8
+9
+10
+Figure 3: A rare occurrence—a game of Random-Turn Hex under (near) optimal play with
+a disconnected play.
+Conformal (non)invariance of Random-Turn Hex.
+Combined with Smirnov’s cel-
+ebrated recent work in percolation [21], the connection between Random-Turn Hex and
+percolation enables us to use Cardy’s formula [4] to approximate player I’s probability of
+winning on very large boards of various shapes, such as the L × rL rectangle. The way
+this is done is as follows. Suppose that the players play the game on a very large board
+that, when suitably scaled, approximates some simply connected domain D in the complex
+plane, where the boundary of D alternates colors at the points b1, b2, b3, b4 with one black
+8
+
+=== PAGE 9 ===
+side between b1 and b2 and the other between b3 and b4. By the Riemann Mapping Theorem,
+there is an analytic function φ that bijectively maps the domain D to the upper half plane
+(i.e., a conformal bijection) such that φ(b1) = 0, φ(b3) = 1, and φ(b4) = ∞. Smirnov proved
+that in percolation on boards that are shaped like the domain D, the probability of a black
+percolation crossing is a function of φ(b2) plus an error term that goes to zero as the board
+size (the length of the shortest path connecting opposite sides) goes to inﬁnity. This function
+of φ(b2) is an explicit formula (involving a hypergeometric function) that is known as Cardy’s
+formula. These crossing probabilities are known as a “conformal invariant” of percolation
+because they remain invariant under conformal maps (up to error terms that go to zero as
+the board size goes to inﬁnity). The connection between Random-Turn Hex and percolation
+tells us that when the two players play optimally, the probability of black winning is (up to
+an additive o(1) error) conformally invariant, and in particular is given by Cardy’s formula.
+However, the actual game play is not conformally invariant, and indeed, even the location
+of the ﬁrst move is not conformally invariant (see Figure 4). The reason for this is not diﬃcult
+to understand. Recall that the ﬁrst move is played at the site that is most likely to be pivotal.
+The probability that a site is pivotal is not scale invariant (for larger boards, the probability
+that a site is pivotal is smaller). Since a general conformal map scales diﬀerent parts of
+the domain by diﬀerent amounts, the location of the site most likely to be pivotal is not
+conformally invariant.
+Figure 4: The location of the best ﬁrst move in Random-Turn Hex is the site that is most
+likely to be pivotal for a percolation crossing. Shown here are estimates of the probability
+that a site is critical when the board is the standard Hex board (on the left) and when the
+board is a disk (on the right), calculated using SLE [20]. For the standard board the best
+ﬁrst move is near the center, while for the disk-shaped board the best ﬁrst move is near one
+of the four points where the black boundary and white boundary meet.
+9
+
+=== PAGE 10 ===
+5
+THREE EXAMPLES ON TREES.
+In this section, we study two diﬀerent random-turn games based on trees. Although these
+particular examples can be analyzed rather well, there are other natural games based on
+trees that we do not know how to analyze. We mention one such example at the end of the
+section (Recursive Three-Fold Majority).
+AND-OR trees.
+We believe that the expected length of game play in Random-Turn Hex
+grows like a nonintegral power of the selection set size |S| and that the set of hexagons played
+has a random fractal structure. The game of Random-Turn AND-OR (see Figure 5) is a
+selection game for which we can actually prove analogous statements.
+T/F
+T/F
+or
+T/F
+T/F
+or
+and
+T/F
+T/F
+or
+T/F
+T/F
+or
+and
+or
+T/F
+T/F
+or
+T/F
+T/F
+or
+and
+T/F
+T/F
+or
+T/F
+T/F
+or
+and
+or
+and
+Figure 5: AND-OR tree of depth 4. In Random-Turn AND-OR, the player who wins the
+coin toss sets the bit at a leaf node. The value of the function determines the winner of the
+game.
+The selection set S is the set of leaves in a depth h complete binary tree. We number the
+levels of the tree from 0 (the root) to h (the leaves). The leaves are treated as binary bits,
+with labels of T (“True”) or F (“False”) if they are chosen by player I or II, respectively.
+The internal nodes of the tree are also treated as binary bits; the players cannot select the
+internal nodes, instead the label of a bit on the kth level of the tree (k < h) is the AND
+of its two children if k is even and the OR if k is odd. Player I wins if the root label is T;
+player II wins if it is F.
+When player I always wins the coin toss with probability p (which need not be 1/2), it is
+straightforward to estimate the probability that she wins the game. Let qk be the probability
+that a label at the kth level is T. Then qk = q2
+k+1 (if k is even) and qk = 2qk+1 −q2
+k+1 (if k is
+odd). When k is even, qk = (2qk+2 −q2
+k+2)2. The map q 7→(2q −q2)2 has a ﬁxed point when
+q4 −4q3 + 4q2 −q = q(q −1)(q2 −3q + 1) = 0
+(i.e., if q ∈{0, 1, (3 ±
+√
+5)/2}); the ﬁxed points in [0, 1] are 0, 1, and (3 −
+√
+5)/2 ≈.382. If
+p is ﬁxed and h tends to ∞along even integers, then the probability player I wins tends to
+0 if p < (3 −
+√
+5)/2 and to 1 if p > (3 −
+√
+5)/2.
+10
+
+=== PAGE 11 ===
+Theorem 5.1. Consider an optimally played game of AND-OR on a level h tree with coin-
+toss probability p. If a move is played in some subtree T below some vertex v, then the
+succeeding moves are all played in T until the label of v is determined. Moreover, the labels
+of the level h −1 vertices are determined in an order that is an optimally played game on
+the tree truncated at level h −1.
+Proof. When a complete set of labels of the leaves (and hence all other vertices) is ﬁxed, we
+say a vertex on level k is pivotal if it is a pivotal element of the game on the tree truncated
+at level k. A vertex on level k is pivotal if and only if its parent is pivotal and its sibling is
+T (if k is odd) or F (if k is even). Thus, a vertex is pivotal if and only if the path from that
+vertex to the root has the property that every sibling of a vertex along that path is T or F
+as the level is odd or even. Note that the event “v is pivotal” is independent of labels on the
+subtree below v.
+We assume, inductively, that the statement of the theorem is true for a tree with fewer
+than h levels and for the ﬁrst t steps on a level h tree. Before the (t + 1)th step is played,
+there are either 0 or 1 partially determined vertices at level h −1 (that is, vertices that are
+undetermined but for which a leaf below them has been played). If there are none, then
+the leaves that are most likely to be pivotal are children of the level h −1 vertices that are
+most likely to be pivotal, so any optimal (t + 1)th step also satisﬁes the desired condition.
+Suppose now that there is exactly one partially determined vertex v at level h −1, and call
+its labeled child x and its yet unlabeled child y. Let z be any unlabeled leaf diﬀerent from
+y that might still aﬀect the outcome of the game. Leaf x must have been labeled at step t.
+We need to show that playing y as the (t + 1)th move is better than playing z.
+Let rt(u) be the conditional probability that a vertex u is pivotal given the labels that
+have been set prior to move t. Let ¯p = p if h is odd and ¯p = 1 −p if h is even (¯p is the
+probability that the value of a leaf node does not determine its parent). Since x was preferred
+over z, we have rt(x) ≥rt(z). Now rt(z) is a nonnegative martingale, which is to say that
+E[rt+1(z)|labels at time t] = rt(z) ≥0. Since x got labeled the way it did with probability
+¯p, we have ¯prt+1(z) ≤rt(z) ≤rt(x) = ¯prt(v) = ¯prt+1(y). Thus, we see that at step t + 1,
+playing y is at least as good as playing z. We need only rule out the case of equality, namely,
+rt+1(z) = rt+1(y).
+Let a be the least common ancestor of y and z, let b1 be the child of a above y, and let
+b2 be the child of a above z. Suppose that x was the ﬁrst move played in the subtree below
+a. Regardless of which player got leaf x, the label of a would not be determined in turn t.
+Thus, z would still be pivotal with positive probability, so the martingale argument would
+actually give the strict inequality ¯prt+1(z) < rt(z) in place of the weak inequality we used
+earlier. Consequently, we get rt+1(z) < rt+1(y), as required.
+On the other hand, suppose that x was not the ﬁrst move played below a. Then by induc-
+tion, the (t −1)th move was played below b1 and, again invoking the inductive hypothesis,
+we see that rt(z) < rt(x). Thus, we get rt+1(z) < rt+1(y) in this case as well.
+Note that the Theorem 5.1 completely characterizes the optimally played games, whether
+or not the two players break ties in the same way. In fact, for every optimally played game
+there is an embedding of the tree in the plane for which at each turn the played leaf is the
+leftmost leaf that at that point has a positive probability to be pivotal.
+11
+
+=== PAGE 12 ===
+Theorem 5.2. If h is even and p = (3 −
+√
+5)/2, then the expected length of the game (i.e.,
+the expected number of labeled leaves) is precisely
+ 
+1 +
+√
+5
+2
+!h
+= (1.6180 . . .)h.
+Proof. When all leaves are randomly labeled, a level k vertex is 1 with probability p if k is
+even and 1 −p if k is odd. Under optimal play, once a vertex’s label is determined, with
+probability p it determines the label of its parent. Thus, given that a vertex v is labeled
+during an optimally played game, the expected number of labeled children of v is 1+1−p.
+Since we know the precise expected length of the game, we take a moment to compare
+this with the lower bounds from the theory of Boolean functions. When the bits xi are
+true with probability p, rather than taking xi = ±1 according to whether the bit is true or
+false, it turns out to be more natural to take T =
+p
+(1 −p)/p and F = −
+p
+p/(1 −p). Then
+E[xi] = 0 and E[x2
+i ] = 1, so the O’Donnell-Servedio bound is still valid. For AND-OR trees
+with p = (3 −
+√
+5)/2, the inﬂuence of each bit is ( −1+
+√
+5
+2
+)h, and there are 2h bits, whence the
+O’Donnell-Servedio bound gives
+E[# turns] ≥(−1 +
+√
+5)2h = (1.5279 . . .)h.
+The O’Donnell-Saks-Schramm-Servedio bound (2) generalizes to the p-biased case [14,
+Theorem 3.1] and yields
+E[# turns] ≥
+1
+( −1+
+√
+5
+2
+)h =
+ 
+1 +
+√
+5
+2
+!h
+= (1.6180 . . .)h.
+This lower bound is exactly tight for AND-OR trees.
+Shannon Switching Game.
+We now discuss a game for which we can prove that the set
+of moves is always connected under optimal play. In some ways, the analysis is similar to
+the analysis of AND-OR games.
+The Shannon Switching Game is played by two players (named Cut and Short) on a
+graph with two distinguished vertices. When it is Cut’s turn, he may delete any unplayed
+edge of the graph, while Short may render an edge immune to being cut. Cut wins if he
+manages to disconnect the two distinguished vertices, otherwise Short wins. When the graph
+is an (L + 1) × L grid, with the vertices of the left side merged into one distinguished vertex
+and the vertices on the other side merged into another distinguished vertex, then the game
+is called Bridg-It (also known as Gale after its inventor David Gale). Oliver Gross showed
+that the ﬁrst player in Bridg-It has a (simple) winning strategy, and then Lehman [12] (see
+also [13]) showed how to solve the general Shannon Switching Game. Here we consider the
+random-turn version of the Shannon Switching Game.
+Just as Random-Turn Hex is connected to site percolation on the triangular lattice, where
+the vertices of the lattice (or, equivalently, faces of the hexaognal lattice) are independently
+colored black or white with probaiblity 1/2, Random-Turn Bridg-It is connected to bond
+12
+
+=== PAGE 13 ===
+percolation on the square lattice, where the edges of the square lattice are independently
+colored black or white with probability 1/2. We don’t know the optimal strategy for Random-
+Turn Bridg-It, but as with Random-Turn Hex, we can make a randomized algorithm that
+plays near optimally. Less is known about bond percolation than site percolation, but it is
+believed that the crossing probabilities for these two processes are asymptotically the same
+on “nice” domains [10], so the probability that Cut wins in Random-Turn Bridg-It is well
+approximated by the probability that a player wins in Random-Turn Hex on a similarly
+shaped board.
+Consider the Random-Turn Shannon Switching Game on a tree, where the root is one
+distinguished vertex and the leaves are (collectively) the other vertex. Thus, Short wins if at
+the end of the game there is a path from the root to one of the leaves. Under optimal play,
+the probability that Short wins is just the probability that there is a path from the root to
+some leaf when each edge is independently deleted with probability 1/2. For the complete
+ternary tree with h levels, the probability that Short wins under optimal play converges to
+3 −
+√
+5 ≈0.764 for large h (see the proof of Theorem 5.5). For the complete binary tree
+with h levels Short wins with probability ∼4/h, so we deﬁne the “enhanced binary tree” to
+be the tree where the root has ⌊h log 2/2⌋children each of whom fathers a complete binary
+tree with h −1 levels. Then the Random-Turn Shannon Switching Game on this enhanced
+binary tree is an approximately fair game when h is large, meaning that Short wins with
+probability 1/2 + o(1). But what are the optimal strategies, and how long does an average
+game last if both players play optimally? We will discuss these issues presently.
+There is a natural coupling of a game with bond percolation on the tree. The edges
+played by Short are the open edges, and those played by Cut are the closed edges. The
+unplayed edges may be considered undecided. We assume that the game terminates when
+the outcome is decided.
+In the following result, a subtree below a vertex v in a rooted tree consists of v and all
+the vertices and edges that are separated from the root by v.
+Theorem 5.3. Consider the Random-Turn Shannon Switching Game on a tree of depth h
+in which each internal node (except possibly the root) has b children and all the leaves are at
+level h. Under optimal play, the set of moves played by Short forms a connected set of edges
+containing the root, and the set of moves played by Cut are all adjacent to the edges played by
+Short. At any position, the set of optimal moves (for either player) consists of all the edges
+closest to the leaves among the undecided edges adjacent to shorted edges. Consequently,
+whenever an edge is played in some subtree T below some vertex, the subsequent moves are
+played in T until all the leaves of T are disconnected from the root by cut edges or until Short
+wins.
+Proof. After Short and Cut have made some moves, deﬁne the residual tree to be the graph
+formed from the original tree by deleting the subtrees disconnected from the root by cut
+edges and contracting edges that have been shorted. Consider some position of an optimally
+played game. By induction, we assume that in the residual tree corresponding to the current
+position the direct descendants of the root are themselves roots of regular b-ary subtrees
+of various depths whose leaves are leaves of the original tree. (The base of the induction
+is clear.) Suppose that e = [x, y] is an edge in the residual tree, where x is closer to the
+root than y. The probability that e is pivotal for bond percolation from the root to the
+13
+
+=== PAGE 14 ===
+leaves (i.e., given the status of the other edges, there is a connection from the root to the
+leaves if e is uncut and there is no connection if e is cut) is precisely the probability that
+y is connected to the leaves (by uncut edges), x is connected to the root, and every open
+path from the root to the leaves passes through e. This is clearly maximized by edges in the
+residual tree adjacent to the root. Among the edges adjacent to the root, this is maximized
+by those closest to the leaves, because the probability of having an open path to the root in
+Bernoulli percolation on the regular b-ary tree is monotone decreasing in the depth of the
+tree. By Lemma 3.1, these correspond to the optimal moves. When one of these edges is
+shorted or cut, the stated structure of the residual tree is preserved. Thus, the induction
+step is established. The theorem follows.
+Next, we consider how long an average optimally played game lasts. In the following
+two theorems we use the notation (common in computer science) Θ(g) to denote a quantity
+that is bounded between c1g and c2g, where c1 and c2 are positive universal constants. (The
+related notation O(g) denotes an expression that is upper bounded by c2g, but which may
+or may not be bounded below.)
+Theorem 5.4. Random-Turn Switching on the enhanced binary tree of depth h lasts on
+average Θ(h2) turns under optimal play.
+Proof. For the complete binary tree of depth h the expected number of vertices in the
+percolation component of the root is h+1. Accordingly, the expected number of played edges
+of the enhanced binary tree is O(h2). For the lower bound, note that for the complete binary
+tree the expected number of vertices in the percolation component of the root conditional
+on there being no leaf in this component is (1 + o(1))h. (This quantity is easily calculated
+inductively, for example.) For the enhanced binary tree, there is a good chance that Θ(h)
+subtrees of the root are explored, so that on average at least Θ(h2) moves are played.
+Theorem 5.5. Random-Turn Switching on the complete ternary tree of order h lasts on
+average Θ(h) turns under optimal play.
+Proof. For the complete ternary tree of depth h let qh be the probability that Cut wins,
+let µh be the expected number of explored (played) edges conditional on Cut winning, and
+let νh be the expected number of explored edges conditional on Short winning. We have
+q0 = 0, µ0 = 0 (say), and ν0 = 0. When Cut wins, the top three edges are always explored.
+Conditional on Cut winning, these top edges are open with probability qh−1/(1 + qh−1),
+independently. Consequently, the following recursions hold:
+qh+1 =
+1 + qh
+2
+3
+,
+µh+1 = 3 + 3
+qh
+1 + qh
+µh ,
+νh+1 = 1 −qh
+1 −q3
+h
+[1 + νh] + qh(1 −qh)
+1 −q3
+h
+[2 + µh + νh] + q2
+h(1 −qh)
+1 −q3
+h
+[3 + 2µh + νh]
+= νh + 1 + qh + q2
+h −3q3
+h
+1 −q3
+h
++ qh + q2
+h −2q3
+h
+1 −q3
+h
+µh .
+We then have qh →
+√
+5 −2 (< 1/2), µh = Θ(1), νh = Θ(h), and E[# turns] = Θ(h).
+14
+
+=== PAGE 15 ===
+Recursive Majority.
+Let Sh = S be a subset of the leaves of the complete ternary tree
+of depth h. Inductively, let Sj be the set of nodes at level j such that the majority of the
+nodes at level j +1 under them is in Sj+1. The payoﬀfunction f(S) for Recursive Three-Fold
+Majority is −1 if S0 = ∅and +1 if S0 = {root}. It seems that this random-turn game cannot
+be analyzed using the methods we have used for the Random-Turn AND-OR game or the
+Random-Turn Shannon Switching Game. In particular, we do not know how long the game
+takes (on average) when played optimally.
+6
+OPEN PROBLEMS.
+We recall here some of the open problems raised earlier in the article. It would be interesting
+to know the expected length of a game of optimally played Random-Turn Hex and whether
+or not the true optimal move (not just near-optimal) can be found eﬃciently. The algorithm
+“play Random-Turn Hex” appears to be an eﬃcient algorithm (in terms of expected number
+of input bits examined) for determining whether or not there is a percolation crossing,
+but is there an asymptotically more eﬃcient algorithm?
+It would also be interesting to
+know, in optimally played Random-Turn Hex on large boards, whether or not the fraction of
+disconnected moves is asymptotically zero. Finally, we do not know how long Random-Turn
+Ternary Recursive Majority takes, or whether or not it is the most eﬃcient algorithm (in
+terms of expected number of input bits read) for evaluating Recursive Ternary Majority.
+ACKNOWLEDGMENTS.
+We are grateful to Wendelin Werner for suggesting to us
+that there should be a version of Hex manifesting some conformal invariance in the scaling
+limit. This was our original motivation for considering the random-turn version of the game.
+Two of us (Peres and Sheﬃeld) were supported in part by NSF grants #DMS-0244479
+and #DMS-0104073.
+References
+[1] Hex information, V. V. Anshelevich, ed., available at http://www.cs.unimaas.nl/
+icga/games/hex/.
+[2] V. V. Anshelevich, The game of Hex: An automatic theorem proving approach to
+game programming, in Proceedings of the Seventeenth National Conference on Artiﬁcial
+Intelligence (2000), pp. 189–194; available at http://home.earthlink.net/~vanshel/
+VAnshelevich-01.pdf.
+[3] C. Browne, Hex Strategy: Making the Right Connections, AK Peters, Natick, MA, 2000.
+[4] J. L. Cardy, Critical percolation in ﬁnite geometries, J. Phys. A 25 (1992) L201–L206.
+[5] A. Coniglio, Fractal structure of Ising and Potts clusters: Exact results, Phys. Rev. Lett.
+62 (1989) 3054–3057.
+[6] D. Gale, The game of Hex and the Brouwer ﬁxed-point theorem, Amer. Math. Monthly
+86 (1979) 818–827.
+15
+
+=== PAGE 16 ===
+[7] M. Gardner, The game of Hex, in Hexaﬂexagons and Other Mathematical Diversions:
+The First Scientiﬁc American Book of Puzzles and Games, 1959, Simon and Schuster,
+New York, pp. 73–83.
+[8] P. Grassberger, Pair connectedness and shortest-path scaling in critical percolation, J.
+Phys. A 32 (1999) 6233–6238.
+[9] H. W. Kuhn and S. Nasar, eds., The Essential John Nash, Princeton University Press,
+Princeton, 2002.
+[10] R. Langlands, P. Pouliot, and Y. Saint-Aubin, Conformal invariance in two-dimensional
+percolation, Bull. Amer. Math. Soc. (N.S.) 30 (1994) 1–61.
+[11] A. J. Lazarus, D. E. Loeb, J. G. Propp, W. R. Stromquist, and D. H. Ullman, Combi-
+natorial games under auction play, Games Econom. Behav. 27 (1999) 229–264.
+[12] A. Lehman, A solution of the Shannon switching game, J. Soc. Indust. Appl. Math. 12
+(1964) 687–725.
+[13] R. Mansﬁeld, Strategies for the Shannon switching game, Amer. Math. Monthly 103
+(1996) 250–252.
+[14] R. O’Donnell, M. Saks, O. Schramm, and R. Servedio, Every decision tree has an
+inﬂuential variable, in Proceedings of the 46th Annual Symposium on Foundations of
+Computer Science (FOCS), 2005, pp. 31–39; available at arXiv:cs.CC/0508071.
+[15] R. O’Donnell and R. Servedio, On decision trees, inﬂuences, and learning monotone deci-
+sion trees, Technical report CUCS-023-04, Department of Computer Science, Columbia
+University, 2004.
+[16] Y. Peres, O. Schramm, S. Sheﬃeld, and D. B. Wilson, Tug-of-war and the inﬁnity
+Laplacian (2006, preprint).
+[17] S. Reisch, Hex ist PSPACE-vollst¨andig, Acta Inform. 15 (1981) 167–191.
+[18] J. van Rijswijck, Computer Hex: Are Bees Better than Fruitﬂies?, Master’s thesis,
+Department of Computer Science, University of Alberta, 2000.
+[19] O. Schramm and J. E. Steif, Quantitative noise sensitivity and exceptional times for
+percolation (2005, preprint); available at arXiv:math.PR/0504586.
+[20] O. Schramm and D. B. Wilson, SLE coordinate changes, New York J. Math. 11 (2005)
+659–669; available at arXiv:math.PR/0505368.
+[21] S. Smirnov, Critical percolation in the plane. I. Conformal invariance and Cardy’s for-
+mula. II. Continuum scaling limit, 2001, available at http://www.math.kth.se/~stas/
+papers/percol.ps.
+[22] S. Smirnov and W. Werner, Critical exponents for two-dimensional percolation, Math.
+Res. Lett. 8 (2001) 729–744.
+16
+
+=== PAGE 17 ===
+[23] I. Stewart, Hex marks the spot, Sci. Amer. 283 (September 2000) 100–103.
+[24] J. Yang, http://www.ee.umanitoba.ca/~jingyang/.
+YUVAL PERES works in probability theory and fractal geometry, especially on problems
+involving Brownian motion, probability on trees, percolation, and projections of fractals.
+After graduating from the Hebrew University, Jerusalem, in 1990, he has taught at Stan-
+ford, Yale, and the Hebrew University. He now teaches in the Statistics and Mathematics
+Departments at the University of California, Berkeley.
+Department of Statistics; 367 Evans Hall; University of California; Berkeley, CA 94720
+http://www.stat.berkeley.edu/~peres/
+ODED SCHRAMM was born in December 1961 in Jerusalem, Israel. He studied at the
+Hebrew University (BSc and MSc) and completed his Ph.D. at Princeton University under
+the direction of William Thurston. After a two-year postdoc at U.C. San Diego, he joined
+the Weizmann Institute of Science and remained there until 1999, at which time he moved to
+Redmond, Washington, to join the Theory Group of Microsoft Research. Among the prizes
+he has received are the Salem Prize (2001), the Clay Research Award (2002), the Henri
+Poincar´e Prize (2003) and the Loeve Prize (2003).
+Microsoft Research; One Microsoft Way; Redmond, WA 98052
+http://research.microsoft.com/~schramm/
+SCOTT SHEFFIELD earned his Ph.D. from Stanford in 2003 and his B.A. and M.A.
+degrees from Harvard in 1998. He completed postdoctoral research at Microsoft Research and
+U.C. Berkeley and is currently an assistant professor in the Courant Institute at New York
+University, where he teaches probability and mathematical ﬁnance. He has held numerous
+internships and short-term research positions in government and industry, and his primary
+research interests are mathematical physics and probability theory.
+Courant Institute; 251 Mercer Street; New York, NY 10012
+http://www.cims.nyu.edu/~sheff/
+DAVID B. WILSON works in probability theory, especially in statistical physics and
+random walks. He studied at MIT where he earned three S.B. degrees in 1991 and his Ph.D.
+in 1996 under the direction of Jim Propp. After postdocs at U.C. Berkeley, DIMACS at
+Rutgers, and the Institute for Advanced Study, he joined the Theory Group of Microsoft
+Research.
+Microsoft Research; One Microsoft Way; Redmond, WA 98052
+http://dbwilson.com
+17

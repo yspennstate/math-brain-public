@@ -1,0 +1,52 @@
+{
+  "status": "WITHOUT_VERIFIED_BRAIN",
+  "full_fei": "OPEN_NOT_PROVED",
+  "checker_scope": "current-run standard-library-equivalent formulas; Decimal precision 70 for exact-subcube finite core; floating point for adversarial and ternary diagnostics",
+  "exact_subcube": {
+    "finite_range_checked": [1, 511],
+    "decimal_precision": 70,
+    "minimum_A_minus_C": "0.0306901028716339425370694788312231288896694392204158339554681975526610",
+    "minimum_at_m": 5,
+    "m_5": {
+      "C": "0.9401790856451434128671128680238906268797359737064005716902644009680618",
+      "A": "0.9708691885167773554041823468551137557694054129268164056457325985207228"
+    },
+    "m_511": {
+      "C": "4.376034537023194925783458343826265864050259214502003824692298456306953",
+      "A": "6.579518002085860639914892315653399113731413384472268864851839710315047",
+      "gap": "2.203483465062665714131433971827133249681154169970265040159541254008094"
+    },
+    "analytic_tail": {
+      "proved_from_m": 512,
+      "even_boundary_m_512_lower_minus_upper_bits": 0.044522688235575814,
+      "odd_boundary_m_513_lower_minus_upper_bits": 0.06713559988227935
+    }
+  },
+  "two_cluster_arbitrary_row_refutation": {
+    "k_8": {"C": 6.475729100578573, "A": 2.0521258910921762, "C_minus_A": 4.423603209486397},
+    "k_16": {"C": 12.71101777663262, "A": 2.843388430066645, "C_minus_A": 9.867629346565975},
+    "k_32": {"C": 24.741130758986802, "A": 3.7184138718702653, "C_minus_A": 21.022716887116538},
+    "k_64": {"C": 48.322195729978766, "A": 4.646423257765424, "C_minus_A": 43.67577247221334},
+    "k_128": {"C": 94.98934503499717, "A": 5.605991855341435, "C_minus_A": 89.38335317965574},
+    "k_256": {"C": 187.8232651837294, "A": 6.583665026355675, "C_minus_A": 181.23960015737373},
+    "asymptotic_C_over_k": 0.7213475204444817,
+    "interpretation": "REFUTED for arbitrary subset laws; not a Boolean FEI counterexample"
+  },
+  "ternary_boolean_derivative_rows": {
+    "dimensions": [1, 2, 3],
+    "nonzero_rows_checked": 6648,
+    "violations_C_le_A": 16,
+    "violations_C_le_A_plus_Ephys": 0,
+    "maximum_C_minus_A": 0.037189922429389066,
+    "maximum_excess_over_Ephys_ratio": 0.03314822277725633,
+    "extremal_observed_row": {
+      "dimension": 3,
+      "values": [-1, -1, -1, 0, -1, 0, 0, 1],
+      "C": 0.46797000057692506,
+      "A": 0.430780078147536,
+      "Ephys": 1.1219280948873624,
+      "support_density": 0.625
+    },
+    "candidate_status": "EVIDENCE_ONLY_NOT_PROVED"
+  }
+}

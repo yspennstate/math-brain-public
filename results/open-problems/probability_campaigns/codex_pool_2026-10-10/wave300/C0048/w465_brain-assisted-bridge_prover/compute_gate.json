@@ -1,0 +1,12 @@
+{
+  "task": "C0048 local bridge verification",
+  "agent": "w465",
+  "created": "2026-10-10",
+  "fresh": true,
+  "max_elapsed_seconds": 120,
+  "max_edges_per_enumerated_graph": 8,
+  "max_configurations_per_graph": 256,
+  "allowed": ["standard-library exact rational finite-graph enumeration", "standard-library Decimal logarithms", "closed-form path calculations"],
+  "forbidden": ["GPU", "DNN training", "agent spawning", "live-store writes", "blind evaluation files"],
+  "purpose": "Check self-contained local identities and refute an invalid finite-to-infinite inference; no numerical parent-problem proof."
+}

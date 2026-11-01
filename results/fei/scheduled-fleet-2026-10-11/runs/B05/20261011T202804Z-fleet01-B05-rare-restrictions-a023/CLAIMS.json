@@ -1,0 +1,56 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261011T202804Z-fleet01-B05-rare-restrictions-a023",
+  "claims": [
+    {
+      "claim_id": "B05-A023-CONTROL-FIRST-ORDER-TRANSPORT-NOGO",
+      "version": 1,
+      "exact_statement": "For every even k>=4, let delta=2^(-k), p=delta^2, let b be the standard quadratic bent sign, let b' flip only the origin, let s be their fresh-coordinate selector, and let F=1+1_{z=0}(s-1) with 2k activation controls. If L_CF is the expected selector packet when all controls are queried before the selector and L_SF is the selector packet when the selector is queried first, then L_CF=p L_core and |L_SF-L_CF|<=p delta^2(3k+7). Moreover L_CF/(p delta)=k+log2(e)+O(sqrt(delta)) and L_SF/(p delta)=k+log2(e)+O(sqrt(delta)+delta*k). Thus this physical control-first, single-use activation-revelation rule transports rather than pays the logarithmic selector debt; no conclusion is made about data-interleaved trees or FEI.",
+      "hypotheses": [
+        "even integer k>=4",
+        "uniform physical Boolean cube",
+        "fresh physical selector y",
+        "2k fresh activation controls",
+        "quadratic bent sign b and the genuine Boolean one-origin flip b'",
+        "entropy in bits and zero packets contribute zero"
+      ],
+      "statement_sha256": "6cc685745498831d69f1463e033ca1b68028da98f4bd7d1d1244c4f0c333566a",
+      "contributors": [
+        "fleet01/B05"
+      ],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "path": "reports/fei-2026-10-11/runs/B05/20261011T202804Z-fleet01-B05-rare-restrictions-a023/REPORT.md"
+      },
+      "proof_dependencies": [
+        {
+          "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+          "version": 1,
+          "role": "accepted family and notation provenance; the order-transport proof is reconstructed in full",
+          "commit": "80cc2e5027efa56d79c4ecdf7d4949759ef2068b"
+        }
+      ],
+      "review_records": [],
+      "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "For this sparse-activation family, revealing all activation controls before the selector reduces the selector entropy debt to O(d) using only a bounded one-use activation credit."
+      ],
+      "first_unproved_line": null,
+      "scope_exclusions": [
+        "Does not refute data-interleaved adaptive trees.",
+        "Does not refute child-deficit transport or an explicit logarithmic potential.",
+        "Does not refute existential good-coordinate selection.",
+        "Does not prove or disprove FEI."
+      ],
+      "next_consumers": [
+        "A027",
+        "A028",
+        "A064",
+        "A087",
+        "A094",
+        "B20"
+      ]
+    }
+  ]
+}

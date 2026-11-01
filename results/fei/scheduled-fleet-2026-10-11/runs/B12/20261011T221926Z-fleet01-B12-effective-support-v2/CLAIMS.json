@@ -1,0 +1,62 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261011T221926Z-fleet01-B12-effective-support-v2",
+  "stream": "B12",
+  "packet_id": "A058",
+  "claims": [
+    {
+      "claim_id": "B12-A058-SPARSE-QUOTIENT-OVERLAP",
+      "version": 2,
+      "exact_statement": "For every surjective L:F_2^n->F_2^r and every nonempty B subset F_2^r with p=|B|/2^r<=1/2, let M be the number of nonzero Fourier coefficients of 1_B. If log_2(2M-1)<=2log_2(1/p)+1, then K(x,z)=1-2 1_{x=-1}1_{Lz in B} satisfies H(K)<6 I(K).",
+      "hypotheses": [
+        "n and r are positive integers and L:F_2^n->F_2^r is surjective",
+        "B is a nonempty subset of F_2^r",
+        "p=|B|/2^r<=1/2",
+        "M is the exact number of nonzero normalized Fourier coefficients of 1_B",
+        "log_2(2M-1)<=2log_2(1/p)+1",
+        "x is one fresh physical selector coordinate",
+        "entropy and influence use the uniform cube and base-2 logarithms"
+      ],
+      "statement_sha256": "66a14daae06513e6d4c753dd2d24404d6d820898aa52c8ab6e63d8b6e4dbcef6",
+      "contributors": [
+        "fleet01/B12"
+      ],
+      "proof_source": {
+        "path": "OVERLAPPING_COMPOSITION_CLASS_v2.tex",
+        "report_path": "REPORT.md",
+        "proof_complete": true
+      },
+      "proof_dependencies": [
+        {
+          "claim": "Parseval and Fourier pullback through a surjective F_2-linear map",
+          "status": "KNOWN",
+          "use": "exact coefficient, support, and nonconstant-mass identities"
+        },
+        {
+          "claim": "cube edge-isoperimetric inequality I(1-2 1_A)>=2p log_2(1/p) for p<=1/2",
+          "status": "KNOWN",
+          "use": "physical data-boundary payment"
+        },
+        {
+          "claim_id": "B12-A058-SPARSE-QUOTIENT-OVERLAP",
+          "version": 1,
+          "status": "SUPERSEDED_PROOF_CANDIDATE",
+          "use": "scope baseline only; version 2 rederives the coefficient ledger"
+        }
+      ],
+      "review_records": [],
+      "status": "PROOF_CANDIDATE",
+      "supersedes": [
+        "B12-A058-SPARSE-QUOTIENT-OVERLAP-v1"
+      ],
+      "refutes": [],
+      "first_unproved_line": "No analytic line remains unsupported; independent source-complete reconstruction and literature comparison remain pending.",
+      "next_consumers": [
+        "A090",
+        "A091",
+        "B20"
+      ]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "claim_25c5933eb4eeace1fc2a65fb1aba685df634054eba10e9f383b0eeb7c1ba32f7",
+    "title": "Theorem 3.13 (Brascamp–Lieb inequality) of arXiv:2405.06616: Fast Mixing in Sparse Random Ising Models",
+    "body": "[Theorem 3.13 (Brascamp–Lieb inequality) of arXiv:2405.06616, 'Fast Mixing in Sparse Random Ising Models'] For any distribution with density ν ∝exp(−V) for some V : Rn →R, if there is a matrix Γ ≻0 such that ∇2V(z) ⪰Γ uniformly, then Cov(ν) ⪯Γ−1. Using the Hubbard-Stratonovich transform with the Brascamp-Lieb inequality allows us to bound covariances using the following lemma.",
+    "metadata": {
+      "artifact_digest": "sha256:dff21d222eb9f47307b7bf2c3ec888ec69c52e575f32e2b257e80fcac202fcbd",
+      "artifact_path": "objects/sha256/df/dff21d222eb9f47307b7bf2c3ec888ec69c52e575f32e2b257e80fcac202fcbd.md",
+      "bundle_digest": "sha256:0ebef6940a4110463a9a29c1442f3422b97ef81a9c5fe6020c1efee1a52ffd62",
+      "bundle_entry_key": "lit-2405-06616-theorem-3-13-68d962",
+      "bundle_id": "population.lit3-arxiv-001",
+      "claim_kind": "concept",
+      "conditions": [],
+      "domain": "harvested statement (arXiv 2405.06616, 2024): mathematics",
+      "draft": "claude-brain-20h-20260901/bundle_lit3_001.json",
+      "evidence_ids": [],
+      "logical_id": "math:harvest.arxiv.mathematics:arxiv-2405-06616-theorem-3-13-68d962",
+      "overlay_schema_version": 1,
+      "proof_text": "",
+      "release_manifest_digest": "sha256:820cf1b09b91033c61bd5093a1d0ffb8b92648f54205e2628bb29974c84b67f6",
+      "revision_digest": "sha256:25c5933eb4eeace1fc2a65fb1aba685df634054eba10e9f383b0eeb7c1ba32f7",
+      "source_id": "arxiv:2405.06616",
+      "source_revision": "as-read-2026-09-02",
+      "statement_fidelity_reviewed": false,
+      "supersedes": [],
+      "trust_class": "curated_secondary",
+      "truth_status": "unverified"
+    }
+  },
+  {
+    "id": "claim_4dc336ffe1859932768872cd898d8a70b2b6935d4bd7b90c575ded181869d08f",
+    "title": "Tensorization (Subadditivity) of Entropy",
+    "body": "Let X_1, ..., X_n be independent random variables and let Z = f(X_1, ..., X_n) be a nonnegative random variable with E[Z log Z] finite. Write Ent(Z) = E[Z log Z] - E[Z] log E[Z] and let Ent^{(i)}(Z) denote the same functional computed with respect to X_i alone, with the other coordinates held fixed. Then Ent(Z) <= sum_{i=1}^n E[ Ent^{(i)}(Z) ]. The same statement with variance in place of entropy is the Efron-Stein inequality, and the two are the p = 2 and p = 1 members of a family of phi-entropies that all tensorize. Tensorization is what converts a ONE-DIMENSIONAL functional inequality into an n-dimensional one with no loss of constant: if each coordinate's law satisfies a logarithmic Sobolev inequality with constant C, then the product law satisfies it with the SAME constant C, independent of n. That dimension-free feature is the whole reason the entropy method produces concentration bounds that do not degrade as n grows. Independence of the coordinates is essential. [standard; e.g. Boucheron, Lugosi and Massart, Concentration Inequalities, Theorem 4.10 and Section 4.1]\nX_1, ..., X_n independent\nZ = f(X) nonnegative with E[Z log Z] finite",
+    "metadata": {
+      "artifact_digest": "sha256:6ecb184e30afa5bd32a4ae4b625d73d2360b14b2e5e28990101a16f74a67375f",
+      "artifact_path": "objects/sha256/6e/6ecb184e30afa5bd32a4ae4b625d73d2360b14b2e5e28990101a16f74a67375f.md",
+      "bundle_digest": "sha256:38b5db6fa95e8893d8a7a3f7c9b4b5bf2145169724a7d2b266005044d60c4d07",
+      "bundle_entry_key": "thm-entropy-tensorization",
+      "bundle_id": "population.martingales-and-concentration-001",
+      "claim_kind": "theorem",
+      "conditions": [],
+      "domain": "probability theory",
+      "draft": "claude-8e06e1f7-M9/bundle_ap02.json",
+      "evidence_ids": [],
+      "logical_id": "math:probability.concentration:tensorization-of-entropy",
+      "overlay_schema_version": 1,
+      "proof_text": "Use the variational (duality) formula for entropy: for Z >= 0 with E[Z log Z] finite, Ent(Z) = sup { E[Z U] : E[e^U] <= 1 }, the supremum attained at U = log Z - log E[Z] on {Z > 0}. Fix any U with E[e^U] <= 1 and let E_i denote conditional expectation given X_1, ..., X_i, with E_0 = E and E_n e^U = e^U. Telescope the exponential rather than U itself: e^U = E[e^U] * prod_{i=1}^n ( E_i e^U / E_{i-1} e^U ), so with U_i = log E_i e^U - log E_{i-1} e^U one has U = log E[e^U] + sum_i U_i <= sum_i U_i, because log E[e^U] <= 0. Hence E[Z U] <= sum_i E[Z U_i]. Now condition on X^{(i)} = (X_j)_{j != i}. By independence, E_{i-1} e^U is a function of X_1, ..., X_{i-1} alone, hence fixed given X^{(i)}, and averaging E_i e^U over X_i with the other coordinates fixed returns E_{i-1} e^U, so E[ e^{U_i} | X^{(i)} ] = 1. The one-variable duality formula, applied in the variable X_i with the others held fixed, then gives E[ Z U_i | X^{(i)} ] <= Ent^{(i)}(Z). Taking expectations and summing over i, E[Z U] <= sum_i E[ Ent^{(i)}(Z) ]; the supremum over admissible U is Ent(Z), which proves the inequality. (The earlier draft telescoped U linearly as E_i U - E_{i-1} U and claimed the conditional normalisation E[e^{U_i} | others] <= 1 by Jensen; that step does not hold, and the log-telescoping above is the standard repair - Boucheron, Lugosi and Massart, proof of Theorem 4.10.)",
+      "release_manifest_digest": "sha256:65bc8bd338d9119f2b8ee6c53a7945a71c4d874c489921ae4c702fb50c6fd474",
+      "revision_digest": "sha256:4dc336ffe1859932768872cd898d8a70b2b6935d4bd7b90c575ded181869d08f",
+      "source_id": "rederived:claude-8e06e1f7-M9",
+      "source_revision": "re-derived-2026-08-22 at sketch level; statement and the variational-plus-telescoping proof structure written by the author; textbook cross-reference in the statement, source not fetched this session",
+      "statement_fidelity_reviewed": false,
+      "supersedes": [],
+      "trust_class": "curated_secondary",
+      "truth_status": "unverified"
+    }
+  }
+]

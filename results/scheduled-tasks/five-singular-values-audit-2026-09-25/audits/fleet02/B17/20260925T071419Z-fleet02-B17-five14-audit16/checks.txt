@@ -1,0 +1,47 @@
+fleet02/B17 P7 exact checks
+run_id=20260925T071419Z-fleet02-B17-five14-audit16
+
+PIN
+commit=ec211ba2d77a4a9850168c6af1574ea651feaa7c
+short.tex blob=c4f2a997cf336ee974e15409b5bccdd8cca039d8
+short.tex SHA256=f4a4f4c6db7f0ad4feffbe04041af3cf1a759fb4cb51f4979b6fd884eba26037; bytes=58136
+short.pdf blob=8be3aae36ecad7a9dc9b7c95978aad09499f32d0
+short.pdf SHA256=4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423; bytes=484310; pages=14
+
+NO-PIVOT
+eta=1/12, zeta=1/256, a0=5/48
+eta^2+zeta=25/2304=a0^2
+
+PROPOSITION 6.4
+sqrt(2)<14143/10000 since 14143^2-2*10000^2=24449>0
+gamma1-.38 > 299/64000
+gamma2-.237 > 67/192000
+gamma3-.09 > 1/38400
+
+LEMMA 5.4
+At v=1/4, A=2^(5/4)e^(3/4)Gamma(1/4).
+Cauchy-Schwarz gives Gamma(1/4)<=2sqrt(2)pi^(1/4), so A^4<=2^11 e^3 pi.
+Using e<2719/1000 and pi<22/7 gives A<19 with positive exact rational margin.
+
+SECTION 7
+Use log2<347/500, log19<3, sqrt(12)<693/200, pi<22/7, 1/e<10/27.
+These rigorously imply diagonal truncated <76, main diagonal <267,
+definite pair <51, indefinite pair <269.
+
+LOCAL DOMAIN TESTS
+N02: padded j stress test 3x1 rank-one T, j=2; repair zero branch separately.
+C12: if p(y)=0 target bound is immediate; otherwise log p(y) is defined.
+N01: set p_T(v)=0 because P(T=v)=0.
+C01: remove one angular seam ray; same Jacobian.
+C03: critical level is two affine lines; null under the joint density.
+N03: set h(0)=+infinity; allowed by extended nonnegative rearrangement lemma.
+N04: set J(0)=+infinity or establish no-atoms before E J(R-a).
+
+VERDICT
+literal source local issues: N02 L148, C12 L224, N01 L398, C01 L412,
+C03 L441, N03 L505/L509, N04 L613.
+false nonproof: C04 L41, C05 L65.
+C02 PASS in P7; peer presentation-status disagreement preserved.
+line222 PASS under factor-value reading.
+unchecked: C07, exhaustive bibliography/priority, pixel/glyph PDF parity.
+corrected theorem chain: no unresolved theorem-level mathematical defect found in P7.

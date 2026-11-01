@@ -1,0 +1,12 @@
+{
+  "helper_version": "A056-v1 code/check.py",
+  "actual_Boolean_family": "Every two-input outer Boolean gate and every pair of two-input Boolean children on disjoint physical blocks; additionally every partial physical restriction of each balanced two-bit child paired with a dictator, and one restricted three-bit majority witness",
+  "parameter_domain": "Outer and child truth-table codes 0 through 15; restrictions in {unfixed,+1,-1}^2",
+  "case_count": {"pilot": 16, "main": 4096, "balanced_subcases_in_main": 576, "restriction_cases": 864, "witness": 1},
+  "symmetry_reduction": "None; all specified truth tables and restrictions are tested",
+  "arithmetic": "Integer Walsh sums and rational arithmetic; entropy represented exactly as rational linear combinations of logarithms of primes",
+  "memory_estimate_MB": 30,
+  "maximum_runtime_seconds": {"pilot": 60, "main": 180},
+  "dimension_escalation": false,
+  "certificate_scope": "Finite identities; all-dimensional claims use analytic proof in REPORT.md"
+}

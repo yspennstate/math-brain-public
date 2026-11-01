@@ -1,0 +1,62 @@
+[
+  {
+    "claim_id": "A016-TWO-WEAK-SEPARATORS-OWNED-PAYMENT",
+    "version": 1,
+    "exact_statement": "For all a>=1, even m>=4, and arbitrary two-bit activation masks A_j, the actual Boolean product of disjoint paired-quadratic private m-bit cores point-edited by A_j on two shared bits has delta=2^-m, J=am/2+2m delta sum E A_j, I=J+d and d<=4delta sum E A_j. Its prescribed two-shared-query stopping tree has exact raw derivative bill T=T_private+2E_zw, exclusive private allocations T_private=2sum u_j with u_j<=J_j, and 2E_zw<=d, hence exact-K4-localized bill<=T<=2I. With every terminal uniform-mask cost am retained, am+T+(3/ln2)d<=4I. The explicit fixed reference Q(L,R)=2^-am times the actual shared spectral conditional derived from the four closed terminal spectra is normalized and has complete CE=am+B_block<=am+2<=3I; the same owned ledger also pays this reference. For a=2, A1=AND and A2=OR, the root is ANF-connected, both shared influences are delta, I=m+(2m+2)delta, T=(4m+1)delta(1+delta), root B/Inf>=(1-delta)^2(m-1)/2 and both descendants B/Inf>=m-1. All three nodes are K4-bad for every even m>=12, although T/I tends to0 and CE/I tends to2. No universal arbitrary-core or unbounded-separator-width policy is claimed.",
+    "hypotheses": [
+      "uniform independent physical bits; Boolean signs; entropy/CE in bits",
+      "a>=1; even m>=4; two shared coordinates; disjoint private m-bit blocks",
+      "private cores are the specified paired quadratic signs with value+1 at origin",
+      "arbitrary two-bit activation masks, including constants and unequal nonlinear masks",
+      "actual prescribed z-then-w stopping tree; complete private terminal costs retained",
+      "Dirichlet energy for signed real derivatives; exact B threshold4",
+      "rate4 ledger uses reviewed B04-NODE-BOUNDARY@1; other statements self-contained"
+    ],
+    "statement_sha256": "456dc42a0b7488348330e173466177b564bb5e50fc0f6bb46f115ee93fa28aaa",
+    "contributors": [
+      "A016/fleet05"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T011255Z-fleet05-A016-addressing-benchmark\\REPORT.md",
+      "locators": [
+        "complete derivation sections1-7"
+      ],
+      "code": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T011255Z-fleet05-A016-addressing-benchmark\\code\\check.py",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T011255Z-fleet05-A016-addressing-benchmark\\code\\formula.py"
+      ],
+      "exact_certificates": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T011255Z-fleet05-A016-addressing-benchmark\\out\\CHECK.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A016\\runs\\20261014T011255Z-fleet05-A016-addressing-benchmark\\out\\FORMULA_CHECK.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "B04-NODE-BOUNDARY",
+        "version": 1,
+        "scope": "terminal-inclusive rate4 ledger only",
+        "acceptance": "A018 stage2 independent reconstruction, consumed previously"
+      }
+    ],
+    "review_records": [],
+    "status": "SCOPED_MECHANISM_APPLICATION_AUTHOR_PROVED_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Necessary heuristic: a paid shared-first stopping prefix requires a shared first pivot with constant positive influence or B<=4Inf. Unequal AND/OR gives weak bad pivots with a paid prefix."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B04-lead",
+      "A018",
+      "A019",
+      "A020",
+      "A028",
+      "A064",
+      "A090",
+      "A091",
+      "A095",
+      "A097",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,88 @@
+% B12 / A058 v2 proof candidate. Full FEI remains open.
+\section*{Effective-support sparse quotient overlap}
+
+Let $L:\mathbb F_2^n\to\mathbb F_2^r$ be surjective and let
+$\varnothing\ne B\subseteq\mathbb F_2^r$.  Put
+\[
+ A=L^{-1}(B),\qquad p=|B|2^{-r},\qquad
+ K(x,z)=1-2\mathbf1_{\{x=-1\}}\mathbf1_A(z).
+\]
+For the normalized quotient Fourier coefficients
+\[
+ a_\alpha=\mathbb E_{y\in\mathbb F_2^r}
+   \mathbf1_B(y)(-1)^{\alpha\cdot y},
+\]
+let
+\[
+ M=|\{\alpha:a_\alpha\ne0\}|,
+ \quad d=\log_2(2M-1),
+ \quad \ell=\log_2(1/p).
+\]
+
+\begin{theorem}[Effective-support overlap, version 2]
+If $p\le1/2$ and $d\le2\ell+1$, then
+\[
+ \mathbf H(K)<6\mathbf I(K).
+\]
+In particular, since $M\le2^r$, it is sufficient that
+$\ell\ge r/2$, or equivalently $|B|\le2^{r/2}$.  This corollary
+automatically has $p\le1/2$ for integral $|B|$ and $r\ge1$.
+\end{theorem}
+
+\begin{proof}
+Surjectivity gives $a_0=p$ and Parseval gives
+$\sum_\alpha a_\alpha^2=p$.  Since
+\[
+ K(x,z)=1-\mathbf1_A(z)+x\mathbf1_A(z),
+\]
+the constant Fourier coefficient is $1-p$, the selector singleton
+has coefficient $p$, and every nonzero quotient frequency with
+$a_\alpha\ne0$ produces two coefficients of magnitudes
+$|a_\alpha|$.  Therefore the nonconstant spectral mass is
+\[
+ q=p^2+2\sum_{\alpha\ne0}a_\alpha^2=2p-p^2,
+\]
+and it is supported on at most $2M-1$ atoms.  Conditional entropy
+maximization gives
+\begin{equation}
+ \mathbf H(K)\le h_2(q)+qd.                              \tag{1}
+\end{equation}
+
+The selector influence is exactly $p$.  The data sectors give the
+exact shared-input identity
+\begin{equation}
+ \mathbf I(K)=p+2\sum_{\alpha\ne0}|L^T\alpha|a_\alpha^2
+             =p+\tfrac12\mathbf I(1-2\mathbf1_A).        \tag{2}
+\end{equation}
+Because $p\le1/2$, cube edge isoperimetry yields
+\begin{equation}
+ \mathbf I(K)\ge p(1+\ell).                             \tag{3}
+\end{equation}
+
+For every $0<q<1$,
+\[
+ h_2(q)
+ \le q\log_2(1/q)+q\log_2 e.
+\]
+Indeed,
+$(1-q)\log_2(1/(1-q))\le q\log_2e$ follows from
+$-\ln(1-q)\le q/(1-q)$.  Since $q\ge p$, (1) implies
+\[
+ \mathbf H(K)
+ \le q(\ell+\log_2e+d)
+ \le p(2-p)(3\ell+1+\log_2e),                           \tag{4}
+\]
+where $d\le2\ell+1$ was used.  Finally,
+$2-p<2$ and $1+\log_2e<3$ (equivalently $\ln2>1/2$), so
+\[
+ \mathbf H(K)<2p(3\ell+3)=6p(\ell+1)\le6\mathbf I(K).
+\]
+This proves the theorem.
+\end{proof}
+
+The selector influence $p$ may tend to zero, and the two branches
+have inner product $1-2p$, so neither neighboring orthogonality nor a
+uniform positive selector-energy assumption is used.  The quantity
+$M$ is the actual quotient Fourier support, not a fixed-order Renyi
+surrogate.  Arbitrary reuse of physical variables among the parity
+rows remains present through the exact weights $|L^T\alpha|$ in (2).

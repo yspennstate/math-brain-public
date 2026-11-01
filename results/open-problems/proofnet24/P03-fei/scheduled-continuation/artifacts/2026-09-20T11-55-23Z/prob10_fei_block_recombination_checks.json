@@ -1,0 +1,160 @@
+{
+  "elapsed_seconds": 3.6125595569610596,
+  "exhaustive": {
+    "by_dimension": {
+      "1": {
+        "function_block_cases": 4,
+        "functions": 4,
+        "max_B_minus_Delta": 0.0,
+        "max_Delta_minus_2B": 0.0,
+        "max_Delta_over_B_when_B_positive": 0.0,
+        "max_direct_identity_error": 0.0,
+        "nonempty_physical_blocks": 1
+      },
+      "2": {
+        "function_block_cases": 48,
+        "functions": 16,
+        "max_B_minus_Delta": 0.0,
+        "max_Delta_minus_2B": 0.0,
+        "max_Delta_over_B_when_B_positive": 2.0,
+        "max_direct_identity_error": 0.0,
+        "nonempty_physical_blocks": 3
+      },
+      "3": {
+        "function_block_cases": 1792,
+        "functions": 256,
+        "max_B_minus_Delta": 4.440892098500626e-16,
+        "max_Delta_minus_2B": 0.0,
+        "max_Delta_over_B_when_B_positive": 2.0,
+        "max_direct_identity_error": 4.440892098500626e-16,
+        "nonempty_physical_blocks": 7
+      },
+      "4": {
+        "function_block_cases": 983040,
+        "functions": 65536,
+        "max_B_minus_Delta": 4.440892098500626e-16,
+        "max_Delta_minus_2B": 0.0,
+        "max_Delta_over_B_when_B_positive": 2.0,
+        "max_direct_identity_error": 8.881784197001252e-16,
+        "nonempty_physical_blocks": 15
+      }
+    },
+    "global_max_B_minus_Delta": 4.440892098500626e-16,
+    "global_max_Delta_minus_2B": 0.0,
+    "global_max_Delta_over_B_when_B_positive": 2.0,
+    "global_max_direct_identity_error": 8.881784197001252e-16,
+    "total_boolean_functions_dimensions_1_through_4": 65812,
+    "total_function_nonempty_block_cases": 984884
+  },
+  "limitations": [
+    "Exhaustive Boolean enumeration stops at dimension four.",
+    "Random Walsh-vector tests are numerical self-checks, not proof.",
+    "The coded stress case is only a small syndrome proxy; the archived m=8 coded obstruction has 2040 input bits and is not enumerated.",
+    "Only physical coordinate blocks are enumerated. The report proves the general affine-coset version analytically.",
+    "No independent audit, formal verification, Lean proof, or source-closure claim is made."
+  ],
+  "scalar_binary_domination": {
+    "max_4t1t_minus_h2t": 0.0,
+    "max_JS_over_B_interior": 1.0,
+    "max_JSfiber_minus_4t1t": 0.0,
+    "max_JSfiber_minus_h2t": 0.0,
+    "points": 500001
+  },
+  "sharp_controlled_character": {
+    "B_control": 1.0,
+    "Delta_control": 2.0,
+    "Delta_over_B": 2.0,
+    "H": 2.0,
+    "average_child_H": 0.0,
+    "truth_table": [
+      1,
+      1,
+      1,
+      -1
+    ]
+  },
+  "status": "PASS",
+  "stress_examples": [
+    {
+      "H": 0.24017391199362037,
+      "H_over_I": 3.842782591897926,
+      "I": 0.0625,
+      "max_proper_block_B_over_block_influence": {"A": [0,1,2,3,4,5,6], "ratio": 3.1864594221783498},
+      "max_proper_block_Delta_over_B": {"A": [0], "ratio": 1.953474969903762},
+      "min_proper_block_B_over_block_influence": {"A": [0], "ratio": 2.104844602633926},
+      "n": 8,
+      "name": "one_point_n8"
+    },
+    {
+      "H": 4.0,
+      "H_over_I": 2.0,
+      "I": 2.0,
+      "max_proper_block_B_over_block_influence": {"A": [0], "ratio": 2.0},
+      "max_proper_block_Delta_over_B": {"A": [0], "ratio": 2.0},
+      "min_proper_block_B_over_block_influence": {"A": [2], "ratio": 0.0},
+      "n": 6,
+      "name": "addressing_m2_n6"
+    },
+    {
+      "H": 8.0,
+      "H_over_I": 2.0,
+      "I": 4.0,
+      "max_proper_block_B_over_block_influence": {"A": [0], "ratio": 2.0},
+      "max_proper_block_Delta_over_B": {"A": [0], "ratio": 2.0},
+      "min_proper_block_B_over_block_influence": {"A": [0], "ratio": 2.0},
+      "n": 8,
+      "name": "bent_quadratic_n8"
+    },
+    {
+      "H": 3.402475551198588,
+      "H_over_I": 3.402475551198588,
+      "I": 1.0,
+      "max_proper_block_B_over_block_influence": {"A": [0,1,2,3], "ratio": 3.402475551198587},
+      "max_proper_block_Delta_over_B": {"A": [0], "ratio": 1.8003900353536464},
+      "min_proper_block_B_over_block_influence": {"A": [0], "ratio": 2.6340033908863787},
+      "n": 8,
+      "name": "tensor_two_onepoint4_n8"
+    },
+    {
+      "H": 4.371987351738497,
+      "H_over_I": 1.9986227893661699,
+      "I": 2.1875,
+      "max_proper_block_B_over_block_influence": {"A": [0,1,2,3,4,5], "ratio": 1.853839530242101},
+      "max_proper_block_Delta_over_B": {"A": [0,1], "ratio": 1.8565598112322848},
+      "min_proper_block_B_over_block_influence": {"A": [0], "ratio": 0.0},
+      "n": 7,
+      "name": "majority_n7"
+    },
+    {
+      "H": 1.9512377755992936,
+      "H_over_I": 3.4688671566209663,
+      "I": 0.5625,
+      "max_proper_block_B_over_block_influence": {"A": [0,1,2,3,4], "ratio": 3.2278954179645596},
+      "max_proper_block_Delta_over_B": {"A": [0], "ratio": 1.8003900353536464},
+      "min_proper_block_B_over_block_influence": {"A": [3], "ratio": 2.1455351442114363},
+      "n": 6,
+      "name": "fresh_control_c3_majority3_n6"
+    },
+    {
+      "H": 2.216917186688699,
+      "H_over_I": 1.1084585933443496,
+      "I": 2.0,
+      "max_proper_block_B_over_block_influence": {"A": [1,2,3,4,5,6], "ratio": 0.9370927081530444},
+      "max_proper_block_Delta_over_B": {"A": [1,2,3,4], "ratio": 1.821398993951327},
+      "min_proper_block_B_over_block_influence": {"A": [0], "ratio": 0.0},
+      "n": 8,
+      "name": "coded_syndrome_proxy_n8"
+    }
+  ],
+  "theorem_checked": "For every tested physical block A, B_A <= Delta_A H <= 2 B_A and Delta_A equals parent entropy minus average child entropy",
+  "walsh_uncertainty_random_vectors": [
+    {"dimension": 2, "k": 1, "min_Hp_plus_Hq_minus_k": 0.00016189498511853806, "trials": 200},
+    {"dimension": 4, "k": 2, "min_Hp_plus_Hq_minus_k": 0.03978037453413519, "trials": 200},
+    {"dimension": 8, "k": 3, "min_Hp_plus_Hq_minus_k": 0.35911608175670917, "trials": 200},
+    {"dimension": 16, "k": 4, "min_Hp_plus_Hq_minus_k": 0.967327565751134, "trials": 200},
+    {"dimension": 32, "k": 5, "min_Hp_plus_Hq_minus_k": 1.8901080763658662, "trials": 200},
+    {"dimension": 64, "k": 6, "min_Hp_plus_Hq_minus_k": 3.0967781922312163, "trials": 200},
+    {"dimension": 128, "k": 7, "min_Hp_plus_Hq_minus_k": 4.540384271211842, "trials": 50},
+    {"dimension": 256, "k": 8, "min_Hp_plus_Hq_minus_k": 5.6247776487286245, "trials": 50}
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w496",
+  "bundle_slug": "c0120-independent-spectral-fan-controls-001",
+  "entries": [
+    {
+      "key": "source-model",
+      "namespace": "probability.polymers",
+      "logical_name": "c0120-gaussian-ground-state-source-scope-draft",
+      "kind": "concept",
+      "title": "C0120 primary-source model: draft scope correction",
+      "statement": "Source-scope audit draft, awaiting independent review: the cited arXiv:0810.4221v2 Section 8 concerns M_n, the maximum sum of iid standard Gaussian weights over n-vertex up-right paths from the origin in Z^2 with a free endpoint. Its logarithmic variance bound is for M_n. The intake replacement by an arbitrary-dimensional log partition function needs a separate source. A power improvement for this precise M_n is not proved here; current openness is UNKNOWN.",
+      "proof_text": null,
+      "assumptions": [
+        "Historical citation arXiv:0810.4221v2; not a current-openness certification"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w496:C0120:source-model",
+        "url": "~/brain_workers/w496/SOURCE_STATUS.json",
+        "revision": "draft-as-written-2026-10-10",
+        "license": "owner-own-work (campaign draft; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "spectral-criterion",
+      "namespace": "probability.polymers",
+      "logical_name": "gaussian-directed-path-polynomial-chaos-cutoff-draft",
+      "kind": "concept",
+      "title": "Polynomial chaos cutoff for Gaussian path variance: draft reduction",
+      "statement": "Draft conditional reduction, not an independently certified theorem: let v_nk be the degree-k Gaussian chaos variance of the centered source-model M_n. The path-indicator gradient has squared norm n almost surely, giving sum k v_nk=n. Hence Var(M_n)<=sum_{k<=K}v_nk+n/(K+1). A bound sum_{k<=ceil(n^delta)}v_nk<=C n^(1-delta), for fixed 0<delta<1 uniformly in n, would give a power variance improvement. This low-chaos-mass input remains unproved.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite free-endpoint n-vertex up-right paths",
+        "iid standard Gaussian vertex environment",
+        "Gaussian first-order Sobolev Hermite identity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w496:C0120:spectral-criterion",
+        "url": "~/brain_workers/w496/INDEPENDENT_DERIVATION.md",
+        "revision": "draft-as-written-2026-10-10",
+        "license": "owner-own-work (campaign draft; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "layer-average",
+      "namespace": "probability.polymers",
+      "logical_name": "gaussian-directed-path-layer-average-split-draft",
+      "kind": "concept",
+      "title": "Independent Gaussian layer averages: draft exact decomposition",
+      "statement": "Draft lemma awaiting independent review: in the source model let A_t be the mean weight of the t+1 vertices on x+y=t, and R_v=g_v-A_t on that layer. Joint Gaussianity and zero cross covariance make the entire vector of A_t independent of the entire R vector. Every path visits one vertex per layer, so M_n(g)=sum_t A_t+M_n(R) and Var(M_n)=H_n+Var(M_n(R)), with H_n=sum_{j=1}^n 1/j. Residual weights within each layer are correlated; the split supplies no residual upper bound.",
+      "proof_text": null,
+      "assumptions": [
+        "iid N(0,1) vertex weights",
+        "n vertices starting at the origin and moving up/right",
+        "Layers t=0,...,n-1"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w496:C0120:layer-average",
+        "url": "~/brain_workers/w496/INDEPENDENT_DERIVATION.md",
+        "revision": "draft-as-written-2026-10-10",
+        "license": "owner-own-work (campaign draft; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "hermite-control",
+      "namespace": "probability.polymers",
+      "logical_name": "fixed-degree-gaussian-chaos-suppression-no-power-control-draft",
+      "kind": "concept",
+      "title": "Fixed-degree suppression alone: draft spectral counterexample",
+      "statement": "Draft counterexample awaiting independent review: for k_n=ceil(log n), normalized probabilists Hermite polynomial H_k and G~N(0,1), F_n=sqrt(n/k_n) H_k_n(G) has variance n/k_n and Gaussian Dirichlet energy n. Every fixed chaos degree eventually vanishes, and normalized gradient covariance tends to zero at every fixed positive Ornstein-Uhlenbeck time, yet no fixed power variance bound follows. This example is not a convex or Lipschitz polymer maximum.",
+      "proof_text": null,
+      "assumptions": [
+        "n>=2",
+        "Normalized Hermite polynomials",
+        "General Gaussian Sobolev functions; not the source lattice class"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w496:C0120:hermite-control",
+        "url": "~/brain_workers/w496/INDEPENDENT_DERIVATION.md",
+        "revision": "draft-as-written-2026-10-10",
+        "license": "owner-own-work (campaign draft; independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "fan-control",
+      "namespace": "probability.polymers",
+      "logical_name": "gaussian-fan-path-qualitative-chaos-no-power-control-draft",
+      "kind": "concept",
+      "title": "Qualitative chaos without a power gain: draft Gaussian fan control",
+      "statement": "Draft counterexample awaiting independent review: on the graph with a common root and n disjoint branches of n-1 vertices with iid standard Gaussian weights, the maximum n-vertex path sum is convex and sqrt(n)-Lipschitz, with path-indicator gradient of squared norm n. It has normalized expected overlap tending to zero at Ornstein-Uhlenbeck time u_n=16 log(log n)/log n, yet Var(M_n)>=c n/log n for all sufficiently large n and some c>0. Thus these structural facts alone do not yield a power bound. The growing-degree fan is not Z^2; fixed lattice geometry may provide the missing quantitative premise.",
+      "proof_text": null,
+      "assumptions": [
+        "n large enough that u_n>0 and the Mills-bound quantile b_n>=1",
+        "A different fan graph for each n; root degree n",
+        "Not a counterexample to C0120 on Z^2"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner:w496:C0120:fan-control",
+        "url": "~/brain_workers/w496/GAUSSIAN_FAN_OBSTRUCTION.md",
+        "revision": "draft-as-written-2026-10-10",
+        "license": "owner-own-work (campaign draft; independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "spectral-criterion",
+      "to_key": "source-model",
+      "kind": "depends_on",
+      "rationale": "The spectral identity uses the Gaussian path maximum and its path-indicator gradient specified by the source-model concept."
+    },
+    {
+      "from_key": "layer-average",
+      "to_key": "source-model",
+      "kind": "depends_on",
+      "rationale": "The layer sizes t+1 and exactly one visited vertex per layer come from this two-dimensional up-right source model."
+    },
+    {
+      "from_key": "fan-control",
+      "to_key": "hermite-control",
+      "kind": "analogous_to",
+      "rationale": "Both give variance lower bounds of logarithmic rather than fixed-power scale while displaying qualitative Gaussian decorrelation; the fan also preserves convexity and a bounded path-indicator gradient."
+    },
+    {
+      "from_key": "fan-control",
+      "to_key": "spectral-criterion",
+      "kind": "semantic_association",
+      "rationale": "The fan control shows why a qualitative overlap statement cannot supply the quantitative polynomial cutoff required by the reduction; it does not disprove that cutoff for the lattice model."
+    }
+  ]
+}

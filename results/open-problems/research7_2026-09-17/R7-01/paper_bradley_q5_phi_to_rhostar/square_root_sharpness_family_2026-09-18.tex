@@ -1,0 +1,193 @@
+% Additive quantitative sharpness note for D0033 / Bradley Question 5.
+% R7-01, 2026-09-18 local date. This does not replace main.tex.
+
+\section{An exact six-state family showing square-root sharpness}
+
+This note concerns only the quantitative dependence of interlaced maximal
+correlation on the one-sided $\phi$ coefficient.  It is not needed for the
+source-level implication $\phi(n)\to0\Rightarrow\rho^*(n)\to0$.
+
+\begin{theorem}[Exact square-root family]
+For every $\varepsilon\in(0,1/2)$ there exists a strictly stationary,
+irreducible, aperiodic six-state Markov chain $(X_t)_{t\in\mathbb Z}$ such
+that
+\[
+  \phi(1)=\varepsilon,\qquad \phi(n)=0\quad(n\ge2),
+\]
+and
+\[
+  \rho^*(1)=\sqrt{2\varepsilon},\qquad
+  \rho^*(n)=0\quad(n\ge2).
+\]
+Moreover the robust one-step HGR coefficient $\kappa(1)$ and the Dobrushin
+row diameter $\delta(K)$ satisfy
+\[
+  \kappa(1)^2=\delta(K)=2\phi(1)=2\varepsilon.
+\]
+Consequently the local estimate $\kappa^2\le 2\phi$ used in the D0033 proof
+is exactly sharp, and no universal estimate of the form
+$\rho^*(1)=o(\sqrt{\phi(1)})$ can hold over stationary Markov chains.
+\end{theorem}
+
+\begin{proof}
+Let
+\[
+  \mathsf E=\{-1,+1\}\times\{-1,0,+1\}.
+\]
+Write a state as $x=(u,v)$.  Let $\pi=\mu\otimes\nu$, where
+\[
+  \mu(+1)=\mu(-1)=\frac12,
+\]
+and
+\[
+  \nu(+1)=\nu(-1)=\varepsilon,
+  \qquad \nu(0)=1-2\varepsilon.
+\]
+Thus under $\pi$ the coordinates $U,V$ are independent and centered, with
+\[
+  \mathbb E_\pi U^2=1,\qquad
+  \mathbb E_\pi V^2=2\varepsilon.
+\]
+Define the Markov kernel
+\[
+  K((u,v),(u',v')):=\pi(u',v')\bigl(1+uv'\bigr).
+  \tag{1}
+\]
+Because $uv'\in\{-1,0,+1\}$, the right side is nonnegative.  Its row sum is
+one since $\mathbb E_\pi V=0$.  Also
+\[
+\sum_{u,v}\pi(u,v)K((u,v),(u',v'))
+ =\pi(u',v')\bigl(1+v'\mathbb E_\pi U\bigr)
+ =\pi(u',v'),
+\]
+so $\pi$ is stationary.
+
+A direct two-step calculation gives complete refreshment.  For
+$x=(u,v)$ and $z=(\tilde u,\tilde v)$,
+\begin{align*}
+ K^2(x,z)
+ &=\sum_{y=(a,b)} \pi(a,b)(1+ub)\,\pi(z)(1+a\tilde v)\\
+ &=\pi(z)\Bigl(1+u\mathbb E b+\tilde v\mathbb E a
+      +u\tilde v\mathbb E[ab]\Bigr)\\
+ &=\pi(z),
+\end{align*}
+using independence and centering of $U,V$ under $\pi$.  Hence $K^2=\Pi$,
+where $\Pi(x,\cdot)=\pi(\cdot)$.  In particular every two-step transition
+is strictly positive on the six states, so the chain is irreducible and
+aperiodic, and the process is one-dependent.
+
+For a fixed row $x=(u,v)$, the signed difference from stationarity has
+density $uv'$ with respect to $\pi$.  Therefore
+\[
+ \|K(x,\cdot)-\pi\|_{\mathrm{TV}}
+ =\frac12\,\mathbb E_\pi |V|
+ =\varepsilon.
+ \tag{2}
+\]
+For a stationary Markov chain, conditioning the whole future at lag one can
+only transmit information through $X_1$; applying the continuation kernel
+cannot increase total variation.  Thus (2) gives $\phi(1)\le\varepsilon$.
+Equality is attained by conditioning on $U_0=+1$ and testing the event
+$\{V_1=+1\}$, because
+\[
+ \mathbb P(V_1=+1\mid U_0=+1)=2\varepsilon,
+ \qquad
+ \mathbb P(V_1=+1)=\varepsilon.
+\]
+Hence $\phi(1)=\varepsilon$.  Since $K^2=\Pi$, the past and future are
+independent at every gap at least two, so $\phi(n)=0$ for $n\ge2$.
+
+We next give an exact independent-edge representation.  For each
+$t\in\mathbb Z$, independently sample a pair $(A_t,B_{t+1})$ with joint law
+\[
+ q(a,b)=\mu(a)\nu(b)(1+ab).
+ \tag{3}
+\]
+The two marginals of $q$ are $\mu$ and $\nu$.  Put
+\[
+ X_t=(A_t,B_t).
+\]
+The variables $A_t$ and $B_t$ come from two different independent edge
+pairs, hence $X_t\sim\pi$.  Conditional on $X_t=(u,v)$, the next coordinate
+$A_{t+1}$ is an independent $\mu$ variable, while
+\[
+ \mathbb P(B_{t+1}=b\mid A_t=u)=\nu(b)(1+ub),
+\]
+which is exactly the kernel (1).  Thus (3) realizes the stationary Markov
+chain.
+
+For one edge, $A$ is a symmetric sign and
+\[
+ \mathbb E[A\mid B]=B:
+\]
+if $B=+1$ then $A=+1$ a.s.; if $B=-1$ then $A=-1$ a.s.; if $B=0$ then the
+conditional law of $A$ is symmetric.  Because every centered square
+integrable function of the binary variable $A$ is a scalar multiple of
+$A$, the HGR maximal correlation of one edge is
+\[
+ \rho(A,B)^2
+ =\operatorname{Var}(\mathbb E[A\mid B])
+ =\mathbb E B^2
+ =2\varepsilon.
+ \tag{4}
+\]
+
+Now let $S,T\subset\mathbb Z$ be disjoint.  In the representation (3), each
+state $X_t$ uses exactly the two edge components $A_t$ and $B_t$.  The
+underlying edge pairs are independent over $t$.  On a given edge $t$, the
+$S$-sigma-field and $T$-sigma-field either see components on only one side,
+or, when exactly one of $t,t+1$ lies in $S$ and the other in $T$, they see
+the correlated pair $(A_t,B_{t+1})$.  Classical tensorization of maximal
+correlation over independent pairs therefore yields
+\[
+ \rho\bigl(\sigma(X_s:s\in S),\sigma(X_t:t\in T)\bigr)
+ \le \sqrt{2\varepsilon},
+\]
+with equality whenever a crossing adjacent edge is present.  Taking
+$S=\{0\}$ and $T=\{1\}$ proves
+\[
+ \rho^*(1)=\sqrt{2\varepsilon}.
+\]
+If $\operatorname{dist}(S,T)\ge2$, there is no crossing edge at all, so the
+two sigma-fields use disjoint families of independent edge pairs; hence
+$\rho^*(n)=0$ for $n\ge2$.
+
+Finally, the two possible one-step rows corresponding to $u=+1$ and $u=-1$
+have total-variation distance $2\varepsilon$, so
+\[
+ \delta(K)=2\varepsilon.
+\]
+For the robust HGR coefficient, an arbitrary input law affects the output
+only through the binary coordinate $U$.  Write $m=\mathbb E U$.  Under that
+input law,
+\[
+ \mathbb P(V'=+1)=\varepsilon(1+m),\qquad
+ \mathbb P(V'=-1)=\varepsilon(1-m),\qquad
+ \mathbb P(V'=0)=1-2\varepsilon,
+\]
+and
+\[
+ \mathbb E[U\mid V'=+1]=1,\quad
+ \mathbb E[U\mid V'=-1]=-1,\quad
+ \mathbb E[U\mid V'=0]=m.
+\]
+Therefore, whenever $\operatorname{Var}(U)>0$,
+\[
+ \frac{\operatorname{Var}(\mathbb E[U\mid V'])}{\operatorname{Var}(U)}
+ =\frac{2\varepsilon(1-m^2)}{1-m^2}
+ =2\varepsilon.
+\]
+Thus $\kappa(1)^2=2\varepsilon=\delta(K)=2\phi(1)$, completing the proof.
+\end{proof}
+
+\paragraph{Interpretation.}
+The previous two-state symmetric-chain calculation shows that the
+alternating-path amplification factor two is first-order sharp when the
+local HGR coefficient is linear in $\phi$.  The present six-state family
+shows, separately and exactly, that the local conversion
+$\kappa^2\le2\phi$ is sharp and that a square-root dependence on $\phi$
+cannot be removed.  These two examples do not simultaneously saturate both
+steps.  Thus the remaining quantitative question is a compatibility
+problem: determine the best universal envelope when local square-root
+extremality and long alternating-path amplification must arise from one and
+the same stationary Markov kernel.

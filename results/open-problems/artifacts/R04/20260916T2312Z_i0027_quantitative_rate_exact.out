@@ -1,0 +1,9 @@
+R04 I0027 quantitative-rate / bridge identity / R05 C13 audit checker
+SELF-CHECK: exact symbolic/integer arithmetic only; published decomposition/lower-bound inputs are external.
+delta_exponent_optimizer a=1/4 exponents [11/4, 5/2, 11/4, 5/2] max=11/4 PASS
+bridge_cutoff_optimizer b=1/2 coefficient_error=n^-1/2 -> K_error=n^(5/2) PASS
+bridge_scalar_profile max=1/54 at s=2/3 PASS
+holder_profile_exact_cases 3905 equality_patterns 5 PASS
+bridge_identity_graph_atlas_connected_through_7 995 PASS
+R05_C13_exact_projectors_charpoly_eventual_negative_derivative_non_edge_transitive PASS
+RESULT PASS

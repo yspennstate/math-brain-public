@@ -1,0 +1,17 @@
+canonical core cell counts / gaps
+same_distinct_124 (86, 42, 48, 22, 124)
+same_same_264 (186, 114, 110, 66, 264)
+distinct_no_connector_280 (180, 100, 118, 64, 280)
+distinct_connector_equal_480 (48, 48, 48, 38, 480)
+distinct_connector_shared_288 (108, 72, 82, 52, 288)
+shared-endpoint connector polynomial coeffs {(0,): 126, (1,): 126, (2,): 36}
+no-connector two-spoke polynomial coeffs {(0, 0): 126, (0, 1): 62, (0, 2): 24, (1, 0): 62, (1, 1): -18, (2, 0): 24}
+equal-endpoint connector gadget (D,C) (14, 10)
+n6_adj total 15 regimes {('distinct', 'connector', 2): 15} failures 0
+n6_dis total 116 regimes {('same-center', 'distinct-pairs'): 72, ('distinct', 'no-connector', 1): 8, ('distinct', 'connector', 2): 12, ('distinct', 'connector', 1): 8, ('same-center', 'same-pair'): 16} failures 0
+n7_adj total 198 regimes {('distinct', 'connector', 2): 198} failures 0
+n7_dis total 2640 regimes {('same-center', 'distinct-pairs'): 1260, ('distinct', 'no-connector', 1): 216, ('distinct', 'connector', 2): 324, ('distinct', 'connector', 1): 216, ('same-center', 'same-pair'): 624} failures 0
+All tested connector examples use the connector in both singleton cycles.
+All tested no-connector distinct-center examples have one shared traversed endpoint
+and a common third attachment equal to the fourth compressed K4 branch vertex.
+OK

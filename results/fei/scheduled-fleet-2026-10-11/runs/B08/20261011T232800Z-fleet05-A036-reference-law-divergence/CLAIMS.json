@@ -1,0 +1,38 @@
+[
+  {
+    "claim_id": "A036-NORMALIZED-RECOVERY-REPAIR-AND-REFERENCE-GUARDS",
+    "version": 1,
+    "exact_statement": "For every finite product law Q with marginals q_i and J=sum_i q_i<=1/16, every real sign choice b_S=epsilon_S sqrt(Q(S)) has normalized collision T=H(C_b^2/Z)-log2 Z satisfying abs(T/4-sum_i h2(q_i)+(2+log2(e))*J)<=9*J*sum_i h2(q_i)+15*J^2. All quantities are in bits. With actual spectral Q, B05 activated bent surgery has (T/4-TC)/I ->8/5-log2(e), and (M-T/4)/I ->2+log2(e). Positive-completed addressing and actual full-support one-point-flipped addressing satisfy T/a ->tau where tau=(4e^4-32e+56/e-20/e^2)/(e^4-12e+30/e-13/e^2), TC ->log2(e), M/a ->2 and I/a ->1/2; thus their constant floors are kappa>=tau/2 and c>=4-tau/2. Sparse activation of the full-support flipped addressing family with r=ceil(3log2 a) has I,M->0, H/I->4 and (T/4-TC)/I ->2-log2(e). Frozen exact B05 k=2,4 and positive-completed addressing a=1..4 pass kappa=c=8; a=4 has T/4-TC>77/100 bits. None of these conclusions supplies a universal Boolean lower-divergence payment.",
+    "hypotheses": [
+      "Universal recovery lemma: normalized signed product-law amplitude, J<=1/16; any phases, zero marginals deleted",
+      "Boolean applications: uniform cube, actual product spectral marginals, named B05 and addressing families as defined in REPORT.md",
+      "Addressing finite T uses positive completion at spectral zeros; full-support transfer uses the realized negative completion and repriced marginals",
+      "Sparse activation uses fresh controls, r=ceil(3log2 a), and the actual changed product reference",
+      "All entropy and divergences in bits; TC=M-H; campaign B is erasure, not marginal sum"
+    ],
+    "statement_sha256": "87a17efbe0149d124730986ca697f7d72688e59e846a707f5e3c3a93c3ec3cab",
+    "contributors": [
+      "A036"
+    ],
+    "proof_source": "REPORT.md Sections 1-8; code/check.py; code/coefficients.py; out/verification.json; out/coefficient_certificate.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "ANALYTICALLY_PROVED_LOCAL_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Universal zero-price TC>=T/4 for the actual full-support signed product-marginal reference"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A037",
+      "A038",
+      "A039",
+      "A040",
+      "A064",
+      "A088",
+      "A094",
+      "B08",
+      "B20"
+    ]
+  }
+]

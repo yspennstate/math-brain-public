@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\section*{A054: component excess with a paid physical interface}
+All entropies are in bits. For real $h$, put $M(h)=\mathbb Eh^2$,
+$F(h)=\sum_s\widehat h(s)^2\log_2(1/\widehat h(s)^2)$ and
+$E_A(h)=\sum_s|s_A|\widehat h(s)^2$; $\kappa=2/\ln2$.
+For a physical block $A$, let $v_t(x)=\mathbb E_yh(x,y)\chi_t(y)$,
+$q_t=\mathbb E_xv_t(x)^2$, and define
+\[
+B_A(h)=\sum_tq_t H((\widehat h(e,t)^2/q_t)_e),\quad
+\Lambda_A(h)=B_A(h)+\frac1{\ln2}\sum_t\operatorname{Ent}_x(v_t^2).
+\]
+Zero fibers are omitted. Raw entropy expansion and cube log Sobolev give
+\[
+F(h)-\mathbb E_xF(h_x)=\Lambda_A(h),\qquad
+0\le\Lambda_A(h)-B_A(h)\le\kappa E_A(h).
+\]
+Let $g=1_U=\sum_k g_k$ be its actual connected-component partition.
+If every $A$-fiber meets at most one component, then
+\[
+F(g)-\sum_kF(g_k)=\Lambda_A(g)-\sum_k\Lambda_A(g_k)
+\le\Gamma_A(g),\quad
+\Gamma_A(g)=\left[B_A(g)+\kappa E_A(g)-\sum_k\Lambda_A(g_k)\right]_+.
+\]
+The interface is defined through partial Fourier amplitudes, conditional
+entropy and energy, independently of the desired entropy gap.
+For $E(g)>0$, edge additivity implies
+\[
+R_{\rm raw}(g)\le\max_kR_{\rm raw}(g_k)+\Gamma_A(g)/E(g).
+\]
+Suppose a proper block $A$ of size $r$ has actual components
+$U_k=R_k\times V_k$, with disjoint subcubes $R_k$ fixing $d_k\ge r/2$
+coordinates and connected nonempty $V_k$. Then, writing $p_k=M(g_k)$,
+\[
+\Lambda_A(g_k)=2d_kp_k=4E_A(g_k),\quad
+E_A(g)\ge rM(g)/4,\quad
+\Gamma_A(g)=[B_A(g)-(4-\kappa)E_A(g)]_+\le\kappa E_A(g).
+\]
+In particular the raw component comparison has a dimension-independent
+paid interface. If all proper physical indicator restrictions have raw
+ratio at most $R_{\rm raw}(g)$, then
+$R_{\rm raw}(g)\le4+\kappa$.
+For the actual Boolean sign $f=1-2g$, if all proper physical restrictions
+have ratio at most $R(f)$ and $M(g)\ge p_0>0$, then
+\[
+I_A(f)=4E_A(g)\ge rM(g),\qquad R(f)\le\kappa+1/p_0.
+\]
+For a threshold-critical sign replace $R(f)I_A$ in the block comparison
+by $KI_A+H(f)-KI(f)$. At $K\ge\kappa+1/p_0$ a positive deficit is impossible.
+Full proofs, mass-tilt normalization, mandatory counterexample controls,
+and the unsupported universal admission line are in
+\texttt{CRITICAL\_INTERFACE\_PAYMENT.md}. No universal connectedness theorem
+or full FEI solution is asserted.
+\end{document}

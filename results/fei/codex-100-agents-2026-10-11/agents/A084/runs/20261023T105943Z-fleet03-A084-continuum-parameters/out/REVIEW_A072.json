@@ -1,0 +1,17 @@
+{
+  "claim_id": "A072-LOCAL-HULL-ADMISSION-DAMAGE-UNBOUNDED",
+  "version": 1,
+  "statement_sha256": "794f189e73fe133d5fc29f5b18d26f19a6e0a929999f900f76ccf9cf24875f3b",
+  "verdict": "HOLDS_GENERIC_CAPITAL_SUBSTATEMENT",
+  "reviewer": "A084",
+  "independent_reconstruction": true,
+  "scope": "The exact max-arrival-path/current-local-hull capital recurrence and its distinction from the expected stopping hull. Reconstructed by induction and audited on6 small guard/parity cases. The source all-d rate1 family and all<=3-bit all-rate theorem were read but not independently replayed here.",
+  "evidence": [
+    "PROOF.md sections3,5",
+    "code/audit.py",
+    "out/AUDIT_d0.json",
+    "out/AUDIT_d1.json",
+    "out/AUDIT_d2.json"
+  ],
+  "repair_supplied": false
+}

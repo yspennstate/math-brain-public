@@ -1,0 +1,209 @@
+\section*{Uniform coherent-kernel envelope and a depth-free fixed-source theorem}
+
+All logarithms are natural.  Put
+\[
+ \psi(x)=x^2\log\frac1{x^2},\qquad
+ K(x,y)=\psi(x)+\psi(y)-\frac{\psi(x+y)+\psi(x-y)}2,
+\]
+with \(\psi(0)=0\).  We use the exact coefficientwise identity proved in
+the preceding B12 run.  If \(F=a+h b\), \(\mu=\mathbb Eh\),
+\(\alpha=\widehat h(\{i\})\), and \(q=\sum_Tb_T^2\), then
+\[
+ R_\mu(\alpha)=\sum_{T:b_T\ne0}b_T^2
+ \left[K\left(\frac{a_T}{b_T}+\mu,\alpha\right)-K(\mu,\alpha)\right].       \tag{1}
+\]
+Here \(a+b\) and \(a-b\) are Boolean signs, so in particular
+\(|a_T|,|b_T|\le1\).
+
+\subsection*{1. The scalar kernel}
+
+The quadratic logarithmic scale terms cancel in \(K\), and hence
+\[
+ K(\lambda x,\lambda y)=\lambda^2K(x,y).                              \tag{2}
+\]
+Define the even function \(k(r)=K(r,1)\).  For \(r\ge0\), with
+\(G(x)=x^2\log x\) and \(G(0)=0\),
+\[
+ k(r)=G(r+1)+G(|r-1|)-2G(r).                                          \tag{3}
+\]
+
+\paragraph{Lemma 1 (proved).}
+The function \(k\) is nonnegative and increasing on \([0,\infty)\), and
+for every real \(r\),
+\[
+ 2\log(1+|r|)-1\ \le\ k(r)\ \le\ 2\log(1+|r|)+3.                    \tag{4}
+\]
+Consequently, for all real \(r,s\),
+\[
+ k(r)-k(s)\le4+2\log(1+|r-s|).                                      \tag{5}
+\]
+
+\paragraph{Proof.}
+Evenness is immediate.  For \(0<r<1\), differentiation of (3) gives
+\[
+ \frac{k'(r)}2=(1+r)\log(1+r)-(1-r)\log(1-r)-2r\log r=:u(r).
+\]
+Now \(u(0)=0\), \(u(1)=2\log2\), and
+\[
+ u'(r)=\log\frac{1-r^2}{r^2}.
+\]
+Thus \(u\) increases and then decreases, and is nonnegative.  For
+\(r>1\), \(G'''(r)=2/r>0\), so the centered second difference (3) is
+increasing.  Since \(k(0)=0\), this proves monotonicity and
+nonnegativity.
+
+For \(r>1\), the second-difference integral is
+\[
+ k(r)=\int_{-1}^1(1-|t|)\,[2\log(r+t)+3],dt.                         \tag{6}
+\]
+The triangular density has mass one and mean zero.  Jensen's inequality
+therefore yields \(k(r)\le2\log r+3\), which proves the upper bound for
+\(r\ge1\); on \([0,1]\), monotonicity gives
+\(k(r)\le k(1)=4\log2<3\).
+
+For the lower bound, on \([0,1/2]\) use \(k\ge0\) and
+\(2\log(3/2)<1\).  On \([1/2,1]\), use monotonicity at \(1/2\);
+direct substitution in (3) gives
+\(k(1/2)=\tfrac94\log(3/2)+\tfrac14\log2>2\log2-1\).
+On \([1,2]\), use \(k(r)\ge k(1)=4\log2>2\log3-1\).  Finally, for
+\(r\ge2\), (6) gives
+\[
+ k(r)\ge2\log(r-1)+3\ge2\log(r+1)-1,
+\]
+because \(4+2\log((r-1)/(r+1))\ge4-2\log3>0\).
+This proves (4).  Applying its upper bound to \(r\) and lower bound to
+\(s\), then using
+\[
+ \frac{1+|r|}{1+|s|}\le1+|r-s|,
+\]
+proves (5). \(\square\)
+
+\subsection*{2. The requested near/separated split}
+
+Let \(\beta=|\alpha|>0\),
+\[
+ r_T=\frac{a_T+\mu b_T}{\beta b_T},\qquad s=\frac{\mu}{\beta}.
+\]
+By (2), the \(T\)-summand in (1) is
+\(\beta^2b_T^2[k(r_T)-k(s)]\).  Fix any \(c>0\) and define
+\[
+ \mathcal N_c=\{T:0<|b_T|,\ |a_T+\mu b_T|\le c\beta|b_T|\},
+ \qquad \mathcal S_c=\{T:b_T\ne0\}\setminus\mathcal N_c.
+\]
+
+\paragraph{Lemma 2 (proved: signed near region).}
+\[
+ R_{\mathcal N_c}\le
+ \beta^2\sum_{T\in\mathcal N_c}b_T^2\,[k(c)-k(|\mu|/\beta)].          \tag{7}
+\]
+In particular, the entire near region is a refund whenever
+\(|\mu|\ge c\beta\).
+
+\paragraph{Proof.}
+On \(\mathcal N_c\), \(|r_T|\le c\).  Evenness and monotonicity give
+\(k(r_T)\le k(c)\), while \(k(s)=k(|\mu|/\beta)\).  Sum the exact
+coefficient contributions. \(\square\)
+
+\paragraph{Lemma 3 (proved: uniform separated region).}
+For every \(T\in\mathcal S_c\), and in fact for every \(T\) with
+\(b_T\ne0\),
+\[
+ k(r_T)-k(s)\le4+2\log\left(1+\frac{|a_T|}{\beta|b_T|}\right).         \tag{8}
+\]
+The bound is uniform in \(\mu/\alpha\), the collision gap, and \(c\).
+
+\paragraph{Proof.}
+Apply (5) and observe that
+\(|r_T-s|=|a_T|/(\beta|b_T|)\). \(\square\)
+
+Thus (7) retains the exact fixed-bias collision refund, while (8) has no
+singularity in either live transition parameter.
+
+\subsection*{3. One-node envelope and the fixed-source hierarchy}
+
+Define the outer collision reserve
+\[
+ M(a,b)=2\sum_{T:b_T\ne0}b_T^2\log_+\frac{|a_T|}{|b_T|}.              \tag{9}
+\]
+Since \(|a_T|\le1\),
+\[
+ 0\le M(a,b)\le\mathcal E_{\rm raw}(b)
+ :=\sum_Tb_T^2\log\frac1{b_T^2}.                                    \tag{10}
+\]
+
+\paragraph{Theorem 4 (proved: uniform complete one-node envelope).}
+For every genuine Boolean disjoint splice and every physical child
+coordinate,
+\[
+ \boxed{
+ R_\mu(\alpha)\le q\psi(\alpha)
+ +(4+2\log2)q\alpha^2+M(a,b)\alpha^2.}                              \tag{11}
+\]
+This includes \(\alpha=0\), where both sides vanish.
+
+\paragraph{Proof.}
+For \(0<\beta\le1\), sum (8) and use
+\[
+ 2\log(1+u)\le2\log2+2\log_+u,
+\]
+and
+\[
+ 2\log_+\frac{|a_T|}{\beta|b_T|}
+ \le\log\frac1{\beta^2}+2\log_+\frac{|a_T|}{|b_T|}.
+\]
+After multiplication by \(\beta^2b_T^2\), the first term is
+\(b_T^2\psi(\beta)\), and summing the final term gives
+\(M(a,b)\beta^2\).  Evenness of \(\psi\) completes the proof. \(\square\)
+
+Now hold the outer Boolean pair \(a\pm b\) fixed and run any deterministic
+physical restriction tree inside the disjoint Boolean child \(h\), with
+exact reach weights \(w_v\), node means \(\mu_v\), and queried singleton
+coefficients \(\alpha_v\).  The preceding B12 theorem proved
+\[
+ \sum_vw_v\psi(\alpha_v)\le\frac2e\mathbf I(h).
+\]
+The same pivotal-event argument, using \(\alpha_v^2\le|\alpha_v|\), gives
+\[
+ \sum_vw_v\alpha_v^2\le\mathbf I(h).                                \tag{12}
+\]
+
+\paragraph{Theorem 5 (proved: depth-free fixed-source payment).}
+For every such tree,
+\[
+ \boxed{
+ \sum_vw_vR_{\mu_v}(\alpha_v)
+ \le\left[M(a,b)+\left(4+2\log2+\frac2e\right)q\right]\mathbf I(h).} \tag{13}
+\]
+No bias floor, collision separation, depth bound, or nonadaptive query
+order is assumed.
+
+In particular, if a family of outer Boolean pairs satisfies
+\(M(a,b)\le Lq\) for one absolute \(L\), then its complete coherent
+remainder is paid by
+\[
+ \left(L+4+2\log2+\frac2e\right)q\mathbf I(h),                       \tag{14}
+\]
+uniformly over every Boolean child and every adaptive nonreusing
+physical hierarchy.  This is a genuine all-parameter class extension:
+the previous result paid only the explicit \(\alpha\)-log envelope,
+whereas (13) pays the entire biased coherent remainder.
+
+\subsection*{4. Exact remaining universal gap}
+
+The price \(M(a,b)/q\) need not be uniformly bounded by this proof.
+It is a reverse spectral collision reserve, and (10) shows that the
+normalized derivative entropy is a sufficient payment.  Removing this
+reserve without a new mechanism would subsume activation embeddings in
+which the outer derivative carries an arbitrary Boolean spectrum.
+Therefore (13) is not full FEI and does not close A057 universally.
+
+For a hierarchy in which the outer witness \((a_v,b_v)\) itself changes
+coherently, the remaining precise obligation is to prove one nonreused
+source/terminal budget for
+\[
+ \sum_vw_v\alpha_v^2M(a_v,b_v),                                     \tag{15}
+\]
+or to replace (8) by a sharper signed estimate whose retained near-region
+refund pays (15).  Equation (7) identifies the refund that must not be
+dropped in that next step.
+

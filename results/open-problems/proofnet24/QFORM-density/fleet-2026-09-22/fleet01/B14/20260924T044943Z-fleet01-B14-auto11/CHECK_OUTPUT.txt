@@ -1,0 +1,11 @@
+Executed equivalent SymPy checks in the current run.
+
+charpoly = -2*a*lam**2 + a*r**2 + lam**3 - lam*r**2
+x* = 4.561552812808830
+a* = 1.390388203202208
+mu* = 2.969562211373718
+C* = 2.760395280574895
+stress roots = [-1.6038754716096766, 1.1099162641747424, 4.493959207434934]
+stress bound = 2.378414230005442
+
+Additional grid check: on a 100x100 grid a,r in [0.1,5], the spectral condition min |eig M(a,r)|>=1 agreed in every tested cell with a>1 and r^2>=(2a-1)/(a-1) (with numerical tolerance 1e-10). The grid check is a consistency check only; the exact proof is in REPORT.md.

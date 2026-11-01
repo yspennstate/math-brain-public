@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B06",
+  "run_id": "20260925T070207Z-fleet02-B06-five-short-audit-r26",
+  "pass_id": "P8-B06-projection-domain-and-zero-set",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_tex_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "source_pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "new_to_B06": {
+    "id": "C12",
+    "line": 224,
+    "page": 5,
+    "status": "GAP",
+    "finding": "The projection proof takes log p(y) without separating p(y)=0.",
+    "witness": "n=2,d=1,U=e1; X1,X2 independent Uniform[0,1]; y=2 gives p(2)=0.",
+    "repair": "If p(y)=0 there is nothing to prove; otherwise take logarithms.",
+    "impact": "No constant or theorem change.",
+    "provenance": "peer-surfaced after initial P8 reconstruction; independently reproduced by B06"
+  },
+  "assigned_lens": "PASS except pre-existing C02 in Step 2",
+  "theorem_assessment": "No theorem-level counterexample found; repaired chain still supports 270 K^2/s.",
+  "remaining_unchecked": [
+    "direct PDF visual equivalence",
+    "line 62 universal current-open-status claim",
+    "some nonessential bibliography metadata"
+  ],
+  "lower_threshold_research": false
+}

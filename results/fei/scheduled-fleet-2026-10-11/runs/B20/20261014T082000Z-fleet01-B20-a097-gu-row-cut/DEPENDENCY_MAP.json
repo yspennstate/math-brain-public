@@ -1,0 +1,53 @@
+{
+  "candidate": "universal G<=4I+3U/4",
+  "status": "OPEN",
+  "proved_chain": [
+    {
+      "claim": "exact signed local identity",
+      "statement": "Delta_i U = B_i-Gamma_i+sum_A K_{i,A}",
+      "status": "source-pinned proved input"
+    },
+    {
+      "claim": "sharp root payment",
+      "statement": "K^(0) <= (2/ln2) M1",
+      "status": "proved input; independent review pending"
+    },
+    {
+      "claim": "complete singleton payment",
+      "statement": "K^(1) <= V1/2+(2/ln2)W2",
+      "status": "proved input; reconstructed in this run; independent review pending"
+    },
+    {
+      "claim": "assembled GU cut",
+      "statement": "G <= D_ge2+V1/2+(2/ln2)I",
+      "status": "proved reduction in this run"
+    }
+  ],
+  "single_open_leaf": {
+    "statement": "D_ge2+V1/2 <= (4-2/ln2)I+3U/4 on tensor-prime positive-residual Boolean functions",
+    "status": "UNPROVED",
+    "implication": "universal G<=4I+3U/4; U<=16I; H<=34I"
+  },
+  "invalidated_edges": [
+    {
+      "edge": "V1/2 <= U unconditionally",
+      "status": "REFUTED",
+      "evidence": "four-bit Boolean mask 3166 has V1=7/4 and U=1/4",
+      "scope_note": "witness has negative frozen residual and does not refute the restricted open leaf"
+    },
+    {
+      "edge": "adaptive read-once root payment => static K^(1) payment without remainder",
+      "status": "UNSUPPORTED",
+      "missing_hypothesis": "one common nonreused tree representing all incompatible ordered parent rows with terminal accounting"
+    },
+    {
+      "edge": "A099 amplified-extension endpoint => universal GU",
+      "status": "UNSUPPORTED",
+      "missing_hypothesis": "algebraic identification of posterior chain functional with V1 or D_ge2 and a universal-GU implication"
+    }
+  ],
+  "review": {
+    "end_to_end_review_1": "PENDING",
+    "end_to_end_review_2": "PENDING"
+  }
+}

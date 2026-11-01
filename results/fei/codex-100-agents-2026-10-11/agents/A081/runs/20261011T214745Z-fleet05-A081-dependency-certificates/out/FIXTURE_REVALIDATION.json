@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "graph_cases": 0,
+  "graph_cases_by_n": {},
+  "dag_counts_by_n": {},
+  "independent_method": "Kahn elimination versus DFS, all adjacency masks including loops",
+  "fixture_count": 13,
+  "fixtures": [
+    {
+      "fixture": "changed statement",
+      "expected": "STATEMENT_HASH",
+      "errors": [
+        "STATEMENT_HASH:B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO@1"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "missing dependency version",
+      "expected": "MISSING_EXACT_DEPENDENCY",
+      "errors": [
+        "MISSING_EXACT_DEPENDENCY:B05-SUB-ENTROPY"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "dependency version hash differs",
+      "expected": "DEPENDENCY_HASH",
+      "errors": [
+        "DEPENDENCY_HASH:B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO@1"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "accepted relies on final FEI",
+      "expected": "ACCEPTED_DEPENDS_ON_UNRESOLVED",
+      "errors": [
+        "ACCEPTED_DEPENDS_ON_UNRESOLVED:B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO@1"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "FEI proof cycle",
+      "expected": "CYCLE_THROUGH_FINAL_FEI",
+      "errors": [
+        "CYCLE_THROUGH_FINAL_FEI:FEI-FINAL@1 -> B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO@1 -> FEI-FINAL@1"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "disconnected self-cycle",
+      "expected": "PROOF_CYCLE",
+      "errors": [
+        "PROOF_CYCLE:PERCOLATION-SINGULARITY-SCOPE@1 -> PERCOLATION-SINGULARITY-SCOPE@1"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "unexplained entropy unit change",
+      "expected": "UNIT_CONVERSION_REQUIRED",
+      "errors": [
+        "UNIT_CONVERSION_REQUIRED:B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO@1",
+        "UNIT_CONVERSION_REQUIRED:B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO@1"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "empty hypothesis instantiation",
+      "expected": "MISSING_HYPOTHESIS_INSTANTIATION",
+      "errors": [
+        "MISSING_HYPOTHESIS_INSTANTIATION:B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO@1"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "duplicate exact version",
+      "expected": "DUPLICATE_VERSION",
+      "errors": [
+        "DUPLICATE_VERSION:FEI-FINAL@1"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "unknown source id",
+      "expected": "MISSING_SOURCE",
+      "errors": [
+        "MISSING_SOURCE:B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO@1"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "conditional route assumes conclusion",
+      "expected": "ROUTE_ASSUMES_CONCLUSION",
+      "errors": [
+        "ROUTE_ASSUMES_CONCLUSION:R-ERASURE"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "conditional route transitively assumes conclusion",
+      "expected": "ROUTE_TRANSITIVELY_ASSUMES_CONCLUSION",
+      "errors": [
+        "ROUTE_TRANSITIVELY_ASSUMES_CONCLUSION:R-ERASURE"
+      ],
+      "status": "PASS"
+    },
+    {
+      "fixture": "advisory workflow feedback allowed",
+      "status": "PASS"
+    }
+  ],
+  "elapsed_seconds": 0.021718099946156144,
+  "arithmetic": "integers and exact byte hashes",
+  "full_FEI": "OPEN"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "claim_id": "A015-BOUNDED-COORDINATE-COVER-RARE-CORE-PAYMENT",
+    "version": 1,
+    "exact_statement": "For the original conditioned forest queue (gamma=6/5), N equal-width W signed conjunction gates, and fixed uniform lambda=1/N, if h original gates cover every relevant coordinate, each nonempty output A has a selected successful event of probability Q(A)>=2^(-1-h log2(N)-(5h-1)W); the actual whole-output probability Q_*(A)>=Q(A). In particular for F=2 A_r 1_{|x|>=m-t}1_{|y|>=m-t}-1 on disjoint uniform blocks, m>=2, r>=0 and 0<=t<=max(1,floor(m/4)), its unchanged full positive-prime table with N=binom(m,t)^2, W=2(m-t)+r and lambda=1/N has complete nonempty cross-entropy C_*<=96 I(F), and H(F)<=107 I(F). In the central-band extension m=2k,t=k,r=0 (k>=1), the same two-prime coordinate cover exists but (2m)Var(F)/I(F)>=(7/8)sqrt(k+1); this is an obstruction to uniform dimension-budget payment only, not a queue-cost or FEI lower bound.",
+    "hypotheses": [
+      "Uniform independent cube; sign Boolean functions; entropy and ideal lengths in bits",
+      "Original queue items(i)-(iv) and eq:forestconditioning, one fixed physical full order per gate, failed and infinite runs retain missing mass",
+      "Positive same-width conjunction table; uniform positive packing weights fixed before any output; h selected original gates cover all relevant coordinates",
+      "Rare-core bound uses only the stated m,t,r domain; central extension is a dimension-budget obstruction, outside that corollary"
+    ],
+    "statement_sha256": "216ef32f062f628349f64d5d3616975646a1502aeaf9497ca2b3ce29168ca47a",
+    "contributors": [
+      "A015"
+    ],
+    "proof_source": [
+      "RARE_CORE_PAYMENT.md",
+      "FRONTIER.md",
+      "code/check_rare_core.py",
+      "code/check_frontier_review.py",
+      "out/checks.json",
+      "out/frontier_review.json"
+    ],
+    "proof_dependencies": [
+      "Original queue definitions only: forests.tex sha256=d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a; no upstream selected-lift, FEI, root-occupation or transfer lemma is assumed"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A015",
+        "scope": "Author analytic proof plus separate exact event/spectrum implementation; not independent acceptance",
+        "assertions": 174839
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_FINITE_CHECKS_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A007",
+      "A008",
+      "A086",
+      "A094",
+      "B03",
+      "B20"
+    ]
+  }
+]

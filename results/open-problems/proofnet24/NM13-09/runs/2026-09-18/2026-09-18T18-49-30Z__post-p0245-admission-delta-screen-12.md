@@ -1,0 +1,221 @@
+Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 maximum. ADMISSION_PENDING / NO MATHEMATICAL MOVEMENT: successor metric `UNMEASURED -> UNMEASURED`; Section-B methods #2/#4/#27 were NOT ATTEMPTED because no successor source crossed admission.**
+
+# NM13-09 — post-P0245 admission delta screen 12
+
+Date: 2026-09-18 UTC  
+Track / namespace: `NM13-09` / `proofnet24/NM13-09/`  
+Category: `CLOSABLE OUTSIDE`  
+Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Exclusive selection shard: `int(SHA256(UTF-8 canonical dedup_key).hexdigest(),16) mod 13 = 8`
+
+## 1. Runtime truth and model-control surface
+
+The task text requests GPT-6 with maximum reasoning. This invocation actually identifies as **GPT-5.6 Sol**. Authenticated reasoning-effort telemetry is not exposed, so the reasoning level is **UNVERIFIED**. I do not claim GPT-6, a binding maximum-reasoning setting, a guaranteed hour-long execution, or a support escalation.
+
+The exposed scheduled-task interface still provides title, prompt, schedule or relative-start information, timing mode, and enabled state. It exposes **no bindable model-family selector and no bindable reasoning-effort selector**. Therefore `GPT-6 / maximum` remains prompt text only. Making it binding would require an owner-authorized product/workspace/API/admin scheduling surface that persists model-family and reasoning-effort fields and provides authenticated per-run routing/effort attestation.
+
+The historical P26 response `You cannot modify this task` remains an authorization-context boundary, not evidence that the task is globally immutable. Repository continuity records a later successful P26 update from another authorized context. The lawful workaround is to use the owning/otherwise-authorized task context or an authorized platform/admin/support route for that same task, never to duplicate the task, change permissions, or bypass access controls. This invocation made **no schedule or permission change**.
+
+## 2. Authoritative continuity and required reads
+
+This invocation continues from the newest immutable NM13-09 report:
+
+`proofnet24/NM13-09/runs/2026-09-18/2026-09-18T17-45-00Z__post-p0245-admission-delta-screen-11.md`, creation commit `cff4b14fb71f52efb2dba91bff1f29b24286a8ac`.
+
+That report preserves the binding lifecycle state:
+
+- `P0245`, canonical key `exact_minimum_stationary_cover_time_for_reversible_chains`, residue 8, has already reached its six-unchanged-run CLOSABLE terminal handoff and is **not reopened**;
+- the successor cursor is strict **delta-only residue-8 admission** after the completed canonical/static reconciliation through populated Codex `P0001--P0488` and the current populated intake frontier;
+- successor metric remains `UNMEASURED` until a source is actually admitted;
+- retained residue-8 near-lead `P0409` remains PENDING unless its literal source scope, current literature, prior-attempt state, honest CLOSABLE shape, shard, and exclusive ownership all pass simultaneously.
+
+This run reread or exact-target-recovered current state from:
+
+- `FLEET_RULES.md`;
+- `operations/new_methods_2026-09-16/OWNER_DIRECTIVE.md`;
+- `operations/NEW_METHODS_2026-09-16.md`;
+- later owner-authorized `operations/NM13_DEPLOYMENT_2026-09-17T203709Z.md`;
+- root `QUEUE.md`, `POSTED.md`, and `RESULTS.md`;
+- `probability_campaign_2026_09/INDEX.md` and `RANKING.md`;
+- the predecessor report above;
+- newest neighboring NM13-08 report `proofnet24/NM13-08/runs/2026-09-18/2026-09-18T17-40-30Z__post-static-admission-delta-screen-6.md`;
+- newest neighboring/audit-partner NM13-10 report `proofnet24/NM13-10/runs/2026-09-18/2026-09-18T17-58-30Z__admission-delta-screen-22.md`;
+- current coordinator admission reconciliation `operations/task_health/runs/2026-09-18T175500Z/admission_delta.md`;
+- exact predecessor-to-current-head Git comparison across claims, source/attempt ledgers, queue/posting roots, campaign state, policy files, handoffs, and neighboring reports;
+- all new canonical claims and terminal/release-looking handoffs in that delta;
+- retained P0409 canonical identity, source statement, prior attempt state, direct claim path and fresh 2026-09-18 literature search.
+
+The append-only intake and attempt corpora are too large for useful byte-for-byte connector rendering every hour. I do **not** claim a fresh visual reread of every historical row. The completed residue-8 canonical/static reconciliation is carried forward only because the exact Git delta below shows the previously screened `probability_1000_intake_*/problems.jsonl`, probability attempt ledgers, and archived Codex `problems.jsonl` did not change. Search misses, absent claims, disabled schedules, terminal handoffs, or inaccessible schedules are never treated as proof of openness, novelty, or ownership release.
+
+## 3. Exact repository delta since screen 11
+
+Captured final pre-write master head: `92a27c490e1259fd710d324397b073da14066fa6` (2026-09-18T18:46:43Z).
+
+The exact comparison
+
+`cff4b14fb71f52efb2dba91bff1f29b24286a8ac .. 92a27c490e1259fd710d324397b073da14066fa6`
+
+is **93 commits ahead and 0 behind**.
+
+Admission-critical static source surfaces are unchanged across the interval:
+
+- root `QUEUE.md`: unchanged;
+- root `RESULTS.md`: unchanged;
+- `probability_campaign_2026_09/INDEX.md`: unchanged;
+- `probability_campaign_2026_09/RANKING.md`: unchanged;
+- previously screened `probability_1000_intake_*/problems.jsonl` source ledgers: unchanged;
+- previously screened probability attempt ledgers: unchanged;
+- archived Codex `probability_campaign_2026_09/codex_20h_20260906/problems.jsonl`: unchanged;
+- controlling owner/NM13 policy files: no superseding policy amendment recovered.
+
+`POSTED.md` **did change**. The new 18 September ResearchGate reconciliation expands posting metadata from the owner-supplied snapshot and explicitly says the update changes no scheduler, successor assignment, retirement, mathematical verdict, or audit count. It therefore strengthens exclusions but creates no free residue-8 source.
+
+Two canonical claim creations appear in the delta and both consume inventory:
+
+1. `operations/claims/CHEN-CHEN-QI-2026-SMALL6.md` — a literal finite CLOSABLE OUTSIDE two-instance Zarankiewicz problem, already exclusively owned by another native slot. It is not free for NM13-09 and is not a new queue/intake row available under this worker's admission rule.
+2. `operations/claims/D0034.md` — Bradley Question 6, classified HARD OUTSIDE and already exclusively owned by R14. Although it is stochastic-process flavored, it is both the wrong category and already claimed.
+
+No canonical claim deletion appears in the exact compare.
+
+Two new terminal handoffs were checked directly rather than interpreted as releases:
+
+- `I0006` (R7-06): terminal HARD handoff after the two permitted stuck recoveries. Its canonical claim still says `CLAIMED / ACTIVE / HARD OUTSIDE`, and the handoff explicitly says it does not mutate or release that claim. It is not free CLOSABLE inventory.
+- `P0087` (R7-01): terminal HARD handoff after its permitted recoveries. Its handoff explicitly states that the canonical claim remains an ownership boundary while audit/publication reconciliation is pending. It is not free inventory.
+
+The current coordinator admission reconciliation remains `E_READY_CLOSABLE: 0 -> 0`. This is supporting evidence only; NM13-09 still applies its own canonical-key/shard/source/literature/prior-attempt/ownership gate.
+
+Therefore the present delta supplies **no new canonical residue-8 source row, no dedup/alias correction exposing a mis-sharded free source, no populated Codex `P0489+` row, no owner-authorized non-exhausted residue-8 CLOSABLE release, and no source-current ownership-clear candidate that NM13-09 may lawfully claim**.
+
+## 4. Retained residue-8 near-lead P0409 — fresh source/current-literature check
+
+Canonical identity remains:
+
+- source ID: `P0409`;
+- canonical dedup key: `joint_law_of_neighboring_ideal_voronoi_vertices`;
+- SHA-256: `294005dac73d8cecaa36e80d694ee89b01cf507805589d5fa26792647add8dfa`;
+- shard residue: `8 mod 13`;
+- canonical claim path `operations/claims/P0409.md`: absent on the checked master, which is only one ownership input and is **not** an admission certificate.
+
+Primary source: Matteo D'Achille, Nicolas Curien, Nathanaël Enriquez, Russell Lyons and Meltem Ünel, *Ideal Poisson--Voronoi tessellations on hyperbolic spaces*, Annals of Probability 54(2) (2026), 846--891, DOI `10.1214/25-AOP1781`, arXiv `2303.16831`. The maintained source text still prints Question 7.3:
+
+> “What is the joint distribution of the neighboring vertices of a typical vertex?”
+
+Prior campaign work is substantive: it uses the ideal-vertex graph, Palm rerooting and mass transport to obtain marginal/invariance information, but does not determine the requested full multivariate neighboring-vertex law. P0409 is therefore not represented as previously unattempted.
+
+Fresh bounded public searches on 2026-09-18 used the exact title, exact Question 7.3 wording, `neighboring vertices`, `joint distribution`, the authors, and recent IPVT work. They recovered the maintained source text and the current surrounding literature, including D'Achille--Thäle on face-volume densities, D'Achille--Khezeli on convergence/uniqueness and parameter-independence phenomena, Mellick on the distinct cell-indistinguishability question, and later percolation/geometry work. None of those retrieved items states a solution of the neighboring-vertex joint distribution.
+
+No source-matching later resolution surfaced in this bounded search. This is **negative evidence only**, not proof of worldwide openness, bibliographic completeness, novelty, or priority.
+
+Admission consequence remains unchanged: **P0409 is PENDING / NOT READY**. The surviving source obligation is a broad continuous multivariate Palm/Mecke classification. No source-faithful finite witness, explicit process construction, exact transition law, sharp scalar threshold, minimal witness complexity, or complete special-class theorem has been identified that answers the printed Question 7.3. Admitting only a marginal law or a restricted geometric class would silently replace the source target and mislabel a broad problem as CLOSABLE.
+
+## 5. Admission decision and Section-B accounting
+
+No candidate passes the full admission gate in this invocation.
+
+Status: **ADMISSION_PENDING**.  
+Successor source ID: `NONE`.  
+Canonical dedup key: `NONE`.  
+Claim ID/path: `NONE`.  
+Successor metric before: `UNMEASURED`.  
+Successor metric after: `UNMEASURED`.  
+Mathematical movement: **none**.  
+Screening counts as mathematical progress: **no**.  
+Successor unchanged-run counter: **NOT_STARTED**.  
+Successor stuck-recovery counter: **NOT_STARTED**.  
+P26 audit: **NOT APPLICABLE — no completed successor claim**.  
+NM13-10 audit: **NOT APPLICABLE — no completed successor claim**.
+
+The prescribed first mathematical methods remain genuinely **unspent**:
+
+- #2 **ATTACK THE NEGATION FIRST** — not attempted on an admitted successor;
+- #4 **PROVE SOMETHING WEAKER, COMPLETELY** — not attempted on an admitted successor;
+- #27 **SWAP THE QUANTIFIERS** — not attempted on an admitted successor.
+
+Canonical hashing, Git-delta inspection, ownership/lifecycle reconciliation, source-status checks and literature review are admission bookkeeping. They do not count as mathematical progress and do not start a successor stagnation counter.
+
+No `operations/claims/<ID>.md` file was created. No checker, theorem artifact, finite certificate, paper folder, or audit request was created because there is no admitted mathematical target and no new mathematical claim worth certifying.
+
+## 6. Durable cursor / next lawful action
+
+Keep NM13-09 on **strict delta-only residue-8 admission**. Do not rescan the completed static inventory merely because another invocation occurs.
+
+Re-enter the full admission gate only if a material trigger appears:
+
+1. a genuinely new or materially changed canonical source row in `QUEUE.md` or a `probability_1000_intake_*/problems.jsonl` ledger;
+2. a populated later source row, including Codex `P0489+` or another later populated intake frontier;
+3. an explicit immutable owner-authorized **non-exhausted CLOSABLE** release/reassignment creating genuinely free residue-8 inventory;
+4. a material primary/current-literature correction that turns P0409 or another residue-8 lead into a precise source-faithful explicit-process, finite-counterexample, exact-transition, sharp-threshold, minimal-witness, or short-theorem target;
+5. a canonical dedup-key/alias correction showing a genuinely unassigned source had previously been hashed under the wrong identity.
+
+For the first source that actually passes: recover exact canonical identity and aliases before hashing; recheck the literal source statement and quantifiers, current primary/later-author/citing literature, prior attempts, all current/historical ownership, handoffs, POSTED and campaign state; race-check ownership on current master; create the canonical claim with **create-only** semantics and read it back; freeze the metric at `UNMEASURED` unless a real certified baseline is recovered; and continue immediately into substantive methods #2/#4/#27 in the same invocation.
+
+## 7. Structured `ledger_delta` for P26
+
+```yaml
+ledger_delta:
+  worker: NM13-09
+  category: CLOSABLE_OUTSIDE
+  report_kind: successor_admission_delta_screen
+  admission_delta_screen_index: 12
+  run_status: ADMISSION_PENDING
+  source_id: null
+  canonical_dedup_key: null
+  claim_id: null
+  claim_path: null
+  shard_residue_required: 8
+  metric:
+    name: successor_source_metric
+    before: UNMEASURED
+    after: UNMEASURED
+    moved: false
+  mathematical_progress: false
+  methods:
+    attempted: []
+    prescribed_unspent: [2, 4, 27]
+  successor_counters:
+    unchanged_runs: NOT_STARTED
+    stuck_recoveries: NOT_STARTED
+  continuity:
+    predecessor_report: proofnet24/NM13-09/runs/2026-09-18/2026-09-18T17-45-00Z__post-p0245-admission-delta-screen-11.md
+    predecessor_report_commit: cff4b14fb71f52efb2dba91bff1f29b24286a8ac
+    prewrite_master_head: 92a27c490e1259fd710d324397b073da14066fa6
+    commits_ahead: 93
+    commits_behind: 0
+  static_residue8_cursor: complete_through_codex_P0488
+  durable_cursor: STRICT_DELTA_ONLY_RESIDUE_8
+  retained_near_lead:
+    id: P0409
+    dedup_key: joint_law_of_neighboring_ideal_voronoi_vertices
+    disposition: PENDING_NOT_READY_BROAD_JOINT_LAW
+  terminal_prior_source:
+    id: P0245
+    disposition: SIX_UNCHANGED_RUN_CLOSABLE_HANDOFF_NOT_REOPENED
+    metric: R_Cayley4
+    value: 1
+  material_delta:
+    posted_registry_changed: true
+    posted_change_effect: BIBLIOGRAPHIC_EXCLUSIONS_ONLY_NO_ASSIGNMENT_RELEASE
+    new_claims_consuming_inventory:
+      - CHEN-CHEN-QI-2026-SMALL6_ALREADY_OWNED_CLOSABLE
+      - D0034_R14_ALREADY_OWNED_HARD
+    terminal_handoffs_not_releases:
+      - I0006_R7-06_HARD_CLAIM_STILL_ACTIVE
+      - P0087_R7-01_HARD_CLAIM_STILL_OWNERSHIP_BOUNDARY
+    source_ledgers_changed: false
+    attempt_ledgers_changed: false
+    queue_changed: false
+    results_changed: false
+    campaign_index_changed: false
+    campaign_ranking_changed: false
+  coordinator_ready_closable:
+    before: 0
+    after: 0
+  audits:
+    P26: NOT_APPLICABLE_NO_SUCCESSOR_CLAIM
+    NM13-10: NOT_APPLICABLE_NO_SUCCESSOR_CLAIM
+  next_step: WAIT_FOR_MATERIAL_RESIDUE8_DELTA_THEN_FULL_ADMISSION_GATE
+```
+
+## 8. Save discipline
+
+This invocation writes exactly this one immutable report in the NM13-09 `runs/` namespace. It makes no shared-root edit, no peer edit, no canonical claim, no public post, no email/Drive action, no workflow execution, no permission change, no paid-compute action, and no schedule change. Readback is performed at the creation commit with no receipt-only follow-up commit.

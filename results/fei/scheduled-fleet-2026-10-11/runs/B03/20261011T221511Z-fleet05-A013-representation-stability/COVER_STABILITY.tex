@@ -1,0 +1,325 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\begin{document}
+\title{Cover transport and vacuum-separated projected references}
+\author{A013 / B03}\maketitle
+All functions are Boolean signs on a uniform physical cube. Logarithms
+are base two. The statements are source-complete author proofs, awaiting
+independent review. No universal FEI claim or literature novelty is made.
+
+\section{Ordered gate covers and physical restrictions}
+A cover represents $\{f=1\}=\bigcup_{l=1}^N E_l$, where $E_l=\{h_l=1\}$.
+Each $h_l$ is a Boolean combination of $M_l$ regular functions with fixed
+monotone orientations and desirability orders. Constants are allowed and
+are removed when starting a queue reference. Write $R_l$ for relevant
+physical support, $p_l=\Pr(E_l)$, $\pi_l=\min(p_l,1/2)$, and
+$d(j)=|\{l:j\in R_l\}|$. Reference root odds are $o_l=\lambda_l\pi_l$,
+root Bernoulli probabilities $q_l=o_l/(1+o_l)$, and
+$\Lambda=\sum_l\log(1+o_l)$. These are reference probabilities, not the
+physical probabilities of a Fourier witness root.
+
+\begin{theorem}[Actual restriction ledger]
+Fix a physical coordinate block $A$, $|A|=k$, to $a$. Replacing every
+gate and every inner regular function by its actual restriction represents
+$f_a$ exactly. No gates or inner functions are added. Relevant supports
+shrink to subsets of $R_l\setminus A$; deleting coordinates from each
+order gives the inherited order, and ranks never increase.
+For any surviving positive gate,
+\[
+ p'_l=\Pr(E_l\mid X_A=a),\quad 0\le p'_l\le\min(1,2^kp_l),\quad
+ \pi'_l=\min(p'_l,1/2)\le2^k\pi_l.
+\]
+Inherited incidence-feasible weights remain feasible. At fixed weights,
+\[
+ q'_l=\frac{\lambda_l\pi'_l}{1+\lambda_l\pi'_l},\qquad
+ \Lambda'\le\sum_l\log(1+2^k\lambda_l\pi_l).
+\]
+There is no positive uniform lower bound on $p'_l/p_l$.
+For a fixed surviving root set $U$, its negative log reference probability
+changes by exactly
+\[
+ \Lambda'-\Lambda+\sum_{l\in U}\log\frac{\pi_l}{\pi'_l}.
+\]
+If there are weights on all gates and $L$ denotes the artificial label law
+$t_l=\lambda_l\pi_l/W$, $W=\sum_l\lambda_l\pi_l>0$, and $W'>0$, then
+\[
+ t'_l=\frac{t_l(\pi'_l/\pi_l)}{W'/W},\qquad
+ D(t'\Vert t)\le\log(2^kW/W').
+\]
+The actual law for uniform attachment names at a retained coordinate $j$
+has entropy $\log d'(j)\le\log d(j)$.
+The independent reference root-vector entropy is exactly
+$\sum_l h_2(q_l)$ before and $\sum_l h_2(q'_l)$ after restriction;
+there is no implied monotonicity of these sums.
+\end{theorem}
+\begin{proof}
+Restriction commutes with a Boolean combination and union. The defining
+desirability inequality remains valid for every assignment after fixing
+other coordinates, so regularity and the inherited orders survive.
+Deleting now irrelevant coordinates preserves that inequality. Conditional
+probability on an event of probability $2^{-k}$ gives the bound on $p'$.
+Clipping at $1/2$ gives the asserted bound on $\pi'$. Incidence constraints
+only lose terms. Independent root selection has probability
+$2^{-\Lambda}\prod_{l\in U}\lambda_l\pi_l$, proving the difference.
+For the label divergence, every nonzero likelihood ratio is at most
+$2^kW/W'$. Average its logarithm under $t'$. Zero weights are omitted;
+zero-probability gates cannot become positive after restriction.
+Constants true make the union constant, and constants false are deleted.
+Deleting their odds also removes their normalizer terms. All formulas for
+surviving roots use the retained gate index set.
+\end{proof}
+This is not a pointwise monotonicity theorem for rank logarithms:
+both $r(j)$ and $|T\cap U_j|+1$ shrink, so their ratio can increase.
+For example $r=3$ and $T$ containing exactly one predecessor gives ratio
+$3/2$. Restricting and deleting that occupied predecessor gives new ratio
+$2/1$, which is larger. Every child subset reference must recompute
+its weights and elementary symmetric normalizers. No claimed universal
+payment for that recomputation is used below.
+
+\section{Tensor and multiplexer covers}
+To avoid silently complementing an OR cover, suppose both signs have
+covers $E_{i,+,l},E_{i,-,l}$, with counts $N_{i,+},N_{i,-}$.
+For $t$ functions on disjoint physical blocks, cover the positive event
+of $\prod_i f_i$ by all intersections
+\[
+ \bigcap_i E_{i,\epsilon_i,l_i},\qquad\prod_i\epsilon_i=+1.
+\]
+It is exact even if the covers overlap within a block. Its count is
+\[
+ N_+=\tfrac12\left[\prod_i(N_{i,+}+N_{i,-})+
+                         \prod_i(N_{i,+}-N_{i,-})\right].
+\]
+Each gate needs at most $\sum_i M_{i,\epsilon_i,l_i}$ regular inner
+functions, all original orders survive on their separate blocks, and its
+event probability is exactly $\prod_i p_{i,\epsilon_i,l_i}$.
+If no negative cover was supplied, a safe construction for $f_i=-1$
+is the single intersection $\bigcap_l\{h_{i,l}=-1\}$, using at most
+$\sum_l M_{i,l}$ inner functions. This can greatly worsen $M$.
+Gate counts can grow exponentially despite exact spectral tensor
+additivity. For example $t$ independent literals have $2^{t-1}$ positive
+minterms although their product has deterministic spectrum and entropy
+zero. Representation size is not itself a paid Fourier cost.
+For a coordinate in block $i$, the transformed attachment degree obeys
+$d'(j)\le d_i^{\pm}(j)\prod_{k\ne i}(N_{k,+}+N_{k,-})$, where
+$d_i^{\pm}$ counts both signed covers. The attachment-name cost increase
+is therefore at most $\sum_{k\ne i}\log(N_{k,+}+N_{k,-})$ relative to
+that two-sign incidence. Each tensor gate root uses
+$\pi'=\min(\prod_i p_i,1/2)$ and its chosen feasible $\lambda'$;
+the normalizer and root-vector entropy are exactly
+$\sum\log(1+\lambda'\pi')$ and $\sum h_2(\lambda'\pi'/(1+\lambda'\pi'))$.
+
+An artificial independent tuple-label law on all signs and names has
+entropy $\sum_i H(L_i)$. Writing $B$ for its sign-product indicator and
+$b=\Pr(B=1)$, the always valid identity is
+\[
+ bH(L\mid B=1)+(1-b)H(L\mid B=0)=\sum_i H(L_i)-h_2(b).
+\]
+Thus $H(L\mid B=1)\le\sum_iH(L_i)/b$ for $b>0$. Uniform
+attachment names still cost exactly $\log d'(j)$ and must be counted
+with the transformed incidence.
+
+For a fresh selector block of $a$ bits and branches $g_b$, covers of
+$g_b=1$ lift to $\{x=b\}\cap E_{b,l}$, with count $\sum_bN_b$,
+inner count $M_{b,l}+a$, probability $2^{-a}p_{b,l}$ and
+$\pi'_{b,l}=2^{-a}p_{b,l}$. When $a\ge1$ and $p_{b,l}>0$,
+\[
+ 2^{-a}\le\pi'_{b,l}/\pi_{b,l}\le2^{1-a}.
+\]
+In a decision tree, replace $a$ by the actual leaf depth $d_l$.
+For an artificial physical leaf label $B$ followed by conditional gate
+name $L$, $H(B,L)=H(B)+\sum_b\Pr(B=b)H(L\mid B=b)$.
+For dyadic tree cells $H(B)=D=\sum_l2^{-d_l}d_l$.
+It is a latent label cost, not automatically the entropy of the output
+Fourier set. Selector incidence is the total number of gates whose
+path fixes that selector, so old feasible $\lambda$ need not remain
+feasible. Scale all inherited weights by
+\[
+ c=\min\{1,\min_{j\text{ selector}}(
+                  \sum_{l:j\in R'_l}\lambda_l)^{-1}\}.
+\]
+An empty sum imposes no constraint. Root odds are then
+$c\lambda_l2^{-d_l}p_l$ and their independent-root normalizer is
+exactly $\sum_l\log(1+c\lambda_l2^{-d_l}p_l)$.
+The root log-odds increase per retained gate lies between
+$d_l-1+\log(1/c)$ and $d_l+\log(1/c)$.
+
+If selectors already occur in a branch, the actual branch is
+$g_b|_{x=b}$. First restrict it, then gate by the selector event.
+The probability is $2^{-a}\Pr(E_{b,l}\mid x=b)$, not $2^{-a}p_{b,l}$.
+The formal example $g_+(x)=x$, $g_-(x)=-x$, selecting on that same $x$,
+gives the constant $1$. Treating the branch $x$ as an independent data
+literal wrongly predicts nonconstant spectrum and positive data
+influence. Shared data alone is harmless to the cover identities;
+shared physical selectors demand actual restriction first.
+
+\section{A repaired complete cost on rare balanced-core activation}
+The next theorem consumes the activated-literal obstruction to the
+uncompressed physical transcript. It pays a complete projected reference,
+not just one entropy component. It supplies a different reference from
+the original incidence queue; no estimate of that queue's infimum is made.
+
+\begin{theorem}[Vacuum-separated projection]
+Let $g$ be any balanced Boolean function. Let $R_g(T)$ be a subprobability
+reference on nonempty Fourier sets with
+$c_g=\sum_{T\ne\varnothing}\widehat g(T)^2\log(1/R_g(T))<\infty$.
+On $r\ge1$ fresh point controls let $p=2^{-r}$ and
+$F=1+A_r(g-1)$. There is an explicit complete probability reference for
+the full spectrum of $F$ with cross entropy $C_F$ satisfying
+\[
+ H(F)\le C_F\le h_2(2p-p^2)+2r(2p-p^2)+pc_g
+              \le p c_g+(6+2/\ln2)pr.
+\]
+If $c_g\le K I(g)$ its complete cost is at most
+$\max\{K,6+2/\ln2\}I(F)$. The arbitrary core cost is retained.
+\end{theorem}
+\begin{proof}
+Stop at the first control failure. Its constant leaf has depth $j$,
+$1\le j\le r$; the last leaf is $g$ at depth $r$. The old transcript
+Kraft masses are $4^{-j}$ times the leaf reference for each selector
+frequency subset along the known path. Sum masses with equal decoded
+Fourier sets. After relabeling the controls in their query order, this
+gives, for a control-only set $S$, with $m=\max S$ and $m=1$ for
+$S=\varnothing$,
+\[
+ Q(S,\varnothing)=\sum_{j=m}^r4^{-j};\qquad
+ Q(S,T)=p^2R_g(T)\quad(T\ne\varnothing).
+\]
+The first formula for the empty set also starts at $j=1$.
+Its total constant-leaf mass is $\sum_j2^j4^{-j}=1-p$; terminal
+mass is $p\sum_TR_g(T)\le p$. Thus $Q$ is a subprobability law.
+For nonempty $S$, $Q(S,\varnothing)\ge4^{-\max S}\ge p^2$.
+The exact Boolean Fourier law is
+\[
+ P(\varnothing,\varnothing)=(1-p)^2,\quad
+ P(S,\varnothing)=p^2\ (S\ne\varnothing),\quad
+ P(S,T)=p^2\widehat g(T)^2\ (T\ne\varnothing).
+\]
+Let $v=2p-p^2$, $q_*=\sum_{(S,T)\ne(\varnothing,\varnothing)}Q(S,T)
+\le1$. Define the full reference to give mass $1-v$ to the empty
+set and mass $vQ(S,T)/q_*$ to every nonempty set. Here $q_*>0$.
+Its exact cross entropy is
+\[
+ C_F=h_2(v)+\sum_{(S,T)\ne\varnothing}P(S,T)
+                         \log(1/Q(S,T))+v\log q_*.
+\]
+The last term is nonpositive and is retained in the exact construction.
+Control-only nonempty mass is $p-p^2$ and terminal mass is $p$.
+Consequently the sum is at most $2rv+pc_g$. The core term follows
+from $2^rp^2=p$. Since $p\le v\le2p$,
+$h_2(v)\le v\log(1/v)+v/\ln2\le2pr+2p/\ln2$.
+Using $r\ge1$ proves the stated coefficient. Gibbs' inequality gives
+$H(F)\le C_F$. Finally physical edges give $I(F)=pI(g)+rp$:
+each control has influence $p$ and data influence scales by $p$.
+\end{proof}
+This erases the unnecessary physical stopping label before charging
+cost. An unchanged transcript costs $4(1-p)+pc_g$ and diverges relative
+to $I(F)$ on $g=y$. Its projected empty atom has probability roughly
+$1/3$; merely summing witnesses still pays a constant on that atom.
+The separate vacuum reference is essential to the repair.
+
+\section{Iteration and explicit nonclosure}
+Disjoint complete references tensor by multiplication, with cross entropy
+$\sum_i c_i$ and influence $\sum_iI_i$. Character balancing with a fresh
+literal XOR-translates the spectrum and its reference, changing no cost
+and adding influence one. Thus disjoint products, balancing, and balanced
+core activations can be iterated with constant at most
+$\max(K_0,6+2/\ln2)$ independent of depth. At each activation,
+\[
+ c_{\rm new}\le p c_{\rm core}+(6+2/\ln2)pr,
+\quad I_{\rm new}=pI_{\rm core}+pr;
+\]
+expanding these recurrences weights each local activation charge by the
+product of subsequent activation probabilities. No ancestral influence
+is spent twice. Activating an unbalanced output again is outside this
+theorem unless it is first balanced; no silent closure is asserted.
+
+Restriction is not stability of A011's boundary admission. On two
+selectors choose leaves $y_2$ only in cell $(+,+)$ and $y_1$ elsewhere.
+The full two-level tree has $D=2$, label-flip budget $B=1$, so $B\ge D/2$.
+Fix the first selector to $-$. Keeping the inherited second query gives
+$D'=1$, $B'=0$. Pruning the equal child leaves repairs this example but
+is a further representation change. Orthogonal neighboring branches
+also need not remain orthogonal after data restriction: $y_1,y_2$ have
+zero inner product, while fixing both to $+$ makes them identical.
+These are failures of stated admission/certificates, not of FEI.
+The ranks/root laws above transport the raw ordered cover; a universal
+paid reference on every physically restricted arbitrary core remains
+unproved. The activation theorem does not supply such a core code.
+\section{Late B03 direction: pointwise queue-charge obstruction}
+The lead's v1 notes appeared at final intake (22:30 UTC), after the
+activation repair above was completed. Consider the actual two-gate union
+\[
+ h(z,y_1,y_2)=(z\wedge y_1)\vee(z\wedge y_2),
+\]
+with positive physical literals and orders $(z,y_i)$ in the conjunctions.
+Its mean is $-1/4$ and influence $5/4$. Squared spectrum is $9/16$ at
+$\{z\}$ and $1/16$ at every other set, including empty.
+On ten fresh controls let $f=1+A_{10}(h-1)$. Fix all controls active:
+the actual child is $h$, with physical probability $p=1/1024$.
+Parent gates are conjunctions of all controls, $z$, and $y_i$, in that
+order. Both covers have maximum read $k=2$. Physical conditioning gives
+\[
+ I(f)=p(5/4+10(5/4))=55/4096,\qquad
+ v_f=1-(1-5p/4)^2\le5p/2.
+\]
+For every valid assignment of a nonempty Fourier set, let $s_l=|A_l|$,
+$\kappa_l=|A\cap R_l|$, and retain the queue helper charges
+\[
+ L(A)=|\mathcal F(A)|\log k,\qquad
+ S(A)=\sum_{l\in\mathcal F}s_l\log(\kappa_l/s_l),
+\]
+\[
+ R(A)=\sum_{j\in A}\left[\tfrac65\log
+ \frac{r_{\tau(j)}(j)}{|(A\setminus\{j\})\cap U_{\tau(j),j}|+1}
+ +b_{\tau(j)}\mathbf1\{\kappa_{\tau(j)}<b_{\tau(j)}/\Gamma\}\right],
+ \qquad\Gamma=120/11.
+\]
+These are helper charges before the paper averages rank and rarity,
+not Fourier entropy. The label $\log k$ is the worst-degree charge of
+Section 5 at $\lambda=1/k$; a valid forest may be chosen for each assignment.
+For the child, minimum expected $L$ is $17/16$: sets containing both
+private $y_i$ require two gates, all others need only one. Every assignment
+of $\{z,y_1,y_2\}$ has subset cost one, hence $\mathbb E S_h\ge1/16$.
+Both $y_i$ have rank two; the rank log is one when $y_i$ occurs without
+$z$. The masses at $\{y_1\},\{y_2\},\{y_1,y_2\}$ give total rank
+expectation $1/4$. Child rarity is absent, since $b=2<\Gamma$ and
+$\kappa\ge1$. Thus $\mathbb E R_h=3/10$, independent of assignment.
+For the parent, $L\le2$ on nonempty sets gives $\mathbb E L_f\le5/1024$.
+Each support has twelve coordinates (thirteen total physical coordinates),
+so $S\le|A|\log13<4|A|$ and $\mathbb E S_f<55/1024$.
+Parent ranks are at most twelve and gate probability is $2^{-12}$,
+so $b=12$. Therefore
+\[
+ \mathbb E R_f<(\tfrac65\cdot4+12)I(f)=231/1024<3/10.
+\]
+All three child charges exceed parent charges, even if assignments are
+optimized independently. Multiplying $S$ by its paper coefficient $6/5$
+preserves the obstruction. The coarse averaging term $(24/5)I\log k$
+also increases, from $33/512$ to $6$. This is a pointwise obstruction:
+the child has probability $1/1024$, so no averaged failure is inferred.
+
+\section{Four exact levels with a reused physical selector}
+Let $F_0=y$ and $F_d=\operatorname{MUX}_x(F_{d-1},z_d)$, $d=1,2,3,4$,
+always using the same physical selector $x$, with distinct data $z_d$.
+The expanded positive OR cover has $d+1$ clauses and formal selector read
+$d+1$: $x^d\wedge y$ and $x^{d-k}\wedge(-x)\wedge z_k$, $1\le k\le d$.
+Literal idempotence and contradiction eliminate every intermediate clause.
+The actual represented function is
+\[
+ F_d=\operatorname{MUX}_x(y,z_d),\quad
+ \text{gates }(x\wedge y),\ ((-x)\wedge z_d).
+\]
+At every listed depth the reduced cover has two regular conjunction gates,
+read two at $x$ and read one at relevant data coordinates. Gate probability
+is $1/4$. Feasible weights $1/2$ give root odds $1/8$, root probabilities
+$1/9$, and $\Lambda=2\log(9/8)$. Root-vector entropy is $2h_2(1/9)$;
+selector attachment-name entropy is one bit, data-name entropy zero.
+All four spectral atoms have mass $1/4$, hence $H=2$, $I=3/2$:
+influences are $1/2$ on $x,y,z_d$, zero on all intermediate data.
+Reduced orders can be $(x,y)$ and $(-x,z_d)$ in each gate's orientation.
+Raw read growth is syntactic; treating each reused selector as a new
+independent physical coordinate gives the wrong ledger. Exact tables
+for all four depths are in \texttt{out/LEAD\_LEDGER\_RESULTS.json}.
+\end{document}

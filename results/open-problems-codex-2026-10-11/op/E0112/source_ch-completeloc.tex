@@ -1,0 +1,858 @@
+%\newcommand{\gibbs}{P_t^{\b,\om}}
+%\newcommand{\gibbss}{P_s^{\b,\om}}
+%\newcommand{\gibbsDeux}{P_t^{\b,\om,\otimes 2}}
+
+
+
+
+ \chapter{Complete localization}
+ 
+As we send some parameters to 0 or $\8$, the present model converges to other related polymer models. A first instance is the intermediate disorder regime of section \ref{sec:IR},
+where parameters $\beta, \nu, r$ are scaled  with the polymer size, see \eqref{eq:paramRI}.
+ 
+\section{A mean field limit}
+
+Another  instance is the mean field limit: independently of the polymer length, we let 
+\begin{center} $\nu \to \8$ and $\beta \to 0$ in such a way that $\nu \beta^2 \to b^2 \in (0,\8)$.
+\end{center}
+Then, the rewards given by the Poisson medium get denser and weaker in this asymptotics so that they turn into a Gaussian environment, given by 
+generalized Gaussian process $g(t,x)$ with mean 0 and covariance
+%%%%%%%
+%$$
+%Q[g(t,x)g(s,y)] = b^2 \delta (t-s) 
+%|\{z \in {\mathbb R}^d: \|z-x\| \leq r_d, \%|z-y\| \leq r_d \}|,
+%$$
+%%%%%%%
+$$
+\E[g(t,x)g(s,y)] 
+= b^2 \delta (t-s) |U(x) \cap U(y)|,
+$$
+where $|\;\cdot \; |$ above denotes the Lebesgue measure. In other words, the environment is gaussian, which is correlated in space but not in time -- it is Brownian-like. 
+Here, the limit of our model is a Brownian directed polymer in a Gaussian environment, introduced in
+\cite{RoTi05}, with partition function
+$$
+{\frak Z}_t= P \left[ \exp \{ \int_0^t g(s, B(s)) ds\} \right] . 
+$$
+We do not elaborate this asymptotics, but instead we focus on the case $b=\8$.
+%As mentioned in \cite{La11}, the proofs of superdiffusivity in one space dimension and
+%the analysis of the influence of spatial correlations for the Gaussian environment case, can be
+%adapted to our case of a Poissonian environment.
+%%%%%%%%%
+
+
+
+\section{The regime of complete localization}
+This corresponds to letting, independently of the polymer length, 
+\begin{equation} \label{eq:completeloc}
+\nu \to \8, \;|\beta|\leq \b_0, \quad {\rm such\ that} \quad \nu \beta^2 \to \8.
+\end{equation}
+(The parameter $r$ is kept fixed.) Precisely, we first let $t \to \8$ and then take the limit \eqref{eq:completeloc}.
+%%%%
+\begin{theorem}
+Under the assumption \eqref{eq:completeloc}, 
+%$$ 
+% 1-\cO \lef( (\n \b^2)^{-1/6}\ri) \leq 
+%\liminf_{t \to \8}  \P\big[  \gibbs  (R_t^*) \big] \leq \limsup_{t \to \8}  \P\big[  \gibbs  (R_t^*) \big] \leq 1-\cO \lef( (\n \b^2)^{-1/6}\ri).
+%$$
+\begin{eqnarray*}
+ 1-\cO \lef( (\n \b^2)^{-1/6}\ri) \leq 
+\liminf_{t \to \8}  \P\big[  \gibbs  (R_t^*) \big]   \qquad \qquad \qquad \qquad \qquad\\ \qquad\qquad \qquad \qquad \qquad 
+ \leq  \limsup_{t \to \8}  \P\big[  \gibbs  (R_t^*) \big]  \leq 1-\cO \lef( (\n \b^2)^{-1/6}\ri).
+\end{eqnarray*}
+\end{theorem}
+%%%
+This statement describes the strong localization properties of the polymer path. 
+The time-average $\frac 1t \int_0^t  
+{\mathbf 1}_{B_s\in U(\Yt(s))}ds$ is the {\em time fraction} the polymer spends together with the favourite path. We know that when $(\partial \psi)/(\partial \beta) \neq 0$
+the time fraction is positive. The claim here is that it is almost  the maximal value 1, in the limit  \eqref{eq:completeloc}. 
+For a benchmark, we recall that, for the free measure $P$, 
+for all smooth path ${\mathsf Y}$ and all $\delta>0$, there exists 
+a positive $C$ such that for large $t$,
+\bdnl{bench}
+P\left( \frac{1}{t} \int_0^t  
+{\mathbf 1}_{B_s\in U( {\mathsf Y}(s))}ds  \geq \delta \right)  \leq e^{-Ct}
+\edn
+(In fact, it is not difficult to see (\ref{bench}) for $Y \equiv 0$ by 
+applying Donsker-Varadhan's large deviations \cite{donskervaradhan-wienersaus} for the occupation measure of Brownian motion. 
+Then, one can 
+use Girsanov transformation to extend (\ref{bench}) to the case of 
+smooth path ${\mathsf Y}$.)
+%%%%
+\begin{proof} Let $\hat \phi_t(\b)= t^{-1} ( \P \ln Z_t - t \nu \b r^d)$. We assume $\b \geq 0$, the other case being similar.  By convexity of $\hat \phi_t$,
+\begin{eqnarray}\nn
+\hat \phi_t(2\b) - \hat \phi_t(\b) &\stackrel{\rm convex}{\geq}& \b \frac{\partial \hat \phi_t }{ \partial \b} (\b) \\ \nn
+&\stackrel{\eqref{eq:meanenergy}}{=}&  \frac{\b \nu \lambda(\b)}{t} \int_{(0,t]\times \rd}ds dx\; \P \;
+ \frac{\gibbs[  \chi_{s,x}]- \gibbs[  \chi_{s,x}]^2}{1+ \lambda(\b) \gibbs[\chi_{s,x}]} \;.
+ \end{eqnarray}
+Bounding from above the denominator in the integral by $e^{\b_0}$, we get
+\begin{equation} \label{eq:rase}
+1- \P {\gibbs}^{\otimes 2} [R_t] \leq e^{\b_0} \frac{\hat \phi_t(2\b) - \hat \phi_t(\b)}{\b \lambda \nu r^d}\;.
+\end{equation}
+Now, using the bound in Lemma \ref{lem:boundfe}, we derive
+$$
+{\rm R.H.S.} \eqref{eq:rase} = {\cal O}((\nu \b^2)^{-1/6}\;.
+$$
+Similarly,
+\begin{eqnarray}\nn
+\hat \phi_t(\b) - \hat \phi_t(\b/2) &\stackrel{\rm convex}{\leq}& (\b/2) \frac{\partial \hat \phi_t }{ \partial \b} (\b) \\ \nn
+&{=}&  \frac{\b \nu \lambda(\b)}{2t} \int_{(0,t]\times \rd}ds dx\; \P \;
+ \frac{\gibbs[  \chi_{s,x}]- \gibbs[  \chi_{s,x}]^2}{1+ \lambda(\b) \gibbs[\chi_{s,x}]} \;,
+ \end{eqnarray}
+leading to 
+$$
+1- \P {\gibbs}^{\otimes 2} [R_t] \geq \frac{\hat \phi_t(\b) - \hat \phi_t(\b/2)}{\b \lambda \nu r^d}  = {\cal O}((\nu \b^2)^{-1/6}\;,
+$$
+and to the desired result.
+\end{proof} 
+ %%%%%%%%%%
+ %%%%%%%%%
+We can 
+extract fine additional  information and geometric properties of the Gibbs measure.
+For $\delta \in (0,1/2)$ define the $(\delta,t)$-negligible set as
+$$
+{\cal N}_{\delta,t}^\h =  \Big\{(s,x) \in [0,t]\times \rd  : \gibbs(\chi_{s,x}) \leq \delta\Big\}, 
+$$ 
+and the  $(\delta,t)$-predominant set as
+$$
+{\cal P}_{\delta,t}^\h =  \Big\{(s,x) \in [0,t]\times \rd  : \gibbs(\chi_{s,x}) \geq 1-\delta\Big\}.
+$$ 
+As suggested by the names, ${\cal N}_{\delta,t}^\h$ is the set of space-time locations the polymer wants to stay
+away from, and ${\cal P}_{\delta,t}^\h$ is  the set of  locations the polymer likes to visit. Both sets depend on the environment.
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{corollary}\label{th:pathlocfull2}
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+For all $0<\delta <1/2$, we have, under the assumption \eqref{eq:completeloc},  
+\begin{equation}
+\label{eq:r2to1-3}
+\limsup_{t\to\8}\P \left[ \frac{1}{t}  \Big\vert  ({\cal N}_{\delta,t}^\h \cup  {\cal P}_{\delta,t}^\h)^\complement
+ \Big\vert  \right]
+%%%%%%%%
+%\longrightarrow 0,
+%%%%%%%%
+=\cO \lef( (\n \b^2)^{-1/6}\ri),
+\end{equation}
+\begin{equation}
+\label{eq:r2to1-4}
+\limsup_{t\to\8}\P \gibbs \left[ \frac{1}{t}  \Big\vert  V_t(B) \bigcap {\cal N}_{\delta,t}^\h
+\Big\vert 
+\right]
+%%%%%%%%
+%\longrightarrow 0,
+%%%%%%%%
+=\cO \lef( (\n \b^2)^{-1/6}\ri),
+\end{equation}
+\begin{equation}
+\label{eq:r2to1-5}
+\limsup_{t\to\8}\P \gibbs \left[ \frac{1}{t}  \Big\vert  
+V_t(B)^\complement   \bigcap 
+{\cal P}_{\delta,t}^\h
+  \Big\vert  
+  %   \bigcap V_t(B)^\complement 
+\right]
+%%%%%%%%
+%\longrightarrow 0,
+%%%%%%%%
+=\cO \lef( (\n \b^2)^{-1/6}\ri).
+\end{equation}
+\end{corollary}
+%%%%%%%%%%%%%%%
+Recall that $\vert \cdot \vert$ denotes the Lebesgue measure on $\R_+ \times \R^d$, and  note that 
+$ \vert  {\cal N}_{\delta,t}^\h  \vert =  \vert  V_t(B)^\complement  \vert = \8$.
+
+The limits (\ref{eq:r2to1-3}),  (\ref{eq:r2to1-4}),  (\ref{eq:r2to1-5}), bring %some geometric measure theoretic 
+information on how is the corridor around the favourite path where the measure concentrates for large $\nu \b^2$.
+We depict the main features  for large $\nu \b^2$:
+%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+ most (in Lebesgue measure) time-space  locations become negligible or predominant, 
+\item most  (in Lebesgue and Gibbs measures)  negligible  locations are outside the tube around the polymer path, 
+\item
+ most  (in Lebesgue and Gibbs measures)  predominant  locations are inside the tube around the polymer path.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%
+The trace $ \big\{x \in \R^d: \gibbs(\chi_{s,x}) \geq 1-\delta\big\}$ at time $t$ of the $(\delta,t)$-predominant set is reminiscent of the $\epsilon$-atoms discovered  in \cite{VargasAtoms07}, with $\epsilon=1-\delta$, and discussed in \cite{BatesChatterjee}. These references study 
+the time and space discrete setting, and restrict to the end point of the polymer.
+
+ %%%%
+\begin{proof}
+It suffices to prove, for all $\delta \in (0,1/2]$,
+\begin{eqnarray}
+\label{eq:2to1-3}
+\frac{1}{tr^d}  \Big\vert  \Big\{(s\!,\!x)\! \in \![0,t]\!\times \!\rd: \gibbs(\chi_{s,x})\! \in \![\delta, 1\!-\!\delta]\Big\} \Big\vert  &\!\leq\!&
+\frac{1}{\delta (1\!-\!\delta)} \!
+{\gibbs}^{\otimes 2} \Big(1\!-\! R_t\Big)\\
+ \label{eq:2to1-4}
+\gibbs \left[ \frac{1}{tr^d}  \Big\vert  V_t(B) \bigcap \Big\{(s,x) : \gibbs(\chi_{s,x}) \leq \delta\Big\} 
+\Big\vert  
+\right]  &\!\leq\!&
+\frac{1}{1-\delta} \;
+ {\gibbs}^{\otimes 2} \Big(1- R_t\Big)\\
+\label{eq:2to1-5}
+\gibbs \left[ \frac{1}{tr^d}  \Big\vert  
+V_t(B)^\complement   \bigcap 
+ \Big\{(s,x) : \gibbs(\chi_{s,x}) \geq 1-\delta\Big\} 
+  \Big\vert  
+  %   \bigcap V_t(B)^\complement 
+\right] &\!\leq\!&
+\frac{1}{1-\delta} \;
+ {\gibbs}^{\otimes 2} \Big(1- R_t\Big).
+\end{eqnarray}
+Note that
+$$
+u(1-u) \geq (1-\delta)u {\mathbf 1}_{u < \delta} + 
+\delta (1-\delta) {\mathbf 1}_{u \in[\delta,1-\delta]} +(1-\delta)(1-u) {\mathbf 1}_{u > 1-\delta} .
+$$
+Setting $A_s=\{x : \gibbs(\chi_{s,x} )\in [\delta, 1-\delta]\}$ and writing
+\begin{eqnarray*}
+{\gibbs}^{\otimes 2} (1- R_t) &=& \frac{1}{tr^d} \int_0^t \int_{\rd} \left[ {\gibbs}( \chi_{s,x})- {\gibbs}( \chi_{s,x})^2\right] dx ds \\
+&\geq &  \frac{1}{tr^d} \int_0^t \int_{A_s} \left[ {\gibbs}( \chi_{s,x})- {\gibbs}( \chi_{s,x})^2\right] dx ds \\
+&\geq & 
+\delta (1-\delta) 
+\frac{1}{tr^d} \int_0^t \left| \{x : {\gibbs}(\chi_{s,x}) \in [\delta, 1-\delta]\} \right|
+ ds, 
+\end{eqnarray*}
+which yields (\ref{eq:2to1-3}). For the next one, we write
+\begin{eqnarray*}
+{\gibbs}^{\otimes 2} (1- R_t) &=& \frac{1}{tr^d} \int_0^t \int_{\rd} \left[ {\gibbs}( \chi_{s,x})- {\gibbs}( \chi_{s,x})^2\right] dx ds \\
+&\geq& (1-\delta) \frac{1}{tr^d} \int_0^t \int_{\rd}  {\gibbs}( \chi_{s,x})  {\mathbf 1}_{
+ {\gibbs} \chi_{s,x})  < \delta} ds dx\\
+ &=& (1-\delta) {\gibbs} \left[ \frac{1}{tr^d} \int_0^t \int_{\rd}   {\mathbf 1}_{
+{\gibbs}( \chi_{s,x})  < \delta, B_s \in U(x)}   \right] ds dx,
+\end{eqnarray*}
+which is (\ref{eq:2to1-4}). The last claim can be proved similarly.
+\end{proof} 
+ %%%%%%%%%%
+ 
+ 
+
+%%Notations and conventions: we will use the same symbols $P, \P, \dots$ to denote probability measures and mathematical expectations; e.g., $P[X]$ is the $P$-expectation of the r.v.(random variable) $X$.  
+%%
+%%\section{Polymer model}
+%%
+%%It is defined as a Brownian motion in a random potential. 
+%%\medskip
+%%
+%%
+%%
+%%%%%%%%%%  SF
+%%%
+%%%The model we consider all through these notes is easy to define as 
+%%%a random walk in a random potential. 
+%%%\subsection{Random walk in random environment: a model for directed polymers} \label{sec:model}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%%First fix a few notations.
+%%%
+%%
+%%$\bullet$ {\it The free measure :}   
+%%$(B=\{ B_t\}_{t \geq 0}, P_x)$ is a Brownian motion on 
+%%the $d$-dimensional Euclidean space $\rd$ starting from $x \in \rd$.
+%%%Precisely, the random sequence $S$ is defined on the probability space $\Om_{\rm traj}=(\Z^d)^{\N}$ with the 
+%%%cylindric $\sigma$-field $\cF$ and a probability 
+%%%measure $P_x$ such that, under $P_x$, the jumps $S_1-S_0, \ldots, S_n-S_{n-1}$ are independent with
+%%%$$
+%%%P_x\{ S_0=x\}=1, \; \; \; 
+%%%P_x\{ S_n\!-\!S_{n-1}=\pm e_j\}=(2d)^{-1},\; \; \; 
+%%%j=1,2,\ldots, d, 
+%%%$$
+%%%where $e_j =(\del_{kj})^d_{k=1}$ is the $j$-th vector of the
+%%%canonical basis of $\zd$. 
+%%%In the sequel, 
+%%%$P_x[X]$ 
+%%%denotes the $P_x$-expectation of a r.v.(random variable) 
+%%%$X$, % on $(\Omega, \cF, P_x)$,
+%%%and  $P_0$ will be simply written by $P$.
+%%We will use short notation  $P_0=P$.
+%%
+%%$\bullet$ {\it The random environment:}  
+%%$\om = \sum_i \delta_{(T_i,X_i)}$ is a Poisson Point Process (PPP) on $\R_+ \times \rd$ with intensity measure $\nu dt dx$.
+%%%%%%%%%%
+%%
+%%
+%%From these two basic ingredients we define the object we consider in the notes. Fix $r>0$, and let $U(x)$ denote Euclidean (closed) ball in $\rd$ with radius $\gamma_d^{-1/d} r$,
+%%$$
+%%U(x)= {\mathrm B}  (x , \gamma_d^{-1/d} r).
+%%$$ with $\gamma_d$ the volume of the unit ball, so $U(x)$ has volume $r^d$.  Tube around path $B$ (or Sausage): 
+%%\begin{equation}
+%%V_t(B)= \left\{ (s,x): s \in (0,t], x \in U(B_s)\right\}
+%%\end{equation}
+%%has indicator function
+%% \begin{equation} \label{def:chitx}
+%%\chi_{s,x}= {\mathbf 1} \{x \in U(B_s) \} = {\mathbf 1} \{|x-B_s| \leq r\}
+%%\end{equation}
+%%meaning that the path $B$ feels the point $(s,x)$. Notations:
+%%\begin{equation}
+%%\nn
+%%\om_t=\om_{|(0,t]\times \rd} \;, \qquad \om (V_t) = \int_{(0,t] \times \rd} \chi_{s,x} \, \om(ds,dx)
+%%\end{equation}
+%%is the number of Poisson points seen by the path $B$ up to time $t$; for a fixed path $B$ this quantity $\om (V_t) $ 
+%%is a Poisson variable with mean $\nu t r^d$.
+%%
+%%
+%%$\bullet$ {\it The polymer measure:} Fix a realization $\om$ of the PPP, and a time horizon
+%%$t>0$. Define the probability measure $\gibbs$ on the path space 
+%%${\cC}(\R_+; \rd)$ equipped with its Borel field by  
+%%\begin{equation} \label{mnen}
+%%%%%\m_n (d\w )=P[\z_n: d\w]/P[\z_n],
+%%d \gibbs =\frac{1}{Z_{t}(\om,\b)}
+%%\exp \{\beta \om(V_t)\} \;dP,
+%%\end{equation}
+%%where $\b \in \R$ is a parameter (the inverse temperature), where 
+%%\begin{equation} \label{Zt}
+%%Z_t=Z_{t}(\om,\b)
+%%=P\lef[\exp \lef(\b \om(V_t)
+%%\rig) \rig]
+%%\end{equation}
+%%is the normalizing constant to make $\gibbs$ a probability measure on the path space.
+%%%
+%%
+%% The model has been introduced by Nobuo Yoshida as a polymer model, and first appeared in \cite{CY05} in the literature.  For $\b >0$ the path is attracted by the Poisson points, and repelled otherwise. The Poisson environment represents randomly dispatched impurities. 
+%%For negative $\b$ the model relates to Brownian motion in Poissonian obstacles
+%%\cite{donskervaradhan-wienersaus, Sznitman} which can be traced back to works of Smoluchowski \cite{Smoluchowski}. Here we consider  a directed version, in contrast to crossings \cite{Wuthrich1, Wuthrich2, Wuthrich-geodesics, Wuthrich-bornes} where the path is stretched ballistically.
+%%Our model with $\b \to +\8$ is related to Euclidean first passage percolation \cite{HowardNewman97, Howard00} with exponent $\alpha=2$ therein.
+%%Also, it cinsists in the field of quenched mean population densities as branching Brownian motion in random medium \cite{Shiozawa-clt, Shiozawa-loc}. 
+%%
+%%\section{Quenched free energy}
+%%
+%%\begin{theorem} \label{th:freeenergy}
+%%The free energy 
+%%$$ p(\b, \nu) =  \lim_{t \to \8} \frac{1}{t} \ln Z_t 
+%%$$
+%%exists a.s. and in $L^p$-norm for all $p \geq 1$, and is deterministic,
+%%$$
+%% p(\b, \nu) = \sup_{t >0}  \frac{1}{t}\P[\ln Z_t]\;.
+%%$$
+%%\end{theorem}
+%%%%
+%%$\Box$ Let $\theta_{t,x}$ the space-time shift operator on the environment space, 
+%%$\theta_{t,x} (\sum_i \delta_{(T_i,X_i)})= \sum_i \delta_{(T_i-t,X_i-x)}$. By Markov property of the Brownian motion,  we have
+%%\begin{eqnarray} \nn
+%%{Z_{t+s}} &=& P\left[ e^{\b \om(V_t)} e^{\b \om(V_{t+s} \setminus V_t)} \right] \\ \nn
+%%&=& P\left[ e^{\b \om(V_t)} P\left[ e^{\b \om(V_{t+s} \setminus V_t)} \big \vert B_t\right] \right] \\ \nn
+%%&=& P\left[ e^{\b \om(V_t)}  Z_s \circ \theta_{t,B_t}
+%%\right] \\ \label{eq:Markov}
+%%&=& {Z_t} \times \gibbs[ Z_s \circ \theta_{t,B_t}] \;,
+%%\end{eqnarray}
+%%a remarkable identity expressing the Markov structure of the model.
+%%Let $u(t)= \P[ \ln Z_t]$, and ${\cG_t}= \sigma( \om_t)$ the $\sigma$-field generated by the environment up to time $t$. By the independence property of PPP, $\om_{|]s,t]}$ is independent of $\cG_s$ for all $0\leq s \leq t$.  Then, denoting by $\P^{\cG_t}$ the conditional expectation and  conditional
+%%probability given $\cG_t$, we have 
+%%%using independence  properties of the Poisson process,
+%%\begin{eqnarray*}
+%%u(t+s) &=& \P[  \ln \frac{Z_{t+s}}{Z_t} ]+ \P \ln Z_t \\
+%%&=&  \P \P^{\cG_t} [ \ln \gibbs[ Z_s \circ \theta_{t,B_t)}] ]+u(t)
+%%\\
+%%%&\stackrel{\rm Jensen}{\geq} 
+%%&\geq &  \P [ \ln  \P^{\cG_t} \gibbs[ Z_s \circ \theta_{t,B_t)}] ]+u(t)  \qquad \rm{(conditional\; Jensen\; ineq.)}\\
+%%&=&  \P [ \ln   \gibbs[ \P^{\cG_t}[Z_s \circ \theta_{t,B_t)}] ]]+u(t)\\
+%%&=&  \P [ \ln   \gibbs[ \P[Z_s \circ \theta_{t,B_t)}] ]]+u(t) \\
+%%&=& \P [ \ln   \gibbs[ \P[Z_s] ]]+u(t) \\
+%%&=&  \ln   \P[Z_s] +u(t) \\
+%%&=& u(s)+u(t)\;.
+%%\end{eqnarray*}
+%%Hence the function $u(t)$ is superadditive. By the superadditive lemma, we get the existence of the limit
+%%\begin{equation}
+%%\nn
+%%\lim_{ t \to \8} \frac{u(t)}{t} = \sup_{t >0} \frac{u(t)}{t} \;.
+%%\end{equation}
+%%Now, anticipating the concentration inequality \eqref{eq:concentrationlogZt} and the continuous time bridging
+%%\eqref{eq:OrderOfCenteredlogZt},
+%%% cor 5.1.3
+%%we easily derive that 
+%%\begin{equation}
+%%\nn
+%%\frac{1}{t} \big( \ln Z_t- \P[\ln Z_t]\big) \longrightarrow 0
+%%\end{equation}
+%%almost surely and in $L^p$ for all $p\geq 1$ finite.  \qed
+%%%%
+%%\subsection{Annealed free energy and hierarchy of moments}
+%%
+%%We first recall two important formulas. 
+%%\begin{itemize}
+%%\item 
+%%The Poisson formula for exponential moments (theorem 3.9 in \cite{LastPenrose}) writes
+%%\begin{equation} \label{eq:PoissonExpMoment}
+%%\P\left[ e^{\int h(s,x) \om_t(ds dx)}\right] = \exp \int_{]0,t]\times \rd} \nu ds dx \left( e^{h(s,x)}-1 \right)   \;.
+%%\end{equation}
+%%\item The linearization formula for Bernoulli writes
+%%\begin{equation}\label{eq:linBer}
+%%e^{\b {\bf 1}_A}-1 = (e^\b-1) {\bf 1}_A =  \lambda(\b) {\bf 1}_A
+%%\;
+%%\end{equation}
+%%introducing the notation 
+%%$$
+%%\lambda(\b)= e^\b-1 
+%%$$
+%%that we use all through.
+%%%\noindent
+%%\end{itemize}
+%%We compute the expectation of the partition function,
+%%\begin{eqnarray}
+%%\P[ Z_t] &=&  P \P\left[ e^{\b \int \chi_{s,x} \om_t(ds,dx)} \right] \nn \qquad \qquad \qquad \qquad
+%%{\rm (Fubini)} \\&=&
+%%P \exp \int_{]0,t]\times \rd} \left( e^{\b \int \chi_{s,x}}-1 \right) \nu ds dx \nn \qquad 
+%%({\rm by\; }\eqref{eq:PoissonExpMoment}) \\
+%%&=&P \left[  \exp \la(\b)  \int_{]0,t]\times \rd}  \chi_{s,x}  \nu ds dx \right] \nn  \qquad  \qquad 
+%%({\rm by\; }\eqref{eq:linBer})  \\&= &\label{eq:annealed}
+%% \exp\{ t \nu \la r^d\} \;.
+%%\end{eqnarray}
+%%%%%%
+%%Hence $\P[ Z_t]$ grows in time at exponential rate  $p^{(1)}(\b, \nu)= \nu \lambda(\b)r^d$. More generally, it is natural to consider the rate of growth of the $s$-th moment 
+%%of the partition function,
+%%$$
+%%p^{(s)}(\b, \nu)= \lim_{t \to \8} \frac{1}{st} \ln \P[ Z_t^s]\,,\quad s >0.
+%%$$
+%%By H\"older inequality, $\|Z\|_r \leq \|Z\|_s$ for $r \leq s$, these rates are non-decreasing in $s$, and for integer values, they can be expressed by handy variational formulas
+%%using large deviation theory. By Jensen's inequality, we have for all $t$
+%%\begin{equation} \label{eq: annealedbound}
+%%\frac{1}{t}\P[\ln Z_t] \leq   \frac{1}{t} \;\ln \P[ Z_t] = p^{(1)}(\nu,\b)\;,
+%%\end{equation}
+%%yielding the so-called {\em annealed bound} : $ p(\b, \nu) \leq  p^{(1)}(\nu,\b)$.  Thus we have a chain of inequalities
+%%\begin{equation}
+%%\nn
+%%  p(\b, \nu) \leq  p^{(1)}(\b, \nu) \leq \ldots \leq  p^{(k)}(\b, \nu) \leq  p^{(k+1)}(\b, \nu) \leq \ldots . 
+%%\end{equation}
+%%It is expected [PROVED ???] that in a large class of models, the first inequalities in the above chain are equalities, while they become strict from
+%%$k^*= \inf \{k \geq 0: p^{(k)}(\b, \nu) <  p^{(k+1)}(\b, \nu)$ (convention $p^{(0)}=p$). Considering the sequence of rates $(p^{(k)}; k \geq 1)$ is
+%%classical approach to intermittency \cite{CarmonaMolchanov, Zeldovich}. sect. 2.4 of \cite{BertiniCancrini95}, 
+%%\cite{Analysis of Stochastic Partial Differential Equations, Koshnevisan,
+%%AMS 2014}.
+%% In the directed case, we focus at $k=0,1$ only. 
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\begin{proposition} \label{prop:p}
+%%%$\phantom{}$
+%%Basic properties of the free energy:
+%%\begin{enumerate}
+%%\item \label{eq:p1} For $\b \neq 0, \nu >0$, we have
+%%$ \b \nu r^d < p(\b, \nu) \leq \nu \lambda(\b)r^d$.
+%%\item \label{eq:p2}
+%%$ \b \to p(\b, \nu)$ is convex.
+%%\item \label{eq:p3} The excess free energy 
+%%\begin{equation}
+%%\label{def:excessfreeenergy}   
+%% \psi(\b,\nu)=\nu \lambda(\b)r^d- p(\b, \nu)
+%%\end{equation}
+%%is non-decreasing in $|\b|$ and in $\nu$. It is jointly continuous. 
+%%\end{enumerate}
+%%\end{proposition}
+%%%%%%
+%%\noindent
+%%$\Box$ The second inequality in item \ref{eq:p1} is the annealed bound. The first one follows from an inifinite-dimensional version of Jensen's
+%%inequality; this version being curiously overlooked in the literature, we recall the full statement:
+%%%%%%
+%%\begin{lemma}[Lemma A.1 in \cite{RASaihp11}]\label{lem:RAS-J}
+%%Let $g$ be a bounded measurable function on a product space ${\cal X} \times  {\cal Y}$, $\mu$ a probability measure on $\cal X$ and $\rho$ a probability measure on $\cal Y$. Then
+%%$$
+%%\ln \int_{\cal X} e^{\int_{\cal Y}  g(x,y) d\rho (y) } d \mu(x) \leq \int_{\cal Y}  \left[ \ln \int_{\cal X}  e^{g(x,y)} d\mu (x) \right] d \rho(y) .
+%%$$
+%%\end{lemma}
+%%We apply it with $\rho=\P, \mu=P, g(x,y)=\b \om(V_t)$ to get the desired bound\footnote{We explain why the Lemma is an infinite-dimensional version of Jensen's inequality:  
+%%the functional $\psi(f)= \ln \int_{\cal X} e^{f(x)} d\mu(x)$ is convex, and the function $f(\cdot)=g(\cdot, y)$ is randomly chosen with $\rho(dy)$.}.
+%%However this bound is not so great, since the simple one $p(\b,\nu) \geq t^{-1} \P[ \ln Z_t]$ for a fixed $t$ is not linear, but strictly convex in $\b$.
+%%%
+%%%
+%%%$$
+%%%P\left[\exp (\b \om(V_t)) \right] \geq \exp \left(\b P[\om(V_t)]\right) 
+%%%$$
+%%%with strict inequality if $\b \nu \neq 0$, and in that case,
+%%%$$
+%%% p(\b, \nu) \geq \frac{1}{t}\P[\ln Z_t]  > \frac{\b}{t} \P  P[\om(V_t)]= \b \nu r^d.
+%%%$$   
+%%Item \ref{eq:p2} is the standard convexity of free energy, 
+%%$$
+%%\frac{\partial^2}{\partial \b^2} \ln Z_t = {\rm Var}_{\gibbs} \big( \om(V_t)) \big) > 0\;,
+%%$$
+%%where ${\rm Var}_{\gibbs}$ denotes the variance under the polymer measure in a fixed environment $\om$.
+%%
+%%We now turn towards item \ref{eq:p3}, in the case $\b \geq 0$ (the other case being similar). We use specific properties of the medium, infinite divisibility: 
+%%for $\nu, \D>0$, we note that the superposition 
+%%$\om+\hat \om$ of two independent PPP with intensities $\nu$ and $\D$ is  a PPP with intensity $\nu+\D$. Writing $\P$ the expectation 
+%%over both variables ${\om,\hat \om}$, we compute by conditioning
+%%%$\P_\om$ for integration over $\om$  alone and $\P_{\om,\hat \om}$ for integration over both variables, we have
+%%\begin{eqnarray} \nn
+%%\P \ln Z_t(\om) & \stackrel{\b \geq 0}{\leq} & 
+%%\P \ln Z_t(\om + \hat \om) \\ &=& \P \P\left[ \ln Z_t(\om + \hat \om) \vert \om\right] \nn \\
+%%&\stackrel{\rm Jensen}{\leq} & \P \ln \P\left[ Z_t(\om + \hat \om)  \vert \om\right] \nn \\
+%%&=& \P \ln Z_t (\om) + t \D  \lambda(\b) r^d. \nn
+%%\end{eqnarray}
+%%This proves  monotonicity of $\psi$  in $\nu$. This proves  at the same time  continuity in $\nu$ (locally uniformly in $\b$) and the joint continuity in $(\b, \nu)$.
+%%[FAUT-IL a ce stade DONNER la formule de densite du PPP($\nu$) par rapport a PPP(1) pour faire la preuve ???]
+%%
+%%The plain identity $\P [Yf(Y)]= \theta \P[f(Y+1)]$ for a r.v. $Y$ distributed as a Poisson law with mean $\theta$ has a counterpart for PPP,
+%%an integration by parts formula known as Slivnyak-Mecke formula (e.g., p.50 in \cite{KendallStoyanMecke} or th.~4.1~in \cite{LastPenrose}):  Let $\cM$ be the space of point measures on $(0,t] \times \rd$ and $h: 
+%%\R_+ \times \rd \times {\cM} \to \R_+$ measurable, then
+%%\begin{equation}
+%%\label{eq:IPP}
+%%\P \left[ \int h(s,x; \om_t) \om_t(ds,dx) \right]= \int_{(0,t]\times \rd}  \P\big[ h(s,x; \om_t + \delta_{s,x}) \big]\; \nu ds dx  \;.
+%%\end{equation}
+%%With this in hand, we can show monotonicity of $\psi$ in $\b$: 
+%%\begin{eqnarray} 
+%%\frac{\partial }{\partial \b} \P \big[ \ln Z_t \big]
+%% \nn &=& \P \gibbs [\om(V_t)]   \\
+%% \nn &=& \P \int \om_t(ds dx)  \frac{ P\left[ \chi_{s,x} e^{\b \om(V_t)} \right]}{Z_t}\\
+%%\nn &\stackrel{\eqref{eq:IPP}}{=}& \P \int_{(0,t]\times \rd} \nu ds dx  \frac{ P\left[ \chi_{s,x} e^{\b (\om(V_t)+\delta_{s,x})} \right]}{P\left[ 
+%%e^{\b (\om(V_t)+\delta_{s,s})} \right]}  \\
+%%\nn &\stackrel{\eqref{eq:linBer}}{=}& \P \int_{(0,t]\times \rd} \nu ds dx  \frac{ P\left[ e^\b \chi_{s,x} e^{\b \om(V_t)} \right]}{P\left[ \big(\lambda(\b)\chi_{s,x}
+%%+1\big) e^{\b \om(V_t)} \right]} \\
+%%\label{eq:meanenergy} 
+%%&{=}& \P \int_{(0,t]\times \rd} \nu ds dx  \frac{ e^\b \gibbs[\chi_{s,x}]}{1+ \lambda(\b) \gibbs[\chi_{s,x}]} \;.
+%%\end{eqnarray}
+%%Define 
+%%\begin{equation}
+%%\label{def:psit}
+%%\psi_t(\b,\nu) = t^{-1} \P \left[ \nu \lambda r^d -\ln Z_t \right] .
+%%\end{equation}
+%%With the identity
+%%$$ \frac{\partial }{\partial \b} \nu \lambda(\b)r^dt = \nu e^{\b} r^d t =  e^{\b} \int_{(0,t]\times \rd} \nu ds dx \gibbs[ \chi_{s,x}]$$
+%%we obtain
+%%\begin{equation}
+%%\label{eq:psi'}
+%%\frac{\partial }{\partial \b}  \psi_t(\b,\nu) = \frac{1}{t}e^\b \lambda(\b) \nu 
+%% \int_{(0,t]\times \rd}  ds dx \; \P \frac{ \gibbs[  \chi_{s,x}]^2}{1+ \lambda(\b) \gibbs[\chi_{s,x}]} \;,
+%% \end{equation}
+%%which has the sign of $\b$. So the limit $\psi$ of $\psi_t$ in increasing in $|\b |$. \qed
+%%A consequence of  monotonicity and continuity of $\psi$ in $|\b|$ in Proposition \ref{prop:p} is the existence and uniqueness of $\b_c^\pm$ defined below.
+%%\begin{definition}
+%%The critical (inverse) temperatures $\b_c^+(\nu), \b_c^-(\nu)$ at density $\nu$ are such that
+%%\begin{equation} \label{eq:highlow}
+%%\left\{ 
+%%\begin{array}{ccc}
+%%\psi(\b,\nu)=0  & {\rm if}  & \b \in [\b_c^-,\b_c^+]  \\
+%%\psi(\b,\nu)>0  & {\rm if}  & \b < \b_c^- \; {\rm or} \; \b > \b_c^+.  
+%%\end{array}
+%%\right.
+%%\end{equation}
+%%%We have $-\8 \leq \b_c^- \leq 0 \leq \b_c^+ \leq + \8$, and $|\b_c^\pm(\nu)|$ is non-increasing in $\nu$.
+%%%The domains in the $(\b,\nu)$-half-plane defined by the first and second line in \eqref{eq:highlow} are called {\rm high and low temperature region}
+%%%respectively.
+%%\end{definition}
+%%We have $-\8 \leq \b_c^- \leq 0 \leq \b_c^+ \leq + \8$, and $|\b_c^\pm(\nu)|$ is non-increasing in $\nu$.
+%%The domains in the $(\b,\nu)$-half-plane defined by the first and second line in \eqref{eq:highlow} are called {\em high and low temperature region}
+%%respectively. The boundary between the two regions is called the {\em critical line}, and a {\em phase transition} in the statistical mechanics sense occurs:
+%%the quenched free energy $p(\b,\nu)$ is equal to the annealed free energy $p^{(1)}(\b,\nu)=\nu \lambda r^d$ 
+%%-- an analytic function -- but analyticity of  $p(\b,\nu)$ breaks down when crossing the critical line.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%% We start with an informal description of  a specific example. 
+%%%Consider a hydrophilic polymer chain (i.e., a long chain of monomers)  wafting in water. 
+%%%Due to the thermal fluctuation, the shape of the polymer should be 
+%%%understood as a random object. 
+%%%We now suppose that the water contains randomly placed hydrophobic 
+%%%molecules as impurities, which repel the 
+%%%hydrophilic monomers which the polymer consists of. 
+%%%The question we address here is:
+%%%\begin{equation*} 
+%%%\mbox{How does the impurities affect the global shape of the polymer chain?}
+%%%\end{equation*}
+%%%We try to answer this question in a mathematical framework.  
+%%%However, as is everywhere else in mathematical physics, 
+%%%it is very difficult to do so without compromising 
+%%%with a rather simplified picture of the initial problem. 
+%%%Here, our simplification goes as follows. 
+%%%We first suppress entanglement, self-intersections  
+%%%and U-turns of the polymer; we shall represent the polymer 
+%%%chain as a graph $\{(j,x_j)\}^n_{j=1}$ in $\N \times \zd $, 
+%%%so that the polymer is supposed to live in 
+%%%$(1+d)$-dimensional discrete lattice 
+%%%and to stretch in the direction of the first coordinate. Such a model is 
+%%%called {\it directed}.
+%%%Each point $(j,x_j) \in \N \times \zd $ on the graph 
+%%%stands for the position of $j$-th monomer in this picture. Secondly, 
+%%%we assume that, the transversal motion 
+%%%$\bx= \{x_j\}^n_{j=1}$ performs a simple random walk in $\zd$, if the 
+%%%impurities are absent. This accounts for consecutive monomers in the chain taking all possible configurations at a fixed distance one from another. 
+%%%We then define the energy of the 
+%%%path $\{(j,x_j)\}^n_{j=1}$ by 
+%%%the formula (\ref{Ham}) at some (inverse) temperature 
+%%% $\b>0$, where
+%%% $\{\omega (n,x) : n \geq 1,\; x \in \zd  \}$ is a field of real 
+%%%i.i.d.~random variables, with $\omega (n,x)$ describing the presence (or 
+%%%strength) of an impurity  
+%%%at site $(n,x)$. The case of an emulsion announced in the title is well captured by an i.i.d.~model. 
+%%%Every time the path steps on an impurity it gets a penalty, and every step on a water molecule brings 
+%%%a reward.
+%%%The typical shape $\{(j,x_j)\}^n_{j=1}$ of the polymer 
+%%%is then given by the one that maximizes the energy (\ref{Ham}).
+%%% Let us suppose for example that 
+%%%$\omega (n,x)$ takes two different values $+1$ (``presence of a water molecule 
+%%%at $(n,x)$'') and $-1$ (``presence of the hydrophobic impurity 
+%%%at $(n,x)$''). 
+%%%Then, the energy of the polymer is decreased by 
+%%%$\b$ each time a monomer is in contact with the impurity ($\omega (j,x_j)=-1$).
+%%%Therefore, the typical shape of the polymer for each given 
+%%%configuration of $\{ \omega (j, x)\}$ is given by the one 
+%%%which tries to avoid the impurities as much as possible. 
+%%%%%%%%%%%%
+%%%\medskip
+%%%
+%%%{\bf What are the main questions ?} 
+%%%We want to study large systems, that is, asymptotics when the length of the polymer chain goes to infinity,  for typical realizations of $\om$.  
+%%%\medskip
+%%%
+%%%%%
+%%%
+%%%Mechanically, the elasticity of the polymer competes with the energy of very favorable, but distant, pinning sites that would require a costly distortion of the polymer.
+%%%From this competition we can guess two possible scenarios:
+%%%
+%%%
+%%%\begin{itemize}
+%%%\item[]
+%%%(i) If the space dimension is large 
+%%%and the temperature is high, the impurities 
+%%%should not affect the global shape of the polymer. This is because the polymer has much space 
+%%%to avoid the impurities by the first assumption and the impurities are weak enough by the second one. It has no interest in travellling far, it only wants to pick a specific proportion (a little bigger than the density) of rewards, using a local strategy.
+%%%\item[]
+%%%(ii)
+%%%If the dimension is small or the environment is strong, then the polymer will not be able any more to avoid the impurities if it stays at reasonable distances. The path will have an advantage in travelling far in order to find more favourable areas. 
+%%%These atypical areas in the medium correspond to a higher density of rewards, and a precise geometry making them feasible for the walk. Then, the global shape of the polymer path 
+%%%changes in a drastic manner. 
+%%%\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%The informal description given above has been put into a mathematical framework by the 
+%%%formalism of a Gibbs measure, in the framework of statistical mechanics. For a more substancial overview of polymer models, see the first chapter of 
+%%%\cite{dHollanderStFl}. \index{modelization} \index{polymer model}
+%%%%%%%%%%%
+%%%\subsection{Polymers viewed as percolation at a positive temperature} \index{last passage  percolation} \index{percolation}
+%%%\index{zero temperature} \index{ground states}
+%%%
+%%%For a fixed $n$, we can take the zero-temperature limits: as $\b \to \8$, 
+%%%\begin{equation} \label{eq:0temp} \left\{
+%%%\begin{array}{ccc}
+%%%\b^{-1} \ln  Z_{n}(\om,\b) &  \longrightarrow &   \max_\bx  H_n(\bx) , \\
+%%%\gibbs (\cdot)   & {\rm concentrates \ on}   & \; \arg \max_\bx   H_n(\bx) .
+%%%\end{array}
+%%%\right.
+%%%\end{equation}
+%%%The right-hand sides of \eqref{eq:0temp} are respectively the passage time %ground state energy
+%%%and the set of geodesics of a last passage  percolation problem. Such quantities have  been extensively studied \cite{KestenStFlour, Durrett84, Newmantopics},
+%%%and the last section of \cite{AuffDamronHanson50} for a recent account. Percolation here is oriented, site percolation.
+%%%Thus, the polymer measure is an 
+%%%interpolation between simple random walk (corresponding to $\b=0$) and  geodesics in last passage percolation (limit as $\b \to \8$). In particular it 
+%%%can be viewed as a "fuzzy" geodesics, and it allows to study percolation by decreasing continuously 
+%%%the temperature, performing a perturbative approach starting
+%%%from the (well-known) random walk model. Having the parameter $\b$ at hand will reveal most useful. \index{perturbative}
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Fin CSYre
+%%%
+%%%\subsection{Exponents and localization} \index{characteristic exponents} \index{volume exponent} \index{wandering exponent} \index{roughness exponent}
+%%%
+%%%To quantify how the fluctuations are influenced by the disorder, two {\bf characteristic exponents}, 
+%%%$\chi^\parallel \in [0,1/2]$ and $  \chi^\perp \in [1/2,1],$ are introduced: loosely speaking, 
+%%%they are defined by
+%%%\begin{equation} \label{def:exponents}
+%%%P_n^{\b,\om} \left[ |S_n|^2 \right] \approx n^{2 \chi^\perp}\;,\quad {\rm Var}\big(\ln Z_n(\om,\b)\big) \approx n^{2\chi^\parallel } \;.
+%%%\end{equation}
+%%%The volume exponent $\chi^\parallel$ characterizes the fluctuations of thermodynamic quantities, though 
+%%%the wandering exponent (or roughness exponent) characterizes the transverse fluctuations of the path. 
+%%%It is expected, and partially confirmed (see \cite{AuffingerDamron13} adapting ideas  for last passage percolation summarized in \cite{Chatterjee-scaling}) 
+%%%that the exponents are related via
+%%%\begin{equation} \label{eq:exponentsrelated}
+%%%\chi^\parallel = 2 \chi^\perp -1 \;.
+%%%\end{equation}
+%%%The scenario (i) in Section \ref{subsec:emulsion} above corresponds to diffusive behavior $\chi^\perp=1/2$, though case (ii)  
+%%%has $\chi^\perp > 1/2$ (superdiffusivity). \index{superdiffusivity}
+%%%In scenario (ii) these exponents are expected to be universal, i.e., not depending on the details of the model but only on the dimension, with 
+%%%$\chi^\parallel =1/3,  \chi^\perp=2/3$ for $d=1$. 
+%%%\medskip
+%%%
+%%%Another feature of scenario (ii) is {\bf localization}: the polymer has a large probability to lie in a favourable
+%%%regions with high density of rewards and feasible for the path: we call them corridors, and this phenomenon is called path localization. It will be sudied in Chapters~\ref{ch:semimart} in a general framework and~\ref{ch:loggamma} on a specific integrable model, where explicit computations can be performed.
+%%%\medskip
+%%%
+%%%
+%%%The interest of mathematicians for these characteristic exponents, their relation and some inequalities depending on the space dimension, started two decades ago for last passage percolation in the discrete setting~\cite{NewPiza, LiceaNewPiza, Piza} and in the continuous setting~\cite{Wuthrich1, Wuthrich2}; it remains very strong
+%%%with novel contributions \cite{AuffingerDamron-sc, Chatterjee-scaling}. For polymers, see also \cite{Petermann, Mejane, CaHu04, CYkokyuroku, BezerraTindelViens} for various estimates in the general setup. But except for exactly solvable models in $d=1$, they remain most mysterious - particularly for $d \geq 2$ - in spite of many efforts.
+%%%\medskip
+%%%
+%%%
+%%%
+%%%%\medskip
+%%%%
+%%%%{\bf Variations}:
+%%%%
+%%%%The random walk $S$ can be defined on locally general finite graphs. In Section \ref{ch:tree},
+%%%%it will be the simple random walk on a rooted binary tree, or more generaly, on a rooted regular tree. Such models relate to branching processes in inhomogeneous medium. 
+%%%%Similarly, the model can be defined in continuous time and/or space.
+%%%
+%%%\section{Particle in a random potential}
+%%%%
+%%%We relate the Gibbs measure to branching random walks in an inhomogeneous medium.
+%%%
+%%%\subsection{Particle in deadly obstacles} \index{particle in deadly obstacles} \index{branching random walk} \index{Gibbs measure}
+%%%
+%%%\index{obstacles} \index{killing potential}
+%%%In order to give a simple intuition of what is a Gibbs measure, 
+%%%we first discuss here our model in the case when the environment variables
+%%%are uniformly bounded from above. For simplicity, and without loss of generality\footnote{A constant shift for $\omega (t,x)$ has a trivial effect on the objects we consider.},
+%%%we assume in this section that 
+%%%\begin{equation}
+%%%  \label{eq:hypneg}
+%%%  \omega (t,x) \leq 0 \qquad \P-{\rm a.s.}
+%%%\end{equation}
+%%%In this case, we can interpret the model in terms of a walker moving among
+%%%deadly obstacles. The space location $x$ hosts a deadly obstacle which strength
+%%%at time $t$ is $(-\beta \omega (t,x))$. We start with an informal description. A particle starts at the origin at time 0,
+%%%it jumps at integer times and immediately after, it dies or survives.
+%%%It moves according to a simple random walk when alive, but it has a probability
+%%%$\exp \beta \omega (t,x) \in (0,1]$ to survive the obstacle at time $t$ if it is still alive
+%%%at time $t-1$ and has jumped at location $x$ at time $t$, and complementary probability
+%%%$1-\exp \beta \omega (t,x)$ to be killed by the obstacle. The event of dying or 
+%%%surviving at time $t$
+%%%are independent of the past, conditionnally on being alive at time $t-1$
+%%%and on the step at time $t$.
+%%%\medskip
+%%%
+%%%We now give a precise construction of
+%%%this process. Let $P, \P$ as before and let Unif be the uniform law
+%%%on $[0,1]$. We fix a realization $(\omega (t,x); (t,x) \in \N\times \Z^d)$
+%%%from $\P$. On the product space $\Omega_{\rm traj}  \times [0,1]$, we define the product measure
+%%%$Pr=P \otimes {\rm Unif}$, and denote by $U:(\bx,u) \mapsto u$ the second
+%%%coordinate mapping. Let
+%%%$$
+%%%\tau = \inf \big\{ n \geq 1: U > \exp\{\beta H_n^\om(S)\}\big\}
+%%%$$
+%%%be the lifetime of the path $S$. We also add to $\Z^d$ a special state called cemetery point and denoted by $\dagger$. 
+%%%Then, the process defined by
+%%%$$
+%%%X_n= 
+%%%\left\{
+%%%  \begin{array}{ll}
+%%%    S_n & {\rm if} \; n < \tau,\\
+%%%    \dagger & {\rm if} \; n \geq \tau,
+%%%  \end{array} \right.  
+%%%$$
+%%%corresponds to our informal description, and is intimately related to the polymer path.
+%%%\begin{proposition}
+%%%The sequence  $X$ is a (time-inhomogeneous) Markov chain on $\Z^d \cup \{ \dagger\}$. It has $\dagger$ as absorbing state, and its one-step transition probability from $x \in \Z^d$ is given by
+%%%$$
+%%%Pr(  X_{n+1}=y \vert X_{n}=x ) = 
+%%%  (2d)^{-1}  \exp\{\beta \omega (n+1, y)\}\qquad {\rm if}\;  y \in \Z^d,
+%%%$$
+%%%and $$Pr(  X_{n+1}=\dagger \vert X_{n}=x ) =   (2d)^{-1}  \sum_{z \in \Z^d, |z-x|_1=1}
+%%%\big(1-\exp\{\beta \omega (n+1, z)\}\big).$$
+%%%Finally, the partition function of the polymer model  is equal to the survival probability,
+%%%$$
+%%%Pr( \tau > n ) = Z_n (\om,\beta)  ,
+%%%$$
+%%%and the polymer measure with time horizon $n$ is equal to the law 
+%%%of the path of the particle killed in the random potential conditionned to be alive at time $n$,
+%%%\begin{equation} \label{eq:avena2}
+%%%\gibbs ( \bx)=
+%%%Pr(X_{[0,n]}=\bx |  \tau > n ) 
+%%%\;.
+%%%\end{equation}
+%%%\end{proposition}
+%%%%%%%%
+%%%%\begin{figure}[h]
+%%%%\begin{center}
+%%%%\includegraphics[scale=.15]{particle-in-potential.eps}
+%%%%%%%\label{fig:ub} 
+%%%%\caption{A particle in a deadly potential: The state space is $\Z^d \cup
+%%%%\{\dagger\}$, with $d=2$ and $\dagger$ is a cemetery (absorbing) point. Conditionally on being still alive at time $t$ and at location 
+%%%%$x$, it dies out there with probability $q=1-\exp \beta \omega (t,x)$ (recall 
+%%%%that $\omega  \leq 0$), or survives one more time unit at least and 
+%%%%moves to a neigboring site with probability $p=(2d)^{-1}(1-q)$. This description corresponds to a slightly 
+%%%%different potential $\tilde H_n(S)= \sum_{i=0}^{n-1} \omega (i, S_i)$.
+%%%%}
+%%%%\end{center}
+%%%%\end{figure}
+%%%%%%%%%%% 
+%%%\begin{proof}      
+%%%First, we note that, for all $n$ and all path $\bx$ of length $n$,    
+%%%\begin{eqnarray*}
+%%%Pr( \tau > n | S_{[0,n]}=\bx) &=& {\rm Unif}(U \leq \exp\{\beta H_n(\bx)\})\\
+%%%&=&
+%%%\exp\{\beta H_n(\bx)\},
+%%%\end{eqnarray*}
+%%%and that
+%%%\begin{equation}\label{eq:avena}
+%%%Pr( \tau > n,  S_{[0,n]}=\bx) = (2d)^{-n}
+%%%\exp\{\beta H_n(\bx)\},
+%%%\end{equation}•
+%%%and also that
+%%%\begin{eqnarray*}
+%%%Pr( \tau > n ) &=& Pr \big[ Pr( \tau > n | S_{[0,n]})\big]\\&=&
+%%%Z_n (\om,\beta) .
+%%%\end{eqnarray*}
+%%%Therefore, 
+%%%\begin{eqnarray*}
+%%%Pr(X_{[0,n]}=\bx |  \tau > n ) &=& Pr(S_{[0,n]}=\bx |  \tau > n ) \\
+%%%&=&
+%%%\frac{Pr( \tau > n | S_{[0,n]}=\bx) Pr(S_{[0,n]}=\bx)}{Pr(\tau > n )}\\
+%%%&=&
+%%%\gibbs ( \bx),
+%%%\end{eqnarray*}
+%%%which is (\ref{eq:avena2}).
+%%%We finally check that the dynamics of the random sequence $X=(X_n, n\geq 0)$ corresponds to the description at the beginning of the section.  First, $X$ is a Markov chain on $\Z^d \cup \{ \dagger\}$, with $\dagger$ as absorbing state.
+%%%Moreover, for all nearest-neighbor path $\om$ in $\Z^d$ with $\bx_n=x, \bx_{n+1}=y$,
+%%%\begin{eqnarray*}
+%%%Pr\left( \tau \!>\! n\!+\!1,  S_{[0,n\!+\!1]}\!=\!\bx_{[0,n\!+\!1]} \!\!\!\!\!\!\!\!\! \right. &\vert&  \left.\!\!\!\!\!\!\!\!\!\tau > n, S_{[0,n]}\!=\!\bx_{[0,n]} \right)
+%%%\\
+%%%&=&\frac{Pr( \tau > n+1, S_{[0,n+1]}=\bx_{[0,n+1]}) }{Pr(\tau \!>\! n, S_{[0,n]}=\bx_{[0,n]} ) }\\
+%%%&\stackrel{(\ref{eq:avena})}{=}& (2d)^{-1} \exp\{\beta (H_{n+1}(\bx)- H_n(\bx))\}
+%%%\\&=&
+%%% (2d)^{-1}  \exp\{\beta \omega (n+1, y)\}.
+%%%\end{eqnarray*}
+%%%This implies the first two equalities of the proposition. \qed \end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%Except in the degenerate case $\b \omega (t,x)=0$ a.s., the lifetime $\tau$ is a.s. finite. Hence, the asymptotics of
+%%%%the sequence of Gibbs measures $\gibbs $ does not simply reduce to $Pr( X \in \cdot | A)$, because the relevant 
+%%%%$A=\{\tau<\8\}$ has probability zero here.
+%%%%
+%%%%\begin{remark}
+%%%%When the environment variables are uniformly bounded from below.
+%%%%\end{remark}
+%%%
+%%%%
+%%%\subsection{Branching random walk picture} \label{sec:BRWp}
+%%%
+%%%We discuss now the case when the environment takes only nonnengative values.  We can interpret the model in terms of a branching population (without deaths) moving in a
+%%%random potential:
+%%%% 
+%%%% The space location $x$ hosts a resource which allows a mean growth by a factor $\exp\{\beta \omega (t,x)\}$ of the local population. Here is an informal description of the dynamics of this random population.
+%%%%We start with one individual at site $0$ at time 0, which will move and multiply from then on.
+%%%%Each individual in the population jumps independently according to a simple random walk at integer times and immediately after, it branches (i.e., it is replaced by a random number of 
+%%%%children) with mean value given by the above factor $\exp\{\beta \omega (t,x)\}$.
+%%%%
+%%%%Precisely, we first fix a collection $\nu_r$ indexed by $r \geq 1$ 
+%%%%of probability measures on $\N^*$ with mean
+%%%%$\sum_{k\geq 1} k \nu_r(k)=r$, such that the mapping $r \mapsto \nu_r$ is measurable.
+%%%%An individual present in the population at time $t-1$ and location $y$ is replaced at time $t$  by 
+%%%%a random number $k$ at a neighboring site $x \sim y$ with probability  
+%%%%$(2d)^{-1} \nu_{\exp \b \omega (t,x)}(k)$.
+%%%%
+%%%%Then,  the partition function $Z_{\n,\beta}^\omega $ of the polymer model  is equal to the 
+%%%% expected population size at time $n$ in a fixed environment $\omega $. 
+%%%%The polymer measure with time horizon $n$ is equal to the law 
+%%%%of the ancestral path of an individual selected uniformly at random in the full population at time $t$;
+%%%The polymer measure with time horizon $n$ is equal to the law 
+%%%of the ancestral path of an individual selected uniformly at random in the full population at time $t$.
+%%%Moreover, the partition function $Z_{n,\beta}^\omega $ of the polymer model  is equal to the 
+%%%expected population size at time $n$ in a fixed environment $\omega $. 
+%%%
+%%%%by ancestral path we mean the time-reversed of the path obtained by recording the location of the selected individual, the location of her father, 
+%%%%the location of her grand-father, \dots till the location $0$ of her ancestor. 
+%%%%\medskip
+%%%%
+%%%%We finally discuss  the general case without assumptions on the environment. We combine the above two constructions: fix a collection $\nu_r$ indexed by $r \geq 0$ 
+%%%%of probability measures on $\N$ with mean
+%%%%$\sum_{k\geq 0} k \nu_r(k)=r$, and construct a branching population moving like the simple random walk and branching according to these reproduction laws. When the outcome $k$ of the branching step is equal to 0, the individual dies without descendents. The whole population can get extinct.
+%%%% The partition function $Z_{\n,\beta}^\omega $ of the polymer model  is still equal to the 
+%%%% expected population size at time $n$ in a fixed environment $\omega $. 
+%%%%But now, the polymer measure is equal to the law 
+%%%%of the ancestral path of an randomly selected individual  at time $t$ conditionnally on survival
+%%%%of the full population.
+%%%\medskip
+%%%
+%%%The case of general environment is a simple combination of the two above: one can define a branching random walk in random environment such that, conditionally on survival at time $n$,  
+%%%the law 
+%%%of the ancestral path of an individual selected uniformly at random in the full population at that time
+%%%is the polymer measure~\cite{CY11}.
+%%%\medskip
+%%%
+%%%All these representations are in the spirit of Feynman-Kac formula.
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%

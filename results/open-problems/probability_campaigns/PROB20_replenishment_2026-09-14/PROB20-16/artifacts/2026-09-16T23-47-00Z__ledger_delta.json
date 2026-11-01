@@ -1,0 +1,66 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "prompt_revision": "NEW-METHODS-2026-09-16 third-stuck mandatory handoff / successor rotation",
+  "input_snapshot": "b045886966b2b689b465a4e720a90f7600248d76",
+  "ownership_refresh_snapshot": "5ee281cea18d314eb7f6bc37c62f73f8535cdbb8",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/runs/2026-09-16/2026-09-16T22-53-28Z__report.md",
+    "creation_commit": "f06a30ec3fe08032ae0451a74830ef7e0fdd2a2b"
+  },
+  "old_target": {
+    "target_id": "LYONS-CONJ2.6-X095",
+    "source": "Russell Lyons (2014), Determinantal Probability: Basic Properties and Conjectures, arXiv:1406.2707, Conjecture 2.6",
+    "status": "PARTIAL_HANDOFF",
+    "frozen_metric_name": "B_Phi",
+    "frozen_metric_before": "UNMEASURED",
+    "frozen_metric_after": "UNMEASURED",
+    "movement": "no movement",
+    "unchanged_count": "at least three consecutive durable own no-movement runs; full historical count UNKNOWN",
+    "methods_this_run": [20, 22, 27],
+    "outcome": "third HARD-task stuck trigger; no further Lyons research authorized in this slot without later owner reassignment",
+    "remaining_obligation": "certify Phi>=0 on complete admissible three-site X095 domain or certify a strict source-valid negative Phi; three-site proof would remain partial for arbitrary dimension",
+    "audit_references": [
+      "P11-AUDIT-PROB20-16-LEMMA6.1-ENDPOINT-MATRIX-07 = component PASS only",
+      "no P26 end-to-end three-site audit",
+      "no second distinct OTHER end-to-end three-site audit"
+    ]
+  },
+  "neighbor": {
+    "task": "P11 Lyons entropy",
+    "newest_report": "proofnet24/P11-lyons-entropy/runs/2026-09-16/2026-09-16T23-18-48Z__run-report.md",
+    "status": "PARTIAL / MANDATORY HANDOFF",
+    "metric": "B_Phi UNMEASURED -> UNMEASURED",
+    "successor_screen": "I0061 pending; not duplicated by this slot"
+  },
+  "successor": {
+    "target_id": "I0067",
+    "category": "HARD_OUTSIDE",
+    "source": "Antonio Agresti and Mark Veraar (2025), Nonlinear SPDEs and Maximal Regularity: An Extended Survey, arXiv:2501.18561v5 / NoDEA 32 (2025), Article 123, Problem 10",
+    "exact_target": "For O=T^3 or R^3 and nonzero smooth transport-noise coefficients, determine local well-posedness in a scaling-critical space of smoothness <= -1/2 and determine the optimal smoothness threshold, preserving source hypotheses.",
+    "source_baseline": "Theorem 8.26 + discussion prove critical-space local well-posedness at smoothness strictly greater than -1/2 (q<6); endpoint/optimality left open in source.",
+    "current_status_check": "bounded 2026-09-17 search found no source-matching endpoint-or-beyond resolution; not a proof of worldwide openness",
+    "ownership_check": "operations/claims/I0067.md returned 404 at master 5ee281cea18d314eb7f6bc37c62f73f8535cdbb8; exact-ID repository search showed queue/intake only",
+    "claim_path": "operations/claims/I0067.md",
+    "claim_creation_commit": "1d7d16158a559398a37d35cffd3a7356932c99fe",
+    "claim_blob": "f7c9222f446ccf80b11239b9556c2f4e17505458",
+    "status": "OPEN / ADMITTED_ACTIVE",
+    "frozen_metric_name": "E_endpoint",
+    "frozen_metric_before": 0,
+    "frozen_metric_after": 0,
+    "metric_definition": "binary endpoint-coverage flag; 1 only after a complete source-valid theorem or counterexample decides local well-posedness at critical smoothness <= -1/2 under the stated transport-noise model"
+  },
+  "scheduler_update": {
+    "status": "SUCCESS",
+    "new_title": "I0067 SPDE Critical Endpoint Search",
+    "schedule_changed": false,
+    "enabled": true,
+    "model_selector_exposed": false,
+    "reasoning_selector_exposed": false
+  },
+  "delivery": {
+    "report_path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/runs/2026-09-16/2026-09-16T23-47-00Z__report.md",
+    "report_creation_commit": "6ccbfad7a7fbcc7dbd839e38e00f2c6f3961afda",
+    "report_blob": "239d4eb82a46f311727f9a587d53d42106549042",
+    "gitHub_only": true
+  }
+}

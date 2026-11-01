@@ -1,0 +1,33 @@
+{
+  "target": "P0017",
+  "worker": "w359",
+  "supervisor": "claude-4a88bc43",
+  "peers": [
+    "w357",
+    "w358"
+  ],
+  "own_independent_referee": "w362",
+  "source_audit": "SOURCE_STATUS.json",
+  "attempt": "ATTEMPT.md",
+  "claims": "CLAIMS.jsonl",
+  "peer_verdicts": "REVIEW_VERDICTS.jsonl",
+  "reviews": [
+    "REVIEW_w357.md",
+    "REVIEW_w358.md",
+    "REVIEW_w358_POSTERIOR.md"
+  ],
+  "own_draft_proofs": "CONE_COUNTEREXAMPLE.md",
+  "exact_edges": "EDGES.jsonl",
+  "bundle_state": "BUNDLE_STATES.json",
+  "implementation_proposal": "patches/01_exact_problem_probe.diff",
+  "checks": [
+    "MATH_CHECKS.json",
+    "PROBE_CHECKS.json",
+    "BUNDLE_VALIDATION.json",
+    "PATCH_CHECK.json"
+  ],
+  "hardest_gap": "Uniform strict posterior Dirichlet contraction for arbitrary nonlinear finite-energy tests; published full KLS proofs not independently audited here.",
+  "formal_theorem_check": null,
+  "trusted_axioms_receipt": null,
+  "novelty_claim": false
+}

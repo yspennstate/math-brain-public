@@ -1,0 +1,545 @@
+diff --git a/math-brain-inbox/w343/bundle_001.json b/math-brain-inbox/w343/bundle_001.json
+new file mode 100644
+--- /dev/null
++++ b/math-brain-inbox/w343/bundle_001.json
+@@ -0,0 +1,540 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w343",
++  "bundle_slug": "team-o-ten-problem-refinements-20261010",
++  "entries": [
++    {
++      "key": "p0340-tree",
++      "namespace": "probability.randomtrees",
++      "logical_name": "full-binary-tree-drawn-length-height-identity",
++      "kind": "lemma",
++      "title": "Drawn length of a full binary tree: exact identity and depth bounds",
++      "statement": "For a finite rooted full binary tree T with n leaves and edge height h(T), define l(leaf)=0 and l(T)=l(L)+l(R)+2+|h(L)-h(R)|. If D(T) is the sum of leaf depths, then l(T)=sum over internal vertices v of h(T_v)+h(T), and 2(n-1)<=l(T)<=D(T). This is a deterministic lemma; independent audit is pending.",
++      "proof_text": "Let T be a finite rooted full binary tree. Let n(T) be its number of leaves, h(T) its height in edges, D(T) the sum of the depths of its leaves, and l(T) the minimal drawn length defined by l(leaf)=0 and l(T)=l(L)+l(R)+2+|h(L)-h(R)|. Write S(T)=sum_{v internal} h(T_v).\n\nThen l(T)=S(T)+h(T) and 2(n(T)-1)<=l(T)<=D(T).\n\nProof. For a leaf all quantities are zero except n=1. At an internal root, h(T)=1+max(h(L),h(R)), so 2h(T)-h(L)-h(R)=2+|h(L)-h(R)|. Substituting the inductive identities into S(T)+h(T) proves the identity. The lower bound follows by summing the increment at least 2 over the n-1 internal vertices. Every full binary tree with k leaves has height at most k-1, by induction on its two children. Hence 2+|h(L)-h(R)|<=n(L)+n(R); combined with D(T)=D(L)+D(R)+n(L)+n(R), induction proves the upper bound.",
++      "assumptions": [
++        "The tree is full binary, and the height of a leaf is zero."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:p0340-tree",
++        "url": "file:///~/brain_workers/w343/P0340_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0340-height",
++      "namespace": "probability.randomtrees",
++      "logical_name": "critical-beta-splitting-height-geometric-moment-bound",
++      "kind": "lemma",
++      "title": "An explicit expected maximum-height bound for critical beta-splitting trees",
++      "statement": "Let T_n be the independent recursive binary splitting tree with q_m(i)=m/[2H_(m-1)i(m-i)], where H_k=sum_(j=1)^k 1/j. For n>=2 put p=1/(2H_(n-1)), b=ceil(log_2 n), and theta=-log(1-p/2). Its expected edge height is at most (log n+b log 2)/theta <=4H_(n-1)(2 log n+log 2). Each tagged leaf depth is bounded by a sum of b geometric(p) waiting times, whose exponential moment at theta is 2^b. No independence among leaf depths is required. Author proof; independent audit pending.",
++      "proof_text": "The prior campaign proof supplies the full linear-limit argument, not just the leaf-depth inequality. The load-bearing estimates can be proved as follows, with a tighter geometric exponential moment.\n\nThe split law is q_m(i)=m/[2 H_{m-1} i(m-i)], where H denotes a harmonic number. A uniformly tagged leaf has next-clade size j with probability 1/[H_{m-1}(m-j)]. Its conditional probability of halving the clade size is at least 1/(2 H_{m-1}). For a chain started at n, put p_n=1/(2 H_{n-1}) and b_n=ceil(log_2 n). Couple successful halvings from below by independent Bernoulli(p_n) trials. Every tagged leaf depth is dominated by the waiting time for b_n successes, a sum of b_n geometric(p_n) variables on {1,2,...}.\n\nSet theta_n=-log(1-p_n/2). The geometric moment is exactly E exp(theta_n G)=2. A union bound in exponential-moment form over n leaf depths, followed by Jensen, gives\n\nE height(T_n) <= [log n+b_n log 2]/theta_n <= 4 H_{n-1}[2 log n+log 2] = O((log n)^2).\n\nNo independence among leaves is used: pointwise exp(theta_n h(T_n)) is at most the sum of exp(theta_n d) over its leaves, whose expected sum is n times the moment of a uniformly tagged leaf. Thus E exp(theta_n h(T_n))<=n 2^b_n before applying Jensen. Compared with the earlier proof's moment bound 3 and integrated tail, this removes its extra factor and integration term.\n\nLet a(n,m) be the probability the tagged descent chain visits m. In a dyadic block (b,2b], each step exits the block with conditional probability at least 1/(2 H_{2b-1}), and the chain never returns. Consequently sum_{m=b+1}^{2b} a(n,m)<=2 H_{2b-1}, uniformly in n. If h_m=E height(T_m), the block sum of a(n,m)h_m/m is at most C(1+log b)^3/b. Summing over dyadic b proves a uniform vanishing tail.\n\nThe Markov branching property and the exact clade identity E N_n(m)=n a(n,m)/m give E drawn(T_n)/n=sum_{m=2}^n a(n,m) h_m/m+h_n/n. The established pointwise occupation limit a(n,m)->a(m)=6 H_{m-1}/[pi^2(m-1)], finite-sum convergence, the uniform tail bound, and h_n/n->0 prove\n\nE drawn(T_n)/n -> c=sum_{m=2}^infinity a(m)h_m/m, with 2<=c<infinity.",
++      "assumptions": [
++        "Independent recursive subtrees conditional on split sizes.",
++        "Leaf height zero; natural logarithms except log_2."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:p0340-height",
++        "url": "file:///~/brain_workers/w343/P0340_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0340-linear",
++      "namespace": "probability.randomtrees",
++      "logical_name": "critical-beta-splitting-linear-expected-drawn-length",
++      "kind": "theorem",
++      "title": "Candidate linear expectation asymptotic for minimal drawn length",
++      "statement": "For T_n with independent recursive splits q_m(i)=m/[2H_(m-1)i(m-i)] and drawn-length recursion l(T)=l(L)+l(R)+2+|h(L)-h(R)|, with leaf height and length zero, put h_m=E h(T_m). Then E l(T_n)/n tends to c=(6/pi^2) sum_(m=2)^infinity H_(m-1)h_m/[m(m-1)], where 2<=c<infinity. The proof uses the published tagged-clade occupation limit a(n,m)->6H_(m-1)/[pi^2(m-1)] and the uniform block estimate sum_(j=b+1)^(2b) a(n,j)<=2H_(2b-1). This is an author-checked proof candidate; no independently certified open-problem solution or law of large numbers is claimed.",
++      "proof_text": "The prior campaign proof supplies the full linear-limit argument, not just the leaf-depth inequality. The load-bearing estimates can be proved as follows, with a tighter geometric exponential moment.\n\nThe split law is q_m(i)=m/[2 H_{m-1} i(m-i)], where H denotes a harmonic number. A uniformly tagged leaf has next-clade size j with probability 1/[H_{m-1}(m-j)]. Its conditional probability of halving the clade size is at least 1/(2 H_{m-1}). For a chain started at n, put p_n=1/(2 H_{n-1}) and b_n=ceil(log_2 n). Couple successful halvings from below by independent Bernoulli(p_n) trials. Every tagged leaf depth is dominated by the waiting time for b_n successes, a sum of b_n geometric(p_n) variables on {1,2,...}.\n\nSet theta_n=-log(1-p_n/2). The geometric moment is exactly E exp(theta_n G)=2. A union bound in exponential-moment form over n leaf depths, followed by Jensen, gives\n\nE height(T_n) <= [log n+b_n log 2]/theta_n <= 4 H_{n-1}[2 log n+log 2] = O((log n)^2).\n\nNo independence among leaves is used: pointwise exp(theta_n h(T_n)) is at most the sum of exp(theta_n d) over its leaves, whose expected sum is n times the moment of a uniformly tagged leaf. Thus E exp(theta_n h(T_n))<=n 2^b_n before applying Jensen. Compared with the earlier proof's moment bound 3 and integrated tail, this removes its extra factor and integration term.\n\nLet a(n,m) be the probability the tagged descent chain visits m. In a dyadic block (b,2b], each step exits the block with conditional probability at least 1/(2 H_{2b-1}), and the chain never returns. Consequently sum_{m=b+1}^{2b} a(n,m)<=2 H_{2b-1}, uniformly in n. If h_m=E height(T_m), the block sum of a(n,m)h_m/m is at most C(1+log b)^3/b. Summing over dyadic b proves a uniform vanishing tail.\n\nThe Markov branching property and the exact clade identity E N_n(m)=n a(n,m)/m give E drawn(T_n)/n=sum_{m=2}^n a(n,m) h_m/m+h_n/n. The established pointwise occupation limit a(n,m)->a(m)=6 H_{m-1}/[pi^2(m-1)], finite-sum convergence, the uniform tail bound, and h_n/n->0 prove\n\nE drawn(T_n)/n -> c=sum_{m=2}^infinity a(m)h_m/m, with 2<=c<infinity.",
++      "assumptions": [
++        "The stated pointwise occupation limit from Aldous-Janson Theorem 18."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:p0340-linear",
++        "url": "file:///~/brain_workers/w343/P0340_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0340-numeric",
++      "namespace": "probability.randomtrees",
++      "logical_name": "critical-beta-splitting-finite-drawn-length-recursion-check",
++      "kind": "concept",
++      "title": "Finite checks for drawn-length and height bounds",
++      "statement": "The local check_p0340.py run checked 6918 ordered full binary trees through ten leaves with no tree-identity or depth-bound failures. A float64 height-distribution recursion agrees with weighted tree enumeration through n=10 and gives E l(T_128)/128=4.496140445692661. At n=128 the earlier proof's height upper bound is 587.772776 and the tightened upper bound is 205.700923, a 65.00% reduction in that bound. These are finite numerical checks, not a proof of the limiting constant. Current Lean setup was refused by the compute governor; no new Lean verification is claimed.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:p0340-numeric",
++        "url": "file:///~/brain_workers/w343/measurement_p0340.json",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0036-two",
++      "namespace": "probability.determinantal",
++      "logical_name": "two-site-equivariant-determinantal-sharp-product-domination",
++      "kind": "lemma",
++      "title": "Sharp product domination for two-site equivariant determinantal kernels",
++      "statement": "For a Hermitian positive contraction Q=[[a,z],[conj(z),a]], put p=sqrt(a^2-|z|^2) and q=1-sqrt((1-a)^2-|z|^2). Its determinantal law stochastically dominates iid Bernoulli(p) and is stochastically dominated by iid Bernoulli(q). Both parameters are optimal, including when Q or I-Q is singular. This proves only the two-site case of the general equivariant conjecture; independent audit pending.",
++      "proof_text": "Let Q be a Hermitian two-site equivariant positive contraction. Write its diagonal entries as a and its off-diagonal modulus as r; 0<=a-r<=a+r<=1. Put d=a^2-r^2=det Q and p=sqrt(d). Its determinantal measure has probabilities P(11)=d, P(10)=P(01)=a-d, P(00)=1-2a+d.\n\nIt stochastically dominates Bernoulli(p) on two sites. All nontrivial increasing events are: site 1 present; site 2 present; both present; at least one present. Their probabilities are respectively a,a,d,2a-d. The product probabilities are p,p,p^2,2p-p^2. Since p<=a and p^2=d, all four comparisons hold. This works at spectral endpoints as well. Applying the same argument to I-Q and complementing gives the upper bound Bernoulli(1-sqrt(det(I-Q))). The constants are optimal, by the both-present and both-absent events.\n\nFor any finite transitive equivariant contraction on N sites, an iid lower domination density b necessarily satisfies b^N<=det Q, hence b<=det(Q)^(1/N). An iid upper domination density c necessarily satisfies (1-c)^N<=det(I-Q), hence c>=1-det(I-Q)^(1/N). This proves necessity, not general sufficiency. Equivariance is needed to identify these determinants' Nth roots with the finite-group Fuglede-Kadison determinant (normalized trace).\n\nEarlier-route check: Q=[[1/2,1/4],[1/4,1/2]] has eigenvalues 1/4 and 3/4. Its harmonic mean is 3/8, whereas its geometric mean is sqrt(3)/4. The smallest full-rest-conditioned presence probability is 3/8. Thus the full-rest one-site lower-bound route cannot certify the sharp geometric-mean density, even though the stochastic domination itself holds. The Schur complement is odds s, and the probability is s/(1+s); they must not be conflated.\n\nSource correspondence: Lyons, Determinantal Probability: Basic Properties and Conjectures (arXiv:1406.2707), Conjecture 5.7, and intake C0036-A002. No result here proves the conjecture for arbitrary groups or proves its current literature status.",
++      "assumptions": [
++        "0<=a-|z|<=a+|z|<=1."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:c0036-two",
++        "url": "file:///~/brain_workers/w343/C0036_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0036-necessary",
++      "namespace": "probability.determinantal",
++      "logical_name": "finite-determinantal-product-domination-determinant-necessity",
++      "kind": "lemma",
++      "title": "Necessary finite determinant bounds for iid domination",
++      "statement": "For a determinantal probability law with positive-contraction kernel Q on N>=1 sites, iid lower stochastic domination at density b implies b<=det(Q)^(1/N); iid upper stochastic domination at density c implies c>=1-det(I-Q)^(1/N). The all-present and all-absent events prove these inequalities. For a finite transitive equivariant kernel these roots are the normalized Fuglede-Kadison determinants. Necessity does not imply the conjectured general sufficiency; independent audit pending.",
++      "proof_text": "Let Q be a Hermitian two-site equivariant positive contraction. Write its diagonal entries as a and its off-diagonal modulus as r; 0<=a-r<=a+r<=1. Put d=a^2-r^2=det Q and p=sqrt(d). Its determinantal measure has probabilities P(11)=d, P(10)=P(01)=a-d, P(00)=1-2a+d.\n\nIt stochastically dominates Bernoulli(p) on two sites. All nontrivial increasing events are: site 1 present; site 2 present; both present; at least one present. Their probabilities are respectively a,a,d,2a-d. The product probabilities are p,p,p^2,2p-p^2. Since p<=a and p^2=d, all four comparisons hold. This works at spectral endpoints as well. Applying the same argument to I-Q and complementing gives the upper bound Bernoulli(1-sqrt(det(I-Q))). The constants are optimal, by the both-present and both-absent events.\n\nFor any finite transitive equivariant contraction on N sites, an iid lower domination density b necessarily satisfies b^N<=det Q, hence b<=det(Q)^(1/N). An iid upper domination density c necessarily satisfies (1-c)^N<=det(I-Q), hence c>=1-det(I-Q)^(1/N). This proves necessity, not general sufficiency. Equivariance is needed to identify these determinants' Nth roots with the finite-group Fuglede-Kadison determinant (normalized trace).\n\nEarlier-route check: Q=[[1/2,1/4],[1/4,1/2]] has eigenvalues 1/4 and 3/4. Its harmonic mean is 3/8, whereas its geometric mean is sqrt(3)/4. The smallest full-rest-conditioned presence probability is 3/8. Thus the full-rest one-site lower-bound route cannot certify the sharp geometric-mean density, even though the stochastic domination itself holds. The Schur complement is odds s, and the probability is s/(1+s); they must not be conflated.\n\nSource correspondence: Lyons, Determinantal Probability: Basic Properties and Conjectures (arXiv:1406.2707), Conjecture 5.7, and intake C0036-A002. No result here proves the conjecture for arbitrary groups or proves its current literature status.",
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:c0036-necessary",
++        "url": "file:///~/brain_workers/w343/C0036_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0036-conditioning",
++      "namespace": "probability.determinantal",
++      "logical_name": "two-site-harmonic-geometric-conditioning-gap",
++      "kind": "lemma",
++      "title": "Full-rest conditionals need not reach the sharp geometric-mean density",
++      "statement": "For Q=[[1/2,1/4],[1/4,1/2]], the minimum presence probability conditioned on the other site is 3/8, while the sharp iid lower domination density is sqrt(3)/4. Thus a worst-full-rest-conditional lower-bound method does not certify the geometric-mean density. The relevant Schur complement is odds s; its presence probability is s/(1+s), not s. Independent audit pending.",
++      "proof_text": "Let Q be a Hermitian two-site equivariant positive contraction. Write its diagonal entries as a and its off-diagonal modulus as r; 0<=a-r<=a+r<=1. Put d=a^2-r^2=det Q and p=sqrt(d). Its determinantal measure has probabilities P(11)=d, P(10)=P(01)=a-d, P(00)=1-2a+d.\n\nIt stochastically dominates Bernoulli(p) on two sites. All nontrivial increasing events are: site 1 present; site 2 present; both present; at least one present. Their probabilities are respectively a,a,d,2a-d. The product probabilities are p,p,p^2,2p-p^2. Since p<=a and p^2=d, all four comparisons hold. This works at spectral endpoints as well. Applying the same argument to I-Q and complementing gives the upper bound Bernoulli(1-sqrt(det(I-Q))). The constants are optimal, by the both-present and both-absent events.\n\nFor any finite transitive equivariant contraction on N sites, an iid lower domination density b necessarily satisfies b^N<=det Q, hence b<=det(Q)^(1/N). An iid upper domination density c necessarily satisfies (1-c)^N<=det(I-Q), hence c>=1-det(I-Q)^(1/N). This proves necessity, not general sufficiency. Equivariance is needed to identify these determinants' Nth roots with the finite-group Fuglede-Kadison determinant (normalized trace).\n\nEarlier-route check: Q=[[1/2,1/4],[1/4,1/2]] has eigenvalues 1/4 and 3/4. Its harmonic mean is 3/8, whereas its geometric mean is sqrt(3)/4. The smallest full-rest-conditioned presence probability is 3/8. Thus the full-rest one-site lower-bound route cannot certify the sharp geometric-mean density, even though the stochastic domination itself holds. The Schur complement is odds s, and the probability is s/(1+s); they must not be conflated.\n\nSource correspondence: Lyons, Determinantal Probability: Basic Properties and Conjectures (arXiv:1406.2707), Conjecture 5.7, and intake C0036-A002. No result here proves the conjecture for arbitrary groups or proves its current literature status.",
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:c0036-conditioning",
++        "url": "file:///~/brain_workers/w343/C0036_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0013-defects",
++      "namespace": "probability.randomgraphs",
++      "logical_name": "complement-invariant-lovasz-theta-two-defect-reduction",
++      "kind": "lemma",
++      "title": "Two nonnegative defects in expected Lovasz theta",
++      "statement": "For a complement-invariant random graph G on n>=1 vertices, let X=theta(G)/sqrt(n), Y=theta(complement G)/sqrt(n), R=sqrt(XY), and Z=(log X-log Y)/2. Using theta(G)theta(complement G)>=n, E theta(G)/sqrt(n)-1=E(R-1)+E[R(cosh Z-1)], with both terms nonnegative. Therefore the expectation asymptotic at sqrt(n) is equivalent to both defect expectations tending to zero. No defect estimate for G(n,1/2) is proved here. Independent audit pending.",
++      "proof_text": "Assume a graph G on n vertices has complement-invariant law, and write X=theta(G)/sqrt(n), Y=theta(complement G)/sqrt(n). The standard theta-product inequality gives XY>=1. Put R=sqrt(XY) and Z=(log X-log Y)/2. Then X=R exp(Z), Y=R exp(-Z), and complement symmetry gives\n\nE theta(G)/sqrt(n)-1 = E(R-1)+E[R(cosh(Z)-1)].\n\nBoth terms on the right are nonnegative. Therefore the desired expectation asymptotic is equivalent to both defect expectations tending to zero. This distinguishes product tightness from complement imbalance; concentration of Z alone does not control R or the exponential tail. Finite n ensures integrability because 1<=theta(G)<=n.\n\nThe equation follows by averaging E X=E Y and using (X+Y)/2=R cosh Z. No estimate that makes either defect vanish for G(n,1/2) is proved here. It continues P0013-A001 and generalizes the exact-product circulant reduction in P0014-A001. It is not a claimed solution of Conjecture 17.",
++      "assumptions": [
++        "The standard Lovasz theta product inequality."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:p0013-defects",
++        "url": "file:///~/brain_workers/w343/P0013_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0150-whisker",
++      "namespace": "probability.metric",
++      "logical_name": "uniform-star-whisker-gromov-weak-nontightness",
++      "kind": "lemma",
++      "title": "Uniform finite graphs can hide a diverging pendant diameter",
++      "statement": "Attach floor(sqrt(m)) new path vertices to the center of an m-vertex star, give all vertices uniform probability mass, and rescale graph distance by m^(-1/4). Every fixed iid sampled distance matrix tends in probability to zero, since the path mass tends to zero and star distances are at most 2m^(-1/4). The rescaled diameter is (floor(sqrt(m))+1)m^(-1/4), which diverges. Thus Gromov-weak convergence to a point need not imply GH tightness even for uniform full-support finite graphs. This family is not a heavy-tailed critical configuration model; independent audit pending.",
++      "proof_text": "Let K_m be a star with m vertices. Attach a pendant path with k_m=floor(sqrt(m)) new vertices to its center. Give all m+k_m vertices uniform mass and rescale graph distance by a_m=m^(-1/4).\n\nFor any fixed r independent samples, the probability that at least one sample is in the path is at most r k_m/(m+k_m), which tends to zero. If all samples belong to the star, every distance is at most 2a_m, which tends to zero. Thus all finite sampled distance matrices converge in probability to the zero matrix: the spaces converge Gromov-weakly to a point.\n\nTheir rescaled diameters equal a_m(k_m+1) for m>=2 and tend to infinity. The Gromov-Hausdorff distance to a point is half the diameter, so they fail even GH tightness. The uniform measure has full support in every finite graph. This is a graph version of P0150-A001's thin-mass obstruction, without an atom-plus-continuous measure. It is not a configuration-model counterexample and does not meet the heavy-tailed critical degree hypotheses.",
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:p0150-whisker",
++        "url": "file:///~/brain_workers/w343/P0150_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0150-mass",
++      "namespace": "probability.metric",
++      "logical_name": "critical-metric-convergence-lower-mass-route-scope",
++      "kind": "concept",
++      "title": "The missing lower-mass input in a weak-to-metric convergence route",
++      "statement": "Finite sampled distance matrices can miss low-mass appendages. A route to compact metric convergence must separately control the mass of every fixed-radius ball (or obtain an equivalent tightness estimate). The star-plus-path construction illustrates this requirement; it does not show that the requested critical configuration-model degree assumptions are insufficient. Their minimal-assumption lower-mass estimate remains unproved in this pass.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:p0150-mass",
++        "url": "file:///~/brain_workers/w343/P0150_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0003-tail",
++      "namespace": "probability.extremes",
++      "logical_name": "moment-threshold-does-not-fix-logarithmic-laplace-tail",
++      "kind": "lemma",
++      "title": "Equal moment thresholds permit different Laplace corrections",
++      "statement": "For a in [0,1], let W_a>=0 have survival probability 1/e on [0,e) and 1/[t(log t)^a] for t>=e. For s>0, E W_a^s is finite exactly when s<1. As lambda decreases to zero, 1-E exp(-lambda W_a) is asymptotic to lambda[log(1/lambda)]^(1-a)/(1-a) for a<1, and to lambda log log(1/lambda) for a=1. Thus the moment threshold alone does not imply a positive finite lambda log(1/lambda) coefficient. These scalar laws are not asserted to satisfy the DGFF Gibbs-Markov or conformal axioms; independent audit pending.",
++      "proof_text": "For a in [0,1], define a nonnegative random variable W_a by survival probability 1/e for 0<=t<e and 1/[t(log t)^a] for t>=e. There is an atom of mass 1-1/e at zero; the positive part is continuous, so this is a valid decreasing survival function.\n\nFor every a in [0,1] and s>0, E W_a^s = s integral_0^infinity t^(s-1) P(W_a>t) dt is finite exactly when s<1. At s=1 the integral integral_e^infinity dt/[t(log t)^a] diverges; for s>1 it also diverges.\n\nFor lambda tending to zero, let L=log(1/lambda). The survival-function identity gives\n\n1-E exp(-lambda W_a)=lambda integral_0^infinity exp(-lambda t) P(W_a>t) dt.\n\nReplacing the exponential by one over [e,1/lambda] costs at most O(lambda): inside the integral, 1-exp(-lambda t)<=lambda t and (log t)^(-a)<=1. The part above 1/lambda costs O(lambda), by substituting u=lambda t and bounding integral_1^infinity exp(-u)/u du. The part below e is also O(lambda). Hence for a<1 the asymptotic is lambda L^(1-a)/(1-a), and for a=1 it is lambda log L.\n\nIn particular W_0 and W_1 have the identical moment threshold s<1, but only W_0 has the lambda log(1/lambda) correction with a positive finite coefficient. W_1's ratio to that scale tends to zero. This disproves a moment-threshold-only route in C0003-A001. These scalar laws have not been shown to satisfy the DGFF Gibbs-Markov or conformal axioms, so they do not refute Conjecture 16.3.",
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:c0003-tail",
++        "url": "file:///~/brain_workers/w343/C0003_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0060-fiber",
++      "namespace": "probability.percolation",
++      "logical_name": "finite-cut-vertex-fiber-hits-product-bypass",
++      "kind": "lemma",
++      "title": "Finite cut-vertex fiber hits do not separate a product graph",
++      "statement": "Let c be a cut vertex of a connected graph G and let a,b lie on opposite sides. Any finite set F contained in {c} x Z can be bypassed in G x Z by moving to a height not used by F, crossing via c there, and returning along the other side. For the three-vertex path a-c-b, removing (c,z) for |z|<=H leaves a shortest a_0-to-b_0 path of length 2H+4. Hitting a corner region alone is not a proof of separation. This does not determine the vacant-set threshold of an infinite interlacement trace; independent audit pending.",
++      "proof_text": "Let G be connected, let c be a cut vertex, and let a,b lie on different sides with finite G-paths to c. Let F be any finite subset of {c} x Z. Choose a height z whose copy (c,z) is not in F. The path from (a,s) vertically to (a,z), then along a-c-b at height z, then vertically to (b,t), avoids F. Thus a finite set of hits on a cut-point fiber does not separate its two sides in G x Z.\n\nFor the three-vertex path a-c-b, deleting {(c,z): |z|<=H} still leaves a path from (a,0) to (b,0) of length 2H+4, going through height H+1. It is shortest because every crossing must use a middle vertex with |z|>=H+1, requiring at least 2(H+1) vertical and two horizontal edges.\n\nThis refutes the inference 'the interlacement hits every corner region, therefore it blocks every crossing' used heuristically in C0060-A001. Hitting a region and creating a separating occupied set are different events. The interlacement trace is infinite; this finite-fiber example does not determine its vacant threshold, its crossing probabilities, or u*. No isotropic capacity exponent from the earlier heuristic is used as a theorem here.",
++      "assumptions": [
++        "F is finite and lies only on the specified fiber."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:c0060-fiber",
++        "url": "file:///~/brain_workers/w343/C0060_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0085-sublevel",
++      "namespace": "probability.percolation",
++      "logical_name": "invasion-explores-finite-root-sublevel-cluster",
++      "kind": "lemma",
++      "title": "Invasion explores a finite root sublevel cluster before exiting it",
++      "statement": "On a connected countable locally finite infinite weighted graph, invasion starts at o and repeatedly adds the other endpoint of a minimum-weight boundary edge. If the ordinary weight-at-most-p root cluster C_p(o) is finite, invasion explores all of it before selecting its first edge with weight greater than p. Hence, under iid uniform weights and almost-sure finiteness of C_pc(o), P(x in IPC)>=P_pc(o connected to x). This compares with an ordinary critical cluster, not the incipient infinite cluster; it does not yield the target invasion exponent d-4. Independent audit pending.",
++      "proof_text": "Give every edge of a connected, countable, locally finite infinite graph a weight. Invasion percolation starts at o and repeatedly selects a minimum-weight edge with exactly one endpoint in its current finite vertex set, adding the other endpoint. Fix p and suppose the ordinary sublevel cluster C_p(o), formed by edges of weight at most p, is finite.\n\nBefore that cluster is fully invaded, a path in C_p(o) from o to an uninvaded vertex supplies a boundary edge of weight at most p. Therefore invasion cannot choose an edge of weight greater than p yet. Any boundary edge with weight at most p ends inside C_p(o). Each invasion step adds a new vertex, so exactly |C_p(o)|-1 such steps explore all of C_p(o) before the first weight greater than p is selected. In particular C_p(o) is contained in the eventual invasion cluster.\n\nFor iid uniform edge weights, if C_pc(o) is finite almost surely, this yields P(x in IPC)>=P_pc(o connected to x). If an ordinary critical two-point lower bound of order |x|^(2-d) is available, the same lower bound follows for invasion. It is two powers weaker than the target |x|^(4-d) and does not compare IPC with the incipient infinite cluster. The finiteness assumption is explicit; an infinite sublevel cluster requires a separate argument.\n\nThis continues C0085-A001's failed IIC-comparison route using an ordinary percolation cluster instead. It neither identifies the invasion asymptotic constant nor proves the high-dimensional conjecture.",
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:c0085-sublevel",
++        "url": "file:///~/brain_workers/w343/C0085_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0131-pathwise",
++      "namespace": "probability.randomenvironment",
++      "logical_name": "uniform-elliptic-adapted-walk-pathwise-site-dichotomy",
++      "kind": "lemma",
++      "title": "Uniform ellipticity gives a pathwise all-or-none recurrence alternative",
++      "statement": "For an adapted nearest-neighbor walk on a connected countable graph, suppose each neighbor transition has conditional probability at least kappa>0 given the complete past. Almost surely, either every vertex is visited infinitely often or every vertex is visited only finitely often. If u has infinitely many visits, the chance of missing a fixed neighbor at k successive opportunities is at most (1-kappa)^k; propagation along finite paths proves the claim. On Z^d the second alternative leaves every finite ball eventually. This does not make the first alternative's annealed probability zero or one. Independent audit pending.",
++      "proof_text": "Consider any adapted nearest-neighbor walk on a connected countable graph. Suppose that, at every step, conditional on its complete past, the probability of moving to each neighbor of the current vertex is at least a fixed kappa>0. This applies to uniformly elliptic cookie walks without using iid stacks.\n\nIf u is visited infinitely often, then each neighbor v is also visited infinitely often almost surely. To see this, after any fixed time choose successive visits to u. Conditional on the past at each visit, failure to move next to v has probability at most 1-kappa. The probability that there are k such opportunities but none is used is at most (1-kappa)^k, by iterated conditioning at their stopping times. If u has infinitely many visits but v only finitely many, after some integer time every opportunity fails; letting k grow rules this out. Union over integer times and the countably many oriented edges, then propagate along finite paths.\n\nThus almost every sample path either visits every vertex infinitely often or visits every vertex only finitely often. On Z^d the latter is equivalent to eventually leaving every finite ball. The remaining C0131 question is whether the annealed probability of the recurrent alternative must be zero or one under the specified iid cookie law. This pathwise lemma supplies no such law.",
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:c0131-pathwise",
++        "url": "file:///~/brain_workers/w343/C0131_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0131-mixture",
++      "namespace": "probability.randomenvironment",
++      "logical_name": "uniform-elliptic-global-mixture-with-nontrivial-recurrence-probability",
++      "kind": "lemma",
++      "title": "A global mixture distinguishes pathwise and annealed dichotomies",
++      "statement": "A fair global coin selecting either simple random walk on Z^2 or a constant-kernel walk with directional probabilities (3/8,1/8,1/4,1/4) yields a uniformly elliptic walk with recurrent-alternative probability 1/2. The simple-random-walk branch is recurrent; the biased branch has drift 1/4 and is transient by the strong law. This global mixture is not an iid cookie environment and is not a counterexample to the iid excited-walk question. Independent audit pending.",
++      "proof_text": "Consider any adapted nearest-neighbor walk on a connected countable graph. Suppose that, at every step, conditional on its complete past, the probability of moving to each neighbor of the current vertex is at least a fixed kappa>0. This applies to uniformly elliptic cookie walks without using iid stacks.\n\nIf u is visited infinitely often, then each neighbor v is also visited infinitely often almost surely. To see this, after any fixed time choose successive visits to u. Conditional on the past at each visit, failure to move next to v has probability at most 1-kappa. The probability that there are k such opportunities but none is used is at most (1-kappa)^k, by iterated conditioning at their stopping times. If u has infinitely many visits but v only finitely many, after some integer time every opportunity fails; letting k grow rules this out. Union over integer times and the countably many oriented edges, then propagate along finite paths.\n\nThus almost every sample path either visits every vertex infinitely often or visits every vertex only finitely often. On Z^d the latter is equivalent to eventually leaving every finite ball. The remaining C0131 question is whether the annealed probability of the recurrent alternative must be zero or one under the specified iid cookie law. This pathwise lemma supplies no such law.\n\nUniform ellipticity alone is insufficient for the annealed conclusion: choose one fair global coin. On Z^2 use simple random walk if it is zero; if it is one, use constant directional probabilities (3/8,1/8,1/4,1/4). All probabilities are at least 1/8. The first branch is recurrent, while the second has nonzero drift and is transient by the strong law. The recurrent alternative has probability 1/2. This mixture is not an iid cookie environment, so it is not a counterexample to C0131.",
++      "assumptions": [
++        "Classical recurrence of simple random walk on Z^2."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:c0131-mixture",
++        "url": "file:///~/brain_workers/w343/C0131_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0016-literature",
++      "namespace": "probability.randommatrix",
++      "logical_name": "gaussian-phase-retrieval-extreme-submatrix-literature-answer",
++      "kind": "concept",
++      "title": "Cached literature answer for the Gaussian worst-subframe problem",
++      "statement": "The cached LITERATURE_P2.md receipt attributes an answer to Yitzchak Shmalo, Extreme least singular values of Gaussian row submatrices and a phase retrieval stability problem, arXiv:2607.06249 (7 July 2026), Theorem 1.1 and Corollary 1.2. For standard real Gaussian (2m-1)-by-m frames it reports omega(A_m)=4^(-m+o_P(m)), equivalently m^(-1)log omega(A_m)->-log 4 in probability. This matches Randomstrasse101 Open Problem 21; the old attempted_unsolved ranking is stale according to that receipt. The primary paper and its full proof were not newly checked here; confirm the citation and normalization before admitting the status correction. This is a literature record, not an original solution.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:p0016-literature",
++        "url": "file:///~/brain_workers/w343/P0016_literature.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0016-numeric",
++      "namespace": "probability.randommatrix",
++      "logical_name": "gaussian-worst-row-subframe-small-dimension-reproduction",
++      "kind": "concept",
++      "title": "Finite reproduction of worst Gaussian row-subframe scaling",
++      "statement": "With NumPy RNG seed 343, the local check minimizes the smallest singular value over every m-row subset of 64 standard real Gaussian frames for each m=1,...,6: 384 frames and 40,768 minors. At m=6 the median of 4^m omega is 2.5933238602603175. At m=1 the exact omega law is |N(0,1)|. These finite samples check the row-subframe convention and provide numerical evidence only; they do not establish the asymptotic or an exponential limit law.",
++      "proof_text": null,
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:p0016-numeric",
++        "url": "file:///~/brain_workers/w343/measurement_p0016.json",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0046-interfaces",
++      "namespace": "probability.spanningforests",
++      "logical_name": "infinite-component-interfaces-suffice-for-sparse-invariant-connection",
++      "kind": "lemma",
++      "title": "Infinite interfaces suffice for arbitrarily sparse independent connection",
++      "statement": "Let F be a random spanning forest on a connected countable locally finite graph G. Join F-components when infinitely many G-edges run between them. If this component graph is almost surely connected, then F united with independent Bernoulli(delta) G-edges is almost surely connected for every 0<delta<1. If F is invariant, the union is invariant and P(e in union minus F)<=delta for each edge. Each infinite interface receives an edge almost surely, and countably many such assertions hold simultaneously. The interface assumption is not proved for a general FUSF; independent audit pending.",
++      "proof_text": "Let G be a connected countable locally finite graph and F a random spanning forest. Conditional on F, form a graph H on the F-components, joining two distinct components when infinitely many G-edges run between them. Suppose H is connected almost surely (a single component is permitted). Then for any 0<delta<1, F united with independent Bernoulli(delta) G-edges is connected almost surely.\n\nProof. For any given adjacent pair in H, the probability that none of its first k boundary edges is added is (1-delta)^k, which tends to zero. There are at most countably many pairs of components; conditional on F, almost surely every edge of H has at least one added representative. A finite H-path between any two F-components therefore lifts to a finite G-path using F-edges and added representatives. This proves connectivity. If the law of F is invariant under the given graph action, independent identical edge sprinkling preserves that invariance. Every edge is added outside F with probability delta P(e not in F)<=delta. Choose delta<epsilon for the strict inequality requested in P0046.\n\nExample: in Z^2 take F to be all vertical edges. Its components are columns, adjacent columns have infinitely many horizontal boundary edges, and H is the line. Every positive sprinkling connects F. In a window of 2H+1 horizontal levels with q columns, the exact connectivity probability is [1-(1-delta)^(2H+1)]^(q-1).\n\nThe hypothesis is not established for a general FUSF. The source explicitly notes that independent sprinkling fails on some nonamenable graphs, so this criterion is only a sufficient special case and a diagnostic for the missing interface structure. It does not solve Question 10.12 or the associated cost-equality problem.",
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:p0046-interfaces",
++        "url": "file:///~/brain_workers/w343/P0046_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0046-columns",
++      "namespace": "probability.spanningforests",
++      "logical_name": "vertical-line-forest-sprinkling-window-connectivity",
++      "kind": "lemma",
++      "title": "A vertical-line forest admits every positive horizontal sprinkling",
++      "statement": "In Z^2 let F consist of all vertical edges. Every 0<delta<1 independent edge sprinkling connects its columns almost surely. In a rectangular window of q>=1 columns and r>=1 horizontal levels, retaining its vertical forest, the exact connectivity probability is [1-(1-delta)^r]^(q-1). Adjacent column pairs have disjoint r-edge interfaces. This example is a spanning forest, not an assertion about the FUSF law; independent audit pending.",
++      "proof_text": "Let G be a connected countable locally finite graph and F a random spanning forest. Conditional on F, form a graph H on the F-components, joining two distinct components when infinitely many G-edges run between them. Suppose H is connected almost surely (a single component is permitted). Then for any 0<delta<1, F united with independent Bernoulli(delta) G-edges is connected almost surely.\n\nProof. For any given adjacent pair in H, the probability that none of its first k boundary edges is added is (1-delta)^k, which tends to zero. There are at most countably many pairs of components; conditional on F, almost surely every edge of H has at least one added representative. A finite H-path between any two F-components therefore lifts to a finite G-path using F-edges and added representatives. This proves connectivity. If the law of F is invariant under the given graph action, independent identical edge sprinkling preserves that invariance. Every edge is added outside F with probability delta P(e not in F)<=delta. Choose delta<epsilon for the strict inequality requested in P0046.\n\nExample: in Z^2 take F to be all vertical edges. Its components are columns, adjacent columns have infinitely many horizontal boundary edges, and H is the line. Every positive sprinkling connects F. In a window of 2H+1 horizontal levels with q columns, the exact connectivity probability is [1-(1-delta)^(2H+1)]^(q-1).\n\nThe hypothesis is not established for a general FUSF. The source explicitly notes that independent sprinkling fails on some nonamenable graphs, so this criterion is only a sufficient special case and a diagnostic for the missing interface structure. It does not solve Question 10.12 or the associated cost-equality problem.",
++      "assumptions": [],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign-w343:p0046-columns",
++        "url": "file:///~/brain_workers/w343/P0046_proof.md",
++        "revision": "author-checked-2026-10-10-pending-w347",
++        "license": "owner-own-work (campaign proof or status note)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "p0340-tree",
++      "to_existing_logical": "math:probability.core:open-problem-p0340-growth-of-the-minimal-drawn-length-of-critical-beta-splitting-trees",
++      "kind": "semantic_association",
++      "rationale": "FROM \"For a finite rooted full binary tree T with n leaves and edge height h(T), define l(leaf)=0 and l(T)=l(L)+l(R)+2+|h(L)-h(R)|. If D(T) is the sum of leaf depths,\"; TO \"Determine the expected total vertical length in the minimal integer-height drawing of DTCS(n); the source specifically proposes growth on the scale n*(log n)^4. Source: Aldous-Janson: Critical beta-splitting\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "p0340-height",
++      "to_existing_logical": "math:probability.core:open-problem-p0340-growth-of-the-minimal-drawn-length-of-critical-beta-splitting-trees",
++      "kind": "semantic_association",
++      "rationale": "FROM \"Let T_n be the independent recursive binary splitting tree with q_m(i)=m/[2H_(m-1)i(m-i)], where H_k=sum_(j=1)^k 1/j. For n>=2 put p=1/(2H_(n-1)), b=ceil(log_2 n), and theta=-log(1-p/2). Its expected edge height is\"; TO \"Determine the expected total vertical length in the minimal integer-height drawing of DTCS(n); the source specifically proposes growth on the scale n*(log n)^4. Source: Aldous-Janson: Critical beta-splitting\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "p0340-linear",
++      "to_existing_logical": "math:probability.core:open-problem-p0340-growth-of-the-minimal-drawn-length-of-critical-beta-splitting-trees",
++      "kind": "semantic_association",
++      "rationale": "FROM \"For T_n with independent recursive splits q_m(i)=m/[2H_(m-1)i(m-i)] and drawn-length recursion l(T)=l(L)+l(R)+2+|h(L)-h(R)|, with leaf height and length zero, put h_m=E h(T_m). Then E l(T_n)/n tends to c=(6/pi^2) sum_(m=2)^infinity\"; TO \"Determine the expected total vertical length in the minimal integer-height drawing of DTCS(n); the source specifically proposes growth on the scale n*(log n)^4. Source: Aldous-Janson: Critical beta-splitting\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "p0340-numeric",
++      "to_existing_logical": "math:probability.core:open-problem-p0340-growth-of-the-minimal-drawn-length-of-critical-beta-splitting-trees",
++      "kind": "semantic_association",
++      "rationale": "FROM \"The local check_p0340.py run checked 6918 ordered full binary trees through ten leaves with no tree-identity or depth-bound failures. A float64 height-distribution recursion agrees with weighted tree\"; TO \"Determine the expected total vertical length in the minimal integer-height drawing of DTCS(n); the source specifically proposes growth on the scale n*(log n)^4. Source: Aldous-Janson: Critical beta-splitting\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "c0036-two",
++      "to_existing_logical": "math:probability.determinantal:open-problem-c0036-fuglede-kadison-product-measure-bounds-for-equivariant-determinantal-p",
++      "kind": "specializes",
++      "rationale": "FROM \"For a Hermitian positive contraction Q=[[a,z],[conj(z),a]], put p=sqrt(a^2-|z|^2) and q=1-sqrt((1-a)^2-|z|^2). Its determinantal law stochastically dominates iid Bernoulli(p) and is stochastically dominated by iid Bernoulli(q). Both parameters are\"; TO \"For every Gamma-equivariant positive contraction Q on l^2(Gamma), P_Q stochastically dominates the product measure with density FK(Q) = exp tr log|Q| and is dominated by the product\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "c0036-necessary",
++      "to_existing_logical": "math:probability.determinantal:open-problem-c0036-fuglede-kadison-product-measure-bounds-for-equivariant-determinantal-p",
++      "kind": "semantic_association",
++      "rationale": "FROM \"For a determinantal probability law with positive-contraction kernel Q on N>=1 sites, iid lower stochastic domination at density b implies b<=det(Q)^(1/N); iid upper stochastic domination at density\"; TO \"For every Gamma-equivariant positive contraction Q on l^2(Gamma), P_Q stochastically dominates the product measure with density FK(Q) = exp tr log|Q| and is dominated by the product\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "c0036-conditioning",
++      "to_existing_logical": "math:probability.determinantal:open-problem-c0036-fuglede-kadison-product-measure-bounds-for-equivariant-determinantal-p",
++      "kind": "semantic_association",
++      "rationale": "FROM \"For Q=[[1/2,1/4],[1/4,1/2]], the minimum presence probability conditioned on the other site is 3/8, while the sharp iid lower domination density is sqrt(3)/4. Thus a worst-full-rest-conditional lower-bound method\"; TO \"For every Gamma-equivariant positive contraction Q on l^2(Gamma), P_Q stochastically dominates the product measure with density FK(Q) = exp tr log|Q| and is dominated by the product\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "p0013-defects",
++      "to_existing_logical": "math:probability.core:open-problem-p0013-expected-lovasz-theta-of-a-dense-independent-edge-graph",
++      "kind": "semantic_association",
++      "rationale": "FROM \"For a complement-invariant random graph G on n>=1 vertices, let X=theta(G)/sqrt(n), Y=theta(complement G)/sqrt(n), R=sqrt(XY), and Z=(log X-log Y)/2. Using theta(G)theta(complement G)>=n, E theta(G)/sqrt(n)-1=E(R-1)+E[R(cosh Z-1)], with both terms\"; TO \"For G distributed as G(n,1/2), is E theta(G)=(1+o(1)) sqrt(n)? Source: Randomstrasse101: Open Problems of 2025, Conjecture 17, Entry 9. Posed in Randomstrasse101: Open Problems of 2025 Status\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "p0150-whisker",
++      "to_existing_logical": "math:probability.core:open-problem-p0150-minimal-assumptions-for-heavy-tailed-critical-metric-convergence",
++      "kind": "semantic_association",
++      "rationale": "FROM \"Attach floor(sqrt(m)) new path vertices to the center of an m-vertex star, give all vertices uniform probability mass, and rescale graph distance by m^(-1/4). Every fixed iid\"; TO \"Remove the extra degree restrictions used to upgrade heavy-tailed critical configuration-model components from Gromov-weak convergence to Gromov-Hausdorff-Prokhorov convergence. Source: Van der Hofstad: Stochastic processes on random graphs,\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "p0150-mass",
++      "to_existing_logical": "math:probability.core:open-problem-p0150-minimal-assumptions-for-heavy-tailed-critical-metric-convergence",
++      "kind": "semantic_association",
++      "rationale": "FROM \"Finite sampled distance matrices can miss low-mass appendages. A route to compact metric convergence must separately control the mass of every fixed-radius ball (or obtain an equivalent\"; TO \"Remove the extra degree restrictions used to upgrade heavy-tailed critical configuration-model components from Gromov-weak convergence to Gromov-Hausdorff-Prokhorov convergence. Source: Van der Hofstad: Stochastic processes on random graphs,\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "c0003-tail",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0003-bypassing-the-laplace-transform-tail-condition-for-the-dgff-extremal-m",
++      "kind": "semantic_association",
++      "rationale": "FROM \"For a in [0,1], let W_a>=0 have survival probability 1/e on [0,e) and 1/[t(log t)^a] for t>=e. For s>0, E W_a^s is finite exactly when s<1. As\"; TO \"Prove that any family of non-trivial random measures {Z^D : D in the class of admissible domains} obeying properties (1)-(4) of Theorem 10.15 (Gibbs-Markov, conformal covariance, positivity,\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "c0060-fiber",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0060-positivity-of-the-vacant-set-threshold-u-for-random-interlacements-on",
++      "kind": "semantic_association",
++      "rationale": "FROM \"Let c be a cut vertex of a connected graph G and let a,b lie on opposite sides. Any finite set F contained in {c} x Z\"; TO \"For random interlacements on G x Z with G the discrete Sierpinski gasket graph, is the vacant-set percolation threshold u* strictly positive? Source: Drewitz, Rath, Sapozhnikov: An\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "c0085-sublevel",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0085-two-point-function-of-high-dimensional-invasion-percolation",
++      "kind": "semantic_association",
++      "rationale": "FROM \"On a connected countable locally finite infinite weighted graph, invasion starts at o and repeatedly adds the other endpoint of a minimum-weight boundary edge. If the ordinary\"; TO \"Show that for d > 6 there is a constant A such that P(x in the invasion percolation cluster) = A |x|^{-(d-4)}(1 + o(1)) as |x| ->\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "c0131-pathwise",
++      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0131-recurrence-transience-dichotomy-for-excited-random-walks-in-dimension",
++      "kind": "semantic_association",
++      "rationale": "FROM \"For an adapted nearest-neighbor walk on a connected countable graph, suppose each neighbor transition has conditional probability at least kappa>0 given the complete past. Almost surely, either\"; TO \"For excited random walks on Z^d, d >= 2, with i.i.d. uniformly elliptic cookie environments, is the walk either recurrent (visits every site infinitely often... in the\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "c0131-mixture",
++      "to_existing_logical": "math:probability.randomenvironment:open-problem-c0131-recurrence-transience-dichotomy-for-excited-random-walks-in-dimension",
++      "kind": "semantic_association",
++      "rationale": "FROM \"A fair global coin selecting either simple random walk on Z^2 or a constant-kernel walk with directional probabilities (3/8,1/8,1/4,1/4) yields a uniformly elliptic walk with recurrent-alternative probability\"; TO \"For excited random walks on Z^d, d >= 2, with i.i.d. uniformly elliptic cookie environments, is the walk either recurrent (visits every site infinitely often... in the\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "p0016-literature",
++      "to_existing_logical": "math:probability.core:open-problem-p0016-worst-square-submatrix-conditioning-in-a-gaussian-frame",
++      "kind": "semantic_association",
++      "rationale": "FROM \"The cached LITERATURE_P2.md receipt attributes an answer to Yitzchak Shmalo, Extreme least singular values of Gaussian row submatrices and a phase retrieval stability problem, arXiv:2607.06249 (7 July\"; TO \"For a (2M-1)-by-M matrix of independent standard real Gaussians, determine the asymptotic size of omega(A), the minimum smallest singular value over row subsets whose complement has rank\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "p0016-numeric",
++      "to_existing_logical": "math:probability.core:open-problem-p0016-worst-square-submatrix-conditioning-in-a-gaussian-frame",
++      "kind": "semantic_association",
++      "rationale": "FROM \"With NumPy RNG seed 343, the local check minimizes the smallest singular value over every m-row subset of 64 standard real Gaussian frames for each m=1,...,6: 384\"; TO \"For a (2M-1)-by-M matrix of independent standard real Gaussians, determine the asymptotic size of omega(A), the minimum smallest singular value over row subsets whose complement has rank\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "p0046-interfaces",
++      "to_existing_logical": "math:probability.core:open-problem-p0046-connecting-a-free-uniform-spanning-forest-by-arbitrarily-sparse-invari",
++      "kind": "semantic_association",
++      "rationale": "FROM \"Let F be a random spanning forest on a connected countable locally finite graph G. Join F-components when infinitely many G-edges run between them. If this component\"; TO \"For any Cayley graph, its free uniform spanning forest F, and epsilon>0, is there an invariant connected random spanning subgraph omega containing F with P(e in omega\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "p0046-columns",
++      "to_existing_logical": "math:probability.core:open-problem-p0046-connecting-a-free-uniform-spanning-forest-by-arbitrarily-sparse-invari",
++      "kind": "semantic_association",
++      "rationale": "FROM \"In Z^2 let F consist of all vertical edges. Every 0<delta<1 independent edge sprinkling connects its columns almost surely. In a rectangular window of q>=1 columns and\"; TO \"For any Cayley graph, its free uniform spanning forest F, and epsilon>0, is there an invariant connected random spanning subgraph omega containing F with P(e in omega\". Precise result or scope guard attached to the assigned question; no general solution inferred."
++    },
++    {
++      "from_key": "p0340-linear",
++      "to_key": "p0340-tree",
++      "kind": "depends_on",
++      "rationale": "FROM \"For T_n with independent recursive splits q_m(i)=m/[2H_(m-1)i(m-i)] and drawn-length recursion l(T)=l(L)+l(R)+2+|h(L)-h(R)|, with leaf height and length zero, put h_m=E h(T_m). Then E l(T_n)/n tends to c=(6/pi^2) sum_(m=2)^infinity\"; TO \"For a finite rooted full binary tree T with n leaves and edge height h(T), define l(leaf)=0 and l(T)=l(L)+l(R)+2+|h(L)-h(R)|. If D(T) is the sum of leaf depths,\". The endpoint statements explain the dependency or scope of the finite example."
++    },
++    {
++      "from_key": "p0340-linear",
++      "to_key": "p0340-height",
++      "kind": "depends_on",
++      "rationale": "FROM \"For T_n with independent recursive splits q_m(i)=m/[2H_(m-1)i(m-i)] and drawn-length recursion l(T)=l(L)+l(R)+2+|h(L)-h(R)|, with leaf height and length zero, put h_m=E h(T_m). Then E l(T_n)/n tends to c=(6/pi^2) sum_(m=2)^infinity\"; TO \"Let T_n be the independent recursive binary splitting tree with q_m(i)=m/[2H_(m-1)i(m-i)], where H_k=sum_(j=1)^k 1/j. For n>=2 put p=1/(2H_(n-1)), b=ceil(log_2 n), and theta=-log(1-p/2). Its expected edge height is\". The endpoint statements explain the dependency or scope of the finite example."
++    },
++    {
++      "from_key": "p0340-numeric",
++      "to_key": "p0340-tree",
++      "kind": "cites",
++      "rationale": "FROM \"The local check_p0340.py run checked 6918 ordered full binary trees through ten leaves with no tree-identity or depth-bound failures. A float64 height-distribution recursion agrees with weighted tree\"; TO \"For a finite rooted full binary tree T with n leaves and edge height h(T), define l(leaf)=0 and l(T)=l(L)+l(R)+2+|h(L)-h(R)|. If D(T) is the sum of leaf depths,\". The endpoint statements explain the dependency or scope of the finite example."
++    },
++    {
++      "from_key": "p0340-numeric",
++      "to_key": "p0340-height",
++      "kind": "cites",
++      "rationale": "FROM \"The local check_p0340.py run checked 6918 ordered full binary trees through ten leaves with no tree-identity or depth-bound failures. A float64 height-distribution recursion agrees with weighted tree\"; TO \"Let T_n be the independent recursive binary splitting tree with q_m(i)=m/[2H_(m-1)i(m-i)], where H_k=sum_(j=1)^k 1/j. For n>=2 put p=1/(2H_(n-1)), b=ceil(log_2 n), and theta=-log(1-p/2). Its expected edge height is\". The endpoint statements explain the dependency or scope of the finite example."
++    },
++    {
++      "from_key": "c0036-two",
++      "to_key": "c0036-necessary",
++      "kind": "depends_on",
++      "rationale": "FROM \"For a Hermitian positive contraction Q=[[a,z],[conj(z),a]], put p=sqrt(a^2-|z|^2) and q=1-sqrt((1-a)^2-|z|^2). Its determinantal law stochastically dominates iid Bernoulli(p) and is stochastically dominated by iid Bernoulli(q). Both parameters are\"; TO \"For a determinantal probability law with positive-contraction kernel Q on N>=1 sites, iid lower stochastic domination at density b implies b<=det(Q)^(1/N); iid upper stochastic domination at density\". The endpoint statements explain the dependency or scope of the finite example."
++    },
++    {
++      "from_key": "c0036-conditioning",
++      "to_key": "c0036-two",
++      "kind": "specializes",
++      "rationale": "FROM \"For Q=[[1/2,1/4],[1/4,1/2]], the minimum presence probability conditioned on the other site is 3/8, while the sharp iid lower domination density is sqrt(3)/4. Thus a worst-full-rest-conditional lower-bound method\"; TO \"For a Hermitian positive contraction Q=[[a,z],[conj(z),a]], put p=sqrt(a^2-|z|^2) and q=1-sqrt((1-a)^2-|z|^2). Its determinantal law stochastically dominates iid Bernoulli(p) and is stochastically dominated by iid Bernoulli(q). Both parameters are\". The endpoint statements explain the dependency or scope of the finite example."
++    },
++    {
++      "from_key": "p0150-mass",
++      "to_key": "p0150-whisker",
++      "kind": "cites",
++      "rationale": "FROM \"Finite sampled distance matrices can miss low-mass appendages. A route to compact metric convergence must separately control the mass of every fixed-radius ball (or obtain an equivalent\"; TO \"Attach floor(sqrt(m)) new path vertices to the center of an m-vertex star, give all vertices uniform probability mass, and rescale graph distance by m^(-1/4). Every fixed iid\". The endpoint statements explain the dependency or scope of the finite example."
++    },
++    {
++      "from_key": "p0016-numeric",
++      "to_key": "p0016-literature",
++      "kind": "cites",
++      "rationale": "FROM \"With NumPy RNG seed 343, the local check minimizes the smallest singular value over every m-row subset of 64 standard real Gaussian frames for each m=1,...,6: 384\"; TO \"The cached LITERATURE_P2.md receipt attributes an answer to Yitzchak Shmalo, Extreme least singular values of Gaussian row submatrices and a phase retrieval stability problem, arXiv:2607.06249 (7 July\". The endpoint statements explain the dependency or scope of the finite example."
++    },
++    {
++      "from_key": "p0046-columns",
++      "to_key": "p0046-interfaces",
++      "kind": "specializes",
++      "rationale": "FROM \"In Z^2 let F consist of all vertical edges. Every 0<delta<1 independent edge sprinkling connects its columns almost surely. In a rectangular window of q>=1 columns and\"; TO \"Let F be a random spanning forest on a connected countable locally finite graph G. Join F-components when infinitely many G-edges run between them. If this component\". The endpoint statements explain the dependency or scope of the finite example."
++    },
++    {
++      "from_key": "p0013-defects",
++      "to_existing_logical": "math:probability.core:open-problem-p0014-expected-lovasz-theta-of-a-random-circulant-graph",
++      "kind": "analogous_to",
++      "rationale": "FROM \"For a complement-invariant random graph G on n>=1 vertices, let X=theta(G)/sqrt(n), Y=theta(complement G)/sqrt(n), R=sqrt(XY), and Z=(log X-log Y)/2. Using theta(G)theta(complement G)>=n, E theta(G)/sqrt(n)-1=E(R-1)+E[R(cosh Z-1)], with both terms\"; TO \"For the graph on Z/nZ formed by independently including each unordered nonzero generator pair {k,-k} with probability 1/2, is E theta(G)=(1+o(1)) sqrt(n)? Source: Randomstrasse101: Open Problems of\". The circulant case has exact theta product, so its product defect is zero."
++    }
++  ]
++}

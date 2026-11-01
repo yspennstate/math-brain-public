@@ -1,0 +1,11 @@
+beta 5.0 alpha 100.0 N/d 1.0 d 1000 (n 100000, N 1000); mu1 0.60571 mus2 0.02742
+  no convergence at lam 10: The iteration is not making good progress, as measured by the 
+ improvement from the last ten iterations.
+Traceback (most recent call last):
+  File "T357\rf_limit_A\rf_cgmt.py", line 73, in <module>
+    for k in range(seeds):
+                     ^^^^^
+  File "T357\rf_limit_A\rf_cgmt.py", line 61, in cross
+    print(f"  no convergence at lam {lam:.3g}: {sol.message}", flush=True); break
+    ^^^^^
+IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed

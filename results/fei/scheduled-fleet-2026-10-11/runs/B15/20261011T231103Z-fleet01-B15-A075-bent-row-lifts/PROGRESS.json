@@ -1,0 +1,76 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T231103Z-fleet01-B15-A075-bent-row-lifts",
+  "stream": "B15",
+  "packet_id": "A075",
+  "packet_ids": ["A075"],
+  "gap_id": "C022-TWO-ADDRESS-PRODUCT-ROWS",
+  "attempt_id": "A075-attempt-01-rowwise-bent-lift",
+  "source_versions": {
+    "stream_contract_blob": "0b1f8d825bdfcc0bf36b86dab00edd1648a27444",
+    "stream_packet_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "packet_status_blob": "66a78ef3249a89d481a47320f990dc2aec002ccb",
+    "claim_registry_blob": "bef50513c8309b0e601aec42470bc09162f26ea8",
+    "obstruction_registry_blob": "d9c8b8632d019aa9e4d5c7394001d116fd21d94e",
+    "current_status_blob": "74f6ae761739455083804505ba0e0fd7aaf2f3e2"
+  },
+  "method": "Analytic row-wise Walsh tensor factorization with explicit quadratic bent signs; exact truth-table/FWHT validation on five frozen parameter vectors.",
+  "prior_status": "The 40/17 optimum was proved only in the finite edge-partition family and its complete signed two-point extension; no all-parameter lift theorem was available.",
+  "mathematical_delta": "Converted the finite 40/17 seed into an explicit infinite actual-Boolean family in every even added dimension. Proved exact H/I formulas and showed every row-wise bent lift decreases the ratio toward 2.",
+  "new_status": "A row-wise quadratic-bent lift theorem is author-proved for every finite parameter vector, pending independent review; C022 and full FEI remain open.",
+  "deliverable_status": "A075-D1_AND_A075-D2_AUTHOR_COMPLETE_PENDING_REVIEW",
+  "mathematical_status": "AUTHOR_PROVED_PARAMETERIZED_FAMILY_PENDING_INDEPENDENT_REVIEW",
+  "claim_versions_used": [
+    "B15-A071 finite 40/17 theorem at 5aca95345e9eaef015d406af6f84bf74c5a3e01d",
+    "B15-A071-SIGNED-PAIR-PRODUCT-02-v1 at b77c06c036e3fd6a206100e0fbde4fecb7c5e7e8"
+  ],
+  "claims_created_or_changed": ["B15-A075-ROWWISE-BENT-LIFT-01-v1"],
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "5aca95345e9eaef015d406af6f84bf74c5a3e01d",
+      "path": "reports/fei-2026-10-11/runs/B15/20261011T210906Z-fleet01-B15-A071-two-address-domain/REPORT.md",
+      "blob": "d60e96e63352d3a2edeeafe7d33b09b20bb28b3a"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "b77c06c036e3fd6a206100e0fbde4fecb7c5e7e8",
+      "path": "reports/fei-2026-10-11/runs/B15/20261011T220643Z-fleet01-B15-A071-affine-pair-reduction/REPORT.md",
+      "blob": "b54f7ea3f226d9fe97cbc0d003619349d4cfa5ea"
+    }
+  ],
+  "next_consumers": ["A025", "A080", "A082", "A085", "A092", "B20"],
+  "independent_reviewer_targets": ["A085", "A092"],
+  "next_action": "Classify arithmetic constraints on general product marginal odds from integer Walsh squares and {0,plus-or-minus-1} inversion, using the 1/5 residual marginal as the first non-fair control.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "General partial-sign product-spectrum rows remain unclassified.",
+    "C022 and full FEI remain open.",
+    "Independent review by A085 or A092 is absent."
+  ],
+  "validation": {
+    "arithmetic": "integers and fractions.Fraction",
+    "random_seed": null,
+    "parameter_vectors": 5,
+    "maximum_dimension": 10,
+    "maximum_truth_table_entries": 1024,
+    "aggregate_assertions_passed": 60,
+    "assertions_failed": 0,
+    "command": "python CHECK.py | tee CHECK.out"
+  },
+  "acceptance_evidence": [
+    "FINITE_PATTERN_TO_FAMILY.tex gives an actual Boolean construction for every finite parameter vector.",
+    "ASYMPTOTIC_PROOF.md gives exact coefficient, entropy, influence, monotonicity, and limiting formulas with no remainder.",
+    "CHECK.py independently reconstructs five truth tables and verifies Parseval, row product laws, exact metrics, and direct edge-count influence."
+  ],
+  "delivery": {
+    "local_staging": "COMPLETE",
+    "open_problems_repository": "SAVED_ALL_FILES_BASE_COMMIT_4818e1d42e6807e6a44433c7e15db20722352e69",
+    "brain_mirror": "SAVED_ALL_FILES_BASE_COMMIT_0ee63f84c865979a456354e82073d9635aca9eae",
+    "independent_review": "NOT_RUN",
+    "native_brain_ingestion": "NOT_RUN"
+  },
+  "full_fei_status": "OPEN"
+}

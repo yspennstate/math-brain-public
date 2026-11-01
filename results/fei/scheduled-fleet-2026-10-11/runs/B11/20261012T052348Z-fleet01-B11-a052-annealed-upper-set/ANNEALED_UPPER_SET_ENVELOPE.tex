@@ -1,0 +1,140 @@
+\section*{An annealed upper-set envelope for critical restrictions}
+
+All logarithms are base two.  Let $f:\{-1,1\}^n\to\{-1,1\}$ and put
+\[
+ p(T)=\widehat f(T)^2,\qquad
+ \pi(A)=\sum_{T\supseteq A}p(T).
+\]
+Let $J\subseteq[n]$ retain every coordinate independently with probability
+$t$, and let $X$ be a uniform assignment of $J^c$.  Write
+$g=f_{J,X}$.  For $A\subseteq J$ define
+\[
+ q_{J,X}(A)=\widehat g(A)^2,\qquad
+ \Pi_{J,X}(A)=\sum_{C:\,A\subseteq C\subseteq J}q_{J,X}(C),
+\]
+and the phase-free marginal
+\[
+ m_J(A)=\sum_{T:\,T\cap J=A}p(T).
+\]
+
+\begin{theorem}[annealed upper-set envelope]
+For every Boolean $f$ and every $t\in[0,1]$,
+\[
+ \boxed{\quad
+ \mathbb E_{J,X}U(f_{J,X})\le F_t(p):=
+ \mathbb E_J\sum_{A\subseteq J}m_J(A)
+       \log\frac{\pi(A)}{m_J(A)}.\quad}                 \tag{1}
+\]
+Terms with zero mass vanish.  This is an all-dimensional statement; it does
+not assume criticality or a lower bound on any spectral marginal.
+\end{theorem}
+
+\begin{proof}
+The restriction Fourier formula gives
+\[
+ \widehat g(A)=\sum_{B\subseteq J^c}\widehat f(A\cup B)\chi_B(X),
+\]
+so orthogonality in $X$ yields
+\[
+ \mathbb E_Xq_{J,X}(A)=m_J(A).                           \tag{2}
+\]
+Consequently
+\[
+ \mathbb E_X\Pi_{J,X}(A)
+ =\sum_{C:\,A\subseteq C\subseteq J}m_J(C)
+ =\sum_{T\supseteq A}p(T)=\pi(A).                       \tag{3}
+\]
+On $0\le x\le y$, the continuous extension of
+$\phi(x,y)=x\log(y/x)$ is jointly concave.  Indeed, after multiplying its
+Hessian by $\ln2$, one obtains
+\[
+ \begin{pmatrix}-1/x&1/y\\1/y&-x/y^2\end{pmatrix},
+\]
+which is negative semidefinite (its determinant is zero).  Jensen's inequality,
+(2), and (3) therefore give
+\[
+ \mathbb E_X\phi(q_{J,X}(A),\Pi_{J,X}(A))
+ \le\phi(m_J(A),\pi(A)).
+\]
+Summing over $A\subseteq J$ and then averaging $J$ proves (1). \qed
+\end{proof}
+
+\subsection*{Exact coordinate charge}
+
+Fix once and for all an order on $[n]$.  Let $Y$ be an independent spectral
+sample with law $p$.  For $A\subseteq J$ and $i\in J\setminus A$, put
+\[
+ Z_{<i}=\{j\in J\setminus A:j<i\}
+\]
+and
+\[
+ d_{J,A,i}=m_J(A)\log
+ \frac{\Pr[Y\supseteq A,\;Y\cap Z_{<i}=\varnothing]}
+      {\Pr[Y\supseteq A,\;Y\cap(Z_{<i}\cup\{i\})=\varnothing]}.
+                                                               \tag{4}
+\]
+Every denominator is positive whenever $m_J(A)>0$.  Set
+\[
+ C_i(t)=\mathbb E_J\sum_{A\subseteq J\setminus\{i\}}d_{J,A,i}.
+\]
+The probabilities in (4) telescope from $\pi(A)$ to $m_J(A)$ as the
+coordinates of $J\setminus A$ are exposed.  Hence
+\[
+ F_t(p)=\sum_{i=1}^n C_i(t),\qquad C_i(t)\ge0.             \tag{5}
+\]
+Writing $p_i=\Pr[i\in Y]=\operatorname{Inf}_i(f)$, Parseval gives
+$I(f)=\sum_i p_i$.  If $p_i=0$, then $C_i(t)=0$.  Thus, for every nonconstant
+$f$, some physical coordinate satisfies
+\[
+ \boxed{\qquad \frac{C_i(t)}{p_i}\ge\frac{F_t(p)}{I(f)}.\qquad}          \tag{6}
+\]
+The charge has the following probabilistic meaning: sample $J$, sample the
+observed intersection $A=Y\cap J$, and charge each retained absent coordinate
+the conditional surprisal of its absence after the earlier absent coordinates
+and all observed present coordinates have been revealed.
+
+\subsection*{Consequence for finite-dimensional ratio maximizers}
+
+Let $f$ attain
+\[
+ c_n=\max_{h\text{ nonconstant on }n\text{ bits}}H(h)/I(h),
+ \qquad R=c_n.
+\]
+The source-complete A052 random-restriction persistence theorem states
+\[
+ \mathbb E U(g)\ge
+ \left[\frac{R-2}{2}t-\frac{1-t}{\ln2}\right]I(f)
+ +\mathbb E\operatorname{Var}(g)+\frac12\mathbb E b(g),                 \tag{7}
+\]
+where
+\[
+ b(g)=\widehat g(\varnothing)^2
+       \log\frac1{\widehat g(\varnothing)^2}.
+\]
+Combining (1), (6), and (7), at $t=1/2$ there is an $i$ with $p_i>0$ such
+that
+\[
+ \boxed{
+ \frac{C_i(1/2)}{p_i}\ge \frac{F_{1/2}(p)}{I(f)}
+ \ge \frac{R-2}{4}-\frac1{2\ln2}
+ +\frac{\mathbb E\operatorname{Var}(g)+\frac12\mathbb E b(g)}{I(f)}.}  \tag{8}
+\]
+In particular, any hypothetical sequence of finite-dimensional maximizers
+with $R\to\infty$ must contain a physical coordinate whose normalized
+conditional-absence surprisal diverges at least as $R/4-O(1)$.  By the prior
+all-block critical theorem, once $R>4$ every such maximizer is already
+spectrally centered: $p_i<1/2$ for every nontrivial coordinate (more precisely,
+$\Psi(p_i)/p_i\ge R$ in that theorem's notation).  Thus the witness in (8)
+cannot be dismissed as a high-influence or spectrally determined coordinate.
+
+\subsection*{Scope and remaining payment}
+
+Equation (8) is a new necessary structural condition on maximizers and an
+exact phase-free upper envelope for the restriction frontier.  It is not an
+upper bound $U\le KI$ and therefore does not prove FEI.  The precise unpaid
+step is now static: prove, for a ratio-critical Boolean spectrum, that
+$\max_i C_i(1/2)/p_i\le K$ with universal $K$ (or at least bound the
+maximizing witness selected in (6)), or construct a genuine Boolean critical
+family for which this maximum diverges.
+Arbitrary probability distributions are not admissible substitutes for such a
+Boolean family.

@@ -1,0 +1,12 @@
+{
+  "helper_version": "A067-family-factorization-2",
+  "reason_for_change": "The direct all-anchor family job hit its frozen runtime limit; its exception was retained. Use exact disjoint-product support factorization instead, with independent full-superset-transform spot checks.",
+  "family": "Point defects and dictator surgeries n=2,...,12; majority3 tensor point defects n=2,...,8",
+  "case_count": {"point_defect_and_surgery": 22, "tensor_sources": 7, "character_anchors": 4064},
+  "domain": "Fixed stated dimensions, no automatic increase",
+  "symmetry": "No anchor omitted. Product spectrum factorizes on disjoint variables; the y factor has full support, so its superset maximum is exactly n for every y-support. Independent full transforms check the formula for every anchor at n=2,3,4 and four selected anchors at n=5,6,7,8.",
+  "arithmetic": "Integer Walsh, integer support maxima, exact Fraction",
+  "memory_estimate_mb": 50,
+  "maximum_runtime_seconds": 60,
+  "expected_runtime_seconds": 10
+}

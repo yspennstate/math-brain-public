@@ -1,0 +1,184 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\begin{document}
+\title{A062: influence conservation on stopped physical restriction trees}
+\author{A062, stream B13}\date{12 October 2026}\maketitle
+All entropies are in bits. Let $f:\{-1,1\}^n\to\{-1,1\}$,
+$p_f(S)=\widehat f(S)^2$, $H(f)=-\sum_Sp_f(S)\log_2p_f(S)$,
+and $I(f)=\sum_S|S|p_f(S)$. These are ordinary influences, not
+character-centered influences.
+
+\paragraph{Physical probability space.}
+Let $X$ be uniform on the input cube and let $R$ be independent auxiliary
+randomness. Include $R$ in $\mathcal F_0$. At time $t$, the next fresh
+coordinate $i_t$ (or fresh block $A_t$), and the decision to stop or wait,
+are measurable in $\mathcal F_t$. Reveal only the selected coordinates of
+$X$. The sigma field $\mathcal F_t$ contains the seed and the revealed
+physical history. Let $g_t$ be the actual Boolean restriction of $f$.
+Conditionally on this history, all unrevealed coordinates are still
+independent fair signs: induction on the reveal history proves this,
+since selection observes no unrevealed input. For a block $A_t$, each
+assignment has conditional probability $2^{-|A_t|}$. Repeated queries
+are redundant and have zero new cost, so omit them. Waiting has zero cost.
+
+\begin{lemma}[One step and fixed blocks]
+For a fresh physical block $A$ of a restricted Boolean function $g$,
+\[
+ I(g)=I_A(g)+2^{-|A|}\sum_z I(g_z),\qquad
+ I_A(g)=\sum_{i\in A}\operatorname{Inf}_i(g).
+\]
+For a singleton $A=\{i\}$, the cost is exactly $\operatorname{Inf}_i(g)$.
+\end{lemma}
+\begin{proof}
+For each $j\notin A$, average the $j$-edge disagreement indicator over
+the physical assignment on $A$. This gives
+$\operatorname{Inf}_j(g)=2^{-|A|}\sum_z\operatorname{Inf}_j(g_z)$.
+Sum over $j\notin A$ and add the influences in $A$.
+Equivalently, Fourier Parseval on the revealed block gives the same
+identity. If a fixed block is revealed in several stages, possibly in a
+history-dependent order, its total expected query cost is $I_A(g)$:
+apply the singleton identities and observe that the terminal restriction
+has exactly the same law as revealing all of $A$ at once. The realized
+path cost need not equal $I_A(g)$.
+\end{proof}
+
+\paragraph{Entropy on the same tree.}
+Define
+\[
+ \delta_A(g)=H(g)-2^{-|A|}\sum_zH(g_z).
+\]
+Let $S\sim p_g$, $q(T)=\Pr(S\setminus A=T)$, and, under a separate
+one-node channel experiment, sample $Z$ uniformly on $A$, then sample
+$T$ from the Fourier law of $g_Z$. Partial Parseval gives
+$q(T)=\mathbb E_Z\widehat {g_Z}(T)^2$. Consequently
+\[
+ \delta_A(g)=B_A(g)+J_A(g),\quad
+ B_A(g)=H(S\cap A\mid S\setminus A),\quad J_A(g)=I(Z;T)\ge0.
+\]
+Both terms are nonnegative. The physical tree probabilities are not
+spectral probabilities; this identity does not choose the next query by
+sampling a spectral set.
+
+For a singleton, writing the parent coefficients as $u_T$ and $v_T$ in
+the two queried-frequency sectors, the child laws are $(u_T+v_T)^2$ and
+$(u_T-v_T)^2$. Their Jensen--Shannon divergence is $J_i$.
+Put $m=u^2+v^2$ and $z=2|uv|/m$. In natural units its packet contribution
+is $m d(z)$, where
+\[
+ d(z)=\tfrac12[(1+z)\ln(1+z)+(1-z)\ln(1-z)].
+\]
+The derivative comparison
+$d'(z)=\operatorname{atanh}z\le z/\sqrt{1-z^2}$ proves
+$d(z)\le1-\sqrt{1-z^2}$ by integration, including endpoints by
+continuity. Thus
+\[
+ 0\le J_i(g)\le\frac{2}{\ln2}\sum_T\min(u_T^2,v_T^2)
+ \le\frac{2}{\ln2}\operatorname{Inf}_i(g).                 \tag{1}
+\]
+The derivative comparison itself follows by differentiating its right
+side minus left side: $(1-z^2)^{-3/2}-(1-z^2)^{-1}\ge0$.
+
+\begin{theorem}[Finite-tree optional stopping, including labelled budgets]
+Let $\tau$ be a bounded stopping time on the above tree. Let
+$c_t=I_{A_t}(g_t)$ and $e_t=\delta_{A_t}(g_t)$, both zero after stopping.
+Write $Q_t=\sum_{s<t}c_s$ and $D_t=\sum_{s<t}e_s$. Then
+\[
+ M_t=I(g_t)+Q_t,\qquad N_t=H(g_t)+D_t
+\]
+are martingales, and
+\[
+ I(f)=\mathbb E Q_\tau+\mathbb E I(g_\tau),\qquad
+ H(f)=\mathbb E D_\tau+\mathbb E H(g_\tau).                 \tag{2}
+\]
+In particular, $\mathbb E Q_\tau\le I(f)$.
+For each original coordinate $j$, the expected cost of querying $j$ plus
+its expected residual influence at the terminal restriction is exactly
+$\operatorname{Inf}_j(f)$.
+\end{theorem}
+\begin{proof}
+The one-step identities say
+$\mathbb E[I(g_{t+1})\mid\mathcal F_t]=I(g_t)-c_t$ and
+$\mathbb E[H(g_{t+1})\mid\mathcal F_t]=H(g_t)-e_t$.
+For a stopping time, $\mathbf1_{t<\tau}$ is $\mathcal F_t$-measurable.
+Multiply each drift identity by that indicator, take expectations, and
+sum over the finite horizon. This proves (2) without invoking any
+unbounded optional-stopping theorem.
+For a coordinate $j$, keep its residual influence until it is queried,
+then replace it by its query cost. Reveals of other coordinates preserve
+its conditional expected influence by edge averaging. Its own reveal
+adds exactly the quantity removed. This gives a martingale for each
+label $j$, and finite summation proves the last assertion.
+\end{proof}
+
+If $\pi_v$ is the physical probability of reaching an internal node or
+terminal leaf, the same identities read
+\[
+ I(f)=\sum_{v\text{ internal}}\pi_v c_v+
+       \sum_{\ell\text{ terminal}}\pi_\ell I(g_\ell),\quad
+ H(f)=\sum_{v\text{ internal}}\pi_v e_v+
+       \sum_{\ell\text{ terminal}}\pi_\ell H(g_\ell).       \tag{3}
+\]
+The weights include all decision randomization as well as the fair
+physical branches. A zero-probability node contributes zero.
+
+\paragraph{The payment interface, not a payment theorem.}
+For singleton queries, let
+$B_{\mathcal T}=\mathbb E\sum_{t<\tau}B_{i_t}(g_t)$ and
+$J_{\mathcal T}=\mathbb E\sum_{t<\tau}J_{i_t}(g_t)$.
+Then (1)--(2) give
+\[
+ H(f)=B_{\mathcal T}+J_{\mathcal T}+\mathbb EH(g_\tau),
+ \qquad J_{\mathcal T}\le(2/\ln2)\mathbb E Q_\tau.
+\]
+If a separately proved policy satisfies
+$B_{\mathcal T}\le K\mathbb E Q_\tau$ and its actual leaves satisfy
+$H(g_\tau)\le C_L I(g_\tau)$ almost surely, then
+\[
+ H(f)\le \max\{K+2/\ln2,C_L\}I(f).                       \tag{4}
+\]
+This conclusion is depth independent and charges every label only once.
+The policy existence and the bound on $B_{\mathcal T}$ remain open in
+the universal setting. A local condition
+$\delta_i(g)\le C\operatorname{Inf}_i(g)$ would make
+$H(g_t)-C I(g_t)$ a submartingale, not a supermartingale;
+equivalently $C I(g_t)-H(g_t)$ is a supermartingale. Neither drift
+condition is a consequence of (2).
+
+\paragraph{Fixed dimension with unbounded waiting or randomized stopping.}
+On an $n$-cube there are at most $n$ fresh singleton reveals, or $n$ total
+coordinates across block reveals. Pathwise $0\le Q_t\le n$,
+$0\le I(g_t)\le n$, $0\le H(g_t)\le n$, and
+$0\le D_t\le n^2$, since each nonzero entropy decrement is at most $n$.
+After absorbing at $\tau$, the restriction eventually stabilizes on each
+path, even if $\tau=\infty$: a finite set of actual finite reveal times
+has a finite maximum. The terminal restriction means this limiting
+restriction. Apply (2) to $\tau\wedge m$ and pass $m\to\infty$ by
+bounded convergence. This proves (2) for all such stopping rules,
+without a bound on $\mathbb E\tau$. Including independent randomness
+in $\mathcal F_0$ justifies arbitrary randomized policies by the same
+argument. Anticipative choices using unrevealed inputs are excluded.
+
+\paragraph{Genuinely unbounded processes.}
+Suppose an abstract fair-restriction process has nonnegative residual
+influence $I_t$, integrable $I_0$, and the stated one-step drift
+$\mathbb E[I_{t+1}\mid\mathcal F_t]=I_t-c_t$ with $c_t\ge0$.
+For the stopped process, monotone convergence gives
+$Q_\infty=\sum_{t<\tau}c_t\in L^1$ and
+$\mathbb E Q_\infty\le\mathbb E I_0$.
+The nonnegative supermartingale $I_{t\wedge\tau}$ converges almost
+surely to $I_*$; Fatou gives only
+\[
+ \mathbb E Q_\infty+\mathbb E I_*\le\mathbb E I_0.          \tag{5}
+\]
+Equality follows if the residual influences are uniformly integrable,
+for example if dominated by one integrable variable. Equivalently,
+given almost-sure convergence, convergence of their expectations is the
+needed nonnegative $L^1$ condition. For entropy the same statement
+requires finite initial entropy, nonnegative entropy drifts, and a
+separate uniform-integrability hypothesis on residual entropy.
+Identifying $I_*$ or the entropy limit with a limiting Boolean
+restriction is another continuity obligation. No such infinite-input
+identification is asserted here.
+\end{document}

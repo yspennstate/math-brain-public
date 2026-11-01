@@ -1,0 +1,349 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B11",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A051",
+      "stream": "B11",
+      "topic": "Near-extremizer definition",
+      "target_statement": "Define an admissible extremality notion stable under the reductions actually used. Prove a compactness, finite approximation, or minimal-counterexample statement before assuming existence of an optimizer.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A051-D1",
+          "description": "EXTREMALITY_DEFINITION.tex: optimizer or minimal-counterexample framework",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A051-D2",
+          "description": "EXISTENCE_AND_LIMITS.md: proved existence/approximation and retained invariances",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Distinguish a maximum over a fixed finite dimension from a supremum over all dimensions; the latter need not be attained.",
+        "If using a minimal counterexample, state a fixed proposed constant and prove the relevant well-ordering/existence conclusion conditionally on a counterexample.",
+        "Show which tensor/balancing/activation operations preserve the chosen extremality property before using them in a structural argument."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A002",
+          "interface": "admissible transformations"
+        },
+        {
+          "agent_id": "A005",
+          "interface": "hardness-equivalence tests"
+        },
+        {
+          "agent_id": "A055",
+          "interface": "critical-class adversary"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A052",
+          "interface_use": "proved extremality framework"
+        },
+        {
+          "agent_id": "A053",
+          "interface_use": "chosen primitivity/extremality condition"
+        },
+        {
+          "agent_id": "A055",
+          "interface_use": "exact extremality tests"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A rigorous extremality framework supporting one nontrivial structural consequence, rather than an assumed optimizer.",
+      "source_ids": [
+        "brain_component_entropy",
+        "brain_component_ratio",
+        "brain_route_map",
+        "reductions_main"
+      ],
+      "advisory_F_tags": [
+        "F15",
+        "F17"
+      ]
+    },
+    {
+      "agent_id": "A052",
+      "stream": "B11",
+      "topic": "Critical-source structure",
+      "target_statement": "Seek a structural restriction forced by ratio extremality under every allowed physical descendant. Test the claim against known component-pruning failures and explain why criticality changes the argument.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A052-D1",
+          "description": "CRITICAL_SOURCE_STRUCTURE.tex: necessary physical-descendant inequality",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A052-D2",
+          "description": "PRUNING_SCOPE.md: failed component rules and the new critical hypothesis",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Derive the structural restriction from the exact ratio or deficit comparison for every allowed physical descendant.",
+        "Replay the known component raw-entropy and maximum-component-ratio counterexamples; criticality must be used at a specified line.",
+        "Do not assume descendants inherit full criticality or that disconnected support permits lossless pruning without a separate proof."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A051",
+          "interface": "proved extremality framework"
+        },
+        {
+          "agent_id": "A029",
+          "interface": "actual child-deficit identity"
+        },
+        {
+          "agent_id": "A054",
+          "interface": "component-excess replacement"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A054",
+          "interface_use": "proved critical-class condition"
+        },
+        {
+          "agent_id": "A055",
+          "interface_use": "candidate critical-source theorem"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A new necessary structural lemma for a rigorously admitted critical class, or an embedding that invalidates it.",
+      "source_ids": [
+        "brain_component_entropy",
+        "brain_component_ratio",
+        "brain_route_map",
+        "reductions_main"
+      ],
+      "advisory_F_tags": [
+        "F15",
+        "F17"
+      ]
+    },
+    {
+      "agent_id": "A053",
+      "stream": "B11",
+      "topic": "Near-tensor perturbations",
+      "target_statement": "Analyze point surgery on products and quantify entropy, influence, and mixed derivative curvature. Determine whether proposed primitivity or nonfactorization conditions really control hidden tensor structure.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A053-D1",
+          "description": "NEAR_TENSOR_PERTURBATIONS.tex: entropy, influence, and mixed-derivative expansions",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A053-D2",
+          "description": "HIDDEN_TENSOR_DIAGNOSTIC.md: which structural tests detect the seed factor",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Keep the signed Fourier perturbation terms and prove uniform remainder estimates in the tensor and defect parameters.",
+        "Quantify the proposed mixed-derivative or nonfactorization statistic, rather than inferring primitivity from visual circuit connectedness.",
+        "Show whether an arbitrarily hard tensor core still passes the proposed condition after tiny surgery, with all influence costs included."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A022",
+          "interface": "exact one-point surgery"
+        },
+        {
+          "agent_id": "A056",
+          "interface": "product H/I identities"
+        },
+        {
+          "agent_id": "A051",
+          "interface": "chosen primitivity/extremality condition"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A022",
+          "interface_use": "near-tensor surgery setup"
+        },
+        {
+          "agent_id": "A054",
+          "interface_use": "nearly disconnected controls"
+        },
+        {
+          "agent_id": "A055",
+          "interface_use": "near-tensor constructions"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A rigorous hidden-core admission result or a proved statistic that excludes the constructed near-tensor family.",
+      "source_ids": [
+        "brain_component_entropy",
+        "brain_component_ratio",
+        "brain_route_map",
+        "reductions_main"
+      ],
+      "advisory_F_tags": [
+        "F15",
+        "F17"
+      ]
+    },
+    {
+      "agent_id": "A054",
+      "stream": "B11",
+      "topic": "Connectedness alternatives",
+      "target_statement": "Replace false unrestricted component entropy or ratio inequalities by a controlled-excess theorem with an explicit interface term. Prove that the interface term can be paid in a stated critical class.",
+      "work_type": "new_math",
+      "priority": "P1",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A054-D1",
+          "description": "COMPONENT_EXCESS.tex: corrected inequality and explicit interface term",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A054-D2",
+          "description": "CRITICAL_INTERFACE_PAYMENT.md: admitted class and full cost comparison",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Retain the existing counterexamples to raw component entropy subadditivity and maximum component ratio as mandatory controls.",
+        "Define the interface term independently of the desired conclusion; setting it equal to the unbounded unexplained entropy gap is not a payment.",
+        "Prove both the component comparison and an influence payment of the interface on the stated critical class; keep universal class admission separate."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A052",
+          "interface": "proved critical-class condition"
+        },
+        {
+          "agent_id": "A053",
+          "interface": "nearly disconnected controls"
+        },
+        {
+          "agent_id": "A040",
+          "interface": "candidate excess-payment diagnostics"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A052",
+          "interface_use": "component-excess replacement"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A complete controlled-excess theorem with a useful paid interface or a parameterized counterexample to that interface.",
+      "source_ids": [
+        "brain_component_entropy",
+        "brain_component_ratio",
+        "brain_route_map",
+        "reductions_main"
+      ],
+      "advisory_F_tags": [
+        "F15",
+        "F17"
+      ]
+    },
+    {
+      "agent_id": "A055",
+      "stream": "B11",
+      "topic": "Extremal obstruction referee",
+      "target_statement": "Try to realize arbitrary hard cores inside every proposed critical class. Preserve all extremality tests in the embedding or identify the exact failed condition.",
+      "work_type": "independent_scope_review",
+      "priority": "P1",
+      "mathematical_design_status": "REVIEW_PENDING",
+      "deliverables": [
+        {
+          "deliverable_id": "A055-D1",
+          "description": "CRITICAL_CLASS_EMBEDDINGS.tex: seed construction and every admission test",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A055-D2",
+          "description": "EXTREMAL_SCOPE_VERDICTS.json: preserved, violated, or unresolved conditions",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Preserve all declared criticality tests in an arbitrary-hard-core embedding before concluding FEI-equivalence.",
+        "Distinguish mere connectedness/primitivity/all-block terminality from full ratio criticality; known failures of the former do not automatically refute the latter.",
+        "If an embedding fails, locate the exact inequality and prove the failure quantitatively instead of declaring the class genuinely easier."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A051",
+          "interface": "exact extremality tests"
+        },
+        {
+          "agent_id": "A052",
+          "interface": "candidate critical-source theorem"
+        },
+        {
+          "agent_id": "A053",
+          "interface": "near-tensor constructions"
+        },
+        {
+          "agent_id": "A002",
+          "interface": "arbitrary-seed transformations"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A005",
+          "interface_use": "critical-class admission tests"
+        },
+        {
+          "agent_id": "A051",
+          "interface_use": "critical-class adversary"
+        }
+      ],
+      "independent_reviewers": [
+        "A090",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "A precise admission verdict for one live critical class, with the original seed and limiting ratio explicit.",
+      "source_ids": [
+        "brain_component_entropy",
+        "brain_component_ratio",
+        "brain_route_map",
+        "reductions_main"
+      ],
+      "advisory_F_tags": [
+        "F15",
+        "F17"
+      ]
+    }
+  ]
+}

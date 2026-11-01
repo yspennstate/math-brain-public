@@ -1,0 +1,25 @@
+Deterministic diagnostics for fleet01/B01 r15. These are checks, not an independent proof review.
+
+partner_residual_W2 0.24999999999999978
+aggregate_bound_partner_stress 17.275717919798065
+partner_grouped_bound 9.513656920021768
+
+eps 1.0 W2 4.0 T 4.0 gamma 4.0 bound 12.215777290955167 spectrum [-1.0, -1.0, 1.0, 1.0, 1.0]
+eps 0.1 W2 40000.00000000004 T 400.00000000000045 gamma 4.000000000000005 bound 12.215777290955165 spectrum [-10.0, -10.0, 0.1, 10.0, 10.0]
+eps 0.01 W2 400000000.0000007 T 40000.00000000007 gamma 4.000000000000007 bound 12.215777290955165 spectrum [-100.0, -100.0, 0.01, 100.0, 100.0]
+
+Random-cut exact expectation checks:
+randomcut_n 4 W2/16 0.0029295197453552708 avg 0.0029295197453552708 err 0.0
+randomcut_n 5 W2/16 4.116062114040623 avg 4.1160621140406235 err 8.881784197001252e-16
+randomcut_n 6 W2/16 1.5859189635035598 avg 1.585918963503561 err 1.3322676295501878e-15
+randomcut_n 7 W2/16 6.458006230016248 avg 6.458006230016248 err 0.0
+
+Zero-currency model checks:
+signed_rank1_sigma 1 W2 2.684588177746986e-31
+signed_rank1_sigma -1 W2 1.0487223704941063e-30
+star_W2 0.0
+triangle_W2 0.0
+
+CONST_AGG 14.52708926969255
+CONST_GAMMA2 13.321399596303262
+STATUS=PASS

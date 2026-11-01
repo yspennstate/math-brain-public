@@ -1,0 +1,62 @@
+[
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 33,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "forward_brownian_sparse_bessel_piece_frequency",
+      "historical_status": "source_says_open",
+      "locator": "Problem 7.4, PDF page 26",
+      "problem_id": "P0031",
+      "recorded_at": "2026-09-06T16:10:50Z",
+      "result_status": "not_started",
+      "schema": "probability-problem.v1",
+      "source_id": "burdzy_scheutzow_2014",
+      "statement": "In a two-sided independent concatenation, use unit-length Brownian segments except at increasingly rare negative-time indices where segments stop on first hitting -1. Characterize frequencies giving backward or two-sided Brownian motion.",
+      "statement_caveat": "The exact deterministic or random schedule is part of the classification; do not invent a schedule and count it as another sourced question.",
+      "title": "Sparse first-passage pieces in a forward Brownian concatenation",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/problems.jsonl",
+    "line": 133,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "forward_brownian_sparse_bessel_piece_frequency",
+      "historical_status": "source_says_open",
+      "locator": "Problem 7.4, PDF page 26",
+      "problem_id": "P0031",
+      "recorded_at": "2026-09-06T19:17:12Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "burdzy_scheutzow_2014",
+      "statement": "In a two-sided independent concatenation, use unit-length Brownian segments except at increasingly rare negative-time indices where segments stop on first hitting -1. Characterize frequencies giving backward or two-sided Brownian motion.",
+      "statement_caveat": "The exact deterministic or random schedule is part of the classification; do not invent a schedule and count it as another sourced question.",
+      "title": "Sparse first-passage pieces in a forward Brownian concatenation",
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~/Downloads/Probability_1000_20h_20260906/attempts.jsonl",
+    "line": 33,
+    "record": {
+      "attempt_id": "P0031-A001",
+      "depth": "first_pass",
+      "full_problem_solved": false,
+      "independent_check": "Independence is not needed for this Borel-Cantelli upper bound. Infinite means do not contradict the almost-sure sparse-clock estimate.",
+      "independent_review": "none",
+      "method": "Sparse exceptional hitting-time clock estimate",
+      "novelty": "not_claimed",
+      "obstruction": "A negligible exceptional time fraction is an asymptotic statement; it does not construct an exact backward Brownian law after a finite random shift. The full frequency classification remains open here.",
+      "problem_id": "P0031",
+      "recorded_at": "2026-09-06T17:37:31Z",
+      "result": "For a standard Brownian first hitting time tau of -1, reflection gives P(tau>t)=2 Phi(1/sqrt(t))-1 ~ sqrt(2/pi)t^(-1/2), hence E tau=infinity. If exceptional segment indices are 2^k, then sum_k P(tau_k>epsilon 2^k)<infinity. Borel-Cantelli yields tau_k/2^k ->0 almost surely. Splitting the sum into finitely many early terms and a geometrically weighted tail gives sum_(k<=K) tau_k/2^K ->0.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_limited_argument"
+    }
+  }
+]

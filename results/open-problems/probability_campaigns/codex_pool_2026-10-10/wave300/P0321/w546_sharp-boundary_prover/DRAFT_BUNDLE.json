@@ -1,0 +1,162 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w546",
+  "bundle_slug": "p0321-smooth-variance-bridge-counterexamples-20261010",
+  "entries": [
+    {
+      "key": "gaussian-increments",
+      "namespace": "probability.statisticalmechanics",
+      "logical_name": "cutoff-planar-gaussian-angle-field-with-stationary-increments",
+      "kind": "definition",
+      "title": "Cutoff planar Gaussian angle-increment field",
+      "statement": "For beta,K,Lambda>0, g is the centered real Gaussian field on R^2 anchored by g(0)=0 with covariance E[g(x)g(y)]=integral_{0<|k|<Lambda}(exp(i k.x)-1)(exp(-i k.y)-1)/(beta K |k|^2) d^2k/(2pi)^2. The integral is a finite positive Gram kernel. Its stationary increment variance v(x-y)=F(Lambda|x-y|)/(pi beta K), with F(z)=integral_0^z(1-J0(t))dt/t, is (pi beta K)^-1 log|x-y|+O(1) at large separation. This is an explicit auxiliary field, not a microscopic Riesz Gibbs identification.",
+      "proof_text": null,
+      "assumptions": [
+        "beta,K,Lambda positive and finite",
+        "real symmetric Gaussian spectral construction",
+        "finite ultraviolet cutoff"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w546:P0321:gaussian-increments",
+        "url": "file:///~/brain_workers/w546/LEMMA_L03.md",
+        "revision": "author proof 2026-10-10; pending w548 independent review",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "quantized-counterexample",
+      "namespace": "probability.statisticalmechanics",
+      "logical_name": "stationary-increment-quantized-angle-defeats-variance-order-inference",
+      "kind": "concept",
+      "title": "DRAFT: quantized angle variance does not determine periodic order",
+      "statement": "DRAFT AUTHOR-PROVED AUXILIARY COUNTEREXAMPLE, pending independent w548 review. Let g be the cutoff planar Gaussian increment field, m=6, h=2pi/m, and U,V independent uniforms in [0,h), independent of g. Set q(x)=h floor((g(x)+V)/h), theta=U+q. The field q has stationary increments. With v=Var[g(x)-g(y)], v<=Var[q(x)-q(y)]<=v+h^2/4, so its variance grows logarithmically with bounded error. However E exp[i6(theta(x)-theta(y))]=1 identically and E exp(i6theta(x))=0. This disproves a variance-only inference for periodic order, not the existence of a hexatic Riesz Gibbs phase.",
+      "proof_text": null,
+      "assumptions": [
+        "specified Gaussian increment field g",
+        "independent global uniform offsets U,V",
+        "h=2pi/6",
+        "abstract angle-lift construction"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w546:P0321:quantized-counterexample",
+        "url": "file:///~/brain_workers/w546/LEMMA_L04.md",
+        "revision": "author proof 2026-10-10; pending w548 independent review",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "smooth-counterexample",
+      "namespace": "probability.statisticalmechanics",
+      "logical_name": "smooth-monotone-angle-perturbation-breaks-variance-to-order-inference",
+      "kind": "concept",
+      "title": "DRAFT: smooth bounded perturbations can retain orientational order",
+      "statement": "DRAFT AUTHOR-PROVED AUXILIARY COUNTEREXAMPLE, pending independent w548 review. Let g be the cutoff planar Gaussian increment field, m=6, h=2pi/m, 0<A<1/m, and U,V independent uniforms on [0,h), independent of g. Put f_A(t)=t+A sin(mt), q_A(x)=f_A(g(x)+V)-f_A(V), theta_A=U+q_A. The map f_A is smooth strictly increasing, |q_A-g|<=2A, and q_A has stationary increments. With v=Var[g(x)-g(y)], Var[q_A(x)-q_A(y)]=v+A^2(1-exp(-m^2v/2)). Yet C_m(x-y)=E exp[i m(theta_A(x)-theta_A(y))] tends to J1(mA)^2>0. Its m-fold phase field is stationary with zero one-point mean. Hence even a smooth bounded monotone perturbation with logarithmic variance correct to O(1) can fail algebraic decay of periodic order. This is not a Riesz Gibbs model or a P0321 solution.",
+      "proof_text": null,
+      "assumptions": [
+        "specified real Gaussian stationary-increment field with finite UV cutoff",
+        "m=6; 0<A<1/m",
+        "independent global uniforms U,V",
+        "no microscopic Gibbs identification"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w546:P0321:smooth-counterexample",
+        "url": "file:///~/brain_workers/w546/LEMMA_L05.md",
+        "revision": "author proof 2026-10-10; pending w548 independent review",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "rejected-bridge",
+      "namespace": "probability.statisticalmechanics",
+      "logical_name": "rejected-logarithmic-angle-variance-to-sixfold-decay-bridge",
+      "kind": "concept",
+      "title": "Rejected route: logarithmic variance alone implies sixfold decay",
+      "statement": "DRAFT ROUTE AUDIT, pending independent w548 review. The proposed implication that stationary angle increments with Var(theta(x)-theta(y))=c log|x-y|+O(1), c>0, automatically give algebraically vanishing E exp[i6(theta(x)-theta(y))] is FALSE for general non-Gaussian fields. The quantized construction has correlation 1, and the smooth bounded monotone construction has positive plateau J1(6A)^2 despite preserving the Gaussian variance within A^2. Gaussianity or direct periodic characteristic-function estimates must be part of a valid inference. These auxiliary counterexamples do not refute P0321.",
+      "proof_text": null,
+      "assumptions": [
+        "proposed bridge assumes stationary increments and logarithmic variance",
+        "bridge does not assume an exactly Gaussian angular law"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w546:P0321:rejected-bridge",
+        "url": "file:///~/brain_workers/w546/LEMMA_L05.md",
+        "revision": "author proof 2026-10-10; pending w548 independent review",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "transfer-gap",
+      "namespace": "probability.statisticalmechanics",
+      "logical_name": "riesz-hexatic-microscopic-characteristic-function-transfer-gap",
+      "kind": "concept",
+      "title": "DRAFT: the unresolved microscopic hexatic transfer gap",
+      "statement": "P0321 OPENNESS UNKNOWN as checked 2026-10-10; no solution claimed. The remaining gap in this attempt is a uniform defect-sensitive transfer from an actual neutralized two-dimensional Riesz Gibbs ensemble on a nonempty finite-temperature interval to the orientational characteristic function and fast positional decorrelation in the SAME thermodynamic state, with measurable bond observables specified. Defect-free phonons give a positive orientational plateau and algebraic positional order; a Gaussian variance approximation alone also fails by the explicit non-Gaussian counterexamples. Control of dislocations/disclinations and of periodic characteristic functions is missing. This is a draft gap record, not a theorem about the Gibbs gas.",
+      "proof_text": null,
+      "assumptions": [
+        "actual Riesz Gibbs law and neutralization must be specified",
+        "phase interval is nonempty and at finite positive temperature",
+        "moment estimates alone are insufficient"
+      ],
+      "domain": "probability and statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w546:P0321:transfer-gap",
+        "url": "file:///~/brain_workers/w546/ATTEMPT.md",
+        "revision": "author proof 2026-10-10; pending w548 independent review",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "quantized-counterexample",
+      "to_key": "gaussian-increments",
+      "kind": "depends_on",
+      "rationale": "The explicit construction q=h floor((g+V)/h) uses the specified stationary Gaussian increments; its variance differs from v by at most h^2/4."
+    },
+    {
+      "from_key": "smooth-counterexample",
+      "to_key": "gaussian-increments",
+      "kind": "depends_on",
+      "rationale": "The construction f_A(g+V)-f_A(V) uses the same g, and the Gaussian increment characteristic function enters its exact variance and Fourier correlation."
+    },
+    {
+      "from_key": "smooth-counterexample",
+      "to_key": "quantized-counterexample",
+      "kind": "analogous_to",
+      "rationale": "Both preserve logarithmic increment variance up to a bounded error and retain periodic long-range order; the smooth version additionally uses a strictly increasing smooth f_A."
+    },
+    {
+      "from_key": "quantized-counterexample",
+      "to_key": "rejected-bridge",
+      "kind": "refutes",
+      "rationale": "The rejected bridge predicts vanishing sixfold correlation from c log r+O(1) variance, but q has that variance and its sixfold correlation is identically 1."
+    },
+    {
+      "from_key": "smooth-counterexample",
+      "to_key": "rejected-bridge",
+      "kind": "refutes",
+      "rationale": "The rejected variance-only inference predicts decaying periodic order; the smooth stationary-increment example has variance v+O(1) and positive limit J1(6A)^2."
+    },
+    {
+      "from_key": "transfer-gap",
+      "to_key": "smooth-counterexample",
+      "kind": "cites",
+      "rationale": "The gap record requires characteristic-function transfer because the smooth construction shows covariance accuracy alone can give the wrong order behavior."
+    },
+    {
+      "from_key": "transfer-gap",
+      "to_existing_logical": "math:probability.core:open-problem-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases",
+      "kind": "semantic_association",
+      "rationale": "This is the remaining gap of the P0321 attempt. The existing card asks for intermediate orientational order without crystalline positional order; no solves/proves relation is asserted."
+    }
+  ]
+}

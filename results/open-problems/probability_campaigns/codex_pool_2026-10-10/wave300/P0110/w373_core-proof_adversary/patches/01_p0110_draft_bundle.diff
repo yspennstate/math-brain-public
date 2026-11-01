@@ -1,0 +1,142 @@
+--- a/~/math-brain-inbox/w373/bundle_001.json
++++ b/~/math-brain-inbox/w373/bundle_001.json
+@@ -0,0 +1,139 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w373",
++  "bundle_slug": "p0110-adversarial-obstructions-w373-001",
++  "entries": [
++    {
++      "key": "tail-mismatch",
++      "namespace": "probability.fpp",
++      "logical_name": "variance-power-law-does-not-determine-exponential-tail-exponent",
++      "kind": "concept",
++      "title": "Variance scaling does not determine exponential-tail scaling",
++      "statement": "DRAFT audit concept; scoped argument independently checked by w374 (KEEP). For the centered symmetric family with masses (1-1/n)/2 at +/-n^(1/3) and 1/(2n) at +/-n^(2/3), the lower variance exponent is 1/3 while the uniform upper exponential-moment exponent is 2/3. This is an abstract family, not FPP; it refutes inferring the strong upper exponent solely from the variance exponent.",
++      "proof_text": null,
++      "assumptions": [
++        "Integer n>=2; exponent definitions are the analogous all-n moment thresholds, not FPP exponents."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w373:P0110:S1.w373.002",
++        "url": "urn:owner-work:w373:P0110:S1.w373.002",
++        "revision": "argument-checked-by-w374-2026-10-10-concept-draft",
++        "license": "owner-own-work (campaign obstruction; no novelty claim)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "selected-routes",
++      "namespace": "probability.fpp",
++      "logical_name": "geodesic-selection-couples-disjoint-route-costs",
++      "kind": "concept",
++      "title": "Selecting a geodesic couples disjoint route costs",
++      "statement": "DRAFT audit concept; scoped argument independently checked by w374 (KEEP). On a four-edge square graph with iid Uniform[1,2] weights and opposite-corner endpoints, let A,B be its two route costs. Conditional on A<B, P(A<=3)=P(B>=3)=3/4 and P(A<=3,B>=3)=1/2; the conditional product 9/16 is false. The iid disjoint route costs are independent before conditioning; conditioning on which route wins destroys that independence. Deterministic restricted domains computed without such conditioning remain a valid independence route.",
++      "proof_text": null,
++      "assumptions": [
++        "Finite square graph only; disjoint two-edge routes; iid continuous Uniform[1,2]; condition on the top route being the unique geodesic."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w373:P0110:S1.w373.003",
++        "url": "urn:owner-work:w373:P0110:S1.w373.003",
++        "revision": "argument-checked-by-w374-2026-10-10-concept-draft",
++        "license": "owner-own-work (campaign obstruction; no novelty claim)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "short-endpoint",
++      "namespace": "probability.fpp",
++      "logical_name": "bounded-positive-fpp-short-endpoint-zero-wandering",
++      "kind": "concept",
++      "title": "Bounded positive FPP has zero wandering at a short endpoint",
++      "statement": "DRAFT audit concept; scoped argument independently checked by w374 (KEEP). For nearest-neighbor FPP on Z^d, d>=2, with every edge weight in [1,2], D(0,e1)=0 for every environment, so a strictly positive lower bound inf_{v!=0} ED(0,v)/|v|^b>0 is impossible for any real b. The direct edge costs at most 2 while every alternative simple path costs at least 3. This does not refute an asymptotic lower wandering bound with a sufficiently-large-distance cutoff.",
++      "proof_text": null,
++      "assumptions": [
++        "Undirected nearest-neighbor lattice; positive bounded weights in [1,2]; D is maximum distance of a minimizing path from the endpoint segment."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w373:P0110:S1.w373.004",
++        "url": "urn:owner-work:w373:P0110:S1.w373.004",
++        "revision": "argument-checked-by-w374-2026-10-10-concept-draft",
++        "license": "owner-own-work (campaign obstruction; no novelty claim)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "variance-transfer",
++      "namespace": "probability.fpp",
++      "logical_name": "high-probability-cost-agreement-does-not-transfer-variance",
++      "kind": "concept",
++      "title": "High-probability cost agreement does not transfer variance",
++      "statement": "DRAFT audit concept; scoped argument independently checked by w374 (KEEP). High-probability agreement of costs in [n,2n] does not imply variance transfer: T_n=n and Y_n=n+nB_n with B_n Bernoulli(1/n) agree with probability 1-1/n but have Var T_n=0, Var Y_n=n-1, and E(Y_n-T_n)^2=n. A cylinder localization probability must be paired with an L2 discrepancy small relative to the true standard deviation. No FPP realization or impossibility result is claimed.",
++      "proof_text": null,
++      "assumptions": [
++        "Integer n>=2; abstract cost coupling, not a constructed FPP environment."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w373:P0110:S1.w373.005",
++        "url": "urn:owner-work:w373:P0110:S1.w373.005",
++        "revision": "argument-checked-by-w374-2026-10-10-concept-draft",
++        "license": "owner-own-work (campaign obstruction; no novelty claim)",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "norm-bend",
++      "namespace": "probability.fpp",
++      "logical_name": "symmetric-bounded-norm-does-not-imply-axial-curvature",
++      "kind": "concept",
++      "title": "Lattice symmetry and norm bounds do not force axial curvature",
++      "statement": "DRAFT audit concept; independent mathematical review pending. The norm g(x)=max(||x||_1,(3/2)||x||_infinity) has square-lattice symmetries and ||x||_1<=g(x)<=(3/2)||x||_1, yet for even n and w+1<=n/4, z=(n/2,w+1) gives g(z)+g(ne1-z)-g(ne1)=0 outside the width-w cylinder. The maximum of these two norms is a norm, but it has a flat axial face. A quadratic mean-gap route needs FPP-specific curvature, and nonrandom-error control when replacing actual means by the norm; this norm is not asserted to be an FPP limit shape.",
++      "proof_text": null,
++      "assumptions": [
++        "A norm countermodel on R^2; n even and w>=1 integer; no realization as an iid FPP time constant is claimed."
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-own-work:w373:P0110:S1.w373.006",
++        "url": "urn:owner-work:w373:P0110:S1.w373.006",
++        "revision": "unreviewed-draft-2026-10-10",
++        "license": "owner-own-work (campaign obstruction; no novelty claim)",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "tail-mismatch",
++      "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
++      "kind": "semantic_association",
++      "rationale": "From: 'For the centered symmetric family with masses (1-1/n)/2 at +/-n^(1/3) and 1/(2n) at +/-n^(2/3), the lower variance exponent is 1/3 while the uniform upper exponential-moment exponent is 2/3.'. Target: 'Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1.' This scoped observation guards an inference on a sufficient proof route; it neither proves nor refutes the target."
++    },
++    {
++      "from_key": "selected-routes",
++      "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
++      "kind": "semantic_association",
++      "rationale": "From: 'On a four-edge square graph with iid Uniform[1,2] weights and opposite-corner endpoints, let A,B be its two route costs. Conditional on A<B, P(A<=3)=P(B>=3)=3/4 and P(A<=3,B>=3)=1/2; the conditional product 9/16 is false.'. Target: 'Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1.' This scoped observation guards an inference on a sufficient proof route; it neither proves nor refutes the target."
++    },
++    {
++      "from_key": "short-endpoint",
++      "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
++      "kind": "semantic_association",
++      "rationale": "From: 'For nearest-neighbor FPP on Z^d, d>=2, with every edge weight in [1,2], D(0,e1)=0 for every environment, so a strictly positive lower bound inf_{v!=0} ED(0,v)/|v|^b>0 is impossible for any real b.'. Target: 'Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1.' This scoped observation guards an inference on a sufficient proof route; it neither proves nor refutes the target."
++    },
++    {
++      "from_key": "variance-transfer",
++      "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
++      "kind": "semantic_association",
++      "rationale": "From: 'High-probability agreement of costs in [n,2n] does not imply variance transfer: T_n=n and Y_n=n+nB_n with B_n Bernoulli(1/n) agree with probability 1-1/n but have Var T_n=0, Var Y_n=n-1, and E(Y_n-T_n)^2=n.'. Target: 'Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1.' This scoped observation guards an inference on a sufficient proof route; it neither proves nor refutes the target."
++    },
++    {
++      "from_key": "norm-bend",
++      "to_existing_logical": "math:probability.core:open-problem-p0110-an-iid-fpp-law-with-proved-kpz-exponent-relation",
++      "kind": "semantic_association",
++      "rationale": "From: 'The norm g(x)=max(||x||_1,(3/2)||x||_infinity) has square-lattice symmetries and ||x||_1<=g(x)<=(3/2)||x||_1, yet for even n and w+1<=n/4, z=(n/2,w+1) gives g(z)+g(ne1-z)-g(ne1)=0 outside the width-w cylinder.'. Target: 'Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1.' This scoped observation guards an inference on a sufficient proof route; it neither proves nor refutes the target."
++    }
++  ]
++}

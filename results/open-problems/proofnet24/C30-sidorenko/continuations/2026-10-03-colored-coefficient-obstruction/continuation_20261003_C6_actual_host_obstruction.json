@@ -1,0 +1,42 @@
+{
+  "status": "EXACT counterexample to all binary colored coefficients being nonnegative; not a Sidorenko counterexample",
+  "q": 8,
+  "full_host_size": 16,
+  "a": [
+    3,
+    3,
+    503,
+    3,
+    3,
+    503,
+    3,
+    503
+  ],
+  "b": [
+    -1,
+    2,
+    0,
+    2,
+    2,
+    0,
+    -2,
+    0
+  ],
+  "normalizing_sum": 1524,
+  "kernel_definition": "W((t,x),(s,y))=8*(a[x xor y]+(-1)^(t+s)*b[x xor y])/1524",
+  "strictly_positive_kernel_min_numerator": 8,
+  "kernel_min_denominator": 1524,
+  "density_coefficient_denominator": "555615694858605040438147841774685034555191066624",
+  "colored_coefficient_numerators": {
+    "0": "39231228560119961423656128859391232874555191066624",
+    "4": "169879744341715336049550281621247098880",
+    "6": "-809116997184077332220240713482240",
+    "8": "537746541002715694399771115520",
+    "10": "40523330214299814592512"
+  },
+  "total_binary_averaging_difference_numerator": "169878935762464733498263970080119324672",
+  "full_host_density_numerator": "39231228560289840359418593592889496844635310391296",
+  "averaged_host_density_numerator": "39231228560119961423656128859391232874555191066624",
+  "total_averaging_difference_is_positive": true,
+  "independent_checker": "global_colored_ant_exact_obstruction_check.py"
+}

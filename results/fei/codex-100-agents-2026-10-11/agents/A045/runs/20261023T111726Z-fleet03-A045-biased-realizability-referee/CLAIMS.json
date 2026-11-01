@@ -1,0 +1,103 @@
+[
+  {
+    "claim_id": "A042-DYADIC-ACTIVATION-ENDPOINT-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "Let g be any finite Boolean sign under an interior independent product law, mu=Eg, a=(1-mu)/2 in (0,1), V=4a(1-a), I=I(g), and let X be independent Bernoulli epsilon=2^-k, k>=1 integer. Put F=1 on X=0 and F=g on X=1. For occupied nonempty coefficients c_T choose j_T by 1/2<2^j_T|c_T|<=1, P_T=v_T*c_T^2, W_T=v_T*4^-j_T, Z_g=sum W_T, J_g=ln4 sum P_T*j_T, Delta_g=I-V. Write j_a for the cell of a, b=4^-j_a, B=V+4a^2*j_a. Then Delta_F=epsilon*Delta_g+epsilon*(1-epsilon)*V and J_F=epsilon*J_g+ln4[epsilon*(1-epsilon)*B+epsilon^2*k*V], with V<=B<=2V, zero composition carry, and sharp outer-gate bound J_outer<=3ln4*Delta_outer, equality at a=epsilon=1/2. Consequently a seed bound J_g<=KDelta_g is preserved under finite independent dyadic activations with constant max(K,3ln4). The corrected entropy obeys E_F=epsilon*E_g+epsilon*(1-epsilon)*V*ln4+2epsilon^2*V*ln(1/epsilon)+4epsilon*(1-epsilon)*a^2*ln(1/a^2), valid for any interior epsilon. For the complete flat dyadic references with actual empty mass, Z_F=epsilon*Z_g+4epsilon*(1-epsilon)*b, w=4a*epsilon*(1-a*epsilon), s=4epsilon*(1-epsilon)*a^2/w, t=4epsilon*(1-epsilon)*b/Z_F, and full ordinary KL_F=epsilon*KL_g+w*d_Bern(s||t). The full composed reference has t_outer obtained by replacing Z_g with V and retains epsilon*KL_g. With Z_outer=epsilon*V+4epsilon*(1-epsilon)*b, the positive normalizer transfer is 0<=w*ln(Z_F/Z_outer)<=epsilon*(Z_g-V); the exact signed flat/tree conversion also subtracts epsilon*V*ln(Z_g/V), replacing its KL together with the reference. Uniformly in the seed, |J_F/epsilon-J_g-ln4*B|<=ln4*epsilon*(k+2)*V. For a fixed nonconstant seed the full KL endpoint is KL_F/epsilon -> KL_g+4a*d_Bern(a||4b/(Z_g+4b)). Constants give actual constant or signed-literal zero-deficit/unit-atom laws; reflecting X covers the corresponding probability-one endpoint. These are natural-log identities and original-owner transfers; arbitrary seed J payment and full FEI remain open.",
+    "hypotheses": [
+      "Actual Boolean sign on a finite independent product cube; deterministic coordinates contract first",
+      "Physical normalized mixed coefficients and actual product variances; natural logarithms",
+      "Independent selector; dyadic epsilon for scale/reference claims; entropy expansion alone valid at any interior epsilon",
+      "Full ordinary references keep actual empty atom and all occupied nonempty labels; constants handled separately",
+      "No independent Boolean reset, renewed seed reserve, second KL rebate or universal seed bound assumed"
+    ],
+    "statement_sha256": "98e11ccae0ed368bb734645e1f9f9dd583bfef482baebad65715d6c8da745590",
+    "contributors": [
+      "A042/fleet03"
+    ],
+    "proof_source": {
+      "path": "PROOF.md",
+      "sha256": "bc9adf9f87e3f9f11e4e9ece021a060e22ad5129cf833238feca4c1554b8967e"
+    },
+    "proof_dependencies": [
+      "Direct physical Fourier expansion of F=1-X+Xg, independently checked by moments and Mobius transform",
+      "Complete finite-law ordinary KL chain rule, reconstructed by pointwise density factorization",
+      {
+        "claim_id": "A044-COMPLETE-DYADIC-REFERENCE-CARRY",
+        "version": 1,
+        "statement_sha256": "31700d6da9cd4b820a87ff0b8420023f970a09f56abdee380bd7ec219f41d2fc",
+        "scope": "Only the optional downstream bound Z_g-V<=9Delta_g-6R_g; independently reconstructed in REVIEW_A044.md. Main endpoint theorem independent of this import."
+      }
+    ],
+    "review_records": [
+      {
+        "claim_id": "A042-DYADIC-ACTIVATION-ENDPOINT-CERTIFICATE",
+        "version": 1,
+        "statement_sha256": "98e11ccae0ed368bb734645e1f9f9dd583bfef482baebad65715d6c8da745590",
+        "proof_sha256": "bc9adf9f87e3f9f11e4e9ece021a060e22ad5129cf833238feca4c1554b8967e",
+        "reviewer": "A045/fleet03",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "scope": "Full exact one-selector endpoint theorem, including sharp outer J bound, actual physical spectrum, full ordinary KL and signed reference transfer, constants/contractions, and explicitly OPEN arbitrary-seed supplier. Optional A044 normalizer bound uses prior-stage independent review.",
+        "independence": "Fresh analytic reconstruction, multilinear Mobius transform checked against centered physical moments, complete per-label likelihood reconstruction, canonical prime-log identities; source code not executed or copied.",
+        "repair_supplied": false,
+        "contributor_conflict": false,
+        "proof": "PROOF.md Sections1-2",
+        "checks": "out/CHECKS.json",
+        "at": "2026-10-23T11:37:08.393630+00:00"
+      }
+    ],
+    "status": "INDEPENDENT_RECONSTRUCTION_HOLDS_AT_STATED_SCOPE_FULL_FEI_OPEN",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Pay the inherited arbitrary-seed dyadic scale charge from genuinely unused ORIGINAL degree-weighted capacity in the same complete reference; epsilon J_g is not negligible compared with epsilon I(g).",
+    "next_consumers": [
+      "A044",
+      "A041",
+      "A045",
+      "A043",
+      "A091",
+      "B09 lead",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A045-MULTISELECTOR-COMPLETE-SEED-TRANSFER",
+    "version": 1,
+    "exact_statement": "For every finite Boolean seed g at any independent product law after deterministic contraction, and every finite set of physically disjoint independent selector wires X_j with probabilities epsilon_j=2^-k_j, k_j>=1, put epsilon=product epsilon_j, a=(1-Eg)/2, V=4a(1-a), L_sel=sum(1-epsilon_j), D_sel=sum[(1-epsilon_j)+epsilon_j*k_j], K_sel=sum k_j. For 0<a<1 let j_a satisfy1/2<2^j_a*a<=1 and b=4^-j_a. For F=1-product X_j+(product X_j)g the actual complete spectrum in PROOF.md Section3 gives Delta_F=epsilon Delta_g+epsilon[4a L_sel-4a^2(1-epsilon)] and J_F=epsilon J_g+ln4*epsilon[4a D_sel+4a^2(j_a-1)(1-epsilon)-4a^2 epsilon K_sel]. All coefficient shifts are exact integers with zero carry. The actual outer gate satisfies sharp J_outer<=3ln4 Delta_outer; consequently a seed J<=KDelta premise is preserved with max(K,3ln4). The complete flat normalizer and full ordinary KL satisfy Z_F=epsilon Z_g+4b epsilon(1-epsilon), K_F=epsilon K_g+w*d_Bern(s||t), w=4a epsilon(1-a epsilon), s=4a^2 epsilon(1-epsilon)/w,t=4b epsilon(1-epsilon)/Z_F. Thus at fixed seed and selector product, Z_F and K_F are independent of selector shape, whereas J_F and I_F generally are not. The full outer-gate/seed reference retains epsilon K_g and signed conversion w ln(Z_F/Z_outer)-epsilon V ln(Z_g/V), whose positive first term is at most epsilon(Z_g-V). Constants and deterministic selectors contract physically; a negative constant seed with several selectors is not generally a signed literal. Reused wires and spectral-conditioning substitutes are excluded. These are exact conditional transfer identities, not a universal seed J payment or a proof of full FEI.",
+    "hypotheses": [
+      "Actual Boolean seed and independent product physical law, with deterministic coordinates contracted",
+      "Finite independent dyadic selectors on physically disjoint wires and blocks",
+      "Full complete flat or actual outer-gate/seed reference; ordinary KL with actual empty mass",
+      "No equality with every sequential binary reference asserted; reference conversion replaces its KL",
+      "Original allocation charged once; universal inherited seed supplier remains open"
+    ],
+    "statement_sha256": "b0bc6ab9bc58cc039ef5489e96ea00076dc18f31a0fcf9a88b461d2f0c46f82f",
+    "contributors": [
+      "A045/fleet03"
+    ],
+    "proof_source": {
+      "path": "PROOF.md",
+      "sha256": "ae8d09f4aa98954bb38096c7b52e5ac851cd62f9cefbf16964bf5cacc10fbce3",
+      "checks": "out/CHECKS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A042-DYADIC-ACTIVATION-ENDPOINT-CERTIFICATE",
+        "version": 1,
+        "statement_sha256": "98e11ccae0ed368bb734645e1f9f9dd583bfef482baebad65715d6c8da745590",
+        "acceptance": "Full independent reconstruction in PROOF.md Sections1-2 and out/A042_REVIEW.json; only one-selector induction premise used."
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTIC_FINITE_DEPTH_COROLLARY_EXACT_CHECKS_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A042",
+      "A044",
+      "A041",
+      "A043",
+      "A091"
+    ]
+  }
+]

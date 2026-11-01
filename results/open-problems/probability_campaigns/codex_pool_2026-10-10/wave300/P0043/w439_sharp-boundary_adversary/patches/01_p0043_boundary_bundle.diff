@@ -1,0 +1,119 @@
+--- a/~/math-brain-inbox/w439/bundle_001.json
++++ b/~/math-brain-inbox/w439/bundle_001.json
+@@ -0,0 +1,116 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w439",
++  "bundle_slug": "p0043-critical-boundary-draft-w439-001",
++  "entries": [
++    {
++      "key": "unit-threshold",
++      "namespace": "probability.percolation",
++      "logical_name": "critical-extinction-requires-nonunit-threshold",
++      "kind": "concept",
++      "title": "DRAFT: Critical extinction needs the p_c<1 boundary",
++      "statement": "Independent derivation pending w440 review. On the infinite path Z with iid Bernoulli bond percolation, p_c=1 and theta(p_c)=1. For p<1, the probability of reaching distance n is at most 2p^n and tends to zero; at p=1 the whole path is open. Thus the assertion of critical extinction on all infinite connected locally finite quasi-transitive graphs needs an exclusion of p_c=1. This does not refute the intended P0043, which includes p_c<1.",
++      "proof_text": null,
++      "assumptions": [
++        "nearest-neighbor infinite path Z",
++        "iid Bernoulli bonds",
++        "theta(p) is the probability the root has an infinite cluster"
++      ],
++      "domain": "probability, Bernoulli bond percolation",
++      "source": {
++        "source_id": "owner-own-work:w439:p0043-critical-boundary-20261010",
++        "url": "~/brain_workers/w439/INDEPENDENT.md",
++        "revision": "2026-10-10-DRAFT-pending-w440",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "subdivision",
++      "namespace": "probability.percolation",
++      "logical_name": "uniformly-subdivided-three-regular-tree-critical-boundary",
++      "kind": "concept",
++      "title": "DRAFT: Exact critical boundary on subdivided 3-regular trees",
++      "statement": "Independent derivation pending w440 review. Replace every edge of the infinite 3-regular tree with L edges, for a positive integer L, and root at an original vertex. The result T_L is quasi-transitive of maximum degree 3 and has p_c=2^(-1/L)<1. Full subdivided edges are independent coarse bonds of retention p^L, so critical clusters are almost surely finite. For 1<=n<=L the critical probability of reaching graph distance n is 1-(1-2^(-n/L))^3, hence 7/8 at n=L. At radii kL, with u_0=1 and u_(k+1)=u_k-u_k^2/4, the probability is 1-(1-u_(k-1)/2)^3. Reciprocal increments tend to 1/4, so (kL) times this probability tends to 6L. Critical susceptibility is infinite because every original-vertex shell has expected connected count 3/2.",
++      "proof_text": null,
++      "assumptions": [
++        "L is a positive integer",
++        "uniform L-subdivision of the infinite 3-regular tree",
++        "iid Bernoulli bonds",
++        "root is an original degree-3 vertex",
++        "ambient graph distance",
++        "fixed L for the asymptotic"
++      ],
++      "domain": "probability, Bernoulli bond percolation",
++      "source": {
++        "source_id": "owner-own-work:w439:p0043-critical-boundary-20261010",
++        "url": "~/brain_workers/w439/INDEPENDENT.md",
++        "revision": "2026-10-10-DRAFT-pending-w440",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "nonuniform",
++      "namespace": "probability.percolation",
++      "logical_name": "quasi-transitive-critical-one-arm-has-no-degree-uniform-decay",
++      "kind": "concept",
++      "title": "DRAFT: Degree alone gives no uniform critical one-arm decay",
++      "statement": "Independent derivation pending w440 review. For every fixed integer n>=1, the supremum of the critical probability of reaching graph distance n, over roots of infinite connected locally finite quasi-transitive graphs of maximum degree at most 3 with p_c<1, is 1. Indeed, for the uniformly L-subdivided 3-regular tree with L>=n, that probability is 1-(1-2^(-n/L))^3 and tends to 1 as L grows. No single f(n) tending to zero can bound the entire class. A degree-only C/n bound fails already at n=L since the probability is 7/8. This does not exclude graph-dependent bounds and does not address the smaller vertex-transitive class. The family has p_c tending to 1, growing orbit count, and volume-growth rate tending to 1.",
++      "proof_text": null,
++      "assumptions": [
++        "iid Bernoulli bond percolation at each graph's own p_c",
++        "infinite connected locally finite quasi-transitive graphs",
++        "maximum degree at most 3",
++        "p_c<1",
++        "arbitrary root",
++        "constants are required to be uniform over graphs"
++      ],
++      "domain": "probability, Bernoulli bond percolation",
++      "source": {
++        "source_id": "owner-own-work:w439:p0043-critical-boundary-20261010",
++        "url": "~/brain_workers/w439/INDEPENDENT.md",
++        "revision": "2026-10-10-DRAFT-pending-w440",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "susceptibility",
++      "namespace": "probability.percolation",
++      "logical_name": "critical-extinction-does-not-imply-finite-susceptibility",
++      "kind": "concept",
++      "title": "DRAFT: Critical extinction can coexist with infinite susceptibility",
++      "statement": "Independent derivation pending w440 review. On the infinite 3-regular tree, iid Bernoulli bond percolation has p_c=1/2 and almost surely no infinite cluster at p_c, but E_{p_c}|C(o)| is infinite. At distance k>=1 there are 3*2^(k-1) vertices, each connected with probability 2^(-k), giving expected connected shell size 3/2. Below p_c, chi(p)=1+3p/(1-2p), which diverges as p increases to p_c. Thus finiteness of susceptibility for every p<p_c cannot be transferred to p=p_c without a further uniform integrability or domination argument; it cannot be assumed as a bridge to critical extinction.",
++      "proof_text": null,
++      "assumptions": [
++        "infinite 3-regular tree",
++        "iid Bernoulli bonds",
++        "critical p=1/2 for the endpoint claim",
++        "0<=p<1/2 for the subcritical formula"
++      ],
++      "domain": "probability, Bernoulli bond percolation",
++      "source": {
++        "source_id": "owner-own-work:w439:p0043-critical-boundary-20261010",
++        "url": "~/brain_workers/w439/INDEPENDENT.md",
++        "revision": "2026-10-10-DRAFT-pending-w440",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "nonuniform",
++      "to_key": "subdivision",
++      "kind": "depends_on",
++      "rationale": "The exact a_L(n) formula, with fixed n and increasing L, gives the supremum 1 and rules out graph-uniform decay."
++    },
++    {
++      "from_key": "susceptibility",
++      "to_key": "subdivision",
++      "kind": "specializes",
++      "rationale": "Set L=1 in the subdivided-tree critical boundary; its original shells show divergent susceptibility despite extinction."
++    }
++  ]
++}

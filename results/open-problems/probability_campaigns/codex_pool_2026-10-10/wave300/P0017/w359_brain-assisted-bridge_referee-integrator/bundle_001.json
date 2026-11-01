@@ -1,0 +1,150 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w359",
+  "bundle_slug": "p0017-cone-bridge-audit-w359-20261010",
+  "entries": [
+    {
+      "key": "status",
+      "namespace": "probability.logconcavity",
+      "logical_name": "p0017-dated-primary-proof-claims-status-20261010",
+      "kind": "concept",
+      "title": "P0017: dated primary proof claims and historical status",
+      "statement": "Source audit, not a mathematical proof certification: P0017 asks for a universal C_P bound for every isotropic log-concave probability law in all dimensions, equivalently a universal positive Euclidean Cheeger lower bound. The September 2026 attempted_un record and its Gaussian-only attempt do not certify current openness. As read on 10 October 2026, arXiv 2610.05474v1 Theorem 1.1, 2610.01447v2 Theorem 1.1, and the 2610.07728 abstract claim full KLS results. Their complete proofs have not been independently audited in this packet; current openness under that audit standard is UNKNOWN. No new full solution or novelty is claimed.",
+      "proof_text": null,
+      "assumptions": [
+        "Dated source check as of 2026-10-10",
+        "Isotropy means mean 0 and covariance I",
+        "C_P is the coefficient in the Euclidean variance inequality"
+      ],
+      "domain": "probability; functional inequalities",
+      "source": {
+        "source_id": "owner-own-work:w359:p0017-dated-primary-proof-claims-status-20261010",
+        "url": "file:///~/brain_workers/w359/SOURCE_AUDIT.md",
+        "revision": "campaign-w359-2026-10-10-v1",
+        "license": "owner-own-work (campaign derivation or source audit; no novelty claim)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bad-fibre",
+      "namespace": "probability.logconcavity",
+      "logical_name": "refuted-isotropy-to-uniform-conditional-poincare-transfer",
+      "kind": "concept",
+      "title": "Refuted route: full isotropy transferred to conditional constants",
+      "statement": "Refuted candidate bridge, not a theorem: one might try to infer a finite universal essential upper bound for C_P(law(Z|X=x)) solely because the joint law (X,Z) is isotropic and log-concave. This transfer requires an additional conditional bound; full isotropy describes the joint covariance and does not imply that each conditional law is isotropic. The accompanying cone calculation is DRAFT evidence pending the independent referee.",
+      "proof_text": null,
+      "assumptions": [
+        "Joint isotropic log-concave law",
+        "Conditional Euclidean Poincare constants",
+        "Proposed uniform conclusion explicitly refuted; no KLS counterexample claimed"
+      ],
+      "domain": "probability; functional inequalities",
+      "source": {
+        "source_id": "owner-own-work:w359:refuted-isotropy-to-uniform-conditional-poincare-transfer",
+        "url": "file:///~/brain_workers/w359/CONE_COUNTEREXAMPLE.md",
+        "revision": "campaign-w359-2026-10-10-v1",
+        "license": "owner-own-work (campaign derivation or source audit; no novelty claim)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "cone",
+      "namespace": "probability.logconcavity",
+      "logical_name": "isotropic-log-concave-cone-unbounded-conditional-poincare-constant",
+      "kind": "concept",
+      "title": "DRAFT: isotropic cone with unbounded conditional Poincare constants",
+      "statement": "DRAFT counterexample pending independent reviewer w362: the probability density exp(-(2+sqrt(2)x)) on x>=-sqrt(2), |z|<=x+sqrt(2) is log-concave and has mean (0,0) and covariance I_2. For x>-sqrt(2), Z|X=x is uniform on [-(x+sqrt(2)),x+sqrt(2)], so its variance is (x+sqrt(2))^2/3. Testing its Poincare inequality on z gives C_P(law(Z|X=x)) at least this value. For every M>0, the set where it exceeds M has probability (1+sqrt(6M))exp(-sqrt(6M))>0. Thus its essential conditional Poincare supremum is infinite. This refutes the stated conditional transfer, not KLS.",
+      "proof_text": null,
+      "assumptions": [
+        "Exact two-dimensional density and Euclidean conditional derivative",
+        "Convex-support log-concavity is allowed",
+        "Own campaign result; w362 independent mathematical review pending"
+      ],
+      "domain": "probability; functional inequalities",
+      "source": {
+        "source_id": "owner-own-work:w359:isotropic-log-concave-cone-unbounded-conditional-poincare-constant",
+        "url": "file:///~/brain_workers/w359/CONE_COUNTEREXAMPLE.md",
+        "revision": "campaign-w359-2026-10-10-v1",
+        "license": "owner-own-work (campaign derivation or source audit; no novelty claim)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "bad-derivative",
+      "namespace": "probability.logconcavity",
+      "logical_name": "refuted-conditional-mean-partial-derivative-commutation",
+      "kind": "concept",
+      "title": "Refuted route: ignore the changing conditional law",
+      "statement": "Refuted candidate identity, not a valid theorem: d/dx E[f(X,Z)|X=x] need not equal E[partial_x f(X,Z)|X=x] when the conditional law of Z depends on x. A product-law argument cannot use this identity merely from zero covariance or isotropy. The derivative of the conditional law, including moving-support boundary terms when applicable, must be accounted for.",
+      "proof_text": null,
+      "assumptions": [
+        "Conditional distribution may depend on x",
+        "Conditional mean and derivative exist on the interior",
+        "No independence hypothesis is supplied"
+      ],
+      "domain": "probability; functional inequalities",
+      "source": {
+        "source_id": "owner-own-work:w359:refuted-conditional-mean-partial-derivative-commutation",
+        "url": "file:///~/brain_workers/w359/CONE_COUNTEREXAMPLE.md",
+        "revision": "campaign-w359-2026-10-10-v1",
+        "license": "owner-own-work (campaign derivation or source audit; no novelty claim)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "cone-derivative",
+      "namespace": "probability.logconcavity",
+      "logical_name": "isotropic-cone-conditional-mean-derivative-noncommutation",
+      "kind": "concept",
+      "title": "DRAFT: conditional z-squared mean has a nonzero derivative",
+      "statement": "DRAFT counterexample pending independent reviewer w362: for density exp(-(2+sqrt(2)x)) on x>=-sqrt(2), |z|<=x+sqrt(2), set f(x,z)=z^2. For every x>-sqrt(2), E[f(X,Z)|X=x]=(x+sqrt(2))^2/3, whose derivative is 2(x+sqrt(2))/3. In contrast, partial_x f is identically zero, so E[partial_x f(X,Z)|X=x]=0. Polynomial moments are finite. This directly refutes conditional-mean derivative commutation without a condition controlling the changing conditional law.",
+      "proof_text": null,
+      "assumptions": [
+        "Same explicit isotropic log-concave cone law",
+        "Interior x>-sqrt(2)",
+        "f(x,z)=z^2",
+        "Independent mathematical review pending"
+      ],
+      "domain": "probability; functional inequalities",
+      "source": {
+        "source_id": "owner-own-work:w359:isotropic-cone-conditional-mean-derivative-noncommutation",
+        "url": "file:///~/brain_workers/w359/CONE_COUNTEREXAMPLE.md",
+        "revision": "campaign-w359-2026-10-10-v1",
+        "license": "owner-own-work (campaign derivation or source audit; no novelty claim)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "status",
+      "to_existing_logical": "math:probability.core:open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
+      "kind": "cites",
+      "rationale": "The existing problem card records the exact historical source and says current status unverified; the source audit adds dated primary proof claims without asserting mathematical certification."
+    },
+    {
+      "from_key": "cone",
+      "to_key": "bad-fibre",
+      "kind": "refutes",
+      "rationale": "The joint covariance is I_2 but the conditional Poincare lower bound is unbounded on positive-probability sets; DRAFT refutation awaits the independent reviewer."
+    },
+    {
+      "from_key": "cone-derivative",
+      "to_key": "bad-derivative",
+      "kind": "refutes",
+      "rationale": "The displayed conditional-mean derivative is nonzero while the conditional partial derivative is zero; this refutes precisely the unqualified identity."
+    },
+    {
+      "from_key": "cone-derivative",
+      "to_key": "cone",
+      "kind": "depends_on",
+      "rationale": "The derivative calculation uses the exact conditional uniform law established for the same cone density."
+    },
+    {
+      "from_key": "cone",
+      "to_existing_logical": "math:probability.core:open-problem-p0017-dimension-free-log-concave-poincare-or-cheeger-constant",
+      "kind": "cites",
+      "rationale": "This is a rejected proof route for the KLS target, not a proof or counterexample to its parent assertion."
+    }
+  ]
+}

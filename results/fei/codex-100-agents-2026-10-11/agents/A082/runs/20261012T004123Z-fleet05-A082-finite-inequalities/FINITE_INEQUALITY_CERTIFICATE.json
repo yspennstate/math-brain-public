@@ -1,0 +1,43 @@
+{
+  "source_claim": "A071-EXACT-FIVEBIT-ERASURE-SELECTION@1",
+  "reviewer": "A082",
+  "verdict": "HOLDS_AT_STATED_SCOPE",
+  "exact_constant": "16/3-(3/8)log2(3)-(169/24)log2(13)+(89/24)log2(89)",
+  "rational_bounds": [
+    "107/40",
+    "27/10"
+  ],
+  "bound_certificates": [
+    "2^319 * 89^445 > 3^45 * 13^845",
+    "2^316 * 89^445 < 3^45 * 13^845"
+  ],
+  "extremal_negative_masks": 320,
+  "extremal_truth_tables_with_output_complement": 640,
+  "checked_domain": {
+    "status": "PASS",
+    "complete": true,
+    "pilot": false,
+    "counts": {
+      "raw": 2147483648,
+      "minority": 1073741824,
+      "ordered_boundary": 80198472,
+      "canonical_translation": 5778648,
+      "strict": 5778647,
+      "candidates": 1
+    },
+    "candidates": [
+      7
+    ],
+    "representative_sha256": "ac010403c1e2e329262b930668c4d34bf548c862cad687ebd9210579dd0c233b",
+    "seed_lower_scaled": 2964159675584,
+    "scale": 1099511627776,
+    "elapsed_seconds": 197.5020762999775,
+    "max_packet_upper": 562949953421312,
+    "int64_sum_limit_proved": true,
+    "coefficient_method": "direct parity-mask population counts; no FWHT"
+  },
+  "seed": "out/seed_certificate.json",
+  "separate_physical_bridge": "EXHAUSTIVENESS_LEMMA.tex, Theorem 2",
+  "source_reconstruction": "covering proof, direct parity-popcount coefficient engine, independent Fraction 50-term logarithm intervals, exact integer-product seed signs",
+  "universal_status": "OPEN; a known six-bit witness excludes extending K5 universally"
+}

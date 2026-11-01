@@ -1,0 +1,9 @@
+B11 formal-verification result for repaired source 98e45d53.
+
+Lemma 2.6 (paper lines 151-160): PASS and kernel-verified by FiveS2Schur.lean blob 418e1187df335719ccbca1a5cf1b4115c0dbad5e; axiom log f453447f1f40175f843e9a1a94caf76554f41e38 ends rc=0.
+
+Lemma 2.5 (lines 143-149): source mathematics PASS; Lean coverage remains PARTIAL. FiveS2Weyl.lean blob 5a9727173f6985eacb0cdaa61196931b9a14da6e verifies perturbation, rank shift, and compression in ApproxGE form, with axiom log 359563330d9c71b57bbd10508b1434091bed20fa ending EXIT 0. A compiled bridge from ApproxGE to Mathlib LinearMap.singularValues was not found.
+
+New edge case: a naive bridge allowing threshold zero fails for an empty column type because ApproxGE requires a nonzero vector while zero-padded singularValues equals zero. Recommended route: prove the bridge for positive thresholds and j>=1, then split zero/padded cases separately.
+
+No new Lean build was run here because lean/lake are unavailable and installation/remote workflows are prohibited. PDF UNCHECKED. WITHOUT_VERIFIED_BRAIN; full_brain_connected:false. Detailed machine-readable coverage is coverage.json in this run directory.

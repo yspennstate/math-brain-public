@@ -1,0 +1,62 @@
+[
+  {
+    "claim_id": "A015-ONE-CONTROL-EXCESS-GATE-BOUND-AND-LEAFLESS-TRANSFER-BARRIER",
+    "version": 1,
+    "exact_statement": "For gamma=6/5 and the source-defined one-fresh-control distributed correction Psi under any fixed original positive feasible prime reference, SAME posterior eta_T, and 0<beta<=1 with beta sum lambda<=1, let v=Var(g) and M=sum_{T nonempty}ghat(T)^2 E_eta_T(|V|-1). Then 0<=M<=I(g)-v and Psi<=[log2(1/beta)/2+(3/5)log2(e)+1/20]M. An alternative bound is Psi<=(v/2)log2 beta+[log2(1/beta)/2+(3/10)log2(e)+1/20]I(g). No private leaf, bounded read or ownership-entropy tail is required. For the actual leafless K_m,m edge-prime Boolean family g=2[(OR x) AND (OR y)]-1, fixed lambda_ij=1/m and beta=1/m, every integer m>=4 satisfies Psi/I(g)>=(15/64)log2 m-217/160, and M/I(g) tends to1. All nonempty-data sectors, SAME original posterior, root/factorial credits and signed normalization are included. These are statements about the source-defined rank-stripped transferred correction, not actual optimal code cost, the infimum over references, or FEI. Inherited complete base cost, rank-transfer and control-only T=empty overhead remain separate.",
+    "hypotheses": [
+      "Uniform finite Boolean cube, base-two entropy/cost units, gamma6/5",
+      "Source-defined actual chronological forest posterior and distributed-lift correction, not an arbitrary spectral probability law",
+      "One common fresh positive control, original positive feasible lambda fixed before spectral selection, 0<beta<=1 and beta sum lambda<=1",
+      "Used sizes s_l>=1, s_l<=kappa_l<=|T|, sum s_l=|T|; actual tree-component roots with 0<pi<=1",
+      "Obstruction fixes the exact K_m,m positive edge primes and lambda=1/m,beta=1/m for every m>=4; it does not quantify over every reference"
+    ],
+    "statement_sha256": "5a98162fdfe6d9d35117f021c6769e547a0dbeeb516aa055b3acf326bd0470fb",
+    "contributors": [
+      "A015"
+    ],
+    "proof_source": {
+      "bound": "agents\\A015\\runs\\20261021T162002Z-fleet03-A015-minterm-barrier-analysis\\ONE_CONTROL.md",
+      "obstruction": "agents\\A015\\runs\\20261021T162002Z-fleet03-A015-minterm-barrier-analysis\\LEAFLESS_SCALE.md",
+      "review": "agents\\A015\\runs\\20261021T162002Z-fleet03-A015-minterm-barrier-analysis\\REVIEW_A007.md",
+      "certificates": [
+        "agents\\A015\\runs\\20261021T162002Z-fleet03-A015-minterm-barrier-analysis\\out\\EXACT_CHECK.json",
+        "agents\\A015\\runs\\20261021T162002Z-fleet03-A015-minterm-barrier-analysis\\out\\LEAFLESS_EXACT.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A007-EXACT-ROOT-TILTED-OCCUPATION",
+        "version": 1,
+        "statement_sha256": "f1af3cd06bfbf3effdd57691e97bb5c8ffe6b67eaf9fecd47f3f5ab39581835c",
+        "status": "SOURCE_INTERFACE_U1_RECONSTRUCTED_SCOPED_NO_ALL_U_ACCEPTANCE",
+        "proof_source": "agents\\A007\\runs\\20261014T100124Z-fleet05-A007-root-normalization\\JOINT_OCCUPATION.md"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_CHECKED_CONDITIONAL_ON_SOURCE_INTERFACE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "M log2(sum lambda)<=K I(g) for every feasible original reference with sum lambda>=1 and absolute K",
+        "witness": "K_m,m exact positive edge primes at lambda=1/m; M/I tends to1 and sum lambda=m",
+        "scope": "Additional proposed standalone payment, no accepted registered claim refuted"
+      },
+      {
+        "statement": "Psi<=K I(g) for every fixed feasible uniform graph-edge reference and absolute K",
+        "witness": "Same K_m,m family, beta=1/m; full source-defined Psi lower bound in LEAFLESS_SCALE.md (10)",
+        "scope": "Fixed-reference transferred-surrogate obstruction; no variational or actual-code lower transfer"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A007",
+      "A008",
+      "A009",
+      "A011",
+      "A086",
+      "A094",
+      "B03",
+      "B20"
+    ]
+  }
+]

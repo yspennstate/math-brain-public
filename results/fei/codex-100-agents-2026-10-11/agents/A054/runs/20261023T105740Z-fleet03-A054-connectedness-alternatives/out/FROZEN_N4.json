@@ -1,0 +1,11 @@
+{
+ "reason": "273-root full check found zero positive surcharges; extend by an explicit fixed family to validate positive forcing surcharge, without automatic escalation",
+ "helper_version": "check_forced_basis.py v2 --four; identical integer test, separate outputs",
+ "family": "64 fixed labelled four-bit supports, masks (1103515245*j+12345) mod65536, j=0..63; also all nonempty original singleton children with inherited labels",
+ "case_count": "64 root masks, at most512 inherited children; 840 unordered independent bases for each four-bit root; 28 per three-bit child",
+ "symmetry": "Only basis column permutations removed; supports are fixed labelled masks, not an exhaustive four-bit theorem",
+ "arithmetic": "Integer and doubled-integer debit; all real debit values covered by analytic proof, not finite grid",
+ "memory_estimate_mb": 100,
+ "max_runtime_seconds": 55,
+ "pilot": "First full finite run is bounded below60seconds, expected below5 seconds; no dimension increases beyond prescribed four-bit family"
+}

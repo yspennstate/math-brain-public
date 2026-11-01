@@ -1,0 +1,34 @@
+{
+  "review_packet": "A094",
+  "target_packet": "A023",
+  "target_claim": "B05_A023_PARITY_BALANCED_TOWER_RETAINED_U_v1",
+  "verdict": "ACCEPTED_AT_FORMAL_SCOPE_WITH_REPORT_WORDING_CORRECTION",
+  "accepted": [
+    "exact U and I tower identities",
+    "physical input count n+2d",
+    "constant-2 root transfer from U(P)<=2I(P)",
+    "adaptive/pruned tree endpoint bound",
+    "common disjoint terminal-factor cancellation",
+    "dense-nullity-two corollary using the independently accepted base theorem"
+  ],
+  "rejected_interpretations": [
+    "the positive-depth tower family is restriction-closed",
+    "the proof constructs nodewise or pivotal-event credit ownership",
+    "the endpoint telescope resolves arbitrary changing-core amortization"
+  ],
+  "scope_falsifier": {
+    "base": "P=1",
+    "depth": 1,
+    "restriction": "w=-1",
+    "result": "dictator z with U=0",
+    "reason_not_in_positive_depth_family": "every positive-depth tower has U>=1"
+  },
+  "unpaid": [
+    "biased selectors",
+    "imperfect/no balancing",
+    "shared or reused variables",
+    "leaf-dependent terminal cores",
+    "arbitrary changing coherent cores"
+  ]
+}
+

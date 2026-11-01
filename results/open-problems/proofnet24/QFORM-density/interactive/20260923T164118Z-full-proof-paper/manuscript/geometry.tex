@@ -1,0 +1,285 @@
+\section{Coordinate geometry and convex input laws}\label{sec:geometry}
+
+The estimates in this section use the original independent coordinates. An orthogonal change of variables in a geometric integral does not imply independence of the rotated random coordinates.
+
+\begin{lemma}[Absolute continuity]\label{geom:ac}
+If $A\ne0$ and the coordinates of $X$ have densities, then $X^TAX+b^TX+c$ has an absolutely continuous distribution.
+\end{lemma}
+\begin{proof}
+If $a_{ii}\ne0$, condition on all coordinates except $X_i$. The conditional polynomial is a nonconstant quadratic, and the inverse image of a Lebesgue null set under it is null: split the real line at its vertex and apply change of variables. If every diagonal entry vanishes, choose $a_{ij}\ne0$. Conditional on $X_{-i}$, the coefficient of $X_i$ is $2\sum_{j\ne i}a_{ij}X_j+b_i$. This is nonzero almost surely, since a nontrivial linear combination of independent absolutely continuous random variables is absolutely continuous. The conditional law is therefore absolutely continuous in this case as well. Fubini completes the argument.
+\end{proof}
+
+\begin{lemma}[A scalar quadratic]\label{geom:square}
+Let $X$ have density $f\le1$, and let $g(x)=a(x-m)^2+\kappa$ with $a\ne0$. On the side $(y-\kappa)/a>0$,
+\[
+ p_{g(X)}(y)=\frac{f(m+r)+f(m-r)}{2\sqrt{|a|\,|y-\kappa|}}
+ \le\frac1{\sqrt{|a|\,|y-\kappa|}},\qquad
+ r=\sqrt{|y-\kappa|/|a|}.
+\]
+The density vanishes on the other side. Moreover, for every $u>0$,
+\begin{equation}\label{eq:square-small}
+ \sup_s\mathbb P(|g(X)-s|\le u)\le2\sqrt{2u/|a|},
+ \qquad
+ \mathbb P(|g(X)-s|\le u)
+ \le\frac{4u}{\sqrt{|a|\max\{|s-\kappa|,u\}}}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The density formula follows by change of variables on the two monotone half-lines. After translation and scaling, the admissible values of $|x-m|$ form an interval whose squared endpoints differ by at most $2u/|a|$. Its length is at most $\sqrt{2u/|a|}$, which proves the first bound after accounting for the two signs. If $s-\kappa$ lies on the occupied side and $|s-\kappa|>u$, rationalizing the difference of the two square roots gives the second estimate with constant $4$. If $|s-\kappa|\le u$, the first estimate implies it. If $s-\kappa$ is on the unoccupied side at distance greater than $u$, the probability is zero.
+\end{proof}
+
+\begin{lemma}[A definite pair]\label{geom:definite}
+Suppose that $W\in\mathbb R^2$ has a joint density bounded by $K$. If $B$ is positive or negative definite and $D=|\det B|$, then every translated quadratic with quadratic part $B$ has density bounded by $\pi K/\sqrt D$.
+\end{lemma}
+\begin{proof}
+Changing sign if necessary, write the eigenvalues as $\mu_1,\mu_2>0$. Complete the square. The parametrization
+\[
+ w=w_0+\sqrt{\delta/\mu_1}\cos\theta\,e_1
+       +\sqrt{\delta/\mu_2}\sin\theta\,e_2,
+ \qquad \delta>0,\quad0\le\theta<2\pi,
+\]
+has Jacobian $1/(2\sqrt D)$ in $(\delta,\theta)$. Integrating the density on this ellipse proves the assertion. This lemma requires a joint density bound, but not independence.
+\end{proof}
+
+\begin{theorem}[Diagonal forms and a sharp diagonal constant]\label{geom:diagonal}
+If $A$ is diagonal and $s_3(A)\ge s>0$, then, for arbitrary affine terms,
+\[
+ \|p_Q\|_\infty\le\pi/s.
+\]
+For the normalization $s=1$, the constant $\pi$ is attained by
+$Q=X_1^2+X_2^2-X_3^2$ with independent uniform coordinates on $[-1/2,1/2]$.
+\end{theorem}
+\begin{proof}
+Among three diagonal coefficients of modulus at least $s$, two have the same sign. Condition on every other coordinate. The remaining two-variable form is definite, its determinant has modulus at least $s^2$, and its joint density is at most one. Apply Lemma~\ref{geom:definite} and average. For sharpness, the density of $X_1^2+X_2^2$ equals $\pi$ on $(0,1/4)$, since the corresponding circles lie in the square. Averaging at $X_3^2$ gives density $\pi$ at zero, in the continuous limiting sense. The uniform upper bound and dominated convergence justify this evaluation.
+\end{proof}
+
+\begin{proposition}[Spectral threshold and a constant lower bound]\label{geom:threshold}
+One nonzero eigenvalue does not ensure bounded density, and two eigenvalues of opposite signs do not ensure it. Any universal constant in Conjecture~\ref{conj:main} must satisfy $C\ge3\sqrt2$.
+\end{proposition}
+\begin{proof}
+The square of a centered uniform variable has the inverse-square-root singularity of Lemma~\ref{geom:square}. For independent centered unit uniforms $U,V$, the density of $U^2-V^2$ diverges logarithmically at zero; for $t>0$ its defining integral contains
+\[
+ \int_t^{1/4}\frac{du}{\sqrt{u(u-t)}}\longrightarrow\infty.
+\]
+For the lower bound on $C$, let $Z_{j,m}$, $j=1,2,3$, be independent normalized sums of $m$ centered unit uniforms. The three corresponding coefficient vectors in $\mathbb R^{3m}$ are orthonormal. Thus
+\[
+ Q_m=Z_{1,m}^2+Z_{2,m}^2-Z_{3,m}^2
+\]
+is admissible with nonzero eigenvalues $1,1,-1$. The central limit theorem and the continuous mapping theorem give weak convergence to $Q_\infty=G_1^2+G_2^2-G_3^2$, where the $G_j$ are independent $N(0,1/12)$ variables. If every $Q_m$ has density at most $C$, the same interval bound passes to the weak limit, hence its density is also at most $C$. Here $G_1^2+G_2^2$ is exponential of rate $6$, and $G_3^2$ has density $\sqrt{6/\pi}\,t^{-1/2}e^{-6t}$ on $t>0$. Their convolution at zero is
+\[
+ p_{Q_\infty}(0)=6\sqrt{6/\pi}\int_0^\infty t^{-1/2}e^{-12t}\,dt=3\sqrt2.
+\]
+The density is continuous at zero. This argument uses weak convergence and interval domination, and does not require a local central limit theorem. It does not prove that $3\sqrt2$ is the sharp universal constant.
+\end{proof}
+
+\subsection{The logarithmic envelope of an indefinite physical pair}
+
+\begin{theorem}[Uniform hyperbolic envelope]\label{geom:pair}
+Let $W_1,W_2$ be independent with densities bounded by one. Let
+$q(w)=(w-w_0)^TB(w-w_0)+\kappa$, where $B$ has eigenvalues $\mu_+>0>\mu_-$. Put
+\[
+ D=|\det B|,\qquad \Lambda=\mu_+^{-1}+|\mu_-|^{-1}.
+\]
+For almost every $s\ne\kappa$,
+\begin{equation}\label{eq:hyperbolic-envelope}
+ p_q(s)\le\frac1{\sqrt D}\left(5.2+\log_+\frac{32}{\Lambda|s-\kappa|}\right)
+ \le\frac1{\sqrt D}\left(5.2+\log_+\frac{16\sqrt D}{|s-\kappa|}\right).
+\end{equation}
+Consequently
+\begin{equation}\label{eq:hyperbolic-window}
+ \mathbb P(|q(W)-s|\le u)
+ \le\frac{2u}{\sqrt D}\left(6.2+\log_+\frac{16\sqrt D}{u}\right).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Translation preserves the coordinate density caps. For $\delta=s-\kappa>0$, the two branches of the level set are
+\[
+ w_\epsilon(t)=\epsilon\sqrt{\delta/\mu_+}\cosh t\,e_+
+       +\sqrt{\delta/|\mu_-|}\sinh t\,e_-,
+ \quad \epsilon\in\{-1,1\},\quad t\in\mathbb R.
+\]
+The Jacobian in $(\delta,t)$ equals $1/(2\sqrt D)$. Thus
+\begin{equation}\label{eq:hyperbolic-coarea}
+ p_q(\kappa+\delta)=\frac1{2\sqrt D}\sum_{\epsilon=\pm1}
+ \int_{\mathbb R}f_1(w_{\epsilon,1}(t))f_2(w_{\epsilon,2}(t))\,dt.
+\end{equation}
+Write one branch as $u e^t+v e^{-t}$. Orthogonality of $e_+,e_-$ gives
+$|u|=|v|=\rho_0=\sqrt{\delta\Lambda}/2$. Choose a physical coordinate $i$ with $|u_i|\ge\rho_0/\sqrt2$. For $t\ge T_1=(3/4)\log2$, the term $v_i e^{-t}$ has modulus at most $|u_i|e^t/2$. The coordinate $w_i(t)$ is monotone there and satisfies
+\[
+ |w_i'(t)|\ge\tfrac12|u_i|e^t,\qquad
+ \tfrac12|u_i|e^t\le|w_i(t)|\le\tfrac32|u_i|e^t,
+ \qquad |w_i'(t)|\ge |w_i(t)|/3.
+\]
+For $T=\max\{T_1,\log(2/|u_i|)\}$, put $m=|u_i|e^T/2\ge1$. Since $f_1f_2\le f_i$ and $\int f_i=1$, change of variables and the decreasing weight $1/|y|$ give
+\[
+ \int_T^\infty f_1(w_1(t))f_2(w_2(t))\,dt
+ \le3\int_{|y|\ge m,\,\text{one side}}\frac{f_i(y)}{|y|}\,dy
+ \le3\log(1+1/m)\le3\log2.
+\]
+The penultimate inequality follows by filling the interval of length one closest to $m$; it also follows directly from layer cake. The negative tail is identical with $v$ in place of $u$. Its cutoff $T'$ and the first cutoff satisfy
+\[
+ T,T'\le\tfrac34\log2+\tfrac12\log_+\frac{32}{\delta\Lambda}.
+\]
+On the middle interval, the integrand is at most one. Each branch integral is therefore at most
+\[
+ \tfrac32\log2+6\log2+\log_+\frac{32}{\delta\Lambda}
+ <5.2+\log_+\frac{32}{\delta\Lambda}.
+\]
+Substitute into \eqref{eq:hyperbolic-coarea}. Negative $\delta$ exchanges the positive and negative eigenvalues. Since $\Lambda\ge2/\sqrt D$, the second estimate in \eqref{eq:hyperbolic-envelope} follows. Finally, among intervals of length $2u$, the integral of $\log_+(K/|x|)$ is largest for the centered interval, and is at most $2u(1+\log_+(K/u))$. Integration proves \eqref{eq:hyperbolic-window}. All calculations may first be made against a nonnegative output test function, so the almost-everywhere formulas are legitimate under later conditioning.
+\end{proof}
+
+\begin{theorem}[A determinant-only bound in arbitrary dimension]\label{geom:fullpair}
+Suppose $s_3(A)\ge s>0$ and $A$ has an indefinite principal block $B$ on two original coordinates. For $D=|\det B|$ and arbitrary affine terms,
+\begin{equation}\label{eq:full-pair}
+ \|p_Q\|_\infty\le D^{-1/2}
+ \left(9.2+\log_+\frac{10000\sqrt D}{s}\right).
+\end{equation}
+There is no rank bound and no restriction on the other entries of $A$.
+\end{theorem}
+\begin{proof}
+Condition on the complementary physical coordinates, and complete the square in the pair. The conditional critical value is a quadratic $R$ whose matrix is the Schur complement $S=A/B$. Lemma~\ref{lem:schur-count} gives $\|S\|\ge s$. Theorem~\ref{four:quarter} and layer cake imply, for every $K>0$,
+\[
+ \sup_t\mathbb E\log_+\frac K{|t-R|}
+ \le\int_0^\infty\min\{1,5(K e^{-u}/\|S\|)^{1/4}\}\,du
+ \le4+\log_+\frac{625K}{\|S\|}.
+\]
+Average \eqref{eq:hyperbolic-envelope} with $K=16\sqrt D$. This proves \eqref{eq:full-pair} by Fubini. Notice that a small eigenvalue of the pair itself need not be controlled separately: its determinant is the only pair parameter in the conclusion.
+\end{proof}
+
+\subsection{Convex superlevel sets and interval laws}
+
+\begin{lemma}[The unit ball in three dimensions]\label{geom:ball}
+Let $Z$ be uniform on the unit ball of $\mathbb R^3$, and let $q$ have invertible quadratic part $M$. Then
+\[
+ \|p_{q(Z)}\|_\infty\le C_B|\det M|^{-1/3},\qquad
+ C_B=\frac3{4\pi}\,38.2.
+\]
+\end{lemma}
+\begin{proof}
+Rotate the ball to diagonalize $M$, and complete squares in the polynomial. Let $|m_1|$ be the largest eigenvalue modulus and $D=|m_2m_3|\le m_1^2$. At a point $(x_2,x_3)$ in the unit disc $\Delta$, the first coordinate ranges along a chord of half-length $h$. The marginal density of $(x_2,x_3)$ is $3h/(2\pi)$, while the conditional first coordinate is uniform on a segment of length $2h$. The chord factors cancel in Lemma~\ref{geom:square}, yielding
+\[
+ p_q(s)\le\frac3{4\pi}|m_1|^{-1/2}
+ \int_\Delta|s-R(x_2,x_3)|^{-1/2}\,dx_2dx_3.
+\]
+Layer cake bounds the integral by the integral over $v>0$ of the area where $|s-R|<v^{-2}$. For a definite $R$, the area is bounded by $\min\{\pi,2\pi v^{-2}/\sqrt D\}$, whose integral is $2\pi\sqrt2\,D^{-1/4}$. For an indefinite $R$, enclose $\Delta$ in $[-1,1]^2$. The latter Lebesgue measure is four times a product probability measure with coordinate densities $1/2\le1$. Theorem~\ref{geom:pair} gives the bound
+\[
+ D^{-1/4}\int_0^\infty\min\{\pi,8v^{-2}(6.2+\log_+(16v^2))\}\,dv.
+\]
+Split this integral at $a=28/5$. It is at most
+\[
+ \pi a+\frac8a\bigl(8.2+\log16+2\log a\bigr)<38.2.
+\]
+Thus $p_q\le C_B|m_1|^{-1/2}D^{-1/4}$. Since
+\[
+ |m_1|^{-1/2}D^{-1/4}
+ =|\det M|^{-1/3}(D/m_1^2)^{1/12}\le|\det M|^{-1/3},
+\]
+the assertion follows.
+\end{proof}
+
+\begin{theorem}[Three-dimensional convex superlevel estimate]\label{geom:convex}
+Let $Z\in\mathbb R^3$ have density $g\le K$ whose positive superlevel sets are convex. For every quadratic polynomial with invertible quadratic part $M$,
+\begin{equation}\label{eq:convex-density}
+ \|p_{q(Z)}\|_\infty\le71.1\,|\det M|^{-1/3}K^{2/3}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+First consider Lebesgue measure on a convex body $C$. For an ellipsoid $E=c+TB_3$, Lemma~\ref{geom:ball} and $\det(T^TMT)=(\det T)^2\det M$ imply that its pushforward density is at most
+\[
+ C_B\,\operatorname{vol}(B_3)^{2/3}|\det M|^{-1/3}\operatorname{vol}(E)^{1/3}.
+\]
+John's ellipsoid theorem gives $E\subset C\subset3E$ (with dilations about the ellipsoid center). Monotonicity of pushforward measures and $\operatorname{vol}(E)\le\operatorname{vol}(C)$ therefore bound the pushforward of $C$ by
+\[
+ C_K|\det M|^{-1/3}\operatorname{vol}(C)^{1/3},\quad
+ C_K=3(4\pi/3)^{2/3}C_B<71.1.
+\]
+The geometric input is John's theorem \citep{John1948}. Apply this to $C_t=\{g>t\}$ and use layer cake. Since $\int_0^K\operatorname{vol}(C_t)\,dt=1$, H\"older gives
+\[
+ \int_0^K\operatorname{vol}(C_t)^{1/3}\,dt\le K^{2/3}.
+\]
+This proves the result. Approximation by full-dimensional level sets handles degenerate or null superlevel sets.
+\end{proof}
+
+\begin{theorem}[Bounded rank for unit-interval inputs]\label{geom:interval}
+Let $X$ be uniform on a product of unit intervals. Suppose
+\[
+ A=R\Lambda R^T+R'\Lambda'R'^T,
+\]
+where $[R\ R']$ has orthonormal columns, $R$ has three columns, $R'$ has $k$ columns, and $\Lambda=\operatorname{diag}(\lambda_1,\lambda_2,\lambda_3)$ is invertible. Decompose $b=R\beta+R'\beta'+\gamma u$, with $u$ a unit vector orthogonal to both ranges if $\gamma\ne0$, and put $k'=k+\mathbf1_{\{\gamma\ne0\}}$. Then
+\begin{equation}\label{eq:interval-density}
+ \|p_Q\|_\infty\le142.2\,[\sqrt2(2\pi)^{1/3}]^{k'}
+ |\lambda_1\lambda_2\lambda_3|^{-1/3}.
+\end{equation}
+In particular, every exact rank-three form with $s_3(A)\ge1$ and arbitrary affine term has density bounded by $372$ for these inputs.
+\end{theorem}
+\begin{proof}
+Write $Y=R^TX$ and $Y'=(R'^TX,\langle u,X\rangle)$, omitting the last coordinate if $\gamma=0$. The joint density $\rho$ of this orthogonal projection is log-concave by the Pr\'ekopa marginal theorem \citep{Prekopa1973}, and is bounded by $2^{(3+k')/2}$ by the product-projection theorem of \citet{LPP2016}. The polynomial is $q(Y)+\varphi(Y')$, where $q$ has quadratic part $\Lambda$. For almost every $y'$ with marginal density $\rho_{Y'}(y')>0$, the conditional density of $Y$ is log-concave and bounded by $2^{(3+k')/2}/\rho_{Y'}(y')$. Theorem~\ref{geom:convex}, followed by integration in $y'$, gives
+\[
+ \|p_Q\|_\infty\le71.1\,|\det\Lambda|^{-1/3}
+ 2^{(3+k')/3}\int\rho_{Y'}(y')^{1/3}\,dy'.
+\]
+Center $Y'$ at its mean $m$. Hoeffding's bounded-variable exponential estimate \citep{Hoeffding1963} and orthonormality give
+$\mathbb E e^{\langle\theta,Y'-m\rangle}\le e^{|\theta|^2/8}$.
+Introducing an independent standard Gaussian in $\mathbb R^{k'}$ yields
+$\mathbb E e^{|Y'-m|^2}\le2^{k'/2}$.
+H\"older, applied after multiplication and division by $e^{|y'-m|^2/3}$, now gives
+\[
+ \int\rho_{Y'}^{1/3}\le
+ \left(\int\rho_{Y'}e^{|y'-m|^2}\right)^{1/3}
+ \left(\int e^{-|y'-m|^2/2}\,dy'\right)^{2/3}
+ \le2^{k'/6}(2\pi)^{k'/3}.
+\]
+Combining the powers of two proves \eqref{eq:interval-density}. The factor $\sqrt2(2\pi)^{1/3}$ is less than $2.61$; when $k=0$, one has $k'\le1$ and the stated constant follows.
+\end{proof}
+
+\begin{proposition}[Reductions in the class of coordinate laws]\label{geom:laws}
+For fixed $A$, let $\mathcal D_A(f_1,\ldots,f_n)$ denote the supremum of the density norm over all affine terms. This functional is translation invariant, convex in each coordinate law, and nonincreasing when one coordinate law is convolved with an arbitrary probability measure. The supremum over all densities $f_i\le1$ equals the supremum over $f_i=\mathbf1_{E_i}$ with $|E_i|=1$. A theorem uniform over a matrix class stable under diagonal congruences $A\mapsto DAD$, $D\ge I$, transfers from unit-interval laws to independent mixtures of widened unit-interval laws and their convolutions, with the same constant.
+\end{proposition}
+\begin{proof}
+Translation changes only the affine coefficients. For fixed output interval and fixed affine term, its probability is linear in each $f_i$ separately. Taking suprema gives convexity. A convolution is a mixture of translations, giving the contraction assertion. To obtain the extremal-set statement, fix an output interval and all laws but one; its probability is $\int f_i(x)g_i(x)\,dx$ with $0\le g_i\le1$. The bathtub principle says its supremum over $0\le f_i\le1$, $\int f_i=1$, is achieved or approximated arbitrarily well by the indicator of a measurable set of measure one. Replace the coordinates successively and then take the supremum over intervals and affine terms. No interval shape for $E_i$ follows from this argument.
+
+Finally, widening the $i$th interval by $r_i\ge1$ replaces $A$ by $DAD$, $D=\operatorname{diag}(r_i)$. The number of positive eigenvalues at least one cannot decrease: on a subspace where $x^TAx\ge|x|^2$, the transformed subspace $D^{-1}E$ satisfies $y^TDADy\ge|Dy|^2\ge|y|^2$. Apply the same argument to $-A$ for negative eigenvalues. Rank is unchanged. The unit-interval theorem thus applies after widening; convexity and the convolution contraction finish the proof.
+\end{proof}
+
+The extremal-set argument above is an elementary special case of the more general extremal-law framework in \citet{MMX2017}. The convexity hypothesis in Theorem~\ref{geom:convex} and the restrictions on the input laws in Theorem~\ref{geom:interval} are substantive. They do not extend those results to arbitrary unions of separated intervals.
+
+\subsection{The ruled side of an exact rank-three form}
+
+\begin{theorem}[A one-sheet bound]\label{geom:ruled}
+Let $u_1,u_2,u_3$ be orthonormal and $\lambda_1,\lambda_2,\mu\ge1$. For
+\[
+ Q=\lambda_1\langle u_1,X\rangle^2+
+   \lambda_2\langle u_2,X\rangle^2-\mu\langle u_3,X\rangle^2,
+\]
+the restriction of the law to $(0,\infty)$ has density bounded by $\pi\sqrt2$. Equivalently, for every interval $J\subset(0,\infty)$,
+$\mathbb P(Q\in J)\le\pi\sqrt2\,|J|$.
+An affine term in the range of the quadratic matrix is allowed after shifting the critical value. Sign reflection gives the corresponding half-line for signature $(1,2)$.
+\end{theorem}
+\begin{proof}
+First assume smooth compactly supported coordinate densities, bounded by one. Write $Y=(\langle u_1,X\rangle,\langle u_2,X\rangle,\langle u_3,X\rangle)$ and let $\rho$ be its density. Put $D=\operatorname{diag}(\sqrt{\lambda_1},\sqrt{\lambda_2},\sqrt\mu)$ and $\Delta=\lambda_1\lambda_2\mu$. In the coordinates $z=Dy$, the quadratic is $z_1^2+z_2^2-z_3^2$. For $s>0$, a ruling of its level set is
+\[
+ z(\theta,t)=\sqrt s\,e_\theta+t(e_\theta^\perp+e_3),\qquad
+ e_\theta=(\cos\theta,\sin\theta,0),\quad
+ e_\theta^\perp=(-\sin\theta,\cos\theta,0).
+\]
+At fixed $t=z_3$, the planar radius is $\sqrt{s+t^2}$ and the planar polar angle differs from $\theta$ by $\arctan(t/\sqrt s)$. Its angular Jacobian is one. Polar coarea, equivalently change of variables against an output test function, gives
+\[
+ p_Q(s)=\frac1{2\sqrt\Delta}\int_0^{2\pi}\int_{\mathbb R}
+ \rho(D^{-1}z(\theta,t))\,dt\,d\theta.
+\]
+The line velocity is $v_\theta=D^{-1}(e_\theta^\perp+e_3)$, with
+\[
+ |v_\theta|^2=\frac{\sin^2\theta}{\lambda_1}+
+ \frac{\cos^2\theta}{\lambda_2}+\frac1\mu.
+\]
+The inner integral is $1/|v_\theta|$ times a two-dimensional orthogonal marginal density of $Y$. It is also a two-dimensional orthogonal projection density of the original product vector $X$, and is at most $2/|v_\theta|$ by \citet{LPP2016}. In this smooth case, the marginal is continuous, so its essential bound is pointwise. Since
+\[
+ \Delta |v_\theta|^2=\lambda_2\mu\sin^2\theta+
+ \lambda_1\mu\cos^2\theta+\lambda_1\lambda_2\ge2,
+\]
+the claimed bound follows by integration in $\theta$.
+
+To remove regularity, approximate each cap-one density in $L^1$ by smooth compactly supported probability densities with the same cap. Explicitly, truncate it, replace the missing mass by an indicator on a disjoint interval of the required length, and convolve with a nonnegative compactly supported mollifier. A diagonal choice of truncation and smoothing gives the approximation. The product densities converge in $L^1$ by the telescoping product estimate, and their pushforwards under $Q$ converge in total variation. Pass the interval inequality to the limit for each fixed $J\subset(0,\infty)$. This step avoids evaluating an almost-everywhere bounded marginal on a potentially exceptional curve. If $b$ belongs to the range of $A$, a translation in the original coordinates removes $b$ and changes only the critical value; the coordinate caps are preserved.
+\end{proof}
+
+This theorem controls one side of the critical value. It supplies no estimate on the two-sheet side and does not accommodate arbitrary affine leakage into the kernel by itself.

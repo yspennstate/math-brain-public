@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "nonpilot_assertions": 13499,
+  "runs": {
+    "validation.json": {
+      "status": "PASS",
+      "pilot": false,
+      "roots": 71,
+      "old_core_edges": 145,
+      "positive_old_core_edges": 72,
+      "last_character_edges": 290,
+      "nontrivial_q_edges": 12,
+      "proper_character_zero_decrements": 418,
+      "exact_assertions": 2926,
+      "seconds": 5.08453659999941,
+      "scope": "finite exact checks; width/all-m theorem follows from coherent packet proof, not numerical extrapolation"
+    },
+    "independent.json": {
+      "status": "PASS",
+      "roots": 6,
+      "positive_old_roots": 4,
+      "nontrivial_q_children": 2,
+      "exact_assertions": 277,
+      "seconds": 4.44651949999934,
+      "arithmetic": "independent direct character sums and48-term log bounds",
+      "full_terminal_telescope": "exact equality PASS"
+    },
+    "mixed.json": {
+      "status": "PASS",
+      "states": 594,
+      "X_query_edges": 504,
+      "tag_query_edges": 396,
+      "positive_old_core_fixture": 1,
+      "current_q_values": [
+        "1",
+        "1/4"
+      ],
+      "exact_assertions": 2343,
+      "seconds": 0.739457500001663,
+      "scope": "all local edges of594 states; arbitrary policies by analytic pathwise invariant, not exhaustive policy enumeration"
+    },
+    "mixed_repro.json": {
+      "status": "PASS",
+      "query_order": [
+        4,
+        7,
+        0,
+        8,
+        1
+      ],
+      "physical_internal_nodes": 31,
+      "full_terminal_leaves": 32,
+      "positive_old_debit": 1,
+      "exact_assertions": 97,
+      "seconds": 0.5860209000002214,
+      "arithmetic": "independent direct character sums and48-term rigorous log bounds",
+      "exact_entropy_and_original_owner_telescopes": "PASS"
+    },
+    "full.json": {
+      "status": "PASS",
+      "local_m": 4,
+      "states": 1458,
+      "X_query_edges": 1944,
+      "tag_query_edges": 972,
+      "rare_second_partner_edges": 288,
+      "dead_mask_partner_zero_edges": 1008,
+      "geometric_tail_cases": 127,
+      "full_owner_scalar_cases": 61,
+      "exact_assertions": 7856,
+      "seconds": 3.971073200000319,
+      "scope": "full local mixed domain at small m; original full-depth cash theorem asserted only analytically for m>=16; no large truth tables"
+    }
+  },
+  "independent_external_review": "PENDING",
+  "formal_check": "NONE; analytic proof and exact finite certificates",
+  "scope": "Analytic coherent character theorem; half-depth for m>=4 and FULL exterior/tag continuation for m>=16 divisible by4. Finite exact checks support the written proofs; no finite extrapolation."
+}

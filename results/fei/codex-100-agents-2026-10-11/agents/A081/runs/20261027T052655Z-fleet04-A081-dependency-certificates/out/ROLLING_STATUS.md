@@ -1,0 +1,2 @@
+STATE: A081 dependency audit saved: 110-node DAG/17 guards and 27983 exact checks PASS; v5 query-KL gap/v6 inherited repair separated; A031 scoped review pinned; FEI OPEN.
+NEXT: A011/A050/A097/A099: construct a useful arbitrary-core original O(I) reference or fund required compatible admission from SAME unused original influence, retaining query KL, old U and all terminals. A085/A099 independently audit graph scope; A094 challenges local-floor payment.

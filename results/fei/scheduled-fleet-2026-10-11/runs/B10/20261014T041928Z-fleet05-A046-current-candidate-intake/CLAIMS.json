@@ -1,0 +1,118 @@
+[
+  {
+    "claim_id": "A046-SEPARATOR-LAYER-CUTOFF-RESERVE",
+    "version": 1,
+    "exact_statement": "Let S,W,U,V be compatible point indicators on disjoint uniform blocks of positive widths s,L,R,T and g an independent balanced Boolean core. For F=1+[WUV OR S(U OR V)](g-1), query the separator S until first failure or completion, then resolve WUV or U OR V and stop at a constant or g. Put alpha=2^-s, q=2^-R,r=2^-T,eta=2^-(L+R+T),e=q+r-qr-eta,JB=(L+R+T)eta,JC=R q(1-r)+T r(1-q),JD=JB+JC,pi=eta+alpha e,m=ceil(log2(min(R,T)+2))+2 and M=min(s,m). Every live separator query with j>m remaining bits is strictly K=4-good. The nonnegative reserve at live state j is V_j=2^-j[min(j,m) JD+e min(j,m)(min(j,m)-1)/2+min(j,m)e I(g)], set zero after failure. Its exact physical drift V_j-V_(j-1)/2 equals the actual child-product face price c_j=2^-j[JD+(j-1)e+e I(g)] when j<=m and zero otherwise. Thus the actual localized separator bill is <=V_s<=M I_other+(M-1)I_sep/2+M I_terminal<=M I(F), where I_sep=s alpha e,I_other=(1-alpha)JB+alpha JC,I_terminal=pi I(g). Terminal entropy remains pi H(g), and H(F)<=(4+2/ln2)(I_sep+I_other)+V_s+pi H(g). This eliminates dependence on separator length s for fixed R,T, but is not a universal influence constant or terminal-core certificate.",
+    "hypotheses": [
+      "Actual Boolean signs on uniform cube; entropy and logarithms in bits",
+      "Compatible point literals; disjoint fresh separator/controller blocks independent of g",
+      "Independent balanced core; full pi H(g) retained at stopping leaves",
+      "History-measurable physical policy exactly as specified; one query per coordinate along each path",
+      "V is a cutoff-envelope reserve and may charge eligible but actually good layers; it is not renewed at descendants"
+    ],
+    "statement_sha256": "c4f09ea5b2a552f438fe64c85737ae4570e03f57453c63683f124dd3a245f2af",
+    "contributors": [
+      "A046"
+    ],
+    "proof_source": {
+      "run_id": "20261014T012528Z-fleet05-A046-current-candidate-intake",
+      "files": [
+        "PROOF.md",
+        "REPORT.md",
+        "code/layers.py",
+        "code/reserve_check.py",
+        "out/RESULTS.json",
+        "out/RESERVE_CHECK.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A040",
+        "verdict": "HOLDS",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A040\\runs\\20261014T033148Z-fleet05-A040-credit-insufficiency-tests\\REVIEW_A046.md",
+        "scope": "Full exact A046-SEPARATOR-LAYER-CUTOFF-RESERVE@1, including arbitrary balanced terminal core, cutoff, physical accounts, reserve drift and terminal-inclusive entropy bound. Independent future-layer-sum reconstruction and direct physical verification.",
+        "excluded": "Root-spectral/output conversion discussed outside this exact claim, prescribed witness/reset conversion, width-independent V bound, actual-bad-node uniformity and arbitrary terminal FEI.",
+        "repair_supplied": false,
+        "source_claims_sha256": "591f961eee295c1ffaeee07bb376ecfd9c41840505c1841d6807b9411db4acee",
+        "exact_validation_assertions": 52110
+      }
+    ],
+    "status": "INDEPENDENT_REVIEW_HOLDS",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A025",
+      "A040",
+      "A050",
+      "A064",
+      "A087",
+      "A092",
+      "B10",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A046-SEPARATOR-LAYER-CUTOFF-RESERVE",
+    "version": 2,
+    "exact_statement": "Let S,W,U,V be independent compatible point indicators on disjoint uniform blocks of positive widths s,L,R,T, and let g be an independent balanced Boolean sign. Set F=1+[WUV OR S(U OR V)](g-1), q=2^-R,r=2^-T,eta=2^-(L+R+T),e=q+r-qr-eta,alpha=2^-s,JB=(L+R+T)eta,JC=R q(1-r)+T r(1-q),JD=JB+JC,pi=eta+alpha e. Query S until failure or completion, then resolve WUV or U OR V and stop at a constant or the actual g. For e<=1/8 every live separator query has B_i/Inf_i<1781/480<4. In particular min(R,T)>=4 gives zero localized strict-K4 bad-control-prefix bill for every s,L. Otherwise define m_*=ceil(log2(min(R,T)+2))+2<=5; in the rare regime define m_*=0. The reserve at live layer j is W_j=2^-j[M_j JD+e M_j(M_j-1)/2+M_j e I(g)], M_j=min(j,m_*), and is zero after separator failure. Its physical drift equals the actual child-product face price c_j=2^-j[JD+(j-1)e+e I(g)] at j<=m_* and zero otherwise. Every possible bad-layer debit is bounded by this drift. With I_sep=s alpha e,I_other=(1-alpha)JB+alpha JC,I_terminal=pi I(g), the entire controller-prefix bad bill obeys Q_bad<=W_s<=5 I_other+2 I_sep+5 I_terminal<=5 I(F), uniformly in all widths and core dimension. Terminal entropy remains pi H(g). Moreover H(F)<=(4+2/ln2)(I_sep+I_other)+W_s+pi H(g); with a separately proved terminal rate C0, H(F)<=max(9+2/ln2,C0+5)I(F). No prescribed-witness funding, arbitrary unbalanced-core K4 bound or general nested-selector reserve is asserted.",
+    "hypotheses": [
+      "Actual uniform Boolean signs; entropy and logarithms in bits; physical pivotal influences and history reaches",
+      "Independent balanced core g and disjoint compatible positive point blocks of the specified widths",
+      "Exactly the declared control-first stopping prefix; each physical coordinate queried at most once along a path",
+      "Q_bad is strict-K4 bad-node face price, not the unfiltered old V envelope or bad nodes inside the stopped core",
+      "All terminal pi H(g) is retained; any C0 is a separately certified inherited core rate; no spectral reference bank is assumed free"
+    ],
+    "statement_sha256": "bd27ee5a2c778775819779bfeceee08d76d1f3f64f9e9667a7dc13e941bf547f",
+    "contributors": [
+      "A046"
+    ],
+    "proof_source": {
+      "run_id": "20261014T041928Z-fleet05-A046-current-candidate-intake",
+      "files": [
+        "PROOF.md",
+        "REPORT.md",
+        "code/check.py",
+        "code/accounts.py",
+        "code/direct.py",
+        "out/SPECTRAL_CHECK.json",
+        "out/ACCOUNT_CHECK.json",
+        "out/DIRECT_CHECK.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A046-SEPARATOR-LAYER-CUTOFF-RESERVE",
+        "version": 1,
+        "statement_sha256": "c4f09ea5b2a552f438fe64c85737ae4570e03f57453c63683f124dd3a245f2af",
+        "status": "INDEPENDENTLY_ACCEPTED_BY_A040_WITHOUT_REPAIR",
+        "scope": "Original cutoff and physical reserve/account theorem, including descendant-good and retained terminal scope"
+      }
+    ],
+    "review_records": [],
+    "status": "EXISTING_INTERFACE_WIDTH_PAYMENT_CLOSED_AUTHOR_PROVED_REVIEW_PENDING",
+    "supersedes": [
+      {
+        "claim_id": "A046-SEPARATOR-LAYER-CUTOFF-RESERVE",
+        "version": 1,
+        "scope": "Improved actual-bad-node payment interface; original V envelope remains valid and its obstruction is preserved"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A040",
+      "A021",
+      "A023",
+      "A025",
+      "A050",
+      "A064",
+      "A087",
+      "A092",
+      "B10",
+      "B20"
+    ]
+  }
+]

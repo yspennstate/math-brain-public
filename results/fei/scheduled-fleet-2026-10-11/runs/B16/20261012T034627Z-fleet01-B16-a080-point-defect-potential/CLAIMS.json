@@ -1,0 +1,24 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B16-A080-POINT-DEFECT-TENSOR-CLASSIFICATION",
+      "version": 1,
+      "packet_id": "A080",
+      "attempt_id": "A080-POINT-DEFECT-TENSOR-AUDIT-1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "Every finite disjoint tensor product of Boolean point defects, with arbitrary component dimensions and multiplicities, satisfies H<4I and U<3I. For one d-dimensional point defect, U=(1-2delta)^2 log2(1/(1-2delta)^2)+2d delta(1-2delta), delta=2^-d, and U/I tends to 1.",
+      "quantifiers": "Every finite multiset of integers d_j>=1; point defects on pairwise disjoint uniform physical cubes.",
+      "units": "bits",
+      "gap_id": "G-A080-UNIVERSAL-COUNTEREXAMPLE",
+      "proof_source": "CANDIDATE_SEQUENCE_AUDIT.tex",
+      "proof_dependencies": [
+        "Exact Walsh transform of a Boolean point defect",
+        "Elementary inequality -ln(1-x)<=x/(1-x)",
+        "A077 sequence definition at source-pinned version"
+      ],
+      "limitations": "Does not cover overlapping nonlinear surgeries or non-point-defect gates; does not prove full FEI.",
+      "review_records": []
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "target_id": "P0110",
+  "worker": "w373",
+  "checked_on": "2026-10-10",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "exact_intake_statement": "Exhibit a nondegenerate iid undirected FPP law with well-defined fluctuation and wandering exponents satisfying chi=2xi-1.",
+  "primary_question": "Find a distribution of passage times where (4.19) holds.",
+  "relation": "chi=2xi-1",
+  "dimension_scope": "Ordinary nearest-neighbor undirected FPP on Z^d, d>=2; the sufficient route in this packet specializes to d=2.",
+  "definition_caveat": "The survey treats exponent existence and the correct definition as part of the problem. This packet explicitly chooses Chatterjee's stronger uniform upper/lower definitions as a sufficient route; it does not identify them with all directional or moment definitions.",
+  "sources": [
+    {
+      "source_id": "dated-ranking-p0110",
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "locator": "line 551",
+      "role": "Task title and prior attempted_un status only; not a current-open certificate."
+    },
+    {
+      "source_id": "intake-op-p0110",
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p01.json",
+      "locator": "entry key op-p0110, around lines 2295-2320",
+      "receipt": "intake_target_receipt.json",
+      "role": "Exact ledger statement and primary source mapping; explicitly current-status-unverified."
+    },
+    {
+      "source_id": "arxiv:1511.03262v2",
+      "url": "https://arxiv.org/pdf/1511.03262v2",
+      "title": "50 years of first passage percolation",
+      "authors": [
+        "Antonio Auffinger",
+        "Michael Damron",
+        "Jack Hanson"
+      ],
+      "revision": "2016-09-23 v2",
+      "locator": "Section 4.3, equation (4.19), Question 22, printed p.88 / PDF p.89 in v2; existence and definition are part of the problem.",
+      "role": "Primary target; dated open assertion only."
+    },
+    {
+      "source_id": "chatterjee:annals-2013-177-2-7",
+      "url": "https://annals.math.princeton.edu/wp-content/uploads/annals-v177-n2-p07-p.pdf",
+      "title": "The universal relation between scaling exponents in first-passage percolation",
+      "doi": "10.4007/annals.2013.177.2.7",
+      "locator": "Theorem 1.1, pp.665-666, inequalities (A1)-(A4); Section 1 includes uniform interval laws as nearly gamma.",
+      "role": "Conditional KPZ theorem with cutoff |v|>C in lower estimates. It does not exhibit a law satisfying exponent matching."
+    },
+    {
+      "source_id": "arxiv:1109.0523v2",
+      "url": "https://arxiv.org/pdf/1109.0523v2",
+      "title": "A simplified proof of the relation between scaling exponents in first-passage percolation",
+      "authors": [
+        "Antonio Auffinger",
+        "Michael Damron"
+      ],
+      "revision": "2014-03-27 v2",
+      "locator": "Introduction support-atom condition; Section 2 equations (2.1),(2.2), Theorems 2.1,2.2; (2.2) literally takes inf over all v!=0.",
+      "role": "Alternative conditional theorem; does not prove exponent existence. Literal all-endpoint wandering hypothesis cannot hold for Uniform[1,2], as shown by D(0,e1)=0. No refutation of the theorem is claimed."
+    },
+    {
+      "source_id": "arxiv:2604.01214v1",
+      "url": "https://arxiv.org/abs/2604.01214v1",
+      "title": "Rotationally invariant first passage percolation: Breaking the n/log n variance barrier",
+      "authors": [
+        "Riddhipratim Basu",
+        "Vladas Sidoravicius",
+        "Allan Sly"
+      ],
+      "revision": "2026-04-01 v1",
+      "locator": "Primary abstract only, read 2026-10-10",
+      "role": "Polynomial variance upper bound for rotationally invariant planar Riemannian FPP; no transfer to iid nearest-neighbor lattice laws or proof of KPZ exponent matching follows from this abstract."
+    }
+  ],
+  "prior_work_checks": [
+    {
+      "path": "probability_1000_attempts_H_20260912 and probability_1000_attempts_I_20260914",
+      "scope": "Targeted case-insensitive P0110/title searches in md/json/jsonl/csv; no matching target record found."
+    },
+    {
+      "path": "prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md",
+      "scope": "P0110 row says attempted_un; no actual Lean theorem receipt recovered for this target."
+    },
+    {
+      "path": "~/brain_workers/teams/W0300_O/TEAM_BOARD.md",
+      "scope": "No P0110 row; adjacent FPP shape and geodesic rows belong to other workers."
+    },
+    {
+      "path": "~/Big Open problem in probability theory/",
+      "scope": "Targeted text/name search found separate percolation/phase-retrieval work, not a P0110 solution; not a whole solved/retired-work audit."
+    },
+    {
+      "path": "~/Open problem project/solved_register.md",
+      "scope": "Targeted P0110/FPP/KPZ/first-passage search found no matching target; no whole-register certification claimed."
+    }
+  ],
+  "brain_scars_read": [
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "proof_steps_need_derived_joint_structure_2026_09_09",
+    "openproblem_recon_fpp_chi_target_2026_08_09",
+    "fpp_gap_event_is_the_overlap_event_2026_08_22",
+    "fpp_beta_measured_and_it_does_not_move_the_wall_2026_08_15"
+  ],
+  "recall_receipt": "recall_receipt.txt",
+  "memory_authority": "Hints only; primary sources and analytic checks determine this packet's conclusions.",
+  "latest_literature_check": "Targeted primary-source web searches for 2025/2026 iid-FPP exponent existence/KPZ relation and the recalled April 2026 paper. They do not certify absence of a solution.",
+  "source_checks_are_mathematical_proofs": false,
+  "formal_check": null,
+  "independent_review": {
+    "reviewer": "w374",
+    "state": "partial-keeps",
+    "kept_claims": [
+      "S1.w373.001",
+      "S1.w373.002",
+      "S1.w373.003",
+      "S1.w373.004",
+      "S1.w373.005",
+      "S1.w373.007"
+    ],
+    "pending_claims": [
+      "S1.w373.006",
+      "S1.w373.008"
+    ],
+    "receipt": "REFEREE_RECEIPT.json"
+  },
+  "canonical_repository_check": {
+    "path": "~/math-research-brain",
+    "scope": "Located src/math_brain/store.py SQLiteStore implementation; no sqlite/db artifact found under this repository. Queried the explicitly named live population store read-only for the exact P0110 card; receipt store_target_receipt.json. No complete canonical solved-work audit claimed."
+  }
+}

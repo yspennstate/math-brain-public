@@ -1,0 +1,65 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w344",
+  "bundle_slug": "w344-open-problem-p0047-checked-partials-20261010",
+  "entries": [
+    {
+      "key": "tail-trivial-forest-infinite-component-count-dichotomy",
+      "namespace": "probability.uniform_spanning_forests",
+      "logical_name": "tail-trivial-forest-infinite-component-count-dichotomy",
+      "kind": "lemma",
+      "title": "The finite-versus-infinite component dichotomy is a tail event",
+      "statement": "For any random spanning forest on a countable graph with trivial edge-tail sigma-field, the event that it has infinitely many components has probability zero or one. Finitely many edge changes alter a finite component count by at most finitely much and cannot change finiteness. For every finite edge set K, the infinite-count event can therefore be computed after making all edges in K absent, so it is measurable outside K. In particular FUSF on an infinite connected locally finite network has either infinitely many components almost surely or finitely many almost surely. In the finite case the argument does not make the component count constant.",
+      "proof_text": "Lyons-Peres, Probability on Trees and Networks, electronic edition 19 August 2026, Theorem 10.18 and Question 10.28, prove tail triviality but leave determinism of the FUSF component count on arbitrary networks open. The earlier attempt correctly warns that finite component counts can change under one edge modification.\n\nFor any spanning subgraph on a countable graph, adding or removing one edge changes a finite component count by at most one; finitely many modifications cannot change an infinite count to a finite one or conversely. For every finite edge set K, the event {infinitely many components} is therefore identical to the same event computed after setting all edges in K absent. It is measurable using only edges outside K, hence is a tail event. Under any tail-trivial forest law, in particular FUSF on an infinite connected locally finite network, its probability is 0 or 1. Thus either there are infinitely many components almost surely, or the number is finite almost surely. The latter alternative does not force the finite number to be constant.\n\nThis tail argument does not prove the full Question 10.28. On the infinite path, removing one edge changes the deterministic spanning subgraph from one component to two, so a generic finite count is not a tail statistic. Three finite path checks confirm this elementary obstruction; they are not samples from an allegedly random FUSF count. On a network that is itself a tree, every finite connected exhaustion has a unique spanning tree, and its free limit contains every edge, giving the trivial connected special case.",
+      "assumptions": [
+        "Countable underlying graph",
+        "Tail-trivial forest law",
+        "For the FUSF corollary use Lyons-Peres Theorem 10.18"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:tail-trivial-forest-infinite-component-count-dichotomy",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "For any random spanning forest on a countable graph with trivial edge-tail sigma-field, the event that it has"
+      }
+    },
+    {
+      "key": "free-uniform-spanning-forest-on-tree-is-connected",
+      "namespace": "probability.uniform_spanning_forests",
+      "logical_name": "free-uniform-spanning-forest-on-tree-is-connected",
+      "kind": "lemma",
+      "title": "FUSF on a tree is the whole connected tree",
+      "statement": "On an infinite connected locally finite network whose underlying graph is a tree and whose edge conductances are positive, the free uniform spanning forest contains every edge almost surely and has exactly one component. Every finite connected induced exhaustion is itself a tree with a unique spanning tree; the free weak limit therefore fixes every edge as present. This is a boundary case of component-count determinism, not an argument for arbitrary networks.",
+      "proof_text": "Lyons-Peres, Probability on Trees and Networks, electronic edition 19 August 2026, Theorem 10.18 and Question 10.28, prove tail triviality but leave determinism of the FUSF component count on arbitrary networks open. The earlier attempt correctly warns that finite component counts can change under one edge modification.\n\nFor any spanning subgraph on a countable graph, adding or removing one edge changes a finite component count by at most one; finitely many modifications cannot change an infinite count to a finite one or conversely. For every finite edge set K, the event {infinitely many components} is therefore identical to the same event computed after setting all edges in K absent. It is measurable using only edges outside K, hence is a tail event. Under any tail-trivial forest law, in particular FUSF on an infinite connected locally finite network, its probability is 0 or 1. Thus either there are infinitely many components almost surely, or the number is finite almost surely. The latter alternative does not force the finite number to be constant.\n\nThis tail argument does not prove the full Question 10.28. On the infinite path, removing one edge changes the deterministic spanning subgraph from one component to two, so a generic finite count is not a tail statistic. Three finite path checks confirm this elementary obstruction; they are not samples from an allegedly random FUSF count. On a network that is itself a tree, every finite connected exhaustion has a unique spanning tree, and its free limit contains every edge, giving the trivial connected special case.",
+      "assumptions": [
+        "Tree underlying graph",
+        "Positive conductances",
+        "Free connected exhaustion"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-w344-open-problems-20261010:free-uniform-spanning-forest-on-tree-is-connected",
+        "url": "file:///~/brain_workers/w344/PROOFS.md",
+        "revision": "2026-10-10 worker result; proof; independent audit pending w346; novelty unverified",
+        "license": "owner-own-work (campaign proof and attributed mathematical source audit)",
+        "excerpt": "On an infinite connected locally finite network whose underlying graph is a tree and whose edge conductances are"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "tail-trivial-forest-infinite-component-count-dichotomy",
+      "to_existing_logical": "math:probability.core:open-problem-p0047-deterministic-component-count-of-the-free-uniform-spanning-forest",
+      "kind": "specializes",
+      "rationale": "New end: \"For any random spanning forest on a countable graph with trivial edge-tail sigma-field, the event that it has\"; existing end: \"On every infinite connected locally finite network, is the number of free uniform spanning-forest components almost surely a\". This result addresses or audits P0047; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    },
+    {
+      "from_key": "free-uniform-spanning-forest-on-tree-is-connected",
+      "to_existing_logical": "math:probability.core:open-problem-p0047-deterministic-component-count-of-the-free-uniform-spanning-forest",
+      "kind": "specializes",
+      "rationale": "New end: \"On an infinite connected locally finite network whose underlying graph is a tree and whose edge conductances are\"; existing end: \"On every infinite connected locally finite network, is the number of free uniform spanning-forest components almost surely a\". This result addresses or audits P0047; the cited card identifies its mathematical context and is not used as a proof or a current openness certificate."
+    }
+  ]
+}

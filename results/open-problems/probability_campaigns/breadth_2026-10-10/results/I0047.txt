@@ -1,0 +1,238 @@
+{
+  "problem_id": "I0047",
+  "source_checks": {
+    "method": "Memory only; no web search, browsing, or child agents.",
+    "source_read": "The user-supplied excerpt of rhofstad_saintflour_2017, Open Problem 3.8. The surrounding model definitions were not supplied.",
+    "literature_recall": [
+      {
+        "title": "Weighted distances in scale-free preferential attachment models",
+        "authors": ["Joost Jorritsma", "Júlia Komjáthy"],
+        "year": 2019,
+        "year_note": "Recalled preprint year; not independently verified.",
+        "scope_recalled": "Weighted-distance results for preferential attachment graphs with degree exponent between 2 and 3.",
+        "limitation": "I have not checked the precise assumptions or established that this resolves every regime intended by the quoted problem.",
+        "url": null
+      }
+    ],
+    "status_from_memory": "Partial literature resolution is recalled. The present openness or complete resolution of the broad source statement is not certified.",
+    "novelty": "No novelty claim. The result below is an independent derivation of a tree special case and may already be standard.",
+    "independent_reader_audit": "Pending. All proposed brain entries remain drafts and have not been promoted to the math brain."
+  },
+  "exact_statement": {
+    "recorded_problem": "Determine the asymptotics of first-passage percolation on the preferential attachment model, including C_n(U_1,U_2) as n tends to infinity.",
+    "scope_issue": "The supplied excerpt does not specify the number of edges added per vertex, attachment parameters, initial graph, or edge-weight distribution.",
+    "proved_special_case": "Start T_2 with the edge {1,2}, rooted at 1. Fix δ > -1. Given T_t, vertex t+1 attaches by one edge to v with probability (deg_t(v)+δ)/((2+δ)t-2). Assign mutually independent, identically distributed, almost surely finite nonnegative edge weights W, independently of the tree. Choose U_n,V_n independently and uniformly from {1,...,n}, independently of all weights. Let C_n be their first-passage distance, and let log denote the natural logarithm.",
+    "conclusions": [
+      "If μ = E[W] < infinity, then C_n/log n converges in L1 to 2μ(1+δ)/(2+δ).",
+      "If E[W] = infinity, then C_n/log n tends to infinity in probability.",
+      "For δ=0 and finite μ, E[C_n] = μ(1-1/n)(H_n-1/2), where H_n = sum_{j=1}^n 1/j."
+    ],
+    "applicability_to_source": "Whether the source's preceding definition includes this one-edge tree model requires a source audit."
+  },
+  "answer": "partial",
+  "proof_or_counterexample": {
+    "label": "proof",
+    "complete_for": "The precisely specified affine preferential attachment tree.",
+    "notation": {
+      "parameters": "a=2+δ, d=1/a, α=1-d=(1+δ)/(2+δ), c=2d. Thus 0<α<1 and c<2.",
+      "tree_quantities": "h(v) is the depth of v from root 1. D_n=h(U_n), D'_n=h(V_n), M_n is the depth of their lowest common ancestor, and L_n is their unweighted distance."
+    },
+    "steps": [
+      {
+        "step": 1,
+        "claim": "Exact marginal depth distribution.",
+        "proof": "Define A_t(z)=sum_{v=1}^t (deg_t(v)+δ)z^{h(v)}. Its value at z=1 is the deterministic total attachment weight at-2. If the next parent has depth h, the increment in A_t(z) is z^h+(a-1)z^{h+1}. Therefore E[A_{t+1}(z) | T_t]=A_t(z)[1+(1+(a-1)z)/(at-2)]. Put G_t(z)=E[A_t(z)]/(at-2). Since G_2(z)=(1+z)/2, normalization gives G_{t+1}(z)=G_t(z)(1-p_{t+1}+p_{t+1}z), where p_j=(a-1)/(aj-2)=α/(j-c). The parent of vertex k is sampled using attachment weights, so E[z^{h(k)}]=zG_{k-1}(z). Consequently, for k≥3, h(k) has the same distribution as 1+B_0+sum_{j=3}^{k-1} B_j, where these auxiliary Bernoulli variables are independent, P(B_0=1)=1/2, and P(B_j=1)=p_j. This asserts a single-vertex marginal representation, not independence between actual vertex depths."
+      },
+      {
+        "step": 2,
+        "claim": "Uniform vertex depth satisfies D_n/log n → α in L2.",
+        "proof": "For k≥3 the preceding representation gives m_k=E[h(k)]=3/2+sum_{j=3}^{k-1}p_j and Var(h(k))=1/4+sum_{j=3}^{k-1}p_j(1-p_j). Since p_j=α/j+O_δ(j^{-2}), m_k=α log k+O_δ(1) and Var(h(k))=O_δ(log k). The same bounds, with adjusted constants, cover h(1)=0 and h(2)=1. Uniform sampling gives E[(D_n-α log n)^2]=(1/n)sum_{k=1}^n [Var(h(k))+(m_k-α log n)^2]. The variance contribution is O_δ(log n). For the other contribution use |m_k-α log n|≤C_δ+α log(n/k). The function x↦log(n/x)^2 decreases on (0,n], hence sum_{k=1}^n log(n/k)^2≤integral_0^n log(n/x)^2 dx=2n. Thus E[(D_n-α log n)^2]=O_δ(log n+1). Division by (log n)^2 proves the claim."
+      },
+      {
+        "step": 3,
+        "claim": "The expected depth of the shared ancestral path remains bounded.",
+        "proof": "For v≥2, let S_v(t) be the size of the descendant subtree of v at time t≥v. Its vertices have total degree 2S_v(t)-1: there are S_v(t)-1 internal edges and one edge to the parent of v. Its total attachment weight is therefore aS_v(t)-1. Set X_v(t)=S_v(t)-d. The probability that X_v increases by one at the next step is X_v(t)/(t-c), and X_v(v)=α. Consequently E[X_v(t+1) | X_v(t)]=(1+1/(t-c))X_v(t), while E[X_v(t+1)(X_v(t+1)+1) | X_v(t)]=(1+2/(t-c))X_v(t)(X_v(t)+1). Telescoping these recurrences yields E[X_v(n)]=α(n-c)/(v-c) and E[X_v(n)(X_v(n)+1)]=α(α+1)(n-c)(n+1-c)/((v-c)(v+1-c)). Since S_v^2=X_v(X_v+1)+(2d-1)X_v+d^2, these identities determine E[S_v(n)^2] exactly. A nonroot vertex is a common ancestor precisely when both endpoints lie in its subtree. Hence E[M_n]=(1/n^2)sum_{v=2}^n E[S_v(n)^2]. Using 1/((v-c)(v+1-c))=1/(v-c)-1/(v+1-c), this becomes E[M_n]=((α+1)/2)(n-c)(n-1)/n^2 +(1-2α)α(n-c)J_n/n^2 +d^2(n-1)/n^2, where J_n=sum_{v=2}^n 1/(v-c). Because J_n=O_δ(log n+1), E[M_n] tends to (α+1)/2. In particular, E[M_n]=O_δ(1)."
+      },
+      {
+        "step": 4,
+        "claim": "L_n/log n → 2α in L1.",
+        "proof": "The unique path identity is L_n=D_n+D'_n-2M_n. Both endpoint depths satisfy Step 2. Independence between their depths is unnecessary: E[|L_n/log n-2α|]≤E[|D_n/log n-α|]+E[|D'_n/log n-α|]+2E[M_n]/log n, and every term tends to zero. It follows also that E[L_n]/log n→2α."
+      },
+      {
+        "step": 5,
+        "claim": "Finite-mean edge weights give C_n/log n → 2αμ in L1.",
+        "proof": "Nonnegative weights and the tree structure imply that first-passage distance equals the sum of weights on the unique simple path. Conditional on the tree and endpoints, this path is independent of the edge weights. For K>0 put W^(K)=min(W,K), μ_K=E[W^(K)], and let C_n^(K) be the corresponding path sum. Conditional variance is at most K^2L_n, so E[|C_n^(K)-μ_KL_n|]≤K sqrt(E[L_n]). Also E[C_n-C_n^(K)]=(μ-μ_K)E[L_n]. Therefore E[|C_n-μL_n|]≤K sqrt(E[L_n])+2(μ-μ_K)E[L_n]. Divide by log n and let n tend to infinity with K fixed. The first term vanishes and the limiting upper bound is 4α(μ-μ_K). Finally μ_K increases to μ, so letting K tend to infinity proves (C_n-μL_n)/log n→0 in L1. Combine this with Step 4."
+      },
+      {
+        "step": 6,
+        "claim": "Infinite-mean edge weights give C_n/log n → infinity in probability.",
+        "proof": "For each fixed K, Step 5 applies to W^(K), giving C_n^(K)/log n→2αμ_K in probability. If E[W]=infinity, then μ_K increases without bound. Given any finite R>0, choose K with 2αμ_K>R. Since C_n≥C_n^(K), P(C_n/log n≤R)≤P(C_n^(K)/log n≤R)→0."
+      },
+      {
+        "step": 7,
+        "claim": "Exact expected distance for δ=0.",
+        "proof": "For a deterministic n-vertex tree let Q_n=sum_{u<v}dist(u,v). Fix v and orient every edge away from v. Each nonroot vertex x contributes dist(x,v)+dist(parent(x),v)=2dist(x,v)-1. Thus sum_p deg(p)dist(p,v)=2sum_p dist(p,v)-(n-1). Summing over v gives sum_{p,v}deg(p)dist(p,v)=4Q_n-n(n-1). In degree-proportional attachment, the next parent is selected with probability deg(p)/(2(n-1)). Adding a leaf at p increases Q by n+sum_v dist(p,v). Therefore, with q_n=E[Q_n], q_{n+1}=((n+1)/(n-1))q_n+n/2 and q_2=1. Dividing by n(n+1) gives q_{n+1}/(n(n+1))=q_n/(n(n-1))+1/(2(n+1)). Telescoping yields q_n=n(n-1)(H_n/2-1/4). Uniform independent endpoints have E[L_n]=2q_n/n^2=(1-1/n)(H_n-1/2). Independence of weights gives E[C_n]=μE[L_n]."
+      }
+    ],
+    "limiting_family": {
+      "label": "proof",
+      "statement": "For finite μ, the logarithmic coefficient 2μ(1+δ)/(2+δ) increases from 0 to 2μ as δ ranges from -1 to infinity.",
+      "proof": "Its derivative is 2μ/(2+δ)^2. For every fixed finite graph size, attachment probabilities tend to 1/t as δ tends to infinity, yielding the random recursive tree limit. For δ=-1+ε with ε decreasing to zero, vertex 3 chooses vertex 1 or 2 with probability 1/2. Conditional on having a star centered at that chosen vertex at time t≥3, the probability of attaching to its center is (t-2+ε)/(t-2+tε), which tends to one. Induction over finitely many steps gives a star limit with center 1 or 2. The theorem itself takes n to infinity with δ fixed; it makes no assertion for a varying parameter δ=δ_n."
+    },
+    "exact_checks": {
+      "label": "exact computation",
+      "method": "Enumerated every parent history with its exact rational attachment probability. Computed all ordered endpoint distances by breadth-first search, including equal endpoints. Checked against the depth probability generating function, subtree second moments, common-ancestor formula, and an independent Wiener-index recurrence.",
+      "coverage": [
+        {"delta": "0", "n": "2 through 8"},
+        {"delta": "-1/2", "n": "2 through 7"},
+        {"delta": "1", "n": "2 through 7"}
+      ],
+      "cases": 19,
+      "parent_histories_evaluated": 7659,
+      "ordered_endpoint_pairs_evaluated": 443514,
+      "all_checks_passed": true,
+      "degree_proportional_expected_hop_distances": [
+        {"n": 2, "value": "1/2"},
+        {"n": 3, "value": "8/9"},
+        {"n": 4, "value": "19/16"},
+        {"n": 5, "value": "107/75"},
+        {"n": 6, "value": "13/8"},
+        {"n": 7, "value": "879/490"},
+        {"n": 8, "value": "621/320"}
+      ],
+      "additional_four_vertex_checks": [
+        {"delta": "-1/2", "expected_hop_distance": "47/40"},
+        {"delta": "1", "expected_hop_distance": "67/56"}
+      ],
+      "weighted_four_vertex_check": {
+        "model": "δ=0; P(W=0)=P(W=2)=1/2 independently for each edge",
+        "distance_values": [0, 2, 4, 6],
+        "probabilities": ["67/128", "47/128", "13/128", "1/128"],
+        "expected_distance": "19/16"
+      }
+    },
+    "numerical_evidence": {
+      "label": "numerical evaluation of an exact expectation formula",
+      "model": "δ=0 and μ=1",
+      "values": [
+        {"n": 1000, "expected_distance_over_log_n": 1.0102392322615803},
+        {"n": 1000000, "expected_distance_over_log_n": 1.0055880867992595}
+      ],
+      "role": "Consistency check only; the convergence claim is proved above."
+    },
+    "conjectures": [],
+    "sketches": []
+  },
+  "hardest_remaining_gap": "The proof relies on a unique path. With two or more attachment edges per new vertex, first-passage distance involves optimization over competing paths, so the tree argument does not supply the asymptotics. A literature and original-source audit must first identify which precise graph and weight regimes remain unresolved. There is no remaining proof gap in the stated tree result.",
+  "evidence_status": "partial",
+  "draft_brain_nodes": [
+    {
+      "key": "I0047.affine_pa_tree.definition.v1",
+      "namespace": "math.probability.preferential_attachment",
+      "logical_name": "affine_pa_tree_fpp",
+      "kind": "definition",
+      "title": "First-passage distance on an affine preferential attachment tree",
+      "statement": "T_2 consists of the edge {1,2}, rooted at 1. For fixed δ>-1, vertex t+1 attaches to v with probability (deg_t(v)+δ)/((2+δ)t-2). Edges carry IID almost surely finite nonnegative weights, independently of the tree. U_n,V_n are independent uniform vertices, independent of the weights. C_n is the sum of edge weights on their unique simple path.",
+      "assumptions": [
+        "One edge is added per new vertex.",
+        "The initial graph is exactly the edge {1,2}.",
+        "The attachment parameter δ>-1 is fixed."
+      ],
+      "domain": "Probability; random trees; preferential attachment; first-passage percolation",
+      "source": {
+        "source_id": "I0047_campaign_derivation_20261010",
+        "url": null,
+        "revision": "draft-v1",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0047.affine_pa_tree.depth.v1",
+      "namespace": "math.probability.preferential_attachment",
+      "logical_name": "affine_pa_tree_depth_marginal_and_lln",
+      "kind": "lemma",
+      "title": "Exact depth marginals and uniform-vertex depth concentration",
+      "statement": "In the specified affine attachment tree, set a=2+δ and α=(a-1)/a. For k≥3, h(k) has the distribution of 1+B_0+sum_{j=3}^{k-1}B_j for independent auxiliary Bernoulli variables with parameters 1/2 and (a-1)/(aj-2), respectively. For uniform U_n, E[(h(U_n)-α log n)^2]=O_δ(log n+1), so h(U_n)/log n→α in L2.",
+      "proof_text": "Let A_t(z)=sum_v(deg_t(v)+δ)z^{h(v)} and G_t(z)=E[A_t(z)]/(at-2). Attachment at depth h adds z^h+(a-1)z^{h+1}. Conditional averaging gives E[A_{t+1}(z)|T_t]=A_t(z)[1+(1+(a-1)z)/(at-2)]. Thus G_{t+1}(z)=G_t(z)(1-p_{t+1}+p_{t+1}z), where p_j=(a-1)/(aj-2), and G_2(z)=(1+z)/2. Since the parent of k is sampled by attachment weight, E[z^{h(k)}]=zG_{k-1}(z), proving the Bernoulli representation by equality of probability generating functions. Put c=2/a. Then p_j=α/(j-c)=α/j+O_δ(j^{-2}); hence E[h(k)]=α log k+O_δ(1) and Var(h(k))=O_δ(log k). The deterministic depths h(1)=0 and h(2)=1 satisfy adjusted bounds. Averaging over the uniform label gives E[(h(U_n)-α log n)^2]=(1/n)sum_k[Var(h(k))+(E[h(k)]-α log n)^2]. Bound the squared mean difference using |E[h(k)]-α log n|≤C_δ+α log(n/k). Since log(n/x)^2 decreases on (0,n], its sum over k=1,...,n is at most its integral, which equals 2n. The averaged squared mean difference is bounded, and the averaged variance is O_δ(log n+1). Division by (log n)^2 establishes L2 convergence.",
+      "assumptions": [
+        "The tree and root are as in affine_pa_tree_fpp.",
+        "δ>-1 is fixed.",
+        "The Bernoulli representation is marginal and does not assert independence of actual vertex depths."
+      ],
+      "domain": "Probability; preferential attachment; random-tree depths",
+      "source": {
+        "source_id": "I0047_campaign_derivation_20261010",
+        "url": null,
+        "revision": "draft-v1",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0047.affine_pa_tree.shared_ancestry.v1",
+      "namespace": "math.probability.preferential_attachment",
+      "logical_name": "affine_pa_tree_bounded_shared_ancestry",
+      "kind": "lemma",
+      "title": "Bounded expected shared ancestral depth",
+      "statement": "Let M_n be the depth of the lowest common ancestor of two independent uniform vertices in the specified tree. With a=2+δ, d=1/a, α=1-d, c=2d, and J_n=sum_{v=2}^n 1/(v-c), E[M_n]=((α+1)/2)(n-c)(n-1)/n^2 +(1-2α)α(n-c)J_n/n^2 +d^2(n-1)/n^2. In particular E[M_n]→(α+1)/2.",
+      "proof_text": "For nonroot vertex v let S_v(t) be its descendant-subtree size. There are S_v(t)-1 internal edges and one edge to its parent, so its total degree is 2S_v(t)-1 and its attachment weight is aS_v(t)-1. Writing X_v(t)=S_v(t)-d, its increment probability is X_v(t)/(t-c), with initial value X_v(v)=α. Conditional expectation therefore multiplies X_v by 1+1/(t-c) and X_v(X_v+1) by 1+2/(t-c). Telescoping gives E[X_v(n)]=α(n-c)/(v-c) and E[X_v(n)(X_v(n)+1)]=α(α+1)(n-c)(n+1-c)/((v-c)(v+1-c)). Because S_v^2=X_v(X_v+1)+(2d-1)X_v+d^2, this gives its second moment. Each nonroot common ancestor contributes one to M_n. Conditional on the tree, the probability that both independent uniform endpoints lie in v's subtree is S_v(n)^2/n^2. Hence E[M_n]=n^{-2}sum_{v=2}^n E[S_v(n)^2]. The factorial-moment terms telescope using 1/((v-c)(v+1-c))=1/(v-c)-1/(v+1-c); their sum is ((α+1)/2)(n-c)(n-1). The mean terms sum to (1-2α)α(n-c)J_n, and the constant terms to d^2(n-1). Division by n^2 gives the formula. Since c<2 is fixed, J_n=O_δ(log n+1); the latter two normalized terms vanish and the first tends to (α+1)/2.",
+      "assumptions": [
+        "The tree is as in affine_pa_tree_fpp, rooted at vertex 1.",
+        "δ>-1 is fixed.",
+        "Endpoints are independent uniform vertices sampled with replacement."
+      ],
+      "domain": "Probability; preferential attachment; subtree moments; common ancestors",
+      "source": {
+        "source_id": "I0047_campaign_derivation_20261010",
+        "url": null,
+        "revision": "draft-v1",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0047.affine_pa_tree.weighted_distance.v1",
+      "namespace": "math.probability.preferential_attachment",
+      "logical_name": "affine_pa_tree_fpp_logarithmic_law",
+      "kind": "theorem",
+      "title": "First-passage asymptotics on an affine attachment tree",
+      "statement": "For the model affine_pa_tree_fpp, if μ=E[W]<infinity then C_n/log n→2μ(1+δ)/(2+δ) in L1. If E[W]=infinity then C_n/log n→infinity in probability.",
+      "proof_text": "Set α=(1+δ)/(2+δ). The included depth lemma proves h(U_n)/log n→α in L2, and the included shared-ancestry lemma proves E[M_n]=O_δ(1). The path identity L_n=h(U_n)+h(V_n)-2M_n and the triangle inequality therefore give L_n/log n→2α in L1, without requiring independence between endpoint depths. Thus E[L_n]/log n→2α. The unique simple path is determined by the tree and endpoints independently of the weights, and nonnegative weights make its weight sum equal to first-passage distance. For K>0 truncate every weight to W^(K)=min(W,K), with mean μ_K, and write C_n^(K) for the resulting sum. Conditional on the path, the summands are IID and their variance is at most K^2, giving E[|C_n^(K)-μ_KL_n|]≤K sqrt(E[L_n]). For finite μ, independence also gives E[C_n-C_n^(K)]=(μ-μ_K)E[L_n]. Consequently E[|C_n-μL_n|]≤K sqrt(E[L_n])+2(μ-μ_K)E[L_n]. After division by log n and passage to the limit in n, the upper limit is at most 4α(μ-μ_K). Monotone convergence gives μ_K↑μ, proving that this upper limit is zero as K increases. Combine with the L1 limit of L_n/log n. If μ=infinity, each truncated law still has finite mean and therefore C_n^(K)/log n→2αμ_K in probability. For a prescribed finite R choose K with 2αμ_K>R. The inequality C_n≥C_n^(K) implies P(C_n/log n≤R)→0, which is the asserted divergence.",
+      "assumptions": [
+        "The tree is as in affine_pa_tree_fpp.",
+        "δ>-1 is fixed.",
+        "Weights are IID, nonnegative, almost surely finite, and independent of the tree and endpoints.",
+        "Endpoints are independent uniform vertices.",
+        "No finite second moment of the weights is assumed."
+      ],
+      "domain": "Probability; preferential attachment; first-passage percolation",
+      "source": {
+        "source_id": "I0047_campaign_derivation_20261010",
+        "url": null,
+        "revision": "draft-v1",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0047.degree_proportional_tree.exact_mean.v1",
+      "namespace": "math.probability.preferential_attachment",
+      "logical_name": "degree_proportional_pa_tree_exact_fpp_mean",
+      "kind": "lemma",
+      "title": "Exact expected distance in the degree-proportional attachment tree",
+      "statement": "For affine_pa_tree_fpp with δ=0 and finite mean edge weight μ, E[C_n]=μ(1-1/n)(H_n-1/2) for every n≥2, where H_n=sum_{j=1}^n 1/j.",
+      "proof_text": "Let Q_n=sum_{u<v}dist(u,v) for the unweighted tree. For each vertex v, orient edges away from v. Summing endpoint distances over edges gives sum_p deg(p)dist(p,v)=2sum_p dist(p,v)-(n-1), because every nonroot vertex contributes twice its depth minus one. Summing over v yields sum_{p,v}deg(p)dist(p,v)=4Q_n-n(n-1). Adding a new leaf at parent p increases Q by n+sum_v dist(p,v). Degree-proportional parent selection has denominator 2(n-1), so q_n=E[Q_n] obeys q_{n+1}=((n+1)/(n-1))q_n+n/2, with q_2=1. Dividing by n(n+1) and telescoping gives q_n/[n(n-1)]=1/2+(1/2)sum_{j=3}^n1/j=H_n/2-1/4. Independent uniform endpoints have expected hop distance 2q_n/n^2. Conditional on their path, the expected sum of independent edge weights equals μ times its length. Substitution proves the formula.",
+      "assumptions": [
+        "Initial graph is the edge {1,2}.",
+        "Each new vertex adds one edge with degree-proportional attachment.",
+        "Endpoints are independent uniform vertices sampled with replacement.",
+        "Weights are independent of the graph and endpoints and have finite mean μ."
+      ],
+      "domain": "Probability; preferential attachment; exact expected distances",
+      "source": {
+        "source_id": "I0047_campaign_derivation_20261010",
+        "url": null,
+        "revision": "draft-v1",
+        "license": "owner-own-work (campaign result)"
+      }
+    }
+  ],
+  "task": "Open problem I0047 (ledger I, queue rank 5): First-passage percolation on preferential attachment models."
+}

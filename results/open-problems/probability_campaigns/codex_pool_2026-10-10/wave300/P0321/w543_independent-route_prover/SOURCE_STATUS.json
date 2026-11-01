@@ -1,0 +1,97 @@
+{
+  "worker": "w543",
+  "target": "P0321",
+  "as_of": "2026-10-10",
+  "title": "Existence of a hexatic phase for two-dimensional Riesz gases",
+  "historical_status": "unsolved in the 2026-09-07 ranking",
+  "current_openness": "UNKNOWN",
+  "complete_rigorous_source_statement_recovered": false,
+  "reason": "The primary source supplies a qualitative phase-diagram expectation, not a fully quantified theorem or fixed microscopic correlation observable. STATEMENT.md distinguishes recovered model assumptions from a proposed formalization.",
+  "primary_source": {
+    "author": "Mathieu Lewin",
+    "title": "Coulomb and Riesz gases: The known and the unknown",
+    "url": "https://arxiv.org/html/2202.09240v2#S6.SS2",
+    "version": "arXiv:2202.09240v2, 30 April 2022",
+    "location": "Section VI.2 (ledger calls it VI.B, PDF pages 66-67); HTML lines 1688-1692",
+    "short_quote": "fast decay of translational correlations and slow decay of (six-fold) orientational correlations",
+    "model": "Classical d=2 Riesz gas; V_0=-log|x|, V_s=|x|^-s for s>0; density rho and Gamma=beta*rho^(s/2). Neutralizing background is needed for highlighted s=0 and s=1.",
+    "caution": "The rendering's generated date is not a new arXiv version; use the version history. Numerical phase thresholds are not assumed rigorous. The source does not require two continuous transitions."
+  },
+  "local_records": [
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "line": 556,
+      "finding": "Tier 5, P0321, historical unsolved status."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006p02.json",
+      "key": "op-p0321",
+      "finding": "Prove or refute the intermediate hexatic phase; source_says_open and current status unverified."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/brain_bundle_C006a05.json",
+      "key": "at-p0321",
+      "finding": "Prior attempt: a rotationally invariant global-angle mixture can have zero one-point order and positive two-point order. Author-checked only. Our shear/Fourier-covariance boundary differs."
+    },
+    {
+      "path": "~/math-brain-build/export/population/nodes.jsonl",
+      "matching_lines": [
+        3643,
+        8627
+      ],
+      "finding": "Exact target and attempt cards found; both metadata truth_status=unverified. No source/hash match is treated as a proof."
+    },
+    {
+      "path": "~/<private-repo>/06_math_research/prob1000_lean_20260908/RANKED_LIST_2026-09-07_annotated.md",
+      "line": 606,
+      "finding": "Ranking row only; no actual P0321 Lean theorem receipt found in the targeted search."
+    }
+  ],
+  "prior_attempt_digest": {
+    "known_attempt": "Let theta_x=Theta+eta_x with a common uniform Theta and iid eta_x. E exp(6i theta_x)=0, but E exp(6i(theta_x-theta_y))=|E exp(6i eta_x)|^2 for x!=y. This rebuts a one-point-order shortcut but does not establish a Riesz phase.",
+    "H_I_search": "Targeted P0321/hexatic searches in probability_1000_attempts_H_20260912 and probability_1000_attempts_I_20260914 returned no matching record. This is a bounded search result, not a claim that no owner proof exists anywhere.",
+    "team_O": "Read the named board; no P0321 row was found. The probability300 board explicitly groups w540-w551 on this target.",
+    "percolation_material": "No relevant Riesz/hexatic filename in the named probability-open-problem folder; percolation attempts were not read because this route does not use them."
+  },
+  "recent_primary_literature_check": [
+    {
+      "url": "https://arxiv.org/abs/2601.18215",
+      "version": "v1, 26 January 2026",
+      "finding": "Li, Ding and Ma discuss energy/entropy in numerical two-dimensional melting models. Their inverse-power simulations use n=6,64 and a cut-and-shifted potential at r_c=2.5; this is not a rigorous thermodynamic hexatic-existence proof for the untruncated s=0 or s=1 Riesz jellium.",
+      "location": "HTML Methods, lines 58-69"
+    },
+    {
+      "url": "https://arxiv.org/abs/1504.03570",
+      "finding": "Mazars's primary numerical study of classical 1/r particles reports a hexatic regime and a weak first-order fluid/hexatic transition; this warns against adding two-continuous-transition hypotheses."
+    },
+    {
+      "url": "https://arxiv.org/abs/cond-mat/9902322",
+      "finding": "Muto and Aoki: molecular-dynamics positional and orientational diagnostics for the classical 2D electron system; numerical evidence, not a rigorous phase-existence theorem."
+    }
+  ],
+  "analytic_fact_sources": [
+    "https://dlmf.nist.gov/10.9.E1",
+    "https://dlmf.nist.gov/10.9.E2",
+    "https://dlmf.nist.gov/10.17.E3"
+  ],
+  "brain_scars_used": [
+    "perceptron_proof_open_gaps_fleet_2026_07_12",
+    "proof_steps_need_derived_joint_structure_2026_09_09"
+  ],
+  "recall": "Timed out after 60 seconds; see recall_evidence.txt. Fallback index grep and named relevant memory files were used.",
+  "novelty_claim": false,
+  "formal_check_receipt": null,
+  "microscopic_solution_claim": false,
+  "auxiliary_audit_status": {
+    "H1_H4": "scoped KEEP by w544 and w545",
+    "receipt": "AUDIT_RECEIPTS.json",
+    "different_login_provenance": "UNVERIFIED",
+    "not_a_P0321_solution": true
+  },
+  "population_read_only_query": {
+    "receipt": "population_store_p0321.json",
+    "matched_nodes": 2,
+    "query_only": true
+  },
+  "canonical_lookup_limit": "The named math-research-brain checkout had no live-store locator in the bounded README/store/local reads; no separate current P0321 solution record was recovered. This does not certify absence of an owner solution."
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "claim_id": "A020-BOUNDARY-081-FALSE",
+    "version": 1,
+    "exact_statement": "For the Boolean sign f on the uniform five-bit cube with negative truth-table mask 474167 (little-endian inputs) and coordinate i=0, Inf_i=1/8, I(D_i)=3/16, and Delta_i=(9/8)log2(3)-1. The ratio Delta_i/[(3/ln2)Inf_i+2I(D_i)] equals (9ln3-8ln2)/(3(1+ln2)) and is greater than 17/20, hence greater than 81/100. Exact B_i/Inf_i=5log2(5)-8<4, so this witness does not invalidate exact-B localization at K=4.",
+    "hypotheses": [
+      "Uniform cube; sign-valued truth mask exactly as stated",
+      "Entropy bits; derivative influence means L2 Dirichlet energy"
+    ],
+    "statement_sha256": "ee35f286b414cd3d5904627826beeeb543baa51c226454ab44ddf3e020afe429",
+    "contributors": [
+      "A020"
+    ],
+    "proof_source": [
+      "REPORT.md section 1",
+      "code/direct.py",
+      "out/direct_certificates.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_REVIEW_PENDING",
+    "supersedes": null,
+    "refutes": [
+      "Exploratory B04 v2 target: universal ratio <=81/100 at Inf_i>=1/8"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "claude-B04",
+      "A018",
+      "A019",
+      "A027",
+      "A091",
+      "A090"
+    ]
+  },
+  {
+    "claim_id": "A020-FIVEBIT-ENVELOPES",
+    "version": 1,
+    "exact_statement": "Every Boolean sign on the uniform five-bit cube and every coordinate with Inf_i>=1/8 satisfy Delta_i < (9/10)*[(3/ln2)Inf_i+2I(D_i)]. Every fresh uniform multiplexer with a=3 and m in {0,1,2} satisfies Delta <= (9/10)*[min(3,(2/ln2)I_sel)+3*h2(I_sel/3)], strictly for I_sel>0 and with equality zero for I_sel=0. These statements are finite-domain certificates only.",
+    "hypotheses": [
+      "Actual Boolean +/-1 truth tables",
+      "Only the specified five-bit singleton and a=3,m<=2 finite domains",
+      "Fresh uniform independent selector/data blocks; entropy bits"
+    ],
+    "statement_sha256": "165b3ca16587b50342be2f8c84661220a3f2680859626da5ef52e941c57a162e",
+    "contributors": [
+      "A020"
+    ],
+    "proof_source": [
+      "REPORT.md sections 2-3",
+      "FROZEN_SPEC.json",
+      "code/census.py",
+      "code/lower.py",
+      "out/census.json",
+      "out/lower_domains.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_REVIEW_PENDING",
+    "supersedes": null,
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "claude-B04",
+      "A018",
+      "A019",
+      "A027",
+      "A091",
+      "A090"
+    ]
+  }
+]

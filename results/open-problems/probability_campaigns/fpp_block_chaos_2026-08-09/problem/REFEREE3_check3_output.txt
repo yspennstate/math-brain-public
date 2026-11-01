@@ -1,0 +1,47 @@
+
+==============================================================================
+1. axis-aligned span: excess >= g(e_2) * overshoot, for EVERY norm (convexity only)
+==============================================================================
+min over all (norm, offset d, overshoot m, side) of  excess/(g(e2)*m) :
+   2.000000   at norm=lp1.3 d=0 m=100 j=-100
+   (claim needs >= 1.0)
+
+==============================================================================
+2. tilted spans: same claim with the support functional at the tilted direction
+==============================================================================
+norm       tilt    min ratio   needs >= 1
+l1         0.00      2.00000           OK
+l1         0.05      1.92375           OK
+l1         0.20      1.73484           OK
+l2         0.00      2.00000           OK
+l2         0.05      2.00000           OK
+l2         0.20      2.00000           OK
+lp1.3      0.00      2.00000           OK
+lp1.3      0.05      1.97470           OK
+lp1.3      0.20      1.87667           OK
+l4         0.00      2.00000           OK
+l4         0.05      1.98102           OK
+l4         0.20      1.90141           OK
+hex        0.00      2.00000           OK
+hex        0.05      1.97998           OK
+hex        0.20      1.91892           OK
+mix        0.00      2.00000           OK
+mix        0.05      1.99845           OK
+mix        0.20      1.97443           OK
+(a tilted span costs the cross term d*<p,n>; with d <= delta r/2 and overshoot
+ m = delta r/2 the loss is a constant factor, never the order.)
+
+==============================================================================
+3. what the far-j term costs in Form A
+==============================================================================
+exponent for a far-j site at overshoot m = delta r/2, next to the MAIN exponent
+       r    delta       c1      g(e2)     far-j expo main expo (top)
+   1e+06     0.10     0.20       1.40          1.412       0.008333   (at a polylog quantile sigma^2=50 the main exponent is 0.1667)
+   1e+06     1.00     0.20       1.40          22.41         0.8333   (at a polylog quantile sigma^2=50 the main exponent is 0.1667)
+   1e+10     0.10     0.20       1.40          231.8         0.8333   (at a polylog quantile sigma^2=50 the main exponent is 0.1667)
+   1e+10     1.00     0.20       1.40           2332          83.33   (at a polylog quantile sigma^2=50 the main exponent is 0.1667)
+   1e+14     0.10     0.20       1.40      2.333e+04          83.33   (at a polylog quantile sigma^2=50 the main exponent is 0.1667)
+   1e+14     1.00     0.20       1.40      2.333e+05           8333   (at a polylog quantile sigma^2=50 the main exponent is 0.1667)
+=> at every consumed (polylog) quantile the far-j term exp(-c sqrt r) is negligible
+   against the main term exp(-c'' c_- polylog); only at the extreme top of the range are
+   the two comparable, and there both are stretched-exponential in sqrt(r).

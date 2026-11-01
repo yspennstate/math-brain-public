@@ -1,0 +1,146 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w406",
+  "bundle_slug": "p0003-cycle-kernel-and-ensemble-gap-w406-001",
+  "entries": [
+    {
+      "key": "vertex",
+      "namespace": "probability.self_avoiding_walk",
+      "logical_name": "honeycomb-midpoint-vertex-relation",
+      "kind": "definition",
+      "title": "Honeycomb midpoint vertex relation",
+      "statement": "For a finite honeycomb lattice domain containing all midpoints emanating from its vertices, define L_v F=sum over incident edges e of (m_e-v)F(m_e), where m_e is the geometric midpoint. The vertex-relation class consists of complex midpoint fields satisfying L_v F=0 for every domain vertex, with prescribed boundary half-edge values. This definition does not require F to be an actual SAW path-sum.",
+      "proof_text": null,
+      "assumptions": [
+        "finite honeycomb lattice domain",
+        "complex midpoint field",
+        "geometric midpoints"
+      ],
+      "domain": "planar self-avoiding walk; proof-bridge auditing",
+      "source": {
+        "source_id": "owner:campaign:P0003:w406:vertex",
+        "url": "file:///~/brain_workers/w406/INDEPENDENT_OBSTRUCTION.md",
+        "revision": "2026-10-10-unreviewed-campaign-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "cycle",
+      "namespace": "probability.self_avoiding_walk",
+      "logical_name": "honeycomb-vertex-relation-cycle-kernel-draft",
+      "kind": "concept",
+      "title": "Draft cycle-kernel obstruction for the honeycomb vertex relation",
+      "statement": "UNREVIEWED CANDIDATE OBSTRUCTION. For a finite connected internal honeycomb graph with zero boundary half-edge values, the complex kernel of L has dimension |E_internal|-|V|+1. On an interior regular hexagon of side delta>0, define N(m_j)=delta/(v_{j+1}-v_j) counterclockwise and zero elsewhere. Then L_v N=0, sup|N|=1, and successive supported values differ by 1 across distance sqrt(3)*delta/2. The submitted incidence/cancellation proof awaits w407. N is not asserted to be the genuine SAW path-sum.",
+      "proof_text": null,
+      "assumptions": [
+        "finite connected internal graph",
+        "zero boundary half-edge values",
+        "regular interior hexagon for norm/jump constants",
+        "independent proof review pending"
+      ],
+      "domain": "planar self-avoiding walk; proof-bridge auditing",
+      "source": {
+        "source_id": "owner:campaign:P0003:w406:cycle",
+        "url": "file:///~/brain_workers/w406/INDEPENDENT_OBSTRUCTION.md",
+        "revision": "2026-10-10-unreviewed-campaign-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "shortcut",
+      "namespace": "probability.self_avoiding_walk",
+      "logical_name": "vertex-identity-implies-uniform-regularity-refuted-route-draft",
+      "kind": "concept",
+      "title": "Draft warning against vertex-identity-only regularity",
+      "statement": "REFUTED-ROUTE DRAFT, independent review pending. The candidate implication 'the honeycomb midpoint vertex relation, fixed boundary values, and boundedness force uniqueness and equicontinuity uniform in the mesh' is defeated by the submitted compact hexagon mode. A regularity or selection premise controlling the actual normalized SAW path-sum is needed. This route warning does not refute the SAW scaling conjecture.",
+      "proof_text": null,
+      "assumptions": [
+        "only the vertex relation and boundedness/boundary data are supplied",
+        "proof in the linked cycle draft must receive independent check"
+      ],
+      "domain": "planar self-avoiding walk; proof-bridge auditing",
+      "source": {
+        "source_id": "owner:campaign:P0003:w406:shortcut",
+        "url": "file:///~/brain_workers/w406/INDEPENDENT_OBSTRUCTION.md",
+        "revision": "2026-10-10-unreviewed-campaign-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "ensemble",
+      "namespace": "probability.self_avoiding_walk",
+      "logical_name": "fixed-length-versus-critical-fugacity-saw-gap-draft",
+      "kind": "concept",
+      "title": "Draft fixed-length versus fugacity ensemble gap",
+      "statement": "UNREVIEWED ELEMENTARY OBSTRUCTION. On a finite graph with marked a!=b and x>0, the law proportional to x^length conditioned on length n is uniform over n-edge a-to-b paths, but its marginal is a mixture over n. On the hexagon C6 with adjacent a,b, its short-path probability is 1/(1+x^4), whereas the uniform length-1 law assigns probability 1. Thus the ensembles differ at finite scale. This proves neither inequivalence nor equivalence of their scaling limits; an explicit transfer estimate remains needed. The rooted P0003 law also leaves its endpoint free.",
+      "proof_text": null,
+      "assumptions": [
+        "finite graph",
+        "marked endpoints distinct",
+        "x>0",
+        "positive partition function",
+        "positive length-class count for conditioning",
+        "independent review pending"
+      ],
+      "domain": "planar self-avoiding walk; proof-bridge auditing",
+      "source": {
+        "source_id": "owner:campaign:P0003:w406:ensemble",
+        "url": "file:///~/brain_workers/w406/ENSEMBLE_GAP.md",
+        "revision": "2026-10-10-unreviewed-campaign-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "targetscope",
+      "namespace": "probability.self_avoiding_walk",
+      "logical_name": "p0003-rooted-fixed-length-source-fidelity-guard",
+      "kind": "concept",
+      "title": "P0003 rooted fixed-length source-fidelity guard",
+      "statement": "SOURCE-COMPARISON DRAFT. Grimmett, arXiv:2205.07318, Question 2.2 asks for a suitable rescaling limit of a uniform n-step SAW rooted at the hexagonal-lattice origin, with SLE parameter 8/3. A chordal critical-fugacity two-boundary-endpoint limit is a distinct formulation. Before applying such a result to this target, specify the original rescaling, topology, time parameter and SLE variant and prove a length/endpoint-conditioning transfer. Current openness on 10 October 2026 is UNKNOWN in this packet; no novelty or solution claim is made.",
+      "proof_text": null,
+      "assumptions": [
+        "recorded source question is Grimmett Question 2.2",
+        "source question does not specify operational rescaling/topology",
+        "no ensemble transfer supplied"
+      ],
+      "domain": "planar self-avoiding walk; proof-bridge auditing",
+      "source": {
+        "source_id": "owner:campaign:P0003:w406:targetscope",
+        "url": "file:///~/brain_workers/w406/ENSEMBLE_GAP.md",
+        "revision": "2026-10-10-unreviewed-campaign-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "cycle",
+      "to_key": "vertex",
+      "kind": "depends_on",
+      "rationale": "The cycle draft uses exactly the midpoint operator L_v F defined in the vertex entry; proof status is pending independent review."
+    },
+    {
+      "from_key": "cycle",
+      "to_key": "shortcut",
+      "kind": "refutes",
+      "rationale": "The source end has norm 1 and jump 1 at distance sqrt(3)*delta/2 with zero boundary values; the target end asserts uniqueness and equicontinuity from those conditions alone. This is a draft refutation, pending the referee."
+    },
+    {
+      "from_key": "ensemble",
+      "to_key": "targetscope",
+      "kind": "semantic_association",
+      "rationale": "The finite C6 probability mismatch exposes why a uniform fixed-n rooted target needs an additional ensemble/endpoint transfer from a chordal fugacity theorem."
+    },
+    {
+      "from_key": "targetscope",
+      "to_existing_logical": "math:probability.core:open-problem-p0003-hexagonal-self-avoiding-walk-scaling-limit",
+      "kind": "cites",
+      "rationale": "The existing target card says 'rescaled uniform n-step hexagonal-lattice self-avoiding walk'; the draft guard retains fixed length and root conditioning rather than silently replacing them by a two-endpoint fugacity law."
+    }
+  ]
+}

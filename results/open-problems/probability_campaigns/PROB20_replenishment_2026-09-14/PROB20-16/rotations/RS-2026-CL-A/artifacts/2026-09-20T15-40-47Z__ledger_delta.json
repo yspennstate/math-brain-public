@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-09-20T15:40:47Z",
+  "claim_id": "RS-2026-CL-A",
+  "native_role": "C02 / 6aa7b4b639a08191b893e2b7dd6cdf59",
+  "status": "PROVED PARTIAL / BOUNDED-GRAPHON EXCESS-CONTRACTION AMPLIFICATION / AUDIT-PENDING",
+  "E_framework": {
+    "old": 1,
+    "new": 1,
+    "reason": "The unrestricted source framework remains unproved; the restricted sufficient theorem strengthened materially."
+  },
+  "old_claim": "For fixed finite-state iid-vertex graphons with conditionally independent edges, bounded source-scale LDA plus fixed positive product noise implies bounded noisy LDA through every degree L_n with L_n^10/n -> 0, hence n^delta for every delta<1/10.",
+  "new_claim": "For arbitrary fixed bounded symmetric row-centered graphons on a probability space, including continuous and infinite-rank kernels, bounded source-scale LDA plus fixed positive product noise implies bounded noisy LDA through every degree L_n with L_n^3/n -> 0, hence n^delta for every delta<1/3.",
+  "new_lemmas": [
+    "Uniform chain bound: if Lambda=||T_W||_op and M=||W||_infty, then the kernel of T_W^ell obeys |W^(ell)(x,y)| <= B_W Lambda^ell with B_W=max(1,M/Lambda,(M/Lambda)^2).",
+    "Excess contraction: for any connected non-cycle motif of excess r, |t(F,W)| <= B_W^(3r) Lambda^e after suppressing degree-two chains.",
+    "Sharper motif enumeration: the number N_{e,r} of unlabeled connected simple minimum-degree-two non-cycle graphs with e edges and excess r satisfies N_{e,r} <= C^r e^(3r-1)."
+  ],
+  "exact_gap": "General S_n-invariant planted laws need not be iid-vertex graphons or conditionally edge-independent. Mao's Reed-Muller/rank construction lies outside this diagram factorization and still defeats the unrestricted polynomial-time low-degree conjecture. The n^(1/3) threshold is also not proved optimal within graphons.",
+  "next_attack": "Try a Schatten/branch-cancellation contraction that gains at branch vertices and can beat the absolute-value cubic-kernel n^(1/3) scale; in parallel formulate a non-graphon excess/width invariant for low-rank matrix computations or bounded-width branching programs and test it against Mao's rank distinguisher.",
+  "source_boundary": "Randomstrasse101, Anastasia Kireeva, 2026-06-05, first broad box displayed as Open Problem 35 despite the post title 'problems 36-38'; Hopkins setup uses fixed k, Omega finite or R, uniform Q_n on Omega^{binom(n,k)}, S_n-invariant P_n, D=(log n)^{1+Omega(1)}, and fixed positive noise. Mao arXiv:2607.20318, submitted 2026-07-22, remains a counterexample to the unrestricted polynomial-time conjecture.",
+  "report": {
+    "path": "runs/2026-09-20/2026-09-20T15-40-47Z__report.md",
+    "commit": "d06b547723e77303d35b168a5c32a905959fdd3b",
+    "blob": "f56aa2bfc59e48d2cc361cf211afd419b94dcc1a"
+  },
+  "handoff": {
+    "path": "artifacts/2026-09-20T15-40-47Z__P08_P09_bounded_kernel_excess_handoff.md",
+    "commit": "7d9af47e24df3aa6628ae01ba81a98c2313640e7",
+    "blob": "64805ae1e314e66d0b088e8e4fdb7c20b683c8c7"
+  },
+  "delivery": "GitHub only; no email, Drive, public posting, permission changes, force-push, or historical overwrite."
+}

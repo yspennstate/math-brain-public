@@ -1,0 +1,20 @@
+{
+  "problem_id": "C0041",
+  "worker": "w455",
+  "checked_on": "2026-10-10",
+  "exact_statement": "For d >= 2, let (omega(x,e): |e|_1=1) be iid site transition vectors on Z^d, each a probability vector, with a deterministic kappa>0 and omega(x,e)>=kappa almost surely for every x,e. Under the annealed law P_0, assume X_n dot l tends to +infinity almost surely for a fixed unit vector l. Must liminf_n (X_n dot l)/n be strictly positive P_0-almost surely?",
+  "primary_source": {"authors": ["Alexander Drewitz", "Alejandro F. Ramirez"], "title": "Selected Topics in Random Walk in Random Environment", "arxiv": "1309.2589v1", "url": "https://arxiv.org/pdf/1309.2589", "locator": "Open Question 2.20, PDF page 24 (index 23); definitions Section 2.1 and Section 2.6", "question_verified_from_primary_pdf": true, "short_quote": "Is the RWRE necessarily ballistic in direction l?", "sha256_verified_here": "5b79b728fd6a0add60442b5a686ed69fdff9041c04d595269824a91e1792ff43"},
+  "historical_status": "source_says_open",
+  "current_openness": "CLAIMED_RESOLVED_BY_2026_PREPRINT; INDEPENDENT_VERIFICATION_PENDING",
+  "local_prior_attempt": {"id": "C0041-A001", "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl", "line": 32, "status": "attempted_unsolved", "gap_quote": "Integrability of the regeneration time is not implied by transience without a quantitative condition."},
+  "solved_retired_check": {"status": "targeted_local_check_complete", "finding": "Exact C0041 matches in the named September intake, H/I attempt and Lean intake paths yielded the dated attempted_unsolved record and no later owner-retirement entry; the public September 23 preprint is a separate claimed resolution.", "limits": "Only named paths and exact-ID reads; no whole-corpus export or private test material."},
+  "literature_checked": [
+    {"arxiv": "1809.02011v3", "url": "https://arxiv.org/abs/1809.02011", "finding": "The title's solved conjecture concerns equivalence of (T') and (T), not directional transience implying ballisticity. Do not retire C0041 on that title."},
+    {"arxiv": "2006.00570v3", "url": "https://arxiv.org/abs/2006.00570", "finding": "A quantitative polynomial hypothesis and a stronger open set of transient directions appear. Version history includes a withdrawn v2 and an acknowledged mistake; no conclusion about C0041 from an earlier version."}
+  ],
+  "recent_claimed_resolution": {"date": "2026-09-23", "source": "https://github.com/openai/math/blob/main/preprints/Directional-transience-implies-ballisticity-September-23-2026/paper.pdf", "paper_sha256": "8b305d1fbb11b2a62d76f7decbc45accf5d1c02362937d0af5c4108dd0cc1411", "claim": "Almost-sure directional transience implies deterministic limiting velocity with positive projection in every d>=2 iid uniformly elliptic nearest-neighbor environment.", "review_state": "paper proof not independently checked; actual Lean implementation found but build and axioms unverified", "comparator_template": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/DirectionalBallisticity.lean", "implementation": "https://raw.githubusercontent.com/openai/math/main/lean/OAI/Probability/Ballisticity/Main.lean", "formal_receipt": "Official formalization.yaml points to OAI.DirectionalTransience.directional_transience_implies_ballisticity in OAI/Probability/Ballisticity/Main.lean. Its body calls directional_transience_implies_ballisticity_unit. The comparator template's sorry is not the implementation. A #print axioms/build receipt is still required."},
+  "single_hardest_piece": "Independently verify the September 2026 claimed proof of E_0[tau_1 | D_l=infinity] < infinity (or its alternative decisive bridge) from only UE, IID and P_0(A_l)=1. The older renewal argument alone does not prove it.",
+  "parent_problem_solved": null,
+  "parent_problem_verdict": "Public preprint and distinct Lean implementation claim resolution; independent paper review and formal build/axiom check not completed by w455.",
+  "served_model_settings": "unverified; no claim about requested model/service settings"
+}

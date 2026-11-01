@@ -1,0 +1,28 @@
+{
+  "id": "claim_5831cf989c54f4dda7ae7e7a4a5bc3fe030a5bc9b5591d47fdd117e4d6d50e0d",
+  "title": "The fibre is an Ising partition function",
+  "body": "For any linear NAE triangle system with sharing graph G (V vertices, E edges): |A| / (2^r (3/4)^k) = Z(G) where Z(G) = < prod_{uv in E} (1 - x_u x_v / 3) > is the uniform average over x in {-1,+1}^V, equivalently Z = SUM over even edge-selections S of (-1/3)^{|S|}. Hence c = log2 Z(G). This is a high-temperature (van der Waerden) expansion at coupling -1/3.\nthe system is linear: no two triples share two coordinates",
+  "metadata": {
+    "artifact_digest": "sha256:c6c1fb5e6b43179809500d1ef5c0a2ff36cce3bd530b89143411c2cf120b43a4",
+    "artifact_path": "objects/sha256/c6/c6c1fb5e6b43179809500d1ef5c0a2ff36cce3bd530b89143411c2cf120b43a4.md",
+    "bundle_digest": "sha256:d2ac76f937511b554cf7fefd2f0c64afe6ffbc4bd60478e4078951135e53aa72",
+    "bundle_entry_key": "thm-fibre-ising",
+    "bundle_id": "population.rademacher-session-results-001",
+    "claim_kind": "theorem",
+    "conditions": [],
+    "domain": "probability / combinatorics (sharp Rademacher singularity campaign)",
+    "draft": "claude-brainloop-0901/bundle_rs05.json",
+    "evidence_ids": [],
+    "logical_id": "math:research.rademacher_singularity:fibre-is-an-ising-partition-function",
+    "overlay_schema_version": 1,
+    "proof_text": "Integrate out the private (unshared) coordinates triangle by triangle: a triangle with 3 private coordinates contributes a constant factor 3/4; one with 2 private coordinates contributes a constant independent of its shared coordinate (this is exactly why trees have c = 0); one with 1 private coordinate contributes (3/2)(1 - x_u x_v/3) on its shared pair; one with 0 private coordinates contributes (3/4)(1 - (uv+vw+uw)/3). Expanding the product over edges and averaging, every selection with a vertex of odd degree vanishes, leaving the even-selection sum. Machine-checked: 1,200 random linear systems across three seeds, exact rational arithmetic, 1,200 matches / 0 mismatches, covering all four triangle types, plus 12/12 structured attack shapes (K4, theta graphs, chorded cycles) and 13/13 additivity shapes (campaign 2026-08-20).",
+    "release_manifest_digest": "sha256:388df10decfeba00eeb4a9535e477ed9b1643b85b50b92b6b9f5925a1df75f40",
+    "revision_digest": "sha256:5831cf989c54f4dda7ae7e7a4a5bc3fe030a5bc9b5591d47fdd117e4d6d50e0d",
+    "source_id": "rederived:claude-brainloop-0901",
+    "source_revision": "campaign session 6c4d55a4 (2026-08-20), machine-checked as stated",
+    "statement_fidelity_reviewed": false,
+    "supersedes": [],
+    "trust_class": "curated_secondary",
+    "truth_status": "unverified"
+  }
+}

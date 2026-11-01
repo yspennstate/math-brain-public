@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-270-REPAIRED-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B15",
+  "run_id": "20260925T100405Z-fleet02-B15-repaired-r01",
+  "source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4e530247ec0ef4101a6e5ecf621bd35a969c42aa",
+    "path": "proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/repaired-2026-09-25/paper.tex",
+    "blob": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+    "sha256": "90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb",
+    "sha256_recomputed_from_authenticated_utf8_bytes": true,
+    "bytes": 61567,
+    "physical_lines": 683,
+    "proof_environments": 26
+  },
+  "passes": [
+    "P1 full forward clause reconstruction",
+    "P2 full reverse theorem-to-dependency reconstruction",
+    "B15 focused endpoint/rearrangement regression"
+  ],
+  "verdict": "PASS_PROOF_CRITICAL_MATHEMATICS_NO_NEW_GAP_FALSE",
+  "line_ledger": "coverage_v4_FINAL.jsonl",
+  "line_status_counts": {
+    "PASS": 236,
+    "UNCHECKED": 12,
+    "NOT_MATHEMATICAL": 435
+  },
+  "unverified": [
+    "15-page rendered PDF pixel/glyph comparison (reference PDF unavailable in current conversation/library and no authenticated connector-to-renderer bridge)",
+    "external related-work attribution and bibliography metadata"
+  ],
+  "endpoint_scope": {
+    "E3": "characteristic-function envelope decays |t|^-3/2; L1; continuous density justified",
+    "E2": "critical |t|^-1; not L1; used only for Riesz negative-half moment",
+    "E1": "|t|^-1/2; used through Gaussian smoothing, not inverse Fourier",
+    "conditioning": "absolute continuity + a.e./essential bound only; no continuity upgrade"
+  },
+  "B15": {
+    "J0": "+infinity explicitly defined before use",
+    "J_bound": "PASS",
+    "rearrangement": "PASS via layer-cake/superlevel centered intervals and Tonelli",
+    "h0": "+infinity explicitly defined",
+    "pair_half": "delta=1/64 gives local integral 4+5 log 2; total 12+5 log 2 <16; D^-1/4 scaling PASS"
+  },
+  "constants": {
+    "C3": 14.818337662843,
+    "C2": 12.095072570796486,
+    "gamma1": 0.3846763769597346,
+    "gamma2": 0.23736246421253723,
+    "gamma3": 0.09004855146533981,
+    "diagonal_halfpotential_singular_part": 75.14307501039998,
+    "diagonal_halfpotential_total": 76.14307501039998,
+    "final_scalar_density": 266.7358243656071,
+    "final_definite_pair_density": 50.26548245743669,
+    "final_indefinite_pair_density": 266.95134633033405,
+    "concentration_rational_upper_fourth_power": 129821.67797760002,
+    "concentration_19_fourth_power": 130321
+  },
+  "theorem_verdicts": {
+    "s5_density": "PASS; essential density <269 after repair chain, hence advertised <=270",
+    "s3_halfpotential": "PASS; <77"
+  },
+  "model_self_report": "GPT-5.6 Sol",
+  "reasoning_effort_configured": null,
+  "reasoning_usage": null,
+  "elapsed_execution_seconds": null,
+  "full_brain_connected": false,
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

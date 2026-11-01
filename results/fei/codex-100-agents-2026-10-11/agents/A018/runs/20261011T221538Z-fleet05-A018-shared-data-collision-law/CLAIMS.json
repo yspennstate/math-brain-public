@@ -1,0 +1,48 @@
+{
+  "claims": [
+    {
+      "claim_id": "A018-COLLISION-BLOCK-INTERFACE",
+      "version": 1,
+      "exact_statement": "For all fresh uniform physical selector blocks W of a bits and arbitrary Boolean branches g_b on one common uniform data cube, define R_T=E_b hat(g_b)(T)^2, r_T(b)=hat(g_b)(T)^2/(2^a R_T), nu_T(A)=hat(F)(A,T)^2/R_T, omitting R_T=0. Then Delta_W H=B_W+M_W, where B_W=sum_T R_T H(nu_T)=H(S_W|S_data), M_W=a-sum_T R_T H(r_T), and 0<=M_W<=(2/ln 2) I_W. M_W=0 iff all branch squared spectra coincide. Delta_W H=0 iff each nonzero coefficient row is a scalar Walsh character. For even m>=2 the bent/one-point-flip Boolean splice has I_W=2^{-m} and B_W>=2^{-m}(m-1), so a universal selector-only linear payment is false. These are source-complete reconstructions/characterizations, not a proof of full FEI.",
+      "hypotheses": [
+        "All g_b Boolean on the same uniform finite data cube",
+        "Selector coordinates fresh from data and uniform independent",
+        "Entropy in bits; physical influence; zero-mass rows omitted"
+      ],
+      "statement_sha256": "c0a217ca27a97b5cad056d906ee1ba55d8d0b0e75ee0d1488894d026fa0143bc",
+      "contributors": [
+        "A018 (reconstruction and characterization; inherited baseline attribution in REPORT.md)"
+      ],
+      "proof_source": "REPORT.md, complete derivation sections 1-5; COLLISION_BLOCK_INTERFACE.tex; code/check_collision.py; out/CHECK.json",
+      "proof_dependencies": [],
+      "review_records": [
+        {
+          "status": "AUTHOR_EXACT_VERIFICATION_ONLY",
+          "assertions": 31794,
+          "independent_reviewers_requested": [
+            "A091",
+            "A090"
+          ]
+        }
+      ],
+      "status": "SOURCE_COMPLETE_BASELINE_RECONSTRUCTION_INDEPENDENT_REVIEW_PENDING",
+      "supersedes": null,
+      "refutes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A017",
+        "A019",
+        "A020",
+        "A026",
+        "A027",
+        "A037",
+        "A057",
+        "A058",
+        "A061",
+        "A063",
+        "A091",
+        "A090"
+      ]
+    }
+  ]
+}

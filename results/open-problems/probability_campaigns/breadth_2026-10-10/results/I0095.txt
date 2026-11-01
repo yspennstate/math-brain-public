@@ -1,0 +1,152 @@
+{
+  "problem_id": "I0095",
+  "source_checks": {
+    "knowledge_only_status": "I know no paper that determines this exact supremum. This does not certify current openness.",
+    "known_related_paper": {
+      "title": "Six standard deviations suffice",
+      "authors": ["Joel Spencer"],
+      "year": 1985,
+      "relevance": "Establishes a universal upper bound, not the exact value requested."
+    },
+    "original_source": {
+      "source_id": "randomstrasse_2024_v1",
+      "url": "https://arxiv.org/pdf/2504.20539v1",
+      "revision": "Locally archived arXiv v1",
+      "locator": "Entry 6, Open Problem 11, page 9",
+      "checked": "The local text confirms both the discrepancy definition and the supremum."
+    },
+    "previous_campaign": "The September 14 owner campaign note already contains the small-size table and the 9×9 witness. These were independently recomputed. A direct combinatorial proof of the universal n=10 upper bound is supplied below.",
+    "restrictions_observed": "No web search, browsing, or child agents.",
+    "novelty_status": "No novelty claim. Literature clearance and independent audit remain pending."
+  },
+  "exact_statement": "For n≥1, define disc(A)=min_{x∈{±1}^n} max_i |sum_j a_ij x_j| and D(n)=max_{A∈{±1}^{n×n}} disc(A). Determine C=sup_{n≥1} D(n)/sqrt(n).",
+  "answer": "partial",
+  "proof_or_counterexample": {
+    "label": "proof",
+    "proved_results": {
+      "requested_supremum_lower_bound": "C≥5/3.",
+      "exact_small_maxima": {
+        "n": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        "D(n)": [1, 2, 1, 2, 3, 4, 3, 4, 5, 4, 5]
+      },
+      "largest_normalized_value_through_n11": "5/3, attained at n=9.",
+      "n12": "D(12)∈{4,6}; the choice is not established here."
+    },
+    "covering_reduction": "Let d be Hamming distance and C(A) the rows of A together with their negatives. Since r·x=n−2d(r,x) and d(−r,x)=n−d(r,x), max_r |r·x|=n−2 min_{c∈C(A)}d(c,x). Therefore disc(A)=n−2R(C(A)), where R(C)=max_x min_{c∈C}d(c,x). Conversely, every nonempty complement-closed code C⊆{±1}^n with |C|≤2n has at most n antipodal pairs. Choosing one representative of each pair and repeating rows produces a square sign matrix. Consequently D(n)=n−2 min_C R(C), over exactly these codes.",
+    "counting_upper_bound": "For positive v of parity n, put R=(n−v)/2. A row covers V(n,R)=sum_{j=0}^R binom(n,j) antipodal coloring classes at threshold |r·x|≥v. Indeed, its radius-R balls around r and −r are disjoint and identified by antipodal pairing. There are 2^(n−1) coloring classes. Thus nV(n,R)<2^(n−1) implies D(n)≤v−2.",
+    "witnesses": {
+      "B6_rows": [
+        "--++++",
+        "+--+++",
+        "+++-++",
+        "+-++-+",
+        "-+-+-+",
+        "-----+"
+      ],
+      "B9_rows": [
+        "---++++++",
+        "-+---++++",
+        "+---++-++",
+        "+++++--++",
+        "+-+----++",
+        "++--+++-+",
+        "+--+-++-+",
+        "-+-+-+--+",
+        "--+-+---+"
+      ],
+      "other_witnesses": "Define H_0=[1] and H_(k+1)=[[H_k,H_k],[H_k,−H_k]]. Define pad(B,k) by appending k all-positive columns and then k all-positive rows. For n=1,…,11 use H_0,H_1,J_3,H_2,pad(H_2,1),B6,pad(B6,1),H_3,B9,pad(B9,1),pad(B9,2), respectively. At n=12 use pad(B9,3)."
+    },
+    "exact_exhaustive_verification": {
+      "label": "proof by finite exhaustive integer enumeration",
+      "explanation": "Negating a coloring preserves every absolute row sum, so fixing its last coordinate to +1 loses none. Bit j records a negative entry in coordinate j+1. A row with code r and coloring with code u have inner product n−2 popcount(u XOR r). The following standalone code checks every coloring class of every witness. It uses no floating-point arithmetic or solver.",
+      "code": "from math import comb\nfrom collections import Counter\n\nS6=['--++++','+--+++','+++-++','+-++-+','-+-+-+','-----+']\nS9=['---++++++','-+---++++','+---++-++','+++++--++','+-+----++','++--+++-+','+--+-++-+','-+-+-+--+','--+-+---+']\ndef signs(ss):\n    return [[1 if c=='+' else -1 for c in s] for s in ss]\ndef H(k):\n    a=[[1]]\n    for _ in range(k):\n        a=[r+r for r in a]+[r+[-z for z in r] for r in a]\n    return a\ndef pad(a,k):\n    n=len(a)+k\n    return [r+[1]*k for r in a]+[[1]*n for _ in range(k)]\ndef histogram(a):\n    n=len(a[0])\n    rows=[sum((z==-1)<<j for j,z in enumerate(r)) for r in a]\n    return Counter(max(abs(n-2*(u^r).bit_count()) for r in rows) for u in range(1<<(n-1)))\nB6,B9=signs(S6),signs(S9)\nA={1:[[1]],2:H(1),3:[[1]*3 for _ in range(3)],4:H(2),5:pad(H(2),1),6:B6,7:pad(B6,1),8:H(3),9:B9,10:pad(B9,1),11:pad(B9,2),12:pad(B9,3)}\nexpected={1:1,2:2,3:1,4:2,5:3,6:4,7:3,8:4,9:5,10:4,11:5,12:4}\nfor n,a in A.items():\n    assert len(a)==n and all(len(r)==n for r in a)\n    h=histogram(a)\n    assert min(h)==expected[n], (n,h)\n    assert sum(h.values())==1<<(n-1)\n    if 3<=n<=11 and n!=10:\n        v=expected[n]+2\n        assert n*sum(comb(n,j) for j in range((n-v)//2+1)) < 1<<(n-1)\nassert histogram(B9)==Counter({5:166,7:81,9:9})\nassert 12*sum(comb(12,j) for j in range(3))==948<2048\nprint('All finite witness and counting checks passed.')"
+    },
+    "universal_n10_upper_bound": "Suppose ten rows force discrepancy at least 6. Work in U={0,1}^10 modulo complementation, with distance δ([a],[b])=min(d(a,b),10−d(a,b)). Its 512 classes split into 256 even and 256 odd classes, since complementation preserves parity. Each row covers its radius-two ball. Such a ball contains 46=1+binom(10,2) classes of its center's parity and 10 of the opposite parity. If e of the ten centers are even, covering requires 100+36e≥256 and 460−36e≥256. Hence e=5. For an even center c, let S(c) be the 46 even classes in its ball. Any two even centers have quotient distance 0, 2, or 4. Coincident centers give intersection size 46. For distance 2, translate one center to zero and represent the other by a two-element support. Common points are zero, that support, and the 16 two-element supports meeting it in one element: intersection size 18. For distance 4, common points are the six two-element subsets of the other center's four-element support: intersection size 6. Thus all pairs intersect in at least six points. If some pair among the five even centers coincides or has distance 2, their union has at most 74 points; each remaining set adds at most 40, giving at most 194. Otherwise all pair distances are 4. For three such centers, translate the first to zero and represent the others by four-element supports P,Q. Their ordinary distance is 4 or 6, so |P∩Q| is 2 or 1. A common point must have a two-element support contained in P∩Q; hence the triple intersection has size at most one. The first two sets cover 86 points. The third overlaps their union in at least 6+6−1=11, adding at most 35. Each remaining set adds at most 40. Therefore all five cover at most 46+40+35+40+40=201 even classes. The five odd centers cover at most 50 additional even classes. This totals at most 251<256, contradicting coverage. Discrepancy at least 6 is impossible; even parity of row sums therefore gives disc(A)≤4 for every 10×10 sign matrix.",
+    "n10_lower_bound": "Append an all-positive column to B9 and one sign row. For every coloring (u,t), the first nine outputs are B9u+t·1, with maximum absolute value at least ||B9u||∞−1≥4. Thus D(10)≥4, completing D(10)=4.",
+    "completion": "The exhaustive checks prove all displayed witness lower bounds. For n=1,2 the upper bound disc(A)≤n suffices. For n=3,4,5,6,7,8,9,11, exclude respectively thresholds 3,4,5,6,5,6,7,7 using the counting bound: covered-class totals are respectively 3,4,5,6,56,72,90,737, below universe sizes 4,8,16,32,64,128,256,1024. The separate parity argument handles n=10. At n=12 the verified witness gives D(12)≥4, while threshold 8 is impossible because 12(1+12+66)=948<2048. Parity yields D(12)∈{4,6}. Finally disc(B9)/sqrt(9)=5/3 proves C≥5/3. Comparing D(n)^2/n through n=11 gives maximum 25/9."
+  },
+  "hardest_remaining_gap": "Determine the optimal complement-closed covering radius with at most 2n words uniformly over n. No upper bound C≤5/3 is proved, and no example exceeding 5/3 is supplied. D(12)=6 would already improve the lower bound to sqrt(3), but this run does not decide its existence or establish limiting extremal behavior.",
+  "evidence_status": "partial",
+  "numerical_evidence": [
+    {
+      "label": "numerical evidence",
+      "experiment": "Simulated annealing for a 12×12 matrix with discrepancy at least 6.",
+      "seed": 950012,
+      "budget_seconds": 90,
+      "iterations": 707035,
+      "total_antipodal_classes": 2048,
+      "best_uncovered_classes": 36,
+      "conclusion": "No covering found. This is not a nonexistence proof."
+    }
+  ],
+  "conjectures": [],
+  "sketches": [],
+  "draft_brain_nodes": [
+    {
+      "key": "I0095.covering_equivalence.draft_20261010",
+      "namespace": "math.discrepancy",
+      "logical_name": "square_sign_discrepancy_as_complement_closed_covering_radius",
+      "kind": "theorem",
+      "title": "Square sign discrepancy as a complement-closed covering radius",
+      "statement": "For n≥1, D(n)=n−2 min_C R(C), over nonempty complement-closed C⊆{±1}^n with |C|≤2n.",
+      "proof_text": "For a sign row r and coloring x, r·x=n−2d(r,x). Since d(−r,x)=n−d(r,x), max_r |r·x|=n−2 min_{c∈C(A)}d(c,x), where C(A) consists of the rows and their negatives. Minimizing over x yields disc(A)=n−2R(C(A)). Conversely, a nonempty complement-closed code of size at most 2n contains at most n antipodal pairs. Choose one representative per pair as a row, repeating rows to obtain n rows. This realizes the same code and discrepancy. Maximizing discrepancy therefore corresponds exactly to minimizing covering radius.",
+      "assumptions": [
+        "disc(A)=min_{x∈{±1}^n}||Ax||∞",
+        "R(C)=max_x min_{c∈C}d(x,c)"
+      ],
+      "domain": "Combinatorics; vector discrepancy; binary covering codes",
+      "source": {
+        "source_id": "I0095_codex_campaign_2026_10_10",
+        "url": null,
+        "revision": "draft-1; independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0095.n9_discrepancy_five.draft_20261010",
+      "namespace": "math.discrepancy",
+      "logical_name": "nine_by_nine_sign_matrix_with_discrepancy_five",
+      "kind": "lemma",
+      "title": "An explicit 9×9 sign matrix has discrepancy five",
+      "statement": "The nine sign rows encoded by [7,29,78,96,122,140,150,213,235] have discrepancy 5. Consequently C≥5/3.",
+      "proof_text": "Bit j of a row code records a negative entry in coordinate j+1, for j=0,…,8. All row codes are below 256, so coordinate nine is positive. Normalize each coloring by making coordinate nine positive; its code u ranges over all integers 0,…,255. The row sum is 9−2 popcount(u XOR r). The following complete integer enumeration checks coverage at threshold 5: R=[7,29,78,96,122,140,150,213,235]; M=0; for each u=0,…,255, set bit u in M if any r∈R satisfies abs(9−2 popcount(u XOR r))≥5. The resulting M is 2^256−1. Equivalently, direct enumeration of maximum absolute row sums gives exactly 166 values equal to 5, 81 equal to 7, and 9 equal to 9; the executable verifier in this JSON computes and asserts this histogram. Thus every coloring has maximum at least 5. The all-positive coloring has row sums (3,1,1,5,−1,3,1,−1,−3), giving maximum 5. Therefore discrepancy is exactly 5, and division by sqrt(9)=3 gives C≥5/3.",
+      "assumptions": [
+        "Bit j=1 denotes entry −1 in coordinate j+1",
+        "Standard sign-vector discrepancy"
+      ],
+      "domain": "Combinatorics; vector discrepancy; exact finite enumeration",
+      "source": {
+        "source_id": "I0095_codex_campaign_2026_10_10",
+        "url": null,
+        "revision": "Witness from owner campaign 2026-09-14; reverified 2026-10-10; audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    },
+    {
+      "key": "I0095.n10_upper_four.draft_20261010",
+      "namespace": "math.discrepancy",
+      "logical_name": "ten_by_ten_sign_discrepancy_at_most_four",
+      "kind": "theorem",
+      "title": "Every 10×10 sign matrix has discrepancy at most four",
+      "statement": "For every A∈{±1}^{10×10}, some x∈{±1}^{10} satisfies ||Ax||∞≤4.",
+      "proof_text": "If discrepancy were at least 6, ten radius-two balls would cover the quotient of the ten-dimensional binary cube by complementation. This quotient has 256 even and 256 odd classes. Each ball covers 46 classes of its center's parity and 10 of the opposite parity. With e even centers, coverage requires 100+36e≥256 and 460−36e≥256, forcing e=5. Consider the same-parity portions S(c) of the five even-centered balls. Each has size 46. Pair intersections have size 46, 18, or 6 at center distances 0, 2, or 4: after translating one center to zero, these counts follow by listing weight-zero and weight-two representatives. At distance 2 the common points are zero, the second center, and sixteen two-element supports sharing exactly one of its elements. At distance 4 they are the six two-element subsets of its support. If any pair has distance 0 or 2, the union of all five S(c) has size at most 74+3·40=194. Otherwise all pair distances are 4. For a triple, translate its first center to zero and choose weight-four supports P,Q for the other two. Their ordinary distance is 4 or 6, making |P∩Q| equal to 2 or 1. Any common point must be a two-element subset of P∩Q, so triple intersections have size at most one. Two sets cover 86 points; a third overlaps their union in at least 11 and adds at most 35; the last two add at most 40 each. Their union therefore has size at most 201. The five odd-centered balls cover at most fifty even classes. At most 251 of the 256 even classes are covered, a contradiction. Since all row sums are even, excluding discrepancy at least 6 proves discrepancy at most 4.",
+      "assumptions": [
+        "Standard sign-vector discrepancy",
+        "Hamming distance on ten coordinates"
+      ],
+      "domain": "Combinatorics; vector discrepancy; covering-ball intersections",
+      "source": {
+        "source_id": "I0095_codex_campaign_2026_10_10",
+        "url": null,
+        "revision": "draft-1; independent audit pending",
+        "license": "owner-own-work (campaign result)"
+      }
+    }
+  ],
+  "audit_status": "Author checked using separate integer matrix and Hamming-distance calculations. The n=10 intersection counts were also exhaustively checked. No independent different-family audit has occurred, and no draft has been admitted as a brain node.",
+  "saved_result": "~/brain_workers/I0095_20261010_codex_work/result_draft.json",
+  "task_reference": {
+    "task": "Open problem I0095, ledger I, queue rank 12",
+    "checklist_entry_closed": "T-20261010-063"
+  }
+}

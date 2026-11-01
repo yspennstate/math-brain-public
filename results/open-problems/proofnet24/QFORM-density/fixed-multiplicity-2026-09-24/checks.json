@@ -1,0 +1,22 @@
+{
+  "suite": "delivery-reproducibility-2026-09-24-v1",
+  "status": "PASS",
+  "source_sha256": "9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69",
+  "source_bytes": 47883,
+  "source_lines": 790,
+  "exact": {
+    "interpolation_seeds": 534,
+    "volume_sampling_cases": 18,
+    "strict_sampling_cases": 9,
+    "diagonal_dominance_slack": "297/2800"
+  },
+  "floating_diagnostics": {
+    "schur_threshold_cases": 240,
+    "graph_weight_cases": 30
+  },
+  "limitations": [
+    "Not formal verification or an independent end-to-end mathematical audit.",
+    "Does not certify all dimensions or replace written analytic proofs.",
+    "New suite; does not reproduce all test counts historically reported in AUDIT.md."
+  ]
+}

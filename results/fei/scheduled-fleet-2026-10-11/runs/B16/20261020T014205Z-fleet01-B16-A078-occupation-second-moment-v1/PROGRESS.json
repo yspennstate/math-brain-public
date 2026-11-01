@@ -1,0 +1,14 @@
+{
+  "schema": "fei-progress/2",
+  "run_id": "20261020T014205Z-fleet01-B16-A078-occupation-second-moment-v1",
+  "stream": "B16",
+  "packet_ids": ["A078"],
+  "stable_gap": "G-A078-BOOLEAN-CODING-PADDING",
+  "status": "CONDITIONAL_ANALYTIC_CANDIDATE",
+  "mathematical_delta": "Replaced endpoint-crossing lower bound P(B)>=1/3072 with a second-moment occupation-time estimate P(B)>=1/196. Combining the same two-sided central band and upper-extension Chernoff bound improves G_y from n+n^2/34,406,400 to n+n^2/1,142,400.",
+  "retained_terms": ["exact flat-spectrum normalization", "terminal extension W=V in R_i(V)", "signed parity mismatch when D_l(T')={l}", "both sides of the central band", "all union-bound suffix lengths", "probability-weighted event A cap B"],
+  "verification": "See CHECK_OCCUPATION_SECOND_MOMENT.json; finite exact checks only, not a substitute for proof review.",
+  "remote_state": "NOT_YET_ATTEMPTED_FOR_THIS_RUN",
+  "independent_reviews": {"A092": "pending", "A088": "pending"},
+  "next_action": "A092 and A088 independently reconstruct the analytic chain from the original Boolean definition; A080 checks that only GU is claimed."
+}

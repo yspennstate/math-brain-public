@@ -1,0 +1,14 @@
+{
+  "helper_version": "A005-stage3-v1",
+  "family": "Every labelled Boolean seed on n=0..3; add r=2 or 3 dummy bits and reverse physical point zero",
+  "pilot_domain": "n=0..2, r in {2,3}",
+  "pilot_case_count": 44,
+  "full_domain": "n=0..3, r in {2,3}",
+  "full_case_count": 556,
+  "symmetry": "No quotient in exhaustive checks. Separate N=12 witness groups nine dummy coordinates by exact permutation symmetry.",
+  "witness": "One three-bit point-defect seed, n=3,N=12,K=5/2,C=8/3; grouped exact Fourier coefficients and all physical-child slack classes",
+  "arithmetic": "integer Walsh transform, rational physical edge counts, exact rational log-prime vectors; 40-term atanh logarithm bounds rounded outward to denominator 2^48",
+  "memory_estimate_mb": 80,
+  "max_runtime_seconds_per_job": 60,
+  "no_dimension_escalation": true
+}

@@ -1,0 +1,189 @@
+\section*{A tensor-prime punctured codimension-two family}
+
+All logarithms are base two and
+\(L(t)=t\log_2(1/t)\), with \(L(0)=0\).  For \(n\ge3\), define
+\(f_n:\{-1,1\}^n\to\{-1,1\}\) by
+\[
+ f_n(x)=-1
+ \quad\Longleftrightarrow\quad
+ x_1=x_2=1\ \hbox{ and }\ x\ne(1,\ldots,1).
+ \tag{1}
+\]
+Thus \(f_n\) is the codimension-two one-point defect with its all-plus
+point punctured.  This is a genuine Boolean family in every dimension.
+
+\subsection*{Frozen target and exact implication}
+
+The frozen GU pair is
+\[
+ G(f)\le4I(f)+\frac34U(f).                              \tag{2}
+\]
+The independently reviewed row-cut reduction says that (2) follows if
+\[
+ D_{\ge2}+\frac12V_1
+ \le\left(4-\frac2{\ln2}\right)I+\frac34U
+      +\frac2{\ln2}Q_{\ge3}                             \tag{3}
+\]
+for every tensor-prime, positive-residual Boolean function of degree at
+least three, where
+\[
+ Q_{\ge3}=I-M_1-W_2,
+ \qquad M_1=\sum_i\min\{p(\varnothing),p(\{i\})\}.
+\]
+If (3) holds, then \(U\le16I\) and the audited reduction gives
+\(H\le34I\).  The purpose of the family (1) is to test the uniformity of
+this degree-at-least-three leaf, not to replace its signed left side by an
+unrelated entropy.
+
+\subsection*{Complete spectrum}
+
+Put
+\[
+ \varepsilon=2^{1-n},\qquad r=\varepsilon^2,
+ \qquad q_+=(1/2+\varepsilon)^2,
+ \qquad q_-=(1/2-\varepsilon)^2.
+\]
+The unpunctured function is the two-bit one-point defect, extended by dummy
+variables.  Puncturing adds twice the indicator of the all-plus vertex.
+Consequently
+\[
+ \widehat f_n(S)=
+ \begin{cases}
+  1/2+\varepsilon,&S=\varnothing,\\
+  -1/2+\varepsilon,&\varnothing\ne S\subseteq\{1,2\},\\
+  \varepsilon,&S\not\subseteq\{1,2\}.
+ \end{cases}                                             \tag{4}
+\]
+In particular, \(\widehat f_n([n])=\varepsilon\ne0\), so
+\(\deg f_n=n\).
+
+Formula (4) gives immediately
+\[
+ \boxed{H_n=L(q_+)+3L(q_-)+(2^n-4)L(r)},                 \tag{5}
+\]
+and
+\[
+ \boxed{I_n=1+(n-4)\varepsilon}.                        \tag{6}
+\]
+
+\subsection*{Exact upper-set functional}
+
+Write a Fourier label as \(S=A\cup B\), where
+\(A\subseteq\{1,2\}\) and
+\(B\subseteq\{3,\ldots,n\}\).  If \(B\ne\varnothing\), every
+coefficient above \(S\) has mass \(r\), hence
+\[
+ \pi(S)=2^{n-|S|}r.
+\]
+For the two exceptional types one has
+\[
+ \pi(\{1\})=\pi(\{2\})=\frac12-\varepsilon,
+ \qquad
+ \pi(\{1,2\})=\frac14-\frac\varepsilon2.
+\]
+Summing every label, including the empty and terminal rows, yields
+\[
+ \boxed{
+ U_n=L(q_+)+L(q_-)
+      +q_-\log_2\frac1{1-2\varepsilon}
+      +n\varepsilon-(4n-4)\varepsilon^2.}               \tag{7}
+\]
+No normalization or zero-mass term is omitted.
+
+\subsection*{Exact restriction aggregate}
+
+Let \(V_N\) denote \(U\) for a dictator on \(N\) variables whose
+all-plus value has been flipped.  With \(e=2^{1-N}\), the same upper-set
+calculation gives
+\[
+ V_N=L(e^2)+\frac12L((1-e)^2)+Ne-(2N-1)e^2.              \tag{8}
+\]
+Restricting either \(x_1\) or \(x_2\) gives one constant child and one
+such punctured dictator on \(n-1\) variables.  Restricting any of the
+other \(n-2\) coordinates gives one unpunctured two-bit defect, whose
+\(U\)-value is exactly one, and one copy of \(f_{n-1}\).  Therefore, for
+\(n\ge4\),
+\[
+ \boxed{
+ G_n=nU_n-V_{n-1}-\frac{n-2}{2}(1+U_{n-1}).}             \tag{9}
+\]
+The endpoint \(n=3\) has a constant punctured codimension-two child and is
+handled directly; (5)--(8) remain valid and the checker records its exact
+value.
+
+\subsection*{High-degree reserve}
+
+Here
+\[
+ M_1=\frac12-2\varepsilon+n\varepsilon^2,
+ \qquad
+ W_2=\frac14-\varepsilon+\binom n2\varepsilon^2.
+\]
+Hence
+\[
+ \boxed{
+ Q_{\ge3}=\frac14+(n-1)\varepsilon
+       -\left(n+\binom n2\right)\varepsilon^2.}          \tag{10}
+\]
+This retains \(W_1-M_1\), \(W_2\), and every degree-at-least-three
+contribution exactly.
+
+\subsection*{Tensor primeness}
+
+For any nontrivial variable partition \(A\sqcup B=[n]\), a factorization
+\(f_n=g(x_A)h(x_B)\) would make the Fourier coefficient matrix across
+\(A\mid B\) have rank one.  This never occurs.  If auxiliary variables
+\(i\in A\cap\{3,\ldots,n\}\) and
+\(j\in B\cap\{3,\ldots,n\}\) exist, the minor indexed by
+\(\varnothing,\{i\}\) and \(\varnothing,\{j\}\) has determinant
+\[
+ \varepsilon(1/2+\varepsilon)-\varepsilon^2
+ =\varepsilon/2\ne0.
+\]
+If all auxiliary variables lie on one side, choose an auxiliary variable
+there and one of \(x_1,x_2\) on the other side.  The analogous determinant
+is
+\[
+ \varepsilon[(1/2+\varepsilon)-(-1/2+\varepsilon)]
+ =\varepsilon\ne0.
+\]
+Thus \(f_n\) is tensor-prime for every \(n\ge3\).
+
+\subsection*{Controlled asymptotics and verdict}
+
+Taylor expansion of the displayed exact formulas gives, uniformly as
+\(n\to\infty\),
+\[
+ \begin{aligned}
+ H_n&=2+\left(4n-8+\frac2{\ln2}\right)\varepsilon
+          +O(n\varepsilon^2),\\
+ U_n&=1+\left(n+\frac1{2\ln2}\right)\varepsilon
+          +O(n\varepsilon^2),\\
+ G_n&=2+\left(n-\frac1{\ln2}\right)\varepsilon
+          +O(n^2\varepsilon^2),\\
+ I_n&=1+(n-4)\varepsilon.
+ \end{aligned}                                           \tag{11}
+\]
+Consequently
+\[
+ \frac{H_n}{I_n}\to2,\qquad
+ \frac{U_n}{I_n}\to1,\qquad
+ \frac{G_n}{I_n}\to2,\qquad
+ \frac{Q_{\ge3}(f_n)}{I_n}\to\frac14.                  \tag{12}
+\]
+For the frozen pair,
+\[
+ G_n-4I_n-\frac34U_n
+ =-\frac{11}{4}+O(n\varepsilon),                         \tag{13}
+\]
+so this family is not a GU falsifier and gives no unbounded
+\(G/I\), \(U/I\), or \(H/I\) sequence.
+
+The structural information is instead sharp: tensor-prime functions of
+arbitrarily high degree can converge spectrally to a degree-two Boolean
+boundary while \(Q_{\ge3}/I\to1/4\).  Therefore a finite degree-at-least-
+three census cannot export its larger strict reserve margin unchanged to
+all dimensions.  Any reserve-only tail theorem must allow a constant at
+most \(1/4\).  The family neither disproves the possible universal bound
+\(Q_{\ge3}\ge I/4\) nor proves the signed leaf (3); those are the precise
+remaining obligations.

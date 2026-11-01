@@ -1,0 +1,2 @@
+STATE: A040 stage 5 complete: A046 v2 full claim independently HOLDS; arbitrary-bias rare separator B/d<10063/2520 and exact first-core-query face contraction proved;30,000 exact assertions PASS;FEI OPEN.
+NEXT: A046/A087 review biased continuation; consume actual core-data entropy/reference debit from one unused inherited child bank, preserving both terminal laws and never renewing the zero separator reserve.

@@ -1,0 +1,414 @@
+\chapter{Weak Disorder, Strong Disorder } \label{ch:3}
+\section{The normalized partition function} In this section, we introduce a natural martingale that will play an important  role in many results concerning the asymptotic behavior of the polymer. 
+
+For any fixed path of the brownian motion, $\{\om(V_t)\}_{t\geq 0}$ is a Poisson process of intensity $\nu r^d$ and has associated exponential martingales $\{\exp \lef(\b \om(V_t)-\lambda(\b)\nu r^d t\rig)\}_{t\geq 0}$. Hence, for	$t\geq 0$, the \emph{normalized partition function}
+\begin{equation} \label{eq:Wt}
+W_t = e^{-\lambda (\b)\nu r^d t} Z_t,
+\end{equation}
+defines a positive, mean $1$, c\`adl\`ag martingale with respect to $\{\mathcal{G}_t\}_{t\geq 0}$.
+
+By Doob's martingale convergence theorem \cite[Chapter 2, Corollary 2.11]{revuzYor}, we get the existence of a random variable $W_\infty$ such that
+\begin{equation}
+W_\infty = \lim_{t\to\infty} W_t \  \text{ a.s.}
+\end{equation} 
+
+\begin{theorem}
+There is a dichotomy: either the limit $W_\infty$ is almost-surely positive, or it is almost-surely zero. Otherwise stated, we have either
+\begin{equation}  \label{eq:WD}
+\IP \{W_\infty > 0\} = 1,
+\end{equation}
+or
+\begin{equation} \label{eq:SD}
+\IP \{W_\infty = 0\} = 1.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Denote by $e_t$ the renormalized weight 
+\begin{equation}
+e_t = \exp(\b \om(V_t(B)) - \lambda(\b)\nu r^d t)
+\end{equation}
+By the Markovian property \eqref{eq:Markov2}, we get that for all positive times $t$ and $s$,
+\begin{equation} \label{eq:WtIntegralEquation}
+W_{s+t} = P [e_{t} \, W_s \circ \theta_{t,B_t} ].
+\end{equation}
+In Section \ref{sec:proofSelfconsistent}, we will justify that one can take the limit as $s\to\infty$ in this equality, in order to get that
+\begin{equation} \label{eq:WinfinityIntegralEquation2}
+W_\infty = P [e_{t} \, W_\infty \circ \theta_{t,B_t} ].
+\end{equation}
+Then, notice that \eqref{eq:WinfinityIntegralEquation2} also writes 
+\begin{equation} \label{eq:WinfinityIntegralEquation}
+W_\infty = W_t \, \int_{\mathbb{R}^d} P_t^{\b,\om} (B_t \in \mathrm{d} x)\, W_\infty \circ \theta_{t,x}.
+\end{equation}
+Since $W_t > 0$ $\IP$-a.s and since $P_t^{\b,\om}$ has positive density with respect to Lebesgue's measure, we obtain by \eqref{eq:WinfinityIntegralEquation} that
+\[ \forall t>0, \quad \{W_\infty = 0\} = \{W_\infty \circ \theta_{t,x} = 0, \ x\text{-a.e.}\}, \]
+or, equivalently,
+\[  \{W_\infty = 0\} = \left\{ \int_{\mathbb{R}^d} P (B_t \in \mathrm{d} x)\, W_\infty \circ \theta_{t,x} =0 \right\}.
+ \]
+The event of the right-hand side belong 
+%[???] 
+% Yes: $\{W_\infty = 0\} \stackrel{a.s.}{=} \{ \int W_\8 \circ \theta_{t,x} P(B_t \in dx) =0\}  \in  \mathcal{G}_{[t,\infty)}$ par discretization de l'$\int$
+to the $\sigma$-field $\mathcal{G}_{[t,\infty)} = \sigma\left(\om(A) ; A \in \mathcal{B}([t,\infty) \times \mathbb{R}^d) \right)$ completed by null sets, so
+\[\{W_\infty = 0\} \in \bigcap_{t>0}^\infty \mathcal{G}_{[t,\infty)}.\]
+The theorem now follows from Komogorov's 0-1 law.
+\end{proof}
+
+This dichotomy calls for a definition.
+
+\begin{definition} We say that the polymer is in the \textbf{weak disorder} phase when $W_\infty > 0$ almost surely. We say it is in the \textbf{strong disorder} phase when $W_\infty = 0$ almost surely.
+\end{definition}
+
+The phase diagram is connected in the $\beta$-parameter space. 
+
+\begin{theorem}\label{th:313} There exist two critical parameters ${\bar{\b}_c}^- \in [-\infty,0]$ and ${\bar{\b}_c}^+ \in [0,\infty]$, depending only on $\nu,r$ and $d$, such that
+\begin{itemize}
+\item For all $\b \in ({\bar{\b}_c}^-,{\bar{\b}_c}^+) \,\cup \{0\}$, the polymer belongs to the weak disorder phase.
+\item For all $\b \in \mathbb{R}\setminus [{\bar{\b}_c}^-,{\bar{\b}_c}^+]$, the polymer belongs to the strong disorder phase.
+\end{itemize}
+\end{theorem}
+\begin{proof}
+Let $\theta$ be a real number in $(0,1)$ and denote $Y_t = W_t^{\theta}$ for all $t\geq 0$. The family $(Y_t)_{t\geq 0}$ is a collection of positive random variables verifying  \[ \sup_{t\geq 0} \IP \big[ Y_t^{1/\theta} \big] = \sup_{t\geq 0} \IP [W_t] = 1 < \infty.\] As $1/\theta$ is strictly greater than $1$, this relation implies the uniform integrablity of $(Y_t)_{t\geq 0}$. Since the process $(W_t^\theta)_{t\geq 0}$ converges almost surely to $W_\infty^\theta$, we get from uniform integrability that
+\begin{equation} \label{eq:CV_Wtheta}
+\lim_{t\to \infty} \IP \left[W_t^{\theta} \right] = \IP \left[ W_\infty^\theta \right].
+\end{equation}
+Now, one can observe that the right hand side term is positive if and only if \eqref{eq:WD} holds and that it is zero if and only if \eqref{eq:SD} holds. To prove the theorem, it is then enough to prove that $\b \mapsto \IP \left[ W_\infty^\theta \right]$ is a non-increasing function of $|\b|$ and choose for example 
+\begin{equation}
+\label{equation:barbetac}
+{\bar{\b}_c}^+ = \inf\{\b \geq 0 : \IP \left[ W_\infty^\theta \right] = 0\} \;,
+\end{equation}
+which does not depend on $\theta \in (0,1)$.
+Using \eqref{eq:CV_Wtheta}, we now just have to show that $\b \mapsto \IP \left[ W_t^\theta \right]$ is an non-increasing function of $|\beta|$ for all positive $t$.
+By standard arguments, we get that
+\begin{align*} \label{eq:derivee_PWt} \frac{\partial}{\partial \b} \IP \left[ W_t^\theta \right] 
+& = \IP \left[ \theta W_t^{\theta-1} \frac{\partial}{\partial \b} W_t  \right]\\
+& =  \IP \left[ \theta W_t^{\theta-1} P \left[ \left(\om(V_t) - \lambda'(\b) \nu r^d t \right) e^{\b \om(V_t) -\lambda (\b)\nu r^d t}\right] \right]\\
+& = \theta \, P \, \IP \left[ W_t^{\theta-1} \left(\om(V_t) - \lambda'(\b) \nu r^d t \right) e^{\b \om(V_t) -\lambda (\b)\nu r^d t} \right].
+\end{align*}
+Introducing the probability measure $\IP^\b$ on point measures, given by
+\[\mathrm d\IP^\b( \om) = e^{\b \om(V_t) - \lambda r^d \nu t} \mathrm d\IP(\om),\]
+the derivative of $\IP[ W_t^\theta ]$ is now given by
+\begin{equation} \label{eq:derivee_PWt}
+\frac{\partial}{\partial \b} \IP \left[ W_t^\theta \right] = \theta \, P \  \IP^\b \left[W_t^{\theta - 1} (\om(V_t) - r^d \nu \lambda' t ) \right].
+\end{equation}
+In Proposition \ref{prop:PoissonGirsanov} just below, we will see that under the probability measure $\IP^\b$, $\om$ is a Poisson point process on $\mathbb{R}_+ \times \mathbb{R}$.
+
+We can then use the \emph{Harris-FKG inequality} for Poisson processes \cite[th. 11 p. 31]{Last2016} in order to bound the above expectation. Indeed, the variable $\om(V_t) - r^d \nu \lambda' t$ is an increasing function of the point process and by definition, the process $W_t^{\theta - 1}$ is then a decreasing function of $\om$ when $\b \geq 0$ (resp. increasing when $\b < 0$). Applying the FKG inequality, we find that for positive $\b$
+\begin{equation} \label{eq:FKG-application}
+\IP^\b \left[W_t^{\theta - 1} (\om(V_t) - \lambda' r^d \nu t ) \right ] \leq  \  \IP^\b \left[W_t^{\theta -1} \right] \IP^\b \left[(\om(V_t) - r^d \nu \lambda' t )\right] = 0,
+\end{equation}
+where the last equality is a result of the relation
+\[\IP [\om(V_t) e^{\b \om(V_t)}] =  \lambda'(\b) r^d \nu t.\]
+The same result with opposite inequality comes when $\b < 0$.
+Thus, we get from \eqref{eq:derivee_PWt} and \eqref{eq:FKG-application} that $\IP[W_t^\theta]$ is a non-increasing function of $|\b|$.
+\end{proof}
+%%%
+We recall at this point that Poisson processes with mutually absolutely continuous intensity measures are themselves mutually absolutely continuous.
+%%%
+\begin{proposition} \label{prop:PoissonGirsanov} Let $\eta$ be a Poisson point process on a measurable space $E$, of intensity measure $\mu$. Let $f$ be a function such that $e^f-1 \in L^1(\mu)$. Then, under the probability measure $\mathbb{Q}$ defined by 
+\[ \frac{\rmd \mathbb{Q}}{\rmd \mathbb{P}} = \exp\left(\int_E f(x) \, \eta(\rmd x) - \int_E (e^{f(x)}-1) \, \rmd \mu(x)\right),\]
+the process $\eta$ is a Poisson point process of intensity measure $e^f \, \rmd \mu$.
+\end{proposition}
+\begin{proof}
+Let $g$ be any non-negative measurable function. As the Laplace functional characterizes Poisson processes (theorem 3.9 in \cite{LastPenrose}), we compute it for the point process $\eta$ under the measure $\mathbb{Q}$:
+\begin{align*}
+\mathbb{Q} \exp\left\{-\int_E g(s) \, \eta(\rmd x)\right\} & = \mathbb{P} \exp \left\{ \int_{E} f(x)-g(x) \, \eta(\rmd x) \right\} e^{ -\int (e^{f(x)}-1) \, \rmd \mu(x) } \\
+& =  \exp \left\{ \int_{E} (e^{ f(x)-g(x)}-1) \, \rmd \mu(x) \right\} e^{ -\int (e^{f(x)}-1) \, \rmd \mu(x) }\\
+& =  \exp \left\{ \int_{E} (e^{-g(x)}-1) e^{f(x)} \, \rmd \mu(x) \right\},\\
+\end{align*}
+where the second equality is an application of \eqref{eq:PoissonExpMoment}.
+The expression we obtain corresponds, as claimed, to a Poisson point process of intensity measure $e^f \, \rmd \mu$.
+\end{proof}
+
+
+\section{The self-consistency equation and UI properties in the weak disorder}
+\subsection{Proof of the self-consistency equation on $W_\infty$} \label{sec:proofSelfconsistent}
+In this section, we prove that one can take the limit in the identity $W_{s+t} = P [e_{t} \, W_s \circ \theta_{t,B_t}]$ and obtain the  equation of self-consistency:
+\begin{equation}
+\label{eq:self_consistent_equation}
+W_\infty = P [e_{t} \, W_\infty \circ \theta_{t,B_t} ].
+\end{equation}
+A part of the problem is that we only have almost sure convergence of the $W_s \circ \theta_{t,x}$ for countable number of $x$'s. 
+To deal with this issue, we show that the quantity
+\begin{equation}W_t(x) := e^{-\lambda (\b)\nu r^d t} P_x\lef[\exp \lef(\b \om(V_t) \rig) \rig],
+\end{equation} 
+does not vary too much with $x$, in the sense of the following lemma:
+
+
+\begin{lemma} \label{lm:distanceWtxWt0}
+There exists a constant $C=C(\b,\nu,r)$, such that, for all $t\in [0,\infty]$ and $x,y\in\mathbb{R}^d$,
+\begin{equation} \label{eq:distanceWtxWt0}
+\IP\left[\left|W_t(x)-W_t(y)\right|\right] \leq C |x-y|.
+\end{equation}
+\end{lemma}
+\begin{proof} To simplify the notations, we only consider the case where $y=0$. To recover the lemma, it is enough to argue that the Poisson environment is invariant in law under a translation in space of vector $y$.
+
+To prove \eqref{eq:distanceWtxWt0} for $y=0$, we write the difference of the two martingales as expectations over two coupled Brownian motions, in the same environment.
+The coupling we consider is the mirror coupling, which is defined as follows (see \cite{Hsu2013} for more details).
+
+At time $0$, one of the Brownian motions is starting at $0$ and one is starting at $x \in \mathbb{R}^d$. Denote by $H$ be the hyperplane bisecting the segment $[0,x]$, which is the hyperplane passing by $x/2$ and orthogonal to the vector $x$. Let also
+\[\tau = \inf\{t\geq 0 | B_t \in H\},\]
+be the first hitting time of $H$ by $B$. Then, define $\widetilde{B}$ as the path that coincides with the reflection of path of $B$ with respect to $H$ for times before $\tau$, and that coincides with $B$ after $\tau$. 
+
+%%%%%%
+\begin{figure} \centering
+\includegraphics[scale=0.45]{mirror-coupling.eps}
+\vskip -3cm
+\caption{Mirror coupling in $d=1$.} 
+ \label{fig:mirror}
+\end{figure}
+%%%%%%%%
+%\bfc [ quick drawing ???] \ec
+The process $\widetilde B$ has the law of a Brownian motion starting from $x$. Moreover, the time $\tau$ is the first time $B$ and $\widetilde B$ meet. After $\tau$, the processes coincide. The variable $\tau$ has the following cumulative distribution function:
+\begin{equation} \label{eq:cumulativeOfTau}
+P(\tau \geq z)=\phi_z(|x|),
+\end{equation}
+where, for positive $z$, \[\phi_z(|x|)=\frac{2}{\sqrt{2\pi z}}\int_{0}^{|x|/2} e^ {-u^2/2z}\rmd u,\] and where $|\cdot|$ is the Euclidean distance. In the litterature, a coupling that satisfies this relation is said to be maximal (see \cite{Hsu2013}).
+%Let $e_t = \exp(\b \om(V_t(B)) - \lambda(\b)\nu r^d t)$ and let \linebreak $\tilde{e}_t = \exp(\b \om(V_t(\widetilde B)) - \lambda(\b)\nu r^d t)$, which 
+%we factorize in the contributions before and after $B$ and $\widetilde B$ coalesce, so that, for $t\in [0,\infty)$,
+Let $$e_t = \exp(\b \om(V_t(B)) - \lambda(\b)\nu r^d t), \quad \tilde{e}_t = \exp(\b \om(V_t(\widetilde B)) - \lambda(\b)\nu r^d t),$$ which we factorize in the contributions before and after $B$ and $\widetilde B$ coalesce, so that, for $t\in [0,\infty)$,
+\begin{align*}
+\IP[|W_t(x)-W_t(0)|] &\leq \IP P[|\tilde{e}_t - e_t|] \\
+& = P\IP [|(\tilde{e}_{t\wedge \tau}-{e}_{t\wedge \tau})e_{(t-t\wedge \tau)^+}\circ \theta_{t\wedge \tau,B_{t\wedge \tau}}|]\\
+& = P\IP [|\tilde{e}_{t\wedge \tau}-{e}_{t\wedge \tau}|],
+\end{align*}
+where the last equality is a result of the independance of the Poisson environment before and strictly after time $t\wedge \tau$. 
+
+Then, we distinguish the cases where $B$ or $\widetilde{B}$ encounter a point of the environment before $t\wedge \tau$, and the cases where they don't. We get that $P\IP [|\tilde{e}_{t\wedge \tau}-{e}_{t\wedge \tau}|]$ writes:
+\begin{align*}
+& P\IP \left[|e_{t\wedge \tau} - \tilde{e}_ {t\wedge \tau}| \mathbf{1}_{\{\om(V_{t\wedge \tau}(B))>1,\,\om(V_{t\wedge \tau}( \widetilde B))>1\}}\right] + P\IP\left[(e_{t\wedge \tau} - e^{-\lambda \nu r^d t\wedge \tau}) \mathbf{1}_{\{\om(V_{t\wedge \tau}(B))>1,\,\om(V_{t\wedge \tau}( \widetilde B))=0\}}\right]\\
+& \qquad + P\IP\left[(\tilde{e}_{t\wedge \tau} - e^{-\lambda \nu r^d t\wedge \tau}) \mathbf{1}_{\{\om(V_{t\wedge \tau}(B)=0,\,\om(V_{t\wedge \tau}( \widetilde B)>1\}}\right].
+\end{align*}
+We first use the triangle inequality in the first expectation of the sum, and neglect the negative terms in two other expectations. Then, recombining the terms, one obtains that
+%\begin{align}
+%\IP[|W_t(x)-W_t(0)|] & \leq 2 P\IP \left[e_{t\wedge \tau} \mathbf{1}_{\{\om(V_{t\wedge \tau}(B))>1\}}\right] + 2 P\IP \left[\tilde{e}_{t\wedge \tau} \mathbf{1}_{\{\om(V_{t\wedge \tau}(\widetilde{B}))>1\}}\right] \nonumber \\ 
+%& = 4 P\IP \left[e_{t\wedge \tau} \mathbf{1}_{\{\om(V_{t\wedge \tau}(B))>1\}}\right] \nonumber \\
+%\label{eq:ineqInLemmaWtx} & \leq 4 P\IP \left[e_{\tau} \mathbf{1}_{\{\om(V_{\tau}(B))>1\}}\right],
+%\end{align}
+
+\begin{align}
+\IP[|W_t(x)-W_t(0)|] & \leq 2 P\IP \left[e_{t\wedge \tau} \mathbf{1}_{\{\om(V_{t\wedge \tau}(B))>1\}}\right] + 2 P\IP \left[\tilde{e}_{t\wedge \tau} \mathbf{1}_{\{\om(V_{t\wedge \tau}(\widetilde{B}))>1\}}\right] \nonumber \\ 
+& = 4 P\IP \left[e_{t\wedge \tau} \mathbf{1}_{\{\om(V_{t\wedge \tau}(B))>1\}}\right]  \label{eq:ineqInLemmaWtx}
+\end{align}
+where the equality is a consequence of invariance in law of the Poisson environment under the translation by $x$.
+
+For any $t$, the variable $\om(V_t)$ is a Poisson r.v. of parameter $ \nu r^d t$, so that
+\begin{equation*}
+P\IP \left[e_{t\wedge\tau} \mathbf{1}_{\{\om(V_{t\wedge\tau}(B)>1\}}\right]  = \sum_{k=1}^\infty P \IP [e_{t\wedge\tau} \mathbf{1}_{\{\om(V_{t\wedge\tau})=k\}}]
+ = \sum_{k=1}^\infty P \left[e^{\b k-\lambda\nu r^d (t\wedge\tau)} \frac{(\nu r^d (t\wedge\tau))^k}{k!}e^{-\nu r^d (t\wedge\tau)} \right],
+\end{equation*}
+from which we get by standard computations that
+\begin{equation} \label{eq:expecInLemmaWtx}
+P\IP \left[e_{t\wedge\tau} \mathbf{1}_{\{\om(V_{(t\wedge\tau)}(B)>1\}}\right] = P[1-\exp(-e^\b \nu r^d t\wedge\tau)] \leq P[1-\exp(-e^\b \nu r^d \tau)].\end{equation}
+
+To control this last expectation, we will first notice that $\tau / |x|^2$ is independent of $|x|$, and we will compute its density. By equation \eqref{eq:cumulativeOfTau} and the change of variable $u=|x|\sqrt(z) v$, we get that
+\begin{align*}
+\P(\tau/|x|^2 > z) = \frac{1}{\sqrt{2\pi}} \int_0^{1/2\sqrt{z}} e^{-v^2/2} \rmd v.
+\end{align*}
+This function of $z$ is continuous and everywhere differentiable on $[0, \8)$. %, except maybe at $z=0$ [??? check this]. 
+The variable $\tau/|x|^2$ hence admits a density with respect to the Lebesgue measure, given by
+\[f(z) = \frac{1}{4\sqrt{2\pi}} \frac{e^{-1/8z}}{z^{3/2}}.\]
+Therefore, one gets that the right-hand side of \eqref{eq:expecInLemmaWtx} can be written as
+\begin{align*}
+&P\left[\left(1-\exp(-e^\b \nu r^d {\tau}{|x|^{-2}} |x|^2)\right)\mathbf{1}_{\{\tau/|x|^2 \leq 1\}}\right] + P\left[\left(1-\exp(-e^\b \nu r^d {\tau}{|x|^{-2}} |x|^2)\right)\mathbf{1}_{\{\tau/|x|^2 > 1\}}\right]\\
+&\qquad \qquad \qquad \qquad 
+\leq e^\b \nu r^d |x|^2 + \int_1^\infty \left(1-\exp(-e^\b \nu r^d z |x|^2)\right) f(z) \rmd z.
+\end{align*}
+As there is some constant $C>0$ such that $f(z) \leq C z^{-3/2}$, after the change of variables $z|x|^2=u$, the integral above can be bounded by
+\[|x| \int_{0}^\infty C \left(1-\exp\left(-e^\b \nu r^d u \right)\right) v^{-3/2} \rmd v,\]
+where one can check that the integral converges. Since its value only depends on $\b,\nu$ and $r$, we finally get that there exists some constant $C'=C(\b,\nu,r)$, such that
+\[\IP[|W_t(x)-W_t(0)|] \leq 4P[1-\exp(-e^\b \nu r^d \tau)] \leq C' (|x|^2 + |x|),\]
+where the first inequality comes from combining \eqref{eq:ineqInLemmaWtx} and \eqref{eq:expecInLemmaWtx}. Since the $W_t(x)$ variables have bounded expectations, this proves the lemma in the case where $t<\infty$. The $t=\infty$ case is then a consequence of Fatou's lemma.
+\end{proof}
+
+\vspace{0.4cm}
+We can now show that the self-consistency equation holds. Let $\delta >0$ be a parameter that will go to $0$. For all $q \in \mathbb{Z}^d$, define $\Delta( q)$ to be the cube of length $\delta$ centered at $\delta q$, so that all the cubes form a partition of the space $\mathbb{R}^d$.
+We get that the right-hand side of \eqref{eq:WtIntegralEquation} satisfies
+\begin{align}
+P [e_{t} \, W_s \circ \theta_{t,B_t} ] & = \sum_{q\in\mathbb{Z}^d} P [e_{t} \, W_s \circ \theta_{t,B_t} ; B_t\in \Delta( q) ] \nonumber \\
+& = \sum_{q\in\mathbb{Z}^d} P [e_{t} \, W_s \circ \theta_{t,\delta q} ; B_t\in \Delta( q) ] + A_s^\delta, \label{eq:approxInL1normForWSD}
+\end{align}
+where
+$A_s^\delta = \sum_{q\in\mathbb{Z}^d} P [e_{t} \, (W_s \circ \theta_{t,B_t}-W_s \circ \theta_{t,\delta q}) ; B_t\in \Delta( q) ].$
+
+First observe that $\IP$-almost surely, $W_s \circ \theta_{t,{\delta q}}$ converges  to $W_\infty \circ \theta_{t,{\delta q}}$ for all $q\in\mathbf{Z}^d$, so Fatou's lemma entails
+\[\IP\text{-a.s.}, \quad \liminf_{s\to\infty} \sum_{q\in\mathbb{Z}^d} P [e_{t} \, W_s \circ \theta_{t,\delta q} ; B_t\in \Delta( q) ] \geq \sum_{q\in\mathbb{Z}^d} P [e_{t} \, W_\infty \circ \theta_{t,\delta q} ; B_t\in \Delta( q) ],\] so that, by \eqref{eq:approxInL1normForWSD} and letting $s\to\infty$ in \eqref{eq:WtIntegralEquation},
+\begin{equation} \label{eq:ineqOnWinftyAfterFatou}
+\IP\text{-a.s.}, \quad W_\infty \geq \sum_{q\in\mathbb{Z}^d} P [e_{t} \, W_\infty \circ \theta_{t,\delta q} ; B_t\in \Delta( q) ] + \liminf_{s\to\infty} A_s^\delta.
+\end{equation}
+
+Furthermore, using the fact that $W$ is a martingale, one can check that $s\mapsto A_s^\delta$ is also a martingale with respect to the filtration $\{\mathcal{G}_{t+s}\}_{s\geq 0}$.
+% [is it ok???]. 
+For any time $S\geq 0$, Lemma \ref{lm:distanceWtxWt0} implies that it satisfies
+\begin{align*}
+\IP[|A_S^\delta|] & \leq \sum_{q\in\mathbb{Z}^d} P \left[\IP[e_{t}\,|W_S \circ \theta_{t,B_t}- W_S \circ \theta_{t,\delta q}|] \mathbf{1}_{B_t\in \Delta( q)} \right]\\
+&\leq C(\delta^2 + \delta) \sum_{q\in\mathbb{Z}^d} P\left[ \mathbf{1}_{B_t\in \Delta( q)}\right]\\ &= C(\delta^2 + \delta),
+\end{align*}
+where, in the second inequality, we have factorized by $\IP[e_{t}] = 1$, using the independence under $\IP$ of the environment before and strictly after time $t$. Thus, by Doob's inequality \cite[Th. 3.8 (i), Ch.~1]{KS91}, we have for all $u>0$,
+\[\IP\left[\sup_{0\leq s\leq S} |A_s^\delta| \geq u \right] \leq \frac{C(\delta^2 + \delta)}{u},\]
+where we can let $S\to\infty$ by monotone convergence. This implies that $\sup_{s\geq 0} |A_s^\delta|$ converges in probability to $0$, when $\delta \to 0$, which in turn implies that
+\[\liminf_{s\to\infty} |A_s^\delta| \overset{\IP}{\longrightarrow} 0.\]
+
+Then, using Lemma \ref{lm:distanceWtxWt0} in the case where $t=\infty$, the same computation as above would show that
+\[\IP\left[ \left| \sum_{q\in\mathbb{Z}^d}P \left[e_{t} \, W_\infty \circ \theta_{t,B_t} ; B_t\in \Delta( q)\right]- \sum_{q\in\mathbb{Z}^d} P \left[e_t \, W_\infty \circ \theta_{t,\delta q} ; B_t\in \Delta( q)\right] \right| \right] \leq C(\delta^2 + \delta),\]
+and hence,
+\[\sum_{q\in\mathbb{Z}^d} P \left[e_t \, W_\infty \circ \theta_{t,\delta q} ; B_t\in \Delta( q)\right]   \overset{L^1}{\longrightarrow} P [e_{t} \, W_\infty \circ \theta_{t,B_t}].\]
+In particular, we have shown that the right-hand side of \eqref{eq:ineqOnWinftyAfterFatou} converges in probability to $P [e_{t} \, W_\infty \circ \theta_{t,B_t}]$, so that almost surely
+\[ W_\infty \geq  P [e_{t} \, W_\infty \circ \theta_{t,B_t}].\]
+Observe that the two quantities have the same expectations to conclude that \eqref{eq:self_consistent_equation} holds.
+
+
+\subsection{Uniform integrability in the weak disorder}
+\begin{proposition} \label{prop:UI}
+The martingale $W_t$ is uniformly integrable if and only if the polymer is in the weak disorder phase, i.e. $W_\infty > 0,\, \IP$-almost surely.
+\end{proposition}
+\begin{proof}
+If $W_t$ is UI, then $W_t$ converges in $L^1$ to $W_\infty$, so that $\IP[W_\infty] = 1 > 0$, therefore weak disorder must hold by the dichotomy.
+
+Suppose now that the polymer is in weak disorder and set
+\[X_{t,x} = \frac{W_\infty\circ \theta_{t,x}}{\IP [W_\infty]}.\]
+The self-consistency equation \eqref{eq:self_consistent_equation} writes
+$X_{0,0} = P[e_t X_{t,B_t}]$,
+so that, as $X_{t,x}$ is independent of $\mathcal{G}_t$ for all $x$,
+\[\IP[ X_{0,0} | \mathcal{G}_t] = P\left[e_t \IP[X_{t,B_t}]\right] = P[e_t].\]
+This shows that for all $t\geq 0$, 
+\[W_t = \IP[X_{0,0} | \mathcal{G}_t] \quad \text{a.s.}\]
+Hence, $(W_t)_{t\geq 0}$ is uniformly integrable since the family of the right-hand side is a uniformly integrable martingale.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{The $\bf{L^2}$-region}
+\begin{theorem} \label{th:LTwoRegion} (i) There exist two critical parameters ${\b_2}^- \in [-\infty,0]$ and ${\b_2}^+ \in [0,\infty]$, depending only on $\nu,r$ and $d$, such that, if $\b \in ({\b_2}^-,{\b_2}^+) \, \cup \{0\}$ then
+\begin{equation}\label{eq:supWt2} \sup_{t\in\mathbb{R}} \IP [W_t^2] < \infty,
+\end{equation} and such that the supremum is infinite if $\b \in \mathbb{R}\setminus [{\b}_2^-,\b_2^+]$.
+
+(ii) Furthermore, if $d\geq 3$, there exists a constant $c(d)\in (0,\infty)$, such that \eqref{eq:supWt2} holds whenever
+\begin{equation} \label{eq:L2_condition}
+\lambda(\b)^2 \nu r^{d+2} < c(d),
+\end{equation}
+
+(iii) In particular, ${\b_2}^- < 0$ and ${\b_2}^+ > 0$ whenever $d\geq 3$.
+
+(iv) Also for  $d\geq 3$, when $\nu r^{d+2} < c(d)$ the constant in \eqref{eq:L2_condition}, we have ${\b_2}^- =-\8$.
+\end{theorem}
+
+\begin{definition}We call the $\,\textbf{$\bf{L^2}$-region}$ the set of parameters $\beta, \nu, r$ for which \eqref{eq:supWt2} holds.\end{definition}
+
+\begin{proof}[Proof of Theorem \ref{th:LTwoRegion}]
+We introduce the product measure $P^{\otimes 2}$ of two independent Brownian motions $B_t$ and $\tilde{B}_t$ starting from $0$ with respective tubes $V_t$ and $\tilde{V}_t$. The main idea is to write
+\[W_t^2 = P^{\otimes 2} [e^{\b \om(V_t)} e^{\b \om(\tilde{V}_t)}]e^{-2\lambda \nu r^d t},\]
+so that, using Fubini's theorem,
+\begin{equation} \IP[W_t^2] = P^{\otimes 2} \, \IP [e^{\b (\om(V_t)+ \om(\tilde{V}_t)}]e^{-2\lambda \nu r^d t}.
+\end{equation}
+One can see that \[\om(V_t) + \om(\tilde{V}_t) = 2\om(V_t \cap \tilde{V}_t) + \om(V_t \Delta \tilde{V}t),\]
+which is the sum of two independent Poisson random variables; computing their Laplace transforms leads us to
+%\begin{align}
+%&\IP [e^{ 2 \b \om(V_t \cap \tilde{V}_t) + \om(V_t \Delta \tilde{V}t)}]e^{-2\lambda \nu r^d t} \nonumber \\
+%&= \exp \left( \lambda(2\b) \nu |V_t \cap \tilde{V}_t| + \lambda \nu |V_t \Delta \tilde{V}t| - 2\lambda \nu r^d t \right) \nonumber \\
+%&= \exp\left(\lambda^2 \nu |V_t \cap \tilde{V}_t| \right) \nonumber \\
+%\label{eq:cvWt2} &\underset{t\to\infty}{\longrightarrow} \exp\left(\lambda^2 \nu |V_\infty \cap \tilde{V}_\infty| \right), 
+%\end{align}
+\begin{eqnarray}
+%\IP [e^{ 2 \b \om(V_t \cap \tilde{V}_t) + \om(V_t \Delta \tilde{V}t)}]e^{-2\lambda \nu r^d t} 
+ \IP[W_t^2]
+\nonumber 
+&=& \exp \left( \lambda(2\b) \nu |V_t \cap \tilde{V}_t| + \lambda \nu |V_t \Delta \tilde{V}_t| - 2\lambda \nu r^d t \right) \nonumber \\
+&=& \exp\left(\lambda^2 \nu |V_t \cap \tilde{V}_t| \right) \nonumber \\
+\label{eq:cvWt2} &\underset{t\to\infty}{\longrightarrow}& \exp\left(\lambda^2 \nu |V_\infty \cap \tilde{V}_\infty| \right), 
+\end{eqnarray}
+where the second equality is obtained using $|V_t|=|\tilde{V}_t|=tr^d$ and $\lambda(\b)^2=\lambda(2\b)-2\lambda(\b)$, while the limit is justified by monotone convergence.
+Now,
+\begin{align*} |V_\infty\cap \tilde{V}_\infty| &= \int_0^\infty |U(B_t)\cap U(\tilde{B}_t)|\rmd t \\
+&= \int_0^\infty |U(0)\cap U(\tilde{B}_t-B_t)|\rmd t\\
+& \eqlaw \int_0^\infty |U(0)\cap U(B_{2t})|\rmd t,
+\end{align*}
+since $(B_t + \tilde{B}_t)_{t\geq 0} \eqlaw (B_{2t})_{t\geq 0}$. Hence, using monotone convergence and \eqref{eq:cvWt2}, we get that
+\begin{equation} \label{eq:supESPWt2}
+\sup_{t\in\mathbb{R}} \IP [W_t^2] = \lim_{t\to\infty} \IP [W_t^2] = P\left[\exp\left(\frac{\lambda(\b)^2}{2} \nu \int_0^\infty |U(0)\cap U(B_{t})|  \rmd t\right) \right],
+\end{equation}
+where the first equality is a consequence of $(W_t^2)_{t\geq 0}$ being a submartingale. Equation \eqref{eq:supESPWt2} shows that $\sup_{t} \IP[W_t^2]$ is an increasing function of $|\b|$, which proves part (i) of the theorem.
+
+To prove the second part, we will bound the right hand side of \eqref{eq:supESPWt2}. First observe that \[|U(0)\cap U(B_t)| \leq |U(0)| \, \mathbf{1}_{|B_t| \leq 2\gamma_d^{-1/d}r} \eqlaw r^d \mathbf{1} \left\{\left|B\left(\frac{t\gamma_d^{2/d}}{4r^{2}}\right)\right| \leq 1 \right\},\]
+so that, by a change of variables,
+\begin{equation} \label{eq:bound_supWt2} \sup_{t\in\mathbb{R}} \IP [W_t^2] \leq P\left[\exp\left(2\lambda(\b)^2 \nu r^{2+d}\gamma_d^{-2/d} \int_0^\infty \mathbf{1}_{|B_t| \leq 1} \, \rmd t\right) \right].
+\end{equation}
+When $d\geq 3$, the Brownian motion is transient and has the following property:
+\[\alpha(d) = \sup_{x\in \mathbb{R}^d} P_x \left[ \int_0^\infty \mathbf{1}_{|B_t| \leq 1}\,\rmd t \right] < \infty.\]
+By Khas'minskii's lemma \cite[p. 8, Lemma 2.1]{Sznitman}, this implies that
+\[P \left[ \exp\left(u \int_0^\infty \mathbf{1}_{|B_t| \leq 1} \, \rmd t\right) \right] < (1-u\alpha)^{-1},\]
+whenever $u\alpha < 1$. Looking back at \eqref{eq:bound_supWt2}, this condition finally leads to \eqref{eq:L2_condition}.
+
+Part (iii) is obtained by observing that $\lambda(\beta) \to 0$ as $\beta \to 0$, so that condition \eqref{eq:L2_condition} is fulfilled for small enough $\b$.
+
+To prove (iv), just note that the right-hand side of  \eqref{eq:L2_condition} tends to $\nu r^{d+2}$ as $\b \to -\8$.
+\end{proof}
+
+\section{Relations between the different critical temperatures}
+
+The critical values $\b_2^\pm, {\bar{\b}_c}^\pm$ and $  \b_c^\pm$ defined in Theorems \ref{defdef..}, \ref{th:313} and
+\ref{th:LTwoRegion}
+are ordered. 
+
+\begin{proposition} The following properties hold:
+\begin{enumerate}[label=(\roman*)]
+\item For all $d\geq 1$,
+\begin{equation}
+\b_2^+ \leq {\bar{\b}_c}^+ \leq \b_c^+ < \infty \quad \text{and} \quad \b_c^- \leq {\bar{\b}_c}^- \leq \b_2^-.
+\end{equation}
+\item When $d\geq 3$, these parameters are all non-zero.
+\item When $d\geq 3$ and $\nu r^{d+2}$ is small enough, $\b_c^- = {\bar{\b}_c}^- = \b_2^- = -\infty$.
+\end{enumerate} 
+\end{proposition}
+\begin{remark} Point (iii) tells us that if the intensity of the Poisson point process or the radius are sufficiently small, the polymer will not really be impacted by the environment.
+\end{remark}
+\begin{remark}\label{rk:criticd=12}
+For $d=1,2$, it holds that
+%[references??? Lacoin, Bertin] \cite[Th. 2.1.1 (b)]{CY05}
+that $\b_2^\pm = {\bar{\b}_c}^\pm = \b_c^\pm = 0$. The reader is referred to the proofs in \cite{BeLa15, Bertin, CY05, Lacoin10} for other similar models, and can be convinced that the arguments go through in our case \cite{BertinUnp}.
+\end{remark}
+%\begin{remark}
+%We have $\b_c^+ < \infty$ for all $d \geq 1$.  
+%\bfc [REFE...] \ec
+%However, $\b_c^-$, is equal to $-\8$ in dimension $d \geq 3$ for some $\nu$'s.
+%\end{remark}
+\begin{remark}
+A long-standing conjecture  is that $\b_c^\pm = {\bar{\b}_c}^\pm$, i.e., that the weak/strong disorder transition coincide with the high/low temperature one. % (except possibly on the critical line). 
+\end{remark}
+
+
+\begin{proof}
+We first show that $\b_2^+ \leq {\bar{\b}_c}^+$.
+Suppose $\b_2^+>0$ and let $0\leq \b < \b_2^+$. By definition, we have
+\[\sup_{t\geq 0} \IP [W_t^2] < \infty,\]
+so that $(W_t)_{t\geq 0}$ is a martingale bounded in $L^2$. Thus, $(W_t)_{t\geq 0}$ converges in $L^2$ norm, which implies $L^1$ convergence.
+
+Since $\IP [W_t] = 1$ for all $t$, we get that $\IP [W_\infty] = 1$, so \eqref{eq:WD} must hold and hence $\b \leq {\bar{\b}_c}^+$. As it is true for all $\b<\b_2^+$, the desired inequality follows directly.
+
+We now turn to the proof of ${\bar{\b}_c}^+ \leq \b_c^+$. Again, suppose that ${\bar{\b}_c}^+>0$ and let $0\leq \b < {\bar{\b}_c}^+$. We have $W_\infty >0$ almost surely, so $\ln W_t \to \ln W_\infty$ almost surely, that is to say
+\[\ln Z_t - \lambda \nu r^d t \underset{t\to\infty}{\longrightarrow} \ln W_\infty.\]
+Dividing by $t$, we get that
+\[\frac{1}{t}\ln Z_t - \lambda \nu r^d \underset{t\to\infty}{\longrightarrow} 0,\]
+thus $p(\b, \nu, r) = \lambda \nu r^d$, i.e. $\b \leq \b_c$.
+The same argument goes for the negative critical values. This ends the proof of (i).
+
+Points (ii) and (iii) are repeated from Theorem \ref{th:LTwoRegion}. 
+\end{proof}
+
+
+
+
+ 
+
+ 

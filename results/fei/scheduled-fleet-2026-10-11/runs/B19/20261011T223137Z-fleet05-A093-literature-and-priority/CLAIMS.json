@@ -1,0 +1,59 @@
+[
+  {
+    "claim_id": "B09-BIASED-BLOCK-UNCERTAINTY",
+    "version": 1,
+    "exact_statement": "For every Boolean sign under an interior product bias p and a physical block A, the exact entropy decrement L_A=M_A+J_A obeys 0<=J_A<=M_A+Delta_A, where M_A=H(S_A|S_B), J_A=I(Z;S_B) for the actual physical-child/spectral experiment, and Delta_A=sum_i_in_A[h2(p_i)+log2(max(p_i,1-p_i))].",
+    "hypotheses": [
+      "genuine Boolean sign",
+      "independent physical inputs",
+      "all p_i in (0,1)",
+      "biased orthonormal Fourier basis",
+      "entropy in bits"
+    ],
+    "statement_sha256": "988abea63a1906de7c54826cb36bb40c443bc1f346d25715d0826d3740985695",
+    "contributors": [
+      "fleet01/B09 original construction"
+    ],
+    "proof_source": {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "adb671ffcda143fa68347806bb96e8c305621a7d",
+      "path": "reports/fei-2026-10-11/runs/B09/20261011T195500Z-fleet01-B09-biased-restriction-uncertainty/REPORT.md",
+      "blob_sha": "71b68e4decf9658a42fef6bb2668e19f25bd214a"
+    },
+    "proof_dependencies": [
+      {
+        "source": "Maassen-Uffink 1988, Phys Rev Lett 60 1103-1106",
+        "locator": "equations (5)-(6); Riesz step (10)-(13)",
+        "url": "https://www.math.ru.nl/~maassen/papers/EntrUncert.pdf",
+        "saved_file": "out/maassen_uffink_1988.pdf"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A093 fleet05 B19",
+        "verdict": "ACCEPT_AT_STATED_SCOPE_CORE_ONLY",
+        "source": "REPORT.md; out/VALIDATION.json; PRIMARY_SOURCE_OVERLAP.md",
+        "method": "Primary Maassen-Uffink theorem matched to physical normalized fibers; independent rational child-marginal implementation",
+        "date_utc": "2026-10-11T22:46:39.797288+00:00",
+        "scope_exclusions": [
+          "No uniform influence payment",
+          "No claim of optimal tax",
+          "No broad substitution additivity",
+          "No new interval-certificate acceptance"
+        ]
+      }
+    ],
+    "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED_CORE_ONLY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B09",
+      "B12",
+      "B13",
+      "B18",
+      "B19",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+ "helper version":"A011-padding-reset-v1; shared.py from own stage6, source hash recorded before search",
+ "actual Boolean family":"F=g(y)-2g(0)1_(x=0)1_(y=0,z=0); every labelled nonconstant g on a=1,2 bits and 16 fixed 3-bit labels",
+ "parameter domain":{"a":[1,2,3],"three_bit_labels":[1,3,7,15,23,27,30,60,85,90,105,126,127,150,170,254],"padding_b":[1,2,3],"controls_r":[1,2],"query_prefix":"ell=1..b; fixed padded-bit order; source-independent query choices are exchangeable in this construction","source_models":["P_g","P_g/2","uniform active frequencies padded by zero"]},
+ "case count":"32 labelled cores,192 roots,384 prefixes,1152 prefix-reference cases; constants separately checked as exclusion witnesses",
+ "justified symmetry reduction":"none on source truth tables; permutation of padding coordinates fixes source/reference, edited point and model",
+ "arithmetic":"integer Walsh transform; Fraction probabilities and independent edge enumeration; rational outward logarithm intervals using prior 32-term atanh helper",
+ "memory estimate":"100 MB; no memory admission above300MB required",
+ "maximum runtime":"55seconds per bounded mode; n<=2 pilot, then a=3 modes 0..3 of four labels; no automatic growth"
+}

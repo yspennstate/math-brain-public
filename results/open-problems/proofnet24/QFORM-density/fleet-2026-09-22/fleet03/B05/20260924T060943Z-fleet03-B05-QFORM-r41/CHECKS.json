@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T060943Z-fleet03-B05-QFORM-r41",
+  "result": "QFORM-WITT-EXACT-CROSSVOLUME-v1",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "latent_determinant",
+      "identity": "det([[0,a*sqrt(1+k^2),0],[a*sqrt(1+k^2),alpha,gamma],[0,gamma,delta]]) = -a^2*(1+k^2)*delta",
+      "type": "exact_algebra"
+    },
+    {
+      "name": "K_side_Gram",
+      "identity": "det Gram(k*u_K/sqrt(1+k^2),v_K,w_K) = k^2 D_K/(1+k^2)",
+      "type": "exact_scaling"
+    },
+    {
+      "name": "hub_side_Gram",
+      "identity": "det G_{H union J} = (E_J+k^2 D_J)/(1+k^2)",
+      "type": "exact_single_diagonal_determinant_expansion"
+    },
+    {
+      "name": "cross_volume",
+      "identity": "Delta_{H union J,K} = S_i |k| sqrt(D_K(E_J+k^2 D_J))",
+      "type": "QR plus determinant"
+    },
+    {
+      "name": "residual_area_factor",
+      "identity": "D_J=s(||p_J||^2||r_J||^2-<p_J,r_J>^2), D_K=(1-s)(||p_K||^2||r_K||^2-<p_K,r_K>^2)",
+      "type": "exact Gram column operation"
+    },
+    {
+      "name": "quantitative_branch_constant",
+      "input": "S_i>=1/2, |k|>=1/8, D_K>=1/64, E_J>=1/18",
+      "delta_lower_bound": "1/(384 sqrt(2))",
+      "density_bound": "6*(384*sqrt(2))^(1/3)",
+      "decimal_upper_bound": 48.952
+    },
+    {
+      "name": "Walsh_partner_control",
+      "parameters": "a=delta=1, alpha=gamma=0, k=1/4; v=(1,1,1,1)/2; w=(1,1,-1,-1)/2; u=(1,-1,1,-1)/2",
+      "literal_pair_1_3": "[[3/8,-1/8],[-1/8,3/8]]",
+      "pair_determinant": "1/8",
+      "partner_density_bound": "pi/sqrt(1/8)=2 sqrt(2) pi < 8.886",
+      "target_nonzero_spectrum": "{+sqrt(17/16),-sqrt(17/16),1}"
+    }
+  ],
+  "scope": "finite symbolic/numerical checks support the written exact proof; they are not Monte Carlo evidence and do not assert full QFORM"
+}

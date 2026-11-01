@@ -1,0 +1,47 @@
+{
+  "schema": "fei-rarity-credit-ledger/1",
+  "packet_id": "A023",
+  "family": "q_a tensor q_b with disjoint physical variables, selector constant branch +1",
+  "parameters": {"a": "integer >=2", "b": "integer >=2"},
+  "scalar_packet": {
+    "definition": "F(p)=complete L+Q selector packet for disagreement probability p",
+    "symmetry": "F(p)=F(1-p)",
+    "tensor_disagreement": "p=2^-a+2^-b-2^(1-a-b)"
+  },
+  "a_first": {
+    "node_state": "q_m tensor q_b",
+    "reach_probability": "2^(m-a)",
+    "credit": "Gamma_(m|b)=R_(m,b)-(R_(m-1,b)+D_b)/2, with R_(0,b)=D_b",
+    "signed_total": "R_(a,b)-D_b=D_a+Xi_(a,b)",
+    "terminal_packet": "one total expected copy of D_b",
+    "negative_debt_identity": "R_(a,b)+N_(a|b)=D_b+P_(a|b)"
+  },
+  "b_first": {
+    "signed_total": "R_(a,b)-D_a=D_b+Xi_(a,b)",
+    "terminal_packet": "one total expected copy of D_a",
+    "negative_debt_identity": "R_(a,b)+N_(b|a)=D_a+P_(b|a)"
+  },
+  "cross_term": {
+    "definition": "Xi_(a,b)=R_(a,b)-D_a-D_b",
+    "accounting_rule": "assign Xi exactly once to the factor revealed first",
+    "sign": "not fixed",
+    "negative_witness": "Xi_(4,4)<-0.01038",
+    "positive_witness": "Xi_(5,5)>0.00239",
+    "equal_rare_asymptotic": "Xi_(n,n)=4^-n(4n-24+6/ln2)+O(n 8^-n)"
+  },
+  "single_use": {
+    "ancestor_credit_reused": false,
+    "terminal_packet_reused": false,
+    "cross_term_reused": false,
+    "physical_tree": true,
+    "adaptive": false,
+    "finite": true
+  },
+  "scope_exclusions": [
+    "shared-variable products",
+    "addressing or multiplexer histories",
+    "arbitrary Boolean branching trees",
+    "a universal terminal-packet versus influence bound",
+    "full FEI"
+  ]
+}

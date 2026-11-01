@@ -1,0 +1,384 @@
+{
+  "helper_version": "A073-rational-log-product/1",
+  "case_count": 3,
+  "failures": 0,
+  "runtime_seconds": 0.012980700004845858,
+  "engine_source": "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261011T220909Z-fleet05-A072-exact-walsh-engine\\EXACT_WALSH_INTERFACE.py",
+  "engine_sha256": "ecaeda32712439f02ceb2895e3042bd837ee34667a5d7fbb211971ac8a962a32",
+  "source_claims": "Selected-record verification, no full-grid acceptance",
+  "cases": [
+    {
+      "name": "minimum_positive",
+      "table": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "biases": [
+        "1/8",
+        "1/8",
+        "1/2"
+      ],
+      "physical_block_mask": 4,
+      "orientation": 1,
+      "parent": {
+        "n": 3,
+        "biases": [
+          "1/8",
+          "1/8",
+          "1/2"
+        ],
+        "walsh": [
+          6,
+          2,
+          2,
+          -2,
+          -2,
+          2,
+          2,
+          -2
+        ],
+        "centered_coefficients": [
+          "63/64",
+          "-1/8",
+          "-1/8",
+          "-1",
+          "1/32",
+          "1/4",
+          "1/4",
+          "2"
+        ],
+        "spectrum": [
+          "3969/4096",
+          "7/4096",
+          "7/4096",
+          "49/4096",
+          "1/4096",
+          "7/4096",
+          "7/4096",
+          "49/4096"
+        ],
+        "pivotal_probabilities": [
+          "1/16",
+          "1/16",
+          "1/64"
+        ],
+        "spectral_influences": [
+          "7/256",
+          "7/256",
+          "1/64"
+        ]
+      },
+      "marginal": [
+        "1985/2048",
+        "7/2048",
+        "7/2048",
+        "49/2048"
+      ],
+      "children": [
+        {
+          "table": [
+            1,
+            1,
+            1,
+            -1
+          ],
+          "weight": "1/2",
+          "spectrum": [
+            "961/1024",
+            "7/1024",
+            "7/1024",
+            "49/1024"
+          ]
+        },
+        {
+          "table": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "weight": "1/2",
+          "spectrum": [
+            "1",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "prime_log_coefficients": {
+        "3": "-3969/1024",
+        "7": "-3969/2048",
+        "2": "-5",
+        "5": "1985/1024",
+        "397": "1985/1024",
+        "31": "-961/1024"
+      },
+      "clearing_denominator": 2048,
+      "integer_exponents": {
+        "3": -7938,
+        "7": -3969,
+        "2": -10240,
+        "5": 3970,
+        "397": 3970,
+        "31": -1922
+      },
+      "sign": 1,
+      "dyadic_margin_bits": [
+        "5/2048",
+        "3/1024"
+      ],
+      "dyadic_lower_exact": false,
+      "numerator_bit_length": 43492,
+      "denominator_bit_length": 43486,
+      "numerator_hex_sha256": "4279f6c300e750008a2b0d7a7b46948f587d588e444c4a8cdf022e7035ab2656",
+      "denominator_hex_sha256": "500625fbc8ce239f2f212024c6a2b49bc9713ed2862ee474e318282daea5564d",
+      "independent_eight_term_interval_bits": [
+        "7279729361287856305537619474762994731658535527256810223637029414937806633096475289005325463241477497784189722678779389102951461/2836475726463114376334530333156911265667235752102173384066634974943997744241019483450346780741027463986385299561792000000000000000",
+        "116476145219847090419561248984519056662562229221161264660734268078587398641499656574805394353606282008075026540368306764345235091/45383611623409830021352485330510580250675772033634774145066159599103963907856311735205548491856439423782164792988672000000000000000"
+      ],
+      "precision_refinements": 0,
+      "outward_decimal_interval_bits": [
+        "128323/50000000",
+        "256649/100000000"
+      ]
+    },
+    {
+      "name": "exact_zero",
+      "table": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "biases": [
+        "1/8",
+        "1/8",
+        "1/2"
+      ],
+      "physical_block_mask": 4,
+      "orientation": 1,
+      "parent": {
+        "n": 3,
+        "biases": [
+          "1/8",
+          "1/8",
+          "1/2"
+        ],
+        "walsh": [
+          0,
+          0,
+          0,
+          0,
+          -4,
+          4,
+          4,
+          4
+        ],
+        "centered_coefficients": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-17/16",
+          "7/2",
+          "7/2",
+          "-4"
+        ],
+        "spectrum": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "289/1024",
+          "343/1024",
+          "343/1024",
+          "49/1024"
+        ],
+        "pivotal_probabilities": [
+          "7/8",
+          "7/8",
+          "1"
+        ],
+        "spectral_influences": [
+          "49/128",
+          "49/128",
+          "1"
+        ]
+      },
+      "marginal": [
+        "289/1024",
+        "343/1024",
+        "343/1024",
+        "49/1024"
+      ],
+      "children": [
+        {
+          "table": [
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "weight": "1/2",
+          "spectrum": [
+            "289/1024",
+            "343/1024",
+            "343/1024",
+            "49/1024"
+          ]
+        },
+        {
+          "table": [
+            -1,
+            1,
+            1,
+            1
+          ],
+          "weight": "1/2",
+          "spectrum": [
+            "289/1024",
+            "343/1024",
+            "343/1024",
+            "49/1024"
+          ]
+        }
+      ],
+      "prime_log_coefficients": {},
+      "clearing_denominator": 1,
+      "integer_exponents": {},
+      "sign": 0,
+      "dyadic_margin_bits": [
+        "0",
+        "0"
+      ],
+      "dyadic_lower_exact": true,
+      "numerator_bit_length": 1,
+      "denominator_bit_length": 1,
+      "numerator_hex_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "denominator_hex_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "equality_proof": "All prime-log coefficients vanish exactly",
+      "precision_refinements": 0
+    },
+    {
+      "name": "taxfree_AND",
+      "table": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "biases": [
+        "1/8",
+        "1/4"
+      ],
+      "physical_block_mask": 1,
+      "orientation": -1,
+      "parent": {
+        "n": 2,
+        "biases": [
+          "1/8",
+          "1/4"
+        ],
+        "walsh": [
+          2,
+          2,
+          2,
+          -2
+        ],
+        "centered_coefficients": [
+          "15/16",
+          "-1/2",
+          "-1/4",
+          "-2"
+        ],
+        "spectrum": [
+          "225/256",
+          "7/256",
+          "3/256",
+          "21/256"
+        ],
+        "pivotal_probabilities": [
+          "1/4",
+          "1/8"
+        ],
+        "spectral_influences": [
+          "7/64",
+          "3/32"
+        ]
+      },
+      "marginal": [
+        "29/32",
+        "3/32"
+      ],
+      "children": [
+        {
+          "table": [
+            1,
+            1
+          ],
+          "weight": "7/8",
+          "spectrum": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "table": [
+            1,
+            -1
+          ],
+          "weight": "1/8",
+          "spectrum": [
+            "1/4",
+            "3/4"
+          ]
+        }
+      ],
+      "prime_log_coefficients": {
+        "3": "225/128",
+        "5": "225/128",
+        "2": "7/4",
+        "7": "7/64",
+        "29": "-29/16"
+      },
+      "clearing_denominator": 128,
+      "integer_exponents": {
+        "3": 225,
+        "5": 225,
+        "2": 224,
+        "7": 14,
+        "29": -232
+      },
+      "sign": 1,
+      "dyadic_margin_bits": [
+        "15/128",
+        "1/8"
+      ],
+      "dyadic_lower_exact": false,
+      "numerator_bit_length": 1143,
+      "denominator_bit_length": 1128,
+      "numerator_hex_sha256": "882f766e0c40562fb21b80ab3dc33be9da7b836676d91ad9dfafeec104fb20c8",
+      "denominator_hex_sha256": "bae49338c067d26c456386f02dd234d18d8adb6e2214efc6147d716f574a7bda",
+      "independent_eight_term_interval_bits": [
+        "262400691633667423637470090559228026827079631271642854383643/2194994868285960443953859456827688195883983103000000000000000",
+        "524801405308189766850472142386521054266643995322950277260401/4389989736571920887907718913655376391767966206000000000000000"
+      ],
+      "precision_refinements": 0,
+      "outward_decimal_interval_bits": [
+        "11954501/100000000",
+        "5977251/50000000"
+      ]
+    }
+  ]
+}

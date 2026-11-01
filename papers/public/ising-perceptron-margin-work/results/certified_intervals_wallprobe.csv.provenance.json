@@ -1,0 +1,24 @@
+{
+ "schedule": "slabs_wallprobe.json",
+ "schedule_sha256": "326d3716bd668a4b58478fc2b14a4bb548b76c892ef0a6014b748a70ec6e8bf5",
+ "slabs_expected": 60,
+ "slabs_certified": 60,
+ "kappa_lo": "-0.930000",
+ "kappa_hi": "-0.900000",
+ "sources_sha256": {
+  "results/box/result_wallprobe.json": "8521d817322bf02390935df923fd54ae0b3abf8ac2c73bc187c4d6196b6a1752"
+ },
+ "bound": true,
+ "output_csv": "results/certified_intervals_wallprobe.csv",
+ "output_csv_sha256": "ccd874066870aed0c7fe71a6908a754512601652578c493dc24b8ad218501f6c",
+ "collector_sha256": "48dfe713d425cb305715932abf88ed966106ee09fc963b4310eaf76536bd11b8",
+ "command": [
+  "collect_slabs.py",
+  "results/box/result_wallprobe.json",
+  "--expect",
+  "slabs_wallprobe.json",
+  "-o",
+  "results/certified_intervals_wallprobe.csv"
+ ],
+ "verify": "recompute sha256 of output_csv and compare to output_csv_sha256; a mismatch means a torn or superseded pair"
+}

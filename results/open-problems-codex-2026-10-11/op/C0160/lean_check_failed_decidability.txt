@@ -1,0 +1,52 @@
+lake : [leancheck] waiting for a Lean slot: Lean checks in this run take turns (a full Mathlib import holds about 8 GB 
+here and the computer is shared); the check starts by itself when a slot frees
+At line:2 char:1
++ lake env lean ~/brain_workers/TRIO_1011/op/C0160/Endpoin ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([leancheck] wai...en a slot frees:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[leancheck] slot 0 taken after 226 s; running the check
+~/brain_workers/TRIO_1011/op/C0160/Endpoint.lean:20:23: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable (a ∈ U)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+~/brain_workers/TRIO_1011/op/C0160/Endpoint.lean:29:20: error: unsolved goals
+α : Type u_1
+inst✝ : LinearOrder α
+U : Set α
+a b : α
+hglb : IsGLB U a
+hbound : ∀ x ∈ U, x ≤ b
+hup : ∀ x ∈ U, ∀ (y : α), x ≤ y → y ≤ b → y ∈ U
+hx : a ∈ U
+hax : a ≤ a
+⊢ a ∈ sorry ()
+~/brain_workers/TRIO_1011/op/C0160/Endpoint.lean:37:6: error: unsolved goals
+case neg
+α : Type u_1
+inst✝ : LinearOrder α
+U : Set α
+a b : α
+hglb : IsGLB U a
+hbound : ∀ x ∈ U, x ≤ b
+hup : ∀ x ∈ U, ∀ (y : α), x ≤ y → y ≤ b → y ∈ U
+x : α
+hx : x ∈ sorry ()
+ha : a ∉ U
+⊢ x ∈ U
+~/brain_workers/TRIO_1011/op/C0160/Endpoint.lean:29:29: warning: This simp argument is unused:
+  hx
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+~/brain_workers/TRIO_1011/op/C0160/Endpoint.lean:37:14: warning: This simp argument is unused:
+  ha
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at hx
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Exit code: 1

@@ -1,0 +1,12 @@
+A  permutations: 300 orbit-balanced targets filled exactly within |E| steps; 187 unbalanced targets leave a positive residual
+B  f = 2 1{x_0 = 1}: r_n (n = 0..13) = 1, 0.5, 0.25, 0.25, 0.1875, 0.1875, 0.1562, 0.1562, 0.1367, 0.1367, 0.123, 0.123, 0.1128, 0.1128
+   r_n = binom(2j, j) / 2^(2j+1) with j = floor(n/2), exactly, for 1 <= n <= 13
+   accepted by stage 12: 0.8872; Monte Carlo 200000 runs, largest deviation from the exact accepted sub-law 0.0005
+B  f = 4 1{x_0 = x_1 = 1}: r_n (n = 0..13) = 1, 0.75, 0.625, 0.5, 0.4062, 0.4062, 0.3672, 0.3359, 0.3008, 0.3008, 0.2842, 0.2683, 0.2495, 0.2495
+   accepted by stage 12: 0.7505; Monte Carlo 200000 runs, largest deviation from the exact accepted sub-law 0.0007
+B  random f on 3 bits #1: r_n (n = 0..13) = 1, 0.2083, 0.2083, 0.1562, 0.1562, 0.1354, 0.1289, 0.1178, 0.1139, 0.1066, 0.1021, 0.09725, 0.09428, 0.09044
+   accepted by stage 12: 0.9096; Monte Carlo 200000 runs, largest deviation from the exact accepted sub-law 0.0008
+B  random f on 3 bits #2: r_n (n = 0..13) = 1, 0.125, 0.1094, 0.08594, 0.08594, 0.07812, 0.07227, 0.06689, 0.06299, 0.06018, 0.05695, 0.0546, 0.05251, 0.05052
+   accepted by stage 12: 0.9495; Monte Carlo 200000 runs, largest deviation from the exact accepted sub-law 0.0012
+C  50069 deterministic shift rules on cycles of length 1..6: every density is integer-valued
+all checks passed

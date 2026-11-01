@@ -1,0 +1,137 @@
+[
+  {
+    "claim_id": "A008-ALL-BOOLEAN-IMPLICANT-ROOT-NORMALIZER-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every nonconstant uniform Boolean function f, q=Pr(f=-1), v=4q(1-q), every finite nonempty table of signed conjunction implicants e of f=+1 of widths w_e>=k>=1, rarities pi_e=2^(-w_e), and positive globally fixed weights satisfying sum_(e:i in R_e)lambda_e<=1, put D=product_e(1+lambda_e*pi_e)-1 and a_k=(1-2^(-k))/k. Then sum_(i in R_e)Inf_i(f)>=2q*w_e/(2^(w_e)-1) for every gate, sum_e lambda_e*pi_e<=a_k I(f)/(2q), and the SAME signed original root-normalization contribution satisfies v log2 D <= [2 a_k(1-q)/ln 2]I(f). No monotonicity, privacy, independent-gate, product-spectrum or posterior assumptions are required. The rarity coefficient is sharp on a single AND_k gate at weight one. Substitution into A009-ARBITRARY-CORE-PRIVATE-LEAF-COMPLETE-PAYMENT v1, with its reference and weights unchanged, gives C_PL<399I/40<10I. This pays only root normalization universally; complete non-root occupation cost and full FEI remain open.",
+    "hypotheses": [
+      "Uniform physical cube and nonconstant Boolean f; costs in bits",
+      "Finite nonempty table of actual signed conjunction implicants of f=+1",
+      "Each gate has positive integer width and its actual rarity 2^-width",
+      "One positive packing-feasible weight vector fixed before the spectral set is sampled",
+      "The <10I corollary uses the unchanged full scope and actual private-block reference of A009 v1"
+    ],
+    "statement_sha256": "140a7ef8246f415477ef68edd58fccc9b135b13e4f5c896fa370a988504067cd",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261021T234312Z-fleet03-A008-gate-label-compression\\ROOT_PAYMENT.md",
+      "code": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261021T234312Z-fleet03-A008-gate-label-compression\\code\\check.py",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261021T234312Z-fleet03-A008-gate-label-compression\\code\\verify.py"
+      ],
+      "certificates": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261021T234312Z-fleet03-A008-gate-label-compression\\out\\PILOT.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261021T234312Z-fleet03-A008-gate-label-compression\\out\\CHECK.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261021T234312Z-fleet03-A008-gate-label-compression\\out\\VERIFY.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "use": "Identity Lambda+log Z=log D and identification of the original root term only; local cube boundary lemma is proved directly"
+      },
+      {
+        "claim_id": "A009-ARBITRARY-CORE-PRIVATE-LEAF-COMPLETE-PAYMENT",
+        "version": 1,
+        "statement_sha256": "cd8869084544f2c5c76e5421dbb16060f797fe3188fc2fcc61f9705b273663a2",
+        "use": "<10I downstream corollary only; not used in the universal root theorem",
+        "status": "WHOLE_INDEPENDENTLY_RECONSTRUCTED_LOCALLY_BY_A008"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A008",
+        "verdict": "ANALYTIC_PROOF_WITH_EXACT_FINITE_AND_INDEPENDENT_FIBER_CHECKS; NOT INDEPENDENT_AGENT_ACCEPTANCE",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261021T234312Z-fleet03-A008-gate-label-compression\\out\\VERIFY.json",
+        "lean_status": "SETUP_UNVERIFIED; compute admission held, no compiler process"
+      },
+      {
+        "reviewer": "A009",
+        "verdict": "UNIVERSAL_ROOT_SUBSTATEMENT_HOLDS_UNCHANGED_NO_REPAIR; PRIVATE_LEAF_COROLLARY_HAS_UPSTREAM_AUTHOR_DISCLOSURE",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261022T220926Z-fleet03-A009-fractional-incidence-optimization\\REVIEW_ROOT.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261022T220926Z-fleet03-A009-fractional-incidence-optimization\\out\\CHECK.json",
+        "method": "All-dimensional cube-cut/fiber/packing reconstruction; every signed implicant on all270 nonconstant functions n<=3 checked independently;1904 faces; no upstream private-leaf acceptance asserted",
+        "reviewer_supplied_substantive_repair": false,
+        "timestamp_utc": "2026-10-22T22:48:11.058390+00:00"
+      }
+    ],
+    "status": "UNIVERSAL_ROOT_SUBSTATEMENT_INDEPENDENTLY_RECONSTRUCTED_BY_A009; COROLLARY_UPSTREAM_AUTHOR_DISCLOSED; LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A007",
+      "A009",
+      "A010",
+      "A015",
+      "A086",
+      "B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A009-ONE-MISSING-EDGE-LEAFLESS-COMPLETE-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For every integer pair2<=a<=b, let G be the positive simple graph K_(a,b) with one named edge deleted and f_G its actual uniform Boolean edge DNF. On precisely its ab-1 surviving positive edge primes, fix both endpoint orders, rarity1/4 and global weights lambda_e=1/b. These satisfy every coordinate incidence row. The original nonempty-conditioned queue, with SAME D=(1+1/(4b))^(ab-1)-1, has an explicit distinct-run output subprobability Q positive on every nonempty Fourier set: one-sided isolated roots sum over actual neighbors; mixed sets use a double-star with at most one extra actual singleton root; the missing endpoint pair uses two actual isolated roots. Its complete nonempty cross-entropy C=sum_(A!=empty) fhat_G(A)^2[-log2 Q(A)] is strictly less than297I(f_G)/8<38I(f_G), including all root rarities, unused-root probabilities, selected subsets, counts, attachments, chronology and output ambiguity. Its complete non-root expectation is at most36I(f_G). No extra controller, private neighbor, optimal-weight assertion, arbitrary-edge-deletion transfer or new FEI class claim is used. The undamaged calibration on all K_(a,b),1<=a<=b, has the same construction at complete cost<97I/8<13I.",
+    "hypotheses": [
+      "Uniform independent physical signs; actual Boolean squared Fourier spectrum and physical influence; costs in bits",
+      "Precisely the surviving positive edge primes; both orders and actual rarity1/4 fixed",
+      "One globally fixed feasible weight vector lambda=1/b, independent of the sampled set",
+      "Original queue and conditional root normalizer; ideal reference probabilities; no free prefix rounding",
+      "The damaged family requires a,b>=2 so all extra singleton-root neighbors exist; the main leafless subfamily has a,b>=3"
+    ],
+    "statement_sha256": "93500264d0fbfa0a24c26c5e90364c1b54252bc22d991bc67a43893a50f3eba3",
+    "contributors": [
+      "A009"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261022T220926Z-fleet03-A009-fractional-incidence-optimization\\ONE_MISSING_EDGE.md",
+      "calibration": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261022T220926Z-fleet03-A009-fractional-incidence-optimization\\LEAFLESS_CERTIFICATE.md",
+      "code": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261022T220926Z-fleet03-A009-fractional-incidence-optimization\\code\\damaged.py",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261022T220926Z-fleet03-A009-fractional-incidence-optimization\\code\\damaged_verify.py"
+      ],
+      "certificates": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261022T220926Z-fleet03-A009-fractional-incidence-optimization\\out\\DAMAGED_CHECK.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261022T220926Z-fleet03-A009-fractional-incidence-optimization\\out\\DAMAGED_VERIFY.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "use": "Original conditioned queue, actual root/count/multiset/label probabilities; no universal payment assumed"
+      },
+      {
+        "claim_id": "A008-ALL-BOOLEAN-IMPLICANT-ROOT-NORMALIZER-PAYMENT",
+        "version": 1,
+        "statement_sha256": "140a7ef8246f415477ef68edd58fccc9b135b13e4f5c896fa370a988504067cd",
+        "use": "Universal width-two root substatement ONLY, independently reconstructed here; no private-leaf premise"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A009",
+        "verdict": "AUTHOR_ANALYTIC_PROOF_AND_SEPARATE_ORIGINAL_PROBABILITY_REPLAY; NO_INDEPENDENT_AGENT_ACCEPTANCE",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261022T220926Z-fleet03-A009-fractional-incidence-optimization\\out\\DAMAGED_VERIFY.json",
+        "lean_status": "SETUP_UNVERIFIED; admission held, no compiler process",
+        "timestamp_utc": "2026-10-22T22:48:11.058390+00:00"
+      }
+    ],
+    "status": "ANALYTIC_PROOF_EXACT_CHECKED_PENDING_INDEPENDENT_AGENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A007",
+      "A008",
+      "A010",
+      "A015",
+      "A086",
+      "B02",
+      "B20"
+    ]
+  }
+]

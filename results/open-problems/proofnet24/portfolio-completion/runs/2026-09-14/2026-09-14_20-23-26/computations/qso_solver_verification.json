@@ -1,0 +1,452 @@
+{
+  "status": "all exact-oracle assertions passed",
+  "cases": [
+    {
+      "name": "equiprobable interior",
+      "known_fixed_point": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "actual_error_l1": "0",
+      "result": {
+        "certificate_schema": "four-type-qso-residual-v1",
+        "operator": {
+          "pairs": [
+            {
+              "i": 0,
+              "j": 0,
+              "p": [
+                "0",
+                "1/3",
+                "1/3",
+                "1/3"
+              ]
+            },
+            {
+              "i": 0,
+              "j": 1,
+              "p": [
+                "0",
+                "0",
+                "1/2",
+                "1/2"
+              ]
+            },
+            {
+              "i": 0,
+              "j": 2,
+              "p": [
+                "0",
+                "1/2",
+                "0",
+                "1/2"
+              ]
+            },
+            {
+              "i": 0,
+              "j": 3,
+              "p": [
+                "0",
+                "1/2",
+                "1/2",
+                "0"
+              ]
+            },
+            {
+              "i": 1,
+              "j": 1,
+              "p": [
+                "1/3",
+                "0",
+                "1/3",
+                "1/3"
+              ]
+            },
+            {
+              "i": 1,
+              "j": 2,
+              "p": [
+                "1/2",
+                "0",
+                "0",
+                "1/2"
+              ]
+            },
+            {
+              "i": 1,
+              "j": 3,
+              "p": [
+                "1/2",
+                "0",
+                "1/2",
+                "0"
+              ]
+            },
+            {
+              "i": 2,
+              "j": 2,
+              "p": [
+                "1/3",
+                "1/3",
+                "0",
+                "1/3"
+              ]
+            },
+            {
+              "i": 2,
+              "j": 3,
+              "p": [
+                "1/2",
+                "1/2",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "i": 3,
+              "j": 3,
+              "p": [
+                "1/3",
+                "1/3",
+                "1/3",
+                "0"
+              ]
+            }
+          ]
+        },
+        "cap": "2/5",
+        "candidate": [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "exact_residual_l1": "0",
+        "certified_error_l1_upper": "0",
+        "coordinate_intervals": [
+          [
+            "1/4",
+            "1/4"
+          ],
+          [
+            "1/4",
+            "1/4"
+          ],
+          [
+            "1/4",
+            "1/4"
+          ],
+          [
+            "1/4",
+            "1/4"
+          ]
+        ],
+        "certificate_basis": "FOUR_TYPE_UNIQUENESS.md, equation (10), q=2/5",
+        "arithmetic": "exact rational residual; floating-point candidate search",
+        "search_step": 0,
+        "requested_tolerance": "1/100000000",
+        "tolerance_met": true
+      }
+    },
+    {
+      "name": "invariant triple boundary",
+      "known_fixed_point": [
+        "1/3",
+        "1/3",
+        "1/3",
+        "0"
+      ],
+      "actual_error_l1": "29/15625000000",
+      "result": {
+        "certificate_schema": "four-type-qso-residual-v1",
+        "operator": {
+          "pairs": [
+            {
+              "i": 0,
+              "j": 0,
+              "p": [
+                "0",
+                "1/2",
+                "1/2",
+                "0"
+              ]
+            },
+            {
+              "i": 0,
+              "j": 1,
+              "p": [
+                "0",
+                "0",
+                "1",
+                "0"
+              ]
+            },
+            {
+              "i": 0,
+              "j": 2,
+              "p": [
+                "0",
+                "1",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "i": 0,
+              "j": 3,
+              "p": [
+                "0",
+                "1/2",
+                "1/2",
+                "0"
+              ]
+            },
+            {
+              "i": 1,
+              "j": 1,
+              "p": [
+                "1/2",
+                "0",
+                "1/2",
+                "0"
+              ]
+            },
+            {
+              "i": 1,
+              "j": 2,
+              "p": [
+                "1",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "i": 1,
+              "j": 3,
+              "p": [
+                "1/2",
+                "0",
+                "1/2",
+                "0"
+              ]
+            },
+            {
+              "i": 2,
+              "j": 2,
+              "p": [
+                "1/2",
+                "1/2",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "i": 2,
+              "j": 3,
+              "p": [
+                "1/2",
+                "1/2",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "i": 3,
+              "j": 3,
+              "p": [
+                "1/3",
+                "1/3",
+                "1/3",
+                "0"
+              ]
+            }
+          ]
+        },
+        "cap": "2/5",
+        "candidate": [
+          "10416666657/31250000000",
+          "10416666657/31250000000",
+          "10416666657/31250000000",
+          "29/31250000000"
+        ],
+        "exact_residual_l1": "29/15625000000",
+        "certified_error_l1_upper": "29/3125000000",
+        "coordinate_intervals": [
+          [
+            "651041657/1953125000",
+            "5208333401/15625000000"
+          ],
+          [
+            "651041657/1953125000",
+            "5208333401/15625000000"
+          ],
+          [
+            "651041657/1953125000",
+            "5208333401/15625000000"
+          ],
+          [
+            "0",
+            "87/15625000000"
+          ]
+        ],
+        "certificate_basis": "FOUR_TYPE_UNIQUENESS.md, equation (10), q=2/5",
+        "arithmetic": "exact rational residual; floating-point candidate search",
+        "search_step": 38,
+        "requested_tolerance": "1/100000000",
+        "tolerance_met": true
+      }
+    }
+  ],
+  "invalid_inputs_rejected": [
+    "parent offspring leakage",
+    "nonstochastic row",
+    "JSON floating point",
+    "missing pair"
+  ],
+  "api_regressions_rejected": [
+    "float candidate false-zero regression",
+    "boolean tolerance",
+    "NaN tolerance",
+    "infinite tolerance"
+  ],
+  "tiny_perturbation_exact_certificate": {
+    "certificate_schema": "four-type-qso-residual-v1",
+    "operator": {
+      "pairs": [
+        {
+          "i": 0,
+          "j": 0,
+          "p": [
+            "0",
+            "100000000000000000003/300000000000000000000",
+            "99999999999999999997/300000000000000000000",
+            "1/3"
+          ]
+        },
+        {
+          "i": 0,
+          "j": 1,
+          "p": [
+            "0",
+            "0",
+            "1/2",
+            "1/2"
+          ]
+        },
+        {
+          "i": 0,
+          "j": 2,
+          "p": [
+            "0",
+            "1/2",
+            "0",
+            "1/2"
+          ]
+        },
+        {
+          "i": 0,
+          "j": 3,
+          "p": [
+            "0",
+            "1/2",
+            "1/2",
+            "0"
+          ]
+        },
+        {
+          "i": 1,
+          "j": 1,
+          "p": [
+            "1/3",
+            "0",
+            "1/3",
+            "1/3"
+          ]
+        },
+        {
+          "i": 1,
+          "j": 2,
+          "p": [
+            "1/2",
+            "0",
+            "0",
+            "1/2"
+          ]
+        },
+        {
+          "i": 1,
+          "j": 3,
+          "p": [
+            "1/2",
+            "0",
+            "1/2",
+            "0"
+          ]
+        },
+        {
+          "i": 2,
+          "j": 2,
+          "p": [
+            "1/3",
+            "1/3",
+            "0",
+            "1/3"
+          ]
+        },
+        {
+          "i": 2,
+          "j": 3,
+          "p": [
+            "1/2",
+            "1/2",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "i": 3,
+          "j": 3,
+          "p": [
+            "1/3",
+            "1/3",
+            "1/3",
+            "0"
+          ]
+        }
+      ]
+    },
+    "cap": "2/5",
+    "candidate": [
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    "exact_residual_l1": "1/800000000000000000000",
+    "certified_error_l1_upper": "1/160000000000000000000",
+    "coordinate_intervals": [
+      [
+        "79999999999999999999/320000000000000000000",
+        "80000000000000000001/320000000000000000000"
+      ],
+      [
+        "79999999999999999999/320000000000000000000",
+        "80000000000000000001/320000000000000000000"
+      ],
+      [
+        "79999999999999999999/320000000000000000000",
+        "80000000000000000001/320000000000000000000"
+      ],
+      [
+        "79999999999999999999/320000000000000000000",
+        "80000000000000000001/320000000000000000000"
+      ]
+    ],
+    "certificate_basis": "FOUR_TYPE_UNIQUENESS.md, equation (10), q=2/5",
+    "arithmetic": "exact rational residual; floating-point candidate search"
+  },
+  "scope": "Checks the finite implementation and known examples; the universal theorem is analytic."
+}

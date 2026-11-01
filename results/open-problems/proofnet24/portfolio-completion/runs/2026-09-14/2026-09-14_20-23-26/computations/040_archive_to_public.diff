@@ -1,0 +1,43 @@
+--- archive_E548_port.lean
++++ public_E548.lean
+@@ -1,7 +1,4 @@
+ import Mathlib
+-set_option autoImplicit true
+-set_option relaxedAutoImplicit true
+-set_option maxHeartbeats 4000000
+ 
+ /-!
+ # Erdős Problem 548
+@@ -465,8 +462,7 @@
+     intro b hb
+     rw [permutationWords_card _ (hl.erase b),List.length_erase_of_mem (List.mem_toFinset.mp hb)]
+   rw [Finset.sum_congr rfl he]
+-  simp only [Finset.sum_const,nsmul_eq_mul,List.toFinset_card_of_nodup hl,
+-    permutationWords_card l₀ hl,Nat.cast_id]
++  simp only [Finset.sum_const,nsmul_eq_mul,List.toFinset_card_of_nodup hl,permutationWords_card l₀ hl]
+   simpa only [Nat.sub_add_cancel hn] using (Nat.factorial_succ (l₀.length-1)).symm
+ 
+ /-- Root-dependent gluing, summed over ALL full permutation words. -/
+@@ -601,9 +597,7 @@
+     | .inl a, .inr _ => a = r
+     | .inr _, .inl b => b = r
+     | .inr _, .inr _ => False
+-  symm := by
+-    constructor
+-    rintro (a | a) (b | b) h <;> first | exact h.symm | exact h
++  symm := by rintro (a | a) (b | b) h <;> first | exact h.symm | exact h
+   loopless := by constructor; rintro (a | a) <;> simp
+ 
+ end Erdos548
+@@ -857,9 +851,8 @@
+       ∀ x ∈ A, ∀ y ∉ A, T.Adj x y → x=r ∧ y=s := by
+   classical
+   let D := T \ fromEdgeSet {s(r,s)}
+-  have hno : ¬D.Reachable r s := by
+-    have hbr := isBridge_iff.mp ((isAcyclic_iff_forall_adj_isBridge.mp hT.isAcyclic) hrs)
+-    simpa only [D,SimpleGraph.deleteEdges] using hbr
++  have hno : ¬D.Reachable r s :=
++    (isBridge_iff.mp ((isAcyclic_iff_forall_adj_isBridge.mp hT.IsAcyclic) hrs)).2
+   have hdeleted : ∀ {x y}, T.Adj x y → ¬D.Adj x y →
+       (x=r ∧ y=s) ∨ (x=s ∧ y=r) := by
+     intro x y hxy hn

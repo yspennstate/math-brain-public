@@ -1,0 +1,35 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261011T232144Z-fleet01-B20-a096-critical-pruning",
+  "claims": [
+    {
+      "claim_id": "B20-A096-CRITICAL-PRUNING",
+      "version": 1,
+      "packet_id": "A096",
+      "attempt_id": "A096-CRITICAL-PRUNING-2",
+      "gap_id": "G-CRITICAL-STEP",
+      "status": "ANALYTICALLY_PROVED_WITH_EXACT_FINITE_CHECK_PENDING_INDEPENDENT_REVIEW",
+      "exact_statement": "For every nonconstant Boolean f and relevant coordinate i, with R=H(f)/I(f), child averages Hbar,Ibar, d_i=I_i(f), and Delta_iH=H(f)-Hbar, one has Hbar-R Ibar=R d_i-Delta_iH. Hence Delta_iH/d_i<R exposes a nonconstant physical child of ratio greater than R. Every descendant-critical f satisfies Delta_iH>=R I_i(f) for all i. A minimum-dimensional counterexample to H<=C I is tensor-prime and satisfies Delta_iH-CI_i(f)>=H(f)-CI(f)>0 for every i.",
+      "hypotheses": [
+        "finite uniform cube",
+        "genuine {-1,1}-valued Boolean source",
+        "physical coordinate restrictions",
+        "entropy in bits"
+      ],
+      "proof_dependencies": [
+        "exact restriction identities for H and I",
+        "B11-A052-CRITICAL-TENSOR-PURITY-v1 for route context only",
+        "B01-A005-ACTIVATION-CONTROL-STEP-CAP-v1 for the activation corollary"
+      ],
+      "scope_exclusions": [
+        "Does not prove a universal bound on the minimum step ratio",
+        "Does not prove constant four",
+        "Does not make qualitative primitivity sufficient",
+        "Does not solve FEI",
+        "Independent review pending"
+      ],
+      "next_consumers": ["A026", "A027", "A051", "A052", "A055", "A087", "A090", "A097"],
+      "independent_reviewers": ["A090", "A094"]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+--- a/~/math-brain-inbox/w366/bundle_001.json
++++ b/~/math-brain-inbox/w366/bundle_001.json
+@@ -0,0 +1,180 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w366",
++  "bundle_slug": "p0104-sharp-moment-and-crossover-boundaries-w366-001",
++  "entries": [
++    {
++      "key": "fpp-definition",
++      "namespace": "probability.firstpassage",
++      "logical_name": "iid-square-lattice-first-passage-time-definition",
++      "kind": "definition",
++      "title": "Iid square-lattice first-passage time",
++      "statement": "On the undirected nearest-neighbour square lattice Z^2 assign iid finite almost surely nonnegative edge weights t_e. For distinct vertices x,y, T(x,y) is the infimum over all finite x-to-y lattice paths of the sum of weights along the path, counting a traversed edge each time it is used.",
++      "proof_text": null,
++      "assumptions": [
++        "iid finite almost surely nonnegative edge weights"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign-w366-p0104-boundary-20261010",
++        "url": "file:///~/brain_workers/w366/LEMMAS.md",
++        "revision": "2026-10-10-author-proof-awaiting-independent-review",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "w366-c1",
++      "namespace": "probability.firstpassage",
++      "logical_name": "fixed-endpoint-planar-fpp-moment-criterion",
++      "kind": "concept",
++      "title": "DRAFT: exact fixed-endpoint FPP moment criterion",
++      "statement": "DRAFT author proof awaiting independent mathematical review; no novelty or P0104 closure claim. For iid finite almost surely nonnegative nearest-neighbour edge weights on Z^2, n>=1 and r>0, E[T(0,n e1)^r]<infinity if and only if E[min(t1,t2,t3,t4)^r]<infinity. More precisely, with L=n+8 and K=n(n+2)^2(n+8), P(M>t)<=P(T>t)<=K P(M>t/L) for all t>=0. Scope: No mathematical gap asserted in this fixed-endpoint moment criterion; constants depend on n. No fixed-law KPZ power estimate follows.",
++      "proof_text": null,
++      "assumptions": [
++        "undirected nearest-neighbour square lattice",
++        "iid finite almost surely nonnegative edge weights",
++        "n integer at least 1",
++        "r>0"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign-w366-p0104-boundary-20261010",
++        "url": "file:///~/brain_workers/w366/LEMMAS.md#c1",
++        "revision": "2026-10-10-author-proof-awaiting-independent-review",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "w366-c2",
++      "namespace": "probability.firstpassage",
++      "logical_name": "pareto-planar-fpp-fixed-endpoint-moment-threshold",
++      "kind": "concept",
++      "title": "DRAFT: sharp Pareto passage-time moment threshold",
++      "statement": "DRAFT author proof awaiting independent mathematical review; no novelty or P0104 closure claim. For iid continuous Pareto weights supported on [1,infinity) with tail index alpha>0 on the square lattice, E[T(0,n e1)^r]<infinity iff 4 alpha>r, for n>=1 and r>0. At alpha=1/2 the mean is finite and Var(T)=infinity. Scope: Only counters an extension lacking moment hypotheses; does not refute the standard KPZ target.",
++      "proof_text": null,
++      "assumptions": [
++        "same lattice and iid hypotheses as C1",
++        "Pareto tail t^(-alpha) for t>=1",
++        "fixed n>=1"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign-w366-p0104-boundary-20261010",
++        "url": "file:///~/brain_workers/w366/LEMMAS.md#c2",
++        "revision": "2026-10-10-author-proof-awaiting-independent-review",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "w366-c3",
++      "namespace": "probability.firstpassage",
++      "logical_name": "bounded-planar-fpp-sharp-straight-path-window",
++      "kind": "concept",
++      "title": "DRAFT: sharp bounded-weight straight-path window",
++      "statement": "DRAFT author proof awaiting independent mathematical review; no novelty or P0104 closure claim. If all square-lattice edge weights lie in [1,1+epsilon], then T(0,n e1) is exactly the straight-path sum for n epsilon<=2. For iid Uniform[1,1+epsilon], Var(T)=n epsilon^2/12 in that window; for n epsilon>2 the straight path loses to a dogleg with positive probability. Scope: The finite window depends on epsilon; nothing here yields a fixed-law asymptotic exponent.",
++      "proof_text": null,
++      "assumptions": [
++        "epsilon>0",
++        "n>=1 integer",
++        "undirected nearest-neighbour square lattice",
++        "deterministic support for the identity; iid Uniform for variance and probabilistic sharpness"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign-w366-p0104-boundary-20261010",
++        "url": "file:///~/brain_workers/w366/LEMMAS.md#c3",
++        "revision": "2026-10-10-author-proof-awaiting-independent-review",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "w366-c4",
++      "namespace": "probability.firstpassage",
++      "logical_name": "planar-fpp-law-uniform-normalized-variance-bound-obstruction",
++      "kind": "concept",
++      "title": "DRAFT: obstruction to a variance bound uniform over laws",
++      "statement": "DRAFT author proof awaiting independent mathematical review; no novelty or P0104 closure claim. For every beta<1, no finite C independent of the edge law and n can satisfy Var_F(T(0,n e1))<=C Var_F(t_e) n^beta for all iid Uniform[1,1+epsilon] laws, epsilon>0, n>=1. A common law-independent starting scale does not repair this. Scope: This refutes a stronger uniform auxiliary bridge, not the per-fixed-law chi=1/3 conjecture.",
++      "proof_text": null,
++      "assumptions": [
++        "same square-lattice model as C3",
++        "beta<1",
++        "C and any starting scale independent of epsilon"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign-w366-p0104-boundary-20261010",
++        "url": "file:///~/brain_workers/w366/LEMMAS.md#c4",
++        "revision": "2026-10-10-author-proof-awaiting-independent-review",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "w366-c5",
++      "namespace": "probability.firstpassage",
++      "logical_name": "bounded-planar-fpp-pre-detour-resampling-overlap",
++      "kind": "concept",
++      "title": "DRAFT: exact geodesic overlap before the detour scale",
++      "statement": "DRAFT author proof awaiting independent mathematical review; no novelty or P0104 closure claim. For iid edge weights in [1,1+epsilon] with variance sigma^2 and n epsilon<2, the geodesic from 0 to n e1 is the deterministic straight path before and after independent edge refresh with probability delta. Overlap equals n, Cov(T,T^delta)=(1-delta)n sigma^2, and E[(T-T^delta)^2]=2 delta n sigma^2. Scope: No law-dependent asymptotic chaos estimate follows; this only refutes a law-uniform overlap bridge.",
++      "proof_text": null,
++      "assumptions": [
++        "undirected nearest-neighbour square lattice",
++        "epsilon>0",
++        "n>=1 integer",
++        "n epsilon<2",
++        "iid weights with that support",
++        "independent edge refresh probability delta in [0,1]"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-campaign-w366-p0104-boundary-20261010",
++        "url": "file:///~/brain_workers/w366/LEMMAS.md#c5",
++        "revision": "2026-10-10-author-proof-awaiting-independent-review",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "w366-c1",
++      "to_key": "fpp-definition",
++      "kind": "depends_on",
++      "rationale": "The moment criterion uses the explicitly defined point-to-point iid square-lattice passage time."
++    },
++    {
++      "from_key": "w366-c2",
++      "to_key": "w366-c1",
++      "kind": "depends_on",
++      "rationale": "C2 transfers the Pareto minimum-of-four moment threshold using exactly the equivalence in C1."
++    },
++    {
++      "from_key": "w366-c3",
++      "to_key": "fpp-definition",
++      "kind": "depends_on",
++      "rationale": "The straight-path window is a deterministic support specialization of this passage-time definition."
++    },
++    {
++      "from_key": "w366-c4",
++      "to_key": "w366-c3",
++      "kind": "depends_on",
++      "rationale": "Setting epsilon=1/n in C3 makes the normalized variance ratio n^(1-beta), disproving a law-uniform prefactor."
++    },
++    {
++      "from_key": "w366-c5",
++      "to_key": "w366-c3",
++      "kind": "depends_on",
++      "rationale": "Strict n epsilon<2 in C3 makes both environments' geodesics the same deterministic path."
++    },
++    {
++      "from_key": "w366-c4",
++      "to_existing_logical": "math:probability.core:open-problem-p0104-subdiffusive-and-kpz-passage-time-fluctuation-exponents",
++      "kind": "semantic_association",
++      "rationale": "The existing P0104 card seeks asymptotic fluctuation exponents under suitable fixed-law assumptions. This auxiliary obstruction concerns a stronger law-uniform estimate and does not refute that target."
++    }
++  ]
++}

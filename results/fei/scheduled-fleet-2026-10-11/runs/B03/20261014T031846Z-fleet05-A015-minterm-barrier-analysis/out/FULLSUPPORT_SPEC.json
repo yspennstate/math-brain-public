@@ -1,0 +1,12 @@
+{
+ "helper_version":"A015-v4-fullsupport-posterior",
+ "helper_dependency":"Own immutable stage-3 code/check.py, compiled from read bytes without importing or writing the prior run",
+ "actual_Boolean_family":"Parity on m=1,2,3, whose N=2^(m-1) positive full cells are all prime; each covered selected T of size s=1,...,m",
+ "parameter_domain":{"m":[1,2,3],"s":"1 through m"},
+ "case_count":{"tables_and_selected_sizes":6,"labelled_assignments":91},
+ "symmetry":"Fixed representative selected T={0,...,s-1}; pure attached-forest multiplicity depends only on s, not its labels or signs; no entropy/sign extrapolation",
+ "arithmetic":"Fraction determinant/independent BFS moments, integer multinomial counts, exact symbolic rational-base gamma powers kept as keys",
+ "memory_estimate_MB":100,
+ "maximum_runtime_seconds":60,
+ "dimension_escalation":false
+}

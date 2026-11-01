@@ -1,0 +1,11 @@
+P0257 guarded-pair exact finite checker
+parameters: block area A=3/2; central-square area a=3/50
+checked n=3..500: multinomial probability identity EXACT
+checked n=3..500: M_n=floor(sqrt(2n/3))^2 block-count identity EXACT
+n=3: M_n=1, p_n=3/5000
+n=4: M_n=1, p_n=27/51200
+n=5: M_n=1, p_n=3087/6250000
+n=10: M_n=4, p_n=565036352721/1280000000000000
+geometry: B=sqrt(6)/2, t=sqrt(6)/10, margin=sqrt(6)/5, pair_diameter<=sqrt(3)/5
+h=(sqrt(6)-sqrt(3))/5 > 0
+ALL_EXACT_FINITE_CHECKS_PASS

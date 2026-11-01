@@ -1,0 +1,76 @@
+# Conserved credit for every adaptive reveal in a prescribed core
+
+Let S(v)=K I(v)-H(v) be the full spectral slack at a vertex of a finite physical restriction tree or DAG. Entropy is in bits. A query has two equiprobable physical children and excess e=H(v)-mean H(child)-K Inf_query. Physical influence telescoping gives mean S(child)=S(v)+e. No terminal entropy is omitted when its queried core becomes constant.
+
+The inherited account at v contains nonnegative credit a and a total nonnegative booked debit D, with zero residual S(v)+a=D. Credits may be redistributed nonnegatively between the two physical outcomes while preserving their conditional mean a. Every original donor expenditure outside this subtree is fixed. A zero-new-flow continuation makes no new zero-mean sibling transfer and no draw from any outside bank. Signed individual debit labels are allowed, but their sum D must remain nonnegative.
+
+Fix a finite set of allowed next coordinate queries at each vertex, including the option to stop. Define the stopping-credit hull recursively by
+
+    R(v)=max( (-S(v))_+, max_allowed_i mean R(v|i) ).
+
+At a leaf only the first term occurs. All maxima are finite. Dummy queries can be removed because both full restricted functions agree with their parent; they do not alter the recursion.
+
+The exact zero-new-flow all-policy criterion is a>=R(v). This covers arbitrary adaptive choices of the allowed coordinates and arbitrary stopping, not just a prescribed order.
+
+Necessity is by induction. Stopping requires a>=0 and S+a=D>=0, hence a>=(-S)_+. If a query must remain affordable under every allowed continuation, each child's credit must be at least its R; conservation of mean credit forces a>=mean R(child) for every possible next coordinate. The finite recursion is therefore a lower bound for any online allocation rule.
+
+For sufficiency, suppose a>=R(v), select any allowed coordinate, and put r=mean R(child). Allocate
+
+    a_child=R(child)+(a-r),
+    d_child=S(child)+a_child.
+
+The scalar a-r is nonnegative. Each a_child is nonnegative and has mean a. Each d_child is nonnegative because R(child)>=(-S(child))_+. The mean outgoing debit is
+
+    T=mean S(child)+a=S(v)+a+e=D+e>=0.
+
+Every child has zero residual and credit at least its own hull, so induction continues for any future policy. There is no new transfer flow. The added a-r is redistributed preexisting credit, not new donor income. If the credit has several nonnegative owner labels summing to a>0, use the separate mean-one kernel a_child/a to conserve each credit label; when a=0 all such labels vanish. The actual source here has one already spent original credit owner. If the credit has several nonnegative owner labels summing to a>0, use the separate mean-one kernel a_child/a to conserve each credit label; when a=0 all such labels vanish. The actual source here has one already spent original credit owner. If the credit has several nonnegative owner labels summing to a>0, use the separate mean-one kernel a_child/a to conserve each credit label; when a=0 all such labels vanish. The actual source here has one already spent original credit owner.
+
+All signed debit labels remain conserved. Let the old labels sum to D and append the signed query label e. For T>0 use k_child=d_child/T, which is nonnegative with mean1, and send each label L to L*k_child. These labels sum to d_child and retain their means. If T=0, nonnegative d_child and mean zero force both child debits to vanish; take k=1. The old-plus-new labels sum to D+e=0 and still conserve every original label. This zero-total branch requires no division. The credit allocation is separate from the debit-label kernel and preserves its own conditional mean.
+
+This theorem assumes the financial convention that inherited credit may be redistributed with conserved conditional mean. That is the same explicit convention in A071's inherited-credit theorem. It does not allow fresh credit or silently cancel an already booked outgoing donor flow.
+
+# Sharpness, stopping policies, and the universal bill
+
+The same finite recursion gives
+
+    R(v)=max_stopping-policy E[(-S(terminal))_+].
+
+The proof is induction: stopping attains the first candidate; querying a maximizing coordinate followed by independently maximizing policies in its children attains each second candidate. Both outcomes are retained with their true conditional probabilities. This is a deterministic finite dynamic program; no unrelated conditional bounds are multiplied and no limit is exchanged with an expectation.
+
+For the FULL set of physical coordinate queries on every uniform Boolean function, a dimension-independent bound R_K(f)<=L I(f), with L>=0, is equivalent to FEI with constant K+L. In one direction, stop immediately: H(f)-K I(f)<=(-S(f))_+<=R_K(f)<=L I(f). Conversely, FEI(K+L) applies to every restricted terminal g, so (-S(g))_+<=L I(g). Physical influence telescoping gives E I(terminal)<=I(f) on every finite stopping tree. Thus every policy payoff is at most L I(f), and taking the finite maximum proves the hull bound. The finite application below allows queries in only one chosen core; it does not establish a bound on the full hull or prove FEI.
+
+# The source inherited-credit result, independently reconstructed
+
+A071-INHERITED-SUBSIDY-NO-RENEWAL@1 assumes signed raw capacities s, nonnegative inherited credit A and nonnegative total debit T. With N=E(-s)_+ and P=E(s)_+, conserved nonnegative credit, nonnegative debit and zero-mean new flow are feasible iff T<=P-N+A. Their minimum additional gross positive flow is max(0,N-A).
+
+Necessity follows by averaging residuals and, on negative-capacity outcomes, f>=-s-a+d>=-s-a. Hence E(f)_+>=N-A and >=0. For sufficiency when A>=N, select a nonnegative mean-one k: use (s)_+/P if P>0, (-s)_+/N if P=0<N, and k=1 if P=N=0. Set a=(-s)_++(A-N)k,d=T k,f=0. Residual is (P+A-N-T)k. When N>A, feasibility forces P,N>0. Put z=N-A,k=(s)_+/P,a=(A/N)(-s)_+,d=T k,f=(z/N)(-s)_+-z k. The residual is (P-z-T)k>=0 and mean positive flow is exactly z. Every displayed denominator is positive in its branch. Old signed labels use the mean-one kernel k, including T=0. This is a reconstruction of the unchanged source theorem, not a repair to it.
+
+The seven full source profiles J(-1,AND_m,g,g,g,g), m=0..5, and J(-1,+1,g,g,g,g) are independently reconstructed from integer core characters and product-measure moments. All nine source adaptive rows are checked with the original incoming credit, booked debit and every query label. The two initial profiles have subsidy A=-S and debit0. A failure at the LAST active source query reaches F_+=J(-1,+1,g,g,g,g) with debit0, credit -S(F_+), and root reach1/1024 or1/2048, respectively. Earlier stopped F_+ leaves can have positive booked debit and larger credit; they are not incorrectly substituted for this zero-debit leaf. The source stopped donors, their outgoing subsidies, their booked balances, all earlier full terminals and the parked2tau account remain fixed.
+
+# Exact Boolean application and symmetry
+
+Let g be negative exactly on {0,1,2} in six bits. Let h be negative on {0,1,2,4,8,16,32,6,17,40}, and J(x)=-h(x xor1). Work on the actual retained full F_+=J(-1,+1,g,g,g,g), with the original K=4. The two core-orbit representatives are j=2 and j=3.
+
+After outer coordinates0=-1 and1=+1 are fixed, the remaining exceptional pair is {3,5}. Coordinates2,4 are interchangeable, as are3,5; the fixed outer Boolean table is checked under these permutations. These are physical coordinate permutations preserving the function and its disjoint core inputs. No affine mixing is used. Thus the two representatives cover any ONE of the four remaining cores, with all six variables in that chosen core available adaptively and all other complete cores retained.
+
+Every physical restriction of g is reduced by deleting only a proven irrelevant inner coordinate. Its full influence is zero and its two restrictions agree pointwise. The resulting core is either constant, a point-defect AND_m for0<=m<=5, or a three-point L-shape in dimensions2..6. Exactly twelve active profiles occur per outer-core type. Every one of the3^6 labelled partial assignments and every available original-coordinate query row is checked against this reduction. Dummy deletions skip irrelevant physical inputs; they introduce no answer conditioning or extra reach factor. Conditional physical query outcomes keep weight1/2. The resulting full functions remain nonconstant even after the chosen core becomes constant, because the other complete cores are still present.
+
+For each profile two spectrum constructions agree: the pinned engine's centered Taylor expansion and a separately implemented product-measure centered-moment transform. The independent path checks integer core character sums, integer inversion, Parseval and edge influences before its entropy calculation. Its outer moments are normalized only on positive-variance coordinates, reconstruct the outer signs on every supported input, and agree exactly on every occupied-mask mass and physical influence. The full Fourier entropy is the occupied-mask entropy plus the normalized nonempty inner spectral entropies. The hierarchy is an exact compressed spectrum certificate; no24/36-bit full truth table or flat integer spectrum is materialized.
+
+The hull is computed as an exact rational log-linear profile. Equal expressions are tested symbolically; unequal Bellman candidates are separated by proved outward logarithm intervals. No floating tolerance chooses a maximizing action or proves an equality. An attaining stopping policy is saved to certify the lower bound as well as the upper bound. Six explicit financial policies (four first/last-active-coordinate policies from zero-debit source leaves and two from the actual earlier positive-debit source leaf) retain original coordinate labels, every signed query label, both complete terminal outcomes and true reaches. The four zero-debit policies also check the mean-credit identity as an exact rational log profile. The two actual early positive-debit policies use conservative intervals for the explicit rational-in-log transport formulas; the written conditional-mean identities establish equality, rather than interval overlap. The root-weighted original outside donor balance is therefore unchanged.
+
+The compressed full-Walsh check writes each occupied-sector coefficient as c_T times the product of nonempty inner coefficients. If d_j is the gcd of the nonempty integer inner Walsh numerators and N_j its truth-table length, every full integer Walsh coefficient in sector T is a multiple of N c_T product_(j in T)(d_j/N_j). Every such base is checked integral; constant-core occupied sectors are exactly zero. Exact sector Parseval gives the full integer square sum N^2, and composing the checked inner and outer inverses proves sign-valued full inversion. Independent outer pivotal probabilities times direct inner edges give integral full edge counts for every physical coordinate. The actual boundary with paired core3=-1 ignores core5 pointwise and reduces to12 relevant physical bits: all4096 integer Walsh entries, full integer Parseval, inverse and12 direct edge counts are explicitly checked and saved. Dummy padding only multiplies Walsh numerators by its truth-table size and does not alter entropy or influence.
+
+The compressed full-Walsh check writes each occupied-sector coefficient as c_T times the product of nonempty inner coefficients. If d_j is the gcd of the nonempty integer inner Walsh numerators and N_j its truth-table length, every full integer Walsh coefficient in sector T is a multiple of N c_T product_(j in T)(d_j/N_j). Every such base is checked integral; constant-core occupied sectors are exactly zero. Exact sector Parseval gives the full integer square sum N^2, and composing the checked inner and outer inverses proves sign-valued full inversion. Independent outer pivotal probabilities times direct inner edges give integral full edge counts for every physical coordinate. The actual boundary with paired core3=-1 ignores core5 pointwise and reduces to12 relevant physical bits: all4096 integer Walsh entries, full integer Parseval, inverse and12 direct edge counts are explicitly checked and saved. Dummy padding only multiplies Walsh numerators by its truth-table size and does not alter entropy or influence.
+
+The compressed full-Walsh check writes each occupied-sector coefficient as c_T times the product of nonempty inner coefficients. If d_j is the gcd of the nonempty integer inner Walsh numerators and N_j its truth-table length, every full integer Walsh coefficient in sector T is a multiple of N c_T product_(j in T)(d_j/N_j). Every such base is checked integral; constant-core occupied sectors are exactly zero. Exact sector Parseval gives the full integer square sum N^2, and composing the checked inner and outer inverses proves sign-valued full inversion. Independent outer pivotal probabilities times direct inner edges give integral full edge counts for every physical coordinate. The actual boundary with paired core3=-1 ignores core5 pointwise and reduces to12 relevant physical bits: all4096 integer Walsh entries, full integer Parseval, inverse and12 direct edge counts are explicitly checked and saved. Dummy padding only multiplies Walsh numerators by its truth-table size and does not alter entropy or influence.
+
+# Checks that could fail
+
+Wrong core normalization, a non-Boolean inverse, a mislabeled restriction or an incorrect outer product law must fail independent integer inversion, edge counts, exact mask masses or direct pivotal probabilities. A missing child or a renewed credit must fail the labelled DAG coverage or exact expected-credit identity. A policy-specific argument masquerading as all-policy coverage must fail the max over every permitted query row. Zero denominators are separated in the written proofs. The scalar boundary checks cover both signs of raw capacities, A=0, A=N, P=0, T=0 and positive additional-flow regimes. Removing the stop option is invalid: a state with S=-1 and a sole next query to two positive-capacity leaves has continuation average requirement0 but needs credit1 if stopping is permitted. A failed hypothesis check is not an FEI counterexample.
+
+Four intermediate Boolean profiles strictly need more future credit than their current negative-part slack alone. Each exact stopping policy and strict positive excess is saved in out/INSTANT_CREDIT_OBSTRUCTION.json. These refute a proposed greedy credit reset, not the actual inherited account: the all-policy allocation already carries at least the full hull into each child. Replacing that conserved future credit by only the present deficit would silently erase a required history reserve.
+
+# First unsupported universal line
+
+Bound the full physical stopping-credit hull R_4(f) by L I(f) with one dimension-independent L, or derive an adequate inherited-credit bound from signed Boolean component rows after exposing a second remaining core. The exact all-policy calculation in one chosen core neither provides this universal bound nor renews any consumed donor. Full FEI remains OPEN.

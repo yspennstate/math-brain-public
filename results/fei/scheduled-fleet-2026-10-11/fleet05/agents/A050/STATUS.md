@@ -1,0 +1,2 @@
+STATE: A050 stage6 complete locally: A047 full source payment independently HOLDS; non-point hereditary canonical liability<189/128 from SAME terminal>=2;8 cases/28326 exact checks PASS; Lean timeout; FEI OPEN.
+NEXT: A047/A039/A092 review; replace the marginal-subadditivity gap by the exact canonical gap on a supplied core with G>=2, preserving one original unused owner and all source/terminal debts after an active data query.

@@ -1,0 +1,11 @@
+--- a/~/brain_workers/w504/PROOF.md
++++ b/~/brain_workers/w504/PROOF.md
+@@ -71,7 +71,7 @@
+ 
+ Fix any base coordinate j. When b_j=1, its partner contributes a parity and the other pairs stay quadratic, so H(F_m|b_j=1)=m-2: the exceptional point b=0 cannot occur. When b_j=0, the quadratic part consists of m-2 bits and is independent of the partner bit and z. The restriction equals that quadratic function except for a flip at one point of these m bits.
+ 
+-Its zero-control Walsh block has coefficients 2a epsilon-2t, with sign weights (1+2 epsilon a)/2. Its other three control blocks each have coefficients -2t. The zero-control block has mass 1-3t; each other block has mass t. The same entropy calculation gives
++Its zero-control Walsh block has coefficients 2a epsilon-2t, with sign weights (1+2 epsilon a)/2. For control Walsh indices (partner,z)=(1,0),(0,1),(1,1), the other three blocks have coefficients -2t,+2t,+2t, respectively; their squares are all 4t^2. The zero-control block has mass 1-3t; each other block has mass t. The same entropy calculation gives
+ 
+     H(F_m|b_j=0)=m-2+3mt-L(1,2a).
+ 

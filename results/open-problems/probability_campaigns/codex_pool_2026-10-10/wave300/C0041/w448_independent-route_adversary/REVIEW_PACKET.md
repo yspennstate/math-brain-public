@@ -1,0 +1,15 @@
+C0041 review packet, w448. The proposed brain change is one dependence guard: an iid outgoing row is fresh at first arrival but becomes tilted by occupation. ATTEMPT.md was saved before the paired proof was read. No full-conjecture proof, novelty claim or current-open assertion is made.
+
+Review CLAIMS.jsonl and SPECIAL_CASE.md for the independent Green route, the two-site a=11/20 sign reversal, and the a=9/10 sufficient ballistic case. Check the conditional h/r decomposition, the positive weighted average, equality of annealed and auxiliary exit distributions, the strict slab faces and exhaustion, and the use of the established (T) ballisticity theorem. The latter is imported with iid, UE and d>=2; the extra uniform auxiliary drift is not claimed to follow from bare directional transience.
+
+PEER_AUDIT.md and AUDIT.jsonl give scoped KEEP verdicts on w447 ER/FV/CC/GO original proofs. The missing E[K_tau|B] remains unproved. The independent arbitrary heavy horizon is a minimal obstruction to a local-to-global inference, not a regeneration-time or C0041 counterexample.
+
+Numerical check: NOT RUN. Two fresh compute gates refused it at critical commit usage (93.8%, 92.1%). verify_green.py contains exact rational occupation, boundary-flow, auxiliary inverse and coefficient checks. measurements.json and COMPUTE_GATES.jsonl preserve the denial. PACKET_VALIDATION.json is structural validation only. MODEL_EVIDENCE.json records that response-side served-model evidence and a different-model review receipt are unavailable.
+
+SOURCE_STATUS.json distinguishes historical source openness, a new full primary claim and actual proof verification. Theorem 1.1 of the 58-page September 23, 2026 manuscript matches the target; only its model and theorem pages were inspected. FORMAL_CHECK_STATUS.json names the comparator's actual theorem and admitted placeholder. There is no formal-check receipt for the claimed solution.
+
+Brain output: four concept-only entries in bundle_001.json, three relations with exact supporting ends in RELATION_EVIDENCE.jsonl. Own-work license starts owner-own-work. BUNDLE_STATE.json tracks prepared, submitted, reviewed, ingested and retrievable separately. Unpublished campaign sources have local report provenance; their public source URL is null. No coordinator manifest/seal is fabricated and no integrator is run here. STORE_CORRECTION_REQUEST.json proposes narrowing the unsafe private-reduction concept, with the existing node id and source quotes. The local hook proposal has a fire and a silent case; its unified diff names the prospective live proposal path.
+
+The attached artifact checksums identify review versions only; they are not cryptographic ingestion ceremony or mathematical proof. Independent reviewer: w449. Integration contact: codex-01a12190. All own new claims remain sketch/concept drafts until the required review gates pass.
+
+NEXT: Independently verify the conditional Green tilt and strict slab-exit argument; rerun the deferred exact checker only when fresh resource gating permits.

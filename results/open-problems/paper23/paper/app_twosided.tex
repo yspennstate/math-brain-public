@@ -1,0 +1,164 @@
+\section{Proof of the two-sided single-layer rate}\label{app:twosided}
+
+This appendix proves \Cref{thm:twosided}: for an $N\times N$ Gaussian matrix $A$ and
+$M_N(\alpha)=\min_{|S|=|T|=n}\smin(A[T,S])$, $n=\lfloor\alpha N\rfloor$,
+\[
+  -\frac1N\log M_N(\alpha)\ \xrightarrow{\ \PP\ }\ \frac{2H(\alpha)}{\dF}.
+\]
+The upper bound is a first moment; the lower bound is a second moment over an alternately marked family
+whose correlations are controlled by a sharp two-direction small-ball estimate. The argument is that of
+\cite{shmaloSharp}, reproduced here so the product proof of \Cref{app:product} can quote its
+construction and its \Cref{lem:twoslab}.
+
+\subsection{First moment: the upper bound}
+\begin{proposition}\label{prop:upper}
+For every $\eps>0$, $\PP(M_N(\alpha)\le e^{-(2H(\alpha)/\dF+\eps)N})\to0$.
+\end{proposition}
+\begin{proof}
+A single $n\times n$ Gaussian matrix $G$ has the hard-edge tail
+\begin{equation}\label{eq:hardedge}
+  \PP(\smin(G)\le t)\ \le\ C_\F(\sqrt n\,t)^{\dF},\qquad t>0,
+\end{equation}
+(real case Edelman and Rudelson--Vershynin; complex analogously, the least squared singular value having
+bounded density near $0$ at scale $1/n$). Each $A[T,S]$ has the law of $G$, so a union bound over the
+$\binom Nn^2=e^{2H(\alpha)N+o(N)}$ pairs gives $\PP(M_N(\alpha)\le t)\le e^{2H(\alpha)N+o(N)}t^{\dF}$;
+at $t=e^{-(2H(\alpha)/\dF+\eps)N}$ the right side is $e^{-\dF\eps N+o(N)}\to0$.
+\end{proof}
+
+\subsection{The sharp two-direction small-ball estimate}
+Let $g$ be a standard $\F$-Gaussian vector in $\F^D$ and $u,v$ unit vectors; write
+$p(t)=\PP(|\zeta|\le t)$ for a standard $\F$-Gaussian scalar. The following is the one analytic
+ingredient.
+
+\begin{lemma}\label{lem:twoslab}
+For all unit $u,v\in\F^D$ with $|\langle u,v\rangle|^2=R$, $s^2=1-R$, and all $0<t\le1$,
+\begin{equation}\label{eq:cond}
+  \PP\bigl(|\langle g,u\rangle|\le t,\ |\langle g,v\rangle|\le t\bigr)\ \le\ p(t)\,p(2t/s)\ \le\
+  C_\F\,p(t)\,\min\bigl(1,(t/s)^{\dF}\bigr).
+\end{equation}
+If moreover $u,v$ are independent Haar-random unit vectors in $\F^D$, then averaging over their overlap,
+for all $D\ge2$ and $0<t\le1$,
+\[
+  \PP\bigl(|\langle g,u\rangle|\le t,\ |\langle g,v\rangle|\le t\bigr)\ \le\ C_\F\,p(t)^2\,(1+\log(1/t)),
+\]
+with $C_\F$ independent of $D$.
+\end{lemma}
+\begin{proof}
+Put $X=\langle g,u\rangle$, $Y=\langle g,v\rangle$; jointly $\F$-Gaussian, unit variances,
+$\EE[Y\overline X]=\rho'$ with $|\rho'|^2=R$. Regress $Y=cX+sW$ with $|c|^2=R$ and $W$ a standard
+$\F$-Gaussian independent of $X$. If $|X|\le t$ then $|cX|\le t$, so $|sW|=|Y-cX|\le|Y|+|cX|\le2t$ on the
+event; hence the event is contained in $\{|X|\le t\}\cap\{|W|\le2t/s\}$, and independence of $X,W$ gives
+$\PP\le p(t)p(2t/s)\le C_\F p(t)\min(1,(t/s)^{\dF})$ by \eqref{eq:pball}. For the averaged bound,
+$R=|\langle u,v\rangle|^2\sim\Beta(\tfrac{\dF}2,\tfrac{(D-1)\dF}2)$, so $s^2=1-R\sim\Beta(\tfrac{(D-1)\dF}2,\tfrac{\dF}2)$,
+and with $\alpha_0=\dF/2$, $b_0=(D-1)\dF/2$,
+\[
+  \EE[\min(1,(t/s)^{\dF})]=t^{\dF}\EE[s^{-\dF}\one_{\{s\ge t\}}]+\PP(s<t).
+\]
+The first expectation is $\tfrac1{B(b_0,\alpha_0)}\int_{t^2}^1 w^{b_0-\alpha_0-1}(1-w)^{\alpha_0-1}\dd w$;
+at $D=2$ the exponent $b_0-\alpha_0-1=-1$ makes it $\le C_\F(1+\log(1/t))$, and at $D\ge3$ the exponent
+exceeds $-1$, the integral converges, and the ratio of Beta functions is bounded uniformly in $D$
+($\Gamma(x+a)/\Gamma(x)\asymp x^a$). The second is $\PP(\Beta(b_0,\alpha_0)<t^2)\le C_\F t^{2b_0}\le
+C_\F t^{\dF}$ since $2b_0=(D-1)\dF\ge\dF$. Hence $\EE[\min(1,(t/s)^{\dF})]\le C_\F t^{\dF}(1+\log(1/t))$,
+and $t^{\dF}\le p(t)/c_\F$ finishes.
+\end{proof}
+
+The averaging is packaged for reuse as follows; the factor $\Lambda$ carries polynomial overlap
+prefactors.
+
+\begin{lemma}\label{lem:averaged}
+Let $j\ge1$, $q=\dF j$, and $\sigma^2\in[0,1]$ a random variable with, for some $\beta\ge\dF(j+1)/2$,
+$\gamma\ge1$, $\Lambda\ge1$, $\PP(\sigma^2\le x)\le\Lambda(\gamma x)^\beta$ for all $x\in(0,1]$. Then for
+$\sqrt\gamma\,t\le1$, $\EE[\min(1,(2t/\sigma)^q)]\le C_{\F,j}\Lambda\gamma^{q/2}t^q$.
+\end{lemma}
+\begin{proof}
+Since $\gamma x\le1$ where the bound is nontrivial, take $\beta=\dF(j+1)/2$. Then
+$\EE[\min(1,(2t/\sigma)^q)]\le\PP(\sigma^2\le4t^2)+(2t)^q\EE[\sigma^{-q}\one_{\{\sigma^2>4t^2\}}]$; the
+first term is $\le\Lambda(4\gamma t^2)^\beta\le C\Lambda\gamma^{q/2}t^q$. Integrating the second by parts
+and splitting at $w_*=(\gamma\Lambda^{1/\beta})^{-1}$, using $\beta-q/2=\dF/2$, both pieces are
+$\le C\Lambda\gamma^{q/2}$; multiplying by $(2t)^q$ finishes.
+\end{proof}
+
+\subsection{The marked-row construction}
+Fix $\eps\in(0,H(\alpha)/\dF)$, set $t=t_N=e^{-(2H(\alpha)/\dF-\eps)N}$, and a marked set
+$M\subseteq[N]$ with $|M|=m_N=\lceil\sqrt N\rceil$. A \emph{configuration} is $c=(S,R,y)$ with $|S|=n$;
+$y\in M$; $R\subseteq[N]\setminus M$, $|R|=n-1$. The rows $\{A_i|_S:i\in R\}$ span a hyperplane in
+$\F^S\cong\F^n$ a.s.; let $u_c\in\F^S$ be a unit normal. Put
+$E_c=\{|\langle A_y|_S,u_c\rangle|\le t\}$ and $W=\sum_c\one_{E_c}$.
+
+\begin{lemma}\label{lem:suff}
+If $W>0$ then $M_N(\alpha)\le t$.
+\end{lemma}
+\begin{proof}
+On $E_c$, set $T=R\cup\{y\}$, $|T|=n$. For $i\in R$, $\langle A_i|_S,u_c\rangle=0$; hence
+$\|A[T,S]u_c\|^2=|\langle A_y|_S,u_c\rangle|^2\le t^2$, so $\smin(A[T,S])\le t$.
+\end{proof}
+
+\begin{lemma}\label{lem:mean}
+$\EE W=m_N\binom Nn\binom{N-m_N}{n-1}p(t)=e^{2H(\alpha)N+o(N)}t^{\dF}=e^{\dF\eps N+o(N)}\to\infty.$
+\end{lemma}
+\begin{proof}
+Since $y\notin R$, $A_y$ is independent of $u_c$, so $\PP(E_c)=p(t)$; there are
+$m_N\binom Nn\binom{N-m_N}{n-1}$ configurations, and $m_N=o(N)$ makes both binomials $e^{H(\alpha)N+o(N)}$.
+\end{proof}
+
+\subsection{Second moment and the lower bound}
+\begin{proposition}\label{prop:lower}
+For every $\eps>0$, $\PP(M_N(\alpha)>e^{-(2H(\alpha)/\dF-\eps)N})\to0$.
+\end{proposition}
+By \Cref{lem:suff} and Chebyshev, $\PP(M_N>t)\le\PP(W=0)\le\Var(W)/(\EE W)^2$, so it suffices that
+$\Var(W)=o((\EE W)^2)$, i.e.\ $\EE[W^2]\le(\EE W)^2(1+o(1))$. Write $\mathcal G=\sigma(A_i:i\ne y)$ for a
+pair with marked rows $y,y'$.
+
+\emph{Distinct marked rows.} If $y\ne y'$, then $A_y$ enters neither $u_c$ (built from $R\not\ni y$), nor
+$u_{c'}$ (from $R'\not\ni y$ since $y\in M$, $R'\subseteq[N]\setminus M$), nor $A_{y'}$; so $E_{c'}$ and
+$u_c$ are $\mathcal G$-measurable while $\PP(E_c\mid\mathcal G)=p(t)$, giving $\PP(E_c\cap E_{c'})=p(t)^2$.
+Summed, these pairs contribute at most $(\#\text{configs})^2p(t)^2=(\EE W)^2$.
+
+\emph{Same marked row.} If $y=y'$, condition on $\mathcal G$; then $u_c,u_{c'}$ are determined and, with
+$\tilde u_c,\tilde u_{c'}$ the zero-padded normals, \eqref{eq:cond} gives
+$\PP(E_c\cap E_{c'}\mid\mathcal G)\le C_\F p(t)\min(1,(t/s)^{\dF})$, $s^2=1-R$,
+$R=|\langle\tilde u_c,\tilde u_{c'}\rangle|^2$. Set $D_{\mathrm c}=n-|S\cap S'|$, $D_{\mathrm r}=n-|R\cap R'|$
+(so $D_{\mathrm r}\ge1$). The overlap has two tail bounds.
+
+\begin{lemma}\label{lem:overlaptail}
+For all $x\in(0,1]$:
+{\rm(i)} if $D_{\mathrm r}\ge2$, $\PP(R>1-x)\le C_\F x^{(D_{\mathrm r}-1)\dF/2}$, uniformly in
+$D_{\mathrm r},N$;\ {\rm(ii)} if $D_{\mathrm c}\ge1$, $\PP(R>1-x)\le n(C_\F nx/D_{\mathrm c})^{D_{\mathrm c}\dF/2}$.
+\end{lemma}
+\begin{proof}
+(ii) $R\le\|u_c|_{S\cap S'}\|^2=1-Z$, $Z=\|u_c|_{S\setminus S'}\|^2$; $u_c$ is Haar on the sphere of
+$\F^S$, so $Z\sim\Beta(a,b)$, $a=D_{\mathrm c}\dF/2$, $b=(n-D_{\mathrm c})\dF/2$. Then
+$\PP(Z\le x)\le x^a/(aB(a,b))\le n(C_\F nx/D_{\mathrm c})^a$ by $\Gamma(a+b)\le\Gamma(b)(a+b)^{a+1}$ and
+$\Gamma(a+1)\ge(a/e)^a$. (i) Condition on the rows $R$ (determining $u_c$); the $D_{\mathrm r}-1$ rows in
+$R'\setminus R$ project to independent Gaussians in $W_0=(\Span\{A_i|_{S'}:i\in R\cap R'\})^\perp$, of
+dimension $D_{\mathrm r}$, and $u_{c'}$ is Haar on the sphere of $W_0$ orthogonal to them, i.e.\ Haar on
+a $D_{\mathrm r}$-sphere; so $R\le|\langle\hat w,u_{c'}\rangle|^2=1-Z'$ with $Z'\sim\Beta(b_0,a_0)$,
+$b_0=(D_{\mathrm r}-1)\dF/2$, $a_0=\dF/2$, giving $\PP(Z'\le x)\le C_\F x^{b_0}$.
+\end{proof}
+
+Now average $C_\F p(t)\min(1,(t/s)^{\dF})$ over three regions, using \Cref{lem:averaged} ($j=1$, $q=\dF$)
+and the counting facts that the fraction of ordered pairs $(S,S')$ with $D_{\mathrm c}\le a$ is
+$\le N^{2a}e^{-H(\alpha)N+o(N)}$, likewise for rows.
+
+\emph{$D_{\mathrm r}\ge3$:} the row bound gives $\beta=(D_{\mathrm r}-1)\dF/2\ge\dF$, $\gamma=C_\F$,
+$\Lambda=1$, so $\PP(E_c\cap E_{c'})\le C_\F p(t)t^{\dF}\le C_\F p(t)^2$; summed over $m_N$ marked rows,
+$\le C_\F(\EE W)^2/m_N=o((\EE W)^2)$.
+
+\emph{$D_{\mathrm r}\le2$, $D_{\mathrm c}\ge2$:} the column bound gives
+$\PP(E_c\cap E_{c'})\le N^Cp(t)^2$; the rows are pinned ($\le N^4e^{-H(\alpha)N}$ fraction), so the
+contribution is $N^Ce^{-H(\alpha)N+o(N)}(\EE W)^2=o((\EE W)^2)$.
+
+\emph{$D_{\mathrm r}\le2$, $D_{\mathrm c}\le1$:} the crude bound $\PP(E_c\cap E_{c'}\mid\mathcal G)\le p(t)$
+gives ratio $C_\F t^{-\dF}=C_\F e^{(2H(\alpha)-\dF\eps)N}$ to $p(t)^2$; both coordinates pinned
+($\le N^Ce^{-2H(\alpha)N}$ fraction), so the contribution is $N^Ce^{-\dF\eps N+o(N)}(\EE W)^2=o((\EE W)^2)$,
+including the diagonal.
+
+Hence $\EE[W^2]\le(\EE W)^2(1+o(1))$, so $\PP(W=0)\to0$ and \Cref{prop:lower} follows.
+\Cref{thm:twosided} is \Cref{prop:upper,prop:lower}. \qed
+
+\begin{remark}\label{rem:marked}
+The marked set forbids a configuration's normal-defining rows from the marked set, which removes the
+$\Theta(1)$ fraction of genuinely correlated pairs in which each configuration's marked row is the
+other's normal row, leaving only the same-marked-row pairs of weight $\Theta(1/m_N)$. Any $m_N\to\infty$,
+$m_N=o(N)$ works.
+\end{remark}

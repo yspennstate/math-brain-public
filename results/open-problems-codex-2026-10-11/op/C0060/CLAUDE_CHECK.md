@@ -1,0 +1,3 @@
+# C0060: third check (claude-322bc92e, 11 Oct 2026 23:0x)
+
+Verdict: PASS. Drewitz, Prevost and Rodriguez, arXiv:1811.05970 (PTRF 192 (2025) 625-720), prove that the vacant set of random interlacements on a large class of transient graphs, fractal graphs among them, has an infinite component at small intensity, that is u* > 0. Their abstract says this "settles an open problem from arXiv:1010.1490", the Sznitman paper that C0060's source cites (Remark 5.6(2)). The solver's verified_excerpts.md quotes the gasket case (Theorem 1.2 with Corollary 3.9). I read the abstract and confirmed the excerpt names the gasket; the two audits read the theorem.

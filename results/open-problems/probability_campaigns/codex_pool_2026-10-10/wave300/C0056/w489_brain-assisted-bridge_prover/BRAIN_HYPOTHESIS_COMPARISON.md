@@ -1,0 +1,13 @@
+# Exact returned-card comparison for C0056
+
+Source: BRAIN_SELECTED_LIVE.json (all three exact IDs found by indexed read-only verification in 2.521349 seconds) and BRAIN_RETRIEVAL.json (full selected export records). The lookup is bounded; no whole store was exported or loaded.
+
+The returned theorem claim_930971f2e2958ad4b39127882e7fb8c2f41978d305608de432e06a9933e30a3d, logical ID math:probability.random-matrices:stieltjes-inversion-formula-density-from-the-boundary-imaginary-part, gives interval inversion for a finite positive Borel measure at endpoints without atoms. Its pointwise density identity assumes the measure is already absolutely continuous with a density continuous at the point; its real-part formula assumes local Holder regularity. It does not turn a bounded first Poisson moment or an annealed density into quenched absolute continuity. Using that pointwise clause to prove the prerequisite would be circular. ATTEMPT.md L1--L3 supply the exact counterexample and a sufficient replacement based on an actual higher moment.
+
+The returned theorem claim_100fb934fa9d5d9538b1e3ae23bbcd65c2cf4181580ee3941350c3dff3f9394b, logical ID math:analysis.functional:lp-lq-duality-with-its-sigma-finiteness-hypothesis, states reflexivity for 1<p<infinity and distinguishes p=1. L3 applies it only to Lebesgue measure on a bounded open interval, where sigma-finiteness and the usual Lp hypotheses hold. The p>1 restriction is the mathematical point; replacing it with p=1 loses weak compactness and admits L1's atom.
+
+The returned prior attempt claim_08aec3cbb621052600dbc46ec290b8fc949fbdb302b77505daa2802cf0a47c06 explicitly reports no independently reviewed result, a failed spanning-tree transfer, and finite kinetic-time control. It is a concept/attempt record, not an Anderson theorem. L4 conditions on the entire complement and does not factor neighbour probabilities.
+
+Measured lookup failure: personal recall hit its 60-second cutoff and the unindexed read-only title query hit its five-second progress deadline. Export lookup found the Stieltjes theorem but its broad Poisson pattern also returned three unrelated mathematical senses: a queue Poisson equation, Poisson summation, and a Poisson Malliavin derivative. This is a concrete disambiguation failure, not a defect in those three cards. A local field-aware prototype retains the spectral-measure card and abstains on those three. FILTER_MEASUREMENT.json records the paired result; no global change or blind-test claim follows.
+
+NEXT: Independent review of L3's pathwise Fatou/subsequence argument and L4's own-site conditioning, followed by a separate attempt at the fixed-disorder inverse cavity-width moment.

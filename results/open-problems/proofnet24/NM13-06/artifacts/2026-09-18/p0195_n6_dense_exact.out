@@ -1,0 +1,40 @@
+$ python p0195_n6_dense_exact.py complement_2K2_to_K2
+case complement_2K2_to_K2 source_mask 30591 target_mask 30719 source_edges 13 missing [(1, 4), (2, 5)] aut_source 16 odd_dim_source 8 aut_target 48 odd_dim_target 7
+degrees 8 7
+x1_boundary source top_root 1 L_minus_1_multiplicity 1 factorization 95551488000*(L - 1)*(2*L - 1)*(3*L - 2)*(6*L - 5)**2*(216*L**3 - 216*L**2 + 57*L - 2)
+x1_boundary target top_root 1 L_minus_1_multiplicity 1 factorization 2123366400*L*(L - 1)*(2*L - 1)*(3*L - 2)**2*(6*L - 5)**2
+resultant_degree_after_endpoint_removal 273
+interior_resultant_roots 5
+interval_signs [1, 1, 1, 1, 1, 1]
+PASS complement_2K2_to_K2
+theorem_scope all 6-vertex simple graphs with at least 13 edges, every absent edge, every finite beta>=0
+metric n_edge^* remains >= 6 (restricted-class theorem; not full n=6 coverage)
+ALL_EXACT_CHECKS_PASS
+
+$ python p0195_n6_dense_exact.py complement_P3_to_K2
+case complement_P3_to_K2 source_mask 22527 target_mask 24575 source_edges 13 missing [(2, 5), (3, 5)] aut_source 12 odd_dim_source 12 aut_target 48 odd_dim_target 7
+degrees 12 7
+x1_boundary source top_root 1 L_minus_1_multiplicity 1 factorization 178322008965120000*L*(L - 1)*(3*L - 2)**3*(6*L - 5)**3*(72*L**2 - 66*L + 13)*(72*L**2 - 30*L + 1)
+x1_boundary target top_root 1 L_minus_1_multiplicity 1 factorization 2123366400*L*(L - 1)*(2*L - 1)*(3*L - 2)**2*(6*L - 5)**2
+resultant_degree_after_endpoint_removal 399
+interior_resultant_roots 5
+interval_signs [1, 1, 1, 1, 1, 1]
+PASS complement_P3_to_K2
+theorem_scope all 6-vertex simple graphs with at least 13 edges, every absent edge, every finite beta>=0
+metric n_edge^* remains >= 6 (restricted-class theorem; not full n=6 coverage)
+ALL_EXACT_CHECKS_PASS
+
+$ python p0195_n6_dense_exact.py complement_K2_to_empty
+case complement_K2_to_empty source_mask 32763 target_mask 32767 source_edges 14 missing [(0, 3)] aut_source 48 odd_dim_source 7 aut_target 720 odd_dim_target 3
+degrees 7 3
+x1_boundary source top_root 1 L_minus_1_multiplicity 1 factorization 2123366400*L*(L - 1)*(2*L - 1)*(3*L - 2)**2*(6*L - 5)**2
+x1_boundary target top_root 1 L_minus_1_multiplicity 1 factorization 256*(L - 1)*(3*L - 2)*(6*L - 5)
+resultant_degree_after_endpoint_removal 75
+interior_resultant_roots 2
+interval_signs [1, 1, 1]
+PASS complement_K2_to_empty
+theorem_scope all 6-vertex simple graphs with at least 13 edges, every absent edge, every finite beta>=0
+metric n_edge^* remains >= 6 (restricted-class theorem; not full n=6 coverage)
+ALL_EXACT_CHECKS_PASS
+
+ALL_THREE_MARKED_TYPES_PASS

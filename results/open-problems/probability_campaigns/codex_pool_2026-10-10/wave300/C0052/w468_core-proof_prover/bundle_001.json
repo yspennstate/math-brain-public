@@ -1,0 +1,149 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w468",
+  "bundle_slug": "c0052-original-current-overlap-gap-20261010",
+  "entries": [
+    {
+      "key": "linear-obstruction",
+      "namespace": "probability.ising.randomcurrents",
+      "logical_name": "random-current-augmentation-linear-reversal-path-obstruction",
+      "kind": "concept",
+      "title": "DRAFT: Augmented current meeting has no graph-uniform linear reversal",
+      "statement": "DRAFT author proof, not a result about critical Z^3. On the finite path a-b-z_1-...-z_(m-1)-c-d with m>=1 bridge edges between b and c and uniform parameter t=beta J>0, sample independent random currents n1,n2,n3,n4 with sources {a,b},{c,d},empty,empty. Put p=tanh(t)^2. Then q=P(b connected to c in n1+n2)=p^m, while r=P(C_b(n1+n3) intersects C_c(n2+n4))=[1+m(1-p)]p^m. Thus q/r=1/[1+m(1-p)] tends to zero at fixed t, refuting a positive graph-uniform constant q>=c r. This does not refute a nonlinear comparison or a critical Z^3 comparison.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite path, zero field, uniform ferromagnetic t>0",
+        "Independent currents with the four specified source sets",
+        "The obstruction concerns linear graph-uniform comparisons only"
+      ],
+      "domain": "probability and mathematical statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w468:C0052:linear-obstruction",
+        "url": "file:///~/brain_workers/w468/TREE_OBSTRUCTION.md",
+        "revision": "2026-10-10-author-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "single-occupation",
+      "namespace": "probability.ising.randomcurrents",
+      "logical_name": "single-random-current-hitting-not-sourceless-augmented-hitting",
+      "kind": "concept",
+      "title": "DRAFT: The single-current hitting law differs from the augmented hitting law",
+      "statement": "DRAFT author proof. On the path a-b-z_1-...-z_(m-1)-c-d, with m>=1 bridge edges b to c, let n have sources {a,b} and let n0 be an independent sourceless current, with uniform t=beta J>0. Writing s=sech(t), P(c in C_b(n))=(1-s)^m and P(c in C_b(n+n0))=(1-s^2)^m. Their ratio is (1+s)^(-m), so no positive graph-uniform lower comparison holds for fixed-endpoint single-current occupation versus augmented occupation. The two-point expression G(a,c)G(c,b)/G(a,b) gives the AUGMENTED hitting probability, not the single-current probability.",
+      "proof_text": null,
+      "assumptions": [
+        "Finite tree path and zero field",
+        "One sourced current plus an independent sourceless current",
+        "Fixed-endpoint comparison; an endpoint-averaged Z^3 comparison is a separate question"
+      ],
+      "domain": "probability and mathematical statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w468:C0052:single-occupation",
+        "url": "file:///~/brain_workers/w468/TREE_OBSTRUCTION.md",
+        "revision": "2026-10-10-author-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "coupling-average",
+      "namespace": "probability.ising.randomcurrents",
+      "logical_name": "ising-signed-coupling-susceptibility-weighted-current-average",
+      "kind": "concept",
+      "title": "DRAFT: Exact susceptibility-weighted current average for the signed Ising coupling",
+      "statement": "DRAFT author reduction with standard switching inputs; C0052 remains unresolved. In the zero-field unit-coupling nearest-neighbor Ising model on Z^3 at beta<beta_c, let G(x)=E[sigma_0 sigma_x], chi=sum_x G(x), xi=[lim_n -(1/n)log G(ne1)]^(-1), U4 the fourth joint cumulant, and lambda=-sum_{x,y,z}U4(0,x,y,z)/(chi^2 xi^3). Let independent X,W have law mu(x)=G(x)/chi. Given X,W, sample independent ORIGINAL currents with sources {0} symmetric-difference {X} and {y} symmetric-difference {y+W}; retain tagged vertices when endpoints coincide. Let Q_y be the averaged probability that 0 and y are connected in their union. Then lambda=2 xi^(-3)sum_y Q_y. For xi>=1 and B={y:||y||infinity<=floor xi}, with Q_B=|B|^(-1)sum_{y in B}Q_y, lambda>=2|B|xi^(-3)Q_B>=2Q_B. The original source target is lambda not tending to zero; no limit existence is assumed.",
+      "proof_text": null,
+      "assumptions": [
+        "Translation-invariant subcritical free Gibbs state on Z^3",
+        "chi finite; xi is the exponential coordinate correlation length",
+        "Standard sourced-current construction, switching identity and tree-diagram summability bound"
+      ],
+      "domain": "probability and mathematical statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w468:C0052:coupling-average",
+        "url": "file:///~/brain_workers/w468/ATTEMPT.md",
+        "revision": "2026-10-10-author-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "contact-kernels",
+      "namespace": "probability.ising.randomcurrents",
+      "logical_name": "original-random-current-endpoint-mixture-joint-hit-kernels",
+      "kind": "concept",
+      "title": "DRAFT: Original current contact moments require joint-hit kernels",
+      "statement": "DRAFT author reduction. In the subcritical translation-invariant zero-field Ising model on Z^3, put mu(x)=G(x)/chi and B={v:||v||infinity<=floor xi_exp}, with xi_exp>=1. Draw X,W independently from mu and Y uniformly from B; conditional on endpoints sample independent currents n1 with sources {0} symmetric-difference {X} and n2 with sources {Y} symmetric-difference {Y+W}. Set N=|B intersect C_0(n1) intersect C_Y(n2)|, m1=E N, m2=E N^2. For one ORIGINAL current n with endpoints 0,x, define k(v)=sum_x mu(x)P(v in C_0(n)) and k2(u,v)=sum_x mu(x)P(u,v in C_0(n)). Then m1=|B|^(-1)sum_{v in B}k(v)sum_{y in B}k(v-y) and m2=|B|^(-1)sum_{u,v in B}k2(u,v)sum_{y in B}k2(u-y,v-y). Diagonal terms are included. Adding one independent sourceless current gives k_aug(v)=G(v), whereas G(v)/chi<=k(v)<=G(v). Hence the corresponding first-moment comparison can lose chi^2. Two hits within one current are not factored into independent probabilities.",
+      "proof_text": null,
+      "assumptions": [
+        "Same subcritical model and standard current identities as the coupling-average entry",
+        "Conditional independence is between currents; within-current joint hits stay in k2",
+        "Single-current components include their tagged anchor vertices"
+      ],
+      "domain": "probability and mathematical statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w468:C0052:contact-kernels",
+        "url": "file:///~/brain_workers/w468/ATTEMPT.md",
+        "revision": "2026-10-10-author-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "uniform-gap",
+      "namespace": "probability.ising.randomcurrents",
+      "logical_name": "three-dimensional-ising-original-contact-second-moment-open-input",
+      "kind": "concept",
+      "title": "DRAFT: Unproved original-current second-moment input for C0052",
+      "statement": "UNPROVED sufficient input, not a theorem or a solution of C0052. In the subcritical zero-field unit-coupling nearest-neighbor Ising model on Z^3, let X,W be independent with mu(x)=G(x)/chi, Y uniform in B={||y||infinity<=floor xi_exp(beta)}, and n1,n2 independent ORIGINAL currents with source pairs (0,X),(Y,Y+W), cancelling repeated endpoints modulo two. Put N=|B intersect C_0(n1) intersect C_Y(n2)|, m1=E N>0 and m2=E N^2. Proving m2<=C m1^2 with a beta-independent finite C near beta_c would yield lambda=-g>=2|B|xi_exp^(-3)/C>=2/C by Cauchy-Schwarz and switching. A bounded-ratio subsequence would suffice for the source's weaker nonvanishing limsup target. Neither bound is established here. Augmented hitting identities and finite-tree computations do not supply this missing input.",
+      "proof_text": null,
+      "assumptions": [
+        "Near-critical subcritical nearest-neighbor zero-field Ising on Z^3",
+        "xi_exp>=1 and the specified susceptibility-weighted endpoint law",
+        "The uniform or subsequence second-moment estimate is an OPEN INPUT"
+      ],
+      "domain": "probability and mathematical statistical mechanics",
+      "source": {
+        "source_id": "owner-own-work:w468:C0052:uniform-gap",
+        "url": "file:///~/brain_workers/w468/ATTEMPT.md",
+        "revision": "2026-10-10-author-draft",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "contact-kernels",
+      "to_key": "coupling-average",
+      "kind": "depends_on",
+      "rationale": "The kernels entry uses 'mu(x)=G(x)/chi' and the same ORIGINAL endpoint-current law defined in the coupling entry; its contact event lower-bounds the coupling entry's 'Q_B'."
+    },
+    {
+      "from_key": "uniform-gap",
+      "to_key": "contact-kernels",
+      "kind": "depends_on",
+      "rationale": "The gap entry asks for 'm2<=C m1^2'. The kernel entry gives exact formulas for 'm1=E N' and 'm2=E N^2', including within-current joint hits."
+    },
+    {
+      "from_key": "uniform-gap",
+      "to_key": "coupling-average",
+      "kind": "depends_on",
+      "rationale": "The gap entry's conditional 'lambda>=2|B|xi_exp^(-3)/C' uses the coupling entry's 'lambda>=2|B|xi^(-3)Q_B' and Q_B>=m1^2/m2."
+    },
+    {
+      "from_key": "single-occupation",
+      "to_key": "contact-kernels",
+      "kind": "semantic_association",
+      "rationale": "The path entry distinguishes 'single-current occupation versus augmented occupation'; the kernel entry states 'k_aug(v)=G(v)' while the ORIGINAL k may be smaller. The fixed-endpoint path result is not asserted to refute the endpoint-averaged Z^3 input."
+    },
+    {
+      "from_key": "linear-obstruction",
+      "to_key": "uniform-gap",
+      "kind": "semantic_association",
+      "rationale": "The path entry refutes only 'q>=c r' uniformly over graphs. The open input concerns ORIGINAL current components and cannot be obtained by assuming that linear augmented-to-original comparison."
+    }
+  ]
+}

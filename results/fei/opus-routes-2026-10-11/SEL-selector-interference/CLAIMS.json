@@ -1,0 +1,153 @@
+{
+  "route": "SEL-selector-interference",
+  "ledger_items": ["C010", "C011", "C012", "C013", "C014", "C026", "C029", "C035"],
+  "full_FEI": "OPEN",
+  "conventions": "uniform measure, +-1 outputs, H in bits, I = E|S|; multiplexer F(x,y)=g_x(y) with fresh selector block x in {-1,1}^a; cost(F) = H(F) - avg_b H(g_b); pi_i = Inf_{x_i}(F); I_sel = sum_i pi_i",
+  "claims": [
+    {
+      "id": "SEL-1",
+      "status": "PROVED",
+      "statement": "For every multiplexer with a fresh uniform selector block and arbitrary Boolean branches on a common data cube: cost(F) = H(S|T) + I(X;Y) and cost(F) <= sum_i h(pi_i) + min{ sum_i h(pi_i), (2/ln2) I_sel } <= a min{2h(I_sel/a), h(I_sel/a) + (2/ln2) I_sel/a}.",
+      "where": "NOTES.md section 3.1",
+      "remaining_gap": "none; assembled from KNOWN pieces (paper prop:shared-data-collision / BR eq.(4), Maassen-Uffink 1988, BR log-Sobolev theorem) plus subadditivity",
+      "dependencies": ["C006 (BR)", "Maassen-Uffink entropic uncertainty", "paper prop:shared-data-collision"]
+    },
+    {
+      "id": "SEL-2",
+      "status": "PROVED",
+      "statement": "If I_sel(F) >= c a (0 < c <= 1) and H(g_b) <= C I(g_b) for all branches, then H(F) <= max{C, K(c)} I(F) with K(c) = min{2h(c)/c, h(c)/c + 2/ln2}. K(1/2) = 4 (C035), K(c) < 2/c for c != 1/2, K(c) = log2(1/c) + log2 e + 2/ln2 + o(1) as c -> 0 (K(0.1) = 7.575, K(0.01) = 10.965).",
+      "where": "NOTES.md section 3.2",
+      "remaining_gap": "none for the stated class; still requires a uniform lower bound c on the energy fraction (see SEL-4 for why it cannot be removed without structure)",
+      "dependencies": ["SEL-1"]
+    },
+    {
+      "id": "SEL-3",
+      "status": "PROVED",
+      "statement": "For the bent point-flip multiplexer F_m = Mux_z(b, b - 2*1_{t=0}) on m+1 bits (m even), delta = Inf_z = 2^-m and cost(F_m) = delta(log2(1/delta) + 3/ln2) + O(m delta^2) (exact closed forms in NOTES). Products of a independent copies attain the SEL-1 bound asymptotically for every a. Hence no inequality cost(F) <= K I_sel(F) with an absolute K holds.",
+      "where": "NOTES.md section 3.3; code/bent_flip.py",
+      "remaining_gap": "none; the one-bit expansion agrees with the math-brain draft card on the sharp split constant",
+      "dependencies": []
+    },
+    {
+      "id": "SEL-4",
+      "status": "PROVED",
+      "statement": "Let Kopt(c) be the sup of H/I over one-node fresh-selector multiplexers with I_sel >= c a and branches of zero entropy. Then sup{H(g)/I(g): I(g) >= 2c n(g)} <= Kopt(c) <= K(c) for 0 < c <= 1/2, and sup_{c>0} Kopt(c) = C_FEI. An energy-uniform closure constant that stays bounded as c -> 0 is equivalent to full FEI.",
+      "where": "NOTES.md section 3.4",
+      "remaining_gap": "none (this is a reduction, not progress on FEI)",
+      "dependencies": ["C012 exact identities", "SEL-2"]
+    },
+    {
+      "id": "SEL-5",
+      "status": "PROVED",
+      "statement": "If selector coordinates may occur in the branches and orthogonality is imposed on the branches as functions of all variables, then every Boolean f on n bits is a single node: f(x) = B_x(x) with B_b = f(b)(-1)^{|S_b|} chi_{S_b}, S_b = {i: b_i = -1}; the branches are pairwise orthogonal signed characters (H = 0). Also every f is a recursive one-bit orthogonal multiplexer with character leaves via F = Mux_v(F_{v=1}, -v F_{v=-1}).",
+      "where": "NOTES.md section 4.1",
+      "remaining_gap": "none",
+      "dependencies": []
+    },
+    {
+      "id": "SEL-6",
+      "status": "PROVED",
+      "statement": "The orthogonal-neighbour closure constant max(4, C_leaf) fails under reuse: g(x0..x3) = x2 if x2 = x3, x0 if (x2,x3) = (1,-1), x1 if (x2,x3) = (-1,1) is balanced with H(g) = 3, I(g) = 3/2 (exact), and G = g o (g o g) on 64 variables has H(G) = 57/4 > 4 I(G) = 27/2, H/I = 38/9, by the balanced composition identities H(f o g) = H(f) + I(f)H(g), I(f o g) = I(f)I(g).",
+      "where": "NOTES.md section 4.2; code/witness_ratio.py",
+      "remaining_gap": "none (composition identity is standard; checked by a 16-variable transform for g o g)",
+      "dependencies": ["SEL-5", "balanced composition lemma (O'Donnell-Tan 2013, KNOWN)"]
+    },
+    {
+      "id": "SEL-5b",
+      "status": "PROVED",
+      "statement": "With orthogonality and branch FEI hypotheses imposed on the effective branches g_b restricted to x = b, a reuse node is exactly a fresh-selector node with those branches, so C035 applies verbatim.",
+      "where": "NOTES.md section 4.3",
+      "remaining_gap": "none (elementary)",
+      "dependencies": ["C035"]
+    },
+    {
+      "id": "SEL-7",
+      "status": "PROVED",
+      "statement": "For any partition of the selector cube and pairwise orthogonal Boolean leaves (overlapping Fourier supports allowed): S-marginal of Fhat^2 is sum_k ahat_k^2, T-marginal is sum_k p_k Ghat_k^2, H(F) <= 2H(p) + sum_k p_k [H(q_k) + H(G_k)], I_sel = (1/4) sum_k I(h_k). If H(h_k) <= C_s I(h_k) and H(G_k) <= C_g I(G_k) then H(F) <= max{C_s + 6, C_g} I(F); strong form max{max(C_s,4) + 2, C_g}(I(F) - 1) for balanced leaves with H(G_k) <= C_g(I(G_k) - 1). Copies inside cells allowed, so selector energy can be small; recursion through leaves preserves the constant (e.g. regular cells and leaves: C_reg + 6 < 14.937).",
+      "where": "NOTES.md section 5.1",
+      "remaining_gap": "constant carries +6 (strong +2) relative to C026; cells must come from an external FEI-good class (with cells from the class itself the constant grows unless SEL-8' holds)",
+      "dependencies": ["paper sec:selectors identities (R(p) <= 2H(p) <= 4D, R(p) <= 4B, edge isoperimetry)"]
+    },
+    {
+      "id": "SEL-8",
+      "status": "REFUTED",
+      "statement": "T1-sharp: for pairwise orthogonal leaves H(F) <= H(p) + sum_k p_k [H(q_k) + H(G_k)] (C010 identity as an upper bound). False for real orthonormal leaves (3-variable example, excess 0.0307 bits) and for Boolean leaves: selector of 9 bits, A_2 = one point, A_1 = rest, G_2 = 1 - 2*1[y=(+1,+1,-1,+1)], G_1 = -y_2 (1 - 2*1[y=(+1,-1,+1,-1)]) (orthogonal, all 16 Fourier sets shared): excess in [1.4028550034696e-5, 1.4028550034697e-5] (interval arithmetic). The excess is eps*Omega + O(eps^2 log 1/eps) with p_2 = eps; max Omega found 0.04266.",
+      "where": "NOTES.md section 5.2; code/t1sharp_boolean_witness.py, t1sharp_omega.py, t1sharp_real_witness.py, svd_witness.py",
+      "remaining_gap": "none for the refutation; also REFUTED: the general SVD-entropy lemma (M = [[2,-1],[-1,-1]])",
+      "dependencies": []
+    },
+    {
+      "id": "SEL-8'",
+      "status": "CONJECTURE",
+      "statement": "For pairwise orthogonal Boolean leaves and any partition, H(F) <= H(p) + sum_k p_k [H(q_k) + H(G_k)] + kappa B with B = sum_k p_k(1-p_k) and an absolute kappa; this would give the constant-preserving strong closure max{C_s, 4 + kappa, C_g}(I(F)-1).",
+      "where": "NOTES.md section 5.2",
+      "remaining_gap": "unproved; evidence only: two-cell real-leaf LP excess <= 1.18 p_1 p_2 (= 0.59 B) for p_1 down to 1e-6, Boolean witness family excess/B -> 0.021",
+      "dependencies": ["SEL-7"]
+    },
+    {
+      "id": "SEL-15",
+      "status": "PROVED",
+      "statement": "Balanced two-cell selectors with orthogonal leaves: for balanced h on the selector cube and Boolean G_1 orthogonal to G_2 on a common data cube (shared variables and overlapping Fourier supports allowed), F = ((1+h)/2)G_1 + ((1-h)/2)G_2 satisfies H(F) <= 2 + H(h)/2 + (H(G_1)+H(G_2))/2 and I(F) = I(h)/2 + (I(G_1)+I(G_2))/2. Corollary (SEL-15c): for C >= 4, the smallest class containing a base class of balanced functions with H <= C(I-1) and closed under this operation with h, G_1, G_2 taken from the class (h on fresh variables) satisfies H <= C(I-1); from dictators, C = 4 exactly (addressing attains it).",
+      "where": "NOTES.md section 5.2b; code/m4_class.py (341 members, max H - 4(I-1) = 0)",
+      "remaining_gap": "unbalanced cuts fail the corresponding sharp bound (SEL-8); multi-cell analogue open except for affine cells (SEL-9) ",
+      "dependencies": ["SEL-7", "two-cell reduction in NOTES 5.2"]
+    },
+    {
+      "id": "SEL-14",
+      "status": "PROVED",
+      "statement": "For any partition and any Boolean (or real unit) leaves, with independent uniform signs eps_k: E_eps H(sum_k eps_k a_k G_k) <= H(p) + sum_k p_k [H(q_k) + H(G_k)], E_eps I_sel = D = (1/4) sum_k I(h_k). Hence some re-signing of the leaves satisfies H <= max{C_s + 4, C_g} I whenever cells and leaves are FEI-good: all interference losses in this report are sign-alignment effects.",
+      "where": "NOTES.md section 5.2c",
+      "remaining_gap": "none (averaging statement; does not bound a specific sign pattern)",
+      "dependencies": ["paper cor:selector-full"]
+    },
+    {
+      "id": "SEL-13",
+      "status": "CONJECTURE",
+      "statement": "Schmidt-entropy defect: for every real matrix M with ||M||_F = 1 and every SVD M = sum_k sigma_k u_k v_k^T (s_k = sigma_k^2), H(|M|^2) <= H(s) + sum_k s_k [H(u_k^2) + H(v_k^2)] + kappa_0 sum_k s_k (1 - s_k), kappa_0 = 0.756151564 (numerical supremum, attained in the limit M_t = [[t,1],[t^2(1-eta),t]], t -> 0, eta = 4.5911). Implies SEL-8' with kappa = kappa_0 for every partition and every orthonormal leaf family.",
+      "where": "NOTES.md section 5.3; code/svd_entropy2.py, svd_entropy3.py, svd_entropy4.py, svd_defect_limit.py, svd_defect_eta2.py",
+      "remaining_gap": "unproved; evidence: 60,000 random matrices up to 6x6, 300 Nelder-Mead starts up to 4x4 (max ratio 0.7561), degenerate rotated SVDs (max 0.318), 80-digit asymptotics of the extremal family. Without the defect term the inequality is false (M = [[2,-1],[-1,-1]]).",
+      "dependencies": []
+    },
+    {
+      "id": "SEL-9",
+      "status": "PROVED",
+      "statement": "Joint-strategy candidate C1 holds: for every partition of F_2^a into affine subspaces (codims c_j, p_j = 2^-c_j) and real leaves g_j with E g_j^2 = l_j, sum p_j l_j = 1, w_j = p_j l_j, Lambda_j = ghat_j^2/l_j: H(Fhat^2) <= H(w) + sum_j w_j c_j + sum_j w_j H(Lambda_j). For Boolean leaves: H(F) <= 2 sum_j p_j c_j + sum_j p_j H(g_j). Proof by tensor powers and the AEP (the method of Arunachalam-Chakraborty-Koucky-Saurabh-de Wolf, arXiv:1809.09819, whose Theorem 1.6 H <= 2 aUC^xor is the constant-leaf case).",
+      "where": "NOTES.md section 6.1; code/affine_c1.py (2,100 partitions incl. 729 irreducible: no violation)",
+      "remaining_gap": "none for affine cells; the leaf extension is not stated in ACKSW (novelty unverified). Same proof gives the Fourier-sparse-cell version with log2 s_j in place of c_j.",
+      "dependencies": ["ACKSW Theorem 1.6 method (KNOWN)"]
+    },
+    {
+      "id": "SEL-10",
+      "status": "PROVED",
+      "statement": "Joint-strategy C2 made unconditional: affine partition of a fresh selector block, Boolean leaves with <g_j, g_l> <= 1 - delta for adjacent distinct cells: I_sel >= (delta/2) sum p_j r_j and H(F) <= max{4/delta, C} I(F) (strong: max{4/delta, C_g}(I(F)-1) for balanced leaves). The recursive class (fresh blocks, affine cells, copies inside cells, shared data, regular base leaves) satisfies H <= max{4/delta, C_reg} I. Contains C035 (point cells) and C011 (Fourier-disjoint leaves) at delta = 1.",
+      "where": "NOTES.md section 6.3",
+      "remaining_gap": "constant 4/delta is not sharp for small delta; log2(1/delta) + O(1) proved for coordinate decision-tree partitions (SEL-12) and CONJECTURED for all affine partitions",
+      "dependencies": ["SEL-9"]
+    },
+    {
+      "id": "SEL-11",
+      "status": "PROVED",
+      "statement": "Reverse uncertainty: for a real function Psi constant on the cells of an affine partition of F_2^a with E Psi^2 = 1, cell weights w_j = p_j v_j^2 and point law r = Psi^2/N: H(Psihat^2) + H(r) <= a + 2H(w) (Maassen-Uffink gives >= a).",
+      "where": "NOTES.md section 6.2",
+      "remaining_gap": "none (special case of SEL-9 with constant leaves)",
+      "dependencies": ["SEL-9"]
+    },
+    {
+      "id": "SEL-12",
+      "status": "PROVED",
+      "statement": "(a) Recursive fresh-selector multiplexers whose every node has energy fraction >= c, from leaves with H <= C_leaf I, satisfy H <= max{C_leaf, K(c)} I. (b) For cells given by a coordinate decision tree with adjacent-cell leaf correlation <= 1 - delta: cost(F) <= K(delta/2) I_sel(F), so H(F) <= max{C, K(delta/2)} I(F), K(delta/2) = log2(1/delta) + O(1) (K(1/2) = 4 at delta = 1).",
+      "where": "NOTES.md section 3.5",
+      "remaining_gap": "parity-decision-tree and irreducible affine partitions only have 4/delta (SEL-10)",
+      "dependencies": ["SEL-1", "SEL-2"]
+    },
+    {
+      "id": "SEL-K1",
+      "status": "KNOWN",
+      "statement": "Copy-or-orthogonal nodes with arbitrary cells are FEI-complete (two-cell selector M_g with orthogonal dictator leaves; paper 'Unrestricted selectors', ledger C012); copy-or-anticopy point cells are FEI-complete (signed dictator, X005/C014). These fix the boundary of SEL-7 and SEL-10.",
+      "where": "NOTES.md sections 3.4, 5.1, 6.3",
+      "remaining_gap": "n/a",
+      "dependencies": ["C012", "C014", "X005"]
+    }
+  ],
+  "best_next_step": "Prove SEL-13, the Schmidt-entropy defect inequality H(|M|^2) <= H(s) + sum_k s_k[H(u_k^2)+H(v_k^2)] + kappa sum_k s_k(1-s_k) for every real matrix and SVD (numerically sharp kappa_0 = 0.75615). It implies SEL-8' and the constant-preserving orthogonal-leaf selector closure max{C_s, 4.757, C_g}(I-1) with arbitrary FEI-good cells, and it is the correct matrix replacement of the refuted coherent-sum bound C034. Milestone: the two-cell case, a one-angle moment inequality E[f(t+alpha)-f(t)] <= f(alpha) + kappa' p_1 p_2 under E[cos^2 t] = p_1, E[sin 2t] = 0, f(t) = h(cos^2 t) (LP: kappa' = 1.175), via a dual certificate checked by interval arithmetic plus an alpha -> 0 expansion."
+}

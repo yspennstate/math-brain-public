@@ -1,0 +1,86 @@
+{
+  "utc": "2026-10-23T12:28:04.008198+00:00",
+  "main": {
+    "sequences": 90,
+    "target_prefixes_or_grid_tuples": 360,
+    "frontiers": 5112,
+    "positive_resets": 921,
+    "negative_resets": 4191,
+    "exact_assertions": 2425605
+  },
+  "all_validation_assertions": 4279503,
+  "other_checks": [
+    {
+      "status": "PASS",
+      "mode": "pilot",
+      "sequences": 1,
+      "target_prefixes_or_grid_tuples": 3,
+      "frontiers": 39,
+      "positive_resets": 8,
+      "negative_resets": 31,
+      "exact_assertions": 4546,
+      "seconds": 1.795069700001477,
+      "compression": "exact per-atom values with multiplicities and unused-pad Hamming sums; no orbit extrapolation"
+    },
+    {
+      "status": "PASS",
+      "mode": "grid",
+      "sequences": 0,
+      "target_prefixes_or_grid_tuples": 43008,
+      "frontiers": 0,
+      "positive_resets": 0,
+      "negative_resets": 0,
+      "exact_assertions": 131134,
+      "seconds": 4.183938000000126,
+      "compression": "exact per-atom values with multiplicities and unused-pad Hamming sums; no orbit extrapolation"
+    },
+    {
+      "status": "PASS",
+      "mode": "gold",
+      "sequences": 2,
+      "target_prefixes_or_grid_tuples": 0,
+      "frontiers": 0,
+      "positive_resets": 0,
+      "negative_resets": 0,
+      "exact_assertions": 9040,
+      "seconds": 1.5842582000004768,
+      "compression": "exact per-atom values with multiplicities and unused-pad Hamming sums; no orbit extrapolation"
+    },
+    {
+      "status": "PASS",
+      "mode": "first",
+      "actual_floor_reference_cases": 2484,
+      "exact_assertions": 126876,
+      "seconds": 11.822190200000477,
+      "scope": "complete actual first floor re-priced without changing model; or actual later scheduled floor, constants included"
+    },
+    {
+      "status": "PASS",
+      "mode": "later",
+      "actual_floor_reference_cases": 4752,
+      "exact_assertions": 235416,
+      "seconds": 27.58577349999905,
+      "scope": "complete actual first floor re-priced without changing model; or actual later scheduled floor, constants included"
+    },
+    {
+      "status": "PASS",
+      "sequences": 2,
+      "literal_models_compared_atomwise": 56,
+      "maximum_M_frontiers": 27,
+      "max_literal_dimension": 16,
+      "parity_guards": 7,
+      "exact_assertions": 1346886,
+      "seconds": 53.82593650000126,
+      "independence": "Own literal tables, original-source physical inheritance, fresh-floor models, integer transform and literal edges; primary checker not imported; shares only pinned rigorous logarithm primitive"
+    }
+  ],
+  "main_batch_runtime_seconds": [
+    51.870721200000844,
+    106.48249850000138,
+    107.95176509999874,
+    155.4353057999997,
+    197.18706779999957,
+    171.3556969000001
+  ],
+  "note": "Counts describe the frozen finite validation only; proof for all finite M and arbitrary source/width/point is analytic."
+}

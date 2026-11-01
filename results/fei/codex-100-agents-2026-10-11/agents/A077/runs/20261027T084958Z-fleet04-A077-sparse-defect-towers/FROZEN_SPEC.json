@@ -1,0 +1,13 @@
+{
+  "helper_version": "A077-event-spectrum-v1",
+  "family": "All Boolean carriers h on d=1,2,3, every event A contained in h-positive vertices with density <=1/2; private V=y. Additional fixed balanced Maj3 profile on the first 128 admissible d=3 pairs.",
+  "parameter_domain": "d=1,2,3 fixed; p=0 included as a boundary control; no automatic escalation",
+  "case_count": "Exact count computed by binomial sum sum_{d=1}^3 sum_{k=0}^{2^{d-1}} binom(2^d,k)2^{2^d-k}; plus 128 Maj3 roots",
+  "symmetry": "None; all labeled carriers and admissible events enumerated",
+  "arithmetic": "Integer Walsh, rational edges, outward rational logarithm intervals; no floating-point sign decisions",
+  "memory_estimate_mb": 60,
+  "max_runtime_seconds": 55,
+  "pilot": "d=1,2 exhaustive; no Maj3 extras",
+  "full": "d=1,2,3 exhaustive with 128 fixed Maj3 extras; same 55s cap",
+  "hypothesis_controls": "p=0,p=1/2; events meeting carrier pivotal edges; h constant; biased V with correct mean law explicitly outside theorem; A not contained in positive carrier checked as exclusion"
+}

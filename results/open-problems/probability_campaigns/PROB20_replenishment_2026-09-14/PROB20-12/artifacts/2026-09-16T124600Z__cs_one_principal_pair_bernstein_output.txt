@@ -1,0 +1,22 @@
+PROB20-12 2026-09-16T124600Z — exact one-common-principal-pair certificate output
+
+Executed in the active analysis runtime with SymPy exact polynomial arithmetic.
+
+block_split True
+GA_A00 U*V
+GA_minor01 U*V*X*Y
+GA_minor02 U*V*(X - 1)*(Y - 1)
+GA_det U*V*X*Y*(X - 1)*(Y - 1)
+GB_B00 U*V*X - U*X - U*Y + U + X*Y
+GB_det -(U*X - U - X*Y)*(V*X + X*Y - X - Y + 1)*(U*X*Y - U*X - U*Y + U + V*X*Y)
+M01_Bernstein_counts [('0', 56), ('1', 6), ('1/2', 6), ('1/4', 9), ('1/8', 3), ('3/4', 1)]
+M02_Bernstein_counts [('0', 48), ('1', 6), ('1/2', 11), ('1/4', 10), ('1/8', 4), ('3/8', 1), ('5/16', 1)]
+ALL EXACT CHECKS PASSED
+
+Interpretation:
+- all nine cross-block entries vanish modulo the CS/sphere ideal;
+- the GA pivot/minors/determinant match the report formulas exactly;
+- the two GB pivot principal minors have only nonnegative tensor-product Bernstein coefficients on [0,1]^4;
+- the GB determinant matches the completely nonnegative factorization in the report.
+
+This is exact self-verification of the finite polynomial identities, not an independent formal proof-assistant verification.

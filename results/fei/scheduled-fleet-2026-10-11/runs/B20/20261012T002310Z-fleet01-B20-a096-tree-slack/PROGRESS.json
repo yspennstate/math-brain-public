@@ -1,0 +1,64 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261012T002310Z-fleet01-B20-a096-tree-slack",
+  "stream": "B20",
+  "primary_packet_id": "A096",
+  "packet_ids": ["A096"],
+  "gap_id": "G-CRITICAL-STEP",
+  "gap_interfaces": ["G-R-MISMATCH"],
+  "attempt_id": "A096-CRITICAL-TREE-TRANSFER-3",
+  "attempt_counter": 3,
+  "claim_versions": ["B20-A096-FIXED-ROOT-TREE-SLACK-v1"],
+  "source_plan_head": "8346fa29a8e192517c785dd7d89f9f77cd1c5667",
+  "source_protocol_revision": "2026-10-11-execution-v2",
+  "source_contract_blob": "d5872923b24d68dbcb93394134e3309302f5d034",
+  "source_stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+  "source_execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+  "prior_status": "A096 had proved critical pruning and the q_n terminal-compensation identity. B11 subsequently proved the local slack decomposition, while the exact relationship between critical slack and a signed physical tree remained unstated.",
+  "new_status": "An arbitrary finite physical restriction tree now has an exact fixed-root deficit telescope. New B01, B05, B10, B11, B14, B15, B16 and B19 records are source-linked without promotion beyond their evidence. Full FEI remains open.",
+  "mathematical_delta": "Proved that reach-weighted local slacks telescope exactly to terminal fixed-root deficits; derived plateau nonnegativity, complete-tree zero total slack, and the precise boundary between the B11 critical identity and B05-B19 signed terminal accounting.",
+  "deliverables": {
+    "A096-D1": "UPDATED_THIS_CYCLE_WITH_SOURCE_AND_DELIVERY_STATES",
+    "A096-D2": "COMPLETE_THIS_CYCLE_PENDING_INDEPENDENT_REVIEW"
+  },
+  "acceptance_evidence": [
+    "REPORT.md",
+    "LIVE_GAP_LEDGER.json",
+    "NEXT_LEMMA_DERIVATION.tex",
+    "CROSS_ROUTE_SCOPE.md",
+    "verify_tree_slack.py",
+    "CHECK.out"
+  ],
+  "remaining_obstacle": "The telescope is exact but circular as a universal bound because it contains the unknown root ratio R. A bounded coordinate step or a nonnegative compensator/stopping rule independent of R is still missing on descendant-critical tensor-prime sources.",
+  "next_consumers": ["A027", "A028", "A029", "A052", "A054", "A055", "A087", "A090", "A094", "A097", "A100"],
+  "independent_reviewers": ["A090", "A094"],
+  "next_action": "Construct and stress-test one nonnegative compensator for the fixed-root deficit martingale, beginning with the exact q_n signed chain and equal-ratio tensors; reject any proposal that inserts R as an assumed universal constant or drops terminal entropy.",
+  "delivery_status": {
+    "canonical": {
+      "status": "NINE_FILE_SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-open-problems",
+      "core_commit": "9c670616a0ff2af489a0180445b5ad2bf3a4854b",
+      "path": "reports/fei-2026-10-11/runs/B20/20261012T002310Z-fleet01-B20-a096-tree-slack/",
+      "verified_files": 9,
+      "report_blob": "b1f1d7e4440033f59d1b047ebb10ab0f84d3a332"
+    },
+    "brain_mirror": {
+      "status": "NINE_FILE_SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-research-brain",
+      "core_commit": "51b996913232990e00f8396e26671aca18ccea00",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B20/20261012T002310Z-fleet01-B20-a096-tree-slack/",
+      "verified_files": 9,
+      "report_blob": "b1f1d7e4440033f59d1b047ebb10ab0f84d3a332"
+    },
+    "independent_review": "PENDING",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "shared_registry_reconciliation": {
+    "status": "CLAIM_PACKET_OBSTRUCTION_AND_CURRENT_STATUS_MIRRORED_AND_READ_BACK",
+    "canonical_commit": "e3810c67b28b1dae28b84699facee0d8f5d7a5fc",
+    "brain_commit": "6e5217e382ceee3504863bb2a7441c473f4ef232",
+    "files": ["CLAIM_REGISTRY.json", "PACKET_STATUS.json", "OBSTRUCTION_REGISTRY.json", "CURRENT_STATUS.md"]
+  },
+  "full_fei_status": "OPEN"
+}

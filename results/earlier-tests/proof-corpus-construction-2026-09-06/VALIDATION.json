@@ -1,0 +1,69 @@
+{
+  "schema": "proof-corpus-construction-validation/v1",
+  "as_of": "2026-09-06T13:49:46.522297+00:00",
+  "code_sha256": {
+    "build_source_pairs.py": "2d4a64a22e8f3379d78719529594f0d9393a810c5c4faac171eb2c5def625c15",
+    "extract_source_context.py": "21ae12b6cbfabc740da07b877a7b0f31ff46f90e0c73b2573ebbde037deb18d4",
+    "test_source_context.py": "94705d177213d8dc9d0cd0cf66cd78f0246948412220125d2686989f1bb901f4",
+    "test_source_pairs.py": "22d3e939e7748f64afb5c3cb85e38190a51e96a3f1a4b2ec4ac2b4690c72d80e",
+    "upstream_extract_proofs.py": "dab84abfd8aef540d3e82cd03eae6fe40750f68cf1ad6906dffeffefab43baac"
+  },
+  "tests": {
+    "source_pair_controls": {
+      "passed": 7,
+      "failed": 0,
+      "seconds": 6.944
+    },
+    "source_context_controls": {
+      "passed": 13,
+      "failed": 0,
+      "seconds": 6.421
+    },
+    "fixture_status": "synthetic controls only; never bank items"
+  },
+  "real_source_cases": [
+    {
+      "paper_id": "2609.04155",
+      "private_path": "<PRIVATE>/source_context_real_md_v1/2609.04155",
+      "manifest_sha256": "f1893ed2bb90422cabfaa8010c77e8eb320dae3ad53aff4dfdaf77b3da68de27",
+      "source_context_sha256": "63ce9dc53d71628d949e4fe3f55a16d5a5999559862d9b05110274b8b4063459",
+      "candidate_occurrences": 23,
+      "distinct_source_proof_texts": 23,
+      "structural_filter_pass": 3,
+      "archive_origin_status": "ARCHIVE_HASH_AND_READ_SOURCE_MEMBER_BYTES_MATCH",
+      "semantic_accepted": 0,
+      "license_status": "UNREVIEWED",
+      "net_new_bank_questions": 0
+    },
+    {
+      "paper_id": "2609.04153",
+      "private_path": "<PRIVATE>/source_context_real_md_v1/2609.04153",
+      "manifest_sha256": "10247c3e7462cd7f218b9ff479ab416d8b8495f6bdd9ebfd651efb95089088e7",
+      "source_context_sha256": "30722e4b76b232d6ad212d1a5b3139c71628786b494721a07f4372ad6497bd3c",
+      "candidate_occurrences": 44,
+      "distinct_source_proof_texts": 44,
+      "structural_filter_pass": 16,
+      "archive_origin_status": "ARCHIVE_HASH_AND_READ_SOURCE_MEMBER_BYTES_MATCH",
+      "semantic_accepted": 0,
+      "license_status": "UNREVIEWED",
+      "net_new_bank_questions": 0
+    }
+  ],
+  "scope_limit": "Two archived-source cases verify bounded extraction/origin behavior, not general extraction correctness or mathematical validity. Re-extraction adds no independent questions. Version labels remain download-log attributions.",
+  "independent_calibration_packet": {
+    "paper_family": "1101.3039",
+    "accepted_forms": 10,
+    "distinct_source_proofs": 5,
+    "source_families": 1,
+    "clean_forms": 5,
+    "flawed_forms": 5,
+    "evaluated_forms": 0,
+    "untouched_heldout_safe_forms": 0,
+    "difficulty": "UNMEASURED",
+    "acceptance_report_sha256": "51027bacc62f4b6469906863fbdb9343a82906557bd96c2d6fd65f81f109c3f2"
+  },
+  "resource_scope": "No model calls, training or GPU use. Serial bounded extraction and tests, BelowNormal priority with allowed logical processors4-9,14-15.",
+  "production_mutation": false,
+  "strong_node_gate": "UNCHANGED_DISABLED",
+  "push_status": "HELD_ROOT_RECONCILIATION"
+}

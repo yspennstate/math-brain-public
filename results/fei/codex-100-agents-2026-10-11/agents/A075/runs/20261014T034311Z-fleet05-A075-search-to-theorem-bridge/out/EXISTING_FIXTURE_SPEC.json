@@ -1,0 +1,12 @@
+{
+  "helper_version": "A075-owned-oneflip-fixture-v1",
+  "family": "Existing A080 core g0=h, g1=h(g0^6), g2=h((-g1)^6), g3=h(g2^6), then one J=-h(x xor1) substitution",
+  "domain": "Exactly the existing 6,36,216,1296-bit circuit and its 7776-bit one-flip child; no additional depth or full large truth table",
+  "case_count": "Four scalar retained core states plus one new gate ledger; all 64 outer biased coefficients at each fixed step",
+  "symmetry": "h transitivity only; J six separate pivotal directions retained",
+  "arithmetic": "Fraction exact bias, influence and full hierarchical H expressions; 192-bit outward logarithms",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": 60,
+  "command": "python -X utf8 code/check_fixture.py",
+  "purpose": "Price the actual source-bound one-flip operation once from its available output-entropy potential, retaining complete seed/core entropy; no new erasure computation or admission assertion"
+}

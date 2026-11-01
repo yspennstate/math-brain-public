@@ -1,0 +1,155 @@
+{
+  "c0133": [
+    {
+      "title": "Open problem: Zero velocity on the non-transient event for excited random walks",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). For excited random walks on Z^d with i.i.d. elliptic environments and a direction l, does X_n . l / n converge to 0 almost surely on the complement of the event {|X_n| -> infinity}? Source: Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012, Problem 4.7, p. 19.\nPosed in Kosygina and Zerner: Excited random walks, results, methods, open problems, 2012\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.randomenvironment:open-problem-c0133-zero-velocity-on-the-non-transient-event-for-excited-random-walks",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0133"
+    },
+    {
+      "title": "Attempt on Zero velocity on the non-transient event for excited random walks",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Try to derive it from the law of large numbers structure of Theorem 4.8. Result: Theorem 4.8 gives lim X_n/n in {v, -cv} a.s. under a 0-1 law assumption for the directional events; on the non-transient event the walk returns to a bounded region infinitely often, so liminf |X_n|/n = 0 trivially along the return times, and the question is whether limsup X_n . l / n can be positive: the walk would have to make excursions of linear size and return. For Markovian RWRE the analogous statement (Zerner 2002) uses a regeneration argument; for excited walks the excursions of linear size would, on the non-transient event, be repeated infinitely often through the same (partially eaten) environment, and each long excursion in direction l has probability decaying exponentially in its length by a large deviation bound for the walk in a fixed (already modified) environment, IF the environment modification is bounded (bounded stacks) - so under (BD) the expected number of linear excursions from a bounded region is finite by Borel-Cantelli, giving the answer YES under (BD) plus a uniform large-deviation bound for excursions. Without (BD) (unbounded stacks under (EL) only) the modification of the environment can be unbounded and the large deviation bound is not uniform. Recorded: under (IID), (EL) and (BD) the answer is yes provided the uniform excursion large-deviation estimate holds (plausible from the elliptic Markov comparison since eaten cookies only change transition probabilities within [eps, 1-eps]); the general (EL) case without (BD) is the open part. Key identity: Linear excursions from a bounded region have exponentially small probability uniformly under (BD)+(UEL); Borel-Cantelli gives zero velocity on the recurrent event. Obstruction: Uniformity fails without bounded stacks.\nRefers to the open problem node open-problem-c0133-zero-velocity-on-the-non-transient-event-for-excited-random-walks\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.randomenvironment:attempt-c0133-zero-velocity-on-the-non-transient-event-for-excited-random-walks",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0133"
+    }
+  ],
+  "p0266": [
+    {
+      "title": "Open problem: Critical variational SPDE maximal second-moment bound",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status candidate_full_solution). Does Theorem6.4 imply E sup_{t<=T}||u(t)||_H^2 <= C_T(1+E||u0||_H^2), including the source critical Allen-Cahn model gamma^2=2? Source: Agresti-Veraar: Nonlinear SPDEs and maximal regularity,published NoDEA2025, Problem4,journal page130/150;PDF131;arXivPDF92.\nPosed in Agresti-Veraar: Nonlinear SPDEs and maximal regularity,published NoDEA2025\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "logical_id": "math:probability.core:open-problem-p0266-critical-variational-spde-maximal-second-moment-bound",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0266"
+    },
+    {
+      "title": "Attempt on Critical variational SPDE maximal second-moment bound",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Spatially constant reduction; reciprocal BES4; finite-horizon harmonic stopping and Gaussian integral Result: For deterministic constant initial condition a>0, the critical model reduces to U_t=e^t/(sqrt(2)R_{(e^(2t)-1)/2}) with R a BES4 process. An exact finite-horizon hitting identity gives P(sup(2R^2)^(-1)>=x)~c/x with c>0, hence E sup U_t^2=infinity for every T>0. The Gelfand-triple and torus assumptions are checked in the full proof. Check: Second route checks the entire abstract theorem in the scalar Gelfand triple and separately checks the torus coercivity and critical interpolation estimates. Gaussian expectation is derived by a positive Laplace integral. Author checks only, not independent review. Obstruction: No gap found in author checks. Later-literature reconciliation and independent proof review remain necessary before promotion.\nRefers to the open problem node open-problem-p0266-critical-variational-spde-maximal-second-moment-bound\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0266-critical-variational-spde-maximal-second-moment-bound",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0266"
+    }
+  ],
+  "c0032": [
+    {
+      "title": "Open problem: Explicit form of the heavy-tailed circular law density",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Identify explicitly the isotropic density g_alpha(|z|) of the limiting spectral law mu_alpha of n^{-1/alpha}X for alpha-stable-type entries; only g_alpha(0) and the tail (r^{2(alpha-1)} e^{-alpha r^alpha/2} up to constants) are known. Source: Bordenave and Chafai: Around the circular law, survey with open problems, Section 6.6, p. 39.\nPosed in Bordenave and Chafai: Around the circular law, survey with open problems\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.random-matrices:open-problem-c0032-explicit-form-of-the-heavy-tailed-circular-law-density",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0032"
+    },
+    {
+      "title": "Attempt on Explicit form of the heavy-tailed circular law density",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Attempt to derive g_alpha from the PWIT recursive distributional equation for the resolvent at z, then differentiate in z. Result: The density is g_alpha(r) = (1/2pi) Delta_z of the log-potential U(z) = -integral log|z-w| dmu_alpha(w), and U is expressed through the limit of the singular-value law of the shifted operator on the PWIT, whose Stieltjes transform satisfies a fixed-point equation in a 2x2 matrix-valued function with alpha-stable-type nonlinearity (as in Bordenave-Caputo-Chafai). The z-dependence enters only through the off-diagonal entries; at z = 0 the equation closes on a single positive stable random variable, which is why g_alpha(0) is explicit. For z not 0 the fixed point involves a two-parameter family of stable laws (radial and angular parts), and I could not reduce it to a scalar equation; the isotropy only removes the angular variable of z, not of the recursion. Tail check: the stated tail r^{2(alpha-1)} e^{-alpha r^alpha/2} is consistent with the expected behaviour that eigenvalues of modulus r come from rows with an exceptionally large entry of size r^alpha, whose density in the stable domain is r^{-alpha-1} ... the exponential factor indicates instead a large-deviation of a sum of alpha-stable variables of the Poisson-Dirichlet type. No closed form. Obstruction: The matrix-valued PWIT fixed point does not reduce to a scalar equation away from z = 0.\nRefers to the open problem node open-problem-c0032-explicit-form-of-the-heavy-tailed-circular-law-density\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.random-matrices:attempt-c0032-explicit-form-of-the-heavy-tailed-circular-law-density",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0032"
+    }
+  ],
+  "p0036": [
+    {
+      "title": "Open problem: Percolation threshold on arbitrary geodesic Cayley spanning trees",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). If T is any geodesic spanning tree rooted at the identity of a Cayley graph of growth rate b, must br(T)=b, equivalently must its Bernoulli bond percolation threshold be 1/b? Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 3.12, printed p.91.\nPosed in Probability on Trees and Networks, paperback electronic version 19 August 2026\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "logical_id": "math:probability.core:open-problem-p0036-percolation-threshold-on-arbitrary-geodesic-cayley-spanning-trees",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0036"
+    },
+    {
+      "title": "Attempt on Percolation threshold on arbitrary geodesic Cayley spanning trees",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Equal level growth does not determine branching number Result: A geodesic spanning tree has exactly the Cayley graph sphere sizes at each level. But growth can exceed branching number for a bounded-degree tree: take a single infinite spine and at its nth vertex attach a finite b-ary tree of height n. Its level sizes have exponential rate sqrt(b)>1, while its only infinite ray is the spine and arbitrarily deep singleton cutsets give branching number one. Check: At level m the largest attached contribution starts around n=m/2 and has order b^(m/2), up to constant factors and a geometric sum. Every attachment is finite, so no additional infinite ray appears. Obstruction: This is not a geodesic Cayley spanning-tree counterexample. It proves that matching sphere counts alone cannot establish the conjectured branching number.\nRefers to the open problem node open-problem-p0036-percolation-threshold-on-arbitrary-geodesic-cayley-spanning-trees\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0036-percolation-threshold-on-arbitrary-geodesic-cayley-spanning-trees",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0036"
+    }
+  ],
+  "c0077": [
+    {
+      "title": "Open problem: Incipient-infinite super-Brownian-motion limit of the high-dimensional IIC",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Show that for d > 6 the rescaled measure-valued process built from the incipient infinite cluster (vertices at intrinsic distance nt, rescaled) converges to incipient infinite super-Brownian motion (SBM with an immortal particle). Source: Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems, Open Problem 15.3, p. 221.\nPosed in Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.percolation:open-problem-c0077-incipient-infinite-super-brownian-motion-limit-of-the-high-dimensional",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0077"
+    },
+    {
+      "title": "Attempt on Incipient-infinite super-Brownian-motion limit of the high-dimensional IIC",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Derive the IIC statement from the critical-cluster statement via the h-transform structure. Result: The IIC is the limit of the critical cluster conditioned on reaching intrinsic distance n (or on |C| large), which at the level of the branching-process comparison is the Doob h-transform of the critical branching process with h = survival, giving the Kesten tree (a spine plus critical trees); at the continuum level the canonical measure of SBM conditioned on survival to time t and then t -> infinity gives SBM with an immortal particle. So C0077 follows from C0076 plus the commutation of the conditioning with the scaling limit, which requires the convergence in C0076 to hold under conditioning on the intrinsic radius exceeding n, i.e. a statement about the conditioned law, which is obtained from the unconditioned one by dividing by the one-arm probability (order 1/n) and thus needs the one-arm asymptotics at the level of the exact constant (C0066). Reduction chain: C0077 <= C0076 + C0066. Obstruction: Same as C0076 plus the sharp one-arm constant.\nRefers to the open problem node open-problem-c0077-incipient-infinite-super-brownian-motion-limit-of-the-high-dimensional\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.percolation:attempt-c0077-incipient-infinite-super-brownian-motion-limit-of-the-high-dimensional",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0077"
+    }
+  ],
+  "p0010": [
+    {
+      "title": "Open problem: Biased random square-lattice orientations",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Does every nonzero orientation bias give positive probability of an infinite directed path from the origin? Source: Selected problems in probability theory, Question 5.1, PDF page 9.\nPosed in Selected problems in probability theory\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "logical_id": "math:probability.core:open-problem-p0010-biased-random-square-lattice-orientations",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0010"
+    },
+    {
+      "title": "Attempt on Biased random square-lattice orientations",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Directed-percolation subgraph comparison Result: Reflecting both coordinate axes maps p to 1-p, so the infinite-path probability is symmetric about one-half. North-east paths use independent edges pointing north/east with probability p; survival of the usual north-east directed percolation therefore implies survival in the full oriented graph. The p=0 and p=1 endpoints have deterministic infinite paths. Check: The comparison is inclusion of path events, not equality of the two models. It proves a region above the directed-percolation threshold and its reflected counterpart only. Obstruction: It does not settle the interval between one-half and that threshold. The critical p=1/2 result does not extend by continuity alone.\nRefers to the open problem node open-problem-p0010-biased-random-square-lattice-orientations\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0010-biased-random-square-lattice-orientations",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0010"
+    }
+  ],
+  "p0090": [
+    {
+      "title": "Attempt on Multistate pivot-tree criterion for interpretation",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Multistate pivot-tree criterion for interpretation structural argument Result: For a finite-type pivot branching process with mean matrix M and spectral radius less than1, E[population at level n] tends to0, hence P(level n nonempty)<=E[size] tends to0. This proves extinction and explains the subcritical direction already covered by Theorem1.8. Check: Jordan normal form shows M^n->0 when its spectral radius is below1, including reducible matrices. Obstruction: At spectral radius1 the first moment need not decay, and reducible type classes can behave differently. The established subcritical argument does not settle critical/supercritical interpretation.\nRefers to the open problem node open-problem-p0090-multistate-pivot-tree-criterion-for-interpretation\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0090-multistate-pivot-tree-criterion-for-interpretation",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0090"
+    },
+    {
+      "title": "Open problem: Multistate pivot-tree criterion for interpretation",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). Extend the two-state interpretation criterion of Theorem1.7 to finite color sets of size at least3, covering critical and supercritical pivot trees even without positive regularity. Source: Random tree recursions: which fixed points correspond to tangible sets of trees?, Section6, PDF p.39, first paragraph.\nPosed in Random tree recursions: which fixed points correspond to tangible sets of trees?\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "logical_id": "math:probability.core:open-problem-p0090-multistate-pivot-tree-criterion-for-interpretation",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0090"
+    }
+  ],
+  "c0119": [
+    {
+      "title": "Open problem: Chaos in directed polymers in dimensions d >= 3",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). Prove chaos (sensitivity of the polymer measure to a small perturbation of the environment) for directed polymers in random environment in dimensions d >= 3, at low temperature. Source: Chatterjee: Chaos, concentration and multiple valleys, 2008, with open questions, Section 12, problem (2), p. 59.\nPosed in Chatterjee: Chaos, concentration and multiple valleys, 2008, with open questions\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.gaussian:open-problem-c0119-chaos-in-directed-polymers-in-dimensions-d-3",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0119"
+    },
+    {
+      "title": "Attempt on Chaos in directed polymers in dimensions d >= 3",
+      "body": "ATTEMPT RECORD, author-checked only, from the 2026-09-07 intake. Method: Check which steps of the d = 2 proof are dimension-dependent. Result: The source's d = 1+1 proof establishes superconcentration of the free energy (variance o(n)) via hypercontractivity and then chaos from superconcentration through the general equivalence theorem; the dimension-dependent step is the variance bound Var(log Z_n) = O(n/log n), obtained from the Benjamini-Kalai-Schramm influence inequality applied to the free energy with the influence of a single site bounded by the expected overlap of two polymers at that site, whose sum over sites is the expected overlap, of order n in the strong disorder regime. The BKS argument is dimension-free provided the polymer is in the strong disorder phase (positive overlap); in d >= 3 the strong disorder phase exists at low temperature (Comets-Yoshida), so the variance bound O(n/log n) transfers and superconcentration follows; the equivalence theorem then gives chaos at the level of the overlap between the polymers at slightly perturbed environments. So the obstruction the source mentions ('certain parts do not work in higher dimensions') must be in the identification that the overlap in the strong-disorder phase is of order n (needed for the influence sum to be order n and the BKS gain to be meaningful): in d >= 3 at low temperature the overlap is positive but the known lower bounds are only qualitative (positive limit of the overlap along the endpoint), not quantitative along the whole path. Rigorous partial: superconcentration (Var log Z_n = o(n)) in d >= 3 at low temperature follows from BKS if the expected path overlap is of order n, which is a consequence of the strong disorder characterisation via the endpoint overlap only if the overlap is positive at a positive fraction of times; this last step is plausible but I found no reference proving it in d >= 3. Reduction recorded. Obstruction: Quantitative (order n) path overlap in the strong disorder phase for d >= 3.\nRefers to the open problem node open-problem-c0119-chaos-in-directed-polymers-in-dimensions-d-3\nNo independent review; result status attempted_unsolved",
+      "logical_id": "math:probability.gaussian:attempt-c0119-chaos-in-directed-polymers-in-dimensions-d-3",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:at-c0119"
+    }
+  ],
+  "p0427": [
+    {
+      "title": "Open problem: Optimal allocation between two exponential parallelism classes",
+      "body": "OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status unsolved). Characterize optimal allocation when two classes have different ordered concave speedup curves and unknown exponential inherent sizes. Source: Harchol-Balter: Open problems in queueing theory inspired by datacenter computing, Section3.4; PDF10-11. Status notes: Focused later-primary-source checks on 2026-09-07; offline concave scheduling, general FCFS threshold representation, SEK-SMOD and fork-join asymptotics credited. No present-openness certification.\nPosed in Harchol-Balter: Open problems in queueing theory inspired by datacenter computing\nStatus as recorded in the campaign ledger on 2026-09-07",
+      "logical_id": "math:probability.core:open-problem-p0427-optimal-allocation-between-two-exponential-parallelism-classes",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:op-p0427"
+    },
+    {
+      "title": "Attempt on Optimal allocation between two exponential parallelism classes",
+      "body": "ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Controlled generators, exact finite-state diagnostic, coupling, renewal reward or capacity comparison Result: Even with two jobs and no arrivals, continuation values change the allocation. Take four divisible servers and independent Exp(1) inherent job sizes. Use normalized concave speedups s1(b)=min(b,sqrt(b)) and s2(b)=min(b,b^(3/4)), including linear fractional-server behavior below one server. Allocate b to class one and 4-b to class two until the first completion, then all four to the survivor. Expected sum of completion times is V(b)=[2+s1(b)/(2*sqrt(2))+s2(4-b)/2]/[s1(b)+s2(4-b)]. The throughput maximizer is b=1: total rate increases below one and decreases above it. Yet V(81/64)<V(1). The slower departure rate improves the continuation state. Check: The first-completion time has mean 1/(r1+r2) and incurs holding cost two; survivor means are 1/(2*sqrt(2)) and 1/2. Independently, the sign of the right derivative V_prime(1) is the sign of 3^(3/4)*(3/(2*sqrt(2))+1/2)-4, which is negative by the rational bounds 3^(3/4)<23/10 and 1/(2*sqrt(2))<9/25. Obstruction: The no-arrival diagnostic does not determine a stationary optimal policy with Poisson arrivals, nor prove a universal allocation formula.\nRefers to the open problem node open-problem-p0427-optimal-allocation-between-two-exponential-parallelism-classes\nNo independent review",
+      "logical_id": "math:probability.core:attempt-p0427-optimal-allocation-between-two-exponential-parallelism-classes",
+      "proof_text": "",
+      "source_id": "owner-probability-campaign-codex-20260906:at-p0427"
+    }
+  ],
+  "c0021": [
+    {
+      "title": "Open problem: Revealment exponent of the iterated 3-majority function",
+      "body": "OPEN PROBLEM (source_says_open; current status unverified; result status attempted_unsolved). The revealments of the iterated 3-majority function on 3^k bits decay like n^{-sigma}; determine sigma. Source: Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems, Exercise VIII.5 note, p. 97.\nPosed in Garban and Steif: Noise sensitivity of Boolean functions and percolation, lecture notes with open problems\nCurrent status unverified as of 2026-09-07",
+      "logical_id": "math:probability.percolation:open-problem-c0021-revealment-exponent-of-the-iterated-3-majority-function",
+      "proof_text": "",
+      "source_id": "owner-probability-intake-claude-20260907:op-c0021"
+    }
+  ]
+}

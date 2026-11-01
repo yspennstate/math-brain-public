@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{Repeated-fallback payment and a priority-tree global reserve}
+\author{A064, stream B13}\maketitle
+All entropy units are bits on finite uniform physical cubes.
+Let $\phi(t)=t\log_2(1/t)$, $\phi(0)=0$.
+\begin{theorem}[Repeated physical fallback]
+At an actual restriction node let $F=A u+(1-A)G$, where $A$ is a
+point indicator on $s\ge1$ remaining controls, all disjoint from $u,G$,
+and $u$ and the entire fallback $G$ occupy independent physical blocks.
+Let $G$ select independent disjoint Boolean cores or constants by any
+exclusive controller. Merge duplicate descriptions of one physical core.
+For the actual selector probabilities and remaining core variances set
+$R=\sum_j\phi(q_j)\operatorname{Var}(u_j)$.
+At a live $A$ query, with $d=\operatorname{Inf}_i(F)$ and
+$\kappa=R-\mathbb E R_{\rm child}$,
+\[
+ D_iH(F)-\kappa\le (8+2/\ln2)d<11d.
+\]
+The fallback on both children is the same physical function.
+No assertion of nonnegativity of the signed left side is required.
+\end{theorem}
+\begin{theorem}[Complete potential and all boundaries]
+Consider a finite ordered priority list of point events on mutually
+disjoint control blocks, selecting distinct Boolean cores on independent
+disjoint data blocks, with a constant-sign fallback. Expose controls in
+priority order until the output label is resolved. Arbitrary adaptive data
+queries can be interleaved, respecting prescribed own-history core trees;
+an independent random seed, if any, is fixed initially.
+Suppose $C\ge0$ and each core has a nonnegative own-history reserve $r_j$
+with $D_j\le C d_j+r_j-\mathbb E r_{j,\rm child}$.
+At every actual node put
+\[
+ Q=\sum_jq_jr_j+\sum_j\phi(q_j)\operatorname{Var}(u_j).
+\]
+Then $Q\ge0$, its data-node price is $C+11/2$, and its control-node
+price is $11$. Initially
+\[
+ Q_0\le\sum_j q_j(0)r_j(0)+2I_{\rm ctrl}(F_0).
+\]
+For every finite adaptive stop $\tau$, with physically reached influence
+costs $\Pi_{\rm data},\Pi_{\rm ctrl}$,
+\[
+ \mathbb E Q_\tau\le Q_0+C\Pi_{\rm data},\qquad
+ H(F_0)\le(C+11/2)\Pi_{\rm data}+11\Pi_{\rm ctrl}
+       +Q_0+\mathbb E[H(F_\tau)-Q_\tau].
+\]
+At a controller-resolved leaf, $Q_\tau$ is the selected remaining core
+reserve and the boundary is its entropy minus its reserve. At a
+complete-data leaf with zero core-leaf reserves, $Q_\tau=0$ but actual
+remaining controller entropy is retained. At a complete controller-and-data
+leaf both $H$ and $Q$ vanish. There is no implicit boundary assumption.
+For a declared full completion with zero core-leaf reserves, the least
+nonnegative reserve at $\alpha=\max(C+11/2,11)$ is at most $Q$ at every
+node. An explicitly supplied initial core bound
+$\sum_jq_jr_j(0)\le K I_{\rm data}(F_0)$ gives
+$H(F_0)\le\max(C+11/2+K,13)I(F_0)$.
+No universal initial core bound or universal priority representation is claimed.
+\end{theorem}
+\paragraph{Proof.} The complete row decomposition, scalar estimates,
+physical-edge initial condition, expected-terminal proof and finite
+Bellman induction are in DERIVATION.md, Sections 1--4. The repeated
+fallback residual is the new ingredient; previously reviewed data prices
+are applied conditionally without refreshing any inherited core account.
+\end{document}

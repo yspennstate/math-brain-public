@@ -1,0 +1,88 @@
+% Section 14, "What is solved and what remains open".
+
+\section{What is solved and what remains open}
+
+The core method gives a complete all-order Toeplitz hierarchy through
+the four-pair layer: volume $2/3$ belongs exactly to inflations of the
+unique two-pair crossing, volume $1/2$ exactly to inflations of reduced
+three-pair cores, and every larger core has volume at most $9/20$ with a
+unique reduced equality type.  All moment polytopes are index-two
+Gorenstein lattice polytopes, and Hankel contributions coincide
+termwise with Toeplitz contributions on the parity-mixing class.  In the
+Hankel subclass the sharp all-order hierarchy is $11/30$ at four pairs
+and at most $1/3$ beyond.
+
+Beyond that layer the picture is now the following.
+
+\subsection*{Settled here}
+
+\begin{enumerate}
+\item[(1)] \emph{The sharp constant beyond four pairs.}  Every reduced
+Toeplitz core with $r\ge5$ pairs appears to satisfy $p_T\le4/9$, and the
+equality class is completely explicit: the two-square family
+$\omega_l=abab\,c_1\cdots c_l\,dede\,c_l\cdots c_1$ attains $4/9$ for
+every chain length $l\ge1$, by flattening and concatenation of section
+profiles.  Exhaustively, at $r=5,6,7$ -- $47{,}808$ labelled words in
+$2013$ dihedral orbits -- the maximum is exactly $4/9$ and is attained
+on a single orbit at each size.  The general-$r$ statement reduces to
+one finite slab lemma, proved below for forms of minimal support.
+
+\item[(2)] \emph{The Hankel companion.}  Squares are forbidden in the
+parity-mixing class, so the smallest usable cycle is $w_3$ with
+$p_H=1/2$, and $\eta_l=abcabc\,c_1\cdots c_l\,defdef\,c_l\cdots c_1$
+attains $1/4=(1/2)^2$ for every $l\ge1$, mirroring $4/9=(2/3)^2$.  The
+exact layer maxima are $1/3$, $23/90$, $1/4$, $1/4$ at $r=5,6,7,8$.
+
+\item[(3)] \emph{One family behind the slab constants.}  For $j$ distinct
+exceptional slot forms the constant is $2/(j+2)$, attained by the
+exceptional system of the fully crossing word $w_{j+1}$; this recovers
+$2/3$, $1/2$, $2/5$ and Theorem 10.4's $1/3$, and predicts $2/7$ at rank
+five.
+
+\item[(4)] \emph{Non-unimodality of $\gamma_H$, certified.}  With
+$u_k=(2k+1)m_{2k}$ the Hankel matrix $(u_{i+j})_{i,j\le2}$ has
+determinant $-73/20<0$, so by Khinchin's theorem $\gamma_H$ is not
+unimodal -- a four-moment computation.  The same test applied to
+$\gamma_T$ finds no obstruction through order twenty-two.
+\end{enumerate}
+
+\subsection*{Still open}
+
+\begin{enumerate}
+\item[(1)] \emph{Closed form and joint $*$-laws.}  Identify either
+limiting scalar law explicitly, or give structural descriptions of the
+joint $*$-distributions of the Bose--Vishwakarma pairs.  The evidence
+here narrows the target rather than reaching it: neither law is a
+variance mixture of Gaussians, a $q$-Gaussian, or (for $\gamma_H$) a
+scale mixture of semicircle laws, and no algebraic or holonomic equation
+of small size fits the moments.  What survives is that $\gamma_T$ may be
+a scale mixture of semicircle laws, in which case the whole problem
+reduces to identifying one positive random variable.
+
+\item[(2)] \emph{Primitive-volume asymptotics.}  The scale of
+$\kappa_r^E$ now has a conjectural answer,
+$\kappa_r^T\sim r!\,(2\rho^2)^r$ with $\rho$ the Sen--Vir\'ag constant,
+consistent with the exact ratios to within $10^{-3}$.  Moreover the
+Catalan transform is boundary-local, $m_{2k}\sim e^{1/\rho^2}\kappa_k$,
+so this problem and the identification problem are the same problem.
+
+\item[(3)] \emph{Free infinite divisibility of $\gamma_T$.}  With the
+moments known through order twenty-two, the conditional-positivity tests
+at orders sixteen through twenty-two all pass.  The first undecided one
+is at order twenty-four, where the condition is the single comparison
+$m_{24}\ge533385290252268206796914811370716813306691285889/
+36005162406403257088495500297206628000\approx1.4814\times10^{10}$;
+extrapolation of the growth ratios gives $m_{24}\approx1.4821\times
+10^{10}$, exceeding the threshold by about one part in $2200$, so
+nothing short of the exact value decides it.
+
+\item[(4)] \emph{The remaining slab cases.}  Conjecture (3) above is a
+theorem for $j\le2$ and $j=4$, and for $j=3$ when all three forms have
+minimal support; the rank-five case $j=5$ appears reachable by the
+rank-four argument of Theorem 10.4 together with the rank-$\le6$
+cosystole bounds of Douthitt, Israel and Kennard.
+
+\item[(5)] \emph{Regularity.}  Absolute continuity of $\gamma_H$, and
+unimodality of $\gamma_T$, both remain open; the latter would follow
+from the semicircular-mixture conjecture.
+\end{enumerate}

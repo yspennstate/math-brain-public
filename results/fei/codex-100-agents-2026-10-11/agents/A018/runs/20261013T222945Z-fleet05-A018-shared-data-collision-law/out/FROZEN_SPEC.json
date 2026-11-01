@@ -1,0 +1,15 @@
+{
+ "helper_version":"A018-shared-separator-product-v3",
+ "targets":"Review A016 shared-spine charge/reference; test H(f1(z,u) f2(z,v))<=H(f1)+H(f2) on disjoint private blocks sharing only physical z",
+ "family":"All ordered pairs of two-branch Boolean modules on k private bits; each actual product uses one shared selector z. A016 shared-spine fixtures separately fixed at (a,m)=(1,4),(2,4),(3,4),(1,6),(2,6)",
+ "domain":"pilot k=1; full k=2; no automatic escalation",
+ "case_count":{"pilot_ordered_module_pairs":256,"full_ordered_module_pairs":65536,"shared_spine_fixtures":5},
+ "symmetry":"No module/table reduction, all ordered pairs retained; common z, private blocks disjoint",
+ "arithmetic":"Integer Walsh and direct physical tables; entropy as integer prime-log forms with rational outward atanh bounds; exact Fraction normalization and derivative energies; no floating sign",
+ "memory_estimate_mb":80,
+ "pilot_max_seconds":60,
+ "full_max_seconds":120,
+ "reused_helper":"Own A018 stage2 check_lead.py definitions for proven log arithmetic; no main/search imported; SHA pinned in output",
+ "save_policy":"Persist first rigorous witness immediately, then finish frozen domain; write finite coverage separately from universal proof",
+ "concurrency":"one sequential CPU process, no GPU or background child"
+}

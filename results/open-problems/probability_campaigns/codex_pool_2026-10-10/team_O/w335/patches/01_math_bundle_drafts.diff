@@ -1,0 +1,614 @@
+--- a/math-brain-inbox/w335/bundle_001.json
++++ b/math-brain-inbox/w335/bundle_001.json
+@@ -0,0 +1,43 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w335",
++  "bundle_slug": "w335-p0205-20261010",
++  "entries": [
++    {
++      "key": "p0205-complete-cayley-spectrum",
++      "namespace": "probability.markov",
++      "logical_name": "complete-cayley-geometric-target-metropolis-spectrum",
++      "kind": "lemma",
++      "title": "Exact complete-Cayley geometric-target Metropolis relaxation [draft; pending w347]",
++      "statement": "Let G have order n>=2 and identity e. For 0<alpha<=1 let P(x,x)=1-alpha and P(x,y)=alpha/(n-1) for y!=x. Start P at e and stop at independent T with P(T=k)=p(1-p)^k, k>=0, 0<p<1. Put b=1-alpha*n/(n-1) and a=p/(1-(1-p)*b). The Metropolis kernel M with proposal P and target Law(X_T) has spectral-gap relaxation time tau(M)=tau(P)*(1+(n-1)*a), where tau(P)=(n-1)/(alpha*n). It is strictly increasing in p. With alpha=p=1/2 both kernels are lazy and tau(M)/[n*tau(P)] tends to 2/3 as n tends to infinity. This family has proposal degree n-1 and does not settle a fixed-degree variant or a differently parametrised monotonicity question.",
++      "proof_text": "P acts as the scalar b on the space orthogonal to constants. Summing p*sum_k (1-p)^k P^k gives the displayed target. Every proposal from a nonidentity state is accepted. From e to any other state, its probability is alpha/(n-1) times r=(1-a)/(1+(n-1)*a). Thus the two-state radial lump has rates alpha*r and alpha/(n-1), and nonconstant eigenvalue 1-alpha*r-alpha/(n-1). The n-2 contrasts between nonidentity states have eigenvalue b. Since 0<a<1 and r<1, the radial eigenvalue is at least b and is lambda_2. Its gap is alpha*(r+1/(n-1))=alpha*n/((n-1)*(1+(n-1)*a)). Inversion proves the formula, including n=2 where the contrast subspace is empty. Differentiating a=p/(1-b+b*p) gives a prime=(1-b)/(1-b+b*p)^2>0. For alpha=p=1/2, a=(n-1)/(3*n/2-1), so (1+(n-1)*a)/n tends to 2/3.",
++      "assumptions": [
++        "Finite group order n>=2",
++        "Uniform nonidentity proposal with holding 1-alpha",
++        "Geo0 convention and inverse ordinary spectral gap"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:p0205-complete-cayley-spectrum",
++        "url": "file:///~/brain_workers/w335/P0205_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "p0205-complete-cayley-spectrum",
++      "to_existing_logical": "math:probability.core:open-problem-p0205-metropolis-relaxation-for-geometric-time-cayley-targets",
++      "kind": "specializes",
++      "rationale": "New card: \"This family has proposal degree n-1\"; existing card: \"Control the relaxation time of Metropolis random walk targeting the distribution of a Cayley walk at an independent geometric time; in particular, test monotonic decrease in the geometric parameter\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "p0205-complete-cayley-spectrum",
++      "to_existing_logical": "math:probability.core:attempt-p0205-metropolis-relaxation-for-geometric-time-cayley-targets",
++      "kind": "generalizes",
++      "rationale": "New card: \"tau(M)=tau(P)*(1+(n-1)*a)\"; existing card: \"Monotone decrease is false already on the two-element Cayley group\"."
++    }
++  ]
++}
+--- a/math-brain-inbox/w335/bundle_002.json
++++ b/math-brain-inbox/w335/bundle_002.json
+@@ -0,0 +1,44 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w335",
++  "bundle_slug": "w335-p0429-20261010",
++  "entries": [
++    {
++      "key": "p0429-path-collision-obstruction",
++      "namespace": "probability.queueing",
++      "logical_name": "uniform-batch-arrival-path-cubic-collision-obstruction",
++      "kind": "lemma",
++      "title": "Sharp cubic collision scale for batch arrival paths [draft; pending w347]",
++      "statement": "For n servers, Poisson jobs of rate lambda*n/k routing to uniform k-subsets, and k tagged arrival streams observed exactly on [0,T], let H count tagged servers hit per job and beta=(lambda*n/k)*P(H>=2). Their joint path total variation from independent rate-lambda Poisson streams is at least 1-exp(-beta*T). If k tends to infinity with k=o(sqrt(n)), beta~lambda*k^3/(2*n). At k/n^(1/3)->c>0, the liminf is at least 1-exp(-lambda*T*c^3/2). Conversely k=o(n^(1/3)) gives path TV tending to zero by the delete-and-restore coupling. This proves a path-coupling obstruction, not a necessary threshold for a stationary queue vector at a single time.",
++      "proof_text": "The total variation distance between the joint arrival-path law and k independent rate-lambda Poisson paths is at least 1-exp(-beta*T). Indeed the observed event that two tagged paths have a simultaneous arrival has probability 1-exp(-beta*T) in the original model by Poisson thinning, and zero under independent Poisson streams. Arrival times are continuous and the interval is observed exactly.\n\nThe factorial moments are E[(H)_r]=(k)_r^2/(n)_r. For nonnegative integer H,\n\n    E[(H)_2]/2 - E[(H)_3]/2 <= P(H>=2) <= E[(H)_2]/2.\n\nThe upper inequality is the pair union bound. The lower follows pointwise from binom(h,2)-1_{h>=2} <= (h)_3/2 (check h=0,1,2, and for h>=3 use h-2>=1). If k grows and k=o(sqrt(n)), then E[(H)_3]/E[(H)_2]=(k-2)^2/(n-2)->0. Consequently beta ~ lambda*k^3/(2*n). In particular if k/n^(1/3)->c>0, the path-TV liminf is at least 1-exp(-lambda*T*c^3/2)>0. If n^(1/3)<<k<<sqrt(n), this lower bound tends to one.\n\nFor completeness, delete original jobs hitting at least two tagged servers and restore each lost marginal arrival rate with independent Poisson streams. The remaining one-tag streams are independent by Poisson marking; the restored marginal rates yield k independent rate-lambda streams. A disagreement probability is at most Lambda*T*(P(H>=2)+E[H*1_{H>=2}]) <= (3/2)*Lambda*T*E[(H)_2] = 3*lambda*T*k*(k-1)^2/(2*(n-1)). Hence k=o(n^(1/3)) suffices at fixed T. The cubic scale is therefore sharp for this exact-path coupling in the stated growing-k regime. Passing from path-TV to the stationary queue vector loses the simultaneous-time witness; no necessary stationary-vector threshold follows from this proof.",
++      "assumptions": [
++        "Poisson jobs with independent uniform routing",
++        "lambda,T fixed and positive",
++        "Exact continuous arrival paths",
++        "For the asymptotic formula: k tends to infinity and k=o(sqrt(n))"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:p0429-path-collision-obstruction",
++        "url": "file:///~/brain_workers/w335/P0429_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "p0429-path-collision-obstruction",
++      "to_existing_logical": "math:probability.core:open-problem-p0429-largest-growing-fork-join-batch-compatible-with-asymptotic-independenc",
++      "kind": "specializes",
++      "rationale": "New card: \"This proves a path-coupling obstruction\"; existing card: \"Determine how quickly the number k(n) of tasks per uniformly routed job can grow while the corresponding k(n) stationary queues remain asymptotically independent\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "p0429-path-collision-obstruction",
++      "to_existing_logical": "math:probability.core:attempt-p0429-largest-growing-fork-join-batch-compatible-with-asymptotic-independenc",
++      "kind": "generalizes",
++      "rationale": "New card: \"beta~lambda*k^3/(2*n)\"; existing card: \"A finite-horizon input coupling suggests a cubic collision scale\"."
++    }
++  ]
++}
+--- a/math-brain-inbox/w335/bundle_003.json
++++ b/math-brain-inbox/w335/bundle_003.json
+@@ -0,0 +1,70 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w335",
++  "bundle_slug": "w335-c0127-20261010",
++  "entries": [
++    {
++      "key": "c0127-common-factor-peaks",
++      "namespace": "probability.gaussian",
++      "logical_name": "common-gaussian-factor-growing-near-peaks-without-superconcentration",
++      "kind": "lemma",
++      "title": "Common-factor obstruction to a growing-peaks criterion [draft; pending w347]",
++      "statement": "Fix 0<rho<1 and independent standard normal Z_0,...,Z_m. Let X_i=sqrt(rho)*Z_0+sqrt(1-rho)*Z_i and M_m=max_i X_i. Coordinates have variance one and distinct covariance rho. Var(M_m)>=rho, so the field is not superconcentrated. Nevertheless the number of coordinates at deficit at most delta_m=(log m)^(-1/4) from M_m tends to infinity in probability. Thus growing near-peaks with pairwise covariance merely bounded away from one, even at vanishing absolute deficit, are insufficient for superconcentration. This does not refute a criterion requiring overlaps to tend to zero.",
++      "proof_text": "Fix 0<rho<1. For m>=2 let Z_0,Z_1,...,Z_m be independent standard normal variables, and X_i=sqrt(rho)*Z_0+sqrt(1-rho)*Z_i. Each X_i has variance one; distinct coordinates have covariance rho, bounded away from one. Put M_m=max_i X_i. Independence gives\n\n    Var(M_m)=rho+(1-rho)*Var(max_i Z_i)>=rho.\n\nThus these maxima are not superconcentrated relative to the unit coordinate variance. Any two selected coordinates have covariance at least rho, including maximisers before and after Gaussian noise, so an overlap-to-zero chaos criterion also fails.\n\nNevertheless, for delta_m=(log m)^(-1/4), the number K_m of coordinates within delta_m of M_m tends to infinity in probability. To prove this, let b_m=sqrt(2 log m), d_m=delta_m/(2 sqrt(1-rho)), and x_m=b_m-d_m. A Gaussian Chernoff bound gives\n\n    P(max_i Z_i > b_m+d_m) <= exp(-b_m*d_m-d_m^2/2) -> 0.\n\nLet N_m count Z_i>=x_m. It is binomial with mean mu_m=m*barPhi(x_m). For x>=1, integrating the Gaussian density on [x,x+1/x] gives barPhi(x)>=exp(-3/2)*exp(-x^2/2)/(sqrt(2*pi)*x). Therefore\n\n    log mu_m >= b_m*d_m-d_m^2/2-log(x_m)-3/2-log(2*pi)/2 -> infinity.\n\nHere b_m*d_m is a positive constant times (log m)^(1/4), which dominates log(x_m)=O(log log m). Since Var(N_m)<=mu_m, Chebyshev gives N_m->infinity in probability. On the high-probability maximum event, each of these N_m coordinates is within 2*d_m of max Z, hence within delta_m of M_m. Thus K_m>=N_m with probability tending to one.",
++      "assumptions": [
++        "Independent standard Gaussian coordinates",
++        "Fixed positive common covariance rho",
++        "Candidate uses overlap bounded away from one, not overlap tending to zero"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:c0127-common-factor-peaks",
++        "url": "file:///~/brain_workers/w335/C0127_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0127-two-peak-quantifier",
++      "namespace": "probability.gaussian",
++      "logical_name": "two-independent-gaussian-peaks-fixed-deficit-probability",
++      "kind": "lemma",
++      "title": "Two-peak counterexample needs a probability quantifier [draft; pending w347]",
++      "statement": "For independent standard normal Z_1,Z_2 and fixed d>0, the probability both coordinates are within d of max(Z_1,Z_2) equals erf(d/2)<1. Repeating coordinates in two blocks does not change this probability. Such replication alone cannot establish near-maximal low-overlap peaks with probability tending to one.",
++      "proof_text": "Both coordinates are within d exactly when |Z_1-Z_2|<=d. Their difference is N(0,2), giving erf(d/2). Its Gaussian tail is strictly positive for finite d.",
++      "assumptions": [
++        "Fixed finite deficit d",
++        "Two independent standard normal block values"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:c0127-two-peak-quantifier",
++        "url": "file:///~/brain_workers/w335/C0127_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "c0127-common-factor-peaks",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0127-chaos-versus-superconcentration-an-equivalent-multiple-peaks-condition",
++      "kind": "specializes",
++      "rationale": "New card: \"This does not refute a criterion requiring overlaps to tend to zero\"; existing card: \"Find a multiple-peaks condition on a Gaussian field that is equivalent to chaos and superconcentration, or show that no such condition exists\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "c0127-common-factor-peaks",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0127-chaos-versus-superconcentration-an-equivalent-multiple-peaks-condition",
++      "kind": "cites",
++      "rationale": "New card: \"Var(M_m)>=rho\"; existing card: \"Find a multiple-peaks condition on a Gaussian field that is equivalent to chaos and superconcentration, or show that no such condition exists\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "c0127-two-peak-quantifier",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0127-chaos-versus-superconcentration-an-equivalent-multiple-peaks-condition",
++      "kind": "cites",
++      "rationale": "New card: \"erf(d/2)<1\"; existing card: \"Find a multiple-peaks condition on a Gaussian field that is equivalent to chaos and superconcentration, or show that no such condition exists\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    }
++  ]
++}
+--- a/math-brain-inbox/w335/bundle_004.json
++++ b/math-brain-inbox/w335/bundle_004.json
+@@ -0,0 +1,71 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w335",
++  "bundle_slug": "w335-p0050-20261010",
++  "entries": [
++    {
++      "key": "p0050-square-gap-singularity",
++      "namespace": "probability.random-graphs",
++      "logical_name": "negative-correlation-divergent-squared-marginal-gap-singularity",
++      "kind": "lemma",
++      "title": "Singularity from a divergent squared marginal gap [draft; pending w347]",
++      "statement": "Let mu and nu be laws of countably many zero-one indicators X_i, pairwise negatively correlated under each law. Suppose delta_i=E_mu X_i-E_nu X_i>=0 and sum_i delta_i^2=infinity. Then mu and nu are mutually singular. The criterion needs no common invariant group action. Its application to distinct free and wired spanning-forest laws requires checking the ordered-marginal, negative-correlation and divergent-squared-gap hypotheses; that divergence is not proved for arbitrary networks here.",
++      "proof_text": "For S_N=sum_{i<=N} delta_i X_i and D_N=sum_{i<=N} delta_i^2, the difference of expectations is D_N. Nonnegative weights and nonpositive off-diagonal covariances imply\n\n    Var_mu(S_N), Var_nu(S_N) <= sum_i delta_i^2 Var(X_i) <= D_N/4.\n\nLet t_N be the midpoint of the two means. Chebyshev gives mu(S_N<=t_N)<=1/D_N and nu(S_N>t_N)<=1/D_N. Choose increasing N_j with D_{N_j}>=2^j. Both error sums are finite. The first Borel-Cantelli lemma therefore makes the measurable event \"S_{N_j}>t_{N_j} for all sufficiently large j\" have mu-probability one and nu-probability zero. This is mutual singularity.",
++      "assumptions": [
++        "Countable indicator coordinates",
++        "Pairwise nonpositive covariances under both laws",
++        "Ordered marginal probabilities",
++        "Divergent sum of squared marginal differences"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:p0050-square-gap-singularity",
++        "url": "file:///~/brain_workers/w335/P0050_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0050-finite-gap-boundary",
++      "namespace": "probability.random-graphs",
++      "logical_name": "finite-coordinate-bernoulli-change-equivalent-measures",
++      "kind": "lemma",
++      "title": "Finite marginal differences need not imply singularity [draft; pending w347]",
++      "statement": "The independent Bernoulli product laws with first-coordinate parameters 3/5 and 2/5 and all other parameters 1/2 are distinct but equivalent. Their squared marginal-gap sum is 1/25. This example shows the preceding sufficient criterion cannot discard its divergence hypothesis or replace it by distinctness alone.",
++      "proof_text": "Only the first-coordinate density changes. The Radon-Nikodym derivative is 3/2 on X_1=1 and 2/3 on X_1=0, strictly positive and finite everywhere.",
++      "assumptions": [
++        "Independent Bernoulli coordinates",
++        "Exactly one changed coordinate"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:p0050-finite-gap-boundary",
++        "url": "file:///~/brain_workers/w335/P0050_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "p0050-square-gap-singularity",
++      "to_existing_logical": "math:probability.core:open-problem-p0050-singularity-of-distinct-free-and-wired-forest-measures",
++      "kind": "specializes",
++      "rationale": "New card: \"The criterion needs no common invariant group action\"; existing card: \"If the wired and free uniform spanning-forest measures differ on an infinite network, must they be mutually singular? Source: Probability on Trees and Networks, paperback electronic version 19 August 2026, Question 10.58, printed p.385.\nPosed in Probability on Trees and Networks,\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "p0050-square-gap-singularity",
++      "to_existing_logical": "math:probability.core:attempt-p0050-singularity-of-distinct-free-and-wired-forest-measures",
++      "kind": "analogous_to",
++      "rationale": "New card: \"sum_i delta_i^2=infinity\"; existing card: \"Arbitrary networks may lack it\"."
++    },
++    {
++      "from_key": "p0050-finite-gap-boundary",
++      "to_key": "p0050-square-gap-singularity",
++      "kind": "semantic_association",
++      "rationale": "Boundary card: \"squared marginal-gap sum is 1/25\"; criterion card: \"sum_i delta_i^2=infinity\". The boundary prevents dropping the divergence hypothesis."
++    }
++  ]
++}
+--- a/math-brain-inbox/w335/bundle_005.json
++++ b/math-brain-inbox/w335/bundle_005.json
+@@ -0,0 +1,43 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w335",
++  "bundle_slug": "w335-p0255-20261010",
++  "entries": [
++    {
++      "key": "p0255-weighted-star-cv",
++      "namespace": "probability.random-graphs",
++      "logical_name": "weighted-star-nearest-unvisited-walk-coefficient-of-variation-bound",
++      "kind": "lemma",
++      "title": "An absolute variation bound for weighted-star NUV walks [draft; pending w347]",
++      "statement": "For a finite star with at least one leaf and positive edge lengths, and a nearest-unvisited walk that stops after all vertices are visited, every random start distribution satisfies sd(L)/E L<=1/(2*sqrt(6)). For at least two leaves, write S for the sum of all edge lengths and w_1>=w_2 for the largest two. All lengths lie in [2S-w_1-w_2,2S-w_1], whose endpoint ratio is at most 3/2. A one-leaf star has constant positive length and coefficient zero. The constant is sharp over arbitrary start distributions; the uniform-start case is included but no optimality claim for that subclass is made. This does not prove an absolute bound for arbitrary graphs.",
++      "proof_text": "Consider a star with m>=2 leaves, positive leaf-edge lengths w_i, total S, and largest two lengths w_1>=w_2. A nearest-unvisited walk stops when every vertex has been visited; it does not return to its start. Its length from the centre is B=2S-w_1. From leaf r it first visits the centre and then the remaining leaves in increasing edge-length order, giving L_r=2S-w_r-max_{j!=r} w_j. Ties between equal weights do not change the total length.\n\nHence every start length lies between A=2S-w_1-w_2 and B. Since S>=w_1+w_2 and w_1>=w_2, B>=3w_2 and B/A<=3/2. For any random start, not only the uniform law, if u=E L then averaging (L-A)(B-L)>=0 gives Var(L)<=(B-u)(u-A). Further,\n\n    (B-A)^2/(4AB) - (B-u)(u-A)/u^2\n      = ((A+B)*u-2AB)^2/(4AB*u^2) >= 0.\n\nThus sd(L)/E L <= (B-A)/(2 sqrt(AB)) <= 1/(2 sqrt(6)). A one-leaf star has constant length and ratio zero. This proves an absolute bound for the weighted-star class requested as a boundary case of P0255.\n\nThe constant is sharp if arbitrary start distributions are allowed: on the three-vertex star with both weights one, give the centre probability 2/5 and each leaf probability 3/10. Then L is three with probability 2/5 and two with probability 3/5, giving Var(L)/(E L)^2=1/24. Under the uniform law that same star has coefficient sqrt(2)/7; no claim of optimality within the uniform-start subclass is made.",
++      "assumptions": [
++        "Positive weighted star with at least one leaf",
++        "Walk stops on visiting the final new vertex",
++        "Arbitrary random starting vertex"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:p0255-weighted-star-cv",
++        "url": "file:///~/brain_workers/w335/P0255_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "p0255-weighted-star-cv",
++      "to_existing_logical": "math:probability.core:open-problem-p0255-variation-of-nearest-unvisited-walk-length-under-a-random-start",
++      "kind": "specializes",
++      "rationale": "New card: \"This does not prove an absolute bound for arbitrary graphs\"; existing card: \"For every finite positive-length graph G and a uniform initial vertex V, is sd(L_NUV(G,V))/E L_NUV(G,V) bounded by an absolute constant? Source: Aldous: The Nearest Unvisited Vertex Walk on Random Graphs,internal date26August2021, Conjecture5 and stronger Open Problem4,PDF8. Stat\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "p0255-weighted-star-cv",
++      "to_existing_logical": "math:probability.core:attempt-p0255-variation-of-nearest-unvisited-walk-length-under-a-random-start",
++      "kind": "specializes",
++      "rationale": "New card: \"endpoint ratio is at most 3/2\"; existing card: \"a rigorous O(sqrt(log n)) coefficient-of-variation bound follows\"."
++    }
++  ]
++}
+--- a/math-brain-inbox/w335/bundle_006.json
++++ b/math-brain-inbox/w335/bundle_006.json
+@@ -0,0 +1,43 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w335",
++  "bundle_slug": "w335-c0014-20261010",
++  "entries": [
++    {
++      "key": "c0014-wiring-direction",
++      "namespace": "probability.electrical-networks",
++      "logical_name": "wired-layer-resistance-lower-comparison-and-interface-current-obstruction",
++      "kind": "lemma",
++      "title": "Wired interfaces reverse the unsupported layer upper comparison [draft; pending w347]",
++      "statement": "In a finite resistor network whose contracted intermediate interfaces yield a series chain of independently wired layer networks, the sum of those wired layer resistances is at most the original effective resistance. Rayleigh monotonicity alone cannot justify the opposite upper bound. On s-a-t and s-b-t with resistances (1,M) and (M,1), respectively, the original resistance is (M+1)/2 and the wired layer sum is 2M/(M+1). Their ratio (M+1)^2/(4M) is unbounded. To upper-bound the original resistance using layer flows, the interface current distributions must match. This does not identify a DGFF limiting law or refute an upper bound constructed using matched flows.",
++      "proof_text": "For a finite positive-resistance network separated into successive layers by interfaces, identify all vertices in each intermediate interface and replace the boundary terminal sets by wired terminals. If the resulting quotient is a series chain of wired layer networks, its total effective resistance is the sum of their wired effective resistances. Rayleigh monotonicity gives\n\n    sum of wired layer resistances <= original effective resistance.\n\nIdentification introduces extra zero-cost connections and decreases effective resistance. It does not, by itself, give the reverse upper bound. For an upper bound by Thomson's principle, unit flows in consecutive layers must have matching distributions on the intermediate interface.\n\nAn explicit counterexample has vertices s,a,b,t and resistances r(s,a)=r(b,t)=1, r(a,t)=r(s,b)=M>0. Before wiring a to b there are two parallel paths, each of resistance M+1, so R_original=(M+1)/2. Wiring a and b gives two successive parallel pairs with resistance M/(M+1), so their sum is R_wired=2M/(M+1). The ratio is (M+1)^2/(4M), unbounded as M grows. At M=100, R_original=50.5 and R_wired=200/101, a factor 25.5025 smaller.\n\nThe independently optimal wired-layer unit flows have incompatible interface currents. In the first layer the low-resistance edge into a carries M/(M+1); in the second layer the edge leaving a carries 1/(M+1). Their mismatch is (M-1)/(M+1). Joining these minimisers as a flow in the original graph violates Kirchhoff's law unless M=1. Wiring supplies the missing current transfer artificially.",
++      "assumptions": [
++        "Finite positive-resistance network",
++        "Wired layer terminal minima",
++        "Contracted quotient is a series chain"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:c0014-wiring-direction",
++        "url": "file:///~/brain_workers/w335/C0014_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "c0014-wiring-direction",
++      "to_existing_logical": "math:probability.gaussian:open-problem-c0014-limit-of-the-normalised-log-effective-resistance-of-the-dgff-electric",
++      "kind": "specializes",
++      "rationale": "New card: \"This does not identify a DGFF limiting law\"; existing card: \"For admissible approximations D_N of a domain D and the network with resistances (13.13) built from the DGFF, characterise the limit distribution of x -> (log N)^{-1/2} log R_eff(floor(xN), D_N^c) as N -> infinity\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "c0014-wiring-direction",
++      "to_existing_logical": "math:probability.gaussian:attempt-c0014-limit-of-the-normalised-log-effective-resistance-of-the-dgff-electric",
++      "kind": "refutes",
++      "rationale": "New card: \"Rayleigh monotonicity alone cannot justify the opposite upper bound\"; existing card: \"Rayleigh monotonicity gives R_eff(x, D_N^c) <= sum over dyadic annuli around x of the resistance across the annulus\"."
++    }
++  ]
++}
+--- a/math-brain-inbox/w335/bundle_007.json
++++ b/math-brain-inbox/w335/bundle_007.json
+@@ -0,0 +1,44 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w335",
++  "bundle_slug": "w335-c0073-20261010",
++  "entries": [
++    {
++      "key": "c0073-speed-measure-obstruction",
++      "namespace": "probability.random-walks",
++      "logical_name": "dangling-leaf-conductance-constant-speed-diffusion-normalization",
++      "kind": "lemma",
++      "title": "Walk clocks change the conductivity-to-diffusion comparison [draft; pending w347]",
++      "statement": "On the integer spine with unit conductances and a conductance-a dangling leaf at each site, a>0, project both vertices in a cell to its integer coordinate. The rate-one constant-speed walk has variance growth D_CS=1/(1+a), whereas the edge-rate variable-speed walk has D_VS=1. Electrical conductivity per cell is one for every a. The speed masses are respectively 2+2a and 2, so increasing leaf conductance slows the constant-speed walk despite nondecreasing conductivity. This is a periodic-network normalization example, not a counterexample to iid high-dimensional percolation monotonicity or its proposed critical exponent.",
++      "proof_text": "For the continuous-time constant-speed walk (total jump rate one), the transitions from a spine vertex are left and right at rate 1/(2+a) each and to its leaf at rate a/(2+a); from a leaf the return rate is one. The two-type stationary spine probability is (2+a)/(2+2a), by balance. The projected coordinate is a martingale and its quadratic-variation rate is 2/(2+a) at a spine vertex and zero at a leaf. Thus\n\n    D_CS = [(2+a)/(2+2a)] * [2/(2+a)] = 1/(1+a).\n\nIn stationary type, the variance identity holds exactly for every t. Ergodicity of the two-state type chain gives the same limiting growth from any initial type, and bounded martingale jumps yield the invariance-principle variance by the martingale central-limit argument.\n\nFor the variable-speed walk with each edge jump rate equal to its conductance, the spine-to-leaf and leaf-to-spine rates are both a. The stationary spine fraction is 1/2 and the projected quadratic-variation rate there is two, hence D_VS=1 for every a>0.\n\nThe electrical conductivity per spatial cell is kappa=1: all macroscopic current uses the spine and no current flows into a dangling leaf. The constant-speed speed-measure mass per cell is m_CS=2+2a, while the variable-speed counting mass is two. Therefore D_CS=2*kappa/m_CS and D_VS=2*kappa/2. Increasing a leaves kappa unchanged and strictly decreases D_CS. Rayleigh monotonicity of conductivity cannot, without a separate speed-measure argument, imply monotonicity of a normalized walk diffusion coefficient.",
++      "assumptions": [
++        "Periodic decorated integer spine",
++        "Positive dangling conductance a",
++        "Diffusion means coordinate variance growth per unit time",
++        "Specified constant-speed or edge-rate clock"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:c0073-speed-measure-obstruction",
++        "url": "file:///~/brain_workers/w335/C0073_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "c0073-speed-measure-obstruction",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0073-critical-exponent-of-the-diffusion-constant-of-random-walk-on-the-supe",
++      "kind": "analogous_to",
++      "rationale": "New card: \"This is a periodic-network normalization example\"; existing card: \"For random walk on the infinite percolation cluster in sufficiently high dimension, show that the diffusion constant satisfies sigma(p)^2 ~ (p - p_c)^2 as p decreases to p_c; even monotonicity of p -> sigma^2(p) is not known\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "c0073-speed-measure-obstruction",
++      "to_existing_logical": "math:probability.percolation:open-problem-c0073-critical-exponent-of-the-diffusion-constant-of-random-walk-on-the-supe",
++      "kind": "cites",
++      "rationale": "New card: \"increasing leaf conductance slows the constant-speed walk\"; existing card: \"For random walk on the infinite percolation cluster in sufficiently high dimension, show that the diffusion constant satisfies sigma(p)^2 ~ (p - p_c)^2 as p decreases to p_c; even monotonicity of p -> sigma^2(p) is not known\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    }
++  ]
++}
+--- a/math-brain-inbox/w335/bundle_008.json
++++ b/math-brain-inbox/w335/bundle_008.json
+@@ -0,0 +1,77 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w335",
++  "bundle_slug": "w335-c0109-20261010",
++  "entries": [
++    {
++      "key": "c0109-truncation-envelope",
++      "namespace": "probability.random-matrices",
++      "logical_name": "finite-two-plus-epsilon-moment-tail-variance-envelope-sharp-power",
++      "kind": "lemma",
++      "title": "Moment truncation controls variance without proving a spectral rate [draft; pending w347]",
++      "statement": "If eps>0 and M=E|X|^(2+eps)<infinity, then E[|X|^2 1_{|X|>R}]<=M*R^(-eps) for R>0. The power eps is sharp as a scalar envelope: a symmetric atom law with total mass c*2^(-(2+eps)*j)/j^2 at +/-2^j has finite (2+eps)-moment and tail variance of order 2^(-eps*m)/m^2 at R=2^m. This proves neither a lower bound nor an optimal exponent for a circular-law convergence rate.",
++      "proof_text": "For eps>0, R>0 and M=E|X|^(2+eps)<infinity,\n\n    E[|X|^2 * 1_{|X|>R}] <= M*R^(-eps),\n    P(|X|>R) <= M*R^(-(2+eps)).\n\nThese follow pointwise from |X|^2<=R^(-eps)|X|^(2+eps) on the tail, and Markov's inequality. At R=n^r the first bound is M*n^(-r*eps). It bounds a truncation error; it is not a lower bound for the error of the original matrix's empirical eigenvalue law.\n\nThe power eps in the scalar tail envelope cannot be uniformly increased under the same moment assumption. Take a symmetric law with total probability q_j=c*2^(-(2+eps)*j)/j^2 at the two atoms +/-2^j, j>=1, and remaining mass at zero, choosing c>0 sufficiently small. It has mean zero, positive finite variance and finite (2+eps)-moment c*sum_j j^(-2). At R=2^m, its missing variance is\n\n    c*sum_{j>m} 2^(-eps*j)/j^2.\n\nThe first summand gives a lower bound; a geometric series after replacing j by m gives an upper bound. For m>=1 this quantity lies between positive constants times 2^(-eps*m)/m^2. Thus it is not O(R^(-eps-eta)) for any eta>0 along dyadic cutoffs. Rescaling by its standard deviation preserves the tail exponent. This sharpness statement concerns a scalar truncation envelope and does not prove a moment-dependent circular-law lower bound.",
++      "assumptions": [
++        "eps>0",
++        "Finite (2+eps)-moment",
++        "Tail sharpness concerns scalar laws only"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:c0109-truncation-envelope",
++        "url": "file:///~/brain_workers/w335/C0109_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "c0109-nonnormal-rank-obstruction",
++      "namespace": "probability.random-matrices",
++      "logical_name": "rank-one-nonnormal-perturbation-unit-spectral-measure-discrepancy",
++      "kind": "lemma",
++      "title": "Rank-one perturbations can move a nonnormal spectral law by one [draft; pending w347]",
++      "statement": "For n>=2, let J_n be the nilpotent matrix with ones on the superdiagonal, and C_n=J_n+e_n e_1^T. Their difference has rank one, but the empirical eigenvalue laws differ by one on the bounded 1-Lipschitz test f(z)=min(|z|,1): J_n has only zero eigenvalues and C_n has all nth roots of unity. Thus a Hermitian-style rank/n bound cannot control nonnormal empirical eigenvalue laws in general. This deterministic example is not an iid circular-law lower bound.",
++      "proof_text": "J_n^n=0. For every z with z^n=1, C_n(1,z,...,z^(n-1))=z(1,z,...,z^(n-1)); these are n distinct eigenvalues. The perturbation is the single nonzero outer product e_n e_1^T. The radial test is zero at the origin and one at each root of unity.",
++      "assumptions": [
++        "Deterministic nonnormal matrices",
++        "n>=2",
++        "Bounded Lipschitz comparison of eigenvalue laws"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:c0109-nonnormal-rank-obstruction",
++        "url": "file:///~/brain_workers/w335/C0109_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "c0109-truncation-envelope",
++      "to_existing_logical": "math:probability.random-matrices:open-problem-c0109-rate-of-convergence-in-the-circular-law-as-a-function-of-the-moment-as",
++      "kind": "specializes",
++      "rationale": "New card: \"This proves neither a lower bound nor an optimal exponent\"; existing card: \"Determine the optimal rate n^{-delta} of convergence of the empirical spectral distribution of n^{-1/2} M_n to the circular law under a (2+eps)-th moment assumption, and the exact dependence of delta on eps\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "c0109-truncation-envelope",
++      "to_existing_logical": "math:probability.random-matrices:attempt-c0109-rate-of-convergence-in-the-circular-law-as-a-function-of-the-moment-as",
++      "kind": "cites",
++      "rationale": "New card: \"tail variance of order 2^(-eps*m)/m^2\"; existing card: \"which caps delta(eps)\"."
++    },
++    {
++      "from_key": "c0109-nonnormal-rank-obstruction",
++      "to_existing_logical": "math:probability.random-matrices:open-problem-c0109-rate-of-convergence-in-the-circular-law-as-a-function-of-the-moment-as",
++      "kind": "analogous_to",
++      "rationale": "New card: \"This deterministic example is not an iid circular-law lower bound\"; existing card: \"Determine the optimal rate n^{-delta} of convergence of the empirical spectral distribution of n^{-1/2} M_n to the circular law under a (2+eps)-th moment assumption, and the exact dependence of delta on eps\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "c0109-nonnormal-rank-obstruction",
++      "to_key": "c0109-truncation-envelope",
++      "kind": "semantic_association",
++      "rationale": "Rank card: \"a Hermitian-style rank/n bound cannot control nonnormal empirical eigenvalue laws\"; tail card: \"This proves neither a lower bound nor an optimal exponent\". Both limit unsupported transfers in a truncation route."
++    }
++  ]
++}
+--- a/math-brain-inbox/w335/bundle_009.json
++++ b/math-brain-inbox/w335/bundle_009.json
+@@ -0,0 +1,70 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w335",
++  "bundle_slug": "w335-p0004-20261010",
++  "entries": [
++    {
++      "key": "p0004-nonstationary-tree",
++      "namespace": "probability.percolation",
++      "logical_name": "bounded-degree-tree-without-rooted-connective-limit",
++      "kind": "lemma",
++      "title": "Bounded degree alone does not give a connective limit [draft; pending w347]",
++      "statement": "There is an infinite connected tree of maximum degree three whose rooted self-avoiding-walk counts c_n satisfy liminf c_n^(1/n)=1 and limsup c_n^(1/n)=2. Use successive level-block lengths 2^(2^j), with one child in even blocks and two in odd blocks. Rooted scalar submultiplicativity already fails at c_1=c_2=1,c_3=2. This refutes a generic bounded-degree existence route, but the example is not a stationary iid percolation cluster of Z^2.",
++      "proof_text": "Let c_n(o) count length-n self-avoiding walks from the root of an infinite spherically symmetric tree. At level l, all vertices have b_l children. Partition the levels into successive blocks of lengths L_j=2^(2^j), j=0,1,... . Give one child at every level in even blocks and two children in odd blocks. This is an infinite connected tree with maximum degree three.\n\nEvery self-avoiding root walk moves outward, so c_n(o)=product_{l<n} b_l. At the end N_j=sum_{h<=j} L_h, write B_j for the number of two-child levels among those N_j. Then log(c_{N_j}(o))/(N_j*log 2)=B_j/N_j. The earlier blocks have total at most j*L_{j-1}=j*sqrt(L_j), negligible relative to L_j. Along odd block ends this ratio tends to one; along even block ends it tends to zero. Since every ratio lies in [0,1],\n\n    liminf c_n(o)^(1/n)=1,  limsup c_n(o)^(1/n)=2.\n\nThe exponential limit therefore does not exist even on an infinite connected bounded-degree graph. On the first three levels, c_1=c_2=1 but c_3=2, directly refuting scalar rooted submultiplicativity c_{n+m}(o)<=c_n(o)*c_m(o). This tree lacks the translation-stationary percolation structure of P0004 and is not a counterexample to that problem.",
++      "assumptions": [
++        "Infinite spherically symmetric rooted tree",
++        "Nonstationary alternating branching blocks",
++        "Rooted self-avoiding-walk counts"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:p0004-nonstationary-tree",
++        "url": "file:///~/brain_workers/w335/P0004_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0004-full-lattice-boundary",
++      "namespace": "probability.percolation",
++      "logical_name": "full-square-lattice-connective-limit-submultiplicativity-boundary",
++      "kind": "lemma",
++      "title": "Translation invariance proves the full-lattice boundary limit [draft; pending w347]",
++      "statement": "For the p=1 bond-percolation configuration on Z^2, let c_n(v) count length-n self-avoiding walks from v. Translation invariance and prefix splitting give c_{n+m}(0)<=c_n(0)*c_m(0). Thus c_n(v)^(1/n) has a common limit in [2,3] by Fekete subadditivity, independent of v. This boundary result does not prove the quenched limit for p in (p_c,1).",
++      "proof_text": "Translate each prefix endpoint to zero; the permitted suffixes inject into all length-m origin walks. This gives scalar submultiplicativity. Fekete applied to log c_n gives the limit. There are 2^n monotone northeast walks and at most 4*3^(n-1) walks without immediate reversal, giving the bounds. Translation preserves the counts.",
++      "assumptions": [
++        "p=1 on the square lattice",
++        "Finite-length self-avoiding walks"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:p0004-full-lattice-boundary",
++        "url": "file:///~/brain_workers/w335/P0004_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "p0004-nonstationary-tree",
++      "to_existing_logical": "math:probability.core:open-problem-p0004-existence-of-the-quenched-connective-limit",
++      "kind": "analogous_to",
++      "rationale": "New card: \"the example is not a stationary iid percolation cluster of Z^2\"; existing card: \"On the infinite supercritical bond-percolation cluster of Z^2, does c_n(v)^(1/n) converge almost surely, independently of v? Source: Selected problems in probability theory, Question 2.3, PDF pages 3-4.\nPosed in Selected problems in probability theory\nStatus as recorded in the ca\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "p0004-nonstationary-tree",
++      "to_existing_logical": "math:probability.core:attempt-p0004-existence-of-the-quenched-connective-limit",
++      "kind": "semantic_association",
++      "rationale": "New card: \"Rooted scalar submultiplicativity already fails\"; existing card: \"No stationary scalar subadditive process or liminf lower bound was obtained\"."
++    },
++    {
++      "from_key": "p0004-full-lattice-boundary",
++      "to_existing_logical": "math:probability.core:open-problem-p0004-existence-of-the-quenched-connective-limit",
++      "kind": "specializes",
++      "rationale": "New card: \"This boundary result does not prove the quenched limit\"; existing card: \"On the infinite supercritical bond-percolation cluster of Z^2, does c_n(v)^(1/n) converge almost surely, independently of v? Source: Selected problems in probability theory, Question 2.3, PDF pages 3-4.\nPosed in Selected problems in probability theory\nStatus as recorded in the ca\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    }
++  ]
++}
+--- a/math-brain-inbox/w335/bundle_010.json
++++ b/math-brain-inbox/w335/bundle_010.json
+@@ -0,0 +1,79 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w335",
++  "bundle_slug": "w335-p0027-20261010",
++  "entries": [
++    {
++      "key": "p0027-smooth-map-rigidity",
++      "namespace": "probability.stochastic-processes",
++      "logical_name": "smooth-deterministic-reflected-brownian-state-map-euclidean-rigidity",
++      "kind": "lemma",
++      "title": "Smooth deterministic reflected-Brownian maps are Euclidean isometries [draft; pending w347]",
++      "statement": "Let D be a bounded connected C^2 domain in R^d and F:D->D a C^2 diffeomorphism. If, for every initial x in D, normal reflected Brownian motion X started at x has F(X_t) with the normal reflected-Brownian law started at F(x), then F(x)=Qx+b for a fixed orthogonal Q and b. The conclusion uses smoothness, an onto map, and all starting points; it does not classify arbitrary measurable deterministic maps or convert every shy coupling to a deterministic one.",
++      "proof_text": "At an interior starting point the small-time covariance of F(X_t)-F(x), divided by t, tends to DF(x)*DF(x)^T by Ito's formula (reflection has no first-order effect before the boundary is hit). The corresponding limit for a reflected Brownian motion started at the interior point F(x) is the identity. Thus DF*DF^T=I at every x. Since DF is square, it is orthogonal, so its columns e_i=partial_i F form an orthonormal basis.\n\nSet A_ijk=<partial_i partial_j F,e_k>. Equality of mixed partials gives A_ijk=A_jik. Differentiating <e_j,e_k>=delta_jk gives A_ijk=-A_ikj. Combining the two symmetries,\n\n    A_ijk = A_jik = -A_jki = -A_kji\n           = A_kij = A_ikj = -A_ijk,\n\nso every A_ijk is zero. The e_k span R^d, hence every second derivative of F is zero. On a connected open domain this makes DF a fixed orthogonal matrix Q and F-Qx a constant b. This establishes rigidity under the stated regularity and all-starting-points assumptions.",
++      "assumptions": [
++        "Bounded connected C^2 domain",
++        "C^2 diffeomorphism from D onto D",
++        "Normal Brownian covariance in the interior",
++        "Reflected law preserved for every initial point"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:p0027-smooth-map-rigidity",
++        "url": "file:///~/brain_workers/w335/P0027_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "p0027-isometry-gap",
++      "namespace": "probability.stochastic-processes",
++      "logical_name": "reflected-brownian-isometry-coupling-positive-displacement-criterion",
++      "kind": "lemma",
++      "title": "Positive displacement characterizes shy isometry couplings [draft; pending w347]",
++      "statement": "Let F(x)=Qx+b be a Euclidean isometry preserving a bounded connected smooth domain D. Suppose normal reflected Brownian motion X in D almost surely visits every nonempty interior open set infinitely often. Then Y=F(X) is a reflected-Brownian coupling, and it is shy if and only if min_{closure D}|x-F(x)|>0. A bounded convex preserving domain has a fixed centroid and therefore no shy isometry coupling. A planar annulus with inner radius R>0 and nontrivial rotation theta has separation at least 2R*|sin(theta/2)|. No claim about arbitrary nondeterministic shy couplings is made.",
++      "proof_text": "For an isometry F preserving D, normal reflection is equivariant: Q sends Brownian noise to Brownian noise and the inward normal at x to the inward normal at F(x). Thus F(X) has the reflected law. Suppose also that X visits every nonempty interior open set infinitely often almost surely, as normal reflected Brownian motion does in a bounded smooth connected domain. Then the deterministic isometry coupling is shy exactly when\n\n    min_{x in closure D} |x-F(x)| > 0.\n\nIf the minimum is positive the distance stays uniformly positive. If it is zero, for every epsilon>0 the set {x in D: |x-F(x)|<epsilon} is nonempty and open by continuity and density of D in its closure. Recurrence forces visits to it. Applying this to epsilon=1/k shows inf_t |X_t-F(X_t)|=0 almost surely, ruling out shyness.\n\nIf D is convex, its volume centroid c lies in D. Any preserving Euclidean isometry fixes c: change variables in its centroid integral to obtain Qc+b=c. Therefore this regular deterministic class has no shy coupling on a bounded convex smooth domain. This is not a claim about all nondeterministic couplings on such a domain.\n\nOn the annulus R<|x|<R_out in R^2, 0<R<R_out, rotation by theta has minimum displacement 2R*|sin(theta/2)|. Every nontrivial rotation modulo 2*pi is therefore a deterministic shy coupling. The prior antipodal example is theta=pi. Letting R=0 or theta=0 removes the positive-gap check.",
++      "assumptions": [
++        "Euclidean isometry preserving D",
++        "Normal reflection",
++        "Recurrence to every nonempty interior open set",
++        "Compact domain closure"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-work:w335:p0027-isometry-gap",
++        "url": "file:///~/brain_workers/w335/P0027_proof.md",
++        "revision": "author-checked-20261010-pending-independent-w347",
++        "license": "owner-own-work",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "p0027-smooth-map-rigidity",
++      "to_existing_logical": "math:probability.core:open-problem-p0027-rigidity-of-shy-reflected-brownian-couplings",
++      "kind": "specializes",
++      "rationale": "New card: \"it does not classify arbitrary measurable deterministic maps\"; existing card: \"If reflected Brownian motions in a bounded connected domain can remain a positive distance apart forever with positive probability, must there be such a coupling with one path a fixed deterministic function of the other at each time? Source: Krzysztof Burdzy: My favorite open pro\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "p0027-smooth-map-rigidity",
++      "to_existing_logical": "math:probability.core:attempt-p0027-rigidity-of-shy-reflected-brownian-couplings",
++      "kind": "generalizes",
++      "rationale": "New card: \"F(x)=Qx+b\"; existing card: \"If an isometry F preserves a reflected-Brownian domain\"."
++    },
++    {
++      "from_key": "p0027-isometry-gap",
++      "to_existing_logical": "math:probability.core:open-problem-p0027-rigidity-of-shy-reflected-brownian-couplings",
++      "kind": "specializes",
++      "rationale": "New card: \"No claim about arbitrary nondeterministic shy couplings is made\"; existing card: \"If reflected Brownian motions in a bounded connected domain can remain a positive distance apart forever with positive probability, must there be such a coupling with one path a fixed deterministic function of the other at each time? Source: Krzysztof Burdzy: My favorite open pro\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
++    },
++    {
++      "from_key": "p0027-isometry-gap",
++      "to_key": "p0027-smooth-map-rigidity",
++      "kind": "semantic_association",
++      "rationale": "Gap card: \"it is shy if and only if min_{closure D}|x-F(x)|>0\"; rigidity card: \"F(x)=Qx+b for a fixed orthogonal Q and b\". Together they delimit the stated smooth deterministic-map class."
++    }
++  ]
++}

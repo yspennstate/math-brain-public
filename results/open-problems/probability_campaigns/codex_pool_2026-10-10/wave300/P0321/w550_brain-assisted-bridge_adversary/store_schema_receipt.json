@@ -1,0 +1,72 @@
+{
+  "database": "~\\math-brain-build\\local\\population\\brain.sqlite3",
+  "read_only": true,
+  "gate": "compute_gate.json",
+  "tables": [
+    {
+      "name": "bundle_manifests",
+      "sql": "CREATE TABLE bundle_manifests (\n    id TEXT PRIMARY KEY,\n    digest TEXT NOT NULL UNIQUE,\n    release_digest TEXT NOT NULL,\n    payload_json TEXT NOT NULL,\n    created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "bundle_members",
+      "sql": "CREATE TABLE bundle_members (\n    bundle_id TEXT NOT NULL REFERENCES bundle_manifests(id),\n    entry_key TEXT NOT NULL,\n    node_id TEXT NOT NULL REFERENCES nodes(id),\n    PRIMARY KEY(bundle_id, entry_key),\n    UNIQUE(bundle_id, node_id)\n)"
+    },
+    {
+      "name": "claim_provenance",
+      "sql": "CREATE TABLE claim_provenance (\n    claim_id       TEXT PRIMARY KEY,\n    evidence_class TEXT NOT NULL,\n    source_kind    TEXT NOT NULL DEFAULT '',\n    source_ref     TEXT NOT NULL DEFAULT '',\n    artifact_path  TEXT NOT NULL DEFAULT '',\n    bundle_id      TEXT NOT NULL DEFAULT '',\n    fire_id        TEXT NOT NULL DEFAULT '',\n    measurement    TEXT NOT NULL DEFAULT '',\n    status         TEXT NOT NULL DEFAULT '',\n    read_from      TEXT NOT NULL DEFAULT '[]',\n    recorded_at    TEXT NOT NULL\n)"
+    },
+    {
+      "name": "claims",
+      "sql": "CREATE TABLE claims (\n    id TEXT PRIMARY KEY REFERENCES nodes(id),\n    payload_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "edge_retractions",
+      "sql": "CREATE TABLE edge_retractions (\n    edge_id TEXT PRIMARY KEY REFERENCES edges(id),\n    reason TEXT NOT NULL,\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "edges",
+      "sql": "CREATE TABLE edges (\n    id TEXT PRIMARY KEY,\n    source_id TEXT NOT NULL REFERENCES nodes(id),\n    target_id TEXT NOT NULL REFERENCES nodes(id),\n    kind TEXT NOT NULL,\n    rationale TEXT NOT NULL,\n    weight REAL NOT NULL CHECK(weight > 0 AND weight <= 1),\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL,\n    UNIQUE(source_id, target_id, kind)\n)"
+    },
+    {
+      "name": "evidence",
+      "sql": "CREATE TABLE evidence (\n    id TEXT PRIMARY KEY REFERENCES nodes(id),\n    claim_id TEXT NOT NULL REFERENCES claims(id),\n    payload_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "evidence_attestations",
+      "sql": "CREATE TABLE evidence_attestations (\n    evidence_id TEXT PRIMARY KEY REFERENCES evidence(id),\n    claim_id TEXT NOT NULL REFERENCES claims(id),\n    nonce TEXT NOT NULL UNIQUE,\n    payload_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "evidence_receipts",
+      "sql": "CREATE TABLE evidence_receipts (\n    evidence_id TEXT PRIMARY KEY REFERENCES evidence(id),\n    claim_id TEXT NOT NULL REFERENCES claims(id),\n    nonce TEXT NOT NULL UNIQUE,\n    payload_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "mistakes",
+      "sql": "CREATE TABLE mistakes (\n    id TEXT PRIMARY KEY REFERENCES nodes(id),\n    claim_id TEXT NOT NULL REFERENCES claims(id),\n    payload_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "nodes",
+      "sql": "CREATE TABLE nodes (\n    id TEXT PRIMARY KEY,\n    kind TEXT NOT NULL,\n    title TEXT NOT NULL,\n    body TEXT NOT NULL,\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "reflex_sources",
+      "sql": "CREATE TABLE reflex_sources (\n    reflex_id TEXT NOT NULL REFERENCES reflexes(id),\n    mistake_id TEXT NOT NULL REFERENCES mistakes(id),\n    PRIMARY KEY(reflex_id, mistake_id)\n)"
+    },
+    {
+      "name": "reflexes",
+      "sql": "CREATE TABLE reflexes (\n    id TEXT PRIMARY KEY REFERENCES nodes(id),\n    payload_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    },
+    {
+      "name": "schema_meta",
+      "sql": "CREATE TABLE schema_meta (\n    version INTEGER PRIMARY KEY,\n    applied_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP\n)"
+    },
+    {
+      "name": "verification_event_evidence",
+      "sql": "CREATE TABLE verification_event_evidence (\n    event_id TEXT NOT NULL REFERENCES verification_events(id),\n    evidence_id TEXT NOT NULL REFERENCES evidence_receipts(evidence_id),\n    ordinal INTEGER NOT NULL CHECK(ordinal >= 0),\n    PRIMARY KEY(event_id, evidence_id),\n    UNIQUE(event_id, ordinal)\n)"
+    },
+    {
+      "name": "verification_events",
+      "sql": "CREATE TABLE verification_events (\n    id TEXT PRIMARY KEY,\n    claim_id TEXT NOT NULL REFERENCES claims(id),\n    payload_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+    }
+  ],
+  "seconds": 0.05421800003387034
+}

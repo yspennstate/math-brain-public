@@ -1,0 +1,138 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w517",
+  "bundle_slug": "p0297-competitive-gaussian-paths-draft-001",
+  "entries": [
+    {
+      "key": "O1",
+      "namespace": "probability.firstpassage",
+      "logical_name": "gaussian-optimizer-bias-draft",
+      "kind": "concept",
+      "title": "DRAFT: Gaussian route selection changes the mean",
+      "statement": "Unreviewed campaign DRAFT; independent mathematical check pending. For v>0, rho in [-1,1], xi>0, two parallel edges with jointly centered Gaussian log fields X,Y of variance v and covariance rho*v have E[log min(exp(xi*X),exp(xi*Y))]=-xi*sqrt(v*(1-rho)/pi), although each fixed edge has centered log length.",
+      "proof_text": null,
+      "assumptions": [
+        "Joint Gaussian law with the stated covariance",
+        "Two unit edges in parallel",
+        "xi>0"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w517:P0297:O1",
+        "url": "~/brain_workers/w517/INDEPENDENT.md",
+        "revision": "2026-10-10-author-draft-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "pending w518",
+      "remaining_gap": "Independent check pending. This is an elementary graph counterexample, not an LQG metric or a refutation of a dimension conjecture."
+    },
+    {
+      "key": "O2",
+      "namespace": "probability.firstpassage",
+      "logical_name": "gaussian-marginals-do-not-determine-crossing-exponents-draft",
+      "kind": "concept",
+      "title": "DRAFT: Marginals do not determine crossing exponents",
+      "statement": "Unreviewed campaign DRAFT; independent mathematical check pending. Fix xi,kappa>0, epsilon_n=exp(-n) and m_n=ceil(exp(kappa*n)). On a graph of m_n parallel unit edges put D_n=min_i exp(xi*X_{n,i}) and let a_n be any median of D_n. If the fields within n are independent N(0,n), log(a_n)/log(epsilon_n) tends to xi*sqrt(2*kappa); if all fields are one common N(0,n), it tends to zero. Thus identical Gaussian edge marginals and D(X+c)=exp(xi*c)D(X) do not determine an optimized normalization exponent. No independence across n is needed. These growing graphs are not GFF or LQG models.",
+      "proof_text": null,
+      "assumptions": [
+        "Within each n the first model has independent Gaussian fields",
+        "The second model has one common Gaussian field",
+        "Geometry is the specified growing parallel-edge graph",
+        "Median crossing normalizer; no independence across n is needed"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w517:P0297:O2",
+        "url": "~/brain_workers/w517/INDEPENDENT.md",
+        "revision": "2026-10-10-author-draft-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "pending w518",
+      "remaining_gap": "Independent check pending. Actual GFF covariance, planar crossing geometry and LQG locality are absent from this toy model; the full dimension remains unproved."
+    },
+    {
+      "key": "NT",
+      "namespace": "probability.firstpassage",
+      "logical_name": "two-route-near-tie-error-bound-draft",
+      "kind": "concept",
+      "title": "DRAFT: Conditional two-route near-tie error bound",
+      "statement": "Unreviewed campaign DRAFT; independent mathematical check pending. Let X be a finite centered Gaussian vector with covariance C positive semidefinite, V=max_i C_ii, xi>0, and exactly two lengths l_p=sum_i a_pi exp(xi X_i), with nonnegative nonzero coefficient vectors. Put f_p=log l_p, w_pi=a_pi exp(xi X_i)/l_p, Delta=f_1-f_2, R=(w_1-w_2)^T C(w_1-w_2), pi_p=exp(-beta f_p)/sum_{q=1}^2 exp(-beta f_q) and B_beta=pi_1*pi_2*R. Suppose nu(A)=E[R*1{Delta in A}] has density b on (-eta,eta), eta>0, and |b(t)-b(0)|<=L|t| there. For beta>0, |beta E B_beta-b(0)| <= 2 log(2)L/beta+(4 beta V+2 b(0))exp(-beta eta). No density assumption is needed outside this interval. For a cutoff family at scale T_n, divide this bound by T_n; a joint cutoff/temperature limit requires both resulting error terms to vanish and b_n(0)/T_n to have a determined limit. Those uniform hypotheses are not proved for LQG here.",
+      "proof_text": null,
+      "assumptions": [
+        "xi>0; two nonzero nonnegative finite coefficient vectors",
+        "C positive semidefinite; w are normalized exponential path weights",
+        "Local absolute continuity and stated Lipschitz bound for the weighted gap measure",
+        "B_beta=pi1*pi2*R uses exactly two alternatives"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w517:P0297:NT",
+        "url": "~/brain_workers/w517/NEAR_TIE_LEMMA.md",
+        "revision": "2026-10-10-author-draft-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "pending w518",
+      "remaining_gap": "Uniform cutoff-dependent gap-density bounds, convergence of b_n(0)/T_n, within-path occupation response and multi-route competitiveness remain unproved for LFPP."
+    },
+    {
+      "key": "3R",
+      "namespace": "probability.firstpassage",
+      "logical_name": "competing-route-correction-to-gaussian-switching-draft",
+      "kind": "concept",
+      "title": "DRAFT: A third route suppresses a pair's switching term",
+      "statement": "Unreviewed campaign DRAFT; independent mathematical check pending. Let Z,U,V0 be independent N(0,1), xi>0, M>=0, and let three parallel edges have log lengths f1=xi(Z+U), f2=xi(Z-U), f3=-M+xi V0. Their Gaussian field covariance is diag(2,2,1), positive definite. For full soft weights pi_p=exp(-beta f_p)/sum_{q=1}^3 exp(-beta f_q), the covariance distance of pair 1,2 is R12=4 and lim_{beta->infinity} beta E[pi_1*pi_2*R12]=[2/(xi sqrt(2*pi))]*Phi(-M/(xi sqrt(2))), where Phi is the standard normal distribution function. The isolated two-route contribution is 2/(xi sqrt(2*pi)). At M=0 the full pair contribution is half; for large M its ratio tends to zero. Pair gap regularity alone does not justify substitution into a full-model switching sum: the pair must beat every other route at its tie. This finite example does not refute w516's qualified reduction or an LQG dimension formula.",
+      "proof_text": null,
+      "assumptions": [
+        "The full soft weights include all three routes",
+        "The third base length is exp(-M)>0",
+        "xi is fixed; beta tends to infinity"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:w517:P0297:3R",
+        "url": "~/brain_workers/w517/NEAR_TIE_LEMMA.md",
+        "revision": "2026-10-10-author-draft-review-pending",
+        "license": "owner-own-work",
+        "excerpt": null
+      },
+      "review_status": "pending w518",
+      "remaining_gap": "Finite model only. Refutes an unqualified isolated-pair replacement, not w516 L1-L5 or any LQG dimension formula."
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "O2",
+      "to_key": "O1",
+      "kind": "analogous_to",
+      "rationale": "Both ends optimize Gaussian route lengths. O1 computes finite selection bias; O2 proves the same dependence issue can persist at normalization-exponent scale.",
+      "supporting_ends": {
+        "from_statement": "Unreviewed campaign DRAFT; independent mathematical check pending. Fix xi,kappa>0, epsilon_n=exp(-n) and m_n=ceil(exp(kappa*n)). On a graph of m_n parallel unit edges put D_n=min_i exp(xi*X_{n,i}) and let a_n be any median of D_n. If the fields within n are independent N(0,n), log(a_n)/log(epsilon_n) tends to xi*sqrt(2*kappa); if all fields are one common N(0,n), it tends to zero. Thus identical Gaussian edge marginals and D(X+c)=exp(xi*c)D(X) do not determine an optimized normalization exponent. No independence across n is needed. These growing graphs are not GFF or LQG models.",
+        "to_statement": "Unreviewed campaign DRAFT; independent mathematical check pending. For v>0, rho in [-1,1], xi>0, two parallel edges with jointly centered Gaussian log fields X,Y of variance v and covariance rho*v have E[log min(exp(xi*X),exp(xi*Y))]=-xi*sqrt(v*(1-rho)/pi), although each fixed edge has centered log length."
+      }
+    },
+    {
+      "from_key": "3R",
+      "to_key": "NT",
+      "kind": "analogous_to",
+      "rationale": "NT explicitly has exactly two routes. 3R gives an exact failure of using its isolated pair density as the corresponding contribution in a three-route denominator.",
+      "supporting_ends": {
+        "from_statement": "Unreviewed campaign DRAFT; independent mathematical check pending. Let Z,U,V0 be independent N(0,1), xi>0, M>=0, and let three parallel edges have log lengths f1=xi(Z+U), f2=xi(Z-U), f3=-M+xi V0. Their Gaussian field covariance is diag(2,2,1), positive definite. For full soft weights pi_p=exp(-beta f_p)/sum_{q=1}^3 exp(-beta f_q), the covariance distance of pair 1,2 is R12=4 and lim_{beta->infinity} beta E[pi_1*pi_2*R12]=[2/(xi sqrt(2*pi))]*Phi(-M/(xi sqrt(2))), where Phi is the standard normal distribution function. The isolated two-route contribution is 2/(xi sqrt(2*pi)). At M=0 the full pair contribution is half; for large M its ratio tends to zero. Pair gap regularity alone does not justify substitution into a full-model switching sum: the pair must beat every other route at its tie. This finite example does not refute w516's qualified reduction or an LQG dimension formula.",
+        "to_statement": "Unreviewed campaign DRAFT; independent mathematical check pending. Let X be a finite centered Gaussian vector with covariance C positive semidefinite, V=max_i C_ii, xi>0, and exactly two lengths l_p=sum_i a_pi exp(xi X_i), with nonnegative nonzero coefficient vectors. Put f_p=log l_p, w_pi=a_pi exp(xi X_i)/l_p, Delta=f_1-f_2, R=(w_1-w_2)^T C(w_1-w_2), pi_p=exp(-beta f_p)/sum_{q=1}^2 exp(-beta f_q) and B_beta=pi_1*pi_2*R. Suppose nu(A)=E[R*1{Delta in A}] has density b on (-eta,eta), eta>0, and |b(t)-b(0)|<=L|t| there. For beta>0, |beta E B_beta-b(0)| <= 2 log(2)L/beta+(4 beta V+2 b(0))exp(-beta eta). No density assumption is needed outside this interval. For a cutoff family at scale T_n, divide this bound by T_n; a joint cutoff/temperature limit requires both resulting error terms to vanish and b_n(0)/T_n to have a determined limit. Those uniform hypotheses are not proved for LQG here."
+      }
+    },
+    {
+      "from_key": "3R",
+      "to_key": "O2",
+      "kind": "analogous_to",
+      "rationale": "Both ends show that optimized costs depend on the joint competing-route structure, not merely one-edge marginals or a two-route marginal gap law.",
+      "supporting_ends": {
+        "from_statement": "Unreviewed campaign DRAFT; independent mathematical check pending. Let Z,U,V0 be independent N(0,1), xi>0, M>=0, and let three parallel edges have log lengths f1=xi(Z+U), f2=xi(Z-U), f3=-M+xi V0. Their Gaussian field covariance is diag(2,2,1), positive definite. For full soft weights pi_p=exp(-beta f_p)/sum_{q=1}^3 exp(-beta f_q), the covariance distance of pair 1,2 is R12=4 and lim_{beta->infinity} beta E[pi_1*pi_2*R12]=[2/(xi sqrt(2*pi))]*Phi(-M/(xi sqrt(2))), where Phi is the standard normal distribution function. The isolated two-route contribution is 2/(xi sqrt(2*pi)). At M=0 the full pair contribution is half; for large M its ratio tends to zero. Pair gap regularity alone does not justify substitution into a full-model switching sum: the pair must beat every other route at its tie. This finite example does not refute w516's qualified reduction or an LQG dimension formula.",
+        "to_statement": "Unreviewed campaign DRAFT; independent mathematical check pending. Fix xi,kappa>0, epsilon_n=exp(-n) and m_n=ceil(exp(kappa*n)). On a graph of m_n parallel unit edges put D_n=min_i exp(xi*X_{n,i}) and let a_n be any median of D_n. If the fields within n are independent N(0,n), log(a_n)/log(epsilon_n) tends to xi*sqrt(2*kappa); if all fields are one common N(0,n), it tends to zero. Thus identical Gaussian edge marginals and D(X+c)=exp(xi*c)D(X) do not determine an optimized normalization exponent. No independence across n is needed. These growing graphs are not GFF or LQG models."
+      }
+    }
+  ],
+  "review_status": "pending w518; coordinator integration only"
+}

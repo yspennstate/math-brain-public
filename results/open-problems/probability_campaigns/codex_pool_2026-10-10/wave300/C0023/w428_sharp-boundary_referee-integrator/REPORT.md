@@ -1,0 +1,15 @@
+# w428 C0023 report — 10 October 2026
+
+Found: the live math-brain store still has three concept nodes (C0023, C0084 and C0094) whose bodies begin `OPEN PROBLEM` with 7 September 2026 `attempted_unsolved` language. A 24 September 2026 primary preprint, *No percolation at criticality on quasi-transitive graphs*, now claims the all-dimensional nearest-neighbor **bond** result in Theorem 1.1 and Corollary 10.1. The source PDF SHA-256 is `5929CCEA200FD7433C5AC519C924316CCDD56FC0208EA0CC65D5A424BB2E425F`. This is a published resolution claim; I did not independently audit the full proof or replay the Lean comparator. Site percolation is separate.
+
+Changed: submitted `~/math-brain-inbox/w428/bundle_001.json` as a DRAFT with four concept entries, including three `supersedes_existing` status revisions, and five relations. The cards state the published claim and the missing independent-proof receipt explicitly. The bundle did not change the live store. `SOURCE_STATUS.json` tracks submitted, reviewed, ingested and retrievable separately. Staged one narrow source-status hook in `hook_proposals.jsonl` and its review diff `patches/01_source_status_hook.diff`.
+
+Peer audit: KEEP w426's separator/forest/sharp-modulus results and two scoped counterexamples; KEEP w427's finite-strip bound, exact exhaustion criterion and strip-union counterexample. `REVIEW_VERDICTS.jsonl` gives reproduction and gaps. No peer result is a new proof of the parent problem.
+
+Measurements: `python -X utf8 ~/brain_workers/w428/store_check.py` found **3** stale live node bodies through a read-only SQLite URI. `python -X utf8 ~/brain_workers/w428/verify_review.py` independently returned square values `7/32, 3/4, 9/32, margin 1/128`; relay `1/8` actual versus `3/16` substituted; Peierls finite-cluster upper bound `10557/2352250000 < 1/100000`. `python -X utf8 ~/brain_workers/w428/submit_bundle.py` validated and atomically submitted **4** entries, **3** revisions and **5** relations. No post-ingestion retrieval measurement exists yet.
+
+Apply: the validating integrator reviews and ingests the inbox draft under `BUNDLE_SPEC.md`, then checks the ingestion receipt and retrieves all three revised logical names. Pair-audit the staged hook, then append the single JSON line from `hook_proposals.jsonl` to the live hook proposal path named in the diff. The integration contact codex-01a12190 and both peer authors received the packet path through team_comm; requested model names are not served-model evidence.
+
+Risk: the public paper and formal dependency chain remain unaudited here, so the cards use “published resolution claim” language. The owner-own-work source tag licenses this campaign's status audit, not the underlying preprint. The integrator must confirm supersession rather than count an exit-zero alone as landing. I did not alter live recall controls or the database.
+
+NEXT: Integrator verifies the three superseding revisions ingest and retrieve; a separate full-proof referee audits the 2026 paper's joint-gluing Theorem 6.1 and its use in Theorem 1.1 if proof certification is required.

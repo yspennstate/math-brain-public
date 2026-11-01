@@ -1,0 +1,80 @@
+[
+  {
+    "claim_id": "A037-CONDITIONAL-CREDIT-CONSERVATION",
+    "version": 1,
+    "exact_statement": "For every finite adaptive transcript tree on a common finite joint law P(W,A,L), sum_h P(h) I(W;Y_h|A,h) + sum_l P(l) H(W|A,l) = H(W|A); every cut and subtree obey the same identity. For finite common-law divergences, K_h+j_h=d_h+E_P K_hy, hence sum_h P(h)d_h+sum_l P(l)K_l=K_root+sum_h P(h)j_h. Shared channels give zero injection; replacing a predicted child reference q by r adds E_p log2(q/r) on the resource side. All terminal terms are retained.",
+    "hypotheses": [
+      "Finite probability/tree spaces; bits; omit zero-probability histories",
+      "KL formulas require finite supported divergences"
+    ],
+    "statement_sha256": "d23c07e7435aeb8fe2904c4b74d672f0efe7e779185c72d177f00c606ee553c4",
+    "contributors": [
+      "A037"
+    ],
+    "proof_source": {
+      "run_id": "20261011T220010Z-fleet05-A037-conditional-credit-ledger",
+      "files": [
+        "REPORT.md",
+        "POSTERIOR_CREDIT_CHAIN.tex",
+        "NO_REUSE_CERTIFICATE.md",
+        "code/ledger_check.py",
+        "out/VALIDATION.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_VALIDATED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A029",
+      "A039",
+      "A057",
+      "A063",
+      "A064",
+      "A097"
+    ]
+  },
+  {
+    "claim_id": "A037-PHYSICAL-SPECTRAL-COMMON-LIFT",
+    "version": 1,
+    "exact_statement": "For every Boolean function on a finite uniform cube and every finite adaptive physical block restriction tree, the function-specific kernel k_h(y|S_0)=2^(-|B_h|) (f_h|B_h=y)hat(S_0 intersect C_h)^2 / sum_U f_hhat(U union (S_0 intersect C_h))^2, on positive fibers, constructs a common root spectral/physical-transcript law with actual fair physical branches and actual child spectra. It satisfies sum_h P(h) J_h=I(S_0;L) and H(S_0|L)=sum_h P(h) H(S_h intersect B_h|S_h intersect C_h,h)+sum_l P(l)H(f_l). No universal phase-blind channel on parent squared spectra exists, as witnessed by f=[1,1,1,-1], g=[1,1,-1,1].",
+    "hypotheses": [
+      "Finite probability/tree spaces; bits; omit zero-probability histories",
+      "Boolean signs, uniform inputs, adaptive block choices measurable from physical history; no rerevealed coordinates"
+    ],
+    "statement_sha256": "aa45c0dacad4b1897e4c2f62511ccd331caf0eb6dc7ecc88cddf5189e8cf2cdb",
+    "contributors": [
+      "A037"
+    ],
+    "proof_source": {
+      "run_id": "20261011T220010Z-fleet05-A037-conditional-credit-ledger",
+      "files": [
+        "REPORT.md",
+        "POSTERIOR_CREDIT_CHAIN.tex",
+        "NO_REUSE_CERTIFICATE.md",
+        "code/ledger_check.py",
+        "out/VALIDATION.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_VALIDATED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Universal physical-child spectral channel determined solely by squared parent Fourier masses"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A029",
+      "A039",
+      "A057",
+      "A063",
+      "A064",
+      "A097"
+    ]
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "claim_id": "A050-ACTIVE-LABEL-SCHEDULE-REPAIR",
+    "version": 1,
+    "exact_statement": "For every uniform-cube Boolean sign and finite deterministic fresh-singleton stopping tree, on its actual coherent root lift let S be the root Fourier-square sample, Q the final queried set, W=S\\Q, D=S intersect Q, and A any fixed superset of all possibly queried coordinates. With a=I_A(f) and R=I(f)-E I(f_leaf), the injected information is e=I(W;Pi|S)=H(D|S), E|D|=R, a-R=E I_A(f_leaf), and e<=a h2(R/a). The bound is the cross-entropy of ONE normalized conditional reference rho_theta(d|S)=theta^|d|(1-theta)^(|S intersect A|-|d|), theta=R/a, minus its conditional KL. Root-Markov compatibility of the actual W is equivalent to e=0. Every leaf independent of A implies e=0 despite variable query sets; E I_A(f_leaf)<=kappa R implies e<=(1+kappa)h2(1/(1+kappa))R. With output information o and Gamma_W=H(Pi|Y)-H(Pi|W), one has o/2+[Gamma_W]_+/2<=R/ln(2)+e/2. The coefficient one in the active entropy capacity is asymptotically sharp on A048's actual indexed-parity point-defect family with k=2r+2. Arbitrary overlapping or identical terminal data cores are permitted when all controller dependence is resolved. Terminal Fourier entropy and influence remain retained; no universal history-bank supply or FEI conclusion is proved.",
+    "hypotheses": [
+      "Uniform finite cube; entropy in bits",
+      "Actual Boolean sign and function-specific coherent lift with original coordinate labels",
+      "Finite deterministic singleton stopping tree with fresh queries; terminals may remain nonconstant",
+      "A fixed superset of all potentially queried coordinates; actual physical influence",
+      "Zero-reservoir and bounded-reservoir clauses carry their explicitly stated additional hypotheses"
+    ],
+    "statement_sha256": "f773ed8333ad463d9eee5810dbd97ead5d777d091e72b38a9ee5d5c5896b1ef1",
+    "contributors": [
+      "A050"
+    ],
+    "proof_source": {
+      "original_run": "~\\brain_workers\\FEI100_20261011\\agents\\A050\\runs\\20261014T004109Z-fleet05-A050-repair-with-scope",
+      "source_statement_sha256": "ccfae9d0cde91a86aad1a97cd77ab8fae8af4b7f5283386a89cd544cf590e4cb",
+      "source_hash_convention": "Preserved source digest; export uses compact JSON statement+hypotheses",
+      "independent_review_run": "20261014T022727Z-fleet05-A048-tensor-stress",
+      "independent_proof": "PROOF.md final reconstruction section",
+      "independent_certificate": "code/check.py; out/CHECK.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A048",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "substantive_repair_supplied": false,
+        "method": "Independent deletion-reference normalization, exact conditional-KL capacity, endpoint and reservoir reconstruction, channel/output conversion, and analytic sharpness on own previous Boolean family; independently written coherent kernel checks",
+        "scope": "Original statement unchanged; no history-bank funding or shared-core scalar-reserve payment accepted",
+        "source": "PROOF.md; out/CHECK.json"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "The same normalized spectral reference supplies H(Pi|W)/2 once and pays signed erasure and complete terminal Fourier entropy from nonduplicated physical influence.",
+    "next_consumers": [
+      "A048",
+      "A047",
+      "A092",
+      "A087",
+      "A091",
+      "A057",
+      "A064",
+      "B10",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A048-COMMON-FACTOR-LABEL-RESERVE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "Let an exclusive controller with probabilities q_j select Boolean cores u_j on a possibly shared data cube, and let R_lab=sum_j q_j log2(1/q_j) Var(u_j). Multiplying the whole output by an independent unqueried Boolean v of mean b changes R_lab by (1-b^2)sum_j q_j log2(1/q_j)(E u_j)^2, while leaving every controller-query physical influence and erased/channel Fourier ledger unchanged. For all integers m,n>=1, G=1-2(1-AND_m(z))AND_n(x) and F=yG with a fresh fair sign y have all-essential short-circuit controller trees, t=2^-m, delta=2^-n, I_ctrl=2mt delta, R_lab(G)=4delta(1-delta)psi(1-t), R_lab(F)=h2(t), and zero terminal labelled reserve. Thus the total labelled control release/I_ctrl>=2^(n-1), uniformly in m. H(F)=H(G), expected terminal Fourier entropy=(1-t)H(h_n), terminal influence(F)=1+(1-t)2n delta. The summed residual D-kappa shifts by exactly minus the reserve boost, so R_lab(root)+sum reach(D-kappa)=H(root)-E H_leaf is common-factor invariant. Independent complete tensor copies add all these quantities without an additional logarithm. This refutes only the unsupported shared-data extension of a dimension-independent independent-core reserve-release payment by controller influence; it refutes neither the disjoint-core source theorem, A050 active-label repair nor FEI.",
+    "hypotheses": [
+      "Uniform independent physical cube; entropy bits; psi(q)=q log2(1/q)",
+      "Exclusive controller labels retained as specified, arbitrary shared core data permitted only for the obstruction",
+      "Common factor independent of all old coordinates and never queried by the controller prefix",
+      "Actual essential short-circuit stopping tree; all terminal Fourier entropy and influence retained"
+    ],
+    "statement_sha256": "b5a24bc034f8f0399ceb786228fa41498443d2892178ac3044a02bfc5d732857",
+    "contributors": [
+      "A048"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/check.py",
+      "out/CHECK.json",
+      "out/SIGNED_CANCELLATION_CERTIFICATE.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "EXISTING_INTERFACE_SCOPE_OBJECTION_PROVED_AND_EXACTLY_CHECKED_LOCALLY_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Exploratory extension of R_lab<=K I_ctrl or sum control releases<=K I_ctrl to arbitrary shared-data cores, with K independent of dimension"
+    ],
+    "first_unproved_line": "One normalized common-row posterior/occupancy reference preserves the negative residual and pays remaining controller, data and terminal cost through one unspent physical influence account.",
+    "next_consumers": [
+      "A038",
+      "A039",
+      "A050",
+      "A057",
+      "A059",
+      "A064",
+      "A087",
+      "A091",
+      "A092",
+      "B10",
+      "B20"
+    ]
+  }
+]

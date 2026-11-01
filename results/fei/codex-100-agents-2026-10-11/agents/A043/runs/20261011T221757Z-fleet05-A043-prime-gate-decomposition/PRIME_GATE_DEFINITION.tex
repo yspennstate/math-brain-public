@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\begin{document}
+\section*{A043: genuine disjoint primes}
+All gates are Boolean sign functions. Remove irrelevant coordinates first.
+An essential gate $f$ on $n\ge2$ inputs is prime if no block
+$B\subset[n]$ with $2\le |B|\le n-1$ admits
+\[
+ f(x)=g(h(x_B),x_{B^c})
+\]
+with Boolean $h$ and $g$. Constants and the two unary literals are
+terminal objects, not members of the prime class. Every essential binary
+gate is prime. Negations may be absorbed into adjacent gates; input
+permutations and input/output negations preserve primality.
+
+\begin{lemma}[Exact criterion]
+For essential $f$, such a block $B$ admits a factorization if and only if
+the rows $r_a=(f(a,b):b\in\{-1,1\}^{B^c})$, indexed by block assignments
+$a$, have exactly two distinct values.
+\end{lemma}
+\begin{proof}
+A one-bit output $h(a)$ permits at most two rows. Essentiality excludes
+one row, since that would make every coordinate in $B$ irrelevant.
+Conversely label the two rows by signs, let $h(a)$ be their label, and
+let $g(s,b)$ be the $b$-entry of the row labeled $s$. This gives the
+identity pointwise. $h$ is nonconstant and hence surjective. Each input
+of $h$ is essential, because otherwise the same input of $f$ would be
+irrelevant. The new wire of $g$ is essential because the rows differ.
+Every other input of $g$ is essential by essentiality of $f$ and
+surjectivity of $h$.
+\end{proof}
+
+\begin{theorem}[Existence and termination]
+Every Boolean function has a formula with each relevant physical input
+appearing once, whose internal gates are essential primes and whose
+terminal operations are constants or literals. No uniqueness is claimed.
+\end{theorem}
+\begin{proof}
+Induct on the number of essential inputs. Constants and unary functions
+are terminal. If $f$ is prime stop. Otherwise use the criterion to split
+off $h$ on $k=|B|$ inputs and $g$ on $n-k+1$ inputs. Both arities are
+strictly below $n$. Apply induction to each, and replace the fresh
+literal in the formula for $g$ by the formula for $h$. All other leaves
+of $g$ use $B^c$; the $h$ leaves use $B$, so physical supports remain
+disjoint. This also proves termination. After unary operations are
+absorbed, a tree with $n$ physical leaves and internal fan-in at least
+two has at most $n-1$ internal gates and depth at most $n-1$.
+\end{proof}
+
+This is equivalent to irreducibility under arbitrary proper disjoint
+substitution: any substitution with at least two nonconstant children
+and at least one child on two or more essential coordinates gives a
+block as above by expanding the other children into the outer gate.
+Unary outer gates, singleton children alone, and constants are trivial
+factorizations and are excluded. Shared physical variables are excluded.
+
+Signed parity of arity at least three splits off any pair of inputs,
+so only binary parity is prime. AND and OR of arity at least three
+likewise split off pairs. In contrast the symmetric threshold
+$1[\sum_i y_i\ge t]$ on bits is prime for every $2\le t\le n-1$.
+Indeed a block of size $k$ gives thresholds $t-j$ on the other $d=n-k$
+bits, $j=0,\ldots,k$. Distinct rows are indexed by the thresholds
+clipped to $0,\ldots,d+1$. The interval has endpoints
+$L=\max(0,t-k)$ and $U=\min(d+1,t)$, and $U-L\ge2$: when $L=0$,
+$U\ge2$; otherwise either $U=t$ gives difference $k\ge2$, or
+$U=d+1$ gives difference $n+1-t\ge2$. Thus every candidate block
+has at least three rows. In particular the prime class has unbounded
+arity; factoring alone does not make the remaining gate bound easier.
+\end{document}

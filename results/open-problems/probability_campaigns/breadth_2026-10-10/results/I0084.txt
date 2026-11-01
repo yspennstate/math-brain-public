@@ -1,0 +1,182 @@
+{
+  "problem_id": "I0084",
+  "source_checks": {
+    "status_from_memory": "I know no paper that resolves Conjecture 5.5 in full. This is not a current-openness certificate.",
+    "known_resolving_paper": null,
+    "internet_used": false,
+    "child_agents_used": false,
+    "primary_sources_checked_locally": [
+      {
+        "authors": ["Takahiro Hasebe", "Yuki Ueda"],
+        "year": 2018,
+        "title": "Large time unimodality for classical and free Brownian motions with initial distributions",
+        "source_id": "free_unimodality_2018",
+        "url": "https://arxiv.org/abs/1710.08240",
+        "locator": "Conjecture 5.5, PDF page 18",
+        "finding": "The recorded conjecture imposes no symmetry assumption and allows arbitrary initial probability measures on R."
+      },
+      {
+        "authors": ["Takahiro Hasebe", "Yuki Ueda"],
+        "year": 2018,
+        "source_id": "free_unimodality_journal_2018",
+        "url": "https://alea.math.cnrs.fr/articles/v15/15-15.pdf",
+        "citation": "ALEA 15 (2018), 353–374, DOI 10.30757/ALEA.v15-15",
+        "locator": "Section 5.2 and Conjecture 5.5, p.373",
+        "finding": "The published version specifies classical convolution for classical strictly stable processes and free convolution for free strictly stable processes. The positive 1/2-stable process is explicitly discussed. The conjecture has no restriction excluding initial measures with unbounded negative support."
+      }
+    ],
+    "previous_campaign_record": "The recorded partial answer concerns compact initial support and symmetric classical stable kernels. It does not resolve the construction below.",
+    "novelty_status": "Unverified. No novelty claim is made; the separate Claude literature reader must check prior art."
+  },
+  "exact_statement": {
+    "label": "conjecture",
+    "statement": "For every alpha in (0,2), does every probability measure mu with integral_R |x|^(2+alpha) dmu(x)<infinity become unimodal at all sufficiently large times under convolution with a classical strictly alpha-stable semigroup, or under free convolution with a free strictly alpha-stable semigroup?",
+    "scope_of_answer": "The universal statement is false already for the positive classical strictly 1/2-stable semigroup."
+  },
+  "answer": "no",
+  "proof_or_counterexample": {
+    "label": "complete proof of a counterexample",
+    "result": "One fixed probability measure has every positive absolute moment finite, yet its convolution with the positive classical 1/2-stable law is non-unimodal at every positive time.",
+    "witness": "Z=sum_{n>=1}2^(-n^2), p_n=2^(-n^2)/Z, mu=sum_{n>=1}p_n delta_(-2^n). Take S_t with Laplace transform exp(-t sqrt(lambda)).",
+    "extremal_family": "A one-sided stable kernel and initial atoms escaping in the opposite direction, with gaps tending to infinity. On suitable gaps, atoms to the right contribute zero and every remaining kernel contribution decreases.",
+    "proof": [
+      {
+        "step": 1,
+        "label": "proof",
+        "statement": "Identify an admissible stable process.",
+        "details": "For t>0 define g_t(u)=t exp(-t^2/(4u))/(2 sqrt(pi) u^(3/2)) for u>0, and g_t(u)=0 for u<=0. Its Laplace transform is exp(-t sqrt(lambda)). To verify this, substitute v=t/(2 sqrt(u)): the transform becomes (2/sqrt(pi))J(a), where a=t sqrt(lambda)/2 and J(a)=integral_0^infinity exp(-v^2-a^2/v^2)dv. For a>0, differentiation under the integral gives J'(a)=-2a integral_0^infinity v^(-2)exp(-v^2-a^2/v^2)dv. Substituting w=a/v makes the latter integral J(a)/a, hence J'(a)=-2J(a). Dominated convergence and the Gaussian integral give J(0)=sqrt(pi)/2, so J(a)=(sqrt(pi)/2)exp(-2a). At lambda=0 this also verifies normalization. Laplace-transform multiplication gives S_s*S_t=S_(s+t), and g_t(u)=t^(-2)g_1(u/t^2), establishing strict stability of index 1/2. Explicitly, these are the laws of the Brownian hitting-time subordinator X_t=inf{s>=0:B_s>t/sqrt(2)}: the reflection principle gives g_t, and the strong Markov property gives stationary independent increments. The source's normalization L_t satisfies S_t=L_(t/sqrt(2))."
+      },
+      {
+        "step": 2,
+        "label": "proof",
+        "statement": "The initial law satisfies every required moment condition.",
+        "details": "Since 1/2<=Z<=sum_{n>=1}2^(-n)=1, the p_n are positive probability weights. For every r>0, integral_R |x|^r dmu(x)=Z^(-1)sum_{n>=1}2^(-n^2+rn). For n>=2r, each summand is at most 2^(-n^2/2)<=2^(-n/2). The latter sequence is summable. Thus every positive absolute moment is finite, including r=2+alpha=5/2."
+      },
+      {
+        "step": 3,
+        "label": "proof",
+        "statement": "Compute the kernel's exact decreasing region.",
+        "details": "For u>0, g_t'(u)=t exp(-t^2/(4u))(t^2/4-3u/2)/(2 sqrt(pi)u^(7/2)). Consequently g_t is strictly decreasing on (b_t,infinity), where b_t=t^2/6. The exponential factor makes g_t continuous at zero with value zero. It also tends to zero at positive infinity, so g_t is bounded and continuous on R."
+      },
+      {
+        "step": 4,
+        "label": "proof",
+        "statement": "The convolution has a continuous density.",
+        "details": "Its density is q_t(x)=sum_{j>=1}p_j g_t(x+2^j). Boundedness of g_t and summability of the weights imply uniform convergence of this series. Therefore q_t is continuous. Tonelli's theorem identifies it as the convolution density and gives integral_R q_t(x)dx=1. In particular, mu*S_t has no atoms."
+      },
+      {
+        "step": 5,
+        "label": "proof",
+        "statement": "There are strictly decreasing intervals arbitrarily far to the left.",
+        "details": "Fix any t>0. For every n>=2 with 2^(n-1)>b_t, the interval I_(n,t)=(-2^n+b_t,-2^(n-1)) is nonempty. If x belongs to this interval and j<n, then x+2^j<=x+2^(n-1)<0; the corresponding contribution is zero. If j>=n, then x+2^j>=x+2^n>b_t; that contribution is strictly decreasing in x. Thus for any u<v in I_(n,t), q_t(u)>q_t(v), with strictness already supplied by the positive-weight term j=n. These intervals exist for all sufficiently large n, and their right endpoints tend to minus infinity."
+      },
+      {
+        "step": 6,
+        "label": "proof",
+        "statement": "Every possible unimodal mode gives a contradiction.",
+        "details": "A unimodal law, in the source's definition, has a finite real mode m and is an atom at m plus a density h that is nondecreasing on (-infinity,m) and nonincreasing on (m,infinity). Here the atom must be zero because the convolution is absolutely continuous. Also h=q_t almost everywhere. Continuity transfers the left monotonicity to q_t: for u<v<m choose u_k->u and v_k->v in the full-measure equality set, with u_k<v_k<m, and pass to the limit in q_t(u_k)=h(u_k)<=h(v_k)=q_t(v_k). But some nonempty I_(n,t) lies entirely to the left of m, contradicting its strict decrease established in step 5. Hence mu*S_t is not unimodal. Since t>0 was arbitrary and mu is fixed, this holds at every positive time."
+      }
+    ],
+    "numerical_evidence": {
+      "label": "numerical evidence, not proof",
+      "method": "80-digit mpmath calculations using 50 atoms, a symbolic derivative check, and independent finite differences.",
+      "normalizing_constant_Z": "0.5644684136059385793347293",
+      "absolute_moment_5_over_2": "9.208271890348990347101187",
+      "quantity": "D(t,n,b)=q_t'(-2^n+b*t^2)/(p_n*t^(-4))",
+      "rows": [
+        {
+          "t": 0.1,
+          "n": 2,
+          "D_at_b_1_over_12": "10.5088694350746879",
+          "D_at_b_1_over_3": "-1.5578965225266654"
+        },
+        {
+          "t": 1,
+          "n": 2,
+          "D_at_b_1_over_12": "10.5085151542228861",
+          "D_at_b_1_over_3": "-1.55820374352800799"
+        },
+        {
+          "t": 10,
+          "n": 8,
+          "D_at_b_1_over_12": "10.5088691969670786",
+          "D_at_b_1_over_3": "-1.55789671437470966"
+        },
+        {
+          "t": 100,
+          "n": 15,
+          "D_at_b_1_over_12": "10.5088694391941558",
+          "D_at_b_1_over_3": "-1.55789651841231635"
+        },
+        {
+          "t": 1000,
+          "n": 21,
+          "D_at_b_1_over_12": "10.5088694392025498",
+          "D_at_b_1_over_3": "-1.55789651840523889"
+        },
+        {
+          "t": 10000,
+          "n": 28,
+          "D_at_b_1_over_12": "10.5088694392025554",
+          "D_at_b_1_over_3": "-1.5578965184052345"
+        }
+      ],
+      "checks": "Finite-difference discrepancies were below 3.36e-30. For each displayed row, omitted normalized derivatives have absolute value below 1e-545: their bound is B*2^(n^2-51^2)/(1-2^(-103)), where B=3*6^(5/2)/(4*sqrt(pi)). This follows from |g_1'(u)|<=B for u>=1/6 and the geometric bound on omitted weight ratios. Direct Laplace integration at t=2.3, lambda=0.7 agrees with exp(-t sqrt(lambda)) within 1e-70.",
+      "role": "The complete proof uses exact decreasing intervals and does not depend on these computations."
+    },
+    "sketch": null
+  },
+  "hardest_remaining_gap": "No mathematical gap remains in this counterexample to the universal statement. Independent proof audit and prior-art review are pending. The symmetric stable version and the free branch are not settled here.",
+  "evidence_status": "counterexample",
+  "draft_brain_nodes": [
+    {
+      "key": "I0084.one_sided_kernel_gap_obstruction.v1",
+      "namespace": "probability.stable_processes",
+      "logical_name": "one_sided_kernel_opposite_support_gap_obstruction",
+      "kind": "lemma",
+      "title": "Opposite support gaps prevent unimodality for one-sided kernels",
+      "statement": "Let g be a bounded continuous probability density on R, zero for x<=0 and strictly decreasing on (b,infinity), where b>=0. Suppose a_n increases to infinity, a_n-a_(n-1)->infinity, and p_n>0 with sum p_n=1. Then (sum p_n delta_(-a_n))*g is not unimodal.",
+      "proof_text": "The convolution density q(x)=sum p_j g(x+a_j) is continuous by uniform convergence, and Tonelli's theorem gives integral q=1. Whenever a_n-a_(n-1)>b, the interval I_n=(-a_n+b,-a_(n-1)) is nonempty. For x in I_n, terms with j<n vanish because x+a_j<0; terms with j>=n strictly decrease because x+a_j>b. Hence q(u)>q(v) whenever u<v belong to I_n, with strictness supplied by p_n>0. The right endpoints tend to minus infinity. If the convolution had finite unimodal mode m, its continuous density would be nondecreasing to the left of m: the monotone density in the definition equals q almost everywhere, and continuity transfers monotonicity by approximation from that equality set. A sufficiently large I_n lies entirely left of m, giving a contradiction.",
+      "assumptions": [
+        "Ordinary classical convolution.",
+        "A bounded continuous probability density, zero on the nonpositive half-line and strictly decreasing beyond a finite b.",
+        "Positive probability weights and consecutive gaps tending to infinity."
+      ],
+      "domain": ["probability", "classical convolution", "unimodality"],
+      "source": {
+        "source_id": "campaign_I0084_counterexample_20261010",
+        "url": null,
+        "revision": "2026-10-10 v1",
+        "license": "owner-own-work (campaign result)"
+      },
+      "audit_status": "Unreviewed draft; independent reader required before promotion."
+    },
+    {
+      "key": "I0084.positive_half_stable_all_moments_counterexample.v1",
+      "namespace": "probability.stable_processes",
+      "logical_name": "positive_half_stable_all_moments_never_unimodal_convolution",
+      "kind": "theorem",
+      "title": "All finite moments do not ensure eventual positive stable unimodality",
+      "statement": "Let Z=sum_{n>=1}2^(-n^2) and mu=Z^(-1)sum_{n>=1}2^(-n^2)delta_(-2^n). Every positive absolute moment of mu is finite. For the positive classical strictly 1/2-stable semigroup S_t with Laplace transform exp(-t sqrt(lambda)), mu*S_t is not unimodal for any t>0. Consequently Hasebe-Ueda Conjecture 5.5 is false as universally stated.",
+      "proof_text": "The semigroup has density g_t(u)=t exp(-t^2/(4u))/(2 sqrt(pi)u^(3/2)) for u>0 and zero otherwise. To verify its Laplace transform, substitute v=t/(2 sqrt(u)), obtaining (2/sqrt(pi))J(t sqrt(lambda)/2), where J(a)=integral_0^infinity exp(-v^2-a^2/v^2)dv. Differentiation and w=a/v give J'(a)=-2J(a); J(0)=sqrt(pi)/2, so the transform is exp(-t sqrt(lambda)). Thus these densities form a convolution semigroup, with scaling g_t(u)=t^(-2)g_1(u/t^2). They are also the laws of the Brownian hitting-time subordinator inf{s>=0:B_s>t/sqrt(2)}, by reflection and strong Markov, explicitly realizing a classical strictly 1/2-stable process. Since 1/2<=Z<=1, the stated weights define a probability measure. For each r>0 its absolute r-th moment is Z^(-1)sum 2^(-n^2+rn), finite because for n>=2r the terms are bounded by 2^(-n^2/2)<=2^(-n/2). Differentiation gives g_t'(u)=t exp(-t^2/(4u))(t^2/4-3u/2)/(2 sqrt(pi)u^(7/2)), so g_t strictly decreases above b_t=t^2/6 and is bounded and continuous on R. The convolution density q_t(x)=sum p_j g_t(x+2^j) is continuous by uniform convergence and has integral one by Tonelli. For every sufficiently large n, I_n=(-2^n+b_t,-2^(n-1)) is nonempty. On I_n the j<n terms vanish, while the j>=n terms strictly decrease, since their arguments exceed b_t. Consequently q_t strictly decreases there. These intervals have right endpoints tending to minus infinity. A unimodal mode m would require q_t to be nondecreasing to its left: absolute continuity eliminates the permitted mode atom, and the monotone density agrees almost everywhere with continuous q_t, so approximation transfers monotonicity to q_t. Choosing I_n entirely left of m contradicts its strict decrease. This argument applies to every t>0 with the same mu.",
+      "assumptions": [
+        "Classical convolution on R.",
+        "The positive strictly 1/2-stable semigroup normalized by exp(-t sqrt(lambda)).",
+        "Unimodality with a finite real mode, as defined in the source."
+      ],
+      "domain": ["probability", "stable processes", "unimodality"],
+      "source": {
+        "source_id": "campaign_I0084_counterexample_20261010",
+        "url": null,
+        "revision": "2026-10-10 v1",
+        "license": "owner-own-work (campaign result)"
+      },
+      "audit_status": "Unreviewed draft; independent reader required before promotion."
+    }
+  ],
+  "artifacts": {
+    "result_json": "~/brain_workers/research_I0084_20261010/result.json",
+    "reproducible_checks": "~/brain_workers/research_I0084_20261010/verify_I0084.py",
+    "node_promotion": "None; draft entries only."
+  }
+}

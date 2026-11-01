@@ -1,0 +1,15 @@
+{
+  "helper_version": "A072-component-shortfall-v1-final",
+  "family": "J(g1,...,g6), g negative on {0,1,2}, inherited prefix block0 original bits2,0,3 answers00b",
+  "domain": "b=0,1; j=1..5; i=0..5; two physical children each",
+  "cases": 60,
+  "symmetry": "none; all labelled cases",
+  "arithmetic": "integer Walsh, Fraction log profiles, 192-bit outward log bounds, 80-term atanh remainder",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds": 55,
+  "pilot_cases": 2,
+  "no_automatic_dimension_escalation": true,
+  "goal": "exact shortfall identity; mandatory other-owner subsidy on saturated paths; preserve old debit and rate4",
+  "allocation_amendment": "Also check optimal minimal-donor allocation, all inherited debit labels and both terminals; unchanged 60-case domain",
+  "boundary_domain": "405 rational allocation cases: V0,V1,W0,W1 in {0,1,2}, T=k/2, k=0..sum(V+W); independent piecewise-linear vertex minimization"
+}

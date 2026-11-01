@@ -1,0 +1,65 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w428",
+  "bundle_slug": "c0023-bond-criticality-source-status-correction-20261010",
+  "entries": [
+    {
+      "key": "source-status",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-bond-percolation-2026-published-resolution-status-audit",
+      "kind": "concept",
+      "title": "Critical bond percolation: 2026 published result and proof-audit status",
+      "statement": "Source-status audit dated 10 October 2026. The 7 September 2026 C0023 and C0084 intake labels predate OpenAI's 24 September 2026 paper 'No percolation at criticality on quasi-transitive graphs'. The paper's Theorem 1.1 claims that independent Bernoulli bond percolation on every infinite connected locally finite quasi-transitive graph with p_c<1 has no infinite cluster at p_c. Corollary 10.1 explicitly claims this for nearest-neighbor bond percolation on Z^d for every d>=2. The public Lean solution states the same broad theorem. This audit checked the paper statement and source PDF hash; it did not rebuild the formal comparator or independently verify the full paper proof. Track 'published resolution claim' separately from 'independently checked proof'. No all-dimensional site-percolation conclusion is inferred here.",
+      "proof_text": null,
+      "assumptions": ["Statement and source-status record only", "Independent Bernoulli bonds; site model excluded", "Full proof audit and served-model review not established"],
+      "domain": "probability theory",
+      "source": {"source_id": "owner-own-work:w428-c0023-source-audit-20261010", "url": "file:///~/brain_workers/w428/SOURCE_STATUS.json", "revision": "2026-10-10; primary paper SHA256 5929CCEA200FD7433C5AC519C924316CCDD56FC0208EA0CC65D5A424BB2E425F", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "c0023",
+      "namespace": "probability.percolation",
+      "logical_name": "open-problem-c0023-no-percolation-at-criticality-on-z-d-for-3-d-10",
+      "kind": "concept",
+      "title": "C0023: historical bond-criticality problem with 2026 published resolution claim",
+      "statement": "Historical target: for each integer 3<=d<=10, let theta_d(p)=P_p(the origin lies in an infinite cluster) for independent nearest-neighbor Bernoulli bond percolation on Z^d, and p_c(d)=inf{p:theta_d(p)>0}. The desired equality theta_d(p_c(d))=0 is explicitly included in Corollary 10.1 of OpenAI's 24 September 2026 preprint 'No percolation at criticality on quasi-transitive graphs', which claims it for every d>=2. The 7 September 2026 intake's 'attempted_unsolved' status is historical and must not be repeated as a current open claim. The published proof and public Lean dependency chain await independent verification in this campaign. Site percolation is a distinct model and is not covered by this card.",
+      "proof_text": null,
+      "assumptions": ["Independent nearest-neighbor Bernoulli bond percolation", "Integer d from 3 through 10", "Published theorem claim; no independent full-proof receipt"],
+      "domain": "probability theory",
+      "supersedes_existing": true,
+      "source": {"source_id": "owner-own-work:w428-c0023-source-audit-20261010", "url": "file:///~/brain_workers/w428/SOURCE_STATUS.json", "revision": "2026-10-10; supersedes historical 2026-09-07 status only", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "c0084",
+      "namespace": "probability.percolation",
+      "logical_name": "open-problem-c0084-no-infinite-cluster-at-criticality-on-quasi-transitive-graphs-with-p-c",
+      "kind": "concept",
+      "title": "C0084: quasi-transitive bond criticality with 2026 published resolution claim",
+      "statement": "Historical Benjamini-Schramm criticality question: for independent Bernoulli bond percolation on any infinite connected locally finite quasi-transitive undirected graph G with p_c(G)<1, is there almost surely no infinite open cluster at p_c(G)? OpenAI's 24 September 2026 preprint 'No percolation at criticality on quasi-transitive graphs', Theorem 1.1, claims the affirmative answer under exactly these graph hypotheses. Its public Lean solution theorem has the same conclusion for labelled bonds. The earlier 'open' label is historical; full mathematical and formal dependency audits are separate and remain unrecorded in this campaign.",
+      "proof_text": null,
+      "assumptions": ["Infinite connected locally finite quasi-transitive undirected graph", "Independent Bernoulli bonds", "p_c(G)<1", "Published theorem claim; no independent full-proof receipt"],
+      "domain": "probability theory",
+      "supersedes_existing": true,
+      "source": {"source_id": "owner-own-work:w428-c0023-source-audit-20261010", "url": "file:///~/brain_workers/w428/SOURCE_STATUS.json", "revision": "2026-10-10; supersedes historical 2026-09-07 status only", "license": "owner-own-work", "excerpt": null}
+    },
+    {
+      "key": "c0094",
+      "namespace": "probability.percolation",
+      "logical_name": "open-problem-c0094-no-infinite-cluster-at-criticality-on-z-d-for-all-d-2-duplicate-record",
+      "kind": "concept",
+      "title": "C0094: duplicate bond-criticality locator with 2026 published resolution claim",
+      "statement": "This historical duplicate locator refers to Heydenreich and van der Hofstad's Open Problem 1.1 for nearest-neighbor Bernoulli bond percolation on Z^d, d>=2: theta_d(p_c(d))=0. OpenAI's 24 September 2026 preprint 'No percolation at criticality on quasi-transitive graphs', Corollary 10.1, claims exactly this bond statement for every d>=2. It is the same mathematical bond target as C0023 for dimensions 3 through 10. The older open label is historical; independent audit of the new full proof is pending. No site-percolation assertion is made.",
+      "proof_text": null,
+      "assumptions": ["Independent nearest-neighbor Bernoulli bonds", "Integer d>=2", "Duplicate historical locator", "Published theorem claim; no independent full-proof receipt"],
+      "domain": "probability theory",
+      "supersedes_existing": true,
+      "source": {"source_id": "owner-own-work:w428-c0023-source-audit-20261010", "url": "file:///~/brain_workers/w428/SOURCE_STATUS.json", "revision": "2026-10-10; supersedes historical 2026-09-07 status only", "license": "owner-own-work", "excerpt": null}
+    }
+  ],
+  "relations": [
+    {"from_key": "c0023", "to_key": "source-status", "kind": "cites", "rationale": "The status correction is supported by the dated source audit and Corollary 10.1."},
+    {"from_key": "c0084", "to_key": "source-status", "kind": "cites", "rationale": "The status correction is supported by the dated source audit and Theorem 1.1."},
+    {"from_key": "c0094", "to_key": "source-status", "kind": "cites", "rationale": "The duplicate locator's status correction is supported by the dated source audit and Corollary 10.1."},
+    {"from_key": "c0084", "to_key": "c0023", "kind": "generalizes", "rationale": "Nearest-neighbor Z^d for d>=2 is infinite, connected, locally finite and transitive, with p_c<1; Corollary 10.1 states this application."},
+    {"from_key": "c0094", "to_key": "c0023", "kind": "semantic_association", "rationale": "Both historical rows express the same critical bond statement on Z^d, with C0094 also including d=2."}
+  ]
+}

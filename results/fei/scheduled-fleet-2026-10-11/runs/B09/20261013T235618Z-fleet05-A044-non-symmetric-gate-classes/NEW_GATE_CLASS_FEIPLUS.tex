@@ -1,0 +1,20 @@
+\paragraph{Sharp unequal-mean mux.}
+For $F(z,y_0,y_1)=(1-z)y_0+zy_1$, independent inputs, $q=\Pr(z=1)$,
+$m_j=\mathbb E y_j$, $v_j=1-m_j^2$, and $g(r)=r\ln(1/r)/(1-r)$,
+\[
+ \sup_{m_0,m_1\in(-1,1)}\frac{H_\mu^+(F)}{\Delta_\mu(F)}
+ =2+\frac{2}{\ln2}\left[1+g(\max(q,1-q))\right].
+\]
+Thus the exact global constant is $K_*=2+4/\ln2$.
+For arbitrary-arity independent-cell addressing with two data means assigned
+by Boolean profile $b$, set $t=(m_1-m_0)/2$ and let $D_c$ be its centered-data deficit.
+Then
+\[
+ H_\mu^+(F)\le t^2H_q^+(b)+K_*D_c,\qquad
+ \Delta_\mu(F)=t^2\Delta_q(b)+D_c.
+\]
+For selection between two reused data wires according to $b$, the profile
+multiplier is instead $\beta=(1-m_0m_1)/2$ in exact disjoint composition.
+Arbitrary-fan-in parity-controlled mux gates have corrected constant $K_*$
+under every product law, and read-once formulas retain the maximum constant
+independently of depth and fan-in. No arbitrary-profile entropy payment is asserted.

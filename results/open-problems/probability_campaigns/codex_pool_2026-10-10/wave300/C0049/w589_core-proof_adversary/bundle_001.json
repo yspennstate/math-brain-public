@@ -1,0 +1,145 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w589",
+  "bundle_slug": "c0049-adversary-endpoint-martingale-20261010",
+  "entries": [
+    {
+      "key": "endpoint",
+      "namespace": "probability.statmech",
+      "logical_name": "parafermionic-boundary-phase-endpoint-control",
+      "kind": "concept",
+      "title": "DRAFT: endpoint control in parafermionic identification",
+      "statement": "DRAFT; independent referee pending. On the upper half-plane with the upper logarithm, for 0<sigma<=1 and epsilon>0, z^(-sigma)(1+epsilon/z^2) has the same positive boundary rays as z^(-sigma) and the same z^sigma F->1 normalization at infinity, but differs. Even the nonvanishing function z^(-sigma)exp(epsilon/z^2) has those data. Boundary phases and infinity normalization alone do not prove uniqueness. A uniform bound on z^sigma F near zero, real continuous boundary values away from zero, and uniform infinity normalization do imply F=z^(-sigma) by reflection, removability, and Liouville.",
+      "proof_text": null,
+      "assumptions": [
+        "Analytic in H; upper logarithm; continuous boundary values away from marked endpoint 0",
+        "No FK endpoint estimate is proved here"
+      ],
+      "domain": "probability and complex analysis",
+      "source": {
+        "source_id": "owner-probability-campaign-w589-C0049-20261010",
+        "url": "urn:owner:probability-campaign:w589:C0049:20261010",
+        "revision": "independent-adversary-draft-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "ui",
+      "namespace": "probability.statmech",
+      "logical_name": "uniform-path-limit-martingale-integrability-obstruction",
+      "kind": "concept",
+      "title": "DRAFT: uniform path convergence does not preserve martingales",
+      "statement": "DRAFT; independent referee pending. For a unit-rate Poisson process N, M^n_t=1-t+nN_{t/n}, 0<=t<=1, is a nonnegative true martingale in its own natural filtration. Its paths eventually equal 1-t on the entire interval almost surely, because the first Poisson jump time is positive. Thus it converges uniformly almost surely to a continuous deterministic non-martingale. Uniform integrability is absent: E[M^n_t]=1 but E[1-t]=1-t. Joint path convergence alone cannot pass a renormalized observable's conditional martingale identity to the limit.",
+      "proof_text": null,
+      "assumptions": [
+        "Each prelimit uses the time-changed Poisson natural filtration",
+        "This is an abstract inference counterexample, not an FK counterexample"
+      ],
+      "domain": "probability and complex analysis",
+      "source": {
+        "source_id": "owner-probability-campaign-w589-C0049-20261010",
+        "url": "urn:owner:probability-campaign:w589:C0049:20261010",
+        "revision": "independent-adversary-draft-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "driver",
+      "namespace": "probability.statmech",
+      "logical_name": "conditional-complex-parafermionic-driver-identification",
+      "kind": "concept",
+      "title": "DRAFT: complex observable identifies the Loewner driver",
+      "statement": "DRAFT; independent referee pending. Let sigma>0 and W_0=0 be a real continuous adapted chordal Loewner driver, with dg_t=2/(g_t-W_t)dt. If exp(sigma(Log g'_t(z)-Log(g_t(z)-W_t))) is a full complex continuous local martingale in the same usual filtration for every z=im, m a positive integer, before swallowing, then W has bracket 8t/(1+sigma), zero drift, and W/sqrt(8/(1+sigma)) is Brownian motion. Recover the semimartingale premise from a local inverse of the nonzero observable; Ito's imaginary finite-variation equation removes signed drift. This conditional route does not establish discrete observable convergence.",
+      "proof_text": null,
+      "assumptions": [
+        "Consistent continuous logarithms",
+        "Both real and imaginary parts are local martingales",
+        "No random time-dependent normalization"
+      ],
+      "domain": "probability and complex analysis",
+      "source": {
+        "source_id": "owner-probability-campaign-w589-C0049-20261010",
+        "url": "urn:owner:probability-campaign:w589:C0049:20261010",
+        "revision": "independent-adversary-draft-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.statmech",
+      "logical_name": "c0049-random-slit-observable-convergence-gap",
+      "kind": "concept",
+      "title": "DRAFT: precise remaining C0049 observable gap",
+      "statement": "DRAFT. For the square-lattice FK-to-SLE observable route, the unresolved input is convergence of the correctly normalized vertex observable (2delta)^(-sigma)f_delta in actual explored slit domains to a fixed deterministic multiple of (g'_t/(g_t-W_t))^sigma, together with common localization, joint convergence of stopped histories, and stopped uniform integrability. Static-domain convergence or weak contour equations alone do not provide this input. The historical C0049 attempt's additional-discrete-relation strategy is sufficient if completed, not a proved necessary characterization of every solution route. Full target openness is UNKNOWN here; q<1 critical tuning and tightness also require verification.",
+      "proof_text": null,
+      "assumptions": [
+        "Source target is Dobrushin square-lattice bond FK; triangular site percolation is different",
+        "No C0049 solved or retired claim"
+      ],
+      "domain": "probability and complex analysis",
+      "source": {
+        "source_id": "owner-probability-campaign-w589-C0049-20261010",
+        "url": "urn:owner:probability-campaign:w589:C0049:20261010",
+        "revision": "independent-adversary-draft-v1",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "q4",
+      "namespace": "probability.statmech",
+      "logical_name": "c0049-q4-free-loop-source-status-october-2026",
+      "kind": "concept",
+      "title": "Source status: October 2026 q=4 free-loop convergence",
+      "statement": "As checked on 2026-10-10, Averous, Duminil-Copin, He, Lammers and Manolescu, arXiv:2610.08507v1 (6 October 2026), Theorem 1.2 states that critical square-lattice random-cluster loop ensembles with q=4 and p=2/3, free boundary conditions, and Caratheodory domain approximation converge weakly to nested CLE(4) in the Camia-Newman topology. This is a checked primary theorem statement; its proof is not independently audited here. The stated theorem does not itself assert Dobrushin chordal-interface convergence. It qualifies older blanket open-status records but does not automatically retire the exact C0049 target.",
+      "proof_text": null,
+      "assumptions": [
+        "Free boundary loop ensembles; square lattice; q=4 p=2/3",
+        "Primary-source statement check is separate from proof review"
+      ],
+      "domain": "probability and complex analysis",
+      "source": {
+        "source_id": "arxiv:2610.08507v1",
+        "url": "https://arxiv.org/html/2610.08507v1#S1.SS3",
+        "revision": "v1-as-read-2026-10-10",
+        "license": "arxiv-nonexclusive (facts paraphrased; no reproduced proof)",
+        "excerpt": "with free boundary conditions"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "gap",
+      "to_key": "ui",
+      "kind": "cites",
+      "rationale": "The route requires 'stopped uniform integrability'; the Poisson counterexample establishes why 'joint path convergence alone' is insufficient."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "driver",
+      "kind": "cites",
+      "rationale": "The gap names the limiting full complex martingale; the conditional identification entry derives the driver only after that input."
+    },
+    {
+      "from_key": "gap",
+      "to_key": "endpoint",
+      "kind": "cites",
+      "rationale": "The gap requires identification of the analytic limit; the endpoint example prevents replacing that identification by boundary phases alone."
+    },
+    {
+      "from_key": "gap",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0049-convergence-of-random-cluster-interfaces-to-sle-kappa-for-q-in-0-4-q-n",
+      "kind": "semantic_association",
+      "rationale": "Existing target is 'critical random-cluster ... Dobrushin domains'; this entry isolates the random-slit observable route to that target."
+    },
+    {
+      "from_key": "q4",
+      "to_existing_logical": "math:probability.statmech:open-problem-c0049-convergence-of-random-cluster-interfaces-to-sle-kappa-for-q-in-0-4-q-n",
+      "kind": "semantic_association",
+      "rationale": "Existing target includes q in (0,4]; Theorem 1.2 now gives q=4 free-loop CLE4 convergence, with a different stated boundary observable."
+    }
+  ]
+}

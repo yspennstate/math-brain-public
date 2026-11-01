@@ -1,0 +1,17 @@
+{
+  "helper_version": "A020-unbounded-admission-v1",
+  "family": "A=point_5(v)*(1-G_m(z))/2, G_m product of m disjoint three-bit point-defect signs, h=chi_u(1-A)+chi_q A; F=1 at gate0 and hs at gate1",
+  "symbolic_domain": {"k": 5, "m": [1, 2, 4, 16, 64, 128, 256]},
+  "actual_truth_table_domain": {"k": 1, "m": [1, 2]},
+  "case_count": 9,
+  "pilot": "symbolic m1 and actual truth-table m1 only",
+  "symmetry": "No search quotient. Exact tensor spectrum histogram has binomial(m,b)*7^b atoms of mass 9^(m-b)/16^m; this counts all Fourier coefficients.",
+  "arithmetic": "Integer Walsh and physical edges for actual tables; Fraction tensor multiplicities; 100-bit outward-rounded rational intervals with 48-term atanh and explicit positive remainder for logs",
+  "memory_estimate_mb": 90,
+  "maximum_runtime_seconds": 60,
+  "largest_truth_table_dimension": 12,
+  "largest_symbolic_dimension": 778,
+  "allocation_policy": "Never allocate symbolic truth tables or exponential spectra",
+  "automatic_dimension_growth": false,
+  "purpose": "Test A016 admission c<=J_A+2 and exact SAME-half-bank remainder; keep root, both complete terminals, original first debit and conversion. Prove an all-m obstruction separately from finite checks."
+}

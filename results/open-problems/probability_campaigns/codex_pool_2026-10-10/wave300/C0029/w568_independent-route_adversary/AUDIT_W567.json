@@ -1,0 +1,34 @@
+{
+  "candidate": "C0029",
+  "auditor": "w568",
+  "reviewed_snapshot_sha256": {
+    "~\\brain_workers\\w568\\review_inputs\\w567_ATTEMPT.md": "8f2997fb0322d9b184e7827f4b90a6a1812b70971fb9d723ea3b3e5fe05a075c",
+    "~\\brain_workers\\w568\\review_inputs\\w567_CLAIMS.jsonl": "d3ee8fc1c1a68f855b9ad6b4c9fd68cc7011af1a7e3a86c353f4be43053da28b"
+  },
+  "order": "ATTEMPT.md was saved before reading any w567 proof; the paired inputs were then frozen and read.",
+  "verdict": "KEEP elementary scope; full-target gap remains",
+  "checks": [
+    {
+      "claim": "C0029-w567-L1",
+      "statement": "For n>=2 and an n by n matrix B of independent uniform {-1,+1} entries, P(s_min(B)=0)>=2^(1-n).",
+      "verdict": "KEEP_SCOPED",
+      "independent_derivation": "For n>=2 condition on row 1. Row 2 is uniform on 2^n sign vectors, and precisely r and -r are proportional. They are distinct, so the probability is 2^(1-n). Row dependence forces singularity. This is a lower bound only."
+    },
+    {
+      "claim": "arithmetic separation",
+      "statement": "For nonsingular sign B of order n>=2, s_min(B)>=alpha_n=2^(n-1)((n-1)/n^2)^((n-1)/2). For 0<=t<sqrt(n)alpha_n, the small-singular-value event is exactly singularity.",
+      "verdict": "KEEP_SCOPED",
+      "independent_derivation": "Subtract the first row from each other row and factor a 2 from each of those n-1 rows: the nonzero determinant is a multiple of 2^(n-1). Frobenius norm squared is n^2. AM-GM bounds the product of the largest n-1 singular values by (n^2/(n-1))^((n-1)/2); division gives alpha_n. Use the strict threshold as stated. This needs no random-row product."
+    },
+    {
+      "claim": "extension from all small t to all t",
+      "verdict": "FIX_SCOPE_EXPLANATION",
+      "why": "Adjusting exponential constants covers finitely many dimensions, but does not by itself cover a fixed interval between the historical small-t range and t=1. A sufficient extra input is uniform fixed-scale universality plus F(t)<t; Tao--Vu Theorem 1.3 provides that input. The modern source already states the all-t target, so this is an omitted equivalence argument, not a contradiction to the target."
+    }
+  ],
+  "hardest_gap": "sqrt(n)alpha_n/exp(-sqrt(n)) tends to zero. Arithmetic separation therefore leaves the intermediate window. A Bernoulli-specific one-sided comparison with the actual finite-n Gaussian CDF, or control of positive error by its coefficient-one slack, is still needed.",
+  "countermodel": "~\\brain_workers\\w568\\OBSTRUCTION_PROOF.md",
+  "formal_check": null,
+  "served_model_acceptance_gate": "NOT PASSED: no response-side identity evidence available for this author/auditor; scoped checks are not an admission receipt",
+  "full_problem_solved": false
+}

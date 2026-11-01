@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "checks": 274995,
+  "domains": [
+    {
+      "n": 0,
+      "signed_cell_rows": 2,
+      "disjoint_signed_pairs": 0,
+      "parallel_pairs": 0,
+      "minimum_nonparallel_energy_ratio": "None"
+    },
+    {
+      "n": 1,
+      "signed_cell_rows": 8,
+      "disjoint_signed_pairs": 4,
+      "parallel_pairs": 4,
+      "minimum_nonparallel_energy_ratio": "None"
+    },
+    {
+      "n": 2,
+      "signed_cell_rows": 48,
+      "disjoint_signed_pairs": 168,
+      "parallel_pairs": 72,
+      "minimum_nonparallel_energy_ratio": "1/3"
+    },
+    {
+      "n": 3,
+      "signed_cell_rows": 480,
+      "disjoint_signed_pairs": 13776,
+      "parallel_pairs": 2576,
+      "minimum_nonparallel_energy_ratio": "1/3"
+    }
+  ],
+  "negative_parallel_control": true,
+  "witnesses": {
+    "sharp_energy": {
+      "n": 2,
+      "a": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "b": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "E0": "3/4",
+      "E": "1/4"
+    },
+    "cubic": {
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "raw_walsh": [
+        6,
+        2,
+        2,
+        -2,
+        2,
+        -2,
+        -2,
+        2
+      ],
+      "influence": "3/4"
+    },
+    "quartic": {
+      "truth": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "phase_degree": 4
+    }
+  },
+  "runtime_seconds": 3.9283810000051744,
+  "arithmetic": "integer/Fraction; rational logarithm enclosure with 18 atanh terms and explicit geometric remainder",
+  "proof_rung": "analytic proof with exact finite validation; not Lean-certified"
+}

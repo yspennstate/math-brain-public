@@ -1,0 +1,10 @@
+R04 I0027 effective-resistance clustering closure checker
+SELF-CHECK: exact finite/symbolic core only; Alev-Anari-Lau-Oveis Gharan Theorem 3 and published barbell lower bound are external inputs
+scaling_exponents C4_linear 29/10 C4_quadratic 14/5 cluster_internal 23/10 all_strictly_below_3 PASS
+C6_probability_inequality_exact_cases 3905 PASS
+cluster_tree_example [3, 2, 4] [(0, 1), (1, 2)] n 9 m 12 eps 1 K 89/4 Kbr 397/24 split_bound PASS
+cluster_tree_example [2, 3, 2, 3] [(0, 1), (1, 2), (1, 3)] n 10 m 11 eps 1 K 1247/66 Kbr 261/22 split_bound PASS
+cluster_tree_example [4, 2, 2, 3, 2] [(0, 1), (1, 2), (2, 3), (2, 4)] n 13 m 16 eps 1 K 2177/48 Kbr 1257/32 split_bound PASS
+C4_normalized_error A*C*(C + 2*delta)/delta**2 PASS
+C6_optimization max 1/54 at s=2/3 PASS
+RESULT PASS

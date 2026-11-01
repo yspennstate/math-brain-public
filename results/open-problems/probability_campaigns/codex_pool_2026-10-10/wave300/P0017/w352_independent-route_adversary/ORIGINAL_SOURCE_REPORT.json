@@ -1,0 +1,87 @@
+[
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+    "line": 19,
+    "row": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "kls_isotropic_log_concave_dimension_free_cheeger",
+      "historical_status": "source_says_open",
+      "locator": "Conjecture 30, Entry 13",
+      "problem_id": "P0017",
+      "recorded_at": "2026-09-06T16:08:02Z",
+      "result_status": "not_started",
+      "schema": "probability-problem.v1",
+      "source_id": "randomstrasse_2025_v1",
+      "statement": "Is there a universal positive lower bound for the Euclidean Cheeger constant of every isotropic log-concave probability measure, in every dimension?",
+      "statement_caveat": "Use outer boundary liminf in the standard definition; the source's displayed halfspace formula has an S/H notational mismatch. Thin-shell and slicing results are separate and reported resolved by this source.",
+      "title": "Dimension-free log-concave Poincare or Cheeger constant",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\problems.jsonl",
+    "line": 119,
+    "row": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "kls_isotropic_log_concave_dimension_free_cheeger",
+      "historical_status": "source_says_open",
+      "locator": "Conjecture 30, Entry 13",
+      "problem_id": "P0017",
+      "recorded_at": "2026-09-06T19:17:12Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "randomstrasse_2025_v1",
+      "statement": "Is there a universal positive lower bound for the Euclidean Cheeger constant of every isotropic log-concave probability measure, in every dimension?",
+      "statement_caveat": "Use outer boundary liminf in the standard definition; the source's displayed halfspace formula has an S/H notational mismatch. Thin-shell and slicing results are separate and reported resolved by this source.",
+      "title": "Dimension-free log-concave Poincare or Cheeger constant",
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\attempts.jsonl",
+    "line": 19,
+    "row": {
+      "attempt_id": "P0017-A001",
+      "depth": "first_pass",
+      "full_problem_solved": false,
+      "independent_check": "The constant is attained by any nonconstant linear function, checking both normalization and dimension independence.",
+      "independent_review": "none",
+      "method": "Gaussian special case by orthogonal expansion",
+      "novelty": "not_claimed",
+      "obstruction": "A general isotropic log-concave measure lacks this diagonal Hermite generator. This special case does not prove its uniform Poincare or Cheeger bound.",
+      "problem_id": "P0017",
+      "recorded_at": "2026-09-06T17:37:31Z",
+      "result": "For standard Gaussian measure, expand a polynomial f in orthonormal multivariate Hermite polynomials with coefficients a_alpha. Then Var(f)=sum_(|alpha|>=1) a_alpha^2 <= sum |alpha| a_alpha^2 = E||gradient f||^2. Closure in Gaussian Sobolev norm extends the inequality to its natural domain.",
+      "schema": "probability-attempt.v1",
+      "substantive": true,
+      "verification": "author_checked_limited_argument"
+    }
+  },
+  {
+    "path": "~\\Downloads\\Probability_1000_20h_20260906\\sources.jsonl",
+    "line": 2,
+    "row": {
+      "access_evidence": "Author-deposited arXiv preprint under CC BY 4.0",
+      "acquired_at": "2026-09-06T15:32:10Z",
+      "acquisition_status": "validated_and_extracted",
+      "bytes": 578998,
+      "extracted_characters": 60504,
+      "extracted_sha256": "4e6cd8e90b85b60e92b215403e1e6f1481b9977786152d506110678b3e218697",
+      "final_url": "https://arxiv.org/pdf/2603.29571",
+      "http_status": 200,
+      "kind": "pdf",
+      "page_count": 19,
+      "raw_relative_to_downloads": "sources/randomstrasse_2025_v1/source.pdf",
+      "reading_status": "unread",
+      "schema": "probability-source.v1",
+      "sha256": "cd4e929a83143f9157283d2d9de7e6a99bca40f57e16d62a9b1f3ba33070801c",
+      "source_id": "randomstrasse_2025_v1",
+      "statement_validation": "not_started",
+      "text_relative_to_downloads": "sources/randomstrasse_2025_v1/text.txt",
+      "title": "Randomstrasse101: Open Problems of 2025",
+      "url": "https://arxiv.org/pdf/2603.29571"
+    }
+  }
+]

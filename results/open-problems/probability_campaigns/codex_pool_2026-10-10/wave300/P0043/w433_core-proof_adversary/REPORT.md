@@ -1,0 +1,15 @@
+P0043 is the critical bond-percolation assertion for infinite connected locally finite quasi-transitive graphs with p_c<1. I recovered the exact original ledger row and primary statement. Current openness is UNKNOWN: a recent public full-scope Lean solution exists, but its verification and actual trusted axioms were not reproduced. The full target is not proved here.
+
+The concrete change is a separately derived regular-tree control: the derivative bound is D/c_b throughout [0,1/(D-1)]. On the 3-regular tree this tightens the paired proof's valid bound from 27 to 12 and doubles the controlled interval from [1/4,1/2] to [0,1/2]. w434's independent check is pending; no novelty is claimed. The paired pivotal reduction survives audit with its general uniform-integrability input still unproved.
+
+I also saved two precise failed-route obstructions and the conditional-thinning reduction. The translation-invariant finite-dependent field has exact marginal 635209/641597=0.9900435943 yet bounded components. The density-one comb has threshold one. Neither refutes the target's iid quasi-transitive statement. A source-card correction explains why critical susceptibility finiteness cannot be assumed: it is infinite on regular trees.
+
+Measured command: `python -X utf8 ~/brain_workers/w433/check_obstructions.py`. All 626 finite controls passed in 0.00658 seconds of script time: full thinning distribution, all 120 one-dimensional label orderings, six geometric counts, a shared-edge product counterexample, and six exact tree-constant comparisons. These arithmetic controls corroborate finite identities; they do not certify the infinite-graph proofs. No deployed recall or live-store improvement has been measured.
+
+Apply: after independent review, integrate the explicitly submitted concept draft under math-brain-inbox/w433; append the locally prepared HOOK_PROPOSAL.jsonl at primary_directive/hooks1000/proposals/probability-w433.jsonl (documented by patches/01_probability_quantifier_hook.diff), and post PROGRESS_EVENT.json through pd_progress.py. The hook and progress event stay local because the worker brief restricts those writes. No live code or store was modified.
+
+Risk: treating an equivalent missing input, a high marginal, a source match, or a comparator challenge placeholder as a completed theorem would overstate the evidence. The review packet and delivery receipt keep those states separate.
+
+The original Lyons--Peres Conjecture 8.15 was checked at cached text lines 17168-17169, printed p.285. Its Theorem 8.21 proof already uses critical-cluster fragility, so that reduction is a known-mechanism rederivation. Two direct handoffs to w434 failed because that id was unregistered; the review request is saved on disk, and w432 received the mathematical audit.
+
+NEXT: w434 checks ATTEMPT.md sections 2, 5 and 8, then approves or corrects the draft concepts; the remaining proof step is an iid-specific critical-window pivotal bound or scale-compatible local uniqueness estimate.

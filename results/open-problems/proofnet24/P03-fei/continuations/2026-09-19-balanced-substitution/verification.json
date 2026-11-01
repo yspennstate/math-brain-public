@@ -1,0 +1,245 @@
+{
+  "full_FEI_proved": false,
+  "full_resolvent_pointwise_candidate": "REFUTED by the accompanying analytic family",
+  "independent_audit": false,
+  "lean_used": false,
+  "acceptance_arithmetic": "Integers and Fraction linear forms in prime logarithms; 64-term outward logarithm bounds",
+  "script_sha256": "9600d6b961d26f9131277b830894c0e9497fefdaee2a9291507885cdf40326ab",
+  "small": {
+    "status": "PASS",
+    "all_truth_tables_dimension_0_to_3": 278,
+    "all_increasing_functions_dimension_4": 168,
+    "distinct_canonical_functions_total": 370,
+    "certified_entropy_inequalities": 1850,
+    "checks": "Monotone C identity; general variance bound; A<=L<=D<=2L; D<=2A+7Q; character invariance"
+  },
+  "composition": {
+    "status": "PASS",
+    "exact_C_and_influence_substitution_examples": 128,
+    "exact_entropy_composition_examples": 128,
+    "exact_allocation_and_XOR_composition_examples": 10,
+    "selected_examples": [
+      {
+        "outer_bits": 3,
+        "outer_entropy": {
+          "lower": "2.000000000000",
+          "upper": "2.000000000000"
+        },
+        "outer_A": {
+          "lower": "0.750000000000",
+          "upper": "0.750000000000"
+        },
+        "composite_A": {
+          "lower": "1.312500000000",
+          "upper": "1.312500000000"
+        },
+        "composition_A_defect": {
+          "lower": "0.000000000000",
+          "upper": "0.000000000000"
+        },
+        "composite_C": "7/4"
+      },
+      {
+        "outer_bits": 3,
+        "outer_entropy": {
+          "lower": "2.216917186688",
+          "upper": "2.216917186689"
+        },
+        "outer_A": {
+          "lower": "0.926250725026",
+          "upper": "0.926250725027"
+        },
+        "composite_A": {
+          "lower": "1.066875725026",
+          "upper": "1.066875725027"
+        },
+        "composition_A_defect": {
+          "lower": "0.000000000000",
+          "upper": "0.000000000000"
+        },
+        "composite_C": "19/16"
+      }
+    ]
+  },
+  "extra": {
+    "status": "PASS",
+    "unequal_ternary_tree_shapes": [
+      {
+        "variables": 5,
+        "C": "5/4",
+        "A": {
+          "lower": "0.937500000000",
+          "upper": "0.937500000000"
+        }
+      },
+      {
+        "variables": 7,
+        "C": "3/2",
+        "A": {
+          "lower": "1.125000000000",
+          "upper": "1.125000000000"
+        }
+      },
+      {
+        "variables": 5,
+        "C": "5/4",
+        "A": {
+          "lower": "0.937500000000",
+          "upper": "0.937500000000"
+        }
+      },
+      {
+        "variables": 9,
+        "C": "7/4",
+        "A": {
+          "lower": "1.312500000000",
+          "upper": "1.312500000000"
+        }
+      }
+    ],
+    "nonodd_balanced_monotone_common_inner_examples": 8,
+    "nonodd_allocation_defect_example": {
+      "lower": "0.397782998537",
+      "upper": "0.397782998538"
+    },
+    "scope": "Checks exact odd-inner closure and a strictly positive general correction"
+  },
+  "family": {
+    "status": "PASS",
+    "majority_spectral_weight_truth_table_checks": [
+      3,
+      5,
+      7,
+      9,
+      11
+    ],
+    "rational_lower_bound_examples": [
+      {
+        "outer_majority_bits": 3,
+        "rational_allocation_lower": {
+          "lower": "0.375000000000",
+          "upper": "0.375000000000"
+        },
+        "harmonic_lower": {
+          "lower": "0.083333333333",
+          "upper": "0.083333333334"
+        }
+      },
+      {
+        "outer_majority_bits": 5,
+        "rational_allocation_lower": {
+          "lower": "0.512695312500",
+          "upper": "0.512695312500"
+        },
+        "harmonic_lower": {
+          "lower": "0.111111111111",
+          "upper": "0.111111111112"
+        }
+      },
+      {
+        "outer_majority_bits": 9,
+        "rational_allocation_lower": {
+          "lower": "0.665017515420",
+          "upper": "0.665017515421"
+        },
+        "harmonic_lower": {
+          "lower": "0.143518518518",
+          "upper": "0.143518518519"
+        }
+      },
+      {
+        "outer_majority_bits": 17,
+        "rational_allocation_lower": {
+          "lower": "0.827896111487",
+          "upper": "0.827896111488"
+        },
+        "harmonic_lower": {
+          "lower": "0.178769841269",
+          "upper": "0.178769841270"
+        }
+      },
+      {
+        "outer_majority_bits": 33,
+        "rational_allocation_lower": {
+          "lower": "0.997581475303",
+          "upper": "0.997581475304"
+        },
+        "harmonic_lower": {
+          "lower": "0.215596055179",
+          "upper": "0.215596055180"
+        }
+      },
+      {
+        "outer_majority_bits": 65,
+        "rational_allocation_lower": {
+          "lower": "1.171316187633",
+          "upper": "1.171316187634"
+        },
+        "harmonic_lower": {
+          "lower": "0.253249733079",
+          "upper": "0.253249733080"
+        }
+      },
+      {
+        "outer_majority_bits": 129,
+        "rational_allocation_lower": {
+          "lower": "1.347355283187",
+          "upper": "1.347355283188"
+        },
+        "harmonic_lower": {
+          "lower": "0.291327272428",
+          "upper": "0.291327272429"
+        }
+      },
+      {
+        "outer_majority_bits": 257,
+        "rational_allocation_lower": {
+          "lower": "1.524674701955",
+          "upper": "1.524674701956"
+        },
+        "harmonic_lower": {
+          "lower": "0.329619282921",
+          "upper": "0.329619282922"
+        }
+      },
+      {
+        "outer_majority_bits": 513,
+        "rational_allocation_lower": {
+          "lower": "1.702695431197",
+          "upper": "1.702695431198"
+        },
+        "harmonic_lower": {
+          "lower": "0.368019164600",
+          "upper": "0.368019164601"
+        }
+      },
+      {
+        "outer_majority_bits": 1025,
+        "rational_allocation_lower": {
+          "lower": "1.881096669297",
+          "upper": "1.881096669298"
+        },
+        "harmonic_lower": {
+          "lower": "0.406473140808",
+          "upper": "0.406473140809"
+        }
+      }
+    ],
+    "Q_parameter_checks_d_13_through_256": 244,
+    "symbolic_K8_witness": {
+      "r": "2^1024",
+      "m": "2^1025+1",
+      "d": 1026,
+      "D_strict_lower": "4099/108",
+      "C_plus_Q_strict_upper": "17/4",
+      "ratio_strict_lower": "4099/459",
+      "ratio_lower_decimal": {
+        "lower": "8.930283224400",
+        "upper": "8.930283224401"
+      },
+      "scope": "Proof-based symbolic witness; NO truth-table enumeration at this dimension"
+    }
+  },
+  "status": "ALL_REQUESTED_CHECKS_PASS",
+  "elapsed_seconds": 4.145
+}

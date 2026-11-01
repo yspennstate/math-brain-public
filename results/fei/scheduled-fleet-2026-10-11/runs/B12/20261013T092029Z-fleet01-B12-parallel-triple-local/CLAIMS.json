@@ -1,0 +1,24 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261013T092029Z-fleet01-B12-parallel-triple-local",
+  "stream": "B12",
+  "primary_packet_id": "A057",
+  "claims": [
+    {
+      "claim_id": "B12-A057-PARALLEL-TRIPLE-LOCAL",
+      "version": "v1",
+      "status": "CONTRIBUTOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every union of three distinct parallel affine cosets and the genuine-Boolean selector splice, the local coherent associator satisfies Omega <= 8 ln(2) I(d), uniformly in dimension, codimension, bias, physical orientation, and overlap; the constant is the sharp supremum.",
+      "evidence": ["PARALLEL_TRIPLE_THEOREM.tex", "check_parallel_triples.py", "check_parallel_triples.out"]
+    },
+    {
+      "claim_id": "B12-A057-FULL-INFLUENCE-HIERARCHY",
+      "version": "v2",
+      "status": "REFUTED_AS_STATED_BY_INDEPENDENT_REVIEW",
+      "statement": "Pathwise coordinate nonreuse alone would imply sum_v w_v I(d_v) <= I(b).",
+      "falsifier_commit": "0f2769f79b04a9a98ad26b3c9fa1c2d94f9cac98"
+    }
+  ],
+  "full_fei": "OPEN"
+}
+

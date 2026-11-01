@@ -1,0 +1,182 @@
+[
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_D_20260908\\problems.jsonl",
+    "line": 49,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "lqg_hausdorff_dimension_d_gamma",
+      "historical_status": "source_says_open",
+      "intake": "D_20260908",
+      "locator": "Problem 5.1, PDF p. 23",
+      "problem_id": "D0049",
+      "recorded_at": "2026-09-08T09:22:17Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "ddg_lqg_metric_intro_2021",
+      "statement": "For gamma in (0,2), compute the Hausdorff dimension d_gamma of the plane equipped with the gamma-LQG metric. More generally, for xi > 0 determine the relationship between the parameters Q and xi of Liouville first passage percolation. The only known case is d_{sqrt(8/3)} = 4, equivalently Q(1/sqrt 6) = 5/sqrt 6. The source notes that the relation between Q and xi is not universal across different log-correlated Gaussian fields, which is one indication of the difficulty.",
+      "status_search": "WebSearch 2026-09-08 for LQG metric dimension results; the sources located (Ding-Gwynne dimension monotonicity and bounds, Ang, Gwynne-Pfeffer numerical bounds, and the source's own Section 5) all give bounds rather than a value, and the source itself, dated 2021, is the most recent survey I fetched. The best rigorous bounds quoted are 3.550408 <= d_{sqrt 2} <= 3.63299. No evidence of resolution.",
+      "title": "The Hausdorff dimension of gamma-LQG, equivalently the relation between Q and xi",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_D_20260908\\problems.jsonl",
+    "line": 52,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "lqg_hausdorff_dimension_d_gamma",
+      "historical_status": "source_says_open",
+      "intake": "D_20260908",
+      "locator": "Problem 1, PDF p. 9",
+      "problem_id": "D0052",
+      "recorded_at": "2026-09-08T09:22:38Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "gwynne_random_surfaces_2020",
+      "statement": "What is the Hausdorff dimension d_gamma of a gamma-LQG surface viewed as a metric space, for gamma in (0,2) other than sqrt(8/3)? The value is not known even at a physics level of rigour: Watabiki's prediction was disproved for small gamma by Ding and Goswami; it is known that gamma maps to d_gamma is strictly increasing, and 3.550408 <= d_{sqrt 2} <= 3.63299.",
+      "status_search": "Same as D0049: WebSearch 2026-09-08 found only bounds and monotonicity, no value. No evidence of resolution. NOTE: this is the same mathematical problem as D0049, stated independently in a second source; the shared dedup_key makes the pair count once in the distinct-problem total.",
+      "title": "The Hausdorff dimension of gamma-LQG as a metric space (Notices survey statement)",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_D_20260908\\attempts.jsonl",
+    "line": 43,
+    "record": {
+      "attempt_id": "D0049-A001",
+      "author": "claude-prob1000-D-0908",
+      "independent_check": "",
+      "key_identity": "d_gamma = 2Q/xi with Q = 2/gamma + gamma/2; d_{sqrt(8/3)} = 4 is known only through the Brownian map bijections.",
+      "method": "Ask what kind of object d_gamma is. The known relations are d_gamma = 2 Q / xi with Q = 2/gamma + gamma/2, so a formula for d_gamma is the same as a formula for the LFPP exponent xi in terms of gamma. The exponent xi is defined by a subadditive limit for the LFPP distance, so it is a Lyapunov-type exponent for a multiplicative cascade of Gaussian weights.",
+      "obstruction": "The wall is that no exactly solvable structure is known for the LQG metric away from gamma = sqrt(8/3). Every exponent that has been computed in LQG (measure exponents, the KPZ relation, ball boundary dimensions) is a consequence of the multiplicative structure of the MEASURE, which is exactly solvable; the metric is a first-passage time and is not a function of the measure. This is the same wall that prevents computing the time constant in ordinary first-passage percolation, and there is no reason to think the LQG case is easier except that its environment is exactly scale invariant.",
+      "problem_id": "D0049",
+      "recorded_at": "2026-09-08T09:22:17Z",
+      "result": "The honest structural statement is that d_gamma is a first-passage percolation time constant for a log-correlated environment, and the only quantity of that type with a known closed form in two dimensions is the sqrt(8/3) case, which is known NOT from the metric side at all but from the Brownian-map bijections. That is a strong warning against expecting a closed form: the value 4 is a combinatorial output of the Schaeffer bijection, and no bijection is available for other gamma. Two soft constraints I can record: (i) d_gamma is strictly increasing in gamma (Ding-Gwynne), continuous, with d_0+ = 2 and d_{2-} = 4 * something at criticality; (ii) the Watabiki prediction is false at small gamma (Ding-Goswami), so any conjectural formula must fail to match Watabiki near gamma = 0, which rules out the whole family of formulas obtained by analytic continuation of the Watabiki ansatz.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_D_20260908\\attempts.jsonl",
+    "line": 46,
+    "record": {
+      "attempt_id": "D0052-A001",
+      "author": "claude-prob1000-D-0908",
+      "independent_check": "",
+      "key_identity": "Linear interpolation between d_0 = 2 and d_{sqrt(8/3)} = 4 predicts d_{sqrt 2} = 3.732 > 3.63299, so d_gamma is not affine; Watabiki's value 3.5616 at gamma = sqrt 2 is inside the rigorous window.",
+      "method": "Use the bounds quoted in this source as a numerical constraint on candidate closed forms, which the other statement of the problem (D0049) does not do.",
+      "obstruction": "Same wall as D0049: no exactly solvable structure for the metric away from gamma = sqrt(8/3). The numerical eliminations above constrain but do not determine the function.",
+      "problem_id": "D0052",
+      "recorded_at": "2026-09-08T09:22:38Z",
+      "result": "The interval 3.550408 <= d_{sqrt 2} <= 3.63299 is narrow enough to eliminate simple guesses, and doing that elimination is the concrete contribution here. Watabiki's formula gives d_gamma = 1 + gamma^2/4 + sqrt((1+gamma^2/4)^2 + gamma^2), which at gamma = sqrt 2 evaluates to 1.5 + sqrt(2.25 + 2) = 1.5 + 2.0616 = 3.5616, inside the interval -- so the quoted bounds do NOT by themselves refute Watabiki at gamma = sqrt 2 (the refutation of Ding-Goswami is at SMALL gamma, as the source says). The linear interpolation between d_0 = 2 and d_{sqrt(8/3)} = 4 gives 2 + 2*(sqrt2/sqrt(8/3)) = 2 + 2*0.8660 = 3.732, which is ABOVE the upper bound 3.63299 and is therefore refuted; so d_gamma is strictly concave somewhere on (0, sqrt(8/3)) if it is smooth. That concavity is a genuine, checkable consequence of the quoted bounds that I did not find stated in either source.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_D_20260908\\sources.jsonl",
+    "line": 16,
+    "record": {
+      "access_evidence": "arXiv 1305.6221 (API-confirmed)",
+      "acquired_at": "2026-09-08T08:43:18Z",
+      "acquisition_status": "validated_and_extracted",
+      "bytes": 2860332,
+      "extracted_characters": 168927,
+      "extracted_sha256": "671d8c830f74119a3883223e89e7288870cabd9b7d8610a1cb70f80a550d81f3",
+      "final_url": "https://arxiv.org/pdf/1305.6221",
+      "http_status": 200,
+      "intake": "D_20260908",
+      "kind": "pdf",
+      "page_count": 73,
+      "raw_relative_to_downloads": "sources/rhodes_vargas_gmc_review_2014/source.pdf",
+      "reading_status": "unread",
+      "schema": "probability-source.v1",
+      "sha256": "02955de094c8e1a4f2c371bbc4a7f1930331d07d36e90aa067525f1b24654598",
+      "source_id": "rhodes_vargas_gmc_review_2014",
+      "statement_validation": "not_started",
+      "text_relative_to_downloads": "sources/rhodes_vargas_gmc_review_2014/text.txt",
+      "title": "Rhodes and Vargas: Gaussian multiplicative chaos and applications, a review",
+      "url": "https://arxiv.org/pdf/1305.6221"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_D_20260908\\sources.jsonl",
+    "line": 20,
+    "record": {
+      "access_evidence": "arXiv 2109.01252 (API-confirmed)",
+      "acquired_at": "2026-09-08T08:43:35Z",
+      "acquisition_status": "validated_and_extracted",
+      "bytes": 2634164,
+      "extracted_characters": 87474,
+      "extracted_sha256": "f35ba3b5035d0ff858fd6ab7821a8fb410522e40872124bfcba49e78eda283ec",
+      "final_url": "https://arxiv.org/pdf/2109.01252",
+      "http_status": 200,
+      "intake": "D_20260908",
+      "kind": "pdf",
+      "page_count": 30,
+      "raw_relative_to_downloads": "sources/ddg_lqg_metric_intro_2021/source.pdf",
+      "reading_status": "unread",
+      "schema": "probability-source.v1",
+      "sha256": "46b04f18a14a4866c07504fd0be072c18ec8fba4f502f54d2b25ab63ade8c194",
+      "source_id": "ddg_lqg_metric_intro_2021",
+      "statement_validation": "not_started",
+      "text_relative_to_downloads": "sources/ddg_lqg_metric_intro_2021/text.txt",
+      "title": "Ding, Dubedat, Gwynne: Introduction to the Liouville quantum gravity metric",
+      "url": "https://arxiv.org/pdf/2109.01252"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_D_20260908\\sources.jsonl",
+    "line": 29,
+    "record": {
+      "access_evidence": "arXiv 1407.5605 (API-confirmed)",
+      "acquired_at": "2026-09-08T08:44:20Z",
+      "acquisition_status": "validated_and_extracted",
+      "bytes": 621082,
+      "extracted_characters": 62967,
+      "extracted_sha256": "add52206d3ffe6fa55ed48b50ebecb9d8811399b30af50f48e8ae9ec244b4d06",
+      "final_url": "https://arxiv.org/pdf/1407.5605",
+      "http_status": 200,
+      "intake": "D_20260908",
+      "kind": "pdf",
+      "page_count": 24,
+      "raw_relative_to_downloads": "sources/drsv_logcorrelated_2014/source.pdf",
+      "reading_status": "unread",
+      "schema": "probability-source.v1",
+      "sha256": "98a1526ac1bafc983c28a92ef73279d0714b20574438de9db3cd9e7d8f274a89",
+      "source_id": "drsv_logcorrelated_2014",
+      "statement_validation": "not_started",
+      "text_relative_to_downloads": "sources/drsv_logcorrelated_2014/text.txt",
+      "title": "Duplantier, Rhodes, Sheffield, Vargas: Log-correlated Gaussian fields, an overview",
+      "url": "https://arxiv.org/pdf/1407.5605"
+    }
+  },
+  {
+    "path": "~\\<private-repo>\\06_math_research\\probability_1000_intake_D_20260908\\sources.jsonl",
+    "line": 30,
+    "record": {
+      "access_evidence": "arXiv 1908.05573 (API-confirmed)",
+      "acquired_at": "2026-09-08T08:44:23Z",
+      "acquisition_status": "validated_and_extracted",
+      "bytes": 6378548,
+      "extracted_characters": 43959,
+      "extracted_sha256": "666728b24bd35fa0558d4d43b97a1c2deee8ca99daf00cf70ed28e3506ed271e",
+      "final_url": "https://arxiv.org/pdf/1908.05573",
+      "http_status": 200,
+      "intake": "D_20260908",
+      "kind": "pdf",
+      "page_count": 12,
+      "raw_relative_to_downloads": "sources/gwynne_random_surfaces_2020/source.pdf",
+      "reading_status": "unread",
+      "schema": "probability-source.v1",
+      "sha256": "4c293197ea7d420a35d0dae5f29768c2bc8cf15a9f11d7f6adda266d8f0f2577",
+      "source_id": "gwynne_random_surfaces_2020",
+      "statement_validation": "not_started",
+      "text_relative_to_downloads": "sources/gwynne_random_surfaces_2020/text.txt",
+      "title": "Gwynne: Random surfaces and Liouville quantum gravity (Notices)",
+      "url": "https://arxiv.org/pdf/1908.05573"
+    }
+  }
+]

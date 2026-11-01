@@ -1,0 +1,676 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue!45!black,
+ pdftitle={Sampling Barriers for Real Gaussian Phase Retrieval},
+ pdfauthor={Yitzchak Shmalo},pdfsubject={Finite sample Gibbs concentration and sign bottlenecks for MALA}}
+\usepackage{bookmark}
+\setlength{\emergencystretch}{2em}
+\setlist[enumerate]{itemsep=3pt,topsep=5pt}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prb}{\mathbb P}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Ent}{\operatorname{Ent}}
+\newcommand{\TV}{\mathrm{TV}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\ip}[2]{\langle#1,#2\rangle}
+\title{Sampling Barriers for Real Gaussian Phase Retrieval}
+\author{Yitzchak Shmalo\\[4pt]
+\small Einstein Institute of Mathematics\\
+\small The Hebrew University of Jerusalem\\
+\small Givat Ram, Jerusalem, Israel\\
+\small \href{mailto:yitzchak.shmalo@gmail.com}{yitzchak.shmalo@gmail.com}}
+\date{31 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study the Gibbs measure of the empirical quartic loss for noiseless real Gaussian phase retrieval, without replacing the loss by a population approximation. For a deterministic unit signal, dimension $d\ge100$, and $m=10^6d$ measurements, a single data event of probability at least $1-10e^{-d/2}$ supports explicit near-minimizer concentration and an exponentially large Poincar\'e constant at inverse temperature of order $d/\epsilon$. A bounded convexification proves that both the Poincar\'e and logarithmic Sobolev constants are nevertheless finite. At sufficiently small loss tolerances, every temperature giving concentration probability at least $3/4$ has the same exponential obstruction. We also prove a discrete Metropolis-adjusted Langevin mixing lower bound from a specified $2$-warm start. For a ball-truncated version, a direct minorization gives a finite all-start upper bound at arbitrary total variation accuracy, with explicit truncation error and zero invariant-distribution step-size bias. The bottleneck is the classical separation of the two real signs in raw parameter space. No optimization hardness, sign-quotient obstruction, unadjusted Euler guarantee, matching mixing rate, verified novelty, or peer review is claimed.
+\end{abstract}
+\noindent\textbf{Keywords.} Real phase retrieval; Gibbs measure; Poincar\'e inequality; logarithmic Sobolev inequality; Metropolis-adjusted Langevin; metastability.
+
+\section{Introduction}
+
+Real phase retrieval determines a signal only up to its sign. This elementary symmetry has different consequences for optimization and for sampling. An optimization procedure can succeed by reaching either of the two minimizers. A sampler for the Gibbs law on the original Euclidean parameter space must also reproduce the relative mass of the two signs. At low temperature, a local sampler can spend exponentially long periods on one side of the separating hyperplane.
+
+The purpose of this paper is to give a finite-sample, explicit-constant proof of that distinction for the actual empirical Gaussian phase-retrieval loss. All conclusions are obtained on one high-probability event with a fixed linear measurement ratio. The proof combines a uniform small-ball estimate, a Gaussian entropy lower bound for the partition function, a clipped-sign test function, and a direct sign-crossing bound for a Metropolis-adjusted Langevin algorithm (MALA). A separate compact-state minorization supplies an upper time-to-accuracy bound with an exact error decomposition. The constants are intentionally conservative.
+
+\subsection{Relation to earlier work}
+
+Raginsky, Rakhlin and Telgarsky~\cite{RRT} analyze nonconvex learning by stochastic-gradient Langevin dynamics and discuss exponential inverse-temperature spectral-gap dependence for multiwell landscapes. Their globally gradient-Lipschitz assumptions are not silently imposed here: the present empirical loss is quartic and its gradient is not globally Lipschitz. Their paper does not formulate the precise finite-sample real phase-retrieval statement proved below. The separation between continuous Langevin dynamics and its discrete approximations is also essential; Roberts and Tweedie~\cite{RT} show why diffusion ergodicity does not automatically give corresponding properties for naive or adjusted discrete schemes.
+
+Eldar and Mendelson~\cite{EM} establish stable real phase retrieval with linearly many Gaussian measurements. The elementary uniform lower estimate used here is consistent with that stability theory and is proved directly. The Bakry--\'Emery and Holley--Stroock criteria, in the normalizations needed below, are recorded in Menz and Schlichting~\cite[Theorems 3.1--3.2]{MS}. Their metastability analysis also underscores that exponential barriers are an established mechanism; no growing-dimensional Eyring--Kramers asymptotic is invoked here.
+
+Mai~\cite{Mai} studies sparse phase retrieval using a quasi-Bayesian approach, including statistical guarantees and Langevin computations in a different prior and noise setting. Lytras, Makras and Sabanis~\cite[Section 8.2]{LMS} treat quartic \emph{complex} phase retrieval using a tamed unadjusted Langevin scheme. A connected complex phase orbit is geometrically different from the two disconnected real signs considered here, and their algorithm differs from MALA. These related results prevent interpreting the present theorem as a newly discovered general metastability principle.
+
+\subsection{Scope and status}
+
+The results concern the real noiseless model, the stated linear sampling ratio, the stated accuracy ranges, and the expressly specified discrete algorithms. The lower-bound initialization is a conditional Gibbs law: it is $2$-warm but is not asserted to be efficiently generable. The upper bound, by contrast, allows every initialization in the truncation ball, including a point mass at the origin. There is no claim about sampling modulo sign, algorithms with global sign flips, finding either minimizer, a planted-network alternative, unadjusted Langevin (ULA), or a geometric-ergodicity upper bound for untruncated MALA. The upper and lower rates are not matched.
+
+This is a research manuscript, not a peer-reviewed publication. Publication novelty and exclusive priority have not been established. The contribution presented is an explicit joint finite-sample concentration, functional-inequality, and discrete-sampling derivation, not a certification that a previously open named conjecture has been resolved.
+
+\section{Model and main results}\label{sec:results}
+
+Fix $d\ge100$ and a deterministic $v\in\R^d$ with $\norm v=1$. Let $m=10^6d$ and let $a_1,\ldots,a_m$ be independent $N(0,I_d)$ vectors. The observations are $y_i=(a_i^Tv)^2$, and the loss is
+\begin{equation}\label{eq:loss}
+ L(x)=\frac1{4m}\sum_{i=1}^m\big((a_i^Tx)^2-(a_i^Tv)^2\big)^2,
+ \qquad x\in\R^d.
+\end{equation}
+For $\beta>0$, write
+\begin{equation}\label{eq:gibbs}
+ Z_\beta=\int_{\R^d}e^{-\beta L(x)}\,dx,
+ \qquad \pi_\beta(dx)=Z_\beta^{-1}e^{-\beta L(x)}\,dx.
+\end{equation}
+All norms are Euclidean unless an operator norm is indicated. Total variation is $\norm{\mu-\nu}_{\TV}=\sup_A\abs{\mu(A)-\nu(A)}$.
+We use the optimal constants in
+\begin{align}
+ \Var_{\pi}(f)&\le C_P(\pi)\int\norm{\nabla f}^2\,d\pi,\label{eq:pi}\\
+ \Ent_{\pi}(f^2)&\le2C_{LS}(\pi)\int\norm{\nabla f}^2\,d\pi,\label{eq:lsi}
+\end{align}
+where $\Ent_\pi(g)=\int g\log(g/\int g\,d\pi)\,d\pi$ for $g\ge0$. Set
+\begin{equation}\label{eq:constants}
+ a=\frac1{4096},\qquad b=\frac{9a}{16},\qquad
+ H=14+\frac12\log(1/a),
+\end{equation}
+and also
+\begin{equation}\label{eq:convconstants}
+ c_0=\frac3{1024},\qquad A_0=4d+\frac12,\qquad
+ R_0^2=\frac{8d+12A_0+1}{c_0}.
+\end{equation}
+
+\begin{theorem}[Concentration and functional inequalities]\label{thm:main}
+There is a data event $\mathcal E$, of probability at least $1-10e^{-d/2}$, on which the following statements hold simultaneously. The Gibbs law~\eqref{eq:gibbs} is well defined for every $\beta>0$, and the minimizers of $L$ are exactly $\{v,-v\}$, with minimum loss zero. For
+\begin{equation}\label{eq:beta}
+ 0<\epsilon\le b/2,\qquad 0<\delta\le1/2,\qquad
+ \beta=\frac2\epsilon\left(Hd+\log\frac2\delta\right),
+\end{equation}
+one has
+\begin{equation}\label{eq:concentration}
+ \pi_\beta\{L\le\epsilon\}\ge1-\delta,
+\end{equation}
+and
+\begin{equation}\label{eq:bounds}
+ \frac1{16}e^{\beta b/4}\le C_P(\pi_\beta)
+ \le C_{LS}(\pi_\beta)
+ \le\frac1\beta\exp\!\left(\frac32\beta A_0R_0^2\right)<\infty.
+\end{equation}
+The upper bound and finiteness in~\eqref{eq:bounds} hold for every $\beta>0$ on $\mathcal E$.
+\end{theorem}
+
+The next results are deterministic on the same event $\mathcal E$. To specify the algorithm completely, define
+\begin{equation}\label{eq:proposal}
+ Y=x-h\nabla L(x)+\sqrt{2h/\beta}\,G,
+ \qquad G\sim N(0,I_d),
+\end{equation}
+with proposal density
+\begin{equation}\label{eq:q}
+ q_h(x,y)=\left(\frac\beta{4\pi h}\right)^{d/2}
+ \exp\!\left[-\frac\beta{4h}\norm{y-x+h\nabla L(x)}^2\right].
+\end{equation}
+MALA accepts $Y=y$ with probability
+\begin{equation}\label{eq:accept}
+ \alpha_h(x,y)=\min\left\{1,
+ e^{-\beta(L(y)-L(x))}\frac{q_h(y,x)}{q_h(x,y)}\right\},
+\end{equation}
+and otherwise stays at $x$. Denote its kernel by $P_h$.
+
+\begin{theorem}[Discrete lower bound]\label{thm:mala}
+Assume~\eqref{eq:beta} and $0<h\le(320d^2)^{-1}$. Let
+\begin{equation}\label{eq:start}
+ A_+=\{x:v^Tx>0\},\qquad
+ \mu_0=\pi_\beta(\,\cdot\mid A_+).
+\end{equation}
+Then $\mu_0$ is $2$-warm with respect to $\pi_\beta$, meaning that $d\mu_0/d\pi_\beta\le2$, and for every integer $k\ge0$,
+\begin{equation}\label{eq:mala-lower}
+ \norm{\mu_0P_h^k-\pi_\beta}_{\TV}
+ \ge\frac12-10k e^{-\beta b/4}.
+\end{equation}
+In particular, the distance is at least $1/4$ whenever $k\le e^{\beta b/4}/40$. The invariant law of $P_h$ is exactly $\pi_\beta$; hence its invariant-distribution discretization bias is zero.
+\end{theorem}
+
+For $R\ge2$, let $K=\{x:\norm x\le R\}$. The \emph{truncated MALA} kernel $P_{h,K}$ uses~\eqref{eq:proposal}, rejects every proposal outside $K$, and applies~\eqref{eq:accept} to proposals inside $K$. Its target is $\pi_{\beta,K}=\pi_\beta(\,\cdot\mid K)$, not the untruncated law.
+
+\begin{theorem}[Arbitrary accuracy with controlled truncation]\label{thm:upper}
+Assume~\eqref{eq:beta}. Given any $0<\zeta<1$, set
+\begin{equation}\label{eq:R}
+ R=\max\left\{2,\sqrt{1+\sqrt{\frac2{a\beta}
+                   \left(Hd+\log\frac4\zeta\right)}}\right\},
+ \qquad K=\{x:\norm x\le R\}.
+\end{equation}
+Define
+\begin{align}
+ M_R&=2d^2(R^2+1)^2,& G_R&=8d^2(R^3+R),\label{eq:MG}\\
+ q_{\min,R}&=\left(\frac\beta{4\pi h}\right)^{d/2}
+ \exp\!\left[-\frac{\beta(2R+hG_R)^2}{4h}\right],\label{eq:qmin}\\
+ \eta_K&=v_dR^d e^{-\beta M_R}q_{\min,R},\label{eq:eta}
+\end{align}
+where $v_d$ is the volume of the unit ball in $\R^d$. For every $h>0$, one has $0<\eta_K\le1$, and every starting law $\mu$ supported on $K$ satisfies
+\begin{equation}\label{eq:upper-all}
+ \norm{\mu P_{h,K}^k-\pi_\beta}_{\TV}
+ \le e^{-k\eta_K}+\pi_\beta(K^c)
+ \le e^{-k\eta_K}+\zeta/2.
+\end{equation}
+Consequently every integer $k\ge\eta_K^{-1}\log(2/\zeta)$ gives total variation error at most $\zeta$, including from $\mu=\delta_0$. The error consists of the finite-time term and the displayed spatial truncation mass. There is no invariant-distribution step-size bias within $K$.
+\end{theorem}
+
+The lower bound is not solely an artifact of a voluntarily overcooled schedule. The next theorem concerns every concentrating temperature in an explicitly restricted tolerance range.
+
+\begin{theorem}[Necessary inverse temperature]\label{thm:necessary}
+Set
+\begin{equation}\label{eq:cstar}
+ c_*=\frac{ae^{-29}}{16},\qquad
+ \epsilon_*=\min\left\{c_*,\frac{c_*b}{4H}\right\}.
+\end{equation}
+For every $0<\epsilon\le\epsilon_*$ and every $\beta>0$ such that $\pi_\beta\{L\le\epsilon\}\ge3/4$,
+\begin{equation}\label{eq:necessary}
+ \beta\ge\frac{c_*d}{\epsilon},\qquad
+ C_P(\pi_\beta)\ge\frac1{16}
+ \exp\!\left(\frac{c_*b\,d}{4\epsilon}\right).
+\end{equation}
+The same lower bound applies to $C_{LS}(\pi_\beta)$.
+\end{theorem}
+
+Theorems~\ref{thm:main}--\ref{thm:necessary} are proved in Sections~\ref{sec:event}--\ref{sec:truncation}. The necessary-temperature range is very small; its explicit constants are part of the theorem and are not suppressed by asymptotic notation.
+
+\section{The common high probability data event}\label{sec:event}
+
+\subsection{Uniform small ball estimate}
+
+For unit vectors $u,w$, put
+\[
+ C_{u,w}=\{z:\abs{z^Tu}\ge1/4,\ \abs{z^Tw}\ge1/4\}.
+\]
+Let $P$ be standard Gaussian measure and $P_m$ its empirical measure from the $a_i$. Regardless of the correlation between $a^Tu$ and $a^Tw$, the union bound and the standard normal density bound give
+\begin{equation}\label{eq:population-sb}
+ P(C_{u,w})\ge1-2\Prb\{\abs{N(0,1)}<1/4\}
+ \ge1-\frac1{\sqrt{2\pi}}>0.60.
+\end{equation}
+Each $C_{u,w}$ is a fixed Boolean combination of four affine halfspaces. Affine halfspaces in $\R^d$ have VC dimension at most $d+1$, and thus their growth function on $N\ge d+1$ points is at most $(eN/(d+1))^{d+1}$. Choosing the four traces gives the bound
+\begin{equation}\label{eq:growth}
+ \mathcal S(N)\le\left(\frac{eN}{d+1}\right)^{4(d+1)}
+\end{equation}
+for the class $\{C_{u,w}\}$. A self-contained empirical deviation argument is provided in Appendix~\ref{app:vc}. At deviation $1/4$, it gives
+\begin{equation}\label{eq:vc}
+ \Prb\left\{\sup_{u,w}\abs{P_m(C_{u,w})-P(C_{u,w})}>1/4\right\}
+ \le8\left(\frac{2em}{d+1}\right)^{4(d+1)}e^{-m/512}
+ \le8e^{-d}.
+\end{equation}
+For the last inequality, use $d+1\le1.01d$, $m=10^6d$, and
+$4(1.01)\log(2e\cdot10^6)-10^6/512<-1$.
+
+On the complementary event, at least $m/4$ sample vectors satisfy both defining inequalities, simultaneously for every $u,w$. Hence, by homogeneity, for every $p,q\in\R^d$,
+\begin{equation}\label{eq:SB}
+ \frac1m\sum_{i=1}^m(a_i^Tp)^2(a_i^Tq)^2
+ \ge\frac1{1024}\norm p^2\norm q^2.
+\end{equation}
+For nonzero $p,q$, normalize them and use $(1/4)(1/4)^4=1/1024$; if either vector is zero the claim is immediate. Since
+$ (a_i^Tx)^2-(a_i^Tv)^2=(a_i^T(x-v))(a_i^T(x+v))$,
+we obtain
+\begin{equation}\label{eq:LD}
+ L(x)\ge aD(x),\qquad D(x)=\norm{x-v}^2\norm{x+v}^2.
+\end{equation}
+In particular, $L$ vanishes exactly at $v$ and $-v$ on this event.
+
+\subsection{Covariance and individual measurement bounds}
+
+Write $S=m^{-1}\sum_i a_ia_i^T$. A $1/8$-net of the unit sphere has at most $17^d$ elements. For a fixed unit vector $u$, the exponential moment of a chi-square random variable yields
+\[
+ \Prb\{u^TSu>3/2\}
+ \le\exp\left[-\frac m2\left(\frac12-\log\frac32\right)\right].
+\]
+The quadratic-form net inequality gives
+$\norm S_\op\le(1-2/8)^{-1}\max_{u\text{ in net}}u^TSu$.
+Indeed, if $x$ is a maximizing unit vector and $u$ is within $1/8$ of $x$, then
+$\abs{x^TSx-u^TSu}\le(1/4)\norm S_\op$.
+Thus $\norm S_\op\le2$ except on an event of probability at most
+\[
+ 17^d\exp\left[-\frac m2\left(\frac12-\log\frac32\right)\right]
+ \le e^{-d}.
+\]
+Another chi-square Chernoff bound and a union bound give
+\begin{equation}\label{eq:maxnorm}
+ \Prb\left\{\max_i\norm{a_i}^2>4d\right\}
+ \le m\exp\left[-\frac{3-\log4}{2}d\right]\le e^{-d/2}.
+\end{equation}
+The final inequality holds at $d=100$ and thereafter: the derivative of
+$\log(10^6d)-((3-\log4)/2-1/2)d$ is negative for $d\ge100$.
+
+Let $\mathcal E$ be the intersection of these two moment-control events and~\eqref{eq:SB}. Its exceptional probability is at most
+$9e^{-d}+e^{-d/2}\le10e^{-d/2}$. On $\mathcal E$,
+\begin{equation}\label{eq:AB}
+ A:=\frac1m\sum_i(a_i^Tv)^2\norm{a_i}^2\le8d,
+ \qquad
+ B:=\frac1m\sum_i\norm{a_i}^4\le8d^2.
+\end{equation}
+For the first inequality use $\max_i\norm{a_i}^2\le4d$ and $v^TSv\le2$; for the second use the same maximum and $\operatorname{tr}S\le2d$. This completes the construction of the event. Every remaining argument is deterministic on $\mathcal E$. In particular, no uniform dimension-free upper bound on the empirical fourth moments is assumed.
+
+\section{Partition functions and concentration}\label{sec:partition}
+
+Let $r(x)=\min(\norm{x-v},\norm{x+v})$. The larger squared distance to the two signs is
+$\norm x^2+1+2\abs{v^Tx}\ge1$, so~\eqref{eq:LD} implies $L(x)\ge ar(x)^2$. Consequently, for every $\gamma>0$,
+\begin{equation}\label{eq:Zupper}
+ Z_\gamma\le\int\left(e^{-a\gamma\norm{x-v}^2}
+                       +e^{-a\gamma\norm{x+v}^2}\right)\,dx
+ =2\left(\frac\pi{a\gamma}\right)^{d/2}<\infty.
+\end{equation}
+Positivity of the integrand also gives $Z_\gamma>0$.
+
+For a lower bound, let $q_\beta$ denote the density of $N(v,I_d/\beta)$. Write $x=v+z$ and $t_i=a_i^Tv$. Since $a_i^Tz$ is centered Gaussian with variance $\norm{a_i}^2/\beta$, its odd moments vanish, and
+\[
+ \E_{q_\beta}\big[(a_i^Tx)^2-t_i^2\big]^2
+ =\frac{4t_i^2\norm{a_i}^2}{\beta}
+  +\frac{3\norm{a_i}^4}{\beta^2}.
+\]
+Therefore, when $\beta\ge d$,
+\begin{equation}\label{eq:EL}
+ \beta\E_{q_\beta}L=A+\frac{3B}{4\beta}\le14d.
+\end{equation}
+Jensen's inequality and the Gaussian differential entropy yield
+\begin{align}
+ \log Z_\beta
+ &=\log\E_{q_\beta}\left[\frac{e^{-\beta L}}{q_\beta}\right]
+ \ge-\beta\E_{q_\beta}L-\E_{q_\beta}\log q_\beta\notag\\
+ &\ge-14d+\frac d2\log\frac{2\pi e}{\beta}.
+\end{align}
+In particular,
+\begin{equation}\label{eq:Zlower}
+ Z_\beta\ge\left(\frac{2\pi}{\beta}\right)^{d/2}e^{-14d}
+ \qquad(\beta\ge d).
+\end{equation}
+Combining~\eqref{eq:Zupper} at $\gamma=\beta/2$ with~\eqref{eq:Zlower} gives
+\begin{equation}\label{eq:Zratio}
+ \frac{Z_{\beta/2}}{Z_\beta}\le2e^{Hd}.
+\end{equation}
+For every $u>0$ and $\beta\ge d$, it follows that
+\begin{equation}\label{eq:tail}
+ \pi_\beta\{L\ge u\}
+ \le e^{-\beta u/2}\frac{Z_{\beta/2}}{Z_\beta}
+ \le2e^{Hd-\beta u/2}.
+\end{equation}
+The inverse temperature in~\eqref{eq:beta} exceeds $d$. Substituting $u=\epsilon$ in~\eqref{eq:tail} proves~\eqref{eq:concentration}.
+
+\section{Functional inequalities and the sign barrier}\label{sec:functional}
+
+\subsection{An exponentially small separating strip}
+
+Write $s=v^Tx$. Since $\norm x^2\ge s^2$,
+\begin{equation}\label{eq:barrier}
+ D(x)=(\norm x^2+1)^2-4s^2
+ \ge(s^2+1)^2-4s^2=(1-s^2)^2.
+\end{equation}
+Thus $L\ge b$ on the strip $B_0=\{x:\abs s\le1/2\}$. Also
+\begin{equation}\label{eq:radialbarrier}
+ D(x)\ge(\norm x^2-1)^2,
+\end{equation}
+because $s^2\le\norm x^2$. Hence $L\ge9a\ge b$ on $B_\infty=\{x:\norm x>2\}$. Under~\eqref{eq:beta},
+$Hd\le\beta\epsilon/2\le\beta b/4$, and~\eqref{eq:tail} yields
+\begin{equation}\label{eq:stripmass}
+ p:=\pi_\beta(B_0)\le2e^{-\beta b/4},
+ \qquad \pi_\beta(B_\infty)\le2e^{-\beta b/4}.
+\end{equation}
+These parameter choices in particular make $p\le1/2$.
+
+The Gibbs density is even. The odd Lipschitz function
+\[
+ f(x)=\max\{-1,\min\{1,2v^Tx\}\}
+\]
+therefore has mean zero. Its variance is at least $1-p$, while its Dirichlet energy is at most $4p$, because its gradient is $2v$ in the interior of the strip and zero outside it, almost everywhere. It is admissible in~\eqref{eq:pi}: convolution and then smooth cutoff approximate it in the weighted Sobolev norm, using its boundedness, bounded gradient, and the quartic tails of the density. Consequently,
+\begin{equation}\label{eq:CPproof}
+ C_P(\pi_\beta)\ge\frac{1-p}{4p}
+ \ge\frac1{8p}\ge\frac1{16}e^{\beta b/4}.
+\end{equation}
+Expanding~\eqref{eq:lsi} at $1+tf$ as $t\to0$ gives~\eqref{eq:pi} with $C_P\le C_{LS}$: the entropy is $2t^2\Var_\pi(f)+o(t^2)$ and the right side is $2C_{LS}t^2\int\norm{\nabla f}^2d\pi$.
+
+\subsection{Bounded convexification and finite upper bounds}
+
+The gradient and Hessian of the empirical loss are
+\begin{align}
+ \nabla L(x)&=\frac1m\sum_i\big((a_i^Tx)^2-(a_i^Tv)^2\big)(a_i^Tx)a_i,\label{eq:grad}\\
+ \nabla^2L(x)&=\frac1m\sum_i\big(3(a_i^Tx)^2-(a_i^Tv)^2\big)a_ia_i^T.\label{eq:hess}
+\end{align}
+For each unit vector $z$,~\eqref{eq:SB} and~\eqref{eq:AB} imply
+\begin{equation}\label{eq:hesslower}
+ z^T\nabla^2L(x)z
+ \ge\frac3{1024}\norm x^2-
+       \frac1m\sum_i(a_i^Tv)^2\norm{a_i}^2
+ \ge c_0\norm x^2-8d.
+\end{equation}
+We now construct a bounded $C^2$ correction making $L$ uniformly convex. To avoid confusing it with the algorithmic step size, denote the scalar cutoff by $\psi$:
+\begin{equation}\label{eq:psi}
+ \psi(s)=
+ \begin{cases}
+ s,&0\le s\le1,\\
+ 1+t-t^3+\tfrac12t^4,&1\le s\le2,\quad t=s-1,\\
+ \tfrac32,&s\ge2.
+ \end{cases}
+\end{equation}
+In its middle interval,
+$\psi'=(1-t)^2(1+2t)\ge0$ and $\psi''=-6t(1-t)\ge-3/2$.
+Values and first two derivatives match at both joins, so $\psi$ is $C^2$. Define
+\begin{equation}\label{eq:u}
+ u(x)=A_0R_0^2\psi(\norm x^2/R_0^2).
+\end{equation}
+It satisfies $0\le u\le3A_0R_0^2/2$. Inside $\norm x\le R_0$, its Hessian is $2A_0I$, and~\eqref{eq:hesslower} gives $\nabla^2(L+u)\succeq I$. In the annulus $R_0^2\le\norm x^2\le2R_0^2$,
+\[
+ \nabla^2u=2A_0\psi'I+
+          \frac{4A_0}{R_0^2}\psi''xx^T\succeq-12A_0I,
+\]
+whereas
+$\nabla^2L\succeq(c_0R_0^2-8d)I=(12A_0+1)I$.
+Beyond the annulus $u$ is constant and~\eqref{eq:hesslower} gives $\nabla^2L\succeq I$. Thus $L+u$ is globally $1$-strongly convex.
+
+The Bakry--\'Emery criterion gives logarithmic Sobolev constant at most $1/\beta$ for the density proportional to $e^{-\beta(L+u)}$. The Holley--Stroock bounded-perturbation inequality then gives, in the convention~\eqref{eq:lsi},
+\begin{equation}\label{eq:finiteLSI}
+ C_P(\pi_\beta)\le C_{LS}(\pi_\beta)
+ \le\frac1\beta e^{\beta\operatorname{osc}(u)}
+ \le\frac1\beta\exp\!\left(\frac32\beta A_0R_0^2\right).
+\end{equation}
+The cited criteria apply to $C^2$ potentials; see~\cite[Theorems 3.1--3.2]{MS}. This proves the remaining assertions of Theorem~\ref{thm:main}. The upper exponent is $O(\beta d^2)$, whereas the lower exponent is $\Omega(\beta)$; the proof supplies no matching-rate conclusion.
+
+\subsection{Diffusion interpretation and normalization}
+
+For completeness, the physical-time Langevin diffusion is
+\begin{equation}\label{eq:diffusion}
+ dX_t=-\nabla L(X_t)\,dt+\sqrt{2/\beta}\,dW_t,
+ \qquad \mathcal G=\beta^{-1}\Delta-\nabla L\cdot\nabla.
+\end{equation}
+Equation~\eqref{eq:SB} with $p=q=x$, together with~\eqref{eq:AB}, gives
+\begin{equation}\label{eq:radialdrift}
+ \ip{x}{\nabla L(x)}\ge4a\norm x^4-8d\norm x^2.
+\end{equation}
+The drift is locally Lipschitz. Applying It\^o's formula to the squared norm stopped on a ball gives
+$\mathcal G\norm x^2\le2d/\beta+16d\norm x^2$.
+Gronwall's inequality bounds the stopped second moment uniformly in the stopping radius on each finite time interval; Markov's inequality then makes the probability of exiting a ball of radius $n$ at most a constant divided by $n^2$. Thus there is no finite-time explosion.
+
+Integration by parts against $e^{-\beta L}$ gives, initially for smooth compactly supported functions,
+\[
+ -\int f\mathcal G f\,d\pi_\beta
+ =\beta^{-1}\int\norm{\nabla f}^2\,d\pi_\beta.
+\]
+The smooth positive quartic-tailed density and the nonexplosive gradient diffusion yield the invariant reversible law $\pi_\beta$. Its spectral-gap variational formula therefore has relaxation time $\beta C_P(\pi_\beta)$, not $C_P(\pi_\beta)$. This normalization statement is about the diffusion, not a transfer theorem for Euler or MALA iterates.
+
+\section{Why concentration forces a low temperature}\label{sec:necessary}
+
+We prove Theorem~\ref{thm:necessary}. Since $L\ge ar^2$, the set $\{L\le\epsilon\}$ is contained in the union of two radius-$\sqrt{\epsilon/a}$ balls. Its Lebesgue volume is at most $2v_d(\epsilon/a)^{d/2}$. The elementary unit-ball bound
+\begin{equation}\label{eq:volume}
+ v_d\le\left(\frac{2\pi e}{d}\right)^{d/2}
+\end{equation}
+follows by integrating $e^{-\norm x^2/2}$ over the ball of radius $\sqrt d$, where the integrand is at least $e^{-d/2}$.
+
+For $\beta\ge d$, bounding the Gibbs numerator by the volume and using~\eqref{eq:Zlower} gives
+\begin{equation}\label{eq:lowvol}
+ \pi_\beta\{L\le\epsilon\}
+ \le2\left(\frac{e^{29}\beta\epsilon}{ad}\right)^{d/2}.
+\end{equation}
+Indeed, the factor $e^{14d}$ from the partition bound combines with the $e^{d/2}$ from~\eqref{eq:volume} to give $(e^{29})^{d/2}$.
+
+If $0<\beta<d$, use $q=N(v,I_d/d)$ in the entropy argument instead. The Gaussian moments give
+\[
+ \E_qL=\frac Ad+\frac{3B}{4d^2}\le14,
+ \qquad \beta\E_qL\le14d,
+\]
+and therefore
+$Z_\beta\ge(2\pi/d)^{d/2}e^{-14d}$.
+Consequently~\eqref{eq:lowvol} holds with $\beta/d$ replaced by $1$. For $\epsilon\le c_*=ae^{-29}/16$, this is at most $2(1/16)^{d/2}<3/4$. Concentration at level $3/4$ thus forces $\beta\ge d$. If moreover $\beta<c_*d/\epsilon$,~\eqref{eq:lowvol} again gives the same contradiction. Hence $\beta\ge c_*d/\epsilon$.
+
+For $\epsilon\le c_*b/(4H)$, this inequality implies $Hd\le\beta b/4$. The general tail bound~\eqref{eq:tail} is applicable because $\beta\ge d$. It gives
+$\pi_\beta(B_0)\le2e^{-\beta b/4}$.
+Here $\beta b/4\ge Hd$, so the strip mass is less than $1/2$. Repeating the clipped-sign argument~\eqref{eq:CPproof} proves
+\[
+ C_P(\pi_\beta)\ge\frac1{16}e^{\beta b/4}
+ \ge\frac1{16}\exp\!\left(\frac{c_*b\,d}{4\epsilon}\right).
+\]
+The relation $C_{LS}\ge C_P$ completes the proof. Thus the exponential raw-space obstruction applies to every sufficiently concentrating temperature in the stated tolerance range, rather than only to~\eqref{eq:beta}.
+
+\section{The discrete sign crossing lower bound}\label{sec:mala}
+
+We prove Theorem~\ref{thm:mala}. The off-diagonal accepted MALA transition density is
+\begin{equation}\label{eq:accepted}
+ q_h(x,y)\alpha_h(x,y)
+ =\min\{q_h(x,y),e^{-\beta(L(y)-L(x))}q_h(y,x)\}.
+\end{equation}
+Multiplying by $e^{-\beta L(x)}$ makes this symmetric in $x,y$. The remaining rejection mass is on the diagonal. This proves detailed balance and hence exact invariance of $\pi_\beta$.
+
+If a law $\mu$ satisfies $\mu\le2\pi_\beta$, then for every measurable set $A$,
+$\mu P_h(A)\le2\pi_\beta P_h(A)=2\pi_\beta(A)$.
+Thus $2$-warmness is preserved at each step. Evenness of the density and zero mass of the hyperplane $v^Tx=0$ imply $\pi_\beta(A_+)=1/2$, so the start in~\eqref{eq:start} has density $2\1_{A_+}$.
+
+For $\norm x\le2$,~\eqref{eq:grad} and $\norm v=1$ give
+\begin{align}
+ \norm{\nabla L(x)}
+ &\le\frac1m\sum_i
+ \big(\norm{a_i}^2\norm x^2+(a_i^Tv)^2\big)
+       \norm{a_i}^2\norm x\notag\\
+ &\le(2^3+2)B\le80d^2.\label{eq:gradball}
+\end{align}
+If $x\in A_+\setminus(B_0\cup B_\infty)$ and $h\le(320d^2)^{-1}$, then
+\[
+ v^T(x-h\nabla L(x))\ge\frac12-h\norm{\nabla L(x)}\ge\frac14.
+\]
+The projected proposal has variance $2h/\beta$. The Chernoff bound $\Prb\{N(0,1)\le-t\}\le e^{-t^2/2}$ gives
+\begin{equation}\label{eq:crossing}
+ \Prb\{v^TY\le0\mid x\}\le e^{-\beta/(64h)}.
+\end{equation}
+Rejecting a proposal cannot create a sign crossing. Hence the stationary flow satisfies
+\begin{align}
+ Q(A_+,A_+^c)
+ &:=\int_{A_+}\pi_\beta(dx)P_h(x,A_+^c)\notag\\
+ &\le\pi_\beta(B_0)+\pi_\beta(B_\infty)+e^{-\beta/(64h)}\notag\\
+ &\le4e^{-\beta b/4}+e^{-\beta/(64h)}
+ \le5e^{-\beta b/4}.\label{eq:flow}
+\end{align}
+The last comparison uses $1/(64h)\ge5d^2\ge b/4$.
+
+At step $j$, preserved $2$-warmness bounds the probability of a transition from $A_+$ to its complement by $2Q(A_+,A_+^c)$. A trajectory starting in $A_+$ can lie in $A_+^c$ at time $k$ only if such a transition occurred during one of the first $k$ steps. A union bound yields
+\[
+ \mu_0P_h^k(A_+^c)\le2kQ(A_+,A_+^c)
+ \le10k e^{-\beta b/4}.
+\]
+Testing total variation on $A_+^c$, whose stationary mass is $1/2$, gives~\eqref{eq:mala-lower}. This is a direct statement about the discrete chain, with no accumulated diffusion approximation error.
+
+\section{Truncated MALA and a finite all start upper bound}\label{sec:truncation}
+
+\subsection{Tail mass at the prescribed radius}
+
+Keep $\beta$ and the target $\pi_\beta$ fixed as in~\eqref{eq:beta}. For any $R\ge2$,~\eqref{eq:LD} and~\eqref{eq:radialbarrier} imply that $L(x)\ge a(R^2-1)^2$ whenever $\norm x>R$. Therefore
+\begin{equation}\label{eq:tau}
+ \tau_R:=\pi_\beta(K^c)
+ \le2\exp\left[Hd-\frac{\beta a}{2}(R^2-1)^2\right].
+\end{equation}
+The radius~\eqref{eq:R} makes this at most $\zeta/2$, without changing the original inverse temperature or target.
+
+\subsection{Uniform minorization}
+
+For $x\in K$, bounding each term of~\eqref{eq:loss} in absolute value gives
+\begin{equation}\label{eq:LMbound}
+ 0\le L(x)\le\frac B4(R^2+1)^2\le M_R.
+\end{equation}
+The same calculation as~\eqref{eq:gradball} gives
+\begin{equation}\label{eq:GGbound}
+ \norm{\nabla L(x)}\le B(R^3+R)\le G_R.
+\end{equation}
+Consequently, for all $x,y\in K$,
+$\norm{y-x+h\nabla L(x)}\le2R+hG_R$,
+and~\eqref{eq:q} yields $q_h(x,y)\ge q_{\min,R}$.
+The accepted density~\eqref{eq:accepted} is thus at least
+$e^{-\beta M_R}q_{\min,R}$ for every such pair. If $\nu_K$ is uniform probability measure on $K$, then
+\begin{equation}\label{eq:minorization}
+ P_{h,K}(x,\cdot)\ge\eta_K\nu_K(\cdot),
+ \qquad \eta_K=v_dR^d e^{-\beta M_R}q_{\min,R}>0.
+\end{equation}
+Taking the whole state space as the measurable set proves $\eta_K\le1$; no separate numerical assumption is needed.
+
+The same detailed-balance computation as for $P_h$, restricted to $K$, proves that $P_{h,K}$ preserves exactly $\pi_{\beta,K}$. If $\eta_K<1$, split the kernel as
+\[
+ P_{h,K}(x,\cdot)=\eta_K\nu_K(\cdot)+(1-\eta_K)\widetilde P(x,\cdot)
+\]
+for a probability kernel $\widetilde P$. Total variation contracts under any probability kernel, so for any two laws $\mu,\nu$ on $K$,
+\[
+ \norm{\mu P_{h,K}-\nu P_{h,K}}_{\TV}
+ \le(1-\eta_K)\norm{\mu-\nu}_{\TV}.
+\]
+Iteration with $\nu=\pi_{\beta,K}$ gives
+\begin{equation}\label{eq:contract}
+ \norm{\mu P_{h,K}^k-\pi_{\beta,K}}_{\TV}
+ \le(1-\eta_K)^k\le e^{-k\eta_K}.
+\end{equation}
+For $\eta_K=1$, the kernel is the common law $\nu_K$ and the same conclusion holds directly (with the $k=0$ bound interpreted as $1$).
+
+Since the density of $\pi_{\beta,K}$ with respect to $\pi_\beta$ is $\1_K/(1-\tau_R)$, direct integration, or testing the set $K^c$, gives
+\begin{equation}\label{eq:TVtrunc}
+ \norm{\pi_{\beta,K}-\pi_\beta}_{\TV}=\tau_R.
+\end{equation}
+Combining~\eqref{eq:tau}, \eqref{eq:contract}, and~\eqref{eq:TVtrunc} proves Theorem~\ref{thm:upper}. Every $h>0$ gives a valid bound; taking $h\le1/(4G_R)$ also puts the algorithm within the small-step regime used by the sign-crossing argument. The upper bound is deliberately inefficient.
+
+\subsection{A common radius two chain with lower and upper bounds}
+
+When $R=2$, the constants reduce to $M_R=50d^2$ and $G_R=80d^2$. At $h=(320d^2)^{-1}$,
+\begin{equation}\label{eq:eta2}
+ \eta_K=v_d2^d\left(\frac\beta{4\pi h}\right)^{d/2}
+ \exp\left[-50\beta d^2-\frac{289\beta}{64h}\right],
+\end{equation}
+because $2R+hG_R=17/4$. For fixed confidence and target accuracies, with $\beta=\Theta(d/\epsilon)$, this reciprocal is at most
+$\exp[O(d^3/\epsilon+d\abs{\log\epsilon})]$.
+For example, the elementary cube inclusion $[-1/\sqrt d,1/\sqrt d]^d\subseteq B(0,1)$ gives $v_d\ge(2/\sqrt d)^d$, which suffices to control the prefactor in~\eqref{eq:eta2}. This order statement does not assert a sharp upper rate, and a radius of two need not meet arbitrarily small $\zeta$ at fixed $\beta$; the radius~\eqref{eq:R} is used when necessary.
+
+For the same radius-two truncated chain, the lower bound~\eqref{eq:mala-lower} holds relative to $\pi_{\beta,K}$ from
+$\mu_{0,K}=\pi_{\beta,K}(\,\cdot\mid A_+)$. Indeed,~\eqref{eq:stripmass} gives $\tau_2\le1/2$ and hence
+\[
+ \pi_{\beta,K}(B_0)\le\frac{\pi_\beta(B_0)}{1-\tau_2}
+ \le4e^{-\beta b/4}.
+\]
+There is no outside-ball contribution to the crossing flow. Adding the proposal crossing bound~\eqref{eq:crossing} still gives at most $5e^{-\beta b/4}$. The truncated target is even, $\mu_{0,K}$ is $2$-warm, and the identical union-bound argument proves
+\begin{equation}\label{eq:trunclower}
+ \norm{\mu_{0,K}P_{h,K}^k-\pi_{\beta,K}}_{\TV}
+ \ge\frac12-10k e^{-\beta b/4}
+ \qquad\bigl(0<h\le(320d^2)^{-1}\bigr).
+\end{equation}
+Thus a single explicitly specified discretized chain has both a slow-start lower bound and a finite all-start upper bound. Relative to the original target, its error bound is the finite-time term plus the controlled truncation mass; no ULA error estimate is being substituted.
+
+\section{Interpretation and remaining questions}
+
+At each fixed admissible $\epsilon$ and confidence level,~\eqref{eq:beta} is of order $d/\epsilon$, and~\eqref{eq:bounds} makes the raw-space Poincar\'e and logarithmic Sobolev constants at least exponential in $d/\epsilon$. Theorem~\ref{thm:necessary} shows that, for its smaller explicit tolerance range, this conclusion persists for every temperature concentrating at least $3/4$ of the mass near the minimum. These statements concern the empirical loss at a fixed linear measurement ratio, not an idealized population potential.
+
+The clipped-sign function explains both the strength and the limit of the result. Local motion must negotiate a low-probability strip to equilibrate the signs. A global sign-flip move can bypass that obstruction, and identifying $x$ with $-x$ removes this particular test function from the quotient. Neither observation supplies a complete fast-mixing theorem for the modified problem, but both show why the present lower bound is not an optimization or statistical hardness result.
+
+The explicit upper bound answers a finite-time sampling question only for the stated truncated MALA algorithm. Its exponential order is much looser than the lower bound. Sharper dimension-dependent estimates, less conservative measurement and temperature constants, initialization-specific results, and rigorous analyses of other discretizations remain separate questions. In particular, quartic growth prevents importing globally smooth ULA bounds without checking their hypotheses.
+
+\section*{Acknowledgments and funding}
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+
+OpenAI AI systems were used to develop the mathematical derivations, perform internal consistency and scope reviews, check relevant sources, and write and prepare this manuscript and its publication files. The author selected the problem and commissioned and directed the work; the author did not carry out the mathematics or the writing. Responsibility for submission or publication rests with the author. The AI-assisted internal reviews, compilation checks, and rendered-page inspections are not external peer review or formal verification.
+
+\section*{Data and code availability}
+
+This paper consists of self-contained theoretical proofs. It reports no empirical datasets or numerical experiments, and no separate empirical dataset is required. The editable LaTeX source and PDF are designated for the
+\href{https://github.com/yspennstate/math-brain-public}{\texttt{math-brain-public} repository}.
+See the \href{https://github.com/yspennstate/math-brain-public/tree/main/papers/t321-phase-retrieval-2026-10-31}{manuscript archive} and its
+\href{https://github.com/yspennstate/math-brain-public/blob/main/papers/t321-phase-retrieval-2026-10-31/T321_Phase_Retrieval_Sampling.pdf}{\texttt{T321\_Phase\_Retrieval\_Sampling.pdf}}.
+The source includes its bibliography and can be compiled with a standard LaTeX installation using:
+\begin{quote}\small\ttfamily
+latexmk -pdf T321\_Phase\_Retrieval\_Sampling.tex
+\end{quote}
+No separate verification-code package is claimed. This manuscript makes no claim of peer review, certified publication novelty, or exclusive priority.
+
+\appendix
+\section{The empirical deviation estimate}\label{app:vc}
+
+Here we justify the conservative VC estimate used in~\eqref{eq:vc}. For a class $\mathcal C$ of measurable sets, let $\mathcal S(N)$ bound the number of distinct membership vectors on any $N$ points. Let $P_m'$ be an independent ghost empirical measure with the same sample size. For a fixed set, the empirical variance is at most $1/(4m)$. If $mt^2\ge2$, Chebyshev's inequality gives
+\[
+ \Prb\{\abs{P_m'(C)-P(C)}\le t/2\}\ge1/2.
+\]
+Conditioning on the original sample, apply this to a set witnessing a deviation greater than $t$ (or use an arbitrarily close witness). The triangle inequality implies the usual symmetrization bound
+\begin{equation}\label{eq:symmetrization}
+ \Prb\{\sup_{C\in\mathcal C}\abs{P_m(C)-P(C)}>t\}
+ \le2\Prb\{\sup_{C\in\mathcal C}\abs{P_m(C)-P_m'(C)}>t/2\}.
+\end{equation}
+One may use outer probabilities if needed; the finite-dimensional halfspace class here has the usual measurable separable realization.
+
+Independently swap the two members of each sample pair with probability $1/2$. The joint distribution is unchanged. Conditional on all $2m$ sample points, each empirical difference has the form
+$m^{-1}\sum_{i=1}^m\sigma_i c_i$, where $\sigma_i$ are independent Rademacher signs and $c_i\in\{-1,0,1\}$. The inequality $\cosh z\le e^{z^2/2}$ yields the conditional tail bound
+\[
+ \Prb_\sigma\left\{\abs{m^{-1}\sum_i\sigma_ic_i}>t/2\right\}
+ \le2e^{-mt^2/8}.
+\]
+There are at most $\mathcal S(2m)$ distinct indicator traces. A union bound followed by~\eqref{eq:symmetrization} gives the stronger estimate
+\[
+ \Prb\{\sup_{C\in\mathcal C}\abs{P_m(C)-P(C)}>t\}
+ \le4\mathcal S(2m)e^{-mt^2/8}
+ \le8\mathcal S(2m)e^{-mt^2/32}.
+\]
+At $t=1/4$ the last exponent is $-m/512$, as used in the main proof.
+
+For clarity, the combinatorial ingredient in~\eqref{eq:growth} is the Sauer bound
+$\mathcal S_{\mathrm{HS}}(N)\le\sum_{j=0}^{d+1}\binom Nj$.
+It follows by induction on the number of points from the recursion separating traces according to whether deleting the last point merges two distinct traces; the merged-pair family has VC dimension lower by at least one. The base cases are one trace in dimension zero and at most $2^N$ traces on $N$ points. Finally, for $D=d+1\le N$, the binomial theorem with $x=D/N\le1$ gives
+\[
+ \sum_{j=0}^D\binom Nj
+ \le x^{-D}(1+x)^N
+ \le(eN/D)^D.
+\]
+Affine halfspaces have VC dimension at most $d+1$ by affine dependence (equivalently, Radon's separation obstruction). Taking four such traces and then their fixed Boolean combination proves~\eqref{eq:growth}.
+
+\begin{thebibliography}{9}
+
+\bibitem{EM}
+Y. C. Eldar and S. Mendelson.
+\newblock Phase Retrieval: Stability and Recovery Guarantees.
+\newblock \emph{Applied and Computational Harmonic Analysis} 36(3), 473--494, 2014.
+\newblock \href{https://arxiv.org/abs/1211.0872}{arXiv:1211.0872}.
+
+\bibitem{LMS}
+I. Lytras, N. Makras and S. Sabanis.
+\newblock The Tamed Subgradient Unadjusted Langevin Algorithm beyond Convexity.
+\newblock 2026. The comparison in this manuscript refers to Section 8.2 of version 1.
+\newblock \href{https://arxiv.org/html/2608.06283v1}{arXiv:2608.06283v1}.
+
+\bibitem{Mai}
+T. T. Mai.
+\newblock Optimal sparse phase retrieval via a quasi-Bayesian approach.
+\newblock 2025.
+\newblock \href{https://arxiv.org/html/2504.09509v1}{arXiv:2504.09509v1}.
+
+\bibitem{MS}
+G. Menz and A. Schlichting.
+\newblock Poincar\'e and logarithmic Sobolev inequalities by decomposition of the energy landscape.
+\newblock \emph{Annals of Probability} 42(5), 1809--1884, 2014.
+\newblock \href{https://doi.org/10.1214/14-AOP908}{doi:10.1214/14-AOP908}.
+\newblock \href{https://arxiv.org/abs/1202.1510v4}{arXiv:1202.1510v4}.
+
+\bibitem{RRT}
+M. Raginsky, A. Rakhlin and M. Telgarsky.
+\newblock Non-convex learning via Stochastic Gradient Langevin Dynamics: a nonasymptotic analysis.
+\newblock \emph{Proceedings of Machine Learning Research} 65, 1674--1703, 2017.
+\newblock \href{https://arxiv.org/html/1702.03849v3}{arXiv:1702.03849v3}.
+
+\bibitem{RT}
+G. O. Roberts and R. L. Tweedie.
+\newblock Exponential Convergence of Langevin Distributions and Their Discrete Approximations.
+\newblock \emph{Bernoulli} 2(4), 341--363, 1996.
+\newblock \href{https://doi.org/10.2307/3318418}{doi:10.2307/3318418}.
+
+\end{thebibliography}
+\end{document}

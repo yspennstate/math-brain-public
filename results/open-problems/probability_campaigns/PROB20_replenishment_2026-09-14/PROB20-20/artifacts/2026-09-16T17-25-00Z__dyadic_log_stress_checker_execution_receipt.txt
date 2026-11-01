@@ -1,0 +1,19 @@
+PROB20-20 dyadic-log stress checker execution receipt
+
+Execution status: EXECUTED in the current run after source archival, using exact Python fractions.Fraction arithmetic.
+Checker source path: probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-20/artifacts/2026-09-16T17-25-00Z__dyadic_log_stress_checker.py
+Checker source creation commit: e3d9d6034d7074ede16f2e9292455199695c5a0c
+Checker source blob: c12840ce872a99b05a372adb3507517381ce2c1e
+Archived output path: probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-20/artifacts/2026-09-16T17-25-00Z__dyadic_log_stress_checker_output.txt
+Archived output creation commit: fc6ddb079919eed166e27359ffc16b633e46b05b
+Archived output blob: 41e404a48598bf8b45d6bfcfc9b440cc073d0d5f
+
+Re-execution reproduced the archived exact E[max]/n fractions, exact P(max<=n/2) fractions, and max-weight modes for n=4,6,8,10,12,14,16,18. The dyadic block inequalities for j=2,...,11 also passed exactly.
+
+Representative reproduced endpoint n=18:
+E[max]/n = 69948204448724484707478728509435 / 139715550473974947745303098768723
+P(max<=n/2) = 8547977128114817998408689758587 / 15523950052663883082811455418747
+mode = 7
+
+Final execution result: PASS.
+This is a self-check of finite algebra/computation only and is not an independent audit or an asymptotic proof of Problem 18.39.

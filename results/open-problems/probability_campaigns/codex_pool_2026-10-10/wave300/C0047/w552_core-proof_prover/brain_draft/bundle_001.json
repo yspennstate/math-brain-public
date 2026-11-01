@@ -1,0 +1,206 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w552",
+  "bundle_slug": "c0047-critical-operator-proof-gap-and-spectral-correction-v1",
+  "entries": [
+    {
+      "key": "target",
+      "namespace": "probability.percolation",
+      "logical_name": "benjamini-schramm-bond-conjecture-fixed-generating-set-scope",
+      "kind": "concept",
+      "title": "C0047: universal fixed-generating-set bond conjecture (current openness UNKNOWN)",
+      "statement": "CONJECTURE, NOT PROVED HERE. For every infinite finitely generated group Gamma and every fixed finite symmetric generating set S excluding the identity, let G be its simple undirected Cayley graph. For independent Bernoulli bond percolation, p_c is the infimum of p with an infinite cluster almost surely, and p_u is the infimum of p with exactly one infinite cluster almost surely. The assertion is p_c(G)<p_u(G) if and only if Gamma is nonamenable. Existence of a favorable S does not settle the universal assertion. The amenable direction is known. October 2026 current openness is UNKNOWN in this bounded source check; no novelty claim is made.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Simple undirected graph",
+        "Arbitrary fixed finite symmetric generating set"
+      ],
+      "domain": "probability theory: Bernoulli bond percolation",
+      "source": {
+        "source_id": "owner-probability300-C0047-w552-v1:target",
+        "url": "file:///~/brain_workers/w552/STATEMENT.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign author proof, independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-two-point-uniform-finite-volume-norm-gap",
+      "kind": "concept",
+      "title": "Unproved universal critical operator input for C0047",
+      "statement": "UNPROVED INPUT. On an infinite connected bounded-degree nonamenable Cayley graph G, define T_pc^F(x,y) as the probability of connection inside the finite connected free-boundary subgraph F at the ambient critical parameter p_c(G). The proposed input is M_c(G)=sup_F ||T_pc^F||_2<infinity, with one bound uniform in all F. Individual finite-volume finiteness is automatic and does not imply this input. This is a stronger sufficient route to p_c<p_u; equivalence to the full conjecture is not claimed.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Simple undirected graph",
+        "Infinite connected bounded-degree Cayley graph",
+        "Free boundary on F"
+      ],
+      "domain": "probability theory: Bernoulli bond percolation",
+      "source": {
+        "source_id": "owner-probability300-C0047-w552-v1:gap",
+        "url": "file:///~/brain_workers/w552/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign author proof, independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "russo",
+      "namespace": "probability.percolation",
+      "logical_name": "finite-volume-russo-bk-two-point-norm-bootstrap",
+      "kind": "concept",
+      "title": "Draft author proof: finite-volume Russo/BK norm bootstrap",
+      "statement": "UNREVIEWED AUTHOR PROOF, DRAFT. Let F be a finite connected free-boundary subgraph of a bounded-degree graph G and alpha=||A_G||_2. For 0<p_0<=q<=1 with alpha ||T_p0^F||_2(q-p_0)<1, the Bernoulli bond two-point kernel satisfies ||T_q^F||_2<=||T_p0^F||_2/[1-alpha ||T_p0^F||_2(q-p_0)]. Russo and BK on F with one edge deleted give entrywise T prime<=T A_F T; the nonnegative Perron vector gives m prime<=alpha m squared. No cluster-exploration independence or Loewner domination is asserted.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Simple undirected graph",
+        "Finite connected free-boundary F",
+        "0<p_0<=q<=1",
+        "Strict denominator positivity"
+      ],
+      "domain": "probability theory: Bernoulli bond percolation",
+      "source": {
+        "source_id": "owner-probability300-C0047-w552-v1:russo",
+        "url": "file:///~/brain_workers/w552/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign author proof, independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "conditional",
+      "namespace": "probability.percolation",
+      "logical_name": "critical-two-point-norm-explicit-nonuniqueness-margin",
+      "kind": "concept",
+      "title": "Draft conditional reduction: explicit positive nonuniqueness margin",
+      "statement": "UNREVIEWED AUTHOR PROOF, CONDITIONAL. Let G be an infinite connected bounded-degree Cayley graph with 0<p_c<1. Assume the uniform bound sup_F ||T_pc^F||_2<=M<infinity, where F is finite connected with free boundary, and let alpha=||A_G||_2. Then p_u>=p_c+eta>p_c, with eta=min{(1-p_c)/2,1/(2 alpha M)}. The bootstrap bounds the full T_q by 2M throughout this interval. Almost-sure uniqueness would force T_q(x,y)>=theta(q)^2, contradicting quadratic forms on n vertices. The uniform critical input remains unproved in general.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Simple undirected graph",
+        "Infinite connected bounded-degree Cayley graph",
+        "0<p_c<1",
+        "UNPROVED IN GENERAL: uniform critical norm M<infinity"
+      ],
+      "domain": "probability theory: Bernoulli bond percolation",
+      "source": {
+        "source_id": "owner-probability300-C0047-w552-v1:conditional",
+        "url": "file:///~/brain_workers/w552/ATTEMPT.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign author proof, independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "nb",
+      "namespace": "probability.percolation",
+      "logical_name": "nonbacktracking-resolvent-sufficient-two-point-operator-bound",
+      "kind": "concept",
+      "title": "Draft author proof: nonbacktracking operator criterion",
+      "statement": "UNREVIEWED AUTHOR PROOF, DRAFT; novelty not asserted. Let G be an infinite connected simple d-regular graph, d>=3, b=d-1 and alpha=||A||_2. Put beta=sqrt(b) if alpha<=2sqrt(b), and beta=(alpha+sqrt(alpha squared-4b))/2 otherwise. For Bernoulli bond percolation and 0<=p<1/beta, ||T_p||_2<=(1-p squared)/(1+b p squared-alpha p). Nonbacktracking walk matrices have B_2=A squared-dI and B_n=A B_n-1-b B_n-2 for n>=3. Their norm-convergent series is (1-p squared)(I-pA+b p squared I) inverse. For Cayley graphs, p_c beta<1 is sufficient for a critical uniform norm bound, but is not derived from nonamenability alone.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Simple undirected graph",
+        "Infinite connected d-regular graph, d>=3",
+        "Strict p beta<1"
+      ],
+      "domain": "probability theory: Bernoulli bond percolation",
+      "source": {
+        "source_id": "owner-probability300-C0047-w552-v1:nb",
+        "url": "file:///~/brain_workers/w552/NONBACKTRACKING_LEMMA.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign author proof, independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "tree",
+      "namespace": "probability.percolation",
+      "logical_name": "regular-tree-critical-two-point-operator-norm-calibration",
+      "kind": "concept",
+      "title": "Draft author proof: regular-tree critical two-point norm",
+      "statement": "UNREVIEWED AUTHOR PROOF OF A KNOWN SPECIAL CASE. On the infinite d-regular tree, d>=3 and b=d-1, Bernoulli bond percolation has p_c=1/b, ||A||_2=2sqrt(b), and ||T_pc||_2=(1-b to the power -2)/(1-b to the power -1/2) squared<infinity. Tree simple paths make the nonbacktracking series exact. The coarse condition p_c||A||<1 holds only for d>=6, while the nonbacktracking sufficient condition p_c sqrt(b)<1 holds for all d>=3. This is an analytic infinite-family statement; finite checks only evaluate its constants.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Simple undirected graph",
+        "Infinite d-regular tree, d>=3"
+      ],
+      "domain": "probability theory: Bernoulli bond percolation",
+      "source": {
+        "source_id": "owner-probability300-C0047-w552-v1:tree",
+        "url": "file:///~/brain_workers/w552/NONBACKTRACKING_LEMMA.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign author proof, independent review pending)",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "normalization",
+      "namespace": "probability.percolation",
+      "logical_name": "percolation-spectral-radius-normalization-c0047-attempt-correction",
+      "kind": "concept",
+      "title": "Draft correction: normalize the spectral input in C0047-A001",
+      "statement": "DRAFT AUTHOR CORRECTION, independent review pending. If rho=||A/d||_2 is the simple-random-walk radius on a nonamenable d-regular Cayley graph, then 0<rho<1 and p_c<=1, so p_c<1/rho is automatic. It cannot be the difficult input of the elementary path/operator route. That route uses alpha=||A||_2=d rho and the SUFFICIENT condition p_c d rho<1. This sufficient condition is not necessary: on the 3-regular tree p_c alpha=sqrt(2)>1 but the critical two-point norm is finite. The correction diagnoses the normalization ambiguity in C0047-A001, not a counterexample to C0047.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent Bernoulli bond percolation",
+        "Simple undirected graph",
+        "Nonamenable d-regular Cayley graph",
+        "rho=||A/d||_2; Kesten characterization rho<1"
+      ],
+      "domain": "probability theory: Bernoulli bond percolation",
+      "source": {
+        "source_id": "owner-probability300-C0047-w552-v1:normalization",
+        "url": "file:///~/brain_workers/w552/PRIOR_DIGEST.md",
+        "revision": "author-draft-2026-10-10-v1",
+        "license": "owner-own-work (campaign author proof, independent review pending)",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "gap",
+      "to_key": "target",
+      "kind": "cites",
+      "rationale": "The unproved uniform critical norm is a sufficient route to the stated universal bond conjecture; it is not the target itself."
+    },
+    {
+      "from_key": "conditional",
+      "to_key": "russo",
+      "kind": "depends_on",
+      "rationale": "The explicit eta uses the displayed finite-volume norm bootstrap with alpha and M."
+    },
+    {
+      "from_key": "conditional",
+      "to_key": "gap",
+      "kind": "depends_on",
+      "rationale": "The conditional reduction explicitly assumes the exact uniform bound whose universal proof is still missing."
+    },
+    {
+      "from_key": "nb",
+      "to_key": "gap",
+      "kind": "semantic_association",
+      "rationale": "The strict extra condition p_c beta<1 yields a finite critical norm but is not supplied by nonamenability alone."
+    },
+    {
+      "from_key": "tree",
+      "to_key": "nb",
+      "kind": "specializes",
+      "rationale": "On a regular tree alpha=2sqrt(d-1), beta=sqrt(d-1), and the nonbacktracking path bound is exact."
+    },
+    {
+      "from_key": "normalization",
+      "to_existing_logical": "math:probability.statmech:attempt-c0047-benjamini-schramm-conjecture-p-c-p-u-if-and-only-if-the-group-is-non-a",
+      "kind": "cites",
+      "rationale": "C0047-A001 uses normalized simple-random-walk rho in its tentative reciprocal-radius criterion; the draft correction specifies the missing degree factor without deleting the historical attempt."
+    }
+  ]
+}

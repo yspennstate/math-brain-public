@@ -1,0 +1,12 @@
+{
+  "helper_version": "A022-stage9 exact.py copied from stage8; check.py new physical frontier implementation",
+  "family": "t=2 g tensor2 controlled at v by every two-bit Boolean a; literal physical truth tables",
+  "domain": "v in [0,1,7,63], all16 two-bit controllers, policies0/1; DATA depths0..5; policy0 control atd1 then outcome0 atd3; policy1 control atd2 then outcome1 atd4",
+  "case_count": {"pilot":4,"main":128},
+  "symmetry": "none; selected vertices explicitly declared, no exhaustiveness outside this domain",
+  "arithmetic": "integer FWHT, Fraction probabilities, exact prime-log coefficient identities;40-term rational atanh bounds with proved tail",
+  "memory_estimate_mb": 100,
+  "maximum_runtime_seconds": {"pilot":60,"main":240},
+  "checks": "actual complete terminal CE/KL, physical data influence, source entropy spend, Gamma identity, each next DATA loss, full signed history; old U=t/64 and inactive frozen references retained",
+  "automatic_dimension_escalation": false
+}

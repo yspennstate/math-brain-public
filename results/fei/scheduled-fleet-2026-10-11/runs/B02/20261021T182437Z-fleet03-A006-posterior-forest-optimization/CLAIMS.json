@@ -1,0 +1,121 @@
+[
+  {
+    "claim_id": "A010-DENOMINATOR-CAPS-AND-JOINT-PAIR-PACKING",
+    "version": 1,
+    "exact_statement": "For every finite positive width-two graph prime table, positive globally packing-feasible lambda, nonempty k-gate subset T, and certified L>0 with sum_T lambda<=L, the conditioned used-gate root-index law obeys p_lambda(T)<=1/[(1+4k/L)^k-(4k/L)^k]. For k>=2 this strictly improves the previous min(1,4^(1-k)L^(k-1)/k^k) cap. It is a sharp supremum when equal weights L/k on T are feasible and the table is allowed positive outside weights tending to zero. For every pair of incident gates i,j in any such table, singleton probabilities p_i,p_j and pair probability r obey p_i*p_j>=4r(p_i+p_j), equivalently [[p_i-4r,4r],[4r,p_j-4r]] is positive semidefinite, yielding t^2*p_i+p_j>=4(t+1)^2*r for every rational t>=0. For exactly two incident gates, positivity, normalization and this cone characterize all feasible root laws. The positive normalized law (2/3,5/18,1/18) satisfies all sharp individual caps and both individual lambda<=1 bounds but violates packing: recovered lambda=(4/5,1/3), determinant=-2/81, t=1/2 cut=-1/18. This is a root-relaxation falsifier, not a Boolean spectral or variational-cost counterexample. On the frozen 67 full-family graph references, new cap LP gaps improve strictly in61 cases; all31 frozen star sizes m2..32 improve strictly. No universal coding-cost payment or FEI solution follows.",
+    "hypotheses": [
+      "Fixed full positive width-two prime table, both endpoint orders and original conditioned chronological queue",
+      "Uniform actual Boolean edge DNF and full distinct partition event family for finite cost certificates",
+      "All weights positive and global; p(T) indexes used-gate monomials, not the initial roots of each actual forest",
+      "L>0 certified by packing; sharpness only with stated equal-weight feasibility, as a supremum if outside gates remain positive",
+      "Two-gate sufficiency does not assert higher-gate root-law realizability; complete cost and tangent gap remain distinct"
+    ],
+    "statement_sha256": "4277ffe54b05e9848ef6fb1e0497beaf97f110863ea8bbffc0872aeb6194aa14",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": {
+      "derivation": "PROOF.md",
+      "code": [
+        "code/check.py",
+        "code/pair.py"
+      ],
+      "certificates": [
+        "out/CHECK.json",
+        "out/PAIR.json"
+      ],
+      "formal_source": "code/PairCone.lean; NOT kernel-certified"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A006-JOINT-ROOT-LAW-LOWER-CERTIFICATE",
+        "version": 1,
+        "statement_sha256": "9a0d49375a7a8ba40ae7b26ca9592229e9d3cf10310aa677e5121b90498716d5",
+        "acceptance": "previous whole source review retained; supporting inequality reconstructed"
+      },
+      {
+        "claim_id": "A006-FULL-PARTITION-INCIDENCE-CAP-CERTIFICATE",
+        "version": 1,
+        "statement_sha256": "c621815c9c2d67358d0218f7d991146f86d318183ce85fda1ac3349c83c7c00c",
+        "acceptance": "whole extension reconstructed in REVIEW_A006.md without repair"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A006",
+        "verdict": "WHOLE_STATEMENT_HOLDS_NO_MATHEMATICAL_REPAIR_HASH_METADATA_CORRECTED_LOCALLY",
+        "source": "REVIEW_A010.md",
+        "upstream_authorship_disclosed": true,
+        "source_declared_statement_sha256": "ddc55eebe48a4483fd797bca1b36d75a01dcf7fcbf30db9bd94f2238f97feb95",
+        "actual_consumed_statement_sha256": "4277ffe54b05e9848ef6fb1e0497beaf97f110863ea8bbffc0872aeb6194aa14",
+        "source_CLAIMS_file_sha256": "dc11b6b45675b1327082b95e8da2b37276d7506c7ecc1f8f2109fcb503492f5d"
+      }
+    ],
+    "status": "SOURCE_STATEMENT_HOLDS_HASH_METADATA_CORRECTED_LOCALLY",
+    "supersedes": [],
+    "refutes": [
+      "Sufficiency of separate sharp root-subset caps, even with individual lambda<=1 conditional bounds (unregistered proposed shortcut)"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A009",
+      "A086",
+      "Claude/B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A006-ANCHORED-ROOT-PACKING-CERTIFICATES",
+    "version": 1,
+    "exact_statement": "For every finite positive gate table with rarities pi_e>0, positive weights satisfying nonnegative packing rows sum_e a_ve lambda_e<=b_v, and conditioned nonempty root law p(T)=prod_T(pi_e lambda_e)/[prod_e(1+pi_e lambda_e)-1], every nonempty anchor U satisfies sum_(e outside U)(a_ve/pi_e)p(U union {e})<=b_v p(U). For positive width-two graph tables every incident pair cone and its rational linear quadratic-form cuts lift to every anchor disjoint from the pair. For any fixed finite family of DISTINCT actual once-per-gate partition runs covering the positive nonempty spectrum, these cuts, valid root-subset caps and any nonnegative rational dual multipliers give the same-full-family global bound G0+v-B<=inf_feasible_weights_and_all_actual_posteriors G<=G0, where B is the exact capped-simplex support of h minus the cut combination. Complete posterior entropy is retained, and used subsets reindex monomials rather than identify runs. On the frozen 67 graph references, exact certificates improve cap-only bounds in45 cases and lifted versus unanchored-pair bounds in38 cases; every bit gap is strictly below9I/10, with explicit rational complete-cost/infimum enclosures. The actual four-edge prime table claw plus disjoint edge has a positive multiplicative inadmissible law at weights(2/5,2/5,2/5,1/2) satisfying every individual sharp cap and every conditional incident-pair PSD cone but violating the anchored whole-row cut by200/3979. No physical realization of a relaxed law, universal complete-cost payment, or FEI solution follows.",
+    "hypotheses": [
+      "finite fixed gate table and finite distinct actual partition-run family",
+      "positive pi and lambda; physical nonnegative packing rows; D>0",
+      "positive output mass on positive nonempty squared Fourier spectrum",
+      "same family when changing weights or relaxing root laws; natural units G, bits C=G/ln2"
+    ],
+    "statement_sha256": "0ff1e51a4a6081c163f13e84bfdd7a45ab66f2002a46171ecbc1729b7ae33637",
+    "contributors": [
+      "A006"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/check.py",
+      "code/replay.py",
+      "code/cost.py",
+      "out/CHECK.json",
+      "out/REPLAY.json",
+      "out/COST.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A010-DENOMINATOR-CAPS-AND-JOINT-PAIR-PACKING",
+        "version": 1,
+        "statement_sha256": "4277ffe54b05e9848ef6fb1e0497beaf97f110863ea8bbffc0872aeb6194aa14",
+        "acceptance": "whole unchanged extension reconstructed in REVIEW_A010.md; upstream authorship disclosed",
+        "source_declared_statement_sha256": "ddc55eebe48a4483fd797bca1b36d75a01dcf7fcbf30db9bd94f2238f97feb95"
+      },
+      {
+        "claim_id": "A006-JOINT-ROOT-LAW-LOWER-CERTIFICATE",
+        "version": 1,
+        "statement_sha256": "9a0d49375a7a8ba40ae7b26ca9592229e9d3cf10310aa677e5121b90498716d5",
+        "acceptance": "previous independently reviewed supporting-hyperplane identity, rederived here"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_CERTIFICATES_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "sufficiency of all individual root caps and conditional incident-pair cones for higher-degree packing"
+    ],
+    "first_unproved_line": "Universal influence-payment of the complete same-reference cost on arbitrary shared/leafless incidence, then arbitrary Boolean prime tables.",
+    "next_consumers": [
+      "A010",
+      "A008",
+      "A086",
+      "A015"
+    ]
+  }
+]

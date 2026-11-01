@@ -1,0 +1,124 @@
+[
+  {
+    "claim_id": "A096-PHYSICAL-PHASE-FUNDED-NONEMPTY-RESET",
+    "version": 1,
+    "exact_statement": "For ANY Boolean seed h on a disjoint finite uniform cube, ANY restricted complementary controller a in {-1,0,1}, b=1-a^2, either sign sigma, and ANY normalized finite-cost source R with R(0)=(Eh)^2, supply the complete coherent reference Q(U,0)=(ahat(U)+sigma*Eh*bhat(U))^2, Q(U,T)=bhat(U)^2 R(T) for T nonempty. At a seed query j put d=E[h*x_j], C=sum ahat^2 bhat^2, D=sum ahat bhat^3, E=sum bhat^4 and Gamma=C-D^2/E>=0 (zero when E=0), x=Gamma*d^2. First coherently block-calibrate BOTH actual inherited child references. In each child of actual tail mass tau=beta*(1-mean_child^2), with beta=E b^2, change its CURRENT conditional nonempty seed profile to (1-epsilon)*M+epsilon*S for ANY prescribed normalized nonempty S, epsilon=x/(tau+x) when x,tau>0, and zero otherwise; preserve the actual signed vacuum and controller factors. The complete erasure-plus-mean-child-CE increment is <=-D_occ-x/ln2, where D_occ is the actual conditional occupancy KL. Consequently any finite adaptive mixed physical tree of these seed transactions and the prescribed paid coherent controller queries preserves the SAME supplied initial influence rate/account and all previous debits/full siblings, without an external reset-count or pathwise log-budget. Fixed A079 controller has Gamma=9/3584. This supplies neither a cheap arbitrary-seed initial reference nor a positive strength when d=0; FEI remains OPEN. Units bits.",
+    "hypotheses": [
+      "Actual Boolean independent uniform physical cubes; current coherent supplied finite reference, not arbitrary incoming wrapper",
+      "Targets prescribed on nonempty seed frequencies; both full children and every old debit retained",
+      "All mixture strengths use CURRENT actual d,tau,Gamma; no original refund reissued",
+      "At zero tail/zero energy no profile change; seed and controller endpoints use explicit point formulas"
+    ],
+    "statement_sha256": "be01db6a0985f69dbb4dd63b488601123e318a4dcdda54cd3911999c3cd34bb2",
+    "contributors": [
+      "A096; coherent wrapper and exact block-calibration baseline credited to A079/A032"
+    ],
+    "proof_source": {
+      "run_id": "20261023T053800Z-fleet03-A096-live-gap-ledger",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check.py",
+        "out/FROZEN_SPEC.json",
+        "out/PILOT.json",
+        "out/VALIDATION.json",
+        "out/POSITIVE_PROFILE_WITNESS.json",
+        "out/PARITY_OBSTRUCTION.json",
+        "out/CHAIN_FROZEN_SPEC.json",
+        "out/CHAIN_CERTIFICATE.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A079-POST-TAG-SECOND-TAIL-RESET-SAME-REFUND",
+        "version": 1,
+        "statement_sha256": "5cac4baac30e53630b88453f0eac7e68294f17163a19ccd8c83189aae1a2b995",
+        "source": "agents\\A079\\runs\\20261023T034945Z-fleet03-A079-correlated-auxiliaries\\CLAIMS.json",
+        "scope": "Only complete coherent wrapper invariant and nonpositive current-reference block calibrations; reconstructed in DERIVATION. No universal initial source price imported."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A097",
+        "run_id": "20261023T062140Z-fleet03-A097-cross-route-transfer",
+        "verdict": "HOLDS_AT_STATED_SUPPLIED_SOURCE_SCOPE",
+        "method": "Independent full CE/occupancy identity reconstruction, common coarse-marginal Pinsker/parallelogram, Gram minimum and mixture-price derivation; own direct-character checker, no source helper imports",
+        "scope": "A096 unchanged vacuum-phase theorem only; new nonempty-bin extension is A097 contributor work and awaits independent acceptance",
+        "evidence": [
+          "DERIVATION.md sections1-3",
+          "out/VALIDATION.json",
+          "out/INDEPENDENT_AUDIT.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENT_RECONSTRUCTION_HOLDS_AT_STATED_SUPPLIED_SOURCE_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A079",
+      "A085",
+      "A097",
+      "A003",
+      "A094",
+      "A050",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A097-NONEMPTY-PHASE-BIN-FUNDED-TRANSFER",
+    "version": 1,
+    "exact_statement": "Let a:{-1,1}^k->{-1,0,1}, b=1-a^2, h:{-1,1}^n->{-1,1} on disjoint uniform cubes, sigma in {-1,1}. Supply normalized finite-CE R with R(empty)=(Eh)^2 and the COMPLETE coherent reference Q(U,empty)=(ahat(U)+sigma*Eh*bhat(U))^2, Q(U,T)=bhat(U)^2 R(T) for nonempty T. At a physical seed query j write u_T=hhat(T), v_T=hhat(T+j), m=Eh, d=v_empty, beta=sum bhat^2, C=sum ahat^2 bhat^2, D=sum ahat bhat^3, E4=sum bhat^4, Gamma=C-D^2/E4>=0 (zero if E4=0). Choose ANY partition W_l of remaining NONEMPTY seed frequencies before the physical outcome; c_l=sum_{T in W_l}u_T v_T and x=Gamma*d^2+E4*sum_l c_l^2. Calibrate BOTH inherited full child marginals on each vacuum atom and each controller-frequency/nonempty-bin block to its ACTUAL child mass, retaining current conditional profile within each bin. This gives coherent Rcal_tau with actual vacuum and Rcal_tau(T)=P_h_tau(W_l)*Rbar(T)/Rbar(W_l). At positive t_tau*x, t_tau=beta*Var(h_tau), mix its CURRENT conditional nonempty profile with ANY prescribed normalized target at epsilon_tau=x/(t_tau+x); otherwise make no mixture. The complete transaction increment B_j(G)+average CE(P_child,Qnew_child)-CE(P_G,Q) is <=-D_occ-x/ln2<=0 in bits. Refund>=2x/ln2 and mixture liability<=x/ln2. Every finite adaptive coherent continuation telescopes using CURRENT references, SAME initial supplied rate/account and all old debits/full siblings. Two sign bins Wplus={nonempty T:u_T v_T>=0}, Wminus={nonempty T:u_T v_T<0} maximize sum c_l^2 over partitions. If d=0 and beta>0, x=(E4/2)*(sum_nonempty |u_T v_T|)^2, positive EXACTLY when the two child squared spectra differ. For fixed A079 controller beta=3/8,E4=21/512,Gamma=9/3584 and actual balanced seed h=x3 times the two-bit point-defect, query1 has d=0,x=21/4096 and both nonconstant children admit epsilon=7/519. This does not fund arbitrary positive-strength changes on zero-energy isospectral queries or supply an influence-priced arbitrary-seed initial reference. Full FEI remains OPEN.",
+    "hypotheses": [
+      "Actual finite Boolean seed and complementary controller on independent uniform physical cubes",
+      "Complete normalized CURRENT coherent reference, supplied finite initial CE and R(empty)=actual seed mean-square",
+      "Partition fixed before query outcome; all old bookings and both full terminal references retained",
+      "Positive actual block has positive inherited reference mass by finite-CE support; zero blocks use explicit zero-law convention",
+      "Recompute controller Gram constants after controller restriction; restore coherent invariant before another phase transaction",
+      "No original refund reissued; no unconditional initial influence price assumed"
+    ],
+    "statement_sha256": "f8ee94db650f099b036f174a5e9d21989eee7c6110efd02901221b86b631a6a8",
+    "contributors": [
+      "A097; A096 vacuum-phase refund argument and A079/A032 coherent block-calibration invariant credited"
+    ],
+    "proof_source": {
+      "run_id": "20261023T062140Z-fleet03-A097-cross-route-transfer",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check.py",
+        "code/audit.py",
+        "out/FROZEN_SPEC.json",
+        "out/PILOT.json",
+        "out/VALIDATION.json",
+        "out/AUDIT_FROZEN_SPEC.json",
+        "out/INDEPENDENT_AUDIT.json",
+        "out/WITNESS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A096-PHYSICAL-PHASE-FUNDED-NONEMPTY-RESET",
+        "version": 1,
+        "statement_sha256": "be01db6a0985f69dbb4dd63b488601123e318a4dcdda54cd3911999c3cd34bb2",
+        "source": "agents\\A096\\runs\\20261023T053800Z-fleet03-A096-live-gap-ledger\\CLAIMS.json",
+        "scope": "Supplied coherent reference/common-marginal phase refund and paid mixture interface; independently reconstructed without repair. Nonempty-bin refinement is new."
+      }
+    ],
+    "review_records": [],
+    "status": "SCOPED_ANALYTIC_PROOF_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A079",
+      "A085",
+      "A094",
+      "A098",
+      "A099",
+      "A050",
+      "B20"
+    ]
+  }
+]

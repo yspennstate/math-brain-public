@@ -1,0 +1,8 @@
+Local deterministic standard-library checker output:
+
+PASS QFORM_GAUSSIAN_CONETIP_RIGIDITY
+sharp_centered_gaussian_cap 4.242640687119285
+partner_theta_0.01_lower 4.117251705266084
+partner_theta_0.01_satellite 0.029554466451491845
+
+The checker numerically evaluates the elliptic-integral formula by deterministic Simpson quadrature on five coefficient triples, checks the Cauchy-Schwarz upper bound, checks the exact isotropic sharp value 3*sqrt(2) at variance 1/12, verifies the strict-slack comparator 6/sqrt(2+1/m) for m=2,10,100, and checks the designated-partner theta=0.01 tradeoff values. These checks support arithmetic/algebra only; the proof is in REPORT.md.

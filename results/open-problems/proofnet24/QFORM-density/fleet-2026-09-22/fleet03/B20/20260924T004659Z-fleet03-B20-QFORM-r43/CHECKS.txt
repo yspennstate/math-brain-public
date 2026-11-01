@@ -1,0 +1,19 @@
+fleet03/B20 r43 deterministic constant/regression checks
+
+Analytic theorem checked: for squared singular values x1>=x2>=..., T2=sum_{k>=3} xk, E2=e2(x), E3=e3(x),
+T2*E2 <= 3*E3.
+Proof is exact by pair-complement triple counting; regression is diagnostic only.
+
+thresholds:
+tau = 27/1048576 = 2.574920654296875e-05
+sqrt(tau) = 0.005074367600299445
+1/64 + tau = 16411/1048576 = 0.01565074920654297
+sqrt(1/64+tau) = 0.12510295442771513
+x1 lower bound = 8796085053023/309747253248 = 28.3976208369486
+sigma1 lower bound = 5.328941812118856
+
+random regression: dimensions 3..29, 3000 log-uniform singular-square arrays per dimension
+violations of T2*E2 <= 3*E3: 0
+largest sampled ratio (T2*E2)/(3*E3): approximately 0.981
+
+No numerical experiment is used as proof.

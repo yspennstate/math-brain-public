@@ -1,0 +1,48 @@
+[
+  {
+    "service": "arxiv",
+    "query": "https://export.arxiv.org/api/query?id_list=2607.13341,2602.00895,2608.20266,2608.21014,2606.07417,2609.24789",
+    "date": "2026-10-12",
+    "error": "HTTPSConnectionPool(host='export.arxiv.org', port=443): Max retries exceeded with url: /api/query?id_list=2607.13341,2602.00895,2608.20266,2608.21014,2606.07417,2609.24789 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  },
+  {
+    "service": "arxiv",
+    "query": "https://arxiv.org/pdf/2607.13341",
+    "date": "2026-10-12",
+    "error": "HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /pdf/2607.13341 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  },
+  {
+    "service": "arxiv",
+    "query": "https://arxiv.org/pdf/2602.00895",
+    "date": "2026-10-12",
+    "error": "HTTPSConnectionPool(host='arxiv.org', port=443): Max retries exceeded with url: /pdf/2602.00895 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  },
+  {
+    "service": "arxiv",
+    "query": "https://arxiv.org/pdf/2608.21014",
+    "date": "2026-10-12",
+    "status": 200,
+    "bytes": 672955
+  },
+  {
+    "service": "openalex_curl",
+    "query": "https://api.openalex.org/works/https://doi.org/10.1007/s00030-025-01090-2",
+    "date": "2026-10-12",
+    "exit": 0,
+    "bytes": 610,
+    "stderr": ""
+  },
+  {
+    "service": "openalex_citations",
+    "error": "'id'",
+    "date": "2026-10-12"
+  },
+  {
+    "service": "github_curl",
+    "query": "https://api.github.com/search/repositories?q=Agresti+Veraar+regularity",
+    "date": "2026-10-12",
+    "exit": 0,
+    "bytes": 73,
+    "stderr": ""
+  }
+]

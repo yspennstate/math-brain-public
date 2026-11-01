@@ -1,0 +1,38 @@
+[
+  {
+    "name": "source",
+    "url": "https://arxiv.org/pdf/1406.0763",
+    "ok": true,
+    "bytes": 370230
+  },
+  {
+    "name": "norm_paper",
+    "url": "https://arxiv.org/pdf/1310.2921",
+    "ok": true,
+    "bytes": 297868
+  },
+  {
+    "name": "arxiv_search",
+    "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22cancellation+norm%22+OR+all%3A%22cancelation+norm%22+OR+all%3A%22spelling+length%22%29+AND+%28all%3A%22random%22+OR+all%3A%22drift%22%29&max_results=30",
+    "ok": true,
+    "bytes": 3060
+  },
+  {
+    "name": "arxiv_biinvariant",
+    "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22bi-invariant%22+OR+all%3A%22conjugation-invariant%22%29+AND+all%3A%22drift%22&max_results=30",
+    "ok": true,
+    "bytes": 820
+  },
+  {
+    "name": "openalex",
+    "url": "https://api.openalex.org/works?search=cancellation+norm+random+walk+drift&per-page=15",
+    "ok": false,
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "name": "openalex_source",
+    "url": "https://api.openalex.org/works?search=Five+remarks+about+random+walks+on+groups&per-page=5",
+    "ok": false,
+    "error": "HTTP Error 429: Too Many Requests"
+  }
+]

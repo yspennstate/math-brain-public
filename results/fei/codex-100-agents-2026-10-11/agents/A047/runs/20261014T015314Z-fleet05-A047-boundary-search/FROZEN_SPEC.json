@@ -1,0 +1,75 @@
+{
+  "helper_version": "A047-product-deletion-audit-v1.2",
+  "family": "all Boolean signs n=0..3; priority z,a,b selecting arbitrary ordered two-bit shared cores; adaptive three-bit parity",
+  "domain": {
+    "laws": [
+      [
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/8",
+        "1/8",
+        "1/8"
+      ],
+      [
+        "1/8",
+        "1/4",
+        "3/8"
+      ],
+      [
+        "3/4",
+        "7/8",
+        "1/2"
+      ]
+    ],
+    "policies": [
+      "complete",
+      "prefix",
+      "adaptive",
+      "controllers"
+    ],
+    "shared_laws": [
+      [
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/8",
+        "3/4",
+        "7/8",
+        "1/4",
+        "3/8"
+      ]
+    ],
+    "parity_laws": [
+      [
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/8",
+        "1/4",
+        "3/8"
+      ],
+      [
+        "1/256",
+        "1/65536",
+        "3/4"
+      ]
+    ]
+  },
+  "case_count": 5475,
+  "pilot_count": 355,
+  "symmetry": "none",
+  "arithmetic": "Fraction direct centered Fourier moments; exact integer-log coefficient identities using factorint decompositions verified by integer products, no primality premise; normalized-reference conditional KL identity; no float signs",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": 300,
+  "pilot_max_seconds": 60,
+  "dimension_escalation": false
+}

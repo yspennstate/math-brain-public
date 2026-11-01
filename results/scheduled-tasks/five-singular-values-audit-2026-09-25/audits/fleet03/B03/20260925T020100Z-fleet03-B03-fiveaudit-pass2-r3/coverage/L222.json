@@ -1,0 +1,26 @@
+{
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "account": "fleet03",
+  "slot": "B03",
+  "run_id": "20260925T020100Z-fleet03-B03-fiveaudit-pass2-r3",
+  "pass_id": "pass2-reverse",
+  "statement_label": "projection zero-beta count",
+  "tex_line_start": 222,
+  "tex_line_end": 222,
+  "clause_id": "P2-L222",
+  "pdf_page": "4-5",
+  "status": "FALSE",
+  "hypotheses_used": [
+    "U column-isometry",
+    "W orthogonal complement"
+  ],
+  "dependencies": [],
+  "derivation_or_objection": "n=3,d=2,U=(e1,e2),W=e3 gives beta1=beta2=0. Drop all zero-beta factors; each is z-independent and <=1.",
+  "checks_performed": "Explicit counterexample plus repaired frame identity.",
+  "downstream_impact": "Local only; constants unchanged.",
+  "repair_reference": "../C08_REPAIR.md",
+  "independence_note": "Deterministic."
+}

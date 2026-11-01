@@ -1,0 +1,130 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w342",
+  "bundle_slug": "w342-p0044-partial-results",
+  "entries": [
+    {
+      "key": "p0044-w342-result-scope",
+      "namespace": "probability.research.attempts",
+      "logical_name": "p0044-w342-result-scope",
+      "kind": "concept",
+      "title": "Result scope and audit status for P0044",
+      "statement": "The cached uniform-spanning-forest question asks for an automorphism-invariant inclusion coupling on arbitrary networks. The canonical tree-network coupling and the equal-edge-marginal reduction establish special cases only. The cached 2026 book already cites Lyons-Thom invariant couplings on sofic groups. Arbitrary networks remain unresolved here. Proofs await w346 KEEP.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0044:p0044-w342-result-scope",
+        "url": "file:///~/brain_workers/w342/proofs/P0044.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "tree-network-canonical-invariant-wired-free-forest-coupling",
+      "namespace": "probability.forests",
+      "logical_name": "tree-network-canonical-invariant-wired-free-forest-coupling",
+      "kind": "lemma",
+      "title": "Canonical invariant forest coupling on tree networks",
+      "statement": "On every countable connected locally finite infinite tree network with positive finite conductances, FUSF is the deterministic full edge set E. Sampling W with the WUSF law and setting F=E gives both required marginals, W subset F for every outcome, and a joint law invariant under every conductance-preserving network automorphism. This includes nonamenable regular trees and does not require Folner averaging.",
+      "proof_text": "# P0044: canonical invariant monotone coupling on every tree network\n\nStatus: proof of a special case and a refuted route, awaiting w346. The general-network invariant coupling question remains unresolved here. The earlier amenable-action averaging argument remains valid; this special case does not require amenability.\n\nLet G be a countable, connected, locally finite infinite tree with positive finite conductances. The free uniform spanning forest law is the deterministic configuration F=E(G): exhaust G by finite connected subtrees, each of which has exactly one spanning tree, its full edge set. Conductances do not change uniqueness, and every fixed edge eventually appears.\n\nLet W have the wired uniform spanning forest law on the same network. Define the joint law by sampling this W and setting F=E(G) deterministically. Its W marginal is exactly WUSF, its F marginal is exactly FUSF, and W subset F holds for every outcome. The wired law is invariant under each conductance-preserving network automorphism: pushforward transports wired exhaustion measures to the measures on the transported exhaustion, which has the same wired weak limit. E(G) is also fixed by every automorphism. Thus the JOINT law is invariant under all network automorphisms.\n\nThis supplies the requested coupling for all locally finite tree networks, including the nonamenable regular tree. Nonamenability therefore cannot itself be an obstruction to invariant monotone coupling; it only prevents the particular Folner averaging proof.\n\nMore generally, if two laws on a countable edge set admit an inclusion coupling and have equal one-edge inclusion probabilities at every edge, then the coupled configurations coincide almost surely. Indeed P(e in F minus W)=P(e in F)-P(e in W)=0 for every e, and the countable union is null. If the common marginal is invariant, its diagonal coupling is invariant.\n\nSource: P0044-A001's amenable averaging result and the cached 2026 Lyons-Peres Question 10.6. The cached statement already records invariant couplings on sofic Cayley groups (Lyons-Thom 2016); no claim that arbitrary networks are covered is made.\n",
+      "assumptions": [
+        "Countable connected locally finite tree network",
+        "Positive finite conductances"
+      ],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0044:tree-network-canonical-invariant-wired-free-forest-coupling",
+        "url": "file:///~/brain_workers/w342/proofs/P0044.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "inclusion-coupling-equal-edge-marginals-is-diagonal",
+      "namespace": "probability.forests",
+      "logical_name": "inclusion-coupling-equal-edge-marginals-is-diagonal",
+      "kind": "lemma",
+      "title": "Equal edge marginals force an inclusion coupling to be diagonal",
+      "statement": "For probability laws on subsets of a countable edge set, suppose a coupling (W,F) has W subset F almost surely and P(e in W)=P(e in F) for every edge e. Then W=F almost surely and the two laws coincide. If this common marginal is invariant under a group action, its diagonal coupling is invariant. Countability is used to take the union of the zero-probability edge discrepancies.",
+      "proof_text": "# P0044: canonical invariant monotone coupling on every tree network\n\nStatus: proof of a special case and a refuted route, awaiting w346. The general-network invariant coupling question remains unresolved here. The earlier amenable-action averaging argument remains valid; this special case does not require amenability.\n\nLet G be a countable, connected, locally finite infinite tree with positive finite conductances. The free uniform spanning forest law is the deterministic configuration F=E(G): exhaust G by finite connected subtrees, each of which has exactly one spanning tree, its full edge set. Conductances do not change uniqueness, and every fixed edge eventually appears.\n\nLet W have the wired uniform spanning forest law on the same network. Define the joint law by sampling this W and setting F=E(G) deterministically. Its W marginal is exactly WUSF, its F marginal is exactly FUSF, and W subset F holds for every outcome. The wired law is invariant under each conductance-preserving network automorphism: pushforward transports wired exhaustion measures to the measures on the transported exhaustion, which has the same wired weak limit. E(G) is also fixed by every automorphism. Thus the JOINT law is invariant under all network automorphisms.\n\nThis supplies the requested coupling for all locally finite tree networks, including the nonamenable regular tree. Nonamenability therefore cannot itself be an obstruction to invariant monotone coupling; it only prevents the particular Folner averaging proof.\n\nMore generally, if two laws on a countable edge set admit an inclusion coupling and have equal one-edge inclusion probabilities at every edge, then the coupled configurations coincide almost surely. Indeed P(e in F minus W)=P(e in F)-P(e in W)=0 for every e, and the countable union is null. If the common marginal is invariant, its diagonal coupling is invariant.\n\nSource: P0044-A001's amenable averaging result and the cached 2026 Lyons-Peres Question 10.6. The cached statement already records invariant couplings on sofic Cayley groups (Lyons-Thom 2016); no claim that arbitrary networks are covered is made.\n",
+      "assumptions": [
+        "Countable edge set",
+        "An inclusion coupling exists",
+        "Equal one-edge probabilities"
+      ],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0044:inclusion-coupling-equal-edge-marginals-is-diagonal",
+        "url": "file:///~/brain_workers/w342/proofs/P0044.md",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "p0044-w342-validation-evidence",
+      "namespace": "probability.research.attempts",
+      "logical_name": "p0044-w342-validation-evidence",
+      "kind": "concept",
+      "title": "Finite validation evidence for P0044",
+      "statement": "Measured validation evidence for P0044: {\"command\": \"python -X utf8 verify_remaining.py\", \"joint_law_symmetry_checks\": 48, \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"order_violations\": 0, \"scope\": \"finite symmetric wired ball; infinite tree coupling established in written proof\", \"seconds\": 0.004, \"wired_ball_spanning_trees\": 54}. These finite checks support the written proof and do not replace its independent audit or establish the full open problem.",
+      "proof_text": null,
+      "assumptions": [],
+      "domain": "probability theory and related mathematics",
+      "source": {
+        "source_id": "owner:w342:P0044:p0044-w342-validation-evidence",
+        "url": "file:///~/brain_workers/w342/p0044_measurements.json",
+        "revision": "author-proof-pending-w346-2026-10-10",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "p0044-w342-result-scope",
+      "kind": "cites",
+      "rationale": "FROM \"The cached uniform-spanning-forest question asks for an automorphism-invariant inclusion coupling on arbitrary networks. The canonical tree-network coupling and the equal-edge-marginal reduction establish special cases only. The cached 2026 book already cites\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For an infinite network, is there a coupling (W,F) of its wired and free uniform spanning forests with W subset F almost surely whose\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0044-invariant-monotone-coupling-of-free-and-wired-uniform-spanning-forests"
+    },
+    {
+      "from_key": "tree-network-canonical-invariant-wired-free-forest-coupling",
+      "kind": "cites",
+      "rationale": "FROM \"On every countable connected locally finite infinite tree network with positive finite conductances, FUSF is the deterministic full edge set E. Sampling W with the WUSF law and setting F=E gives both required marginals, W subset F for every outcome, and a\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For an infinite network, is there a coupling (W,F) of its wired and free uniform spanning forests with W subset F almost surely whose\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0044-invariant-monotone-coupling-of-free-and-wired-uniform-spanning-forests"
+    },
+    {
+      "from_key": "tree-network-canonical-invariant-wired-free-forest-coupling",
+      "kind": "cites",
+      "rationale": "FROM \"On every countable connected locally finite infinite tree network with positive finite conductances, FUSF is the deterministic full edge set E. Sampling W with the WUSF law and setting F=E gives both required marginals, W subset F for every outcome, and a\"; TO \"The cached uniform-spanning-forest question asks for an automorphism-invariant inclusion coupling on arbitrary networks. The canonical tree-network coupling and the equal-edge-marginal reduction establish special cases only. The cached 2026 book already cites\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0044-w342-result-scope"
+    },
+    {
+      "from_key": "inclusion-coupling-equal-edge-marginals-is-diagonal",
+      "kind": "cites",
+      "rationale": "FROM \"For probability laws on subsets of a countable edge set, suppose a coupling (W,F) has W subset F almost surely and P(e in W)=P(e in F) for every edge e. Then W=F almost surely and the two laws coincide. If this common marginal is invariant under a group\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For an infinite network, is there a coupling (W,F) of its wired and free uniform spanning forests with W subset F almost surely whose\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0044-invariant-monotone-coupling-of-free-and-wired-uniform-spanning-forests"
+    },
+    {
+      "from_key": "inclusion-coupling-equal-edge-marginals-is-diagonal",
+      "kind": "cites",
+      "rationale": "FROM \"For probability laws on subsets of a countable edge set, suppose a coupling (W,F) has W subset F almost surely and P(e in W)=P(e in F) for every edge e. Then W=F almost surely and the two laws coincide. If this common marginal is invariant under a group\"; TO \"The cached uniform-spanning-forest question asks for an automorphism-invariant inclusion coupling on arbitrary networks. The canonical tree-network coupling and the equal-edge-marginal reduction establish special cases only. The cached 2026 book already cites\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0044-w342-result-scope"
+    },
+    {
+      "from_key": "p0044-w342-validation-evidence",
+      "kind": "cites",
+      "rationale": "FROM \"Measured validation evidence for P0044: {\"command\": \"python -X utf8 verify_remaining.py\", \"joint_law_symmetry_checks\": 48, \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"order_violations\": 0, \"scope\": \"finite\"; TO \"OPEN PROBLEM from the Codex campaign ledger (source_says_open; current status unverified; result status attempted_unsolved). For an infinite network, is there a coupling (W,F) of its wired and free uniform spanning forests with W subset F almost surely whose\"; This result touches the cached problem; no full solution or independent KEEP is implied.",
+      "to_existing_logical": "math:probability.core:open-problem-p0044-invariant-monotone-coupling-of-free-and-wired-uniform-spanning-forests"
+    },
+    {
+      "from_key": "p0044-w342-validation-evidence",
+      "kind": "cites",
+      "rationale": "FROM \"Measured validation evidence for P0044: {\"command\": \"python -X utf8 verify_remaining.py\", \"joint_law_symmetry_checks\": 48, \"label\": \"finite checks and numerical evidence; separate written proof awaiting audit\", \"order_violations\": 0, \"scope\": \"finite\"; TO \"The cached uniform-spanning-forest question asks for an automorphism-invariant inclusion coupling on arbitrary networks. The canonical tree-network coupling and the equal-edge-marginal reduction establish special cases only. The cached 2026 book already cites\"; The scope card states the unresolved part and the pending independent audit.",
+      "to_key": "p0044-w342-result-scope"
+    }
+  ]
+}

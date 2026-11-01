@@ -1,0 +1,55 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T012604Z-fleet01-B20-a097-constant-child-cap",
+  "claims": [
+    {
+      "claim_id": "B20-A097-CONSTANT-CHILD-CRITICAL-CAP",
+      "version": 1,
+      "packet_id": "A097",
+      "attempt_id": "A097-CONSTANT-CHILD-TRANSFER-1",
+      "gap_id": "G-CRITICAL-STEP",
+      "exact_statement": "For every restriction-critical nonconstant Boolean K on a finite uniform cube, if some relevant coordinate has a constant physical child, then H(K)/I(K)<=C_*, where C_*=max_{0<=p<=1} c(p) for the exact constant-branch selector tax and 4.872321<C_*<4.872322. Hence any restriction-critical source with H/I>=4.872322 has two nonconstant physical children at every relevant coordinate.",
+      "hypotheses": [
+        "finite uniform cube",
+        "genuine {-1,1}-valued Boolean function",
+        "physical unbiased coordinate restriction",
+        "restriction-criticality against every nonconstant physical child",
+        "base-2 Fourier entropy"
+      ],
+      "statement_sha256": "d0112ac932d526919cdf18415d4078d5cf0c97ab065f080416ac5aeddffb6cd7",
+      "contributors": ["fleet01/B20"],
+      "proof_source": "CROSS_ROUTE_SUBSTITUTION.tex",
+      "proof_dependencies": [
+        {
+          "claim_id": "B05-A023-TWO-FACTOR-SIGNED-REFUND",
+          "version": 1,
+          "scope_used": "arbitrary-Boolean-child scalar packet formula versus a constant",
+          "review_status": "ACCEPTED_AT_EXACT_SCOPE_BY_B19_A094"
+        },
+        {
+          "claim_id": "B12-A060-SELECTOR-TAX-SHARPNESS",
+          "version": 2,
+          "scope_used": "sharp one-variable bound C_*<4.872322",
+          "review_status": "PROVED_SOURCE_COMPLETE_PENDING_INDEPENDENT_REVIEW"
+        },
+        {
+          "claim_id": "B20-A096-CRITICAL-PRUNING",
+          "version": 1,
+          "scope_used": "restriction-critical child ratio inequality",
+          "review_status": "PROVED_PENDING_INDEPENDENT_REVIEW"
+        }
+      ],
+      "review_records": [],
+      "status": "ANALYTICALLY_PROVED_WITH_EXACT_IDENTITY_AUDIT_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "A restriction-critical source of ratio at least 4.872322 can have a relevant coordinate with a constant child"
+      ],
+      "first_unproved_line": "Bound the critical step ratio on tensor-prime sources with two nonconstant children at every relevant coordinate.",
+      "next_consumers": ["A001", "A028", "A052", "A054", "A055", "A087", "A090", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN",
+  "independent_review": "PENDING"
+}
+

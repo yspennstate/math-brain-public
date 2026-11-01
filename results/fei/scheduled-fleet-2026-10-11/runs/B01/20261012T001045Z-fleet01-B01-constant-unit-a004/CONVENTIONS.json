@@ -1,0 +1,67 @@
+{
+  "schema": "fei-conventions/1",
+  "packet_id": "A004",
+  "status": "PROVED_BASELINE_PENDING_INDEPENDENT_REVIEW",
+  "domain": "uniform cube {-1,1}^n",
+  "fourier": {
+    "characters": "chi_S(x)=product_{i in S} x_i",
+    "coefficient": "fhat(S)=E[f chi_S]",
+    "parseval_sign": "sum_S fhat(S)^2=1",
+    "spectral_law": "P_f(S)=fhat(S)^2"
+  },
+  "logarithms": {
+    "campaign_unit": "bits",
+    "campaign_base": 2,
+    "nats_to_bits": "divide by ln(2)",
+    "bits_to_nats": "multiply by ln(2)",
+    "constants_bits": {
+      "one_over_ln2": "1.4426950408889634",
+      "two_over_ln2": "2.8853900817779268",
+      "three_over_ln2": "4.3280851226668902",
+      "K_ref": "3+2 log_2(3)+log_2(6e) = 10.197582543052432..."
+    },
+    "K_ref_nats": "(ln 2) K_ref = 1+4 ln 2+3 ln 3"
+    ,
+    "public_threshold_paper_constants": {
+      "C_lev": "log_2(4+e) = 2.748092317155018... bits",
+      "L_star": "1+ln(2) = 1.693147180559945... (the source intentionally uses natural ln here)",
+      "L_mix": "2+EulerGamma = 2.577215664901533...",
+      "C_reg": "C_lev+2 log_2(e pi) = 8.936474657877582... bits",
+      "four_C_reg": "35.74589863151033... bits",
+      "AND_OR_product_gate": "2+4/ln(2) = 7.770780163555854... bits",
+      "XOR_product_gate": "2/ln(2) = 2.885390081777927... bits"
+    }
+  },
+  "sign_indicator_mapping": {
+    "choice": "g=(1-f)/2, so g=1 exactly where f=-1",
+    "mean": "mu=E[g]=(1-E[f])/2",
+    "empty_coefficient": "ghat(empty)=mu",
+    "nonempty_coefficients": "ghat(S)=-fhat(S)/2 for S nonempty",
+    "variance": "Var(g)=mu(1-mu)=Var(f)/4",
+    "warning": "The raw squares ghat(S)^2 have total mass mu, not 1; their raw entropy is not Shannon entropy until normalized."
+  },
+  "influence": {
+    "directional_sign": "I_i(f)=Pr[f(x) != f(x^flip_i)]=sum_{S contains i} fhat(S)^2",
+    "total_sign": "I(f)=sum_i I_i(f)=sum_S |S| fhat(S)^2",
+    "indicator_same_edge_probability": "Pr[g(x) != g(x^flip_i)]=I_i(f)",
+    "indicator_fourier": "I_i(f)=4 sum_{S contains i} ghat(S)^2",
+    "oriented_boundary_warning": "A convention counting each undirected boundary edge once and dividing by 2^n equals I_i(f)/2; it is not the campaign directional influence."
+  },
+  "variance_and_empty_atom": {
+    "variance_sign": "v=Var(f)=1-fhat(empty)^2=sum_{S nonempty} P_f(S)",
+    "level_gap": "I(f)-v=sum_{S nonempty} (|S|-1) P_f(S) >= 0",
+    "normalized_nonempty_law": "Q(S)=P_f(S)/v for S nonempty when v>0",
+    "entropy_split": "H(f)=h_2(v)+v H(Q)",
+    "raw_nonempty_entropy": "sum_{S nonempty} P_f(S) log_2(1/P_f(S))=v H(Q)+v log_2(1/v)",
+    "endpoint": "When v=0, f is constant; use H=I=0 and do not form Q or H/I."
+  },
+  "character_multiplication": {
+    "spectrum": "widehat(chi_U f)(S)=fhat(S triangle U)",
+    "entropy": "H(chi_U f)=H(f)",
+    "influence": "I(chi_U f)=I(f)+|U|-2 sum_{i in U} I_i(f)",
+    "minimum": "D(f)=min_U I(chi_U f)=sum_i min(I_i(f),1-I_i(f))",
+    "warning": "Character multiplication preserves H but not I; a character chi_U has I=|U| and becomes constant after multiplying by chi_U."
+  },
+  "zero_terms": "Use 0 log_2(1/0)=0 and omit any ratio whose denominator is zero."
+}
+

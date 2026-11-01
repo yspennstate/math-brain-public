@@ -1,0 +1,14 @@
+Date: 2026-10-11
+Working directory: ~/lean_verify
+Command: lake env lean ~/brain_workers/TRIO_1011/op/C0031/Centering.lean
+Timeout supplied to the foreground subprocess: 3600 seconds
+Observed result: exit code 0; stdout and stderr empty.
+
+Checked declarations:
+  separated_centers_disjoint
+  center_bound
+
+Scope: real-algebra triangle-inequality/centering core only.
+This does NOT formalize the probability argument, singular-value interlacing,
+heavy-tailed law, or the complete special-case theorem.
+Uses ordinary kernel-checked proofs with linarith; no sorry or native_decide.

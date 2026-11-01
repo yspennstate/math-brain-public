@@ -1,0 +1,56 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "claim_id": "RS-2026-CL-A",
+  "date_utc": "2026-09-20T06:42:00Z",
+  "model_actual": "GPT-5.6 Sol",
+  "reasoning_actual": "UNVERIFIED",
+  "requested_model_preference": "GPT-6 maximum",
+  "metric": {
+    "name": "E_framework",
+    "before": 1,
+    "after": 1,
+    "movement": "NO FROZEN-METRIC MOVEMENT; source-generalization obligation moved materially"
+  },
+  "classification": "PROVED PARTIAL",
+  "status": "READ-ONCE-CYLINDER-DNF-NOISE-TRANSFER",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-20/2026-09-20T05-49-00Z__report.md",
+    "creation_commit": "44c1b6d7cc4fbefa6c4d8489d7dbffb514b1b89f",
+    "blob": "ce0f292d9d16d44ac28fa29d9dc60878a206b064"
+  },
+  "captured_master_before_report": "7808f35e1cec2760362663fa417fe39ca3ef6f27",
+  "new_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-20/2026-09-20T06-42-00Z__report.md",
+    "creation_commit": "a718a1879081b238f7e6f46e6cd0123d7424520d",
+    "readback_blob": "8e02ad105b3be0e6cba0fb6f2ec772b0a39b601e"
+  },
+  "handoff": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-20T06-42-00Z__P08_P09_block_product_tail_handoff.md",
+    "creation_commit": "0e8d94132977b57f70b565e4929efefa8b60ad82",
+    "readback_blob": "7d6e4004d42e1b42ddebb5690c4c3f5ce9eb4db2",
+    "ownership": "RS-2026-CL-A retained; P08/P09 source ownership untouched"
+  },
+  "methods": [
+    "B4 PROVE SOMETHING WEAKER, COMPLETELY",
+    "B21 ASK WHO ELSE HAS THIS SHAPE",
+    "B30 DO ONE SCALE AT A TIME"
+  ],
+  "proved_change": [
+    "For Boolean uniform product null, bounded degree-D LDA plus fixed coordinate-resampling noise rules out strong distinction by polynomial-size read-once DNFs whenever D/log(m+2) tends to infinity and the null acceptance probability tends to zero.",
+    "The proof splits narrow terms, controlled directly by bounded LDA, from wide terms, controlled by an exact absolute-Fourier coefficient generating function and a Chernoff tail extraction.",
+    "The theorem extends exactly to read-once cylinder DNFs over every fixed finite uniform alphabet using tensor characters, with local radius r_{q,z}=(1+(q-1)rho z)/q.",
+    "Mao's successful rank test therefore cannot have a read-once DNF representation of subexp(D_n) term count; quantitatively liminf log m_n / D_n >= log(2/(1+rho)) in the Boolean case."
+  ],
+  "scope": "Concrete test-side sufficient theorem for fixed finite uniform product nulls and read-once cylinder DNFs after fixed independent resampling; not a full-source characterization and not a proof of the unrestricted low-degree conjecture.",
+  "mao_boundary": "Respected quantitatively: Mao has exact low-degree matching but his noised rank-test acceptance set cannot have the read-once cylinder-DNF structure at subexponential-in-D_n size.",
+  "prior_art": "Haramaty-Lee-Viola bounded-independence-plus-noise product-test results and Hsieh et al. rigorous low-degree implications are relevant prior art. The conjunction/cylinder-specific bounded-LDA robustification here has UNVERIFIED novelty.",
+  "remaining_gap": "Extend beyond disjoint conjunction/cylinder blocks: limited-overlap DNFs, arbitrary bounded product tests under merely bounded LDA, or signed S_n graph-shape norms that preserve orbit cancellation. Arbitrary polynomial-time algorithms remain far outside the theorem.",
+  "next_attack": [
+    "Develop a limited-overlap cluster expansion for the noise-weighted Fourier tail using the term-intersection graph.",
+    "Extract a variance-controlled low-degree majorant from bounded-independence-plus-noise product-test proofs to upgrade exact moment matching to bounded LDA.",
+    "Develop a signed invariant graph-shape norm and test it against Mao's mandatory rank-test obstruction."
+  ],
+  "novelty": "UNVERIFIED",
+  "prompt_or_scheduler_modified": false,
+  "delivery": "GitHub only"
+}

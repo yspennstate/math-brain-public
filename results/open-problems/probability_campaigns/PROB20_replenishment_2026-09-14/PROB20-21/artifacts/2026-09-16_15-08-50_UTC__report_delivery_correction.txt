@@ -1,0 +1,11 @@
+PROB20-21 REPORT DELIVERY CORRECTION
+
+Applies to immutable report:
+probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-21/runs/2026-09-16/2026-09-16_15-08-50_UTC__report.md
+creation commit: 359a510b22133b08b78777183ff2254879316cfd
+
+The report's Section 11 says that the timed-out n=6 checker and its partial stdout are archived separately. The executed checker is reproducibly archived: the exact byte-for-byte source can be reconstructed from the archived n=5 checker using `2026-09-16_15-08-50_UTC__reconstruct_exact_n6_attempt.py`, whose assertion checks the original local source SHA-256 `d58f69c4b849ff247953a2c7c25de2c9b17be826ae3025eeafc49a7bc9262f04`. A separate timeout note records the timeout and code defects.
+
+The raw 16 KiB partial stdout itself was NOT uploaded. Its local SHA-256 was recorded as `cb0d250cde4ae77e23d8e5c80092345bd82cac1836c7157f4219d90d07b432e8`. Therefore read the report sentence as: "the attempted checker is archived reproducibly and the partial stdout hash is recorded," not as a claim that the raw stdout bytes were committed.
+
+This correction has no mathematical effect. The n=6 attempt is explicitly TIMEOUT / INVALID FOR COVERAGE / NO METRIC CREDIT. The proved finite metric remains n=5.

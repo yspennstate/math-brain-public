@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "claim": "QFORM-SPECTRAL-COMMUTING-VOLUME-GATE-v1",
+  "symbolic_checks": {
+    "marginal_bound": "alpha_i <= l_i + 3*(s3^2/T2)*(1-l_i)",
+    "gate": "A_spec=L+3*(1-L)/Rtail",
+    "finite_threshold": "Rtail > 3*(1-L)/(3/4-L) for L<3/4",
+    "L_one_half_threshold": 6,
+    "q_choice": "max(1,2*A_spec)"
+  },
+  "explicit_family": {
+    "L": 0.5,
+    "T2": 1.0,
+    "s3": 0.25,
+    "Rtail": 16.0,
+    "A_spec_exact": "19/32",
+    "A_spec": 0.59375,
+    "q_exact": "19/16",
+    "q": 1.1875,
+    "E3_exact": "531/256",
+    "E3": 2.07421875,
+    "C_spec_exact": "96*e/(5*sqrt(19))",
+    "C_spec": 11.973439114424531,
+    "density_bound_exact": "[96*e/(5*sqrt(19))]*(256/531)^(1/6)",
+    "density_bound": 10.602537507719617,
+    "old_triangle_gate": 1.0267627018922192,
+    "old_gate_fails_3_over_4": true,
+    "spectrum_large": [1, 1, -1, -1],
+    "tail_singular_values": "16 copies of 1/4",
+    "continuity": true
+  },
+  "full_target_status": "OPEN",
+  "check_kind": "finite arithmetic and exact-form consistency only; not an independent proof certificate"
+}

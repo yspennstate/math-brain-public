@@ -1,0 +1,35 @@
+--- a/~/.claude/brain_graph/bin/candidate_alias_ro.py
++++ b/~/.claude/brain_graph/bin/candidate_alias_ro.py
+@@ -0,0 +1,32 @@
++"""Bounded exact-candidate lookup for a math-brain store; never writes the store."""
++from pathlib import Path
++import argparse
++import json
++import re
++import sqlite3
++
++
++def resolve_candidate(database: str | Path, candidate: str, limit: int = 5) -> list[dict]:
++    if re.fullmatch(r'C[0-9]{4}', candidate, flags=re.IGNORECASE) is None:
++        raise ValueError('Expected an exact candidate ID such as C0041')
++    if not 1 <= limit <= 10:
++        raise ValueError('limit must be between 1 and 10')
++    database_path = Path(database).resolve(strict=True)
++    pattern = 'math:%:open-problem-' + candidate.lower() + '-%'
++    with sqlite3.connect(database_path.as_uri() + '?mode=ro', uri=True, timeout=3) as connection:
++        connection.row_factory = sqlite3.Row
++        rows = connection.execute(
++            'SELECT id, kind, title, body, metadata_json FROM nodes '
++            "WHERE (CASE WHEN json_valid(metadata_json) THEN json_extract(metadata_json, '$.logical_id') ELSE NULL END) LIKE ? "
++            'ORDER BY id LIMIT ?', (pattern, limit)
++        ).fetchall()
++    return [dict(row) for row in rows]
++
++
++if __name__ == '__main__':
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('database')
++    parser.add_argument('candidate')
++    parser.add_argument('--limit', type=int, default=5)
++    args = parser.parse_args()
++    print(json.dumps(resolve_candidate(args.database, args.candidate, args.limit), ensure_ascii=False, indent=2))

@@ -1,0 +1,18 @@
+{
+  "helper_version": "A020 five-bit group-preserving census v1",
+  "actual_Boolean_family": "All signs on n=5; selector block low bits 0,1,2, data bits 3,4; singleton boundary tests all five coordinates",
+  "domain": "a=3,m=0,1,2; full n=5 scan, n=3,4 exact small continuation",
+  "case_count": "2^32 labeled five-bit tables (2^31 output-complement representatives scanned); 256 and 65536 lower-domain tables",
+  "symmetry": "Output complement, input translations, sorting physical influences within selector bits and within data bits; proof in REPORT. No cross-block permutations used.",
+  "arithmetic": "Integer batched FWHT and exact physical edges; outward 2^40 natural-log endpoints derived by Fraction atanh40 tails; comparisons int64 with overflow bounds checked; float only discovered-witness ranking",
+  "memory_estimate_MB": 120,
+  "maximum_memory_MB": 250,
+  "batch_size": 32768,
+  "pilot_raw_cases": 524288,
+  "pilot_maximum_runtime_seconds": 60,
+  "full_maximum_runtime_seconds": 1200,
+  "fixed_tests": ["Delta_i <= 81/100 [(3/ln2)d+2I(D)] for d>=1/8: report rigorous violations if present", "Delta <= min(a,(2/ln2)s)+a*h2(s/a)", "Auxiliary rational caps 9/10 of each envelope, used only if every exact comparison passes"],
+  "candidate_artifact_cap": 256,
+  "source_method": "A071 full_census.py read-only symmetry design; new A020 entropy and boundary code",
+  "no_automatic_dimension_escalation": true
+}

@@ -1,0 +1,142 @@
+% B05/A023: retained-credit theorem for separated changing cores.
+\section*{Fresh rare-switch trees with separated changing cores}
+
+All logarithms are base two.  For a Boolean function $h$ let
+\[
+ U(h)=\sum_S\widehat h(S)^2
+ \log\frac{\sum_{T\supseteq S}\widehat h(T)^2}{\widehat h(S)^2}.
+\]
+
+Let $g_0$ and $g_1$ be arbitrary Boolean functions on disjoint physical
+variable blocks.  Write
+\[
+ r_i=\Pr[g_i=-1],\quad \mu_i=1-2r_i,\quad
+ q_i=1-\mu_i^2=4r_i(1-r_i),
+\]
+and
+\[
+ \theta=\Pr[g_0\ne g_1]=r_0+r_1-2r_0r_1,qquad
+ \Delta=r_1-r_0.
+\]
+The probability here is under independent uniform inputs to the two
+disjoint blocks.  Let $z$ be a fresh $d$-bit control block, $p=2^{-d}$,
+and define the physical rare switch
+\[
+ F(z,x,y)=\begin{cases}
+ g_1(y),&z=z_\star,\\
+ g_0(x),&z\ne z_\star.
+ \end{cases}                                                   \tag{1}
+\]
+Put $\bar r=(1-p)r_0+pr_1$ and
+\[
+ M(r)=(1-2r)^2\log\frac1{(1-2r)^2}.
+\]
+
+\subsection*{Exact two-core identity}
+
+Direct Walsh summation gives
+\begin{align}
+U(F)={}&M(\bar r)+(1-p)[U(g_0)-M(r_0)]+p[U(g_1)-M(r_1)]\\
+&+q_0\left((1-p)^2\log\frac1{1-p}+\frac{pd}{2}-p^2d\right)
+ +q_1\frac{pd}{2}\\
+&+(2pd-4p^2d)\Delta^2
+ +4(p-p^2)\Delta^2\log\frac{\theta}{\Delta^2}.              \tag{2}
+\end{align}
+The final term is zero when $\Delta=0$.
+
+To verify (2), let $u_T=\widehat g_0(T)$ and
+$v_R=\widehat g_1(R)$.  At the empty control frequency, the nonempty
+$g_0$-frequencies have coefficient $(1-p)u_T$, the nonempty
+$g_1$-frequencies have coefficient $pv_R$, and the empty coefficient is
+$1-2\bar r$.  At every nonempty control frequency the corresponding
+coefficients are $-pu_T$, $pv_R$, and $2p(r_0-r_1)$.  Because the child
+variable blocks are disjoint, their nonempty Fourier supports do not
+overlap and no mixed child frequency is present.  Summing the upper masses
+over the control supersets gives (2).  Thus (2) is an exact identity, not a
+mixture or orthogonality estimate.
+
+The complete signed charge of revealing the $d$ controls, stopping at the
+first inactive bit and otherwise reaching $g_1$, is
+\[
+ J=U(F)-(1-p)U(g_0)-pU(g_1).                                \tag{3}
+\]
+Every control coordinate is pivotal with probability $2p\theta$, so
+\[
+ I_{\rm ctl}(F)=2pd\theta.                                  \tag{4}
+\]
+
+\subsection*{Uniform node bound}
+
+Set
+\[
+ L_M=\frac{4(1+2/e)}{\ln2},\qquad
+ C_{\rm sep}=3+L_M+\frac2{\ln2}+\frac2{e\ln2}<16.964.       \tag{5}
+\]
+We prove
+\[
+ \boxed{J\le C_{\rm sep}I_{\rm ctl}(F).}                   \tag{6}
+\]
+
+Let $\phi(\mu)=\mu^2\log(1/\mu^2)$.  Then
+$|\phi'|\le L_M/2$.  Since
+\[
+ |\mu_1-\mu_0|\le1-\mu_0\mu_1=2\theta,
+\]
+the $M$-Jensen term in (3) is at most $2L_Mp\theta$.
+Furthermore
+\[
+q_0,q_1\le4\theta,qquad \Delta^2\le\theta,qquad
+\Delta^2\log\frac{\theta}{\Delta^2}\le\frac{\theta}{e\ln2},\tag{7}
+\]
+and
+\[
+(1-p)^2\log\frac1{1-p}\le\frac p{\ln2}.                   \tag{8}
+\]
+Applying (7)--(8) termwise to (2)--(3) gives
+\[
+J\le
+p\theta\left(2L_M+\frac4{\ln2}+\frac4{e\ln2}\right)
++6pd\theta
+\le C_{\rm sep}(2pd\theta),
+\]
+which proves (6), including all deterministic endpoint cases.
+
+\subsection*{Arbitrary-depth retained-leaf theorem}
+
+Consider any finite rooted tree.  At every internal node $v$, a fresh
+$d_v$-bit block implements (1), selecting child $1$ at one word and child
+$0$ otherwise.  The complete variable sets of the two child subtrees are
+disjoint, and all control blocks are fresh.  Leaves are arbitrary genuine
+Boolean functions on mutually disjoint blocks.  Let $w_v$ be the physical
+reach probability and $w_\ell$ the leaf probability.
+
+The signed node charges telescope exactly:
+\[
+\sum_{v\ \mathrm{internal}}w_vJ_v
+=U(F_{\rm root})-\sum_{\ell\ \mathrm{leaf}}w_\ell U(g_\ell).\tag{9}
+\]
+Every selector coordinate is used at exactly one node, and
+\[
+ I_{\rm sel}(F_{\rm root})
+=\sum_{v\ \mathrm{internal}}w_v I_{{\rm ctl},v}.            \tag{10}
+\]
+Equations (6), (9), and (10) prove the all-depth retained-credit bound
+\[
+\boxed{
+U(F_{\rm root})-\sum_\ell w_\ell U(g_\ell)
+\le C_{\rm sep}I_{\rm sel}(F_{\rm root}).}                 \tag{11}
+\]
+The constant is independent of tree depth, all activation probabilities,
+leaf dimensions, leaf spectra, and the number of changing cores.
+
+If the leaves obey $U(g_\ell)\le K I(g_\ell)$, then their physical data
+influences also telescope without reuse, yielding
+\[
+ U(F_{\rm root})\le\max\{C_{\rm sep},K\}I(F_{\rm root}).   \tag{12}
+\]
+
+The separation hypothesis is essential to this proof: it deletes every
+nonempty Fourier overlap between sibling cores.  Shared variables, reused
+address bits, and coherent overlapping sibling spectra produce additional
+upper-mass interference not present in (2).  Bounding that overlap defect
+by a single-use physical event remains the next universal obligation.

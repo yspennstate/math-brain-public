@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "run_id": "fleet02-B08-20260924T053906Z-r34",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "target": "QFORM-DENSITY-THREE-LARGE-EIGENVALUES",
+  "status": "NEW_SUPPORTING_HYBRID_ROUTER_PLUS_TARGET_VALID_CANCELLATION_STRESS_FAMILY_FULL_TARGET_OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "read_order": [
+    "REPORT.md",
+    "CORRECTION.md",
+    "CORRECTION_R51_EDGE.md",
+    "CHECK_RESULTS.json"
+  ],
+  "normative_corrections": [
+    "CORRECTION.md: auxiliary Walsh cut character chi is an unnormalized +/-1 sign character",
+    "CORRECTION_R51_EDGE.md: withdraw the zero-star Walsh-family application of fleet03/B08 r51; direct fleet04/B08 child-window gives <64/L there; fixed-source Fresnel remains <=8/L"
+  ],
+  "proved_supporting_results": [
+    "QFORM-DIFFUSE-TOP3-RANK2-CROSS-ROUTER-v1",
+    "QFORM-DIFFUSE-UNPAID-RANK2-INTERSECTION-v1",
+    "signed top-three/complement crossing cancellation certificate",
+    "target-valid Walsh rank-two cancellation stress family"
+  ],
+  "paid_benchmark": "197.7780678260685/L",
+  "unpaid_crossing_tube": {
+    "actual_cross_rank": 2,
+    "actual_cross_error_over_L": 0.05512604949999305,
+    "complement_cross_rank": 5,
+    "complement_cross_error_over_L": 0.05512604949999305,
+    "complement_cross_norm_lower_over_L": 0.31987395050000694,
+    "signed_cancellation_magnitude_lower_over_L": 0.31987395050000694
+  },
+  "actual_spectral_gate": {
+    "s4_lower_over_L": 0.31987395050000694,
+    "window_scale_over_L": 0.0049980304765626085,
+    "window_leverage_lower": 0.03125,
+    "physical_row_lower_over_L": 0.0006247538095703261
+  },
+  "required_fixed_source": {
+    "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+    "files_read": ["RESULTS.md", "FOURIER_ROUTE_REPORT.md", "COUNTEREXAMPLE_SEARCH.md"],
+    "completed_result_applied": "generalized rank-r Fresnel--Brascamp--Lieb theorem",
+    "real_target_inequality": "Walsh stress family: |phi(t)|<=min(1,16*pi^2/(L^2*t^2)), hence ||p_Q||_infinity<=8/L and p_Q in C_0"
+  },
+  "newest_partner": {
+    "slot": "fleet03/B08",
+    "run": "r51",
+    "math_commit": "b28041e2486d6523b22946efc2c4a9b5bc5eea04",
+    "theorem": "QFORM-DISTRIBUTED-STAR-TRANSVERSE-TWOCHILD-v1",
+    "application_scope": "star-dominated physical-deletion sub-branch inherited from fleet01/B08 r43; transverse/diffuse-two-child chamber paid, leaving aligned or localized child alternatives"
+  },
+  "first_unpaid_implication": "QFORM-RANK2-CROSS-CANCELLATION-ALIGNED-OR-SCALAR-COMPILER-v1",
+  "checker": "QFORM_B08_R34_CHECK_PASS",
+  "full_target": "OPEN"
+}

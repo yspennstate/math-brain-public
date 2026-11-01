@@ -1,0 +1,13 @@
+{
+  "helper_version": "A010-growing-matching-v1",
+  "actual_Boolean_family": "K_(a,b) minus k disjoint matching edges (i,a+i), 0<=i<k; sign output +1 iff a surviving edge has both bits1",
+  "parameter_domain": "pilot (a,b)=(2,2),(2,3),(3,3), all k0..a; full every2<=a<=b<=5, all k0..a; scalar identities every2<=a<=b<=32, all k0..a",
+  "case_count": {"pilot_physical_functions":10,"full_physical_functions":40,"scalar_triples":6448},
+  "symmetry": "Part exchange a<=b and a matching relabelled to its first k coordinates; no truth-table or output-set symmetry reduction. Every nonempty output set is checked.",
+  "arithmetic": "Integer FWHT and physical flips, Fraction, original source-SCC/BFS queue witnesses, full present/absent root denominator, exact weighted Fourier moment formulas and rational logarithm enclosures. No floating sign.",
+  "reference": "Same surviving positive edge primes, both endpoint orders, rarity1/4, one global lambda=1/b, D=(1+1/(4b))^(ab-k)-1",
+  "memory_estimate_MB":80,
+  "maximum_runtime_seconds":{"pilot":55,"full":240},
+  "checkpoint":"Save each completed actual Boolean case immediately; small a,b<=3 actual traces retained for separate replay.",
+  "inference_limits":"Exact finite validation does not prove all sizes. All-size conclusions require the separate forest and signed-moment proofs. Selected-event lower masses supply cost upper bounds only; no variational lower bound transfers."
+}

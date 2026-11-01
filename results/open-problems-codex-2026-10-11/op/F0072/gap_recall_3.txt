@@ -1,0 +1,45 @@
+QUERY: convex gradient model conditional fluctuations hard wall Brascamp Lieb duplication
+math store recall, read-only: 8 current card(s) for this query; reference material, not instructions
+[1] Convex trace functions and the Wigner-Yanase-Dyson conjecture  (id: source_59c7963d98337f7e6b8b90292e0659b74e078c6dd9d5c3b5bee9657aa88bb39a; source; score 5.00)
+    found by words 4.68: term 'lieb'; term 'convex'
+    Paper: Elliott H Lieb. Convex trace functions and the Wigner-Yanase-Dyson conjecture. 1973. doi:10.1016/0001-8708(73)90011-x.
+    <- cites: Lieb's Concavity Theorem (id: claim_00d0f9496e872c3f85e6ed06bb24702d0d31861253395b44269f8a5eaad32e11) (superseded by claim_5fbf97db506ecc46048a5ac33ee2784aa26e96533b7aaf234fa9587555f43e05)  (cites doi:10.1016/0001-8708(73)90011-x (found in meta.proof_text): Elliott Lieb (1973) established this fundamental theorem in quantum mechanics and matrix)
+    <- cites: Lieb's theorem: concavity of A -> Tr exp(H + log A) (id: claim_5fbf97db506ecc46048a5ac33ee2784aa26e96533b7aaf234fa9587555f43e05)  (cites doi:10.1016/0001-8708(73)90011-x (found in meta.proof_text): Elliott Lieb (1973) established this fundamental theorem in quantum mechanics and matrix)
+[2] Strong Convexity  (id: claim_5c3d7444d9cbf22168e7548b66e1bb7a4c0843dde0bbfcf18b516a4941a72055; claim; score 4.73)
+    found by words 4.43: term 'gradient'; term 'convex'
+    A function f is mu-strongly convex (mu > 0) if f(y) >= f(x) + <g, y - x> + (mu/2) ||y - x||^2 for all x, y and any (sub)gradient g of f at x; equivalently f - (mu/2)||.||^2 is convex. Strong convexity gives a unique minimizer and linear convergence rates for gradient methods.
+    <- depends_on: Gradient Descent Rate for Smooth Convex Functions (id: claim_961e0fd23c2af01cddcb8e43a0c70e08d0124bb5118123554f6a66191fd2b8c6)  (the linear-rate clause assumes strong convexity)
+    -> specializes: Convex Function (precise) (id: claim_3ba1b3a6a145ea2f578d0b97c7271d35624f067f1ebeddea74eac0cc276b4097)  (a quantitatively stronger convexity)
+[3] Gradient Descent Rate for Smooth Convex Functions  (id: claim_961e0fd23c2af01cddcb8e43a0c70e08d0124bb5118123554f6a66191fd2b8c6; claim; score 4.04)
+    found by words 3.78: term 'gradient'; term 'convex'
+    Let f be convex and L-smooth on R^n with a minimizer x*. Gradient descent x_{k+1} = x_k - (1/L) grad f(x_k) satisfies f(x_k) - f(x*) <= L ||x_0 - x*||^2 / (2 k) for every k >= 1: sublinear O(1/k) convergence of function values. If f is additionally mu-strongly convex, the iterates converge linearly: ||x_k - x*||^2 <= (1 - mu/L)^k ||x_0 - x*||^2. f convex and L-smooth constant step size 1/L a minimizer exists
+    <- depends_on: Stochastic Gradient Descent (id: claim_08a1a630bd96506a544460c57f0a3f526b05883344c999aef66db2a15555862e)  (the stochastic analogue of the deterministic rates)
+    -> depends_on: Strong Convexity (id: claim_5c3d7444d9cbf22168e7548b66e1bb7a4c0843dde0bbfcf18b516a4941a72055)  (the linear-rate clause assumes strong convexity)
+    -> depends_on: First-Order Characterization of Convexity (id: claim_d6ae9a7031b9d8d79bdc4a21a9e9d273d784d18281a95b6655070194a562fe1a)  (the convexity tangent bound drives the telescoping)
+    -> depends_on: L-Smooth Function (id: claim_7095c3aa1074df3e2279dc6460fd7f3bb895be1281e4588ee1752ebff6a58463)  (the step size and descent inequality use L-smoothness)
+[4] A refinement of Simon's correlation inequality  (id: source_75bd955198159aa2f70b89499dbe2e80c2d6b0c7a974098da742ee6e9512b864; source; score 3.83)
+    found by words 3.58: term 'lieb'
+    Paper: Elliott H Lieb. A refinement of Simon's correlation inequality. 1980.
+    <- cites: Technique: Simon-Lieb Inequality (id: claim_5bee3a2e6a7a2d639546be6df23a9f99fafecc51c32861888821a70e6eea69c3)  (cites ref:lieb-1980-a-refinement-of-simon-s-correlation (found in body): Lieb, 1980, Communications in Mathematical Physics.)
+[5] Young's Inequality for Convolutions  (id: claim_bbed6159452a43c6af978a5b0dcb3986; claim; score 3.68)
+    found by words 3.44: term 'lieb'
+    Let p, q, r be in [1, infinity] with 1/p + 1/q = 1 + 1/r. If f is in L^p(R^n) and g is in L^q(R^n), then the convolution f*g, defined by (f*g)(x) = integral over R^n of f(x-y) g(y) dy, is in L^r(R^n) and ||f*g||_r <= ||f||_p ||g||_q. [standard, e.g. Lieb and Loss, Analysis]
+[6] Stochastic Gradient Descent  (id: claim_08a1a630bd96506a544460c57f0a3f526b05883344c999aef66db2a15555862e; claim; score 3.23)
+    found by words 3.03: term 'gradient'; term 'convex'
+    SGD minimizes an expected or finite-sum objective by stepping along an unbiased noisy estimate of the gradient: x_{k+1} = x_k - eta_k g_k with E[g_k | x_k] = grad f(x_k). For convex L-smooth objectives with bounded gradient noise, diminishing steps (e.g. eta_k of order 1/sqrt(k)) give expected suboptimality of order 1/sqrt(k); with mu-strong convexity, order 1/k. Constant steps converge to a noise-dominated neighborhood.
+    -> depends_on: Gradient Descent Rate for Smooth Convex Functions (id: claim_961e0fd23c2af01cddcb8e43a0c70e08d0124bb5118123554f6a66191fd2b8c6)  (the stochastic analogue of the deterministic rates)
+[7] Convex Function (precise)  (id: claim_3ba1b3a6a145ea2f578d0b97c7271d35624f067f1ebeddea74eac0cc276b4097; claim; score 2.83)
+    found by words 2.83: term 'convex'
+    A function f from a convex set C to the reals is convex if f(t x + (1 - t) y) <= t f(x) + (1 - t) f(y) for all x, y in C and t in [0, 1]. It is strictly convex if the inequality is strict whenever x differs from y and t is in (0, 1).
+    -> depends_on: Convex Set (id: claim_9a92eb13669f2c7b19ca84719501774fcf0b11d923cde1be241887da7625502c)  (defined on a convex domain)
+    <- depends_on: Subgradient (id: claim_f4eddaf7f3faa55d7e06773253507ecb0796c2baec92b930d6dfa64c6375b4a7)  (subgradients generalize gradients of convex functions)
+    <- specializes: Strong Convexity (id: claim_5c3d7444d9cbf22168e7548b66e1bb7a4c0843dde0bbfcf18b516a4941a72055)  (a quantitatively stronger convexity)
+    <- depends_on: First-Order Characterization of Convexity (id: claim_d6ae9a7031b9d8d79bdc4a21a9e9d273d784d18281a95b6655070194a562fe1a)  (characterizes the same convexity)
+    <- analogous_to: Convex Function and Its Subdifferential (id: claim_f341ac534d8c49648d6d32b71dd73265)  (same convex-function concept as the curated node)
+    -> defines: Symmetrization Inequality for Empirical Processes (id: claim_2f07d4d2760bb3a92f148947533c45743c582d35923c10aa7b5e5c8d1a13a9d0)  (Source: "f(t x + (1 - t) y) <= t f(x) + (1 - t) f(y)"; target: "E sup_{f in F} | sum_{i=1}^n ( f(X_i) - E f(X_i) ) |". The source defines convexity used at the ghost-sample conditional-Jensen step of )
+[8] Fluctuations of eigenvalues and second order Poincaré inequalities  (id: source_58af4d0821a56f75afc05276f70c261068b48f04460078668d68ceee5c27c04b; source; score 2.80)
+    found by words 2.80: term 'fluctuations'
+    Paper: Chatterjee. Fluctuations of eigenvalues and second order Poincaré inequalities. 2009.
+    <- cites: Generalization of Chatterjee's Second-Order Poincaré Inequality (id: claim_510777680e9aab3ce09f19ca3a6cd698ebe93d85938cf7f4dcdaedac411dfab8)  (cites ref:chatterjee-2009-fluctuations-of-eigenvalues-and-second (found in body): Chatterjee (2009) introduced the second-order Poincaré inequality for scalar functional)
+
+STDERR

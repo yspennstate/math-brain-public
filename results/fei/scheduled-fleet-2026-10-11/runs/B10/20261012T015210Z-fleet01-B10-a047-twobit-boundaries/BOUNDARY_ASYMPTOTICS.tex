@@ -1,0 +1,76 @@
+\section*{Two-bit boundary reduction for the half-tax candidate}
+
+Write $h=h_2$ and
+\[
+ \delta(p)=\min(p,1-p)\log_2\frac{\max(p,1-p)}{\min(p,1-p)}.
+\]
+Every two-bit Boolean gate is, up to output sign, input complements and a swap,
+constant, a dictator, parity, or a one-point defect.  The first three classes
+satisfy $J\le M+\delta/2$ immediately: constants and irrelevant reveals have
+$J=M=0$; revealing the dictator gives $J=0\le M$; and parity has product
+squared spectrum and hence $J=0$.
+
+For the point defect, let $p$ be the probability of the exceptional revealed
+value and $q$ the probability of the exceptional unrevealed value.  Put
+\[
+ s=4q(1-q),\qquad c=4q^2.
+\]
+Directly from the four squared biased Fourier coefficients,
+\[
+ J=h(sp)-p h(s),
+\]
+\[
+ M=(1-sp)h\!\left(\frac{cp(1-p)}{1-sp}\right)+sp h(p).
+\]
+Thus the entire two-bit question is $D(p,q)\le0$, where
+\[
+ D(p,q)=J-M-\frac12\delta(p).
+\]
+
+Let logarithms below be natural.  For fixed $q\in(0,1)$ and $p\downarrow0$,
+the expansion $h_2(x)=(x\log(1/x)+x+O(x^2))/\log2$ gives
+\[
+ D(p,q)=\frac p{\log2}\left[-8\left(q-\frac14\right)^2
+ \log\frac1p+B(q)\right]+O_q\!\left(p^2\log\frac1p\right),
+\]
+where
+\[
+ B(q)=4q(1-2q)+(1-4q(1-q))\log(1-4q(1-q))
+      +4q^2\log(4q^2),
+\]
+with $0\log0=0$.  On every compact interval on which the displayed small
+arguments stay uniformly controlled, the remainder is uniform.  The
+coefficient of $\log(1/p)$ is nonpositive and vanishes only at $q=1/4$.
+At that unique saturation point,
+\[
+ B(1/4)=\frac12-\log2<0,
+\]
+since $\log2=\int_0^1(1+x)^{-1}dx>1/2$.  Consequently $D(p,q)<0$ for all
+sufficiently small $p$ for every fixed $q$, and uniformly in a neighborhood
+of $q=1/4$.  Moreover
+\[
+ D(p,1/4)=\frac{\frac12-\log2}{\log2}\,p
+          +O\!\left(p^2\log\frac1p\right).
+\]
+This resolves the first term left undecided by the previously known sharp
+ratio limit: the candidate approaches equality from the valid side.
+
+At the opposite revealed endpoint, for fixed $q\ne1/2$ and
+$\varepsilon=1-p\downarrow0$,
+\[
+ D(1-\varepsilon,q)
+ =-\frac{4q+\frac12}{\log2}\,\varepsilon\log\frac1\varepsilon
+   +O_q(\varepsilon).
+\]
+For $q=1/2$ the identity $J=M$ gives $D=-\delta/2$ exactly.  Hence this
+endpoint is also strictly safe.  For fixed interior $p$, $q\downarrow0$ gives
+$D\to-\delta(p)/2$, while $q\uparrow1$ gives
+$D\to-h_2(4p(1-p))-\delta(p)/2$; both limits are nonpositive
+(and are strict away from the balanced degeneracy where the displayed terms
+vanish).
+
+These statements are endpoint theorems, not a proof on the full open square.
+The remaining possible two-bit violation must be sought in a compact interior
+region or in a genuinely joint corner not covered by the fixed-parameter
+limits.  The accompanying deterministic pilot probes those regimes but is not
+an interval certificate.

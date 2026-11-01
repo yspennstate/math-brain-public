@@ -1,0 +1,18 @@
+{
+  "problem_id": "P0043",
+  "historical_statement": "For an infinite connected locally finite quasi-transitive graph G with p_c(G)<1, Bernoulli bond percolation at p_c(G) has no infinite open cluster almost surely.",
+  "ranking": "2026-09-07 RANKING_2026-09-07.csv line 549: tier 5, attempted_un, theta(p_c)=0 on quasi-transitive graphs",
+  "original_id_record": "Probability_1000_20h_20260906/problems.jsonl lines 46 and 143: Lyons-Peres Conjecture 8.15, source_says_open as of 2026-09-06, current_status unverified",
+  "original_attempt": "Probability_1000_20h_20260906/attempts.jsonl line 43: P0043-A001 proves only regular-tree critical extinction; full_problem_solved=false; independent_review=none",
+  "primary_historical_source": "Tom Hutchcroft, arXiv:1605.05301 (2016), introduction (Benjamini-Schramm conjecture) and Theorem 1 (exponential-growth class): https://arxiv.org/abs/1605.05301",
+  "recent_source_claim": "OpenAI math, result 213, preprint dated 2026-09-24, claims full quasi-transitive result: https://github.com/openai/math/blob/main/preprints/No-percolation-at-criticality-on-quasi-transitive-graphs-September-24-2026/paper.pdf",
+  "recent_source_scope": "The associated Lean docs claim infinite connected locally finite quasi-transitive bond percolation with p_c<1, including bond multiplicities: https://github.com/openai/math/blob/main/lean/docs/213.md",
+  "current_openness": "UNKNOWN: recent 42-page proof claim exists, but no independent mathematical validation yet",
+  "formal_check_receipt": "NOT REPRODUCED: both comparator statements have intentional `sorry`, but a separate OAI.Probability.CriticalPercolation.Main solution module exists. Its 213-line Main.lean has the matching theorem and no local `sorry`/`axiom`; it imports a large dependency chain not checked for admitted declarations, trusted axioms, statement fidelity or kernel verification. Comparator config permits propext, Quot.sound, Classical.choice. The comparator files are not proof receipts, and absence of `sorry` in Main alone is not proof.",
+  "formal_solution_url": "https://raw.githubusercontent.com/openai/math/main/lean/OAI/Probability/CriticalPercolation/Main.lean",
+  "formal_solution_theorem": "OAI.CriticalPercolation.BondGraph.no_percolation_at_criticality, Main.lean lines 190-206",
+  "formal_comparator_configuration": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/CriticalPercolation.json",
+  "source_download_bytes": 573471,
+  "source_download_local": "source_2026_claim.pdf",
+  "next_check": "Independently audit Proposition 8.1's strip case and fixed-seed-before-coordinate-scale parameter lowering, then Proposition 9.2's contact-shell conditioning; obtain w437's verdict on w434's conditional Proposition 9.3 argument and reproduce Lean dependency-closure axioms before solved-status promotion."
+}

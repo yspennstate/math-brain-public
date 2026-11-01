@@ -1,0 +1,90 @@
+{
+  "command": "python -X utf8 tests/verify_transfer.py",
+  "exhaustive_environments": 9216,
+  "finite_graph_cases": [
+    {
+      "n": 3,
+      "edge_count": 10,
+      "environments": 1024,
+      "var_f_exact": "48639/65536",
+      "var_g_exact": "3/4",
+      "covariance_exact": "767/65536",
+      "var_difference_exact": "187/128",
+      "departure_probability_exact": "1/256",
+      "error_second_moment_exact": "1/256",
+      "difference_variance_ratio": 0.984230761323218,
+      "corrected_bounds": [
+        {
+          "certificate": "actual L2 error",
+          "lower": 1.0848473868974426,
+          "upper": 1.9463415779463071
+        },
+        {
+          "certificate": "n sqrt(p) certificate",
+          "lower": 0.4733531958485781,
+          "upper": 3.0578357689951714
+        }
+      ],
+      "naive_independence_verdict": "FAIL",
+      "transfer_verdict": "PASS"
+    },
+    {
+      "n": 4,
+      "edge_count": 13,
+      "environments": 8192,
+      "var_f_exact": "3967/4096",
+      "var_g_exact": "1",
+      "covariance_exact": "199/4096",
+      "var_difference_exact": "471/256",
+      "departure_probability_exact": "15/1024",
+      "error_second_moment_exact": "9/512",
+      "difference_variance_ratio": 0.9498361482228385,
+      "corrected_bounds": [
+        {
+          "certificate": "actual L2 error",
+          "lower": 1.033812455860468,
+          "upper": 3.1214609816395322
+        },
+        {
+          "certificate": "n sqrt(p) certificate",
+          "lower": 0.0005044197113375262,
+          "upper": 7.623519017788662
+        }
+      ],
+      "naive_independence_verdict": "FAIL",
+      "transfer_verdict": "PASS"
+    }
+  ],
+  "common_shock_cases": [
+    {
+      "n": 16,
+      "p_exact": "1/16",
+      "var_f_exact": "15",
+      "var_difference_exact": "0",
+      "naive_prediction_exact": "30",
+      "counterexample": "exact common shock, not an iid FPP construction"
+    },
+    {
+      "n": 64,
+      "p_exact": "1/64",
+      "var_f_exact": "63",
+      "var_difference_exact": "0",
+      "naive_prediction_exact": "126",
+      "counterexample": "exact common shock, not an iid FPP construction"
+    },
+    {
+      "n": 256,
+      "p_exact": "1/256",
+      "var_f_exact": "255",
+      "var_difference_exact": "0",
+      "naive_prediction_exact": "510",
+      "counterexample": "exact common shock, not an iid FPP construction"
+    }
+  ],
+  "naive_decoupling_failures": 2,
+  "corrected_transfer_passes": 2,
+  "elapsed_seconds": 0.12459320004563779,
+  "formal_proof": false,
+  "parent_problem_solved": false,
+  "limitations": "Atomic finite ladders check the coupling algebra only; they do not test continuous-law exponent existence."
+}

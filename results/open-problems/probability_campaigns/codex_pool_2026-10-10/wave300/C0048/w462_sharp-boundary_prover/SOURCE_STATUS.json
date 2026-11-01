@@ -1,0 +1,72 @@
+{
+  "candidate": "C0048",
+  "worker": "w462",
+  "current_openness": "UNKNOWN",
+  "target_solved": false,
+  "exact_target": "CONJECTURE; CURRENT OPENNESS UNKNOWN. For every integer q>=3,d>=3, the zero-field nearest-neighbor unit-coupling Potts model on Z^d is conjectured to satisfy m(beta_c)>0, where its weight is exp(beta sum 1{equal neighboring spins}), m(beta)=(q mu^1_beta(sigma_0=1)-1)/(q-1), and beta_c=inf{beta:m(beta)>0}. Equivalently theta^w(p_c,q)>0 for ordinary FK open connectivity and p=1-exp(-beta). The 2017 primary Conjecture 2 and the 2026-09-07 ranking are dated evidence, not a current openness certificate.",
+  "primary_source": {
+    "title": "Lectures on the Ising and Potts models on the hypercubic lattice",
+    "author": "Hugo Duminil-Copin",
+    "url": "https://arxiv.org/abs/1707.00520",
+    "locator": "Conjecture 2, printed p. 93; definitions p. 5; FK conversion equation (1.4), p. 8"
+  },
+  "prior_attempt": {
+    "id": "C0048-A001",
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/attempts.jsonl",
+    "line": 38,
+    "result": "No result; contour entropy and 3D transfer obstacles"
+  },
+  "prior_searches": [
+    "Exact C0048 in H/I attempt directories and Lean ranking: no additional exact proof found",
+    "Owner probability project notes/paper/research Potts search: no matching retirement found",
+    "Read-only canonical-store target and attempt cards saved in STORE_PRIOR_CHECK.json"
+  ],
+  "recent_primary_evidence": [
+    "https://arxiv.org/abs/2309.06489 (renormalization-group approximation)",
+    "https://arxiv.org/abs/2501.14320 (finite-size fuzzy-sphere study)",
+    "https://doi.org/10.1016/j.nuclphysb.2025.116801 (RG study; not full lattice proof)"
+  ],
+  "source_status_limit": "Targeted searches cannot certify current openness or a complete owner retirement check.",
+  "brain_recall": {
+    "timeout_seconds": 60,
+    "result": "timeout",
+    "fallback_slug": "perceptron_proof_open_gaps_fleet_2026_07_12"
+  },
+  "hardest_gap": "theta^w(p_c,3)>0 on nearest-neighbor Z^3; no valid critical lower bound established",
+  "requested_model": "gpt-6.1-sol, reasoning max, Fast service tier",
+  "served_model_evidence": "UNKNOWN; requested settings are not observed served settings",
+  "states": {
+    "submitted": {
+      "state": "staged DRAFT",
+      "path": "~\\math-brain-inbox\\w462\\bundle_001.json"
+    },
+    "reviewed": {
+      "state": "pending",
+      "referee": "w464",
+      "request_message_id": "msg-1954f0e7ae"
+    },
+    "ingested": {
+      "state": "not observed"
+    },
+    "retrievable": {
+      "state": "not checked"
+    }
+  },
+  "handoffs": {
+    "statement_first": {
+      "to": "w463",
+      "message_id": "msg-a71e0f50ca",
+      "state": "delivered"
+    },
+    "complete_packet": {
+      "to": "w464",
+      "message_id": "msg-1954f0e7ae",
+      "state": "delivered, review pending"
+    },
+    "progress_post": "pd_progress.py returned logged for S1.C0048",
+    "archive_patch": "PATCH_CHECK.json exit_code=0",
+    "served_model": "UNKNOWN",
+    "parent_problem_solved": false
+  },
+  "cross_edge_proposal": "~\\brain_workers\\w462\\CROSS_EDGE_PROPOSAL.jsonl"
+}

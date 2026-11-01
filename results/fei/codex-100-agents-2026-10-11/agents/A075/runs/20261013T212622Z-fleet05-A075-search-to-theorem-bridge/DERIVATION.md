@@ -1,0 +1,5 @@
+# Immediate analytic checkpoint: sparse matching spectrum
+
+Write r=2k+l, a=1+3k+l, N=2^r. Let u count intact matching pairs with nonempty Fourier intersection and v count selected isolated coordinates. The indicator Walsh numerator is L_(u,v)=a-4u-2v, with multiplicity C(k,u)3^u C(l,v). The empty coefficient of f is 1-2a/N, and every nonempty coefficient is -2L_(u,v)/N. Each paired coordinate has two internal A-edges and each isolated coordinate one, so their influences are 2(a-4)/N and 2(a-2)/N respectively (zero means irrelevant).
+
+Fixing only zeros preserves this family with some pairs broken into isolated coordinates. A slice with exactly one fixed one is a point defect, possibly with its matched partner dummy. Two fixed ones yield a point defect if they are one matching pair, otherwise a constant. Three fixed ones yield a constant. Therefore the restriction closure contains only these partial matchings, point defects with dummies, and constants. Proof and exact validation are being completed in REPORT.md.

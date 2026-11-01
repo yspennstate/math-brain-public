@@ -1,0 +1,49 @@
+{
+  "scope": "finite identities and examples only; not a universal or independent proof",
+  "checks": {
+    "bathtub_envelope": {
+      "cases": 2402,
+      "max_exact_over_bound": 0.3546830314860988
+    },
+    "weak_L2_squared_constant": {
+      "exact_max": 14.280330249499508,
+      "bound": 15
+    },
+    "symbolic_schur_determinant": "PASS",
+    "rayleigh_cancellation": "PASS",
+    "physical_pivot_frame": {
+      "cases": 48,
+      "max_frame_error": 8.958893819492037e-16,
+      "max_reconstruction_error": 2.3931937572871565e-15,
+      "max_relative_determinant_error": 6.926033955656388e-16
+    },
+    "diffuse_Riesz_integral": [
+      {
+        "absolute_determinant": 1e-12,
+        "relative_error": 2.220446049250313e-16
+      },
+      {
+        "absolute_determinant": 0.001,
+        "relative_error": 1.1102230246251565e-16
+      },
+      {
+        "absolute_determinant": 1.0,
+        "relative_error": 0.0
+      },
+      {
+        "absolute_determinant": 1000.0,
+        "relative_error": 1.1102230246251565e-16
+      },
+      {
+        "absolute_determinant": 1000000000000.0,
+        "relative_error": 2.220446049250313e-16
+      }
+    ]
+  },
+  "constants": {
+    "rank_two_half_Riesz": 87.63560920082658,
+    "diffuse_half_Riesz": 9.326575926388497,
+    "cap_one_shear_constant": 61.96773353931867
+  },
+  "status": "PASS"
+}

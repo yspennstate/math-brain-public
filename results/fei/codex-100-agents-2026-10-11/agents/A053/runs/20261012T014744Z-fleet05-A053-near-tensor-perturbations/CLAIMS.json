@@ -1,0 +1,37 @@
+[
+  {
+    "claim_id": "A053-DESCENT-CONTINUITY-AND-EQUALITY-BOUNDARY",
+    "version": 1,
+    "exact_statement": "For g=f-2f(v)*1_v, p=2^-n and a=|A|, |L_A(g)-L_A(f)|<=eta_(n,a)=E_n+2^-a E_(n-a) and |I_A(g)-I_A(f)|<=2ap. If I_A(f)>2ap then phi(g)<=[L_A(f)+eta]/[I_A(f)-2ap]. If every seed influence >=kappa>2p, |phi(g)-phi(f)|<=max_(1<=a<n) eta/[a(kappa-2p)]+4p/[kappa(kappa-2p)] and |R(g)-R(f)|<=E_n/[n(kappa-2p)]+2p/[kappa(kappa-2p)]; a seed slack exceeding their sum transfers phi(g)<R(g). Whole-channel continuity also holds with a(delta_P+delta_Q)+h2(delta_P)+h2(delta_Q), where delta_Q is the edited child spectral TV weighted by 2^-a. The point-defect ratios R_n=H(1-2*1_0)/(2n2^-n) strictly increase to 4. For the exact tensor seed F_n=chi_[n] and its one-point surgery G_n=chi_[n](1-2*1_0), every n>=2 has phi(G_n)>R(G_n), with residual L_A-R(G_n)I_A=2(n-a)2^-n(R_n-R_(n-a))>0 and 1<phi(G_n)/R(G_n)<=n/(n-1). Both values are asymptotic to 8*2^-n. For n>=3 all averaged own-ratio block tests pass although the edited two-bit descendant has ratio 2>R(G_n).",
+    "hypotheses": [
+      "Uniform physical cube; Boolean signs; entropy in bits; n>=2",
+      "One-point surgery at an arbitrary vertex; proper block family in the fixed named ambient coordinates",
+      "For two-sided quotient continuity, all seed influences >=kappa>2^(1-n); one-sided transfer only needs the selected I_A>2|A|2^-n",
+      "E_0=E_1=0,E_2=2,E_3=3,E_m=h2(2^(1-floor(m/2)))+m*2^(1-floor(m/2)) for m>=4",
+      "No full FEI claim; exact-product R6 is not refuted; no automatic criticality inheritance"
+    ],
+    "statement_sha256": "9a5b4cba55816ffd8ad0fd5b0d9b7374bfb41613702da89109b7277de9a66158",
+    "contributors": [
+      "A053/fleet05"
+    ],
+    "proof_source": "CONTINUITY_PROOF.md sections 1-6; NEAR_TENSOR_DESCENT.tex; code/check_descent.py; out/EXACT_CHECK.json; out/PARITY_CERTIFICATES.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_ANALYTIC_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unversioned inference in B11 STREAM_NOTES.md v2 A053 target: one-point continuity makes all near-tensors inherit phi<=H/I from exact-product R6"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B11-lead",
+      "A051",
+      "A052",
+      "A054",
+      "A055",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

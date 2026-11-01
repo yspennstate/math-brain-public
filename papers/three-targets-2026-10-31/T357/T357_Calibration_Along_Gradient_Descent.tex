@@ -1,0 +1,4244 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  11pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=27mm]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,longtable,array,xurl}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Calibration along gradient descent}
+\fancyhead[R]{\small Y. Shmalo}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks[2]
+\providecommand{\sech}{\operatorname{sech}}
+\providecommand{\argmin}{\operatorname*{arg\,min}}
+\providecommand{\argmax}{\operatorname*{arg\,max}}
+\providecommand{\logit}{\operatorname{logit}}
+\providecommand{\diag}{\operatorname{diag}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Calibration along gradient descent in Gaussian tanh random-feature classifiers},
+  pdfauthor={Yitzchak Shmalo},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Calibration along gradient descent in Gaussian tanh
+random-feature classifiers}
+\author{Yitzchak Shmalo}
+\date{31 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\small Einstein Institute of Mathematics, The Hebrew University of Jerusalem\\
+Givat Ram, Jerusalem, Israel\\
+\texttt{yitzchak.shmalo@gmail.com}
+\end{center}
+
+\begin{abstract}
+We study ordinary full-batch gradient descent on cross-entropy in a
+two-layer Gaussian random-feature model with tanh activation and a
+logistic single-index teacher. At every fixed positive iteration and
+arbitrary positive finite sample/input and width/input ratios, an explicit
+causal recursion determines the asymptotic population risk and exact
+unbinned calibration conditional on the trained model. The proof verifies
+matrix universality for the actual nonlinear features and upgrades joint
+Gaussian approximation to total variation. In an explicit sample-rich
+regime, the calibration approximation is uniform over all positive times
+and the limiting estimator. In a separate strongly overparameterized
+regime, a large-norm witness gives a uniform calibration floor at every
+positive stopping time and a finite window for population-risk-optimal
+stopping. A scalar single-crossing argument proves strict average
+overconfidence at the risk-optimal first-step learning scale. All-time
+claims use stated sufficient ratio and step conditions; hidden features
+remain fixed throughout training.
+\end{abstract}
+
+\clearpage
+\setcounter{tocdepth}{1}
+\tableofcontents
+\clearpage
+
+\hypertarget{introduction-and-relation-to-prior-work}{%
+\section{Introduction and relation to prior
+work}\label{introduction-and-relation-to-prior-work}}
+
+Calibration compares a predictor's stated probability with the label
+frequency conditional on that prediction. It is distinct from
+classification accuracy and from recovering the entire conditional
+probability given the input. This paper concerns exact score-conditional
+calibration for the realized trained network. The training matrix is
+reused at each update, and the algorithm is ordinary gradient descent.
+
+Bai, Mei, Wang and Xiong {[}1{]} established high-dimensional
+overconfidence for logistic regression, including an underparameterized
+setting. Clarté, Loureiro, Krzakala and Zdeborová {[}2{]} already
+derived calibration and uncertainty descriptions for random-feature
+estimators. Thus neither random-feature calibration nor the Gaussian
+conditioning formula used below is a new subject or a new general
+formula. The contribution here is the discrete training
+trajectory of ordinary reused-data GD, exact model-conditional
+calibration convergence, and stopping-time conclusions under explicit
+assumptions.
+
+Early-stopping benefits and calibration tradeoffs have also been studied
+in other scalings and models {[}6--8{]}. Our results keep proportional
+aspect ratios and a positive learning scale fixed. They do not rule out
+calibrated early stopping under different sample scalings, vanishing
+learning scales, feature learning, or post-training calibration.
+
+The matrix spectral input is due to Louart, Liao and Couillet {[}3{]};
+the rectangular memory and covariance formulas and their universality
+are due to Fan {[}4{]} and Wang, Zhong and Fan {[}5{]}. The appendix
+verifies their hypotheses for the present matrix and gives an exact
+auxiliary representation whose corrections cancel in the physical GD
+update. Theorem A covers every fixed finite horizon. Theorems B and D
+use different nonempty ratio regimes to control all positive stopping
+times. Theorem C concerns signed average overconfidence, which is
+stronger than positive calibration error and requires its stated choice
+of scale.
+
+This is an internally reviewed research manuscript. Its precise
+contributions are presented without a claim of external acceptance or
+exclusive publication priority.
+
+\hypertarget{model-algorithm-and-calibration-definition}{%
+\section{1. Model, algorithm, and calibration
+definition}\label{model-algorithm-and-calibration-definition}}
+
+Let \(d,n,m\to\infty\), with \[
+n/d\to\alpha\in(0,\infty),\qquad m/d\to\gamma\in(0,\infty).
+\] Fix a deterministic unit vector \(\theta_d\), finite \(\beta\ge0\),
+and independent \[
+X_i\sim N(0,I_d),\qquad W_j\sim N(0,I_d/d),
+\qquad Y_i\mid X_i\sim\operatorname{Bernoulli}(\sigma(\beta\theta_d^\top X_i)),
+\] where the labels are conditionally independent and
+\(\sigma(u)=(1+e^{-u})^{-1}\). The two-layer score and probability are
+\[
+S_b(x)=\sum_{j=1}^m b_j\tanh(W_j^\top x),\qquad p_b(x)=\sigma(S_b(x)).
+\] Only the output coefficients are trained. Write
+\(H_{ij}=\tanh(W_j^\top X_i)\), and define mean cross-entropy \[
+\mathcal L_n(b)=\frac1n\sum_i[\log(1+e^{(Hb)_i})-Y_i(Hb)_i].
+\] For fixed \(c>0\), the \textbf{actual algorithm} is \[
+b^0=0,\qquad
+b^{t+1}=b^t+\frac{cd}{nm}H^\top[Y-\sigma(Hb^t)]. \tag{1}
+\] This is mean-loss GD with step \(cd/m\) in \(b\), equivalently step
+\(cd\) in the normalized output coefficients \(w=\sqrt m\,b\). The same
+sample and feature matrix are reused at every step.
+
+Let \(\mathcal E_d\) contain all training data and features. For a fresh
+independent input, put \(Z=\theta_d^\top X\) and \(S_{t,d}=S_{b^t}(X)\).
+Define \[
+A_{t,d}=\mathbb E[ZS_{t,d}\mid\mathcal E_d],\qquad
+Q_{t,d}=\mathbb E[S_{t,d}^2\mid\mathcal E_d].
+\] The exact, unbinned, model-conditional calibration error is \[
+\mathrm{CE}_{t,d}=\mathbb E\big[\,|\mathbb E[Y\mid S_{t,d},\mathcal E_d]-\sigma(S_{t,d})|\mid\mathcal E_d\big]. \tag{2}
+\] Conditioning on the score or its sigmoid is equivalent. This is not a
+fixed-bin estimator or an average of calibration computed under
+resampled models.
+
+Throughout, \(\|\mu-\nu\|_{\rm TV}=\sup_{|f|\le1}|\int f\,d(\mu-\nu)|\),
+the full total-variation norm, twice the probability-distance
+convention.
+
+For a centered Gaussian pair with \(\operatorname{Var}Z=1\), covariance
+\(A\), and score variance \(Q>A^2\), set \[
+\begin{aligned}
+g_{A,Q}(s)&=\mathbb E_V\sigma\left(\beta\left[\frac AQs+\sqrt{1-A^2/Q}\,V\right]\right),\\
+C_\beta(A,Q)&=\mathbb E_U\left|g_{A,Q}(\sqrt Q\,U)-\sigma(\sqrt Q\,U)\right|,\\
+\mathcal R_\beta(A,Q)&=\mathbb E_U\log\left(2\cosh(\sqrt Q\,U/2)\right)-\mu_\beta A,\\
+\mu_\beta&=\mathbb E[U(\sigma(\beta U)-1/2)],
+\end{aligned} \tag{3}
+\] where \(U,V\) are independent standard normals.
+
+\hypertarget{finite-time-theorem}{%
+\section{2. Finite-time theorem}\label{finite-time-theorem}}
+
+\textbf{Theorem A.} Under the model above, for every fixed integer
+\(T\ge1\) and fixed \(c>0\), the explicit recursion in Section 3 defines
+deterministic \(A_t,Q_t\) and a positive-definite matrix \(\Sigma_T\),
+with \[
+Q_t-A_t^2=(\Sigma_T)_{tt}>0,\qquad 1\le t\le T.
+\] For each such time, \[
+A_{t,d}\xrightarrow{P}A_t,\quad Q_{t,d}\xrightarrow{P}Q_t,\quad
+\left\|\mathcal L((Z,S_{t,d})\mid\mathcal E_d)-
+N\left(0,\begin{pmatrix}1&A_t\\A_t&Q_t\end{pmatrix}\right)\right\|_{\rm TV}
+\xrightarrow{P}0. \tag{4}
+\] The entire finite test-score path converges conditionally weakly in
+probability to the Gaussian path in (10) below. In particular, \[
+\mathrm{CE}_{t,d}\xrightarrow{P}C_\beta(A_t,Q_t)>0,\qquad
+\mathbb E[\ell(Y,S_{t,d})\mid\mathcal E_d]\xrightarrow{P}\mathcal R_\beta(A_t,Q_t). \tag{5}
+\] The TV and calibration convergences also hold in every finite \(L^p\)
+over the training environment, since their errors are uniformly bounded.
+The calibration curves satisfy the stronger integrated statement \[
+\mathbb E\left[\left|\mathbb E[Y\mid S_{t,d},\mathcal E_d]-g_{A_t,Q_t}(S_{t,d})\right|\mid\mathcal E_d\right]\xrightarrow{P}0. \tag{6}
+\] All finite aspect ratios are allowed, including \(m>n\). The theorem
+fixes time before taking the dimension limit; it alone does not justify
+a growing-time conclusion.
+
+\hypertarget{explicit-recursion-the-dependence-on-sample-ratio-width-and-time}{%
+\section{3. Explicit recursion: the dependence on sample ratio, width,
+and
+time}\label{explicit-recursion-the-dependence-on-sample-ratio-width-and-time}}
+
+Set \[
+a=\mathbb E[U\tanh U],\quad v=\mathbb E[\tanh^2U],\quad
+\nu=v-a^2>0,\quad \lambda=c/\alpha,\quad s=a\sqrt\gamma.
+\] There are two scalar probability spaces. On the training-row space,
+\(Z\sim N(0,1)\) and
+\(Y\mid Z\sim\operatorname{Bernoulli}(\sigma(\beta Z))\). Gaussian row
+fields \(G_1,G_2,\ldots\) are independent of \((Z,Y)\). On the column
+space, standard normal \(H_\star\) is independent of Gaussian column
+fields. Both Gaussian covariance sequences are constructed below.
+
+Initialize the training residual function \(R_1=Y-1/2\), the column
+coefficient \(q_0=0\), and empty matrices \(\Psi_0,\Gamma_0,\Sigma_0\).
+At stage \(t\), the previous row covariance determines the joint law of
+\((G_1,\ldots,G_{t-1})\) and hence the already defined functions
+\(R_1,\ldots,R_t\). Compute \[
+\widehat\Delta_t=\alpha(\mathbb E[R_iR_j])_{i,j\le t},\quad
+(\widehat\Phi_t)_{ij}=\alpha\mathbb E[\partial_{G_j}R_i]\ (j<i),\quad
+\widehat\ell_t=\alpha\mathbb E[ZR_t], \tag{7}
+\] with all other entries of \(\widehat\Phi_t\) zero. Embed the
+preceding \(\Psi,\Gamma\) in \(t\times t\) matrices with zero last row
+and column. First calculate \[
+\begin{aligned}
+U_t&=(I-a^2\widehat\Phi_t\Psi_t)^{-1},\quad T_t=(I-a^2\Psi_t\widehat\Phi_t)^{-1},\\
+\mathsf B_t&=\gamma^{-1}(\nu\widehat\Phi_t+a^2U_t\widehat\Phi_t),\\
+\Omega_t&=\gamma^{-1}\left[\nu\widehat\Delta_t+
+a^2U_t(\widehat\Delta_t+a^2\widehat\Phi_t\Gamma_t\widehat\Phi_t^\top)U_t^\top\right].
+\end{aligned} \tag{8}
+\] The last column of \(\widehat\Phi_t\) is zero, so these expressions
+use only previous column information. If \(\psi_j\) denotes row \(j\) of
+\(\Psi\), padded with zeros, complete the current row and coefficient by
+\[
+\psi_t=\psi_{t-1}+\lambda\left[e_t^\top+\sum_{j<t}(\mathsf B_t)_{tj}\psi_j\right],
+\quad q_t=q_{t-1}+\lambda\left[\sum_{j<t}(\mathsf B_t)_{tj}q_j+
+\frac{s}{\gamma}\widehat\ell_t\right].
+\] Here \(\psi_0=0\). Put \(q_{1:t}=(q_1,\ldots,q_t)^\top\) and \[
+\begin{aligned}
+\Gamma_t&=\Psi_t\Omega_t\Psi_t^\top+q_{1:t}q_{1:t}^\top,\\
+\mathsf A_t&=\nu\Psi_t+a^2T_t\Psi_t,\\
+\Sigma_t&=\nu\Gamma_t+a^2T_t
+(\Gamma_t+a^2\Psi_t\widehat\Delta_t\Psi_t^\top)T_t^\top,
+\end{aligned} \tag{9}
+\] where \(T_t\) is now evaluated with the completed \(\Psi_t\). Its
+inverses exist without a small-step assumption: the products with
+\(\widehat\Phi_t\) are strictly lower triangular, so their inverses are
+finite geometric polynomials.
+
+Let \(G_{1:t}\sim N(0,\Sigma_t)\), consistently with previous stages and
+independently of \((Z,Y)\), and set \[
+S_t^{\rm train}=G_t+\sum_{j\le t}(\mathsf A_t)_{tj}R_j+s q_tZ,
+\qquad R_{t+1}=Y-\sigma(S_t^{\rm train}).
+\] Derivatives required in (7) are computed recursively, with
+deterministic coefficients held fixed: \[
+\partial_{G_j}R_{t+1}=-\sigma'(S_t^{\rm train})
+\left[\mathbf1_{j=t}+\sum_{k\le t}(\mathsf A_t)_{tk}\partial_{G_j}R_k\right].
+\] This finishes one causal stage. Only finite matrices and Gaussian
+expectations occur. The fresh-test law and required overlaps are \[
+S_t^{\rm test}=s q_tZ+G_t,
+\quad A_t=s q_t,
+\quad Q_t=s^2q_t^2+(\Sigma_t)_{tt}. \tag{10}
+\] Thus (3), (7)--(10) explicitly characterize calibration and risk as
+functions of \(\alpha,\gamma,\beta,c,t\).
+
+As an exact normalization check, at the first update \[
+A_1=ca^2\mu_\beta,\qquad
+Q_1-A_1^2=c^2\tau^2,\quad
+\tau^2=\frac{\mu_\beta^2a^2v}{\gamma}+
+\frac{a^4+v^2/\gamma}{4\alpha}. \tag{11}
+\] This agrees with the direct one-step calculation in Appendix B. The
+two variance terms both matter.
+
+\hypertarget{uniform-training-time-and-early-stopping-theorem}{%
+\section{4. Uniform training-time and early-stopping
+theorem}\label{uniform-training-time-and-early-stopping-theorem}}
+
+We give explicit sufficient constants, without claiming they are sharp.
+Let \[
+L=8\sqrt{1+\gamma},\quad s_0=\nu/2,\quad k_0=\sqrt{s_0/2},\quad
+p_0=s_0^2/(20L^4),
+\] \[
+\begin{gathered}
+B_0=\sqrt{2\log(4/p_0)},\quad p_1=\sigma(-\beta B_0)p_0/2,\quad
+\mathfrak a=k_0p_1/4,\\
+C_* = \max\{1,(32L/(k_0p_1))^2\},\qquad \Lambda=16L^2.
+\end{gathered}
+\] Assume additionally \[
+\alpha/\gamma>C_*,\qquad 0<c<\gamma/(2\Lambda). \tag{12}
+\] These are finite constants for every fixed finite \(\beta\) and
+\(\gamma>0\), so the regime is nonempty. It has more samples than
+trained output coefficients.
+
+\textbf{Theorem B.} Under (12), with probability tending to one, the
+empirical logistic loss has a unique finite MLE \(b^*\), and GD
+converges to it geometrically with a dimension-independent contraction
+factor. Use \(t=\infty\) for this MLE. The deterministic trajectory from
+Section 3 has limits \(A_\infty,Q_\infty\), and \[
+\sup_{t\in\{1,2,\ldots,\infty\}}
+\{|A_{t,d}-A_t|+|Q_{t,d}-Q_t|\}\xrightarrow{P}0,
+\] \[
+\sup_{t\in\{1,2,\ldots,\infty\}}
+|\mathrm{CE}_{t,d}-C_\beta(A_t,Q_t)|\xrightarrow{P}0. \tag{13}
+\] There is a deterministic \(\varepsilon_*>0\), depending only on the
+fixed parameters, such that \[
+\mathbb P\left\{\inf_{t\in\{1,2,\ldots,\infty\}}\mathrm{CE}_{t,d}\ge\varepsilon_*/2\right\}\longrightarrow1. \tag{14}
+\] Consequently no training-measurable stopping rule with a positive
+integer value, or the value \(\infty\), attains asymptotic calibration
+in this regime. A stopping rule may grow arbitrarily with dimension. If
+it diverges in probability, its calibration tends to
+\(C_\beta(A_\infty,Q_\infty)>0\). This conclusion keeps \(c\) fixed and
+positive; it does not cover dimension-dependent vanishing steps or all
+late-time overparameterized regimes.
+
+At time zero, the constant prediction \(1/2\) is calibrated by teacher
+symmetry. Equation (14) concerns positive training times and nontrivial
+learning. It does not confuse calibration with Bayes accuracy.
+
+\hypertarget{strict-overconfidence-with-an-improved-predictor}{%
+\section{5. Strict overconfidence with an improved
+predictor}\label{strict-overconfidence-with-an-improved-predictor}}
+
+\textbf{Theorem C.} Let \(\beta>0\) and any fixed \(\alpha,\gamma>0\).
+Put \(k=a^2\mu_\beta>0\), let \(\tau>0\) be given by (11), and set
+\(U=kZ+\tau G\) with independent standard normals. Define
+\(g(u)=\mathbb E[\sigma(\beta Z)\mid U=u]\) and \[
+R(c)=\mathbb E[\log(1+e^{cU})-cU g(U)].
+\] There is a unique population-risk-optimal first-step scale \(c_*>0\).
+For GD (1) run with this fixed scale, its first-step population risk and
+signed overconfidence satisfy \[
+\mathcal R_{1,d}\xrightarrow{P}R(c_*)<\log2,
+\] \[
+\mathrm{OC}_{1,d}:=
+\mathbb E[(\sigma(S_{1,d})-\sigma(\beta Z))\operatorname{sign}(S_{1,d})\mid\mathcal E_d]
+\xrightarrow{P}\mathrm{OC}_*>0. \tag{15}
+\] The signed quantity is \textbf{average predicted confidence minus
+classification accuracy}. It does not assert pointwise overconfidence at
+every score. In fact the optimal-scale Gaussian predictor is
+overconfident close to its decision boundary and underconfident in the
+far tails.
+
+This theorem uses Theorem A with \(c=c_*\). The scale need not
+automatically lie in (12); the following corollary gives explicit
+sufficient conditions for that compatibility. Optimizing first-step risk
+is not asserted to optimize over the entire GD path.
+
+\textbf{Corollary: one fixed model can satisfy all three conclusions.}
+The regimes are not disjoint. Retain \(L,k_0,p_0,B_0\) above, and choose
+\[
+\alpha/\gamma>C_0:=\max\{1,(256L/(k_0p_0))^2\},\qquad
+0<\beta<\min\{\log(3)/B_0,\ v/(8aL\sqrt\alpha)\}.
+\tag{16}
+\] Then \(\sigma(-\beta B_0)>1/4\), so \(C_*(\beta)\le C_0\). Further,
+\[
+c_*<\frac{\beta k}{k^2+\tau^2}
+\le\frac{a^2\alpha\gamma\beta^2}{v^2}
+<\frac{\gamma}{64L^2}<\frac{\gamma}{2\Lambda}.
+\] Here \(\mu_\beta\le\beta/4\) and \(\tau^2\ge v^2/(4\alpha\gamma)\).
+Thus the \textbf{same} fixed-step network, with \(c=c_*\), has the
+complete deterministic training-time calibration curve, an improved and
+strictly overconfident first iterate, and the uniform positive
+calibration floor for every positive stopping time. Equation (16) is an
+explicit nonempty open regime with a weak but nonzero teacher. It does
+not impose this restriction on Theorem A or on Theorem C separately.
+
+\hypertarget{all-positive-stopping-times-in-a-strongly-overparameterized-regime}{%
+\section{6. All positive stopping times in a strongly overparameterized
+regime}\label{all-positive-stopping-times-in-a-strongly-overparameterized-regime}}
+
+There is a second all-time regime, with more trained coefficients than
+samples. Its proof does not require a late-time Gaussian approximation.
+Define, with \(\nu\) as in Section 3, \[
+s_X=\nu/2,\quad \kappa_X=\sqrt{s_X/2},\quad
+L_X=8\sqrt{1+\alpha},\quad p_X=s_X^2/(20L_X^4),
+\] \[
+C_X=\max\{1,(32L_X/(\kappa_Xp_X))^2\},\qquad
+k_X=\kappa_X^2p_X/16,\quad K_X=64L_X^2.
+\] Assume \[
+\gamma/\alpha>C_X,\qquad 0<c<2\alpha/K_X. \tag{17}
+\] For every fixed \(\alpha>0\) and finite \(\beta\), this is a nonempty
+proportional regime. The constants are conservative sufficient
+conditions.
+
+\textbf{Theorem D.} Under (17), there is \(\varepsilon>0\) such that \[
+\mathbb P\{\inf_{t\in\{1,2,\ldots\}}\mathrm{CE}_{t,d}
+\ge\varepsilon\}\longrightarrow1. \tag{18}
+\] Thus every training-measurable stopping rule taking a finite positive
+integer value, including one diverging arbitrarily with dimension, has a
+positive exact-calibration floor. The empirical loss converges to zero,
+the coefficient norms diverge, and population cross-entropy diverges
+uniformly at late times: for every \(M<\infty\), there is a
+deterministic \(T_M\) with \[
+\mathbb P\{\inf_{t\ge T_M}\mathcal R_{t,d}>M\}\longrightarrow1.
+\tag{19}
+\] There is a deterministic finite \(T_0\) such that, with probability
+tending to one, every population-risk minimizing time on the entire GD
+path lies in \(\{0,\ldots,T_0\}\). Theorem A therefore determines the
+limiting optimal risk by minimizing over this finite window. If the
+limiting minimizer is unique, the minimizing time converges to it. For
+\(\beta>0\), a sufficiently small fixed positive \(c\) gives a
+first-step improvement over the constant predictor while retaining the
+calibration obstruction.
+
+\textbf{Proof.} Appendix F proves that \(HH^\top/m\) lies between
+\(k_XI\) and \(K_XI\) with probability tending to one. A separating
+comparator and the convex GD inequality give a dimension-uniform loss
+upper bound tending to zero. Jensen's inequality then forces every late
+iterate's norm above any specified constant. A uniform small-ball event
+for fresh features and finite teacher noise gives a score-measurable
+witness to calibration error for every sufficiently large coefficient
+vector, whether delocalized or not. Combining that witness with Theorem
+A for the finitely many earlier times proves (18). A related witness
+lower bounds population cross-entropy by a positive multiple of
+coefficient norm, proving (19) and the finite optimization window. The
+full inequalities, constants, and quantifiers are in Appendix F.
+
+Time \(\infty\) is not a finite MLE in this separable regime, and no
+claim is made here about the calibration of a terminal hard classifier.
+Theorem D supplies a uniform lower bound, not an exact late-time
+calibration curve. The exact curve in Theorem A fixes time before
+dimension. Theorem B gives a uniform curve under its separate
+assumptions.
+
+\hypertarget{proof-of-the-combined-theorem}{%
+\section{7. Proof of the combined
+theorem}\label{proof-of-the-combined-theorem}}
+
+The detailed proofs are in Appendices A--F. The following proof
+establishes their logical composition and identifies the imported
+mathematical results.
+
+\textbf{Step 1: actual random-feature matrix and independent teacher
+signal.} Rotate \(\theta=e_1\), and write input and feature vectors as
+their first coordinate plus perpendicular coordinates. Taylor expansion
+of tanh gives, for training rows and a proportional independent test
+block together, \[
+H/\sqrt m=A_0+(a\sqrt\gamma/m)zh^\top+E_d,
+\qquad \|E_d\|_{\rm op}\xrightarrow{P}0.
+\] The perpendicular matrix \(A_0\) is independent of \(z,h\), labels,
+and the training/test mask. The error follows from Gaussian sup-norm
+bounds, a centered derivative-feature matrix bound, and a Frobenius
+bound on the Taylor remainder; no entrywise-to-operator inference is
+omitted.
+
+\textbf{Step 2: the universality hypotheses are proved for this matrix.}
+Clip each underlying Gaussian matrix in operator norm and then clip the
+normalized feature matrix. These Frobenius-nonexpansive projections
+preserve signed-permutation symmetry and make each fixed matrix-power
+entry globally \(O(d^{-1/2})\)-Lipschitz in all Gaussian entries.
+Gaussian concentration gives summable failure bounds for every fixed
+power: off-diagonal entries vanish at the required rate, and diagonal
+entries approach their normalized trace uniformly. The clipped and
+original matrices agree eventually almost surely. Conditional Hermite
+covariance analysis and the Louart--Liao--Couillet spectral theorem
+identify the limiting singular law with the biorthogonally invariant
+Gaussian comparison matrix. These facts verify Wang--Zhong--Fan
+Proposition D.1(b2), including more than just an empirical spectral
+distribution.
+
+The row-normalized rectangular cumulants are \[
+\kappa_2=v,\qquad \kappa_{2j}=a^{2j}\delta^{j-1}\quad(j\ge2),
+\] where \(\delta\) is the total training-plus-query row ratio before
+the query block is eliminated. Substitution into Fan's rectangular
+covariance and memory formulas sums finite triangular series. After
+conditioning on training rows, every \(\delta\) cancels exactly,
+yielding (8)--(9).
+
+\textbf{Step 3: ordinary GD is represented causally.} Write
+\(w^t=\sqrt m\,b^t\) for the normalized coefficient vector. Introduce
+auxiliary column fields by subtracting the deterministic memory terms
+\(\mathsf B\) from \(A_0^\top\mathbf R_t\), and row fields by
+subtracting \(\mathsf A\) from \(A_0w^t\), where \(\mathbf R_t\) is the
+sample residual vector. Define the coordinatewise nonlinearities by
+adding exactly these terms back. They cancel algebraically in the
+physical update. Teacher overlaps are first fixed to their deterministic
+recursive expectations. The resulting history-dependent maps meet the
+continuity, growth, Lipschitz, and independent-side-information
+assumptions of Wang--Zhong--Fan Theorem 2.22.
+
+No degeneracy assumption is left open. The residual second-moment matrix
+begins with \(\Delta_1>0\). From (8)--(9), \(\Omega_t\) dominates a
+positive multiple of \(\Delta_t\), and \(\Sigma_t\succeq\nu\Gamma_t\).
+The derivative matrix \(\Psi_t\) has positive diagonal \(\lambda\), so
+\(\Gamma_t\succ0\). Conditional on the past and a training row, the next
+sigmoid residual depends strictly on a fresh Gaussian innovation; hence
+it cannot lie in the linear span of preceding residuals. This proves
+positive definiteness inductively for every fixed time and every
+\(c>0\).
+
+The AMP theorem now gives joint empirical state convergence. Its overlap
+convergence, a normalized Euclidean stability bound, and a finite
+induction replace frozen teacher overlaps by the actual empirical ones.
+The same stability argument removes \(E_d\). On query rows all residuals
+are zero, so the limiting physical score is exactly (10). Conditional
+laws of large numbers and conditional fourth-moment bounds identify the
+realized-network covariances. This proves finite-time conditional weak
+convergence and the deterministic overlaps for the original nonlinear
+GD, rather than a different AMP training algorithm.
+
+\textbf{Step 4: exact calibration requires, and receives, total
+variation.} A leave-one-feature comparison proves \(\|b^t\|_2=O_P(1)\)
+and \(\|b^t\|_\infty=O_P(\sqrt{\log d/d})\) at any fixed horizon. Thus
+the fresh score has bounded gradient and Hessian Hilbert--Schmidt norm,
+while its Hessian operator norm vanishes. An Ornstein--Uhlenbeck
+covariance identity proves Gaussian weak approximation with matched
+covariance. The teacher-orthogonal derivative Gram determinant is
+concentrated away from zero whenever the residual score variance is
+positive. Localized inverse-vector fields and Gaussian integration by
+parts give a dimension-free total-variation smoothing bound.
+Mollification then upgrades weak convergence to joint TV. This analytic
+argument is proved in Appendix C.
+
+For any joint law \(\mu\) of \((Z,S)\), define the signed measure \[
+\zeta_\mu(B)=\int\mathbf1_{s\in B}[\sigma(\beta z)-\sigma(s)]\,\mu(dz,ds).
+\] Its TV norm equals calibration error. Therefore
+\(|C(\mu)-C(\widetilde\mu)|\le\|\mu-\widetilde\mu\|_{\rm TV}\). The same
+measure argument controls the integrated conditional regression curve.
+Logistic loss is at most \(\log2+|S|\), so bounded conditional second
+moments justify truncation for risk. These observations prove (4)--(6).
+
+Strict positivity in (5) is elementary. For \(A\le0\) or \(\beta=0\),
+the conditional teacher curve cannot equal a strictly increasing
+nonconstant sigmoid. For \(A>0,\beta>0\), write it as
+\(g(s)=\mathbb E\sigma(ks+rG)\) with \(r>0\). Its upper tail satisfies
+\(e^{ks}(1-g(s))\to e^{r^2/2}\). Equality with \(\sigma(s)\) would first
+require \(k=1\), then \(r=0\), a contradiction.
+
+\textbf{Step 5: all times are controlled on one event.} Under (12), the
+conditional feature covariance and its teacher-orthogonal residual both
+dominate \((\nu/2)I\). A bounded-cutoff small-ball argument and the
+noisy labels yield empirical coercivity uniformly in every coefficient
+direction. Uniform unsigned small-ball bounds give a sample covariance
+lower bound even after deleting an arbitrary small fraction of rows. On
+the bounded initial loss sublevel set, this yields uniform positive
+logistic Hessian curvature. GD and every feature-deleted GD path stay in
+that same ball and contract by a common dimension-independent factor
+\(q<1\).
+
+Feature-deleted minimizers are defined on a fixed compact ball even on
+exceptional data, preserving independence from the omitted feature.
+Their missing-coordinate gradients have centered Gaussian concentration.
+A union bound only through a deterministic \(O(\log d)\) horizon,
+followed by the common geometric tail, proves \[
+\sup_{t\ge0}\|b^t\|_\infty=O_P(\sqrt{\log d/d}).
+\] The first update makes a nonvanishing loss decrease, so convexity
+bounds every positive iterate's norm away from zero. This gives uniform
+lower residual variance and upper score variance. The TV theorem is
+sequentially uniform on this bounded class. Its calibration functional
+is continuous and strictly positive on the resulting compact covariance
+set, proving (14).
+
+Finally, the geometric coefficient tail gives a geometric tail for
+\(A_{t,d},Q_{t,d}\). Fixed-time deterministic limits from Theorem A are
+therefore exponentially Cauchy. Splitting a supremum into finitely many
+times and the common tail proves (13). This supplies the needed exchange
+of training-time and dimension limits rather than assuming it.
+
+\textbf{Step 6: signed overconfidence at the best first-step scale.} For
+\(U=kZ+\tau G\), Gaussian conditioning gives
+\(g(u)=\mathbb E\sigma(\lambda_0u+rG)\), where
+\(\lambda_0=\beta k/(k^2+\tau^2)>0\) and \(r>0\). Appendix E proves that
+\(\operatorname{logit}g(u)/u\) is strictly increasing on \(u>0\), from
+\(4g'(0)\) to \(\lambda_0\). Its proof derives a normal variance-mixture
+representation of logistic noise from its characteristic function, then
+proves the necessary strict single-crossing property by an explicit
+kernel-ratio inequality.
+
+The cross-entropy has strictly positive second derivative and a unique
+minimizer \(c_*\in(4g'(0),\lambda_0)\). The error
+\(e(u)=\sigma(c_*u)-g(u)\) is positive below one threshold \(u_*\) and
+negative above it. Risk stationarity gives \(\mathbb E[Ue(U)]=0\).
+Consequently \[
+\mathrm{OC}_*=2\int_0^\infty e(u)(1-u/u_*)\varphi_{k^2+\tau^2}(u)\,du>0.
+\] Both factors have the same strict sign. Also \(R'(0)<0\), so
+\(R(c_*)<\log2\). Theorem A's TV and risk convergence transfer both
+strict conclusions to the actual trained network, proving (15). This
+proves Theorems A--C. Appendix F proves Theorem D by a separate
+large-norm argument, as described in Section 6.
+
+\clearpage
+
+\hypertarget{appendix-a.-feature-matrices-and-the-finite-time-gd-representation}{%
+\section{Appendix A. Feature matrices and the finite-time GD
+representation}\label{appendix-a.-feature-matrices-and-the-finite-time-gd-representation}}
+
+Theorem, lemma, and proposition numbers in this appendix are local;
+equation and section references carry the appendix letter.
+
+\hypertarget{a.1-model-and-normalization}{%
+\subsection{A.1 Model and
+normalization}\label{a.1-model-and-normalization}}
+
+Use the Gaussian model of Section 1: inputs \(X_i\sim N(0,I_d)\), a
+deterministic unit teacher \(\theta\), conditionally independent labels
+\(Y_i\mid X_i\sim\mathrm{Bernoulli}(\sigma(\beta\theta^\top X_i))\),
+fixed finite \(\beta\ge0\), and independent feature rows
+\(W_j\sim N(0,I_d/d)\). Let \(n/d\to\alpha>0,m/d\to\gamma>0\),
+\(\phi=\tanh\), \(H_{ij}=\phi(W_j^\top X_i)\), and \(K=HH^\top/m\).
+
+Write the score as \(S_t(x)=(b^t)^\top h(x)\), where \(b^t=a^t/\sqrt m\)
+in the old network convention. Mean-loss GD with output-weight step
+\(cd\) is exactly
+
+\[
+b^0=0,\quad u^t=Hb^t,\quad r^t=Y-\sigma(u^t),\quad
+b^{t+1}=b^t+\frac{\lambda_d}{m}H^\top r^t,
+\qquad\lambda_d=\frac{cd}{n}\longrightarrow\frac c\alpha. \tag{A.1.1}
+\]
+
+Consequently \(u^{t+1}=u^t+\lambda_dKr^t\). All statements below allow
+any fixed \(c>0\), except the explicit small-step conclusion in
+Proposition 3. The horizon \(T\) is a fixed integer independent of
+dimension. No claim concerns \(T_d\to\infty\).
+
+Define \[
+a=\mathbb E[G\phi(G)],\quad v=\mathbb E\phi(G)^2,\quad
+\nu=v-a^2>0,
+\quad A(q)=\mathbb E\phi'(\sqrt qG).
+\tag{A.1.2}
+\] Strict positivity of \(\nu\) follows because tanh is not a scalar
+multiple of its input in Gaussian \(L^2\).
+
+\hypertarget{a.2-uniform-feature-matrix-bounds}{%
+\subsection{A.2 Uniform feature-matrix
+bounds}\label{a.2-uniform-feature-matrix-bounds}}
+
+Conditional on \(F\), whose rows are \(W_j^\top\), the rows of \(H\) are
+independent centered random vectors. For any unit \(v_0\in\mathbb R^m\),
+the function \(x\mapsto v_0^\top\phi(Fx)\) is
+\(\|F\|_{\rm op}\)-Lipschitz and odd. Gaussian concentration therefore
+gives \[
+\mathbb E[\exp(sv_0^\top h(X))\mid F]
+\le \exp(s^2\|F\|_{\rm op}^2/2).
+\tag{A.2.1}
+\] For a unit \(u_0\in\mathbb R^n\), conditional independence gives the
+same bound for \(u_0^\top Hv_0\). Taking \(1/4\)-nets of the two unit
+spheres and using the standard net inequality proves \[
+\|H\|_{\rm op}=O_P(\sqrt d),\qquad
+\|K\|_{\rm op}=O_P(1). \tag{A.2.2}
+\] The failure probabilities at sufficiently large fixed constants decay
+exponentially in \(d\). The same net argument for the Gaussian matrices
+proves \(\|F\|_{\rm op}=O_P(1)\) and \(\|X\|_{\rm op}=O_P(\sqrt d)\),
+again with exponential tails. Integrating these bounds shows that all
+fixed moments of the corresponding normalized norms are uniformly
+bounded.
+
+The elementary proof above does not infer a bounded spectral norm merely
+from entrywise boundedness.
+
+\hypertarget{a.3-delocalization-along-every-fixed-finite-gd-path}{%
+\subsection{A.3 Delocalization along every fixed finite GD
+path}\label{a.3-delocalization-along-every-fixed-finite-gd-path}}
+
+\textbf{Theorem 1.} For each fixed \(T<\infty\), \[
+\max_{0\le t\le T}\|b^t\|_2=O_P(1),\qquad
+\max_{0\le t\le T}\|b^t\|_\infty
+=O_P\!\left(\sqrt{\frac{\log d}{d}}\right). \tag{A.3.1}
+\] The first bound has uniformly bounded fixed moments. The proof uses
+the same reused training sample at every step.
+
+\textbf{Proof.} Since \(\|r^t\|_2\le\sqrt n\), (A.1.1) gives directly \[
+\|b^t\|_2\le \frac{T\lambda_d}{m}\|H\|_{\rm op}\sqrt n=O_P(1). \tag{A.3.2}
+\]
+
+For the coordinate bound, denote feature column \(j\) by \(h_j\),
+replace that column by zero, and retain the denominator \(m\). Write
+\(K^{-j}=K-h_jh_j^\top/m\), and let \(u^{-j,t},r^{-j,t}\) be the
+corresponding GD scores and residuals. The matrices satisfy
+\(0\preceq K^{-j}\preceq K\).
+
+Conditional on \(X,Y,F_{-j}\), the vector \(r^{-j,t}\) is independent of
+\(W_j\), bounded in Euclidean norm by \(\sqrt n\), and \[
+G\mapsto (r^{-j,t})^\top\phi(XG/\sqrt d)
+\] is odd and \(\|X\|_{\rm op}\sqrt{n/d}\)-Lipschitz for
+\(G\sim N(0,I_d)\). Its conditional mean is zero. Gaussian concentration
+followed by a union bound over \(j\le m,t<T\), on
+\(\|X\|_{\rm op}\le C\sqrt d\), therefore yields \[
+\max_{j,t<T}|h_j^\top r^{-j,t}|=O_P(\sqrt{d\log d}). \tag{A.3.3}
+\] The conditioning here is essential: later residuals in the original
+model are not independent of \(W_j\).
+
+Set \(e^{j,t}=u^t-u^{-j,t}\). Since sigmoid is \(1/4\)-Lipschitz, \[
+\|e^{j,t+1}\|_2
+\le\left(1+\frac{\lambda_d\|K\|_{\rm op}}4\right)\|e^{j,t}\|_2
++\frac{\lambda_d\|h_j\|_2}{m}|h_j^\top r^{-j,t}|. \tag{A.3.4}
+\] We have \(e^{j,0}=0\) and \(\|h_j\|_2\le\sqrt n\). On the
+simultaneous high-probability bounds (A.2.2) and (A.3.3), iteration for
+fixed \(T\) gives \[
+\max_{j,t\le T}\|e^{j,t}\|_2=O_P(\sqrt{\log d}). \tag{A.3.5}
+\] Thus \[
+|h_j^\top r^t|
+\le|h_j^\top r^{-j,t}|+\tfrac14\sqrt n\,\|e^{j,t}\|_2
+=O_P(\sqrt{d\log d})
+\] uniformly over the finitely many times and all features. Summing
+(A.1.1) over time and dividing by \(m\) proves the second assertion in
+(A.3.1). \(\square\)
+
+\hypertarget{a.4-joint-fresh-test-gaussian-approximation-for-the-entire-finite-path}{%
+\subsection{A.4 Joint fresh-test Gaussian approximation for the entire
+finite
+path}\label{a.4-joint-fresh-test-gaussian-approximation-for-the-entire-finite-path}}
+
+Let \(\mathcal E_d\) contain the features and training sample, and
+define the exact conditional covariances \[
+A_{t,d}=\mathbb E_X[(\theta^\top X)S_t(X)\mid\mathcal E_d],\qquad
+Q_{st,d}=\mathbb E_X[S_s(X)S_t(X)\mid\mathcal E_d]. \tag{A.4.1}
+\] Write \(C_d\) for the covariance matrix of
+\((\theta^\top X,S_1(X),\ldots,S_T(X))\). All means are zero by oddness.
+
+\textbf{Theorem 2.} For fixed \(T\), in bounded-Lipschitz distance, \[
+d_{\rm BL}\!\left(
+\mathcal L((\theta^\top X,S_1(X),\ldots,S_T(X))\mid\mathcal E_d),
+N(0,C_d)\right)\longrightarrow0\quad\text{in probability}. \tag{A.4.2}
+\] This is a Gaussian approximation whose covariance is allowed to
+depend on the realized network. It does not assert that \(C_d\) has a
+deterministic limit.
+
+\textbf{Proof.} Fix real \(u,v_1,\ldots,v_T\), put \(b=\sum_tv_tb^t\),
+and let \[
+f(x)=u\theta^\top x+b^\top\phi(Fx).
+\] Then \(\mathbb Ef(X)=0\), and globally \[
+\|\nabla f\|_2\le L:=|u|+\|F\|_{\rm op}\|b\|_2=O_P(1),
+\quad
+\|\nabla^2 f\|_{\rm op}\le
+\varepsilon:=\|\phi''\|_\infty\|F\|_{\rm op}^2\|b\|_\infty=o_P(1).
+\tag{A.4.3}
+\]
+
+Here is a self-contained normal-approximation argument. For the Gaussian
+Ornstein--Uhlenbeck semigroup \(P_s\), set \[
+U_f(x)=\int_0^\infty e^{-s}P_s\nabla f(x)\,ds,
+\qquad T_f(x)=\nabla f(x)\cdot U_f(x).
+\] Gaussian integration by parts, or integration of \(\frac d{ds}P_sf\),
+gives for smooth bounded \(g\) \[
+\mathbb E[f(X)g(f(X))]=\mathbb E[T_f(X)g'(f(X))],
+\quad\mathbb ET_f=\mathbb Ef^2=:q.
+\tag{A.4.4}
+\] The semigroup derivative identity gives \(\|U_f\|_\infty\le L\) and
+\(\|DU_f\|_{\rm op,\infty}\le\varepsilon/2\), whence
+\(\|\nabla T_f\|_2\le3L\varepsilon/2\). Gaussian Poincaré yields \[
+\mathbb E|T_f-q|\le\tfrac32L\varepsilon. \tag{A.4.5}
+\] For \(\psi(t)=\mathbb Ee^{itf(X)}\), (A.4.4) gives
+\(\psi'(t)=-tq\psi(t)-t\mathbb E[(T_f-q)e^{itf(X)}]\). Solving this
+scalar differential equation and using \(q\ge0\) gives \[
+|\psi(t)-e^{-qt^2/2}|\le\tfrac34t^2L\varepsilon. \tag{A.4.6}
+\] No lower bound on \(q\) is needed.
+
+The conditional covariance matrices are tight because (A.4.3) and
+Poincaré bound all diagonal entries. Every subsequence admits a further
+subsequence on which the bounds in (A.4.3) hold almost surely and
+\(C_d\) converges along further deterministic realizations in a compact
+set. Applying (A.4.6) to a countable dense collection of coefficient
+vectors, tightness and the characteristic-function criterion identifies
+every conditional subsequential limit with the corresponding Gaussian
+covariance limit. This proves (A.4.2). \(\square\)
+
+The old covariance-operator lemma applies uniformly to these
+data-dependent weights because their Euclidean norms are tight: \[
+A_{t,d}=a\theta^\top F^\top b^t+o_P(1),
+\quad
+Q_{st,d}=a^2(F^\top b^s)^\top(F^\top b^t)+\nu(b^s)^\top b^t+o_P(1). \tag{A.4.7}
+\] Indeed the exact first formula is
+\(A_{t,d}=\theta^\top F^\top D_A b^t\), where
+\(D_A=\operatorname{diag}(A(\|W_j\|^2))\), and
+\(\|D_A-aI\|_{\rm op}\to0\). The exact second formula is
+\(Q_{st,d}=(b^s)^\top\Sigma_Fb^t\).
+
+For any subsequence on which \((A_{t,d},Q_{st,d})\) converges in
+probability to deterministic limits, Theorem 2 supplies the full joint
+finite-time Gaussian test-law limit on that subsequence. With fresh
+labels, apply the common Markov kernel
+\(Y\mid Z\sim\mathrm{Bernoulli}(\sigma(\beta Z))\).
+
+The total-variation and exact-calibration strengthening is proved
+separately in Appendix C; its conditions are furnished by Theorem 1
+together with a nonvanishing coefficient norm, for example Proposition 3
+below.
+
+\hypertarget{a.5-a-rigorous-nondegeneracy-condition}{%
+\subsection{A.5 A rigorous nondegeneracy
+condition}\label{a.5-a-rigorous-nondegeneracy-condition}}
+
+Put \(\rho_\beta=\mathbb E\sigma'(\beta G)>0\). This is positive for
+every fixed finite \(\beta\).
+
+\textbf{Proposition 3.} \[
+\|b^1\|_2^2\ge\frac{c^2v\rho_\beta}{\alpha\gamma}+o_P(1). \tag{A.5.1}
+\] If \(\lambda_d\|K\|_{\rm op}\le4\), then pathwise \[
+\|b^t\|_2\ge\tfrac12\|b^1\|_2\quad\text{for every integer }t\ge1. \tag{A.5.2}
+\] In particular a sufficiently small, fixed positive \(c\) makes
+(A.5.2) hold with probability tending to one. At every fixed positive
+time in this regime, the teacher-orthogonal fresh-score variance is
+bounded away from zero in probability.
+
+\textbf{Proof.} Conditional on \(X,F\), write \(R=Y-1/2=\mu+\epsilon\),
+where \(\mu_i=\sigma(\beta Z_i)-1/2\), independent centered
+\(\epsilon_i\) have variance \(D_{ii}=\sigma'(\beta Z_i)\), and \(D\) is
+diagonal. Since \[
+\|b^1\|_2^2=\frac{\lambda_d^2}{m}R^\top KR,
+\] expanding the quadratic form and using independence and bounded
+fourth moments gives \[
+\operatorname{Var}(R^\top KR\mid X,F)
+\le C\{\operatorname{tr}(K^2)+\|K\mu\|_2^2\}
+\le Cn\|K\|_{\rm op}^2. \tag{A.5.3}
+\] Thus
+\(\|b^1\|_2^2=\lambda_d^2m^{-1}(\mu^\top K\mu+\operatorname{tr}KD)+o_P(1)\).
+The first term is nonnegative. Conditional on \(F\), the row quantities
+\(D_{ii}K_{ii}\) are iid, bounded, and have mean \[
+\frac1m\sum_j\mathbb E_X[\sigma'(\beta\theta^\top X)\phi(W_j^\top X)^2].
+\] Uniformly over \(j\), \(\|W_j\|^2\to1\) and \(\theta^\top W_j\to0\).
+Continuity of bounded Gaussian expectations therefore makes this mean
+tend to \(v\rho_\beta\). The conditional LLN proves
+\(n^{-1}\operatorname{tr}KD\to v\rho_\beta\), yielding (A.5.1).
+
+For (A.5.2), let \(L(b)=\sum_i\ell(Y_i,h_i^\top b)\),
+\(g_0=\nabla L(0)=-H^\top R\), and \(\eta=\lambda_d/m\). Its gradient is
+\(\|H\|_{\rm op}^2/4\)-Lipschitz. Under the displayed step condition,
+descent gives \(L(b^t)\le L(b^1)\le L(0)-\eta\|g_0\|^2/2\). Convexity
+gives \(L(b^t)\ge L(0)+g_0^\top b^t\). Combining these and
+Cauchy--Schwarz yields \(\|b^t\|\ge\eta\|g_0\|/2=\|b^1\|/2\). Finally,
+the exact Hermite decomposition implies \[
+Q_{tt,d}-A_{t,d}^2\ge(\nu-o_P(1))\|b^t\|_2^2, \tag{A.5.4}
+\] uniformly for the fixed-time path. \(\square\)
+
+\hypertarget{a.6-teacher-coordinate-removal-is-operator-small}{%
+\subsection{A.6 Teacher-coordinate removal is
+operator-small}\label{a.6-teacher-coordinate-removal-is-operator-small}}
+
+Rotate coordinates so that \(\theta=e_1\). Write \(X_i=(z_i,x_i)\) and
+\(W_j=(t_j,f_j)\), with \(x_i\in\mathbb R^{d-1}\),
+\(f_j\in\mathbb R^{d-1}\). Let \(V\) have rows \(f_j^\top\),
+\(U_{ij}=x_i^\top f_j\), \(H^0=\phi(U)\). The vectors \(z,t\), the noise
+matrix \(H^0\), and label randomness conditional on \(z\) have the
+required independence: \(H^0\) is independent of \((z,t,Y)\).
+
+\textbf{Proposition 4.} For any fixed proportional number of rows,
+including training rows together with an additional proportional block
+of test rows, \[
+\left\|\frac{H-H^0-a zt^\top}{\sqrt m}\right\|_{\rm op}\longrightarrow0
+\quad\text{in probability}. \tag{A.6.1}
+\]
+
+\textbf{Proof.} Taylor's theorem gives \[
+H-H^0-a zt^\top
+=\operatorname{diag}(z)[\phi'(U)-a\mathbf1\mathbf1^\top]\operatorname{diag}(t)+R,
+\quad |R_{ij}|\le C z_i^2t_j^2. \tag{A.6.2}
+\] The remainder satisfies \[
+\|R\|_F^2\le C\Big(\sum_i z_i^4\Big)\Big(\sum_jt_j^4\Big)=O_P(1),
+\] so \(\|R\|_{\rm op}/\sqrt m=o_P(1)\).
+
+Conditional on \(V\), the centered rows of the derivative matrix
+\(\phi'(U)\) are independent. The same concentration-and-net proof as in
+Section A.2 applies with Lipschitz constant
+\(\|\phi''\|_\infty\|V\|_{\rm op}\); hence the centered matrix has
+operator norm \(O_P(\sqrt d)\). Its row mean minus \(a\mathbf1\) is the
+vector \(\delta_j=A(\|f_j\|^2)-a\). Bounded \(A'\) and
+\(\mathbb E(\|f_j\|^2-1)^2=O(d^{-1})\) give \(\|\delta\|_2=O_P(1)\).
+Thus \[
+\|\phi'(U)-a\mathbf1\mathbf1^\top\|_{\rm op}=O_P(\sqrt d).
+\] Finally \(\|z\|_\infty=O_P(\sqrt{\log d})\) and
+\(\|t\|_\infty=O_P(\sqrt{\log d/d})\), so the first matrix in (A.6.2),
+after division by \(\sqrt m\), is \(O_P(\log d/\sqrt d)=o_P(1)\).
+\(\square\)
+
+This is an operator-norm statement for the normalized \emph{feature
+matrix}, not just for its population covariance. If \(A,\widetilde A\)
+have bounded operator norm and \(\|A-\widetilde A\|_{\rm op}=o_P(1)\),
+finite-time logistic GD in the parameter \(w=\sqrt m b\), with
+normalized scores \(Aw\), differs by \(o_P(\sqrt m)\) in coefficient
+norm and \(o_P(\sqrt n)\) in score norm. To verify, subtract the two
+recursions, use \(1/4\)-Lipschitzness of sigmoid, \(\|r\|\le\sqrt n\),
+and \(\|w^t\|=O_P(\sqrt m)\), and iterate the resulting linear
+inequality for fixed \(T\).
+
+\hypertarget{a.7-the-perpendicular-rf-matrix-satisfies-generalized-invariance}{%
+\subsection{A.7 The perpendicular RF matrix satisfies generalized
+invariance}\label{a.7-the-perpendicular-rf-matrix-satisfies-generalized-invariance}}
+
+We verify the matrix assumptions of {[}5, Proposition D.1(b2){]}. The
+following section then embeds the physical GD iteration in the
+corresponding causal recursion.
+
+Let \(N/d\to\delta>0\) be the total number of rows, \(p=d-1\),
+\(X\in\mathbb R^{N\times p}\) have independent standard Gaussian
+entries, and \(G\in\mathbb R^{m\times p}\) be an independent standard
+Gaussian matrix. Set \[
+V=G/\sqrt d,\qquad
+A_0=\frac1{\sqrt m}\phi(XV^\top),\qquad r=N/m\to\delta/\gamma.
+\tag{A.7.1}
+\] For the almost-sure source-theorem application below, choose the
+standard product construction in which the full data-array sequence is
+independent of the full feature-array sequence, and different dimensions
+may be taken independent. This choice is harmless for the final
+in-probability conclusions, which depend only on the per-dimension laws.
+It avoids conditioning on an entire feature sequence that could encode
+data from another dimension under an adversarial cross-dimension
+coupling.
+
+\textbf{Theorem 5 (matrix hypothesis verification).} The matrix \(A_0\)
+has the rectangular generalized-invariance property used by
+Wang--Zhong--Fan, with the same limiting diagonal distribution as \[
+A_G=\frac{aXV^\top+\sqrt\nu\,E}{\sqrt m},
+\tag{A.7.2}
+\] where \(E\) is an independent standard Gaussian \(N\times m\) matrix.
+In particular:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The operator norm is eventually bounded by a deterministic constant.
+\item
+  The singular-value distribution has a deterministic compactly
+  supported limit, identical to that of (A.7.2), and its second moment
+  is positive.
+\item
+  For every fixed integer \(k\ge0\) and every \(\epsilon>0\), the
+  following inequalities hold eventually almost surely (with positive
+  powers used for the first two lines): \[
+  \max_i\left|((A_0A_0^\top)^k)_{ii}-\frac1N\operatorname{tr}(A_0A_0^\top)^k\right|
+  +\max_{i\ne j}|((A_0A_0^\top)^k)_{ij}|
+  \le m^{-1/2+\epsilon},
+  \tag{A.7.3}
+  \] \[
+  \max_i\left|((A_0^\top A_0)^k)_{ii}-\frac1m\operatorname{tr}(A_0^\top A_0)^k\right|
+  +\max_{i\ne j}|((A_0^\top A_0)^k)_{ij}|
+  \le m^{-1/2+\epsilon},
+  \tag{A.7.4}
+  \] \[
+  \max_{i,j}|((A_0A_0^\top)^kA_0)_{ij}|\le m^{-1/2+\epsilon}.
+  \tag{A.7.5}
+  \]
+\item
+  It is invariant under independent signed permutations of its rows and
+  columns.
+\end{enumerate}
+
+\textbf{Proof of the uniform entry estimates.} For a matrix \(B\), let
+\(\mathcal P_R(B)\) denote its Frobenius-metric projection onto the
+closed convex set \(\{C:\|C\|_{\rm op}\le R\}\). This map clips singular
+values at \(R\) and is Frobenius-nonexpansive. It commutes with left and
+right orthogonal transformations.
+
+Fix sufficiently large deterministic constants \(C_X,C_G,C_A\), and
+define \[
+\bar X=\mathcal P_{C_X\sqrt d}(X),\quad
+\bar G=\mathcal P_{C_G\sqrt d}(G),\quad
+B=\mathcal P_{C_A}\!\left(\frac1{\sqrt m}\phi(\bar X\bar G^\top/\sqrt d)\right).
+\tag{A.7.6}
+\] The exponential norm bounds in Section A.2 show \(B=A_0\) outside an
+event of probability at most \(C e^{-cd}\). Thus \(B=A_0\) eventually
+almost surely. This explicit clipping step avoids the invalid inference
+that a derivative bound only on a nonconvex high-probability set is
+automatically a global Lipschitz bound.
+
+For any two base inputs, the product inequality and the scalar Lipschitz
+property of tanh give \[
+\|B(X,G)-B(X',G')\|_F
+\le\frac C{\sqrt m}\big(\|X-X'\|_F+\|G-G'\|_F\big)
+\le\frac {C'}{\sqrt d}\|(X,G)-(X',G')\|_F.
+\tag{A.7.7}
+\] Because \(\|B\|_{\rm op}\le C_A\), each scalar entry of
+\((BB^\top)^k\), \((B^\top B)^k\), or \((BB^\top)^kB\) is a globally
+\(C_k\)-Lipschitz function of \(B\) in Frobenius norm. This follows by
+telescoping products; for example \[
+\|(BB^\top)^k-(B'B'^\top)^k\|_F
+\le 2k C_A^{2k-1}\|B-B'\|_F.
+\] Consequently each such scalar entry is \(C_k'/\sqrt d\)-Lipschitz in
+the independent standard Gaussian base entries.
+
+Oddness of tanh and equivariance of all clipping maps imply that \(B\)
+is invariant under row and column signed permutations. Therefore every
+offdiagonal entry of \((BB^\top)^k\) or \((B^\top B)^k\) has expectation
+zero; all diagonal entries in a given block have the same expectation;
+and all entries of \((BB^\top)^kB\) have expectation zero. Gaussian
+concentration and a union bound over \(O(d^2)\) entries give, for any
+fixed \(\eta>0\), failure probability at most \[
+C_kd^2\exp(-c_k d^{2\eta})
+\] for the assertion that every entry differs from its expectation by at
+most \(d^{-1/2+\eta}\). This sequence is summable. The difference
+between a diagonal expectation and the realized average trace is bounded
+by the same maximum diagonal error. Choose \(\eta<\epsilon\) and absorb
+fixed constants and dimension ratios. Borel--Cantelli and \(B=A_0\)
+eventually prove (A.7.3)--(A.7.5), simultaneously for the countable
+collection of integer \(k\) and rational positive \(\epsilon\).
+Arbitrary positive \(\epsilon\) follows by decreasing it to a rational
+number.
+
+\textbf{Proof of spectral matching.} Let \[
+\Sigma_V=\mathbb E_x[\phi(Vx)\phi(Vx)^\top],\qquad
+C_V=a^2VV^\top+\nu I_m.
+\] The Hermite covariance calculation strengthens to almost sure
+operator convergence here: \[
+\|\Sigma_V-C_V\|_{\rm op}\to0. \tag{A.7.8}
+\] Indeed Gaussian norm and spherical-inner-product tails imply,
+eventually almost surely, \[
+\max_j|\|f_j\|^2-1|=O(\sqrt{\log d/d}),\qquad
+\max_{j\ne k}\frac{|f_j^\top f_k|}{\|f_j\|\|f_k\|}
+=O(\sqrt{\log d/d}).
+\] The offdiagonal higher-odd-Hermite remainder has operator norm at
+most its maximal absolute row sum, hence at most
+\(C m(\log d/d)^{3/2}=o(1)\). The diagonal remainder and linear Hermite
+coefficient converge uniformly, proving (A.7.8).
+
+Condition on any realization of the sequence \(V\) satisfying these
+bounds. The Louart--Liao--Couillet spectral theorem applies to
+\(\phi(XV^\top)\), since \(V^\top\) is bounded in operator norm, tanh is
+Lipschitz, and all dimensions are proportional. It gives the same
+spectral deterministic equivalent as a Gaussian sample matrix with row
+covariance \(\Sigma_V\). A Gaussian coupling and \[
+\|\Sigma_V^{1/2}-C_V^{1/2}\|_{\rm op}
+\le\|\Sigma_V-C_V\|_{\rm op}^{1/2}
+\] replace \(\Sigma_V\) by \(C_V\) without changing the limiting
+spectral law. Conditional on \(V\), (A.7.2) has exactly Gaussian
+independent rows with covariance \(C_V/m\). Fubini's theorem transfers
+this conditional almost-sure conclusion to the joint model.
+
+The empirical eigenvalue law of \(VV^\top\) tends to the
+Marchenko--Pastur law with aspect \(\gamma\), so the empirical law of
+\(C_V\) tends to its image under \(x\mapsto\nu+a^2x\). The fixed-point
+description in the spectral theorem consequently has a deterministic
+limit. More explicitly, if \(H\) is that image law, the feature-side
+squared-singular law is characterized for \(\zeta>0\) by \[
+\delta_\zeta=\int\frac{t}{\zeta+rt/(1+\delta_\zeta)}\,dH(t),\qquad
+m(-\zeta)=\int\frac1{\zeta+rt/(1+\delta_\zeta)}\,dH(t).
+\tag{A.7.9}
+\] The positive solution is unique: divide its defining equation by
+\(1+\delta_\zeta\) to obtain
+\(\delta_\zeta/(1+\delta_\zeta)=\int t/[\zeta(1+\delta_\zeta)+rt]\,dH(t)\),
+whose left side is strictly increasing and right side decreasing. The
+bound \(0\le\delta_\zeta\le(\sup\operatorname{supp}H)/\zeta\) makes
+continuity under weak convergence of uniformly compactly supported
+covariance laws immediate by subsequences. The deterministic operator
+bounds turn weak spectral convergence into convergence of every fixed
+spectral moment. Also
+\(m^{-1}\operatorname{tr}(A_0^\top A_0)\to r v>0\).
+\textbf{Normalization for the AMP source:} its singular-value law \(D\)
+is padded to the row dimension \(N\), whereas (A.7.9) is normalized to
+the feature dimension \(m\). For \(k\ge1\),
+\(\mathbb E[D^{2k}]=r^{-1}\int\lambda^k\,d\mu_{\rm feature}(\lambda)\);
+in particular \(\mathbb E D^2=v\), not \(rv\). The aspect ratio is
+\(r=N/m\). As an additional normalization check,
+\(\mathbb E D^4=v^2+r(v^2+a^4\gamma)\), so the singular-value law is
+nonconstant. This also supplies the positive-variance singular-law
+hypothesis used by the AMP degeneracy-removal argument.
+
+Finally (A.7.2) is bi-orthogonally invariant: Gaussian left
+multiplication of \(X,E\) and Gaussian right multiplication of \(V,E\)
+preserve their joint law. The independently signed-permutation
+representation required by the generalized-invariance definition follows
+by taking an independent copy of \(A_0\) and multiplying it by
+independent uniform signed permutations. The law is unchanged, and these
+permutations can be independent of any side information already
+independent of \(A_0\). Items 1--4 are precisely the sufficient matrix
+conditions of the Proposition D.1(b), which identifies the limiting
+diagonal distribution. \(\square\)
+
+Theorem 5 does not infer dynamics from an empirical spectral law. It
+verifies the additional entrywise-polynomial and independence hypotheses
+needed by a dynamical universality theorem. Combined with Proposition 4,
+the residual issue is the finite-time algorithmic embedding, rather than
+an unchecked Gaussian-equivalence conjecture for the RF matrix.
+
+\hypertarget{a.8-causal-embedding-of-the-rank-one-logistic-recursion-in-rectangular-amp}{%
+\subsection{A.8 Causal embedding of the rank-one logistic recursion in
+rectangular
+AMP}\label{a.8-causal-embedding-of-the-rank-one-logistic-recursion-in-rectangular-amp}}
+
+This section supplies the exact algorithmic embedding and the
+deterministic-overlap comparison. The Gaussian query/state recursion and
+positive-definiteness proof are in Appendix B. The present formulas
+specify their normalization and show that no extra universality for
+arbitrary empirical scalar coefficients is being assumed.
+
+Use a proportional block of additional test inputs, for example
+\(N=2n\), and the deterministic row mask \(M_i=1\) for the \(n\)
+training rows and \(0\) for the test rows. Set \[
+\pi=n/N=1/2,\quad r=N/m\to2\alpha/\gamma,\quad
+\lambda= c/\alpha,\quad s=a\sqrt\gamma,\quad v=\sqrt d\,t.
+\tag{A.8.1}
+\] Here the letter \(v\) denotes the feature-side teacher vector only
+within this section; the scalar feature moment in earlier sections
+remains \(\mathbb E\tanh(G)^2\). Write \(w_t=\sqrt m\,b^t\). Proposition
+4 reduces the normalized feature matrix to \[
+D=A_0+\frac{s}{m}zv^\top.
+\] The small differences between \((\lambda_d,s_d,r_d)\) and their
+limits are harmless by the same finite-time stability estimate. The
+exact resulting physical iteration is \[
+q_t^{\rm emp}=m^{-1}v^\top w_t,\quad
+S_t=A_0w_t+s q_t^{\rm emp}z,\quad
+r_t=M\odot[Y-\sigma(S_t)],
+\tag{A.8.2}
+\] \[
+\rho_t^{\rm emp}=N^{-1}z^\top r_t,\qquad
+w_{t+1}=w_t+\lambda[A_0^\top r_t+s r\rho_t^{\rm emp}v],\qquad w_0=0.
+\tag{A.8.3}
+\] The side vectors \((M,z,Y)\) and \(v\) are independent of \(A_0\).
+Their empirical laws converge to \((M,Z,Y)\) and \(V\), where
+\(M\sim\mathrm{Bernoulli}(\pi)\) is independent of \((Z,Y)\), \(Z,V\)
+are standard Gaussian, and
+\(Y\mid Z\sim\mathrm{Bernoulli}(\sigma(\beta Z))\). Gaussian and bounded
+side variables have all moments. Polynomial density follows, for
+example, by splitting the two finite coordinates \(M,Y\) and using
+polynomial density under the Gaussian measure; their joint law is
+dominated by a constant times Gaussian measure times counting measure.
+
+Let \(a_{th},b_{th}\) be the deterministic rectangular-AMP correction
+coefficients prescribed by the row-normalized singular law in Theorem 5.
+The AMP has column fields \(Z_t^{\rm A}\), row fields \(Y_t^{\rm A}\),
+feature iterates \(Q_t\), and residual iterates \(R_t\): \[
+Z_t^{\rm A}=A_0^\top R_t-\sum_{h<t}b_{th}Q_h,\qquad
+Y_t^{\rm A}=A_0Q_t-\sum_{h\le t}a_{th}R_h.
+\tag{A.8.4}
+\] Initialize \(Q_0=0\) and \(R_1=M\odot(Y-1/2)\). Define its
+nonlinearities recursively by \[
+Q_t=Q_{t-1}+\lambda\left[Z_t^{\rm A}+\sum_{h<t}b_{th}Q_h+s r\rho_{t-1}V\right],
+\tag{A.8.5}
+\] \[
+R_{t+1}=M\left[Y-\sigma\!\left(Y_t^{\rm A}+\sum_{h\le t}a_{th}R_h+s q_tZ\right)\right],
+\tag{A.8.6}
+\] where \[
+\rho_{t-1}=\mathbb E[Z R_t],\qquad q_t=\mathbb E[VQ_t]
+\tag{A.8.7}
+\] are taken in the limiting AMP law. Each \(Q_h\) in (A.8.5) is already
+a deterministic function of the past column fields and feature-side
+information, and each \(R_h\) in (A.8.6) is already a deterministic
+function of past row fields and sample-side information. Thus these are
+legitimate memory-dependent coordinatewise nonlinearities.
+
+\textbf{Causality.} Before the \(t\)th column update, the law of \(R_t\)
+and hence \(\rho_{t-1}\) are already known. The column field law and
+(A.8.5) then determine \(Q_t\) and \(q_t\). Only after this does (A.8.6)
+define \(R_{t+1}\). Consequently the overlap definitions introduce no
+circular fixed point at a time step. The source's AMP covariance and
+correction-coefficient prescriptions follow the same alternating order.
+
+\textbf{Regularity.} At a fixed horizon, (A.8.5) is affine in its
+Gaussian-field arguments. Equation (A.8.6) is recursively globally
+Lipschitz in its Gaussian-field arguments because \(0\le M\le1\) and
+\(\|\sigma'\|_\infty\le1/4\). To meet a theorem requiring definitions on
+the entire Euclidean side-information space, replace the formal
+arguments \(M,Y\) by their projections onto \([0,1]\); this changes no
+observed value and keeps the Lipschitz constants uniform in the side
+arguments. All functions have at most polynomial growth. The Bernoulli
+sampling threshold is not an update nonlinearity: the already generated
+label is supplied as side information.
+
+\textbf{Exact cancellation.} Substituting (A.8.4) into (A.8.5) cancels
+all \(b_{th}\) corrections. Substituting (A.8.4) into (A.8.6) cancels
+all \(a_{th}\) corrections. Thus the finite-dimensional AMP trajectory
+is exactly logistic GD with the scalar overlaps frozen to (A.8.7). These
+identities are algebraic and do not use a limit.
+
+\textbf{Deterministic-overlap freezing.} Suppose the source theorem is
+applied to this AMP, using the positive-definiteness result of Appendix
+B. Let \((\bar w_t,\bar r_t)\) denote its frozen-overlap physical
+iterates. Joint empirical \(W_2\) convergence gives \[
+\epsilon^q_t:=|m^{-1}v^\top\bar w_t-q_t|\to0,
+\qquad
+\epsilon^\rho_t:=|N^{-1}z^\top\bar r_t-\rho_t|\to0,
+\tag{A.8.8}
+\] since both products are continuous with quadratic growth. Define \[
+e_t=\|w_t-\bar w_t\|_2/\sqrt m,\quad
+h_t=\|r_t-\bar r_t\|_2/\sqrt N,\quad
+V_m=\|v\|_2/\sqrt m,\quad Z_N=\|z\|_2/\sqrt N.
+\] On \(\|A_0\|_{\rm op}\le C\), Cauchy--Schwarz and sigmoid's
+derivative bound give \[
+h_t\le\frac14\left[\left(C/\sqrt r+sZ_NV_m\right)e_t+sZ_N\epsilon^q_t\right],
+\tag{A.8.9}
+\] \[
+e_{t+1}\le e_t+\lambda\left[\left(C\sqrt r+s rV_mZ_N\right)h_t+s rV_m\epsilon^\rho_t\right].
+\tag{A.8.10}
+\] We have \(e_0=0\), \(V_m,Z_N\to1\), and finitely many times.
+Induction using (A.8.8) proves \(\max_{t\le T}(e_t+h_t)\to0\) in
+probability. Differences in dimension-dependent constants add only
+\(o_P(1)\) terms. Therefore the adaptive-overlap physical iteration has
+exactly the same finite-time empirical limit as the frozen AMP.
+
+This comparison is independent of whether the source's remark on
+empirical Onsager coefficients includes the rank-one overlaps: it proves
+the required replacement directly.
+
+\hypertarget{a.9-assembled-finite-horizon-theorem-and-its-boundary}{%
+\subsection{A.9 Assembled finite-horizon theorem and its
+boundary}\label{a.9-assembled-finite-horizon-theorem-and-its-boundary}}
+
+The preceding matrix inputs, Appendix B, and Appendix C give the
+following assembly.
+
+\textbf{Theorem 6 (original Gaussian tanh GD, each fixed finite
+horizon).} Fix \(\alpha,\gamma,c\in(0,\infty)\), \(0\le\beta<\infty\),
+and a fixed integer \(T\). Run the original model (A.1.1). Compute
+\(q_{1:T},\Sigma_T\) by the explicit recursion (B.16) in Appendix B,
+with \(s=a\sqrt\gamma\), and put \[
+A_t=sq_t,\qquad Q_{st}=s^2q_sq_t+(\Sigma_T)_{st}.
+\] Then \(\Sigma_T\) is positive definite. Conditional on the realized
+features and training sample, the joint fresh-test law converges weakly
+in probability to \[
+\begin{gathered}
+\bigl(Z,S_1,\ldots,S_T,Y\bigr),\qquad S_t=A_tZ+G_t,\\
+G_{1:T}\sim N(0,\Sigma_T),\quad G\perp Z,\qquad
+Y\mid Z\sim\mathrm{Bernoulli}(\sigma(\beta Z)).
+\end{gathered}
+\tag{A.9.1}
+\] For every \(1\le t\le T\), the conditional law of \((Z,S_t,Y)\) in
+fact converges in total variation in probability. The exact, unbinned,
+model-conditional calibration error converges in probability and every
+finite \(L^p\) to \[
+C_t=\mathbb E_{S\sim N(0,Q_{tt})}|g_t(S)-\sigma(S)|,
+\quad
+ g_t(x)=\mathbb E_H\sigma\!\left(\beta\left[\frac{A_t}{Q_{tt}}x+
+ \sqrt{\frac{(\Sigma_T)_{tt}}{Q_{tt}}}\,H\right]\right).
+\tag{A.9.2}
+\] Its population logistic risk converges in \(L^1\) to \[
+R_t=\mathbb E_G\log\left(2\cosh\left(\frac{\sqrt{Q_{tt}}G}{2}\right)\right)-\kappa A_t,
+\qquad
+\kappa=\mathbb E[Z(\sigma(\beta Z)-1/2)].
+\tag{A.9.3}
+\] All these convergences are uniform over the finite index set
+\(\{1,\ldots,T\}\). At time zero, \(C_0=0\) and \(R_0=\log2\) exactly.
+
+\textbf{Assembly proof.} Theorem 5 and the side-information/regularity
+checks in Section A.8 verify WZF's matrix and algorithm assumptions. the
+positive-definiteness induction in Appendix B verifies all of its
+nonsingularity assumptions without perturbation, for every \(c>0\). The
+AMP embedding cancels the memory corrections exactly; (A.8.9)--(A.8.10)
+remove frozen-overlap dependence; Proposition 4 and finite-time operator
+stability restore the actual tanh features. On a mask-zero test row all
+residual iterates vanish, so the limiting score is exactly
+\(sq_tZ+G_t\), proving (A.9.1) for appended test rows.
+
+Conditional on the original training environment those appended rows are
+independent fresh inputs. Conditional LLNs for bounded observables
+therefore yield the claimed conditional test-law convergence. For the
+covariance identification, Gaussian concentration gives
+\(\mathbb E_X|S_t(X)|^4\le C\|F\|_{\rm op}^4\|b^t\|_2^4=O_P(1)\); hence
+conditional variances of the appended empirical quadratic averages are
+\(O_P(N^{-1})\). This identifies the realized-model covariance limit
+with \(Q\), including teacher covariances \(A\).
+
+Theorem 1 supplies coefficient delocalization. Since Appendix B proves
+\((\Sigma_T)_{tt}>0\), the deterministic smoothing theorem in Appendix C
+upgrades each conditional pair to total variation. Adding the fresh
+label is a common Markov kernel and contracts total variation. the
+signed-measure inequality in Appendix C then proves (A.9.2). Gaussian
+integration gives (A.9.3); uniform second-moment bounds for the scores
+imply uniform integrability of logistic losses and conditional risks, so
+the convergence is in \(L^1\). Finite unions give the stated uniformity
+over \(t\le T\). \(\square\)
+
+For clarity, \(C_t>0\) at every positive finite time. If \(\beta=0\),
+the regression curve is \(1/2\) and the score is nondegenerate. If
+\(\beta>0\) and \(A_t\le0\), monotonicity prevents \(g_t\) from equaling
+the increasing sigmoid. If \(A_t>0\), dominated convergence gives \[
+1-g_t(x)\sim
+\exp\!\left[-\frac{\beta A_t}{Q_{tt}}x+
+\frac{\beta^2(\Sigma_T)_{tt}}{2Q_{tt}}\right]
+\quad(x\to\infty).
+\] Equality with \(1-\sigma(x)\sim e^{-x}\) would require both
+\(\beta A_t/Q_{tt}=1\) and \((\Sigma_T)_{tt}=0\), contradicting positive
+definiteness. Continuity and the everywhere-positive score density turn
+nonidentity into strictly positive calibration error.
+
+For any training-dependent stopping time \(\tau_d\in\{0,\ldots,T\}\),
+the realized population risk and calibration are approximated, in
+probability, by \(R_{\tau_d}\) and \(C_{\tau_d}\). If the deterministic
+finite-grid risk has a unique minimizer, every minimizer of the realized
+population risk on that grid converges to it in probability. Minimizing
+calibration alone includes the exact zero-score solution at time zero.
+No monotonicity of the risk or calibration curve is asserted.
+
+This theorem concerns every fixed finite horizon, at arbitrary positive
+finite aspect ratios and step size. It does not, by itself, identify an
+infinite-time limit or optimize over an unbounded stopping horizon.
+Appendix D gives an additional all-time result under its explicitly
+stated sample-ratio and small-step assumptions; those hypotheses must
+remain visible whenever that extension is used.
+
+\clearpage
+
+\hypertarget{appendix-b.-explicit-causal-state-evolution}{%
+\section{Appendix B. Explicit causal state
+evolution}\label{appendix-b.-explicit-causal-state-evolution}}
+
+Theorem, lemma, and proposition numbers in this appendix are local;
+equation and section references carry the appendix letter.
+
+\hypertarget{b.1-model-dimensions-and-the-physical-update}{%
+\subsection{B.1 Model, dimensions, and the physical
+update}\label{b.1-model-dimensions-and-the-physical-update}}
+
+Let \(X_i\sim N(0,I_d)\), let \(\theta\) be a deterministic unit vector,
+and let \[
+Y_i\mid X_i\sim\operatorname{Bernoulli}(\sigma(\beta\theta^\top X_i)),
+\qquad \sigma(x)=(1+e^{-x})^{-1},\quad 0\le\beta<\infty.
+\] There are \(n\) training examples and \(m\) independent random
+features \(W_j\sim N(0,I_d/d)\), with \[
+n/d\to\alpha>0,\qquad m/d\to\gamma>0,\qquad
+H_{ij}=\tanh(W_j^\top X_i).
+\] Write \[
+a=\mathbb E[G\tanh G],\qquad v=\mathbb E[\tanh^2G],\qquad
+\nu=v-a^2>0,\quad G\sim N(0,1).
+\] Strict positivity follows because \(\tanh G\) is not a scalar
+multiple of \(G\) in Gaussian \(L^2\).
+
+In Appendix A's normalization, \(w^t=\sqrt m\,b^t\), \(A=H/\sqrt m\),
+and a mean-loss GD step of size \(cd\) gives \[
+w^0=0,\qquad w^{t+1}=w^t+\lambda_d A^\top r^t,
+\quad r^t=M\odot(Y-\sigma(Aw^t)),\quad \lambda_d=cd/n\to\lambda=c/\alpha.
+\tag{B.1}
+\] Here a proportional independent query block is appended to the rows,
+and \(M_i=1\) on training rows and \(M_i=0\) on query rows. If the total
+number of rows is \(N\), set \[
+N/d\to\delta>\alpha,\qquad r=N/m\to\delta/\gamma,
+\qquad p=n/N\to\alpha/\delta.
+\tag{B.2}
+\] The common choice \(N=2n\) gives \(p=1/2\), \(\delta=2\alpha\). No
+result depends on that choice.
+
+Rotate \(\theta\) to the first coordinate. Let \(z_i=\theta^\top X_i\)
+and \(h_j=\sqrt d\,\theta^\top W_j\). Then \(z_i,h_j\) are standard
+normal, and Appendix A's decomposition is \[
+A=A_0+\frac{s_d}{m}zh^\top+E_d,
+\quad s_d=a\sqrt{m/d}\to s=a\sqrt\gamma,
+\quad \|E_d\|_{\rm op}=o_{\mathbb P}(1).
+\tag{B.3}
+\] The perpendicular matrix \(A_0\) is independent of \((z,Y,M,h)\). For
+the exact spike matrix \(A_0+s_dzh^\top/m\), the physical GD update is
+\[
+Q_t=Q_{t-1}+\lambda_d\left[A_0^\top R_t+s_d r_d\ell_t^{(d)}h\right],
+\quad R_{t+1}=M\odot\left[Y-\sigma(A_0Q_t+s_dq_t^{(d)}z)\right],
+\tag{B.4}
+\] where \(Q_t=w^t\), \(R_t=r^{t-1}\), \[
+q_t^{(d)}=m^{-1}h^\top Q_t,\qquad
+\ell_t^{(d)}=N^{-1}z^\top R_t,\qquad r_d=N/m.
+\] In particular the column spike coefficient is \(s r\ell_t\), not
+\(s\ell_t\).
+
+\hypertarget{b.2-the-rf-rectangular-cumulants-have-a-closed-form}{%
+\subsection{B.2 The RF rectangular cumulants have a closed
+form}\label{b.2-the-rf-rectangular-cumulants-have-a-closed-form}}
+
+Let \(\mu_k\) be the limiting \textbf{row-normalized} moments \[
+\mu_k=\lim N^{-1}\operatorname{tr}(A_0A_0^\top)^k.
+\] The squared singular-value law is padded with zeros to \(N\) values
+when necessary. the Gaussian comparison matrix in Appendix A has
+independent rows conditional on its feature covariance, whose limiting
+covariance law is \[
+\mathcal H=\mathcal L(\nu+a^2 L),\qquad L\sim\operatorname{MP}_{\gamma},
+\quad \mathbb EL=1.
+\] Let \(M(z)=\sum_{k\ge1}\mu_kz^k\) and
+\(M_{\mathcal H}(z)=\sum_{k\ge1}(\int t^k\,d\mathcal H(t))z^k\). The
+spectral fixed point in Appendix A, expanded at infinity, gives the
+formal-power-series identity \[
+rM(z)=M_{\mathcal H}\big(rz(1+M(z))\big).
+\tag{B.5}
+\] For completeness, writing \(m_F(-\zeta)\) for the feature-side
+Stieltjes transform and \(e_\zeta\) for the auxiliary scalar in Appendix
+A, its fixed point implies
+\(r e_\zeta/(1+e_\zeta)=1-\zeta m_F(-\zeta)\). Since the feature moment
+series is \(rM\), substitution \(z=-1/\zeta\) gives \(e_\zeta=-M/(1+M)\)
+and then (B.5).
+
+The ordinary free \(R\)-transform of \(\mathcal H\) is \[
+R_{\mathcal H}^{\rm ord}(u)=\nu+\frac{a^2}{1-a^2\gamma u}.
+\] Equivalently, \[
+M_{\mathcal H}(w)=w(1+M_{\mathcal H}(w))
+\left[\nu+\frac{a^2}{1-a^2\gamma w(1+M_{\mathcal H}(w))}\right].
+\] Combine this identity with (B.5), and set \(t=z(1+M)(1+rM)\). Since
+\(r\gamma=\delta\), this yields \[
+M(z)=\nu t+\frac{a^2t}{1-a^2\delta t}.
+\tag{B.6}
+\] Fan's rectangular moment/cumulant identity is
+\(M(z)=R_{\rm rect}(z(1+M(z))(1+rM(z)))\). Therefore \[
+\boxed{R_{\rm rect}(t)=\nu t+\frac{a^2t}{1-a^2\delta t},\qquad
+\kappa_2=v,\quad\kappa_{2k}=a^{2k}\delta^{k-1}\ (k\ge2).}
+\tag{B.7}
+\] This is a formal-series identity; no convergence radius or small-step
+condition is needed. In particular \[
+\mu_1=v,\qquad
+\mu_2=(1+r)v^2+\delta a^4
+=v^2+r(v^2+a^4\gamma),\qquad \kappa_4=\delta a^4.
+\tag{B.8}
+\]
+
+\hypertarget{b.3-exact-finite-dimensional-memory-and-covariance-formulas}{%
+\subsection{B.3 Exact finite-dimensional memory and covariance
+formulas}\label{b.3-exact-finite-dimensional-memory-and-covariance-formulas}}
+
+Use \(R_t\) for the scalar row residual and \(Q_t\) for the scalar
+column iterate. The centered row and column Gaussian fields will be
+\(G_t\) and \(Z_t\), respectively. Their covariance matrices are
+\(\Sigma_t\) and \(\Omega_t\). The teacher scalar is denoted
+\(Z_\star\), and the independent column teacher coordinate is
+\(H_\star\).
+
+Define the \(t\times t\) matrices \[
+\Delta_t=(\mathbb E[R_iR_j])_{i,j\le t},\quad
+\Gamma_t=(\mathbb E[Q_iQ_j])_{i,j\le t},
+\] \[
+(\Phi_t)_{ij}=\mathbb E\left[\frac{\partial R_i}{\partial G_j}\right]
+\quad(j<i),\qquad
+(\Psi_t)_{ij}=\mathbb E\left[\frac{\partial Q_i}{\partial Z_j}\right]
+\quad(j\le i),
+\tag{B.9}
+\] and put zero in the remaining entries. Thus \(\Phi_t\) is strictly
+lower triangular and \(\Psi_t\) is lower triangular. All derivatives
+hold the deterministic recursion coefficients fixed.
+
+Our coefficient matrices \(\mathsf A_t=(a_{ij})\) and
+\(\mathsf B_t=(b_{ij})\) are \textbf{lower} triangular. They are the
+transposes of Fan's displayed upper-triangular matrices \(A_t,B_t\). Set
+\(h_0=a^2\delta\). Then the explicit formulas are \[
+\boxed{\begin{aligned}
+\mathsf A_t&=\nu\Psi_t+a^2\Psi_t(I-h_0\Phi_t\Psi_t)^{-1},\\
+\mathsf B_t&=r\nu\Phi_t+ra^2\Phi_t(I-h_0\Psi_t\Phi_t)^{-1},\\
+\Sigma_t&=\nu\Gamma_t+a^2(I-h_0\Psi_t\Phi_t)^{-1}
+\left[\Gamma_t+h_0\Psi_t\Delta_t\Psi_t^\top\right]
+(I-h_0\Psi_t\Phi_t)^{-\top},\\
+\Omega_t&=r\nu\Delta_t+ra^2(I-h_0\Phi_t\Psi_t)^{-1}
+\left[\Delta_t+h_0\Phi_t\Gamma_t\Phi_t^\top\right]
+(I-h_0\Phi_t\Psi_t)^{-\top}.
+\end{aligned}}
+\tag{B.10}
+\] Every inverse is a finite polynomial: \(\Phi_t\Psi_t\) and
+\(\Psi_t\Phi_t\) are strictly lower triangular, so
+\((I-h_0L)^{-1}=\sum_{j=0}^{t-1}h_0^jL^j\).
+
+Here is an explicit check against the primary-source formulas. With
+\(L=\Phi\Psi\) and \(K=\Psi\Phi\), Fan's covariance coefficients, in our
+notation, are \[
+\Theta^{(j)}=\sum_{i=0}^jL^i\Delta(L^\top)^{j-i}
++\sum_{i=0}^{j-1}L^i\Phi\Gamma\Phi^\top(L^\top)^{j-1-i},
+\] \[
+\Xi^{(j)}=\sum_{i=0}^jK^i\Gamma(K^\top)^{j-i}
++\sum_{i=0}^{j-1}K^i\Psi\Delta\Psi^\top(K^\top)^{j-1-i}.
+\] The second sums are empty for \(j=0\). His prescriptions give
+\(\Sigma=\sum_{j\ge0}\kappa_{2j+2}\Xi^{(j)}\),
+\(\Omega=r\sum_{j\ge0}\kappa_{2j+2}\Theta^{(j)}\),
+\(\mathsf A=\sum_{j\ge0}\kappa_{2j+2}\Psi(\Phi\Psi)^j\), and
+\(\mathsf B=r\sum_{j\ge0}\kappa_{2j+2}\Phi(\Psi\Phi)^j\). Inserting
+(B.7) and summing the two finite geometric series proves (B.10). In
+particular no additional factor of \(r\) belongs inside either
+covariance bracket.
+
+\hypertarget{b.4-causal-recursion-and-its-implementation-without-circular-definitions}{%
+\subsection{B.4 Causal recursion and its implementation without circular
+definitions}\label{b.4-causal-recursion-and-its-implementation-without-circular-definitions}}
+
+Let \[
+Z_\star,H_\star\sim N(0,1),\quad
+Y\mid Z_\star\sim\operatorname{Bernoulli}(\sigma(\beta Z_\star)),
+\quad M\sim\operatorname{Bernoulli}(p),
+\] with \(M\) independent of \((Z_\star,Y)\) and \(H_\star\) on the
+separate column probability space. Initialize \[
+R_1=M(Y-1/2),\qquad Q_0=0,\qquad q_0=0.
+\] For \(t=1,2,\ldots\), carry out the following operations.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  From the already defined row functions
+  \(R_{1:t}(G_{1:t-1},Z_\star,Y,M)\) and \(\Sigma_{t-1}\), compute
+  \(\Delta_t\), \(\Phi_t\), and \(\ell_t=\mathbb E[Z_\star R_t]\).
+\item
+  Embed the previous \(\Psi_{t-1},\Gamma_{t-1}\) in \(t\times t\)
+  matrices with zero last row/column. Compute \(\mathsf B_t,\Omega_t\)
+  from (B.10). Their values do not depend on the missing current column
+  function: the last column of \(\Phi_t\) is zero, so \(\Phi_t\Psi_t\)
+  and \(\Phi_t\Gamma_t\Phi_t^\top\) only use previous column
+  information.
+\item
+  Let \(Z_{1:t}\sim N(0,\Omega_t)\) independently of \(H_\star\),
+  consistently with previous stages. Define \[
+  Q_t=Q_{t-1}+\lambda\left[Z_t+\sum_{j<t}b_{tj}Q_j+s r\ell_tH_\star\right],
+  \qquad q_t=\mathbb E[H_\star Q_t].
+  \tag{B.11}
+  \]
+\item
+  Compute the current derivative row of \(\Psi_t\) and \(\Gamma_t\),
+  then compute \(\mathsf A_t,\Sigma_t\) using (B.10). Let
+  \(G_{1:t}\sim N(0,\Sigma_t)\) independently of \((Z_\star,Y,M)\).
+  Define \[
+  S_t=G_t+\sum_{j\le t}a_{tj}R_j+s q_tZ_\star,
+  \qquad R_{t+1}=M(Y-\sigma(S_t)).
+  \tag{B.12}
+  \]
+\end{enumerate}
+
+All column functions are linear. More precisely, \[
+Q_{1:t}=\Psi_tZ_{1:t}+q_{1:t}H_\star,\qquad
+\Gamma_t=\Psi_t\Omega_t\Psi_t^\top+q_{1:t}q_{1:t}^\top,
+\tag{B.13}
+\] and their coefficients can be calculated without integration: \[
+(\Psi_t)_{tj}=(\Psi_{t-1})_{t-1,j}
++\lambda\mathbf1_{\{j=t\}}+\lambda\sum_{k<t}b_{tk}(\Psi_{t-1})_{kj},
+\] \[
+q_t=q_{t-1}+\lambda\sum_{j<t}b_{tj}q_j+\lambda s r\ell_t,
+\tag{B.14}
+\] where nonexistent entries at \(t=1\) are zero. In particular every
+diagonal entry of \(\Psi_t\) equals \(\lambda\).
+
+For the row derivatives, differentiate the already explicit scalar
+recursion: \[
+\frac{\partial R_{t+1}}{\partial G_j}
+=-M\sigma'(S_t)\left[\mathbf1_{\{j=t\}}
++\sum_{k\le t}a_{tk}\frac{\partial R_k}{\partial G_j}\right],\quad j\le t.
+\tag{B.15}
+\] Thus the remaining computations are finite-dimensional Gaussian
+integrals and a Bernoulli average; there is no unknown limiting quantity
+outside the recursion.
+
+\hypertarget{b.5-query-block-size-cancels-exactly}{%
+\subsection{B.5 Query-block size cancels
+exactly}\label{b.5-query-block-size-cancels-exactly}}
+
+The apparent dependence on \(\delta\) in (B.7)--(B.12) is only a
+bookkeeping choice. Let \(R^{\rm tr}_t\) be the row recursion
+conditioned on \(M=1\). Define \[
+\widehat\Delta_t=\alpha(\mathbb E[R_i^{\rm tr}R_j^{\rm tr}])_{i,j\le t},\qquad
+\widehat\Phi_t=\alpha(\mathbb E[\partial_{G_j}R_i^{\rm tr}])_{i,j\le t},
+\qquad \widehat\ell_t=\alpha\mathbb E[Z_\star R_t^{\rm tr}].
+\] Since \(R_t=0\) when \(M=0\), \[
+\widehat\Delta_t=\delta\Delta_t,\qquad
+\widehat\Phi_t=\delta\Phi_t,\qquad \widehat\ell_t=\delta\ell_t.
+\] Define \(T_t=(I-a^2\Psi_t\widehat\Phi_t)^{-1}\) and
+\(U_t=(I-a^2\widehat\Phi_t\Psi_t)^{-1}\). Then (B.10) becomes \[
+\boxed{\begin{aligned}
+\mathsf A_t&=\nu\Psi_t+a^2\Psi_tU_t,\\
+\mathsf B_t&=\gamma^{-1}\left[\nu\widehat\Phi_t+a^2\widehat\Phi_tT_t\right],\\
+\Sigma_t&=\nu\Gamma_t+a^2T_t\left[\Gamma_t+a^2\Psi_t\widehat\Delta_t\Psi_t^\top\right]T_t^\top,\\
+\Omega_t&=\gamma^{-1}\left\{\nu\widehat\Delta_t+a^2U_t
+\left[\widehat\Delta_t+a^2\widehat\Phi_t\Gamma_t\widehat\Phi_t^\top\right]U_t^\top\right\}.
+\end{aligned}}
+\tag{B.16}
+\] Replace \(s r\ell_t\) in (B.11) by \((s/\gamma)\widehat\ell_t\) and
+use \(M=1\) in the training scalar recursion. This is an entirely
+\(\delta\)-free prescription, depending only on
+\((\alpha,\gamma,\beta,c,a,\nu)\).
+
+On a query row \(M=0\), every \(R_j\) is zero. The physical test path is
+therefore \[
+\boxed{S_t^{\rm test}=s q_tZ_\star+G_t,\qquad
+G_{1:T}\sim N(0,\Sigma_T)\text{ independently of }Z_\star.}
+\tag{B.17}
+\] Its deterministic teacher/score overlaps are \[
+\mathcal A_t=s q_t,\qquad
+\mathcal Q_{st}=s^2q_sq_t+(\Sigma_T)_{st}.
+\tag{B.18}
+\] Equation (B.16) proves algebraically that these quantities are
+independent of the number of appended queries.
+
+\hypertarget{b.6-positive-definiteness-no-regularization-or-algorithm-change}{%
+\subsection{B.6 Positive definiteness: no regularization or algorithm
+change}\label{b.6-positive-definiteness-no-regularization-or-algorithm-change}}
+
+Suppose \(c>0\). Equations (B.10) imply \[
+\Omega_t\succeq r\nu\Delta_t,\qquad \Sigma_t\succeq\nu\Gamma_t.
+\tag{B.19}
+\] Initially \(\Delta_1=p/4>0\). If \(\Delta_t\succ0\), then
+\(\Omega_t\succ0\). Since \(\Psi_t\) is triangular with diagonal
+\(\lambda>0\), (B.13) gives \(\Gamma_t\succ0\), hence
+\(\Sigma_t\succ0\).
+
+To continue the induction, suppose \(R_{t+1}\) were in the linear span
+of \(R_1,\ldots,R_t\) almost surely. Condition on
+\((Z_\star,Y,M,G_1,\ldots,G_{t-1})\). On the event \(M=1\) of positive
+probability, all previous residuals are fixed. But the conditional
+variance of \(G_t\) is positive because \(\Sigma_t\succ0\), and \[
+R_{t+1}=Y-\sigma\left(G_t+\sum_{j\le t}a_{tj}R_j+s q_tZ_\star\right)
+\] is a strictly monotone nonconstant function of that conditional
+Gaussian. This is impossible. Therefore \(\Delta_{t+1}\succ0\).
+Induction establishes positive definiteness at every finite stage,
+including the uninformative-teacher case \(\beta=0\).
+
+The case \(c=0\) is immediate from (B.1): every score is zero. It need
+not be passed through a theorem requiring nonsingular covariances.
+
+\hypertarget{b.7-why-this-is-ordinary-gd-including-adaptive-overlaps}{%
+\subsection{B.7 Why this is ordinary GD, including adaptive
+overlaps}\label{b.7-why-this-is-ordinary-gd-including-adaptive-overlaps}}
+
+For any fixed deterministic arrays \(a_{tj},b_{tj}\), introduce fields
+\[
+\mathbf Z_t=A_0^\top\mathbf R_t-\sum_{j<t}b_{tj}\mathbf Q_j,
+\qquad
+\mathbf G_t=A_0\mathbf Q_t-\sum_{j\le t}a_{tj}\mathbf R_j.
+\] Using (B.11) and (B.12) coordinatewise adds these same terms back.
+With empirical teacher overlaps, the resulting algorithm is identically
+(B.4), at every finite dimension. This algebra does not impose an
+Onsager correction on GD.
+
+For the theorem application, first use the deterministic scalar overlaps
+\(q_t,\ell_t\) of (B.11)--(B.12). The resulting auxiliary AMP has
+coordinatewise nonlinearities, so WZF applies. Its empirical overlaps
+converge to \(q_t,\ell_t\) by its joint \(W_2\) convergence with the
+teacher side information. Then compare it with the empirical-overlap
+recursion (B.4).
+
+Here are explicit bounds closing that comparison. Normalize errors by
+\(e^Q_t=\|Q_t^{\rm GD}-Q_t^{\rm aux}\|/\sqrt m\) and
+\(e^R_t=\|R_t^{\rm GD}-R_t^{\rm aux}\|/\sqrt N\). On events where
+\(\|A_0\|_{\rm op}\), \(\|h\|/\sqrt m\), \(\|z\|/\sqrt N\), and the
+fixed dimension ratios are bounded, Cauchy--Schwarz gives \[
+|q_t^{\rm GD}-q_t|\le C e^Q_t+
+|m^{-1}h^\top Q_t^{\rm aux}-q_t|,
+\] \[
+|\ell_t^{\rm GD}-\ell_t|\le C e^R_t+
+|N^{-1}z^\top R_t^{\rm aux}-\ell_t|.
+\] The two trailing terms tend to zero. The physical updates and
+\(\operatorname{Lip}(\sigma)=1/4\) then imply \[
+e^Q_t\le e^Q_{t-1}+C e^R_t+o_{\mathbb P}(1),\qquad
+e^R_{t+1}\le C e^Q_t+o_{\mathbb P}(1).
+\tag{B.20}
+\] The initial error is zero, so both errors vanish at every fixed time.
+Replacing \(s_d,\lambda_d,r_d\) by their limits only adds vanishing
+terms of the same kind.
+
+Finally, \(\|E_d\|_{\rm op}=o_{\mathbb P}(1)\) in (B.3) transfers this
+conclusion to the \textbf{actual tanh RF matrix}. At fixed time
+\(\|Q_t\|/\sqrt m=O_{\mathbb P}(1)\) and \(\|R_t\|/\sqrt N\le1\). Thus
+every occurrence of \(E_dQ_t\) or \(E_d^\top R_t\) is
+\(o_{\mathbb P}(1)\) in the relevant normalized norm, and the same
+finite induction proves convergence of actual-GD iterates and score
+vectors.
+
+The appended queries never enter the update, since their mask is zero.
+Conditional on the training data and features, their score paths are iid
+fresh-test paths. A conditional law of large numbers for bounded
+Lipschitz functions therefore converts empirical query convergence into
+convergence in probability of the conditional fresh-test law to (B.17).
+Quadratic observables also converge: the fixed-time operator bounds and
+Gaussian Lipschitz concentration give bounded conditional fourth moments
+in probability, so the conditional variance of their query averages is
+\(O_{\mathbb P}(1/N)\). Consequently the realized fresh-test covariance
+in Appendix A converges to (B.18).
+
+\hypertarget{b.8-source-hypotheses-and-normalization}{%
+\subsection{B.8 Source hypotheses and
+normalization}\label{b.8-source-hypotheses-and-normalization}}
+
+The primary sources are:
+
+\begin{itemize}
+\tightlist
+\item
+  Zhou Fan, \emph{Approximate Message Passing algorithms for
+  rotationally invariant matrices}, Annals of Statistics 50(1), 197--224
+  (2022), \href{https://arxiv.org/pdf/2008.11892}{arXiv:2008.11892v5}.
+  In that paper, Section 2.4 gives the rectangular cumulant convention,
+  and Section 5.1, equations (5.7)--(5.13), gives the memory/covariance
+  prescription. Corollary 5.4 addresses degeneracy for the invariant
+  comparison ensemble.
+\item
+  Tianhao Wang, Xinyi Zhong, and Zhou Fan, \emph{Universality of
+  Approximate Message Passing algorithms and tensor networks}, Annals of
+  Applied Probability 34(4), 3943--3994 (2024),
+  \href{https://arxiv.org/html/2206.13037v5}{arXiv:2206.13037v5}. The
+  applicable result is Theorem 2.22 with Assumption 2.17, algorithm
+  (2.14), and prescriptions (D.4)--(D.5). Proposition D.1(b) supplies
+  the matrix criterion checked in Appendix A.
+\end{itemize}
+
+The application checks are as follows.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Requirement
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Verification
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Generalized-invariant matrix with invariant comparison law & Appendix A
+Theorem 5, applied to the perpendicular RF matrix with all
+training/query rows present \\
+Independent initialization and side information & \(A_0\) is independent
+of \(z,Y,M,h\) after teacher-coordinate separation \\
+Nonzero initial AMP second moment & \(R_1=M(Y-1/2)\) and
+\(\mathbb ER_1^2=p/4\); zero GD weights do not mean zero AMP
+initialization \\
+All side-information moments and polynomial density & Gaussian teacher
+coordinates and bounded labels/masks have exponential moments; their
+polynomial algebra is dense in \(L^2\) \\
+Coordinatewise continuous, polynomial-growth, Lipschitz functions &
+Column functions are linear; row functions are finite compositions of
+sigmoid and affine functions with deterministic coefficients \\
+Uniform Lipschitz constants over side information & Extend the mask off
+\(\{0,1\}\) by the smooth bounded function \(\sin^2(\pi x/2)\); this
+leaves actual iterates unchanged and keeps row derivatives uniformly
+bounded \\
+Eventual operator bound and positive spectral second moment & Appendix A
+Theorem 5; \(\mathbb ED^2=v>0\) \\
+Nonsingular \(\Omega_t,\Sigma_t\) & The direct induction in Section
+B.6 \\
+Empirical teacher-overlap dependence & Apply the theorem to
+deterministic overlaps first, then use (B.20) \\
+Fixed time and consistent finite aspect ratios & Every statement fixes
+\(T\) before \(d\to\infty\); deterministic parameter replacements are
+handled by (B.20) \\
+Fresh-test extraction & Mask-zero appended rows, (B.17), and the
+conditional law of large numbers \\
+\end{longtable}
+
+The source notation uses a matrix with ``\(m\) rows and \(n\) columns.''
+Here these correspond to \(N\) rows and \(m\) features, so its aspect
+parameter is \(r=\delta/\gamma\), \textbf{not} the RF ratio
+\(\gamma=m/d\). The zero padding in Section B.2 is essential when
+\(N>m\).
+
+\hypertarget{b.9-exact-first-step-validation}{%
+\subsection{B.9 Exact first-step
+validation}\label{b.9-exact-first-step-validation}}
+
+Put \[
+\mu=\mathbb E[Z_\star(\sigma(\beta Z_\star)-1/2)].
+\] Using the query-independent recursion (B.16), \[
+\widehat\Delta_{11}=\alpha/4,\quad \widehat\Phi_{11}=0,
+\quad \widehat\ell_1=\alpha\mu,\quad
+\Omega_{11}=\frac{\alpha v}{4\gamma},\quad \Psi_{11}=\lambda.
+\] Consequently \[
+Q_1=\lambda Z_1+\frac{ca\mu}{\sqrt\gamma}H_\star,
+\quad q_1=\frac{ca\mu}{\sqrt\gamma},\quad
+\Gamma_{11}=\frac{c^2v}{4\alpha\gamma}+\frac{c^2a^2\mu^2}{\gamma}.
+\] The forward memory coefficient is \(a_{11}=\lambda v\). It vanishes
+from a test score because \(R_1=0\) on the test block. The Gaussian
+residual variance is \[
+\begin{aligned}
+\Sigma_{11}
+&=v\Gamma_{11}+a^4\lambda^2\widehat\Delta_{11}\\
+&=c^2\left[\frac{\mu^2a^2v}{\gamma}
++\frac{a^4+v^2/\gamma}{4\alpha}\right].
+\end{aligned}
+\] Since \(s q_1=ca^2\mu\), the fresh-test law is exactly \[
+\boxed{S_1^{\rm test}=ca^2\mu\,Z_\star+ au_1G,\qquad
+\tau_1^2=c^2\left[\frac{\mu^2a^2v}{\gamma}
++\frac{a^4+v^2/\gamma}{4\alpha}\right],}
+\tag{B.21}
+\] with \(G\) independent standard normal. This reproduces both terms of
+the first-step variance. Omitting \(\kappa_4=\delta a^4\) would
+incorrectly remove \(c^2a^4/(4\alpha)\); forgetting the mask-zero query
+block would incorrectly retain the training self term
+\(\lambda v(Y-1/2)\).
+
+\clearpage
+
+\hypertarget{appendix-c.-total-variation-and-exact-calibration-transfer}{%
+\section{Appendix C. Total variation and exact calibration
+transfer}\label{appendix-c.-total-variation-and-exact-calibration-transfer}}
+
+Theorem, lemma, and proposition numbers in this appendix are local;
+equation and section references carry the appendix letter.
+
+\hypertarget{c.1-notation-and-the-exact-calibration-functional}{%
+\subsection{C.1 Notation and the exact calibration
+functional}\label{c.1-notation-and-the-exact-calibration-functional}}
+
+Write
+
+\[
+\begin{gathered}
+X\sim N(0,I_d),\quad Z=\theta_d^\top X,\quad \|\theta_d\|=1,\quad S=f_d(X),\\
+Y\mid X,\mathcal E_d\sim\operatorname{Bernoulli}(p(Z)),\qquad p(z)=\sigma(\beta z).
+\end{gathered}
+\]
+
+The environment \(\mathcal E_d\) contains the training data and random
+features, and the fresh \(X\) is independent of this environment. A
+realized score is a deterministic function of this fresh input. We use
+the \textbf{total-variation norm} convention
+
+\[
+\|\mu-\nu\|_{\rm TV}
+ =\sup_{|h|\le1}\left|\int h\,d\mu-\int h\,d\nu\right|,
+\tag{C.1.1}
+\]
+
+which is twice \(\sup_A|\mu(A)-\nu(A)|\) for probability measures.
+
+Let \(\mu\) be the conditional law of \((Z,S)\). Its exact calibration
+functional is
+
+\[
+\mathcal C_\beta(\mu)
+ =\mathbb E_\mu\left|
+       \mathbb E_\mu[p(Z)\mid S]-\sigma(S)\right|.
+\tag{C.1.2}
+\]
+
+This equals the original calibration error conditioned on the predicted
+probability and the environment, since sigmoid is one-to-one and
+\(\mathbb E[Y\mid X,\mathcal E_d]=p(Z)\).
+
+For a finite signed measure on the score line define
+
+\[
+\zeta_\mu(B)=\int\mathbf1_{\{s\in B\}}
+                    [p(z)-\sigma(s)]\,\mu(dz,ds).
+\]
+
+Its Radon--Nikodym derivative relative to the score marginal is
+\(\mathbb E_\mu[p(Z)\mid S=s]-\sigma(s)\), so
+
+\[
+\mathcal C_\beta(\mu)=\|\zeta_\mu\|_{\rm TV}.
+\]
+
+Consequently, for any two probability laws on \(\mathbb R^2\),
+
+\[
+\boxed{\quad
+ |\mathcal C_\beta(\mu)-\mathcal C_\beta(\nu)|
+ \le \|\mu-\nu\|_{\rm TV}.
+ \quad}
+\tag{C.1.3}
+\]
+
+Indeed \(|p(z)-\sigma(s)|\le1\), and multiplication by this bounded
+function followed by projection onto the score coordinate contracts the
+total-variation norm. Thus no continuity of a conditional-expectation
+operator under weak convergence is being asserted.
+
+There is a useful stronger statement. Let
+\(g_\mu(s)=\mathbb E_\mu[p(Z)\mid S=s]\), and choose an everywhere
+\([0,1]\)-valued version of \(g_\nu\) on the whole score line. The same
+signed-measure argument, applied to the positive measures \(g_\mu\mu_S\)
+and \(g_\nu\nu_S\), gives
+
+\[
+\int |g_\mu(s)-g_\nu(s)|\,\mu_S(ds)
+ \le 2\|\mu-\nu\|_{\rm TV}.
+\tag{C.1.4}
+\]
+
+This is convergence of the conditional calibration curve integrated
+under the actual score law. It does not assert pointwise convergence at
+every score.
+
+\hypertarget{c.2-a-deterministic-gaussian-smoothing-theorem}{%
+\subsection{C.2 A deterministic Gaussian smoothing
+theorem}\label{c.2-a-deterministic-gaussian-smoothing-theorem}}
+
+All norms on derivatives in this section are uniform over
+\(x\in\mathbb R^d\). A Hilbert--Schmidt norm is denoted by
+\(\|\cdot\|_{\rm HS}\).
+
+\textbf{Theorem 2.1 (joint TV approximation with matched covariance).}
+Let \(f_d:\mathbb R^d\to\mathbb R\) be smooth, odd functions, and let
+\(X_d\sim N(0,I_d)\). Suppose, for fixed finite \(L,H\),
+
+\[
+\|\nabla f_d\|\le L,\qquad
+\|\nabla^2 f_d\|_{\rm HS}\le H,\qquad
+\|\nabla^2 f_d\|_{\rm op}\le\varepsilon_d\longrightarrow0.
+\tag{C.2.1}
+\]
+
+Put
+
+\[
+A_d=\mathbb E[Z_df_d(X_d)],\quad
+Q_d=\mathbb E f_d(X_d)^2,\quad
+\delta_d=Q_d-A_d^2,
+\quad Z_d=\theta_d^\top X_d.
+\]
+
+If \(\delta_d\ge\delta_*>0\), then
+
+\[
+\left\|\mathcal L(Z_d,f_d(X_d))-
+ N\!\left(0,\begin{pmatrix}1&A_d\\A_d&Q_d\end{pmatrix}\right)
+\right\|_{\rm TV}\longrightarrow0.
+\tag{C.2.2}
+\]
+
+The covariance need not converge. In particular, if the pair converges
+weakly to a nonsingular centered Gaussian with covariance
+\(\left(\begin{smallmatrix}1&A\\A&Q\end{smallmatrix}\right)\), then its
+convergence is in total variation.
+
+The proof has two separate parts: weak Gaussian approximation from the
+small Hessian operator norm, and a smoothing estimate using the bounded
+Hessian Hilbert--Schmidt norm. Supplying both is necessary for a joint
+TV conclusion.
+
+\hypertarget{c.2.1-self-contained-weak-gaussian-approximation}{%
+\subsubsection{C.2.1 Self-contained weak Gaussian
+approximation}\label{c.2.1-self-contained-weak-gaussian-approximation}}
+
+For a centered smooth Gaussian functional \(f(X)\), define the
+Ornstein--Uhlenbeck semigroup
+
+\[
+P_tf(x)=\mathbb E f(e^{-t}x+\sqrt{1-e^{-2t}}X'),
+\qquad
+U_f(x)=\int_0^\infty e^{-t}P_t\nabla f(x)\,dt.
+\]
+
+Gaussian integration by parts and the semigroup generator give the
+covariance identity
+
+\[
+\mathbb E[f(X)h(X)]
+ =\mathbb E[U_f(X)\cdot\nabla h(X)].
+\tag{C.2.3}
+\]
+
+For completeness, \(f-\mathbb Ef=-\int_0^\infty\partial_tP_tf\,dt\). The
+generator is \(\mathcal L=\Delta-x\cdot\nabla\), and
+\(-\mathbb E[(\mathcal Lg)h]=\mathbb E\nabla g\cdot\nabla h\). Also
+\(\nabla P_tf=e^{-t}P_t\nabla f\). Substitution proves (C.2.3). The
+bounded derivative assumptions, Gaussian moments, and an initial
+truncation justify these integrations for the functions used here.
+
+If \(\|\nabla f\|\le L_f\) and
+\(\|\nabla^2f\|_{\rm op}\le\varepsilon_f\), then
+
+\[
+\|U_f\|\le L_f,\qquad
+\|DU_f\|_{\rm op}
+ =\left\|\int_0^\infty e^{-2t}P_t\nabla^2f\,dt\right\|_{\rm op}
+ \le\varepsilon_f/2.
+\]
+
+Set \(T_f=\nabla f\cdot U_f\). Equation (C.2.3), with \(h=f\), gives
+\(\mathbb ET_f=\operatorname{Var}(f(X))=:v_f\). Moreover
+
+\[
+\|\nabla T_f\|
+ \le\tfrac32 L_f\varepsilon_f,
+\qquad
+\operatorname{Var}(T_f)
+ \le\tfrac94 L_f^2\varepsilon_f^2
+\tag{C.2.4}
+\]
+
+by Gaussian Poincare. Apply (C.2.3) to \(h=e^{itf}\). The characteristic
+function \(\chi_f(t)=\mathbb E e^{itf}\) satisfies
+
+\[
+\chi_f'(t)=-t v_f\chi_f(t)
+           -t\mathbb E[(T_f-v_f)e^{itf}].
+\]
+
+Solving this scalar differential equation and using (C.2.4) gives
+
+\[
+|\chi_f(t)-e^{-v_ft^2/2}|
+ \le\tfrac34 L_f\varepsilon_f t^2.
+\tag{C.2.5}
+\]
+
+Apply (C.2.5) to \(f=uZ_d+v f_d(X_d)\), whose gradient is bounded by
+\(|u|+|v|L\) and Hessian operator norm by \(|v|\varepsilon_d\). Along
+every subsequence where \((A_d,Q_d)\to(A,Q)\), it follows that
+\((Z_d,f_d(X_d))\) converges weakly to the Gaussian with that
+covariance. Such covariance-convergent subsequences exist because
+Poincare gives \(Q_d\le L^2\), and \(|A_d|\le L\).
+
+This derivation uses no independence of feature coordinates and no
+assumed random-feature Gaussian equivalence.
+
+\hypertarget{c.2.2-a-nondegenerate-gaussian-derivative-matrix-with-high-probability}{%
+\subsubsection{C.2.2 A nondegenerate Gaussian derivative matrix with
+high
+probability}\label{c.2.2-a-nondegenerate-gaussian-derivative-matrix-with-high-probability}}
+
+Temporarily suppress the dimension subscript. Write
+
+\[
+g=\nabla f,\quad J=\nabla^2f,\quad
+P=I-\theta\theta^\top,\quad q=Pg,\quad
+\Delta=\|q\|^2.
+\]
+
+The determinant of the Gaussian derivative Gram matrix of \((Z,f)\) is
+exactly \(\Delta\). Let \(a=\theta\cdot g\). Gaussian integration by
+parts gives \(\mathbb Ea=A\), while Poincare gives
+
+\[
+\operatorname{Var}(a)\le\mathbb E\|J\theta\|^2
+ \le\varepsilon^2.
+\]
+
+Using Poincare again for \(f\),
+
+\[
+\mathbb E\Delta
+ =\mathbb E\|g\|^2-\mathbb Ea^2
+ \ge Q-A^2-\varepsilon^2.
+\tag{C.2.6}
+\]
+
+Also \(\nabla\Delta=2Jq\), so
+
+\[
+\operatorname{Var}(\Delta)
+ \le 4L^2\varepsilon^2.
+\tag{C.2.7}
+\]
+
+If \(Q-A^2\ge\delta_*\), equations (C.2.6)--(C.2.7) imply
+
+\[
+\Pr\{\Delta\le\delta_*/4\}=o(1).
+\tag{C.2.8}
+\]
+
+For example, when \(\varepsilon^2\le\delta_*/4\), the left side is at
+most \(16L^2\varepsilon^2/\delta_*^2\), since
+\(\mathbb E\Delta-\delta_*/4\ge\delta_*/2\).
+
+Thus one needs neither a pointwise lower bound on \(\Delta\) nor inverse
+moments of \(\Delta\) over its entire distribution.
+
+\hypertarget{c.2.3-localized-integration-by-parts-and-the-smoothing-estimate}{%
+\subsubsection{C.2.3 Localized integration by parts and the smoothing
+estimate}\label{c.2.3-localized-integration-by-parts-and-the-smoothing-estimate}}
+
+Choose a fixed smooth \(\chi:[0,\infty)\to[0,1]\) equal to zero on
+\([0,\delta_*/8]\) and to one on \([\delta_*/4,\infty)\). On
+\(\Delta>0\) define
+
+\[
+v_2=\frac q\Delta,\qquad
+v_1=\theta-a v_2.
+\]
+
+They obey
+
+\[
+\theta\cdot v_1=1,\quad g\cdot v_1=0,
+\qquad
+\theta\cdot v_2=0,\quad g\cdot v_2=1.
+\tag{C.2.9}
+\]
+
+Set \(V_i=\chi(\Delta)v_i\), extended by zero on the region where the
+cutoff vanishes. These are globally smooth vector fields. On the support
+of the cutoff, \(\Delta\ge\delta_*/8\). The bounds
+
+\[
+\|v_2\|=\Delta^{-1/2},\qquad
+\|Dv_2\|_{\rm HS}
+ \le\frac{\|J\|_{\rm HS}}\Delta
+       +\frac{\|q\|\|\nabla\Delta\|}{\Delta^2}
+ \le\frac{3H}\Delta
+\]
+
+and \(|a|\le L\), \(\|\nabla a\|\le H\), together with the cutoff
+derivative bound, imply
+
+\[
+\|V_i\|+\|DV_i\|_{\rm HS}
+ \le C(L,H,\delta_*),\qquad i=1,2.
+\tag{C.2.10}
+\]
+
+The constant is independent of input dimension. No trace-of-Hessian
+bound is used here.
+
+For a vector field \(V\), its Gaussian divergence is
+\(\mathfrak d(V)=X\cdot V-\operatorname{div}V\). Two Gaussian
+integrations by parts give
+
+\[
+\mathbb E\mathfrak d(V)^2
+ =\mathbb E\|V\|^2
+   +\mathbb E\sum_{i,j}(\partial_iV_j)(\partial_jV_i)
+ \le\mathbb E\|V\|^2+\mathbb E\|DV\|_{\rm HS}^2.
+\tag{C.2.11}
+\]
+
+This identity can first be proved for smooth truncated fields and then
+extended by Gaussian Sobolev approximation; (C.2.10) supplies the
+required integrability. In particular its bound is dimension-free,
+although the two terms defining \(\mathfrak d(V)\) separately need not
+be.
+
+For \(\psi\in C_c^\infty(\mathbb R^2)\), (C.2.9) and integration by
+parts yield
+
+\[
+\mathbb E[\chi(\Delta)\,\partial_i\psi(Z,f)]
+ =\mathbb E[\psi(Z,f)\mathfrak d(V_i)].
+\tag{C.2.12}
+\]
+
+Therefore the positive subprobability measure
+
+\[
+\eta(B)=\mathbb E[\chi(\Delta)\mathbf1_{\{(Z,f)\in B\}}]
+\]
+
+has distributional first derivatives with total-variation norms bounded
+by \(C(L,H,\delta_*)\). More directly, integrate \(\psi(x+h)-\psi(x)\)
+along the segment from \(x\) to \(x+h\) and use (C.2.12). Taking the
+supremum over smooth bounded test functions gives
+
+\[
+\|\tau_h\eta-\eta\|_{\rm TV}\le C\|h\|.
+\tag{C.2.13}
+\]
+
+The same supremum equals the total-variation norm for finite regular
+Borel measures; smooth approximation of continuous compactly supported
+tests justifies this step.
+
+Let \(\rho_r\) be a nonnegative smooth probability mollifier on
+\(\mathbb R^2\), supported in a ball of radius \(r\). Integrating
+(C.2.13) against the mollifier and writing \(\mu=\mathcal L(Z,f)\) gives
+
+\[
+\begin{aligned}
+\|\mu-\mu*\rho_r\|_{\rm TV}
+&\le2\|\mu-\eta\|_{\rm TV}
+       +\|\eta-\eta*\rho_r\|_{\rm TV}\\
+&\le2\mathbb E[1-\chi(\Delta)]+Cr
+ =o(1)+Cr.
+\end{aligned}
+\tag{C.2.14}
+\]
+
+This is the required uniform regularization estimate for the joint law.
+
+\hypertarget{c.2.4-completing-the-tv-proof}{%
+\subsubsection{C.2.4 Completing the TV
+proof}\label{c.2.4-completing-the-tv-proof}}
+
+Pass to any subsequence along which \((A_d,Q_d)\to(A,Q)\). Its Gaussian
+covariance is nonsingular because \(Q-A^2\ge\delta_*\). Section C.2.1
+gives \(\mu_d\Rightarrow G_{A,Q}\). For fixed \(r>0\), convolution
+densities \(\mu_d*\rho_r\) converge pointwise to \(G_{A,Q}*\rho_r\),
+since the translated mollifier is a bounded continuous test function.
+All these nonnegative densities have mass one, so Scheffe's argument
+gives convergence in \(L^1\), equivalently TV. The elementary argument
+is \(\int|p_d-p|=2-2\int\min(p_d,p)\to0\), by dominated convergence for
+the minimum.
+
+Use (C.2.14), this fixed-\(r\) convergence, and
+\(\|G_{A,Q}-G_{A,Q}*\rho_r\|_{\rm TV}\to0\) as \(r\downarrow0\). First
+taking the dimension limit and then \(r\downarrow0\) proves
+\(\|\mu_d-G_{A,Q}\|_{\rm TV}\to0\). Gaussian densities with converging
+nonsingular covariance matrices also converge pointwise and in \(L^1\),
+so \(\|G_{A_d,Q_d}-G_{A,Q}\|_{\rm TV}\to0\). The triangle inequality
+proves (C.2.2) on this subsequence. Compactness of the covariance
+parameters then proves (C.2.2) for the whole sequence. This completes
+Theorem 2.1.
+
+For the last assertion of the theorem, bounded gradients and oddness
+give the uniform fourth-moment bound \(\mathbb E f_d^4\le5L^4\): apply
+Poincare to \(f_d^2\) and use \(\mathbb E f_d^2\le L^2\). Hence a weak
+limit gives convergence of \(A_d,Q_d\) to \(A,Q\), and \(Q>A^2\)
+supplies \(\delta_*>0\) eventually.
+
+\hypertarget{c.3-structural-theorem-for-trained-random-feature-readouts}{%
+\subsection{C.3 Structural theorem for trained random-feature
+readouts}\label{c.3-structural-theorem-for-trained-random-feature-readouts}}
+
+Let \(F_d\) have rows \(W_j^\top\), and, conditional on an arbitrary
+environment containing \((F_d,b_d)\), let
+
+\[
+f_d(x)=\sum_{j=1}^m b_{d,j}\tanh(W_j^\top x).
+\tag{C.3.1}
+\]
+
+There is \textbf{no independence assumption between the trained \(b_d\)
+and the features or training sample}. The fresh input remains
+independent of the environment.
+
+Writing \(J_2=\sup_u|\tanh''u|\le2\), the exact derivative bounds are
+
+\[
+\begin{aligned}
+\|\nabla f_d\|
+ &\le\|F_d\|_{\rm op}\|b_d\|_2,\\
+\|\nabla^2f_d\|_{\rm op}
+ &\le J_2\|F_d\|_{\rm op}^2\|b_d\|_\infty,\\
+\|\nabla^2f_d\|_{\rm HS}
+ &\le J_2\|F_d\|_{\rm op}^2\|b_d\|_2.
+\end{aligned}
+\tag{C.3.2}
+\]
+
+For the last inequality use
+\(\nabla^2 f_d=F_d^\top\operatorname{diag} (b_{d,j}\tanh''(W_j^\top x))F_d\)
+and \(\|ABC\|_{\rm HS}\le\|A\|_{\rm op}\|B\|_{\rm HS}\|C\|_{\rm op}\).
+
+Let
+
+\[
+A_d=\mathbb E_X[Zf_d(X)\mid\mathcal E_d],\quad
+Q_d=\mathbb E_X[f_d(X)^2\mid\mathcal E_d],\quad
+\delta_d=Q_d-A_d^2.
+\tag{C.3.3}
+\]
+
+\textbf{Corollary 3.1 (conditional matched-Gaussian TV).} If
+
+\[
+\|F_d\|_{\rm op}=O_P(1),\qquad
+\|b_d\|_2=O_P(1),\qquad
+\|b_d\|_\infty\to0\text{ in probability},\qquad
+\delta_d^{-1}=O_P(1),
+\tag{C.3.4}
+\]
+
+then, writing \(\mu_d=\mathcal L_X(Z,f_d(X)\mid\mathcal E_d)\),
+
+\[
+\|\mu_d-G_{A_d,Q_d}\|_{\rm TV}\to0
+\quad\text{in probability and every finite }L^p.
+\tag{C.3.5}
+\]
+
+Here \(\delta_d^{-1}=O_P(1)\) includes positivity with probability
+tending to one; values on a vanishing exceptional event can be assigned
+arbitrarily. The \(L^p\) conclusion uses the bound of two for TV.
+
+To justify the use of deterministic Theorem 2.1 with random
+environments, first restrict to events with fixed bounds on
+\(\|F_d\|_{\rm op},\|b_d\|_2,\delta_d^{-1}\). The deterministic
+convergence is uniform in the sequential sense on each such bounded
+class: if uniformity failed, choose one violating deterministic
+environment at each dimension and contradict Theorem 2.1. The \(O_P(1)\)
+assumptions make the complementary probabilities arbitrarily small.
+Finally use \(\|b_d\|_\infty\to0\). No almost-sure boundedness of the
+sequence of random environments is assumed.
+
+The same reasoning gives a direct transfer version: if the first three
+conditions in (C.3.4) hold and the conditional law of \((Z,f_d(X))\)
+converges weakly in probability to a fixed nonsingular Gaussian, then
+its convergence is in TV in probability. Uniform fourth moments on each
+bounded environment event give convergence of the covariances, as in the
+last paragraph of Section C.2.
+
+\hypertarget{c.3.1-rf-covariance-relative-delocalization-and-nondegeneracy}{%
+\subsubsection{C.3.1 RF covariance, relative delocalization, and
+nondegeneracy}\label{c.3.1-rf-covariance-relative-delocalization-and-nondegeneracy}}
+
+For Gaussian rows \(W_j\sim N(0,I_d/d)\), define
+
+\[
+a_1=\mathbb E[G\tanh G],\quad v=\mathbb E\tanh^2G,
+\quad\nu=v-a_1^2>0.
+\]
+
+Strict positivity holds by the strict Cauchy--Schwarz inequality, since
+\(\tanh G\) is not a multiple of \(G\) almost surely. Put
+\(q_j=\|W_j\|^2\),
+\(D_A=\operatorname{diag}(\mathbb E\tanh'(\sqrt{q_j}G))\), and
+\(\Sigma_F=\mathbb E_X[h(X)h(X)^\top]\). The exact first-Hermite
+decomposition and the operator bound in Appendix A give
+
+\[
+\Sigma_F=D_AFF^\top D_A+D_R+E_F,
+\quad \|D_R-\nu I\|_{\rm op}\to0,
+\quad\|E_F\|_{\rm op}\to0
+\tag{C.3.6}
+\]
+
+in probability, when \(m/d\to\gamma\in(0,\infty)\). Here
+\((D_R)_{jj}=\mathbb E\tanh^2(\sqrt{q_j}G)-q_j(D_A)_{jj}^2\). The
+off-diagonal remainder obeys the cubic Hermite bound, whose squared
+Frobenius expectation is \(O(d^{-1})\); row-norm concentration handles
+the diagonal.
+
+Gaussian integration by parts gives the exact covariance
+\(A_d=\theta^\top F^\top D_A b_d\). Thus, uniformly over all readout
+vectors, including data-dependent vectors,
+
+\[
+\begin{aligned}
+Q_d-A_d^2
+ &=\|(I-\theta\theta^\top)F^\top D_A b_d\|^2
+   +b_d^\top(D_R+E_F)b_d\\
+ &\ge (\nu-o_P(1))\|b_d\|_2^2.
+\end{aligned}
+\tag{C.3.7}
+\]
+
+In particular, a norm bounded away from zero supplies the last condition
+of (C.3.4). There is also a scale-free alternative: if
+
+\[
+\Pr\{b_d=0\}\to0,\qquad
+\frac{\|b_d\|_\infty}{\|b_d\|_2}\to0
+\quad\text{in probability},
+\tag{C.3.8}
+\]
+
+retain \(\|F_d\|_{\rm op}=O_P(1)\), which the Gaussian-row hypothesis
+supplies, and normalize the score by \(\|b_d\|_2\). Its coefficient norm
+is one and (C.3.7) gives a residual variance at least \(\nu/2\) with
+probability tending to one. Corollary 3.1 applies to the normalized
+score. The invertible, environment-dependent rescaling of its second
+coordinate preserves TV, proving (C.3.5) for the original score as well.
+This variant does not require its raw variance to stay bounded away from
+zero.
+
+Absolute coefficient delocalization alone cannot be silently substituted
+for relative delocalization when the whole coefficient vector vanishes.
+At exactly zero score the conditioning sigma-field changes, so this is a
+substantive distinction for calibration.
+
+\hypertarget{c.4-later-fixed-time-readouts-exact-gaussian-calibration-proxy}{%
+\subsection{C.4 Later fixed-time readouts: exact Gaussian calibration
+proxy}\label{c.4-later-fixed-time-readouts-exact-gaussian-calibration-proxy}}
+
+For \(Q>A^2\), define the deterministic scalar functional
+
+\[
+C_\beta(A,Q)=\mathbb E_T\left|
+ \mathbb E_H\sigma\!\left(\beta\left[
+ \frac A{\sqrt Q}T+\sqrt{1-\frac{A^2}Q}\,H\right]\right)
+ -\sigma(\sqrt Q\,T)\right|,
+\tag{C.4.1}
+\]
+
+where \(T,H\) are independent standard normals. Corollary 3.1 and
+(C.1.3) immediately imply
+
+\[
+\operatorname{CE}_d-C_\beta(A_d,Q_d)\longrightarrow0
+\quad\text{in probability and every finite }L^p.
+\tag{C.4.2}
+\]
+
+This is an exact calibration approximation for the original trained
+network with its own conditional covariance, not calibration under a
+different training distribution. It holds for any fixed training time
+whose coefficients satisfy (C.3.4), or the relative variant (C.3.8).
+
+If additionally \(A_d\to A\) and \(Q_d\to Q>A^2\) in probability,
+bounded convergence in (C.4.1) gives the deterministic exact limit
+\(\operatorname{CE}_d\to C_\beta(A,Q)\). This explicitly identifies what
+a later-time overlap or DMFT theorem must provide.
+
+Appendix A proves fixed-horizon coefficient bounds and delocalization
+for actual GD. Appendix B proves positive residual variance at each
+fixed positive time for every fixed positive step and supplies the
+deterministic overlap limits. These results provide all inputs to the
+transfer theorem above.
+
+\hypertarget{c.4.1-risk-also-has-a-covariance-proxy}{%
+\subsubsection{C.4.1 Risk also has a covariance
+proxy}\label{c.4.1-risk-also-has-a-covariance-proxy}}
+
+On events with bounded \(\|F\|_{\rm op}\|b_d\|_2\), Gaussian Poincare
+and oddness bound the score second moment uniformly. Truncate logistic
+loss, use (C.3.5) for the bounded truncation, then let the truncation
+level grow. The upper bound \(0\le\ell(Y,S)\le\log2+|S|\) makes the tail
+uniformly small on these events. Localization therefore proves
+
+\[
+L_d-\left\{
+ \mathbb E_T\log\bigl(2\cosh(\sqrt{Q_d}T/2)\bigr)
+ -\kappa A_d\right\}\longrightarrow0
+\quad\text{in probability}.
+\tag{C.4.3}
+\]
+
+The Gaussian formula uses
+\(\mathbb E[S\sigma(\beta Z)]=A_d\mathbb E[Z\sigma(\beta Z)] =\kappa A_d\).
+An \(L^1\) conclusion for (C.4.3) needs unconditional uniform
+integrability; it is not inferred from \(O_P(1)\) bounds alone.
+
+\hypertarget{c.4.2-positive-calibration-without-deterministic-overlap-convergence}{%
+\subsubsection{C.4.2 Positive calibration without deterministic overlap
+convergence}\label{c.4.2-positive-calibration-without-deterministic-overlap-convergence}}
+
+For every \(\beta\ge0\), \(Q>A^2\), and \(Q>0\),
+
+\[
+C_\beta(A,Q)>0.
+\tag{C.4.4}
+\]
+
+If \(\beta=0\) or \(A=0\), the conditional teacher mean is \(1/2\),
+while \(\sigma(S)\) is nonconstant. If \(\beta>0,A<0\), the former mean
+is strictly decreasing in the score whereas the prediction is strictly
+increasing. If \(\beta>0,A>0\), write the former mean as
+
+\[
+g(s)=\mathbb E_H\sigma(\lambda s+rH),\quad
+\lambda=\beta A/Q>0,\quad r=\beta\sqrt{1-A^2/Q}>0.
+\]
+
+If calibration held, continuity and positivity of the Gaussian density
+would imply \(g(s)=\sigma(s)\) for every real \(s\). But dominated
+convergence gives
+
+\[
+e^{\lambda s}(1-g(s))\longrightarrow e^{r^2/2}
+\quad(s\to+\infty).
+\]
+
+Comparison with the logistic tail first forces \(\lambda=1\), then
+\(e^{r^2/2}=1\), a contradiction.
+
+The map \(C_\beta\) is continuous on the region \(Q>A^2\). Hence for
+each fixed \(0<\delta_*\le Q_*<\infty\),
+
+\[
+c_*(\beta,\delta_*,Q_*)
+ :=\min_{\substack{Q\le Q_*\\Q-A^2\ge\delta_*}}
+ C_\beta(A,Q)>0.
+\tag{C.4.5}
+\]
+
+The set is compact and \(Q\ge\delta_*\). Therefore if a finite
+collection of trained times satisfies common deterministic upper and
+lower covariance bounds with probability tending to one, as well as the
+hypotheses of Corollary 3.1, then
+
+\[
+\Pr\left\{\min_{1\le t\le T}\operatorname{CE}_{t,d}
+                    \ge c_*/2\right\}\longrightarrow1.
+\tag{C.4.6}
+\]
+
+A union bound over the fixed number of times suffices. Deterministic
+overlap convergence is unnecessary for this qualitative conclusion. It
+is still necessary for an explicit deterministic trajectory of risk and
+calibration, unless another argument identifies those functionals
+without identifying the overlaps.
+
+\clearpage
+
+\hypertarget{appendix-d.-uniform-time-control-in-the-sample-rich-regime}{%
+\section{Appendix D. Uniform time control in the sample-rich
+regime}\label{appendix-d.-uniform-time-control-in-the-sample-rich-regime}}
+
+Theorem, lemma, and proposition numbers in this appendix are local;
+equation and section references carry the appendix letter.
+
+\hypertarget{d.1-model-constants-and-theorem}{%
+\subsection{D.1 Model, constants, and
+theorem}\label{d.1-model-constants-and-theorem}}
+
+Let \[
+X_i\stackrel{\mathrm{iid}}\sim N(0,I_d),\qquad
+Y_i\mid X_i\sim\operatorname{Bernoulli}(\sigma(\beta\theta^\top X_i)),
+\quad \|\theta\|=1,
+\] with conditionally independent labels, fixed finite \(\beta\geq0\),
+and \(\sigma(u)=(1+e^{-u})^{-1}\). Independently, the rows of
+\(F\in\mathbb R^{m\times d}\) are \(W_j\sim N(0,I_d/d)\). Put \[
+h(x)=\tanh(Fx),\quad H_{ij}=h_j(X_i),\quad
+\mathcal L_n(b)=\frac1n\sum_{i=1}^n
+ \big\{\log(1+e^{h(X_i)^\top b})-Y_i h(X_i)^\top b\big\}.
+\tag{D.1.1}
+\] Assume \(n/d\to\alpha>0\), \(m/d\to\gamma>0\). The raw score is
+\(b^\top h(x)\); in the alternative network notation \(b=a/\sqrt m\).
+The GD update in the other notes is exactly \[
+b^0=0,\qquad b^{t+1}=b^t-\eta_d\nabla\mathcal L_n(b^t),
+\qquad \eta_d=\frac{cd}{m}.
+\tag{D.1.2}
+\]
+
+Here are explicit, deliberately conservative constants. For
+\(G\sim N(0,1)\), define \[
+a_1=\mathbb E[G\tanh G],\quad v=\mathbb E\tanh^2G,
+\quad \nu=v-a_1^2>0.
+\] Choose any deterministic \(L\) for which
+\(\|F\|_{\mathrm{op}}\leq L\) with probability tending to one. The
+elementary Gaussian net bound permits, for example, \[
+L=8\sqrt{1+\gamma}.
+\] Set \[
+s=\nu/2,\qquad \kappa=\sqrt{s/2},\qquad
+p_0=\frac{s^2}{20L^4},\qquad
+B=\sqrt{2\log(4/p_0)},
+\] \[
+q_\beta=\sigma(-\beta B),\quad
+p_1=q_\beta p_0/2,\quad
+\mathfrak a=\kappa p_1/4,\quad
+C_*=\max\left\{1,\left(\frac{32L}{\kappa p_1}\right)^2\right\}.
+\tag{D.1.3}
+\] The ratio and step assumptions for this appendix are \[
+\boxed{\quad\alpha/\gamma>C_*,\qquad
+0<c<\frac{\gamma}{2\Lambda},\quad
+\Lambda=16L^2.\quad}
+\tag{D.1.4}
+\] These define a nonempty proportional regime for each fixed
+\(\beta,\gamma\). No assertion that these thresholds are sharp is made.
+
+Further set \[
+R_0=\frac{\log2}{\mathfrak a},\quad R=2R_0,
+\quad C_H=64L^2,\quad \delta=p_0/4,
+\quad M=R\sqrt{C_H/\delta},
+\] \[
+\chi=\frac{\kappa^2p_0}{16},\qquad
+\mu=\chi\sigma'(M)>0,\qquad
+\eta_-=\frac{c}{2\gamma},\qquad q=1-\eta_-\mu\in(0,1).
+\tag{D.1.5}
+\] All these constants are independent of \(d\), although some are very
+small or very large.
+
+\textbf{Theorem 1 (whole GD trajectory).} Under (D.1.4), with
+probability tending to one:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\mathcal L_n(b)\geq\mathfrak a\|b\|\) for every \(b\in\mathbb R^m\).
+  There is a unique finite unregularized MLE \(b^*\), with
+  \(\|b^*\|\leq R_0\).
+\item
+  Every GD iterate and every feature-deleted GD iterate defined in
+  Section D.6 lies in \(\{\|b\|\leq R_0\}\). On the larger ball
+  \(\{\|b\|\leq R\}\), \[
+  \mu I\preceq\nabla^2\mathcal L_n(b)\preceq\Lambda I.
+  \tag{D.1.6}
+  \]
+\item
+  For every integer \(t\geq0\), simultaneously, \[
+  \|b^t-b^*\|\leq R_0q^t.
+  \tag{D.1.7}
+  \]
+\item
+  The MLE and the whole trajectory are delocalized: \[
+  \|b^*\|_\infty+\sup_{t\geq0}\|b^t\|_\infty
+     =O_P\!\left(\sqrt{\frac{\log d}{d}}\right).
+  \tag{D.1.8}
+  \]
+\item
+  For a deterministic \(r_*>0\), \[
+  \inf_{t\geq1}\|b^t\|\geq r_*,\qquad \|b^*\|\geq r_*
+  \tag{D.1.9}
+  \] with probability tending to one. One permissible choice is \[
+  r_* =\frac c4\sqrt{\frac{v\rho_\beta}{\alpha\gamma}},
+  \qquad \rho_\beta=\mathbb E\sigma'(\beta G)>0.
+  \tag{D.1.10}
+  \]
+\end{enumerate}
+
+The label mechanism is not independent of the feature vector after
+conditioning on \(F\). The proof below does not make that assumption.
+
+\hypertarget{d.2-the-good-feature-event}{%
+\subsection{D.2 The good feature
+event}\label{d.2-the-good-feature-event}}
+
+Write \(\Sigma_F=\mathbb E_X h(X)h(X)^\top\) and
+\(g_F=\mathbb E_X[(\theta^\top X)h(X)]\). There is an event
+\(\mathcal F_d\), depending only on \(F\), on which \[
+\|F\|_{\mathrm{op}}\leq L,\qquad
+\Sigma_F\succeq sI,\qquad
+\Sigma_F-g_Fg_F^\top\succeq sI,
+\tag{D.2.1}
+\] with \(\mathbb P(\mathcal F_d^c)=O(d^{-1})+O(de^{-c_Fd})\) for some
+fixed \(c_F>0\). Constants in probability estimates may depend on fixed
+model parameters.
+
+For completeness, the covariance claim follows directly from Hermite
+expansion. Put \(q_j=\|W_j\|^2\), \(A(q)=\mathbb E\tanh'(\sqrt qG)\),
+and \(D_A=\operatorname{diag}(A(q_j))\). Oddness gives only odd Hermite
+coefficients, and Gaussian integration by parts identifies the linear
+coefficient. Thus \[
+\Sigma_F=D_AFF^\top D_A+D_\nu+E,
+\quad (D_\nu)_{jj}=\mathbb E\tanh^2(\sqrt{q_j}G)-q_jA(q_j)^2,
+\tag{D.2.2}
+\] where \(E_{jj}=0\) and, for \(j\ne k\), \[
+|E_{jk}|\leq |\rho_{jk}|^3,\qquad
+\rho_{jk}=\frac{W_j^\top W_k}{\|W_j\|\|W_k\|}.
+\tag{D.2.3}
+\] Indeed, Cauchy--Schwarz on the Hermite coefficients of degree at
+least three bounds their sum by \(|\rho_{jk}|^3\), since tanh has second
+moment at most one. Independent Gaussian directions give \[
+\mathbb E\|E\|_F^2\leq
+\frac{15m(m-1)}{d(d+2)(d+4)}=O(d^{-1}).
+\tag{D.2.4}
+\] Uniform concentration of \(q_j\) around one and continuity give
+\(\min_j(D_\nu)_{jj}\geq3\nu/4\) except on an exponentially unlikely
+event. Markov's inequality gives \(\|E\|_{\mathrm{op}}\leq\nu/4\) with
+failure \(O(d^{-1})\). Also \[
+g_F=D_AF\theta,
+\quad
+\Sigma_F-g_Fg_F^\top
+=D_AF(I-\theta\theta^\top)F^\top D_A+D_\nu+E\succeq sI.
+\tag{D.2.5}
+\] The operator norm bound follows by a Gaussian sphere-net argument.
+These observations prove (D.2.1).
+
+Conditional on \(F\in\mathcal F_d\), for every unit \(u\in\mathbb R^m\),
+the function \(x\mapsto u^\top h(x)\) is odd and \(L\)-Lipschitz. In
+particular, \[
+\mathbb E e^{t u^\top h(X)}\leq e^{t^2L^2/2},\qquad
+s\leq\mathbb E(u^\top h(X))^2\leq L^2,
+\quad
+\mathbb E(u^\top h(X))^4\leq5L^4.
+\tag{D.2.6}
+\] The fourth-moment bound follows from Gaussian Poincare applied first
+to the centered function and then to its square:
+\(\mathbb E f^4\leq(\mathbb E f^2)^2+4L^2\mathbb E f^2\leq5L^4\).
+
+\hypertarget{d.3-uniform-small-ball-events-and-noisy-label-coercivity}{%
+\subsection{D.3 Uniform small-ball events and noisy-label
+coercivity}\label{d.3-uniform-small-ball-events-and-noisy-label-coercivity}}
+
+Everything in this section is conditional on a fixed
+\(F\in\mathcal F_d\). The pairs \((X_i,Y_i)\) are iid under this
+conditioning. For each unit \(u\), Paley--Zygmund, or Cauchy--Schwarz
+applied above the threshold, gives \[
+\mathbb P(|u^\top h(X)|\geq\kappa)\geq p_0.
+\tag{D.3.1}
+\] Let \(Z=\theta^\top X\) and \(T=2Y-1\). The chosen \(B\) has
+\(\mathbb P(|Z|>B)\leq p_0/2\). On \(|Z|\leq B\), either label has
+conditional probability at least \(q_\beta\). Therefore \[
+\mathbb P(-T u^\top h(X)\geq\kappa)
+\geq q_\beta\mathbb P(|u^\top h(X)|\geq\kappa,|Z|\leq B)
+\geq p_1.
+\tag{D.3.2}
+\] This is a conditional-label calculation at each \(X\); it never
+separates the dependent events involving \(h(X)\) and \(Z\).
+
+Define the bounded cutoff \[
+\psi(x)=
+\begin{cases}
+0,&x\leq\kappa/2,\\
+2x/\kappa-1,&\kappa/2<x<\kappa,\\
+1,&x\geq\kappa.
+\end{cases}
+\tag{D.3.3}
+\] It is \(2/\kappa\)-Lipschitz and vanishes at zero. For either class
+\[
+f_u(X,Y)=\psi(-T u^\top h(X)),\qquad
+\widetilde f_u(X)=\psi(|u^\top h(X)|),\quad \|u\|=1,
+\] symmetrization and Rademacher contraction give \[
+\mathbb E\sup_{\|u\|=1}|(P_n-P)f_u|
+\leq\frac{8}{\kappa}
+ \mathbb E\left\|\frac1n\sum_i\epsilon_iT_i h(X_i)\right\|
+\leq\frac{8L}{\kappa}\sqrt{\frac mn}.
+\tag{D.3.4}
+\] The same bound holds for \(\widetilde f_u\), with \(T_i\) omitted.
+The numerical factor eight safely includes the absolute-value form of
+contraction. The last inequality uses \(T_i^2=1\) and the independent
+Rademacher signs, not independence of \(T_i\) and \(h(X_i)\).
+
+Since changing one sample changes each supremum by at most \(1/n\),
+bounded differences imply an upper-tail bound \(e^{-2nz^2}\) above its
+expectation. If \(n/m\geq C_*\), (D.3.4) is at most \(p_1/4\). Using
+\(z=p_1/4\) for the signed class and \(z=p_0/4\) for the unsigned class
+proves, simultaneously, except with probability \[
+e^{-np_1^2/8}+e^{-np_0^2/8},
+\tag{D.3.5}
+\] that for every unit \(u\), \[
+\frac1n\sum_i\psi(-T_i u^\top h_i)\geq p_1/2,
+\qquad
+\frac1n\#\{i:|u^\top h_i|>\kappa/2\}\geq p_0/2.
+\tag{D.3.6}
+\] Measurability of the suprema is unproblematic: the cutoff classes are
+continuous in \(u\), so a countable dense subset of the sphere suffices.
+
+The logistic loss obeys \(\log(1+e^{-Tz})\geq(-Tz)_+\). Also
+\(x_+\geq(\kappa/2)\psi(x)\). Consequently, for every \(b\ne0\), using
+\(u=b/\|b\|\), \[
+\mathcal L_n(b)
+\geq\|b\|\frac1n\sum_i(-T_i u^\top h_i)_+
+\geq\frac{\kappa p_1}{4}\|b\|
+=\mathfrak a\|b\|.
+\tag{D.3.7}
+\] The inequality at \(b=0\) is immediate. Thus the entire initial
+sublevel set \(\{\mathcal L_n\leq\log2\}\) is contained in the
+deterministic radius-\(R_0\) ball.
+
+\hypertarget{d.4-robust-covariance-and-curvature-on-the-whole-ball}{%
+\subsection{D.4 Robust covariance and curvature on the whole
+ball}\label{d.4-robust-covariance-and-curvature-on-the-whole-ball}}
+
+The unsigned event in (D.3.6) gives an arbitrary-deletion bound: for
+\textbf{every} subset \(I\subseteq\{1,\ldots,n\}\) with
+\(|I^c|\leq\delta n\), \[
+\frac1n\sum_{i\in I}h_i h_i^\top\succeq\chi I_m.
+\tag{D.4.1}
+\] Indeed, for each unit \(u\), at least \(p_0n/2\) rows have
+\(|u^\top h_i|>\kappa/2\); after arbitrary deletion of at most
+\(p_0n/4\) rows, at least \(p_0n/4\) remain, contributing at least
+\(\kappa^2p_0/16\). This proof does not union-bound over subsets and
+does not assume deleted rows are independent of the data.
+
+We also have, with conditional failure at most \(2e^{-3n}\) when
+\(n\geq m\), \[
+\|H\|_{\mathrm{op}}\leq8L\sqrt n,
+\qquad \frac1nH^\top H\preceq C_H I_m.
+\tag{D.4.2}
+\] For a direct proof, take \(1/4\)-nets of the two unit spheres, of
+cardinalities at most \(9^n,9^m\). Each bilinear form \(u^\top Hv\) is
+centered \(L\)-subGaussian by independence of the rows and (D.2.6). The
+bound at \(4L\sqrt n\), a union bound, and the factor-two net inequality
+give failure \(2\exp\{(n+m)\log9-8n\}\leq2e^{-3n}\). This uses no
+within-row independence.
+
+For any \(\|b\|\leq R\), let \(I_b=\{i:|h_i^\top b|\leq M\}\). Equation
+(D.4.2) gives \[
+\frac{|I_b^c|}{n}\leq\frac{b^\top H^\top Hb}{nM^2}
+\leq\frac{C_HR^2}{M^2}=\delta.
+\] The logistic Hessian is therefore bounded simultaneously on the ball
+by \[
+\nabla^2\mathcal L_n(b)
+=\frac1n\sum_i\sigma'(h_i^\top b)h_ih_i^\top
+\succeq\sigma'(M)\frac1n\sum_{i\in I_b}h_ih_i^\top
+\succeq\mu I_m.
+\tag{D.4.3}
+\] Globally, \(\nabla^2\mathcal L_n(b)\preceq C_HI/4=\Lambda I\). Thus
+the desired curvature is simultaneous for all points in the ball, not
+merely at a prespecified iterate.
+
+Let \(\mathcal G_d\) be the feature event together with (D.3.6) and
+(D.4.2). For large \(d\), (D.1.4) gives \(n/m\geq C_*\), and \[
+\mathbb P(\mathcal G_d^c)
+\leq\mathbb P(\mathcal F_d^c)
+ +e^{-np_1^2/8}+e^{-np_0^2/8}+2e^{-3n}=o(1).
+\tag{D.4.4}
+\]
+
+\hypertarget{d.5-mle-existence-and-uniform-contraction}{%
+\subsection{D.5 MLE existence and uniform
+contraction}\label{d.5-mle-existence-and-uniform-contraction}}
+
+On \(\mathcal G_d\), coercivity and continuity give a finite global
+minimizer. Its loss is at most \(\mathcal L_n(0)=\log2\), so its norm is
+at most \(R_0\). Strict convexity on the containing ball proves
+uniqueness; call the minimizer \(b^*\). Its full gradient is zero.
+
+For probabilistic expressions involving the MLE, assign \(b^*=0\) on any
+exceptional realization without a unique finite MLE. This arbitrary
+extension has vanishing probability and does not change any conclusion.
+
+For large \(d\), the step assumption implies \[
+\eta_-\leq\eta_d\leq2c/\gamma<1/\Lambda.
+\tag{D.5.1}
+\] The global smoothness inequality gives \[
+\mathcal L_n(b-\eta_d\nabla\mathcal L_n(b))
+\leq\mathcal L_n(b)-\frac{\eta_d}{2}\|\nabla\mathcal L_n(b)\|^2.
+\tag{D.5.2}
+\] Thus all iterates remain in the initial sublevel set, and hence in
+the radius-\(R_0\) ball.
+
+For \(x,y\) in this ball, integrate the Hessian along their line
+segment. It yields a symmetric matrix \(A_{x,y}\) with spectrum in
+\([\mu,\Lambda]\) such that \[
+[x-\eta_d\nabla\mathcal L_n(x)]-[y-\eta_d\nabla\mathcal L_n(y)]
+=(I-\eta_dA_{x,y})(x-y).
+\] Consequently the GD map contracts by \[
+q_d=1-\eta_d\mu\leq q<1.
+\tag{D.5.3}
+\] Applying this with \(y=b^*\) proves (D.1.7), uniformly for every
+integer time. No dimension-dependent burn-in is hidden in the
+contraction factor.
+
+\hypertarget{d.6-leave-one-feature-definitions-and-concentration}{%
+\subsection{D.6 Leave-one-feature definitions and
+concentration}\label{d.6-leave-one-feature-definitions-and-concentration}}
+
+Let \(P_j\) set coordinate \(j\) to zero. Define restricted GD for every
+data realization, including outside \(\mathcal G_d\), by \[
+b^{-j,0}=0,\qquad
+b^{-j,t+1}=b^{-j,t}-\eta_d P_j\nabla\mathcal L_n(b^{-j,t}).
+\tag{D.6.1}
+\] The coordinate \(j\) stays zero, so this update uses only
+\(X,Y,F_{-j}\). On \(\mathcal G_d\), the same descent inequality applied
+on the coordinate subspace shows that every restricted iterate has loss
+at most \(\log2\) and norm at most \(R_0\). Therefore the same full
+Hessian bounds apply simultaneously along the full and all restricted
+trajectories.
+
+Also define \(\bar b^{-j}\), for every data realization, to minimize
+\(\mathcal L_n\) over the deterministic compact set \[
+\{b:b_j=0,\ \|b\|\leq R\}.
+\tag{D.6.2}
+\] If needed, select the unique minimum-norm minimizer. This is a
+measurable selector: it is the limit as \(\epsilon\downarrow0\) of the
+unique minimizers after adding \(\epsilon\|b\|^2\). The definition uses
+only \(X,Y,F_{-j}\). On \(\mathcal G_d\), its loss is at most \(\log2\),
+so \(\|\bar b^{-j}\|\leq R_0<R\). It is then an unconstrained minimizer
+in its coordinate subspace, and \[
+\nabla\mathcal L_n(\bar b^{-j})=g_j^*e_j.
+\tag{D.6.3}
+\] The larger compact ball in the definition is essential: it keeps the
+object well defined and independent of \(W_j\) even on exceptional
+samples, while still giving interior stationarity on the good event.
+
+For any of these restricted coefficient vectors \(b\), put \[
+g_j(b)=\frac1n\sum_i
+ [\sigma(h_{i,-j}^\top b_{-j})-Y_i]\tanh(W_j^\top X_i).
+\tag{D.6.4}
+\] Conditional on \(X,Y,F_{-j}\), the bracketed residual vector is
+fixed, has norm at most \(\sqrt n\), and is independent of
+\(W_j=G_j/\sqrt d\). As a function of standard Gaussian \(G_j\), (D.6.4)
+is odd, has mean zero, and has Lipschitz constant at most \[
+\frac{\|X\|_{\mathrm{op}}}{\sqrt{nd}}.
+\tag{D.6.5}
+\] Hence \[
+\mathbb P(|g_j(b)|>u\mid X,Y,F_{-j})
+\leq2\exp\!\left(-\frac{ndu^2}{2\|X\|_{\mathrm{op}}^2}\right).
+\tag{D.6.6}
+\] This conditioning is valid for the compact restricted minimizer and
+for every deterministic restricted-GD time. Conditioning instead on a
+good event involving \(W_j\) before applying concentration would not be
+valid; we do not do so.
+
+Choose a deterministic \(B_X\) with
+\(\mathbb P(\|X\|_{\mathrm{op}}>B_X\sqrt d)\leq e^{-c_Xd}\) for large
+\(d\); the same net proof permits \(B_X=8\sqrt{1+\alpha}\). For
+\(d\geq3\), define \[
+T_d=1+\left\lceil\frac{\max\{0,\log(R_0d)\}}{-\log q}\right\rceil,
+\qquad
+\tau_d=B_X\sqrt{\frac{8\log d}{n}}.
+\tag{D.6.7}
+\] In particular \(T_d=O(\log d)\) with a dimension-independent implied
+constant. Applying (D.6.6) and a union bound over \(j\leq m\),
+\(0\leq t<T_d\), and the restricted minimizers gives \[
+\max_{j,t<T_d}|g_j(b^{-j,t})|\leq\tau_d,
+\qquad \max_j|g_j^*|\leq\tau_d
+\tag{D.6.8}
+\] except with probability at most \[
+e^{-c_Xd}+2m(T_d+1)d^{-4}=o(1).
+\tag{D.6.9}
+\] No independence between different leave-one-feature problems or
+different times is asserted or required.
+
+\hypertarget{d.7-uniform-coefficient-delocalization}{%
+\subsection{D.7 Uniform coefficient
+delocalization}\label{d.7-uniform-coefficient-delocalization}}
+
+First compare the full and restricted MLEs on the intersection of
+\(\mathcal G_d\) and (D.6.8). Strong monotonicity along their segment
+gives \[
+\mu\|\bar b^{-j}-b^*\|^2
+\leq\langle\nabla\mathcal L_n(\bar b^{-j})-
+ \nabla\mathcal L_n(b^*),\bar b^{-j}-b^*\rangle
+=-g_j^*b_j^*.
+\] Cauchy--Schwarz implies \[
+|b_j^*|\leq\|\bar b^{-j}-b^*\|\leq|g_j^*|/\mu,
+\quad\text{hence}\quad \|b^*\|_\infty\leq\tau_d/\mu.
+\tag{D.7.1}
+\]
+
+For the trajectories, let \(G_d(b)=b-\eta_d\nabla\mathcal L_n(b)\).
+Equation (D.6.1) says \[
+b^{-j,t+1}=G_d(b^{-j,t})+\eta_dg_j(b^{-j,t})e_j.
+\] The contraction established on the common ball gives \[
+\|b^{t+1}-b^{-j,t+1}\|
+\leq q_d\|b^t-b^{-j,t}\|+\eta_d|g_j(b^{-j,t})|.
+\tag{D.7.2}
+\] Starting from zero and using \(1-q_d=\eta_d\mu\), (D.6.8) implies \[
+\max_{j,\ 0\leq t\leq T_d}\|b^t-b^{-j,t}\|
+\leq\frac{\eta_d\tau_d}{1-q_d}=\frac{\tau_d}{\mu}.
+\tag{D.7.3}
+\] Since the restricted coordinate is zero, this bounds every
+\(|b_j^t|\) through time \(T_d\). For every \(t\geq T_d\), (D.1.7) and
+the definition of \(T_d\) give \[
+\|b^t\|_\infty\leq\|b^*\|_\infty+R_0q^{T_d}
+\leq\tau_d/\mu+d^{-1}.
+\tag{D.7.4}
+\] Thus on this single event, \[
+\boxed{\quad\sup_{t\geq0}\|b^t\|_\infty
+\leq\tau_d/\mu+d^{-1},\qquad \|b^*\|_\infty\leq\tau_d/\mu.\quad}
+\tag{D.7.5}
+\] Together with (D.4.4) and (D.6.9), this proves (D.1.8) with an
+explicit failure bound. The proof handles infinitely many GD times by
+deterministic contraction after a logarithmic horizon; it does not
+union-bound infinitely many concentration events.
+
+\hypertarget{d.8-positive-norms-and-simultaneous-calibration-floor}{%
+\subsection{D.8 Positive norms and simultaneous calibration
+floor}\label{d.8-positive-norms-and-simultaneous-calibration-floor}}
+
+The lower-norm result is the argument in Appendix A Proposition 3; it is
+included here to make its use explicit. Put \(K=HH^\top/m\),
+\(\lambda_d=cd/n\), and \(R_Y=Y-1/2\). Then \[
+\|b^1\|^2=\frac{\lambda_d^2}{m}R_Y^\top K R_Y.
+\tag{D.8.1}
+\] Conditional on \(X,F\), decompose \(R_Y=\bar r+\epsilon\), with
+independent centered bounded \(\epsilon_i\), and
+\(D_{ii}=\mathbb E(\epsilon_i^2\mid X,F)=\sigma'(\beta Z_i)\). A
+quadratic-form expansion gives \[
+\operatorname{Var}(R_Y^\top KR_Y\mid X,F)
+\leq C\{\operatorname{tr}K^2+\|K\bar r\|^2\}
+\leq Cn\|K\|_{\mathrm{op}}^2.
+\tag{D.8.2}
+\] The norm \(\|K\|\) is bounded in probability, so the normalization in
+(D.8.1) makes its centered fluctuation \(o_P(1)\). The contribution
+\(\bar r^\top K\bar r\) is nonnegative. Conditional on \(F\), the
+bounded iid row variables \(D_{ii}K_{ii}\) have expectation tending to
+\(v\rho_\beta\): uniformly over features, \(\|W_j\|^2\to1\) and
+\(\theta^\top W_j\to0\), and the relevant bounded bivariate Gaussian
+expectation is continuous. Hence \[
+\frac1n\operatorname{tr}(KD)\to v\rho_\beta,
+\qquad
+\|b^1\|^2\geq\frac{c^2v\rho_\beta}{\alpha\gamma}+o_P(1).
+\tag{D.8.3}
+\]
+
+Let \(g_0=\nabla\mathcal L_n(0)\). Descent and convexity respectively
+give, for every \(t\geq1\), \[
+\mathcal L_n(b^t)\leq\log2-\frac{\eta_d}{2}\|g_0\|^2,
+\qquad
+\mathcal L_n(b^t)\geq\log2+g_0^\top b^t.
+\] Therefore \(\|b^t\|\geq\eta_d\|g_0\|/2=\|b^1\|/2\), simultaneously at
+all positive times. Letting \(t\to\infty\) gives the same bound for
+\(b^*\). Equation (D.8.3) proves (D.1.9)--(D.1.10).
+
+For a fresh test pair, condition on the complete training environment
+\(\mathcal E_d=(F,X_{1:n},Y_{1:n})\). Let \(S_{t,d}=h(X)^\top b^t\) and
+\[
+A_{t,d}=\mathbb E_X[ZS_{t,d}\mid\mathcal E_d]=g_F^\top b^t,
+\qquad
+Q_{t,d}=\mathbb E_X[S_{t,d}^2\mid\mathcal E_d]=(b^t)^\top\Sigma_Fb^t.
+\tag{D.8.4}
+\] Use \(t=\infty\) for \(b^*\). Equations (D.2.1), (D.1.9), and
+Poincare yield, simultaneously for all \(t\in\{1,2,\ldots,\infty\}\), \[
+Q_{t,d}-A_{t,d}^2\geq s r_*^2=:\Delta_*>0,
+\qquad Q_{t,d}\leq L^2R_0^2=:Q_*.
+\tag{D.8.5}
+\] The readout derivative bounds are uniform in time: \[
+\|\nabla S_t\|\leq LR_0,\quad
+\|\nabla^2S_t\|_{\mathrm{HS}}\leq2L^2R_0,\quad
+\|\nabla^2S_t\|_{\mathrm{op}}
+\leq2L^2\sup_u\|b^u\|_\infty=o_P(1).
+\tag{D.8.6}
+\] The proof of Appendix C Theorem 2.1 is sequentially uniform over
+classes with fixed bounds in (D.8.5)--(D.8.6). Otherwise a deterministic
+sequence violating uniformity would contradict that theorem.
+Consequently its random-environment argument gives \[
+\sup_{t\in\{1,2,\ldots,\infty\}}
+\left\|\mathcal L((Z,S_{t,d})\mid\mathcal E_d)
+-N\!\left(0,\begin{pmatrix}1&A_{t,d}\\A_{t,d}&Q_{t,d}\end{pmatrix}\right)
+\right\|_{\mathrm{TV}}\longrightarrow0
+\quad\text{in probability}.
+\tag{D.8.7}
+\] This argument does not require deterministic overlap limits or a
+union bound over time.
+
+For \(Q>A^2\), define the explicit Gaussian calibration functional \[
+\mathcal C_\beta(A,Q)
+=\mathbb E_{U}\left|
+\mathbb E_V\sigma\!\left(\beta\frac{A}{\sqrt Q}U
++\beta\sqrt{1-\frac{A^2}{Q}}V\right)
+-\sigma(\sqrt Q U)\right|,
+\qquad U,V\stackrel{\mathrm{iid}}\sim N(0,1).
+\tag{D.8.8}
+\] Let \(\mathrm{CE}_{t,d}\) be exact, unbinned population calibration
+error of the predictor \(\sigma(S_{t,d})\), conditional on
+\(\mathcal E_d\). Since sigmoid is injective, conditioning on its
+probability is equivalent to conditioning on the score. the
+signed-measure argument in Appendix C makes this calibration error
+TV-Lipschitz. Applying the common label kernel \(Y\mid Z\) and (D.8.7),
+\[
+\sup_{t\in\{1,2,\ldots,\infty\}}
+|\mathrm{CE}_{t,d}-\mathcal C_\beta(A_{t,d},Q_{t,d})|
+\longrightarrow0
+\quad\text{in probability}.
+\tag{D.8.9}
+\]
+
+For clarity, strict positivity of (D.8.8) holds for every \(Q-A^2>0\).
+If \(\beta=0\), the true curve is the constant \(1/2\) and the
+nonconstant prediction has positive error. If \(\beta>0,A\leq0\), the
+Gaussian conditional probability is nonincreasing while sigmoid is
+strictly increasing. If \(\beta>0,A>0\), write its conditional curve as
+\(g(s)=\mathbb E\sigma(ks+\tau V)\), with \(k=\beta A/Q>0\) and
+\(\tau=\beta\sqrt{1-A^2/Q}>0\). Dominated convergence gives \[
+\lim_{s\to\infty}e^{ks}(1-g(s))=e^{\tau^2/2}.
+\] Equality with \(\sigma(s)\) for every \(s\) would force first \(k=1\)
+and then \(e^{\tau^2/2}=1\), a contradiction. Equality almost everywhere
+would imply equality everywhere by continuity. Thus the error is
+strictly positive.
+
+The parameter set \[
+\mathcal K=\{(A,Q): Q\leq Q_*,\ Q-A^2\geq\Delta_*\}
+\tag{D.8.10}
+\] is compact. Formula (D.8.8) is continuous on it by dominated
+convergence. Therefore \[
+\varepsilon_*:=\min_{(A,Q)\in\mathcal K}\mathcal C_\beta(A,Q)>0.
+\tag{D.8.11}
+\] Equations (D.8.5) and (D.8.9) prove the simultaneous statement \[
+\mathbb P\!\left(
+\inf_{t\in\{1,2,\ldots,\infty\}}\mathrm{CE}_{t,d}
+\geq\varepsilon_*/2\right)\longrightarrow1.
+\tag{D.8.12}
+\] In particular, \textbf{no training-measurable stopping rule taking a
+positive integer time, even one diverging with dimension, attains
+asymptotic calibration in this fixed-step regime.} The same holds if the
+rule may output the MLE. At time zero the constant predictor \(1/2\) is
+calibrated, since the symmetric teacher has marginal class probability
+\(1/2\). The theorem does not cover steps \(c=c_d\to0\), which alter the
+stated regime.
+
+Positive absolute calibration error does not alone assert that every
+confidence level is overconfident. The full curve in (D.8.8), or its
+conditional form \(g(s)\), determines the direction. Early positive
+iterates can be underconfident while still having strictly positive
+exact calibration error.
+
+\hypertarget{d.9-promotion-of-deterministic-finite-time-overlaps-to-all-times}{%
+\subsection{D.9 Promotion of deterministic finite-time overlaps to all
+times}\label{d.9-promotion-of-deterministic-finite-time-overlaps-to-all-times}}
+
+Theorem A and Appendix B prove, for every fixed integer \(t\geq1\),
+deterministic limits \[
+A_{t,d}\xrightarrow{P}A_t(\alpha,\gamma,c,\beta),\qquad
+Q_{t,d}\xrightarrow{P}Q_t(\alpha,\gamma,c,\beta).
+\tag{D.9.1}
+\] Then these limits extend to \(t=\infty\), and convergence is uniform
+over all positive integer times and the MLE: \[
+\sup_{t\in\{1,2,\ldots,\infty\}}
+\big\{|A_{t,d}-A_t|+|Q_{t,d}-Q_t|\big\}\xrightarrow{P}0.
+\tag{D.9.2}
+\]
+
+Here is the proof, including the exchange of limits. The population norm
+bounds are \(\|g_F\|\leq L\) and \(\|\Sigma_F\|\leq L^2\). From (D.1.7),
+for every \(t\geq T\), including infinity, \[
+\|b^t-b^T\|\leq2R_0q^T,
+\] \[
+|A_{t,d}-A_{T,d}|\leq2LR_0q^T,
+\qquad
+|Q_{t,d}-Q_{T,d}|\leq4L^2R_0^2q^T.
+\tag{D.9.3}
+\] For each fixed \(t,T\), take probability limits in these
+deterministic inequalities on events of probability tending to one. This
+gives the same bound between \((A_t,Q_t)\) and \((A_T,Q_T)\). Therefore
+the deterministic sequence is exponentially Cauchy and has a limit
+\((A_\infty,Q_\infty)\). For arbitrary fixed \(T\), split the supremum
+in (D.9.2) into the finite times below \(T\) and the common exponential
+tail. Equation (D.9.1) controls the finite part, while (D.9.3) controls
+both tails. Let \(d\to\infty\), then \(T\to\infty\). This proves (D.9.2)
+without interchanging unproved limits.
+
+Combining uniform continuity on (D.8.10), (D.8.9), and (D.9.2) gives the
+deterministic whole-trajectory theorem \[
+\boxed{\quad
+\sup_{t\in\{1,2,\ldots,\infty\}}
+\left|\mathrm{CE}_{t,d}
+-\mathcal C_\beta\big(A_t(\alpha,\gamma,c,\beta),
+Q_t(\alpha,\gamma,c,\beta)\big)\right|
+\xrightarrow{P}0.\quad}
+\tag{D.9.4}
+\] For a data-dependent positive stopping rule \(\tau_d\), the same
+uniform estimate holds after substituting \(t=\tau_d\). If
+\(\tau_d\to\infty\) in probability, then
+\(\mathrm{CE}_{\tau_d,d}\to\mathcal C_\beta(A_\infty,Q_\infty)>0\) in
+probability. If the stopping time has no limiting value, the
+deterministic curve still approximates its realized index and the common
+positive floor still applies.
+
+The finite-time result (D.9.1) is what makes (D.9.4) a calibration
+function of the aspect ratios and training time. Equations
+(D.8.7)--(D.8.12) themselves do not require that input and are already
+unconditional consequences of the proofs above and the analytic transfer
+theorem in Appendix C.
+
+\clearpage
+
+\hypertarget{appendix-e.-a-single-crossing-theorem-and-signed-overconfidence}{%
+\section{Appendix E. A single-crossing theorem and signed
+overconfidence}\label{appendix-e.-a-single-crossing-theorem-and-signed-overconfidence}}
+
+Theorem, lemma, and proposition numbers in this appendix are local;
+equation and section references carry the appendix letter.
+
+\hypertarget{e.1-statement}{%
+\subsection{E.1 Statement}\label{e.1-statement}}
+
+Let \(Z,G\) be independent standard normal variables, let
+\(k,\tau,\beta>0\), and put
+
+\[
+U=kZ+\tau G,\qquad V=k^2+\tau^2.
+\tag{E.1}
+\]
+
+Given \(Z\), let \(Y\) be Bernoulli with mean \(\sigma(\beta Z)\),
+independently of \(G\), where \(\sigma(x)=(1+e^{-x})^{-1}\). Its
+conditional regression given the score coordinate is
+
+\[
+g(u):=\mathbb E[Y\mid U=u]
+=\mathbb E_H\sigma(\lambda u+sH),\qquad
+\lambda=\frac{\beta k}{V},\quad s=\frac{\beta\tau}{\sqrt V},
+\tag{E.2}
+\]
+
+with \(H\) standard normal. Consider the positive-scale predictors
+\(p_c(u)=\sigma(cu)\) and their population cross-entropy
+
+\[
+R(c)=\mathbb E\{\log(1+e^{cU})-cU g(U)\}.
+\tag{E.3}
+\]
+
+\textbf{Theorem.} For every \(k,\tau,\beta>0\):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The function \[
+  h(u)=\frac{\operatorname{logit}g(u)}u,\qquad u>0,
+  \tag{E.4}
+  \] is continuous and strictly increasing, with endpoint limits \[
+  h(0+)=4g'(0)=4\lambda\mathbb E\sigma'(sH),
+  \qquad h(+\infty)=\lambda.
+  \tag{E.5}
+  \]
+\item
+  \(R\) has a unique global minimizer \(c_*\), and \[
+  4g'(0)<c_*<\lambda,\qquad R(c_*)<R(0)=\log2.
+  \tag{E.6}
+  \]
+\item
+  There is a unique \(u_*>0\) such that \[
+  \sigma(c_*u)-g(u)
+  \begin{cases}>0,&0<u<u_*,\\=0,&u=u_*,\\<0,&u>u_*.
+  \end{cases}
+  \tag{E.7}
+  \]
+\item
+  The average signed overconfidence is strictly positive: \[
+  \operatorname{OC}(c_*):=
+  \mathbb E\big[(\sigma(c_*U)-g(U))\operatorname{sign}U\big]>0.
+  \tag{E.8}
+  \]
+\end{enumerate}
+
+Here the predicted class is \(\mathbf1_{\{U>0\}}\), its confidence is
+\(\sigma(c_*|U|)\), and its conditional probability of being correct is
+\(g(|U|)\). With \(S=c_*U\), conditioning on \(U\) gives the equivalent
+exact definition
+
+\[
+\operatorname{OC}(c_*)=\mathbb E[(\sigma(S)-\sigma(\beta Z))\operatorname{sign}S].
+\]
+
+Thus (E.8) is exactly mean confidence minus mean accuracy. It is not a
+claim of overconfidence at every score: (E.7) proves underconfidence in
+the far tails.
+
+\hypertarget{e.2-logistic-noise-as-a-normal-variance-mixture}{%
+\subsection{E.2 Logistic noise as a normal variance
+mixture}\label{e.2-logistic-noise-as-a-normal-variance-mixture}}
+
+Let \(E_1,E_2,\ldots\) be independent exponential variables of mean one,
+and define
+
+\[
+W=2\sum_{j=1}^{\infty}\frac{E_j}{j^2}.
+\tag{E.9}
+\]
+
+The series is finite almost surely, because its expectation is
+\(2\sum j^{-2}=\pi^2/3<\infty\). If \(N\) is an independent standard
+normal variable, the characteristic function of \(\sqrt W N\) is
+
+\[
+\mathbb E e^{-t^2W/2}
+=\prod_{j=1}^{\infty}(1+t^2/j^2)^{-1}
+=\frac{\pi t}{\sinh(\pi t)},
+\tag{E.10}
+\]
+
+with the continuous value one at \(t=0\). The last identity is Euler's
+product for \(\sinh\). On the other hand, the characteristic function of
+a standard logistic variable \(L\) is
+
+\[
+\int_{-\infty}^{\infty}e^{itx}\frac{e^x}{(1+e^x)^2}\,dx
+=\int_0^{\infty}\frac{r^{it}}{(1+r)^2}\,dr
+=\Gamma(1+it)\Gamma(1-it)
+=\frac{\pi t}{\sinh(\pi t)}.
+\tag{E.11}
+\]
+
+The middle equality is the beta integral, and the last follows from the
+gamma reflection identity. Uniqueness of characteristic functions
+therefore proves
+
+\[
+L\ \overset d=\ \sqrt W N.
+\tag{E.12}
+\]
+
+We also need strict support, not just a formal mixture. Write
+\(W=2E_1+Q\), where \(Q=2\sum_{j\ge2}E_j/j^2\). For every \(w>0\),
+\(\mathbb P(Q<w)>0\): choose a finite cutoff whose remaining tail has
+expectation less than \(w/4\); the tail is below \(w/2\) with positive
+probability by Markov's inequality, and the finite initial sum is below
+\(w/2\) with positive probability, independently. Conditioning on \(Q\)
+gives the density
+
+\[
+f_W(w)=\frac12 e^{-w/2}
+\mathbb E\big[e^{Q/2}\mathbf1_{\{Q<w\}}\big]>0
+\quad(w>0).
+\tag{E.13}
+\]
+
+It is finite, since the integrand is bounded by \(e^{w/2}\). Hence the
+CDF \(F_W\) is strictly increasing on \((0,\infty)\), is positive at
+every positive argument, and vanishes at nonpositive arguments.
+
+\hypertarget{e.3-a-direct-strict-single-crossing-argument}{%
+\subsection{E.3 A direct strict single-crossing
+argument}\label{e.3-a-direct-strict-single-crossing-argument}}
+
+For \(s>0\), write
+
+\[
+F_s(x)=\mathbb E\sigma(x+sH),\qquad
+\Lambda_s(x)=\operatorname{logit}F_s(x).
+\tag{E.14}
+\]
+
+By symmetry of \(H\), \(F_s\) is the CDF of \(L+sH\). Conditional on
+\(W\), this is a centered normal variable of variance \(W+s^2\).
+Consequently
+
+\[
+F_s(x)=\mathbb E\Phi\left(\frac{x}{\sqrt{W+s^2}}\right),
+\qquad
+\sigma(cx)=\mathbb E\Phi\left(\frac{x}{\sqrt W/c}\right)
+\quad(c>0).
+\tag{E.15}
+\]
+
+Set \(x=e^t\). The difference of the CDFs of the logarithms of the two
+random scales in (E.15) is
+
+\[
+N_c(u)
+=F_W(e^{2u}-s^2)-F_W(c^2e^{2u}).
+\tag{E.16}
+\]
+
+Integration by parts yields
+
+\[
+D_c(t):=F_s(e^t)-\sigma(ce^t)
+=\int_{\mathbb R}K(t-u)N_c(u)\,du,
+\qquad K(v)=e^v\varphi(e^v).
+\tag{E.17}
+\]
+
+For completeness, the function being integrated against the signed scale
+law is \(u\mapsto\Phi(e^{t-u})\); its derivative is \(-K(t-u)\). The
+boundary terms vanish because \(N_c(u)\to0\) at both ends. The integral
+is absolutely convergent: \(|N_c|\le1\) and \(\int K(v)\,dv=1/2\).
+
+If \(c\ge1\), (E.13) and (E.16) give \(N_c(u)<0\) for every finite
+\(u\); hence \(D_c(t)<0\) for every \(t\). In particular
+
+\[
+\tfrac12<F_s(x)<\sigma(x)\quad(x>0).
+\tag{E.18}
+\]
+
+The first strict inequality follows from symmetry and strict
+monotonicity of \(F_s\).
+
+For \(0<c<1\), put
+
+\[
+u_c=\frac12\log\frac{s^2}{1-c^2}.
+\tag{E.19}
+\]
+
+Strict monotonicity of \(F_W\) implies
+
+\[
+N_c(u)<0\ (u<u_c),\qquad
+N_c(u_c)=0,\qquad
+N_c(u)>0\ (u>u_c).
+\tag{E.20}
+\]
+
+For any \(t_2>t_1\), the kernel ratio
+
+\[
+Q(u):=\frac{K(t_2-u)}{K(t_1-u)}
+=e^{t_2-t_1}
+\exp\left[-\frac{e^{2t_2}-e^{2t_1}}2e^{-2u}\right]
+\tag{E.21}
+\]
+
+is strictly increasing in \(u\), and is bounded above by
+\(e^{t_2-t_1}\). Therefore
+
+\[
+D_c(t_2)-Q(u_c)D_c(t_1)
+=\int_{\mathbb R}K(t_1-u)
+  [Q(u)-Q(u_c)]N_c(u)\,du>0.
+\tag{E.22}
+\]
+
+Every factor except the bracket and \(N_c\) is positive; these last two
+factors have the same strict sign on either side of \(u_c\). The
+integral is finite by the bound on \(Q\) and the integrability of \(K\).
+In particular, a zero of \(D_c\) is followed by strictly positive
+values. This proves the exact direction of the required single crossing
+without an appeal to a general variation-diminishing result.
+
+Now fix \(0<x_1<x_2\), and choose
+
+\[
+c=\frac{\Lambda_s(x_1)}{x_1}\in(0,1),
+\tag{E.23}
+\]
+
+where membership in \((0,1)\) follows from (E.18). Then
+\(D_c(\log x_1)=0\). Equation (E.22) gives
+
+\[
+F_s(x_2)>\sigma(cx_2),\quad\text{so}\quad
+\frac{\Lambda_s(x_2)}{x_2}>
+\frac{\Lambda_s(x_1)}{x_1}.
+\tag{E.24}
+\]
+
+This is strict monotonicity for every pair \(x_1<x_2\), without needing
+an analyticity argument.
+
+At zero, dominated differentiation and \(F_s(0)=1/2\) give
+
+\[
+\lim_{x\downarrow0}\frac{\Lambda_s(x)}x
+=4\mathbb E\sigma'(sH)\in(0,1).
+\tag{E.25}
+\]
+
+For the other endpoint,
+
+\[
+e^x[1-F_s(x)]
+=\mathbb E\frac{e^{-sH}}{1+e^{-x-sH}}
+\longrightarrow e^{s^2/2}
+\tag{E.26}
+\]
+
+by dominated convergence, since \(e^{-sH}\) is integrable. Thus
+
+\[
+\Lambda_s(x)=x-\frac{s^2}2+o(1),\qquad
+\lim_{x\to\infty}\frac{\Lambda_s(x)}x=1.
+\tag{E.27}
+\]
+
+Applying (E.24)--(E.27) with \(x=\lambda u\) proves (E.4)--(E.5).
+
+\hypertarget{e.4-risk-minimization-and-strict-signed-overconfidence}{%
+\subsection{E.4 Risk minimization and strict signed
+overconfidence}\label{e.4-risk-minimization-and-strict-signed-overconfidence}}
+
+The normal law of \(U\) has all moments, so dominated differentiation
+gives
+
+\[
+R'(c)=\mathbb E[U(\sigma(cU)-g(U))],\qquad
+R''(c)=\mathbb E[U^2\sigma'(cU)]>0.
+\tag{E.28}
+\]
+
+Since \(g(u)>1/2\) for \(u>0\), symmetry implies \(R'(0)<0\). On the
+other hand,
+
+\[
+\lim_{c\to\infty}R'(c)
+=\mathbb E[|U|(1-g(|U|))]>0.
+\tag{E.29}
+\]
+
+The integrand is strictly positive almost surely and is integrable. Thus
+the strictly convex function \(R\) has a unique critical point
+\(c_*>0\), and it is its global minimizer. Its value is strictly below
+\(R(0)=\log2\).
+
+Let \(h_0=4g'(0)\). By the strict increase already proved,
+\(h_0<h(u)<\lambda\) for every \(u>0\). Hence \(R'(c)<0\) for
+\(c\le h_0\), and \(R'(c)>0\) for \(c\ge\lambda\). This proves
+\(h_0<c_*<\lambda\). Continuity, strict increase and the endpoint limits
+produce a unique \(u_*>0\) with \(h(u_*)=c_*\), and (E.7) follows from
+the strict increase of \(\sigma\).
+
+Write \(e(u)=\sigma(c_*u)-g(u)\), and let \(\varphi_V\) denote the
+\(N(0,V)\) density. The first-order condition and oddness of \(e\) give
+
+\[
+0=R'(c_*)=2\int_0^\infty u\,e(u)\varphi_V(u)\,du.
+\tag{E.30}
+\]
+
+Subtracting this identity divided by \(u_*\) from the unweighted signed
+error gives
+
+\[
+\begin{aligned}
+\operatorname{OC}(c_*)
+&=2\int_0^\infty e(u)\varphi_V(u)\,du\\
+&=2\int_0^\infty e(u)
+    \left(1-\frac u{u_*}\right)\varphi_V(u)\,du
+>0.
+\end{aligned}
+\tag{E.31}
+\]
+
+The two factors \(e(u)\) and \(1-u/u_*\) have the same strict sign for
+every \(u>0\) other than \(u_*\). Integrability follows from \(|e|\le1\)
+and the first absolute normal moment. This completes the theorem.
+
+One may compute \(c_*\) through a one-dimensional strictly monotone
+equation. Stein's identity and the original representation (E.1) give
+
+\[
+Vc_*\,\mathbb E\sigma'(c_*\sqrt V\,H)
+=k\beta\,\mathbb E\sigma'(\beta H).
+\tag{E.32}
+\]
+
+Equation (E.28), rather than any presumed monotonicity of the individual
+factors in (E.32), proves uniqueness.
+
+\hypertarget{e.5-consequence-for-the-random-feature-model}{%
+\subsection{E.5 Consequence for the random-feature
+model}\label{e.5-consequence-for-the-random-feature-model}}
+
+Suppose a first-step Gaussian random-feature theorem gives, conditional
+on the trained model,
+
+\[
+\mathcal L(Z,U_d\mid\text{model})
+\longrightarrow \mathcal L(Z,kZ+\tau G)
+\quad\text{in total variation in probability},
+\tag{E.33}
+\]
+
+with \(k,\tau>0\), and gives population cross-entropy convergence at
+every fixed deterministic scale. Taking the fixed scale \(c=c_*\) from
+this appendix then yields
+
+\[
+\operatorname{OC}_d(c_*)\xrightarrow{\mathbb P}
+\operatorname{OC}(c_*)>0,\qquad
+R_d(c_*)\xrightarrow{\mathbb P}R(c_*)<\log2.
+\tag{E.34}
+\]
+
+Indeed signed OC is the conditional expectation of the bounded
+measurable function
+
+\[
+(z,u)\longmapsto
+[\sigma(c_*u)-\sigma(\beta z)]\operatorname{sign}u,
+\tag{E.35}
+\]
+
+so total variation proves the first assertion directly. A second moment
+bound or the separately established risk-transfer theorem handles the
+unbounded cross-entropy integrand. In particular, fixed positive margins
+below \(\log2\) and above zero hold simultaneously with probability
+tending to one. Theorem A and Appendix C supply these total-variation
+and risk limits.
+
+Because \(u\mapsto\sigma(c_*u)\) is one-to-one, the limiting exact
+unbinned calibration error is
+
+\[
+\mathbb E|\sigma(c_*U)-g(U)|
+\ge\operatorname{OC}(c_*)>0.
+\tag{E.36}
+\]
+
+The finite-model OC statement (E.34) itself does not require continuity
+of conditional regression: it uses the bounded test function (E.35).
+This is weaker in prerequisite than proving convergence of an entire
+conditional calibration curve.
+
+The theorem treats all positive parameters in the Gaussian scalar
+experiment, not a selected categorical surrogate or one numerical
+parameter choice. It closes a signed-overconfidence proof obligation at
+a risk-optimal \textbf{first-step scale}. It does not establish a
+deterministic arbitrary-time neural-GD trajectory, interchange a
+training-time limit with dimension, optimize over all stopping times, or
+show that the scalar risk optimum is a global optimum over the full GD
+path. Those remain separate the present problem obligations. The
+limiting predictor is overconfident near the boundary and underconfident
+in the tails, so a claim of pointwise overconfidence at all scores would
+be false.
+
+\hypertarget{e.6-an-explicit-common-regime-with-the-whole-trajectory-stopping-theorem}{%
+\subsection{E.6 An explicit common regime with the whole-trajectory
+stopping
+theorem}\label{e.6-an-explicit-common-regime-with-the-whole-trajectory-stopping-theorem}}
+
+The risk-optimal scale above is not automatically a stable GD step.
+Nevertheless, there is an explicit nonempty regime in which it satisfies
+the small-step and sample-size conditions of the entire-trajectory
+theorem in Appendix D. Thus the overconfidence and stopping conclusions
+need not be about incompatible parameter choices.
+
+Use the actual first-step law from the Gaussian tanh RF calculation,
+with the step scale factored out: \[
+S_1=cU,\qquad
+k=a^2\mu_\beta,\qquad
+\tau^2=\frac{\mu_\beta^2a^2v}{\gamma}
++\frac{a^4+v^2/\gamma}{4\alpha},
+\tag{E.37}
+\] where \[
+\begin{gathered}
+a=\mathbb E[H\tanh H]>0,\quad v=\mathbb E\tanh^2H>0,\quad \nu=v-a^2>0,\\
+\mu_\beta=\mathbb E[H(\sigma(\beta H)-1/2)]=\beta\mathbb E\sigma'(\beta H).
+\end{gathered}
+\] These are exactly the coefficients in Appendix B, equation (B.21),
+and in equation (11) of the main text. For \(\beta>0\), both \(k\) and
+\(\tau\) are strictly positive.
+
+Fix any \(\gamma>0\), and use the constants of Appendix D \[
+L=8\sqrt{1+\gamma},\qquad
+s_0=\nu/2,\qquad
+\kappa=\sqrt{s_0/2},\qquad
+p_0=\frac{s_0^2}{20L^4},\qquad
+B=\sqrt{2\log(4/p_0)}.
+\] Choose \[
+\frac{\alpha}{\gamma}>
+C_0:=\max\left\{1,\left(\frac{256L}{\kappa p_0}\right)^2\right\},
+\qquad
+0<\beta<
+\min\left\{\frac{\log3}{B},\frac{v}{8aL\sqrt\alpha}\right\}.
+\tag{E.38}
+\] Every interval here has positive length. In particular this is a
+nonempty open set of proportional sample, width and teacher parameters,
+although its sample ratio is deliberately very conservative.
+
+The first inequality on \(\beta\) gives \(q_\beta=\sigma(-\beta B)>1/4\)
+and hence \(p_1=q_\beta p_0/2>p_0/8\) in Appendix D. Thus its threshold
+satisfies \[
+C_*(\beta)=
+\max\left\{1,\left(\frac{32L}{\kappa p_1}\right)^2\right\}
+\le C_0<\alpha/\gamma.
+\tag{E.39}
+\] Next, \(\mu_\beta\le\beta/4\) and (E.37) give \[
+0<c_*<\frac{\beta k}{k^2+\tau^2}
+\le\frac{a^2\alpha\gamma\beta^2}{v^2}
+<\frac{\gamma}{64L^2}
+<\frac{\gamma}{32L^2}
+=\frac{\gamma}{2\Lambda},
+\qquad\Lambda=16L^2.
+\tag{E.40}
+\] This is precisely inside the stable fixed-step interval of Appendix
+D. The scalar risk optimum is therefore a valid fixed deterministic GD
+parameter in the same model for which Appendix D proves its all-time
+statements.
+
+Consequently, Theorems A and B imply that this one model simultaneously
+has:
+
+\begin{itemize}
+\tightlist
+\item
+  A first positive iterate with population risk strictly below \(\log2\)
+  and strictly positive signed overconfidence, with probability tending
+  to one.
+\item
+  A fixed positive exact-calibration floor, with probability tending to
+  one, simultaneously over every positive integer training time, the
+  MLE, and any training-measurable stopping rule taking those values.
+\item
+  A calibrated time-zero predictor with risk exactly \(\log2\).
+\end{itemize}
+
+This also gives a nonvacuous risk-constrained stopping conclusion. For
+any fixed \(\Delta>0\) and any training-measurable rule
+\(T_d\in\{0,1,\ldots,\infty\}\) such that \[
+\mathbb P\{R_d(T_d)\le\log2-\Delta\}\longrightarrow1,
+\tag{E.41}
+\] one necessarily has \(\mathbb P(T_d>0)\to1\), because the risk at
+time zero is exactly \(\log2\). The simultaneous positive calibration
+floor then applies to \(T_d\). On the other hand, a fixed first-step
+rule satisfies (E.41) for every \(\Delta<R(0)-R(c_*)\) by (E.34). Thus
+such risk improvement is attainable but cannot coexist with asymptotic
+exact calibration through stopping alone in this fixed-step regime.
+
+This common regime still has sufficiently large \(n/m\), so the fitted
+output layer is underparameterized. The random-feature architecture
+remains the original dense Gaussian nonlinear model; no categorical
+design is introduced. The argument does not extend the all-time
+statement to every overparameterized sample ratio or to
+dimension-dependent vanishing steps.
+
+\clearpage
+
+\hypertarget{appendix-f.-all-time-obstruction-in-the-strongly-overparameterized-regime}{%
+\section{Appendix F. All-time obstruction in the strongly
+overparameterized
+regime}\label{appendix-f.-all-time-obstruction-in-the-strongly-overparameterized-regime}}
+
+Theorem, lemma, and proposition numbers in this appendix are local;
+equation and section references carry the appendix letter.
+
+\hypertarget{f.1-model-and-explicit-nonempty-regime}{%
+\subsection{F.1 Model and explicit nonempty
+regime}\label{f.1-model-and-explicit-nonempty-regime}}
+
+Use the exact original Gaussian tanh model: \[
+X_i\sim N(0,I_d),\quad W_j\sim N(0,I_d/d),\quad
+Y_i\mid X_i\sim\operatorname{Bernoulli}(\sigma(\beta\theta^\top X_i)),
+\] with independent inputs and feature rows, conditionally independent
+labels, \(\|\theta\|=1\), and fixed finite \(\beta\ge0\). Let \[
+n/d\to\alpha>0,\qquad m/d\to\gamma>0,\quad
+h(x)=\tanh(Fx),\quad H_{ij}=h_j(X_i).
+\] Only the output coefficients are trained. Put \(s_i=2Y_i-1\),
+\(\ell(z)=\log(1+e^{-z})\), and \[
+\mathcal L_n(b)=\frac1n\sum_i\ell(s_i h_i^\top b),\qquad
+b^0=0,\quad b^{t+1}=b^t-\eta_d\nabla\mathcal L_n(b^t),
+\quad \eta_d=\frac{cd}{m}.
+\tag{F.1.1}
+\] Thus the actual update coefficient multiplying
+\(H^\top[Y-\sigma(Hb^t)]\) is \(cd/(nm)\), as in the main theorem. The
+scale \(c>0\) is fixed independently of dimension.
+
+Define \[
+a=\mathbb E[G\tanh G],\quad v=\mathbb E\tanh^2G,\quad
+\nu=v-a^2>0,\quad s=\nu/2,\quad \kappa=\sqrt{s/2},
+\quad G\sim N(0,1).
+\] For the training-input side, set \[
+L_X=8\sqrt{1+\alpha},\quad p_X=\frac{s^2}{20L_X^4},\quad
+C_X=\max\left\{1,\left(\frac{32L_X}{\kappa p_X}\right)^2\right\},
+\] \[
+k_0=\frac{\kappa^2p_X}{16},\qquad k_1=64L_X^2.
+\tag{F.1.2}
+\] The explicit assumptions for this module are \[
+\boxed{\qquad\gamma/\alpha>C_X,\qquad 0<c<2\alpha/k_1.\qquad}
+\tag{F.1.3}
+\] For each fixed \(\alpha>0\) and finite \(\beta\), these conditions
+leave nonempty open intervals of width ratios and learning scales. They
+imply \(m>n\) for large dimension. Their conservative constants are not
+claimed to be sharp.
+
+For the fresh-input feature side, define \[
+L_F=8\sqrt{1+\gamma},\quad p_F=\frac{s^2}{20L_F^4},\quad
+B_F=\sqrt{2\log(4/p_F)},\quad q_F=\sigma(-\beta B_F)>0,
+\] \[
+C_F=\log\frac4{q_Fp_F},\quad
+R_F=\frac{C_F}{\kappa},\quad
+\varepsilon_F=\frac{q_Fp_F}{4},\quad
+a_F=\frac{q_F\kappa p_F}{2}>0.
+\tag{F.1.4}
+\] Finally put \[
+D=2\sqrt{\gamma k_1/\alpha},\qquad
+\mathfrak B_t=\frac1{t+1}+\frac{\alpha}{ck_0}\frac{\log^2(t+1)}t
+\quad(t\ge1).
+\tag{F.1.5}
+\] These are all deterministic dimension-independent constants or
+sequences.
+
+\hypertarget{f.2-the-simultaneous-design-event-proved-for-the-actual-nonlinear-features}{%
+\subsection{F.2 The simultaneous design event, proved for the actual
+nonlinear
+features}\label{f.2-the-simultaneous-design-event-proved-for-the-actual-nonlinear-features}}
+
+With probability tending to one, all of the following hold: \[
+\|F\|_{\mathrm{op}}\le L_F,\qquad
+\Sigma_F:=\mathbb E_X[h(X)h(X)^\top]\succeq sI_m,
+\tag{F.2.1}
+\] \[
+k_0I_n\preceq HH^\top/m\preceq k_1I_n.
+\tag{F.2.2}
+\] We prove these facts directly for the actual nonlinear features.
+
+\hypertarget{f.2.1-population-covariance-on-either-side}{%
+\subsubsection{F.2.1 Population covariance on either
+side}\label{f.2.1-population-covariance-on-either-side}}
+
+Consider a matrix \(V\) with \(r\) independent rows \(N(0,I_d/d)\),
+where \(r/d\) tends to a fixed positive constant. For an independent
+\(G\sim N(0,I_d)\), write \(h_V(G)=\tanh(VG)\). If \(q_j=\|V_j\|^2\) and
+\(A(q)=\mathbb E\tanh'(\sqrt qG_1)\), the Hermite expansion gives \[
+\mathbb E[h_Vh_V^\top]
+=D_AVV^\top D_A+D_\nu+E,
+\tag{F.2.3}
+\] where \[
+(D_\nu)_{jj}=\mathbb E\tanh^2(\sqrt{q_j}G_1)-q_jA(q_j)^2,
+\quad E_{jj}=0,
+\quad |E_{ij}|\le|\rho_{ij}|^3\ (i\ne j).
+\] Here \(\rho_{ij}\) is the inner product of the two normalized rows.
+The linear Hermite coefficient is identified by Gaussian integration by
+parts; all remaining degrees are odd and at least three. Cauchy--Schwarz
+on their coefficients gives the displayed remainder bound, since the
+second moment of tanh is at most one. Independent Gaussian row
+directions satisfy \[
+\mathbb E\|E\|_F^2
+\le\frac{15r(r-1)}{d(d+2)(d+4)}=O(d^{-1}).
+\tag{F.2.4}
+\] Uniform row-norm concentration makes \(D_\nu\to\nu I\) in operator
+norm, while (F.2.4) makes \(\|E\|_{\mathrm{op}}\to0\) in probability.
+Thus the covariance is at least \(sI\) with probability tending to one.
+Gaussian sphere nets also give
+\(\|V\|_{\mathrm{op}}\le8\sqrt{1+r/d+o(1)}\) with exponential
+probability; the stated constants \(L_F,L_X\) have ample fixed slack.
+More explicitly, the covariance event can be chosen with failure
+\(O(d^{-1})+O(de^{-c_0d})\).
+
+Apply this first to \(V=F\), obtaining (F.2.1). Apply it also to
+\(V=X/\sqrt d\), obtaining an event \(\mathcal X_d\), measurable in the
+training inputs alone, on which \[
+\|X\|_{\mathrm{op}}/\sqrt d\le L_X,\qquad
+K_X:=\mathbb E_G[\tanh(XG/\sqrt d)\tanh(XG/\sqrt d)^\top]
+\succeq sI_n.
+\tag{F.2.5}
+\] This second use is legitimate because the rows \(X_i/\sqrt d\) are
+iid Gaussian. It does not replace the actual feature matrix by
+independent entries.
+
+\hypertarget{f.2.2-conditional-independent-columns-and-small-balls}{%
+\subsubsection{F.2.2 Conditional independent columns and small
+balls}\label{f.2.2-conditional-independent-columns-and-small-balls}}
+
+Condition on \(X\in\mathcal X_d\). The \(m\) columns \(h_j\) of \(H\)
+are iid centered vectors of the form \(\tanh(XG_j/\sqrt d)\). For every
+unit \(u\in\mathbb R^n\), \(u^\top h_j\) is a centered \(L_X\)-Lipschitz
+function of a standard Gaussian vector. Consequently \[
+\mathbb E e^{z u^\top h_j}\le e^{z^2L_X^2/2},\quad
+\mathbb E(u^\top h_j)^2\ge s,\quad
+\mathbb E(u^\top h_j)^4\le5L_X^4.
+\tag{F.2.6}
+\] The fourth-moment bound follows by Gaussian Poincare applied to the
+function and its square. Paley--Zygmund then gives \[
+\mathbb P(|u^\top h_j|\ge\kappa\mid X)\ge p_X.
+\tag{F.2.7}
+\]
+
+Let \(\psi(z)=0\) for \(|z|\le\kappa/2\), let it rise linearly to one on
+\(\kappa/2<|z|<\kappa\), and let it equal one for \(|z|\ge\kappa\). It
+is \(2/\kappa\)-Lipschitz, bounded by one, and vanishes at zero.
+Symmetrization, Rademacher contraction, and
+\(\operatorname{tr}K_X\le nL_X^2\) give \[
+\mathbb E\sup_{\|u\|=1}\left|
+\frac1m\sum_j\psi(u^\top h_j)-\mathbb E\psi(u^\top h_j)
+\right|
+\le\frac{8L_X}{\kappa}\sqrt{\frac nm}.
+\tag{F.2.8}
+\] If \(m/n\ge C_X\), this is at most \(p_X/4\). Bounded differences
+with deviation \(p_X/4\) proves, except with conditional probability
+\(e^{-mp_X^2/8}\), \[
+\inf_{\|u\|=1}\frac1m\#\{j:|u^\top h_j|>\kappa/2\}\ge p_X/2.
+\tag{F.2.9}
+\] In fact (F.2.9) is robust: after deleting any subset of at most
+\(p_Xm/4\) columns, the remaining Gram matrix, still normalized by
+\(m\), is at least \(\kappa^2p_XI/16=k_0I\). No independence of the
+deleted columns or union bound over subsets is needed. In particular it
+proves the lower half of (F.2.2).
+
+The same two-sphere-net bound applied to \(H^\top\) gives \[
+\|H\|_{\mathrm{op}}\le8L_X\sqrt m
+\tag{F.2.10}
+\] with conditional failure at most \(2e^{-3m}\) when \(m\ge n\): each
+fixed bilinear form is centered \(L_X\)-subGaussian, and \(1/4\)-nets
+have cardinalities at most \(9^m,9^n\). This proves the upper half of
+(F.2.2).
+
+Let \(\mathcal G_d\) combine (F.2.1), (F.2.5), and (F.2.2). For large
+\(d\), (F.1.3) ensures \(m/n\ge C_X\), and \[
+\mathbb P(\mathcal G_d^c)
+\le O(d^{-1})+O(de^{-c_0d})+e^{-mp_X^2/8}+2e^{-3m}=o(1).
+\tag{F.2.11}
+\] No independence between the good feature event and the conditional
+sample-Gram event is asserted: a union bound suffices. Labels play no
+role in this design event.
+
+\hypertarget{f.3-uniform-empirical-loss-decay}{%
+\subsection{F.3 Uniform empirical loss
+decay}\label{f.3-uniform-empirical-loss-decay}}
+
+On \(\mathcal G_d\), the full row rank in (F.2.2) makes every binary
+labeling strictly separable. For \(R>0\), the explicit comparator \[
+b_R=H^\top(HH^\top)^{-1}(R s_{1:n})
+\tag{F.3.1}
+\] has every signed training margin equal to \(R\), and \[
+\mathcal L_n(b_R)=\ell(R)\le e^{-R},\qquad
+\|b_R\|^2\le\frac{nR^2}{mk_0}.
+\tag{F.3.2}
+\]
+
+The empirical Hessian is globally bounded by \[
+\nabla^2\mathcal L_n(b)\preceq\frac{H^\top H}{4n},
+\quad\text{so its smoothness constant is at most }\frac{mk_1}{4n}.
+\] For large \(d\), \(n/d\ge\alpha/2\); assumption (F.1.3) gives \[
+\eta_d\frac{mk_1}{4n}=\frac{cdk_1}{4n}<1.
+\tag{F.3.3}
+\] Hence ordinary GD decreases the empirical loss at every step.
+
+For clarity, the convex smooth-GD comparator inequality used here is \[
+\mathcal L_n(b^t)-\mathcal L_n(u)\le\frac{\|u\|^2}{2\eta_dt}
+\quad(t\ge1).
+\tag{F.3.4}
+\] It follows directly by expanding \(\|b^{k+1}-u\|^2\), using
+convexity, and using descent to replace
+\(\eta_d^2\|\nabla\mathcal L_n(b^k)\|^2\) by
+\(2\eta_d[\mathcal L_n(b^k)-\mathcal L_n(b^{k+1})]\). Summing gives the
+bound on the average of losses at times \(1,\ldots,t\), and monotonicity
+bounds the final loss by that average. No strong convexity or finite MLE
+is needed.
+
+Use (F.3.2) in (F.3.4), then take \(R=\log(t+1)\). Since
+\(n/d\le2\alpha\) eventually, \[
+\boxed{\quad
+\mathcal L_n(b^t)
+\le\frac1{t+1}+\frac{n}{2cdk_0}\frac{\log^2(t+1)}t
+\le\mathfrak B_t\qquad\text{for every }t\ge1.
+\quad}
+\tag{F.3.5}
+\] This inequality holds simultaneously at all integer times on one
+event. In particular it applies to times growing arbitrarily quickly
+with dimension.
+
+\hypertarget{f.4-uniform-norm-growth-and-a-deterministic-crossing-time}{%
+\subsection{F.4 Uniform norm growth and a deterministic crossing
+time}\label{f.4-uniform-norm-growth-and-a-deterministic-crossing-time}}
+
+For any \(b\), Jensen's inequality, monotonicity of \(\ell\), and
+Cauchy--Schwarz give \[
+\mathcal L_n(b)
+\ge\ell\!\left(\frac1n\sum_i s_i h_i^\top b\right)
+\ge\ell\!\left(\frac{\|Hb\|}{\sqrt n}\right)
+\ge\ell(D\|b\|).
+\tag{F.4.1}
+\] The last inequality uses \(\|H\|^2/m\le k_1\) and
+\(m/n\le4\gamma/\alpha\) for large \(d\). Thus (F.3.5) implies \[
+\boxed{\quad
+\|b^t\|\ge\frac1D
+\left[-\log(e^{\mathfrak B_t}-1)\right]_+
+\quad(t\ge1).\quad}
+\tag{F.4.2}
+\] Its right-hand side grows as \(D^{-1}(\log t-2\log\log t-O(1))\). The
+path need not have monotone norm; the simultaneous lower bound is what
+is used.
+
+For any deterministic threshold \(R_*>0\), define the explicit finite
+integer \[
+T(R_*)=\min\{T\ge2:\mathfrak B_T<\ell(DR_*)\}.
+\tag{F.4.3}
+\] It exists because \(\mathfrak B_T\to0\). At this time the loss is
+below \(\ell(DR_*)\); monotone empirical loss and (F.4.1) then give \[
+\|b^t\|>R_*\qquad\text{for every integer }t\ge T(R_*).
+\tag{F.4.4}
+\] The time \(T(R_*)\) depends only on the fixed model parameters and
+the chosen threshold, never on dimension or the data. This is stronger
+than taking \(t\to\infty\) separately for each fixed dataset.
+
+\hypertarget{f.5-a-calibration-floor-for-every-sufficiently-large-readout}{%
+\subsection{F.5 A calibration floor for every sufficiently large
+readout}\label{f.5-a-calibration-floor-for-every-sufficiently-large-readout}}
+
+We prove a large-norm calibration witness directly. On (F.2.1), every
+coefficient vector \(b\), including arbitrary training-dependent
+vectors, satisfies \[
+\mathbb E_X S_b^2\ge s\|b\|^2,\qquad
+\mathbb E_X S_b^4\le5L_F^4\|b\|^4,
+\quad S_b=b^\top h(X).
+\] Consequently \[
+\mathbb P_X(|S_b|\ge\kappa\|b\|)\ge p_F
+\quad\text{for every }b\ne0.
+\tag{F.5.1}
+\] All constants and inequalities are simultaneous over \(b\). This
+statement follows from uniform population moment bounds; it does not
+union-bound over coefficient vectors.
+
+Write \(Z=\theta^\top X\), \(p(Z)=\sigma(\beta Z)\). The choice of
+\(B_F\) ensures \(\mathbb P(|Z|>B_F)\le p_F/2\), and on the
+complementary event either label has probability at least \(q_F\).
+Define the bounded measurable score witness \[
+f(S)=\operatorname{sign}(S)\mathbf1_{\{|S|\ge C_F\}}.
+\] For every score and teacher coordinate, \[
+[\sigma(S)-p(Z)]f(S)
+\ge q_F\mathbf1_{\{|S|\ge C_F,\ |Z|\le B_F\}}
+   -e^{-C_F}\mathbf1_{\{|S|\ge C_F\}}.
+\tag{F.5.2}
+\] Indeed, on a positive score the signed difference is at least
+\(1-p(Z)-e^{-C_F}\), and on a negative score it is at least
+\(p(Z)-e^{-C_F}\). Outside the bounded-teacher event the remaining lower
+bound is still \(-e^{-C_F}\).
+
+If \(\|b\|\ge R_F=C_F/\kappa\), (F.5.1) implies
+\(\mathbb P(|S_b|\ge C_F,|Z|\le B_F)\ge p_F/2\). Hence \[
+\mathbb E_X[(\sigma(S_b)-p(Z))f(S_b)]
+\ge q_Fp_F/2-e^{-C_F}\ge\varepsilon_F.
+\tag{F.5.3}
+\] By the defining signed-measure characterization of exact calibration
+error, or just conditional expectation and \(|f|\le1\), \[
+\mathrm{CE}(b)
+=\mathbb E_X\left|\mathbb E[p(Z)\mid S_b]-\sigma(S_b)\right|
+\ge\left|\mathbb E_X[(\sigma(S_b)-p(Z))f(S_b)]\right|.
+\] Therefore \[
+\boxed{\qquad \inf_{\|b\|\ge R_F}\mathrm{CE}(b)\ge\varepsilon_F>0.\qquad}
+\tag{F.5.4}
+\] This holds on the good feature event for all readouts at once. It
+does not require their coefficients to be delocalized or their fresh
+score to be approximately Gaussian. The bounded-teacher and score-tail
+events may be dependent; only the union bound was used.
+
+\hypertarget{f.6-all-positive-times-and-arbitrary-stopping-rules}{%
+\subsection{F.6 All positive times and arbitrary stopping
+rules}\label{f.6-all-positive-times-and-arbitrary-stopping-rules}}
+
+Set \(T_F=T(R_F)\), a deterministic finite integer. On \(\mathcal G_d\),
+(F.4.4) and (F.5.4) give \[
+\inf_{t\ge T_F}\mathrm{CE}_{t,d}\ge\varepsilon_F.
+\tag{F.6.1}
+\] For the finitely many earlier times, apply \textbf{Theorem A}. It
+applies to every fixed finite horizon, every fixed \(c>0\), and all
+finite positive \(\alpha,\gamma\). It proves deterministic limits \[
+\mathrm{CE}_{t,d}\xrightarrow{P}C_\beta(A_t,Q_t)>0
+\qquad(1\le t<T_F).
+\tag{F.6.2}
+\] The positive-definite residual covariance in that theorem is valid
+also in the present separable regime. No finite-MLE result is imported.
+
+Define \[
+\varepsilon_{\rm early}
+=\frac12\min_{1\le t<T_F}C_\beta(A_t,Q_t)>0,
+\qquad
+\varepsilon_* =\min\{\varepsilon_F,\varepsilon_{\rm early}\}>0.
+\tag{F.6.3}
+\] The minimum is over a nonempty finite set because \(T_F\ge2\). A
+finite union bound in (F.6.2), combined with (F.2.11) and (F.6.1),
+proves the new theorem: \[
+\boxed{\qquad
+\mathbb P\!\left\{\inf_{t\in\{1,2,\ldots\}}
+\mathrm{CE}_{t,d}\ge\varepsilon_*\right\}\longrightarrow1.
+\qquad}
+\tag{F.6.4}
+\]
+
+In particular, for \textbf{every} sequence of training-measurable
+stopping rules \(\tau_d\in\{1,2,\ldots\}\), with no upper bound on their
+size, \[
+\mathbb P(\mathrm{CE}_{\tau_d,d}\ge\varepsilon_*)\longrightarrow1.
+\tag{F.6.5}
+\] The event in (F.6.4) is common to all rules; the order of its
+quantifiers is stronger than proving (F.6.5) one rule at a time. Extra
+randomization of the rule does not affect this pathwise implication.
+Time zero remains the calibrated constant predictor. A finite
+unregularized MLE does not exist in this separable regime, so no such
+object is claimed here.
+
+\hypertarget{f.7-population-risk-divergence-and-a-finite-optimal-stopping-window}{%
+\subsection{F.7 Population-risk divergence and a finite optimal-stopping
+window}\label{f.7-population-risk-divergence-and-a-finite-optimal-stopping-window}}
+
+The same feature event yields a useful stronger conclusion about risk.
+Conditional on \(X\), logistic cross-entropy is at least \[
+\min\{p(Z),1-p(Z)\}|S_b|.
+\] Use the joint event \(\{|S_b|\ge\kappa\|b\|,|Z|\le B_F\}\), whose
+probability is at least \(p_F/2\). Uniformly for all coefficients, \[
+\mathcal R_F(b):=\mathbb E[\ell(Y,S_b)\mid F,b]
+\ge a_F\|b\|,
+\qquad
+\mathcal R_F(b)\le\log2+L_F\|b\|.
+\tag{F.7.1}
+\] In the lower bound, \(\ell(Y,S)=\log(1+e^S)-YS\); this is the same
+loss as \(\ell((2Y-1)S)\) in Section F.1. The upper bound follows from
+\(\ell(Y,S)\le\log2+|S|\) and Gaussian Poincare. If \(b\) is trained on
+data, both expectations are fresh-test population quantities conditioned
+on that training environment.
+
+Combining (F.7.1) and (F.4.2), on one event of probability tending to
+one, \[
+\mathcal R_{t,d}\ge\frac{a_F}{D}
+\left[-\log(e^{\mathfrak B_t}-1)\right]_+
+\quad\text{for every }t\ge1.
+\tag{F.7.2}
+\] This proves uniform late-time divergence: for each fixed \(M>0\), a
+deterministic finite time exists after which \(\mathcal R_{t,d}>M\)
+simultaneously for all later times with probability tending to one. For
+every \(\tau_d\to\infty\) in probability,
+\(\mathcal R_{\tau_d,d}\to\infty\) in probability. Empirical risk
+nevertheless tends to zero by (F.3.5).
+
+In particular, let \[
+R_{\rm risk}=(\log2+1)/a_F,\qquad
+T_{\rm risk}=T(R_{\rm risk}).
+\tag{F.7.3}
+\] Then \(\mathcal R_{t,d}>\log2+1\) for all \(t\ge T_{\rm risk}\) on
+\(\mathcal G_d\), whereas \(\mathcal R_{0,d}=\log2\). Therefore the
+population-risk optimum over the whole GD path is attained before this
+fixed time: \[
+\inf_{t\ge0}\mathcal R_{t,d}
+=\min_{0\le t<T_{\rm risk}}\mathcal R_{t,d}
+\quad\text{with probability tending to one}.
+\tag{F.7.4}
+\] Finite-time risk convergence from the main theorem now gives the
+deterministic characterization \[
+\inf_{t\ge0}\mathcal R_{t,d}
+\xrightarrow{P}
+\min_{0\le t<T_{\rm risk}}\mathcal R_\beta(A_t,Q_t),
+\tag{F.7.5}
+\] where the time-zero value is \(\log2\). Thus the fixed-time recursion
+suffices to compute optimal population-risk stopping in this regime: no
+unproved exchange of infinite time and dimension is used. If the finite
+limiting minimum has a unique index, a population-risk-minimizing index
+equals it with probability tending to one. Without uniqueness, the
+limiting minimizing set remains the correct conclusion.
+
+\hypertarget{f.8-nontrivial-learning-and-the-calibration-obstruction-can-coexist}{%
+\subsection{F.8 Nontrivial learning and the calibration obstruction can
+coexist}\label{f.8-nontrivial-learning-and-the-calibration-obstruction-can-coexist}}
+
+For \(\beta>0\), retain the exact first-step constants \[
+\mu_\beta=\mathbb E[G(\sigma(\beta G)-1/2)]>0,
+\quad k=a^2\mu_\beta,
+\] \[
+\tau^2=\frac{\mu_\beta^2a^2v}{\gamma}
++\frac{a^4+v^2/\gamma}{4\alpha},\qquad V=k^2+\tau^2.
+\tag{F.8.1}
+\] The limiting first-step score is \(cU\) with \(U=kZ+\tau G\). Its
+risk \(R(c)\) has \(R'(0)=-a^2\mu_\beta^2\) and \(R''(c)\le V/4\). Hence
+\[
+R(c)\le\log2-ca^2\mu_\beta^2+c^2V/8.
+\] Choosing a fixed \[
+0<c<\min\left\{2\alpha/k_1,\ 4a^2\mu_\beta^2/V\right\}
+\tag{F.8.2}
+\] simultaneously satisfies stability and gives \[
+R(c)<\log2-\tfrac12ca^2\mu_\beta^2.
+\tag{F.8.3}
+\] Thus a positive-step predictor improves population risk by a fixed
+amount, yet every positive stopping time still has the uniform
+calibration floor (F.6.4). In particular, a rule allowed to output time
+zero that achieves a fixed positive risk improvement with probability
+tending to one must output a positive time with probability tending to
+one, and therefore cannot attain asymptotic exact calibration. The
+result is not merely a pathology of steps that never learn.
+
+There is also an explicit common regime with \textbf{strict signed
+overconfidence at the actual risk-optimal first step}. Retain (F.1.3)'s
+width condition and choose \[
+0<\beta<\frac{v}{a\sqrt{\gamma k_1}}.
+\tag{F.8.4}
+\] Let \(c_{\rm risk}\) be the unique minimizer of the first-step
+Gaussian risk. The scalar theorem in Appendix E proves both strict risk
+improvement and strictly positive average confidence minus accuracy at
+this scale, and gives \[
+0<c_{\rm risk}<\frac{\beta k}{V}
+\le\frac{a^2\alpha\gamma\beta^2}{v^2}
+<\frac{\alpha}{k_1}<\frac{2\alpha}{k_1}.
+\tag{F.8.5}
+\] Here \(\mu_\beta\le\beta/4\) and \(V\ge v^2/(4\alpha\gamma)\). Thus
+choosing the fixed step \(c=c_{\rm risk}\) satisfies the same stability
+assumption as the entire-trajectory theorem. For this single strongly
+overparameterized model, the first iterate strictly improves risk and is
+overconfident on average, while no positive stopping time attains exact
+asymptotic calibration. As in the scalar theorem, this is an average
+signed statement, not overconfidence at every score. Condition (F.8.4)
+restricts this compatibility corollary only; the calibration floor and
+population-risk divergence allow every fixed finite \(\beta\).
+
+\hypertarget{f.9-abstract-extension-to-any-uniformly-positive-separability-margin}{%
+\subsection{F.9 Abstract extension to any uniformly positive
+separability
+margin}\label{f.9-abstract-extension-to-any-uniformly-positive-separability-margin}}
+
+The row-Gram condition is a concrete sufficient certificate, not a
+logical necessity for the late-time argument. Suppose instead that, with
+probability tending to one:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The fresh-input feature conditions (F.2.1) hold with common constants.
+\item
+  \(\|H\|_{\mathrm{op}}/\sqrt n\le D_0\).
+\item
+  A unit vector \(u_d\) has
+  \(\min_i s_i h_i^\top u_d\ge\kappa_{\rm sep}>0\), with a deterministic
+  constant \(\kappa_{\rm sep}\).
+\item
+  The GD steps satisfy \(0<\eta_-\le\eta_d\le4/D_0^2\).
+\end{enumerate}
+
+The comparator \(b_R=(R/\kappa_{\rm sep})u_d\) and (F.3.4) give \[
+\mathcal L_n(b^t)
+\le\frac1{t+1}+\frac{\log^2(t+1)}{2\eta_-\kappa_{\rm sep}^2t}.
+\tag{F.9.1}
+\] Equation (F.4.1) holds with \(D_0\) in place of \(D\). The remainder
+of Sections F.4--7 therefore applies verbatim. If the same fixed-time
+positive calibration theorem is available, all positive stopping times
+again have a common calibration floor and the population-risk optimum is
+in a deterministic finite window.
+
+Consequently a separately proved exact-model max-margin limit
+\(\kappa_d\to\kappa_*>0\) would extend this module to every parameter
+point covered by that positive-margin theorem. This paragraph is an
+implication, not an assertion that a particular external universality
+theorem has already verified the premise for every aspect ratio. At a
+zero-margin phase boundary, the deterministic crossing time may diverge
+and this proof does not close the stopping-time quantifier.
+
+\clearpage
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Y. Bai, S. Mei, H. Wang and C. Xiong. \emph{Don't Just Blame
+  Over-parametrization for Over-confidence}. ICML, PMLR 139, 566--576
+  (2021). \href{https://proceedings.mlr.press/v139/bai21c.html}{Primary
+  paper}.
+\item
+  L. Clarté, B. Loureiro, F. Krzakala and L. Zdeborová. \emph{On
+  double-descent in uncertainty quantification in overparametrized
+  models}. AISTATS, PMLR 206 (2023).
+  \href{https://proceedings.mlr.press/v206/clarte23a.html}{Primary
+  paper}.
+\item
+  C. Louart, Z. Liao and R. Couillet. \emph{A random matrix approach to
+  neural networks}. Annals of Applied Probability 28(2), 1190--1248
+  (2018).
+  \href{https://doi.org/10.1214/17-AAP1328}{doi:10.1214/17-AAP1328}.
+\item
+  Z. Fan. \emph{Approximate Message Passing algorithms for rotationally
+  invariant matrices}. Annals of Statistics 50(1), 197--224 (2022).
+  \href{https://doi.org/10.1214/21-AOS2101}{doi:10.1214/21-AOS2101}.
+\item
+  T. Wang, X. Zhong and Z. Fan. \emph{Universality of Approximate
+  Message Passing algorithms and tensor networks}. Annals of Applied
+  Probability 34(4), 3943--3994 (2024).
+  \href{https://arxiv.org/html/2206.13037v5}{Versioned full text},
+  especially Proposition D.1(b2) and Theorem 2.22.
+\item
+  Z. Ji, J. Li and M. Telgarsky. \emph{Early-stopped neural networks are
+  consistent}. NeurIPS 34 (2021).
+  \href{https://proceedings.neurips.cc/paper/2021/file/0e1ebad68af7f0ae4830b7ac92bc3c6f-Paper.pdf}{Primary
+  paper}.
+\item
+  J. Wu, P. Bartlett, M. Telgarsky and B. Yu. \emph{Benefits of Early
+  Stopping in Gradient Descent for Overparameterized Logistic
+  Regression}. ICML, PMLR 267, 67081--67110 (2025).
+  \href{https://proceedings.mlr.press/v267/wu25b.html}{Primary paper}.
+\item
+  E. Berta, D. Holzmüller, M. I. Jordan and F. Bach. \emph{Rethinking
+  Early Stopping: Refine, Then Calibrate}. arXiv:2501.19195v2 (2025).
+  \href{https://arxiv.org/html/2501.19195v2}{Primary manuscript}.
+\item
+  Y. Shmalo. \emph{Math Brain: public research repository} (2026).
+  \url{https://github.com/yspennstate/math-brain-public}.
+\item
+  Y. Shmalo. \emph{Calibration along gradient descent in Gaussian tanh
+  random-feature classifiers}. Public manuscript and reproducibility
+  package, 31 October 2026.
+  \href{https://github.com/yspennstate/math-brain-public/tree/main/papers/three-targets-2026-10-31/T357}{Public paper archive};
+  \href{https://github.com/yspennstate/math-brain-public/blob/main/papers/three-targets-2026-10-31/T357/T357_Calibration_Along_Gradient_Descent.pdf}{PDF in Math Brain}.
+\end{enumerate}
+
+\section*{Public repository and source availability}
+The complete manuscript, six detailed proof appendices, and editable
+sources are archived in the public Math Brain repository [9]. The
+paper-specific archive and PDF are given in [10], together with the
+release's contribution history and verification record.
+
+\hypertarget{acknowledgments-funding-and-declarations}{%
+\section{Acknowledgments, funding, and
+declarations}\label{acknowledgments-funding-and-declarations}}
+
+\textbf{Acknowledgments and funding.} The research presented in this
+paper was supported by the European Research Council (ERC) under the
+European Union's Horizon Europe research and innovation programme (grant
+agreement No.~101041711), by the Simons Foundation as part of the
+Collaboration on the Mathematical and Scientific Foundations of Deep
+Learning, by Heights Labs, by Convex Nexus Capital, by the Israel
+Science Foundation (grant number 2258/19), and by the Israel Science
+Foundation (ISF Grant 4101/25).
+
+\textbf{Declaration of competing interest.} The author holds equity in
+Heights Labs and in Convex Nexus Capital and has a management role at
+Convex Nexus Capital. These entities are included in the funding
+declaration above.
+
+\textbf{AI assistance and provenance.} The mathematical arguments,
+literature comparisons, verification, and writing were produced by AI
+systems under the author's direction. This manuscript consolidates the
+finite-time proof package of 24 October 2026 and its strongly
+overparameterized continuation. The author selected the problem and
+commissioned and directed the work; the author did not carry out the
+mathematics or the writing. Responsibility for submission or publication
+rests with the author. Internal AI-assisted mathematical reviews and
+normalization checks are not external peer review or proof-assistant
+formalization. The accompanying public source archive records the contribution history
+and checksums of the released files.
+
+\end{document}

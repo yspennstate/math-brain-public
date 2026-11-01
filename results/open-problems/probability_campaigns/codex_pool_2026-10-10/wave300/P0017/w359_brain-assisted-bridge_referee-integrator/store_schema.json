@@ -1,0 +1,18 @@
+[
+  [
+    "nodes",
+    "CREATE TABLE nodes (\n    id TEXT PRIMARY KEY,\n    kind TEXT NOT NULL,\n    title TEXT NOT NULL,\n    body TEXT NOT NULL,\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+  ],
+  [
+    "reflex_sources",
+    "CREATE TABLE reflex_sources (\n    reflex_id TEXT NOT NULL REFERENCES reflexes(id),\n    mistake_id TEXT NOT NULL REFERENCES mistakes(id),\n    PRIMARY KEY(reflex_id, mistake_id)\n)"
+  ],
+  [
+    "edges",
+    "CREATE TABLE edges (\n    id TEXT PRIMARY KEY,\n    source_id TEXT NOT NULL REFERENCES nodes(id),\n    target_id TEXT NOT NULL REFERENCES nodes(id),\n    kind TEXT NOT NULL,\n    rationale TEXT NOT NULL,\n    weight REAL NOT NULL CHECK(weight > 0 AND weight <= 1),\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL,\n    UNIQUE(source_id, target_id, kind)\n)"
+  ],
+  [
+    "edge_retractions",
+    "CREATE TABLE edge_retractions (\n    edge_id TEXT PRIMARY KEY REFERENCES edges(id),\n    reason TEXT NOT NULL,\n    metadata_json TEXT NOT NULL,\n    digest TEXT NOT NULL UNIQUE,\n    created_at TEXT NOT NULL\n)"
+  ]
+]

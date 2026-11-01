@@ -1,0 +1,35 @@
+{
+  "problem_id": "P0104",
+  "source_checks": [
+    {
+      "source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv:550",
+      "exact_quote": "5,P0104,Subdiffusive and KPZ passage-time fluctuation exponents,attempted_un,FPP fluctuation exponents (chi=1/3)",
+      "finding": "Ranking labels this candidate tier 5 and attempted_un as of 2026-09-07; these are dated triage labels, not a source statement or current-open certification."
+    },
+    {
+      "source": "Auffinger, Damron and Hanson, 50 years of first passage percolation, arXiv:1511.03262v2, Section 3.1, Question 13",
+      "url": "https://arxiv.org/html/1511.03262v2",
+      "exact_quote": "Show that for any d >= 2, under suitable conditions on F, chi < 1/2. If d = 2, show that chi = 1/3.",
+      "finding": "This is the main source question underlying the ranking title. Question 15 separately asks for chi>0 in a suitable dimension. The authors explicitly say the meaning of variance asymptotic and 'suitable conditions' are not settled in this broad formulation."
+    },
+    {
+      "source": "Basu, Sidoravicius and Sly, Rotationally invariant first passage percolation: Breaking the n/log n variance barrier, arXiv:2604.01214v1, Theorem 1",
+      "url": "https://arxiv.org/html/2604.01214v1",
+      "finding": "For their planar Riemannian FPP class built from a smooth positive bounded isotropic finite-range dependent field with FKG, Var(X_n) <= n^(1-epsilon). This is a proved special model, not the nearest-neighbor iid lattice question or chi = 1/3."
+    },
+    {
+      "source": "~/Open problem project/solved_register.md (2026-06-01) and ~/<private-repo>/06_math_research/probability_open_problem_campaign_2026_08_09/problem/CRUX_iteration_arithmetic.md:700",
+      "finding": "The targeted local solved register has no FPP entry; the later FPP campaign says chi=1/3 remains untouched. Neither is a complete current-status check."
+    },
+    {
+      "source": "Damron, Hanson, Houdre and Xu, arXiv:1810.08270v2, condition (1.2.1), Theorem 1, Remark 2",
+      "url": "https://arxiv.org/html/1810.08270v2",
+      "finding": "Full-lattice two-quantile fluctuation theorem is planar under F(0)<p_c and F(I)<oriented_p_c if I>0; it implies only logarithmic variance lower bound. The recalled card omits these conditions and wrongly says quantitative anti-concentration cannot imply a variance lower bound."
+    }
+  ],
+  "exact_statement": "Source Question 13 is quoted above. Working precise lattice subproblem: on nearest-neighbor Z^2 with iid nondegenerate edge weights supported in [a,b], 0<a<b<infinity, prove that the limsup of log Var(T(0,ne1))/(2 log n) is strictly below 1/2; the chi=1/3 target would require the matching liminf and limsup to equal 1/3. This bounded-law specialization is ours, not a verbatim source theorem.",
+  "current_status": "UNKNOWN",
+  "prior_attempt_status": "The canonical math-brain attempt card records the n/log n exponent obstruction, author-checked only; CRUX section 9.5 conditionally reduces a lattice block-chaos route to (L1') conditional second moment, (L2') conditional increment kurtosis, and (L3) occupation count. Its section 9.2 formula was superseded, and chi=1/3 remains unproved there.",
+  "literature_check_scope": "Targeted 2026 primary arXiv search and the 2026-04-01 BSS paper; not an exhaustive novelty search.",
+  "next_check": "Independent w374 source-scope audit requested; current openness remains UNKNOWN pending a complete current literature sweep."
+}

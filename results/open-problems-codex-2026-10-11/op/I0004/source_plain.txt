@@ -1,0 +1,2409 @@
+
+ 
+ 
+ The randomly oriented Manhattan lattice in 2D is transient 
+ 
+ 
+ 
+   
+ 
+  // Restore the saved color scheme preference, or
+  // enact the browser preference if "automatic", 
+  // without expecting DOM load to have completed.
+  //
+  // Also restore any saved readingmode and ToC display preferences.
+  function initializeReadingPreferences() {
+    let saved_theme = localStorage.getItem("ar5iv_theme") || "automatic";
+    if (saved_theme === "automatic") {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        saved_theme = "dark";
+      }
+    }
+    if (saved_theme == "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+
+    const tocDisplay = localStorage.getItem('arxiv_html_paper_toc_display');
+    if (tocDisplay) {
+      document.documentElement.setAttribute("data-toc-display", tocDisplay);
+    }
+    const readingMode = localStorage.getItem('arxiv_html_paper_reading_mode');
+    if (readingMode) {
+      document.documentElement.setAttribute("data-reading-mode", readingMode);
+    }
+    // Pre-apply spinout-banner dismissal here, before the banner paints, so it
+    // never flashes in only to be hidden later by the deferred arxiv-header.js.
+    // Key matches arxiv-header.js: "arxiv-banner-dismissed:" + data-banner-name.
+    if (localStorage.getItem('arxiv-banner-dismissed:spinout-nonprofit')) {
+      document.documentElement.setAttribute("data-banner-dismissed", "");
+    }
+  }
+  // Run as soon as JS starts, to minimize repainting
+  initializeReadingPreferences();
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  /* Banner pre-dismissal (set above before paint -> no flash-then-hide) and
+     reading-mode chrome hiding. */
+  html[data-banner-dismissed] .ds-announcement { display: none; }
+  html[data-reading-mode="enabled"] .ds-announcement,
+  html[data-reading-mode="enabled"] .ds-site-footer { display: none; }
+  /* Print keeps the reader header's logo, not its controls: the theme's own print rule
+     (header, nav { display: none }) sits in a layer that its header layer outranks. */
+  @media print { .arxiv-html-header .html-header-nav { display: none; } }
+  /* Keep the announcement text dark on the Open-Blue band in both colour themes
+     (otherwise it inherits the paper's warm-wash text in dark mode and washes out). */
+  .ds-announcement-text { color: var(--arxiv-ink, #1c1a17); }
+ 
+ 
+ 
+ 
+ 
+   
+     
+       Report GitHub Issue 
+       × 
+     
+
+     
+       Title: 
+       
+
+       Content selection saved. Describe the issue below: 
+
+       Description: 
+       
+     
+
+     
+       Submit without GitHub 
+       Submit in GitHub 
+     
+   
+ 
+     
+     arXiv is now an independent nonprofit! 
+     Learn more 
+     × 
+   
+
+ 
+   
+     
+       Back to arXiv 
+     
+   
+   
+   
+     Why HTML? 
+     
+       
+         
+       
+       Report Issue 
+     
+     
+       
+         
+         
+       
+       Back to Abstract 
+     
+     
+     
+       
+         
+       
+       Download PDF 
+     
+     
+       
+         
+         
+       
+     
+     
+     
+       
+         
+       
+     
+     
+     
+       
+         
+           
+           
+         
+       
+       
+         
+           
+           
+         
+       
+       
+         
+           
+           
+         
+       
+     
+   
+ 
+ 
+ 
+ Abstract. 
+ 1  Introduction 
+ 
+ 1.1  Main results 
+ 1.2  Notation and conventions 
+ 1.3  Proof overview 
+ 1.4  Related results 
+ 
+ 1.4.1  Randomly oriented Manhattan lattices 
+ 1.4.2  Partially oriented lattices 
+ 1.4.3  Diffusion in incompressible random flows 
+ 
+ 1.5  Formalization 
+ 
+ 2  The variational bound 
+ 
+ 2.1  Fourier transform 
+ 2.2  The fixed-frequency bound 
+ 
+ 3  Fourier–Walsh coordinates 
+ 
+ 3.1  Degree and frequency 
+ 3.2  Degrees one and three 
+ 3.3  Low-degree operators 
+ 
+ 4  The test function 
+ 5  Estimating the quadratic functional 
+ 6  The frequency bound 
+ 
+ 6.1  Return probabilities in time 
+ 
+ 7  Open questions 
+ References 
+ 
+ 
+ 
+ 
+   
+    License: arXiv.org perpetual non-exclusive license
+   
+   
+arXiv:2609.07621v1 [math.PR] 07 Sep 2026 
+ 
+ 
+ The randomly oriented Manhattan lattice in 2D is transient 
+ 
+ 
+ Ahmed Bou-Rabee
+ 
+  and  
+ Yuval Peres
+ 
+
+ Abstract. 
+    
+ Independently orient each horizontal and vertical line of  ℤ 2 \mathbb{Z}^{2}  by a fair
+coin. A walker chooses one of the two lines through its current position
+with equal probability and takes one step in the direction of that line.
+Redner  [ 1989 ]  introduced this walk as a model of transport in
+an isotropic random velocity field and predicted that its root-mean-square
+displacement grows like  n 2 / 3 n^{2/3} . We prove that the walk is transient
+almost surely.
+The proof is a short variational argument. 
+  
+ 
+ 
+ Figure 1.  One fair coin directs each line, so every edge of a line points the
+same way. The two blue arrows are the possible steps from the marked site. 
+ 
+ 
+ 1.  Introduction 
+
+ 
+ The  randomly oriented Manhattan lattice  is the square lattice with
+every horizontal and vertical line given a direction by an independent fair
+coin. We study the random walk that at each step chooses one of the two
+lines through its position with equal probability and moves one unit in that
+line’s direction (Figure  1 ). Once a line is oriented, every later step along it has the same direction.
+Figure  2  compares the walk with simple random walk. 
+ 
+ 
+ Figure 2.  The randomly oriented Manhattan walk on the left and simple random
+walk on the right, after  400 400  steps in the top row and  4000 4000  steps in the
+bottom row, colored by time from blue to red. The two panels of each row are
+drawn to the same scale. 
+ 
+ 
+ Redner [1989]  introduced this walk and predicted a
+non-Gaussian displacement profile on the scale  n 2 / 3 n^{2/3} . In particular,
+this prediction implies transience of the walk. 
+ 
+ 
+ 1.1.  Main results 
+
+ 
+ Write  e 1 , e 2 e_{1},e_{2}  for the standard basis of  ℤ 2 \mathbb{Z}^{2} , and record the
+line orientations by
+ ω : ℤ 2 × { 1 , 2 } → { − 1 , 1 } \omega\colon\mathbb{Z}^{2}\times\{1,2\}\to\{-1,1\} : the line through  z z  parallel
+to  e i e_{i}  points along  ω ⁡ ( z , i ) ​ e i \omega(z,i)e_{i} . We call  ω \omega  the
+ environment  and write  ℙ \mathbb{P}  for its law. 
+ 
+ 
+ From  z z  the walker steps to 
+ 
+
+ 
+ (1) 
+ 
+ z + ω ⁡ ( z , 1 ) ​ e 1 or z + ω ⁡ ( z , 2 ) ​ e 2 , with probability  1 / 2  each. z+\omega(z,1)e_{1}\qquad\text{or}\qquad z+\omega(z,2)e_{2},\qquad\text{with probability $1/2$ each.} 
+ 
+ 
+ This can be understood as a random walk with a random drift which is divergence free. 
+ 
+ 
+ Write  P z ω P^{\omega}_{z}  for the quenched law of the walk started at  z z  in a fixed
+environment  ω \omega , and write  p n ω ​ ( z , z ′ ) p^{\omega}_{n}(z,z^{\prime})  for the probability under
+ P z ω P^{\omega}_{z}  that the walk is at  z ′ z^{\prime}  after  n n  steps.
+Averaging over  ω \omega  gives the annealed transition probability
+ p ¯ n ​ ( z , z ′ ) = 𝔼 ​ p n ω ​ ( z , z ′ ) \overline{p}_{n}(z,z^{\prime})=\mathbb{E}p^{\omega}_{n}(z,z^{\prime}) . 
+ 
+ 
+ Theorem 1.1 . 
+ 
+ For  ℙ \mathbb{P} -almost every environment  ω \omega , 
+ 
+
+ 
+ 
+ ∑ n ≥ 0 p n ω ​ ( x , x ) < ∞ for every  ​ x ∈ ℤ 2 . \sum_{n\geq 0}p^{\omega}_{n}(x,x)<\infty\qquad\text{for every }x\in\mathbb{Z}^{2}\,. 
+ 
+ 
+ 
+ 
+ 
+ We prove the above theorem by analyzing a continuous time version of the
+walk, which jumps across each of its two outgoing edges at rate  1 1 .
+Write  p t ω ​ ( z , z ′ ) p^{\omega}_{t}(z,z^{\prime})  for its transition probabilities and set
+ p ¯ t ​ ( 0 , 0 ) = 𝔼 ​ p t ω ​ ( 0 , 0 ) \overline{p}_{t}(0,0)=\mathbb{E}p^{\omega}_{t}(0,0) . We deduce Theorem  1.1 
+from the following annealed bound. 
+ 
+ 
+ Theorem 1.2 . 
+ 
+ For every  λ ∈ ( 0 , 1 ] \lambda\in(0,1] , 
+ 
+
+ 
+ 
+ ∫ 0 ∞ e − λ ​ t ​ p ¯ t ​ ( 0 , 0 ) ​ 𝑑 t ≤ 2048 , \int_{0}^{\infty}e^{-\lambda t}\overline{p}_{t}(0,0)\,\mathrm{d}t\leq 2048\,, 
+ 
+ 
+ and hence  ∫ 0 ∞ p ¯ t ​ ( 0 , 0 ) ​ 𝑑 t < ∞ \int_{0}^{\infty}\overline{p}_{t}(0,0)\,\mathrm{d}t<\infty . 
+ 
+ 
+ 
+ Note that transience does not hold for every deterministic environment.
+Indeed, take the alternating orientations,  ω ⁡ ( z , 1 ) = ( − 1 ) z 2 \omega(z,1)=(-1)^{z_{2}}  and
+ ω ⁡ ( z , 2 ) = ( − 1 ) z 1 \omega(z,2)=(-1)^{z_{1}} . This walk can be mapped to simple random walk on
+ ℤ 2 \mathbb{Z}^{2}  as detailed in  Beaton and Holmes [2023] , who report
+this as an observation of Guillotin-Plantard. 
+ 
+ 
+ 
+ 1.2.  Notation and conventions 
+
+ 
+ 
+ •  
+ 
+ ℙ \mathbb{P}  is the law of the environment and  𝔼 \mathbb{E}  is the corresponding
+expectation. 
+ 
+ •  
+ 
+ ⟨ ⋅ , ⋅ ⟩ \langle\cdot,\cdot\rangle  and  ∥ ⋅ ∥ \lVert\cdot\rVert  denote the inner product and norm of the
+ L 2 L^{2}  space which is indicated. 
+ 
+ •  
+ 
+ c > 0 c>0  and  C > 0 C>0  are finite constants which may change from line to
+line. Numerical constants in the quantitative bounds are displayed
+explicitly. 
+ 
+ 
+ 
+ 
+ 
+ 1.3.  Proof overview 
+
+ 
+ For reversible walks, the usual technique to show transience is to exhibit a
+unit flow from a vertex to infinity with finite energy, see, for example,
+ [ Lyons and Peres, 2016 , Theorem 2.11] . In our nonreversible setting, we instead use a
+variational formula for the resolvent, given, for example, in
+ [ Komorowski, Landim, and Olla, 2012 , Theorem 4.1] . Variational principles for operators that are
+not self-adjoint are standard in homogenization; see
+ Armstrong, Kuusi, and Mourrat [2019, Chapter 10] ,  Armstrong, Bou-Rabee, and Kuusi [2024, (2.4)] , and
+ Armstrong, Bou-Rabee, and Kuusi [2026, (2.32)] . 
+ 
+ 
+ The variational formula bounds the annealed Green function using a test
+function at each spatial frequency. We build the test function from the
+line orientations. It is not a flow and satisfies no additional constraint:
+every square-integrable function of the orientations can be used.
+The difficulty is to choose one that makes the bound small. 
+ 
+ 
+ The zero test function in this variational principle gives the same bound as for simple random walk, which is too weak: its
+frequency integral diverges logarithmically. To improve on this, we must exploit the enhancement of the drift by careful choice of test function.
+This choice is made from a family of functions formed from products of one and three line signs, indexed by one even function of a single
+frequency. As we will see, a careful optimization of the even function will make the frequency integral converge. 
+ 
+ 
+ Step 1: A variational bound at each frequency. 
+Fix  λ ∈ ( 0 , 1 ] \lambda\in(0,1] . The law of the environment is translation invariant,
+so we may Fourier transform in the position of the walk and treat each
+frequency on its own. Write  𝕋 ≔ ( − π , π ] \mathbb{T}\coloneqq(-\pi,\pi]  with normalized Haar measure
+ d ​ m \,\mathrm{d}m , and  d ​ m ​ ( p ) = d ​ m ​ ( p 1 ) ​ d ​ m ​ ( p 2 ) \,\mathrm{d}m(p)=\,\mathrm{d}m(p_{1})\,\mathrm{d}m(p_{2})  on  𝕋 2 \mathbb{T}^{2} . Write  T x T_{x}  for the shift of the
+environment by  x x . At a frequency  p ∈ 𝕋 2 p\in\mathbb{T}^{2}  the generator of the walk acts on
+ L 2 ​ ( ℙ ) L^{2}(\mathbb{P})  as  S p + A p S_{p}+A_{p} , where 
+ 
+
+ 
+ 
+ S p \displaystyle S_{p} 
+ ≔ 1 2 ​ ∑ i = 1 2 ( e i ​ p i ​ T e i + e − i ​ p i ​ T − e i − 2 ​ I ) , \displaystyle\coloneqq\frac{1}{2}\sum_{i=1}^{2}\bigl(e^{ip_{i}}T_{e_{i}}+e^{-ip_{i}}T_{-e_{i}}-2I\bigr), 
+ 
+ 
+ 
+ A p \displaystyle A_{p} 
+ ≔ 1 2 ​ ∑ i = 1 2 ω ⁡ ( 0 , i ) ​ ( e i ​ p i ​ T e i − e − i ​ p i ​ T − e i ) \displaystyle\coloneqq\frac{1}{2}\sum_{i=1}^{2}\omega(0,i)\bigl(e^{ip_{i}}T_{e_{i}}-e^{-ip_{i}}T_{-e_{i}}\bigr) 
+ 
+ 
+ (Proposition  2.1 ). Here  S p S_{p}  is self-adjoint and
+nonpositive and  A p A_{p}  is skew-adjoint. Let  H ≔ λ ​ I − S p H\coloneqq\lambda I-S_{p}  and
+ r λ ​ ( p ) ≔ Re ⁡ ⟨ 1 , ( H − A p ) − 1 ​ 1 ⟩ r_{\lambda}(p)\coloneqq\operatorname{Re}\langle 1,(H-A_{p})^{-1}1\rangle . The annealed Green function is the
+average of  r λ r_{\lambda}  over the frequencies, 
+ 
+
+ 
+ 
+ ∫ 0 ∞ e − λ ​ t ​ p ¯ t ​ ( 0 , 0 ) ​ 𝑑 t = ∫ 𝕋 2 r λ ​ ( p ) ​ 𝑑 m ​ ( p ) \int_{0}^{\infty}e^{-\lambda t}\overline{p}_{t}(0,0)\,\mathrm{d}t=\int_{\mathbb{T}^{2}}r_{\lambda}(p)\,\mathrm{d}m(p) 
+ 
+ 
+ (Proposition  2.1 ). Every  g ∈ L 2 ​ ( ℙ ) g\in L^{2}(\mathbb{P})  gives an upper
+bound (Lemma  2.2 ), 
+ 
+
+ 
+ (2) 
+ 
+ r λ ​ ( p ) ≤ ⟨ g , H ​ g ⟩ + ⟨ 1 − A p ​ g , H − 1 ​ ( 1 − A p ​ g ) ⟩ . r_{\lambda}(p)\leq\langle g,Hg\rangle+\langle 1-A_{p}g,H^{-1}(1-A_{p}g)\rangle\,. 
+ 
+ 
+ The first term is the energy of  g g , and the second is
+ ∥ H − 1 / 2 ( 1 − A p g ) ∥ 2 \lVert H^{-1/2}(1-A_{p}g)\rVert^{2} . We seek  g g  for which both terms are small. 
+ 
+ 
+ Taking  g = 0 g=0  makes the energy zero and leaves  1 − A p ​ g = 1 1-A_{p}g=1 , which
+gives the simple random walk bound  r λ ​ ( p ) ≤ [ λ + θ ⁡ ( p ) ] − 1 r_{\lambda}(p)\leq[\lambda+\theta(p)]^{-1} 
+with  θ ⁡ ( p ) ≔ 2 − cos ⁡ p 1 − cos ⁡ p 2 \theta(p)\coloneqq 2-\cos p_{1}-\cos p_{2} . Averaging this upper bound
+over  p p  gives order  log ⁡ ( 1 / λ ) \log(1/\lambda) . We therefore need a nonzero test function to
+obtain a bound whose integral stays finite as  λ ↓ 0 \lambda\downarrow 0 . 
+ 
+ 
+ Step 2: A family of test functions. 
+To improve the bound from  g = 0 g=0 , we take  g = f + k g=f+k , where 
+ 
+
+ 
+ (3) 
+ 
+ f ⁡ ( ω ) = ∑ y ∈ ℤ f y ​ ω ​ ( y ​ e 2 , 1 ) , k ⁡ ( ω ) = ∑ x , y , y ′ ∈ ℤ y < y ′ k y , y ′ , x ​ ω ​ ( y ​ e 2 , 1 ) ​ ω ​ ( y ′ ​ e 2 , 1 ) ​ ω ​ ( x ​ e 1 , 2 ) . \begin{split}f(\omega)&=\sum_{y\in\mathbb{Z}}f_{y}\omega(ye_{2},1),\\
+k(\omega)&=\sum_{\begin{subarray}{c}x,y,y^{\prime}\in\mathbb{Z}\\
+y<y^{\prime}\end{subarray}}k_{y,y^{\prime},x}\omega(ye_{2},1)\omega(y^{\prime}e_{2},1)\omega(xe_{1},2)\,.\end{split} 
+ 
+ 
+ Here  ω ⁡ ( z , i ) \omega(z,i)  is the orientation of the line through  z z  parallel
+to  e i e_{i} . Thus  f f  is linear in the horizontal orientations, while  k k 
+combines products of two distinct horizontal orientations and one vertical
+orientation. We take the coefficient arrays to be square summable, so
+that  f , k ∈ L 2 ​ ( ℙ ) f,k\in L^{2}(\mathbb{P}) . 
+ 
+ 
+ The role of  f f  is to make the constant component of  A p ​ g A_{p}g 
+close to  1 1 . Recall that the Fourier–Walsh expansion writes each
+ F ∈ L 2 ​ ( ℙ ) F\in L^{2}(\mathbb{P})  in the
+orthonormal basis of products of orientations  ω ⁡ ( z , i ) \omega(z,i)  of finitely
+many distinct lines; see, for example,  O’Donnell [2014, Theorem 1.5] .
+The formula for  A p A_{p}  in Step 1 shifts these products and multiplies
+them by an orientation. Multiplication either introduces that
+orientation or cancels it if already present, since  ω ​ ( z , i ) 2 = 1 \omega(z,i)^{2}=1 .
+Thus only terms containing a single orientation can produce a
+constant term under  A p A_{p} . Note that  Ledger, Tóth, and Valkó [2018, (2.1)]  also use linear functions of the horizontal
+orientations to bound the Laplace transform of mean-square displacement
+from below. 
+ 
+ 
+ Each term of  f f  contains one orientation, and  A p A_{p}  either removes
+that orientation or introduces a second one. Thus  A p ​ f A_{p}f  has only
+constant and quadratic components. It remains to control the quadratic
+terms in  1 − A p ​ f 1-A_{p}f . We bound the
+contribution from products of two horizontal orientations directly.
+The role of  k k  is to reduce the contribution from products of a horizontal and a vertical
+orientation. We index the coefficients  ( f y ) y ∈ ℤ (f_{y})_{y\in\mathbb{Z}} 
+in Fourier coordinates using a real even function  φ ∈ L 2 ​ ( 𝕋 , m ) \varphi\in L^{2}(\mathbb{T},m) .
+The correction  k k  also contributes energy and creates quartic terms
+in  A p ​ k A_{p}k . Lemma  4.1  constructs  k k  from  φ \varphi  and
+shows that the bound for products of a horizontal and a vertical
+orientation gains a logarithmic term in its denominator, even after
+these additional contributions are included. Thus  φ \varphi  specifies  g = f + k g=f+k . The rest of the proof is to choose  φ \varphi . 
+ 
+ 
+ Step 3: Optimizing and integrating over frequencies. 
+We choose  φ \varphi  to balance cancellation of the constant term
+against the energy and the nonconstant terms in
+( 2 ). Lemma  5.1  bounds
+ r λ ​ ( p ) r_{\lambda}(p)  by a quadratic functional of  φ \varphi . We choose
+ φ \varphi  to minimize this functional; Section  6 
+carries out the minimization. In particular, Proposition  6.1  gives, for
+ a ≔ max ⁡ { | p 1 | , | p 2 | } a\coloneqq\max\{\lvert p_{1}\rvert,\lvert p_{2}\rvert\} , 
+ 
+
+ 
+ 
+ r λ ​ ( p ) ≤ 4096 a 2 ​ [ 1 + log ⁡ ( 1 / a ) ] 3 / 2 ( λ < a < 1 / 4 ) . r_{\lambda}(p)\leq\frac{4096}{a^{2}[1+\log(1/a)]^{3/2}}\qquad(\sqrt{\lambda}<a<1/4)\,. 
+ 
+ 
+ Since  3 / 2 > 1 3/2>1 , the integral of this bound over
+ λ < a < 1 / 4 \sqrt{\lambda}<a<1/4  stays bounded as  λ ↓ 0 \lambda\downarrow 0 .
+The estimate from  g = 0 g=0  gives a uniformly bounded contribution from
+the remaining frequencies. Letting  λ ↓ 0 \lambda\downarrow 0  therefore
+gives a finite annealed Green function, proving
+Theorem  1.2 . 
+ 
+ 
+ 
+ 1.4.  Related results 
+
+ 
+ 1.4.1.  Randomly oriented Manhattan lattices 
+
+ 
+ As discussed above, the displacement scale  n 2 / 3 n^{2/3}  predicted by  Redner [1989] 
+would imply transience of the walk if accompanied by an annealed local limit: the return
+probability would then have order  n − 4 / 3 n^{-4/3} . Simulations support this decay
+ [ Mejía-Monasterio, Nechaev,
+Oshanin, and Vasilyev, 2020 , Section 3.2] ; further discussions of the displacement
+prediction appear in  Bouchaud and Georges [1990]  and
+ Pène [2020, Section 3.5] . The transience conjecture is attributed
+to Guillotin-Plantard in  Bosi [2019, Appendix A] . 
+ 
+ 
+ In the mathematics literature, the Laplace transform of the annealed
+mean-square displacement has been bounded rigorously by
+ Ledger, Tóth, and Valkó [2018, Theorem 1.1]  in dimensions two and three. In dimension three,
+ Nguyen [2026, Theorem 1.1]  obtained order
+ λ − 2 ​ | log ⁡ λ | \lambda^{-2}\sqrt{\lvert\log\lambda\rvert} , up to multiplicative factors
+ ( log ⁡ | log ⁡ λ | ) ± ( 2 + ε ) (\log\lvert\log\lambda\rvert)^{\pm(2+\varepsilon)}  for every
+ ε > 0 \varepsilon>0  and all sufficiently small  λ \lambda .
+These estimates establish superdiffusivity in the Laplace-transform sense, but do not immediately yield bounds on mean-square displacement. Such bounds alone do not control the probability of returning to the origin. 
+ 
+ 
+ When the horizontal orientations are independent and uniform on
+ { − 1 , 1 } \{-1,1\}  and the vertical orientations alternate deterministically,
+the walk is almost surely transient  [ Bosi, 2019 , Theorem 9] .
+On the randomly oriented Manhattan lattice, following both orientations at every
+step gives the deterministic update
+ z ↦ z + ω ⁡ ( z , 1 ) ​ e 1 + ω ⁡ ( z , 2 ) ​ e 2 z\mapsto z+\omega(z,1)e_{1}+\omega(z,2)e_{2} ; this walk is eventually
+two-periodic for  ℙ \mathbb{P} -almost every environment
+ [ Collevecchio, Hamza, and Tournier, 2019 , Theorem 1] . Quantum and classical network models on
+the alternating deterministic lattice are studied in
+ Beamond, Owczarek, and Cardy [2003] . 
+ 
+ 
+ Our proof uses the nonreversible resolvent variational formula
+ [ Komorowski, Landim, and Olla, 2012 , Theorem 4.1]  that  Ledger, Tóth, and Valkó [2018, Section 2]  use for displacement bounds.
+Polynomial test functions similar to ours also appear in the study of asymmetric exclusion
+ [ Landim, Quastel, Salmhofer, and Yau, 2004 , Sections 3–4]   [ Yau, 2004 , Section 2]  and the
+stationary one-dimensional self-repelling Brownian polymer
+ [ Tarrès, Tóth, and Valkó, 2012 ] . Variational formulas for
+resolvents are discussed in  Tóth [2018, (39)] , and their connection
+with capacities and transience in  Gaudillière and Landim [2014, Theorem 2.4] . 
+ 
+ 
+ 
+ 1.4.2.  Partially oriented lattices 
+
+ 
+ If only the horizontal lines are oriented, the walker can move up,
+down, or in the direction of its current horizontal line. Choosing
+uniformly among these three moves makes the vertical coordinate a
+lazy simple random walk independent of the orientations. One can
+therefore describe the visits to horizontal lines before using their
+directions to determine the horizontal displacement. This is a
+discrete version of the Matheron–de Marsily model
+ [ Matheron and de Marsily, 1980 ] . For the walk studied here, each coordinate
+depends on the orientations encountered by the other, so the same
+separation is unavailable. 
+ 
+ 
+ With independent horizontal orientations uniform on  { − 1 , 1 } \{-1,1\} ,
+the partially oriented walk is almost surely transient
+ [ Campanino and Petritis, 2003 , Theorem 1.8]  and has zero speed
+ [ Campanino and Petritis, 2004 , Theorem 2.11] . The horizontal displacement grows on
+a different scale from the vertical displacement:
+ Guillotin-Plantard and Le Ny [2008a, Theorem 2]  proved an annealed joint functional limit
+theorem with scales  n 3 / 4 n^{3/4}  and  n 1 / 2 n^{1/2} , respectively.
+The limiting coordinates are dependent, even though the vertical
+motion is independent of the orientations. The annealed return
+probability has order  n − 5 / 4 n^{-5/4} 
+ [ Castell, Guillotin-Plantard, Pène, and
+Schapira, 2011 , Theorem 20] . 
+ 
+ 
+ For the partially oriented walk,  Guillotin-Plantard and Le Ny [2008b, Theorem 1]  extend almost-sure transience from independent
+horizontal orientations uniform on  { − 1 , 1 } \{-1,1\}  to orientations whose
+probabilities are sampled along a stationary orbit of a dynamical system. The orientations
+are independent conditional on the orbit, but can be dependent after
+averaging over it. Their theorem assumes that each orientation has
+mean zero and that the probabilities satisfy the integrability
+condition (2.3).  Brémont [2017]  allows all transition
+probabilities to depend on the layer. In such models, changing only
+departures from the horizontal axis can turn a transient walk into
+a recurrent one  [ Bosi, Hu, and Peres, 2022 , Corollary 2.6] ; see
+also  Brémont [2017, Proposition 7.8] . 
+ 
+ 
+ 
+ 1.4.3.  Diffusion in incompressible random flows 
+
+ 
+ Our walk has divergence-free drift, making it a discrete analogue of a
+Brownian particle transported by a stationary incompressible random flow
+ [ Bouchaud, Georges, Koplik, Provata, and
+Redner, 1990 ] . For a class of incompressible random drifts with covariance
+decay  R − 2 ​ ( 1 − γ ) R^{-2(1-\gamma)}  at distance  R R ,  Armstrong, Bou-Rabee, and Kuusi [2026]  obtained moment
+estimates over the environment for the quenched mean-square displacement
+at scale  t 2 / ( 2 − γ ) t^{2/(2-\gamma)} , for sufficiently small positive  γ \gamma .
+For the  d d -dimensional version of our walk, the covariance of each drift
+component is constant along its coordinate axis and zero elsewhere.
+Its average over a box of side  R R  centered at the origin therefore has
+order  R 1 − d R^{1-d} .
+Matching these exponents gives the heuristic correspondence 
+ 
+
+ 
+ (4) 
+ 
+ γ = 3 − d 2 . \gamma=\frac{3-d}{2}\,. 
+ 
+ 
+ The renormalization-group predictions of  Bouchaud and Georges [1990] , as recalled in
+ Armstrong, Bou-Rabee, and Kuusi [2026] , then give mean-square displacement of order  t 4 / 3 t^{4/3}  in
+dimension two,  t ​ ( log ⁡ t ) 1 / 2 t(\log t)^{1/2}  in dimension three, and  t t  in higher
+dimensions. In dimension two this recovers Redner’s displacement exponent.
+It remains unclear how to adapt the methods of  Armstrong, Bou-Rabee, and Kuusi [2026]  to our
+setting, since their argument requires sufficiently small positive  γ \gamma . 
+ 
+ 
+ 
+ 
+ 1.5.  Formalization 
+
+ 
+ Every theorem, lemma and proposition of this paper has been formalized
+in Lean 4 and proved from Mathlib, together with the recurrence assertion
+in Problem  3 . No proof uses  sorry  or any axiom
+beyond the three of Lean’s own logic. The development is available at
+ https://github.com/nitromannitol/Manhattan-Transience . 
+ 
+ 
+ 
+ 
+ Acknowledgments 
+
+ 
+ The research of Y. Peres was supported by National Natural Science Foundation of China grant
+RFIS-W2531011. We acknowledge use of ChatGPT 5.6. 
+ 
+ 
+ 
+ 2.  The variational bound 
+
+ 
+ 2.1.  Fourier transform 
+
+ 
+ For a fixed environment and  h : ℤ 2 → ℝ h\colon\mathbb{Z}^{2}\to\mathbb{R} , the generator is 
+ 
+
+ 
+ (5) 
+ 
+ ( 𝒢 ω ​ h ) ​ ( z ) = 1 2 ​ ∑ i = 1 2 [ h ⁡ ( z + e i ) + h ⁡ ( z − e i ) − 2 ​ h ​ ( z ) ] + 1 2 ∑ i = 1 2 ω ( z , i ) [ h ( z + e i ) − h ( z − e i ) ] . \begin{split}(\mathcal{G}_{\omega}h)(z)&=\frac{1}{2}\sum_{i=1}^{2}\bigl[h(z+e_{i})+h(z-e_{i})-2h(z)\bigr]\\
+&\quad+\frac{1}{2}\sum_{i=1}^{2}\omega(z,i)\bigl[h(z+e_{i})-h(z-e_{i})\bigr]\,.\end{split} 
+ 
+ 
+ On  ℓ 2 ​ ( ℤ 2 ) \ell^{2}(\mathbb{Z}^{2}) , the first sum is the self-adjoint simple-random-walk
+generator. The second sum is skew-adjoint because  ω ⁡ ( z , i ) \omega(z,i)  is
+constant along  e i e_{i} . 
+ 
+ 
+ For  x ∈ ℤ 2 x\in\mathbb{Z}^{2} , define the environment shift and its action on functions by 
+ 
+
+ 
+ 
+ ( T x ​ F ) ​ ( ω ) = F ⁡ ( τ x ​ ω ) , ( τ x ​ ω ) ​ ( z , i ) = ω ⁡ ( z + x , i ) . (T_{x}F)(\omega)=F(\tau_{x}\omega),\qquad(\tau_{x}\omega)(z,i)=\omega(z+x,i)\,. 
+ 
+ 
+ The operator  T x T_{x}  is unitary on  L 2 ​ ( ℙ ) L^{2}(\mathbb{P}) , and  T ± e i T_{\pm e_{i}}  commutes
+with multiplication by  ω ⁡ ( 0 , i ) \omega(0,i)  because that sign is constant along
+the line parallel to  e i e_{i} . 
+ 
+ 
+ We keep track of both the walker’s position and the environment seen
+from that position. The generator of this pair on
+ L 2 ​ ( ℙ , ℓ 2 ​ ( ℤ 2 ) ) L^{2}(\mathbb{P};\ell^{2}(\mathbb{Z}^{2}))  is 
+ 
+
+ 
+ (6) 
+ 
+ ( 𝒢 ​ F ) ​ ( ω , z ) = ∑ i = 1 2 [ F ⁡ ( τ ω ⁡ ( 0 , i ) ​ e i ​ ω , z + ω ⁡ ( 0 , i ) ​ e i ) − F ⁡ ( ω , z ) ] . (\mathcal{G}F)(\omega,z)=\sum_{i=1}^{2}\bigl[F(\tau_{\omega(0,i)e_{i}}\omega,z+\omega(0,i)e_{i})-F(\omega,z)\bigr]\,. 
+ 
+ 
+ For returns to the origin, set
+ δ 0 ( ω , z ) = 𝟏 { z = 0 } \delta_{0}(\omega,z)=\mathbf{1}_{\{z=0\}} . Then, the inner product being that of
+ L 2 ​ ( ℙ , ℓ 2 ​ ( ℤ 2 ) ) L^{2}(\mathbb{P};\ell^{2}(\mathbb{Z}^{2})) , 
+ 
+
+ 
+ (7) 
+ 
+ p ¯ t ​ ( 0 , 0 ) = ⟨ δ 0 , e t ​ 𝒢 ​ δ 0 ⟩ . \overline{p}_{t}(0,0)=\langle\delta_{0},e^{t\mathcal{G}}\delta_{0}\rangle\,. 
+ 
+ 
+ Under the Fourier transform
+ F ^ ( ω , p ) = ∑ z e − i p ⋅ z F ( ω , z ) \widehat{F}(\omega,p)=\sum_{z}e^{-ip\cdot z}F(\omega,z) , the function
+ F ⁡ ( τ x ​ ω , z + x ) F(\tau_{x}\omega,z+x)  becomes  e i ​ p ⋅ x ​ T x ​ F ^ e^{ip\cdot x}T_{x}\widehat{F} . 
+ 
+ 
+ Proposition 2.1 . 
+ 
+ After Fourier transformation in the position variable,  𝒢 \mathcal{G}  acts
+at each frequency  p ∈ 𝕋 2 p\in\mathbb{T}^{2}  as  G p = S p + A p G_{p}=S_{p}+A_{p} , where 
+ 
+
+ 
+ (8) 
+ 
+ S p \displaystyle S_{p} 
+ = 1 2 ​ ∑ i = 1 2 ( e i ​ p i ​ T e i + e − i ​ p i ​ T − e i − 2 ​ I ) , \displaystyle=\frac{1}{2}\sum_{i=1}^{2}\bigl(e^{ip_{i}}T_{e_{i}}+e^{-ip_{i}}T_{-e_{i}}-2I\bigr), 
+ 
+ 
+ (9) 
+ 
+ A p \displaystyle A_{p} 
+ = 1 2 ​ ∑ i = 1 2 ω ⁡ ( 0 , i ) ​ ( e i ​ p i ​ T e i − e − i ​ p i ​ T − e i ) . \displaystyle=\frac{1}{2}\sum_{i=1}^{2}\omega(0,i)\bigl(e^{ip_{i}}T_{e_{i}}-e^{-ip_{i}}T_{-e_{i}}\bigr)\,. 
+ 
+ 
+ Uniformly in  p p , the operator  S p S_{p}  is self-adjoint and nonpositive,
+ A p ∗ = − A p A_{p}^{*}=-A_{p} ,  ∥ S p ∥ ≤ 4 \lVert S_{p}\rVert\leq 4 , and  ∥ A p ∥ ≤ 2 \lVert A_{p}\rVert\leq 2 .
+Let  d ⁡ ( s ) ≔ 1 − cos ⁡ s d(s)\coloneqq 1-\cos s  and  θ ⁡ ( p ) ≔ d ⁡ ( p 1 ) + d ⁡ ( p 2 ) \theta(p)\coloneqq d(p_{1})+d(p_{2}) .
+For every  λ > 0 \lambda>0 , 
+ 
+
+ 
+ (10) 
+ 
+ ∫ 0 ∞ e − λ ​ t ​ p ¯ t ​ ( 0 , 0 ) ​ 𝑑 t \displaystyle\int_{0}^{\infty}e^{-\lambda t}\overline{p}_{t}(0,0)\,\mathrm{d}t 
+ = ∫ 𝕋 2 r λ ​ ( p ) ​ 𝑑 m ​ ( p ) , \displaystyle=\int_{\mathbb{T}^{2}}r_{\lambda}(p)\,\mathrm{d}m(p), 
+ 
+ 
+ (11) 
+ 
+ r λ ​ ( p ) \displaystyle r_{\lambda}(p) 
+ ≔ Re ⁡ ⟨ 1 , ( λ ​ I − G p ) − 1 ​ 1 ⟩ . \displaystyle\coloneqq\operatorname{Re}\langle 1,(\lambda I-G_{p})^{-1}1\rangle\,. 
+ 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ Splitting ( 6 ) according to the two values of each
+sign gives ( 8 ) and ( 9 ). Unitarity of the shifts and
+their commutation with the corresponding signs give the operator
+assertions. The Fourier transform of  δ 0 \delta_{0}  is  1 1 , so Plancherel’s
+theorem and integration of ( 7 ) against
+ e − λ ​ t ​ d ​ t e^{-\lambda t}\,\mathrm{d}t  give ( 10 ).
+∎ 
+ 
+ 
+ 
+ 
+ 2.2.  The fixed-frequency bound 
+
+ 
+ Fix  λ > 0 \lambda>0  and  p ∈ 𝕋 2 p\in\mathbb{T}^{2} , and let 
+ 
+
+ 
+ (12) 
+ 
+ H ≔ λ ​ I − S p , λ ​ I ≤ H ≤ ( λ + 4 ) ​ I , H ​ 1 = ( λ + θ ⁡ ( p ) ) ​ 1 . H\coloneqq\lambda I-S_{p},\qquad\lambda I\leq H\leq(\lambda+4)I,\qquad H1=(\lambda+\theta(p))1\,. 
+ 
+ 
+ Thus  H − 1 H^{-1}  and  H − 1 / 2 H^{-1/2}  are bounded, and we set 
+ 
+
+ 
+ (13) 
+ 
+ ∥ g ∥ 1 , λ 2 ≔ ⟨ g , H ​ g ⟩ , ∥ u ∥ − 1 , λ 2 ≔ ⟨ u , H − 1 ​ u ⟩ . \lVert g\rVert_{1,\lambda}^{2}\coloneqq\langle g,Hg\rangle,\qquad\lVert u\rVert_{-1,\lambda}^{2}\coloneqq\langle u,H^{-1}u\rangle\,. 
+ 
+ 
+ 
+ 
+ Lemma 2.2 . 
+ 
+ For every  λ > 0 \lambda>0 ,  p ∈ 𝕋 2 p\in\mathbb{T}^{2} , and  g ∈ L 2 ​ ( ℙ ) g\in L^{2}(\mathbb{P}) , 
+ 
+
+ 
+ (14) 
+ 
+ 0 ≤ r λ ​ ( p ) ≤ ∥ g ∥ 1 , λ 2 + ∥ 1 − A p ​ g ∥ − 1 , λ 2 . 0\leq r_{\lambda}(p)\leq\lVert g\rVert_{1,\lambda}^{2}+\lVert 1-A_{p}g\rVert_{-1,\lambda}^{2}\,. 
+ 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ Let  z ≔ ( H − A p ) − 1 ​ 1 z\coloneqq(H-A_{p})^{-1}1 ,  d ≔ z + g d\coloneqq z+g , and  q ≔ 1 − A p ​ g q\coloneqq 1-A_{p}g . Then
+ q = H ​ z − A p ​ d q=Hz-A_{p}d , and skew-adjointness gives 
+ 
+
+ 
+ 
+ r λ ​ ( p ) = Re ⁡ ⟨ 1 , z ⟩ = ∥ z ∥ 1 , λ 2 , Re ⁡ ⟨ q , d ⟩ = Re ⁡ ⟨ H ​ z , d ⟩ . r_{\lambda}(p)=\operatorname{Re}\langle 1,z\rangle=\lVert z\rVert_{1,\lambda}^{2},\qquad\operatorname{Re}\langle q,d\rangle=\operatorname{Re}\langle Hz,d\rangle\,. 
+ 
+ 
+ Expanding  z = d − g z=d-g  gives 
+ 
+
+ 
+ 
+ ∥ z ∥ 1 , λ 2 = ∥ g ∥ 1 , λ 2 + ( 2 ​ Re ⁡ ⟨ q , d ⟩ − ∥ d ∥ 1 , λ 2 ) . \lVert z\rVert_{1,\lambda}^{2}=\lVert g\rVert_{1,\lambda}^{2}+\left(2\operatorname{Re}\langle q,d\rangle-\lVert d\rVert_{1,\lambda}^{2}\right)\,. 
+ 
+ 
+ Weighted Cauchy–Schwarz bounds the bracket by  ∥ q ∥ − 1 , λ 2 \lVert q\rVert_{-1,\lambda}^{2} .
+∎ 
+ 
+ 
+ 
+ Remark 2.3 . 
+ 
+ Taking  g = 0 g=0  gives 
+ 
+
+ 
+ (15) 
+ 
+ r λ ​ ( p ) ≤ ∥ 0 ∥ 1 , λ 2 + ∥ 1 ∥ − 1 , λ 2 = 1 λ + θ ⁡ ( p ) . r_{\lambda}(p)\leq\lVert 0\rVert_{1,\lambda}^{2}+\lVert 1\rVert_{-1,\lambda}^{2}=\frac{1}{\lambda+\theta(p)}\,. 
+ 
+ 
+ This bound suffices when  p p  stays away from  0 0 . 
+ 
+ 
+ 
+ 
+ 
+ 3.  Fourier–Walsh coordinates 
+
+ 
+ We evaluate the variational bound by expanding the test function in
+products of the orientations  ω ⁡ ( x , j ) \omega(x,j) . Fix  λ > 0 \lambda>0  and  p ∈ 𝕋 2 p\in\mathbb{T}^{2} , and write
+ A = A p A=A_{p} . 
+ 
+ 
+ For a finite set of lines, form the products over all subsets of their
+orientations, including the empty product  1 1 . These products form an
+orthonormal basis for functions of those orientations
+ [ O’Donnell, 2014 , Theorem 1.5] . Taking conditional expectations onto
+increasing finite sets that exhaust all lines and applying  L 2 L^{2} 
+martingale convergence gives the Fourier–Walsh basis of  L 2 ​ ( ℙ ) L^{2}(\mathbb{P}) . 
+ 
+ 
+ 3.1.  Degree and frequency 
+
+ 
+ Index the horizontal lines by  ( y ​ e 2 , 1 ) (ye_{2},1)  and the vertical lines by
+ ( x ​ e 1 , 2 ) (xe_{1},2) , with  x , y ∈ ℤ x,y\in\mathbb{Z} . For  n ≥ 0 n\geq 0 , let  ℋ n \mathcal{H}_{n}  be the closed
+span of products of the orientations of  n n  distinct lines.
+Every  F ∈ ℋ n F\in\mathcal{H}_{n}  has a square-summable coefficient array  f f , symmetric
+under permutations of the line indices  ( x a , j a ) (x_{a},j_{a}) , such that 
+ 
+
+ 
+ 
+ F ⁡ ( ω ) = ∑ 𝐱 , 𝐣 f 𝐣 ​ ( 𝐱 ) ​ ∏ a = 1 n ω ⁡ ( x a , j a ) . F(\omega)=\sum_{\mathbf{x},\mathbf{j}}f_{\mathbf{j}}(\mathbf{x})\prod_{a=1}^{n}\omega(x_{a},j_{a})\,. 
+ 
+ 
+ The sum converges in  L 2 ​ ( ℙ ) L^{2}(\mathbb{P})  and runs over ordered line indices;
+ f f  vanishes when two line indices coincide.
+If  F ∈ ℋ n F\in\mathcal{H}_{n}  and
+ G ∈ ℋ m G\in\mathcal{H}_{m}  have coefficients  f f  and  g g , then 
+ 
+
+ 
+ (16) 
+ 
+ ⟨ F , G ⟩ = 𝟏 { m = n } n ! ⟨ f , g ⟩ ℓ 2 . \langle F,G\rangle=\mathbf{1}_{\{m=n\}}n!\langle f,g\rangle_{\ell^{2}}\,. 
+ 
+ 
+ The factor  n ! n!  counts the orderings of the  n n  line indices. 
+ 
+ 
+ Multiplication by  ω ⁡ ( 0 , i ) \omega(0,i)  introduces this factor into a product
+when it is absent and cancels it when it is present, since
+ ω ​ ( 0 , i ) 2 = 1 \omega(0,i)^{2}=1 . Consequently 
+ 
+
+ 
+ (17) 
+ 
+ A = D − D ∗ , D : ℋ n ⟶ ℋ n + 1 . A=D-D^{*},\qquad D\colon\mathcal{H}_{n}\longrightarrow\mathcal{H}_{n+1}\,. 
+ 
+ 
+ Here  D D  raises the degree by one and  − D ∗ -D^{*}  lowers it by one, as in the
+decomposition in  Landim, Quastel, Salmhofer, and Yau [2004, (2.6)–(2.8)]  for the exclusion process
+at density  1 / 2 1/2 .
+To exclude repeated line indices after raising, let  Π n \Pi_{n}  denote the
+orthogonal projection onto coefficients supported on distinct line indices.
+Write  H n H_{n}  and  D n D_{n}  for the restrictions of  H H  and  D D  to  ℋ n \mathcal{H}_{n} . 
+ 
+ 
+ For the line coefficients we use the Fourier convention 
+ 
+
+ 
+ (18) 
+ 
+ f ^ 𝐣 ​ ( 𝝃 ) = ∑ 𝐱 e i ​ ∑ a x a ⋅ ξ a ​ f 𝐣 ​ ( 𝐱 ) , \widehat{f}_{\mathbf{j}}(\boldsymbol{\xi})=\sum_{\mathbf{x}}e^{i\sum_{a}x_{a}\cdot\xi_{a}}f_{\mathbf{j}}(\mathbf{x})\,, 
+ 
+ 
+ with convergence in  L 2 L^{2} . A line frequency  ξ a \xi_{a}  has zero  j a j_{a} th
+coordinate. Simultaneous shifts now act by scalar multiplication.
+We drop the hats and also use  Π n \Pi_{n}  for the projection after Fourier
+transformation.
+For a degree- n n  coefficient, the total frequency is 
+ 
+
+ 
+ (19) 
+ 
+ P = p + ξ 1 + ⋯ + ξ n . P=p+\xi_{1}+\cdots+\xi_{n}\,. 
+ 
+ 
+ Equations ( 8 ) and ( 12 ) give 
+ 
+
+ 
+ (20) 
+ 
+ H n  is multiplication by  ​ λ + θ ⁡ ( P ) . \text{$H_{n}$ is multiplication by }\lambda+\theta(P)\,. 
+ 
+ 
+ We will use 
+ 
+
+ 
+ (21) 
+ 
+ log + x = max { 0 , log x } , 2 ​ s 2 π 2 ≤ d ( s ) ≤ s 2 2 ( | s | ≤ π ) . \log_{+}x=\max\{0,\log x\},\qquad\frac{2s^{2}}{\pi^{2}}\leq d(s)\leq\frac{s^{2}}{2}\quad(\lvert s\rvert\leq\pi)\,. 
+ 
+ 
+ We identify  H 0 H_{0}  with the scalar  λ + θ ⁡ ( p ) \lambda+\theta(p)  by which it acts
+on constants. 
+ 
+ 
+ Lemma 3.1 . 
+ 
+ Let  D ~ n \widetilde{D}_{n}  be the raising operator computed without imposing
+distinct line indices. Then 
+ 
+
+ 
+ (22) 
+ 
+ ( D ~ n ​ f ) j 1 ​ … ​ j n + 1 = i n + 1 ​ ∑ a = 1 n + 1 sin ⁡ ( P j a ) ​ f j 1 ​ … ​ j a ^ ​ … ​ j n + 1 , (\widetilde{D}_{n}f)_{j_{1}\dots j_{n+1}}=\frac{i}{n+1}\sum_{a=1}^{n+1}\sin(P_{j_{a}})f_{j_{1}\dots\widehat{j_{a}}\dots j_{n+1}}\,, 
+ 
+ 
+ where  P P  is the total frequency after raising and the hat omits the
+ a a -th line index. Moreover,
+ D n = Π n + 1 ​ D ~ n ​ Π n D_{n}=\Pi_{n+1}\widetilde{D}_{n}\Pi_{n} , and  Π n \Pi_{n}  commutes with every bounded
+multiplier that is a function of  P P . 
+ 
+ 
+ 
+ The commutation statement lets us remove a projection in upper bounds.
+If  Π \Pi  is an orthogonal projection commuting with a bounded positive
+multiplier  N N  with bounded inverse, then 
+ 
+
+ 
+ (23) 
+ 
+ ⟨ Π ​ u , N − 1 ​ Π ​ u ⟩ ≤ ⟨ u , N − 1 ​ u ⟩ , ⟨ Π ​ u , N ​ Π ​ u ⟩ ≤ ⟨ u , N ​ u ⟩ . \langle\Pi u,N^{-1}\Pi u\rangle\leq\langle u,N^{-1}u\rangle,\qquad\langle\Pi u,N\Pi u\rangle\leq\langle u,Nu\rangle\,. 
+ 
+ 
+ 
+ 
+ Proof of Lemma  3.1 . 
+ 
+ By ( 9 ), raising first shifts and then multiplies by
+ ω ⁡ ( 0 , i ) \omega(0,i) . On a coefficient of total frequency  P ′ P^{\prime} , the shift
+contributes
+ 1 2 ​ ( e i ​ P i ′ − e − i ​ P i ′ ) = i ​ sin ⁡ ( P i ′ ) \tfrac{1}{2}(e^{iP^{\prime}_{i}}-e^{-iP^{\prime}_{i}})=i\sin(P^{\prime}_{i}) . Multiplication appends a line
+index of type  i i  at the site  0 0 , whose Fourier factor is  1 1 .
+Symmetrization averages over the  n + 1 n+1  positions of the new index. If it
+occupies position  a a , then  P ′ = P − ξ a P^{\prime}=P-\xi_{a}  and  ( ξ a ) j a = 0 (\xi_{a})_{j_{a}}=0 , so
+ P j a ′ = P j a P^{\prime}_{j_{a}}=P_{j_{a}} . This gives ( 22 ). The new index must be
+distinct from the existing indices, which gives the projection  Π n + 1 \Pi_{n+1} . 
+ 
+ 
+ Simultaneous translations preserve distinctness, so  Π n \Pi_{n}  commutes
+with their multipliers. Uniform approximation by trigonometric polynomials
+gives commutation with continuous functions of  P P  in operator norm;
+spectral calculus extends this to bounded Borel functions of  P P .
+∎ 
+ 
+ 
+ 
+ 
+ 3.2.  Degrees one and three 
+
+ 
+ We now take  g = f + k g=f+k  with  f ∈ ℋ 1 f\in\mathcal{H}_{1}  and  k ∈ ℋ 3 k\in\mathcal{H}_{3} .
+After separating the contribution of the constant component of
+ 1 − A p ​ ( f + k ) 1-A_{p}(f+k) , the remaining terms in ( 14 ) are 
+ 
+
+ 
+ (24) 
+ 
+ E p ​ ( f , k ) = ⟨ f , H 1 ​ f ⟩ + ⟨ k , H 3 ​ k ⟩ + ∥ D 1 ​ f − D 2 ∗ ​ k ∥ − 1 , λ 2 + ∥ D 3 ​ k ∥ − 1 , λ 2 . E_{p}(f,k)=\langle f,H_{1}f\rangle+\langle k,H_{3}k\rangle+\lVert D_{1}f-D_{2}^{*}k\rVert_{-1,\lambda}^{2}+\lVert D_{3}k\rVert_{-1,\lambda}^{2}\,. 
+ 
+ 
+ Take  f f  and  k k  of the form ( 3 ).
+On coefficients of products  ω ⁡ ( y ​ e 2 , 1 ) ​ ω ​ ( x ​ e 1 , 2 ) \omega(ye_{2},1)\omega(xe_{1},2) , Fourier
+transformation turns  H H  into multiplication by
+ λ + d ⁡ ( p 2 + s ) + d ⁡ ( p 1 + u ) \lambda+d(p_{2}+s)+d(p_{1}+u) , where  s s  and  u u  are Fourier dual to  y y 
+and  x x . Let  s ′ s^{\prime}  be the frequency of the second horizontal line index
+in  k k . We center the denominator by setting 
+ 
+
+ 
+ (25) 
+ 
+ r = p 2 + s , r ′ = p 2 + s ′ , β = p 1 + u , and α = r + r ′ − p 2 . r=p_{2}+s,\qquad r^{\prime}=p_{2}+s^{\prime},\qquad\beta=p_{1}+u,\qquad\text{and}\qquad\alpha=r+r^{\prime}-p_{2}\,. 
+ 
+ 
+ Here  r , r ′ r,r^{\prime}  are the shifted frequencies of the two horizontal line
+indices in  k k , and  β \beta  is the shifted frequency of its vertical
+line index. Subscripts list the values of  j j  in the factors
+ ω ⁡ ( x , j ) \omega(x,j) ; for example,  112 112  denotes two horizontal orientations
+and one vertical orientation. The total frequencies are 
+ 
+
+ 
+ 
+ degree  0 : P = ( p 1 , p 2 ) , component  11 : P = ( p 1 , α ) , component  1 : P = ( p 1 , r ) , component  12 : P = ( β , r ) , component  112 : P = ( β , α ) . \begin{array}[]{llll}\text{degree $0$:}&P=(p_{1},p_{2}),&\quad\text{component $11$:}&P=(p_{1},\alpha),\\
+\text{component $1$:}&P=(p_{1},r),&\quad\text{component $12$:}&P=(\beta,r),\\
+&&\quad\text{component $112$:}&P=(\beta,\alpha)\,.\end{array} 
+ 
+ 
+ The shifts preserve Haar measure. We use these variables throughout the
+coefficient calculations. 
+ 
+ 
+ 
+ 3.3.  Low-degree operators 
+
+ 
+ By ( 16 ), multiplying the Fourier coefficients of components
+ 11 11 ,  12 12 , and  112 112  by  2 \sqrt{2} ,  2 2 , and  18 \sqrt{18} , respectively, makes
+the correspondence with Walsh expansions an isometry. From now on,
+we identify each Walsh component with its normalized Fourier coefficient
+function. 
+ 
+ 
+ Lemma 3.2 . 
+ 
+ Let  k ⁡ ( r , r ′ , β ) k(r,r^{\prime},\beta)  be a normalized Fourier coefficient of component
+ 112 112 , symmetric in  r , r ′ r,r^{\prime} . In the variables ( 25 ) and the
+normalization above, 
+ 
+
+ 
+ (26) 
+ 
+ ( D ~ 2 ∗ ​ k ) 11 ​ ( r , r ′ ) \displaystyle\bigl(\widetilde{D}_{2}^{*}k\bigr)_{11}(r,r^{\prime}) 
+ = − i sin ( α ) ∫ 𝕋 k ( r , r ′ , β ) d m ( β ) , \displaystyle=-i\sin(\alpha)\int_{\mathbb{T}}k(r,r^{\prime},\beta)\,\mathrm{d}m(\beta), 
+ 
+ 
+ (27) 
+ 
+ ( D ~ 2 ∗ ​ k ) 12 ​ ( r , β ) \displaystyle\bigl(\widetilde{D}_{2}^{*}k\bigr)_{12}(r,\beta) 
+ = − i 2 sin ( β ) ∫ 𝕋 k ( r , r ′ , β ) d m ( r ′ ) . \displaystyle=-i\sqrt{2}\sin(\beta)\int_{\mathbb{T}}k(r,r^{\prime},\beta)\,\mathrm{d}m(r^{\prime})\,. 
+ 
+ 
+ The first formula integrates out the frequency of the vertical line
+index; the second integrates out that of either horizontal line index.
+For  f f  linear in the orientations  ω ⁡ ( y ​ e 2 , 1 ) \omega(ye_{2},1) , 
+ 
+
+ 
+ (28) 
+ 
+ ( D 0 ∗ f ) ( p ) = − i sin ( p 1 ) ∫ 𝕋 f d m , ( D ~ 1 f ) 11 = i 2 sin ( p 1 ) [ f ( r ) + f ( r ′ ) ] , ( D ~ 1 f ) 12 = i sin ( r ) f ( r ) . (D_{0}^{*}f)(p)=-i\sin(p_{1})\int_{\mathbb{T}}f\,\mathrm{d}m,\quad(\widetilde{D}_{1}f)_{11}=\tfrac{i}{\sqrt{2}}\sin(p_{1})[f(r)+f(r^{\prime})],\quad(\widetilde{D}_{1}f)_{12}=i\sin(r)f(r)\,. 
+ 
+ 
+ 
+ 
+ 
+ Proof of Lemma  3.2 . 
+ 
+ For a coefficient with subscript  112 112 , equation ( 22 ) gives, before
+normalization, 
+ 
+
+ 
+ 
+ i 3 ​ [ sin ⁡ β ​ f 12 ​ ( r ′ , β ) + sin ⁡ β ​ f 12 ​ ( r , β ) + sin ⁡ α ​ f 11 ​ ( r , r ′ ) ] . \frac{i}{3}\bigl[\sin\beta f_{12}(r^{\prime},\beta)+\sin\beta f_{12}(r,\beta)+\sin\alpha f_{11}(r,r^{\prime})\bigr]\,. 
+ 
+ 
+ Multiplying the coefficients with subscripts  11 11 ,  12 12 , and  112 112  by
+ 2 \sqrt{2} ,  2 2 , and  18 = 3 ​ 2 \sqrt{18}=3\sqrt{2} , then taking adjoints, gives
+( 26 )–( 27 ); symmetry in  ( r , r ′ ) (r,r^{\prime})  gives the factor
+ 2 \sqrt{2}  in ( 27 ). 
+ 
+ 
+ For the Fourier coefficient of  f f , the total frequency is  ( p 1 , r ) (p_{1},r) .
+Equation ( 22 ) with  n = 0 n=0  gives
+ ( D ~ 0 ​ u ) 1 = i ​ sin ⁡ ( p 1 ) ​ u (\widetilde{D}_{0}u)_{1}=i\sin(p_{1})u , whose adjoint is the first formula in
+( 28 ). Equation ( 22 ) with  n = 1 n=1 , followed by the
+degree-two normalization above, gives the other two formulas.
+∎ 
+ 
+ 
+ 
+ 
+ 
+ 4.  The test function 
+
+ 
+ Exchange rows and columns if necessary, and fix
+ λ ∈ ( 0 , 1 ] \lambda\in(0,1]  and  p ∈ 𝕋 2 p\in\mathbb{T}^{2}  with
+ a ≔ | p 1 | ≥ | p 2 | a\coloneqq\lvert p_{1}\rvert\geq\lvert p_{2}\rvert .
+Let 
+ 
+
+ 
+ (29) 
+ 
+ δ ≔ λ + a , s ≔ sin ⁡ p 1 , H 0 ≔ λ + θ ⁡ ( p ) . \delta\coloneqq\sqrt{\lambda}+a,\qquad s\coloneqq\sin p_{1},\qquad H_{0}\coloneqq\lambda+\theta(p)\,. 
+ 
+ 
+ We use the shifted variables of ( 25 ); sums are taken modulo
+ 2 ​ π 2\pi , and absolute values use representatives in  ( − π , π ] (-\pi,\pi] .
+Let  φ ∈ L 2 ​ ( 𝕋 , m ) \varphi\in L^{2}(\mathbb{T},m)  be real and even, and set 
+ 
+
+ 
+ (30) 
+ 
+ f ⁡ ( r ) = − i ​ φ ​ ( r ) , w ⁡ ( r ) ≔ sin ⁡ ( r ) ​ φ ​ ( r ) . f(r)=-i\varphi(r),\qquad w(r)\coloneqq\sin(r)\varphi(r)\,. 
+ 
+ 
+ Equation ( 28 ) gives 
+ 
+
+ 
+ (31) 
+ 
+ D 0 ∗ f = − s ∫ 𝕋 φ d m , ( D 1 f ) 12 = w . D_{0}^{*}f=-s\int_{\mathbb{T}}\varphi\,\mathrm{d}m,\qquad(D_{1}f)_{12}=w\,. 
+ 
+ 
+ We choose  k k  so that  ( D 2 ∗ ​ k ) 12 (D_{2}^{*}k)_{12}  approximates  w w  and
+ ( D 2 ∗ ​ k ) 11 = 0 (D_{2}^{*}k)_{11}=0 . The correction will add a logarithmic
+term to the denominator  λ + d ⁡ ( r ) + d ⁡ ( β ) \lambda+d(r)+d(\beta) , giving 
+ 
+
+ 
+ (32) 
+ 
+ W ⁡ ( r , β ) ≔ λ + d ⁡ ( r ) + d ⁡ ( β ) + sin 2 ⁡ β 4 ​ π ​ log ⁡ ( 1 + π δ + | r | + | β | ) . \begin{split}W(r,\beta)\coloneqq{}&\lambda+d(r)+d(\beta)\\
+&+\frac{\sin^{2}\beta}{4\pi}\log\left(1+\frac{\pi}{\delta+\lvert r\rvert+\lvert\beta\rvert}\right)\,.\end{split} 
+ 
+ 
+ The following lemma bounds the sum of the energy of  k k , the quartic
+contribution  ∥ D 3 ​ k ∥ − 1 , λ 2 \lVert D_{3}k\rVert_{-1,\lambda}^{2} , and the remaining quadratic contribution. 
+ 
+ 
+ Lemma 4.1 . 
+ 
+ For every  λ ∈ ( 0 , 1 ] \lambda\in(0,1] ,  p ∈ 𝕋 2 p\in\mathbb{T}^{2}  with
+ | p 2 | ≤ | p 1 | \lvert p_{2}\rvert\leq\lvert p_{1}\rvert , and real even
+ φ ∈ L 2 ​ ( 𝕋 , m ) \varphi\in L^{2}(\mathbb{T},m) , there is  k ∈ ℋ 3 k\in\mathcal{H}_{3}  of the form
+( 3 ) such that
+ ( D 2 ∗ ​ k ) 11 = 0 (D_{2}^{*}k)_{11}=0  and 
+ 
+
+ 
+ (33) 
+ 
+ ∥ k ∥ 1 , λ 2 + ∥ D 3 ​ k ∥ − 1 , λ 2 + ∥ ( D 1 ​ f ) 12 − ( D 2 ∗ ​ k ) 12 ∥ − 1 , λ 2 ≤ ∫ 𝕋 2 w ​ ( r ) 2 W ⁡ ( r , β ) ​ d m ​ ( r ) ​ d m ​ ( β ) . \begin{split}\lVert k\rVert_{1,\lambda}^{2}+\lVert D_{3}k\rVert_{-1,\lambda}^{2}+\lVert(D_{1}f)_{12}-(D_{2}^{*}k)_{12}\rVert_{-1,\lambda}^{2}\leq\int_{\mathbb{T}^{2}}\frac{w(r)^{2}}{W(r,\beta)}\,\mathrm{d}m(r)\,\mathrm{d}m(\beta)\,.\end{split} 
+ 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ Step 1. 
+To preserve parity in the minimization, we bound
+ ∥ k ∥ 1 , λ 2 + ∥ D 3 ​ k ∥ − 1 , λ 2 \lVert k\rVert_{1,\lambda}^{2}+\lVert D_{3}k\rVert_{-1,\lambda}^{2}  by a weighted squared norm of its Fourier
+coefficient, with a weight even in each frequency.
+Set 
+ 
+
+ 
+ (34) 
+ 
+ M ⁡ ( r , r ′ , β ) ≔ 4 ​ ( δ + | r | + | r ′ | + | β | ) . M(r,r^{\prime},\beta)\coloneqq 4\bigl(\delta+\lvert r\rvert+\lvert r^{\prime}\rvert+\lvert\beta\rvert\bigr)\,. 
+ 
+ 
+ For every  K ∈ L 2 ​ ( 𝕋 3 ) K\in L^{2}(\mathbb{T}^{3})  symmetric in  r , r ′ r,r^{\prime} , we have 
+ 
+
+ 
+ (35) 
+ 
+ ∥ Π 3 ​ K ∥ 1 , λ 2 + ∥ D 3 ​ Π 3 ​ K ∥ − 1 , λ 2 ≤ ∫ 𝕋 3 M ​ | K | 2 ​ 𝑑 m ​ ( r ) ​ 𝑑 m ​ ( r ′ ) ​ 𝑑 m ​ ( β ) . \lVert\Pi_{3}K\rVert_{1,\lambda}^{2}+\lVert D_{3}\Pi_{3}K\rVert_{-1,\lambda}^{2}\leq\int_{\mathbb{T}^{3}}M\lvert K\rvert^{2}\,\mathrm{d}m(r)\,\mathrm{d}m(r^{\prime})\,\mathrm{d}m(\beta)\,. 
+ 
+ 
+ To integrate over the frequency of a newly added line index, use 
+ 
+
+ 
+ (36) 
+ 
+ ∫ 𝕋 d ​ m ​ ( t ) μ + d ⁡ ( t ) = 1 μ ⁡ ( μ + 2 ) ≤ 1 2 ​ μ ( μ > 0 ) . \int_{\mathbb{T}}\frac{\,\mathrm{d}m(t)}{\mu+d(t)}=\frac{1}{\sqrt{\mu(\mu+2)}}\leq\frac{1}{\sqrt{2\mu}}\qquad(\mu>0)\,. 
+ 
+ 
+ The substitution  u = tan ⁡ ( t / 2 ) u=\tan(t/2)  gives the equality.
+By ( 16 ), the normalization factors for subscripts  1112 1112 ,  1122 1122 ,
+and  112 112  are  96 \sqrt{96} ,  12 12 , and  18 \sqrt{18} .
+Equation ( 22 ) therefore gives  i ​ sin ⁡ β / 3 i\sin\beta/\sqrt{3}  times
+three summands for component  1112 1112 , and  i ​ sin ⁡ α / 2 i\sin\alpha/\sqrt{2}  times
+two summands for component  1122 1122 .
+Drop the degree-four projection  Π 4 \Pi_{4}  using ( 23 ), bound each squared
+sum by its number of terms times the sum of squares, and apply
+( 36 ). The result is 
+ 
+
+ 
+ 
+ ∥ Π 3 K ∥ 1 , λ 2 + ∥ D 3 Π 3 K ∥ − 1 , λ 2 ≤ ∫ 𝕋 3 [ \displaystyle\lVert\Pi_{3}K\rVert_{1,\lambda}^{2}+\lVert D_{3}\Pi_{3}K\rVert_{-1,\lambda}^{2}\leq\int_{\mathbb{T}^{3}}\Biggl[ 
+ λ + d ⁡ ( β ) + d ⁡ ( α ) + 3 ​ sin 2 ⁡ β ( λ + d ⁡ ( β ) ) ​ ( λ + d ⁡ ( β ) + 2 ) \displaystyle\lambda+d(\beta)+d(\alpha)+\frac{3\sin^{2}\beta}{\sqrt{(\lambda+d(\beta))(\lambda+d(\beta)+2)}} 
+ 
+ 
+ 
+ 
+ + 2 ​ sin 2 ⁡ α ( λ + d ⁡ ( α ) ) ​ ( λ + d ⁡ ( α ) + 2 ) ] | Π 3 K | 2 d m ( r ) d m ( r ′ ) d m ( β ) . \displaystyle+\frac{2\sin^{2}\alpha}{\sqrt{(\lambda+d(\alpha))(\lambda+d(\alpha)+2)}}\Biggr]\lvert\Pi_{3}K\rvert^{2}\,\mathrm{d}m(r)\,\mathrm{d}m(r^{\prime})\,\mathrm{d}m(\beta)\,. 
+ 
+ 
+ The bracket is a positive continuous function of the total frequency
+ ( β , α ) (\beta,\alpha) , so Lemma  3.1  and ( 23 )
+allow  Π 3 ​ K \Pi_{3}K  to be replaced by  K K  in this integral.
+The inequalities  d ⁡ ( t ) ≤ | t | d(t)\leq\lvert t\rvert  and
+ sin 2 ⁡ t ≤ | t | ​ 2 ​ d ​ ( t ) \sin^{2}t\leq\lvert t\rvert\sqrt{2d(t)}  bound the bracket by
+ λ + 4 ​ | β | + 3 ​ | α | ≤ M \lambda+4\lvert\beta\rvert+3\lvert\alpha\rvert\leq M , since
+ λ ≤ λ \lambda\leq\sqrt{\lambda}  and  | α | ≤ | r | + | r ′ | + a \lvert\alpha\rvert\leq\lvert r\rvert+\lvert r^{\prime}\rvert+a .
+This proves ( 35 ); removing the projection before comparing
+with  M M  avoids requiring  Π 3 \Pi_{3}  to commute with  M M . 
+ 
+ 
+ Step 2. 
+Write  W = B + σ W=B+\sigma , where 
+ 
+
+ 
+ (37) 
+ 
+ B ⁡ ( r , β ) \displaystyle B(r,\beta) 
+ ≔ λ + d ⁡ ( r ) + d ⁡ ( β ) , \displaystyle\coloneqq\lambda+d(r)+d(\beta), 
+ 
+ 
+ (38) 
+ 
+ σ ⁡ ( r , β ) \displaystyle\sigma(r,\beta) 
+ ≔ W ⁡ ( r , β ) − B ⁡ ( r , β ) = sin 2 ⁡ β ​ ∫ 𝕋 d ​ m ​ ( r ′ ) M ⁡ ( r , r ′ , β ) . \displaystyle\coloneqq W(r,\beta)-B(r,\beta)=\sin^{2}\beta\int_{\mathbb{T}}\frac{\,\mathrm{d}m(r^{\prime})}{M(r,r^{\prime},\beta)}\,. 
+ 
+ 
+ Integrating  1 / ( δ + | r | + | β | + | r ′ | ) 1/(\delta+\lvert r\rvert+\lvert\beta\rvert+\lvert r^{\prime}\rvert)  over  r ′ r^{\prime}  gives
+the logarithm in ( 32 ).
+For every real square-integrable  t ⁡ ( r , β ) t(r,\beta)  odd in  r r  and even in
+ β \beta , the construction below gives a symmetric coefficient  K K  with
+ ( D ~ 2 ∗ ​ K ) 12 = σ ​ t (\widetilde{D}_{2}^{*}K)_{12}=\sigma t  and
+ ∫ 𝕋 3 M ​ | K | 2 ​ 𝑑 m = ∫ 𝕋 2 σ ​ t 2 ​ 𝑑 m \int_{\mathbb{T}^{3}}M\lvert K\rvert^{2}\,\mathrm{d}m=\int_{\mathbb{T}^{2}}\sigma t^{2}\,\mathrm{d}m .
+Thus the minimization reduces to completing the square at each
+ ( r , β ) (r,\beta) : 
+ 
+
+ 
+ (39) 
+ 
+ σ ​ t 2 + ( w − σ ​ t ) 2 B = w 2 W + σ ​ W B ​ ( t − w W ) 2 ( t ∈ ℝ ) . \sigma t^{2}+\frac{(w-\sigma t)^{2}}{B}=\frac{w^{2}}{W}+\frac{\sigma W}{B}\left(t-\frac{w}{W}\right)^{2}\qquad(t\in\mathbb{R})\,. 
+ 
+ 
+ Taking  t = w / W t=w/W , define the symmetric coefficient 
+ 
+
+ 
+ (40) 
+ 
+ K ⁡ ( r , r ′ , β ) ≔ i ​ sin ⁡ β 2 ​ M ​ ( r , r ′ , β ) ​ [ w ⁡ ( r ) W ⁡ ( r , β ) + w ⁡ ( r ′ ) W ⁡ ( r ′ , β ) ] . K(r,r^{\prime},\beta)\coloneqq\frac{i\sin\beta}{\sqrt{2}M(r,r^{\prime},\beta)}\left[\frac{w(r)}{W(r,\beta)}+\frac{w(r^{\prime})}{W(r^{\prime},\beta)}\right]\,. 
+ 
+ 
+ Since  W ≥ λ W\geq\lambda  and  M ≥ 4 ​ δ M\geq 4\delta , we have  K ∈ L 2 ​ ( 𝕋 3 ) K\in L^{2}(\mathbb{T}^{3}) .
+The function  w ⁡ ( r ) / W ⁡ ( r , β ) w(r)/W(r,\beta)  is odd in  r r  and even in  β \beta , while
+ M M  is even in each variable. Hence 
+ 
+
+ 
+ (41) 
+ 
+ ∫ 𝕋 w ⁡ ( r ′ ) M ⁡ ( r , r ′ , β ) ​ W ​ ( r ′ , β ) ​ 𝑑 m ​ ( r ′ ) = 0 , ( D ~ 2 ∗ ​ K ) 12 = σ ​ w W . \int_{\mathbb{T}}\frac{w(r^{\prime})}{M(r,r^{\prime},\beta)W(r^{\prime},\beta)}\,\mathrm{d}m(r^{\prime})=0,\qquad(\widetilde{D}_{2}^{*}K)_{12}=\frac{\sigma w}{W}\,. 
+ 
+ 
+ 
+ 
+ In the expansion of  M ​ | K | 2 M\lvert K\rvert^{2} , the cross term integrates to zero by
+( 41 ). The two square terms have equal integrals
+by symmetry, so 
+ 
+
+ 
+ (42) 
+ 
+ ∫ 𝕋 3 M ​ | K | 2 ​ 𝑑 m ​ ( r ) ​ 𝑑 m ​ ( r ′ ) ​ 𝑑 m ​ ( β ) = ∫ 𝕋 2 σ ​ w 2 W 2 ​ 𝑑 m ​ ( r ) ​ 𝑑 m ​ ( β ) . \int_{\mathbb{T}^{3}}M\lvert K\rvert^{2}\,\mathrm{d}m(r)\,\mathrm{d}m(r^{\prime})\,\mathrm{d}m(\beta)=\int_{\mathbb{T}^{2}}\frac{\sigma w^{2}}{W^{2}}\,\mathrm{d}m(r)\,\mathrm{d}m(\beta)\,. 
+ 
+ 
+ The same calculations apply with any real square-integrable  t ⁡ ( r , β ) t(r,\beta) 
+odd in  r r  and even in  β \beta  in place of  w / W w/W .
+These identities give the quadratic expression in ( 39 ). 
+ 
+ 
+ Step 3. 
+Set  k = Π 3 ​ K ∈ ℋ 3 k=\Pi_{3}K\in\mathcal{H}_{3}  to remove coefficients with coincident row indices.
+The removed part has Fourier transform 
+ 
+
+ 
+ 
+ ( ( I − Π 3 ) ​ K ) ​ ( r , r ′ , β ) = ∫ 𝕋 K ⁡ ( t , r + r ′ − t , β ) ​ 𝑑 m ​ ( t ) . ((I-\Pi_{3})K)(r,r^{\prime},\beta)=\int_{\mathbb{T}}K(t,r+r^{\prime}-t,\beta)\,\mathrm{d}m(t)\,. 
+ 
+ 
+ Its integral in  r ′ r^{\prime}  equals the integral of  K K  over both row variables.
+This double integral vanishes because  K K  is odd under
+ ( r , r ′ ) ↦ ( − r , − r ′ ) (r,r^{\prime})\mapsto(-r,-r^{\prime}) . Thus 
+ 
+
+ 
+ (43) 
+ 
+ ∫ 𝕋 ( ( I − Π 3 ) ​ K ) ​ ( r , r ′ , β ) ​ 𝑑 m ​ ( r ′ ) = 0 , ( D 2 ∗ ​ k ) 12 = σ ​ w W . \int_{\mathbb{T}}((I-\Pi_{3})K)(r,r^{\prime},\beta)\,\mathrm{d}m(r^{\prime})=0,\qquad(D_{2}^{*}k)_{12}=\frac{\sigma w}{W}\,. 
+ 
+ 
+ Also,  K K  is odd in  β \beta , and  Π 3 \Pi_{3}  acts only on row indices.
+Equation ( 26 ) gives  ( D 2 ∗ ​ k ) 11 = 0 (D_{2}^{*}k)_{11}=0 . 
+ 
+ 
+ Finally,  w − σ ​ w / W = B ​ w / W w-\sigma w/W=Bw/W .
+Equations ( 35 ), ( 42 ), and
+( 43 ) therefore bound the left side of
+( 33 ) by 
+ 
+
+ 
+ 
+ ∫ 𝕋 2 ( σ + B ) ​ w 2 W 2 ​ 𝑑 m ​ ( r ) ​ 𝑑 m ​ ( β ) = ∫ 𝕋 2 w 2 W ​ 𝑑 m ​ ( r ) ​ 𝑑 m ​ ( β ) . \int_{\mathbb{T}^{2}}\frac{(\sigma+B)w^{2}}{W^{2}}\,\mathrm{d}m(r)\,\mathrm{d}m(\beta)=\int_{\mathbb{T}^{2}}\frac{w^{2}}{W}\,\mathrm{d}m(r)\,\mathrm{d}m(\beta)\,. 
+ 
+ 
+ ∎ 
+ 
+ 
+ 
+ 
+ 5.  Estimating the quadratic functional 
+
+ 
+ We integrate out the column frequency to reduce the variational bound
+to a quadratic functional of  φ \varphi  alone. 
+ 
+ 
+ Restrict the row frequencies to 
+ 
+
+ 
+ (44) 
+ 
+ Γ δ ≔ { r ∈ 𝕋 : δ ≤ | r | ≤ 1 / 4 } ( 0 < δ < 1 / 256 ) . \Gamma_{\delta}\coloneqq\{r\in\mathbb{T}:\sqrt{\delta}\leq\lvert r\rvert\leq 1/4\}\qquad(0<\delta<1/256)\,. 
+ 
+ 
+ The cutoff gives  δ ≤ r 2 \delta\leq r^{2} , so the degree-one contribution can
+be bounded using the weight 
+ 
+
+ 
+ (45) 
+ 
+ q ⁡ ( r ) ≔ | r | log ⁡ ( 1 / | r | ) ( 0 < | r | ≤ 1 / 4 ) . q(r)\coloneqq\frac{\lvert r\rvert}{\sqrt{\log(1/\lvert r\rvert)}}\qquad(0<\lvert r\rvert\leq 1/4)\,. 
+ 
+ 
+ 
+ 
+ Lemma 5.1 . 
+ 
+ For every
+ λ ∈ ( 0 , 1 ] \lambda\in(0,1] ,  p ∈ 𝕋 2 p\in\mathbb{T}^{2}  with
+ | p 2 | ≤ | p 1 | \lvert p_{2}\rvert\leq\lvert p_{1}\rvert  and
+ δ = λ + | p 1 | < 1 / 256 \delta=\sqrt{\lambda}+\lvert p_{1}\rvert<1/256 , and every real even
+ φ ∈ L 2 ​ ( 𝕋 , m ) \varphi\in L^{2}(\mathbb{T},m)  vanishing off  Γ δ \Gamma_{\delta} , 
+ 
+
+ 
+ (46) 
+ 
+ r λ ​ ( p ) ≤ ( 1 − s ​ ∫ Γ δ φ ​ 𝑑 m ) 2 H 0 + 16 ​ ∫ Γ δ q ⁡ ( r ) ​ φ ​ ( r ) 2 ​ 𝑑 m ​ ( r ) . r_{\lambda}(p)\leq\frac{\left(1-s\int_{\Gamma_{\delta}}\varphi\,\mathrm{d}m\right)^{2}}{H_{0}}+16\int_{\Gamma_{\delta}}q(r)\varphi(r)^{2}\,\mathrm{d}m(r)\,. 
+ 
+ 
+ 
+ 
+ 
+ For each fixed  δ \delta , the weight  q q  is bounded above and away from
+zero on  Γ δ \Gamma_{\delta} . Thus the lemma covers every real even measurable
+ φ \varphi  supported there with finite weighted square integral. 
+ 
+ 
+ Proof. 
+ 
+ Take  f f  and  k k  as in Lemma  4.1 .
+By ( 17 ), ( 24 ), and ( 31 ),
+orthogonality of the degrees gives 
+ 
+
+ 
+ (47) 
+ 
+ ∥ f + k ∥ 1 , λ 2 + ∥ 1 − A p ​ ( f + k ) ∥ − 1 , λ 2 = ( 1 − s ​ ∫ 𝕋 φ ​ 𝑑 m ) 2 H 0 + E p ​ ( f , k ) . \lVert f+k\rVert_{1,\lambda}^{2}+\lVert 1-A_{p}(f+k)\rVert_{-1,\lambda}^{2}=\frac{\left(1-s\int_{\mathbb{T}}\varphi\,\mathrm{d}m\right)^{2}}{H_{0}}+E_{p}(f,k)\,. 
+ 
+ 
+ Set  μ = λ + d ⁡ ( p 1 ) \mu=\lambda+d(p_{1}) . Apply
+ | f ⁡ ( r ) + f ⁡ ( r ′ ) | 2 ≤ 2 ​ | f ⁡ ( r ) | 2 + 2 ​ | f ⁡ ( r ′ ) | 2 \lvert f(r)+f(r^{\prime})\rvert^{2}\leq 2\lvert f(r)\rvert^{2}+2\lvert f(r^{\prime})\rvert^{2}  in
+( 28 ), remove the projection using ( 23 ), and
+integrate with ( 36 ). Together with ( 20 ),
+this gives 
+ 
+
+ 
+ (48) 
+ 
+ ∥ f ∥ 1 , λ 2 + ∥ ( D 1 ​ f ) 11 ∥ − 1 , λ 2 ≤ ∫ 𝕋 [ μ + d ⁡ ( r ) + 2 ​ s 2 μ ⁡ ( μ + 2 ) ] ​ φ ​ ( r ) 2 ​ d m ​ ( r ) ≤ ∫ 𝕋 ( δ 2 + 2 ​ 2 ​ δ + r 2 2 ) ​ φ ​ ( r ) 2 ​ d m ​ ( r ) . \begin{split}\lVert f\rVert_{1,\lambda}^{2}+\lVert(D_{1}f)_{11}\rVert_{-1,\lambda}^{2}&\leq\int_{\mathbb{T}}\left[\mu+d(r)+\frac{2s^{2}}{\sqrt{\mu(\mu+2)}}\right]\varphi(r)^{2}\,\mathrm{d}m(r)\\
+&\leq\int_{\mathbb{T}}\left(\delta^{2}+2\sqrt{2}\delta+\frac{r^{2}}{2}\right)\varphi(r)^{2}\,\mathrm{d}m(r)\,.\end{split} 
+ 
+ 
+ Here we used  μ ≤ δ 2 \mu\leq\delta^{2}  and  s 2 ≤ 2 ​ μ s^{2}\leq 2\mu .
+On  Γ δ \Gamma_{\delta} , the last weight is at most  5 ​ r 2 ≤ 5 ​ q ​ ( r ) 5r^{2}\leq 5q(r) ,
+since  δ ≤ r 2 \delta\leq r^{2} . Lemma  4.1  therefore gives 
+ 
+
+ 
+ (49) 
+ 
+ E p ​ ( f , k ) ≤ 5 ​ ∫ Γ δ q ⁡ ( r ) ​ φ ​ ( r ) 2 ​ 𝑑 m ​ ( r ) + ∫ 𝕋 2 sin 2 ⁡ r ​ φ ​ ( r ) 2 W ⁡ ( r , β ) ​ 𝑑 m ​ ( r ) ​ 𝑑 m ​ ( β ) . E_{p}(f,k)\leq 5\int_{\Gamma_{\delta}}q(r)\varphi(r)^{2}\,\mathrm{d}m(r)+\int_{\mathbb{T}^{2}}\frac{\sin^{2}r\varphi(r)^{2}}{W(r,\beta)}\,\mathrm{d}m(r)\,\mathrm{d}m(\beta)\,. 
+ 
+ 
+ It remains to bound the integral of  W − 1 W^{-1}  in  β \beta .
+Fix  r ∈ Γ δ r\in\Gamma_{\delta} , let  ρ ≔ | r | \rho\coloneqq\lvert r\rvert , and split this integral at
+ | β | = ρ \lvert\beta\rvert=\sqrt{\rho} .
+On the inner interval,  δ ≤ ρ 2 \delta\leq\rho^{2}  gives
+ δ + ρ + | β | ≤ 3 ​ ρ \delta+\rho+\lvert\beta\rvert\leq 3\sqrt{\rho}  and
+ | β | ≤ 1 / 2 \lvert\beta\rvert\leq 1/2 . Therefore 
+ 
+
+ 
+ 
+ log ⁡ ( 1 + π δ + ρ + | β | ) ≥ 1 2 ​ log ⁡ ( 1 / ρ ) , W ⁡ ( r , β ) ≥ 2 ​ ρ 2 π 2 + β 2 ​ log ⁡ ( 1 / ρ ) 2 ​ π 3 . \log\left(1+\frac{\pi}{\delta+\rho+\lvert\beta\rvert}\right)\geq\frac{1}{2}\log(1/\rho),\qquad W(r,\beta)\geq\frac{2\rho^{2}}{\pi^{2}}+\frac{\beta^{2}\log(1/\rho)}{2\pi^{3}}\,. 
+ 
+ 
+ The second inequality follows from ( 32 ),
+( 21 ), and  | sin ⁡ β | ≥ 2 ​ | β | / π \lvert\sin\beta\rvert\geq 2\lvert\beta\rvert/\pi 
+for  | β | ≤ π / 2 \lvert\beta\rvert\leq\pi/2 .
+On the outer interval,  W ≥ d ⁡ ( β ) ≥ 2 ​ β 2 / π 2 W\geq d(\beta)\geq 2\beta^{2}/\pi^{2} .
+Hence 
+ 
+
+ 
+ (50) 
+ 
+ ∫ 𝕋 d ​ m ​ ( β ) W ⁡ ( r , β ) ≤ 1 2 ​ π ​ ∫ ℝ d ​ β 2 ​ ρ 2 / π 2 + β 2 ​ log ⁡ ( 1 / ρ ) / ( 2 ​ π 3 ) + π 2 ​ ∫ ρ π d ​ β β 2 ≤ π 5 / 2 2 ​ ρ ​ log ⁡ ( 1 / ρ ) + π 2 ​ ρ ≤ 11 ρ ​ log ⁡ ( 1 / ρ ) . \begin{split}\int_{\mathbb{T}}\frac{\,\mathrm{d}m(\beta)}{W(r,\beta)}&\leq\frac{1}{2\pi}\int_{\mathbb{R}}\frac{\,\mathrm{d}\beta}{2\rho^{2}/\pi^{2}+\beta^{2}\log(1/\rho)/(2\pi^{3})}+\frac{\pi}{2}\int_{\sqrt{\rho}}^{\pi}\frac{\,\mathrm{d}\beta}{\beta^{2}}\\
+&\leq\frac{\pi^{5/2}}{2\rho\sqrt{\log(1/\rho)}}+\frac{\pi}{2\sqrt{\rho}}\leq\frac{11}{\rho\sqrt{\log(1/\rho)}}\,.\end{split} 
+ 
+ 
+ The last inequality uses  ρ ​ log ⁡ ( 1 / ρ ) ≤ 1 \rho\log(1/\rho)\leq 1  and
+ ( π 5 / 2 + π ) / 2 < 11 (\pi^{5/2}+\pi)/2<11 .
+Since  sin 2 ⁡ r ≤ r 2 \sin^{2}r\leq r^{2} , equations ( 49 ) and
+( 50 ) give  E p ​ ( f , k ) ≤ 16 ​ ∫ Γ δ q ​ φ 2 ​ 𝑑 m E_{p}(f,k)\leq 16\int_{\Gamma_{\delta}}q\varphi^{2}\,\mathrm{d}m .
+Substitution in ( 47 ) and Lemma  2.2 
+prove the result.
+∎ 
+ 
+ 
+ 
+ 
+ 6.  The frequency bound 
+
+ 
+ The first term on the right side of ( 46 ) depends only on
+ ∫ Γ δ φ ​ 𝑑 m \int_{\Gamma_{\delta}}\varphi\,\mathrm{d}m .
+For a fixed value of this integral, Cauchy–Schwarz shows that
+ ∫ Γ δ q ​ φ 2 ​ 𝑑 m \int_{\Gamma_{\delta}}q\varphi^{2}\,\mathrm{d}m  is minimized when  φ \varphi  is proportional to
+ q − 1 q^{-1}  on  Γ δ \Gamma_{\delta} . This leaves one scalar to optimize. Set 
+ 
+
+ 
+ (51) 
+ 
+ Z δ ≔ ∫ Γ δ d ​ m ​ ( r ) q ⁡ ( r ) = 2 3 ​ π ​ [ ( 1 2 ​ log ⁡ ( 1 / δ ) ) 3 / 2 − ( log ⁡ 4 ) 3 / 2 ] ≍ [ log ( 1 / δ ) ] 3 / 2 ( 0 < δ < 1 / 256 ) . \begin{split}Z_{\delta}\coloneqq\int_{\Gamma_{\delta}}\frac{\,\mathrm{d}m(r)}{q(r)}&=\frac{2}{3\pi}\left[\left(\tfrac{1}{2}\log(1/\delta)\right)^{3/2}-(\log 4)^{3/2}\right]\\
+&\asymp[\log(1/\delta)]^{3/2}\qquad(0<\delta<1/256)\,.\end{split} 
+ 
+ 
+ The equality follows by substituting  u = log ⁡ ( 1 / r ) u=\log(1/r) .
+Choose  φ ⁡ ( r ) = t / q ⁡ ( r ) \varphi(r)=t/q(r)  on  Γ δ \Gamma_{\delta}  and zero elsewhere,
+where  t ∈ ℝ t\in\mathbb{R} . This function belongs to  L 2 ​ ( 𝕋 , m ) L^{2}(\mathbb{T},m)  because
+ Γ δ \Gamma_{\delta}  stays away from zero. Then
+ ∫ φ ​ 𝑑 m = t ​ Z δ \int\varphi\,\mathrm{d}m=tZ_{\delta}  and
+ ∫ q ​ φ 2 ​ 𝑑 m = t 2 ​ Z δ \int q\varphi^{2}\,\mathrm{d}m=t^{2}Z_{\delta} .
+Substituting in ( 46 ) and completing the square gives 
+ 
+
+ 
+ (52) 
+ 
+ inf t ∈ ℝ { ( 1 − s ​ t ​ Z δ ) 2 H 0 + 16 ​ t 2 ​ Z δ } = 1 H 0 + s 2 ​ Z δ / 16 , t = s 16 ​ H 0 + s 2 ​ Z δ . \inf_{t\in\mathbb{R}}\left\{\frac{(1-stZ_{\delta})^{2}}{H_{0}}+16t^{2}Z_{\delta}\right\}=\frac{1}{H_{0}+s^{2}Z_{\delta}/16},\qquad t=\frac{s}{16H_{0}+s^{2}Z_{\delta}}\,. 
+ 
+ 
+ Thus 
+ 
+
+ 
+ (53) 
+ 
+ r λ ​ ( p ) ≤ 1 H 0 + s 2 ​ Z δ / 16 . r_{\lambda}(p)\leq\frac{1}{H_{0}+s^{2}Z_{\delta}/16}\,. 
+ 
+ 
+ 
+ 
+ Proposition 6.1 . 
+ 
+ For every
+ λ ∈ ( 0 , 1 ] \lambda\in(0,1]  and  p ∈ 𝕋 2 p\in\mathbb{T}^{2} , writing
+ a ⁡ ( p ) = max ⁡ { | p 1 | , | p 2 | } a(p)=\max\{\lvert p_{1}\rvert,\lvert p_{2}\rvert\} , we have 
+ 
+
+ 
+ (54) 
+ 
+ r λ ​ ( p ) ≤ 2048 λ + a ​ ( p ) 2 ​ [ 1 + log + ⁡ ( 1 / ( λ + a ⁡ ( p ) ) ) ] 3 / 2 . r_{\lambda}(p)\leq\frac{2048}{\lambda+a(p)^{2}[1+\log_{+}(1/(\sqrt{\lambda}+a(p)))]^{3/2}}\,. 
+ 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ Set  δ = λ + a ⁡ ( p ) \delta=\sqrt{\lambda}+a(p) .
+For  δ < 1 / 256 \delta<1/256 , exchange rows and columns if needed.
+Equation ( 51 ) gives  Z δ ≥ [ log ⁡ ( 1 / δ ) ] 3 / 2 / 32 Z_{\delta}\geq[\log(1/\delta)]^{3/2}/32 .
+Since  s 2 ≥ 4 ​ a ​ ( p ) 2 / π 2 s^{2}\geq 4a(p)^{2}/\pi^{2}  and  log ⁡ ( 1 / δ ) > 5 \log(1/\delta)>5 , 
+ 
+
+ 
+ 
+ H 0 + s 2 ​ Z δ 16 ≥ λ + a ​ ( p ) 2 ​ [ log ⁡ ( 1 / δ ) ] 3 / 2 128 ​ π 2 ≥ λ + a ​ ( p ) 2 ​ [ 1 + log ⁡ ( 1 / δ ) ] 3 / 2 2048 . H_{0}+\frac{s^{2}Z_{\delta}}{16}\geq\lambda+\frac{a(p)^{2}[\log(1/\delta)]^{3/2}}{128\pi^{2}}\geq\frac{\lambda+a(p)^{2}[1+\log(1/\delta)]^{3/2}}{2048}\,. 
+ 
+ 
+ Thus ( 53 ) gives ( 54 ).
+For  δ ≥ 1 / 256 \delta\geq 1/256 , use ( 15 ),
+ θ ⁡ ( p ) ≥ a ​ ( p ) 2 / 5 \theta(p)\geq a(p)^{2}/5 , and
+ [ 1 + log + ⁡ ( 1 / δ ) ] 3 / 2 < 19 [1+\log_{+}(1/\delta)]^{3/2}<19 .
+∎ 
+ 
+ 
+ 
+ Proof of Theorem  1.2 . 
+ 
+ The square  { a ( p ) ≤ b } \{a(p)\leq b\}  has normalized measure  b 2 / π 2 b^{2}/\pi^{2}  for
+ 0 ≤ b ≤ π 0\leq b\leq\pi . On  a ⁡ ( p ) ≤ λ a(p)\leq\sqrt{\lambda} , the bound
+ r λ ≤ 1 / λ r_{\lambda}\leq 1/\lambda  therefore contributes at most  1 / π 2 1/\pi^{2} .
+On  λ < a ⁡ ( p ) < 1 / 4 \sqrt{\lambda}<a(p)<1/4 ,
+ 1 + log + ⁡ ( 1 / ( λ + a ⁡ ( p ) ) ) ≥ [ 1 + log ⁡ ( 1 / a ⁡ ( p ) ) ] / 2 1+\log_{+}(1/(\sqrt{\lambda}+a(p)))\geq[1+\log(1/a(p))]/2 .
+On  a ⁡ ( p ) ≥ 1 / 4 a(p)\geq 1/4 , use  r λ ​ ( p ) ≤ π 2 / ( 2 ​ a ​ ( p ) 2 ) r_{\lambda}(p)\leq\pi^{2}/(2a(p)^{2}) .
+Integrating these three bounds using Proposition  6.1  gives 
+ 
+
+ 
+ 
+ ∫ 𝕋 2 r λ ​ ( p ) ​ 𝑑 m ​ ( p ) \displaystyle\int_{\mathbb{T}^{2}}r_{\lambda}(p)\,\mathrm{d}m(p) 
+ ≤ 1 π 2 + 2 5 / 2 ⋅ 2048 π 2 ​ ∫ 0 1 / 4 d ​ a a ​ [ 1 + log ⁡ ( 1 / a ) ] 3 / 2 + log ⁡ ( 4 ​ π ) \displaystyle\leq\frac{1}{\pi^{2}}+\frac{2^{5/2}\cdot 2048}{\pi^{2}}\int_{0}^{1/4}\frac{\,\mathrm{d}a}{a[1+\log(1/a)]^{3/2}}+\log(4\pi) 
+ 
+ 
+ 
+ 
+ = 1 π 2 + 2 7 / 2 ⋅ 2048 π 2 ​ 1 + log ⁡ 4 + log ⁡ ( 4 ​ π ) < 2048 . \displaystyle=\frac{1}{\pi^{2}}+\frac{2^{7/2}\cdot 2048}{\pi^{2}\sqrt{1+\log 4}}+\log(4\pi)<2048\,. 
+ 
+ 
+ Here we integrated using  u = 1 + log ⁡ ( 1 / a ) u=1+\log(1/a) .
+For  λ > 1 / 4 \sqrt{\lambda}>1/4 , omit the middle integral; the other two bounds
+still cover all frequencies. Equation ( 10 ) and monotone convergence
+as  λ ↓ 0 \lambda\downarrow 0  prove the explicit Green bound 
+ 
+
+ 
+ (55) 
+ 
+ ∫ 0 ∞ p ¯ t ​ ( 0 , 0 ) ​ 𝑑 t ≤ 2048 . \int_{0}^{\infty}\overline{p}_{t}(0,0)\,\mathrm{d}t\leq 2048\,. 
+ 
+ 
+ ∎ 
+ 
+ 
+ 
+ Proof of Theorem  1.1 . 
+ 
+ Tonelli’s theorem gives
+ ∫ 0 ∞ p t ω ​ ( 0 , 0 ) ​ 𝑑 t < ∞ \int_{0}^{\infty}p_{t}^{\omega}(0,0)\,\mathrm{d}t<\infty  almost surely.
+The continuous-time walk is the discrete-time walk run with an independent
+rate-two Poisson clock, so another application of Tonelli gives 
+ 
+
+ 
+ 
+ ∫ 0 ∞ p t ω ​ ( 0 , 0 ) ​ 𝑑 t = ∑ n ≥ 0 p n ω ​ ( 0 , 0 ) ​ ∫ 0 ∞ e − 2 ​ t ​ ( 2 ​ t ) n n ! ​ 𝑑 t = 1 2 ​ ∑ n ≥ 0 p n ω ​ ( 0 , 0 ) . \int_{0}^{\infty}p_{t}^{\omega}(0,0)\,\mathrm{d}t=\sum_{n\geq 0}p_{n}^{\omega}(0,0)\int_{0}^{\infty}e^{-2t}\frac{(2t)^{n}}{n!}\,\mathrm{d}t=\frac{1}{2}\sum_{n\geq 0}p_{n}^{\omega}(0,0)\,. 
+ 
+ 
+ Finally,  p n ω ​ ( x , x ) = p n τ x ​ ω ​ ( 0 , 0 ) p_{n}^{\omega}(x,x)=p_{n}^{\tau_{x}\omega}(0,0)  and  ℙ \mathbb{P}  is
+translation invariant. Intersecting the probability-one events over
+ x ∈ ℤ 2 x\in\mathbb{Z}^{2}  proves the theorem.
+∎ 
+ 
+ 
+ 
+ 6.1.  Return probabilities in time 
+
+ 
+ Proposition 6.2 . 
+ 
+ For every deterministic Manhattan orientation  ω \omega , all  x , y ∈ ℤ 2 x,y\in\mathbb{Z}^{2} ,
+and  t ≥ 0 t\geq 0 , 
+ 
+
+ 
+ (56) 
+ 
+ p t ω ​ ( x , y ) ≤ 2 t + 2 . p_{t}^{\omega}(x,y)\leq\frac{2}{t+2}\,. 
+ 
+ 
+ For  f ⁡ ( t ) ≔ p ¯ t ​ ( 0 , 0 ) f(t)\coloneqq\overline{p}_{t}(0,0)  and every  t > 0 t>0 , 
+ 
+
+ 
+ (57) 
+ 
+ | f ′ ( t ) | ≤ 2 t ​ ( 1 + t / 4 ) ≤ 8 t − 3 / 2 . \lvert f^{\prime}(t)\rvert\leq\frac{2}{\sqrt{t}(1+t/4)}\leq 8t^{-3/2}\,. 
+ 
+ 
+ 
+ 
+ 
+ Proof. 
+ 
+ We prove ( 56 ) by a Nash argument; see also
+ Kozma and Tóth [2017, Proposition 3] . Fix  ω \omega , write
+ P t = e t ​ 𝒢 ω P_{t}=e^{t\mathcal{G}_{\omega}} , and let  S ω S_{\omega}  be the symmetric part
+of  𝒢 ω \mathcal{G}_{\omega} . By ( 5 ),  S ω S_{\omega}  is the
+rate-two simple-random-walk generator. Fourier splitting gives 
+ 
+
+ 
+ 
+ ∥ h ∥ 2 4 ≤ 2 ​ ∥ h ∥ 1 2 ​ ⟨ h , − S ω ​ h ⟩ ( h ∈ ℓ 1 ​ ( ℤ 2 ) ) . \lVert h\rVert_{2}^{4}\leq 2\lVert h\rVert_{1}^{2}\langle h,-S_{\omega}h\rangle\qquad(h\in\ell^{1}(\mathbb{Z}^{2}))\,. 
+ 
+ 
+ Counting measure is invariant, so  P t ​ δ y P_{t}\delta_{y}  and  P t ∗ ​ δ x P_{t}^{*}\delta_{x} 
+are nonnegative with  ℓ 1 \ell^{1}  norm one. The energy identity and the
+Nash inequality bound both squared  ℓ 2 \ell^{2}  norms by  ( 1 + t ) − 1 (1+t)^{-1} .
+The semigroup identity and Cauchy–Schwarz then give 
+ 
+
+ 
+ 
+ p t ω ​ ( x , y ) = ⟨ P t / 2 ∗ ​ δ x , P t / 2 ​ δ y ⟩ ≤ 1 1 + t / 2 . p_{t}^{\omega}(x,y)=\langle P_{t/2}^{*}\delta_{x},P_{t/2}\delta_{y}\rangle\leq\frac{1}{1+t/2}\,. 
+ 
+ 
+ 
+ 
+ For  s > 0 s>0 , differentiating the rate-two Poisson representation of  P s P_{s} 
+gives 
+ 
+
+ 
+ 
+ sup x ∑ y | ( 𝒢 ω ​ P s ) ​ ( x , y ) | ≤ 𝔼 ​ | N s / s − 2 | ≤ 2 / s , \sup_{x}\sum_{y}\lvert(\mathcal{G}_{\omega}P_{s})(x,y)\rvert\leq\mathbb{E}\lvert N_{s}/s-2\rvert\leq\sqrt{2/s}\,, 
+ 
+ 
+ where  N s N_{s}  has the Poisson distribution of mean  2 ​ s 2s .
+Apply this bound and ( 56 ) to the two factors in
+ 𝒢 ω ​ P t = ( 𝒢 ω ​ P t / 2 ) ​ P t / 2 \mathcal{G}_{\omega}P_{t}=(\mathcal{G}_{\omega}P_{t/2})P_{t/2}  to obtain
+ | ∂ t p t ω ​ ( x , y ) | ≤ 2 / [ t ​ ( 1 + t / 4 ) ] \lvert\partial_{t}p_{t}^{\omega}(x,y)\rvert\leq 2/[\sqrt{t}(1+t/4)] .
+Averaging over  ω \omega  proves ( 57 ).
+∎ 
+ 
+ 
+ 
+ 
+ 
+ 7.  Open questions 
+
+ 
+ Problem 1   (Mean-square displacement) . 
+ 
+ Is the annealed mean-square displacement of order  t 4 / 3 t^{4/3}  as
+ t → ∞ t\to\infty ?
+Can the renormalization scheme of  Armstrong, Bou-Rabee, and Kuusi [2026, Section 3]  be
+adapted to this setting? 
+ 
+ 
+ 
+ Problem 2   (A decay rate) . 
+ 
+ Can one prove that  p ¯ t ​ ( 0 , 0 ) = O ⁡ ( t − β ) \overline{p}_{t}(0,0)=O(t^{-\beta})  as  t → ∞ t\to\infty 
+for some  β > 1 \beta>1 ? Redner’s prediction  [ Redner, 1989 , (3)]  suggests return probabilities of order  t − 4 / 3 t^{-4/3} . 
+ 
+ 
+ 
+ Problem 3   (Which orientations are transient) . 
+ 
+ Which orientation fields give a recurrent walk, and which give a transient
+one? Theorem  1.1  gives transience for  ℙ \mathbb{P} -almost every
+environment. A uniform random shift by a vector in  { 0 , 1 } 2 \{0,1\}^{2}  of the
+alternating environment of Section  1.1  gives a stationary
+ergodic law with mean-zero line orientations under which the walk is
+recurrent almost surely. 
+ 
+ 
+ For the partially oriented walk,  Guillotin-Plantard and Le Ny [2008b, Section 4]  ask a related
+question when an irrational rotation determines the horizontal orientations.
+Fix an irrational  α \alpha . Direct the line at height  y ∈ ℤ y\in\mathbb{Z}  to the right
+if the fractional part of  y ​ α y\alpha  is less than  1 / 2 1/2 , and to the left
+otherwise; vertical edges can be crossed in either direction.
+Is this walk recurrent or transient? 
+ 
+ 
+ 
+ 
+ References 
+
+ 
+      
+ Armstrong et al. [2019] 
+ 
+S. Armstrong, T. Kuusi, and J.-C. Mourrat.
+
+ 
+ Quantitative Stochastic Homogenization and Large-Scale
+Regularity , volume 352 of  Grundlehren der mathematischen
+Wissenschaften .
+
+ 
+ Springer, Cham, 2019.
+
+ 
+ doi:  10.1007/978-3-030-15545-2 .
+
+ 
+ URL  https://doi.org/10.1007/978-3-030-15545-2 .
+
+ 
+      
+ Armstrong et al. [2024] 
+ 
+S. Armstrong, A. Bou-Rabee, and T. Kuusi.
+
+ 
+ Superdiffusive central limit theorem for a Brownian particle in a
+critically-correlated incompressible random drift.
+
+ 
+ Preprint, 2024.
+
+ 
+ URL  https://doi.org/10.48550/arXiv.2404.01115 .
+
+ 
+      
+ Armstrong et al. [2026] 
+ 
+S. Armstrong, A. Bou-Rabee, and T. Kuusi.
+
+ 
+ Superdiffusion and anomalous regularization in self-similar random
+incompressible flows.
+
+ 
+ Preprint, 2026.
+
+ 
+ URL  https://doi.org/10.48550/arXiv.2601.22142 .
+
+ 
+      
+ Beamond et al. [2003] 
+ 
+E. J. Beamond, A. L. Owczarek, and J. Cardy.
+
+ 
+ Quantum and classical localization and the Manhattan lattice.
+
+ 
+ J. Phys. A , 36(41):10251–10267, 2003.
+
+ 
+ doi:  10.1088/0305-4470/36/41/001 .
+
+ 
+ URL  https://doi.org/10.1088/0305-4470/36/41/001 .
+
+ 
+      
+ Beaton and Holmes [2023] 
+ 
+N. R. Beaton and M. Holmes.
+
+ 
+ The mean square displacement of random walk on the Manhattan
+lattice.
+
+ 
+ Statist. Probab. Lett. , 193:109706, 2023.
+
+ 
+ doi:  10.1016/j.spl.2022.109706 .
+
+ 
+ URL  https://doi.org/10.1016/j.spl.2022.109706 .
+
+ 
+      
+ Bosi [2019] 
+ 
+G. Bosi.
+
+ 
+ Simple random walks on some partially directed planar graphs .
+
+ 
+ PhD thesis, Alma Mater Studiorum Università di Bologna, 2019.
+
+ 
+ URL  https://doi.org/10.6092/unibo/amsdottorato/8914 .
+
+ 
+      
+ Bosi et al. [2022] 
+ 
+G. Bosi, Y. Hu, and Y. Peres.
+
+ 
+ Recurrence and windings of two revolving random walks.
+
+ 
+ Electron. J. Probab. , 27:paper no. 66, 22, 2022.
+
+ 
+ doi:  10.1214/22-EJP781 .
+
+ 
+ URL  https://doi.org/10.1214/22-EJP781 .
+
+ 
+      
+ Bouchaud and Georges [1990] 
+ 
+J.-P. Bouchaud and A. Georges.
+
+ 
+ Anomalous diffusion in disordered media: statistical mechanisms,
+models and physical applications.
+
+ 
+ Phys. Rep. , 195(4–5):127–293, 1990.
+
+ 
+ doi:  10.1016/0370-1573(90)90099-N .
+
+ 
+ URL  https://doi.org/10.1016/0370-1573(90)90099-N .
+
+ 
+      
+ Bouchaud et al. [1990] 
+ 
+J.-P. Bouchaud, A. Georges, J. Koplik, A. Provata, and S. Redner.
+
+ 
+ Superdiffusion in random velocity fields.
+
+ 
+ Phys. Rev. Lett. , 64(21):2503–2506, 1990.
+
+ 
+ doi:  10.1103/PhysRevLett.64.2503 .
+
+ 
+ URL  https://doi.org/10.1103/PhysRevLett.64.2503 .
+
+ 
+      
+ Brémont [2017] 
+ 
+J. Brémont.
+
+ 
+ Markov chains in a stratified environment.
+
+ 
+ ALEA Lat. Am. J. Probab. Math. Stat. , 14(2):751–798, 2017.
+
+ 
+ doi:  10.30757/ALEA.v14-36 .
+
+ 
+ URL  https://doi.org/10.30757/ALEA.v14-36 .
+
+ 
+      
+ Campanino and Petritis [2003] 
+ 
+M. Campanino and D. Petritis.
+
+ 
+ Random walks on randomly oriented lattices.
+
+ 
+ Markov Process. Related Fields , 9(3):391–412, 2003.
+
+ 
+ doi:  10.48550/arXiv.math/0111305 .
+
+ 
+ URL  https://doi.org/10.48550/arXiv.math/0111305 .
+
+ 
+ DOI identifies the arXiv version.
+
+ 
+      
+ Campanino and Petritis [2004] 
+ 
+M. Campanino and D. Petritis.
+
+ 
+ On the physical relevance of random walks: an example of random walks
+on a randomly oriented lattice.
+
+ 
+ In V. A. Kaimanovich, editor,  Random Walks and Geometry , pages
+393–411. Walter de Gruyter, Berlin, 2004.
+
+ 
+ doi:  10.1515/9783110198089.2.393 .
+
+ 
+ URL  https://doi.org/10.1515/9783110198089.2.393 .
+
+ 
+      
+ Castell et al. [2011] 
+ 
+F. Castell, N. Guillotin-Plantard, F. Pène, and B. Schapira.
+
+ 
+ A local limit theorem for random walks in random scenery and on
+randomly oriented lattices.
+
+ 
+ Ann. Probab. , 39(6):2079–2118, 2011.
+
+ 
+ doi:  10.1214/10-AOP606 .
+
+ 
+ URL  https://doi.org/10.1214/10-AOP606 .
+
+ 
+      
+ Collevecchio et al. [2019] 
+ 
+A. Collevecchio, K. Hamza, and L. Tournier.
+
+ 
+ A deterministic walk on the randomly oriented Manhattan lattice.
+
+ 
+ Electron. J. Probab. , 24:paper no. 137, 20, 2019.
+
+ 
+ doi:  10.1214/19-EJP385 .
+
+ 
+ URL  https://doi.org/10.1214/19-EJP385 .
+
+ 
+      
+ Gaudillière and Landim [2014] 
+ 
+A. Gaudillière and C. Landim.
+
+ 
+ A Dirichlet principle for non reversible Markov chains and some
+recurrence theorems.
+
+ 
+ Probab. Theory Related Fields , 158(1–2):55–89, 2014.
+
+ 
+ doi:  10.1007/s00440-012-0477-5 .
+
+ 
+ URL  https://doi.org/10.1007/s00440-012-0477-5 .
+
+ 
+      
+ Guillotin-Plantard and Le Ny [2008a] 
+ 
+N. Guillotin-Plantard and A. Le Ny.
+
+ 
+ A functional limit theorem for a 2d-random walk with dependent
+marginals.
+
+ 
+ Electron. Commun. Probab. , 13:337–351,
+2008a.
+
+ 
+ doi:  10.1214/ECP.v13-1386 .
+
+ 
+ URL  https://doi.org/10.1214/ECP.v13-1386 .
+
+ 
+      
+ Guillotin-Plantard and Le Ny [2008b] 
+ 
+N. Guillotin-Plantard and A. Le Ny.
+
+ 
+ Transient random walks on 2D-oriented lattices.
+
+ 
+ Theory Probab. Appl. , 52(4):699–711,
+2008b.
+
+ 
+ doi:  10.1137/S0040585X97983353 .
+
+ 
+ URL  https://doi.org/10.1137/S0040585X97983353 .
+
+ 
+      
+ Komorowski et al. [2012] 
+ 
+T. Komorowski, C. Landim, and S. Olla.
+
+ 
+ Fluctuations in Markov Processes: Time Symmetry and
+Martingale Approximation , volume 345 of  Grundlehren der
+mathematischen Wissenschaften .
+
+ 
+ Springer, Berlin, 2012.
+
+ 
+ doi:  10.1007/978-3-642-29880-6 .
+
+ 
+ URL  https://doi.org/10.1007/978-3-642-29880-6 .
+
+ 
+      
+ Kozma and Tóth [2017] 
+ 
+G. Kozma and B. Tóth.
+
+ 
+ Central limit theorem for random walks in doubly stochastic random
+environment:  ℋ − 1 \mathcal{H}_{-1}  suffices.
+
+ 
+ Ann. Probab. , 45(6B):4307–4347, 2017.
+
+ 
+ doi:  10.1214/16-AOP1166 .
+
+ 
+ URL  https://doi.org/10.1214/16-AOP1166 .
+
+ 
+      
+ Landim et al. [2004] 
+ 
+C. Landim, J. Quastel, M. Salmhofer, and H.-T. Yau.
+
+ 
+ Superdiffusivity of asymmetric exclusion process in dimensions one
+and two.
+
+ 
+ Comm. Math. Phys. , 244(3):455–481, 2004.
+
+ 
+ doi:  10.1007/s00220-003-1020-4 .
+
+ 
+ URL  https://doi.org/10.1007/s00220-003-1020-4 .
+
+ 
+      
+ Ledger et al. [2018] 
+ 
+S. Ledger, B. Tóth, and B. Valkó.
+
+ 
+ Random walk on the randomly-oriented Manhattan lattice.
+
+ 
+ Electron. Commun. Probab. , 23:paper no. 43, 11,
+2018.
+
+ 
+ doi:  10.1214/18-ECP144 .
+
+ 
+ URL  https://doi.org/10.1214/18-ECP144 .
+
+ 
+      
+ Lyons and Peres [2016] 
+ 
+R. Lyons and Y. Peres.
+
+ 
+ Probability on Trees and Networks .
+
+ 
+ Cambridge University Press, Cambridge, 2016.
+
+ 
+ doi:  10.1017/9781316672815 .
+
+ 
+ URL  https://doi.org/10.1017/9781316672815 .
+
+ 
+      
+ Matheron and de Marsily [1980] 
+ 
+G. Matheron and G. de Marsily.
+
+ 
+ Is transport in porous media always diffusive? A counterexample.
+
+ 
+ Water Resources Research , 16(5):901–917,
+1980.
+
+ 
+ doi:  10.1029/WR016i005p00901 .
+
+ 
+ URL  https://doi.org/10.1029/WR016i005p00901 .
+
+ 
+      
+ Mejía-Monasterio et al. [2020] 
+ 
+C. Mejía-Monasterio, S. Nechaev, G. Oshanin, and O. Vasilyev.
+
+ 
+ Tracer diffusion on a crowded random Manhattan lattice.
+
+ 
+ New J. Phys. , 22:033024, 2020.
+
+ 
+ doi:  10.1088/1367-2630/ab7bf1 .
+
+ 
+ URL  https://doi.org/10.1088/1367-2630/ab7bf1 .
+
+ 
+      
+ Nguyen [2026] 
+ 
+T.-M. Nguyen.
+
+ 
+ Superdiffusivity of random walks on the three-dimensional randomly
+oriented Manhattan lattice.
+
+ 
+ Preprint, 2026.
+
+ 
+ URL  https://doi.org/10.48550/arXiv.2608.21701 .
+
+ 
+      
+ O’Donnell [2014] 
+ 
+R. O’Donnell.
+
+ 
+ Analysis of Boolean Functions .
+
+ 
+ Cambridge University Press, Cambridge, 2014.
+
+ 
+ doi:  10.1017/CBO9781139814782 .
+
+ 
+ URL  https://doi.org/10.1017/CBO9781139814782 .
+
+ 
+      
+ Pène [2020] 
+ 
+F. Pène.
+
+ 
+ Random walks in random sceneries and related models.
+
+ 
+ ESAIM Proc. Surveys , 68:35–51, 2020.
+
+ 
+ doi:  10.1051/proc/202068003 .
+
+ 
+ URL  https://doi.org/10.1051/proc/202068003 .
+
+ 
+      
+ Redner [1989] 
+ 
+S. Redner.
+
+ 
+ Superdiffusive transport due to random velocity fields.
+
+ 
+ Phys. D , 38(1–3):287–290, 1989.
+
+ 
+ doi:  10.1016/0167-2789(89)90207-8 .
+
+ 
+ URL  https://doi.org/10.1016/0167-2789(89)90207-8 .
+
+ 
+      
+ Tarrès et al. [2012] 
+ 
+P. Tarrès, B. Tóth, and B. Valkó.
+
+ 
+ Diffusivity bounds for 1D Brownian polymers.
+
+ 
+ Ann. Probab. , 40(2):695–713, 2012.
+
+ 
+ doi:  10.1214/10-AOP630 .
+
+ 
+ URL  https://doi.org/10.1214/10-AOP630 .
+
+ 
+      
+ Tóth [2018] 
+ 
+B. Tóth.
+
+ 
+ Diffusive and super-diffusive limits for random walks and diffusions
+with long memory.
+
+ 
+ In  Proceedings of the International Congress of
+Mathematicians—Rio de Janeiro 2018, Vol. IV , pages 3039–3058. World
+Scientific, 2018.
+
+ 
+ doi:  10.1142/9789813272880_0171 .
+
+ 
+ URL  https://doi.org/10.1142/9789813272880_0171 .
+
+ 
+      
+ Yau [2004] 
+ 
+H.-T. Yau.
+
+ 
+ ( log ⁡ t ) 2 / 3 (\log t)^{2/3}  law of the two dimensional asymmetric simple
+exclusion process.
+
+ 
+ Ann. of Math. (2) , 159(1):377–405, 2004.
+
+ 
+ doi:  10.4007/annals.2004.159.377 .
+
+ 
+ URL  https://doi.org/10.4007/annals.2004.159.377 .
+
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+   
+    Experimental support, please
+     view the build logs 
+    for errors. Generated by
+     
+       
+        L
+         A 
+        T
+         E 
+       
+       xml 
+       
+     .
+   
+   
+     Instructions for reporting errors 
+     We are continuing to improve HTML versions of papers, and your feedback helps enhance accessibility and mobile
+      support. To report errors in the HTML that will help us improve conversion and rendering, choose any of the
+      methods listed below: 
+     
+       Click the "Report Issue"  ( 
+             
+           )  button, located in the page header. 
+     
+     Tip:  You can select the relevant text first, to include it in your report. 
+     Our team has already identified  the following issues . We appreciate your time reviewing and reporting rendering errors we
+      may not have found yet. Your efforts will help us improve the HTML versions for all readers, because disability
+      should not be a barrier to accessing research. Thank you for your continued support in championing open access for
+      all. 
+     Have a free development cycle? Help support accessibility at arXiv! Our collaborators at LaTeXML maintain a  list of packages that need conversion , and welcome  developer contributions . 
+   
+ 
+   
+     
+       
+        We gratefully acknowledge support from
+        our  major funders ,
+         member institutions ,  ,
+        and all contributors.
+       
+       
+         About 
+         · 
+         Help 
+         · 
+         Contact 
+         · 
+         Subscribe 
+         · 
+         Copyright 
+         · 
+         Privacy 
+         · 
+         Accessibility 
+         · 
+         Operational Status  (opens in new tab) 
+       
+     
+
+     
+       Major funding support from 
+       
+         
+           
+         
+         
+           
+         
+         
+           
+         
+       
+     
+   
+ 
+   
+     
+       
+     
+   
+ 
+ 

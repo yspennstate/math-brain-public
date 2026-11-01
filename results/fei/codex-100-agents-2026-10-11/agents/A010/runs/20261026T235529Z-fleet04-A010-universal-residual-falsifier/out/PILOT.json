@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "checks": 391,
+  "rows": [
+    {
+      "r": 1,
+      "s": 1,
+      "truth_inputs": 128,
+      "I": "57/64",
+      "M_X": "21/128",
+      "M_Y": "21/128",
+      "ceiling_cost_upper": "5095/2048",
+      "normalized_reference": true
+    }
+  ],
+  "scalar_pairs": 0,
+  "seconds": 0.016900999995414168,
+  "proof_level": "exact finite certificates; all-parameter proof in REVIEW_AND_EXTENSION.md",
+  "spec": {
+    "helper_version": "A010-independent-union-v1",
+    "family": "f=2 product_X OR(z0,z1,private pair) product_Y OR(z1,z2,private pair)-1",
+    "domain": [
+      [
+        1,
+        1
+      ]
+    ],
+    "case_count": 1,
+    "symmetry": "none; swapped cases explicitly included",
+    "arithmetic": "integer Walsh, integer union DP, Fraction; ceiling logarithm upper certificate",
+    "memory_estimate_mb": 90,
+    "max_runtime_seconds": 55,
+    "scalar_domain": "all integer r,s from 4 through 64; induction covers larger values analytically"
+  }
+}

@@ -1,0 +1,813 @@
+\section{Semidefinite forms and spectral spread}
+\label{sec:semidefinite}
+
+Throughout this section, $X=(X_1,\ldots,X_n)$ has independent coordinates
+with Lebesgue densities $0\leq f_i\leq1$.  We write
+\[
+ Q=X^TAX+b^TX+c,\qquad \varphi_Q(t)=\mathbb E e^{itQ},
+\]
+where $A$ is real and symmetric.  The vector $b$ and scalar $c$ are
+arbitrary.  Density bounds refer to the essential supremum.  Eigenvalues
+of a positive semidefinite matrix are numbered in decreasing order,
+including zeros.
+
+\begin{theorem}[Semidefinite forms]\label{sd:main}
+If $A$ is positive semidefinite and $\lambda_3(A)>0$, then $Q$ has a
+density satisfying
+\begin{equation}\label{sd:main-bound}
+ \|p_Q\|_\infty\leq \frac{17100}{\lambda_3(A)}.
+\end{equation}
+The same conclusion holds for negative semidefinite $A$, with
+$\lambda_3(-A)$ in the denominator.  The bound is independent of dimension
+and rank, and allows a linear term outside the range of $A$.
+\end{theorem}
+
+\begin{remark}[Density at the lower endpoint]\label{sd:endpoint-zero}
+For the homogeneous form $Q=X^TAX$ with $A\succeq0$ and
+$\lambda_3(A)>0$, only three positive eigendirections are needed to
+show that the density vanishes \emph{at zero}.  Let $u_1,u_2,u_3$
+be orthonormal eigenvectors with positive eigenvalues
+$\lambda_1,\lambda_2,\lambda_3$, and put
+$Y_j=\langle u_j,X\rangle$.  Lemma~\ref{four:projection} bounds the
+joint density of $(Y_1,Y_2,Y_3)$ by $2^{3/2}$.  Positivity of the
+discarded spectral terms gives
+\[
+ Q\geq\sum_{j=1}^3\lambda_jY_j^2,
+ \qquad
+ \mathbb P(Q\leq t)
+ \leq \frac{8\sqrt2\,\pi}{3\sqrt{\lambda_1\lambda_2\lambda_3}}
+       t^{3/2}\quad(t\geq0).
+\]
+Thus the distribution function has right derivative zero at zero;
+the continuous density furnished by
+Theorem~\ref{fg:fixed-matrix-continuity} satisfies $p_Q(0)=0$.
+The comparison concerns the lower tail of a nonnegative homogeneous
+form.  It does not identify the law of $Q$ after spectral truncation
+or prove a density bound at positive levels, and it does not apply at
+zero when an affine term moves zero away from the lower endpoint.
+\end{remark}
+
+\subsection{Concentration and conditioning}
+For a real random variable $Z$, define
+\[
+ L_Z(u)=\sup_s\mathbb P(|Z-s|\leq u),\qquad
+ \alpha_1(Z)=\sup_{u>0}\frac{L_Z(u)}{\sqrt u},\qquad
+ \alpha_2(Z)=\sup_{0<u\leq1}
+       \frac{L_Z(u)}{u(1+\log(1/u))}.
+\]
+
+\begin{lemma}[Fourier concentration]\label{sd:fejer}
+For every $u>0$,
+\begin{equation}\label{sd:fejer-bound}
+ L_Z(u)\leq\frac{u}{2\sin^2 1}
+              \int_{|t|\leq2/u}|\varphi_Z(t)|\,dt.
+\end{equation}
+If $|\varphi_Z(t)|\leq B|t|^{-1/2}$ for $t\ne0$, then
+$\alpha_1(Z)\leq2\sqrt2 B/\sin^2 1$.
+If $|\varphi_Z(t)|\leq\min(1,B/|t|)$ and $B\geq2$, then
+$\alpha_2(Z)\leq B/\sin^2 1$.
+\end{lemma}
+
+\begin{proof}
+The function $K(x)=(\sin x/x)^2$, with $K(0)=1$, is at least
+$\sin^2 1$ on $[-1,1]$.  Its Fourier transform, with kernel $e^{-itx}$,
+is $\pi(1-|t|/2)_+$.  Fourier inversion and Fubini's theorem therefore give
+\[
+ \mathbb P(|Z-s|\leq u)
+ \leq\frac{\mathbb E K((Z-s)/u)}{\sin^2 1}
+ \leq\frac{u}{2\sin^2 1}
+            \int_{|t|\leq2/u}|\varphi_Z(t)|\,dt.
+\]
+Integrating $B|t|^{-1/2}$ proves the first consequence.
+For $0<u\leq\min(1,2/B)$, integration of $\min(1,B/|t|)$ gives
+\[
+ L_Z(u)\leq\frac{Bu}{\sin^2 1}
+       \left(1+\log\frac{2}{Bu}\right)
+ \leq\frac{Bu}{\sin^2 1}(1+\log(1/u)).
+\]
+For $2/B<u\leq1$, the last inequality follows from $L_Z(u)\leq1$
+and $Bu>2$.
+\end{proof}
+
+\begin{lemma}[Square-root profiles]\label{sd:composition}
+Suppose that, for every nonnegative Borel function $h$,
+\begin{equation}\label{sd:profile}
+ \mathbb E h(Q)\leq
+ K\,\mathbb E\int_{\mathbb R}h(y)|y-\xi|^{-1/2}\,dy.
+\end{equation}
+Then $Q$ has a density.  Moreover:
+\begin{enumerate}
+\item $\alpha_1(Q)\leq4K$;
+\item if $\alpha_1(\xi)\leq K_1$, then
+$\alpha_2(Q)\leq4\sqrt2 K\max(K_1,1)$;
+\item if $\alpha_2(\xi)\leq K_2$ and $K_2\geq1$, then
+\begin{equation}\label{sd:composition-density}
+ \|p_Q\|_\infty\leq3K\sqrt{K_2(3+\log K_2)}.
+\end{equation}
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Tonelli's theorem shows that the right side of \eqref{sd:profile}
+vanishes when $h$ is the indicator of a Lebesgue null set.  Thus $Q$
+has a density, with
+$p_Q(y)\leq K\mathbb E|y-\xi|^{-1/2}$ almost everywhere.
+The integral of $|y-\xi|^{-1/2}$ over an interval of length $2u$
+is at most $4\sqrt u$, proving the first assertion.
+
+For any $d\in\mathbb R$,
+\begin{equation}\label{sd:interval-kernel}
+ \int_{-u}^u|y+d|^{-1/2}\,dy
+ \leq4\sqrt2\,u\max(|d|,u)^{-1/2}.
+\end{equation}
+For $|d|\leq2u$ this follows from the preceding integral bound.
+For $|d|>2u$, use $|y+d|\geq|d|/2$.
+When $0<u\leq1$, layer cake gives
+\begin{align*}
+ \mathbb E\max(|s-\xi|,u)^{-1/2}
+ &=\int_0^{u^{-1/2}}\mathbb P(|s-\xi|<t^{-2})\,dt\\
+ &\leq1+K_1\int_1^{u^{-1/2}}\frac{dt}{t}\\
+ &\leq\max(K_1,1)(1+\log(1/u)).
+\end{align*}
+Combine this with \eqref{sd:profile} and \eqref{sd:interval-kernel}.
+
+For the last assertion, put $V=\sqrt{K_2(3+\log K_2)}\geq1$.
+For every $s$,
+\begin{align*}
+ \mathbb E|s-\xi|^{-1/2}
+ &\leq V+K_2\int_V^\infty t^{-2}(1+2\log t)\,dt\\
+ &=V+K_2(3+2\log V)/V.
+\end{align*}
+Writing $a=3+\log K_2\geq3$ gives
+$3+2\log V=a+\log a\leq2a$.
+The last display is at most $3V$, proving the claim.
+\end{proof}
+
+\begin{lemma}[Positive pivots]\label{sd:pivot}
+Suppose $A$ is positive semidefinite and $a=a_{ii}>0$.
+Completing the square gives
+$Q=a(X_i-m(X_{-i}))^2+R(X_{-i})$, with $m$ affine and $R$ quadratic.
+The matrix of $R$ is the positive semidefinite Schur complement
+\[
+ S=A_{-i,-i}-a^{-1}A_{-i,i}A_{i,-i}.
+\]
+The profile \eqref{sd:profile} holds with $K=a^{-1/2}$ and $\xi=R$.
+For $k\geq2$,
+\begin{equation}\label{sd:schur-eigenvalue}
+ \lambda_{k-1}(S)\geq\lambda_k(A).
+\end{equation}
+If $A$ has rank $r$, then $S$ has rank $r-1$.
+\end{lemma}
+
+\begin{proof}
+For fixed $X_{-i}$, the density of $a(X_i-m)^2$ at $w>0$ is
+\[
+ \frac{f_i(m+\sqrt{w/a})+f_i(m-\sqrt{w/a})}{2\sqrt{aw}}
+ \leq(aw)^{-1/2}.
+\]
+Integration and averaging prove the profile.  No independence between
+$m$ and $R$ is needed.  Writing
+$A=\left(\begin{smallmatrix}a&v^T\\v&D\end{smallmatrix}\right)$, the identity
+\[
+ (x,y)^TA(x,y)=a(x+a^{-1}v^Ty)^2+y^TSy
+\]
+proves positivity of $S$ and the rank assertion.
+A $k$-dimensional subspace where the form of $A$ is at least
+$\lambda_k(A)$ times the squared norm intersects $ax+v^Ty=0$
+in dimension at least $k-1$.  Projection onto $y$ is injective on
+this intersection, and on its image
+$y^TSy\geq\lambda_k(A)(x^2+|y|^2)\geq\lambda_k(A)|y|^2$.
+The variational principle proves \eqref{sd:schur-eigenvalue}.
+\end{proof}
+
+\subsection{The decoupling normalization}
+For a $p\times q$ matrix $M$ of rank at least $k$, set
+\[
+ Z_k=e_k(M^TM)
+ =\sum_{\substack{S\subseteq[p],\,T\subseteq[q]\\|S|=|T|=k}}
+       \det(M_{S,T})^2,\qquad
+ w_{S,T}=\det(M_{S,T})^2/Z_k.
+\]
+Let $\alpha_i=\sum_{S\ni i,T}w_{S,T}$ and
+$\beta_j=\sum_{S,T\ni j}w_{S,T}$ be the row and column inclusion
+probabilities.  If $M=A_{I,J}$ for disjoint coordinate sets $I,J$
+and $\alpha_i\leq1/2$ for every $i\in I$, Lemma~\ref{four:volume} gives
+\begin{equation}\label{sd:volume-decay}
+ |\varphi_Q(t)|^2\leq
+ e^{k/2}(2\pi)^k|t|^{-k}Z_k^{-1/2}.
+\end{equation}
+Arbitrary quadratic terms inside $I$ and $J$, and arbitrary linear
+terms, are allowed.  For $k=3$, Fourier inversion gives
+\begin{equation}\label{sd:volume-density}
+ \|p_Q\|_\infty\leq6\sqrt e\,Z_3^{-1/6}.
+\end{equation}
+Indeed, with $B=(2\pi)^{3/2}e^{3/4}Z_3^{-1/4}$,
+\[
+ (2\pi)^{-1}\int_{\mathbb R}\min(1,B|t|^{-3/2})\,dt
+ =3B^{2/3}/\pi=6\sqrt e\,Z_3^{-1/6}.
+\]
+The analytic input in \eqref{sd:volume-decay} is the integrated
+Fourier estimate of Lemma~\ref{four:lp} and the Gaussian
+Brascamp--Lieb theorem \citep{BL1976,Lieb1990}.  No pointwise decay
+assumption on an individual characteristic function is used.
+
+\subsection{A partition in Gram coordinates}
+For positive semidefinite $A$ of rank $r$, choose
+\[
+ A=BB^T,\qquad B^TB=\Lambda
+ =\operatorname{diag}(\lambda_1,\ldots,\lambda_r)>0.
+\]
+Write $b_i^T$ for row $i$ of $B$, so that $|b_i|^2=a_{ii}$.
+For independent equiprobable signs $\varepsilon_i$, define
+\[
+ I=\{i:\varepsilon_i=1\},\quad J=\{i:\varepsilon_i=-1\},\quad
+ N=\tfrac12\sum_i\varepsilon_i b_ib_i^T.
+\]
+Then $H_I=B_I^TB_I=\Lambda/2+N$ and
+$H_J=B_J^TB_J=\Lambda/2-N$.
+
+\begin{lemma}[Partition identity]\label{sd:partition-identity}
+For every $g\in\mathbb R^r$,
+\begin{align}
+ \langle B_Ig,A_{I,J}B_Jg\rangle
+ &=|\Lambda g|^2/4-|Ng|^2,\label{sd:gram-identity}\\
+ |B_Ig|\,|B_Jg|&\leq g^T\Lambda g/2.\label{sd:gram-product}
+\end{align}
+If $K\subseteq[r]$ has cardinality $k$, $\lambda_m\geq\theta>0$
+for $m\in K$, and
+$T_K=\sum_{m\in K}|Ne_m|^2/\lambda_m^2\leq1/8$, then
+$s_k(A_{I,J})\geq\theta/4$.
+If $\max_i a_{ii}\leq d$, then
+\[
+ \mathbb ET_K\leq kd/(4\theta),\qquad
+ \mathbb P(T_K>1/8)\leq2kd/\theta.
+\]
+\end{lemma}
+
+\begin{proof}
+The scalar product is $g^TH_IH_Jg$.  Expanding $H_IH_J$ gives
+$\Lambda^2/4-N^2+(N\Lambda-\Lambda N)/2$, whose last term is
+skew symmetric.  This proves \eqref{sd:gram-identity}.
+Equation~\eqref{sd:gram-product} follows from $H_I+H_J=\Lambda$.
+For $g$ in the span $G$ of $\{e_m:m\in K\}$,
+Cauchy--Schwarz gives $|Ng|\leq|\Lambda g|T_K^{1/2}$.
+Thus the scalar product is at least $|\Lambda g|^2/8$.
+It is positive for $g\ne0$, so $B_J$ is injective on $G$.
+For $x=B_Jg\ne0$,
+\[
+ \frac{|A_{I,J}x|}{|x|}
+ \geq\frac{\langle B_Ig,A_{I,J}B_Jg\rangle}{|B_Ig|\,|B_Jg|}
+ \geq\frac{|\Lambda g|^2}{4g^T\Lambda g}\geq\theta/4.
+\]
+The singular-value variational principle on the $k$-dimensional
+subspace $B_JG$ proves the assertion.  Finally,
+\[
+ \mathbb E|Ne_m|^2
+ =\tfrac14\sum_i b_i(m)^2|b_i|^2
+ \leq\tfrac d4\sum_i b_i(m)^2=d\lambda_m/4.
+\]
+Sum over $m$ and apply Markov's inequality.
+\end{proof}
+
+\subsection{Volume marginals and ridge leverage}
+
+\begin{lemma}[Volume marginals]\label{sd:ridge}
+Let $G=MM^T$ have eigenvalues $\sigma_1\geq\sigma_2\geq\cdots\geq0$
+and an orthonormal eigenbasis $(u_m)$.  If $\operatorname{rank}M\geq k$,
+then
+\begin{equation}\label{sd:marginal-spectrum}
+ \alpha_i=\sum_m p_m u_m(i)^2,\qquad
+ p_m=\frac{\sigma_m e_{k-1}(\sigma_{-m})}{e_k(\sigma)},
+\end{equation}
+where $e_0=1$ and $\sigma_{-m}$ is the list with entry $m$ removed.
+Moreover $p_m\leq\min(1,k\sigma_m/\sigma_k)$.
+If $0<\kappa\leq\sigma_k/k$ and $m_i=M^Te_i$, then
+\begin{equation}\label{sd:ridge-bound}
+ \alpha_i\leq2m_i^T(M^TM+\kappa I)^{-1}m_i.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+By Cauchy--Binet, the numerator of $\alpha_i$ is
+$\sum_{S\ni i,\,|S|=k}\det G_{S,S}$.
+Differentiate $\det(I+tD(z)G)$ with respect to $z_i$ at
+$z=(1,\ldots,1)$, where $D(z)=\operatorname{diag}(z)$, and take
+the coefficient of $t^k$.  The principal-minor expansion gives
+this numerator, whereas spectral decomposition gives the
+coefficient in
+\[
+ \sum_m u_m(i)^2\,t\sigma_m
+                     \prod_{\ell\ne m}(1+t\sigma_\ell).
+\]
+This proves \eqref{sd:marginal-spectrum}.
+The identity
+$e_k(\sigma)=\sigma_me_{k-1}(\sigma_{-m})+e_k(\sigma_{-m})$
+gives $p_m\leq1$.  For $m\leq k$ it also gives
+$p_m\leq k\sigma_m/\sigma_k$.  Otherwise the list
+$\mu=\sigma_{-m}$ contains $k$ entries at least $\sigma_k$, and
+\[
+ k e_k(\mu)
+ =\sum_{|S|=k-1}\left(\prod_{j\in S}\mu_j\right)
+                       \sum_{j\notin S}\mu_j
+ \geq\sigma_k e_{k-1}(\mu).
+\]
+Indeed, each $(k-1)$-element set omits one of those $k$ entries.
+This proves the remaining bound for $p_m$.
+The inequality $\min(1,x)\leq2x/(1+x)$ now yields
+$p_m\leq2\sigma_m/(\sigma_m+\kappa)$.
+The spectral decomposition of
+$M(M^TM+\kappa I)^{-1}M^T$ proves \eqref{sd:ridge-bound}.
+\end{proof}
+
+\begin{lemma}[Gram comparison]\label{sd:ridge-comparison}
+For $M=A_{I,J}=B_IB_J^T$, $i\in I$, and $\kappa>0$,
+\begin{equation}\label{sd:ridge-gram}
+ m_i^T(M^TM+\kappa I)^{-1}m_i
+ \leq b_i^T(H_I+\kappa\Lambda^{-1})^{-1}b_i .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The identity
+$(B_JH_IB_J^T+\kappa I)B_J=B_J(H_IH_J+\kappa I)$ gives
+\[
+ m_i^T(M^TM+\kappa I)^{-1}m_i
+ =b_i^TH_J(H_IH_J+\kappa I)^{-1}b_i .
+\]
+If $H_J>0$, the middle matrix is
+$(H_I+\kappa H_J^{-1})^{-1}$.
+Since $H_J\leq\Lambda$, order reversal under inversion gives
+\eqref{sd:ridge-gram}.  If $H_J$ is singular, replace it in this
+matrix identity by $H_J+\varepsilon I\leq\Lambda+\varepsilon I$
+and let $\varepsilon\downarrow0$.
+Continuity at a positive semidefinite matrix $T$ follows from the
+expression
+$T^{1/2}(T^{1/2}H_IT^{1/2}+\kappa I)^{-1}T^{1/2}$.
+\end{proof}
+
+\begin{proposition}[A semidefinite partition]\label{sd:psd-partition}
+For $k\in\{1,2,3\}$, let $\theta=\lambda_k(A)>0$, with $A$
+positive semidefinite, and put
+$\gamma_1=128$, $\gamma_2=300$, $\gamma_3=640$.
+If $\max_i a_{ii}\leq\theta/\gamma_k$, some partition
+$[n]=I\sqcup J$ satisfies
+\[
+ s_k(A_{I,J})\geq\theta/4,\qquad
+ \max_{i\in I}\alpha_i
+ \leq(64k/\theta)\max_i a_{ii}\leq1/2.
+\]
+Uniformly in the linear and constant terms, this implies
+\begin{align}
+ k=1:\quad&
+ |\varphi_Q(t)|\leq2e^{1/4}\sqrt{2\pi}\,
+                         (\theta|t|)^{-1/2},\label{sd:psd-k1}\\
+ k=2:\quad&
+ |\varphi_Q(t)|\leq8\pi\sqrt e\,(\theta|t|)^{-1},
+                         \label{sd:psd-k2}\\
+ k=3:\quad&
+ \|p_Q\|_\infty\leq24\sqrt e/\theta.\label{sd:psd-k3}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+Put $d=\max_i a_{ii}$.  Split the Gram-coordinate space into its
+first $k$ coordinates, denoted by the subscript $b$, and the
+remaining coordinates, denoted by $s$.  These subscripts denote
+blocks, not the linear coefficient of $Q$.  Set
+\[
+ \kappa=\theta^2/(16k),\qquad \rho=\kappa/\theta=\theta/(16k),
+ \qquad \ell_i=|\Lambda_b^{-1/2}b_i^b|^2.
+\]
+Then $\sum_i\ell_i=k$ and $\ell_i\leq d/\theta$.
+Consider the events
+\begin{align*}
+ \mathcal S:\quad&
+ \sum_{m=1}^k |Ne_m|^2/\lambda_m^2\leq1/8,\\
+ \mathcal E_1:\quad&
+ \|\Lambda_b^{-1/2}N_{bb}\Lambda_b^{-1/2}\|_F^2\leq1/64,\\
+ \mathcal E_2:\quad&
+ (2/\rho)\|N_{sb}\Lambda_b^{-1/2}\|_F^2\leq1/8.
+\end{align*}
+An empty $s$ block contributes zero.
+On $\mathcal S$, Lemma~\ref{sd:partition-identity} gives
+$s_k(M)\geq\theta/4$, so $\kappa\leq s_k(M)^2/k$.
+Lemmas~\ref{sd:ridge} and \ref{sd:ridge-comparison} give
+$\alpha_i\leq2b_i^T(H_I+\kappa\Lambda^{-1})^{-1}b_i$.
+
+For $T>0$, completing a square gives the block inequality
+\begin{equation}\label{sd:block-comparison}
+ \begin{pmatrix}P&R\\R^T&T\end{pmatrix}
+ \geq
+ \begin{pmatrix}P-2RT^{-1}R^T&0\\0&T/2\end{pmatrix}.
+\end{equation}
+The quadratic form of the difference is
+$2|T^{-1/2}R^Tx+T^{1/2}y/2|^2$.
+As $\Lambda_s\leq\theta I$ and $(H_I)_{ss}\geq0$,
+\eqref{sd:block-comparison}, with $T=\rho I$, yields
+\[
+ H_I+\kappa\Lambda^{-1}
+ \geq
+ \left(\Lambda_b/2+N_{bb}-(2/\rho)N_{bs}N_{sb}\right)
+       \oplus(\rho/2)I_s.
+\]
+On $\mathcal E_1$, $N_{bb}\geq-\Lambda_b/8$.
+On $\mathcal E_2$, conjugating by $\Lambda_b^{-1/2}$ and bounding
+operator norm by trace gives
+$(2/\rho)N_{bs}N_{sb}\leq\Lambda_b/8$.
+Therefore
+$H_I+\kappa\Lambda^{-1}\geq\Lambda_b/4\oplus(\rho/2)I_s$ and
+\[
+ \alpha_i\leq8\ell_i+(4/\rho)|b_i^s|^2
+ \leq(64k/\theta)|b_i|^2=(64k/\theta)a_{ii}.
+\]
+
+It remains to show that these events can hold simultaneously.
+Lemma~\ref{sd:partition-identity} gives
+$\mathbb P(\mathcal S^c)\leq2kd/\theta$.
+Independence and centering of the signs also give
+\begin{align*}
+ \mathbb E\|\Lambda_b^{-1/2}N_{bb}\Lambda_b^{-1/2}\|_F^2
+ &=\tfrac14\sum_i\ell_i^2\leq kd/(4\theta),\\
+ \mathbb E\|N_{sb}\Lambda_b^{-1/2}\|_F^2
+ &=\tfrac14\sum_i|b_i^s|^2\ell_i\leq kd/4.
+\end{align*}
+Markov's inequality gives failure bounds $16kd/\theta$ and
+$64k^2d/\theta$ for $\mathcal E_1$ and $\mathcal E_2$.
+The total is at most
+\[
+ (18k+64k^2)/\gamma_k
+ =
+ \begin{cases}82/128,&k=1,\\292/300,&k=2,\\630/640,&k=3,\end{cases}
+\]
+which is strictly below one.  The marginal bound is at most
+$1/2$ for each stated $\gamma_k$.
+Since $Z_k\geq\prod_{j=1}^k s_j(M)^2\geq(\theta/4)^{2k}$,
+\eqref{sd:volume-decay}--\eqref{sd:volume-density} prove
+\eqref{sd:psd-k1}--\eqref{sd:psd-k3}.
+\end{proof}
+
+\subsection{Completion of the semidefinite proof}
+
+\begin{proposition}[The first two levels]\label{sd:psd-levels}
+For positive semidefinite $A$ and arbitrary $b,c$:
+\begin{enumerate}
+\item if $\lambda_1(A)\geq1$, then
+$\alpha_1(Q)\leq K_1:=4\sqrt{128}<45.26$;
+\item if $\lambda_2(A)\geq1$, then
+$\alpha_2(Q)\leq K_2:=4\sqrt{600}\,K_1<4435$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+If some $a_{ii}\geq1/128$, Lemmas~\ref{sd:pivot} and
+\ref{sd:composition}(1) give the first bound.
+Otherwise Proposition~\ref{sd:psd-partition}, with $k=1$,
+and Lemma~\ref{sd:fejer} give
+\[
+ \alpha_1(Q)\leq
+ (2\sqrt2/\sin^2 1)\,2e^{1/4}\sqrt{2\pi}<25.72<K_1.
+\]
+For the second assertion, a coefficient $a_{ii}\geq1/300$ leaves
+a positive semidefinite Schur complement with an eigenvalue at least
+one.  Apply the first assertion to its quadratic form, which is the
+random center in the profile.  Lemma~\ref{sd:composition}(2)
+gives $\alpha_2(Q)\leq4\sqrt2\sqrt{300}\,K_1=K_2$.
+If there is no such coefficient,
+\eqref{sd:psd-k2} and Lemma~\ref{sd:fejer} give
+$\alpha_2(Q)\leq8\pi\sqrt e/\sin^2 1<58.53<K_2$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{sd:main}]
+Suppose first that $\lambda_3(A)\geq1$.  A coefficient
+$a_{ii}\geq1/640$ leaves a positive semidefinite Schur complement
+with at least two eigenvalues at least one.
+Apply Proposition~\ref{sd:psd-levels}(2) to its quadratic form and
+Lemma~\ref{sd:composition}(3) to obtain
+\[
+ \|p_Q\|_\infty\leq
+ 3\sqrt{640}\sqrt{K_2(3+\log K_2)}<17100.
+\]
+Here $K_2=4\sqrt{600}\,4\sqrt{128}$ is used without rounding.
+If every diagonal coefficient is below $1/640$,
+Proposition~\ref{sd:psd-partition}, with $k=3$, instead gives
+$\|p_Q\|_\infty\leq24\sqrt e$.
+For $\lambda_3(A)=\theta>0$, apply this argument to $Q/\theta$
+and use density scaling.  Applying the result to $-Q$ proves
+the negative semidefinite case.
+\end{proof}
+
+\subsection{Indefinite forms with a small absolute spectral diagonal}
+For a real symmetric $A$, write $|A|=(A^2)^{1/2}$ and let
+$|\lambda|_{(1)}(A)\geq|\lambda|_{(2)}(A)\geq\cdots$
+be its eigenvalue moduli.  In particular $(|A|)_{ii}\geq|a_{ii}|$.
+
+\begin{theorem}[Absolute spectral spread]\label{sd:indefinite}
+Let $k\in\{1,2,3\}$, set $\theta=|\lambda|_{(k)}(A)>0$, and put
+$\gamma'_1=130$, $\gamma'_2=360$, $\gamma'_3=680$.
+If
+\begin{equation}\label{sd:absolute-spread}
+ \max_i(|A|)_{ii}\leq\theta/\gamma'_k,
+\end{equation}
+some partition $[n]=I\sqcup J$ satisfies
+$s_k(A_{I,J})\geq23\theta/80$ and
+$\max_{i\in I}\alpha_i\leq1/2$.
+Consequently, for every $b,c$,
+\begin{equation}\label{sd:indefinite-fourier}
+ |\varphi_Q(t)|\leq
+ e^{k/4}(2\pi)^{k/2}(23\theta|t|/80)^{-k/2}.
+\end{equation}
+For $k=3$, $Q$ has a density and
+\begin{equation}\label{sd:indefinite-density}
+ \|p_Q\|_\infty\leq \frac{480\sqrt e}{23\theta}
+ <\frac{35}{\theta}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+On the range of $A$, factor
+\[
+ A=B\Sigma B^T,\qquad B^TB=\Lambda>0,\qquad
+ \Sigma=\operatorname{diag}(\pm1),
+\]
+where the entries of $\Lambda$ are the nonzero eigenvalue moduli
+in decreasing order.  Thus $BB^T=|A|$ and
+$|b_i|^2=(|A|)_{ii}\leq d:=\max_i(|A|)_{ii}$.
+Define the random partition and $N$ as before.  Then
+$H_I=\Lambda/2+N$, $H_J=\Lambda/2-N$, and
+$M=A_{I,J}=B_I\Sigma B_J^T$.
+Let $G$ be the first $k$ Gram coordinates.
+Decompose $g\in G$ as $g=g_++g_-$ according to the signs in $\Sigma$.
+Direct multiplication gives
+\begin{align}
+ \langle B_I\Sigma g,MB_Jg\rangle
+ &=|\Lambda g|^2/4-g_-^T\Lambda Ng_+
+      -g_+^T\Lambda Ng_-
+      -(\Sigma N\Sigma g)^TNg,\label{sd:signed-identity}\\
+ |B_I\Sigma g|^2+|B_Jg|^2
+ &=g^T\Lambda g-4g_+^TNg_-.\label{sd:signed-norm}
+\end{align}
+Suppose
+\begin{equation}\label{sd:signed-events}
+ T:=\sum_{m=1}^k |Ne_m|^2/\lambda_m^2\leq\eta^2,\qquad
+ \|\Lambda_b^{-1/2}N_{bb}\Lambda_b^{-1/2}\|_F\leq\eta',
+\end{equation}
+where $b$ denotes the first $k$ Gram coordinates.
+Then $|Ng|\leq\eta|\Lambda g|$ for $g\in G$.
+The sum of the two middle terms in \eqref{sd:signed-identity}
+has modulus at most $\eta|\Lambda g|^2$, by applying this bound
+separately to $g_+$ and $g_-$ and then using $2ab\leq a^2+b^2$.
+The last term has modulus at most $2\eta^2|\Lambda g|^2$
+(the smaller coefficient $\eta^2$ would also suffice).
+Since
+$|g_+^TNg_-|\leq
+\eta'|\Lambda^{1/2}g_+|\,|\Lambda^{1/2}g_-|$,
+\eqref{sd:signed-norm} gives
+\[
+ |B_I\Sigma g|\,|B_Jg|
+ \leq(1/2+\eta')g^T\Lambda g.
+\]
+If $1/4-\eta-2\eta^2>0$, positivity of the scalar product makes
+$B_J$ injective on $G$.  Testing against $B_I\Sigma g$ and applying
+the singular-value variational principle gives
+\begin{equation}\label{sd:signed-sv}
+ s_k(M)\geq
+ \theta\,\frac{1/4-\eta-2\eta^2}{1/2+\eta'}.
+\end{equation}
+Take $\eta=1/16$ and $\eta'=1/8$; the last ratio is $q=23/80$.
+
+The ridge comparison carries over to the signed factorization.
+The calculation of Lemma~\ref{sd:ridge-comparison}, with
+$\Sigma H_I\Sigma$ and $\Sigma b_i$, gives
+\begin{align*}
+ m_i^T(M^TM+\kappa I)^{-1}m_i
+ &\leq(\Sigma b_i)^T
+    (\Sigma H_I\Sigma+\kappa\Lambda^{-1})^{-1}(\Sigma b_i)\\
+ &=b_i^T(H_I+\kappa\Lambda^{-1})^{-1}b_i.
+\end{align*}
+Here $\Sigma$ commutes with $\Lambda$; the same limiting argument
+handles a singular $H_J$.
+Set $\kappa=q^2\theta^2/k$ and $\rho=\kappa/\theta=q^2\theta/k$,
+and additionally require
+\[
+ (2/\rho)\|N_{sb}\Lambda_b^{-1/2}\|_F^2\leq1/8.
+\]
+On these events, $\kappa\leq s_k(M)^2/k$, and the block comparison
+in Proposition~\ref{sd:psd-partition} gives
+$H_I+\kappa\Lambda^{-1}\geq\Lambda_b/4\oplus(\rho/2)I_s$.
+Thus
+\[
+ \alpha_i\leq8\ell_i+(4/\rho)|b_i^s|^2
+       \leq\frac{4k}{q^2\theta}(|A|)_{ii}.
+\]
+
+All second moments used in Proposition~\ref{sd:psd-partition}
+depend only on $|b_i|^2\leq d$ and are unchanged.
+Markov's inequality bounds the failure probabilities of the
+three events by
+$64kd/\theta$, $16kd/\theta$, and $4k^2d/(q^2\theta)$.
+Their sum is at most
+\[
+ \frac{80k+(25600/529)k^2}{\gamma'_k}<1,\qquad k=1,2,3.
+\]
+The three ratios are less than $0.988$, $0.983$, and $0.994$.
+Also $4k/(q^2\gamma'_k)<1/2$ in every case.
+A good partition therefore exists.  Since $Z_k\geq(q\theta)^{2k}$,
+\eqref{sd:volume-decay}--\eqref{sd:volume-density}
+prove the theorem.
+\end{proof}
+
+\begin{remark}\label{sd:scope}
+Condition \eqref{sd:absolute-spread} concerns the diagonal of
+$|A|$, not merely that of $A$.  The positive and negative spectral
+contributions to $a_{ii}$ can cancel for an indefinite matrix.
+Such cancellation is absent from $(|A|)_{ii}$.
+Thus Theorem~\ref{sd:indefinite} does not settle the unrestricted
+indefinite case.
+\end{remark}
+
+\subsection{A smaller constant for a separated nonzero spectrum}
+The following argument gives a smaller constant when every nonzero
+eigenvalue, rather than just the third, is bounded away from zero.
+
+\begin{lemma}[A spread spectral frame]\label{sd:frame}
+Let $R$ be an $n\times r$ matrix with $R^TR=I_r$ and let
+$\Lambda$ be a nonsingular real diagonal $r\times r$ matrix.
+If every row $r_i^T$ of $R$ satisfies $|r_i|^2\leq1/2$, then
+for $Q=X^TR\Lambda R^TX+b^TX+c$,
+\begin{equation}\label{sd:frame-fourier}
+ |\varphi_Q(t)|
+ \leq(4\pi)^{r/2}|t|^{-r/2}|\det\Lambda|^{-1/2}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Put $c_i=|r_i|^2$ and $u_i=r_i/\sqrt{c_i}$ when $c_i>0$.
+Then $\sum_i c_i u_i u_i^T=I_r$ and $\sum_i c_i=r$.
+The geometric Brascamp--Lieb inequality \citep{BL1976,Lieb1990}
+applied to
+$F_i(s)=|\varphi_{X_i}(\sqrt{c_i}s+tb_i)|^{1/c_i}$ gives
+\begin{align*}
+ \int_{\mathbb R^r}
+  \prod_i|\varphi_{X_i}(\langle r_i,u\rangle+tb_i)|\,du
+ &\leq\prod_{i:c_i>0}\left(\int_{\mathbb R}F_i(s)\,ds\right)^{c_i}\\
+ &\leq(4\pi)^r.
+\end{align*}
+The last inequality is Lemma~\ref{four:lp} with exponent
+$1/c_i\geq2$, after changing variables.  Rows with $c_i=0$
+contribute factors of modulus at most one.
+
+For a justified quadratic Fourier inversion, put $Y=R^TX$ and
+regularize the quadratic exponential as
+\[
+ e^{itY^T\Lambda Y-\varepsilon|Y|^2},\qquad \varepsilon>0.
+\]
+The Fourier transform with kernel $e^{-iu^Ty}$ of this complex
+Gaussian has modulus at most
+$\pi^{r/2}|t|^{-r/2}|\det\Lambda|^{-1/2}$.
+Fourier inversion and independence therefore bound the
+regularized expectation by
+\[
+ (4\pi|t|)^{-r/2}|\det\Lambda|^{-1/2}
+ \int_{\mathbb R^r}
+   \prod_i|\varphi_{X_i}(\langle r_i,u\rangle+tb_i)|\,du.
+\]
+For $\varepsilon>0$ the Gaussian transform is integrable, which
+justifies the initial use of Fubini.  The preceding
+Brascamp--Lieb bound supplies an integrable majorant for the
+product after multiplication by the uniformly bounded Gaussian
+Fourier factor.  Let $\varepsilon\downarrow0$ to prove
+\eqref{sd:frame-fourier}.
+\end{proof}
+
+\begin{theorem}[Separated nonzero semidefinite spectrum]\label{sd:separated}
+Suppose $A$ is positive semidefinite of rank $r\geq3$ and every
+nonzero eigenvalue is at least $\theta>0$.  Then
+\begin{equation}\label{sd:separated-bound}
+ \|p_Q\|_\infty\leq130/\theta
+\end{equation}
+for all $b,c$.  The same assertion holds if all nonzero
+eigenvalues are at most $-\theta$.
+\end{theorem}
+
+\begin{proof}
+Scale so that $\theta=1$, and write $A=R\Lambda R^T$ with
+$R^TR=I_r$ and $\Lambda\geq I_r$.  Then $|r_i|^2\leq a_{ii}$.
+Use a positive pivot if some $a_{ii}\geq1/2$.
+Otherwise Lemma~\ref{sd:frame} applies, and
+\[
+ |\varphi_Q(t)|
+ \leq\min(1,(4\pi/|t|)^{r/2})
+ \leq\min(1,(4\pi/|t|)^{j/2})\quad(r\geq j).
+\]
+For rank at least one, a pivot gives $\alpha_1(Q)\leq4\sqrt2<15$.
+Without a pivot, Lemma~\ref{sd:fejer} gives
+$\alpha_1(Q)\leq2\sqrt2\sqrt{4\pi}/\sin^2 1<15$.
+Thus $\alpha_1\leq15$ throughout this spectral class.
+
+For rank at least two, a pivot leaves a Schur complement of rank
+one less with all nonzero eigenvalues at least one.
+The first level and Lemma~\ref{sd:composition}(2) give
+$\alpha_2(Q)\leq4\sqrt2\sqrt2\cdot15=120$.
+Without a pivot, Lemma~\ref{sd:fejer} gives
+$\alpha_2(Q)\leq4\pi/\sin^2 1<18$.
+
+For rank at least three, a pivot and the second level give
+\[
+ \|p_Q\|_\infty\leq3\sqrt2\sqrt{120(3+\log120)}<130.
+\]
+Without a pivot, integrating
+$\min(1,(4\pi/|t|)^{3/2})$ gives $\|p_Q\|_\infty\leq12$.
+Scaling and reflection complete the proof.
+\end{proof}
+
+\subsection{Sharper bounds in definite rank three}
+
+\begin{theorem}[Exact definite rank three]\label{sd:rank-three}
+Suppose $A$ has rank three and its nonzero eigenvalues are all
+at least $\theta>0$, or all at most $-\theta$.  Then, for every
+$b\in\mathbb R^n$ and $c\in\mathbb R$,
+\begin{equation}\label{sd:rank-three-bound}
+ \|p_{X^TAX+b^TX+c}\|_\infty\leq58/\theta.
+\end{equation}
+If in addition $b\in\operatorname{range}(A)$, the stronger bound
+\begin{equation}\label{sd:rank-three-range}
+ \|p_{X^TAX+b^TX+c}\|_\infty\leq3e/\theta
+\end{equation}
+holds.
+\end{theorem}
+
+\begin{proof}
+Reflection and scaling reduce the assertion to $A\geq0$,
+$\operatorname{rank}(A)=3$, and $\lambda_3(A)\geq1$.
+Write $A=R\Lambda R^T$ with $R^TR=I_3$ and $\Lambda\geq I_3$.
+If every row $r_i^T$ of $R$ satisfies $|r_i|^2\leq1/2$,
+Theorem~\ref{four:diffuse}, with the individual linear terms as
+separable phases, gives
+\[
+ \|p_Q\|_\infty\leq3e\,(\det\Lambda)^{-1/3}\leq3e.
+ \tag*{}
+\]
+This proves both assertions in this case.
+
+Otherwise choose $i$ with $|r_i|^2>1/2$.  Then
+$a=a_{ii}\geq|r_i|^2>1/2$.
+Lemma~\ref{sd:pivot} writes
+$Q=a(X_i-m(X_{-i}))^2+T(X_{-i})$.
+The matrix of $T$ has rank two, with both nonzero eigenvalues
+at least one; its linear term may be arbitrary.
+Theorem~\ref{thm:rank-two-affine} therefore gives
+$\alpha_2(T)\leq46$.  The conditional square density yields
+\[
+ \|p_Q\|_\infty
+ \leq \sqrt2\sup_s\mathbb E|s-T|^{-1/2}.
+ \tag*{}
+\]
+For any $V\geq1$, the layer-cake calculation used in
+Lemma~\ref{sd:composition} gives
+\[
+ \mathbb E|s-T|^{-1/2}
+ \leq V+\frac{46(3+2\log V)}{V}.
+ \tag*{}
+\]
+Taking $V=20$ proves \eqref{sd:rank-three-bound}, since
+\[
+ \sqrt2\left(20+\frac{46(3+2\log20)}{20}\right)
+ <57.531<58.
+ \tag*{}
+\]
+
+Now suppose $b\in\operatorname{range}(A)$.  Choose $z$ with
+$2Az=b$ and replace $X$ by $X+z$, absorbing the resulting
+constant into $c$.  Translation preserves independence and all
+coordinate density caps, so it is enough to treat $b=0$.
+In the heavy-row case the Schur complement is a positive
+semidefinite matrix of rank two with nonzero eigenvalues
+$\mu_1,\mu_2\geq1$.  Thus
+\[
+ T=Y^T\operatorname{diag}(\mu_1,\mu_2)Y+c',
+ \qquad Y=U^TX_{-i},\quad U^TU=I_2.
+ \tag*{}
+\]
+Lemma~\ref{four:projection} bounds the joint density of $Y$ by
+$2$.  Lemma~\ref{geom:definite} consequently gives
+$\|p_T\|_\infty\leq2\pi$.
+Keep the support restriction in the square density formula:
+\[
+ p_Q(s)\leq a^{-1/2}
+      \mathbb E\bigl[(s-T)^{-1/2}{\bf1}_{\{T<s\}}\bigr]
+ \quad\hbox{for almost every }s.
+ \tag*{}
+\]
+For any real random variable with density bounded by $M$,
+layer cake gives
+\[
+ \mathbb E\bigl[(s-T)^{-1/2}{\bf1}_{\{T<s\}}\bigr]
+ =\int_0^\infty\mathbb P(s-t^{-2}<T<s)\,dt
+ \leq\int_0^\infty\min(1,Mt^{-2})\,dt=2\sqrt M.
+ \tag*{}
+\]
+It follows that $\|p_Q\|_\infty\leq4\sqrt\pi<3e$.
+Together with the diffuse case, this proves
+\eqref{sd:rank-three-range}.  Restoring the scale $\theta$
+completes the proof.
+\end{proof}

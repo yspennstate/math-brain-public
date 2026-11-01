@@ -1,0 +1,5 @@
+python REPRODUCE.py > REPRODUCE.out
+python -m json.tool CLAIMS.json
+python -m json.tool PROGRESS.json
+python -m json.tool PACKET_DELTA.json
+sha256sum REVIEW_PROOF.md REPRODUCE.py REPRODUCE.out REPORT.md CLAIMS.json PROGRESS.json PACKET_DELTA.json SOURCE_PINS.md COMMANDS.txt DELIVERY.json

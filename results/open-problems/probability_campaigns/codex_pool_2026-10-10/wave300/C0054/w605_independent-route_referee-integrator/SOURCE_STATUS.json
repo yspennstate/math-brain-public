@@ -1,0 +1,31 @@
+{
+  "id": "C0054",
+  "checked_at": "2026-10-10",
+  "rows": [
+    {
+      "kind": "ranking_status",
+      "source_path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+      "source_line": 435,
+      "source_quote": "4,C0054,Localisation of all bulk states for two-dimensional random band matrices at fixe,attempted_un,2D band matrices localised at fixed W",
+      "verdict": "The ranking is truncated and is not an exact mathematical statement or evidence of current openness.",
+      "current_openness": "UNKNOWN"
+    },
+    {
+      "kind": "source_statement_correction",
+      "primary_url": "https://arxiv.org/pdf/1807.03031",
+      "primary_locator": "Bourgade, Random band matrices (2018), equation (0.1), conjecture (0.2), section 2.2",
+      "source_quote": "For d = 2, it is conjectured that all states are localized with a localization length of order exp(W2)",
+      "exact_scope": "Real symmetric matrix on Lambda={1,...,N}^2 with periodic L1 distance; centered entries independent up to symmetry; H_ij=0 beyond W; comparable variances of nonzero entries with each row variance sum one; section 2.2 adds uniform subgaussian tails for W H_ij. Bulk means |E|<2-kappa in the transition discussion. Conjecture (0.2) predicts W_c(N) of order sqrt(log N); section 2.2 predicts localization length of order exp(W^2). Poisson versus GOE is part of the transition expectation, not an established fixed-W theorem.",
+      "intake_source": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/problems.jsonl:54",
+      "correction": "The intake writes this as an all-bulk-eigenvector and Poisson joint assertion at fixed W. The primary survey gives a heuristic scale and transition, without quantified finite-volume localization or a precise point-process convergence theorem for fixed W. Treat those as separate proof obligations.",
+      "current_openness": "UNKNOWN"
+    },
+    {
+      "kind": "recent_primary_literature",
+      "primary_url": "https://arxiv.org/abs/2609.24426",
+      "result": "Lai-Yang v2 (2026-10-06) proves bulk delocalization when W >= (log N)^55 for the stated Gaussian two-dimensional torus model, yielding a stretched-exponential lower bound on localization length. It does not address fixed W as N tends to infinity.",
+      "current_openness": "UNKNOWN"
+    }
+  ],
+  "next": "Check owner solved/retired records and audit peer artifacts; current openness remains bounded-search UNKNOWN."
+}

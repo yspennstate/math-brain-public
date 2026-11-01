@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-20",
+  "worker": "NM13-13",
+  "target": "T04",
+  "role": "cluster-aware random 3-SAT variational upper bound",
+  "status": "OPEN / PARTIAL; CANDIDATE_FULL pending later independent review",
+  "runtime_model": "GPT-5.6 Sol",
+  "runtime_effort": "UNVERIFIED",
+  "source_model": "iid uniform proper signed 3-clauses on three distinct variables, m=floor(alpha*n)",
+  "published_explicit_bracket_before": [3.52, 4.4898],
+  "published_explicit_bracket_after": [3.52, 4.4898],
+  "project_candidate_upper_before": 4.3888762,
+  "project_candidate_upper_after": 4.388865,
+  "project_candidate_endpoint_gain": 0.0000112,
+  "project_candidate_width_before": 0.8688762,
+  "project_candidate_width_after": 0.868865,
+  "new_mechanism": {
+    "name": "direct product-measure Gaussian quadrature",
+    "statement": "For X=QQ' and the X^K-tilted law sigma_K, the omitted squared-moment tail equals mu_K^2 E_sigmaK h_K(X). An r-node Gaussian rule gives E h_K >= sum_i w_i h_K(x_i) by the nonnegative 2r-th Hermite remainder, first for finite truncations and then by monotone convergence.",
+    "K": 2300,
+    "nodes": 9,
+    "density_exact": "877773/200000",
+    "density_decimal": 4.388865,
+    "survey_support": ["33/5000", "49/625", "1/2", "576/625", "4967/5000"],
+    "survey_weights": ["139/2500", "1831/10000", "2613/5000", "1831/10000", "139/2500"],
+    "A_K": "5.0689735487468019675868317941571e-5",
+    "product_gauss9_tail_lower": "5.0757242977747182632610902543446e-5",
+    "A_upper": "-6.7507490279162956742584601875e-8",
+    "certificate": "CERTIFIED_STRUCTURAL_CHECKS=True; CERTIFIED_A_UPPER_NEGATIVE=True; CERTIFIED_A_NEGATIVE=True"
+  },
+  "mechanism_comparison": {
+    "predecessor_four_node_one_variable_A_upper_diagnostic_at_same_density": "about +1.4672745e-6",
+    "new_product_gauss9_A_upper_certified": "<-6.7507490e-8",
+    "tail_lower_bound_gain_diagnostic": "about 1.5347820e-6"
+  },
+  "preserved_failures": [
+    "arbitrary rescue stars fail composition",
+    "anchored degree-one rescue matching not globally reoptimized in Diaz type polytope",
+    "positive local multiplicative second moment identical-pair barrier at log(2)/log(5/4)=3.10628...",
+    "sublinear solution-ball quotienting yields only exp(o(n))",
+    "whole-component quotienting leaves uncontrolled overlap moment",
+    "whitening lacks uniform exponential cluster-multiplicity theorem",
+    "q-binomial radius-two route only about 4.5923",
+    "equal-weight two-support hard-field survey stalls near 4.4178"
+  ],
+  "companion_status": "NM13-06 latest two-menu collision branching analysis is constructive/lower-bound-side and complementary; best-case surrogate transition near 3.5806856 is not a source threshold claim.",
+  "literature_check_date": "2026-09-20",
+  "literature_sources": [
+    "Hajiaghayi-Sorkin arXiv:math/0310193: lower bound 3.52",
+    "Diaz-Kirousis-Mitsche-Perez-Gimenez arXiv:0807.3600 / FSTTCS 2008: upper bound 4.4898",
+    "Carenini ECCC TR26-145: O(n/log n) scaling window, not k=3 threshold location"
+  ],
+  "prewrite_master": "d5b351738eda036890fc6de794522c037ce26c3f",
+  "report": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/2026-09-20T11-12-00Z__t04_direct_product_gauss9_4388865_upper.md",
+  "report_commit": "3ec8699137baa9700737748f3a06875a947053ed",
+  "code": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T11-12-00Z__product_gauss9_4388865_interval.py",
+  "code_commit": "476584833fecdba0d46a3a3902b46e33b972c463",
+  "output": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T11-12-00Z__product_gauss9_4388865_interval.out",
+  "output_commit": "e77bd5f95849d2916b884a33fe92648fcde579cb",
+  "next_attack": "jointly reoptimize a rational symmetric five- or seven-support survey against the direct product-law Gaussian objective; fallback endpoint-aware Gauss-Radau/Markov-Stieltjes lower envelope only if it provably dominates ordinary Gaussian quadrature"
+}

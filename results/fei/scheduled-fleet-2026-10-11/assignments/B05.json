@@ -1,0 +1,435 @@
+{
+  "schema": "fei-stream-contracts/2",
+  "stream": "B05",
+  "catalog_sha256": "fd09039c4d5efe48fba1bc1652f6cd04183181db82912305d4354c1b2fa14f5b",
+  "catalog": "../AGENT_ASSIGNMENTS.json",
+  "protocol": "../EXECUTION_PROTOCOL.json",
+  "live_state": "../PACKET_STATUS.json",
+  "rule": "Select one primary packet. Actual proof dependencies and status require original evidence; upstream lists are advisory. Review nominees recuse if contributors.",
+  "assignments": [
+    {
+      "agent_id": "A021",
+      "stream": "B05",
+      "topic": "Rare-core asymptotics",
+      "target_statement": "For balanced tensor cores activated on one control point, expand every entropy and influence term uniformly in the two parameters. Extract necessary asymptotic conditions on any claimed global potential.",
+      "work_type": "interface_derivation",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A021-D1",
+          "description": "RARE_CORE_EXPANSIONS.tex: uniform two-parameter H/I and mismatch/KL expansions",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A021-D2",
+          "description": "POTENTIAL_NECESSITIES.md: necessary scaling for candidate global debts",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Keep tensor count and selector rarity independent until specifying the limiting regime; bound remainder terms uniformly in that regime.",
+        "Retain μ[log₂(1/μ)−D₂(ν||q)] from the existing mismatch/KL theorem and distinguish its local debt from the already paid 3μ/ln2 term.",
+        "Show which core H/I ratio survives activation and state that rare output or small I alone is FEI-strength, not a structural simplification."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A002",
+          "interface": "exact activation transformations"
+        },
+        {
+          "agent_id": "A024",
+          "interface": "boundary normalizations"
+        },
+        {
+          "agent_id": "A022",
+          "interface": "point-surgery formulas"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A002",
+          "interface_use": "two-parameter activation accounting"
+        },
+        {
+          "agent_id": "A007",
+          "interface_use": "rare activation expansions"
+        },
+        {
+          "agent_id": "A012",
+          "interface_use": "exact rare-core ledger"
+        },
+        {
+          "agent_id": "A015",
+          "interface_use": "sparse activated core"
+        },
+        {
+          "agent_id": "A023",
+          "interface_use": "rare-core mismatch/KL asymptotics"
+        },
+        {
+          "agent_id": "A025",
+          "interface_use": "two-parameter rare-core ledger"
+        },
+        {
+          "agent_id": "A026",
+          "interface_use": "rare mismatch/KL obstruction"
+        },
+        {
+          "agent_id": "A036",
+          "interface_use": "rare mismatch/KL scaling"
+        },
+        {
+          "agent_id": "A040",
+          "interface_use": "rare-core asymptotics"
+        },
+        {
+          "agent_id": "A047",
+          "interface_use": "rare-core expansion"
+        },
+        {
+          "agent_id": "A048",
+          "interface_use": "uniform two-parameter limits"
+        },
+        {
+          "agent_id": "A077",
+          "interface_use": "rare activation ledger"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "A uniform asymptotic ledger identifies one concrete unpaid scaling term for A023/A026/A036/A048.",
+      "source_ids": [
+        "reductions_restrictions",
+        "brain_route_map",
+        "brain_phase_energy",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F03",
+        "F15",
+        "F17"
+      ]
+    },
+    {
+      "agent_id": "A022",
+      "stream": "B05",
+      "topic": "One-point surgery",
+      "target_statement": "Analyze Boolean seeds after one-point or adjacent-point flips, including bent and near-tensor seeds. Produce exact spectral formulas for the logarithmic terms that a local estimate would have to pay.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A022-D1",
+          "description": "POINT_SURGERY.tex: exact Fourier changes for one-point/adjacent-point Boolean flips",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A022-D2",
+          "description": "SURGERY_LOG_CERTIFICATE.md: logarithmic contribution and violation margin",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Specify the exact sign-valued truth table after each flip and retain both old coefficients and the signed perturbation.",
+        "Recover the bent-splice logarithmic control before claiming a new near-tensor family; include the interaction term for adjacent flips.",
+        "Separate an analytic parameter family from a finite numerical seed and identify precisely which local charge fails."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A072",
+          "interface": "integer Walsh representation"
+        },
+        {
+          "agent_id": "A053",
+          "interface": "near-tensor surgery setup"
+        },
+        {
+          "agent_id": "A077",
+          "interface": "multi-scale defect construction"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A020",
+          "interface_use": "one-point bent splice"
+        },
+        {
+          "agent_id": "A021",
+          "interface_use": "point-surgery formulas"
+        },
+        {
+          "agent_id": "A053",
+          "interface_use": "exact one-point surgery"
+        },
+        {
+          "agent_id": "A077",
+          "interface_use": "exact point-surgery formulas"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A reusable exact surgery formula plus either a new scalable failure or a proved cancellation mechanism.",
+      "source_ids": [
+        "reductions_restrictions",
+        "brain_route_map",
+        "brain_phase_energy",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F03",
+        "F15",
+        "F17"
+      ]
+    },
+    {
+      "agent_id": "A023",
+      "stream": "B05",
+      "topic": "Amortized rarity budget",
+      "target_statement": "Develop a ledger paying a rare event once at its first revelation, with an explicit stopping rule and no reuse across descendants. Prove a complete bound for at least one nontrivial family.",
+      "work_type": "new_math",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A023-D1",
+          "description": "RARE_REVELATION_PAYMENT.tex: declared model family, stopping rule, and complete payment",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A023-D2",
+          "description": "RARITY_CREDIT_LEDGER.json: first revelation and descendant reuse accounting",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Own only the first-revelation rarity payment for a declared nontrivial family; A029 owns child-deficit transport and A064 owns the global potential.",
+        "Bound the complete expected sum of μ[log₂(1/μ)−D₂(ν||q)] plus terminal entropy, with each rarity credit spent at most once.",
+        "Exhibit a uniform bound on an unbounded parameter family and state whether its stopping rule is physical, adaptive, and finite."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A021",
+          "interface": "rare-core mismatch/KL asymptotics"
+        },
+        {
+          "agent_id": "A061",
+          "interface": "fair-tree entropy telescope"
+        },
+        {
+          "agent_id": "A062",
+          "interface": "influence telescope"
+        },
+        {
+          "agent_id": "A037",
+          "interface": "nonreuse information-credit interface"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A027",
+          "interface_use": "scoped rarity amortization"
+        },
+        {
+          "agent_id": "A028",
+          "interface_use": "rare first-revelation payment"
+        },
+        {
+          "agent_id": "A064",
+          "interface_use": "scoped rare first-revelation payment"
+        },
+        {
+          "agent_id": "A087",
+          "interface_use": "rare first-revelation payment"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A complete scoped amortization theorem, or a rigorously growing expected debt under the proposed rule, is required for renewal.",
+      "source_ids": [
+        "reductions_restrictions",
+        "brain_route_map",
+        "brain_phase_energy",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F03",
+        "F15",
+        "F17"
+      ]
+    },
+    {
+      "agent_id": "A024",
+      "stream": "B05",
+      "topic": "Biased-child stability",
+      "target_statement": "Distinguish fair physical restrictions, whose remaining uniform inputs stay uniform, from changed inner-output means inducing biased outer-gate inputs in genuine disjoint composition. Track near-dictator and deterministic limits with the existing mismatch/KL rebate and the exact corrected FEI+ normalization; identify the credit needed to avoid unpaid rare logarithms.",
+      "work_type": "interface_derivation",
+      "priority": "P0",
+      "mathematical_design_status": "RECOVERED_BASELINE",
+      "deliverables": [
+        {
+          "deliverable_id": "A024-D1",
+          "description": "BIAS_TRANSPORT.tex: physical restrictions versus induced outer-gate biases",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A024-D2",
+          "description": "BOUNDARY_CREDITS.md: exact near-dictator and rare-child normalization terms",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "A fair physical restriction leaves untouched originally uniform coordinates uniform; distinguish this from nonzero inner means inducing product biases at an outer gate.",
+        "At zero/one input probabilities reduce deterministic coordinates before normalizing biased Fourier atoms or dividing by I−Var.",
+        "Keep the mismatch/KL rebate and the corrected FEI+ normalization credit; do not charge a small child by an unsupported bounded scalar multiplier."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A004",
+          "interface": "biased normalization conventions"
+        },
+        {
+          "agent_id": "A056",
+          "interface": "means under disjoint substitution"
+        },
+        {
+          "agent_id": "A042",
+          "interface": "weighted bias endpoint controls"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A021",
+          "interface_use": "boundary normalizations"
+        },
+        {
+          "agent_id": "A029",
+          "interface_use": "actual physical-child normalizations"
+        },
+        {
+          "agent_id": "A039",
+          "interface_use": "physical child law"
+        },
+        {
+          "agent_id": "A041",
+          "interface_use": "induced outer means"
+        },
+        {
+          "agent_id": "A042",
+          "interface_use": "deterministic input contraction"
+        },
+        {
+          "agent_id": "A056",
+          "interface_use": "induced child means"
+        },
+        {
+          "agent_id": "A057",
+          "interface_use": "induced means after restriction"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 2,
+      "renewal_milestone": "A precise reusable normalization/mean-transport interface is delivered; any weighted-threshold extension is assigned to A041.",
+      "source_ids": [
+        "reductions_restrictions",
+        "brain_route_map",
+        "brain_phase_energy",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F03",
+        "F15",
+        "F17"
+      ]
+    },
+    {
+      "agent_id": "A025",
+      "stream": "B05",
+      "topic": "Rare-event counterfamily",
+      "target_statement": "Turn a finite failure of a local charge into a rigorous parameterized Boolean family. State whether it refutes a constant, an all-coordinate rule, or a universal route; do not upgrade its scope.",
+      "work_type": "counterexample_family",
+      "priority": "P0",
+      "mathematical_design_status": "UNPROVED_TARGET",
+      "deliverables": [
+        {
+          "deliverable_id": "A025-D1",
+          "description": "RARE_COUNTERFAMILY.tex: explicit Boolean sequence and asymptotic inequality",
+          "initial_status": "OPEN"
+        },
+        {
+          "deliverable_id": "A025-D2",
+          "description": "REFUTED_STATEMENT.json: original constant, quantifiers, and unaffected claims",
+          "initial_status": "OPEN"
+        }
+      ],
+      "acceptance_criteria": [
+        "Give all dimensions and rarity parameters and prove the sign of the violation for a stated infinite range.",
+        "Retain the complete KL credit when refuting a candidate payment; a failure of a weaker scalar surrogate does not refute the stronger mismatch bound.",
+        "Explicitly distinguish a refuted local/all-coordinate rule from existential good-coordinate selection, an optimized tree, and FEI itself.",
+        "The accepted B05 fixed-price no-go is available as a completed first-instance artifact. Reuse its exact scope and move new effort to a distinct family or a constructive nonreusing tree payment; do not recount its reproof as a new result."
+      ],
+      "advisory_upstream": [
+        {
+          "agent_id": "A049",
+          "interface": "minimal exact witness"
+        },
+        {
+          "agent_id": "A021",
+          "interface": "two-parameter rare-core ledger"
+        },
+        {
+          "agent_id": "A073",
+          "interface": "logarithmic sign certificate"
+        },
+        {
+          "agent_id": "A075",
+          "interface": "finite-to-family construction"
+        }
+      ],
+      "next_consumers": [
+        {
+          "agent_id": "A075",
+          "interface_use": "known rare-event parameter family"
+        },
+        {
+          "agent_id": "A080",
+          "interface_use": "rare-event family"
+        },
+        {
+          "agent_id": "A092",
+          "interface_use": "parameterized rare family"
+        }
+      ],
+      "independent_reviewers": [
+        "A087",
+        "A094"
+      ],
+      "initial_pilot_cap_cycles": 3,
+      "renewal_milestone": "A parameterized certified local failure or a sharpened surviving scope closes the pilot.",
+      "source_ids": [
+        "reductions_restrictions",
+        "brain_route_map",
+        "brain_phase_energy",
+        "b19_review_readbacks"
+      ],
+      "advisory_F_tags": [
+        "F03",
+        "F15",
+        "F17"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261014T032000Z-fleet01-B12-indicator-coefficient4",
+  "stream": "B12",
+  "primary_packet_id": "A058",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "B12-A058-CO-SINGLETON-INDICATOR-FAMILY",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For the r-bit indicator q_r which vanishes at exactly one point, Phi(q_r)/I(q_r)=2(2^r-1)/r times [r-(2^r-2)2^{-r} log2(2^r-1)]; this ratio is strictly greater than 4 for every r>=3, approaches 4 from above, and is preserved by every tensor power.",
+      "scope": "Every integer r>=3 and every positive tensor depth k; exact disjoint-product indicator family in dimension rk."
+    },
+    {
+      "claim_id": "B12-A058-INDICATOR-COEFFICIENT-FOUR",
+      "version": "v1",
+      "status": "REFUTED",
+      "statement": "The universal unsigned estimate Phi(q)<=4 I(q) fails already for the three-bit co-singleton indicator, where Phi/I=14-(7/2)log2(7)>4.",
+      "scope": "Exact Boolean indicator witness; strict sign certified by 7^7<2^20 and amplified to every tensor depth."
+    },
+    {
+      "claim_id": "B12-A058-SIX-BIT-INDICATOR-LOWER-BOUND",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "The six-bit indicator mask 18446708751093190623 and all its tensor powers satisfy Phi/I=K*=4.512256384896659..., forcing K>=K*>4.5 in every universal estimate Phi(q)<=K I(q).",
+      "scope": "Exact seed and every positive tensor power; rational lower bound certified by 2^3024>3^547*19^475*7^49."
+    },
+    {
+      "claim_id": "B12-A058-GENUINE-BOOLEAN-TENSOR-CONTROL",
+      "version": "v2",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For f_k=2q^{tensor k}-1, the co-singleton r=3 family and the six-bit seed family have bounded genuine-Boolean FEI ratios, with limits 5.073268136529566... and 5.244969399712791... respectively.",
+      "scope": "All positive tensor depths, with exact closed formulas and asymptotic limits; these are controls, not FEI counterfamilies."
+    },
+    {
+      "claim_id": "B12-A058-SHARED-COORDINATE-OVERLAP",
+      "version": "v8",
+      "status": "OPEN",
+      "statement": "The complete finite sign ensemble is paid, but the actual physical signing still lacks a uniform activation witness. Independent unsigned coefficient-four payments of the activation indicators are now refuted; a joint signed near/separated, posterior-activation, or terminal-reserve mechanism remains necessary."
+    }
+  ]
+}
+

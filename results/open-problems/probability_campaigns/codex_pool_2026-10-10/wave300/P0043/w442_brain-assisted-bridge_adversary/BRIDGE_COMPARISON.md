@@ -1,0 +1,13 @@
+# Retrieved bridge and exact missing premises
+
+Brain card: claim_5df2b62b583a156268141fc66e8bdf6bca069daa8e9dcd6daf40af92ed7320a5; logical id math:harvest.arxiv.owner-math:arxiv-2304-12110-lemma-7-72467d. The complete returned body and metadata are preserved in BRIDGE_CARD.json. Its metadata says claim_kind=concept, truth_status=unverified, statement_fidelity_reviewed=false, conditions=[] and proof_text="". It is not a checked theorem.
+
+Primary check: [Vanneuville, arXiv:2304.12110v3, Section 3](https://arxiv.org/html/2304.12110v3), Definition 4 and Lemma 7. The global setup is a finite graph. The first explored edge is deterministic; later choices use revealed history only. A common q bounds the conditional next-edge opening probability after every prefix of every positive-probability complete transcript. Those assumptions give domination of iid-q. The finite-graph setup and nonanticipating exploration definition are absent from the standalone harvested fragment. C004 writes the complete statement and induction, preserving zero-probability branch handling.
+
+The proof need is stronger: hypothetical infinite critical clusters have threshold one under fresh thinning by w441 L002. Finite stochastic domination alone supplies neither an infinite percolating comparison object nor the exposure-uniform bounds and exhaustion argument needed to contradict that fragility. Positive rooted expansion would supply a sufficient object, but C003 rules that premise out on subexponential ambient graphs.
+
+Attempt: direct independent thinning preserves Bernoulli-pq marginals, so it proves the fragility obstruction instead of overcoming it. A finite exploration comparison may address selected cluster events only after its exact conditional hypotheses are proved. Marginals, conditional multiplication without a filtration argument and continuity separately at each radius do not supply those hypotheses.
+
+Measured failure and bounded repair: ranked recall returned no output within its 60 s limit (64.914 s including teardown). Read-only title fallback returned five unranked candidates in 0.0801 s, including this finite comparison card. Exact-id recovery took 0.0804 s. A narrower title scan hit its two-second SQL instruction deadline and returned no card. This separately reviewed diagnostic is not a ranking-quality claim or a live global recall change. Exact-id mode requires an already known id; rows retain unchecked source/current/applicability flags.
+
+NEXT: Independently audit a finite gluing step for a common conditional bound after arbitrary positive-probability exposure histories, including zero-probability branches; do not infer anchored expansion on a subexponential graph.

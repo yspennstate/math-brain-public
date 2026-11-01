@@ -1,0 +1,124 @@
+[
+  {
+    "claim_id": "A045-SHARP-TAX-DEFICIT-PAYMENT-NOGO",
+    "version": 1,
+    "exact_statement": "There is no finite K such that sum_i tau*(p_i)<=K delta_p(g) for every essential Boolean gate of arity at most six and every interior independent product law, where tau* is the sharp scalar singleton uncertainty tax and delta=I-Var uses spectral influence. For AND_n at a common bias p->0, n tau*(p)/delta ~ n/[8(n-1)] p^(1-n)log2(1/p) for every fixed n>=2. For essential AND_2, the minimum reach-weighted tax over singleton gate-input query policies ending only in constant or literal leaves is tau*(p), whose ratio to delta is asymptotic to log2(1/p)/(8p). Even its actual positive Shannon correction obeys (J-M)/delta=log2(1/p)+O(p log2(1/p)), while Hplus/delta=2+[4p/(1-p)]log2(1/p)->2. The dyadic biases p_m=1-(1-2^-m)^2 are realized by disjoint uniform-cube OR(AND_m,AND_m) children. These are failures of separate gate-tax or Shannon-correction payment, not failures of corrected product FEI+ or uniform FEI, and gate-wire exposure is not automatically a singleton physical query of the underlying uniform cube.",
+    "hypotheses": [
+      "finite genuine essential Boolean gates",
+      "independent gate-input biases in (0,1)",
+      "sharp scalar tax in bits, normalized product Fourier spectrum",
+      "spectral influence I and deficit delta=I-Var",
+      "query-policy minimum requires constants/literals at all terminal restrictions",
+      "simultaneous equal-bias path p->0, not a fixed-child endpoint expansion",
+      "all-n statement concerns the explicit conjunction family, not all gates"
+    ],
+    "statement_sha256": "b828159e610b36a1edab492d671306f0b8944e1dcf22a43e2fcf8944cce2a008",
+    "contributors": [
+      "A045"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A045\\runs\\20261013T212421Z-fleet05-A045-biased-realizability-referee\\REPORT.md",
+      "locators": [
+        "Sections 2-3 raw/stopped tax",
+        "Section 5 actual correction",
+        "Section 6 normalization cancellation"
+      ],
+      "checker": "code/check.py",
+      "certificates": "out/CHECK_OUTPUT.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A045-BIASED-REALIZABILITY-REFEREE",
+        "version": 1,
+        "use": "scalar minimum on p<=1/16; source-complete prior analytic reconstruction; not a repeated half-tax review",
+        "status": "PREVIOUS_LOCAL_PROOF_WITH_SCOPED_LEAD_ACKNOWLEDGEMENT"
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTIC_MECHANISM_REFUTATION_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "finite universal gate sum_i tau*(p_i)<=K delta",
+      "finite universal best affine-leaf gate-query tax bill<=K root delta",
+      "finite universal (actual singleton J-M)_+<=K gate delta"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B09",
+      "A041",
+      "A043",
+      "A050",
+      "A057",
+      "A085",
+      "A090",
+      "A091",
+      "A098",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A042-SHARP-BINARY-PRIME-ENDPOINT",
+    "version": 1,
+    "exact_statement": "For each of the eight essential binary Boolean sign gates with one exceptional truth-table corner, the supremum over all interior independent Bernoulli biases of corrected Hplus/(I-Var) is exactly 2+4/ln(2). For XOR and XNOR the supremum is exactly 2/ln(2). The suprema are not attained in the interior. Writing A(x)=x ln(1/x)/(1-x), corner ratios are 2+2[A(u)+A(v)]/ln(2), where u,v are probabilities of the exceptional corner coordinates; parity ratios are [A(1-4p(1-p))+A(1-4q(1-q))]/ln(2). These formulas extend as limits of interior ratios along arbitrary independent endpoint rates, while deterministic contracted functions have Hplus=I-Var=0. The common sharp corrected constant 2+4/ln(2) propagates through genuine read-once binary formulas under every product physical law by exact disjoint composition; on uniform physical inputs it implies ordinary H<= [2+4/ln(2)] I. No higher-arity prime or universal FEI estimate is established.",
+    "hypotheses": [
+      "genuine finite Boolean sign tables",
+      "essential arity-two gates for the supremum statements",
+      "independent input biases in (0,1)",
+      "corrected entropy in bits and spectral influence",
+      "contract deterministic inputs before forming a ratio or child variance divisor",
+      "genuine disjoint read-once supports for the composition corollary",
+      "A(0)=0 and A(1)=1 are limiting values"
+    ],
+    "statement_sha256": "e163ebefc916767a00214eea2d54e56e53c9666821565f612f15a7ef4f17d5e8",
+    "contributors": [
+      "A042/fleet05"
+    ],
+    "proof_source": {
+      "original_source": "~\\brain_workers\\FEI100_20261011\\agents\\A042\\runs\\20261012T002547Z-fleet05-A042-bias-endpoint-certificates\\CLAIMS.json",
+      "original_proof_source": {
+        "run_id": "20261012T002547Z-fleet05-A042-bias-endpoint-certificates",
+        "path": "REPORT.md",
+        "checker": "code/binary_certificate.py",
+        "output": "out/CHECK_OUTPUT.json"
+      },
+      "independent_reconstruction": "~\\brain_workers\\FEI100_20261011\\agents\\A045\\runs\\20261013T212421Z-fleet05-A045-biased-realizability-referee\\REPORT.md",
+      "independent_certificate": "out/BINARY_REVIEW_CHECK.json"
+    },
+    "proof_dependencies": [
+      "elementary two-bit Fourier computation",
+      "ln y <= y-1 and convergent logarithm series",
+      "disjoint centered-product Fourier composition, independently reconstructed in REPORT.md"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A045/fleet05",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "at_utc": "2026-10-13T21:37:54.360437+00:00",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A045\\runs\\20261013T212421Z-fleet05-A045-biased-realizability-referee\\REPORT.md",
+        "locator": "Section 7: classification, scalar extrema, independent exact formulas, composition and uniform closure",
+        "method": "independent all-bias analytic reconstruction plus 400 actual truth tables/biases; exact Fraction and prime-log coefficient certificates; source checker not used",
+        "contributor_to_original": false,
+        "scope_exclusions": [
+          "No higher-arity prime bound",
+          "Source additional quantitative remainder bounds not independently certified; they are outside this exact claim statement",
+          "No independent acceptance of any prime census or full FEI"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A041",
+      "A043",
+      "A044",
+      "A045",
+      "A084",
+      "A090",
+      "A091",
+      "B09",
+      "B20"
+    ]
+  }
+]

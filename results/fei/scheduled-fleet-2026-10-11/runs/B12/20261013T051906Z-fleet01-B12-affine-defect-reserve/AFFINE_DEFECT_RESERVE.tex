@@ -1,0 +1,118 @@
+\section*{Affine-coset character flips admit a sharp source-influence payment}
+
+All logarithms are natural.  For a real function $u$ on a Boolean cube put
+\[
+  {\cal E}(u)=\sum_S \Phi(\widehat u(S)^2),\qquad
+  \Phi(t)=t\log(1/t),\quad \Phi(0)=0,
+\]
+and $I(u)=\sum_S |S|\widehat u(S)^2$.
+
+\subsection*{Local theorem}
+Let $D$ be a nonempty affine subspace of $\mathbb F_2^n$ of codimension
+$k\geq 1$, let $\chi_r$ be a nonconstant character, and define the genuine
+Boolean branches
+\[
+ g_- = \chi_r,\qquad g_+=\chi_r(1-2\mathbf 1_D).
+\]
+Thus
+\[
+ a={g_++g_-\over2}=\chi_r(1-\mathbf 1_D),\qquad
+ b={g_+-g_-\over2}=-\chi_r\mathbf 1_D.
+\]
+Use the shared physical selector $h=-\chi_r$ and put $F=a+hb$.  Define the
+signed full-block associator
+\[
+ \Omega(D,r)={\cal E}(F)-{\cal E}(a)-{\cal E}(hb).
+\]
+Then
+\[
+ \boxed{\ \Omega(D,r)\leq 8\log 2\,I(b)\ } .                    \tag{1}
+\]
+More precisely, exactly one of the following holds.
+
+\begin{enumerate}
+\item If $\chi_r$ is nonconstant on $D$, then $\Omega(D,r)=0$.
+\item If $\chi_r=+1$ on $D$, then $F=\chi_r$ and $\Omega(D,r)\leq0$.
+\item If $\chi_r=-1$ on $D$, write $p=2^{-k}$ and $L=\log(1/p)=k\log2$.
+Then
+\[
+ \Omega_k=\Phi((1-2p)^2)-\Phi((1-p)^2)
+ +(p^{-1}-1)\Phi(4p^2)-(2p^{-1}-1)\Phi(p^2),                 \tag{2}
+\]
+and
+\[
+ \Omega_k\leq 4pL\leq8\log2\,I(b).                          \tag{3}
+\]
+\end{enumerate}
+
+The constant in (1) is sharp for this class: for coordinate subcubes with
+codimension $k$ and $\chi_r=-1$ on $D$,
+\[
+ {\Omega_k\over I(b)}\longrightarrow 8\log2.                \tag{4}
+\]
+
+\subsection*{Proof}
+Let $W$ be the annihilator of the direction space of $D$.  It is a
+$k$-dimensional linear space.  The spectrum of $\mathbf1_D$ is supported on
+$W$, is flat there, and every nonzero coefficient has magnitude $p$.
+Multiplication by $\chi_r$ translates this support to $r+W$.
+
+If $r\notin W$, the character varies on $D$.  The set
+$D_-=D\cap\{\chi_r=-1\}$ has codimension $k+1$ and annihilator
+$W'=\langle W,r\rangle$.  Now $a=\chi_r(1-\mathbf1_D)$ has one Fourier
+coefficient of magnitude $1-p$ and $2^k-1$ coefficients of magnitude $p$.
+Also
+\[
+ F=\chi_r+2\mathbf1_{D_-}
+\]
+has one coefficient of magnitude $1-p$ and $2^{k+1}-1$ coefficients of
+magnitude $p$.  Finally $hb=\mathbf1_D$ has $2^k$ coefficients of magnitude
+$p$.  Hence the entropy contributions cancel coefficient-for-coefficient:
+$\Omega(D,r)=0$.
+
+If $r\in W$, the character is constant on $D$.  In the $+1$ case,
+$F=\chi_r$, so nonnegativity of ${\cal E}(a)$ and ${\cal E}(hb)$ gives
+$\Omega\leq0$.  In the $-1$ case the flat spectra give (2) directly.
+Writing
+\[
+ A(p)=\Phi((1-2p)^2)-\Phi((1-p)^2),
+\]
+elementary simplification of (2) yields
+\[
+ \Omega_k=A(p)+(4p-6p^2)L-8p(1-p)\log2.                     \tag{5}
+\]
+For $f(t)=\Phi((1-t)^2)$,
+\[
+ f'(t)=2(1-t)(1+2\log(1-t))\leq2,
+\]
+and therefore $A(p)=f(2p)-f(p)\leq2p$.  Since $p\leq1/2$,
+$2p\leq8p(1-p)\log2$.  Equation (5) now gives
+$\Omega_k\leq(4p-6p^2)L\leq4pL$.
+
+Let $m$ be the number of physical coordinates used by $W$.  Each used
+coordinate occurs in exactly half of the elements of $W$, so
+\[
+ I(b)=p^2\sum_{S\in W}|S|={pm\over2}\geq{pk\over2}.
+\]
+This proves (3).  Finally $A(p)=2p+O(p^2)$ in (5), while
+$I(b)=pk/2$ for a coordinate $k$-subspace.  Division proves (4).
+
+\subsection*{Adaptive hierarchy corollary}
+Consider an adaptive nonreusing physical hierarchy with actual reach weights
+$w_v$.  Suppose the restricted local branch pair at every queried node is an
+affine-coset character flip of the form above, and the local branch-difference
+sources $b_v$ are restrictions of one physical source $b$.  Then
+\[
+ \sum_v w_v\Omega_v
+ \leq 8\log2\sum_v w_v I_{B_v}(b_v)
+ \leq 8\log2\,I(b).                                         \tag{6}
+\]
+The second inequality is the exact nonreuse derivative-energy ledger: for
+each physical coordinate, reached nodes that query it select disjoint pieces
+of the source derivative energy.  Thus (6) keeps changing activation weights
+and pays every positive associator once, with no depth, address-count,
+codimension, or correlation-gap factor.
+
+This is a proper-class theorem, not full FEI.  Outside affine-coset character
+flips the complete signed coherent remainder is still unpaid.
+

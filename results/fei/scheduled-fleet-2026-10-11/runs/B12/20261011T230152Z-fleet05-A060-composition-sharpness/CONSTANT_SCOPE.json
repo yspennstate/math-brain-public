@@ -1,0 +1,36 @@
+{
+  "units": {
+    "H": "bits",
+    "B": "bits",
+    "Lambda": "nats",
+    "D": "nats"
+  },
+  "chain": {
+    "fresh_selector": true,
+    "balanced": true,
+    "physical_input_disjointness": true,
+    "branch_orthogonality": "rare-switch branch F_(t-1) versus fresh y: correlation zero; singleton physical selector-cube neighbours are not uniformly orthogonal",
+    "selector_energy_density": "p=2^-r tends to zero",
+    "actual_H": "<=6(I-1)",
+    "spurious_depth_cost": "D~p d^2; deficit epsilon=rp gives D~epsilon d^2/r"
+  },
+  "bent_cell": {
+    "fresh_selector": true,
+    "balanced_branches": false,
+    "orthogonal_branches": false,
+    "branch_correlation": "1-2delta",
+    "overlapping_Fourier_supports": true,
+    "I_W": "2a p delta",
+    "I_data": "m(1/2+2p delta)",
+    "asymptotic": "fixed a: slope 2(1-2^-a)/a in m; a->infinity,m/a->lambda: 4+2lambda",
+    "what_fails": "selector-only payment",
+    "what_remains": "data-side influence may pay the small entropy cost; reserving and transferring it is unresolved"
+  },
+  "tensorization": {
+    "additive_fixed_D": "erased for tensor-closed classes",
+    "H<=C(I-1)+D": "same multiplicative universal/tensor-closed coefficient as H<=CI",
+    "per_factor_D": "not erased",
+    "narrow_families": "chain family and single bent-splice family themselves not tensor closed; claim applies to their tensor closures"
+  },
+  "full_FEI": "OPEN"
+}

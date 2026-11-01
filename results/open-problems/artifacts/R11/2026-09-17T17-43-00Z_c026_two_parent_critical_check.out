@@ -1,0 +1,13 @@
+R11 C026 exact self-check
+checks=8506
+N4 alpha=1/2 Delta=1/2 L=16 mu=1/10
+N4 root p13=5/64 p22=3/64 ratio=5/3
+N4 distinct-locus size2 joint=601/9600 covariance=1/9600
+N4 C023 two-block joint=69/1024
+N4 C026 two-block joint=691/10240
+N4 tree-visible C026-C023 difference=1/10240
+two-parent parent-sharing probability=(N+1)/(2N)
+U010 discrepancy source eta=((N-1)/N)*alpha/(2alpha+1) <= alpha
+critical scales: Delta=alpha=1/ceil(sqrt(N)), L=N^2
+on N=n^2: N*Delta=n and L*Delta^2=N
+ALL_EXACT_CHECKS_PASS

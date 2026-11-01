@@ -1,0 +1,30 @@
+PROB20-19 local S4 classification checker
+Executed locally in the research runtime on 2026-09-16.
+Exit code: 0
+
+STDOUT
+------
+PASS invariant-gradient pair factorization:
+  grad_i-grad_j = (x - y)*(A + B*x + B*y + C*x**2 + C*x*y + C*y**2)
+PASS three-distinct-level subtraction:
+  Q(r,s)-Q(r,t) = (s - t)*(B + C*r + C*s + C*t)
+  Therefore distinct r,s,t require B + C(r+s+t)=0.
+PASS Newton generator identities on sum-zero hyperplane.
+PASS axis invariants:
+  q2(h31) = 1
+  q3(h31) = sqrt(3)/3
+  q4(h31) = 7/12
+  q2(h22) = 1
+  q3(h22) = 0
+  q4(h22) = 1/4
+PASS cubic coefficient relation:
+  c3 = 6*a*q3(h31) = 2*sqrt(3)*a
+ALL SYMBOLIC CHECKS PASSED
+
+RUNTIME NOTE
+------------
+The host emitted an unrelated spreadsheet-runtime warmup warning after the checker completed. The Python process itself exited with code 0 and all assertions passed. The warning did not alter the symbolic computation.
+
+STATUS
+------
+Self-review/reproducibility artifact only; not independent verification of the mathematical theorem.

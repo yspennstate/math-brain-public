@@ -1,0 +1,77 @@
+{
+  "native_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target": "RS-2026-CL-A",
+  "report_kind": "research_progress",
+  "captured_master": "f7530b293a3cb6f37a1ec93d3969a6a370158e17",
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T20-38-00Z__report.md",
+    "creation_commit": "042fc9c8c6df7c18808cdaa4ef16b8f941af5ef9",
+    "blob": "053708612d6e60aba2135c5443cdef611076132d"
+  },
+  "previous_ledger": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-19T20-38-00Z__ledger_delta.json",
+    "creation_commit": "05b38ca73c28d2030610b6fad426f11bdf5d86ef",
+    "blob": "646e0c90fd2a6a6e6a7e26aa0d257b48d2653c68"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T21-37-11Z__report.md",
+    "creation_commit": "7388a94099455eac75cd7115f917f9b7fd686fee",
+    "readback_blob": "69ac0cf86330402ade2cf321749894fab028747e"
+  },
+  "metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": "NO_FROZEN_METRIC_MOVEMENT_MATERIAL_OBLIGATION_MOVEMENT"
+  },
+  "status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / ADAPTED_FRAME_DUALITY_MOVING_GEOMETRY_AND_SIGNED_ANGLE_PROGRESS",
+  "historical_initial_methods": ["B2", "B27", "B21"],
+  "previous_methods": ["B12", "B6", "B21"],
+  "methods": ["B11", "B5", "B30"],
+  "method_outcomes": {
+    "B11": "For every full-support binary null, constructed the canonical one-dimensional support-pure vectors H_S=V_S intersect W_S^perp and proved triangularity, hence exact preservation of the source polynomial filtration. Derived exact adapted dual formula Adv^2=b^T G_ad^{-1}b and weighted comparison Adv^2<=b^T R^{-1}b whenever G_ad>=R.",
+    "B5": "For Gibbs interpolation dQ_lambda proportional exp(lambda U)dQ_0, differentiated the moving support-pure vectors and adapted Gram matrix. Identified exact local susceptibility equations and the sufficient relative derivative condition ||G^{-1/2} dotG G^{-1/2}||<=CD, which integrates to exp(O(D)) frame stability. Verified that the predecessor 1D Ising raw-Gram pathology disappears in the moving bond-chaos frame.",
+    "B30": "Diagonalized the exact degree-two support-pure Gram matrix for any spin-flip exchangeable law using the Johnson scheme. In high-temperature Curie-Weiss, all three normalized eigenvalues stay uniformly positive through beta<1, while the naive absolute-angle row sum exceeds 1 already for beta>1-1/sqrt(2). This rules out absolute-angle/Gershgorin control as the intended general mechanism while preserving a signed-frame route."
+  },
+  "new_results": [
+    "Canonical support-pure source-degree basis exists automatically for every finite full-support binary null: H_S=V_S intersect (sum_{T proper subset S}V_T)^perp is one-dimensional and triangular in the Walsh basis.",
+    "Exact weighted adapted-frame dual theorem: if G_ad>=R>0 then Adv^{<=D}(P,Q)^2<=b^T R^{-1}b; diagonal weights give sum_S |<h,psi_S>|^2/w_S.",
+    "Exact moving-frame differentiation identities under exponential Gibbs interpolation and exact relative-derivative-to-Loewner integration theorem.",
+    "Exact Johnson-scheme eigenvalues for the exchangeable degree-two adapted pair frame: lambda0=a+2(n-2)b+C(n-2,2)c, lambda1=1+(n-4)r-(n-3)q, lambda2=1-2r+q, normalized by a=1-r^2.",
+    "For high-temperature Curie-Weiss beta<1, degree-two normalized eigenvalues tend 1, 1/(1-beta), 1/(1-beta)^2 while the absolute off-diagonal row sum tends 2 alpha+alpha^2 and exceeds 1 for beta>1-1/sqrt(2).",
+    "Curie-Weiss also has the dimension-free pointwise density lower bound dQ_beta/dU >= sqrt(1-beta), giving a complete signed norm lower comparison in this special model."
+  ],
+  "remaining_obligation": [
+    "Prove or refute a signed adapted-frame comparison G_D^ad>=R_D under a broad weak-Gibbs hypothesis at source degree D=(log n)^{1+Omega(1)}; Dobrushin uniqueness alone remains unresolved.",
+    "Bound likelihood/current coefficients b_S in the same support-pure coordinates and sum against R_D^{-1} without n^D entropy loss.",
+    "Determine whether complete analyticity or a cluster expansion proves the O(D) relative moving-Gram derivative bound, preserving signed cancellations.",
+    "Test Dobrushin uniqueness against adapted-frame counterexamples rather than raw monomial counterexamples.",
+    "Translate Hsieh symmetry regularization and Chen-Li interface reassembly into the adapted-frame/interior-pressure language without false subsumption.",
+    "Maintain Mao as a quantitative negative stress and obtain actual P26 plus one distinct OTHER full theorem/source audit before closure."
+  ],
+  "next_methods": ["B14", "B2", "B25"],
+  "audits": {
+    "p26": false,
+    "distinct_other": false,
+    "qualifying_count": "0/2"
+  },
+  "hard_recovery_cycles_consumed": 1,
+  "same_obligation_stagnation": 0,
+  "novelty": "UNVERIFIED",
+  "prompt_immutability": "PRESERVED_NO_AUTOMATION_UPDATE_CALLED",
+  "model_control": {
+    "requested": "GPT-6 maximum",
+    "actual_exposed_model": "GPT-5.6 Sol",
+    "reasoning_level": "UNVERIFIED",
+    "authenticated_scheduler_model_selector_exposed": false,
+    "authenticated_reasoning_selector_exposed": false
+  },
+  "source_check_date_utc": "2026-09-19",
+  "source_check_date_local": "2026-09-20",
+  "source_status": "Open Problem 35 still live/open in fresh Randomstrasse read",
+  "mandatory_negative_stress": "Songtao Mao arXiv:2607.20318",
+  "positive_comparators": ["Hsieh et al. arXiv:2601.05850", "Chen-Li arXiv:2608.06279"],
+  "prior_art": ["dependent Hoeffding/HDMR", "Friedrichs/Dixmier angles", "Feshchenko matrices", "oblique projections", "Dobrushin comparison", "Curie-Weiss high-temperature CLT", "Johnson association schemes", "cluster/current expansions", "Fourier/noise semigroups"],
+  "closure": "NOT_CLOSED"
+}

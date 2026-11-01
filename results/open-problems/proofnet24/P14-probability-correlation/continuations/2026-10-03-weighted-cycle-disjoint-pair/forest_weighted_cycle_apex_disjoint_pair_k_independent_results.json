@@ -1,0 +1,1136 @@
+{
+  "status": "PASS; finite exact audit, analytic Hermitian proof separate",
+  "arithmetic": "fractions.Fraction and exact Sturm/gcd",
+  "implementation": "literal all-vertex forest DPs, independent transfer matrices, and independent cyclic-gap enumeration",
+  "prescribed_apex_cases": [
+    {
+      "label": "all_positive_nonuniform",
+      "n": 2,
+      "lambdas": [
+        "1",
+        "5/4"
+      ],
+      "betas": [
+        "3/2",
+        "3/2"
+      ],
+      "coefficients_ascending": [
+        "13/4",
+        "39/4",
+        "9/4"
+      ],
+      "degree": 2,
+      "negative_roots_counting_multiplicity": 2,
+      "Lambda": "5/4",
+      "delta": "45/8"
+    },
+    {
+      "label": "one_zero_lambda",
+      "n": 2,
+      "lambdas": [
+        "1",
+        "0"
+      ],
+      "betas": [
+        "3/2",
+        "3/2"
+      ],
+      "coefficients_ascending": [
+        "2",
+        "6",
+        "9/4"
+      ],
+      "degree": 2,
+      "negative_roots_counting_multiplicity": 2,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "one_zero_beta",
+      "n": 2,
+      "lambdas": [
+        "1",
+        "5/4"
+      ],
+      "betas": [
+        "3/2",
+        "0"
+      ],
+      "coefficients_ascending": [
+        "13/4",
+        "39/8"
+      ],
+      "degree": 1,
+      "negative_roots_counting_multiplicity": 1,
+      "Lambda": "5/4",
+      "delta": "45/8"
+    },
+    {
+      "label": "edgeless_repeated_root_boundary",
+      "n": 2,
+      "lambdas": [
+        "0",
+        "0"
+      ],
+      "betas": [
+        "1",
+        "1"
+      ],
+      "coefficients_ascending": [
+        "1",
+        "2",
+        "1"
+      ],
+      "degree": 2,
+      "negative_roots_counting_multiplicity": 2,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "all_positive_nonuniform",
+      "n": 3,
+      "lambdas": [
+        "4/3",
+        "3/2",
+        "1/5"
+      ],
+      "betas": [
+        "2",
+        "7/4",
+        "2"
+      ],
+      "coefficients_ascending": [
+        "33/5",
+        "759/20",
+        "397/12",
+        "7"
+      ],
+      "degree": 3,
+      "negative_roots_counting_multiplicity": 3,
+      "Lambda": "2/5",
+      "delta": "14/5"
+    },
+    {
+      "label": "one_zero_lambda",
+      "n": 3,
+      "lambdas": [
+        "4/3",
+        "0",
+        "1/5"
+      ],
+      "betas": [
+        "2",
+        "7/4",
+        "2"
+      ],
+      "coefficients_ascending": [
+        "14/5",
+        "161/10",
+        "131/6",
+        "7"
+      ],
+      "degree": 3,
+      "negative_roots_counting_multiplicity": 3,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "one_zero_beta",
+      "n": 3,
+      "lambdas": [
+        "4/3",
+        "3/2",
+        "1/5"
+      ],
+      "betas": [
+        "2",
+        "0",
+        "2"
+      ],
+      "coefficients_ascending": [
+        "33/5",
+        "132/5",
+        "54/5"
+      ],
+      "degree": 2,
+      "negative_roots_counting_multiplicity": 2,
+      "Lambda": "2/5",
+      "delta": "14/5"
+    },
+    {
+      "label": "edgeless_repeated_root_boundary",
+      "n": 3,
+      "lambdas": [
+        "0",
+        "0",
+        "0"
+      ],
+      "betas": [
+        "1",
+        "1",
+        "1"
+      ],
+      "coefficients_ascending": [
+        "1",
+        "3",
+        "3",
+        "1"
+      ],
+      "degree": 3,
+      "negative_roots_counting_multiplicity": 3,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "all_positive_nonuniform",
+      "n": 4,
+      "lambdas": [
+        "5/3",
+        "7/4",
+        "2/5",
+        "4"
+      ],
+      "betas": [
+        "5/2",
+        "2",
+        "3",
+        "2"
+      ],
+      "coefficients_ascending": [
+        "140/3",
+        "1330/3",
+        "2479/4",
+        "1017/4",
+        "30"
+      ],
+      "degree": 4,
+      "negative_roots_counting_multiplicity": 4,
+      "Lambda": "14/3",
+      "delta": "2156/9"
+    },
+    {
+      "label": "one_zero_lambda",
+      "n": 4,
+      "lambdas": [
+        "5/3",
+        "7/4",
+        "0",
+        "4"
+      ],
+      "betas": [
+        "5/2",
+        "2",
+        "3",
+        "2"
+      ],
+      "coefficients_ascending": [
+        "110/3",
+        "1045/3",
+        "2221/4",
+        "977/4",
+        "30"
+      ],
+      "degree": 4,
+      "negative_roots_counting_multiplicity": 4,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "one_zero_beta",
+      "n": 4,
+      "lambdas": [
+        "5/3",
+        "7/4",
+        "2/5",
+        "4"
+      ],
+      "betas": [
+        "5/2",
+        "2",
+        "0",
+        "2"
+      ],
+      "coefficients_ascending": [
+        "140/3",
+        "910/3",
+        "5153/20",
+        "54"
+      ],
+      "degree": 3,
+      "negative_roots_counting_multiplicity": 3,
+      "Lambda": "14/3",
+      "delta": "2156/9"
+    },
+    {
+      "label": "edgeless_repeated_root_boundary",
+      "n": 4,
+      "lambdas": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "betas": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "coefficients_ascending": [
+        "1",
+        "4",
+        "6",
+        "4",
+        "1"
+      ],
+      "degree": 4,
+      "negative_roots_counting_multiplicity": 4,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "all_positive_nonuniform",
+      "n": 5,
+      "lambdas": [
+        "2",
+        "1/4",
+        "3/5",
+        "5",
+        "7/2"
+      ],
+      "betas": [
+        "3",
+        "1/4",
+        "4",
+        "7/3",
+        "2/5"
+      ],
+      "coefficients_ascending": [
+        "627/4",
+        "125191/80",
+        "1758859/800",
+        "449623/600",
+        "12791/150",
+        "14/5"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "Lambda": "21/4",
+      "delta": "1701/2"
+    },
+    {
+      "label": "one_zero_lambda",
+      "n": 5,
+      "lambdas": [
+        "2",
+        "1/4",
+        "0",
+        "5",
+        "7/2"
+      ],
+      "betas": [
+        "3",
+        "1/4",
+        "4",
+        "7/3",
+        "2/5"
+      ],
+      "coefficients_ascending": [
+        "405/4",
+        "16173/16",
+        "121777/80",
+        "14065/24",
+        "1172/15",
+        "14/5"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "one_zero_beta",
+      "n": 5,
+      "lambdas": [
+        "2",
+        "1/4",
+        "3/5",
+        "5",
+        "7/2"
+      ],
+      "betas": [
+        "3",
+        "1/4",
+        "0",
+        "7/3",
+        "2/5"
+      ],
+      "coefficients_ascending": [
+        "627/4",
+        "75031/80",
+        "604827/800",
+        "12139/100",
+        "231/50"
+      ],
+      "degree": 4,
+      "negative_roots_counting_multiplicity": 4,
+      "Lambda": "21/4",
+      "delta": "1701/2"
+    },
+    {
+      "label": "edgeless_repeated_root_boundary",
+      "n": 5,
+      "lambdas": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "betas": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "coefficients_ascending": [
+        "1",
+        "5",
+        "10",
+        "10",
+        "5",
+        "1"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "all_positive_nonuniform",
+      "n": 6,
+      "lambdas": [
+        "7/3",
+        "1/2",
+        "4/5",
+        "6",
+        "1/2",
+        "1"
+      ],
+      "betas": [
+        "7/2",
+        "1/2",
+        "5",
+        "8/3",
+        "3/5",
+        "3"
+      ],
+      "coefficients_ascending": [
+        "931/5",
+        "213199/75",
+        "9008131/900",
+        "17377003/1800",
+        "683141/180",
+        "395107/600",
+        "42"
+      ],
+      "degree": 6,
+      "negative_roots_counting_multiplicity": 6,
+      "Lambda": "14/5",
+      "delta": "2646/5"
+    },
+    {
+      "label": "one_zero_lambda",
+      "n": 6,
+      "lambdas": [
+        "7/3",
+        "1/2",
+        "4/5",
+        "0",
+        "1/2",
+        "1"
+      ],
+      "betas": [
+        "7/2",
+        "1/2",
+        "5",
+        "8/3",
+        "3/5",
+        "3"
+      ],
+      "coefficients_ascending": [
+        "27",
+        "2061/5",
+        "1723939/900",
+        "6008899/1800",
+        "1902121/900",
+        "308167/600",
+        "42"
+      ],
+      "degree": 6,
+      "negative_roots_counting_multiplicity": 6,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "one_zero_beta",
+      "n": 6,
+      "lambdas": [
+        "7/3",
+        "1/2",
+        "4/5",
+        "6",
+        "1/2",
+        "1"
+      ],
+      "betas": [
+        "7/2",
+        "1/2",
+        "5",
+        "0",
+        "3/5",
+        "3"
+      ],
+      "coefficients_ascending": [
+        "931/5",
+        "58653/25",
+        "136087/20",
+        "1031979/200",
+        "27357/20",
+        "945/8"
+      ],
+      "degree": 5,
+      "negative_roots_counting_multiplicity": 5,
+      "Lambda": "14/5",
+      "delta": "2646/5"
+    },
+    {
+      "label": "edgeless_repeated_root_boundary",
+      "n": 6,
+      "lambdas": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "betas": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "coefficients_ascending": [
+        "1",
+        "6",
+        "15",
+        "20",
+        "15",
+        "6",
+        "1"
+      ],
+      "degree": 6,
+      "negative_roots_counting_multiplicity": 6,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "all_positive_nonuniform",
+      "n": 7,
+      "lambdas": [
+        "1/3",
+        "3/4",
+        "1",
+        "7",
+        "1",
+        "4/3",
+        "3/2"
+      ],
+      "betas": [
+        "4",
+        "3/4",
+        "6",
+        "1/3",
+        "4/5",
+        "7/2",
+        "1/2"
+      ],
+      "coefficients_ascending": [
+        "7777/18",
+        "7411481/1080",
+        "30696193/1080",
+        "499589/12",
+        "29763137/1440",
+        "129403/30",
+        "2931/8",
+        "42/5"
+      ],
+      "degree": 7,
+      "negative_roots_counting_multiplicity": 7,
+      "Lambda": "7/2",
+      "delta": "13720/9"
+    },
+    {
+      "label": "one_zero_lambda",
+      "n": 7,
+      "lambdas": [
+        "1/3",
+        "3/4",
+        "1",
+        "0",
+        "1",
+        "4/3",
+        "3/2"
+      ],
+      "betas": [
+        "4",
+        "3/4",
+        "6",
+        "1/3",
+        "4/5",
+        "7/2",
+        "1/2"
+      ],
+      "coefficients_ascending": [
+        "490/9",
+        "46697/54",
+        "4537193/1080",
+        "5447627/720",
+        "1777597/360",
+        "338549/240",
+        "7207/40",
+        "42/5"
+      ],
+      "degree": 7,
+      "negative_roots_counting_multiplicity": 7,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "one_zero_beta",
+      "n": 7,
+      "lambdas": [
+        "1/3",
+        "3/4",
+        "1",
+        "7",
+        "1",
+        "4/3",
+        "3/2"
+      ],
+      "betas": [
+        "4",
+        "3/4",
+        "6",
+        "0",
+        "4/5",
+        "7/2",
+        "1/2"
+      ],
+      "coefficients_ascending": [
+        "7777/18",
+        "2418647/360",
+        "410033/15",
+        "9383621/240",
+        "294789/16",
+        "138813/40",
+        "1134/5"
+      ],
+      "degree": 6,
+      "negative_roots_counting_multiplicity": 6,
+      "Lambda": "7/2",
+      "delta": "13720/9"
+    },
+    {
+      "label": "edgeless_repeated_root_boundary",
+      "n": 7,
+      "lambdas": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "betas": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "coefficients_ascending": [
+        "1",
+        "7",
+        "21",
+        "35",
+        "35",
+        "21",
+        "7",
+        "1"
+      ],
+      "degree": 7,
+      "negative_roots_counting_multiplicity": 7,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "all_positive_nonuniform",
+      "n": 8,
+      "lambdas": [
+        "2/3",
+        "1",
+        "6/5",
+        "1",
+        "3/2",
+        "5/3",
+        "7/4",
+        "2/5"
+      ],
+      "betas": [
+        "1/2",
+        "1",
+        "7",
+        "2/3",
+        "1",
+        "4",
+        "3/4",
+        "6"
+      ],
+      "coefficients_ascending": [
+        "16877/45",
+        "4236127/540",
+        "1033423693/21600",
+        "395407999/3600",
+        "4295327123/43200",
+        "618431801/14400",
+        "67828747/7200",
+        "121241/120",
+        "42"
+      ],
+      "degree": 8,
+      "negative_roots_counting_multiplicity": 8,
+      "Lambda": "7/5",
+      "delta": "23716/45"
+    },
+    {
+      "label": "one_zero_lambda",
+      "n": 8,
+      "lambdas": [
+        "2/3",
+        "1",
+        "6/5",
+        "1",
+        "0",
+        "5/3",
+        "7/4",
+        "2/5"
+      ],
+      "betas": [
+        "1/2",
+        "1",
+        "7",
+        "2/3",
+        "1",
+        "4",
+        "3/4",
+        "6"
+      ],
+      "coefficients_ascending": [
+        "6776/45",
+        "425194/135",
+        "56730113/2700",
+        "32498953/600",
+        "590383571/10800",
+        "96145949/3600",
+        "24366611/3600",
+        "102341/120",
+        "42"
+      ],
+      "degree": 8,
+      "negative_roots_counting_multiplicity": 8,
+      "Lambda": "0",
+      "delta": "0"
+    },
+    {
+      "label": "one_zero_beta",
+      "n": 8,
+      "lambdas": [
+        "2/3",
+        "1",
+        "6/5",
+        "1",
+        "3/2",
+        "5/3",
+        "7/4",
+        "2/5"
+      ],
+      "betas": [
+        "1/2",
+        "1",
+        "7",
+        "2/3",
+        "0",
+        "4",
+        "3/4",
+        "6"
+      ],
+      "coefficients_ascending": [
+        "16877/45",
+        "4033603/540",
+        "61607983/1440",
+        "382558861/4320",
+        "63359587/960",
+        "3109535/144",
+        "460465/144",
+        "175"
+      ],
+      "degree": 7,
+      "negative_roots_counting_multiplicity": 7,
+      "Lambda": "7/5",
+      "delta": "23716/45"
+    },
+    {
+      "label": "edgeless_repeated_root_boundary",
+      "n": 8,
+      "lambdas": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "betas": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "coefficients_ascending": [
+        "1",
+        "8",
+        "28",
+        "56",
+        "70",
+        "56",
+        "28",
+        "8",
+        "1"
+      ],
+      "degree": 8,
+      "negative_roots_counting_multiplicity": 8,
+      "Lambda": "0",
+      "delta": "0"
+    }
+  ],
+  "seeded_random_apex": {
+    "seed": 731042,
+    "cases": 120,
+    "cases_by_n": {
+      "2": 16,
+      "3": 11,
+      "4": 14,
+      "5": 20,
+      "6": 20,
+      "7": 25,
+      "8": 14
+    },
+    "counterexamples": 0
+  },
+  "marked_cases": [
+    {
+      "label": "parallel_C2",
+      "n": 2,
+      "lambdas": [
+        "1",
+        "2"
+      ],
+      "betas": [
+        "1",
+        "3"
+      ],
+      "columns": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "A_E_F_C": [
+        "107742",
+        "31538",
+        "14358",
+        "4202"
+      ],
+      "Rayleigh": "90720",
+      "strict": true
+    },
+    {
+      "label": "weighted_C3",
+      "n": 3,
+      "lambdas": [
+        "1/2",
+        "2/3",
+        "3/4"
+      ],
+      "betas": [
+        "1",
+        "2",
+        "4"
+      ],
+      "columns": [
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "A_E_F_C": [
+        "231701264",
+        "25637300",
+        "44423731/4",
+        "1228720"
+      ],
+      "Rayleigh": "30152589495",
+      "strict": true
+    },
+    {
+      "label": "weighted_C4",
+      "n": 4,
+      "lambdas": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "betas": [
+        "1/2",
+        "2/3",
+        "3/4",
+        "4/5"
+      ],
+      "columns": [
+        "1/3",
+        "2/5",
+        "3/7",
+        "4/9"
+      ],
+      "A_E_F_C": [
+        "18312930234643064/7911643359375",
+        "6649594902040367/3692100234375",
+        "12896547388239631/7595177625000",
+        "2340263907164609/1772208112500"
+      ],
+      "Rayleigh": "891218324236071335009/586157833209375000",
+      "strict": true
+    },
+    {
+      "label": "weighted_C5",
+      "n": 5,
+      "lambdas": [
+        "1/3",
+        "2/5",
+        "3/7",
+        "4/9",
+        "5/11"
+      ],
+      "betas": [
+        "1",
+        "3",
+        "2",
+        "5",
+        "4"
+      ],
+      "columns": [
+        "1",
+        "1",
+        "2",
+        "3"
+      ],
+      "A_E_F_C": [
+        "112107437218564/10395",
+        "667058233826/495",
+        "882355255132/1485",
+        "85729858714/1155"
+      ],
+      "Rayleigh": "1534061213657001671296/7203735",
+      "strict": true
+    },
+    {
+      "label": "broken_cycle",
+      "n": 4,
+      "lambdas": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "betas": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "columns": [
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "A_E_F_C": [
+        "38242303113",
+        "3041105349",
+        "1297898343",
+        "103203459"
+      ],
+      "Rayleigh": "307631967468840",
+      "strict": true
+    },
+    {
+      "label": "zero_profiles_rank2",
+      "n": 4,
+      "lambdas": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "betas": [
+        "1",
+        "0",
+        "3",
+        "0"
+      ],
+      "columns": [
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "A_E_F_C": [
+        "37751508",
+        "6850116",
+        "3073788",
+        "557676"
+      ],
+      "Rayleigh": "2694384000",
+      "strict": true
+    },
+    {
+      "label": "one_profile_equality",
+      "n": 3,
+      "lambdas": [
+        "1",
+        "2",
+        "3"
+      ],
+      "betas": [
+        "1",
+        "0",
+        "0"
+      ],
+      "columns": [
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "A_E_F_C": [
+        "10368",
+        "5184",
+        "2808",
+        "1404"
+      ],
+      "Rayleigh": "0",
+      "strict": false
+    },
+    {
+      "label": "zero_row_equality",
+      "n": 3,
+      "lambdas": [
+        "1",
+        "2",
+        "3"
+      ],
+      "betas": [
+        "1",
+        "2",
+        "3"
+      ],
+      "columns": [
+        "0",
+        "3",
+        "5",
+        "7"
+      ],
+      "A_E_F_C": [
+        "9040172",
+        "9040172",
+        "503532",
+        "503532"
+      ],
+      "Rayleigh": "0",
+      "strict": false
+    }
+  ],
+  "conditioning_cases": [
+    {
+      "n": 3,
+      "lambdas": [
+        "1/2",
+        "2/3",
+        "3/4"
+      ],
+      "betas": [
+        "1",
+        "0",
+        "3"
+      ],
+      "coordinate_conditionings": 26,
+      "strict": 16,
+      "equality": 10
+    },
+    {
+      "n": 4,
+      "lambdas": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "betas": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "coordinate_conditionings": 80,
+      "strict": 72,
+      "equality": 8
+    }
+  ],
+  "summary": {
+    "prescribed_apex_cases": 28,
+    "seeded_random_apex_cases": 120,
+    "maximum_n": 8,
+    "marked_cases": 8,
+    "strict_marked_cases": 6,
+    "equality_marked_cases": 2,
+    "coordinate_conditionings": 106,
+    "conditioning_strict": 88,
+    "conditioning_equality": 18,
+    "counterexamples": 0
+  }
+}

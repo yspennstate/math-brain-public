@@ -1,0 +1,52 @@
+{
+  "helper": "review_phase.py@3 outward 96-bit log grid",
+  "sha256": "a1c08ac867360a3d93b9e6ae0f42923f1fb147d604e74c5d581a435ca3b9f5f5",
+  "family": "All labelled Boolean functions on fixed 2-bit pilot / 3-bit main seed; fixed displayed A079 controller; both wrapper signs",
+  "domain": "all physical seed coordinates; actual spectrum and weighted ghost-tail references with exact actual vacuum; two sign bins; one deterministic occupied-support target per child",
+  "case_count": {
+    "pilot": 128,
+    "main": 3072,
+    "main_truth_tables": 256,
+    "partitions_per_seed_query": 27
+  },
+  "symmetry": "none",
+  "arithmetic": "Exact Fraction; 18-term atanh + explicit tail; directed rational rounding to 2^-96 grid before CE sums",
+  "estimated_peak_MB": 140,
+  "maximum_seconds_per_invocation": 55,
+  "dimension_escalation": false,
+  "shards": [
+    {
+      "id": 0,
+      "truth_tables": [
+        0,
+        63
+      ],
+      "transactions": 768
+    },
+    {
+      "id": 1,
+      "truth_tables": [
+        64,
+        127
+      ],
+      "transactions": 768
+    },
+    {
+      "id": 2,
+      "truth_tables": [
+        128,
+        191
+      ],
+      "transactions": 768
+    },
+    {
+      "id": 3,
+      "truth_tables": [
+        192,
+        255
+      ],
+      "transactions": 768
+    }
+  ],
+  "reason": "Unrounded rational log endpoints caused denominator explosion; first 64-table shard also hit frozen clock; no inequality failure or partial pass claimed"
+}

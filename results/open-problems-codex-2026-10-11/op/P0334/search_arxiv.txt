@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/gDUVAEfdARCyS6hIf5ZAdKmEm9M</id>
+  <title>arXiv Query: search_query=all:quantile AND all:process AND all:Lp&amp;id_list=&amp;start=0&amp;max_results=30</title>
+  <updated>2026-10-11T23:51:37Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:quantile+AND+(all:process+AND+all:Lp)&amp;start=0&amp;max_results=30&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>30</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2501.03883v2</id>
+    <title>Spline Quantile Regression</title>
+    <updated>2025-04-08T20:42:01Z</updated>
+    <link href="https://arxiv.org/abs/2501.03883v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.03883v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantile regression is a powerful tool capable of offering a richer view of the data as compared to least-squares regression. Quantile regression is typically performed individually on a few quantiles or a grid of quantiles without considering the similarity of the underlying regression coefficients at nearby quantiles. When needed, an ad hoc post-processing procedure such as kernel smoothing is employed to smooth the individually estimated coefficients across quantiles and thereby improve the performance of these estimates. This paper introduces a new method, called spline quantile regression (SQR), that unifies quantile regression with quantile smoothing and jointly estimates the regression coefficients across quantiles as smoothing splines. We discuss the computation of the SQR solution as a linear program (LP) using an interior-point algorithm. We also experiment with some gradient algorithms that require less memory than the LP algorithm. The performance of the SQR method and these algorithms is evaluated using simulated and real-world data.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-07T15:44:38Z</published>
+    <arxiv:primary_category term="stat.ME"/>
+    <arxiv:journal_ref>Journal of Statistical Theory Practice, 20:30, 2026</arxiv:journal_ref>
+    <author>
+      <name>Ta-Hsin Li</name>
+    </author>
+    <author>
+      <name>Nimrod Megiddo</name>
+    </author>
+    <arxiv:doi>10.1007/s42519-026-00545-8</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s42519-026-00545-8" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.12822v4</id>
+    <title>Large deviations of lp-blocks of regularly varying time series and applications to cluster inference</title>
+    <updated>2022-07-21T06:50:30Z</updated>
+    <link href="https://arxiv.org/abs/2106.12822v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.12822v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the regularly varying time series setting, a cluster of exceedances is a short period for which the supremum norm exceeds a high threshold. We propose to study a generalization of this notion considering short periods, or blocks, with lp-norm above a high threshold. Our main result derives new large deviation principles of extremal lp-blocks, which guide us to define and characterize spectral cluster processes in lp. We then study cluster inference in lp to motivate our results. We design consistent disjoint block estimators to infer features of cluster processes. Our estimators promote the use of large empirical quantiles from the lp-norm of blocks as threshold levels which eases implementation and also facilitates comparison for different p&gt;0. Our approach highlights the advantages of cluster inference based on extremal l$α$--blocks, where $α$&gt;0 is the index of regular variation of the series. We focus on inferring important indices in extreme value theory, e.g., the extremal index.</summary>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-24T08:21:38Z</published>
+    <arxiv:primary_category term="math.PR"/>
+    <author>
+      <name>Gloria Buriticá</name>
+      <arxiv:affiliation>UCPH</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Thomas Mikosch</name>
+      <arxiv:affiliation>UCPH</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Olivier Wintenberger</name>
+      <arxiv:affiliation>LPSM</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1803.07688v2</id>
+    <title>Point process models for quasi-periodic volcanic earthquakes</title>
+    <updated>2018-09-02T22:30:50Z</updated>
+    <link href="https://arxiv.org/abs/1803.07688v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1803.07688v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Long period (LP) earthquakes are common at active volcanoes, and are ubiquitous at persistently active andesitic and dacitic subduction zone volcanoes. They provide critical information regarding the state of volcanic unrest, and their occurrence rates are key data for eruption forecasting. LPs are commonly quasi-periodic or 'anti-clustered', unlike volcano-tectonic (VT) earthquakes, so the existing Poisson point process methods used to model occurrence rates of VT earthquakes are unlikely to be optimal for LP data. We evaluate the performance of candidate formulations for LP data, based on inhomogeneous point process models with four different inter-event time distributions: exponential (IP), Gamma (IG), inverse Gaussian (IIG), and Weibull (IW). We examine how well these models explain the observed data, and the quality of retrospective forecasts of eruption time. We use a Bayesian MCMC approach to fit the models. Goodness-of-fit is assessed using Quantile-Quantile and Kolmogorov-Smirnov methods, and benchmarking against results obtained from synthetic datasets. IG and IIG models were both found to fit the data well, with the IIG model slightly outperforming the IG model. Retrospective forecasting analysis shows that the IG model performs best, with the initial preference for the IIG model controlled by catalogue incompleteness late in the sequence. The IG model fits the data significantly better than the IP model, and simulations show it produces better forecasts for highly periodic data. Simulations also show that forecast precision increases with the degree of periodicity of the earthquake process using the IG model, and so should be better for LP earthquakes than VTs. These results provide a new framework for point process modelling of volcanic earthquake time series, and verification of alternative models.</summary>
+    <category term="stat.AP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-03-20T23:21:14Z</published>
+    <arxiv:comment>22 pages, 12 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.AP"/>
+    <author>
+      <name>Anastasia Ignatieva</name>
+    </author>
+    <author>
+      <name>Andrew F. Bell</name>
+    </author>
+    <author>
+      <name>Bruce J. Worton</name>
+    </author>
+  </entry>
+</feed>

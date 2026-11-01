@@ -1,0 +1,33 @@
+# A037: calibration releases do not separately pay the next query
+
+## exact target, quantifiers, hypotheses and units
+
+Bits. Independently reconstruct A050's supplied-reference theorem for every finite Boolean adaptive physical tree, including arbitrary ghost-row completions, and settle the stronger local helper O_after-O_before<=d. Here d is the released binary KL from vacuum calibration and O the actual reference-outcome KL for one physical query. The helper is FALSE on genuine AND2 with a positive complete reference. Full FEI remains OPEN.
+
+## sources actually read, revisions and theorem locators
+
+EXECUTION_PROTOCOL.json revision2026-10-11-execution-v2; machine AGENTS.md; current control README; BOARD.md snapshot2026-10-27T0719Z; B08 STREAM_NOTES.md v2; own prior REPORT/PROOF and rolling files. A050 20261027T005654Z PROOF sections1-4 and exact claim version1 (statement SHA256 e91fa893eb1ba02faa445155ebd683aa7bc9245a8f0a43ecdf502ec0e3b5f88d) are reconstructed. A039 20261026T214918Z PROOF sections1-6 is read for comparison, with its full original-source dependency not accepted here. Required campaign registries, plan, supplemental documents and four context-paper text files are intake-scanned with exact source hashes/locators in out/INTAKE.json; this scan is not an independent audit of every theorem in those papers. Current threshold Proposition8.6 supplies background physical-selector scope only; no percolation theorem is used. The math-brain search returned unrelated calibration/conditioning cards; none is used as evidence. Lead's initial activated-bent task is already completed in prior stages; protocol dispatch instead consumes the newer A050 dependency.
+
+## complete derivation or exact first unsupported line
+
+PROOF.md section1 gives the full common-kernel chain A=E+O+mean Achild with source-zero reference rows retained, then the exact vacuum release and normalized witness closure. It independently accepts A050 without repair. Conditional finite-tree identity (4) pays all releases, erasure KL, query KL and full terminal KL from ACTUAL original A; no credit can be counted twice. Sections2-3 give full-support AND2 witness Q=(63,1,32,32)/128. Before calibration O=0; afterward O=(1/2)log2(4225/3264)>d because 2^(4(O-d))=34315595234375/33513629810688>1. Reduced erasure KL pays both terms. A050 already includes O and survives unchanged. First unsupported universal line: a noncircular original arbitrary-core influence-priced complete source or necessary compatible policy with paid full terminal reserve. Neither result closes it.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Main COMPLETED domain: all20 Boolean tables n1..2, 272 complete references: all ordered spike pairs n<=2, all labelled cases, no symmetry reduction. Both fair and deterministic zero-row completions are checked; selected full trees use history-adapted completions. Literal Walsh and exact Fraction/prime-log arithmetic: 25601 assertions, 801 query nodes, 326 biased-outcome events, 114 ghost-row events, 0.500s, PASS. Independent FWHT and multiplicative exp2(4^n weighted KL) representation imports no main/peer code: 552 full trees, 7928 nodes, 149649 assertions, 3.007s, PASS. Its exact rational epsilon-grid confirms the explicit strict witness. Finite checks support the written all-tree derivation; no all-dimensional FEI inference is made.
+
+Commands: python -X utf8 code/check.py 2 (pilot); python -X utf8 code/check.py 3 (two INCOMPLETE attempts); python -X utf8 code/audit.py (independent). Pilot completed n<=2 in1.20s. Initial full ordered-pair n3 attempt hit its frozen55s cutoff; this is not a full n3-pair certificate. SPEC_REVISION.json restricts the domain before a second55s cutoff; neither n3 prime-log attempt is complete. SPEC.json is preserved. The independent likelihood-product audit COMPLETES all276 Boolean tables n1..3 with552 trees in3.01s; no further prime-log retry is needed. Estimated memory70MB per job, observed peak unmeasured; no >300MB job, GPU, dimension escalation or detached work. The core Lean strict-integer attempt returned RUNTIME_UNVERIFIED after120.4s, source SHA2562b8654269ad119ebd4e4153e98a2a8527e81f19ed7e8604dfa7b6f5467a6dd5d; no formal certification is claimed. An initial intake decode failed on non-UTF8 source bytes, then an explicit recorded cp1252 fallback preserved those bytes. The first pilot failed to save because out/ did not yet exist; creation was fixed before successful runs.
+
+## proof dependencies and changed downstream conclusions
+
+A050-VACUUM-CALIBRATED-HEREDITARY-REFERENCE@1 independently HOLDS at its exact supplied-source scope without repair; local review saved in CLAIMS.json, shared registry adoption unverified. New A037-VACUUM-RELEASE-ONLY-QUERY-PAYMENT-FALSE@1 is an author proof with exact certificate, external review pending. It blocks a release-only payment shortcut, not the full original accounting. A039's moving-anchor bank retains O and is unaffected. No FEI constant changes.
+
+## one next mathematical action and independent reviewer
+
+A050/A096/A097/A011 should fund a genuinely required arbitrary-core physical query from the SAME remaining original joint erasure/query account, retaining old bills and both full terminals, or supply original CE<=C I. A094/A088 independently reconstruct the new explicit inequality; no message has been sent and no external review is presumed.
+
+## actual persistence receipts or precise save blocker
+
+All research files are saved inside the designated A037 run with SHA256/size/schema checks in out/RECEIPTS.json. PROGRESS.json and PACKET_DELTA.json agree exactly. STATUS.md is two lines, WORKLOG.md/LEARNED.md appended. Supervisor publication/brain ingestion is unverified and no git or external research write is made. Session wake warned of stale owner/state/dream notes; they are not mathematical evidence. Checklist working hook failed from a held lock. Compute snapshot showed94.4% CPU,7.2GB disk free,8.8GB available memory; only small bounded checks were launched, no other work stopped.
+
+Universal bridge: C024 history transfer and C019 stopping-tree payment gain an independent acceptance of free repeated vacuum calibration with the entire original conditional KL ledger, and an exact obstruction to separately paying the next query from released credit. The universal advance is removal of an invalid local financing shortcut, not a new FEI constant. An arbitrary-core ORIGINAL O(I) source and useful terminal reserve remain unpaid. The shortest next route is their joint erasure/query liability under one necessary policy, because the explicit Boolean witness shows why a release-only argument cannot supply that payment.

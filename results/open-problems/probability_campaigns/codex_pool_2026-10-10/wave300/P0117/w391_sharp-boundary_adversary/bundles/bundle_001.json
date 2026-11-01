@@ -1,0 +1,138 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w391",
+  "bundle_slug": "fpp-boundary-obstructions-20261010",
+  "entries": [
+    {
+      "key": "def-bigeodesic",
+      "namespace": "probability.fpp",
+      "logical_name": "ambient-fpp-bi-infinite-geodesic-definition",
+      "kind": "definition",
+      "title": "Global bi-infinite FPP geodesic",
+      "statement": "Give each unoriented nearest-neighbor edge of Z^2 a finite nonnegative weight t_e, and let T(u,v) be the infimum of the weights of all finite walks from u to v, charging every edge traversal. A global bi-infinite geodesic is an injective adjacent-vertex sequence (v_k) indexed by all integers such that sum_{k=i}^{j-1} t_{v_k,v_{k+1}}=T(v_i,v_j) for every i<j. Competitors may leave any strip or region containing the sequence.",
+      "proof_text": null,
+      "assumptions": [
+        "Undirected nearest-neighbor Z^2",
+        "Finite nonnegative edge weights"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:fpp-boundary-notes-20261010:def-bigeodesic",
+        "url": "urn:math-work:fpp-boundary-notes:2026-10-10",
+        "revision": "draft-2026-10-10-pending-independent-review",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "draft-atomic",
+      "namespace": "probability.fpp",
+      "logical_name": "draft-fpp-minimum-atom-bigeodesics-under-directed-survival",
+      "kind": "concept",
+      "title": "DRAFT: minimum-atom bigeodesics under directed survival",
+      "statement": "DRAFT author derivation, independent review pending. For iid weights equal to a>0 with probability p in (0,1) and b>a otherwise, suppose northeast directed bond percolation on the a-edges has positive forward survival probability theta(p). Then almost surely some global bi-infinite FPP geodesic exists. At the origin, forward and backward surviving-ray events depend on disjoint edge time levels and intersect with probability theta(p)^2. Their concatenation is monotone and every finite segment has Manhattan distance many a-edges, the minimum possible cost. Translation ergodicity upgrades positive probability of existence to probability one. This is a boundary obstruction to dropping nonatomicity, not a counterexample to the nonatomic-law target.",
+      "proof_text": null,
+      "assumptions": [
+        "Independent identically distributed weights on undirected nearest-neighbor Z^2",
+        "Two-point law with 0<a<b<infinity and 0<p<1",
+        "Positive northeast directed open-ray survival probability theta(p)"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:fpp-boundary-notes-20261010:draft-atomic",
+        "url": "urn:math-work:fpp-boundary-notes:2026-10-10",
+        "revision": "draft-2026-10-10-pending-independent-review",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "draft-direction",
+      "namespace": "probability.fpp",
+      "logical_name": "draft-fpp-axis-direction-with-unbounded-strip-wandering",
+      "kind": "concept",
+      "title": "DRAFT: axial direction with unbounded strip wandering",
+      "statement": "DRAFT author derivation, independent review pending. In the constant weight-1 FPP environment, put f(k)=sign(k) floor(sqrt(abs(k))) for integers k, with f(0)=0. Join (k,f(k)) to (k+1,f(k)) horizontally and then move vertically at column k+1 to f(k+1). The resulting doubly infinite monotone staircase is a global geodesic: each finite segment has Manhattan-optimal length. Its two end directions are +e1 and -e1 because f(k)/abs(k) tends to zero, but neither tail lies eventually in any finite horizontal strip because f is unbounded at both ends. End directions alone therefore give no geometric finite-strip confinement. This example uses a constant law and does not refute a nonatomic iid theorem.",
+      "proof_text": null,
+      "assumptions": [
+        "Undirected nearest-neighbor Z^2",
+        "Every edge has weight 1",
+        "The proposed bridge uses end directions alone"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:fpp-boundary-notes-20261010:draft-direction",
+        "url": "urn:math-work:fpp-boundary-notes:2026-10-10",
+        "revision": "draft-2026-10-10-pending-independent-review",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "gap-confinement",
+      "namespace": "probability.fpp",
+      "logical_name": "fpp-thin-tube-obstruction-requires-bigeodesic-confinement-bridge",
+      "kind": "concept",
+      "title": "Confinement gap in FPP thin-tube obstruction routes",
+      "statement": "An absence theorem restricted to bigeodesic tails in deterministic thin horizontal or vertical tubes requires a further confinement theorem, or an obstruction for wider and adaptive wandering, before it can establish unrestricted absence. Countable intersections over fixed finite widths do not cover a path whose transverse displacement is unbounded. A directional limit permits unbounded sublinear transverse displacement. The separate compactness route, taking limits of geodesics between opposite distant endpoints, likewise needs anchoring near a bounded region; endpoints on opposite sides alone allow the connecting paths to escape every fixed ball. These are missing bridge premises, not refutations of absence for nonatomic iid planar FPP.",
+      "proof_text": null,
+      "assumptions": [
+        "Ambient nearest-neighbor Z^2 FPP",
+        "The available absence theorem covers only specified deterministic tubes",
+        "No additional bigeodesic confinement or tightness premise is assumed"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-own-work:fpp-boundary-notes-20261010:gap-confinement",
+        "url": "urn:math-work:fpp-boundary-notes:2026-10-10",
+        "revision": "draft-2026-10-10-pending-independent-review",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "draft-atomic",
+      "to_key": "def-bigeodesic",
+      "kind": "depends_on",
+      "rationale": "The minimum-atom construction checks every finite segment against the ambient metric."
+    },
+    {
+      "from_key": "draft-direction",
+      "to_key": "def-bigeodesic",
+      "kind": "depends_on",
+      "rationale": "The staircase is a global bigeodesic by the Manhattan lower bound."
+    },
+    {
+      "from_key": "gap-confinement",
+      "to_key": "def-bigeodesic",
+      "kind": "depends_on",
+      "rationale": "The unrestricted path quantifier refers to global bigeodesics."
+    },
+    {
+      "from_key": "gap-confinement",
+      "to_key": "draft-atomic",
+      "kind": "semantic_association",
+      "rationale": "A local tube obstruction does not establish absence for all nonconstant atomic laws; the directed-survival example identifies that scope boundary."
+    },
+    {
+      "from_key": "gap-confinement",
+      "to_key": "draft-direction",
+      "kind": "semantic_association",
+      "rationale": "An axial end direction can coexist with unbounded transverse displacement in the stated constant-law example."
+    },
+    {
+      "from_key": "gap-confinement",
+      "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+      "kind": "cites",
+      "rationale": "The stored P0117 target is the nonatomic iid planar absence question; the boundary examples and partial routes leave its unrestricted quantifier unresolved here."
+    },
+    {
+      "from_key": "gap-confinement",
+      "to_existing_logical": "math:probability.core:attempt-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
+      "kind": "cites",
+      "rationale": "The exact prior-attempt card records the separate anchoring/tightness obstruction in a finite-geodesic compactness route."
+    }
+  ]
+}

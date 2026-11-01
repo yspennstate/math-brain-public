@@ -1,0 +1,81 @@
+{
+  "state_id": 54,
+  "clock": 3,
+  "state": "((('u', 'u', 'u'), ('u', 'u', 'u'), ('u', 'u', 'u')), (('u', 'u', 'u'), ('u', 'u', 'u'), ('u', 'u', 0)), (('u', 'u', 'u'), ('u', 'u', 0), ('u', 'u', 0)))",
+  "remaining_leaves": 24,
+  "value": "3028131/262144",
+  "best_median_query_cost": "3031947/262144",
+  "positive_median_regret": "477/32768",
+  "chosen_optimal_path": [
+    1,
+    2,
+    0
+  ],
+  "ancestry": [
+    {
+      "probabilities": [
+        "1/2",
+        "3/8",
+        "1/4"
+      ],
+      "chosen_index": 1,
+      "chosen_probability": "3/8",
+      "median": "3/8",
+      "is_median": true
+    },
+    {
+      "probabilities": [
+        "1/2",
+        "1/2",
+        "1/4"
+      ],
+      "chosen_index": 2,
+      "chosen_probability": "1/4",
+      "median": "1/2",
+      "is_median": false
+    },
+    {
+      "probabilities": [
+        "1/2",
+        "1/2",
+        "0"
+      ],
+      "chosen_index": 0,
+      "chosen_probability": "1/2",
+      "median": "1/2",
+      "is_median": true
+    }
+  ],
+  "optimal_trace": [
+    {
+      "from_state": 43,
+      "outcomes": [
+        44,
+        45
+      ],
+      "observed": 0,
+      "to_state": 44
+    },
+    {
+      "from_state": 44,
+      "outcomes": [
+        46,
+        47
+      ],
+      "observed": 0,
+      "to_state": 46
+    },
+    {
+      "from_state": 46,
+      "outcomes": [
+        54,
+        55
+      ],
+      "observed": 0,
+      "to_state": 54
+    }
+  ],
+  "states_inspected": 7,
+  "seconds": 0.2629159999778494,
+  "prefix_median_eligible": true
+}

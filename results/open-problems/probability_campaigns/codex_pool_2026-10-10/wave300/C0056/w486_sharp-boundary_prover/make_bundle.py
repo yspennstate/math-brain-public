@@ -1,0 +1,93 @@
+"""Prepare and submit only a DRAFT concept bundle; never access a live store."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+DEST = Path('~/math-brain-inbox/w486')
+source = {"source_id": "owner:w486:c0056-born-boundary:2026-10-10",
+          "url": "file:///~/brain_workers/w486/ATTEMPT.md", "revision": "author-draft-2", "license": "owner-own-work",
+          "excerpt": None}
+
+
+def entry(key, logical, title, statement, assumptions, kind='concept'):
+    return {"key": key, "namespace": "probability.random-operators",
+            "logical_name": logical, "kind": kind, "title": title,
+            "statement": statement, "proof_text": None, "assumptions": assumptions,
+            "domain": "probability and spectral theory", "source": dict(source)}
+
+
+bundle = {
+    "spec": "mathbrain-draft-v1", "author_agent": "w486",
+    "bundle_slug": "c0056-sharp-born-boundary-w486-002",
+    "entries": [
+        entry('model', 'bounded-iid-lattice-anderson-model', 'Bounded iid lattice Anderson operator',
+              'On l2(Z^d), d>=1, let H0 psi(x)=-sum_j[psi(x+e_j)+psi(x-e_j)] and let V multiply by iid bounded real variables of law mu. The Anderson operator is H_lambda=H0+lambda V, lambda>0. The free band is [-2d,2d], and M=ess sup |V_x| is finite. Centering of mu is an additional assumption, not part of this definition.',
+              ['d>=1', 'bounded real iid single-site law'], 'definition'),
+        entry('cubes', 'iid-coherent-cubes-free-weyl-sequences-draft', 'Draft: coherent iid cubes give common approximate eigenvectors',
+              'DRAFT author proof; independent review pending. For the bounded iid lattice model and any fixed m in supp(mu), one probability-one event has arbitrarily distant L-cubes with all |V_x-m|<1/L for every positive integer L. For each E in [-2d,2d], normalized cutoff plane waves on these cubes satisfy ||(H0-E)psi_L||<=2d sqrt(2/L) and ||(V-m)psi_L||<=1/L. Independence is used only for fixed disjoint finite cubes; this asserts no spectral type.',
+              ['bounded iid real law', 'm in support', 'infinite Z^d']),
+        entry('threshold', 'iid-born-resolvent-operator-norm-threshold-draft', 'Draft: exact iid Born expansion boundary',
+              'DRAFT author proof; independent review pending. For bounded iid real lattice disorder with M=ess sup |V_x|>0, almost surely on one event, for all E in [-2d,2d], eta>0, lambda>0 and n>=0, set R0=(H0-E-i eta)^(-1), K=lambda V R0 and c=lambda M/eta. Then ||K^n||=c^n, r(K)=c, and ||R0 K^n||=c^n/eta. The unrenormalized Born resolvent series R0 sum_n(-K)^n converges in operator norm exactly when eta>lambda M, and fails at equality. This does not prove or disprove ac spectrum.',
+              ['bounded iid real law', 'M>0', 'infinite lattice', 'E in closed free band', 'eta>0', 'lambda>0']),
+        entry('bridge', 'small-disorder-uniform-born-convergence-false-bridge', 'False auxiliary bridge: fixed small disorder controls all resolvent heights',
+              'This is a FALSE auxiliary assertion, recorded to prevent its use: for centered bounded nonzero iid lattice disorder, sufficiently small fixed lambda makes the unrenormalized Born resolvent series converge in operator norm at every eta>0 for energies in the free band. The draft exact-threshold result refutes it at eta<=lambda ess sup |V_x|. Its refutation does not refute the Anderson delocalization conjecture or renormalized methods.',
+              ['centered bounded nonzero iid law', 'fixed positive disorder', 'infinite lattice operator norm']),
+        entry('scope', 'anderson-ac-spectrum-goe-statistics-separate-obligations', 'Anderson spectral delocalization and GOE statistics are separate obligations',
+              'Scope note from C0056: existence of nonzero infinite-volume absolutely continuous spectral weight and periodic finite-volume GOE bulk statistics are different assertions. A proof of one supplies no proof of the other without an additional theorem. The w486 Born-threshold proof is an auxiliary route obstruction and proves neither assertion. Current openness was UNKNOWN at the 2026-10-10 check because an unverified recent primary manuscript claimed the uniform-law spectral assertion; no novelty claim is made.',
+              ['C0056 source scope', 'no transfer theorem supplied']),
+    ],
+    "relations": [
+        {"from_key": "cubes", "to_key": "model", "kind": "depends_on",
+         "rationale": "The coherent-cube statement explicitly requires the model's iid site law and nearest-neighbor hopping."},
+        {"from_key": "threshold", "to_key": "cubes", "kind": "depends_on",
+         "rationale": "The necessity proof uses cube-supported vectors jointly approximating H0 energy E and an extremal V value m."},
+        {"from_key": "threshold", "to_key": "bridge", "kind": "refutes",
+         "rationale": "For every fixed lambda>0, eta<=lambda M gives Born terms whose norms do not vanish, contradicting the asserted convergence at every positive height."},
+        {"from_key": "scope", "to_key": "threshold", "kind": "semantic_association",
+         "rationale": "The scope note records exactly which C0056 obligations the route obstruction leaves open."},
+    ],
+}
+
+keys = {item['key'] for item in bundle['entries']}
+assert len(keys) == len(bundle['entries']) and len(keys) <= 200
+allowed = {'depends_on', 'defines', 'proves', 'refutes', 'generalizes',
+           'specializes', 'analogous_to', 'cites', 'semantic_association'}
+for item in bundle['entries']:
+    assert item['kind'] in {'definition', 'concept'} and item['proof_text'] is None
+    assert item['statement'] and item['source']['license'].startswith('owner-own-work')
+    for source_field in ('source_id', 'url', 'revision', 'license'):
+        assert isinstance(item['source'][source_field], str) and item['source'][source_field].strip()
+for edge in bundle['relations']:
+    assert edge['from_key'] in keys and edge['to_key'] in keys and edge['kind'] in allowed
+depends = {}
+for edge in bundle['relations']:
+    if edge['kind'] == 'depends_on':
+        depends.setdefault(edge['from_key'], []).append(edge['to_key'])
+
+
+def visit(key, active):
+    assert key not in active, 'dependency cycle'
+    for other in depends.get(key, []):
+        visit(other, active | {key})
+
+
+for key in keys:
+    visit(key, set())
+text = json.dumps(bundle, indent=2) + '\n'
+(ROOT / 'bundle_002.json').write_text(text, encoding='utf-8')
+DEST.mkdir(parents=True, exist_ok=True)
+part = DEST / 'bundle_002.json.part'
+target = DEST / 'bundle_002.json'
+if target.exists():
+    assert target.read_text(encoding='utf-8') == text, 'existing submission differs; do not overwrite'
+else:
+    part.write_text(text, encoding='utf-8')
+    part.rename(target)
+receipt = {'submitted': True, 'reviewed': False, 'ingested': False, 'retrievable': False,
+           'path': str(target), 'entries': len(bundle['entries']),
+           'relations': len(bundle['relations']), 'live_store_changed': False,
+           'previous_invalid_draft': str(DEST / 'bundle_001.json'),
+           'correction': 'Use bundle_002; bundle_001 lacks the source.url string required by the integrator and is preserved, not deleted.',
+           'check': 'Local draft schema, references, license prefix and dependency graph checked; coordinator integration not run.'}
+(ROOT / 'BRAIN_SUBMISSION.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
+print(json.dumps(receipt))

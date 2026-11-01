@@ -1,0 +1,61 @@
+{
+  "worker": "NM13-13",
+  "parent": "T04",
+  "claim_id": "NM13-13-T04-GAUSS2-TAIL-438900-UPPER-06",
+  "status": "OPEN/PARTIAL; CANDIDATE_FULL pending later independent review",
+  "source_model": "classical iid random 3-SAT, independent fair signs, three distinct variables per clause",
+  "source_threshold_metric": {
+    "kind": "externally published explicit-decimal bracket",
+    "before": "[3.52, 4.4898]",
+    "after": "[3.52, 4.4898]",
+    "movement": "none"
+  },
+  "project_candidate_metric": {
+    "kind": "explicit candidate-full fixed-density unsatisfiability upper endpoint",
+    "before": 4.38908,
+    "after": 4.389,
+    "endpoint_gain": 0.00008,
+    "bracket_before": "[3.52, 4.38908]",
+    "bracket_after": "[3.52, 4.38900]",
+    "width_before": 0.86908,
+    "width_after": 0.869
+  },
+  "mechanism_gain": {
+    "name": "two-node Gaussian quadrature lower envelope for the Hausdorff moment tail",
+    "statement": "For the Q^K-tilted law on [0,1], the two-node Gaussian rule matching moments 0..3 underestimates E[X^t] for every integer t>=4 by the Hermite interpolation remainder. Squaring and summing yields a rigorous lower bound on the omitted positive moment series.",
+    "alpha": 4.389,
+    "survey_support": ["19/2500", "2/25", "1/2", "23/25", "2481/2500"],
+    "survey_weights": ["107/2000", "1823/10000", "1321/2500", "1823/10000", "107/2000"],
+    "K": 2300,
+    "T": 60000,
+    "A_K": "3.1535441388348512002019044217384730814e-5",
+    "finite_gaussian_tail_lower_bound": "3.3046248548640366038421275758455342205e-5",
+    "certified_A_upper": "-1.5108071602918540364022315410706113913e-6",
+    "certificate": "CERTIFIED_A_NEGATIVE=True"
+  },
+  "handoff": "Preserves predecessor five-support 4.38908 candidate and its interpolation/de-Poissonization transfer. Replaces the one-ratio log-convex tail envelope by a two-node Gaussian-quadrature envelope; no constructive NM13-06 work is duplicated.",
+  "prior_failures_preserved": [
+    "arbitrary rescue stars fail composition",
+    "anchored degree-one rescue matching lacks global Diaz-polytope reoptimization",
+    "positive local second moments hit the identical-pair barrier near 3.10628",
+    "sublinear solution-ball quotienting saves only exp(o(n))",
+    "whole-component quotienting leaves a cross-component overlap moment uncontrolled",
+    "whitening/core counting lacks a uniform exponential cluster-multiplicity theorem",
+    "q-binomial radius-two route only reached about 4.5923",
+    "equal-weight two-support hard-field survey stalls near 4.4178"
+  ],
+  "companion_nonduplication": "NM13-06 is currently on constructive four-spectrum polarity refinement and dynamic repair; this run remains on cluster-aware interpolation upper bounds.",
+  "artifacts": {
+    "code": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T07-54-00Z__gauss2_tail_438900_interval.py",
+    "output": "proofnet24/NM13-13/progress-3sat/runs/2026-09-20/artifacts/2026-09-20T07-54-00Z__gauss2_tail_438900_interval.out",
+    "code_commit": "7f55edb03b7afa7b995876eef745a40a0f3e843c",
+    "output_commit": "677a112c02ccfaa672c6342ecdc15864eb3a291f"
+  },
+  "prewrite_master": "f7ecfbfc6a8201beb354b60c2f0046fe6683185d",
+  "literature_check_date": "2026-09-20",
+  "literature_scope": "bounded check of Hajiaghayi-Sorkin 3.52, Diaz-Kirousis-Mitsche-Perez-Gimenez 4.4898, fixed-k scaling-window status, and interpolation/1RSB-upper-bound status; no claim of exhaustive worldwide novelty",
+  "residual_obstruction": "The candidate transfer inherits the finite-temperature interpolation and same-density de-Poissonization argument from earlier T04 reports and awaits independent review. The finite-support survey is not globally optimized; a stronger moment-envelope or richer survey may move the endpoint further.",
+  "next_attack": "Use three-node Gaussian quadrature (moments 0..5) or a certified Hankel/Markov extremal envelope for the Q^K-tilted Hausdorff measure, then jointly optimize a rational five- or seven-support survey at a density below 4.389.",
+  "unchanged_substantive_runs": 0,
+  "failed_recoveries": 0
+}

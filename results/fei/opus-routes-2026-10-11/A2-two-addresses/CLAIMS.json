@@ -1,0 +1,85 @@
+{
+ "route": "A2-two-addresses (ledger C016, C022, C031)",
+ "updated": "2026-10-12",
+ "full_FEI": "OPEN (nothing here addresses the universal conjecture beyond the proper class K2)",
+ "class_K2": "Boolean f with an address set A, |A| <= 2, such that for every T subset A with w_T = P(S_A = T) > 0 the conditional law of S_{[n] minus A} given S_A = T is a product law on {0,1}^{[n] minus A}",
+ "claims": [
+  {
+   "id": "A2-L3",
+   "status": "PROVED",
+   "statement": "For a row g_T(x) = E_y[f(y,x) chi_T(y)] (|A| = 2) whose normalized squared Walsh law is product: g_T = chi_{D1} phi(x_R) with phi full-support on R (r = |R|); |phihat(U)| = kappa prod_{i in U xor U*} p_i/q_i (coprime p_i >= q_i >= 1); nu = 2^{r+1} kappa is an integer divisible by prod q_i; with nu' = nu / prod q_i: w_T = nu'^2 4^{-(r+1)} prod_i (p_i^2+q_i^2) and log2(1/w_T) + H(q_T) = 2 - 2 log2 nu' + sum_i Ft(p_i,q_i), Ft(p,q) = 2 - log2(p^2+q^2) + h(q^2/(p^2+q^2)). nu' is even iff all coefficients lie in 2^{-r}Z; otherwise nu' and all p_i,q_i are odd and the number of points of {-1,1}^R with |phi| = 1/2 is odd. Also 2 v2(nu') >= #{i : p_i^2+q_i^2 odd} (+2 for {0,+-1}-valued rows).",
+   "where": "NOTES.md Section 3, Lemmas 1-3 and 6; exact check on all 90,176 nonzero product rows at |C| = 4 (code/check_identity.py)",
+   "remaining_gap": "none"
+  },
+  {
+   "id": "A2-L3k",
+   "status": "PROVED",
+   "statement": "Lemma 3 for k spectral addresses: rows take values in 2^{1-k} Z, the minimal Walsh coefficient of a product row is nu 2^{1-k-r} with prod q_i | nu, w_T = nu'^2 4^{1-k-r} prod (p_i^2+q_i^2) and log2(1/w_T) + H(q_T) = 2(k-1) - 2 log2 nu' + sum_i Ft(p_i,q_i), nu' = nu/prod q_i.",
+   "where": "NOTES.md Section 5.9 (same proof as Lemma 3 with unit 2^{1-k-r})",
+   "remaining_gap": "none for the identity; the analogue of Lemmas 1 and 5 (fiber classification) for k >= 3 is not done"
+  },
+  {
+   "id": "A2-T-A",
+   "status": "PROVED",
+   "statement": "Every f in K2 satisfies H(f) <= 4 I(f).",
+   "where": "NOTES.md Section 3, Theorem A and Lemma E (analytic)",
+   "remaining_gap": "none; superseded in strength by A2-T-S but has a short purely analytic proof"
+  },
+  {
+   "id": "A2-T-S",
+   "status": "PROVED",
+   "statement": "Every f in K2 satisfies H(f) <= c* I(f) with c* = 16/3 - (3/2) log2 3 = 2.9558895822...; equality for the 3-variable AND (f = -1 iff y1 = y2 = x = -1, H = 4 - (9/8) log2 3, I = 3/4). Hence the optimal constant on K2 is c*, refuting any constant below c* (in particular 2 and 40/17).",
+   "where": "NOTES.md Section 5 (5.1-5.7); computer-assisted step 5.6 in code/verify_rho23.py",
+   "remaining_gap": "Proof is complete but one step (scenario B with rho = |R_cap| in {2,3}) is a rigorous interval-arithmetic certificate (mpmath.iv, 40 digits; certified bounds -0.0872 and -0.0441 for e odd, -0.684 and -0.266 for e even). Independent referee review (B18/B19) not yet done. Novelty versus the literature not checked beyond the campaign sources; the class is campaign-internal."
+  },
+  {
+   "id": "A2-C-sel",
+   "status": "PROVED",
+   "statement": "Signed-character selectors with any number of address coordinates: if f(y,x) = s(x) chi_{tau(x)}(y) and every row s 1_{tau = T} has a product squared Walsh law, then H(f) <= 4 (I(f) - Inf_y(f)) <= 4 I(f); the constant 4 is sharp (addressing functions y_x: H = 2a, I = 1 + a/2).",
+   "where": "NOTES.md Section 3, Corollary A'",
+   "remaining_gap": "none"
+  },
+  {
+   "id": "A2-E-exh",
+   "status": "EVIDENCE",
+   "statement": "Exhaustive enumeration of K2 for n <= 6 (n <= 4 all functions and address sets; n = 5, 6 with the address pair fixed, all product rows, symmetry reduction only by x-translations, x-permutations and negation) gives max H/I = c* = 2.955889582 (AND_3); 1,564,928 K2 functions at n = 5 with a fixed address pair.",
+   "where": "NOTES.md Section 2.1; code/exhaust_small.py, rows_search.py, rows_v2.py; data/v2_m3*.json, data/v2_m4.json",
+   "remaining_gap": "float logarithms; superseded by A2-T-S as a proof"
+  },
+  {
+   "id": "A2-E-relax",
+   "status": "EVIDENCE",
+   "statement": "The arithmetic relaxation of K2 (row types constrained only by Lemmas 3, 5, 6) has supremum c* in every searched parameter range; next-best scenario rho = 3 (2.914374), then rho = 2 (2.786517); E_* empty scenario 2.505329. All relaxation constraints and the inequality chain H - c*I <= Phi <= 0 were checked on about 98,000 sampled K2 functions with |C| = 3, 4.",
+   "where": "NOTES.md Sections 4.1, 5; code/relax.py, lagr.py, validate_relax.py, check_phi.py",
+   "remaining_gap": "evidence only"
+  },
+  {
+   "id": "A2-R-lagr1",
+   "status": "REFUTED",
+   "statement": "Attempted shortcut: a single Lagrange multiplier on sum w_T = 1 with per-row suprema certifies H <= c* I in the E_*-empty scenario. It does not: the bound is +0.0218 (tiny rows exploit free weights); a direct heavy-row argument (Section 5.2) is needed.",
+   "where": "NOTES.md Section 4.2; code/lagr.py output",
+   "remaining_gap": "none (replaced by Section 5.2)"
+  },
+  {
+   "id": "A2-R-even-weights",
+   "status": "REFUTED",
+   "statement": "Attempted shortcut: in scenario B one may keep only the weights of even-class rows (dropping their unfair-coordinate and nu' structure). The resulting bound is +0.0295 (the Gibbs gap 2 delta log2(1+2^{-c/delta})) for every rho >= 3, so it cannot certify c*; the envelopes of Section 5.4 are required.",
+   "where": "NOTES.md Section 4.2; code/lagr_simple.py",
+   "remaining_gap": "none"
+  },
+  {
+   "id": "A2-H-ladder",
+   "status": "PROVED",
+   "statement": "Let C_k be the optimal constant for Boolean f with an address set of size <= k and all conditional laws product. C_k is nondecreasing, K_k contains every Boolean function on k+1 variables (a law on one bit is product), hence sup_k C_k = C_FEI. C_0 = C_1 = 2 (known), C_2 = 16/3 - (3/2) log2 3 = H/I(AND_3) (A2-T-S).",
+   "where": "NOTES.md Section 5.9",
+   "remaining_gap": "C_k for k >= 3 open"
+  },
+  {
+   "id": "A2-E-k3",
+   "status": "EVIDENCE",
+   "statement": "Three addresses, n = 5 (|C| = 2): exhaustive search (2,634,528 functions after reducing the x = 0 fiber by y-translations, y-permutations and negation) gives max H/I = 3.402475551 = H/I(AND_4), equal to the maximum over all 4-variable Boolean functions. Conjecture (open): C_3 = H/I(AND_4).",
+   "where": "NOTES.md Section 5.9; code/k3_n5.py; data/k3_n5.json",
+   "remaining_gap": "only n <= 5 searched; no proof"
+  }
+ ]
+}

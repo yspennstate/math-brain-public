@@ -1,0 +1,102 @@
+% Further certified margins.
+% Sync note: stage-2 counts refer to the enlarged exclusion box.
+% The 0.05 manifests were regenerated 2026-07-17 with exact B-matrix
+% packets (leaf counts shifted 867 -> 855 and 1365 -> 1363 under the
+% same policy, zero failures at every stage).  The -0.05 stage-2 and
+% shoulder supplement were regenerated the same night with GRID_N
+% recorded (1294 -> 1282 leaves; the supplement is new - the enlarged
+% box's lattice needs it, and the first rerun's single shoulder leaf
+% is preserved as evidence).  The remaining margins ship their
+% original manifests.
+% 2026-07-18: all Region-II sweeps regenerated with witness values
+% and parameter packets; three tags reproduce their leaf counts
+% exactly, while -0.05 (884 -> 867) and 0.13 (883 -> 874) retile
+% under the current evaluators (their originals predated the July
+% eval repairs); zero failures throughout.
+
+\section{Further margins}
+\label{sec:margins}
+
+The four conditions of Theorem~\ref{thm:main} are margin-wise
+statements, and the certificate pipeline of
+Sections~\ref{sec:twovar}--\ref{sec:regionI} runs unchanged at any
+$\kappa$ inside the strip where the fixed point is certified unique:
+the pilot locates the $(q_0,\psi_0)$ boxes at both endpoints of the
+$\alpha$ window, configures the exact-arithmetic modules from those
+balls, and runs the same four pieces.  Beyond $\kappa=0.05$ we have
+certified Condition~2varfn at eleven further margins; on the negative
+side the fixed-point uniqueness input comes entirely from the
+contraction certificates of the companion strip (there is no
+independent derivation there).  The certified pieces per margin:
+
+\begin{table}[h]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccc}
+\hline
+$\kappa$ & $\alpha^*(\kappa)$ window & sweep & Region I & stage 2 &
+inradius / required \\
+\hline
+$-0.45$ & $[1.557652103,\ 1.557654134]$ & 655 & 1404 (+12) & 1196 &
+$0.01480\ /\ 0.01207$ \\
+$-0.35$ & $[1.345396801,\ 1.345398741]$ & 750 & 1404 (+12) & 1217 &
+$0.01502\ /\ 0.01207$ \\
+$-0.25$ & $[1.167138556,\ 1.167140421]$ & 790 & 1404 (+12) & 1224 &
+$0.01517\ /\ 0.01208$ \\
+$-0.15$ & $[1.016777361,\ 1.016779164]$ & 852 & 1404 (+12) & 1259 &
+$0.01526\ /\ 0.01208$ \\
+$-0.05$ & $[0.889408031,\ 0.889409783]$ & 867 & 1404 (+12) & 1282 &
+$0.01527\ /\ 0.01209$ \\
+$0.02$  & $[0.811778721,\ 0.811780443]$ & 865 & 1404 (+12) & 1346 &
+$0.01495\ /\ 0.01209$ \\
+$0.05$  & $[0.781073067,\ 0.781074777]$ & 855 & 1404 (+12) & 1363 &
+$0.01481\ /\ 0.01209$ \\
+$0.08$  & $[0.751787901,\ 0.751789600]$ & 858 & 1404 (+12) & 1368 &
+$0.01468\ /\ 0.01209$ \\
+$0.0995$ & $[0.733478513,\ 0.733480205]$ & 904 & 1404 (+12) & 1394 &
+$0.01459\ /\ 0.01209$ \\
+$0.115$ & $[0.719316785,\ 0.719318471]$ & 897 & 1404 (+12) & 1404 &
+$0.01452\ /\ 0.01210$ \\
+$0.13$  & $[0.705932217,\ 0.705933898]$ & 874 & 1404 (+12) & 1421 &
+$0.01446\ /\ 0.01210$ \\
+$0.16$ & $[0.680075517,\ 0.680077189]$ & 896 & 1404 (+12) & 1425 &
+$0.01432\ /\ 0.01210$ \\
+\hline
+\end{tabular}
+\caption{Certified leaf and band counts per piece, with zero failures
+in every manifest.  Region~I counts marked $(+12)$ include the twelve
+shoulder-supplement chunks; under the enlarged exclusion box every
+margin's stage-2 lattice consumes one.  The final column gives the
+constructive moment-body inradius against the required star radius,
+both exact-arithmetic bounds.}
+\end{table}
+
+Every margin's Region-I manifest carries per-band interval packets
+for the frozen-tilt matrix $B$, and the kernel-checked skeleton
+includes for each a fifth family: Loewner definiteness of every
+band's $B$-matrix, decided over the integers in thirteen chunks of
+$108$ bands together with a decided total count ($55$ kernel theorems
+per margin; the mutation battery rejects a sign corruption in each
+family).
+
+The $0.13$ run additionally exposed a completeness
+defect in the stage-2 containment---supplement arcs stored on one
+angular branch were invisible to cells whose interval fell on the
+other, weakening containment only, never soundness---which was fixed
+and the margin re-certified with zero failures.  One observation from
+the $0.0995$ run is also methodologically relevant.  Its Region~II sweep initially
+failed a single minimal-size cell just above the exclusion box's
+upper edge, where the dual certificate degenerates in a thin ridge
+(the certified value interval collapses to $[\pm 0.181]$ on a cell of
+width $0.0018$, recovering two cell-widths higher).  The exclusion
+box's upper offset moved from $+0.0961$ to $+0.1030$ in response;
+this is sound without revisiting Region~I because the stage-2
+containment derives its tiling from the same box and fails loudly if
+the enlarged region outgrows what the star and supplement cover.  The
+$0.05$ stage-2 was re-run against its published Region~I manifest
+under the enlarged box on two machines independently; both certify
+with 1365 leaves and zero failures, and the shipped manifest is the
+box run with its bindings intact.
+
+\input{interval_section}

@@ -1,0 +1,13 @@
+# P0104 referee handoff — 2026-10-10
+
+**Found:** The primary Auffinger–Damron–Hanson Questions 13 and 15 leave suitable weight laws unspecified; Section 3.1 also leaves the heuristic exponent notation open to several precise definitions. Current status is UNKNOWN after a bounded search. The existing P0104 card mislocates the two questions for the authors' PDF URL; `SOURCE_CORRECTIONS.jsonl` gives the exact correction. The 2026 Basu–Sidoravicius–Sly power variance result concerns a rotationally invariant Riemannian model, not the iid lattice chi=1/3 claim.
+
+**Changed:** Five independently reasoned KEEP verdict rows in `VERDICTS.jsonl`, each limited to its special-case or conditional scope; a two-card draft concept bundle in `brain_draft/bundle_001.json`; a reviewable add-file diff in `patches/01_p0104_bundle.diff`; one narrow local hook proposal. The source statement, status, own attempted route, and peer review are in `SOURCE_STATUS.json`, `ATTEMPT.md`, `CLAIMS.jsonl`, and `REVIEW_PACKET.md`.
+
+**Measured:** `python -X utf8 audit_exact.py` checked all 16 four-edge assignments with exact fractions and reproduced Var(T)=23/64, Var(L)=3/8, Cov(L,G)=-1/16. `python -X utf8 validate_artifacts.py` checked 2 concept entries, 1 supported relation, 5 verdict rows, and 1 hook; it also reproduced w363's path-count ceiling 0.31222221<1/3. `python -X utf8 write_patch.py` generated a 51-line unified diff. These checks do not prove the unproved spectral-mass estimate G1 or resolve P0104.
+
+**Risk:** The draft has one independent mathematical referee (w365), not a completed two-auditor keep; the source correction also needs a second check. The bundle is prepared locally, not submitted, ingested, or retrievable. I did not run the live integrator because it writes outside this worker folder and may touch the store. The newer inbox, progress, and hook instructions conflict with the explicit “write ONLY inside your folder; the only exceptions” rule in this worker brief, so all such output is staged here for handoff.
+
+**Apply:** After second audit, copy `brain_draft/bundle_001.json` to `~/math-brain-inbox/w365/bundle_001.part`, rename it to `.json`, run the normal draft integrator, then verify the two logical names are retrievable; use `patches/01_p0104_bundle.diff` to review the exact intended addition. Apply `SOURCE_CORRECTIONS.jsonl:S1.w365.6` to the existing P0104 card only after its source-locator audit.
+
+**NEXT:** Second auditor checks the bundle and locator correction; integrator submits and validates them. For w363's proof route, estimate low-degree spectral mass F_n(k), the still-open load-bearing G1.

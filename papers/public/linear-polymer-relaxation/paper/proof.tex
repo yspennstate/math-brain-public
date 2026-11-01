@@ -1,0 +1,541 @@
+\section{A stationary comparison with a labelled cut chain}
+\label{proof:sec:representation}
+
+Fix $n\geq2$ and $\beta>0$. Write $L_M$ for the polymer generator in
+Theorem~\ref{thm:main}, and put $K(m)=\sum_jm_j$. We use a labelled
+auxiliary process, but only through its stationary Dirichlet form.
+
+Arrange $n$ labelled sites in cyclic order, with one bond from each site to
+the next, and let $[n]$ also index these bonds. For $n=2$ these are two
+distinct bonds between the two sites. Thus the construction concerns a
+cyclic order and does not require a simple cycle graph. Let
+\[
+ \Omega_n=\{S\subseteq[n]:S\neq\varnothing\}.
+\]
+The elements of $S$ are the cut bonds. Define the generator
+\begin{equation}\label{proof:eq:LB}
+ (L_BF)(S)=\beta\sum_{i\notin S}\bigl(F(S\cup\{i\})-F(S)\bigr)
+ +\frac{|S|-1}{n}\sum_{i\in S}\bigl(F(S\setminus\{i\})-F(S)\bigr).
+\end{equation}
+When $|S|=1$, the second sum is understood to be zero; the empty set is
+never a state. The process is irreducible: one can pass from $S$ to $T$
+by adding bonds until reaching $S\cup T$ and then deleting the bonds
+outside $T$. Its reversible probability measure is
+\begin{equation}\label{proof:eq:piB}
+ \pi_B(S)=\frac1{Z_B}\frac{(\beta n)^{|S|}}{(|S|-1)!}.
+\end{equation}
+Indeed, if $|S|=k$ and $i\notin S$, then
+$\pi_B(S\cup\{i\})/\pi_B(S)=\beta n/k$, whereas the reverse jump has
+rate $k/n$.
+
+Cutting the cyclic order at the bonds in $S$ produces $|S|$ segments.
+Let $p(S)=(m_j)_{j\geq1}$ record their unordered lengths. In particular,
+$\sum_jjm_j=n$ and $K(p(S))=|S|$.
+
+\begin{proposition}\label{proof:prop:comparison}
+The pushforward of $\pi_B$ under $p$ is
+\begin{equation}\label{proof:eq:piM}
+ \pi_M(m)=\frac1{Z_M}\frac{(\beta n)^{K(m)}}{\prod_jm_j!}.
+\end{equation}
+It is reversible for $L_M$. For every function $f$ on the polymer state
+space, the lift $F=f\circ p$ satisfies
+\begin{equation}\label{proof:eq:dirichletcomparison}
+ \operatorname{Var}_{\pi_B}(F)=\operatorname{Var}_{\pi_M}(f),
+ \qquad
+ \mathcal E_B(F,F)=\mathcal E_M(f,f).
+\end{equation}
+Consequently $\gamma_M\geq\gamma_B$. More generally, any Poincar\'e
+inequality for rotation-invariant functions on $\Omega_n$ holds, with
+the same constant, for polymer observables.
+\end{proposition}
+
+\begin{proof}
+If $m$ has $k$ segments, the number of cut sets mapping to $m$ is
+\begin{equation}\label{proof:eq:multiplicity}
+ N(m)=\frac{n(k-1)!}{\prod_jm_j!}.
+\end{equation}
+To prove this formula, count cut sets together with a distinguished
+cut. On one hand there are $kN(m)$ such pairs. On the other hand the
+distinguished cut has $n$ possible locations, and the ordered segment
+lengths have $k!/\prod_jm_j!$ possible arrangements. This also proves
+the formula when $k=1$ or $k=n$. Multiplying~\eqref{proof:eq:multiplicity}
+by the weight per cut set in~\eqref{proof:eq:piB} gives
+\eqref{proof:eq:piM}.
+
+Conditional on $p(S)=m$, the cut set is uniform. Equivalently, after
+distinguishing a uniformly chosen cut, its segment lengths occur in
+uniform multiset order around the cycle. Adding an absent cut already
+has the required fragmentation rates in every configuration: in a
+segment of length $j$, the split into $i$ and $j-i$ has two possible
+locations if $i<j/2$, and one if $i=j/2$. Thus its rate is
+$2\beta m_j$ or $\beta m_j$, respectively.
+
+For mergers, suppose first that $k\geq2$. At each of the $k$ boundaries,
+the two neighbouring segment positions sample the multiset of lengths
+without replacement. For $i\neq j$, the expected number of boundaries
+between an $i$-segment and a $j$-segment is
+\[
+ k\left(\frac{m_i}{k}\frac{m_j}{k-1}
+       +\frac{m_j}{k}\frac{m_i}{k-1}\right)
+ =\frac{2m_im_j}{k-1}.
+\]
+For equal sizes it is $m_i(m_i-1)/(k-1)$. A boundary is removed at rate
+$(k-1)/n$, so the averaged merger rates are $2m_im_j/n$ and
+$m_i(m_i-1)/n$. These formulas include $k=2$: the same two segments
+have two distinct boundaries, each with removal rate $1/n$.
+At $k=1$ there is no merger.
+
+These calculations prove the exact conditional identity
+\begin{equation}\label{proof:eq:conditionalgenerator}
+ \mathbb E_{\pi_B}\bigl[L_B(f\circ p)(S)\mid p(S)=m\bigr]
+ =(L_Mf)(m).
+\end{equation}
+For two polymer functions $f,g$, reversibility of $L_B$ and
+\eqref{proof:eq:conditionalgenerator} imply
+\[
+ \langle f,L_Mg\rangle_{\pi_M}
+ =\langle f\circ p,L_B(g\circ p)\rangle_{\pi_B}
+ =\langle L_Mf,g\rangle_{\pi_M}.
+\]
+Thus $L_M$ is reversible under $\pi_M$. Taking $g=f$, and using
+$\mathcal E(f,f)=-\langle f,Lf\rangle$, proves the Dirichlet-form
+identity. The variance identity follows from the pushforward measure.
+Every polymer lift is invariant under a rotation of the labelled
+cyclic order, so the final assertions follow from the variational
+characterization of the spectral gap.
+\end{proof}
+
+\begin{remark}\label{proof:rem:averaging}
+Equation~\eqref{proof:eq:conditionalgenerator} is a stationary
+conditional average. The projection of the cut process need not be a
+Markov chain when started from an individual cut configuration. The
+proof uses only~\eqref{proof:eq:dirichletcomparison}; no assertion of
+strong lumpability is needed.
+\end{remark}
+
+\section{Finite comparison and the cluster-count chain}
+\label{proof:sec:count}
+
+We first record a positive-vector comparison for finite killed
+generators. Such comparisons are standard in the spectral analysis of
+birth--death processes; see, for example, \cite{Zeifman1991}. We include
+the argument to specify exactly what is used.
+
+\begin{lemma}\label{proof:lem:positive}
+Let $I$ be a finite set and let
+\[
+ (Ag)(x)=\sum_{y\neq x}r(x,y)(g(y)-g(x))-V(x)g(x),
+ \qquad r(x,y)\geq0,\quad V(x)\geq0.
+\]
+Suppose the off-diagonal graph is connected. Assume positive weights
+$\rho$ satisfy $\rho(x)r(x,y)=\rho(y)r(y,x)$ for all $x,y$.
+If $\lambda_*$ is the smallest eigenvalue
+of $-A$, then, for every strictly positive vector $h$,
+\begin{equation}\label{proof:eq:positivecomparison}
+ \min_x\frac{-(Ah)(x)}{h(x)}
+ \ \leq\ \lambda_*\ \leq\
+ \max_x\frac{-(Ah)(x)}{h(x)}.
+\end{equation}
+The conclusion also holds on a one-point state space.
+\end{lemma}
+
+\begin{proof}
+The operator is self-adjoint in the inner product weighted by $\rho$,
+and its quadratic form is
+\[
+ \langle g,-Ag\rangle_\rho
+ =\frac12\sum_{x,y}\rho(x)r(x,y)(g(y)-g(x))^2
+   +\sum_x\rho(x)V(x)g(x)^2.
+\]
+A unit vector minimizing this form can be replaced by its absolute
+value without increasing the form. Hence a nonnegative minimizing
+eigenvector $v$ exists. If $v(x)=0$, its eigenvalue equation implies
+$\sum_y r(x,y)v(y)=0$, so all its neighbours also have value zero.
+Connectedness shows that $v$ is strictly positive.
+
+At a point $x$ where $v(x)/h(x)$ is minimal, the nonnegative
+off-diagonal entries give
+$(Av)(x)\geq(v(x)/h(x))(Ah)(x)$. Since $Av=-\lambda_*v$, this implies
+$\lambda_*\leq-(Ah)(x)/h(x)$. A point where $v/h$ is maximal gives
+the reverse inequality. This proves~\eqref{proof:eq:positivecomparison}.
+For one state the assertion is immediate.
+\end{proof}
+
+The number of clusters is itself a Markov coordinate of the polymer
+process. If it has value $k$, its total fragmentation and merger rates
+are, respectively, $\beta(n-k)$ and $k(k-1)/n$. Write $Q$ for its
+generator on $\{1,\ldots,n\}$:
+\begin{equation}\label{proof:eq:Q}
+ (Qg)(k)=\beta(n-k)(g(k+1)-g(k))
+       +\frac{k(k-1)}n(g(k-1)-g(k)).
+\end{equation}
+The zero boundary coefficients suppress the nonexistent terms. The
+stationary measure is the pushforward of $\pi_B$ under $S\mapsto|S|$.
+Testing the polymer variational principle with count observables gives
+\begin{equation}\label{proof:eq:countupper}
+ \gamma_M\leq\gamma_Q.
+\end{equation}
+
+For $1\leq k\leq n-1$, define the discrete derivative
+$(\partial g)(k)=g(k+1)-g(k)$. Direct expansion yields the intertwining
+\begin{equation}\label{proof:eq:gradient}
+ \partial Q=\mathcal A\partial,
+\end{equation}
+where $\mathcal A$ is the killed birth--death generator
+\begin{align}
+ (\mathcal Ah)(k)
+ ={}&\beta(n-k-1)(h(k+1)-h(k))
+     +\frac{k(k-1)}n(h(k-1)-h(k))\notag\\
+ &-\left(\beta+\frac{2k}n\right)h(k).
+ \label{proof:eq:derivativegenerator}
+\end{align}
+This finite identity is an instance of the birth--death
+intertwinings studied in \cite{ChafaiJoulin2013}. Here it can also be
+checked by comparing the three coefficients of $h(k-1),h(k),h(k+1)$.
+The derivative is an isomorphism from functions modulo constants to
+$\mathbb R^{n-1}$. Therefore the eigenvalues of $-\mathcal A$ are
+exactly the nonzero eigenvalues of $-Q$, with multiplicity. In
+particular its smallest eigenvalue is $\gamma_Q$.
+
+Every finite birth--death matrix with positive interior rates is
+reversible under positive weights, obtained recursively from detailed
+balance. Lemma~\ref{proof:lem:positive} thus applies to $\mathcal A$;
+for $n=2$ it is a one-point matrix. The choice $h=1$ gives
+\begin{equation}\label{proof:eq:countbase}
+ \gamma_Q\geq\beta+\frac2n.
+\end{equation}
+
+\begin{proposition}\label{proof:prop:upper}
+For every $n\geq2$ and $\beta>0$,
+\begin{equation}\label{proof:eq:uniformupper}
+ \gamma_M\leq\gamma_Q
+ \leq\beta+4\max\{\sqrt\beta,1/n\}
+ \leq4\left(\beta+\sqrt\beta+\frac1n\right).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Put $a=\max\{1,n\sqrt\beta\}$ and choose
+$h(k)=((k+a)(k+a+1))^{-1}$. The adjacent ratios are
+\[
+ \frac{h(k+1)}{h(k)}=\frac{k+a}{k+a+2},\qquad
+ \frac{h(k-1)}{h(k)}=\frac{k+a+1}{k+a-1}.
+\]
+Substitution into~\eqref{proof:eq:derivativegenerator} gives the exact
+identity
+\begin{equation}\label{proof:eq:uppercertificate}
+ \frac{-(\mathcal Ah)(k)}{h(k)}
+ =\frac{2\beta(n-k-1)}{k+a+2}+\beta
+   +\frac{2ka}{n(k+a-1)}
+ \leq\frac{2\beta n}{a}+\beta+\frac{2a}{n}.
+\end{equation}
+The last inequality uses $a\geq1$. If $a=n\sqrt\beta$, the last
+expression is $\beta+4\sqrt\beta$. If $a=1$, then $\beta n\leq1/n$
+and it is at most $\beta+4/n$. Apply the upper half of
+Lemma~\ref{proof:lem:positive}, followed by
+\eqref{proof:eq:countupper}.
+\end{proof}
+
+\section{Harmonic decomposition and rotation-invariant observables}
+\label{proof:sec:harmonics}
+
+The cut chain has the full permutation symmetry of $[n]$. Its
+degree-one modes can be slow when $\beta$ is very small, but those
+modes do not occur in polymer observables. We give the relevant
+Boolean-lattice decomposition explicitly. Related harmonic
+descriptions of functions on slices of the Boolean cube appear in
+\cite{Filmus2016}.
+
+For $0\leq j\leq n$, let $V_j$ be the space of real functions on the
+$j$-subsets of $[n]$, with counting inner product. Set
+$V_{-1}=V_{n+1}=\{0\}$. Define the upward and downward maps by
+\[
+ (Ua)(T)=\sum_{i\in T}a(T\setminus\{i\}),\qquad
+ (Da)(R)=\sum_{i\notin R}a(R\cup\{i\}).
+\]
+Thus $U:V_j\to V_{j+1}$ and $D:V_j\to V_{j-1}$ are adjoints on
+adjacent layers. On $V_j$, direct double counting gives
+\begin{equation}\label{proof:eq:commutator}
+ DU-UD=(n-2j)I.
+\end{equation}
+Indeed, the diagonal term of $DU$ counts $n-j$ extensions and that
+of $UD$ counts $j$ deletions. Every other term exchanges one present
+and one absent label and occurs once on each side.
+
+For $0\leq\ell\leq\lfloor n/2\rfloor$, set
+$H_\ell=\ker(D:V_\ell\to V_{\ell-1})$. If $a\in H_\ell$, define its
+lift on a layer of $k$-subsets by
+\begin{equation}\label{proof:eq:harmoniclift}
+ F_a(S)=\sum_{\substack{T\subseteq S\\|T|=\ell}}a(T)
+       =\frac{U^{k-\ell}a(S)}{(k-\ell)!}
+       \quad(k\geq\ell),
+\end{equation}
+and put $F_a=0$ when $k<\ell$.
+
+\begin{lemma}\label{proof:lem:layers}
+For every $0\leq k\leq n$, the layer $V_k$ is the orthogonal direct
+sum of the lifted spaces $H_\ell$, with
+$0\leq\ell\leq\min\{k,n-k\}$. Their dimensions and lift norms are
+\begin{equation}\label{proof:eq:dimensionnorm}
+ \dim H_\ell=\binom n\ell-\binom n{\ell-1},
+ \qquad
+ \|F_a\|_{V_k}^2=\binom{n-2\ell}{k-\ell}\|a\|_{V_\ell}^2,
+\end{equation}
+where $\binom n{-1}=0$. The lift is injective for
+$\ell\leq k\leq n-\ell$ and vanishes for $k>n-\ell$.
+\end{lemma}
+
+\begin{proof}
+Taking an inner product in~\eqref{proof:eq:commutator} gives
+\[
+ \|Ua\|^2=\|Da\|^2+(n-2j)\|a\|^2\qquad(a\in V_j).
+\]
+Hence $U$ is injective for $j<n/2$, and its adjoint on the next layer
+is surjective. This proves the dimension formula for $H_\ell$.
+
+For $a\in H_\ell$, induction using the commutator gives
+\begin{equation}\label{proof:eq:tower}
+ DU^ja=j(n-2\ell-j+1)U^{j-1}a.
+\end{equation}
+For the induction step, commute $D$ past the last $U$ and use
+\[
+ (j-1)(n-2\ell-j+2)+n-2(\ell+j-1)
+ =j(n-2\ell-j+1).
+\]
+Consequently
+\[
+ \|U^ja\|^2
+ =j(n-2\ell-j+1)\|U^{j-1}a\|^2
+ =\frac{j!(n-2\ell)!}{(n-2\ell-j)!}\|a\|^2
+\]
+for $0\leq j\leq n-2\ell$. Dividing by $(j!)^2$ proves the norm
+formula and injectivity. At $j=n-2\ell+1$ the preceding norm
+recursion gives zero, so all subsequent lifts vanish.
+
+For orthogonality, let $a\in H_\ell$, $b\in H_h$, and $\ell<h$,
+with both lifts supported on layer $k$. Move the $k-h$ upward maps
+in the lift of $b$ across the inner product, and apply
+\eqref{proof:eq:tower}. The resulting inner product is a scalar
+multiple of $\langle U^{h-\ell}a,b\rangle$, which is zero because
+$Db=0$. Finally the dimensions telescope:
+\[
+ \sum_{\ell=0}^{\min(k,n-k)}
+ \left(\binom n\ell-\binom n{\ell-1}\right)
+ =\binom n{\min(k,n-k)}=\binom nk.
+\]
+Thus the orthogonal subspaces exhaust $V_k$.
+\end{proof}
+
+On the nonempty Boolean lattice, the degree-$\ell$ sector consists
+of all functions obtained by multiplying the lifts of a basis of
+$H_\ell$ by arbitrary functions of the layer $k$. For degree zero
+the layers are $1,\ldots,n$; for degree $\ell\geq1$ they are
+$\ell,\ldots,n-\ell$. The layerwise decomposition in
+Lemma~\ref{proof:lem:layers} is orthogonal also in $L^2(\pi_B)$,
+because $\pi_B$ is constant on each layer.
+
+\begin{lemma}\label{proof:lem:sectoraction}
+Each degree sector is preserved by $L_B$. Degree zero is the count
+generator $Q$. For $\ell\geq1$, each harmonic direction has radial
+generator
+\begin{align}
+ (\mathcal L_\ell g)(k)
+ ={}&\beta(n-k-\ell)(g(k+1)-g(k))\notag\\
+ &+\frac{(k-1)(k-\ell)}n(g(k-1)-g(k))
+  -\left(\ell\beta+\frac{\ell(k-1)}n\right)g(k),
+ \label{proof:eq:sector}
+\end{align}
+on $\ell\leq k\leq n-\ell$. It is a reversible killed birth--death
+generator. The spectrum of $-L_B$ is the union of the spectrum of
+$-Q$ and the spectra of $-\mathcal L_\ell$, the latter repeated
+$\dim H_\ell$ times.
+\end{lemma}
+
+\begin{proof}
+The lift satisfies
+\begin{equation}\label{proof:eq:neighbours}
+ \sum_{i\in S}F_a(S\setminus\{i\})=(k-\ell)F_a(S),
+ \qquad
+ \sum_{i\notin S}F_a(S\cup\{i\})=(n-k-\ell)F_a(S).
+\end{equation}
+The first identity counts each $\ell$-subset of $S$ exactly $k-\ell$
+times. For the second, the terms already contained in $S$ contribute
+$(n-k)F_a(S)$. The remaining terms can be grouped as
+\[
+ \sum_{\substack{R\subseteq S\\|R|=\ell-1}}
+ \sum_{i\notin S}a(R\cup\{i\}).
+\]
+By $Da=0$, the inner sum is the negative of the corresponding sum
+over $i\in S\setminus R$. Summing over $R$ counts each
+$\ell$-subset $\ell$ times, giving $-\ell F_a(S)$. For $\ell=0$
+the identities hold directly.
+
+Substitute~\eqref{proof:eq:neighbours} in~\eqref{proof:eq:LB} to obtain
+\[
+ L_B(F_ag)(S)=F_a(S)(\mathcal L_\ell g)(|S|).
+\]
+The same identities, with the zero lift outside its support, show
+that there is no contribution outside this degree sector. Both
+radial boundary coefficients in~\eqref{proof:eq:sector} are zero.
+
+For an explicit self-adjointness check, the norm formula
+\eqref{proof:eq:dimensionnorm} shows that the radial inner product,
+up to a fixed positive multiplier, has weights
+\begin{equation}\label{proof:eq:sectorweights}
+ \nu_\ell(k)=\frac{(\beta n)^k}{(k-1)!}
+               \binom{n-2\ell}{k-\ell}.
+\end{equation}
+They satisfy
+\[
+ \nu_\ell(k)\,\beta(n-k-\ell)
+ =\nu_\ell(k+1)\,\frac{k(k+1-\ell)}n.
+\]
+The killing term is nonnegative. If the sector has more than one
+layer, its interior birth and death rates are positive. Choosing an
+orthogonal basis in each $H_\ell$ therefore yields orthogonal radial
+copies of~\eqref{proof:eq:sector}. Completeness follows from
+Lemma~\ref{proof:lem:layers}, proving the spectral assertion.
+\end{proof}
+
+\begin{proposition}\label{proof:prop:base}
+Every rotation-invariant function $F$ on $\Omega_n$ satisfies
+\begin{equation}\label{proof:eq:rotationpoincare}
+ \mathcal E_B(F,F)\geq
+ \left(\beta+\frac2n\right)\operatorname{Var}_{\pi_B}(F).
+\end{equation}
+In particular,
+\begin{equation}\label{proof:eq:polymerbase}
+ \gamma_M\geq\beta+\frac2n.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For $\ell\geq2$, the killing in~\eqref{proof:eq:sector} is at least
+\[
+ \ell\beta+\frac{\ell(\ell-1)}n\geq2\beta+\frac2n.
+\]
+By Lemma~\ref{proof:lem:positive} with $h=1$, every eigenvalue of
+$-\mathcal L_\ell$ is at least this value. In degree zero, every
+nonconstant eigenvalue is at least $\beta+2/n$ by
+\eqref{proof:eq:countbase}.
+
+It remains to exclude degree one. The degree-one part on any layer
+$1\leq k\leq n-1$ has the unique form
+\[
+ S\longmapsto\sum_{i\in S}a_i(k),\qquad\sum_{i=1}^na_i(k)=0.
+\]
+Uniqueness follows from the injectivity in
+Lemma~\ref{proof:lem:layers}. All degree sectors and their
+orthogonal complements are preserved by relabelling. Since the
+inner product is also preserved, their orthogonal projections
+commute with rotations. The degree-one projection of a
+rotation-invariant $F$ is therefore rotation-invariant. Its unique
+coefficient vector must be fixed by the cyclic permutation of all
+$n$ labels, so its entries are all equal. Their sum is zero, and
+the vector vanishes. The lift is already zero on layer $n$.
+
+After subtracting its mean, $F$ consequently contains only the
+nonconstant part of degree zero and degrees at least two. The
+complete orthogonal spectral decomposition now proves
+\eqref{proof:eq:rotationpoincare}. Apply
+Proposition~\ref{proof:prop:comparison} to conclude
+\eqref{proof:eq:polymerbase}.
+\end{proof}
+
+\section{A reciprocal certificate in the square-root regime}
+\label{proof:sec:reciprocal}
+
+\begin{proposition}\label{proof:prop:squareroot}
+If $n\geq8$ and $4/n^2\leq\beta\leq1/16$, then
+\begin{equation}\label{proof:eq:squareroot}
+ \gamma_B\geq\frac{\sqrt\beta}{5},
+ \qquad
+ \gamma_M\geq\frac{\sqrt\beta}{5}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Put $a=n\sqrt\beta$, so that $2\leq a\leq n/4$. Use the positive
+test vector $h(k)=1/(k+a)$, first for the count derivative
+$\mathcal A$. Its exact quotient is
+\begin{align}
+ \frac{-(\mathcal Ah)(k)}{h(k)}
+ &=\frac{\beta(n-k-1)}{k+a+1}
+   -\frac{k(k-1)}{n(k+a-1)}+\beta+\frac{2k}n\notag\\
+ &\geq\frac{\beta(n-k-1)}{k+a+1}+\beta+\frac kn.
+ \label{proof:eq:countreciprocal}
+\end{align}
+If $k\leq a$, then $n-k-1\geq n/2$ and
+$k+a+1\leq5a/2$. The birth term in the last line is therefore at
+least $\beta n/(5a)=\sqrt\beta/5$. If $k\geq a$, its last term is
+at least $a/n=\sqrt\beta$. Lemma~\ref{proof:lem:positive} proves
+that every nonconstant degree-zero eigenvalue is at least
+$\sqrt\beta/5$.
+
+For degree $\ell\geq1$, the same test vector on
+$\ell\leq k\leq n-\ell$ gives
+\begin{equation}\label{proof:eq:sectorcertificate}
+ \frac{-(\mathcal L_\ell h)(k)}{h(k)}
+ =\frac{\beta(n-k-\ell)}{k+a+1}+\ell\beta
+  +\frac{(k-1)((\ell-1)k+\ell a)}{n(k+a-1)}.
+\end{equation}
+For clarity, the last term combines the negative death contribution
+$-(k-1)(k-\ell)/(n(k+a-1))$ with the killing
+$\ell(k-1)/n$. Their numerator is
+\[
+ (k-1)\bigl(\ell(k+a-1)-(k-\ell)\bigr)
+ =(k-1)((\ell-1)k+\ell a).
+\]
+All terms on the right of~\eqref{proof:eq:sectorcertificate} are
+nonnegative. If $k\leq a$, then $\ell\leq k$ gives
+$n-k-\ell\geq n-2a\geq n/2$, while $k+a+1\leq5a/2$.
+The birth term is again at least $\sqrt\beta/5$. If $k\geq a$,
+then $(\ell-1)k+\ell a\geq a$ and
+\[
+ \frac{k-1}{k+a-1}\geq\frac13,
+ \qquad
+ 3(k-1)-(k+a-1)=2k-a-2\geq a-2\geq0.
+\]
+The last term in~\eqref{proof:eq:sectorcertificate} is at least
+$a/(3n)=\sqrt\beta/3$. Another application of
+Lemma~\ref{proof:lem:positive} bounds every eigenvalue of every
+$-\mathcal L_\ell$ below by $\sqrt\beta/5$.
+
+Lemma~\ref{proof:lem:sectoraction} exhausts the spectrum of the cut
+chain, so $\gamma_B\geq\sqrt\beta/5$. The polymer inequality follows
+from Proposition~\ref{proof:prop:comparison}.
+\end{proof}
+
+\section{Completion of the uniform bound}
+\label{proof:sec:completion}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Write $s=\beta+\sqrt\beta+1/n$. Proposition~\ref{proof:prop:upper}
+gives $\gamma_M\leq4s$. For the lower bound, use
+\eqref{proof:eq:polymerbase} throughout and divide the parameters
+into the following exhaustive cases.
+
+If $\beta\geq1/16$, then $\sqrt\beta\leq4\beta$, whence
+\[
+ s\leq5\beta+\frac1n
+ \leq5\left(\beta+\frac2n\right)\leq5\gamma_M.
+\]
+If $\beta\leq4/n^2$, then $\sqrt\beta\leq2/n$, so
+\[
+ s\leq\beta+\frac3n
+ \leq\frac32\left(\beta+\frac2n\right)
+ \leq\frac32\gamma_M.
+\]
+If $n<8$ and $\beta<1/16$, the same conclusion follows from
+$\sqrt\beta<1/4\leq2/n$.
+
+In every remaining case, $n\geq8$ and
+$4/n^2<\beta<1/16$. Proposition~\ref{proof:prop:squareroot} gives
+$\sqrt\beta\leq5\gamma_M$, while
+\eqref{proof:eq:polymerbase} gives $\beta+1/n\leq\gamma_M$.
+Adding these inequalities yields $s\leq6\gamma_M$.
+The preceding weak inequalities cover all boundary values.
+Therefore $s/6\leq\gamma_M\leq4s$ for every $n\geq2$ and
+$\beta>0$. Both bounds are positive, so their reciprocals give the
+stated relaxation-time bounds.
+\end{proof}

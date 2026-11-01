@@ -1,0 +1,1581 @@
+REGISTRY FULL {
+  "schema": "fei-claim-registry/2",
+  "revision": "2026-10-11-execution-v2",
+  "snapshot_at": "2026-10-11T20:03:27+00:00",
+  "owner": "B20",
+  "full_fei_status": "OPEN",
+  "interpretation": "Navigation to immutable proofs and reviews. Status changes are not mathematical certificates.",
+  "claims": [
+    {
+      "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+      "version": 1,
+      "source_claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO-v1",
+      "exact_statement": "For every finite K,A,B >= 0 there is a genuine Boolean physical split with L > K*d + A*V_post + B*M_inf, where q_W=(Ghat(W)^2+Hhat(W)^2)/2, e_W=(Ghat(W)-Hhat(W))^2/4, theta_W=e_W/q_W, d=sum e_W, L=sum q_W*h2(theta_W), V_post=sum q_W*(theta_W-d)^2, and M_inf=sum_i(Inf_i(G)-Inf_i(H))^2.",
+      "hypotheses": [
+        "uniform physical cube",
+        "genuine Boolean sign children G,H",
+        "entropy in bits",
+        "zero-q packets contribute zero",
+        "fixed finite nonnegative K,A,B"
+      ],
+      "statement_sha256": "331eeffbfcb3e4cec0f5a1db9d76852528ecfee2918d3f440ba420f284a20149",
+      "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED",
+      "contributors": [
+        "fleet01/B05 original run"
+      ],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "80cc2e5027efa56d79c4ecdf7d4949759ef2068b",
+        "path": "reports/fei-2026-10-11/runs/B05/20261011T193057Z-fleet01-B05-rare-restrictions/REPORT.md"
+      },
+      "proof_dependencies": [],
+      "review_records": [
+        {
+          "reviewer": "fleet01/B19",
+          "verdict": "ACCEPT_AT_STATED_SCOPE",
+          "source": {
+            "repository": "yspennstate/math-open-problems",
+            "commit": "7955d427222392911dc6af2e4ee3aa8aab67ac8c",
+            "path": "reports/fei-2026-10-11/runs/B19/20261011T195038Z-fleet01-B19-independent-review/REPORT.md",
+            "blob_sha": "dcec4cb77233a7b233b4798b25aab5f2dd5c82b6"
+          },
+          "method": "Independent all-even-k algebraic reconstruction plus full k=4 truth tables, integer FWHT and Fraction packet checks; 80-digit Decimal entropy is numerical support, not an interval certificate.",
+          "saved_assertions": 16404,
+          "analytic_proof_supplies_all_k_sign": true
+        },
+        {
+          "reviewer": "recovery fei_audit",
+          "verdict": "NO_GAP_FOUND_AT_STATED_SCOPE",
+          "source": {
+            "path": "verification/plan_mathematical_audit_2026-10-11.md"
+          },
+          "method": "Independent analytic reconstruction; original floating-point checker not rerun."
+        }
+      ],
+      "scope_exclusions": [
+        "Does not refute existential good-coordinate selection.",
+        "Does not refute every adaptive stopping tree or nonlocal transport.",
+        "Does not disprove FEI."
+      ],
+      "refutes": [
+        "universal all-coordinate fixed-price L <= K*d + A*V_post + B*M_inf"
+      ],
+      "supersedes": [],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "B05",
+        "B06",
+        "B08",
+        "B10",
+        "B13",
+        "B20"
+      ],
+      "next_action": "Compare control-first and selector-first actual restriction trees, including terminal entropy and creation/spending of logarithmic credit."
+    },
+    {
+      "claim_id": "B09-BIASED-BLOCK-UNCERTAINTY",
+      "version": 1,
+      "exact_statement": "For every Boolean sign under an interior product bias p and a physical block A, the exact entropy decrement L_A=M_A+J_A obeys 0<=J_A<=M_A+Delta_A, where M_A=H(S_A|S_B), J_A=I(Z;S_B) for the actual physical-child/spectral experiment, and Delta_A=sum_i_in_A[h2(p_i)+log2(max(p_i,1-p_i))].",
+      "hypotheses": [
+        "genuine Boolean sign",
+        "independent physical inputs",
+        "all p_i in (0,1)",
+        "biased orthonormal Fourier basis",
+        "entropy in bits"
+      ],
+      "statement_sha256": "988abea63a1906de7c54826cb36bb40c443bc1f346d25715d0826d3740985695",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "adb671ffcda143fa68347806bb96e8c305621a7d",
+        "path": "reports/fei-2026-10-11/runs/B09/20261011T195500Z-fleet01-B09-biased-restriction-uncertainty/REPORT.md",
+        "blob_sha": "71b68e4decf9658a42fef6bb2668e19f25bd214a"
+      },
+      "review_records": [],
+      "review_obligations": [
+        "Independently check the exact biased physical restriction identity and Maassen-Uffink transform.",
+        "Use the independent repaired certificate at a1ff93577685acd461b154b04e0c1aa0c65645c8/verification/B09_interval_repair_20261011; the original negative-log interval division is faulty. Check stronger consequences separately.",
+        "Report section 5(4): the asymptotic of the displayed upper bound does not by itself prove that every O(p) replacement is impossible; require a lower-bound family or narrow the claim.",
+        "Distinguish additive disjoint tensor products from any broader composition statement."
+      ],
+      "proof_dependencies": [
+        "Maassen-Uffink entropic uncertainty; primary source to be read at review"
+      ],
+      "next_consumers": [
+        "B09",
+        "B12",
+        "B13",
+        "B18",
+        "B19",
+        "B20"
+      ],
+      "first_unproved_line": "Uniform influence payment and any claimed asymptotic optimality of the tax remain unproved.",
+      "supersedes": [],
+      "refutes": []
+    },
+    {
+      "claim_id": "B09-TAXFREE-AND-COUNTEREXAMPLE-REPAIRED",
+      "version": 1,
+      "exact_statement": "For g(X,Y)=(-1)^(XY), independent P(X=1)=1/8 and P(Y=1)=1/4, with physical block A={X}, J_A-M_A>1195/10000 bits. Thus universal tax-free J_A<=M_A under arbitrary product biases is false.",
+      "hypotheses": [
+        "two-bit actual Boolean sign",
+        "specified interior independent biases",
+        "biased orthonormal Fourier basis",
+        "entropy in bits"
+      ],
+      "statement_sha256": "3654bf6460ad26235f25803c92c8bad40c0da83b37b5744104c7bbed64b0ec4c",
+      "status": "FINITE_COUNTEREXAMPLE_CERTIFIED_WITH_INDEPENDENT_REPAIR",
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "a1ff93577685acd461b154b04e0c1aa0c65645c8",
+        "path": "reports/fei-2026-10-11/verification/B09_interval_repair_20261011/REPORT.md"
+      },
+      "contributors": [
+        "B09 original construction",
+        "concurrent interactive certificate repair"
+      ],
+      "review_records": [],
+      "proof_dependencies": [],
+      "scope_exclusions": [
+        "Not a proof of full FEI or its failure.",
+        "Does not accept the complete B09 auxiliary theorem.",
+        "Does not prove that every O(p) endpoint correction is impossible."
+      ],
+      "repair": "Original signed logarithm interval division had wrong denominator ordering for negative numerators; corrected by extrema over all four corner quotients.",
+      "supersedes": [
+        "original B09 interval implementation as a rigorous certificate"
+      ],
+      "refutes": [
+        "universal arbitrary-product-bias J_A<=M_A"
+      ],
+      "next_consumers": [
+        "B09",
+        "B17",
+        "B18",
+        "B19",
+        "B20"
+      ],
+      "first_unproved_line": null
+    }
+  ],
+  "gaps": [
+    {
+      "gap_id": "G-J-COST",
+      "title": "Complete conditioned posterior witness cost",
+      "lead_packet": "A006",
+      "consumer_streams": [
+        "B01",
+        "B02",
+        "B03",
+        "B04",
+        "B08"
+      ],
+      "exact_open_obligation": "Prove R_f <= K I(f) universally for a fixed finite K, including normalizers, roots, ranks, labels and posterior entropy; or a new explicit broad class.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-R-SELECT",
+      "title": "Existential coordinate or proper-block selection",
+      "lead_packet": "A026",
+      "consumer_streams": [
+        "B05",
+        "B06",
+        "B13"
+      ],
+      "exact_open_obligation": "Prove an actual physical selection rule with universally paid total entropy decrease; a local all-coordinate bound is not available.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-R-MISMATCH",
+      "title": "Nonlocal mismatch/KL tree payment",
+      "lead_packet": "A064",
+      "consumer_streams": [
+        "B05",
+        "B06",
+        "B08",
+        "B13"
+      ],
+      "exact_open_obligation": "Pay the full tree sum of mismatch logarithms minus KL credit, PLUS terminal entropy, without reusing physical influence.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-BOOLEANITY",
+      "title": "Full signed Booleanity entropy mechanism",
+      "lead_packet": "A031",
+      "consumer_streams": [
+        "B01",
+        "B07",
+        "B08",
+        "B14"
+      ],
+      "exact_open_obligation": "Use a consequence of full signed Booleanity absent from the already refuted finite-prefix relaxations to bound a precise entropy term.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-PHASE-COND",
+      "title": "Conditional spectral entropy after phase marginal control",
+      "lead_packet": "A034",
+      "consumer_streams": [
+        "B07",
+        "B14",
+        "B16"
+      ],
+      "exact_open_obligation": "Bound the unpaid conditional spectral entropy under a proved structural condition that does not silently contain an arbitrary tensor factor.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-BIASED-LTF",
+      "title": "Arity-uniform corrected FEI+ for weighted biased thresholds",
+      "lead_packet": "A041",
+      "consumer_streams": [
+        "B09",
+        "B12",
+        "B14"
+      ],
+      "exact_open_obligation": "Find a replacement inequality surviving all three weighted-threshold controls, with all biases and variance-deficit normalization explicit.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-LOWSEL-COLLISION",
+      "title": "Low-energy or reused-selector collision payment",
+      "lead_packet": "A019",
+      "consumer_streams": [
+        "B03",
+        "B04",
+        "B06",
+        "B12"
+      ],
+      "exact_open_obligation": "Derive a genuinely new unbounded selector class or pay complete collision cost where I_sel/a tends to zero; the positive-energy corollary is already proved.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    },
+    {
+      "gap_id": "G-BIASED-TAX",
+      "title": "Biased restriction tax: review and global payment",
+      "lead_packet": "A041",
+      "consumer_streams": [
+        "B09",
+        "B12",
+        "B13",
+        "B19"
+      ],
+      "exact_open_obligation": "Review B09 core lemma and fixed counterexample; distinguish an available tax from an optimal or necessary tax, then pay a valid term without repeated charges.",
+      "status": "OPEN",
+      "attempt_history": [],
+      "stagnant_substantive_attempts": 0
+    }
+  ],
+  "baseline_sources": [
+    {
+      "repository": "yspennstate/fourier-entropy-threshold-functions",
+      "commit": "cd27aa96a5bb670a5b3ae5451095b7020db8e9d4",
+      "path": "paper/main.tex",
+      "sha256": "5cff9d1b91c92883a6d35ec7674ff5953365cadc85299747e4047d9deb150dac"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "bfb1d10b25cb5cb2e09112357cd24b21b5b1fe5e",
+      "path": "research_pushes/2026-10-11-full-fei-100-agents/SEED_LEMMAS.md",
+      "blob_sha": "c575d18146a9a9d2bdee006dc3856947565442bc"
+    },
+    {
+      "path": "verification/plan_mathematical_audit_2026-10-11.md",
+      "role": "audited source map; follow its immutable originals for proofs"
+    }
+  ],
+  "propagation_events": [
+    {
+      "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+      "version": 1,
+      "event": "NARROW_LOCAL_HELPER_REFUTED",
+      "consumers": [
+        "B05",
+        "B06",
+        "B08",
+        "B10",
+        "B13",
+        "B20"
+      ],
+      "delivery_state": "Plan revision prepared; actual schedule deployment recorded separately.",
+      "downstream_mathematical_use": "NOT_INFERRED_FROM_RECEIPTS"
+    }
+  ],
+  "statement_hash_convention": "SHA256 of UTF-8 json.dumps({statement: exact_statement, hypotheses: hypotheses}, sort_keys=True, separators=(comma, colon)); strings stored as written.",
+  "current_public_release": {
+    "commit": "b38ba0ab49618ccbe6d1518a34c141dcec9f247c",
+    "source_sha256": "85e9c4f36026eb5890be5686d03bf5264e524144686ee203ed799e3d41ac7017",
+    "pdf_sha256": "e7c8c3d7f2324f0a0720368f08ba8cbd2eeadad015bacbef4564080fd534f490",
+    "change": "Data availability paragraph only; audited mathematical baseline remains pinned separately."
+  }
+}
+PACKET STRUCTURE ['schema', 'revision', 'snapshot_at', 'owner', 'interpretation', 'coverage', 'packets', 'unadopted_live_outputs', 'unassigned_stream_review_queue', 'queue_rule']
+PACKET {
+  "packet_id": "A081",
+  "stream": "B17",
+  "topic": "Dependency certificates",
+  "execution_status": "OPEN",
+  "deliverable_status": "NOT_YET_ADOPTED_IN_THIS_INDEX",
+  "mathematical_status": "RECOVERED_BASELINE",
+  "gap_id": null,
+  "attempt_history": [],
+  "latest_verified_artifact": null,
+  "next_action": "Select the packet at dispatch; freeze its exact gap, source versions and bounded first cycle from AGENT_ASSIGNMENTS.json.",
+  "unreviewed_complete_claims": 0,
+  "work_type": "baseline_interface",
+  "design_target_id": "FEI-B17-A081-INITIAL"
+}
+INVENTORY [
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\CURRENT_STATUS.md",
+    "sha256": "e1e7a458d9bda5274392e6b2b3595f293232e83043911c40dd82bf30db4488a6",
+    "bytes": 8105,
+    "lines": 57
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\README.md",
+    "sha256": "faeccdb8c3899208da58ee76597288460b3f35cb08a5e539a051407dcc134692",
+    "bytes": 6592,
+    "lines": 48
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\TASK_EXECUTION.md",
+    "sha256": "43625f33789534536ab4ba440a736460d0e252f93c735f2a5272d062ede3a4f4",
+    "bytes": 2337,
+    "lines": 13
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\AGENT_ASSIGNMENTS.json",
+    "sha256": "ef0590ed703d1da25059aa01953901fc38e426e5387b612303e2d0589b90cc6e",
+    "bytes": 925605,
+    "lines": 16169
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\CLAIM_REGISTRY.json",
+    "sha256": "b465c6ffc2c83e4248c9c268d46e813a6584ab0af25466f53f82ffce56ef74b2",
+    "bytes": 13424,
+    "lines": 323
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\EXECUTION_PROTOCOL.json",
+    "sha256": "5817c4d0df3d09678fbed838901de91d9377535173553432441ecc537b26d594",
+    "bytes": 10806,
+    "lines": 250
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\MANIFEST.json",
+    "sha256": "9823c5046367f18a99b8537403eebf78ce582530ee54d278c6d58b5f766cc992",
+    "bytes": 3614,
+    "lines": 81
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\OBSTRUCTION_REGISTRY.json",
+    "sha256": "e3f95c2b14855cd3274a05d8c3d3eb061e35aa8eb6d853045a228e4160277433",
+    "bytes": 10833,
+    "lines": 305
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\PACKET_PROGRESS.json",
+    "sha256": "86f6ffb79092c41da3ce8653135b43086bfdd889947c2760b05db11ee604e0a1",
+    "bytes": 79348,
+    "lines": 1392
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\PACKET_STATUS.json",
+    "sha256": "5501f1b84b79ccfa829e8b9b1bd2a54c20f2354721c3b8d13b98c77f8cc29606",
+    "bytes": 66954,
+    "lines": 1592
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\PUBLICATION_RECEIPTS.json",
+    "sha256": "8c25c71997c0249673c35266b1d744862d920b2ccf226fa0b52a678a101ee036",
+    "bytes": 2418,
+    "lines": 53
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\REPORT_PACKAGE_MANIFEST.json",
+    "sha256": "dcbd8953815ece099052c1ce44f7960ec430b5d06f18d7876dc9697593090a7e",
+    "bytes": 13962,
+    "lines": 346
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\STREAM_NEXT_ACTIONS.json",
+    "sha256": "66147c7ee85b7ea5b6ef1c3323bd19b1ade00b47adeb5354c627b71412644171",
+    "bytes": 13048,
+    "lines": 469
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\FEI_100_agent_research_plan.tex",
+    "sha256": "9c48b99436725bf85da2858172957accf5790a59089a5def8af9e6ed4a3a87d0",
+    "bytes": 161069,
+    "lines": 1406
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B19\\20261011T195038Z-fleet01-B19-independent-review\\CLAIMS.json",
+    "sha256": "394f3eefc67808c3ef9c9f83b530b28cf61c893889cd1a94ccc31d39185095f1",
+    "bytes": 1595,
+    "lines": 40
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B19\\20261011T195038Z-fleet01-B19-independent-review\\INDEPENDENT_CHECK.py",
+    "sha256": "33e9d2cc48af73ce6d683fe6f918fb97a448fcd7043c38bffe10017c2dcefbf3",
+    "bytes": 3412,
+    "lines": 131
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B19\\20261011T195038Z-fleet01-B19-independent-review\\REPORT.md",
+    "sha256": "9ab6f5d78f827c91fc820bdb4f3adb15f0040c14afd250ab9faf8d9cf19693cc",
+    "bytes": 8787,
+    "lines": 254
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B09\\20261011T195500Z-fleet01-B09-biased-restriction-uncertainty\\BIASED_OUTPUT.json",
+    "sha256": "bf2213097ee2a5e893e9ae26ccf5d279de7d4baa68eaf7b1f3d8b8209926cf61",
+    "bytes": 8127,
+    "lines": 334
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B09\\20261011T195500Z-fleet01-B09-biased-restriction-uncertainty\\CHECKER_OUTPUT.json",
+    "sha256": "ce38d27918a4e48bbb59a4e6a0e5ad1de47652e3dc9253146ed1f86f5930ba1e",
+    "bytes": 6624,
+    "lines": 376
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B09\\20261011T195500Z-fleet01-B09-biased-restriction-uncertainty\\check_biased_and_counterexample.py",
+    "sha256": "f0b25852fb23f91ebeb00b48b3a9043c730ee130298dc6846e3213ff6b7dc242",
+    "bytes": 2265,
+    "lines": 79
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B09\\20261011T195500Z-fleet01-B09-biased-restriction-uncertainty\\check_biased_restriction.py",
+    "sha256": "75cc0358640182a9107e6a1510003bef2277592e85cb91cd41f036c0378c0cbc",
+    "bytes": 3423,
+    "lines": 101
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B09\\20261011T195500Z-fleet01-B09-biased-restriction-uncertainty\\check_numaro_multiplicity.py",
+    "sha256": "e52ff4a5baa8c25733d3ae796859ed8eb3a3ddddc89bc72bc0e77c207d8c2821",
+    "bytes": 2319,
+    "lines": 55
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B09\\20261011T195500Z-fleet01-B09-biased-restriction-uncertainty\\check_restriction_multiplicity.py",
+    "sha256": "34dfbde8a4493ff482d15833f87d2ef4899a118225e5270bcf123f8ca42aff69",
+    "bytes": 4294,
+    "lines": 150
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B09\\20261011T195500Z-fleet01-B09-biased-restriction-uncertainty\\INTERVAL_OUTPUT.txt",
+    "sha256": "23965c1a1a9a175dc2f5e3dbfeeef5d09d320c60c18a9d97ccc6bf540350f168",
+    "bytes": 325,
+    "lines": 8
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B09\\20261011T195500Z-fleet01-B09-biased-restriction-uncertainty\\NUMARO_OUTPUT.json",
+    "sha256": "42e5bca15c054b662e0965f59170896a0b86cda2bafab26b6317da6ddc2f0e02",
+    "bytes": 6884,
+    "lines": 285
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B09\\20261011T195500Z-fleet01-B09-biased-restriction-uncertainty\\REPORT.md",
+    "sha256": "9b20e8b545cf9a05e31e3ae667b292ff4d70b13b09f8917b70d4810235e257e8",
+    "bytes": 14689,
+    "lines": 379
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B05\\20261011T193057Z-fleet01-B05-rare-restrictions\\CHECK.py",
+    "sha256": "02f6f7c70aa89b7d713a4c5913800549c5a5bf19091fdf010a750c85fb73f178",
+    "bytes": 2293,
+    "lines": 75
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B05\\20261011T193057Z-fleet01-B05-rare-restrictions\\CLAIMS.json",
+    "sha256": "362f98d97330b2955506b6c2b6e78c82f868dbe29405ff7f03b4ed1a6b2893c1",
+    "bytes": 1832,
+    "lines": 45
+  },
+  {
+    "path": "~\\mop_fei100\\reports\\fei-2026-10-11\\runs\\B05\\20261011T193057Z-fleet01-B05-rare-restrictions\\REPORT.md",
+    "sha256": "8a9ca323ca6be6ab66d7b76749565309f0c6db400b2971254e47ff776102d0e3",
+    "bytes": 10963,
+    "lines": 279
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\CAMPAIGN.md",
+    "sha256": "c1c9ec51de448075561edb0ec5fa08090bbfc4ca9ecbc0f60a1b3770ef7b58f0",
+    "bytes": 9560,
+    "lines": 75
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\CLAIMS.md",
+    "sha256": "595d0469b9fb722a7a3de0296f636816bf94dafb147cf3d6832585ba0271a185",
+    "bytes": 13253,
+    "lines": 86
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\COUNTEREXAMPLES.md",
+    "sha256": "168979e42936d784879965a1bf2b4abecc52d81a5739a58d92fe2fb1be81fc8a",
+    "bytes": 13660,
+    "lines": 127
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\NATIVE_MAPPING.md",
+    "sha256": "b5f3776d3ee53323d9d561020fddfb9a26198d2aff7799002a7e2954e2d8dacf",
+    "bytes": 7176,
+    "lines": 95
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\REPORT.md",
+    "sha256": "4c738492c144409386dec541b75c5caf3a5261ba14a06bb7b653d9a56fa9e68b",
+    "bytes": 60181,
+    "lines": 731
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\REVIEW.md",
+    "sha256": "d892a73a4211e19d4e4a0f2bf18905e538c6be66f6f8bd3df015d8237b1c3d59",
+    "bytes": 2499,
+    "lines": 23
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\SEED_LEMMAS.md",
+    "sha256": "7381273c5e374727f6069a06390e60a6463bccead35c46a9ff1f652e55366dc3",
+    "bytes": 14495,
+    "lines": 368
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\SOURCES_README.md",
+    "sha256": "bd5e0f0cebc7372a148aabddaea650acc42f89b7a888bbe2b74229a82ec02c4f",
+    "bytes": 2260,
+    "lines": 22
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ADDENDUM_11_26_CRITICAL_RARE_MOMENT.md",
+    "sha256": "7a00cb5f5c2334a578f0b2d4126e99747b6628de584605466d334c85bc08762b",
+    "bytes": 2374,
+    "lines": 16
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md",
+    "sha256": "644820cbdc68089a62719c4adc4e3604ef55f778bd07e3e702c7f46fac50c002",
+    "bytes": 3720,
+    "lines": 34
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\BLOCK_RESTRICTION_IDENTITY_2026-09-18.md",
+    "sha256": "57e100efe1e153a0f7bd1d2b7997b77d8c68e73f37440a5d21ea62a4903534d5",
+    "bytes": 6351,
+    "lines": 128
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_REDUCTION.md",
+    "sha256": "eab8a37cae78930ad4c252be2297e024fc585a063969b6829433fe496a6008b1",
+    "bytes": 7095,
+    "lines": 137
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_RIGIDITY.md",
+    "sha256": "9a88f9b9faeb929c276f959d20afadebc870b84a02dff35c82be6bdaa391ddd4",
+    "bytes": 7463,
+    "lines": 115
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md",
+    "sha256": "cb118c45df4f99677fda0d565a528c8804067cb5921dc00208a92138920be77b",
+    "bytes": 9263,
+    "lines": 151
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\GAMMA_ENDPOINT_LEDGER.md",
+    "sha256": "6e48127f0aa408cce6bb9d54e09944dfe7efa2ba3a8a3d91c89d8193ec5ad6f6",
+    "bytes": 8787,
+    "lines": 119
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ISOSPECTRAL_SPLICING_CURATED.md",
+    "sha256": "60166e3778d93cd6b8ca4b50179966a7ca8476cf2d27e8778e040ea88b91ddea",
+    "bytes": 20847,
+    "lines": 694
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\LOG_ALLOCATION_CURATED.md",
+    "sha256": "69e77dd608b00608fbbfbea355b9a098f9f2588193dfc5ccfa0f1df7ddc58b56",
+    "bytes": 9417,
+    "lines": 151
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ONE_BIT_ENDPOINT.md",
+    "sha256": "d79aa2322729726a3ab25e91f80c20668ad06b79d47eec7c925eda25614e4d79",
+    "bytes": 6861,
+    "lines": 93
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\OVERLAPPING_PRODUCT_NOTE.md",
+    "sha256": "c9a1227e3d2c58d35966acdb205a5a0efb97866fae08b494bdea26a4ace36839",
+    "bytes": 3121,
+    "lines": 16
+  },
+  {
+    "path": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ROUTE_MAP_CURATED.md",
+    "sha256": "d81378ac439f33703b3c3a051de8074c16f7fbe9566d11c9570017138514ed20",
+    "bytes": 70205,
+    "lines": 408
+  },
+  {
+    "path": "~\\brain_workers\\FEI100_20261011\\context\\percolation_spectral_pivotal_entropy_30pp.txt",
+    "sha256": "d33469ce69f21137a9620927df39c33ff65ef45f54f8be2fec8a55210d46c8b6",
+    "bytes": 110843,
+    "lines": 2276
+  },
+  {
+    "path": "~\\brain_workers\\FEI100_20261011\\context\\percolation_spectral_pivotal_entropy_31pp_other_version.txt",
+    "sha256": "4f09cf6e96559f5c7bbbe67e4f15ba34017770fc498f4bc178c928419189e00b",
+    "bytes": 109922,
+    "lines": 2219
+  },
+  {
+    "path": "~\\brain_workers\\FEI100_20261011\\context\\threshold_paper_29pp_earlier_version.txt",
+    "sha256": "056e86b12567f3ba766d4aaeb8beb97042151eee3094c1bcd0d27e6ca32a1007",
+    "bytes": 98102,
+    "lines": 2097
+  },
+  {
+    "path": "~\\brain_workers\\FEI100_20261011\\context\\threshold_paper_38pp.txt",
+    "sha256": "36a5953075759ea1085b005cb92352d364693c45a37fc35260d3b39f21cde20c",
+    "bytes": 132312,
+    "lines": 2817
+  }
+]
+ASSIGNMENT {
+  "agent_id": "A081",
+  "interface": "statement-version schema",
+  "dependency_kind": "ADVISORY_REUSE",
+  "required_to_start": false,
+  "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+}
+ASSIGNMENT {
+  "agent_id": "A081",
+  "interface_use": "exact theorem and gap map"
+}
+ASSIGNMENT {
+  "agent_id": "A081",
+  "interface_use": "normalization ledger"
+}
+ASSIGNMENT {
+  "agent_id": "A081",
+  "stream": "B17",
+  "stream_name": "Certificates and finite-to-infinite bridges",
+  "topic": "Dependency certificates",
+  "assignment": "Encode the accepted proof dependency graph with exact statement versions, hypotheses, units, source pins, and unresolved leaves. Reject any cycle passing through the final FEI claim.",
+  "original_assignment": "Encode the accepted proof dependency graph with exact statement versions, hypotheses, units, source pins, and unresolved leaves. Reject any cycle passing through the final FEI claim.",
+  "assignment_revision_note": "Original task retained; packet-specific tests include recovered baselines and scope corrections.",
+  "work_type": "baseline_interface",
+  "priority": {
+    "band": "P0",
+    "rationale": "Immediate campaign work: closes a primary J/R interface, attacks its unpaid term, certifies a decisive falsifier, or removes a review/execution bottleneck."
+  },
+  "initial_execution_status": "OPEN",
+  "mathematical_status": "RECOVERED_BASELINE",
+  "gap_id": "FEI-B17-A081-INITIAL",
+  "claim_id": null,
+  "target_statement": "Encode the accepted proof dependency graph with exact statement versions, hypotheses, units, source pins, and unresolved leaves. Reject any cycle passing through the final FEI claim.",
+  "baseline_source_ids": [
+    "threshold_source",
+    "reductions_main",
+    "brain_route_map"
+  ],
+  "advisory_method_tags": [
+    "F01",
+    "F02",
+    "F06",
+    "F16",
+    "F18",
+    "F19"
+  ],
+  "upstream_packets": [
+    {
+      "agent_id": "A001",
+      "interface": "exact theorem and gap map",
+      "dependency_kind": "ADVISORY_REUSE",
+      "required_to_start": false,
+      "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+    },
+    {
+      "agent_id": "A004",
+      "interface": "normalization ledger",
+      "dependency_kind": "ADVISORY_REUSE",
+      "required_to_start": false,
+      "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+    },
+    {
+      "agent_id": "A096",
+      "interface": "complete accepted-result records",
+      "dependency_kind": "ADVISORY_REUSE",
+      "required_to_start": false,
+      "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+    }
+  ],
+  "proof_dependencies": [],
+  "proof_dependency_status": "DECLARE_AND_SOURCE_PIN_PER_ATTEMPT; empty design list does not assert a dependency-free proof.",
+  "deliverables": [
+    {
+      "deliverable_id": "A081-D1",
+      "description": "PROOF_DEPENDENCIES.json: versioned mathematical statements and unresolved leaves",
+      "initial_status": "OPEN"
+    },
+    {
+      "deliverable_id": "A081-D2",
+      "description": "DEPENDENCY_VALIDATOR.md: source/hypothesis/unit and cycle checks",
+      "initial_status": "OPEN"
+    }
+  ],
+  "acceptance_criteria": [
+    "Treat mathematical implication edges separately from advisory packet reuse and reviewer routing.",
+    "Every accepted lemma has a complete source, immutable revision, hypotheses, and evidence state; an OPEN target cannot be silently treated as proved.",
+    "Reject a proof cycle containing the desired FEI theorem, and preserve any genuinely conditional theorem with its unproved premise visible."
+  ],
+  "next_consumers": [
+    {
+      "agent_id": "A001",
+      "interface_use": "statement-version schema"
+    },
+    {
+      "agent_id": "A083",
+      "interface_use": "exact accepted statement/version"
+    },
+    {
+      "agent_id": "A090",
+      "interface_use": "exact statement graph and original sources"
+    },
+    {
+      "agent_id": "A096",
+      "interface_use": "versioned mathematical dependency graph"
+    },
+    {
+      "agent_id": "A098",
+      "interface_use": "proof-status evidence"
+    },
+    {
+      "agent_id": "A099",
+      "interface_use": "accepted versioned proof graph"
+    }
+  ],
+  "reviewers": [
+    {
+      "agent_id": "A090",
+      "role": "PRIMARY_INDEPENDENT_REVIEW",
+      "required_when": "A completed mathematical, baseline, certificate, or review artifact is proposed for acceptance.",
+      "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+    },
+    {
+      "agent_id": "A094",
+      "role": "SECOND_OR_ALTERNATE_REVIEW",
+      "required_when": "A major new theorem/counterfamily needs another review, or the primary reviewer must recuse; full-FEI complete-chain requirements are specified separately.",
+      "independence_requirement": "The nominated reviewer must not have authored, repaired, or materially contributed the claim being approved. If that condition fails, record recusal and select an uninvolved alternative with matching mathematical scope."
+    }
+  ],
+  "initial_pilot": {
+    "work_cycles": 1,
+    "budget_kind": "CAP_NOT_MANDATORY_SPEND",
+    "first_cycle_output": "PROOF_DEPENDENCIES.json: versioned mathematical statements and unresolved leaves",
+    "final_cycle_gate": "Apply the packet-specific acceptance criteria, save the complete derivation or exact first gap, and route the result to the nominated independent reviewer.",
+    "renewal_milestone": "One usable dependency schema and baseline graph are accepted; update only when a source statement/version changes.",
+    "no_progress_action": "After the pilot, record the exact unresolved line and changed approach needed. Retire an accepted baseline; pause a falsified helper; otherwise choose a distinct hypothesis, proof mechanism, or targeted falsifier before renewal.",
+    "actual_cycles_used": 0
+  },
+  "concurrent_contract_at_a1ff935": {
+    "input_packet_ids": [
+      "A001",
+      "A003"
+    ],
+    "completion_criterion": "A versioned proof graph contains exact statements, units, source pins, accepted and open leaves, and no proof-dependency cycle; a changed or refuted ancestor invalidates downstream acceptance.",
+    "suggested_review_packets": [
+      "A090",
+      "A094"
+    ],
+    "baseline_guard": "Read the installed status and relevant supplement CLAIMS/COUNTEREXAMPLES/SEED_LEMMAS. Existing identities and C035 closure are calibration inputs, not new progress.",
+    "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap."
+  },
+  "owner_native_stream": "B17",
+  "input_packet_ids": [
+    "A001",
+    "A003",
+    "A004",
+    "A096"
+  ],
+  "completion_criterion": "Treat mathematical implication edges separately from advisory packet reuse and reviewer routing. Every accepted lemma has a complete source, immutable revision, hypotheses, and evidence state; an OPEN target cannot be silently treated as proved. Reject a proof cycle containing the desired FEI theorem, and preserve any genuinely conditional theorem with its unproved premise visible.",
+  "suggested_review_packets": [
+    "A090",
+    "A094"
+  ],
+  "baseline_guard": "Use OBSTRUCTION_REGISTRY.json and the matrix recovered baselines at their exact scopes; do not repeat already proved positive-energy selector closure or the three already refuted weighted-threshold payments.",
+  "blocked_input_action": "Read available source originals, derive the needed input locally, or produce a precisely scoped repair/obstruction while retaining this native lane; record any unresolved gap.",
+  "supplemental_F_groups": [
+    "F01",
+    "F02",
+    "F06",
+    "F16",
+    "F18",
+    "F19"
+  ]
+}
+ASSIGNMENT {
+  "agent_id": "A081",
+  "interface": "exact accepted statement/version",
+  "dependency_kind": "ADVISORY_REUSE",
+  "required_to_start": false,
+  "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+}
+ASSIGNMENT {
+  "agent_id": "A081",
+  "interface": "exact statement graph and original sources",
+  "dependency_kind": "ADVISORY_REUSE",
+  "required_to_start": false,
+  "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+}
+ASSIGNMENT {
+  "agent_id": "A081",
+  "interface": "versioned mathematical dependency graph",
+  "dependency_kind": "ADVISORY_REUSE",
+  "required_to_start": false,
+  "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+}
+ASSIGNMENT {
+  "agent_id": "A081",
+  "interface_use": "complete accepted-result records"
+}
+ASSIGNMENT {
+  "agent_id": "A081",
+  "interface": "proof-status evidence",
+  "dependency_kind": "ADVISORY_REUSE",
+  "required_to_start": false,
+  "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+}
+ASSIGNMENT {
+  "agent_id": "A081",
+  "interface": "accepted versioned proof graph",
+  "dependency_kind": "ADVISORY_REUSE",
+  "required_to_start": false,
+  "reuse_condition": "Reuse only the complete reviewed/proved interface actually needed. Frozen baseline sources permit independent starts; an unproved upstream endpoint is never an assumed lemma."
+}
+
+SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\baseline\current-threshold-paper.tex
+1790: \section{Composition and strong entropy}\label{comp:section}
+1791: 
+1792: We use the product-measure composition principle of O'Donnell and Tan \cite{ODT13}. The exact identities below record the entropy and deficit cancellation.
+1793: 
+1794: Let \(f_i\) be Boolean functions on mutually disjoint input blocks with product laws \(\mu_i\). Let \(\eta_i=\mathbb E_{\mu_i}f_i\) and \(v_i=1-\eta_i^2>0\). Let \(g\) be a Boolean function on the independent outputs, endowed with the product law \(\eta\) in \(\{-1,1\}\) notation. Set \(F=g(f_1,\ldots,f_m)\). Let \[
+1795:  a_i=\frac{\I_i^\eta(g)}{v_i}.
+1796: \]
+1797: 
+1798: \begin{proposition}[Exact composition identities]\label{comp:identities}
+1799: 
+1800: \begin{equation}\label{comp:eq-6-1}
+1801: \mathcal E_\mu(F)=\mathcal E_\eta(g)
+1802:                    +\sum_i a_i\mathcal E_{\mu_i}(f_i),
+1803: \end{equation} \begin{equation}\label{comp:eq-6-2}
+1804: \I_\mu(F)=\sum_i a_i \I_{\mu_i}(f_i),
+1805:  \qquad
+1806:  \operatorname{Var}_\mu(F)=\operatorname{Var}_\eta(g),
+1807: \end{equation} \begin{equation}\label{comp:eq-6-3}
+1808: \Delta_\mu(F)=\Delta_\eta(g)+\sum_i a_i\Delta_{\mu_i}(f_i).
+1809: \end{equation}
+1810: 
+1811: \end{proposition}
+1812: \begin{proof}
+1813: 
+1814: The centered normalized output of block \(i\) expands as \[
+1815:  \frac{f_i-\eta_i}{\sqrt{v_i}}
+1816:     =\sum_{T\ne\varnothing}
+1817:            \frac{\widehat f_i(T)}{\sqrt{v_i}}\phi_T.
+1818: \] For a nonempty union \(S=\bigcup_{i\in A}T_i\), where every \(T_i\) is nonempty and contained in block \(i\), substitution into the \(\eta\)-biased Fourier expansion of \(g\) gives \begin{equation}\label{comp:eq-6-4}
+1819: \widehat F_\mu(S)
+1820:     =\widehat g_\eta(A)
+1821:         \prod_{i\in A}\frac{\widehat f_i(T_i)}{\sqrt{v_i}}.
+1822: \end{equation} There is exactly one possible \(A\) and one collection \((T_i)\) for each \(S\), so there is no interference between different decompositions. Equivalently, sample \(A\) from the squared Fourier spectrum of \(g\), and for each \(i\in A\) independently sample a nonempty \(T_i\) from the law \(\widehat f_i(T_i)^2/v_i\). The union has the squared Fourier law of \(F\).
+1823: 
+1824: The logarithm in the corrected entropy splits: \[
+1825:  \ln\frac{\sigma_S^2}{\widehat F_\mu(S)^2}
+1826:  =
+1827:  \ln\frac{\prod_{i\in A}v_i}{\widehat g_\eta(A)^2}
+1828:   +\sum_{i\in A}
+1829:        \ln\frac{\sigma_{T_i}^2}{\widehat f_i(T_i)^2}.
+1830: \] Taking expectations gives \eqref{comp:eq-6-1}, because the probability that \(i\in A\) is \(\I_i^\eta(g)\). Taking expected cardinalities in \eqref{comp:eq-6-4} gives the influence identity. The variance identity follows from the output distribution, or from its constant coefficient. Finally \[
+1831:  \sum_i a_iv_i=\I_\eta(g),
+1832: \] which proves \eqref{comp:eq-6-3}.
+1833: 
+1834: \end{proof}
+1835: 
+1836: \begin{corollary}[Constant-preserving composition]\label{comp:closure}
+1837: 
+1838: If \(g\) satisfies biased FEI+ with bit constant \(C_0\) under its induced product law and every \(f_i\) satisfies biased FEI+ with bit constant \(C_i\), then \[
+1839:  \HH_\mu^+(F)\le\max(C_0,C_1,\ldots,C_m)\Delta_\mu(F).
+1840: \]
+1841: 
+1842: \end{corollary}
+1843: \begin{proof}
+1844: 
+1845: This is immediate from \eqref{comp:eq-6-1} and \eqref{comp:eq-6-3}, since every deficit and \(a_i\) is nonnegative. Constant child outputs are fixed and removed before applying the identity.
+1846: 
+1847: \end{proof}
+1848: 
+1849: \begin{corollary}[Read-once threshold and parity formulas]\label{comp:threshold-formulas}
+1850: 
+1851: Every read-once formula built from \(T_{t,r}\) gates and parity gates, with arbitrary fan-ins and negations, satisfies \[
+1852:  \HH_\mu^+(f)\le C_T\Delta_\mu(f),\qquad C_T<744,
+1853: \] under every product measure on its original inputs. Depth and intermediate biases do not appear in the constant.
+1854: 
+1855: \end{corollary}
+1856: \begin{proof}
+2323: 
+2324: For a concrete pair with shared data, take
+2325: \[
+2326:  g_+(y)=\operatorname{Maj}_3(y_1,y_2,y_3),\qquad
+2327:  g_-(y)=\operatorname{Maj}_3(y_1,-y_2,y_4).
+2328: \]
+2329: Their common nonzero Fourier indices are $\{1\}$ and $\{2\}$, whose
+2330: inner-product contributions cancel. The two branches are therefore
+2331: orthogonal despite sharing two inputs. Their one-bit multiplexer has
+2332: two spectral atoms of mass $1/4$ and eight of mass $1/16$, and hence
+2333: $\HH(F)=3$ and $\I(F)=2$.
+2334: 
+2335: \subsection{Unrestricted selectors and the optimal FEI constant}
+2336: 
+2337: Given a balanced Boolean $g$, let
+2338: \[
+2339:  M_g(x,y_1,y_2)=\frac{1+g(x)}2y_1+\frac{1-g(x)}2y_2.
+2340: \]
+2341: The exact identities give
+2342: \[
+2343:  \HH(M_g)=2+\frac12\HH(g),\qquad \I(M_g)=1+\frac12\I(g).
+2344: \]
+2345: Consequently FEI on the class of these two-cell selectors is equivalent
+2346: to full FEI, with the same optimal universal full-FEI constant.
+2347: To prove the nontrivial implication without an additive loss, take an
+2348: arbitrary Boolean $f$, its tensor power on $t$ independent input blocks,
+2349: and balance it with a fresh sign:
+2350: \[
+2351:  g_t(x^{(1)},\ldots,x^{(t)},z)
+2352:    =z\prod_{r=1}^t f(x^{(r)}).
+2353: \]
+2354: Then
+2355: \[
+2356:  \HH(g_t)=tH(f),\quad \I(g_t)=tI(f)+1,
+2357: \quad \HH(M_{g_t})=2+\tfrac t2\HH(f),\quad
+2358:  \I(M_{g_t})=\tfrac32+\tfrac t2\I(f).
+2359: \]
+2360: If $\HH(M_g)\le C \I(M_g)$ for every balanced $g$, divide the corresponding
+2361: inequality by $t/2$ and let $t\to\infty$ to obtain $\HH(f)\le C \I(f)$.
+2362: The converse holds because every $M_g$ is Boolean.
+2363: 
+2364: The entropy of choosing a selector label is always bounded by $2D$.
+2365: For arbitrary cells, the unresolved term is the normalized Fourier
+2366: entropy inside the selected cell. A cheap label description alone does
+2367: not establish a uniform bound for that term.
+2368: 
+2369: \subsection{Rare activation and the optimal FEI constant}\label{sec:rare-equivalence}
+2370: 
+2371: Rare-activation reductions to small-influence functions appear in
+2372: Wan--Wright--Wu~\cite{WWW14} and Shalev~\cite{Shalev18}.
+2373: The following exact calculation records a version that preserves the
+2374: optimal universal constant.
+2375: 
+2376: Let $g$ be balanced and Boolean, let $A_r$ be the indicator of one point
+2377: on $r\ge1$ fresh control bits, and set
+2378: \[
+2379:  p=2^{-r},\qquad F=1+A_r(g-1).
+2380: \]
+2381: The function $F$ is Boolean and $\P(F=-1)=p/2$.
+2382: \begin{proposition}[Exact activation identities]\label{prop:activation}
+2383: With this notation,
+2384: \begin{align}
+2385:  \HH(F)&=p\HH(g)+2rp(2-p)
+2386:        +(1-p)^2\log\frac1{(1-p)^2},\label{eq:activation-entropy}\\
+2387:  \I(F)&=p\bigl(\I(g)+r\bigr).\label{eq:activation-influence}
+2388: \end{align}
+2389: \end{proposition}
+2390: \begin{proof}
+2391: Write $T$ for a data Fourier set and $U$ for a control Fourier set.
+2392: For $T\ne\varnothing$, the coefficient is
+2393: $p\varepsilon_U\wh g(T)$, where $\varepsilon_U\in\{-1,1\}$ depends
+2394: only on the selected control point. For $T=\varnothing$ and
+2395: $U\ne\varnothing$, it is $-p\varepsilon_U$; the constant coefficient is
+2396: $1-p$. Summing the nonempty-data terms over the $2^r$ control sets gives
+2397: $p\HH(g)+2rp$. The nonempty-control, empty-data terms contribute
+2398: $2rp(1-p)$, and the constant term gives the last term in
+2399: \eqref{eq:activation-entropy}.
+2400: 
+2401: Each data influence is multiplied by $p$. A control bit is pivotal
+2402: precisely when all other controls match the specified point and $g=-1$,
+2403: an event of probability $2^{-(r-1)}/2=p$. Summing proves
+2404: \eqref{eq:activation-influence}.
+2405: \end{proof}
+2406: 
+2407: Let $C_{\rm FEI}$ be the supremum of $\HH(f)/\I(f)$ over nonconstant
+2408: Boolean functions, allowing the value $+\infty$.
+2409: For $\varepsilon,\delta>0$, let $C_{\varepsilon,\delta}^{\rm act}$ be
+2410: the same supremum restricted to the above balanced-core activations
+2411: satisfying $0<\I(F)\le\varepsilon$ and $\P(F=-1)\le\delta$.
+2412: \begin{corollary}\label{cor:activation-equivalence}
+2413: For every $\varepsilon,\delta>0$,
+2414: \[
+2415:  C_{\varepsilon,\delta}^{\rm act}=C_{\rm FEI}.
+2416: \]
+2417: \end{corollary}
+2418: \begin{proof}
+2419: The upper bound follows from inclusion of classes. For the reverse
+2420: bound, fix any nonconstant Boolean $f$ and balance its tensor powers by
+2421: \[
+2422:  g_t=z\prod_{j=1}^t f(x^{(j)}),
+2423:  \qquad \HH(g_t)=t\HH(f),\qquad \I(g_t)=t\I(f)+1.
+2424: \]
+2425: The blocks and the sign $z$ are independent. Take
+2426: $r_t=\lceil2\log(t+1)\rceil$, $p_t=2^{-r_t}$, and activate $g_t$ on a
+2427: point of $r_t$ fresh controls. Then $\I(F_t)\to0$ and
+2428: $\P(F_t=-1)\to0$. Also
+2429: \[
+2430:  \frac{(1-p)^2\log(1/(1-p)^2)}p\longrightarrow2\log e
+2431:  \qquad(p\downarrow0).
+2432: \]
+2433: Dividing \eqref{eq:activation-entropy} and
+2434: \eqref{eq:activation-influence} by $p_t t$ therefore gives
+2435: \[
+2436:  \frac{\HH(F_t)}{\I(F_t)}\longrightarrow
+2437:  \frac{\HH(f)}{\I(f)},
+2438: \]
+2439: since $r_t/t\to0$. For all sufficiently large $t$, the prescribed
+2440: $\varepsilon,\delta$ bounds hold. Taking the supremum over $f$ proves
+2441: the assertion, including the possibility of an infinite supremum.
+2442: \end{proof}
+2443: 
+2444: Thus a uniform estimate for arbitrary sparsely activated cores would
+2445: resolve full FEI. Rarity and small total influence alone impose no
+2446: smaller optimal constant. This conclusion concerns arbitrary cores;
+2447: the structured gate hypotheses in the preceding theorems supply
+
+SOURCE ~\brain_workers\FEI100_20261011\context\percolation_spectral_pivotal_entropy_30pp.txt
+1:      ENTROPY AND SINGULARITY OF SPECTRAL AND PIVOTAL SETS IN
+2:                                              PLANAR PERCOLATION
+3: 
+4:                                                                YITZCHAK SHMALO
+5: 
+6:             Abstract. The spectral sample and pivotal set of a percolation crossing have the same one- and
+7:             two-coordinate inclusion probabilities under the uniform product measure. We prove that both
+8:             Shannon entropies are comparable to total influence for critical square-lattice bond and triangular-
+9:             lattice site crossings, with matching estimates at every retained nonroot spatial resolution. The
+10:             triangular entropy bounds are uniform over a class of inhomogeneous near-critical product measures.
+11:             For critical triangular-site square crossings, the two laws are asymptotically mutually singular: an
+12:             elementary triangular face is forbidden in the pivotal set and occurs with positive density in a
+13:             large spectral sample. Every fixed face density below an explicit threshold has nonempty spectral
+14:             probability comparable to R24(R)2, while the nonempty overlap of the two laws has decay exponent
+15:             11/12. Their minimum expected symmetric-difference distance over all couplings is comparable to
+16:             total influence. Geometric separation persists after independent thinning whenever the retention
+17:             probability R satisfies R3 R24(R)  ; the face detector fails when this quantity tends to zero.
+18:             The proofs combine spatial encoding, arm estimates, local Fourier cancellation, and an exact six-cycle
+19:             coercivity inequality preserved under exterior conditioning.
+20: 
+21:                                        1. Introduction
+22: 
+23:    The spectral sample and the pivotal set are two random subsets associated with a Boolean crossing
+24: function. At the uniform product measure they have the same one- and two-coordinate inclusion
+25: probabilities [6, equation (2.13)]. We prove that their Shannon entropies are also comparable to
+26: the same influence scale, with matching comparisons at each retained nonroot spatial resolution.
+27: For critical triangular-lattice square crossings, we further prove that their laws are asymptotically
+28: mutually singular. The distinction is detected by elementary triangular faces, which occur in a large
+29: spectral sample and are forbidden in a pivotal set.
+30: 
+31:    The entropy estimate answers the square-crossing question in [6, Section 11, Question 1]. Its
+32: pivotal counterpart gives the other square-crossing bound in [11, Conjecture 8]. The singularity
+33: theorem answers the discrete triangular-site case of [6, Section 11, Question 5]. Both questions
+34: appeared in the 2008 preprint of [6], published in 2010. The spectral entropy bound is a percolation
+35: instance of the Fourier entropy�influence conjecture of Friedgut and Kalai [4]; no assertion for
+36: arbitrary Boolean functions is made here. Likewise, the singularity result concerns discrete laws. It
+37: does not establish mutual singularity of their continuum limits or the square-lattice bond analogue.
+38: 
+39: 1.1. The random sets and their entropy. Let f : {0, 1}V  {-1, 1} be an increasing Boolean
+40: 
+41: function under independent coordinate parameters pi  (0, 1). Use the normalized product characters
+42: 
+43:      A (X )                     =        Xi - pi   ,  f^(A) = E[f A].
+44:                                        pi(1 - pi)
+45:                                    iA
+46: 
+47: The spectral sample Sf has law
+48: 
+49: (1)                                    P(Sf = A) = f^(A)2.
+50: 
+51: 2020 Mathematics Subject Classification. 60K35, 42C10, 60G57.
+52: Key words and phrases. Planar percolation, Fourier entropy, pivotal set, spectral sample, singularity.
+53: 
+54:                                        1
+55: 
+56: 2                                    YITZCHAK SHMALO
+57: 
+58: It has total mass one by Parseval. The pivotal set Pf consists of the coordinates whose reversal
+59: changes f . Write
+60: 
+61:            i(f ) = P(i  Pf ),  I(f ) = E|Pf |,                         
+62:                                                 J (f ) = E|Sf | = 4pi(1 - pi)i(f ).
+63: 
+64:                                                                                i
+65: 
+66: The last identity is proved in (18). At the uniform measure, I(f ) = J(f ) and
+67: 
+68: (2)                   P(i  Sf ) = P(i  Pf ), P(i, j  Sf ) = P(i, j  Pf ) (i = j).
+69: 
+70: The two-coordinate identity is recalled in Lemma 6.1. For fair coordinates we also write i = 2Xi - 1,
+71: 
+72: so   A  =         i.
+73: 
+74:               iA
+75: 
+76:     Shannon entropy H and binary entropy h2 are measured in bits. We write log2 for base-two
+77: 
+78: logarithms and ln for natural logarithms. Let Q be a rectangle with horizontal and vertical sides,
+79: 
+80: larger side R, and aspect ratio at most a fixed . Its crossing function is
+81: 
+82:                                        f = 21{Q has an open left�right crossing} - 1.
+83: 
+84: We use the geometric tile convention of [6, Section 2.1]; coordinates are the random tiles meeting Q.
+85: Fix an admissible microscopic inner radius r0 and put
+86: 
+87:                                         m(t) = t24(t), 4(t) = 4(r0, t),
+88: 
+89: where 4 is the critical alternating four-arm probability of the model. On the triangular lattice,
+90: 4(R) = R-5/4+o(1) [17].
+91: 
+92: Theorem 1.1 (Crossing entropy). Fix 0 < p0  1/2,   (0, 1/2), and   1. Consider either of
+93: the following models, in the embeddings of Section 5:
+94: 
+95:      (i) critical bond percolation on the square lattice;
+96:      (ii) triangular-lattice site percolation with independent parameters
+97: 
+98:                       px  [p, 1 - p], p  [p0, 1/2], R  L(p).
+99: 
+100:         Here L is the characteristic length of [12, Section 3.1], with L(1/2) = .
+101: 
+102: There are constants c, C, R0 > 0, depending only on these fixed parameters and the lattice conventions,
+103: such that for every such rectangle with R  R0,
+104: 
+105: (3)        cI(f )  H(Pf )  CI(f ), cJ(f )  H(Sf )  CJ(f ), I(f )  J(f )  m(R).
+106: 
+107: The constants are uniform in the rectangle's location and the admissible parameter profile.
+108: 
+109:    To measure spatial entropy, project the tile centers coordinatewise onto Q and repeatedly bisect
+110: both sides of the rectangle. For s = R2-k, let Zs(A) record the depth-k cells occupied by a set A of
+111: coordinates. The boundary convention and a fixed lattice cutoff s are specified in Section 4. Scales
+112: s  s are called retained scales.
+113: 
+114: Theorem 1.2 (Entropy at each resolution). Under the hypotheses of Theorem 1.1, for every retained
+115: nonroot dyadic scale s  s = R2-k  R/2 and A  {Sf , Pf },
+116: 
+117: (4)                            H(Zs(A))  E|Zs(A)|     m(R)
+118:                                                              .
+119:                                                       m(s)
+120: 
+121: At the root, H(ZR(Pf ))  1, whereas
+122: 
+123: (5)                            H(ZR(Sf )) = h2((Ef )2).
+124: 
+125: For any deterministic offset of an axis-parallel square grid, the entropy upper bound also holds at
+126: every s  s  R, using the same projected centers.
+127: 
+128:    Thus, away from the root, entropy is comparable to the expected number of occupied cells. For
+129: standard critical square crossings, EfR  0 [6, Section 1.3], so the spectral root entropy tends to
+130: zero. Formula (5) records this dependence on the crossing probability.
+131: 
+132:                    ENTROPY AND SINGULARITY IN PERCOLATION                                        3
+133: 
+134: 1.2. Local faces and singularity. For the singularity statements, let R be a positive integer and
+135: let fR be the critical triangular-site crossing sign of [0, R]2. Write �R and R for the laws of SR and
+136: PR, and set
+137: 
+138:                                                   R = (EfR)2 = �R().
+139: 
+140: Let VR be the sites whose tiles meet the square, and let KR(A) count the elementary triangular
+141: faces contained in A whose three tiles lie wholly inside the square. Let VR be the sites whose full
+142: seven-site wheel lies a fixed positive lattice distance inside the square, and put XR = |SR  VR|.
+143: Every tested center is nonterminal and has all six ring neighbors. The fixed boundary collar may be
+144: 
+145: enlarged without affecting the asymptotic conclusions.
+146: 
+147: Theorem 1.3 (Discrete singularity). For critical triangular-site square crossings,
+148: 
+149:                       R(KR > 0) = 0, �R(KR > 0) - 1,        dTV(�R, R) - 1,
+150: where total variation is normalized to lie in [0, 1].
+151: 
+152: In this model, Theorems 1.1, 1.2, and 1.3 therefore give
+153: 
+154:                 H(SR)  H(PR)  m(R),        H(Zs(SR))  H(Zs(PR))                m(R)
+155:                                                                                       ,
+156:                                                                                m(s)
+157: 
+158: at the retained nonroot scales, together with asymptotic singularity of the full laws. Equal first and
+159: 
+160: second inclusion statistics and comparable entropy do not determine the typical local geometry.
+161: 
+162:    Set                                        
+163: (6)                                  8 - 53 1
+164:                      a =                             >,
+165:                                              16         32
+166: 
+167: and define the binary relative entropy in natural units, for 0 < a < 1, by
+168: 
+169:                                                             1-
+170:                    D(a) =  ln + (1 - ) ln ,
+171:                                            a                1-a
+172: 
+173: with the usual zero-term conventions at  = 0, 1.
+174: 
+175: Theorem 1.4 (Finite face bounds). For every R, m > 0, and 0   < a,
+176: 
+177:                 (                                 )         { m             }
+178: 
+179: (7)             P KR(SR)  3 XR, XR  m  exp - 7 D(a) .
+180: 
+181: In particular,
+182: 
+183: (8)                P(KR(SR) = 0, XR  m)  (1 - a)m/7.
+184: 
+185: These bounds hold for every fair site-connection function on a finite triangular-lattice domain, with
+186: the same complete nonterminal-wheel convention.
+187: 
+188: Theorem 1.5 (Triangle-free mass). For critical triangular-site square crossings,
+189: 
+190: (9)                �R(KR = 0, S = )  R24(R)2 = R-1/2+o(1).
+191: 
+192: Consequently �R(KR = 0) = R + R-1/2+o(1).
+193: 
+194: The same sharp scale holds for every fixed 0   < a/3: Theorem 9.3 proves
+195:                                   �R(S = , KR(S)  |S|)  R24(R)2.
+196: 
+197: Conditional on such low face density and nonemptiness, the spectral size has an exponentially
+198: decaying tail up to a vanishing boundary error.
+199: 
+200: Theorem 1.6 (Total variation deficit). For the same square crossings,
+201:                                         1 - dTV(�R, R) = R + R-11/12+o(1).
+202: 
+203: The second term is the overlap on nonempty supports.
+204: 
+205: 4  YITZCHAK SHMALO
+206: 
+207:    The conformal crossing limit gives R  0 [18]. No rate for the empty atom is asserted.
+208: Theorem 10.3 extends discrete singularity to every fixed Jordan quad after conditioning the spectral
+209: sample to be nonempty; the corresponding unconditioned conclusion retains the common empty
+210: atom. Proposition 10.2 extends the finite face bounds to product measures with uniformly bounded
+211: ring parameters. Those finite bounds alone do not supply a near-critical asymptotic singularity
+212: theorem.
+213: 
+214: 1.3. The two uses of local irrelevance. The entropy upper bound encodes occupied cells through
+215: successive spatial refinements. An occupied cell has one of fifteen nonempty four-child masks, so its
+216: contribution is bounded by a constant times its occupancy probability. Four-arm estimates in the
+217: interior and half-plane arm estimates near the boundary control the sum over cells. Positive relative
+218: growth of m then sums the cost over scales. Pete proposed self-similarity and tree descriptions as a
+219: route to the percolation entropy bounds in 2011 [15, slides 21�22]; the spectral local-mass estimate
+220: in [6, Lemma 3.2 and equation (3.7)] is a related antecedent.
+
+SOURCE ~\brain_workers\FEI100_20261011\context\threshold_paper_29pp_earlier_version.txt
+1:      FOURIER ENTROPY OF THRESHOLD FUNCTIONS AND THEIR
+2:                                               COMPOSITIONS
+3: 
+4:                                                         YITZCHAK SHMALO
+5: 
+6:      Abstract. We prove the Fourier entropy�influence inequality for every linear threshold function,
+7:      without restrictions on its weights or threshold. The argument applies to regular Boolean functions
+8:      and gives an O(log(m + 1)) bound for arbitrary Boolean combinations of m such functions. These
+9:      estimates hold after multiplication by any coordinate character and imply bounds by influence
+10:      minus variance. We also obtain an O(log(k + 1)) bound for unions of regular functions in which
+11:      each variable occurs at most k times. For symmetric thresholds under arbitrary product measures,
+12:      we prove the strengthened entropy inequality needed for composition. Consequently, read-once
+13:      formulas of arbitrary depth and fan-in over symmetric threshold and parity gates satisfy FEI. The
+14:      proofs use antichain estimates for pivotal fibers, spectral reference measures, and product-measure
+15:      composition.
+16: 
+17:                                        1. Introduction
+18: 
+19: For a Boolean function f : {-1, 1}n  {-1, 1}, write
+20: 
+21:                         f (x) = f (S)S(x),           S(x) = xi,
+22: 
+23:                                      S[n]                            iS
+24: 
+25: where the underlying measure is uniform unless another measure is specified. The squared Fourier
+26: coefficients form a probability distribution. Its entropy and mean set size are
+27: 
+28: (1)                     H(f ) =        f (S)2 log 1 , I(f ) =         |S|f (S)2.
+29:                                            f (S)2
+30:                                  S[n]                          S[n]
+31: 
+32: All logarithms denoted by log are to base 2; ln denotes the natural logarithm. The Fourier entropy�
+33: 
+34: influence conjecture of Friedgut and Kalai [7] asserts that H(f )  CI(f ) for an absolute constant C
+35: 
+36: and every Boolean function.
+37: 
+38: A linear threshold function is a function
+39: 
+40:                                            n
+41: 
+42: (2)                                    f (x) = sgn wixi -  .
+43: 
+44:                                            i=1
+45: 
+46: We fix sgn(0) = 1; either convention can be represented by moving the threshold slightly off the
+47: finite set of attained scores. The weights may vanish, have either sign, or differ by arbitrarily large
+48: factors.
+49: 
+50:    Our bounds use the quantity
+51: 
+52:                                  n
+53: 
+54: (3)                     D(f ) = min{Infi(f ), 1 - Infi(f )} = min I(U f ),
+55: 
+56:                                  i=1                           U [n]
+57: 
+58: where Infi(f ) = P[f (X) = f (Xi)]. Multiplication by a coordinate character permutes the Fourier
+59: coefficients, so it preserves entropy. In particular, a bound by D(f ) gives FEI for every character
+60: 
+61: multiple of f at once.
+62: 
+63:     Date: 11 October 2026.
+64:     2020 Mathematics Subject Classification. 42C10, 60C05, 68Q17, 06E30.
+65:     Key words and phrases. Fourier entropy�influence conjecture, linear threshold function, regular Boolean function,
+66: antichain, product measure, Boolean formula.
+67: 
+68:                                                                                         1
+69: 
+70: 2                             YITZCHAK SHMALO
+71: 
+72:    A Boolean function is unate if it becomes monotone after reversing some input coordinates. For
+73: a monotone function, coordinate j is at least as desirable as coordinate i if
+74: 
+75: (4)                           f (xj=1,i=-1)  f (xj=-1,i=1)
+76: 
+77: for every assignment to the other coordinates. We call a unate function regular if, in a monotone
+78: 
+79: orientation, its coordinates admit an order in which every earlier coordinate is at least as desirable
+80: 
+81: as every later coordinate. Thus every linear threshold function is regular: orient the weights to be
+82: 
+83: nonnegative and order them by decreasing magnitude. Here regularity refers to a coordinate order,
+84: 
+85: and imposes no smallness condition on the largest weight.
+86: 
+87:    Put
+88: 
+89: (5) L = 3 + ln 2,         1+  1 + 4/L ,  Creg  =           3+   1  +  ln    a   +  aL  <  13.415.
+90:                    a =         2                                          a-1
+91: 
+92:                                                                           ln 2
+93: 
+94: Theorem A. Every regular Boolean function f satisfies
+95: 
+96: (6)                           H(f )  Creg D(f ).
+97: 
+98: Consequently, for every U  [n], the function g = U f satisfies
+99: 
+100:                    H(g)  Creg I(g), H(g)  4Creg I(g) - Var(g) .
+101: 
+102: These conclusions apply, in particular, to every linear threshold function.
+103: 
+104:    The same method allows several coordinate orders to coexist. The component functions may
+105: depend on all the same variables, and their orientations may differ.
+106: 
+107: Theorem B. Let m  1, let h1, . . . , hm be regular Boolean functions, let F : {-1, 1}m  {-1, 1}
+108: be arbitrary, and put f = F (h1, . . . , hm). Then
+109: 
+110:                                          17
+111: (7)                H(f )  13.422 + log m I(f ),
+112:                                          5
+113: 
+114:                                          22
+115: (8)                H(f )  13.644 + log m D(f ).
+116:                                          5
+117: 
+118: For every character multiple g = U f , the second estimate also gives
+119: 
+120:                                            22
+121:                    H(g)  13.644 + log m I(g)
+122: 
+123:                                             5
+124: 
+125: and
+126:                                                              22
+127: 
+128:                                   H(g)  4 13.644 + log m I(g) - Var(g) .
+129:                                                               5
+130: 
+131: The decimal constants in these statements are rounded upward.
+132: 
+133:    This includes intersections, unions, parity combinations, and arbitrary Boolean combinations of
+134: m halfspaces. It also includes every Boolean labeling of a linear score with at most m transitions.
+135: The number of input variables and the geometry of the weights do not enter the bounds.
+136: 
+137:    The proof extends further to a unate function whose coordinates split into w desirability chains:
+138: one adds log w to the constant in Theorem A. For combinations of m such functions, one adds log w
+139: to the constants in Theorem B; see Theorem 4.2. A different spectral reference measure gives a
+140: bound depending on variable overlap rather than the number of component functions.
+
+SOURCE ~\brain_workers\FEI100_20261011\context\percolation_spectral_pivotal_entropy_31pp_other_version.txt
+1:      ENTROPY AND SINGULARITY OF SPECTRAL AND PIVOTAL SETS IN
+2:                                              PLANAR PERCOLATION
+3: 
+4:                                                                YITZCHAK SHMALO
+5: 
+6:             Abstract. The spectral sample and pivotal set of a percolation crossing have the same one- and
+7:             two-coordinate inclusion probabilities under the uniform product measure. We prove that both
+8:             Shannon entropies are comparable to total influence for critical square-lattice bond and triangular-
+9:             lattice site crossings, with matching estimates at every retained nonroot spatial resolution. The
+10:             triangular entropy bounds are uniform over a class of inhomogeneous near-critical product measures.
+11:             For critical triangular-site square crossings, the two laws are asymptotically mutually singular: an
+12:             elementary triangular face is forbidden in the pivotal set and occurs with positive density in a
+13:             large spectral sample. Every fixed face density below an explicit threshold has nonempty spectral
+14:             probability comparable to R24(R)2, while the nonempty overlap of the two laws lies between
+15:             R-11/12+o(1) and R-1/2+o(1), and equals R-11/12+o(1) if the Garban�Pete�Schramm bound on small
+16:             spectral samples extends to pivotal sets. Their minimum expected symmetric-difference distance
+17:             over all couplings is comparable to total influence. Geometric separation persists after independent
+18:             thinning whenever the retention probability R satisfies R3 R24(R)  ; the face detector fails
+19:             when this quantity tends to zero. The proofs combine spatial encoding, arm estimates, local Fourier
+20:             cancellation, and an exact six-cycle coercivity inequality preserved under exterior conditioning.
+21: 
+22:                                 1. Introduction
+23: 
+24:    The spectral sample and the pivotal set are two random subsets associated with a Boolean
+25: crossing function. At the uniform product measure they have the same one- and two-coordinate
+26: inclusion probabilities [5, equations (2.12) and (2.13)]. We prove that their Shannon entropies are
+27: also comparable to the same influence scale, with matching comparisons at each retained nonroot
+28: spatial resolution. For critical triangular-lattice square crossings, we further prove that their laws
+29: are asymptotically mutually singular. The distinction is detected by elementary triangular faces,
+30: which occur in a large spectral sample and are forbidden in a pivotal set.
+31: 
+32:    The entropy estimate answers the square-crossing question in [5, Section 11, Question 1]. Its
+33: pivotal counterpart gives the other square-crossing bound in [9, Conjecture 8]. The singularity
+34: theorem answers the discrete triangular-site case of [5, Section 11, Question 5]. Both questions
+35: appeared in the 2008 preprint of [5], published in 2010. The spectral entropy bound is a percolation
+36: instance of the Fourier entropy�influence conjecture of Friedgut and Kalai [4]; no assertion for
+37: arbitrary Boolean functions is made here. Likewise, the singularity result concerns discrete laws. It
+38: does not establish mutual singularity of their continuum limits or the square-lattice bond analogue.
+39: 
+40: 1.1. The random sets and their entropy. Let f : {0, 1}V  {-1, 1} be an increasing Boolean
+41: 
+42: function under independent coordinate parameters pi  (0, 1). Use the normalized product characters
+43: 
+44:      A(X) =                     Xi - pi ,   f (A) = E[f A].
+45:                                 pi(1 - pi)
+46:                       iA
+47: 
+48: The spectral sample Sf has law
+49: 
+50: (1)                             P(Sf = A) = f (A)2.
+51: 
+52: Date: 11 October 2026.
+53: 2020 Mathematics Subject Classification. 60K35, 42C10, 60G57.
+54: Key words and phrases. Planar percolation, Fourier entropy, pivotal set, spectral sample, singularity.
+55: 
+56:                                                                                    1
+57: 
+58: 2                                    YITZCHAK SHMALO
+59: 
+60: It has total mass one by Parseval. The pivotal set Pf consists of the coordinates whose reversal
+61: changes f . Write
+62: 
+63:               i(f ) = P(i  Pf ), I(f ) = E|Pf |, J(f ) = E|Sf | = 4pi(1 - pi)i(f ).
+64: 
+65:                                                                                                                              i
+66: 
+67: The last identity is proved in (19). At the uniform measure, I(f ) = J(f ) and
+68: 
+69: (2)  P(i  Sf ) = P(i  Pf ), P(i, j  Sf ) = P(i, j  Pf ) (i = j).
+70: 
+71: The two-coordinate identity is recalled in Lemma 6.1. For fair coordinates we also write i = 2Xi - 1,
+72: so A = iA i.
+73: 
+74:    Shannon entropy H and binary entropy h2 are measured in bits. We write log2 for base-two
+75: logarithms and ln for natural logarithms. Let Q be a rectangle with horizontal and vertical sides,
+76: 
+77: larger side R, and aspect ratio at most a fixed . Its crossing function is
+78: 
+79:                                        f = 21{Q has an open left�right crossing} - 1.
+80: 
+81: We use the geometric tile convention of [5, Section 2.1]; coordinates are the random tiles meeting Q.
+82: Fix an admissible microscopic inner radius r0 and put
+83: 
+84:                                         m(t) = t24(t), 4(t) = 4(r0, t),
+85: 
+86: where 4 is the critical alternating four-arm probability of the model. On the triangular lattice,
+87: 4(R) = R-5/4+o(1) [18].
+88: 
+89: Theorem 1.1 (Crossing entropy). Fix 0 < p0  1/2,   (0, 1/2), and   1. Consider either of
+90: the following models, in the embeddings of Section 5:
+91: 
+92:      (i) critical bond percolation on the square lattice;
+93:      (ii) triangular-lattice site percolation with independent parameters
+94: 
+95:      px  [p, 1 - p], p  [p0, 1/2], R  L(p).
+96: 
+97:      Here L is the characteristic length of [12, Section 3.1], with L(1/2) = .
+98: 
+99: There are constants c, C, R0 > 0, depending only on these fixed parameters and the lattice conventions,
+100: such that for every such rectangle with R  R0,
+101: 
+102: (3)  cI(f )  H(Pf )  CI(f ), cJ(f )  H(Sf )  CJ(f ), I(f )  J(f )  m(R).
+103: 
+104: The constants are uniform in the rectangle's location and the admissible parameter profile.
+105: 
+106:    To measure spatial entropy, project the tile centers coordinatewise onto Q and repeatedly bisect
+107: both sides of the rectangle. For s = R2-k, let Zs(A) record the depth-k cells occupied by a set A of
+108: coordinates. The boundary convention and a fixed lattice cutoff s are specified in Section 4. Scales
+109: s  s are called retained scales.
+110: 
+111: Theorem 1.2 (Entropy at each resolution). Under the hypotheses of Theorem 1.1, for every retained
+112: nonroot dyadic scale s  s = R2-k  R/2 and A  {Sf , Pf },
+113: 
+114: (4)  H(Zs(A))  E|Zs(A)|                               m(R)
+115:                                                              .
+116:                                                       m(s)
+117: 
+118: At the root, H(ZR(Pf ))  1, whereas
+119: 
+120: (5)  H(ZR(Sf )) = h2 (Ef )2 .
+121: 
+122: For any deterministic offset of an axis-parallel square grid, the entropy upper bound also holds at
+123: every s  s  R, using the same projected centers.
+124: 
+125:                                 ENTROPY AND SINGULARITY IN PERCOLATION                                              3
+126: 
+127:    Thus, away from the root, entropy is comparable to the expected number of occupied cells. For
+128: standard critical square crossings, EfR  0 (on T by Cardy's formula [17]; on Z2 see [5, Section 1.3]),
+129: so the spectral root entropy tends to zero. Formula (5) records this dependence on the crossing
+130: 
+131: probability.
+132: 
+133: 1.2. Local faces and singularity. For the singularity statements, let R be a positive integer and
+134: 
+135: let fR be the critical triangular-site crossing sign of [0, R]2. Write �R and R for the laws of SR and
+136: 
+137: PR, and set                                        R = (EfR)2 = �R().
+138: 
+139: Let VR be the sites whose tiles meet the square, and let KR(A) count the elementary triangular
+140: faces contained in A whose three tiles lie wholly inside the square. Let VR be the sites whose full
+141: seven-site wheel lies a fixed positive lattice distance inside the square, and put XR = |SR  VR|.
+142: 
+143: Every tested center is nonterminal and has all six ring neighbors. The fixed boundary collar may be
+144: 
+145: enlarged without affecting the asymptotic conclusions.
+146: 
+147: Theorem 1.3 (Discrete singularity). For critical triangular-site square crossings,
+148: 
+149:                       R(KR > 0) = 0, �R(KR > 0) - 1,                                dTV(�R, R) - 1,
+150: where total variation is normalized to lie in [0, 1].

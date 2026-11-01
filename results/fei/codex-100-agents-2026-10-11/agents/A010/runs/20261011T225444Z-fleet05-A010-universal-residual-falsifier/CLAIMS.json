@@ -1,0 +1,88 @@
+[
+  {
+    "claim_id": "A010-PIJ-FINITE-TABLE-CEILING",
+    "version": 1,
+    "exact_statement": "Every Boolean sign on the uniform cube with 1<=n<=4 admits one of its two all-prime-implicant tables, one ordered cover per conjunction (transported from an NPN representative), and lambda=1/read, for which the complete conditioned posterior partition-forest residual R is at most (1421029/1000000) I. Moreover for n<=2, in the class of all-prime-implicant tables with one complete support order per conjunction, optimizing BOTH orientations, EVERY positive packing weight and EVERY gate order, the maximum residual/influence infimum is exactly 3/10, attained by the two-bit point defect. Constants have R=I=0. No all-dimensional conclusion or weight-infimum lower bound for n=3,4 is asserted.",
+    "hypotheses": [
+      "Uniform cube; normalized sign Fourier spectrum; entropy in bits",
+      "Exactly the partition forests of forests.tex with one root per source SCC",
+      "Permitted output orientation, transported prime supports and physical orders",
+      "Finite census: 1<=n<=4; fixed global lambda=1/max coordinate read",
+      "Analytic infimum subclaim: n<=2; prime gates fixed by either orientation; one complete support order per gate; all admissible positive weights and all gate orders"
+    ],
+    "statement_sha256": "be899b0fa23230ed244e93ec90e98d90ab0c5dc45feaf911e142ff8a50d93599",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": {
+      "report": "REPORT.md",
+      "code": [
+        "code/search.py",
+        "code/replay.py"
+      ],
+      "certificate": [
+        "out/results.json",
+        "out/replay.json",
+        "out/summary.json",
+        "out/hashes.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locator": "eq:forestcost; definition of partition forests; thm:posteriorforest"
+      }
+    ],
+    "review_records": [],
+    "status": "FINITE_CERTIFIED_AUTHOR_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      "A010-PIJ-N2-INFIMUM-v1"
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "Claude/B02",
+      "A006",
+      "A009",
+      "A086",
+      "A094"
+    ]
+  },
+  {
+    "claim_id": "A010-PIJ-RADIAL-BOUNDARY",
+    "version": 1,
+    "exact_statement": "For any fixed finite ordered support table with positive pi, covering every positive-mass nonempty Fourier set, and any fixed positive packing vector mu, the complete optimal posterior partition-forest residual obeys R(t mu)=D log2(1/t)+O(1) as t decreases to zero, where D=sum_{A nonempty} P_f(A)(d_A-1) and d_A is the minimum number of supports covering A. In particular D>0 forces divergence to +infinity. The remainder depends on the fixed table and direction; no partial-boundary or all-lambda infimum claim follows.",
+    "hypotheses": [
+      "Fixed finite support/order table with pi_l>0 and every spectral A covered",
+      "Distinct partition forests; one root per source SCC; all used lambda_l positive",
+      "Fixed positive packing vector mu; 0<t<=1; bits; fixed finite Fourier law"
+    ],
+    "statement_sha256": "b802087cbd1e1359404afe5a29379879645ffeb4965aa5efc11b67b2dfe57b97",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": {
+      "report": "REPORT.md, weight-boundary handoff paragraph"
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locator": "eq:forestcost; definition of partition forests; thm:posteriorforest"
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTICALLY_PROVED_AUTHOR_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "Claude/B02",
+      "A006",
+      "A009",
+      "A086",
+      "A094"
+    ]
+  }
+]

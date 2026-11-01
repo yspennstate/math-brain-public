@@ -1,0 +1,87 @@
+{
+  "agent": "w540",
+  "target_id": "P0321",
+  "checked_date": "2026-10-10",
+  "historical_ranking": {
+    "path": "~/<private-repo>/06_math_research/probability_1000_intake_claude_20260907/RANKING_2026-09-07.csv",
+    "line": 556,
+    "tier": 5,
+    "recorded_status": "unsolved",
+    "recorded_date": "2026-09-07"
+  },
+  "canonical_problem_card": {
+    "store": "~/math-brain-build/local/population/brain.sqlite3",
+    "access": "sqlite3 URI mode=ro; exact two node IDs only",
+    "id": "claim_648b6149635f3ed755552a110f297d32ce8291ed63aa1fbfa8c148a36fcad248",
+    "logical_id": "math:probability.core:open-problem-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases",
+    "source_id": "owner-probability-campaign-codex-20260906:op-p0321",
+    "exact_campaign_statement": "Prove or refute the intermediate hexatic phase predicted in two-dimensional Riesz-gas phase diagrams, distinguished by orientational order and absence of crystalline positional order.",
+    "locator_as_stored": "Lewin 2022, Section VI.B, PDF 66-67",
+    "truth_status": "unverified",
+    "statement_fidelity_reviewed": false,
+    "export_match": "export/population/nodes.jsonl:3643 and claims.jsonl:3643",
+    "existing_digests": "Read as provenance metadata only; not recomputed or represented as mathematical verification."
+  },
+  "primary_source": {
+    "author": "Mathieu Lewin",
+    "title": "Coulomb and Riesz gases: The known and the unknown",
+    "arxiv": "2202.09240v2",
+    "url": "https://arxiv.org/html/2202.09240v2#S6.SS2",
+    "verified_section": "VI.2 Phase diagram: numerics",
+    "verified_excerpt": "fast decay of translational correlations and slow decay of (six-fold) orientational correlations",
+    "model_definition": "Equation (3): V_s(x)=|x|^(-s) for s>0, -log|x| for s=0. Density parameter Upsilon=beta*rho^(s/d).",
+    "phase_paragraph": "Qualitative prediction and numerical evidence, including s=0 and s=1; no fully quantified hexatic existence proposition supplied.",
+    "pdf_page_check": "Not independently verified; HTML section checked. The PDF tool request failed.",
+    "hash_check": "No downloaded byte artifact or hash certificate claimed.",
+    "theorem_47_scope": {
+      "as_checked": "Theorem 47 requires d in {1,2}, s>d and beta finite for its translation-invariance assertion.",
+      "source_url": "https://arxiv.org/html/2202.09240v2#S6.SS1",
+      "excluded_application": "It cannot establish this assertion for s=1,d=2; no such use is made in the w540 route.",
+      "origin_of_check": "w542 identified the issue; w540 directly checked the primary theorem statement."
+    }
+  },
+  "prior_attempt": {
+    "id": "claim_f0fcbb1d46ce0001a883659cae4db27b444d22c8c3d7f3b762bd0376496a0c54",
+    "logical_id": "math:probability.core:attempt-p0321-existence-of-a-hexatic-phase-for-two-dimensional-riesz-gases",
+    "source_id": "owner-probability-campaign-codex-20260906:at-p0321",
+    "digest": "A uniform global angle forces a zero one-point spin mean but cancels from pair differences. Independent local angle errors can therefore leave a positive two-point plateau. A one-point rotation average is insufficient to decide the phase.",
+    "review_status": "Stored author-checked only, no independent review, truth_status unverified.",
+    "read_receipt": "Exact node found in read-only live store and export lines 8627.",
+    "relation_to_this_attempt": "This attempt addresses a different insufficient diagnostic: logarithmic variance or additive approximation error cannot certify a positive algebraic vertex."
+  },
+  "other_named_prior_work": {
+    "H_20260912": "Targeted rg for P0321/hexatic in named text/JSON/Lean files returned no matching artifact.",
+    "I_20260914": "Targeted rg for P0321/hexatic in named text/JSON/Lean files returned no matching artifact.",
+    "lean_20260908": "Only matching annotated historical ranking row was found; no target formal theorem or formal receipt recovered.",
+    "team_O": "Targeted board read/search found no P0321 row. This is not a full-corpus absence claim.",
+    "Big_Open_directory": "No Riesz/hexatic/solved/retired/manifest filename match found in the targeted filename query; percolation attempts were not read because they do not bear on this lemma."
+  },
+  "recent_primary_literature": [
+    {
+      "authors": "Pawel Matus and Tobias Holder",
+      "title": "Theory of two-dimensional Wigner crystals with defects: Interactions, melting transitions and collective modes",
+      "arxiv": "2607.18477v1",
+      "url": "https://arxiv.org/html/2607.18477v1#S4",
+      "as_read_date": "2026-10-10",
+      "sections_checked": "II model and IV dislocation proliferation",
+      "excerpt": "The proliferation of dislocations is then modelled",
+      "assessment": "Inference from the checked argument: quadratic/effective Wigner elasticity and a model of defect proliferation, including a zero-temperature hexatic action. It does not provide this packet's volume-uniform classical microscopic cumulant/insertion estimates or a classical Gibbs existence theorem.",
+      "relevance": "Useful effective-field lead; not a certificate closing the chosen missing lemma."
+    }
+  ],
+  "bounded_searches": [
+    "Riesz hexatic phase existence mathematical open problem",
+    "site.arxiv.org Coulomb and Riesz gases: The known and the unknown",
+    "site.arxiv.org Riesz hexatic proof",
+    "site.arxiv.org hexatic rigorous Coulomb 2026",
+    "site.arxiv.org Riesz hexatic 2025"
+  ],
+  "owner_solved_retired_check": "The exact stored target and attempt remain unverified historical concepts. No matching retirement or independently checked solution certificate was recovered in the bounded checks. Coverage is not exhaustive.",
+  "current_openness": "UNKNOWN",
+  "novelty_claim": false,
+  "fully_quantified_original_statement": false,
+  "chosen_precise_subtarget": "Classical density-one s=1 neutral jellium, an open beta interval, Palm/Delaunay sixfold bond correlations of order r^(-eta), eta in (0,2), and summable truncated positional pair density. Defined in STATEMENT.md; this is a chosen sufficient narrower formulation.",
+  "full_target_proven": false,
+  "hardest_missing_input": "M: microscopic, volume-uniform connected-defect and bond-insertion estimates on a nonempty temperature interval, including a phase-compatible real-angle lift, nonzero amplitude, positional disorder and equilibrium limits.",
+  "formal_check_receipt": null
+}

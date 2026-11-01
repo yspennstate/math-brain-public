@@ -1,0 +1,65 @@
+{
+  "schema_version": 2,
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261013T165101Z-fleet01-B19-b01-bent-gu-review-a094",
+  "stream_id": "B19",
+  "account": "fleet01",
+  "primary_packet_id": "A094",
+  "packet_ids": ["A094"],
+  "target_stream": "B01",
+  "target_packet": "A003",
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "attempt_id": "B19-A094-B01-BENT-GU-REVIEW-01",
+  "method": "Independent direct Walsh reconstruction, exact physical edge accounting, rational log intervals, algebraic-degree audit, and a separately constructed extra-row scope falsifier.",
+  "claim_versions_used": [
+    "B01_A003_BENT_NULLITY_TWO_GU_LOWER_v1",
+    "B01_A003_ARBITRARY_NULLITY_TWO_FEI_v1"
+  ],
+  "claims_created_or_changed": [
+    "B01_A003_BENT_NULLITY_TWO_GU_LOWER_v1 accepted at finite scope",
+    "B19_A094_BENT_FIBER_PATTERN_SCOPE_v1 repaired and pending fresh review",
+    "B01_A003_NULLITY_TWO_GU_THREE_v2 remains open"
+  ],
+  "source_artifacts": {
+    "target_finalized_commit": "addf01f7987afb3d29f6284565843eb5c0b862b2",
+    "target_package_commit": "92b9dd65273085c6cfa2c3ba69fa624b248e2959",
+    "predecessor_visible_commit": "f108d34dd304d03aae2d28c5160c4a32a45758d3",
+    "primary_literature": "Potapov arXiv:2609.21563v1, retrieved 2026-10-13",
+    "control_revision": "2026-10-12.1",
+    "control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28"
+  },
+  "prior_status": "Ten-variable G/I>2.974 witness and broad bent-fiber pattern were author-proved pending independent review.",
+  "mathematical_delta": "Accepted the exact nonquadratic finite witness and its a+b>2.974 consequence. Refuted the extra-dependent-row version of the extracted pattern and proved the corrected s=rank=m-2 statement. Clarified that sharpness at 3 is still open.",
+  "deliverable_status": "COMPLETE_DELIVERED_AND_VERIFIED",
+  "mathematical_status": "FINITE_CLAIM_ACCEPTED; GENERAL_PATTERN_SCOPE_REPAIRED_BY_REVIEWER; FULL_FEI_OPEN",
+  "verification": {
+    "parent_coefficients_checked": 1024,
+    "restrictions_reconstructed": 20,
+    "child_coefficients_checked": 10240,
+    "upper_set_support_atoms": 5120,
+    "physical_edges_checked": 5120,
+    "arithmetic": "integer/Fraction with rigorous positive-series tails",
+    "result": "PASS"
+  },
+  "acceptance_evidence": "CHECK_INDEPENDENT.py/out",
+  "scope_correction_evidence": "CHECK_SCOPE.py/out",
+  "remaining_obstacle": "No proof or refutation of G<=3I on arbitrary nullity-two shields; no universal lower payment for child upper-set counts under dual-bent derivative constraints.",
+  "next_consumers": ["B01", "B05", "B18", "B20", "A005", "A087", "A095"],
+  "reviewer_targets": ["A085", "A090"],
+  "next_action": "Prove or refute the dual-bent child-support lower bound after fixing s=m-2; separately test width seven only as a bounded falsifier for crossing 3.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [],
+  "delivery": {
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_path": "reports/fei-2026-10-11/runs/B19/20261013T165101Z-fleet01-B19-b01-bent-gu-review-a094/",
+    "brain_repository": "yspennstate/math-research-brain",
+    "brain_path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B19/20261013T165101Z-fleet01-B19-b01-bent-gu-review-a094/",
+    "canonical_package_commit": "80a25cee05abb9f473b7af7165f663a6f1de59c8",
+    "brain_package_commit": "16679c4476054657c0504c4a22a4a78179cc966f",
+    "readback": "VERIFIED_EXACT_FOR_ALL_TWELVE_PACKAGE_FILES_IN_BOTH_REPOSITORIES",
+    "status": "DELIVERED_AND_VERIFIED",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN"
+}
+

@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "data_queries": 804,
+  "controller_continuations": 2,
+  "assertions": 10304,
+  "runtime_seconds": 0.4022887999890372,
+  "mode": "main",
+  "arithmetic": "Fraction likelihood factorization, direct spectra and physical edges, certified rational JS bounds",
+  "fixture": {
+    "source_KL": {
+      "2": "4",
+      "5": "-1",
+      "3": "-1"
+    },
+    "retained_frequency_likelihood_ratio": "P_h2(C)/Q_C(C)",
+    "data_erasure_KL": "0",
+    "data_outcome_KL": "0",
+    "additional_conditional_reset_KL": "0",
+    "data_query_influence": "1/4",
+    "continuations": [
+      {
+        "branch": 0,
+        "root_KL": {
+          "2": "4",
+          "5": "-1",
+          "3": "-1"
+        },
+        "terminal_KL": {
+          "2": "1",
+          "3": "-1/2"
+        },
+        "signed_reset": {
+          "2": "3/2",
+          "3": "-1/2"
+        },
+        "terminal_entropy": {},
+        "removed_controller_I": "1",
+        "terminal_I": "0"
+      },
+      {
+        "branch": 1,
+        "root_KL": {
+          "2": "4",
+          "5": "-1",
+          "3": "-1"
+        },
+        "terminal_KL": {
+          "2": "1",
+          "3": "-1/2"
+        },
+        "signed_reset": {
+          "2": "3/2",
+          "3": "-1/2"
+        },
+        "terminal_entropy": {
+          "2": "2"
+        },
+        "removed_controller_I": "1",
+        "terminal_I": "1"
+      }
+    ],
+    "positive_entropy_drift": {
+      "2": "1",
+      "3": "-3/8"
+    }
+  }
+}

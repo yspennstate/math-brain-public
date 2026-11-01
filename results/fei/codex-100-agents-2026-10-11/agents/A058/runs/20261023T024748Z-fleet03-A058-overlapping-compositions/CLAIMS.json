@@ -1,0 +1,57 @@
+[
+  {
+    "claim_id": "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER",
+    "version": 7,
+    "exact_statement": "For every finite uniform cube, arbitrary Boolean G,H on the same physical data bits, and a fresh fair selector z, let F=(G+H)/2+z(G-H)/2, J=Pr(G!=H), e=GH, and L=H(F)-(H(G)+H(H))/2. Then 0<=L<=h2(J)+4J<=I(e)+4J. For every adaptive physical stopping tree the signed coherent debit equals L_root minus the reached live-terminal L values and is at most the ONE original allowance 4J_root+I(e_root)<=4I(F_root), retaining every inherited-core decrement and full actual terminal. This supplies no ownership across nested muxes. Indeed for complete quadratic Boolean f_n=(-1)^(sum_{i<j}x_i*x_j), even n>=2, the sum of newly supplied disagreement-influence tickets at all mux levels is n(n-1)/2, while I(f_n)=n/2, for any complete adaptive coordinate-order tree.",
+    "hypotheses": [
+      "finite uniform cubes, real Walsh coefficients, base-2 entropy",
+      "fresh fair selector; arbitrary overlap between Boolean branches",
+      "one explicitly allocated original source allowance; signed expected-reach ledger",
+      "both inherited branches and every actual terminal retained; no renewed bank",
+      "scalar profile and bent edit are prior work; v6 remains available under its stronger hypotheses"
+    ],
+    "statement_sha256": "375b063144a232ead3d2cb7413e8922a27cd1818be2910d92fbccb0b514d500b",
+    "contributors": [
+      "A058"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/exact_mux.js",
+      "code/finalize.py",
+      "out/EXACT_VALIDATION.json",
+      "out/NESTED_OBSTRUCTION.json",
+      "out/INDEPENDENT_VALIDATION.json"
+    ],
+    "proof_dependencies": [
+      "author reconstruction of exact coherent Fourier rows; elementary binary entropy series, concavity and input reveal chain",
+      "v6 for comparison only; not needed in new derivation",
+      "prior profile cards claim_76e621c18b4bc9fb5327f154b1f567e583b339d4cbcd041d2453291adf7cd257 and claim_7f5f22ff912203aa5274e2ba4e216316da9392bbfda1386c6f02803c17b8e759 credited, not assumed accepted"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A091",
+        "status": "PENDING; primary; no message sent"
+      },
+      {
+        "reviewer": "A090",
+        "status": "PENDING; alternate; no message sent"
+      }
+    ],
+    "status": "AUTHOR_PROOF_WITH_EXACT_FINITE_CHECKS; INDEPENDENT_REVIEW_PENDING; FULL_FEI_OPEN",
+    "supersedes": [
+      "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER@6 (addendum; preserves sharper common-phase theorem)"
+    ],
+    "refutes": [
+      "Unclaimed naive universal nested budget sum_v w_v I(G_v H_v)<=K I(F_root) for a dimension-independent K"
+    ],
+    "first_unproved_line": "No proof that an already diminished ancestor bank contains this new source, or that arbitrary nested overlap costs can be allocated once to root physical edges. Summing fresh disagreement tickets is explicitly false.",
+    "next_consumers": [
+      "A091",
+      "A090",
+      "A057",
+      "A059",
+      "B12",
+      "B20"
+    ]
+  }
+]

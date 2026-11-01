@@ -1,0 +1,205 @@
+% Additive research note for R7-01 / D0033, 2026-09-17.
+% This file does not replace the existing manuscript.
+
+\section{Arcsine tensorization and first-order sharpness inside stationary Markov chains}
+
+We retain the notation of the main proof.  For a Markov transition kernel
+$K(x,\mathrm dy)$ on a standard Borel space, define its robust Hilbertian
+contraction coefficient
+\[
+ \kappa(K):=\sup_{\lambda}\rho(U,V),
+ \qquad U\sim\lambda,\quad V\mid U=x\sim K(x,\cdot),
+\]
+where the supremum is over all input laws supported on the full-measure set of
+rows used by the chain (degenerate inputs contribute zero).  For the chain let
+\[
+ \kappa(n):=\sup_{t-s\ge n}\kappa(K_{s,t}).
+\]
+The Dobrushin/chi-square lemma proved in the preceding note gives
+\[
+ \kappa(K)^2\le \delta(K),
+ \qquad
+ \kappa(n)^2\le \Delta(n)\le \min\{1,2\phi(n)\}.
+\tag{1}
+\]
+
+\subsection{An arcsine improvement of the block-path bound}
+
+Define
+\[
+ \Psi(r):=\sin\!\left(\min\{2\arcsin r,\pi/2\}\right),\qquad 0\le r\le1.
+\]
+Thus
+\[
+ \Psi(r)=2r\sqrt{1-r^2}\quad(0\le r\le 2^{-1/2}),
+ \qquad \Psi(r)=1\quad(r\ge2^{-1/2}).
+\tag{2}
+\]
+
+\paragraph{Theorem.}
+For every lag $n$,
+\[
+ \boxed{\rho^*(n)\le \Psi(\kappa(n)).}
+\tag{3}
+\]
+Consequently, whenever $\phi(n)\le1/4$,
+\[
+ \boxed{\rho^*(n)\le
+  2\sqrt{2\phi(n)\bigl(1-2\phi(n)\bigr)}.}
+\tag{4}
+\]
+In particular the source implication $\phi(n)\to0\Rightarrow\rho^*(n)\to0$
+remains valid, while (4) strictly improves the previously recorded
+$2\sqrt{2\phi(n)}$ bound whenever $0<\phi(n)<1/4$.
+
+\paragraph{Proof.}
+Fix finite disjoint index sets $S,T$ with $\operatorname{dist}(S,T)\ge n$.
+Order $S\cup T$ chronologically and merge consecutive selected indices of the
+same color into maximal monochromatic blocks.  Write the $S$-blocks in
+chronological order as $U_i$ and the $T$-blocks as $V_j$.  After possibly
+shifting one index, a block $U_i$ is adjacent in the chronological block path
+only to $V_i$ and $V_{i-1}$.
+
+Use Peyre's minimal-hypothesis formulation of the tensorization theorem: the
+subjective correlation of $(U_i,V_j)$ is taken after conditioning only on
+$U_{i'}$, $i'<i$, and $V_{j'}$, $j'<j$.  If the two blocks are nonadjacent,
+this conditioning contains an intervening Markov separator; past and future
+are therefore conditionally independent and the subjective correlation is
+zero.  If the blocks are adjacent, let $s$ be the last time in the earlier
+block and $t$ the first time in the later block.  The prescribed conditioning
+is entirely earlier than this transition.  It can change the input law of
+$X_s$, but it does not change $K_{s,t}$, and the conditioned input remains
+supported on the same row-good set.  By definition of $\kappa$ and Markov data
+processing,
+\[
+ \rho(U_i,V_j\mid\hbox{prescribed prefixes})
+ \le \kappa(K_{s,t})\le\kappa(n).
+\tag{5}
+\]
+
+Pad the two finite block sequences by deterministic variables and index them
+by $\mathbb Z$.  Peyre's ``$\mathbb Z$ against $\mathbb Z$'' theorem
+(Theorem 3.3.10, with the minimal hypotheses from Section 3.4(a)) applies with
+\[
+ \varepsilon(0)=\varepsilon(-1)=\kappa(n),\qquad
+ \varepsilon(z)=0\quad(z\notin\{0,-1\}).
+\]
+It gives
+\[
+ \arcsin\rho(\sigma(U_i:i),\sigma(V_j:j))
+ \le \min\{2\arcsin\kappa(n),\pi/2\},
+\]
+which is (3).  Taking the supremum over finite interlacings and then the usual
+finite-coordinate $L^2$ approximation proves (3) for $\rho^*(n)$.
+Equation (4) follows from (1), monotonicity of $\Psi$ on $[0,2^{-1/2}]$, and
+$\Delta(n)\le2\phi(n)$.  \qed
+
+Peyre's Section 3.5 records optimality of the arcsine theorem under its abstract
+prefix-correlation hypotheses.  Hence any improvement beyond (3) must exploit
+additional compatibility specific to Markov transition kernels, rather than
+only the two-edge path of subjective correlation bounds.
+
+\subsection{A stationary two-state family forcing the path factor two}
+
+The factor two in the weak-dependence expansion of (3) is already forced by a
+stationary two-state Markov chain.  Let $0<a<1$ and let $(X_k)_{k\in\mathbb Z}$
+take values in $\{-1,+1\}$ with stationary law $(1/2,1/2)$ and transition rule
+\[
+ \mathbb P(X_{k+1}=X_k)=\frac{1+a}{2},\qquad
+ \mathbb P(X_{k+1}=-X_k)=\frac{1-a}{2}.
+\tag{6}
+\]
+Then
+\[
+ \mathbb E[X_{k+h}\mid X_k]=a^hX_k,
+ \qquad \mathbb E[X_iX_j]=a^{|i-j|}.
+\tag{7}
+\]
+Fix $n\ge1$ and put $r=a^n$.  The $n$-step channel is the binary symmetric
+channel with parameter $r$.  Its robust maximal correlation is exactly $r$.
+Indeed, for an input law with mean $m$, the only centered nonconstant input
+direction is $X-m$, and direct calculation gives
+\[
+ \rho(U,V)^2=
+ \frac{r^2(1-m^2)}{1-r^2m^2}\le r^2,
+\tag{8}
+\]
+with equality at the stationary input $m=0$.  Also
+\[
+ \boxed{\phi(n)=\frac r2.}
+\tag{9}
+\]
+For (9), conditioning the past can only alter the posterior law of $X_0$;
+after $n$ steps the resulting bias is multiplied by $r$, so total variation
+from stationarity is at most $r/2$.  Equality is attained by conditioning on
+$X_0=+1$ and testing $X_n=+1$.
+
+Now choose the interlacing
+\[
+ S_N=\{0,2n,\ldots,2Nn\},\qquad
+ T_N=\{n,3n,\ldots,(2N-1)n\},
+\]
+and the admissible centered test functions
+\[
+ F_N=\sum_{i=0}^{N}X_{2in},\qquad
+ G_N=\sum_{j=0}^{N-1}X_{(2j+1)n}.
+\]
+From (7), counting pairs by their separation yields
+\[
+ \frac{\operatorname{Var}(F_N)}{N}
+ \longrightarrow 1+2\sum_{h\ge1}r^{2h}
+ =\frac{1+r^2}{1-r^2},
+\tag{10}
+\]
+and the same limit for $\operatorname{Var}(G_N)/N$.  Likewise each bulk odd
+site sees even sites at odd distances, so
+\[
+ \frac{\operatorname{Cov}(F_N,G_N)}{N}
+ \longrightarrow \sum_{k\in\mathbb Z}r^{|2k-1|}
+ =\frac{2r}{1-r^2}.
+\tag{11}
+\]
+Boundary terms in (10)--(11) are $O(1)$ because the corresponding geometric
+series are summable.  Therefore
+\[
+ \lim_{N\to\infty}\operatorname{Corr}(F_N,G_N)
+ =\boxed{\frac{2r}{1+r^2}},
+\tag{12}
+\]
+and hence
+\[
+ \boxed{\rho^*(n)\ge\frac{2a^n}{1+a^{2n}}
+       =\frac{4\phi(n)}{1+4\phi(n)^2}.}
+\tag{13}
+\]
+
+On the other hand, applying (3) with the exact robust local coefficient
+$\kappa(n)=r$ gives, for $r\le2^{-1/2}$,
+\[
+ \rho^*(n)\le2r\sqrt{1-r^2}.
+\tag{14}
+\]
+Thus as $r\downarrow0$,
+\[
+ 2r-2r^3+O(r^5)
+ \le \rho^*(n)
+ \le 2r-r^3+O(r^5),
+\]
+so
+\[
+ \boxed{\rho^*(n)=2r+O(r^3)}
+ \qquad(r\downarrow0).
+\tag{15}
+\]
+In particular the coefficient $2$ in the weak-edge expansion of the path
+tensorization step cannot be replaced by any smaller universal coefficient,
+even within stationary irreducible aperiodic two-state Markov chains.
+
+This sharpness statement concerns the global path step as a function of the
+robust local HGR coefficient $r$.  It does not show that the universal
+Dobrushin conversion $\kappa^2\le\Delta\le2\phi$ is simultaneously sharp on
+the same Markov family; indeed here $\kappa=r$ and $\Delta=r=2\phi$, so the
+Dobrushin-to-HGR square-root bound is deliberately loose.  The remaining
+constant question is therefore localized to compatibility between local
+Dobrushin extremizers (erasure-type channels) and long stationary Markov
+interlacings.

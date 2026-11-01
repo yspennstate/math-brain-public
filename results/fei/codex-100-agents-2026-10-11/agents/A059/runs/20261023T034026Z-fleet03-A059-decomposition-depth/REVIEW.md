@@ -1,0 +1,11 @@
+# Source reconstruction and scope
+
+A091 stage18 independently reconstructs the preceding A059 frequent-wrapper LOCAL theorem at the stated rate below21. Its stopped assembly is explicitly conditional on imported signed DATA and private-list inputs. This stage preserves that distinction and does not claim an independent reconstruction of the entire old dependency chain.
+
+A060 stage6's all-density bound20+log2(1/c) per influence is reconstructed by retaining rho=(1-c)/c in the old exterior Jensen inequality, then ln(1+2rho)<=ln(2/c). The certificate's positive Taylor/atanh estimates have the correct directions. Its leading-coefficient witness uses one fair literal, for which singleton square equals influence=1 internally. Hence the sharper density tax here is compatible with that witness, rather than contradicting its sharp leading coefficient.
+
+A057 stage18's nonflat source formula is independently derived by observing that off the point C, X changes g into bent b, with disagreement expectation [1-c-mu(sqrt(c)-c)]/2. Its 3/8 lower bound, D_X<=2, fine-reserve release and once-only rate6 source allocation are valid under the stated independent-block geometry. Its tribes obstruction correctly disproves the SOURCE-ONLY influence-weighted surrogate bill (mc/2)I(g). Its Section4 validly funds that larger bill from a separate existing internal ticket. No part of that certificate is refuted here.
+
+The new mechanism changes the sufficient density charge itself: the exterior K0 changes only the empty remaining internal Fourier pair, whose queried coefficient is the SINGLETON beta. A universal derivative inequality |beta|<=Inf, and an exact mean-variance telescope, replace the larger influence-weighted surrogate tax. Thus even the tribes obstruction family costs at most1/8 in the NEW tax at exterior m4. The base rate becomes21 rather than the prior all-c base20; both base and inherited terminals remain explicit.
+
+New claim independence: A059 is its contributor and author checker; no independent acceptance is claimed. Reviewers A091/A087 should check the exact pair identity, Jensen at zero denominators, the Boolean derivative use, all stopping-frontier variance debits, and source allocation with both actual children. Formal admission is held; no Lean compiler is launched.

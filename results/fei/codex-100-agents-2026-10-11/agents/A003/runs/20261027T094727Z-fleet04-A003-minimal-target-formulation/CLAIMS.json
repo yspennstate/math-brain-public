@@ -1,0 +1,45 @@
+[
+  {
+    "claim_id": "A003-TENSOR-DEFECT-WITNESS-CONSTANT",
+    "version": 1,
+    "exact_statement": "For every nonconstant uniform Boolean seed f, let F_m be its m-fold disjoint product. Sublinear total defects in B(F_m)<=lambda H(F_m)+K I(F_m)+o(m), lambda<1, imply the exact seed inequality and FEI((K+2/ln2)/(1-lambda)). Vanishing local defects in eligible-coordinate B or signed L selection imply the exact seed selection, with constants stated in DERIVATION.md. Complete reference CE(p_Fm,Q_m)<=C m I(f)+o(m) implies FEI(C). Under the fixed admitted witness identity h2(v)+Kref I+R*=H+vD(Pplus||U), U a subprobability and Kref=3+2log2(3)+log2(6e), admitted choices for an unbounded sequence m with R*(F_m)<=K m I(f)+o(m) imply FEI(Kref+K), improving the prior conservative sufficient constant by 2. All constants precede all seeds; errors may depend on the seed; all required constructions are hypotheses, not asserted universal suppliers.",
+    "hypotheses": [
+      "Uniform finite Boolean cubes; disjoint product tensors; all seeds; an unbounded tensor sequence for each seed.",
+      "lambda<1; 0<c<1; tau>0 for weak eligible-coordinate variants.",
+      "Complete normalized source references or the ORIGINAL fixed admitted subprobability witness interface; no discarded terminals/query-KL/old bills."
+    ],
+    "statement_sha256": "9df95a77b69e250eb5b5642b4c7a76013af1895947ca3665b777b245f3a8a2dc",
+    "contributors": [
+      "A003"
+    ],
+    "proof_source": "DERIVATION.md",
+    "proof_dependencies": [
+      "Inherited A003 stage1 fixed witness identity; verbatim IMPLICATIONS_BASELINE.md",
+      "B01 erasure-fraction and low-influence localization, STREAM_NOTES.md v1",
+      "C007 exact signed Booleanity; elementary Fourier product and finite probability identities"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A003",
+        "kind": "author proof and distinct implementation audit",
+        "verdict": "HOLDS_AT_STATED_CONDITIONAL_SCOPE",
+        "independent_agent": false
+      },
+      {
+        "reviewer": "Lean tool admission",
+        "verdict": "SETUP_UNVERIFIED; compute admission held; no compiler started"
+      }
+    ],
+    "status": "AUTHOR_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Construct the required fixed witnesses/references or eligible coordinate for EVERY Boolean core with one absolute price and the specified vanishing defect.",
+    "next_consumers": [
+      "A004",
+      "A086",
+      "A094",
+      "B01",
+      "B20"
+    ]
+  }
+]

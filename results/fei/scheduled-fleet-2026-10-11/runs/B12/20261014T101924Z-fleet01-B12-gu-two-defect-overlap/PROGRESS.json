@@ -1,0 +1,86 @@
+{
+  "schema": "fei-progress/2",
+  "run_id": "20261014T101924Z-fleet01-B12-gu-two-defect-overlap",
+  "stream": "B12",
+  "account": "fleet01",
+  "primary_packet_id": "A058",
+  "packet_ids": ["A058"],
+  "attempt_id": "A058-GU-TWO-DEFECT-OVERLAP-14",
+  "attempt_counter": 14,
+  "gap_id": "B12-A058-SHARED-COORDINATE-OVERLAP",
+  "candidate": "Freeze (a,b)=(32,0) for parity-masked two-point defects, whose separating coordinates have two nonterminal point-defect children, and close the restriction-generated product class.",
+  "prior_status": "Same-variable parity-masked one-defect factors satisfied (16,0), but the proof used a terminal character on every coordinate. General posterior-only orientation was already refuted.",
+  "new_status": "TWO_NONTERMINAL_MASKED_TWO_DEFECT_GU_PROVED_PENDING_REVIEW; ARBITRARY_MULTI_DEFECT_SPLIT_OPEN",
+  "mathematical_delta": "Derived the exact translated even-parity-coset spectral and upper-mass kernel, plus the four-type physical recurrence retaining both nonterminal signs. Proved the sharp point-defect GU constant for every unmasked two-defect function and the pair (32,0) for arbitrary same-block parity masks and disjoint products.",
+  "claim_versions": [
+    "B12-A058-TWO-DEFECT-MASKED-GU-v1",
+    "B12-A058-TWO-DEFECT-PARITY-COSET-KERNEL-v1",
+    "B12-A058-UNMASKED-TWO-DEFECT-SHARP-GU-v1",
+    "B12-A058-SHARED-COORDINATE-OVERLAP-v15"
+  ],
+  "source_pins": {
+    "gu_focus_blob": "9448198701fbfe0cceb72bda7a6837ebd59704f9",
+    "assignment_blob": "40935ac651643a17815d0addf664ec4c1c0313cc",
+    "preceding_b12_canonical_final": "44e5996e7a29cbb7256d105ca9ece1b8bf0ae1b1",
+    "preceding_b12_brain_final": "7dee9af60a63a528020ea70d9096080b12173926",
+    "open_problems_head_inspected": "e0d6bf113068806474c4c9fdac84b0a686e4b206",
+    "brain_head_inspected": "0efc444c5c6d1ef3d5ef6684ef0ba8dccbb19121"
+  },
+  "gu_implication": {
+    "proved_pair": "a=32,b=0 on the stated restriction-closed class",
+    "class_consequence": "U(f)<=32I(f) and H(f)<=66I(f)",
+    "universal_consequence_if_extended": "The same pair for every Boolean f would prove universal GU and H(f)<=66I(f).",
+    "status": "PROVED only for a proper class; universal extension OPEN"
+  },
+  "case_extension": {
+    "previous_class": "same-variable parity-masked one-point defects, with one terminal character child on every restriction",
+    "new_class": "same-variable parity-masked two-point defects; every separating coordinate has two nonterminal point-defect children",
+    "removed_hypotheses": [
+      "one terminal child on every physical restriction",
+      "bounded Hamming separation",
+      "physical separation of parity mask and defect set",
+      "bounded mask weight, factor count or depth"
+    ],
+    "remaining_hypothesis": "the negative set has size at most two in every irreducible factor",
+    "parameter_dependence": "constant 32 is independent of all dimension, separation, mask and product parameters"
+  },
+  "verification": {
+    "status": "PASS",
+    "method": "exact rational Walsh laws, upper masses and influences plus deterministic binary logarithms",
+    "command": "python3 CHECK.py",
+    "seed": null,
+    "direct_two_defect_cases": 18500,
+    "exhaustive_kernel_cases": 18040,
+    "physical_recurrence_cases": 18040,
+    "maximum_recurrence_error": 1.7763568394002505e-15,
+    "unmasked_max_G_over_I": 2.1176687467547968,
+    "unmasked_max_location_n_d": [4, 1],
+    "output_artifacts": ["CHECK.out"]
+  },
+  "normalization_and_terminal_terms": [
+    "The law is normalized exactly: p+(2^(n-1)-1)q=1.",
+    "Upper masses count the actual translated parity coset; inclusion is not treated as translation invariant.",
+    "Separating coordinates retain and average both nonterminal point-defect children.",
+    "Nonseparating coordinates retain the active two-defect child and the zero-U character terminal.",
+    "Mask weight changes only on coordinates physically belonging to the mask.",
+    "The unmasked one-defect theorem is imported from its original proof and used with its exact sharp constant."
+  ],
+  "obstruction_controls": [
+    "No favorable sign, fixed-sign projection, unsigned coefficient-four bound, or unproved coefficient repair is used.",
+    "Negative G values are allowed and never converted to absolute values.",
+    "The proper-class theorem is not labeled universal GU or full FEI.",
+    "Finite enumeration reconstructs the kernel but is not used for all-dimensional inference."
+  ],
+  "remaining_obstacle": "Control arbitrary defect sets whose two physical children retain unrelated multi-defect upper-set geometries, with one source-influence/terminal-reserve budget.",
+  "next_action": "Derive the exact three-defect recursion (one-defect versus two-defect children) and isolate a normalized defect-set score whose coefficient can plausibly remain independent of defect count.",
+  "consumer_targets": ["A057", "A059", "A060", "B01", "B03", "B08", "B09", "B18", "B19", "B20"],
+  "reviewer_targets": ["A091", "A090", "A094"],
+  "independent_review": "NONE_OBSERVED",
+  "canonical_delivery": "87906bc034ae4dc5589a640ca292b0a8f338e7a5; 9_OF_9_INITIAL_FILES_NONEMPTY_AND_BLOB_EXACT",
+  "brain_handoff_delivery": "1378545f33d19ddec7fe0ba5db7f038d98fee787; 9_OF_9_INITIAL_FILES_NONEMPTY_AND_BLOB_EXACT",
+  "native_ingestion": "NOT_OBSERVED",
+  "packet_completion_status": "IN_PROGRESS",
+  "universal_gu_status": "OPEN",
+  "full_fei_status": "OPEN"
+}
+

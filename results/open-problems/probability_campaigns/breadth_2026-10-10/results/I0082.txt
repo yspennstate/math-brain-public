@@ -1,0 +1,84 @@
+{
+  "problem_id": "I0082",
+  "source_checks": {
+    "initial_status_from_memory": "I do not know a paper resolving the full question.",
+    "browsing_performed": false,
+    "child_agents_used": false,
+    "source_statement_checked": "The supplied question is Problem 3.11. The subsequent text beginning '4 Classical Brownian motion' is extraction spillover.",
+    "local_material": "A provisional local note attributes the finite-variance exclusion to Hasebe and Ueda, 2018, Theorem 1.4, and records stable-law numerical experiments. The original paper was not inspected. Neither attribution nor numerical experiments are used in the proof below.",
+    "literature_status": "Current literature status and novelty remain unverified. The recorded partially_answered_2026_09_14 status is not an openness certificate.",
+    "audit_status": "Complete author proof supplied; independent audit by a different model family remains pending. No draft entry has been promoted to a math-brain node."
+  },
+  "exact_statement": "Does there exist a non-point-mass Borel probability measure mu on R such that mu boxplus nu is unimodal for every unimodal Borel probability measure nu on R? Here boxplus denotes free additive convolution. Unimodality permits an atom at a mode m, with the remaining density nondecreasing to the left of m and nonincreasing to its right.",
+  "answer": "no",
+  "proof_or_counterexample": {
+    "label": "proof",
+    "claim": "Freely strongly unimodal real probability measures are exactly the point masses. No moment assumption is required.",
+    "witness_family": "For every non-point-mass mu, nu_L=(1/100)delta_0+(99/100)U[0,L] is unimodal, whereas mu boxplus nu_L is nonunimodal for every sufficiently large L depending on mu.",
+    "proof_steps": [
+      "1. Analytic preliminaries. For a probability law eta define G_eta(z)=integral (z-s)^(-1) eta(ds) and F_eta(z)=1/G_eta(z), for Im z>0. Cauchy-Schwarz gives Im F_eta(z)>=Im z, strictly for every z when eta is not a point mass: |G_eta(z)|^2<integral |z-s|^(-2) eta(ds), and Im F_eta(z)=Im z times this integral divided by |G_eta(z)|^2. We use the standard analytic subordination theorem: if sigma=lambda boxplus kappa, there are upper-half-plane points omega_lambda, omega_kappa with F_lambda(omega_lambda)=F_kappa(omega_kappa)=F_sigma(z) and omega_lambda+omega_kappa=z+F_sigma(z). Such a pair is pointwise unique. Indeed, writing h_eta=F_eta-id, omega_kappa is a fixed point of T_z(v)=z+h_lambda(z+h_kappa(v)). This holomorphic half-plane self-map has image in {Im v>=Im z}, so cannot be the identity. Two distinct interior fixed points would force it to be the identity by Schwarz's lemma.",
+      "2. Local inverse construction without moments. Fix non-point-mass mu and set lambda_epsilon=D_epsilon mu. Dominated convergence gives G_lambda_epsilon(z)->1/z uniformly on compact upper-half-plane subsets, hence F_lambda_epsilon->id there, including derivatives. For any bounded disk D whose closure is in the lower half-plane, U={1/w:w in closure(D)} is compact in the upper half-plane. Choose a bounded convex open V with closure in that half-plane, containing U with positive boundary distance. For sufficiently small epsilon, |F_lambda_epsilon'-1|<1/2 on V; integration along segments proves injectivity. Rouche's theorem on fixed small circles centered at points of U supplies an inverse H_epsilon on a neighborhood of U. It satisfies H_epsilon(u)->u uniformly. Thus R_epsilon(w)=H_epsilon(1/w)-1/w is analytic on D, tends uniformly to zero, and has strictly negative imaginary part. The last assertion follows from F_lambda_epsilon(H_epsilon(u))=u and the strict inequality in step 1. This construction requires neither moments nor a global inverse-transform branch.",
+      "3. Fix kappa=p delta_0+q U[0,1], where p=1/100 and q=99/100. It is unimodal with mode 0. Put x_1=p, x_2=1/4, c=pi q, g(x)=p/x+q log(x/(1-x)), and w_j=g(x_j)-ic. Near either x_j its upper Cauchy transform extends analytically as A(z)=p/z+q[Log z-Log(1-z)-i pi], using branches near positive x_j and 1-x_j. Take b=g(x_2)-10i, r=99/10, and D={w:|w-b|<r}. Its closure lies below Im w=-1/10. Since 3<pi<4, 2.97<c<3.96. Also d=g(x_1)-g(x_2)=24/25-(99/100)log 33 has |d|<3. Consequently both w_j lie in D. Write Delta=r^2-(10-c)^2. Then Delta>48.5891 and 2r/Delta<19.8/48.5891<5/12. The disk pseudohyperbolic distance between w_1 and w_2 satisfies rho=r|d|/|r^2-(w_1-b)conjugate(w_2-b)|<=r|d|/Delta<29.7/48.5891<2/3.",
+      "4. Apply step 2 on this D. Define a_epsilon=Re R_epsilon(w_2), B_epsilon=R_epsilon-a_epsilon, and t_epsilon=-Im R_epsilon(w_2)>0. Then t_epsilon->0 and B_epsilon(w_2)=-i t_epsilon. Schwarz-Pick applied to h(w)=(B_epsilon(w)+i t_epsilon)/(B_epsilon(w)-i t_epsilon), which maps D into the unit disk and vanishes at w_2, gives |h(w)|<=rho_D(w,w_2). Therefore B_epsilon and its derivatives are O(t_epsilon) uniformly on every fixed compact subset of D. Put K_epsilon=-Im B_epsilon, with K_epsilon' denoting differentiation in the real direction. The same bound gives K_epsilon(w_1)>=t_epsilon(1-rho)/(1+rho)>t_epsilon/5, K_epsilon(w_2)=t_epsilon, and |K_epsilon'(w_2)|<=|B_epsilon'(w_2)|<=t_epsilon 2r/Delta<(5/12)t_epsilon. The derivative factor is 2r, not r.",
+      "5. Identify the physical convolution density. Let lambda_tilde_epsilon be lambda_epsilon translated by -a_epsilon, and sigma_epsilon=lambda_tilde_epsilon boxplus kappa. On fixed small complex neighborhoods of x_1 and x_2, the equation W_epsilon(z)=A(z-B_epsilon(W_epsilon(z))) has a unique analytic solution near A(z). Indeed B_epsilon and B_epsilon' are O(t_epsilon), so the right side maps an O(t_epsilon)-ball about A(z) into itself and is a contraction. Iteration gives W_epsilon=A+O(t_epsilon), uniformly, with values in D. For z in the upper half of either neighborhood put u=1/W_epsilon(z), omega_lambda=H_epsilon(u)-a_epsilon=u+B_epsilon(W_epsilon(z)), and omega_kappa=z-B_epsilon(W_epsilon(z)). Both lie in the upper half-plane. The inverse construction and fixed-point equation give F_lambda_tilde_epsilon(omega_lambda)=F_kappa(omega_kappa)=u, and their sum is z+u. Subordination uniqueness from step 1 therefore identifies W_epsilon with G_sigma_epsilon. Stieltjes inversion gives a real-analytic local density f_epsilon(x)=-Im W_epsilon(x)/pi, positive for small epsilon because f_epsilon=q+O(t_epsilon).",
+      "6. Obtain a relative error estimate. Write t=t_epsilon and B=B_epsilon. Taylor expansion, using B,B'=O(t) and W=A+O(t), yields W(z)=A(z)-A'(z)B(A(z))+O(t^2), uniformly on fixed complex neighborhoods. Cauchy's estimates allow differentiation with the same O(t^2) error on smaller neighborhoods. Hence f_epsilon'(x)=-[g''(x)K_epsilon(g(x)-ic)+(g'(x))^2 K_epsilon'(g(x)-ic)]/pi+O(t_epsilon^2). All error constants are independent of epsilon. In particular, the remainder is controlled relative to t_epsilon, regardless of the tail of mu.",
+      "7. Exact derivative signs. Direct calculation gives g'(x)=(x-p)/(x^2(1-x)) and g''(x)=2p/x^3+q[-1/x^2+1/(1-x)^2]. Thus g'(x_1)=0, g''(x_1)=1000000/99, g'(x_2)=128/25, and g''(x_2)=-64/5. Steps 4 and 6 give f_epsilon'(x_1)<=-[200000/(99 pi)]t_epsilon+O(t_epsilon^2)<0 for sufficiently small epsilon. They also give f_epsilon'(x_2)>=[64/5-(128/25)^2(5/12)]t_epsilon/pi-O(t_epsilon^2)=[704/(375 pi)]t_epsilon-O(t_epsilon^2)>0. A unimodal law cannot have these signs at x_1<x_2: the negative derivative forces any mode to be at or left of x_1, after which a positive derivative at x_2 is impossible.",
+      "8. Scale back. Put L=1/epsilon and nu_L=p delta_0+q U[0,L]. D_epsilon(mu boxplus nu_L)=lambda_epsilon boxplus kappa, whose translation by -a_epsilon is sigma_epsilon. Translation and positive dilation preserve unimodality. Thus mu boxplus nu_L is nonunimodal for all sufficiently large L, although nu_L is unimodal. Conversely, delta_a boxplus nu is a translation of nu and is unimodal whenever nu is. This proves the claim."
+    ],
+    "numerical_evidence": {
+      "label": "numerical evidence; not used in the proof",
+      "method": "65-digit implicit transform solves; analytic derivatives checked against centered finite differences with step 1e-9.",
+      "coordinates": "Derivatives of the centered scaled density at x=0.01 and x=0.25.",
+      "rows": [
+        {
+          "law": "Cauchy scale 1e-6",
+          "derivative_at_0_01": -0.0032152512797825705,
+          "derivative_at_0_25": 0.000004074366543085882
+        },
+        {
+          "law": "semicircle variance 1e-6",
+          "derivative_at_0_01": -0.00999004632188343,
+          "derivative_at_0_25": 0.000012671805358068347
+        },
+        {
+          "law": "symmetric Bernoulli at +/-0.001",
+          "derivative_at_0_01": -0.009989765313916378,
+          "derivative_at_0_25": 0.000012671723070695684
+        },
+        {
+          "law": "free Poisson rate 0.1 dilated by 0.001",
+          "derivative_at_0_01": -0.0009928313424819436,
+          "derivative_at_0_25": 0.0000012593608534807204
+        }
+      ],
+      "verification": "Finite-difference discrepancies were below 3e-16. Transform-equation residuals were below 9e-66. The Cauchy derivative signs were also verified by exact rational arithmetic directly from classical Cauchy convolution."
+    }
+  },
+  "hardest_remaining_gap": "No mathematical gap identified in the author proof. Independent-model audit should scrutinize the local inverse construction, the subordination identification, and the uniform O(t_epsilon^2) remainder. That audit and literature verification remain pending.",
+  "evidence_status": "proved",
+  "draft_brain_nodes": [
+    {
+      "key": "probability/free_unimodality/I0082/only_point_masses/draft_20261010",
+      "namespace": "probability.free_probability.unimodality",
+      "logical_name": "only_point_masses_are_freely_strongly_unimodal",
+      "kind": "theorem",
+      "title": "Draft: every nonconstant law fails free strong unimodality",
+      "statement": "For every non-point-mass Borel probability law mu on R, there exists L_0(mu)<infinity such that mu boxplus [(1/100)delta_0+(99/100)U[0,L]] is not unimodal for every L>L_0(mu). Consequently freely strongly unimodal real probability laws are exactly point masses. No moment assumption is required.",
+      "proof_text": "For a real probability law eta let G_eta(z)=integral (z-s)^(-1) eta(ds) and F_eta=1/G_eta. Cauchy-Schwarz implies Im F_eta(z)>=Im z, strictly for a non-point-mass law. The standard free-additive subordination theorem supplies upper-half-plane omega_lambda,omega_kappa satisfying F_lambda(omega_lambda)=F_kappa(omega_kappa)=F_lambda_boxplus_kappa(z) and omega_lambda+omega_kappa=z+F_lambda_boxplus_kappa(z). These equations have at most one upper-half-plane pair: with h_eta=F_eta-id, omega_kappa is a fixed point of T_z(v)=z+h_lambda(z+h_kappa(v)); this self-map cannot be the identity because its image has imaginary part at least Im z. Schwarz's lemma excludes two distinct interior fixed points.\n\nFix non-point-mass mu and let lambda_epsilon=D_epsilon mu. Dominated convergence gives F_lambda_epsilon->id locally uniformly on the upper half-plane, including derivatives. For any bounded disk D with closure in the lower half-plane, U={1/w:w in closure(D)} is compact in the upper half-plane. Choose a bounded convex V with closure in that half-plane containing U with positive boundary distance. For small epsilon, |F_lambda_epsilon'-1|<1/2 on V, which proves injectivity by integrating along segments. Rouche's theorem on fixed small circles about points of U gives an analytic inverse H_epsilon on a neighborhood of U, with H_epsilon(u)->u uniformly. Therefore R_epsilon(w)=H_epsilon(1/w)-1/w is analytic on D, tends uniformly to zero, and has strictly negative imaginary part by the strict F inequality. No moments or global inverse branch are used.\n\nSet p=1/100, q=99/100 and kappa=p delta_0+q U[0,1], unimodal with mode 0. Put x_1=p, x_2=1/4, c=pi q, g(x)=p/x+q log(x/(1-x)), and w_j=g(x_j)-ic. Its Cauchy transform has local analytic continuation A(z)=p/z+q[Log z-Log(1-z)-i pi] near either point. Take b=g(x_2)-10i, r=99/10, and D={|w-b|<r}. This closed disk lies strictly in the lower half-plane. The bounds 3<pi<4 imply 2.97<c<3.96. Also d=g(x_1)-g(x_2)=24/25-(99/100)log 33 satisfies |d|<3. Hence both w_j belong to D. Write Delta=r^2-(10-c)^2>48.5891. Then 2r/Delta<5/12. Their disk pseudohyperbolic distance satisfies rho=r|d|/|r^2-(w_1-b)conjugate(w_2-b)|<=r|d|/Delta<2/3.\n\nApply the inverse construction on D. Let a_epsilon=Re R_epsilon(w_2), B_epsilon=R_epsilon-a_epsilon and t_epsilon=-Im R_epsilon(w_2)>0. Then t_epsilon->0, B_epsilon maps D into the lower half-plane, and B_epsilon(w_2)=-it_epsilon. Schwarz-Pick applied to (B_epsilon+it_epsilon)/(B_epsilon-it_epsilon) gives uniform O(t_epsilon) bounds for B_epsilon and all fixed-order derivatives on compact subsets of D. With K_epsilon=-Im B_epsilon and real-direction derivative K_epsilon', it gives K_epsilon(w_1)>t_epsilon/5, K_epsilon(w_2)=t_epsilon and |K_epsilon'(w_2)|<=|B_epsilon'(w_2)|<=t_epsilon 2r/Delta<(5/12)t_epsilon. These bounds follow respectively from (1-rho)/(1+rho) and the derivative form of Schwarz-Pick; the factor 2r is retained.\n\nLet lambda_tilde_epsilon be lambda_epsilon translated by -a_epsilon and sigma_epsilon=lambda_tilde_epsilon boxplus kappa. On fixed small complex neighborhoods of x_j, the equation W_epsilon=A(z-B_epsilon(W_epsilon)) has a unique holomorphic solution near A. The O(t_epsilon) bounds make its right side a contraction mapping an O(t_epsilon)-ball about A(z) into itself. Thus W_epsilon=A+O(t_epsilon), uniformly, with values in D. For upper-half-plane z in either neighborhood, put u=1/W_epsilon(z), omega_lambda=H_epsilon(u)-a_epsilon=u+B_epsilon(W_epsilon(z)), and omega_kappa=z-B_epsilon(W_epsilon(z)). Both are in the upper half-plane. They satisfy the subordination equations by the inverse construction and the defining equation for W_epsilon. The uniqueness proved above identifies W_epsilon=G_sigma_epsilon. Consequently Stieltjes inversion gives real-analytic local density f_epsilon=-Im W_epsilon/pi, positive for small epsilon.\n\nTaylor expansion, using the uniform bounds and writing t=t_epsilon, gives W_epsilon(z)=A(z)-A'(z)B_epsilon(A(z))+O(t^2) on fixed complex neighborhoods. Cauchy's estimates give the same error order after differentiation on smaller neighborhoods. Therefore f_epsilon'(x)=-[g''(x)K_epsilon(g(x)-ic)+(g'(x))^2K_epsilon'(g(x)-ic)]/pi+O(t^2), with constants independent of epsilon. Direct differentiation yields g'(x)=(x-p)/(x^2(1-x)), g''(x)=2p/x^3+q[-1/x^2+1/(1-x)^2], hence g'(x_1)=0, g''(x_1)=1000000/99, g'(x_2)=128/25 and g''(x_2)=-64/5. Thus f_epsilon'(x_1)<=-[200000/(99pi)]t+O(t^2)<0, whereas f_epsilon'(x_2)>=[64/5-(128/25)^2(5/12)]t/pi-O(t^2)=[704/(375pi)]t-O(t^2)>0 for sufficiently small epsilon. These signs at x_1<x_2 contradict unimodality: the first forces any mode to lie at or left of x_1, after which the second is impossible.\n\nFinally, set L=1/epsilon and nu_L=p delta_0+q U[0,L]. D_epsilon(mu boxplus nu_L)=lambda_epsilon boxplus kappa, whose translation by -a_epsilon is the nonunimodal sigma_epsilon. Since translation and positive dilation preserve unimodality, mu boxplus nu_L is nonunimodal for every sufficiently large L. Each nu_L is unimodal. Conversely delta_a boxplus nu is a translation of nu, so point masses are freely strongly unimodal. This completes the proof. The argument is an author draft awaiting independent audit and literature verification.",
+      "assumptions": [
+        "mu is a Borel probability measure on R",
+        "Standard unimodality permits an atom at the mode and a monotone density on either side",
+        "Standard analytic subordination theorem for real free additive convolution, stated explicitly in the proof"
+      ],
+      "domain": "free probability; free additive convolution; unimodal probability measures",
+      "source": {
+        "source_id": "PROBABILITY300_20261010_I0082_author_draft",
+        "url": null,
+        "revision": "2026-10-10-draft-1",
+        "license": "owner-own-work (campaign result)"
+      },
+      "review_status": "Unreviewed draft; independent model-family audit required before promotion"
+    }
+  ],
+  "task_checklist_id": "T-20261010-059"
+}

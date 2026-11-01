@@ -1,0 +1,13 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "~\\brain_workers\\TRIO_1011\\op\\F0072\\MixtureAlgebra.lean"
+  ],
+  "cwd": "~/lean_verify",
+  "exit_code": 1,
+  "stdout": "~\\brain_workers\\TRIO_1011\\op\\F0072\\MixtureAlgebra.lean:7:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class\n  HMul \u211d \u211d ?m.22\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\n~\\brain_workers\\TRIO_1011\\op\\F0072\\MixtureAlgebra.lean:7:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class\n  HPow \u211d \u2115 \u211d\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n~\\brain_workers\\TRIO_1011\\op\\F0072\\MixtureAlgebra.lean:8:69: error: unsolved goals\n\u211d : Type u_1\na b c u v r : \u211d\n\u22a2 sorry\n~\\brain_workers\\TRIO_1011\\op\\F0072\\MixtureAlgebra.lean:11:43: error(lean.synthInstanceFailed): failed to synthesize instance of type class\n  HSub \u211d \u211d ?m.6\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n~\\brain_workers\\TRIO_1011\\op\\F0072\\MixtureAlgebra.lean:11:67: error: unsolved goals\n\u211d : Type u_1\nx y : \u211d\n\u22a2 sorry\n",
+  "stderr": "",
+  "seconds": 638.6005623340607
+}

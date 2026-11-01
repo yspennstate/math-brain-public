@@ -1,0 +1,13 @@
+{
+  "attempt_id": "C0029-A001",
+  "author": "claude-probability-1000-continue-0907",
+  "independent_check": "",
+  "key_identity": "Gaussian case: P(sqrt n s_n <= t) = 1 - exp(-t^2/2 - t), so the conjectured constant is the Gaussian value.",
+  "method": "Test whether the constant 1 in front of t is forced by the Gaussian comparison and whether the Bernoulli case can beat it.",
+  "obstruction": "Hard-edge universality covers t >= n^{-c}; the conjecture needs the constant 1 down to exponentially small t.",
+  "problem_id": "C0029",
+  "recorded_at": "2026-09-07T06:38:45Z",
+  "result": "For the Gaussian matrix Edelman's exact law gives P(sqrt n s_n <= t) = 1 - e^{-t^2/2 - t} ~ t as t -> 0, so the constant 1 is exactly the Gaussian density at zero of sqrt n s_n; the conjecture says Bernoulli matrices are no worse than Gaussian up to the exponentially small singular mass. A sufficient condition would be a local limit theorem for sqrt n s_n at zero uniform in n, which is a universality statement at the hard edge (the smallest singular value) and is known (Tao-Vu 2010 hard-edge universality) only in the form P(sqrt n s_n <= t) = (1 - e^{-t^2/2-t}) + O(n^{-c}) for t in a fixed range, which gives the conjecture for t >= n^{-c'} but not for t between c^n and n^{-c'}. The gap regime is exactly the small-ball regime where the Rudelson-Vershynin constant C appears. No improvement obtained.",
+  "schema": "probability-attempt.v1",
+  "substantive": true
+}

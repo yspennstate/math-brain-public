@@ -1,0 +1,13 @@
+{
+  "helper_version": "A075-output-entropy-potential-v1",
+  "family": "Actual gate h negative on {0,1,2,4,8,16,32,6,17,40} and one-flip gate J(x)=-h(x xor1); six disjoint identical arbitrary Boolean cores",
+  "domain": "h chosen input bias a in (0,7/32] or [1/2,25/32]; J input bias p in (0,1/16]; arbitrary finite admissible words. Compact certificates: 128 fixed rational intervals on each h band [1/16,7/32] and [1/2,25/32]. Rare ends are analytic, not sampled inference.",
+  "case_count": "256 compact real-parameter intervals; exact gate probability/pivotal polynomials; 12 rational gate profiles at p in {1/32,1/16,1/8,7/32,1/2,25/32}; four direct 12-bit compositions (two gates times AND2/parity2); independent A089 constants review",
+  "symmetry": "Matching automorphisms only for h; J retains all six separately computed pivotal probabilities, no transitivity shortcut",
+  "arithmetic": "int/Fraction, exact power and Bernstein polynomial identities; 192-bit 80-term atanh outward logarithms; floating fields display only",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds": 60,
+  "constant_frozen_before_job": 64,
+  "no_automatic_dimension_or_precision_increase": true,
+  "command": "python -X utf8 code/check_potential.py"
+}

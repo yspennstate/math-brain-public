@@ -1,0 +1,216 @@
+% R7-06 additive artifact, 2026-09-17.
+% Restricted exact reduction for I0114; this does NOT prove omega*_9 universal optimality.
+\section*{The striped index-three blocker as a three-point deformation and a Jacobi-theta inequality}
+
+Let
+\[
+ e_1=(1,0),\qquad e_2=(1/2,\sqrt3/2),\qquad \Lambda=\langle e_1,e_2\rangle=A_2,
+\]
+and let
+\[
+ M_0=\langle e_1,3e_2\rangle\subset\Lambda,\qquad [\Lambda:M_0]=3.
+\]
+For $b>0$ and a lattice $L$, write
+\[
+ \Theta_{L,b}(y)=\sum_{\lambda\in L}e^{-b|y+\lambda|^2},\qquad
+ D_{L,b}(y)=\Theta_{L,b}(0)-\Theta_{L,b}(y).
+\]
+The remaining ``near-orbit'' rigid-pair inequality from the R7-06 reduction is
+\[
+ \boxed{D_{M_0,b}(y)\ge D_{\Lambda,b}(y)\quad\text{for all }b>0,\ y\in\mathbb R^2.}\tag{1}
+\]
+Equivalently, with
+\[
+ H:=\Lambda\setminus M_0=(e_2+M_0)\sqcup(-e_2+M_0),
+\]
+we must show that
+\[
+ T_b(y):=\sum_{h\in H}e^{-b|y+h|^2}
+       =\Theta_{M_0,b}(y+e_2)+\Theta_{M_0,b}(y-e_2)
+\]
+satisfies $T_b(y)\ge T_b(0)$.
+
+\subsection*{1. Exact one-point deformation interpretation}
+Let $V_b=\Theta_{M_0,b}$ be the periodized Gaussian on the flat torus $\mathbb R^2/M_0$.  Consider the three-point subgroup configuration
+\[
+ C_0=\{-e_2,0,e_2\}\pmod{M_0}
+\]
+and the one-point deformation
+\[
+ C_y=\{-e_2,y,e_2\}\pmod{M_0}.
+\]
+For the unordered pair energy $\mathcal E_b(C)=\sum_{i<j}V_b(x_i-x_j)$,
+\[
+ \mathcal E_b(C_y)-\mathcal E_b(C_0)
+ =V_b(y+e_2)+V_b(y-e_2)-2V_b(e_2)
+ =\boxed{T_b(y)-T_b(0)}.\tag{2}
+\]
+Thus (1) is exactly global one-point stability of this order-three subgroup configuration, not merely an abstract difference of two lattice theta functions.
+
+\subsection*{2. Rectangular double cover and tensor-product factorization}
+Put
+\[
+ u=e_1=(1,0),\qquad v=2e_2-e_1=(0,\sqrt3),\qquad L_0=\langle u,3v\rangle.
+\]
+Then $L_0\subset M_0$ has index two and
+\[
+ M_0=L_0\sqcup(h+L_0),\qquad h=3e_2-e_1=\frac{u+3v}{2}.
+\]
+Modulo $L_0$, the four cosets comprising $H$ are
+\[
+ \boxed{\pm v,\qquad \pm\frac{u+v}{2}}.\tag{3}
+\]
+For physical coordinates $(X,Y)$ define the one-dimensional Gaussian combs
+\[
+ P_b(X)=\sum_{m\in\mathbb Z}e^{-b(X+m)^2},\qquad
+ Q_b(Y)=\sum_{n\in\mathbb Z}e^{-b(Y+3\sqrt3\,n)^2},
+\]
+and
+\[
+ A_b(Y)=Q_b(Y+\sqrt3)+Q_b(Y-\sqrt3),\qquad
+ B_b(Y)=Q_b(Y+\sqrt3/2)+Q_b(Y-\sqrt3/2).
+\]
+Summing the four cosets in (3) gives the exact tensor-product identity
+\[
+ \boxed{T_b(X,Y)=P_b(X)A_b(Y)+P_b(X+1/2)B_b(Y).}\tag{4}
+\]
+This is a two-term Jacobi heat-kernel problem on a rectangular cover.
+
+\subsection*{3. Exact reciprocal structure factor}
+Use normalized vertical coordinate $\eta=Y/(3\sqrt3)$.  Reciprocal modes of $L_0$ are indexed by $(k,\ell)\in\mathbb Z^2$ and have squared norm
+\[
+ |\xi_{k,\ell}|^2=k^2+\frac{\ell^2}{27}.
+\]
+The four-source structure factor from (3) is
+\[
+ S(k,\ell)=2\cos\frac{2\pi\ell}{3}+2(-1)^k\cos\frac{\pi\ell}{3}.
+\]
+A direct residue check gives
+\[
+ \boxed{
+ S(k,\ell)=
+ \begin{cases}
+ 4,&\ell\equiv 3k\pmod 6,\\
+ -2,&\ell\equiv 3k\pm2\pmod 6,\\
+ 0,&\text{otherwise}.
+ \end{cases}}\tag{5}
+\]
+The positive support is the triangular reciprocal lattice $\ell=3k+6n$, on which
+\[
+ |\xi|^2=\frac43(k^2+kn+n^2).
+\]
+However, a nearest-residue three-mode pairing cannot prove (1) term by term.  For the positive mode $(k,\ell)=(1,3)$ and its two negative neighbors $(1,1)$ and $(1,5)$, take $(X,\eta)=(3/4,1/4)$.  Then
+\[
+ kX+\ell\eta=\frac32\quad\Rightarrow\quad \cos(2\pi(kX+\ell\eta))=-1,
+\]
+while
+\[
+ kX+(\ell\pm2)\eta\in\mathbb Z.
+\]
+Hence both negative-neighbor contributions to $1-\cos$ vanish while the positive mode survives.  Any proof based only on pairing each positive mode with these two adjacent negative residue modes is therefore impossible; cross-shell or real-space structure is required.
+
+\subsection*{4. Scale differentiation and the first-loss system}
+Define
+\[
+ \mu_b(y):=
+ \frac{\sum_{h\in H}|y+h|^2e^{-b|y+h|^2}}{T_b(y)}.
+\]
+Then
+\[
+ \boxed{\partial_b\log T_b(y)=-\mu_b(y).}\tag{6}
+\]
+At any height crossing $T_b(y)=T_b(0)$,
+\[
+ \boxed{\partial_b\big(T_b(y)-T_b(0)\big)
+ =T_b(0)\big(\mu_b(0)-\mu_b(y)\big).}\tag{7}
+\]
+Consequently, if positivity is known for small $b$ and is first lost as $b$ increases, then at the first global bifurcation point $(b_*,y_*)$ one necessarily has
+\[
+ \begin{aligned}
+ T_{b_*}(y_*)&=T_{b_*}(0),\\
+ \nabla_yT_{b_*}(y_*)&=0,\\
+ \nabla_y^2T_{b_*}(y_*)&\succeq0,\\
+ \mu_{b_*}(0)&\le\mu_{b_*}(y_*).
+ \end{aligned}\tag{8}
+\]
+The gradient equation is the exact first-moment balance
+\[
+ \boxed{\sum_{h\in H}(y_*+h)e^{-b_*|y_*+h|^2}=0.}\tag{9}
+\]
+Thus a counterexample cannot appear arbitrarily: it must satisfy simultaneous height, first-moment, Hessian, and scale-moment constraints.
+
+\subsection*{5. Conductor-three / discriminant $-27$ Jacobi form}
+In lattice coordinates, vectors of $M_0$ have squared norm
+\[
+ |me_1+3ne_2|^2=m^2+3mn+9n^2.
+\]
+With $x=m+n$ this becomes
+\[
+ \boxed{x^2+xn+7n^2,}\tag{10}
+\]
+a primitive positive binary quadratic form of discriminant $1-28=-27$.  Thus the striped blocker compares the Eisenstein maximal-order form of discriminant $-3$ with its conductor-three order of discriminant $-27$.
+
+For $q=e^{-b}$ set
+\[
+ \mathcal P_q(t):=\sum_{n\in\mathbb Z}q^{(n+t)^2},\qquad z=Y/\sqrt3.
+\]
+Splitting the $e_2$ coefficient into even and odd integers yields
+\[
+ \boxed{
+ \Theta_{\Lambda,b}(X,Y)
+ =\mathcal P_q(X)\mathcal P_{q^3}(z)
+ +\mathcal P_q(X+1/2)\mathcal P_{q^3}(z+1/2).}\tag{11}
+\]
+For $M_0$, the same parity split gives
+\[
+ \boxed{
+ \Theta_{M_0,b}(X,Y)
+ =\mathcal P_q(X)\mathcal P_{q^{27}}(z/3)
+ +\mathcal P_q(X+1/2)\mathcal P_{q^{27}}(z/3+1/2).}\tag{12}
+\]
+Hence
+\[
+ \boxed{
+ \begin{aligned}
+ T_b(X,Y)=&\ \mathcal P_q(X)
+ \big[\mathcal P_{q^3}(z)-\mathcal P_{q^{27}}(z/3)\big]\\
+ &+\mathcal P_q(X+1/2)
+ \big[\mathcal P_{q^3}(z+1/2)-\mathcal P_{q^{27}}(z/3+1/2)\big].
+ \end{aligned}}\tag{13}
+\]
+The striped inequality (1) is exactly the assertion that the right-hand side of (13) is at least its value at $(X,z)=(0,0)$ for every $q\in(0,1)$ and every $(X,z)$.  That base value is
+\[
+ T_b(0)=\mathcal P_q(0)\big[\mathcal P_{q^3}(0)-\mathcal P_{q^{27}}(0)\big]
+ +\mathcal P_q(1/2)\big[\mathcal P_{q^3}(1/2)-\mathcal P_{q^{27}}(1/2)\big].\tag{14}
+\]
+This is a degree-three / conductor-three Jacobi-theta structure.  It should not be silently identified with the standard Borwein cubic $b(q)$ character: that standard character selects a different index-three congruence class.  Any use of a cubic-theta identity must first match the exact character/coset in (11)--(13).
+
+\subsection*{6. Exact relation to Tenpas's higher-cardinality rectangular-torus conjecture}
+Nathaniel Tenpas defines
+\[
+ \Phi_\beta=\begin{bmatrix}1&1/2\\0&\beta/2\end{bmatrix}\mathbb Z^2,
+ \qquad
+ L_\beta^m=\begin{bmatrix}1&0\\0&m\beta\end{bmatrix}\mathbb Z^2,
+\]
+and $\omega^*_{m,\beta}=\Phi_\beta/L_\beta^m$.  At
+\[
+ \boxed{m=3,\qquad\beta=\sqrt3,}\tag{15}
+\]
+one has $\Phi_{\sqrt3}=\Lambda$ and $L_{\sqrt3}^3=L_0$, so
+\[
+ \omega^*_{3,\sqrt3}=\Lambda/L_0.
+\]
+Let
+\[
+ J=M_0/L_0=\{0,h\},\qquad K=\Lambda/L_0,\qquad K\setminus J=H/L_0.
+\]
+Since $h$ has order two and $(K\setminus J)+h=K\setminus J$, rigidly translating the pair $J$ to $J+y$ changes only its cross-energy with $K\setminus J$.  For unordered energy,
+\[
+ \boxed{
+ \mathcal E_b\big((K\setminus J)\cup(J+y)\big)-\mathcal E_b(K)
+ =2\big[T_b(y)-T_b(0)\big].}\tag{16}
+\]
+(With the ordered-energy convention used by Hardin--Tenpas/Tenpas, the factor is $4$.)  Hence (1) is exactly the rigid-order-two-subgroup slide slice of Tenpas's open $m=3,\beta=\sqrt3$ Conjecture 10.  Tenpas proves the $m=2$ case; the $m=3$ statement itself is not available as an input.  Equation (16) is therefore a localization of the open higher-cardinality problem, not a proof by citation.
+
+\subsection*{Status}
+Equations (2)--(16) are exact reductions/identities.  They prove neither (1) nor universal optimality of $\omega^*_9$ by themselves.  The remaining mathematical issue is a global inequality for the two-term Jacobi expression (13), equivalently exclusion of the first-loss system (8)--(9).  This artifact is PARTIAL relative to Serfaty Conjecture 11.1 and to R7-06's frozen metric $m_{\rm sq}$.

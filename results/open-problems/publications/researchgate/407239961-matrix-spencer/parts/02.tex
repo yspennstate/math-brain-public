@@ -1,0 +1,359 @@
+facts that convolution by $V_M$ preserves Fourier coefficients with $|k|\le M$
+and produces a polynomial of degree less than $2M$.
+
+\section{The finite Toeplitz extension input}\label{sec:extension}
+
+For a finite sequence $a=(a_k)_{-(d-1)\le k\le d-1}$, write
+$T_d(a)=(a_{x-y})_{0\le x,y<d}$.  A function $\phi\in L^\infty(\T)$ induces
+$T_d(a)$ if $\widehat\phi(k)=a_k$ for all $|k|<d$.
+
+\begin{theorem}[Finite self-adjoint Toeplitz extension]\label{thm:selfadjoint-extension}
+There is an absolute constant $K_0$ such that every self-adjoint scalar
+$d\times d$ Toeplitz matrix $A=T_d(a)$ has a real-valued inducer
+$\phi_A\in L^\infty(\T)$ satisfying
+\[
+   \widehat\phi_A(k)=a_k\quad(|k|<d),
+   \qquad
+   \norm{\phi_A}_\infty\le K_0\norm{A}_{op} .
+\]
+One may take $K_0=3$ with the normalization used in
+\cite{CourtneySarason2012}.
+\end{theorem}
+
+\begin{proof}[Reference]
+This is the finite scalar Toeplitz extension theorem of
+Nikolskaya--Farforovskaya \cite{NikolskayaFarforovskaya2004}.  In the notation
+of Courtney--Sarason \cite{CourtneySarason2012}, for an $(N+1)\times(N+1)$
+self-adjoint Toeplitz matrix $A$ one minimizes $\norm{f}_\infty$ over all
+$f\in L^\infty(\T)$ whose Fourier coefficients of orders $-N,\ldots,N$ agree
+with the diagonals of $A$.  Courtney--Sarason record the bound $c_N\le3$ of
+Nikolskaya--Farforovskaya.  If a complex-valued minimizer is obtained in the
+self-adjoint case, its real part has the same required Fourier coefficients and
+no larger $L^\infty$ norm.
+\end{proof}
+
+\begin{corollary}[Complex finite Toeplitz extension]\label{cor:complex-extension}
+There is an absolute constant $K_T$ such that every complex scalar Toeplitz
+matrix $A=T_d(a)$ has an inducer $\phi_A\in L^\infty(\T)$ satisfying
+\[
+   \widehat\phi_A(k)=a_k\quad(|k|<d),
+   \qquad
+   \norm{\phi_A}_\infty\le K_T\norm{A}_{op} .
+\]
+One may take $K_T=2K_0$.
+\end{corollary}
+
+\begin{proof}
+Let
+\[
+   B=\frac{A+A^*}{2},
+   \qquad
+   C=\frac{A-A^*}{2i} .
+\]
+Then $B$ and $C$ are self-adjoint Toeplitz matrices and
+$\norm{B}_{op},\norm{C}_{op}\le\norm{A}_{op}$.  By
+\cref{thm:selfadjoint-extension}, choose real-valued inducers $u$ and $v$ for
+$B$ and $C$, respectively, with
+$\norm{u}_\infty,\norm{v}_\infty\le K_0\norm{A}_{op}$.  The function
+$\phi_A=u+iv$ has $\norm{\phi_A}_\infty\le2K_0\norm{A}_{op}$.
+
+It remains only to check the coefficients.  If $a_k$ are the Toeplitz
+coefficients of $A$, then the coefficients of $B$ and $C$ are
+\[
+   b_k=\frac{a_k+\overline{a_{-k}}}{2},
+   \qquad
+   c_k=\frac{a_k-\overline{a_{-k}}}{2i} .
+\]
+Therefore $b_k+ic_k=a_k$ for every $|k|<d$, as required.
+\end{proof}
+
+\section{Proof of the main theorem}\label{sec:main-proof}
+
+\begin{theorem}[Arbitrary scalar Toeplitz signing]\label{thm:toeplitz}
+There is a universal constant $C$ such that, for every collection of complex
+$d\times d$ Toeplitz contractions $A_1,\ldots,A_n$,
+\[
+   \discop(A_1,\ldots,A_n)
+   \le C\sqrt{n\log\!\left(e+\frac dn\right)} .
+\]
+\end{theorem}
+
+\begin{proof}
+The case $d=1$ is the scalar form of \cref{thm:vector-spencer}, so assume
+$d\ge2$.  For each $i$, choose an inducer $\phi_i\in L^\infty(\T)$ from
+\cref{cor:complex-extension}.  Since $\norm{A_i}_{op}\le1$, we have
+$\norm{\phi_i}_\infty\le K_T$.
+
+Put
+\[
+   p_i=\phi_i*V_d .
+\]
+Then $p_i$ is a trigonometric polynomial of degree less than $2d$,
+$\widehat p_i(k)=\widehat\phi_i(k)$ for all $|k|<d$, and
+\[
+   \norm{p_i}_\infty\le \norm{V_d}_{L^1}\norm{\phi_i}_\infty\le3K_T .
+\]
+The equality of the Fourier coefficients in the range $|k|<d$ gives
+$T_d(p_i)=A_i$.
+
+Let $Q\subset\T$ be a uniform grid of size $16d$.  By \cref{lem:grid}, $Q$ is
+$2$-norming for trigonometric polynomials of degree less than $2d$.  For each
+$i$, define the sampled vector
+\[
+   x_i=(p_i(\theta))_{\theta\in Q}\in\C^Q .
+\]
+Then $\norm{x_i}_\infty\le3K_T$.  Applying \cref{thm:vector-spencer} to
+$x_i/(3K_T)$ gives signs $\eps_i\in\{-1,1\}$ such that
+\[
+   \max_{\theta\in Q}\left|\sum_{i=1}^n\eps_i p_i(\theta)\right|
+   \le C\sqrt{n\log\!\left(e+\frac{|Q|}{n}\right)}
+   \le C\sqrt{n\log\!\left(e+\frac dn\right)} .
+\]
+For $P=\sum_i\eps_i p_i$, the grid estimate gives
+\[
+   \norm{P}_\infty\le
+   C\sqrt{n\log\!\left(e+\frac dn\right)} .
+\]
+Finally, by \cref{lem:toeplitz-upper},
+\[
+   \left\|\sum_{i=1}^n\eps_i A_i\right\|_{op}
+   =\norm{T_d(P)}_{op}
+   \le\norm{P}_\infty .
+\]
+This proves the theorem.
+\end{proof}
+
+\begin{corollary}[Arbitrary scalar Hankel signing]\label{cor:hankel}
+There is a universal constant $C$ such that, for arbitrary complex Hankel
+contractions $H_1,\ldots,H_n\in M_d(\C)$,
+\[
+   \discop(H_1,\ldots,H_n)
+   \le C\sqrt{n\log\!\left(e+\frac dn\right)} .
+\]
+\end{corollary}
+
+\begin{proof}
+Let $J_d$ be the reversal matrix.  If $H$ is Hankel, then $HJ_d$ is Toeplitz,
+and $\norm{HJ_d}_{op}=\norm{H}_{op}$.  Apply \cref{thm:toeplitz} to the Toeplitz
+matrices $H_iJ_d$.  For the resulting signs,
+\[
+   \left\|\sum_i\eps_i H_i\right\|_{op}
+   =\left\|\left(\sum_i\eps_i H_iJ_d\right)J_d\right\|_{op}
+   =\left\|\sum_i\eps_i H_iJ_d\right\|_{op} .
+\]
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:main}]
+This is \cref{thm:toeplitz} together with \cref{cor:hankel}.  If $d\le n$, then
+$\log(e+d/n)\le\log(e+1)$, so the right-hand side is $O(\sqrt n)$.
+\end{proof}
+
+\appendix
+
+\section{Direct finite-section refinements}\label{app:finite-section}
+
+This appendix proves \cref{thm:banded-intro,thm:tame-intro}.  These arguments do
+not use the finite Toeplitz extension theorem.  They instead compare the
+operator norm of a finite Toeplitz section with the sup norm of its polynomial
+symbol on the scale resolved by the section.
+
+\begin{lemma}[Finite-window lower bound]\label{lem:window}
+Let $p$ be a real-valued trigonometric polynomial, and let $h\in\mathbb N$ satisfy
+$2h-1\le d$.  Then
+\[
+   \norm{T_d(p)}_{op}
+   \ge \norm{p}_\infty - \frac{3\pi}{2h}\norm{p'}_\infty .
+\]
+\end{lemma}
+
+\begin{proof}
+Choose $2h-1$ consecutive indices inside $\{0,\ldots,d-1\}$, centered at an
+integer $x_0$, and define the triangular window
+\[
+   u_x=\max(0,h-|x-x_0|).
+\]
+For $\theta\in\T$, set $v_\theta(x)=u_xe^{ix\theta}$.  A direct calculation gives
+\[
+   \frac{\ip{T_d(p)v_\theta}{v_\theta}}{\norm u_2^2}=(p*W_h)(\theta),
+\]
+where $W_h\ge0$ is a probability kernel.  More explicitly, up to a harmless
+phase, the Fourier transform of $u$ is $hF_h$, and hence
+\[
+   W_h(\phi)=\frac{h^2F_h(\phi)^2}{\norm u_2^2},
+   \qquad
+   \norm u_2^2=h^2+2\sum_{j=1}^{h-1}j^2=\frac{2h^3+h}{3} .
+\]
+Therefore
+\[
+   \norm{T_d(p)}_{op}\ge\sup_{\theta\in\T}\abs{(p*W_h)(\theta)} . \tag{1}
+\]
+Identifying $\T$ with $[-\pi,\pi]$ and using
+$\abs{\sin(\phi/2)}\ge\abs\phi/\pi$ on this interval,
+\[
+   F_h(\phi)\le\min\!\left(h,\frac{\pi^2}{h\phi^2}\right),
+   \qquad 0<|\phi|\le\pi .
+\]
+Consequently
+\[
+ \int_\T |\phi|F_h(\phi)^2\,\frac{d\phi}{2\pi}
+ \le \frac1\pi\left(\int_0^{\pi/h}\phi h^2\,d\phi
+       +\int_{\pi/h}^\pi \frac{\pi^4}{h^2\phi^3}\,d\phi\right)
+ \le \pi .
+\]
+Thus
+\[
+   \int_\T |\phi|W_h(\phi)\,\frac{d\phi}{2\pi}
+   \le \frac{h^2}{\norm u_2^2}\pi
+   =\frac{3h\pi}{2h^2+1}\le \frac{3\pi}{2h}. \tag{2}
+\]
+Choose $\theta_*$ such that $\abs{p(\theta_*)}=\norm{p}_\infty$ and replace $p$
+by $-p$ if necessary so that $p(\theta_*)=\norm{p}_\infty$.  Since $W_h$ is a
+probability kernel,
+\[
+   (p*W_h)(\theta_*)
+   \ge \norm{p}_\infty-
+orm{p'}_\infty
+      \int_\T |\phi|W_h(\phi)\,\frac{d\phi}{2\pi} .
+\]
+Together with (1) and (2), this proves the claim.
+\end{proof}
+
+\begin{lemma}[Symbol transfer for banded sections]\label{lem:symbol-transfer}
+Let $p$ be a real-valued trigonometric polynomial of degree at most $w$.  If
+$h>w$ and $2h-1\le d$, then
+\[
+   \norm{T_d(p)}_{op}
+   \ge\left(1-\frac{3\pi w}{2h}\right)\norm{p}_\infty .
+\]
+In particular, if $d\ge20w$, then
+\[
+   \norm{p}_\infty\le2\norm{T_d(p)}_{op} .
+\]
+\end{lemma}
+
+\begin{proof}
+The first estimate follows from \cref{lem:window} and Bernstein's inequality
+$\norm{p'}_\infty\le w\norm{p}_\infty$.  If $d\ge20w$, choose $h=10w$; then
+$2h-1\le d$ and $1-3\pi/20>1/2$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:banded-intro}]
+Let $A_i=T_d(p_i)$ with $p_i$ of degree at most $w$.  Write
+$p_i=q_i+ir_i$, where $q_i$ and $r_i$ are real-valued trigonometric polynomials.
+Then
+\[
+   T_d(q_i)=\frac{A_i+A_i^*}{2},
+   \qquad
+   T_d(r_i)=\frac{A_i-A_i^*}{2i},
+\]
+and both matrices have operator norm at most $1$.  By
+\cref{lem:symbol-transfer},
+\[
+   \norm{q_i}_\infty\le2,
+   \qquad
+   \norm{r_i}_\infty\le2,
+\]
+so $\norm{p_i}_\infty\le4$ after increasing the absolute constant.
+
+Let $Q\subset\T$ be a uniform grid of size $8w$.  The grid lemma gives a
+constant-factor norming inequality for all degree-$w$ polynomials.  Apply
+\cref{thm:vector-spencer} to the sample vectors
+$x_i=(p_i(\theta))_{\theta\in Q}$.  There are signs such that
+\[
+   \max_{\theta\in Q}\left|\sum_i\eps_i p_i(\theta)\right|
+   \le C\sqrt{n\log\!\left(e+\frac wn\right)} .
+\]
+For $P=\sum_i\eps_i p_i$, \cref{lem:grid} and \cref{lem:toeplitz-upper} give
+\[
+   \left\|\sum_i\eps_i A_i\right\|_{op}
+   =\norm{T_d(P)}_{op}
+   \le\norm{P}_\infty
+   \le C\sqrt{n\log\!\left(e+\frac wn\right)} .
+\]
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:tame-intro}]
+The case $d=1$ is scalar vector Spencer, so assume $d\ge2$.  Write
+$p_i=q_i+ir_i$ with $q_i,r_i$ real-valued.  Then
+$\norm{q_i'}_\infty,\norm{r_i'}_\infty\le\norm{p_i'}_\infty\le L$, and the
+self-adjoint Toeplitz sections $T_d(q_i)$ and $T_d(r_i)$ have norm at most $1$.
+Choose $h=\lfloor(d+1)/2\rfloor$.  Since $2h-1\le d$ and $h\ge d/2$,
+\cref{lem:window} gives
+\[
+   \norm{q_i}_\infty,\norm{r_i}_\infty
+   \le 1+\frac{3\pi L}{d} .
+\]
+Thus $\norm{p_i}_\infty\le C(1+L/d)$.
+
+Use a uniform grid $Q\subset\T$ of size $8d$.  It norms all polynomials of
+degree less than $d$ up to an absolute factor.  Apply vector Spencer to the
+sample vectors $(p_i(\theta))_{\theta\in Q}$.  The resulting signs satisfy
+\[
+   \max_{\theta\in Q}\left|\sum_i\eps_i p_i(\theta)\right|
+   \le C\left(1+\frac Ld\right)
+      \sqrt{n\log\!\left(e+\frac dn\right)} .
+\]
+The grid estimate and \cref{lem:toeplitz-upper} complete the proof.
+\end{proof}
+
+\section{A fixed-block sampled-lift formulation}\label{app:lifts}
+
+This appendix records a finite-dimensional lifting formulation that explains the
+sampling step in the main proof and applies equally to fixed-size matrix-valued
+symbols.  The scalar theorem in the main text uses only the case $b=1$, where
+the input is exactly vector Spencer.
+
+\begin{theorem}[Block-diagonal Matrix Spencer, fixed block size]\label{thm:block-spencer}
+There is a universal constant $C_{BD}$ such that the following holds.  Let
+$Y_1,\ldots,Y_n$ be self-adjoint elements of
+\[
+   \bigoplus_{q\in Q}M_b(\C)
+\]
+with $\norm{Y_i}\le1$.  Then there are signs $\eps_i\in\{-1,1\}$ such that
+\[
+   \left\|\sum_{i=1}^n\eps_iY_i\right\|
+   \le C_{BD}\sqrt{n\log\!\left(e+\frac{b^2|Q|}{n}\right)} .
+\]
+The same bound holds for arbitrary complex block-diagonal matrices after
+Hermitian dilation, with only a change of the universal constant.
+\end{theorem}
+
+\begin{proof}[Reference]
+This is the block-diagonal Matrix Spencer theorem of Dadush--Jiang--Reis
+\cite{DadushJiangReis2022}, applied to block diagonal matrices with block size
+$b$ and total ambient dimension $b|Q|$.  Their entropy parameter is the product
+of the block size and the ambient dimension, namely $b^2|Q|$.  The complex case
+follows by replacing each block $Y_{i,q}$ by its Hermitian dilation
+\[
+   \begin{pmatrix}0&Y_{i,q}\\ Y_{i,q}^*&0\end{pmatrix} .
+\]
+This doubles the block size and preserves the operator norm of every signed sum.
+\end{proof}
+
+\begin{definition}[Sampled multiplier lift]\label{def:sampled-lift}
+Let $\Omega$ be compact and let $\mathcal F\subset C(\Omega;M_b(\C))$ be a
+finite-dimensional linear space.  A finite set $Q\subset\Omega$ is
+$L$-norming for $\mathcal F$ if
+\[
+   \norm{F}_{L^\infty(\Omega;M_b)}
+   \le L\max_{q\in Q}\norm{F(q)}_{op},
+   \qquad F\in\mathcal F .
+\]
+A tuple $A_1,\ldots,A_n\in M_D(\C)$ admits a $(K,L,Q,b)$ sampled multiplier lift
+if there are $F_i\in\mathcal F$ and a linear contraction
+\[
+   \Pi:\spanop\{F_1,\ldots,F_n\}\to M_D(\C),
+\]
+where the domain is normed by $L^\infty(\Omega;M_b)$, such that
+$\Pi(F_i)=A_i$ and
+\[
+   \norm{F_i}_{L^\infty(\Omega;M_b)}\le K\norm{A_i}_{op}
+   \qquad (i=1,\ldots,n).
+\]
+\end{definition}
+
+\begin{theorem}[Sampled signing]\label{thm:sampled}
+If $A_1,\ldots,A_n$ admit a $(K,L,Q,b)$ sampled multiplier lift and
+$\norm{A_i}_{op}\le1$, then
+\[
+   \discop(A_1,\ldots,A_n)

@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "run_id": "20261013T192810Z-fleet01-B05-biased-tower-retained-credit-a023",
+  "stream": "B05",
+  "packet_id": "A023",
+  "gap_id": "B05_RARE_REFUNDS",
+  "claims": [
+    {
+      "claim_id": "B05_A023_NEGATIVE_HALF_SCALAR_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For the exact half-activation scalar R, R(t)<=1 for every t in [-1,0].",
+      "quantifiers": "all real t in the closed interval [-1,0]",
+      "evidence": "PROOF.md Section 2; CHECK_BIASED_RETAINED.py supplies diagnostics only"
+    },
+    {
+      "claim_id": "B05_A023_BIASED_TOWER_ENDPOINT_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every Boolean base P with U(P)<=c I(P), c>=48/35, every fresh fair-selector tower whose positive levels use fresh two-bit AND balancers of mean -1/2 satisfies U(F_d)<=c I(F_d) for all d>=1.",
+      "quantifiers": "all base dimensions, Boolean P, c>=48/35, and integers d>=1",
+      "evidence": "PROOF.md Sections 1-3"
+    },
+    {
+      "claim_id": "B05_A023_BIASED_TOWER_RETAINED_CREDIT_v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "Every finite adaptive/pruned restriction tree on the biased tower variables, with any common disjoint Boolean terminal core, has retained U loss at most c I(F_d); dense nullity-two bases admit c=2.",
+      "quantifiers": "all permitted finite trees, reveal orders, pruning policies, common disjoint terminal cores, and depths",
+      "evidence": "PROOF.md Section 4 and CHECK_BIASED_RETAINED.out"
+    }
+  ],
+  "unaffected_open_claim": "No dimension-independent retained-credit bound is proved for arbitrary bias, biased outer selectors, reused variables, or changing overlapping coherent cores.",
+  "full_fei_status": "OPEN"
+}

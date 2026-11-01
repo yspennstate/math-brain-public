@@ -1,0 +1,275 @@
+[
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 14,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0014",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Problem 16.14, p. 227",
+      "problem_id": "C0014",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "biskup_dgff_extrema_2020",
+      "statement": "For admissible approximations D_N of a domain D and the network with resistances (13.13) built from the DGFF, characterise the limit distribution of x -> (log N)^{-1/2} log R_eff(floor(xN), D_N^c) as N -> infinity.",
+      "status_search": "",
+      "title": "Limit of the normalised log-effective resistance of the DGFF electric network",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 73,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0073",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Open Problem 14.1, p. 206",
+      "problem_id": "C0073",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "heydenreich_hofstad_highd_2017",
+      "statement": "For random walk on the infinite percolation cluster in sufficiently high dimension, show that the diffusion constant satisfies sigma(p)^2 ~ (p - p_c)^2 as p decreases to p_c; even monotonicity of p -> sigma^2(p) is not known.",
+      "status_search": "",
+      "title": "Critical exponent of the diffusion constant of random walk on the supercritical percolation cluster",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 109,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0109",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Section 6, p. 22",
+      "problem_id": "C0109",
+      "recorded_at": "2026-09-07T07:01:07Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "tao_vu_littlewood_offord_2009",
+      "statement": "Determine the optimal rate n^{-delta} of convergence of the empirical spectral distribution of n^{-1/2} M_n to the circular law under a (2+eps)-th moment assumption, and the exact dependence of delta on eps.",
+      "status_search": "Rate results: Gotze-Tikhomirov, and Jalowy (2021) obtained near-optimal rates for Ginibre and for i.i.d. matrices with sufficiently many moments; the exact eps -> delta dependence at the (2+eps) level was not found in this session.",
+      "title": "Rate of convergence in the circular law as a function of the moment assumption",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\problems.jsonl",
+    "line": 127,
+    "record": {
+      "admitted": true,
+      "current_status": "unverified",
+      "dedup_key": "C0127",
+      "historical_status": "source_says_open",
+      "intake": "claude_20260907",
+      "locator": "Section 12, problem (6), p. 59",
+      "problem_id": "C0127",
+      "recorded_at": "2026-09-07T07:01:07Z",
+      "result_status": "attempted_unsolved",
+      "schema": "probability-problem.v1",
+      "source_id": "chatterjee_chaos_2008",
+      "statement": "Find a multiple-peaks condition on a Gaussian field that is equivalent to chaos and superconcentration, or show that no such condition exists.",
+      "status_search": "",
+      "title": "Chaos versus superconcentration: an equivalent multiple-peaks condition",
+      "verification": "unreviewed"
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 14,
+    "record": {
+      "attempt_id": "C0014-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "beta sqrt g min_{[0,1]} B <= liminf (log N)^{-1/2} log R_eff <= beta sqrt g max_{[0,1]} B in distribution (heuristic sandwich).",
+      "method": "Bound log R_eff by the field along an annulus decomposition; compare upper and lower bounds.",
+      "obstruction": "Upper (flow) and lower (cutset) bounds converge to different functionals of the concentric walk.",
+      "problem_id": "C0014",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "Rayleigh monotonicity gives R_eff(x, D_N^c) <= sum over dyadic annuli around x of the resistance across the annulus, each bounded by the maximum of e^{beta h} over the annulus times a constant, so log R_eff <= beta max_{annuli} (h max over annulus) summed... more precisely log R_eff <= log sum_k e^{beta M_k} where M_k is the field maximum over annulus k; by the concentric decomposition M_k is the walk value at scale k plus a bounded extremal term, so log R_eff is bounded above by beta times the maximum over k of the concentric walk, which after dividing by (log N)^{1/2} converges to beta sqrt g times the maximum of a Brownian motion on [0,1]. The lower bound via cutsets gives the same functional with the minimum over annuli of the field minimum, i.e. a different functional. The two bounds do not match: the upper bound is a maximum of a Brownian motion and the lower bound is a minimum, so the limit distribution is sandwiched between beta sqrt g times max and min of a Brownian motion but not identified. The notes' guess of a CGFF limit for the field x -> log R_eff is consistent with this sandwich only if the resistance is dominated by the coarse scale.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 16,
+    "record": {
+      "attempt_id": "C0016-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "",
+      "method": "Compare with known dimensions of LQG geodesics and of the LQG metric ball boundary.",
+      "obstruction": "Continuum object not defined; only the discrete energy scaling is accessible.",
+      "problem_id": "C0016",
+      "recorded_at": "2026-09-07T06:38:45Z",
+      "result": "If the continuum path were an LQG geodesic its Euclidean Hausdorff dimension would be that of LQG geodesics, which is strictly greater than 1 and below 2 and only known within bounds for general gamma; the energy support, if concentrated on a fractal set, would have dimension between the geodesic dimension and 2. I could not do better than these bounds because the object (C0015) is not constructed. A rigorous discrete statement is available: the discrete energy of the minimising current between opposite sides of [0,N]^2 is bounded above and below by constants times the effective conductance, whose growth exponent is the same as that of the resistance in C0014, so the energy is not carried by a set of full dimension 2 whenever the resistance exponent is non-trivial.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 61,
+    "record": {
+      "attempt_id": "C0073-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "Rayleigh's monotonicity applies since the standard coupling only adds conductors; the homogenised conductivity equals theta times the diffusion constant times a fixed normalisation.",
+      "key_identity": "theta(p) sigma^2(p) is nondecreasing in p (effective conductivity is monotone by Rayleigh); monotonicity of sigma^2 alone remains open.",
+      "method": "Attempt monotonicity via a coupling of the percolation clusters and the variational formula for the diffusion constant.",
+      "obstruction": "No lower bound on the backbone conductivity near p_c.",
+      "problem_id": "C0073",
+      "recorded_at": "2026-09-07T06:52:37Z",
+      "result": "The diffusion constant of the random conductance model has a variational (homogenisation) formula sigma^2 = inf over correctors of the expected Dirichlet energy per unit volume; adding edges (increasing p in the standard coupling) increases every Dirichlet energy but ALSO changes the normalisation (the density of the infinite cluster theta(p) and the invariant measure), so monotonicity of sigma^2 in p does not follow from the coupling: the variational formula gives monotonicity of the effective conductance per unit volume, sigma^2 theta(p)... more precisely the quantity theta(p) sigma^2(p) times the degree normalisation is monotone (it is the effective conductivity of the medium, monotone by Rayleigh), so sigma^2(p) >= sigma^2(p') theta(p')/theta(p) for p > p': a one-sided monotonicity statement. Near p_c this gives sigma^2(p) >= c (p - p_c)^{-1} theta... which is useless as a lower bound for the exponent since theta is small. For the exponent: the heuristic in the source (backbone of the cluster carries the walk) gives sigma^2 ~ theta^2 ~ (p-p_c)^2 in mean field; rigorously the effective conductivity of the percolation medium is bounded above by theta(p) times the conductivity of the cluster, giving sigma^2 theta <= C theta sigma_backbone... I could not turn the backbone heuristic into bounds. Rigorous partial result: p -> theta(p) sigma^2(p) is nondecreasing (Rayleigh monotonicity of the effective conductivity under the standard coupling), which is weaker than the monotonicity of sigma^2 asked in the source.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 93,
+    "record": {
+      "attempt_id": "C0109-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "",
+      "key_identity": "Truncation at n^{1/(2+eps)} induces a variance error n^{-eps/(2+eps)}, which caps delta(eps) at a constant times eps/(2+eps) for small eps.",
+      "method": "Locate the rate bottleneck in the Hermitisation argument.",
+      "obstruction": "Sharp conversion constant from log-potential to Kolmogorov distance.",
+      "problem_id": "C0109",
+      "recorded_at": "2026-09-07T07:01:07Z",
+      "result": "The Hermitisation proof controls the log-potential U_n(z) = (1/n) log|det(n^{-1/2}M_n - z)| through the singular-value distribution of the shifted matrix; the error has three parts: (a) the rate in the Marchenko-Pastur-type convergence of the singular-value distribution, of order n^{-1/2}-ish under four moments and degrading to n^{-c(eps)} under 2+eps moments through the truncation at level n^{1/(2+eps)}; (b) the smallest singular value lower bound, which contributes only a log-factor to the log-potential error; (c) the conversion from log-potential convergence to weak convergence of the ESD, which costs a power through the smoothing of the Laplacian. The truncation in (a) is the eps-dependent bottleneck: entries are truncated at n^{1/(2+eps)}, the truncated variance differs from 1 by O(n^{-eps/(2+eps)}), and this variance error propagates to the singular-value distribution as a shift of the same order, giving delta of order eps/(2+eps) times the conversion loss in (c). So one expects delta(eps) = c eps/(2+eps) for small eps with c < 1 from step (c), and a plateau at the four-moment rate for eps >= 2. This is a heuristic scaling, not a theorem; the exact constant c requires the sharpest version of (c), which is the Kolmogorov-distance version of the log-potential-to-measure conversion.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\attempts.jsonl",
+    "line": 103,
+    "record": {
+      "attempt_id": "C0127-A001",
+      "author": "claude-probability-1000-continue-0907",
+      "independent_check": "Argmax is determined by sign(Z_1 - Z_2) up to the small noise, stable under noise of size smaller than |Z_1 - Z_2|; Var(max) = Var(max(Z_1,Z_2)) is order 1.",
+      "key_identity": "Counterexample: X_i = Z_1 (i in first half), Z_2 (second half), plus small noise: two low-overlap peaks, no chaos, no superconcentration.",
+      "method": "Test candidate conditions on the two extreme examples (i.i.d. field and the DGFF).",
+      "obstruction": "Growing-number version neither proved nor refuted.",
+      "problem_id": "C0127",
+      "recorded_at": "2026-09-07T07:01:07Z",
+      "result": "Superconcentration of the maximum M = max_i X_i of a Gaussian field is Var(M) = o(max variance), and chaos is the decorrelation of the argmax under noise. A natural candidate equivalent condition is 'the near-maximal set at deficit delta = C sqrt(Var M)... has at least two points with overlap bounded away from 1 with probability tending to 1'; I checked it on the i.i.d. field (superconcentrated, chaotic, and the near-maximal set at deficit of order 1/sqrt(log n) has many points with zero overlap: condition holds) and on a field with a single dominant direction X_i = Z + small noise (not superconcentrated, not chaotic, near-maximal set at any deficit consists of points all with overlap near 1: condition fails), and on the 2D DGFF (superconcentrated and chaotic per the source; the near-maximal set at O(1) deficit has multiple clusters at macroscopic distance with overlap = covariance ratio bounded away from 1: condition holds). The converse direction (multiple peaks implies chaos) is where the source expects failure: a field could have two well-separated peaks that are both stable under noise (e.g. X_i = Z_1 on half the indices and Z_2 on the other half plus small noise: two peaks with overlap 0, but the argmax is Z_1-vs-Z_2 determined and stable under small noise, so no chaos, and Var(M) is of order 1 = the variance scale, so no superconcentration). This example shows that the naive multiple-peaks condition is NOT equivalent to chaos: multiple peaks without chaos. A corrected candidate must require MANY (growing number of) peaks, not just two; with 'number of near-maximal mutually low-overlap points tends to infinity' the two-peak counterexample is excluded, and I could not find a counterexample to the growing-number version nor prove it equivalent. Recorded: two-peak version disproved as an equivalence by an explicit example; growing-number version open.",
+      "schema": "probability-attempt.v1",
+      "substantive": true
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\sources.jsonl",
+    "line": 1,
+    "record": {
+      "access_evidence": "arXiv 1712.09972",
+      "acquired_at": "2026-09-07T06:19:12Z",
+      "acquisition_status": "validated_and_extracted",
+      "bytes": 9702506,
+      "extracted_characters": 471088,
+      "extracted_sha256": "6308ab8998f3614f01d72a13da35c51d1d1740e736acddb06c0ecb80824ad54b",
+      "final_url": "https://arxiv.org/pdf/1712.09972",
+      "http_status": 200,
+      "intake": "claude_20260907",
+      "kind": "pdf",
+      "page_count": 235,
+      "raw_relative_to_downloads": "sources/biskup_dgff_extrema_2020/source.pdf",
+      "reading_status": "unread",
+      "schema": "probability-source.v1",
+      "sha256": "ba20f38db0482e6138cfe094aeba2b6a55e40ed61f161acd95b101cc2c5d4bf0",
+      "source_id": "biskup_dgff_extrema_2020",
+      "statement_validation": "not_started",
+      "text_relative_to_downloads": "sources/biskup_dgff_extrema_2020/text.txt",
+      "title": "Biskup: Extrema of the two-dimensional discrete Gaussian free field, PIMS-CRM lecture notes",
+      "url": "https://arxiv.org/pdf/1712.09972"
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\sources.jsonl",
+    "line": 21,
+    "record": {
+      "access_evidence": "author page",
+      "acquired_at": "2026-09-07T06:42:27Z",
+      "acquisition_status": "validated_and_extracted",
+      "bytes": 1598409,
+      "extracted_characters": 585247,
+      "extracted_sha256": "d03b32318fd4c42163f2eb1c208accc87de60ffe6d90502fd78d1d70507e1d10",
+      "final_url": "https://www.mathematik.uni-muenchen.de/~heyden/survey-high-d-percolation.pdf",
+      "http_status": 200,
+      "intake": "claude_20260907",
+      "kind": "pdf",
+      "page_count": 267,
+      "raw_relative_to_downloads": "sources/heydenreich_hofstad_highd_2017/source.pdf",
+      "reading_status": "unread",
+      "schema": "probability-source.v1",
+      "sha256": "ca7b798cfc26ebfb708173704f9663611b27a2e1b470f5d524b149ca331dd811",
+      "source_id": "heydenreich_hofstad_highd_2017",
+      "statement_validation": "not_started",
+      "text_relative_to_downloads": "sources/heydenreich_hofstad_highd_2017/text.txt",
+      "title": "Heydenreich and van der Hofstad: Progress in high-dimensional percolation and random graphs, author version with open problems",
+      "url": "https://www.mathematik.uni-muenchen.de/~heyden/survey-high-d-percolation.pdf"
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\sources.jsonl",
+    "line": 24,
+    "record": {
+      "access_evidence": "public web",
+      "acquired_at": "2026-09-07T06:53:35Z",
+      "acquisition_status": "validated_and_extracted",
+      "bytes": 2769596,
+      "extracted_characters": 56039,
+      "extracted_sha256": "f4aef735151fa4a8c2e0775ab7c53e216d81a5e27172be71c8ba2b537aa801c7",
+      "final_url": "https://arxiv.org/pdf/0810.2994",
+      "http_status": 200,
+      "intake": "claude_20260907",
+      "kind": "pdf",
+      "page_count": 25,
+      "raw_relative_to_downloads": "sources/tao_vu_littlewood_offord_2009/source.pdf",
+      "reading_status": "unread",
+      "schema": "probability-source.v1",
+      "sha256": "a959b2650feccb9b16d462d7a82ae946730b5a5cfd884451d44b85962da26cd3",
+      "source_id": "tao_vu_littlewood_offord_2009",
+      "statement_validation": "not_started",
+      "text_relative_to_downloads": "sources/tao_vu_littlewood_offord_2009/text.txt",
+      "title": "Tao and Vu: From the Littlewood-Offord problem to the circular law, survey with open questions",
+      "url": "https://arxiv.org/pdf/0810.2994"
+    }
+  },
+  {
+    "file": "~\\<private-repo>\\06_math_research\\probability_1000_intake_claude_20260907\\sources.jsonl",
+    "line": 29,
+    "record": {
+      "access_evidence": "arXiv",
+      "acquired_at": "2026-09-07T06:55:56Z",
+      "acquisition_status": "validated_and_extracted",
+      "bytes": 586944,
+      "extracted_characters": 130589,
+      "extracted_sha256": "e58058138c0f797174c513fc8579af201360f9d093f241af8c24fe3503017956",
+      "final_url": "https://arxiv.org/pdf/0810.4221",
+      "http_status": 200,
+      "intake": "claude_20260907",
+      "kind": "pdf",
+      "page_count": 63,
+      "raw_relative_to_downloads": "sources/chatterjee_chaos_2008/source.pdf",
+      "reading_status": "unread",
+      "schema": "probability-source.v1",
+      "sha256": "17f13a871b84417a83514995c70d2ebf49f5464faeac9dd95e8c4d823b600658",
+      "source_id": "chatterjee_chaos_2008",
+      "statement_validation": "not_started",
+      "text_relative_to_downloads": "sources/chatterjee_chaos_2008/text.txt",
+      "title": "Chatterjee: Chaos, concentration and multiple valleys, 2008, with open questions",
+      "url": "https://arxiv.org/pdf/0810.4221"
+    }
+  }
+]

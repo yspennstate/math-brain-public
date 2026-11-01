@@ -1,0 +1,13 @@
+{
+  "helper_version": "A038-stage6-inherited-reference-v3-mixed-core",
+  "reason": "Support audit of Maj3 shows that erasing a data bit fills every remaining fiber, so it cannot exercise reference-only rows at that query. Replace Maj3 at the SAME fixed six-bit dimension by v=(-1)^y2*(1-2*1[y0=y1=0]). Its next y0 query is coherent within y2-present rows and has source-zero rows in the y2-absent sector.",
+  "actual_Boolean_family": "F=(-1)^a on x=0; v=(-1)^y2*(1-2*1[y0=y1=0]) on x=1,b=1; +1 otherwise",
+  "parameter_domain": "one fixed six-bit root; a then y0 in both children; all four terminal functions nonconstant",
+  "case_count": "64 inputs, 1 root, 2 children, 4 full terminals, all source and reference rows",
+  "symmetry": "none",
+  "arithmetic": "integer/Fraction Fourier and influences, rational root bisection, outward 24-term atanh log intervals",
+  "memory_estimate_MB": 60,
+  "max_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "target": "positive bookings after two original-reference queries below SAME original and final actual S4 banks; test coherent source rows AND positive inherited mass on source-zero rows"
+}

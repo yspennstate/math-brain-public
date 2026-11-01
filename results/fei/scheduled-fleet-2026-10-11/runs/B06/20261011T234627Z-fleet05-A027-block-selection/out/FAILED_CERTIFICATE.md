@@ -1,0 +1,5 @@
+# Preserved failed extra sign assumption
+
+The first execution of code/overhead_certificate.py passed its frozen decisive lower sign Pi_H/Pi_I>399/100 but failed line 44, `assert ratio[1]<4`, with AssertionError. That extra upper sign was an unsupported guess and was not part of the frozen target. It has been withdrawn. The analytic iterated limit equals 4 and never asserted approach from below. The helper was corrected to retain only the frozen lower sign and report the exact interval's sign relative to 4; the compressed Boolean family, parameters and arithmetic are unchanged. No previously saved mathematical theorem depended on the guessed upper sign.
+
+The next execution passed the mathematical sign but failed persistence because the unrounded Fraction denominator exceeded Python's 4300-digit integer-to-string cap. The arithmetic was retained; exported bounds are now rounded OUTWARD by exact integer floor/ceil to a denominator of 2^64 before serialization. No conversion limit was raised and no floating-point bound is exported. A final rerun verifies the rounded lower sign and records the mathematical runtime.

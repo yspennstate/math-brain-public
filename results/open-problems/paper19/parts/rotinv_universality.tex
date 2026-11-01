@@ -1,0 +1,208 @@
+\subsection{Spherical directions and radial weights}
+
+There is a clean spherical-direction extension that does not require a new
+second-moment proof.  Once the row directions are uniform on the sphere, changing
+the row radii is a diagonal row weighting.  Proposition~\ref{prop:random-row-weight}
+therefore transfers the Gaussian row-normalized theorem to all spherical
+direction ensembles whose radial weights have subexponential global variation.
+
+\begin{definition}[Spherical radial model]\label{def:rot-inv}
+Let \(\Theta_m\in\F^{N_m\times m}\) have iid rows uniform on the unit sphere of
+\(\F^m\), where \(\F\in\{\R,\C\}\).  A \emph{spherical radial weighting} is a
+matrix
+\[
+  A_m=D_m^{\rm rad}\Theta_m,\qquad
+  D_m^{\rm rad}=\operatorname{diag}(r_{1m},\ldots,r_{N_m,m}),
+\]
+where the \(r_{im}\) are positive finite random variables, possibly dependent on
+\(\Theta_m\).  For a deterministic scale \(b_m>0\), put
+\[
+  \Delta_m^{\rm rad}(b_m)
+  =\max_{1\le i\le N_m}\left|\log\frac{r_{im}}{b_m}\right|.
+\]
+This includes rotationally invariant row laws \(a_i=R_{im}\theta_i\), with
+\(\theta_i\) uniform on the sphere and \(R_{im}\) independent of \(\theta_i\),
+whenever the rows are independent.
+\end{definition}
+
+\begin{theorem}[Spherical directions with radial weights]\label{thm:rot-inv-univ}
+Let \(N_m/m\to\gamma>1\), let \(A_m=D_m^{\rm rad}\Theta_m\) be a spherical radial
+weighting over \(\F\in\{\R,\C\}\), and assume that for some deterministic
+\(b_m>0\),
+\[
+  \frac{1}{m}\log b_m\to\alpha,
+  \qquad
+  \Delta_m^{\rm rad}(b_m)=o_\PP(m).
+\]
+Then
+\[
+  \frac1m\log\min_{|T|=m}\smin((A_m)_T)
+  \xrightarrow{\PP}
+  \alpha-\frac{h(\gamma)}{d_\F}.
+\]
+In particular, if \(b_m=e^{o(m)}\), spherical radial weights with
+subexponential global variation have the same exponential base as the Gaussian
+row-submatrix model.
+\end{theorem}
+
+\begin{proof}
+Write
+\[
+  M_m(B)=\min_{|T|=m}\smin((B_m)_T)
+\]
+for any matrix sequence \(B_m\).
+Let \(G_m\) have iid standard \(\F\)-Gaussian entries and let \(U_m\) be obtained
+by normalizing every nonzero row of \(G_m\) to Euclidean norm one.  The rows of
+\(U_m\) are iid uniform on the unit sphere, so \(U_m\) has the same law as
+\(\Theta_m\).  Corollary~\ref{cor:row-normalized-gaussian} gives
+\[
+  \frac1m\log M_m(\Theta)
+  =
+  \frac1m\log\min_{|T|=m}\smin((\Theta_m)_T)
+  \xrightarrow{\PP}-\frac{h(\gamma)}{d_\F}.
+\]
+For every row set \(T\),
+\[
+  (A_m)_T=(D_m^{\rm rad})_T(\Theta_m)_T .
+\]
+On the event \(\Delta_m^{\rm rad}(b_m)\le\delta m\), all row weights satisfy
+\(b_me^{-\delta m}\le r_{im}\le b_me^{\delta m}\).  Hence
+\[
+  b_me^{-\delta m}\smin((\Theta_m)_T)
+  \le \smin((A_m)_T)
+  \le b_me^{\delta m}\smin((\Theta_m)_T)
+\]
+uniformly in \(T\).  All selected spherical square submatrices are nonsingular
+almost surely; positive finite radii preserve this, so the logarithms below are
+taken off a null event.  Taking minima over \(T\), logarithms, and division by
+\(m\) gives
+\[
+  \left|
+  \frac1m\log M_m(A)-\frac1m\log b_m-\frac1m\log M_m(\Theta)
+  \right|
+  \le \delta
+\]
+on that event.  Since \(\delta>0\) is arbitrary and
+\(\Delta_m^{\rm rad}(b_m)=o_\PP(m)\), the claimed limit follows.
+\end{proof}
+
+\begin{corollary}[Rotationally invariant rows with controlled radii]\label{cor:rot-controlled-radii}
+Let the rows of \(A_m\in\F^{N_m\times m}\) be iid rotationally invariant vectors
+\(a_i=R_{im}\theta_i\), with \(\theta_i\) uniform on the unit sphere of
+\(\F^m\), \(R_{im}>0\), and \(N_m/m\to\gamma>1\).  If there is a deterministic
+scale \(b_m>0\) such that
+\[
+  \frac{1}{m}\log b_m\to\alpha,
+  \qquad
+  N_m\,\PP\left\{
+    \left|\log\frac{R_{1m}}{b_m}\right|>\varepsilon m
+  \right\}\to0
+  \quad(\varepsilon>0),
+\]
+then
+\[
+  \frac1m\log\min_{|T|=m}\smin(A_{m,T})
+  \xrightarrow{\PP}
+  \alpha-\frac{h(\gamma)}{d_\F}.
+\]
+\end{corollary}
+
+\begin{proof}
+The displayed tail condition is exactly the union-bound criterion for
+\(\Delta_m^{\rm rad}(b_m)=o_\PP(m)\).  Apply
+Theorem~\ref{thm:rot-inv-univ}.
+\end{proof}
+
+\begin{corollary}[Almost-sure spherical radial lower envelope]\label{cor:rot-inv-as-lower-envelope}
+Assume the matrices \(A_m=D_m^{\rm rad}\Theta_m\) are realized on a common
+probability space, with \(N_m/m\to\gamma>1\).  Let \(b_m>0\) be deterministic and
+put
+\[
+  \alpha_-=\liminf_{m\to\infty}\frac1m\log b_m.
+\]
+If
+\[
+  \Delta_m^{\rm rad}(b_m)=o(m)\qquad\hbox{almost surely},
+\]
+then
+\[
+  \liminf_{m\to\infty}\frac1m
+  \log\min_{|T|=m}\smin((A_m)_T)
+  \ge \alpha_- -\frac{h(\gamma)}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+For iid rotationally invariant rows \(a_i=R_{im}\theta_i\), it is enough that,
+for every \(\varepsilon>0\),
+\[
+  \sum_{m=1}^\infty
+  N_m\,\PP\left\{
+    \left|\log\frac{R_{1m}}{b_m}\right|>\varepsilon m
+  \right\}<\infty .
+\]
+\end{corollary}
+
+\begin{proof}
+First consider \(\Theta_m\).  It has the same law as the row-normalized Gaussian
+matrix \(U_m\).  The proof of Corollary~\ref{cor:row-normalized-gaussian} gives
+summable failure probabilities at every threshold below
+\(-h(\gamma)/d_\F\); hence, by the first Borel--Cantelli lemma, the same bound
+holds for any common coupling of the spherical matrices \(\Theta_m\):
+\[
+  \liminf_{m\to\infty}\frac1m\log
+  \min_{|T|=m}\smin((\Theta_m)_T)
+  \ge -\frac{h(\gamma)}{d_\F}
+  \qquad\hbox{almost surely}.
+\]
+No independence across \(m\) is needed.
+
+The radial sandwich in the proof of Theorem~\ref{thm:rot-inv-univ} gives
+\[
+  \min_{|T|=m}\smin((A_m)_T)
+  \ge b_m e^{-\Delta_m^{\rm rad}(b_m)}
+      \min_{|T|=m}\smin((\Theta_m)_T).
+\]
+Taking logarithmic liminf and using
+\(\Delta_m^{\rm rad}(b_m)=o(m)\) proves the displayed lower envelope.  The final
+summability condition implies \(\Delta_m^{\rm rad}(b_m)=o(m)\) almost surely by
+the union bound and the first Borel--Cantelli lemma.
+\end{proof}
+
+\begin{corollary}[Spherical random frames have Balan--Wang base \(1/4\)]\label{cor:spherical-pr}
+Let \(A_m\in\R^{(2m-1)\times m}\) have iid rows uniform on the sphere of
+deterministic radius \(b_m>0\), where \(b_m=e^{o(m)}\).  Then \(A_m\) is full
+spark almost surely and
+\[
+  \frac1m\log\omega(A_m)\xrightarrow{\PP}-\log4,
+  \qquad
+  \omega(A_m)=4^{-m+o_\PP(m)}.
+\]
+On any common coupling over \(m\), the lower envelope also satisfies
+\[
+  \liminf_{m\to\infty}\frac1m\log\omega(A_m)\ge-\log4
+  \qquad\hbox{almost surely}.
+\]
+\end{corollary}
+
+\begin{proof}
+For each fixed \(m\), iid continuous spherical rows are full spark almost surely.
+On this event the Balan--Wang statistic at \(N=2m-1\) is
+\[
+  \omega(A_m)=\min_{|T|=m}\smin(A_{m,T}).
+\]
+Apply Theorem~\ref{thm:rot-inv-univ} with \(\gamma=2\),
+\(h(2)=\log4\), and \(\alpha=0\).
+\end{proof}
+
+On a common coupling over \(m\), the displayed lower envelope follows from
+Corollary~\ref{cor:rot-inv-as-lower-envelope}.
+
+\begin{remark}[Radial extremes]\label{rem:radial-mixture}
+The theorem covers non-degenerate radial mixtures as long as the largest and
+smallest radii among the \(O(m)\) sampled rows remain subexponential after a
+common deterministic scaling.  Such mixtures do not change the exponential
+base.  What remains outside the theorem is a genuinely exponential radial
+extreme regime, where some available rows have radii \(e^{\Theta(m)}b_m\) or
+\(e^{-\Theta(m)}b_m\).  Then the global diagonal sandwich gives only crude
+bounds, and the sharp base becomes a weighted selection problem for the row
+radii; see Problem~\ref{prob:radial-mixture}.
+\end{remark}

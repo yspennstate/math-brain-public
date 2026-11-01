@@ -1,0 +1,2 @@
+STATE: A018 stage5: arbitrary supplied non-flat core joint-reference transfer preserves C>=A060 Gamma<4.873; exact empty-row KL refund, eligible negative prior-change witness; A019 full HOLDS/A060 fine-profile partial HOLDS;18690 checks; FEI OPEN.
+NEXT: One actual core-data exposure with nonconstant fallback, SAME joint references and one unused certified child bank; retain positive-excess, negative-credit and internal-pivotal controls.

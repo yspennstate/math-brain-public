@@ -1,0 +1,68 @@
+parent: T07_uniform_all_forests_pairwise_negative_edge_correlation
+source_measure: "uniform measure on all acyclic spanning edge subsets of an arbitrary finite graph"
+parent_status_before: OPEN
+parent_status_after: OPEN
+complete_all_simple_graph_order_before: 9
+complete_all_simple_graph_order_after: 9
+counterexample_order_lower_bound_before: 10
+counterexample_order_lower_bound_after: 10
+restricted_claim:
+  id: T07-INDEPENDENT-CYCLIC-ATOM-STRIP-21
+  status: CANDIDATE_FULL_PENDING_INDEPENDENT_REVIEW
+  novelty_priority: UNVERIFIED
+  graph_class: "G=I_3 join H, H=a C3 disjoint_union b C4 disjoint_union_{l=1}^{11} n_l P_l, all multiplicities >=0"
+  conclusion: "Delta_G(e,f)>=0 for every distinct present edge pair; strict except degenerate tree K_{3,1}"
+new_lemmas:
+  - id: T07-QUADRATIC-STRIP-DISCRIMINANT-CANCELLATION-21
+    statement: "For quadratic Q(u,v), after v=u^2/2-hu, 4c4*c2-c3^2=q02*(q20+q01/2)-q11^2/4, independent of h."
+  - id: T07-CYCLIC-ATOM-RESPONSE-STRIP-21
+    statement: "C3 and C4 right atoms lie in span{I,N,N^2}; arbitrary P1..P11,C3,C4 products collapse to rho_C4<=h<=1/8."
+new_exact_atoms:
+  C3:
+    transfer: "178 I + 144 N + 41 N^2"
+    rho: "1535/12816"
+  C4:
+    transfer: "1014 I + 1096 N + (1384/3) N^2"
+    rho: "2767/23153"
+mechanism_before: "independent-terminal response-strip theorem for arbitrary mixtures of P1,...,P11"
+mechanism_after: "13-parameter arbitrary-multiplicity theorem adding cyclic C3,C4 atoms; exceptional strip sign reduced to one h-independent discriminant scalar"
+exact_certificate:
+  path_local_representatives: 3478
+  new_mixed_raw_representatives: 7862
+  total_local_representatives: 11340
+  distinct_response_polynomials: 3842
+  path_regular: 3402
+  path_zero: 1
+  path_discriminant: 75
+  new_mixed_regular: 363
+  new_mixed_discriminant: 1
+  failures: 0
+  minimum_positive_discriminant_K: 207792
+  output_terminal: ALL_EXACT_CHECKS_PASS
+whole_graph_regressions:
+  - "I3 join C4: n=7,m=16,Z=8166,min_gap=146464"
+  - "I3 join (C4 disjoint_union K1): n=8,m=19,Z=43296,min_gap=1512768"
+  - "I3 join C3: n=6,m=12,Z=1000,min_gap=2496"
+p14_scope:
+  dense_nine_classes_19_36_edges: 120314
+  all_unlabeled_simple_nine_vertex_graphs: 274668
+  dense_pair_checks: 25304635
+  minimal_counterexample_reduction: "3-connected, using block factorization plus two-separator transfer/fixed-graph weighted implication"
+literature_scope:
+  grimmett_winkler: "all graphs <=8 vertices and nine-vertex graphs <=18 edges; uniform spanning tree is a distinct known theorem"
+  erickson_1008_3660: "stronger all-positive-weight Rayleigh/SOS theorem for series-parallel graphs"
+  tang_zhang_2603_10738: "specified complete-graph ensembles including fixed-component forests, not arbitrary-graph all-forest law"
+  bado_2026: "strict uniform-all-forest p-NC for wheel graphs"
+honest_failure:
+  - "parent conjecture remains open; all-graph cutoff unchanged"
+  - "arbitrary 3-connected graphs need not admit the three-terminal atom decomposition"
+  - "independent-terminal path components beyond order 11 remain unproved"
+next_attack: "use the 15-state path-tail recurrence to derive a recurrence directly for q02,q20,q01,q11, hence for K=q02*(q20+q01/2)-q11^2/4, for same-path different-terminal spoke pairs"
+files:
+  report: 2026-09-20T11-21-35Z__cyclic-atom-response-strip-report.md
+  ledger_delta: 2026-09-20T11-21-35Z__ledger_delta.yaml
+  checker: 2026-09-20T11-21-35Z__cyclic-atom-response-strip-checker.py
+  output: 2026-09-20T11-21-35Z__cyclic-atom-response-strip-checker.out
+runtime:
+  model: GPT-5.6 Sol
+  reasoning_effort: UNVERIFIED

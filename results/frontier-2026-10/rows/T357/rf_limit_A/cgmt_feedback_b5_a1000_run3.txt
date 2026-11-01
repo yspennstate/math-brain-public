@@ -1,0 +1,19 @@
+T357 (agent A, 20 Oct 2026): is the third of alpha lam_risk that the fixed-N closed form misses the CGMT feedback of
+the extra variance into Vh and A1? cgmt_decompose.py showed the prox step does not matter at alpha 1000 (P = Q gives the same
+lam_risk), so the fixed point reduces to two equations in (mu, sg):
+    (ii)  mu = -A1 T1,   (iii)  mu^2 + sg^2 = A1^2 T2 + (E rho'^2 / n) T3,
+    A1 = E[Z1 rho'(Q)] - mu Vh, Vh = E rho''(Q), Q = mu Z1 + sg Z2, G = 1/(lam + Vh S),
+    T1 = sum mt^2 G / rho^2, T2 = sum mt^2 S G^2 / rho^2, T3 = sum S^2 G^2.
+FULL solves (ii)-(iii) as they stand. FROZEN solves the n = inf system (no noise term) and then only adds the noise to sg^2 with
+Vh, A1 and E rho'^2 held at their n = inf values - the variance with no feedback, which is what a fixed-N M-estimator
+expansion keeps. MU_ONLY keeps the feedback in (ii) but not in (iii)'s A1^2 T2 term, to split the feedback further.
+The minimiser of the excess risk over lam is alpha lam_risk for each. argv: beta alpha psi d [seed0]
+beta 5.0 alpha 1000.0 N 1000 d 1000 n 1000000 seed0 100: rho 0.8705
+  full    : alpha*lam_risk 0.02957  min excess 1.667489e-01
+  frozen  : alpha*lam_risk 0.02143  min excess 1.667480e-01
+  mu_only : alpha*lam_risk 0.00248  min excess 1.664021e-01  (minimum at the grid edge)
+  n = inf excess at the smallest/largest lam: 1.662456e-01 / 1.664399e-01 (must rise with lam)
+  closed form (frozen): kappa2 4084.84  Vh 0.13166  E rho'^2 0.13262  g' +0.6661  alpha*lam: variance term 0.01633 + path term -0.00941 = 0.00693
+  frozen, (g T3)' along the path: alpha*lam = 0.02421   (Vh' +10.0746, E rho'^2' -0.0299; kappa2 4084.84 from the n = inf curve)
+  frozen excess - n=inf excess at three lam: 0.0003:4.745425e-04 3e-05:5.004073e-04 3e-06:5.032896e-04  predicted (1/n) g T3: 4.746403e-04 5.005138e-04 5.033970e-04
+  local zero of E0' + (gT3)'/n: alpha*lam = 0.02147; there (gT3)' = g T3' -1.4590e+05 + g' T3 +3.9526e+04, E0'/lam 4953.99

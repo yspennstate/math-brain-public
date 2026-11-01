@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T135926Z-fleet02-B20-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "ESSENTIAL_STEP_APPLIED",
+  "full_qform_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-ONE-ANCHOR-JENSEN-q-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "For 1<=q<5/4, a selected original-coordinate 3x3-minor family with one compulsory row h and every other row marginal <=q/2 gives a continuous density with ||p||inf <= [5/(5-4q)] 2^(4/5) sqrt(e) q^(-2/5) ||N[h,:]||_2^(1/5) Z^(-1/5), retaining arbitrary same-side/outside curvature."
+    },
+    {
+      "id": "QFORM-N3-NESTED-ANCHOR-3/5-PAYMENT-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "In the fleet01/B20 nested double-anchor branch with E>c_* and Z_nested>E^3/707788800, if the non-anchor row marginals or the non-anchor column marginals are all <=3/5, then ||p_Q||inf<7981.581 with continuous density."
+    },
+    {
+      "id": "QFORM-N3-DOUBLEDOUBLE-ANCHOR-WEDGE-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "Every unpaid nested-anchor survivor has physical i!=r and j!=s with joint selected-minor mass Z_22>E^3/3538944000 and both physical row/column wedge squares >E^2/3538944000; hence s1(N)s2(N)>E/sqrt(3538944000)."
+    },
+    {
+      "id": "QFORM-EXACTR3-R31-THREEBANK-STAR-SPLICE-v1",
+      "status": "PROVED_IN_RUN",
+      "statement": "Inside exact-rank-three N3(1/64), fleet03/B20 r31 either pays <522 or yields a physical hub h with star energy >223/4096, each edge square <65/4096, and three disjoint original-coordinate leaf banks each carrying star energy >31/4096. The fleet01 leverage-free cross-cut may be taken on h^c simultaneously."
+    },
+    {
+      "id": "QFORM-N3-LOWRANK-OR-2x2ANCHOR-PAYMENT-v1",
+      "status": "OPEN_NEXT",
+      "statement": "Pay the remaining near-rank-one/rank-two cross-cut tubes or the quantitatively double-concentrated two-row/two-column anchor packet, preserving arbitrary same-bank/outside curvature and original product structure."
+    }
+  ],
+  "source_application": {
+    "source": "interactive/20260922T211500Z-decoupling-brascamp-lieb FOURIER_ROUTE_REPORT D5",
+    "actual_inequality": "e5>=E^5/(120*64^4), E>3969/16384 => ||p||inf<201.787"
+  },
+  "designated_partner": {
+    "account": "fleet03",
+    "slot": "B20",
+    "run_id": "20260923T121606Z-fleet03-B20-QFORM-r31",
+    "commit": "c6e058c3d4aa36e89ad433c1f4d41b6f82739bf8",
+    "actual_expression": "sum_j A_hj^2=||Mr_h||^2 leading to >223/4096 and three banks >31/4096"
+  },
+  "corrections_preserved": [
+    "QFORM-POINTWISE-DECAY-FALSE",
+    "QFORM-FIBER-SUP-DIMENSION-LOSS",
+    "QFORM-NO-INDEPENDENCE-AFTER-ROTATION",
+    "no small-tail deletion",
+    "no one-good-minor inference"
+  ]
+}

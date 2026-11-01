@@ -1,0 +1,39 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w404",
+  "bundle_slug": "c0096-critical-o1-source-correction-001",
+  "entries": [
+    {
+      "key": "critical-o1-is-ising",
+      "namespace": "probability.loop_models",
+      "logical_name": "critical-honeycomb-o1-interface-is-ising-sle3",
+      "kind": "concept",
+      "title": "Critical honeycomb O(1) interface is Ising/SLE(3)",
+      "statement": "In the honeycomb O(n) loop model with one boundary interface, n=1 and critical edge weight z=1/sqrt(3) correspond to the Ising case, whose interface has a proved SLE(3) limit. The existing C0096 math-brain card calls that n=1 critical case site percolation; the cited primary source identifies it as Ising. This corrects only that parenthetical and does not imply the n=0 SAW scaling limit.",
+      "proof_text": null,
+      "assumptions": ["n=1", "z=1/sqrt(3)", "boundary interface and boundary conditions as in BDGS Section 3.4", "source-fidelity correction pending second referee before live-store replacement"],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "arxiv:1206.2092:section-3.4",
+        "url": "https://arxiv.org/html/1206.2092",
+        "revision": "as read 2026-10-10",
+        "license": "arxiv-nonexclusive",
+        "excerpt": "For n=1 and z=1/sqrt(3), it has been proved that the interface converges to SLE_3"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "critical-o1-is-ising",
+      "to_existing_logical": "math:probability.percolation:open-problem-c0096-interfaces-of-the-honeycomb-o-n-loop-model-converge-to-sle-kappa",
+      "kind": "semantic_association",
+      "rationale": "The new card states critical n=1 is Ising/SLE(3); the existing C0096 card says critical n=1 is site percolation. The BDGS source explicitly supports the Ising/SLE(3) reading. Review the existing card's parenthetical before superseding it."
+    },
+    {
+      "from_key": "critical-o1-is-ising",
+      "to_existing_logical": "math:probability.core:open-problem-p0003-hexagonal-self-avoiding-walk-scaling-limit",
+      "kind": "semantic_association",
+      "rationale": "The new card concerns n=1 critical Ising interfaces and SLE(3); the existing P0003 card asks about n=0 fixed-length honeycomb SAW and SLE(8/3). These are different model parameters and ensembles."
+    }
+  ]
+}

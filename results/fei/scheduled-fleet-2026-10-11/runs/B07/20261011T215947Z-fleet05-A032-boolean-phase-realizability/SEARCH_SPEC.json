@@ -1,0 +1,11 @@
+{
+  "helper_version": "A032-phase-exact-v1",
+  "actual_Boolean_family": "Every sign truth table on n=0,1,2,3,4; candidate labelled spectral laws satisfying necessary integer square and common mod4 conditions",
+  "parameter_domain": "n=0..4 fixed; candidate Walsh magnitudes a>=0, sum a^2=4^n, all a even for n>=1 and common residue modulo4 for n>=2",
+  "case_count": "Boolean enumeration: 32907 representatives modulo global output negation; magnitude cases determined by a frozen recursive sum-of-squares pattern enumeration, no adaptive dimension increase",
+  "symmetry": "Only global sign removed by fixing truth_table[0]=+1; spectral labels are never permuted or quotient-identified",
+  "arithmetic": "Python arbitrary precision integers and Fraction; no floating arithmetic used for admission or certificates",
+  "memory_estimate": "Under 100 MB: catalogue at most32768 tuples of16 integers, streaming candidates",
+  "maximum_runtime": "Pilot60 seconds; full same-domain validation180 seconds; no background processes",
+  "pilot": "n=0..3 truth catalogues and complete candidate magnitude laws; separate n=4 run only after successful pilot"
+}

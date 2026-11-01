@@ -1,0 +1,192 @@
+\section{Exact reduction and sharp spectral asymptotics}
+\label{sec:exact-spectrum}
+
+The preceding argument controls every polymer observable without assuming
+that the full gap is attained by a count observable. We now prove that it
+is attained there. Granovsky and Erlihson
+\cite[Section~2.3]{GranovskyErlihson2009} already announce this equality
+for their solvable class. The purpose of the argument below is an
+independent proof which explicitly controls all the orthogonal sectors.
+It also supplies the comparison needed for the spatial extension.
+
+\begin{lemma}[Adjacent ratios]\label{lem:ground-ratio}
+Let $h>0$ be a ground state of the count-derivative operator
+$\mathcal A$ in~\eqref{proof:eq:derivativegenerator}:
+$-\mathcal Ah=\gamma_Qh$. Then
+\[
+ \frac{h(i+1)}{h(i)}>\frac12,\qquad 1\le i\le n-2.
+\]
+For $n=2$ the assertion has no ratios to check.
+\end{lemma}
+
+\begin{proof}
+Write $\lambda_i=\beta(n-i-1)$, $\mu_i=i(i-1)/n$ and
+$V_i=\beta+2i/n$. Suppose that $r=h(i+1)/h(i)\le1/2$ is the
+minimum of the forward ratios. The eigenvalue equations at $i$ and
+$i+1$, respectively, imply
+\begin{align*}
+ \gamma_Q&\ge\lambda_i(1-r)+\mu_i(1-r^{-1})+V_i,\\
+ \gamma_Q&\le\lambda_{i+1}(1-r)+\mu_{i+1}(1-r^{-1})+V_{i+1}.
+\end{align*}
+Indeed, the preceding ratio is at least $r$ in the first inequality,
+and the following ratio is at least $r$ in the second. A missing
+preceding or following ratio is multiplied by a zero boundary rate.
+Subtracting gives
+\[
+ 0\ge\beta(1-r)+\frac{2i}{n}(r^{-1}-1)-\frac2n>0.
+\]
+At $r=1/2$ the last expression equals $\beta/2+2(i-1)/n>0$;
+it increases as $r$ decreases. This contradiction
+proves the assertion.
+\end{proof}
+
+\begin{proposition}[Comparison of the higher sectors]
+\label{prop:higher-exact}
+For $2\le\ell\le\lfloor n/2\rfloor$,
+\[
+ \inf\operatorname{Spec}(-\mathcal L_\ell)
+ \ge\gamma_Q+\frac{(\ell-2)(\ell+1)}n.
+\]
+In fact every sector with $\ell\ge2$ has its bottom eigenvalue
+strictly above $\gamma_Q$.
+\end{proposition}
+
+\begin{proof}
+Set $r=k-\ell+1$ and use $g(k)=h(r)$ as a positive test vector
+for~\eqref{proof:eq:sector}. Its domain is
+$1\le r\le n-2\ell+1$. Comparing the birth, death and killing
+coefficients with those of $\mathcal A$ gives
+\begin{align}
+ -\frac{\mathcal L_\ell g(k)}{g(k)}
+ ={}&\gamma_Q
+ +(\ell-1)\beta\left(2\frac{h(r+1)}{h(r)}-1\right)\notag\\
+ &+\frac{\ell-2}{n}
+ \left[r+\ell-(r-1)\left(\frac{h(r-1)}{h(r)}-1\right)\right].
+ \label{eq:higher-exact-certificate}
+\end{align}
+The forward-ratio term is strictly positive by
+Lemma~\ref{lem:ground-ratio}. The backward ratio is at most two,
+so the expression in square brackets is at least $\ell+1$.
+The positive-vector comparison proves the claim. At $r=1$ the
+backward term is zero. At the upper endpoint,
+$r+1=n-2\ell+2\le n-1$, so the forward value is in the domain
+of $h$. The same computation applies to a one-state sector.
+\end{proof}
+
+\begin{theorem}[Exact count reduction]\label{thm:exact-gap}
+For every $n\ge2$ and $\beta>0$,
+\[
+ \boxed{\gamma_M(n,\beta)=\gamma_Q(n,\beta).}
+\]
+More generally, the best Poincar\'e constant on rotation-invariant
+cut-set observables is $\gamma_Q$.
+\end{theorem}
+
+\begin{proof}
+Rotation invariance eliminates degree one, as proved in
+Proposition~\ref{proof:prop:base}. The nonconstant degree-zero
+sector has lowest rate $\gamma_Q$, and
+Proposition~\ref{prop:higher-exact} puts every surviving higher
+sector at or above that rate. Orthogonality therefore gives a
+Poincar\'e inequality with constant $\gamma_Q$ on all
+rotation-invariant functions. The stationary comparison transfers
+it to polymers. The opposite inequality follows by testing with
+count observables. For $n=2,3$ there is no higher sector to check.
+\end{proof}
+
+\subsection{An explicit error bound for the leading constant}
+
+The same family of positive vectors used for the earlier upper
+bound gives a sharper result if its parameter is chosen by an
+algebraic cancellation.
+
+\begin{theorem}[Sharp estimate with a uniform error]
+\label{thm:sharp-gap}
+Put
+\[
+ d=\sqrt{\beta^2+4\beta},\qquad
+ a=\frac{\beta n+1+
+       \sqrt{(\beta n+1)^2+4\beta n(n+1)}}2,
+ \qquad c=\frac{2a}{n}-\beta.
+\]
+Then $a>1$ and
+\begin{equation}\label{eq:sharp-bracket}
+ c-\frac{6(a-1)}{n(a+3)}
+ \le\gamma_M
+ \le c-\frac{6a(a-1)}{n(n+a-2)(n+a+1)}.
+\end{equation}
+In particular,
+\begin{equation}\label{eq:sharp-additive}
+ \boxed{\quad d-\frac5n\le\gamma_M(n,\beta)
+                     \le d+\frac4n.\quad}
+\end{equation}
+These estimates can be combined with
+$\gamma_M\ge\beta+2/n$ whenever the lower expression is small.
+\end{theorem}
+
+\begin{proof}
+Choose
+$h(k)=[(k+a)(k+a+1)]^{-1}$ for the count derivative.
+Its forward and backward ratios are respectively
+$1-2/(k+a+2)$ and $1+2/(k+a-1)$. Hence
+\begin{align*}
+ -\frac{\mathcal Ah(k)}{h(k)}
+ &=\beta+\frac{2\beta(n-k-1)}{k+a+2}
+                       +\frac{2ak}{n(k+a-1)}\\
+ &=\frac{2a}{n}-\beta+
+   \frac{2\beta(n+a+1)}{k+a+2}
+             -\frac{2a(a-1)}{n(k+a-1)}.
+\end{align*}
+The definition of $a$ is precisely
+$a(a-1)=\beta n(n+a+1)$. Thus
+\begin{equation}\label{eq:sharp-certificate}
+ -\frac{\mathcal Ah(k)}{h(k)}
+ =c-\frac{6a(a-1)}
+          {n(k+a-1)(k+a+2)}.
+\end{equation}
+This quantity increases with $k$; its extreme values at $1$ and
+$n-1$ give~\eqref{eq:sharp-bracket} by positive-vector comparison
+and Theorem~\ref{thm:exact-gap}. Both endpoint terms in the original
+generator are treated with their zero coefficients, so the calculation
+also holds for $n=2$.
+
+The subtracted term in~\eqref{eq:sharp-certificate} is between
+zero and $6/n$. Moreover,
+\[
+ c=\frac1n+\sqrt{d^2+\frac{6\beta}{n}+\frac1{n^2}},
+ \qquad d+\frac1n\le c\le d+\frac4n.
+\]
+For the upper inequality, square $d+3/n$ and use $d\ge\beta$.
+The lower inequality is immediate. These facts imply
+\eqref{eq:sharp-additive}.
+\end{proof}
+
+\begin{corollary}[Asymptotic equivalents]\label{cor:sharp-equivalents}
+Let $n\to\infty$ and allow $\beta=\beta_n>0$ to vary.
+If $n\sqrt{\beta_n}\to\infty$, then
+\[
+ \gamma_M(n,\beta_n)\sim\sqrt{\beta_n^2+4\beta_n}.
+\]
+In particular,
+\begin{align*}
+ \beta_n\sim b/n,\ b>0
+ &\quad\Longrightarrow\quad
+ \sqrt n\,\gamma_M(n,\beta_n)\longrightarrow2\sqrt b,\\
+ \beta_n\longrightarrow\beta_0>0
+ &\quad\Longrightarrow\quad
+ \gamma_M(n,\beta_n)\longrightarrow\sqrt{\beta_0^2+4\beta_0}.
+\end{align*}
+If $n^2\beta_n\to0$, then
+\[
+ n\gamma_M(n,\beta_n)\longrightarrow2.
+\]
+\end{corollary}
+
+\begin{proof}
+In the first regime, $nd\ge2n\sqrt{\beta_n}\to\infty$,
+so the additive error in~\eqref{eq:sharp-additive} is negligible.
+The two displayed specializations follow. In the final regime,
+$a\to1$ in Theorem~\ref{thm:sharp-gap}; its upper bound gives
+$n\gamma_M\le2a-\beta_n n\to2$, while the lower bound
+$\gamma_M\ge\beta_n+2/n$ gives the reverse limit.
+\end{proof}

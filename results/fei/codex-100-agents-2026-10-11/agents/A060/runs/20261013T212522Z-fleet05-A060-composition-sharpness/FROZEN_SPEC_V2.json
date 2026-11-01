@@ -1,0 +1,11 @@
+{
+ "helper_version": "A060 stage2 independent reproduction v2",
+ "family": "same all-balanced n=4 functions, equality orbits of Maj3 and the four-input consensus selector, plus swapped bent gates with a balanced alpha=1/4 inner",
+ "domain": {"balanced_n":4,"NPN_seeds":[5951,1343],"actual_seed_definition":"Maj3 first three signs with fourth dummy; if x3=x4 return x3 else x1 when x3=+ and x2 otherwise","dyadic_composition_m":[2,4]},
+ "case_count": "12870 masks filtered from all 65536 four-bit tables; 768 signed permutation/output transformations per each of two seeds; two explicit dyadic-inner composition tables",
+ "symmetry": "census uses no quotient; the two finite orbits are enumerated only to classify equality cases",
+ "arithmetic": "direct singleton character sums and direct edge counts, independently generated masks, integer power comparisons; direct character transform for two physical tables",
+ "memory_estimate_MB":70,
+ "max_runtime_seconds":60,
+ "reason": "initial equality classification was disproved by mask 1343; freeze an independent full-domain check and exact orbit classification, without changing the original inequality census domain"
+}

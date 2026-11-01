@@ -1,0 +1,81 @@
+{
+  "native_task_id": "6aa7b4b639a08191b893e2b7dd6cdf59",
+  "target_id": "RS-2026-CL-A",
+  "report_kind": "research_run",
+  "input_snapshot_sha": "39f26cf07cc6ece95f6fb05e1d66e9511acb69ee",
+  "source": {
+    "author": "Anastasia Kireeva",
+    "venue": "Randomstrasse 101",
+    "title": "Low-degree hardness of finding the largest clique in Erdős–Rényi graph (problems 36-38)",
+    "posted": "2026-06-05",
+    "displayed_problem": "Open Problem 35"
+  },
+  "previous_report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T08-52-00Z__report.md",
+    "creation_commit": "71e63a3eac73bca2c50d45c1b01e2372c2d8076b",
+    "blob": "0608970f21e43fbcfb2716688f3d8ccb17a75b26"
+  },
+  "previous_ledger": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/artifacts/2026-09-19T08-52-00Z__ledger_delta.json",
+    "creation_commit": "21cb62df4862319ab4009e5b10abf385194d316e",
+    "blob": "a35eea1abd7b61387350ed963754c76461a6bbd0"
+  },
+  "report": {
+    "path": "probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-16/rotations/RS-2026-CL-A/runs/2026-09-19/2026-09-19T09-43-00Z__report.md",
+    "creation_commit": "92308242964d13f5a383dbc210e7e26d5a55178d",
+    "blob": "d5e0ae3a8c2afc2f92b98d50f1bde638a0e2a1a9"
+  },
+  "metric": {
+    "name": "E_framework",
+    "initial": 0,
+    "before": 1,
+    "after": 1,
+    "movement": "NO FROZEN-METRIC MOVEMENT; source-generalization obligation moved materially"
+  },
+  "status": "PARTIAL_METRIC_COMPLETE_CANDIDATE_AUDIT_PENDING / SUB_POISSON_COLLISION_TV_ALIGNMENT_AND_LDP_PROGRESS",
+  "historical_initial_methods": ["B2", "B27", "B21"],
+  "methods": ["B3", "B23", "B29"],
+  "method_outcomes": {
+    "B3": "PROGRESS: replaced negative association by a general Laplace-domination theorem. If log E exp(<h,S>) <= sum_i r_i psi_i(h_i), then for iid latent replicas and H>=0, Psi_mu(H)<=sum_i r_i psi_i(b_i) with b_i=sum_j r_j H_ij psi_j(W_j)/W_j. Sequential conditional occupancy caps imply the sub-Poisson specialization and give a finite local certificate for dependent latent Gibbs supports.",
+    "B23": "PROGRESS VIA REFUTATION + REPAIR: an exact Boolean change-of-basis example has zero source LDA, O(1) collision pressure, perfect off-diagonal source-degree transport, and product log-Sobolev/hypercontractivity, yet fixed positive noisy TV because a high source-degree parity is a degree-one noise eigenfunction. Full statistical indistinguishability requires source-degree-aligned full-tail damping, under which a direct L2 argument gives a TV bound.",
+    "B29": "PROGRESS: for exchangeable latent supports with size LDP rate I, derived the hypergeometric intersection rate J and the variational collision free energy Lambda_I(c)=sup_{x,y,z}{cz-I(x)-I(y)-J(z;x,y)}. Calibrations recover iid Bernoulli, fixed-size, empty/full and exponentially rare macroscopic regimes. Lambda_I(c)>0 forces Theta(n) pressure and rules out source-scale Pi_2=o(D_n)."
+  },
+  "mathematical_state": {
+    "laplace_collision_theorem": "If log E_mu exp(<h,S>)<=sum_i r_i psi_i(h_i) for all h>=0, W_j=sum_i H_ij, kappa_j=psi_j(W_j)/W_j and b_i=sum_j r_j kappa_j H_ij, then log E exp(S^THT)<=sum_i r_i psi_i(b_i).",
+    "sub_poisson_certificate": "Prefix conditional occupancy P(S_i=1|S_1,...,S_{i-1})<=pbar_i implies log E exp(<h,S>)<=sum_i pbar_i(e^{h_i}-1). Uniform full-boundary conditional caps imply prefix caps by tower property. Pairwise latent Gibbs laws admit pbar_i=logistic(theta_i+sum_{j:J_ij>0}J_ij).",
+    "tv_obstruction": "On uniform Boolean Q, conjugate product noise by an invertible F2 character map so a source-degree m>D parity becomes a degree-one noise coordinate. Then L=1+a chi_R has Adv^{<=D}=0 and Pi_2=log(1+a^2), while TV after fixed time t is a e^{-t}/2 despite perfect off-diagonal source-degree transport and product LSI/hypercontractivity.",
+    "tv_repair": "If ||S_t Pi_{>D}||_{2->2}<=exp(-kappa_t(D+1)), then TV(P S_t,Q)<=0.5 Adv^{<=D}(P,Q)+0.5 exp(Pi_2/2-kappa_t(D+1)). Thus vanishing LDA plus Pi_2=o(D) and fixed positive kappa_t imply noisy TV convergence.",
+    "exchangeable_ldp": "If |S|/n obeys an LDP with rate I, then conditional intersection fraction z given sizes x,y has J(z;x,y)=h(y)-x h(z/x)-(1-x)h((y-z)/(1-x)); for K_c=exp(c|S cap T|), n^{-1}log E K_c -> sup{cz-I(x)-I(y)-J(z;x,y)}.",
+    "macroscopic_obstruction": "At D_n=o(n), positive collision free energy Lambda_I(c)>0 forces Pi_2=Theta(n), so any source-scale pressure framework allowing exchangeable rare macroscopic supports must at least satisfy Lambda_I(c)=0; moderate-deviation control is still needed for Pi_2=o(D_n)."
+  },
+  "audits": {
+    "qualifying_count": "0/2",
+    "p26": null,
+    "other": null
+  },
+  "recovery_stuck": {
+    "hard_recovery_cycles_consumed": 1,
+    "same_obligation_stagnation": 0,
+    "stuck_trigger": false
+  },
+  "prior_art_state": "Sub-Poisson/product Laplace bounds, stochastic domination from conditional intensity caps, negative association/strong-Rayleigh examples, Gibbs/Donsker-Varadhan variational formulas, Boolean Fourier product-noise LSI/hypercontractivity, Dobrushin/KP/complete-analyticity locality, Renyi/collision entropy, Cramer/Sanov/Varadhan large deviations, hypergeometric entropy asymptotics, Kato/Toda/QR and Davies/Combes-Thomas are classical. Source-directed synthesis novelty remains UNVERIFIED.",
+  "later_negative_stress": "Songtao Mao arXiv:2607.20318 remains mandatory and is excluded only through substantive pressure/reference, latent-regularity and degree/noise-alignment hypotheses, never by naming the rank distinguisher.",
+  "positive_comparators": [
+    "Hsieh-Kane-Kothari-Li-Mohanty-Tiegel arXiv:2601.05850 / STOC 2026",
+    "Chen-Li arXiv:2608.06279 (2026-08-06)"
+  ],
+  "artifacts": {},
+  "next_methods": ["B12", "B20", "B27"],
+  "next_attack": {
+    "B12": "Identify the exact source-degree/noise-energy alignment invariant that excludes the parity-basis counterexample; formulate it as a spectral/form lower bound on high source layers and compare it with the existing Kato/Toda tilted certificate.",
+    "B20": "Attempt to upgrade weak-Ising Kato/Toda leakage control to full high-source-degree damping; if impossible, isolate the exact slow mode or missing coercivity hypothesis rather than adding another leakage lemma.",
+    "B27": "State and test a sharp two-tier quantifier framework: bounded LDA gives pressure-controlled polynomial indistinguishability, while vanishing LDA plus aligned full-tail damping gives TV; reconcile explicitly against Hsieh and Chen-Li."
+  },
+  "model_runtime_truth": {
+    "requested": "GPT-6 / maximum",
+    "actual_reported": "GPT-5.6 Sol",
+    "reasoning": "UNVERIFIED",
+    "scheduler_model_selector_exposed": false,
+    "scheduler_reasoning_selector_exposed": false
+  }
+}

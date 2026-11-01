@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T102839Z-fleet01-B05-QFORM-r30",
+  "checks": [
+    {
+      "name": "cube_root_endpoint_constants",
+      "rho": 0.0078125,
+      "eta_rho_one_third": 0.19842513149602495,
+      "gram_loss_upper": 0.20623763149602495,
+      "gram_lower": 0.793762368503975,
+      "scaled_partner_248_bound": 312.436076388217
+    },
+    {
+      "name": "triangular_shear_identity",
+      "input": "Q=2*beta*sqrt(c)*xh*L+2*beta*U*L+alpha*L^2+2*delta0*L*V+gamma*V^2; Y=xh+U/sqrt(c)",
+      "expanded_after_xh_equals_Y_minus_U_over_sqrt_c": "alpha*L^2+2*delta0*L*V+2*beta*sqrt(c)*Y*L+gamma*V^2",
+      "status": "symbolically_verified"
+    },
+    {
+      "name": "partner_leave_one_out_gate_match",
+      "identity": "ell_j^(-h)=u_j^2/rho+w_j^2+z_j^2",
+      "det_H_h": "rho",
+      "status": "exact_algebra"
+    }
+  ],
+  "limitations": "Finite arithmetic and symbolic expansion only; not an independent proof review and not a universal numerical validation."
+}

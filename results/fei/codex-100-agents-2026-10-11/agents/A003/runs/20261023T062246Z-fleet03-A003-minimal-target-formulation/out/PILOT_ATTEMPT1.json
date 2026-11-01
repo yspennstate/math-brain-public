@@ -1,0 +1,8 @@
+{
+ "status":"FAILED_COVERAGE_ASSERTION_4250",
+ "reason":"The 64 evenly spaced candidates checked the energy/ledger but reached no genuine shape change: small seeds leave only one nonempty child label, and the sampled parity3 fixture used the exact reference. The fail-closed coverage predicate rejected the pilot.",
+ "mathematical_effect":"none; the proposed generic transaction theorem is unchanged",
+ "original_pilot_indices":"[i*1986//64 for i in range(64)]",
+ "repair":"Retain first62 old sample indices, append index1956 (parity3 uniform-tail reference) and1985 (nonpoint4 weighted-tail reference); still64 pilot cases from original frozen full domain.",
+ "additional_checker_endpoint_repair":"Exact zero-refund parity controls are checked by exact probability-law equality and interval containment of zero, rather than requiring a subtraction of outward CE intervals to be the degenerate interval [0,0]."
+}

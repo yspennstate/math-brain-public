@@ -1,0 +1,15 @@
+# Independent review of A059 interrupted priority payment@1
+
+Verdict: ACCEPT_AT_STATED_SCOPE, without repair. A059 remains the source contributor. The source includes its explicit order restriction; the new later-private-test extension belongs to A057 and is not retroactively attributed to the reviewer receipt.
+
+I reconstruct from physical Fourier coefficients of F=A u+(1-A)G, q=EA, means m,n, delta=m-n, V=Var(G), M=n+q delta. Nonempty u frequencies contribute q Var(u) to query erasure. Nonempty remaining A frequencies across empty/nonempty G contribute (q-2q^2)(V+delta^2). The empty remaining A/nonempty G row contributes V Phi((1-q)^2,q^2); the fully empty row contributes Phi(M^2,q^2 delta^2). This is the source equation(3), including the same G in both children.
+
+For the fine fallback representation with label probabilities p_j and variances V_j, its selectors scale by 1-q; own u probability doubles on the successful query branch and dies on the failed branch. Hence the release is q Var(u)+[phi(1-q)-phi(1-2q)/2]sum_j p_j V_j. The bracket is nonnegative by concavity; it must not be replaced by a coarse variance of G. Subtracting the first term and dropping only that nonnegative bracket is an upper bound.
+
+With d0=(1-mn)/2, V+delta^2<=4d0, V<=4d0, |delta|<=2d0, |M|<=1, Phi(a,b)<=2sqrt(ab), and q<=1/2, the three residual terms cost at most 4q d0,8q d0,4q d0. The physical influence is i=2q d0, giving B-kappa<=8i. The full normalized physical concavity gap adds <=2i/ln2. The source asserts no positive lower bound on this residual, and this review adds none.
+
+The source's ordered multi-stage stopping consequence is finite induction: every live control point has exactly this independent-u/shared-fallback form. Arbitrary data interruptions preserve disjoint physical blocks. The signed data drift is independently reconstructed from the A057/A087 identities: q[Delta H(u)-paird(m,beta)] equals the nonempty-core potential drop minus q phi(beta^2); the exact singleton entropy cancels the same term in M's logarithmic envelope, leaving 3q beta^2/ln2 and the variance-rarity drop. Thus no data log is rounded to O(beta^2). The actual terminal profile stays in the telescoped formula; controller-resolved phi(mean^2)<=I_leaf/ln2 follows from -x ln x<=1-x and Poincare. No hidden controller/core entropy payment is assumed.
+
+The independent checker in this run verifies the exact earlier-query formula against actual parent spectra and actual fine-label reserve release, including partially resolved fallback controllers and biased data. It also checks the stopped signed inequality on declared physical trees. It uses A057 rational primitives and new direct state/tree code, not the A059 checker. Frozen scope, commands and outputs are in REPORT and CHECK files. The all-dimensional bridge is the preceding analytic proof, not the census.
+
+No assertion is made about arbitrary priority query order or universal FEI. The source remains valid at its stated ordered-controller scope. Our PROOF Section1 pays a later-private query only in the explicitly independent two-test geometry after X is resolved.

@@ -1,0 +1,40 @@
+[
+  {
+    "claim_id": "A053-THIRD-QUERY-ALL-POLICY-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer r>=7, the Boolean G_r in THIRD_QUERY_PROOF.md is one physical vertex edit of a triple-parity-coded seed of Fourier support distance at least 3, has odd negative count and no nontrivial Boolean tensor factorization, satisfies H(G_r)<=3 I(G_r), and admits an original three-query selector block with entropy decrement L3>(2r-3)2^(-2r) and influence debit Q3=3*2^(-2r)-6*2^(-6r-3). Thus L3/Q3 is unbounded. For every fixed K>=9 and r>=7 with 2r-3>3K, the complete three-query bank B3=L3-KQ3 is positive although its retained two-query prefix bank B2<-2^(-6r-4). In particular r16,K9 gives B3>2*2^(-32). This refutes the proposed all-policy third-query extension, not FEI or an existential critical-source selector.",
+    "hypotheses": [
+      "Uniform binary cube, normalized Walsh transform, entropy in bits",
+      "Specified actual Boolean family and original selector-triple query, all original terminal reaches",
+      "The general-K prefix bound uses the preceding two-query theorem; K9 is also directly recomputed"
+    ],
+    "statement_sha256": "17fe53bb4a774b71cab23ae3dd25a090e182825966c0b5a81064e0dbfce6402b",
+    "contributors": [
+      "A053"
+    ],
+    "proof_source": "THIRD_QUERY_PROOF.md",
+    "proof_dependencies": [
+      "A053-ANCESTOR-PACKING-ALL-POLICY-TWO-QUERY-PAYMENT@1 for general-K negative prefix only; divergent local price proof is self-contained"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A053",
+        "kind": "author analytic proof and exact arithmetic verification",
+        "outcome": "PASS; independent review of new theorem pending"
+      }
+    ],
+    "status": "AUTHOR_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered proposal: extend all-policy two-query payment through a third query at a fixed rate, with earlier bank retained"
+    ],
+    "first_unproved_line": "No gap claimed in the stated construction. Universal critical-source original-block selection with sufficient independent unused affine release remains open.",
+    "next_consumers": [
+      "B11",
+      "A052",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

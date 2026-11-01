@@ -1,0 +1,24 @@
+I0130_B10_DEPTH20_FEEDBACK_DIAGNOSTIC
+Exact dynamic-programming policy extraction at epsilon=533/169420 for the unchanged p/192 family.
+
+Top policy nodes:
+d=20 J=3840 p=118
+d=19 J=7014 p=73
+d=19 J=814  p=174
+d=18 J=9783 p=44
+d=18 J=4483 p=107
+d=18 J=4492 p=107
+d=18 J=2828 p=136
+d=17 J=12291 p=26
+d=17 J=7571  p=66
+d=17 J=7558  p=66
+d=17 J=1578  p=158
+d=17 J=7567  p=66
+d=17 J=1587  p=158
+d=17 J=6164  p=84
+d=17 J=396   p=183
+
+Reachable exact state-depth pairs inspected in the extracted depth-20 policy tree: 88238.
+Pairs with an active structural action rather than immediate old654 handoff: 64463.
+
+B10 outcome this run: the B9 sampled compact affine-in-(J,d)+residue feedback class did not produce a threshold-reaching candidate, so there is no successful compact candidate to derandomize. The exact DP itself is deterministic, but its current state/depth table is not yet a scalable compact certificate. This artifact is diagnostic evidence, not a theorem that no compact feedback law exists.

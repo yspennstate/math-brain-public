@@ -1,0 +1,201 @@
+--- a/~/math-brain-inbox/w390/bundle_001.json
++++ b/~/math-brain-inbox/w390/bundle_001.json
+@@ -0,0 +1,198 @@
++{
++  "spec": "mathbrain-draft-v1",
++  "author_agent": "w390",
++  "bundle_slug": "p0117-quantitative-thin-tube-boundary-w390-001",
++  "entries": [
++    {
++      "key": "slab",
++      "namespace": "probability.fpp",
++      "logical_name": "ambient-fpp-cheap-bypass-excludes-confined-slab-crossing",
++      "kind": "lemma",
++      "title": "Cheap bypass excludes an FPP crossing confined to a strip",
++      "statement": "DRAFT: author-proved special case; independent review pending. Fix integer columns A and A+m and a strip |y-y0|<=w. For 0<=l<h, suppose all m(2w+1) horizontal edges inside this strip between the columns cost at least h, while the m edges in row y0+w+1 and the vertical connectors at the two columns from y0-w to y0+w+1 cost at most l. If m(h-l)>(4w+2)l, no ambient-lattice finite geodesic joining the two columns stays in the strip.",
++      "proof_text": "a deterministic slab obstruction\n\nFix integers A, y_0 and w >= 0, and write m=m(w). Require weight at least h on the m(2w+1) horizontal edges\n\n    {(x,y),(x+1,y)} with A <= x < A+m, |y-y_0| <= w.\n\nRequire weight at most l on the m horizontal edges of row y_0+w+1 over the same x interval and on the vertical edges at columns A and A+m between levels y_0-w and y_0+w+1. There are exactly m+4w+2 required cheap edges. The high and low sets are disjoint.\n\nOn this event, no finite geodesic contained in the horizontal strip |y-y_0| <= w joins a vertex of column A to a vertex of column A+m.\n\nProof. Any such path crosses each of the m intervening vertical cuts at least once. Each crossing uses an expensive horizontal edge, so nonnegativity gives path cost at least mh. If its endpoint heights are y and z, go vertically from (A,y) to the row y_0+w+1, traverse that row to column A+m, then go vertically to (A+m,z). This competing path uses at most m+4w+2 cheap edges, and has cost at most (m+4w+2)l < mh. Thus the confined path is not a geodesic. Neither monotonicity nor uniqueness of the original path is assumed. The competing path may leave the tube: the metric is the full Z^2 metric, not a metric restricted to the tube. QED.",
++      "assumptions": [
++        "Undirected nearest-neighbor Z^2",
++        "iid finite nonnegative nonconstant edge weights",
++        "Geodesics minimize in the full ambient lattice",
++        "Injective rays and bigeodesics",
++        "Independent mathematical review pending; no novelty claim",
++        "w>=0 integer",
++        "m>=1 integer",
++        "Nonnegative edge costs"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign:w390:P0117:2026-10-10",
++        "url": "urn:owner-own-work:w390:P0117:thin-tube:2026-10-10",
++        "revision": "author-proof-v1-pending-independent-review-w392",
++        "license": "owner-own-work; DRAFT, author-proved special case, not independently reviewed",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "trap",
++      "namespace": "probability.fpp",
++      "logical_name": "iid-fpp-slab-trap-probability-and-disjoint-supports",
++      "kind": "lemma",
++      "title": "Probability and independent supports of the FPP strip trap",
++      "statement": "DRAFT: author-proved special case; independent review pending. Choose 0<=l<h<infinity with p_l=P(t_e<=l)>0 and p_h=P(t_e>=h)>0; K=1+4l/(h-l), C=2K log(1/p_h)+(K+4)log(1/p_l). Logs are natural. For integer w>=0, let m=floor((4w+2)l/(h-l))+1. The event with m(2w+1) high horizontal edges in the strip and m+4w+2 low bypass and connector edges has probability q_w=p_h^(m(2w+1))*p_l^(m+4w+2)>=exp(-C(w+1)^2). Copies spaced by m+1 columns have disjoint required edge supports and hence independent events.",
++      "proof_text": "an independent family of traps\n\nFor fixed w, the event of Lemma 1 has probability\n\n    q_w = p_h^(m(w)(2w+1)) p_l^(m(w)+4w+2)\n        >= exp(-C(w+1)^2).\n\nProof. Independence applies to the explicitly listed distinct edges. Since 2w+1 <= 2(w+1), m <= K(w+1), and m+4w+2 <= (K+4)(w+1), taking negative logarithms proves the bound. Slabs whose left columns are separated by m+1 have disjoint required edge sets, including both vertical connector columns, so their trap events are independent. No conditioning on the existence or choice of a geodesic occurs. QED.",
++      "assumptions": [
++        "Undirected nearest-neighbor Z^2",
++        "iid finite nonnegative nonconstant edge weights",
++        "Geodesics minimize in the full ambient lattice",
++        "Injective rays and bigeodesics",
++        "Independent mathematical review pending; no novelty claim",
++        "Choose 0<=l<h<infinity with p_l=P(t_e<=l)>0 and p_h=P(t_e>=h)>0; K=1+4l/(h-l), C=2K log(1/p_h)+(K+4)log(1/p_l). Logs are natural. "
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign:w390:P0117:2026-10-10",
++        "url": "urn:owner-own-work:w390:P0117:thin-tube:2026-10-10",
++        "revision": "author-proof-v1-pending-independent-review-w392",
++        "license": "owner-own-work; DRAFT, author-proved special case, not independently reviewed",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "tube",
++      "namespace": "probability.fpp",
++      "logical_name": "nonconstant-iid-fpp-no-eventual-logarithmically-thin-tube-ray",
++      "kind": "theorem",
++      "title": "Geodesic rays cannot eventually stay in sufficiently thin logarithmic tubes",
++      "statement": "DRAFT: author-proved special case; independent review pending. Choose 0<=l<h<infinity with p_l=P(t_e<=l)>0 and p_h=P(t_e>=h)>0; K=1+4l/(h-l), C=2K log(1/p_h)+(K+4)log(1/p_l). Logs are natural. For every fixed deterministic nondecreasing integer width w(n)>=0 with limsup w(n)/sqrt(log n)<1/sqrt(C), and each fixed integer y0, almost surely no injective ambient-lattice geodesic ray has a tail in {(x,y): |y-y0|<=w(|x|)}. This requires neither continuity nor moments. It does not exclude unrestricted bigeodesics.",
++      "proof_text": "no geodesic ray eventually fits a logarithmically thin tube\n\nLet w: {0,1,...} -> {0,1,...} be a deterministic nondecreasing function with\n\n    limsup_(n -> infinity) w(n)/sqrt(log n) < 1/sqrt(C).\n\nFor any fixed integer y_0, almost surely no geodesic ray has a tail entirely in\n\n    T_w(y_0) = {(x,y) in Z^2: |y-y_0| <= w(|x|)}.\n\nProof. For R=2^k set W=w(2R), m=m(W), and J=floor(R/(m+1)). Use J slabs with left columns A_j=R+j(m+1), 0 <= j < J. Their endpoints lie between R and 2R, and all tube vertices there have height within W of y_0. By Lemma 2 the required edge sets are disjoint. Therefore\n\n    P(no trap among these J slabs) = (1-q_W)^J <= exp(-J q_W).\n\nPut L=limsup w(n)/sqrt(log n). Choose a number theta strictly between C L^2 and 1. For all sufficiently large R, C(W+1)^2 <= theta log R. Thus q_W >= R^(-theta). Also W+1 <= D sqrt(log R) for some finite D and all large R, so\n\n    J >= R/[2(K+1)(W+1)]\n\nfor all sufficiently large R. Hence J q_W >= c R^(1-theta)/sqrt(log R) for some c>0. The no-trap probabilities are summable over dyadic k. By the first Borel-Cantelli lemma, almost surely every sufficiently distant positive dyadic annulus contains a trap. Reflection gives the same conclusion on the negative x side. Independence BETWEEN annuli is not needed.\n\nSuppose a geodesic ray has a tail in T_w(y_0). For each M, the part of this tube with |x| <= M is a finite vertex set. An injective ray eventually leaves it permanently. Nearest-neighbor steps prevent infinitely many switches between the two sides after that departure. Consequently the x coordinate tends to +infinity or -infinity.\n\nConsider the +infinity case and any sufficiently distant trapped slab with columns A and A+m, beyond the beginning of the confined tail. Choose an index at column A and a later first index at column A+m, then choose the last column-A index before that arrival. Between the chosen indices the x coordinate is in [A,A+m], by the nearest-neighbor property. The entire subpath is therefore in the height-W strip. It is a finite geodesic crossing forbidden by Lemma 1. The negative-side argument follows by reflection. QED.\n\nThe assertion excludes all rays on the probability-one trap event; it is not merely an assertion about one preselected random ray.",
++      "assumptions": [
++        "Undirected nearest-neighbor Z^2",
++        "iid finite nonnegative nonconstant edge weights",
++        "Geodesics minimize in the full ambient lattice",
++        "Injective rays and bigeodesics",
++        "Independent mathematical review pending; no novelty claim",
++        "Choose 0<=l<h<infinity with p_l=P(t_e<=l)>0 and p_h=P(t_e>=h)>0; K=1+4l/(h-l), C=2K log(1/p_h)+(K+4)log(1/p_l). Logs are natural. ",
++        "Deterministic width and center"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign:w390:P0117:2026-10-10",
++        "url": "urn:owner-own-work:w390:P0117:thin-tube:2026-10-10",
++        "revision": "author-proof-v1-pending-independent-review-w392",
++        "license": "owner-own-work; DRAFT, author-proved special case, not independently reviewed",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "transversal",
++      "namespace": "probability.fpp",
++      "logical_name": "iid-fpp-simultaneous-logarithmic-transversal-ray-lower-bound",
++      "kind": "theorem",
++      "title": "A simultaneous logarithmic transversal lower bound for FPP geodesic rays",
++      "statement": "DRAFT: author-proved special case; independent review pending. Choose 0<=l<h<infinity with p_l=P(t_e<=l)>0 and p_h=P(t_e>=h)>0; K=1+4l/(h-l), C=2K log(1/p_h)+(K+4)log(1/p_l). Logs are natural. Almost surely every injective ambient-lattice geodesic ray (x_j,y_j), simultaneously for every integer center y0, satisfies limsup_j |y_j-y0|/sqrt(log(2+|x_j|)) >=1/sqrt(C). Therefore no bigeodesic has a tail eventually in a fixed finite-width horizontal or vertical strip. The coefficient and scale are not claimed optimal.",
++      "proof_text": "a simultaneous transversal lower bound\n\nAlmost surely, for every geodesic ray (v_j)=(x_j,y_j) and every integer y_0,\n\n    limsup_(j -> infinity) |y_j-y_0|/sqrt(log(2+|x_j|)) >= 1/sqrt(C).\n\nProof. Apply Theorem 3 to w_c(n)=ceil(c sqrt(log(2+n))) for each positive rational c<1/sqrt(C) and every integer y_0, then take the countable intersection of their probability-one events. If the displayed limsup were below 1/sqrt(C), choose a rational c strictly between them. Eventually the ray would lie in T_(w_c)(y_0), a contradiction. QED.\n\nIn particular there is almost surely no bigeodesic wholly in any fixed horizontal or vertical finite-width strip, or with even one tail eventually in a tube as in Theorem 3. A bigeodesic tail is a geodesic ray. Coordinate exchange handles vertical strips.",
++      "assumptions": [
++        "Undirected nearest-neighbor Z^2",
++        "iid finite nonnegative nonconstant edge weights",
++        "Geodesics minimize in the full ambient lattice",
++        "Injective rays and bigeodesics",
++        "Independent mathematical review pending; no novelty claim",
++        "Choose 0<=l<h<infinity with p_l=P(t_e<=l)>0 and p_h=P(t_e>=h)>0; K=1+4l/(h-l), C=2K log(1/p_h)+(K+4)log(1/p_l). Logs are natural. "
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign:w390:P0117:2026-10-10",
++        "url": "urn:owner-own-work:w390:P0117:thin-tube:2026-10-10",
++        "revision": "author-proof-v1-pending-independent-review-w392",
++        "license": "owner-own-work; DRAFT, author-proved special case, not independently reviewed",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "constant",
++      "namespace": "probability.fpp",
++      "logical_name": "constant-iid-fpp-horizontal-bigeodesic-hypothesis-boundary",
++      "kind": "lemma",
++      "title": "Constant-law boundary of the FPP strip exclusion",
++      "statement": "DRAFT: author-proved special case; independent review pending. If every nearest-neighbor edge of Z^2 has a fixed weight a>=0, the path ((j,0)) indexed by all integers is a bigeodesic in the full lattice. Thus nonconstancy is necessary for fixed-strip exclusion. This law is atomic and is not a counterexample to the nonatomic P0117 target.",
++      "proof_text": "A finite horizontal segment has L1-minimal length. With constant a>0 its cost is a times that length, so it minimizes among all paths. With a=0 all finite path costs tie at zero.",
++      "assumptions": [
++        "Undirected nearest-neighbor Z^2",
++        "Constant iid edge law at a>=0",
++        "Independent review pending"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign:w390:P0117:2026-10-10",
++        "url": "urn:owner-own-work:w390:P0117:thin-tube:2026-10-10",
++        "revision": "author-proof-v1-pending-independent-review-w392",
++        "license": "owner-own-work; DRAFT, author-proved special case, not independently reviewed",
++        "excerpt": null
++      }
++    },
++    {
++      "key": "scope",
++      "namespace": "probability.fpp",
++      "logical_name": "p0117-thin-tube-proof-unrestricted-wandering-gap",
++      "kind": "concept",
++      "title": "The remaining unrestricted-wandering gap in the P0117 tube route",
++      "statement": "DRAFT concept: the standard P0117 target excludes every bigeodesic for nonatomic iid finite nonnegative weights on Z^2, commonly with E[min(X1,X2,X3,X4)^2]<infinity. Explicit independent slab traps exclude confined rays in tubes of width below a sufficient multiple of sqrt(log n). An unrestricted candidate may wander outside every such tube. No bridge forcing confinement is proved, so the tube result cannot be promoted to the full target. Current openness and novelty are UNKNOWN; a September 2026 primary manuscript already claims the standard full result.",
++      "proof_text": null,
++      "assumptions": [
++        "Author analysis only",
++        "No assertion that the target remains open",
++        "No full-target proof claim"
++      ],
++      "domain": "probability theory",
++      "source": {
++        "source_id": "owner-probability-campaign:w390:P0117:2026-10-10",
++        "url": "urn:owner-own-work:w390:P0117:thin-tube:2026-10-10",
++        "revision": "author-proof-v1-pending-independent-review-w392",
++        "license": "owner-own-work; DRAFT, author-proved special case, not independently reviewed",
++        "excerpt": null
++      }
++    }
++  ],
++  "relations": [
++    {
++      "from_key": "trap",
++      "to_key": "slab",
++      "kind": "depends_on",
++      "rationale": "The trap statement counts the strip, bypass and connector edges explicitly defined in the slab lemma."
++    },
++    {
++      "from_key": "tube",
++      "to_key": "slab",
++      "kind": "depends_on",
++      "rationale": "A ray confined to the tube must cross a trapped slab; the slab lemma excludes that ambient geodesic crossing."
++    },
++    {
++      "from_key": "tube",
++      "to_key": "trap",
++      "kind": "depends_on",
++      "rationale": "The dyadic argument uses q_w>=exp(-C(w+1)^2) and disjoint slab supports to obtain summable no-trap probabilities."
++    },
++    {
++      "from_key": "transversal",
++      "to_key": "tube",
++      "kind": "depends_on",
++      "rationale": "A transversal limsup below 1/sqrt(C) forces eventual confinement in one rational-coefficient tube excluded by the tube theorem."
++    },
++    {
++      "from_key": "constant",
++      "to_key": "tube",
++      "kind": "semantic_association",
++      "rationale": "The constant-law horizontal bigeodesic shows why the tube theorem must assume a nonconstant weight law; it does not refute the theorem as stated."
++    },
++    {
++      "from_key": "scope",
++      "to_key": "tube",
++      "kind": "cites",
++      "rationale": "The scope concept identifies the limitation of the tube theorem: only eventually confined rays are excluded."
++    },
++    {
++      "from_key": "scope",
++      "to_existing_logical": "math:probability.core:open-problem-p0117-absence-of-bi-infinite-geodesics-in-planar-iid-fpp",
++      "kind": "semantic_association",
++      "rationale": "The existing P0117 card asks about bi-infinite geodesics for nondegenerate continuous iid planar laws. The scope concept records why thin-tube exclusion alone does not answer it."
++    }
++  ]
++}

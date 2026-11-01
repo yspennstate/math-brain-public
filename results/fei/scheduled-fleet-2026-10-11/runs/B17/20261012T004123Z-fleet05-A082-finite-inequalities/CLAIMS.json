@@ -1,0 +1,102 @@
+[
+  {
+    "claim_id": "A071-EXACT-FIVEBIT-ERASURE-SELECTION",
+    "version": 1,
+    "exact_statement": "On the uniform five-bit cube, E*(5)=max_{f nonconstant} min_{i:Inf_i(f)>0} H(S_i|S_-i)/Inf_i(f) equals K5=16/3-(3/8)log2(3)-(169/24)log2(13)+(89/24)log2(89). Equality holds exactly for the 640 truth tables whose minority class is {t,t xor e_i,t xor e_j}, with t in F2^5 and distinct coordinates i,j, allowing output complement. The associated spectral law is P(S)=fhat(S)^2 and entropy is in bits.",
+    "hypotheses": [
+      "Actual Boolean sign functions on the uniform cube F2^5",
+      "Only relevant physical coordinates participate in the minimum",
+      "Base-two Shannon entropy of the squared normalized Walsh spectrum"
+    ],
+    "statement_sha256": "7e30279e1c16bc098377bb8dad61dc8357cff0fe4f760865a4766e2ff3de1a67",
+    "contributors": [
+      "fleet05/A071"
+    ],
+    "proof_source": [
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T233808Z-fleet05-A071-search-space-design\\REPORT.md",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T233808Z-fleet05-A071-search-space-design\\SEARCH_DOMAIN.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T233808Z-fleet05-A071-search-space-design\\FULL_DOMAIN.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T233808Z-fleet05-A071-search-space-design\\code\\sparse_search.py",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T233808Z-fleet05-A071-search-space-design\\code\\full_census.py",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T233808Z-fleet05-A071-search-space-design\\code\\check_final.py",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T233808Z-fleet05-A071-search-space-design\\out\\search.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T233808Z-fleet05-A071-search-space-design\\out\\full_census.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T233808Z-fleet05-A071-search-space-design\\out\\final_certificate.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A071\\runs\\20261011T233808Z-fleet05-A071-search-space-design\\out\\candidate_certificates.json",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261012T004123Z-fleet05-A082-finite-inequalities\\EXHAUSTIVENESS_LEMMA.tex",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261012T004123Z-fleet05-A082-finite-inequalities\\out\\review_census.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewed_claim": "A071-EXACT-FIVEBIT-ERASURE-SELECTION",
+        "version": 1,
+        "reviewer": "A082",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "contributor_conflict": false,
+        "substantive_repair": false,
+        "source_claim_sha256": "7e30279e1c16bc098377bb8dad61dc8357cff0fe4f760865a4766e2ff3de1a67",
+        "method": "covering proof, direct parity-popcount coefficient engine, independent Fraction 50-term logarithm intervals, exact integer-product seed signs",
+        "evidence": "out/review_census.json; out/seed_certificate.json; EXHAUSTIVENESS_LEMMA.tex",
+        "adoption": "shared source records not modified"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_STATED_SCOPE_LOCAL_REVIEW_RECORD",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A075",
+      "A074",
+      "A073",
+      "A085",
+      "A092",
+      "A026",
+      "A028",
+      "A082",
+      "B15",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A082-AFFINE5-ERASURE-BRIDGE",
+    "version": 1,
+    "exact_statement": "For every finite uniform physical cube, each nonconstant Boolean sign whose nonzero Fourier support has affine F2 dimension at most five, and each disjoint product of such factors, admits a relevant coordinate with B_i<=K5 I_i at every physical restriction, and H(f)<=(K5+2/ln2)I(f), where K5=16/3-(3/8)log2(3)-(169/24)log2(13)+(89/24)log2(89)<27/10. K5 is optimal for the selectable-erasure statement in this class.",
+    "hypotheses": [
+      "Boolean sign outputs on a uniform finite cube",
+      "entropy in bits",
+      "affine Fourier support dimension at most five for each disjoint factor",
+      "only physical coordinate restrictions; factors have disjoint variable sets"
+    ],
+    "statement_sha256": "60096e196a023fdb1c803d29320ec002e759c02bcd45a6d16b38acac21a5e9f4",
+    "contributors": [
+      "A082",
+      "A026 (source of parameterized affine-support argument)"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261012T004123Z-fleet05-A082-finite-inequalities\\EXHAUSTIVENESS_LEMMA.tex, Theorem 2",
+    "proof_dependencies": [
+      {
+        "claim_id": "A071-EXACT-FIVEBIT-ERASURE-SELECTION",
+        "version": 1
+      },
+      "C005 exact decrement and JS bound (reconstructed in prior A082 and B17 sources)"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCAL_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A026",
+      "A027",
+      "A028",
+      "A061",
+      "A075",
+      "A081",
+      "A085",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

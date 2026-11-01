@@ -1,0 +1,15 @@
+{
+ "helper_version":"A023-matching-pair-rare-lot-v1",
+ "family":"matching quadratic bent seed with two distinct edits at0,w, fair nested controls and shared z; old U=m/8, prescribed half-uniform seed reference and ORIGINAL projected controller reference",
+ "pilot_domain":"m4,w1,affine mask0; all25 allowed fixed-even-orientation core histories,9 partial controls, z live/0/1",
+ "pilot_case_count":675,
+ "main_domain":"m4,w in{1,3},affine masks{0,15}, all25 core histories each; m6,w1,affine mask0,all125 core histories;9 partial controls and3 z statuses at every core history",
+ "main_case_count":6075,
+ "policy_domain":"All adaptive stopping/query policies in these finite domains; intact pair query uses even coordinate first; query its odd partner only when its residual coefficient vanishes; controls/z arbitrary. Complete pair policy exact expected depth3m/4 and negative all-dummy branches checked.",
+ "symmetry":"none; no all-bent exhaustion; analytic proof allows arbitrary pair orientation, affine mask, distinct vertices and even m>=4",
+ "arithmetic":"integer FWHT, physical edges, Fraction, exact prime-log vectors with rigorous rational atanh sign certificates; own older arithmetic helper only",
+ "memory_estimate_MB":220,
+ "maximum_runtime_seconds_per_job":60,
+ "dimension_policy":"fixed m4,6; no automatic escalation",
+ "success_criteria":"Conserved Z/M, exact outside mass and full CE, actual source influence bound, mixed reference/R release, old debit/fullKL booking; all-policy root expected bank>F(m); full-policy depth3m/4; negative conditional leaves retained"
+}

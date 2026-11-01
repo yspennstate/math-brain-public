@@ -1,0 +1,40 @@
+name = "paper12_lean"
+version = "0.1.0"
+defaultTargets = ["EntropyObstruction", "BandedInterior", "MultilevelInteriorCount", "GridNorming", "TensorReversal", "MultilevelBandConstant", "EntropyAbsorption", "ReversalSymmetry"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+
+# Reuse the mathlib package that is already downloaded and *fully built*
+# (compiled .olean files) under the sibling project
+#   ~\phase_retrieval_omega\lean\omega_comb
+# so that `import Mathlib...` resolves with no network access and no rebuild.
+# (The same toolchain, leanprover/lean4:v4.29.1, is pinned in lean-toolchain.)
+[[require]]
+name = "mathlib"
+path = "../../../phase_retrieval_omega/lean/omega_comb/.lake/packages/mathlib"
+
+[[lean_lib]]
+name = "EntropyObstruction"
+
+[[lean_lib]]
+name = "BandedInterior"
+
+[[lean_lib]]
+name = "MultilevelInteriorCount"
+
+[[lean_lib]]
+name = "GridNorming"
+
+[[lean_lib]]
+name = "TensorReversal"
+
+[[lean_lib]]
+name = "MultilevelBandConstant"
+
+[[lean_lib]]
+name = "EntropyAbsorption"
+
+[[lean_lib]]
+name = "ReversalSymmetry"

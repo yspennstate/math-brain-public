@@ -1,0 +1,70 @@
+{
+  "spec": "mathbrain-draft-v1",
+  "author_agent": "w335",
+  "bundle_slug": "w335-c0127-20261010",
+  "entries": [
+    {
+      "key": "c0127-common-factor-peaks",
+      "namespace": "probability.gaussian",
+      "logical_name": "common-gaussian-factor-growing-near-peaks-without-superconcentration",
+      "kind": "lemma",
+      "title": "Common-factor obstruction to a growing-peaks criterion [draft; pending w347]",
+      "statement": "Fix 0<rho<1 and independent standard normal Z_0,...,Z_m. Let X_i=sqrt(rho)*Z_0+sqrt(1-rho)*Z_i and M_m=max_i X_i. Coordinates have variance one and distinct covariance rho. Var(M_m)>=rho, so the field is not superconcentrated. Nevertheless the number of coordinates at deficit at most delta_m=(log m)^(-1/4) from M_m tends to infinity in probability. Thus growing near-peaks with pairwise covariance merely bounded away from one, even at vanishing absolute deficit, are insufficient for superconcentration. This does not refute a criterion requiring overlaps to tend to zero.",
+      "proof_text": "Fix 0<rho<1. For m>=2 let Z_0,Z_1,...,Z_m be independent standard normal variables, and X_i=sqrt(rho)*Z_0+sqrt(1-rho)*Z_i. Each X_i has variance one; distinct coordinates have covariance rho, bounded away from one. Put M_m=max_i X_i. Independence gives\n\n    Var(M_m)=rho+(1-rho)*Var(max_i Z_i)>=rho.\n\nThus these maxima are not superconcentrated relative to the unit coordinate variance. Any two selected coordinates have covariance at least rho, including maximisers before and after Gaussian noise, so an overlap-to-zero chaos criterion also fails.\n\nNevertheless, for delta_m=(log m)^(-1/4), the number K_m of coordinates within delta_m of M_m tends to infinity in probability. To prove this, let b_m=sqrt(2 log m), d_m=delta_m/(2 sqrt(1-rho)), and x_m=b_m-d_m. A Gaussian Chernoff bound gives\n\n    P(max_i Z_i > b_m+d_m) <= exp(-b_m*d_m-d_m^2/2) -> 0.\n\nLet N_m count Z_i>=x_m. It is binomial with mean mu_m=m*barPhi(x_m). For x>=1, integrating the Gaussian density on [x,x+1/x] gives barPhi(x)>=exp(-3/2)*exp(-x^2/2)/(sqrt(2*pi)*x). Therefore\n\n    log mu_m >= b_m*d_m-d_m^2/2-log(x_m)-3/2-log(2*pi)/2 -> infinity.\n\nHere b_m*d_m is a positive constant times (log m)^(1/4), which dominates log(x_m)=O(log log m). Since Var(N_m)<=mu_m, Chebyshev gives N_m->infinity in probability. On the high-probability maximum event, each of these N_m coordinates is within 2*d_m of max Z, hence within delta_m of M_m. Thus K_m>=N_m with probability tending to one.",
+      "assumptions": [
+        "Independent standard Gaussian coordinates",
+        "Fixed positive common covariance rho",
+        "Candidate uses overlap bounded away from one, not overlap tending to zero"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w335:c0127-common-factor-peaks",
+        "url": "file:///~/brain_workers/w335/C0127_proof.md",
+        "revision": "author-checked-20261010-pending-independent-w347",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    },
+    {
+      "key": "c0127-two-peak-quantifier",
+      "namespace": "probability.gaussian",
+      "logical_name": "two-independent-gaussian-peaks-fixed-deficit-probability",
+      "kind": "lemma",
+      "title": "Two-peak counterexample needs a probability quantifier [draft; pending w347]",
+      "statement": "For independent standard normal Z_1,Z_2 and fixed d>0, the probability both coordinates are within d of max(Z_1,Z_2) equals erf(d/2)<1. Repeating coordinates in two blocks does not change this probability. Such replication alone cannot establish near-maximal low-overlap peaks with probability tending to one.",
+      "proof_text": "Both coordinates are within d exactly when |Z_1-Z_2|<=d. Their difference is N(0,2), giving erf(d/2). Its Gaussian tail is strictly positive for finite d.",
+      "assumptions": [
+        "Fixed finite deficit d",
+        "Two independent standard normal block values"
+      ],
+      "domain": "probability theory",
+      "source": {
+        "source_id": "owner-work:w335:c0127-two-peak-quantifier",
+        "url": "file:///~/brain_workers/w335/C0127_proof.md",
+        "revision": "author-checked-20261010-pending-independent-w347",
+        "license": "owner-own-work",
+        "excerpt": null
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "c0127-common-factor-peaks",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0127-chaos-versus-superconcentration-an-equivalent-multiple-peaks-condition",
+      "kind": "specializes",
+      "rationale": "New card: \"This does not refute a criterion requiring overlaps to tend to zero\"; existing card: \"Find a multiple-peaks condition on a Gaussian field that is equivalent to chaos and superconcentration, or show that no such condition exists\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    },
+    {
+      "from_key": "c0127-common-factor-peaks",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0127-chaos-versus-superconcentration-an-equivalent-multiple-peaks-condition",
+      "kind": "cites",
+      "rationale": "New card: \"Var(M_m)>=rho\"; existing card: \"Find a multiple-peaks condition on a Gaussian field that is equivalent to chaos and superconcentration, or show that no such condition exists\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    },
+    {
+      "from_key": "c0127-two-peak-quantifier",
+      "to_existing_logical": "math:probability.gaussian:open-problem-c0127-chaos-versus-superconcentration-an-equivalent-multiple-peaks-condition",
+      "kind": "cites",
+      "rationale": "New card: \"erf(d/2)<1\"; existing card: \"Find a multiple-peaks condition on a Gaussian field that is equivalent to chaos and superconcentration, or show that no such condition exists\". This result treats an explicitly stated special case or limitation; it does not certify a solution."
+    }
+  ]
+}

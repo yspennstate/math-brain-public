@@ -1,0 +1,214 @@
+\section{Full physical-query bills and the price of changing reference policy}
+\label{sec:v12}
+All logarithms are base two. The reference law includes every atom outside the true
+support. An old bill is retained as a fixed term $U$ throughout.
+
+\begin{lemma}[Exact projection-query bill]\label{lem:v12-query}
+Let $P$ be a Boolean squared Fourier law and let $Q$ be a normalized covering reference.
+At a physical query $i$, give both children $Q'=\pi_iQ$, where $\pi_i$ deletes frequency $i$.
+Put $P'=\pi_iP$, $L_i=D(P\Vert Q)-D(P'\Vert Q')$ and
+$J_i=\frac12\sum_{b=0}^1D(P_b\Vert P')$. Then
+\[
+ L_i\geq0,\quad 0\leq J_i\leq\frac2{\ln2}\operatorname{Inf}_i(f),\quad
+ \tfrac12\sum_bD(P_b\Vert Q')=D(P\Vert Q)+J_i-L_i.
+\]
+\end{lemma}
+\begin{proof}
+The restriction coefficients are $a_T,b_T$; the parent coefficients are
+$(a_T+b_T)/2,(a_T-b_T)/2$. Squaring gives
+$P'=(P_0+P_1)/2$. The KL chain rule along $\pi_i$ gives $L_i\geq0$; expanding the
+child divergences about their midpoint gives the equality. Every positive child atom
+is covered by $Q'$, so all divergences are finite.
+
+For completeness, in natural units define
+\[
+ e(a,b)=\tfrac12\left[a^2\ln\frac{2a^2}{a^2+b^2}
+                       +b^2\ln\frac{2b^2}{a^2+b^2}\right].
+\]
+We have $e(a,b)\leq(a-b)^2/2$. Taking absolute values leaves the left side unchanged
+and only decreases the right side. For nonnegative $a,b$ with $a+b>0$, scale to
+$a=1+t,b=1-t$, $|t|\leq1$. If $j(t)=e(1+t,1-t)$, then
+\[
+ j(0)=j'(0)=0,\qquad
+ j''(t)=2\ln\frac{1-t^2}{1+t^2}+\frac4{1+t^2}\leq4\quad(-1<t<1).
+\]
+Integrating twice and using evenness gives $j(t)\leq2t^2$. Continuity treats the
+endpoints; $a=b=0$ contributes zero. Summation over $T$ and division by $\ln2$ gives
+the asserted bound because $\operatorname{Inf}_i=\sum_T(a_T-b_T)^2/4$.
+\end{proof}
+
+For any covering update $Q\longmapsto R$ with finite forward fee, define its excess
+\[
+ G(P;Q,R)=D(R\Vert Q)+D(P\Vert R)-D(P\Vert Q)
+          =\sum_s(R(s)-P(s))\log\frac{R(s)}{Q(s)}.
+\]
+Terms with $R(s)=P(s)=0$ are zero. Updates that fail these support conditions cannot
+be inserted as finite-fee transactions.
+
+\begin{lemma}[Two updates with nonpositive excess]\label{lem:v12-update}
+For a finite partition with true and reference cell masses $p,q$, replace the reference
+cell masses by $r=(1-t)q+tp$, $0\leq t\leq1$, preserving its conditional laws in the cells.
+The complete new reference $R$ satisfies $G\leq0$. For $0<t<1$,
+\[
+ G=-\frac{1-t}{t}\{D(r\Vert q)+D(q\Vert r)\}.
+\]
+At $t=0$ and $t=1$, $G=0$.
+
+Alternatively, let $R$ minimize $D(v\Vert Q)$ over a nonempty closed affine slice of
+the simplex containing $P$, with support restricted to $\operatorname{supp}Q$.
+Then $R$ covers $P$ and $G=0$.
+\end{lemma}
+\begin{proof}
+For the partition update, conditionals cancel, and
+$G=\sum_c(r_c-p_c)\log(r_c/q_c)$.
+For $0<t<1$, $r-p=-(1-t)(r-q)/t$, giving the formula. A zero $q$ cell has zero
+$p$ and zero $r$ and is omitted jointly. At $t=0$ the update is the identity.
+At $t=1$, $r=p$ on the cells, so $G=0$, including cells whose reference mass vanishes.
+
+For the affine update the feasible set is compact and the objective continuous and
+strictly convex, giving a unique minimizer. It contains the support of every feasible
+law: otherwise mixing it toward that law creates a negative $t\log(1/t)$ term, while
+changes on its positive support are $O(t)$, contradicting minimality. Finiteness of the
+set justifies this comparison. In particular it covers $P$.
+Both signs of the direction $P-R$ are feasible for sufficiently small displacement:
+outside $\operatorname{supp}R$ both laws vanish, and on its finite positive support the
+entries remain nonnegative. First variation therefore gives
+$\sum_s(P(s)-R(s))\log(R(s)/Q(s))=0$, which is $G=0$.
+\end{proof}
+
+\begin{theorem}[One supplied source pays complete projection histories]\label{thm:v12-bill}
+Let $f$ be any Boolean function on a finite uniform cube, and supply a normalized
+covering reference $Q_0$. Consider any finite adaptive tree with physical coordinate
+queries, projection inheritance as in Lemma~\ref{lem:v12-query}, and finitely many
+updates of Lemma~\ref{lem:v12-update}. Let $w_v$ be actual physical reaches.
+Charge signed physical entropy increments, full query contractions $L_v$, every full
+forward update fee, and full terminal cross entropy. Then the complete bill obeys
+\[
+ \mathrm{Bill}=U+\operatorname{CE}(P_0,Q_0)
+               +\sum_{\rm query}w_vJ_v+\sum_{\rm update}w_vG_v
+ \leq U+\operatorname{CE}(P_0,Q_0)
+     +\frac2{\ln2}\left(I(f)-\mathbb E I(f_{\rm leaf})\right).
+\]
+Each physical coordinate is queried at most once per path. There is no new source
+allowance at any descendant. A fixed positive subprobability scalar can also be
+preserved, with its cross-entropy penalty retained.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:v12-query} gives the change in true divergence at each query.
+At an update its change plus the forward fee is $G$.
+Multiplication by actual reaches and cancellation of all interior divergences gives
+\[
+ \mathbb E D_{\rm leaf}+\sum_{\rm query}w_vL_v
+   +\sum_{\rm update}w_v\mathrm{fee}_v
+ =D_0+\sum_{\rm query}w_vJ_v+\sum_{\rm update}w_vG_v.
+\]
+Signed entropy changes telescope to $H(f)-\mathbb EH(f_{\rm leaf})$, proving the
+exact bill. Updates change only references, so
+$\sum_{\rm query}w_v\operatorname{Inf}_{i_v}(f_v)
+=I(f)-\mathbb EI(f_{\rm leaf})$.
+The two lemmas now give the inequality. All sums are finite; no optional-stopping
+limit is invoked. For a fixed scalar $s\in(0,1]$, replacing every reference by $sQ$
+adds $-\log s$ to its true cross entropy and divergence, unchanged along a query;
+the update fee is the divergence between normalized shapes. The same proof retains
+that scalar penalty.
+\end{proof}
+
+This theorem does not permit an arbitrary update at zero excess. The direction
+$D(R\Vert Q)$ of the forward fee matters, as does the specified inheritance policy.
+
+\begin{proposition}[A positive forward handoff on an actual rate-four source]
+\label{prop:v12-forward}
+Let $f$ have one negative vertex on three bits, and supply the uniform reference on
+eight spectral atoms. Then $I(f)=3/4$ and $\operatorname{CE}=3=4I(f)$.
+After any physical root query, switching from the projected reference to the normalized
+true-kernel reference has average excess $\frac3{32}\log5>0$ over both children.
+\end{proposition}
+\begin{proof}
+The parent spectrum is $(9/16,1/16,\ldots,1/16)$.
+The true exterior midpoint and projected reference are
+$m=(5/8,1/8,1/8,1/8)$ and $q=(1/4,1/4,1/4,1/4)$.
+The children are $P_c=\delta_0$ and $P_a=q$. Normalize
+$R_b(T)=q(T)P_b(T)/(m(T)Z_b)$.
+Direct division gives $Z_c=2/5$, $R_c=\delta_0$, $Z_a=8/5$, and
+$R_a=(1/16,5/16,5/16,5/16)$. All forward fees are finite.
+For the constant child the excess is zero. Since $P_a=q$, the other excess is
+\[
+ D(R_a\Vert P_a)+D(P_a\Vert R_a)
+ =\left(\tfrac{15}{16}\log5-2\right)
+  +\left(2-\tfrac34\log5\right)=\tfrac3{16}\log5.
+\]
+Each child has actual reach $1/2$. Translation of inputs and output complementation
+preserve the squared laws, proving the full stated symmetry scope.
+\end{proof}
+
+\begin{proposition}[High-order matching does not pay a query locally]
+\label{prop:v12-moment}
+For every even $n\geq4$, an actual Boolean function has $H=n$, $I=n/2$ and a positive
+rational reference of cross entropy below $4I$ matching the vacuum and all spectral
+marginals on at most $n-2$ coordinates, but each $i\leq n-1$ has
+\[
+ n-\tfrac14<L_i<n,\qquad 2n-\tfrac12<L_i/\operatorname{Inf}_i<2n.
+\]
+\end{proposition}
+\begin{proof}
+Take the product of $n/2$ disjoint two-bit signs with one negative input each.
+Their squared spectra are uniform, so $P(S)=2^{-n}$ and every influence is $1/2$.
+Put $k=n-1$, $\epsilon=2^{-4n}$, and perturb the face
+$F=\{\{n\}\cup V:V\subseteq[k]\}$ by
+\[
+ Q(\{n\}\cup V)=2^{-n}\{1+(1-\epsilon)(-1)^{|V|}\},
+ \qquad Q(S)=2^{-n}\quad(S\notin F).
+\]
+Normalization follows by parity cancellation; all entries are positive and the
+vacuum lies outside the face. Every inclusion moment of order at most $k-1$ has an
+unsummed free coordinate on the face, so its perturbation vanishes.
+Inclusion-exclusion gives all marginals of that order. For $i\leq k$ the perturbations
+cancel within each projection fiber; consequently $\pi_iQ=\pi_iP$ and
+\[
+ L_i=D(P\Vert Q)=\tfrac14\log\frac1{\epsilon(2-\epsilon)}
+                =n-\tfrac14\log(2-\epsilon).
+\]
+The strict bounds follow from $1<2-\epsilon<2$. Thus $\operatorname{CE}=n+L_i<2n=4I$.
+Any information projection imposing only these matched moments leaves $Q$ fixed:
+it is feasible and has zero divergence from itself. These are alternative first
+queries, not $n-1$ separate debits on one path. After the first such projection the
+original mismatch is gone. No repeated unused reserve is inferred.
+\end{proof}
+
+\paragraph{Initial source pricing remains universal.}
+Let $g$ be balanced and let a fresh $r$-bit point event have probability $p=2^{-r}$.
+For $F=1-A+Ag$, direct Fourier expansion gives
+\[
+ H(F)=A_r+pH(g),\quad I(F)=p(I(g)+r),\quad
+ A_r=2rp(2-p)-(1-p)^2\log((1-p)^2).
+\]
+For any covering full reference $Q_F$, its nonempty-data sector has positive mass
+$q_D$. Marginalize its conditional reference over the control frequencies to obtain
+a covering law $R_g$ on nonempty data sets. The true sector mass is $p$, its
+conditional law is uniform on control frequencies times $P_g$, and the KL chain rule
+followed by marginalization gives $D(P_F\Vert Q_F)\geq pD(P_g\Vert R_g)$.
+Therefore
+$\operatorname{CE}(P_F,Q_F)\geq A_r+p\operatorname{CE}(P_g,R_g)$.
+For arbitrary $h$, choose $g=z\prod_{j=1}^m h_j$ on disjoint variables. Then
+$H(g)=mH(h)$ and $I(g)=1+mI(h)$.
+A universal original source bound $\operatorname{CE}(P_F,Q_F)\leq KI(F)$ would imply
+\[
+ H(h)\leq KI(h)+\frac{K(1+r)-A_r/p}{m}.
+\]
+Letting integers $m$ tend to infinity proves full FEI with constant $K$.
+History stability cannot silently replace this unpaid initial-source theorem.
+
+\paragraph{Source versions and open leaves.}
+The projection/profile theorem and activation reduction reconstruct
+A012-UNIVERSAL-PROJECTION-PROFILE-HISTORY@1; affine calibration reconstructs
+A097-AFFINE-PROJECTION-HISTORY-TRANSFER@1; the moment family reconstructs
+A097-HIGH-MOMENT-MATCHED-QUERY-LOSS@1; the handoff invoice reconstructs
+A093-FORWARD-TRUE-KERNEL-HANDOFF-DEFICIT@1. Exact original statements and hashes
+are preserved in the registry. The inherited-reference identities in
+Section~\ref{sec:v11} remain valid under their stated policy and cost conventions.
+A011's withdrawn v5 terminal-to-transaction identification is not an accepted
+dependency: the accumulated query contraction must be retained in that policy too.
+No new dimension-independent FEI constant follows, and both integrated-chain audits
+remain pending. The first unsupported universal line is an influence-priced original
+arbitrary-core source or payment of a necessary compatible conversion from its actual
+unused original account, including the old bills and every full terminal.

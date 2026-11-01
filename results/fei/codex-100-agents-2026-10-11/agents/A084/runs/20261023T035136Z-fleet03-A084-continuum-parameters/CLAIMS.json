@@ -1,0 +1,49 @@
+[
+  {
+    "claim_id": "A084-SAME-CREDIT-TWO-CORE-CONTINUATION",
+    "version": 1,
+    "exact_statement": "Let h:{-1,1}^6->{-1,1} be negative exactly on the bit masks {0,1,2,4,8,16,32,6,17,40}, J(x)=-h(x xor 1), and g be negative exactly on {0,1,2} on six physical bits; bit 1 means sign -1. Retain the complete Boolean F_plus=J(-1,+1,g,g,g,g), S=4I-H with entropy in bits, and its supplied credit A0=-S(F_plus)>0. For any chosen pair of the four remaining disjoint physical cores, the exact conserved-credit hull over every allowed adaptive physical query and stopping policy within that pair has root R=A0. Further, after ANY prefix in one core using A072's original allocation a_b=R1(child_b)+a-mean R1, its actual incoming credit already dominates R2 at every cut, even when the second core is selected using the observed prefix. Thus all such two-core continuations require zero additional outside transfer for every real supplied initial old net debit D>=0 (incoming credit A0+D). All signed old debit labels, nonnegative credit-owner labels, other complete terminals and the outside donor books are preserved. On any finite restriction DAG the underlying account theorem holds for arbitrary nonnegative normalized real conditional weights, including zero-weight faces after removing unreachable outcomes: the exact all-policy requirement is R(v)=max(0,-S(v),max_query sum_b w_b R(child_b)). The physical Boolean application here uses only weights 1/2.",
+    "hypotheses": [
+      "The specified actual Boolean family and physical disjoint blocks; the other two whole cores remain present.",
+      "Original credit is already supplied and booked at the source terminal; no unused donor is asserted or newly renewed.",
+      "An optional initial prefix uses the actual source one-core allocation; after admission, only the chosen two cores may be queried.",
+      "All incoming credit-owner labels are nonnegative; signed old debit labels have total S+a>=0; refunds may be signed.",
+      "The general weighted-DAG statement assumes finite acyclic restriction states and fixed real S values; it makes no biased-influence identity claim."
+    ],
+    "statement_sha256": "55c7c1651b72ecb1d203f529f289ad9c72fe6fe3a29b6d166c3bc665129dc203",
+    "contributors": [
+      "A084"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/joint.py",
+      "code/prefix.py",
+      "code/arithmetic.py",
+      "out/JOINT_CASES.json",
+      "out/PREFIX_CUTS.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A072-OTHER-CORE-STOPPING-CREDIT-HULL",
+        "version": 1,
+        "statement_sha256": "3232af6b6b8937dc62c1e50b57a212def54049aec44fe6ad145148fa912feb10",
+        "acceptance": "HOLDS_SUBSTATEMENT_INDEPENDENTLY_RECONSTRUCTED",
+        "scope": "Single-core S/R profiles and the actual source allocation; all24 source profiles reproduced. This does not independently review every other source financial claim."
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_FINITE_CERTIFICATE_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "None within the stated finite-family/analytic-account theorem. Universal extension: enabling a third physical core after credit already allocated jointly, and arbitrary-core admission, remain unpaid.",
+    "next_consumers": [
+      "A072",
+      "A089",
+      "A074",
+      "A092",
+      "A075",
+      "B17",
+      "B20"
+    ]
+  }
+]

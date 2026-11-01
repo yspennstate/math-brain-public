@@ -1,0 +1,103 @@
+{
+  "worker": "w489",
+  "target": "C0056",
+  "date": "2026-10-10",
+  "reviewer": "w491",
+  "adversary": "w490",
+  "served_model_response_receipt": null,
+  "served_identity_status": "unavailable; requested settings are not evidence",
+  "author_math_status": "draft generic/conditional results; no parent solution",
+  "independent_review_status": "pending",
+  "formal_receipt": null,
+  "source_hash_check": "SOURCE_HASH_CHECK.json",
+  "retrieval_measurement": {
+    "command": "python -X utf8 ~/brain_workers/w489/measure_filter.py",
+    "sample": "same four bounded export lookup candidates; nonblind local diagnostic",
+    "before_returned": 4,
+    "before_relevant": 1,
+    "before_precision": 0.25,
+    "after_returned": 1,
+    "after_relevant": 1,
+    "after_precision": 1.0,
+    "retained_known_relevant": [
+      "claim_930971f2e2958ad4b39127882e7fb8c2f41978d305608de432e06a9933e30a3d"
+    ],
+    "filtered_ids": [
+      "claim_1db70383c85142d8ecde57ea5515a36aabc42e213337acc9e7bfc1a61bc742fe",
+      "claim_3b718e0037a91db9c64b0a4706cc1000aa0a6e3fe12673010be7f29fee1bf2dc",
+      "claim_586863c260722c5c6ef9695cfc7bca42df2e1d279dd99ef8d17159ff87adbe41"
+    ],
+    "seconds": 4.1500083170831203e-05,
+    "limitation": "Four manually judged candidates only. Precision gain is local; no population, ranking, timing, or mathematical-validity improvement inferred.",
+    "deployment": "local prototype only; no global recall controls changed",
+    "checks_passed": true
+  },
+  "files": [
+    {
+      "path": "~\\brain_workers\\w489\\TARGET.md",
+      "sha256": "d20c1399105d5a217ddfb6d30cccd3930b59d2f92e5424ee67769096c662b07f"
+    },
+    {
+      "path": "~\\brain_workers\\w489\\ATTEMPT.md",
+      "sha256": "7856b2bbe8f8d07a1be61bdadb3f1a7fea13f6320f8d41885af603b27d271d8e"
+    },
+    {
+      "path": "~\\brain_workers\\w489\\CLAIMS.jsonl",
+      "sha256": "6c71c136698764050c2fb45dd805dfdab9e424a195f45a747c0e910f1f39f3b5"
+    },
+    {
+      "path": "~\\brain_workers\\w489\\EDGES.jsonl",
+      "sha256": "a8e423b3d28e2a31ff099db6823d0892dc551839365e5f905ca54807ef5e3442"
+    },
+    {
+      "path": "~\\brain_workers\\w489\\SOURCE_STATUS.json",
+      "sha256": "1fde96fc2e3f1ba28e97afb920851bd5cf9724cdd764c7d78d19dc4a797e9799"
+    },
+    {
+      "path": "~\\brain_workers\\w489\\BRAIN_HYPOTHESIS_COMPARISON.md",
+      "sha256": "1801be2564d7601803db3106deab421f211028640b11bf44ea0e4392f87843b7"
+    },
+    {
+      "path": "~\\brain_workers\\w489\\FILTER_MEASUREMENT.json",
+      "sha256": "91633be578799860e6150493604280545e27e6f0bd2369faeec28fe268f17372"
+    }
+  ],
+  "bundle": "~\\brain_workers\\w489\\DRAFT_bundle_001.json",
+  "integration_digest_or_manifest": "not computed; reserved for the coordinator",
+  "promotion_gate": "Mathematical review plus required different-model and served-identity evidence; none claimed passed here",
+  "submitted": true,
+  "reviewed": false,
+  "ingested": false,
+  "retrievable": false,
+  "inbox_draft": "~\\math-brain-inbox\\w489\\bundle_001.json",
+  "hook_proposal": "~\\primary_directive\\hooks1000\\proposals\\math-w489.jsonl",
+  "statement_first_message_id": "msg-f46efe7a7d",
+  "handoff_receipts": [
+    {
+      "recipient": "w490",
+      "kind": "claim",
+      "message_id": "msg-f46efe7a7d"
+    },
+    {
+      "recipient": "w490",
+      "kind": "answer",
+      "message_id": "msg-4beb7460af"
+    },
+    {
+      "recipient": "w491",
+      "kind": "review",
+      "message_id": "msg-cf8b413f2d"
+    },
+    {
+      "recipient": "codex-01a12190",
+      "kind": "done",
+      "message_id": "msg-4052174196"
+    },
+    {
+      "recipient": "w483",
+      "kind": "answer",
+      "message_id": "msg-2beaa034d0"
+    }
+  ],
+  "submission_payload_equal": true
+}
